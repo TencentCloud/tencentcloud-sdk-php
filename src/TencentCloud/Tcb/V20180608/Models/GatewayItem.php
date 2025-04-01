@@ -72,6 +72,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLongAccessId(string $LongAccessId) 设置Donut接入ID
  * @method string getAccessDomain() 获取Donut接入域名
  * @method void setAccessDomain(string $AccessDomain) 设置Donut接入域名
+ * @method array getTags() 获取标签键值对
+ * @method void setTags(array $Tags) 设置标签键值对
  */
 class GatewayItem extends AbstractModel
 {
@@ -206,6 +208,11 @@ class GatewayItem extends AbstractModel
     public $AccessDomain;
 
     /**
+     * @var array 标签键值对
+     */
+    public $Tags;
+
+    /**
      * @param string $Uin 用户uin
      * @param integer $AppId 用户appid
      * @param string $WxAppId WxAppId
@@ -232,6 +239,7 @@ class GatewayItem extends AbstractModel
      * @param integer $VersionNumLimit 网关版本限额
      * @param string $LongAccessId Donut接入ID
      * @param string $AccessDomain Donut接入域名
+     * @param array $Tags 标签键值对
      */
     function __construct()
     {
@@ -348,6 +356,15 @@ class GatewayItem extends AbstractModel
 
         if (array_key_exists("AccessDomain",$param) and $param["AccessDomain"] !== null) {
             $this->AccessDomain = $param["AccessDomain"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

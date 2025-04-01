@@ -67,29 +67,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTPNSAndroidRegion() 获取TPNS服务Android应用所属地域，详细说明参见 ModifyApplication 同名入参。
  * @method void setTPNSAndroidRegion(string $TPNSAndroidRegion) 设置TPNS服务Android应用所属地域，详细说明参见 ModifyApplication 同名入参。
  * @method string getSelfSmsAppId() 获取自主短信配置APPID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSelfSmsAppId(string $SelfSmsAppId) 设置自主短信配置APPID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSelfSmsAppKey() 获取自主短信配置APPKey
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSelfSmsAppKey(string $SelfSmsAppKey) 设置自主短信配置APPKey
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSelfSmsSign() 获取自主短信配置签名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSelfSmsSign(string $SelfSmsSign) 设置自主短信配置签名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSelfSmsTemplateId() 获取自主短信配置模板ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSelfSmsTemplateId(integer $SelfSmsTemplateId) 设置自主短信配置模板ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWechatNotifyStatus() 获取第三方小程序强提醒开关 0：关闭；1：开启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWechatNotifyStatus(integer $WechatNotifyStatus) 设置第三方小程序强提醒开关 0：关闭；1：开启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInterconnectionProducts() 获取互联互通产品ID列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInterconnectionProducts(string $InterconnectionProducts) 设置互联互通产品ID列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class IotApplication extends AbstractModel
 {
@@ -210,37 +198,31 @@ class IotApplication extends AbstractModel
 
     /**
      * @var string 自主短信配置APPID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SelfSmsAppId;
 
     /**
      * @var string 自主短信配置APPKey
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SelfSmsAppKey;
 
     /**
      * @var string 自主短信配置签名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SelfSmsSign;
 
     /**
      * @var integer 自主短信配置模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SelfSmsTemplateId;
 
     /**
      * @var integer 第三方小程序强提醒开关 0：关闭；1：开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WechatNotifyStatus;
 
     /**
      * @var string 互联互通产品ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InterconnectionProducts;
 
@@ -269,17 +251,11 @@ class IotApplication extends AbstractModel
      * @param string $TPNSiOSRegion TPNS服务iOS应用所属地域，详细说明参见 ModifyApplication 同名入参。
      * @param string $TPNSAndroidRegion TPNS服务Android应用所属地域，详细说明参见 ModifyApplication 同名入参。
      * @param string $SelfSmsAppId 自主短信配置APPID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SelfSmsAppKey 自主短信配置APPKey
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SelfSmsSign 自主短信配置签名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SelfSmsTemplateId 自主短信配置模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $WechatNotifyStatus 第三方小程序强提醒开关 0：关闭；1：开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InterconnectionProducts 互联互通产品ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

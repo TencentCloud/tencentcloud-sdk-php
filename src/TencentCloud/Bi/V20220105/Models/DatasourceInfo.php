@@ -148,6 +148,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUseVPC(boolean $UseVPC) 设置开启vpc
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOwner() 获取所属人ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOwner(string $Owner) 设置所属人ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOwnerName() 获取所属人名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOwnerName(string $OwnerName) 设置所属人名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DatasourceInfo extends AbstractModel
 {
@@ -364,6 +372,18 @@ class DatasourceInfo extends AbstractModel
     public $UseVPC;
 
     /**
+     * @var string 所属人ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Owner;
+
+    /**
+     * @var string 所属人名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OwnerName;
+
+    /**
      * @param integer $Id 数据库ID
      * @param string $DbName 数据库名称
      * @param string $ServiceType 域类型，1、腾讯云，2、本地
@@ -427,6 +447,10 @@ class DatasourceInfo extends AbstractModel
      * @param string $DbTypeName 数据源名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $UseVPC 开启vpc
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Owner 所属人ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OwnerName 所属人名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -594,6 +618,14 @@ class DatasourceInfo extends AbstractModel
 
         if (array_key_exists("UseVPC",$param) and $param["UseVPC"] !== null) {
             $this->UseVPC = $param["UseVPC"];
+        }
+
+        if (array_key_exists("Owner",$param) and $param["Owner"] !== null) {
+            $this->Owner = $param["Owner"];
+        }
+
+        if (array_key_exists("OwnerName",$param) and $param["OwnerName"] !== null) {
+            $this->OwnerName = $param["OwnerName"];
         }
     }
 }

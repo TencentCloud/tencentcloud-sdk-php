@@ -22,8 +22,24 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例Id，形如 tdsql-ow728lmc
  * @method void setInstanceId(string $InstanceId) 设置实例Id，形如 tdsql-ow728lmc
- * @method string getZone() 获取切换的目标区域，会自动选择该可用区中延迟最低的节点
- * @method void setZone(string $Zone) 设置切换的目标区域，会自动选择该可用区中延迟最低的节点
+ * @method string getZone() 获取指定可用区标识符，具体含义由zoneMode参数决定。 
+
+- 当zoneMode为target时表示目标可用区 
+
+- 当zoneMode为avoid时表示需避开的故障可用区
+ * @method void setZone(string $Zone) 设置指定可用区标识符，具体含义由zoneMode参数决定。 
+
+- 当zoneMode为target时表示目标可用区 
+
+- 当zoneMode为avoid时表示需避开的故障可用区
+ * @method string getZoneMode() 获取可用区模式选择器，定义zone参数的语义类型。 
+- 默认值：target
+
+- 可选值：target, avoid
+ * @method void setZoneMode(string $ZoneMode) 设置可用区模式选择器，定义zone参数的语义类型。 
+- 默认值：target
+
+- 可选值：target, avoid
  */
 class SwitchDBInstanceHARequest extends AbstractModel
 {
@@ -33,13 +49,33 @@ class SwitchDBInstanceHARequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 切换的目标区域，会自动选择该可用区中延迟最低的节点
+     * @var string 指定可用区标识符，具体含义由zoneMode参数决定。 
+
+- 当zoneMode为target时表示目标可用区 
+
+- 当zoneMode为avoid时表示需避开的故障可用区
      */
     public $Zone;
 
     /**
+     * @var string 可用区模式选择器，定义zone参数的语义类型。 
+- 默认值：target
+
+- 可选值：target, avoid
+     */
+    public $ZoneMode;
+
+    /**
      * @param string $InstanceId 实例Id，形如 tdsql-ow728lmc
-     * @param string $Zone 切换的目标区域，会自动选择该可用区中延迟最低的节点
+     * @param string $Zone 指定可用区标识符，具体含义由zoneMode参数决定。 
+
+- 当zoneMode为target时表示目标可用区 
+
+- 当zoneMode为avoid时表示需避开的故障可用区
+     * @param string $ZoneMode 可用区模式选择器，定义zone参数的语义类型。 
+- 默认值：target
+
+- 可选值：target, avoid
      */
     function __construct()
     {
@@ -60,6 +96,10 @@ class SwitchDBInstanceHARequest extends AbstractModel
 
         if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
             $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("ZoneMode",$param) and $param["ZoneMode"] !== null) {
+            $this->ZoneMode = $param["ZoneMode"];
         }
     }
 }

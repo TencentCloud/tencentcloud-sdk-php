@@ -27,37 +27,21 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getCreateTime() 获取固件创建时间
  * @method void setCreateTime(integer $CreateTime) 设置固件创建时间
  * @method string getProductName() 获取产品名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductName(string $ProductName) 设置产品名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取固件名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置固件名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取固件描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置固件描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProductId() 获取产品ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductId(string $ProductId) 设置产品ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFwType() 获取固件升级模块
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFwType(string $FwType) 设置固件升级模块
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreateUserId() 获取创建者子 uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateUserId(integer $CreateUserId) 设置创建者子 uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatorNickName() 获取创建者昵称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatorNickName(string $CreatorNickName) 设置创建者昵称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserDefined() 获取固件用户自定义配置信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserDefined(string $UserDefined) 设置固件用户自定义配置信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class FirmwareInfo extends AbstractModel
 {
@@ -78,49 +62,41 @@ class FirmwareInfo extends AbstractModel
 
     /**
      * @var string 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductName;
 
     /**
      * @var string 固件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 固件描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var string 产品ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductId;
 
     /**
      * @var string 固件升级模块
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FwType;
 
     /**
      * @var integer 创建者子 uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateUserId;
 
     /**
      * @var string 创建者昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatorNickName;
 
     /**
      * @var string 固件用户自定义配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserDefined;
 
@@ -129,21 +105,13 @@ class FirmwareInfo extends AbstractModel
      * @param string $Md5sum 固件MD5值
      * @param integer $CreateTime 固件创建时间
      * @param string $ProductName 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 固件名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 固件描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProductId 产品ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FwType 固件升级模块
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateUserId 创建者子 uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatorNickName 创建者昵称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserDefined 固件用户自定义配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

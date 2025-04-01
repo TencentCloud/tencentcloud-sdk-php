@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 弹性伸缩策略
  *
  * @method integer getMaxReplicas() 获取最大副本数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxReplicas(integer $MaxReplicas) 设置最大副本数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getMetrics() 获取指标列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetrics(array $Metrics) 设置指标列表
@@ -57,7 +55,6 @@ class CloudNativeAPIGatewayStrategyAutoScalerConfig extends AbstractModel
 {
     /**
      * @var integer 最大副本数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxReplicas;
 
@@ -110,7 +107,6 @@ class CloudNativeAPIGatewayStrategyAutoScalerConfig extends AbstractModel
 
     /**
      * @param integer $MaxReplicas 最大副本数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Metrics 指标列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Enabled 是否开启指标伸缩

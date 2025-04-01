@@ -27,23 +27,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDeviceId() 获取设备ID
  * @method void setDeviceId(string $DeviceId) 设置设备ID
  * @method string getAliasName() 获取设备别名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAliasName(string $AliasName) 设置设备别名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFamilyId() 获取设备绑定的家庭ID
  * @method void setFamilyId(string $FamilyId) 设置设备绑定的家庭ID
  * @method string getRoomId() 获取设备所在的房间ID，默认"0"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoomId(string $RoomId) 设置设备所在的房间ID，默认"0"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIconUrl() 获取图标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIconUrl(string $IconUrl) 设置图标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIconUrlGrid() 获取grid图标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIconUrlGrid(string $IconUrlGrid) 设置grid图标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreateTime() 获取设备绑定时间戳
  * @method void setCreateTime(integer $CreateTime) 设置设备绑定时间戳
  * @method integer getUpdateTime() 获取设备更新时间戳
@@ -68,7 +60,6 @@ class FamilySubDevice extends AbstractModel
 
     /**
      * @var string 设备别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AliasName;
 
@@ -79,19 +70,16 @@ class FamilySubDevice extends AbstractModel
 
     /**
      * @var string 设备所在的房间ID，默认"0"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoomId;
 
     /**
      * @var string 图标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IconUrl;
 
     /**
      * @var string grid图标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IconUrlGrid;
 
@@ -110,14 +98,10 @@ class FamilySubDevice extends AbstractModel
      * @param string $DeviceName 设备名称
      * @param string $DeviceId 设备ID
      * @param string $AliasName 设备别名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FamilyId 设备绑定的家庭ID
      * @param string $RoomId 设备所在的房间ID，默认"0"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IconUrl 图标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IconUrlGrid grid图标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateTime 设备绑定时间戳
      * @param integer $UpdateTime 设备更新时间戳
      */

@@ -25,13 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getRole() 获取用户角色 1所有者，0：其他分享者
  * @method void setRole(integer $Role) 设置用户角色 1所有者，0：其他分享者
  * @method string getFamilyId() 获取家庭ID，所有者带该参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFamilyId(string $FamilyId) 设置家庭ID，所有者带该参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFamilyName() 获取家庭名称，所有者带该参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFamilyName(string $FamilyName) 设置家庭名称，所有者带该参数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DeviceUser extends AbstractModel
 {
@@ -47,13 +43,11 @@ class DeviceUser extends AbstractModel
 
     /**
      * @var string 家庭ID，所有者带该参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FamilyId;
 
     /**
      * @var string 家庭名称，所有者带该参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FamilyName;
 
@@ -61,9 +55,7 @@ class DeviceUser extends AbstractModel
      * @param string $UserId 用户ID
      * @param integer $Role 用户角色 1所有者，0：其他分享者
      * @param string $FamilyId 家庭ID，所有者带该参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FamilyName 家庭名称，所有者带该参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

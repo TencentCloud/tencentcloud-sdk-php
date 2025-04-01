@@ -72,6 +72,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组ids，安全组可以传数组形式，兼容之前SecurityGroupId参数
  * @method integer getDcnSyncMode() 获取DCN同步模式，0：异步， 1：强同步
  * @method void setDcnSyncMode(integer $DcnSyncMode) 设置DCN同步模式，0：异步， 1：强同步
+ * @method string getCpuType() 获取Cpu类型，如：英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD
+ * @method void setCpuType(string $CpuType) 设置Cpu类型，如：英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD
  */
 class CreateHourDCDBInstanceRequest extends AbstractModel
 {
@@ -190,6 +192,11 @@ class CreateHourDCDBInstanceRequest extends AbstractModel
     public $DcnSyncMode;
 
     /**
+     * @var string Cpu类型，如：英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD
+     */
+    public $CpuType;
+
+    /**
      * @param integer $ShardMemory 分片内存大小，单位：GB，可以通过 DescribeShardSpec
  查询实例规格获得。
      * @param integer $ShardStorage 分片存储空间大小，单位：GB，可以通过 DescribeShardSpec
@@ -216,6 +223,7 @@ class CreateHourDCDBInstanceRequest extends AbstractModel
      * @param string $RollbackTime 回档时间，例如“2021-11-22 00:00:00”
      * @param array $SecurityGroupIds 安全组ids，安全组可以传数组形式，兼容之前SecurityGroupId参数
      * @param integer $DcnSyncMode DCN同步模式，0：异步， 1：强同步
+     * @param string $CpuType Cpu类型，如：英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD
      */
     function __construct()
     {
@@ -326,6 +334,10 @@ class CreateHourDCDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("DcnSyncMode",$param) and $param["DcnSyncMode"] !== null) {
             $this->DcnSyncMode = $param["DcnSyncMode"];
+        }
+
+        if (array_key_exists("CpuType",$param) and $param["CpuType"] !== null) {
+            $this->CpuType = $param["CpuType"];
         }
     }
 }

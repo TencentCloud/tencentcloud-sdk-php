@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 扩容策略
  *
  * @method string getType() 获取类型，Pods
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置类型，Pods
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getValue() 获取数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(integer $Value) 设置数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPeriodSeconds() 获取扩容周期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPeriodSeconds(integer $PeriodSeconds) 设置扩容周期
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AutoScalerPolicy extends AbstractModel
 {
     /**
      * @var string 类型，Pods
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var integer 数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @var integer 扩容周期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PeriodSeconds;
 
     /**
      * @param string $Type 类型，Pods
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Value 数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PeriodSeconds 扩容周期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

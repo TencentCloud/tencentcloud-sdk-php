@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * DescribeCertDomains返回参数结构体
  *
  * @method array getDomains() 获取已接入CDN的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomains(array $Domains) 设置已接入CDN的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCertifiedDomains() 获取已配置证书的CDN域名列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertifiedDomains(array $CertifiedDomains) 设置已配置证书的CDN域名列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,13 +31,11 @@ class DescribeCertDomainsResponse extends AbstractModel
 {
     /**
      * @var array 已接入CDN的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Domains;
 
     /**
      * @var array 已配置证书的CDN域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CertifiedDomains;
 
@@ -52,9 +46,7 @@ class DescribeCertDomainsResponse extends AbstractModel
 
     /**
      * @param array $Domains 已接入CDN的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CertifiedDomains 已配置证书的CDN域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getUsedNum() 获取已使用授权数
  * @method void setUsedNum(integer $UsedNum) 设置已使用授权数
  * @method array getTWeCallLicense() 获取TWeCall激活码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTWeCallLicense(array $TWeCallLicense) 设置TWeCall激活码
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class LicenseServiceNumInfo extends AbstractModel
 {
@@ -50,7 +48,6 @@ class LicenseServiceNumInfo extends AbstractModel
 
     /**
      * @var array TWeCall激活码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TWeCallLicense;
 
@@ -59,7 +56,6 @@ class LicenseServiceNumInfo extends AbstractModel
      * @param integer $TotalNum 授权总数
      * @param integer $UsedNum 已使用授权数
      * @param array $TWeCallLicense TWeCall激活码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

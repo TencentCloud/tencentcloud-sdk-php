@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGatewayDeviceNum(integer $GatewayDeviceNum) 设置已注册网关数
  * @method integer getSubDeviceNum() 获取已注册子设备数
  * @method void setSubDeviceNum(integer $SubDeviceNum) 设置已注册子设备数
+ * @method integer getVideoDeviceNum() 获取已注册视频设备数
+ * @method void setVideoDeviceNum(integer $VideoDeviceNum) 设置已注册视频设备数
  */
 class RegisteredDeviceTypeInfo extends AbstractModel
 {
@@ -45,9 +47,15 @@ class RegisteredDeviceTypeInfo extends AbstractModel
     public $SubDeviceNum;
 
     /**
+     * @var integer 已注册视频设备数
+     */
+    public $VideoDeviceNum;
+
+    /**
      * @param integer $NormalDeviceNum 已注册设备数
      * @param integer $GatewayDeviceNum 已注册网关数
      * @param integer $SubDeviceNum 已注册子设备数
+     * @param integer $VideoDeviceNum 已注册视频设备数
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class RegisteredDeviceTypeInfo extends AbstractModel
 
         if (array_key_exists("SubDeviceNum",$param) and $param["SubDeviceNum"] !== null) {
             $this->SubDeviceNum = $param["SubDeviceNum"];
+        }
+
+        if (array_key_exists("VideoDeviceNum",$param) and $param["VideoDeviceNum"] !== null) {
+            $this->VideoDeviceNum = $param["VideoDeviceNum"];
         }
     }
 }

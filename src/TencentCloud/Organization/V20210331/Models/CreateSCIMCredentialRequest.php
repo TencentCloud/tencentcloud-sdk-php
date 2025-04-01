@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() 获取空间ID。z-前缀开头，后面是12位随机数字/小写字母
  * @method void setZoneId(string $ZoneId) 设置空间ID。z-前缀开头，后面是12位随机数字/小写字母
+ * @method integer getExpireDuration() 获取过期时间（秒），最小1小时，最大99年。如果不传则默认一年过期
+ * @method void setExpireDuration(integer $ExpireDuration) 设置过期时间（秒），最小1小时，最大99年。如果不传则默认一年过期
  */
 class CreateSCIMCredentialRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class CreateSCIMCredentialRequest extends AbstractModel
     public $ZoneId;
 
     /**
+     * @var integer 过期时间（秒），最小1小时，最大99年。如果不传则默认一年过期
+     */
+    public $ExpireDuration;
+
+    /**
      * @param string $ZoneId 空间ID。z-前缀开头，后面是12位随机数字/小写字母
+     * @param integer $ExpireDuration 过期时间（秒），最小1小时，最大99年。如果不传则默认一年过期
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class CreateSCIMCredentialRequest extends AbstractModel
         }
         if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
             $this->ZoneId = $param["ZoneId"];
+        }
+
+        if (array_key_exists("ExpireDuration",$param) and $param["ExpireDuration"] !== null) {
+            $this->ExpireDuration = $param["ExpireDuration"];
         }
     }
 }

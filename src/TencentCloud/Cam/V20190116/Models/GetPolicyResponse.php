@@ -21,37 +21,23 @@ use TencentCloud\Common\AbstractModel;
  * GetPolicy返回参数结构体
  *
  * @method string getPolicyName() 获取策略名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolicyName(string $PolicyName) 设置策略名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取策略描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置策略描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getType() 获取1 表示自定义策略，2 表示预设策略。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(integer $Type) 设置1 表示自定义策略，2 表示预设策略。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAddTime() 获取策略创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddTime(string $AddTime) 设置策略创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取策略最近更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置策略最近更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPolicyDocument() 获取策略文档。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolicyDocument(string $PolicyDocument) 设置策略文档。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPresetAlias() 获取备注。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPresetAlias(string $PresetAlias) 设置备注。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsServiceLinkedRolePolicy() 获取是否是服务相关策略，0代表不是服务相关策略，1代表是服务相关策略。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsServiceLinkedRolePolicy(integer $IsServiceLinkedRolePolicy) 设置是否是服务相关策略，0代表不是服务相关策略，1代表是服务相关策略。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -59,37 +45,31 @@ class GetPolicyResponse extends AbstractModel
 {
     /**
      * @var string 策略名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PolicyName;
 
     /**
      * @var string 策略描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var integer 1 表示自定义策略，2 表示预设策略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 策略创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AddTime;
 
     /**
      * @var string 策略最近更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @var string 策略文档。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PolicyDocument;
 
@@ -101,7 +81,6 @@ class GetPolicyResponse extends AbstractModel
 
     /**
      * @var integer 是否是服务相关策略，0代表不是服务相关策略，1代表是服务相关策略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsServiceLinkedRolePolicy;
 
@@ -112,21 +91,14 @@ class GetPolicyResponse extends AbstractModel
 
     /**
      * @param string $PolicyName 策略名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 策略描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Type 1 表示自定义策略，2 表示预设策略。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AddTime 策略创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 策略最近更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PolicyDocument 策略文档。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PresetAlias 备注。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsServiceLinkedRolePolicy 是否是服务相关策略，0代表不是服务相关策略，1代表是服务相关策略。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutputName(string $OutputName) 设置输出的名称。
  * @method string getDescription() 获取输出描述。
  * @method void setDescription(string $Description) 设置输出描述。
- * @method string getProtocol() 获取输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP|RIST。
- * @method void setProtocol(string $Protocol) 设置输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP|RIST。
+ * @method string getProtocol() 获取输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST。
+ * @method void setProtocol(string $Protocol) 设置输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST。
  * @method string getOutputRegion() 获取输出地区。
  * @method void setOutputRegion(string $OutputRegion) 设置输出地区。
  * @method CreateOutputSRTSettings getSRTSettings() 获取输出的SRT的配置。
@@ -64,7 +64,7 @@ class CreateOutputInfo extends AbstractModel
     public $Description;
 
     /**
-     * @var string 输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP|RIST。
+     * @var string 输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST。
      */
     public $Protocol;
 
@@ -127,7 +127,7 @@ class CreateOutputInfo extends AbstractModel
     /**
      * @param string $OutputName 输出的名称。
      * @param string $Description 输出描述。
-     * @param string $Protocol 输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP|RIST。
+     * @param string $Protocol 输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST。
      * @param string $OutputRegion 输出地区。
      * @param CreateOutputSRTSettings $SRTSettings 输出的SRT的配置。
      * @param CreateOutputRTMPSettings $RTMPSettings 输出的RTMP的配置。

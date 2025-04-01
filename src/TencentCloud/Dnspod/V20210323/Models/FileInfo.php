@@ -61,9 +61,7 @@ RECORD_LOG：解析量数据
 RECORD_EXPORT：导出解析记录
 DOMAIN_EXPORT：导出域名列表
  * @method LeftTime getLeftTime() 获取剩余时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLeftTime(LeftTime $LeftTime) 设置剩余时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class FileInfo extends AbstractModel
 {
@@ -129,7 +127,6 @@ DOMAIN_EXPORT：导出域名列表
 
     /**
      * @var LeftTime 剩余时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LeftTime;
 
@@ -155,7 +152,6 @@ RECORD_LOG：解析量数据
 RECORD_EXPORT：导出解析记录
 DOMAIN_EXPORT：导出域名列表
      * @param LeftTime $LeftTime 剩余时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppId(string $AppId) 设置租户iD
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsProjectOwner() 获取是否项目负责人
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsProjectOwner(boolean $IsProjectOwner) 设置是否项目负责人
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProjectUserRole extends AbstractModel
 {
@@ -134,6 +138,12 @@ class ProjectUserRole extends AbstractModel
     public $AppId;
 
     /**
+     * @var boolean 是否项目负责人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsProjectOwner;
+
+    /**
      * @param array $Roles 用户角色对象
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserName mc
@@ -155,6 +165,8 @@ class ProjectUserRole extends AbstractModel
      * @param string $OwnerUin 主账号id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AppId 租户iD
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsProjectOwner 是否项目负责人
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -217,6 +229,10 @@ class ProjectUserRole extends AbstractModel
 
         if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
             $this->AppId = $param["AppId"];
+        }
+
+        if (array_key_exists("IsProjectOwner",$param) and $param["IsProjectOwner"] !== null) {
+            $this->IsProjectOwner = $param["IsProjectOwner"];
         }
     }
 }

@@ -21,17 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * DescribeCloudStorageOrder返回参数结构体
  *
  * @method integer getStartTime() 获取云存套餐开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(integer $StartTime) 设置云存套餐开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getExpireTime() 获取云存套餐过期时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpireTime(integer $ExpireTime) 设置云存套餐过期时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPackageId() 获取套餐id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPackageId(string $PackageId) 设置套餐id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取套餐状态
 0：等待生效
 1: 已过期
@@ -43,13 +37,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getChannelId() 获取通道id
  * @method void setChannelId(integer $ChannelId) 设置通道id
  * @method integer getPrice() 获取订单金额，单位为分
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrice(integer $Price) 设置订单金额，单位为分
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAmount() 获取支付金额，单位为分
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAmount(integer $Amount) 设置支付金额，单位为分
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -57,19 +47,16 @@ class DescribeCloudStorageOrderResponse extends AbstractModel
 {
     /**
      * @var integer 云存套餐开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
      * @var integer 云存套餐过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpireTime;
 
     /**
      * @var string 套餐id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PackageId;
 
@@ -88,13 +75,11 @@ class DescribeCloudStorageOrderResponse extends AbstractModel
 
     /**
      * @var integer 订单金额，单位为分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Price;
 
     /**
      * @var integer 支付金额，单位为分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Amount;
 
@@ -105,20 +90,15 @@ class DescribeCloudStorageOrderResponse extends AbstractModel
 
     /**
      * @param integer $StartTime 云存套餐开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ExpireTime 云存套餐过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PackageId 套餐id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 套餐状态
 0：等待生效
 1: 已过期
 2:生效
      * @param integer $ChannelId 通道id
      * @param integer $Price 订单金额，单位为分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Amount 支付金额，单位为分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

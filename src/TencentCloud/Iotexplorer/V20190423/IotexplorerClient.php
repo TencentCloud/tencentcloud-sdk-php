@@ -45,7 +45,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\CreateLoRaFrequencyResponse CreateLoRaFrequency(Models\CreateLoRaFrequencyRequest $req) 创建 LoRa 自定义频点
  * @method Models\CreateLoRaGatewayResponse CreateLoRaGateway(Models\CreateLoRaGatewayRequest $req) 创建新 LoRa 网关设备接口
  * @method Models\CreatePositionFenceResponse CreatePositionFence(Models\CreatePositionFenceRequest $req) 创建围栏
- * @method Models\CreatePositionSpaceResponse CreatePositionSpace(Models\CreatePositionSpaceRequest $req) 创建位置空间
+ * @method Models\CreatePositionSpaceResponse CreatePositionSpace(Models\CreatePositionSpaceRequest $req) 创建位置空间。
  * @method Models\CreateProjectResponse CreateProject(Models\CreateProjectRequest $req) 为用户提供新建项目的能力，用于集中管理产品和应用。
  * @method Models\CreateStudioProductResponse CreateStudioProduct(Models\CreateStudioProductRequest $req) 为用户提供新建产品的能力，用于管理用户的设备
  * @method Models\CreateTRTCSignaturesWithRoomIdResponse CreateTRTCSignaturesWithRoomId(Models\CreateTRTCSignaturesWithRoomIdRequest $req) 创建TRTC通话参数

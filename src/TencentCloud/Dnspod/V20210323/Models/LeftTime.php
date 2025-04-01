@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 批量生成文件剩余时间
  *
  * @method integer getDays() 获取剩余天数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDays(integer $Days) 设置剩余天数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHours() 获取剩余小时数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHours(integer $Hours) 设置剩余小时数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMins() 获取剩余分钟数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMins(integer $Mins) 设置剩余分钟数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class LeftTime extends AbstractModel
 {
     /**
      * @var integer 剩余天数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Days;
 
     /**
      * @var integer 剩余小时数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Hours;
 
     /**
      * @var integer 剩余分钟数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Mins;
 
     /**
      * @param integer $Days 剩余天数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Hours 剩余小时数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Mins 剩余分钟数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

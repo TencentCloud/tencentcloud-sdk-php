@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * UpdateDevicesEnableState返回参数结构体
  *
  * @method string getResultCode() 获取删除的结果代码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResultCode(string $ResultCode) 设置删除的结果代码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResultMessage() 获取删除的结果信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResultMessage(string $ResultMessage) 设置删除的结果信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,13 +31,11 @@ class UpdateDevicesEnableStateResponse extends AbstractModel
 {
     /**
      * @var string 删除的结果代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResultCode;
 
     /**
      * @var string 删除的结果信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResultMessage;
 
@@ -52,9 +46,7 @@ class UpdateDevicesEnableStateResponse extends AbstractModel
 
     /**
      * @param string $ResultCode 删除的结果代码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResultMessage 删除的结果信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

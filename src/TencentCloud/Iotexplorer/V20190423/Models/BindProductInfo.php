@@ -25,33 +25,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getProductName() 获取产品名称。
  * @method void setProductName(string $ProductName) 设置产品名称。
  * @method string getProjectId() 获取产品所属项目ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectId(string $ProjectId) 设置产品所属项目ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDataProtocol() 获取物模型类型。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataProtocol(integer $DataProtocol) 设置物模型类型。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCategoryId() 获取产品分组模板ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCategoryId(integer $CategoryId) 设置产品分组模板ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProductType() 获取产品类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductType(integer $ProductType) 设置产品类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNetType() 获取连接类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetType(string $NetType) 设置连接类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDevStatus() 获取状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDevStatus(string $DevStatus) 设置状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProductOwnerName() 获取产品拥有者名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductOwnerName(string $ProductOwnerName) 设置产品拥有者名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BindProductInfo extends AbstractModel
 {
@@ -67,43 +53,36 @@ class BindProductInfo extends AbstractModel
 
     /**
      * @var string 产品所属项目ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectId;
 
     /**
      * @var integer 物模型类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataProtocol;
 
     /**
      * @var integer 产品分组模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CategoryId;
 
     /**
      * @var integer 产品类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductType;
 
     /**
      * @var string 连接类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NetType;
 
     /**
      * @var string 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DevStatus;
 
     /**
      * @var string 产品拥有者名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductOwnerName;
 
@@ -111,19 +90,12 @@ class BindProductInfo extends AbstractModel
      * @param string $ProductId 产品ID。
      * @param string $ProductName 产品名称。
      * @param string $ProjectId 产品所属项目ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DataProtocol 物模型类型。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CategoryId 产品分组模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProductType 产品类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NetType 连接类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DevStatus 状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProductOwnerName 产品拥有者名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -28,8 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProgress(string $Progress) 设置进度。0~100
  * @method string getProgressMessage() 获取进度信息。
  * @method void setProgressMessage(string $ProgressMessage) 设置进度信息。
- * @method string getDocumentRecognizeResultUrl() 获取文档解析结果URL。存储在腾讯云cos，可以通过http请求下载，URL十分钟内有效。
- * @method void setDocumentRecognizeResultUrl(string $DocumentRecognizeResultUrl) 设置文档解析结果URL。存储在腾讯云cos，可以通过http请求下载，URL十分钟内有效。
+ * @method string getDocumentRecognizeResultUrl() 获取文档解析结果的临时下载地址。
+文件类型为zip压缩包，下载链接有效期30分钟。
+压缩包内包含*.md、*.json以及images文件夹。
+
+ * @method void setDocumentRecognizeResultUrl(string $DocumentRecognizeResultUrl) 设置文档解析结果的临时下载地址。
+文件类型为zip压缩包，下载链接有效期30分钟。
+压缩包内包含*.md、*.json以及images文件夹。
+
  * @method array getFailedPages() 获取文档解析失败的页码。
  * @method void setFailedPages(array $FailedPages) 设置文档解析失败的页码。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。本接口为流式响应接口，当请求成功时，RequestId 会被放在 HTTP 响应的 Header "X-TC-RequestId" 中。
@@ -58,7 +64,10 @@ class ReconstructDocumentSSEResponse extends AbstractModel
     public $ProgressMessage;
 
     /**
-     * @var string 文档解析结果URL。存储在腾讯云cos，可以通过http请求下载，URL十分钟内有效。
+     * @var string 文档解析结果的临时下载地址。
+文件类型为zip压缩包，下载链接有效期30分钟。
+压缩包内包含*.md、*.json以及images文件夹。
+
      */
     public $DocumentRecognizeResultUrl;
 
@@ -77,7 +86,10 @@ class ReconstructDocumentSSEResponse extends AbstractModel
      * @param string $ResponseType 响应类型。1：返回进度信息，2：返回解析结果
      * @param string $Progress 进度。0~100
      * @param string $ProgressMessage 进度信息。
-     * @param string $DocumentRecognizeResultUrl 文档解析结果URL。存储在腾讯云cos，可以通过http请求下载，URL十分钟内有效。
+     * @param string $DocumentRecognizeResultUrl 文档解析结果的临时下载地址。
+文件类型为zip压缩包，下载链接有效期30分钟。
+压缩包内包含*.md、*.json以及images文件夹。
+
      * @param array $FailedPages 文档解析失败的页码。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。本接口为流式响应接口，当请求成功时，RequestId 会被放在 HTTP 响应的 Header "X-TC-RequestId" 中。
      */

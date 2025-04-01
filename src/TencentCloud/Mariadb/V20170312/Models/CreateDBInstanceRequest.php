@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDcnInstanceId(string $DcnInstanceId) 设置DCN源实例ID
  * @method integer getDcnSyncMode() 获取DCN同步模式，0：异步， 1：强同步
  * @method void setDcnSyncMode(integer $DcnSyncMode) 设置DCN同步模式，0：异步， 1：强同步
+ * @method string getCpuType() 获取cpu类型，英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD
+ * @method void setCpuType(string $CpuType) 设置cpu类型，英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD
  */
 class CreateDBInstanceRequest extends AbstractModel
 {
@@ -180,6 +182,11 @@ class CreateDBInstanceRequest extends AbstractModel
     public $DcnSyncMode;
 
     /**
+     * @var string cpu类型，英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD
+     */
+    public $CpuType;
+
+    /**
      * @param array $Zones 实例节点可用区分布，可填写多个可用区。
      * @param integer $NodeCount 节点个数大小，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得。
@@ -204,6 +211,7 @@ class CreateDBInstanceRequest extends AbstractModel
      * @param string $DcnRegion DCN源地域
      * @param string $DcnInstanceId DCN源实例ID
      * @param integer $DcnSyncMode DCN同步模式，0：异步， 1：强同步
+     * @param string $CpuType cpu类型，英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD
      */
     function __construct()
     {
@@ -310,6 +318,10 @@ class CreateDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("DcnSyncMode",$param) and $param["DcnSyncMode"] !== null) {
             $this->DcnSyncMode = $param["DcnSyncMode"];
+        }
+
+        if (array_key_exists("CpuType",$param) and $param["CpuType"] !== null) {
+            $this->CpuType = $param["CpuType"];
         }
     }
 }

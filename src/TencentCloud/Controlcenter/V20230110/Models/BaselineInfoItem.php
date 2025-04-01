@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 账号工厂基线信息
  *
  * @method string getIdentifier() 获取账号工厂基线项唯一标识，只能包含英文字母、数字和@、,._[]-:()（）【】+=，。，长度2-128个字符。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIdentifier(string $Identifier) 设置账号工厂基线项唯一标识，只能包含英文字母、数字和@、,._[]-:()（）【】+=，。，长度2-128个字符。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConfiguration() 获取账号工厂基线项配置，不同的基线项配置参数不同。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfiguration(string $Configuration) 设置账号工厂基线项配置，不同的基线项配置参数不同。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getApplyCount() 获取基线应用的账号数量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplyCount(integer $ApplyCount) 设置基线应用的账号数量。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BaselineInfoItem extends AbstractModel
 {
     /**
      * @var string 账号工厂基线项唯一标识，只能包含英文字母、数字和@、,._[]-:()（）【】+=，。，长度2-128个字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Identifier;
 
     /**
      * @var string 账号工厂基线项配置，不同的基线项配置参数不同。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Configuration;
 
     /**
      * @var integer 基线应用的账号数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplyCount;
 
     /**
      * @param string $Identifier 账号工厂基线项唯一标识，只能包含英文字母、数字和@、,._[]-:()（）【】+=，。，长度2-128个字符。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Configuration 账号工厂基线项配置，不同的基线项配置参数不同。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ApplyCount 基线应用的账号数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

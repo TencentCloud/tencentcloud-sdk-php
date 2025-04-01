@@ -23,17 +23,23 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInstanceType() 获取规格类型
 BASIC：基础版
 PRO ：专业版
+PLATINUM： 铂金版
  * @method void setInstanceType(string $InstanceType) 设置规格类型
 BASIC：基础版
 PRO ：专业版
+PLATINUM： 铂金版
  * @method string getSkuCode() 获取规格代码
  * @method void setSkuCode(string $SkuCode) 设置规格代码
  * @method boolean getOnSale() 获取是否售卖
+1: 可售卖
+0: 不可售卖
  * @method void setOnSale(boolean $OnSale) 设置是否售卖
+1: 可售卖
+0: 不可售卖
  * @method integer getTopicNumLimit() 获取topic num限制
  * @method void setTopicNumLimit(integer $TopicNumLimit) 设置topic num限制
- * @method integer getTpsLimit() 获取tps
- * @method void setTpsLimit(integer $TpsLimit) 设置tps
+ * @method integer getTpsLimit() 获取MQTT 集群下每秒钟生产消息量和消费消息量之和。详细计算方式参考 [计费概述](https://cloud.tencent.com/document/product/1778/109698)
+ * @method void setTpsLimit(integer $TpsLimit) 设置MQTT 集群下每秒钟生产消息量和消费消息量之和。详细计算方式参考 [计费概述](https://cloud.tencent.com/document/product/1778/109698)
  * @method integer getClientNumLimit() 获取客户端连接数
  * @method void setClientNumLimit(integer $ClientNumLimit) 设置客户端连接数
  * @method integer getMaxSubscriptionPerClient() 获取单客户端最大订阅数
@@ -49,6 +55,7 @@ class ProductSkuItem extends AbstractModel
      * @var string 规格类型
 BASIC：基础版
 PRO ：专业版
+PLATINUM： 铂金版
      */
     public $InstanceType;
 
@@ -59,6 +66,8 @@ PRO ：专业版
 
     /**
      * @var boolean 是否售卖
+1: 可售卖
+0: 不可售卖
      */
     public $OnSale;
 
@@ -68,7 +77,7 @@ PRO ：专业版
     public $TopicNumLimit;
 
     /**
-     * @var integer tps
+     * @var integer MQTT 集群下每秒钟生产消息量和消费消息量之和。详细计算方式参考 [计费概述](https://cloud.tencent.com/document/product/1778/109698)
      */
     public $TpsLimit;
 
@@ -96,10 +105,13 @@ PRO ：专业版
      * @param string $InstanceType 规格类型
 BASIC：基础版
 PRO ：专业版
+PLATINUM： 铂金版
      * @param string $SkuCode 规格代码
      * @param boolean $OnSale 是否售卖
+1: 可售卖
+0: 不可售卖
      * @param integer $TopicNumLimit topic num限制
-     * @param integer $TpsLimit tps
+     * @param integer $TpsLimit MQTT 集群下每秒钟生产消息量和消费消息量之和。详细计算方式参考 [计费概述](https://cloud.tencent.com/document/product/1778/109698)
      * @param integer $ClientNumLimit 客户端连接数
      * @param integer $MaxSubscriptionPerClient 单客户端最大订阅数
      * @param integer $AuthorizationPolicyLimit 授权规则条数

@@ -118,9 +118,9 @@ HYBRID_PAID:
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScaleStrategy(string $ScaleStrategy) 设置定时伸缩策略
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getScheduledAction() 获取定时停止的配置
+ * @method ScheduledAction getScheduledAction() 获取定时停止的配置
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScheduledAction(string $ScheduledAction) 设置定时停止的配置
+ * @method void setScheduledAction(ScheduledAction $ScheduledAction) 设置定时停止的配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPodList() 获取实例列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -303,7 +303,7 @@ HYBRID_PAID:
     public $ScaleStrategy;
 
     /**
-     * @var string 定时停止的配置
+     * @var ScheduledAction 定时停止的配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScheduledAction;
@@ -430,7 +430,7 @@ HYBRID_PAID:
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScaleStrategy 定时伸缩策略
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ScheduledAction 定时停止的配置
+     * @param ScheduledAction $ScheduledAction 定时停止的配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PodList 实例列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -570,7 +570,8 @@ HYBRID_PAID:
         }
 
         if (array_key_exists("ScheduledAction",$param) and $param["ScheduledAction"] !== null) {
-            $this->ScheduledAction = $param["ScheduledAction"];
+            $this->ScheduledAction = new ScheduledAction();
+            $this->ScheduledAction->deserialize($param["ScheduledAction"]);
         }
 
         if (array_key_exists("PodList",$param) and $param["PodList"] !== null) {

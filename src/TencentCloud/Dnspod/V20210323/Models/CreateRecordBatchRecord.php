@@ -21,29 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 批量添加记录任务中的记录信息
  *
  * @method string getSubDomain() 获取子域名(主机记录)。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubDomain(string $SubDomain) 设置子域名(主机记录)。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRecordType() 获取记录类型, 详见 DescribeRecordType 接口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordType(string $RecordType) 设置记录类型, 详见 DescribeRecordType 接口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRecordLine() 获取解析记录的线路，详见 DescribeRecordLineList 接口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordLine(string $RecordLine) 设置解析记录的线路，详见 DescribeRecordLineList 接口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取记录值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置记录值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTTL() 获取记录的 TTL 值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTTL(integer $TTL) 设置记录的 TTL 值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取记录添加状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置记录添加状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOperation() 获取操作类型
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperation(string $Operation) 设置操作类型
@@ -55,49 +43,39 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getId() 获取此条记录在列表中的ID
  * @method void setId(integer $Id) 设置此条记录在列表中的ID
  * @method integer getMX() 获取记录的MX权重
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMX(integer $MX) 设置记录的MX权重
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWeight() 获取记录的权重
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWeight(integer $Weight) 设置记录的权重
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CreateRecordBatchRecord extends AbstractModel
 {
     /**
      * @var string 子域名(主机记录)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubDomain;
 
     /**
      * @var string 记录类型, 详见 DescribeRecordType 接口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecordType;
 
     /**
      * @var string 解析记录的线路，详见 DescribeRecordLineList 接口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecordLine;
 
     /**
      * @var string 记录值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @var integer 记录的 TTL 值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TTL;
 
     /**
      * @var string 记录添加状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
@@ -120,38 +98,28 @@ class CreateRecordBatchRecord extends AbstractModel
 
     /**
      * @var integer 记录的MX权重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MX;
 
     /**
      * @var integer 记录的权重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Weight;
 
     /**
      * @param string $SubDomain 子域名(主机记录)。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RecordType 记录类型, 详见 DescribeRecordType 接口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RecordLine 解析记录的线路，详见 DescribeRecordLineList 接口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 记录值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TTL 记录的 TTL 值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 记录添加状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Operation 操作类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrMsg 错误信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Id 此条记录在列表中的ID
      * @param integer $MX 记录的MX权重
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Weight 记录的权重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

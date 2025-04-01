@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAmountUnit(string $AmountUnit) 设置价格金额单位，不传默认单位为分，取值：  
 * pent：分
 * microPent：微分
+ * @method string getCpuType() 获取Cpu类型，如：英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD
+ * @method void setCpuType(string $CpuType) 设置Cpu类型，如：英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD
  */
 class DescribePriceRequest extends AbstractModel
 {
@@ -95,6 +97,11 @@ class DescribePriceRequest extends AbstractModel
     public $AmountUnit;
 
     /**
+     * @var string Cpu类型，如：英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD
+     */
+    public $CpuType;
+
+    /**
      * @param string $Zone 欲新购实例的可用区ID。
      * @param integer $NodeCount 实例节点个数，可以通过 DescribeDBInstanceSpecs
  查询实例规格获得。
@@ -108,6 +115,7 @@ class DescribePriceRequest extends AbstractModel
      * @param string $AmountUnit 价格金额单位，不传默认单位为分，取值：  
 * pent：分
 * microPent：微分
+     * @param string $CpuType Cpu类型，如：英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD
      */
     function __construct()
     {
@@ -152,6 +160,10 @@ class DescribePriceRequest extends AbstractModel
 
         if (array_key_exists("AmountUnit",$param) and $param["AmountUnit"] !== null) {
             $this->AmountUnit = $param["AmountUnit"];
+        }
+
+        if (array_key_exists("CpuType",$param) and $param["CpuType"] !== null) {
+            $this->CpuType = $param["CpuType"];
         }
     }
 }

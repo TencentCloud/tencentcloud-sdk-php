@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 指标伸缩行为
  *
  * @method AutoScalerRules getScaleUp() 获取扩容行为配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScaleUp(AutoScalerRules $ScaleUp) 设置扩容行为配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method AutoScalerRules getScaleDown() 获取缩容行为配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScaleDown(AutoScalerRules $ScaleDown) 设置缩容行为配置
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AutoScalerBehavior extends AbstractModel
 {
     /**
      * @var AutoScalerRules 扩容行为配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScaleUp;
 
     /**
      * @var AutoScalerRules 缩容行为配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScaleDown;
 
     /**
      * @param AutoScalerRules $ScaleUp 扩容行为配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoScalerRules $ScaleDown 缩容行为配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

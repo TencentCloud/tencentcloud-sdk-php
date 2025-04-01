@@ -39,13 +39,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getIsReceiverOwner() 获取是否主联系人
  * @method void setIsReceiverOwner(integer $IsReceiverOwner) 设置是否主联系人
  * @method integer getWechatFlag() 获取是否允许微信接收通知
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWechatFlag(integer $WechatFlag) 设置是否允许微信接收通知
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUin() 获取账号uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUin(integer $Uin) 设置账号uin
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Receiver extends AbstractModel
 {
@@ -92,13 +88,11 @@ class Receiver extends AbstractModel
 
     /**
      * @var integer 是否允许微信接收通知
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WechatFlag;
 
     /**
      * @var integer 账号uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uin;
 
@@ -113,9 +107,7 @@ class Receiver extends AbstractModel
      * @param integer $EmailFlag 邮箱是否验证
      * @param integer $IsReceiverOwner 是否主联系人
      * @param integer $WechatFlag 是否允许微信接收通知
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Uin 账号uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

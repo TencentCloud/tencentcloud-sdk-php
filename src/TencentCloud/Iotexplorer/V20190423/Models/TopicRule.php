@@ -25,17 +25,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSql() 获取规则的SQL语句，如： SELECT * FROM 'pid/dname/event'，然后对其进行base64编码，得：U0VMRUNUICogRlJPTSAncGlkL2RuYW1lL2V2ZW50Jw==
  * @method void setSql(string $Sql) 设置规则的SQL语句，如： SELECT * FROM 'pid/dname/event'，然后对其进行base64编码，得：U0VMRUNUICogRlJPTSAncGlkL2RuYW1lL2V2ZW50Jw==
  * @method string getDescription() 获取规则描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置规则描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getActions() 获取行为的JSON字符串。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActions(string $Actions) 设置行为的JSON字符串。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getRuleDisabled() 获取是否禁用规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleDisabled(boolean $RuleDisabled) 设置是否禁用规则
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TopicRule extends AbstractModel
 {
@@ -51,19 +45,16 @@ class TopicRule extends AbstractModel
 
     /**
      * @var string 规则描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var string 行为的JSON字符串。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Actions;
 
     /**
      * @var boolean 是否禁用规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleDisabled;
 
@@ -71,11 +62,8 @@ class TopicRule extends AbstractModel
      * @param string $RuleName 规则名称。
      * @param string $Sql 规则的SQL语句，如： SELECT * FROM 'pid/dname/event'，然后对其进行base64编码，得：U0VMRUNUICogRlJPTSAncGlkL2RuYW1lL2V2ZW50Jw==
      * @param string $Description 规则描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Actions 行为的JSON字符串。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $RuleDisabled 是否禁用规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

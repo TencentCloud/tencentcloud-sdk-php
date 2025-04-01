@@ -22,12 +22,24 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAndroidInstanceId() 获取安卓实例 ID
  * @method void setAndroidInstanceId(string $AndroidInstanceId) 设置安卓实例 ID
- * @method integer getWidth() 获取分辨率宽度
- * @method void setWidth(integer $Width) 设置分辨率宽度
- * @method integer getHeight() 获取分辨率高度
- * @method void setHeight(integer $Height) 设置分辨率高度
+ * @method integer getWidth() 获取分辨率宽度。建议按照以下数值设置，避免出现性能不足问题：
+实例类型为单开（A1）、双开（A2）、三开（ A3）：建议设置为 1080
+实例类型为 四开（A4） 及以上：建议设置为 720
+ * @method void setWidth(integer $Width) 设置分辨率宽度。建议按照以下数值设置，避免出现性能不足问题：
+实例类型为单开（A1）、双开（A2）、三开（ A3）：建议设置为 1080
+实例类型为 四开（A4） 及以上：建议设置为 720
+ * @method integer getHeight() 获取分辨率高度。建议按照以下数值设置，避免出现性能不足问题：
+实例类型为单开（A1）、双开（A2）、三开（ A3）：建议设置为 1920
+实例类型为 四开（A4） 及以上：建议设置为 1280
+ * @method void setHeight(integer $Height) 设置分辨率高度。建议按照以下数值设置，避免出现性能不足问题：
+实例类型为单开（A1）、双开（A2）、三开（ A3）：建议设置为 1920
+实例类型为 四开（A4） 及以上：建议设置为 1280
  * @method integer getDPI() 获取每英寸像素点。如果不填，系统将会计算一个合理的数值。修改 DPI 可能会导致 App 异常退出，请谨慎使用！
+分辨率为 720x1280：建议配置为 320
+分辨率为  1080x1920：建议配置为 480
  * @method void setDPI(integer $DPI) 设置每英寸像素点。如果不填，系统将会计算一个合理的数值。修改 DPI 可能会导致 App 异常退出，请谨慎使用！
+分辨率为 720x1280：建议配置为 320
+分辨率为  1080x1920：建议配置为 480
  */
 class ModifyAndroidInstanceResolutionRequest extends AbstractModel
 {
@@ -37,25 +49,37 @@ class ModifyAndroidInstanceResolutionRequest extends AbstractModel
     public $AndroidInstanceId;
 
     /**
-     * @var integer 分辨率宽度
+     * @var integer 分辨率宽度。建议按照以下数值设置，避免出现性能不足问题：
+实例类型为单开（A1）、双开（A2）、三开（ A3）：建议设置为 1080
+实例类型为 四开（A4） 及以上：建议设置为 720
      */
     public $Width;
 
     /**
-     * @var integer 分辨率高度
+     * @var integer 分辨率高度。建议按照以下数值设置，避免出现性能不足问题：
+实例类型为单开（A1）、双开（A2）、三开（ A3）：建议设置为 1920
+实例类型为 四开（A4） 及以上：建议设置为 1280
      */
     public $Height;
 
     /**
      * @var integer 每英寸像素点。如果不填，系统将会计算一个合理的数值。修改 DPI 可能会导致 App 异常退出，请谨慎使用！
+分辨率为 720x1280：建议配置为 320
+分辨率为  1080x1920：建议配置为 480
      */
     public $DPI;
 
     /**
      * @param string $AndroidInstanceId 安卓实例 ID
-     * @param integer $Width 分辨率宽度
-     * @param integer $Height 分辨率高度
+     * @param integer $Width 分辨率宽度。建议按照以下数值设置，避免出现性能不足问题：
+实例类型为单开（A1）、双开（A2）、三开（ A3）：建议设置为 1080
+实例类型为 四开（A4） 及以上：建议设置为 720
+     * @param integer $Height 分辨率高度。建议按照以下数值设置，避免出现性能不足问题：
+实例类型为单开（A1）、双开（A2）、三开（ A3）：建议设置为 1920
+实例类型为 四开（A4） 及以上：建议设置为 1280
      * @param integer $DPI 每英寸像素点。如果不填，系统将会计算一个合理的数值。修改 DPI 可能会导致 App 异常退出，请谨慎使用！
+分辨率为 720x1280：建议配置为 320
+分辨率为  1080x1920：建议配置为 480
      */
     function __construct()
     {

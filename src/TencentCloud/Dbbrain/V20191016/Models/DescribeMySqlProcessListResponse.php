@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Batch\V20170312\Models;
+namespace TencentCloud\Dbbrain\V20191016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeCpmOsInfo返回参数结构体
+ * DescribeMySqlProcessList返回参数结构体
  *
- * @method array getOsInfoSet() 获取操作系统信息列表。
- * @method void setOsInfoSet(array $OsInfoSet) 设置操作系统信息列表。
+ * @method array getProcessList() 获取实时线程列表。
+ * @method void setProcessList(array $ProcessList) 设置实时线程列表。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeCpmOsInfoResponse extends AbstractModel
+class DescribeMySqlProcessListResponse extends AbstractModel
 {
     /**
-     * @var array 操作系统信息列表。
+     * @var array 实时线程列表。
      */
-    public $OsInfoSet;
+    public $ProcessList;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class DescribeCpmOsInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $OsInfoSet 操作系统信息列表。
+     * @param array $ProcessList 实时线程列表。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,12 +54,12 @@ class DescribeCpmOsInfoResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OsInfoSet",$param) and $param["OsInfoSet"] !== null) {
-            $this->OsInfoSet = [];
-            foreach ($param["OsInfoSet"] as $key => $value){
-                $obj = new OsInfo();
+        if (array_key_exists("ProcessList",$param) and $param["ProcessList"] !== null) {
+            $this->ProcessList = [];
+            foreach ($param["ProcessList"] as $key => $value){
+                $obj = new MySqlProcess();
                 $obj->deserialize($value);
-                array_push($this->OsInfoSet, $obj);
+                array_push($this->ProcessList, $obj);
             }
         }
 

@@ -44,53 +44,29 @@ use TencentCloud\Common\AbstractModel;
  * @method string getExpireTime() 获取过期时间，公共实例过期时间 0001-01-01T00:00:00Z，公共实例是永久有效
  * @method void setExpireTime(string $ExpireTime) 设置过期时间，公共实例过期时间 0001-01-01T00:00:00Z，公共实例是永久有效
  * @method integer getTotalDevice() 获取总设备数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalDevice(integer $TotalDevice) 设置总设备数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getActivateDevice() 获取激活设备数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActivateDevice(integer $ActivateDevice) 设置激活设备数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取实例状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置实例状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUpDownTPS() 获取消息上下行配置TPS
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpDownTPS(integer $UpDownTPS) 设置消息上下行配置TPS
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUpDownCurrentTPS() 获取当前消息上下行TPS
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpDownCurrentTPS(integer $UpDownCurrentTPS) 设置当前消息上下行TPS
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getForwardTPS() 获取消息转发配置TPS
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setForwardTPS(integer $ForwardTPS) 设置消息转发配置TPS
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getForwardCurrentTPS() 获取消息转发当前TPS
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setForwardCurrentTPS(integer $ForwardCurrentTPS) 设置消息转发当前TPS
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCellNum() 获取实例单元数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCellNum(integer $CellNum) 设置实例单元数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBillingTag() 获取实例Tag，企业实例必传
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBillingTag(string $BillingTag) 设置实例Tag，企业实例必传
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEverydayFreeMessageCount() 获取每日消息数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEverydayFreeMessageCount(integer $EverydayFreeMessageCount) 设置每日消息数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxDeviceOnlineCount() 获取最大在线设备数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxDeviceOnlineCount(integer $MaxDeviceOnlineCount) 设置最大在线设备数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceDetail extends AbstractModel
 {
@@ -151,73 +127,61 @@ class InstanceDetail extends AbstractModel
 
     /**
      * @var integer 总设备数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalDevice;
 
     /**
      * @var integer 激活设备数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActivateDevice;
 
     /**
      * @var string 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var integer 实例状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var integer 消息上下行配置TPS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpDownTPS;
 
     /**
      * @var integer 当前消息上下行TPS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpDownCurrentTPS;
 
     /**
      * @var integer 消息转发配置TPS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ForwardTPS;
 
     /**
      * @var integer 消息转发当前TPS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ForwardCurrentTPS;
 
     /**
      * @var integer 实例单元数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CellNum;
 
     /**
      * @var string 实例Tag，企业实例必传
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BillingTag;
 
     /**
      * @var integer 每日消息数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EverydayFreeMessageCount;
 
     /**
      * @var integer 最大在线设备数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxDeviceOnlineCount;
 
@@ -234,29 +198,17 @@ class InstanceDetail extends AbstractModel
      * @param string $UpdateTime 更新时间
      * @param string $ExpireTime 过期时间，公共实例过期时间 0001-01-01T00:00:00Z，公共实例是永久有效
      * @param integer $TotalDevice 总设备数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ActivateDevice 激活设备数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 实例状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UpDownTPS 消息上下行配置TPS
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UpDownCurrentTPS 当前消息上下行TPS
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ForwardTPS 消息转发配置TPS
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ForwardCurrentTPS 消息转发当前TPS
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CellNum 实例单元数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BillingTag 实例Tag，企业实例必传
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EverydayFreeMessageCount 每日消息数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxDeviceOnlineCount 最大在线设备数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,129 +21,89 @@ use TencentCloud\Common\AbstractModel;
  * 账号工厂基线项
  *
  * @method string getIdentifier() 获取账号工厂基线项唯一标识，只能包含英文字母、数字和@、,._[]-:()（）【】+=，。，长度2-128个字符。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIdentifier(string $Identifier) 设置账号工厂基线项唯一标识，只能包含英文字母、数字和@、,._[]-:()（）【】+=，。，长度2-128个字符。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取基线项名称，功能项名字唯一，仅支持英文字母、数宇、汉字、符号@、＆_[]-的组合，1-25个中文或英文字符。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置基线项名称，功能项名字唯一，仅支持英文字母、数宇、汉字、符号@、＆_[]-的组合，1-25个中文或英文字符。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNameEn() 获取基线项英文名称，基线项名字唯一，仅支持英文字母、数字、空格、符号@、＆_[]-的组合，1-64个英文字符。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNameEn(string $NameEn) 设置基线项英文名称，基线项名字唯一，仅支持英文字母、数字、空格、符号@、＆_[]-的组合，1-64个英文字符。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWeight() 获取基线项权重，数值小权重越高，取值范围大于等于0。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWeight(integer $Weight) 设置基线项权重，数值小权重越高，取值范围大于等于0。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRequired() 获取基线项是否必填，1必填，0非必填
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRequired(integer $Required) 设置基线项是否必填，1必填，0非必填
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDependsOn() 获取基线项依赖项，N的取值范围与该基线项依赖的其它基线项个数有关。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDependsOn(array $DependsOn) 设置基线项依赖项，N的取值范围与该基线项依赖的其它基线项个数有关。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取基线描述，长度为2~256个英文或中文字符，默认值为空。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置基线描述，长度为2~256个英文或中文字符，默认值为空。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescriptionEn() 获取基线项英文描述，长度为2~1024个英文字符，默认值为空。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescriptionEn(string $DescriptionEn) 设置基线项英文描述，长度为2~1024个英文字符，默认值为空。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClassify() 获取基线分类，长度为2~32个英文或中文字符，不能为空。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClassify(string $Classify) 设置基线分类，长度为2~32个英文或中文字符，不能为空。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClassifyEn() 获取基线英文分类，长度为2~64个英文字符，不能为空。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClassifyEn(string $ClassifyEn) 设置基线英文分类，长度为2~64个英文字符，不能为空。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AccountFactoryItem extends AbstractModel
 {
     /**
      * @var string 账号工厂基线项唯一标识，只能包含英文字母、数字和@、,._[]-:()（）【】+=，。，长度2-128个字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Identifier;
 
     /**
      * @var string 基线项名称，功能项名字唯一，仅支持英文字母、数宇、汉字、符号@、＆_[]-的组合，1-25个中文或英文字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 基线项英文名称，基线项名字唯一，仅支持英文字母、数字、空格、符号@、＆_[]-的组合，1-64个英文字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NameEn;
 
     /**
      * @var integer 基线项权重，数值小权重越高，取值范围大于等于0。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Weight;
 
     /**
      * @var integer 基线项是否必填，1必填，0非必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Required;
 
     /**
      * @var array 基线项依赖项，N的取值范围与该基线项依赖的其它基线项个数有关。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DependsOn;
 
     /**
      * @var string 基线描述，长度为2~256个英文或中文字符，默认值为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var string 基线项英文描述，长度为2~1024个英文字符，默认值为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DescriptionEn;
 
     /**
      * @var string 基线分类，长度为2~32个英文或中文字符，不能为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Classify;
 
     /**
      * @var string 基线英文分类，长度为2~64个英文字符，不能为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClassifyEn;
 
     /**
      * @param string $Identifier 账号工厂基线项唯一标识，只能包含英文字母、数字和@、,._[]-:()（）【】+=，。，长度2-128个字符。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 基线项名称，功能项名字唯一，仅支持英文字母、数宇、汉字、符号@、＆_[]-的组合，1-25个中文或英文字符。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NameEn 基线项英文名称，基线项名字唯一，仅支持英文字母、数字、空格、符号@、＆_[]-的组合，1-64个英文字符。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Weight 基线项权重，数值小权重越高，取值范围大于等于0。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Required 基线项是否必填，1必填，0非必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DependsOn 基线项依赖项，N的取值范围与该基线项依赖的其它基线项个数有关。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 基线描述，长度为2~256个英文或中文字符，默认值为空。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DescriptionEn 基线项英文描述，长度为2~1024个英文字符，默认值为空。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Classify 基线分类，长度为2~32个英文或中文字符，不能为空。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClassifyEn 基线英文分类，长度为2~64个英文字符，不能为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

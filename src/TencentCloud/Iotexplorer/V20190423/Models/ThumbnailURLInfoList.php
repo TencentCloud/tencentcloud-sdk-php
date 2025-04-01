@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 缩略图信息
  *
  * @method string getThumbnailURL() 获取缩略图访问地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setThumbnailURL(string $ThumbnailURL) 设置缩略图访问地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getExpireTime() 获取缩略图访问地址的过期时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpireTime(integer $ExpireTime) 设置缩略图访问地址的过期时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ThumbnailURLInfoList extends AbstractModel
 {
     /**
      * @var string 缩略图访问地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ThumbnailURL;
 
     /**
      * @var integer 缩略图访问地址的过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpireTime;
 
     /**
      * @param string $ThumbnailURL 缩略图访问地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ExpireTime 缩略图访问地址的过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

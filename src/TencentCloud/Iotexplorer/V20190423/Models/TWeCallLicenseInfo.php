@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * TWeCall信息
  *
  * @method string getTWeCallType() 获取voip类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTWeCallType(string $TWeCallType) 设置voip类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalNum() 获取总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalNum(integer $TotalNum) 设置总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUsedNum() 获取已使用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsedNum(integer $UsedNum) 设置已使用
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TWeCallLicenseInfo extends AbstractModel
 {
     /**
      * @var string voip类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TWeCallType;
 
     /**
      * @var integer 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalNum;
 
     /**
      * @var integer 已使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UsedNum;
 
     /**
      * @param string $TWeCallType voip类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalNum 总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UsedNum 已使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 授权小程序信息
  *
  * @method string getMiniProgramAppId() 获取小程序APPID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMiniProgramAppId(string $MiniProgramAppId) 设置小程序APPID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(integer $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMiniProgramName() 获取小程序名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMiniProgramName(string $MiniProgramName) 设置小程序名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLicenseNum() 获取激活码数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLicenseNum(integer $LicenseNum) 设置激活码数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIotAppId() 获取应用ID 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIotAppId(string $IotAppId) 设置应用ID 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIotAppName() 获取应用名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIotAppName(string $IotAppName) 设置应用名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AuthMiniProgramAppInfo extends AbstractModel
 {
     /**
      * @var string 小程序APPID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MiniProgramAppId;
 
     /**
      * @var integer 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 小程序名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MiniProgramName;
 
     /**
      * @var integer 激活码数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LicenseNum;
 
     /**
      * @var string 应用ID 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IotAppId;
 
     /**
      * @var string 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IotAppName;
 
     /**
      * @param string $MiniProgramAppId 小程序APPID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MiniProgramName 小程序名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LicenseNum 激活码数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IotAppId 应用ID 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IotAppName 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

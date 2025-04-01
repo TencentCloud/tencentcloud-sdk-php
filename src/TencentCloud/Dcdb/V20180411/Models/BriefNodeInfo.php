@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRole(string $Role) 设置DB节点角色，取值为master或者slave
  * @method string getShardId() 获取节点所属分片的分片ID
  * @method void setShardId(string $ShardId) 设置节点所属分片的分片ID
+ * @method string getZone() 获取节点所在可用区
+ * @method void setZone(string $Zone) 设置节点所在可用区
  */
 class BriefNodeInfo extends AbstractModel
 {
@@ -45,9 +47,15 @@ class BriefNodeInfo extends AbstractModel
     public $ShardId;
 
     /**
+     * @var string 节点所在可用区
+     */
+    public $Zone;
+
+    /**
      * @param string $NodeId DB节点ID
      * @param string $Role DB节点角色，取值为master或者slave
      * @param string $ShardId 节点所属分片的分片ID
+     * @param string $Zone 节点所在可用区
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class BriefNodeInfo extends AbstractModel
 
         if (array_key_exists("ShardId",$param) and $param["ShardId"] !== null) {
             $this->ShardId = $param["ShardId"];
+        }
+
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
         }
     }
 }

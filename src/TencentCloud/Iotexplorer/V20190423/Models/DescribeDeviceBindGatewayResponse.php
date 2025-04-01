@@ -21,25 +21,15 @@ use TencentCloud\Common\AbstractModel;
  * DescribeDeviceBindGateway返回参数结构体
  *
  * @method string getGatewayProductId() 获取网关产品ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGatewayProductId(string $GatewayProductId) 设置网关产品ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGatewayDeviceName() 获取网关设备名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGatewayDeviceName(string $GatewayDeviceName) 设置网关设备名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGatewayName() 获取网关产品名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGatewayName(string $GatewayName) 设置网关产品名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGatewayProductOwnerName() 获取设备对应产品所属的主账号名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGatewayProductOwnerName(string $GatewayProductOwnerName) 设置设备对应产品所属的主账号名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGatewayProductOwnerUin() 获取设备对应产品所属的主账号 UIN
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGatewayProductOwnerUin(string $GatewayProductOwnerUin) 设置设备对应产品所属的主账号 UIN
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -47,31 +37,26 @@ class DescribeDeviceBindGatewayResponse extends AbstractModel
 {
     /**
      * @var string 网关产品ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GatewayProductId;
 
     /**
      * @var string 网关设备名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GatewayDeviceName;
 
     /**
      * @var string 网关产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GatewayName;
 
     /**
      * @var string 设备对应产品所属的主账号名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GatewayProductOwnerName;
 
     /**
      * @var string 设备对应产品所属的主账号 UIN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GatewayProductOwnerUin;
 
@@ -82,15 +67,10 @@ class DescribeDeviceBindGatewayResponse extends AbstractModel
 
     /**
      * @param string $GatewayProductId 网关产品ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GatewayDeviceName 网关设备名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GatewayName 网关产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GatewayProductOwnerName 设备对应产品所属的主账号名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GatewayProductOwnerUin 设备对应产品所属的主账号 UIN
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

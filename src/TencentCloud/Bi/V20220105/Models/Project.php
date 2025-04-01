@@ -102,6 +102,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigList(array $ConfigList) 设置定制化参数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreatedUserName() 获取创建人
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreatedUserName(string $CreatedUserName) 设置创建人
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOwner() 获取所属人id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOwner(string $Owner) 设置所属人id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOwnerName() 获取所属人
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOwnerName(string $OwnerName) 设置所属人
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Project extends AbstractModel
 {
@@ -231,6 +243,24 @@ class Project extends AbstractModel
     public $ConfigList;
 
     /**
+     * @var string 创建人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreatedUserName;
+
+    /**
+     * @var string 所属人id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Owner;
+
+    /**
+     * @var string 所属人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OwnerName;
+
+    /**
      * @param integer $Id 项目ID
      * @param string $Logo 项目Logo
 注意：此字段可能返回 null，表示取不到有效值。
@@ -271,6 +301,12 @@ class Project extends AbstractModel
      * @param string $ManagePlatform 托管平台名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ConfigList 定制化参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreatedUserName 创建人
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Owner 所属人id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OwnerName 所属人
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -373,6 +409,18 @@ class Project extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ConfigList, $obj);
             }
+        }
+
+        if (array_key_exists("CreatedUserName",$param) and $param["CreatedUserName"] !== null) {
+            $this->CreatedUserName = $param["CreatedUserName"];
+        }
+
+        if (array_key_exists("Owner",$param) and $param["Owner"] !== null) {
+            $this->Owner = $param["Owner"];
+        }
+
+        if (array_key_exists("OwnerName",$param) and $param["OwnerName"] !== null) {
+            $this->OwnerName = $param["OwnerName"];
         }
     }
 }

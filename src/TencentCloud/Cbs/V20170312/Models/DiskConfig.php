@@ -22,20 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getAvailable() 获取配置是否可用。
  * @method void setAvailable(boolean $Available) 设置配置是否可用。
- * @method string getDiskChargeType() 获取付费模式。取值范围：<br><li>PREPAID：表示预付费，即包年包月<br><li>POSTPAID_BY_HOUR：表示后付费，即按量计费。
- * @method void setDiskChargeType(string $DiskChargeType) 设置付费模式。取值范围：<br><li>PREPAID：表示预付费，即包年包月<br><li>POSTPAID_BY_HOUR：表示后付费，即按量计费。
+ * @method string getDiskChargeType() 获取付费模式。取值范围：<br><li>PREPAID：表示预付费，即包年包月</li><br><li>POSTPAID_BY_HOUR：表示后付费，即按量计费。</li>
+ * @method void setDiskChargeType(string $DiskChargeType) 设置付费模式。取值范围：<br><li>PREPAID：表示预付费，即包年包月</li><br><li>POSTPAID_BY_HOUR：表示后付费，即按量计费。</li>
  * @method string getZone() 获取云硬盘所属的[可用区](/document/product/213/15753#ZoneInfo)。
  * @method void setZone(string $Zone) 设置云硬盘所属的[可用区](/document/product/213/15753#ZoneInfo)。
  * @method string getInstanceFamily() 获取实例机型系列。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceFamily(string $InstanceFamily) 设置实例机型系列。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDiskType() 获取云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
- * @method void setDiskType(string $DiskType) 设置云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
+ * @method string getDiskType() 获取云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘</li><br><li>CLOUD_PREMIUM：表示高性能云硬盘</li><br><li>CLOUD_SSD：SSD表示SSD云硬盘。</li>
+ * @method void setDiskType(string $DiskType) 设置云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘</li><br><li>CLOUD_PREMIUM：表示高性能云硬盘</li><br><li>CLOUD_SSD：SSD表示SSD云硬盘。</li>
  * @method integer getStepSize() 获取云盘大小变化的最小步长，单位GB。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStepSize(integer $StepSize) 设置云盘大小变化的最小步长，单位GB。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getExtraPerformanceRange() 获取额外的性能区间。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtraPerformanceRange(array $ExtraPerformanceRange) 设置额外的性能区间。
@@ -44,16 +42,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceClass(string $DeviceClass) 设置实例机型。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDiskUsage() 获取云盘类型。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。
- * @method void setDiskUsage(string $DiskUsage) 设置云盘类型。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。
+ * @method string getDiskUsage() 获取云盘类型。取值范围：<br><li>SYSTEM_DISK：表示系统盘</li><br><li>DATA_DISK：表示数据盘。</li>
+ * @method void setDiskUsage(string $DiskUsage) 设置云盘类型。取值范围：<br><li>SYSTEM_DISK：表示系统盘</li><br><li>DATA_DISK：表示数据盘。</li>
  * @method integer getMinDiskSize() 获取最小可配置云盘大小，单位GB。
  * @method void setMinDiskSize(integer $MinDiskSize) 设置最小可配置云盘大小，单位GB。
  * @method integer getMaxDiskSize() 获取最大可配置云盘大小，单位GB。
  * @method void setMaxDiskSize(integer $MaxDiskSize) 设置最大可配置云盘大小，单位GB。
  * @method Price getPrice() 获取描述预付费或后付费云盘的价格。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrice(Price $Price) 设置描述预付费或后付费云盘的价格。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DiskConfig extends AbstractModel
 {
@@ -63,7 +59,7 @@ class DiskConfig extends AbstractModel
     public $Available;
 
     /**
-     * @var string 付费模式。取值范围：<br><li>PREPAID：表示预付费，即包年包月<br><li>POSTPAID_BY_HOUR：表示后付费，即按量计费。
+     * @var string 付费模式。取值范围：<br><li>PREPAID：表示预付费，即包年包月</li><br><li>POSTPAID_BY_HOUR：表示后付费，即按量计费。</li>
      */
     public $DiskChargeType;
 
@@ -79,13 +75,12 @@ class DiskConfig extends AbstractModel
     public $InstanceFamily;
 
     /**
-     * @var string 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
+     * @var string 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘</li><br><li>CLOUD_PREMIUM：表示高性能云硬盘</li><br><li>CLOUD_SSD：SSD表示SSD云硬盘。</li>
      */
     public $DiskType;
 
     /**
      * @var integer 云盘大小变化的最小步长，单位GB。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StepSize;
 
@@ -102,7 +97,7 @@ class DiskConfig extends AbstractModel
     public $DeviceClass;
 
     /**
-     * @var string 云盘类型。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。
+     * @var string 云盘类型。取值范围：<br><li>SYSTEM_DISK：表示系统盘</li><br><li>DATA_DISK：表示数据盘。</li>
      */
     public $DiskUsage;
 
@@ -118,28 +113,25 @@ class DiskConfig extends AbstractModel
 
     /**
      * @var Price 描述预付费或后付费云盘的价格。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Price;
 
     /**
      * @param boolean $Available 配置是否可用。
-     * @param string $DiskChargeType 付费模式。取值范围：<br><li>PREPAID：表示预付费，即包年包月<br><li>POSTPAID_BY_HOUR：表示后付费，即按量计费。
+     * @param string $DiskChargeType 付费模式。取值范围：<br><li>PREPAID：表示预付费，即包年包月</li><br><li>POSTPAID_BY_HOUR：表示后付费，即按量计费。</li>
      * @param string $Zone 云硬盘所属的[可用区](/document/product/213/15753#ZoneInfo)。
      * @param string $InstanceFamily 实例机型系列。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DiskType 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：SSD表示SSD云硬盘。
+     * @param string $DiskType 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘</li><br><li>CLOUD_PREMIUM：表示高性能云硬盘</li><br><li>CLOUD_SSD：SSD表示SSD云硬盘。</li>
      * @param integer $StepSize 云盘大小变化的最小步长，单位GB。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ExtraPerformanceRange 额外的性能区间。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceClass 实例机型。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DiskUsage 云盘类型。取值范围：<br><li>SYSTEM_DISK：表示系统盘<br><li>DATA_DISK：表示数据盘。
+     * @param string $DiskUsage 云盘类型。取值范围：<br><li>SYSTEM_DISK：表示系统盘</li><br><li>DATA_DISK：表示数据盘。</li>
      * @param integer $MinDiskSize 最小可配置云盘大小，单位GB。
      * @param integer $MaxDiskSize 最大可配置云盘大小，单位GB。
      * @param Price $Price 描述预付费或后付费云盘的价格。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

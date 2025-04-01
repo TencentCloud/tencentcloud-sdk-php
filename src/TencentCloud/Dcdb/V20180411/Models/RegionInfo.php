@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneList(array $ZoneList) 设置可用区列表
  * @method array getAvailableChoice() 获取可选择的主可用区和从可用区
  * @method void setAvailableChoice(array $AvailableChoice) 设置可选择的主可用区和从可用区
+ * @method string getHostType() 获取主机类型，如：物理机：Machine，容器：Container。
+ * @method void setHostType(string $HostType) 设置主机类型，如：物理机：Machine，容器：Container。
+ * @method string getCpuType() 获取Cpu类型，如：英特尔：Intel/AMD，海光：Hygon
+ * @method void setCpuType(string $CpuType) 设置Cpu类型，如：英特尔：Intel/AMD，海光：Hygon
  */
 class RegionInfo extends AbstractModel
 {
@@ -59,11 +63,23 @@ class RegionInfo extends AbstractModel
     public $AvailableChoice;
 
     /**
+     * @var string 主机类型，如：物理机：Machine，容器：Container。
+     */
+    public $HostType;
+
+    /**
+     * @var string Cpu类型，如：英特尔：Intel/AMD，海光：Hygon
+     */
+    public $CpuType;
+
+    /**
      * @param string $Region 地域英文ID
      * @param integer $RegionId 地域数字ID
      * @param string $RegionName 地域中文名
      * @param array $ZoneList 可用区列表
      * @param array $AvailableChoice 可选择的主可用区和从可用区
+     * @param string $HostType 主机类型，如：物理机：Machine，容器：Container。
+     * @param string $CpuType Cpu类型，如：英特尔：Intel/AMD，海光：Hygon
      */
     function __construct()
     {
@@ -106,6 +122,14 @@ class RegionInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->AvailableChoice, $obj);
             }
+        }
+
+        if (array_key_exists("HostType",$param) and $param["HostType"] !== null) {
+            $this->HostType = $param["HostType"];
+        }
+
+        if (array_key_exists("CpuType",$param) and $param["CpuType"] !== null) {
+            $this->CpuType = $param["CpuType"];
         }
     }
 }

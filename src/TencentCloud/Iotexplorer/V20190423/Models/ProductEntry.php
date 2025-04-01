@@ -51,37 +51,21 @@ wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、els
  * @method integer getModuleId() 获取产品ModuleId
  * @method void setModuleId(integer $ModuleId) 设置产品ModuleId
  * @method string getEnableProductScript() 获取是否使用脚本进行二进制转json功能 可以取值 true / false
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableProductScript(string $EnableProductScript) 设置是否使用脚本进行二进制转json功能 可以取值 true / false
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreateUserId() 获取创建人 UinId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateUserId(integer $CreateUserId) 设置创建人 UinId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatorNickName() 获取创建者昵称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatorNickName(string $CreatorNickName) 设置创建者昵称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBindStrategy() 获取绑定策略（1：强踢；2：非强踢；0：表示无意义）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBindStrategy(integer $BindStrategy) 设置绑定策略（1：强踢；2：非强踢；0：表示无意义）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDeviceCount() 获取设备数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceCount(integer $DeviceCount) 设置设备数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRate() 获取平均传输速率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRate(string $Rate) 设置平均传输速率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPeriod() 获取有效期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPeriod(string $Period) 设置有效期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsInterconnection() 获取互联互通标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsInterconnection(integer $IsInterconnection) 设置互联互通标识
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProductEntry extends AbstractModel
 {
@@ -158,49 +142,41 @@ wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、els
 
     /**
      * @var string 是否使用脚本进行二进制转json功能 可以取值 true / false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableProductScript;
 
     /**
      * @var integer 创建人 UinId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateUserId;
 
     /**
      * @var string 创建者昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatorNickName;
 
     /**
      * @var integer 绑定策略（1：强踢；2：非强踢；0：表示无意义）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BindStrategy;
 
     /**
      * @var integer 设备数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceCount;
 
     /**
      * @var string 平均传输速率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Rate;
 
     /**
      * @var string 有效期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Period;
 
     /**
      * @var integer 互联互通标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsInterconnection;
 
@@ -221,21 +197,13 @@ wifi、wifi-ble、cellular、5g、lorawan、ble、ethernet、wifi-ethernet、els
      * @param string $ProjectId 项目ID
      * @param integer $ModuleId 产品ModuleId
      * @param string $EnableProductScript 是否使用脚本进行二进制转json功能 可以取值 true / false
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateUserId 创建人 UinId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatorNickName 创建者昵称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BindStrategy 绑定策略（1：强踢；2：非强踢；0：表示无意义）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DeviceCount 设备数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Rate 平均传输速率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Period 有效期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsInterconnection 互联互通标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

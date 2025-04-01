@@ -31,9 +31,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getOriginType() 获取源站类型。取值有：<li>HTTP：HTTP 源。</li>
  * @method void setOriginType(string $OriginType) 设置源站类型。取值有：<li>HTTP：HTTP 源。</li>
  * @method IncrementalMigrationHttpOriginConfig getHttpOriginConfig() 获取回源源站配置。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHttpOriginConfig(IncrementalMigrationHttpOriginConfig $HttpOriginConfig) 设置回源源站配置。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class IncrementalMigrationStrategyInfo extends AbstractModel
 {
@@ -64,7 +62,6 @@ class IncrementalMigrationStrategyInfo extends AbstractModel
 
     /**
      * @var IncrementalMigrationHttpOriginConfig 回源源站配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HttpOriginConfig;
 
@@ -75,7 +72,6 @@ class IncrementalMigrationStrategyInfo extends AbstractModel
      * @param string $BucketId 策略生效的存储桶 ID。
      * @param string $OriginType 源站类型。取值有：<li>HTTP：HTTP 源。</li>
      * @param IncrementalMigrationHttpOriginConfig $HttpOriginConfig 回源源站配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

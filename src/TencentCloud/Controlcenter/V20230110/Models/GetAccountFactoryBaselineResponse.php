@@ -21,25 +21,15 @@ use TencentCloud\Common\AbstractModel;
  * GetAccountFactoryBaseline返回参数结构体
  *
  * @method integer getOwnerUin() 获取资源所属主账号uin。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOwnerUin(integer $OwnerUin) 设置资源所属主账号uin。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取基线项名称，基线项名字唯一，仅支持英文字母、数宇、汉字、符号@、＆_[]-的组合，1-25个中文或英文字符。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置基线项名称，基线项名字唯一，仅支持英文字母、数宇、汉字、符号@、＆_[]-的组合，1-25个中文或英文字符。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getBaselineConfigItems() 获取基线项配置列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBaselineConfigItems(array $BaselineConfigItems) 设置基线项配置列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间，按照ISO8601标准表示，格式为yyyy-MM-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间，按照ISO8601标准表示，格式为yyyy-MM-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取更新时间，按照ISO8601标准表示，格式为yyyy-MM-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间，按照ISO8601标准表示，格式为yyyy-MM-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -47,31 +37,26 @@ class GetAccountFactoryBaselineResponse extends AbstractModel
 {
     /**
      * @var integer 资源所属主账号uin。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OwnerUin;
 
     /**
      * @var string 基线项名称，基线项名字唯一，仅支持英文字母、数宇、汉字、符号@、＆_[]-的组合，1-25个中文或英文字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var array 基线项配置列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BaselineConfigItems;
 
     /**
      * @var string 创建时间，按照ISO8601标准表示，格式为yyyy-MM-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 更新时间，按照ISO8601标准表示，格式为yyyy-MM-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
@@ -82,15 +67,10 @@ class GetAccountFactoryBaselineResponse extends AbstractModel
 
     /**
      * @param integer $OwnerUin 资源所属主账号uin。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 基线项名称，基线项名字唯一，仅支持英文字母、数宇、汉字、符号@、＆_[]-的组合，1-25个中文或英文字符。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $BaselineConfigItems 基线项配置列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间，按照ISO8601标准表示，格式为yyyy-MM-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 更新时间，按照ISO8601标准表示，格式为yyyy-MM-dd hh:mm:ss。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

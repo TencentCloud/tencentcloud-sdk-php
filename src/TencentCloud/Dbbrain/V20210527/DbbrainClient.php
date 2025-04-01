@@ -71,11 +71,13 @@ use TencentCloud\Dbbrain\V20210527\Models as Models;
  * @method Models\DescribeRedisCommandCostStatisticsResponse DescribeRedisCommandCostStatistics(Models\DescribeRedisCommandCostStatisticsRequest $req) 延迟分析-查询命令延迟分布
  * @method Models\DescribeRedisCommandOverviewResponse DescribeRedisCommandOverview(Models\DescribeRedisCommandOverviewRequest $req) 延迟分析-查询实例访问命令统计
  * @method Models\DescribeRedisProcessListResponse DescribeRedisProcessList(Models\DescribeRedisProcessListRequest $req) 获取 Redis 实例所有 proxy 节点的实时会话详情列表。
+ * @method Models\DescribeRedisSlowLogTopSqlsResponse DescribeRedisSlowLogTopSqls(Models\DescribeRedisSlowLogTopSqlsRequest $req) 统计排序指定时间段内的top慢sql。
  * @method Models\DescribeRedisTopBigKeysResponse DescribeRedisTopBigKeys(Models\DescribeRedisTopBigKeysRequest $req) 查询redis实例大key列表。
  * @method Models\DescribeRedisTopHotKeysResponse DescribeRedisTopHotKeys(Models\DescribeRedisTopHotKeysRequest $req) 热Key分析
  * @method Models\DescribeRedisTopKeyPrefixListResponse DescribeRedisTopKeyPrefixList(Models\DescribeRedisTopKeyPrefixListRequest $req) 查询redis实例top key前缀列表。
  * @method Models\DescribeSecurityAuditLogDownloadUrlsResponse DescribeSecurityAuditLogDownloadUrls(Models\DescribeSecurityAuditLogDownloadUrlsRequest $req) 查询安全审计日志导出文件下载链接。目前日志文件下载仅提供腾讯云内网地址，请通过广州地域的腾讯云服务器进行下载。
  * @method Models\DescribeSecurityAuditLogExportTasksResponse DescribeSecurityAuditLogExportTasks(Models\DescribeSecurityAuditLogExportTasksRequest $req) 查询安全审计日志导出任务列表。
+ * @method Models\DescribeSlowLogQueryTimeStatsResponse DescribeSlowLogQueryTimeStats(Models\DescribeSlowLogQueryTimeStatsRequest $req) 统计排序指定时间段内的top慢sql。
  * @method Models\DescribeSlowLogTimeSeriesStatsResponse DescribeSlowLogTimeSeriesStats(Models\DescribeSlowLogTimeSeriesStatsRequest $req) 获取慢日志统计柱状图。
  * @method Models\DescribeSlowLogTopSqlsResponse DescribeSlowLogTopSqls(Models\DescribeSlowLogTopSqlsRequest $req) 按照Sql模板+schema的聚合方式，统计排序指定时间段内的top慢sql。
  * @method Models\DescribeSlowLogUserHostStatsResponse DescribeSlowLogUserHostStats(Models\DescribeSlowLogUserHostStatsRequest $req) 获取慢日志来源地址统计分布图。

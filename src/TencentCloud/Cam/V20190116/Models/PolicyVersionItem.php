@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 策略版本列表元素结构
  *
  * @method integer getVersionId() 获取策略版本号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersionId(integer $VersionId) 设置策略版本号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateDate() 获取策略版本创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateDate(string $CreateDate) 设置策略版本创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsDefaultVersion() 获取是否是正在生效的版本。0表示不是，1表示是
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsDefaultVersion(integer $IsDefaultVersion) 设置是否是正在生效的版本。0表示不是，1表示是
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PolicyVersionItem extends AbstractModel
 {
     /**
      * @var integer 策略版本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VersionId;
 
     /**
      * @var string 策略版本创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateDate;
 
     /**
      * @var integer 是否是正在生效的版本。0表示不是，1表示是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsDefaultVersion;
 
     /**
      * @param integer $VersionId 策略版本号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateDate 策略版本创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsDefaultVersion 是否是正在生效的版本。0表示不是，1表示是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

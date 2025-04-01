@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 设备事件的搜索结果项
  *
  * @method integer getTimeStamp() 获取事件的时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeStamp(integer $TimeStamp) 设置事件的时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProductId() 获取事件的产品ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductId(string $ProductId) 设置事件的产品ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeviceName() 获取事件的设备名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceName(string $DeviceName) 设置事件的设备名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEventId() 获取事件的标识符ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEventId(string $EventId) 设置事件的标识符ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取事件的类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置事件的类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getData() 获取事件的数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(string $Data) 设置事件的数据
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class EventHistoryItem extends AbstractModel
 {
     /**
      * @var integer 事件的时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeStamp;
 
     /**
      * @var string 事件的产品ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductId;
 
     /**
      * @var string 事件的设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceName;
 
     /**
      * @var string 事件的标识符ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventId;
 
     /**
      * @var string 事件的类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 事件的数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
 
     /**
      * @param integer $TimeStamp 事件的时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProductId 事件的产品ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceName 事件的设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EventId 事件的标识符ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 事件的类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Data 事件的数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(integer $ProjectId) 设置项目ID
  * @method boolean getIsOnlyBindAppUser() 获取是否只获取绑定企微应用的
  * @method void setIsOnlyBindAppUser(boolean $IsOnlyBindAppUser) 设置是否只获取绑定企微应用的
+ * @method boolean getAllPage() 获取是否获取全部数据
+ * @method void setAllPage(boolean $AllPage) 设置是否获取全部数据
+ * @method string getRoleCode() 获取角色编码
+ * @method void setRoleCode(string $RoleCode) 设置角色编码
  */
 class DescribeUserRoleProjectListRequest extends AbstractModel
 {
@@ -52,10 +56,22 @@ class DescribeUserRoleProjectListRequest extends AbstractModel
     public $IsOnlyBindAppUser;
 
     /**
+     * @var boolean 是否获取全部数据
+     */
+    public $AllPage;
+
+    /**
+     * @var string 角色编码
+     */
+    public $RoleCode;
+
+    /**
      * @param integer $PageNo 页码
      * @param integer $PageSize 页数
      * @param integer $ProjectId 项目ID
      * @param boolean $IsOnlyBindAppUser 是否只获取绑定企微应用的
+     * @param boolean $AllPage 是否获取全部数据
+     * @param string $RoleCode 角色编码
      */
     function __construct()
     {
@@ -84,6 +100,14 @@ class DescribeUserRoleProjectListRequest extends AbstractModel
 
         if (array_key_exists("IsOnlyBindAppUser",$param) and $param["IsOnlyBindAppUser"] !== null) {
             $this->IsOnlyBindAppUser = $param["IsOnlyBindAppUser"];
+        }
+
+        if (array_key_exists("AllPage",$param) and $param["AllPage"] !== null) {
+            $this->AllPage = $param["AllPage"];
+        }
+
+        if (array_key_exists("RoleCode",$param) and $param["RoleCode"] !== null) {
+            $this->RoleCode = $param["RoleCode"];
         }
     }
 }

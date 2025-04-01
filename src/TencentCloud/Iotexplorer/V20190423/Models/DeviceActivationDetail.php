@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalBluetoothLicense(integer $TotalBluetoothLicense) 设置蓝牙授权数
  * @method integer getUsedBluetoothLicense() 获取已使用蓝牙授权数
  * @method void setUsedBluetoothLicense(integer $UsedBluetoothLicense) 设置已使用蓝牙授权数
+ * @method integer getTotalFreeLicense() 获取可免费注册设备数
+ * @method void setTotalFreeLicense(integer $TotalFreeLicense) 设置可免费注册设备数
+ * @method integer getUsedFreeLicense() 获取已使用注册设备数
+ * @method void setUsedFreeLicense(integer $UsedFreeLicense) 设置已使用注册设备数
  */
 class DeviceActivationDetail extends AbstractModel
 {
@@ -66,12 +70,24 @@ class DeviceActivationDetail extends AbstractModel
     public $UsedBluetoothLicense;
 
     /**
+     * @var integer 可免费注册设备数
+     */
+    public $TotalFreeLicense;
+
+    /**
+     * @var integer 已使用注册设备数
+     */
+    public $UsedFreeLicense;
+
+    /**
      * @param integer $TotalDeviceNum 可注册设备数
      * @param integer $UsedDeviceNum 已注册设备数
      * @param integer $TotalNormalLicense 设备授权数
      * @param integer $UsedNormalLicense 已使用设备授权数
      * @param integer $TotalBluetoothLicense 蓝牙授权数
      * @param integer $UsedBluetoothLicense 已使用蓝牙授权数
+     * @param integer $TotalFreeLicense 可免费注册设备数
+     * @param integer $UsedFreeLicense 已使用注册设备数
      */
     function __construct()
     {
@@ -108,6 +124,14 @@ class DeviceActivationDetail extends AbstractModel
 
         if (array_key_exists("UsedBluetoothLicense",$param) and $param["UsedBluetoothLicense"] !== null) {
             $this->UsedBluetoothLicense = $param["UsedBluetoothLicense"];
+        }
+
+        if (array_key_exists("TotalFreeLicense",$param) and $param["TotalFreeLicense"] !== null) {
+            $this->TotalFreeLicense = $param["TotalFreeLicense"];
+        }
+
+        if (array_key_exists("UsedFreeLicense",$param) and $param["UsedFreeLicense"] !== null) {
+            $this->UsedFreeLicense = $param["UsedFreeLicense"];
         }
     }
 }

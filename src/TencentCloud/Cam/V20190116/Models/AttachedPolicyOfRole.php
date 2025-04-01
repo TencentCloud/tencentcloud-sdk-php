@@ -27,23 +27,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getAddTime() 获取绑定时间
  * @method void setAddTime(string $AddTime) 设置绑定时间
  * @method string getPolicyType() 获取策略类型，User表示自定义策略，QCS表示预设策略
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolicyType(string $PolicyType) 设置策略类型，User表示自定义策略，QCS表示预设策略
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreateMode() 获取策略创建方式，1表示按产品功能或项目权限创建，其他表示按策略语法创建
  * @method void setCreateMode(integer $CreateMode) 设置策略创建方式，1表示按产品功能或项目权限创建，其他表示按策略语法创建
  * @method integer getDeactived() 获取是否已下线(0:否 1:是)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeactived(integer $Deactived) 设置是否已下线(0:否 1:是)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDeactivedDetail() 获取已下线的产品列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeactivedDetail(array $DeactivedDetail) 设置已下线的产品列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取策略描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置策略描述
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AttachedPolicyOfRole extends AbstractModel
 {
@@ -64,7 +56,6 @@ class AttachedPolicyOfRole extends AbstractModel
 
     /**
      * @var string 策略类型，User表示自定义策略，QCS表示预设策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PolicyType;
 
@@ -75,19 +66,16 @@ class AttachedPolicyOfRole extends AbstractModel
 
     /**
      * @var integer 是否已下线(0:否 1:是)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Deactived;
 
     /**
      * @var array 已下线的产品列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeactivedDetail;
 
     /**
      * @var string 策略描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
@@ -96,14 +84,10 @@ class AttachedPolicyOfRole extends AbstractModel
      * @param string $PolicyName 策略名称
      * @param string $AddTime 绑定时间
      * @param string $PolicyType 策略类型，User表示自定义策略，QCS表示预设策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateMode 策略创建方式，1表示按产品功能或项目权限创建，其他表示按策略语法创建
      * @param integer $Deactived 是否已下线(0:否 1:是)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DeactivedDetail 已下线的产品列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 策略描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

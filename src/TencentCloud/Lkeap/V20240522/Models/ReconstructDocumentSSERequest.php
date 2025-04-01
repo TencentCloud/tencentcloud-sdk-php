@@ -24,14 +24,14 @@ use TencentCloud\Common\AbstractModel;
 **支持的文件类型**：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、IM、PCX、PPM、TIFF、XBM、HEIF、JP2
 **支持的文件大小**：
 - PDF、DOC、DOCX、PPT、PPTX 支持100M
-- MD、TXT 支持10M
+- MD、TXT、XLS、XLSX、CSV 支持10M
 - 其他支持20M
 
  * @method void setFileType(string $FileType) 设置文件类型。
 **支持的文件类型**：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、IM、PCX、PPM、TIFF、XBM、HEIF、JP2
 **支持的文件大小**：
 - PDF、DOC、DOCX、PPT、PPTX 支持100M
-- MD、TXT 支持10M
+- MD、TXT、XLS、XLSX、CSV 支持10M
 - 其他支持20M
 
  * @method string getFileUrl() 获取文件的 URL 地址。
@@ -66,7 +66,7 @@ class ReconstructDocumentSSERequest extends AbstractModel
 **支持的文件类型**：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、IM、PCX、PPM、TIFF、XBM、HEIF、JP2
 **支持的文件大小**：
 - PDF、DOC、DOCX、PPT、PPTX 支持100M
-- MD、TXT 支持10M
+- MD、TXT、XLS、XLSX、CSV 支持10M
 - 其他支持20M
 
      */
@@ -109,7 +109,7 @@ class ReconstructDocumentSSERequest extends AbstractModel
 **支持的文件类型**：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、IM、PCX、PPM、TIFF、XBM、HEIF、JP2
 **支持的文件大小**：
 - PDF、DOC、DOCX、PPT、PPTX 支持100M
-- MD、TXT 支持10M
+- MD、TXT、XLS、XLSX、CSV 支持10M
 - 其他支持20M
 
      * @param string $FileUrl 文件的 URL 地址。

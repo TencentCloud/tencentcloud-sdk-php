@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodeId(string $NodeId) 设置DB节点ID
  * @method string getRole() 获取DB节点角色，取值为master或者slave
  * @method void setRole(string $Role) 设置DB节点角色，取值为master或者slave
+ * @method string getZone() 获取节点所在的可用区
+ * @method void setZone(string $Zone) 设置节点所在的可用区
  */
 class NodeInfo extends AbstractModel
 {
@@ -38,8 +40,14 @@ class NodeInfo extends AbstractModel
     public $Role;
 
     /**
+     * @var string 节点所在的可用区
+     */
+    public $Zone;
+
+    /**
      * @param string $NodeId DB节点ID
      * @param string $Role DB节点角色，取值为master或者slave
+     * @param string $Zone 节点所在的可用区
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class NodeInfo extends AbstractModel
 
         if (array_key_exists("Role",$param) and $param["Role"] !== null) {
             $this->Role = $param["Role"];
+        }
+
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
         }
     }
 }

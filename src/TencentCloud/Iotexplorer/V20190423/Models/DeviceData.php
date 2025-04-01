@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * DeviceData
  *
  * @method string getDeviceCert() 获取设备证书，用于 TLS 建立链接时校验客户端身份。采用非对称加密时返回该参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceCert(string $DeviceCert) 设置设备证书，用于 TLS 建立链接时校验客户端身份。采用非对称加密时返回该参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeviceName() 获取设备名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceName(string $DeviceName) 设置设备名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDevicePrivateKey() 获取设备私钥，用于 TLS 建立链接时校验客户端身份，腾讯云后台不保存，请妥善保管。采用非对称加密时返回该参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDevicePrivateKey(string $DevicePrivateKey) 设置设备私钥，用于 TLS 建立链接时校验客户端身份，腾讯云后台不保存，请妥善保管。采用非对称加密时返回该参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDevicePsk() 获取对称加密密钥，base64编码。采用对称加密时返回该参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDevicePsk(string $DevicePsk) 设置对称加密密钥，base64编码。采用对称加密时返回该参数。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DeviceData extends AbstractModel
 {
     /**
      * @var string 设备证书，用于 TLS 建立链接时校验客户端身份。采用非对称加密时返回该参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceCert;
 
     /**
      * @var string 设备名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceName;
 
     /**
      * @var string 设备私钥，用于 TLS 建立链接时校验客户端身份，腾讯云后台不保存，请妥善保管。采用非对称加密时返回该参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DevicePrivateKey;
 
     /**
      * @var string 对称加密密钥，base64编码。采用对称加密时返回该参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DevicePsk;
 
     /**
      * @param string $DeviceCert 设备证书，用于 TLS 建立链接时校验客户端身份。采用非对称加密时返回该参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceName 设备名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DevicePrivateKey 设备私钥，用于 TLS 建立链接时校验客户端身份，腾讯云后台不保存，请妥善保管。采用非对称加密时返回该参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DevicePsk 对称加密密钥，base64编码。采用对称加密时返回该参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

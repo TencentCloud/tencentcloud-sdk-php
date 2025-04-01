@@ -21,17 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * ActivateTWeCallLicense返回参数结构体
  *
  * @method array getDeviceList() 获取设备激活返回数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceList(array $DeviceList) 设置设备激活返回数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getFailureList() 获取设备激活失败返回数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailureList(array $FailureList) 设置设备激活失败返回数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSuccessList() 获取设备激活成功返回数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSuccessList(array $SuccessList) 设置设备激活成功返回数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -39,19 +33,17 @@ class ActivateTWeCallLicenseResponse extends AbstractModel
 {
     /**
      * @var array 设备激活返回数据
-注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $DeviceList;
 
     /**
      * @var array 设备激活失败返回数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailureList;
 
     /**
      * @var array 设备激活成功返回数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SuccessList;
 
@@ -62,11 +54,8 @@ class ActivateTWeCallLicenseResponse extends AbstractModel
 
     /**
      * @param array $DeviceList 设备激活返回数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FailureList 设备激活失败返回数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SuccessList 设备激活成功返回数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

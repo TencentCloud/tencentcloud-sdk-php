@@ -27,19 +27,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getResourceName() 获取指标资源名称
 - cpu
 - memory
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceName(string $ResourceName) 设置指标资源名称
 - cpu
 - memory
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTargetType() 获取指标目标类型，目前只支持百分比Utilization
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargetType(string $TargetType) 设置指标目标类型，目前只支持百分比Utilization
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTargetValue() 获取指标目标值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargetValue(integer $TargetValue) 设置指标目标值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudNativeAPIGatewayStrategyAutoScalerConfigMetric extends AbstractModel
 {
@@ -53,19 +47,16 @@ class CloudNativeAPIGatewayStrategyAutoScalerConfigMetric extends AbstractModel
      * @var string 指标资源名称
 - cpu
 - memory
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceName;
 
     /**
      * @var string 指标目标类型，目前只支持百分比Utilization
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetType;
 
     /**
      * @var integer 指标目标值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetValue;
 
@@ -75,11 +66,8 @@ class CloudNativeAPIGatewayStrategyAutoScalerConfigMetric extends AbstractModel
      * @param string $ResourceName 指标资源名称
 - cpu
 - memory
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TargetType 指标目标类型，目前只支持百分比Utilization
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TargetValue 指标目标值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

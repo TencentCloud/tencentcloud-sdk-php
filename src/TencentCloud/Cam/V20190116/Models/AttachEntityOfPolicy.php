@@ -23,19 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getId() 获取实体ID
  * @method void setId(string $Id) 设置实体ID
  * @method string getName() 获取实体名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置实体名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUin() 获取实体Uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUin(integer $Uin) 设置实体Uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRelatedType() 获取关联类型。1 用户关联 ； 2 用户组关联 3 角色关联
  * @method void setRelatedType(integer $RelatedType) 设置关联类型。1 用户关联 ； 2 用户组关联 3 角色关联
  * @method string getAttachmentTime() 获取策略关联时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAttachmentTime(string $AttachmentTime) 设置策略关联时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AttachEntityOfPolicy extends AbstractModel
 {
@@ -46,13 +40,11 @@ class AttachEntityOfPolicy extends AbstractModel
 
     /**
      * @var string 实体名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var integer 实体Uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uin;
 
@@ -63,19 +55,15 @@ class AttachEntityOfPolicy extends AbstractModel
 
     /**
      * @var string 策略关联时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AttachmentTime;
 
     /**
      * @param string $Id 实体ID
      * @param string $Name 实体名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Uin 实体Uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RelatedType 关联类型。1 用户关联 ； 2 用户组关联 3 角色关联
      * @param string $AttachmentTime 策略关联时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

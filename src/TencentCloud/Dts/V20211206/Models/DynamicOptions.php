@@ -28,6 +28,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConflictHandleType(string $ConflictHandleType) 设置冲突处理选项，ReportError(报错)、Ignore(忽略)、Cover(覆盖)、ConditionCover(条件覆盖); 目前目标端为kafka的链路不支持修改该配置
  * @method ConflictHandleOption getConflictHandleOption() 获取冲突处理的详细选项，如条件覆盖中的条件行和条件操作；不能部分更新该选项的内部字段；有更新时、需要全量更新该字段
  * @method void setConflictHandleOption(ConflictHandleOption $ConflictHandleOption) 设置冲突处理的详细选项，如条件覆盖中的条件行和条件操作；不能部分更新该选项的内部字段；有更新时、需要全量更新该字段
+ * @method KafkaOption getKafkaOption() 获取同步到kafka链路的kafka配置
+ * @method void setKafkaOption(KafkaOption $KafkaOption) 设置同步到kafka链路的kafka配置
+ * @method boolean getFilterBeginCommit() 获取同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持
+ * @method void setFilterBeginCommit(boolean $FilterBeginCommit) 设置同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持
+ * @method boolean getFilterCheckpoint() 获取同步到kafka链路是否过滤掉checkpoint消息。目前仅mysql2kafka链路支持
+ * @method void setFilterCheckpoint(boolean $FilterCheckpoint) 设置同步到kafka链路是否过滤掉checkpoint消息。目前仅mysql2kafka链路支持
+ * @method string getDealOfExistSameTable() 获取同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、ExecuteAfterIgnore(忽略并继续执行)
+ * @method void setDealOfExistSameTable(string $DealOfExistSameTable) 设置同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、ExecuteAfterIgnore(忽略并继续执行)
+ * @method string getStartPosition() 获取仅增量任务重新设置指定位点
+ * @method void setStartPosition(string $StartPosition) 设置仅增量任务重新设置指定位点
  */
 class DynamicOptions extends AbstractModel
 {
@@ -52,10 +62,40 @@ class DynamicOptions extends AbstractModel
     public $ConflictHandleOption;
 
     /**
+     * @var KafkaOption 同步到kafka链路的kafka配置
+     */
+    public $KafkaOption;
+
+    /**
+     * @var boolean 同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持
+     */
+    public $FilterBeginCommit;
+
+    /**
+     * @var boolean 同步到kafka链路是否过滤掉checkpoint消息。目前仅mysql2kafka链路支持
+     */
+    public $FilterCheckpoint;
+
+    /**
+     * @var string 同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、ExecuteAfterIgnore(忽略并继续执行)
+     */
+    public $DealOfExistSameTable;
+
+    /**
+     * @var string 仅增量任务重新设置指定位点
+     */
+    public $StartPosition;
+
+    /**
      * @param array $OpTypes 所要同步的DML和DDL的选项，Insert(插入操作)、Update(更新操作)、Delete(删除操作)、DDL(结构同步)，PartialDDL(自定义,和DdlOptions一起起作用 )；必填、dts会用该值覆盖原有的值
      * @param array $DdlOptions DDL同步选项，具体描述要同步那些DDL; 当OpTypes取值PartialDDL时、字段不能为空；必填、dts会用该值覆盖原有的值
      * @param string $ConflictHandleType 冲突处理选项，ReportError(报错)、Ignore(忽略)、Cover(覆盖)、ConditionCover(条件覆盖); 目前目标端为kafka的链路不支持修改该配置
      * @param ConflictHandleOption $ConflictHandleOption 冲突处理的详细选项，如条件覆盖中的条件行和条件操作；不能部分更新该选项的内部字段；有更新时、需要全量更新该字段
+     * @param KafkaOption $KafkaOption 同步到kafka链路的kafka配置
+     * @param boolean $FilterBeginCommit 同步到kafka链路是否过滤掉begin和commit消息。目前仅mysql2kafka链路支持
+     * @param boolean $FilterCheckpoint 同步到kafka链路是否过滤掉checkpoint消息。目前仅mysql2kafka链路支持
+     * @param string $DealOfExistSameTable 同名表的处理，ReportErrorAfterCheck(前置校验并报错，默认)、ExecuteAfterIgnore(忽略并继续执行)
+     * @param string $StartPosition 仅增量任务重新设置指定位点
      */
     function __construct()
     {
@@ -90,6 +130,27 @@ class DynamicOptions extends AbstractModel
         if (array_key_exists("ConflictHandleOption",$param) and $param["ConflictHandleOption"] !== null) {
             $this->ConflictHandleOption = new ConflictHandleOption();
             $this->ConflictHandleOption->deserialize($param["ConflictHandleOption"]);
+        }
+
+        if (array_key_exists("KafkaOption",$param) and $param["KafkaOption"] !== null) {
+            $this->KafkaOption = new KafkaOption();
+            $this->KafkaOption->deserialize($param["KafkaOption"]);
+        }
+
+        if (array_key_exists("FilterBeginCommit",$param) and $param["FilterBeginCommit"] !== null) {
+            $this->FilterBeginCommit = $param["FilterBeginCommit"];
+        }
+
+        if (array_key_exists("FilterCheckpoint",$param) and $param["FilterCheckpoint"] !== null) {
+            $this->FilterCheckpoint = $param["FilterCheckpoint"];
+        }
+
+        if (array_key_exists("DealOfExistSameTable",$param) and $param["DealOfExistSameTable"] !== null) {
+            $this->DealOfExistSameTable = $param["DealOfExistSameTable"];
+        }
+
+        if (array_key_exists("StartPosition",$param) and $param["StartPosition"] !== null) {
+            $this->StartPosition = $param["StartPosition"];
         }
     }
 }

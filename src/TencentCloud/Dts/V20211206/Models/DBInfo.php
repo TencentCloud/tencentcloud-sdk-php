@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTmpSecretKey(string $TmpSecretKey) 设置临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
  * @method string getTmpToken() 获取临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
  * @method void setTmpToken(string $TmpToken) 设置临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
+ * @method string getEncryptConn() 获取是否走加密传输、UnEncrypted表示不走加密传输，Encrypted表示走加密传输，默认UnEncrypted
+ * @method void setEncryptConn(string $EncryptConn) 设置是否走加密传输、UnEncrypted表示不走加密传输，Encrypted表示走加密传输，默认UnEncrypted
  * @method string getSetId() 获取tdsql的分片id。如节点类型为set必填。
  * @method void setSetId(string $SetId) 设置tdsql的分片id。如节点类型为set必填。
  */
@@ -166,6 +168,11 @@ class DBInfo extends AbstractModel
     public $TmpToken;
 
     /**
+     * @var string 是否走加密传输、UnEncrypted表示不走加密传输，Encrypted表示走加密传输，默认UnEncrypted
+     */
+    public $EncryptConn;
+
+    /**
      * @var string tdsql的分片id。如节点类型为set必填。
      */
     public $SetId;
@@ -191,6 +198,7 @@ class DBInfo extends AbstractModel
      * @param string $TmpSecretId 临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
      * @param string $TmpSecretKey 临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
      * @param string $TmpToken 临时密钥Id，可通过申请扮演角色临时访问凭证获取临时密钥https://cloud.tencent.com/document/product/1312/48197，其中角色资源RoleArn的定义可参考DTS跨账号迁移文档(https://cloud.tencent.com/document/product/571/54117)第4节中关于角色的定义。
+     * @param string $EncryptConn 是否走加密传输、UnEncrypted表示不走加密传输，Encrypted表示走加密传输，默认UnEncrypted
      * @param string $SetId tdsql的分片id。如节点类型为set必填。
      */
     function __construct()
@@ -284,6 +292,10 @@ class DBInfo extends AbstractModel
 
         if (array_key_exists("TmpToken",$param) and $param["TmpToken"] !== null) {
             $this->TmpToken = $param["TmpToken"];
+        }
+
+        if (array_key_exists("EncryptConn",$param) and $param["EncryptConn"] !== null) {
+            $this->EncryptConn = $param["EncryptConn"];
         }
 
         if (array_key_exists("SetId",$param) and $param["SetId"] !== null) {

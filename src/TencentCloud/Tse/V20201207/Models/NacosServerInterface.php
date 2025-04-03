@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * nacos服务端接口列表，用于云监控
  *
  * @method string getInterface() 获取接口名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInterface(string $Interface) 设置接口名
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NacosServerInterface extends AbstractModel
 {
     /**
      * @var string 接口名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Interface;
 
     /**
      * @param string $Interface 接口名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

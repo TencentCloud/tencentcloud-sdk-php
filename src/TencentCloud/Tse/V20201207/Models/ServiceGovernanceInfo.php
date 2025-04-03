@@ -37,9 +37,7 @@ use TencentCloud\Common\AbstractModel;
  * @method array getLimiterVpcInfos() 获取服务治理限流server引擎绑定的网络信息
  * @method void setLimiterVpcInfos(array $LimiterVpcInfos) 设置服务治理限流server引擎绑定的网络信息
  * @method array getCLSTopics() 获取引擎关联CLS日志主题信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCLSTopics(array $CLSTopics) 设置引擎关联CLS日志主题信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServiceGovernanceInfo extends AbstractModel
 {
@@ -85,7 +83,6 @@ class ServiceGovernanceInfo extends AbstractModel
 
     /**
      * @var array 引擎关联CLS日志主题信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CLSTopics;
 
@@ -99,7 +96,6 @@ class ServiceGovernanceInfo extends AbstractModel
      * @param array $PgwVpcInfos 服务治理pushgateway引擎绑定的网络信息
      * @param array $LimiterVpcInfos 服务治理限流server引擎绑定的网络信息
      * @param array $CLSTopics 引擎关联CLS日志主题信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

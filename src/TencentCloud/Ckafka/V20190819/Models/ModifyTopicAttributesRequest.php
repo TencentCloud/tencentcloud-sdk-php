@@ -50,10 +50,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRetentionBytes(integer $RetentionBytes) 设置可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B
  * @method array getTags() 获取标签列表
  * @method void setTags(array $Tags) 设置标签列表
- * @method integer getQuotaProducerByteRate() 获取生产限流，单位 MB/s
- * @method void setQuotaProducerByteRate(integer $QuotaProducerByteRate) 设置生产限流，单位 MB/s
- * @method integer getQuotaConsumerByteRate() 获取消费限流，单位 MB/s
- * @method void setQuotaConsumerByteRate(integer $QuotaConsumerByteRate) 设置消费限流，单位 MB/s
+ * @method integer getQuotaProducerByteRate() 获取生产限流，单位 MB/s；设置为-1，则生产不限流
+ * @method void setQuotaProducerByteRate(integer $QuotaProducerByteRate) 设置生产限流，单位 MB/s；设置为-1，则生产不限流
+ * @method integer getQuotaConsumerByteRate() 获取消费限流，单位 MB/s；设置为-1，则消费不限流
+ * @method void setQuotaConsumerByteRate(integer $QuotaConsumerByteRate) 设置消费限流，单位 MB/s；设置为-1，则消费不限流
  * @method integer getReplicaNum() 获取topic副本数  最小值 1,最大值 3
  * @method void setReplicaNum(integer $ReplicaNum) 设置topic副本数  最小值 1,最大值 3
  */
@@ -135,12 +135,12 @@ class ModifyTopicAttributesRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @var integer 生产限流，单位 MB/s
+     * @var integer 生产限流，单位 MB/s；设置为-1，则生产不限流
      */
     public $QuotaProducerByteRate;
 
     /**
-     * @var integer 消费限流，单位 MB/s
+     * @var integer 消费限流，单位 MB/s；设置为-1，则消费不限流
      */
     public $QuotaConsumerByteRate;
 
@@ -165,8 +165,8 @@ class ModifyTopicAttributesRequest extends AbstractModel
      * @param string $AclRuleName ACL规则名
      * @param integer $RetentionBytes 可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B
      * @param array $Tags 标签列表
-     * @param integer $QuotaProducerByteRate 生产限流，单位 MB/s
-     * @param integer $QuotaConsumerByteRate 消费限流，单位 MB/s
+     * @param integer $QuotaProducerByteRate 生产限流，单位 MB/s；设置为-1，则生产不限流
+     * @param integer $QuotaConsumerByteRate 消费限流，单位 MB/s；设置为-1，则消费不限流
      * @param integer $ReplicaNum topic副本数  最小值 1,最大值 3
      */
     function __construct()

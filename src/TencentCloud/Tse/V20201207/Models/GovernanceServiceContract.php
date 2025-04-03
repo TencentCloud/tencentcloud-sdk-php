@@ -21,141 +21,97 @@ use TencentCloud\Common\AbstractModel;
  * 服务契约定义
  *
  * @method string getName() 获取契约名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置契约名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNamespace() 获取所属服务命名空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespace(string $Namespace) 设置所属服务命名空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProtocol() 获取协议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProtocol(string $Protocol) 设置协议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getID() 获取契约ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setID(string $ID) 设置契约ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getService() 获取所属服务名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setService(string $Service) 设置所属服务名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVersion() 获取版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersion(string $Version) 设置版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRevision() 获取信息摘要
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRevision(string $Revision) 设置信息摘要
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContent() 获取额外内容描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContent(string $Content) 设置额外内容描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifyTime() 获取修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyTime(string $ModifyTime) 设置修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getInterfaces() 获取契约接口列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInterfaces(array $Interfaces) 设置契约接口列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class GovernanceServiceContract extends AbstractModel
 {
     /**
      * @var string 契约名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 所属服务命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Namespace;
 
     /**
      * @var string 协议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Protocol;
 
     /**
      * @var string 契约ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ID;
 
     /**
      * @var string 所属服务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Service;
 
     /**
      * @var string 版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Version;
 
     /**
      * @var string 信息摘要
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Revision;
 
     /**
      * @var string 额外内容描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Content;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyTime;
 
     /**
      * @var array 契约接口列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Interfaces;
 
     /**
      * @param string $Name 契约名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Namespace 所属服务命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Protocol 协议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ID 契约ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Service 所属服务名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Version 版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Revision 信息摘要
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Content 额外内容描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Interfaces 契约接口列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

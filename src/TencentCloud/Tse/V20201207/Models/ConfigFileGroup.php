@@ -21,225 +21,153 @@ use TencentCloud\Common\AbstractModel;
  * 配置文件组
  *
  * @method integer getId() 获取配置文件组id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(integer $Id) 设置配置文件组id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取配置文件组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置配置文件组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNamespace() 获取命名空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespace(string $Namespace) 设置命名空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getComment() 获取备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComment(string $Comment) 设置备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateBy() 获取创建者
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateBy(string $CreateBy) 设置创建者
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifyTime() 获取修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyTime(string $ModifyTime) 设置修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifyBy() 获取修改者
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyBy(string $ModifyBy) 设置修改者
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFileCount() 获取文件数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileCount(integer $FileCount) 设置文件数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getUserIds() 获取关联用户，link_users
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserIds(array $UserIds) 设置关联用户，link_users
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getGroupIds() 获取组id，link_groups
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupIds(array $GroupIds) 设置组id，link_groups
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRemoveUserIds() 获取remove_link_users
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemoveUserIds(array $RemoveUserIds) 设置remove_link_users
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRemoveGroupIds() 获取remove_link_groups
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemoveGroupIds(array $RemoveGroupIds) 设置remove_link_groups
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getEditable() 获取是否可编辑
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEditable(boolean $Editable) 设置是否可编辑
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOwner() 获取归属者
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOwner(string $Owner) 设置归属者
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDepartment() 获取部门
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDepartment(string $Department) 设置部门
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBusiness() 获取业务
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBusiness(string $Business) 设置业务
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getConfigFileGroupTags() 获取配置文件组标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigFileGroupTags(array $ConfigFileGroupTags) 设置配置文件组标签
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ConfigFileGroup extends AbstractModel
 {
     /**
      * @var integer 配置文件组id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var string 配置文件组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Namespace;
 
     /**
      * @var string 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Comment;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 创建者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateBy;
 
     /**
      * @var string 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyTime;
 
     /**
      * @var string 修改者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyBy;
 
     /**
      * @var integer 文件数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileCount;
 
     /**
      * @var array 关联用户，link_users
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserIds;
 
     /**
      * @var array 组id，link_groups
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupIds;
 
     /**
      * @var array remove_link_users
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RemoveUserIds;
 
     /**
      * @var array remove_link_groups
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RemoveGroupIds;
 
     /**
      * @var boolean 是否可编辑
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Editable;
 
     /**
      * @var string 归属者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Owner;
 
     /**
      * @var string 部门
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Department;
 
     /**
      * @var string 业务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Business;
 
     /**
      * @var array 配置文件组标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigFileGroupTags;
 
     /**
      * @param integer $Id 配置文件组id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 配置文件组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Namespace 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Comment 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateBy 创建者
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyBy 修改者
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FileCount 文件数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $UserIds 关联用户，link_users
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $GroupIds 组id，link_groups
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RemoveUserIds remove_link_users
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RemoveGroupIds remove_link_groups
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Editable 是否可编辑
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Owner 归属者
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Department 部门
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Business 业务
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ConfigFileGroupTags 配置文件组标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

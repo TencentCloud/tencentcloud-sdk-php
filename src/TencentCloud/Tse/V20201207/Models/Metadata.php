@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 元数据信息
  *
  * @method string getKey() 获取元数据键名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKey(string $Key) 设置元数据键名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取元数据键值。不填则默认为空字符串。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置元数据键值。不填则默认为空字符串。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Metadata extends AbstractModel
 {
     /**
      * @var string 元数据键名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Key;
 
     /**
      * @var string 元数据键值。不填则默认为空字符串。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @param string $Key 元数据键名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 元数据键值。不填则默认为空字符串。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

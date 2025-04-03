@@ -21,117 +21,81 @@ use TencentCloud\Common\AbstractModel;
  * 服务契约接口定义
  *
  * @method string getID() 获取契约接口ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setID(string $ID) 设置契约接口ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMethod() 获取方法名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMethod(string $Method) 设置方法名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPath() 获取路径/接口名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPath(string $Path) 设置路径/接口名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContent() 获取内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContent(string $Content) 设置内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSource() 获取创建来源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSource(string $Source) 设置创建来源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRevision() 获取信息摘要
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRevision(string $Revision) 设置信息摘要
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifyTime() 获取修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyTime(string $ModifyTime) 设置修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取接口名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置接口名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class GovernanceInterfaceDescription extends AbstractModel
 {
     /**
      * @var string 契约接口ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ID;
 
     /**
      * @var string 方法名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Method;
 
     /**
      * @var string 路径/接口名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Path;
 
     /**
      * @var string 内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Content;
 
     /**
      * @var string 创建来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Source;
 
     /**
      * @var string 信息摘要
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Revision;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyTime;
 
     /**
      * @var string 接口名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @param string $ID 契约接口ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Method 方法名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Path 路径/接口名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Content 内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Source 创建来源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Revision 信息摘要
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 接口名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -49,9 +49,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getClientBandWidth() 获取客户端带宽
  * @method void setClientBandWidth(integer $ClientBandWidth) 设置客户端带宽
  * @method boolean getEnableConfigIntranet() 获取客户端内网开关
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableConfigIntranet(boolean $EnableConfigIntranet) 设置客户端内网开关
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class EnvInfo extends AbstractModel
 {
@@ -127,7 +125,6 @@ class EnvInfo extends AbstractModel
 
     /**
      * @var boolean 客户端内网开关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableConfigIntranet;
 
@@ -147,7 +144,6 @@ class EnvInfo extends AbstractModel
      * @param string $EnvDesc 环境描述
      * @param integer $ClientBandWidth 客户端带宽
      * @param boolean $EnableConfigIntranet 客户端内网开关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

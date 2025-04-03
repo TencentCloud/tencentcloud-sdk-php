@@ -23,13 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getResult() 获取操作是否成功
  * @method void setResult(boolean $Result) 设置操作是否成功
  * @method string getConfigFileReleaseId() 获取配置发布Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigFileReleaseId(string $ConfigFileReleaseId) 设置配置发布Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConfigFileId() 获取配置文件Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigFileId(string $ConfigFileId) 设置配置文件Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -42,13 +38,11 @@ class CreateOrUpdateConfigFileAndReleaseResponse extends AbstractModel
 
     /**
      * @var string 配置发布Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigFileReleaseId;
 
     /**
      * @var string 配置文件Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigFileId;
 
@@ -60,9 +54,7 @@ class CreateOrUpdateConfigFileAndReleaseResponse extends AbstractModel
     /**
      * @param boolean $Result 操作是否成功
      * @param string $ConfigFileReleaseId 配置发布Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConfigFileId 配置文件Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

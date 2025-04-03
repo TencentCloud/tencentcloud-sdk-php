@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 存储的额外选项
  *
  * @method string getName() 获取存储对象，分为snap和txn两种
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置存储对象，分为snap和txn两种
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取存储类型，分为三类CLOUD_PREMIUM/CLOUD_SSD/CLOUD_SSD_PLUS，分别对应高性能云硬盘、SSD云硬盘、增强型SSD云硬盘
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置存储类型，分为三类CLOUD_PREMIUM/CLOUD_SSD/CLOUD_SSD_PLUS，分别对应高性能云硬盘、SSD云硬盘、增强型SSD云硬盘
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCapacity() 获取存储容量，[50, 3200]的范围
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCapacity(integer $Capacity) 设置存储容量，[50, 3200]的范围
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class StorageOption extends AbstractModel
 {
     /**
      * @var string 存储对象，分为snap和txn两种
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 存储类型，分为三类CLOUD_PREMIUM/CLOUD_SSD/CLOUD_SSD_PLUS，分别对应高性能云硬盘、SSD云硬盘、增强型SSD云硬盘
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var integer 存储容量，[50, 3200]的范围
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Capacity;
 
     /**
      * @param string $Name 存储对象，分为snap和txn两种
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 存储类型，分为三类CLOUD_PREMIUM/CLOUD_SSD/CLOUD_SSD_PLUS，分别对应高性能云硬盘、SSD云硬盘、增强型SSD云硬盘
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Capacity 存储容量，[50, 3200]的范围
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

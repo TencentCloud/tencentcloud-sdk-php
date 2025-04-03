@@ -38,6 +38,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssociatedRule(array $AssociatedRule) 设置关联到的规则数组。在DescribeTargetGroupList接口调用时无法获取到该参数。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProtocol() 获取后端转发协议类型，支持类型TCP， UDP。仅V2新版目标组支持返回该参数。
+
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProtocol(string $Protocol) 设置后端转发协议类型，支持类型TCP， UDP。仅V2新版目标组支持返回该参数。
+
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTargetGroupType() 获取目标组类型，当前支持v1(旧版目标组), v2(新版目标组), gwlb(全局负载均衡目标组)。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargetGroupType(string $TargetGroupType) 设置目标组类型，当前支持v1(旧版目标组), v2(新版目标组), gwlb(全局负载均衡目标组)。
@@ -99,6 +105,13 @@ class TargetGroupInfo extends AbstractModel
     public $AssociatedRule;
 
     /**
+     * @var string 后端转发协议类型，支持类型TCP， UDP。仅V2新版目标组支持返回该参数。
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Protocol;
+
+    /**
      * @var string 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), gwlb(全局负载均衡目标组)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -141,6 +154,9 @@ class TargetGroupInfo extends AbstractModel
      * @param string $CreatedTime 目标组的创建时间
      * @param string $UpdatedTime 目标组的修改时间
      * @param array $AssociatedRule 关联到的规则数组。在DescribeTargetGroupList接口调用时无法获取到该参数。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Protocol 后端转发协议类型，支持类型TCP， UDP。仅V2新版目标组支持返回该参数。
+
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TargetGroupType 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), gwlb(全局负载均衡目标组)。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -197,6 +213,10 @@ class TargetGroupInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->AssociatedRule, $obj);
             }
+        }
+
+        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
+            $this->Protocol = $param["Protocol"];
         }
 
         if (array_key_exists("TargetGroupType",$param) and $param["TargetGroupType"] !== null) {

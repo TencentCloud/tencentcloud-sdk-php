@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * CLB多可用区信息
  *
  * @method boolean getCLBMultiZoneFlag() 获取是否启用多可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCLBMultiZoneFlag(boolean $CLBMultiZoneFlag) 设置是否启用多可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCLBMasterZone() 获取主可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCLBMasterZone(string $CLBMasterZone) 设置主可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCLBSlaveZone() 获取备可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCLBSlaveZone(string $CLBSlaveZone) 设置备可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CLBMultiRegion extends AbstractModel
 {
     /**
      * @var boolean 是否启用多可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CLBMultiZoneFlag;
 
     /**
      * @var string 主可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CLBMasterZone;
 
     /**
      * @var string 备可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CLBSlaveZone;
 
     /**
      * @param boolean $CLBMultiZoneFlag 是否启用多可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CLBMasterZone 主可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CLBSlaveZone 备可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

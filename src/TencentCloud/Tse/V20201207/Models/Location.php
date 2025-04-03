@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 新增Location字段，展示zone/region/campus
  *
  * @method string getRegion() 获取大区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置大区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getZone() 获取可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZone(string $Zone) 设置可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCampus() 获取机房
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCampus(string $Campus) 设置机房
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Location extends AbstractModel
 {
     /**
      * @var string 大区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
      * @var string 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Zone;
 
     /**
      * @var string 机房
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Campus;
 
     /**
      * @param string $Region 大区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Zone 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Campus 机房
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

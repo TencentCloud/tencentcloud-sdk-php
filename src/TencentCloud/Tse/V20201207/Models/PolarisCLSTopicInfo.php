@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 北极星日志主题信息
  *
  * @method string getLogSetId() 获取日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogSetId(string $LogSetId) 设置日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLogSetName() 获取日志集名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogSetName(string $LogSetName) 设置日志集名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTopicId() 获取日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicId(string $TopicId) 设置日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTopicName() 获取日志主题名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicName(string $TopicName) 设置日志主题名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PolarisCLSTopicInfo extends AbstractModel
 {
     /**
      * @var string 日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogSetId;
 
     /**
      * @var string 日志集名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogSetName;
 
     /**
      * @var string 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicId;
 
     /**
      * @var string 日志主题名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicName;
 
     /**
      * @param string $LogSetId 日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LogSetName 日志集名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TopicId 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TopicName 日志主题名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

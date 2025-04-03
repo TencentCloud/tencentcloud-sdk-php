@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 配置发布版本信息
  *
  * @method string getName() 获取配置发布的版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置配置发布的版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getActive() 获取是否生效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActive(boolean $Active) 设置是否生效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getId() 获取配置发布的ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(string $Id) 设置配置发布的ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNamespace() 获取配置发布的命名空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespace(string $Namespace) 设置配置发布的命名空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroup() 获取配置发布的分组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroup(string $Group) 设置配置发布的分组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileName() 获取配置发布的文件名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileName(string $FileName) 设置配置发布的文件名
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ReleaseVersion extends AbstractModel
 {
     /**
      * @var string 配置发布的版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var boolean 是否生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Active;
 
     /**
      * @var string 配置发布的ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var string 配置发布的命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Namespace;
 
     /**
      * @var string 配置发布的分组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Group;
 
     /**
      * @var string 配置发布的文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileName;
 
     /**
      * @param string $Name 配置发布的版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Active 是否生效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Id 配置发布的ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Namespace 配置发布的命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Group 配置发布的分组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileName 配置发布的文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

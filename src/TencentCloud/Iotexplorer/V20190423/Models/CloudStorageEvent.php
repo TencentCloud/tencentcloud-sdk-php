@@ -29,13 +29,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEventId() 获取事件ID
  * @method void setEventId(string $EventId) 设置事件ID
  * @method string getUploadStatus() 获取事件录像上传状态，Finished: 全部上传成功 Partial: 部分上传成功 Failed: 上传失败	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUploadStatus(string $UploadStatus) 设置事件录像上传状态，Finished: 全部上传成功 Partial: 部分上传成功 Failed: 上传失败	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getData() 获取事件自定义数据	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(string $Data) 设置事件自定义数据	
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudStorageEvent extends AbstractModel
 {
@@ -61,13 +57,11 @@ class CloudStorageEvent extends AbstractModel
 
     /**
      * @var string 事件录像上传状态，Finished: 全部上传成功 Partial: 部分上传成功 Failed: 上传失败	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UploadStatus;
 
     /**
      * @var string 事件自定义数据	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
 
@@ -77,9 +71,7 @@ class CloudStorageEvent extends AbstractModel
      * @param string $Thumbnail 事件缩略图
      * @param string $EventId 事件ID
      * @param string $UploadStatus 事件录像上传状态，Finished: 全部上传成功 Partial: 部分上传成功 Failed: 上传失败	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Data 事件自定义数据	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppAssetKind(integer $AppAssetKind) 设置应用资产类型：1-web
  * @method string getAppAssetUrl() 获取应用资产url
  * @method void setAppAssetUrl(string $AppAssetUrl) 设置应用资产url
+ * @method integer getReplayType() 获取回放类型 默认0, 1-rfb 2-mp4 3-ssh
+ * @method void setReplayType(integer $ReplayType) 设置回放类型 默认0, 1-rfb 2-mp4 3-ssh
  */
 class SessionResult extends AbstractModel
 {
@@ -164,6 +166,11 @@ class SessionResult extends AbstractModel
     public $AppAssetUrl;
 
     /**
+     * @var integer 回放类型 默认0, 1-rfb 2-mp4 3-ssh
+     */
+    public $ReplayType;
+
+    /**
      * @param string $UserName 用户名
      * @param string $RealName 姓名
      * @param string $Account 主机账号
@@ -184,6 +191,7 @@ class SessionResult extends AbstractModel
      * @param string $Protocol 会话协议
      * @param integer $AppAssetKind 应用资产类型：1-web
      * @param string $AppAssetUrl 应用资产url
+     * @param integer $ReplayType 回放类型 默认0, 1-rfb 2-mp4 3-ssh
      */
     function __construct()
     {
@@ -276,6 +284,10 @@ class SessionResult extends AbstractModel
 
         if (array_key_exists("AppAssetUrl",$param) and $param["AppAssetUrl"] !== null) {
             $this->AppAssetUrl = $param["AppAssetUrl"];
+        }
+
+        if (array_key_exists("ReplayType",$param) and $param["ReplayType"] !== null) {
+            $this->ReplayType = $param["ReplayType"];
         }
     }
 }

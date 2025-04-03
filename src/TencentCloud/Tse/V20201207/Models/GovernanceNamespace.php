@@ -21,189 +21,129 @@ use TencentCloud\Common\AbstractModel;
  * 治理中心命名空间
  *
  * @method string getName() 获取命名空间名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置命名空间名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getComment() 获取命名空间描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComment(string $Comment) 设置命名空间描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifyTime() 获取修改时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyTime(string $ModifyTime) 设置修改时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalServiceCount() 获取命名空间下总服务数据量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalServiceCount(integer $TotalServiceCount) 设置命名空间下总服务数据量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalHealthInstanceCount() 获取命名空间下总健康实例数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalHealthInstanceCount(integer $TotalHealthInstanceCount) 设置命名空间下总健康实例数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalInstanceCount() 获取命名空间下总实例数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalInstanceCount(integer $TotalInstanceCount) 设置命名空间下总实例数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getId() 获取命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(string $Id) 设置命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getEditable() 获取是否可以编辑
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEditable(boolean $Editable) 设置是否可以编辑
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getUserIds() 获取可以操作此命名空间的用户ID列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserIds(array $UserIds) 设置可以操作此命名空间的用户ID列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getGroupIds() 获取可以操作此命名空间的用户组ID列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupIds(array $GroupIds) 设置可以操作此命名空间的用户组ID列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRemoveUserIds() 获取移除可以操作此命名空间的用户ID列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemoveUserIds(array $RemoveUserIds) 设置移除可以操作此命名空间的用户ID列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRemoveGroupIds() 获取移除可以操作此命名空间的用户组ID列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemoveGroupIds(array $RemoveGroupIds) 设置移除可以操作此命名空间的用户组ID列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getServiceExportTo() 获取该命名空间下的服务对哪些命名空间可见
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceExportTo(array $ServiceExportTo) 设置该命名空间下的服务对哪些命名空间可见
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getSyncToGlobalRegistry() 获取是否开启同步到全局注册中心	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSyncToGlobalRegistry(boolean $SyncToGlobalRegistry) 设置是否开启同步到全局注册中心	
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class GovernanceNamespace extends AbstractModel
 {
     /**
      * @var string 命名空间名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 命名空间描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Comment;
 
     /**
      * @var string 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 修改时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyTime;
 
     /**
      * @var integer 命名空间下总服务数据量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalServiceCount;
 
     /**
      * @var integer 命名空间下总健康实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalHealthInstanceCount;
 
     /**
      * @var integer 命名空间下总实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalInstanceCount;
 
     /**
      * @var string 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var boolean 是否可以编辑
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Editable;
 
     /**
      * @var array 可以操作此命名空间的用户ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserIds;
 
     /**
      * @var array 可以操作此命名空间的用户组ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupIds;
 
     /**
      * @var array 移除可以操作此命名空间的用户ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RemoveUserIds;
 
     /**
      * @var array 移除可以操作此命名空间的用户组ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RemoveGroupIds;
 
     /**
      * @var array 该命名空间下的服务对哪些命名空间可见
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceExportTo;
 
     /**
      * @var boolean 是否开启同步到全局注册中心	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SyncToGlobalRegistry;
 
     /**
      * @param string $Name 命名空间名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Comment 命名空间描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyTime 修改时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalServiceCount 命名空间下总服务数据量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalHealthInstanceCount 命名空间下总健康实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalInstanceCount 命名空间下总实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Id 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Editable 是否可以编辑
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $UserIds 可以操作此命名空间的用户ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $GroupIds 可以操作此命名空间的用户组ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RemoveUserIds 移除可以操作此命名空间的用户ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RemoveGroupIds 移除可以操作此命名空间的用户组ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ServiceExportTo 该命名空间下的服务对哪些命名空间可见
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $SyncToGlobalRegistry 是否开启同步到全局注册中心	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

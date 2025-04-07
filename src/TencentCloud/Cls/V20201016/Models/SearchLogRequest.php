@@ -116,6 +116,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUseNewAnalysis(boolean $UseNewAnalysis) 设置为true代表使用新的检索结果返回方式，输出参数AnalysisRecords和Columns有效
 为false时代表使用老的检索结果返回方式, 输出AnalysisResults和ColNames有效
 两种返回方式在编码格式上有少量区别，建议使用true
+ * @method boolean getHighLight() 获取是否高亮符合检索条件的关键词，一般用于高亮显示。仅支持键值检索，不支持全文检索
+ * @method void setHighLight(boolean $HighLight) 设置是否高亮符合检索条件的关键词，一般用于高亮显示。仅支持键值检索，不支持全文检索
  */
 class SearchLogRequest extends AbstractModel
 {
@@ -216,6 +218,11 @@ class SearchLogRequest extends AbstractModel
     public $UseNewAnalysis;
 
     /**
+     * @var boolean 是否高亮符合检索条件的关键词，一般用于高亮显示。仅支持键值检索，不支持全文检索
+     */
+    public $HighLight;
+
+    /**
      * @param integer $From 要检索分析的日志的起始时间，**Unix时间戳（毫秒）**
      * @param integer $To 要检索分析的日志的结束时间，**Unix时间戳（毫秒）**
      * @param string $Query 检索分析语句，最大长度为12KB
@@ -264,6 +271,7 @@ class SearchLogRequest extends AbstractModel
      * @param boolean $UseNewAnalysis 为true代表使用新的检索结果返回方式，输出参数AnalysisRecords和Columns有效
 为false时代表使用老的检索结果返回方式, 输出AnalysisResults和ColNames有效
 两种返回方式在编码格式上有少量区别，建议使用true
+     * @param boolean $HighLight 是否高亮符合检索条件的关键词，一般用于高亮显示。仅支持键值检索，不支持全文检索
      */
     function __construct()
     {
@@ -329,6 +337,10 @@ class SearchLogRequest extends AbstractModel
 
         if (array_key_exists("UseNewAnalysis",$param) and $param["UseNewAnalysis"] !== null) {
             $this->UseNewAnalysis = $param["UseNewAnalysis"];
+        }
+
+        if (array_key_exists("HighLight",$param) and $param["HighLight"] !== null) {
+            $this->HighLight = $param["HighLight"];
         }
     }
 }

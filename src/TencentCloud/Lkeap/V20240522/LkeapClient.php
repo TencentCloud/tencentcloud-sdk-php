@@ -25,7 +25,7 @@ use TencentCloud\Lkeap\V20240522\Models as Models;
 /**
  * @method Models\ChatCompletionsResponse ChatCompletions(Models\ChatCompletionsRequest $req) ### 接口功能
 
-调用接口，发起一次对话请求。单账号限制接口并发上限为5。
+调用接口，发起一次对话请求。单账号限制接口并发上限为100。
 如需使用OpenAI兼容接口， 请参考文档：[Deepseek OpenAI对话接口](https://cloud.tencent.com/document/product/1772/115969)
 
 #### 在线体验
@@ -142,6 +142,7 @@ except TencentCloudSDKException as err:
  * @method Models\DeleteKnowledgeBaseResponse DeleteKnowledgeBase(Models\DeleteKnowledgeBaseRequest $req) 用于从系统中删除一个现有的知识库。删除知识库将移除该知识库及其所有关联的知识条目（如文档、问答对、属性标签等）。该操作是不可逆的，请在执行前确认是否需要删除。**使用场景**：当某个知识库不再需要时，可以使用此接口将其从系统中删除。例如，一个项目结束后，其相关的知识库可能不再需要存储，可以使用该接口进行删除。
  * @method Models\DeleteQAsResponse DeleteQAs(Models\DeleteQAsRequest $req) 用于删除已有的问答对。 使用场景：当某个问答对不再适用或需要移除时使用。
  * @method Models\DescribeDocResponse DescribeDoc(Models\DescribeDocRequest $req) 用于查询特定文档的详细信息。 使用场景：当需要查看某个文档的具体内容和属性时使用。
+ * @method Models\GetCharacterUsageResponse GetCharacterUsage(Models\GetCharacterUsageRequest $req) 获取字符使用量统计
  * @method Models\GetEmbeddingResponse GetEmbedding(Models\GetEmbeddingRequest $req) 本接口（GetEmbedding）调用文本表示模型，将文本转化为用数值表示的向量形式，可用于文本检索、信息推荐、知识挖掘等场景。
 本接口（GetEmbedding）有单账号调用上限控制，如您有提高并发限制的需求请 [联系我们](https://cloud.tencent.com/act/event/Online_service) 。
  * @method Models\GetReconstructDocumentResultResponse GetReconstructDocumentResult(Models\GetReconstructDocumentResultRequest $req) 本接口为异步接口的查询结果接口，用于获取文档解析处理结果。

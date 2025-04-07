@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPkgId(string $PkgId) 设置日志上报请求包的ID
  * @method string getPkgLogId() 获取请求包内日志的ID
  * @method void setPkgLogId(string $PkgLogId) 设置请求包内日志的ID
+ * @method array getHighLights() 获取符合检索条件的关键词，一般用于高亮显示。仅支持键值检索，不支持全文检索	
+ * @method void setHighLights(array $HighLights) 设置符合检索条件的关键词，一般用于高亮显示。仅支持键值检索，不支持全文检索	
  * @method string getLogJson() 获取日志内容的Json序列化字符串
  * @method void setLogJson(string $LogJson) 设置日志内容的Json序列化字符串
  * @method string getHostName() 获取日志来源主机名称
@@ -81,6 +83,11 @@ class LogInfo extends AbstractModel
     public $PkgLogId;
 
     /**
+     * @var array 符合检索条件的关键词，一般用于高亮显示。仅支持键值检索，不支持全文检索	
+     */
+    public $HighLights;
+
+    /**
      * @var string 日志内容的Json序列化字符串
      */
     public $LogJson;
@@ -108,6 +115,7 @@ class LogInfo extends AbstractModel
      * @param string $FileName 日志文件名称
      * @param string $PkgId 日志上报请求包的ID
      * @param string $PkgLogId 请求包内日志的ID
+     * @param array $HighLights 符合检索条件的关键词，一般用于高亮显示。仅支持键值检索，不支持全文检索	
      * @param string $LogJson 日志内容的Json序列化字符串
      * @param string $HostName 日志来源主机名称
      * @param string $RawLog 原始日志(仅在日志创建索引异常时有值)
@@ -152,6 +160,15 @@ class LogInfo extends AbstractModel
 
         if (array_key_exists("PkgLogId",$param) and $param["PkgLogId"] !== null) {
             $this->PkgLogId = $param["PkgLogId"];
+        }
+
+        if (array_key_exists("HighLights",$param) and $param["HighLights"] !== null) {
+            $this->HighLights = [];
+            foreach ($param["HighLights"] as $key => $value){
+                $obj = new HighLightItem();
+                $obj->deserialize($value);
+                array_push($this->HighLights, $obj);
+            }
         }
 
         if (array_key_exists("LogJson",$param) and $param["LogJson"] !== null) {

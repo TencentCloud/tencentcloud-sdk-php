@@ -18,28 +18,28 @@ namespace TencentCloud\Cls\V20201016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 日志内容高亮描述信息
+ * 符合检索条件的关键词，一般用于高亮显示。仅支持键值检索，不支持全文检索
  *
- * @method string getKey() 获取高亮的日志Key
- * @method void setKey(string $Key) 设置高亮的日志Key
- * @method array getValues() 获取高亮的语法
- * @method void setValues(array $Values) 设置高亮的语法
+ * @method string getKey() 获取高亮的日志字段名称
+ * @method void setKey(string $Key) 设置高亮的日志字段名称
+ * @method array getValues() 获取高亮的关键词
+ * @method void setValues(array $Values) 设置高亮的关键词
  */
 class HighLightItem extends AbstractModel
 {
     /**
-     * @var string 高亮的日志Key
+     * @var string 高亮的日志字段名称
      */
     public $Key;
 
     /**
-     * @var array 高亮的语法
+     * @var array 高亮的关键词
      */
     public $Values;
 
     /**
-     * @param string $Key 高亮的日志Key
-     * @param array $Values 高亮的语法
+     * @param string $Key 高亮的日志字段名称
+     * @param array $Values 高亮的关键词
      */
     function __construct()
     {

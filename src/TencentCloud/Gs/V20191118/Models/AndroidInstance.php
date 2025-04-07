@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置名称
  * @method string getUserId() 获取用户ID
  * @method void setUserId(string $UserId) 设置用户ID
+ * @method string getPrivateIP() 获取内网 IP
+ * @method void setPrivateIP(string $PrivateIP) 设置内网 IP
  */
 class AndroidInstance extends AbstractModel
 {
@@ -115,6 +117,11 @@ class AndroidInstance extends AbstractModel
     public $UserId;
 
     /**
+     * @var string 内网 IP
+     */
+    public $PrivateIP;
+
+    /**
      * @param string $AndroidInstanceId 实例 ID
      * @param string $AndroidInstanceRegion 实例所在区域
      * @param string $AndroidInstanceZone 实例可用区
@@ -128,6 +135,7 @@ class AndroidInstance extends AbstractModel
      * @param array $AndroidInstanceLabels 标签列表
      * @param string $Name 名称
      * @param string $UserId 用户ID
+     * @param string $PrivateIP 内网 IP
      */
     function __construct()
     {
@@ -197,6 +205,10 @@ class AndroidInstance extends AbstractModel
 
         if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
             $this->UserId = $param["UserId"];
+        }
+
+        if (array_key_exists("PrivateIP",$param) and $param["PrivateIP"] !== null) {
+            $this->PrivateIP = $param["PrivateIP"];
         }
     }
 }

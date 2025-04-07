@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Gs\V20191118\Models as Models;
 
 /**
+ * @method Models\BackUpAndroidInstanceToStorageResponse BackUpAndroidInstanceToStorage(Models\BackUpAndroidInstanceToStorageRequest $req) 备份云手机到指定存储
  * @method Models\ConnectAndroidInstanceResponse ConnectAndroidInstance(Models\ConnectAndroidInstanceRequest $req) 连接安卓实例
  * @method Models\CopyAndroidInstanceResponse CopyAndroidInstance(Models\CopyAndroidInstanceRequest $req) 复制安卓实例：
 1. 排除和包含文件只能指定/data下的文件，不指定时复制整个/data目录
@@ -55,6 +56,7 @@ use TencentCloud\Gs\V20191118\Models as Models;
  * @method Models\RebootAndroidInstancesResponse RebootAndroidInstances(Models\RebootAndroidInstancesRequest $req) 重启安卓实例
  * @method Models\ResetAndroidInstancesResponse ResetAndroidInstances(Models\ResetAndroidInstancesRequest $req) 重置安卓实例
  * @method Models\RestartAndroidInstancesAppResponse RestartAndroidInstancesApp(Models\RestartAndroidInstancesAppRequest $req) 启动安卓实例应用
+ * @method Models\RestoreAndroidInstanceFromStorageResponse RestoreAndroidInstanceFromStorage(Models\RestoreAndroidInstanceFromStorageRequest $req) 指定存储还原云手机
  * @method Models\SaveGameArchiveResponse SaveGameArchive(Models\SaveGameArchiveRequest $req) 保存游戏存档
  * @method Models\StartAndroidInstancesResponse StartAndroidInstances(Models\StartAndroidInstancesRequest $req) 重启安卓实例
  * @method Models\StartAndroidInstancesAppResponse StartAndroidInstancesApp(Models\StartAndroidInstancesAppRequest $req) 启动安卓实例应用

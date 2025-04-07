@@ -72,6 +72,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageUrl(string $ImageUrl) 设置原图地址
  * @method string getPortraitUrl() 获取身份证头像照片的地址（人像面）
  * @method void setPortraitUrl(string $PortraitUrl) 设置身份证头像照片的地址（人像面）
+ * @method integer getIntErrorCode() 获取整型错误码
+ * @method void setIntErrorCode(integer $IntErrorCode) 设置整型错误码
  */
 class IDCardInfoResult extends AbstractModel
 {
@@ -158,6 +160,11 @@ class IDCardInfoResult extends AbstractModel
     public $PortraitUrl;
 
     /**
+     * @var integer 整型错误码
+     */
+    public $IntErrorCode;
+
+    /**
      * @param array $WarnCodes 警告代码
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Address 地址（人像面）
@@ -184,6 +191,7 @@ class IDCardInfoResult extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ImageUrl 原图地址
      * @param string $PortraitUrl 身份证头像照片的地址（人像面）
+     * @param integer $IntErrorCode 整型错误码
      */
     function __construct()
     {
@@ -252,6 +260,10 @@ class IDCardInfoResult extends AbstractModel
 
         if (array_key_exists("PortraitUrl",$param) and $param["PortraitUrl"] !== null) {
             $this->PortraitUrl = $param["PortraitUrl"];
+        }
+
+        if (array_key_exists("IntErrorCode",$param) and $param["IntErrorCode"] !== null) {
+            $this->IntErrorCode = $param["IntErrorCode"];
         }
     }
 }

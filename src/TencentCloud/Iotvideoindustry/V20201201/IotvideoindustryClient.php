@@ -36,7 +36,7 @@ use TencentCloud\Iotvideoindustry\V20201201\Models as Models;
  * @method Models\CreateDeviceResponse CreateDevice(Models\CreateDeviceRequest $req) 本接口(CreateDevice) 用于创建设备。
  * @method Models\CreateDeviceGroupResponse CreateDeviceGroup(Models\CreateDeviceGroupRequest $req) 本接口(CreateDeviceGroup) 用于创建设备管理分组。
  * @method Models\CreateLiveChannelResponse CreateLiveChannel(Models\CreateLiveChannelRequest $req) 创建直播频道
- * @method Models\CreateLiveRecordPlanResponse CreateLiveRecordPlan(Models\CreateLiveRecordPlanRequest $req) 创建直播录制计划
+ * @method Models\CreateLiveRecordPlanResponse CreateLiveRecordPlan(Models\CreateLiveRecordPlanRequest $req) 创建直播录制计划，直播录制接口，暂时下线中，只有国标接口支持云端录制
  * @method Models\CreateMessageForwardResponse CreateMessageForward(Models\CreateMessageForwardRequest $req) 创建消息转发配置
  * @method Models\CreateRecordPlanResponse CreateRecordPlan(Models\CreateRecordPlanRequest $req) 本接口(CreateRecordPlan) 用于创建录制计划，使设备与时间模板绑定，以便及时启动录制
 请使用CreateRecordingPlan代替

@@ -34,8 +34,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterNodeNum(integer $ClusterNodeNum) 设置集群节点数
  * @method string getRegion() 获取集群区域
  * @method void setRegion(string $Region) 设置集群区域
- * @method string getDefenderStatus() 获取防护状态: 已防护: Defended 未防护: UnDefended
- * @method void setDefenderStatus(string $DefenderStatus) 设置防护状态: 已防护: Defended 未防护: UnDefended
+ * @method string getDefenderStatus() 获取防护状态: 
+已防护: Defended 
+未防护: UnDefended
+部分防护: PartDefened
+ * @method void setDefenderStatus(string $DefenderStatus) 设置防护状态: 
+已防护: Defended 
+未防护: UnDefended
+部分防护: PartDefened
  * @method string getClusterStatus() 获取集群状态
  * @method void setClusterStatus(string $ClusterStatus) 设置集群状态
  * @method string getClusterSubStatus() 获取集群运行子状态
@@ -139,7 +145,10 @@ class ClusterInfoItem extends AbstractModel
     public $Region;
 
     /**
-     * @var string 防护状态: 已防护: Defended 未防护: UnDefended
+     * @var string 防护状态: 
+已防护: Defended 
+未防护: UnDefended
+部分防护: PartDefened
      */
     public $DefenderStatus;
 
@@ -275,7 +284,10 @@ class ClusterInfoItem extends AbstractModel
      * @param string $ClusterType 集群类型
      * @param integer $ClusterNodeNum 集群节点数
      * @param string $Region 集群区域
-     * @param string $DefenderStatus 防护状态: 已防护: Defended 未防护: UnDefended
+     * @param string $DefenderStatus 防护状态: 
+已防护: Defended 
+未防护: UnDefended
+部分防护: PartDefened
      * @param string $ClusterStatus 集群状态
      * @param string $ClusterSubStatus 集群运行子状态
      * @param string $ClusterCheckMode 集群的检测模式，为Cluster_Normal或者Cluster_Actived.

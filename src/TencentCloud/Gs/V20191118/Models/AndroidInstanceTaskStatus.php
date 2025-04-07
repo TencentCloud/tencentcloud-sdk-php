@@ -28,6 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAndroidInstanceId(string $AndroidInstanceId) 设置实例ID
  * @method string getTaskResult() 获取任务执行结果描述，针对某些任务，可以是可解析的 json
  * @method void setTaskResult(string $TaskResult) 设置任务执行结果描述，针对某些任务，可以是可解析的 json
+ * @method string getTaskType() 获取任务类型
+ * @method void setTaskType(string $TaskType) 设置任务类型
+ * @method string getCreateTime() 获取任务创建时间
+ * @method void setCreateTime(string $CreateTime) 设置任务创建时间
+ * @method string getCompleteTime() 获取任务完成时间
+ * @method void setCompleteTime(string $CompleteTime) 设置任务完成时间
  */
 class AndroidInstanceTaskStatus extends AbstractModel
 {
@@ -52,10 +58,28 @@ class AndroidInstanceTaskStatus extends AbstractModel
     public $TaskResult;
 
     /**
+     * @var string 任务类型
+     */
+    public $TaskType;
+
+    /**
+     * @var string 任务创建时间
+     */
+    public $CreateTime;
+
+    /**
+     * @var string 任务完成时间
+     */
+    public $CompleteTime;
+
+    /**
      * @param string $TaskId 任务ID
      * @param string $Status 任务状态：SUCCESS，FAILED，PROCESSING，PENDING,CANCELED
      * @param string $AndroidInstanceId 实例ID
      * @param string $TaskResult 任务执行结果描述，针对某些任务，可以是可解析的 json
+     * @param string $TaskType 任务类型
+     * @param string $CreateTime 任务创建时间
+     * @param string $CompleteTime 任务完成时间
      */
     function __construct()
     {
@@ -84,6 +108,18 @@ class AndroidInstanceTaskStatus extends AbstractModel
 
         if (array_key_exists("TaskResult",$param) and $param["TaskResult"] !== null) {
             $this->TaskResult = $param["TaskResult"];
+        }
+
+        if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
+            $this->TaskType = $param["TaskType"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("CompleteTime",$param) and $param["CompleteTime"] !== null) {
+            $this->CompleteTime = $param["CompleteTime"];
         }
     }
 }

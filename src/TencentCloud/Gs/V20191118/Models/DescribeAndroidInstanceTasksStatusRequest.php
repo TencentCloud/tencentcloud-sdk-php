@@ -20,18 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAndroidInstanceTasksStatus请求参数结构体
  *
- * @method array getTaskIds() 获取任务ID列表
- * @method void setTaskIds(array $TaskIds) 设置任务ID列表
+ * @method array getTaskIds() 获取任务 ID 列表
+ * @method void setTaskIds(array $TaskIds) 设置任务 ID 列表
+ * @method array getFilter() 获取条件过滤器
+ * @method void setFilter(array $Filter) 设置条件过滤器
+ * @method integer getOffset() 获取偏移量，默认为 0
+ * @method void setOffset(integer $Offset) 设置偏移量，默认为 0
+ * @method integer getLimit() 获取限制量，默认为20，最大值为100
+ * @method void setLimit(integer $Limit) 设置限制量，默认为20，最大值为100
  */
 class DescribeAndroidInstanceTasksStatusRequest extends AbstractModel
 {
     /**
-     * @var array 任务ID列表
+     * @var array 任务 ID 列表
      */
     public $TaskIds;
 
     /**
-     * @param array $TaskIds 任务ID列表
+     * @var array 条件过滤器
+     */
+    public $Filter;
+
+    /**
+     * @var integer 偏移量，默认为 0
+     */
+    public $Offset;
+
+    /**
+     * @var integer 限制量，默认为20，最大值为100
+     */
+    public $Limit;
+
+    /**
+     * @param array $TaskIds 任务 ID 列表
+     * @param array $Filter 条件过滤器
+     * @param integer $Offset 偏移量，默认为 0
+     * @param integer $Limit 限制量，默认为20，最大值为100
      */
     function __construct()
     {
@@ -48,6 +72,23 @@ class DescribeAndroidInstanceTasksStatusRequest extends AbstractModel
         }
         if (array_key_exists("TaskIds",$param) and $param["TaskIds"] !== null) {
             $this->TaskIds = $param["TaskIds"];
+        }
+
+        if (array_key_exists("Filter",$param) and $param["Filter"] !== null) {
+            $this->Filter = [];
+            foreach ($param["Filter"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filter, $obj);
+            }
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
     }
 }

@@ -135,6 +135,9 @@ use TencentCloud\Common\AbstractModel;
  <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>
 
 注：`合同组暂不支持批量拒签功能。`
+
+ * @method PresetApproverInfo getPresetApproverInfo() 获取	 预设的动态签署方的补充信息，仅匹配对应信息的签署方才能领取合同。暂时仅对个人参与方生效。
+ * @method void setPresetApproverInfo(PresetApproverInfo $PresetApproverInfo) 设置	 预设的动态签署方的补充信息，仅匹配对应信息的签署方才能领取合同。暂时仅对个人参与方生效。
  */
 class CreateBatchQuickSignUrlRequest extends AbstractModel
 {
@@ -249,6 +252,11 @@ class CreateBatchQuickSignUrlRequest extends AbstractModel
     public $CanBatchReject;
 
     /**
+     * @var PresetApproverInfo 	 预设的动态签署方的补充信息，仅匹配对应信息的签署方才能领取合同。暂时仅对个人参与方生效。
+     */
+    public $PresetApproverInfo;
+
+    /**
      * @param FlowCreateApprover $FlowApproverInfo 批量签署的流程签署人，其中姓名(ApproverName)、参与人类型(ApproverType)必传，手机号(ApproverMobile)和证件信息(ApproverIdCardType、ApproverIdCardNumber)可任选一种或全部传入。
 <ul>
 <li>若为个人参与方：ApproverType=1</li>
@@ -306,6 +314,8 @@ class CreateBatchQuickSignUrlRequest extends AbstractModel
  <ul><li>false (默认): 不允许批量拒签</li> <li>true : 允许批量拒签。</li></ul>
 
 注：`合同组暂不支持批量拒签功能。`
+
+     * @param PresetApproverInfo $PresetApproverInfo 	 预设的动态签署方的补充信息，仅匹配对应信息的签署方才能领取合同。暂时仅对个人参与方生效。
      */
     function __construct()
     {
@@ -375,6 +385,11 @@ class CreateBatchQuickSignUrlRequest extends AbstractModel
 
         if (array_key_exists("CanBatchReject",$param) and $param["CanBatchReject"] !== null) {
             $this->CanBatchReject = $param["CanBatchReject"];
+        }
+
+        if (array_key_exists("PresetApproverInfo",$param) and $param["PresetApproverInfo"] !== null) {
+            $this->PresetApproverInfo = new PresetApproverInfo();
+            $this->PresetApproverInfo->deserialize($param["PresetApproverInfo"]);
         }
     }
 }

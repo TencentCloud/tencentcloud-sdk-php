@@ -30,10 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method integer getSize() 获取镜像大小
  * @method void setSize(integer $Size) 设置镜像大小
- * @method integer getHostCnt() 获取关联主机个数
- * @method void setHostCnt(integer $HostCnt) 设置关联主机个数
+ * @method integer getHostCnt() 获取关联主机个数(包含普通节点数和超级节点数)
+ * @method void setHostCnt(integer $HostCnt) 设置关联主机个数(包含普通节点数和超级节点数)
  * @method integer getContainerCnt() 获取关联容器个数
  * @method void setContainerCnt(integer $ContainerCnt) 设置关联容器个数
+ * @method integer getSuperNodeCnt() 获取超级节点数
+ * @method void setSuperNodeCnt(integer $SuperNodeCnt) 设置超级节点数
  * @method string getScanTime() 获取最近扫描时间
  * @method void setScanTime(string $ScanTime) 设置最近扫描时间
  * @method integer getVulCnt() 获取漏洞个数
@@ -109,7 +111,7 @@ class DescribeAssetImageDetailResponse extends AbstractModel
     public $Size;
 
     /**
-     * @var integer 关联主机个数
+     * @var integer 关联主机个数(包含普通节点数和超级节点数)
      */
     public $HostCnt;
 
@@ -117,6 +119,11 @@ class DescribeAssetImageDetailResponse extends AbstractModel
      * @var integer 关联容器个数
      */
     public $ContainerCnt;
+
+    /**
+     * @var integer 超级节点数
+     */
+    public $SuperNodeCnt;
 
     /**
      * @var string 最近扫描时间
@@ -239,8 +246,9 @@ class DescribeAssetImageDetailResponse extends AbstractModel
      * @param string $ImageDigest 镜像摘要
      * @param string $CreateTime 创建时间
      * @param integer $Size 镜像大小
-     * @param integer $HostCnt 关联主机个数
+     * @param integer $HostCnt 关联主机个数(包含普通节点数和超级节点数)
      * @param integer $ContainerCnt 关联容器个数
+     * @param integer $SuperNodeCnt 超级节点数
      * @param string $ScanTime 最近扫描时间
      * @param integer $VulCnt 漏洞个数
      * @param integer $RiskCnt 风险行为数
@@ -304,6 +312,10 @@ class DescribeAssetImageDetailResponse extends AbstractModel
 
         if (array_key_exists("ContainerCnt",$param) and $param["ContainerCnt"] !== null) {
             $this->ContainerCnt = $param["ContainerCnt"];
+        }
+
+        if (array_key_exists("SuperNodeCnt",$param) and $param["SuperNodeCnt"] !== null) {
+            $this->SuperNodeCnt = $param["SuperNodeCnt"];
         }
 
         if (array_key_exists("ScanTime",$param) and $param["ScanTime"] !== null) {

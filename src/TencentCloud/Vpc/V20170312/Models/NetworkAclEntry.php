@@ -37,13 +37,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getPriority() 获取优先级，从1开始。	
  * @method void setPriority(integer $Priority) 设置优先级，从1开始。	
  * @method string getNetworkAclIpv4EntryId() 获取IPv4网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryID至少提供一个。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetworkAclIpv4EntryId(string $NetworkAclIpv4EntryId) 设置IPv4网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryID至少提供一个。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNetworkAclIpv6EntryId() 获取IPv6网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryId至少提供一个。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetworkAclIpv6EntryId(string $NetworkAclIpv6EntryId) 设置IPv6网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryId至少提供一个。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NetworkAclEntry extends AbstractModel
 {
@@ -89,13 +85,11 @@ class NetworkAclEntry extends AbstractModel
 
     /**
      * @var string IPv4网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryID至少提供一个。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NetworkAclIpv4EntryId;
 
     /**
      * @var string IPv6网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryId至少提供一个。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NetworkAclIpv6EntryId;
 
@@ -109,9 +103,7 @@ class NetworkAclEntry extends AbstractModel
      * @param string $ModifyTime 修改时间。
      * @param integer $Priority 优先级，从1开始。	
      * @param string $NetworkAclIpv4EntryId IPv4网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryID至少提供一个。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NetworkAclIpv6EntryId IPv6网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryId至少提供一个。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

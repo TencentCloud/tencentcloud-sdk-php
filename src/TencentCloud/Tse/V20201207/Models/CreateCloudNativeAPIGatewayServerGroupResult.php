@@ -25,13 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getGroupId() 获取分组id
  * @method void setGroupId(string $GroupId) 设置分组id
  * @method string getStatus() 获取状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTaskId() 获取任务ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskId(string $TaskId) 设置任务ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CreateCloudNativeAPIGatewayServerGroupResult extends AbstractModel
 {
@@ -47,13 +43,11 @@ class CreateCloudNativeAPIGatewayServerGroupResult extends AbstractModel
 
     /**
      * @var string 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskId;
 
@@ -61,9 +55,7 @@ class CreateCloudNativeAPIGatewayServerGroupResult extends AbstractModel
      * @param string $GatewayId 网关实例id
      * @param string $GroupId 分组id
      * @param string $Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskId 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

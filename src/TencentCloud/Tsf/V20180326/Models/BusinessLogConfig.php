@@ -53,13 +53,9 @@ use TencentCloud\Common\AbstractModel;
  * @method array getConfigAssociatedGroupList() 获取配置项关联部署组
  * @method void setConfigAssociatedGroupList(array $ConfigAssociatedGroupList) 设置配置项关联部署组
  * @method boolean getFilebeatConfigEnable() 获取是否开启filebeat高级配置开关
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFilebeatConfigEnable(boolean $FilebeatConfigEnable) 设置是否开启filebeat高级配置开关
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFilebeatCloseTimeout() 获取close_timeout参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFilebeatCloseTimeout(integer $FilebeatCloseTimeout) 设置close_timeout参数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BusinessLogConfig extends AbstractModel
 {
@@ -126,13 +122,11 @@ class BusinessLogConfig extends AbstractModel
 
     /**
      * @var boolean 是否开启filebeat高级配置开关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FilebeatConfigEnable;
 
     /**
      * @var integer close_timeout参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FilebeatCloseTimeout;
 
@@ -154,9 +148,7 @@ class BusinessLogConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ConfigAssociatedGroupList 配置项关联部署组
      * @param boolean $FilebeatConfigEnable 是否开启filebeat高级配置开关
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FilebeatCloseTimeout close_timeout参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -28,8 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method integer getSize() 获取镜像大小
  * @method void setSize(integer $Size) 设置镜像大小
- * @method integer getHostCnt() 获取主机个数
- * @method void setHostCnt(integer $HostCnt) 设置主机个数
+ * @method integer getHostCnt() 获取主机个数(包含普通节点数和超级节点数)
+ * @method void setHostCnt(integer $HostCnt) 设置主机个数(包含普通节点数和超级节点数)
+ * @method integer getSuperNodeCnt() 获取超级节点数
+ * @method void setSuperNodeCnt(integer $SuperNodeCnt) 设置超级节点数
  * @method integer getContainerCnt() 获取容器个数
  * @method void setContainerCnt(integer $ContainerCnt) 设置容器个数
  * @method string getScanTime() 获取扫描时间
@@ -98,9 +100,14 @@ class ImagesInfo extends AbstractModel
     public $Size;
 
     /**
-     * @var integer 主机个数
+     * @var integer 主机个数(包含普通节点数和超级节点数)
      */
     public $HostCnt;
+
+    /**
+     * @var integer 超级节点数
+     */
+    public $SuperNodeCnt;
 
     /**
      * @var integer 容器个数
@@ -217,7 +224,8 @@ class ImagesInfo extends AbstractModel
      * @param string $ImageName 镜像名称
      * @param string $CreateTime 创建时间
      * @param integer $Size 镜像大小
-     * @param integer $HostCnt 主机个数
+     * @param integer $HostCnt 主机个数(包含普通节点数和超级节点数)
+     * @param integer $SuperNodeCnt 超级节点数
      * @param integer $ContainerCnt 容器个数
      * @param string $ScanTime 扫描时间
      * @param integer $VulCnt 漏洞个数
@@ -272,6 +280,10 @@ class ImagesInfo extends AbstractModel
 
         if (array_key_exists("HostCnt",$param) and $param["HostCnt"] !== null) {
             $this->HostCnt = $param["HostCnt"];
+        }
+
+        if (array_key_exists("SuperNodeCnt",$param) and $param["SuperNodeCnt"] !== null) {
+            $this->SuperNodeCnt = $param["SuperNodeCnt"];
         }
 
         if (array_key_exists("ContainerCnt",$param) and $param["ContainerCnt"] !== null) {

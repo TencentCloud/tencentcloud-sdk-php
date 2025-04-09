@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * Kong网关被动健康检查配置
  *
  * @method string getType() 获取后端target协议类型，被动健康检查支持http和tcp，主动健康检查支持http
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置后端target协议类型，被动健康检查支持http和tcp，主动健康检查支持http
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class KongPassiveHealthCheck extends AbstractModel
 {
     /**
      * @var string 后端target协议类型，被动健康检查支持http和tcp，主动健康检查支持http
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @param string $Type 后端target协议类型，被动健康检查支持http和tcp，主动健康检查支持http
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

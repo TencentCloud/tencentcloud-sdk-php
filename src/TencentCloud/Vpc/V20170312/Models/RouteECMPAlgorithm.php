@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 用于修改入路由表ECMP算法。现在支持的算法有：ECMP_QUINTUPLE_HASH：五元组hash，ECMP_SOURCE_DESTINATION_IP_HASH：源和目的IP hash，ECMP_DESTINATION_IP_HASH：目的IP hash，ECMP_SOURCE_IP_HASH：源IP hash。
  *
  * @method string getDestinationCidrBlock() 获取 目标网段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDestinationCidrBlock(string $DestinationCidrBlock) 设置 目标网段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubnetRouteAlgorithm() 获取支持的 ECMP算法有：ECMP_QUINTUPLE_HASH：五元组hash，ECMP_SOURCE_DESTINATION_IP_HASH：源和目的IP hash，ECMP_DESTINATION_IP_HASH：目的IP hash，ECMP_SOURCE_IP_HASH：源IP hash。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetRouteAlgorithm(string $SubnetRouteAlgorithm) 设置支持的 ECMP算法有：ECMP_QUINTUPLE_HASH：五元组hash，ECMP_SOURCE_DESTINATION_IP_HASH：源和目的IP hash，ECMP_DESTINATION_IP_HASH：目的IP hash，ECMP_SOURCE_IP_HASH：源IP hash。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RouteECMPAlgorithm extends AbstractModel
 {
     /**
      * @var string  目标网段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DestinationCidrBlock;
 
     /**
      * @var string 支持的 ECMP算法有：ECMP_QUINTUPLE_HASH：五元组hash，ECMP_SOURCE_DESTINATION_IP_HASH：源和目的IP hash，ECMP_DESTINATION_IP_HASH：目的IP hash，ECMP_SOURCE_IP_HASH：源IP hash。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetRouteAlgorithm;
 
     /**
      * @param string $DestinationCidrBlock  目标网段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetRouteAlgorithm 支持的 ECMP算法有：ECMP_QUINTUPLE_HASH：五元组hash，ECMP_SOURCE_DESTINATION_IP_HASH：源和目的IP hash，ECMP_DESTINATION_IP_HASH：目的IP hash，ECMP_SOURCE_IP_HASH：源IP hash。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

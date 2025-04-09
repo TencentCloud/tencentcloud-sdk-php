@@ -41,13 +41,13 @@ use TencentCloud\Common\AbstractModel;
 - true: 不展示上传文件页
  
 
-注意: 此参数仅针对**EmbedType=CREATE_TEMPLATE(创建模板)有效**，
+注意: 此参数仅针对**EmbedType=CREATE_TEMPLATE(创建模板)和EmbedType=CREATE_CONTRACT_DRAFT_COOPEDIT(创建起草合同)有效**，
  * @method void setSkipUploadFile(boolean $SkipUploadFile) 设置跳过上传文件，默认为false(展示上传文件页）![image](https://qcloudimg.tencent-cloud.cn/raw/8ca33745cf772e79831dbe5a70e82400.png)
 - false: 展示上传文件页
 - true: 不展示上传文件页
  
 
-注意: 此参数仅针对**EmbedType=CREATE_TEMPLATE(创建模板)有效**，
+注意: 此参数仅针对**EmbedType=CREATE_TEMPLATE(创建模板)和EmbedType=CREATE_CONTRACT_DRAFT_COOPEDIT(创建起草合同)有效**，
  */
 class EmbedUrlOption extends AbstractModel
 {
@@ -73,7 +73,7 @@ class EmbedUrlOption extends AbstractModel
 - true: 不展示上传文件页
  
 
-注意: 此参数仅针对**EmbedType=CREATE_TEMPLATE(创建模板)有效**，
+注意: 此参数仅针对**EmbedType=CREATE_TEMPLATE(创建模板)和EmbedType=CREATE_CONTRACT_DRAFT_COOPEDIT(创建起草合同)有效**，
      */
     public $SkipUploadFile;
 
@@ -91,7 +91,7 @@ class EmbedUrlOption extends AbstractModel
 - true: 不展示上传文件页
  
 
-注意: 此参数仅针对**EmbedType=CREATE_TEMPLATE(创建模板)有效**，
+注意: 此参数仅针对**EmbedType=CREATE_TEMPLATE(创建模板)和EmbedType=CREATE_CONTRACT_DRAFT_COOPEDIT(创建起草合同)有效**，
      */
     function __construct()
     {

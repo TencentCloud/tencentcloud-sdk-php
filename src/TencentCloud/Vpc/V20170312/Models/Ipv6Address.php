@@ -41,13 +41,9 @@ use TencentCloud\Common\AbstractModel;
 <li>`DELETING`：删除中</li>
 <li>`AVAILABLE`：可用的</li>
  * @method string getPublicIpAddress() 获取如果 IPv6地址是 ULA 类型，绑定的公网IP地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicIpAddress(string $PublicIpAddress) 设置如果 IPv6地址是 ULA 类型，绑定的公网IP地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAddressType() 获取`IPv6`地址的类型: `GUA`(全球单播地址), `OTHER`(非GUA/ULA地址), `ULA`(唯一本地地址)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddressType(string $AddressType) 设置`IPv6`地址的类型: `GUA`(全球单播地址), `OTHER`(非GUA/ULA地址), `ULA`(唯一本地地址)
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Ipv6Address extends AbstractModel
 {
@@ -87,13 +83,11 @@ class Ipv6Address extends AbstractModel
 
     /**
      * @var string 如果 IPv6地址是 ULA 类型，绑定的公网IP地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicIpAddress;
 
     /**
      * @var string `IPv6`地址的类型: `GUA`(全球单播地址), `OTHER`(非GUA/ULA地址), `ULA`(唯一本地地址)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AddressType;
 
@@ -109,9 +103,7 @@ class Ipv6Address extends AbstractModel
 <li>`DELETING`：删除中</li>
 <li>`AVAILABLE`：可用的</li>
      * @param string $PublicIpAddress 如果 IPv6地址是 ULA 类型，绑定的公网IP地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AddressType `IPv6`地址的类型: `GUA`(全球单播地址), `OTHER`(非GUA/ULA地址), `ULA`(唯一本地地址)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

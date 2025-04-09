@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 安全组策略统计
  *
  * @method integer getIngressIPv4TotalCount() 获取入站IPv4总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIngressIPv4TotalCount(integer $IngressIPv4TotalCount) 设置入站IPv4总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIngressIPv6TotalCount() 获取入站IPv6总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIngressIPv6TotalCount(integer $IngressIPv6TotalCount) 设置入站IPv6总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEgressIPv4TotalCount() 获取出站IPv4总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEgressIPv4TotalCount(integer $EgressIPv4TotalCount) 设置出站IPv4总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEgressIPv6TotalCount() 获取出站IPv6总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEgressIPv6TotalCount(integer $EgressIPv6TotalCount) 设置出站IPv6总数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PolicyStatistics extends AbstractModel
 {
     /**
      * @var integer 入站IPv4总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IngressIPv4TotalCount;
 
     /**
      * @var integer 入站IPv6总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IngressIPv6TotalCount;
 
     /**
      * @var integer 出站IPv4总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EgressIPv4TotalCount;
 
     /**
      * @var integer 出站IPv6总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EgressIPv6TotalCount;
 
     /**
      * @param integer $IngressIPv4TotalCount 入站IPv4总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IngressIPv6TotalCount 入站IPv6总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EgressIPv4TotalCount 出站IPv4总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EgressIPv6TotalCount 出站IPv6总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

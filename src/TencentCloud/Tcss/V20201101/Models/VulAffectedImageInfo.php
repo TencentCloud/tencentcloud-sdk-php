@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageID(string $ImageID) 设置镜像ID
  * @method string getImageName() 获取镜像名称
  * @method void setImageName(string $ImageName) 设置镜像名称
- * @method integer getHostCount() 获取关联的主机数
- * @method void setHostCount(integer $HostCount) 设置关联的主机数
+ * @method integer getHostCount() 获取关联的主机数(包含普通节点数和超级节点数)
+ * @method void setHostCount(integer $HostCount) 设置关联的主机数(包含普通节点数和超级节点数)
+ * @method integer getSuperNodeCount() 获取关联的超级节点数
+ * @method void setSuperNodeCount(integer $SuperNodeCount) 设置关联的超级节点数
  * @method integer getContainerCount() 获取关联的容器数
  * @method void setContainerCount(integer $ContainerCount) 设置关联的容器数
  * @method array getComponentList() 获取组件列表
@@ -44,9 +46,14 @@ class VulAffectedImageInfo extends AbstractModel
     public $ImageName;
 
     /**
-     * @var integer 关联的主机数
+     * @var integer 关联的主机数(包含普通节点数和超级节点数)
      */
     public $HostCount;
+
+    /**
+     * @var integer 关联的超级节点数
+     */
+    public $SuperNodeCount;
 
     /**
      * @var integer 关联的容器数
@@ -61,7 +68,8 @@ class VulAffectedImageInfo extends AbstractModel
     /**
      * @param string $ImageID 镜像ID
      * @param string $ImageName 镜像名称
-     * @param integer $HostCount 关联的主机数
+     * @param integer $HostCount 关联的主机数(包含普通节点数和超级节点数)
+     * @param integer $SuperNodeCount 关联的超级节点数
      * @param integer $ContainerCount 关联的容器数
      * @param array $ComponentList 组件列表
      */
@@ -88,6 +96,10 @@ class VulAffectedImageInfo extends AbstractModel
 
         if (array_key_exists("HostCount",$param) and $param["HostCount"] !== null) {
             $this->HostCount = $param["HostCount"];
+        }
+
+        if (array_key_exists("SuperNodeCount",$param) and $param["SuperNodeCount"] !== null) {
+            $this->SuperNodeCount = $param["SuperNodeCount"];
         }
 
         if (array_key_exists("ContainerCount",$param) and $param["ContainerCount"] !== null) {

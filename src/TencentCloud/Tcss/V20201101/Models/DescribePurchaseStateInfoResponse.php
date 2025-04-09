@@ -62,6 +62,8 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
  * @method void setDefendClusterCoresCnt(integer $DefendClusterCoresCnt) 设置已防护集群核数
  * @method integer getDefendHostCoresCnt() 获取已防护主机核数
  * @method void setDefendHostCoresCnt(integer $DefendHostCoresCnt) 设置已防护主机核数
+ * @method integer getTrialCoresCnt() 获取试用的专业版核数
+ * @method void setTrialCoresCnt(integer $TrialCoresCnt) 设置试用的专业版核数
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -169,6 +171,11 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
     public $DefendHostCoresCnt;
 
     /**
+     * @var integer 试用的专业版核数
+     */
+    public $TrialCoresCnt;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -195,6 +202,7 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
      * @param integer $FlexibleCoresLimit 弹性计费核数上限
      * @param integer $DefendClusterCoresCnt 已防护集群核数
      * @param integer $DefendHostCoresCnt 已防护主机核数
+     * @param integer $TrialCoresCnt 试用的专业版核数
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -288,6 +296,10 @@ State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
 
         if (array_key_exists("DefendHostCoresCnt",$param) and $param["DefendHostCoresCnt"] !== null) {
             $this->DefendHostCoresCnt = $param["DefendHostCoresCnt"];
+        }
+
+        if (array_key_exists("TrialCoresCnt",$param) and $param["TrialCoresCnt"] !== null) {
+            $this->TrialCoresCnt = $param["TrialCoresCnt"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * 云原生网关路由信息
  *
  * @method string getID() 获取服务ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setID(string $ID) 设置服务ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取服务名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置服务名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getMethods() 获取无
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMethods(array $Methods) 设置无
@@ -41,45 +37,27 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHosts(array $Hosts) 设置无
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getProtocols() 获取无
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProtocols(array $Protocols) 设置无
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getPreserveHost() 获取无
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPreserveHost(boolean $PreserveHost) 设置无
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHttpsRedirectStatusCode() 获取无
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHttpsRedirectStatusCode(integer $HttpsRedirectStatusCode) 设置无
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getStripPath() 获取无
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStripPath(boolean $StripPath) 设置无
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedTime() 获取无
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedTime(string $CreatedTime) 设置无
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getForceHttps() 获取是否开启了强制HTTPS
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setForceHttps(boolean $ForceHttps) 设置是否开启了强制HTTPS
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getServiceName() 获取服务名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceName(string $ServiceName) 设置服务名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getServiceID() 获取服务ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceID(string $ServiceID) 设置服务ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDestinationPorts() 获取目的端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDestinationPorts(array $DestinationPorts) 设置目的端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getHeaders() 获取路由的Headers
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeaders(array $Headers) 设置路由的Headers
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getRequestBuffering() 获取是否缓存请求body，默认true
  * @method void setRequestBuffering(boolean $RequestBuffering) 设置是否缓存请求body，默认true
  * @method boolean getResponseBuffering() 获取是否缓存响应body，默认true
@@ -91,13 +69,11 @@ class KongRoutePreview extends AbstractModel
 {
     /**
      * @var string 服务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ID;
 
     /**
      * @var string 服务名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
@@ -121,31 +97,26 @@ class KongRoutePreview extends AbstractModel
 
     /**
      * @var array 无
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Protocols;
 
     /**
      * @var boolean 无
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PreserveHost;
 
     /**
      * @var integer 无
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HttpsRedirectStatusCode;
 
     /**
      * @var boolean 无
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StripPath;
 
     /**
      * @var string 无
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedTime;
 
@@ -158,25 +129,21 @@ class KongRoutePreview extends AbstractModel
 
     /**
      * @var string 服务名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceName;
 
     /**
      * @var string 服务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceID;
 
     /**
      * @var array 目的端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DestinationPorts;
 
     /**
      * @var array 路由的Headers
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Headers;
 
@@ -197,9 +164,7 @@ class KongRoutePreview extends AbstractModel
 
     /**
      * @param string $ID 服务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 服务名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Methods 无
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Paths 无
@@ -207,25 +172,16 @@ class KongRoutePreview extends AbstractModel
      * @param array $Hosts 无
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Protocols 无
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $PreserveHost 无
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HttpsRedirectStatusCode 无
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $StripPath 无
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedTime 无
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $ForceHttps 是否开启了强制HTTPS
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceName 服务名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceID 服务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DestinationPorts 目的端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Headers 路由的Headers
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $RequestBuffering 是否缓存请求body，默认true
      * @param boolean $ResponseBuffering 是否缓存响应body，默认true
      * @param integer $RegexPriority 正则优先级

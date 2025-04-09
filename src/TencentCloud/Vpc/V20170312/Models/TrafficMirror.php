@@ -43,17 +43,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCreateTime() 获取流量镜像创建时间。
  * @method void setCreateTime(string $CreateTime) 设置流量镜像创建时间。
  * @method string getType() 获取流量镜像的类型。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置流量镜像的类型。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubnetId() 获取流量镜像所属的子网ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetId(string $SubnetId) 设置流量镜像所属的子网ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTargetInfo() 获取流量镜接收目标资源信息，当接收目标为ENI和CLB时返回。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargetInfo(array $TargetInfo) 设置流量镜接收目标资源信息，当接收目标为ENI和CLB时返回。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TrafficMirror extends AbstractModel
 {
@@ -114,19 +108,16 @@ class TrafficMirror extends AbstractModel
 
     /**
      * @var string 流量镜像的类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 流量镜像所属的子网ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetId;
 
     /**
      * @var array 流量镜接收目标资源信息，当接收目标为ENI和CLB时返回。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetInfo;
 
@@ -143,11 +134,8 @@ class TrafficMirror extends AbstractModel
      * @param TrafficMirrorTarget $CollectorTarget 流量镜接收目标。
      * @param string $CreateTime 流量镜像创建时间。
      * @param string $Type 流量镜像的类型。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 流量镜像所属的子网ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TargetInfo 流量镜接收目标资源信息，当接收目标为ENI和CLB时返回。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

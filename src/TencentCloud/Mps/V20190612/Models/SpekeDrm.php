@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * FairPlay，WideVine，PlayReady 等Drm加密方式。
  *
- * @method string getResourceId() 获取资源标记，
+ * @method string getResourceId() 获取资源标记，该字段内容为用户自定义；
 支持1-128个字符的数字、字母、下划线(_)、中划线(-)。
- * @method void setResourceId(string $ResourceId) 设置资源标记，
+ * @method void setResourceId(string $ResourceId) 设置资源标记，该字段内容为用户自定义；
 支持1-128个字符的数字、字母、下划线(_)、中划线(-)。
- * @method string getKeyServerUrl() 获取drm厂商访问地址；
+ * @method string getKeyServerUrl() 获取DRM厂商访问地址，该字段内容从DRM厂商获取。
 
-注: 不同DRM厂商对子流的数量限制不一样，如 pallycon 限制不能超过5条子流，drmtoday厂商最多仅支持9条子流加密
- * @method void setKeyServerUrl(string $KeyServerUrl) 设置drm厂商访问地址；
+注: 不同DRM厂商对子流的数量限制不一样，如 PallyCon 限制不能超过5条子流，DRMtoday厂商最多仅支持9条子流加密
+ * @method void setKeyServerUrl(string $KeyServerUrl) 设置DRM厂商访问地址，该字段内容从DRM厂商获取。
 
-注: 不同DRM厂商对子流的数量限制不一样，如 pallycon 限制不能超过5条子流，drmtoday厂商最多仅支持9条子流加密
- * @method string getVector() 获取加密初始化向量(32字节字符串)。
- * @method void setVector(string $Vector) 设置加密初始化向量(32字节字符串)。
+注: 不同DRM厂商对子流的数量限制不一样，如 PallyCon 限制不能超过5条子流，DRMtoday厂商最多仅支持9条子流加密
+ * @method string getVector() 获取加密初始化向量(32字节字符串)，该字段内容为用户自定义。
+ * @method void setVector(string $Vector) 设置加密初始化向量(32字节字符串)，该字段内容为用户自定义。
  * @method string getEncryptionMethod() 获取加密方式，FairPlay 默认cbcs，PlayReady，Widevine 默认cenc
 
 cbcs：PlayReady，Widevine，FairPlay 支持；
@@ -51,20 +51,20 @@ preset1：每个子流使用不同的key加密；
 class SpekeDrm extends AbstractModel
 {
     /**
-     * @var string 资源标记，
+     * @var string 资源标记，该字段内容为用户自定义；
 支持1-128个字符的数字、字母、下划线(_)、中划线(-)。
      */
     public $ResourceId;
 
     /**
-     * @var string drm厂商访问地址；
+     * @var string DRM厂商访问地址，该字段内容从DRM厂商获取。
 
-注: 不同DRM厂商对子流的数量限制不一样，如 pallycon 限制不能超过5条子流，drmtoday厂商最多仅支持9条子流加密
+注: 不同DRM厂商对子流的数量限制不一样，如 PallyCon 限制不能超过5条子流，DRMtoday厂商最多仅支持9条子流加密
      */
     public $KeyServerUrl;
 
     /**
-     * @var string 加密初始化向量(32字节字符串)。
+     * @var string 加密初始化向量(32字节字符串)，该字段内容为用户自定义。
      */
     public $Vector;
 
@@ -85,12 +85,12 @@ preset1：每个子流使用不同的key加密；
     public $EncryptionPreset;
 
     /**
-     * @param string $ResourceId 资源标记，
+     * @param string $ResourceId 资源标记，该字段内容为用户自定义；
 支持1-128个字符的数字、字母、下划线(_)、中划线(-)。
-     * @param string $KeyServerUrl drm厂商访问地址；
+     * @param string $KeyServerUrl DRM厂商访问地址，该字段内容从DRM厂商获取。
 
-注: 不同DRM厂商对子流的数量限制不一样，如 pallycon 限制不能超过5条子流，drmtoday厂商最多仅支持9条子流加密
-     * @param string $Vector 加密初始化向量(32字节字符串)。
+注: 不同DRM厂商对子流的数量限制不一样，如 PallyCon 限制不能超过5条子流，DRMtoday厂商最多仅支持9条子流加密
+     * @param string $Vector 加密初始化向量(32字节字符串)，该字段内容为用户自定义。
      * @param string $EncryptionMethod 加密方式，FairPlay 默认cbcs，PlayReady，Widevine 默认cenc
 
 cbcs：PlayReady，Widevine，FairPlay 支持；

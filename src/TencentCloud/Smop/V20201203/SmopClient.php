@@ -23,7 +23,9 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Smop\V20201203\Models as Models;
 
 /**
- * @method Models\SubmitTaskEventResponse SubmitTaskEvent(Models\SubmitTaskEventRequest $req) 提交任务事件接口
+ * @method Models\SubmitTaskEventResponse SubmitTaskEvent(Models\SubmitTaskEventRequest $req) smop产品下线，接口也一起下线
+
+提交任务事件接口
  */
 
 class SmopClient extends AbstractClient

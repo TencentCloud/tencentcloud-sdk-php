@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 云原生API网关节点配置。
  *
  * @method string getSpecification() 获取节点配置, 1c2g|2c4g|4c8g|8c16g。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpecification(string $Specification) 设置节点配置, 1c2g|2c4g|4c8g|8c16g。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNumber() 获取节点数量，2-9。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNumber(integer $Number) 设置节点数量，2-9。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudNativeAPIGatewayNodeConfig extends AbstractModel
 {
     /**
      * @var string 节点配置, 1c2g|2c4g|4c8g|8c16g。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Specification;
 
     /**
      * @var integer 节点数量，2-9。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Number;
 
     /**
      * @param string $Specification 节点配置, 1c2g|2c4g|4c8g|8c16g。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Number 节点数量，2-9。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

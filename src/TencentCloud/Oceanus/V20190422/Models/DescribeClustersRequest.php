@@ -29,7 +29,19 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getOrderType() 获取集群信息结果排序规则，1 按时间降序，2 按照时间升序，3  按照状态排序
  * @method void setOrderType(integer $OrderType) 设置集群信息结果排序规则，1 按时间降序，2 按照时间升序，3  按照状态排序
  * @method array getFilters() 获取过滤规则
+    
+- Name
+    按照集群的名字进行模糊查询。例如：测试
+    类型： String
+    必选： 否
+    
  * @method void setFilters(array $Filters) 设置过滤规则
+    
+- Name
+    按照集群的名字进行模糊查询。例如：测试
+    类型： String
+    必选： 否
+    
  * @method string getWorkSpaceId() 获取工作空间 SerialId
  * @method void setWorkSpaceId(string $WorkSpaceId) 设置工作空间 SerialId
  */
@@ -57,6 +69,12 @@ class DescribeClustersRequest extends AbstractModel
 
     /**
      * @var array 过滤规则
+    
+- Name
+    按照集群的名字进行模糊查询。例如：测试
+    类型： String
+    必选： 否
+    
      */
     public $Filters;
 
@@ -71,6 +89,12 @@ class DescribeClustersRequest extends AbstractModel
      * @param integer $Limit 请求的集群数量，默认 20，最大值 100
      * @param integer $OrderType 集群信息结果排序规则，1 按时间降序，2 按照时间升序，3  按照状态排序
      * @param array $Filters 过滤规则
+    
+- Name
+    按照集群的名字进行模糊查询。例如：测试
+    类型： String
+    必选： 否
+    
      * @param string $WorkSpaceId 工作空间 SerialId
      */
     function __construct()

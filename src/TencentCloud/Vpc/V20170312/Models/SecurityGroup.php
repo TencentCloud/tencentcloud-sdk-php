@@ -35,9 +35,7 @@ use TencentCloud\Common\AbstractModel;
  * @method array getTagSet() 获取标签键值对。
  * @method void setTagSet(array $TagSet) 设置标签键值对。
  * @method string getUpdateTime() 获取安全组更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置安全组更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SecurityGroup extends AbstractModel
 {
@@ -78,7 +76,6 @@ class SecurityGroup extends AbstractModel
 
     /**
      * @var string 安全组更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
@@ -91,7 +88,6 @@ class SecurityGroup extends AbstractModel
      * @param string $CreatedTime 安全组创建时间。
      * @param array $TagSet 标签键值对。
      * @param string $UpdateTime 安全组更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 高级选项设置
  *
  * @method integer getSubTaskConcurrency() 获取子任务单机并发数限制，默认值为2
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubTaskConcurrency(integer $SubTaskConcurrency) 设置子任务单机并发数限制，默认值为2
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AdvanceSettings extends AbstractModel
 {
     /**
      * @var integer 子任务单机并发数限制，默认值为2
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubTaskConcurrency;
 
     /**
      * @param integer $SubTaskConcurrency 子任务单机并发数限制，默认值为2
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

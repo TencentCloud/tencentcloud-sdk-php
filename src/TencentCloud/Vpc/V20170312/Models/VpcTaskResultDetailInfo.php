@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * Vpc任务结果详细信息。
  *
  * @method string getResourceId() 获取资源ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceId(string $ResourceId) 设置资源ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取状态。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置状态。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VpcTaskResultDetailInfo extends AbstractModel
 {
     /**
      * @var string 资源ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceId;
 
     /**
      * @var string 状态。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @param string $ResourceId 资源ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 状态。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

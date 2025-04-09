@@ -26,8 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageName(string $ImageName) 设置镜像名称
  * @method integer getID() 获取白名单记录ID
  * @method void setID(integer $ID) 设置白名单记录ID
- * @method integer getHostCount() 获取关联主机数量
- * @method void setHostCount(integer $HostCount) 设置关联主机数量
+ * @method integer getHostCount() 获取关联主机数量（包含普通节点和超级节点数量）
+ * @method void setHostCount(integer $HostCount) 设置关联主机数量（包含普通节点和超级节点数量）
+ * @method integer getSuperNodeCount() 获取关联超级节点数量
+ * @method void setSuperNodeCount(integer $SuperNodeCount) 设置关联超级节点数量
  * @method integer getContainerCount() 获取关联容器数量
  * @method void setContainerCount(integer $ContainerCount) 设置关联容器数量
  * @method array getEventType() 获取加白事件类型
@@ -57,9 +59,14 @@ class EscapeWhiteListInfo extends AbstractModel
     public $ID;
 
     /**
-     * @var integer 关联主机数量
+     * @var integer 关联主机数量（包含普通节点和超级节点数量）
      */
     public $HostCount;
+
+    /**
+     * @var integer 关联超级节点数量
+     */
+    public $SuperNodeCount;
 
     /**
      * @var integer 关联容器数量
@@ -90,7 +97,8 @@ class EscapeWhiteListInfo extends AbstractModel
      * @param string $ImageID 镜像ID
      * @param string $ImageName 镜像名称
      * @param integer $ID 白名单记录ID
-     * @param integer $HostCount 关联主机数量
+     * @param integer $HostCount 关联主机数量（包含普通节点和超级节点数量）
+     * @param integer $SuperNodeCount 关联超级节点数量
      * @param integer $ContainerCount 关联容器数量
      * @param array $EventType 加白事件类型
      * @param string $InsertTime 创建时间
@@ -124,6 +132,10 @@ class EscapeWhiteListInfo extends AbstractModel
 
         if (array_key_exists("HostCount",$param) and $param["HostCount"] !== null) {
             $this->HostCount = $param["HostCount"];
+        }
+
+        if (array_key_exists("SuperNodeCount",$param) and $param["SuperNodeCount"] !== null) {
+            $this->SuperNodeCount = $param["SuperNodeCount"];
         }
 
         if (array_key_exists("ContainerCount",$param) and $param["ContainerCount"] !== null) {

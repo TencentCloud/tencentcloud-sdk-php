@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 流日志
  *
- * @method string getVpcId() 获取私用网络ID或者统一ID，建议使用统一ID。
- * @method void setVpcId(string $VpcId) 设置私用网络ID或者统一ID，建议使用统一ID。
+ * @method string getVpcId() 获取私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
+ * @method void setVpcId(string $VpcId) 设置私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
  * @method string getFlowLogId() 获取流日志唯一ID。
  * @method void setFlowLogId(string $FlowLogId) 设置流日志唯一ID。
  * @method string getFlowLogName() 获取流日志实例名字。
  * @method void setFlowLogName(string $FlowLogName) 设置流日志实例名字。
- * @method string getResourceType() 获取流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN|NAT|DCG。
- * @method void setResourceType(string $ResourceType) 设置流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN|NAT|DCG。
+ * @method string getResourceType() 获取流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。
+ * @method void setResourceType(string $ResourceType) 设置流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。
  * @method string getResourceId() 获取资源唯一ID。
  * @method void setResourceId(string $ResourceId) 设置资源唯一ID。
- * @method string getTrafficType() 获取流日志采集类型，ACCEPT|REJECT|ALL。
- * @method void setTrafficType(string $TrafficType) 设置流日志采集类型，ACCEPT|REJECT|ALL。
+ * @method string getTrafficType() 获取流日志采集类型，ACCEPT（允许），REJECT（拒绝），ALL（全部）。
+ * @method void setTrafficType(string $TrafficType) 设置流日志采集类型，ACCEPT（允许），REJECT（拒绝），ALL（全部）。
  * @method string getCloudLogId() 获取流日志存储ID。
  * @method void setCloudLogId(string $CloudLogId) 设置流日志存储ID。
- * @method string getCloudLogState() 获取流日志存储ID状态。
- * @method void setCloudLogState(string $CloudLogState) 设置流日志存储ID状态。
+ * @method string getCloudLogState() 获取流日志存储ID状态。SUCCESS（成功），DELETED（删除）。
+ * @method void setCloudLogState(string $CloudLogState) 设置流日志存储ID状态。SUCCESS（成功），DELETED（删除）。
  * @method string getFlowLogDescription() 获取流日志描述信息。
  * @method void setFlowLogDescription(string $FlowLogDescription) 设置流日志描述信息。
  * @method string getCreatedTime() 获取流日志创建时间。
@@ -45,22 +45,16 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getEnable() 获取是否启用，true-启用，false-停用。
  * @method void setEnable(boolean $Enable) 设置是否启用，true-启用，false-停用。
  * @method string getStorageType() 获取消费端类型：cls、ckafka。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStorageType(string $StorageType) 设置消费端类型：cls、ckafka。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method FlowLogStorage getFlowLogStorage() 获取消费端信息，当消费端类型为ckafka时返回。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowLogStorage(FlowLogStorage $FlowLogStorage) 设置消费端信息，当消费端类型为ckafka时返回。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCloudLogRegion() 获取流日志存储ID对应的地域信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCloudLogRegion(string $CloudLogRegion) 设置流日志存储ID对应的地域信息。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class FlowLog extends AbstractModel
 {
     /**
-     * @var string 私用网络ID或者统一ID，建议使用统一ID。
+     * @var string 私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
      */
     public $VpcId;
 
@@ -75,7 +69,7 @@ class FlowLog extends AbstractModel
     public $FlowLogName;
 
     /**
-     * @var string 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN|NAT|DCG。
+     * @var string 流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。
      */
     public $ResourceType;
 
@@ -85,7 +79,7 @@ class FlowLog extends AbstractModel
     public $ResourceId;
 
     /**
-     * @var string 流日志采集类型，ACCEPT|REJECT|ALL。
+     * @var string 流日志采集类型，ACCEPT（允许），REJECT（拒绝），ALL（全部）。
      */
     public $TrafficType;
 
@@ -95,7 +89,7 @@ class FlowLog extends AbstractModel
     public $CloudLogId;
 
     /**
-     * @var string 流日志存储ID状态。
+     * @var string 流日志存储ID状态。SUCCESS（成功），DELETED（删除）。
      */
     public $CloudLogState;
 
@@ -121,41 +115,35 @@ class FlowLog extends AbstractModel
 
     /**
      * @var string 消费端类型：cls、ckafka。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StorageType;
 
     /**
      * @var FlowLogStorage 消费端信息，当消费端类型为ckafka时返回。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowLogStorage;
 
     /**
      * @var string 流日志存储ID对应的地域信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CloudLogRegion;
 
     /**
-     * @param string $VpcId 私用网络ID或者统一ID，建议使用统一ID。
+     * @param string $VpcId 私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
      * @param string $FlowLogId 流日志唯一ID。
      * @param string $FlowLogName 流日志实例名字。
-     * @param string $ResourceType 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN|NAT|DCG。
+     * @param string $ResourceType 流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。
      * @param string $ResourceId 资源唯一ID。
-     * @param string $TrafficType 流日志采集类型，ACCEPT|REJECT|ALL。
+     * @param string $TrafficType 流日志采集类型，ACCEPT（允许），REJECT（拒绝），ALL（全部）。
      * @param string $CloudLogId 流日志存储ID。
-     * @param string $CloudLogState 流日志存储ID状态。
+     * @param string $CloudLogState 流日志存储ID状态。SUCCESS（成功），DELETED（删除）。
      * @param string $FlowLogDescription 流日志描述信息。
      * @param string $CreatedTime 流日志创建时间。
      * @param array $TagSet 标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
      * @param boolean $Enable 是否启用，true-启用，false-停用。
      * @param string $StorageType 消费端类型：cls、ckafka。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FlowLogStorage $FlowLogStorage 消费端信息，当消费端类型为ckafka时返回。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CloudLogRegion 流日志存储ID对应的地域信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

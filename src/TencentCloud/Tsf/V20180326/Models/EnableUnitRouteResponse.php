@@ -20,18 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * EnableUnitRoute返回参数结构体
  *
- * @method boolean getResult() 获取返回结果，成功失败
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResult(boolean $Result) 设置返回结果，成功失败
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getResult() 获取返回结果。成功：true，失败：false。
+ * @method void setResult(boolean $Result) 设置返回结果。成功：true，失败：false。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class EnableUnitRouteResponse extends AbstractModel
 {
     /**
-     * @var boolean 返回结果，成功失败
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var boolean 返回结果。成功：true，失败：false。
      */
     public $Result;
 
@@ -41,8 +38,7 @@ class EnableUnitRouteResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param boolean $Result 返回结果，成功失败
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $Result 返回结果。成功：true，失败：false。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 根据公网IP查询云原生网关实例信息出参
  *
  * @method string getGatewayId() 获取实例id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGatewayId(string $GatewayId) 设置实例id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupId() 获取分组id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupId(string $GroupId) 设置分组id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeInstanceInfoByIpResult extends AbstractModel
 {
     /**
      * @var string 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GatewayId;
 
     /**
      * @var string 分组id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupId;
 
     /**
      * @param string $GatewayId 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupId 分组id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

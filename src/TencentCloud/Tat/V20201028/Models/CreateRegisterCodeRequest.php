@@ -34,8 +34,16 @@ use TencentCloud\Common\AbstractModel;
 
 - 若传入值小于等于 99999，则以小时为单位设置有效时间。
 - 若传入值大于 99999，则设置为长期有效。
- * @method string getIpAddressRange() 获取该注册码限制tat_agent只能从IpAddressRange所描述公网出口进行注册。默认不做限制。
- * @method void setIpAddressRange(string $IpAddressRange) 设置该注册码限制tat_agent只能从IpAddressRange所描述公网出口进行注册。默认不做限制。
+ * @method string getIpAddressRange() 获取限制注册码只能从 IpAddressRange 所描述公网出口进行注册。
+
+默认为空，即无任何限制。
+
+取值应为标准 IPv4 或 CIDRv4 格式。例如 192.168.1.1 或 192.168.0.0/16。
+ * @method void setIpAddressRange(string $IpAddressRange) 设置限制注册码只能从 IpAddressRange 所描述公网出口进行注册。
+
+默认为空，即无任何限制。
+
+取值应为标准 IPv4 或 CIDRv4 格式。例如 192.168.1.1 或 192.168.0.0/16。
  */
 class CreateRegisterCodeRequest extends AbstractModel
 {
@@ -63,7 +71,11 @@ class CreateRegisterCodeRequest extends AbstractModel
     public $EffectiveTime;
 
     /**
-     * @var string 该注册码限制tat_agent只能从IpAddressRange所描述公网出口进行注册。默认不做限制。
+     * @var string 限制注册码只能从 IpAddressRange 所描述公网出口进行注册。
+
+默认为空，即无任何限制。
+
+取值应为标准 IPv4 或 CIDRv4 格式。例如 192.168.1.1 或 192.168.0.0/16。
      */
     public $IpAddressRange;
 
@@ -75,7 +87,11 @@ class CreateRegisterCodeRequest extends AbstractModel
 
 - 若传入值小于等于 99999，则以小时为单位设置有效时间。
 - 若传入值大于 99999，则设置为长期有效。
-     * @param string $IpAddressRange 该注册码限制tat_agent只能从IpAddressRange所描述公网出口进行注册。默认不做限制。
+     * @param string $IpAddressRange 限制注册码只能从 IpAddressRange 所描述公网出口进行注册。
+
+默认为空，即无任何限制。
+
+取值应为标准 IPv4 或 CIDRv4 格式。例如 192.168.1.1 或 192.168.0.0/16。
      */
     function __construct()
     {

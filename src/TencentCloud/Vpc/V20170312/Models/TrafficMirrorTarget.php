@@ -25,13 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getAlgHash() 获取流量镜像接收IP组，均衡规则，支持ENI/FIVE_TUPLE_FLOW（vpc），FIVE_TUPLE_FLOW（公网IP）
  * @method void setAlgHash(string $AlgHash) 设置流量镜像接收IP组，均衡规则，支持ENI/FIVE_TUPLE_FLOW（vpc），FIVE_TUPLE_FLOW（公网IP）
  * @method array getTargetEndPoints() 获取流量镜像的接收endpoint（公网IP）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargetEndPoints(array $TargetEndPoints) 设置流量镜像的接收endpoint（公网IP）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTargetType() 获取流量镜像的接收类型，分别为：IP/ENI/CLB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargetType(string $TargetType) 设置流量镜像的接收类型，分别为：IP/ENI/CLB
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TrafficMirrorTarget extends AbstractModel
 {
@@ -47,13 +43,11 @@ class TrafficMirrorTarget extends AbstractModel
 
     /**
      * @var array 流量镜像的接收endpoint（公网IP）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetEndPoints;
 
     /**
      * @var string 流量镜像的接收类型，分别为：IP/ENI/CLB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetType;
 
@@ -61,9 +55,7 @@ class TrafficMirrorTarget extends AbstractModel
      * @param array $TargetIps 流量镜像的接收IP
      * @param string $AlgHash 流量镜像接收IP组，均衡规则，支持ENI/FIVE_TUPLE_FLOW（vpc），FIVE_TUPLE_FLOW（公网IP）
      * @param array $TargetEndPoints 流量镜像的接收endpoint（公网IP）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TargetType 流量镜像的接收类型，分别为：IP/ENI/CLB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

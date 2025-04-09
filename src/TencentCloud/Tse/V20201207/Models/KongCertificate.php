@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 云原生网关证书
  *
  * @method KongCertificatesPreview getCert() 获取无
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCert(KongCertificatesPreview $Cert) 设置无
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class KongCertificate extends AbstractModel
 {
     /**
      * @var KongCertificatesPreview 无
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Cert;
 
     /**
      * @param KongCertificatesPreview $Cert 无
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

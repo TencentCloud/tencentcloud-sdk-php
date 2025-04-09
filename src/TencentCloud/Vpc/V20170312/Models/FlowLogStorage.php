@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStorageId() 获取存储实例Id，当流日志存储类型为ckafka时，必填。
  * @method void setStorageId(string $StorageId) 设置存储实例Id，当流日志存储类型为ckafka时，必填。
  * @method string getStorageTopic() 获取主题Id，当流日志存储类型为ckafka时，必填。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStorageTopic(string $StorageTopic) 设置主题Id，当流日志存储类型为ckafka时，必填。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class FlowLogStorage extends AbstractModel
 {
@@ -36,14 +34,12 @@ class FlowLogStorage extends AbstractModel
 
     /**
      * @var string 主题Id，当流日志存储类型为ckafka时，必填。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StorageTopic;
 
     /**
      * @param string $StorageId 存储实例Id，当流日志存储类型为ckafka时，必填。
      * @param string $StorageTopic 主题Id，当流日志存储类型为ckafka时，必填。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

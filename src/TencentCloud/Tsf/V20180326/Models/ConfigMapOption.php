@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * ConfigMap可选项
  *
  * @method string getKey() 获取-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKey(string $Key) 设置-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPath() 获取-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPath(string $Path) 设置-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMode() 获取-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMode(string $Mode) 设置-
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ConfigMapOption extends AbstractModel
 {
     /**
      * @var string -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Key;
 
     /**
      * @var string -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Path;
 
     /**
      * @var string -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Mode;
 
     /**
      * @param string $Key -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Path -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Mode -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

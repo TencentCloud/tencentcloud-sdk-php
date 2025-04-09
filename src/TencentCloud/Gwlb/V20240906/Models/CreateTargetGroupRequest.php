@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
 - IP_HASH_3_ELASTIC：弹性哈希
  * @method boolean getAllDeadToAlive() 获取是否支持全死全活。默认支持。
  * @method void setAllDeadToAlive(boolean $AllDeadToAlive) 设置是否支持全死全活。默认支持。
+ * @method array getTags() 获取标签。
+ * @method void setTags(array $Tags) 设置标签。
  */
 class CreateTargetGroupRequest extends AbstractModel
 {
@@ -89,6 +91,11 @@ class CreateTargetGroupRequest extends AbstractModel
     public $AllDeadToAlive;
 
     /**
+     * @var array 标签。
+     */
+    public $Tags;
+
+    /**
      * @param string $TargetGroupName 目标组名称，限定60个字符。
      * @param string $VpcId 目标组的vpcid属性，不填则使用默认vpc
      * @param integer $Port 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。仅支持6081。
@@ -100,6 +107,7 @@ class CreateTargetGroupRequest extends AbstractModel
      * @param string $ScheduleAlgorithm 均衡算法。
 - IP_HASH_3_ELASTIC：弹性哈希
      * @param boolean $AllDeadToAlive 是否支持全死全活。默认支持。
+     * @param array $Tags 标签。
      */
     function __construct()
     {
@@ -150,6 +158,15 @@ class CreateTargetGroupRequest extends AbstractModel
 
         if (array_key_exists("AllDeadToAlive",$param) and $param["AllDeadToAlive"] !== null) {
             $this->AllDeadToAlive = $param["AllDeadToAlive"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

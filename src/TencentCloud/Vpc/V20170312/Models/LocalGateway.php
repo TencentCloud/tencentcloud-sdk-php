@@ -33,9 +33,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCreateTime() 获取本地网关创建时间
  * @method void setCreateTime(string $CreateTime) 设置本地网关创建时间
  * @method array getTagSet() 获取标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagSet(array $TagSet) 设置标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLocalGatewayId() 获取本地网关实例ID（计划起用）
  * @method void setLocalGatewayId(string $LocalGatewayId) 设置本地网关实例ID（计划起用）
  */
@@ -73,7 +71,6 @@ class LocalGateway extends AbstractModel
 
     /**
      * @var array 标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagSet;
 
@@ -90,7 +87,6 @@ class LocalGateway extends AbstractModel
      * @param string $LocalGwIp 本地网关IP地址
      * @param string $CreateTime 本地网关创建时间
      * @param array $TagSet 标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LocalGatewayId 本地网关实例ID（计划起用）
      */
     function __construct()

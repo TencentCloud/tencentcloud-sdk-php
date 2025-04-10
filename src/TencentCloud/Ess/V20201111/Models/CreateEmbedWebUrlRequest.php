@@ -38,8 +38,11 @@ use TencentCloud\Common\AbstractModel;
 
 注意：
 不同的嵌入类型，操作人需要的权限项不同（权限配置可参考[权限配置](https://qian.tencent.com/document/61355)）。
-<table>
+<table  border="1">
+<thead>
 <tr><th>EmbedType</th><th>权限</th></tr>
+</thead>     
+<tbody> 
 <tr><th>CREATE_SEAL</th><th>印章管理-添加印章</th></tr>
 <tr><th>CREATE_TEMPLATE</th><th>模板管理-创建模板</th></tr>
 <tr><th>MODIFY_TEMPLATE</th><th>模板管理-编辑模板</th></tr>
@@ -53,6 +56,7 @@ use TencentCloud\Common\AbstractModel;
 <tr><th>EXTEND_SERVICE</th><th>无要求</th></tr>
 <tr><th>PREVIEW_FLOW</th><th>是否是当前合同的参与方，或者发起方企业的法人、超管、合同管理员</th></tr>
 <tr><th>PREVIEW_FLOW_DETAIL</th><th>是否是当前合同的参与方，或者发起方企业的法人、超管、合同管理员</th></tr>
+</tbody> 
 </table>
  * @method void setEmbedType(string $EmbedType) 设置WEB嵌入资源类型，支持以下类型
 <ul><li>CREATE_SEAL: 生成创建印章的嵌入页面</li>
@@ -68,8 +72,11 @@ use TencentCloud\Common\AbstractModel;
 
 注意：
 不同的嵌入类型，操作人需要的权限项不同（权限配置可参考[权限配置](https://qian.tencent.com/document/61355)）。
-<table>
+<table  border="1">
+<thead>
 <tr><th>EmbedType</th><th>权限</th></tr>
+</thead>     
+<tbody> 
 <tr><th>CREATE_SEAL</th><th>印章管理-添加印章</th></tr>
 <tr><th>CREATE_TEMPLATE</th><th>模板管理-创建模板</th></tr>
 <tr><th>MODIFY_TEMPLATE</th><th>模板管理-编辑模板</th></tr>
@@ -83,6 +90,7 @@ use TencentCloud\Common\AbstractModel;
 <tr><th>EXTEND_SERVICE</th><th>无要求</th></tr>
 <tr><th>PREVIEW_FLOW</th><th>是否是当前合同的参与方，或者发起方企业的法人、超管、合同管理员</th></tr>
 <tr><th>PREVIEW_FLOW_DETAIL</th><th>是否是当前合同的参与方，或者发起方企业的法人、超管、合同管理员</th></tr>
+</tbody> 
 </table>
  * @method string getBusinessId() 获取WEB嵌入的业务资源ID
 
@@ -148,8 +156,11 @@ class CreateEmbedWebUrlRequest extends AbstractModel
 
 注意：
 不同的嵌入类型，操作人需要的权限项不同（权限配置可参考[权限配置](https://qian.tencent.com/document/61355)）。
-<table>
+<table  border="1">
+<thead>
 <tr><th>EmbedType</th><th>权限</th></tr>
+</thead>     
+<tbody> 
 <tr><th>CREATE_SEAL</th><th>印章管理-添加印章</th></tr>
 <tr><th>CREATE_TEMPLATE</th><th>模板管理-创建模板</th></tr>
 <tr><th>MODIFY_TEMPLATE</th><th>模板管理-编辑模板</th></tr>
@@ -163,6 +174,7 @@ class CreateEmbedWebUrlRequest extends AbstractModel
 <tr><th>EXTEND_SERVICE</th><th>无要求</th></tr>
 <tr><th>PREVIEW_FLOW</th><th>是否是当前合同的参与方，或者发起方企业的法人、超管、合同管理员</th></tr>
 <tr><th>PREVIEW_FLOW_DETAIL</th><th>是否是当前合同的参与方，或者发起方企业的法人、超管、合同管理员</th></tr>
+</tbody> 
 </table>
      */
     public $EmbedType;
@@ -224,8 +236,11 @@ class CreateEmbedWebUrlRequest extends AbstractModel
 
 注意：
 不同的嵌入类型，操作人需要的权限项不同（权限配置可参考[权限配置](https://qian.tencent.com/document/61355)）。
-<table>
+<table  border="1">
+<thead>
 <tr><th>EmbedType</th><th>权限</th></tr>
+</thead>     
+<tbody> 
 <tr><th>CREATE_SEAL</th><th>印章管理-添加印章</th></tr>
 <tr><th>CREATE_TEMPLATE</th><th>模板管理-创建模板</th></tr>
 <tr><th>MODIFY_TEMPLATE</th><th>模板管理-编辑模板</th></tr>
@@ -239,6 +254,7 @@ class CreateEmbedWebUrlRequest extends AbstractModel
 <tr><th>EXTEND_SERVICE</th><th>无要求</th></tr>
 <tr><th>PREVIEW_FLOW</th><th>是否是当前合同的参与方，或者发起方企业的法人、超管、合同管理员</th></tr>
 <tr><th>PREVIEW_FLOW_DETAIL</th><th>是否是当前合同的参与方，或者发起方企业的法人、超管、合同管理员</th></tr>
+</tbody> 
 </table>
      * @param string $BusinessId WEB嵌入的业务资源ID
 

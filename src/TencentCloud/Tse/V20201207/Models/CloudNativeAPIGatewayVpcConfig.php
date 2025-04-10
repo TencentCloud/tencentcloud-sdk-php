@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 云原生API网关vpc配置。
  *
  * @method string getVpcId() 获取私有网络ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(string $VpcId) 设置私有网络ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubnetId() 获取子网ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetId(string $SubnetId) 设置子网ID。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudNativeAPIGatewayVpcConfig extends AbstractModel
 {
     /**
      * @var string 私有网络ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
     /**
      * @var string 子网ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetId;
 
     /**
      * @param string $VpcId 私有网络ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 子网ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

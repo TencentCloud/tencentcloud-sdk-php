@@ -43,71 +43,39 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCreateTime() 获取云原生API网关创建时间。
  * @method void setCreateTime(string $CreateTime) 设置云原生API网关创建时间。
  * @method array getTags() 获取实例的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置实例的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getEnableCls() 获取是否开启 cls 日志
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableCls(boolean $EnableCls) 设置是否开启 cls 日志
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTradeType() 获取付费模式，0表示后付费，1预付费
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTradeType(integer $TradeType) 设置付费模式，0表示后付费，1预付费
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFeatureVersion() 获取实例版本，当前支持开发版、标准版、专业版【TRIAL、STANDARD、PROFESSIONAL】
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFeatureVersion(string $FeatureVersion) 设置实例版本，当前支持开发版、标准版、专业版【TRIAL、STANDARD、PROFESSIONAL】
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getInternetMaxBandwidthOut() 获取公网出流量带宽，[1,2048]Mbps
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置公网出流量带宽，[1,2048]Mbps
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAutoRenewFlag() 获取自动续费标记，0表示默认状态(用户未设置，即初始状态)；
 1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标记，0表示默认状态(用户未设置，即初始状态)；
 1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCurDeadline() 获取到期时间，预付费时使用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCurDeadline(string $CurDeadline) 设置到期时间，预付费时使用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIsolateTime() 获取隔离时间，实例隔离时使用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsolateTime(string $IsolateTime) 设置隔离时间，实例隔离时使用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getEnableInternet() 获取是否开启客户端公网。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableInternet(boolean $EnableInternet) 设置是否开启客户端公网。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEngineRegion() 获取实例实际的地域信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEngineRegion(string $EngineRegion) 设置实例实际的地域信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIngressClassName() 获取Ingress class名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIngressClassName(string $IngressClassName) 设置Ingress class名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInternetPayMode() 获取公网计费方式。可选取值 BANDWIDTH | TRAFFIC ，表示按带宽和按流量计费。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInternetPayMode(string $InternetPayMode) 设置公网计费方式。可选取值 BANDWIDTH | TRAFFIC ，表示按带宽和按流量计费。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGatewayMinorVersion() 获取云原生API网关小版本号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGatewayMinorVersion(string $GatewayMinorVersion) 设置云原生API网关小版本号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method InstancePort getInstancePort() 获取实例监听的端口信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstancePort(InstancePort $InstancePort) 设置实例监听的端口信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLoadBalancerType() 获取公网CLB默认类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLoadBalancerType(string $LoadBalancerType) 设置公网CLB默认类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPublicIpAddresses() 获取公网IP地址列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicIpAddresses(array $PublicIpAddresses) 设置公网IP地址列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeCloudNativeAPIGatewayResult extends AbstractModel
 {
@@ -160,98 +128,82 @@ class DescribeCloudNativeAPIGatewayResult extends AbstractModel
 
     /**
      * @var array 实例的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
      * @var boolean 是否开启 cls 日志
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableCls;
 
     /**
      * @var integer 付费模式，0表示后付费，1预付费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TradeType;
 
     /**
      * @var string 实例版本，当前支持开发版、标准版、专业版【TRIAL、STANDARD、PROFESSIONAL】
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FeatureVersion;
 
     /**
      * @var integer 公网出流量带宽，[1,2048]Mbps
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InternetMaxBandwidthOut;
 
     /**
      * @var integer 自动续费标记，0表示默认状态(用户未设置，即初始状态)；
 1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoRenewFlag;
 
     /**
      * @var string 到期时间，预付费时使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CurDeadline;
 
     /**
      * @var string 隔离时间，实例隔离时使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsolateTime;
 
     /**
      * @var boolean 是否开启客户端公网。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableInternet;
 
     /**
      * @var string 实例实际的地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EngineRegion;
 
     /**
      * @var string Ingress class名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IngressClassName;
 
     /**
      * @var string 公网计费方式。可选取值 BANDWIDTH | TRAFFIC ，表示按带宽和按流量计费。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InternetPayMode;
 
     /**
      * @var string 云原生API网关小版本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GatewayMinorVersion;
 
     /**
      * @var InstancePort 实例监听的端口信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstancePort;
 
     /**
      * @var string 公网CLB默认类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LoadBalancerType;
 
     /**
      * @var array 公网IP地址列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicIpAddresses;
 
@@ -268,38 +220,22 @@ class DescribeCloudNativeAPIGatewayResult extends AbstractModel
      * @param string $Description 云原生API网关描述。
      * @param string $CreateTime 云原生API网关创建时间。
      * @param array $Tags 实例的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $EnableCls 是否开启 cls 日志
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TradeType 付费模式，0表示后付费，1预付费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FeatureVersion 实例版本，当前支持开发版、标准版、专业版【TRIAL、STANDARD、PROFESSIONAL】
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InternetMaxBandwidthOut 公网出流量带宽，[1,2048]Mbps
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AutoRenewFlag 自动续费标记，0表示默认状态(用户未设置，即初始状态)；
 1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CurDeadline 到期时间，预付费时使用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IsolateTime 隔离时间，实例隔离时使用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $EnableInternet 是否开启客户端公网。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EngineRegion 实例实际的地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IngressClassName Ingress class名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InternetPayMode 公网计费方式。可选取值 BANDWIDTH | TRAFFIC ，表示按带宽和按流量计费。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GatewayMinorVersion 云原生API网关小版本号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstancePort $InstancePort 实例监听的端口信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LoadBalancerType 公网CLB默认类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PublicIpAddresses 公网IP地址列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

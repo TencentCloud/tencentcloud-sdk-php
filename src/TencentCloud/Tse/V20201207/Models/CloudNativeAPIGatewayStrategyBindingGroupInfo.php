@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 策略绑定的网关分组信息
  *
  * @method string getGroupId() 获取网关分组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupId(string $GroupId) 设置网关分组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method CloudNativeAPIGatewayNodeConfig getNodeConfig() 获取节点配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodeConfig(CloudNativeAPIGatewayNodeConfig $NodeConfig) 设置节点配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBindTime() 获取绑定时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBindTime(string $BindTime) 设置绑定时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupName() 获取网关分组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupName(string $GroupName) 设置网关分组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取绑定状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置绑定状态
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudNativeAPIGatewayStrategyBindingGroupInfo extends AbstractModel
 {
     /**
      * @var string 网关分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupId;
 
     /**
      * @var CloudNativeAPIGatewayNodeConfig 节点配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeConfig;
 
     /**
      * @var string 绑定时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BindTime;
 
     /**
      * @var string 网关分组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupName;
 
     /**
      * @var string 绑定状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @param string $GroupId 网关分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CloudNativeAPIGatewayNodeConfig $NodeConfig 节点配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BindTime 绑定时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 网关分组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 绑定状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

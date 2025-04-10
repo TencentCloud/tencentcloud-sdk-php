@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 微服务引擎实例的VPC信息
  *
  * @method string getVpcID() 获取微服务引擎VPC信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcID(string $VpcID) 设置微服务引擎VPC信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubnetID() 获取微服务引擎子网信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetID(string $SubnetID) 设置微服务引擎子网信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SourceInstanceVpcInfo extends AbstractModel
 {
     /**
      * @var string 微服务引擎VPC信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcID;
 
     /**
      * @var string 微服务引擎子网信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetID;
 
     /**
      * @param string $VpcID 微服务引擎VPC信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetID 微服务引擎子网信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

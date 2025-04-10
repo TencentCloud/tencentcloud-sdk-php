@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRetentionId(integer $RetentionId) 设置规则Id
  * @method integer getExecutionId() 获取规则执行Id
  * @method void setExecutionId(integer $ExecutionId) 设置规则执行Id
- * @method integer getOffset() 获取分页Page
- * @method void setOffset(integer $Offset) 设置分页Page
- * @method integer getLimit() 获取分页PageSize
- * @method void setLimit(integer $Limit) 设置分页PageSize
+ * @method integer getOffset() 获取页数，第几页，用于分页
+ * @method void setOffset(integer $Offset) 设置页数，第几页，用于分页
+ * @method integer getLimit() 获取每页个数，用于分页，最大值为100
+ * @method void setLimit(integer $Limit) 设置每页个数，用于分页，最大值为100
  */
 class DescribeTagRetentionExecutionTaskRequest extends AbstractModel
 {
@@ -49,12 +49,12 @@ class DescribeTagRetentionExecutionTaskRequest extends AbstractModel
     public $ExecutionId;
 
     /**
-     * @var integer 分页Page
+     * @var integer 页数，第几页，用于分页
      */
     public $Offset;
 
     /**
-     * @var integer 分页PageSize
+     * @var integer 每页个数，用于分页，最大值为100
      */
     public $Limit;
 
@@ -62,8 +62,8 @@ class DescribeTagRetentionExecutionTaskRequest extends AbstractModel
      * @param string $RegistryId 主实例iD
      * @param integer $RetentionId 规则Id
      * @param integer $ExecutionId 规则执行Id
-     * @param integer $Offset 分页Page
-     * @param integer $Limit 分页PageSize
+     * @param integer $Offset 页数，第几页，用于分页
+     * @param integer $Limit 每页个数，用于分页，最大值为100
      */
     function __construct()
     {

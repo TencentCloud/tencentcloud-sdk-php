@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 公网地址信息
  *
  * @method string getVip() 获取公网 ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVip(string $Vip) 设置公网 ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getInternetMaxBandwidthOut() 获取公网最大带宽
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置公网最大带宽
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupId() 获取公网所属分组 id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupId(string $GroupId) 设置公网所属分组 id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupName() 获取公网所属分组名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupName(string $GroupName) 设置公网所属分组名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNetworkId() 获取公网负载均衡 id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetworkId(string $NetworkId) 设置公网负载均衡 id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取公网负载均衡描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置公网负载均衡描述
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PublicAddressConfig extends AbstractModel
 {
     /**
      * @var string 公网 ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Vip;
 
     /**
      * @var integer 公网最大带宽
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InternetMaxBandwidthOut;
 
     /**
      * @var string 公网所属分组 id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupId;
 
     /**
      * @var string 公网所属分组名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupName;
 
     /**
      * @var string 公网负载均衡 id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NetworkId;
 
     /**
      * @var string 公网负载均衡描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @param string $Vip 公网 ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InternetMaxBandwidthOut 公网最大带宽
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupId 公网所属分组 id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 公网所属分组名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NetworkId 公网负载均衡 id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 公网负载均衡描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

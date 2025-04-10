@@ -56,6 +56,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQueueCheckPointWrites(integer $QueueCheckPointWrites) 设置管道缓冲队列检查点写入数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreateTime() 获取创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateTime(string $CreateTime) 设置创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUpdateTime() 获取更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUpdateTime(string $UpdateTime) 设置更新时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LogstashPipelineInfo extends AbstractModel
 {
@@ -118,6 +126,18 @@ class LogstashPipelineInfo extends AbstractModel
     public $QueueCheckPointWrites;
 
     /**
+     * @var string 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateTime;
+
+    /**
+     * @var string 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UpdateTime;
+
+    /**
      * @param string $PipelineId 管道ID
      * @param string $PipelineDesc 管道描述信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -135,6 +155,10 @@ class LogstashPipelineInfo extends AbstractModel
      * @param string $QueueMaxBytes 管道缓冲队列大小
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $QueueCheckPointWrites 管道缓冲队列检查点写入数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UpdateTime 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -188,6 +212,14 @@ class LogstashPipelineInfo extends AbstractModel
 
         if (array_key_exists("QueueCheckPointWrites",$param) and $param["QueueCheckPointWrites"] !== null) {
             $this->QueueCheckPointWrites = $param["QueueCheckPointWrites"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = $param["UpdateTime"];
         }
     }
 }

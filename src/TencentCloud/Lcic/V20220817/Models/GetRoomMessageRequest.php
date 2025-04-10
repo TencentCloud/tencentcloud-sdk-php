@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSeq(integer $Seq) 设置消息序列。获取该序列以前的消息(不包含该seq消息)
  * @method integer getLimit() 获取消息拉取的条数。最大数量不能超过套餐包限制。
  * @method void setLimit(integer $Limit) 设置消息拉取的条数。最大数量不能超过套餐包限制。
+ * @method string getUserId() 获取请求消息的userId
+ * @method void setUserId(string $UserId) 设置请求消息的userId
  */
 class GetRoomMessageRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class GetRoomMessageRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string 请求消息的userId
+     */
+    public $UserId;
+
+    /**
      * @param integer $SdkAppId 低代码互动课堂的SdkAppId。
      * @param integer $RoomId 课堂Id。	
      * @param integer $Seq 消息序列。获取该序列以前的消息(不包含该seq消息)
      * @param integer $Limit 消息拉取的条数。最大数量不能超过套餐包限制。
+     * @param string $UserId 请求消息的userId
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class GetRoomMessageRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
+            $this->UserId = $param["UserId"];
         }
     }
 }

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIdcId(integer $IdcId) 设置机房id
  * @method string getDeviceType() 获取设备类型，server, netDevice, otherDevice
  * @method void setDeviceType(string $DeviceType) 设置设备类型，server, netDevice, otherDevice
- * @method string getStuffOption() 获取下架选择 1.自行解决 2.由腾讯IDC负责 3.不涉及下架，如：其他设备退出
- * @method void setStuffOption(string $StuffOption) 设置下架选择 1.自行解决 2.由腾讯IDC负责 3.不涉及下架，如：其他设备退出
+ * @method string getStuffOption() 获取下架选择 1.自行解决 2.由腾讯IDC负责
+ * @method void setStuffOption(string $StuffOption) 设置下架选择 1.自行解决 2.由腾讯IDC负责
  * @method string getIsPowerOffConfirm() 获取关电确认 1.授权时关电 2.关电前需要确认
  * @method void setIsPowerOffConfirm(string $IsPowerOffConfirm) 设置关电确认 1.授权时关电 2.关电前需要确认
  * @method array getDeviceSnList() 获取设备sn列表
@@ -56,7 +56,7 @@ class CreateQuitWorkOrderRequest extends AbstractModel
     public $DeviceType;
 
     /**
-     * @var string 下架选择 1.自行解决 2.由腾讯IDC负责 3.不涉及下架，如：其他设备退出
+     * @var string 下架选择 1.自行解决 2.由腾讯IDC负责
      */
     public $StuffOption;
 
@@ -103,7 +103,7 @@ class CreateQuitWorkOrderRequest extends AbstractModel
     /**
      * @param integer $IdcId 机房id
      * @param string $DeviceType 设备类型，server, netDevice, otherDevice
-     * @param string $StuffOption 下架选择 1.自行解决 2.由腾讯IDC负责 3.不涉及下架，如：其他设备退出
+     * @param string $StuffOption 下架选择 1.自行解决 2.由腾讯IDC负责
      * @param string $IsPowerOffConfirm 关电确认 1.授权时关电 2.关电前需要确认
      * @param array $DeviceSnList 设备sn列表
      * @param string $HandoverMethod 交接方式 1.物流上门收货 2.客户上门自提

@@ -21,93 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * 灰度规则中的条件配置
  *
  * @method string getType() 获取条件类型，支持 path, method, query, header, cookie, body 和 system。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置条件类型，支持 path, method, query, header, cookie, body 和 system。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getKey() 获取参数名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKey(string $Key) 设置参数名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOperator() 获取操作符，支持 "le", "eq", "lt", "ne", "ge", "gt", "regex", "exists", "in", "not in",  "prefix" ,"exact", "regex" 等
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperator(string $Operator) 设置操作符，支持 "le", "eq", "lt", "ne", "ge", "gt", "regex", "exists", "in", "not in",  "prefix" ,"exact", "regex" 等
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取目标参数值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置目标参数值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDelimiter() 获取分隔符，当 Operator 为 in 或者 not in 时生效。支持值为英文逗号，英文分号，空格，换行符。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDelimiter(string $Delimiter) 设置分隔符，当 Operator 为 in 或者 not in 时生效。支持值为英文逗号，英文分号，空格，换行符。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGlobalConfigId() 获取全局配置 Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGlobalConfigId(string $GlobalConfigId) 设置全局配置 Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGlobalConfigName() 获取全局配置名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGlobalConfigName(string $GlobalConfigName) 设置全局配置名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudNativeAPIGatewayCanaryRuleCondition extends AbstractModel
 {
     /**
      * @var string 条件类型，支持 path, method, query, header, cookie, body 和 system。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 参数名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Key;
 
     /**
      * @var string 操作符，支持 "le", "eq", "lt", "ne", "ge", "gt", "regex", "exists", "in", "not in",  "prefix" ,"exact", "regex" 等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Operator;
 
     /**
      * @var string 目标参数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @var string 分隔符，当 Operator 为 in 或者 not in 时生效。支持值为英文逗号，英文分号，空格，换行符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Delimiter;
 
     /**
      * @var string 全局配置 Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GlobalConfigId;
 
     /**
      * @var string 全局配置名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GlobalConfigName;
 
     /**
      * @param string $Type 条件类型，支持 path, method, query, header, cookie, body 和 system。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Key 参数名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Operator 操作符，支持 "le", "eq", "lt", "ne", "ge", "gt", "regex", "exists", "in", "not in",  "prefix" ,"exact", "regex" 等
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 目标参数值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Delimiter 分隔符，当 Operator 为 in 或者 not in 时生效。支持值为英文逗号，英文分号，空格，换行符。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GlobalConfigId 全局配置 Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GlobalConfigName 全局配置名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyContainerGroup请求参数结构体
  *
- * @method string getGroupId() 获取部署组ID
- * @method void setGroupId(string $GroupId) 设置部署组ID
+ * @method string getGroupId() 获取部署组ID 必填项
+ * @method void setGroupId(string $GroupId) 设置部署组ID 必填项
  * @method integer getAccessType() 获取0:公网 1:集群内访问 2：NodePort
  * @method void setAccessType(integer $AccessType) 设置0:公网 1:集群内访问 2：NodePort
  * @method array getProtocolPorts() 获取ProtocolPorts数组
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyContainerGroupRequest extends AbstractModel
 {
     /**
-     * @var string 部署组ID
+     * @var string 部署组ID 必填项
      */
     public $GroupId;
 
@@ -73,7 +73,7 @@ class ModifyContainerGroupRequest extends AbstractModel
     public $Alias;
 
     /**
-     * @param string $GroupId 部署组ID
+     * @param string $GroupId 部署组ID 必填项
      * @param integer $AccessType 0:公网 1:集群内访问 2：NodePort
      * @param array $ProtocolPorts ProtocolPorts数组
      * @param integer $UpdateType 更新方式：0:快速更新 1:滚动更新

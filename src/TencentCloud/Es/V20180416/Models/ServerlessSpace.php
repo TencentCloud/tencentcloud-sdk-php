@@ -86,9 +86,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterType(integer $ClusterType) 设置0
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTagList() 获取key:value
+ * @method array getTagList() 获取空间标签信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTagList(array $TagList) 设置key:value
+ * @method void setTagList(array $TagList) 设置空间标签信息
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServerlessSpace extends AbstractModel
@@ -203,7 +203,7 @@ class ServerlessSpace extends AbstractModel
     public $ClusterType;
 
     /**
-     * @var array key:value
+     * @var array 空间标签信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagList;
@@ -242,7 +242,7 @@ class ServerlessSpace extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ClusterType 0
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $TagList key:value
+     * @param array $TagList 空间标签信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

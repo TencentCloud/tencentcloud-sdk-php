@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeOverviewInvocation请求参数结构体
  *
- * @method string getNamespaceId() 获取命名空间ID
- * @method void setNamespaceId(string $NamespaceId) 设置命名空间ID
- * @method string getType() 获取监控统计类型，可选值：SumReqAmount、AvgFailureRate、AvgTimeCost，分别对应请求量、请求错误率、平均响应耗时
- * @method void setType(string $Type) 设置监控统计类型，可选值：SumReqAmount、AvgFailureRate、AvgTimeCost，分别对应请求量、请求错误率、平均响应耗时
+ * @method string getNamespaceId() 获取命名空间ID， 此参数必填
+ * @method void setNamespaceId(string $NamespaceId) 设置命名空间ID， 此参数必填
+ * @method string getType() 获取监控统计类型，必填，可选值：SumReqAmount、AvgFailureRate、AvgTimeCost，分别对应请求量、请求错误率、平均响应耗时
+ * @method void setType(string $Type) 设置监控统计类型，必填，可选值：SumReqAmount、AvgFailureRate、AvgTimeCost，分别对应请求量、请求错误率、平均响应耗时
  * @method integer getPeriod() 获取监控统计数据粒度，可选值：60、3600、86400，分别对应1分钟、1小时、1天
  * @method void setPeriod(integer $Period) 设置监控统计数据粒度，可选值：60、3600、86400，分别对应1分钟、1小时、1天
  * @method string getStartTime() 获取查询开始时间，默认为当天的 00:00:00
@@ -34,12 +34,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeOverviewInvocationRequest extends AbstractModel
 {
     /**
-     * @var string 命名空间ID
+     * @var string 命名空间ID， 此参数必填
      */
     public $NamespaceId;
 
     /**
-     * @var string 监控统计类型，可选值：SumReqAmount、AvgFailureRate、AvgTimeCost，分别对应请求量、请求错误率、平均响应耗时
+     * @var string 监控统计类型，必填，可选值：SumReqAmount、AvgFailureRate、AvgTimeCost，分别对应请求量、请求错误率、平均响应耗时
      */
     public $Type;
 
@@ -59,8 +59,8 @@ class DescribeOverviewInvocationRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @param string $NamespaceId 命名空间ID
-     * @param string $Type 监控统计类型，可选值：SumReqAmount、AvgFailureRate、AvgTimeCost，分别对应请求量、请求错误率、平均响应耗时
+     * @param string $NamespaceId 命名空间ID， 此参数必填
+     * @param string $Type 监控统计类型，必填，可选值：SumReqAmount、AvgFailureRate、AvgTimeCost，分别对应请求量、请求错误率、平均响应耗时
      * @param integer $Period 监控统计数据粒度，可选值：60、3600、86400，分别对应1分钟、1小时、1天
      * @param string $StartTime 查询开始时间，默认为当天的 00:00:00
      * @param string $EndTime 查询结束时间，默认为当前时间

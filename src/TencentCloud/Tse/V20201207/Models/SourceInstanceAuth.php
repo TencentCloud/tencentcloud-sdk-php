@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 实例鉴权信息
  *
  * @method string getUsername() 获取用户名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsername(string $Username) 设置用户名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPassword() 获取账户密码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPassword(string $Password) 设置账户密码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAccessToken() 获取访问凭据 token
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccessToken(string $AccessToken) 设置访问凭据 token
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SourceInstanceAuth extends AbstractModel
 {
     /**
      * @var string 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Username;
 
     /**
      * @var string 账户密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Password;
 
     /**
      * @var string 访问凭据 token
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccessToken;
 
     /**
      * @param string $Username 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Password 账户密码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AccessToken 访问凭据 token
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

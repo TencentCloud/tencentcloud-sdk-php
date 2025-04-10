@@ -90,9 +90,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTagList() 获取标签信息
  * @method void setTagList(array $TagList) 设置标签信息
- * @method float getIndexTraffic() 获取3782478.47
+ * @method float getIndexTraffic() 获取索引流量，单位byte
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIndexTraffic(float $IndexTraffic) 设置3782478.47
+ * @method void setIndexTraffic(float $IndexTraffic) 设置索引流量，单位byte
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServerlessIndexMetaField extends AbstractModel
@@ -205,7 +205,7 @@ class ServerlessIndexMetaField extends AbstractModel
     public $TagList;
 
     /**
-     * @var float 3782478.47
+     * @var float 索引流量，单位byte
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IndexTraffic;
@@ -246,7 +246,7 @@ class ServerlessIndexMetaField extends AbstractModel
      * @param integer $StorageType 存储类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TagList 标签信息
-     * @param float $IndexTraffic 3782478.47
+     * @param float $IndexTraffic 索引流量，单位byte
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

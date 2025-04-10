@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 服务的 WAF 状态
  *
  * @method string getName() 获取 服务的名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置 服务的名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getId() 获取服务的 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(string $Id) 设置服务的 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取服务的类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置服务的类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取 服务是否开启 WAF 防护
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置 服务是否开启 WAF 防护
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServiceWafStatus extends AbstractModel
 {
     /**
      * @var string  服务的名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 服务的 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var string 服务的类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string  服务是否开启 WAF 防护
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @param string $Name  服务的名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Id 服务的 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 服务的类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status  服务是否开启 WAF 防护
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

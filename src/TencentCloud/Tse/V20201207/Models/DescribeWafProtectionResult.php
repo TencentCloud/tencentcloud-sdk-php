@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 获取WAF保护资源状态
  *
  * @method string getGlobalStatus() 获取全局防护状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGlobalStatus(string $GlobalStatus) 设置全局防护状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getServicesStatus() 获取服务防护状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServicesStatus(array $ServicesStatus) 设置服务防护状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRouteStatus() 获取路由防护状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRouteStatus(array $RouteStatus) 设置路由防护状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getObjectStatus() 获取对象防护状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setObjectStatus(string $ObjectStatus) 设置对象防护状态
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeWafProtectionResult extends AbstractModel
 {
     /**
      * @var string 全局防护状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GlobalStatus;
 
     /**
      * @var array 服务防护状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServicesStatus;
 
     /**
      * @var array 路由防护状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RouteStatus;
 
     /**
      * @var string 对象防护状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ObjectStatus;
 
     /**
      * @param string $GlobalStatus 全局防护状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ServicesStatus 服务防护状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RouteStatus 路由防护状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ObjectStatus 对象防护状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

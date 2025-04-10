@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * kong证书列表
  *
  * @method integer getTotal() 获取证书列表总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotal(integer $Total) 设置证书列表总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCertificatesList() 获取无
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertificatesList(array $CertificatesList) 设置无
@@ -37,7 +35,6 @@ class KongCertificatesList extends AbstractModel
 {
     /**
      * @var integer 证书列表总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Total;
 
@@ -56,7 +53,6 @@ class KongCertificatesList extends AbstractModel
 
     /**
      * @param integer $Total 证书列表总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CertificatesList 无
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Pages 证书列表总页数

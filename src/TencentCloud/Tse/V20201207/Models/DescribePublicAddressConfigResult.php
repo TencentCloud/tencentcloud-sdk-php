@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 获取云原生api网关公网地址信息响应结果
  *
  * @method string getGatewayId() 获取网关实例id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGatewayId(string $GatewayId) 设置网关实例id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getConfigList() 获取公网地址信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigList(array $ConfigList) 设置公网地址信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取总个数	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置总个数	
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribePublicAddressConfigResult extends AbstractModel
 {
     /**
      * @var string 网关实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GatewayId;
 
     /**
      * @var array 公网地址信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigList;
 
     /**
      * @var integer 总个数	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
      * @param string $GatewayId 网关实例id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ConfigList 公网地址信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 总个数	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

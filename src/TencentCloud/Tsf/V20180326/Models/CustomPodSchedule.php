@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 自定义Pod调度规则
  *
  * @method ForceSchedule getForceSchedule() 获取-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setForceSchedule(ForceSchedule $ForceSchedule) 设置-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method TrySchedule getTrySchedule() 获取-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrySchedule(TrySchedule $TrySchedule) 设置-
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CustomPodSchedule extends AbstractModel
 {
     /**
      * @var ForceSchedule -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ForceSchedule;
 
     /**
      * @var TrySchedule -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TrySchedule;
 
     /**
      * @param ForceSchedule $ForceSchedule -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TrySchedule $TrySchedule -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

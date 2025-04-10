@@ -29,81 +29,43 @@ use TencentCloud\Common\AbstractModel;
  * @method string getNextNode() 获取下一个节点
  * @method void setNextNode(string $NextNode) 设置下一个节点
  * @method ApproveOpinion getOpinion() 获取审批意见模型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOpinion(ApproveOpinion $Opinion) 设置审批意见模型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getScfName() 获取scf函数名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScfName(string $ScfName) 设置scf函数名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSubStatus() 获取状态（0：待审批，1：审批通过，2：拒绝，3：scf执行失败，4：scf执行成功）18: 外部审批中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubStatus(integer $SubStatus) 设置状态（0：待审批，1：审批通过，2：拒绝，3：scf执行失败，4：scf执行成功）18: 外部审批中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getApprovedUin() 获取审批节点审批人
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApprovedUin(array $ApprovedUin) 设置审批节点审批人
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取审批时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置审批时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMsg() 获取审批意见信息 审批节点:审批人意见  执行节点:scf函数执行日志
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMsg(string $Msg) 设置审批意见信息 审批节点:审批人意见  执行节点:scf函数执行日志
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ApproveUser getUsers() 获取有权限审批该节点的uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsers(ApproveUser $Users) 设置有权限审批该节点的uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsApprove() 获取是否有权限审批该节点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsApprove(boolean $IsApprove) 设置是否有权限审批该节点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApproveId() 获取审批id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApproveId(string $ApproveId) 设置审批id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getApproveMethod() 获取审批方式 0或签 1会签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApproveMethod(integer $ApproveMethod) 设置审批方式 0或签 1会签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getApproveType() 获取审批节点审批类型，1人工审批 2自动通过 3自动决绝 4外部审批scf
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApproveType(integer $ApproveType) 设置审批节点审批类型，1人工审批 2自动通过 3自动决绝 4外部审批scf
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCallMethod() 获取外部审批类型 scf:0或null ; CKafka:1
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCallMethod(integer $CallMethod) 设置外部审批类型 scf:0或null ; CKafka:1
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDataHubId() 获取CKafka - 接入资源ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataHubId(string $DataHubId) 设置CKafka - 接入资源ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTaskName() 获取CKafka - 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskName(string $TaskName) 设置CKafka - 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCKafkaRegion() 获取CKafka - 地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCKafkaRegion(string $CKafkaRegion) 设置CKafka - 地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExternalUrl() 获取外部审批Url
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExternalUrl(string $ExternalUrl) 设置外部审批Url
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getParallelNodes() 获取并行节点 3-4
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParallelNodes(string $ParallelNodes) 设置并行节点 3-4
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRejectedCloudFunctionMsg() 获取scf拒绝时返回信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRejectedCloudFunctionMsg(string $RejectedCloudFunctionMsg) 设置scf拒绝时返回信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPrevNode() 获取上一个节点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrevNode(string $PrevNode) 设置上一个节点
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class StatusNode extends AbstractModel
 {
@@ -129,115 +91,96 @@ class StatusNode extends AbstractModel
 
     /**
      * @var ApproveOpinion 审批意见模型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Opinion;
 
     /**
      * @var string scf函数名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScfName;
 
     /**
      * @var integer 状态（0：待审批，1：审批通过，2：拒绝，3：scf执行失败，4：scf执行成功）18: 外部审批中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubStatus;
 
     /**
      * @var array 审批节点审批人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApprovedUin;
 
     /**
      * @var string 审批时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 审批意见信息 审批节点:审批人意见  执行节点:scf函数执行日志
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Msg;
 
     /**
      * @var ApproveUser 有权限审批该节点的uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Users;
 
     /**
      * @var boolean 是否有权限审批该节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsApprove;
 
     /**
      * @var string 审批id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApproveId;
 
     /**
      * @var integer 审批方式 0或签 1会签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApproveMethod;
 
     /**
      * @var integer 审批节点审批类型，1人工审批 2自动通过 3自动决绝 4外部审批scf
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApproveType;
 
     /**
      * @var integer 外部审批类型 scf:0或null ; CKafka:1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CallMethod;
 
     /**
      * @var string CKafka - 接入资源ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataHubId;
 
     /**
      * @var string CKafka - 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskName;
 
     /**
      * @var string CKafka - 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CKafkaRegion;
 
     /**
      * @var string 外部审批Url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExternalUrl;
 
     /**
      * @var string 并行节点 3-4
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParallelNodes;
 
     /**
      * @var string scf拒绝时返回信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RejectedCloudFunctionMsg;
 
     /**
      * @var string 上一个节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PrevNode;
 
@@ -247,43 +190,24 @@ class StatusNode extends AbstractModel
      * @param integer $NodeType 节点类型 1:审批节点 2:执行节点 3:条件节点
      * @param string $NextNode 下一个节点
      * @param ApproveOpinion $Opinion 审批意见模型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScfName scf函数名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SubStatus 状态（0：待审批，1：审批通过，2：拒绝，3：scf执行失败，4：scf执行成功）18: 外部审批中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ApprovedUin 审批节点审批人
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 审批时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Msg 审批意见信息 审批节点:审批人意见  执行节点:scf函数执行日志
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ApproveUser $Users 有权限审批该节点的uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsApprove 是否有权限审批该节点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApproveId 审批id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ApproveMethod 审批方式 0或签 1会签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ApproveType 审批节点审批类型，1人工审批 2自动通过 3自动决绝 4外部审批scf
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CallMethod 外部审批类型 scf:0或null ; CKafka:1
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataHubId CKafka - 接入资源ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskName CKafka - 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CKafkaRegion CKafka - 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExternalUrl 外部审批Url
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ParallelNodes 并行节点 3-4
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RejectedCloudFunctionMsg scf拒绝时返回信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PrevNode 上一个节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

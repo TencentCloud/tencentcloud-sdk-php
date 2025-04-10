@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 参数限流的规则
  *
  * @method array getFilters() 获取请求匹配条件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFilters(array $Filters) 设置请求匹配条件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLimitBy() 获取参数限流依据组合
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLimitBy(array $LimitBy) 设置参数限流依据组合
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getQpsThresholds() 获取限流阈值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQpsThresholds(array $QpsThresholds) 设置限流阈值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAccurateQpsThresholds() 获取精确限流阈值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccurateQpsThresholds(array $AccurateQpsThresholds) 设置精确限流阈值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class LimitRule extends AbstractModel
 {
     /**
      * @var array 请求匹配条件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Filters;
 
     /**
      * @var array 参数限流依据组合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LimitBy;
 
     /**
      * @var array 限流阈值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QpsThresholds;
 
     /**
      * @var array 精确限流阈值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccurateQpsThresholds;
 
     /**
      * @param array $Filters 请求匹配条件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $LimitBy 参数限流依据组合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $QpsThresholds 限流阈值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AccurateQpsThresholds 精确限流阈值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

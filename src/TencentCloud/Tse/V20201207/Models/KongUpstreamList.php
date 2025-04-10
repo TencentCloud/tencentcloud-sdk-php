@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * kong后端upstream列表
  *
  * @method array getUpstreamList() 获取无
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpstreamList(array $UpstreamList) 设置无
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class KongUpstreamList extends AbstractModel
 {
     /**
      * @var array 无
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpstreamList;
 
     /**
      * @param array $UpstreamList 无
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

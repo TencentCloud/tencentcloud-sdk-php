@@ -35,6 +35,7 @@ use TencentCloud\Bh\V20230418\Models as Models;
  * @method Models\CreateCmdTemplateResponse CreateCmdTemplate(Models\CreateCmdTemplateRequest $req) 新建高危命令模板
  * @method Models\CreateDeviceAccountResponse CreateDeviceAccount(Models\CreateDeviceAccountRequest $req) 新建主机账号
  * @method Models\CreateDeviceGroupResponse CreateDeviceGroup(Models\CreateDeviceGroupRequest $req) 新建资产组
+ * @method Models\CreateOperationTaskResponse CreateOperationTask(Models\CreateOperationTaskRequest $req) 创建运维任务
  * @method Models\CreateResourceResponse CreateResource(Models\CreateResourceRequest $req) 创建堡垒机实例
  * @method Models\CreateUserResponse CreateUser(Models\CreateUserRequest $req) 新建用户
  * @method Models\CreateUserGroupResponse CreateUserGroup(Models\CreateUserGroupRequest $req) 新建用户组
@@ -45,6 +46,7 @@ use TencentCloud\Bh\V20230418\Models as Models;
  * @method Models\DeleteDeviceGroupMembersResponse DeleteDeviceGroupMembers(Models\DeleteDeviceGroupMembersRequest $req) 删除资产组成员
  * @method Models\DeleteDeviceGroupsResponse DeleteDeviceGroups(Models\DeleteDeviceGroupsRequest $req) 删除资产组
  * @method Models\DeleteDevicesResponse DeleteDevices(Models\DeleteDevicesRequest $req) 删除主机
+ * @method Models\DeleteOperationTasksResponse DeleteOperationTasks(Models\DeleteOperationTasksRequest $req) 删除运维任务
  * @method Models\DeleteUserGroupMembersResponse DeleteUserGroupMembers(Models\DeleteUserGroupMembersRequest $req) 删除用户组成员
  * @method Models\DeleteUserGroupsResponse DeleteUserGroups(Models\DeleteUserGroupsRequest $req) 删除用户组
  * @method Models\DeleteUsersResponse DeleteUsers(Models\DeleteUsersRequest $req) 删除用户
@@ -61,6 +63,7 @@ use TencentCloud\Bh\V20230418\Models as Models;
  * @method Models\DescribeDomainsResponse DescribeDomains(Models\DescribeDomainsRequest $req) 查询网络域
  * @method Models\DescribeLoginEventResponse DescribeLoginEvent(Models\DescribeLoginEventRequest $req) 查询登录日志
  * @method Models\DescribeOperationEventResponse DescribeOperationEvent(Models\DescribeOperationEventRequest $req) 查询操作日志
+ * @method Models\DescribeOperationTaskResponse DescribeOperationTask(Models\DescribeOperationTaskRequest $req) 获取运维任务列表
  * @method Models\DescribeResourcesResponse DescribeResources(Models\DescribeResourcesRequest $req) 查询用户购买的堡垒机服务信息，包括资源ID、授权点数、VPC、过期时间等。
  * @method Models\DescribeUserGroupMembersResponse DescribeUserGroupMembers(Models\DescribeUserGroupMembersRequest $req) 查询用户组成员列表
  * @method Models\DescribeUserGroupsResponse DescribeUserGroups(Models\DescribeUserGroupsRequest $req) 查询用户组列表
@@ -72,6 +75,7 @@ use TencentCloud\Bh\V20230418\Models as Models;
  * @method Models\ModifyDeviceResponse ModifyDevice(Models\ModifyDeviceRequest $req) 修改资产信息
  * @method Models\ModifyDeviceGroupResponse ModifyDeviceGroup(Models\ModifyDeviceGroupRequest $req) 修改资产组
  * @method Models\ModifyOAuthSettingResponse ModifyOAuthSetting(Models\ModifyOAuthSettingRequest $req) 设置OAuth认证参数
+ * @method Models\ModifyOperationTaskResponse ModifyOperationTask(Models\ModifyOperationTaskRequest $req) 修改运维任务
  * @method Models\ModifyResourceResponse ModifyResource(Models\ModifyResourceRequest $req) 资源变配
  * @method Models\ModifyUserResponse ModifyUser(Models\ModifyUserRequest $req) 修改用户信息
  * @method Models\ModifyUserGroupResponse ModifyUserGroup(Models\ModifyUserGroupRequest $req) 修改用户组
@@ -79,6 +83,7 @@ use TencentCloud\Bh\V20230418\Models as Models;
  * @method Models\ResetDeviceAccountPrivateKeyResponse ResetDeviceAccountPrivateKey(Models\ResetDeviceAccountPrivateKeyRequest $req) 清除设备账号绑定的密钥
  * @method Models\ResetUserResponse ResetUser(Models\ResetUserRequest $req) 重置用户
  * @method Models\RunChangePwdTaskResponse RunChangePwdTask(Models\RunChangePwdTaskRequest $req) 执行改密任务
+ * @method Models\RunOperationTaskResponse RunOperationTask(Models\RunOperationTaskRequest $req) 执行运维任务
  * @method Models\SearchAuditLogResponse SearchAuditLog(Models\SearchAuditLogRequest $req) 搜索审计日志
  * @method Models\SearchCommandResponse SearchCommand(Models\SearchCommandRequest $req) 命令执行检索
  * @method Models\SearchCommandBySidResponse SearchCommandBySid(Models\SearchCommandBySidRequest $req) 根据会话Id搜索Command

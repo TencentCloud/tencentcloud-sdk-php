@@ -25,33 +25,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getNodeIp() 获取节点 ip
  * @method void setNodeIp(string $NodeIp) 设置节点 ip
  * @method string getZoneId() 获取Zone id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneId(string $ZoneId) 设置Zone id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getZone() 获取Zone
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZone(string $Zone) 设置Zone
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupId() 获取分组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupId(string $GroupId) 设置分组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupName() 获取分组名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupName(string $GroupName) 设置分组名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWeight() 获取节点权重
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWeight(integer $Weight) 设置节点权重
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsDefaultWeight() 获取是否默认权重
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsDefaultWeight(boolean $IsDefaultWeight) 设置是否默认权重
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudNativeAPIGatewayNode extends AbstractModel
 {
@@ -67,43 +53,36 @@ class CloudNativeAPIGatewayNode extends AbstractModel
 
     /**
      * @var string Zone id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneId;
 
     /**
      * @var string Zone
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Zone;
 
     /**
      * @var string 分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupId;
 
     /**
      * @var string 分组名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupName;
 
     /**
      * @var string 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var integer 节点权重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Weight;
 
     /**
      * @var boolean 是否默认权重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsDefaultWeight;
 
@@ -111,19 +90,12 @@ class CloudNativeAPIGatewayNode extends AbstractModel
      * @param string $NodeId 云原生网关节点 id
      * @param string $NodeIp 节点 ip
      * @param string $ZoneId Zone id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Zone Zone
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupId 分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 分组名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Weight 节点权重
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsDefaultWeight 是否默认权重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

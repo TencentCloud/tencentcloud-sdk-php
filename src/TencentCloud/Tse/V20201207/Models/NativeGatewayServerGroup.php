@@ -39,33 +39,19 @@ use TencentCloud\Common\AbstractModel;
 0：否。
 1：是。
  * @method CloudNativeAPIGatewayStrategy getBindingStrategy() 获取关联策略信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBindingStrategy(CloudNativeAPIGatewayStrategy $BindingStrategy) 设置关联策略信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGatewayId() 获取网关实例 id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGatewayId(string $GatewayId) 设置网关实例 id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getInternetMaxBandwidthOut() 获取带宽
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置带宽
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifyTime() 获取修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyTime(string $ModifyTime) 设置修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubnetIds() 获取子网id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetIds(string $SubnetIds) 设置子网id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDefaultWeight() 获取分组默认权重
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefaultWeight(integer $DefaultWeight) 设置分组默认权重
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getElasticNumber() 获取弹性节点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setElasticNumber(integer $ElasticNumber) 设置弹性节点
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NativeGatewayServerGroup extends AbstractModel
 {
@@ -108,43 +94,36 @@ class NativeGatewayServerGroup extends AbstractModel
 
     /**
      * @var CloudNativeAPIGatewayStrategy 关联策略信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BindingStrategy;
 
     /**
      * @var string 网关实例 id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GatewayId;
 
     /**
      * @var integer 带宽
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InternetMaxBandwidthOut;
 
     /**
      * @var string 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyTime;
 
     /**
      * @var string 子网id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetIds;
 
     /**
      * @var integer 分组默认权重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DefaultWeight;
 
     /**
      * @var integer 弹性节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ElasticNumber;
 
@@ -159,19 +138,12 @@ class NativeGatewayServerGroup extends AbstractModel
 0：否。
 1：是。
      * @param CloudNativeAPIGatewayStrategy $BindingStrategy 关联策略信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GatewayId 网关实例 id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InternetMaxBandwidthOut 带宽
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetIds 子网id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DefaultWeight 分组默认权重
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ElasticNumber 弹性节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

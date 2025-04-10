@@ -36,6 +36,7 @@ use TencentCloud\Chc\V20230418\Models as Models;
  * @method Models\CreateRackOnWorkOrderResponse CreateRackOnWorkOrder(Models\CreateRackOnWorkOrderRequest $req) 创建设备上架工单
  * @method Models\CreateReceivingWorkOrderResponse CreateReceivingWorkOrder(Models\CreateReceivingWorkOrderRequest $req) 创建设备收货工单
  * @method Models\CreateServerModelResponse CreateServerModel(Models\CreateServerModelRequest $req) 新增服务器设备型号
+ * @method Models\CreateSpeciallyQuitWorkOrderResponse CreateSpeciallyQuitWorkOrder(Models\CreateSpeciallyQuitWorkOrderRequest $req) 创建临时设备退出工单
  * @method Models\DescribeAvailableModelListResponse DescribeAvailableModelList(Models\DescribeAvailableModelListRequest $req) 获取机房内可用的型号列表
  * @method Models\DescribeCampusListResponse DescribeCampusList(Models\DescribeCampusListRequest $req) 获取用户可操作的园区列表
  * @method Models\DescribeCommonServiceWorkOrderDetailResponse DescribeCommonServiceWorkOrderDetail(Models\DescribeCommonServiceWorkOrderDetailRequest $req) 查询通用服务工单详情

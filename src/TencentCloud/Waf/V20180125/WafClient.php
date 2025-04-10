@@ -37,6 +37,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\CreateDealsResponse CreateDeals(Models\CreateDealsRequest $req) 计费资源购买、续费下单接口
  * @method Models\CreateHostResponse CreateHost(Models\CreateHostRequest $req) clb-waf中添加防护域名
  * @method Models\CreateIpAccessControlResponse CreateIpAccessControl(Models\CreateIpAccessControlRequest $req) Waf IP黑白名单新增接口
+ * @method Models\CreatePostCKafkaFlowResponse CreatePostCKafkaFlow(Models\CreatePostCKafkaFlowRequest $req) 创建CKafka投递流任务
  * @method Models\CreatePostCLSFlowResponse CreatePostCLSFlow(Models\CreatePostCLSFlowRequest $req) 创建CLS投递流任务
  * @method Models\DeleteAccessExportResponse DeleteAccessExport(Models\DeleteAccessExportRequest $req) 本接口用于删除访问日志导出
  * @method Models\DeleteAntiFakeUrlResponse DeleteAntiFakeUrl(Models\DeleteAntiFakeUrlRequest $req) 删除防篡改url
@@ -97,6 +98,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DescribePeakValueResponse DescribePeakValue(Models\DescribePeakValueRequest $req) 获取业务和攻击概览峰值
  * @method Models\DescribePolicyStatusResponse DescribePolicyStatus(Models\DescribePolicyStatusRequest $req) 获取防护状态以及生效的实例id
  * @method Models\DescribePortsResponse DescribePorts(Models\DescribePortsRequest $req) 获取Saas型WAF防护端口列表
+ * @method Models\DescribePostCKafkaFlowsResponse DescribePostCKafkaFlows(Models\DescribePostCKafkaFlowsRequest $req) 获取CKafka投递流任务列表
  * @method Models\DescribePostCLSFlowsResponse DescribePostCLSFlows(Models\DescribePostCLSFlowsRequest $req) 获取CLS投递流任务列表
  * @method Models\DescribeProtectionModesResponse DescribeProtectionModes(Models\DescribeProtectionModesRequest $req) 查询Tiga引擎大类规则及其防护模式
  * @method Models\DescribeRuleLimitResponse DescribeRuleLimit(Models\DescribeRuleLimitRequest $req) 获取各个模块具体的规格限制
@@ -119,6 +121,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
 描述WAF自动封禁模块详情
  * @method Models\DescribeWafThreatenIntelligenceResponse DescribeWafThreatenIntelligence(Models\DescribeWafThreatenIntelligenceRequest $req) 描述WAF威胁情报封禁模块配置详情
  * @method Models\DescribeWebshellStatusResponse DescribeWebshellStatus(Models\DescribeWebshellStatusRequest $req) 获取域名的webshell状态
+ * @method Models\DestroyPostCKafkaFlowResponse DestroyPostCKafkaFlow(Models\DestroyPostCKafkaFlowRequest $req) 销毁CKafka投递流任务
  * @method Models\DestroyPostCLSFlowResponse DestroyPostCLSFlow(Models\DestroyPostCLSFlowRequest $req) 销毁CLS投递流任务
  * @method Models\FreshAntiFakeUrlResponse FreshAntiFakeUrl(Models\FreshAntiFakeUrlRequest $req) 刷新防篡改url
  * @method Models\GenerateDealsAndPayNewResponse GenerateDealsAndPayNew(Models\GenerateDealsAndPayNewRequest $req) 计费资源购买、续费下单接口

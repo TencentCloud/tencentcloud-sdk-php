@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 实例监听端口信息
  *
  * @method string getHttpPort() 获取监听的 http 端口范围。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHttpPort(string $HttpPort) 设置监听的 http 端口范围。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHttpsPort() 获取监听的 https 端口范围。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHttpsPort(string $HttpsPort) 设置监听的 https 端口范围。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTcpPort() 获取监听的 tcp 端口范围。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTcpPort(string $TcpPort) 设置监听的 tcp 端口范围。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUdpPort() 获取监听的 udp 端口范围。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUdpPort(string $UdpPort) 设置监听的 udp 端口范围。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstancePort extends AbstractModel
 {
     /**
      * @var string 监听的 http 端口范围。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HttpPort;
 
     /**
      * @var string 监听的 https 端口范围。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HttpsPort;
 
     /**
      * @var string 监听的 tcp 端口范围。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TcpPort;
 
     /**
      * @var string 监听的 udp 端口范围。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UdpPort;
 
     /**
      * @param string $HttpPort 监听的 http 端口范围。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HttpsPort 监听的 https 端口范围。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TcpPort 监听的 tcp 端口范围。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UdpPort 监听的 udp 端口范围。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

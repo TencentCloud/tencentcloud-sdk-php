@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 云原生网关限流插件外部redis配置
  *
  * @method string getRedisHost() 获取redis ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRedisHost(string $RedisHost) 设置redis ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRedisPassword() 获取redis密码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRedisPassword(string $RedisPassword) 设置redis密码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRedisPort() 获取redis端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRedisPort(integer $RedisPort) 设置redis端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRedisTimeout() 获取超时时间  ms
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRedisTimeout(integer $RedisTimeout) 设置超时时间  ms
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ExternalRedis extends AbstractModel
 {
     /**
      * @var string redis ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RedisHost;
 
     /**
      * @var string redis密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RedisPassword;
 
     /**
      * @var integer redis端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RedisPort;
 
     /**
      * @var integer 超时时间  ms
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RedisTimeout;
 
     /**
      * @param string $RedisHost redis ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RedisPassword redis密码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RedisPort redis端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RedisTimeout 超时时间  ms
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

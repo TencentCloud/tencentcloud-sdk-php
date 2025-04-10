@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRuleType() 获取触发规则类型, Cron/Repeat
  * @method void setRuleType(string $RuleType) 设置触发规则类型, Cron/Repeat
  * @method string getExpression() 获取Cron类型规则，cron表达式。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpression(string $Expression) 设置Cron类型规则，cron表达式。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRepeatInterval() 获取时间间隔， 单位毫秒
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRepeatInterval(integer $RepeatInterval) 设置时间间隔， 单位毫秒
@@ -40,7 +38,6 @@ class TaskRule extends AbstractModel
 
     /**
      * @var string Cron类型规则，cron表达式。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Expression;
 
@@ -53,7 +50,6 @@ class TaskRule extends AbstractModel
     /**
      * @param string $RuleType 触发规则类型, Cron/Repeat
      * @param string $Expression Cron类型规则，cron表达式。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RepeatInterval 时间间隔， 单位毫秒
 注意：此字段可能返回 null，表示取不到有效值。
      */

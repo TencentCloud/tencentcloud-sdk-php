@@ -33,9 +33,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置查询状态
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSearchAfter() 获取查询es时，使用searchAfter返回的游标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSearchAfter(array $SearchAfter) 设置查询es时，使用searchAfter返回的游标
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TsfPageBusinessLogV2 extends AbstractModel
 {
@@ -63,7 +61,6 @@ class TsfPageBusinessLogV2 extends AbstractModel
 
     /**
      * @var array 查询es时，使用searchAfter返回的游标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SearchAfter;
 
@@ -75,7 +72,6 @@ class TsfPageBusinessLogV2 extends AbstractModel
      * @param string $Status 查询状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SearchAfter 查询es时，使用searchAfter返回的游标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

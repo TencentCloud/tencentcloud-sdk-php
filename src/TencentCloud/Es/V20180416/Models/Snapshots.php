@@ -88,6 +88,10 @@ SUCCESS     备份成功
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailures(array $Failures) 设置备份失败的索引分片和失败原因
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUserBackUp() 获取是否用户备份
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUserBackUp(string $UserBackUp) 设置是否用户备份
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Snapshots extends AbstractModel
 {
@@ -178,6 +182,12 @@ SUCCESS     备份成功
     public $Failures;
 
     /**
+     * @var string 是否用户备份
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UserBackUp;
+
+    /**
      * @param string $SnapshotName 快照名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uuid 快照Uuid
@@ -211,6 +221,8 @@ SUCCESS     备份成功
      * @param integer $SuccessfulShards 备份成功的分片数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Failures 备份失败的索引分片和失败原因
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UserBackUp 是否用户备份
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -281,6 +293,10 @@ SUCCESS     备份成功
                 $obj->deserialize($value);
                 array_push($this->Failures, $obj);
             }
+        }
+
+        if (array_key_exists("UserBackUp",$param) and $param["UserBackUp"] !== null) {
+            $this->UserBackUp = $param["UserBackUp"];
         }
     }
 }

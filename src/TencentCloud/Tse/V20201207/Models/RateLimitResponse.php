@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 云原生网关限流插件自定义响应
  *
  * @method string getBody() 获取自定义响应体
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBody(string $Body) 设置自定义响应体
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getHeaders() 获取Headers
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeaders(array $Headers) 设置Headers
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHttpStatus() 获取http状态码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHttpStatus(integer $HttpStatus) 设置http状态码
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RateLimitResponse extends AbstractModel
 {
     /**
      * @var string 自定义响应体
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Body;
 
     /**
      * @var array Headers
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Headers;
 
     /**
      * @var integer http状态码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HttpStatus;
 
     /**
      * @param string $Body 自定义响应体
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Headers Headers
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HttpStatus http状态码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

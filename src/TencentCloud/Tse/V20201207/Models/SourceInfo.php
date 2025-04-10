@@ -23,13 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method array getAddresses() 获取微服务引擎接入IP地址信息
  * @method void setAddresses(array $Addresses) 设置微服务引擎接入IP地址信息
  * @method SourceInstanceVpcInfo getVpcInfo() 获取微服务引擎VPC信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcInfo(SourceInstanceVpcInfo $VpcInfo) 设置微服务引擎VPC信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method SourceInstanceAuth getAuth() 获取微服务引擎鉴权信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuth(SourceInstanceAuth $Auth) 设置微服务引擎鉴权信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SourceInfo extends AbstractModel
 {
@@ -40,22 +36,18 @@ class SourceInfo extends AbstractModel
 
     /**
      * @var SourceInstanceVpcInfo 微服务引擎VPC信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcInfo;
 
     /**
      * @var SourceInstanceAuth 微服务引擎鉴权信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Auth;
 
     /**
      * @param array $Addresses 微服务引擎接入IP地址信息
      * @param SourceInstanceVpcInfo $VpcInfo 微服务引擎VPC信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SourceInstanceAuth $Auth 微服务引擎鉴权信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

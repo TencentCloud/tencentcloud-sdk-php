@@ -36,6 +36,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(integer $CreateTime) 设置创建时间，以毫秒为单位
  * @method integer getUpdateTime() 获取创建时间，以毫秒为单位
  * @method void setUpdateTime(integer $UpdateTime) 设置创建时间，以毫秒为单位
+ * @method string getInstanceId() 获取实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceId(string $InstanceId) 设置实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNamespace() 获取命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNamespace(string $Namespace) 设置命名空间
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLastUpdateTime() 获取最后写入时间，单位为秒
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastUpdateTime(integer $LastUpdateTime) 设置最后写入时间，单位为秒
@@ -88,6 +96,18 @@ class RocketMQTopic extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var string 实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceId;
+
+    /**
+     * @var string 命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Namespace;
+
+    /**
      * @var integer 最后写入时间，单位为秒
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -114,6 +134,10 @@ class RocketMQTopic extends AbstractModel
      * @param integer $PartitionNum 读写分区数
      * @param integer $CreateTime 创建时间，以毫秒为单位
      * @param integer $UpdateTime 创建时间，以毫秒为单位
+     * @param string $InstanceId 实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Namespace 命名空间
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LastUpdateTime 最后写入时间，单位为秒
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SubscriptionCount 订阅数量
@@ -160,6 +184,14 @@ class RocketMQTopic extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
+            $this->Namespace = $param["Namespace"];
         }
 
         if (array_key_exists("LastUpdateTime",$param) and $param["LastUpdateTime"] !== null) {

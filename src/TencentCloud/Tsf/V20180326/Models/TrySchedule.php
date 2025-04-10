@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 尽量调度
  *
  * @method array getAffinityList() 获取-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAffinityList(array $AffinityList) 设置-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAntiAffinityList() 获取-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAntiAffinityList(array $AntiAffinityList) 设置-
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TrySchedule extends AbstractModel
 {
     /**
      * @var array -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AffinityList;
 
     /**
      * @var array -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AntiAffinityList;
 
     /**
      * @param array $AffinityList -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AntiAffinityList -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

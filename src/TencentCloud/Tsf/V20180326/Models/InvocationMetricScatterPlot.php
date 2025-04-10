@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getPeriod() 获取时间轴开始时间，GMT，精确到毫秒
  * @method void setPeriod(integer $Period) 设置时间轴开始时间，GMT，精确到毫秒
  * @method array getDataPoints() 获取多值数据点集合
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataPoints(array $DataPoints) 设置多值数据点集合
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InvocationMetricScatterPlot extends AbstractModel
 {
@@ -50,7 +48,6 @@ class InvocationMetricScatterPlot extends AbstractModel
 
     /**
      * @var array 多值数据点集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataPoints;
 
@@ -59,7 +56,6 @@ class InvocationMetricScatterPlot extends AbstractModel
      * @param integer $StartTime 时间粒度
      * @param integer $Period 时间轴开始时间，GMT，精确到毫秒
      * @param array $DataPoints 多值数据点集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

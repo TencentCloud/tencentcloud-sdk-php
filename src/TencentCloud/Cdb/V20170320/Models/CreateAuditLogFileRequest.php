@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilter(AuditLogFilter $Filter) 设置已废弃。
  * @method array getLogFilter() 获取过滤条件。可按设置的过滤条件过滤日志。
  * @method void setLogFilter(array $LogFilter) 设置过滤条件。可按设置的过滤条件过滤日志。
+ * @method array getColumnFilter() 获取下载筛选列
+ * @method void setColumnFilter(array $ColumnFilter) 设置下载筛选列
  */
 class CreateAuditLogFileRequest extends AbstractModel
 {
@@ -82,6 +84,11 @@ class CreateAuditLogFileRequest extends AbstractModel
     public $LogFilter;
 
     /**
+     * @var array 下载筛选列
+     */
+    public $ColumnFilter;
+
+    /**
      * @param string $InstanceId 实例 ID，与云数据库控制台页面中显示的实例 ID 相同。
      * @param string $StartTime 开始时间。
      * @param string $EndTime 结束时间。
@@ -92,6 +99,7 @@ class CreateAuditLogFileRequest extends AbstractModel
 "execTime" - 执行时间。
      * @param AuditLogFilter $Filter 已废弃。
      * @param array $LogFilter 过滤条件。可按设置的过滤条件过滤日志。
+     * @param array $ColumnFilter 下载筛选列
      */
     function __construct()
     {
@@ -138,6 +146,10 @@ class CreateAuditLogFileRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->LogFilter, $obj);
             }
+        }
+
+        if (array_key_exists("ColumnFilter",$param) and $param["ColumnFilter"] !== null) {
+            $this->ColumnFilter = $param["ColumnFilter"];
         }
     }
 }

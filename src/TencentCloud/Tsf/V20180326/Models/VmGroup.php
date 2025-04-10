@@ -123,29 +123,17 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getEnableBatchHealthCheck() 获取批次是否开启健康检查
  * @method void setEnableBatchHealthCheck(boolean $EnableBatchHealthCheck) 设置批次是否开启健康检查
  * @method boolean getFilebeatCgroupEnable() 获取是否开启cgroup控制内存cpu
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFilebeatCgroupEnable(boolean $FilebeatCgroupEnable) 设置是否开启cgroup控制内存cpu
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getFilebeatMaxCpu() 获取filebeat使用cpu上限
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFilebeatMaxCpu(float $FilebeatMaxCpu) 设置filebeat使用cpu上限
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFilebeatMaxMem() 获取filebeat使用内存上限
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFilebeatMaxMem(integer $FilebeatMaxMem) 设置filebeat使用内存上限
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRepositoryId() 获取仓库ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRepositoryId(string $RepositoryId) 设置仓库ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRepositoryName() 获取仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRepositoryName(string $RepositoryName) 设置仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRepositoryType() 获取仓库类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRepositoryType(string $RepositoryType) 设置仓库类型
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VmGroup extends AbstractModel
 {
@@ -358,37 +346,31 @@ class VmGroup extends AbstractModel
 
     /**
      * @var boolean 是否开启cgroup控制内存cpu
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FilebeatCgroupEnable;
 
     /**
      * @var float filebeat使用cpu上限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FilebeatMaxCpu;
 
     /**
      * @var integer filebeat使用内存上限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FilebeatMaxMem;
 
     /**
      * @var string 仓库ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RepositoryId;
 
     /**
      * @var string 仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RepositoryName;
 
     /**
      * @var string 仓库类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RepositoryType;
 
@@ -445,17 +427,11 @@ class VmGroup extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $EnableBatchHealthCheck 批次是否开启健康检查
      * @param boolean $FilebeatCgroupEnable 是否开启cgroup控制内存cpu
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $FilebeatMaxCpu filebeat使用cpu上限
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FilebeatMaxMem filebeat使用内存上限
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RepositoryId 仓库ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RepositoryName 仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RepositoryType 仓库类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

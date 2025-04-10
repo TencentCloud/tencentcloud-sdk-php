@@ -24,8 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegistryId(string $RegistryId) 设置实例ID
  * @method string getNamespaceName() 获取命名空间名称
  * @method void setNamespaceName(string $NamespaceName) 设置命名空间名称
- * @method string getRepositoryName() 获取仓库名称
- * @method void setRepositoryName(string $RepositoryName) 设置仓库名称
+ * @method string getRepositoryName() 获取仓库名称，需满足以下规则：
+1. 长度需 ​大于2且小于245个字符 
+2. 仅允许小写字母、数字及符号 . _ -
+ * @method void setRepositoryName(string $RepositoryName) 设置仓库名称，需满足以下规则：
+1. 长度需 ​大于2且小于245个字符 
+2. 仅允许小写字母、数字及符号 . _ -
  * @method string getBriefDescription() 获取仓库简短描述
  * @method void setBriefDescription(string $BriefDescription) 设置仓库简短描述
  * @method string getDescription() 获取仓库详细描述
@@ -44,7 +48,9 @@ class CreateRepositoryRequest extends AbstractModel
     public $NamespaceName;
 
     /**
-     * @var string 仓库名称
+     * @var string 仓库名称，需满足以下规则：
+1. 长度需 ​大于2且小于245个字符 
+2. 仅允许小写字母、数字及符号 . _ -
      */
     public $RepositoryName;
 
@@ -61,7 +67,9 @@ class CreateRepositoryRequest extends AbstractModel
     /**
      * @param string $RegistryId 实例ID
      * @param string $NamespaceName 命名空间名称
-     * @param string $RepositoryName 仓库名称
+     * @param string $RepositoryName 仓库名称，需满足以下规则：
+1. 长度需 ​大于2且小于245个字符 
+2. 仅允许小写字母、数字及符号 . _ -
      * @param string $BriefDescription 仓库简短描述
      * @param string $Description 仓库详细描述
      */

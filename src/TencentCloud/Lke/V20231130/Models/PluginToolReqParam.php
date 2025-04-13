@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDefaultValue(string $DefaultValue) 设置参数默认值
  * @method array getSubParams() 获取子参数,ParamType 是OBJECT 或 ARRAY<>类型有用
  * @method void setSubParams(array $SubParams) 设置子参数,ParamType 是OBJECT 或 ARRAY<>类型有用
+ * @method boolean getGlobalHidden() 获取插件参数配置是否隐藏不可见，true-隐藏不可见，false-可见
+ * @method void setGlobalHidden(boolean $GlobalHidden) 设置插件参数配置是否隐藏不可见，true-隐藏不可见，false-可见
  */
 class PluginToolReqParam extends AbstractModel
 {
@@ -66,12 +68,18 @@ class PluginToolReqParam extends AbstractModel
     public $SubParams;
 
     /**
+     * @var boolean 插件参数配置是否隐藏不可见，true-隐藏不可见，false-可见
+     */
+    public $GlobalHidden;
+
+    /**
      * @param string $Name 参数名称
      * @param string $Desc 参数描述
      * @param integer $Type 参数类型，0:string, 1:int, 2:float，3:bool 4:object 5:array_string, 6:array_int, 7:array_float, 8:array_bool, 9:array_object
      * @param boolean $IsRequired 参数是否必填
      * @param string $DefaultValue 参数默认值
      * @param array $SubParams 子参数,ParamType 是OBJECT 或 ARRAY<>类型有用
+     * @param boolean $GlobalHidden 插件参数配置是否隐藏不可见，true-隐藏不可见，false-可见
      */
     function __construct()
     {
@@ -113,6 +121,10 @@ class PluginToolReqParam extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SubParams, $obj);
             }
+        }
+
+        if (array_key_exists("GlobalHidden",$param) and $param["GlobalHidden"] !== null) {
+            $this->GlobalHidden = $param["GlobalHidden"];
         }
     }
 }

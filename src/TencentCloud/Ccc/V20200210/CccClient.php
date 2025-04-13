@@ -55,6 +55,7 @@ use TencentCloud\Ccc\V20200210\Models as Models;
  * @method Models\DeletePredictiveDialingCampaignResponse DeletePredictiveDialingCampaign(Models\DeletePredictiveDialingCampaignRequest $req) 删除预测式外呼任务
  * @method Models\DeleteStaffResponse DeleteStaff(Models\DeleteStaffRequest $req) 删除坐席信息
  * @method Models\DescribeAICallExtractResultResponse DescribeAICallExtractResult(Models\DescribeAICallExtractResultRequest $req) 获取 AI 通话内容提取结果。
+ * @method Models\DescribeAILatencyResponse DescribeAILatency(Models\DescribeAILatencyRequest $req) 获取 AI 时延信息
  * @method Models\DescribeActiveCarrierPrivilegeNumberResponse DescribeActiveCarrierPrivilegeNumber(Models\DescribeActiveCarrierPrivilegeNumberRequest $req) 查询生效运营商白名单规则
  * @method Models\DescribeAgentCruiseDialingCampaignResponse DescribeAgentCruiseDialingCampaign(Models\DescribeAgentCruiseDialingCampaignRequest $req) 查询 座席巡航式外呼任务
  * @method Models\DescribeAutoCalloutTaskResponse DescribeAutoCalloutTask(Models\DescribeAutoCalloutTaskRequest $req) 查询自动外呼任务详情
@@ -85,6 +86,7 @@ use TencentCloud\Ccc\V20200210\Models as Models;
  * @method Models\DescribeTelRecordAsrResponse DescribeTelRecordAsr(Models\DescribeTelRecordAsrRequest $req) 拉取会话录音转文本信息
  * @method Models\DescribeTelSessionResponse DescribeTelSession(Models\DescribeTelSessionRequest $req) 获取 PSTN 会话信息
  * @method Models\DisableCCCPhoneNumberResponse DisableCCCPhoneNumber(Models\DisableCCCPhoneNumberRequest $req) 停用号码
+ * @method Models\ForceMemberOfflineResponse ForceMemberOffline(Models\ForceMemberOfflineRequest $req) 强制客服下线
  * @method Models\HangUpCallResponse HangUpCall(Models\HangUpCallRequest $req) 挂断电话
  * @method Models\ModifyCompanyApplyResponse ModifyCompanyApply(Models\ModifyCompanyApplyRequest $req) 修改公司资质申请，只能修改状态为驳回或待审核的申请单。（1、首次使用接口，建议先在云联络中心控制台查看各个资料模板:https://console.cloud.tencent.com/ccc/enterprise/update。2、参数中图片Url建议使用腾讯云Cos存储的临时链接）
  * @method Models\ModifyExtensionResponse ModifyExtension(Models\ModifyExtensionRequest $req) 修改话机账号(绑定技能组、绑定坐席账号)
@@ -93,6 +95,7 @@ use TencentCloud\Ccc\V20200210\Models as Models;
  * @method Models\ModifyStaffPasswordResponse ModifyStaffPassword(Models\ModifyStaffPasswordRequest $req) 修改座席的密码
  * @method Models\PausePredictiveDialingCampaignResponse PausePredictiveDialingCampaign(Models\PausePredictiveDialingCampaignRequest $req) 暂停预测式外呼任务
  * @method Models\ResetExtensionPasswordResponse ResetExtensionPassword(Models\ResetExtensionPasswordRequest $req) 重置话机注册密码
+ * @method Models\RestoreMemberOnlineResponse RestoreMemberOnline(Models\RestoreMemberOnlineRequest $req) 恢复客服上线
  * @method Models\ResumePredictiveDialingCampaignResponse ResumePredictiveDialingCampaign(Models\ResumePredictiveDialingCampaignRequest $req) 恢复预测式外呼任务
  * @method Models\StopAutoCalloutTaskResponse StopAutoCalloutTask(Models\StopAutoCalloutTaskRequest $req) 停止自动外呼任务
  * @method Models\TransferToManualResponse TransferToManual(Models\TransferToManualRequest $req) 特定场景下讲会话转接到人工坐席

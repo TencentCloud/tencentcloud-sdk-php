@@ -216,7 +216,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeHistoryAccountsResponse DescribeHistoryAccounts(Models\DescribeHistoryAccountsRequest $req) 本接口 (DescribeHistoryAccounts) 用于获取帐号变更历史列表数据。
  * @method Models\DescribeHistoryServiceResponse DescribeHistoryService(Models\DescribeHistoryServiceRequest $req) 查询日志检索服务信息
  * @method Models\DescribeHostInfoResponse DescribeHostInfo(Models\DescribeHostInfoRequest $req) 主机信息与标签信息查询
- * @method Models\DescribeHostLoginListResponse DescribeHostLoginList(Models\DescribeHostLoginListRequest $req) 获取登录审计列表
+ * @method Models\DescribeHostLoginListResponse DescribeHostLoginList(Models\DescribeHostLoginListRequest $req) 获取异常登录列表
  * @method Models\DescribeHotVulTopResponse DescribeHotVulTop(Models\DescribeHotVulTopRequest $req) 获取全网热点漏洞
  * @method Models\DescribeIgnoreBaselineRuleResponse DescribeIgnoreBaselineRule(Models\DescribeIgnoreBaselineRuleRequest $req) 查询已经忽略的检测项信息
  * @method Models\DescribeIgnoreHostAndItemConfigResponse DescribeIgnoreHostAndItemConfig(Models\DescribeIgnoreHostAndItemConfigRequest $req) 获取一键忽略受影响的检测项和主机信息

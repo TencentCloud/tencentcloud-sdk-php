@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cwp\V20180228\Models;
+namespace TencentCloud\Hunyuan\V20230901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeHostLoginList返回参数结构体
+ * SubmitHunyuanTo3DJob返回参数结构体
  *
- * @method integer getTotalCount() 获取总数
- * @method void setTotalCount(integer $TotalCount) 设置总数
- * @method array getHostLoginList() 获取异常登录列表
- * @method void setHostLoginList(array $HostLoginList) 设置异常登录列表
+ * @method string getJobId() 获取任务id
+ * @method void setJobId(string $JobId) 设置任务id
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeHostLoginListResponse extends AbstractModel
+class SubmitHunyuanTo3DJobResponse extends AbstractModel
 {
     /**
-     * @var integer 总数
+     * @var string 任务id
      */
-    public $TotalCount;
-
-    /**
-     * @var array 异常登录列表
-     */
-    public $HostLoginList;
+    public $JobId;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +38,7 @@ class DescribeHostLoginListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 总数
-     * @param array $HostLoginList 异常登录列表
+     * @param string $JobId 任务id
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +54,8 @@ class DescribeHostLoginListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
-        if (array_key_exists("HostLoginList",$param) and $param["HostLoginList"] !== null) {
-            $this->HostLoginList = [];
-            foreach ($param["HostLoginList"] as $key => $value){
-                $obj = new HostLoginList();
-                $obj->deserialize($value);
-                array_push($this->HostLoginList, $obj);
-            }
+        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
+            $this->JobId = $param["JobId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

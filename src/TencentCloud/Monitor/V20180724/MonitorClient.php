@@ -152,6 +152,7 @@ use TencentCloud\Monitor\V20180724\Models as Models;
  * @method Models\EnableGrafanaInternetResponse EnableGrafanaInternet(Models\EnableGrafanaInternetRequest $req) 设置 Grafana 公网访问
  * @method Models\EnableGrafanaSSOResponse EnableGrafanaSSO(Models\EnableGrafanaSSORequest $req) 设置 Grafana 单点登录，使用腾讯云账号
  * @method Models\EnableSSOCamCheckResponse EnableSSOCamCheck(Models\EnableSSOCamCheckRequest $req) SSO单点登录时，设置是否cam鉴权
+ * @method Models\ExportPrometheusReadOnlyDynamicAPIResponse ExportPrometheusReadOnlyDynamicAPI(Models\ExportPrometheusReadOnlyDynamicAPIRequest $req) Prometheus 内部动态 api 代理，仅内部使用
  * @method Models\GetMonitorDataResponse GetMonitorData(Models\GetMonitorDataRequest $req) 获取云产品的监控数据。此接口不适用于拉取容器服务监控数据，如需拉取容器服务监控数据，请使用[根据维度条件查询监控数据](https://cloud.tencent.com/document/product/248/51845)接口。
 传入产品的命名空间、对象维度描述和监控指标即可获得相应的监控数据。
 接口调用限制：单请求最多可支持批量拉取10个实例的监控数据，单请求的数据点数限制为1440个。

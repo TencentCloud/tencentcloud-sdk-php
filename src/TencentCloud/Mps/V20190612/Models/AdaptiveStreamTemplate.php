@@ -37,10 +37,10 @@ use TencentCloud\Common\AbstractModel;
 <li>0：否，</li>
 <li>1：是。</li>
  * @method array getAudioList() 获取音频参数信息列表。
-注意：参数数组长度最大为64。
+注意：参数只在自适应转码使用音轨合并多音轨时使用, 参数数组长度最大为64。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAudioList(array $AudioList) 设置音频参数信息列表。
-注意：参数数组长度最大为64。
+注意：参数只在自适应转码使用音轨合并多音轨时使用, 参数数组长度最大为64。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AdaptiveStreamTemplate extends AbstractModel
@@ -71,7 +71,7 @@ class AdaptiveStreamTemplate extends AbstractModel
 
     /**
      * @var array 音频参数信息列表。
-注意：参数数组长度最大为64。
+注意：参数只在自适应转码使用音轨合并多音轨时使用, 参数数组长度最大为64。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AudioList;
@@ -86,7 +86,7 @@ class AdaptiveStreamTemplate extends AbstractModel
 <li>0：否，</li>
 <li>1：是。</li>
      * @param array $AudioList 音频参数信息列表。
-注意：参数数组长度最大为64。
+注意：参数只在自适应转码使用音轨合并多音轨时使用, 参数数组长度最大为64。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

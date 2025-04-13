@@ -24,9 +24,33 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGreeting(string $Greeting) 设置欢迎语，200字符以内
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRoleDescription() 获取角色描述，300字符以内
+ * @method string getRoleDescription() 获取角色描述，4000字符以内。通过填写描述，设定应用的 #角色名称、 #风格特点 及可达成的#意图。建议按照下面的模板填写，且自定义意图建议不超过5个。
+
+#角色名称：
+#风格特点：
+#输出要求：
+#能力限制：
+
+能够达成以下用户意图
+##意图名称：
+##意图描述：
+##意图示例：
+##意图实现：
+
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRoleDescription(string $RoleDescription) 设置角色描述，300字符以内
+ * @method void setRoleDescription(string $RoleDescription) 设置角色描述，4000字符以内。通过填写描述，设定应用的 #角色名称、 #风格特点 及可达成的#意图。建议按照下面的模板填写，且自定义意图建议不超过5个。
+
+#角色名称：
+#风格特点：
+#输出要求：
+#能力限制：
+
+能够达成以下用户意图
+##意图名称：
+##意图描述：
+##意图示例：
+##意图实现：
+
 注意：此字段可能返回 null，表示取不到有效值。
  * @method AppModel getModel() 获取生成模型配置
 注意：此字段可能返回 null，表示取不到有效值。
@@ -68,6 +92,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setThoughtModel(AppModel $ThoughtModel) 设置思考模型配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getIntentAchievements() 获取意图达成方式优先级
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIntentAchievements(array $IntentAchievements) 设置意图达成方式优先级
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getImageTextRetrieval() 获取是否开启图文检索
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setImageTextRetrieval(boolean $ImageTextRetrieval) 设置是否开启图文检索
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class KnowledgeQaConfig extends AbstractModel
 {
@@ -78,7 +110,19 @@ class KnowledgeQaConfig extends AbstractModel
     public $Greeting;
 
     /**
-     * @var string 角色描述，300字符以内
+     * @var string 角色描述，4000字符以内。通过填写描述，设定应用的 #角色名称、 #风格特点 及可达成的#意图。建议按照下面的模板填写，且自定义意图建议不超过5个。
+
+#角色名称：
+#风格特点：
+#输出要求：
+#能力限制：
+
+能够达成以下用户意图
+##意图名称：
+##意图描述：
+##意图示例：
+##意图实现：
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoleDescription;
@@ -144,9 +188,33 @@ class KnowledgeQaConfig extends AbstractModel
     public $ThoughtModel;
 
     /**
+     * @var array 意图达成方式优先级
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IntentAchievements;
+
+    /**
+     * @var boolean 是否开启图文检索
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ImageTextRetrieval;
+
+    /**
      * @param string $Greeting 欢迎语，200字符以内
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RoleDescription 角色描述，300字符以内
+     * @param string $RoleDescription 角色描述，4000字符以内。通过填写描述，设定应用的 #角色名称、 #风格特点 及可达成的#意图。建议按照下面的模板填写，且自定义意图建议不超过5个。
+
+#角色名称：
+#风格特点：
+#输出要求：
+#能力限制：
+
+能够达成以下用户意图
+##意图名称：
+##意图描述：
+##意图示例：
+##意图实现：
+
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AppModel $Model 生成模型配置
 注意：此字段可能返回 null，表示取不到有效值。
@@ -167,6 +235,10 @@ class KnowledgeQaConfig extends AbstractModel
      * @param array $Plugins 应用关联插件
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AppModel $ThoughtModel 思考模型配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $IntentAchievements 意图达成方式优先级
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $ImageTextRetrieval 是否开启图文检索
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -245,6 +317,19 @@ class KnowledgeQaConfig extends AbstractModel
         if (array_key_exists("ThoughtModel",$param) and $param["ThoughtModel"] !== null) {
             $this->ThoughtModel = new AppModel();
             $this->ThoughtModel->deserialize($param["ThoughtModel"]);
+        }
+
+        if (array_key_exists("IntentAchievements",$param) and $param["IntentAchievements"] !== null) {
+            $this->IntentAchievements = [];
+            foreach ($param["IntentAchievements"] as $key => $value){
+                $obj = new IntentAchievement();
+                $obj->deserialize($value);
+                array_push($this->IntentAchievements, $obj);
+            }
+        }
+
+        if (array_key_exists("ImageTextRetrieval",$param) and $param["ImageTextRetrieval"] !== null) {
+            $this->ImageTextRetrieval = $param["ImageTextRetrieval"];
         }
     }
 }

@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQueryType(string $QueryType) 设置查询类型 filename 文档、 attribute 标签
  * @method string getCateBizId() 获取分类ID
  * @method void setCateBizId(string $CateBizId) 设置分类ID
+ * @method array getFileTypes() 获取文件类型分类筛选
+ * @method void setFileTypes(array $FileTypes) 设置文件类型分类筛选
+ * @method array getFilterFlag() 获取文档列表筛选标识位
+ * @method void setFilterFlag(array $FilterFlag) 设置文档列表筛选标识位
  */
 class ListDocRequest extends AbstractModel
 {
@@ -73,6 +77,16 @@ class ListDocRequest extends AbstractModel
     public $CateBizId;
 
     /**
+     * @var array 文件类型分类筛选
+     */
+    public $FileTypes;
+
+    /**
+     * @var array 文档列表筛选标识位
+     */
+    public $FilterFlag;
+
+    /**
      * @param string $BotBizId 应用ID
      * @param integer $PageNumber 页码
      * @param integer $PageSize 每页数量
@@ -80,6 +94,8 @@ class ListDocRequest extends AbstractModel
      * @param array $Status 文档状态： 1-未生成 2-生成中 3-生成成功 4-生成失败 5-删除中 6-删除成功  7-审核中  8-审核失败 9-审核成功  10-待发布  11-发布中  12-已发布  13-学习中  14-学习失败  15-更新中  16-更新失败  17-解析中  18-解析失败  19-导入失败   20-已过期 21-超量失效 22-超量失效恢复
      * @param string $QueryType 查询类型 filename 文档、 attribute 标签
      * @param string $CateBizId 分类ID
+     * @param array $FileTypes 文件类型分类筛选
+     * @param array $FilterFlag 文档列表筛选标识位
      */
     function __construct()
     {
@@ -120,6 +136,19 @@ class ListDocRequest extends AbstractModel
 
         if (array_key_exists("CateBizId",$param) and $param["CateBizId"] !== null) {
             $this->CateBizId = $param["CateBizId"];
+        }
+
+        if (array_key_exists("FileTypes",$param) and $param["FileTypes"] !== null) {
+            $this->FileTypes = $param["FileTypes"];
+        }
+
+        if (array_key_exists("FilterFlag",$param) and $param["FilterFlag"] !== null) {
+            $this->FilterFlag = [];
+            foreach ($param["FilterFlag"] as $key => $value){
+                $obj = new DocFilterFlag();
+                $obj->deserialize($value);
+                array_push($this->FilterFlag, $obj);
+            }
         }
     }
 }

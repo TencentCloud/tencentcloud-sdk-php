@@ -31,16 +31,16 @@ use TencentCloud\Common\AbstractModel;
 默认值：0
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSelectType() 获取合并音轨输入类型，可选值：
-trask：表示使用音轨id；
-trask_channel： 表示使用音轨id和声道id；
-默认：trask。
-注意：如果原视频是多声道，建议使用trask_channel。
+track：表示使用音轨id；
+track_channel： 表示使用音轨id和声道id；
+默认：track。
+注意：如果原视频是多声道，建议使用track_channel。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSelectType(string $SelectType) 设置合并音轨输入类型，可选值：
-trask：表示使用音轨id；
-trask_channel： 表示使用音轨id和声道id；
-默认：trask。
-注意：如果原视频是多声道，建议使用trask_channel。
+track：表示使用音轨id；
+track_channel： 表示使用音轨id和声道id；
+默认：track。
+注意：如果原视频是多声道，建议使用track_channel。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getInputTrackInfo() 获取音轨信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -60,10 +60,10 @@ class AudioTrackChannelInfo extends AbstractModel
 
     /**
      * @var string 合并音轨输入类型，可选值：
-trask：表示使用音轨id；
-trask_channel： 表示使用音轨id和声道id；
-默认：trask。
-注意：如果原视频是多声道，建议使用trask_channel。
+track：表示使用音轨id；
+track_channel： 表示使用音轨id和声道id；
+默认：track。
+注意：如果原视频是多声道，建议使用track_channel。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SelectType;
@@ -81,10 +81,10 @@ trask_channel： 表示使用音轨id和声道id；
 默认值：0
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SelectType 合并音轨输入类型，可选值：
-trask：表示使用音轨id；
-trask_channel： 表示使用音轨id和声道id；
-默认：trask。
-注意：如果原视频是多声道，建议使用trask_channel。
+track：表示使用音轨id；
+track_channel： 表示使用音轨id和声道id；
+默认：track。
+注意：如果原视频是多声道，建议使用track_channel。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $InputTrackInfo 音轨信息
 注意：此字段可能返回 null，表示取不到有效值。

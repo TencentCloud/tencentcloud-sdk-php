@@ -51,9 +51,7 @@ Standard｜Lane
  * @method string getMatchMode() 获取泳道匹配规则：严格STRICT｜宽松PERMISSIVE
  * @method void setMatchMode(string $MatchMode) 设置泳道匹配规则：严格STRICT｜宽松PERMISSIVE
  * @method string getLaneTag() 获取泳道标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLaneTag(string $LaneTag) 设置泳道标签
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudNativeAPIGatewayCanaryRule extends AbstractModel
 {
@@ -126,7 +124,6 @@ Standard｜Lane
 
     /**
      * @var string 泳道标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LaneTag;
 
@@ -147,7 +144,6 @@ Standard｜Lane
      * @param string $LaneName 泳道名称
      * @param string $MatchMode 泳道匹配规则：严格STRICT｜宽松PERMISSIVE
      * @param string $LaneTag 泳道标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

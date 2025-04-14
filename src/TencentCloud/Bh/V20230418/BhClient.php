@@ -29,6 +29,7 @@ use TencentCloud\Bh\V20230418\Models as Models;
  * @method Models\BindDeviceAccountPasswordResponse BindDeviceAccountPassword(Models\BindDeviceAccountPasswordRequest $req) 绑定主机账号密码
  * @method Models\BindDeviceAccountPrivateKeyResponse BindDeviceAccountPrivateKey(Models\BindDeviceAccountPrivateKeyRequest $req) 绑定主机账号私钥
  * @method Models\BindDeviceResourceResponse BindDeviceResource(Models\BindDeviceResourceRequest $req) 修改资产绑定的堡垒机服务
+ * @method Models\CreateAccessWhiteListRuleResponse CreateAccessWhiteListRule(Models\CreateAccessWhiteListRuleRequest $req) 添加访问白名单规则
  * @method Models\CreateAclResponse CreateAcl(Models\CreateAclRequest $req) 新建访问权限
  * @method Models\CreateAssetSyncJobResponse CreateAssetSyncJob(Models\CreateAssetSyncJobRequest $req) 创建手工资产同步任务
  * @method Models\CreateChangePwdTaskResponse CreateChangePwdTask(Models\CreateChangePwdTaskRequest $req) 创建修改密码任务
@@ -39,6 +40,7 @@ use TencentCloud\Bh\V20230418\Models as Models;
  * @method Models\CreateResourceResponse CreateResource(Models\CreateResourceRequest $req) 创建堡垒机实例
  * @method Models\CreateUserResponse CreateUser(Models\CreateUserRequest $req) 新建用户
  * @method Models\CreateUserGroupResponse CreateUserGroup(Models\CreateUserGroupRequest $req) 新建用户组
+ * @method Models\DeleteAccessWhiteListRulesResponse DeleteAccessWhiteListRules(Models\DeleteAccessWhiteListRulesRequest $req) 删除访问白名单规则
  * @method Models\DeleteAclsResponse DeleteAcls(Models\DeleteAclsRequest $req) 删除访问权限
  * @method Models\DeleteChangePwdTaskResponse DeleteChangePwdTask(Models\DeleteChangePwdTaskRequest $req) 删除改密任务
  * @method Models\DeleteCmdTemplatesResponse DeleteCmdTemplates(Models\DeleteCmdTemplatesRequest $req) 删除高危命令模板
@@ -51,6 +53,7 @@ use TencentCloud\Bh\V20230418\Models as Models;
  * @method Models\DeleteUserGroupsResponse DeleteUserGroups(Models\DeleteUserGroupsRequest $req) 删除用户组
  * @method Models\DeleteUsersResponse DeleteUsers(Models\DeleteUsersRequest $req) 删除用户
  * @method Models\DeployResourceResponse DeployResource(Models\DeployResourceRequest $req) 开通服务，初始化资源，只针对新购资源
+ * @method Models\DescribeAccessWhiteListRulesResponse DescribeAccessWhiteListRules(Models\DescribeAccessWhiteListRulesRequest $req) 查询访问白名单规则列表
  * @method Models\DescribeAclsResponse DescribeAcls(Models\DescribeAclsRequest $req) 查询访问权限列表
  * @method Models\DescribeAssetSyncStatusResponse DescribeAssetSyncStatus(Models\DescribeAssetSyncStatusRequest $req) 查询资产同步状态
  * @method Models\DescribeChangePwdTaskResponse DescribeChangePwdTask(Models\DescribeChangePwdTaskRequest $req) 查询改密任务列表
@@ -91,6 +94,7 @@ use TencentCloud\Bh\V20230418\Models as Models;
  * @method Models\SearchFileBySidResponse SearchFileBySid(Models\SearchFileBySidRequest $req) 搜索文件传输会话下文件操作列表
  * @method Models\SearchSessionResponse SearchSession(Models\SearchSessionRequest $req) 搜索会话
  * @method Models\SearchSessionCommandResponse SearchSessionCommand(Models\SearchSessionCommandRequest $req) 命令检索
+ * @method Models\SearchTaskResultResponse SearchTaskResult(Models\SearchTaskResultRequest $req) 搜索运维任务执行结果
  */
 
 class BhClient extends AbstractClient

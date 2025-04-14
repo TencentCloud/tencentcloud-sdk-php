@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeregisterTargetGroupInstances请求参数结构体
  *
- * @method string getTargetGroupId() 获取目标组ID。
- * @method void setTargetGroupId(string $TargetGroupId) 设置目标组ID。
+ * @method string getTargetGroupId() 获取目标组ID。可通过[DescribeTargetGroupList](https://cloud.tencent.com/document/api/1782/111692)接口获取。
+ * @method void setTargetGroupId(string $TargetGroupId) 设置目标组ID。可通过[DescribeTargetGroupList](https://cloud.tencent.com/document/api/1782/111692)接口获取。
  * @method array getTargetGroupInstances() 获取待解绑的服务器信息。
  * @method void setTargetGroupInstances(array $TargetGroupInstances) 设置待解绑的服务器信息。
  */
 class DeregisterTargetGroupInstancesRequest extends AbstractModel
 {
     /**
-     * @var string 目标组ID。
+     * @var string 目标组ID。可通过[DescribeTargetGroupList](https://cloud.tencent.com/document/api/1782/111692)接口获取。
      */
     public $TargetGroupId;
 
@@ -38,7 +38,7 @@ class DeregisterTargetGroupInstancesRequest extends AbstractModel
     public $TargetGroupInstances;
 
     /**
-     * @param string $TargetGroupId 目标组ID。
+     * @param string $TargetGroupId 目标组ID。可通过[DescribeTargetGroupList](https://cloud.tencent.com/document/api/1782/111692)接口获取。
      * @param array $TargetGroupInstances 待解绑的服务器信息。
      */
     function __construct()

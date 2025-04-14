@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyTargetGroupAttribute请求参数结构体
  *
- * @method string getTargetGroupId() 获取目标组的ID。
- * @method void setTargetGroupId(string $TargetGroupId) 设置目标组的ID。
+ * @method string getTargetGroupId() 获取目标组的ID，可以通过[DescribeTargetGroups](https://cloud.tencent.com/document/product/214/40554)获取。
+ * @method void setTargetGroupId(string $TargetGroupId) 设置目标组的ID，可以通过[DescribeTargetGroups](https://cloud.tencent.com/document/product/214/40554)获取。
  * @method string getTargetGroupName() 获取目标组的新名称。
  * @method void setTargetGroupName(string $TargetGroupName) 设置目标组的新名称。
  * @method TargetGroupHealthCheck getHealthCheck() 获取健康检查详情。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyTargetGroupAttributeRequest extends AbstractModel
 {
     /**
-     * @var string 目标组的ID。
+     * @var string 目标组的ID，可以通过[DescribeTargetGroups](https://cloud.tencent.com/document/product/214/40554)获取。
      */
     public $TargetGroupId;
 
@@ -52,7 +52,7 @@ class ModifyTargetGroupAttributeRequest extends AbstractModel
     public $AllDeadToAlive;
 
     /**
-     * @param string $TargetGroupId 目标组的ID。
+     * @param string $TargetGroupId 目标组的ID，可以通过[DescribeTargetGroups](https://cloud.tencent.com/document/product/214/40554)获取。
      * @param string $TargetGroupName 目标组的新名称。
      * @param TargetGroupHealthCheck $HealthCheck 健康检查详情。
      * @param boolean $AllDeadToAlive 是否支持全死全活。

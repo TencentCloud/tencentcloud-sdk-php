@@ -28,36 +28,12 @@ use TencentCloud\Common\AbstractModel;
 该参数目前仅用于`DescribeInstances`等查询类接口的返回参数，不可用于`RunInstances`等写接口的入参。
  * @method void setDiskId(string $DiskId) 设置数据盘ID。
 该参数目前仅用于`DescribeInstances`等查询类接口的返回参数，不可用于`RunInstances`等写接口的入参。
- * @method boolean getDeleteWithInstance() 获取数据盘是否随子机销毁。取值范围：
-<li>true：子机销毁时，销毁数据盘，只支持按小时后付费云盘</li>
-<li>
-  false：子机销毁时，保留数据盘<br />
-  默认取值：true<br />
-  该参数目前仅用于 `RunInstances` 接口。
-</li>
- * @method void setDeleteWithInstance(boolean $DeleteWithInstance) 设置数据盘是否随子机销毁。取值范围：
-<li>true：子机销毁时，销毁数据盘，只支持按小时后付费云盘</li>
-<li>
-  false：子机销毁时，保留数据盘<br />
-  默认取值：true<br />
-  该参数目前仅用于 `RunInstances` 接口。
-</li>
+ * @method boolean getDeleteWithInstance() 获取数据盘是否随子机销毁。取值范围：<li>true：子机销毁时，销毁数据盘，只支持按小时后付费云盘</li><li>false：子机销毁时，保留数据盘</li><br/>默认取值：true <br/>该参数目前仅用于 `RunInstances` 接口。
+ * @method void setDeleteWithInstance(boolean $DeleteWithInstance) 设置数据盘是否随子机销毁。取值范围：<li>true：子机销毁时，销毁数据盘，只支持按小时后付费云盘</li><li>false：子机销毁时，保留数据盘</li><br/>默认取值：true <br/>该参数目前仅用于 `RunInstances` 接口。
  * @method string getSnapshotId() 获取数据盘快照ID。选择的数据盘快照大小需小于数据盘大小。
  * @method void setSnapshotId(string $SnapshotId) 设置数据盘快照ID。选择的数据盘快照大小需小于数据盘大小。
- * @method boolean getEncrypt() 获取数据盘是加密。取值范围：
-<li>true：加密</li>
-<li>
-  false：不加密<br />
-  默认取值：false<br />
-  该参数目前仅用于 `RunInstances` 接口。
-</li>
- * @method void setEncrypt(boolean $Encrypt) 设置数据盘是加密。取值范围：
-<li>true：加密</li>
-<li>
-  false：不加密<br />
-  默认取值：false<br />
-  该参数目前仅用于 `RunInstances` 接口。
-</li>
+ * @method boolean getEncrypt() 获取数据盘是否加密。取值范围：<li>true：加密</li><li>false：不加密</li><br/>默认取值：false<br/>该参数目前仅用于 `RunInstances` 接口。
+ * @method void setEncrypt(boolean $Encrypt) 设置数据盘是否加密。取值范围：<li>true：加密</li><li>false：不加密</li><br/>默认取值：false<br/>该参数目前仅用于 `RunInstances` 接口。
  * @method string getKmsKeyId() 获取自定义CMK对应的ID，取值为UUID或者类似kms-abcd1234。用于加密云盘。
 
 该参数目前仅用于 `RunInstances` 接口。
@@ -100,13 +76,7 @@ class DataDisk extends AbstractModel
     public $DiskId;
 
     /**
-     * @var boolean 数据盘是否随子机销毁。取值范围：
-<li>true：子机销毁时，销毁数据盘，只支持按小时后付费云盘</li>
-<li>
-  false：子机销毁时，保留数据盘<br />
-  默认取值：true<br />
-  该参数目前仅用于 `RunInstances` 接口。
-</li>
+     * @var boolean 数据盘是否随子机销毁。取值范围：<li>true：子机销毁时，销毁数据盘，只支持按小时后付费云盘</li><li>false：子机销毁时，保留数据盘</li><br/>默认取值：true <br/>该参数目前仅用于 `RunInstances` 接口。
      */
     public $DeleteWithInstance;
 
@@ -116,13 +86,7 @@ class DataDisk extends AbstractModel
     public $SnapshotId;
 
     /**
-     * @var boolean 数据盘是加密。取值范围：
-<li>true：加密</li>
-<li>
-  false：不加密<br />
-  默认取值：false<br />
-  该参数目前仅用于 `RunInstances` 接口。
-</li>
+     * @var boolean 数据盘是否加密。取值范围：<li>true：加密</li><li>false：不加密</li><br/>默认取值：false<br/>该参数目前仅用于 `RunInstances` 接口。
      */
     public $Encrypt;
 
@@ -162,21 +126,9 @@ class DataDisk extends AbstractModel
      * @param string $DiskType 数据盘类型。数据盘类型限制详见[存储概述](https://cloud.tencent.com/document/product/213/4952)。取值范围：<br /><li>LOCAL_BASIC：本地硬盘<br /> <li>LOCAL_SSD：本地SSD硬盘<br /><li>LOCAL_NVME：本地NVME硬盘，与InstanceType强相关，不支持指定<br /><li>LOCAL_PRO：本地HDD硬盘，与InstanceType强相关，不支持指定<br /><li>CLOUD_BASIC：普通云硬盘<br /><li> CLOUD_PREMIUM：高性能云硬盘<br /><li>CLOUD_SSD：SSD云硬盘<br /><li> CLOUD_HSSD：增强型SSD云硬盘<br /> <li>CLOUD_TSSD：极速型SSD云硬盘<br /><li>CLOUD_BSSD：通用型SSD云硬盘<br /><br />默认取值：LOCAL_BASIC。<br /><br />该参数对`ResizeInstanceDisk`接口无效。</li></li></li> </li> </li></li></li></li></li></li>
      * @param string $DiskId 数据盘ID。
 该参数目前仅用于`DescribeInstances`等查询类接口的返回参数，不可用于`RunInstances`等写接口的入参。
-     * @param boolean $DeleteWithInstance 数据盘是否随子机销毁。取值范围：
-<li>true：子机销毁时，销毁数据盘，只支持按小时后付费云盘</li>
-<li>
-  false：子机销毁时，保留数据盘<br />
-  默认取值：true<br />
-  该参数目前仅用于 `RunInstances` 接口。
-</li>
+     * @param boolean $DeleteWithInstance 数据盘是否随子机销毁。取值范围：<li>true：子机销毁时，销毁数据盘，只支持按小时后付费云盘</li><li>false：子机销毁时，保留数据盘</li><br/>默认取值：true <br/>该参数目前仅用于 `RunInstances` 接口。
      * @param string $SnapshotId 数据盘快照ID。选择的数据盘快照大小需小于数据盘大小。
-     * @param boolean $Encrypt 数据盘是加密。取值范围：
-<li>true：加密</li>
-<li>
-  false：不加密<br />
-  默认取值：false<br />
-  该参数目前仅用于 `RunInstances` 接口。
-</li>
+     * @param boolean $Encrypt 数据盘是否加密。取值范围：<li>true：加密</li><li>false：不加密</li><br/>默认取值：false<br/>该参数目前仅用于 `RunInstances` 接口。
      * @param string $KmsKeyId 自定义CMK对应的ID，取值为UUID或者类似kms-abcd1234。用于加密云盘。
 
 该参数目前仅用于 `RunInstances` 接口。

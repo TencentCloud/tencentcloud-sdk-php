@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ImportInstancesActionTimer请求参数结构体
  *
- * @method array getInstanceIds() 获取实例id列表，可以通过DescribeInstances接口查询到。
- * @method void setInstanceIds(array $InstanceIds) 设置实例id列表，可以通过DescribeInstances接口查询到。
+ * @method array getInstanceIds() 获取实例id列表，可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
+ * @method void setInstanceIds(array $InstanceIds) 设置实例id列表，可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
  * @method ActionTimer getActionTimer() 获取定时器任务信息，目前仅支持定时销毁。
  * @method void setActionTimer(ActionTimer $ActionTimer) 设置定时器任务信息，目前仅支持定时销毁。
  */
 class ImportInstancesActionTimerRequest extends AbstractModel
 {
     /**
-     * @var array 实例id列表，可以通过DescribeInstances接口查询到。
+     * @var array 实例id列表，可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
      */
     public $InstanceIds;
 
@@ -38,7 +38,7 @@ class ImportInstancesActionTimerRequest extends AbstractModel
     public $ActionTimer;
 
     /**
-     * @param array $InstanceIds 实例id列表，可以通过DescribeInstances接口查询到。
+     * @param array $InstanceIds 实例id列表，可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
      * @param ActionTimer $ActionTimer 定时器任务信息，目前仅支持定时销毁。
      */
     function __construct()

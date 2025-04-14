@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCBSSource(CBSConfig $CBSSource) 设置CBS配置信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method HostPath getHostPathSource() 获取主机路径信息
+ * @method void setHostPathSource(HostPath $HostPathSource) 设置主机路径信息
  */
 class DataConfig extends AbstractModel
 {
@@ -134,6 +136,11 @@ class DataConfig extends AbstractModel
     public $CBSSource;
 
     /**
+     * @var HostPath 主机路径信息
+     */
+    public $HostPathSource;
+
+    /**
      * @param string $MappingPath 映射路径
      * @param string $DataSourceUsage 存储用途
 可选值为 BUILTIN_CODE, BUILTIN_DATA, BUILTIN_MODEL, USER_DATA, USER_CODE, USER_MODEL, OUTPUT, OTHER
@@ -156,6 +163,7 @@ class DataConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CBSConfig $CBSSource CBS配置信息
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param HostPath $HostPathSource 主机路径信息
      */
     function __construct()
     {
@@ -220,6 +228,11 @@ class DataConfig extends AbstractModel
         if (array_key_exists("CBSSource",$param) and $param["CBSSource"] !== null) {
             $this->CBSSource = new CBSConfig();
             $this->CBSSource->deserialize($param["CBSSource"]);
+        }
+
+        if (array_key_exists("HostPathSource",$param) and $param["HostPathSource"] !== null) {
+            $this->HostPathSource = new HostPath();
+            $this->HostPathSource->deserialize($param["HostPathSource"]);
         }
     }
 }

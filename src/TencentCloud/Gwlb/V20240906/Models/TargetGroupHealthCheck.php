@@ -38,10 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeout(integer $Timeout) 设置健康检查超时时间。 默认为2秒。 可配置范围：2 - 30秒。
  * @method integer getIntervalTime() 获取检测间隔时间。 默认为5秒。 可配置范围：2 - 300秒。
  * @method void setIntervalTime(integer $IntervalTime) 设置检测间隔时间。 默认为5秒。 可配置范围：2 - 300秒。
- * @method integer getHealthNum() 获取检测健康阈值。 默认为3秒。 可配置范围：2 - 10次。
- * @method void setHealthNum(integer $HealthNum) 设置检测健康阈值。 默认为3秒。 可配置范围：2 - 10次。
- * @method integer getUnHealthNum() 获取检测不健康阈值。 默认为3秒。 可配置范围：2 - 10次。
- * @method void setUnHealthNum(integer $UnHealthNum) 设置检测不健康阈值。 默认为3秒。 可配置范围：2 - 10次。
+ * @method integer getHealthNum() 获取检测健康阈值。 默认为3次。 可配置范围：2 - 10次。
+ * @method void setHealthNum(integer $HealthNum) 设置检测健康阈值。 默认为3次。 可配置范围：2 - 10次。
+ * @method integer getUnHealthNum() 获取检测不健康阈值。 默认为3次。 可配置范围：2 - 10次。
+ * @method void setUnHealthNum(integer $UnHealthNum) 设置检测不健康阈值。 默认为3次。 可配置范围：2 - 10次。
  */
 class TargetGroupHealthCheck extends AbstractModel
 {
@@ -75,12 +75,12 @@ class TargetGroupHealthCheck extends AbstractModel
     public $IntervalTime;
 
     /**
-     * @var integer 检测健康阈值。 默认为3秒。 可配置范围：2 - 10次。
+     * @var integer 检测健康阈值。 默认为3次。 可配置范围：2 - 10次。
      */
     public $HealthNum;
 
     /**
-     * @var integer 检测不健康阈值。 默认为3秒。 可配置范围：2 - 10次。
+     * @var integer 检测不健康阈值。 默认为3次。 可配置范围：2 - 10次。
      */
     public $UnHealthNum;
 
@@ -94,8 +94,8 @@ class TargetGroupHealthCheck extends AbstractModel
 
      * @param integer $Timeout 健康检查超时时间。 默认为2秒。 可配置范围：2 - 30秒。
      * @param integer $IntervalTime 检测间隔时间。 默认为5秒。 可配置范围：2 - 300秒。
-     * @param integer $HealthNum 检测健康阈值。 默认为3秒。 可配置范围：2 - 10次。
-     * @param integer $UnHealthNum 检测不健康阈值。 默认为3秒。 可配置范围：2 - 10次。
+     * @param integer $HealthNum 检测健康阈值。 默认为3次。 可配置范围：2 - 10次。
+     * @param integer $UnHealthNum 检测不健康阈值。 默认为3次。 可配置范围：2 - 10次。
      */
     function __construct()
     {

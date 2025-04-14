@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsDefaultVersion(boolean $IsDefaultVersion) 设置是否为默认启动模板版本。
  * @method string getLaunchTemplateVersionDescription() 获取实例启动模板版本描述信息。
  * @method void setLaunchTemplateVersionDescription(string $LaunchTemplateVersionDescription) 设置实例启动模板版本描述信息。
- * @method string getCreatedBy() 获取创建者。
- * @method void setCreatedBy(string $CreatedBy) 设置创建者。
+ * @method string getCreatedBy() 获取创建者的AppId。
+ * @method void setCreatedBy(string $CreatedBy) 设置创建者的AppId。
  */
 class LaunchTemplateVersionInfo extends AbstractModel
 {
@@ -68,7 +68,7 @@ class LaunchTemplateVersionInfo extends AbstractModel
     public $LaunchTemplateVersionDescription;
 
     /**
-     * @var string 创建者。
+     * @var string 创建者的AppId。
      */
     public $CreatedBy;
 
@@ -79,7 +79,7 @@ class LaunchTemplateVersionInfo extends AbstractModel
      * @param string $LaunchTemplateId 实例启动模板ID。
      * @param boolean $IsDefaultVersion 是否为默认启动模板版本。
      * @param string $LaunchTemplateVersionDescription 实例启动模板版本描述信息。
-     * @param string $CreatedBy 创建者。
+     * @param string $CreatedBy 创建者的AppId。
      */
     function __construct()
     {

@@ -22,8 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTaskId() 获取导出镜像任务ID
  * @method void setTaskId(integer $TaskId) 设置导出镜像任务ID
- * @method array getCosPaths() 获取导出镜像的COS文件名列表
- * @method void setCosPaths(array $CosPaths) 设置导出镜像的COS文件名列表
+ * @method array getCosPaths() 获取导出镜像的COS文件名列表。其中，文件名格式如下。
+* 系统盘：前缀名_镜像ID_system_快照ID.镜像格式
+* 数据盘：前缀名_镜像ID_data_快照ID.镜像格式
+ * @method void setCosPaths(array $CosPaths) 设置导出镜像的COS文件名列表。其中，文件名格式如下。
+* 系统盘：前缀名_镜像ID_system_快照ID.镜像格式
+* 数据盘：前缀名_镜像ID_data_快照ID.镜像格式
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,7 +39,9 @@ class ExportImagesResponse extends AbstractModel
     public $TaskId;
 
     /**
-     * @var array 导出镜像的COS文件名列表
+     * @var array 导出镜像的COS文件名列表。其中，文件名格式如下。
+* 系统盘：前缀名_镜像ID_system_快照ID.镜像格式
+* 数据盘：前缀名_镜像ID_data_快照ID.镜像格式
      */
     public $CosPaths;
 
@@ -46,7 +52,9 @@ class ExportImagesResponse extends AbstractModel
 
     /**
      * @param integer $TaskId 导出镜像任务ID
-     * @param array $CosPaths 导出镜像的COS文件名列表
+     * @param array $CosPaths 导出镜像的COS文件名列表。其中，文件名格式如下。
+* 系统盘：前缀名_镜像ID_system_快照ID.镜像格式
+* 数据盘：前缀名_镜像ID_data_快照ID.镜像格式
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

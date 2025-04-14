@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyGatewayLoadBalancerAttribute请求参数结构体
  *
- * @method string getLoadBalancerId() 获取网关负载均衡的唯一ID。
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置网关负载均衡的唯一ID。
+ * @method string getLoadBalancerId() 获取网关负载均衡的唯一ID。可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/api/1782/111683) 接口获取。
+ * @method void setLoadBalancerId(string $LoadBalancerId) 设置网关负载均衡的唯一ID。可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/api/1782/111683) 接口获取。
  * @method string getLoadBalancerName() 获取网关负载均衡实例名称。可支持输入1-60个字符。
  * @method void setLoadBalancerName(string $LoadBalancerName) 设置网关负载均衡实例名称。可支持输入1-60个字符。
  * @method boolean getDeleteProtect() 获取是否开启删除保护。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyGatewayLoadBalancerAttributeRequest extends AbstractModel
 {
     /**
-     * @var string 网关负载均衡的唯一ID。
+     * @var string 网关负载均衡的唯一ID。可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/api/1782/111683) 接口获取。
      */
     public $LoadBalancerId;
 
@@ -45,7 +45,7 @@ class ModifyGatewayLoadBalancerAttributeRequest extends AbstractModel
     public $DeleteProtect;
 
     /**
-     * @param string $LoadBalancerId 网关负载均衡的唯一ID。
+     * @param string $LoadBalancerId 网关负载均衡的唯一ID。可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/api/1782/111683) 接口获取。
      * @param string $LoadBalancerName 网关负载均衡实例名称。可支持输入1-60个字符。
      * @param boolean $DeleteProtect 是否开启删除保护。
      */

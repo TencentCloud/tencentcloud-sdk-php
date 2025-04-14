@@ -66,6 +66,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\DescribeConnectResourceResponse DescribeConnectResource(Models\DescribeConnectResourceRequest $req) 查询Datahub连接源
  * @method Models\DescribeConnectResourcesResponse DescribeConnectResources(Models\DescribeConnectResourcesRequest $req) 查询Datahub连接源列表
  * @method Models\DescribeConsumerGroupResponse DescribeConsumerGroup(Models\DescribeConsumerGroupRequest $req) 查询消费分组信息
+ * @method Models\DescribeCvmInfoResponse DescribeCvmInfo(Models\DescribeCvmInfoRequest $req) 本接口用于获取实例对应后端CVM信息，包括cvmId和ip等。用于专业版，标准版返回数据为空
  * @method Models\DescribeDatahubGroupOffsetsResponse DescribeDatahubGroupOffsets(Models\DescribeDatahubGroupOffsetsRequest $req) 获取Datahub消费分组offset
  * @method Models\DescribeDatahubTaskResponse DescribeDatahubTask(Models\DescribeDatahubTaskRequest $req) 查询Datahub任务信息
  * @method Models\DescribeDatahubTasksResponse DescribeDatahubTasks(Models\DescribeDatahubTasksRequest $req) 查询Datahub任务列表
@@ -89,6 +90,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\DescribeTopicProduceConnectionResponse DescribeTopicProduceConnection(Models\DescribeTopicProduceConnectionRequest $req) 查询topic 生产端连接信息
  * @method Models\DescribeTopicSubscribeGroupResponse DescribeTopicSubscribeGroup(Models\DescribeTopicSubscribeGroupRequest $req) 查询订阅某主题消息分组信息
  * @method Models\DescribeTopicSyncReplicaResponse DescribeTopicSyncReplica(Models\DescribeTopicSyncReplicaRequest $req) 获取Topic 副本详情信息
+ * @method Models\DescribeTypeInstancesResponse DescribeTypeInstances(Models\DescribeTypeInstancesRequest $req) 本接口（DescribeTypeInstances）用于在用户账户下获取指定类型消息队列 CKafka 实例列表
  * @method Models\DescribeUserResponse DescribeUser(Models\DescribeUserRequest $req) 查询用户信息
  * @method Models\FetchDatahubMessageByOffsetResponse FetchDatahubMessageByOffset(Models\FetchDatahubMessageByOffsetRequest $req) 根据指定offset位置的消息
  * @method Models\FetchLatestDatahubMessageListResponse FetchLatestDatahubMessageList(Models\FetchLatestDatahubMessageListRequest $req) 查询最新消息列表

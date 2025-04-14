@@ -30,13 +30,18 @@ use TencentCloud\Gs\V20191118\Models as Models;
 2. 源实例和目的实例必须在同一区域
 3. 复制时，源实例和目的实例都会停机，复制完后实例会自动启动
 4. 复制时会产生大量内网流量，请限制并发
+ * @method Models\CreateAndroidAppResponse CreateAndroidApp(Models\CreateAndroidAppRequest $req) 创建安卓应用
+ * @method Models\CreateAndroidAppVersionResponse CreateAndroidAppVersion(Models\CreateAndroidAppVersionRequest $req) 创建安卓应用版本
  * @method Models\CreateAndroidInstanceImageResponse CreateAndroidInstanceImage(Models\CreateAndroidInstanceImageRequest $req) 创建安卓实例镜像
  * @method Models\CreateAndroidInstanceLabelResponse CreateAndroidInstanceLabel(Models\CreateAndroidInstanceLabelRequest $req) 创建安卓实例
  * @method Models\CreateAndroidInstanceSSHResponse CreateAndroidInstanceSSH(Models\CreateAndroidInstanceSSHRequest $req) 创建安卓实例 SSH 连接
  * @method Models\CreateAndroidInstanceWebShellResponse CreateAndroidInstanceWebShell(Models\CreateAndroidInstanceWebShellRequest $req) 创建安卓实例 WebShell 连接
  * @method Models\CreateAndroidInstancesResponse CreateAndroidInstances(Models\CreateAndroidInstancesRequest $req) 创建安卓实例
  * @method Models\CreateAndroidInstancesScreenshotResponse CreateAndroidInstancesScreenshot(Models\CreateAndroidInstancesScreenshotRequest $req) 安卓实例截图
+ * @method Models\CreateCosCredentialResponse CreateCosCredential(Models\CreateCosCredentialRequest $req) 用于创建 Cos 临时密钥
  * @method Models\CreateSessionResponse CreateSession(Models\CreateSessionRequest $req) 创建会话
+ * @method Models\DeleteAndroidAppResponse DeleteAndroidApp(Models\DeleteAndroidAppRequest $req) 删除安卓应用
+ * @method Models\DeleteAndroidAppVersionResponse DeleteAndroidAppVersion(Models\DeleteAndroidAppVersionRequest $req) 删除安卓应用版本
  * @method Models\DeleteAndroidInstanceImagesResponse DeleteAndroidInstanceImages(Models\DeleteAndroidInstanceImagesRequest $req) 删除安卓实例镜像
  * @method Models\DeleteAndroidInstanceLabelResponse DeleteAndroidInstanceLabel(Models\DeleteAndroidInstanceLabelRequest $req) 创建安卓实例
  * @method Models\DescribeAndroidAppsResponse DescribeAndroidApps(Models\DescribeAndroidAppsRequest $req) 查询安卓应用信息
@@ -49,6 +54,7 @@ use TencentCloud\Gs\V20191118\Models as Models;
  * @method Models\DestroyAndroidInstancesResponse DestroyAndroidInstances(Models\DestroyAndroidInstancesRequest $req) 销毁安卓实例
  * @method Models\ExecuteCommandOnAndroidInstancesResponse ExecuteCommandOnAndroidInstances(Models\ExecuteCommandOnAndroidInstancesRequest $req) 在安卓实例上异步执行命令，命令输出结果如果内容过长会被截断
  * @method Models\InstallAndroidInstancesAppResponse InstallAndroidInstancesApp(Models\InstallAndroidInstancesAppRequest $req) 安装安卓实例应用
+ * @method Models\ModifyAndroidAppResponse ModifyAndroidApp(Models\ModifyAndroidAppRequest $req) 修改安卓应用信息
  * @method Models\ModifyAndroidInstanceInformationResponse ModifyAndroidInstanceInformation(Models\ModifyAndroidInstanceInformationRequest $req) 修改安卓实例的信息
  * @method Models\ModifyAndroidInstanceResolutionResponse ModifyAndroidInstanceResolution(Models\ModifyAndroidInstanceResolutionRequest $req) 修改安卓实例分辨率。需要注意的是该接口可能导致正在运行的应用出现闪退，所以建议在实例维护时期才进行调用。
  * @method Models\ModifyAndroidInstancesLabelsResponse ModifyAndroidInstancesLabels(Models\ModifyAndroidInstancesLabelsRequest $req) 修改安卓实例分辨率。需要注意的是该接口可能导致正在运行的应用出现闪退，所以建议在实例维护时期才进行调用。

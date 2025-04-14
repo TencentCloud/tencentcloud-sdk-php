@@ -278,6 +278,22 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIfSupportCreateAndDDL(CreateAndDDLSupport $IfSupportCreateAndDDL) 设置是否支持select or ddl
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDataFromType() 获取资产来源 历史默认值都是CRAWLER
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDataFromType(string $DataFromType) 设置资产来源 历史默认值都是CRAWLER
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEngineOwner() 获取引擎侧责任人
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEngineOwner(string $EngineOwner) 设置引擎侧责任人
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDataLayerUuid() 获取数据分层UUID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDataLayerUuid(string $DataLayerUuid) 设置数据分层UUID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDataLayerName() 获取数据分层名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDataLayerName(string $DataLayerName) 设置数据分层名称
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getColumnCount() 获取字段数量
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setColumnCount(integer $ColumnCount) 设置字段数量
@@ -671,6 +687,30 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
     public $IfSupportCreateAndDDL;
 
     /**
+     * @var string 资产来源 历史默认值都是CRAWLER
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DataFromType;
+
+    /**
+     * @var string 引擎侧责任人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EngineOwner;
+
+    /**
+     * @var string 数据分层UUID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DataLayerUuid;
+
+    /**
+     * @var string 数据分层名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DataLayerName;
+
+    /**
      * @var integer 字段数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -805,6 +845,14 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
      * @param string $ErrorTips 用户无映射账户，请先完成账户映射后再来申请。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CreateAndDDLSupport $IfSupportCreateAndDDL 是否支持select or ddl
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DataFromType 资产来源 历史默认值都是CRAWLER
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EngineOwner 引擎侧责任人
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DataLayerUuid 数据分层UUID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DataLayerName 数据分层名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ColumnCount 字段数量
 注意：此字段可能返回 null，表示取不到有效值。
@@ -1094,6 +1142,22 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
         if (array_key_exists("IfSupportCreateAndDDL",$param) and $param["IfSupportCreateAndDDL"] !== null) {
             $this->IfSupportCreateAndDDL = new CreateAndDDLSupport();
             $this->IfSupportCreateAndDDL->deserialize($param["IfSupportCreateAndDDL"]);
+        }
+
+        if (array_key_exists("DataFromType",$param) and $param["DataFromType"] !== null) {
+            $this->DataFromType = $param["DataFromType"];
+        }
+
+        if (array_key_exists("EngineOwner",$param) and $param["EngineOwner"] !== null) {
+            $this->EngineOwner = $param["EngineOwner"];
+        }
+
+        if (array_key_exists("DataLayerUuid",$param) and $param["DataLayerUuid"] !== null) {
+            $this->DataLayerUuid = $param["DataLayerUuid"];
+        }
+
+        if (array_key_exists("DataLayerName",$param) and $param["DataLayerName"] !== null) {
+            $this->DataLayerName = $param["DataLayerName"];
         }
 
         if (array_key_exists("ColumnCount",$param) and $param["ColumnCount"] !== null) {

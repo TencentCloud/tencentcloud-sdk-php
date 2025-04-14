@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
 UserData: 实例自定义数据
  * @method void setAttributes(array $Attributes) 设置需要获取的实例属性。可选值：
 UserData: 实例自定义数据
- * @method array getInstanceIds() 获取实例ID列表
- * @method void setInstanceIds(array $InstanceIds) 设置实例ID列表
+ * @method array getInstanceIds() 获取实例ID列表。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
+ * @method void setInstanceIds(array $InstanceIds) 设置实例ID列表。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
  */
 class DescribeInstancesAttributesRequest extends AbstractModel
 {
@@ -36,14 +36,14 @@ UserData: 实例自定义数据
     public $Attributes;
 
     /**
-     * @var array 实例ID列表
+     * @var array 实例ID列表。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
      */
     public $InstanceIds;
 
     /**
      * @param array $Attributes 需要获取的实例属性。可选值：
 UserData: 实例自定义数据
-     * @param array $InstanceIds 实例ID列表
+     * @param array $InstanceIds 实例ID列表。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
      */
     function __construct()
     {

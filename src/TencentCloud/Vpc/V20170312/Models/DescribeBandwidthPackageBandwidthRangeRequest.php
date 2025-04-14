@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBandwidthPackageBandwidthRange请求参数结构体
  *
- * @method array getBandwidthPackageIds() 获取带宽包资源ID列表，单次查询上限20。
- * @method void setBandwidthPackageIds(array $BandwidthPackageIds) 设置带宽包资源ID列表，单次查询上限20。
+ * @method array getBandwidthPackageIds() 获取带宽包资源ID列表，单次查询上限20。可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。
+ * @method void setBandwidthPackageIds(array $BandwidthPackageIds) 设置带宽包资源ID列表，单次查询上限20。可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。
  */
 class DescribeBandwidthPackageBandwidthRangeRequest extends AbstractModel
 {
     /**
-     * @var array 带宽包资源ID列表，单次查询上限20。
+     * @var array 带宽包资源ID列表，单次查询上限20。可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。
      */
     public $BandwidthPackageIds;
 
     /**
-     * @param array $BandwidthPackageIds 带宽包资源ID列表，单次查询上限20。
+     * @param array $BandwidthPackageIds 带宽包资源ID列表，单次查询上限20。可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。
      */
     function __construct()
     {

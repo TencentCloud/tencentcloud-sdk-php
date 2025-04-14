@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTargetGroupName() 获取目标组名称，限定60个字符。
  * @method void setTargetGroupName(string $TargetGroupName) 设置目标组名称，限定60个字符。
- * @method string getVpcId() 获取目标组的vpcid属性，不填则使用默认vpc
- * @method void setVpcId(string $VpcId) 设置目标组的vpcid属性，不填则使用默认vpc
+ * @method string getVpcId() 获取网关负载均衡后端目标组所属的网络 ID，如vpc-12345678，可以通过 [DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)  接口获取。 不填此参数则默认为DefaultVPC。
+ * @method void setVpcId(string $VpcId) 设置网关负载均衡后端目标组所属的网络 ID，如vpc-12345678，可以通过 [DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)  接口获取。 不填此参数则默认为DefaultVPC。
  * @method integer getPort() 获取目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。仅支持6081。
  * @method void setPort(integer $Port) 设置目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。仅支持6081。
  * @method array getTargetGroupInstances() 获取目标组绑定的后端服务器
@@ -53,7 +53,7 @@ class CreateTargetGroupRequest extends AbstractModel
     public $TargetGroupName;
 
     /**
-     * @var string 目标组的vpcid属性，不填则使用默认vpc
+     * @var string 网关负载均衡后端目标组所属的网络 ID，如vpc-12345678，可以通过 [DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)  接口获取。 不填此参数则默认为DefaultVPC。
      */
     public $VpcId;
 
@@ -97,7 +97,7 @@ class CreateTargetGroupRequest extends AbstractModel
 
     /**
      * @param string $TargetGroupName 目标组名称，限定60个字符。
-     * @param string $VpcId 目标组的vpcid属性，不填则使用默认vpc
+     * @param string $VpcId 网关负载均衡后端目标组所属的网络 ID，如vpc-12345678，可以通过 [DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)  接口获取。 不填此参数则默认为DefaultVPC。
      * @param integer $Port 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。仅支持6081。
      * @param array $TargetGroupInstances 目标组绑定的后端服务器
      * @param string $Protocol 网关负载均衡目标组协议。

@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RemoveBandwidthPackageResources请求参数结构体
  *
- * @method string getBandwidthPackageId() 获取带宽包唯一标识ID，形如'bwp-xxxx'
- * @method void setBandwidthPackageId(string $BandwidthPackageId) 设置带宽包唯一标识ID，形如'bwp-xxxx'
- * @method string getResourceType() 获取资源类型，包括‘Address’, ‘LoadBalance’
- * @method void setResourceType(string $ResourceType) 设置资源类型，包括‘Address’, ‘LoadBalance’
- * @method array getResourceIds() 获取资源ID，可支持资源形如'eip-xxxx', 'lb-xxxx'
- * @method void setResourceIds(array $ResourceIds) 设置资源ID，可支持资源形如'eip-xxxx', 'lb-xxxx'
+ * @method array getResourceIds() 获取资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'。EIP资源列表可通过[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取，LB资源列表可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/api/214/30685)接口获取。
+ * @method void setResourceIds(array $ResourceIds) 设置资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'。EIP资源列表可通过[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取，LB资源列表可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/api/214/30685)接口获取。
+ * @method string getBandwidthPackageId() 获取带宽包唯一标识ID，形如'bwp-xxxx'，可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。
+ * @method void setBandwidthPackageId(string $BandwidthPackageId) 设置带宽包唯一标识ID，形如'bwp-xxxx'，可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。
+ * @method string getResourceType() 获取资源类型，可选值：
+<li>Address：弹性公网IP</li>
+<li>LoadBalance：负载均衡</li>
+ * @method void setResourceType(string $ResourceType) 设置资源类型，可选值：
+<li>Address：弹性公网IP</li>
+<li>LoadBalance：负载均衡</li>
  */
 class RemoveBandwidthPackageResourcesRequest extends AbstractModel
 {
     /**
-     * @var string 带宽包唯一标识ID，形如'bwp-xxxx'
-     */
-    public $BandwidthPackageId;
-
-    /**
-     * @var string 资源类型，包括‘Address’, ‘LoadBalance’
-     */
-    public $ResourceType;
-
-    /**
-     * @var array 资源ID，可支持资源形如'eip-xxxx', 'lb-xxxx'
+     * @var array 资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'。EIP资源列表可通过[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取，LB资源列表可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/api/214/30685)接口获取。
      */
     public $ResourceIds;
 
     /**
-     * @param string $BandwidthPackageId 带宽包唯一标识ID，形如'bwp-xxxx'
-     * @param string $ResourceType 资源类型，包括‘Address’, ‘LoadBalance’
-     * @param array $ResourceIds 资源ID，可支持资源形如'eip-xxxx', 'lb-xxxx'
+     * @var string 带宽包唯一标识ID，形如'bwp-xxxx'，可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。
+     */
+    public $BandwidthPackageId;
+
+    /**
+     * @var string 资源类型，可选值：
+<li>Address：弹性公网IP</li>
+<li>LoadBalance：负载均衡</li>
+     */
+    public $ResourceType;
+
+    /**
+     * @param array $ResourceIds 资源唯一ID，当前支持EIP资源和LB资源，形如'eip-xxxx', 'lb-xxxx'。EIP资源列表可通过[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取，LB资源列表可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/api/214/30685)接口获取。
+     * @param string $BandwidthPackageId 带宽包唯一标识ID，形如'bwp-xxxx'，可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。
+     * @param string $ResourceType 资源类型，可选值：
+<li>Address：弹性公网IP</li>
+<li>LoadBalance：负载均衡</li>
      */
     function __construct()
     {
@@ -62,16 +70,16 @@ class RemoveBandwidthPackageResourcesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ResourceIds",$param) and $param["ResourceIds"] !== null) {
+            $this->ResourceIds = $param["ResourceIds"];
+        }
+
         if (array_key_exists("BandwidthPackageId",$param) and $param["BandwidthPackageId"] !== null) {
             $this->BandwidthPackageId = $param["BandwidthPackageId"];
         }
 
         if (array_key_exists("ResourceType",$param) and $param["ResourceType"] !== null) {
             $this->ResourceType = $param["ResourceType"];
-        }
-
-        if (array_key_exists("ResourceIds",$param) and $param["ResourceIds"] !== null) {
-            $this->ResourceIds = $param["ResourceIds"];
         }
     }
 }

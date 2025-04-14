@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 访问信息
  *
  * @method string getAddress() 获取地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddress(string $Address) 设置地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProtocol() 获取协议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProtocol(string $Protocol) 设置协议
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AccessInfo extends AbstractModel
 {
     /**
      * @var string 地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Address;
 
     /**
      * @var string 协议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Protocol;
 
     /**
      * @param string $Address 地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Protocol 协议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

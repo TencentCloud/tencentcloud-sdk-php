@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ExitRescueMode请求参数结构体
  *
- * @method string getInstanceId() 获取退出救援模式的实例id
- * @method void setInstanceId(string $InstanceId) 设置退出救援模式的实例id
+ * @method string getInstanceId() 获取退出救援模式的实例id。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
+ * @method void setInstanceId(string $InstanceId) 设置退出救援模式的实例id。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
  */
 class ExitRescueModeRequest extends AbstractModel
 {
     /**
-     * @var string 退出救援模式的实例id
+     * @var string 退出救援模式的实例id。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId 退出救援模式的实例id
+     * @param string $InstanceId 退出救援模式的实例id。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
      */
     function __construct()
     {

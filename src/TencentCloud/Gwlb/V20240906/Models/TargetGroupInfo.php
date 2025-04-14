@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegisteredInstancesCount(integer $RegisteredInstancesCount) 设置目标组内的实例数量。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTag() 获取目标组的标签。
+ * @method void setTag(array $Tag) 设置目标组的标签。
  */
 class TargetGroupInfo extends AbstractModel
 {
@@ -148,6 +150,11 @@ class TargetGroupInfo extends AbstractModel
     public $RegisteredInstancesCount;
 
     /**
+     * @var array 目标组的标签。
+     */
+    public $Tag;
+
+    /**
      * @param string $TargetGroupId 目标组ID
      * @param string $VpcId 目标组的vpcid
      * @param string $TargetGroupName 目标组的名字
@@ -172,6 +179,7 @@ class TargetGroupInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RegisteredInstancesCount 目标组内的实例数量。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tag 目标组的标签。
      */
     function __construct()
     {
@@ -242,6 +250,15 @@ class TargetGroupInfo extends AbstractModel
 
         if (array_key_exists("RegisteredInstancesCount",$param) and $param["RegisteredInstancesCount"] !== null) {
             $this->RegisteredInstancesCount = $param["RegisteredInstancesCount"];
+        }
+
+        if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
+            $this->Tag = [];
+            foreach ($param["Tag"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->Tag, $obj);
+            }
         }
     }
 }

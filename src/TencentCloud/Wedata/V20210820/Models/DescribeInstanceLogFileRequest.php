@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceLifeDetailDtoList(array $InstanceLifeDetailDtoList) 设置生命周期为基础数据进行日志匹配。Dynamic=true动态获取日志链路中使用
  * @method integer getCurrentLifeRound() 获取当前生命周期数
  * @method void setCurrentLifeRound(integer $CurrentLifeRound) 设置当前生命周期数
+ * @method integer getMaxLifeRound() 获取最大生命周期数
+ * @method void setMaxLifeRound(integer $MaxLifeRound) 设置最大生命周期数
  * @method integer getTries() 获取当前生命周期重试次数
  * @method void setTries(integer $Tries) 设置当前生命周期重试次数
  * @method boolean getDynamic() 获取动态获取日志信息标识
@@ -105,6 +107,11 @@ class DescribeInstanceLogFileRequest extends AbstractModel
     public $CurrentLifeRound;
 
     /**
+     * @var integer 最大生命周期数
+     */
+    public $MaxLifeRound;
+
+    /**
      * @var integer 当前生命周期重试次数
      */
     public $Tries;
@@ -126,6 +133,7 @@ class DescribeInstanceLogFileRequest extends AbstractModel
      * @param string $ExecutionFileType 文件类型,Log/Code
      * @param array $InstanceLifeDetailDtoList 生命周期为基础数据进行日志匹配。Dynamic=true动态获取日志链路中使用
      * @param integer $CurrentLifeRound 当前生命周期数
+     * @param integer $MaxLifeRound 最大生命周期数
      * @param integer $Tries 当前生命周期重试次数
      * @param boolean $Dynamic 动态获取日志信息标识
      */
@@ -189,6 +197,10 @@ class DescribeInstanceLogFileRequest extends AbstractModel
 
         if (array_key_exists("CurrentLifeRound",$param) and $param["CurrentLifeRound"] !== null) {
             $this->CurrentLifeRound = $param["CurrentLifeRound"];
+        }
+
+        if (array_key_exists("MaxLifeRound",$param) and $param["MaxLifeRound"] !== null) {
+            $this->MaxLifeRound = $param["MaxLifeRound"];
         }
 
         if (array_key_exists("Tries",$param) and $param["Tries"] !== null) {

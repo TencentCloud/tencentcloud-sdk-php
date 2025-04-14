@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getType() 获取HDD本地存储类型，值为：LOCAL_PRO.
  * @method void setType(string $Type) 设置HDD本地存储类型，值为：LOCAL_PRO.
- * @method integer getMinSize() 获取HDD本地存储的最小容量
- * @method void setMinSize(integer $MinSize) 设置HDD本地存储的最小容量
- * @method integer getMaxSize() 获取HDD本地存储的最大容量
- * @method void setMaxSize(integer $MaxSize) 设置HDD本地存储的最大容量
+ * @method integer getMinSize() 获取HDD本地存储的最小容量。单位：GiB。
+ * @method void setMinSize(integer $MinSize) 设置HDD本地存储的最小容量。单位：GiB。
+ * @method integer getMaxSize() 获取HDD本地存储的最大容量。单位：GiB。
+ * @method void setMaxSize(integer $MaxSize) 设置HDD本地存储的最大容量。单位：GiB。
  */
 class StorageBlock extends AbstractModel
 {
@@ -35,19 +35,19 @@ class StorageBlock extends AbstractModel
     public $Type;
 
     /**
-     * @var integer HDD本地存储的最小容量
+     * @var integer HDD本地存储的最小容量。单位：GiB。
      */
     public $MinSize;
 
     /**
-     * @var integer HDD本地存储的最大容量
+     * @var integer HDD本地存储的最大容量。单位：GiB。
      */
     public $MaxSize;
 
     /**
      * @param string $Type HDD本地存储类型，值为：LOCAL_PRO.
-     * @param integer $MinSize HDD本地存储的最小容量
-     * @param integer $MaxSize HDD本地存储的最大容量
+     * @param integer $MinSize HDD本地存储的最小容量。单位：GiB。
+     * @param integer $MaxSize HDD本地存储的最大容量。单位：GiB。
      */
     function __construct()
     {

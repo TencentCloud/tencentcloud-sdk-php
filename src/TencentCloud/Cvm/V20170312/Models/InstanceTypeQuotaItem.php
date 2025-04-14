@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) 设置可用区。
  * @method string getInstanceType() 获取实例机型。
  * @method void setInstanceType(string $InstanceType) 设置实例机型。
- * @method string getInstanceChargeType() 获取实例计费模式。取值范围： <br><li>PREPAID：表示预付费，即包年包月<br></li>POSTPAID_BY_HOUR：表示后付费，即按量计费<br><li>CDHPAID：表示[专用宿主机](https://cloud.tencent.com/document/product/416)付费，即只对`专用宿主机`计费，不对`专用宿主机`上的实例计费。<br></li>`SPOTPAID`：表示竞价实例付费。
- * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例计费模式。取值范围： <br><li>PREPAID：表示预付费，即包年包月<br></li>POSTPAID_BY_HOUR：表示后付费，即按量计费<br><li>CDHPAID：表示[专用宿主机](https://cloud.tencent.com/document/product/416)付费，即只对`专用宿主机`计费，不对`专用宿主机`上的实例计费。<br></li>`SPOTPAID`：表示竞价实例付费。
+ * @method string getInstanceChargeType() 获取实例计费模式。取值范围： <br><li>PREPAID：表示预付费，即包年包月<br></li><li>POSTPAID_BY_HOUR：表示后付费，即按量计费</li><li>CDHPAID：表示[专用宿主机](https://cloud.tencent.com/document/product/416)付费，即只对`专用宿主机`计费，不对`专用宿主机`上的实例计费。<br></li><li>SPOTPAID：表示竞价实例付费。</li>
+ * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例计费模式。取值范围： <br><li>PREPAID：表示预付费，即包年包月<br></li><li>POSTPAID_BY_HOUR：表示后付费，即按量计费</li><li>CDHPAID：表示[专用宿主机](https://cloud.tencent.com/document/product/416)付费，即只对`专用宿主机`计费，不对`专用宿主机`上的实例计费。<br></li><li>SPOTPAID：表示竞价实例付费。</li>
  * @method integer getNetworkCard() 获取网卡类型，例如：25代表25G网卡
  * @method void setNetworkCard(integer $NetworkCard) 设置网卡类型，例如：25代表25G网卡
  * @method Externals getExternals() 获取扩展属性。
@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTypeName(string $TypeName) 设置机型名称。
  * @method array getLocalDiskTypeList() 获取本地磁盘规格列表。当该参数返回为空值时，表示当前情况下无法创建本地盘。
  * @method void setLocalDiskTypeList(array $LocalDiskTypeList) 设置本地磁盘规格列表。当该参数返回为空值时，表示当前情况下无法创建本地盘。
- * @method string getStatus() 获取实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br></li>SOLD_OUT：表示实例已售罄。
- * @method void setStatus(string $Status) 设置实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br></li>SOLD_OUT：表示实例已售罄。
+ * @method string getStatus() 获取实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br></li><li>SOLD_OUT：表示实例已售罄。</li>
+ * @method void setStatus(string $Status) 设置实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br></li><li>SOLD_OUT：表示实例已售罄。</li>
  * @method ItemPrice getPrice() 获取实例的售卖价格。
  * @method void setPrice(ItemPrice $Price) 设置实例的售卖价格。
  * @method string getSoldOutReason() 获取售罄原因。
@@ -65,15 +65,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getFrequency() 获取实例的CPU主频信息
  * @method void setFrequency(string $Frequency) 设置实例的CPU主频信息
  * @method string getStatusCategory() 获取描述库存情况。取值范围：
-<li> EnoughStock：表示对应库存非常充足</li> 
-<li>NormalStock：表示对应库存供应有保障</li>
-<li> UnderStock：表示对应库存即将售罄</li> 
-<li>WithoutStock：表示对应库存已经售罄</li>
+<li> EnoughStock：表示对应库存非常充足</li> <li>NormalStock：表示对应库存供应有保障</li><li> UnderStock：表示对应库存即将售罄</li> <li>WithoutStock：表示对应库存已经售罄</li>
  * @method void setStatusCategory(string $StatusCategory) 设置描述库存情况。取值范围：
-<li> EnoughStock：表示对应库存非常充足</li> 
-<li>NormalStock：表示对应库存供应有保障</li>
-<li> UnderStock：表示对应库存即将售罄</li> 
-<li>WithoutStock：表示对应库存已经售罄</li>
+<li> EnoughStock：表示对应库存非常充足</li> <li>NormalStock：表示对应库存供应有保障</li><li> UnderStock：表示对应库存即将售罄</li> <li>WithoutStock：表示对应库存已经售罄</li>
  */
 class InstanceTypeQuotaItem extends AbstractModel
 {
@@ -88,7 +82,7 @@ class InstanceTypeQuotaItem extends AbstractModel
     public $InstanceType;
 
     /**
-     * @var string 实例计费模式。取值范围： <br><li>PREPAID：表示预付费，即包年包月<br></li>POSTPAID_BY_HOUR：表示后付费，即按量计费<br><li>CDHPAID：表示[专用宿主机](https://cloud.tencent.com/document/product/416)付费，即只对`专用宿主机`计费，不对`专用宿主机`上的实例计费。<br></li>`SPOTPAID`：表示竞价实例付费。
+     * @var string 实例计费模式。取值范围： <br><li>PREPAID：表示预付费，即包年包月<br></li><li>POSTPAID_BY_HOUR：表示后付费，即按量计费</li><li>CDHPAID：表示[专用宿主机](https://cloud.tencent.com/document/product/416)付费，即只对`专用宿主机`计费，不对`专用宿主机`上的实例计费。<br></li><li>SPOTPAID：表示竞价实例付费。</li>
      */
     public $InstanceChargeType;
 
@@ -128,7 +122,7 @@ class InstanceTypeQuotaItem extends AbstractModel
     public $LocalDiskTypeList;
 
     /**
-     * @var string 实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br></li>SOLD_OUT：表示实例已售罄。
+     * @var string 实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br></li><li>SOLD_OUT：表示实例已售罄。</li>
      */
     public $Status;
 
@@ -189,17 +183,14 @@ class InstanceTypeQuotaItem extends AbstractModel
 
     /**
      * @var string 描述库存情况。取值范围：
-<li> EnoughStock：表示对应库存非常充足</li> 
-<li>NormalStock：表示对应库存供应有保障</li>
-<li> UnderStock：表示对应库存即将售罄</li> 
-<li>WithoutStock：表示对应库存已经售罄</li>
+<li> EnoughStock：表示对应库存非常充足</li> <li>NormalStock：表示对应库存供应有保障</li><li> UnderStock：表示对应库存即将售罄</li> <li>WithoutStock：表示对应库存已经售罄</li>
      */
     public $StatusCategory;
 
     /**
      * @param string $Zone 可用区。
      * @param string $InstanceType 实例机型。
-     * @param string $InstanceChargeType 实例计费模式。取值范围： <br><li>PREPAID：表示预付费，即包年包月<br></li>POSTPAID_BY_HOUR：表示后付费，即按量计费<br><li>CDHPAID：表示[专用宿主机](https://cloud.tencent.com/document/product/416)付费，即只对`专用宿主机`计费，不对`专用宿主机`上的实例计费。<br></li>`SPOTPAID`：表示竞价实例付费。
+     * @param string $InstanceChargeType 实例计费模式。取值范围： <br><li>PREPAID：表示预付费，即包年包月<br></li><li>POSTPAID_BY_HOUR：表示后付费，即按量计费</li><li>CDHPAID：表示[专用宿主机](https://cloud.tencent.com/document/product/416)付费，即只对`专用宿主机`计费，不对`专用宿主机`上的实例计费。<br></li><li>SPOTPAID：表示竞价实例付费。</li>
      * @param integer $NetworkCard 网卡类型，例如：25代表25G网卡
      * @param Externals $Externals 扩展属性。
      * @param integer $Cpu 实例的CPU核数，单位：核。
@@ -207,7 +198,7 @@ class InstanceTypeQuotaItem extends AbstractModel
      * @param string $InstanceFamily 实例机型系列。
      * @param string $TypeName 机型名称。
      * @param array $LocalDiskTypeList 本地磁盘规格列表。当该参数返回为空值时，表示当前情况下无法创建本地盘。
-     * @param string $Status 实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br></li>SOLD_OUT：表示实例已售罄。
+     * @param string $Status 实例是否售卖。取值范围： <br><li>SELL：表示实例可购买<br></li><li>SOLD_OUT：表示实例已售罄。</li>
      * @param ItemPrice $Price 实例的售卖价格。
      * @param string $SoldOutReason 售罄原因。
      * @param float $InstanceBandwidth 内网带宽，单位Gbps。
@@ -220,10 +211,7 @@ class InstanceTypeQuotaItem extends AbstractModel
      * @param float $GpuCount 实例机型映射的物理GPU卡数，单位：卡。vGPU卡型小于1，直通卡型大于等于1。vGPU是通过分片虚拟化技术，将物理GPU卡重新划分，同一块GPU卡经虚拟化分割后可分配至不同的实例使用。直通卡型会将GPU设备直接挂载给实例使用。
      * @param string $Frequency 实例的CPU主频信息
      * @param string $StatusCategory 描述库存情况。取值范围：
-<li> EnoughStock：表示对应库存非常充足</li> 
-<li>NormalStock：表示对应库存供应有保障</li>
-<li> UnderStock：表示对应库存即将售罄</li> 
-<li>WithoutStock：表示对应库存已经售罄</li>
+<li> EnoughStock：表示对应库存非常充足</li> <li>NormalStock：表示对应库存供应有保障</li><li> UnderStock：表示对应库存即将售罄</li> <li>WithoutStock：表示对应库存已经售罄</li>
      */
     function __construct()
     {

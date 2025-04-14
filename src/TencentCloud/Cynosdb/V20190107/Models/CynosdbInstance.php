@@ -142,6 +142,10 @@ pause
  * @method void setDeviceType(string $DeviceType) 设置实例机器类型
  * @method string getInstanceStorageType() 获取实例存储类型
  * @method void setInstanceStorageType(string $InstanceStorageType) 设置实例存储类型
+ * @method string getCynosVersionTag() 获取未知字段
+ * @method void setCynosVersionTag(string $CynosVersionTag) 设置未知字段
+ * @method array getNodeList() 获取libradb 节点信息
+ * @method void setNodeList(array $NodeList) 设置libradb 节点信息
  */
 class CynosdbInstance extends AbstractModel
 {
@@ -431,6 +435,16 @@ pause
     public $InstanceStorageType;
 
     /**
+     * @var string 未知字段
+     */
+    public $CynosVersionTag;
+
+    /**
+     * @var array libradb 节点信息
+     */
+    public $NodeList;
+
+    /**
      * @param string $Uin 用户Uin
      * @param integer $AppId 用户AppId
      * @param string $ClusterId 集群ID
@@ -492,6 +506,8 @@ pause
      * @param InstanceAbility $InstanceAbility 当前实例支持的能力
      * @param string $DeviceType 实例机器类型
      * @param string $InstanceStorageType 实例存储类型
+     * @param string $CynosVersionTag 未知字段
+     * @param array $NodeList libradb 节点信息
      */
     function __construct()
     {
@@ -749,6 +765,14 @@ pause
 
         if (array_key_exists("InstanceStorageType",$param) and $param["InstanceStorageType"] !== null) {
             $this->InstanceStorageType = $param["InstanceStorageType"];
+        }
+
+        if (array_key_exists("CynosVersionTag",$param) and $param["CynosVersionTag"] !== null) {
+            $this->CynosVersionTag = $param["CynosVersionTag"];
+        }
+
+        if (array_key_exists("NodeList",$param) and $param["NodeList"] !== null) {
+            $this->NodeList = $param["NodeList"];
         }
     }
 }

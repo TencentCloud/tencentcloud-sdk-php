@@ -24,16 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetGroupIds(array $TargetGroupIds) 设置目标组ID数组。
  * @method array getFilters() 获取过滤条件数组。
 
-- TargetGroupVpcId - String - 是否必填：否 - （过滤条件）按照目标组所属的私有网络过滤，如“vpc-bhqk****”。
+- TargetGroupVpcId - String - 是否必填：否 - （过滤条件）按照目标组所属的私有网络过滤，可以通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)获取，如“vpc-bhqk****”。
 - TargetGroupName - String - 是否必填：否 - （过滤条件）按照目标组的名称过滤，如“tg_name”
  * @method void setFilters(array $Filters) 设置过滤条件数组。
 
-- TargetGroupVpcId - String - 是否必填：否 - （过滤条件）按照目标组所属的私有网络过滤，如“vpc-bhqk****”。
+- TargetGroupVpcId - String - 是否必填：否 - （过滤条件）按照目标组所属的私有网络过滤，可以通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)获取，如“vpc-bhqk****”。
 - TargetGroupName - String - 是否必填：否 - （过滤条件）按照目标组的名称过滤，如“tg_name”
- * @method integer getOffset() 获取显示的偏移起始量。
- * @method void setOffset(integer $Offset) 设置显示的偏移起始量。
- * @method integer getLimit() 获取显示条数限制，默认为20。
- * @method void setLimit(integer $Limit) 设置显示条数限制，默认为20。
+ * @method integer getOffset() 获取显示的偏移起始量，默认为0。
+ * @method void setOffset(integer $Offset) 设置显示的偏移起始量，默认为0。
+ * @method integer getLimit() 获取显示条数限制，默认为20，最大值为1000。
+ * @method void setLimit(integer $Limit) 设置显示条数限制，默认为20，最大值为1000。
  */
 class DescribeTargetGroupListRequest extends AbstractModel
 {
@@ -45,18 +45,18 @@ class DescribeTargetGroupListRequest extends AbstractModel
     /**
      * @var array 过滤条件数组。
 
-- TargetGroupVpcId - String - 是否必填：否 - （过滤条件）按照目标组所属的私有网络过滤，如“vpc-bhqk****”。
+- TargetGroupVpcId - String - 是否必填：否 - （过滤条件）按照目标组所属的私有网络过滤，可以通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)获取，如“vpc-bhqk****”。
 - TargetGroupName - String - 是否必填：否 - （过滤条件）按照目标组的名称过滤，如“tg_name”
      */
     public $Filters;
 
     /**
-     * @var integer 显示的偏移起始量。
+     * @var integer 显示的偏移起始量，默认为0。
      */
     public $Offset;
 
     /**
-     * @var integer 显示条数限制，默认为20。
+     * @var integer 显示条数限制，默认为20，最大值为1000。
      */
     public $Limit;
 
@@ -64,10 +64,10 @@ class DescribeTargetGroupListRequest extends AbstractModel
      * @param array $TargetGroupIds 目标组ID数组。
      * @param array $Filters 过滤条件数组。
 
-- TargetGroupVpcId - String - 是否必填：否 - （过滤条件）按照目标组所属的私有网络过滤，如“vpc-bhqk****”。
+- TargetGroupVpcId - String - 是否必填：否 - （过滤条件）按照目标组所属的私有网络过滤，可以通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)获取，如“vpc-bhqk****”。
 - TargetGroupName - String - 是否必填：否 - （过滤条件）按照目标组的名称过滤，如“tg_name”
-     * @param integer $Offset 显示的偏移起始量。
-     * @param integer $Limit 显示条数限制，默认为20。
+     * @param integer $Offset 显示的偏移起始量，默认为0。
+     * @param integer $Limit 显示条数限制，默认为20，最大值为1000。
      */
     function __construct()
     {

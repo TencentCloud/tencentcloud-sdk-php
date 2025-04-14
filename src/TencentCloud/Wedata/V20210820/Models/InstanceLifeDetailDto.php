@@ -20,17 +20,51 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实例生命周期detail
  *
- * @method string getState() 获取实例状态
+ * @method string getState() 获取**实例状态**
+- [0] 表示 等待事件
+- [12] 表示 等待上游
+- [6, 7, 9, 10, 18] 表示 等待运行
+- [1, 19, 22] 表示 运行中
+- [21] 表示 跳过运行
+- [3] 表示 失败重试
+- [8, 4, 5, 13] 表示 失败
+- [2] 表示 成功
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setState(string $State) 设置实例状态
+ * @method void setState(string $State) 设置**实例状态**
+- [0] 表示 等待事件
+- [12] 表示 等待上游
+- [6, 7, 9, 10, 18] 表示 等待运行
+- [1, 19, 22] 表示 运行中
+- [21] 表示 跳过运行
+- [3] 表示 失败重试
+- [8, 4, 5, 13] 表示 失败
+- [2] 表示 成功
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStartTime() 获取该状态开始时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(string $StartTime) 设置该状态开始时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDetailState() 获取实例生命周期阶段状态
+ * @method string getDetailState() 获取**实例生命周期阶段状态**
+
+- WAIT_UPSTREAM 表示 等待事件/上游状态
+- WAIT_RUN 表示 等待运行状态
+- RUNNING 表示 运行中状态
+- COMPLETE 表示 终态-完成
+- FAILED 表示 终态-失败重试
+- EXPIRED 表示 终态-失败
+- SKIP_RUNNING 表示 终态-被上游分支节点跳过的分支
+- HISTORY 表示 兼容历史实例
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDetailState(string $DetailState) 设置实例生命周期阶段状态
+ * @method void setDetailState(string $DetailState) 设置**实例生命周期阶段状态**
+
+- WAIT_UPSTREAM 表示 等待事件/上游状态
+- WAIT_RUN 表示 等待运行状态
+- RUNNING 表示 运行中状态
+- COMPLETE 表示 终态-完成
+- FAILED 表示 终态-失败重试
+- EXPIRED 表示 终态-失败
+- SKIP_RUNNING 表示 终态-被上游分支节点跳过的分支
+- HISTORY 表示 兼容历史实例
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndTime() 获取该状态结束时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -40,7 +74,15 @@ use TencentCloud\Common\AbstractModel;
 class InstanceLifeDetailDto extends AbstractModel
 {
     /**
-     * @var string 实例状态
+     * @var string **实例状态**
+- [0] 表示 等待事件
+- [12] 表示 等待上游
+- [6, 7, 9, 10, 18] 表示 等待运行
+- [1, 19, 22] 表示 运行中
+- [21] 表示 跳过运行
+- [3] 表示 失败重试
+- [8, 4, 5, 13] 表示 失败
+- [2] 表示 成功
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $State;
@@ -52,7 +94,16 @@ class InstanceLifeDetailDto extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string 实例生命周期阶段状态
+     * @var string **实例生命周期阶段状态**
+
+- WAIT_UPSTREAM 表示 等待事件/上游状态
+- WAIT_RUN 表示 等待运行状态
+- RUNNING 表示 运行中状态
+- COMPLETE 表示 终态-完成
+- FAILED 表示 终态-失败重试
+- EXPIRED 表示 终态-失败
+- SKIP_RUNNING 表示 终态-被上游分支节点跳过的分支
+- HISTORY 表示 兼容历史实例
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DetailState;
@@ -64,11 +115,28 @@ class InstanceLifeDetailDto extends AbstractModel
     public $EndTime;
 
     /**
-     * @param string $State 实例状态
+     * @param string $State **实例状态**
+- [0] 表示 等待事件
+- [12] 表示 等待上游
+- [6, 7, 9, 10, 18] 表示 等待运行
+- [1, 19, 22] 表示 运行中
+- [21] 表示 跳过运行
+- [3] 表示 失败重试
+- [8, 4, 5, 13] 表示 失败
+- [2] 表示 成功
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StartTime 该状态开始时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DetailState 实例生命周期阶段状态
+     * @param string $DetailState **实例生命周期阶段状态**
+
+- WAIT_UPSTREAM 表示 等待事件/上游状态
+- WAIT_RUN 表示 等待运行状态
+- RUNNING 表示 运行中状态
+- COMPLETE 表示 终态-完成
+- FAILED 表示 终态-失败重试
+- EXPIRED 表示 终态-失败
+- SKIP_RUNNING 表示 终态-被上游分支节点跳过的分支
+- HISTORY 表示 兼容历史实例
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndTime 该状态结束时间
 注意：此字段可能返回 null，表示取不到有效值。

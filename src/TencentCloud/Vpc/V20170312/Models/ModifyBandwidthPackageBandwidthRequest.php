@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyBandwidthPackageBandwidth请求参数结构体
  *
- * @method integer getInternetMaxBandwidth() 获取带宽包限速大小。单位：Mbps。
- * @method void setInternetMaxBandwidth(integer $InternetMaxBandwidth) 设置带宽包限速大小。单位：Mbps。
- * @method string getBandwidthPackageId() 获取共享带宽包ID
- * @method void setBandwidthPackageId(string $BandwidthPackageId) 设置共享带宽包ID
+ * @method integer getInternetMaxBandwidth() 获取带宽包限速大小。单位：Mbps。带宽包计费类型对应的带宽上下限可参考：[BandwidthRange](https://cloud.tencent.com/document/api/215/15824#BandwidthRange) 
+ * @method void setInternetMaxBandwidth(integer $InternetMaxBandwidth) 设置带宽包限速大小。单位：Mbps。带宽包计费类型对应的带宽上下限可参考：[BandwidthRange](https://cloud.tencent.com/document/api/215/15824#BandwidthRange) 
+ * @method string getBandwidthPackageId() 获取共享带宽包ID，可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。
+ * @method void setBandwidthPackageId(string $BandwidthPackageId) 设置共享带宽包ID，可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。
  */
 class ModifyBandwidthPackageBandwidthRequest extends AbstractModel
 {
     /**
-     * @var integer 带宽包限速大小。单位：Mbps。
+     * @var integer 带宽包限速大小。单位：Mbps。带宽包计费类型对应的带宽上下限可参考：[BandwidthRange](https://cloud.tencent.com/document/api/215/15824#BandwidthRange) 
      */
     public $InternetMaxBandwidth;
 
     /**
-     * @var string 共享带宽包ID
+     * @var string 共享带宽包ID，可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。
      */
     public $BandwidthPackageId;
 
     /**
-     * @param integer $InternetMaxBandwidth 带宽包限速大小。单位：Mbps。
-     * @param string $BandwidthPackageId 共享带宽包ID
+     * @param integer $InternetMaxBandwidth 带宽包限速大小。单位：Mbps。带宽包计费类型对应的带宽上下限可参考：[BandwidthRange](https://cloud.tencent.com/document/api/215/15824#BandwidthRange) 
+     * @param string $BandwidthPackageId 共享带宽包ID，可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。
      */
     function __construct()
     {

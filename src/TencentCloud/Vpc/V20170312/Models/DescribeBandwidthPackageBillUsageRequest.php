@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBandwidthPackageBillUsage请求参数结构体
  *
- * @method string getBandwidthPackageId() 获取后付费共享带宽包的唯一ID
- * @method void setBandwidthPackageId(string $BandwidthPackageId) 设置后付费共享带宽包的唯一ID
+ * @method string getBandwidthPackageId() 获取后付费共享带宽包的唯一ID，可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/api/215/19209)接口获取BandwidthPackageId。
+ * @method void setBandwidthPackageId(string $BandwidthPackageId) 设置后付费共享带宽包的唯一ID，可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/api/215/19209)接口获取BandwidthPackageId。
  */
 class DescribeBandwidthPackageBillUsageRequest extends AbstractModel
 {
     /**
-     * @var string 后付费共享带宽包的唯一ID
+     * @var string 后付费共享带宽包的唯一ID，可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/api/215/19209)接口获取BandwidthPackageId。
      */
     public $BandwidthPackageId;
 
     /**
-     * @param string $BandwidthPackageId 后付费共享带宽包的唯一ID
+     * @param string $BandwidthPackageId 后付费共享带宽包的唯一ID，可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/api/215/19209)接口获取BandwidthPackageId。
      */
     function __construct()
     {

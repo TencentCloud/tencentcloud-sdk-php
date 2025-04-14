@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteTargetGroups请求参数结构体
  *
- * @method array getTargetGroupIds() 获取目标组ID列表。
- * @method void setTargetGroupIds(array $TargetGroupIds) 设置目标组ID列表。
+ * @method array getTargetGroupIds() 获取目标组ID列表。 可以通过接口[DescribeTargetGroups](https://cloud.tencent.com/document/product/214/40554)获取。
+ * @method void setTargetGroupIds(array $TargetGroupIds) 设置目标组ID列表。 可以通过接口[DescribeTargetGroups](https://cloud.tencent.com/document/product/214/40554)获取。
  */
 class DeleteTargetGroupsRequest extends AbstractModel
 {
     /**
-     * @var array 目标组ID列表。
+     * @var array 目标组ID列表。 可以通过接口[DescribeTargetGroups](https://cloud.tencent.com/document/product/214/40554)获取。
      */
     public $TargetGroupIds;
 
     /**
-     * @param array $TargetGroupIds 目标组ID列表。
+     * @param array $TargetGroupIds 目标组ID列表。 可以通过接口[DescribeTargetGroups](https://cloud.tencent.com/document/product/214/40554)获取。
      */
     function __construct()
     {

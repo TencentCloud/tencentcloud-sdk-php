@@ -34,10 +34,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAdminPassword(string $AdminPassword) 设置集群密码
  * @method array getResources() 获取资源信息
  * @method void setResources(array $Resources) 设置资源信息
- * @method Tag getTags() 获取标签列表
- * @method void setTags(Tag $Tags) 设置标签列表
+ * @method Tag getTags() 获取废弃，用TagItems
+ * @method void setTags(Tag $Tags) 设置废弃，用TagItems
  * @method string getProductVersion() 获取版本
  * @method void setProductVersion(string $ProductVersion) 设置版本
+ * @method array getTagItems() 获取标签列表
+ * @method void setTagItems(array $TagItems) 设置标签列表
  */
 class CreateInstanceByApiRequest extends AbstractModel
 {
@@ -77,7 +79,7 @@ class CreateInstanceByApiRequest extends AbstractModel
     public $Resources;
 
     /**
-     * @var Tag 标签列表
+     * @var Tag 废弃，用TagItems
      */
     public $Tags;
 
@@ -87,6 +89,11 @@ class CreateInstanceByApiRequest extends AbstractModel
     public $ProductVersion;
 
     /**
+     * @var array 标签列表
+     */
+    public $TagItems;
+
+    /**
      * @param string $InstanceName 实例名称
      * @param string $Zone 可用区
      * @param string $UserVPCId 私有网络
@@ -94,8 +101,9 @@ class CreateInstanceByApiRequest extends AbstractModel
      * @param ChargeProperties $ChargeProperties 计费方式
      * @param string $AdminPassword 集群密码
      * @param array $Resources 资源信息
-     * @param Tag $Tags 标签列表
+     * @param Tag $Tags 废弃，用TagItems
      * @param string $ProductVersion 版本
+     * @param array $TagItems 标签列表
      */
     function __construct()
     {
@@ -151,6 +159,15 @@ class CreateInstanceByApiRequest extends AbstractModel
 
         if (array_key_exists("ProductVersion",$param) and $param["ProductVersion"] !== null) {
             $this->ProductVersion = $param["ProductVersion"];
+        }
+
+        if (array_key_exists("TagItems",$param) and $param["TagItems"] !== null) {
+            $this->TagItems = [];
+            foreach ($param["TagItems"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagItems, $obj);
+            }
         }
     }
 }

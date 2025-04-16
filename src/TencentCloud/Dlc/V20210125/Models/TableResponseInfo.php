@@ -31,41 +31,25 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPartitions(array $Partitions) 设置数据表分块信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLocation() 获取数据存储路径。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocation(string $Location) 设置数据存储路径。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getProperties() 获取数据表属性信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProperties(array $Properties) 设置数据表属性信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifiedTime() 获取数据表更新时间, 单位: ms。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifiedTime(string $ModifiedTime) 设置数据表更新时间, 单位: ms。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取数据表创建时间,单位: ms。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置数据表创建时间,单位: ms。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInputFormat() 获取数据格式。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInputFormat(string $InputFormat) 设置数据格式。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStorageSize() 获取数据表存储大小（单位：Byte）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStorageSize(integer $StorageSize) 设置数据表存储大小（单位：Byte）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRecordCount() 获取数据表行数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordCount(integer $RecordCount) 设置数据表行数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMapMaterializedViewName() 获取xxxx
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMapMaterializedViewName(string $MapMaterializedViewName) 设置xxxx
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHeatValue() 获取访问热点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeatValue(integer $HeatValue) 设置访问热点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInputFormatShort() 获取InputFormat的缩写
  * @method void setInputFormatShort(string $InputFormatShort) 设置InputFormat的缩写
  */
@@ -90,7 +74,6 @@ class TableResponseInfo extends AbstractModel
 
     /**
      * @var string 数据存储路径。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Location;
 
@@ -102,43 +85,36 @@ class TableResponseInfo extends AbstractModel
 
     /**
      * @var string 数据表更新时间, 单位: ms。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifiedTime;
 
     /**
      * @var string 数据表创建时间,单位: ms。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 数据格式。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InputFormat;
 
     /**
      * @var integer 数据表存储大小（单位：Byte）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StorageSize;
 
     /**
      * @var integer 数据表行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecordCount;
 
     /**
      * @var string xxxx
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MapMaterializedViewName;
 
     /**
      * @var integer 访问热点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HeatValue;
 
@@ -154,23 +130,15 @@ class TableResponseInfo extends AbstractModel
      * @param array $Partitions 数据表分块信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Location 数据存储路径。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Properties 数据表属性信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifiedTime 数据表更新时间, 单位: ms。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 数据表创建时间,单位: ms。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InputFormat 数据格式。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StorageSize 数据表存储大小（单位：Byte）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RecordCount 数据表行数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MapMaterializedViewName xxxx
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HeatValue 访问热点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InputFormatShort InputFormat的缩写
      */
     function __construct()

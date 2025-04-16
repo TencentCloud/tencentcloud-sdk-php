@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) 设置通道组域名
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupName() 获取通道组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupName(string $GroupName) 设置通道组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProjectId() 获取项目ID
  * @method void setProjectId(integer $ProjectId) 设置项目ID
  * @method RegionDetail getRealServerRegionInfo() 获取目标地域
@@ -53,25 +51,17 @@ CHANGING表示部分部署中。
  * @method array getTagSet() 获取标签列表。
  * @method void setTagSet(array $TagSet) 设置标签列表。
  * @method string getVersion() 获取通道组版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersion(string $Version) 设置通道组版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(integer $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProxyType() 获取通道组是否包含微软通道
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProxyType(integer $ProxyType) 设置通道组是否包含微软通道
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHttp3Supported() 获取支持Http3特性的标识，其中：
 0表示关闭；
 1表示启用。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHttp3Supported(integer $Http3Supported) 设置支持Http3特性的标识，其中：
 0表示关闭；
 1表示启用。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFeatureBitmap() 获取特性位图，每个bit位代表一种特性，其中：
 0，表示不支持该特性；
 1，表示支持该特性。
@@ -84,7 +74,6 @@ CHANGING表示部分部署中。
 第6个bit，支持三网接入；
 第7个bit，支持接入段Qos加速。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFeatureBitmap(integer $FeatureBitmap) 设置特性位图，每个bit位代表一种特性，其中：
 0，表示不支持该特性；
 1，表示支持该特性。
@@ -96,7 +85,6 @@ CHANGING表示部分部署中。
 第5个bit，支持精品BGP接入；
 第6个bit，支持三网接入；
 第7个bit，支持接入段Qos加速。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProxyGroupInfo extends AbstractModel
@@ -114,7 +102,6 @@ class ProxyGroupInfo extends AbstractModel
 
     /**
      * @var string 通道组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupName;
 
@@ -147,19 +134,16 @@ CHANGING表示部分部署中。
 
     /**
      * @var string 通道组版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Version;
 
     /**
      * @var integer 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var integer 通道组是否包含微软通道
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProxyType;
 
@@ -167,7 +151,6 @@ CHANGING表示部分部署中。
      * @var integer 支持Http3特性的标识，其中：
 0表示关闭；
 1表示启用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Http3Supported;
 
@@ -184,7 +167,6 @@ CHANGING表示部分部署中。
 第6个bit，支持三网接入；
 第7个bit，支持接入段Qos加速。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FeatureBitmap;
 
@@ -193,7 +175,6 @@ CHANGING表示部分部署中。
      * @param string $Domain 通道组域名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 通道组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProjectId 项目ID
      * @param RegionDetail $RealServerRegionInfo 目标地域
      * @param string $Status 通道组状态。
@@ -206,15 +187,11 @@ CLOSED表示已关闭；
 CHANGING表示部分部署中。
      * @param array $TagSet 标签列表。
      * @param string $Version 通道组版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProxyType 通道组是否包含微软通道
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Http3Supported 支持Http3特性的标识，其中：
 0表示关闭；
 1表示启用。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FeatureBitmap 特性位图，每个bit位代表一种特性，其中：
 0，表示不支持该特性；
 1，表示支持该特性。
@@ -226,7 +203,6 @@ CHANGING表示部分部署中。
 第5个bit，支持精品BGP接入；
 第6个bit，支持三网接入；
 第7个bit，支持接入段Qos加速。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

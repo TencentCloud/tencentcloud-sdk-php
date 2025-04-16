@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * spark session batch SQL的消耗信息
  *
  * @method string getBatchId() 获取任务id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBatchId(string $BatchId) 设置任务id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDataEngineName() 获取引擎名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataEngineName(string $DataEngineName) 设置引擎名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDataEngineId() 获取引擎id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataEngineId(string $DataEngineId) 设置引擎id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getCost() 获取本次消耗，单位cu
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCost(float $Cost) 设置本次消耗，单位cu
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTimeCost() 获取时间开销，秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeCost(integer $TimeCost) 设置时间开销，秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOperator() 获取操作者
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperator(string $Operator) 设置操作者
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BatchSQLCostInfo extends AbstractModel
 {
     /**
      * @var string 任务id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BatchId;
 
     /**
      * @var string 引擎名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataEngineName;
 
     /**
      * @var string 引擎id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataEngineId;
 
     /**
      * @var float 本次消耗，单位cu
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Cost;
 
     /**
      * @var integer 时间开销，秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeCost;
 
     /**
      * @var string 操作者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Operator;
 
     /**
      * @param string $BatchId 任务id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataEngineName 引擎名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataEngineId 引擎id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Cost 本次消耗，单位cu
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TimeCost 时间开销，秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Operator 操作者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * DescribeInstances返回参数结构体
  *
  * @method integer getTotalCount() 获取实例总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置实例总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getInstancesList() 获取实例数组
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstancesList(array $InstancesList) 设置实例数组
@@ -39,7 +37,6 @@ class DescribeInstancesResponse extends AbstractModel
 {
     /**
      * @var integer 实例总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
@@ -62,7 +59,6 @@ class DescribeInstancesResponse extends AbstractModel
 
     /**
      * @param integer $TotalCount 实例总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $InstancesList 实例数组
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrorMsg 错误信息

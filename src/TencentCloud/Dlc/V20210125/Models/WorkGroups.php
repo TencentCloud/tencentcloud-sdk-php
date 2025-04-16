@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWorkGroupSet(array $WorkGroupSet) 设置工作组信息集合
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取工作组总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置工作组总数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkGroups extends AbstractModel
 {
@@ -39,7 +37,6 @@ class WorkGroups extends AbstractModel
 
     /**
      * @var integer 工作组总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
@@ -47,7 +44,6 @@ class WorkGroups extends AbstractModel
      * @param array $WorkGroupSet 工作组信息集合
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 工作组总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

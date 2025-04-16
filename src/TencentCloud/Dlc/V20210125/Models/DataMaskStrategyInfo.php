@@ -21,47 +21,34 @@ use TencentCloud\Common\AbstractModel;
  * 数据脱敏策略信息
  *
  * @method string getStrategyName() 获取策略名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStrategyName(string $StrategyName) 设置策略名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStrategyType() 获取MASK_SHOW_FIRST_4; MASK_SHOW_LAST_4;MASK_HASH; MASK_DATE_SHOW_YEAR; MASK_NULL; MASK_DEFAULT 等
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStrategyType(string $StrategyType) 设置MASK_SHOW_FIRST_4; MASK_SHOW_LAST_4;MASK_HASH; MASK_DATE_SHOW_YEAR; MASK_NULL; MASK_DEFAULT 等
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStrategyDesc() 获取策略描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStrategyDesc(string $StrategyDesc) 设置策略描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getGroups() 获取用户组策略列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroups(array $Groups) 设置用户组策略列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUsers() 获取用户子账号uin列表，按;拼接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsers(string $Users) 设置用户子账号uin列表，按;拼接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStrategyId() 获取策略Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStrategyId(string $StrategyId) 设置策略Id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataMaskStrategyInfo extends AbstractModel
 {
     /**
      * @var string 策略名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StrategyName;
 
     /**
      * @var string MASK_SHOW_FIRST_4; MASK_SHOW_LAST_4;MASK_HASH; MASK_DATE_SHOW_YEAR; MASK_NULL; MASK_DEFAULT 等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StrategyType;
 
     /**
      * @var string 策略描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StrategyDesc;
 
@@ -73,29 +60,22 @@ class DataMaskStrategyInfo extends AbstractModel
 
     /**
      * @var string 用户子账号uin列表，按;拼接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Users;
 
     /**
      * @var string 策略Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StrategyId;
 
     /**
      * @param string $StrategyName 策略名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StrategyType MASK_SHOW_FIRST_4; MASK_SHOW_LAST_4;MASK_HASH; MASK_DATE_SHOW_YEAR; MASK_NULL; MASK_DEFAULT 等
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StrategyDesc 策略描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Groups 用户组策略列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Users 用户子账号uin列表，按;拼接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StrategyId 策略Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

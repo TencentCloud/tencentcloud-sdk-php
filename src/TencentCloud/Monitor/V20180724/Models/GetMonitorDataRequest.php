@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置起始时间，如2018-09-22T19:51:23+08:00
  * @method string getEndTime() 获取结束时间，如2018-09-22T20:51:23+08:00，默认为当前时间。 EndTime不能小于StartTime
  * @method void setEndTime(string $EndTime) 设置结束时间，如2018-09-22T20:51:23+08:00，默认为当前时间。 EndTime不能小于StartTime
- * @method integer getSpecifyStatistics() 获取返回多种统计方式数据。avg, max, min (1,2,4)可以自由组合
- * @method void setSpecifyStatistics(integer $SpecifyStatistics) 设置返回多种统计方式数据。avg, max, min (1,2,4)可以自由组合
+ * @method integer getSpecifyStatistics() 获取返回多种统计方式数据。avg, max, min (1,2,4)可以自由组合。注意: 仅支持对API配置文档中展示的统计方式返回对应的统计数据。如所需的统计方式不满足您的查询需求，请提工单反馈。
+ * @method void setSpecifyStatistics(integer $SpecifyStatistics) 设置返回多种统计方式数据。avg, max, min (1,2,4)可以自由组合。注意: 仅支持对API配置文档中展示的统计方式返回对应的统计数据。如所需的统计方式不满足您的查询需求，请提工单反馈。
  */
 class GetMonitorDataRequest extends AbstractModel
 {
@@ -68,7 +68,7 @@ class GetMonitorDataRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var integer 返回多种统计方式数据。avg, max, min (1,2,4)可以自由组合
+     * @var integer 返回多种统计方式数据。avg, max, min (1,2,4)可以自由组合。注意: 仅支持对API配置文档中展示的统计方式返回对应的统计数据。如所需的统计方式不满足您的查询需求，请提工单反馈。
      */
     public $SpecifyStatistics;
 
@@ -79,7 +79,7 @@ class GetMonitorDataRequest extends AbstractModel
      * @param integer $Period 监控统计周期，如60。默认为取值为300，单位为s。每个指标支持的统计周期不一定相同，各个云产品支持的统计周期请参阅各个产品[监控指标](https://cloud.tencent.com/document/product/248/6140)文档，对应的统计周期列即为支持的统计周期。单请求的数据点数限制为1440个。
      * @param string $StartTime 起始时间，如2018-09-22T19:51:23+08:00
      * @param string $EndTime 结束时间，如2018-09-22T20:51:23+08:00，默认为当前时间。 EndTime不能小于StartTime
-     * @param integer $SpecifyStatistics 返回多种统计方式数据。avg, max, min (1,2,4)可以自由组合
+     * @param integer $SpecifyStatistics 返回多种统计方式数据。avg, max, min (1,2,4)可以自由组合。注意: 仅支持对API配置文档中展示的统计方式返回对应的统计数据。如所需的统计方式不满足您的查询需求，请提工单反馈。
      */
     function __construct()
     {

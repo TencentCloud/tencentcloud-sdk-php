@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * ValueRange值
  *
  * @method string getType() 获取参数类型，可以为 enum，string，section; 其中enum表示枚举，类似： utf8,latin1,gbk; string表示返回的参数值是字符串; section表示返回的参数值是一个取值范围，类似：[4-8]
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置参数类型，可以为 enum，string，section; 其中enum表示枚举，类似： utf8,latin1,gbk; string表示返回的参数值是字符串; section表示返回的参数值是一个取值范围，类似：[4-8]
-注意：此字段可能返回 null，表示取不到有效值。
  * @method Range getRange() 获取type 取section的时候，返回的参数值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRange(Range $Range) 设置type 取section的时候，返回的参数值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getEnum() 获取type 取enum的时候，返回参数值
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnum(array $Enum) 设置type 取enum的时候，返回参数值
@@ -41,13 +37,11 @@ class ValueRange extends AbstractModel
 {
     /**
      * @var string 参数类型，可以为 enum，string，section; 其中enum表示枚举，类似： utf8,latin1,gbk; string表示返回的参数值是字符串; section表示返回的参数值是一个取值范围，类似：[4-8]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var Range type 取section的时候，返回的参数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Range;
 
@@ -65,9 +59,7 @@ class ValueRange extends AbstractModel
 
     /**
      * @param string $Type 参数类型，可以为 enum，string，section; 其中enum表示枚举，类似： utf8,latin1,gbk; string表示返回的参数值是字符串; section表示返回的参数值是一个取值范围，类似：[4-8]
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Range $Range type 取section的时候，返回的参数值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Enum type 取enum的时候，返回参数值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $String type 取string的时候，返回的参数值

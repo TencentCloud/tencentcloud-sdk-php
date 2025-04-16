@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置实例要绑定的标签列表。
  * @method PrePaySetting getPrePaySetting() 获取预付费参数
  * @method void setPrePaySetting(PrePaySetting $PrePaySetting) 设置预付费参数
+ * @method string getClientToken() 获取唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808	
+ * @method void setClientToken(string $ClientToken) 设置唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808	
  */
 class CreateSLInstanceRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class CreateSLInstanceRequest extends AbstractModel
     public $PrePaySetting;
 
     /**
+     * @var string 唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808	
+     */
+    public $ClientToken;
+
+    /**
      * @param string $InstanceName 实例名称。
      * @param integer $PayMode 实例计费模式，0表示后付费，即按量计费。
      * @param string $DiskType 实例存储类型，填写CLOUD_HSSD，表示性能云存储。
@@ -88,6 +95,7 @@ class CreateSLInstanceRequest extends AbstractModel
      * @param array $ZoneSettings 实例可用区详细配置，当前支持多可用区，可用区数量只能为1或3，包含区域名称，VPC信息、节点数量，其中所有区域节点总数需大于等于3，小于等于50。
      * @param array $Tags 实例要绑定的标签列表。
      * @param PrePaySetting $PrePaySetting 预付费参数
+     * @param string $ClientToken 唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808	
      */
     function __construct()
     {
@@ -143,6 +151,10 @@ class CreateSLInstanceRequest extends AbstractModel
         if (array_key_exists("PrePaySetting",$param) and $param["PrePaySetting"] !== null) {
             $this->PrePaySetting = new PrePaySetting();
             $this->PrePaySetting->deserialize($param["PrePaySetting"]);
+        }
+
+        if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
+            $this->ClientToken = $param["ClientToken"];
         }
     }
 }

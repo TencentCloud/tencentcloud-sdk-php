@@ -27,8 +27,10 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getHasLakeFs() 获取是否有托管存储权限
  * @method void setHasLakeFs(boolean $HasLakeFs) 设置是否有托管存储权限
  * @method string getLakeFsStatus() 获取托管存储状态，HasLakeFs等于true时，该值才有意义
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLakeFsStatus(string $LakeFsStatus) 设置托管存储状态，HasLakeFs等于true时，该值才有意义
+ * @method string getBucketType() 获取托管存储桶类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBucketType(string $BucketType) 设置托管存储桶类型
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -52,9 +54,14 @@ class DescribeAdvancedStoreLocationResponse extends AbstractModel
 
     /**
      * @var string 托管存储状态，HasLakeFs等于true时，该值才有意义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LakeFsStatus;
+
+    /**
+     * @var string 托管存储桶类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BucketType;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -66,6 +73,7 @@ class DescribeAdvancedStoreLocationResponse extends AbstractModel
      * @param string $StoreLocation 查询结果保存cos路径
      * @param boolean $HasLakeFs 是否有托管存储权限
      * @param string $LakeFsStatus 托管存储状态，HasLakeFs等于true时，该值才有意义
+     * @param string $BucketType 托管存储桶类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -96,6 +104,10 @@ class DescribeAdvancedStoreLocationResponse extends AbstractModel
 
         if (array_key_exists("LakeFsStatus",$param) and $param["LakeFsStatus"] !== null) {
             $this->LakeFsStatus = $param["LakeFsStatus"];
+        }
+
+        if (array_key_exists("BucketType",$param) and $param["BucketType"] !== null) {
+            $this->BucketType = $param["BucketType"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

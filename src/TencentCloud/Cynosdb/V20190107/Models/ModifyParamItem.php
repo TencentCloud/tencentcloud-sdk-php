@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCurrentValue(string $CurrentValue) 设置参数当前值
  * @method string getOldValue() 获取参数旧值（只在出参时有用）
  * @method void setOldValue(string $OldValue) 设置参数旧值（只在出参时有用）
+ * @method string getComponent() 获取libra组件类型
+ * @method void setComponent(string $Component) 设置libra组件类型
  */
 class ModifyParamItem extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ModifyParamItem extends AbstractModel
     public $OldValue;
 
     /**
+     * @var string libra组件类型
+     */
+    public $Component;
+
+    /**
      * @param string $ParamName 参数名
      * @param string $CurrentValue 参数当前值
      * @param string $OldValue 参数旧值（只在出参时有用）
+     * @param string $Component libra组件类型
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ModifyParamItem extends AbstractModel
 
         if (array_key_exists("OldValue",$param) and $param["OldValue"] !== null) {
             $this->OldValue = $param["OldValue"];
+        }
+
+        if (array_key_exists("Component",$param) and $param["Component"] !== null) {
+            $this->Component = $param["Component"];
         }
     }
 }

@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 通道信息
  *
  * @method string getInstanceId() 获取（旧参数，请使用ProxyId）通道实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置（旧参数，请使用ProxyId）通道实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreateTime() 获取创建时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
  * @method void setCreateTime(integer $CreateTime) 设置创建时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
  * @method integer getProjectId() 获取项目ID。
@@ -71,9 +69,7 @@ MOVING表示迁移中。
  * @method string getVersion() 获取通道版本号：1.0，2.0，3.0。
  * @method void setVersion(string $Version) 设置通道版本号：1.0，2.0，3.0。
  * @method string getProxyId() 获取（新参数）通道实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProxyId(string $ProxyId) 设置（新参数）通道实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScalarable() 获取1，该通道可缩扩容；0，该通道无法缩扩容。
  * @method void setScalarable(integer $Scalarable) 设置1，该通道可缩扩容；0，该通道无法缩扩容。
  * @method array getSupportProtocols() 获取支持的协议类型。
@@ -87,77 +83,47 @@ MOVING表示迁移中。
  * @method void setPolicyId(string $PolicyId) 设置安全策略ID，当设置了安全策略时，存在该字段。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method RegionDetail getAccessRegionInfo() 获取接入地域详细信息，包括地域ID和地域名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccessRegionInfo(RegionDetail $AccessRegionInfo) 设置接入地域详细信息，包括地域ID和地域名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method RegionDetail getRealServerRegionInfo() 获取源站地域详细信息，包括地域ID和地域名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealServerRegionInfo(RegionDetail $RealServerRegionInfo) 设置源站地域详细信息，包括地域ID和地域名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getForwardIP() 获取通道转发IP
  * @method void setForwardIP(string $ForwardIP) 设置通道转发IP
  * @method array getTagSet() 获取标签列表，不存在标签时，该字段为空列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagSet(array $TagSet) 设置标签列表，不存在标签时，该字段为空列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSupportSecurity() 获取是否支持安全组配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSupportSecurity(integer $SupportSecurity) 设置是否支持安全组配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBillingType() 获取计费类型: 0表示按带宽计费  1表示按流量计费。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBillingType(integer $BillingType) 设置计费类型: 0表示按带宽计费  1表示按流量计费。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRelatedGlobalDomains() 获取关联了解析的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRelatedGlobalDomains(array $RelatedGlobalDomains) 设置关联了解析的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getModifyConfigTime() 获取配置变更时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyConfigTime(integer $ModifyConfigTime) 设置配置变更时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProxyType() 获取通道类型，100表示THUNDER通道，103表示微软合作通道
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProxyType(integer $ProxyType) 设置通道类型，100表示THUNDER通道，103表示微软合作通道
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getClientIPMethod() 获取通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClientIPMethod(array $ClientIPMethod) 设置通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIPAddressVersion() 获取IP版本：IPv4、IPv6
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIPAddressVersion(string $IPAddressVersion) 设置IP版本：IPv4、IPv6
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNetworkType() 获取网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网，secure_eip表示定制安全EIP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetworkType(string $NetworkType) 设置网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网，secure_eip表示定制安全EIP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPackageType() 获取通道套餐类型：Thunder表示标准通道，Accelerator表示银牌加速通道，
 CrossBorder表示跨境通道。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPackageType(string $PackageType) 设置通道套餐类型：Thunder表示标准通道，Accelerator表示银牌加速通道，
 CrossBorder表示跨境通道。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBanStatus() 获取封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBanStatus(string $BanStatus) 设置封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getIPList() 获取IP列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIPList(array $IPList) 设置IP列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHttp3Supported() 获取支持Http3协议的标识，其中：
 0表示关闭；
 1表示启用。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHttp3Supported(integer $Http3Supported) 设置支持Http3协议的标识，其中：
 0表示关闭；
 1表示启用。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getInBanBlacklist() 获取是否在封禁黑名单中，其中：0表示不在黑名单中，1表示在黑名单中。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInBanBlacklist(integer $InBanBlacklist) 设置是否在封禁黑名单中，其中：0表示不在黑名单中，1表示在黑名单中。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFeatureBitmap() 获取特性位图，每个bit位代表一种特性，其中：
 0，表示不支持该特性；
 1，表示支持该特性。
@@ -169,7 +135,6 @@ CrossBorder表示跨境通道。
 第5个bit，支持精品BGP接入；
 第6个bit，支持三网接入；
 第7个bit，支持接入段Qos加速。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFeatureBitmap(integer $FeatureBitmap) 设置特性位图，每个bit位代表一种特性，其中：
 0，表示不支持该特性；
@@ -183,25 +148,19 @@ CrossBorder表示跨境通道。
 第6个bit，支持三网接入；
 第7个bit，支持接入段Qos加速。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsAutoScaleProxy() 获取是否是开启了auto scale的通道，0表示否，1表示是。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsAutoScaleProxy(integer $IsAutoScaleProxy) 设置是否是开启了auto scale的通道，0表示否，1表示是。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsSupportTLSChoice() 获取是否允许设置TLS配置
 0表示不支持；
 1表示支持。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsSupportTLSChoice(integer $IsSupportTLSChoice) 设置是否允许设置TLS配置
 0表示不支持；
 1表示支持。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProxyInfo extends AbstractModel
 {
     /**
      * @var string （旧参数，请使用ProxyId）通道实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
@@ -274,7 +233,6 @@ MOVING表示迁移中。
 
     /**
      * @var string （新参数）通道实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProxyId;
 
@@ -302,13 +260,11 @@ MOVING表示迁移中。
 
     /**
      * @var RegionDetail 接入地域详细信息，包括地域ID和地域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccessRegionInfo;
 
     /**
      * @var RegionDetail 源站地域详细信息，包括地域ID和地域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RealServerRegionInfo;
 
@@ -319,25 +275,21 @@ MOVING表示迁移中。
 
     /**
      * @var array 标签列表，不存在标签时，该字段为空列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagSet;
 
     /**
      * @var integer 是否支持安全组配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SupportSecurity;
 
     /**
      * @var integer 计费类型: 0表示按带宽计费  1表示按流量计费。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BillingType;
 
     /**
      * @var array 关联了解析的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RelatedGlobalDomains;
 
@@ -349,44 +301,37 @@ MOVING表示迁移中。
 
     /**
      * @var integer 通道类型，100表示THUNDER通道，103表示微软合作通道
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProxyType;
 
     /**
      * @var array 通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClientIPMethod;
 
     /**
      * @var string IP版本：IPv4、IPv6
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IPAddressVersion;
 
     /**
      * @var string 网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网，secure_eip表示定制安全EIP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NetworkType;
 
     /**
      * @var string 通道套餐类型：Thunder表示标准通道，Accelerator表示银牌加速通道，
 CrossBorder表示跨境通道。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PackageType;
 
     /**
      * @var string 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BanStatus;
 
     /**
      * @var array IP列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IPList;
 
@@ -394,13 +339,11 @@ CrossBorder表示跨境通道。
      * @var integer 支持Http3协议的标识，其中：
 0表示关闭；
 1表示启用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Http3Supported;
 
     /**
      * @var integer 是否在封禁黑名单中，其中：0表示不在黑名单中，1表示在黑名单中。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InBanBlacklist;
 
@@ -417,13 +360,11 @@ CrossBorder表示跨境通道。
 第6个bit，支持三网接入；
 第7个bit，支持接入段Qos加速。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FeatureBitmap;
 
     /**
      * @var integer 是否是开启了auto scale的通道，0表示否，1表示是。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsAutoScaleProxy;
 
@@ -431,13 +372,11 @@ CrossBorder表示跨境通道。
      * @var integer 是否允许设置TLS配置
 0表示不支持；
 1表示支持。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsSupportTLSChoice;
 
     /**
      * @param string $InstanceId （旧参数，请使用ProxyId）通道实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateTime 创建时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
      * @param integer $ProjectId 项目ID。
      * @param string $ProxyName 通道名称。
@@ -462,7 +401,6 @@ MOVING表示迁移中。
      * @param string $IP 接入IP。
      * @param string $Version 通道版本号：1.0，2.0，3.0。
      * @param string $ProxyId （新参数）通道实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Scalarable 1，该通道可缩扩容；0，该通道无法缩扩容。
      * @param array $SupportProtocols 支持的协议类型。
      * @param string $GroupId 通道组ID，当通道归属于某一通道组时，存在该字段。
@@ -470,41 +408,26 @@ MOVING表示迁移中。
      * @param string $PolicyId 安全策略ID，当设置了安全策略时，存在该字段。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionDetail $AccessRegionInfo 接入地域详细信息，包括地域ID和地域名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionDetail $RealServerRegionInfo 源站地域详细信息，包括地域ID和地域名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ForwardIP 通道转发IP
      * @param array $TagSet 标签列表，不存在标签时，该字段为空列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SupportSecurity 是否支持安全组配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BillingType 计费类型: 0表示按带宽计费  1表示按流量计费。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RelatedGlobalDomains 关联了解析的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ModifyConfigTime 配置变更时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProxyType 通道类型，100表示THUNDER通道，103表示微软合作通道
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ClientIPMethod 通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IPAddressVersion IP版本：IPv4、IPv6
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NetworkType 网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网，secure_eip表示定制安全EIP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PackageType 通道套餐类型：Thunder表示标准通道，Accelerator表示银牌加速通道，
 CrossBorder表示跨境通道。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BanStatus 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $IPList IP列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Http3Supported 支持Http3协议的标识，其中：
 0表示关闭；
 1表示启用。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InBanBlacklist 是否在封禁黑名单中，其中：0表示不在黑名单中，1表示在黑名单中。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FeatureBitmap 特性位图，每个bit位代表一种特性，其中：
 0，表示不支持该特性；
 1，表示支持该特性。
@@ -517,13 +440,10 @@ CrossBorder表示跨境通道。
 第6个bit，支持三网接入；
 第7个bit，支持接入段Qos加速。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsAutoScaleProxy 是否是开启了auto scale的通道，0表示否，1表示是。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsSupportTLSChoice 是否允许设置TLS配置
 0表示不支持；
 1表示支持。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

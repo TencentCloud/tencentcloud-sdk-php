@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * SparkSQL批任务日志操作信息。
  *
  * @method string getText() 获取操作提示
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setText(string $Text) 设置操作提示
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOperate() 获取操作类型：COPY、LOG、UI、RESULT、List、TAB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperate(string $Operate) 设置操作类型：COPY、LOG、UI、RESULT、List、TAB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSupplement() 获取补充信息：如：taskid、sessionid、sparkui等
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSupplement(array $Supplement) 设置补充信息：如：taskid、sessionid、sparkui等
@@ -37,13 +33,11 @@ class SparkSessionBatchLogOperate extends AbstractModel
 {
     /**
      * @var string 操作提示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Text;
 
     /**
      * @var string 操作类型：COPY、LOG、UI、RESULT、List、TAB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Operate;
 
@@ -55,9 +49,7 @@ class SparkSessionBatchLogOperate extends AbstractModel
 
     /**
      * @param string $Text 操作提示
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Operate 操作类型：COPY、LOG、UI、RESULT、List、TAB
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Supplement 补充信息：如：taskid、sessionid、sparkui等
 注意：此字段可能返回 null，表示取不到有效值。
      */

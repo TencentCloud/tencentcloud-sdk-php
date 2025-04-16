@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例 ID 。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID 。
- * @method string getType() 获取扩容类型。可选值：auto：代表进行自动扩容
-manual：代表进行手动扩容
- * @method void setType(string $Type) 设置扩容类型。可选值：auto：代表进行自动扩容
-manual：代表进行手动扩容
- * @method integer getExpandCpu() 获取手动扩容时，扩容的CPU核心数。Type 为 manual 时必传。
- * @method void setExpandCpu(integer $ExpandCpu) 设置手动扩容时，扩容的CPU核心数。Type 为 manual 时必传。
+ * @method string getType() 获取扩容类型。auto 自动  manual 立即生效 timeInterval 按时间段 period 按周期
+ * @method void setType(string $Type) 设置扩容类型。auto 自动  manual 立即生效 timeInterval 按时间段 period 按周期
+ * @method integer getExpandCpu() 获取手动扩容时，扩容的 CPU 核心数。
+说明：1. Type 为 manual 时必传。2. 扩容的 CPU 核心数上限为当前实例 CPU 核心数，比如8核16G最大可手动扩容的 CPU 核心数为8，即范围为1 - 8。
+ * @method void setExpandCpu(integer $ExpandCpu) 设置手动扩容时，扩容的 CPU 核心数。
+说明：1. Type 为 manual 时必传。2. 扩容的 CPU 核心数上限为当前实例 CPU 核心数，比如8核16G最大可手动扩容的 CPU 核心数为8，即范围为1 - 8。
  * @method AutoStrategy getAutoStrategy() 获取自动扩容策略。Type 为 auto 时必传。
  * @method void setAutoStrategy(AutoStrategy $AutoStrategy) 设置自动扩容策略。Type 为 auto 时必传。
  */
@@ -39,13 +39,13 @@ class StartCpuExpandRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 扩容类型。可选值：auto：代表进行自动扩容
-manual：代表进行手动扩容
+     * @var string 扩容类型。auto 自动  manual 立即生效 timeInterval 按时间段 period 按周期
      */
     public $Type;
 
     /**
-     * @var integer 手动扩容时，扩容的CPU核心数。Type 为 manual 时必传。
+     * @var integer 手动扩容时，扩容的 CPU 核心数。
+说明：1. Type 为 manual 时必传。2. 扩容的 CPU 核心数上限为当前实例 CPU 核心数，比如8核16G最大可手动扩容的 CPU 核心数为8，即范围为1 - 8。
      */
     public $ExpandCpu;
 
@@ -56,9 +56,9 @@ manual：代表进行手动扩容
 
     /**
      * @param string $InstanceId 实例 ID 。
-     * @param string $Type 扩容类型。可选值：auto：代表进行自动扩容
-manual：代表进行手动扩容
-     * @param integer $ExpandCpu 手动扩容时，扩容的CPU核心数。Type 为 manual 时必传。
+     * @param string $Type 扩容类型。auto 自动  manual 立即生效 timeInterval 按时间段 period 按周期
+     * @param integer $ExpandCpu 手动扩容时，扩容的 CPU 核心数。
+说明：1. Type 为 manual 时必传。2. 扩容的 CPU 核心数上限为当前实例 CPU 核心数，比如8核16G最大可手动扩容的 CPU 核心数为8，即范围为1 - 8。
      * @param AutoStrategy $AutoStrategy 自动扩容策略。Type 为 auto 时必传。
      */
     function __construct()

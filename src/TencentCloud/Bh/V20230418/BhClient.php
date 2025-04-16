@@ -94,6 +94,7 @@ use TencentCloud\Bh\V20230418\Models as Models;
  * @method Models\SearchFileBySidResponse SearchFileBySid(Models\SearchFileBySidRequest $req) 搜索文件传输会话下文件操作列表
  * @method Models\SearchSessionResponse SearchSession(Models\SearchSessionRequest $req) 搜索会话
  * @method Models\SearchSessionCommandResponse SearchSessionCommand(Models\SearchSessionCommandRequest $req) 命令检索
+ * @method Models\SearchSubtaskResultByIdResponse SearchSubtaskResultById(Models\SearchSubtaskResultByIdRequest $req) 查询运维子任务执行结果
  * @method Models\SearchTaskResultResponse SearchTaskResult(Models\SearchTaskResultRequest $req) 搜索运维任务执行结果
  */
 

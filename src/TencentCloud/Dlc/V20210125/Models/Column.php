@@ -29,33 +29,19 @@ use TencentCloud\Common\AbstractModel;
  * @method void setComment(string $Comment) 设置对该类的注释。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPrecision() 获取表示整个 numeric 的长度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrecision(integer $Precision) 设置表示整个 numeric 的长度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScale() 获取表示小数部分的长度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScale(integer $Scale) 设置表示小数部分的长度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNullable() 获取是否为null
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNullable(string $Nullable) 设置是否为null
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPosition() 获取字段位置，小的在前
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPosition(integer $Position) 设置字段位置，小的在前
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取字段创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置字段创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifiedTime() 获取字段修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifiedTime(string $ModifiedTime) 设置字段修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsPartition() 获取是否为分区字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsPartition(boolean $IsPartition) 设置是否为分区字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DataMaskStrategyInfo getDataMaskStrategyInfo() 获取数据脱敏策略信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataMaskStrategyInfo(DataMaskStrategyInfo $DataMaskStrategyInfo) 设置数据脱敏策略信息
@@ -81,43 +67,36 @@ class Column extends AbstractModel
 
     /**
      * @var integer 表示整个 numeric 的长度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Precision;
 
     /**
      * @var integer 表示小数部分的长度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Scale;
 
     /**
      * @var string 是否为null
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Nullable;
 
     /**
      * @var integer 字段位置，小的在前
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Position;
 
     /**
      * @var string 字段创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 字段修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifiedTime;
 
     /**
      * @var boolean 是否为分区字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsPartition;
 
@@ -133,19 +112,12 @@ class Column extends AbstractModel
      * @param string $Comment 对该类的注释。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Precision 表示整个 numeric 的长度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Scale 表示小数部分的长度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Nullable 是否为null
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Position 字段位置，小的在前
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 字段创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifiedTime 字段修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsPartition 是否为分区字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataMaskStrategyInfo $DataMaskStrategyInfo 数据脱敏策略信息
 注意：此字段可能返回 null，表示取不到有效值。
      */

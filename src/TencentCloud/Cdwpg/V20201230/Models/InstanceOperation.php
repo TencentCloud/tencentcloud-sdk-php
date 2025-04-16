@@ -23,21 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getId() 获取操作名称，例如“create_instance"、“scaleout_instance”等
  * @method void setId(integer $Id) 设置操作名称，例如“create_instance"、“scaleout_instance”等
  * @method string getInstanceId() 获取集群ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置集群ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAction() 获取操作名称描述，例如“创建”，“修改集群名称”等
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAction(string $Action) 设置操作名称描述，例如“创建”，“修改集群名称”等
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStartTime() 获取操作开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(string $StartTime) 设置操作开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndTime() 获取操作结束时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置操作结束时间
@@ -64,25 +56,21 @@ class InstanceOperation extends AbstractModel
 
     /**
      * @var string 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var string 操作名称描述，例如“创建”，“修改集群名称”等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Action;
 
     /**
      * @var integer 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 操作开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
@@ -113,13 +101,9 @@ class InstanceOperation extends AbstractModel
     /**
      * @param integer $Id 操作名称，例如“create_instance"、“scaleout_instance”等
      * @param string $InstanceId 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Action 操作名称描述，例如“创建”，“修改集群名称”等
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StartTime 操作开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndTime 操作结束时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Context 操作上下文

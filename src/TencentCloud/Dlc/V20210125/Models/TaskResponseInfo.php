@@ -43,9 +43,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRowAffectInfo() 获取数据影响统计信息。
  * @method void setRowAffectInfo(string $RowAffectInfo) 设置数据影响统计信息。
  * @method string getDataSet() 获取任务结果数据表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataSet(string $DataSet) 设置任务结果数据表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getError() 获取失败信息, 例如：errorMessage。该字段已废弃。
  * @method void setError(string $Error) 设置失败信息, 例如：errorMessage。该字段已废弃。
  * @method integer getPercentage() 获取任务执行进度num/100(%)
@@ -55,89 +53,49 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTaskType() 获取执行SQL的引擎类型
  * @method void setTaskType(string $TaskType) 设置执行SQL的引擎类型
  * @method string getProgressDetail() 获取任务进度明细
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProgressDetail(string $ProgressDetail) 设置任务进度明细
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取任务结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置任务结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDataEngineId() 获取计算资源id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataEngineId(string $DataEngineId) 设置计算资源id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOperateUin() 获取执行sql的子uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperateUin(string $OperateUin) 设置执行sql的子uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDataEngineName() 获取计算资源名字
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataEngineName(string $DataEngineName) 设置计算资源名字
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInputType() 获取导入类型是本地导入还是cos
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInputType(string $InputType) 设置导入类型是本地导入还是cos
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInputConf() 获取导入配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInputConf(string $InputConf) 设置导入配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDataNumber() 获取数据条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataNumber(integer $DataNumber) 设置数据条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getCanDownload() 获取查询数据能不能下载
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCanDownload(boolean $CanDownload) 设置查询数据能不能下载
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserAlias() 获取用户别名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserAlias(string $UserAlias) 设置用户别名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSparkJobName() 获取spark应用作业名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSparkJobName(string $SparkJobName) 设置spark应用作业名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSparkJobId() 获取spark应用作业Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSparkJobId(string $SparkJobId) 设置spark应用作业Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSparkJobFile() 获取spark应用入口jar文件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSparkJobFile(string $SparkJobFile) 设置spark应用入口jar文件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUiUrl() 获取spark ui url
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUiUrl(string $UiUrl) 设置spark ui url
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalTime() 获取任务耗时，单位： ms
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalTime(integer $TotalTime) 设置任务耗时，单位： ms
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCmdArgs() 获取spark app job执行task的程序入口参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCmdArgs(string $CmdArgs) 设置spark app job执行task的程序入口参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getImageVersion() 获取集群镜像大版本名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageVersion(string $ImageVersion) 设置集群镜像大版本名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDriverSize() 获取driver规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDriverSize(string $DriverSize) 设置driver规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExecutorSize() 获取executor规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExecutorSize(string $ExecutorSize) 设置executor规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getExecutorNums() 获取指定executor数量，最小值为1，最大值小于集群规格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExecutorNums(integer $ExecutorNums) 设置指定executor数量，最小值为1，最大值小于集群规格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getExecutorMaxNumbers() 获取指定executor max数量（动态配置场景下），最小值为1，最大值小于集群规格（当ExecutorMaxNumbers小于ExecutorNums时，改值设定为ExecutorNums）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExecutorMaxNumbers(integer $ExecutorMaxNumbers) 设置指定executor max数量（动态配置场景下），最小值为1，最大值小于集群规格（当ExecutorMaxNumbers小于ExecutorNums时，改值设定为ExecutorNums）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method CommonMetrics getCommonMetrics() 获取任务公共指标数据
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCommonMetrics(CommonMetrics $CommonMetrics) 设置任务公共指标数据
@@ -151,17 +109,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrestoMonitorMetrics(PrestoMonitorMetrics $PrestoMonitorMetrics) 设置presto任务指标数据
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResultFormat() 获取结果文件格式：默认为csv
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResultFormat(string $ResultFormat) 设置结果文件格式：默认为csv
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEngineTypeDetail() 获取引擎类型，SparkSQL：SparkSQL 引擎；SparkBatch：Spark作业引擎；PrestoSQL：Presto引擎
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEngineTypeDetail(string $EngineTypeDetail) 设置引擎类型，SparkSQL：SparkSQL 引擎；SparkBatch：Spark作业引擎；PrestoSQL：Presto引擎
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceGroupName() 获取spark引擎资源组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceGroupName(string $ResourceGroupName) 设置spark引擎资源组名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskResponseInfo extends AbstractModel
 {
@@ -222,7 +174,6 @@ class TaskResponseInfo extends AbstractModel
 
     /**
      * @var string 任务结果数据表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataSet;
 
@@ -248,25 +199,21 @@ class TaskResponseInfo extends AbstractModel
 
     /**
      * @var string 任务进度明细
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProgressDetail;
 
     /**
      * @var string 任务结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @var string 计算资源id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataEngineId;
 
     /**
      * @var string 执行sql的子uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OperateUin;
 
@@ -278,97 +225,81 @@ class TaskResponseInfo extends AbstractModel
 
     /**
      * @var string 导入类型是本地导入还是cos
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InputType;
 
     /**
      * @var string 导入配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InputConf;
 
     /**
      * @var integer 数据条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataNumber;
 
     /**
      * @var boolean 查询数据能不能下载
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CanDownload;
 
     /**
      * @var string 用户别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserAlias;
 
     /**
      * @var string spark应用作业名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SparkJobName;
 
     /**
      * @var string spark应用作业Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SparkJobId;
 
     /**
      * @var string spark应用入口jar文件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SparkJobFile;
 
     /**
      * @var string spark ui url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UiUrl;
 
     /**
      * @var integer 任务耗时，单位： ms
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalTime;
 
     /**
      * @var string spark app job执行task的程序入口参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CmdArgs;
 
     /**
      * @var string 集群镜像大版本名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageVersion;
 
     /**
      * @var string driver规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DriverSize;
 
     /**
      * @var string executor规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecutorSize;
 
     /**
      * @var integer 指定executor数量，最小值为1，最大值小于集群规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecutorNums;
 
     /**
      * @var integer 指定executor max数量（动态配置场景下），最小值为1，最大值小于集群规格（当ExecutorMaxNumbers小于ExecutorNums时，改值设定为ExecutorNums）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecutorMaxNumbers;
 
@@ -392,19 +323,16 @@ class TaskResponseInfo extends AbstractModel
 
     /**
      * @var string 结果文件格式：默认为csv
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResultFormat;
 
     /**
      * @var string 引擎类型，SparkSQL：SparkSQL 引擎；SparkBatch：Spark作业引擎；PrestoSQL：Presto引擎
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EngineTypeDetail;
 
     /**
      * @var string spark引擎资源组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceGroupName;
 
@@ -421,53 +349,32 @@ class TaskResponseInfo extends AbstractModel
      * @param boolean $ResultExpired 结果是否过期。
      * @param string $RowAffectInfo 数据影响统计信息。
      * @param string $DataSet 任务结果数据表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Error 失败信息, 例如：errorMessage。该字段已废弃。
      * @param integer $Percentage 任务执行进度num/100(%)
      * @param string $OutputMessage 任务执行输出信息。
      * @param string $TaskType 执行SQL的引擎类型
      * @param string $ProgressDetail 任务进度明细
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 任务结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataEngineId 计算资源id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OperateUin 执行sql的子uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataEngineName 计算资源名字
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InputType 导入类型是本地导入还是cos
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InputConf 导入配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DataNumber 数据条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $CanDownload 查询数据能不能下载
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserAlias 用户别名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SparkJobName spark应用作业名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SparkJobId spark应用作业Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SparkJobFile spark应用入口jar文件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UiUrl spark ui url
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalTime 任务耗时，单位： ms
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CmdArgs spark app job执行task的程序入口参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ImageVersion 集群镜像大版本名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DriverSize driver规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExecutorSize executor规格：small,medium,large,xlarge；内存型(引擎类型)：m.small,m.medium,m.large,m.xlarge
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ExecutorNums 指定executor数量，最小值为1，最大值小于集群规格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ExecutorMaxNumbers 指定executor max数量（动态配置场景下），最小值为1，最大值小于集群规格（当ExecutorMaxNumbers小于ExecutorNums时，改值设定为ExecutorNums）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CommonMetrics $CommonMetrics 任务公共指标数据
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SparkMonitorMetrics $SparkMonitorMetrics spark任务指标数据
@@ -475,11 +382,8 @@ class TaskResponseInfo extends AbstractModel
      * @param PrestoMonitorMetrics $PrestoMonitorMetrics presto任务指标数据
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResultFormat 结果文件格式：默认为csv
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EngineTypeDetail 引擎类型，SparkSQL：SparkSQL 引擎；SparkBatch：Spark作业引擎；PrestoSQL：Presto引擎
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceGroupName spark引擎资源组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

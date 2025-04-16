@@ -21,21 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * DescribeTaskLog返回参数结构体
  *
  * @method string getContext() 获取下一次分页参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContext(string $Context) 设置下一次分页参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getListOver() 获取是否获取完结
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setListOver(boolean $ListOver) 设置是否获取完结
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getResults() 获取日志详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResults(array $Results) 设置日志详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLogUrl() 获取日志url
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogUrl(string $LogUrl) 设置日志url
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -43,25 +35,21 @@ class DescribeTaskLogResponse extends AbstractModel
 {
     /**
      * @var string 下一次分页参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Context;
 
     /**
      * @var boolean 是否获取完结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ListOver;
 
     /**
      * @var array 日志详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Results;
 
     /**
      * @var string 日志url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogUrl;
 
@@ -72,13 +60,9 @@ class DescribeTaskLogResponse extends AbstractModel
 
     /**
      * @param string $Context 下一次分页参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $ListOver 是否获取完结
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Results 日志详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LogUrl 日志url
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

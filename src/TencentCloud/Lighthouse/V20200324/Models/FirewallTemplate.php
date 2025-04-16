@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 防火墙模板信息。
  *
- * @method string getTemplateId() 获取模板Id。
- * @method void setTemplateId(string $TemplateId) 设置模板Id。
+ * @method string getTemplateId() 获取模板ID。
+ * @method void setTemplateId(string $TemplateId) 设置模板ID。
  * @method string getTemplateName() 获取模板名称。
  * @method void setTemplateName(string $TemplateName) 设置模板名称。
- * @method string getTemplateType() 获取模板类型。
- * @method void setTemplateType(string $TemplateType) 设置模板类型。
- * @method string getTemplateState() 获取模板状态。
- * @method void setTemplateState(string $TemplateState) 设置模板状态。
+ * @method string getTemplateType() 获取模板类型。取值: "PRIVATE"(个人模版)
+ * @method void setTemplateType(string $TemplateType) 设置模板类型。取值: "PRIVATE"(个人模版)
+ * @method string getTemplateState() 获取模板状态。取值: "NORMAL"(正常)
+ * @method void setTemplateState(string $TemplateState) 设置模板状态。取值: "NORMAL"(正常)
  * @method string getCreatedTime() 获取模板创建时间。
  * @method void setCreatedTime(string $CreatedTime) 设置模板创建时间。
  */
 class FirewallTemplate extends AbstractModel
 {
     /**
-     * @var string 模板Id。
+     * @var string 模板ID。
      */
     public $TemplateId;
 
@@ -44,12 +44,12 @@ class FirewallTemplate extends AbstractModel
     public $TemplateName;
 
     /**
-     * @var string 模板类型。
+     * @var string 模板类型。取值: "PRIVATE"(个人模版)
      */
     public $TemplateType;
 
     /**
-     * @var string 模板状态。
+     * @var string 模板状态。取值: "NORMAL"(正常)
      */
     public $TemplateState;
 
@@ -59,10 +59,10 @@ class FirewallTemplate extends AbstractModel
     public $CreatedTime;
 
     /**
-     * @param string $TemplateId 模板Id。
+     * @param string $TemplateId 模板ID。
      * @param string $TemplateName 模板名称。
-     * @param string $TemplateType 模板类型。
-     * @param string $TemplateState 模板状态。
+     * @param string $TemplateType 模板类型。取值: "PRIVATE"(个人模版)
+     * @param string $TemplateState 模板状态。取值: "NORMAL"(正常)
      * @param string $CreatedTime 模板创建时间。
      */
     function __construct()

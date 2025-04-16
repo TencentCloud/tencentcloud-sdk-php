@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyPrivateZoneVpc返回参数结构体
  *
- * @method string getZoneId() 获取私有域ID, zone-xxxxxx
- * @method void setZoneId(string $ZoneId) 设置私有域ID, zone-xxxxxx
+ * @method string getZoneId() 获取私有域ID, zone-12345ds6
+ * @method void setZoneId(string $ZoneId) 设置私有域ID, zone-12345ds6
  * @method array getVpcSet() 获取解析域关联的VPC列表
  * @method void setVpcSet(array $VpcSet) 设置解析域关联的VPC列表
  * @method array getAccountVpcSet() 获取私有域账号关联的全部VPC列表
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyPrivateZoneVpcResponse extends AbstractModel
 {
     /**
-     * @var string 私有域ID, zone-xxxxxx
+     * @var string 私有域ID, zone-12345ds6
      */
     public $ZoneId;
 
@@ -52,7 +52,7 @@ class ModifyPrivateZoneVpcResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ZoneId 私有域ID, zone-xxxxxx
+     * @param string $ZoneId 私有域ID, zone-12345ds6
      * @param array $VpcSet 解析域关联的VPC列表
      * @param array $AccountVpcSet 私有域账号关联的全部VPC列表
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。

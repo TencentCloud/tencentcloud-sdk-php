@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCmkUserCount(integer $CmkUserCount) 设置返回KMS用户密钥使用数量
  * @method integer getCmkLimit() 获取返回KMS用户密钥规格数量
  * @method void setCmkLimit(integer $CmkLimit) 设置返回KMS用户密钥规格数量
+ * @method array getExclusiveHSMList() 获取返回独享集群组
+ * @method void setExclusiveHSMList(array $ExclusiveHSMList) 设置返回独享集群组
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -103,6 +105,11 @@ class GetServiceStatusResponse extends AbstractModel
     public $CmkLimit;
 
     /**
+     * @var array 返回独享集群组
+     */
+    public $ExclusiveHSMList;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -119,6 +126,7 @@ class GetServiceStatusResponse extends AbstractModel
      * @param string $SubscriptionInfo KMS 订阅信息。
      * @param integer $CmkUserCount 返回KMS用户密钥使用数量
      * @param integer $CmkLimit 返回KMS用户密钥规格数量
+     * @param array $ExclusiveHSMList 返回独享集群组
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -176,6 +184,15 @@ class GetServiceStatusResponse extends AbstractModel
 
         if (array_key_exists("CmkLimit",$param) and $param["CmkLimit"] !== null) {
             $this->CmkLimit = $param["CmkLimit"];
+        }
+
+        if (array_key_exists("ExclusiveHSMList",$param) and $param["ExclusiveHSMList"] !== null) {
+            $this->ExclusiveHSMList = [];
+            foreach ($param["ExclusiveHSMList"] as $key => $value){
+                $obj = new ExclusiveHSM();
+                $obj->deserialize($value);
+                array_push($this->ExclusiveHSMList, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

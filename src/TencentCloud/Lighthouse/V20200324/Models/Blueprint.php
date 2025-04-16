@@ -36,14 +36,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlatform(string $Platform) 设置操作系统平台。
  * @method string getPlatformType() 获取操作系统平台类型，如 LINUX_UNIX、WINDOWS。
  * @method void setPlatformType(string $PlatformType) 设置操作系统平台类型，如 LINUX_UNIX、WINDOWS。
- * @method string getBlueprintType() 获取镜像类型，如 APP_OS、PURE_OS、PRIVATE。
- * @method void setBlueprintType(string $BlueprintType) 设置镜像类型，如 APP_OS、PURE_OS、PRIVATE。
+ * @method string getBlueprintType() 获取镜像类型，如 APP_OS（应用镜像）, PURE_OS（系统镜像）, DOCKER（容器）, PRIVATE（私有镜像）, SHARED（共享镜像）, GAME_PORTAL（游戏专区镜像）。
+ * @method void setBlueprintType(string $BlueprintType) 设置镜像类型，如 APP_OS（应用镜像）, PURE_OS（系统镜像）, DOCKER（容器）, PRIVATE（私有镜像）, SHARED（共享镜像）, GAME_PORTAL（游戏专区镜像）。
  * @method string getImageUrl() 获取镜像图片 URL。
  * @method void setImageUrl(string $ImageUrl) 设置镜像图片 URL。
  * @method integer getRequiredSystemDiskSize() 获取镜像所需系统盘大小，单位 GB。
  * @method void setRequiredSystemDiskSize(integer $RequiredSystemDiskSize) 设置镜像所需系统盘大小，单位 GB。
- * @method string getBlueprintState() 获取镜像状态。
- * @method void setBlueprintState(string $BlueprintState) 设置镜像状态。
+ * @method string getBlueprintState() 获取镜像状态，镜镜像状态，NORMAL（正常）、SYNCING（同步中）、OFFLINE（下线）、ISOLATED（已隔离）、CREATEFAILED（创建失败）、SYNCING_FAILED（目的地域同步失败）、ISOLATING（隔离中）、ISOLATED（已隔离）、DELETING（删除中）、DESTROYING（销毁中）。
+ * @method void setBlueprintState(string $BlueprintState) 设置镜像状态，镜镜像状态，NORMAL（正常）、SYNCING（同步中）、OFFLINE（下线）、ISOLATED（已隔离）、CREATEFAILED（创建失败）、SYNCING_FAILED（目的地域同步失败）、ISOLATING（隔离中）、ISOLATED（已隔离）、DELETING（删除中）、DESTROYING（销毁中）。
  * @method string getCreatedTime() 获取创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
 格式为： YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -110,7 +110,7 @@ class Blueprint extends AbstractModel
     public $PlatformType;
 
     /**
-     * @var string 镜像类型，如 APP_OS、PURE_OS、PRIVATE。
+     * @var string 镜像类型，如 APP_OS（应用镜像）, PURE_OS（系统镜像）, DOCKER（容器）, PRIVATE（私有镜像）, SHARED（共享镜像）, GAME_PORTAL（游戏专区镜像）。
      */
     public $BlueprintType;
 
@@ -125,7 +125,7 @@ class Blueprint extends AbstractModel
     public $RequiredSystemDiskSize;
 
     /**
-     * @var string 镜像状态。
+     * @var string 镜像状态，镜镜像状态，NORMAL（正常）、SYNCING（同步中）、OFFLINE（下线）、ISOLATED（已隔离）、CREATEFAILED（创建失败）、SYNCING_FAILED（目的地域同步失败）、ISOLATING（隔离中）、ISOLATED（已隔离）、DELETING（删除中）、DESTROYING（销毁中）。
      */
     public $BlueprintState;
 
@@ -191,10 +191,10 @@ class Blueprint extends AbstractModel
      * @param string $OsName 操作系统名称。
      * @param string $Platform 操作系统平台。
      * @param string $PlatformType 操作系统平台类型，如 LINUX_UNIX、WINDOWS。
-     * @param string $BlueprintType 镜像类型，如 APP_OS、PURE_OS、PRIVATE。
+     * @param string $BlueprintType 镜像类型，如 APP_OS（应用镜像）, PURE_OS（系统镜像）, DOCKER（容器）, PRIVATE（私有镜像）, SHARED（共享镜像）, GAME_PORTAL（游戏专区镜像）。
      * @param string $ImageUrl 镜像图片 URL。
      * @param integer $RequiredSystemDiskSize 镜像所需系统盘大小，单位 GB。
-     * @param string $BlueprintState 镜像状态。
+     * @param string $BlueprintState 镜像状态，镜镜像状态，NORMAL（正常）、SYNCING（同步中）、OFFLINE（下线）、ISOLATED（已隔离）、CREATEFAILED（创建失败）、SYNCING_FAILED（目的地域同步失败）、ISOLATING（隔离中）、ISOLATED（已隔离）、DELETING（删除中）、DESTROYING（销毁中）。
      * @param string $CreatedTime 创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
 格式为： YYYY-MM-DDThh:mm:ssZ。
 注意：此字段可能返回 null，表示取不到有效值。

@@ -21,29 +21,19 @@ use TencentCloud\Common\AbstractModel;
  * 网络配置
  *
  * @method integer getId() 获取网络配置id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(integer $Id) 设置网络配置id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAssociateId() 获取网络配置唯一标志符
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssociateId(string $AssociateId) 设置网络配置唯一标志符
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHouseId() 获取计算引擎id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHouseId(string $HouseId) 设置计算引擎id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDatasourceConnectionId() 获取数据源id(已废弃)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatasourceConnectionId(string $DatasourceConnectionId) 设置数据源id(已废弃)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getState() 获取网络配置状态（0-初始化，1-正常）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setState(integer $State) 设置网络配置状态（0-初始化，1-正常）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(integer $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUpdateTime() 获取修改时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(integer $UpdateTime) 设置修改时间
@@ -53,13 +43,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppid(integer $Appid) 设置创建用户Appid
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHouseName() 获取计算引擎名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHouseName(string $HouseName) 设置计算引擎名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDatasourceConnectionName() 获取网络配置名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatasourceConnectionName(string $DatasourceConnectionName) 设置网络配置名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNetworkConnectionType() 获取网络配置类型
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetworkConnectionType(integer $NetworkConnectionType) 设置网络配置类型
@@ -97,25 +83,21 @@ class NetworkConnection extends AbstractModel
 {
     /**
      * @var integer 网络配置id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var string 网络配置唯一标志符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AssociateId;
 
     /**
      * @var string 计算引擎id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HouseId;
 
     /**
      * @var string 数据源id(已废弃)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DatasourceConnectionId;
 
@@ -127,7 +109,6 @@ class NetworkConnection extends AbstractModel
 
     /**
      * @var integer 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
@@ -145,13 +126,11 @@ class NetworkConnection extends AbstractModel
 
     /**
      * @var string 计算引擎名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HouseName;
 
     /**
      * @var string 网络配置名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DatasourceConnectionName;
 
@@ -205,25 +184,18 @@ class NetworkConnection extends AbstractModel
 
     /**
      * @param integer $Id 网络配置id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AssociateId 网络配置唯一标志符
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HouseId 计算引擎id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatasourceConnectionId 数据源id(已废弃)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $State 网络配置状态（0-初始化，1-正常）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UpdateTime 修改时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Appid 创建用户Appid
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HouseName 计算引擎名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatasourceConnectionName 网络配置名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NetworkConnectionType 网络配置类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uin 创建用户uin

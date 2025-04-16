@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * DescribeSimpleInstances返回参数结构体
  *
  * @method integer getTotalCount() 获取集群列表总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置集群列表总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getInstancesList() 获取集群列表详情
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstancesList(array $InstancesList) 设置集群列表详情
@@ -39,7 +37,6 @@ class DescribeSimpleInstancesResponse extends AbstractModel
 {
     /**
      * @var integer 集群列表总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
@@ -62,7 +59,6 @@ class DescribeSimpleInstancesResponse extends AbstractModel
 
     /**
      * @param integer $TotalCount 集群列表总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $InstancesList 集群列表详情
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrorMsg 错误信息

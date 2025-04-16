@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * 数据优化引擎信息
  *
  * @method string getHouseName() 获取引擎资源名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHouseName(string $HouseName) 设置引擎资源名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHouseId() 获取引擎资源ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHouseId(string $HouseId) 设置引擎资源ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHouseSize() 获取该参数仅针对spark作业引擎有效，用于执行数据优化任务的资源大小，不填时将采用该引擎所有资源
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHouseSize(integer $HouseSize) 设置该参数仅针对spark作业引擎有效，用于执行数据优化任务的资源大小，不填时将采用该引擎所有资源
@@ -37,13 +33,11 @@ class OptimizerEngineInfo extends AbstractModel
 {
     /**
      * @var string 引擎资源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HouseName;
 
     /**
      * @var string 引擎资源ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HouseId;
 
@@ -55,9 +49,7 @@ class OptimizerEngineInfo extends AbstractModel
 
     /**
      * @param string $HouseName 引擎资源名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HouseId 引擎资源ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HouseSize 该参数仅针对spark作业引擎有效，用于执行数据优化任务的资源大小，不填时将采用该引擎所有资源
 注意：此字段可能返回 null，表示取不到有效值。
      */

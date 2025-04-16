@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * SmartOptimizerLifecyclePolicy
  *
  * @method string getLifecycleEnable() 获取生命周期启用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLifecycleEnable(string $LifecycleEnable) 设置生命周期启用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getExpiration() 获取过期时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpiration(integer $Expiration) 设置过期时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getDropTable() 获取是否删表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDropTable(boolean $DropTable) 设置是否删表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExpiredField() 获取过期字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpiredField(string $ExpiredField) 设置过期字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExpiredFieldFormat() 获取过期字段格式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpiredFieldFormat(string $ExpiredFieldFormat) 设置过期字段格式
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SmartOptimizerLifecyclePolicy extends AbstractModel
 {
     /**
      * @var string 生命周期启用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LifecycleEnable;
 
     /**
      * @var integer 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Expiration;
 
     /**
      * @var boolean 是否删表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DropTable;
 
     /**
      * @var string 过期字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpiredField;
 
     /**
      * @var string 过期字段格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpiredFieldFormat;
 
     /**
      * @param string $LifecycleEnable 生命周期启用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Expiration 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $DropTable 是否删表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExpiredField 过期字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExpiredFieldFormat 过期字段格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getFormat() 获取文本类型，本参数取值为TextFile。
  * @method void setFormat(string $Format) 设置文本类型，本参数取值为TextFile。
  * @method string getRegex() 获取处理文本用的正则表达式。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegex(string $Regex) 设置处理文本用的正则表达式。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TextFile extends AbstractModel
 {
@@ -36,14 +34,12 @@ class TextFile extends AbstractModel
 
     /**
      * @var string 处理文本用的正则表达式。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Regex;
 
     /**
      * @param string $Format 文本类型，本参数取值为TextFile。
      * @param string $Regex 处理文本用的正则表达式。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

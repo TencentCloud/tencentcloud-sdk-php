@@ -21,121 +21,85 @@ use TencentCloud\Common\AbstractModel;
  * 表字段描述信息
  *
  * @method string getName() 获取字段名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置字段名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取字段类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置字段类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getComment() 获取字段描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComment(string $Comment) 设置字段描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDefault() 获取字段默认值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefault(string $Default) 设置字段默认值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getNotNull() 获取字段是否是非空
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNotNull(boolean $NotNull) 设置字段是否是非空
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPrecision() 获取表示整个 numeric 的长度,取值1-38
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrecision(integer $Precision) 设置表示整个 numeric 的长度,取值1-38
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScale() 获取表示小数部分的长度
 Scale小于Precision
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScale(integer $Scale) 设置表示小数部分的长度
 Scale小于Precision
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPosition() 获取字段位置，小的在前
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPosition(integer $Position) 设置字段位置，小的在前
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsPartition() 获取是否为分区字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsPartition(boolean $IsPartition) 设置是否为分区字段
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TColumn extends AbstractModel
 {
     /**
      * @var string 字段名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 字段类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 字段描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Comment;
 
     /**
      * @var string 字段默认值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Default;
 
     /**
      * @var boolean 字段是否是非空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NotNull;
 
     /**
      * @var integer 表示整个 numeric 的长度,取值1-38
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Precision;
 
     /**
      * @var integer 表示小数部分的长度
 Scale小于Precision
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Scale;
 
     /**
      * @var integer 字段位置，小的在前
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Position;
 
     /**
      * @var boolean 是否为分区字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsPartition;
 
     /**
      * @param string $Name 字段名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 字段类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Comment 字段描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Default 字段默认值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $NotNull 字段是否是非空
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Precision 表示整个 numeric 的长度,取值1-38
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Scale 表示小数部分的长度
 Scale小于Precision
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Position 字段位置，小的在前
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsPartition 是否为分区字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

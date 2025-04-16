@@ -82,9 +82,9 @@ use TencentCloud\Common\AbstractModel;
 * I: MINUTE_CYCLE
 * C: CRONTAB_CYCLE
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCurRunDate() 获取标准数据时间
+ * @method string getCurRunDate() 获取实例数据时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCurRunDate(string $CurRunDate) 设置标准数据时间
+ * @method void setCurRunDate(string $CurRunDate) 设置实例数据时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTryLimit() 获取每次运行失败，下发重试次数限制
 注意：此字段可能返回 null，表示取不到有效值。
@@ -237,7 +237,7 @@ class InstanceVO extends AbstractModel
     public $TaskCycleType;
 
     /**
-     * @var string 标准数据时间
+     * @var string 实例数据时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CurRunDate;
@@ -354,7 +354,7 @@ class InstanceVO extends AbstractModel
 * I: MINUTE_CYCLE
 * C: CRONTAB_CYCLE
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CurRunDate 标准数据时间
+     * @param string $CurRunDate 实例数据时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TryLimit 每次运行失败，下发重试次数限制
 注意：此字段可能返回 null，表示取不到有效值。

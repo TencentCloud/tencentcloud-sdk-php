@@ -21,21 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * 用户详细信息
  *
  * @method string getUserId() 获取用户Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserId(string $UserId) 设置用户Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取返回的信息类型，Group：返回的当前用户的工作组信息；DataAuth：返回的当前用户的数据权限信息；EngineAuth：返回的当前用户的引擎权限信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置返回的信息类型，Group：返回的当前用户的工作组信息；DataAuth：返回的当前用户的数据权限信息；EngineAuth：返回的当前用户的引擎权限信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserType() 获取用户类型：ADMIN：管理员 COMMON：一般用户
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserType(string $UserType) 设置用户类型：ADMIN：管理员 COMMON：一般用户
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserDescription() 获取用户描述信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserDescription(string $UserDescription) 设置用户描述信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method Policys getDataPolicyInfo() 获取数据权限信息集合
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataPolicyInfo(Policys $DataPolicyInfo) 设置数据权限信息集合
@@ -49,41 +41,37 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWorkGroupInfo(WorkGroups $WorkGroupInfo) 设置绑定到该用户的工作组集合信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserAlias() 获取用户别名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserAlias(string $UserAlias) 设置用户别名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method Policys getRowFilterInfo() 获取行过滤集合
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRowFilterInfo(Policys $RowFilterInfo) 设置行过滤集合
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAccountType() 获取账号类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccountType(string $AccountType) 设置账号类型
+ * @method Policys getCatalogPolicyInfo() 获取数据源权限集合
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCatalogPolicyInfo(Policys $CatalogPolicyInfo) 设置数据源权限集合
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class UserDetailInfo extends AbstractModel
 {
     /**
      * @var string 用户Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserId;
 
     /**
      * @var string 返回的信息类型，Group：返回的当前用户的工作组信息；DataAuth：返回的当前用户的数据权限信息；EngineAuth：返回的当前用户的引擎权限信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 用户类型：ADMIN：管理员 COMMON：一般用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserType;
 
     /**
      * @var string 用户描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserDescription;
 
@@ -107,7 +95,6 @@ class UserDetailInfo extends AbstractModel
 
     /**
      * @var string 用户别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserAlias;
 
@@ -119,19 +106,20 @@ class UserDetailInfo extends AbstractModel
 
     /**
      * @var string 账号类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccountType;
 
     /**
+     * @var Policys 数据源权限集合
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CatalogPolicyInfo;
+
+    /**
      * @param string $UserId 用户Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 返回的信息类型，Group：返回的当前用户的工作组信息；DataAuth：返回的当前用户的数据权限信息；EngineAuth：返回的当前用户的引擎权限信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserType 用户类型：ADMIN：管理员 COMMON：一般用户
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserDescription 用户描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Policys $DataPolicyInfo 数据权限信息集合
 注意：此字段可能返回 null，表示取不到有效值。
      * @param Policys $EnginePolicyInfo 引擎权限集合
@@ -139,10 +127,10 @@ class UserDetailInfo extends AbstractModel
      * @param WorkGroups $WorkGroupInfo 绑定到该用户的工作组集合信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserAlias 用户别名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Policys $RowFilterInfo 行过滤集合
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AccountType 账号类型
+     * @param Policys $CatalogPolicyInfo 数据源权限集合
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -200,6 +188,11 @@ class UserDetailInfo extends AbstractModel
 
         if (array_key_exists("AccountType",$param) and $param["AccountType"] !== null) {
             $this->AccountType = $param["AccountType"];
+        }
+
+        if (array_key_exists("CatalogPolicyInfo",$param) and $param["CatalogPolicyInfo"] !== null) {
+            $this->CatalogPolicyInfo = new Policys();
+            $this->CatalogPolicyInfo->deserialize($param["CatalogPolicyInfo"]);
         }
     }
 }

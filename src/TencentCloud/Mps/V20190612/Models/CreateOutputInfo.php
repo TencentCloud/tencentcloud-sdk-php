@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置绑定的输入安全组 ID。 
  * @method array getZones() 获取可用区，output最多只支持输入一个可用区。	
  * @method void setZones(array $Zones) 设置可用区，output最多只支持输入一个可用区。	
- * @method string getOutputType() 获取输出类型：Internet/TencentCSS/StreamLive
- * @method void setOutputType(string $OutputType) 设置输出类型：Internet/TencentCSS/StreamLive
+ * @method string getOutputType() 获取输出类型：Internet/TencentCSS
+ * @method void setOutputType(string $OutputType) 设置输出类型：Internet/TencentCSS
  * @method CreateOutputRistSettings getRISTSettings() 获取输出的RIST的配置。
  * @method void setRISTSettings(CreateOutputRistSettings $RISTSettings) 设置输出的RIST的配置。
  * @method PidSelector getPidSelector() 获取对于含有多个音/视频轨的流，可以指定需要使用的轨道
@@ -110,7 +110,7 @@ class CreateOutputInfo extends AbstractModel
     public $Zones;
 
     /**
-     * @var string 输出类型：Internet/TencentCSS/StreamLive
+     * @var string 输出类型：Internet/TencentCSS
      */
     public $OutputType;
 
@@ -137,7 +137,7 @@ class CreateOutputInfo extends AbstractModel
      * @param integer $MaxConcurrent 最大拉流并发数，最大4，默认4。
      * @param array $SecurityGroupIds 绑定的输入安全组 ID。 
      * @param array $Zones 可用区，output最多只支持输入一个可用区。	
-     * @param string $OutputType 输出类型：Internet/TencentCSS/StreamLive
+     * @param string $OutputType 输出类型：Internet/TencentCSS
      * @param CreateOutputRistSettings $RISTSettings 输出的RIST的配置。
      * @param PidSelector $PidSelector 对于含有多个音/视频轨的流，可以指定需要使用的轨道
      */

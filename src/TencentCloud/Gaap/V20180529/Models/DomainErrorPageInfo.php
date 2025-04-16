@@ -29,25 +29,15 @@ use TencentCloud\Common\AbstractModel;
  * @method array getErrorNos() 获取原始错误码
  * @method void setErrorNos(array $ErrorNos) 设置原始错误码
  * @method integer getNewErrorNo() 获取新的错误码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNewErrorNo(integer $NewErrorNo) 设置新的错误码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getClearHeaders() 获取需要清理的响应头
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClearHeaders(array $ClearHeaders) 设置需要清理的响应头
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSetHeaders() 获取需要设置的响应头
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSetHeaders(array $SetHeaders) 设置需要设置的响应头
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBody() 获取设置的响应体(不包括 HTTP头)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBody(string $Body) 设置设置的响应体(不包括 HTTP头)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取规则状态,0为成功
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置规则状态,0为成功
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DomainErrorPageInfo extends AbstractModel
 {
@@ -73,31 +63,26 @@ class DomainErrorPageInfo extends AbstractModel
 
     /**
      * @var integer 新的错误码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NewErrorNo;
 
     /**
      * @var array 需要清理的响应头
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClearHeaders;
 
     /**
      * @var array 需要设置的响应头
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SetHeaders;
 
     /**
      * @var string 设置的响应体(不包括 HTTP头)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Body;
 
     /**
      * @var integer 规则状态,0为成功
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
@@ -107,15 +92,10 @@ class DomainErrorPageInfo extends AbstractModel
      * @param string $Domain 域名
      * @param array $ErrorNos 原始错误码
      * @param integer $NewErrorNo 新的错误码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ClearHeaders 需要清理的响应头
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SetHeaders 需要设置的响应头
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Body 设置的响应体(不包括 HTTP头)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 规则状态,0为成功
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

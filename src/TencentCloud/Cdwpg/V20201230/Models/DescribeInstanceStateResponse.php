@@ -47,9 +47,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProcessName(string $ProcessName) 设置当前步骤的名称，例如：”购买资源中“
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBackupStatus() 获取集群备份任务开启状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackupStatus(integer $BackupStatus) 设置集群备份任务开启状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -98,7 +96,6 @@ class DescribeInstanceStateResponse extends AbstractModel
 
     /**
      * @var integer 集群备份任务开启状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BackupStatus;
 
@@ -122,7 +119,6 @@ class DescribeInstanceStateResponse extends AbstractModel
      * @param string $ProcessName 当前步骤的名称，例如：”购买资源中“
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BackupStatus 集群备份任务开启状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

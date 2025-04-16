@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * SparkSQL批任务信息
  *
  * @method string getTaskId() 获取SQL子任务唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskId(string $TaskId) 设置SQL子任务唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExecuteSQL() 获取运行SQL
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExecuteSQL(string $ExecuteSQL) 设置运行SQL
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMessage() 获取任务信息，成功则返回：Task Success!，失败则返回异常信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置任务信息，成功则返回：Task Success!，失败则返回异常信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BatchSqlTask extends AbstractModel
 {
     /**
      * @var string SQL子任务唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskId;
 
     /**
      * @var string 运行SQL
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecuteSQL;
 
     /**
      * @var string 任务信息，成功则返回：Task Success!，失败则返回异常信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
     /**
      * @param string $TaskId SQL子任务唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExecuteSQL 运行SQL
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message 任务信息，成功则返回：Task Success!，失败则返回异常信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

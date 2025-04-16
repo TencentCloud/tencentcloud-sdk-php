@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * FavorInfo
  *
  * @method integer getPriority() 获取优先事项
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPriority(integer $Priority) 设置优先事项
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCatalog() 获取Catalog名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCatalog(string $Catalog) 设置Catalog名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDataBase() 获取DataBase名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataBase(string $DataBase) 设置DataBase名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTable() 获取Table名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTable(string $Table) 设置Table名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class FavorInfo extends AbstractModel
 {
     /**
      * @var integer 优先事项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Priority;
 
     /**
      * @var string Catalog名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Catalog;
 
     /**
      * @var string DataBase名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataBase;
 
     /**
      * @var string Table名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Table;
 
     /**
      * @param integer $Priority 优先事项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Catalog Catalog名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataBase DataBase名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Table Table名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

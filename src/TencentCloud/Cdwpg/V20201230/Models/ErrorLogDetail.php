@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 错误日志详细信息
  *
  * @method string getUserName() 获取用户名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserName(string $UserName) 设置用户名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDatabase() 获取数据库
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatabase(string $Database) 设置数据库
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getErrorTime() 获取报错时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorTime(string $ErrorTime) 设置报错时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getErrorMessage() 获取报错信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorMessage(string $ErrorMessage) 设置报错信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ErrorLogDetail extends AbstractModel
 {
     /**
      * @var string 用户名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserName;
 
     /**
      * @var string 数据库
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Database;
 
     /**
      * @var string 报错时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrorTime;
 
     /**
      * @var string 报错信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrorMessage;
 
     /**
      * @param string $UserName 用户名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Database 数据库
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrorTime 报错时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrorMessage 报错信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

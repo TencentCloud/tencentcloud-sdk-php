@@ -21,21 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * ParamDetail 详细
  *
  * @method string getParamName() 获取参数名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParamName(string $ParamName) 设置参数名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDefaultValue() 获取默认值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefaultValue(string $DefaultValue) 设置默认值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getNeedRestart() 获取是否需要重启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNeedRestart(boolean $NeedRestart) 设置是否需要重启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRunningValue() 获取当前运行值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRunningValue(string $RunningValue) 设置当前运行值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ValueRange getValueRange() 获取取值范围
  * @method void setValueRange(ValueRange $ValueRange) 设置取值范围
  * @method string getUnit() 获取单位
@@ -55,25 +47,21 @@ class ParamDetail extends AbstractModel
 {
     /**
      * @var string 参数名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParamName;
 
     /**
      * @var string 默认值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DefaultValue;
 
     /**
      * @var boolean 是否需要重启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NeedRestart;
 
     /**
      * @var string 当前运行值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RunningValue;
 
@@ -102,13 +90,9 @@ class ParamDetail extends AbstractModel
 
     /**
      * @param string $ParamName 参数名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DefaultValue 默认值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $NeedRestart 是否需要重启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RunningValue 当前运行值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ValueRange $ValueRange 取值范围
      * @param string $Unit 单位
 注意：此字段可能返回 null，表示取不到有效值。

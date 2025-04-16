@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUserId() 获取用户Id，和子用户uin相同
  * @method void setUserId(string $UserId) 设置用户Id，和子用户uin相同
  * @method string getUserDescription() 获取用户描述信息，方便区分不同用户
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserDescription(string $UserDescription) 设置用户描述信息，方便区分不同用户
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPolicySet() 获取单独给用户绑定的权限集合
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolicySet(array $PolicySet) 设置单独给用户绑定的权限集合
@@ -39,17 +37,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWorkGroupSet(array $WorkGroupSet) 设置关联的工作组集合
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsOwner() 获取是否是主账号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsOwner(boolean $IsOwner) 设置是否是主账号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserType() 获取用户类型。ADMIN：管理员 COMMON：普通用户。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserType(string $UserType) 设置用户类型。ADMIN：管理员 COMMON：普通用户。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserAlias() 获取用户别名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserAlias(string $UserAlias) 设置用户别名
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAccountType() 获取账号类型
+ * @method void setAccountType(string $AccountType) 设置账号类型
  */
 class UserInfo extends AbstractModel
 {
@@ -60,7 +54,6 @@ class UserInfo extends AbstractModel
 
     /**
      * @var string 用户描述信息，方便区分不同用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserDescription;
 
@@ -88,26 +81,27 @@ class UserInfo extends AbstractModel
 
     /**
      * @var boolean 是否是主账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsOwner;
 
     /**
      * @var string 用户类型。ADMIN：管理员 COMMON：普通用户。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserType;
 
     /**
      * @var string 用户别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserAlias;
 
     /**
+     * @var string 账号类型
+     */
+    public $AccountType;
+
+    /**
      * @param string $UserId 用户Id，和子用户uin相同
      * @param string $UserDescription 用户描述信息，方便区分不同用户
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PolicySet 单独给用户绑定的权限集合
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Creator 当前用户的创建者
@@ -115,11 +109,9 @@ class UserInfo extends AbstractModel
      * @param array $WorkGroupSet 关联的工作组集合
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsOwner 是否是主账号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserType 用户类型。ADMIN：管理员 COMMON：普通用户。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserAlias 用户别名
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AccountType 账号类型
      */
     function __construct()
     {
@@ -178,6 +170,10 @@ class UserInfo extends AbstractModel
 
         if (array_key_exists("UserAlias",$param) and $param["UserAlias"] !== null) {
             $this->UserAlias = $param["UserAlias"];
+        }
+
+        if (array_key_exists("AccountType",$param) and $param["AccountType"] !== null) {
+            $this->AccountType = $param["AccountType"];
         }
     }
 }

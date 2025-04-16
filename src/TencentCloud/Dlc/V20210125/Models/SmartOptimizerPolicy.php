@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * SmartOptimizerPolicy
  *
  * @method string getInherit() 获取是否继承
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInherit(string $Inherit) 设置是否继承
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getResources() 获取ResourceInfo
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResources(array $Resources) 设置ResourceInfo
@@ -49,7 +47,6 @@ class SmartOptimizerPolicy extends AbstractModel
 {
     /**
      * @var string 是否继承
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Inherit;
 
@@ -85,7 +82,6 @@ class SmartOptimizerPolicy extends AbstractModel
 
     /**
      * @param string $Inherit 是否继承
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Resources ResourceInfo
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SmartOptimizerWrittenPolicy $Written SmartOptimizerWrittenPolicy

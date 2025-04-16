@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 集群状态抽象后的结构体
  *
  * @method string getInstanceState() 获取集群状态，例如：Serving
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceState(string $InstanceState) 设置集群状态，例如：Serving
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFlowCreateTime() 获取集群操作创建时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowCreateTime(string $FlowCreateTime) 设置集群操作创建时间
@@ -65,7 +63,6 @@ class InstanceStateInfo extends AbstractModel
 {
     /**
      * @var string 集群状态，例如：Serving
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceState;
 
@@ -125,7 +122,6 @@ class InstanceStateInfo extends AbstractModel
 
     /**
      * @param string $InstanceState 集群状态，例如：Serving
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FlowCreateTime 集群操作创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FlowName 集群操作名称

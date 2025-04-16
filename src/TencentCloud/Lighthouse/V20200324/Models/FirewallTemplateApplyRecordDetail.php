@@ -26,10 +26,12 @@ use TencentCloud\Common\AbstractModel;
 
 - SUCCESS：成功
 - FAILED：失败
+- RUNNING：运行中
  * @method void setApplyState(string $ApplyState) 设置防火墙模板应用状态。
 
 - SUCCESS：成功
 - FAILED：失败
+- RUNNING：运行中
  * @method string getErrorMessage() 获取防火墙模板应用错误信息。
  * @method void setErrorMessage(string $ErrorMessage) 设置防火墙模板应用错误信息。
  */
@@ -45,6 +47,7 @@ class FirewallTemplateApplyRecordDetail extends AbstractModel
 
 - SUCCESS：成功
 - FAILED：失败
+- RUNNING：运行中
      */
     public $ApplyState;
 
@@ -59,6 +62,7 @@ class FirewallTemplateApplyRecordDetail extends AbstractModel
 
 - SUCCESS：成功
 - FAILED：失败
+- RUNNING：运行中
      * @param string $ErrorMessage 防火墙模板应用错误信息。
      */
     function __construct()

@@ -25,35 +25,21 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getCertificateType() 获取证书类型。
  * @method void setCertificateType(integer $CertificateType) 设置证书类型。
  * @method string getCertificateAlias() 获取证书名字。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertificateAlias(string $CertificateAlias) 设置证书名字。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCertificateContent() 获取证书内容。
  * @method void setCertificateContent(string $CertificateContent) 设置证书内容。
  * @method string getCertificateKey() 获取密钥内容。仅当证书类型为SSL证书时，返回该字段。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertificateKey(string $CertificateKey) 设置密钥内容。仅当证书类型为SSL证书时，返回该字段。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreateTime() 获取创建时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(integer $CreateTime) 设置创建时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBeginTime() 获取证书生效起始时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBeginTime(integer $BeginTime) 设置证书生效起始时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEndTime() 获取证书过期时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(integer $EndTime) 设置证书过期时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIssuerCN() 获取证书签发者通用名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIssuerCN(string $IssuerCN) 设置证书签发者通用名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubjectCN() 获取证书主题通用名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubjectCN(string $SubjectCN) 设置证书主题通用名称。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CertificateDetail extends AbstractModel
 {
@@ -69,7 +55,6 @@ class CertificateDetail extends AbstractModel
 
     /**
      * @var string 证书名字。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CertificateAlias;
 
@@ -80,37 +65,31 @@ class CertificateDetail extends AbstractModel
 
     /**
      * @var string 密钥内容。仅当证书类型为SSL证书时，返回该字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CertificateKey;
 
     /**
      * @var integer 创建时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var integer 证书生效起始时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BeginTime;
 
     /**
      * @var integer 证书过期时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
      * @var string 证书签发者通用名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IssuerCN;
 
     /**
      * @var string 证书主题通用名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubjectCN;
 
@@ -118,20 +97,13 @@ class CertificateDetail extends AbstractModel
      * @param string $CertificateId 证书ID。
      * @param integer $CertificateType 证书类型。
      * @param string $CertificateAlias 证书名字。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CertificateContent 证书内容。
      * @param string $CertificateKey 密钥内容。仅当证书类型为SSL证书时，返回该字段。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateTime 创建时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BeginTime 证书生效起始时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EndTime 证书过期时间，采用Unix时间戳的方式，表示从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IssuerCN 证书签发者通用名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubjectCN 证书主题通用名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

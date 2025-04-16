@@ -23,7 +23,9 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Tan\V20220420\Models as Models;
 
 /**
- * @method Models\CreateBlockNodeRecordsResponse CreateBlockNodeRecords(Models\CreateBlockNodeRecordsRequest $req) 推送节点数据
+ * @method Models\CreateBlockNodeRecordsResponse CreateBlockNodeRecords(Models\CreateBlockNodeRecordsRequest $req) 产品下线
+
+推送节点数据
  */
 
 class TanClient extends AbstractClient

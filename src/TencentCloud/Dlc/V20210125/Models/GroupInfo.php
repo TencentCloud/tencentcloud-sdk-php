@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 数据脱敏用户组信息
  *
  * @method integer getWorkGroupId() 获取用户组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWorkGroupId(integer $WorkGroupId) 设置用户组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStrategyType() 获取策略类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStrategyType(string $StrategyType) 设置策略类型
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class GroupInfo extends AbstractModel
 {
     /**
      * @var integer 用户组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkGroupId;
 
     /**
      * @var string 策略类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StrategyType;
 
     /**
      * @param integer $WorkGroupId 用户组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StrategyType 策略类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

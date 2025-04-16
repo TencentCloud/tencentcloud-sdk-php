@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceType(string $DeviceType) 设置变配后实例机器类型
  * @method string getUpgradeType() 获取升级方式。升级完成后切换或维护时间内切换
  * @method void setUpgradeType(string $UpgradeType) 设置升级方式。升级完成后切换或维护时间内切换
+ * @method integer getLibraNodeCount() 获取libra节点数量
+ * @method void setLibraNodeCount(integer $LibraNodeCount) 设置libra节点数量
+ * @method integer getOldLibraNodeCount() 获取原libra节点数量
+ * @method void setOldLibraNodeCount(integer $OldLibraNodeCount) 设置原libra节点数量
  */
 class ModifyInstanceData extends AbstractModel
 {
@@ -87,6 +91,16 @@ class ModifyInstanceData extends AbstractModel
     public $UpgradeType;
 
     /**
+     * @var integer libra节点数量
+     */
+    public $LibraNodeCount;
+
+    /**
+     * @var integer 原libra节点数量
+     */
+    public $OldLibraNodeCount;
+
+    /**
      * @param integer $Cpu 变配后CPU
      * @param integer $Memory 变配后内存
      * @param integer $StorageLimit 变配后存储上限
@@ -96,6 +110,8 @@ class ModifyInstanceData extends AbstractModel
      * @param string $OldDeviceType 变配前实例机器类型
      * @param string $DeviceType 变配后实例机器类型
      * @param string $UpgradeType 升级方式。升级完成后切换或维护时间内切换
+     * @param integer $LibraNodeCount libra节点数量
+     * @param integer $OldLibraNodeCount 原libra节点数量
      */
     function __construct()
     {
@@ -144,6 +160,14 @@ class ModifyInstanceData extends AbstractModel
 
         if (array_key_exists("UpgradeType",$param) and $param["UpgradeType"] !== null) {
             $this->UpgradeType = $param["UpgradeType"];
+        }
+
+        if (array_key_exists("LibraNodeCount",$param) and $param["LibraNodeCount"] !== null) {
+            $this->LibraNodeCount = $param["LibraNodeCount"];
+        }
+
+        if (array_key_exists("OldLibraNodeCount",$param) and $param["OldLibraNodeCount"] !== null) {
+            $this->OldLibraNodeCount = $param["OldLibraNodeCount"];
         }
     }
 }

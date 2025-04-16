@@ -33,9 +33,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getContinentInnerCode() 获取大洲编码。
  * @method void setContinentInnerCode(string $ContinentInnerCode) 设置大洲编码。
  * @method string getRemark() 获取标注信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置标注信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CountryAreaMap extends AbstractModel
 {
@@ -71,7 +69,6 @@ class CountryAreaMap extends AbstractModel
 
     /**
      * @var string 标注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
@@ -83,7 +80,6 @@ class CountryAreaMap extends AbstractModel
      * @param string $ContinentName 大洲名称。
      * @param string $ContinentInnerCode 大洲编码。
      * @param string $Remark 标注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

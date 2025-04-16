@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * ParamItem 信息
  *
  * @method string getNodeType() 获取节点类型, cn/dn
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodeType(string $NodeType) 设置节点类型, cn/dn
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNodeName() 获取节点名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodeName(string $NodeName) 设置节点名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取参数个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置参数个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDetails() 获取参数信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDetails(array $Details) 设置参数信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ParamItem extends AbstractModel
 {
     /**
      * @var string 节点类型, cn/dn
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeType;
 
     /**
      * @var string 节点名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeName;
 
     /**
      * @var integer 参数个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
      * @var array 参数信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Details;
 
     /**
      * @param string $NodeType 节点类型, cn/dn
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NodeName 节点名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 参数个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Details 参数信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

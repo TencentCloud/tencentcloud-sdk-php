@@ -51,21 +51,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataEngines(array $DataEngines) 设置数据源绑定的计算引擎信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserAlias() 获取创建人
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserAlias(string $UserAlias) 设置创建人
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getNetworkConnectionSet() 获取网络配置列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetworkConnectionSet(array $NetworkConnectionSet) 设置网络配置列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getConnectivityState() 获取连通性状态：0（未测试，默认）、1（正常）、2（失败）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConnectivityState(integer $ConnectivityState) 设置连通性状态：0（未测试，默认）、1（正常）、2（失败）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConnectivityTips() 获取连通性测试提示信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConnectivityTips(string $ConnectivityTips) 设置连通性测试提示信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DatasourceConnectionInfo extends AbstractModel
 {
@@ -138,7 +132,6 @@ class DatasourceConnectionInfo extends AbstractModel
 
     /**
      * @var string 创建人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserAlias;
 
@@ -150,13 +143,11 @@ class DatasourceConnectionInfo extends AbstractModel
 
     /**
      * @var integer 连通性状态：0（未测试，默认）、1（正常）、2（失败）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConnectivityState;
 
     /**
      * @var string 连通性测试提示信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConnectivityTips;
 
@@ -177,13 +168,10 @@ class DatasourceConnectionInfo extends AbstractModel
      * @param array $DataEngines 数据源绑定的计算引擎信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserAlias 创建人
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $NetworkConnectionSet 网络配置列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ConnectivityState 连通性状态：0（未测试，默认）、1（正常）、2（失败）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConnectivityTips 连通性测试提示信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

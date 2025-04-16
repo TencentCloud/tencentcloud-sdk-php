@@ -21,25 +21,15 @@ use TencentCloud\Common\AbstractModel;
  * DescribeDMSTable返回参数结构体
  *
  * @method Asset getAsset() 获取基础对象
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAsset(Asset $Asset) 设置基础对象
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getViewOriginalText() 获取视图文本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setViewOriginalText(string $ViewOriginalText) 设置视图文本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getViewExpandedText() 获取视图文本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setViewExpandedText(string $ViewExpandedText) 设置视图文本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRetention() 获取hive维护版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRetention(integer $Retention) 设置hive维护版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DMSSds getSds() 获取存储对象
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSds(DMSSds $Sds) 设置存储对象
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPartitionKeys() 获取分区列
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPartitionKeys(array $PartitionKeys) 设置分区列
@@ -49,49 +39,29 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPartitions(array $Partitions) 设置分区
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取表类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置表类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDbName() 获取数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDbName(string $DbName) 设置数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSchemaName() 获取Schame名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSchemaName(string $SchemaName) 设置Schame名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStorageSize() 获取存储大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStorageSize(integer $StorageSize) 设置存储大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRecordCount() 获取记录数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordCount(integer $RecordCount) 设置记录数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLifeTime() 获取生命周期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLifeTime(integer $LifeTime) 设置生命周期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLastAccessTime() 获取最后访问时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastAccessTime(string $LastAccessTime) 设置最后访问时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDataUpdateTime() 获取数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataUpdateTime(string $DataUpdateTime) 设置数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStructUpdateTime() 获取结构更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStructUpdateTime(string $StructUpdateTime) 设置结构更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getColumns() 获取列
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setColumns(array $Columns) 设置列
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取表名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置表名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -99,31 +69,26 @@ class DescribeDMSTableResponse extends AbstractModel
 {
     /**
      * @var Asset 基础对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Asset;
 
     /**
      * @var string 视图文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ViewOriginalText;
 
     /**
      * @var string 视图文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ViewExpandedText;
 
     /**
      * @var integer hive维护版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Retention;
 
     /**
      * @var DMSSds 存储对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Sds;
 
@@ -141,55 +106,46 @@ class DescribeDMSTableResponse extends AbstractModel
 
     /**
      * @var string 表类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DbName;
 
     /**
      * @var string Schame名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SchemaName;
 
     /**
      * @var integer 存储大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StorageSize;
 
     /**
      * @var integer 记录数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecordCount;
 
     /**
      * @var integer 生命周期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LifeTime;
 
     /**
      * @var string 最后访问时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastAccessTime;
 
     /**
      * @var string 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataUpdateTime;
 
     /**
      * @var string 结构更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StructUpdateTime;
 
@@ -201,7 +157,6 @@ class DescribeDMSTableResponse extends AbstractModel
 
     /**
      * @var string 表名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
@@ -212,41 +167,26 @@ class DescribeDMSTableResponse extends AbstractModel
 
     /**
      * @param Asset $Asset 基础对象
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ViewOriginalText 视图文本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ViewExpandedText 视图文本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Retention hive维护版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DMSSds $Sds 存储对象
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PartitionKeys 分区列
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Partitions 分区
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 表类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DbName 数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SchemaName Schame名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StorageSize 存储大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RecordCount 记录数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LifeTime 生命周期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastAccessTime 最后访问时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataUpdateTime 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StructUpdateTime 结构更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Columns 列
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 表名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

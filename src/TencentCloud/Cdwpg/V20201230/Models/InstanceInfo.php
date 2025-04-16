@@ -21,17 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * 云原生实例详情
  *
  * @method integer getID() 获取ID值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setID(integer $ID) 设置ID值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceType() 获取内核版本类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceType(string $InstanceType) 设置内核版本类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceName() 获取集群名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceName(string $InstanceName) 设置集群名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取集群状态
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置集群状态
@@ -49,17 +43,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceID(string $InstanceID) 设置集群id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegion() 获取地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getZone() 获取地区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZone(string $Zone) 设置地区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegionDesc() 获取地域详情
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionDesc(string $RegionDesc) 设置地域详情
@@ -73,21 +61,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置标签
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVersion() 获取内核版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersion(string $Version) 设置内核版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCharset() 获取字符集
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCharset(string $Charset) 设置字符集
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCNNodes() 获取CN节点列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCNNodes(array $CNNodes) 设置CN节点列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDNNodes() 获取DN节点列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDNNodes(array $DNNodes) 设置DN节点列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRegionId() 获取地域id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionId(integer $RegionId) 设置地域id
@@ -97,51 +77,34 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneId(integer $ZoneId) 设置地区id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVpcId() 获取私有网络
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(string $VpcId) 设置私有网络
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubnetId() 获取子网
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetId(string $SubnetId) 设置子网
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExpireTime() 获取过期时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpireTime(string $ExpireTime) 设置过期时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPayMode() 获取计费方式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayMode(string $PayMode) 设置计费方式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getRenewFlag() 获取自动续费
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRenewFlag(boolean $RenewFlag) 设置自动续费
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取集群id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置集群id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAccessDetails() 获取访问信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccessDetails(array $AccessDetails) 设置访问信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
     /**
      * @var integer ID值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ID;
 
     /**
      * @var string 内核版本类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceType;
 
     /**
      * @var string 集群名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceName;
 
@@ -171,19 +134,16 @@ class InstanceInfo extends AbstractModel
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
      * @var string 地区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Zone;
 
@@ -207,25 +167,21 @@ class InstanceInfo extends AbstractModel
 
     /**
      * @var string 内核版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Version;
 
     /**
      * @var string 字符集
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Charset;
 
     /**
      * @var array CN节点列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CNNodes;
 
     /**
      * @var array DN节点列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DNNodes;
 
@@ -243,53 +199,43 @@ class InstanceInfo extends AbstractModel
 
     /**
      * @var string 私有网络
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
     /**
      * @var string 子网
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetId;
 
     /**
      * @var string 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpireTime;
 
     /**
      * @var string 计费方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PayMode;
 
     /**
      * @var boolean 自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RenewFlag;
 
     /**
      * @var string 集群id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var array 访问信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccessDetails;
 
     /**
      * @param integer $ID ID值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceType 内核版本类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 集群名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 集群状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StatusDesc 集群状态详情
@@ -299,11 +245,8 @@ class InstanceInfo extends AbstractModel
      * @param string $InstanceID 集群id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Zone 地区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegionDesc 地域详情
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ZoneDesc 地区详情
@@ -311,31 +254,20 @@ class InstanceInfo extends AbstractModel
      * @param array $Tags 标签
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Version 内核版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Charset 字符集
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CNNodes CN节点列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DNNodes DN节点列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RegionId 地域id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ZoneId 地区id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcId 私有网络
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 子网
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExpireTime 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PayMode 计费方式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $RenewFlag 自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 集群id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AccessDetails 访问信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

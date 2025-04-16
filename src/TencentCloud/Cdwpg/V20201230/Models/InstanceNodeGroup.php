@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 集群节点信息
  *
  * @method string getSpecName() 获取机型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpecName(string $SpecName) 设置机型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DiskSpecPlus getDataDisk() 获取磁盘信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataDisk(DiskSpecPlus $DataDisk) 设置磁盘信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCvmCount() 获取机器个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCvmCount(integer $CvmCount) 设置机器个数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceNodeGroup extends AbstractModel
 {
     /**
      * @var string 机型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SpecName;
 
     /**
      * @var DiskSpecPlus 磁盘信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataDisk;
 
     /**
      * @var integer 机器个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CvmCount;
 
     /**
      * @param string $SpecName 机型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiskSpecPlus $DataDisk 磁盘信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CvmCount 机器个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

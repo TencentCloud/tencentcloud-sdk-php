@@ -57,37 +57,23 @@ use TencentCloud\Common\AbstractModel;
  * @method string getGroupId() 获取通道组ID
  * @method void setGroupId(string $GroupId) 设置通道组ID
  * @method array getTagSet() 获取标签列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagSet(array $TagSet) 设置标签列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPolicyId() 获取安全策略ID，当设置了安全策略时，存在该字段。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolicyId(string $PolicyId) 设置安全策略ID，当设置了安全策略时，存在该字段。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVersion() 获取通道组版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersion(string $Version) 设置通道组版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getClientIPMethod() 获取通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClientIPMethod(array $ClientIPMethod) 设置通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIPAddressVersion() 获取IP版本，可取值：IPv4、IPv6，默认值IPv4
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIPAddressVersion(string $IPAddressVersion) 设置IP版本，可取值：IPv4、IPv6，默认值IPv4
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPackageType() 获取通道组套餐类型：Thunder表示标准通道组，Accelerator表示银牌加速通道组，CrossBorder表示跨境通道组。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPackageType(string $PackageType) 设置通道组套餐类型：Thunder表示标准通道组，Accelerator表示银牌加速通道组，CrossBorder表示跨境通道组。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHttp3Supported() 获取支持Http3特性的标识，其中：
 0表示关闭；
 1表示启用。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHttp3Supported(integer $Http3Supported) 设置支持Http3特性的标识，其中：
 0表示关闭；
 1表示启用。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFeatureBitmap() 获取特性位图，每个bit位代表一种特性，其中：
 0，表示不支持该特性；
 1，表示支持该特性。
@@ -99,7 +85,6 @@ use TencentCloud\Common\AbstractModel;
 第5个bit，支持精品BGP接入；
 第6个bit，支持三网接入；
 第7个bit，支持接入段Qos加速。
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFeatureBitmap(integer $FeatureBitmap) 设置特性位图，每个bit位代表一种特性，其中：
 0，表示不支持该特性；
@@ -113,15 +98,12 @@ use TencentCloud\Common\AbstractModel;
 第6个bit，支持三网接入；
 第7个bit，支持接入段Qos加速。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsSupportTLSChoice() 获取是否支持设置TLS设置
 0表示不支持；
 1表示支持。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsSupportTLSChoice(integer $IsSupportTLSChoice) 设置是否支持设置TLS设置
 0表示不支持；
 1表示支持。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProxyGroupDetail extends AbstractModel
 {
@@ -193,37 +175,31 @@ class ProxyGroupDetail extends AbstractModel
 
     /**
      * @var array 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagSet;
 
     /**
      * @var string 安全策略ID，当设置了安全策略时，存在该字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PolicyId;
 
     /**
      * @var string 通道组版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Version;
 
     /**
      * @var array 通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClientIPMethod;
 
     /**
      * @var string IP版本，可取值：IPv4、IPv6，默认值IPv4
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IPAddressVersion;
 
     /**
      * @var string 通道组套餐类型：Thunder表示标准通道组，Accelerator表示银牌加速通道组，CrossBorder表示跨境通道组。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PackageType;
 
@@ -231,7 +207,6 @@ class ProxyGroupDetail extends AbstractModel
      * @var integer 支持Http3特性的标识，其中：
 0表示关闭；
 1表示启用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Http3Supported;
 
@@ -248,7 +223,6 @@ class ProxyGroupDetail extends AbstractModel
 第6个bit，支持三网接入；
 第7个bit，支持接入段Qos加速。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FeatureBitmap;
 
@@ -256,7 +230,6 @@ class ProxyGroupDetail extends AbstractModel
      * @var integer 是否支持设置TLS设置
 0表示不支持；
 1表示支持。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsSupportTLSChoice;
 
@@ -280,21 +253,14 @@ class ProxyGroupDetail extends AbstractModel
      * @param boolean $IsOldGroup 是否老通道组，2018-08-03之前创建的通道组为老通道组
      * @param string $GroupId 通道组ID
      * @param array $TagSet 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PolicyId 安全策略ID，当设置了安全策略时，存在该字段。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Version 通道组版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ClientIPMethod 通道获取客户端IP的方式，0表示TOA，1表示Proxy Protocol
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IPAddressVersion IP版本，可取值：IPv4、IPv6，默认值IPv4
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PackageType 通道组套餐类型：Thunder表示标准通道组，Accelerator表示银牌加速通道组，CrossBorder表示跨境通道组。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Http3Supported 支持Http3特性的标识，其中：
 0表示关闭；
 1表示启用。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FeatureBitmap 特性位图，每个bit位代表一种特性，其中：
 0，表示不支持该特性；
 1，表示支持该特性。
@@ -307,11 +273,9 @@ class ProxyGroupDetail extends AbstractModel
 第6个bit，支持三网接入；
 第7个bit，支持接入段Qos加速。
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsSupportTLSChoice 是否支持设置TLS设置
 0表示不支持；
 1表示支持。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * Range范围
  *
  * @method string getMin() 获取最小值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMin(string $Min) 设置最小值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMax() 获取最大值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMax(string $Max) 设置最大值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Range extends AbstractModel
 {
     /**
      * @var string 最小值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Min;
 
     /**
      * @var string 最大值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Max;
 
     /**
      * @param string $Min 最小值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Max 最大值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

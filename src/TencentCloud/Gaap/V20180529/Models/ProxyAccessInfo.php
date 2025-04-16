@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 加速通道接入点详细信息(包含id、地域、ip等）
  *
  * @method string getRegionId() 获取地域ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionId(string $RegionId) 设置地域ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegionName() 获取地域名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionName(string $RegionName) 设置地域名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProxyId() 获取通道ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProxyId(string $ProxyId) 设置通道ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVip() 获取通道接入ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVip(string $Vip) 设置通道接入ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getVipList() 获取三网通道VIP列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVipList(array $VipList) 设置三网通道VIP列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSourceRegionIdcType() 获取接入点IDC类型。ec或dc
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSourceRegionIdcType(string $SourceRegionIdcType) 设置接入点IDC类型。ec或dc
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProxyAccessInfo extends AbstractModel
 {
     /**
      * @var string 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionId;
 
     /**
      * @var string 地域名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionName;
 
     /**
      * @var string 通道ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProxyId;
 
     /**
      * @var string 通道接入ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Vip;
 
     /**
      * @var array 三网通道VIP列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VipList;
 
     /**
      * @var string 接入点IDC类型。ec或dc
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SourceRegionIdcType;
 
     /**
      * @param string $RegionId 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegionName 地域名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProxyId 通道ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Vip 通道接入ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $VipList 三网通道VIP列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SourceRegionIdcType 接入点IDC类型。ec或dc
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

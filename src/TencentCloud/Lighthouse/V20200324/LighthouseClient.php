@@ -44,7 +44,7 @@ use TencentCloud\Lighthouse\V20200324\Models as Models;
 * 本接口为异步接口，请求发送成功后会返回一个 RequestId，此时操作并未立即完成。实例操作结果可以通过调用 <a href="https://cloud.tencent.com/document/product/1207/47573" target="_blank">DescribeInstances</a> 接口查询，如果实例的最新操作状态（LatestOperationState）为“SUCCESS”，则代表操作成功。
  * @method Models\AttachCcnResponse AttachCcn(Models\AttachCcnRequest $req) 本接口 (AttachCcn) 用于建立与云联网的关联。
  * @method Models\AttachDisksResponse AttachDisks(Models\AttachDisksRequest $req) 本接口（AttachDisks）用于挂载一个或多个云硬盘。
-<li>只能挂载处于待挂载状态的云硬盘</li>
+<li>只能挂载磁盘状态（DiskState）处于待挂载（UNATTACHED）状态的云硬盘，磁盘状态可通过接口查询云硬盘（DescribeDisks）获取</li>
  * @method Models\CancelShareBlueprintAcrossAccountsResponse CancelShareBlueprintAcrossAccounts(Models\CancelShareBlueprintAcrossAccountsRequest $req) 本接口（CancelShareBlueprintAcrossAccounts）用于取消镜像跨账号共享。
 指定的镜像ID必须为自定义镜像，且指定账号ID必须已进行共享。
  * @method Models\CreateBlueprintResponse CreateBlueprint(Models\CreateBlueprintRequest $req) 本接口 (CreateBlueprint) 用于创建镜像。
@@ -180,6 +180,9 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
  * @method Models\ModifyBlueprintAttributeResponse ModifyBlueprintAttribute(Models\ModifyBlueprintAttributeRequest $req) 本接口 (ModifyBlueprintAttribute) 用于修改镜像属性。
  * @method Models\ModifyDiskBackupsAttributeResponse ModifyDiskBackupsAttribute(Models\ModifyDiskBackupsAttributeRequest $req) 本接口 (ModifyDiskBackupsAttribute) 用于修改云硬盘备份点属性。
  * @method Models\ModifyDisksAttributeResponse ModifyDisksAttribute(Models\ModifyDisksAttributeRequest $req) 本接口(ModifyDisksAttribute)用于修改云硬盘属性。
+云硬盘必须处于以下状态:
+<li> ATTACHED（已挂载）</li>
+<li> UNATTACHED（待挂载）</li>
  * @method Models\ModifyDisksBackupQuotaResponse ModifyDisksBackupQuota(Models\ModifyDisksBackupQuotaRequest $req) 本接口(ModifyDisksBackupQuota)用于调整云硬盘备份点配额。
 该操作目前仅支持云硬盘类型为数据盘且状态是ATTACHED（已挂载）或 UNATTACHED（待挂载）的云硬盘。
 支持批量操作。每次批量请求云硬盘数量上限为15个。

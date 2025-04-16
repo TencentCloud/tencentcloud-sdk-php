@@ -49,6 +49,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\CreateProjectResponse CreateProject(Models\CreateProjectRequest $req) 为用户提供新建项目的能力，用于集中管理产品和应用。
  * @method Models\CreateStudioProductResponse CreateStudioProduct(Models\CreateStudioProductRequest $req) 为用户提供新建产品的能力，用于管理用户的设备
  * @method Models\CreateTRTCSignaturesWithRoomIdResponse CreateTRTCSignaturesWithRoomId(Models\CreateTRTCSignaturesWithRoomIdRequest $req) 创建TRTC通话参数
+ * @method Models\CreateTWeSeeRecognitionTaskResponse CreateTWeSeeRecognitionTask(Models\CreateTWeSeeRecognitionTaskRequest $req) 创建 TWeSee 语义理解任务
  * @method Models\CreateTopicPolicyResponse CreateTopicPolicy(Models\CreateTopicPolicyRequest $req) 本接口（CreateTopicPolicy）用于创建一个Topic
  * @method Models\CreateTopicRuleResponse CreateTopicRule(Models\CreateTopicRuleRequest $req) 创建规则
  * @method Models\DeleteCloudStorageEventResponse DeleteCloudStorageEvent(Models\DeleteCloudStorageEventRequest $req) 删除云存事件
@@ -143,6 +144,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\InheritCloudStorageUserResponse InheritCloudStorageUser(Models\InheritCloudStorageUserRequest $req) 继承云存用户
  * @method Models\InvokeCloudStorageAIServiceTaskResponse InvokeCloudStorageAIServiceTask(Models\InvokeCloudStorageAIServiceTaskRequest $req) 同步执行设备云存 AI 分析任务
  * @method Models\InvokeExternalSourceAIServiceTaskResponse InvokeExternalSourceAIServiceTask(Models\InvokeExternalSourceAIServiceTaskRequest $req) 创建外部视频 AI 分析任务
+ * @method Models\InvokeTWeSeeRecognitionTaskResponse InvokeTWeSeeRecognitionTask(Models\InvokeTWeSeeRecognitionTaskRequest $req) 同步执行 TWeSee 语义理解任务
  * @method Models\ListEventHistoryResponse ListEventHistory(Models\ListEventHistoryRequest $req) 获取设备的历史事件
  * @method Models\ListFirmwaresResponse ListFirmwares(Models\ListFirmwaresRequest $req) 本接口（ListFirmwares）用于获取固件列表
  * @method Models\ListTopicPolicyResponse ListTopicPolicy(Models\ListTopicPolicyRequest $req) 本接口（ListTopicPolicy）用于获取Topic列表

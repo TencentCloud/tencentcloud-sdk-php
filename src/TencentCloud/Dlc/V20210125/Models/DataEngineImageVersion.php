@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getImageVersion() 获取镜像大版本名称
  * @method void setImageVersion(string $ImageVersion) 设置镜像大版本名称
  * @method string getDescription() 获取镜像大版本描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置镜像大版本描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsPublic() 获取是否为公共版本：1：公共；2：私有
  * @method void setIsPublic(integer $IsPublic) 设置是否为公共版本：1：公共；2：私有
  * @method string getEngineType() 获取集群类型：SparkSQL/PrestoSQL/SparkBatch
@@ -55,7 +53,6 @@ class DataEngineImageVersion extends AbstractModel
 
     /**
      * @var string 镜像大版本描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
@@ -93,7 +90,6 @@ class DataEngineImageVersion extends AbstractModel
      * @param string $ImageVersionId 镜像大版本ID
      * @param string $ImageVersion 镜像大版本名称
      * @param string $Description 镜像大版本描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsPublic 是否为公共版本：1：公共；2：私有
      * @param string $EngineType 集群类型：SparkSQL/PrestoSQL/SparkBatch
      * @param integer $IsSharedEngine 版本状态：1：初始化；2：上线；3：下线

@@ -74,10 +74,10 @@ use TencentCloud\Common\AbstractModel;
 4)、Codec为：eac3时，取值范围：[26, 6144]，备注：当SampleRate为44100HZ，最大值为：5644，当SampleRate为48000HZ，最大值为：6144，
 
 
- * @method integer getSampleRate() 获取音频流的采样率，不同编码标准支持的采样率选项不同。详细参考[音频采样率支持范围文档]https://cloud.tencent.com/document/product/862/77166#f3b039f1-d817-4a96-b4e4-90132d31cd53
+ * @method integer getSampleRate() 获取音频流的采样率，不同编码标准支持的采样率选项不同。详细参考[音频采样率支持范围文档](https://cloud.tencent.com/document/product/862/77166#f3b039f1-d817-4a96-b4e4-90132d31cd53)
 单位：Hz
 注意：请确保源音频流的采样率在上述选项范围内，否则可能导致转码失败！
- * @method void setSampleRate(integer $SampleRate) 设置音频流的采样率，不同编码标准支持的采样率选项不同。详细参考[音频采样率支持范围文档]https://cloud.tencent.com/document/product/862/77166#f3b039f1-d817-4a96-b4e4-90132d31cd53
+ * @method void setSampleRate(integer $SampleRate) 设置音频流的采样率，不同编码标准支持的采样率选项不同。详细参考[音频采样率支持范围文档](https://cloud.tencent.com/document/product/862/77166#f3b039f1-d817-4a96-b4e4-90132d31cd53)
 单位：Hz
 注意：请确保源音频流的采样率在上述选项范围内，否则可能导致转码失败！
  * @method integer getAudioChannel() 获取音频通道方式，可选值：
@@ -137,7 +137,7 @@ class AudioTemplateInfo extends AbstractModel
     public $Bitrate;
 
     /**
-     * @var integer 音频流的采样率，不同编码标准支持的采样率选项不同。详细参考[音频采样率支持范围文档]https://cloud.tencent.com/document/product/862/77166#f3b039f1-d817-4a96-b4e4-90132d31cd53
+     * @var integer 音频流的采样率，不同编码标准支持的采样率选项不同。详细参考[音频采样率支持范围文档](https://cloud.tencent.com/document/product/862/77166#f3b039f1-d817-4a96-b4e4-90132d31cd53)
 单位：Hz
 注意：请确保源音频流的采样率在上述选项范围内，否则可能导致转码失败！
      */
@@ -188,7 +188,7 @@ class AudioTemplateInfo extends AbstractModel
 4)、Codec为：eac3时，取值范围：[26, 6144]，备注：当SampleRate为44100HZ，最大值为：5644，当SampleRate为48000HZ，最大值为：6144，
 
 
-     * @param integer $SampleRate 音频流的采样率，不同编码标准支持的采样率选项不同。详细参考[音频采样率支持范围文档]https://cloud.tencent.com/document/product/862/77166#f3b039f1-d817-4a96-b4e4-90132d31cd53
+     * @param integer $SampleRate 音频流的采样率，不同编码标准支持的采样率选项不同。详细参考[音频采样率支持范围文档](https://cloud.tencent.com/document/product/862/77166#f3b039f1-d817-4a96-b4e4-90132d31cd53)
 单位：Hz
 注意：请确保源音频流的采样率在上述选项范围内，否则可能导致转码失败！
      * @param integer $AudioChannel 音频通道方式，可选值：

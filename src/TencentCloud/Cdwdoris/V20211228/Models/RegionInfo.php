@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsInternationalSite(integer $IsInternationalSite) 设置0代表是国际站 1代表不是
  * @method string getBucket() 获取桶
  * @method void setBucket(string $Bucket) 设置桶
+ * @method integer getSSCCount() 获取存算分离集群数
+ * @method void setSSCCount(integer $SSCCount) 设置存算分离集群数
+ * @method boolean getEnableSSC() 获取是否开通存算分离
+ * @method void setEnableSSC(boolean $EnableSSC) 设置是否开通存算分离
  */
 class RegionInfo extends AbstractModel
 {
@@ -73,6 +77,16 @@ class RegionInfo extends AbstractModel
     public $Bucket;
 
     /**
+     * @var integer 存算分离集群数
+     */
+    public $SSCCount;
+
+    /**
+     * @var boolean 是否开通存算分离
+     */
+    public $EnableSSC;
+
+    /**
      * @param string $Name 地域名称，例如“ap-guangzhou"
      * @param string $Desc 地域描述，例如"广州”
      * @param integer $RegionId 地域唯一标记
@@ -80,6 +94,8 @@ class RegionInfo extends AbstractModel
      * @param integer $Count 该地域下集群数目
      * @param integer $IsInternationalSite 0代表是国际站 1代表不是
      * @param string $Bucket 桶
+     * @param integer $SSCCount 存算分离集群数
+     * @param boolean $EnableSSC 是否开通存算分离
      */
     function __construct()
     {
@@ -125,6 +141,14 @@ class RegionInfo extends AbstractModel
 
         if (array_key_exists("Bucket",$param) and $param["Bucket"] !== null) {
             $this->Bucket = $param["Bucket"];
+        }
+
+        if (array_key_exists("SSCCount",$param) and $param["SSCCount"] !== null) {
+            $this->SSCCount = $param["SSCCount"];
+        }
+
+        if (array_key_exists("EnableSSC",$param) and $param["EnableSSC"] !== null) {
+            $this->EnableSSC = $param["EnableSSC"];
         }
     }
 }

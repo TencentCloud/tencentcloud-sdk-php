@@ -29,9 +29,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getProjectId() 获取项目ID
  * @method void setProjectId(integer $ProjectId) 设置项目ID
  * @method array getTagSet() 获取标签列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagSet(array $TagSet) 设置标签列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BindRealServerInfo extends AbstractModel
 {
@@ -57,7 +55,6 @@ class BindRealServerInfo extends AbstractModel
 
     /**
      * @var array 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagSet;
 
@@ -67,7 +64,6 @@ class BindRealServerInfo extends AbstractModel
      * @param string $RealServerName 源站名称
      * @param integer $ProjectId 项目ID
      * @param array $TagSet 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

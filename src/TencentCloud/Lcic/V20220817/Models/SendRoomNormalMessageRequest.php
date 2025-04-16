@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCloudCustomData(string $CloudCustomData) 设置消息自定义数据（云端保存，会发送到对端，程序卸载重装后还能拉取到）。
  * @method string getNickName() 获取昵称，当FromAccount没有在房间中，需要填写NickName，当FromAccount在房间中，填写NickName无意义
  * @method void setNickName(string $NickName) 设置昵称，当FromAccount没有在房间中，需要填写NickName，当FromAccount在房间中，填写NickName无意义
+ * @method string getPriority() 获取消息的优先级，默认优先级 Normal。
+可以指定3种优先级，从高到低依次为 High、Normal 和 Low，区分大小写。
+ * @method void setPriority(string $Priority) 设置消息的优先级，默认优先级 Normal。
+可以指定3种优先级，从高到低依次为 High、Normal 和 Low，区分大小写。
  */
 class SendRoomNormalMessageRequest extends AbstractModel
 {
@@ -66,12 +70,20 @@ class SendRoomNormalMessageRequest extends AbstractModel
     public $NickName;
 
     /**
+     * @var string 消息的优先级，默认优先级 Normal。
+可以指定3种优先级，从高到低依次为 High、Normal 和 Low，区分大小写。
+     */
+    public $Priority;
+
+    /**
      * @param integer $SdkAppId 低代码互动课堂的SdkAppId。
      * @param integer $RoomId 房间ID。
      * @param string $FromAccount 管理员指定消息发送方账号（若需设置 FromAccount 信息，则该参数取值不能为空）
      * @param array $MsgBody 自定义消息
      * @param string $CloudCustomData 消息自定义数据（云端保存，会发送到对端，程序卸载重装后还能拉取到）。
      * @param string $NickName 昵称，当FromAccount没有在房间中，需要填写NickName，当FromAccount在房间中，填写NickName无意义
+     * @param string $Priority 消息的优先级，默认优先级 Normal。
+可以指定3种优先级，从高到低依次为 High、Normal 和 Low，区分大小写。
      */
     function __construct()
     {
@@ -113,6 +125,10 @@ class SendRoomNormalMessageRequest extends AbstractModel
 
         if (array_key_exists("NickName",$param) and $param["NickName"] !== null) {
             $this->NickName = $param["NickName"];
+        }
+
+        if (array_key_exists("Priority",$param) and $param["Priority"] !== null) {
+            $this->Priority = $param["Priority"];
         }
     }
 }

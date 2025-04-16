@@ -235,7 +235,7 @@ use TencentCloud\Cdb\V20170320\Models as Models;
 1、本接口支持主实例、只读实例、灾备实例进行重启操作。
 2、实例状态必须为正常，并且没有其他异步任务在执行中。
  * @method Models\StartBatchRollbackResponse StartBatchRollback(Models\StartBatchRollbackRequest $req) 该接口（StartBatchRollback）用于批量回档云数据库实例的库表。
- * @method Models\StartCpuExpandResponse StartCpuExpand(Models\StartCpuExpandRequest $req) 通过该API，可以开启CPU弹性扩容，包括一次性的手动扩容以及自动弹性扩容。
+ * @method Models\StartCpuExpandResponse StartCpuExpand(Models\StartCpuExpandRequest $req) 通过该 API，可以开启 CPU 弹性扩容，包括一次性的手动扩容以及自动弹性扩容。
  * @method Models\StartReplicationResponse StartReplication(Models\StartReplicationRequest $req) 本接口（StartReplication）用于开启 RO 复制，从主实例同步数据。
  * @method Models\StopCpuExpandResponse StopCpuExpand(Models\StopCpuExpandRequest $req) 通过该API，可以关闭 CPU 弹性扩容。
  * @method Models\StopDBImportJobResponse StopDBImportJob(Models\StopDBImportJobRequest $req) 本接口(StopDBImportJob)用于终止数据导入任务。

@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * ResourceInfo
  *
  * @method string getAttributionType() 获取归属类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAttributionType(string $AttributionType) 设置归属类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceType() 获取资源类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceType(string $ResourceType) 设置资源类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取引擎名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置引擎名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstance() 获取如资源类型为spark-sql 取值为Name, 如为spark-batch 取值为session app_name
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstance(string $Instance) 设置如资源类型为spark-sql 取值为Name, 如为spark-batch 取值为session app_name
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getFavor() 获取亲和性
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFavor(array $Favor) 设置亲和性
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceGroupName() 获取标准引擎资源组信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceGroupName(string $ResourceGroupName) 设置标准引擎资源组信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ResourceInfo extends AbstractModel
 {
     /**
      * @var string 归属类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AttributionType;
 
     /**
      * @var string 资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceType;
 
     /**
      * @var string 引擎名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 如资源类型为spark-sql 取值为Name, 如为spark-batch 取值为session app_name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Instance;
 
@@ -83,31 +67,23 @@ class ResourceInfo extends AbstractModel
 
     /**
      * @var integer 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 标准引擎资源组信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceGroupName;
 
     /**
      * @param string $AttributionType 归属类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceType 资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 引擎名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Instance 如资源类型为spark-sql 取值为Name, 如为spark-batch 取值为session app_name
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Favor 亲和性
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceGroupName 标准引擎资源组信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

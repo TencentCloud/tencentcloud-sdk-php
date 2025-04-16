@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 混合表中，change表的数据保存时间，单位为天
  *
  * @method integer getDataRetentionTime() 获取change表的数据保存时间，单位为天
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataRetentionTime(integer $DataRetentionTime) 设置change表的数据保存时间，单位为天
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SmartOptimizerChangeTablePolicy extends AbstractModel
 {
     /**
      * @var integer change表的数据保存时间，单位为天
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataRetentionTime;
 
     /**
      * @param integer $DataRetentionTime change表的数据保存时间，单位为天
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

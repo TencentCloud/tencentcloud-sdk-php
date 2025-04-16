@@ -27,29 +27,17 @@ use TencentCloud\Common\AbstractModel;
  * @method array getResultSchema() 获取schema
  * @method void setResultSchema(array $ResultSchema) 设置schema
  * @method string getNextToken() 获取分页信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNextToken(string $NextToken) 设置分页信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOutputPath() 获取存储结果地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutputPath(string $OutputPath) 设置存储结果地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUseTime() 获取引擎计算耗时
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUseTime(integer $UseTime) 设置引擎计算耗时
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAffectRows() 获取结果条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAffectRows(integer $AffectRows) 设置结果条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDataAmount() 获取数据扫描量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataAmount(integer $DataAmount) 设置数据扫描量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUiUrl() 获取spark ui地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUiUrl(string $UiUrl) 设置spark ui地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -72,37 +60,31 @@ class DescribeNotebookSessionStatementSqlResultResponse extends AbstractModel
 
     /**
      * @var string 分页信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NextToken;
 
     /**
      * @var string 存储结果地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutputPath;
 
     /**
      * @var integer 引擎计算耗时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UseTime;
 
     /**
      * @var integer 结果条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AffectRows;
 
     /**
      * @var integer 数据扫描量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataAmount;
 
     /**
      * @var string spark ui地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UiUrl;
 
@@ -116,17 +98,11 @@ class DescribeNotebookSessionStatementSqlResultResponse extends AbstractModel
      * @param string $ResultSet 结果数据
      * @param array $ResultSchema schema
      * @param string $NextToken 分页信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OutputPath 存储结果地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UseTime 引擎计算耗时
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AffectRows 结果条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DataAmount 数据扫描量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UiUrl spark ui地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

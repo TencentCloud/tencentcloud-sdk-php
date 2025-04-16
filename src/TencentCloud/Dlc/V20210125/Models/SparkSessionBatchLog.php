@@ -21,17 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * SparkSQL批任务运行日志
  *
  * @method string getStep() 获取日志步骤：BEG/CS/DS/DSS/DSF/FINF/RTO/CANCEL/CT/DT/DTS/DTF/FINT/EXCE
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStep(string $Step) 设置日志步骤：BEG/CS/DS/DSS/DSF/FINF/RTO/CANCEL/CT/DT/DTS/DTF/FINT/EXCE
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTime() 获取时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTime(string $Time) 设置时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMessage() 获取日志提示
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置日志提示
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getOperate() 获取日志操作
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperate(array $Operate) 设置日志操作
@@ -41,19 +35,16 @@ class SparkSessionBatchLog extends AbstractModel
 {
     /**
      * @var string 日志步骤：BEG/CS/DS/DSS/DSF/FINF/RTO/CANCEL/CT/DT/DTS/DTF/FINT/EXCE
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Step;
 
     /**
      * @var string 时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Time;
 
     /**
      * @var string 日志提示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
@@ -65,11 +56,8 @@ class SparkSessionBatchLog extends AbstractModel
 
     /**
      * @param string $Step 日志步骤：BEG/CS/DS/DSS/DSF/FINF/RTO/CANCEL/CT/DT/DTS/DTF/FINT/EXCE
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Time 时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message 日志提示
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Operate 日志操作
 注意：此字段可能返回 null，表示取不到有效值。
      */

@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * SmartOptimizerWrittenPolicy
  *
  * @method string getWrittenEnable() 获取none/enable/disable/default
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWrittenEnable(string $WrittenEnable) 设置none/enable/disable/default
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SmartOptimizerWrittenPolicy extends AbstractModel
 {
     /**
      * @var string none/enable/disable/default
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WrittenEnable;
 
     /**
      * @param string $WrittenEnable none/enable/disable/default
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

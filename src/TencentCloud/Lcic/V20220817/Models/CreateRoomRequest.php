@@ -32,10 +32,12 @@ use TencentCloud\Common\AbstractModel;
 1 标清
 2 高清
 3 全高清
+注意：连麦人数（MaxMicNumber）>6时，仅可使用标清
  * @method void setResolution(integer $Resolution) 设置头像区域，摄像头视频画面的分辨率。可以有如下取值：
 1 标清
 2 高清
 3 全高清
+注意：连麦人数（MaxMicNumber）>6时，仅可使用标清
  * @method integer getMaxMicNumber() 获取设置课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。该取值影响计费，请根据业务实际情况设置。计费规则见“购买指南”下“计费概述”。
  * @method void setMaxMicNumber(integer $MaxMicNumber) 设置设置课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。该取值影响计费，请根据业务实际情况设置。计费规则见“购买指南”下“计费概述”。
  * @method string getSubType() 获取课堂子类型，可以有以下取值：videodoc 文档+视频video 纯视频
@@ -110,6 +112,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRecordStream(integer $RecordStream) 设置录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0
  * @method integer getWhiteBoardSnapshotMode() 获取板书截图生成类型。0 不生成板书（默认）；1 全量模式；2 单页去重模式
  * @method void setWhiteBoardSnapshotMode(integer $WhiteBoardSnapshotMode) 设置板书截图生成类型。0 不生成板书（默认）；1 全量模式；2 单页去重模式
+ * @method integer getSubtitlesTranscription() 获取字幕转写功能开关：0关闭，1开启，默认关闭
+ * @method void setSubtitlesTranscription(integer $SubtitlesTranscription) 设置字幕转写功能开关：0关闭，1开启，默认关闭
  */
 class CreateRoomRequest extends AbstractModel
 {
@@ -138,6 +142,7 @@ class CreateRoomRequest extends AbstractModel
 1 标清
 2 高清
 3 全高清
+注意：连麦人数（MaxMicNumber）>6时，仅可使用标清
      */
     public $Resolution;
 
@@ -285,6 +290,11 @@ class CreateRoomRequest extends AbstractModel
     public $WhiteBoardSnapshotMode;
 
     /**
+     * @var integer 字幕转写功能开关：0关闭，1开启，默认关闭
+     */
+    public $SubtitlesTranscription;
+
+    /**
      * @param string $Name 课堂名称。
      * @param integer $StartTime 预定的课堂开始时间，unix时间戳（秒）。
      * @param integer $EndTime 预定的课堂结束时间，unix时间戳（秒）。
@@ -293,6 +303,7 @@ class CreateRoomRequest extends AbstractModel
 1 标清
 2 高清
 3 全高清
+注意：连麦人数（MaxMicNumber）>6时，仅可使用标清
      * @param integer $MaxMicNumber 设置课堂同时最大可与老师进行连麦互动的人数，该参数支持正式上课/开播前调用修改房间修改。小班课取值范围[0,16]，大班课取值范围[0,1]，当取值为0时表示当前课堂/直播，不支持连麦互动。该取值影响计费，请根据业务实际情况设置。计费规则见“购买指南”下“计费概述”。
      * @param string $SubType 课堂子类型，可以有以下取值：videodoc 文档+视频video 纯视频
      * @param string $TeacherId 老师ID。通过[注册用户]接口获取的UserId。指定后该用户在房间内拥有老师权限。
@@ -330,6 +341,7 @@ class CreateRoomRequest extends AbstractModel
      * @param string $RecordLang 录制自定义语言，仅recordlayout=9的时候此参数有效
      * @param integer $RecordStream 录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0
      * @param integer $WhiteBoardSnapshotMode 板书截图生成类型。0 不生成板书（默认）；1 全量模式；2 单页去重模式
+     * @param integer $SubtitlesTranscription 字幕转写功能开关：0关闭，1开启，默认关闭
      */
     function __construct()
     {
@@ -466,6 +478,10 @@ class CreateRoomRequest extends AbstractModel
 
         if (array_key_exists("WhiteBoardSnapshotMode",$param) and $param["WhiteBoardSnapshotMode"] !== null) {
             $this->WhiteBoardSnapshotMode = $param["WhiteBoardSnapshotMode"];
+        }
+
+        if (array_key_exists("SubtitlesTranscription",$param) and $param["SubtitlesTranscription"] !== null) {
+            $this->SubtitlesTranscription = $param["SubtitlesTranscription"];
         }
     }
 }

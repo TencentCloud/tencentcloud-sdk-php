@@ -25,15 +25,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSessionId() 获取Session唯一标识
  * @method void setSessionId(string $SessionId) 设置Session唯一标识
  * @method string getProxyUser() 获取代理用户，默认为root
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProxyUser(string $ProxyUser) 设置代理用户，默认为root
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getState() 获取Session状态，包含：not_started（未启动）、starting（已启动）、idle（等待输入）、busy(正在运行statement)、shutting_down（停止）、error（异常）、dead（已退出）、killed（被杀死）、success（正常停止）
  * @method void setState(string $State) 设置Session状态，包含：not_started（未启动）、starting（已启动）、idle（等待输入）、busy(正在运行statement)、shutting_down（停止）、error（异常）、dead（已退出）、killed（被杀死）、success（正常停止）
  * @method string getSparkAppId() 获取Spark任务返回的AppId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSparkAppId(string $SparkAppId) 设置Spark任务返回的AppId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取Session名称
  * @method void setName(string $Name) 设置Session名称
  * @method string getCreateTime() 获取Session创建时间
@@ -41,31 +37,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDataEngineName() 获取引擎名称
  * @method void setDataEngineName(string $DataEngineName) 设置引擎名称
  * @method string getLastRunningTime() 获取最新的运行时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastRunningTime(string $LastRunningTime) 设置最新的运行时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreator() 获取创建者
  * @method void setCreator(string $Creator) 设置创建者
  * @method string getSparkUiUrl() 获取spark ui地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSparkUiUrl(string $SparkUiUrl) 设置spark ui地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSessionType() 获取session类型，group：资源组session independent：独立资源session，不依赖资源组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSessionType(string $SessionType) 设置session类型，group：资源组session independent：独立资源session，不依赖资源组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDataEngineId() 获取引擎id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataEngineId(string $DataEngineId) 设置引擎id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceGroupId() 获取资源组id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceGroupId(string $ResourceGroupId) 设置资源组id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceGroupName() 获取资源组名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceGroupName(string $ResourceGroupName) 设置资源组名字
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NotebookSessions extends AbstractModel
 {
@@ -81,7 +65,6 @@ class NotebookSessions extends AbstractModel
 
     /**
      * @var string 代理用户，默认为root
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProxyUser;
 
@@ -92,7 +75,6 @@ class NotebookSessions extends AbstractModel
 
     /**
      * @var string Spark任务返回的AppId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SparkAppId;
 
@@ -113,7 +95,6 @@ class NotebookSessions extends AbstractModel
 
     /**
      * @var string 最新的运行时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastRunningTime;
 
@@ -124,31 +105,26 @@ class NotebookSessions extends AbstractModel
 
     /**
      * @var string spark ui地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SparkUiUrl;
 
     /**
      * @var string session类型，group：资源组session independent：独立资源session，不依赖资源组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SessionType;
 
     /**
      * @var string 引擎id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataEngineId;
 
     /**
      * @var string 资源组id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceGroupId;
 
     /**
      * @var string 资源组名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceGroupName;
 
@@ -156,26 +132,18 @@ class NotebookSessions extends AbstractModel
      * @param string $Kind 类型，当前支持：spark、pyspark、sparkr、sql
      * @param string $SessionId Session唯一标识
      * @param string $ProxyUser 代理用户，默认为root
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $State Session状态，包含：not_started（未启动）、starting（已启动）、idle（等待输入）、busy(正在运行statement)、shutting_down（停止）、error（异常）、dead（已退出）、killed（被杀死）、success（正常停止）
      * @param string $SparkAppId Spark任务返回的AppId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name Session名称
      * @param string $CreateTime Session创建时间
      * @param string $DataEngineName 引擎名称
      * @param string $LastRunningTime 最新的运行时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Creator 创建者
      * @param string $SparkUiUrl spark ui地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SessionType session类型，group：资源组session independent：独立资源session，不依赖资源组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataEngineId 引擎id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceGroupId 资源组id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceGroupName 资源组名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

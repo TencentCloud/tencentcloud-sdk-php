@@ -65,35 +65,21 @@ use TencentCloud\Common\AbstractModel;
 0表示异常；
 1表示正常。
  * @method array getRealServerSet() 获取监听器绑定的源站信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealServerSet(array $RealServerSet) 设置监听器绑定的源站信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreateTime() 获取监听器创建时间，Unix时间戳
  * @method void setCreateTime(integer $CreateTime) 设置监听器创建时间，Unix时间戳
  * @method integer getClientIPMethod() 获取监听器获取客户端 IP 的方式，0表示TOA, 1表示Proxy Protocol
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClientIPMethod(integer $ClientIPMethod) 设置监听器获取客户端 IP 的方式，0表示TOA, 1表示Proxy Protocol
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHealthyThreshold() 获取健康阈值，表示连续检查成功多少次后认定源站健康。范围为1到10
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHealthyThreshold(integer $HealthyThreshold) 设置健康阈值，表示连续检查成功多少次后认定源站健康。范围为1到10
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUnhealthyThreshold() 获取不健康阈值，表示连续检查失败多少次数后认为源站不健康。范围为1到10
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnhealthyThreshold(integer $UnhealthyThreshold) 设置不健康阈值，表示连续检查失败多少次数后认为源站不健康。范围为1到10
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFailoverSwitch() 获取源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailoverSwitch(integer $FailoverSwitch) 设置源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSessionPersist() 获取是否开启会话保持选项：0关闭， 非0开启，非0值为会话保持时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSessionPersist(integer $SessionPersist) 设置是否开启会话保持选项：0关闭， 非0开启，非0值为会话保持时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProxyId() 获取监听器的通道ID，如果监听器属于通道组，则为null
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProxyId(string $ProxyId) 设置监听器的通道ID，如果监听器属于通道组，则为null
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupId() 获取监听器的通道组ID，如果监听器属于通道，则为null
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupId(string $GroupId) 设置监听器的通道组ID，如果监听器属于通道，则为null
@@ -173,7 +159,6 @@ class TCPListener extends AbstractModel
 
     /**
      * @var array 监听器绑定的源站信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RealServerSet;
 
@@ -184,37 +169,31 @@ class TCPListener extends AbstractModel
 
     /**
      * @var integer 监听器获取客户端 IP 的方式，0表示TOA, 1表示Proxy Protocol
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClientIPMethod;
 
     /**
      * @var integer 健康阈值，表示连续检查成功多少次后认定源站健康。范围为1到10
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HealthyThreshold;
 
     /**
      * @var integer 不健康阈值，表示连续检查失败多少次数后认为源站不健康。范围为1到10
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UnhealthyThreshold;
 
     /**
      * @var integer 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailoverSwitch;
 
     /**
      * @var integer 是否开启会话保持选项：0关闭， 非0开启，非0值为会话保持时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SessionPersist;
 
     /**
      * @var string 监听器的通道ID，如果监听器属于通道组，则为null
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProxyId;
 
@@ -248,20 +227,13 @@ class TCPListener extends AbstractModel
 0表示异常；
 1表示正常。
      * @param array $RealServerSet 监听器绑定的源站信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateTime 监听器创建时间，Unix时间戳
      * @param integer $ClientIPMethod 监听器获取客户端 IP 的方式，0表示TOA, 1表示Proxy Protocol
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HealthyThreshold 健康阈值，表示连续检查成功多少次后认定源站健康。范围为1到10
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UnhealthyThreshold 不健康阈值，表示连续检查失败多少次数后认为源站不健康。范围为1到10
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FailoverSwitch 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SessionPersist 是否开启会话保持选项：0关闭， 非0开启，非0值为会话保持时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProxyId 监听器的通道ID，如果监听器属于通道组，则为null
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupId 监听器的通道组ID，如果监听器属于通道，则为null
 注意：此字段可能返回 null，表示取不到有效值。
      */

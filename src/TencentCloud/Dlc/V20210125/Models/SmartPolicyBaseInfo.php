@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * SmartPolicyBaseInfo
  *
  * @method string getUin() 获取用户uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUin(string $Uin) 设置用户uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPolicyType() 获取Catalog/Database/Table
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolicyType(string $PolicyType) 设置Catalog/Database/Table
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCatalog() 获取Catalog名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCatalog(string $Catalog) 设置Catalog名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDatabase() 获取数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatabase(string $Database) 设置数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTable() 获取表名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTable(string $Table) 设置表名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAppId() 获取用户appid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppId(string $AppId) 设置用户appid
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SmartPolicyBaseInfo extends AbstractModel
 {
     /**
      * @var string 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uin;
 
     /**
      * @var string Catalog/Database/Table
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PolicyType;
 
     /**
      * @var string Catalog名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Catalog;
 
     /**
      * @var string 数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Database;
 
     /**
      * @var string 表名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Table;
 
     /**
      * @var string 用户appid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppId;
 
     /**
      * @param string $Uin 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PolicyType Catalog/Database/Table
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Catalog Catalog名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Database 数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Table 表名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AppId 用户appid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

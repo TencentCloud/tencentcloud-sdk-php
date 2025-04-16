@@ -21,29 +21,19 @@ use TencentCloud\Common\AbstractModel;
  * 升级信息
  *
  * @method string getTaskName() 获取任务名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskName(string $TaskName) 设置任务名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSourceVersion() 获取原有内核版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSourceVersion(string $SourceVersion) 设置原有内核版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTargetVersion() 获取目标内核版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargetVersion(string $TargetVersion) 设置目标内核版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取任务创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置任务创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndTime() 获取任务结束时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置任务结束时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取任务完成状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置任务完成状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOperateUin() 获取操作者
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperateUin(string $OperateUin) 设置操作者
@@ -53,25 +43,21 @@ class UpgradeItem extends AbstractModel
 {
     /**
      * @var string 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskName;
 
     /**
      * @var string 原有内核版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SourceVersion;
 
     /**
      * @var string 目标内核版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetVersion;
 
     /**
      * @var string 任务创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
@@ -83,7 +69,6 @@ class UpgradeItem extends AbstractModel
 
     /**
      * @var string 任务完成状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
@@ -95,17 +80,12 @@ class UpgradeItem extends AbstractModel
 
     /**
      * @param string $TaskName 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SourceVersion 原有内核版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TargetVersion 目标内核版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 任务创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndTime 任务结束时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 任务完成状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OperateUin 操作者
 注意：此字段可能返回 null，表示取不到有效值。
      */

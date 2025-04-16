@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePrivateZone请求参数结构体
  *
- * @method string getZoneId() 获取域名，格式必须是标准的TLD
- * @method void setZoneId(string $ZoneId) 设置域名，格式必须是标准的TLD
+ * @method string getZoneId() 获取私有域id
+ * @method void setZoneId(string $ZoneId) 设置私有域id
  */
 class DescribePrivateZoneRequest extends AbstractModel
 {
     /**
-     * @var string 域名，格式必须是标准的TLD
+     * @var string 私有域id
      */
     public $ZoneId;
 
     /**
-     * @param string $ZoneId 域名，格式必须是标准的TLD
+     * @param string $ZoneId 私有域id
      */
     function __construct()
     {

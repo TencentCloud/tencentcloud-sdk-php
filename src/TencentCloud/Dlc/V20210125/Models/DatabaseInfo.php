@@ -31,9 +31,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProperties(array $Properties) 设置数据库属性列表。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLocation() 获取数据库cos路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocation(string $Location) 设置数据库cos路径
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DatabaseInfo extends AbstractModel
 {
@@ -56,7 +54,6 @@ class DatabaseInfo extends AbstractModel
 
     /**
      * @var string 数据库cos路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Location;
 
@@ -67,7 +64,6 @@ class DatabaseInfo extends AbstractModel
      * @param array $Properties 数据库属性列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Location 数据库cos路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

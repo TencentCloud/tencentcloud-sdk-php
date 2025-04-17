@@ -14,31 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Lighthouse\V20200324\Models;
+namespace TencentCloud\Gs\V20191118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeInstanceLoginKeyPairAttribute返回参数结构体
+ * ModifyAndroidInstancesResolution返回参数结构体
  *
- * @method string getPermitLogin() 获取是否允许使用默认密钥对登录，YES：允许登录 NO：禁止登录。
- * @method void setPermitLogin(string $PermitLogin) 设置是否允许使用默认密钥对登录，YES：允许登录 NO：禁止登录。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeInstanceLoginKeyPairAttributeResponse extends AbstractModel
+class ModifyAndroidInstancesResolutionResponse extends AbstractModel
 {
-    /**
-     * @var string 是否允许使用默认密钥对登录，YES：允许登录 NO：禁止登录。
-     */
-    public $PermitLogin;
-
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param string $PermitLogin 是否允许使用默认密钥对登录，YES：允许登录 NO：禁止登录。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,10 +46,6 @@ class DescribeInstanceLoginKeyPairAttributeResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PermitLogin",$param) and $param["PermitLogin"] !== null) {
-            $this->PermitLogin = $param["PermitLogin"];
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

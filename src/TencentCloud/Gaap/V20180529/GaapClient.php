@@ -75,7 +75,7 @@ use TencentCloud\Gaap\V20180529\Models as Models;
  * @method Models\DescribeCrossBorderProxiesResponse DescribeCrossBorderProxies(Models\DescribeCrossBorderProxiesRequest $req) 本接口（DescribeCrossBorderProxies）用于查询跨境通道实例列表。
  * @method Models\DescribeCustomHeaderResponse DescribeCustomHeader(Models\DescribeCustomHeaderRequest $req) 本接口（DescribeCustomHeader）用于自定义header列表
  * @method Models\DescribeDestRegionsResponse DescribeDestRegions(Models\DescribeDestRegionsRequest $req) 本接口（DescribeDestRegions）用于查询源站区域，即源站服务器所在区域。
- * @method Models\DescribeDomainErrorPageInfoResponse DescribeDomainErrorPageInfo(Models\DescribeDomainErrorPageInfoRequest $req) 查询目前定制域名的错误响应
+ * @method Models\DescribeDomainErrorPageInfoResponse DescribeDomainErrorPageInfo(Models\DescribeDomainErrorPageInfoRequest $req) 查询指定域名的错误响应
  * @method Models\DescribeDomainErrorPageInfoByIdsResponse DescribeDomainErrorPageInfoByIds(Models\DescribeDomainErrorPageInfoByIdsRequest $req) 根据定制错误ID查询错误响应
  * @method Models\DescribeFirstLinkSessionResponse DescribeFirstLinkSession(Models\DescribeFirstLinkSessionRequest $req) 产品功能已下线，下线对应的api接口
 

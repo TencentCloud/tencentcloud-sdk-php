@@ -37,6 +37,7 @@ use TencentCloud\Es\V20250101\Models as Models;
  * @method Models\ParseDocumentAsyncResponse ParseDocumentAsync(Models\ParseDocumentAsyncRequest $req) 本服务可将各类格式文档精准转换为标准格式，满足企业知识库建设、技术文档迁移、内容平台结构化存储等需求。
 本接口为异步接口，有单账号调用上限控制，如您有提高并发限制的需求请[联系我们](https://cloud.tencent.com/act/event/Online_service)  。
  * @method Models\RunRerankResponse RunRerank(Models\RunRerankRequest $req) 重排序
+ * @method Models\WebSearchResponse WebSearch(Models\WebSearchRequest $req) WebSearch API 是一个网页搜索服务，支持多种搜索引擎，可以获取网页的标题、URL、摘要和正文内容。
  */
 
 class EsClient extends AbstractClient

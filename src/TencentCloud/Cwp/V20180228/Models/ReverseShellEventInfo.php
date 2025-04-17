@@ -76,6 +76,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModifyTime(string $ModifyTime) 设置处理时间
  * @method string getCmdLineQuote() 获取命令详情的转义后内容，供正则加白全字符串匹配使用
  * @method void setCmdLineQuote(string $CmdLineQuote) 设置命令详情的转义后内容，供正则加白全字符串匹配使用
+ * @method integer getRiskLevel() 获取风险等级
+ * @method void setRiskLevel(integer $RiskLevel) 设置风险等级
  */
 class ReverseShellEventInfo extends AbstractModel
 {
@@ -220,6 +222,11 @@ class ReverseShellEventInfo extends AbstractModel
     public $CmdLineQuote;
 
     /**
+     * @var integer 风险等级
+     */
+    public $RiskLevel;
+
+    /**
      * @param integer $Id ID 主键
      * @param string $Uuid 主机安全uuid
      * @param string $Quuid 主机uuid
@@ -248,6 +255,7 @@ class ReverseShellEventInfo extends AbstractModel
      * @param string $MachineStatus 主机在线状态 OFFLINE  ONLINE
      * @param string $ModifyTime 处理时间
      * @param string $CmdLineQuote 命令详情的转义后内容，供正则加白全字符串匹配使用
+     * @param integer $RiskLevel 风险等级
      */
     function __construct()
     {
@@ -372,6 +380,10 @@ class ReverseShellEventInfo extends AbstractModel
 
         if (array_key_exists("CmdLineQuote",$param) and $param["CmdLineQuote"] !== null) {
             $this->CmdLineQuote = $param["CmdLineQuote"];
+        }
+
+        if (array_key_exists("RiskLevel",$param) and $param["RiskLevel"] !== null) {
+            $this->RiskLevel = $param["RiskLevel"];
         }
     }
 }

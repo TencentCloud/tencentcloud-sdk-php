@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogParseType(string $LogParseType) 设置解析类型：json ｜ line
  * @method string getTag() 获取服务标签, function: 函数托管
  * @method void setTag(string $Tag) 设置服务标签, function: 函数托管
+ * @method string getInternalAccess() 获取内网访问开关 close | open
+ * @method void setInternalAccess(string $InternalAccess) 设置内网访问开关 close | open
  */
 class ServerBaseConfig extends AbstractModel
 {
@@ -171,6 +173,11 @@ class ServerBaseConfig extends AbstractModel
     public $Tag;
 
     /**
+     * @var string 内网访问开关 close | open
+     */
+    public $InternalAccess;
+
+    /**
      * @param string $EnvId 环境 Id
      * @param string $ServerName 服务名
      * @param array $OpenAccessTypes 是否开启公网访问
@@ -192,6 +199,7 @@ class ServerBaseConfig extends AbstractModel
      * @param string $LogTopicId cls 主题id
      * @param string $LogParseType 解析类型：json ｜ line
      * @param string $Tag 服务标签, function: 函数托管
+     * @param string $InternalAccess 内网访问开关 close | open
      */
     function __construct()
     {
@@ -293,6 +301,10 @@ class ServerBaseConfig extends AbstractModel
 
         if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
             $this->Tag = $param["Tag"];
+        }
+
+        if (array_key_exists("InternalAccess",$param) and $param["InternalAccess"] !== null) {
+            $this->InternalAccess = $param["InternalAccess"];
         }
     }
 }

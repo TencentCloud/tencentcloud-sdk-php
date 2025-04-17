@@ -113,11 +113,6 @@ use TencentCloud\Lighthouse\V20200324\Models as Models;
  * @method Models\DescribeFirewallTemplateRulesResponse DescribeFirewallTemplateRules(Models\DescribeFirewallTemplateRulesRequest $req) 本接口 (DescribeFirewallTemplateRules) 用于查询防火墙模板规则列表。
  * @method Models\DescribeFirewallTemplatesResponse DescribeFirewallTemplates(Models\DescribeFirewallTemplatesRequest $req) 本接口 (DescribeFirewallTemplates) 用于查询防火墙模板列表。
  * @method Models\DescribeGeneralResourceQuotasResponse DescribeGeneralResourceQuotas(Models\DescribeGeneralResourceQuotasRequest $req) 本接口（DescribeGeneralResourceQuotas）用于查询通用资源配额信息。
- * @method Models\DescribeInstanceLoginKeyPairAttributeResponse DescribeInstanceLoginKeyPairAttribute(Models\DescribeInstanceLoginKeyPairAttributeRequest $req) 后端代码已与23年2月4号下线
-近90天无调用记录
-经评估，下线无风险，操作下线
-
-本接口用于查询实例默认登录密钥属性。
  * @method Models\DescribeInstanceVncUrlResponse DescribeInstanceVncUrl(Models\DescribeInstanceVncUrlRequest $req) 本接口 ( DescribeInstanceVncUrl ) 用于查询实例管理终端地址，获取的地址可用于实例的 VNC 登录。
 
 * 仅处于 `RUNNING`，`RESCUE_MODE` 状态的机器，且当前机器无变更中操作，才可使用此功能。
@@ -226,14 +221,6 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 * 只有状态为 RUNNING，STOPPED的实例才可以进行此操作。
 * 支持批量操作。每次请求批量实例的上限为 30。
 * 本接口为异步接口，请求发送成功后会返回一个 RequestId，此时操作并未立即完成。实例操作结果可以通过调用 <a href="https://cloud.tencent.com/document/product/1207/47573" target="_blank">DescribeInstances</a> 接口查询，如果实例的最新操作状态（LatestOperationState）为“SUCCESS”，则代表操作成功。
- * @method Models\ModifyInstancesLoginKeyPairAttributeResponse ModifyInstancesLoginKeyPairAttribute(Models\ModifyInstancesLoginKeyPairAttributeRequest $req) 后端代码已与23年2月4号下线
-近90天只有一次调用记录，且明确返回前端接口下线错误信息
-
-经评估无风险，操作接口下线
-
-本接口用于设置实例默认登录密钥对属性。
-
-
  * @method Models\ModifyInstancesRenewFlagResponse ModifyInstancesRenewFlag(Models\ModifyInstancesRenewFlagRequest $req) 本接口 (ModifyInstancesRenewFlag) 用于修改包年包月实例续费标识。
 
 * 实例被标识为自动续费后，每次在实例到期时，会自动续费一个月。

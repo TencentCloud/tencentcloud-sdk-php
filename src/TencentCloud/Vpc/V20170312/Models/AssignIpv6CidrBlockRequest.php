@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getVpcId() 获取`VPC`实例`ID`，形如：`vpc-f49l6u0z`。
  * @method void setVpcId(string $VpcId) 设置`VPC`实例`ID`，形如：`vpc-f49l6u0z`。
+ * @method string getAddressType() 获取申请IPv6 Cidr 的类型，`GUA`(全球单播地址), `ULA`(唯一本地地址)。
+ * @method void setAddressType(string $AddressType) 设置申请IPv6 Cidr 的类型，`GUA`(全球单播地址), `ULA`(唯一本地地址)。
  */
 class AssignIpv6CidrBlockRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class AssignIpv6CidrBlockRequest extends AbstractModel
     public $VpcId;
 
     /**
+     * @var string 申请IPv6 Cidr 的类型，`GUA`(全球单播地址), `ULA`(唯一本地地址)。
+     */
+    public $AddressType;
+
+    /**
      * @param string $VpcId `VPC`实例`ID`，形如：`vpc-f49l6u0z`。
+     * @param string $AddressType 申请IPv6 Cidr 的类型，`GUA`(全球单播地址), `ULA`(唯一本地地址)。
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class AssignIpv6CidrBlockRequest extends AbstractModel
         }
         if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
             $this->VpcId = $param["VpcId"];
+        }
+
+        if (array_key_exists("AddressType",$param) and $param["AddressType"] !== null) {
+            $this->AddressType = $param["AddressType"];
         }
     }
 }

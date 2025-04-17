@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置输出的描述。
  * @method string getProtocol() 获取输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST。
  * @method void setProtocol(string $Protocol) 设置输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST。
+ * @method string getOutputKind() 获取输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出。
+ * @method void setOutputKind(string $OutputKind) 设置输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出。
  * @method CreateOutputSRTSettings getSRTSettings() 获取转推SRT的配置。
  * @method void setSRTSettings(CreateOutputSRTSettings $SRTSettings) 设置转推SRT的配置。
  * @method CreateOutputInfoRTPSettings getRTPSettings() 获取转推RTP的配置。
@@ -72,6 +74,11 @@ class ModifyOutputInfo extends AbstractModel
      * @var string 输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST。
      */
     public $Protocol;
+
+    /**
+     * @var string 输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出。
+     */
+    public $OutputKind;
 
     /**
      * @var CreateOutputSRTSettings 转推SRT的配置。
@@ -129,6 +136,7 @@ class ModifyOutputInfo extends AbstractModel
      * @param string $OutputName 输出的名称。
      * @param string $Description 输出的描述。
      * @param string $Protocol 输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST。
+     * @param string $OutputKind 输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出。
      * @param CreateOutputSRTSettings $SRTSettings 转推SRT的配置。
      * @param CreateOutputInfoRTPSettings $RTPSettings 转推RTP的配置。
      * @param CreateOutputRTMPSettings $RTMPSettings 转推RTMP的配置。
@@ -168,6 +176,10 @@ class ModifyOutputInfo extends AbstractModel
 
         if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
             $this->Protocol = $param["Protocol"];
+        }
+
+        if (array_key_exists("OutputKind",$param) and $param["OutputKind"] !== null) {
+            $this->OutputKind = $param["OutputKind"];
         }
 
         if (array_key_exists("SRTSettings",$param) and $param["SRTSettings"] !== null) {

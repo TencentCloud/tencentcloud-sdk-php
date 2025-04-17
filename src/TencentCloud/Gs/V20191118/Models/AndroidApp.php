@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置安卓应用创建时间
  * @method string getUserId() 获取用户 Id
  * @method void setUserId(string $UserId) 设置用户 Id
+ * @method string getAppMode() 获取应用模式（NORMAL : 普通模式；ADVANCED : 高级模式）
+ * @method void setAppMode(string $AppMode) 设置应用模式（NORMAL : 普通模式；ADVANCED : 高级模式）
  */
 class AndroidApp extends AbstractModel
 {
@@ -66,12 +68,18 @@ class AndroidApp extends AbstractModel
     public $UserId;
 
     /**
+     * @var string 应用模式（NORMAL : 普通模式；ADVANCED : 高级模式）
+     */
+    public $AppMode;
+
+    /**
      * @param string $AndroidAppId 安卓应用 Id
      * @param string $Name 安卓应用名称
      * @param string $State 安卓应用状态（上架、下架）
      * @param array $AndroidAppVersionInfo 安卓应用版本列表
      * @param string $CreateTime 安卓应用创建时间
      * @param string $UserId 用户 Id
+     * @param string $AppMode 应用模式（NORMAL : 普通模式；ADVANCED : 高级模式）
      */
     function __construct()
     {
@@ -113,6 +121,10 @@ class AndroidApp extends AbstractModel
 
         if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
             $this->UserId = $param["UserId"];
+        }
+
+        if (array_key_exists("AppMode",$param) and $param["AppMode"] !== null) {
+            $this->AppMode = $param["AppMode"];
         }
     }
 }

@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 迁移主题修改状态后的结果
  *
  * @method string getTopicName() 获取主题名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicName(string $TopicName) 设置主题名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getSuccess() 获取是否成功
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSuccess(boolean $Success) 设置是否成功
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNamespace() 获取命名空间，仅4.x有效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespace(string $Namespace) 设置命名空间，仅4.x有效
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TopicStageChangeResult extends AbstractModel
 {
     /**
      * @var string 主题名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicName;
 
     /**
      * @var boolean 是否成功
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Success;
 
     /**
      * @var string 命名空间，仅4.x有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Namespace;
 
     /**
      * @param string $TopicName 主题名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Success 是否成功
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Namespace 命名空间，仅4.x有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

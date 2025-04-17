@@ -91,7 +91,7 @@ use TencentCloud\Trocket\V20230308\Models as Models;
  * @method Models\DescribeMigratingGroupStatsResponse DescribeMigratingGroupStats(Models\DescribeMigratingGroupStatsRequest $req) 查看迁移消费组的实时信息
  * @method Models\DescribeMigratingTopicListResponse DescribeMigratingTopicList(Models\DescribeMigratingTopicListRequest $req) 查询Topic迁移状态列表
 
-查询过滤器，支持TopicName、MigrationStatus查询
+查询过滤器，支持TopicName、MigrationStatus、Namespace查询
  * @method Models\DescribeMigratingTopicStatsResponse DescribeMigratingTopicStats(Models\DescribeMigratingTopicStatsRequest $req) 用于查询迁移主题的实时数据
  * @method Models\DescribeProductSKUsResponse DescribeProductSKUs(Models\DescribeProductSKUsRequest $req) 查询产品售卖规格，针对 RocketMQ 5.x 集群。
  * @method Models\DescribeRoleListResponse DescribeRoleList(Models\DescribeRoleListRequest $req) 查询角色列表，Filter参数使用说明如下：
@@ -104,6 +104,7 @@ use TencentCloud\Trocket\V20230308\Models as Models;
 GroupName，消费组名称模糊搜索
 Imported，是否已导入
 ImportStatus，导入状态
+Namespace，命名空间
  * @method Models\DescribeTopicResponse DescribeTopic(Models\DescribeTopicRequest $req) 查询主题详情，Offset和Limit参数是指订阅该主题的消费组查询分页参数，Filter参数使用说明如下：
 
 ConsumerGroup，消费组名称过滤

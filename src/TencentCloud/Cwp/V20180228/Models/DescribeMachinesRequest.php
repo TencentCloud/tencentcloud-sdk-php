@@ -42,7 +42,6 @@ Other 混合云专区
 <li>Ips - String - 是否必填：否 - 通过ip查询 </li>
 <li>Names - String - 是否必填：否 - 通过实例名查询 </li>
 <li>InstanceIds - String - 是否必填：否 - 通过实例id查询 </li>
-<li>Status - String - 是否必填：否 - 客户端在线状态（OFFLINE: 离线/关机 | ONLINE: 在线 | UNINSTALLED：未安装 | AGENT_OFFLINE 离线| AGENT_SHUTDOWN 已关机）</li>
 <li>Version - String  是否必填：否 - 当前防护版本（ PRO_VERSION：专业版 | BASIC_VERSION：基础版 | Flagship : 旗舰版 | ProtectedMachines: 专业版+旗舰版）</li>
 <li>Risk - String 是否必填: 否 - 风险主机( yes ) </li>
 <li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
@@ -50,11 +49,12 @@ Other 混合云专区
 <li>Quuid - String - 是否必填: 否 - 云服务器uuid  最大100条.</li>
 <li>AddedOnTheFifteen- String 是否必填: 否 - 是否只查询15天内新增的主机( 1：是) </li>
 <li> TagId- String 是否必填: 否 - 查询指定标签关联的主机列表 </li>
+<li> AgentStatus- String 是否必填: 否 - ALL 全部; ONLINE 防护中; OFFLINE 已离线;UNINSTALLED 未安装</li>
+<li> MachineStatus- String 是否必填: 否 - ALL 全部; RUNNING 运行中; STOPPED 已关机; EXPIRED 待回收</li>
  * @method void setFilters(array $Filters) 设置过滤条件。
 <li>Ips - String - 是否必填：否 - 通过ip查询 </li>
 <li>Names - String - 是否必填：否 - 通过实例名查询 </li>
 <li>InstanceIds - String - 是否必填：否 - 通过实例id查询 </li>
-<li>Status - String - 是否必填：否 - 客户端在线状态（OFFLINE: 离线/关机 | ONLINE: 在线 | UNINSTALLED：未安装 | AGENT_OFFLINE 离线| AGENT_SHUTDOWN 已关机）</li>
 <li>Version - String  是否必填：否 - 当前防护版本（ PRO_VERSION：专业版 | BASIC_VERSION：基础版 | Flagship : 旗舰版 | ProtectedMachines: 专业版+旗舰版）</li>
 <li>Risk - String 是否必填: 否 - 风险主机( yes ) </li>
 <li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
@@ -62,6 +62,8 @@ Other 混合云专区
 <li>Quuid - String - 是否必填: 否 - 云服务器uuid  最大100条.</li>
 <li>AddedOnTheFifteen- String 是否必填: 否 - 是否只查询15天内新增的主机( 1：是) </li>
 <li> TagId- String 是否必填: 否 - 查询指定标签关联的主机列表 </li>
+<li> AgentStatus- String 是否必填: 否 - ALL 全部; ONLINE 防护中; OFFLINE 已离线;UNINSTALLED 未安装</li>
+<li> MachineStatus- String 是否必填: 否 - ALL 全部; RUNNING 运行中; STOPPED 已关机; EXPIRED 待回收</li>
  * @method array getProjectIds() 获取机器所属业务ID列表
  * @method void setProjectIds(array $ProjectIds) 设置机器所属业务ID列表
  */
@@ -97,7 +99,6 @@ Other 混合云专区
 <li>Ips - String - 是否必填：否 - 通过ip查询 </li>
 <li>Names - String - 是否必填：否 - 通过实例名查询 </li>
 <li>InstanceIds - String - 是否必填：否 - 通过实例id查询 </li>
-<li>Status - String - 是否必填：否 - 客户端在线状态（OFFLINE: 离线/关机 | ONLINE: 在线 | UNINSTALLED：未安装 | AGENT_OFFLINE 离线| AGENT_SHUTDOWN 已关机）</li>
 <li>Version - String  是否必填：否 - 当前防护版本（ PRO_VERSION：专业版 | BASIC_VERSION：基础版 | Flagship : 旗舰版 | ProtectedMachines: 专业版+旗舰版）</li>
 <li>Risk - String 是否必填: 否 - 风险主机( yes ) </li>
 <li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
@@ -105,6 +106,8 @@ Other 混合云专区
 <li>Quuid - String - 是否必填: 否 - 云服务器uuid  最大100条.</li>
 <li>AddedOnTheFifteen- String 是否必填: 否 - 是否只查询15天内新增的主机( 1：是) </li>
 <li> TagId- String 是否必填: 否 - 查询指定标签关联的主机列表 </li>
+<li> AgentStatus- String 是否必填: 否 - ALL 全部; ONLINE 防护中; OFFLINE 已离线;UNINSTALLED 未安装</li>
+<li> MachineStatus- String 是否必填: 否 - ALL 全部; RUNNING 运行中; STOPPED 已关机; EXPIRED 待回收</li>
      */
     public $Filters;
 
@@ -127,7 +130,6 @@ Other 混合云专区
 <li>Ips - String - 是否必填：否 - 通过ip查询 </li>
 <li>Names - String - 是否必填：否 - 通过实例名查询 </li>
 <li>InstanceIds - String - 是否必填：否 - 通过实例id查询 </li>
-<li>Status - String - 是否必填：否 - 客户端在线状态（OFFLINE: 离线/关机 | ONLINE: 在线 | UNINSTALLED：未安装 | AGENT_OFFLINE 离线| AGENT_SHUTDOWN 已关机）</li>
 <li>Version - String  是否必填：否 - 当前防护版本（ PRO_VERSION：专业版 | BASIC_VERSION：基础版 | Flagship : 旗舰版 | ProtectedMachines: 专业版+旗舰版）</li>
 <li>Risk - String 是否必填: 否 - 风险主机( yes ) </li>
 <li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
@@ -135,6 +137,8 @@ Other 混合云专区
 <li>Quuid - String - 是否必填: 否 - 云服务器uuid  最大100条.</li>
 <li>AddedOnTheFifteen- String 是否必填: 否 - 是否只查询15天内新增的主机( 1：是) </li>
 <li> TagId- String 是否必填: 否 - 查询指定标签关联的主机列表 </li>
+<li> AgentStatus- String 是否必填: 否 - ALL 全部; ONLINE 防护中; OFFLINE 已离线;UNINSTALLED 未安装</li>
+<li> MachineStatus- String 是否必填: 否 - ALL 全部; RUNNING 运行中; STOPPED 已关机; EXPIRED 待回收</li>
      * @param array $ProjectIds 机器所属业务ID列表
      */
     function __construct()

@@ -29,15 +29,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCreateTime() 获取任务创建时间
  * @method void setCreateTime(string $CreateTime) 设置任务创建时间
  * @method string getEndTime() 获取任务结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置任务结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取任务完成状态
  * @method void setStatus(string $Status) 设置任务完成状态
  * @method string getOperateUin() 获取操作者
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperateUin(string $OperateUin) 设置操作者
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class UpgradeItem extends AbstractModel
 {
@@ -63,7 +59,6 @@ class UpgradeItem extends AbstractModel
 
     /**
      * @var string 任务结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
@@ -74,7 +69,6 @@ class UpgradeItem extends AbstractModel
 
     /**
      * @var string 操作者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OperateUin;
 
@@ -84,10 +78,8 @@ class UpgradeItem extends AbstractModel
      * @param string $TargetVersion 目标内核版本
      * @param string $CreateTime 任务创建时间
      * @param string $EndTime 任务结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 任务完成状态
      * @param string $OperateUin 操作者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

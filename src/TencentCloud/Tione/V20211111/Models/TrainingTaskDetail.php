@@ -150,6 +150,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCallbackUrl(string $CallbackUrl) 设置回调地址
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getCodeRepos() 获取任务关联的代码仓库配置
+ * @method void setCodeRepos(array $CodeRepos) 设置任务关联的代码仓库配置
  */
 class TrainingTaskDetail extends AbstractModel
 {
@@ -379,6 +381,11 @@ class TrainingTaskDetail extends AbstractModel
     public $CallbackUrl;
 
     /**
+     * @var array 任务关联的代码仓库配置
+     */
+    public $CodeRepos;
+
+    /**
      * @param string $Id 训练任务ID
      * @param string $Name 训练任务名称
      * @param string $Uin 主账号uin
@@ -444,6 +451,7 @@ class TrainingTaskDetail extends AbstractModel
      * @param string $Status 任务状态，eg：STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FAILED异常、SUCCEED已完成
      * @param string $CallbackUrl 回调地址
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $CodeRepos 任务关联的代码仓库配置
      */
     function __construct()
     {
@@ -636,6 +644,15 @@ class TrainingTaskDetail extends AbstractModel
 
         if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {
             $this->CallbackUrl = $param["CallbackUrl"];
+        }
+
+        if (array_key_exists("CodeRepos",$param) and $param["CodeRepos"] !== null) {
+            $this->CodeRepos = [];
+            foreach ($param["CodeRepos"] as $key => $value){
+                $obj = new CodeRepoConfig();
+                $obj->deserialize($value);
+                array_push($this->CodeRepos, $obj);
+            }
         }
     }
 }

@@ -31,23 +31,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRegion() 获取地域
  * @method void setRegion(string $Region) 设置地域
  * @method integer getRegionId() 获取地域Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionId(integer $RegionId) 设置地域Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegionDesc() 获取地域详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionDesc(string $RegionDesc) 设置地域详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getZone() 获取地区
  * @method void setZone(string $Zone) 设置地区
  * @method integer getZoneId() 获取地区id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneId(integer $ZoneId) 设置地区id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getZoneDesc() 获取地区详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneDesc(string $ZoneDesc) 设置地区详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVpcId() 获取私有网络
  * @method void setVpcId(string $VpcId) 设置私有网络
  * @method string getSubnetId() 获取子网
@@ -57,9 +49,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getExpireTime() 获取过期时间
  * @method void setExpireTime(string $ExpireTime) 设置过期时间
  * @method string getAccessInfo() 获取访问地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccessInfo(string $AccessInfo) 设置访问地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPayMode() 获取计费方式
  * @method void setPayMode(string $PayMode) 设置计费方式
  * @method boolean getRenewFlag() 获取自动续费
@@ -94,13 +84,11 @@ class InstanceSimpleInfoNew extends AbstractModel
 
     /**
      * @var integer 地域Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionId;
 
     /**
      * @var string 地域详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionDesc;
 
@@ -111,13 +99,11 @@ class InstanceSimpleInfoNew extends AbstractModel
 
     /**
      * @var integer 地区id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneId;
 
     /**
      * @var string 地区详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneDesc;
 
@@ -143,7 +129,6 @@ class InstanceSimpleInfoNew extends AbstractModel
 
     /**
      * @var string 访问地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccessInfo;
 
@@ -164,20 +149,15 @@ class InstanceSimpleInfoNew extends AbstractModel
      * @param string $Version 内核版本
      * @param string $Region 地域
      * @param integer $RegionId 地域Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegionDesc 地域详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Zone 地区
      * @param integer $ZoneId 地区id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ZoneDesc 地区详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcId 私有网络
      * @param string $SubnetId 子网
      * @param string $CreateTime 开始时间
      * @param string $ExpireTime 过期时间
      * @param string $AccessInfo 访问地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PayMode 计费方式
      * @param boolean $RenewFlag 自动续费
      */

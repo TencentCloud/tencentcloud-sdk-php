@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAppId() 获取账号AppId
  * @method void setAppId(string $AppId) 设置账号AppId
+ * @method integer getNameLimit() 获取扩展包名数量上限
+ * @method void setNameLimit(integer $NameLimit) 设置扩展包名数量上限
  */
 class ApplicationInfo extends AbstractModel
 {
@@ -150,6 +152,11 @@ class ApplicationInfo extends AbstractModel
     public $AppId;
 
     /**
+     * @var integer 扩展包名数量上限
+     */
+    public $NameLimit;
+
+    /**
      * @param string $AppName 应用名称
      * @param string $BundleId Ios应用的唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
@@ -172,6 +179,7 @@ class ApplicationInfo extends AbstractModel
      * @param array $DomainList web端Domain列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AppId 账号AppId
+     * @param integer $NameLimit 扩展包名数量上限
      */
     function __construct()
     {
@@ -254,6 +262,10 @@ class ApplicationInfo extends AbstractModel
 
         if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
             $this->AppId = $param["AppId"];
+        }
+
+        if (array_key_exists("NameLimit",$param) and $param["NameLimit"] !== null) {
+            $this->NameLimit = $param["NameLimit"];
         }
     }
 }

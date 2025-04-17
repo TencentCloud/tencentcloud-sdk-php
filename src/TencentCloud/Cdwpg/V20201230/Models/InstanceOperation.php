@@ -31,21 +31,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStartTime() 获取操作开始时间
  * @method void setStartTime(string $StartTime) 设置操作开始时间
  * @method string getEndTime() 获取操作结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置操作结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContext() 获取操作上下文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContext(string $Context) 设置操作上下文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取操作更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置操作更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUin() 获取操作UIN
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUin(string $Uin) 设置操作UIN
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceOperation extends AbstractModel
 {
@@ -76,25 +68,21 @@ class InstanceOperation extends AbstractModel
 
     /**
      * @var string 操作结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
      * @var string 操作上下文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Context;
 
     /**
      * @var string 操作更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @var string 操作UIN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uin;
 
@@ -105,13 +93,9 @@ class InstanceOperation extends AbstractModel
      * @param integer $Status 状态
      * @param string $StartTime 操作开始时间
      * @param string $EndTime 操作结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Context 操作上下文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 操作更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uin 操作UIN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

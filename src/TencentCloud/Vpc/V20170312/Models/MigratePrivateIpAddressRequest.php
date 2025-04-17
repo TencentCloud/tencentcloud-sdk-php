@@ -20,22 +20,28 @@ use TencentCloud\Common\AbstractModel;
 /**
  * MigratePrivateIpAddress请求参数结构体
  *
- * @method string getSourceNetworkInterfaceId() 获取当内网IP绑定的弹性网卡实例ID，例如：eni-m6dyj72l。
- * @method void setSourceNetworkInterfaceId(string $SourceNetworkInterfaceId) 设置当内网IP绑定的弹性网卡实例ID，例如：eni-m6dyj72l。
- * @method string getDestinationNetworkInterfaceId() 获取待迁移的目的弹性网卡实例ID。
- * @method void setDestinationNetworkInterfaceId(string $DestinationNetworkInterfaceId) 设置待迁移的目的弹性网卡实例ID。
+ * @method string getSourceNetworkInterfaceId() 获取当内网IP绑定的弹性网卡实例ID，例如：eni-m6dyj72l。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
+
+ * @method void setSourceNetworkInterfaceId(string $SourceNetworkInterfaceId) 设置当内网IP绑定的弹性网卡实例ID，例如：eni-m6dyj72l。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
+
+ * @method string getDestinationNetworkInterfaceId() 获取待迁移的目的弹性网卡实例ID。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
+
+ * @method void setDestinationNetworkInterfaceId(string $DestinationNetworkInterfaceId) 设置待迁移的目的弹性网卡实例ID。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
+
  * @method string getPrivateIpAddress() 获取迁移的内网IP地址，例如：10.0.0.6。
  * @method void setPrivateIpAddress(string $PrivateIpAddress) 设置迁移的内网IP地址，例如：10.0.0.6。
  */
 class MigratePrivateIpAddressRequest extends AbstractModel
 {
     /**
-     * @var string 当内网IP绑定的弹性网卡实例ID，例如：eni-m6dyj72l。
+     * @var string 当内网IP绑定的弹性网卡实例ID，例如：eni-m6dyj72l。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
+
      */
     public $SourceNetworkInterfaceId;
 
     /**
-     * @var string 待迁移的目的弹性网卡实例ID。
+     * @var string 待迁移的目的弹性网卡实例ID。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
+
      */
     public $DestinationNetworkInterfaceId;
 
@@ -45,8 +51,10 @@ class MigratePrivateIpAddressRequest extends AbstractModel
     public $PrivateIpAddress;
 
     /**
-     * @param string $SourceNetworkInterfaceId 当内网IP绑定的弹性网卡实例ID，例如：eni-m6dyj72l。
-     * @param string $DestinationNetworkInterfaceId 待迁移的目的弹性网卡实例ID。
+     * @param string $SourceNetworkInterfaceId 当内网IP绑定的弹性网卡实例ID，例如：eni-m6dyj72l。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
+
+     * @param string $DestinationNetworkInterfaceId 待迁移的目的弹性网卡实例ID。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
+
      * @param string $PrivateIpAddress 迁移的内网IP地址，例如：10.0.0.6。
      */
     function __construct()

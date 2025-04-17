@@ -30,6 +30,8 @@ CREATING： 创建中、
 CREATE_FAIL：创建失败、CREATE_SUCCESS：创建成功）
  * @method string getCreateTime() 获取安卓应用版本创建时间
  * @method void setCreateTime(string $CreateTime) 设置安卓应用版本创建时间
+ * @method string getCommand() 获取shell 命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+ * @method void setCommand(string $Command) 设置shell 命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
  */
 class AndroidAppVersionInfo extends AbstractModel
 {
@@ -51,11 +53,17 @@ CREATE_FAIL：创建失败、CREATE_SUCCESS：创建成功）
     public $CreateTime;
 
     /**
+     * @var string shell 命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+     */
+    public $Command;
+
+    /**
      * @param string $AndroidAppVersion 安卓应用版本
      * @param string $State 安卓应用版本创建状态（NORMAL：无、UPLOADING：上传中、
 CREATING： 创建中、
 CREATE_FAIL：创建失败、CREATE_SUCCESS：创建成功）
      * @param string $CreateTime 安卓应用版本创建时间
+     * @param string $Command shell 命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
      */
     function __construct()
     {
@@ -80,6 +88,10 @@ CREATE_FAIL：创建失败、CREATE_SUCCESS：创建成功）
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("Command",$param) and $param["Command"] !== null) {
+            $this->Command = $param["Command"];
         }
     }
 }

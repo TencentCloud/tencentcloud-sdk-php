@@ -31,9 +31,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMethod() 获取方法
  * @method void setMethod(string $Method) 设置方法
  * @method string getMask() 获取是否遮盖
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMask(string $Mask) 设置是否遮盖
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class HbaConfig extends AbstractModel
 {
@@ -64,7 +62,6 @@ class HbaConfig extends AbstractModel
 
     /**
      * @var string 是否遮盖
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Mask;
 
@@ -75,7 +72,6 @@ class HbaConfig extends AbstractModel
      * @param string $Address ip地址
      * @param string $Method 方法
      * @param string $Mask 是否遮盖
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

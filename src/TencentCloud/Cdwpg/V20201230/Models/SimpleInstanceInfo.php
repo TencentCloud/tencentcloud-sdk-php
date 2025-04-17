@@ -41,9 +41,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getExpireTime() 获取到期时间
  * @method void setExpireTime(string $ExpireTime) 设置到期时间
  * @method string getAccessInfo() 获取访问地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccessInfo(string $AccessInfo) 设置访问地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRenewFlag() 获取自动续费开关，0为不自动续费，1为自动续费
  * @method void setRenewFlag(integer $RenewFlag) 设置自动续费开关，0为不自动续费，1为自动续费
  * @method ChargeProperties getChargeProperties() 获取计费方式
@@ -51,9 +49,7 @@ use TencentCloud\Common\AbstractModel;
  * @method array getResources() 获取资源集合
  * @method void setResources(array $Resources) 设置资源集合
  * @method array getTags() 获取标签列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取集群状态
  * @method void setStatus(integer $Status) 设置集群状态
  */
@@ -111,7 +107,6 @@ class SimpleInstanceInfo extends AbstractModel
 
     /**
      * @var string 访问地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccessInfo;
 
@@ -132,7 +127,6 @@ class SimpleInstanceInfo extends AbstractModel
 
     /**
      * @var array 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
@@ -153,12 +147,10 @@ class SimpleInstanceInfo extends AbstractModel
      * @param string $CreateTime 开始时间
      * @param string $ExpireTime 到期时间
      * @param string $AccessInfo 访问地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RenewFlag 自动续费开关，0为不自动续费，1为自动续费
      * @param ChargeProperties $ChargeProperties 计费方式
      * @param array $Resources 资源集合
      * @param array $Tags 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 集群状态
      */
     function __construct()

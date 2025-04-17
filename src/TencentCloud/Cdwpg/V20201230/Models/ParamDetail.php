@@ -31,17 +31,11 @@ use TencentCloud\Common\AbstractModel;
  * @method ValueRange getValueRange() 获取取值范围
  * @method void setValueRange(ValueRange $ValueRange) 设置取值范围
  * @method string getUnit() 获取单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnit(string $Unit) 设置单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getShortDesc() 获取英文简介
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setShortDesc(string $ShortDesc) 设置英文简介
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getParameterName() 获取参数名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParameterName(string $ParameterName) 设置参数名
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ParamDetail extends AbstractModel
 {
@@ -72,19 +66,16 @@ class ParamDetail extends AbstractModel
 
     /**
      * @var string 单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Unit;
 
     /**
      * @var string 英文简介
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ShortDesc;
 
     /**
      * @var string 参数名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParameterName;
 
@@ -95,11 +86,8 @@ class ParamDetail extends AbstractModel
      * @param string $RunningValue 当前运行值
      * @param ValueRange $ValueRange 取值范围
      * @param string $Unit 单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ShortDesc 英文简介
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ParameterName 参数名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

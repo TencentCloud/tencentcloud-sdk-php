@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFlowLog请求参数结构体
  *
- * @method string getVpcId() 获取私用网络ID或者统一ID，建议使用统一ID。
- * @method void setVpcId(string $VpcId) 设置私用网络ID或者统一ID，建议使用统一ID。
- * @method string getFlowLogId() 获取流日志唯一ID。
- * @method void setFlowLogId(string $FlowLogId) 设置流日志唯一ID。
+ * @method string getVpcId() 获取私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。该接口不支持拉取CCN类型的流日志，所以该字段为必选。
+ * @method void setVpcId(string $VpcId) 设置私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。该接口不支持拉取CCN类型的流日志，所以该字段为必选。
+ * @method string getFlowLogId() 获取流日志唯一ID。可通过[CreateFlowLog](https://cloud.tencent.com/document/product/215/35015)接口创建；可通过[DescribeFlowLogs](https://cloud.tencent.com/document/product/215/35012)接口获取；
+ * @method void setFlowLogId(string $FlowLogId) 设置流日志唯一ID。可通过[CreateFlowLog](https://cloud.tencent.com/document/product/215/35015)接口创建；可通过[DescribeFlowLogs](https://cloud.tencent.com/document/product/215/35012)接口获取；
  */
 class DescribeFlowLogRequest extends AbstractModel
 {
     /**
-     * @var string 私用网络ID或者统一ID，建议使用统一ID。
+     * @var string 私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。该接口不支持拉取CCN类型的流日志，所以该字段为必选。
      */
     public $VpcId;
 
     /**
-     * @var string 流日志唯一ID。
+     * @var string 流日志唯一ID。可通过[CreateFlowLog](https://cloud.tencent.com/document/product/215/35015)接口创建；可通过[DescribeFlowLogs](https://cloud.tencent.com/document/product/215/35012)接口获取；
      */
     public $FlowLogId;
 
     /**
-     * @param string $VpcId 私用网络ID或者统一ID，建议使用统一ID。
-     * @param string $FlowLogId 流日志唯一ID。
+     * @param string $VpcId 私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。该接口不支持拉取CCN类型的流日志，所以该字段为必选。
+     * @param string $FlowLogId 流日志唯一ID。可通过[CreateFlowLog](https://cloud.tencent.com/document/product/215/35015)接口创建；可通过[DescribeFlowLogs](https://cloud.tencent.com/document/product/215/35012)接口获取；
      */
     function __construct()
     {

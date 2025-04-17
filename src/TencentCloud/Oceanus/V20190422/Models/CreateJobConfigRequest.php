@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setJobId(string $JobId) 设置作业Id
  * @method string getEntrypointClass() 获取主类
  * @method void setEntrypointClass(string $EntrypointClass) 设置主类
- * @method string getProgramArgs() 获取主类入参
- * @method void setProgramArgs(string $ProgramArgs) 设置主类入参
+ * @method string getProgramArgs() 获取主类入参，需要区分下Sql作业配置，Jar作业配置，Python作业配置，具体参考下面的示例值
+ * @method void setProgramArgs(string $ProgramArgs) 设置主类入参，需要区分下Sql作业配置，Jar作业配置，Python作业配置，具体参考下面的示例值
  * @method string getRemark() 获取备注
  * @method void setRemark(string $Remark) 设置备注
  * @method array getResourceRefs() 获取资源引用数组
@@ -100,7 +100,7 @@ class CreateJobConfigRequest extends AbstractModel
     public $EntrypointClass;
 
     /**
-     * @var string 主类入参
+     * @var string 主类入参，需要区分下Sql作业配置，Jar作业配置，Python作业配置，具体参考下面的示例值
      */
     public $ProgramArgs;
 
@@ -257,7 +257,7 @@ class CreateJobConfigRequest extends AbstractModel
     /**
      * @param string $JobId 作业Id
      * @param string $EntrypointClass 主类
-     * @param string $ProgramArgs 主类入参
+     * @param string $ProgramArgs 主类入参，需要区分下Sql作业配置，Jar作业配置，Python作业配置，具体参考下面的示例值
      * @param string $Remark 备注
      * @param array $ResourceRefs 资源引用数组
      * @param integer $DefaultParallelism 作业默认并行度

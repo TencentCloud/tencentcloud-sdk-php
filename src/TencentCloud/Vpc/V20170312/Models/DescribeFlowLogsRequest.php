@@ -20,30 +20,32 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFlowLogs请求参数结构体
  *
- * @method string getVpcId() 获取私用网络ID或者统一ID，建议使用统一ID。
- * @method void setVpcId(string $VpcId) 设置私用网络ID或者统一ID，建议使用统一ID。
- * @method string getFlowLogId() 获取流日志唯一ID。
- * @method void setFlowLogId(string $FlowLogId) 设置流日志唯一ID。
+ * @method string getVpcId() 获取私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
+ * @method void setVpcId(string $VpcId) 设置私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
+ * @method string getFlowLogId() 获取流日志唯一ID。可通过[CreateFlowLog](https://cloud.tencent.com/document/product/215/35015)接口创建。
+ * @method void setFlowLogId(string $FlowLogId) 设置流日志唯一ID。可通过[CreateFlowLog](https://cloud.tencent.com/document/product/215/35015)接口创建。
  * @method string getFlowLogName() 获取流日志实例名字。
  * @method void setFlowLogName(string $FlowLogName) 设置流日志实例名字。
- * @method string getResourceType() 获取流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE。
- * @method void setResourceType(string $ResourceType) 设置流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE。
+ * @method string getResourceType() 获取流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。
+
+ * @method void setResourceType(string $ResourceType) 设置流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。
+
  * @method string getResourceId() 获取资源唯一ID。
  * @method void setResourceId(string $ResourceId) 设置资源唯一ID。
- * @method string getTrafficType() 获取流日志采集类型，ACCEPT|REJECT|ALL。
- * @method void setTrafficType(string $TrafficType) 设置流日志采集类型，ACCEPT|REJECT|ALL。
+ * @method string getTrafficType() 获取流日志采集类型，ACCEPT（允许），REJECT（拒绝），ALL（全部）。
+ * @method void setTrafficType(string $TrafficType) 设置流日志采集类型，ACCEPT（允许），REJECT（拒绝），ALL（全部）。
  * @method string getCloudLogId() 获取流日志存储ID。
  * @method void setCloudLogId(string $CloudLogId) 设置流日志存储ID。
- * @method string getCloudLogState() 获取流日志存储ID状态。
- * @method void setCloudLogState(string $CloudLogState) 设置流日志存储ID状态。
- * @method string getOrderField() 获取按某个字段排序,支持字段：flowLogName,createTime，默认按CreatedTime。
- * @method void setOrderField(string $OrderField) 设置按某个字段排序,支持字段：flowLogName,createTime，默认按CreatedTime。
+ * @method string getCloudLogState() 获取流日志存储ID状态。SUCCESS（成功），DELETED（删除）
+ * @method void setCloudLogState(string $CloudLogState) 设置流日志存储ID状态。SUCCESS（成功），DELETED（删除）
+ * @method string getOrderField() 获取按某个字段排序,支持字段：flowLogName,createTime，默认按createTime。
+ * @method void setOrderField(string $OrderField) 设置按某个字段排序,支持字段：flowLogName,createTime，默认按createTime。
  * @method string getOrderDirection() 获取升序（ASC）还是降序（DESC）,默认：DESC。
  * @method void setOrderDirection(string $OrderDirection) 设置升序（ASC）还是降序（DESC）,默认：DESC。
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
- * @method integer getLimit() 获取每页行数，默认为10。
- * @method void setLimit(integer $Limit) 设置每页行数，默认为10。
+ * @method integer getLimit() 获取每页行数，默认为10。范围1-100。
+ * @method void setLimit(integer $Limit) 设置每页行数，默认为10。范围1-100。
  * @method Filter getFilters() 获取过滤条件，参数不支持同时指定FlowLogId和Filters。
 <li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
 <li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。</li>
@@ -56,12 +58,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeFlowLogsRequest extends AbstractModel
 {
     /**
-     * @var string 私用网络ID或者统一ID，建议使用统一ID。
+     * @var string 私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
      */
     public $VpcId;
 
     /**
-     * @var string 流日志唯一ID。
+     * @var string 流日志唯一ID。可通过[CreateFlowLog](https://cloud.tencent.com/document/product/215/35015)接口创建。
      */
     public $FlowLogId;
 
@@ -71,7 +73,8 @@ class DescribeFlowLogsRequest extends AbstractModel
     public $FlowLogName;
 
     /**
-     * @var string 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE。
+     * @var string 流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。
+
      */
     public $ResourceType;
 
@@ -81,7 +84,7 @@ class DescribeFlowLogsRequest extends AbstractModel
     public $ResourceId;
 
     /**
-     * @var string 流日志采集类型，ACCEPT|REJECT|ALL。
+     * @var string 流日志采集类型，ACCEPT（允许），REJECT（拒绝），ALL（全部）。
      */
     public $TrafficType;
 
@@ -91,12 +94,12 @@ class DescribeFlowLogsRequest extends AbstractModel
     public $CloudLogId;
 
     /**
-     * @var string 流日志存储ID状态。
+     * @var string 流日志存储ID状态。SUCCESS（成功），DELETED（删除）
      */
     public $CloudLogState;
 
     /**
-     * @var string 按某个字段排序,支持字段：flowLogName,createTime，默认按CreatedTime。
+     * @var string 按某个字段排序,支持字段：flowLogName,createTime，默认按createTime。
      */
     public $OrderField;
 
@@ -111,7 +114,7 @@ class DescribeFlowLogsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 每页行数，默认为10。
+     * @var integer 每页行数，默认为10。范围1-100。
      */
     public $Limit;
 
@@ -128,18 +131,19 @@ class DescribeFlowLogsRequest extends AbstractModel
     public $CloudLogRegion;
 
     /**
-     * @param string $VpcId 私用网络ID或者统一ID，建议使用统一ID。
-     * @param string $FlowLogId 流日志唯一ID。
+     * @param string $VpcId 私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
+     * @param string $FlowLogId 流日志唯一ID。可通过[CreateFlowLog](https://cloud.tencent.com/document/product/215/35015)接口创建。
      * @param string $FlowLogName 流日志实例名字。
-     * @param string $ResourceType 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE。
+     * @param string $ResourceType 流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。
+
      * @param string $ResourceId 资源唯一ID。
-     * @param string $TrafficType 流日志采集类型，ACCEPT|REJECT|ALL。
+     * @param string $TrafficType 流日志采集类型，ACCEPT（允许），REJECT（拒绝），ALL（全部）。
      * @param string $CloudLogId 流日志存储ID。
-     * @param string $CloudLogState 流日志存储ID状态。
-     * @param string $OrderField 按某个字段排序,支持字段：flowLogName,createTime，默认按CreatedTime。
+     * @param string $CloudLogState 流日志存储ID状态。SUCCESS（成功），DELETED（删除）
+     * @param string $OrderField 按某个字段排序,支持字段：flowLogName,createTime，默认按createTime。
      * @param string $OrderDirection 升序（ASC）还是降序（DESC）,默认：DESC。
      * @param integer $Offset 偏移量，默认为0。
-     * @param integer $Limit 每页行数，默认为10。
+     * @param integer $Limit 每页行数，默认为10。范围1-100。
      * @param Filter $Filters 过滤条件，参数不支持同时指定FlowLogId和Filters。
 <li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
 <li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。</li>

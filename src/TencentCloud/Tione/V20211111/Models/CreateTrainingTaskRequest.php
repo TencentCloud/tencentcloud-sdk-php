@@ -68,6 +68,8 @@ POSTPAID_BY_HOUR 按量计费
  * @method void setCallbackUrl(string $CallbackUrl) 设置回调地址，用于创建/启动/停止训练任务的异步回调。回调格式&内容详见：[[TI-ONE接口回调说明]](https://cloud.tencent.com/document/product/851/84292)
  * @method EncodedStartCmdInfo getEncodedStartCmdInfo() 获取编码后的任务启动命令，与StartCmdInfo同时配置时，仅当前参数生效
  * @method void setEncodedStartCmdInfo(EncodedStartCmdInfo $EncodedStartCmdInfo) 设置编码后的任务启动命令，与StartCmdInfo同时配置时，仅当前参数生效
+ * @method array getCodeRepos() 获取代码仓库配置
+ * @method void setCodeRepos(array $CodeRepos) 设置代码仓库配置
  */
 class CreateTrainingTaskRequest extends AbstractModel
 {
@@ -188,6 +190,11 @@ POSTPAID_BY_HOUR 按量计费
     public $EncodedStartCmdInfo;
 
     /**
+     * @var array 代码仓库配置
+     */
+    public $CodeRepos;
+
+    /**
      * @param string $Name 训练任务名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
      * @param string $ChargeType 计费模式，eg：PREPAID 包年包月（资源组）;
 POSTPAID_BY_HOUR 按量计费
@@ -212,6 +219,7 @@ POSTPAID_BY_HOUR 按量计费
      * @param string $DataSource 数据来源，eg：DATASET、COS、CFS、CFSTurbo、HDFS、GooseFSx
      * @param string $CallbackUrl 回调地址，用于创建/启动/停止训练任务的异步回调。回调格式&内容详见：[[TI-ONE接口回调说明]](https://cloud.tencent.com/document/product/851/84292)
      * @param EncodedStartCmdInfo $EncodedStartCmdInfo 编码后的任务启动命令，与StartCmdInfo同时配置时，仅当前参数生效
+     * @param array $CodeRepos 代码仓库配置
      */
     function __construct()
     {
@@ -337,6 +345,15 @@ POSTPAID_BY_HOUR 按量计费
         if (array_key_exists("EncodedStartCmdInfo",$param) and $param["EncodedStartCmdInfo"] !== null) {
             $this->EncodedStartCmdInfo = new EncodedStartCmdInfo();
             $this->EncodedStartCmdInfo->deserialize($param["EncodedStartCmdInfo"]);
+        }
+
+        if (array_key_exists("CodeRepos",$param) and $param["CodeRepos"] !== null) {
+            $this->CodeRepos = [];
+            foreach ($param["CodeRepos"] as $key => $value){
+                $obj = new CodeRepoConfig();
+                $obj->deserialize($value);
+                array_push($this->CodeRepos, $obj);
+            }
         }
     }
 }

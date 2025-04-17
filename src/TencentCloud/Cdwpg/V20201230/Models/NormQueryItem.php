@@ -21,213 +21,145 @@ use TencentCloud\Common\AbstractModel;
  * 慢查询项目信息
  *
  * @method integer getCallTimes() 获取调用次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCallTimes(integer $CallTimes) 设置调用次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSharedReadBlocks() 获取读共享内存块数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSharedReadBlocks(integer $SharedReadBlocks) 设置读共享内存块数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSharedWriteBlocks() 获取写共享内存块数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSharedWriteBlocks(integer $SharedWriteBlocks) 设置写共享内存块数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDatabaseName() 获取数据库
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatabaseName(string $DatabaseName) 设置数据库
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNormalQuery() 获取脱敏后语句
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNormalQuery(string $NormalQuery) 设置脱敏后语句
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMaxElapsedQuery() 获取执行时间最长的语句
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxElapsedQuery(string $MaxElapsedQuery) 设置执行时间最长的语句
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getCostTime() 获取花费总时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCostTime(float $CostTime) 设置花费总时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClientIp() 获取客户端ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClientIp(string $ClientIp) 设置客户端ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserName() 获取用户名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserName(string $UserName) 设置用户名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getTotalCallTimesPercent() 获取总次数占比
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCallTimesPercent(float $TotalCallTimesPercent) 设置总次数占比
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getTotalCostTimePercent() 获取总耗时占比
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCostTimePercent(float $TotalCostTimePercent) 设置总耗时占比
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getMinCostTime() 获取花费最小时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMinCostTime(float $MinCostTime) 设置花费最小时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getMaxCostTime() 获取花费最大时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxCostTime(float $MaxCostTime) 设置花费最大时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFirstTime() 获取最早一条时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFirstTime(string $FirstTime) 设置最早一条时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLastTime() 获取最晚一条时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastTime(string $LastTime) 设置最晚一条时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getReadCostTime() 获取读io总耗时
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReadCostTime(float $ReadCostTime) 设置读io总耗时
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getWriteCostTime() 获取写io总耗时
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWriteCostTime(float $WriteCostTime) 设置写io总耗时
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NormQueryItem extends AbstractModel
 {
     /**
      * @var integer 调用次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CallTimes;
 
     /**
      * @var integer 读共享内存块数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SharedReadBlocks;
 
     /**
      * @var integer 写共享内存块数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SharedWriteBlocks;
 
     /**
      * @var string 数据库
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DatabaseName;
 
     /**
      * @var string 脱敏后语句
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NormalQuery;
 
     /**
      * @var string 执行时间最长的语句
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxElapsedQuery;
 
     /**
      * @var float 花费总时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CostTime;
 
     /**
      * @var string 客户端ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClientIp;
 
     /**
      * @var string 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserName;
 
     /**
      * @var float 总次数占比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCallTimesPercent;
 
     /**
      * @var float 总耗时占比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCostTimePercent;
 
     /**
      * @var float 花费最小时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MinCostTime;
 
     /**
      * @var float 花费最大时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxCostTime;
 
     /**
      * @var string 最早一条时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FirstTime;
 
     /**
      * @var string 最晚一条时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastTime;
 
     /**
      * @var float 读io总耗时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReadCostTime;
 
     /**
      * @var float 写io总耗时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WriteCostTime;
 
     /**
      * @param integer $CallTimes 调用次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SharedReadBlocks 读共享内存块数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SharedWriteBlocks 写共享内存块数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatabaseName 数据库
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NormalQuery 脱敏后语句
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MaxElapsedQuery 执行时间最长的语句
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $CostTime 花费总时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClientIp 客户端ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserName 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $TotalCallTimesPercent 总次数占比
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $TotalCostTimePercent 总耗时占比
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $MinCostTime 花费最小时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $MaxCostTime 花费最大时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FirstTime 最早一条时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastTime 最晚一条时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $ReadCostTime 读io总耗时
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $WriteCostTime 写io总耗时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

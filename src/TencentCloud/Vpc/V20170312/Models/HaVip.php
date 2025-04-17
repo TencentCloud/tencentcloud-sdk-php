@@ -47,25 +47,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getBusiness() 获取使用havip的业务标识。
  * @method void setBusiness(string $Business) 设置使用havip的业务标识。
  * @method array getHaVipAssociationSet() 获取`HAVIP`的飘移范围。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHaVipAssociationSet(array $HaVipAssociationSet) 设置`HAVIP`的飘移范围。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getCheckAssociate() 获取是否开启`HAVIP`的飘移范围校验。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCheckAssociate(boolean $CheckAssociate) 设置是否开启`HAVIP`的飘移范围校验。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCdcId() 获取CDC实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCdcId(string $CdcId) 设置CDC实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFlushedTime() 获取HAVIP 刷新时间。该参数只作为出参数。以下场景会触发 FlushTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlushedTime(string $FlushedTime) 设置HAVIP 刷新时间。该参数只作为出参数。以下场景会触发 FlushTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTagSet() 获取标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagSet(array $TagSet) 设置标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class HaVip extends AbstractModel
 {
@@ -128,31 +118,26 @@ class HaVip extends AbstractModel
 
     /**
      * @var array `HAVIP`的飘移范围。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HaVipAssociationSet;
 
     /**
      * @var boolean 是否开启`HAVIP`的飘移范围校验。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CheckAssociate;
 
     /**
      * @var string CDC实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CdcId;
 
     /**
      * @var string HAVIP 刷新时间。该参数只作为出参数。以下场景会触发 FlushTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlushedTime;
 
     /**
      * @var array 标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagSet;
 
@@ -171,15 +156,10 @@ class HaVip extends AbstractModel
      * @param string $CreatedTime 创建时间。
      * @param string $Business 使用havip的业务标识。
      * @param array $HaVipAssociationSet `HAVIP`的飘移范围。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $CheckAssociate 是否开启`HAVIP`的飘移范围校验。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CdcId CDC实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FlushedTime HAVIP 刷新时间。该参数只作为出参数。以下场景会触发 FlushTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TagSet 标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -40,6 +40,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsSwitchBind(boolean $IsSwitchBind) 设置是否允许换绑,false 不允许换绑
  * @method MachineExtraInfo getMachineExtraInfo() 获取主机额外信息
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置主机额外信息
+ * @method string getInstanceState() 获取<li> RUNNING 运行中</li>
+<li> STOPPED 已关机</li>
+<li> EXPIRED 待回收</li>
+ * @method void setInstanceState(string $InstanceState) 设置<li> RUNNING 运行中</li>
+<li> STOPPED 已关机</li>
+<li> EXPIRED 待回收</li>
+ * @method string getAgentState() 获取<li>ONLINE 已离线 </li>
+<li>OFFLINE 防护中</li>
+<li>UNINSTALLED 未安装客户端</li>
+ * @method void setAgentState(string $AgentState) 设置<li>ONLINE 已离线 </li>
+<li>OFFLINE 防护中</li>
+<li>UNINSTALLED 未安装客户端</li>
  */
 class LicenseBindDetail extends AbstractModel
 {
@@ -94,6 +106,20 @@ class LicenseBindDetail extends AbstractModel
     public $MachineExtraInfo;
 
     /**
+     * @var string <li> RUNNING 运行中</li>
+<li> STOPPED 已关机</li>
+<li> EXPIRED 待回收</li>
+     */
+    public $InstanceState;
+
+    /**
+     * @var string <li>ONLINE 已离线 </li>
+<li>OFFLINE 防护中</li>
+<li>UNINSTALLED 未安装客户端</li>
+     */
+    public $AgentState;
+
+    /**
      * @param string $MachineName 机器别名
      * @param string $MachineWanIp 机器公网IP
      * @param string $MachineIp 机器内网IP
@@ -104,6 +130,12 @@ class LicenseBindDetail extends AbstractModel
      * @param boolean $IsUnBind 是否允许解绑,false 不允许解绑
      * @param boolean $IsSwitchBind 是否允许换绑,false 不允许换绑
      * @param MachineExtraInfo $MachineExtraInfo 主机额外信息
+     * @param string $InstanceState <li> RUNNING 运行中</li>
+<li> STOPPED 已关机</li>
+<li> EXPIRED 待回收</li>
+     * @param string $AgentState <li>ONLINE 已离线 </li>
+<li>OFFLINE 防护中</li>
+<li>UNINSTALLED 未安装客户端</li>
      */
     function __construct()
     {
@@ -157,6 +189,14 @@ class LicenseBindDetail extends AbstractModel
         if (array_key_exists("MachineExtraInfo",$param) and $param["MachineExtraInfo"] !== null) {
             $this->MachineExtraInfo = new MachineExtraInfo();
             $this->MachineExtraInfo->deserialize($param["MachineExtraInfo"]);
+        }
+
+        if (array_key_exists("InstanceState",$param) and $param["InstanceState"] !== null) {
+            $this->InstanceState = $param["InstanceState"];
+        }
+
+        if (array_key_exists("AgentState",$param) and $param["AgentState"] !== null) {
+            $this->AgentState = $param["AgentState"];
         }
     }
 }

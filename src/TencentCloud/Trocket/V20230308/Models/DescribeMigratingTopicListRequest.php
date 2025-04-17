@@ -20,27 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMigratingTopicList请求参数结构体
  *
- * @method integer getOffset() 获取查询起始位置
- * @method void setOffset(integer $Offset) 设置查询起始位置
- * @method integer getLimit() 获取查询结果限制数量
- * @method void setLimit(integer $Limit) 设置查询结果限制数量
  * @method string getTaskId() 获取任务ID
  * @method void setTaskId(string $TaskId) 设置任务ID
  * @method array getFilters() 获取查询条件列表
  * @method void setFilters(array $Filters) 设置查询条件列表
+ * @method integer getOffset() 获取查询起始位置
+ * @method void setOffset(integer $Offset) 设置查询起始位置
+ * @method integer getLimit() 获取查询结果限制数量
+ * @method void setLimit(integer $Limit) 设置查询结果限制数量
  */
 class DescribeMigratingTopicListRequest extends AbstractModel
 {
-    /**
-     * @var integer 查询起始位置
-     */
-    public $Offset;
-
-    /**
-     * @var integer 查询结果限制数量
-     */
-    public $Limit;
-
     /**
      * @var string 任务ID
      */
@@ -52,10 +42,20 @@ class DescribeMigratingTopicListRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @param integer $Offset 查询起始位置
-     * @param integer $Limit 查询结果限制数量
+     * @var integer 查询起始位置
+     */
+    public $Offset;
+
+    /**
+     * @var integer 查询结果限制数量
+     */
+    public $Limit;
+
+    /**
      * @param string $TaskId 任务ID
      * @param array $Filters 查询条件列表
+     * @param integer $Offset 查询起始位置
+     * @param integer $Limit 查询结果限制数量
      */
     function __construct()
     {
@@ -70,14 +70,6 @@ class DescribeMigratingTopicListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
-        }
-
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
-        }
-
         if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
             $this->TaskId = $param["TaskId"];
         }
@@ -89,6 +81,14 @@ class DescribeMigratingTopicListRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
     }
 }

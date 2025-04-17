@@ -20,26 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DisassociateNetworkInterfaceSecurityGroups请求参数结构体
  *
- * @method array getNetworkInterfaceIds() 获取弹性网卡实例ID。形如：eni-pxir56ns。每次请求的实例的上限为100。
- * @method void setNetworkInterfaceIds(array $NetworkInterfaceIds) 设置弹性网卡实例ID。形如：eni-pxir56ns。每次请求的实例的上限为100。
- * @method array getSecurityGroupIds() 获取安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。每次请求的实例的上限为100。
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。每次请求的实例的上限为100。
+ * @method array getNetworkInterfaceIds() 获取弹性网卡实例ID。形如：eni-pxir56ns。每次请求的实例的上限为100。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
+
+ * @method void setNetworkInterfaceIds(array $NetworkInterfaceIds) 设置弹性网卡实例ID。形如：eni-pxir56ns。每次请求的实例的上限为100。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
+
+ * @method array getSecurityGroupIds() 获取安全组实例ID，例如：sg-33ocnj9n，可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808)接口获取。每次请求的实例的上限为100。
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组实例ID，例如：sg-33ocnj9n，可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808)接口获取。每次请求的实例的上限为100。
  */
 class DisassociateNetworkInterfaceSecurityGroupsRequest extends AbstractModel
 {
     /**
-     * @var array 弹性网卡实例ID。形如：eni-pxir56ns。每次请求的实例的上限为100。
+     * @var array 弹性网卡实例ID。形如：eni-pxir56ns。每次请求的实例的上限为100。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
+
      */
     public $NetworkInterfaceIds;
 
     /**
-     * @var array 安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。每次请求的实例的上限为100。
+     * @var array 安全组实例ID，例如：sg-33ocnj9n，可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808)接口获取。每次请求的实例的上限为100。
      */
     public $SecurityGroupIds;
 
     /**
-     * @param array $NetworkInterfaceIds 弹性网卡实例ID。形如：eni-pxir56ns。每次请求的实例的上限为100。
-     * @param array $SecurityGroupIds 安全组实例ID，例如：sg-33ocnj9n，可通过DescribeSecurityGroups获取。每次请求的实例的上限为100。
+     * @param array $NetworkInterfaceIds 弹性网卡实例ID。形如：eni-pxir56ns。每次请求的实例的上限为100。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
+
+     * @param array $SecurityGroupIds 安全组实例ID，例如：sg-33ocnj9n，可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808)接口获取。每次请求的实例的上限为100。
      */
     function __construct()
     {

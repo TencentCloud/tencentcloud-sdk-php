@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConsumerLag(integer $ConsumerLag) 设置客户端消费堆积
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getChannelProtocol() 获取消费者客户端类型（grpc；remoting；http）
+ * @method void setChannelProtocol(string $ChannelProtocol) 设置消费者客户端类型（grpc；remoting；http）
  */
 class ConsumerClient extends AbstractModel
 {
@@ -62,12 +64,18 @@ class ConsumerClient extends AbstractModel
     public $ConsumerLag;
 
     /**
+     * @var string 消费者客户端类型（grpc；remoting；http）
+     */
+    public $ChannelProtocol;
+
+    /**
      * @param string $ClientId 客户端ID
      * @param string $ClientAddr 客户端地址
      * @param string $Language 客户端SDK语言
      * @param string $Version 客户端SDK版本
      * @param integer $ConsumerLag 客户端消费堆积
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ChannelProtocol 消费者客户端类型（grpc；remoting；http）
      */
     function __construct()
     {
@@ -100,6 +108,10 @@ class ConsumerClient extends AbstractModel
 
         if (array_key_exists("ConsumerLag",$param) and $param["ConsumerLag"] !== null) {
             $this->ConsumerLag = $param["ConsumerLag"];
+        }
+
+        if (array_key_exists("ChannelProtocol",$param) and $param["ChannelProtocol"] !== null) {
+            $this->ChannelProtocol = $param["ChannelProtocol"];
         }
     }
 }

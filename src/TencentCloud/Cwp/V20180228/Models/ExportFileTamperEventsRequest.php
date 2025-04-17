@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileds(array $Fileds) 设置需要导出的字段
  * @method string getFields() 获取需要导出的字段
  * @method void setFields(string $Fields) 设置需要导出的字段
+ * @method array getWhere() 获取需要导出的字段
+ * @method void setWhere(array $Where) 设置需要导出的字段
  */
 class ExportFileTamperEventsRequest extends AbstractModel
 {
@@ -54,8 +56,14 @@ class ExportFileTamperEventsRequest extends AbstractModel
 
     /**
      * @var string 需要导出的字段
+     * @deprecated
      */
     public $Fields;
+
+    /**
+     * @var array 需要导出的字段
+     */
+    public $Where;
 
     /**
      * @param array $Filters 过滤条件。
@@ -65,6 +73,7 @@ class ExportFileTamperEventsRequest extends AbstractModel
 <li>RuleCategory- string - 是否必填：否 - 规则类别 0 系统规则 1 自定义规则</li>
      * @param array $Fileds 需要导出的字段
      * @param string $Fields 需要导出的字段
+     * @param array $Where 需要导出的字段
      */
     function __construct()
     {
@@ -94,6 +103,10 @@ class ExportFileTamperEventsRequest extends AbstractModel
 
         if (array_key_exists("Fields",$param) and $param["Fields"] !== null) {
             $this->Fields = $param["Fields"];
+        }
+
+        if (array_key_exists("Where",$param) and $param["Where"] !== null) {
+            $this->Where = $param["Where"];
         }
     }
 }

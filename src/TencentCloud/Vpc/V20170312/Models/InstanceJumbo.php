@@ -14,16 +14,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Lighthouse\V20200324\Models;
+namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeInstanceLoginKeyPairAttribute请求参数结构体
+ * 云服务器巨帧状态
  *
  * @method string getInstanceId() 获取实例ID。
  * @method void setInstanceId(string $InstanceId) 设置实例ID。
+ * @method boolean getJumboState() 获取实例是否支持巨帧。
+ * @method void setJumboState(boolean $JumboState) 设置实例是否支持巨帧。
  */
-class DescribeInstanceLoginKeyPairAttributeRequest extends AbstractModel
+class InstanceJumbo extends AbstractModel
 {
     /**
      * @var string 实例ID。
@@ -31,7 +33,13 @@ class DescribeInstanceLoginKeyPairAttributeRequest extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var boolean 实例是否支持巨帧。
+     */
+    public $JumboState;
+
+    /**
      * @param string $InstanceId 实例ID。
+     * @param boolean $JumboState 实例是否支持巨帧。
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeInstanceLoginKeyPairAttributeRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("JumboState",$param) and $param["JumboState"] !== null) {
+            $this->JumboState = $param["JumboState"];
         }
     }
 }

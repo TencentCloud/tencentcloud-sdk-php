@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUserName() 获取账号名
  * @method void setUserName(string $UserName) 设置账号名
  * @method array getPerms() 获取账户属性
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPerms(array $Perms) 设置账户属性
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AccountInfo extends AbstractModel
 {
@@ -43,7 +41,6 @@ class AccountInfo extends AbstractModel
 
     /**
      * @var array 账户属性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Perms;
 
@@ -51,7 +48,6 @@ class AccountInfo extends AbstractModel
      * @param string $InstanceId 实例ID
      * @param string $UserName 账号名
      * @param array $Perms 账户属性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

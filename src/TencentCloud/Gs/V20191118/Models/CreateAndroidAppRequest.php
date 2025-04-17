@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置安卓应用名字
  * @method string getUserId() 获取用户 Id
  * @method void setUserId(string $UserId) 设置用户 Id
+ * @method string getAppMode() 获取应用模式（NORMAL : 普通模式、只支持 apk 文件上传，为默认值；ADVANCED : 高级模式、只支持上传 tgz 文件 和 自定义 shell 命令执行）
+ * @method void setAppMode(string $AppMode) 设置应用模式（NORMAL : 普通模式、只支持 apk 文件上传，为默认值；ADVANCED : 高级模式、只支持上传 tgz 文件 和 自定义 shell 命令执行）
  */
 class CreateAndroidAppRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreateAndroidAppRequest extends AbstractModel
     public $UserId;
 
     /**
+     * @var string 应用模式（NORMAL : 普通模式、只支持 apk 文件上传，为默认值；ADVANCED : 高级模式、只支持上传 tgz 文件 和 自定义 shell 命令执行）
+     */
+    public $AppMode;
+
+    /**
      * @param string $Name 安卓应用名字
      * @param string $UserId 用户 Id
+     * @param string $AppMode 应用模式（NORMAL : 普通模式、只支持 apk 文件上传，为默认值；ADVANCED : 高级模式、只支持上传 tgz 文件 和 自定义 shell 命令执行）
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class CreateAndroidAppRequest extends AbstractModel
 
         if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
             $this->UserId = $param["UserId"];
+        }
+
+        if (array_key_exists("AppMode",$param) and $param["AppMode"] !== null) {
+            $this->AppMode = $param["AppMode"];
         }
     }
 }

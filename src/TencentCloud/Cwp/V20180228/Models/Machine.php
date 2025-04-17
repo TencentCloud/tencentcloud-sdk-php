@@ -24,16 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMachineName(string $MachineName) 设置主机名称。
  * @method string getMachineOs() 获取主机系统。
  * @method void setMachineOs(string $MachineOs) 设置主机系统。
- * @method string getMachineStatus() 获取主机状态。
-<li>OFFLINE: 离线  </li>
-<li>ONLINE: 在线</li>
-<li>SHUTDOWN: 已关机</li>
-<li>UNINSTALLED: 未防护</li>
- * @method void setMachineStatus(string $MachineStatus) 设置主机状态。
-<li>OFFLINE: 离线  </li>
-<li>ONLINE: 在线</li>
-<li>SHUTDOWN: 已关机</li>
-<li>UNINSTALLED: 未防护</li>
+ * @method string getMachineStatus() 获取主机状态。 <li>OFFLINE: 离线 </li> <li>ONLINE: 在线</li> <li>SHUTDOWN: 已关机</li> <li>UNINSTALLED: 未防护</li>	
+ * @method void setMachineStatus(string $MachineStatus) 设置主机状态。 <li>OFFLINE: 离线 </li> <li>ONLINE: 在线</li> <li>SHUTDOWN: 已关机</li> <li>UNINSTALLED: 未防护</li>	
+ * @method string getAgentStatus() 获取ONLINE 防护中; OFFLINE 已离线;UNINStALLED 未安装
+ * @method void setAgentStatus(string $AgentStatus) 设置ONLINE 防护中; OFFLINE 已离线;UNINStALLED 未安装
+ * @method string getInstanceStatus() 获取RUNNING 运行中; STOPED 已关机; EXPIRED 待回收	
+ * @method void setInstanceStatus(string $InstanceStatus) 设置RUNNING 运行中; STOPED 已关机; EXPIRED 待回收	
  * @method string getUuid() 获取主机安全Uuid，若客户端长时间不在线将返回空字符。
  * @method void setUuid(string $Uuid) 设置主机安全Uuid，若客户端长时间不在线将返回空字符。
  * @method string getQuuid() 获取CVM或BM机器唯一Uuid。
@@ -118,13 +114,19 @@ class Machine extends AbstractModel
     public $MachineOs;
 
     /**
-     * @var string 主机状态。
-<li>OFFLINE: 离线  </li>
-<li>ONLINE: 在线</li>
-<li>SHUTDOWN: 已关机</li>
-<li>UNINSTALLED: 未防护</li>
+     * @var string 主机状态。 <li>OFFLINE: 离线 </li> <li>ONLINE: 在线</li> <li>SHUTDOWN: 已关机</li> <li>UNINSTALLED: 未防护</li>	
      */
     public $MachineStatus;
+
+    /**
+     * @var string ONLINE 防护中; OFFLINE 已离线;UNINStALLED 未安装
+     */
+    public $AgentStatus;
+
+    /**
+     * @var string RUNNING 运行中; STOPED 已关机; EXPIRED 待回收	
+     */
+    public $InstanceStatus;
 
     /**
      * @var string 主机安全Uuid，若客户端长时间不在线将返回空字符。
@@ -276,11 +278,9 @@ class Machine extends AbstractModel
     /**
      * @param string $MachineName 主机名称。
      * @param string $MachineOs 主机系统。
-     * @param string $MachineStatus 主机状态。
-<li>OFFLINE: 离线  </li>
-<li>ONLINE: 在线</li>
-<li>SHUTDOWN: 已关机</li>
-<li>UNINSTALLED: 未防护</li>
+     * @param string $MachineStatus 主机状态。 <li>OFFLINE: 离线 </li> <li>ONLINE: 在线</li> <li>SHUTDOWN: 已关机</li> <li>UNINSTALLED: 未防护</li>	
+     * @param string $AgentStatus ONLINE 防护中; OFFLINE 已离线;UNINStALLED 未安装
+     * @param string $InstanceStatus RUNNING 运行中; STOPED 已关机; EXPIRED 待回收	
      * @param string $Uuid 主机安全Uuid，若客户端长时间不在线将返回空字符。
      * @param string $Quuid CVM或BM机器唯一Uuid。
      * @param integer $VulNum 漏洞数。
@@ -340,6 +340,14 @@ class Machine extends AbstractModel
 
         if (array_key_exists("MachineStatus",$param) and $param["MachineStatus"] !== null) {
             $this->MachineStatus = $param["MachineStatus"];
+        }
+
+        if (array_key_exists("AgentStatus",$param) and $param["AgentStatus"] !== null) {
+            $this->AgentStatus = $param["AgentStatus"];
+        }
+
+        if (array_key_exists("InstanceStatus",$param) and $param["InstanceStatus"] !== null) {
+            $this->InstanceStatus = $param["InstanceStatus"];
         }
 
         if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {

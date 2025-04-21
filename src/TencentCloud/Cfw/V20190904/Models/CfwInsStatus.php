@@ -25,29 +25,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getFwType() 获取防火墙类型，nat：nat防火墙；ew：vpc间防火墙
  * @method void setFwType(string $FwType) 设置防火墙类型，nat：nat防火墙；ew：vpc间防火墙
  * @method string getRegion() 获取实例所属地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置实例所属地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取实例运行状态，Running：正常运行；BypassAutoFix：bypass修复；Updating：升级中；Expand：扩容中；BypassManual：手动触发bypass中；BypassAuto：自动触发bypass中
  * @method void setStatus(string $Status) 设置实例运行状态，Running：正常运行；BypassAutoFix：bypass修复；Updating：升级中；Expand：扩容中；BypassManual：手动触发bypass中；BypassAuto：自动触发bypass中
  * @method string getEventTime() 获取事件时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEventTime(string $EventTime) 设置事件时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRecoverTime() 获取恢复时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecoverTime(string $RecoverTime) 设置恢复时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCfwInsName() 获取实例名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCfwInsName(string $CfwInsName) 设置实例名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTrafficMode() 获取Normal: 正常模式
 OnlyRoute: 透明模式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrafficMode(string $TrafficMode) 设置Normal: 正常模式
 OnlyRoute: 透明模式
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CfwInsStatus extends AbstractModel
 {
@@ -63,7 +53,6 @@ class CfwInsStatus extends AbstractModel
 
     /**
      * @var string 实例所属地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
@@ -74,26 +63,22 @@ class CfwInsStatus extends AbstractModel
 
     /**
      * @var string 事件时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventTime;
 
     /**
      * @var string 恢复时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecoverTime;
 
     /**
      * @var string 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CfwInsName;
 
     /**
      * @var string Normal: 正常模式
 OnlyRoute: 透明模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TrafficMode;
 
@@ -101,17 +86,12 @@ OnlyRoute: 透明模式
      * @param string $CfwInsId 防火墙实例id
      * @param string $FwType 防火墙类型，nat：nat防火墙；ew：vpc间防火墙
      * @param string $Region 实例所属地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 实例运行状态，Running：正常运行；BypassAutoFix：bypass修复；Updating：升级中；Expand：扩容中；BypassManual：手动触发bypass中；BypassAuto：自动触发bypass中
      * @param string $EventTime 事件时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RecoverTime 恢复时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CfwInsName 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TrafficMode Normal: 正常模式
 OnlyRoute: 透明模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

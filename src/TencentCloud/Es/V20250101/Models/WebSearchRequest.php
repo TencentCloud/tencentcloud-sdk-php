@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWhiteSites(array $WhiteSites) 设置域名白名单，在不指定 Site 时，只保存匹配白名单域名的网页。
  * @method array getBlackSites() 获取域名黑名单，在不指定 Site 和白名单时，过滤黑名单中的域名。
  * @method void setBlackSites(array $BlackSites) 设置域名黑名单，在不指定 Site 和白名单时，过滤黑名单中的域名。
- * @method integer getStartTime() 获取秒级时间冲，搜索网页的开始时间，默认不限制开始时间。
- * @method void setStartTime(integer $StartTime) 设置秒级时间冲，搜索网页的开始时间，默认不限制开始时间。
+ * @method integer getStartTime() 获取秒级时间戳，搜索网页的开始时间，默认不限制开始时间。
+ * @method void setStartTime(integer $StartTime) 设置秒级时间戳，搜索网页的开始时间，默认不限制开始时间。
  * @method integer getEndTime() 获取秒级时间戳，搜索网页的结束时间，默认为现在。
  * @method void setEndTime(integer $EndTime) 设置秒级时间戳，搜索网页的结束时间，默认为现在。
  * @method string getSearchEngine() 获取指定搜索引擎，可选混合搜索 mixed，或 bing, baidu, sogou, 默认为 sogou
@@ -72,7 +72,7 @@ class WebSearchRequest extends AbstractModel
     public $BlackSites;
 
     /**
-     * @var integer 秒级时间冲，搜索网页的开始时间，默认不限制开始时间。
+     * @var integer 秒级时间戳，搜索网页的开始时间，默认不限制开始时间。
      */
     public $StartTime;
 
@@ -93,7 +93,7 @@ class WebSearchRequest extends AbstractModel
      * @param boolean $FetchContent 是否获取返回网页全文，默认 false。
      * @param array $WhiteSites 域名白名单，在不指定 Site 时，只保存匹配白名单域名的网页。
      * @param array $BlackSites 域名黑名单，在不指定 Site 和白名单时，过滤黑名单中的域名。
-     * @param integer $StartTime 秒级时间冲，搜索网页的开始时间，默认不限制开始时间。
+     * @param integer $StartTime 秒级时间戳，搜索网页的开始时间，默认不限制开始时间。
      * @param integer $EndTime 秒级时间戳，搜索网页的结束时间，默认为现在。
      * @param string $SearchEngine 指定搜索引擎，可选混合搜索 mixed，或 bing, baidu, sogou, 默认为 sogou
      */

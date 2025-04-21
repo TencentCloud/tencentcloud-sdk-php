@@ -220,6 +220,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectName(string $ProjectName) 设置项目名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUpdateTime() 获取更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUpdateTime(string $UpdateTime) 设置更新时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Rule extends AbstractModel
 {
@@ -524,6 +528,12 @@ class Rule extends AbstractModel
     public $ProjectName;
 
     /**
+     * @var string 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UpdateTime;
+
+    /**
      * @param integer $RuleId 规则ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleGroupId 规则组ID
@@ -623,6 +633,8 @@ class Rule extends AbstractModel
      * @param string $ProjectId 项目id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectName 项目名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UpdateTime 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -840,6 +852,10 @@ class Rule extends AbstractModel
 
         if (array_key_exists("ProjectName",$param) and $param["ProjectName"] !== null) {
             $this->ProjectName = $param["ProjectName"];
+        }
+
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = $param["UpdateTime"];
         }
     }
 }

@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVersion(string $Version) 设置ckafka版本号
  * @method string getTopic() 获取主题名称
  * @method void setTopic(string $Topic) 设置主题名称
+ * @method string getCompression() 获取压缩算法，支持gzip 和 lz4
+ * @method void setCompression(string $Compression) 设置压缩算法，支持gzip 和 lz4
+ * @method string getContent() 获取描述信息
+ * @method void setContent(string $Content) 设置描述信息
  */
 class PostCKafkaFlowInfo extends AbstractModel
 {
@@ -80,6 +84,16 @@ class PostCKafkaFlowInfo extends AbstractModel
     public $Topic;
 
     /**
+     * @var string 压缩算法，支持gzip 和 lz4
+     */
+    public $Compression;
+
+    /**
+     * @var string 描述信息
+     */
+    public $Content;
+
+    /**
      * @param integer $FlowId 投递流唯一ID
      * @param integer $LogType 1-访问日志 2-攻击日志
      * @param integer $Status 状态 0-为关闭 1-为启用
@@ -88,6 +102,8 @@ class PostCKafkaFlowInfo extends AbstractModel
      * @param string $Brokers ckafka地址信息
      * @param string $Version ckafka版本号
      * @param string $Topic 主题名称
+     * @param string $Compression 压缩算法，支持gzip 和 lz4
+     * @param string $Content 描述信息
      */
     function __construct()
     {
@@ -132,6 +148,14 @@ class PostCKafkaFlowInfo extends AbstractModel
 
         if (array_key_exists("Topic",$param) and $param["Topic"] !== null) {
             $this->Topic = $param["Topic"];
+        }
+
+        if (array_key_exists("Compression",$param) and $param["Compression"] !== null) {
+            $this->Compression = $param["Compression"];
+        }
+
+        if (array_key_exists("Content",$param) and $param["Content"] !== null) {
+            $this->Content = $param["Content"];
         }
     }
 }

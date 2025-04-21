@@ -22,11 +22,11 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getKeyName() 获取密钥对名称，可由数字，字母和下划线组成，长度不超过25个字符。
  * @method void setKeyName(string $KeyName) 设置密钥对名称，可由数字，字母和下划线组成，长度不超过25个字符。
- * @method integer getProjectId() 获取密钥对创建后所属的项目ID。
+ * @method integer getProjectId() 获取密钥对创建后所属的项目ID，ProjectId为0表示默认项目。
 可以通过以下方式获取项目ID：
 <li>通过项目列表查询项目ID。</li>
 <li>通过调用接口 [DescribeProjects](https://cloud.tencent.com/document/api/651/78725)，取返回信息中的`projectId `获取项目ID。</li>
- * @method void setProjectId(integer $ProjectId) 设置密钥对创建后所属的项目ID。
+ * @method void setProjectId(integer $ProjectId) 设置密钥对创建后所属的项目ID，ProjectId为0表示默认项目。
 可以通过以下方式获取项目ID：
 <li>通过项目列表查询项目ID。</li>
 <li>通过调用接口 [DescribeProjects](https://cloud.tencent.com/document/api/651/78725)，取返回信息中的`projectId `获取项目ID。</li>
@@ -41,7 +41,7 @@ class CreateKeyPairRequest extends AbstractModel
     public $KeyName;
 
     /**
-     * @var integer 密钥对创建后所属的项目ID。
+     * @var integer 密钥对创建后所属的项目ID，ProjectId为0表示默认项目。
 可以通过以下方式获取项目ID：
 <li>通过项目列表查询项目ID。</li>
 <li>通过调用接口 [DescribeProjects](https://cloud.tencent.com/document/api/651/78725)，取返回信息中的`projectId `获取项目ID。</li>
@@ -55,7 +55,7 @@ class CreateKeyPairRequest extends AbstractModel
 
     /**
      * @param string $KeyName 密钥对名称，可由数字，字母和下划线组成，长度不超过25个字符。
-     * @param integer $ProjectId 密钥对创建后所属的项目ID。
+     * @param integer $ProjectId 密钥对创建后所属的项目ID，ProjectId为0表示默认项目。
 可以通过以下方式获取项目ID：
 <li>通过项目列表查询项目ID。</li>
 <li>通过调用接口 [DescribeProjects](https://cloud.tencent.com/document/api/651/78725)，取返回信息中的`projectId `获取项目ID。</li>

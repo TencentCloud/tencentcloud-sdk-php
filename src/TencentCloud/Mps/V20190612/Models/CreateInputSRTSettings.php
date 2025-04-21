@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMode(string $Mode) 设置SRT模式，可选[LISTENER|CALLER]，默认为LISTENER。
  * @method string getStreamId() 获取流Id，可选大小写字母、数字和特殊字符（.#!:&,=_-），长度为0~512。具体格式可以参考：https://github.com/Haivision/srt/blob/master/docs/features/access-control.md#standard-keys。
  * @method void setStreamId(string $StreamId) 设置流Id，可选大小写字母、数字和特殊字符（.#!:&,=_-），长度为0~512。具体格式可以参考：https://github.com/Haivision/srt/blob/master/docs/features/access-control.md#standard-keys。
- * @method integer getLatency() 获取延迟，默认0，单位ms，范围为[0, 3000]。
- * @method void setLatency(integer $Latency) 设置延迟，默认0，单位ms，范围为[0, 3000]。
+ * @method integer getLatency() 获取延迟，默认120，单位ms，范围为[0, 3000]。
+ * @method void setLatency(integer $Latency) 设置延迟，默认120，单位ms，范围为[0, 3000]。
  * @method integer getRecvLatency() 获取接收延迟，默认120，单位ms，范围为[0, 3000]。
  * @method void setRecvLatency(integer $RecvLatency) 设置接收延迟，默认120，单位ms，范围为[0, 3000]。
- * @method integer getPeerLatency() 获取对端延迟，默认0，单位ms，范围为[0, 3000]。
- * @method void setPeerLatency(integer $PeerLatency) 设置对端延迟，默认0，单位ms，范围为[0, 3000]。
+ * @method integer getPeerLatency() 获取对端延迟，默认120，单位ms，范围为[0, 3000]。
+ * @method void setPeerLatency(integer $PeerLatency) 设置对端延迟，默认120，单位ms，范围为[0, 3000]。
  * @method integer getPeerIdleTimeout() 获取对端超时时间，默认5000，单位ms，范围为[1000, 10000]。
  * @method void setPeerIdleTimeout(integer $PeerIdleTimeout) 设置对端超时时间，默认5000，单位ms，范围为[1000, 10000]。
  * @method string getPassphrase() 获取解密密钥，默认为空，表示不加密。只可填ascii码值，长度为[10, 79]。
@@ -52,7 +52,7 @@ class CreateInputSRTSettings extends AbstractModel
     public $StreamId;
 
     /**
-     * @var integer 延迟，默认0，单位ms，范围为[0, 3000]。
+     * @var integer 延迟，默认120，单位ms，范围为[0, 3000]。
      */
     public $Latency;
 
@@ -62,7 +62,7 @@ class CreateInputSRTSettings extends AbstractModel
     public $RecvLatency;
 
     /**
-     * @var integer 对端延迟，默认0，单位ms，范围为[0, 3000]。
+     * @var integer 对端延迟，默认120，单位ms，范围为[0, 3000]。
      */
     public $PeerLatency;
 
@@ -89,9 +89,9 @@ class CreateInputSRTSettings extends AbstractModel
     /**
      * @param string $Mode SRT模式，可选[LISTENER|CALLER]，默认为LISTENER。
      * @param string $StreamId 流Id，可选大小写字母、数字和特殊字符（.#!:&,=_-），长度为0~512。具体格式可以参考：https://github.com/Haivision/srt/blob/master/docs/features/access-control.md#standard-keys。
-     * @param integer $Latency 延迟，默认0，单位ms，范围为[0, 3000]。
+     * @param integer $Latency 延迟，默认120，单位ms，范围为[0, 3000]。
      * @param integer $RecvLatency 接收延迟，默认120，单位ms，范围为[0, 3000]。
-     * @param integer $PeerLatency 对端延迟，默认0，单位ms，范围为[0, 3000]。
+     * @param integer $PeerLatency 对端延迟，默认120，单位ms，范围为[0, 3000]。
      * @param integer $PeerIdleTimeout 对端超时时间，默认5000，单位ms，范围为[1000, 10000]。
      * @param string $Passphrase 解密密钥，默认为空，表示不加密。只可填ascii码值，长度为[10, 79]。
      * @param integer $PbKeyLen 密钥长度，默认为0，可选[0|16|24|32]。

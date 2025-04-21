@@ -35,9 +35,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutPut(StatementOutput $OutPut) 设置Statement输出信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBatchId() 获取批任务id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBatchId(string $BatchId) 设置批任务id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCode() 获取运行语句
  * @method void setCode(string $Code) 设置运行语句
  * @method string getTaskId() 获取任务ID
@@ -78,7 +76,6 @@ class NotebookSessionStatementInfo extends AbstractModel
 
     /**
      * @var string 批任务id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BatchId;
 
@@ -101,7 +98,6 @@ class NotebookSessionStatementInfo extends AbstractModel
      * @param StatementOutput $OutPut Statement输出信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BatchId 批任务id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Code 运行语句
      * @param string $TaskId 任务ID
      */

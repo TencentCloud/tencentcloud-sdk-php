@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * 网页搜索结果
  *
  * @method string getTitle() 获取标题
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTitle(string $Title) 设置标题
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUrl() 获取url
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUrl(string $Url) 设置url
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSummary() 获取网页摘要
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSummary(string $Summary) 设置网页摘要
@@ -45,13 +41,11 @@ class WebPage extends AbstractModel
 {
     /**
      * @var string 标题
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Title;
 
     /**
      * @var string url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Url;
 
@@ -75,9 +69,7 @@ class WebPage extends AbstractModel
 
     /**
      * @param string $Title 标题
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Url url
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Summary 网页摘要
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Time 网页收录时间。可能为空。

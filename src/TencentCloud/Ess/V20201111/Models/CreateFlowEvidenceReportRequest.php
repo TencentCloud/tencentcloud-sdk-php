@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReportType(integer $ReportType) 设置指定申请的报告类型，可选类型如下：
 <ul><li> **0** :合同签署报告（默认）</li>
 <li> **1** :公证处核验报告</li></ul>
+ * @method boolean getHybridEvidenceFlowFile() 获取混合云模式获取合同文件合并出证，默认：不同意。注：此参数需要联系腾讯电子签运营进行开通后生效
+ * @method void setHybridEvidenceFlowFile(boolean $HybridEvidenceFlowFile) 设置混合云模式获取合同文件合并出证，默认：不同意。注：此参数需要联系腾讯电子签运营进行开通后生效
  */
 class CreateFlowEvidenceReportRequest extends AbstractModel
 {
@@ -67,6 +69,11 @@ class CreateFlowEvidenceReportRequest extends AbstractModel
     public $ReportType;
 
     /**
+     * @var boolean 混合云模式获取合同文件合并出证，默认：不同意。注：此参数需要联系腾讯电子签运营进行开通后生效
+     */
+    public $HybridEvidenceFlowFile;
+
+    /**
      * @param UserInfo $Operator 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      * @param string $FlowId 合同流程ID，为32位字符串。
@@ -76,6 +83,7 @@ class CreateFlowEvidenceReportRequest extends AbstractModel
      * @param integer $ReportType 指定申请的报告类型，可选类型如下：
 <ul><li> **0** :合同签署报告（默认）</li>
 <li> **1** :公证处核验报告</li></ul>
+     * @param boolean $HybridEvidenceFlowFile 混合云模式获取合同文件合并出证，默认：不同意。注：此参数需要联系腾讯电子签运营进行开通后生效
      */
     function __construct()
     {
@@ -106,6 +114,10 @@ class CreateFlowEvidenceReportRequest extends AbstractModel
 
         if (array_key_exists("ReportType",$param) and $param["ReportType"] !== null) {
             $this->ReportType = $param["ReportType"];
+        }
+
+        if (array_key_exists("HybridEvidenceFlowFile",$param) and $param["HybridEvidenceFlowFile"] !== null) {
+            $this->HybridEvidenceFlowFile = $param["HybridEvidenceFlowFile"];
         }
     }
 }

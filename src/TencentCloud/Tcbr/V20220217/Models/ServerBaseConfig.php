@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTag(string $Tag) 设置服务标签, function: 函数托管
  * @method string getInternalAccess() 获取内网访问开关 close | open
  * @method void setInternalAccess(string $InternalAccess) 设置内网访问开关 close | open
+ * @method string getInternalDomain() 获取内网域名
+ * @method void setInternalDomain(string $InternalDomain) 设置内网域名
  */
 class ServerBaseConfig extends AbstractModel
 {
@@ -178,6 +180,11 @@ class ServerBaseConfig extends AbstractModel
     public $InternalAccess;
 
     /**
+     * @var string 内网域名
+     */
+    public $InternalDomain;
+
+    /**
      * @param string $EnvId 环境 Id
      * @param string $ServerName 服务名
      * @param array $OpenAccessTypes 是否开启公网访问
@@ -200,6 +207,7 @@ class ServerBaseConfig extends AbstractModel
      * @param string $LogParseType 解析类型：json ｜ line
      * @param string $Tag 服务标签, function: 函数托管
      * @param string $InternalAccess 内网访问开关 close | open
+     * @param string $InternalDomain 内网域名
      */
     function __construct()
     {
@@ -305,6 +313,10 @@ class ServerBaseConfig extends AbstractModel
 
         if (array_key_exists("InternalAccess",$param) and $param["InternalAccess"] !== null) {
             $this->InternalAccess = $param["InternalAccess"];
+        }
+
+        if (array_key_exists("InternalDomain",$param) and $param["InternalDomain"] !== null) {
+            $this->InternalDomain = $param["InternalDomain"];
         }
     }
 }

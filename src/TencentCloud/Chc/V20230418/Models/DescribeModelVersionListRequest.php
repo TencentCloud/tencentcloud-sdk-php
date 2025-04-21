@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChecked(boolean $Checked) 设置是否已评估
  * @method integer getCampusId() 获取园区ID，当 Checked 参数传 True 时，该参数必须传值
  * @method void setCampusId(integer $CampusId) 设置园区ID，当 Checked 参数传 True 时，该参数必须传值
+ * @method string getModelName() 获取型号关键字，可以实现模糊匹配搜索功能
+ * @method void setModelName(string $ModelName) 设置型号关键字，可以实现模糊匹配搜索功能
  */
 class DescribeModelVersionListRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeModelVersionListRequest extends AbstractModel
     public $CampusId;
 
     /**
+     * @var string 型号关键字，可以实现模糊匹配搜索功能
+     */
+    public $ModelName;
+
+    /**
      * @param string $DeviceType 型号类型，只支持传入 netDevice 和 server
      * @param array $Filters model-name  型号名称  类型：String  必选：否
      * @param boolean $Checked 是否已评估
      * @param integer $CampusId 园区ID，当 Checked 参数传 True 时，该参数必须传值
+     * @param string $ModelName 型号关键字，可以实现模糊匹配搜索功能
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class DescribeModelVersionListRequest extends AbstractModel
 
         if (array_key_exists("CampusId",$param) and $param["CampusId"] !== null) {
             $this->CampusId = $param["CampusId"];
+        }
+
+        if (array_key_exists("ModelName",$param) and $param["ModelName"] !== null) {
+            $this->ModelName = $param["ModelName"];
         }
     }
 }

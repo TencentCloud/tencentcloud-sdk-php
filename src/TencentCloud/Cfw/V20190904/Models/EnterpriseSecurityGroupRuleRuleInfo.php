@@ -156,6 +156,8 @@ ANY:表示所有
  * @method void setBetaList(array $BetaList) 设置自动化任务信息
  * @method integer getId() 获取规则id  等同RuleUuid
  * @method void setId(integer $Id) 设置规则id  等同RuleUuid
+ * @method SgDnsParseCount getDnsParseCount() 获取域名解析的IP统计
+ * @method void setDnsParseCount(SgDnsParseCount $DnsParseCount) 设置域名解析的IP统计
  */
 class EnterpriseSecurityGroupRuleRuleInfo extends AbstractModel
 {
@@ -348,6 +350,11 @@ ANY:表示所有
     public $Id;
 
     /**
+     * @var SgDnsParseCount 域名解析的IP统计
+     */
+    public $DnsParseCount;
+
+    /**
      * @param integer $OrderIndex 排序
      * @param integer $RuleUuid 主键id
      * @param string $Uuid 规则uuid
@@ -416,6 +423,7 @@ ANY:表示所有
      * @param string $ProtocolPortName 端口模板名称
      * @param array $BetaList 自动化任务信息
      * @param integer $Id 规则id  等同RuleUuid
+     * @param SgDnsParseCount $DnsParseCount 域名解析的IP统计
      */
     function __construct()
     {
@@ -553,6 +561,11 @@ ANY:表示所有
 
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("DnsParseCount",$param) and $param["DnsParseCount"] !== null) {
+            $this->DnsParseCount = new SgDnsParseCount();
+            $this->DnsParseCount->deserialize($param["DnsParseCount"]);
         }
     }
 }

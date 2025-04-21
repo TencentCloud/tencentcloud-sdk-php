@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyKeyPairAttribute请求参数结构体
  *
- * @method string getKeyId() 获取密钥对ID，密钥对ID形如：`skey-xxxxxxxx`。<br><br>可以通过以下方式获取可用的密钥 ID：<br><li>通过登录[控制台](https://console.cloud.tencent.com/cvm/sshkey)查询密钥 ID。<br><li>通过调用接口 [DescribeKeyPairs](https://cloud.tencent.com/document/api/213/9403) ，取返回信息中的 `KeyId` 获取密钥对 ID。
- * @method void setKeyId(string $KeyId) 设置密钥对ID，密钥对ID形如：`skey-xxxxxxxx`。<br><br>可以通过以下方式获取可用的密钥 ID：<br><li>通过登录[控制台](https://console.cloud.tencent.com/cvm/sshkey)查询密钥 ID。<br><li>通过调用接口 [DescribeKeyPairs](https://cloud.tencent.com/document/api/213/9403) ，取返回信息中的 `KeyId` 获取密钥对 ID。
+ * @method string getKeyId() 获取密钥对ID。可以通过以下方式获取可用的密钥 ID：
+<li>通过登录[控制台](https://console.cloud.tencent.com/cvm/sshkey)查询密钥 ID。</li>
+<li>通过调用接口 [DescribeKeyPairs](https://cloud.tencent.com/document/api/213/9403) ，取返回信息中的 `KeyId` 获取密钥对 ID。</li>
+ * @method void setKeyId(string $KeyId) 设置密钥对ID。可以通过以下方式获取可用的密钥 ID：
+<li>通过登录[控制台](https://console.cloud.tencent.com/cvm/sshkey)查询密钥 ID。</li>
+<li>通过调用接口 [DescribeKeyPairs](https://cloud.tencent.com/document/api/213/9403) ，取返回信息中的 `KeyId` 获取密钥对 ID。</li>
  * @method string getKeyName() 获取修改后的密钥对名称，可由数字，字母和下划线组成，长度不超过25个字符。
  * @method void setKeyName(string $KeyName) 设置修改后的密钥对名称，可由数字，字母和下划线组成，长度不超过25个字符。
  * @method string getDescription() 获取修改后的密钥对描述信息。可任意命名，但不得超过60个字符。
@@ -30,7 +34,9 @@ use TencentCloud\Common\AbstractModel;
 class ModifyKeyPairAttributeRequest extends AbstractModel
 {
     /**
-     * @var string 密钥对ID，密钥对ID形如：`skey-xxxxxxxx`。<br><br>可以通过以下方式获取可用的密钥 ID：<br><li>通过登录[控制台](https://console.cloud.tencent.com/cvm/sshkey)查询密钥 ID。<br><li>通过调用接口 [DescribeKeyPairs](https://cloud.tencent.com/document/api/213/9403) ，取返回信息中的 `KeyId` 获取密钥对 ID。
+     * @var string 密钥对ID。可以通过以下方式获取可用的密钥 ID：
+<li>通过登录[控制台](https://console.cloud.tencent.com/cvm/sshkey)查询密钥 ID。</li>
+<li>通过调用接口 [DescribeKeyPairs](https://cloud.tencent.com/document/api/213/9403) ，取返回信息中的 `KeyId` 获取密钥对 ID。</li>
      */
     public $KeyId;
 
@@ -45,7 +51,9 @@ class ModifyKeyPairAttributeRequest extends AbstractModel
     public $Description;
 
     /**
-     * @param string $KeyId 密钥对ID，密钥对ID形如：`skey-xxxxxxxx`。<br><br>可以通过以下方式获取可用的密钥 ID：<br><li>通过登录[控制台](https://console.cloud.tencent.com/cvm/sshkey)查询密钥 ID。<br><li>通过调用接口 [DescribeKeyPairs](https://cloud.tencent.com/document/api/213/9403) ，取返回信息中的 `KeyId` 获取密钥对 ID。
+     * @param string $KeyId 密钥对ID。可以通过以下方式获取可用的密钥 ID：
+<li>通过登录[控制台](https://console.cloud.tencent.com/cvm/sshkey)查询密钥 ID。</li>
+<li>通过调用接口 [DescribeKeyPairs](https://cloud.tencent.com/document/api/213/9403) ，取返回信息中的 `KeyId` 获取密钥对 ID。</li>
      * @param string $KeyName 修改后的密钥对名称，可由数字，字母和下划线组成，长度不超过25个字符。
      * @param string $Description 修改后的密钥对描述信息。可任意命名，但不得超过60个字符。
      */

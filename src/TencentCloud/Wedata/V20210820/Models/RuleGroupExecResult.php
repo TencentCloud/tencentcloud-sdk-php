@@ -117,9 +117,21 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceStatus(string $InstanceStatus) 设置实例状态
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStartTime() 获取实例运行的开始时间
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(string $StartTime) 设置实例运行的开始时间
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFinishTime() 获取实例运行的结束时间
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFinishTime(string $FinishTime) 设置实例运行的结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRuleGroupName() 获取监控名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRuleGroupName(string $RuleGroupName) 设置监控名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRuleGroupExist() 获取判断是否屏蔽监控 0.屏蔽 1.不屏蔽
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRuleGroupExist(string $RuleGroupExist) 设置判断是否屏蔽监控 0.屏蔽 1.不屏蔽
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleGroupExecResult extends AbstractModel
 {
@@ -269,13 +281,27 @@ class RuleGroupExecResult extends AbstractModel
 
     /**
      * @var string 实例运行的开始时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
      * @var string 实例运行的结束时间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FinishTime;
+
+    /**
+     * @var string 监控名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RuleGroupName;
+
+    /**
+     * @var string 判断是否屏蔽监控 0.屏蔽 1.不屏蔽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RuleGroupExist;
 
     /**
      * @param integer $RuleGroupExecId 规则组执行ID
@@ -327,7 +353,13 @@ class RuleGroupExecResult extends AbstractModel
      * @param string $InstanceStatus 实例状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StartTime 实例运行的开始时间
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FinishTime 实例运行的结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RuleGroupName 监控名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RuleGroupExist 判断是否屏蔽监控 0.屏蔽 1.不屏蔽
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -449,6 +481,14 @@ class RuleGroupExecResult extends AbstractModel
 
         if (array_key_exists("FinishTime",$param) and $param["FinishTime"] !== null) {
             $this->FinishTime = $param["FinishTime"];
+        }
+
+        if (array_key_exists("RuleGroupName",$param) and $param["RuleGroupName"] !== null) {
+            $this->RuleGroupName = $param["RuleGroupName"];
+        }
+
+        if (array_key_exists("RuleGroupExist",$param) and $param["RuleGroupExist"] !== null) {
+            $this->RuleGroupExist = $param["RuleGroupExist"];
         }
     }
 }

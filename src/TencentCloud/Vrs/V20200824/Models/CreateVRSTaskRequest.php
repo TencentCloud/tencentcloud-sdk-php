@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
 5 - 一句话声音复刻。
  * @method string getVPRAudioId() 获取校验音频ID。（仅基础版声音复刻使用）
  * @method void setVPRAudioId(string $VPRAudioId) 设置校验音频ID。（仅基础版声音复刻使用）
+ * @method integer getEnableVoiceEnhance() 获取是否开启语音增强，0 - 关闭，1 - 开启 。默认关闭
+语音增强仅适用于一句话复刻场景
+ * @method void setEnableVoiceEnhance(integer $EnableVoiceEnhance) 设置是否开启语音增强，0 - 关闭，1 - 开启 。默认关闭
+语音增强仅适用于一句话复刻场景
  */
 class CreateVRSTaskRequest extends AbstractModel
 {
@@ -134,6 +138,12 @@ class CreateVRSTaskRequest extends AbstractModel
     public $VPRAudioId;
 
     /**
+     * @var integer 是否开启语音增强，0 - 关闭，1 - 开启 。默认关闭
+语音增强仅适用于一句话复刻场景
+     */
+    public $EnableVoiceEnhance;
+
+    /**
      * @param string $SessionId 唯一请求 ID
      * @param string $VoiceName 音色名称
      * @param integer $VoiceGender 音色性别:
@@ -156,6 +166,8 @@ class CreateVRSTaskRequest extends AbstractModel
 0 - 轻量版声音复刻（默认）；
 5 - 一句话声音复刻。
      * @param string $VPRAudioId 校验音频ID。（仅基础版声音复刻使用）
+     * @param integer $EnableVoiceEnhance 是否开启语音增强，0 - 关闭，1 - 开启 。默认关闭
+语音增强仅适用于一句话复刻场景
      */
     function __construct()
     {
@@ -212,6 +224,10 @@ class CreateVRSTaskRequest extends AbstractModel
 
         if (array_key_exists("VPRAudioId",$param) and $param["VPRAudioId"] !== null) {
             $this->VPRAudioId = $param["VPRAudioId"];
+        }
+
+        if (array_key_exists("EnableVoiceEnhance",$param) and $param["EnableVoiceEnhance"] !== null) {
+            $this->EnableVoiceEnhance = $param["EnableVoiceEnhance"];
         }
     }
 }

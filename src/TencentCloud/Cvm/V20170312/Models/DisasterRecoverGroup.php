@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCurrentNum(integer $CurrentNum) 设置分散置放群组内云服务器当前数量。
  * @method array getInstanceIds() 获取分散置放群组内，云服务器id列表。
  * @method void setInstanceIds(array $InstanceIds) 设置分散置放群组内，云服务器id列表。
- * @method string getCreateTime() 获取分散置放群组创建时间。
- * @method void setCreateTime(string $CreateTime) 设置分散置放群组创建时间。
+ * @method string getCreateTime() 获取分散置放群组创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
+ * @method void setCreateTime(string $CreateTime) 设置分散置放群组创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
  * @method integer getAffinity() 获取置放群组亲和度
  * @method void setAffinity(integer $Affinity) 设置置放群组亲和度
  * @method array getTags() 获取置放群组关联的标签列表。
@@ -81,7 +81,7 @@ class DisasterRecoverGroup extends AbstractModel
     public $InstanceIds;
 
     /**
-     * @var string 分散置放群组创建时间。
+     * @var string 分散置放群组创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
      */
     public $CreateTime;
 
@@ -105,7 +105,7 @@ class DisasterRecoverGroup extends AbstractModel
      * @param integer $CvmQuotaTotal 分散置放群组内最大容纳云服务器数量。
      * @param integer $CurrentNum 分散置放群组内云服务器当前数量。
      * @param array $InstanceIds 分散置放群组内，云服务器id列表。
-     * @param string $CreateTime 分散置放群组创建时间。
+     * @param string $CreateTime 分散置放群组创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
      * @param integer $Affinity 置放群组亲和度
      * @param array $Tags 置放群组关联的标签列表。
      */

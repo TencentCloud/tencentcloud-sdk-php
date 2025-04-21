@@ -58,8 +58,8 @@ drop：拒绝
  * @method void setRuleAction(string $RuleAction) 设置访问控制策略中设置的流量通过云防火墙的方式。取值：
 accept：放行
 drop：拒绝
- * @method string getDescription() 获取描述
- * @method void setDescription(string $Description) 设置描述
+ * @method string getDescription() 获取规则描述 用于规则使用或者场景的描述，最多支持50个字符
+ * @method void setDescription(string $Description) 设置规则描述 用于规则使用或者场景的描述，最多支持50个字符
  * @method string getOrderIndex() 获取规则顺序，-1表示最低，1表示最高，请勿和外层Type冲突（和外层的Type配合使用，当中间插入时，指定添加位置）
  * @method void setOrderIndex(string $OrderIndex) 设置规则顺序，-1表示最低，1表示最高，请勿和外层Type冲突（和外层的Type配合使用，当中间插入时，指定添加位置）
  * @method string getProtocol() 获取协议；TCP/UDP/ICMP/ANY
@@ -123,7 +123,7 @@ drop：拒绝
     public $RuleAction;
 
     /**
-     * @var string 描述
+     * @var string 规则描述 用于规则使用或者场景的描述，最多支持50个字符
      */
     public $Description;
 
@@ -185,7 +185,7 @@ region：地域(ap-gaungzhou)
      * @param string $RuleAction 访问控制策略中设置的流量通过云防火墙的方式。取值：
 accept：放行
 drop：拒绝
-     * @param string $Description 描述
+     * @param string $Description 规则描述 用于规则使用或者场景的描述，最多支持50个字符
      * @param string $OrderIndex 规则顺序，-1表示最低，1表示最高，请勿和外层Type冲突（和外层的Type配合使用，当中间插入时，指定添加位置）
      * @param string $Protocol 协议；TCP/UDP/ICMP/ANY
      * @param string $Port 访问控制策略的端口。取值：

@@ -410,12 +410,12 @@ HoaiMy
  * @method void setExtractConfig(array $ExtractConfig) 设置通话内容提取配置
  * @method float getTemperature() 获取模型温度控制
  * @method void setTemperature(float $Temperature) 设置模型温度控制
- * @method array getVariables() 获取通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> dify变量</p>  
+ * @method array getVariables() 获取通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> 欢迎语延迟播放(秒级)：welcome-message-delay</p>  <p> dify变量</p>  
 
 1. dify-inputs-xxx 为dify的inputs变量
 2.  dify-inputs-user 为dify的user值
 3.  dify-inputs-conversation_id 为dify的conversation_id值
- * @method void setVariables(array $Variables) 设置通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> dify变量</p>  
+ * @method void setVariables(array $Variables) 设置通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> 欢迎语延迟播放(秒级)：welcome-message-delay</p>  <p> dify变量</p>  
 
 1. dify-inputs-xxx 为dify的inputs变量
 2.  dify-inputs-user 为dify的user值
@@ -712,6 +712,7 @@ HoaiMy
 
     /**
      * @var array 提示词变量
+     * @deprecated
      */
     public $PromptVariables;
 
@@ -731,7 +732,7 @@ HoaiMy
     public $Temperature;
 
     /**
-     * @var array 通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> dify变量</p>  
+     * @var array 通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> 欢迎语延迟播放(秒级)：welcome-message-delay</p>  <p> dify变量</p>  
 
 1. dify-inputs-xxx 为dify的inputs变量
 2.  dify-inputs-user 为dify的user值
@@ -935,7 +936,7 @@ HoaiMy
      * @param integer $VadSilenceTime 语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
      * @param array $ExtractConfig 通话内容提取配置
      * @param float $Temperature 模型温度控制
-     * @param array $Variables 通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> dify变量</p>  
+     * @param array $Variables 通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> 欢迎语延迟播放(秒级)：welcome-message-delay</p>  <p> dify变量</p>  
 
 1. dify-inputs-xxx 为dify的inputs变量
 2.  dify-inputs-user 为dify的user值

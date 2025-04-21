@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRestrictState(string $RestrictState) 设置实例业务状态。取值范围：<br><li>NORMAL：表示正常状态的实例</li><li>EXPIRED：表示过期的实例</li><li>PROTECTIVELY_ISOLATED：表示被安全隔离的实例。</li>
  * @method string getInstanceName() 获取实例名称。
  * @method void setInstanceName(string $InstanceName) 设置实例名称。
- * @method string getInstanceChargeType() 获取实例计费模式。取值范围：<br><li>`PREPAID`：表示预付费，即包年包月</li><li>`POSTPAID_BY_HOUR`：表示后付费，即按量计费</li><li>`CDHPAID`：`专用宿主机`付费，即只对`专用宿主机`计费，不对`专用宿主机`上的实例计费。</li><li>`SPOTPAID`：表示竞价实例付费。</li>
- * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例计费模式。取值范围：<br><li>`PREPAID`：表示预付费，即包年包月</li><li>`POSTPAID_BY_HOUR`：表示后付费，即按量计费</li><li>`CDHPAID`：`专用宿主机`付费，即只对`专用宿主机`计费，不对`专用宿主机`上的实例计费。</li><li>`SPOTPAID`：表示竞价实例付费。</li>
+ * @method string getInstanceChargeType() 获取实例[计费类型](https://cloud.tencent.com/document/product/213/2180)。取值范围：<br><li>PREPAID：预付费，即包年包月</li><br><li>POSTPAID_BY_HOUR：按小时后付费</li><br><li>CDHPAID：独享子机（基于专用宿主机创建，宿主机部分的资源不收费）</li><br><li>SPOTPAID：竞价付费</li><br><li>CDCPAID：专用集群付费</li>
+ * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例[计费类型](https://cloud.tencent.com/document/product/213/2180)。取值范围：<br><li>PREPAID：预付费，即包年包月</li><br><li>POSTPAID_BY_HOUR：按小时后付费</li><br><li>CDHPAID：独享子机（基于专用宿主机创建，宿主机部分的资源不收费）</li><br><li>SPOTPAID：竞价付费</li><br><li>CDCPAID：专用集群付费</li>
  * @method SystemDisk getSystemDisk() 获取实例系统盘信息。
  * @method void setSystemDisk(SystemDisk $SystemDisk) 设置实例系统盘信息。
  * @method array getDataDisks() 获取实例数据盘信息。
@@ -66,8 +66,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。
  * @method LoginSettings getLoginSettings() 获取实例登录设置。目前只返回实例所关联的密钥。
  * @method void setLoginSettings(LoginSettings $LoginSettings) 设置实例登录设置。目前只返回实例所关联的密钥。
- * @method string getInstanceState() 获取实例状态。取值范围：<br><li>PENDING：表示创建中<br></li><li>LAUNCH_FAILED：表示创建失败<br></li><li>RUNNING：表示运行中<br></li><li>STOPPED：表示关机<br></li><li>STARTING：表示开机中<br></li><li>STOPPING：表示关机中<br></li><li>REBOOTING：表示重启中<br></li><li>SHUTDOWN：表示停止待销毁<br></li><li>TERMINATING：表示销毁中。<br></li>
- * @method void setInstanceState(string $InstanceState) 设置实例状态。取值范围：<br><li>PENDING：表示创建中<br></li><li>LAUNCH_FAILED：表示创建失败<br></li><li>RUNNING：表示运行中<br></li><li>STOPPED：表示关机<br></li><li>STARTING：表示开机中<br></li><li>STOPPING：表示关机中<br></li><li>REBOOTING：表示重启中<br></li><li>SHUTDOWN：表示停止待销毁<br></li><li>TERMINATING：表示销毁中。<br></li>
+ * @method string getInstanceState() 获取实例状态。状态类型详见[实例状态表](https://cloud.tencent.com/document/api/213/15753#InstanceStatus)
+ * @method void setInstanceState(string $InstanceState) 设置实例状态。状态类型详见[实例状态表](https://cloud.tencent.com/document/api/213/15753#InstanceStatus)
  * @method array getTags() 获取实例关联的标签列表。
  * @method void setTags(array $Tags) 设置实例关联的标签列表。
  * @method string getStopChargingMode() 获取实例的关机计费模式。
@@ -161,7 +161,7 @@ class Instance extends AbstractModel
     public $InstanceName;
 
     /**
-     * @var string 实例计费模式。取值范围：<br><li>`PREPAID`：表示预付费，即包年包月</li><li>`POSTPAID_BY_HOUR`：表示后付费，即按量计费</li><li>`CDHPAID`：`专用宿主机`付费，即只对`专用宿主机`计费，不对`专用宿主机`上的实例计费。</li><li>`SPOTPAID`：表示竞价实例付费。</li>
+     * @var string 实例[计费类型](https://cloud.tencent.com/document/product/213/2180)。取值范围：<br><li>PREPAID：预付费，即包年包月</li><br><li>POSTPAID_BY_HOUR：按小时后付费</li><br><li>CDHPAID：独享子机（基于专用宿主机创建，宿主机部分的资源不收费）</li><br><li>SPOTPAID：竞价付费</li><br><li>CDCPAID：专用集群付费</li>
      */
     public $InstanceChargeType;
 
@@ -233,7 +233,7 @@ class Instance extends AbstractModel
     public $LoginSettings;
 
     /**
-     * @var string 实例状态。取值范围：<br><li>PENDING：表示创建中<br></li><li>LAUNCH_FAILED：表示创建失败<br></li><li>RUNNING：表示运行中<br></li><li>STOPPED：表示关机<br></li><li>STARTING：表示开机中<br></li><li>STOPPING：表示关机中<br></li><li>REBOOTING：表示重启中<br></li><li>SHUTDOWN：表示停止待销毁<br></li><li>TERMINATING：表示销毁中。<br></li>
+     * @var string 实例状态。状态类型详见[实例状态表](https://cloud.tencent.com/document/api/213/15753#InstanceStatus)
      */
     public $InstanceState;
 
@@ -348,7 +348,7 @@ class Instance extends AbstractModel
      * @param integer $Memory 实例内存容量，单位：`GB`。
      * @param string $RestrictState 实例业务状态。取值范围：<br><li>NORMAL：表示正常状态的实例</li><li>EXPIRED：表示过期的实例</li><li>PROTECTIVELY_ISOLATED：表示被安全隔离的实例。</li>
      * @param string $InstanceName 实例名称。
-     * @param string $InstanceChargeType 实例计费模式。取值范围：<br><li>`PREPAID`：表示预付费，即包年包月</li><li>`POSTPAID_BY_HOUR`：表示后付费，即按量计费</li><li>`CDHPAID`：`专用宿主机`付费，即只对`专用宿主机`计费，不对`专用宿主机`上的实例计费。</li><li>`SPOTPAID`：表示竞价实例付费。</li>
+     * @param string $InstanceChargeType 实例[计费类型](https://cloud.tencent.com/document/product/213/2180)。取值范围：<br><li>PREPAID：预付费，即包年包月</li><br><li>POSTPAID_BY_HOUR：按小时后付费</li><br><li>CDHPAID：独享子机（基于专用宿主机创建，宿主机部分的资源不收费）</li><br><li>SPOTPAID：竞价付费</li><br><li>CDCPAID：专用集群付费</li>
      * @param SystemDisk $SystemDisk 实例系统盘信息。
      * @param array $DataDisks 实例数据盘信息。
      * @param array $PrivateIpAddresses 实例主网卡的内网`IP`列表。
@@ -364,7 +364,7 @@ class Instance extends AbstractModel
      * @param string $OsName 操作系统名称。
      * @param array $SecurityGroupIds 实例所属安全组。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的sgId字段来获取。
      * @param LoginSettings $LoginSettings 实例登录设置。目前只返回实例所关联的密钥。
-     * @param string $InstanceState 实例状态。取值范围：<br><li>PENDING：表示创建中<br></li><li>LAUNCH_FAILED：表示创建失败<br></li><li>RUNNING：表示运行中<br></li><li>STOPPED：表示关机<br></li><li>STARTING：表示开机中<br></li><li>STOPPING：表示关机中<br></li><li>REBOOTING：表示重启中<br></li><li>SHUTDOWN：表示停止待销毁<br></li><li>TERMINATING：表示销毁中。<br></li>
+     * @param string $InstanceState 实例状态。状态类型详见[实例状态表](https://cloud.tencent.com/document/api/213/15753#InstanceStatus)
      * @param array $Tags 实例关联的标签列表。
      * @param string $StopChargingMode 实例的关机计费模式。
 取值范围：<br><li>KEEP_CHARGING：关机继续收费</li><li>STOP_CHARGING：关机停止收费</li><li>NOT_APPLICABLE：实例处于非关机状态或者不适用关机停止计费的条件</li>

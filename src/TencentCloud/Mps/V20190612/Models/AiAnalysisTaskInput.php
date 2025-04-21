@@ -24,17 +24,17 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDefinition(integer $Definition) 设置视频内容分析模板 ID。
  * @method string getExtendedParameter() 获取扩展参数，其值为序列化的 json字符串。
 注意：此参数为定制需求参数，参考如下：
-智能檫除：https://cloud.tencent.com/document/product/862/101530
-智能拆条：https://cloud.tencent.com/document/product/862/112098
-高光集锦：https://cloud.tencent.com/document/product/862/107280
-智能横转竖：https://cloud.tencent.com/document/product/862/112112
+[智能檫除](https://cloud.tencent.com/document/product/862/101530)
+[智能拆条](https://cloud.tencent.com/document/product/862/112098)
+[高光集锦](https://cloud.tencent.com/document/product/862/107280)
+[智能横转竖](https://cloud.tencent.com/document/product/862/112112)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtendedParameter(string $ExtendedParameter) 设置扩展参数，其值为序列化的 json字符串。
 注意：此参数为定制需求参数，参考如下：
-智能檫除：https://cloud.tencent.com/document/product/862/101530
-智能拆条：https://cloud.tencent.com/document/product/862/112098
-高光集锦：https://cloud.tencent.com/document/product/862/107280
-智能横转竖：https://cloud.tencent.com/document/product/862/112112
+[智能檫除](https://cloud.tencent.com/document/product/862/101530)
+[智能拆条](https://cloud.tencent.com/document/product/862/112098)
+[高光集锦](https://cloud.tencent.com/document/product/862/107280)
+[智能横转竖](https://cloud.tencent.com/document/product/862/112112)
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AiAnalysisTaskInput extends AbstractModel
@@ -47,10 +47,10 @@ class AiAnalysisTaskInput extends AbstractModel
     /**
      * @var string 扩展参数，其值为序列化的 json字符串。
 注意：此参数为定制需求参数，参考如下：
-智能檫除：https://cloud.tencent.com/document/product/862/101530
-智能拆条：https://cloud.tencent.com/document/product/862/112098
-高光集锦：https://cloud.tencent.com/document/product/862/107280
-智能横转竖：https://cloud.tencent.com/document/product/862/112112
+[智能檫除](https://cloud.tencent.com/document/product/862/101530)
+[智能拆条](https://cloud.tencent.com/document/product/862/112098)
+[高光集锦](https://cloud.tencent.com/document/product/862/107280)
+[智能横转竖](https://cloud.tencent.com/document/product/862/112112)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExtendedParameter;
@@ -59,10 +59,10 @@ class AiAnalysisTaskInput extends AbstractModel
      * @param integer $Definition 视频内容分析模板 ID。
      * @param string $ExtendedParameter 扩展参数，其值为序列化的 json字符串。
 注意：此参数为定制需求参数，参考如下：
-智能檫除：https://cloud.tencent.com/document/product/862/101530
-智能拆条：https://cloud.tencent.com/document/product/862/112098
-高光集锦：https://cloud.tencent.com/document/product/862/107280
-智能横转竖：https://cloud.tencent.com/document/product/862/112112
+[智能檫除](https://cloud.tencent.com/document/product/862/101530)
+[智能拆条](https://cloud.tencent.com/document/product/862/112098)
+[高光集锦](https://cloud.tencent.com/document/product/862/107280)
+[智能横转竖](https://cloud.tencent.com/document/product/862/112112)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

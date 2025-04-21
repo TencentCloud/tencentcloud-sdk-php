@@ -61,9 +61,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getOperateUin() 获取执行sql的子uin
  * @method void setOperateUin(string $OperateUin) 设置执行sql的子uin
  * @method string getDataEngineName() 获取计算资源名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataEngineName(string $DataEngineName) 设置计算资源名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInputType() 获取导入类型是本地导入还是cos
  * @method void setInputType(string $InputType) 设置导入类型是本地导入还是cos
  * @method string getInputConf() 获取导入配置
@@ -219,7 +217,6 @@ class TaskResponseInfo extends AbstractModel
 
     /**
      * @var string 计算资源名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataEngineName;
 
@@ -358,7 +355,6 @@ class TaskResponseInfo extends AbstractModel
      * @param string $DataEngineId 计算资源id
      * @param string $OperateUin 执行sql的子uin
      * @param string $DataEngineName 计算资源名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InputType 导入类型是本地导入还是cos
      * @param string $InputConf 导入配置
      * @param integer $DataNumber 数据条数

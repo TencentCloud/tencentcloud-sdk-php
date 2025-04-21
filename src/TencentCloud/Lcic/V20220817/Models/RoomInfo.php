@@ -88,6 +88,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRecordStream(integer $RecordStream) 设置录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0
  * @method integer getWhiteBoardSnapshotMode() 获取板书截图生成类型。0 不生成板书（默认）；1 全量模式；2 单页去重模式
  * @method void setWhiteBoardSnapshotMode(integer $WhiteBoardSnapshotMode) 设置板书截图生成类型。0 不生成板书（默认）；1 全量模式；2 单页去重模式
+ * @method integer getSubtitlesTranscription() 获取字幕转写功能开关：0关闭，1开启，默认关闭
+ * @method void setSubtitlesTranscription(integer $SubtitlesTranscription) 设置字幕转写功能开关：0关闭，1开启，默认关闭
  */
 class RoomInfo extends AbstractModel
 {
@@ -248,6 +250,11 @@ class RoomInfo extends AbstractModel
     public $WhiteBoardSnapshotMode;
 
     /**
+     * @var integer 字幕转写功能开关：0关闭，1开启，默认关闭
+     */
+    public $SubtitlesTranscription;
+
+    /**
      * @param string $Name 房间名称。
      * @param integer $StartTime 预定的房间开始时间，unix时间戳。
      * @param integer $EndTime 预定的房间结束时间，unix时间戳。
@@ -282,6 +289,7 @@ class RoomInfo extends AbstractModel
      * @param string $RecordLang 录制自定义语言，仅recordlayout=9的时候此参数有效
      * @param integer $RecordStream 录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0
      * @param integer $WhiteBoardSnapshotMode 板书截图生成类型。0 不生成板书（默认）；1 全量模式；2 单页去重模式
+     * @param integer $SubtitlesTranscription 字幕转写功能开关：0关闭，1开启，默认关闭
      */
     function __construct()
     {
@@ -414,6 +422,10 @@ class RoomInfo extends AbstractModel
 
         if (array_key_exists("WhiteBoardSnapshotMode",$param) and $param["WhiteBoardSnapshotMode"] !== null) {
             $this->WhiteBoardSnapshotMode = $param["WhiteBoardSnapshotMode"];
+        }
+
+        if (array_key_exists("SubtitlesTranscription",$param) and $param["SubtitlesTranscription"] !== null) {
+            $this->SubtitlesTranscription = $param["SubtitlesTranscription"];
         }
     }
 }

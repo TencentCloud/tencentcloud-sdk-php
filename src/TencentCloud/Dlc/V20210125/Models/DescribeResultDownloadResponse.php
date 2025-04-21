@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * DescribeResultDownload返回参数结构体
  *
  * @method string getPath() 获取下载文件路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPath(string $Path) 设置下载文件路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取任务状态 init | queue | format | compress | success|  timeout | error
  * @method void setStatus(string $Status) 设置任务状态 init | queue | format | compress | success|  timeout | error
  * @method string getReason() 获取任务异常原因
@@ -41,7 +39,6 @@ class DescribeResultDownloadResponse extends AbstractModel
 {
     /**
      * @var string 下载文件路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Path;
 
@@ -77,7 +74,6 @@ class DescribeResultDownloadResponse extends AbstractModel
 
     /**
      * @param string $Path 下载文件路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 任务状态 init | queue | format | compress | success|  timeout | error
      * @param string $Reason 任务异常原因
      * @param string $SecretId 临时SecretId

@@ -102,8 +102,10 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\DescribeResourcePackageSaleSpecResponse DescribeResourcePackageSaleSpec(Models\DescribeResourcePackageSaleSpecRequest $req) 本接口（DescribeResourcePackageSaleSpec）用于查询资源包规格。
  * @method Models\DescribeResourcesByDealNameResponse DescribeResourcesByDealName(Models\DescribeResourcesByDealNameRequest $req) 本接口（DescribeResourcesByDealName）用于查询订单关联实例。
  * @method Models\DescribeRollbackTimeRangeResponse DescribeRollbackTimeRange(Models\DescribeRollbackTimeRangeRequest $req) 本接口（DescribeRollbackTimeRange）用于查询回档时间范围。
+ * @method Models\DescribeSSLStatusResponse DescribeSSLStatus(Models\DescribeSSLStatusRequest $req) 查询实例SSL状态
  * @method Models\DescribeServerlessInstanceSpecsResponse DescribeServerlessInstanceSpecs(Models\DescribeServerlessInstanceSpecsRequest $req) 查询Serverless实例可选规格
  * @method Models\DescribeServerlessStrategyResponse DescribeServerlessStrategy(Models\DescribeServerlessStrategyRequest $req) 查询serverless策略
+ * @method Models\DescribeSlaveZonesResponse DescribeSlaveZones(Models\DescribeSlaveZonesRequest $req) 查询从可用区
  * @method Models\DescribeSupportProxyVersionResponse DescribeSupportProxyVersion(Models\DescribeSupportProxyVersionRequest $req) 本接口（DescribeSupportProxyVersion）用于查询支持的数据库代理版本。
  * @method Models\DescribeTasksResponse DescribeTasks(Models\DescribeTasksRequest $req) 本接口（DescribeTasks）用于查询任务列表。
  * @method Models\DescribeZonesResponse DescribeZones(Models\DescribeZonesRequest $req) 本接口（DescribeZones）用于查询可售卖地域可用区信息。
@@ -153,6 +155,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\OpenClusterReadOnlyInstanceGroupAccessResponse OpenClusterReadOnlyInstanceGroupAccess(Models\OpenClusterReadOnlyInstanceGroupAccessRequest $req) 本接口（OpenClusterReadOnlyInstanceGroupAccess）用于开启只读实例组接入。
  * @method Models\OpenClusterTransparentEncryptResponse OpenClusterTransparentEncrypt(Models\OpenClusterTransparentEncryptRequest $req) 开通集群透明加密
  * @method Models\OpenReadOnlyInstanceExclusiveAccessResponse OpenReadOnlyInstanceExclusiveAccess(Models\OpenReadOnlyInstanceExclusiveAccessRequest $req) 本接口（OpenReadOnlyInstanceExclusiveAccess）用于开通只读实例独有访问接入组。
+ * @method Models\OpenSSLResponse OpenSSL(Models\OpenSSLRequest $req) 开启SSL加密
  * @method Models\OpenWanResponse OpenWan(Models\OpenWanRequest $req) 本接口（OpenWan）用于开通外网。
  * @method Models\PauseServerlessResponse PauseServerless(Models\PauseServerlessRequest $req) 本接口（PauseServerless）用于暂停 serverless 集群。
  * @method Models\RefundResourcePackageResponse RefundResourcePackage(Models\RefundResourcePackageRequest $req) 本接口（RefundResourcePackage）用于资源包退款。

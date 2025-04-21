@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 描述了数据盘的信息
  *
- * @method integer getDiskSize() 获取数据盘大小，单位：GB。最小调整步长为10G，不同数据盘类型取值范围不同，具体限制详见：[存储概述](https://cloud.tencent.com/document/product/213/4952)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
- * @method void setDiskSize(integer $DiskSize) 设置数据盘大小，单位：GB。最小调整步长为10G，不同数据盘类型取值范围不同，具体限制详见：[存储概述](https://cloud.tencent.com/document/product/213/4952)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
+ * @method integer getDiskSize() 获取数据盘大小，单位：GiB。最小调整步长为10GiB，不同数据盘类型取值范围不同，具体限制详见：[存储概述](https://cloud.tencent.com/document/product/213/4952)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
+ * @method void setDiskSize(integer $DiskSize) 设置数据盘大小，单位：GiB。最小调整步长为10GiB，不同数据盘类型取值范围不同，具体限制详见：[存储概述](https://cloud.tencent.com/document/product/213/4952)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
  * @method string getDiskType() 获取数据盘类型。数据盘类型限制详见[存储概述](https://cloud.tencent.com/document/product/213/4952)。取值范围：<br /><li>LOCAL_BASIC：本地硬盘<br /> <li>LOCAL_SSD：本地SSD硬盘<br /><li>LOCAL_NVME：本地NVME硬盘，与InstanceType强相关，不支持指定<br /><li>LOCAL_PRO：本地HDD硬盘，与InstanceType强相关，不支持指定<br /><li>CLOUD_BASIC：普通云硬盘<br /><li> CLOUD_PREMIUM：高性能云硬盘<br /><li>CLOUD_SSD：SSD云硬盘<br /><li> CLOUD_HSSD：增强型SSD云硬盘<br /> <li>CLOUD_TSSD：极速型SSD云硬盘<br /><li>CLOUD_BSSD：通用型SSD云硬盘<br /><br />默认取值：LOCAL_BASIC。<br /><br />该参数对`ResizeInstanceDisk`接口无效。</li></li></li> </li> </li></li></li></li></li></li>
  * @method void setDiskType(string $DiskType) 设置数据盘类型。数据盘类型限制详见[存储概述](https://cloud.tencent.com/document/product/213/4952)。取值范围：<br /><li>LOCAL_BASIC：本地硬盘<br /> <li>LOCAL_SSD：本地SSD硬盘<br /><li>LOCAL_NVME：本地NVME硬盘，与InstanceType强相关，不支持指定<br /><li>LOCAL_PRO：本地HDD硬盘，与InstanceType强相关，不支持指定<br /><li>CLOUD_BASIC：普通云硬盘<br /><li> CLOUD_PREMIUM：高性能云硬盘<br /><li>CLOUD_SSD：SSD云硬盘<br /><li> CLOUD_HSSD：增强型SSD云硬盘<br /> <li>CLOUD_TSSD：极速型SSD云硬盘<br /><li>CLOUD_BSSD：通用型SSD云硬盘<br /><br />默认取值：LOCAL_BASIC。<br /><br />该参数对`ResizeInstanceDisk`接口无效。</li></li></li> </li> </li></li></li></li></li></li>
  * @method string getDiskId() 获取数据盘ID。
@@ -40,8 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKmsKeyId(string $KmsKeyId) 设置自定义CMK对应的ID，取值为UUID或者类似kms-abcd1234。用于加密云盘。
 
 该参数目前仅用于 `RunInstances` 接口。
- * @method integer getThroughputPerformance() 获取云硬盘性能，单位：MB/s
- * @method void setThroughputPerformance(integer $ThroughputPerformance) 设置云硬盘性能，单位：MB/s
+ * @method integer getThroughputPerformance() 获取云硬盘性能，单位：MiB/s。使用此参数可给云硬盘购买额外的性能。
+当前仅支持极速型云盘（CLOUD_TSSD）和增强型SSD云硬盘（CLOUD_HSSD）
+ * @method void setThroughputPerformance(integer $ThroughputPerformance) 设置云硬盘性能，单位：MiB/s。使用此参数可给云硬盘购买额外的性能。
+当前仅支持极速型云盘（CLOUD_TSSD）和增强型SSD云硬盘（CLOUD_HSSD）
  * @method string getCdcId() 获取所属的独享集群ID。
  * @method void setCdcId(string $CdcId) 设置所属的独享集群ID。
  * @method boolean getBurstPerformance() 获取突发性能
@@ -51,16 +53,12 @@ use TencentCloud\Common\AbstractModel;
 
  <b>注：内测中。</b>
  * @method string getDiskName() 获取磁盘名称，长度不超过128 个字符。
-
-该参数正在邀测中，暂未开放使用。
  * @method void setDiskName(string $DiskName) 设置磁盘名称，长度不超过128 个字符。
-
-该参数正在邀测中，暂未开放使用。
  */
 class DataDisk extends AbstractModel
 {
     /**
-     * @var integer 数据盘大小，单位：GB。最小调整步长为10G，不同数据盘类型取值范围不同，具体限制详见：[存储概述](https://cloud.tencent.com/document/product/213/4952)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
+     * @var integer 数据盘大小，单位：GiB。最小调整步长为10GiB，不同数据盘类型取值范围不同，具体限制详见：[存储概述](https://cloud.tencent.com/document/product/213/4952)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
      */
     public $DiskSize;
 
@@ -98,7 +96,8 @@ class DataDisk extends AbstractModel
     public $KmsKeyId;
 
     /**
-     * @var integer 云硬盘性能，单位：MB/s
+     * @var integer 云硬盘性能，单位：MiB/s。使用此参数可给云硬盘购买额外的性能。
+当前仅支持极速型云盘（CLOUD_TSSD）和增强型SSD云硬盘（CLOUD_HSSD）
      */
     public $ThroughputPerformance;
 
@@ -116,13 +115,11 @@ class DataDisk extends AbstractModel
 
     /**
      * @var string 磁盘名称，长度不超过128 个字符。
-
-该参数正在邀测中，暂未开放使用。
      */
     public $DiskName;
 
     /**
-     * @param integer $DiskSize 数据盘大小，单位：GB。最小调整步长为10G，不同数据盘类型取值范围不同，具体限制详见：[存储概述](https://cloud.tencent.com/document/product/213/4952)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
+     * @param integer $DiskSize 数据盘大小，单位：GiB。最小调整步长为10GiB，不同数据盘类型取值范围不同，具体限制详见：[存储概述](https://cloud.tencent.com/document/product/213/4952)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
      * @param string $DiskType 数据盘类型。数据盘类型限制详见[存储概述](https://cloud.tencent.com/document/product/213/4952)。取值范围：<br /><li>LOCAL_BASIC：本地硬盘<br /> <li>LOCAL_SSD：本地SSD硬盘<br /><li>LOCAL_NVME：本地NVME硬盘，与InstanceType强相关，不支持指定<br /><li>LOCAL_PRO：本地HDD硬盘，与InstanceType强相关，不支持指定<br /><li>CLOUD_BASIC：普通云硬盘<br /><li> CLOUD_PREMIUM：高性能云硬盘<br /><li>CLOUD_SSD：SSD云硬盘<br /><li> CLOUD_HSSD：增强型SSD云硬盘<br /> <li>CLOUD_TSSD：极速型SSD云硬盘<br /><li>CLOUD_BSSD：通用型SSD云硬盘<br /><br />默认取值：LOCAL_BASIC。<br /><br />该参数对`ResizeInstanceDisk`接口无效。</li></li></li> </li> </li></li></li></li></li></li>
      * @param string $DiskId 数据盘ID。
 该参数目前仅用于`DescribeInstances`等查询类接口的返回参数，不可用于`RunInstances`等写接口的入参。
@@ -132,14 +129,13 @@ class DataDisk extends AbstractModel
      * @param string $KmsKeyId 自定义CMK对应的ID，取值为UUID或者类似kms-abcd1234。用于加密云盘。
 
 该参数目前仅用于 `RunInstances` 接口。
-     * @param integer $ThroughputPerformance 云硬盘性能，单位：MB/s
+     * @param integer $ThroughputPerformance 云硬盘性能，单位：MiB/s。使用此参数可给云硬盘购买额外的性能。
+当前仅支持极速型云盘（CLOUD_TSSD）和增强型SSD云硬盘（CLOUD_HSSD）
      * @param string $CdcId 所属的独享集群ID。
      * @param boolean $BurstPerformance 突发性能
 
  <b>注：内测中。</b>
      * @param string $DiskName 磁盘名称，长度不超过128 个字符。
-
-该参数正在邀测中，暂未开放使用。
      */
     function __construct()
     {

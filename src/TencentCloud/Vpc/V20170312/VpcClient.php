@@ -571,7 +571,7 @@ LimitTypes取值范围：
 如有需要, 可以封禁任意限速实例, 可接入到内部运营系统
  * @method Models\MigrateBandwidthPackageResourcesResponse MigrateBandwidthPackageResources(Models\MigrateBandwidthPackageResourcesRequest $req) 本接口 (MigrateBandwidthPackageResources) 用于共享带宽包之间迁移资源
  * @method Models\MigrateNetworkInterfaceResponse MigrateNetworkInterface(Models\MigrateNetworkInterfaceRequest $req) 本接口（MigrateNetworkInterface）用于弹性网卡迁移。
-本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口。
+本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询[DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) `接口。
  * @method Models\MigratePrivateIpAddressResponse MigratePrivateIpAddress(Models\MigratePrivateIpAddressRequest $req) 本接口（MigratePrivateIpAddress）用于弹性网卡内网IP迁移。
 * 该接口用于将一个内网IP从一个弹性网卡上迁移到另外一个弹性网卡，主IP地址不支持迁移。
 * 迁移前后的弹性网卡必须在同一个子网内。  

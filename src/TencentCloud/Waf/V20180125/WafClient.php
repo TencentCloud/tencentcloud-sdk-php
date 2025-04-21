@@ -44,6 +44,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DeleteAntiInfoLeakRuleResponse DeleteAntiInfoLeakRule(Models\DeleteAntiInfoLeakRuleRequest $req) 信息防泄漏删除规则
  * @method Models\DeleteAttackDownloadRecordResponse DeleteAttackDownloadRecord(Models\DeleteAttackDownloadRecordRequest $req) 删除攻击日志下载任务记录
  * @method Models\DeleteAttackWhiteRuleResponse DeleteAttackWhiteRule(Models\DeleteAttackWhiteRuleRequest $req) 供用户控制台调用，删除Tiga规则引擎白名单。
+ * @method Models\DeleteBotSceneUCBRuleResponse DeleteBotSceneUCBRule(Models\DeleteBotSceneUCBRuleRequest $req) 场景化后删除Bot的UCB自定义规则
  * @method Models\DeleteCCRuleResponse DeleteCCRule(Models\DeleteCCRuleRequest $req) Waf  CC V2 Delete接口
  * @method Models\DeleteCustomRuleResponse DeleteCustomRule(Models\DeleteCustomRuleRequest $req) 删除自定义规则
  * @method Models\DeleteCustomWhiteRuleResponse DeleteCustomWhiteRule(Models\DeleteCustomWhiteRuleRequest $req) 删除精准白名单规则
@@ -69,6 +70,9 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DescribeAttackWhiteRuleResponse DescribeAttackWhiteRule(Models\DescribeAttackWhiteRuleRequest $req) 获取用户规则白名单列表
  * @method Models\DescribeAutoDenyIPResponse DescribeAutoDenyIP(Models\DescribeAutoDenyIPRequest $req) 描述WAF自动封禁IP详情,对齐自动封堵状态
  * @method Models\DescribeBatchIpAccessControlResponse DescribeBatchIpAccessControl(Models\DescribeBatchIpAccessControlRequest $req) Waf 批量防护IP黑白名单查询
+ * @method Models\DescribeBotSceneListResponse DescribeBotSceneList(Models\DescribeBotSceneListRequest $req) 获取BOT场景列表与概览
+ * @method Models\DescribeBotSceneOverviewResponse DescribeBotSceneOverview(Models\DescribeBotSceneOverviewRequest $req) 获取Bot场景全局概览
+ * @method Models\DescribeBotSceneUCBRuleResponse DescribeBotSceneUCBRule(Models\DescribeBotSceneUCBRuleRequest $req) 场景化后Bot获取UCB自定义规则策略
  * @method Models\DescribeCCAutoStatusResponse DescribeCCAutoStatus(Models\DescribeCCAutoStatusRequest $req) 获取SAAS型接入的紧急CC防护状态
  * @method Models\DescribeCCRuleResponse DescribeCCRule(Models\DescribeCCRuleRequest $req) Waf  CC V2 Query接口
  * @method Models\DescribeCCRuleListResponse DescribeCCRuleList(Models\DescribeCCRuleListRequest $req) 根据多条件查询CC规则
@@ -140,6 +144,8 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\ModifyAreaBanRuleResponse ModifyAreaBanRule(Models\ModifyAreaBanRuleRequest $req) 添加（编辑）地域封禁中的地域信息
  * @method Models\ModifyAreaBanStatusResponse ModifyAreaBanStatus(Models\ModifyAreaBanStatusRequest $req) 修改防护域名的地域封禁状态
  * @method Models\ModifyAttackWhiteRuleResponse ModifyAttackWhiteRule(Models\ModifyAttackWhiteRuleRequest $req) 供用户控制台调用，修改Tiga规则引擎白名单。
+ * @method Models\ModifyBotSceneStatusResponse ModifyBotSceneStatus(Models\ModifyBotSceneStatusRequest $req) bot子场景开关
+ * @method Models\ModifyBotSceneUCBRuleResponse ModifyBotSceneUCBRule(Models\ModifyBotSceneUCBRuleRequest $req) 【接口复用】场景化后更新Bot的UCB自定义规则，两个调用位置：1.BOT全局白名单 2.BOT场景配置
  * @method Models\ModifyBotStatusResponse ModifyBotStatus(Models\ModifyBotStatusRequest $req) Bot_V2 bot总开关更新
  * @method Models\ModifyCustomRuleResponse ModifyCustomRule(Models\ModifyCustomRuleRequest $req) 编辑自定义规则
  * @method Models\ModifyCustomRuleStatusResponse ModifyCustomRuleStatus(Models\ModifyCustomRuleStatusRequest $req) 开启或禁用访问控制（自定义策略）

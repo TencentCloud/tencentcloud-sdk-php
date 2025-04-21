@@ -51,6 +51,7 @@ use TencentCloud\Ccc\V20200210\Models as Models;
  * @method Models\CreateSDKLoginTokenResponse CreateSDKLoginToken(Models\CreateSDKLoginTokenRequest $req) 创建 SDK 登录 Token。
  * @method Models\CreateStaffResponse CreateStaff(Models\CreateStaffRequest $req) 创建客服账号。
  * @method Models\CreateUserSigResponse CreateUserSig(Models\CreateUserSigRequest $req) 创建用户数据签名
+ * @method Models\DeleteCCCSkillGroupResponse DeleteCCCSkillGroup(Models\DeleteCCCSkillGroupRequest $req) 删除技能组
  * @method Models\DeleteExtensionResponse DeleteExtension(Models\DeleteExtensionRequest $req) 删除话机账号
  * @method Models\DeletePredictiveDialingCampaignResponse DeletePredictiveDialingCampaign(Models\DeletePredictiveDialingCampaignRequest $req) 删除预测式外呼任务
  * @method Models\DeleteStaffResponse DeleteStaff(Models\DeleteStaffRequest $req) 删除坐席信息

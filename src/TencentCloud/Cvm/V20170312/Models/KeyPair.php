@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeyId(string $KeyId) 设置密钥对的`ID`，是密钥对的唯一标识。
  * @method string getKeyName() 获取密钥对名称。
  * @method void setKeyName(string $KeyName) 设置密钥对名称。
- * @method integer getProjectId() 获取密钥对所属的项目`ID`。
- * @method void setProjectId(integer $ProjectId) 设置密钥对所属的项目`ID`。
+ * @method integer getProjectId() 获取密钥对所属的项目 `ID`，ProjectId 为 0 时表示默认项目。
+ * @method void setProjectId(integer $ProjectId) 设置密钥对所属的项目 `ID`，ProjectId 为 0 时表示默认项目。
  * @method string getDescription() 获取密钥对描述信息。
  * @method void setDescription(string $Description) 设置密钥对描述信息。
  * @method string getPublicKey() 获取密钥对的纯文本公钥。
@@ -52,7 +52,7 @@ class KeyPair extends AbstractModel
     public $KeyName;
 
     /**
-     * @var integer 密钥对所属的项目`ID`。
+     * @var integer 密钥对所属的项目 `ID`，ProjectId 为 0 时表示默认项目。
      */
     public $ProjectId;
 
@@ -89,7 +89,7 @@ class KeyPair extends AbstractModel
     /**
      * @param string $KeyId 密钥对的`ID`，是密钥对的唯一标识。
      * @param string $KeyName 密钥对名称。
-     * @param integer $ProjectId 密钥对所属的项目`ID`。
+     * @param integer $ProjectId 密钥对所属的项目 `ID`，ProjectId 为 0 时表示默认项目。
      * @param string $Description 密钥对描述信息。
      * @param string $PublicKey 密钥对的纯文本公钥。
      * @param string $PrivateKey 密钥对的纯文本私钥。腾讯云不会保管私钥，请用户自行妥善保存。

@@ -30,12 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCallers(array $Callers) 设置主叫号码列表
  * @method array getPromptVariables() 获取提示词变量
  * @method void setPromptVariables(array $PromptVariables) 设置提示词变量
- * @method array getVariables() 获取通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> dify变量</p>  
+ * @method array getVariables() 获取通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> 欢迎语延迟播放(秒级)：welcome-message-delay</p>  <p> dify变量</p>  
 
 1. dify-inputs-xxx 为dify的inputs变量
 2.  dify-inputs-user 为dify的user值
 3.  dify-inputs-conversation_id 为dify的conversation_id值
- * @method void setVariables(array $Variables) 设置通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> dify变量</p>  
+ * @method void setVariables(array $Variables) 设置通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> 欢迎语延迟播放(秒级)：welcome-message-delay</p>  <p> dify变量</p>  
 
 1. dify-inputs-xxx 为dify的inputs变量
 2.  dify-inputs-user 为dify的user值
@@ -65,11 +65,12 @@ class CreateAIAgentCallRequest extends AbstractModel
 
     /**
      * @var array 提示词变量
+     * @deprecated
      */
     public $PromptVariables;
 
     /**
-     * @var array 通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> dify变量</p>  
+     * @var array 通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> 欢迎语延迟播放(秒级)：welcome-message-delay</p>  <p> dify变量</p>  
 
 1. dify-inputs-xxx 为dify的inputs变量
 2.  dify-inputs-user 为dify的user值
@@ -83,7 +84,7 @@ class CreateAIAgentCallRequest extends AbstractModel
      * @param string $Callee 被叫号码
      * @param array $Callers 主叫号码列表
      * @param array $PromptVariables 提示词变量
-     * @param array $Variables 通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> dify变量</p>  
+     * @param array $Variables 通用变量： <p>提示词变量</p> <p>欢迎语变量</p> <p> 欢迎语延迟播放(秒级)：welcome-message-delay</p>  <p> dify变量</p>  
 
 1. dify-inputs-xxx 为dify的inputs变量
 2.  dify-inputs-user 为dify的user值

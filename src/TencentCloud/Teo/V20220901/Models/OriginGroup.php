@@ -39,9 +39,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUpdateTime() 获取源站组更新时间。
  * @method void setUpdateTime(string $UpdateTime) 设置源站组更新时间。
  * @method string getHostHeader() 获取回源Host Header。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostHeader(string $HostHeader) 设置回源Host Header。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OriginGroup extends AbstractModel
 {
@@ -84,7 +82,6 @@ class OriginGroup extends AbstractModel
 
     /**
      * @var string 回源Host Header。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostHeader;
 
@@ -99,7 +96,6 @@ class OriginGroup extends AbstractModel
      * @param string $CreateTime 源站组创建时间。
      * @param string $UpdateTime 源站组更新时间。
      * @param string $HostHeader 回源Host Header。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

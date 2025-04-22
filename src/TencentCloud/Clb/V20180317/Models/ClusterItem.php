@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getClusterId() 获取集群唯一ID
  * @method void setClusterId(string $ClusterId) 设置集群唯一ID
  * @method string getClusterName() 获取集群名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterName(string $ClusterName) 设置集群名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getZone() 获取集群所在可用区，如ap-guangzhou-1
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZone(string $Zone) 设置集群所在可用区，如ap-guangzhou-1
@@ -40,7 +38,6 @@ class ClusterItem extends AbstractModel
 
     /**
      * @var string 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterName;
 
@@ -53,7 +50,6 @@ class ClusterItem extends AbstractModel
     /**
      * @param string $ClusterId 集群唯一ID
      * @param string $ClusterName 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Zone 集群所在可用区，如ap-guangzhou-1
 注意：此字段可能返回 null，表示取不到有效值。
      */

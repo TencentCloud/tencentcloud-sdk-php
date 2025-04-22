@@ -18,7 +18,7 @@ namespace TencentCloud\Dts\V20211206\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 目标端为kakfa时添加的同步选项字段
+ * 目标端为kafka时添加的同步选项字段
  *
  * @method string getDataType() 获取投递到kafka的数据类型，如Avro,Json,canal-pb,canal-json
  * @method void setDataType(string $DataType) 设置投递到kafka的数据类型，如Avro,Json,canal-pb,canal-json

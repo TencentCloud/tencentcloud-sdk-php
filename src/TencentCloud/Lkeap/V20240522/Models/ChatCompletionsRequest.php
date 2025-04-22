@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStream(boolean $Stream) 设置是否流式输出
  * @method float getTemperature() 获取控制生成的随机性，较高的值会产生更多样化的输出。
  * @method void setTemperature(float $Temperature) 设置控制生成的随机性，较高的值会产生更多样化的输出。
- * @method integer getMaxTokens() 获取最大生成的token数量
- * @method void setMaxTokens(integer $MaxTokens) 设置最大生成的token数量
+ * @method integer getMaxTokens() 获取最大生成的token数量，默认为4096，最大可设置为16384
+ * @method void setMaxTokens(integer $MaxTokens) 设置最大生成的token数量，默认为4096，最大可设置为16384
  */
 class ChatCompletionsRequest extends AbstractModel
 {
@@ -69,7 +69,7 @@ class ChatCompletionsRequest extends AbstractModel
     public $Temperature;
 
     /**
-     * @var integer 最大生成的token数量
+     * @var integer 最大生成的token数量，默认为4096，最大可设置为16384
      */
     public $MaxTokens;
 
@@ -83,7 +83,7 @@ class ChatCompletionsRequest extends AbstractModel
 
      * @param boolean $Stream 是否流式输出
      * @param float $Temperature 控制生成的随机性，较高的值会产生更多样化的输出。
-     * @param integer $MaxTokens 最大生成的token数量
+     * @param integer $MaxTokens 最大生成的token数量，默认为4096，最大可设置为16384
      */
     function __construct()
     {

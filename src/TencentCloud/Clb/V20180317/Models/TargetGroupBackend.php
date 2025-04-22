@@ -31,29 +31,19 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getWeight() 获取后端服务的转发权重，取值范围：[0, 100]，默认为 10。
  * @method void setWeight(integer $Weight) 设置后端服务的转发权重，取值范围：[0, 100]，默认为 10。
  * @method array getPublicIpAddresses() 获取后端服务的外网 IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicIpAddresses(array $PublicIpAddresses) 设置后端服务的外网 IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPrivateIpAddresses() 获取后端服务的内网 IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrivateIpAddresses(array $PrivateIpAddresses) 设置后端服务的内网 IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceName() 获取后端服务的实例名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceName(string $InstanceName) 设置后端服务的实例名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegisteredTime() 获取后端服务被绑定的时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegisteredTime(string $RegisteredTime) 设置后端服务被绑定的时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEniId() 获取弹性网卡唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEniId(string $EniId) 设置弹性网卡唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getZoneId() 获取后端服务的可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneId(integer $ZoneId) 设置后端服务的可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TargetGroupBackend extends AbstractModel
 {
@@ -84,19 +74,16 @@ class TargetGroupBackend extends AbstractModel
 
     /**
      * @var array 后端服务的外网 IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicIpAddresses;
 
     /**
      * @var array 后端服务的内网 IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PrivateIpAddresses;
 
     /**
      * @var string 后端服务的实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceName;
 
@@ -108,13 +95,11 @@ class TargetGroupBackend extends AbstractModel
 
     /**
      * @var string 弹性网卡唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EniId;
 
     /**
      * @var integer 后端服务的可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneId;
 
@@ -125,17 +110,12 @@ class TargetGroupBackend extends AbstractModel
      * @param integer $Port 后端服务的监听端口，全端口段监听器此字段返回0，代表无效端口，即不支持设置。
      * @param integer $Weight 后端服务的转发权重，取值范围：[0, 100]，默认为 10。
      * @param array $PublicIpAddresses 后端服务的外网 IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PrivateIpAddresses 后端服务的内网 IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 后端服务的实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegisteredTime 后端服务被绑定的时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EniId 弹性网卡唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ZoneId 后端服务的可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

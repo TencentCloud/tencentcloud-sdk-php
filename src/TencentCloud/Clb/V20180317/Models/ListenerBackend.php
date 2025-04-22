@@ -27,17 +27,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getPort() 获取监听器的端口
  * @method void setPort(integer $Port) 设置监听器的端口
  * @method array getRules() 获取监听器下的规则信息（仅适用于HTTP/HTTPS监听器）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRules(array $Rules) 设置监听器下的规则信息（仅适用于HTTP/HTTPS监听器）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTargets() 获取监听器上绑定的后端服务列表（仅适用于TCP/UDP/TCP_SSL监听器）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargets(array $Targets) 设置监听器上绑定的后端服务列表（仅适用于TCP/UDP/TCP_SSL监听器）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEndPort() 获取若支持端口段，则为端口段结束端口；若不支持端口段，则为0
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndPort(integer $EndPort) 设置若支持端口段，则为端口段结束端口；若不支持端口段，则为0
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ListenerBackend extends AbstractModel
 {
@@ -58,19 +52,16 @@ class ListenerBackend extends AbstractModel
 
     /**
      * @var array 监听器下的规则信息（仅适用于HTTP/HTTPS监听器）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Rules;
 
     /**
      * @var array 监听器上绑定的后端服务列表（仅适用于TCP/UDP/TCP_SSL监听器）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Targets;
 
     /**
      * @var integer 若支持端口段，则为端口段结束端口；若不支持端口段，则为0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndPort;
 
@@ -79,11 +70,8 @@ class ListenerBackend extends AbstractModel
      * @param string $Protocol 监听器的协议
      * @param integer $Port 监听器的端口
      * @param array $Rules 监听器下的规则信息（仅适用于HTTP/HTTPS监听器）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Targets 监听器上绑定的后端服务列表（仅适用于TCP/UDP/TCP_SSL监听器）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EndPort 若支持端口段，则为端口段结束端口；若不支持端口段，则为0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

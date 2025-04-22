@@ -95,9 +95,7 @@ use TencentCloud\Common\AbstractModel;
 <li> inactive：未生效；</li>
 <li> paused：已停用。</li>
  * @method string getAliasZoneName() 获取站点别名。数字、英文、-和_组合，限制20个字符。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAliasZoneName(string $AliasZoneName) 设置站点别名。数字、英文、-和_组合，限制20个字符。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsFake() 获取是否伪站点，取值有：
 <li> 0：非伪站点；</li>
 <li> 1：伪站点。</li>
@@ -220,7 +218,6 @@ class Zone extends AbstractModel
 
     /**
      * @var string 站点别名。数字、英文、-和_组合，限制20个字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AliasZoneName;
 
@@ -281,7 +278,6 @@ class Zone extends AbstractModel
 <li> inactive：未生效；</li>
 <li> paused：已停用。</li>
      * @param string $AliasZoneName 站点别名。数字、英文、-和_组合，限制20个字符。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsFake 是否伪站点，取值有：
 <li> 0：非伪站点；</li>
 <li> 1：伪站点。</li>

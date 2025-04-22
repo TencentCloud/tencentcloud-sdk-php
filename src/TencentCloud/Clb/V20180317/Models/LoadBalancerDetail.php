@@ -169,13 +169,9 @@ Public：公网属性，Private：内网属性；对于内网属性的负载均�
  * @method void setSniSwitch(integer $SniSwitch) 设置是否开启SNI特性，1：表示开启，0：表示不开启（本参数仅对于HTTPS监听器有意义）。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLoadBalancerDomain() 获取负载均衡实例的域名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLoadBalancerDomain(string $LoadBalancerDomain) 设置负载均衡实例的域名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEgress() 获取网络出口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEgress(string $Egress) 设置网络出口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAttributeFlags() 获取负载均衡的属性
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAttributeFlags(array $AttributeFlags) 设置负载均衡的属性
@@ -417,13 +413,11 @@ Public：公网属性，Private：内网属性；对于内网属性的负载均�
 
     /**
      * @var string 负载均衡实例的域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LoadBalancerDomain;
 
     /**
      * @var string 网络出口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Egress;
 
@@ -522,9 +516,7 @@ Public：公网属性，Private：内网属性；对于内网属性的负载均�
      * @param integer $SniSwitch 是否开启SNI特性，1：表示开启，0：表示不开启（本参数仅对于HTTPS监听器有意义）。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LoadBalancerDomain 负载均衡实例的域名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Egress 网络出口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AttributeFlags 负载均衡的属性
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SlaType 负载均衡实例的规格类型信息<ul><li> clb.c1.small：简约型规格 </li><li>clb.c2.medium：标准型规格 </li><li> clb.c3.small：高阶型1规格 </li><li> clb.c3.medium：高阶型2规格 </li><li> clb.c4.small：超强型1规格 </li><li> clb.c4.medium：超强型2规格 </li><li> clb.c4.large：超强型3规格 </li><li> clb.c4.xlarge：超强型4规格 </li><li>""：非性能容量型实例</li></ul>

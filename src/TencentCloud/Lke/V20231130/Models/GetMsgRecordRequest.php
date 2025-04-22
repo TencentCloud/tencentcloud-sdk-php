@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBotAppKey(string $BotAppKey) 设置应用AppKey, 当Type=5[API访客]时, 该字段必填
  * @method integer getScene() 获取场景, 体验: 1; 正式: 2
  * @method void setScene(integer $Scene) 设置场景, 体验: 1; 正式: 2
+ * @method string getMidRecordId() 获取传该值，代表拉取该记录id的前后总共count条消息记录
+ * @method void setMidRecordId(string $MidRecordId) 设置传该值，代表拉取该记录id的前后总共count条消息记录
  */
 class GetMsgRecordRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class GetMsgRecordRequest extends AbstractModel
     public $Scene;
 
     /**
+     * @var string 传该值，代表拉取该记录id的前后总共count条消息记录
+     */
+    public $MidRecordId;
+
+    /**
      * @param integer $Type 类型
      * @param integer $Count 数量
      * @param string $SessionId 会话sessionid
      * @param string $LastRecordId 最后一条记录ID
      * @param string $BotAppKey 应用AppKey, 当Type=5[API访客]时, 该字段必填
      * @param integer $Scene 场景, 体验: 1; 正式: 2
+     * @param string $MidRecordId 传该值，代表拉取该记录id的前后总共count条消息记录
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class GetMsgRecordRequest extends AbstractModel
 
         if (array_key_exists("Scene",$param) and $param["Scene"] !== null) {
             $this->Scene = $param["Scene"];
+        }
+
+        if (array_key_exists("MidRecordId",$param) and $param["MidRecordId"] !== null) {
+            $this->MidRecordId = $param["MidRecordId"];
         }
     }
 }

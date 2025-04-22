@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * lb实例包年包月相关配置属性
  *
  * @method string getRenewFlag() 获取续费类型：AUTO_RENEW 自动续费，  MANUAL_RENEW 手动续费
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRenewFlag(string $RenewFlag) 设置续费类型：AUTO_RENEW 自动续费，  MANUAL_RENEW 手动续费
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPeriod() 获取购买时长，单位：月
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPeriod(integer $Period) 设置购买时长，单位：月
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class LBChargePrepaid extends AbstractModel
 {
     /**
      * @var string 续费类型：AUTO_RENEW 自动续费，  MANUAL_RENEW 手动续费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RenewFlag;
 
     /**
      * @var integer 购买时长，单位：月
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Period;
 
     /**
      * @param string $RenewFlag 续费类型：AUTO_RENEW 自动续费，  MANUAL_RENEW 手动续费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Period 购买时长，单位：月
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

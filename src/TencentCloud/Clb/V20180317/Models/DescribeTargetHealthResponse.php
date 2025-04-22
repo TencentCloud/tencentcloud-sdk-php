@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * DescribeTargetHealth返回参数结构体
  *
  * @method array getLoadBalancers() 获取负载均衡实例列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLoadBalancers(array $LoadBalancers) 设置负载均衡实例列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -31,7 +29,6 @@ class DescribeTargetHealthResponse extends AbstractModel
 {
     /**
      * @var array 负载均衡实例列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LoadBalancers;
 
@@ -42,7 +39,6 @@ class DescribeTargetHealthResponse extends AbstractModel
 
     /**
      * @param array $LoadBalancers 负载均衡实例列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getConfigType() 获取配置类型
  * @method void setConfigType(string $ConfigType) 设置配置类型
  * @method string getConfigName() 获取配置名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigName(string $ConfigName) 设置配置名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConfigContent() 获取配置内容
  * @method void setConfigContent(string $ConfigContent) 设置配置内容
  * @method string getCreateTimestamp() 获取增加配置时间
@@ -49,7 +47,6 @@ class ConfigListItem extends AbstractModel
 
     /**
      * @var string 配置名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigName;
 
@@ -72,7 +69,6 @@ class ConfigListItem extends AbstractModel
      * @param string $UconfigId 配置ID
      * @param string $ConfigType 配置类型
      * @param string $ConfigName 配置名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConfigContent 配置内容
      * @param string $CreateTimestamp 增加配置时间
      * @param string $UpdateTimestamp 修改配置时间

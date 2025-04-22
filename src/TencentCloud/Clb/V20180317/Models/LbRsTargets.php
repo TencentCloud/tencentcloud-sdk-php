@@ -27,13 +27,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getPort() 获取绑定后端实例的端口。
  * @method void setPort(integer $Port) 设置绑定后端实例的端口。
  * @method integer getVpcId() 获取rs的vpcId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(integer $VpcId) 设置rs的vpcId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWeight() 获取rs的权重
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWeight(integer $Weight) 设置rs的权重
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class LbRsTargets extends AbstractModel
 {
@@ -54,13 +50,11 @@ class LbRsTargets extends AbstractModel
 
     /**
      * @var integer rs的vpcId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
     /**
      * @var integer rs的权重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Weight;
 
@@ -69,9 +63,7 @@ class LbRsTargets extends AbstractModel
      * @param string $PrivateIp 后端实例的内网ip。
      * @param integer $Port 绑定后端实例的端口。
      * @param integer $VpcId rs的vpcId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Weight rs的权重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -148,6 +148,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\CreateDirectConnectGatewayResponse CreateDirectConnectGateway(Models\CreateDirectConnectGatewayRequest $req) 本接口（CreateDirectConnectGateway）用于创建专线网关。
  * @method Models\CreateDirectConnectGatewayCcnRoutesResponse CreateDirectConnectGatewayCcnRoutes(Models\CreateDirectConnectGatewayCcnRoutesRequest $req) 本接口（CreateDirectConnectGatewayCcnRoutes）用于创建专线网关的云联网路由（IDC网段）
  * @method Models\CreateFlowLogResponse CreateFlowLog(Models\CreateFlowLogRequest $req) 本接口（CreateFlowLog）用于创建网络流日志。
+ * @method Models\CreateGlobalRoutesResponse CreateGlobalRoutes(Models\CreateGlobalRoutesRequest $req) 本接口（CreateGlobalRoutes）用于创建全局路由。
  * @method Models\CreateHaVipResponse CreateHaVip(Models\CreateHaVipRequest $req) 本接口（CreateHaVip）用于创建高可用虚拟IP（HAVIP）。
  * @method Models\CreateHighPriorityRouteTableResponse CreateHighPriorityRouteTable(Models\CreateHighPriorityRouteTableRequest $req) 高优路由表创建
  * @method Models\CreateHighPriorityRoutesResponse CreateHighPriorityRoutes(Models\CreateHighPriorityRoutesRequest $req) 创建高优路由表条目。
@@ -273,6 +274,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`QueryTask`接口
  * @method Models\DeleteDirectConnectGatewayCcnRoutesResponse DeleteDirectConnectGatewayCcnRoutes(Models\DeleteDirectConnectGatewayCcnRoutesRequest $req) 本接口（DeleteDirectConnectGatewayCcnRoutes）用于删除专线网关的云联网路由（IDC网段）
  * @method Models\DeleteFlowLogResponse DeleteFlowLog(Models\DeleteFlowLogRequest $req) 本接口（DeleteFlowLog）用于删除流日志。
+ * @method Models\DeleteGlobalRoutesResponse DeleteGlobalRoutes(Models\DeleteGlobalRoutesRequest $req) 删除全局路由。
  * @method Models\DeleteHaVipResponse DeleteHaVip(Models\DeleteHaVipRequest $req) 本接口（DeleteHaVip）用于删除高可用虚拟IP（HAVIP）。<br />
 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口。
  * @method Models\DeleteHighPriorityRouteTablesResponse DeleteHighPriorityRouteTables(Models\DeleteHighPriorityRouteTablesRequest $req) 删除高优路由表
@@ -377,6 +379,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 * 只支持单个网关实例查询。即入参 `VpnId`、 `DirectConnectGatewayId`、 `PeeringConnectionId`、 `NatId` 最多只支持传一个，且必须传一个。
 * 如果网关有流量，但调用本接口没有返回数据，请在控制台对应网关详情页确认是否开启网关流量监控。
  * @method Models\DescribeGatewayFlowQosResponse DescribeGatewayFlowQos(Models\DescribeGatewayFlowQosRequest $req) 本接口（DescribeGatewayFlowQos）用于查询网关来访IP流控带宽。
+ * @method Models\DescribeGlobalRoutesResponse DescribeGlobalRoutes(Models\DescribeGlobalRoutesRequest $req) 查询全局路由列表。
  * @method Models\DescribeHaVipsResponse DescribeHaVips(Models\DescribeHaVipsRequest $req) 本接口（DescribeHaVips）用于查询高可用虚拟IP（HAVIP）列表。
  * @method Models\DescribeHighPriorityRouteTablesResponse DescribeHighPriorityRouteTables(Models\DescribeHighPriorityRouteTablesRequest $req) 查询高优路由表。
  * @method Models\DescribeHighPriorityRoutesResponse DescribeHighPriorityRoutes(Models\DescribeHighPriorityRoutesRequest $req) 查询高优路由表条目信息。
@@ -603,6 +606,8 @@ LimitTypes取值范围：
  * @method Models\ModifyDirectConnectGatewayAttributeResponse ModifyDirectConnectGatewayAttribute(Models\ModifyDirectConnectGatewayAttributeRequest $req) 本接口（ModifyDirectConnectGatewayAttribute）用于修改专线网关属性
  * @method Models\ModifyFlowLogAttributeResponse ModifyFlowLogAttribute(Models\ModifyFlowLogAttributeRequest $req) 本接口（ModifyFlowLogAttribute）用于修改流日志属性。
  * @method Models\ModifyGatewayFlowQosResponse ModifyGatewayFlowQos(Models\ModifyGatewayFlowQosRequest $req) 本接口（ModifyGatewayFlowQos）用于调整网关流控带宽。
+ * @method Models\ModifyGlobalRouteECMPAlgorithmResponse ModifyGlobalRouteECMPAlgorithm(Models\ModifyGlobalRouteECMPAlgorithmRequest $req) 修改全局路由表ECMP算法 HASH 策略。
+ * @method Models\ModifyGlobalRoutesResponse ModifyGlobalRoutes(Models\ModifyGlobalRoutesRequest $req) 修改全局路由。
  * @method Models\ModifyHaVipAttributeResponse ModifyHaVipAttribute(Models\ModifyHaVipAttributeRequest $req) 本接口（ModifyHaVipAttribute）用于修改高可用虚拟IP（HAVIP）属性。
  * @method Models\ModifyHighPriorityRouteAttributeResponse ModifyHighPriorityRouteAttribute(Models\ModifyHighPriorityRouteAttributeRequest $req) 修改高优路由表条目属性。
  * @method Models\ModifyHighPriorityRouteECMPAlgorithmResponse ModifyHighPriorityRouteECMPAlgorithm(Models\ModifyHighPriorityRouteECMPAlgorithmRequest $req) 修改高优路由表 HASH 策略。

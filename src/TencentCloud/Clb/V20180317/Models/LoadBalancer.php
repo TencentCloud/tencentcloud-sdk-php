@@ -25,83 +25,55 @@ use TencentCloud\Common\AbstractModel;
  * @method string getLoadBalancerName() 获取负载均衡实例的名称。
  * @method void setLoadBalancerName(string $LoadBalancerName) 设置负载均衡实例的名称。
  * @method string getLoadBalancerType() 获取负载均衡实例的网络类型：
-OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均衡，可通过绑定EIP出公网，具体可参考EIP文档。
+OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均衡，可通过绑定EIP出公网，具体可参考EIP文档[绑定弹性公网IP](https://cloud.tencent.com/document/product/215/16700)。
  * @method void setLoadBalancerType(string $LoadBalancerType) 设置负载均衡实例的网络类型：
-OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均衡，可通过绑定EIP出公网，具体可参考EIP文档。
+OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均衡，可通过绑定EIP出公网，具体可参考EIP文档[绑定弹性公网IP](https://cloud.tencent.com/document/product/215/16700)。
  * @method integer getForward() 获取负载均衡类型标识，1：负载均衡，0：传统型负载均衡。
  * @method void setForward(integer $Forward) 设置负载均衡类型标识，1：负载均衡，0：传统型负载均衡。
  * @method string getDomain() 获取负载均衡实例的域名，仅公网传统型和域名型负载均衡实例才提供该字段。逐步下线中，建议用LoadBalancerDomain替代。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomain(string $Domain) 设置负载均衡实例的域名，仅公网传统型和域名型负载均衡实例才提供该字段。逐步下线中，建议用LoadBalancerDomain替代。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLoadBalancerVips() 获取负载均衡实例的 VIP 列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLoadBalancerVips(array $LoadBalancerVips) 设置负载均衡实例的 VIP 列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取负载均衡实例的状态，包括
 0：创建中，1：正常运行。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置负载均衡实例的状态，包括
 0：创建中，1：正常运行。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取负载均衡实例的创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
+格式：YYYY-MM-DD HH:mm:ss
  * @method void setCreateTime(string $CreateTime) 设置负载均衡实例的创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
+格式：YYYY-MM-DD HH:mm:ss
  * @method string getStatusTime() 获取负载均衡实例的上次状态转换时间。
-注意：此字段可能返回 null，表示取不到有效值。
+格式：YYYY-MM-DD HH:mm:ss
  * @method void setStatusTime(string $StatusTime) 设置负载均衡实例的上次状态转换时间。
-注意：此字段可能返回 null，表示取不到有效值。
+格式：YYYY-MM-DD HH:mm:ss
  * @method integer getProjectId() 获取负载均衡实例所属的项目 ID， 0 表示默认项目。
  * @method void setProjectId(integer $ProjectId) 设置负载均衡实例所属的项目 ID， 0 表示默认项目。
  * @method string getVpcId() 获取私有网络的 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(string $VpcId) 设置私有网络的 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getOpenBgp() 获取高防 LB 的标识，1：高防负载均衡 0：非高防负载均衡。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOpenBgp(integer $OpenBgp) 设置高防 LB 的标识，1：高防负载均衡 0：非高防负载均衡。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getSnat() 获取在 2016 年 12 月份之前的传统型内网负载均衡都是开启了 snat 的。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSnat(boolean $Snat) 设置在 2016 年 12 月份之前的传统型内网负载均衡都是开启了 snat 的。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsolation() 获取0：表示未被隔离，1：表示被隔离。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsolation(integer $Isolation) 设置0：表示未被隔离，1：表示被隔离。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLog() 获取用户开启日志的信息，日志只有公网属性创建了 HTTP 、HTTPS 监听器的负载均衡才会有日志。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLog(string $Log) 设置用户开启日志的信息，日志只有公网属性创建了 HTTP 、HTTPS 监听器的负载均衡才会有日志。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubnetId() 获取负载均衡实例所在的子网（仅对内网VPC型LB有意义）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetId(string $SubnetId) 设置负载均衡实例所在的子网（仅对内网VPC型LB有意义）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取负载均衡实例的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置负载均衡实例的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSecureGroups() 获取负载均衡实例的安全组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecureGroups(array $SecureGroups) 设置负载均衡实例的安全组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method TargetRegionInfo getTargetRegionInfo() 获取负载均衡实例绑定的后端设备的基本信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargetRegionInfo(TargetRegionInfo $TargetRegionInfo) 设置负载均衡实例绑定的后端设备的基本信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAnycastZone() 获取anycast负载均衡的发布域，对于非anycast的负载均衡，此字段返回为空字符串
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAnycastZone(string $AnycastZone) 设置anycast负载均衡的发布域，对于非anycast的负载均衡，此字段返回为空字符串
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAddressIPVersion() 获取IP版本，ipv4 | ipv6
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddressIPVersion(string $AddressIPVersion) 设置IP版本，ipv4 | ipv6
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getNumericalVpcId() 获取数值形式的私有网络 ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNumericalVpcId(integer $NumericalVpcId) 设置数值形式的私有网络 ID
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getNumericalVpcId() 获取数值形式的私有网络 ID。
+ * @method void setNumericalVpcId(integer $NumericalVpcId) 设置数值形式的私有网络 ID。
  * @method string getVipIsp() 获取负载均衡IP地址所属的运营商。
 
 - BGP :  BGP（多线）
@@ -124,13 +96,17 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackupZoneSet(array $BackupZoneSet) 设置备可用区
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIsolatedTime() 获取负载均衡实例被隔离的时间
+ * @method string getIsolatedTime() 获取负载均衡实例被隔离的时间。
+格式：YYYY-MM-DD HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsolatedTime(string $IsolatedTime) 设置负载均衡实例被隔离的时间
+ * @method void setIsolatedTime(string $IsolatedTime) 设置负载均衡实例被隔离的时间。
+格式：YYYY-MM-DD HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExpireTime() 获取负载均衡实例的过期时间，仅对预付费负载均衡生效
+ * @method string getExpireTime() 获取负载均衡实例的过期时间，仅对预付费负载均衡生效。
+格式：YYYY-MM-DD HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExpireTime(string $ExpireTime) 设置负载均衡实例的过期时间，仅对预付费负载均衡生效
+ * @method void setExpireTime(string $ExpireTime) 设置负载均衡实例的过期时间，仅对预付费负载均衡生效。
+格式：YYYY-MM-DD HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getChargeType() 获取负载均衡实例的计费类型，PREPAID：包年包月，POSTPAID_BY_HOUR：按量计费
 注意：此字段可能返回 null，表示取不到有效值。
@@ -140,18 +116,14 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetworkAttributes(InternetAccessible $NetworkAttributes) 设置负载均衡实例的网络属性
 注意：此字段可能返回 null，表示取不到有效值。
- * @method LBChargePrepaid getPrepaidAttributes() 获取负载均衡实例的预付费相关属性
+ * @method LBChargePrepaid getPrepaidAttributes() 获取负载均衡实例的预付费相关属性，仅在 ChargeType=PREPAID 时显示。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPrepaidAttributes(LBChargePrepaid $PrepaidAttributes) 设置负载均衡实例的预付费相关属性
+ * @method void setPrepaidAttributes(LBChargePrepaid $PrepaidAttributes) 设置负载均衡实例的预付费相关属性，仅在 ChargeType=PREPAID 时显示。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLogSetId() 获取负载均衡日志服务(CLS)的日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogSetId(string $LogSetId) 设置负载均衡日志服务(CLS)的日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLogTopicId() 获取负载均衡日志服务(CLS)的日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogTopicId(string $LogTopicId) 设置负载均衡日志服务(CLS)的日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAddressIPv6() 获取负载均衡实例的IPv6地址
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddressIPv6(string $AddressIPv6) 设置负载均衡实例的IPv6地址
@@ -161,57 +133,41 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
  * @method void setExtraInfo(ExtraInfo $ExtraInfo) 设置暂做保留，一般用户无需关注。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsDDos() 获取是否可绑定高防包
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsDDos(boolean $IsDDos) 设置是否可绑定高防包
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConfigId() 获取负载均衡维度的个性化配置ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigId(string $ConfigId) 设置负载均衡维度的个性化配置ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getLoadBalancerPassToTarget() 获取后端服务是否放通来自LB的流量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLoadBalancerPassToTarget(boolean $LoadBalancerPassToTarget) 设置后端服务是否放通来自LB的流量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ExclusiveCluster getExclusiveCluster() 获取内网独占集群
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExclusiveCluster(ExclusiveCluster $ExclusiveCluster) 设置内网独占集群
+ * @method string getIPv6Mode() 获取IP地址版本为ipv6时此字段有意义，IPv6Nat64 | IPv6FullChain。
+IPv6Nat64: 基于 NAT64 IPv6 过渡技术实现的负载均衡器。
+IPv6FullChain：基于 IPv6 单栈技术实现的负载均衡。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIPv6Mode() 获取IP地址版本为ipv6时此字段有意义， IPv6Nat64 | IPv6FullChain
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIPv6Mode(string $IPv6Mode) 设置IP地址版本为ipv6时此字段有意义， IPv6Nat64 | IPv6FullChain
+ * @method void setIPv6Mode(string $IPv6Mode) 设置IP地址版本为ipv6时此字段有意义，IPv6Nat64 | IPv6FullChain。
+IPv6Nat64: 基于 NAT64 IPv6 过渡技术实现的负载均衡器。
+IPv6FullChain：基于 IPv6 单栈技术实现的负载均衡。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getSnatPro() 获取是否开启SnatPro。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSnatPro(boolean $SnatPro) 设置是否开启SnatPro。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSnatIps() 获取开启SnatPro负载均衡后，SnatIp列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSnatIps(array $SnatIps) 设置开启SnatPro负载均衡后，SnatIp列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSlaType() 获取性能容量型规格。<ul><li> clb.c1.small：简约型规格 </li><li> clb.c2.medium：标准型规格 </li><li> clb.c3.small：高阶型1规格 </li><li> clb.c3.medium：高阶型2规格 </li><li> clb.c4.small：超强型1规格 </li><li> clb.c4.medium：超强型2规格 </li><li> clb.c4.large：超强型3规格 </li><li> clb.c4.xlarge：超强型4规格 </li><li>""：非性能容量型实例</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSlaType(string $SlaType) 设置性能容量型规格。<ul><li> clb.c1.small：简约型规格 </li><li> clb.c2.medium：标准型规格 </li><li> clb.c3.small：高阶型1规格 </li><li> clb.c3.medium：高阶型2规格 </li><li> clb.c4.small：超强型1规格 </li><li> clb.c4.medium：超强型2规格 </li><li> clb.c4.large：超强型3规格 </li><li> clb.c4.xlarge：超强型4规格 </li><li>""：非性能容量型实例</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsBlock() 获取vip是否被封堵
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsBlock(boolean $IsBlock) 设置vip是否被封堵
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIsBlockTime() 获取封堵或解封时间
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIsBlockTime(string $IsBlockTime) 设置封堵或解封时间
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIsBlockTime() 获取封堵或解封时间。
+格式：YYYY-MM-DD HH:mm:ss。
+ * @method void setIsBlockTime(string $IsBlockTime) 设置封堵或解封时间。
+格式：YYYY-MM-DD HH:mm:ss。
  * @method boolean getLocalBgp() 获取IP类型是否是本地BGP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocalBgp(boolean $LocalBgp) 设置IP类型是否是本地BGP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterTag() 获取7层独占标签。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterTag(string $ClusterTag) 设置7层独占标签。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getMixIpTarget() 获取开启IPv6FullChain负载均衡7层监听器支持混绑IPv4/IPv6目标功能。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMixIpTarget(boolean $MixIpTarget) 设置开启IPv6FullChain负载均衡7层监听器支持混绑IPv4/IPv6目标功能。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getZones() 获取私有网络内网负载均衡，就近接入模式下规则所落在的可用区
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZones(array $Zones) 设置私有网络内网负载均衡，就近接入模式下规则所落在的可用区
@@ -221,29 +177,63 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
  * @method void setNfvInfo(string $NfvInfo) 设置CLB是否为NFV，空：不是，l7nfv：七层是NFV。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHealthLogSetId() 获取负载均衡日志服务(CLS)的健康检查日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHealthLogSetId(string $HealthLogSetId) 设置负载均衡日志服务(CLS)的健康检查日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHealthLogTopicId() 获取负载均衡日志服务(CLS)的健康检查日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHealthLogTopicId(string $HealthLogTopicId) 设置负载均衡日志服务(CLS)的健康检查日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getClusterIds() 获取集群ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterIds(array $ClusterIds) 设置集群ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getAttributeFlags() 获取负载均衡的属性
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAttributeFlags(array $AttributeFlags) 设置负载均衡的属性
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAttributeFlags() 获取负载均衡的属性，按位来决定是否开启
+2^0: 删除保护，开启后防止负载均衡被误删除。 
+2^1: 用户不可见，控制负载均衡对用户的可见性。 
+2^2: 阻塞状态，可能用于限制负载均衡的某些操作或流量。 
+2^3: 禁用负载均衡的NAT功能，可能用于特定场景下的流量直接转发。 
+2^4: 封禁状态，可能用于暂停负载均衡服务或限制访问。 
+2^5: 升配标志，可能用于标识负载均衡需要升级配置或性能。 
+2^6: 停止状态，开启后负载均衡暂停服务。 
+2^7: 不使用VPC网关，可能用于绕过VPC网关直接处理流量。 
+2^8: 安全组在TGW（Transit Gateway）中，涉及网络安全策略配置。 
+2^9: 共享限制标志，可能用于控制负载均衡的共享资源限制。 
+2^10: Web应用防火墙（WAF）标志，开启后启用WAF保护。 
+2^11: 域名型负载均衡，标识负载均衡是否基于域名进行流量分发。 
+2^12: IPv6源地址转换（SNAT），用于IPv6网络的源地址处理。 
+2^13: 隐藏域名，可能用于隐私保护或特定场景下不暴露域名。 
+2^14: 巨型帧支持，开启后支持更大的数据帧以提高网络效率。 
+2^15: 四层IP直连无NAT，可能用于四层负载均衡直接转发IP流量。 
+2^16: VPC网关三层服务，可能涉及三层网络服务的网关功能。 
+2^17: IPv6扩展标志，可能用于特定的IPv6功能支持。 
+2^18: IPv6独占标志，可能用于专属IPv6流量处理。 
+2^19: BGP专业版支持，可能涉及高级BGP路由功能。 
+2^20: TOA（TCP Option Address）清理，清除TCP选项中的地址信息。 
+
+ * @method void setAttributeFlags(array $AttributeFlags) 设置负载均衡的属性，按位来决定是否开启
+2^0: 删除保护，开启后防止负载均衡被误删除。 
+2^1: 用户不可见，控制负载均衡对用户的可见性。 
+2^2: 阻塞状态，可能用于限制负载均衡的某些操作或流量。 
+2^3: 禁用负载均衡的NAT功能，可能用于特定场景下的流量直接转发。 
+2^4: 封禁状态，可能用于暂停负载均衡服务或限制访问。 
+2^5: 升配标志，可能用于标识负载均衡需要升级配置或性能。 
+2^6: 停止状态，开启后负载均衡暂停服务。 
+2^7: 不使用VPC网关，可能用于绕过VPC网关直接处理流量。 
+2^8: 安全组在TGW（Transit Gateway）中，涉及网络安全策略配置。 
+2^9: 共享限制标志，可能用于控制负载均衡的共享资源限制。 
+2^10: Web应用防火墙（WAF）标志，开启后启用WAF保护。 
+2^11: 域名型负载均衡，标识负载均衡是否基于域名进行流量分发。 
+2^12: IPv6源地址转换（SNAT），用于IPv6网络的源地址处理。 
+2^13: 隐藏域名，可能用于隐私保护或特定场景下不暴露域名。 
+2^14: 巨型帧支持，开启后支持更大的数据帧以提高网络效率。 
+2^15: 四层IP直连无NAT，可能用于四层负载均衡直接转发IP流量。 
+2^16: VPC网关三层服务，可能涉及三层网络服务的网关功能。 
+2^17: IPv6扩展标志，可能用于特定的IPv6功能支持。 
+2^18: IPv6独占标志，可能用于专属IPv6流量处理。 
+2^19: BGP专业版支持，可能涉及高级BGP路由功能。 
+2^20: TOA（TCP Option Address）清理，清除TCP选项中的地址信息。 
+
  * @method string getLoadBalancerDomain() 获取负载均衡实例的域名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLoadBalancerDomain(string $LoadBalancerDomain) 设置负载均衡实例的域名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEgress() 获取网络出口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEgress(string $Egress) 设置网络出口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getExclusive() 获取实例类型是否为独占型。1：独占型实例。0：非独占型实例。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExclusive(integer $Exclusive) 设置实例类型是否为独占型。1：独占型实例。0：非独占型实例。
@@ -265,7 +255,7 @@ class LoadBalancer extends AbstractModel
 
     /**
      * @var string 负载均衡实例的网络类型：
-OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均衡，可通过绑定EIP出公网，具体可参考EIP文档。
+OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均衡，可通过绑定EIP出公网，具体可参考EIP文档[绑定弹性公网IP](https://cloud.tencent.com/document/product/215/16700)。
      */
     public $LoadBalancerType;
 
@@ -276,32 +266,29 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
      * @var string 负载均衡实例的域名，仅公网传统型和域名型负载均衡实例才提供该字段。逐步下线中，建议用LoadBalancerDomain替代。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Domain;
 
     /**
      * @var array 负载均衡实例的 VIP 列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LoadBalancerVips;
 
     /**
      * @var integer 负载均衡实例的状态，包括
 0：创建中，1：正常运行。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 负载均衡实例的创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
+格式：YYYY-MM-DD HH:mm:ss
      */
     public $CreateTime;
 
     /**
      * @var string 负载均衡实例的上次状态转换时间。
-注意：此字段可能返回 null，表示取不到有效值。
+格式：YYYY-MM-DD HH:mm:ss
      */
     public $StatusTime;
 
@@ -312,25 +299,21 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
      * @var string 私有网络的 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
     /**
      * @var integer 高防 LB 的标识，1：高防负载均衡 0：非高防负载均衡。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OpenBgp;
 
     /**
      * @var boolean 在 2016 年 12 月份之前的传统型内网负载均衡都是开启了 snat 的。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Snat;
 
     /**
      * @var integer 0：表示未被隔离，1：表示被隔离。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Isolation;
 
@@ -343,43 +326,36 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
      * @var string 负载均衡实例所在的子网（仅对内网VPC型LB有意义）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetId;
 
     /**
      * @var array 负载均衡实例的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
      * @var array 负载均衡实例的安全组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecureGroups;
 
     /**
      * @var TargetRegionInfo 负载均衡实例绑定的后端设备的基本信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetRegionInfo;
 
     /**
      * @var string anycast负载均衡的发布域，对于非anycast的负载均衡，此字段返回为空字符串
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AnycastZone;
 
     /**
      * @var string IP版本，ipv4 | ipv6
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AddressIPVersion;
 
     /**
-     * @var integer 数值形式的私有网络 ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 数值形式的私有网络 ID。
      */
     public $NumericalVpcId;
 
@@ -407,13 +383,15 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
     public $BackupZoneSet;
 
     /**
-     * @var string 负载均衡实例被隔离的时间
+     * @var string 负载均衡实例被隔离的时间。
+格式：YYYY-MM-DD HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsolatedTime;
 
     /**
-     * @var string 负载均衡实例的过期时间，仅对预付费负载均衡生效
+     * @var string 负载均衡实例的过期时间，仅对预付费负载均衡生效。
+格式：YYYY-MM-DD HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpireTime;
@@ -431,20 +409,18 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
     public $NetworkAttributes;
 
     /**
-     * @var LBChargePrepaid 负载均衡实例的预付费相关属性
+     * @var LBChargePrepaid 负载均衡实例的预付费相关属性，仅在 ChargeType=PREPAID 时显示。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PrepaidAttributes;
 
     /**
      * @var string 负载均衡日志服务(CLS)的日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogSetId;
 
     /**
      * @var string 负载均衡日志服务(CLS)的日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogTopicId;
 
@@ -462,67 +438,60 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
      * @var boolean 是否可绑定高防包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsDDos;
 
     /**
      * @var string 负载均衡维度的个性化配置ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigId;
 
     /**
      * @var boolean 后端服务是否放通来自LB的流量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LoadBalancerPassToTarget;
 
     /**
      * @var ExclusiveCluster 内网独占集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExclusiveCluster;
 
     /**
-     * @var string IP地址版本为ipv6时此字段有意义， IPv6Nat64 | IPv6FullChain
+     * @var string IP地址版本为ipv6时此字段有意义，IPv6Nat64 | IPv6FullChain。
+IPv6Nat64: 基于 NAT64 IPv6 过渡技术实现的负载均衡器。
+IPv6FullChain：基于 IPv6 单栈技术实现的负载均衡。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IPv6Mode;
 
     /**
      * @var boolean 是否开启SnatPro。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SnatPro;
 
     /**
      * @var array 开启SnatPro负载均衡后，SnatIp列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SnatIps;
 
     /**
      * @var string 性能容量型规格。<ul><li> clb.c1.small：简约型规格 </li><li> clb.c2.medium：标准型规格 </li><li> clb.c3.small：高阶型1规格 </li><li> clb.c3.medium：高阶型2规格 </li><li> clb.c4.small：超强型1规格 </li><li> clb.c4.medium：超强型2规格 </li><li> clb.c4.large：超强型3规格 </li><li> clb.c4.xlarge：超强型4规格 </li><li>""：非性能容量型实例</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SlaType;
 
     /**
      * @var boolean vip是否被封堵
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsBlock;
 
     /**
-     * @var string 封堵或解封时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 封堵或解封时间。
+格式：YYYY-MM-DD HH:mm:ss。
      */
     public $IsBlockTime;
 
     /**
      * @var boolean IP类型是否是本地BGP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LocalBgp;
 
@@ -534,7 +503,6 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
      * @var boolean 开启IPv6FullChain负载均衡7层监听器支持混绑IPv4/IPv6目标功能。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MixIpTarget;
 
@@ -552,13 +520,11 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 
     /**
      * @var string 负载均衡日志服务(CLS)的健康检查日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HealthLogSetId;
 
     /**
      * @var string 负载均衡日志服务(CLS)的健康检查日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HealthLogTopicId;
 
@@ -569,20 +535,39 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
     public $ClusterIds;
 
     /**
-     * @var array 负载均衡的属性
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 负载均衡的属性，按位来决定是否开启
+2^0: 删除保护，开启后防止负载均衡被误删除。 
+2^1: 用户不可见，控制负载均衡对用户的可见性。 
+2^2: 阻塞状态，可能用于限制负载均衡的某些操作或流量。 
+2^3: 禁用负载均衡的NAT功能，可能用于特定场景下的流量直接转发。 
+2^4: 封禁状态，可能用于暂停负载均衡服务或限制访问。 
+2^5: 升配标志，可能用于标识负载均衡需要升级配置或性能。 
+2^6: 停止状态，开启后负载均衡暂停服务。 
+2^7: 不使用VPC网关，可能用于绕过VPC网关直接处理流量。 
+2^8: 安全组在TGW（Transit Gateway）中，涉及网络安全策略配置。 
+2^9: 共享限制标志，可能用于控制负载均衡的共享资源限制。 
+2^10: Web应用防火墙（WAF）标志，开启后启用WAF保护。 
+2^11: 域名型负载均衡，标识负载均衡是否基于域名进行流量分发。 
+2^12: IPv6源地址转换（SNAT），用于IPv6网络的源地址处理。 
+2^13: 隐藏域名，可能用于隐私保护或特定场景下不暴露域名。 
+2^14: 巨型帧支持，开启后支持更大的数据帧以提高网络效率。 
+2^15: 四层IP直连无NAT，可能用于四层负载均衡直接转发IP流量。 
+2^16: VPC网关三层服务，可能涉及三层网络服务的网关功能。 
+2^17: IPv6扩展标志，可能用于特定的IPv6功能支持。 
+2^18: IPv6独占标志，可能用于专属IPv6流量处理。 
+2^19: BGP专业版支持，可能涉及高级BGP路由功能。 
+2^20: TOA（TCP Option Address）清理，清除TCP选项中的地址信息。 
+
      */
     public $AttributeFlags;
 
     /**
      * @var string 负载均衡实例的域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LoadBalancerDomain;
 
     /**
      * @var string 网络出口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Egress;
 
@@ -601,44 +586,30 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
      * @param string $LoadBalancerId 负载均衡实例 ID。
      * @param string $LoadBalancerName 负载均衡实例的名称。
      * @param string $LoadBalancerType 负载均衡实例的网络类型：
-OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均衡，可通过绑定EIP出公网，具体可参考EIP文档。
+OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均衡，可通过绑定EIP出公网，具体可参考EIP文档[绑定弹性公网IP](https://cloud.tencent.com/document/product/215/16700)。
      * @param integer $Forward 负载均衡类型标识，1：负载均衡，0：传统型负载均衡。
      * @param string $Domain 负载均衡实例的域名，仅公网传统型和域名型负载均衡实例才提供该字段。逐步下线中，建议用LoadBalancerDomain替代。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $LoadBalancerVips 负载均衡实例的 VIP 列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 负载均衡实例的状态，包括
 0：创建中，1：正常运行。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 负载均衡实例的创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
+格式：YYYY-MM-DD HH:mm:ss
      * @param string $StatusTime 负载均衡实例的上次状态转换时间。
-注意：此字段可能返回 null，表示取不到有效值。
+格式：YYYY-MM-DD HH:mm:ss
      * @param integer $ProjectId 负载均衡实例所属的项目 ID， 0 表示默认项目。
      * @param string $VpcId 私有网络的 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $OpenBgp 高防 LB 的标识，1：高防负载均衡 0：非高防负载均衡。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Snat 在 2016 年 12 月份之前的传统型内网负载均衡都是开启了 snat 的。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Isolation 0：表示未被隔离，1：表示被隔离。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Log 用户开启日志的信息，日志只有公网属性创建了 HTTP 、HTTPS 监听器的负载均衡才会有日志。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 负载均衡实例所在的子网（仅对内网VPC型LB有意义）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 负载均衡实例的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SecureGroups 负载均衡实例的安全组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TargetRegionInfo $TargetRegionInfo 负载均衡实例绑定的后端设备的基本信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AnycastZone anycast负载均衡的发布域，对于非anycast的负载均衡，此字段返回为空字符串
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AddressIPVersion IP版本，ipv4 | ipv6
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $NumericalVpcId 数值形式的私有网络 ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $NumericalVpcId 数值形式的私有网络 ID。
      * @param string $VipIsp 负载均衡IP地址所属的运营商。
 
 - BGP :  BGP（多线）
@@ -650,66 +621,75 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $BackupZoneSet 备可用区
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IsolatedTime 负载均衡实例被隔离的时间
+     * @param string $IsolatedTime 负载均衡实例被隔离的时间。
+格式：YYYY-MM-DD HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ExpireTime 负载均衡实例的过期时间，仅对预付费负载均衡生效
+     * @param string $ExpireTime 负载均衡实例的过期时间，仅对预付费负载均衡生效。
+格式：YYYY-MM-DD HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChargeType 负载均衡实例的计费类型，PREPAID：包年包月，POSTPAID_BY_HOUR：按量计费
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InternetAccessible $NetworkAttributes 负载均衡实例的网络属性
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param LBChargePrepaid $PrepaidAttributes 负载均衡实例的预付费相关属性
+     * @param LBChargePrepaid $PrepaidAttributes 负载均衡实例的预付费相关属性，仅在 ChargeType=PREPAID 时显示。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LogSetId 负载均衡日志服务(CLS)的日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LogTopicId 负载均衡日志服务(CLS)的日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AddressIPv6 负载均衡实例的IPv6地址
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ExtraInfo $ExtraInfo 暂做保留，一般用户无需关注。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsDDos 是否可绑定高防包
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConfigId 负载均衡维度的个性化配置ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $LoadBalancerPassToTarget 后端服务是否放通来自LB的流量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExclusiveCluster $ExclusiveCluster 内网独占集群
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IPv6Mode IP地址版本为ipv6时此字段有意义， IPv6Nat64 | IPv6FullChain
+     * @param string $IPv6Mode IP地址版本为ipv6时此字段有意义，IPv6Nat64 | IPv6FullChain。
+IPv6Nat64: 基于 NAT64 IPv6 过渡技术实现的负载均衡器。
+IPv6FullChain：基于 IPv6 单栈技术实现的负载均衡。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $SnatPro 是否开启SnatPro。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SnatIps 开启SnatPro负载均衡后，SnatIp列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SlaType 性能容量型规格。<ul><li> clb.c1.small：简约型规格 </li><li> clb.c2.medium：标准型规格 </li><li> clb.c3.small：高阶型1规格 </li><li> clb.c3.medium：高阶型2规格 </li><li> clb.c4.small：超强型1规格 </li><li> clb.c4.medium：超强型2规格 </li><li> clb.c4.large：超强型3规格 </li><li> clb.c4.xlarge：超强型4规格 </li><li>""：非性能容量型实例</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsBlock vip是否被封堵
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IsBlockTime 封堵或解封时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IsBlockTime 封堵或解封时间。
+格式：YYYY-MM-DD HH:mm:ss。
      * @param boolean $LocalBgp IP类型是否是本地BGP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterTag 7层独占标签。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $MixIpTarget 开启IPv6FullChain负载均衡7层监听器支持混绑IPv4/IPv6目标功能。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Zones 私有网络内网负载均衡，就近接入模式下规则所落在的可用区
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NfvInfo CLB是否为NFV，空：不是，l7nfv：七层是NFV。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HealthLogSetId 负载均衡日志服务(CLS)的健康检查日志集ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HealthLogTopicId 负载均衡日志服务(CLS)的健康检查日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ClusterIds 集群ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $AttributeFlags 负载均衡的属性
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AttributeFlags 负载均衡的属性，按位来决定是否开启
+2^0: 删除保护，开启后防止负载均衡被误删除。 
+2^1: 用户不可见，控制负载均衡对用户的可见性。 
+2^2: 阻塞状态，可能用于限制负载均衡的某些操作或流量。 
+2^3: 禁用负载均衡的NAT功能，可能用于特定场景下的流量直接转发。 
+2^4: 封禁状态，可能用于暂停负载均衡服务或限制访问。 
+2^5: 升配标志，可能用于标识负载均衡需要升级配置或性能。 
+2^6: 停止状态，开启后负载均衡暂停服务。 
+2^7: 不使用VPC网关，可能用于绕过VPC网关直接处理流量。 
+2^8: 安全组在TGW（Transit Gateway）中，涉及网络安全策略配置。 
+2^9: 共享限制标志，可能用于控制负载均衡的共享资源限制。 
+2^10: Web应用防火墙（WAF）标志，开启后启用WAF保护。 
+2^11: 域名型负载均衡，标识负载均衡是否基于域名进行流量分发。 
+2^12: IPv6源地址转换（SNAT），用于IPv6网络的源地址处理。 
+2^13: 隐藏域名，可能用于隐私保护或特定场景下不暴露域名。 
+2^14: 巨型帧支持，开启后支持更大的数据帧以提高网络效率。 
+2^15: 四层IP直连无NAT，可能用于四层负载均衡直接转发IP流量。 
+2^16: VPC网关三层服务，可能涉及三层网络服务的网关功能。 
+2^17: IPv6扩展标志，可能用于特定的IPv6功能支持。 
+2^18: IPv6独占标志，可能用于专属IPv6流量处理。 
+2^19: BGP专业版支持，可能涉及高级BGP路由功能。 
+2^20: TOA（TCP Option Address）清理，清除TCP选项中的地址信息。 
+
      * @param string $LoadBalancerDomain 负载均衡实例的域名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Egress 网络出口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Exclusive 实例类型是否为独占型。1：独占型实例。0：非独占型实例。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TargetCount 已绑定的后端服务数量。

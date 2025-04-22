@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
 <li>on：开启；</li>
 <li>off：关闭。</li>
  * @method integer getPercent() 获取缓存预刷新百分比，取值范围：1-99。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPercent(integer $Percent) 设置缓存预刷新百分比，取值范围：1-99。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CachePrefresh extends AbstractModel
 {
@@ -42,7 +40,6 @@ class CachePrefresh extends AbstractModel
 
     /**
      * @var integer 缓存预刷新百分比，取值范围：1-99。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Percent;
 
@@ -51,7 +48,6 @@ class CachePrefresh extends AbstractModel
 <li>on：开启；</li>
 <li>off：关闭。</li>
      * @param integer $Percent 缓存预刷新百分比，取值范围：1-99。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

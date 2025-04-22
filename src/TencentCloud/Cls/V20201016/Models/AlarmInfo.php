@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupTriggerStatus(boolean $GroupTriggerStatus) 设置分组触发状态。true：开启，false：关闭（默认）
  * @method array getGroupTriggerCondition() 获取分组触发条件。
  * @method void setGroupTriggerCondition(array $GroupTriggerCondition) 设置分组触发条件。
+ * @method array getTags() 获取告警策略绑定的标签信息。
+ * @method void setTags(array $Tags) 设置告警策略绑定的标签信息。
  * @method integer getMonitorObjectType() 获取监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。 
  * @method void setMonitorObjectType(integer $MonitorObjectType) 设置监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。 
  * @method integer getAlarmLevel() 获取告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。
@@ -149,6 +151,11 @@ class AlarmInfo extends AbstractModel
     public $GroupTriggerCondition;
 
     /**
+     * @var array 告警策略绑定的标签信息。
+     */
+    public $Tags;
+
+    /**
      * @var integer 监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。 
      */
     public $MonitorObjectType;
@@ -187,6 +194,7 @@ Condition互斥。
      * @param array $Analysis 多维分析设置
      * @param boolean $GroupTriggerStatus 分组触发状态。true：开启，false：关闭（默认）
      * @param array $GroupTriggerCondition 分组触发条件。
+     * @param array $Tags 告警策略绑定的标签信息。
      * @param integer $MonitorObjectType 监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。 
      * @param integer $AlarmLevel 告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。
      * @param array $Classifications 告警附加分类字段。
@@ -280,6 +288,15 @@ Condition互斥。
 
         if (array_key_exists("GroupTriggerCondition",$param) and $param["GroupTriggerCondition"] !== null) {
             $this->GroupTriggerCondition = $param["GroupTriggerCondition"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
 
         if (array_key_exists("MonitorObjectType",$param) and $param["MonitorObjectType"] !== null) {

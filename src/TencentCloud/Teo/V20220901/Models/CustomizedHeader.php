@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 负载均衡实例 HTTP/HTTPS 健康检查策略下可配置的自定义头部。
  *
  * @method string getKey() 获取自定义头部 Key。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKey(string $Key) 设置自定义头部 Key。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取自定义头部 Value。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置自定义头部 Value。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CustomizedHeader extends AbstractModel
 {
     /**
      * @var string 自定义头部 Key。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Key;
 
     /**
      * @var string 自定义头部 Value。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @param string $Key 自定义头部 Key。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 自定义头部 Value。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -45,23 +45,15 @@ use TencentCloud\Common\AbstractModel;
 
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTargetGroupType() 获取目标组类型，当前支持v1(旧版目标组), v2(新版目标组), gwlb(全局负载均衡目标组)。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargetGroupType(string $TargetGroupType) 设置目标组类型，当前支持v1(旧版目标组), v2(新版目标组), gwlb(全局负载均衡目标组)。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAssociatedRuleCount() 获取目标组已关联的规则数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssociatedRuleCount(integer $AssociatedRuleCount) 设置目标组已关联的规则数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRegisteredInstancesCount() 获取目标组内的实例数量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegisteredInstancesCount(integer $RegisteredInstancesCount) 设置目标组内的实例数量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTag() 获取标签。
  * @method void setTag(array $Tag) 设置标签。
  * @method integer getWeight() 获取默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWeight(integer $Weight) 设置默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getFullListenSwitch() 获取是否全监听目标组
  * @method void setFullListenSwitch(boolean $FullListenSwitch) 设置是否全监听目标组
  */
@@ -113,19 +105,16 @@ class TargetGroupInfo extends AbstractModel
 
     /**
      * @var string 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), gwlb(全局负载均衡目标组)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetGroupType;
 
     /**
      * @var integer 目标组已关联的规则数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AssociatedRuleCount;
 
     /**
      * @var integer 目标组内的实例数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegisteredInstancesCount;
 
@@ -136,7 +125,6 @@ class TargetGroupInfo extends AbstractModel
 
     /**
      * @var integer 默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Weight;
 
@@ -159,14 +147,10 @@ class TargetGroupInfo extends AbstractModel
 
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TargetGroupType 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), gwlb(全局负载均衡目标组)。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AssociatedRuleCount 目标组已关联的规则数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RegisteredInstancesCount 目标组内的实例数量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tag 标签。
      * @param integer $Weight 默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $FullListenSwitch 是否全监听目标组
      */
     function __construct()

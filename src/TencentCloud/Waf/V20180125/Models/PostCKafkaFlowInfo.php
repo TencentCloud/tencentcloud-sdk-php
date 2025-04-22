@@ -38,8 +38,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopic(string $Topic) 设置主题名称
  * @method string getCompression() 获取压缩算法，支持gzip 和 lz4
  * @method void setCompression(string $Compression) 设置压缩算法，支持gzip 和 lz4
+ * @method integer getSASLEnable() 获取是否支持SASL,0-关闭，1-开启
+ * @method void setSASLEnable(integer $SASLEnable) 设置是否支持SASL,0-关闭，1-开启
+ * @method string getSASLUser() 获取SASL用户名
+ * @method void setSASLUser(string $SASLUser) 设置SASL用户名
+ * @method string getSASLPassword() 获取SALS密码
+ * @method void setSASLPassword(string $SASLPassword) 设置SALS密码
  * @method string getContent() 获取描述信息
  * @method void setContent(string $Content) 设置描述信息
+ * @method integer getVipType() 获取1-外网TGW，2-支撑环境，默认为支撑环境
+ * @method void setVipType(integer $VipType) 设置1-外网TGW，2-支撑环境，默认为支撑环境
+ * @method FieldWriteConfig getWriteConfig() 获取配置状态
+ * @method void setWriteConfig(FieldWriteConfig $WriteConfig) 设置配置状态
  */
 class PostCKafkaFlowInfo extends AbstractModel
 {
@@ -89,9 +99,34 @@ class PostCKafkaFlowInfo extends AbstractModel
     public $Compression;
 
     /**
+     * @var integer 是否支持SASL,0-关闭，1-开启
+     */
+    public $SASLEnable;
+
+    /**
+     * @var string SASL用户名
+     */
+    public $SASLUser;
+
+    /**
+     * @var string SALS密码
+     */
+    public $SASLPassword;
+
+    /**
      * @var string 描述信息
      */
     public $Content;
+
+    /**
+     * @var integer 1-外网TGW，2-支撑环境，默认为支撑环境
+     */
+    public $VipType;
+
+    /**
+     * @var FieldWriteConfig 配置状态
+     */
+    public $WriteConfig;
 
     /**
      * @param integer $FlowId 投递流唯一ID
@@ -103,7 +138,12 @@ class PostCKafkaFlowInfo extends AbstractModel
      * @param string $Version ckafka版本号
      * @param string $Topic 主题名称
      * @param string $Compression 压缩算法，支持gzip 和 lz4
+     * @param integer $SASLEnable 是否支持SASL,0-关闭，1-开启
+     * @param string $SASLUser SASL用户名
+     * @param string $SASLPassword SALS密码
      * @param string $Content 描述信息
+     * @param integer $VipType 1-外网TGW，2-支撑环境，默认为支撑环境
+     * @param FieldWriteConfig $WriteConfig 配置状态
      */
     function __construct()
     {
@@ -154,8 +194,29 @@ class PostCKafkaFlowInfo extends AbstractModel
             $this->Compression = $param["Compression"];
         }
 
+        if (array_key_exists("SASLEnable",$param) and $param["SASLEnable"] !== null) {
+            $this->SASLEnable = $param["SASLEnable"];
+        }
+
+        if (array_key_exists("SASLUser",$param) and $param["SASLUser"] !== null) {
+            $this->SASLUser = $param["SASLUser"];
+        }
+
+        if (array_key_exists("SASLPassword",$param) and $param["SASLPassword"] !== null) {
+            $this->SASLPassword = $param["SASLPassword"];
+        }
+
         if (array_key_exists("Content",$param) and $param["Content"] !== null) {
             $this->Content = $param["Content"];
+        }
+
+        if (array_key_exists("VipType",$param) and $param["VipType"] !== null) {
+            $this->VipType = $param["VipType"];
+        }
+
+        if (array_key_exists("WriteConfig",$param) and $param["WriteConfig"] !== null) {
+            $this->WriteConfig = new FieldWriteConfig();
+            $this->WriteConfig->deserialize($param["WriteConfig"]);
         }
     }
 }

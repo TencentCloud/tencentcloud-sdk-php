@@ -29,11 +29,9 @@ use TencentCloud\Common\AbstractModel;
  * @method array getAlgorithms() 获取支持的压缩算法列表，取值有：
 <li>brotli：brotli算法；</li>
 <li>gzip：gzip算法。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlgorithms(array $Algorithms) 设置支持的压缩算法列表，取值有：
 <li>brotli：brotli算法；</li>
 <li>gzip：gzip算法。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Compression extends AbstractModel
 {
@@ -48,7 +46,6 @@ class Compression extends AbstractModel
      * @var array 支持的压缩算法列表，取值有：
 <li>brotli：brotli算法；</li>
 <li>gzip：gzip算法。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Algorithms;
 
@@ -59,7 +56,6 @@ class Compression extends AbstractModel
      * @param array $Algorithms 支持的压缩算法列表，取值有：
 <li>brotli：brotli算法；</li>
 <li>gzip：gzip算法。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

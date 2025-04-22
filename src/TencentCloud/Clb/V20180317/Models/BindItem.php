@@ -23,17 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getLoadBalancerId() 获取配置绑定的CLB ID
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置配置绑定的CLB ID
  * @method string getListenerId() 获取配置绑定的监听器ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setListenerId(string $ListenerId) 设置配置绑定的监听器ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDomain() 获取配置绑定的域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomain(string $Domain) 设置配置绑定的域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLocationId() 获取配置绑定的规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocationId(string $LocationId) 设置配置绑定的规则
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BindItem extends AbstractModel
 {
@@ -44,30 +38,24 @@ class BindItem extends AbstractModel
 
     /**
      * @var string 配置绑定的监听器ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ListenerId;
 
     /**
      * @var string 配置绑定的域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Domain;
 
     /**
      * @var string 配置绑定的规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LocationId;
 
     /**
      * @param string $LoadBalancerId 配置绑定的CLB ID
      * @param string $ListenerId 配置绑定的监听器ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Domain 配置绑定的域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LocationId 配置绑定的规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

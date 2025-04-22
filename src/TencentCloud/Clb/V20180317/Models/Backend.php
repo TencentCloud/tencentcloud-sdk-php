@@ -33,25 +33,19 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublicIpAddresses(array $PublicIpAddresses) 设置后端服务的外网 IP
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPrivateIpAddresses() 获取后端服务的内网 IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrivateIpAddresses(array $PrivateIpAddresses) 设置后端服务的内网 IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceName() 获取后端服务的实例名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceName(string $InstanceName) 设置后端服务的实例名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegisteredTime() 获取后端服务被绑定的时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegisteredTime(string $RegisteredTime) 设置后端服务被绑定的时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEniId() 获取弹性网卡唯一ID，如 eni-1234abcd
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEniId(string $EniId) 设置弹性网卡唯一ID，如 eni-1234abcd
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTag() 获取标签。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTag(string $Tag) 设置标签。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Backend extends AbstractModel
 {
@@ -83,7 +77,6 @@ class Backend extends AbstractModel
 
     /**
      * @var array 后端服务的内网 IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PrivateIpAddresses;
 
@@ -95,7 +88,6 @@ class Backend extends AbstractModel
 
     /**
      * @var string 后端服务被绑定的时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegisteredTime;
 
@@ -107,7 +99,6 @@ class Backend extends AbstractModel
 
     /**
      * @var string 标签。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tag;
 
@@ -119,15 +110,12 @@ class Backend extends AbstractModel
      * @param array $PublicIpAddresses 后端服务的外网 IP
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PrivateIpAddresses 后端服务的内网 IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 后端服务的实例名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegisteredTime 后端服务被绑定的时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EniId 弹性网卡唯一ID，如 eni-1234abcd
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Tag 标签。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

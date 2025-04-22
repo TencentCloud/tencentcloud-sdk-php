@@ -164,6 +164,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getEnableLogCollection() 获取是否开启cls日志功能
  * @method void setEnableLogCollection(boolean $EnableLogCollection) 设置是否开启cls日志功能
+ * @method string getReason() 获取集群状态的原因
+ * @method void setReason(string $Reason) 设置集群状态的原因
  */
 class ClusterV2 extends AbstractModel
 {
@@ -388,6 +390,11 @@ class ClusterV2 extends AbstractModel
     public $EnableLogCollection;
 
     /**
+     * @var string 集群状态的原因
+     */
+    public $Reason;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $ClusterName 集群名称
 注意：此字段可能返回 null，表示取不到有效值。
@@ -460,6 +467,7 @@ class ClusterV2 extends AbstractModel
      * @param string $KuberneteNativeSecret native secret
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $EnableLogCollection 是否开启cls日志功能
+     * @param string $Reason 集群状态的原因
      */
     function __construct()
     {
@@ -621,6 +629,10 @@ class ClusterV2 extends AbstractModel
 
         if (array_key_exists("EnableLogCollection",$param) and $param["EnableLogCollection"] !== null) {
             $this->EnableLogCollection = $param["EnableLogCollection"];
+        }
+
+        if (array_key_exists("Reason",$param) and $param["Reason"] !== null) {
+            $this->Reason = $param["Reason"];
         }
     }
 }

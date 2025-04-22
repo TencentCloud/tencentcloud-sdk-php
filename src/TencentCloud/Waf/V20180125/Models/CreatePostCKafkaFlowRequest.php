@@ -36,6 +36,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopic(string $Topic) 设置主题名称，默认不传或者传空字符串，默认值为waf_post_access_log
  * @method string getKafkaVersion() 获取kafka集群的版本号
  * @method void setKafkaVersion(string $KafkaVersion) 设置kafka集群的版本号
+ * @method integer getSASLEnable() 获取是否开启SASL校验，默认不开启，0-关闭，1-开启
+ * @method void setSASLEnable(integer $SASLEnable) 设置是否开启SASL校验，默认不开启，0-关闭，1-开启
+ * @method string getSASLUser() 获取SASL用户名
+ * @method void setSASLUser(string $SASLUser) 设置SASL用户名
+ * @method string getSASLPassword() 获取SASL密码
+ * @method void setSASLPassword(string $SASLPassword) 设置SASL密码
+ * @method FieldWriteConfig getWriteConfig() 获取开启访问日志某些字段是否投递
+ * @method void setWriteConfig(FieldWriteConfig $WriteConfig) 设置开启访问日志某些字段是否投递
  */
 class CreatePostCKafkaFlowRequest extends AbstractModel
 {
@@ -80,6 +88,26 @@ class CreatePostCKafkaFlowRequest extends AbstractModel
     public $KafkaVersion;
 
     /**
+     * @var integer 是否开启SASL校验，默认不开启，0-关闭，1-开启
+     */
+    public $SASLEnable;
+
+    /**
+     * @var string SASL用户名
+     */
+    public $SASLUser;
+
+    /**
+     * @var string SASL密码
+     */
+    public $SASLPassword;
+
+    /**
+     * @var FieldWriteConfig 开启访问日志某些字段是否投递
+     */
+    public $WriteConfig;
+
+    /**
      * @param string $CKafkaRegion 投递的CKafka所在区域
      * @param string $CKafkaID 客户的CKafka 实例ID
      * @param string $Brokers 支撑环境是IP:PORT，外网环境是domain:PORT
@@ -88,6 +116,10 @@ class CreatePostCKafkaFlowRequest extends AbstractModel
      * @param integer $LogType 1-访问日志，2-攻击日志，默认为访问日志
      * @param string $Topic 主题名称，默认不传或者传空字符串，默认值为waf_post_access_log
      * @param string $KafkaVersion kafka集群的版本号
+     * @param integer $SASLEnable 是否开启SASL校验，默认不开启，0-关闭，1-开启
+     * @param string $SASLUser SASL用户名
+     * @param string $SASLPassword SASL密码
+     * @param FieldWriteConfig $WriteConfig 开启访问日志某些字段是否投递
      */
     function __construct()
     {
@@ -132,6 +164,23 @@ class CreatePostCKafkaFlowRequest extends AbstractModel
 
         if (array_key_exists("KafkaVersion",$param) and $param["KafkaVersion"] !== null) {
             $this->KafkaVersion = $param["KafkaVersion"];
+        }
+
+        if (array_key_exists("SASLEnable",$param) and $param["SASLEnable"] !== null) {
+            $this->SASLEnable = $param["SASLEnable"];
+        }
+
+        if (array_key_exists("SASLUser",$param) and $param["SASLUser"] !== null) {
+            $this->SASLUser = $param["SASLUser"];
+        }
+
+        if (array_key_exists("SASLPassword",$param) and $param["SASLPassword"] !== null) {
+            $this->SASLPassword = $param["SASLPassword"];
+        }
+
+        if (array_key_exists("WriteConfig",$param) and $param["WriteConfig"] !== null) {
+            $this->WriteConfig = new FieldWriteConfig();
+            $this->WriteConfig->deserialize($param["WriteConfig"]);
         }
     }
 }

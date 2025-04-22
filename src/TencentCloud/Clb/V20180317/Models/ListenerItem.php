@@ -35,9 +35,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargets(array $Targets) 设置四层绑定对象
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEndPort() 获取端口段监听器的结束端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndPort(integer $EndPort) 设置端口段监听器的结束端口
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ListenerItem extends AbstractModel
 {
@@ -70,7 +68,6 @@ class ListenerItem extends AbstractModel
 
     /**
      * @var integer 端口段监听器的结束端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndPort;
 
@@ -83,7 +80,6 @@ class ListenerItem extends AbstractModel
      * @param array $Targets 四层绑定对象
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EndPort 端口段监听器的结束端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

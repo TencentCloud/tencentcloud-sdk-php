@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAutoSnapshotPolicyAttribute请求参数结构体
  *
- * @method string getAutoSnapshotPolicyId() 获取定期快照策略ID。
- * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) 设置定期快照策略ID。
+ * @method string getAutoSnapshotPolicyId() 获取定期快照策略ID。可以通过[查询定期快照策略](https://cloud.tencent.com/document/product/362/33556)API查询。
+ * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) 设置定期快照策略ID。可以通过[查询定期快照策略](https://cloud.tencent.com/document/product/362/33556)API查询。
  * @method boolean getIsActivated() 获取是否激活定期快照策略，FALSE表示未激活，TRUE表示激活，默认为TRUE。
  * @method void setIsActivated(boolean $IsActivated) 设置是否激活定期快照策略，FALSE表示未激活，TRUE表示激活，默认为TRUE。
  * @method boolean getIsPermanent() 获取通过该定期快照策略创建的快照是否永久保留。FALSE表示非永久保留，TRUE表示永久保留，默认为FALSE。
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyAutoSnapshotPolicyAttributeRequest extends AbstractModel
 {
     /**
-     * @var string 定期快照策略ID。
+     * @var string 定期快照策略ID。可以通过[查询定期快照策略](https://cloud.tencent.com/document/product/362/33556)API查询。
      */
     public $AutoSnapshotPolicyId;
 
@@ -66,7 +66,7 @@ class ModifyAutoSnapshotPolicyAttributeRequest extends AbstractModel
     public $RetentionDays;
 
     /**
-     * @param string $AutoSnapshotPolicyId 定期快照策略ID。
+     * @param string $AutoSnapshotPolicyId 定期快照策略ID。可以通过[查询定期快照策略](https://cloud.tencent.com/document/product/362/33556)API查询。
      * @param boolean $IsActivated 是否激活定期快照策略，FALSE表示未激活，TRUE表示激活，默认为TRUE。
      * @param boolean $IsPermanent 通过该定期快照策略创建的快照是否永久保留。FALSE表示非永久保留，TRUE表示永久保留，默认为FALSE。
      * @param string $AutoSnapshotPolicyName 要创建的定期快照策略名。不传则默认为“未命名”。最大长度不能超60个字节。

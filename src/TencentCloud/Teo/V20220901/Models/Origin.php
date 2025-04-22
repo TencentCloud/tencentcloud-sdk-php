@@ -21,43 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 源站配置。
  *
  * @method array getOrigins() 获取主源站列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrigins(array $Origins) 设置主源站列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getBackupOrigins() 获取备源站列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackupOrigins(array $BackupOrigins) 设置备源站列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOriginPullProtocol() 获取回源协议配置，取值有：
 <li>http：强制 http 回源；</li>
 <li>follow：协议跟随回源；</li>
 <li>https：强制 https 回源。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOriginPullProtocol(string $OriginPullProtocol) 设置回源协议配置，取值有：
 <li>http：强制 http 回源；</li>
 <li>follow：协议跟随回源；</li>
 <li>https：强制 https 回源。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCosPrivateAccess() 获取源站为腾讯云 COS 时，是否为私有访问 bucket，取值有：
 <li>on：私有访问；</li>
 <li>off：公共访问。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCosPrivateAccess(string $CosPrivateAccess) 设置源站为腾讯云 COS 时，是否为私有访问 bucket，取值有：
 <li>on：私有访问；</li>
 <li>off：公共访问。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Origin extends AbstractModel
 {
     /**
      * @var array 主源站列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Origins;
 
     /**
      * @var array 备源站列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BackupOrigins;
 
@@ -66,7 +56,6 @@ class Origin extends AbstractModel
 <li>http：强制 http 回源；</li>
 <li>follow：协议跟随回源；</li>
 <li>https：强制 https 回源。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OriginPullProtocol;
 
@@ -74,24 +63,19 @@ class Origin extends AbstractModel
      * @var string 源站为腾讯云 COS 时，是否为私有访问 bucket，取值有：
 <li>on：私有访问；</li>
 <li>off：公共访问。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CosPrivateAccess;
 
     /**
      * @param array $Origins 主源站列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $BackupOrigins 备源站列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OriginPullProtocol 回源协议配置，取值有：
 <li>http：强制 http 回源；</li>
 <li>follow：协议跟随回源；</li>
 <li>https：强制 https 回源。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CosPrivateAccess 源站为腾讯云 COS 时，是否为私有访问 bucket，取值有：
 <li>on：私有访问；</li>
 <li>off：公共访问。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

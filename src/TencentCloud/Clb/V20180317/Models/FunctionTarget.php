@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * SCF云函数（Serverless Cloud Function）作为后端服务
  *
  * @method FunctionInfo getFunction() 获取云函数相关信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFunction(FunctionInfo $Function) 设置云函数相关信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWeight() 获取权重
  * @method void setWeight(integer $Weight) 设置权重
  */
@@ -31,7 +29,6 @@ class FunctionTarget extends AbstractModel
 {
     /**
      * @var FunctionInfo 云函数相关信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Function;
 
@@ -42,7 +39,6 @@ class FunctionTarget extends AbstractModel
 
     /**
      * @param FunctionInfo $Function 云函数相关信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Weight 权重
      */
     function __construct()

@@ -33,9 +33,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getHealthStatusDetial() 获取(**该参数对象即将下线，不推荐使用，请使用HealthStatusDetail获取健康详情**) 当前健康状态的详细信息。如：Alive、Dead、Unknown。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知。
  * @method void setHealthStatusDetial(string $HealthStatusDetial) 设置(**该参数对象即将下线，不推荐使用，请使用HealthStatusDetail获取健康详情**) 当前健康状态的详细信息。如：Alive、Dead、Unknown。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知。
  * @method string getTargetGroupId() 获取目标组唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargetGroupId(string $TargetGroupId) 设置目标组唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getWeight() 获取Target的权重。
+ * @method void setWeight(integer $Weight) 设置Target的权重。
  */
 class TargetHealth extends AbstractModel
 {
@@ -72,9 +72,13 @@ class TargetHealth extends AbstractModel
 
     /**
      * @var string 目标组唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetGroupId;
+
+    /**
+     * @var integer Target的权重。
+     */
+    public $Weight;
 
     /**
      * @param string $IP Target的内网IP
@@ -84,7 +88,7 @@ class TargetHealth extends AbstractModel
      * @param string $HealthStatusDetail 当前健康状态的详细信息。如：Alive、Dead、Unknown、Close。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知，Close表示健康检查关闭或监听器状态停止。
      * @param string $HealthStatusDetial (**该参数对象即将下线，不推荐使用，请使用HealthStatusDetail获取健康详情**) 当前健康状态的详细信息。如：Alive、Dead、Unknown。Alive状态为健康，Dead状态为异常，Unknown状态包括尚未开始探测、探测中、状态未知。
      * @param string $TargetGroupId 目标组唯一ID。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Weight Target的权重。
      */
     function __construct()
     {
@@ -125,6 +129,10 @@ class TargetHealth extends AbstractModel
 
         if (array_key_exists("TargetGroupId",$param) and $param["TargetGroupId"] !== null) {
             $this->TargetGroupId = $param["TargetGroupId"];
+        }
+
+        if (array_key_exists("Weight",$param) and $param["Weight"] !== null) {
+            $this->Weight = $param["Weight"];
         }
     }
 }

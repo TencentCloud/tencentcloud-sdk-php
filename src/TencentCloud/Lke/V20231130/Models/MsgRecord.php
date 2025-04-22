@@ -116,6 +116,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAgentThought(AgentThought $AgentThought) 设置Agent的思考过程信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ExtraInfo getExtraInfo() 获取扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExtraInfo(ExtraInfo $ExtraInfo) 设置扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MsgRecord extends AbstractModel
 {
@@ -264,6 +268,12 @@ class MsgRecord extends AbstractModel
     public $AgentThought;
 
     /**
+     * @var ExtraInfo 扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExtraInfo;
+
+    /**
      * @param string $Content 内容
      * @param string $SessionId 当前记录所对应的 Session ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -311,6 +321,8 @@ class MsgRecord extends AbstractModel
      * @param array $QuoteInfos 参考来源引用位置信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AgentThought $AgentThought Agent的思考过程信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExtraInfo $ExtraInfo 扩展信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -438,6 +450,11 @@ class MsgRecord extends AbstractModel
         if (array_key_exists("AgentThought",$param) and $param["AgentThought"] !== null) {
             $this->AgentThought = new AgentThought();
             $this->AgentThought->deserialize($param["AgentThought"]);
+        }
+
+        if (array_key_exists("ExtraInfo",$param) and $param["ExtraInfo"] !== null) {
+            $this->ExtraInfo = new ExtraInfo();
+            $this->ExtraInfo->deserialize($param["ExtraInfo"]);
         }
     }
 }

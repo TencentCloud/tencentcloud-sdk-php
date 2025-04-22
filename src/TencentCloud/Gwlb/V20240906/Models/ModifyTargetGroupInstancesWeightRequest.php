@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyTargetGroupInstancesWeight请求参数结构体
  *
- * @method string getTargetGroupId() 获取目标组ID。可通过DescribeTargetGroupList接口获取。
- * @method void setTargetGroupId(string $TargetGroupId) 设置目标组ID。可通过DescribeTargetGroupList接口获取。
+ * @method string getTargetGroupId() 获取目标组ID。可通过[DescribeTargetGroupList](https://cloud.tencent.com/document/api/1782/111692)接口获取。
+ * @method void setTargetGroupId(string $TargetGroupId) 设置目标组ID。可通过[DescribeTargetGroupList](https://cloud.tencent.com/document/api/1782/111692)接口获取。
  * @method array getTargetGroupInstances() 获取实例绑定配置数组。
  * @method void setTargetGroupInstances(array $TargetGroupInstances) 设置实例绑定配置数组。
  */
 class ModifyTargetGroupInstancesWeightRequest extends AbstractModel
 {
     /**
-     * @var string 目标组ID。可通过DescribeTargetGroupList接口获取。
+     * @var string 目标组ID。可通过[DescribeTargetGroupList](https://cloud.tencent.com/document/api/1782/111692)接口获取。
      */
     public $TargetGroupId;
 
@@ -38,7 +38,7 @@ class ModifyTargetGroupInstancesWeightRequest extends AbstractModel
     public $TargetGroupInstances;
 
     /**
-     * @param string $TargetGroupId 目标组ID。可通过DescribeTargetGroupList接口获取。
+     * @param string $TargetGroupId 目标组ID。可通过[DescribeTargetGroupList](https://cloud.tencent.com/document/api/1782/111692)接口获取。
      * @param array $TargetGroupInstances 实例绑定配置数组。
      */
     function __construct()

@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
 <li>on：开启；</li>
 <li>off：关闭。</li>
  * @method string getHeaderName() 获取回源时，存放客户端 IP 的请求头名称。当 Switch 为 on 时，该参数必填。该参数不允许填写 X-Forwarded-For。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeaderName(string $HeaderName) 设置回源时，存放客户端 IP 的请求头名称。当 Switch 为 on 时，该参数必填。该参数不允许填写 X-Forwarded-For。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClientIpHeader extends AbstractModel
 {
@@ -42,7 +40,6 @@ class ClientIpHeader extends AbstractModel
 
     /**
      * @var string 回源时，存放客户端 IP 的请求头名称。当 Switch 为 on 时，该参数必填。该参数不允许填写 X-Forwarded-For。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HeaderName;
 
@@ -51,7 +48,6 @@ class ClientIpHeader extends AbstractModel
 <li>on：开启；</li>
 <li>off：关闭。</li>
      * @param string $HeaderName 回源时，存放客户端 IP 的请求头名称。当 Switch 为 on 时，该参数必填。该参数不允许填写 X-Forwarded-For。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -27,23 +27,15 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getWeight() 获取后端服务的转发权重，取值范围：[0, 100]，默认为 10。
  * @method void setWeight(integer $Weight) 设置后端服务的转发权重，取值范围：[0, 100]，默认为 10。
  * @method array getPublicIpAddresses() 获取后端服务的外网 IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicIpAddresses(array $PublicIpAddresses) 设置后端服务的外网 IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPrivateIpAddresses() 获取后端服务的内网 IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrivateIpAddresses(array $PrivateIpAddresses) 设置后端服务的内网 IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceName() 获取后端服务的实例名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceName(string $InstanceName) 设置后端服务的实例名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRunFlag() 获取后端服务的状态
 1：故障，2：运行中，3：创建中，4：已关机，5：已退还，6：退还中， 7：重启中，8：开机中，9：关机中，10：密码重置中，11：格式化中，12：镜像制作中，13：带宽设置中，14：重装系统中，19：升级中，21：热迁移中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRunFlag(integer $RunFlag) 设置后端服务的状态
 1：故障，2：运行中，3：创建中，4：已关机，5：已退还，6：退还中， 7：重启中，8：开机中，9：关机中，10：密码重置中，11：格式化中，12：镜像制作中，13：带宽设置中，14：重装系统中，19：升级中，21：热迁移中
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClassicalTarget extends AbstractModel
 {
@@ -64,26 +56,22 @@ class ClassicalTarget extends AbstractModel
 
     /**
      * @var array 后端服务的外网 IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicIpAddresses;
 
     /**
      * @var array 后端服务的内网 IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PrivateIpAddresses;
 
     /**
      * @var string 后端服务的实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceName;
 
     /**
      * @var integer 后端服务的状态
 1：故障，2：运行中，3：创建中，4：已关机，5：已退还，6：退还中， 7：重启中，8：开机中，9：关机中，10：密码重置中，11：格式化中，12：镜像制作中，13：带宽设置中，14：重装系统中，19：升级中，21：热迁移中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RunFlag;
 
@@ -92,14 +80,10 @@ class ClassicalTarget extends AbstractModel
      * @param string $InstanceId 后端服务的唯一 ID，可通过 DescribeInstances 接口返回字段中的 unInstanceId 字段获取
      * @param integer $Weight 后端服务的转发权重，取值范围：[0, 100]，默认为 10。
      * @param array $PublicIpAddresses 后端服务的外网 IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PrivateIpAddresses 后端服务的内网 IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 后端服务的实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RunFlag 后端服务的状态
 1：故障，2：运行中，3：创建中，4：已关机，5：已退还，6：退还中， 7：重启中，8：开机中，9：关机中，10：密码重置中，11：格式化中，12：镜像制作中，13：带宽设置中，14：重装系统中，19：升级中，21：热迁移中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

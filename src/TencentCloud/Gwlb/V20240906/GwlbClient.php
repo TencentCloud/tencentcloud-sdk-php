@@ -45,7 +45,6 @@ use TencentCloud\Gwlb\V20240906\Models as Models;
  * @method Models\ModifyGatewayLoadBalancerAttributeResponse ModifyGatewayLoadBalancerAttribute(Models\ModifyGatewayLoadBalancerAttributeRequest $req) ModifyGatewayLoadBalancerAttribute 接口用于修改负载均衡实例的属性。支持修改负载均衡实例的名称、带宽上限。
  * @method Models\ModifyTargetGroupAttributeResponse ModifyTargetGroupAttribute(Models\ModifyTargetGroupAttributeRequest $req) 修改目标组的名称、健康探测等属性。
  * @method Models\ModifyTargetGroupInstancesWeightResponse ModifyTargetGroupInstancesWeight(Models\ModifyTargetGroupInstancesWeightRequest $req) 修改目标组的服务器权重。
-本接口为异步接口，本接口返回成功后需以返回的 RequestID 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
  * @method Models\RegisterTargetGroupInstancesResponse RegisterTargetGroupInstances(Models\RegisterTargetGroupInstancesRequest $req) 注册服务器到目标组。
  */
 

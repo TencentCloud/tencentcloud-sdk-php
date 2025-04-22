@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWorkFlow(WorkFlowSummary $WorkFlow) 设置工作流调试信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method AgentDebugInfo getAgent() 获取Agent调试信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAgent(AgentDebugInfo $Agent) 设置Agent调试信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProcedureDebugging extends AbstractModel
 {
@@ -84,6 +88,12 @@ class ProcedureDebugging extends AbstractModel
     public $WorkFlow;
 
     /**
+     * @var AgentDebugInfo Agent调试信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Agent;
+
+    /**
      * @param string $Content 检索query
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $System 系统prompt
@@ -95,6 +105,8 @@ class ProcedureDebugging extends AbstractModel
      * @param TaskFlowSummary $TaskFlow 任务流程
 注意：此字段可能返回 null，表示取不到有效值。
      * @param WorkFlowSummary $WorkFlow 工作流调试信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AgentDebugInfo $Agent Agent调试信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -144,6 +156,11 @@ class ProcedureDebugging extends AbstractModel
         if (array_key_exists("WorkFlow",$param) and $param["WorkFlow"] !== null) {
             $this->WorkFlow = new WorkFlowSummary();
             $this->WorkFlow->deserialize($param["WorkFlow"]);
+        }
+
+        if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
+            $this->Agent = new AgentDebugInfo();
+            $this->Agent->deserialize($param["Agent"]);
         }
     }
 }

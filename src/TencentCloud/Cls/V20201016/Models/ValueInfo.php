@@ -34,6 +34,8 @@ long及double类型字段需为空；
  * @method void setSqlFlag(boolean $SqlFlag) 设置字段是否开启分析功能
  * @method boolean getContainZH() 获取是否包含中文，long及double类型字段需为false
  * @method void setContainZH(boolean $ContainZH) 设置是否包含中文，long及double类型字段需为false
+ * @method string getAlias() 获取字段别名
+ * @method void setAlias(string $Alias) 设置字段别名
  */
 class ValueInfo extends AbstractModel
 {
@@ -61,6 +63,11 @@ long及double类型字段需为空；
     public $ContainZH;
 
     /**
+     * @var string 字段别名
+     */
+    public $Alias;
+
+    /**
      * @param string $Type 字段类型，目前支持的类型有：long、text、double
      * @param string $Tokenizer 字段的分词符，其中的每个字符代表一个分词符；
 仅支持英文符号、\n\t\r及转义符\；
@@ -68,6 +75,7 @@ long及double类型字段需为空；
 注意：\n\t\r本身已被转义，直接使用双引号包裹即可作为入参，无需再次转义。使用API Explorer进行调试时请使用JSON参数输入方式，以避免\n\t\r被重复转义
      * @param boolean $SqlFlag 字段是否开启分析功能
      * @param boolean $ContainZH 是否包含中文，long及double类型字段需为false
+     * @param string $Alias 字段别名
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ long及double类型字段需为空；
 
         if (array_key_exists("ContainZH",$param) and $param["ContainZH"] !== null) {
             $this->ContainZH = $param["ContainZH"];
+        }
+
+        if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
+            $this->Alias = $param["Alias"];
         }
     }
 }

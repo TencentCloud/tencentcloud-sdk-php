@@ -22,53 +22,37 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getCertId() 获取服务器证书 ID。来源于 SSL 侧，您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/ssl) 查看 CertId。
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertId(string $CertId) 设置服务器证书 ID。来源于 SSL 侧，您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/ssl) 查看 CertId。
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAlias() 获取证书备注名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlias(string $Alias) 设置证书备注名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取证书类型，取值有：
 <li>default：默认证书；</li>
 <li>upload：用户上传；</li>
 <li>managed：腾讯云托管。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置证书类型，取值有：
 <li>default：默认证书；</li>
 <li>upload：用户上传；</li>
 <li>managed：腾讯云托管。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExpireTime() 获取证书过期时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpireTime(string $ExpireTime) 设置证书过期时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeployTime() 获取证书部署时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeployTime(string $DeployTime) 设置证书部署时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSignAlgo() 获取签名算法。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSignAlgo(string $SignAlgo) 设置签名算法。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCommonName() 获取证书归属域名名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCommonName(string $CommonName) 设置证书归属域名名称。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServerCertInfo extends AbstractModel
 {
     /**
      * @var string 服务器证书 ID。来源于 SSL 侧，您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/ssl) 查看 CertId。
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CertId;
 
     /**
      * @var string 证书备注名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Alias;
 
@@ -77,53 +61,41 @@ class ServerCertInfo extends AbstractModel
 <li>default：默认证书；</li>
 <li>upload：用户上传；</li>
 <li>managed：腾讯云托管。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 证书过期时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpireTime;
 
     /**
      * @var string 证书部署时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeployTime;
 
     /**
      * @var string 签名算法。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SignAlgo;
 
     /**
      * @var string 证书归属域名名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CommonName;
 
     /**
      * @param string $CertId 服务器证书 ID。来源于 SSL 侧，您可以前往 [SSL 证书列表](https://console.cloud.tencent.com/ssl) 查看 CertId。
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Alias 证书备注名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 证书类型，取值有：
 <li>default：默认证书；</li>
 <li>upload：用户上传；</li>
 <li>managed：腾讯云托管。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExpireTime 证书过期时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeployTime 证书部署时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SignAlgo 签名算法。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CommonName 证书归属域名名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

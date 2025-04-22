@@ -45,9 +45,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getListenerName() 获取监听器名称
  * @method void setListenerName(string $ListenerName) 设置监听器名称
  * @method integer getWeight() 获取关联目标组的权重， 该参数只有v2新版目标组生效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWeight(integer $Weight) 设置关联目标组的权重， 该参数只有v2新版目标组生效。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssociationItem extends AbstractModel
 {
@@ -101,7 +99,6 @@ class AssociationItem extends AbstractModel
 
     /**
      * @var integer 关联目标组的权重， 该参数只有v2新版目标组生效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Weight;
 
@@ -119,7 +116,6 @@ class AssociationItem extends AbstractModel
      * @param string $LoadBalancerName 负载均衡名称
      * @param string $ListenerName 监听器名称
      * @param integer $Weight 关联目标组的权重， 该参数只有v2新版目标组生效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

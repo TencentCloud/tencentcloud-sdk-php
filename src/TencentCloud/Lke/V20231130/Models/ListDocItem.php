@@ -144,6 +144,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置文档创建落库时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCateBizId() 获取文档所属分类ID
+ * @method void setCateBizId(string $CateBizId) 设置文档所属分类ID
  */
 class ListDocItem extends AbstractModel
 {
@@ -334,6 +336,11 @@ class ListDocItem extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var string 文档所属分类ID
+     */
+    public $CateBizId;
+
+    /**
      * @param string $DocBizId 文档ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileName 文件名称
@@ -396,6 +403,7 @@ class ListDocItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 文档创建落库时间
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CateBizId 文档所属分类ID
      */
     function __construct()
     {
@@ -537,6 +545,10 @@ class ListDocItem extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("CateBizId",$param) and $param["CateBizId"] !== null) {
+            $this->CateBizId = $param["CateBizId"];
         }
     }
 }

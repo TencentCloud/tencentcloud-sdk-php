@@ -81,9 +81,7 @@ use TencentCloud\Common\AbstractModel;
 <li>true：开启；</li>
 <li>false：关闭。</li>默认值：false。
  * @method integer getSessionPersistTime() 获取会话保持的时间，只有当SessionPersist为true时，该值才会生效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSessionPersistTime(integer $SessionPersistTime) 设置会话保持的时间，只有当SessionPersist为true时，该值才会生效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOriginPort() 获取源站端口，支持格式：
 <li>单端口，如：80。</li>
 <li>端口段：81-82，表示81，82两个端口。</li>
@@ -91,9 +89,7 @@ use TencentCloud\Common\AbstractModel;
 <li>单端口，如：80。</li>
 <li>端口段：81-82，表示81，82两个端口。</li>
  * @method string getRuleTag() 获取规则标签。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleTag(string $RuleTag) 设置规则标签。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApplicationProxyRule extends AbstractModel
 {
@@ -161,7 +157,6 @@ class ApplicationProxyRule extends AbstractModel
 
     /**
      * @var integer 会话保持的时间，只有当SessionPersist为true时，该值才会生效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SessionPersistTime;
 
@@ -174,7 +169,6 @@ class ApplicationProxyRule extends AbstractModel
 
     /**
      * @var string 规则标签。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleTag;
 
@@ -210,12 +204,10 @@ class ApplicationProxyRule extends AbstractModel
 <li>true：开启；</li>
 <li>false：关闭。</li>默认值：false。
      * @param integer $SessionPersistTime 会话保持的时间，只有当SessionPersist为true时，该值才会生效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OriginPort 源站端口，支持格式：
 <li>单端口，如：80。</li>
 <li>端口段：81-82，表示81，82两个端口。</li>
      * @param string $RuleTag 规则标签。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

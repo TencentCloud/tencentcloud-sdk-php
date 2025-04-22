@@ -31,13 +31,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEniId() 获取子机的网卡ID。
  * @method void setEniId(string $EniId) 设置子机的网卡ID。
  * @method string getInstanceId() 获取子机实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置子机实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceName() 获取子机实例名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceName(string $InstanceName) 设置子机实例名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegion() 获取子机或者网卡所属的地域。
  * @method void setRegion(string $Region) 设置子机或者网卡所属的地域。
  */
@@ -70,13 +66,11 @@ class CrossTargets extends AbstractModel
 
     /**
      * @var string 子机实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var string 子机实例名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceName;
 
@@ -92,9 +86,7 @@ class CrossTargets extends AbstractModel
      * @param string $VpcName 子机或网卡所属的私有网络名称。
      * @param string $EniId 子机的网卡ID。
      * @param string $InstanceId 子机实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 子机实例名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 子机或者网卡所属的地域。
      */
     function __construct()

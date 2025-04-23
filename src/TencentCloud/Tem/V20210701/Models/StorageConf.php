@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStorageVolPath() 获取存储卷路径
  * @method void setStorageVolPath(string $StorageVolPath) 设置存储卷路径
  * @method string getStorageVolIp() 获取存储卷IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStorageVolIp(string $StorageVolIp) 设置存储卷IP
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class StorageConf extends AbstractModel
 {
@@ -43,7 +41,6 @@ class StorageConf extends AbstractModel
 
     /**
      * @var string 存储卷IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StorageVolIp;
 
@@ -51,7 +48,6 @@ class StorageConf extends AbstractModel
      * @param string $StorageVolName 存储卷名称
      * @param string $StorageVolPath 存储卷路径
      * @param string $StorageVolIp 存储卷IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

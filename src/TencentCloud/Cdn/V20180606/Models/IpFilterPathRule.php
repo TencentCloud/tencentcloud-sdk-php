@@ -60,6 +60,8 @@ file 时填充后缀名，如 jpg、txt
 directory 时填充路径，如 /xxx/test/
 path 时填充绝对路径，如 /xxx/test.html
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRemark() 获取备注信息, 最多支持50个字符
+ * @method void setRemark(string $Remark) 设置备注信息, 最多支持50个字符
  */
 class IpFilterPathRule extends AbstractModel
 {
@@ -100,6 +102,11 @@ path 时填充绝对路径，如 /xxx/test.html
     public $RulePaths;
 
     /**
+     * @var string 备注信息, 最多支持50个字符
+     */
+    public $Remark;
+
+    /**
      * @param string $FilterType IP 黑白名单类型
 whitelist：白名单
 blacklist：黑名单
@@ -120,6 +127,7 @@ file 时填充后缀名，如 jpg、txt
 directory 时填充路径，如 /xxx/test/
 path 时填充绝对路径，如 /xxx/test.html
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Remark 备注信息, 最多支持50个字符
      */
     function __construct()
     {
@@ -148,6 +156,10 @@ path 时填充绝对路径，如 /xxx/test.html
 
         if (array_key_exists("RulePaths",$param) and $param["RulePaths"] !== null) {
             $this->RulePaths = $param["RulePaths"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
         }
     }
 }

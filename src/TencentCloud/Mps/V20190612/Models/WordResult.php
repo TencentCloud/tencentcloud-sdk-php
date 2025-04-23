@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStart(float $Start) 设置字词起始时间戳，单位秒。
  * @method float getEnd() 获取字词结束时间戳，单位秒。
  * @method void setEnd(float $End) 设置字词结束时间戳，单位秒。
+ * @method string getTrans() 获取翻译文本
+ * @method void setTrans(string $Trans) 设置翻译文本
  */
 class WordResult extends AbstractModel
 {
@@ -45,9 +47,15 @@ class WordResult extends AbstractModel
     public $End;
 
     /**
+     * @var string 翻译文本
+     */
+    public $Trans;
+
+    /**
      * @param string $Word 字词文本。
      * @param float $Start 字词起始时间戳，单位秒。
      * @param float $End 字词结束时间戳，单位秒。
+     * @param string $Trans 翻译文本
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class WordResult extends AbstractModel
 
         if (array_key_exists("End",$param) and $param["End"] !== null) {
             $this->End = $param["End"];
+        }
+
+        if (array_key_exists("Trans",$param) and $param["Trans"] !== null) {
+            $this->Trans = $param["Trans"];
         }
     }
 }

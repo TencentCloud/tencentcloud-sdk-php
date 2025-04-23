@@ -29,9 +29,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getLocationId() 获取配置绑定的规则
  * @method void setLocationId(string $LocationId) 设置配置绑定的规则
  * @method string getListenerName() 获取监听器名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setListenerName(string $ListenerName) 设置监听器名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProtocol() 获取监听器协议
  * @method void setProtocol(string $Protocol) 设置监听器协议
  * @method integer getVport() 获取监听器端口
@@ -67,7 +65,6 @@ class BindDetailItem extends AbstractModel
 
     /**
      * @var string 监听器名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ListenerName;
 
@@ -98,7 +95,6 @@ class BindDetailItem extends AbstractModel
      * @param string $Domain 配置绑定的域名
      * @param string $LocationId 配置绑定的规则
      * @param string $ListenerName 监听器名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Protocol 监听器协议
      * @param integer $Vport 监听器端口
      * @param string $Url location的url

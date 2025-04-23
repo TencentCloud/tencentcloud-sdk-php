@@ -29,9 +29,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRegion() 获取区域名称
  * @method void setRegion(string $Region) 设置区域名称
  * @method string getDescription() 获取环境描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置环境描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取状态,1:已销毁;0:正常
  * @method void setStatus(integer $Status) 设置状态,1:已销毁;0:正常
  * @method string getVpc() 获取vpc网络
@@ -57,37 +55,21 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLocked() 获取环境锁，1为上锁，0则为上锁
  * @method void setLocked(integer $Locked) 设置环境锁，1为上锁，0则为上锁
  * @method string getAppId() 获取用户AppId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppId(string $AppId) 设置用户AppId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUin() 获取用户Uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUin(string $Uin) 设置用户Uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubAccountUin() 获取用户SubAccountUin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubAccountUin(string $SubAccountUin) 设置用户SubAccountUin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterId() 获取集群ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterId(string $ClusterId) 设置集群ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getHasAuthority() 获取资源是否有权限
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHasAuthority(boolean $HasAuthority) 设置资源是否有权限
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEnvType() 获取环境类型: test、pre、prod
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnvType(string $EnvType) 设置环境类型: test、pre、prod
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegionId() 获取地域码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionId(string $RegionId) 设置地域码
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TemNamespaceInfo extends AbstractModel
 {
@@ -113,7 +95,6 @@ class TemNamespaceInfo extends AbstractModel
 
     /**
      * @var string 环境描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
@@ -179,49 +160,41 @@ class TemNamespaceInfo extends AbstractModel
 
     /**
      * @var string 用户AppId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppId;
 
     /**
      * @var string 用户Uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uin;
 
     /**
      * @var string 用户SubAccountUin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubAccountUin;
 
     /**
      * @var string 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterId;
 
     /**
      * @var array 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
      * @var boolean 资源是否有权限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HasAuthority;
 
     /**
      * @var string 环境类型: test、pre、prod
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnvType;
 
     /**
      * @var string 地域码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionId;
 
@@ -231,7 +204,6 @@ class TemNamespaceInfo extends AbstractModel
      * @param string $EnvironmentName 环境名称
      * @param string $Region 区域名称
      * @param string $Description 环境描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 状态,1:已销毁;0:正常
      * @param string $Vpc vpc网络
      * @param string $CreateDate 创建时间
@@ -245,21 +217,13 @@ class TemNamespaceInfo extends AbstractModel
      * @param boolean $EnableTswTraceService 是否开启tsw
      * @param integer $Locked 环境锁，1为上锁，0则为上锁
      * @param string $AppId 用户AppId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uin 用户Uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubAccountUin 用户SubAccountUin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterId 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $HasAuthority 资源是否有权限
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EnvType 环境类型: test、pre、prod
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegionId 地域码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

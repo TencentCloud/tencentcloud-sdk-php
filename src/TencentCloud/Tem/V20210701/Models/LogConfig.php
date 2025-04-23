@@ -25,47 +25,27 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInputType() 获取收集类型，container_stdout 为标准输出；container_file 为文件；
  * @method void setInputType(string $InputType) 设置收集类型，container_stdout 为标准输出；container_file 为文件；
  * @method string getLogsetId() 获取日志集 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogsetId(string $LogsetId) 设置日志集 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTopicId() 获取日志主题 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicId(string $TopicId) 设置日志主题 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLogType() 获取日志提取模式，minimalist_log 为单行全文；multiline_log 为多行全文；  fullregex_log 为单行正则； multiline_fullregex_log 为多行正则； json_log 为 json；
  * @method void setLogType(string $LogType) 设置日志提取模式，minimalist_log 为单行全文；multiline_log 为多行全文；  fullregex_log 为单行正则； multiline_fullregex_log 为多行正则； json_log 为 json；
  * @method string getBeginningRegex() 获取首行正则表达式，当 LogType 为多行全文、多行正则时生效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBeginningRegex(string $BeginningRegex) 设置首行正则表达式，当 LogType 为多行全文、多行正则时生效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLogPath() 获取收集文件目录，当 InputType=container_file 时生效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogPath(string $LogPath) 设置收集文件目录，当 InputType=container_file 时生效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFilePattern() 获取收集文件名模式，当 InputType=container_file 时生效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFilePattern(string $FilePattern) 设置收集文件名模式，当 InputType=container_file 时生效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateDate() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateDate(string $CreateDate) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifyDate() 获取更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyDate(string $ModifyDate) 设置更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApplicationId() 获取应用 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationId(string $ApplicationId) 设置应用 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApplicationName() 获取应用名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationName(string $ApplicationName) 设置应用名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method LogConfigExtractRule getExtractRule() 获取导出规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtractRule(LogConfigExtractRule $ExtractRule) 设置导出规则
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class LogConfig extends AbstractModel
 {
@@ -81,13 +61,11 @@ class LogConfig extends AbstractModel
 
     /**
      * @var string 日志集 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogsetId;
 
     /**
      * @var string 日志主题 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicId;
 
@@ -98,49 +76,41 @@ class LogConfig extends AbstractModel
 
     /**
      * @var string 首行正则表达式，当 LogType 为多行全文、多行正则时生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BeginningRegex;
 
     /**
      * @var string 收集文件目录，当 InputType=container_file 时生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogPath;
 
     /**
      * @var string 收集文件名模式，当 InputType=container_file 时生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FilePattern;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateDate;
 
     /**
      * @var string 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyDate;
 
     /**
      * @var string 应用 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationId;
 
     /**
      * @var string 应用名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationName;
 
     /**
      * @var LogConfigExtractRule 导出规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExtractRule;
 
@@ -148,26 +118,16 @@ class LogConfig extends AbstractModel
      * @param string $Name 名称
      * @param string $InputType 收集类型，container_stdout 为标准输出；container_file 为文件；
      * @param string $LogsetId 日志集 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TopicId 日志主题 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LogType 日志提取模式，minimalist_log 为单行全文；multiline_log 为多行全文；  fullregex_log 为单行正则； multiline_fullregex_log 为多行正则； json_log 为 json；
      * @param string $BeginningRegex 首行正则表达式，当 LogType 为多行全文、多行正则时生效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LogPath 收集文件目录，当 InputType=container_file 时生效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FilePattern 收集文件名模式，当 InputType=container_file 时生效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateDate 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyDate 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationId 应用 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationName 应用名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogConfigExtractRule $ExtractRule 导出规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

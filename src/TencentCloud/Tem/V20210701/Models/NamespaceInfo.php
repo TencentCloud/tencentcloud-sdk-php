@@ -35,25 +35,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCreatedDate() 获取创建时间
  * @method void setCreatedDate(string $CreatedDate) 设置创建时间
  * @method string getEnvironmentName() 获取环境名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnvironmentName(string $EnvironmentName) 设置环境名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApmInstanceId() 获取APM 资源 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApmInstanceId(string $ApmInstanceId) 设置APM 资源 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLocked() 获取环境是否上锁，1为上锁，0则未上锁
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocked(integer $Locked) 设置环境是否上锁，1为上锁，0则未上锁
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEnvType() 获取环境类型：test、pre、prod
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnvType(string $EnvType) 设置环境类型：test、pre、prod
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NamespaceInfo extends AbstractModel
 {
@@ -94,31 +84,26 @@ class NamespaceInfo extends AbstractModel
 
     /**
      * @var string 环境名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnvironmentName;
 
     /**
      * @var string APM 资源 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApmInstanceId;
 
     /**
      * @var integer 环境是否上锁，1为上锁，0则未上锁
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Locked;
 
     /**
      * @var array 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
      * @var string 环境类型：test、pre、prod
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnvType;
 
@@ -131,15 +116,10 @@ class NamespaceInfo extends AbstractModel
      * @param string $Description 描述
      * @param string $CreatedDate 创建时间
      * @param string $EnvironmentName 环境名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApmInstanceId APM 资源 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Locked 环境是否上锁，1为上锁，0则未上锁
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EnvType 环境类型：test、pre、prod
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

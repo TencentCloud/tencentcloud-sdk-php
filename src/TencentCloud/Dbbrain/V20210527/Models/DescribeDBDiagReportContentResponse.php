@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tem\V20210701\Models;
+namespace TencentCloud\Dbbrain\V20210527\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteApplicationAutoscaler返回参数结构体
+ * DescribeDBDiagReportContent返回参数结构体
  *
- * @method boolean getResult() 获取是否成功
- * @method void setResult(boolean $Result) 设置是否成功
+ * @method string getReport() 获取报告内容。
+ * @method void setReport(string $Report) 设置报告内容。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DeleteApplicationAutoscalerResponse extends AbstractModel
+class DescribeDBDiagReportContentResponse extends AbstractModel
 {
     /**
-     * @var boolean 是否成功
+     * @var string 报告内容。
      */
-    public $Result;
+    public $Report;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class DeleteApplicationAutoscalerResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param boolean $Result 是否成功
+     * @param string $Report 报告内容。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +54,8 @@ class DeleteApplicationAutoscalerResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = $param["Result"];
+        if (array_key_exists("Report",$param) and $param["Report"] !== null) {
+            $this->Report = $param["Report"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -25,25 +25,17 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeployStrategyConf(DeployStrategyConf $DeployStrategyConf) 设置分批发布策略
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStartTime() 获取开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(string $StartTime) 设置开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndTime() 获取结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取当前状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置当前状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DeployServiceBatchDetail getBetaBatchDetail() 获取beta分批详情
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBetaBatchDetail(DeployServiceBatchDetail $BetaBatchDetail) 设置beta分批详情
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getOtherBatchDetail() 获取其他分批详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOtherBatchDetail(array $OtherBatchDetail) 设置其他分批详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DescribeRunPodPage getOldVersionPodList() 获取老版本pod列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOldVersionPodList(DescribeRunPodPage $OldVersionPodList) 设置老版本pod列表
@@ -53,25 +45,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCurrentBatchIndex(integer $CurrentBatchIndex) 设置当前批次id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getErrorMessage() 获取错误原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorMessage(string $ErrorMessage) 设置错误原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCurrentBatchStatus() 获取当前批次状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCurrentBatchStatus(string $CurrentBatchStatus) 设置当前批次状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNewDeployVersion() 获取新版本version
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNewDeployVersion(string $NewDeployVersion) 设置新版本version
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOldDeployVersion() 获取旧版本version
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOldDeployVersion(string $OldDeployVersion) 设置旧版本version
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNewVersionPackageInfo() 获取包名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNewVersionPackageInfo(string $NewVersionPackageInfo) 设置包名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNextBatchStartTime() 获取下一批次开始时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNextBatchStartTime(integer $NextBatchStartTime) 设置下一批次开始时间
@@ -87,19 +69,16 @@ class TemDeployApplicationDetailInfo extends AbstractModel
 
     /**
      * @var string 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
      * @var string 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
      * @var string 当前状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
@@ -111,7 +90,6 @@ class TemDeployApplicationDetailInfo extends AbstractModel
 
     /**
      * @var array 其他分批详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OtherBatchDetail;
 
@@ -129,31 +107,26 @@ class TemDeployApplicationDetailInfo extends AbstractModel
 
     /**
      * @var string 错误原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrorMessage;
 
     /**
      * @var string 当前批次状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CurrentBatchStatus;
 
     /**
      * @var string 新版本version
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NewDeployVersion;
 
     /**
      * @var string 旧版本version
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OldDeployVersion;
 
     /**
      * @var string 包名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NewVersionPackageInfo;
 
@@ -167,29 +140,20 @@ class TemDeployApplicationDetailInfo extends AbstractModel
      * @param DeployStrategyConf $DeployStrategyConf 分批发布策略
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StartTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 当前状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeployServiceBatchDetail $BetaBatchDetail beta分批详情
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $OtherBatchDetail 其他分批详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DescribeRunPodPage $OldVersionPodList 老版本pod列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CurrentBatchIndex 当前批次id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrorMessage 错误原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CurrentBatchStatus 当前批次状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NewDeployVersion 新版本version
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OldDeployVersion 旧版本version
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NewVersionPackageInfo 包名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NextBatchStartTime 下一批次开始时间
 注意：此字段可能返回 null，表示取不到有效值。
      */

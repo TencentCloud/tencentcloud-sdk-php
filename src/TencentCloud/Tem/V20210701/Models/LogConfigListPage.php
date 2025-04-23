@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * LogConfig 列表结果
  *
  * @method array getRecords() 获取记录
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecords(array $Records) 设置记录
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContinueToken() 获取翻页游标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContinueToken(string $ContinueToken) 设置翻页游标
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class LogConfigListPage extends AbstractModel
 {
     /**
      * @var array 记录
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Records;
 
     /**
      * @var string 翻页游标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContinueToken;
 
     /**
      * @param array $Records 记录
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContinueToken 翻页游标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

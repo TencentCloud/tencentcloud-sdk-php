@@ -76,6 +76,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DeleteUsersFromWorkGroupResponse DeleteUsersFromWorkGroup(Models\DeleteUsersFromWorkGroupRequest $req) 从工作组中删除用户
  * @method Models\DeleteWorkGroupResponse DeleteWorkGroup(Models\DeleteWorkGroupRequest $req) 删除工作组
  * @method Models\DescribeAdvancedStoreLocationResponse DescribeAdvancedStoreLocation(Models\DescribeAdvancedStoreLocationRequest $req) 查询sql查询界面高级设置
+ * @method Models\DescribeClusterMonitorInfosResponse DescribeClusterMonitorInfos(Models\DescribeClusterMonitorInfosRequest $req) 查询任务监控指标信息
  * @method Models\DescribeDLCCatalogAccessResponse DescribeDLCCatalogAccess(Models\DescribeDLCCatalogAccessRequest $req) 查询DLC Catalog授权列表
  * @method Models\DescribeDMSDatabaseResponse DescribeDMSDatabase(Models\DescribeDMSDatabaseRequest $req) DMS元数据获取库
  * @method Models\DescribeDMSPartitionsResponse DescribeDMSPartitions(Models\DescribeDMSPartitionsRequest $req) DMS元数据获取分区

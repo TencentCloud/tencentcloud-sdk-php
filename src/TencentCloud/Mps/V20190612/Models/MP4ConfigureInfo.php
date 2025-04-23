@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tem\V20210701\Models;
+namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 标签
+ * MP4配置参数
  *
- * @method string getTagKey() 获取标签键
- * @method void setTagKey(string $TagKey) 设置标签键
- * @method string getTagValue() 获取标签值
- * @method void setTagValue(string $TagValue) 设置标签值
+ * @method integer getInterval() 获取录制周期，单位：秒，取值范围 10 分钟到720分钟。默认值：60分钟（3600秒）。
+ * @method void setInterval(integer $Interval) 设置录制周期，单位：秒，取值范围 10 分钟到720分钟。默认值：60分钟（3600秒）。
  */
-class Tag extends AbstractModel
+class MP4ConfigureInfo extends AbstractModel
 {
     /**
-     * @var string 标签键
+     * @var integer 录制周期，单位：秒，取值范围 10 分钟到720分钟。默认值：60分钟（3600秒）。
      */
-    public $TagKey;
+    public $Interval;
 
     /**
-     * @var string 标签值
-     */
-    public $TagValue;
-
-    /**
-     * @param string $TagKey 标签键
-     * @param string $TagValue 标签值
+     * @param integer $Interval 录制周期，单位：秒，取值范围 10 分钟到720分钟。默认值：60分钟（3600秒）。
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class Tag extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TagKey",$param) and $param["TagKey"] !== null) {
-            $this->TagKey = $param["TagKey"];
-        }
-
-        if (array_key_exists("TagValue",$param) and $param["TagValue"] !== null) {
-            $this->TagValue = $param["TagValue"];
+        if (array_key_exists("Interval",$param) and $param["Interval"] !== null) {
+            $this->Interval = $param["Interval"];
         }
     }
 }

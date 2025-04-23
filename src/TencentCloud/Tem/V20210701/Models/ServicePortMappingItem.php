@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 服务端口映射条目
  *
  * @method integer getPort() 获取应用访问端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPort(integer $Port) 设置应用访问端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTargetPort() 获取应用监听端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargetPort(integer $TargetPort) 设置应用监听端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProtocol() 获取协议类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProtocol(string $Protocol) 设置协议类型
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServicePortMappingItem extends AbstractModel
 {
     /**
      * @var integer 应用访问端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Port;
 
     /**
      * @var integer 应用监听端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetPort;
 
     /**
      * @var string 协议类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Protocol;
 
     /**
      * @param integer $Port 应用访问端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TargetPort 应用监听端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Protocol 协议类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

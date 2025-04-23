@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDefinition(integer $Definition) 设置录制模板唯一标识。
  * @method HLSConfigureInfo getHLSConfigure() 获取HLS 配置参数
  * @method void setHLSConfigure(HLSConfigureInfo $HLSConfigure) 设置HLS 配置参数
+ * @method MP4ConfigureInfo getMP4Configure() 获取MP4配置参数
+ * @method void setMP4Configure(MP4ConfigureInfo $MP4Configure) 设置MP4配置参数
  * @method string getName() 获取录制模板名称。
  * @method void setName(string $Name) 设置录制模板名称。
  * @method string getComment() 获取模板描述信息。
@@ -50,6 +52,11 @@ class LiveRecordTemplate extends AbstractModel
      * @var HLSConfigureInfo HLS 配置参数
      */
     public $HLSConfigure;
+
+    /**
+     * @var MP4ConfigureInfo MP4配置参数
+     */
+    public $MP4Configure;
 
     /**
      * @var string 录制模板名称。
@@ -81,6 +88,7 @@ class LiveRecordTemplate extends AbstractModel
     /**
      * @param integer $Definition 录制模板唯一标识。
      * @param HLSConfigureInfo $HLSConfigure HLS 配置参数
+     * @param MP4ConfigureInfo $MP4Configure MP4配置参数
      * @param string $Name 录制模板名称。
      * @param string $Comment 模板描述信息。
      * @param string $Type 模板类型，取值：
@@ -109,6 +117,11 @@ class LiveRecordTemplate extends AbstractModel
         if (array_key_exists("HLSConfigure",$param) and $param["HLSConfigure"] !== null) {
             $this->HLSConfigure = new HLSConfigureInfo();
             $this->HLSConfigure->deserialize($param["HLSConfigure"]);
+        }
+
+        if (array_key_exists("MP4Configure",$param) and $param["MP4Configure"] !== null) {
+            $this->MP4Configure = new MP4ConfigureInfo();
+            $this->MP4Configure->deserialize($param["MP4Configure"]);
         }
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {

@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method array getRecords() 获取记录
  * @method void setRecords(array $Records) 设置记录
  * @method string getContinueToken() 获取分页游标，用以查询下一页
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContinueToken(string $ContinueToken) 设置分页游标，用以查询下一页
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRemainingCount() 获取剩余数目
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemainingCount(integer $RemainingCount) 设置剩余数目
@@ -40,7 +38,6 @@ class DescribeConfigDataListPage extends AbstractModel
 
     /**
      * @var string 分页游标，用以查询下一页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContinueToken;
 
@@ -53,7 +50,6 @@ class DescribeConfigDataListPage extends AbstractModel
     /**
      * @param array $Records 记录
      * @param string $ContinueToken 分页游标，用以查询下一页
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RemainingCount 剩余数目
 注意：此字段可能返回 null，表示取不到有效值。
      */

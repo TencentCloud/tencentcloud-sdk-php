@@ -59,9 +59,7 @@ FS_SIZE_READ(磁盘读大小，MiB/s)
  * @method boolean getEnabled() 获取是否启用
  * @method void setEnabled(boolean $Enabled) 设置是否启用
  * @method float getDoubleThreshold() 获取阈值（小数，优先使用）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDoubleThreshold(float $DoubleThreshold) 设置阈值（小数，优先使用）
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class HorizontalAutoscaler extends AbstractModel
 {
@@ -106,7 +104,6 @@ FS_SIZE_READ(磁盘读大小，MiB/s)
 
     /**
      * @var float 阈值（小数，优先使用）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DoubleThreshold;
 
@@ -131,7 +128,6 @@ FS_SIZE_READ(磁盘读大小，MiB/s)
      * @param integer $Threshold 阈值（整数）
      * @param boolean $Enabled 是否启用
      * @param float $DoubleThreshold 阈值（小数，优先使用）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

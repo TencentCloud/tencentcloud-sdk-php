@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAdditionalConfig(string $AdditionalConfig) 设置JSON 格式字符串，用于指定特定凭据类型的额外配置。
  * @method array getTags() 获取标签列表
  * @method void setTags(array $Tags) 设置标签列表
+ * @method string getKmsHsmClusterId() 获取KMS的独享集群的ID。当KmsKeyId为空,并且用户的KMS存在有效的HsmClusterId时有效。
+ * @method void setKmsHsmClusterId(string $KmsHsmClusterId) 设置KMS的独享集群的ID。当KmsKeyId为空,并且用户的KMS存在有效的HsmClusterId时有效。
  */
 class CreateSecretRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class CreateSecretRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var string KMS的独享集群的ID。当KmsKeyId为空,并且用户的KMS存在有效的HsmClusterId时有效。
+     */
+    public $KmsHsmClusterId;
+
+    /**
      * @param string $SecretName 凭据名称，同一region内不可重复，最长128字节，使用字母、数字或者 - _ 的组合，第一个字符必须为字母或者数字。一旦创建不可修改。
      * @param string $VersionId 凭据版本，查询凭据信息时需要根据SecretName 和 VersionId进行查询，最长64 字节，使用字母、数字或者 - _ . 的组合并且以字母或数字开头。若为空，则使用默认的初始凭据版本号。可选，若为空或该凭据为云产品类凭据，则该版本号默认为 SSM_Current。
      * @param string $Description 描述信息，用于详细描述用途等，最大支持2048字节。
@@ -96,6 +103,7 @@ class CreateSecretRequest extends AbstractModel
      * @param string $SecretString 文本类型凭据信息明文（不需要进行base64编码）。SecretBinary 和 SecretString 必须且只能设置一个，最大支持32KB字节。
      * @param string $AdditionalConfig JSON 格式字符串，用于指定特定凭据类型的额外配置。
      * @param array $Tags 标签列表
+     * @param string $KmsHsmClusterId KMS的独享集群的ID。当KmsKeyId为空,并且用户的KMS存在有效的HsmClusterId时有效。
      */
     function __construct()
     {
@@ -149,6 +157,10 @@ class CreateSecretRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("KmsHsmClusterId",$param) and $param["KmsHsmClusterId"] !== null) {
+            $this->KmsHsmClusterId = $param["KmsHsmClusterId"];
         }
     }
 }

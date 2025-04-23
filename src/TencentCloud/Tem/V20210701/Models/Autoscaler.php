@@ -25,41 +25,25 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getMaxReplicas() 获取弹性伸缩最大实例数
  * @method void setMaxReplicas(integer $MaxReplicas) 设置弹性伸缩最大实例数
  * @method array getHorizontalAutoscaler() 获取指标弹性伸缩策略(指标策略和定时策略必须填写一个)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHorizontalAutoscaler(array $HorizontalAutoscaler) 设置指标弹性伸缩策略(指标策略和定时策略必须填写一个)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCronHorizontalAutoscaler() 获取定时弹性伸缩策略(指标策略和定时策略必须填写一个)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCronHorizontalAutoscaler(array $CronHorizontalAutoscaler) 设置定时弹性伸缩策略(指标策略和定时策略必须填写一个)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAutoscalerId() 获取弹性伸缩ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoscalerId(string $AutoscalerId) 设置弹性伸缩ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAutoscalerName() 获取弹性伸缩名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoscalerName(string $AutoscalerName) 设置弹性伸缩名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取弹性伸缩描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置弹性伸缩描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateDate() 获取创建日期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateDate(string $CreateDate) 设置创建日期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifyDate() 获取修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyDate(string $ModifyDate) 设置修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEnableDate() 获取启用时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableDate(string $EnableDate) 设置启用时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getEnabled() 获取是否启用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnabled(boolean $Enabled) 设置是否启用
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Autoscaler extends AbstractModel
 {
@@ -75,43 +59,36 @@ class Autoscaler extends AbstractModel
 
     /**
      * @var array 指标弹性伸缩策略(指标策略和定时策略必须填写一个)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HorizontalAutoscaler;
 
     /**
      * @var array 定时弹性伸缩策略(指标策略和定时策略必须填写一个)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CronHorizontalAutoscaler;
 
     /**
      * @var string 弹性伸缩ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoscalerId;
 
     /**
      * @var string 弹性伸缩名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoscalerName;
 
     /**
      * @var string 弹性伸缩描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var string 创建日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateDate;
 
     /**
      * @var string 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyDate;
 
@@ -123,7 +100,6 @@ class Autoscaler extends AbstractModel
 
     /**
      * @var boolean 是否启用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Enabled;
 
@@ -131,23 +107,15 @@ class Autoscaler extends AbstractModel
      * @param integer $MinReplicas 弹性伸缩最小实例数
      * @param integer $MaxReplicas 弹性伸缩最大实例数
      * @param array $HorizontalAutoscaler 指标弹性伸缩策略(指标策略和定时策略必须填写一个)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CronHorizontalAutoscaler 定时弹性伸缩策略(指标策略和定时策略必须填写一个)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AutoscalerId 弹性伸缩ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AutoscalerName 弹性伸缩名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 弹性伸缩描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateDate 创建日期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyDate 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EnableDate 启用时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Enabled 是否启用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

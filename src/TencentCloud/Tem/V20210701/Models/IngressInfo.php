@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * Ingress 配置
  *
  * @method string getEnvironmentId() 获取环境ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnvironmentId(string $EnvironmentId) 设置环境ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAddressIPVersion() 获取ip version
  * @method void setAddressIPVersion(string $AddressIPVersion) 设置ip version
  * @method string getIngressName() 获取ingress name
@@ -31,9 +29,7 @@ use TencentCloud\Common\AbstractModel;
  * @method array getRules() 获取rules 配置
  * @method void setRules(array $Rules) 设置rules 配置
  * @method string getClbId() 获取clb ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClbId(string $ClbId) 设置clb ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterNamespace() 获取环境namespace
  * @method void setClusterNamespace(string $ClusterNamespace) 设置环境namespace
  * @method array getTls() 获取tls 配置
@@ -41,37 +37,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTls(array $Tls) 设置tls 配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterId() 获取环境集群ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterId(string $ClusterId) 设置环境集群ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVip() 获取clb ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVip(string $Vip) 设置clb ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getMixed() 获取是否混合 https，默认 false，可选值 true 代表有 https 协议监听
  * @method void setMixed(boolean $Mixed) 设置是否混合 https，默认 false，可选值 true 代表有 https 协议监听
  * @method string getRewriteType() 获取重定向模式，可选值：
 - AUTO（自动重定向http到https）
 - NONE（不使用重定向）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRewriteType(string $RewriteType) 设置重定向模式，可选值：
 - AUTO（自动重定向http到https）
 - NONE（不使用重定向）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDomain() 获取clb 域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomain(string $Domain) 设置clb 域名
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class IngressInfo extends AbstractModel
 {
     /**
      * @var string 环境ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnvironmentId;
 
@@ -92,7 +77,6 @@ class IngressInfo extends AbstractModel
 
     /**
      * @var string clb ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClbId;
 
@@ -109,19 +93,16 @@ class IngressInfo extends AbstractModel
 
     /**
      * @var string 环境集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterId;
 
     /**
      * @var string clb ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Vip;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
@@ -134,40 +115,31 @@ class IngressInfo extends AbstractModel
      * @var string 重定向模式，可选值：
 - AUTO（自动重定向http到https）
 - NONE（不使用重定向）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RewriteType;
 
     /**
      * @var string clb 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Domain;
 
     /**
      * @param string $EnvironmentId 环境ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AddressIPVersion ip version
      * @param string $IngressName ingress name
      * @param array $Rules rules 配置
      * @param string $ClbId clb ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterNamespace 环境namespace
      * @param array $Tls tls 配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterId 环境集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Vip clb ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Mixed 是否混合 https，默认 false，可选值 true 代表有 https 协议监听
      * @param string $RewriteType 重定向模式，可选值：
 - AUTO（自动重定向http到https）
 - NONE（不使用重定向）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Domain clb 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

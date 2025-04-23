@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDefinition() 获取录制模板唯一标识。
  * @method void setDefinition(integer $Definition) 设置录制模板唯一标识。
- * @method HLSConfigureInfo getHLSConfigure() 获取HLS 配置参数
- * @method void setHLSConfigure(HLSConfigureInfo $HLSConfigure) 设置HLS 配置参数
+ * @method HLSConfigureInfo getHLSConfigure() 获取HLS配置参数，和MP4Configure需要二选一必填。
+ * @method void setHLSConfigure(HLSConfigureInfo $HLSConfigure) 设置HLS配置参数，和MP4Configure需要二选一必填。
+ * @method MP4ConfigureInfo getMP4Configure() 获取MP4配置参数，和HLSConfigure需要二选一必填。
+ * @method void setMP4Configure(MP4ConfigureInfo $MP4Configure) 设置MP4配置参数，和HLSConfigure需要二选一必填。
  * @method string getName() 获取录制模板名称，长度限制：64 个字符。
  * @method void setName(string $Name) 设置录制模板名称，长度限制：64 个字符。
  * @method string getComment() 获取模板描述信息，长度限制：256 个字符。
@@ -37,9 +39,14 @@ class ModifyLiveRecordTemplateRequest extends AbstractModel
     public $Definition;
 
     /**
-     * @var HLSConfigureInfo HLS 配置参数
+     * @var HLSConfigureInfo HLS配置参数，和MP4Configure需要二选一必填。
      */
     public $HLSConfigure;
+
+    /**
+     * @var MP4ConfigureInfo MP4配置参数，和HLSConfigure需要二选一必填。
+     */
+    public $MP4Configure;
 
     /**
      * @var string 录制模板名称，长度限制：64 个字符。
@@ -53,7 +60,8 @@ class ModifyLiveRecordTemplateRequest extends AbstractModel
 
     /**
      * @param integer $Definition 录制模板唯一标识。
-     * @param HLSConfigureInfo $HLSConfigure HLS 配置参数
+     * @param HLSConfigureInfo $HLSConfigure HLS配置参数，和MP4Configure需要二选一必填。
+     * @param MP4ConfigureInfo $MP4Configure MP4配置参数，和HLSConfigure需要二选一必填。
      * @param string $Name 录制模板名称，长度限制：64 个字符。
      * @param string $Comment 模板描述信息，长度限制：256 个字符。
      */
@@ -77,6 +85,11 @@ class ModifyLiveRecordTemplateRequest extends AbstractModel
         if (array_key_exists("HLSConfigure",$param) and $param["HLSConfigure"] !== null) {
             $this->HLSConfigure = new HLSConfigureInfo();
             $this->HLSConfigure->deserialize($param["HLSConfigure"]);
+        }
+
+        if (array_key_exists("MP4Configure",$param) and $param["MP4Configure"] !== null) {
+            $this->MP4Configure = new MP4ConfigureInfo();
+            $this->MP4Configure->deserialize($param["MP4Configure"]);
         }
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {

@@ -21,93 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * 分批发布单批次详情
  *
  * @method string getPodId() 获取pod Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPodId(string $PodId) 设置pod Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPodStatus() 获取pod状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPodStatus(array $PodStatus) 设置pod状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPodVersion() 获取pod版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPodVersion(string $PodVersion) 设置pod版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取pod创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置pod创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getZone() 获取pod所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZone(string $Zone) 设置pod所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWebshell() 获取webshell地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWebshell(string $Webshell) 设置webshell地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置状态
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DeployServicePodDetail extends AbstractModel
 {
     /**
      * @var string pod Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PodId;
 
     /**
      * @var array pod状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PodStatus;
 
     /**
      * @var string pod版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PodVersion;
 
     /**
      * @var string pod创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string pod所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Zone;
 
     /**
      * @var string webshell地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Webshell;
 
     /**
      * @var string 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @param string $PodId pod Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PodStatus pod状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PodVersion pod版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime pod创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Zone pod所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Webshell webshell地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

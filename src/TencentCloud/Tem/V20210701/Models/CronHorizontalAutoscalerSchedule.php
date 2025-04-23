@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
 例如
 00:00（零点零分触发）
  * @method integer getTargetReplicas() 获取目标实例数（不大于50）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargetReplicas(integer $TargetReplicas) 设置目标实例数（不大于50）
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CronHorizontalAutoscalerSchedule extends AbstractModel
 {
@@ -42,7 +40,6 @@ class CronHorizontalAutoscalerSchedule extends AbstractModel
 
     /**
      * @var integer 目标实例数（不大于50）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetReplicas;
 
@@ -51,7 +48,6 @@ class CronHorizontalAutoscalerSchedule extends AbstractModel
 例如
 00:00（零点零分触发）
      * @param integer $TargetReplicas 目标实例数（不大于50）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

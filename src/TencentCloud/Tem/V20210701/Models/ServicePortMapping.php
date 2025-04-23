@@ -21,141 +21,97 @@ use TencentCloud\Common\AbstractModel;
  * 端口映射详细信息结构体
  *
  * @method string getType() 获取服务类型：如：EXTERNAL，VPC，CLUSTER
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置服务类型：如：EXTERNAL，VPC，CLUSTER
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getServiceName() 获取服务名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceName(string $ServiceName) 设置服务名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterIp() 获取集群内访问vip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterIp(string $ClusterIp) 设置集群内访问vip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExternalIp() 获取集群外方位vip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExternalIp(string $ExternalIp) 设置集群外方位vip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubnetId() 获取子网id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetId(string $SubnetId) 设置子网id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVpcId() 获取vpc id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(string $VpcId) 设置vpc id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLoadBalanceId() 获取LoadBalance Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLoadBalanceId(string $LoadBalanceId) 设置LoadBalance Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getYaml() 获取yaml 内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setYaml(string $Yaml) 设置yaml 内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPorts() 获取暴露端口列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPorts(array $Ports) 设置暴露端口列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPortMappingItemList() 获取端口映射数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPortMappingItemList(array $PortMappingItemList) 设置端口映射数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExternalDomain() 获取clb domain
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExternalDomain(string $ExternalDomain) 设置clb domain
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServicePortMapping extends AbstractModel
 {
     /**
      * @var string 服务类型：如：EXTERNAL，VPC，CLUSTER
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 服务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceName;
 
     /**
      * @var string 集群内访问vip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterIp;
 
     /**
      * @var string 集群外方位vip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExternalIp;
 
     /**
      * @var string 子网id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetId;
 
     /**
      * @var string vpc id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
     /**
      * @var string LoadBalance Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LoadBalanceId;
 
     /**
      * @var string yaml 内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Yaml;
 
     /**
      * @var array 暴露端口列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ports;
 
     /**
      * @var array 端口映射数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PortMappingItemList;
 
     /**
      * @var string clb domain
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExternalDomain;
 
     /**
      * @param string $Type 服务类型：如：EXTERNAL，VPC，CLUSTER
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceName 服务名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterIp 集群内访问vip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExternalIp 集群外方位vip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 子网id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcId vpc id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LoadBalanceId LoadBalance Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Yaml yaml 内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Ports 暴露端口列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PortMappingItemList 端口映射数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExternalDomain clb domain
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

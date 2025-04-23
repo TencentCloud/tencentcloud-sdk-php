@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tem\V20210701\Models;
+namespace TencentCloud\Cdc\V20201214\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 标签
+ * CreateDedicatedClusterImageCache请求参数结构体
  *
- * @method string getTagKey() 获取标签键
- * @method void setTagKey(string $TagKey) 设置标签键
- * @method string getTagValue() 获取标签值
- * @method void setTagValue(string $TagValue) 设置标签值
+ * @method string getDedicatedClusterId() 获取集群ID
+ * @method void setDedicatedClusterId(string $DedicatedClusterId) 设置集群ID
+ * @method string getImageId() 获取镜像ID
+ * @method void setImageId(string $ImageId) 设置镜像ID
  */
-class Tag extends AbstractModel
+class CreateDedicatedClusterImageCacheRequest extends AbstractModel
 {
     /**
-     * @var string 标签键
+     * @var string 集群ID
      */
-    public $TagKey;
+    public $DedicatedClusterId;
 
     /**
-     * @var string 标签值
+     * @var string 镜像ID
      */
-    public $TagValue;
+    public $ImageId;
 
     /**
-     * @param string $TagKey 标签键
-     * @param string $TagValue 标签值
+     * @param string $DedicatedClusterId 集群ID
+     * @param string $ImageId 镜像ID
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class Tag extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TagKey",$param) and $param["TagKey"] !== null) {
-            $this->TagKey = $param["TagKey"];
+        if (array_key_exists("DedicatedClusterId",$param) and $param["DedicatedClusterId"] !== null) {
+            $this->DedicatedClusterId = $param["DedicatedClusterId"];
         }
 
-        if (array_key_exists("TagValue",$param) and $param["TagValue"] !== null) {
-            $this->TagValue = $param["TagValue"];
+        if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
+            $this->ImageId = $param["ImageId"];
         }
     }
 }

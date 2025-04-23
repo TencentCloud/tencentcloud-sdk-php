@@ -126,6 +126,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLast3MaxQPS(integer $Last3MaxQPS) 设置最近3天最大qps
  * @method integer getLast3MaxBandwidth() 获取最近3天最大带宽
  * @method void setLast3MaxBandwidth(integer $Last3MaxBandwidth) 设置最近3天最大带宽
+ * @method MajorEventsProPkg getMajorEventsProPkg() 获取重保增强包
+ * @method void setMajorEventsProPkg(MajorEventsProPkg $MajorEventsProPkg) 设置重保增强包
  */
 class InstanceInfo extends AbstractModel
 {
@@ -355,6 +357,11 @@ class InstanceInfo extends AbstractModel
     public $Last3MaxBandwidth;
 
     /**
+     * @var MajorEventsProPkg 重保增强包
+     */
+    public $MajorEventsProPkg;
+
+    /**
      * @param string $InstanceId 实例唯一ID
      * @param string $InstanceName 实例名称
      * @param string $ResourceIds 实例对应资源ID，计费使用
@@ -408,6 +415,7 @@ class InstanceInfo extends AbstractModel
      * @param integer $FreeDelayFlag 实例延期释放标识
      * @param integer $Last3MaxQPS 最近3天最大qps
      * @param integer $Last3MaxBandwidth 最近3天最大带宽
+     * @param MajorEventsProPkg $MajorEventsProPkg 重保增强包
      */
     function __construct()
     {
@@ -602,6 +610,11 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("Last3MaxBandwidth",$param) and $param["Last3MaxBandwidth"] !== null) {
             $this->Last3MaxBandwidth = $param["Last3MaxBandwidth"];
+        }
+
+        if (array_key_exists("MajorEventsProPkg",$param) and $param["MajorEventsProPkg"] !== null) {
+            $this->MajorEventsProPkg = new MajorEventsProPkg();
+            $this->MajorEventsProPkg->deserialize($param["MajorEventsProPkg"]);
         }
     }
 }

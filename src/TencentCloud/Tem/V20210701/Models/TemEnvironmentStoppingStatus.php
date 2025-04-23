@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 环境停止进程（只统计由环境停止操作触发的应用数量）
  *
  * @method integer getApplicationNumNeedToStop() 获取需要停止的应用数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationNumNeedToStop(integer $ApplicationNumNeedToStop) 设置需要停止的应用数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStoppedApplicationNum() 获取已经停止的应用数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStoppedApplicationNum(integer $StoppedApplicationNum) 设置已经停止的应用数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStopFailedApplicationNum() 获取停止失败的应用数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStopFailedApplicationNum(integer $StopFailedApplicationNum) 设置停止失败的应用数量
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TemEnvironmentStoppingStatus extends AbstractModel
 {
     /**
      * @var integer 需要停止的应用数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationNumNeedToStop;
 
     /**
      * @var integer 已经停止的应用数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StoppedApplicationNum;
 
     /**
      * @var integer 停止失败的应用数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StopFailedApplicationNum;
 
     /**
      * @param integer $ApplicationNumNeedToStop 需要停止的应用数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StoppedApplicationNum 已经停止的应用数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StopFailedApplicationNum 停止失败的应用数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -29,9 +29,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getPages() 获取页数
  * @method void setPages(integer $Pages) 设置页数
  * @method integer getCurrent() 获取当前条目
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCurrent(integer $Current) 设置当前条目
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NamespacePage extends AbstractModel
 {
@@ -57,7 +55,6 @@ class NamespacePage extends AbstractModel
 
     /**
      * @var integer 当前条目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Current;
 
@@ -67,7 +64,6 @@ class NamespacePage extends AbstractModel
      * @param integer $Size 条目数
      * @param integer $Pages 页数
      * @param integer $Current 当前条目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

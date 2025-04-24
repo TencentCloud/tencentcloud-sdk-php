@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConfigFileSupportedClient(integer $ConfigFileSupportedClient) 设置配置文件类型
  * @method ConfigFilePersistent getConfigFilePersistent() 获取配置文件持久化
  * @method void setConfigFilePersistent(ConfigFilePersistent $ConfigFilePersistent) 设置配置文件持久化
+ * @method boolean getEncrypted() 获取是否开启加密算法
+ * @method void setEncrypted(boolean $Encrypted) 设置是否开启加密算法
+ * @method string getEncryptAlgo() 获取加密算法
+ * @method void setEncryptAlgo(string $EncryptAlgo) 设置加密算法
  */
 class ConfigFile extends AbstractModel
 {
@@ -143,6 +147,16 @@ class ConfigFile extends AbstractModel
     public $ConfigFilePersistent;
 
     /**
+     * @var boolean 是否开启加密算法
+     */
+    public $Encrypted;
+
+    /**
+     * @var string 加密算法
+     */
+    public $EncryptAlgo;
+
+    /**
      * @param integer $Id 配置文件id
      * @param string $Name 配置文件名称
      * @param string $Namespace 配置文件命名空间
@@ -160,6 +174,8 @@ class ConfigFile extends AbstractModel
      * @param string $ReleaseBy 配置文件发布者
      * @param integer $ConfigFileSupportedClient 配置文件类型
      * @param ConfigFilePersistent $ConfigFilePersistent 配置文件持久化
+     * @param boolean $Encrypted 是否开启加密算法
+     * @param string $EncryptAlgo 加密算法
      */
     function __construct()
     {
@@ -246,6 +262,14 @@ class ConfigFile extends AbstractModel
         if (array_key_exists("ConfigFilePersistent",$param) and $param["ConfigFilePersistent"] !== null) {
             $this->ConfigFilePersistent = new ConfigFilePersistent();
             $this->ConfigFilePersistent->deserialize($param["ConfigFilePersistent"]);
+        }
+
+        if (array_key_exists("Encrypted",$param) and $param["Encrypted"] !== null) {
+            $this->Encrypted = $param["Encrypted"];
+        }
+
+        if (array_key_exists("EncryptAlgo",$param) and $param["EncryptAlgo"] !== null) {
+            $this->EncryptAlgo = $param["EncryptAlgo"];
         }
     }
 }

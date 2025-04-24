@@ -53,11 +53,13 @@ use TencentCloud\Gs\V20191118\Models as Models;
  * @method Models\DescribeInstancesCountResponse DescribeInstancesCount(Models\DescribeInstancesCountRequest $req) 获取并发总数和运行数
  * @method Models\DestroyAndroidInstancesResponse DestroyAndroidInstances(Models\DestroyAndroidInstancesRequest $req) 销毁安卓实例
  * @method Models\ExecuteCommandOnAndroidInstancesResponse ExecuteCommandOnAndroidInstances(Models\ExecuteCommandOnAndroidInstancesRequest $req) 在安卓实例上异步执行命令，命令输出结果如果内容过长会被截断
+ * @method Models\FetchAndroidInstancesLogsResponse FetchAndroidInstancesLogs(Models\FetchAndroidInstancesLogsRequest $req) 批量获取安卓实例日志
  * @method Models\InstallAndroidInstancesAppResponse InstallAndroidInstancesApp(Models\InstallAndroidInstancesAppRequest $req) 安装安卓实例应用
  * @method Models\ModifyAndroidAppResponse ModifyAndroidApp(Models\ModifyAndroidAppRequest $req) 修改安卓应用信息
  * @method Models\ModifyAndroidAppVersionResponse ModifyAndroidAppVersion(Models\ModifyAndroidAppVersionRequest $req) 修改安卓应用版本
  * @method Models\ModifyAndroidInstanceInformationResponse ModifyAndroidInstanceInformation(Models\ModifyAndroidInstanceInformationRequest $req) 修改安卓实例的信息
  * @method Models\ModifyAndroidInstanceResolutionResponse ModifyAndroidInstanceResolution(Models\ModifyAndroidInstanceResolutionRequest $req) 修改安卓实例分辨率。需要注意的是该接口可能导致正在运行的应用出现闪退，所以建议在实例维护时期才进行调用。
+ * @method Models\ModifyAndroidInstancesInformationResponse ModifyAndroidInstancesInformation(Models\ModifyAndroidInstancesInformationRequest $req) 批量修改安卓实例信息
  * @method Models\ModifyAndroidInstancesLabelsResponse ModifyAndroidInstancesLabels(Models\ModifyAndroidInstancesLabelsRequest $req) 修改安卓实例分辨率。需要注意的是该接口可能导致正在运行的应用出现闪退，所以建议在实例维护时期才进行调用。
  * @method Models\ModifyAndroidInstancesResolutionResponse ModifyAndroidInstancesResolution(Models\ModifyAndroidInstancesResolutionRequest $req) 修改安卓实例分辨率。需要注意的是该接口需要重启才能生效。
  * @method Models\ModifyAndroidInstancesUserIdResponse ModifyAndroidInstancesUserId(Models\ModifyAndroidInstancesUserIdRequest $req) 批量修改安卓实例的用户ID

@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
 一个用户绑定了多个角色时以RoleIdList为准
  * @method integer getRoleIdList() 获取用户角色id列表
  * @method void setRoleIdList(integer $RoleIdList) 设置用户角色id列表
+ * @method array getRoleList() 获取用户角色id列表
+ * @method void setRoleList(array $RoleList) 设置用户角色id列表
  * @method array getSkillGroupList() 获取所属技能组列表
  * @method void setSkillGroupList(array $SkillGroupList) 设置所属技能组列表
  * @method integer getLastModifyTimestamp() 获取最后修改时间
@@ -79,8 +81,14 @@ class StaffInfo extends AbstractModel
 
     /**
      * @var integer 用户角色id列表
+     * @deprecated
      */
     public $RoleIdList;
+
+    /**
+     * @var array 用户角色id列表
+     */
+    public $RoleList;
 
     /**
      * @var array 所属技能组列表
@@ -106,6 +114,7 @@ class StaffInfo extends AbstractModel
      * @param integer $RoleId 用户角色id
 一个用户绑定了多个角色时以RoleIdList为准
      * @param integer $RoleIdList 用户角色id列表
+     * @param array $RoleList 用户角色id列表
      * @param array $SkillGroupList 所属技能组列表
      * @param integer $LastModifyTimestamp 最后修改时间
      * @param string $ExtensionNumber 座席分机号（1 到 8 打头，4 - 6 位）
@@ -149,6 +158,10 @@ class StaffInfo extends AbstractModel
 
         if (array_key_exists("RoleIdList",$param) and $param["RoleIdList"] !== null) {
             $this->RoleIdList = $param["RoleIdList"];
+        }
+
+        if (array_key_exists("RoleList",$param) and $param["RoleList"] !== null) {
+            $this->RoleList = $param["RoleList"];
         }
 
         if (array_key_exists("SkillGroupList",$param) and $param["SkillGroupList"] !== null) {

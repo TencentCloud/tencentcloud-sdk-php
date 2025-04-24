@@ -118,6 +118,10 @@ UPDATING 更新中
  * @method void setSubUin(string $SubUin) 设置服务组的subuin
  * @method integer getAppId() 获取服务组的app_id
  * @method void setAppId(integer $AppId) 设置服务组的app_id
+ * @method boolean getAuthorizationEnable() 获取是否开启鉴权
+ * @method void setAuthorizationEnable(boolean $AuthorizationEnable) 设置是否开启鉴权
+ * @method array getAuthTokens() 获取限流鉴权 token 列表
+ * @method void setAuthTokens(array $AuthTokens) 设置限流鉴权 token 列表
  */
 class ServiceGroup extends AbstractModel
 {
@@ -251,6 +255,16 @@ UPDATING 更新中
     public $AppId;
 
     /**
+     * @var boolean 是否开启鉴权
+     */
+    public $AuthorizationEnable;
+
+    /**
+     * @var array 限流鉴权 token 列表
+     */
+    public $AuthTokens;
+
+    /**
      * @param string $ServiceGroupId 服务组id
      * @param string $ServiceGroupName 服务组名
      * @param string $CreatedBy 创建者
@@ -300,6 +314,8 @@ UPDATING 更新中
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubUin 服务组的subuin
      * @param integer $AppId 服务组的app_id
+     * @param boolean $AuthorizationEnable 是否开启鉴权
+     * @param array $AuthTokens 限流鉴权 token 列表
      */
     function __construct()
     {
@@ -402,6 +418,19 @@ UPDATING 更新中
 
         if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
             $this->AppId = $param["AppId"];
+        }
+
+        if (array_key_exists("AuthorizationEnable",$param) and $param["AuthorizationEnable"] !== null) {
+            $this->AuthorizationEnable = $param["AuthorizationEnable"];
+        }
+
+        if (array_key_exists("AuthTokens",$param) and $param["AuthTokens"] !== null) {
+            $this->AuthTokens = [];
+            foreach ($param["AuthTokens"] as $key => $value){
+                $obj = new AuthToken();
+                $obj->deserialize($value);
+                array_push($this->AuthTokens, $obj);
+            }
         }
     }
 }

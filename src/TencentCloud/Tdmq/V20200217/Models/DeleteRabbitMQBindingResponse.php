@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteRabbitMQBinding返回参数结构体
  *
- * @method string getInstanceId() 获取实例名称
- * @method void setInstanceId(string $InstanceId) 设置实例名称
+ * @method string getInstanceId() 获取实例 ID
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID
  * @method string getVirtualHost() 获取vhost参数
  * @method void setVirtualHost(string $VirtualHost) 设置vhost参数
  * @method integer getBindingId() 获取路由关系Id
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DeleteRabbitMQBindingResponse extends AbstractModel
 {
     /**
-     * @var string 实例名称
+     * @var string 实例 ID
      */
     public $InstanceId;
 
@@ -52,7 +52,7 @@ class DeleteRabbitMQBindingResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $InstanceId 实例名称
+     * @param string $InstanceId 实例 ID
      * @param string $VirtualHost vhost参数
      * @param integer $BindingId 路由关系Id
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。

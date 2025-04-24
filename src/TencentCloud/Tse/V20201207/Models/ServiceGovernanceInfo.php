@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimiterVpcInfos(array $LimiterVpcInfos) 设置服务治理限流server引擎绑定的网络信息
  * @method array getCLSTopics() 获取引擎关联CLS日志主题信息
  * @method void setCLSTopics(array $CLSTopics) 设置引擎关联CLS日志主题信息
+ * @method string getSubPassword() 获取子用户密码
+ * @method void setSubPassword(string $SubPassword) 设置子用户密码
  */
 class ServiceGovernanceInfo extends AbstractModel
 {
@@ -87,6 +89,11 @@ class ServiceGovernanceInfo extends AbstractModel
     public $CLSTopics;
 
     /**
+     * @var string 子用户密码
+     */
+    public $SubPassword;
+
+    /**
      * @param string $EngineRegion 引擎所在的地域
      * @param array $BoundK8SInfos 服务治理引擎绑定的kubernetes集群信息
      * @param array $VpcInfos 服务治理引擎绑定的网络信息
@@ -96,6 +103,7 @@ class ServiceGovernanceInfo extends AbstractModel
      * @param array $PgwVpcInfos 服务治理pushgateway引擎绑定的网络信息
      * @param array $LimiterVpcInfos 服务治理限流server引擎绑定的网络信息
      * @param array $CLSTopics 引擎关联CLS日志主题信息
+     * @param string $SubPassword 子用户密码
      */
     function __construct()
     {
@@ -169,6 +177,10 @@ class ServiceGovernanceInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->CLSTopics, $obj);
             }
+        }
+
+        if (array_key_exists("SubPassword",$param) and $param["SubPassword"] !== null) {
+            $this->SubPassword = $param["SubPassword"];
         }
     }
 }

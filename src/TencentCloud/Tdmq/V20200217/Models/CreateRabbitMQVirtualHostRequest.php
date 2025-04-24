@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateRabbitMQVirtualHost请求参数结构体
  *
- * @method string getInstanceId() 获取集群实例Id
- * @method void setInstanceId(string $InstanceId) 设置集群实例Id
+ * @method string getInstanceId() 获取实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
  * @method string getVirtualHost() 获取vhost名
  * @method void setVirtualHost(string $VirtualHost) 设置vhost名
  * @method string getDescription() 获取描述
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateRabbitMQVirtualHostRequest extends AbstractModel
 {
     /**
-     * @var string 集群实例Id
+     * @var string 实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
      */
     public $InstanceId;
 
@@ -59,7 +59,7 @@ class CreateRabbitMQVirtualHostRequest extends AbstractModel
     public $MirrorQueuePolicyFlag;
 
     /**
-     * @param string $InstanceId 集群实例Id
+     * @param string $InstanceId 实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
      * @param string $VirtualHost vhost名
      * @param string $Description 描述
      * @param boolean $TraceFlag 消息轨迹开关,true打开,false关闭,默认关闭

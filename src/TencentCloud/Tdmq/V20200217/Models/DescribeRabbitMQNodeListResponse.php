@@ -20,11 +20,11 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRabbitMQNodeList返回参数结构体
  *
- * @method integer getTotalCount() 获取集群列表数量
- * @method void setTotalCount(integer $TotalCount) 设置集群列表数量
- * @method array getNodeList() 获取集群列表
+ * @method integer getTotalCount() 获取集群节点数量
+ * @method void setTotalCount(integer $TotalCount) 设置集群节点数量
+ * @method array getNodeList() 获取集群节点列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNodeList(array $NodeList) 设置集群列表
+ * @method void setNodeList(array $NodeList) 设置集群节点列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeRabbitMQNodeListResponse extends AbstractModel
 {
     /**
-     * @var integer 集群列表数量
+     * @var integer 集群节点数量
      */
     public $TotalCount;
 
     /**
-     * @var array 集群列表
+     * @var array 集群节点列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeList;
@@ -48,8 +48,8 @@ class DescribeRabbitMQNodeListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 集群列表数量
-     * @param array $NodeList 集群列表
+     * @param integer $TotalCount 集群节点数量
+     * @param array $NodeList 集群节点列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

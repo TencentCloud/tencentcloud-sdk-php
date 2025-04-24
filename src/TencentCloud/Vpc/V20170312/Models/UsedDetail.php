@@ -32,8 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemainingAmount(TrafficFlow $RemainingAmount) 设置本次抵扣后剩余量
  * @method string getTime() 获取抵扣时间
  * @method void setTime(string $Time) 设置抵扣时间
- * @method string getResourceType() 获取资源类型。可能的值: CVM, LB, NAT, HAVIP, EIP
- * @method void setResourceType(string $ResourceType) 设置资源类型。可能的值: CVM, LB, NAT, HAVIP, EIP
+ * @method string getResourceType() 获取资源类型。可选值: EIP, BWP, LB
+
+ * @method void setResourceType(string $ResourceType) 设置资源类型。可选值: EIP, BWP, LB
+
  * @method string getResourceId() 获取资源ID
  * @method void setResourceId(string $ResourceId) 设置资源ID
  * @method string getResourceName() 获取资源名称
@@ -74,7 +76,8 @@ class UsedDetail extends AbstractModel
     public $Time;
 
     /**
-     * @var string 资源类型。可能的值: CVM, LB, NAT, HAVIP, EIP
+     * @var string 资源类型。可选值: EIP, BWP, LB
+
      */
     public $ResourceType;
 
@@ -100,7 +103,8 @@ class UsedDetail extends AbstractModel
      * @param TrafficFlow $Deduction 本次抵扣
      * @param TrafficFlow $RemainingAmount 本次抵扣后剩余量
      * @param string $Time 抵扣时间
-     * @param string $ResourceType 资源类型。可能的值: CVM, LB, NAT, HAVIP, EIP
+     * @param string $ResourceType 资源类型。可选值: EIP, BWP, LB
+
      * @param string $ResourceId 资源ID
      * @param string $ResourceName 资源名称
      * @param string $Deadline 流量包到期时间

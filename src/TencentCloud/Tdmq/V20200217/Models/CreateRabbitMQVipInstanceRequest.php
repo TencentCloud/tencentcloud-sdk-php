@@ -22,22 +22,40 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getZoneIds() 获取可用区
  * @method void setZoneIds(array $ZoneIds) 设置可用区
- * @method string getVpcId() 获取私有网络VpcId
- * @method void setVpcId(string $VpcId) 设置私有网络VpcId
- * @method string getSubnetId() 获取私有网络SubnetId
- * @method void setSubnetId(string $SubnetId) 设置私有网络SubnetId
+ * @method string getVpcId() 获取私有网络ID，形如 vpc-xxx。有效的 VpcId 可通过登录[私有网络](https://console.cloud.tencent.com/vpc/vpc?rid=1)控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372)，从接口返回中的 unVpcId 字段获取。若在创建子机时 VpcId 与 SubnetId 同时传入 DEFAULT，则强制使用默认 vpc 网络。
+ * @method void setVpcId(string $VpcId) 设置私有网络ID，形如 vpc-xxx。有效的 VpcId 可通过登录[私有网络](https://console.cloud.tencent.com/vpc/vpc?rid=1)控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372)，从接口返回中的 unVpcId 字段获取。若在创建子机时 VpcId 与 SubnetId 同时传入 DEFAULT，则强制使用默认 vpc 网络。
+ * @method string getSubnetId() 获取私有网络子网 ID，形如 subnet-xxx。有效的私有网络子网 ID 可通过登录[子网控制台](https://console.cloud.tencent.com/vpc/subnet?rid=1)查询；也可以调用接口 [DescribeSubnets](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的 unSubnetId 字段获取。若在创建子机时 SubnetId 与 VpcId 同时传入 DEFAULT，则强制使用默认 vpc 网络。
+ * @method void setSubnetId(string $SubnetId) 设置私有网络子网 ID，形如 subnet-xxx。有效的私有网络子网 ID 可通过登录[子网控制台](https://console.cloud.tencent.com/vpc/subnet?rid=1)查询；也可以调用接口 [DescribeSubnets](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的 unSubnetId 字段获取。若在创建子机时 SubnetId 与 VpcId 同时传入 DEFAULT，则强制使用默认 vpc 网络。
  * @method string getClusterName() 获取集群名称
  * @method void setClusterName(string $ClusterName) 设置集群名称
- * @method string getNodeSpec() 获取节点规格,基础型rabbit-vip-basic-1,标准型rabbit-vip-basic-2,高阶1型rabbit-vip-basic-3,高阶2型rabbit-vip-basic-4。不传默认为基础型
- * @method void setNodeSpec(string $NodeSpec) 设置节点规格,基础型rabbit-vip-basic-1,标准型rabbit-vip-basic-2,高阶1型rabbit-vip-basic-3,高阶2型rabbit-vip-basic-4。不传默认为基础型
+ * @method string getNodeSpec() 获取集群的节点规格，需要输入对应的规格标识：
+2C8G：rabbit-vip-basic-2c8g
+4C16G：rabbit-vip-basic-4c16g
+8C32G：rabbit-vip-basic-8c32g
+16C32G：rabbit-vip-basic-4
+16C64G：rabbit-vip-basic-16c64g
+2C4G：rabbit-vip-basic-5
+4C8G：rabbit-vip-basic-1
+8C16G（已售罄）：rabbit-vip-basic-2
+不传默认为 4C8G：rabbit-vip-basic-1
+ * @method void setNodeSpec(string $NodeSpec) 设置集群的节点规格，需要输入对应的规格标识：
+2C8G：rabbit-vip-basic-2c8g
+4C16G：rabbit-vip-basic-4c16g
+8C32G：rabbit-vip-basic-8c32g
+16C32G：rabbit-vip-basic-4
+16C64G：rabbit-vip-basic-16c64g
+2C4G：rabbit-vip-basic-5
+4C8G：rabbit-vip-basic-1
+8C16G（已售罄）：rabbit-vip-basic-2
+不传默认为 4C8G：rabbit-vip-basic-1
  * @method integer getNodeNum() 获取节点数量,多可用区最少为3节点。不传默认单可用区为1,多可用区为3
  * @method void setNodeNum(integer $NodeNum) 设置节点数量,多可用区最少为3节点。不传默认单可用区为1,多可用区为3
  * @method integer getStorageSize() 获取单节点存储规格,不传默认为200G
  * @method void setStorageSize(integer $StorageSize) 设置单节点存储规格,不传默认为200G
- * @method boolean getEnableCreateDefaultHaMirrorQueue() 获取镜像队列,不传默认为false
- * @method void setEnableCreateDefaultHaMirrorQueue(boolean $EnableCreateDefaultHaMirrorQueue) 设置镜像队列,不传默认为false
- * @method boolean getAutoRenewFlag() 获取预付费使用。自动续费,不传默认为true
- * @method void setAutoRenewFlag(boolean $AutoRenewFlag) 设置预付费使用。自动续费,不传默认为true
+ * @method boolean getEnableCreateDefaultHaMirrorQueue() 获取是否开启默认镜像队列，true 表示为开启，false 表示为不开启。不传默认为 false
+ * @method void setEnableCreateDefaultHaMirrorQueue(boolean $EnableCreateDefaultHaMirrorQueue) 设置是否开启默认镜像队列，true 表示为开启，false 表示为不开启。不传默认为 false
+ * @method boolean getAutoRenewFlag() 获取仅预付费集群（PayMode 参数为 1 时）使用该参数，表示是否自动续费，true 表示打开自动续费。不传默认为 true
+ * @method void setAutoRenewFlag(boolean $AutoRenewFlag) 设置仅预付费集群（PayMode 参数为 1 时）使用该参数，表示是否自动续费，true 表示打开自动续费。不传默认为 true
  * @method integer getTimeSpan() 获取购买时长,不传默认为1(月)
  * @method void setTimeSpan(integer $TimeSpan) 设置购买时长,不传默认为1(月)
  * @method integer getPayMode() 获取付费方式，0 为后付费，即按量计费；1 为预付费，即包年包月。默认包年包月
@@ -48,8 +66,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsIntl(boolean $IsIntl) 设置是否国际站请求，默认 false
  * @method array getResourceTags() 获取资源标签列表
  * @method void setResourceTags(array $ResourceTags) 设置资源标签列表
- * @method integer getBandwidth() 获取公网带宽大小，单位 M
- * @method void setBandwidth(integer $Bandwidth) 设置公网带宽大小，单位 M
+ * @method integer getBandwidth() 获取公网带宽大小，单位 Mbps
+ * @method void setBandwidth(integer $Bandwidth) 设置公网带宽大小，单位 Mbps
  * @method boolean getEnablePublicAccess() 获取是否打开公网接入，不传默认为false
  * @method void setEnablePublicAccess(boolean $EnablePublicAccess) 设置是否打开公网接入，不传默认为false
  */
@@ -61,12 +79,12 @@ class CreateRabbitMQVipInstanceRequest extends AbstractModel
     public $ZoneIds;
 
     /**
-     * @var string 私有网络VpcId
+     * @var string 私有网络ID，形如 vpc-xxx。有效的 VpcId 可通过登录[私有网络](https://console.cloud.tencent.com/vpc/vpc?rid=1)控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372)，从接口返回中的 unVpcId 字段获取。若在创建子机时 VpcId 与 SubnetId 同时传入 DEFAULT，则强制使用默认 vpc 网络。
      */
     public $VpcId;
 
     /**
-     * @var string 私有网络SubnetId
+     * @var string 私有网络子网 ID，形如 subnet-xxx。有效的私有网络子网 ID 可通过登录[子网控制台](https://console.cloud.tencent.com/vpc/subnet?rid=1)查询；也可以调用接口 [DescribeSubnets](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的 unSubnetId 字段获取。若在创建子机时 SubnetId 与 VpcId 同时传入 DEFAULT，则强制使用默认 vpc 网络。
      */
     public $SubnetId;
 
@@ -76,7 +94,16 @@ class CreateRabbitMQVipInstanceRequest extends AbstractModel
     public $ClusterName;
 
     /**
-     * @var string 节点规格,基础型rabbit-vip-basic-1,标准型rabbit-vip-basic-2,高阶1型rabbit-vip-basic-3,高阶2型rabbit-vip-basic-4。不传默认为基础型
+     * @var string 集群的节点规格，需要输入对应的规格标识：
+2C8G：rabbit-vip-basic-2c8g
+4C16G：rabbit-vip-basic-4c16g
+8C32G：rabbit-vip-basic-8c32g
+16C32G：rabbit-vip-basic-4
+16C64G：rabbit-vip-basic-16c64g
+2C4G：rabbit-vip-basic-5
+4C8G：rabbit-vip-basic-1
+8C16G（已售罄）：rabbit-vip-basic-2
+不传默认为 4C8G：rabbit-vip-basic-1
      */
     public $NodeSpec;
 
@@ -91,12 +118,12 @@ class CreateRabbitMQVipInstanceRequest extends AbstractModel
     public $StorageSize;
 
     /**
-     * @var boolean 镜像队列,不传默认为false
+     * @var boolean 是否开启默认镜像队列，true 表示为开启，false 表示为不开启。不传默认为 false
      */
     public $EnableCreateDefaultHaMirrorQueue;
 
     /**
-     * @var boolean 预付费使用。自动续费,不传默认为true
+     * @var boolean 仅预付费集群（PayMode 参数为 1 时）使用该参数，表示是否自动续费，true 表示打开自动续费。不传默认为 true
      */
     public $AutoRenewFlag;
 
@@ -126,7 +153,7 @@ class CreateRabbitMQVipInstanceRequest extends AbstractModel
     public $ResourceTags;
 
     /**
-     * @var integer 公网带宽大小，单位 M
+     * @var integer 公网带宽大小，单位 Mbps
      */
     public $Bandwidth;
 
@@ -137,20 +164,29 @@ class CreateRabbitMQVipInstanceRequest extends AbstractModel
 
     /**
      * @param array $ZoneIds 可用区
-     * @param string $VpcId 私有网络VpcId
-     * @param string $SubnetId 私有网络SubnetId
+     * @param string $VpcId 私有网络ID，形如 vpc-xxx。有效的 VpcId 可通过登录[私有网络](https://console.cloud.tencent.com/vpc/vpc?rid=1)控制台查询；也可以调用接口 [DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372)，从接口返回中的 unVpcId 字段获取。若在创建子机时 VpcId 与 SubnetId 同时传入 DEFAULT，则强制使用默认 vpc 网络。
+     * @param string $SubnetId 私有网络子网 ID，形如 subnet-xxx。有效的私有网络子网 ID 可通过登录[子网控制台](https://console.cloud.tencent.com/vpc/subnet?rid=1)查询；也可以调用接口 [DescribeSubnets](https://cloud.tencent.com/document/api/215/15784)，从接口返回中的 unSubnetId 字段获取。若在创建子机时 SubnetId 与 VpcId 同时传入 DEFAULT，则强制使用默认 vpc 网络。
      * @param string $ClusterName 集群名称
-     * @param string $NodeSpec 节点规格,基础型rabbit-vip-basic-1,标准型rabbit-vip-basic-2,高阶1型rabbit-vip-basic-3,高阶2型rabbit-vip-basic-4。不传默认为基础型
+     * @param string $NodeSpec 集群的节点规格，需要输入对应的规格标识：
+2C8G：rabbit-vip-basic-2c8g
+4C16G：rabbit-vip-basic-4c16g
+8C32G：rabbit-vip-basic-8c32g
+16C32G：rabbit-vip-basic-4
+16C64G：rabbit-vip-basic-16c64g
+2C4G：rabbit-vip-basic-5
+4C8G：rabbit-vip-basic-1
+8C16G（已售罄）：rabbit-vip-basic-2
+不传默认为 4C8G：rabbit-vip-basic-1
      * @param integer $NodeNum 节点数量,多可用区最少为3节点。不传默认单可用区为1,多可用区为3
      * @param integer $StorageSize 单节点存储规格,不传默认为200G
-     * @param boolean $EnableCreateDefaultHaMirrorQueue 镜像队列,不传默认为false
-     * @param boolean $AutoRenewFlag 预付费使用。自动续费,不传默认为true
+     * @param boolean $EnableCreateDefaultHaMirrorQueue 是否开启默认镜像队列，true 表示为开启，false 表示为不开启。不传默认为 false
+     * @param boolean $AutoRenewFlag 仅预付费集群（PayMode 参数为 1 时）使用该参数，表示是否自动续费，true 表示打开自动续费。不传默认为 true
      * @param integer $TimeSpan 购买时长,不传默认为1(月)
      * @param integer $PayMode 付费方式，0 为后付费，即按量计费；1 为预付费，即包年包月。默认包年包月
      * @param string $ClusterVersion 集群版本，不传默认为 3.8.30，可选值为 3.8.30 和 3.11.8
      * @param boolean $IsIntl 是否国际站请求，默认 false
      * @param array $ResourceTags 资源标签列表
-     * @param integer $Bandwidth 公网带宽大小，单位 M
+     * @param integer $Bandwidth 公网带宽大小，单位 Mbps
      * @param boolean $EnablePublicAccess 是否打开公网接入，不传默认为false
      */
     function __construct()

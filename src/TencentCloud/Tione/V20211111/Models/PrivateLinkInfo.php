@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setState(string $State) 设置私有连接状态
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getInnerGrpcAddr() 获取grpc内网调用地址
+ * @method void setInnerGrpcAddr(array $InnerGrpcAddr) 设置grpc内网调用地址
  */
 class PrivateLinkInfo extends AbstractModel
 {
@@ -74,6 +76,11 @@ class PrivateLinkInfo extends AbstractModel
     public $State;
 
     /**
+     * @var array grpc内网调用地址
+     */
+    public $InnerGrpcAddr;
+
+    /**
      * @param string $VpcId 私有连接所在的VPCID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 私有连接所在的子网ID
@@ -84,6 +91,7 @@ class PrivateLinkInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $State 私有连接状态
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $InnerGrpcAddr grpc内网调用地址
      */
     function __construct()
     {
@@ -116,6 +124,10 @@ class PrivateLinkInfo extends AbstractModel
 
         if (array_key_exists("State",$param) and $param["State"] !== null) {
             $this->State = $param["State"];
+        }
+
+        if (array_key_exists("InnerGrpcAddr",$param) and $param["InnerGrpcAddr"] !== null) {
+            $this->InnerGrpcAddr = $param["InnerGrpcAddr"];
         }
     }
 }

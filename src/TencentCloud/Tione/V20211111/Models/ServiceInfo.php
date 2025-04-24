@@ -166,6 +166,10 @@ HYBRID_PAID:
  * @method void setTerminationGracePeriodSeconds(integer $TerminationGracePeriodSeconds) 设置服务的优雅退出时限。单位为秒，默认值为30，最小为1
  * @method array getPreStopCommand() 获取服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束
  * @method void setPreStopCommand(array $PreStopCommand) 设置服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束
+ * @method boolean getGrpcEnable() 获取是否启用grpc端口
+ * @method void setGrpcEnable(boolean $GrpcEnable) 设置是否启用grpc端口
+ * @method HealthProbe getHealthProbe() 获取健康探针
+ * @method void setHealthProbe(HealthProbe $HealthProbe) 设置健康探针
  */
 class ServiceInfo extends AbstractModel
 {
@@ -381,6 +385,16 @@ HYBRID_PAID:
     public $PreStopCommand;
 
     /**
+     * @var boolean 是否启用grpc端口
+     */
+    public $GrpcEnable;
+
+    /**
+     * @var HealthProbe 健康探针
+     */
+    public $HealthProbe;
+
+    /**
      * @param integer $Replicas 期望运行的Pod数量，停止状态是0
 不同计费模式和调节模式下对应关系如下
 PREPAID 和 POSTPAID_BY_HOUR:
@@ -454,6 +468,8 @@ HYBRID_PAID:
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TerminationGracePeriodSeconds 服务的优雅退出时限。单位为秒，默认值为30，最小为1
      * @param array $PreStopCommand 服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束
+     * @param boolean $GrpcEnable 是否启用grpc端口
+     * @param HealthProbe $HealthProbe 健康探针
      */
     function __construct()
     {
@@ -630,6 +646,15 @@ HYBRID_PAID:
 
         if (array_key_exists("PreStopCommand",$param) and $param["PreStopCommand"] !== null) {
             $this->PreStopCommand = $param["PreStopCommand"];
+        }
+
+        if (array_key_exists("GrpcEnable",$param) and $param["GrpcEnable"] !== null) {
+            $this->GrpcEnable = $param["GrpcEnable"];
+        }
+
+        if (array_key_exists("HealthProbe",$param) and $param["HealthProbe"] !== null) {
+            $this->HealthProbe = new HealthProbe();
+            $this->HealthProbe->deserialize($param["HealthProbe"]);
         }
     }
 }

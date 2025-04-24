@@ -140,6 +140,10 @@ HYBRID_PAID:
  * @method void setTerminationGracePeriodSeconds(integer $TerminationGracePeriodSeconds) 设置30
  * @method array getPreStopCommand() 获取["sleep","60"]
  * @method void setPreStopCommand(array $PreStopCommand) 设置["sleep","60"]
+ * @method boolean getGrpcEnable() 获取是否启用 grpc 端口
+ * @method void setGrpcEnable(boolean $GrpcEnable) 设置是否启用 grpc 端口
+ * @method HealthProbe getHealthProbe() 获取健康探针
+ * @method void setHealthProbe(HealthProbe $HealthProbe) 设置健康探针
  */
 class CreateModelServiceRequest extends AbstractModel
 {
@@ -352,6 +356,16 @@ HYBRID_PAID:
     public $PreStopCommand;
 
     /**
+     * @var boolean 是否启用 grpc 端口
+     */
+    public $GrpcEnable;
+
+    /**
+     * @var HealthProbe 健康探针
+     */
+    public $HealthProbe;
+
+    /**
      * @param string $ServiceGroupId 新增版本时需要填写
      * @param string $ServiceGroupName 不超过60个字，仅支持英文、数字、下划线"_"、短横"-"，只能以英文、数字开头
      * @param string $ServiceDescription 模型服务的描述
@@ -412,6 +426,8 @@ HYBRID_PAID:
      * @param integer $InstancePerReplicas 单副本下的实例数，仅在部署类型为DIST时生效，默认1
      * @param integer $TerminationGracePeriodSeconds 30
      * @param array $PreStopCommand ["sleep","60"]
+     * @param boolean $GrpcEnable 是否启用 grpc 端口
+     * @param HealthProbe $HealthProbe 健康探针
      */
     function __construct()
     {
@@ -596,6 +612,15 @@ HYBRID_PAID:
 
         if (array_key_exists("PreStopCommand",$param) and $param["PreStopCommand"] !== null) {
             $this->PreStopCommand = $param["PreStopCommand"];
+        }
+
+        if (array_key_exists("GrpcEnable",$param) and $param["GrpcEnable"] !== null) {
+            $this->GrpcEnable = $param["GrpcEnable"];
+        }
+
+        if (array_key_exists("HealthProbe",$param) and $param["HealthProbe"] !== null) {
+            $this->HealthProbe = new HealthProbe();
+            $this->HealthProbe->deserialize($param["HealthProbe"]);
         }
     }
 }

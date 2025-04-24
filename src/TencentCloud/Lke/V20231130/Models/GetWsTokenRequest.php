@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetWsToken请求参数结构体
  *
- * @method integer getType() 获取接入类型，当前请填写5
- * @method void setType(integer $Type) 设置接入类型，当前请填写5
- * @method string getBotAppKey() 获取当Type=5时，必填；应用AppKey（应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取）
- * @method void setBotAppKey(string $BotAppKey) 设置当Type=5时，必填；应用AppKey（应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取）
+ * @method integer getType() 获取接入类型， 5-API 访客
+ * @method void setType(integer $Type) 设置接入类型， 5-API 访客
+ * @method string getBotAppKey() 获取  应用AppKey </br>   获取方式:</br>   1、应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取</br>   2、参考 https://cloud.tencent.com/document/product/1759/109469 第二项
+ * @method void setBotAppKey(string $BotAppKey) 设置  应用AppKey </br>   获取方式:</br>   1、应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取</br>   2、参考 https://cloud.tencent.com/document/product/1759/109469 第二项
  * @method string getVisitorBizId() 获取访客ID（外部输入，建议唯一，标识当前接入会话的用户）
  * @method void setVisitorBizId(string $VisitorBizId) 设置访客ID（外部输入，建议唯一，标识当前接入会话的用户）
  * @method array getVisitorLabels() 获取知识标签，用于知识库中知识的检索过滤。该字段即将下线，请使用对话端接口中的 custom_variables 字段替代该字段。
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class GetWsTokenRequest extends AbstractModel
 {
     /**
-     * @var integer 接入类型，当前请填写5
+     * @var integer 接入类型， 5-API 访客
      */
     public $Type;
 
     /**
-     * @var string 当Type=5时，必填；应用AppKey（应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取）
+     * @var string   应用AppKey </br>   获取方式:</br>   1、应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取</br>   2、参考 https://cloud.tencent.com/document/product/1759/109469 第二项
      */
     public $BotAppKey;
 
@@ -52,8 +52,8 @@ class GetWsTokenRequest extends AbstractModel
     public $VisitorLabels;
 
     /**
-     * @param integer $Type 接入类型，当前请填写5
-     * @param string $BotAppKey 当Type=5时，必填；应用AppKey（应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取）
+     * @param integer $Type 接入类型， 5-API 访客
+     * @param string $BotAppKey   应用AppKey </br>   获取方式:</br>   1、应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取</br>   2、参考 https://cloud.tencent.com/document/product/1759/109469 第二项
      * @param string $VisitorBizId 访客ID（外部输入，建议唯一，标识当前接入会话的用户）
      * @param array $VisitorLabels 知识标签，用于知识库中知识的检索过滤。该字段即将下线，请使用对话端接口中的 custom_variables 字段替代该字段。
      */

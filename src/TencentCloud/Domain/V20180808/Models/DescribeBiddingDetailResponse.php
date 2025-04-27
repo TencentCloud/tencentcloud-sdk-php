@@ -34,20 +34,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpireTime(string $ExpireTime) 设置过期时间
  * @method string getDeleteTime() 获取删除时间
  * @method void setDeleteTime(string $DeleteTime) 设置删除时间
- * @method integer getCurrentPrice() 获取当前价格
- * @method void setCurrentPrice(integer $CurrentPrice) 设置当前价格
+ * @method integer getCurrentPrice() 获取当前价格 单位元
+ * @method void setCurrentPrice(integer $CurrentPrice) 设置当前价格 单位元
  * @method string getCurrentNickname() 获取当前用户昵称
  * @method void setCurrentNickname(string $CurrentNickname) 设置当前用户昵称
- * @method integer getBiddingBondPrice() 获取竞价保证金
- * @method void setBiddingBondPrice(integer $BiddingBondPrice) 设置竞价保证金
+ * @method integer getBiddingBondPrice() 获取竞价保证金 单位元
+ * @method void setBiddingBondPrice(integer $BiddingBondPrice) 设置竞价保证金 单位元
  * @method integer getStatus() 获取2 竞价中  3 等待出价 4 竞价失败 10 竞价持有者赎回
  * @method void setStatus(integer $Status) 设置2 竞价中  3 等待出价 4 竞价失败 10 竞价持有者赎回
  * @method integer getBiddingFlag() 获取竞价标识，1 领先，2 落后
  * @method void setBiddingFlag(integer $BiddingFlag) 设置竞价标识，1 领先，2 落后
  * @method string getBiddingBondRefund() 获取是否退款，yes表示退款，no表示不退款
  * @method void setBiddingBondRefund(string $BiddingBondRefund) 设置是否退款，yes表示退款，no表示不退款
- * @method integer getBiddingPrice() 获取我的出价
- * @method void setBiddingPrice(integer $BiddingPrice) 设置我的出价
+ * @method integer getBiddingPrice() 获取我的出价 单位元
+ * @method void setBiddingPrice(integer $BiddingPrice) 设置我的出价 单位元
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -89,7 +89,7 @@ class DescribeBiddingDetailResponse extends AbstractModel
     public $DeleteTime;
 
     /**
-     * @var integer 当前价格
+     * @var integer 当前价格 单位元
      */
     public $CurrentPrice;
 
@@ -99,7 +99,7 @@ class DescribeBiddingDetailResponse extends AbstractModel
     public $CurrentNickname;
 
     /**
-     * @var integer 竞价保证金
+     * @var integer 竞价保证金 单位元
      */
     public $BiddingBondPrice;
 
@@ -119,7 +119,7 @@ class DescribeBiddingDetailResponse extends AbstractModel
     public $BiddingBondRefund;
 
     /**
-     * @var integer 我的出价
+     * @var integer 我的出价 单位元
      */
     public $BiddingPrice;
 
@@ -136,13 +136,13 @@ class DescribeBiddingDetailResponse extends AbstractModel
      * @param string $RegTime  注册时间
      * @param string $ExpireTime 过期时间
      * @param string $DeleteTime 删除时间
-     * @param integer $CurrentPrice 当前价格
+     * @param integer $CurrentPrice 当前价格 单位元
      * @param string $CurrentNickname 当前用户昵称
-     * @param integer $BiddingBondPrice 竞价保证金
+     * @param integer $BiddingBondPrice 竞价保证金 单位元
      * @param integer $Status 2 竞价中  3 等待出价 4 竞价失败 10 竞价持有者赎回
      * @param integer $BiddingFlag 竞价标识，1 领先，2 落后
      * @param string $BiddingBondRefund 是否退款，yes表示退款，no表示不退款
-     * @param integer $BiddingPrice 我的出价
+     * @param integer $BiddingPrice 我的出价 单位元
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

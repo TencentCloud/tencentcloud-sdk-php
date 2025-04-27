@@ -22,8 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTemplateId() 获取模板ID
  * @method void setTemplateId(string $TemplateId) 设置模板ID
- * @method string getAuditStatus() 获取认证状态：未实名认证:NotUpload, 实名审核中:InAudit，已实名认证:Approved，实名审核失败:Reject
- * @method void setAuditStatus(string $AuditStatus) 设置认证状态：未实名认证:NotUpload, 实名审核中:InAudit，已实名认证:Approved，实名审核失败:Reject
+ * @method string getAuditStatus() 获取认证状态:
+NotUpload: 未实名认证
+InAudit: 实名审核中
+Approved: 已实名认证
+Reject: 实名审核失败
+NotVerified: 实名信息待修改
+ * @method void setAuditStatus(string $AuditStatus) 设置认证状态:
+NotUpload: 未实名认证
+InAudit: 实名审核中
+Approved: 已实名认证
+Reject: 实名审核失败
+NotVerified: 实名信息待修改
  * @method string getCreatedOn() 获取创建时间
  * @method void setCreatedOn(string $CreatedOn) 设置创建时间
  * @method string getUpdatedOn() 获取更新时间
@@ -53,7 +63,12 @@ class TemplateInfo extends AbstractModel
     public $TemplateId;
 
     /**
-     * @var string 认证状态：未实名认证:NotUpload, 实名审核中:InAudit，已实名认证:Approved，实名审核失败:Reject
+     * @var string 认证状态:
+NotUpload: 未实名认证
+InAudit: 实名审核中
+Approved: 已实名认证
+Reject: 实名审核失败
+NotVerified: 实名信息待修改
      */
     public $AuditStatus;
 
@@ -109,7 +124,12 @@ class TemplateInfo extends AbstractModel
 
     /**
      * @param string $TemplateId 模板ID
-     * @param string $AuditStatus 认证状态：未实名认证:NotUpload, 实名审核中:InAudit，已实名认证:Approved，实名审核失败:Reject
+     * @param string $AuditStatus 认证状态:
+NotUpload: 未实名认证
+InAudit: 实名审核中
+Approved: 已实名认证
+Reject: 实名审核失败
+NotVerified: 实名信息待修改
      * @param string $CreatedOn 创建时间
      * @param string $UpdatedOn 更新时间
      * @param string $UserUin 用户UIN

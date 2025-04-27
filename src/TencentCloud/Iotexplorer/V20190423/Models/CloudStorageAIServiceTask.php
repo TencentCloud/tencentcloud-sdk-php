@@ -38,10 +38,14 @@ use TencentCloud\Common\AbstractModel;
 - `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
 - `VideoToText`：视频语义理解
- * @method integer getStartTime() 获取对应云存视频的起始时间
- * @method void setStartTime(integer $StartTime) 设置对应云存视频的起始时间
- * @method integer getEndTime() 获取对应云存视频的结束时间
- * @method void setEndTime(integer $EndTime) 设置对应云存视频的结束时间
+ * @method integer getStartTime() 获取对应云存视频的起始时间（秒级 UNIX 时间戳）
+ * @method void setStartTime(integer $StartTime) 设置对应云存视频的起始时间（秒级 UNIX 时间戳）
+ * @method integer getStartTimeMs() 获取对应云存视频的起始时间（毫秒级 UNIX 时间戳）
+ * @method void setStartTimeMs(integer $StartTimeMs) 设置对应云存视频的起始时间（毫秒级 UNIX 时间戳）
+ * @method integer getEndTime() 获取对应云存视频的结束时间（秒级 UNIX 时间戳）
+ * @method void setEndTime(integer $EndTime) 设置对应云存视频的结束时间（秒级 UNIX 时间戳）
+ * @method integer getEndTimeMs() 获取对应云存视频的结束时间（毫秒级 UNIX 时间戳）
+ * @method void setEndTimeMs(integer $EndTimeMs) 设置对应云存视频的结束时间（毫秒级 UNIX 时间戳）
  * @method integer getStatus() 获取任务状态（1：失败；2：成功但结果为空；3：成功且结果非空；4：执行中）
  * @method void setStatus(integer $Status) 设置任务状态（1：失败；2：成功但结果为空；3：成功且结果非空；4：执行中）
  * @method string getResult() 获取任务结果
@@ -89,14 +93,24 @@ class CloudStorageAIServiceTask extends AbstractModel
     public $ServiceType;
 
     /**
-     * @var integer 对应云存视频的起始时间
+     * @var integer 对应云存视频的起始时间（秒级 UNIX 时间戳）
      */
     public $StartTime;
 
     /**
-     * @var integer 对应云存视频的结束时间
+     * @var integer 对应云存视频的起始时间（毫秒级 UNIX 时间戳）
+     */
+    public $StartTimeMs;
+
+    /**
+     * @var integer 对应云存视频的结束时间（秒级 UNIX 时间戳）
      */
     public $EndTime;
+
+    /**
+     * @var integer 对应云存视频的结束时间（毫秒级 UNIX 时间戳）
+     */
+    public $EndTimeMs;
 
     /**
      * @var integer 任务状态（1：失败；2：成功但结果为空；3：成功且结果非空；4：执行中）
@@ -143,8 +157,10 @@ class CloudStorageAIServiceTask extends AbstractModel
 - `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
 - `VideoToText`：视频语义理解
-     * @param integer $StartTime 对应云存视频的起始时间
-     * @param integer $EndTime 对应云存视频的结束时间
+     * @param integer $StartTime 对应云存视频的起始时间（秒级 UNIX 时间戳）
+     * @param integer $StartTimeMs 对应云存视频的起始时间（毫秒级 UNIX 时间戳）
+     * @param integer $EndTime 对应云存视频的结束时间（秒级 UNIX 时间戳）
+     * @param integer $EndTimeMs 对应云存视频的结束时间（毫秒级 UNIX 时间戳）
      * @param integer $Status 任务状态（1：失败；2：成功但结果为空；3：成功且结果非空；4：执行中）
      * @param string $Result 任务结果
      * @param array $Files 任务输出文件列表
@@ -190,8 +206,16 @@ class CloudStorageAIServiceTask extends AbstractModel
             $this->StartTime = $param["StartTime"];
         }
 
+        if (array_key_exists("StartTimeMs",$param) and $param["StartTimeMs"] !== null) {
+            $this->StartTimeMs = $param["StartTimeMs"];
+        }
+
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("EndTimeMs",$param) and $param["EndTimeMs"] !== null) {
+            $this->EndTimeMs = $param["EndTimeMs"];
         }
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {

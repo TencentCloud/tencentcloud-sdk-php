@@ -20,18 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDomainRedemption请求参数结构体
  *
- * @method string getDomainId() 获取域名 ID
- * @method void setDomainId(string $DomainId) 设置域名 ID
+ * @method string getDomainId() 获取域名ID
+可通过DescribeDomainList接口获取
+ * @method void setDomainId(string $DomainId) 设置域名ID
+可通过DescribeDomainList接口获取
  */
 class CreateDomainRedemptionRequest extends AbstractModel
 {
     /**
-     * @var string 域名 ID
+     * @var string 域名ID
+可通过DescribeDomainList接口获取
      */
     public $DomainId;
 
     /**
-     * @param string $DomainId 域名 ID
+     * @param string $DomainId 域名ID
+可通过DescribeDomainList接口获取
      */
     function __construct()
     {

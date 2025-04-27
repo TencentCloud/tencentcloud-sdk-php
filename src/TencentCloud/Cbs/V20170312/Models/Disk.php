@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * 描述了云硬盘的详细信息
  *
  * @method boolean getDeleteWithInstance() 获取云盘是否与挂载的实例一起销毁。<br><li>true:销毁实例时会同时销毁云盘，只支持按小时后付费云盘。</li><li>false：销毁实例时不销毁云盘。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeleteWithInstance(boolean $DeleteWithInstance) 设置云盘是否与挂载的实例一起销毁。<br><li>true:销毁实例时会同时销毁云盘，只支持按小时后付费云盘。</li><li>false：销毁实例时不销毁云盘。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRenewFlag() 获取自动续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费</li><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRenewFlag(string $RenewFlag) 设置自动续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费</li><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDiskType() 获取硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘</li><li>CLOUD_PREMIUM：表示高性能云硬盘</li><li>CLOUD_BSSD：表示通用型SSD云硬盘</li><li>CLOUD_SSD：表示SSD云硬盘</li><li>CLOUD_HSSD：表示增强型SSD云硬盘</li><li>CLOUD_TSSD：表示极速型SSD云硬盘。</li>
  * @method void setDiskType(string $DiskType) 设置硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘</li><li>CLOUD_PREMIUM：表示高性能云硬盘</li><li>CLOUD_BSSD：表示通用型SSD云硬盘</li><li>CLOUD_SSD：表示SSD云硬盘</li><li>CLOUD_HSSD：表示增强型SSD云硬盘</li><li>CLOUD_TSSD：表示极速型SSD云硬盘。</li>
  * @method string getDiskState() 获取云盘状态。取值范围：<br><li>UNATTACHED：未挂载</li><li>ATTACHING：挂载中</li><li>ATTACHED：已挂载</li><li>DETACHING：解挂中</li><li>EXPANDING：扩容中</li><li>ROLLBACKING：回滚中</li><li>TORECYCLE：待回收</li><li>DUMPING：拷贝硬盘中。</li>
@@ -35,9 +31,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getSnapshotCount() 获取云盘拥有的快照总数。
  * @method void setSnapshotCount(integer $SnapshotCount) 设置云盘拥有的快照总数。
  * @method boolean getAutoRenewFlagError() 获取云盘已挂载到子机，且子机与云盘都是包年包月。<br><li>true：子机设置了自动续费标识，但云盘未设置</li><li>false：云盘自动续费标识正常。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoRenewFlagError(boolean $AutoRenewFlagError) 设置云盘已挂载到子机，且子机与云盘都是包年包月。<br><li>true：子机设置了自动续费标识，但云盘未设置</li><li>false：云盘自动续费标识正常。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getRollbacking() 获取云盘是否处于快照回滚状态。取值范围：<br><li>false:表示不处于快照回滚状态</li><li>true:表示处于快照回滚状态。</li>
  * @method void setRollbacking(boolean $Rollbacking) 设置云盘是否处于快照回滚状态。取值范围：<br><li>false:表示不处于快照回滚状态</li><li>true:表示处于快照回滚状态。</li>
  * @method array getInstanceIdList() 获取对于非共享型云盘，该参数为空数组。对于共享型云盘，则表示该云盘当前被挂载到的CVM实例InstanceId
@@ -49,31 +43,23 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getBackupDisk() 获取云硬盘因欠费销毁或者到期销毁时， 是否使用快照备份数据的标识。true表示销毁时创建快照进行数据备份。false表示直接销毁，不进行数据备份。
  * @method void setBackupDisk(boolean $BackupDisk) 设置云硬盘因欠费销毁或者到期销毁时， 是否使用快照备份数据的标识。true表示销毁时创建快照进行数据备份。false表示直接销毁，不进行数据备份。
  * @method array getTags() 获取与云盘绑定的标签，云盘未绑定标签则取值为空。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置与云盘绑定的标签，云盘未绑定标签则取值为空。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取云硬盘挂载的云主机ID。
  * @method void setInstanceId(string $InstanceId) 设置云硬盘挂载的云主机ID。
  * @method string getAttachMode() 获取云盘的挂载类型。取值范围：<br><li>PF: PF挂载</li><li>VF: VF挂载</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAttachMode(string $AttachMode) 设置云盘的挂载类型。取值范围：<br><li>PF: PF挂载</li><li>VF: VF挂载</li>
+ * @method array getAutoSnapshotPolicyIds() 获取云盘关联的定期快照ID。只有在调用[DescribeDisks](/document/product/362/16315)接口时，入参ReturnBindAutoSnapshotPolicy取值为TRUE才会返回该参数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getAutoSnapshotPolicyIds() 获取云盘关联的定期快照ID。只有在调用DescribeDisks接口时，入参ReturnBindAutoSnapshotPolicy取值为TRUE才会返回该参数。
+ * @method void setAutoSnapshotPolicyIds(array $AutoSnapshotPolicyIds) 设置云盘关联的定期快照ID。只有在调用[DescribeDisks](/document/product/362/16315)接口时，入参ReturnBindAutoSnapshotPolicy取值为TRUE才会返回该参数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAutoSnapshotPolicyIds(array $AutoSnapshotPolicyIds) 设置云盘关联的定期快照ID。只有在调用DescribeDisks接口时，入参ReturnBindAutoSnapshotPolicy取值为TRUE才会返回该参数。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getThroughputPerformance() 获取云硬盘额外性能值，单位MB/s。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setThroughputPerformance(integer $ThroughputPerformance) 设置云硬盘额外性能值，单位MB/s。
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getThroughputPerformance() 获取云硬盘额外性能值，单位MiB/s。
+ * @method void setThroughputPerformance(integer $ThroughputPerformance) 设置云硬盘额外性能值，单位MiB/s。
  * @method boolean getMigrating() 获取云盘是否处于类型变更中。取值范围：<br><li>false:表示云盘不处于类型变更中</li><li>true:表示云盘已发起类型变更，正处于迁移中。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMigrating(boolean $Migrating) 设置云盘是否处于类型变更中。取值范围：<br><li>false:表示云盘不处于类型变更中</li><li>true:表示云盘已发起类型变更，正处于迁移中。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDiskId() 获取云硬盘ID。
  * @method void setDiskId(string $DiskId) 设置云硬盘ID。
- * @method integer getSnapshotSize() 获取云盘拥有的快照总容量，单位为MB。
- * @method void setSnapshotSize(integer $SnapshotSize) 设置云盘拥有的快照总容量，单位为MB。
+ * @method integer getSnapshotSize() 获取云盘拥有的快照总容量，单位为MiB。
+ * @method void setSnapshotSize(integer $SnapshotSize) 设置云盘拥有的快照总容量，单位为MiB。
  * @method Placement getPlacement() 获取云硬盘所在的位置。
  * @method void setPlacement(Placement $Placement) 设置云硬盘所在的位置。
  * @method boolean getIsReturnable() 获取判断预付费的云盘是否支持主动退还。<br><li>true:支持主动退还</li><li>false:不支持主动退还。</li>
@@ -87,9 +73,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getDiskSize() 获取云硬盘大小，单位GiB。
  * @method void setDiskSize(integer $DiskSize) 设置云硬盘大小，单位GiB。
  * @method integer getMigratePercent() 获取云盘类型变更的迁移进度，取值0到100。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMigratePercent(integer $MigratePercent) 设置云盘类型变更的迁移进度，取值0到100。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDiskUsage() 获取云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘</li><li>DATA_DISK：数据盘。</li>
  * @method void setDiskUsage(string $DiskUsage) 设置云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘</li><li>DATA_DISK：数据盘。</li>
  * @method string getDiskChargeType() 获取付费模式。取值范围：<br><li>PREPAID：预付费，即包年包月</li><li>POSTPAID_BY_HOUR：后付费，即按量计费。</li>
@@ -99,19 +83,15 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getSnapshotAbility() 获取云盘是否具备创建快照的能力。取值范围：<br><li>false表示不具备</li><li>true表示具备。</li>
  * @method void setSnapshotAbility(boolean $SnapshotAbility) 设置云盘是否具备创建快照的能力。取值范围：<br><li>false表示不具备</li><li>true表示具备。</li>
  * @method boolean getDeadlineError() 获取在云盘已挂载到实例，且实例与云盘都是包年包月的条件下，此字段才有意义。<br><li>true:云盘到期时间早于实例。</li><li>false：云盘到期时间晚于实例。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeadlineError(boolean $DeadlineError) 设置在云盘已挂载到实例，且实例与云盘都是包年包月的条件下，此字段才有意义。<br><li>true:云盘到期时间早于实例。</li><li>false：云盘到期时间晚于实例。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRollbackPercent() 获取云盘快照回滚的进度。
  * @method void setRollbackPercent(integer $RollbackPercent) 设置云盘快照回滚的进度。
- * @method integer getDifferDaysOfDeadline() 获取当前时间距离盘到期的天数（仅对预付费盘有意义）。
+ * @method integer getDifferDaysOfDeadline() 获取当前时间距离云硬盘到期的天数（仅对预付费云硬盘有意义）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDifferDaysOfDeadline(integer $DifferDaysOfDeadline) 设置当前时间距离盘到期的天数（仅对预付费盘有意义）。
+ * @method void setDifferDaysOfDeadline(integer $DifferDaysOfDeadline) 设置当前时间距离云硬盘到期的天数（仅对预付费云硬盘有意义）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getReturnFailCode() 获取预付费云盘在不支持主动退还的情况下，该参数表明不支持主动退还的具体原因。取值范围：<br><li>1：云硬盘已经退还</li><li>2：云硬盘已过期</li><li>3：云盘不支持退还</li><li>8：超过可退还数量的限制。</li>
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReturnFailCode(integer $ReturnFailCode) 设置预付费云盘在不支持主动退还的情况下，该参数表明不支持主动退还的具体原因。取值范围：<br><li>1：云硬盘已经退还</li><li>2：云硬盘已过期</li><li>3：云盘不支持退还</li><li>8：超过可退还数量的限制。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getReturnFailCode() 获取预付费云盘在不支持主动退还的情况下，该参数表明不支持主动退还的具体原因。取值范围：<br><li>1：云硬盘已经退还</li><li>2：云硬盘已过期</li><li>3：云盘不支持退还</li><li>8：超过可退还数量的限制。</li><li>10：非弹性云硬盘、系统盘、后付费云硬盘等不支持退还</li>
+ * @method void setReturnFailCode(integer $ReturnFailCode) 设置预付费云盘在不支持主动退还的情况下，该参数表明不支持主动退还的具体原因。取值范围：<br><li>1：云硬盘已经退还</li><li>2：云硬盘已过期</li><li>3：云盘不支持退还</li><li>8：超过可退还数量的限制。</li><li>10：非弹性云硬盘、系统盘、后付费云硬盘等不支持退还</li>
  * @method boolean getShareable() 获取云盘是否为共享型云盘。
  * @method void setShareable(boolean $Shareable) 设置云盘是否为共享型云盘。
  * @method string getCreateTime() 获取云硬盘的创建时间。
@@ -129,29 +109,23 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLastAttachInsId(string $LastAttachInsId) 设置云硬盘最后一次挂载的实例ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getErrorPrompt() 获取云硬盘最后一次操作错误提示
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorPrompt(string $ErrorPrompt) 设置云硬盘最后一次操作错误提示
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getBurstPerformance() 获取云盘是否开启性能突发
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBurstPerformance(boolean $BurstPerformance) 设置云盘是否开启性能突发
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEncryptType() 获取云硬盘加密类型，值为ENCRYPT_V1和ENCRYPT_V2，分别表示第一代和第二代加密技术，两种加密技术互不兼容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEncryptType(string $EncryptType) 设置云硬盘加密类型，值为ENCRYPT_V1和ENCRYPT_V2，分别表示第一代和第二代加密技术，两种加密技术互不兼容
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getKmsKeyId() 获取加密盘密钥ID
+ * @method void setKmsKeyId(string $KmsKeyId) 设置加密盘密钥ID
  */
 class Disk extends AbstractModel
 {
     /**
      * @var boolean 云盘是否与挂载的实例一起销毁。<br><li>true:销毁实例时会同时销毁云盘，只支持按小时后付费云盘。</li><li>false：销毁实例时不销毁云盘。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeleteWithInstance;
 
     /**
      * @var string 自动续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费</li><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RenewFlag;
 
@@ -172,7 +146,6 @@ class Disk extends AbstractModel
 
     /**
      * @var boolean 云盘已挂载到子机，且子机与云盘都是包年包月。<br><li>true：子机设置了自动续费标识，但云盘未设置</li><li>false：云盘自动续费标识正常。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoRenewFlagError;
 
@@ -203,7 +176,6 @@ class Disk extends AbstractModel
 
     /**
      * @var array 与云盘绑定的标签，云盘未绑定标签则取值为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
@@ -214,25 +186,22 @@ class Disk extends AbstractModel
 
     /**
      * @var string 云盘的挂载类型。取值范围：<br><li>PF: PF挂载</li><li>VF: VF挂载</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AttachMode;
 
     /**
-     * @var array 云盘关联的定期快照ID。只有在调用DescribeDisks接口时，入参ReturnBindAutoSnapshotPolicy取值为TRUE才会返回该参数。
+     * @var array 云盘关联的定期快照ID。只有在调用[DescribeDisks](/document/product/362/16315)接口时，入参ReturnBindAutoSnapshotPolicy取值为TRUE才会返回该参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoSnapshotPolicyIds;
 
     /**
-     * @var integer 云硬盘额外性能值，单位MB/s。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 云硬盘额外性能值，单位MiB/s。
      */
     public $ThroughputPerformance;
 
     /**
      * @var boolean 云盘是否处于类型变更中。取值范围：<br><li>false:表示云盘不处于类型变更中</li><li>true:表示云盘已发起类型变更，正处于迁移中。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Migrating;
 
@@ -242,7 +211,7 @@ class Disk extends AbstractModel
     public $DiskId;
 
     /**
-     * @var integer 云盘拥有的快照总容量，单位为MB。
+     * @var integer 云盘拥有的快照总容量，单位为MiB。
      */
     public $SnapshotSize;
 
@@ -274,7 +243,6 @@ class Disk extends AbstractModel
 
     /**
      * @var integer 云盘类型变更的迁移进度，取值0到100。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MigratePercent;
 
@@ -300,7 +268,6 @@ class Disk extends AbstractModel
 
     /**
      * @var boolean 在云盘已挂载到实例，且实例与云盘都是包年包月的条件下，此字段才有意义。<br><li>true:云盘到期时间早于实例。</li><li>false：云盘到期时间晚于实例。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeadlineError;
 
@@ -310,14 +277,13 @@ class Disk extends AbstractModel
     public $RollbackPercent;
 
     /**
-     * @var integer 当前时间距离盘到期的天数（仅对预付费盘有意义）。
+     * @var integer 当前时间距离云硬盘到期的天数（仅对预付费云硬盘有意义）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DifferDaysOfDeadline;
 
     /**
-     * @var integer 预付费云盘在不支持主动退还的情况下，该参数表明不支持主动退还的具体原因。取值范围：<br><li>1：云硬盘已经退还</li><li>2：云硬盘已过期</li><li>3：云盘不支持退还</li><li>8：超过可退还数量的限制。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 预付费云盘在不支持主动退还的情况下，该参数表明不支持主动退还的具体原因。取值范围：<br><li>1：云硬盘已经退还</li><li>2：云硬盘已过期</li><li>3：云盘不支持退还</li><li>8：超过可退还数量的限制。</li><li>10：非弹性云硬盘、系统盘、后付费云硬盘等不支持退还</li>
      */
     public $ReturnFailCode;
 
@@ -359,50 +325,45 @@ class Disk extends AbstractModel
 
     /**
      * @var string 云硬盘最后一次操作错误提示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrorPrompt;
 
     /**
      * @var boolean 云盘是否开启性能突发
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BurstPerformance;
 
     /**
      * @var string 云硬盘加密类型，值为ENCRYPT_V1和ENCRYPT_V2，分别表示第一代和第二代加密技术，两种加密技术互不兼容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EncryptType;
 
     /**
+     * @var string 加密盘密钥ID
+     */
+    public $KmsKeyId;
+
+    /**
      * @param boolean $DeleteWithInstance 云盘是否与挂载的实例一起销毁。<br><li>true:销毁实例时会同时销毁云盘，只支持按小时后付费云盘。</li><li>false：销毁实例时不销毁云盘。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RenewFlag 自动续费标识。取值范围：<br><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费</li><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DiskType 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘</li><li>CLOUD_PREMIUM：表示高性能云硬盘</li><li>CLOUD_BSSD：表示通用型SSD云硬盘</li><li>CLOUD_SSD：表示SSD云硬盘</li><li>CLOUD_HSSD：表示增强型SSD云硬盘</li><li>CLOUD_TSSD：表示极速型SSD云硬盘。</li>
      * @param string $DiskState 云盘状态。取值范围：<br><li>UNATTACHED：未挂载</li><li>ATTACHING：挂载中</li><li>ATTACHED：已挂载</li><li>DETACHING：解挂中</li><li>EXPANDING：扩容中</li><li>ROLLBACKING：回滚中</li><li>TORECYCLE：待回收</li><li>DUMPING：拷贝硬盘中。</li>
      * @param integer $SnapshotCount 云盘拥有的快照总数。
      * @param boolean $AutoRenewFlagError 云盘已挂载到子机，且子机与云盘都是包年包月。<br><li>true：子机设置了自动续费标识，但云盘未设置</li><li>false：云盘自动续费标识正常。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Rollbacking 云盘是否处于快照回滚状态。取值范围：<br><li>false:表示不处于快照回滚状态</li><li>true:表示处于快照回滚状态。</li>
      * @param array $InstanceIdList 对于非共享型云盘，该参数为空数组。对于共享型云盘，则表示该云盘当前被挂载到的CVM实例InstanceId
      * @param boolean $Encrypt 云盘是否为加密盘。取值范围：<br><li>false:表示非加密盘</li><li>true:表示加密盘。</li>
      * @param string $DiskName 云硬盘名称。
      * @param boolean $BackupDisk 云硬盘因欠费销毁或者到期销毁时， 是否使用快照备份数据的标识。true表示销毁时创建快照进行数据备份。false表示直接销毁，不进行数据备份。
      * @param array $Tags 与云盘绑定的标签，云盘未绑定标签则取值为空。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 云硬盘挂载的云主机ID。
      * @param string $AttachMode 云盘的挂载类型。取值范围：<br><li>PF: PF挂载</li><li>VF: VF挂载</li>
+     * @param array $AutoSnapshotPolicyIds 云盘关联的定期快照ID。只有在调用[DescribeDisks](/document/product/362/16315)接口时，入参ReturnBindAutoSnapshotPolicy取值为TRUE才会返回该参数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $AutoSnapshotPolicyIds 云盘关联的定期快照ID。只有在调用DescribeDisks接口时，入参ReturnBindAutoSnapshotPolicy取值为TRUE才会返回该参数。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ThroughputPerformance 云硬盘额外性能值，单位MB/s。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ThroughputPerformance 云硬盘额外性能值，单位MiB/s。
      * @param boolean $Migrating 云盘是否处于类型变更中。取值范围：<br><li>false:表示云盘不处于类型变更中</li><li>true:表示云盘已发起类型变更，正处于迁移中。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DiskId 云硬盘ID。
-     * @param integer $SnapshotSize 云盘拥有的快照总容量，单位为MB。
+     * @param integer $SnapshotSize 云盘拥有的快照总容量，单位为MiB。
      * @param Placement $Placement 云硬盘所在的位置。
      * @param boolean $IsReturnable 判断预付费的云盘是否支持主动退还。<br><li>true:支持主动退还</li><li>false:不支持主动退还。</li>
 注意：此字段可能返回 null，表示取不到有效值。
@@ -410,18 +371,15 @@ class Disk extends AbstractModel
      * @param boolean $Attached 云盘是否挂载到云主机上。取值范围：<br><li>false:表示未挂载</li><li>true:表示已挂载。</li>
      * @param integer $DiskSize 云硬盘大小，单位GiB。
      * @param integer $MigratePercent 云盘类型变更的迁移进度，取值0到100。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DiskUsage 云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘</li><li>DATA_DISK：数据盘。</li>
      * @param string $DiskChargeType 付费模式。取值范围：<br><li>PREPAID：预付费，即包年包月</li><li>POSTPAID_BY_HOUR：后付费，即按量计费。</li>
      * @param boolean $Portable 是否为弹性云盘，false表示非弹性云盘，true表示弹性云盘。
      * @param boolean $SnapshotAbility 云盘是否具备创建快照的能力。取值范围：<br><li>false表示不具备</li><li>true表示具备。</li>
      * @param boolean $DeadlineError 在云盘已挂载到实例，且实例与云盘都是包年包月的条件下，此字段才有意义。<br><li>true:云盘到期时间早于实例。</li><li>false：云盘到期时间晚于实例。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RollbackPercent 云盘快照回滚的进度。
-     * @param integer $DifferDaysOfDeadline 当前时间距离盘到期的天数（仅对预付费盘有意义）。
+     * @param integer $DifferDaysOfDeadline 当前时间距离云硬盘到期的天数（仅对预付费云硬盘有意义）
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ReturnFailCode 预付费云盘在不支持主动退还的情况下，该参数表明不支持主动退还的具体原因。取值范围：<br><li>1：云硬盘已经退还</li><li>2：云硬盘已过期</li><li>3：云盘不支持退还</li><li>8：超过可退还数量的限制。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ReturnFailCode 预付费云盘在不支持主动退还的情况下，该参数表明不支持主动退还的具体原因。取值范围：<br><li>1：云硬盘已经退还</li><li>2：云硬盘已过期</li><li>3：云盘不支持退还</li><li>8：超过可退还数量的限制。</li><li>10：非弹性云硬盘、系统盘、后付费云硬盘等不支持退还</li>
      * @param boolean $Shareable 云盘是否为共享型云盘。
      * @param string $CreateTime 云硬盘的创建时间。
      * @param integer $DeleteSnapshot 销毁云盘时删除关联的非永久保留快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁，默认取0。快照是否永久保留可以通过DescribeSnapshots接口返回的快照详情的IsPermanent字段来判断，true表示永久快照，false表示非永久快照。
@@ -431,11 +389,9 @@ class Disk extends AbstractModel
      * @param string $LastAttachInsId 云硬盘最后一次挂载的实例ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrorPrompt 云硬盘最后一次操作错误提示
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $BurstPerformance 云盘是否开启性能突发
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EncryptType 云硬盘加密类型，值为ENCRYPT_V1和ENCRYPT_V2，分别表示第一代和第二代加密技术，两种加密技术互不兼容
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $KmsKeyId 加密盘密钥ID
      */
     function __construct()
     {
@@ -626,6 +582,10 @@ class Disk extends AbstractModel
 
         if (array_key_exists("EncryptType",$param) and $param["EncryptType"] !== null) {
             $this->EncryptType = $param["EncryptType"];
+        }
+
+        if (array_key_exists("KmsKeyId",$param) and $param["KmsKeyId"] !== null) {
+            $this->KmsKeyId = $param["KmsKeyId"];
         }
     }
 }

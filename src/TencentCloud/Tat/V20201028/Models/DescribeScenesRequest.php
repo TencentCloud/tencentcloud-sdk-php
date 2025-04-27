@@ -22,9 +22,13 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getSceneIds() 获取场景 ID 数组。
 
+每次请求的上限为 100。
+
 参数不支持同时指定 `SceneIds ` 和 `Filters ` 。
 
  * @method void setSceneIds(array $SceneIds) 设置场景 ID 数组。
+
+每次请求的上限为 100。
 
 参数不支持同时指定 `SceneIds ` 和 `Filters ` 。
 
@@ -51,6 +55,8 @@ class DescribeScenesRequest extends AbstractModel
 {
     /**
      * @var array 场景 ID 数组。
+
+每次请求的上限为 100。
 
 参数不支持同时指定 `SceneIds ` 和 `Filters ` 。
 
@@ -80,6 +86,8 @@ class DescribeScenesRequest extends AbstractModel
 
     /**
      * @param array $SceneIds 场景 ID 数组。
+
+每次请求的上限为 100。
 
 参数不支持同时指定 `SceneIds ` 和 `Filters ` 。
 

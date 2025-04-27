@@ -20,10 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * EnterRescueMode请求参数结构体
  *
- * @method string getInstanceId() 获取需要进入救援模式的实例id
- * @method void setInstanceId(string $InstanceId) 设置需要进入救援模式的实例id
- * @method string getPassword() 获取救援模式下系统密码
- * @method void setPassword(string $Password) 设置救援模式下系统密码
+ * @method string getInstanceId() 获取需要进入救援模式的实例ID。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
+
+ * @method void setInstanceId(string $InstanceId) 设置需要进入救援模式的实例ID。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
+
+ * @method string getPassword() 获取救援模式下系统密码。不同操作系统类型密码复杂度限制不一样，具体如下：<li>Linux实例密码必须8到30位，至少包括两项[a-z]，[A-Z]、[0-9] 和 [( ) \` ~ ! @ # $ % ^ & *  - + = | { } [ ] : ; ' , . ? / ]中的特殊符号。</li><li>Windows实例密码必须12到30位，至少包括三项[a-z]，[A-Z]，[0-9] 和 [( ) \` ~ ! @ # $ % ^ & * - + = | { } [ ] : ; ' , . ? /]中的特殊符号。</li>
+ * @method void setPassword(string $Password) 设置救援模式下系统密码。不同操作系统类型密码复杂度限制不一样，具体如下：<li>Linux实例密码必须8到30位，至少包括两项[a-z]，[A-Z]、[0-9] 和 [( ) \` ~ ! @ # $ % ^ & *  - + = | { } [ ] : ; ' , . ? / ]中的特殊符号。</li><li>Windows实例密码必须12到30位，至少包括三项[a-z]，[A-Z]，[0-9] 和 [( ) \` ~ ! @ # $ % ^ & * - + = | { } [ ] : ; ' , . ? /]中的特殊符号。</li>
  * @method string getUsername() 获取救援模式下系统用户名
  * @method void setUsername(string $Username) 设置救援模式下系统用户名
  * @method boolean getForceStop() 获取是否强制关机。本参数已弃用，推荐使用StopType，不可以与参数StopType同时使用。
@@ -34,12 +36,13 @@ use TencentCloud\Common\AbstractModel;
 class EnterRescueModeRequest extends AbstractModel
 {
     /**
-     * @var string 需要进入救援模式的实例id
+     * @var string 需要进入救援模式的实例ID。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
+
      */
     public $InstanceId;
 
     /**
-     * @var string 救援模式下系统密码
+     * @var string 救援模式下系统密码。不同操作系统类型密码复杂度限制不一样，具体如下：<li>Linux实例密码必须8到30位，至少包括两项[a-z]，[A-Z]、[0-9] 和 [( ) \` ~ ! @ # $ % ^ & *  - + = | { } [ ] : ; ' , . ? / ]中的特殊符号。</li><li>Windows实例密码必须12到30位，至少包括三项[a-z]，[A-Z]，[0-9] 和 [( ) \` ~ ! @ # $ % ^ & * - + = | { } [ ] : ; ' , . ? /]中的特殊符号。</li>
      */
     public $Password;
 
@@ -60,8 +63,9 @@ class EnterRescueModeRequest extends AbstractModel
     public $StopType;
 
     /**
-     * @param string $InstanceId 需要进入救援模式的实例id
-     * @param string $Password 救援模式下系统密码
+     * @param string $InstanceId 需要进入救援模式的实例ID。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
+
+     * @param string $Password 救援模式下系统密码。不同操作系统类型密码复杂度限制不一样，具体如下：<li>Linux实例密码必须8到30位，至少包括两项[a-z]，[A-Z]、[0-9] 和 [( ) \` ~ ! @ # $ % ^ & *  - + = | { } [ ] : ; ' , . ? / ]中的特殊符号。</li><li>Windows实例密码必须12到30位，至少包括三项[a-z]，[A-Z]，[0-9] 和 [( ) \` ~ ! @ # $ % ^ & * - + = | { } [ ] : ; ' , . ? /]中的特殊符号。</li>
      * @param string $Username 救援模式下系统用户名
      * @param boolean $ForceStop 是否强制关机。本参数已弃用，推荐使用StopType，不可以与参数StopType同时使用。
      * @param string $StopType 实例的关闭模式。取值范围：<br><li>SOFT_FIRST：表示在正常关闭失败后进行强制关闭</li><br><li>HARD：直接强制关闭</li><br><li>SOFT：仅软关机</li><br>默认取值：SOFT。

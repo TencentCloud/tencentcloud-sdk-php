@@ -21,9 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * ModifyDomainOwnerBatch请求参数结构体
  *
  * @method array getDomains() 获取要过户的域名。
+一次提交不大于4000个
  * @method void setDomains(array $Domains) 设置要过户的域名。
- * @method string getNewOwnerUin() 获取转入账户的uin。
- * @method void setNewOwnerUin(string $NewOwnerUin) 设置转入账户的uin。
+一次提交不大于4000个
+ * @method string getNewOwnerUin() 获取转入账户的主uin。
+ * @method void setNewOwnerUin(string $NewOwnerUin) 设置转入账户的主uin。
  * @method boolean getTransferDns() 获取是否同时转移对应的 DNS 解析域名，默认false
  * @method void setTransferDns(boolean $TransferDns) 设置是否同时转移对应的 DNS 解析域名，默认false
  * @method string getNewOwnerAppId() 获取转入账户的appid。
@@ -33,11 +35,12 @@ class ModifyDomainOwnerBatchRequest extends AbstractModel
 {
     /**
      * @var array 要过户的域名。
+一次提交不大于4000个
      */
     public $Domains;
 
     /**
-     * @var string 转入账户的uin。
+     * @var string 转入账户的主uin。
      */
     public $NewOwnerUin;
 
@@ -53,7 +56,8 @@ class ModifyDomainOwnerBatchRequest extends AbstractModel
 
     /**
      * @param array $Domains 要过户的域名。
-     * @param string $NewOwnerUin 转入账户的uin。
+一次提交不大于4000个
+     * @param string $NewOwnerUin 转入账户的主uin。
      * @param boolean $TransferDns 是否同时转移对应的 DNS 解析域名，默认false
      * @param string $NewOwnerAppId 转入账户的appid。
      */

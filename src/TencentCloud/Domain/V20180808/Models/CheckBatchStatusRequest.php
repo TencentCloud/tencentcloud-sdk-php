@@ -21,17 +21,53 @@ use TencentCloud\Common\AbstractModel;
  * CheckBatchStatus请求参数结构体
  *
  * @method array getLogIds() 获取操作日志 ID数组，最多 200 个
+可通过任意批量操作接口获取，例如：
+BatchModifyDomainInfo
+ModifyDomainDNSBatch
+ModifyDomainOwnerBatch
+UpdateProhibitionBatch
+TransferProhibitionBatch
+TransferInDomainBatch
+TransferInDomainBatchBuy
+CancelTransferOutInBatch
  * @method void setLogIds(array $LogIds) 设置操作日志 ID数组，最多 200 个
+可通过任意批量操作接口获取，例如：
+BatchModifyDomainInfo
+ModifyDomainDNSBatch
+ModifyDomainOwnerBatch
+UpdateProhibitionBatch
+TransferProhibitionBatch
+TransferInDomainBatch
+TransferInDomainBatchBuy
+CancelTransferOutInBatch
  */
 class CheckBatchStatusRequest extends AbstractModel
 {
     /**
      * @var array 操作日志 ID数组，最多 200 个
+可通过任意批量操作接口获取，例如：
+BatchModifyDomainInfo
+ModifyDomainDNSBatch
+ModifyDomainOwnerBatch
+UpdateProhibitionBatch
+TransferProhibitionBatch
+TransferInDomainBatch
+TransferInDomainBatchBuy
+CancelTransferOutInBatch
      */
     public $LogIds;
 
     /**
      * @param array $LogIds 操作日志 ID数组，最多 200 个
+可通过任意批量操作接口获取，例如：
+BatchModifyDomainInfo
+ModifyDomainDNSBatch
+ModifyDomainOwnerBatch
+UpdateProhibitionBatch
+TransferProhibitionBatch
+TransferInDomainBatch
+TransferInDomainBatchBuy
+CancelTransferOutInBatch
      */
     function __construct()
     {

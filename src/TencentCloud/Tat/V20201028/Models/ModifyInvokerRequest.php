@@ -26,22 +26,30 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInvokerId(string $InvokerId) 设置待修改的执行器ID。
 
 可通过 [DescribeInvokers(查询执行器)](https://cloud.tencent.com/document/api/1340/61759) 接口获取。
- * @method string getName() 获取待修改的执行器名称。
- * @method void setName(string $Name) 设置待修改的执行器名称。
- * @method string getType() 获取执行器类型，当前仅支持周期类型执行器，取值：`SCHEDULE` 。
- * @method void setType(string $Type) 设置执行器类型，当前仅支持周期类型执行器，取值：`SCHEDULE` 。
+ * @method string getName() 获取待修改的执行器名称。长度不超过 120 字符。
+ * @method void setName(string $Name) 设置待修改的执行器名称。长度不超过 120 字符。
+ * @method string getType() 获取待修改的执行器类型。
+
+可选取值（当前仅支持一种）：
+
+- `SCHEDULE`：周期类型执行器。
+ * @method void setType(string $Type) 设置待修改的执行器类型。
+
+可选取值（当前仅支持一种）：
+
+- `SCHEDULE`：周期类型执行器。
  * @method string getCommandId() 获取待修改的命令ID。
 
 可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
  * @method void setCommandId(string $CommandId) 设置待修改的命令ID。
 
 可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
- * @method string getUsername() 获取待修改的用户名。
- * @method void setUsername(string $Username) 设置待修改的用户名。
- * @method string getParameters() 获取待修改的自定义参数。
+ * @method string getUsername() 获取待修改的用户名。长度不超过 256 字符。
+ * @method void setUsername(string $Username) 设置待修改的用户名。长度不超过 256 字符。
+ * @method string getParameters() 获取待修改的自定义参数。字段类型为 JSON encode string。
 
 仅在 CommandId 所指命令的 EnableParameter 为 true 时，才允许设置此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
- * @method void setParameters(string $Parameters) 设置待修改的自定义参数。
+ * @method void setParameters(string $Parameters) 设置待修改的自定义参数。字段类型为 JSON encode string。
 
 仅在 CommandId 所指命令的 EnableParameter 为 true 时，才允许设置此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
  * @method array getInstanceIds() 获取待修改的实例ID列表。列表长度上限100。
@@ -55,7 +63,11 @@ use TencentCloud\Common\AbstractModel;
 
 实例需要安装 TAT 客户端, 且客户端为 Online 状态。可通过 [DescribeAutomationAgentStatus(查询客户端状态)](https://cloud.tencent.com/document/api/1340/52682) 接口查询客户端状态。
  * @method ScheduleSettings getScheduleSettings() 获取待修改的周期执行器设置。
+
+要将执行器类型修改为 `SCHEDULE` 时，必须指定此参数。
  * @method void setScheduleSettings(ScheduleSettings $ScheduleSettings) 设置待修改的周期执行器设置。
+
+要将执行器类型修改为 `SCHEDULE` 时，必须指定此参数。
  */
 class ModifyInvokerRequest extends AbstractModel
 {
@@ -67,12 +79,16 @@ class ModifyInvokerRequest extends AbstractModel
     public $InvokerId;
 
     /**
-     * @var string 待修改的执行器名称。
+     * @var string 待修改的执行器名称。长度不超过 120 字符。
      */
     public $Name;
 
     /**
-     * @var string 执行器类型，当前仅支持周期类型执行器，取值：`SCHEDULE` 。
+     * @var string 待修改的执行器类型。
+
+可选取值（当前仅支持一种）：
+
+- `SCHEDULE`：周期类型执行器。
      */
     public $Type;
 
@@ -84,12 +100,12 @@ class ModifyInvokerRequest extends AbstractModel
     public $CommandId;
 
     /**
-     * @var string 待修改的用户名。
+     * @var string 待修改的用户名。长度不超过 256 字符。
      */
     public $Username;
 
     /**
-     * @var string 待修改的自定义参数。
+     * @var string 待修改的自定义参数。字段类型为 JSON encode string。
 
 仅在 CommandId 所指命令的 EnableParameter 为 true 时，才允许设置此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
      */
@@ -106,6 +122,8 @@ class ModifyInvokerRequest extends AbstractModel
 
     /**
      * @var ScheduleSettings 待修改的周期执行器设置。
+
+要将执行器类型修改为 `SCHEDULE` 时，必须指定此参数。
      */
     public $ScheduleSettings;
 
@@ -113,13 +131,17 @@ class ModifyInvokerRequest extends AbstractModel
      * @param string $InvokerId 待修改的执行器ID。
 
 可通过 [DescribeInvokers(查询执行器)](https://cloud.tencent.com/document/api/1340/61759) 接口获取。
-     * @param string $Name 待修改的执行器名称。
-     * @param string $Type 执行器类型，当前仅支持周期类型执行器，取值：`SCHEDULE` 。
+     * @param string $Name 待修改的执行器名称。长度不超过 120 字符。
+     * @param string $Type 待修改的执行器类型。
+
+可选取值（当前仅支持一种）：
+
+- `SCHEDULE`：周期类型执行器。
      * @param string $CommandId 待修改的命令ID。
 
 可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
-     * @param string $Username 待修改的用户名。
-     * @param string $Parameters 待修改的自定义参数。
+     * @param string $Username 待修改的用户名。长度不超过 256 字符。
+     * @param string $Parameters 待修改的自定义参数。字段类型为 JSON encode string。
 
 仅在 CommandId 所指命令的 EnableParameter 为 true 时，才允许设置此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
      * @param array $InstanceIds 待修改的实例ID列表。列表长度上限100。
@@ -128,6 +150,8 @@ class ModifyInvokerRequest extends AbstractModel
 
 实例需要安装 TAT 客户端, 且客户端为 Online 状态。可通过 [DescribeAutomationAgentStatus(查询客户端状态)](https://cloud.tencent.com/document/api/1340/52682) 接口查询客户端状态。
      * @param ScheduleSettings $ScheduleSettings 待修改的周期执行器设置。
+
+要将执行器类型修改为 `SCHEDULE` 时，必须指定此参数。
      */
     function __construct()
     {

@@ -31,7 +31,7 @@ use TencentCloud\Domain\V20180808\Models as Models;
  * @method Models\CheckDomainResponse CheckDomain(Models\CheckDomainRequest $req) 检查域名是否可以注册。
  * @method Models\CreateCustomDnsHostResponse CreateCustomDnsHost(Models\CreateCustomDnsHostRequest $req) 创建自定义DNS Host
  * @method Models\CreateDomainBatchResponse CreateDomainBatch(Models\CreateDomainBatchRequest $req) 本接口 ( CreateDomainBatch ) 用于批量域名注册 。
- * @method Models\CreateDomainRedemptionResponse CreateDomainRedemption(Models\CreateDomainRedemptionRequest $req) 创建赎回订单。
+ * @method Models\CreateDomainRedemptionResponse CreateDomainRedemption(Models\CreateDomainRedemptionRequest $req) 创建赎回订单。需要域名状态为：RedemptionPending：赎回期
  * @method Models\CreatePhoneEmailResponse CreatePhoneEmail(Models\CreatePhoneEmailRequest $req) 此接口用于创建有效的手机、邮箱
  * @method Models\CreateTemplateResponse CreateTemplate(Models\CreateTemplateRequest $req) 本接口 ( CreateTemplate ) 用于添加域名信息模板 。
  * @method Models\DeleteBiddingResponse DeleteBidding(Models\DeleteBiddingRequest $req) 删除记录。
@@ -49,6 +49,7 @@ use TencentCloud\Domain\V20180808\Models as Models;
  * @method Models\DescribeBiddingSuccessfulDetailResponse DescribeBiddingSuccessfulDetail(Models\DescribeBiddingSuccessfulDetailRequest $req) 我得标的域名-得标详情。
  * @method Models\DescribeBiddingSuccessfulListResponse DescribeBiddingSuccessfulList(Models\DescribeBiddingSuccessfulListRequest $req) 我得标的域名。
  * @method Models\DescribeCustomDnsHostSetResponse DescribeCustomDnsHostSet(Models\DescribeCustomDnsHostSetRequest $req) 查询自定义DNS Host
+当前域名在任意状态下均可获取(根据域名当前状态，不一定能获取到具体数据)
  * @method Models\DescribeDomainBaseInfoResponse DescribeDomainBaseInfo(Models\DescribeDomainBaseInfoRequest $req) 本接口 (  DescribeDomainBaseInfo) 获取域名基本信息。
  * @method Models\DescribeDomainNameListResponse DescribeDomainNameList(Models\DescribeDomainNameListRequest $req) 本接口 (  DescribeDomainNameList ) 我的域名列表。
  * @method Models\DescribeDomainPriceListResponse DescribeDomainPriceList(Models\DescribeDomainPriceListRequest $req) 按照域名后缀获取对应的价格列表
@@ -73,7 +74,8 @@ use TencentCloud\Domain\V20180808\Models as Models;
  * @method Models\ReservedPreDomainsResponse ReservedPreDomains(Models\ReservedPreDomainsRequest $req) 用于合作商对预释放域名进行预留。
  * @method Models\SendPhoneEmailCodeResponse SendPhoneEmailCode(Models\SendPhoneEmailCodeRequest $req) 此接口用于发送手机邮箱验证码。
  * @method Models\SetDomainAutoRenewResponse SetDomainAutoRenew(Models\SetDomainAutoRenewRequest $req) 本接口 ( SetDomainAutoRenew ) 用于设置域名自动续费。
- * @method Models\SyncCustomDnsHostResponse SyncCustomDnsHost(Models\SyncCustomDnsHostRequest $req) 同步自定义DNS Host
+当前操作暂不受域名状态限制
+ * @method Models\SyncCustomDnsHostResponse SyncCustomDnsHost(Models\SyncCustomDnsHostRequest $req) 同步自定义DNS Host，将域名已经设置的host配置数据从注册局同步下来
  * @method Models\TransferInDomainBatchResponse TransferInDomainBatch(Models\TransferInDomainBatchRequest $req) 本接口 ( TransferInDomainBatch ) 用于批量转入域名 。
  * @method Models\TransferProhibitionBatchResponse TransferProhibitionBatch(Models\TransferProhibitionBatchRequest $req) 本接口 ( TransferProhibitionBatch ) 用于批量禁止域名转移 。
  * @method Models\UpdateProhibitionBatchResponse UpdateProhibitionBatch(Models\UpdateProhibitionBatchRequest $req) 本接口 ( UpdateProhibitionBatch ) 用于批量禁止更新锁。

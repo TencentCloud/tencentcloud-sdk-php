@@ -20,11 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInvokers请求参数结构体
  *
- * @method array getInvokerIds() 获取执行器ID列表。
+ * @method array getInvokerIds() 获取执行器 ID 列表。
+
+每次请求的上限为 100。
 
 参数不支持同时指定 `InvokerIds ` 和 `Filters ` 。
 
- * @method void setInvokerIds(array $InvokerIds) 设置执行器ID列表。
+ * @method void setInvokerIds(array $InvokerIds) 设置执行器 ID 列表。
+
+每次请求的上限为 100。
 
 参数不支持同时指定 `InvokerIds ` 和 `Filters ` 。
 
@@ -32,16 +36,16 @@ use TencentCloud\Common\AbstractModel;
 
 - invoker-id - String - 是否必填：否 - （过滤条件）按执行器ID过滤。
 - command-id - String - 是否必填：否 - （过滤条件）按命令ID过滤。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
-- type - String - 是否必填：否 - （过滤条件）按执行器类型过滤。目前仅支持 SCHEDULE 一种。
+- invoker-type - String - 是否必填：否 - （过滤条件）按执行器类型过滤。目前仅支持 SCHEDULE 一种。
 
-参数不支持同时指定 `InvokerIds ` 和 `Filters ` 。
+每次请求的 `Filters` 的上限为 10，`Filter.Values` 的上限为 5。参数不支持同时指定 `InvokerIds` 和 `Filters` 。
  * @method void setFilters(array $Filters) 设置过滤条件：
 
 - invoker-id - String - 是否必填：否 - （过滤条件）按执行器ID过滤。
 - command-id - String - 是否必填：否 - （过滤条件）按命令ID过滤。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
-- type - String - 是否必填：否 - （过滤条件）按执行器类型过滤。目前仅支持 SCHEDULE 一种。
+- invoker-type - String - 是否必填：否 - （过滤条件）按执行器类型过滤。目前仅支持 SCHEDULE 一种。
 
-参数不支持同时指定 `InvokerIds ` 和 `Filters ` 。
+每次请求的 `Filters` 的上限为 10，`Filter.Values` 的上限为 5。参数不支持同时指定 `InvokerIds` 和 `Filters` 。
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
  * @method integer getOffset() 获取偏移量，默认为0。
@@ -50,7 +54,9 @@ use TencentCloud\Common\AbstractModel;
 class DescribeInvokersRequest extends AbstractModel
 {
     /**
-     * @var array 执行器ID列表。
+     * @var array 执行器 ID 列表。
+
+每次请求的上限为 100。
 
 参数不支持同时指定 `InvokerIds ` 和 `Filters ` 。
 
@@ -62,9 +68,9 @@ class DescribeInvokersRequest extends AbstractModel
 
 - invoker-id - String - 是否必填：否 - （过滤条件）按执行器ID过滤。
 - command-id - String - 是否必填：否 - （过滤条件）按命令ID过滤。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
-- type - String - 是否必填：否 - （过滤条件）按执行器类型过滤。目前仅支持 SCHEDULE 一种。
+- invoker-type - String - 是否必填：否 - （过滤条件）按执行器类型过滤。目前仅支持 SCHEDULE 一种。
 
-参数不支持同时指定 `InvokerIds ` 和 `Filters ` 。
+每次请求的 `Filters` 的上限为 10，`Filter.Values` 的上限为 5。参数不支持同时指定 `InvokerIds` 和 `Filters` 。
      */
     public $Filters;
 
@@ -79,7 +85,9 @@ class DescribeInvokersRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @param array $InvokerIds 执行器ID列表。
+     * @param array $InvokerIds 执行器 ID 列表。
+
+每次请求的上限为 100。
 
 参数不支持同时指定 `InvokerIds ` 和 `Filters ` 。
 
@@ -87,9 +95,9 @@ class DescribeInvokersRequest extends AbstractModel
 
 - invoker-id - String - 是否必填：否 - （过滤条件）按执行器ID过滤。
 - command-id - String - 是否必填：否 - （过滤条件）按命令ID过滤。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
-- type - String - 是否必填：否 - （过滤条件）按执行器类型过滤。目前仅支持 SCHEDULE 一种。
+- invoker-type - String - 是否必填：否 - （过滤条件）按执行器类型过滤。目前仅支持 SCHEDULE 一种。
 
-参数不支持同时指定 `InvokerIds ` 和 `Filters ` 。
+每次请求的 `Filters` 的上限为 10，`Filter.Values` 的上限为 5。参数不支持同时指定 `InvokerIds` 和 `Filters` 。
      * @param integer $Limit 返回数量，默认为20，最大值为100。
      * @param integer $Offset 偏移量，默认为0。
      */

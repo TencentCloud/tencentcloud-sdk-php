@@ -31,11 +31,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getExpireTime() 获取到期时间
  * @method void setExpireTime(string $ExpireTime) 设置到期时间
  * @method string getStatus() 获取域名状态
+ bid：出价
+noAction：无法操作
  * @method void setStatus(string $Status) 设置域名状态
- * @method float getCurrentPrice() 获取域名价格
- * @method void setCurrentPrice(float $CurrentPrice) 设置域名价格
- * @method float getAppointBondPrice() 获取域名保证金
- * @method void setAppointBondPrice(float $AppointBondPrice) 设置域名保证金
+ bid：出价
+noAction：无法操作
+ * @method float getCurrentPrice() 获取域名价格 单位元
+ * @method void setCurrentPrice(float $CurrentPrice) 设置域名价格 单位元
+ * @method float getAppointBondPrice() 获取域名保证金 单位元
+ * @method void setAppointBondPrice(float $AppointBondPrice) 设置域名保证金 单位元
  * @method boolean getIsAppoint() 获取是否已经预约
  * @method void setIsAppoint(boolean $IsAppoint) 设置是否已经预约
  * @method string getBusinessId() 获取业务ID
@@ -74,16 +78,18 @@ class DescribeUnPreDomainDetailResponse extends AbstractModel
 
     /**
      * @var string 域名状态
+ bid：出价
+noAction：无法操作
      */
     public $Status;
 
     /**
-     * @var float 域名价格
+     * @var float 域名价格 单位元
      */
     public $CurrentPrice;
 
     /**
-     * @var float 域名保证金
+     * @var float 域名保证金 单位元
      */
     public $AppointBondPrice;
 
@@ -114,8 +120,10 @@ class DescribeUnPreDomainDetailResponse extends AbstractModel
      * @param string $DeleteTime 域名删除时间
      * @param string $ExpireTime 到期时间
      * @param string $Status 域名状态
-     * @param float $CurrentPrice 域名价格
-     * @param float $AppointBondPrice 域名保证金
+ bid：出价
+noAction：无法操作
+     * @param float $CurrentPrice 域名价格 单位元
+     * @param float $AppointBondPrice 域名保证金 单位元
      * @param boolean $IsAppoint 是否已经预约
      * @param string $BusinessId 业务ID
      * @param boolean $IsDomainUser 是否为原持有者域名

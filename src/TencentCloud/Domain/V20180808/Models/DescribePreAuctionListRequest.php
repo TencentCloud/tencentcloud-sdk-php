@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePreAuctionList请求参数结构体
  *
- * @method integer getPageNumber() 获取页码
- * @method void setPageNumber(integer $PageNumber) 设置页码
- * @method integer getPageSize() 获取条数
- * @method void setPageSize(integer $PageSize) 设置条数
+ * @method integer getPageNumber() 获取页码 默认1
+ * @method void setPageNumber(integer $PageNumber) 设置页码 默认1
+ * @method integer getPageSize() 获取条数 默认20 最大100
+ * @method void setPageSize(integer $PageSize) 设置条数 默认20 最大100
  */
 class DescribePreAuctionListRequest extends AbstractModel
 {
     /**
-     * @var integer 页码
+     * @var integer 页码 默认1
      */
     public $PageNumber;
 
     /**
-     * @var integer 条数
+     * @var integer 条数 默认20 最大100
      */
     public $PageSize;
 
     /**
-     * @param integer $PageNumber 页码
-     * @param integer $PageSize 条数
+     * @param integer $PageNumber 页码 默认1
+     * @param integer $PageSize 条数 默认20 最大100
      */
     function __construct()
     {

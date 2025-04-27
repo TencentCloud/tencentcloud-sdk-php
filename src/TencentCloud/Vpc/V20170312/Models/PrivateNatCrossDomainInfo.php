@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 私网NAT网关跨域信息
  *
  * @method string getCcnId() 获取跨域私网NAT关联的云联网ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCcnId(string $CcnId) 设置跨域私网NAT关联的云联网ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLocalVpcId() 获取跨域私网NAT本端Vpc
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocalVpcId(string $LocalVpcId) 设置跨域私网NAT本端Vpc
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPeerVpcId() 获取跨域私网NAT对端Vpc
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPeerVpcId(string $PeerVpcId) 设置跨域私网NAT对端Vpc
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PrivateNatCrossDomainInfo extends AbstractModel
 {
     /**
      * @var string 跨域私网NAT关联的云联网ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CcnId;
 
     /**
      * @var string 跨域私网NAT本端Vpc
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LocalVpcId;
 
     /**
      * @var string 跨域私网NAT对端Vpc
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PeerVpcId;
 
     /**
      * @param string $CcnId 跨域私网NAT关联的云联网ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LocalVpcId 跨域私网NAT本端Vpc
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PeerVpcId 跨域私网NAT对端Vpc
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

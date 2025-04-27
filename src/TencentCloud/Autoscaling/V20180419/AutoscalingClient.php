@@ -26,10 +26,10 @@ use TencentCloud\Autoscaling\V20180419\Models as Models;
  * @method Models\AttachInstancesResponse AttachInstances(Models\AttachInstancesRequest $req) 本接口（AttachInstances）用于将 CVM 实例添加到伸缩组。
 * 仅支持添加处于`RUNNING`（运行中）或`STOPPED`（已关机）状态的 CVM 实例
 * 添加的 CVM 实例需要和伸缩组 VPC 网络一致
-
  * @method Models\AttachLoadBalancersResponse AttachLoadBalancers(Models\AttachLoadBalancersRequest $req) 此接口（AttachLoadBalancers）用于将负载均衡器添加到伸缩组。
  * @method Models\CancelInstanceRefreshResponse CancelInstanceRefresh(Models\CancelInstanceRefreshRequest $req) 取消伸缩组的实例刷新活动。
-* 已刷新/正在刷新的批次不受影响，待刷新批次被取消
+* 已刷新的批次不受影响，待刷新批次被取消
+* 如存在正在刷新的批次，不允许取消；可先暂停活动，等待当前批次结束后再取消
 * 刷新失败的实例保持备用中状态，需用户手动处理后尝试退出备用中状态或销毁
 * 取消后不允许回滚操作，也不支持恢复操作
 * 因 maxSurge 参数而临时扩容的实例在取消后会自动销毁

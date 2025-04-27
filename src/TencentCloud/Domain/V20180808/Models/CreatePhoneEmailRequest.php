@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCode(string $Code) 设置手机号或者邮箱
  * @method integer getType() 获取1：手机   2：邮箱
  * @method void setType(integer $Type) 设置1：手机   2：邮箱
- * @method string getVerifyCode() 获取验证码(通过SendPhoneEmailCode发送到手机或邮箱的验证码)
- * @method void setVerifyCode(string $VerifyCode) 设置验证码(通过SendPhoneEmailCode发送到手机或邮箱的验证码)
+ * @method string getVerifyCode() 获取验证码
+通过调用SendPhoneEmailCode接口发送到手机或邮箱的验证码：https://cloud.tencent.com/document/api/242/62666
+ * @method void setVerifyCode(string $VerifyCode) 设置验证码
+通过调用SendPhoneEmailCode接口发送到手机或邮箱的验证码：https://cloud.tencent.com/document/api/242/62666
  */
 class CreatePhoneEmailRequest extends AbstractModel
 {
@@ -40,14 +42,16 @@ class CreatePhoneEmailRequest extends AbstractModel
     public $Type;
 
     /**
-     * @var string 验证码(通过SendPhoneEmailCode发送到手机或邮箱的验证码)
+     * @var string 验证码
+通过调用SendPhoneEmailCode接口发送到手机或邮箱的验证码：https://cloud.tencent.com/document/api/242/62666
      */
     public $VerifyCode;
 
     /**
      * @param string $Code 手机号或者邮箱
      * @param integer $Type 1：手机   2：邮箱
-     * @param string $VerifyCode 验证码(通过SendPhoneEmailCode发送到手机或邮箱的验证码)
+     * @param string $VerifyCode 验证码
+通过调用SendPhoneEmailCode接口发送到手机或邮箱的验证码：https://cloud.tencent.com/document/api/242/62666
      */
     function __construct()
     {

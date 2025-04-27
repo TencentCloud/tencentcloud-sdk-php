@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEventId(string $EventId) 设置用户自定义事件ID，后续扩展使用
  * @method string getSummary() 获取视频内容摘要
  * @method void setSummary(string $Summary) 设置视频内容摘要
+ * @method integer getChannelId() 获取通道ID
+ * @method void setChannelId(integer $ChannelId) 设置通道ID
+ * @method string getThumbnail() 获取缩略图路径
+ * @method void setThumbnail(string $Thumbnail) 设置缩略图路径
  */
 class TargetInfo extends AbstractModel
 {
@@ -73,6 +77,16 @@ class TargetInfo extends AbstractModel
     public $Summary;
 
     /**
+     * @var integer 通道ID
+     */
+    public $ChannelId;
+
+    /**
+     * @var string 缩略图路径
+     */
+    public $Thumbnail;
+
+    /**
      * @param string $Id 视频唯一ID
      * @param string $ProductId 产品ID
      * @param string $DeviceName 设备名称
@@ -80,6 +94,8 @@ class TargetInfo extends AbstractModel
      * @param integer $EndTimeMs 视频结束时间（毫秒级Unix时间戳）
      * @param string $EventId 用户自定义事件ID，后续扩展使用
      * @param string $Summary 视频内容摘要
+     * @param integer $ChannelId 通道ID
+     * @param string $Thumbnail 缩略图路径
      */
     function __construct()
     {
@@ -120,6 +136,14 @@ class TargetInfo extends AbstractModel
 
         if (array_key_exists("Summary",$param) and $param["Summary"] !== null) {
             $this->Summary = $param["Summary"];
+        }
+
+        if (array_key_exists("ChannelId",$param) and $param["ChannelId"] !== null) {
+            $this->ChannelId = $param["ChannelId"];
+        }
+
+        if (array_key_exists("Thumbnail",$param) and $param["Thumbnail"] !== null) {
+            $this->Thumbnail = $param["Thumbnail"];
         }
     }
 }

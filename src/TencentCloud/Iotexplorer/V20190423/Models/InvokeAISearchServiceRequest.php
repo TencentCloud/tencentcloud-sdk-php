@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuery(string $Query) 设置自然语言查询
  * @method string getSummaryLang() 获取搜索结果总结的语言类型，支持的类型有：en-US、zh-CN、id-ID、th-TH
  * @method void setSummaryLang(string $SummaryLang) 设置搜索结果总结的语言类型，支持的类型有：en-US、zh-CN、id-ID、th-TH
+ * @method integer getChannelId() 获取通道ID
+ * @method void setChannelId(integer $ChannelId) 设置通道ID
  */
 class InvokeAISearchServiceRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class InvokeAISearchServiceRequest extends AbstractModel
     public $SummaryLang;
 
     /**
+     * @var integer 通道ID
+     */
+    public $ChannelId;
+
+    /**
      * @param string $ProductId 产品ID
      * @param string $DeviceName 设备名称
      * @param string $Query 自然语言查询
      * @param string $SummaryLang 搜索结果总结的语言类型，支持的类型有：en-US、zh-CN、id-ID、th-TH
+     * @param integer $ChannelId 通道ID
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class InvokeAISearchServiceRequest extends AbstractModel
 
         if (array_key_exists("SummaryLang",$param) and $param["SummaryLang"] !== null) {
             $this->SummaryLang = $param["SummaryLang"];
+        }
+
+        if (array_key_exists("ChannelId",$param) and $param["ChannelId"] !== null) {
+            $this->ChannelId = $param["ChannelId"];
         }
     }
 }

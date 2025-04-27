@@ -207,6 +207,7 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
  * @method Models\DescribeTaskScriptResponse DescribeTaskScript(Models\DescribeTaskScriptRequest $req) 查询任务脚本
  * @method Models\DescribeTaskTableMetricOverviewResponse DescribeTaskTableMetricOverview(Models\DescribeTaskTableMetricOverviewRequest $req) 查询实时任务表粒度指标概览
  * @method Models\DescribeTemplateDimCountResponse DescribeTemplateDimCount(Models\DescribeTemplateDimCountRequest $req) 查询规则模板维度分布情况
+ * @method Models\DescribeTenantProjectsResponse DescribeTenantProjects(Models\DescribeTenantProjectsRequest $req) 租户全局范围的项目列表，与用户查看范围无关.
  * @method Models\DescribeThirdTaskRunLogResponse DescribeThirdTaskRunLog(Models\DescribeThirdTaskRunLogRequest $req) 获取第三方运行日志
  * @method Models\DescribeTopTableStatResponse DescribeTopTableStat(Models\DescribeTopTableStatRequest $req) 数据质量概览页面表排行接口
  * @method Models\DescribeTrendStatResponse DescribeTrendStat(Models\DescribeTrendStatRequest $req) 数据质量概览页面趋势变化接口

@@ -21,15 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * 周期执行器设置。
  *
  * @method string getPolicy() 获取执行策略：
+
 - ONCE：单次执行
 - RECURRENCE：周期执行
-
-只有在 CreateInvoker 时才必填，ModifyInvoker 时为非必填
  * @method void setPolicy(string $Policy) 设置执行策略：
+
 - ONCE：单次执行
 - RECURRENCE：周期执行
-
-只有在 CreateInvoker 时才必填，ModifyInvoker 时为非必填
  * @method string getRecurrence() 获取触发 Crontab 表达式。Policy 为 RECURRENCE 时，需要指定此字段。Crontab 按北京时间解析。
  * @method void setRecurrence(string $Recurrence) 设置触发 Crontab 表达式。Policy 为 RECURRENCE 时，需要指定此字段。Crontab 按北京时间解析。
  * @method string getInvokeTime() 获取执行器下次执行时间。Policy 为 ONCE 时，需要指定此字段。
@@ -43,10 +41,9 @@ class ScheduleSettings extends AbstractModel
 {
     /**
      * @var string 执行策略：
+
 - ONCE：单次执行
 - RECURRENCE：周期执行
-
-只有在 CreateInvoker 时才必填，ModifyInvoker 时为非必填
      */
     public $Policy;
 
@@ -64,10 +61,9 @@ class ScheduleSettings extends AbstractModel
 
     /**
      * @param string $Policy 执行策略：
+
 - ONCE：单次执行
 - RECURRENCE：周期执行
-
-只有在 CreateInvoker 时才必填，ModifyInvoker 时为非必填
      * @param string $Recurrence 触发 Crontab 表达式。Policy 为 RECURRENCE 时，需要指定此字段。Crontab 按北京时间解析。
      * @param string $InvokeTime 执行器下次执行时间。Policy 为 ONCE 时，需要指定此字段。
 

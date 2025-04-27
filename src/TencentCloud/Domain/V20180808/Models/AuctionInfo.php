@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBidder(string $Bidder) 设置竞拍人
  * @method string getAuctionTime() 获取竞拍时间
  * @method void setAuctionTime(string $AuctionTime) 设置竞拍时间
- * @method float getAuctionPrice() 获取竞拍价格
- * @method void setAuctionPrice(float $AuctionPrice) 设置竞拍价格
+ * @method float getAuctionPrice() 获取竞拍价格 单位元
+ * @method void setAuctionPrice(float $AuctionPrice) 设置竞拍价格 单位元
  * @method string getStatus() 获取状态 up: 领先 down: 落后
  * @method void setStatus(string $Status) 设置状态 up: 领先 down: 落后
  */
@@ -42,7 +42,7 @@ class AuctionInfo extends AbstractModel
     public $AuctionTime;
 
     /**
-     * @var float 竞拍价格
+     * @var float 竞拍价格 单位元
      */
     public $AuctionPrice;
 
@@ -54,7 +54,7 @@ class AuctionInfo extends AbstractModel
     /**
      * @param string $Bidder 竞拍人
      * @param string $AuctionTime 竞拍时间
-     * @param float $AuctionPrice 竞拍价格
+     * @param float $AuctionPrice 竞拍价格 单位元
      * @param string $Status 状态 up: 领先 down: 落后
      */
     function __construct()

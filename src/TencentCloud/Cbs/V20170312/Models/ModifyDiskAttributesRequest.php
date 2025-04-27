@@ -20,8 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDiskAttributes请求参数结构体
  *
- * @method array getDiskIds() 获取一个或多个待操作的云硬盘ID。如果传入多个云盘ID，仅支持所有云盘修改为同一属性。
- * @method void setDiskIds(array $DiskIds) 设置一个或多个待操作的云硬盘ID。如果传入多个云盘ID，仅支持所有云盘修改为同一属性。
+ * @method array getDiskIds() 获取一个或多个待操作的云硬盘ID，可以通过[DescribeDisks](/document/product/362/16315)接口查询。如果传入多个云盘ID，仅支持将所有云盘修改为同一属性。
+
+ * @method void setDiskIds(array $DiskIds) 设置一个或多个待操作的云硬盘ID，可以通过[DescribeDisks](/document/product/362/16315)接口查询。如果传入多个云盘ID，仅支持将所有云盘修改为同一属性。
+
  * @method string getDiskName() 获取新的云硬盘名称。
  * @method void setDiskName(string $DiskName) 设置新的云硬盘名称。
  * @method boolean getPortable() 获取是否为弹性云盘，FALSE表示非弹性云盘，TRUE表示弹性云盘。仅支持非弹性云盘修改为弹性云盘。
@@ -31,14 +33,21 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getDeleteWithInstance() 获取成功挂载到云主机后该云硬盘是否随云主机销毁，TRUE表示随云主机销毁，FALSE表示不随云主机销毁。仅支持按量计费云硬盘数据盘。
  * @method void setDeleteWithInstance(boolean $DeleteWithInstance) 设置成功挂载到云主机后该云硬盘是否随云主机销毁，TRUE表示随云主机销毁，FALSE表示不随云主机销毁。仅支持按量计费云硬盘数据盘。
  * @method string getDiskType() 获取变更云盘类型时，可传入该参数，表示变更的目标类型，取值范围：<br><li>CLOUD_PREMIUM：表示高性能云硬盘</li><li>CLOUD_SSD：表示SSD云硬盘。</li>当前不支持批量变更类型，即传入DiskType时，DiskIds仅支持传入一块云盘；<br>变更云盘类型时不支持同时变更其他属性。
+具体说明请参考[调整云硬盘类型](https://cloud.tencent.com/document/product/362/32540)
  * @method void setDiskType(string $DiskType) 设置变更云盘类型时，可传入该参数，表示变更的目标类型，取值范围：<br><li>CLOUD_PREMIUM：表示高性能云硬盘</li><li>CLOUD_SSD：表示SSD云硬盘。</li>当前不支持批量变更类型，即传入DiskType时，DiskIds仅支持传入一块云盘；<br>变更云盘类型时不支持同时变更其他属性。
- * @method string getBurstPerformanceOperation() 获取开启/关闭云盘性能突发功能
- * @method void setBurstPerformanceOperation(string $BurstPerformanceOperation) 设置开启/关闭云盘性能突发功能
+具体说明请参考[调整云硬盘类型](https://cloud.tencent.com/document/product/362/32540)
+ * @method string getBurstPerformanceOperation() 获取开启/关闭云盘性能突发功能，取值范围： 
+CREATE：开启
+CANCEL：关闭
+ * @method void setBurstPerformanceOperation(string $BurstPerformanceOperation) 设置开启/关闭云盘性能突发功能，取值范围： 
+CREATE：开启
+CANCEL：关闭
  */
 class ModifyDiskAttributesRequest extends AbstractModel
 {
     /**
-     * @var array 一个或多个待操作的云硬盘ID。如果传入多个云盘ID，仅支持所有云盘修改为同一属性。
+     * @var array 一个或多个待操作的云硬盘ID，可以通过[DescribeDisks](/document/product/362/16315)接口查询。如果传入多个云盘ID，仅支持将所有云盘修改为同一属性。
+
      */
     public $DiskIds;
 
@@ -64,22 +73,29 @@ class ModifyDiskAttributesRequest extends AbstractModel
 
     /**
      * @var string 变更云盘类型时，可传入该参数，表示变更的目标类型，取值范围：<br><li>CLOUD_PREMIUM：表示高性能云硬盘</li><li>CLOUD_SSD：表示SSD云硬盘。</li>当前不支持批量变更类型，即传入DiskType时，DiskIds仅支持传入一块云盘；<br>变更云盘类型时不支持同时变更其他属性。
+具体说明请参考[调整云硬盘类型](https://cloud.tencent.com/document/product/362/32540)
      */
     public $DiskType;
 
     /**
-     * @var string 开启/关闭云盘性能突发功能
+     * @var string 开启/关闭云盘性能突发功能，取值范围： 
+CREATE：开启
+CANCEL：关闭
      */
     public $BurstPerformanceOperation;
 
     /**
-     * @param array $DiskIds 一个或多个待操作的云硬盘ID。如果传入多个云盘ID，仅支持所有云盘修改为同一属性。
+     * @param array $DiskIds 一个或多个待操作的云硬盘ID，可以通过[DescribeDisks](/document/product/362/16315)接口查询。如果传入多个云盘ID，仅支持将所有云盘修改为同一属性。
+
      * @param string $DiskName 新的云硬盘名称。
      * @param boolean $Portable 是否为弹性云盘，FALSE表示非弹性云盘，TRUE表示弹性云盘。仅支持非弹性云盘修改为弹性云盘。
      * @param integer $ProjectId 新的云硬盘项目ID，只支持修改弹性云盘的项目ID。通过[DescribeProject](/document/api/378/4400)接口查询可用项目及其ID。
      * @param boolean $DeleteWithInstance 成功挂载到云主机后该云硬盘是否随云主机销毁，TRUE表示随云主机销毁，FALSE表示不随云主机销毁。仅支持按量计费云硬盘数据盘。
      * @param string $DiskType 变更云盘类型时，可传入该参数，表示变更的目标类型，取值范围：<br><li>CLOUD_PREMIUM：表示高性能云硬盘</li><li>CLOUD_SSD：表示SSD云硬盘。</li>当前不支持批量变更类型，即传入DiskType时，DiskIds仅支持传入一块云盘；<br>变更云盘类型时不支持同时变更其他属性。
-     * @param string $BurstPerformanceOperation 开启/关闭云盘性能突发功能
+具体说明请参考[调整云硬盘类型](https://cloud.tencent.com/document/product/362/32540)
+     * @param string $BurstPerformanceOperation 开启/关闭云盘性能突发功能，取值范围： 
+CREATE：开启
+CANCEL：关闭
      */
     function __construct()
     {

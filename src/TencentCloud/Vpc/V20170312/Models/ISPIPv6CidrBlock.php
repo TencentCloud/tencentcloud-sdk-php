@@ -20,17 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 返回多运营商IPv6 Cidr Block
  *
+ * @method string getIPv6CidrBlock() 获取IPv6 CIdr Block
+ * @method void setIPv6CidrBlock(string $IPv6CidrBlock) 设置IPv6 CIdr Block
+ * @method string getISPType() 获取网络运营商类型 取值范围:'BGP'-默认, 'CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联调
+ * @method void setISPType(string $ISPType) 设置网络运营商类型 取值范围:'BGP'-默认, 'CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联调
  * @method string getAddressType() 获取IPv6 Cidr 的类型：`GUA`(全球单播地址), `ULA`(唯一本地地址)
  * @method void setAddressType(string $AddressType) 设置IPv6 Cidr 的类型：`GUA`(全球单播地址), `ULA`(唯一本地地址)
  */
 class ISPIPv6CidrBlock extends AbstractModel
 {
     /**
+     * @var string IPv6 CIdr Block
+     */
+    public $IPv6CidrBlock;
+
+    /**
+     * @var string 网络运营商类型 取值范围:'BGP'-默认, 'CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联调
+     */
+    public $ISPType;
+
+    /**
      * @var string IPv6 Cidr 的类型：`GUA`(全球单播地址), `ULA`(唯一本地地址)
      */
     public $AddressType;
 
     /**
+     * @param string $IPv6CidrBlock IPv6 CIdr Block
+     * @param string $ISPType 网络运营商类型 取值范围:'BGP'-默认, 'CMCC'-中国移动, 'CTCC'-中国电信, 'CUCC'-中国联调
      * @param string $AddressType IPv6 Cidr 的类型：`GUA`(全球单播地址), `ULA`(唯一本地地址)
      */
     function __construct()
@@ -46,6 +62,14 @@ class ISPIPv6CidrBlock extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("IPv6CidrBlock",$param) and $param["IPv6CidrBlock"] !== null) {
+            $this->IPv6CidrBlock = $param["IPv6CidrBlock"];
+        }
+
+        if (array_key_exists("ISPType",$param) and $param["ISPType"] !== null) {
+            $this->ISPType = $param["ISPType"];
+        }
+
         if (array_key_exists("AddressType",$param) and $param["AddressType"] !== null) {
             $this->AddressType = $param["AddressType"];
         }

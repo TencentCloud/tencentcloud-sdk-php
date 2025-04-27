@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeEventConfig返回参数结构体
  *
- * @method string getMode() 获取接收事件通知的方式。"PUSH" 为 [HTTP 回调通知](https://cloud.tencent.com/document/product/266/7829#http.E5.9B.9E.E8.B0.83)，"PULL" 为 [基于消息队列的可靠通知](https://cloud.tencent.com/document/product/266/7829#.E5.9F.BA.E4.BA.8E.E6.B6.88.E6.81.AF.E9.98.9F.E5.88.97.E7.9A.84.E5.8F.AF.E9.9D.A0.E9.80.9A.E7.9F.A5)。
- * @method void setMode(string $Mode) 设置接收事件通知的方式。"PUSH" 为 [HTTP 回调通知](https://cloud.tencent.com/document/product/266/7829#http.E5.9B.9E.E8.B0.83)，"PULL" 为 [基于消息队列的可靠通知](https://cloud.tencent.com/document/product/266/7829#.E5.9F.BA.E4.BA.8E.E6.B6.88.E6.81.AF.E9.98.9F.E5.88.97.E7.9A.84.E5.8F.AF.E9.9D.A0.E9.80.9A.E7.9F.A5)。
- * @method string getNotificationUrl() 获取采用 [HTTP 回调通知](https://cloud.tencent.com/document/product/266/7829#http.E5.9B.9E.E8.B0.83) 接收方式时，用于接收 V3 版本事件通知的地址。
- * @method void setNotificationUrl(string $NotificationUrl) 设置采用 [HTTP 回调通知](https://cloud.tencent.com/document/product/266/7829#http.E5.9B.9E.E8.B0.83) 接收方式时，用于接收 V3 版本事件通知的地址。
+ * @method string getMode() 获取接收事件通知的方式。"PUSH" 为 [普通回调](https://cloud.tencent.com/document/product/266/33779#.E6.99.AE.E9.80.9A.E5.9B.9E.E8.B0.83)，"PULL" 为 [可靠回调](https://cloud.tencent.com/document/product/266/33779#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83)。
+ * @method void setMode(string $Mode) 设置接收事件通知的方式。"PUSH" 为 [普通回调](https://cloud.tencent.com/document/product/266/33779#.E6.99.AE.E9.80.9A.E5.9B.9E.E8.B0.83)，"PULL" 为 [可靠回调](https://cloud.tencent.com/document/product/266/33779#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83)。
+ * @method string getNotificationUrl() 获取采用 [普通回调](https://cloud.tencent.com/document/product/266/33779#.E6.99.AE.E9.80.9A.E5.9B.9E.E8.B0.83) 模式时，用于接收 V3 版本事件通知的地址。
+ * @method void setNotificationUrl(string $NotificationUrl) 设置采用 [普通回调](https://cloud.tencent.com/document/product/266/33779#.E6.99.AE.E9.80.9A.E5.9B.9E.E8.B0.83) 模式时，用于接收 V3 版本事件通知的地址。
  * @method string getUploadMediaCompleteEventSwitch() 获取是否接收 [视频上传完成](https://cloud.tencent.com/document/product/266/7830) 事件通知，"OFF" 为忽略该事件通知，"ON" 为接收事件通知。
  * @method void setUploadMediaCompleteEventSwitch(string $UploadMediaCompleteEventSwitch) 设置是否接收 [视频上传完成](https://cloud.tencent.com/document/product/266/7830) 事件通知，"OFF" 为忽略该事件通知，"ON" 为接收事件通知。
  * @method string getDeleteMediaCompleteEventSwitch() 获取是否接收 [视频删除完成](https://cloud.tencent.com/document/product/266/13434) 事件通知，"OFF" 为忽略该事件通知，"ON" 为接收事件通知。
@@ -36,12 +36,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeEventConfigResponse extends AbstractModel
 {
     /**
-     * @var string 接收事件通知的方式。"PUSH" 为 [HTTP 回调通知](https://cloud.tencent.com/document/product/266/7829#http.E5.9B.9E.E8.B0.83)，"PULL" 为 [基于消息队列的可靠通知](https://cloud.tencent.com/document/product/266/7829#.E5.9F.BA.E4.BA.8E.E6.B6.88.E6.81.AF.E9.98.9F.E5.88.97.E7.9A.84.E5.8F.AF.E9.9D.A0.E9.80.9A.E7.9F.A5)。
+     * @var string 接收事件通知的方式。"PUSH" 为 [普通回调](https://cloud.tencent.com/document/product/266/33779#.E6.99.AE.E9.80.9A.E5.9B.9E.E8.B0.83)，"PULL" 为 [可靠回调](https://cloud.tencent.com/document/product/266/33779#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83)。
      */
     public $Mode;
 
     /**
-     * @var string 采用 [HTTP 回调通知](https://cloud.tencent.com/document/product/266/7829#http.E5.9B.9E.E8.B0.83) 接收方式时，用于接收 V3 版本事件通知的地址。
+     * @var string 采用 [普通回调](https://cloud.tencent.com/document/product/266/33779#.E6.99.AE.E9.80.9A.E5.9B.9E.E8.B0.83) 模式时，用于接收 V3 版本事件通知的地址。
      */
     public $NotificationUrl;
 
@@ -66,8 +66,8 @@ class DescribeEventConfigResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Mode 接收事件通知的方式。"PUSH" 为 [HTTP 回调通知](https://cloud.tencent.com/document/product/266/7829#http.E5.9B.9E.E8.B0.83)，"PULL" 为 [基于消息队列的可靠通知](https://cloud.tencent.com/document/product/266/7829#.E5.9F.BA.E4.BA.8E.E6.B6.88.E6.81.AF.E9.98.9F.E5.88.97.E7.9A.84.E5.8F.AF.E9.9D.A0.E9.80.9A.E7.9F.A5)。
-     * @param string $NotificationUrl 采用 [HTTP 回调通知](https://cloud.tencent.com/document/product/266/7829#http.E5.9B.9E.E8.B0.83) 接收方式时，用于接收 V3 版本事件通知的地址。
+     * @param string $Mode 接收事件通知的方式。"PUSH" 为 [普通回调](https://cloud.tencent.com/document/product/266/33779#.E6.99.AE.E9.80.9A.E5.9B.9E.E8.B0.83)，"PULL" 为 [可靠回调](https://cloud.tencent.com/document/product/266/33779#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83)。
+     * @param string $NotificationUrl 采用 [普通回调](https://cloud.tencent.com/document/product/266/33779#.E6.99.AE.E9.80.9A.E5.9B.9E.E8.B0.83) 模式时，用于接收 V3 版本事件通知的地址。
      * @param string $UploadMediaCompleteEventSwitch 是否接收 [视频上传完成](https://cloud.tencent.com/document/product/266/7830) 事件通知，"OFF" 为忽略该事件通知，"ON" 为接收事件通知。
      * @param string $DeleteMediaCompleteEventSwitch 是否接收 [视频删除完成](https://cloud.tencent.com/document/product/266/13434) 事件通知，"OFF" 为忽略该事件通知，"ON" 为接收事件通知。
      * @param string $PersistenceCompleteEventSwitch 是否接收剪辑固化完成事件通知，"OFF" 为忽略该事件通知，"ON" 为接收事件通知。

@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ClearLaunchConfigurationAttributes请求参数结构体
  *
- * @method string getLaunchConfigurationId() 获取启动配置ID。
- * @method void setLaunchConfigurationId(string $LaunchConfigurationId) 设置启动配置ID。
+ * @method string getLaunchConfigurationId() 获取启动配置ID。可通过如下方式获取：
+<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 查询启动配置ID。</li>
+<li>通过调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。</li>
+ * @method void setLaunchConfigurationId(string $LaunchConfigurationId) 设置启动配置ID。可通过如下方式获取：
+<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 查询启动配置ID。</li>
+<li>通过调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。</li>
  * @method boolean getClearDataDisks() 获取是否清空数据盘信息，非必填，默认为 false。
 填 true 代表清空“数据盘”信息，清空后基于此新创建的云主机将不含有任何数据盘。
  * @method void setClearDataDisks(boolean $ClearDataDisks) 设置是否清空数据盘信息，非必填，默认为 false。
@@ -48,7 +52,9 @@ use TencentCloud\Common\AbstractModel;
 class ClearLaunchConfigurationAttributesRequest extends AbstractModel
 {
     /**
-     * @var string 启动配置ID。
+     * @var string 启动配置ID。可通过如下方式获取：
+<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 查询启动配置ID。</li>
+<li>通过调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。</li>
      */
     public $LaunchConfigurationId;
 
@@ -88,7 +94,9 @@ class ClearLaunchConfigurationAttributesRequest extends AbstractModel
     public $ClearMetadata;
 
     /**
-     * @param string $LaunchConfigurationId 启动配置ID。
+     * @param string $LaunchConfigurationId 启动配置ID。可通过如下方式获取：
+<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 查询启动配置ID。</li>
+<li>通过调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。</li>
      * @param boolean $ClearDataDisks 是否清空数据盘信息，非必填，默认为 false。
 填 true 代表清空“数据盘”信息，清空后基于此新创建的云主机将不含有任何数据盘。
      * @param boolean $ClearHostNameSettings 是否清空云服务器主机名相关设置信息，非必填，默认为 false。

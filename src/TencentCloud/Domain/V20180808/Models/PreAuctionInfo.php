@@ -24,12 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) 设置域名
  * @method string getBiddingTime() 获取竞价倒计时
  * @method void setBiddingTime(string $BiddingTime) 设置竞价倒计时
- * @method integer getBidCount() 获取出价次数
- * @method void setBidCount(integer $BidCount) 设置出价次数
- * @method float getPrice() 获取当前价格
- * @method void setPrice(float $Price) 设置当前价格
- * @method string getOp() 获取用户操作 bid：出价 "noAction"：无法操作
- * @method void setOp(string $Op) 设置用户操作 bid：出价 "noAction"：无法操作
+ * @method integer getBidCount() 获取出价次数 单位元
+ * @method void setBidCount(integer $BidCount) 设置出价次数 单位元
+ * @method float getPrice() 获取当前价格 单位元
+ * @method void setPrice(float $Price) 设置当前价格 单位元
+ * @method string getOp() 获取用户操作 
+bid：出价 
+noAction：无法操作
+ * @method void setOp(string $Op) 设置用户操作 
+bid：出价 
+noAction：无法操作
  * @method string getBusinessId() 获取业务ID
  * @method void setBusinessId(string $BusinessId) 设置业务ID
  */
@@ -46,17 +50,19 @@ class PreAuctionInfo extends AbstractModel
     public $BiddingTime;
 
     /**
-     * @var integer 出价次数
+     * @var integer 出价次数 单位元
      */
     public $BidCount;
 
     /**
-     * @var float 当前价格
+     * @var float 当前价格 单位元
      */
     public $Price;
 
     /**
-     * @var string 用户操作 bid：出价 "noAction"：无法操作
+     * @var string 用户操作 
+bid：出价 
+noAction：无法操作
      */
     public $Op;
 
@@ -68,9 +74,11 @@ class PreAuctionInfo extends AbstractModel
     /**
      * @param string $Domain 域名
      * @param string $BiddingTime 竞价倒计时
-     * @param integer $BidCount 出价次数
-     * @param float $Price 当前价格
-     * @param string $Op 用户操作 bid：出价 "noAction"：无法操作
+     * @param integer $BidCount 出价次数 单位元
+     * @param float $Price 当前价格 单位元
+     * @param string $Op 用户操作 
+bid：出价 
+noAction：无法操作
      * @param string $BusinessId 业务ID
      */
     function __construct()

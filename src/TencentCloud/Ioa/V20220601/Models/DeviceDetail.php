@@ -84,8 +84,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceStrategyVer(string $DeviceStrategyVer) 设置设备管控策略版本
  * @method string getNGNStrategyVer() 获取NGN策略版本
  * @method void setNGNStrategyVer(string $NGNStrategyVer) 设置NGN策略版本
- * @method string getIOAUserName() 获取最近登录账户的账号
- * @method void setIOAUserName(string $IOAUserName) 设置最近登录账户的账号
+ * @method string getIOAUserName() 获取最近登录账户的账号(账号系统用户账号)
+ * @method void setIOAUserName(string $IOAUserName) 设置最近登录账户的账号(账号系统用户账号)
  * @method string getDeviceNewStrategyVer() 获取设备管控新策略
  * @method void setDeviceNewStrategyVer(string $DeviceNewStrategyVer) 设置设备管控新策略
  * @method string getNGNNewStrategyVer() 获取NGN策略新版本
@@ -102,10 +102,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIdentityNewStrategyVer(string $IdentityNewStrategyVer) 设置身份策略新版本
  * @method string getAccountGroupName() 获取最近登录账号部门
  * @method void setAccountGroupName(string $AccountGroupName) 设置最近登录账号部门
- * @method string getAccountName() 获取最近登录账户的姓名
- * @method void setAccountName(string $AccountName) 设置最近登录账户的姓名
+ * @method string getAccountName() 获取最近登录账户的姓名(账号系统用户姓名)
+ * @method void setAccountName(string $AccountName) 设置最近登录账户的姓名(账号系统用户姓名)
  * @method integer getAccountGroupId() 获取账号组id
  * @method void setAccountGroupId(integer $AccountGroupId) 设置账号组id
+ * @method string getRemarkName() 获取终端备注名
+ * @method void setRemarkName(string $RemarkName) 设置终端备注名
  */
 class DeviceDetail extends AbstractModel
 {
@@ -270,7 +272,7 @@ class DeviceDetail extends AbstractModel
     public $NGNStrategyVer;
 
     /**
-     * @var string 最近登录账户的账号
+     * @var string 最近登录账户的账号(账号系统用户账号)
      */
     public $IOAUserName;
 
@@ -315,7 +317,7 @@ class DeviceDetail extends AbstractModel
     public $AccountGroupName;
 
     /**
-     * @var string 最近登录账户的姓名
+     * @var string 最近登录账户的姓名(账号系统用户姓名)
      */
     public $AccountName;
 
@@ -323,6 +325,11 @@ class DeviceDetail extends AbstractModel
      * @var integer 账号组id
      */
     public $AccountGroupId;
+
+    /**
+     * @var string 终端备注名
+     */
+    public $RemarkName;
 
     /**
      * @param integer $Id 设备ID
@@ -357,7 +364,7 @@ class DeviceDetail extends AbstractModel
      * @param string $SerialNum SN序列号
      * @param string $DeviceStrategyVer 设备管控策略版本
      * @param string $NGNStrategyVer NGN策略版本
-     * @param string $IOAUserName 最近登录账户的账号
+     * @param string $IOAUserName 最近登录账户的账号(账号系统用户账号)
      * @param string $DeviceNewStrategyVer 设备管控新策略
      * @param string $NGNNewStrategyVer NGN策略新版本
      * @param string $HostName 宿主机名称（需要宿主机也安装iOA才能显示）
@@ -366,8 +373,9 @@ class DeviceDetail extends AbstractModel
      * @param string $IdentityStrategyVer 身份策略版本
      * @param string $IdentityNewStrategyVer 身份策略新版本
      * @param string $AccountGroupName 最近登录账号部门
-     * @param string $AccountName 最近登录账户的姓名
+     * @param string $AccountName 最近登录账户的姓名(账号系统用户姓名)
      * @param integer $AccountGroupId 账号组id
+     * @param string $RemarkName 终端备注名
      */
     function __construct()
     {
@@ -552,6 +560,10 @@ class DeviceDetail extends AbstractModel
 
         if (array_key_exists("AccountGroupId",$param) and $param["AccountGroupId"] !== null) {
             $this->AccountGroupId = $param["AccountGroupId"];
+        }
+
+        if (array_key_exists("RemarkName",$param) and $param["RemarkName"] !== null) {
+            $this->RemarkName = $param["RemarkName"];
         }
     }
 }

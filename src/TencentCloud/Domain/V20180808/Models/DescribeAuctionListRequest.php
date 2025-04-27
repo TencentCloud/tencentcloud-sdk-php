@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getBusinessId() 获取业务ID，通过接口DescribeBiddingList返回结果中获取
  * @method void setBusinessId(string $BusinessId) 设置业务ID，通过接口DescribeBiddingList返回结果中获取
- * @method integer getLimit() 获取条数，默认10条
- * @method void setLimit(integer $Limit) 设置条数，默认10条
- * @method integer getOffSet() 获取偏移量
- * @method void setOffSet(integer $OffSet) 设置偏移量
+ * @method integer getLimit() 获取条数，默认10，最大100
+ * @method void setLimit(integer $Limit) 设置条数，默认10，最大100
+ * @method integer getOffSet() 获取偏移量 默认0
+ * @method void setOffSet(integer $OffSet) 设置偏移量 默认0
  */
 class DescribeAuctionListRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class DescribeAuctionListRequest extends AbstractModel
     public $BusinessId;
 
     /**
-     * @var integer 条数，默认10条
+     * @var integer 条数，默认10，最大100
      */
     public $Limit;
 
     /**
-     * @var integer 偏移量
+     * @var integer 偏移量 默认0
      */
     public $OffSet;
 
     /**
      * @param string $BusinessId 业务ID，通过接口DescribeBiddingList返回结果中获取
-     * @param integer $Limit 条数，默认10条
-     * @param integer $OffSet 偏移量
+     * @param integer $Limit 条数，默认10，最大100
+     * @param integer $OffSet 偏移量 默认0
      */
     function __construct()
     {

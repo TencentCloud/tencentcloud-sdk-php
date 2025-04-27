@@ -21,25 +21,29 @@ use TencentCloud\Common\AbstractModel;
  * BiddingPreRelease请求参数结构体
  *
  * @method string getBusinessId() 获取业务ID
+可通过DescribeBiddingList接口获取
  * @method void setBusinessId(string $BusinessId) 设置业务ID
- * @method float getPrice() 获取价格
- * @method void setPrice(float $Price) 设置价格
+可通过DescribeBiddingList接口获取
+ * @method float getPrice() 获取价格 单位元
+ * @method void setPrice(float $Price) 设置价格 单位元
  */
 class BiddingPreReleaseRequest extends AbstractModel
 {
     /**
      * @var string 业务ID
+可通过DescribeBiddingList接口获取
      */
     public $BusinessId;
 
     /**
-     * @var float 价格
+     * @var float 价格 单位元
      */
     public $Price;
 
     /**
      * @param string $BusinessId 业务ID
-     * @param float $Price 价格
+可通过DescribeBiddingList接口获取
+     * @param float $Price 价格 单位元
      */
     function __construct()
     {

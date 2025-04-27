@@ -20,18 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteTemplate请求参数结构体
  *
- * @method string getTemplateId() 获取模板ID(可通过模板信息列表获取)
- * @method void setTemplateId(string $TemplateId) 设置模板ID(可通过模板信息列表获取)
+ * @method string getTemplateId() 获取模板ID
+可通过DescribeTemplates接口获取
+ * @method void setTemplateId(string $TemplateId) 设置模板ID
+可通过DescribeTemplates接口获取
  */
 class DeleteTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 模板ID(可通过模板信息列表获取)
+     * @var string 模板ID
+可通过DescribeTemplates接口获取
      */
     public $TemplateId;
 
     /**
-     * @param string $TemplateId 模板ID(可通过模板信息列表获取)
+     * @param string $TemplateId 模板ID
+可通过DescribeTemplates接口获取
      */
     function __construct()
     {

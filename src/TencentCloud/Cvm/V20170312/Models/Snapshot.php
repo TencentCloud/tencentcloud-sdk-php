@@ -28,8 +28,8 @@ DATA_DISK：数据盘。
  * @method void setDiskUsage(string $DiskUsage) 设置创建此快照的云硬盘类型。取值范围：
 SYSTEM_DISK：系统盘
 DATA_DISK：数据盘。
- * @method integer getDiskSize() 获取创建此快照的云硬盘大小，单位GB。
- * @method void setDiskSize(integer $DiskSize) 设置创建此快照的云硬盘大小，单位GB。
+ * @method integer getDiskSize() 获取创建此快照的云硬盘大小，单位 GiB。
+ * @method void setDiskSize(integer $DiskSize) 设置创建此快照的云硬盘大小，单位 GiB。
  */
 class Snapshot extends AbstractModel
 {
@@ -46,7 +46,7 @@ DATA_DISK：数据盘。
     public $DiskUsage;
 
     /**
-     * @var integer 创建此快照的云硬盘大小，单位GB。
+     * @var integer 创建此快照的云硬盘大小，单位 GiB。
      */
     public $DiskSize;
 
@@ -55,7 +55,7 @@ DATA_DISK：数据盘。
      * @param string $DiskUsage 创建此快照的云硬盘类型。取值范围：
 SYSTEM_DISK：系统盘
 DATA_DISK：数据盘。
-     * @param integer $DiskSize 创建此快照的云硬盘大小，单位GB。
+     * @param integer $DiskSize 创建此快照的云硬盘大小，单位 GiB。
      */
     function __construct()
     {

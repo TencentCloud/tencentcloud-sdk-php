@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getDomains() 获取批量修改的域名。
  * @method void setDomains(array $Domains) 设置批量修改的域名。
- * @method string getTemplateId() 获取模板ID(可从模板列表接口获取)
- * @method void setTemplateId(string $TemplateId) 设置模板ID(可从模板列表接口获取)
+ * @method string getTemplateId() 获取模板ID
+可从DescribeTemplates接口获取
+ * @method void setTemplateId(string $TemplateId) 设置模板ID
+可从DescribeTemplates接口获取
  * @method boolean getLockTransfer() 获取true： 开启60天内禁止转移注册商锁定
 false：关闭60天内禁止转移注册商锁定
 默认 true
@@ -39,7 +41,8 @@ class BatchModifyDomainInfoRequest extends AbstractModel
     public $Domains;
 
     /**
-     * @var string 模板ID(可从模板列表接口获取)
+     * @var string 模板ID
+可从DescribeTemplates接口获取
      */
     public $TemplateId;
 
@@ -52,7 +55,8 @@ false：关闭60天内禁止转移注册商锁定
 
     /**
      * @param array $Domains 批量修改的域名。
-     * @param string $TemplateId 模板ID(可从模板列表接口获取)
+     * @param string $TemplateId 模板ID
+可从DescribeTemplates接口获取
      * @param boolean $LockTransfer true： 开启60天内禁止转移注册商锁定
 false：关闭60天内禁止转移注册商锁定
 默认 true

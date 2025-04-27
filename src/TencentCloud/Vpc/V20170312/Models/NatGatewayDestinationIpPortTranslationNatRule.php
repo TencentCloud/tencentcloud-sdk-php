@@ -33,17 +33,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDescription() 获取NAT网关转发规则描述。
  * @method void setDescription(string $Description) 设置NAT网关转发规则描述。
  * @method string getNatGatewayId() 获取NAT网关的ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNatGatewayId(string $NatGatewayId) 设置NAT网关的ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVpcId() 获取私有网络VPC的ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(string $VpcId) 设置私有网络VPC的ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedTime() 获取NAT网关转发规则创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedTime(string $CreatedTime) 设置NAT网关转发规则创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NatGatewayDestinationIpPortTranslationNatRule extends AbstractModel
 {
@@ -79,19 +73,16 @@ class NatGatewayDestinationIpPortTranslationNatRule extends AbstractModel
 
     /**
      * @var string NAT网关的ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NatGatewayId;
 
     /**
      * @var string 私有网络VPC的ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
     /**
      * @var string NAT网关转发规则创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedTime;
 
@@ -103,11 +94,8 @@ class NatGatewayDestinationIpPortTranslationNatRule extends AbstractModel
      * @param integer $PrivatePort 内网端口。
      * @param string $Description NAT网关转发规则描述。
      * @param string $NatGatewayId NAT网关的ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcId 私有网络VPC的ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedTime NAT网关转发规则创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

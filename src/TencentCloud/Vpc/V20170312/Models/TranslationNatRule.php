@@ -27,13 +27,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTranslationIp() 获取转换`IP`,当转换规则类型为四层时为`IP`池。
  * @method void setTranslationIp(string $TranslationIp) 设置转换`IP`,当转换规则类型为四层时为`IP`池。
  * @method string getDescription() 获取转换规则描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置转换规则描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOriginalIp() 获取源`IP`,当转换规则类型为三层时有效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOriginalIp(string $OriginalIp) 设置源`IP`,当转换规则类型为三层时有效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间。
  * @method void setCreateTime(string $CreateTime) 设置创建时间。
  * @method string getUpdateTime() 获取更新时间。
@@ -58,13 +54,11 @@ class TranslationNatRule extends AbstractModel
 
     /**
      * @var string 转换规则描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var string 源`IP`,当转换规则类型为三层时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OriginalIp;
 
@@ -83,9 +77,7 @@ class TranslationNatRule extends AbstractModel
      * @param string $TranslationType 转换规则类型，可选值"NETWORK_LAYER","TRANSPORT_LAYER"。
      * @param string $TranslationIp 转换`IP`,当转换规则类型为四层时为`IP`池。
      * @param string $Description 转换规则描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OriginalIp 源`IP`,当转换规则类型为三层时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间。
      * @param string $UpdateTime 更新时间。
      */

@@ -20,8 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCustomDnsHostSet请求参数结构体
  *
- * @method string getDomainId() 获取域名实例ID(域名基本信息或我的域名列表接口可获取)
- * @method void setDomainId(string $DomainId) 设置域名实例ID(域名基本信息或我的域名列表接口可获取)
+ * @method string getDomainId() 获取域名实例ID
+可通过DescribeDomainList接口获取
+ * @method void setDomainId(string $DomainId) 设置域名实例ID
+可通过DescribeDomainList接口获取
  * @method integer getLimit() 获取返回数量，默认为20，取值范围[1,100]
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，取值范围[1,100]
  * @method integer getOffset() 获取偏移量，默认为0
@@ -30,7 +32,8 @@ use TencentCloud\Common\AbstractModel;
 class DescribeCustomDnsHostSetRequest extends AbstractModel
 {
     /**
-     * @var string 域名实例ID(域名基本信息或我的域名列表接口可获取)
+     * @var string 域名实例ID
+可通过DescribeDomainList接口获取
      */
     public $DomainId;
 
@@ -45,7 +48,8 @@ class DescribeCustomDnsHostSetRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @param string $DomainId 域名实例ID(域名基本信息或我的域名列表接口可获取)
+     * @param string $DomainId 域名实例ID
+可通过DescribeDomainList接口获取
      * @param integer $Limit 返回数量，默认为20，取值范围[1,100]
      * @param integer $Offset 偏移量，默认为0
      */

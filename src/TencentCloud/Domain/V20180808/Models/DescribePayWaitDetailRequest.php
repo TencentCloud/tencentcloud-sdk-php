@@ -21,17 +21,21 @@ use TencentCloud\Common\AbstractModel;
  * DescribePayWaitDetail请求参数结构体
  *
  * @method string getBusinessId() 获取业务ID
+可通过DescribeBiddingList接口获取
  * @method void setBusinessId(string $BusinessId) 设置业务ID
+可通过DescribeBiddingList接口获取
  */
 class DescribePayWaitDetailRequest extends AbstractModel
 {
     /**
      * @var string 业务ID
+可通过DescribeBiddingList接口获取
      */
     public $BusinessId;
 
     /**
      * @param string $BusinessId 业务ID
+可通过DescribeBiddingList接口获取
      */
     function __construct()
     {

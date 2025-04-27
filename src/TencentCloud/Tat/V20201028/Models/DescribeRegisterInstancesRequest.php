@@ -22,13 +22,17 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getInstanceIds() 获取托管实例 id。
 
+每次请求的上限为 100。
+
 参数不支持同时指定 `InstanceIds` 和 `Filters` 。
 
  * @method void setInstanceIds(array $InstanceIds) 设置托管实例 id。
 
+每次请求的上限为 100。
+
 参数不支持同时指定 `InstanceIds` 和 `Filters` 。
 
- * @method array getFilters() 获取过滤器列表。参数不支持同时指定 `InstanceIds` 和 `Filters` 。
+ * @method array getFilters() 获取过滤器列表。每次请求的 `Filters` 的上限为 10，`Filter.Values` 的上限为 5。参数不支持同时指定 `InstanceIds` 和 `Filters` 。
 
 
 - instance-name
@@ -76,7 +80,7 @@ use TencentCloud\Common\AbstractModel;
 例如 Filter 为 {"Name": "tag:key1", "Values": ["v1", "v2"] } ，即查询所有标签为 key1:v1 或 key1:v2 的资源。
 
 
- * @method void setFilters(array $Filters) 设置过滤器列表。参数不支持同时指定 `InstanceIds` 和 `Filters` 。
+ * @method void setFilters(array $Filters) 设置过滤器列表。每次请求的 `Filters` 的上限为 10，`Filter.Values` 的上限为 5。参数不支持同时指定 `InstanceIds` 和 `Filters` 。
 
 
 - instance-name
@@ -134,13 +138,15 @@ class DescribeRegisterInstancesRequest extends AbstractModel
     /**
      * @var array 托管实例 id。
 
+每次请求的上限为 100。
+
 参数不支持同时指定 `InstanceIds` 和 `Filters` 。
 
      */
     public $InstanceIds;
 
     /**
-     * @var array 过滤器列表。参数不支持同时指定 `InstanceIds` 和 `Filters` 。
+     * @var array 过滤器列表。每次请求的 `Filters` 的上限为 10，`Filter.Values` 的上限为 5。参数不支持同时指定 `InstanceIds` 和 `Filters` 。
 
 
 - instance-name
@@ -204,9 +210,11 @@ class DescribeRegisterInstancesRequest extends AbstractModel
     /**
      * @param array $InstanceIds 托管实例 id。
 
+每次请求的上限为 100。
+
 参数不支持同时指定 `InstanceIds` 和 `Filters` 。
 
-     * @param array $Filters 过滤器列表。参数不支持同时指定 `InstanceIds` 和 `Filters` 。
+     * @param array $Filters 过滤器列表。每次请求的 `Filters` 的上限为 10，`Filter.Values` 的上限为 5。参数不支持同时指定 `InstanceIds` 和 `Filters` 。
 
 
 - instance-name

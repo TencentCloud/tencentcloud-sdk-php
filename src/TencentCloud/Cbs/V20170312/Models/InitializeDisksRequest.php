@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InitializeDisks请求参数结构体
  *
- * @method array getDiskIds() 获取待重新初始化的云硬盘ID列表， 单次初始化限制20块以内
- * @method void setDiskIds(array $DiskIds) 设置待重新初始化的云硬盘ID列表， 单次初始化限制20块以内
+ * @method array getDiskIds() 获取待重新初始化的云硬盘ID列表，可以通过[DescribeDisks](/document/product/362/16315)接口查询， 单次初始化限制20块以内
+ * @method void setDiskIds(array $DiskIds) 设置待重新初始化的云硬盘ID列表，可以通过[DescribeDisks](/document/product/362/16315)接口查询， 单次初始化限制20块以内
  */
 class InitializeDisksRequest extends AbstractModel
 {
     /**
-     * @var array 待重新初始化的云硬盘ID列表， 单次初始化限制20块以内
+     * @var array 待重新初始化的云硬盘ID列表，可以通过[DescribeDisks](/document/product/362/16315)接口查询， 单次初始化限制20块以内
      */
     public $DiskIds;
 
     /**
-     * @param array $DiskIds 待重新初始化的云硬盘ID列表， 单次初始化限制20块以内
+     * @param array $DiskIds 待重新初始化的云硬盘ID列表，可以通过[DescribeDisks](/document/product/362/16315)接口查询， 单次初始化限制20块以内
      */
     function __construct()
     {

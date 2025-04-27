@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 我竞价的域名结构体。
  *
- * @method string getBusinessID() 获取business_id
- * @method void setBusinessID(string $BusinessID) 设置business_id
+ * @method string getBusinessID() 获取预约ID
+ * @method void setBusinessID(string $BusinessID) 设置预约ID
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
- * @method integer getCurrentPrice() 获取当前价格
- * @method void setCurrentPrice(integer $CurrentPrice) 设置当前价格
+ * @method integer getCurrentPrice() 获取当前价格 单位元
+ * @method void setCurrentPrice(integer $CurrentPrice) 设置当前价格 单位元
  * @method string getCurrentNickname() 获取当前用户昵称
  * @method void setCurrentNickname(string $CurrentNickname) 设置当前用户昵称
- * @method integer getBiddingPrice() 获取我的出价
- * @method void setBiddingPrice(integer $BiddingPrice) 设置我的出价
- * @method integer getBiddingBondPrice() 获取竞价保证金
- * @method void setBiddingBondPrice(integer $BiddingBondPrice) 设置竞价保证金
+ * @method integer getBiddingPrice() 获取我的出价 单位元
+ * @method void setBiddingPrice(integer $BiddingPrice) 设置我的出价 单位元
+ * @method integer getBiddingBondPrice() 获取竞价保证金 单位元
+ * @method void setBiddingBondPrice(integer $BiddingBondPrice) 设置竞价保证金 单位元
  * @method string getBiddingEndTime() 获取竞价结束时间
  * @method void setBiddingEndTime(string $BiddingEndTime) 设置竞价结束时间
  * @method integer getBiddingFlag() 获取竞价标识，1 领先，2 落后
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class BiddingResult extends AbstractModel
 {
     /**
-     * @var string business_id
+     * @var string 预约ID
      */
     public $BusinessID;
 
@@ -54,7 +54,7 @@ class BiddingResult extends AbstractModel
     public $Domain;
 
     /**
-     * @var integer 当前价格
+     * @var integer 当前价格 单位元
      */
     public $CurrentPrice;
 
@@ -64,12 +64,12 @@ class BiddingResult extends AbstractModel
     public $CurrentNickname;
 
     /**
-     * @var integer 我的出价
+     * @var integer 我的出价 单位元
      */
     public $BiddingPrice;
 
     /**
-     * @var integer 竞价保证金
+     * @var integer 竞价保证金 单位元
      */
     public $BiddingBondPrice;
 
@@ -94,12 +94,12 @@ class BiddingResult extends AbstractModel
     public $Status;
 
     /**
-     * @param string $BusinessID business_id
+     * @param string $BusinessID 预约ID
      * @param string $Domain 域名
-     * @param integer $CurrentPrice 当前价格
+     * @param integer $CurrentPrice 当前价格 单位元
      * @param string $CurrentNickname 当前用户昵称
-     * @param integer $BiddingPrice 我的出价
-     * @param integer $BiddingBondPrice 竞价保证金
+     * @param integer $BiddingPrice 我的出价 单位元
+     * @param integer $BiddingBondPrice 竞价保证金 单位元
      * @param string $BiddingEndTime 竞价结束时间
      * @param integer $BiddingFlag 竞价标识，1 领先，2 落后
      * @param integer $BiddingNum 出价次数

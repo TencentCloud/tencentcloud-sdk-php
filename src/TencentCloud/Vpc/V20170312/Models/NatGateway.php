@@ -47,47 +47,27 @@ use TencentCloud\Common\AbstractModel;
  * @method string getZone() 获取NAT网关所在的可用区。
  * @method void setZone(string $Zone) 设置NAT网关所在的可用区。
  * @method array getDirectConnectGatewayIds() 获取绑定的专线网关ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDirectConnectGatewayIds(array $DirectConnectGatewayIds) 设置绑定的专线网关ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubnetId() 获取所属子网ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetId(string $SubnetId) 设置所属子网ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTagSet() 获取标签键值对。
  * @method void setTagSet(array $TagSet) 设置标签键值对。
  * @method array getSecurityGroupSet() 获取NAT网关绑定的安全组列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecurityGroupSet(array $SecurityGroupSet) 设置NAT网关绑定的安全组列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSourceIpTranslationNatRuleSet() 获取NAT网关的SNAT转发规则。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSourceIpTranslationNatRuleSet(array $SourceIpTranslationNatRuleSet) 设置NAT网关的SNAT转发规则。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsExclusive() 获取是否独享型NAT。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsExclusive(boolean $IsExclusive) 设置是否独享型NAT。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getExclusiveGatewayBandwidth() 获取独享型NAT所在的网关集群的带宽(单位:Mbps)，当IsExclusive为false时无此字段。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExclusiveGatewayBandwidth(integer $ExclusiveGatewayBandwidth) 设置独享型NAT所在的网关集群的带宽(单位:Mbps)，当IsExclusive为false时无此字段。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRestrictState() 获取NAT网关是否被封禁。“NORMAL”：未被封禁，“RESTRICTED”：已被封禁。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRestrictState(string $RestrictState) 设置NAT网关是否被封禁。“NORMAL”：未被封禁，“RESTRICTED”：已被封禁。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNatProductVersion() 获取NAT网关类型，1表示传统型NAT网关，2表示标准型NAT网关
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNatProductVersion(integer $NatProductVersion) 设置NAT网关类型，1表示传统型NAT网关，2表示标准型NAT网关
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getSmartScheduleMode() 获取是否启用根据目的网段选择SNAT使用的EIP功能	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSmartScheduleMode(boolean $SmartScheduleMode) 设置是否启用根据目的网段选择SNAT使用的EIP功能	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDedicatedClusterId() 获取NAT实例归属的专属集群id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDedicatedClusterId(string $DedicatedClusterId) 设置NAT实例归属的专属集群id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NatGateway extends AbstractModel
 {
@@ -150,13 +130,11 @@ class NatGateway extends AbstractModel
 
     /**
      * @var array 绑定的专线网关ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DirectConnectGatewayIds;
 
     /**
      * @var string 所属子网ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetId;
 
@@ -167,49 +145,41 @@ class NatGateway extends AbstractModel
 
     /**
      * @var array NAT网关绑定的安全组列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecurityGroupSet;
 
     /**
      * @var array NAT网关的SNAT转发规则。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SourceIpTranslationNatRuleSet;
 
     /**
      * @var boolean 是否独享型NAT。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsExclusive;
 
     /**
      * @var integer 独享型NAT所在的网关集群的带宽(单位:Mbps)，当IsExclusive为false时无此字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExclusiveGatewayBandwidth;
 
     /**
      * @var string NAT网关是否被封禁。“NORMAL”：未被封禁，“RESTRICTED”：已被封禁。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RestrictState;
 
     /**
      * @var integer NAT网关类型，1表示传统型NAT网关，2表示标准型NAT网关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NatProductVersion;
 
     /**
      * @var boolean 是否启用根据目的网段选择SNAT使用的EIP功能	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SmartScheduleMode;
 
     /**
      * @var string NAT实例归属的专属集群id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DedicatedClusterId;
 
@@ -228,26 +198,16 @@ class NatGateway extends AbstractModel
      * @param string $VpcId VPC实例ID。
      * @param string $Zone NAT网关所在的可用区。
      * @param array $DirectConnectGatewayIds 绑定的专线网关ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 所属子网ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TagSet 标签键值对。
      * @param array $SecurityGroupSet NAT网关绑定的安全组列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SourceIpTranslationNatRuleSet NAT网关的SNAT转发规则。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsExclusive 是否独享型NAT。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ExclusiveGatewayBandwidth 独享型NAT所在的网关集群的带宽(单位:Mbps)，当IsExclusive为false时无此字段。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RestrictState NAT网关是否被封禁。“NORMAL”：未被封禁，“RESTRICTED”：已被封禁。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NatProductVersion NAT网关类型，1表示传统型NAT网关，2表示标准型NAT网关
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $SmartScheduleMode 是否启用根据目的网段选择SNAT使用的EIP功能	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DedicatedClusterId NAT实例归属的专属集群id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 我预定的域名结构体。
  *
- * @method string getBusinessID() 获取business_id
- * @method void setBusinessID(string $BusinessID) 设置business_id
+ * @method string getBusinessID() 获取预约ID
+ * @method void setBusinessID(string $BusinessID) 设置预约ID
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
- * @method integer getAppointPrice() 获取预定价格
- * @method void setAppointPrice(integer $AppointPrice) 设置预定价格
- * @method integer getAppointBondPrice() 获取预约保证金
- * @method void setAppointBondPrice(integer $AppointBondPrice) 设置预约保证金
+ * @method integer getAppointPrice() 获取预定价格 单位元
+ * @method void setAppointPrice(integer $AppointPrice) 设置预定价格 单位元
+ * @method integer getAppointBondPrice() 获取预约保证金 单位元
+ * @method void setAppointBondPrice(integer $AppointBondPrice) 设置预约保证金 单位元
  * @method string getAppointEndTime() 获取预约结束时间
  * @method void setAppointEndTime(string $AppointEndTime) 设置预约结束时间
  * @method integer getAppointNum() 获取预约人数
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class BiddingAppointResult extends AbstractModel
 {
     /**
-     * @var string business_id
+     * @var string 预约ID
      */
     public $BusinessID;
 
@@ -48,12 +48,12 @@ class BiddingAppointResult extends AbstractModel
     public $Domain;
 
     /**
-     * @var integer 预定价格
+     * @var integer 预定价格 单位元
      */
     public $AppointPrice;
 
     /**
-     * @var integer 预约保证金
+     * @var integer 预约保证金 单位元
      */
     public $AppointBondPrice;
 
@@ -73,10 +73,10 @@ class BiddingAppointResult extends AbstractModel
     public $Status;
 
     /**
-     * @param string $BusinessID business_id
+     * @param string $BusinessID 预约ID
      * @param string $Domain 域名
-     * @param integer $AppointPrice 预定价格
-     * @param integer $AppointBondPrice 预约保证金
+     * @param integer $AppointPrice 预定价格 单位元
+     * @param integer $AppointBondPrice 预约保证金 单位元
      * @param string $AppointEndTime 预约结束时间
      * @param integer $AppointNum 预约人数
      * @param integer $Status 1 已预约，2 竞价中，3 等待出价 4 竞价失败 5 等待支付 6 等待转移，7 转移中 8 交易成功 9 预约持有者赎回 10 竞价持有者赎回 11 其他阶段持有者赎回 12 违约

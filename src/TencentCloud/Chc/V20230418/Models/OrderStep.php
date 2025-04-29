@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStepName(string $StepName) 设置步骤名
  * @method string getOwnerName() 获取处理人
  * @method void setOwnerName(string $OwnerName) 设置处理人
+ * @method string getOwnerPhone() 获取处理人手机号
+ * @method void setOwnerPhone(string $OwnerPhone) 设置处理人手机号
  * @method string getFinishTime() 获取完成时间
  * @method void setFinishTime(string $FinishTime) 设置完成时间
  * @method string getStepStatus() 获取此步骤状态
@@ -42,6 +44,11 @@ class OrderStep extends AbstractModel
     public $OwnerName;
 
     /**
+     * @var string 处理人手机号
+     */
+    public $OwnerPhone;
+
+    /**
      * @var string 完成时间
      */
     public $FinishTime;
@@ -54,6 +61,7 @@ class OrderStep extends AbstractModel
     /**
      * @param string $StepName 步骤名
      * @param string $OwnerName 处理人
+     * @param string $OwnerPhone 处理人手机号
      * @param string $FinishTime 完成时间
      * @param string $StepStatus 此步骤状态
      */
@@ -76,6 +84,10 @@ class OrderStep extends AbstractModel
 
         if (array_key_exists("OwnerName",$param) and $param["OwnerName"] !== null) {
             $this->OwnerName = $param["OwnerName"];
+        }
+
+        if (array_key_exists("OwnerPhone",$param) and $param["OwnerPhone"] !== null) {
+            $this->OwnerPhone = $param["OwnerPhone"];
         }
 
         if (array_key_exists("FinishTime",$param) and $param["FinishTime"] !== null) {

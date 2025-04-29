@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * bgp参数，包括CloudAsn，Asn，AuthKey
  *
- * @method string getCloudAsn() 获取腾讯侧BGP ASN
- * @method void setCloudAsn(string $CloudAsn) 设置腾讯侧BGP ASN
+ * @method integer getCloudAsn() 获取腾讯侧BGP ASN
+ * @method void setCloudAsn(integer $CloudAsn) 设置腾讯侧BGP ASN
  * @method integer getAsn() 获取用户侧BGP ASN
  * @method void setAsn(integer $Asn) 设置用户侧BGP ASN
  * @method string getAuthKey() 获取用户侧BGP密钥
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class BgpPeer extends AbstractModel
 {
     /**
-     * @var string 腾讯侧BGP ASN
+     * @var integer 腾讯侧BGP ASN
      */
     public $CloudAsn;
 
@@ -45,7 +45,7 @@ class BgpPeer extends AbstractModel
     public $AuthKey;
 
     /**
-     * @param string $CloudAsn 腾讯侧BGP ASN
+     * @param integer $CloudAsn 腾讯侧BGP ASN
      * @param integer $Asn 用户侧BGP ASN
      * @param string $AuthKey 用户侧BGP密钥
      */

@@ -28,8 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConsumerGroupName(string $ConsumerGroupName) 设置消费组名称。实际的消费组全称形如：consumer-grp-#{SubscribeId}-#{ConsumerGroupName}
  * @method string getNewPassword() 获取新密码。字符长度不小于3，不大于32
  * @method void setNewPassword(string $NewPassword) 设置新密码。字符长度不小于3，不大于32
- * @method string getOldPassword() 获取旧密码，非必选
- * @method void setOldPassword(string $OldPassword) 设置旧密码，非必选
  */
 class ModifyConsumerGroupPasswordRequest extends AbstractModel
 {
@@ -54,16 +52,10 @@ class ModifyConsumerGroupPasswordRequest extends AbstractModel
     public $NewPassword;
 
     /**
-     * @var string 旧密码，非必选
-     */
-    public $OldPassword;
-
-    /**
      * @param string $SubscribeId 数据订阅实例的 ID
      * @param string $AccountName 账号名称。实际的账户全称形如：account-#{SubscribeId}-#{AccountName}
      * @param string $ConsumerGroupName 消费组名称。实际的消费组全称形如：consumer-grp-#{SubscribeId}-#{ConsumerGroupName}
      * @param string $NewPassword 新密码。字符长度不小于3，不大于32
-     * @param string $OldPassword 旧密码，非必选
      */
     function __construct()
     {
@@ -92,10 +84,6 @@ class ModifyConsumerGroupPasswordRequest extends AbstractModel
 
         if (array_key_exists("NewPassword",$param) and $param["NewPassword"] !== null) {
             $this->NewPassword = $param["NewPassword"];
-        }
-
-        if (array_key_exists("OldPassword",$param) and $param["OldPassword"] !== null) {
-            $this->OldPassword = $param["OldPassword"];
         }
     }
 }

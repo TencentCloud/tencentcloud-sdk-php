@@ -48,7 +48,9 @@ CreateScdnLogTask 用于创建事件日志任务
 
 删除SCDN域名
  * @method Models\DescribeBillingDataResponse DescribeBillingData(Models\DescribeBillingDataRequest $req) DescribeBillingData 用于查询实际计费数据明细。
- * @method Models\DescribeCcDataResponse DescribeCcData(Models\DescribeCcDataRequest $req) CC统计数据查询
+ * @method Models\DescribeCcDataResponse DescribeCcData(Models\DescribeCcDataRequest $req) SCDN平台下线，接口开始预下线处理
+
+CC统计数据查询
  * @method Models\DescribeCdnDataResponse DescribeCdnData(Models\DescribeCdnDataRequest $req) DescribeCdnData 用于查询 CDN 实时访问监控数据，支持以下指标查询：
 
 + 流量（单位为 byte）
@@ -68,7 +70,9 @@ CreateScdnLogTask 用于创建事件日志任务
  * @method Models\DescribeCdnOriginIpResponse DescribeCdnOriginIp(Models\DescribeCdnOriginIpRequest $req) ### <font color=red>**该接口已废弃** </font><br>
 本接口（DescribeCdnOriginIp）用于查询 CDN 回源节点的IP信息。（注：替换接口为DescribeIpStatus）
  * @method Models\DescribeCertDomainsResponse DescribeCertDomains(Models\DescribeCertDomainsRequest $req) DescribeCertDomains 用于校验SSL证书并提取证书中包含的域名。
- * @method Models\DescribeDDoSDataResponse DescribeDDoSData(Models\DescribeDDoSDataRequest $req) DDoS统计数据查询
+ * @method Models\DescribeDDoSDataResponse DescribeDDoSData(Models\DescribeDDoSDataRequest $req) SCDN平台下线，接口开始预下线处理
+
+DDoS统计数据查询
  * @method Models\DescribeDiagnoseReportResponse DescribeDiagnoseReport(Models\DescribeDiagnoseReportRequest $req) ### <font color=red>**该接口已废弃** </font><br>
 DescribeDiagnoseReport 用于获取指定报告id的内容。
  * @method Models\DescribeDistrictIspDataResponse DescribeDistrictIspData(Models\DescribeDistrictIspDataRequest $req) 查询指定域名的区域、运营商明细数据
@@ -76,7 +80,9 @@ DescribeDiagnoseReport 用于获取指定报告id的内容。
  * @method Models\DescribeDomainsResponse DescribeDomains(Models\DescribeDomainsRequest $req) DescribeDomains 用于查询内容分发网络加速域名（含境内、境外）基本配置信息，包括项目ID、服务状态，业务类型、创建时间、更新时间等信息。
  * @method Models\DescribeDomainsConfigResponse DescribeDomainsConfig(Models\DescribeDomainsConfigRequest $req) DescribeDomainsConfig 用于查询内容分发网络加速域名（含境内、境外）的所有配置信息。
  * @method Models\DescribeEdgePackTaskStatusResponse DescribeEdgePackTaskStatus(Models\DescribeEdgePackTaskStatusRequest $req) DescribeEdgePackTaskStatus 用于查询动态打包任务状态列表
- * @method Models\DescribeEventLogDataResponse DescribeEventLogData(Models\DescribeEventLogDataRequest $req) DescribeEventLogData 用于查询事件日志统计曲线
+ * @method Models\DescribeEventLogDataResponse DescribeEventLogData(Models\DescribeEventLogDataRequest $req) SCDN平台下线，接口开始预下线处理
+
+DescribeEventLogData 用于查询事件日志统计曲线
  * @method Models\DescribeHttpsPackagesResponse DescribeHttpsPackages(Models\DescribeHttpsPackagesRequest $req) DescribeHttpsPackages 用于查询 CDN HTTPS请求包详情。
  * @method Models\DescribeImageConfigResponse DescribeImageConfig(Models\DescribeImageConfigRequest $req) DescribeImageConfig 用于获取域名图片优化的当前配置，支持Webp、TPG、 Guetzli 和 Avif。
  * @method Models\DescribeIpStatusResponse DescribeIpStatus(Models\DescribeIpStatusRequest $req) DescribeIpStatus 用于查询域名所在加速平台的边缘节点、回源节点明细。注意事项：暂不支持查询边缘节点信息并且数据会存在一定延迟。
@@ -131,8 +137,10 @@ DescribeScdnConfig 用于查询指定 SCDN 加速域名的安全相关配置
 + 仅支持 90 天内数据查询，且从2021年09月20日开始有数据
  * @method Models\DescribeTrafficPackagesResponse DescribeTrafficPackages(Models\DescribeTrafficPackagesRequest $req) DescribeTrafficPackages 用于查询 CDN 流量包详情。
  * @method Models\DescribeUrlViolationsResponse DescribeUrlViolations(Models\DescribeUrlViolationsRequest $req) DescribeUrlViolations 用于查询被 CDN 系统扫描到的域名违规 URL 列表及当前状态。
-对应内容分发网络控制台【图片鉴黄】页面。
- * @method Models\DescribeWafDataResponse DescribeWafData(Models\DescribeWafDataRequest $req) Waf统计数据查询
+对应内容分发网络控制台【内容合规】页面。
+ * @method Models\DescribeWafDataResponse DescribeWafData(Models\DescribeWafDataRequest $req) SCDN平台下线，接口开始预下线处理
+
+Waf统计数据查询
  * @method Models\DisableCachesResponse DisableCaches(Models\DisableCachesRequest $req) ### <font color=red>**该接口已废弃** </font><br>
 DisableCaches 用于禁用 CDN 上指定 URL 的访问，禁用完成后，中国境内访问会直接返回 403。
  * @method Models\DisableClsLogTopicResponse DisableClsLogTopic(Models\DisableClsLogTopicRequest $req) DisableClsLogTopic 用于停止日志主题投递。注意：停止后，所有绑定该日志主题域名的日志将不再继续投递至该主题，已经投递的日志将会继续保留。生效时间约为 5~15 分钟。
@@ -156,10 +164,16 @@ ListScdnLogTasks 用于查询SCDN日志下载任务列表,以及展示下载任�
  * @method Models\ListScdnTopBotDataResponse ListScdnTopBotData(Models\ListScdnTopBotDataRequest $req) SCDN平台已经正式下线，接口开始预下线处理
 
 获取Bot攻击的Top数据列表
- * @method Models\ListTopBotDataResponse ListTopBotData(Models\ListTopBotDataRequest $req) 获取Bot攻击的Top信息
- * @method Models\ListTopCcDataResponse ListTopCcData(Models\ListTopCcDataRequest $req) 获取CC攻击Top数据
+ * @method Models\ListTopBotDataResponse ListTopBotData(Models\ListTopBotDataRequest $req) SCDN平台下线，接口开始预下线处理
+
+获取Bot攻击的Top信息
+ * @method Models\ListTopCcDataResponse ListTopCcData(Models\ListTopCcDataRequest $req) SCDN平台下线，接口开始预下线处理
+
+获取CC攻击Top数据
  * @method Models\ListTopClsLogDataResponse ListTopClsLogData(Models\ListTopClsLogDataRequest $req) 通过CLS日志计算Top信息。支持近7天的日志数据。
- * @method Models\ListTopDDoSDataResponse ListTopDDoSData(Models\ListTopDDoSDataRequest $req) 获取DDoS攻击Top数据
+ * @method Models\ListTopDDoSDataResponse ListTopDDoSData(Models\ListTopDDoSDataRequest $req) SCDN平台下线，接口开始预下线处理
+
+获取DDoS攻击Top数据
  * @method Models\ListTopDataResponse ListTopData(Models\ListTopDataRequest $req) ListTopData 通过入参 Metric 和 Filter 组合不同，可以查询以下排序数据：
 
 + 依据总流量、总请求数对访问 URL 排序，从大至小返回 TOP 1000 URL
@@ -169,7 +183,9 @@ ListScdnLogTasks 用于查询SCDN日志下载任务列表,以及展示下载任�
 + 依据总回源流量、回源峰值带宽、总回源请求数、平均回源失败率、2XX/3XX/4XX/5XX 回源状态码对域名排序，从大至小返回域名列表
 
 注意：仅支持 90 天内数据查询
- * @method Models\ListTopWafDataResponse ListTopWafData(Models\ListTopWafDataRequest $req) 获取Waf攻击Top数据
+ * @method Models\ListTopWafDataResponse ListTopWafData(Models\ListTopWafDataRequest $req) SCDN平台下线，接口开始预下线处理
+
+获取Waf攻击Top数据
  * @method Models\ManageClsTopicDomainsResponse ManageClsTopicDomains(Models\ManageClsTopicDomainsRequest $req) ManageClsTopicDomains 用于管理某日志主题下绑定的域名列表。
  * @method Models\ModifyDomainConfigResponse ModifyDomainConfig(Models\ModifyDomainConfigRequest $req) ModifyDomainConfig 用于修改内容分发网络加速域名配置信息
 注意：

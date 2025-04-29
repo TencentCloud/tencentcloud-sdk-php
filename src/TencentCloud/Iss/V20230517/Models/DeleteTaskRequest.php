@@ -14,28 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Domain\V20180808\Models;
+namespace TencentCloud\Iss\V20230517\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeTemplate请求参数结构体
+ * DeleteTask请求参数结构体
  *
- * @method string getTemplateId() 获取模板ID
-通过DescribeTemplateList接口获取:https://cloud.tencent.com/document/api/242/48940
- * @method void setTemplateId(string $TemplateId) 设置模板ID
-通过DescribeTemplateList接口获取:https://cloud.tencent.com/document/api/242/48940
+ * @method string getTaskId() 获取任务ID
+ * @method void setTaskId(string $TaskId) 设置任务ID
  */
-class DescribeTemplateRequest extends AbstractModel
+class DeleteTaskRequest extends AbstractModel
 {
     /**
-     * @var string 模板ID
-通过DescribeTemplateList接口获取:https://cloud.tencent.com/document/api/242/48940
+     * @var string 任务ID
      */
-    public $TemplateId;
+    public $TaskId;
 
     /**
-     * @param string $TemplateId 模板ID
-通过DescribeTemplateList接口获取:https://cloud.tencent.com/document/api/242/48940
+     * @param string $TaskId 任务ID
      */
     function __construct()
     {
@@ -50,8 +46,8 @@ class DescribeTemplateRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
-            $this->TemplateId = $param["TemplateId"];
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
     }
 }

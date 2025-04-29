@@ -64,6 +64,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReplyIndex(integer $ReplyIndex) 设置用于展示思考放在哪个回复气泡中
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSourceAgentName() 获取主agent
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSourceAgentName(string $SourceAgentName) 设置主agent
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTargetAgentName() 获取挂号agent
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTargetAgentName(string $TargetAgentName) 设置挂号agent
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AgentProcedure extends AbstractModel
 {
@@ -134,6 +142,18 @@ class AgentProcedure extends AbstractModel
     public $ReplyIndex;
 
     /**
+     * @var string 主agent
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SourceAgentName;
+
+    /**
+     * @var string 挂号agent
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TargetAgentName;
+
+    /**
      * @param integer $Index 索引
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 执行过程英语名
@@ -155,6 +175,10 @@ class AgentProcedure extends AbstractModel
      * @param string $NodeName 工作流节点名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ReplyIndex 用于展示思考放在哪个回复气泡中
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SourceAgentName 主agent
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TargetAgentName 挂号agent
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -213,6 +237,14 @@ class AgentProcedure extends AbstractModel
 
         if (array_key_exists("ReplyIndex",$param) and $param["ReplyIndex"] !== null) {
             $this->ReplyIndex = $param["ReplyIndex"];
+        }
+
+        if (array_key_exists("SourceAgentName",$param) and $param["SourceAgentName"] !== null) {
+            $this->SourceAgentName = $param["SourceAgentName"];
+        }
+
+        if (array_key_exists("TargetAgentName",$param) and $param["TargetAgentName"] !== null) {
+            $this->TargetAgentName = $param["TargetAgentName"];
         }
     }
 }

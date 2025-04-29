@@ -14,28 +14,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Domain\V20180808\Models;
+namespace TencentCloud\Iss\V20230517\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeTemplate请求参数结构体
+ * 录像下载任务数据结构
  *
- * @method string getTemplateId() 获取模板ID
-通过DescribeTemplateList接口获取:https://cloud.tencent.com/document/api/242/48940
- * @method void setTemplateId(string $TemplateId) 设置模板ID
-通过DescribeTemplateList接口获取:https://cloud.tencent.com/document/api/242/48940
+ * @method string getDownloadTaskId() 获取下载任务ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDownloadTaskId(string $DownloadTaskId) 设置下载任务ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
-class DescribeTemplateRequest extends AbstractModel
+class VideoDownloadTaskData extends AbstractModel
 {
     /**
-     * @var string 模板ID
-通过DescribeTemplateList接口获取:https://cloud.tencent.com/document/api/242/48940
+     * @var string 下载任务ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $TemplateId;
+    public $DownloadTaskId;
 
     /**
-     * @param string $TemplateId 模板ID
-通过DescribeTemplateList接口获取:https://cloud.tencent.com/document/api/242/48940
+     * @param string $DownloadTaskId 下载任务ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -50,8 +50,8 @@ class DescribeTemplateRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
-            $this->TemplateId = $param["TemplateId"];
+        if (array_key_exists("DownloadTaskId",$param) and $param["DownloadTaskId"] !== null) {
+            $this->DownloadTaskId = $param["DownloadTaskId"];
         }
     }
 }

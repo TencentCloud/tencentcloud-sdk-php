@@ -68,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModelCategory() 获取模型类别 generate：生成模型，thought：思考模型
  * @method void setModelCategory(string $ModelCategory) 设置模型类别 generate：生成模型，thought：思考模型
+ * @method boolean getIsDefault() 获取是否默认模型
+ * @method void setIsDefault(boolean $IsDefault) 设置是否默认模型
+ * @method integer getRoleLenLimit() 获取角色提示词输入长度限制
+ * @method void setRoleLenLimit(integer $RoleLenLimit) 设置角色提示词输入长度限制
  */
 class ModelInfo extends AbstractModel
 {
@@ -152,6 +156,16 @@ class ModelInfo extends AbstractModel
     public $ModelCategory;
 
     /**
+     * @var boolean 是否默认模型
+     */
+    public $IsDefault;
+
+    /**
+     * @var integer 角色提示词输入长度限制
+     */
+    public $RoleLenLimit;
+
+    /**
      * @param string $ModelName 模型名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModelDesc 模型描述
@@ -176,6 +190,8 @@ class ModelInfo extends AbstractModel
      * @param integer $SupportWorkflowStatus 支持工作流的类型 0:模型不支持; 1: 模型支持工作流； 2： 模型支持效果不佳；
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModelCategory 模型类别 generate：生成模型，thought：思考模型
+     * @param boolean $IsDefault 是否默认模型
+     * @param integer $RoleLenLimit 角色提示词输入长度限制
      */
     function __construct()
     {
@@ -247,6 +263,14 @@ class ModelInfo extends AbstractModel
 
         if (array_key_exists("ModelCategory",$param) and $param["ModelCategory"] !== null) {
             $this->ModelCategory = $param["ModelCategory"];
+        }
+
+        if (array_key_exists("IsDefault",$param) and $param["IsDefault"] !== null) {
+            $this->IsDefault = $param["IsDefault"];
+        }
+
+        if (array_key_exists("RoleLenLimit",$param) and $param["RoleLenLimit"] !== null) {
+            $this->RoleLenLimit = $param["RoleLenLimit"];
         }
     }
 }

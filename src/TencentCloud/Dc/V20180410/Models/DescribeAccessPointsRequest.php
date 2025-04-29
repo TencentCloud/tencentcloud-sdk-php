@@ -20,10 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAccessPoints请求参数结构体
  *
- * @method string getRegionId() 获取接入点所在的地域。使用DescribeRegions查询。
-您可以通过调用 DescribeRegions接口获取地域ID。
- * @method void setRegionId(string $RegionId) 设置接入点所在的地域。使用DescribeRegions查询。
-您可以通过调用 DescribeRegions接口获取地域ID。
+ * @method string getRegionId() 获取接入点所在的地域。你可以通过调用[DescribeRegions](https://cloud.tencent.com/document/product/1596/77930)接口获取地域ID。
+ * @method void setRegionId(string $RegionId) 设置接入点所在的地域。你可以通过调用[DescribeRegions](https://cloud.tencent.com/document/product/1596/77930)接口获取地域ID。
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
@@ -34,8 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAccessPointsRequest extends AbstractModel
 {
     /**
-     * @var string 接入点所在的地域。使用DescribeRegions查询。
-您可以通过调用 DescribeRegions接口获取地域ID。
+     * @var string 接入点所在的地域。你可以通过调用[DescribeRegions](https://cloud.tencent.com/document/product/1596/77930)接口获取地域ID。
      */
     public $RegionId;
 
@@ -55,8 +52,7 @@ class DescribeAccessPointsRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @param string $RegionId 接入点所在的地域。使用DescribeRegions查询。
-您可以通过调用 DescribeRegions接口获取地域ID。
+     * @param string $RegionId 接入点所在的地域。你可以通过调用[DescribeRegions](https://cloud.tencent.com/document/product/1596/77930)接口获取地域ID。
      * @param integer $Offset 偏移量，默认为0。
      * @param integer $Limit 返回数量，默认为20，最大值为100。
      * @param array $Filters 过滤参数，支持：access-point-id、isp

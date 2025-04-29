@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AcceptDirectConnectTunnel请求参数结构体
  *
- * @method string getDirectConnectTunnelId() 获取专用通道ID。可以通过[DescribeDirectConnectTunnel](https://cloud.tencent.com/document/product/216/19819)接口获取。
- * @method void setDirectConnectTunnelId(string $DirectConnectTunnelId) 设置专用通道ID。可以通过[DescribeDirectConnectTunnel](https://cloud.tencent.com/document/product/216/19819)接口获取。
+ * @method string getDirectConnectTunnelId() 获取专用通道ID。可以通过[DescribeDirectConnectTunnels](https://cloud.tencent.com/document/product/216/19819)接口获取。
+ * @method void setDirectConnectTunnelId(string $DirectConnectTunnelId) 设置专用通道ID。可以通过[DescribeDirectConnectTunnels](https://cloud.tencent.com/document/product/216/19819)接口获取。
  */
 class AcceptDirectConnectTunnelRequest extends AbstractModel
 {
     /**
-     * @var string 专用通道ID。可以通过[DescribeDirectConnectTunnel](https://cloud.tencent.com/document/product/216/19819)接口获取。
+     * @var string 专用通道ID。可以通过[DescribeDirectConnectTunnels](https://cloud.tencent.com/document/product/216/19819)接口获取。
      */
     public $DirectConnectTunnelId;
 
     /**
-     * @param string $DirectConnectTunnelId 专用通道ID。可以通过[DescribeDirectConnectTunnel](https://cloud.tencent.com/document/product/216/19819)接口获取。
+     * @param string $DirectConnectTunnelId 专用通道ID。可以通过[DescribeDirectConnectTunnels](https://cloud.tencent.com/document/product/216/19819)接口获取。
      */
     function __construct()
     {

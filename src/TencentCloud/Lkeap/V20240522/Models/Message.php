@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
 ReasoningConent参数仅支持出参，且只有deepseek-r1模型会返回。
  * @method void setReasoningContent(string $ReasoningContent) 设置思维链内容。
 ReasoningConent参数仅支持出参，且只有deepseek-r1模型会返回。
+ * @method array getSearchResults() 获取搜索结果
+ * @method void setSearchResults(array $SearchResults) 设置搜索结果
  */
 class Message extends AbstractModel
 {
@@ -48,10 +50,16 @@ ReasoningConent参数仅支持出参，且只有deepseek-r1模型会返回。
     public $ReasoningContent;
 
     /**
+     * @var array 搜索结果
+     */
+    public $SearchResults;
+
+    /**
      * @param string $Role 角色
      * @param string $Content 内容
      * @param string $ReasoningContent 思维链内容。
 ReasoningConent参数仅支持出参，且只有deepseek-r1模型会返回。
+     * @param array $SearchResults 搜索结果
      */
     function __construct()
     {
@@ -76,6 +84,15 @@ ReasoningConent参数仅支持出参，且只有deepseek-r1模型会返回。
 
         if (array_key_exists("ReasoningContent",$param) and $param["ReasoningContent"] !== null) {
             $this->ReasoningContent = $param["ReasoningContent"];
+        }
+
+        if (array_key_exists("SearchResults",$param) and $param["SearchResults"] !== null) {
+            $this->SearchResults = [];
+            foreach ($param["SearchResults"] as $key => $value){
+                $obj = new SearchResult();
+                $obj->deserialize($value);
+                array_push($this->SearchResults, $obj);
+            }
         }
     }
 }

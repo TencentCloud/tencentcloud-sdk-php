@@ -104,6 +104,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConstruct(integer $Construct) 设置建设模式
  * @method string getAccessPointName() 获取物理专线的接入点名称
  * @method void setAccessPointName(string $AccessPointName) 设置物理专线的接入点名称
+ * @method boolean getIsThreeArch() 获取是否三层架构
+ * @method void setIsThreeArch(boolean $IsThreeArch) 设置是否三层架构
  */
 class DirectConnect extends AbstractModel
 {
@@ -286,6 +288,11 @@ class DirectConnect extends AbstractModel
     public $AccessPointName;
 
     /**
+     * @var boolean 是否三层架构
+     */
+    public $IsThreeArch;
+
+    /**
      * @param string $DirectConnectId 物理专线ID。
      * @param string $DirectConnectName 物理专线的名称。
      * @param string $AccessPointId 物理专线的接入点ID。
@@ -328,6 +335,7 @@ class DirectConnect extends AbstractModel
      * @param integer $MinBandwidth 物理专线最小带宽
      * @param integer $Construct 建设模式
      * @param string $AccessPointName 物理专线的接入点名称
+     * @param boolean $IsThreeArch 是否三层架构
      */
     function __construct()
     {
@@ -481,6 +489,10 @@ class DirectConnect extends AbstractModel
 
         if (array_key_exists("AccessPointName",$param) and $param["AccessPointName"] !== null) {
             $this->AccessPointName = $param["AccessPointName"];
+        }
+
+        if (array_key_exists("IsThreeArch",$param) and $param["IsThreeArch"] !== null) {
+            $this->IsThreeArch = $param["IsThreeArch"];
         }
     }
 }

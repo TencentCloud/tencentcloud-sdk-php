@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getType() 获取类型
  * @method void setType(integer $Type) 设置类型
- * @method integer getCount() 获取数量
- * @method void setCount(integer $Count) 设置数量
+ * @method integer getCount() 获取数量,  数量需大于2
+ * @method void setCount(integer $Count) 设置数量,  数量需大于2
  * @method string getSessionId() 获取会话sessionid
  * @method void setSessionId(string $SessionId) 设置会话sessionid
  * @method string getLastRecordId() 获取最后一条记录ID
  * @method void setLastRecordId(string $LastRecordId) 设置最后一条记录ID
- * @method string getBotAppKey() 获取应用AppKey, 当Type=5[API访客]时, 该字段必填
- * @method void setBotAppKey(string $BotAppKey) 设置应用AppKey, 当Type=5[API访客]时, 该字段必填
+ * @method string getBotAppKey() 获取应用AppKey, 当Type=5[API访客]时, 该字段必填  :</br>  获取方式:</br>   1、应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取</br>   2、参考 https://cloud.tencent.com/document/product/1759/109469 第二项
+ * @method void setBotAppKey(string $BotAppKey) 设置应用AppKey, 当Type=5[API访客]时, 该字段必填  :</br>  获取方式:</br>   1、应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取</br>   2、参考 https://cloud.tencent.com/document/product/1759/109469 第二项
  * @method integer getScene() 获取场景, 体验: 1; 正式: 2
  * @method void setScene(integer $Scene) 设置场景, 体验: 1; 正式: 2
  * @method string getMidRecordId() 获取传该值，代表拉取该记录id的前后总共count条消息记录
@@ -43,7 +43,7 @@ class GetMsgRecordRequest extends AbstractModel
     public $Type;
 
     /**
-     * @var integer 数量
+     * @var integer 数量,  数量需大于2
      */
     public $Count;
 
@@ -58,7 +58,7 @@ class GetMsgRecordRequest extends AbstractModel
     public $LastRecordId;
 
     /**
-     * @var string 应用AppKey, 当Type=5[API访客]时, 该字段必填
+     * @var string 应用AppKey, 当Type=5[API访客]时, 该字段必填  :</br>  获取方式:</br>   1、应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取</br>   2、参考 https://cloud.tencent.com/document/product/1759/109469 第二项
      */
     public $BotAppKey;
 
@@ -74,10 +74,10 @@ class GetMsgRecordRequest extends AbstractModel
 
     /**
      * @param integer $Type 类型
-     * @param integer $Count 数量
+     * @param integer $Count 数量,  数量需大于2
      * @param string $SessionId 会话sessionid
      * @param string $LastRecordId 最后一条记录ID
-     * @param string $BotAppKey 应用AppKey, 当Type=5[API访客]时, 该字段必填
+     * @param string $BotAppKey 应用AppKey, 当Type=5[API访客]时, 该字段必填  :</br>  获取方式:</br>   1、应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取</br>   2、参考 https://cloud.tencent.com/document/product/1759/109469 第二项
      * @param integer $Scene 场景, 体验: 1; 正式: 2
      * @param string $MidRecordId 传该值，代表拉取该记录id的前后总共count条消息记录
      */

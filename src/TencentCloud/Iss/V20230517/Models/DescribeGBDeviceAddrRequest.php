@@ -14,28 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Domain\V20180808\Models;
+namespace TencentCloud\Iss\V20230517\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeTemplate请求参数结构体
+ * DescribeGBDeviceAddr请求参数结构体
  *
- * @method string getTemplateId() 获取模板ID
-通过DescribeTemplateList接口获取:https://cloud.tencent.com/document/api/242/48940
- * @method void setTemplateId(string $TemplateId) 设置模板ID
-通过DescribeTemplateList接口获取:https://cloud.tencent.com/document/api/242/48940
+ * @method array getDeviceIds() 获取设备ID列表
+ * @method void setDeviceIds(array $DeviceIds) 设置设备ID列表
  */
-class DescribeTemplateRequest extends AbstractModel
+class DescribeGBDeviceAddrRequest extends AbstractModel
 {
     /**
-     * @var string 模板ID
-通过DescribeTemplateList接口获取:https://cloud.tencent.com/document/api/242/48940
+     * @var array 设备ID列表
      */
-    public $TemplateId;
+    public $DeviceIds;
 
     /**
-     * @param string $TemplateId 模板ID
-通过DescribeTemplateList接口获取:https://cloud.tencent.com/document/api/242/48940
+     * @param array $DeviceIds 设备ID列表
      */
     function __construct()
     {
@@ -50,8 +46,8 @@ class DescribeTemplateRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
-            $this->TemplateId = $param["TemplateId"];
+        if (array_key_exists("DeviceIds",$param) and $param["DeviceIds"] !== null) {
+            $this->DeviceIds = $param["DeviceIds"];
         }
     }
 }

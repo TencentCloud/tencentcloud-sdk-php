@@ -23,9 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDirectConnectName() 获取物理专线的名称。
  * @method void setDirectConnectName(string $DirectConnectName) 设置物理专线的名称。
  * @method string getAccessPointId() 获取物理专线所在的接入点。
-您可以通过调用 DescribeAccessPoints接口获取地域ID。所选择的接入点必须存在且处于可接入的状态。
+您可以通过调用[DescribeAccessPoints](https://cloud.tencent.com/document/product/216/34827)接口获取接入点ID。
  * @method void setAccessPointId(string $AccessPointId) 设置物理专线所在的接入点。
-您可以通过调用 DescribeAccessPoints接口获取地域ID。所选择的接入点必须存在且处于可接入的状态。
+您可以通过调用[DescribeAccessPoints](https://cloud.tencent.com/document/product/216/34827)接口获取接入点ID。
  * @method string getLineOperator() 获取提供接入物理专线的运营商。
 ChinaTelecom：中国电信； 
 ChinaMobile：中国移动；
@@ -90,7 +90,7 @@ class CreateDirectConnectRequest extends AbstractModel
 
     /**
      * @var string 物理专线所在的接入点。
-您可以通过调用 DescribeAccessPoints接口获取地域ID。所选择的接入点必须存在且处于可接入的状态。
+您可以通过调用[DescribeAccessPoints](https://cloud.tencent.com/document/product/216/34827)接口获取接入点ID。
      */
     public $AccessPointId;
 
@@ -188,7 +188,7 @@ ChinaOther：中国其他；
     /**
      * @param string $DirectConnectName 物理专线的名称。
      * @param string $AccessPointId 物理专线所在的接入点。
-您可以通过调用 DescribeAccessPoints接口获取地域ID。所选择的接入点必须存在且处于可接入的状态。
+您可以通过调用[DescribeAccessPoints](https://cloud.tencent.com/document/product/216/34827)接口获取接入点ID。
      * @param string $LineOperator 提供接入物理专线的运营商。
 ChinaTelecom：中国电信； 
 ChinaMobile：中国移动；

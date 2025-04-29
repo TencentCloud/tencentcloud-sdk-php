@@ -23,19 +23,15 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getMobileDeviceType() 获取移动设备类型，
 0: 手机
 1: 平板
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMobileDeviceType(integer $MobileDeviceType) 设置移动设备类型，
 0: 手机
 1: 平板
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScreenOrientation() 获取屏幕方向，
 0: 竖屏，
 1: 横屏
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScreenOrientation(integer $ScreenOrientation) 设置屏幕方向，
 0: 竖屏，
 1: 横屏
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class EmulateMobileParams extends AbstractModel
 {
@@ -43,7 +39,6 @@ class EmulateMobileParams extends AbstractModel
      * @var integer 移动设备类型，
 0: 手机
 1: 平板
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MobileDeviceType;
 
@@ -51,7 +46,6 @@ class EmulateMobileParams extends AbstractModel
      * @var integer 屏幕方向，
 0: 竖屏，
 1: 横屏
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScreenOrientation;
 
@@ -59,11 +53,9 @@ class EmulateMobileParams extends AbstractModel
      * @param integer $MobileDeviceType 移动设备类型，
 0: 手机
 1: 平板
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ScreenOrientation 屏幕方向，
 0: 竖屏，
 1: 横屏
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

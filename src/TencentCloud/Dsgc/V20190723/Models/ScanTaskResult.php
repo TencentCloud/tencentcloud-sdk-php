@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResultDescription(string $ResultDescription) 设置结果描述
  * @method string getSuggestion() 获取结果建议
  * @method void setSuggestion(string $Suggestion) 设置结果建议
+ * @method float getProgress() 获取扫描进度
+ * @method void setProgress(float $Progress) 设置扫描进度
  */
 class ScanTaskResult extends AbstractModel
 {
@@ -66,12 +68,18 @@ class ScanTaskResult extends AbstractModel
     public $Suggestion;
 
     /**
+     * @var float 扫描进度
+     */
+    public $Progress;
+
+    /**
      * @param integer $Id 任务最新一次运行结果ID
      * @param string $EndTime 任务扫描结束的时间，格式如：2021-12-12 12:12:12
      * @param integer $Status 任务状态，-1待触发 0待扫描 1扫描中 2扫描终止 3扫描成功 4扫描失败
      * @param string $Result 扫描任务结果展示，如果扫描失败，则显示失败原因
      * @param string $ResultDescription 结果描述
      * @param string $Suggestion 结果建议
+     * @param float $Progress 扫描进度
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class ScanTaskResult extends AbstractModel
 
         if (array_key_exists("Suggestion",$param) and $param["Suggestion"] !== null) {
             $this->Suggestion = $param["Suggestion"];
+        }
+
+        if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
+            $this->Progress = $param["Progress"];
         }
     }
 }

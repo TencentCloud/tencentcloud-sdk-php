@@ -14,28 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Domain\V20180808\Models;
+namespace TencentCloud\Iss\V20230517\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeTemplate请求参数结构体
+ * 设备地址返回结果
  *
- * @method string getTemplateId() 获取模板ID
-通过DescribeTemplateList接口获取:https://cloud.tencent.com/document/api/242/48940
- * @method void setTemplateId(string $TemplateId) 设置模板ID
-通过DescribeTemplateList接口获取:https://cloud.tencent.com/document/api/242/48940
+ * @method string getDeviceId() 获取设备Id
+ * @method void setDeviceId(string $DeviceId) 设置设备Id
+ * @method string getAddr() 获取IP地址
+ * @method void setAddr(string $Addr) 设置IP地址
  */
-class DescribeTemplateRequest extends AbstractModel
+class RemoteAddrInfo extends AbstractModel
 {
     /**
-     * @var string 模板ID
-通过DescribeTemplateList接口获取:https://cloud.tencent.com/document/api/242/48940
+     * @var string 设备Id
      */
-    public $TemplateId;
+    public $DeviceId;
 
     /**
-     * @param string $TemplateId 模板ID
-通过DescribeTemplateList接口获取:https://cloud.tencent.com/document/api/242/48940
+     * @var string IP地址
+     */
+    public $Addr;
+
+    /**
+     * @param string $DeviceId 设备Id
+     * @param string $Addr IP地址
      */
     function __construct()
     {
@@ -50,8 +54,12 @@ class DescribeTemplateRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
-            $this->TemplateId = $param["TemplateId"];
+        if (array_key_exists("DeviceId",$param) and $param["DeviceId"] !== null) {
+            $this->DeviceId = $param["DeviceId"];
+        }
+
+        if (array_key_exists("Addr",$param) and $param["Addr"] !== null) {
+            $this->Addr = $param["Addr"];
         }
     }
 }

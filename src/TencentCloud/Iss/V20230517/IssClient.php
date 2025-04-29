@@ -35,6 +35,7 @@ use TencentCloud\Iss\V20230517\Models as Models;
  * @method Models\AddRecordTemplateResponse AddRecordTemplate(Models\AddRecordTemplateRequest $req) 用于新增实时上云模板
  * @method Models\AddStreamAuthResponse AddStreamAuth(Models\AddStreamAuthRequest $req) 用于设置推拉流鉴权配置。
  * @method Models\AddUserDeviceResponse AddUserDevice(Models\AddUserDeviceRequest $req) 用于新增单个设备。添加设备之后，可根据返回结果到设备上进行配置，配置后等待设备注册/推流。
+ * @method Models\BatchDeleteVideoDownloadTaskResponse BatchDeleteVideoDownloadTask(Models\BatchDeleteVideoDownloadTaskRequest $req) 用于批量删除本地录像下载失败的任务
  * @method Models\BatchOperateDeviceResponse BatchOperateDevice(Models\BatchOperateDeviceRequest $req) 用于批量操作（启用，禁用，删除）设备
  * @method Models\CallISAPIResponse CallISAPI(Models\CallISAPIRequest $req) 本接口可基于海康ISUP 5.0协议实现透传ISAPI的请求数据，调用接口前需确保设备采用ISUP协议成功注册至本平台
  * @method Models\ControlDevicePTZResponse ControlDevicePTZ(Models\ControlDevicePTZRequest $req) 用于设备通道云台控制，包括转动、变倍、变焦、光圈等。
@@ -43,6 +44,7 @@ use TencentCloud\Iss\V20230517\Models as Models;
  * @method Models\ControlDeviceStreamResponse ControlDeviceStream(Models\ControlDeviceStreamRequest $req) 用于获取设备的实时开流地址。
  * @method Models\ControlRecordResponse ControlRecord(Models\ControlRecordRequest $req) 用于录像回放过程中的倍速、跳转、播放/暂停/停止等控制。
  * @method Models\ControlRecordTimelineResponse ControlRecordTimeline(Models\ControlRecordTimelineRequest $req) 用于查询设备本地录像时间轴信息，为NVR/IPC本地存储的录像。
+ * @method Models\CreateVideoDownloadTaskResponse CreateVideoDownloadTask(Models\CreateVideoDownloadTaskRequest $req) 创建本地录像下载任务
  * @method Models\DeleteAITaskResponse DeleteAITask(Models\DeleteAITaskRequest $req) 删除AI任务
  * @method Models\DeleteDomainResponse DeleteDomain(Models\DeleteDomainRequest $req) 用于删除域名。
  * @method Models\DeleteGatewayResponse DeleteGateway(Models\DeleteGatewayRequest $req) 用于删除网关。
@@ -52,6 +54,7 @@ use TencentCloud\Iss\V20230517\Models as Models;
  * @method Models\DeleteRecordPlanResponse DeleteRecordPlan(Models\DeleteRecordPlanRequest $req) 用于删除实时上云计划
  * @method Models\DeleteRecordRetrieveTaskResponse DeleteRecordRetrieveTask(Models\DeleteRecordRetrieveTaskRequest $req) 用于删除取回任务
  * @method Models\DeleteRecordTemplateResponse DeleteRecordTemplate(Models\DeleteRecordTemplateRequest $req) 用于删除实时上云模板
+ * @method Models\DeleteTaskResponse DeleteTask(Models\DeleteTaskRequest $req) 用于删除执行完成的任务
  * @method Models\DeleteUserDeviceResponse DeleteUserDevice(Models\DeleteUserDeviceRequest $req) 用于删除已添加的设备。
  * @method Models\DescribeAITaskResponse DescribeAITask(Models\DescribeAITaskRequest $req) 获取AI任务详情
  * @method Models\DescribeAITaskResultResponse DescribeAITaskResult(Models\DescribeAITaskResultRequest $req) 获取AI任务识别结果
@@ -61,6 +64,7 @@ use TencentCloud\Iss\V20230517\Models as Models;
  * @method Models\DescribeDeviceRegionResponse DescribeDeviceRegion(Models\DescribeDeviceRegionRequest $req) 用于添加设备时，查询设备可以使用的服务节点，查询结果为已经绑定了域名的服务节点。
  * @method Models\DescribeDomainResponse DescribeDomain(Models\DescribeDomainRequest $req) 用于查询添加的域名列表。
  * @method Models\DescribeDomainRegionResponse DescribeDomainRegion(Models\DescribeDomainRegionRequest $req) 用于用户添加域名时，查询可以绑定的服务节点，结果为平台支持的所有服务节点。（注意：每个服务节点只能绑定一个域名）
+ * @method Models\DescribeGBDeviceAddrResponse DescribeGBDeviceAddr(Models\DescribeGBDeviceAddrRequest $req) 用于获取国标设备的公网地址
  * @method Models\DescribeGatewayResponse DescribeGateway(Models\DescribeGatewayRequest $req) 用于获取网关详情。
  * @method Models\DescribeGatewayMonitorResponse DescribeGatewayMonitor(Models\DescribeGatewayMonitorRequest $req) 用于获取网关的数据及流量监控信息。
  * @method Models\DescribeGatewayProtocolResponse DescribeGatewayProtocol(Models\DescribeGatewayProtocolRequest $req) 用于查询网关接入协议。
@@ -97,6 +101,7 @@ use TencentCloud\Iss\V20230517\Models as Models;
  * @method Models\ListRecordTemplatesResponse ListRecordTemplates(Models\ListRecordTemplatesRequest $req) 用于查询实时上云模板列表
  * @method Models\ListSubTasksResponse ListSubTasks(Models\ListSubTasksRequest $req) 用于查询任务的子任务列表
  * @method Models\ListTasksResponse ListTasks(Models\ListTasksRequest $req) 用于查询批量任务和简单任务列表
+ * @method Models\ListVideoDownloadTaskResponse ListVideoDownloadTask(Models\ListVideoDownloadTaskRequest $req) 查询本店里录像下载任务列表
  * @method Models\PlayRecordResponse PlayRecord(Models\PlayRecordRequest $req) 用于获取设备本地录像 URL 地址。
  * @method Models\QueryForbidPlayChannelListResponse QueryForbidPlayChannelList(Models\QueryForbidPlayChannelListRequest $req) 查询禁播通道列表
  * @method Models\RefreshDeviceChannelResponse RefreshDeviceChannel(Models\RefreshDeviceChannelRequest $req) 用于同步国标设备的通道（接口调用后，触发向设备请求通道列表，新增的通道入库，设备上已删除的通道需自行删除、后台不自动删除）。

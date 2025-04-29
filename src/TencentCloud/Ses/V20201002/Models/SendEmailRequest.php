@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSmtpMessageId(string $SmtpMessageId) 设置smtp头中的Message-Id字段
  * @method string getSmtpHeaders() 获取smtp头中可以设置的其它字段
  * @method void setSmtpHeaders(string $SmtpHeaders) 设置smtp头中可以设置的其它字段
+ * @method string getHeaderFrom() 获取smtp头中的from字段，建议域名与FromEmailAddress保持一致
+ * @method void setHeaderFrom(string $HeaderFrom) 设置smtp头中的from字段，建议域名与FromEmailAddress保持一致
  */
 class SendEmailRequest extends AbstractModel
 {
@@ -121,6 +123,11 @@ class SendEmailRequest extends AbstractModel
     public $SmtpHeaders;
 
     /**
+     * @var string smtp头中的from字段，建议域名与FromEmailAddress保持一致
+     */
+    public $HeaderFrom;
+
+    /**
      * @param string $FromEmailAddress 发件人邮箱地址。不使用别名时请直接填写发件人邮箱地址，例如：noreply@mail.qcloud.com如需填写发件人别名时，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）：别名+一个空格+<邮箱地址>，别名中不能带有冒号(:)。
      * @param array $Destination 收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
      * @param string $Subject 邮件主题
@@ -136,6 +143,7 @@ class SendEmailRequest extends AbstractModel
      * @param integer $TriggerType 邮件触发类型 0:非触发类，默认类型，营销类邮件、非即时类邮件等选择此类型  1:触发类，验证码等即时发送类邮件，若邮件超过一定大小，系统会自动选择非触发类型通道
      * @param string $SmtpMessageId smtp头中的Message-Id字段
      * @param string $SmtpHeaders smtp头中可以设置的其它字段
+     * @param string $HeaderFrom smtp头中的from字段，建议域名与FromEmailAddress保持一致
      */
     function __construct()
     {
@@ -207,6 +215,10 @@ class SendEmailRequest extends AbstractModel
 
         if (array_key_exists("SmtpHeaders",$param) and $param["SmtpHeaders"] !== null) {
             $this->SmtpHeaders = $param["SmtpHeaders"];
+        }
+
+        if (array_key_exists("HeaderFrom",$param) and $param["HeaderFrom"] !== null) {
+            $this->HeaderFrom = $param["HeaderFrom"];
         }
     }
 }

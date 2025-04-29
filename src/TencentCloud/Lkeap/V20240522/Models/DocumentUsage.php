@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalToken(integer $TotalToken) 设置文档拆分任务消耗的总token数
  * @method integer getTotalTokens() 获取文档拆分任务消耗的总token数
  * @method void setTotalTokens(integer $TotalTokens) 设置文档拆分任务消耗的总token数
+ * @method integer getSplitTokens() 获取拆分消耗的token数
+ * @method void setSplitTokens(integer $SplitTokens) 设置拆分消耗的token数
+ * @method integer getMllmTokens() 获取mllm消耗的token数
+ * @method void setMllmTokens(integer $MllmTokens) 设置mllm消耗的token数
  */
 class DocumentUsage extends AbstractModel
 {
@@ -46,9 +50,21 @@ class DocumentUsage extends AbstractModel
     public $TotalTokens;
 
     /**
+     * @var integer 拆分消耗的token数
+     */
+    public $SplitTokens;
+
+    /**
+     * @var integer mllm消耗的token数
+     */
+    public $MllmTokens;
+
+    /**
      * @param integer $PageNumber 文档拆分任务的页数
      * @param integer $TotalToken 文档拆分任务消耗的总token数
      * @param integer $TotalTokens 文档拆分任务消耗的总token数
+     * @param integer $SplitTokens 拆分消耗的token数
+     * @param integer $MllmTokens mllm消耗的token数
      */
     function __construct()
     {
@@ -73,6 +89,14 @@ class DocumentUsage extends AbstractModel
 
         if (array_key_exists("TotalTokens",$param) and $param["TotalTokens"] !== null) {
             $this->TotalTokens = $param["TotalTokens"];
+        }
+
+        if (array_key_exists("SplitTokens",$param) and $param["SplitTokens"] !== null) {
+            $this->SplitTokens = $param["SplitTokens"];
+        }
+
+        if (array_key_exists("MllmTokens",$param) and $param["MllmTokens"] !== null) {
+            $this->MllmTokens = $param["MllmTokens"];
         }
     }
 }

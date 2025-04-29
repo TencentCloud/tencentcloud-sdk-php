@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDirectConnects请求参数结构体
  *
- * @method array getFilters() 获取过滤条件。
- * @method void setFilters(array $Filters) 设置过滤条件。
+ * @method array getFilters() 获取过滤条件。direct-connect-id：物理专线ID，states：物理专线状态（AVAILABLE-就绪，PENDING-申请中，REJECTED-申请被拒绝，PENDINGPAY-待付款，PAID-付款完成，BUILDING-建设中，STOPED-建设终止，DELETED-删除完成）。
+ * @method void setFilters(array $Filters) 设置过滤条件。direct-connect-id：物理专线ID，states：物理专线状态（AVAILABLE-就绪，PENDING-申请中，REJECTED-申请被拒绝，PENDINGPAY-待付款，PAID-付款完成，BUILDING-建设中，STOPED-建设终止，DELETED-删除完成）。
  * @method array getDirectConnectIds() 获取物理专线 ID数组。
  * @method void setDirectConnectIds(array $DirectConnectIds) 设置物理专线 ID数组。
  * @method integer getOffset() 获取偏移量，默认为0。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDirectConnectsRequest extends AbstractModel
 {
     /**
-     * @var array 过滤条件。
+     * @var array 过滤条件。direct-connect-id：物理专线ID，states：物理专线状态（AVAILABLE-就绪，PENDING-申请中，REJECTED-申请被拒绝，PENDINGPAY-待付款，PAID-付款完成，BUILDING-建设中，STOPED-建设终止，DELETED-删除完成）。
      */
     public $Filters;
 
@@ -52,7 +52,7 @@ class DescribeDirectConnectsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param array $Filters 过滤条件。
+     * @param array $Filters 过滤条件。direct-connect-id：物理专线ID，states：物理专线状态（AVAILABLE-就绪，PENDING-申请中，REJECTED-申请被拒绝，PENDINGPAY-待付款，PAID-付款完成，BUILDING-建设中，STOPED-建设终止，DELETED-删除完成）。
      * @param array $DirectConnectIds 物理专线 ID数组。
      * @param integer $Offset 偏移量，默认为0。
      * @param integer $Limit 返回数量，默认为20，最大值为100。

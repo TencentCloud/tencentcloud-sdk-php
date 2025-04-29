@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUser(User $User) 设置该字段表示待检测对象对应的用户相关信息，若填入则可甄别相应违规风险用户。
  * @method Device getDevice() 获取该字段表示待检测对象对应的设备相关信息，若填入则可甄别相应违规风险设备。
  * @method void setDevice(Device $Device) 设置该字段表示待检测对象对应的设备相关信息，若填入则可甄别相应违规风险设备。
+ * @method string getType() 获取该字段表示送审的数据类型，默认为通用图片，可以选择。
+ * @method void setType(string $Type) 设置该字段表示送审的数据类型，默认为通用图片，可以选择。
  */
 class ImageModerationRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class ImageModerationRequest extends AbstractModel
     public $Device;
 
     /**
+     * @var string 该字段表示送审的数据类型，默认为通用图片，可以选择。
+     */
+    public $Type;
+
+    /**
      * @param string $BizType 该字段表示策略的具体编号，用于接口调度，在内容安全控制台中可配置。若不传入Biztype参数（留空），则代表采用默认的识别策略；传入则会在审核时根据业务场景采取不同的审核策略。<br>备注：Biztype仅为数字、字母与下划线的组合，长度为3-32个字符；不同Biztype关联不同的业务场景与识别能力策略，调用前请确认正确的Biztype。
      * @param string $DataId 该字段表示您为待检测对象分配的数据ID，传入后可方便您对文件进行标识和管理。<br>取值：由英文字母（大小写均可）、数字及四个特殊符号（_，-，@，#）组成，**长度不超过64个字符**。
      * @param string $FileContent 该字段表示待检测图片文件内容的Base64编码，由于云API对请求包体有大小限制，图片的**Base64编码内容大小不得超过10MB**。<br/>备注：**该字段与FileUrl必须选择输入其中一个**。
@@ -88,6 +95,7 @@ class ImageModerationRequest extends AbstractModel
      * @param integer $MaxFrames **GIF检测专用**，用于标识最大截帧数量；默认值为1，此时只会检测输入GIF的第一帧不进行切分处理（可能会造成处理超时）。<br>备注：Interval与MaxFrames参数需要组合使用。例如，Interval=3, MaxFrames=400，则代表在检测GIF时，将每间隔2帧检测一次且最多检测400帧。
      * @param User $User 该字段表示待检测对象对应的用户相关信息，若填入则可甄别相应违规风险用户。
      * @param Device $Device 该字段表示待检测对象对应的设备相关信息，若填入则可甄别相应违规风险设备。
+     * @param string $Type 该字段表示送审的数据类型，默认为通用图片，可以选择。
      */
     function __construct()
     {
@@ -134,6 +142,10 @@ class ImageModerationRequest extends AbstractModel
         if (array_key_exists("Device",$param) and $param["Device"] !== null) {
             $this->Device = new Device();
             $this->Device->deserialize($param["Device"]);
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

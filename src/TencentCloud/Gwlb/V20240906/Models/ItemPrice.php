@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * 描述了单项的价格信息
  *
  * @method float getUnitPrice() 获取后付费单价，单位：元。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnitPrice(float $UnitPrice) 设置后付费单价，单位：元。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getChargeUnit() 获取后付费计价单元，可取值范围： HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：实例按小时后付费（POSTPAID_BY_HOUR）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChargeUnit(string $ChargeUnit) 设置后付费计价单元，可取值范围： HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：实例按小时后付费（POSTPAID_BY_HOUR）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getOriginalPrice() 获取预支费用的原价，单位：元。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOriginalPrice(float $OriginalPrice) 设置预支费用的原价，单位：元。
@@ -37,25 +33,19 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiscountPrice(float $DiscountPrice) 设置预支费用的折扣价，单位：元。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method float getUnitPriceDiscount() 获取后付费的折扣单价，单位:元。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnitPriceDiscount(float $UnitPriceDiscount) 设置后付费的折扣单价，单位:元。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getDiscount() 获取折扣，如20.0代表2折。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiscount(float $Discount) 设置折扣，如20.0代表2折。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ItemPrice extends AbstractModel
 {
     /**
      * @var float 后付费单价，单位：元。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UnitPrice;
 
     /**
      * @var string 后付费计价单元，可取值范围： HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：实例按小时后付费（POSTPAID_BY_HOUR）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChargeUnit;
 
@@ -73,29 +63,23 @@ class ItemPrice extends AbstractModel
 
     /**
      * @var float 后付费的折扣单价，单位:元。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UnitPriceDiscount;
 
     /**
      * @var float 折扣，如20.0代表2折。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Discount;
 
     /**
      * @param float $UnitPrice 后付费单价，单位：元。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChargeUnit 后付费计价单元，可取值范围： HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：实例按小时后付费（POSTPAID_BY_HOUR）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $OriginalPrice 预支费用的原价，单位：元。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $DiscountPrice 预支费用的折扣价，单位：元。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $UnitPriceDiscount 后付费的折扣单价，单位:元。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Discount 折扣，如20.0代表2折。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

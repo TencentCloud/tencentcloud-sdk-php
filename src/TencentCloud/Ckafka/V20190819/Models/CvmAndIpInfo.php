@@ -21,21 +21,16 @@ use TencentCloud\Common\AbstractModel;
  * CVM和IP信息
  *
  * @method string getCkafkaInstanceId() 获取ckafka集群实例Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCkafkaInstanceId(string $CkafkaInstanceId) 设置ckafka集群实例Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取CVM实例ID
  * @method void setInstanceId(string $InstanceId) 设置CVM实例ID
  * @method string getIp() 获取IP地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIp(string $Ip) 设置IP地址
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CvmAndIpInfo extends AbstractModel
 {
     /**
      * @var string ckafka集群实例Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CkafkaInstanceId;
 
@@ -46,16 +41,13 @@ class CvmAndIpInfo extends AbstractModel
 
     /**
      * @var string IP地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ip;
 
     /**
      * @param string $CkafkaInstanceId ckafka集群实例Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId CVM实例ID
      * @param string $Ip IP地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

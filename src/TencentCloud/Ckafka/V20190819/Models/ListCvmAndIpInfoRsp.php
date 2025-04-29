@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * CVM和IP 信息列表
  *
  * @method array getCvmList() 获取cvm和IP 列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCvmList(array $CvmList) 设置cvm和IP 列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取实例数据量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置实例数据量
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ListCvmAndIpInfoRsp extends AbstractModel
 {
     /**
      * @var array cvm和IP 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CvmList;
 
     /**
      * @var integer 实例数据量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
      * @param array $CvmList cvm和IP 列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 实例数据量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

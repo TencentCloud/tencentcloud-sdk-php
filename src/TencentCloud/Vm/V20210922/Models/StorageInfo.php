@@ -18,7 +18,7 @@ namespace TencentCloud\Vm\V20210922\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- *  数据存储信息
+ * 数据存储信息
  *
  * @method string getType() 获取类型 可选：
 URL 资源链接类型

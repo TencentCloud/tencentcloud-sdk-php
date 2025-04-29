@@ -25,7 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getBotAppKey() 获取  应用AppKey </br>   获取方式:</br>   1、应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取</br>   2、参考 https://cloud.tencent.com/document/product/1759/109469 第二项
  * @method void setBotAppKey(string $BotAppKey) 设置  应用AppKey </br>   获取方式:</br>   1、应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取</br>   2、参考 https://cloud.tencent.com/document/product/1759/109469 第二项
  * @method string getVisitorBizId() 获取访客ID（外部输入，建议唯一，标识当前接入会话的用户）
+长度限制： string(64)
  * @method void setVisitorBizId(string $VisitorBizId) 设置访客ID（外部输入，建议唯一，标识当前接入会话的用户）
+长度限制： string(64)
  * @method array getVisitorLabels() 获取知识标签，用于知识库中知识的检索过滤。该字段即将下线，请使用对话端接口中的 custom_variables 字段替代该字段。
  * @method void setVisitorLabels(array $VisitorLabels) 设置知识标签，用于知识库中知识的检索过滤。该字段即将下线，请使用对话端接口中的 custom_variables 字段替代该字段。
  */
@@ -43,6 +45,7 @@ class GetWsTokenRequest extends AbstractModel
 
     /**
      * @var string 访客ID（外部输入，建议唯一，标识当前接入会话的用户）
+长度限制： string(64)
      */
     public $VisitorBizId;
 
@@ -55,6 +58,7 @@ class GetWsTokenRequest extends AbstractModel
      * @param integer $Type 接入类型， 5-API 访客
      * @param string $BotAppKey   应用AppKey </br>   获取方式:</br>   1、应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取</br>   2、参考 https://cloud.tencent.com/document/product/1759/109469 第二项
      * @param string $VisitorBizId 访客ID（外部输入，建议唯一，标识当前接入会话的用户）
+长度限制： string(64)
      * @param array $VisitorLabels 知识标签，用于知识库中知识的检索过滤。该字段即将下线，请使用对话端接口中的 custom_variables 字段替代该字段。
      */
     function __construct()

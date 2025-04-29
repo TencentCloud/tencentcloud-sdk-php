@@ -112,9 +112,15 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLineCount(integer $LineCount) 设置**本次查询返回的日志行数**
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExtInfo() 获取执行平台日志分页查询参数, 每次请求透明传入。第一页查询时值为空字符串
+ * @method string getExtInfo() 获取**分页查询日志时使用，无具体业务含义**
+
+第一次查询时值为null 
+第二次及以后查询时使用上一次查询返回信息中的ExtInfo字段值即可
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExtInfo(string $ExtInfo) 设置执行平台日志分页查询参数, 每次请求透明传入。第一页查询时值为空字符串
+ * @method void setExtInfo(string $ExtInfo) 设置**分页查询日志时使用，无具体业务含义**
+
+第一次查询时值为null 
+第二次及以后查询时使用上一次查询返回信息中的ExtInfo字段值即可
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsEnd() 获取日志分页查询，是否最后一页
 注意：此字段可能返回 null，表示取不到有效值。
@@ -218,7 +224,10 @@ class InstanceLogVO extends AbstractModel
     public $LineCount;
 
     /**
-     * @var string 执行平台日志分页查询参数, 每次请求透明传入。第一页查询时值为空字符串
+     * @var string **分页查询日志时使用，无具体业务含义**
+
+第一次查询时值为null 
+第二次及以后查询时使用上一次查询返回信息中的ExtInfo字段值即可
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExtInfo;
@@ -276,7 +285,10 @@ class InstanceLogVO extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LineCount **本次查询返回的日志行数**
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ExtInfo 执行平台日志分页查询参数, 每次请求透明传入。第一页查询时值为空字符串
+     * @param string $ExtInfo **分页查询日志时使用，无具体业务含义**
+
+第一次查询时值为null 
+第二次及以后查询时使用上一次查询返回信息中的ExtInfo字段值即可
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsEnd 日志分页查询，是否最后一页
 注意：此字段可能返回 null，表示取不到有效值。

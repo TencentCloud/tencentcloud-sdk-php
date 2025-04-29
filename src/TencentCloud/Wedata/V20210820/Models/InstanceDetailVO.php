@@ -110,9 +110,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalRunNum(integer $TotalRunNum) 设置累计运行次数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getLifeRoundNum() 获取生命周期编号
+ * @method integer getLifeRoundNum() 获取**实例生命周期编号，标识实例的某一次执行**
+
+例如：周期实例第一次运行的编号为0，用户后期又重跑了该实例，第二次的执行的编号为1
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLifeRoundNum(integer $LifeRoundNum) 设置生命周期编号
+ * @method void setLifeRoundNum(integer $LifeRoundNum) 设置**实例生命周期编号，标识实例的某一次执行**
+
+例如：周期实例第一次运行的编号为0，用户后期又重跑了该实例，第二次的执行的编号为1
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getInstanceType() 获取**实例类型**
 
@@ -323,7 +327,9 @@ class InstanceDetailVO extends AbstractModel
     public $TotalRunNum;
 
     /**
-     * @var integer 生命周期编号
+     * @var integer **实例生命周期编号，标识实例的某一次执行**
+
+例如：周期实例第一次运行的编号为0，用户后期又重跑了该实例，第二次的执行的编号为1
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LifeRoundNum;
@@ -458,7 +464,9 @@ class InstanceDetailVO extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalRunNum 累计运行次数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $LifeRoundNum 生命周期编号
+     * @param integer $LifeRoundNum **实例生命周期编号，标识实例的某一次执行**
+
+例如：周期实例第一次运行的编号为0，用户后期又重跑了该实例，第二次的执行的编号为1
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InstanceType **实例类型**
 

@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterName() 获取实例名称。
  * @method void setClusterName(string $ClusterName) 设置实例名称。
- * @method AddressInfo getReadWriteAddress() 获取集群读写地址信息。
- * @method void setReadWriteAddress(AddressInfo $ReadWriteAddress) 设置集群读写地址信息。
- * @method array getReadOnlyAddress() 获取集群只读地址信息。
- * @method void setReadOnlyAddress(array $ReadOnlyAddress) 设置集群只读地址信息。
- * @method array getNodeList() 获取集群节点列表信息。
- * @method void setNodeList(array $NodeList) 设置集群节点列表信息。
+ * @method AddressInfo getReadWriteAddress() 获取云盘版实例的读写地址信息。
+ * @method void setReadWriteAddress(AddressInfo $ReadWriteAddress) 设置云盘版实例的读写地址信息。
+ * @method array getReadOnlyAddress() 获取云盘版实例的只读地址信息。
+ * @method void setReadOnlyAddress(array $ReadOnlyAddress) 设置云盘版实例的只读地址信息。
+ * @method array getNodeList() 获取云盘版实例的节点列表信息。
+ * @method void setNodeList(array $NodeList) 设置云盘版实例的节点列表信息。
  * @method integer getReadonlyLimit() 获取只读空间保护阈值,单位GB
  * @method void setReadonlyLimit(integer $ReadonlyLimit) 设置只读空间保护阈值,单位GB
  * @method integer getNodeCount() 获取实例节点数。
@@ -43,17 +43,17 @@ class DescribeClusterInfoResponse extends AbstractModel
     public $ClusterName;
 
     /**
-     * @var AddressInfo 集群读写地址信息。
+     * @var AddressInfo 云盘版实例的读写地址信息。
      */
     public $ReadWriteAddress;
 
     /**
-     * @var array 集群只读地址信息。
+     * @var array 云盘版实例的只读地址信息。
      */
     public $ReadOnlyAddress;
 
     /**
-     * @var array 集群节点列表信息。
+     * @var array 云盘版实例的节点列表信息。
      */
     public $NodeList;
 
@@ -74,9 +74,9 @@ class DescribeClusterInfoResponse extends AbstractModel
 
     /**
      * @param string $ClusterName 实例名称。
-     * @param AddressInfo $ReadWriteAddress 集群读写地址信息。
-     * @param array $ReadOnlyAddress 集群只读地址信息。
-     * @param array $NodeList 集群节点列表信息。
+     * @param AddressInfo $ReadWriteAddress 云盘版实例的读写地址信息。
+     * @param array $ReadOnlyAddress 云盘版实例的只读地址信息。
+     * @param array $NodeList 云盘版实例的节点列表信息。
      * @param integer $ReadonlyLimit 只读空间保护阈值,单位GB
      * @param integer $NodeCount 实例节点数。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。

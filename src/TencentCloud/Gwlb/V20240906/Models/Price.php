@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 表示网关负载均衡的价格
  *
  * @method ItemPrice getInstancePrice() 获取描述了实例价格。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstancePrice(ItemPrice $InstancePrice) 设置描述了实例价格。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ItemPrice getLcuPrice() 获取描述了GLCU的价格。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLcuPrice(ItemPrice $LcuPrice) 设置描述了GLCU的价格。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Price extends AbstractModel
 {
     /**
      * @var ItemPrice 描述了实例价格。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstancePrice;
 
     /**
      * @var ItemPrice 描述了GLCU的价格。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LcuPrice;
 
     /**
      * @param ItemPrice $InstancePrice 描述了实例价格。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ItemPrice $LcuPrice 描述了GLCU的价格。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

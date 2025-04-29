@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsFilterPerAuthUser(boolean $IsFilterPerAuthUser) 设置是否过滤掉企业管理员
  * @method boolean getIsFilterCurrentUser() 获取是否过滤掉当前用户
  * @method void setIsFilterCurrentUser(boolean $IsFilterCurrentUser) 设置是否过滤掉当前用户
+ * @method string getKeyword() 获取关键字
+ * @method void setKeyword(string $Keyword) 设置关键字
  */
 class DescribeUserProjectListRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DescribeUserProjectListRequest extends AbstractModel
     public $IsFilterCurrentUser;
 
     /**
+     * @var string 关键字
+     */
+    public $Keyword;
+
+    /**
      * @param integer $ProjectId 项目ID
      * @param boolean $AllPage 无
      * @param integer $PageNo 无
      * @param integer $PageSize 无
      * @param boolean $IsFilterPerAuthUser 是否过滤掉企业管理员
      * @param boolean $IsFilterCurrentUser 是否过滤掉当前用户
+     * @param string $Keyword 关键字
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DescribeUserProjectListRequest extends AbstractModel
 
         if (array_key_exists("IsFilterCurrentUser",$param) and $param["IsFilterCurrentUser"] !== null) {
             $this->IsFilterCurrentUser = $param["IsFilterCurrentUser"];
+        }
+
+        if (array_key_exists("Keyword",$param) and $param["Keyword"] !== null) {
+            $this->Keyword = $param["Keyword"];
         }
     }
 }

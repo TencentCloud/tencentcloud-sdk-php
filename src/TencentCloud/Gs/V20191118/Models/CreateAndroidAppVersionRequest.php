@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAndroidAppId(string $AndroidAppId) 设置应用ID
  * @method string getDownloadUrl() 获取应用包下载地址
  * @method void setDownloadUrl(string $DownloadUrl) 设置应用包下载地址
- * @method string getCommand() 获取shell 命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
- * @method void setCommand(string $Command) 设置shell 命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+ * @method string getCommand() 获取应用 shell 安装命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+ * @method void setCommand(string $Command) 设置应用 shell 安装命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+ * @method string getUninstallCommand() 获取应用 shell 卸载命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+ * @method void setUninstallCommand(string $UninstallCommand) 设置应用 shell 卸载命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
  */
 class CreateAndroidAppVersionRequest extends AbstractModel
 {
@@ -40,14 +42,20 @@ class CreateAndroidAppVersionRequest extends AbstractModel
     public $DownloadUrl;
 
     /**
-     * @var string shell 命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+     * @var string 应用 shell 安装命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
      */
     public $Command;
 
     /**
+     * @var string 应用 shell 卸载命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+     */
+    public $UninstallCommand;
+
+    /**
      * @param string $AndroidAppId 应用ID
      * @param string $DownloadUrl 应用包下载地址
-     * @param string $Command shell 命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+     * @param string $Command 应用 shell 安装命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+     * @param string $UninstallCommand 应用 shell 卸载命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class CreateAndroidAppVersionRequest extends AbstractModel
 
         if (array_key_exists("Command",$param) and $param["Command"] !== null) {
             $this->Command = $param["Command"];
+        }
+
+        if (array_key_exists("UninstallCommand",$param) and $param["UninstallCommand"] !== null) {
+            $this->UninstallCommand = $param["UninstallCommand"];
         }
     }
 }

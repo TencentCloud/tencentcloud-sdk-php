@@ -24,8 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(string $ProjectId) 设置**项目ID**
  * @method string getInstanceKey() 获取**实例唯一标识**
  * @method void setInstanceKey(string $InstanceKey) 设置**实例唯一标识**
- * @method integer getLifeRoundNum() 获取生命周期编号
- * @method void setLifeRoundNum(integer $LifeRoundNum) 设置生命周期编号
+ * @method integer getLifeRoundNum() 获取**实例生命周期编号，标识实例的某一次执行**
+
+例如：周期实例第一次运行的编号为0，用户后期又重跑了该实例，第二次执行的编号为1
+ * @method void setLifeRoundNum(integer $LifeRoundNum) 设置**实例生命周期编号，标识实例的某一次执行**
+
+例如：周期实例第一次运行的编号为0，用户后期又重跑了该实例，第二次执行的编号为1
  * @method string getScheduleTimeZone() 获取**时区**
 timeZone, 默认UTC+8
  * @method void setScheduleTimeZone(string $ScheduleTimeZone) 设置**时区**
@@ -68,6 +72,14 @@ timeZone, 默认UTC+8
 默认 10000
  * @method void setEndLineCount(integer $EndLineCount) 设置**获取日志的结束行 行号**
 默认 10000
+ * @method string getExtInfo() 获取**分页查询日志时使用，无具体业务含义**
+
+第一次查询时值为null 
+第二次及以后查询时使用上一次查询返回信息中的ExtInfo字段值即可
+ * @method void setExtInfo(string $ExtInfo) 设置**分页查询日志时使用，无具体业务含义**
+
+第一次查询时值为null 
+第二次及以后查询时使用上一次查询返回信息中的ExtInfo字段值即可
  */
 class GetInstanceLogRequest extends AbstractModel
 {
@@ -82,7 +94,9 @@ class GetInstanceLogRequest extends AbstractModel
     public $InstanceKey;
 
     /**
-     * @var integer 生命周期编号
+     * @var integer **实例生命周期编号，标识实例的某一次执行**
+
+例如：周期实例第一次运行的编号为0，用户后期又重跑了该实例，第二次执行的编号为1
      */
     public $LifeRoundNum;
 
@@ -136,9 +150,19 @@ timeZone, 默认UTC+8
     public $EndLineCount;
 
     /**
+     * @var string **分页查询日志时使用，无具体业务含义**
+
+第一次查询时值为null 
+第二次及以后查询时使用上一次查询返回信息中的ExtInfo字段值即可
+     */
+    public $ExtInfo;
+
+    /**
      * @param string $ProjectId **项目ID**
      * @param string $InstanceKey **实例唯一标识**
-     * @param integer $LifeRoundNum 生命周期编号
+     * @param integer $LifeRoundNum **实例生命周期编号，标识实例的某一次执行**
+
+例如：周期实例第一次运行的编号为0，用户后期又重跑了该实例，第二次执行的编号为1
      * @param string $ScheduleTimeZone **时区**
 timeZone, 默认UTC+8
      * @param string $BrokerIp **日志所在执行机Ip**
@@ -160,6 +184,10 @@ timeZone, 默认UTC+8
 默认 1
      * @param integer $EndLineCount **获取日志的结束行 行号**
 默认 10000
+     * @param string $ExtInfo **分页查询日志时使用，无具体业务含义**
+
+第一次查询时值为null 
+第二次及以后查询时使用上一次查询返回信息中的ExtInfo字段值即可
      */
     function __construct()
     {
@@ -212,6 +240,10 @@ timeZone, 默认UTC+8
 
         if (array_key_exists("EndLineCount",$param) and $param["EndLineCount"] !== null) {
             $this->EndLineCount = $param["EndLineCount"];
+        }
+
+        if (array_key_exists("ExtInfo",$param) and $param["ExtInfo"] !== null) {
+            $this->ExtInfo = $param["ExtInfo"];
         }
     }
 }

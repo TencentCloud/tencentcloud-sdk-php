@@ -53,7 +53,7 @@ use TencentCloud\Common\AbstractModel;
 - FAILED 表示 终态-失败重试
 - EXPIRED 表示 终态-失败
 - SKIP_RUNNING 表示 终态-被上游分支节点跳过的分支
-- HISTORY 表示 兼容历史实例
+- HISTORY 表示 兼容2024-03-30之前的历史实例，之后实例无需关注次枚举类型
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDetailState(string $DetailState) 设置**实例生命周期阶段状态**
 
@@ -64,7 +64,7 @@ use TencentCloud\Common\AbstractModel;
 - FAILED 表示 终态-失败重试
 - EXPIRED 表示 终态-失败
 - SKIP_RUNNING 表示 终态-被上游分支节点跳过的分支
-- HISTORY 表示 兼容历史实例
+- HISTORY 表示 兼容2024-03-30之前的历史实例，之后实例无需关注次枚举类型
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndTime() 获取该状态结束时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -103,7 +103,7 @@ class InstanceLifeDetailDto extends AbstractModel
 - FAILED 表示 终态-失败重试
 - EXPIRED 表示 终态-失败
 - SKIP_RUNNING 表示 终态-被上游分支节点跳过的分支
-- HISTORY 表示 兼容历史实例
+- HISTORY 表示 兼容2024-03-30之前的历史实例，之后实例无需关注次枚举类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DetailState;
@@ -136,7 +136,7 @@ class InstanceLifeDetailDto extends AbstractModel
 - FAILED 表示 终态-失败重试
 - EXPIRED 表示 终态-失败
 - SKIP_RUNNING 表示 终态-被上游分支节点跳过的分支
-- HISTORY 表示 兼容历史实例
+- HISTORY 表示 兼容2024-03-30之前的历史实例，之后实例无需关注次枚举类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndTime 该状态结束时间
 注意：此字段可能返回 null，表示取不到有效值。

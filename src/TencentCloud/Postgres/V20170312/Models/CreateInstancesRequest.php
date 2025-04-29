@@ -142,6 +142,8 @@ KeyId创建获取相关参考[开启透明数据加密](https://cloud.tencent.co
 KMSRegion相关介绍参考[开启透明数据加密](https://cloud.tencent.com/document/product/409/71749)
  * @method void setKMSRegion(string $KMSRegion) 设置使用KMS服务的地域，KMSRegion为空默认使用本地域的KMS，本地域不支持的情况下需自选其他KMS支持的地域。
 KMSRegion相关介绍参考[开启透明数据加密](https://cloud.tencent.com/document/product/409/71749)
+ * @method string getKMSClusterId() 获取指定KMS服务的集群，KMSClusterId为空使用默认集群的KMS，若选择指定KMS集群，则需要传入KMSClusterId。 KMSClusterId相关介绍参考开启透明数据加密
+ * @method void setKMSClusterId(string $KMSClusterId) 设置指定KMS服务的集群，KMSClusterId为空使用默认集群的KMS，若选择指定KMS集群，则需要传入KMSClusterId。 KMSClusterId相关介绍参考开启透明数据加密
  * @method string getDBEngine() 获取数据库引擎，支持：
 <li>postgresql：云数据库PostgreSQL</li>
 <li>mssql_compatible：MSSQL兼容-云数据库PostgreSQL</li>
@@ -353,6 +355,11 @@ KMSRegion相关介绍参考[开启透明数据加密](https://cloud.tencent.com/
     public $KMSRegion;
 
     /**
+     * @var string 指定KMS服务的集群，KMSClusterId为空使用默认集群的KMS，若选择指定KMS集群，则需要传入KMSClusterId。 KMSClusterId相关介绍参考开启透明数据加密
+     */
+    public $KMSClusterId;
+
+    /**
      * @var string 数据库引擎，支持：
 <li>postgresql：云数据库PostgreSQL</li>
 <li>mssql_compatible：MSSQL兼容-云数据库PostgreSQL</li>
@@ -451,6 +458,7 @@ mssql_compatible引擎：
 KeyId创建获取相关参考[开启透明数据加密](https://cloud.tencent.com/document/product/409/71749)
      * @param string $KMSRegion 使用KMS服务的地域，KMSRegion为空默认使用本地域的KMS，本地域不支持的情况下需自选其他KMS支持的地域。
 KMSRegion相关介绍参考[开启透明数据加密](https://cloud.tencent.com/document/product/409/71749)
+     * @param string $KMSClusterId 指定KMS服务的集群，KMSClusterId为空使用默认集群的KMS，若选择指定KMS集群，则需要传入KMSClusterId。 KMSClusterId相关介绍参考开启透明数据加密
      * @param string $DBEngine 数据库引擎，支持：
 <li>postgresql：云数据库PostgreSQL</li>
 <li>mssql_compatible：MSSQL兼容-云数据库PostgreSQL</li>
@@ -598,6 +606,10 @@ mssql_compatible引擎：
 
         if (array_key_exists("KMSRegion",$param) and $param["KMSRegion"] !== null) {
             $this->KMSRegion = $param["KMSRegion"];
+        }
+
+        if (array_key_exists("KMSClusterId",$param) and $param["KMSClusterId"] !== null) {
+            $this->KMSClusterId = $param["KMSClusterId"];
         }
 
         if (array_key_exists("DBEngine",$param) and $param["DBEngine"] !== null) {

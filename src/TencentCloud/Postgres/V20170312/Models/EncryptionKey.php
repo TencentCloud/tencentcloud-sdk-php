@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeyRegion(string $KeyRegion) 设置KMS密钥所在地域。
  * @method string getCreateTime() 获取DEK密钥创建时间。
  * @method void setCreateTime(string $CreateTime) 设置DEK密钥创建时间。
+ * @method string getKMSClusterId() 获取密钥所在的KMS服务集群Id，为空表示密钥在默认的KMS集群中，不为空表示在指定的KMS服务集群中
+ * @method void setKMSClusterId(string $KMSClusterId) 设置密钥所在的KMS服务集群Id，为空表示密钥在默认的KMS集群中，不为空表示在指定的KMS服务集群中
  */
 class EncryptionKey extends AbstractModel
 {
@@ -66,12 +68,18 @@ class EncryptionKey extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var string 密钥所在的KMS服务集群Id，为空表示密钥在默认的KMS集群中，不为空表示在指定的KMS服务集群中
+     */
+    public $KMSClusterId;
+
+    /**
      * @param string $KeyId KMS实例加密的KeyId。
      * @param string $KeyAlias KMS实例加密Key的别名。
      * @param string $DEKCipherTextBlob 实例加密密钥DEK的密文。
      * @param integer $IsEnabled 密钥是否启用，1-启用， 0-未启用。
      * @param string $KeyRegion KMS密钥所在地域。
      * @param string $CreateTime DEK密钥创建时间。
+     * @param string $KMSClusterId 密钥所在的KMS服务集群Id，为空表示密钥在默认的KMS集群中，不为空表示在指定的KMS服务集群中
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class EncryptionKey extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("KMSClusterId",$param) and $param["KMSClusterId"] !== null) {
+            $this->KMSClusterId = $param["KMSClusterId"];
         }
     }
 }

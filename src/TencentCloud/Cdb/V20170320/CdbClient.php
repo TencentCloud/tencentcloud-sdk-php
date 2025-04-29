@@ -29,7 +29,7 @@ use TencentCloud\Cdb\V20170320\Models as Models;
  * @method Models\AnalyzeAuditLogsResponse AnalyzeAuditLogs(Models\AnalyzeAuditLogsRequest $req) 本接口（AnalyzeAuditLogs）用于在不同过滤条件下的审计日志结果集中，选定特定的数据列进行聚合统计。
  * @method Models\AssociateSecurityGroupsResponse AssociateSecurityGroups(Models\AssociateSecurityGroupsRequest $req) 本接口(AssociateSecurityGroups)用于安全组批量绑定实例。
  * @method Models\BalanceRoGroupLoadResponse BalanceRoGroupLoad(Models\BalanceRoGroupLoadRequest $req) 本接口(BalanceRoGroupLoad)用于重新均衡 RO 组内实例的负载。注意，RO 组内 RO 实例会有一次数据库连接瞬断，请确保应用程序能重连数据库，谨慎操作。
- * @method Models\CheckMigrateClusterResponse CheckMigrateCluster(Models\CheckMigrateClusterRequest $req) 本接口（CheckMigrateCluster）用于高可用实例一键迁移到集群版校验。
+ * @method Models\CheckMigrateClusterResponse CheckMigrateCluster(Models\CheckMigrateClusterRequest $req) 本接口（CheckMigrateCluster）用于高可用实例一键迁移到云盘版校验。
  * @method Models\CloseAuditServiceResponse CloseAuditService(Models\CloseAuditServiceRequest $req) 实例关闭审计服务
  * @method Models\CloseCDBProxyResponse CloseCDBProxy(Models\CloseCDBProxyRequest $req) 本接口（CloseCDBProxy）用于关闭数据库代理。
  * @method Models\CloseCdbProxyAddressResponse CloseCdbProxyAddress(Models\CloseCdbProxyAddressRequest $req) 请求关闭数据库代理地址
@@ -109,7 +109,7 @@ use TencentCloud\Cdb\V20170320\Models as Models;
  * @method Models\DescribeCdbProxyInfoResponse DescribeCdbProxyInfo(Models\DescribeCdbProxyInfoRequest $req) 本接口（DescribeCdbProxyInfo）用于查询数据库代理详情信息。
  * @method Models\DescribeCdbZoneConfigResponse DescribeCdbZoneConfig(Models\DescribeCdbZoneConfigRequest $req) 本接口(DescribeCdbZoneConfig)用于查询云数据库各地域可售卖的规格配置。
  * @method Models\DescribeCloneListResponse DescribeCloneList(Models\DescribeCloneListRequest $req) 本接口（DescribeCloneList）用于查询用户实例的克隆任务列表。
- * @method Models\DescribeClusterInfoResponse DescribeClusterInfo(Models\DescribeClusterInfoRequest $req) 本接口（DescribeClusterInfo）用于查询集群版实例信息。
+ * @method Models\DescribeClusterInfoResponse DescribeClusterInfo(Models\DescribeClusterInfoRequest $req) 本接口（DescribeClusterInfo）用于查询云盘版实例信息。
  * @method Models\DescribeCpuExpandStrategyResponse DescribeCpuExpandStrategy(Models\DescribeCpuExpandStrategyRequest $req) DescribeCpuExpandStrategy
 
 通过该 API 可以查询实例的 CPU 弹性扩容策略

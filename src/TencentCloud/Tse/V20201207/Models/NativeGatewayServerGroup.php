@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDefaultWeight(integer $DefaultWeight) 设置分组默认权重
  * @method integer getElasticNumber() 获取弹性节点
  * @method void setElasticNumber(integer $ElasticNumber) 设置弹性节点
+ * @method boolean getSupportTOA() 获取是否支持TOA
+ * @method void setSupportTOA(boolean $SupportTOA) 设置是否支持TOA
+ * @method boolean getSupportIPV6() 获取是否支持IPV6
+ * @method void setSupportIPV6(boolean $SupportIPV6) 设置是否支持IPV6
  */
 class NativeGatewayServerGroup extends AbstractModel
 {
@@ -128,6 +132,16 @@ class NativeGatewayServerGroup extends AbstractModel
     public $ElasticNumber;
 
     /**
+     * @var boolean 是否支持TOA
+     */
+    public $SupportTOA;
+
+    /**
+     * @var boolean 是否支持IPV6
+     */
+    public $SupportIPV6;
+
+    /**
      * @param string $GroupId 云原生网关分组唯一id
      * @param string $Name 分组名
      * @param string $Description 描述信息
@@ -144,6 +158,8 @@ class NativeGatewayServerGroup extends AbstractModel
      * @param string $SubnetIds 子网id
      * @param integer $DefaultWeight 分组默认权重
      * @param integer $ElasticNumber 弹性节点
+     * @param boolean $SupportTOA 是否支持TOA
+     * @param boolean $SupportIPV6 是否支持IPV6
      */
     function __construct()
     {
@@ -214,6 +230,14 @@ class NativeGatewayServerGroup extends AbstractModel
 
         if (array_key_exists("ElasticNumber",$param) and $param["ElasticNumber"] !== null) {
             $this->ElasticNumber = $param["ElasticNumber"];
+        }
+
+        if (array_key_exists("SupportTOA",$param) and $param["SupportTOA"] !== null) {
+            $this->SupportTOA = $param["SupportTOA"];
+        }
+
+        if (array_key_exists("SupportIPV6",$param) and $param["SupportIPV6"] !== null) {
+            $this->SupportIPV6 = $param["SupportIPV6"];
         }
     }
 }

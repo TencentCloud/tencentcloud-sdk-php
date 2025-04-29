@@ -26,8 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAndroidAppVersion(string $AndroidAppVersion) 设置安卓应用版本 Id
  * @method string getAndroidAppVersionName() 获取安卓应用版本名称
  * @method void setAndroidAppVersionName(string $AndroidAppVersionName) 设置安卓应用版本名称
- * @method string getCommand() 获取shell 命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
- * @method void setCommand(string $Command) 设置shell 命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+ * @method string getCommand() 获取应用 shell 安装命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+ * @method void setCommand(string $Command) 设置应用 shell 安装命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+ * @method string getUninstallCommand() 获取应用 shell 卸载命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+ * @method void setUninstallCommand(string $UninstallCommand) 设置应用 shell 卸载命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
  */
 class ModifyAndroidAppVersionRequest extends AbstractModel
 {
@@ -47,15 +49,21 @@ class ModifyAndroidAppVersionRequest extends AbstractModel
     public $AndroidAppVersionName;
 
     /**
-     * @var string shell 命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+     * @var string 应用 shell 安装命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
      */
     public $Command;
+
+    /**
+     * @var string 应用 shell 卸载命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+     */
+    public $UninstallCommand;
 
     /**
      * @param string $AndroidAppId 安卓应用 Id
      * @param string $AndroidAppVersion 安卓应用版本 Id
      * @param string $AndroidAppVersionName 安卓应用版本名称
-     * @param string $Command shell 命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+     * @param string $Command 应用 shell 安装命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+     * @param string $UninstallCommand 应用 shell 卸载命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class ModifyAndroidAppVersionRequest extends AbstractModel
 
         if (array_key_exists("Command",$param) and $param["Command"] !== null) {
             $this->Command = $param["Command"];
+        }
+
+        if (array_key_exists("UninstallCommand",$param) and $param["UninstallCommand"] !== null) {
+            $this->UninstallCommand = $param["UninstallCommand"];
         }
     }
 }

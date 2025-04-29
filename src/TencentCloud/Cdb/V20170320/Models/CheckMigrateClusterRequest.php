@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVolume(integer $Volume) 设置实例硬盘大小，单位：GB
  * @method string getDiskType() 获取磁盘类型。 CLOUD_SSD: SSD云硬盘; CLOUD_HSSD: 增强型SSD云硬盘
  * @method void setDiskType(string $DiskType) 设置磁盘类型。 CLOUD_SSD: SSD云硬盘; CLOUD_HSSD: 增强型SSD云硬盘
- * @method ClusterTopology getClusterTopology() 获取集群版节点拓扑配置。
- * @method void setClusterTopology(ClusterTopology $ClusterTopology) 设置集群版节点拓扑配置。
- * @method string getDeviceType() 获取迁移实例类型。支持值包括： "CLOUD_NATIVE_CLUSTER" - 标准型集群版实例， "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 加强型集群版实例。
- * @method void setDeviceType(string $DeviceType) 设置迁移实例类型。支持值包括： "CLOUD_NATIVE_CLUSTER" - 标准型集群版实例， "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 加强型集群版实例。
+ * @method ClusterTopology getClusterTopology() 获取云盘版节点拓扑配置。
+ * @method void setClusterTopology(ClusterTopology $ClusterTopology) 设置云盘版节点拓扑配置。
+ * @method string getDeviceType() 获取迁移实例类型。支持值包括： "CLOUD_NATIVE_CLUSTER" - 标准型云盘版实例， "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 加强型云盘版实例。
+ * @method void setDeviceType(string $DeviceType) 设置迁移实例类型。支持值包括： "CLOUD_NATIVE_CLUSTER" - 标准型云盘版实例， "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 加强型云盘版实例。
  * @method array getRoInfo() 获取只读实例信息
  * @method void setRoInfo(array $RoInfo) 设置只读实例信息
  */
@@ -65,12 +65,12 @@ class CheckMigrateClusterRequest extends AbstractModel
     public $DiskType;
 
     /**
-     * @var ClusterTopology 集群版节点拓扑配置。
+     * @var ClusterTopology 云盘版节点拓扑配置。
      */
     public $ClusterTopology;
 
     /**
-     * @var string 迁移实例类型。支持值包括： "CLOUD_NATIVE_CLUSTER" - 标准型集群版实例， "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 加强型集群版实例。
+     * @var string 迁移实例类型。支持值包括： "CLOUD_NATIVE_CLUSTER" - 标准型云盘版实例， "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 加强型云盘版实例。
      */
     public $DeviceType;
 
@@ -85,8 +85,8 @@ class CheckMigrateClusterRequest extends AbstractModel
      * @param integer $Memory 实例内存大小，单位：MB
      * @param integer $Volume 实例硬盘大小，单位：GB
      * @param string $DiskType 磁盘类型。 CLOUD_SSD: SSD云硬盘; CLOUD_HSSD: 增强型SSD云硬盘
-     * @param ClusterTopology $ClusterTopology 集群版节点拓扑配置。
-     * @param string $DeviceType 迁移实例类型。支持值包括： "CLOUD_NATIVE_CLUSTER" - 标准型集群版实例， "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 加强型集群版实例。
+     * @param ClusterTopology $ClusterTopology 云盘版节点拓扑配置。
+     * @param string $DeviceType 迁移实例类型。支持值包括： "CLOUD_NATIVE_CLUSTER" - 标准型云盘版实例， "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - 加强型云盘版实例。
      * @param array $RoInfo 只读实例信息
      */
     function __construct()

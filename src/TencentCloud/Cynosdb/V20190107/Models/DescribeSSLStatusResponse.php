@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * DescribeSSLStatus返回参数结构体
  *
  * @method string getIsOpenSSL() 获取yes-开启，no-关闭
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsOpenSSL(string $IsOpenSSL) 设置yes-开启，no-关闭
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDownloadUrl() 获取证书下载地址
  * @method void setDownloadUrl(string $DownloadUrl) 设置证书下载地址
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -33,7 +31,6 @@ class DescribeSSLStatusResponse extends AbstractModel
 {
     /**
      * @var string yes-开启，no-关闭
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsOpenSSL;
 
@@ -49,7 +46,6 @@ class DescribeSSLStatusResponse extends AbstractModel
 
     /**
      * @param string $IsOpenSSL yes-开启，no-关闭
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DownloadUrl 证书下载地址
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

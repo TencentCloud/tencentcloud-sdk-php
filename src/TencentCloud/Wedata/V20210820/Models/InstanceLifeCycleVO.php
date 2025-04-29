@@ -46,9 +46,13 @@ use TencentCloud\Common\AbstractModel;
 - [8, 4, 5, 13] 表示 失败
 - [2] 表示 成功
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getLifeRoundNum() 获取生命周期编号
+ * @method integer getLifeRoundNum() 获取**实例生命周期编号，标识实例的某一次执行**
+
+例如：周期实例第一次运行的编号为0，用户后期又重跑了该实例，第二次执行的编号为1
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLifeRoundNum(integer $LifeRoundNum) 设置生命周期编号
+ * @method void setLifeRoundNum(integer $LifeRoundNum) 设置**实例生命周期编号，标识实例的某一次执行**
+
+例如：周期实例第一次运行的编号为0，用户后期又重跑了该实例，第二次执行的编号为1
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRunType() 获取**实例运行触发类型**
 
@@ -91,8 +95,12 @@ use TencentCloud\Common\AbstractModel;
 该文件内容为当次执行实例运行使用的代码，仅部分任务支持
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExecutionJobId() 获取**下发执行ID**
+统一执行平台下发执行到新版执行机标识某次执行的唯一ID，存量老执行机下发执行没有此ID。
+如果不知道执行机版本是否支持此ID，可以联系腾讯云运维同学
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExecutionJobId(string $ExecutionJobId) 设置**下发执行ID**
+统一执行平台下发执行到新版执行机标识某次执行的唯一ID，存量老执行机下发执行没有此ID。
+如果不知道执行机版本是否支持此ID，可以联系腾讯云运维同学
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBrokerIp() 获取日志所在执行节点
 注意：此字段可能返回 null，表示取不到有效值。
@@ -141,7 +149,9 @@ class InstanceLifeCycleVO extends AbstractModel
     public $InstanceState;
 
     /**
-     * @var integer 生命周期编号
+     * @var integer **实例生命周期编号，标识实例的某一次执行**
+
+例如：周期实例第一次运行的编号为0，用户后期又重跑了该实例，第二次执行的编号为1
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LifeRoundNum;
@@ -184,6 +194,8 @@ class InstanceLifeCycleVO extends AbstractModel
 
     /**
      * @var string **下发执行ID**
+统一执行平台下发执行到新版执行机标识某次执行的唯一ID，存量老执行机下发执行没有此ID。
+如果不知道执行机版本是否支持此ID，可以联系腾讯云运维同学
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecutionJobId;
@@ -229,7 +241,9 @@ class InstanceLifeCycleVO extends AbstractModel
 - [8, 4, 5, 13] 表示 失败
 - [2] 表示 成功
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $LifeRoundNum 生命周期编号
+     * @param integer $LifeRoundNum **实例生命周期编号，标识实例的某一次执行**
+
+例如：周期实例第一次运行的编号为0，用户后期又重跑了该实例，第二次执行的编号为1
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RunType **实例运行触发类型**
 
@@ -252,6 +266,8 @@ class InstanceLifeCycleVO extends AbstractModel
 该文件内容为当次执行实例运行使用的代码，仅部分任务支持
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExecutionJobId **下发执行ID**
+统一执行平台下发执行到新版执行机标识某次执行的唯一ID，存量老执行机下发执行没有此ID。
+如果不知道执行机版本是否支持此ID，可以联系腾讯云运维同学
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BrokerIp 日志所在执行节点
 注意：此字段可能返回 null，表示取不到有效值。

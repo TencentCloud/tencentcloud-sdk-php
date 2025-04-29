@@ -22,13 +22,13 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProjectId() 获取**项目ID**
  * @method void setProjectId(string $ProjectId) 设置**项目ID**
- * @method string getScheduleTimeFrom() 获取**实例计划调度时间**
+ * @method string getScheduleTimeFrom() 获取**实例计划调度时间过滤条件**
 过滤起始时间，时间格式为 yyyy-MM-dd HH:mm:ss
- * @method void setScheduleTimeFrom(string $ScheduleTimeFrom) 设置**实例计划调度时间**
+ * @method void setScheduleTimeFrom(string $ScheduleTimeFrom) 设置**实例计划调度时间过滤条件**
 过滤起始时间，时间格式为 yyyy-MM-dd HH:mm:ss
- * @method string getScheduleTimeTo() 获取**实例计划调度时间**
+ * @method string getScheduleTimeTo() 获取**实例计划调度时间过滤条件**
 过滤截止时间，时间格式为 yyyy-MM-dd HH:mm:ss
- * @method void setScheduleTimeTo(string $ScheduleTimeTo) 设置**实例计划调度时间**
+ * @method void setScheduleTimeTo(string $ScheduleTimeTo) 设置**实例计划调度时间过滤条件**
 过滤截止时间，时间格式为 yyyy-MM-dd HH:mm:ss
  * @method integer getPageNumber() 获取**页码，整型**
 配合pageSize使用且不能小于1， 默认值1
@@ -40,16 +40,16 @@ use TencentCloud\Common\AbstractModel;
 配合pageNumber使用且不能大于200, 默认值 10
  * @method string getSortColumn() 获取**查询结果排序字段**
 
-- SCHEDULE_DATE 表示 计划调度时间
-- START_TIME 表示 实例开始执行时间
-- END_TIME 表示 实例结束执行时间
-- COST_TIME 表示 实例执行时长
+- SCHEDULE_DATE 表示 根据计划调度时间排序
+- START_TIME 表示 根据实例开始执行时间排序
+- END_TIME 表示 根据实例结束执行时间排序
+- COST_TIME 表示 根据实例执行时长排序
  * @method void setSortColumn(string $SortColumn) 设置**查询结果排序字段**
 
-- SCHEDULE_DATE 表示 计划调度时间
-- START_TIME 表示 实例开始执行时间
-- END_TIME 表示 实例结束执行时间
-- COST_TIME 表示 实例执行时长
+- SCHEDULE_DATE 表示 根据计划调度时间排序
+- START_TIME 表示 根据实例开始执行时间排序
+- END_TIME 表示 根据实例结束执行时间排序
+- COST_TIME 表示 根据实例执行时长排序
  * @method string getSortType() 获取**实例排序方式**
 
 - ASC 
@@ -146,13 +146,13 @@ use TencentCloud\Common\AbstractModel;
 支持过滤多个，条件间为 或 的过滤关系
 可以通过接口 DescribeNormalSchedulerExecutorGroups 获取项目下的所有调度资源组列表
 可以通过接口 DescribeNormalIntegrationExecutorGroups 获取项目下的所有集成资源组列表
- * @method string getStartTimeFrom() 获取**开始时间**
+ * @method string getStartTimeFrom() 获取**实例执行开始时间过滤条件**
 过滤起始时间，时间格式为 yyyy-MM-dd HH:mm:ss
- * @method void setStartTimeFrom(string $StartTimeFrom) 设置**开始时间**
+ * @method void setStartTimeFrom(string $StartTimeFrom) 设置**实例执行开始时间过滤条件**
 过滤起始时间，时间格式为 yyyy-MM-dd HH:mm:ss
- * @method string getStartTimeTo() 获取**开始时间**
+ * @method string getStartTimeTo() 获取**实例执行开始时间过滤条件**
 过滤截止时间，时间格式为 yyyy-MM-dd HH:mm:ss
- * @method void setStartTimeTo(string $StartTimeTo) 设置**开始时间**
+ * @method void setStartTimeTo(string $StartTimeTo) 设置**实例执行开始时间过滤条件**
 过滤截止时间，时间格式为 yyyy-MM-dd HH:mm:ss
  * @method string getScheduleTimeZone() 获取**时区**
 timeZone, 默认UTC+8
@@ -167,13 +167,13 @@ class ListInstancesRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var string **实例计划调度时间**
+     * @var string **实例计划调度时间过滤条件**
 过滤起始时间，时间格式为 yyyy-MM-dd HH:mm:ss
      */
     public $ScheduleTimeFrom;
 
     /**
-     * @var string **实例计划调度时间**
+     * @var string **实例计划调度时间过滤条件**
 过滤截止时间，时间格式为 yyyy-MM-dd HH:mm:ss
      */
     public $ScheduleTimeTo;
@@ -193,10 +193,10 @@ class ListInstancesRequest extends AbstractModel
     /**
      * @var string **查询结果排序字段**
 
-- SCHEDULE_DATE 表示 计划调度时间
-- START_TIME 表示 实例开始执行时间
-- END_TIME 表示 实例结束执行时间
-- COST_TIME 表示 实例执行时长
+- SCHEDULE_DATE 表示 根据计划调度时间排序
+- START_TIME 表示 根据实例开始执行时间排序
+- END_TIME 表示 根据实例结束执行时间排序
+- COST_TIME 表示 根据实例执行时长排序
      */
     public $SortColumn;
 
@@ -289,13 +289,13 @@ class ListInstancesRequest extends AbstractModel
     public $ExecutorGroupIdList;
 
     /**
-     * @var string **开始时间**
+     * @var string **实例执行开始时间过滤条件**
 过滤起始时间，时间格式为 yyyy-MM-dd HH:mm:ss
      */
     public $StartTimeFrom;
 
     /**
-     * @var string **开始时间**
+     * @var string **实例执行开始时间过滤条件**
 过滤截止时间，时间格式为 yyyy-MM-dd HH:mm:ss
      */
     public $StartTimeTo;
@@ -308,9 +308,9 @@ timeZone, 默认UTC+8
 
     /**
      * @param string $ProjectId **项目ID**
-     * @param string $ScheduleTimeFrom **实例计划调度时间**
+     * @param string $ScheduleTimeFrom **实例计划调度时间过滤条件**
 过滤起始时间，时间格式为 yyyy-MM-dd HH:mm:ss
-     * @param string $ScheduleTimeTo **实例计划调度时间**
+     * @param string $ScheduleTimeTo **实例计划调度时间过滤条件**
 过滤截止时间，时间格式为 yyyy-MM-dd HH:mm:ss
      * @param integer $PageNumber **页码，整型**
 配合pageSize使用且不能小于1， 默认值1
@@ -318,10 +318,10 @@ timeZone, 默认UTC+8
 配合pageNumber使用且不能大于200, 默认值 10
      * @param string $SortColumn **查询结果排序字段**
 
-- SCHEDULE_DATE 表示 计划调度时间
-- START_TIME 表示 实例开始执行时间
-- END_TIME 表示 实例结束执行时间
-- COST_TIME 表示 实例执行时长
+- SCHEDULE_DATE 表示 根据计划调度时间排序
+- START_TIME 表示 根据实例开始执行时间排序
+- END_TIME 表示 根据实例结束执行时间排序
+- COST_TIME 表示 根据实例执行时长排序
      * @param string $SortType **实例排序方式**
 
 - ASC 
@@ -370,9 +370,9 @@ timeZone, 默认UTC+8
 支持过滤多个，条件间为 或 的过滤关系
 可以通过接口 DescribeNormalSchedulerExecutorGroups 获取项目下的所有调度资源组列表
 可以通过接口 DescribeNormalIntegrationExecutorGroups 获取项目下的所有集成资源组列表
-     * @param string $StartTimeFrom **开始时间**
+     * @param string $StartTimeFrom **实例执行开始时间过滤条件**
 过滤起始时间，时间格式为 yyyy-MM-dd HH:mm:ss
-     * @param string $StartTimeTo **开始时间**
+     * @param string $StartTimeTo **实例执行开始时间过滤条件**
 过滤截止时间，时间格式为 yyyy-MM-dd HH:mm:ss
      * @param string $ScheduleTimeZone **时区**
 timeZone, 默认UTC+8

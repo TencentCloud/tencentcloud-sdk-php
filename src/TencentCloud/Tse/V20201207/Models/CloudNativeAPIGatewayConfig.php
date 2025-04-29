@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSlaveZoneName(string $SlaveZoneName) 设置备可用区名称
  * @method string getNetworkId() 获取网络 id
  * @method void setNetworkId(string $NetworkId) 设置网络 id
+ * @method boolean getIPV6FullChain() 获取是否为新 ipv6 CLB
+ * @method void setIPV6FullChain(boolean $IPV6FullChain) 设置是否为新 ipv6 CLB
  */
 class CloudNativeAPIGatewayConfig extends AbstractModel
 {
@@ -174,6 +176,11 @@ class CloudNativeAPIGatewayConfig extends AbstractModel
     public $NetworkId;
 
     /**
+     * @var boolean 是否为新 ipv6 CLB
+     */
+    public $IPV6FullChain;
+
+    /**
      * @param string $ConsoleType 控制台类型。
      * @param string $HttpUrl HTTP链接地址。
      * @param string $HttpsUrl HTTPS链接地址。
@@ -196,6 +203,7 @@ class CloudNativeAPIGatewayConfig extends AbstractModel
      * @param string $MasterZoneName 主可用区名称
      * @param string $SlaveZoneName 备可用区名称
      * @param string $NetworkId 网络 id
+     * @param boolean $IPV6FullChain 是否为新 ipv6 CLB
      */
     function __construct()
     {
@@ -293,6 +301,10 @@ class CloudNativeAPIGatewayConfig extends AbstractModel
 
         if (array_key_exists("NetworkId",$param) and $param["NetworkId"] !== null) {
             $this->NetworkId = $param["NetworkId"];
+        }
+
+        if (array_key_exists("IPV6FullChain",$param) and $param["IPV6FullChain"] !== null) {
+            $this->IPV6FullChain = $param["IPV6FullChain"];
         }
     }
 }

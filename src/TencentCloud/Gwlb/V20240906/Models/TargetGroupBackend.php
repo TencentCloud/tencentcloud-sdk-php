@@ -39,13 +39,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRegisteredTime() 获取后端服务被绑定的时间
  * @method void setRegisteredTime(string $RegisteredTime) 设置后端服务被绑定的时间
  * @method string getEniId() 获取弹性网卡唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEniId(string $EniId) 设置弹性网卡唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getZoneId() 获取后端服务的可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneId(integer $ZoneId) 设置后端服务的可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TargetGroupBackend extends AbstractModel
 {
@@ -96,13 +92,11 @@ class TargetGroupBackend extends AbstractModel
 
     /**
      * @var string 弹性网卡唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EniId;
 
     /**
      * @var integer 后端服务的可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneId;
 
@@ -117,9 +111,7 @@ class TargetGroupBackend extends AbstractModel
      * @param string $InstanceName 后端服务的实例名称
      * @param string $RegisteredTime 后端服务被绑定的时间
      * @param string $EniId 弹性网卡唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ZoneId 后端服务的可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

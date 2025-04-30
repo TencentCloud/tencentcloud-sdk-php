@@ -70,6 +70,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceMarketOptions(InstanceMarketOptionsRequest $InstanceMarketOptions) 设置实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费但没有传递该参数时，默认按当前固定折扣价格出价。
  * @method string getUserData() 获取提供给实例使用的用户数据，需要以 base64 方式编码，支持的最大数据大小为 16KB。关于获取此参数的详细介绍，请参阅[Windows](https://cloud.tencent.com/document/product/213/17526)和[Linux](https://cloud.tencent.com/document/product/213/17525)启动时运行命令。
  * @method void setUserData(string $UserData) 设置提供给实例使用的用户数据，需要以 base64 方式编码，支持的最大数据大小为 16KB。关于获取此参数的详细介绍，请参阅[Windows](https://cloud.tencent.com/document/product/213/17526)和[Linux](https://cloud.tencent.com/document/product/213/17525)启动时运行命令。
+ * @method Metadata getMetadata() 获取自定义metadata，支持创建 CVM 时添加自定义元数据键值对。
+**注：内测中**。
+ * @method void setMetadata(Metadata $Metadata) 设置自定义metadata，支持创建 CVM 时添加自定义元数据键值对。
+**注：内测中**。
  * @method boolean getDryRun() 获取是否只预检此次请求。
 true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制和云服务器库存。
 如果检查不通过，则返回对应错误码；
@@ -207,6 +211,12 @@ class RunInstancesRequest extends AbstractModel
     public $UserData;
 
     /**
+     * @var Metadata 自定义metadata，支持创建 CVM 时添加自定义元数据键值对。
+**注：内测中**。
+     */
+    public $Metadata;
+
+    /**
      * @var boolean 是否只预检此次请求。
 true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制和云服务器库存。
 如果检查不通过，则返回对应错误码；
@@ -276,6 +286,8 @@ false（默认）：发送正常请求，通过检查后直接创建实例
      * @param array $TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到相应的云服务器、云硬盘实例。
      * @param InstanceMarketOptionsRequest $InstanceMarketOptions 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费但没有传递该参数时，默认按当前固定折扣价格出价。
      * @param string $UserData 提供给实例使用的用户数据，需要以 base64 方式编码，支持的最大数据大小为 16KB。关于获取此参数的详细介绍，请参阅[Windows](https://cloud.tencent.com/document/product/213/17526)和[Linux](https://cloud.tencent.com/document/product/213/17525)启动时运行命令。
+     * @param Metadata $Metadata 自定义metadata，支持创建 CVM 时添加自定义元数据键值对。
+**注：内测中**。
      * @param boolean $DryRun 是否只预检此次请求。
 true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制和云服务器库存。
 如果检查不通过，则返回对应错误码；
@@ -403,6 +415,11 @@ false（默认）：发送正常请求，通过检查后直接创建实例
 
         if (array_key_exists("UserData",$param) and $param["UserData"] !== null) {
             $this->UserData = $param["UserData"];
+        }
+
+        if (array_key_exists("Metadata",$param) and $param["Metadata"] !== null) {
+            $this->Metadata = new Metadata();
+            $this->Metadata->deserialize($param["Metadata"]);
         }
 
         if (array_key_exists("DryRun",$param) and $param["DryRun"] !== null) {

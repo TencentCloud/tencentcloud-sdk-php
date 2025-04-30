@@ -146,6 +146,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimingResource(boolean $TimingResource) 设置是否是定时销毁资源
  * @method string getTkeClusterId() 获取资源类型（HardwareResourceType）为pod时，对应的TKE集群id
  * @method void setTkeClusterId(string $TkeClusterId) 设置资源类型（HardwareResourceType）为pod时，对应的TKE集群id
+ * @method array getConfigurableServices() 获取新挂磁盘时可支持配置的服务名称列表
+ * @method void setConfigurableServices(array $ConfigurableServices) 设置新挂磁盘时可支持配置的服务名称列表
  */
 class NodeHardwareInfo extends AbstractModel
 {
@@ -437,6 +439,11 @@ class NodeHardwareInfo extends AbstractModel
     public $TkeClusterId;
 
     /**
+     * @var array 新挂磁盘时可支持配置的服务名称列表
+     */
+    public $ConfigurableServices;
+
+    /**
      * @param integer $AppId 用户APPID
      * @param string $SerialNo 序列号
      * @param string $OrderNo 机器实例ID
@@ -500,6 +507,7 @@ class NodeHardwareInfo extends AbstractModel
      * @param string $SharedClusterIdDesc 共享集群id描述
      * @param boolean $TimingResource 是否是定时销毁资源
      * @param string $TkeClusterId 资源类型（HardwareResourceType）为pod时，对应的TKE集群id
+     * @param array $ConfigurableServices 新挂磁盘时可支持配置的服务名称列表
      */
     function __construct()
     {
@@ -748,6 +756,10 @@ class NodeHardwareInfo extends AbstractModel
 
         if (array_key_exists("TkeClusterId",$param) and $param["TkeClusterId"] !== null) {
             $this->TkeClusterId = $param["TkeClusterId"];
+        }
+
+        if (array_key_exists("ConfigurableServices",$param) and $param["ConfigurableServices"] !== null) {
+            $this->ConfigurableServices = $param["ConfigurableServices"];
         }
     }
 }

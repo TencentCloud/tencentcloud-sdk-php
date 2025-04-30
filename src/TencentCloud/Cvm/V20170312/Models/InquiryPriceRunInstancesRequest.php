@@ -62,6 +62,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagSpecification(array $TagSpecification) 设置标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到云服务器实例。
  * @method InstanceMarketOptionsRequest getInstanceMarketOptions() 获取实例的市场相关选项，如竞价实例相关参数
  * @method void setInstanceMarketOptions(InstanceMarketOptionsRequest $InstanceMarketOptions) 设置实例的市场相关选项，如竞价实例相关参数
+ * @method Metadata getMetadata() 获取自定义metadata，支持创建 CVM 时添加自定义元数据键值对。
+
+**注：内测中**。
+ * @method void setMetadata(Metadata $Metadata) 设置自定义metadata，支持创建 CVM 时添加自定义元数据键值对。
+
+**注：内测中**。
  * @method string getHpcClusterId() 获取高性能计算集群ID。
  * @method void setHpcClusterId(string $HpcClusterId) 设置高性能计算集群ID。
  * @method CpuTopology getCpuTopology() 获取描述了实例CPU拓扑结构的相关信息。若不指定该参数，则按系统资源情况决定。
@@ -165,6 +171,13 @@ class InquiryPriceRunInstancesRequest extends AbstractModel
     public $InstanceMarketOptions;
 
     /**
+     * @var Metadata 自定义metadata，支持创建 CVM 时添加自定义元数据键值对。
+
+**注：内测中**。
+     */
+    public $Metadata;
+
+    /**
      * @var string 高性能计算集群ID。
      */
     public $HpcClusterId;
@@ -201,6 +214,9 @@ class InquiryPriceRunInstancesRequest extends AbstractModel
      * @param string $HostName 云服务器的主机名。<br><li>点号（.）和短横线（-）不能作为 HostName 的首尾字符，不能连续使用。</li><br><li>Windows 实例：主机名字符长度为[2, 15]，允许字母（不限制大小写）、数字和短横线（-）组成，不支持点号（.），不能全是数字。</li><br><li>其他类型（Linux 等）实例：主机名字符长度为[2, 30]，允许支持多个点号，点之间为一段，每段允许字母（不限制大小写）、数字和短横线（-）组成。</li>
      * @param array $TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到云服务器实例。
      * @param InstanceMarketOptionsRequest $InstanceMarketOptions 实例的市场相关选项，如竞价实例相关参数
+     * @param Metadata $Metadata 自定义metadata，支持创建 CVM 时添加自定义元数据键值对。
+
+**注：内测中**。
      * @param string $HpcClusterId 高性能计算集群ID。
      * @param CpuTopology $CpuTopology 描述了实例CPU拓扑结构的相关信息。若不指定该参数，则按系统资源情况决定。
      * @param LaunchTemplate $LaunchTemplate 实例启动模板。
@@ -306,6 +322,11 @@ class InquiryPriceRunInstancesRequest extends AbstractModel
         if (array_key_exists("InstanceMarketOptions",$param) and $param["InstanceMarketOptions"] !== null) {
             $this->InstanceMarketOptions = new InstanceMarketOptionsRequest();
             $this->InstanceMarketOptions->deserialize($param["InstanceMarketOptions"]);
+        }
+
+        if (array_key_exists("Metadata",$param) and $param["Metadata"] !== null) {
+            $this->Metadata = new Metadata();
+            $this->Metadata->deserialize($param["Metadata"]);
         }
 
         if (array_key_exists("HpcClusterId",$param) and $param["HpcClusterId"] !== null) {

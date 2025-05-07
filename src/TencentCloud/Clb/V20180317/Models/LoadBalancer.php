@@ -72,8 +72,8 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
  * @method void setAnycastZone(string $AnycastZone) 设置anycast负载均衡的发布域，对于非anycast的负载均衡，此字段返回为空字符串
  * @method string getAddressIPVersion() 获取IP版本，ipv4 | ipv6
  * @method void setAddressIPVersion(string $AddressIPVersion) 设置IP版本，ipv4 | ipv6
- * @method integer getNumericalVpcId() 获取数值形式的私有网络 ID。
- * @method void setNumericalVpcId(integer $NumericalVpcId) 设置数值形式的私有网络 ID。
+ * @method integer getNumericalVpcId() 获取数值形式的私有网络 ID，可以通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
+ * @method void setNumericalVpcId(integer $NumericalVpcId) 设置数值形式的私有网络 ID，可以通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
  * @method string getVipIsp() 获取负载均衡IP地址所属的运营商。
 
 - BGP :  BGP（多线）
@@ -355,7 +355,7 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
     public $AddressIPVersion;
 
     /**
-     * @var integer 数值形式的私有网络 ID。
+     * @var integer 数值形式的私有网络 ID，可以通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
      */
     public $NumericalVpcId;
 
@@ -609,7 +609,7 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
      * @param TargetRegionInfo $TargetRegionInfo 负载均衡实例绑定的后端设备的基本信息
      * @param string $AnycastZone anycast负载均衡的发布域，对于非anycast的负载均衡，此字段返回为空字符串
      * @param string $AddressIPVersion IP版本，ipv4 | ipv6
-     * @param integer $NumericalVpcId 数值形式的私有网络 ID。
+     * @param integer $NumericalVpcId 数值形式的私有网络 ID，可以通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
      * @param string $VipIsp 负载均衡IP地址所属的运营商。
 
 - BGP :  BGP（多线）

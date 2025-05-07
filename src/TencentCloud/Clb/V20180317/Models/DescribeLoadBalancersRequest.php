@@ -62,16 +62,16 @@ OPEN：公网属性， INTERNAL：内网属性。
  * @method void setOrderType(integer $OrderType) 设置1：倒序，0：顺序，默认为1，按照创建时间倒序。
  * @method string getSearchKey() 获取模糊搜索字段，模糊匹配负载均衡实例的名称、域名、负载均衡实例的 VIP 地址，负载均衡实例ID。
  * @method void setSearchKey(string $SearchKey) 设置模糊搜索字段，模糊匹配负载均衡实例的名称、域名、负载均衡实例的 VIP 地址，负载均衡实例ID。
- * @method integer getProjectId() 获取负载均衡实例所属的项目 ID，可以通过[DescribeProject](https://cloud.tencent.com/document/api/651/78725) 接口获取，不传默认所有项目。
- * @method void setProjectId(integer $ProjectId) 设置负载均衡实例所属的项目 ID，可以通过[DescribeProject](https://cloud.tencent.com/document/api/651/78725) 接口获取，不传默认所有项目。
+ * @method integer getProjectId() 获取负载均衡实例所属的项目 ID，可以通过[DescribeProject](https://cloud.tencent.com/document/api/651/78725)接口获取，不传默认所有项目。
+ * @method void setProjectId(integer $ProjectId) 设置负载均衡实例所属的项目 ID，可以通过[DescribeProject](https://cloud.tencent.com/document/api/651/78725)接口获取，不传默认所有项目。
  * @method integer getWithRs() 获取负载均衡是否绑定后端服务，0：没有绑定后端服务，1：绑定后端服务，-1：查询全部。
  * @method void setWithRs(integer $WithRs) 设置负载均衡是否绑定后端服务，0：没有绑定后端服务，1：绑定后端服务，-1：查询全部。
- * @method string getVpcId() 获取负载均衡实例所属私有网络唯一ID，如 vpc-bhqkbhdx，
+ * @method string getVpcId() 获取负载均衡实例所属私有网络唯一ID，如 vpc-bhqkbhdx，可以通过[DescribeVpcs](https://cloud.tencent.com/document/api/215/15778)接口获取。
 查找基础网络类型的负载均衡可传入'0'。
- * @method void setVpcId(string $VpcId) 设置负载均衡实例所属私有网络唯一ID，如 vpc-bhqkbhdx，
+ * @method void setVpcId(string $VpcId) 设置负载均衡实例所属私有网络唯一ID，如 vpc-bhqkbhdx，可以通过[DescribeVpcs](https://cloud.tencent.com/document/api/215/15778)接口获取。
 查找基础网络类型的负载均衡可传入'0'。
- * @method string getSecurityGroup() 获取安全组ID，如 sg-m1cc****。
- * @method void setSecurityGroup(string $SecurityGroup) 设置安全组ID，如 sg-m1cc****。
+ * @method string getSecurityGroup() 获取安全组ID，如 sg-m1cc****，可以通过接口[DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808)获取。
+ * @method void setSecurityGroup(string $SecurityGroup) 设置安全组ID，如 sg-m1cc****，可以通过接口[DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808)获取。
  * @method string getMasterZone() 获取主可用区ID，如 ："100001" （对应的是广州一区）。可通过[DescribeZones](https://cloud.tencent.com/document/product/213/15707)获取可用区列表。
  * @method void setMasterZone(string $MasterZone) 设置主可用区ID，如 ："100001" （对应的是广州一区）。可通过[DescribeZones](https://cloud.tencent.com/document/product/213/15707)获取可用区列表。
  * @method array getFilters() 获取每次请求的`Filters`的上限为10，`Filter.Values`的上限为100。<br/>`Filter.Name`和`Filter.Values`皆为必填项。详细的过滤条件如下：
@@ -94,10 +94,12 @@ OPEN：公网属性， INTERNAL：内网属性。
 按照【CLB 标签的键】进行过滤，例如：tag-key。
 类型：String
 必选：否
+获取方式：[DescribeTags](https://cloud.tencent.com/document/api/651/35316)
 - tag:tag-key
 按照【CLB标签键值】进行过滤，例如：tag-test。
 类型：String
 必选：否
+获取方式：[DescribeTagKeys](https://cloud.tencent.com/document/api/651/35318)
 - function-name
 按照【后端绑定SCF云函数的函数名称】进行过滤，例如：helloworld-1744958255。
 类型：String
@@ -140,10 +142,12 @@ OPEN：公网属性， INTERNAL：内网属性。
 按照【CLB 标签的键】进行过滤，例如：tag-key。
 类型：String
 必选：否
+获取方式：[DescribeTags](https://cloud.tencent.com/document/api/651/35316)
 - tag:tag-key
 按照【CLB标签键值】进行过滤，例如：tag-test。
 类型：String
 必选：否
+获取方式：[DescribeTagKeys](https://cloud.tencent.com/document/api/651/35318)
 - function-name
 按照【后端绑定SCF云函数的函数名称】进行过滤，例如：helloworld-1744958255。
 类型：String
@@ -247,7 +251,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $SearchKey;
 
     /**
-     * @var integer 负载均衡实例所属的项目 ID，可以通过[DescribeProject](https://cloud.tencent.com/document/api/651/78725) 接口获取，不传默认所有项目。
+     * @var integer 负载均衡实例所属的项目 ID，可以通过[DescribeProject](https://cloud.tencent.com/document/api/651/78725)接口获取，不传默认所有项目。
      */
     public $ProjectId;
 
@@ -257,13 +261,13 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $WithRs;
 
     /**
-     * @var string 负载均衡实例所属私有网络唯一ID，如 vpc-bhqkbhdx，
+     * @var string 负载均衡实例所属私有网络唯一ID，如 vpc-bhqkbhdx，可以通过[DescribeVpcs](https://cloud.tencent.com/document/api/215/15778)接口获取。
 查找基础网络类型的负载均衡可传入'0'。
      */
     public $VpcId;
 
     /**
-     * @var string 安全组ID，如 sg-m1cc****。
+     * @var string 安全组ID，如 sg-m1cc****，可以通过接口[DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808)获取。
      */
     public $SecurityGroup;
 
@@ -293,10 +297,12 @@ OPEN：公网属性， INTERNAL：内网属性。
 按照【CLB 标签的键】进行过滤，例如：tag-key。
 类型：String
 必选：否
+获取方式：[DescribeTags](https://cloud.tencent.com/document/api/651/35316)
 - tag:tag-key
 按照【CLB标签键值】进行过滤，例如：tag-test。
 类型：String
 必选：否
+获取方式：[DescribeTagKeys](https://cloud.tencent.com/document/api/651/35318)
 - function-name
 按照【后端绑定SCF云函数的函数名称】进行过滤，例如：helloworld-1744958255。
 类型：String
@@ -350,11 +356,11 @@ OPEN：公网属性， INTERNAL：内网属性。
 
      * @param integer $OrderType 1：倒序，0：顺序，默认为1，按照创建时间倒序。
      * @param string $SearchKey 模糊搜索字段，模糊匹配负载均衡实例的名称、域名、负载均衡实例的 VIP 地址，负载均衡实例ID。
-     * @param integer $ProjectId 负载均衡实例所属的项目 ID，可以通过[DescribeProject](https://cloud.tencent.com/document/api/651/78725) 接口获取，不传默认所有项目。
+     * @param integer $ProjectId 负载均衡实例所属的项目 ID，可以通过[DescribeProject](https://cloud.tencent.com/document/api/651/78725)接口获取，不传默认所有项目。
      * @param integer $WithRs 负载均衡是否绑定后端服务，0：没有绑定后端服务，1：绑定后端服务，-1：查询全部。
-     * @param string $VpcId 负载均衡实例所属私有网络唯一ID，如 vpc-bhqkbhdx，
+     * @param string $VpcId 负载均衡实例所属私有网络唯一ID，如 vpc-bhqkbhdx，可以通过[DescribeVpcs](https://cloud.tencent.com/document/api/215/15778)接口获取。
 查找基础网络类型的负载均衡可传入'0'。
-     * @param string $SecurityGroup 安全组ID，如 sg-m1cc****。
+     * @param string $SecurityGroup 安全组ID，如 sg-m1cc****，可以通过接口[DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808)获取。
      * @param string $MasterZone 主可用区ID，如 ："100001" （对应的是广州一区）。可通过[DescribeZones](https://cloud.tencent.com/document/product/213/15707)获取可用区列表。
      * @param array $Filters 每次请求的`Filters`的上限为10，`Filter.Values`的上限为100。<br/>`Filter.Name`和`Filter.Values`皆为必填项。详细的过滤条件如下：
 - charge-type
@@ -376,10 +382,12 @@ OPEN：公网属性， INTERNAL：内网属性。
 按照【CLB 标签的键】进行过滤，例如：tag-key。
 类型：String
 必选：否
+获取方式：[DescribeTags](https://cloud.tencent.com/document/api/651/35316)
 - tag:tag-key
 按照【CLB标签键值】进行过滤，例如：tag-test。
 类型：String
 必选：否
+获取方式：[DescribeTagKeys](https://cloud.tencent.com/document/api/651/35318)
 - function-name
 按照【后端绑定SCF云函数的函数名称】进行过滤，例如：helloworld-1744958255。
 类型：String

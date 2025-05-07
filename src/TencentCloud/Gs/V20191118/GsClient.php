@@ -63,6 +63,10 @@ use TencentCloud\Gs\V20191118\Models as Models;
  * @method Models\ModifyAndroidInstancesLabelsResponse ModifyAndroidInstancesLabels(Models\ModifyAndroidInstancesLabelsRequest $req) 修改安卓实例分辨率。需要注意的是该接口可能导致正在运行的应用出现闪退，所以建议在实例维护时期才进行调用。
  * @method Models\ModifyAndroidInstancesResolutionResponse ModifyAndroidInstancesResolution(Models\ModifyAndroidInstancesResolutionRequest $req) 修改安卓实例分辨率。需要注意的是该接口需要重启才能生效。
  * @method Models\ModifyAndroidInstancesUserIdResponse ModifyAndroidInstancesUserId(Models\ModifyAndroidInstancesUserIdRequest $req) 批量修改安卓实例的用户ID
+ * @method Models\RebootAndroidInstanceHostsResponse RebootAndroidInstanceHosts(Models\RebootAndroidInstanceHostsRequest $req) 重启安卓实例宿主机。请注意：
+
+- 当前每 15 分钟只能重启一次
+- 一个宿主机可能有多个云手机实例，重启宿主机会影响运行在上面的所有实例，请确保该宿主机上的所有云手机实例未投入业务使用
  * @method Models\RebootAndroidInstancesResponse RebootAndroidInstances(Models\RebootAndroidInstancesRequest $req) 重启安卓实例
  * @method Models\ResetAndroidInstancesResponse ResetAndroidInstances(Models\ResetAndroidInstancesRequest $req) 重置安卓实例
  * @method Models\RestartAndroidInstancesAppResponse RestartAndroidInstancesApp(Models\RestartAndroidInstancesAppRequest $req) 启动安卓实例应用

@@ -22,7 +22,9 @@ use TencentCloud\Common\AbstractModel;
 注意，自定义探测相关参数 目前只有少量区域灰度支持。
  *
  * @method integer getHealthSwitch() 获取是否开启健康检查：1（开启）、0（关闭）。
+默认为开启。
  * @method void setHealthSwitch(integer $HealthSwitch) 设置是否开启健康检查：1（开启）、0（关闭）。
+默认为开启。
  * @method integer getTimeOut() 获取健康检查的响应超时时间，可选值：2~60，默认值：2，单位：秒。响应超时时间要小于检查间隔时间。
  * @method void setTimeOut(integer $TimeOut) 设置健康检查的响应超时时间，可选值：2~60，默认值：2，单位：秒。响应超时时间要小于检查间隔时间。
  * @method integer getIntervalTime() 获取健康检查探测间隔时间，默认值：5，IPv4 CLB实例的取值范围为：2-300，IPv6 CLB 实例的取值范围为：5-300。单位：秒。
@@ -84,6 +86,7 @@ class HealthCheck extends AbstractModel
 {
     /**
      * @var integer 是否开启健康检查：1（开启）、0（关闭）。
+默认为开启。
      */
     public $HealthSwitch;
 
@@ -181,6 +184,7 @@ class HealthCheck extends AbstractModel
 
     /**
      * @param integer $HealthSwitch 是否开启健康检查：1（开启）、0（关闭）。
+默认为开启。
      * @param integer $TimeOut 健康检查的响应超时时间，可选值：2~60，默认值：2，单位：秒。响应超时时间要小于检查间隔时间。
      * @param integer $IntervalTime 健康检查探测间隔时间，默认值：5，IPv4 CLB实例的取值范围为：2-300，IPv6 CLB 实例的取值范围为：5-300。单位：秒。
 说明：部分老旧 IPv4 CLB实例的取值范围为：5-300。

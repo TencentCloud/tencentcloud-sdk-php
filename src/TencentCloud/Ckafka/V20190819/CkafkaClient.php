@@ -81,6 +81,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\DescribePrometheusResponse DescribePrometheus(Models\DescribePrometheusRequest $req) 获取实例Prometheus信息
  * @method Models\DescribeRegionResponse DescribeRegion(Models\DescribeRegionRequest $req) 枚举地域,只支持广州地域
  * @method Models\DescribeRouteResponse DescribeRoute(Models\DescribeRouteRequest $req) 查看路由信息
+ * @method Models\DescribeSecurityGroupRoutesResponse DescribeSecurityGroupRoutes(Models\DescribeSecurityGroupRoutesRequest $req) 获取安全组路由信息列表
  * @method Models\DescribeTaskStatusResponse DescribeTaskStatus(Models\DescribeTaskStatusRequest $req) 查询任务状态
  * @method Models\DescribeTopicResponse DescribeTopic(Models\DescribeTopicRequest $req) 接口请求域名：https://ckafka.tencentcloudapi.com
 本接口（DescribeTopic）用于在用户获取消息队列 CKafka 实例的主题列表

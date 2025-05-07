@@ -28,8 +28,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContainRootSnapshot(boolean $ContainRootSnapshot) 设置快照组是否包含系统盘快照。
  * @method array getSnapshotIdSet() 获取快照组包含的快照ID列表。
  * @method void setSnapshotIdSet(array $SnapshotIdSet) 设置快照组包含的快照ID列表。
- * @method string getSnapshotGroupState() 获取快照组状态。<br><li>NORMAL: 正常<br><li>CREATING:创建中<br><li>ROLLBACKING:回滚中
- * @method void setSnapshotGroupState(string $SnapshotGroupState) 设置快照组状态。<br><li>NORMAL: 正常<br><li>CREATING:创建中<br><li>ROLLBACKING:回滚中
+ * @method string getSnapshotGroupState() 获取<ul>
+    <li>NORMAL: 正常</li>
+    <li>CREATING: 创建中</li>
+    <li>ROLLBACKING: 回滚中</li>
+</ul>
+ * @method void setSnapshotGroupState(string $SnapshotGroupState) 设置<ul>
+    <li>NORMAL: 正常</li>
+    <li>CREATING: 创建中</li>
+    <li>ROLLBACKING: 回滚中</li>
+</ul>
  * @method integer getPercent() 获取快照组创建进度。
  * @method void setPercent(integer $Percent) 设置快照组创建进度。
  * @method string getCreateTime() 获取快照组创建时间。
@@ -47,6 +55,10 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDeadlineTime() 获取快照组到期时间。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeadlineTime(string $DeadlineTime) 设置快照组到期时间。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAutoSnapshotPolicyId() 获取来源自动快照策略ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) 设置来源自动快照策略ID
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class SnapshotGroup extends AbstractModel
@@ -72,7 +84,11 @@ class SnapshotGroup extends AbstractModel
     public $SnapshotIdSet;
 
     /**
-     * @var string 快照组状态。<br><li>NORMAL: 正常<br><li>CREATING:创建中<br><li>ROLLBACKING:回滚中
+     * @var string <ul>
+    <li>NORMAL: 正常</li>
+    <li>CREATING: 创建中</li>
+    <li>ROLLBACKING: 回滚中</li>
+</ul>
      */
     public $SnapshotGroupState;
 
@@ -118,11 +134,21 @@ class SnapshotGroup extends AbstractModel
     public $DeadlineTime;
 
     /**
+     * @var string 来源自动快照策略ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AutoSnapshotPolicyId;
+
+    /**
      * @param string $SnapshotGroupId 快照组ID。
      * @param string $SnapshotGroupType 快照组类型。NORMAL: 普通快照组，非一致性快照。
      * @param boolean $ContainRootSnapshot 快照组是否包含系统盘快照。
      * @param array $SnapshotIdSet 快照组包含的快照ID列表。
-     * @param string $SnapshotGroupState 快照组状态。<br><li>NORMAL: 正常<br><li>CREATING:创建中<br><li>ROLLBACKING:回滚中
+     * @param string $SnapshotGroupState <ul>
+    <li>NORMAL: 正常</li>
+    <li>CREATING: 创建中</li>
+    <li>ROLLBACKING: 回滚中</li>
+</ul>
      * @param integer $Percent 快照组创建进度。
      * @param string $CreateTime 快照组创建时间。
      * @param string $ModifyTime 快照组最新修改时间
@@ -131,6 +157,8 @@ class SnapshotGroup extends AbstractModel
      * @param integer $ImageCount 快照组关联的镜像数量。
      * @param boolean $IsPermanent 快照组是否永久保留
      * @param string $DeadlineTime 快照组到期时间。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AutoSnapshotPolicyId 来源自动快照策略ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -201,6 +229,10 @@ class SnapshotGroup extends AbstractModel
 
         if (array_key_exists("DeadlineTime",$param) and $param["DeadlineTime"] !== null) {
             $this->DeadlineTime = $param["DeadlineTime"];
+        }
+
+        if (array_key_exists("AutoSnapshotPolicyId",$param) and $param["AutoSnapshotPolicyId"] !== null) {
+            $this->AutoSnapshotPolicyId = $param["AutoSnapshotPolicyId"];
         }
     }
 }

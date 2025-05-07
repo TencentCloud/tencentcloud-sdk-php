@@ -23,13 +23,19 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getOAuthEnable() 获取开启或关闭鉴权。
 True: 开启;
 False: 关闭
+默认为关闭。
  * @method void setOAuthEnable(boolean $OAuthEnable) 设置开启或关闭鉴权。
 True: 开启;
 False: 关闭
- * @method string getOAuthFailureStatus() 获取IAP全部故障后，拒绝请求还是放行。BYPASS:通过,
+默认为关闭。
+ * @method string getOAuthFailureStatus() 获取IAP全部故障后，拒绝请求还是放行。
+BYPASS: 通过
 REJECT: 拒绝
- * @method void setOAuthFailureStatus(string $OAuthFailureStatus) 设置IAP全部故障后，拒绝请求还是放行。BYPASS:通过,
+默认为 BYPASS
+ * @method void setOAuthFailureStatus(string $OAuthFailureStatus) 设置IAP全部故障后，拒绝请求还是放行。
+BYPASS: 通过
 REJECT: 拒绝
+默认为 BYPASS
  */
 class OAuth extends AbstractModel
 {
@@ -37,12 +43,15 @@ class OAuth extends AbstractModel
      * @var boolean 开启或关闭鉴权。
 True: 开启;
 False: 关闭
+默认为关闭。
      */
     public $OAuthEnable;
 
     /**
-     * @var string IAP全部故障后，拒绝请求还是放行。BYPASS:通过,
+     * @var string IAP全部故障后，拒绝请求还是放行。
+BYPASS: 通过
 REJECT: 拒绝
+默认为 BYPASS
      */
     public $OAuthFailureStatus;
 
@@ -50,8 +59,11 @@ REJECT: 拒绝
      * @param boolean $OAuthEnable 开启或关闭鉴权。
 True: 开启;
 False: 关闭
-     * @param string $OAuthFailureStatus IAP全部故障后，拒绝请求还是放行。BYPASS:通过,
+默认为关闭。
+     * @param string $OAuthFailureStatus IAP全部故障后，拒绝请求还是放行。
+BYPASS: 通过
 REJECT: 拒绝
+默认为 BYPASS
      */
     function __construct()
     {

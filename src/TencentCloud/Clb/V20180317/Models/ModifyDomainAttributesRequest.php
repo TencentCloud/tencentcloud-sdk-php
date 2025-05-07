@@ -20,22 +20,28 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDomainAttributes请求参数结构体
  *
- * @method string getLoadBalancerId() 获取负载均衡实例ID。
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例ID。
- * @method string getListenerId() 获取负载均衡监听器ID。
- * @method void setListenerId(string $ListenerId) 设置负载均衡监听器ID。
- * @method string getDomain() 获取域名（必须是已经创建的转发规则下的域名），如果是多域名，可以指定多域名列表中的任意一个。
- * @method void setDomain(string $Domain) 设置域名（必须是已经创建的转发规则下的域名），如果是多域名，可以指定多域名列表中的任意一个。
+ * @method string getLoadBalancerId() 获取负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口查询。
+ * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口查询。
+ * @method string getListenerId() 获取负载均衡监听器ID，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
+ * @method void setListenerId(string $ListenerId) 设置负载均衡监听器ID，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
+ * @method string getDomain() 获取域名（必须是已经创建的转发规则下的域名），如果是多域名，可以指定多域名列表中的任意一个，可以通过[DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
+ * @method void setDomain(string $Domain) 设置域名（必须是已经创建的转发规则下的域名），如果是多域名，可以指定多域名列表中的任意一个，可以通过[DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
  * @method string getNewDomain() 获取要修改的新域名。NewDomain和NewDomains只能传一个。
  * @method void setNewDomain(string $NewDomain) 设置要修改的新域名。NewDomain和NewDomains只能传一个。
  * @method CertificateInput getCertificate() 获取域名相关的证书信息，注意，仅对启用SNI的监听器适用，不可和MultiCertInfo 同时传入。
  * @method void setCertificate(CertificateInput $Certificate) 设置域名相关的证书信息，注意，仅对启用SNI的监听器适用，不可和MultiCertInfo 同时传入。
- * @method boolean getHttp2() 获取是否开启Http2，注意，只有HTTPS域名才能开启Http2。
- * @method void setHttp2(boolean $Http2) 设置是否开启Http2，注意，只有HTTPS域名才能开启Http2。
+ * @method boolean getHttp2() 获取是否开启HTTP2，注意，只有HTTPS域名才能开启HTTP2。
+True: 开启HTTP2，Fasle: 不开启HTTP2。
+ * @method void setHttp2(boolean $Http2) 设置是否开启HTTP2，注意，只有HTTPS域名才能开启HTTP2。
+True: 开启HTTP2，Fasle: 不开启HTTP2。
  * @method boolean getDefaultServer() 获取是否设为默认域名，注意，一个监听器下只能设置一个默认域名。
+True: 设为默认域名，Fasle: 不设置为默认域名。
  * @method void setDefaultServer(boolean $DefaultServer) 设置是否设为默认域名，注意，一个监听器下只能设置一个默认域名。
- * @method boolean getQuic() 获取是否开启Quic，注意，只有HTTPS域名才能开启Quic
- * @method void setQuic(boolean $Quic) 设置是否开启Quic，注意，只有HTTPS域名才能开启Quic
+True: 设为默认域名，Fasle: 不设置为默认域名。
+ * @method boolean getQuic() 获取是否开启 QUIC，注意，只有 HTTPS 域名才能开启 QUIC。
+True: 开启 QUIC，False: 不开启QUIC。
+ * @method void setQuic(boolean $Quic) 设置是否开启 QUIC，注意，只有 HTTPS 域名才能开启 QUIC。
+True: 开启 QUIC，False: 不开启QUIC。
  * @method string getNewDefaultServerDomain() 获取监听器下必须配置一个默认域名，若要关闭原默认域名，必须同时指定另一个域名作为新的默认域名，如果新的默认域名是多域名，可以指定多域名列表中的任意一个。
  * @method void setNewDefaultServerDomain(string $NewDefaultServerDomain) 设置监听器下必须配置一个默认域名，若要关闭原默认域名，必须同时指定另一个域名作为新的默认域名，如果新的默认域名是多域名，可以指定多域名列表中的任意一个。
  * @method array getNewDomains() 获取要修改的新域名列表。NewDomain和NewDomains只能传一个。
@@ -46,17 +52,17 @@ use TencentCloud\Common\AbstractModel;
 class ModifyDomainAttributesRequest extends AbstractModel
 {
     /**
-     * @var string 负载均衡实例ID。
+     * @var string 负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口查询。
      */
     public $LoadBalancerId;
 
     /**
-     * @var string 负载均衡监听器ID。
+     * @var string 负载均衡监听器ID，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
      */
     public $ListenerId;
 
     /**
-     * @var string 域名（必须是已经创建的转发规则下的域名），如果是多域名，可以指定多域名列表中的任意一个。
+     * @var string 域名（必须是已经创建的转发规则下的域名），如果是多域名，可以指定多域名列表中的任意一个，可以通过[DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
      */
     public $Domain;
 
@@ -71,17 +77,20 @@ class ModifyDomainAttributesRequest extends AbstractModel
     public $Certificate;
 
     /**
-     * @var boolean 是否开启Http2，注意，只有HTTPS域名才能开启Http2。
+     * @var boolean 是否开启HTTP2，注意，只有HTTPS域名才能开启HTTP2。
+True: 开启HTTP2，Fasle: 不开启HTTP2。
      */
     public $Http2;
 
     /**
      * @var boolean 是否设为默认域名，注意，一个监听器下只能设置一个默认域名。
+True: 设为默认域名，Fasle: 不设置为默认域名。
      */
     public $DefaultServer;
 
     /**
-     * @var boolean 是否开启Quic，注意，只有HTTPS域名才能开启Quic
+     * @var boolean 是否开启 QUIC，注意，只有 HTTPS 域名才能开启 QUIC。
+True: 开启 QUIC，False: 不开启QUIC。
      */
     public $Quic;
 
@@ -101,14 +110,17 @@ class ModifyDomainAttributesRequest extends AbstractModel
     public $MultiCertInfo;
 
     /**
-     * @param string $LoadBalancerId 负载均衡实例ID。
-     * @param string $ListenerId 负载均衡监听器ID。
-     * @param string $Domain 域名（必须是已经创建的转发规则下的域名），如果是多域名，可以指定多域名列表中的任意一个。
+     * @param string $LoadBalancerId 负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口查询。
+     * @param string $ListenerId 负载均衡监听器ID，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
+     * @param string $Domain 域名（必须是已经创建的转发规则下的域名），如果是多域名，可以指定多域名列表中的任意一个，可以通过[DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
      * @param string $NewDomain 要修改的新域名。NewDomain和NewDomains只能传一个。
      * @param CertificateInput $Certificate 域名相关的证书信息，注意，仅对启用SNI的监听器适用，不可和MultiCertInfo 同时传入。
-     * @param boolean $Http2 是否开启Http2，注意，只有HTTPS域名才能开启Http2。
+     * @param boolean $Http2 是否开启HTTP2，注意，只有HTTPS域名才能开启HTTP2。
+True: 开启HTTP2，Fasle: 不开启HTTP2。
      * @param boolean $DefaultServer 是否设为默认域名，注意，一个监听器下只能设置一个默认域名。
-     * @param boolean $Quic 是否开启Quic，注意，只有HTTPS域名才能开启Quic
+True: 设为默认域名，Fasle: 不设置为默认域名。
+     * @param boolean $Quic 是否开启 QUIC，注意，只有 HTTPS 域名才能开启 QUIC。
+True: 开启 QUIC，False: 不开启QUIC。
      * @param string $NewDefaultServerDomain 监听器下必须配置一个默认域名，若要关闭原默认域名，必须同时指定另一个域名作为新的默认域名，如果新的默认域名是多域名，可以指定多域名列表中的任意一个。
      * @param array $NewDomains 要修改的新域名列表。NewDomain和NewDomains只能传一个。
      * @param MultiCertInfo $MultiCertInfo 域名相关的证书信息，注意，仅对启用SNI的监听器适用；支持同时传入多本算法类型不同的服务器证书，不可和Certificate 同时传入。

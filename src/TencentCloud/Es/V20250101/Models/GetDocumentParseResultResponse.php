@@ -20,13 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetDocumentParseResult返回参数结构体
  *
- * @method integer getStatus() 获取任务状态
- * @method void setStatus(integer $Status) 设置任务状态
- * @method string getDocumentParseResultUrl() 获取结果文件
- * @method void setDocumentParseResultUrl(string $DocumentParseResultUrl) 设置结果文件
- * @method array getFailedPages() 获取失败的页码
+ * @method integer getStatus() 获取任务状态，-1：失败，0：运行中，1：成功。
+ * @method void setStatus(integer $Status) 设置任务状态，-1：失败，0：运行中，1：成功。
+ * @method string getDocumentParseResultUrl() 获取结果文件。
+ * @method void setDocumentParseResultUrl(string $DocumentParseResultUrl) 设置结果文件。
+ * @method array getFailedPages() 获取失败的页码。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFailedPages(array $FailedPages) 设置失败的页码
+ * @method void setFailedPages(array $FailedPages) 设置失败的页码。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -34,17 +34,17 @@ use TencentCloud\Common\AbstractModel;
 class GetDocumentParseResultResponse extends AbstractModel
 {
     /**
-     * @var integer 任务状态
+     * @var integer 任务状态，-1：失败，0：运行中，1：成功。
      */
     public $Status;
 
     /**
-     * @var string 结果文件
+     * @var string 结果文件。
      */
     public $DocumentParseResultUrl;
 
     /**
-     * @var array 失败的页码
+     * @var array 失败的页码。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailedPages;
@@ -55,9 +55,9 @@ class GetDocumentParseResultResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Status 任务状态
-     * @param string $DocumentParseResultUrl 结果文件
-     * @param array $FailedPages 失败的页码
+     * @param integer $Status 任务状态，-1：失败，0：运行中，1：成功。
+     * @param string $DocumentParseResultUrl 结果文件。
+     * @param array $FailedPages 失败的页码。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

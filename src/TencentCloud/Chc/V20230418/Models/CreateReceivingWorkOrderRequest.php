@@ -34,14 +34,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpressInfo(ExpressDelivery $ExpressInfo) 设置快递寄件信息,快递寄件必填
  * @method string getRemark() 获取备注
  * @method void setRemark(string $Remark) 设置备注
- * @method array getServerDeviceList() 获取服务器收货列表
- * @method void setServerDeviceList(array $ServerDeviceList) 设置服务器收货列表
+ * @method array getServerDeviceList() 获取服务器收货列表。最大值：200
+ * @method void setServerDeviceList(array $ServerDeviceList) 设置服务器收货列表。最大值：200
  * @method array getNetDeviceList() 获取网络设备收货列表
  * @method void setNetDeviceList(array $NetDeviceList) 设置网络设备收货列表
  * @method array getWireDeviceList() 获取线材收货列表
  * @method void setWireDeviceList(array $WireDeviceList) 设置线材收货列表
  * @method array getOtherDeviceList() 获取其他设备收货列表
  * @method void setOtherDeviceList(array $OtherDeviceList) 设置其他设备收货列表
+ * @method boolean getWithRackOn() 获取收货后自动上架。此参数为true时，后台会自动提设备上架单
+ * @method void setWithRackOn(boolean $WithRackOn) 设置收货后自动上架。此参数为true时，后台会自动提设备上架单
+ * @method array getDeviceRackOnList() 获取设备上架信息。当WithRackOn为true此参数必传，且sn需要和收货的列表一致
+ * @method void setDeviceRackOnList(array $DeviceRackOnList) 设置设备上架信息。当WithRackOn为true此参数必传，且sn需要和收货的列表一致
+ * @method string getStuffOption() 获取上架人员 1.自行解决 2.由腾讯IDC负责
+ * @method void setStuffOption(string $StuffOption) 设置上架人员 1.自行解决 2.由腾讯IDC负责
+ * @method SelfOperation getSelfOperationInfo() 获取自行解决信息。当StuffOption为1时，此参数必填
+ * @method void setSelfOperationInfo(SelfOperation $SelfOperationInfo) 设置自行解决信息。当StuffOption为1时，此参数必填
+ * @method boolean getWithPowerOn() 获取上架后自动开电。此参数为true时，后台会自动提设备开电单
+ * @method void setWithPowerOn(boolean $WithPowerOn) 设置上架后自动开电。此参数为true时，后台会自动提设备开电单
  */
 class CreateReceivingWorkOrderRequest extends AbstractModel
 {
@@ -81,7 +91,7 @@ class CreateReceivingWorkOrderRequest extends AbstractModel
     public $Remark;
 
     /**
-     * @var array 服务器收货列表
+     * @var array 服务器收货列表。最大值：200
      */
     public $ServerDeviceList;
 
@@ -101,6 +111,31 @@ class CreateReceivingWorkOrderRequest extends AbstractModel
     public $OtherDeviceList;
 
     /**
+     * @var boolean 收货后自动上架。此参数为true时，后台会自动提设备上架单
+     */
+    public $WithRackOn;
+
+    /**
+     * @var array 设备上架信息。当WithRackOn为true此参数必传，且sn需要和收货的列表一致
+     */
+    public $DeviceRackOnList;
+
+    /**
+     * @var string 上架人员 1.自行解决 2.由腾讯IDC负责
+     */
+    public $StuffOption;
+
+    /**
+     * @var SelfOperation 自行解决信息。当StuffOption为1时，此参数必填
+     */
+    public $SelfOperationInfo;
+
+    /**
+     * @var boolean 上架后自动开电。此参数为true时，后台会自动提设备开电单
+     */
+    public $WithPowerOn;
+
+    /**
      * @param integer $IdcId 机房id
      * @param string $DeviceType 设备类型，server, netDevice, wire, otherDevice
      * @param string $EntryTime 进入时间
@@ -108,10 +143,15 @@ class CreateReceivingWorkOrderRequest extends AbstractModel
      * @param boolean $IsExpressDelivery 是否快递寄件
      * @param ExpressDelivery $ExpressInfo 快递寄件信息,快递寄件必填
      * @param string $Remark 备注
-     * @param array $ServerDeviceList 服务器收货列表
+     * @param array $ServerDeviceList 服务器收货列表。最大值：200
      * @param array $NetDeviceList 网络设备收货列表
      * @param array $WireDeviceList 线材收货列表
      * @param array $OtherDeviceList 其他设备收货列表
+     * @param boolean $WithRackOn 收货后自动上架。此参数为true时，后台会自动提设备上架单
+     * @param array $DeviceRackOnList 设备上架信息。当WithRackOn为true此参数必传，且sn需要和收货的列表一致
+     * @param string $StuffOption 上架人员 1.自行解决 2.由腾讯IDC负责
+     * @param SelfOperation $SelfOperationInfo 自行解决信息。当StuffOption为1时，此参数必填
+     * @param boolean $WithPowerOn 上架后自动开电。此参数为true时，后台会自动提设备开电单
      */
     function __construct()
     {
@@ -189,6 +229,32 @@ class CreateReceivingWorkOrderRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->OtherDeviceList, $obj);
             }
+        }
+
+        if (array_key_exists("WithRackOn",$param) and $param["WithRackOn"] !== null) {
+            $this->WithRackOn = $param["WithRackOn"];
+        }
+
+        if (array_key_exists("DeviceRackOnList",$param) and $param["DeviceRackOnList"] !== null) {
+            $this->DeviceRackOnList = [];
+            foreach ($param["DeviceRackOnList"] as $key => $value){
+                $obj = new DeviceRackOn();
+                $obj->deserialize($value);
+                array_push($this->DeviceRackOnList, $obj);
+            }
+        }
+
+        if (array_key_exists("StuffOption",$param) and $param["StuffOption"] !== null) {
+            $this->StuffOption = $param["StuffOption"];
+        }
+
+        if (array_key_exists("SelfOperationInfo",$param) and $param["SelfOperationInfo"] !== null) {
+            $this->SelfOperationInfo = new SelfOperation();
+            $this->SelfOperationInfo->deserialize($param["SelfOperationInfo"]);
+        }
+
+        if (array_key_exists("WithPowerOn",$param) and $param["WithPowerOn"] !== null) {
+            $this->WithPowerOn = $param["WithPowerOn"];
         }
     }
 }

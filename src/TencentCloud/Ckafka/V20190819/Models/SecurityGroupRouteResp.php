@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 安全组路由信息返回结果
  *
  * @method integer getTotalCount() 获取符合条件的安全组路由信息总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置符合条件的安全组路由信息总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSecurityGroupRoutes() 获取符合条件的安全组路由信息列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecurityGroupRoutes(array $SecurityGroupRoutes) 设置符合条件的安全组路由信息列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SecurityGroupRouteResp extends AbstractModel
 {
     /**
      * @var integer 符合条件的安全组路由信息总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
      * @var array 符合条件的安全组路由信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecurityGroupRoutes;
 
     /**
      * @param integer $TotalCount 符合条件的安全组路由信息总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SecurityGroupRoutes 符合条件的安全组路由信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

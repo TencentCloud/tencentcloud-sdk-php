@@ -25,15 +25,25 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getBiddingNum() 获取出价次数
  * @method void setBiddingNum(integer $BiddingNum) 设置出价次数
  * @method string getBiddingStartTime() 获取竞价开始时间
+格式:YYYY-MM-DD HH:mm:ss
  * @method void setBiddingStartTime(string $BiddingStartTime) 设置竞价开始时间
+格式:YYYY-MM-DD HH:mm:ss
  * @method string getBiddingEndTime() 获取竞价结束时间
+格式:YYYY-MM-DD HH:mm:ss
  * @method void setBiddingEndTime(string $BiddingEndTime) 设置竞价结束时间
+格式:YYYY-MM-DD HH:mm:ss
  * @method string getRegTime() 获取 注册时间
+格式:YYYY-MM-DD HH:mm:ss
  * @method void setRegTime(string $RegTime) 设置 注册时间
+格式:YYYY-MM-DD HH:mm:ss
  * @method string getExpireTime() 获取过期时间
+格式:YYYY-MM-DD HH:mm:ss
  * @method void setExpireTime(string $ExpireTime) 设置过期时间
+格式:YYYY-MM-DD HH:mm:ss
  * @method string getDeleteTime() 获取删除时间
+格式:YYYY-MM-DD HH:mm:ss
  * @method void setDeleteTime(string $DeleteTime) 设置删除时间
+格式:YYYY-MM-DD HH:mm:ss
  * @method integer getCurrentPrice() 获取当前价格 单位元
  * @method void setCurrentPrice(integer $CurrentPrice) 设置当前价格 单位元
  * @method string getCurrentNickname() 获取当前用户昵称
@@ -65,26 +75,31 @@ class DescribeBiddingDetailResponse extends AbstractModel
 
     /**
      * @var string 竞价开始时间
+格式:YYYY-MM-DD HH:mm:ss
      */
     public $BiddingStartTime;
 
     /**
      * @var string 竞价结束时间
+格式:YYYY-MM-DD HH:mm:ss
      */
     public $BiddingEndTime;
 
     /**
      * @var string  注册时间
+格式:YYYY-MM-DD HH:mm:ss
      */
     public $RegTime;
 
     /**
      * @var string 过期时间
+格式:YYYY-MM-DD HH:mm:ss
      */
     public $ExpireTime;
 
     /**
      * @var string 删除时间
+格式:YYYY-MM-DD HH:mm:ss
      */
     public $DeleteTime;
 
@@ -132,10 +147,15 @@ class DescribeBiddingDetailResponse extends AbstractModel
      * @param string $Domain 域名
      * @param integer $BiddingNum 出价次数
      * @param string $BiddingStartTime 竞价开始时间
+格式:YYYY-MM-DD HH:mm:ss
      * @param string $BiddingEndTime 竞价结束时间
+格式:YYYY-MM-DD HH:mm:ss
      * @param string $RegTime  注册时间
+格式:YYYY-MM-DD HH:mm:ss
      * @param string $ExpireTime 过期时间
+格式:YYYY-MM-DD HH:mm:ss
      * @param string $DeleteTime 删除时间
+格式:YYYY-MM-DD HH:mm:ss
      * @param integer $CurrentPrice 当前价格 单位元
      * @param string $CurrentNickname 当前用户昵称
      * @param integer $BiddingBondPrice 竞价保证金 单位元

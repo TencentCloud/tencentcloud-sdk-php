@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSortBy(string $SortBy) 设置返回结果按照该字段排序
  * @method string getSorting() 获取正序或者倒序，例如：desc
  * @method void setSorting(string $Sorting) 设置正序或者倒序，例如：desc
+ * @method integer getIsDefault() 获取是否设置为常驻：1非常驻（默认）、2常驻（仅能设置一个常驻）
+ * @method void setIsDefault(integer $IsDefault) 设置是否设置为常驻：1非常驻（默认）、2常驻（仅能设置一个常驻）
  */
 class DescribeUserRolesRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DescribeUserRolesRequest extends AbstractModel
     public $Sorting;
 
     /**
+     * @var integer 是否设置为常驻：1非常驻（默认）、2常驻（仅能设置一个常驻）
+     */
+    public $IsDefault;
+
+    /**
      * @param integer $Limit 列举的数量限制
      * @param integer $Offset 列举的偏移位置
      * @param string $Fuzzy 按照arn模糊列举
      * @param string $SortBy 返回结果按照该字段排序
      * @param string $Sorting 正序或者倒序，例如：desc
+     * @param integer $IsDefault 是否设置为常驻：1非常驻（默认）、2常驻（仅能设置一个常驻）
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DescribeUserRolesRequest extends AbstractModel
 
         if (array_key_exists("Sorting",$param) and $param["Sorting"] !== null) {
             $this->Sorting = $param["Sorting"];
+        }
+
+        if (array_key_exists("IsDefault",$param) and $param["IsDefault"] !== null) {
+            $this->IsDefault = $param["IsDefault"];
         }
     }
 }

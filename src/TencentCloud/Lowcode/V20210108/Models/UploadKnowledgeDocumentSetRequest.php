@@ -34,10 +34,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDocumentDesc(string $DocumentDesc) 设置对文件的描述
  * @method string getFileTitle() 获取文件标题
  * @method void setFileTitle(string $FileTitle) 设置文件标题
- * @method string getFileMetaData() 获取	文件元信息，为jsonstring
- * @method void setFileMetaData(string $FileMetaData) 设置	文件元信息，为jsonstring
+ * @method string getFileMetaData() 获取文件元信息，为jsonstring
+ * @method void setFileMetaData(string $FileMetaData) 设置文件元信息，为jsonstring
  * @method string getDocumentSetId() 获取文件id
  * @method void setDocumentSetId(string $DocumentSetId) 设置文件id
+ * @method string getDelimiter() 获取使用 regex 分割文档
+ * @method void setDelimiter(string $Delimiter) 设置使用 regex 分割文档
  */
 class UploadKnowledgeDocumentSetRequest extends AbstractModel
 {
@@ -77,7 +79,7 @@ class UploadKnowledgeDocumentSetRequest extends AbstractModel
     public $FileTitle;
 
     /**
-     * @var string 	文件元信息，为jsonstring
+     * @var string 文件元信息，为jsonstring
      */
     public $FileMetaData;
 
@@ -87,6 +89,11 @@ class UploadKnowledgeDocumentSetRequest extends AbstractModel
     public $DocumentSetId;
 
     /**
+     * @var string 使用 regex 分割文档
+     */
+    public $Delimiter;
+
+    /**
      * @param string $EnvId 环境ID
      * @param string $CollectionView 知识库标识
      * @param string $FileName 状态;ENABLED启用；NOT_ENABLED不启用
@@ -94,8 +101,9 @@ class UploadKnowledgeDocumentSetRequest extends AbstractModel
      * @param string $DocumentType 文件类型，例如: .docx, .md
      * @param string $DocumentDesc 对文件的描述
      * @param string $FileTitle 文件标题
-     * @param string $FileMetaData 	文件元信息，为jsonstring
+     * @param string $FileMetaData 文件元信息，为jsonstring
      * @param string $DocumentSetId 文件id
+     * @param string $Delimiter 使用 regex 分割文档
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class UploadKnowledgeDocumentSetRequest extends AbstractModel
 
         if (array_key_exists("DocumentSetId",$param) and $param["DocumentSetId"] !== null) {
             $this->DocumentSetId = $param["DocumentSetId"];
+        }
+
+        if (array_key_exists("Delimiter",$param) and $param["Delimiter"] !== null) {
+            $this->Delimiter = $param["Delimiter"];
         }
     }
 }

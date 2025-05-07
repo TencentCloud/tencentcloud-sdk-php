@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 切片文档信息
  *
- * @method string getFileType() 获取文件类型
- * @method void setFileType(string $FileType) 设置文件类型
- * @method string getFileContent() 获取文件的 base64值
- * @method void setFileContent(string $FileContent) 设置文件的 base64值
+ * @method string getFileType() 获取文件类型，支持 MD，TXT 格式。
+ * @method void setFileType(string $FileType) 设置文件类型，支持 MD，TXT 格式。
+ * @method string getFileContent() 获取文本原文，使用字符串格式输入。
+ * @method void setFileContent(string $FileContent) 设置文本原文，使用字符串格式输入。
  */
 class ChunkDocument extends AbstractModel
 {
     /**
-     * @var string 文件类型
+     * @var string 文件类型，支持 MD，TXT 格式。
      */
     public $FileType;
 
     /**
-     * @var string 文件的 base64值
+     * @var string 文本原文，使用字符串格式输入。
      */
     public $FileContent;
 
     /**
-     * @param string $FileType 文件类型
-     * @param string $FileContent 文件的 base64值
+     * @param string $FileType 文件类型，支持 MD，TXT 格式。
+     * @param string $FileContent 文本原文，使用字符串格式输入。
      */
     function __construct()
     {

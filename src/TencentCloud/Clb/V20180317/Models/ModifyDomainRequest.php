@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDomain请求参数结构体
  *
- * @method string getLoadBalancerId() 获取负载均衡实例 ID。
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID。
- * @method string getListenerId() 获取负载均衡监听器 ID。
- * @method void setListenerId(string $ListenerId) 设置负载均衡监听器 ID。
- * @method string getDomain() 获取监听器下的某个旧域名。
- * @method void setDomain(string $Domain) 设置监听器下的某个旧域名。
+ * @method string getLoadBalancerId() 获取负载均衡实例 ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口查询。
+ * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口查询。
+ * @method string getListenerId() 获取负载均衡监听器 ID， 可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
+ * @method void setListenerId(string $ListenerId) 设置负载均衡监听器 ID， 可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
+ * @method string getDomain() 获取监听器下的某个旧域名， 可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 查询。
+ * @method void setDomain(string $Domain) 设置监听器下的某个旧域名， 可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 查询。
  * @method string getNewDomain() 获取新域名，	长度限制为：1-120。有三种使用格式：非正则表达式格式，通配符格式，正则表达式格式。非正则表达式格式只能使用字母、数字、‘-’、‘.’。通配符格式的使用 ‘*’ 只能在开头或者结尾。正则表达式以'~'开头。
  * @method void setNewDomain(string $NewDomain) 设置新域名，	长度限制为：1-120。有三种使用格式：非正则表达式格式，通配符格式，正则表达式格式。非正则表达式格式只能使用字母、数字、‘-’、‘.’。通配符格式的使用 ‘*’ 只能在开头或者结尾。正则表达式以'~'开头。
  */
 class ModifyDomainRequest extends AbstractModel
 {
     /**
-     * @var string 负载均衡实例 ID。
+     * @var string 负载均衡实例 ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口查询。
      */
     public $LoadBalancerId;
 
     /**
-     * @var string 负载均衡监听器 ID。
+     * @var string 负载均衡监听器 ID， 可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
      */
     public $ListenerId;
 
     /**
-     * @var string 监听器下的某个旧域名。
+     * @var string 监听器下的某个旧域名， 可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 查询。
      */
     public $Domain;
 
@@ -52,9 +52,9 @@ class ModifyDomainRequest extends AbstractModel
     public $NewDomain;
 
     /**
-     * @param string $LoadBalancerId 负载均衡实例 ID。
-     * @param string $ListenerId 负载均衡监听器 ID。
-     * @param string $Domain 监听器下的某个旧域名。
+     * @param string $LoadBalancerId 负载均衡实例 ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口查询。
+     * @param string $ListenerId 负载均衡监听器 ID， 可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
+     * @param string $Domain 监听器下的某个旧域名， 可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 查询。
      * @param string $NewDomain 新域名，	长度限制为：1-120。有三种使用格式：非正则表达式格式，通配符格式，正则表达式格式。非正则表达式格式只能使用字母、数字、‘-’、‘.’。通配符格式的使用 ‘*’ 只能在开头或者结尾。正则表达式以'~'开头。
      */
     function __construct()

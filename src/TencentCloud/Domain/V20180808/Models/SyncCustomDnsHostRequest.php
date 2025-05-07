@@ -20,18 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SyncCustomDnsHost请求参数结构体
  *
- * @method string getDomainId() 获取域名实例ID，可以通过DescribeDomainList接口获取
- * @method void setDomainId(string $DomainId) 设置域名实例ID，可以通过DescribeDomainList接口获取
+ * @method string getDomainId() 获取域名实例ID
+可通过DescribeDomainNameList接口获取(https://cloud.tencent.com/document/api/242/48941)
+ * @method void setDomainId(string $DomainId) 设置域名实例ID
+可通过DescribeDomainNameList接口获取(https://cloud.tencent.com/document/api/242/48941)
  */
 class SyncCustomDnsHostRequest extends AbstractModel
 {
     /**
-     * @var string 域名实例ID，可以通过DescribeDomainList接口获取
+     * @var string 域名实例ID
+可通过DescribeDomainNameList接口获取(https://cloud.tencent.com/document/api/242/48941)
      */
     public $DomainId;
 
     /**
-     * @param string $DomainId 域名实例ID，可以通过DescribeDomainList接口获取
+     * @param string $DomainId 域名实例ID
+可通过DescribeDomainNameList接口获取(https://cloud.tencent.com/document/api/242/48941)
      */
     function __construct()
     {

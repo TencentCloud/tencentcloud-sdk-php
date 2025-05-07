@@ -21,25 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * ModifyDomainDNSBatch请求参数结构体
  *
  * @method array getDomains() 获取批量操作的域名。
+一次提交不超过4000个
  * @method void setDomains(array $Domains) 设置批量操作的域名。
+一次提交不超过4000个
  * @method array getDns() 获取域名DNS 数组。
+不少于2个，一般建议2-6个
  * @method void setDns(array $Dns) 设置域名DNS 数组。
+不少于2个，一般建议2-6个
  */
 class ModifyDomainDNSBatchRequest extends AbstractModel
 {
     /**
      * @var array 批量操作的域名。
+一次提交不超过4000个
      */
     public $Domains;
 
     /**
      * @var array 域名DNS 数组。
+不少于2个，一般建议2-6个
      */
     public $Dns;
 
     /**
      * @param array $Domains 批量操作的域名。
+一次提交不超过4000个
      * @param array $Dns 域名DNS 数组。
+不少于2个，一般建议2-6个
      */
     function __construct()
     {

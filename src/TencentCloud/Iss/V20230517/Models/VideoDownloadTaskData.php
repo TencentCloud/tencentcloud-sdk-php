@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 录像下载任务数据结构
  *
  * @method string getDownloadTaskId() 获取下载任务ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDownloadTaskId(string $DownloadTaskId) 设置下载任务ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VideoDownloadTaskData extends AbstractModel
 {
     /**
      * @var string 下载任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DownloadTaskId;
 
     /**
      * @param string $DownloadTaskId 下载任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

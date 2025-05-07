@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChunkDocument请求参数结构体
  *
- * @method ChunkDocument getDocument() 获取文件切片文件信息
- * @method void setDocument(ChunkDocument $Document) 设置文件切片文件信息
- * @method string getModelName() 获取模型名称
- * @method void setModelName(string $ModelName) 设置模型名称
- * @method ChunkConfig getConfig() 获取文件切片配置
- * @method void setConfig(ChunkConfig $Config) 设置文件切片配置
+ * @method ChunkDocument getDocument() 获取切片文件信息。
+ * @method void setDocument(ChunkDocument $Document) 设置切片文件信息。
+ * @method string getModelName() 获取模型名称，可选模型列表：doc-chunk。
+ * @method void setModelName(string $ModelName) 设置模型名称，可选模型列表：doc-chunk。
+ * @method ChunkConfig getConfig() 获取文件切片配置。
+ * @method void setConfig(ChunkConfig $Config) 设置文件切片配置。
  */
 class ChunkDocumentRequest extends AbstractModel
 {
     /**
-     * @var ChunkDocument 文件切片文件信息
+     * @var ChunkDocument 切片文件信息。
      */
     public $Document;
 
     /**
-     * @var string 模型名称
+     * @var string 模型名称，可选模型列表：doc-chunk。
      */
     public $ModelName;
 
     /**
-     * @var ChunkConfig 文件切片配置
+     * @var ChunkConfig 文件切片配置。
      */
     public $Config;
 
     /**
-     * @param ChunkDocument $Document 文件切片文件信息
-     * @param string $ModelName 模型名称
-     * @param ChunkConfig $Config 文件切片配置
+     * @param ChunkDocument $Document 切片文件信息。
+     * @param string $ModelName 模型名称，可选模型列表：doc-chunk。
+     * @param ChunkConfig $Config 文件切片配置。
      */
     function __construct()
     {

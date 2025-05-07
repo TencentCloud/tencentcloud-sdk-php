@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ParseDocumentAsync请求参数结构体
  *
- * @method Document getDocument() 获取文件信息
- * @method void setDocument(Document $Document) 设置文件信息
- * @method string getModelName() 获取模型名称
- * @method void setModelName(string $ModelName) 设置模型名称
+ * @method Document getDocument() 获取文件信息。
+ * @method void setDocument(Document $Document) 设置文件信息。
+ * @method string getModelName() 获取模型名称，可选模型列表：doc-llm。
+ * @method void setModelName(string $ModelName) 设置模型名称，可选模型列表：doc-llm。
  */
 class ParseDocumentAsyncRequest extends AbstractModel
 {
     /**
-     * @var Document 文件信息
+     * @var Document 文件信息。
      */
     public $Document;
 
     /**
-     * @var string 模型名称
+     * @var string 模型名称，可选模型列表：doc-llm。
      */
     public $ModelName;
 
     /**
-     * @param Document $Document 文件信息
-     * @param string $ModelName 模型名称
+     * @param Document $Document 文件信息。
+     * @param string $ModelName 模型名称，可选模型列表：doc-llm。
      */
     function __construct()
     {

@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 本地录像下载任务列表
  *
  * @method array getList() 获取任务列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setList(array $List) 设置任务列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取任务总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置任务总数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ListVideoDownloadTaskData extends AbstractModel
 {
     /**
      * @var array 任务列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $List;
 
     /**
      * @var integer 任务总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
      * @param array $List 任务列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 任务总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

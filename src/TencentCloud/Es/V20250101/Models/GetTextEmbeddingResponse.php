@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getData() 获取结果集
  * @method void setData(array $Data) 设置结果集
- * @method Usage getUsage() 获取消耗token数量
- * @method void setUsage(Usage $Usage) 设置消耗token数量
+ * @method Usage getUsage() 获取向量化消耗的token数量。
+ * @method void setUsage(Usage $Usage) 设置向量化消耗的token数量。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,7 +35,7 @@ class GetTextEmbeddingResponse extends AbstractModel
     public $Data;
 
     /**
-     * @var Usage 消耗token数量
+     * @var Usage 向量化消耗的token数量。
      */
     public $Usage;
 
@@ -46,7 +46,7 @@ class GetTextEmbeddingResponse extends AbstractModel
 
     /**
      * @param array $Data 结果集
-     * @param Usage $Usage 消耗token数量
+     * @param Usage $Usage 向量化消耗的token数量。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

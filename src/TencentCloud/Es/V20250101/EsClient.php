@@ -25,7 +25,8 @@ use TencentCloud\Es\V20250101\Models as Models;
 /**
  * @method Models\ChatCompletionsResponse ChatCompletions(Models\ChatCompletionsRequest $req) 本服务支持一系列高性能的大语言模型，包括DeepSeek以及腾讯自主研发的混元大模型，结合混合搜索等先进搜索技术，快速高效实现RAG，有效解决幻觉和知识更新问题。
 本接口有单账号调用上限控制，如您有提高并发限制的需求请[联系我们](https://cloud.tencent.com/act/event/Online_service)  。
- * @method Models\ChunkDocumentResponse ChunkDocument(Models\ChunkDocumentRequest $req) 实时文档切片
+ * @method Models\ChunkDocumentResponse ChunkDocument(Models\ChunkDocumentRequest $req) 文本切片是将长文本分割为短片段的技术，用于适配模型输入、提升处理效率或信息检索，平衡片段长度与语义连贯性，适用于NLP、数据分析等场景。
+本接口为分隔符规则切片接口，有单账号调用上限控制，如您有提高并发限制的需求请 [联系我们](https://cloud.tencent.com/act/event/Online_service)  。
  * @method Models\ChunkDocumentAsyncResponse ChunkDocumentAsync(Models\ChunkDocumentAsyncRequest $req) 文本切片是将长文本分割为短片段的技术，用于适配模型输入、提升处理效率或信息检索，平衡片段长度与语义连贯性，适用于NLP、数据分析等场景。
 本接口为异步接口，有单账号调用上限控制，如您有提高并发限制的需求请[联系我们](https://cloud.tencent.com/act/event/Online_service) 。
  * @method Models\GetDocumentChunkResultResponse GetDocumentChunkResult(Models\GetDocumentChunkResultRequest $req) 获取文档切片结果
@@ -36,7 +37,8 @@ use TencentCloud\Es\V20250101\Models as Models;
 本接口有单账号调用上限控制，如您有提高并发限制的需求请[联系我们](https://cloud.tencent.com/act/event/Online_service)。
  * @method Models\ParseDocumentAsyncResponse ParseDocumentAsync(Models\ParseDocumentAsyncRequest $req) 本服务可将各类格式文档精准转换为标准格式，满足企业知识库建设、技术文档迁移、内容平台结构化存储等需求。
 本接口为异步接口，有单账号调用上限控制，如您有提高并发限制的需求请[联系我们](https://cloud.tencent.com/act/event/Online_service)  。
- * @method Models\RunRerankResponse RunRerank(Models\RunRerankRequest $req) 重排序
+ * @method Models\RunRerankResponse RunRerank(Models\RunRerankRequest $req) 重排是指在 RAG 过程中，通过评估文档与查询之间的相关性，将最相关的文档放在前面，确保语言模型在生成回答时优先考虑排名靠前的上下文，提高生成结果的准确性和可信度，也可以通过这种方式进行过滤，减少大模型成本。
+本接口有单账号调用上限控制，如您有提高并发限制的需求请[联系我们](https://cloud.tencent.com/act/event/Online_service)  。
  * @method Models\WebSearchResponse WebSearch(Models\WebSearchRequest $req) WebSearch API 是一个网页搜索服务，支持多种搜索引擎，可以获取网页的标题、URL、摘要和正文内容。
  */
 

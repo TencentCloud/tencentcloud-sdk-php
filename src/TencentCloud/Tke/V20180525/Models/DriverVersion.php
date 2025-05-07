@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GPU驱动和CUDA的版本信息
  *
- * @method string getVersion() 获取GPU驱动或者CUDA的版本
- * @method void setVersion(string $Version) 设置GPU驱动或者CUDA的版本
  * @method string getName() 获取GPU驱动或者CUDA的名字
  * @method void setName(string $Name) 设置GPU驱动或者CUDA的名字
+ * @method string getVersion() 获取GPU驱动或者CUDA的版本
+ * @method void setVersion(string $Version) 设置GPU驱动或者CUDA的版本
  */
 class DriverVersion extends AbstractModel
 {
-    /**
-     * @var string GPU驱动或者CUDA的版本
-     */
-    public $Version;
-
     /**
      * @var string GPU驱动或者CUDA的名字
      */
     public $Name;
 
     /**
-     * @param string $Version GPU驱动或者CUDA的版本
+     * @var string GPU驱动或者CUDA的版本
+     */
+    public $Version;
+
+    /**
      * @param string $Name GPU驱动或者CUDA的名字
+     * @param string $Version GPU驱动或者CUDA的版本
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class DriverVersion extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
-            $this->Version = $param["Version"];
-        }
-
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
+            $this->Version = $param["Version"];
         }
     }
 }

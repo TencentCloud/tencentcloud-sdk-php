@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ReleaseIp6AddressesBandwidth请求参数结构体
  *
- * @method array getIp6Addresses() 获取IPv6地址。Ip6Addresses和Ip6AddressIds必须且只能传一个
- * @method void setIp6Addresses(array $Ip6Addresses) 设置IPv6地址。Ip6Addresses和Ip6AddressIds必须且只能传一个
- * @method array getIp6AddressIds() 获取IPv6地址对应的唯一ID，形如eip-xxxxxxxx。Ip6Addresses和Ip6AddressIds必须且只能传一个。
- * @method void setIp6AddressIds(array $Ip6AddressIds) 设置IPv6地址对应的唯一ID，形如eip-xxxxxxxx。Ip6Addresses和Ip6AddressIds必须且只能传一个。
+ * @method array getIp6Addresses() 获取IPv6地址。可以使用[DescribeIp6Addresses](https://cloud.tencent.com/document/product/215/40089)接口查询Ip6Addresses。Ip6Addresses和Ip6AddressIds必须且只能传一个。
+ * @method void setIp6Addresses(array $Ip6Addresses) 设置IPv6地址。可以使用[DescribeIp6Addresses](https://cloud.tencent.com/document/product/215/40089)接口查询Ip6Addresses。Ip6Addresses和Ip6AddressIds必须且只能传一个。
+ * @method array getIp6AddressIds() 获取IPv6地址对应的唯一ID，形如eip-xxxxxxxx。可以使用[DescribeIp6Addresses](https://cloud.tencent.com/document/product/215/40089)接口查询Ip6AddressIds。Ip6Addresses和Ip6AddressIds必须且只能传一个。
+ * @method void setIp6AddressIds(array $Ip6AddressIds) 设置IPv6地址对应的唯一ID，形如eip-xxxxxxxx。可以使用[DescribeIp6Addresses](https://cloud.tencent.com/document/product/215/40089)接口查询Ip6AddressIds。Ip6Addresses和Ip6AddressIds必须且只能传一个。
  */
 class ReleaseIp6AddressesBandwidthRequest extends AbstractModel
 {
     /**
-     * @var array IPv6地址。Ip6Addresses和Ip6AddressIds必须且只能传一个
+     * @var array IPv6地址。可以使用[DescribeIp6Addresses](https://cloud.tencent.com/document/product/215/40089)接口查询Ip6Addresses。Ip6Addresses和Ip6AddressIds必须且只能传一个。
      */
     public $Ip6Addresses;
 
     /**
-     * @var array IPv6地址对应的唯一ID，形如eip-xxxxxxxx。Ip6Addresses和Ip6AddressIds必须且只能传一个。
+     * @var array IPv6地址对应的唯一ID，形如eip-xxxxxxxx。可以使用[DescribeIp6Addresses](https://cloud.tencent.com/document/product/215/40089)接口查询Ip6AddressIds。Ip6Addresses和Ip6AddressIds必须且只能传一个。
      */
     public $Ip6AddressIds;
 
     /**
-     * @param array $Ip6Addresses IPv6地址。Ip6Addresses和Ip6AddressIds必须且只能传一个
-     * @param array $Ip6AddressIds IPv6地址对应的唯一ID，形如eip-xxxxxxxx。Ip6Addresses和Ip6AddressIds必须且只能传一个。
+     * @param array $Ip6Addresses IPv6地址。可以使用[DescribeIp6Addresses](https://cloud.tencent.com/document/product/215/40089)接口查询Ip6Addresses。Ip6Addresses和Ip6AddressIds必须且只能传一个。
+     * @param array $Ip6AddressIds IPv6地址对应的唯一ID，形如eip-xxxxxxxx。可以使用[DescribeIp6Addresses](https://cloud.tencent.com/document/product/215/40089)接口查询Ip6AddressIds。Ip6Addresses和Ip6AddressIds必须且只能传一个。
      */
     function __construct()
     {

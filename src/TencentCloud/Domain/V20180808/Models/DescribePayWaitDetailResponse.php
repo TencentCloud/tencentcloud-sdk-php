@@ -32,10 +32,14 @@ pay：等待支持
 sub：已经预订
 wait：等待出价
 finish：完成出价
- * @method string getEndTime() 获取支付结束时间
- * @method void setEndTime(string $EndTime) 设置支付结束时间
- * @method string getRegTime() 获取域名注册时间
- * @method void setRegTime(string $RegTime) 设置域名注册时间
+ * @method string getEndTime() 获取支付结束时间 
+格式:YYYY-MM-DD HH:mm:ss
+ * @method void setEndTime(string $EndTime) 设置支付结束时间 
+格式:YYYY-MM-DD HH:mm:ss
+ * @method string getRegTime() 获取域名注册时间 
+格式:YYYY-MM-DD HH:mm:ss
+ * @method void setRegTime(string $RegTime) 设置域名注册时间 
+格式:YYYY-MM-DD HH:mm:ss
  * @method float getPrice() 获取域名成交价格 单位元
  * @method void setPrice(float $Price) 设置域名成交价格 单位元
  * @method float getRetDeposit() 获取待退还保证金 单位元
@@ -60,12 +64,14 @@ finish：完成出价
     public $Status;
 
     /**
-     * @var string 支付结束时间
+     * @var string 支付结束时间 
+格式:YYYY-MM-DD HH:mm:ss
      */
     public $EndTime;
 
     /**
-     * @var string 域名注册时间
+     * @var string 域名注册时间 
+格式:YYYY-MM-DD HH:mm:ss
      */
     public $RegTime;
 
@@ -91,8 +97,10 @@ pay：等待支持
 sub：已经预订
 wait：等待出价
 finish：完成出价
-     * @param string $EndTime 支付结束时间
-     * @param string $RegTime 域名注册时间
+     * @param string $EndTime 支付结束时间 
+格式:YYYY-MM-DD HH:mm:ss
+     * @param string $RegTime 域名注册时间 
+格式:YYYY-MM-DD HH:mm:ss
      * @param float $Price 域名成交价格 单位元
      * @param float $RetDeposit 待退还保证金 单位元
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。

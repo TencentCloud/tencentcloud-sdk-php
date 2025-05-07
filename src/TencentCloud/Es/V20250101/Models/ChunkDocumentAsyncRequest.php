@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChunkDocumentAsync请求参数结构体
  *
- * @method Document getDocument() 获取文件信息
- * @method void setDocument(Document $Document) 设置文件信息
- * @method string getModelName() 获取模型名称
- * @method void setModelName(string $ModelName) 设置模型名称
- * @method ChunkConfigAsync getConfig() 获取文件切片配置
- * @method void setConfig(ChunkConfigAsync $Config) 设置文件切片配置
+ * @method Document getDocument() 获取文件信息。
+ * @method void setDocument(Document $Document) 设置文件信息。
+ * @method string getModelName() 获取模型名称，可选模型列表：doc-tree-chunk。
+ * @method void setModelName(string $ModelName) 设置模型名称，可选模型列表：doc-tree-chunk。
+ * @method ChunkConfigAsync getConfig() 获取文件切片配置。
+ * @method void setConfig(ChunkConfigAsync $Config) 设置文件切片配置。
  */
 class ChunkDocumentAsyncRequest extends AbstractModel
 {
     /**
-     * @var Document 文件信息
+     * @var Document 文件信息。
      */
     public $Document;
 
     /**
-     * @var string 模型名称
+     * @var string 模型名称，可选模型列表：doc-tree-chunk。
      */
     public $ModelName;
 
     /**
-     * @var ChunkConfigAsync 文件切片配置
+     * @var ChunkConfigAsync 文件切片配置。
      */
     public $Config;
 
     /**
-     * @param Document $Document 文件信息
-     * @param string $ModelName 模型名称
-     * @param ChunkConfigAsync $Config 文件切片配置
+     * @param Document $Document 文件信息。
+     * @param string $ModelName 模型名称，可选模型列表：doc-tree-chunk。
+     * @param ChunkConfigAsync $Config 文件切片配置。
      */
     function __construct()
     {

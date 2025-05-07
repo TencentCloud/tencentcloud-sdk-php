@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getDomainList() 获取预约预释放域名列表
  * @method void setDomainList(array $DomainList) 设置预约预释放域名列表
- * @method string getTemplateId() 获取模板ID 可通过DescribeTemplates接口获取
- * @method void setTemplateId(string $TemplateId) 设置模板ID 可通过DescribeTemplates接口获取
+ * @method string getTemplateId() 获取模板ID 
+可通过[DescribeTemplateList](https://cloud.tencent.com/document/api/242/48940)接口获取
+ * @method void setTemplateId(string $TemplateId) 设置模板ID 
+可通过[DescribeTemplateList](https://cloud.tencent.com/document/api/242/48940)接口获取
  * @method integer getIsAutoPay() 获取结束后是否自动支付尾款，默认1 开启 传入0关闭
  * @method void setIsAutoPay(integer $IsAutoPay) 设置结束后是否自动支付尾款，默认1 开启 传入0关闭
  * @method integer getIsBidAutoPay() 获取结束后是否自动进行梯度保证金扣除，默认1开启 传入0关闭
@@ -37,7 +39,8 @@ class ReservedPreDomainsRequest extends AbstractModel
     public $DomainList;
 
     /**
-     * @var string 模板ID 可通过DescribeTemplates接口获取
+     * @var string 模板ID 
+可通过[DescribeTemplateList](https://cloud.tencent.com/document/api/242/48940)接口获取
      */
     public $TemplateId;
 
@@ -53,7 +56,8 @@ class ReservedPreDomainsRequest extends AbstractModel
 
     /**
      * @param array $DomainList 预约预释放域名列表
-     * @param string $TemplateId 模板ID 可通过DescribeTemplates接口获取
+     * @param string $TemplateId 模板ID 
+可通过[DescribeTemplateList](https://cloud.tencent.com/document/api/242/48940)接口获取
      * @param integer $IsAutoPay 结束后是否自动支付尾款，默认1 开启 传入0关闭
      * @param integer $IsBidAutoPay 结束后是否自动进行梯度保证金扣除，默认1开启 传入0关闭
      */

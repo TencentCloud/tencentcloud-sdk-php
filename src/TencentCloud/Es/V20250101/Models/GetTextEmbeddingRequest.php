@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetTextEmbedding请求参数结构体
  *
- * @method string getModelName() 获取模型名称
- * @method void setModelName(string $ModelName) 设置模型名称
- * @method array getTexts() 获取需进行向量化的文本集
- * @method void setTexts(array $Texts) 设置需进行向量化的文本集
+ * @method string getModelName() 获取模型名称，可选模型列表：bge-base-zh-v1.5,conan-embedding-v1,bge-m3,KaLM-embedding-multilingual-mini-v1。
+ * @method void setModelName(string $ModelName) 设置模型名称，可选模型列表：bge-base-zh-v1.5,conan-embedding-v1,bge-m3,KaLM-embedding-multilingual-mini-v1。
+ * @method array getTexts() 获取需进行向量化的文本集。
+ * @method void setTexts(array $Texts) 设置需进行向量化的文本集。
  */
 class GetTextEmbeddingRequest extends AbstractModel
 {
     /**
-     * @var string 模型名称
+     * @var string 模型名称，可选模型列表：bge-base-zh-v1.5,conan-embedding-v1,bge-m3,KaLM-embedding-multilingual-mini-v1。
      */
     public $ModelName;
 
     /**
-     * @var array 需进行向量化的文本集
+     * @var array 需进行向量化的文本集。
      */
     public $Texts;
 
     /**
-     * @param string $ModelName 模型名称
-     * @param array $Texts 需进行向量化的文本集
+     * @param string $ModelName 模型名称，可选模型列表：bge-base-zh-v1.5,conan-embedding-v1,bge-m3,KaLM-embedding-multilingual-mini-v1。
+     * @param array $Texts 需进行向量化的文本集。
      */
     function __construct()
     {

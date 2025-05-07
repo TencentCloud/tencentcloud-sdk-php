@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 实例路由
  *
  * @method string getInstanceId() 获取ckafka集群实例Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRouteId() 获取路由Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRouteId(integer $RouteId) 设置路由Id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceRoute extends AbstractModel
 {
     /**
      * @var string ckafka集群实例Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var integer 路由Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RouteId;
 
     /**
      * @param string $InstanceId ckafka集群实例Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RouteId 路由Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

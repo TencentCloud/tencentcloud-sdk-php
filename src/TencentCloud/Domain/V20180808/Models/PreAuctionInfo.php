@@ -23,9 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
  * @method string getBiddingTime() 获取竞价倒计时
+格式:YYYY-MM-DD HH:mm:ss
  * @method void setBiddingTime(string $BiddingTime) 设置竞价倒计时
- * @method integer getBidCount() 获取出价次数 单位元
- * @method void setBidCount(integer $BidCount) 设置出价次数 单位元
+格式:YYYY-MM-DD HH:mm:ss
+ * @method integer getBidCount() 获取出价次数
+ * @method void setBidCount(integer $BidCount) 设置出价次数
  * @method float getPrice() 获取当前价格 单位元
  * @method void setPrice(float $Price) 设置当前价格 单位元
  * @method string getOp() 获取用户操作 
@@ -46,11 +48,12 @@ class PreAuctionInfo extends AbstractModel
 
     /**
      * @var string 竞价倒计时
+格式:YYYY-MM-DD HH:mm:ss
      */
     public $BiddingTime;
 
     /**
-     * @var integer 出价次数 单位元
+     * @var integer 出价次数
      */
     public $BidCount;
 
@@ -74,7 +77,8 @@ noAction：无法操作
     /**
      * @param string $Domain 域名
      * @param string $BiddingTime 竞价倒计时
-     * @param integer $BidCount 出价次数 单位元
+格式:YYYY-MM-DD HH:mm:ss
+     * @param integer $BidCount 出价次数
      * @param float $Price 当前价格 单位元
      * @param string $Op 用户操作 
 bid：出价 

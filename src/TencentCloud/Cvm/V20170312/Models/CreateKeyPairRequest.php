@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateKeyPair请求参数结构体
  *
- * @method string getKeyName() 获取密钥对名称，可由数字，字母和下划线组成，长度不超过25个字符。
- * @method void setKeyName(string $KeyName) 设置密钥对名称，可由数字，字母和下划线组成，长度不超过25个字符。
+ * @method string getKeyName() 获取密钥对名称，可由数字、字母和下划线组成，长度不超过25个字符。密钥对名称不能和已经存在的密钥对名称重复。
+ * @method void setKeyName(string $KeyName) 设置密钥对名称，可由数字、字母和下划线组成，长度不超过25个字符。密钥对名称不能和已经存在的密钥对名称重复。
  * @method integer getProjectId() 获取密钥对创建后所属的项目ID，ProjectId为0表示默认项目。
 可以通过以下方式获取项目ID：
 <li>通过项目列表查询项目ID。</li>
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateKeyPairRequest extends AbstractModel
 {
     /**
-     * @var string 密钥对名称，可由数字，字母和下划线组成，长度不超过25个字符。
+     * @var string 密钥对名称，可由数字、字母和下划线组成，长度不超过25个字符。密钥对名称不能和已经存在的密钥对名称重复。
      */
     public $KeyName;
 
@@ -54,7 +54,7 @@ class CreateKeyPairRequest extends AbstractModel
     public $TagSpecification;
 
     /**
-     * @param string $KeyName 密钥对名称，可由数字，字母和下划线组成，长度不超过25个字符。
+     * @param string $KeyName 密钥对名称，可由数字、字母和下划线组成，长度不超过25个字符。密钥对名称不能和已经存在的密钥对名称重复。
      * @param integer $ProjectId 密钥对创建后所属的项目ID，ProjectId为0表示默认项目。
 可以通过以下方式获取项目ID：
 <li>通过项目列表查询项目ID。</li>

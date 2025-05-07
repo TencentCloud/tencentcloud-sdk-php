@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 路由列表过滤器
  *
  * @method string getName() 获取过滤名称,目前支持security-group-id,按安全组关联过滤
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置过滤名称,目前支持security-group-id,按安全组关联过滤
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getValues() 获取过滤值,当过滤名称为security-group-id时仅支持传单个value
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValues(array $Values) 设置过滤值,当过滤名称为security-group-id时仅支持传单个value
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRelation() 获取过滤关系,支持IN和NOT_IN,默认为IN
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRelation(string $Relation) 设置过滤关系,支持IN和NOT_IN,默认为IN
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RouteFilter extends AbstractModel
 {
     /**
      * @var string 过滤名称,目前支持security-group-id,按安全组关联过滤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var array 过滤值,当过滤名称为security-group-id时仅支持传单个value
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Values;
 
     /**
      * @var string 过滤关系,支持IN和NOT_IN,默认为IN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Relation;
 
     /**
      * @param string $Name 过滤名称,目前支持security-group-id,按安全组关联过滤
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Values 过滤值,当过滤名称为security-group-id时仅支持传单个value
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Relation 过滤关系,支持IN和NOT_IN,默认为IN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

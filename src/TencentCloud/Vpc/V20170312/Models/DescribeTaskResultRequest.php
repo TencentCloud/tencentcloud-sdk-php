@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTaskResult请求参数结构体
  *
- * @method integer getTaskId() 获取异步任务ID。TaskId和DealName必填一个参数
- * @method void setTaskId(integer $TaskId) 设置异步任务ID。TaskId和DealName必填一个参数
- * @method string getDealName() 获取计费订单号。TaskId和DealName必填一个参数
- * @method void setDealName(string $DealName) 设置计费订单号。TaskId和DealName必填一个参数
+ * @method integer getTaskId() 获取异步任务ID。从异步任务接口返回结果中查看。例如：[AllocateAddresses](https://cloud.tencent.com/document/product/215/16699)接口。TaskId和DealName必填一个参数。
+ * @method void setTaskId(integer $TaskId) 设置异步任务ID。从异步任务接口返回结果中查看。例如：[AllocateAddresses](https://cloud.tencent.com/document/product/215/16699)接口。TaskId和DealName必填一个参数。
+ * @method string getDealName() 获取计费订单号。在控制台中的[费用中心-订单管理](https://console.cloud.tencent.com/expense/deal)中查看订单号。TaskId和DealName必填一个参数。
+ * @method void setDealName(string $DealName) 设置计费订单号。在控制台中的[费用中心-订单管理](https://console.cloud.tencent.com/expense/deal)中查看订单号。TaskId和DealName必填一个参数。
  */
 class DescribeTaskResultRequest extends AbstractModel
 {
     /**
-     * @var integer 异步任务ID。TaskId和DealName必填一个参数
+     * @var integer 异步任务ID。从异步任务接口返回结果中查看。例如：[AllocateAddresses](https://cloud.tencent.com/document/product/215/16699)接口。TaskId和DealName必填一个参数。
      */
     public $TaskId;
 
     /**
-     * @var string 计费订单号。TaskId和DealName必填一个参数
+     * @var string 计费订单号。在控制台中的[费用中心-订单管理](https://console.cloud.tencent.com/expense/deal)中查看订单号。TaskId和DealName必填一个参数。
      */
     public $DealName;
 
     /**
-     * @param integer $TaskId 异步任务ID。TaskId和DealName必填一个参数
-     * @param string $DealName 计费订单号。TaskId和DealName必填一个参数
+     * @param integer $TaskId 异步任务ID。从异步任务接口返回结果中查看。例如：[AllocateAddresses](https://cloud.tencent.com/document/product/215/16699)接口。TaskId和DealName必填一个参数。
+     * @param string $DealName 计费订单号。在控制台中的[费用中心-订单管理](https://console.cloud.tencent.com/expense/deal)中查看订单号。TaskId和DealName必填一个参数。
      */
     function __construct()
     {

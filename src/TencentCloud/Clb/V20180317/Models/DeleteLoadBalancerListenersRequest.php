@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteLoadBalancerListeners请求参数结构体
  *
- * @method string getLoadBalancerId() 获取负载均衡实例ID。
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例ID。
- * @method array getListenerIds() 获取指定删除的监听器ID数组，最大为20个。若不填则删除负载均衡的所有监听器。
- * @method void setListenerIds(array $ListenerIds) 设置指定删除的监听器ID数组，最大为20个。若不填则删除负载均衡的所有监听器。
+ * @method string getLoadBalancerId() 获取负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口查询。
+ * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口查询。
+ * @method array getListenerIds() 获取指定删除的监听器ID数组，最大为20个。若不填则删除负载均衡的所有监听器，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
+ * @method void setListenerIds(array $ListenerIds) 设置指定删除的监听器ID数组，最大为20个。若不填则删除负载均衡的所有监听器，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
  */
 class DeleteLoadBalancerListenersRequest extends AbstractModel
 {
     /**
-     * @var string 负载均衡实例ID。
+     * @var string 负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口查询。
      */
     public $LoadBalancerId;
 
     /**
-     * @var array 指定删除的监听器ID数组，最大为20个。若不填则删除负载均衡的所有监听器。
+     * @var array 指定删除的监听器ID数组，最大为20个。若不填则删除负载均衡的所有监听器，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
      */
     public $ListenerIds;
 
     /**
-     * @param string $LoadBalancerId 负载均衡实例ID。
-     * @param array $ListenerIds 指定删除的监听器ID数组，最大为20个。若不填则删除负载均衡的所有监听器。
+     * @param string $LoadBalancerId 负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口查询。
+     * @param array $ListenerIds 指定删除的监听器ID数组，最大为20个。若不填则删除负载均衡的所有监听器，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
      */
     function __construct()
     {

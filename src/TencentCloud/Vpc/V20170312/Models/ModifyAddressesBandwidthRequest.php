@@ -20,10 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAddressesBandwidth请求参数结构体
  *
- * @method array getAddressIds() 获取EIP唯一标识ID列表，形如'eip-xxxx'
- * @method void setAddressIds(array $AddressIds) 设置EIP唯一标识ID列表，形如'eip-xxxx'
- * @method integer getInternetMaxBandwidthOut() 获取调整带宽目标值
- * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置调整带宽目标值
+ * @method array getAddressIds() 获取EIP唯一标识ID列表，形如'eip-xxxx'，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
+
+ * @method void setAddressIds(array $AddressIds) 设置EIP唯一标识ID列表，形如'eip-xxxx'，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
+
+ * @method integer getInternetMaxBandwidthOut() 获取调整带宽目标值，可调整的带宽上限值参考产品文档[带宽上限](https://cloud.tencent.com/document/product/1199/48333)。
+ * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置调整带宽目标值，可调整的带宽上限值参考产品文档[带宽上限](https://cloud.tencent.com/document/product/1199/48333)。
  * @method string getStartTime() 获取包月带宽起始时间(已废弃，输入无效)
  * @method void setStartTime(string $StartTime) 设置包月带宽起始时间(已废弃，输入无效)
  * @method string getEndTime() 获取包月带宽结束时间(已废弃，输入无效)
@@ -32,12 +34,13 @@ use TencentCloud\Common\AbstractModel;
 class ModifyAddressesBandwidthRequest extends AbstractModel
 {
     /**
-     * @var array EIP唯一标识ID列表，形如'eip-xxxx'
+     * @var array EIP唯一标识ID列表，形如'eip-xxxx'，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
+
      */
     public $AddressIds;
 
     /**
-     * @var integer 调整带宽目标值
+     * @var integer 调整带宽目标值，可调整的带宽上限值参考产品文档[带宽上限](https://cloud.tencent.com/document/product/1199/48333)。
      */
     public $InternetMaxBandwidthOut;
 
@@ -52,8 +55,9 @@ class ModifyAddressesBandwidthRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @param array $AddressIds EIP唯一标识ID列表，形如'eip-xxxx'
-     * @param integer $InternetMaxBandwidthOut 调整带宽目标值
+     * @param array $AddressIds EIP唯一标识ID列表，形如'eip-xxxx'，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
+
+     * @param integer $InternetMaxBandwidthOut 调整带宽目标值，可调整的带宽上限值参考产品文档[带宽上限](https://cloud.tencent.com/document/product/1199/48333)。
      * @param string $StartTime 包月带宽起始时间(已废弃，输入无效)
      * @param string $EndTime 包月带宽结束时间(已废弃，输入无效)
      */

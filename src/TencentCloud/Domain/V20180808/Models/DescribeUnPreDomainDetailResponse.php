@@ -24,12 +24,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) 设置域名
  * @method integer getPreCount() 获取预约人数
  * @method void setPreCount(integer $PreCount) 设置预约人数
- * @method string getRegTime() 获取域名注册时间
- * @method void setRegTime(string $RegTime) 设置域名注册时间
- * @method string getDeleteTime() 获取域名删除时间
- * @method void setDeleteTime(string $DeleteTime) 设置域名删除时间
- * @method string getExpireTime() 获取到期时间
- * @method void setExpireTime(string $ExpireTime) 设置到期时间
+ * @method string getRegTime() 获取域名注册时间 
+格式:YYYY-MM-DD HH:mm:ss
+ * @method void setRegTime(string $RegTime) 设置域名注册时间 
+格式:YYYY-MM-DD HH:mm:ss
+ * @method string getDeleteTime() 获取域名删除时间 
+格式:YYYY-MM-DD HH:mm:ss
+ * @method void setDeleteTime(string $DeleteTime) 设置域名删除时间 
+格式:YYYY-MM-DD HH:mm:ss
+ * @method string getExpireTime() 获取到期时间 
+格式:YYYY-MM-DD HH:mm:ss
+ * @method void setExpireTime(string $ExpireTime) 设置到期时间 
+格式:YYYY-MM-DD HH:mm:ss
  * @method string getStatus() 获取域名状态
  bid：出价
 noAction：无法操作
@@ -62,17 +68,20 @@ class DescribeUnPreDomainDetailResponse extends AbstractModel
     public $PreCount;
 
     /**
-     * @var string 域名注册时间
+     * @var string 域名注册时间 
+格式:YYYY-MM-DD HH:mm:ss
      */
     public $RegTime;
 
     /**
-     * @var string 域名删除时间
+     * @var string 域名删除时间 
+格式:YYYY-MM-DD HH:mm:ss
      */
     public $DeleteTime;
 
     /**
-     * @var string 到期时间
+     * @var string 到期时间 
+格式:YYYY-MM-DD HH:mm:ss
      */
     public $ExpireTime;
 
@@ -116,9 +125,12 @@ noAction：无法操作
     /**
      * @param string $Domain 域名
      * @param integer $PreCount 预约人数
-     * @param string $RegTime 域名注册时间
-     * @param string $DeleteTime 域名删除时间
-     * @param string $ExpireTime 到期时间
+     * @param string $RegTime 域名注册时间 
+格式:YYYY-MM-DD HH:mm:ss
+     * @param string $DeleteTime 域名删除时间 
+格式:YYYY-MM-DD HH:mm:ss
+     * @param string $ExpireTime 到期时间 
+格式:YYYY-MM-DD HH:mm:ss
      * @param string $Status 域名状态
  bid：出价
 noAction：无法操作

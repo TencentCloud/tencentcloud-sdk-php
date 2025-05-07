@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChatCompletions请求参数结构体
  *
- * @method array getMessages() 获取会话内容，按对话时间从旧到新在数组中排列，长度受模型窗口大小限制
- * @method void setMessages(array $Messages) 设置会话内容，按对话时间从旧到新在数组中排列，长度受模型窗口大小限制
- * @method string getModelName() 获取模型名称
- * @method void setModelName(string $ModelName) 设置模型名称
- * @method boolean getStream() 获取是否以流式接口的形式返回数据，默认true
- * @method void setStream(boolean $Stream) 设置是否以流式接口的形式返回数据，默认true
- * @method float getTopP() 获取取值区间为[0.0, 1.0], 非必要不建议使用, 不合理的取值会影响效果 
- * @method void setTopP(float $TopP) 设置取值区间为[0.0, 1.0], 非必要不建议使用, 不合理的取值会影响效果 
- * @method float getTemperature() 获取取值区间为[0.0, 2.0], 非必要不建议使用, 不合理的取值会影响效果 
- * @method void setTemperature(float $Temperature) 设置取值区间为[0.0, 2.0], 非必要不建议使用, 不合理的取值会影响效果 
+ * @method array getMessages() 获取会话内容，按对话时间从旧到新在数组中排列，长度受模型窗口大小限制。
+ * @method void setMessages(array $Messages) 设置会话内容，按对话时间从旧到新在数组中排列，长度受模型窗口大小限制。
+ * @method string getModelName() 获取模型名称，可选模型列表：hunyuan-turbo，hunyuan-large，hunyuan-large-longcontext，hunyuan-standard，hunyuan-standard-256K，deepseek-r1，deepseek-v3，deepseek-r1-distill-qwen-32b。
+ * @method void setModelName(string $ModelName) 设置模型名称，可选模型列表：hunyuan-turbo，hunyuan-large，hunyuan-large-longcontext，hunyuan-standard，hunyuan-standard-256K，deepseek-r1，deepseek-v3，deepseek-r1-distill-qwen-32b。
+ * @method boolean getStream() 获取是否以流式接口的形式返回数据，默认true。
+ * @method void setStream(boolean $Stream) 设置是否以流式接口的形式返回数据，默认true。
+ * @method float getTopP() 获取取值区间为[0.0, 1.0], 非必要不建议使用, 不合理的取值会影响效果 。
+ * @method void setTopP(float $TopP) 设置取值区间为[0.0, 1.0], 非必要不建议使用, 不合理的取值会影响效果 。
+ * @method float getTemperature() 获取取值区间为[0.0, 2.0], 非必要不建议使用, 不合理的取值会影响效果 。
+ * @method void setTemperature(float $Temperature) 设置取值区间为[0.0, 2.0], 非必要不建议使用, 不合理的取值会影响效果 。
  * @method boolean getOnlineSearch() 获取是否开启联网搜索。默认为 false。
  * @method void setOnlineSearch(boolean $OnlineSearch) 设置是否开启联网搜索。默认为 false。
  * @method OnlineSearchOptions getOnlineSearchOptions() 获取当 OnlineSearch 为 true 时，指定的搜索引擎，默认为 bing。
@@ -38,27 +38,27 @@ use TencentCloud\Common\AbstractModel;
 class ChatCompletionsRequest extends AbstractModel
 {
     /**
-     * @var array 会话内容，按对话时间从旧到新在数组中排列，长度受模型窗口大小限制
+     * @var array 会话内容，按对话时间从旧到新在数组中排列，长度受模型窗口大小限制。
      */
     public $Messages;
 
     /**
-     * @var string 模型名称
+     * @var string 模型名称，可选模型列表：hunyuan-turbo，hunyuan-large，hunyuan-large-longcontext，hunyuan-standard，hunyuan-standard-256K，deepseek-r1，deepseek-v3，deepseek-r1-distill-qwen-32b。
      */
     public $ModelName;
 
     /**
-     * @var boolean 是否以流式接口的形式返回数据，默认true
+     * @var boolean 是否以流式接口的形式返回数据，默认true。
      */
     public $Stream;
 
     /**
-     * @var float 取值区间为[0.0, 1.0], 非必要不建议使用, 不合理的取值会影响效果 
+     * @var float 取值区间为[0.0, 1.0], 非必要不建议使用, 不合理的取值会影响效果 。
      */
     public $TopP;
 
     /**
-     * @var float 取值区间为[0.0, 2.0], 非必要不建议使用, 不合理的取值会影响效果 
+     * @var float 取值区间为[0.0, 2.0], 非必要不建议使用, 不合理的取值会影响效果 。
      */
     public $Temperature;
 
@@ -73,11 +73,11 @@ class ChatCompletionsRequest extends AbstractModel
     public $OnlineSearchOptions;
 
     /**
-     * @param array $Messages 会话内容，按对话时间从旧到新在数组中排列，长度受模型窗口大小限制
-     * @param string $ModelName 模型名称
-     * @param boolean $Stream 是否以流式接口的形式返回数据，默认true
-     * @param float $TopP 取值区间为[0.0, 1.0], 非必要不建议使用, 不合理的取值会影响效果 
-     * @param float $Temperature 取值区间为[0.0, 2.0], 非必要不建议使用, 不合理的取值会影响效果 
+     * @param array $Messages 会话内容，按对话时间从旧到新在数组中排列，长度受模型窗口大小限制。
+     * @param string $ModelName 模型名称，可选模型列表：hunyuan-turbo，hunyuan-large，hunyuan-large-longcontext，hunyuan-standard，hunyuan-standard-256K，deepseek-r1，deepseek-v3，deepseek-r1-distill-qwen-32b。
+     * @param boolean $Stream 是否以流式接口的形式返回数据，默认true。
+     * @param float $TopP 取值区间为[0.0, 1.0], 非必要不建议使用, 不合理的取值会影响效果 。
+     * @param float $Temperature 取值区间为[0.0, 2.0], 非必要不建议使用, 不合理的取值会影响效果 。
      * @param boolean $OnlineSearch 是否开启联网搜索。默认为 false。
      * @param OnlineSearchOptions $OnlineSearchOptions 当 OnlineSearch 为 true 时，指定的搜索引擎，默认为 bing。
      */

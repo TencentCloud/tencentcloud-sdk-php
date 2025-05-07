@@ -30,12 +30,15 @@ use TencentCloud\Domain\V20180808\Models as Models;
  * @method Models\CheckBatchStatusResponse CheckBatchStatus(Models\CheckBatchStatusRequest $req) 本接口 ( CheckBatchStatus ) 用于查询批量操作日志状态 。
  * @method Models\CheckDomainResponse CheckDomain(Models\CheckDomainRequest $req) 检查域名是否可以注册。
  * @method Models\CreateCustomDnsHostResponse CreateCustomDnsHost(Models\CreateCustomDnsHostRequest $req) 创建自定义DNS Host
+域名在“正常状态”下可创建，域名如果“未实名”则无法创建，账户如果未实名则无法创建。
+默认每个域名 自定义DNS Host 数量不超过10个
  * @method Models\CreateDomainBatchResponse CreateDomainBatch(Models\CreateDomainBatchRequest $req) 本接口 ( CreateDomainBatch ) 用于批量域名注册 。
  * @method Models\CreateDomainRedemptionResponse CreateDomainRedemption(Models\CreateDomainRedemptionRequest $req) 创建赎回订单。需要域名状态为：RedemptionPending：赎回期
  * @method Models\CreatePhoneEmailResponse CreatePhoneEmail(Models\CreatePhoneEmailRequest $req) 此接口用于创建有效的手机、邮箱
  * @method Models\CreateTemplateResponse CreateTemplate(Models\CreateTemplateRequest $req) 本接口 ( CreateTemplate ) 用于添加域名信息模板 。
  * @method Models\DeleteBiddingResponse DeleteBidding(Models\DeleteBiddingRequest $req) 删除记录。
  * @method Models\DeleteCustomDnsHostResponse DeleteCustomDnsHost(Models\DeleteCustomDnsHostRequest $req) 删除自定义DNS Host
+仅能删除域名在“正常状态”下，已经创建过的自定义Host，域名如果“未实名”或账户未实名，则无法操作
  * @method Models\DeletePhoneEmailResponse DeletePhoneEmail(Models\DeletePhoneEmailRequest $req) 此接口用于删除已验证的手机邮箱
  * @method Models\DeleteReservedPreDomainInfoResponse DeleteReservedPreDomainInfo(Models\DeleteReservedPreDomainInfoRequest $req) 用于清除多余的预定域名信息
  * @method Models\DeleteTemplateResponse DeleteTemplate(Models\DeleteTemplateRequest $req) 本接口 ( DeleteTemplate ) 用于删除信息模板。
@@ -66,6 +69,7 @@ use TencentCloud\Domain\V20180808\Models as Models;
  * @method Models\DescribeTldListResponse DescribeTldList(Models\DescribeTldListRequest $req) 用于获取域名注册当前支持注册的后缀
  * @method Models\DescribeUnPreDomainDetailResponse DescribeUnPreDomainDetail(Models\DescribeUnPreDomainDetailRequest $req) 查询预释放未预约域名详情接口
  * @method Models\ModifyCustomDnsHostResponse ModifyCustomDnsHost(Models\ModifyCustomDnsHostRequest $req) 修改自定义DNS Host
+域名在“正常状态”下可修改已经存在的自定义DNS Host，域名如果“未实名”则无法修改，账户如果未实名则无法修改。 默认每个域名 自定义DNS Host 数量不超过10个
  * @method Models\ModifyDomainDNSBatchResponse ModifyDomainDNSBatch(Models\ModifyDomainDNSBatchRequest $req) 本接口 ( ModifyDomainDNSBatch) 用于批量域名 DNS 修改 。
  * @method Models\ModifyDomainOwnerBatchResponse ModifyDomainOwnerBatch(Models\ModifyDomainOwnerBatchRequest $req) 本接口 ( ModifyDomainOwnerBatch) 用于域名批量账号间转移 。
  * @method Models\ModifyIntlCustomDnsHostResponse ModifyIntlCustomDnsHost(Models\ModifyIntlCustomDnsHostRequest $req) 国际站-修改DNS Host

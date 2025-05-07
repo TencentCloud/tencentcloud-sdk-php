@@ -81,9 +81,7 @@ use TencentCloud\Common\AbstractModel;
 <p style="padding-left: 30px;">表示共享带宽包。</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTagSet() 获取弹性公网IP关联的标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagSet(array $TagSet) 设置弹性公网IP关联的标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeadlineDate() 获取到期时间。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeadlineDate(string $DeadlineDate) 设置到期时间。
@@ -109,13 +107,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBandwidthPackageId(string $BandwidthPackageId) 设置当前公网IP所关联的带宽包ID，如果该公网IP未使用带宽包计费，则返回为空
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUnVpcId() 获取传统弹性公网IPv6所属vpc唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnVpcId(string $UnVpcId) 设置传统弹性公网IPv6所属vpc唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDedicatedClusterId() 获取CDC唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDedicatedClusterId(string $DedicatedClusterId) 设置CDC唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Address extends AbstractModel
 {
@@ -223,7 +217,6 @@ class Address extends AbstractModel
 
     /**
      * @var array 弹性公网IP关联的标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagSet;
 
@@ -265,13 +258,11 @@ class Address extends AbstractModel
 
     /**
      * @var string 传统弹性公网IPv6所属vpc唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UnVpcId;
 
     /**
      * @var string CDC唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DedicatedClusterId;
 
@@ -307,7 +298,6 @@ class Address extends AbstractModel
 <p style="padding-left: 30px;">表示共享带宽包。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TagSet 弹性公网IP关联的标签列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeadlineDate 到期时间。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceType EIP绑定的实例类型。
@@ -321,9 +311,7 @@ class Address extends AbstractModel
      * @param string $BandwidthPackageId 当前公网IP所关联的带宽包ID，如果该公网IP未使用带宽包计费，则返回为空
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UnVpcId 传统弹性公网IPv6所属vpc唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DedicatedClusterId CDC唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

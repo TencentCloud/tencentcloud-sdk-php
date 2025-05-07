@@ -21,21 +21,21 @@ use TencentCloud\Common\AbstractModel;
  * DeleteBidding请求参数结构体
  *
  * @method string getBusinessID() 获取预约ID
-可通过DescribeBiddingList接口获取
+可通过[DescribeBiddingList](https://cloud.tencent.com/document/api/242/106598)接口获取
  * @method void setBusinessID(string $BusinessID) 设置预约ID
-可通过DescribeBiddingList接口获取
+可通过[DescribeBiddingList](https://cloud.tencent.com/document/api/242/106598)接口获取
  */
 class DeleteBiddingRequest extends AbstractModel
 {
     /**
      * @var string 预约ID
-可通过DescribeBiddingList接口获取
+可通过[DescribeBiddingList](https://cloud.tencent.com/document/api/242/106598)接口获取
      */
     public $BusinessID;
 
     /**
      * @param string $BusinessID 预约ID
-可通过DescribeBiddingList接口获取
+可通过[DescribeBiddingList](https://cloud.tencent.com/document/api/242/106598)接口获取
      */
     function __construct()
     {

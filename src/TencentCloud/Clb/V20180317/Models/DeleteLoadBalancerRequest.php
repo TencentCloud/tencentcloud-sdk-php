@@ -20,26 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteLoadBalancer请求参数结构体
  *
- * @method array getLoadBalancerIds() 获取要删除的负载均衡实例 ID数组，数组大小最大支持20。
- * @method void setLoadBalancerIds(array $LoadBalancerIds) 设置要删除的负载均衡实例 ID数组，数组大小最大支持20。
- * @method boolean getForceDelete() 获取是否强制删除clb。为true表示强制删除，为false表示不是强制删除，需要做拦截校验。
- * @method void setForceDelete(boolean $ForceDelete) 设置是否强制删除clb。为true表示强制删除，为false表示不是强制删除，需要做拦截校验。
+ * @method array getLoadBalancerIds() 获取要删除的负载均衡实例 ID 数组，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取数组大小最大支持20。
+ * @method void setLoadBalancerIds(array $LoadBalancerIds) 设置要删除的负载均衡实例 ID 数组，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取数组大小最大支持20。
+ * @method boolean getForceDelete() 获取是否强制删除clb。True表示强制删除，False表示不是强制删除，需要做拦截校验。
+默认为 False
+ * @method void setForceDelete(boolean $ForceDelete) 设置是否强制删除clb。True表示强制删除，False表示不是强制删除，需要做拦截校验。
+默认为 False
  */
 class DeleteLoadBalancerRequest extends AbstractModel
 {
     /**
-     * @var array 要删除的负载均衡实例 ID数组，数组大小最大支持20。
+     * @var array 要删除的负载均衡实例 ID 数组，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取数组大小最大支持20。
      */
     public $LoadBalancerIds;
 
     /**
-     * @var boolean 是否强制删除clb。为true表示强制删除，为false表示不是强制删除，需要做拦截校验。
+     * @var boolean 是否强制删除clb。True表示强制删除，False表示不是强制删除，需要做拦截校验。
+默认为 False
      */
     public $ForceDelete;
 
     /**
-     * @param array $LoadBalancerIds 要删除的负载均衡实例 ID数组，数组大小最大支持20。
-     * @param boolean $ForceDelete 是否强制删除clb。为true表示强制删除，为false表示不是强制删除，需要做拦截校验。
+     * @param array $LoadBalancerIds 要删除的负载均衡实例 ID 数组，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取数组大小最大支持20。
+     * @param boolean $ForceDelete 是否强制删除clb。True表示强制删除，False表示不是强制删除，需要做拦截校验。
+默认为 False
      */
     function __construct()
     {

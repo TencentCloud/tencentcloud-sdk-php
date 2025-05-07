@@ -61,9 +61,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getBandwidth() 获取带宽包限速大小。单位：Mbps，-1表示不限速。
  * @method void setBandwidth(integer $Bandwidth) 设置带宽包限速大小。单位：Mbps，-1表示不限速。
  * @method string getEgress() 获取网络出口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEgress(string $Egress) 设置网络出口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeadline() 获取带宽包到期时间，只有预付费会返回，按量计费返回为null
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeadline(string $Deadline) 设置带宽包到期时间，只有预付费会返回，按量计费返回为null
@@ -125,7 +123,6 @@ class BandwidthPackage extends AbstractModel
 
     /**
      * @var string 网络出口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Egress;
 
@@ -157,7 +154,6 @@ class BandwidthPackage extends AbstractModel
      * @param array $ResourceSet 带宽包资源信息
      * @param integer $Bandwidth 带宽包限速大小。单位：Mbps，-1表示不限速。
      * @param string $Egress 网络出口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Deadline 带宽包到期时间，只有预付费会返回，按量计费返回为null
 注意：此字段可能返回 null，表示取不到有效值。
      */

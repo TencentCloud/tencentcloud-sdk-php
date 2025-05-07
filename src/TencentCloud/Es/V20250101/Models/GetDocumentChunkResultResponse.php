@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetDocumentChunkResult返回参数结构体
  *
- * @method integer getStatus() 获取任务状态
- * @method void setStatus(integer $Status) 设置任务状态
- * @method string getDocumentChunkResultUrl() 获取切片结果
- * @method void setDocumentChunkResultUrl(string $DocumentChunkResultUrl) 设置切片结果
- * @method DocumentChunkUsage getUsage() 获取用量
- * @method void setUsage(DocumentChunkUsage $Usage) 设置用量
+ * @method integer getStatus() 获取任务状态，-1：失败，0：运行中，1：成功。
+ * @method void setStatus(integer $Status) 设置任务状态，-1：失败，0：运行中，1：成功。
+ * @method string getDocumentChunkResultUrl() 获取切片结果文件。
+ * @method void setDocumentChunkResultUrl(string $DocumentChunkResultUrl) 设置切片结果文件。
+ * @method DocumentChunkUsage getUsage() 获取Token用量。
+ * @method void setUsage(DocumentChunkUsage $Usage) 设置Token用量。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class GetDocumentChunkResultResponse extends AbstractModel
 {
     /**
-     * @var integer 任务状态
+     * @var integer 任务状态，-1：失败，0：运行中，1：成功。
      */
     public $Status;
 
     /**
-     * @var string 切片结果
+     * @var string 切片结果文件。
      */
     public $DocumentChunkResultUrl;
 
     /**
-     * @var DocumentChunkUsage 用量
+     * @var DocumentChunkUsage Token用量。
      */
     public $Usage;
 
@@ -52,9 +52,9 @@ class GetDocumentChunkResultResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Status 任务状态
-     * @param string $DocumentChunkResultUrl 切片结果
-     * @param DocumentChunkUsage $Usage 用量
+     * @param integer $Status 任务状态，-1：失败，0：运行中，1：成功。
+     * @param string $DocumentChunkResultUrl 切片结果文件。
+     * @param DocumentChunkUsage $Usage Token用量。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

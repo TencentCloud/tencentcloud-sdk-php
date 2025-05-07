@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCosPermissionList(array $CosPermissionList) 设置cos授权路径列表
  * @method string getPermissionJson() 获取cam策略json
  * @method void setPermissionJson(string $PermissionJson) 设置cam策略json
+ * @method integer getIsDefault() 获取是否设置为常驻：1非常驻（默认）、2常驻（仅能设置一个常驻）
+ * @method void setIsDefault(integer $IsDefault) 设置是否设置为常驻：1非常驻（默认）、2常驻（仅能设置一个常驻）
  */
 class UserRole extends AbstractModel
 {
@@ -94,6 +96,11 @@ class UserRole extends AbstractModel
     public $PermissionJson;
 
     /**
+     * @var integer 是否设置为常驻：1非常驻（默认）、2常驻（仅能设置一个常驻）
+     */
+    public $IsDefault;
+
+    /**
      * @param integer $RoleId 角色ID
      * @param string $AppId 用户app ID
      * @param string $Uin 用户ID
@@ -104,6 +111,7 @@ class UserRole extends AbstractModel
      * @param string $Creator 创建者UIN
      * @param array $CosPermissionList cos授权路径列表
      * @param string $PermissionJson cam策略json
+     * @param integer $IsDefault 是否设置为常驻：1非常驻（默认）、2常驻（仅能设置一个常驻）
      */
     function __construct()
     {
@@ -161,6 +169,10 @@ class UserRole extends AbstractModel
 
         if (array_key_exists("PermissionJson",$param) and $param["PermissionJson"] !== null) {
             $this->PermissionJson = $param["PermissionJson"];
+        }
+
+        if (array_key_exists("IsDefault",$param) and $param["IsDefault"] !== null) {
+            $this->IsDefault = $param["IsDefault"];
         }
     }
 }

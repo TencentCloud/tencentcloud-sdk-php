@@ -20,8 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SetDomainAutoRenew请求参数结构体
  *
- * @method string getDomainId() 获取域名ID 例如：domain-dwerewwq可通过DescribreDomainList接口获取
- * @method void setDomainId(string $DomainId) 设置域名ID 例如：domain-dwerewwq可通过DescribreDomainList接口获取
+ * @method string getDomainId() 获取域名实例ID
+可通过DescribeDomainNameList接口获取(https://cloud.tencent.com/document/api/242/48941)
+ * @method void setDomainId(string $DomainId) 设置域名实例ID
+可通过DescribeDomainNameList接口获取(https://cloud.tencent.com/document/api/242/48941)
  * @method integer getAutoRenew() 获取AutoRenew 有三个可选值：
  0：不设置自动续费
 1：设置自动续费
@@ -34,7 +36,8 @@ use TencentCloud\Common\AbstractModel;
 class SetDomainAutoRenewRequest extends AbstractModel
 {
     /**
-     * @var string 域名ID 例如：domain-dwerewwq可通过DescribreDomainList接口获取
+     * @var string 域名实例ID
+可通过DescribeDomainNameList接口获取(https://cloud.tencent.com/document/api/242/48941)
      */
     public $DomainId;
 
@@ -47,7 +50,8 @@ class SetDomainAutoRenewRequest extends AbstractModel
     public $AutoRenew;
 
     /**
-     * @param string $DomainId 域名ID 例如：domain-dwerewwq可通过DescribreDomainList接口获取
+     * @param string $DomainId 域名实例ID
+可通过DescribeDomainNameList接口获取(https://cloud.tencent.com/document/api/242/48941)
      * @param integer $AutoRenew AutoRenew 有三个可选值：
  0：不设置自动续费
 1：设置自动续费

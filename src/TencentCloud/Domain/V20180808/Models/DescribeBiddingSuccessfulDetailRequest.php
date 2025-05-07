@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBiddingSuccessfulDetail请求参数结构体
  *
- * @method string getBusinessID() 获取预约ID
-可通过DescribeBiddingSuccessfulList接口获取
- * @method void setBusinessID(string $BusinessID) 设置预约ID
-可通过DescribeBiddingSuccessfulList接口获取
+ * @method string getBusinessID() 获取预约ID 
+可通过[DescribeBiddingSuccessfulList](https://cloud.tencent.com/document/api/242/106596)接口获取
+ * @method void setBusinessID(string $BusinessID) 设置预约ID 
+可通过[DescribeBiddingSuccessfulList](https://cloud.tencent.com/document/api/242/106596)接口获取
  */
 class DescribeBiddingSuccessfulDetailRequest extends AbstractModel
 {
     /**
-     * @var string 预约ID
-可通过DescribeBiddingSuccessfulList接口获取
+     * @var string 预约ID 
+可通过[DescribeBiddingSuccessfulList](https://cloud.tencent.com/document/api/242/106596)接口获取
      */
     public $BusinessID;
 
     /**
-     * @param string $BusinessID 预约ID
-可通过DescribeBiddingSuccessfulList接口获取
+     * @param string $BusinessID 预约ID 
+可通过[DescribeBiddingSuccessfulList](https://cloud.tencent.com/document/api/242/106596)接口获取
      */
     function __construct()
     {

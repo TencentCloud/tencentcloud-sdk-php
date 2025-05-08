@@ -137,6 +137,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTenant() 获取用户自定义的租户别名，如果没有，会复用专业集群 ID
 
  * @method void setTenant(string $Tenant) 设置用户自定义的租户别名，如果没有，会复用专业集群 ID
+
+ * @method boolean getIsolateConsumerEnable() 获取是否开启异常消费者隔离
+ * @method void setIsolateConsumerEnable(boolean $IsolateConsumerEnable) 设置是否开启异常消费者隔离
+ * @method integer getAckTimeOut() 获取消费者 Ack 超时时间，单位：秒
+ * @method void setAckTimeOut(integer $AckTimeOut) 设置消费者 Ack 超时时间，单位：秒
  */
 class Topic extends AbstractModel
 {
@@ -300,6 +305,16 @@ class Topic extends AbstractModel
     public $Tenant;
 
     /**
+     * @var boolean 是否开启异常消费者隔离
+     */
+    public $IsolateConsumerEnable;
+
+    /**
+     * @var integer 消费者 Ack 超时时间，单位：秒
+     */
+    public $AckTimeOut;
+
+    /**
      * @param string $AverageMsgSize 最后一次间隔内发布消息的平均byte大小。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConsumerCount 消费者数量。
@@ -358,6 +373,9 @@ class Topic extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterId 集群 ID
      * @param string $Tenant 用户自定义的租户别名，如果没有，会复用专业集群 ID
+
+     * @param boolean $IsolateConsumerEnable 是否开启异常消费者隔离
+     * @param integer $AckTimeOut 消费者 Ack 超时时间，单位：秒
      */
     function __construct()
     {
@@ -475,6 +493,14 @@ class Topic extends AbstractModel
 
         if (array_key_exists("Tenant",$param) and $param["Tenant"] !== null) {
             $this->Tenant = $param["Tenant"];
+        }
+
+        if (array_key_exists("IsolateConsumerEnable",$param) and $param["IsolateConsumerEnable"] !== null) {
+            $this->IsolateConsumerEnable = $param["IsolateConsumerEnable"];
+        }
+
+        if (array_key_exists("AckTimeOut",$param) and $param["AckTimeOut"] !== null) {
+            $this->AckTimeOut = $param["AckTimeOut"];
         }
     }
 }

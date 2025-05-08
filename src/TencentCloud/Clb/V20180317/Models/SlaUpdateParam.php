@@ -20,8 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 升级为性能容量型参数
  *
- * @method string getLoadBalancerId() 获取lb的字符串ID
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置lb的字符串ID
+ * @method string getLoadBalancerId() 获取负载均衡实例 ID。
+可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
+ * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID。
+可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
  * @method string getSlaType() 获取性能容量型规格，取值范围：
 <li> clb.c2.medium：标准型规格 </li>
 <li> clb.c3.small：高阶型1规格 </li>
@@ -42,7 +44,8 @@ use TencentCloud\Common\AbstractModel;
 class SlaUpdateParam extends AbstractModel
 {
     /**
-     * @var string lb的字符串ID
+     * @var string 负载均衡实例 ID。
+可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
      */
     public $LoadBalancerId;
 
@@ -59,7 +62,8 @@ class SlaUpdateParam extends AbstractModel
     public $SlaType;
 
     /**
-     * @param string $LoadBalancerId lb的字符串ID
+     * @param string $LoadBalancerId 负载均衡实例 ID。
+可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
      * @param string $SlaType 性能容量型规格，取值范围：
 <li> clb.c2.medium：标准型规格 </li>
 <li> clb.c3.small：高阶型1规格 </li>

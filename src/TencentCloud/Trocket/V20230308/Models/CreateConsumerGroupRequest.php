@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConsumerGroup(string $ConsumerGroup) 设置消费组名称
  * @method string getRemark() 获取备注
  * @method void setRemark(string $Remark) 设置备注
+ * @method array getTagList() 获取标签列表
+ * @method void setTagList(array $TagList) 设置标签列表
  */
 class CreateConsumerGroupRequest extends AbstractModel
 {
@@ -69,6 +71,11 @@ class CreateConsumerGroupRequest extends AbstractModel
     public $Remark;
 
     /**
+     * @var array 标签列表
+     */
+    public $TagList;
+
+    /**
      * @param string $InstanceId 集群ID
      * @param integer $MaxRetryTimes 最大重试次数
      * @param boolean $ConsumeEnable 是否开启消费
@@ -76,6 +83,7 @@ class CreateConsumerGroupRequest extends AbstractModel
 并发投递：false
      * @param string $ConsumerGroup 消费组名称
      * @param string $Remark 备注
+     * @param array $TagList 标签列表
      */
     function __construct()
     {
@@ -112,6 +120,15 @@ class CreateConsumerGroupRequest extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("TagList",$param) and $param["TagList"] !== null) {
+            $this->TagList = [];
+            foreach ($param["TagList"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagList, $obj);
+            }
         }
     }
 }

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setListenerId(string $ListenerId) 设置负载均衡监听器ID。
  * @method array getTargets() 获取待绑定的后端服务列表，数组长度最大支持20。
  * @method void setTargets(array $Targets) 设置待绑定的后端服务列表，数组长度最大支持20。
- * @method string getLocationId() 获取转发规则的ID，当绑定后端服务到七层转发规则时，必须提供此参数或Domain+Url两者之一。
- * @method void setLocationId(string $LocationId) 设置转发规则的ID，当绑定后端服务到七层转发规则时，必须提供此参数或Domain+Url两者之一。
+ * @method string getLocationId() 获取转发规则的ID，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口获取，当绑定后端服务到七层转发规则时，必须提供此参数或Domain+Url两者之一。
+ * @method void setLocationId(string $LocationId) 设置转发规则的ID，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口获取，当绑定后端服务到七层转发规则时，必须提供此参数或Domain+Url两者之一。
  * @method string getDomain() 获取目标转发规则的域名，提供LocationId参数时本参数不生效。
  * @method void setDomain(string $Domain) 设置目标转发规则的域名，提供LocationId参数时本参数不生效。
  * @method string getUrl() 获取目标转发规则的URL，提供LocationId参数时本参数不生效。
@@ -51,7 +51,7 @@ class RegisterTargetsRequest extends AbstractModel
     public $Targets;
 
     /**
-     * @var string 转发规则的ID，当绑定后端服务到七层转发规则时，必须提供此参数或Domain+Url两者之一。
+     * @var string 转发规则的ID，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口获取，当绑定后端服务到七层转发规则时，必须提供此参数或Domain+Url两者之一。
      */
     public $LocationId;
 
@@ -69,7 +69,7 @@ class RegisterTargetsRequest extends AbstractModel
      * @param string $LoadBalancerId 负载均衡实例ID。
      * @param string $ListenerId 负载均衡监听器ID。
      * @param array $Targets 待绑定的后端服务列表，数组长度最大支持20。
-     * @param string $LocationId 转发规则的ID，当绑定后端服务到七层转发规则时，必须提供此参数或Domain+Url两者之一。
+     * @param string $LocationId 转发规则的ID，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口获取，当绑定后端服务到七层转发规则时，必须提供此参数或Domain+Url两者之一。
      * @param string $Domain 目标转发规则的域名，提供LocationId参数时本参数不生效。
      * @param string $Url 目标转发规则的URL，提供LocationId参数时本参数不生效。
      */

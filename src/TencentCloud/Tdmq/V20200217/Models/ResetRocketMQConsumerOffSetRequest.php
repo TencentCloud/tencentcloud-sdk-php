@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNamespaceId(string $NamespaceId) 设置命名空间名称
  * @method string getGroupId() 获取消费组名称
  * @method void setGroupId(string $GroupId) 设置消费组名称
- * @method string getTopic() 获取主题名称
- * @method void setTopic(string $Topic) 设置主题名称
  * @method integer getType() 获取重置方式，0表示从最新位点开始，1表示从指定时间点开始
  * @method void setType(integer $Type) 设置重置方式，0表示从最新位点开始，1表示从指定时间点开始
+ * @method string getTopic() 获取主题名称
+ * @method void setTopic(string $Topic) 设置主题名称
  * @method integer getResetTimestamp() 获取重置指定的时间戳，仅在 Type 为1是生效，以毫秒为单位
  * @method void setResetTimestamp(integer $ResetTimestamp) 设置重置指定的时间戳，仅在 Type 为1是生效，以毫秒为单位
  */
@@ -51,14 +51,14 @@ class ResetRocketMQConsumerOffSetRequest extends AbstractModel
     public $GroupId;
 
     /**
-     * @var string 主题名称
-     */
-    public $Topic;
-
-    /**
      * @var integer 重置方式，0表示从最新位点开始，1表示从指定时间点开始
      */
     public $Type;
+
+    /**
+     * @var string 主题名称
+     */
+    public $Topic;
 
     /**
      * @var integer 重置指定的时间戳，仅在 Type 为1是生效，以毫秒为单位
@@ -69,8 +69,8 @@ class ResetRocketMQConsumerOffSetRequest extends AbstractModel
      * @param string $ClusterId 集群ID
      * @param string $NamespaceId 命名空间名称
      * @param string $GroupId 消费组名称
-     * @param string $Topic 主题名称
      * @param integer $Type 重置方式，0表示从最新位点开始，1表示从指定时间点开始
+     * @param string $Topic 主题名称
      * @param integer $ResetTimestamp 重置指定的时间戳，仅在 Type 为1是生效，以毫秒为单位
      */
     function __construct()
@@ -98,12 +98,12 @@ class ResetRocketMQConsumerOffSetRequest extends AbstractModel
             $this->GroupId = $param["GroupId"];
         }
 
-        if (array_key_exists("Topic",$param) and $param["Topic"] !== null) {
-            $this->Topic = $param["Topic"];
-        }
-
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("Topic",$param) and $param["Topic"] !== null) {
+            $this->Topic = $param["Topic"];
         }
 
         if (array_key_exists("ResetTimestamp",$param) and $param["ResetTimestamp"] !== null) {

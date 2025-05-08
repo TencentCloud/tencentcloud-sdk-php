@@ -106,6 +106,10 @@ use TencentCloud\Common\AbstractModel;
 4: 试用版到期;
 8: 账号欠费
 }
+ * @method integer getIsRemoteCommandExecutionAnalysis() 获取是否开远程命令执行检测（0=关， 1=开）
+ * @method void setIsRemoteCommandExecutionAnalysis(integer $IsRemoteCommandExecutionAnalysis) 设置是否开远程命令执行检测（0=关， 1=开）
+ * @method integer getIsMemoryHijackingAnalysis() 获取是否开内存马执行检测（0=关， 1=开）
+ * @method void setIsMemoryHijackingAnalysis(integer $IsMemoryHijackingAnalysis) 设置是否开内存马执行检测（0=关， 1=开）
  */
 class ApmInstanceDetail extends AbstractModel
 {
@@ -301,6 +305,16 @@ class ApmInstanceDetail extends AbstractModel
     public $StopReason;
 
     /**
+     * @var integer 是否开远程命令执行检测（0=关， 1=开）
+     */
+    public $IsRemoteCommandExecutionAnalysis;
+
+    /**
+     * @var integer 是否开内存马执行检测（0=关， 1=开）
+     */
+    public $IsMemoryHijackingAnalysis;
+
+    /**
      * @param string $InstanceId 业务系统 ID
      * @param string $Name 业务系统名
      * @param string $Description 业务系统描述信息
@@ -344,6 +358,8 @@ class ApmInstanceDetail extends AbstractModel
 4: 试用版到期;
 8: 账号欠费
 }
+     * @param integer $IsRemoteCommandExecutionAnalysis 是否开远程命令执行检测（0=关， 1=开）
+     * @param integer $IsMemoryHijackingAnalysis 是否开内存马执行检测（0=关， 1=开）
      */
     function __construct()
     {
@@ -509,6 +525,14 @@ class ApmInstanceDetail extends AbstractModel
 
         if (array_key_exists("StopReason",$param) and $param["StopReason"] !== null) {
             $this->StopReason = $param["StopReason"];
+        }
+
+        if (array_key_exists("IsRemoteCommandExecutionAnalysis",$param) and $param["IsRemoteCommandExecutionAnalysis"] !== null) {
+            $this->IsRemoteCommandExecutionAnalysis = $param["IsRemoteCommandExecutionAnalysis"];
+        }
+
+        if (array_key_exists("IsMemoryHijackingAnalysis",$param) and $param["IsMemoryHijackingAnalysis"] !== null) {
+            $this->IsMemoryHijackingAnalysis = $param["IsMemoryHijackingAnalysis"];
         }
     }
 }

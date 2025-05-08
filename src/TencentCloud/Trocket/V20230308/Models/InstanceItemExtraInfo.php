@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceStatus(integer $InstanceStatus) 设置4.0共享集群状态
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsFrozen() 获取是否已冻结
+ * @method void setIsFrozen(boolean $IsFrozen) 设置是否已冻结
  */
 class InstanceItemExtraInfo extends AbstractModel
 {
@@ -114,6 +116,11 @@ class InstanceItemExtraInfo extends AbstractModel
     public $InstanceStatus;
 
     /**
+     * @var boolean 是否已冻结
+     */
+    public $IsFrozen;
+
+    /**
      * @param boolean $IsVip 是否vip
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VipInstanceStatus 4.x专享集群状态
@@ -132,6 +139,7 @@ class InstanceItemExtraInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InstanceStatus 4.0共享集群状态
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsFrozen 是否已冻结
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class InstanceItemExtraInfo extends AbstractModel
 
         if (array_key_exists("InstanceStatus",$param) and $param["InstanceStatus"] !== null) {
             $this->InstanceStatus = $param["InstanceStatus"];
+        }
+
+        if (array_key_exists("IsFrozen",$param) and $param["IsFrozen"] !== null) {
+            $this->IsFrozen = $param["IsFrozen"];
         }
     }
 }

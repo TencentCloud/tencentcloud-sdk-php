@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateRule请求参数结构体
  *
- * @method string getLoadBalancerId() 获取负载均衡实例 ID。
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID。
- * @method string getListenerId() 获取监听器 ID。
- * @method void setListenerId(string $ListenerId) 设置监听器 ID。
+ * @method string getLoadBalancerId() 获取负载均衡实例 ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取
+ * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取
+ * @method string getListenerId() 获取监听器 ID，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口获取
+ * @method void setListenerId(string $ListenerId) 设置监听器 ID，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口获取
  * @method array getRules() 获取新建转发规则的信息。
  * @method void setRules(array $Rules) 设置新建转发规则的信息。
  */
 class CreateRuleRequest extends AbstractModel
 {
     /**
-     * @var string 负载均衡实例 ID。
+     * @var string 负载均衡实例 ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取
      */
     public $LoadBalancerId;
 
     /**
-     * @var string 监听器 ID。
+     * @var string 监听器 ID，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口获取
      */
     public $ListenerId;
 
@@ -45,8 +45,8 @@ class CreateRuleRequest extends AbstractModel
     public $Rules;
 
     /**
-     * @param string $LoadBalancerId 负载均衡实例 ID。
-     * @param string $ListenerId 监听器 ID。
+     * @param string $LoadBalancerId 负载均衡实例 ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取
+     * @param string $ListenerId 监听器 ID，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口获取
      * @param array $Rules 新建转发规则的信息。
      */
     function __construct()

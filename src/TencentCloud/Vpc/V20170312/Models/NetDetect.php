@@ -69,13 +69,9 @@ NONEXTHOP：无下一跳；
 下一跳类型为CCN，取值云联网ID，形如：ccn-12345678；
 下一跳类型为NONEXTHOP，指定网络探测为无下一跳的网络探测，添加和修改时，不需要指定值，查询时值为空字符串；
  * @method string getNextHopName() 获取下一跳网关名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNextHopName(string $NextHopName) 设置下一跳网关名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNetDetectDescription() 获取网络探测描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetDetectDescription(string $NetDetectDescription) 设置网络探测描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间。
  * @method void setCreateTime(string $CreateTime) 设置创建时间。
  * @method array getTagSet() 获取标签键值对。	
@@ -149,13 +145,11 @@ NONEXTHOP：无下一跳；
 
     /**
      * @var string 下一跳网关名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NextHopName;
 
     /**
      * @var string 网络探测描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NetDetectDescription;
 
@@ -195,9 +189,7 @@ NONEXTHOP：无下一跳；
 下一跳类型为CCN，取值云联网ID，形如：ccn-12345678；
 下一跳类型为NONEXTHOP，指定网络探测为无下一跳的网络探测，添加和修改时，不需要指定值，查询时值为空字符串；
      * @param string $NextHopName 下一跳网关名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NetDetectDescription 网络探测描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间。
      * @param array $TagSet 标签键值对。	
      */

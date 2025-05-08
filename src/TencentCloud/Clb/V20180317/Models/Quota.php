@@ -26,16 +26,18 @@ use TencentCloud\Common\AbstractModel;
 <li> TOTAL_LISTENER_QUOTA：一个CLB下的监听器配额 </li>
 <li> TOTAL_LISTENER_RULE_QUOTA：一个监听器下的转发规则配额 </li>
 <li> TOTAL_TARGET_BIND_QUOTA：一条转发规则下可绑定设备的配额 </li>
-<li> TOTAL_SNAP_IP_QUOTA： 一个CLB实例下跨地域2.0的SNAT IP配额 </li>
+<li> TOTAL_SNAT_IP_QUOTA： 一个CLB实例下跨地域2.0的SNAT IP配额 </li>
 <li>TOTAL_ISP_CLB_QUOTA：用户当前地域下的三网CLB配额 </li>
+<li>TOTAL_FULL_PORT_RANGE_LISTENER_QUOTA：一个CLB实例下的单个协议全端口段监听器配额</li>
  * @method void setQuotaId(string $QuotaId) 设置配额名称，取值范围：
 <li> TOTAL_OPEN_CLB_QUOTA：用户当前地域下的公网CLB配额 </li>
 <li> TOTAL_INTERNAL_CLB_QUOTA：用户当前地域下的内网CLB配额 </li>
 <li> TOTAL_LISTENER_QUOTA：一个CLB下的监听器配额 </li>
 <li> TOTAL_LISTENER_RULE_QUOTA：一个监听器下的转发规则配额 </li>
 <li> TOTAL_TARGET_BIND_QUOTA：一条转发规则下可绑定设备的配额 </li>
-<li> TOTAL_SNAP_IP_QUOTA： 一个CLB实例下跨地域2.0的SNAT IP配额 </li>
+<li> TOTAL_SNAT_IP_QUOTA： 一个CLB实例下跨地域2.0的SNAT IP配额 </li>
 <li>TOTAL_ISP_CLB_QUOTA：用户当前地域下的三网CLB配额 </li>
+<li>TOTAL_FULL_PORT_RANGE_LISTENER_QUOTA：一个CLB实例下的单个协议全端口段监听器配额</li>
  * @method integer getQuotaCurrent() 获取当前使用数量，为 null 时表示无意义。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQuotaCurrent(integer $QuotaCurrent) 设置当前使用数量，为 null 时表示无意义。
@@ -52,8 +54,9 @@ class Quota extends AbstractModel
 <li> TOTAL_LISTENER_QUOTA：一个CLB下的监听器配额 </li>
 <li> TOTAL_LISTENER_RULE_QUOTA：一个监听器下的转发规则配额 </li>
 <li> TOTAL_TARGET_BIND_QUOTA：一条转发规则下可绑定设备的配额 </li>
-<li> TOTAL_SNAP_IP_QUOTA： 一个CLB实例下跨地域2.0的SNAT IP配额 </li>
+<li> TOTAL_SNAT_IP_QUOTA： 一个CLB实例下跨地域2.0的SNAT IP配额 </li>
 <li>TOTAL_ISP_CLB_QUOTA：用户当前地域下的三网CLB配额 </li>
+<li>TOTAL_FULL_PORT_RANGE_LISTENER_QUOTA：一个CLB实例下的单个协议全端口段监听器配额</li>
      */
     public $QuotaId;
 
@@ -75,8 +78,9 @@ class Quota extends AbstractModel
 <li> TOTAL_LISTENER_QUOTA：一个CLB下的监听器配额 </li>
 <li> TOTAL_LISTENER_RULE_QUOTA：一个监听器下的转发规则配额 </li>
 <li> TOTAL_TARGET_BIND_QUOTA：一条转发规则下可绑定设备的配额 </li>
-<li> TOTAL_SNAP_IP_QUOTA： 一个CLB实例下跨地域2.0的SNAT IP配额 </li>
+<li> TOTAL_SNAT_IP_QUOTA： 一个CLB实例下跨地域2.0的SNAT IP配额 </li>
 <li>TOTAL_ISP_CLB_QUOTA：用户当前地域下的三网CLB配额 </li>
+<li>TOTAL_FULL_PORT_RANGE_LISTENER_QUOTA：一个CLB实例下的单个协议全端口段监听器配额</li>
      * @param integer $QuotaCurrent 当前使用数量，为 null 时表示无意义。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $QuotaLimit 配额数量。

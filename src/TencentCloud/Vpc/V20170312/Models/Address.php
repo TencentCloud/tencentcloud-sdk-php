@@ -32,10 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置绑定的资源实例`ID`。可能是一个`CVM`，`NAT`。
  * @method string getCreatedTime() 获取创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
- * @method string getNetworkInterfaceId() 获取绑定的弹性网卡ID
- * @method void setNetworkInterfaceId(string $NetworkInterfaceId) 设置绑定的弹性网卡ID
- * @method string getPrivateAddressIp() 获取绑定的资源内网ip
- * @method void setPrivateAddressIp(string $PrivateAddressIp) 设置绑定的资源内网ip
+ * @method string getNetworkInterfaceId() 获取绑定的弹性网卡ID，null表示没有绑定弹性网卡。
+ * @method void setNetworkInterfaceId(string $NetworkInterfaceId) 设置绑定的弹性网卡ID，null表示没有绑定弹性网卡。
+ * @method string getPrivateAddressIp() 获取绑定的资源内网ip，null表示没有绑定资源内网ip。
+ * @method void setPrivateAddressIp(string $PrivateAddressIp) 设置绑定的资源内网ip，null表示没有绑定资源内网ip。
  * @method boolean getIsArrears() 获取资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离状态
  * @method void setIsArrears(boolean $IsArrears) 设置资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离状态
  * @method boolean getIsBlocked() 获取资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态
@@ -48,10 +48,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCascadeRelease(boolean $CascadeRelease) 设置eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放
  * @method AlgType getEipAlgType() 获取EIP ALG开启的协议类型。
  * @method void setEipAlgType(AlgType $EipAlgType) 设置EIP ALG开启的协议类型。
- * @method string getInternetServiceProvider() 获取弹性公网IP的运营商信息，当前可能返回值包括"CMCC","CTCC","CUCC","BGP"
- * @method void setInternetServiceProvider(string $InternetServiceProvider) 设置弹性公网IP的运营商信息，当前可能返回值包括"CMCC","CTCC","CUCC","BGP"
- * @method boolean getLocalBgp() 获取是否本地带宽EIP
- * @method void setLocalBgp(boolean $LocalBgp) 设置是否本地带宽EIP
+ * @method string getInternetServiceProvider() 获取弹性公网IP的运营商信息，当前可能返回值包括"CMCC"(移动),"CTCC"(电信),"CUCC"(联通),"BGP"(常规BGP)。
+ * @method void setInternetServiceProvider(string $InternetServiceProvider) 设置弹性公网IP的运营商信息，当前可能返回值包括"CMCC"(移动),"CTCC"(电信),"CUCC"(联通),"BGP"(常规BGP)。
+ * @method boolean getLocalBgp() 获取是否本地带宽EIP，可选值：
+<li>true：本地带宽EIP</li>
+<li>false：非本地带宽EIP</li>
+ * @method void setLocalBgp(boolean $LocalBgp) 设置是否本地带宽EIP，可选值：
+<li>true：本地带宽EIP</li>
+<li>false：非本地带宽EIP</li>
  * @method integer getBandwidth() 获取弹性公网IP的带宽值。注意，传统账户类型账户的弹性公网IP没有带宽属性，值为空。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBandwidth(integer $Bandwidth) 设置弹性公网IP的带宽值。注意，传统账户类型账户的弹性公网IP没有带宽属性，值为空。
@@ -82,13 +86,31 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTagSet() 获取弹性公网IP关联的标签列表。
  * @method void setTagSet(array $TagSet) 设置弹性公网IP关联的标签列表。
- * @method string getDeadlineDate() 获取到期时间。
+ * @method string getDeadlineDate() 获取预付费包月带宽IP到期时间。
+时间格式：YYYY-MM-DDThh:mm:ssZ
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDeadlineDate(string $DeadlineDate) 设置到期时间。
+ * @method void setDeadlineDate(string $DeadlineDate) 设置预付费包月带宽IP到期时间。
+时间格式：YYYY-MM-DDThh:mm:ssZ
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceType() 获取EIP绑定的实例类型。
+ * @method string getInstanceType() 获取EIP绑定的实例类型。可选值：
+<li>CVM：云服务器</li>
+<li>NAT：NAT 网关</li>
+<li>HAVIP：高可用虚拟IP</li>
+<li>ENI：弹性网卡</li>
+<li>CLB：内网CLB</li>
+<li>DHCPIP：弹性内网IP</li>
+
+
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceType(string $InstanceType) 设置EIP绑定的实例类型。
+ * @method void setInstanceType(string $InstanceType) 设置EIP绑定的实例类型。可选值：
+<li>CVM：云服务器</li>
+<li>NAT：NAT 网关</li>
+<li>HAVIP：高可用虚拟IP</li>
+<li>ENI：弹性网卡</li>
+<li>CLB：内网CLB</li>
+<li>DHCPIP：弹性内网IP</li>
+
+
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEgress() 获取静态单线IP网络出口
 注意：此字段可能返回 null，表示取不到有效值。
@@ -144,12 +166,12 @@ class Address extends AbstractModel
     public $CreatedTime;
 
     /**
-     * @var string 绑定的弹性网卡ID
+     * @var string 绑定的弹性网卡ID，null表示没有绑定弹性网卡。
      */
     public $NetworkInterfaceId;
 
     /**
-     * @var string 绑定的资源内网ip
+     * @var string 绑定的资源内网ip，null表示没有绑定资源内网ip。
      */
     public $PrivateAddressIp;
 
@@ -184,12 +206,14 @@ class Address extends AbstractModel
     public $EipAlgType;
 
     /**
-     * @var string 弹性公网IP的运营商信息，当前可能返回值包括"CMCC","CTCC","CUCC","BGP"
+     * @var string 弹性公网IP的运营商信息，当前可能返回值包括"CMCC"(移动),"CTCC"(电信),"CUCC"(联通),"BGP"(常规BGP)。
      */
     public $InternetServiceProvider;
 
     /**
-     * @var boolean 是否本地带宽EIP
+     * @var boolean 是否本地带宽EIP，可选值：
+<li>true：本地带宽EIP</li>
+<li>false：非本地带宽EIP</li>
      */
     public $LocalBgp;
 
@@ -221,13 +245,22 @@ class Address extends AbstractModel
     public $TagSet;
 
     /**
-     * @var string 到期时间。
+     * @var string 预付费包月带宽IP到期时间。
+时间格式：YYYY-MM-DDThh:mm:ssZ
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeadlineDate;
 
     /**
-     * @var string EIP绑定的实例类型。
+     * @var string EIP绑定的实例类型。可选值：
+<li>CVM：云服务器</li>
+<li>NAT：NAT 网关</li>
+<li>HAVIP：高可用虚拟IP</li>
+<li>ENI：弹性网卡</li>
+<li>CLB：内网CLB</li>
+<li>DHCPIP：弹性内网IP</li>
+
+
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceType;
@@ -273,16 +306,18 @@ class Address extends AbstractModel
      * @param string $AddressIp 外网IP地址
      * @param string $InstanceId 绑定的资源实例`ID`。可能是一个`CVM`，`NAT`。
      * @param string $CreatedTime 创建时间。按照`ISO8601`标准表示，并且使用`UTC`时间。格式为：`YYYY-MM-DDThh:mm:ssZ`。
-     * @param string $NetworkInterfaceId 绑定的弹性网卡ID
-     * @param string $PrivateAddressIp 绑定的资源内网ip
+     * @param string $NetworkInterfaceId 绑定的弹性网卡ID，null表示没有绑定弹性网卡。
+     * @param string $PrivateAddressIp 绑定的资源内网ip，null表示没有绑定资源内网ip。
      * @param boolean $IsArrears 资源隔离状态。true表示eip处于隔离状态，false表示资源处于未隔离状态
      * @param boolean $IsBlocked 资源封堵状态。true表示eip处于封堵状态，false表示eip处于未封堵状态
      * @param boolean $IsEipDirectConnection eip是否支持直通模式。true表示eip支持直通模式，false表示资源不支持直通模式
      * @param string $AddressType EIP 资源类型，包括CalcIP、WanIP、EIP和AnycastEIP、高防EIP。其中：`CalcIP` 表示设备 IP，`WanIP` 表示普通公网 IP，`EIP` 表示弹性公网 IP，`AnycastEIP` 表示加速 EIP，`AntiDDoSEIP`表示高防EIP。
      * @param boolean $CascadeRelease eip是否在解绑后自动释放。true表示eip将会在解绑后自动释放，false表示eip在解绑后不会自动释放
      * @param AlgType $EipAlgType EIP ALG开启的协议类型。
-     * @param string $InternetServiceProvider 弹性公网IP的运营商信息，当前可能返回值包括"CMCC","CTCC","CUCC","BGP"
-     * @param boolean $LocalBgp 是否本地带宽EIP
+     * @param string $InternetServiceProvider 弹性公网IP的运营商信息，当前可能返回值包括"CMCC"(移动),"CTCC"(电信),"CUCC"(联通),"BGP"(常规BGP)。
+     * @param boolean $LocalBgp 是否本地带宽EIP，可选值：
+<li>true：本地带宽EIP</li>
+<li>false：非本地带宽EIP</li>
      * @param integer $Bandwidth 弹性公网IP的带宽值。注意，传统账户类型账户的弹性公网IP没有带宽属性，值为空。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InternetChargeType 弹性公网IP的网络计费模式。注意，传统账户类型账户的弹性公网IP没有网络计费模式属性，值为空。
@@ -298,9 +333,18 @@ class Address extends AbstractModel
 <p style="padding-left: 30px;">表示共享带宽包。</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TagSet 弹性公网IP关联的标签列表。
-     * @param string $DeadlineDate 到期时间。
+     * @param string $DeadlineDate 预付费包月带宽IP到期时间。
+时间格式：YYYY-MM-DDThh:mm:ssZ
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceType EIP绑定的实例类型。
+     * @param string $InstanceType EIP绑定的实例类型。可选值：
+<li>CVM：云服务器</li>
+<li>NAT：NAT 网关</li>
+<li>HAVIP：高可用虚拟IP</li>
+<li>ENI：弹性网卡</li>
+<li>CLB：内网CLB</li>
+<li>DHCPIP：弹性内网IP</li>
+
+
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Egress 静态单线IP网络出口
 注意：此字段可能返回 null，表示取不到有效值。

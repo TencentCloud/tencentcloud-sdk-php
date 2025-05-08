@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPartitionCount(integer $PartitionCount) 设置主题分区Partition的数量，不传参默认创建1个，最大创建允许10个，分裂/合并操作会改变分区数量，整体上限50个。
  * @method string getTopicType() 获取日志类型，ACCESS：访问日志，HEALTH：健康检查日志，默认ACCESS。
  * @method void setTopicType(string $TopicType) 设置日志类型，ACCESS：访问日志，HEALTH：健康检查日志，默认ACCESS。
- * @method integer getPeriod() 获取存储时间，单位天
+ * @method integer getPeriod() 获取存储时间，单位天，默认为 30。
 - 日志接入标准存储时，支持1至3600天，值为3640时代表永久保存。
 - 日志接入低频存储时，支持7至3600天，值为3640时代表永久保存。
- * @method void setPeriod(integer $Period) 设置存储时间，单位天
+ * @method void setPeriod(integer $Period) 设置存储时间，单位天，默认为 30。
 - 日志接入标准存储时，支持1至3600天，值为3640时代表永久保存。
 - 日志接入低频存储时，支持7至3600天，值为3640时代表永久保存。
  * @method string getStorageType() 获取日志主题的存储类型，可选值 HOT（标准存储），COLD（低频存储）；默认为HOT。
@@ -53,7 +53,7 @@ class CreateTopicRequest extends AbstractModel
     public $TopicType;
 
     /**
-     * @var integer 存储时间，单位天
+     * @var integer 存储时间，单位天，默认为 30。
 - 日志接入标准存储时，支持1至3600天，值为3640时代表永久保存。
 - 日志接入低频存储时，支持7至3600天，值为3640时代表永久保存。
      */
@@ -68,7 +68,7 @@ class CreateTopicRequest extends AbstractModel
      * @param string $TopicName 日志主题的名称。
      * @param integer $PartitionCount 主题分区Partition的数量，不传参默认创建1个，最大创建允许10个，分裂/合并操作会改变分区数量，整体上限50个。
      * @param string $TopicType 日志类型，ACCESS：访问日志，HEALTH：健康检查日志，默认ACCESS。
-     * @param integer $Period 存储时间，单位天
+     * @param integer $Period 存储时间，单位天，默认为 30。
 - 日志接入标准存储时，支持1至3600天，值为3640时代表永久保存。
 - 日志接入低频存储时，支持7至3600天，值为3640时代表永久保存。
      * @param string $StorageType 日志主题的存储类型，可选值 HOT（标准存储），COLD（低频存储）；默认为HOT。

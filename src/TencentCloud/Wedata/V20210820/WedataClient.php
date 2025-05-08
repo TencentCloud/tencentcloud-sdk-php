@@ -60,9 +60,10 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\CreateOpsMakePlanResponse CreateOpsMakePlan(Models\CreateOpsMakePlanRequest $req) 批量补数据（创建补录任务）
  * @method Models\CreateRuleResponse CreateRule(Models\CreateRuleRequest $req) 创建质量规则接口
  * @method Models\CreateRuleTemplateResponse CreateRuleTemplate(Models\CreateRuleTemplateRequest $req) 创建规则模板
- * @method Models\CreateTaskResponse CreateTask(Models\CreateTaskRequest $req) 创建任务
+ * @method Models\CreateTaskResponse CreateTask(Models\CreateTaskRequest $req) 创建任务。本接口已废弃，请使用接口CreateTaskNew。
  * @method Models\CreateTaskAlarmRegularResponse CreateTaskAlarmRegular(Models\CreateTaskAlarmRegularRequest $req) 创建任务告警规则
  * @method Models\CreateTaskFolderResponse CreateTaskFolder(Models\CreateTaskFolderRequest $req) 编排空间-工作流-创建任务文件夹
+ * @method Models\CreateTaskNewResponse CreateTaskNew(Models\CreateTaskNewRequest $req) 聚合创建任务
  * @method Models\CreateTaskVersionDsResponse CreateTaskVersionDs(Models\CreateTaskVersionDsRequest $req) 提交任务版本
  * @method Models\CreateWorkflowDsResponse CreateWorkflowDs(Models\CreateWorkflowDsRequest $req) 创建工作流
  * @method Models\DagInstancesResponse DagInstances(Models\DagInstancesRequest $req) 拉取dag实例
@@ -250,18 +251,21 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
  * @method Models\ModifyTaskInfoResponse ModifyTaskInfo(Models\ModifyTaskInfoRequest $req) <p style="color:red;">[注意：该版本只满足广州区部分白名单客户使用]</p>
 更新任务
  * @method Models\ModifyTaskLinksResponse ModifyTaskLinks(Models\ModifyTaskLinksRequest $req) <p style="color:red;">[注意：该版本只满足广州区部分白名单客户使用]</p>
-添加父任务依赖
+添加父任务依赖。本接口已废弃，请使用接口ModifyTaskLinksDs。
+ * @method Models\ModifyTaskLinksDsResponse ModifyTaskLinksDs(Models\ModifyTaskLinksDsRequest $req) 添加父任务依赖
  * @method Models\ModifyTaskNameResponse ModifyTaskName(Models\ModifyTaskNameRequest $req) 重命名任务（任务编辑）
  * @method Models\ModifyTaskScriptResponse ModifyTaskScript(Models\ModifyTaskScriptRequest $req) <p style="color:red;">[注意：该版本只满足广州区部分白名单客户使用]</p>
 修改任务脚本
- * @method Models\ModifyWorkflowInfoResponse ModifyWorkflowInfo(Models\ModifyWorkflowInfoRequest $req) 更新工作流信息
+ * @method Models\ModifyWorkflowInfoResponse ModifyWorkflowInfo(Models\ModifyWorkflowInfoRequest $req) 更新工作流信息。本接口已废弃，请使用接口UpdateWorkflowInfo。
  * @method Models\ModifyWorkflowScheduleResponse ModifyWorkflowSchedule(Models\ModifyWorkflowScheduleRequest $req) 更新工作流调度。本接口已废弃，请使用接口RenewWorkflowSchedulerInfoDs。
  * @method Models\MoveTasksToFolderResponse MoveTasksToFolder(Models\MoveTasksToFolderRequest $req) 编排空间-工作流-移动任务到工作流文件夹
+ * @method Models\RegisterDsEventResponse RegisterDsEvent(Models\RegisterDsEventRequest $req) 注册事件
  * @method Models\RegisterEventResponse RegisterEvent(Models\RegisterEventRequest $req) <p style="color:red;">[注意：该版本只满足广州区部分白名单客户使用]</p>
-注册事件
+注册事件。本接口已废弃，请使用接口RegisterDsEvent。
  * @method Models\RegisterEventListenerResponse RegisterEventListener(Models\RegisterEventListenerRequest $req) <p style="color:red;">[注意：该版本只满足广州区部分白名单客户使用]</p>
 注册事件监听器
  * @method Models\RemoveWorkflowDsResponse RemoveWorkflowDs(Models\RemoveWorkflowDsRequest $req) 删除编排空间工作流
+ * @method Models\RenewWorkflowOwnerDsResponse RenewWorkflowOwnerDs(Models\RenewWorkflowOwnerDsRequest $req) 批量更新工作流下任务责任人
  * @method Models\RenewWorkflowSchedulerInfoDsResponse RenewWorkflowSchedulerInfoDs(Models\RenewWorkflowSchedulerInfoDsRequest $req) 更新工作流下任务调度信息
  * @method Models\ResumeIntegrationTaskResponse ResumeIntegrationTask(Models\ResumeIntegrationTaskRequest $req) 继续集成任务
  * @method Models\RobAndLockIntegrationTaskResponse RobAndLockIntegrationTask(Models\RobAndLockIntegrationTaskRequest $req) 抢占锁定集成任务
@@ -288,7 +292,9 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
  * @method Models\UnlockIntegrationTaskResponse UnlockIntegrationTask(Models\UnlockIntegrationTaskRequest $req) 解锁集成任务
  * @method Models\UpdateDataModelRegistryInfoResponse UpdateDataModelRegistryInfo(Models\UpdateDataModelRegistryInfoRequest $req) 数语向wedata注册，提供自身cam角色信息，跳转域名、ip、端口信息等
  * @method Models\UpdateProjectUserRoleResponse UpdateProjectUserRole(Models\UpdateProjectUserRoleRequest $req) 修改项目用户角色
- * @method Models\UpdateWorkflowOwnerResponse UpdateWorkflowOwner(Models\UpdateWorkflowOwnerRequest $req) 修改工作流责任人
+ * @method Models\UpdateWorkflowInfoResponse UpdateWorkflowInfo(Models\UpdateWorkflowInfoRequest $req) <p style="color:red;">[该接口为 ds 中开发]</p>
+更新工作流（包括工作流基本信息与工作流参数）
+ * @method Models\UpdateWorkflowOwnerResponse UpdateWorkflowOwner(Models\UpdateWorkflowOwnerRequest $req) 修改工作流责任人。本接口已废弃，请使用接口RenewWorkflowOwnerDs。
  * @method Models\UploadContentResponse UploadContent(Models\UploadContentRequest $req) 保存任务信息
  * @method Models\UploadResourceResponse UploadResource(Models\UploadResourceRequest $req) 资源管理-上传资源
  */

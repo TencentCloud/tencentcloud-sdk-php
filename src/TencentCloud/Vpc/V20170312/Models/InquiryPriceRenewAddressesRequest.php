@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquiryPriceRenewAddresses请求参数结构体
  *
- * @method array getAddressIds() 获取续费资源实例ID。
- * @method void setAddressIds(array $AddressIds) 设置续费资源实例ID。
- * @method AddressChargePrepaid getAddressChargePrepaid() 获取包月按带宽预付费EIP的计费参数。EIP为包月按带宽预付费时，该参数必传，其余场景不需传递。
- * @method void setAddressChargePrepaid(AddressChargePrepaid $AddressChargePrepaid) 设置包月按带宽预付费EIP的计费参数。EIP为包月按带宽预付费时，该参数必传，其余场景不需传递。
+ * @method array getAddressIds() 获取续费资源实例ID。可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
+ * @method void setAddressIds(array $AddressIds) 设置续费资源实例ID。可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
+ * @method AddressChargePrepaid getAddressChargePrepaid() 获取包月按带宽预付费EIP的计费参数。EIP为包月按带宽预付费时，该参数必传，不支持其他计费模式。
+ * @method void setAddressChargePrepaid(AddressChargePrepaid $AddressChargePrepaid) 设置包月按带宽预付费EIP的计费参数。EIP为包月按带宽预付费时，该参数必传，不支持其他计费模式。
  */
 class InquiryPriceRenewAddressesRequest extends AbstractModel
 {
     /**
-     * @var array 续费资源实例ID。
+     * @var array 续费资源实例ID。可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
      */
     public $AddressIds;
 
     /**
-     * @var AddressChargePrepaid 包月按带宽预付费EIP的计费参数。EIP为包月按带宽预付费时，该参数必传，其余场景不需传递。
+     * @var AddressChargePrepaid 包月按带宽预付费EIP的计费参数。EIP为包月按带宽预付费时，该参数必传，不支持其他计费模式。
      */
     public $AddressChargePrepaid;
 
     /**
-     * @param array $AddressIds 续费资源实例ID。
-     * @param AddressChargePrepaid $AddressChargePrepaid 包月按带宽预付费EIP的计费参数。EIP为包月按带宽预付费时，该参数必传，其余场景不需传递。
+     * @param array $AddressIds 续费资源实例ID。可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
+     * @param AddressChargePrepaid $AddressChargePrepaid 包月按带宽预付费EIP的计费参数。EIP为包月按带宽预付费时，该参数必传，不支持其他计费模式。
      */
     function __construct()
     {

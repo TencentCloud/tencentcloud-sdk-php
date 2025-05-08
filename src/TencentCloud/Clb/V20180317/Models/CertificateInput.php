@@ -36,10 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCertKey(string $CertKey) 设置上传服务端证书的 key，如果没有 CertId，则此项必传。
  * @method string getCertContent() 获取上传服务端证书的内容，如果没有 CertId，则此项必传。
  * @method void setCertContent(string $CertContent) 设置上传服务端证书的内容，如果没有 CertId，则此项必传。
- * @method string getCertCaName() 获取上传客户端 CA 证书的名称，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。
- * @method void setCertCaName(string $CertCaName) 设置上传客户端 CA 证书的名称，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。
- * @method string getCertCaContent() 获取上传客户端证书的内容，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。
- * @method void setCertCaContent(string $CertCaContent) 设置上传客户端证书的内容，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。
+ * @method string getCertCaName() 获取上传客户端 CA 证书的名称，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。
+ * @method void setCertCaName(string $CertCaName) 设置上传客户端 CA 证书的名称，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。
+ * @method string getCertCaContent() 获取上传客户端证书的内容，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。
+ * @method void setCertCaContent(string $CertCaContent) 设置上传客户端证书的内容，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。
  */
 class CertificateInput extends AbstractModel
 {
@@ -80,12 +80,12 @@ class CertificateInput extends AbstractModel
     public $CertContent;
 
     /**
-     * @var string 上传客户端 CA 证书的名称，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。
+     * @var string 上传客户端 CA 证书的名称，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。
      */
     public $CertCaName;
 
     /**
-     * @var string 上传客户端证书的内容，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。
+     * @var string 上传客户端证书的内容，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。
      */
     public $CertCaContent;
 
@@ -98,8 +98,8 @@ class CertificateInput extends AbstractModel
      * @param string $CertName 上传服务端证书的名称，如果没有 CertId，则此项必传。
      * @param string $CertKey 上传服务端证书的 key，如果没有 CertId，则此项必传。
      * @param string $CertContent 上传服务端证书的内容，如果没有 CertId，则此项必传。
-     * @param string $CertCaName 上传客户端 CA 证书的名称，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。
-     * @param string $CertCaContent 上传客户端证书的内容，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。
+     * @param string $CertCaName 上传客户端 CA 证书的名称，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。
+     * @param string $CertCaContent 上传客户端证书的内容，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。
      */
     function __construct()
     {

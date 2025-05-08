@@ -35,13 +35,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCreateTime() 获取跟踪集创建时间
  * @method void setCreateTime(string $CreateTime) 设置跟踪集创建时间
  * @method integer getTrackForAllMembers() 获取是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrackForAllMembers(integer $TrackForAllMembers) 设置是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method Filter getFilters() 获取数据投递过滤条件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFilters(Filter $Filters) 设置数据投递过滤条件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -84,13 +80,11 @@ class DescribeAuditTrackResponse extends AbstractModel
 
     /**
      * @var integer 是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TrackForAllMembers;
 
     /**
      * @var Filter 数据投递过滤条件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Filters;
 
@@ -108,9 +102,7 @@ class DescribeAuditTrackResponse extends AbstractModel
      * @param Storage $Storage 数据投递存储（目前支持 cos、cls）
      * @param string $CreateTime 跟踪集创建时间
      * @param integer $TrackForAllMembers 是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Filter $Filters 数据投递过滤条件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

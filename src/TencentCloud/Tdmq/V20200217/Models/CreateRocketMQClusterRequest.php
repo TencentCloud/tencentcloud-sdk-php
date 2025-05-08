@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置集群名称，3-64个字符，只能包含字母、数字、“-”及“_”
  * @method string getRemark() 获取集群描述，128个字符以内
  * @method void setRemark(string $Remark) 设置集群描述，128个字符以内
+ * @method array getTagList() 获取标签列表
+ * @method void setTagList(array $TagList) 设置标签列表
  */
 class CreateRocketMQClusterRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreateRocketMQClusterRequest extends AbstractModel
     public $Remark;
 
     /**
+     * @var array 标签列表
+     */
+    public $TagList;
+
+    /**
      * @param string $Name 集群名称，3-64个字符，只能包含字母、数字、“-”及“_”
      * @param string $Remark 集群描述，128个字符以内
+     * @param array $TagList 标签列表
      */
     function __construct()
     {
@@ -60,6 +68,15 @@ class CreateRocketMQClusterRequest extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("TagList",$param) and $param["TagList"] !== null) {
+            $this->TagList = [];
+            foreach ($param["TagList"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagList, $obj);
+            }
         }
     }
 }

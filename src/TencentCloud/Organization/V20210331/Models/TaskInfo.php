@@ -39,9 +39,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStatus() 获取InProgress：任务执行中。 Success：任务执行成功。 Failed：任务执行失败。
  * @method void setStatus(string $Status) 设置InProgress：任务执行中。 Success：任务执行成功。 Failed：任务执行失败。
  * @method string getFailureReason() 获取失败原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailureReason(string $FailureReason) 设置失败原因
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskInfo extends AbstractModel
 {
@@ -92,7 +90,6 @@ class TaskInfo extends AbstractModel
 
     /**
      * @var string 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailureReason;
 
@@ -107,7 +104,6 @@ class TaskInfo extends AbstractModel
      * @param string $TaskType 任务类型。
      * @param string $Status InProgress：任务执行中。 Success：任务执行成功。 Failed：任务执行失败。
      * @param string $FailureReason 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

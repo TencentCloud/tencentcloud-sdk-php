@@ -125,6 +125,7 @@ use TencentCloud\Dsgc\V20190723\Models as Models;
  * @method Models\DescribeDSPADiscoveryTaskResultDetailResponse DescribeDSPADiscoveryTaskResultDetail(Models\DescribeDSPADiscoveryTaskResultDetailRequest $req) 获取分类分级任务结果详情，该接口只有在任务状态为时才支持结果正确查询：
 3 扫描成功
  * @method Models\DescribeDSPADiscoveryTaskTablesResponse DescribeDSPADiscoveryTaskTables(Models\DescribeDSPADiscoveryTaskTablesRequest $req) 获取分级分级扫描的表集合
+ * @method Models\DescribeDSPADiscoveryTasksResponse DescribeDSPADiscoveryTasks(Models\DescribeDSPADiscoveryTasksRequest $req) 获取分类分级任务列表
  * @method Models\DescribeDSPAESDataAssetByComplianceIdResponse DescribeDSPAESDataAssetByComplianceId(Models\DescribeDSPAESDataAssetByComplianceIdRequest $req) 根据合规组id，去查询ES的概览页统计数据
  * @method Models\DescribeDSPAESDataAssetDetailResponse DescribeDSPAESDataAssetDetail(Models\DescribeDSPAESDataAssetDetailRequest $req) 根据合规组id，去查询ES的概览页下的统计列表数据
  * @method Models\DescribeDSPAESDataSampleResponse DescribeDSPAESDataSample(Models\DescribeDSPAESDataSampleRequest $req) 获取ES扫描结果数据样本

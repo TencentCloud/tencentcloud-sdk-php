@@ -21,25 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 查询类型
  *
  * @method string getVpcId() 获取vpc的字符串id，只支持字符串id。
+可以通过 [DescribeVpcs](https://cloud.tencent.com/document/api/215/15778) 接口查询。
  * @method void setVpcId(string $VpcId) 设置vpc的字符串id，只支持字符串id。
- * @method string getPrivateIp() 获取需要查询后端的内网ip，可以是cvm和弹性网卡。
- * @method void setPrivateIp(string $PrivateIp) 设置需要查询后端的内网ip，可以是cvm和弹性网卡。
+可以通过 [DescribeVpcs](https://cloud.tencent.com/document/api/215/15778) 接口查询。
+ * @method string getPrivateIp() 获取需要查询后端的内网 IP，可以是 CVM 和弹性网卡。
+可以通过 [DescribeAddresses](https://cloud.tencent.com/document/product/215/16702) 接口查询。
+ * @method void setPrivateIp(string $PrivateIp) 设置需要查询后端的内网 IP，可以是 CVM 和弹性网卡。
+可以通过 [DescribeAddresses](https://cloud.tencent.com/document/product/215/16702) 接口查询。
  */
 class LbRsItem extends AbstractModel
 {
     /**
      * @var string vpc的字符串id，只支持字符串id。
+可以通过 [DescribeVpcs](https://cloud.tencent.com/document/api/215/15778) 接口查询。
      */
     public $VpcId;
 
     /**
-     * @var string 需要查询后端的内网ip，可以是cvm和弹性网卡。
+     * @var string 需要查询后端的内网 IP，可以是 CVM 和弹性网卡。
+可以通过 [DescribeAddresses](https://cloud.tencent.com/document/product/215/16702) 接口查询。
      */
     public $PrivateIp;
 
     /**
      * @param string $VpcId vpc的字符串id，只支持字符串id。
-     * @param string $PrivateIp 需要查询后端的内网ip，可以是cvm和弹性网卡。
+可以通过 [DescribeVpcs](https://cloud.tencent.com/document/api/215/15778) 接口查询。
+     * @param string $PrivateIp 需要查询后端的内网 IP，可以是 CVM 和弹性网卡。
+可以通过 [DescribeAddresses](https://cloud.tencent.com/document/product/215/16702) 接口查询。
      */
     function __construct()
     {

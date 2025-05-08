@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupName(string $GroupName) 设置消费组、订阅
  * @method boolean getQueryDlqMsg() 获取查询死信时该值为true，只对Rocketmq有效
  * @method void setQueryDlqMsg(boolean $QueryDlqMsg) 设置查询死信时该值为true，只对Rocketmq有效
+ * @method string getProduceTime() 获取生产时间
+ * @method void setProduceTime(string $ProduceTime) 设置生产时间
  */
 class DescribeMqMsgTraceRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class DescribeMqMsgTraceRequest extends AbstractModel
     public $QueryDlqMsg;
 
     /**
+     * @var string 生产时间
+     */
+    public $ProduceTime;
+
+    /**
      * @param string $Protocol pulsar、rocketmq、rabbitmq、cmq
      * @param string $MsgId 消息id
      * @param string $ClusterId 集群id，cmq为空
@@ -88,6 +95,7 @@ class DescribeMqMsgTraceRequest extends AbstractModel
      * @param string $QueueName cmq必填，其他协议填空
      * @param string $GroupName 消费组、订阅
      * @param boolean $QueryDlqMsg 查询死信时该值为true，只对Rocketmq有效
+     * @param string $ProduceTime 生产时间
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class DescribeMqMsgTraceRequest extends AbstractModel
 
         if (array_key_exists("QueryDlqMsg",$param) and $param["QueryDlqMsg"] !== null) {
             $this->QueryDlqMsg = $param["QueryDlqMsg"];
+        }
+
+        if (array_key_exists("ProduceTime",$param) and $param["ProduceTime"] !== null) {
+            $this->ProduceTime = $param["ProduceTime"];
         }
     }
 }

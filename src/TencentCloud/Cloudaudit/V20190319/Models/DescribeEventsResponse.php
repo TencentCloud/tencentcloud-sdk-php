@@ -25,13 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getNextToken() 获取查看更多日志的凭证
  * @method void setNextToken(integer $NextToken) 设置查看更多日志的凭证
  * @method array getEvents() 获取日志集合
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEvents(array $Events) 设置日志集合
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取此字段已经废弃。翻页请使用ListOver配合NextToken，在ListOver为false进行下一页数据读取。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置此字段已经废弃。翻页请使用ListOver配合NextToken，在ListOver为false进行下一页数据读取。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -49,13 +45,11 @@ class DescribeEventsResponse extends AbstractModel
 
     /**
      * @var array 日志集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Events;
 
     /**
      * @var integer 此字段已经废弃。翻页请使用ListOver配合NextToken，在ListOver为false进行下一页数据读取。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
@@ -68,9 +62,7 @@ class DescribeEventsResponse extends AbstractModel
      * @param boolean $ListOver 日志集合是否结束。true表示结束，无需进行翻页。
      * @param integer $NextToken 查看更多日志的凭证
      * @param array $Events 日志集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 此字段已经废弃。翻页请使用ListOver配合NextToken，在ListOver为false进行下一页数据读取。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

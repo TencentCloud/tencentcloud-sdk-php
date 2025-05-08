@@ -114,6 +114,10 @@ PREPAID，包年包月
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDestroyTime(integer $DestroyTime) 设置预销毁时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getZoneIds() 获取所属可用区列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setZoneIds(array $ZoneIds) 设置所属可用区列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class FusionInstanceItem extends AbstractModel
 {
@@ -249,6 +253,12 @@ PREPAID，包年包月
     public $DestroyTime;
 
     /**
+     * @var array 所属可用区列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ZoneIds;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param string $Version 实例版本
@@ -295,6 +305,8 @@ PREPAID，包年包月
      * @param InstanceItemExtraInfo $InstanceItemExtraInfo 4.x独有数据
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DestroyTime 预销毁时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ZoneIds 所属可用区列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -398,6 +410,10 @@ PREPAID，包年包月
 
         if (array_key_exists("DestroyTime",$param) and $param["DestroyTime"] !== null) {
             $this->DestroyTime = $param["DestroyTime"];
+        }
+
+        if (array_key_exists("ZoneIds",$param) and $param["ZoneIds"] !== null) {
+            $this->ZoneIds = $param["ZoneIds"];
         }
     }
 }

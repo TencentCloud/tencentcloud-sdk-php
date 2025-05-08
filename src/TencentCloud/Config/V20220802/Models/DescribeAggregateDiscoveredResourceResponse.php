@@ -21,41 +21,23 @@ use TencentCloud\Common\AbstractModel;
  * DescribeAggregateDiscoveredResource返回参数结构体
  *
  * @method string getResourceId() 获取资源Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceId(string $ResourceId) 设置资源Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceType() 获取资源类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceType(string $ResourceType) 设置资源类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceName() 获取资源名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceName(string $ResourceName) 设置资源名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceRegion() 获取资源地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceRegion(string $ResourceRegion) 设置资源地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceZone() 获取资源可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceZone(string $ResourceZone) 设置资源可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConfiguration() 获取资源配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfiguration(string $Configuration) 设置资源配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceCreateTime() 获取资源创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceCreateTime(string $ResourceCreateTime) 设置资源创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取资源标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置资源标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取资源更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置资源更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -63,55 +45,46 @@ class DescribeAggregateDiscoveredResourceResponse extends AbstractModel
 {
     /**
      * @var string 资源Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceId;
 
     /**
      * @var string 资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceType;
 
     /**
      * @var string 资源名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceName;
 
     /**
      * @var string 资源地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceRegion;
 
     /**
      * @var string 资源可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceZone;
 
     /**
      * @var string 资源配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Configuration;
 
     /**
      * @var string 资源创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceCreateTime;
 
     /**
      * @var array 资源标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
      * @var string 资源更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
@@ -122,23 +95,14 @@ class DescribeAggregateDiscoveredResourceResponse extends AbstractModel
 
     /**
      * @param string $ResourceId 资源Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceType 资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceName 资源名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceRegion 资源地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceZone 资源可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Configuration 资源配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceCreateTime 资源创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 资源标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 资源更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

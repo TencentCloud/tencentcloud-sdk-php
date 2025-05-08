@@ -20,26 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DisassociateIPv6Address请求参数结构体
  *
- * @method string getIPv6AddressId() 获取弹性公网IPv6唯一ID，EIPv6 唯一 ID 形如：eipv6-11112222。
- * @method void setIPv6AddressId(string $IPv6AddressId) 设置弹性公网IPv6唯一ID，EIPv6 唯一 ID 形如：eipv6-11112222。
- * @method boolean getKeepBindWithEni() 获取解绑时是否保持绑定弹性网卡。
- * @method void setKeepBindWithEni(boolean $KeepBindWithEni) 设置解绑时是否保持绑定弹性网卡。
+ * @method string getIPv6AddressId() 获取弹性公网IPv6唯一ID，EIPv6 唯一 ID 形如：eipv6-11112222。可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressId。
+ * @method void setIPv6AddressId(string $IPv6AddressId) 设置弹性公网IPv6唯一ID，EIPv6 唯一 ID 形如：eipv6-11112222。可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressId。
+ * @method boolean getKeepBindWithEni() 获取解绑时是否保持绑定弹性网卡。可选值：true、false。
+默认值：false
+ * @method void setKeepBindWithEni(boolean $KeepBindWithEni) 设置解绑时是否保持绑定弹性网卡。可选值：true、false。
+默认值：false
  */
 class DisassociateIPv6AddressRequest extends AbstractModel
 {
     /**
-     * @var string 弹性公网IPv6唯一ID，EIPv6 唯一 ID 形如：eipv6-11112222。
+     * @var string 弹性公网IPv6唯一ID，EIPv6 唯一 ID 形如：eipv6-11112222。可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressId。
      */
     public $IPv6AddressId;
 
     /**
-     * @var boolean 解绑时是否保持绑定弹性网卡。
+     * @var boolean 解绑时是否保持绑定弹性网卡。可选值：true、false。
+默认值：false
      */
     public $KeepBindWithEni;
 
     /**
-     * @param string $IPv6AddressId 弹性公网IPv6唯一ID，EIPv6 唯一 ID 形如：eipv6-11112222。
-     * @param boolean $KeepBindWithEni 解绑时是否保持绑定弹性网卡。
+     * @param string $IPv6AddressId 弹性公网IPv6唯一ID，EIPv6 唯一 ID 形如：eipv6-11112222。可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressId。
+     * @param boolean $KeepBindWithEni 解绑时是否保持绑定弹性网卡。可选值：true、false。
+默认值：false
      */
     function __construct()
     {

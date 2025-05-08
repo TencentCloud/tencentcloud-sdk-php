@@ -29,17 +29,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTargetUin() 获取授权的集团账号目标账号的UIN
  * @method void setTargetUin(integer $TargetUin) 设置授权的集团账号目标账号的UIN
  * @method string getTargetType() 获取同步的集团账号目标账号的类型，ManagerUin管理账号;MemberUin成员账号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargetType(string $TargetType) 设置同步的集团账号目标账号的类型，ManagerUin管理账号;MemberUin成员账号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTaskType() 获取任务类型。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskType(string $TaskType) 设置任务类型。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTaskStatus() 获取任务状态：InProgress: 进行中，Failed: 失败 3:Success: 成功
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskStatus(string $TaskStatus) 设置任务状态：InProgress: 进行中，Failed: 失败 3:Success: 成功
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RoleProvisioningsTask extends AbstractModel
 {
@@ -65,19 +59,16 @@ class RoleProvisioningsTask extends AbstractModel
 
     /**
      * @var string 同步的集团账号目标账号的类型，ManagerUin管理账号;MemberUin成员账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetType;
 
     /**
      * @var string 任务类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskType;
 
     /**
      * @var string 任务状态：InProgress: 进行中，Failed: 失败 3:Success: 成功
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskStatus;
 
@@ -87,11 +78,8 @@ class RoleProvisioningsTask extends AbstractModel
      * @param string $RoleConfigurationName 权限配置名称。
      * @param integer $TargetUin 授权的集团账号目标账号的UIN
      * @param string $TargetType 同步的集团账号目标账号的类型，ManagerUin管理账号;MemberUin成员账号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskType 任务类型。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskStatus 任务状态：InProgress: 进行中，Failed: 失败 3:Success: 成功
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

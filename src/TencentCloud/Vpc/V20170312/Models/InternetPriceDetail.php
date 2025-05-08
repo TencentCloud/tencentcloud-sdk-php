@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUnitPrice(float $UnitPrice) 设置付费单价，单位：元，仅后付费价格查询返回。
  * @method float getDiscountPrice() 获取折扣后的价格，单位：元。
  * @method void setDiscountPrice(float $DiscountPrice) 设置折扣后的价格，单位：元。
- * @method string getChargeUnit() 获取计价单元，可取值范围：<ul> <li>HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：流量按小时后付费（TRAFFIC_POSTPAID_BY_HOUR）、带宽按小时后付费（BANDWIDTH_POSTPAID_BY_HOUR）。</li></ul>
- * @method void setChargeUnit(string $ChargeUnit) 设置计价单元，可取值范围：<ul> <li>HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：流量按小时后付费（TRAFFIC_POSTPAID_BY_HOUR）、带宽按小时后付费（BANDWIDTH_POSTPAID_BY_HOUR）。</li></ul>
+ * @method string getChargeUnit() 获取计价单元，可取值范围：<ul> <li>HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：流量按小时后付费（TRAFFIC_POSTPAID_BY_HOUR）、带宽按小时后付费（BANDWIDTH_POSTPAID_BY_HOUR）。</li><li> MONTH :表示计价单元是按月来计算。当前涉及该计价单元的场景有：包月按带宽预付费（BANDWIDTH_PREPAID_BY_MONTH）。</li></ul>
+ * @method void setChargeUnit(string $ChargeUnit) 设置计价单元，可取值范围：<ul> <li>HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：流量按小时后付费（TRAFFIC_POSTPAID_BY_HOUR）、带宽按小时后付费（BANDWIDTH_POSTPAID_BY_HOUR）。</li><li> MONTH :表示计价单元是按月来计算。当前涉及该计价单元的场景有：包月按带宽预付费（BANDWIDTH_PREPAID_BY_MONTH）。</li></ul>
  * @method float getOriginalPrice() 获取原价，单位：元，仅预付费价格查询返回。
  * @method void setOriginalPrice(float $OriginalPrice) 设置原价，单位：元，仅预付费价格查询返回。
  */
@@ -42,7 +42,7 @@ class InternetPriceDetail extends AbstractModel
     public $DiscountPrice;
 
     /**
-     * @var string 计价单元，可取值范围：<ul> <li>HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：流量按小时后付费（TRAFFIC_POSTPAID_BY_HOUR）、带宽按小时后付费（BANDWIDTH_POSTPAID_BY_HOUR）。</li></ul>
+     * @var string 计价单元，可取值范围：<ul> <li>HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：流量按小时后付费（TRAFFIC_POSTPAID_BY_HOUR）、带宽按小时后付费（BANDWIDTH_POSTPAID_BY_HOUR）。</li><li> MONTH :表示计价单元是按月来计算。当前涉及该计价单元的场景有：包月按带宽预付费（BANDWIDTH_PREPAID_BY_MONTH）。</li></ul>
      */
     public $ChargeUnit;
 
@@ -54,7 +54,7 @@ class InternetPriceDetail extends AbstractModel
     /**
      * @param float $UnitPrice 付费单价，单位：元，仅后付费价格查询返回。
      * @param float $DiscountPrice 折扣后的价格，单位：元。
-     * @param string $ChargeUnit 计价单元，可取值范围：<ul> <li>HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：流量按小时后付费（TRAFFIC_POSTPAID_BY_HOUR）、带宽按小时后付费（BANDWIDTH_POSTPAID_BY_HOUR）。</li></ul>
+     * @param string $ChargeUnit 计价单元，可取值范围：<ul> <li>HOUR：表示计价单元是按每小时来计算。当前涉及该计价单元的场景有：流量按小时后付费（TRAFFIC_POSTPAID_BY_HOUR）、带宽按小时后付费（BANDWIDTH_POSTPAID_BY_HOUR）。</li><li> MONTH :表示计价单元是按月来计算。当前涉及该计价单元的场景有：包月按带宽预付费（BANDWIDTH_PREPAID_BY_MONTH）。</li></ul>
      * @param float $OriginalPrice 原价，单位：元，仅预付费价格查询返回。
      */
     function __construct()

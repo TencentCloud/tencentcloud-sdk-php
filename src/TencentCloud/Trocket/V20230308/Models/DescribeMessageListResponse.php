@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * DescribeMessageList返回参数结构体
  *
  * @method integer getTotalCount() 获取查询总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置查询总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getData() 获取消息记录列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(array $Data) 设置消息记录列表
@@ -39,7 +37,6 @@ class DescribeMessageListResponse extends AbstractModel
 {
     /**
      * @var integer 查询总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
@@ -62,7 +59,6 @@ class DescribeMessageListResponse extends AbstractModel
 
     /**
      * @param integer $TotalCount 查询总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Data 消息记录列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskRequestId 一次查询ID

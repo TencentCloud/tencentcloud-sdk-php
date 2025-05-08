@@ -68,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsSqlInjectionAnalysis(integer $IsSqlInjectionAnalysis) 设置是否开启 SQL 注入检测（0=关,1=开）
  * @method integer getIsInstrumentationVulnerabilityScan() 获取是否开启组件漏洞检测（0=关,1=开）
  * @method void setIsInstrumentationVulnerabilityScan(integer $IsInstrumentationVulnerabilityScan) 设置是否开启组件漏洞检测（0=关,1=开）
+ * @method integer getIsRemoteCommandExecutionAnalysis() 获取是否开启远程命令攻击检测
+ * @method void setIsRemoteCommandExecutionAnalysis(integer $IsRemoteCommandExecutionAnalysis) 设置是否开启远程命令攻击检测
+ * @method integer getIsMemoryHijackingAnalysis() 获取是否开启内存马检测
+ * @method void setIsMemoryHijackingAnalysis(integer $IsMemoryHijackingAnalysis) 设置是否开启内存马检测
  */
 class ModifyApmInstanceRequest extends AbstractModel
 {
@@ -192,6 +196,16 @@ class ModifyApmInstanceRequest extends AbstractModel
     public $IsInstrumentationVulnerabilityScan;
 
     /**
+     * @var integer 是否开启远程命令攻击检测
+     */
+    public $IsRemoteCommandExecutionAnalysis;
+
+    /**
+     * @var integer 是否开启内存马检测
+     */
+    public $IsMemoryHijackingAnalysis;
+
+    /**
      * @param string $InstanceId 业务系统 ID
      * @param string $Name 业务系统名
      * @param array $Tags Tag 列表
@@ -216,6 +230,8 @@ class ModifyApmInstanceRequest extends AbstractModel
      * @param string $DashboardTopicID 关联的 Dashboard ID，开启关联 Dashboard 后才会生效
      * @param integer $IsSqlInjectionAnalysis 是否开启 SQL 注入检测（0=关,1=开）
      * @param integer $IsInstrumentationVulnerabilityScan 是否开启组件漏洞检测（0=关,1=开）
+     * @param integer $IsRemoteCommandExecutionAnalysis 是否开启远程命令攻击检测
+     * @param integer $IsMemoryHijackingAnalysis 是否开启内存马检测
      */
     function __construct()
     {
@@ -329,6 +345,14 @@ class ModifyApmInstanceRequest extends AbstractModel
 
         if (array_key_exists("IsInstrumentationVulnerabilityScan",$param) and $param["IsInstrumentationVulnerabilityScan"] !== null) {
             $this->IsInstrumentationVulnerabilityScan = $param["IsInstrumentationVulnerabilityScan"];
+        }
+
+        if (array_key_exists("IsRemoteCommandExecutionAnalysis",$param) and $param["IsRemoteCommandExecutionAnalysis"] !== null) {
+            $this->IsRemoteCommandExecutionAnalysis = $param["IsRemoteCommandExecutionAnalysis"];
+        }
+
+        if (array_key_exists("IsMemoryHijackingAnalysis",$param) and $param["IsMemoryHijackingAnalysis"] !== null) {
+            $this->IsMemoryHijackingAnalysis = $param["IsMemoryHijackingAnalysis"];
         }
     }
 }

@@ -84,6 +84,10 @@ CLUSTERING 集群模式;
 BROADCASTING 广播模式;
 CLUSTERING 集群模式;
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getClientSubscriptionInfos() 获取订阅不一致的客户端列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClientSubscriptionInfos(array $ClientSubscriptionInfos) 设置订阅不一致的客户端列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SubscriptionData extends AbstractModel
 {
@@ -180,6 +184,12 @@ CLUSTERING 集群模式;
     public $MessageModel;
 
     /**
+     * @var array 订阅不一致的客户端列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClientSubscriptionInfos;
+
+    /**
      * @param string $InstanceId 实例ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Topic 主题名称
@@ -211,6 +221,8 @@ CLUSTERING 集群模式;
      * @param string $MessageModel 消费模式: 
 BROADCASTING 广播模式;
 CLUSTERING 集群模式;
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ClientSubscriptionInfos 订阅不一致的客户端列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -284,6 +296,15 @@ CLUSTERING 集群模式;
 
         if (array_key_exists("MessageModel",$param) and $param["MessageModel"] !== null) {
             $this->MessageModel = $param["MessageModel"];
+        }
+
+        if (array_key_exists("ClientSubscriptionInfos",$param) and $param["ClientSubscriptionInfos"] !== null) {
+            $this->ClientSubscriptionInfos = [];
+            foreach ($param["ClientSubscriptionInfos"] as $key => $value){
+                $obj = new ClientSubscriptionInfo();
+                $obj->deserialize($value);
+                array_push($this->ClientSubscriptionInfos, $obj);
+            }
         }
     }
 }

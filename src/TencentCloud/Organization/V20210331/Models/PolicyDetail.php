@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getPolicyId() 获取策略ID。
  * @method void setPolicyId(integer $PolicyId) 设置策略ID。
  * @method string getPolicyName() 获取策略名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolicyName(string $PolicyName) 设置策略名称。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PolicyDetail extends AbstractModel
 {
@@ -36,14 +34,12 @@ class PolicyDetail extends AbstractModel
 
     /**
      * @var string 策略名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PolicyName;
 
     /**
      * @param integer $PolicyId 策略ID。
      * @param string $PolicyName 策略名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAddressBandwidthRange请求参数结构体
  *
- * @method array getAddressIds() 获取EIP资源ID列表，单次查询上限20。
- * @method void setAddressIds(array $AddressIds) 设置EIP资源ID列表，单次查询上限20。
+ * @method array getAddressIds() 获取EIP资源ID列表，单次查询上限20，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
+ * @method void setAddressIds(array $AddressIds) 设置EIP资源ID列表，单次查询上限20，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
  */
 class DescribeAddressBandwidthRangeRequest extends AbstractModel
 {
     /**
-     * @var array EIP资源ID列表，单次查询上限20。
+     * @var array EIP资源ID列表，单次查询上限20，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
      */
     public $AddressIds;
 
     /**
-     * @param array $AddressIds EIP资源ID列表，单次查询上限20。
+     * @param array $AddressIds EIP资源ID列表，单次查询上限20，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
      */
     function __construct()
     {

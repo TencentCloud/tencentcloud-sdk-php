@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getKeepTime() 获取保留时间，支持1～365天。
  * @method void setKeepTime(integer $KeepTime) 设置保留时间，支持1～365天。
  * @method boolean getCreateNewCos() 获取是否创建新的cos桶，默认为False。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateNewCos(boolean $CreateNewCos) 设置是否创建新的cos桶，默认为False。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCosRegion() 获取cos桶所在地域。
  * @method void setCosRegion(string $CosRegion) 设置cos桶所在地域。
  * @method string getCosBucket() 获取cos桶。
@@ -37,19 +35,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSnapshotPolicyId() 获取快照策略Id。
  * @method void setSnapshotPolicyId(string $SnapshotPolicyId) 设置快照策略Id。
  * @method array getBackupPolicies() 获取时间备份策略。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackupPolicies(array $BackupPolicies) 设置时间备份策略。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getEnable() 获取启用状态，True-启用，False-停用，默认为True。
  * @method void setEnable(boolean $Enable) 设置启用状态，True-启用，False-停用，默认为True。
  * @method string getCreateTime() 获取创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTagSet() 获取标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagSet(array $TagSet) 设置标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SnapshotPolicy extends AbstractModel
 {
@@ -70,7 +62,6 @@ class SnapshotPolicy extends AbstractModel
 
     /**
      * @var boolean 是否创建新的cos桶，默认为False。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateNewCos;
 
@@ -91,7 +82,6 @@ class SnapshotPolicy extends AbstractModel
 
     /**
      * @var array 时间备份策略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BackupPolicies;
 
@@ -102,13 +92,11 @@ class SnapshotPolicy extends AbstractModel
 
     /**
      * @var string 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var array 标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagSet;
 
@@ -117,17 +105,13 @@ class SnapshotPolicy extends AbstractModel
      * @param string $BackupType 备份策略类型，operate-操作备份，time-定时备份。
      * @param integer $KeepTime 保留时间，支持1～365天。
      * @param boolean $CreateNewCos 是否创建新的cos桶，默认为False。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CosRegion cos桶所在地域。
      * @param string $CosBucket cos桶。
      * @param string $SnapshotPolicyId 快照策略Id。
      * @param array $BackupPolicies 时间备份策略。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Enable 启用状态，True-启用，False-停用，默认为True。
      * @param string $CreateTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TagSet 标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

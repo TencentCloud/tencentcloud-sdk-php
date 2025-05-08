@@ -338,7 +338,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
  * @method Models\DeleteVpnGatewaySslClientResponse DeleteVpnGatewaySslClient(Models\DeleteVpnGatewaySslClientRequest $req) 本接口（DeleteVpnGatewaySslClient）用于删除SSL-VPN-CLIENT。
  * @method Models\DeleteVpnGatewaySslServerResponse DeleteVpnGatewaySslServer(Models\DeleteVpnGatewaySslServerRequest $req) 删除SSL-VPN-SERVER 实例
  * @method Models\DescribeAccountAttributesResponse DescribeAccountAttributes(Models\DescribeAccountAttributesRequest $req) 本接口（DescribeAccountAttributes）用于查询用户账号私有属性。
- * @method Models\DescribeAddressBandwidthRangeResponse DescribeAddressBandwidthRange(Models\DescribeAddressBandwidthRangeRequest $req) 查询指定EIP的带宽上下限范围。
+ * @method Models\DescribeAddressBandwidthRangeResponse DescribeAddressBandwidthRange(Models\DescribeAddressBandwidthRangeRequest $req) 本接口（DescribeAddressBandwidthRange）用于查询指定EIP的带宽上下限范围。
  * @method Models\DescribeAddressQuotaResponse DescribeAddressQuota(Models\DescribeAddressQuotaRequest $req) 本接口 (DescribeAddressQuota) 用于查询您账户的[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)（简称 EIP）在当前地域的配额信息。配额详情可参见 [EIP 产品简介](https://cloud.tencent.com/document/product/213/5733)。
  * @method Models\DescribeAddressTemplateGroupsResponse DescribeAddressTemplateGroups(Models\DescribeAddressTemplateGroupsRequest $req) 本接口（DescribeAddressTemplateGroups）用于查询IP地址模板集合。
  * @method Models\DescribeAddressTemplatesResponse DescribeAddressTemplates(Models\DescribeAddressTemplatesRequest $req) 本接口（DescribeAddressTemplates）用于查询IP地址模板。
@@ -561,7 +561,7 @@ LimitTypes取值范围：
  * @method Models\InquiryPriceAllocateAddressesResponse InquiryPriceAllocateAddresses(Models\InquiryPriceAllocateAddressesRequest $req) 本接口（InquiryPriceAllocateAddresses）用于新购弹性公网IP询价。
  * @method Models\InquiryPriceCreateVpnGatewayResponse InquiryPriceCreateVpnGateway(Models\InquiryPriceCreateVpnGatewayRequest $req) 本接口（InquiryPriceCreateVpnGateway）用于创建VPN网关询价。
  * @method Models\InquiryPriceModifyAddressesBandwidthResponse InquiryPriceModifyAddressesBandwidth(Models\InquiryPriceModifyAddressesBandwidthRequest $req) EIP修改带宽询价
- * @method Models\InquiryPriceRenewAddressesResponse InquiryPriceRenewAddresses(Models\InquiryPriceRenewAddressesRequest $req) 本接口（InquiryPriceRenewAddresses）用于续费预付费弹性公网IP询价。
+ * @method Models\InquiryPriceRenewAddressesResponse InquiryPriceRenewAddresses(Models\InquiryPriceRenewAddressesRequest $req) 本接口（InquiryPriceRenewAddresses）用于续费预付费弹性公网IP询价，只支持包月按带宽预付费的计费模式。
  * @method Models\InquiryPriceRenewVpnGatewayResponse InquiryPriceRenewVpnGateway(Models\InquiryPriceRenewVpnGatewayRequest $req) 本接口（InquiryPriceRenewVpnGateway）用于续费VPN网关询价。目前仅支持IPSEC类型网关的询价。
  * @method Models\InquiryPriceResetVpnGatewayInternetMaxBandwidthResponse InquiryPriceResetVpnGatewayInternetMaxBandwidth(Models\InquiryPriceResetVpnGatewayInternetMaxBandwidthRequest $req) 本接口（InquiryPriceResetVpnGatewayInternetMaxBandwidth）用于调整VPN网关带宽上限询价。
  * @method Models\LockCcnBandwidthsResponse LockCcnBandwidths(Models\LockCcnBandwidthsRequest $req) 本接口（LockCcnBandwidths）用户锁定云联网限速实例。
@@ -591,7 +591,7 @@ LimitTypes取值范围：
 >?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
 >
  * @method Models\ModifyAddressesBandwidthResponse ModifyAddressesBandwidth(Models\ModifyAddressesBandwidthRequest $req) 本接口（ModifyAddressesBandwidth）用于调整[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)(简称EIP)带宽，支持后付费EIP, 预付费EIP和带宽包EIP
- * @method Models\ModifyAddressesRenewFlagResponse ModifyAddressesRenewFlag(Models\ModifyAddressesRenewFlagRequest $req) 调整EIP续费标识
+ * @method Models\ModifyAddressesRenewFlagResponse ModifyAddressesRenewFlag(Models\ModifyAddressesRenewFlagRequest $req) 本接口（ModifyAddressesRenewFlag）用于调整EIP续费标识。
  * @method Models\ModifyAssistantCidrResponse ModifyAssistantCidr(Models\ModifyAssistantCidrRequest $req) 本接口（ModifyAssistantCidr）用于批量修改辅助CIDR，支持新增和删除。
  * @method Models\ModifyBandwidthPackageAttributeResponse ModifyBandwidthPackageAttribute(Models\ModifyBandwidthPackageAttributeRequest $req) 接口用于修改带宽包属性，包括带宽包名称和计费模式
  * @method Models\ModifyBandwidthPackageBandwidthResponse ModifyBandwidthPackageBandwidth(Models\ModifyBandwidthPackageBandwidthRequest $req) 接口用于调整[共享带宽包](https://cloud.tencent.com/document/product/684/15245)(BWP)带宽

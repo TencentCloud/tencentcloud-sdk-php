@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例ID。
  * @method string getListenerId() 获取负载均衡监听器ID。
  * @method void setListenerId(string $ListenerId) 设置负载均衡监听器ID。
- * @method array getFunctionTargets() 获取要修改的后端云函数服务列表。
- * @method void setFunctionTargets(array $FunctionTargets) 设置要修改的后端云函数服务列表。
+ * @method array getFunctionTargets() 获取要修改的后端云函数服务列表，仅支持 Event 函数类型。
+ * @method void setFunctionTargets(array $FunctionTargets) 设置要修改的后端云函数服务列表，仅支持 Event 函数类型。
  * @method string getLocationId() 获取转发规则的ID，当绑定机器到七层转发规则时，必须提供此参数或Domain+Url两者之一。
  * @method void setLocationId(string $LocationId) 设置转发规则的ID，当绑定机器到七层转发规则时，必须提供此参数或Domain+Url两者之一。
  * @method string getDomain() 获取目标规则的域名，提供LocationId参数时本参数不生效。
@@ -46,7 +46,7 @@ class ModifyFunctionTargetsRequest extends AbstractModel
     public $ListenerId;
 
     /**
-     * @var array 要修改的后端云函数服务列表。
+     * @var array 要修改的后端云函数服务列表，仅支持 Event 函数类型。
      */
     public $FunctionTargets;
 
@@ -68,7 +68,7 @@ class ModifyFunctionTargetsRequest extends AbstractModel
     /**
      * @param string $LoadBalancerId 负载均衡实例ID。
      * @param string $ListenerId 负载均衡监听器ID。
-     * @param array $FunctionTargets 要修改的后端云函数服务列表。
+     * @param array $FunctionTargets 要修改的后端云函数服务列表，仅支持 Event 函数类型。
      * @param string $LocationId 转发规则的ID，当绑定机器到七层转发规则时，必须提供此参数或Domain+Url两者之一。
      * @param string $Domain 目标规则的域名，提供LocationId参数时本参数不生效。
      * @param string $Url 目标规则的URL，提供LocationId参数时本参数不生效。

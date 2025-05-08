@@ -27,39 +27,23 @@ use TencentCloud\Common\AbstractModel;
  * @method string getResourceId() 获取资源ID
  * @method void setResourceId(string $ResourceId) 设置资源ID
  * @method string getResourceRegion() 获取地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceRegion(string $ResourceRegion) 设置地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceStatus() 获取资源状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceStatus(string $ResourceStatus) 设置资源状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getResourceDelete() 获取是否删除 1:已删除 0:未删除
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceDelete(integer $ResourceDelete) 设置是否删除 1:已删除 0:未删除
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceCreateTime() 获取资源创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceCreateTime(string $ResourceCreateTime) 设置资源创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取标签信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceZone() 获取可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceZone(string $ResourceZone) 设置可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getComplianceResult() 获取合规状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComplianceResult(string $ComplianceResult) 设置合规状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getResourceOwnerId() 获取资源所属用户ID
  * @method void setResourceOwnerId(integer $ResourceOwnerId) 设置资源所属用户ID
  * @method string getResourceOwnerName() 获取用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceOwnerName(string $ResourceOwnerName) 设置用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AggregateResourceInfo extends AbstractModel
 {
@@ -80,43 +64,36 @@ class AggregateResourceInfo extends AbstractModel
 
     /**
      * @var string 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceRegion;
 
     /**
      * @var string 资源状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceStatus;
 
     /**
      * @var integer 是否删除 1:已删除 0:未删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceDelete;
 
     /**
      * @var string 资源创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceCreateTime;
 
     /**
      * @var array 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
      * @var string 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceZone;
 
     /**
      * @var string 合规状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComplianceResult;
 
@@ -127,7 +104,6 @@ class AggregateResourceInfo extends AbstractModel
 
     /**
      * @var string 用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceOwnerName;
 
@@ -136,22 +112,14 @@ class AggregateResourceInfo extends AbstractModel
      * @param string $ResourceName 资源名称
      * @param string $ResourceId 资源ID
      * @param string $ResourceRegion 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceStatus 资源状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ResourceDelete 是否删除 1:已删除 0:未删除
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceCreateTime 资源创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceZone 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ComplianceResult 合规状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ResourceOwnerId 资源所属用户ID
      * @param string $ResourceOwnerName 用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

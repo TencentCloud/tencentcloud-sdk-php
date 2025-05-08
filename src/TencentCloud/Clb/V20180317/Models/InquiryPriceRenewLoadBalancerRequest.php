@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquiryPriceRenewLoadBalancer请求参数结构体
  *
- * @method string getLoadBalancerId() 获取负载均衡实例ID
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例ID
+ * @method string getLoadBalancerId() 获取负载均衡实例 ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
+ * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
  * @method LBChargePrepaid getLoadBalancerChargePrepaid() 获取续费周期
  * @method void setLoadBalancerChargePrepaid(LBChargePrepaid $LoadBalancerChargePrepaid) 设置续费周期
  */
 class InquiryPriceRenewLoadBalancerRequest extends AbstractModel
 {
     /**
-     * @var string 负载均衡实例ID
+     * @var string 负载均衡实例 ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
      */
     public $LoadBalancerId;
 
@@ -38,7 +38,7 @@ class InquiryPriceRenewLoadBalancerRequest extends AbstractModel
     public $LoadBalancerChargePrepaid;
 
     /**
-     * @param string $LoadBalancerId 负载均衡实例ID
+     * @param string $LoadBalancerId 负载均衡实例 ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
      * @param LBChargePrepaid $LoadBalancerChargePrepaid 续费周期
      */
     function __construct()

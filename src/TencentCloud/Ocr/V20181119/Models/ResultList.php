@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAnswer(array $Answer) 设置答案
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getParse() 获取解析
+ * @method void setParse(array $Parse) 设置解析
  * @method array getCoord() 获取整题的坐标
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCoord(array $Coord) 设置整题的坐标
@@ -78,6 +80,11 @@ class ResultList extends AbstractModel
     public $Answer;
 
     /**
+     * @var array 解析
+     */
+    public $Parse;
+
+    /**
      * @var array 整题的坐标
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -94,6 +101,7 @@ class ResultList extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Answer 答案
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Parse 解析
      * @param array $Coord 整题的坐标
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -152,6 +160,15 @@ class ResultList extends AbstractModel
                 $obj = new Element();
                 $obj->deserialize($value);
                 array_push($this->Answer, $obj);
+            }
+        }
+
+        if (array_key_exists("Parse",$param) and $param["Parse"] !== null) {
+            $this->Parse = [];
+            foreach ($param["Parse"] as $key => $value){
+                $obj = new Element();
+                $obj->deserialize($value);
+                array_push($this->Parse, $obj);
             }
         }
 

@@ -52,10 +52,10 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
  * @method void setVpcId(string $VpcId) 设置私有网络的 ID
  * @method integer getOpenBgp() 获取高防 LB 的标识，1：高防负载均衡 0：非高防负载均衡。
  * @method void setOpenBgp(integer $OpenBgp) 设置高防 LB 的标识，1：高防负载均衡 0：非高防负载均衡。
- * @method boolean getSnat() 获取在 2016 年 12 月份之前的传统型内网负载均衡都是开启了 snat 的。
- * @method void setSnat(boolean $Snat) 设置在 2016 年 12 月份之前的传统型内网负载均衡都是开启了 snat 的。
- * @method integer getIsolation() 获取0：表示未被隔离，1：表示被隔离。
- * @method void setIsolation(integer $Isolation) 设置0：表示未被隔离，1：表示被隔离。
+ * @method boolean getSnat() 获取是否开启 SNAT，在 2016 年 12 月份之前的传统型内网负载均衡都是开启了 SNAT 的。
+ * @method void setSnat(boolean $Snat) 设置是否开启 SNAT，在 2016 年 12 月份之前的传统型内网负载均衡都是开启了 SNAT 的。
+ * @method integer getIsolation() 获取是否被隔离，0：表示未被隔离，1：表示被隔离。
+ * @method void setIsolation(integer $Isolation) 设置是否被隔离，0：表示未被隔离，1：表示被隔离。
  * @method string getLog() 获取用户开启日志的信息，日志只有公网属性创建了 HTTP 、HTTPS 监听器的负载均衡才会有日志。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLog(string $Log) 设置用户开启日志的信息，日志只有公网属性创建了 HTTP 、HTTPS 监听器的负载均衡才会有日志。
@@ -308,12 +308,12 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
     public $OpenBgp;
 
     /**
-     * @var boolean 在 2016 年 12 月份之前的传统型内网负载均衡都是开启了 snat 的。
+     * @var boolean 是否开启 SNAT，在 2016 年 12 月份之前的传统型内网负载均衡都是开启了 SNAT 的。
      */
     public $Snat;
 
     /**
-     * @var integer 0：表示未被隔离，1：表示被隔离。
+     * @var integer 是否被隔离，0：表示未被隔离，1：表示被隔离。
      */
     public $Isolation;
 
@@ -599,8 +599,8 @@ OPEN：公网属性， INTERNAL：内网属性；对于内网属性的负载均�
      * @param integer $ProjectId 负载均衡实例所属的项目 ID， 0 表示默认项目。
      * @param string $VpcId 私有网络的 ID
      * @param integer $OpenBgp 高防 LB 的标识，1：高防负载均衡 0：非高防负载均衡。
-     * @param boolean $Snat 在 2016 年 12 月份之前的传统型内网负载均衡都是开启了 snat 的。
-     * @param integer $Isolation 0：表示未被隔离，1：表示被隔离。
+     * @param boolean $Snat 是否开启 SNAT，在 2016 年 12 月份之前的传统型内网负载均衡都是开启了 SNAT 的。
+     * @param integer $Isolation 是否被隔离，0：表示未被隔离，1：表示被隔离。
      * @param string $Log 用户开启日志的信息，日志只有公网属性创建了 HTTP 、HTTPS 监听器的负载均衡才会有日志。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 负载均衡实例所在的子网（仅对内网VPC型LB有意义）

@@ -45,13 +45,9 @@ use TencentCloud\Common\AbstractModel;
  * @method array getTagSet() 获取标签键值对
  * @method void setTagSet(array $TagSet) 设置标签键值对
  * @method array getAssistantCidrSet() 获取辅助CIDR
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssistantCidrSet(array $AssistantCidrSet) 设置辅助CIDR
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getIpv6CidrBlockSet() 获取返回多运营商IPv6 Cidr Block
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpv6CidrBlockSet(array $Ipv6CidrBlockSet) 设置返回多运营商IPv6 Cidr Block
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Vpc extends AbstractModel
 {
@@ -117,13 +113,11 @@ class Vpc extends AbstractModel
 
     /**
      * @var array 辅助CIDR
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AssistantCidrSet;
 
     /**
      * @var array 返回多运营商IPv6 Cidr Block
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ipv6CidrBlockSet;
 
@@ -141,9 +135,7 @@ class Vpc extends AbstractModel
      * @param string $Ipv6CidrBlock `VPC`的`IPv6` `CIDR`。
      * @param array $TagSet 标签键值对
      * @param array $AssistantCidrSet 辅助CIDR
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Ipv6CidrBlockSet 返回多运营商IPv6 Cidr Block
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

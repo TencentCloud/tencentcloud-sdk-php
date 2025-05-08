@@ -24,12 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置模板名，最大长度32字符，不能包含空白字符
  * @method string getCmdList() 获取命令列表，\n分隔，最大长度32768字节
  * @method void setCmdList(string $CmdList) 设置命令列表，\n分隔，最大长度32768字节
- * @method integer getEncoding() 获取标识cmdlist字段前端是否为base64加密传值.
-0:表示非base64加密
-1:表示是base64加密
- * @method void setEncoding(integer $Encoding) 设置标识cmdlist字段前端是否为base64加密传值.
-0:表示非base64加密
-1:表示是base64加密
+ * @method integer getEncoding() 获取标识CmdList字段前端是否为base64加密传值.0:表示非base64加密1:表示是base64加密
+ * @method void setEncoding(integer $Encoding) 设置标识CmdList字段前端是否为base64加密传值.0:表示非base64加密1:表示是base64加密
  */
 class CreateCmdTemplateRequest extends AbstractModel
 {
@@ -44,18 +40,14 @@ class CreateCmdTemplateRequest extends AbstractModel
     public $CmdList;
 
     /**
-     * @var integer 标识cmdlist字段前端是否为base64加密传值.
-0:表示非base64加密
-1:表示是base64加密
+     * @var integer 标识CmdList字段前端是否为base64加密传值.0:表示非base64加密1:表示是base64加密
      */
     public $Encoding;
 
     /**
      * @param string $Name 模板名，最大长度32字符，不能包含空白字符
      * @param string $CmdList 命令列表，\n分隔，最大长度32768字节
-     * @param integer $Encoding 标识cmdlist字段前端是否为base64加密传值.
-0:表示非base64加密
-1:表示是base64加密
+     * @param integer $Encoding 标识CmdList字段前端是否为base64加密传值.0:表示非base64加密1:表示是base64加密
      */
     function __construct()
     {

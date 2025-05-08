@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ReleaseIPv6Addresses请求参数结构体
  *
- * @method array getIPv6AddressIds() 获取IPv6地址唯一ID。
- * @method void setIPv6AddressIds(array $IPv6AddressIds) 设置IPv6地址唯一ID。
+ * @method array getIPv6AddressIds() 获取IPv6地址唯一ID。可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressId。
+ * @method void setIPv6AddressIds(array $IPv6AddressIds) 设置IPv6地址唯一ID。可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressId。
  */
 class ReleaseIPv6AddressesRequest extends AbstractModel
 {
     /**
-     * @var array IPv6地址唯一ID。
+     * @var array IPv6地址唯一ID。可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressId。
      */
     public $IPv6AddressIds;
 
     /**
-     * @param array $IPv6AddressIds IPv6地址唯一ID。
+     * @param array $IPv6AddressIds IPv6地址唯一ID。可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressId。
      */
     function __construct()
     {

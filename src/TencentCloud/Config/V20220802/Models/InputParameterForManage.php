@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 规则入参
  *
  * @method string getValueType() 获取值类型。数值：Integer， 字符串：String
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValueType(string $ValueType) 设置值类型。数值：Integer， 字符串：String
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getParameterKey() 获取参数Key
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParameterKey(string $ParameterKey) 设置参数Key
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取参数类型。必填类型：Require，可选类型：Optional。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置参数类型。必填类型：Require，可选类型：Optional。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDefaultValue() 获取默认值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefaultValue(string $DefaultValue) 设置默认值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置描述
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InputParameterForManage extends AbstractModel
 {
     /**
      * @var string 值类型。数值：Integer， 字符串：String
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ValueType;
 
     /**
      * @var string 参数Key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParameterKey;
 
     /**
      * @var string 参数类型。必填类型：Require，可选类型：Optional。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 默认值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DefaultValue;
 
     /**
      * @var string 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @param string $ValueType 值类型。数值：Integer， 字符串：String
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ParameterKey 参数Key
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 参数类型。必填类型：Require，可选类型：Optional。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DefaultValue 默认值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

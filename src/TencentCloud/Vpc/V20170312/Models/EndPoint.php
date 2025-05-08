@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEndPointId() 获取终端节点ID。
  * @method void setEndPointId(string $EndPointId) 设置终端节点ID。
- * @method string getVpcId() 获取VPCID。
- * @method void setVpcId(string $VpcId) 设置VPCID。
+ * @method string getVpcId() 获取VPC唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
+ * @method void setVpcId(string $VpcId) 设置VPC唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
  * @method string getSubnetId() 获取子网ID。
  * @method void setSubnetId(string $SubnetId) 设置子网ID。
  * @method string getEndPointOwner() 获取APPID。
@@ -40,22 +40,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndPointVip(string $EndPointVip) 设置终端节点的VIP。
  * @method string getState() 获取终端节点状态，ACTIVE：可用，PENDING：待接受，ACCEPTING：接受中，REJECTED：已拒绝，FAILED：失败。
  * @method void setState(string $State) 设置终端节点状态，ACTIVE：可用，PENDING：待接受，ACCEPTING：接受中，REJECTED：已拒绝，FAILED：失败。
- * @method string getCreateTime() 获取创建时间。
- * @method void setCreateTime(string $CreateTime) 设置创建时间。
+ * @method string getCreateTime() 获取创建时间。格式：YYYY-MM-DD HH:MM:SS。
+ * @method void setCreateTime(string $CreateTime) 设置创建时间。格式：YYYY-MM-DD HH:MM:SS。
  * @method array getGroupSet() 获取终端节点绑定的安全组实例ID列表。
  * @method void setGroupSet(array $GroupSet) 设置终端节点绑定的安全组实例ID列表。
  * @method string getServiceName() 获取终端节点服务名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceName(string $ServiceName) 设置终端节点服务名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCdcId() 获取CDC 集群唯一 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCdcId(string $CdcId) 设置CDC 集群唯一 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTagSet() 获取标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagSet(array $TagSet) 设置标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class EndPoint extends AbstractModel
 {
@@ -65,7 +59,7 @@ class EndPoint extends AbstractModel
     public $EndPointId;
 
     /**
-     * @var string VPCID。
+     * @var string VPC唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
      */
     public $VpcId;
 
@@ -110,7 +104,7 @@ class EndPoint extends AbstractModel
     public $State;
 
     /**
-     * @var string 创建时间。
+     * @var string 创建时间。格式：YYYY-MM-DD HH:MM:SS。
      */
     public $CreateTime;
 
@@ -121,25 +115,22 @@ class EndPoint extends AbstractModel
 
     /**
      * @var string 终端节点服务名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceName;
 
     /**
      * @var string CDC 集群唯一 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CdcId;
 
     /**
      * @var array 标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagSet;
 
     /**
      * @param string $EndPointId 终端节点ID。
-     * @param string $VpcId VPCID。
+     * @param string $VpcId VPC唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
      * @param string $SubnetId 子网ID。
      * @param string $EndPointOwner APPID。
      * @param string $EndPointName 终端节点名称。
@@ -148,14 +139,11 @@ class EndPoint extends AbstractModel
      * @param string $EndPointServiceId 终端节点服务的ID。
      * @param string $EndPointVip 终端节点的VIP。
      * @param string $State 终端节点状态，ACTIVE：可用，PENDING：待接受，ACCEPTING：接受中，REJECTED：已拒绝，FAILED：失败。
-     * @param string $CreateTime 创建时间。
+     * @param string $CreateTime 创建时间。格式：YYYY-MM-DD HH:MM:SS。
      * @param array $GroupSet 终端节点绑定的安全组实例ID列表。
      * @param string $ServiceName 终端节点服务名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CdcId CDC 集群唯一 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TagSet 标签键值对。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

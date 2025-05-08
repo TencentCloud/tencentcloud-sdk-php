@@ -108,6 +108,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneIds(array $ZoneIds) 设置集群节点所在的可用区，若该集群为跨可用区集群，则包含该集群节点所在的多个可用区。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsFrozen() 获取是否已冻结
+ * @method void setIsFrozen(boolean $IsFrozen) 设置是否已冻结
  */
 class RocketMQClusterInfo extends AbstractModel
 {
@@ -256,6 +258,11 @@ class RocketMQClusterInfo extends AbstractModel
     public $ZoneIds;
 
     /**
+     * @var boolean 是否已冻结
+     */
+    public $IsFrozen;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $ClusterName 集群名称
      * @param string $Region 地域信息
@@ -300,6 +307,7 @@ class RocketMQClusterInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ZoneIds 集群节点所在的可用区，若该集群为跨可用区集群，则包含该集群节点所在的多个可用区。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsFrozen 是否已冻结
      */
     function __construct()
     {
@@ -417,6 +425,10 @@ class RocketMQClusterInfo extends AbstractModel
 
         if (array_key_exists("ZoneIds",$param) and $param["ZoneIds"] !== null) {
             $this->ZoneIds = $param["ZoneIds"];
+        }
+
+        if (array_key_exists("IsFrozen",$param) and $param["IsFrozen"] !== null) {
+            $this->IsFrozen = $param["IsFrozen"];
         }
     }
 }

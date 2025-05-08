@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 跟踪集概览
  *
  * @method integer getAuditStatus() 获取跟踪集状态，1：开启，0：关闭
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuditStatus(integer $AuditStatus) 设置跟踪集状态，1：开启，0：关闭
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCosBucketName() 获取COS存储桶名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCosBucketName(string $CosBucketName) 设置COS存储桶名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAuditName() 获取跟踪集名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuditName(string $AuditName) 设置跟踪集名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLogFilePrefix() 获取日志前缀
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogFilePrefix(string $LogFilePrefix) 设置日志前缀
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AuditSummary extends AbstractModel
 {
     /**
      * @var integer 跟踪集状态，1：开启，0：关闭
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AuditStatus;
 
     /**
      * @var string COS存储桶名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CosBucketName;
 
     /**
      * @var string 跟踪集名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AuditName;
 
     /**
      * @var string 日志前缀
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogFilePrefix;
 
     /**
      * @param integer $AuditStatus 跟踪集状态，1：开启，0：关闭
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CosBucketName COS存储桶名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AuditName 跟踪集名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LogFilePrefix 日志前缀
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

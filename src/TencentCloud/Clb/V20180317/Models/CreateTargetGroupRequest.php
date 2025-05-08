@@ -41,15 +41,19 @@ use TencentCloud\Common\AbstractModel;
     <li>取值范围[0, 100]</li>
     <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li>
 </ul>
-
+v1 目标组类型不支持设置 Weight 参数。
  * @method void setWeight(integer $Weight) 设置后端服务默认权重。
 <ul>
     <li>取值范围[0, 100]</li>
     <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li>
 </ul>
-
+v1 目标组类型不支持设置 Weight 参数。
  * @method boolean getFullListenSwitch() 获取全监听目标组标识，为true表示是全监听目标组，false表示不是全监听目标组。
  * @method void setFullListenSwitch(boolean $FullListenSwitch) 设置全监听目标组标识，为true表示是全监听目标组，false表示不是全监听目标组。
+ * @method boolean getKeepaliveEnable() 获取是否开启长连接，此参数仅适用于HTTP/HTTPS目标组，0:关闭；1:开启， 默认关闭。
+ * @method void setKeepaliveEnable(boolean $KeepaliveEnable) 设置是否开启长连接，此参数仅适用于HTTP/HTTPS目标组，0:关闭；1:开启， 默认关闭。
+ * @method integer getSessionExpireTime() 获取会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。TCP/UDP目标组不支持该参数。
+ * @method void setSessionExpireTime(integer $SessionExpireTime) 设置会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。TCP/UDP目标组不支持该参数。
  */
 class CreateTargetGroupRequest extends AbstractModel
 {
@@ -95,7 +99,7 @@ class CreateTargetGroupRequest extends AbstractModel
     <li>取值范围[0, 100]</li>
     <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li>
 </ul>
-
+v1 目标组类型不支持设置 Weight 参数。
      */
     public $Weight;
 
@@ -103,6 +107,16 @@ class CreateTargetGroupRequest extends AbstractModel
      * @var boolean 全监听目标组标识，为true表示是全监听目标组，false表示不是全监听目标组。
      */
     public $FullListenSwitch;
+
+    /**
+     * @var boolean 是否开启长连接，此参数仅适用于HTTP/HTTPS目标组，0:关闭；1:开启， 默认关闭。
+     */
+    public $KeepaliveEnable;
+
+    /**
+     * @var integer 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。TCP/UDP目标组不支持该参数。
+     */
+    public $SessionExpireTime;
 
     /**
      * @param string $TargetGroupName 目标组名称，限定50个字符
@@ -118,8 +132,10 @@ class CreateTargetGroupRequest extends AbstractModel
     <li>取值范围[0, 100]</li>
     <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li>
 </ul>
-
+v1 目标组类型不支持设置 Weight 参数。
      * @param boolean $FullListenSwitch 全监听目标组标识，为true表示是全监听目标组，false表示不是全监听目标组。
+     * @param boolean $KeepaliveEnable 是否开启长连接，此参数仅适用于HTTP/HTTPS目标组，0:关闭；1:开启， 默认关闭。
+     * @param integer $SessionExpireTime 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。TCP/UDP目标组不支持该参数。
      */
     function __construct()
     {
@@ -178,6 +194,14 @@ class CreateTargetGroupRequest extends AbstractModel
 
         if (array_key_exists("FullListenSwitch",$param) and $param["FullListenSwitch"] !== null) {
             $this->FullListenSwitch = $param["FullListenSwitch"];
+        }
+
+        if (array_key_exists("KeepaliveEnable",$param) and $param["KeepaliveEnable"] !== null) {
+            $this->KeepaliveEnable = $param["KeepaliveEnable"];
+        }
+
+        if (array_key_exists("SessionExpireTime",$param) and $param["SessionExpireTime"] !== null) {
+            $this->SessionExpireTime = $param["SessionExpireTime"];
         }
     }
 }

@@ -77,21 +77,15 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
  * @method string getRouteTableId() 获取路由表实例ID，例如：rtb-azd4dt1c。
  * @method void setRouteTableId(string $RouteTableId) 设置路由表实例ID，例如：rtb-azd4dt1c。
  * @method string getDestinationIpv6CidrBlock() 获取创建IPv6目的网段，取值不能在私有网络网段内，例如：2402:4e00:1000:810b::/64。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDestinationIpv6CidrBlock(string $DestinationIpv6CidrBlock) 设置创建IPv6目的网段，取值不能在私有网络网段内，例如：2402:4e00:1000:810b::/64。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRouteItemId() 获取路由唯一策略ID。
  * @method void setRouteItemId(string $RouteItemId) 设置路由唯一策略ID。
  * @method boolean getPublishedToVbc() 获取路由策略是否发布到云联网。该字段仅做出参使用，作为入参字段时此参数不生效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublishedToVbc(boolean $PublishedToVbc) 设置路由策略是否发布到云联网。该字段仅做出参使用，作为入参字段时此参数不生效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedTime() 获取路由策略创建时间
  * @method void setCreatedTime(string $CreatedTime) 设置路由策略创建时间
  * @method string getCdcId() 获取CDC 集群唯一 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCdcId(string $CdcId) 设置CDC 集群唯一 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Route extends AbstractModel
 {
@@ -157,7 +151,6 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
 
     /**
      * @var string 创建IPv6目的网段，取值不能在私有网络网段内，例如：2402:4e00:1000:810b::/64。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DestinationIpv6CidrBlock;
 
@@ -168,7 +161,6 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
 
     /**
      * @var boolean 路由策略是否发布到云联网。该字段仅做出参使用，作为入参字段时此参数不生效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublishedToVbc;
 
@@ -179,7 +171,6 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
 
     /**
      * @var string CDC 集群唯一 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CdcId;
 
@@ -213,13 +204,10 @@ CCN：云联网路由，系统默认下发，不可编辑与删除。
 用户只能添加和操作 USER 类型的路由。
      * @param string $RouteTableId 路由表实例ID，例如：rtb-azd4dt1c。
      * @param string $DestinationIpv6CidrBlock 创建IPv6目的网段，取值不能在私有网络网段内，例如：2402:4e00:1000:810b::/64。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RouteItemId 路由唯一策略ID。
      * @param boolean $PublishedToVbc 路由策略是否发布到云联网。该字段仅做出参使用，作为入参字段时此参数不生效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedTime 路由策略创建时间
      * @param string $CdcId CDC 集群唯一 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

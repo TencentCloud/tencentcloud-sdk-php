@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 跟踪集数据投递筛选条件
  *
  * @method array getResourceFields() 获取资源筛选条件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceFields(array $ResourceFields) 设置资源筛选条件
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Filter extends AbstractModel
 {
     /**
      * @var array 资源筛选条件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceFields;
 
     /**
      * @param array $ResourceFields 资源筛选条件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

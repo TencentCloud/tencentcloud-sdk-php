@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * CIC的权限策略
  *
  * @method integer getRolePolicyId() 获取策略ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRolePolicyId(integer $RolePolicyId) 设置策略ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRolePolicyName() 获取权限策略名称
  * @method void setRolePolicyName(string $RolePolicyName) 设置权限策略名称
  * @method string getRolePolicyType() 获取权限策略类型
@@ -37,7 +35,6 @@ class RolePolicie extends AbstractModel
 {
     /**
      * @var integer 策略ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RolePolicyId;
 
@@ -63,7 +60,6 @@ class RolePolicie extends AbstractModel
 
     /**
      * @param integer $RolePolicyId 策略ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RolePolicyName 权限策略名称
      * @param string $RolePolicyType 权限策略类型
      * @param string $RolePolicyDocument 自定义策略内容。仅自定义策略返回该参数。

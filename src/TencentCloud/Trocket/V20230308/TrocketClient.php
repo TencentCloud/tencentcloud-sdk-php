@@ -53,7 +53,6 @@ use TencentCloud\Trocket\V20230308\Models as Models;
 2. InstanceId，集群ID查询
 3. InstanceType, 集群类型查询，支持多选
 4. Version，集群版本查询
-当使用TagFilters查询时，Filters参数失效。
  * @method Models\DescribeInstanceResponse DescribeInstance(Models\DescribeInstanceRequest $req) 查询 RocketMQ 5.x 集群信息。
  * @method Models\DescribeInstanceListResponse DescribeInstanceList(Models\DescribeInstanceListRequest $req) 查询集群列表，仅支持 5.x 集群。Filters参数使用说明如下：
 1. InstanceName, 名称模糊查询

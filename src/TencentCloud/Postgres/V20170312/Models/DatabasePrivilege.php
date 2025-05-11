@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 指定账号对数据库对象拥有的权限列表
  *
- * @method DatabaseObject getObject() 获取数据库对象，当ObjectType为database时，DataseName/SchemaName/TableName可为空；当ObjectType为schema时，SchemaName/TableName可为空；当ObjectType为column时，TableName不可为空，其余情况均可为空。
+ * @method DatabaseObject getObject() 获取数据库对象，当ObjectType为database时，DatabaseName/SchemaName/TableName可为空；当ObjectType为schema时，SchemaName/TableName可为空；当ObjectType为column时，TableName不可为空，其余情况均可为空。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setObject(DatabaseObject $Object) 设置数据库对象，当ObjectType为database时，DataseName/SchemaName/TableName可为空；当ObjectType为schema时，SchemaName/TableName可为空；当ObjectType为column时，TableName不可为空，其余情况均可为空。
+ * @method void setObject(DatabaseObject $Object) 设置数据库对象，当ObjectType为database时，DatabaseName/SchemaName/TableName可为空；当ObjectType为schema时，SchemaName/TableName可为空；当ObjectType为column时，TableName不可为空，其余情况均可为空。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPrivilegeSet() 获取指定账号对数据库对象拥有的权限列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DatabasePrivilege extends AbstractModel
 {
     /**
-     * @var DatabaseObject 数据库对象，当ObjectType为database时，DataseName/SchemaName/TableName可为空；当ObjectType为schema时，SchemaName/TableName可为空；当ObjectType为column时，TableName不可为空，其余情况均可为空。
+     * @var DatabaseObject 数据库对象，当ObjectType为database时，DatabaseName/SchemaName/TableName可为空；当ObjectType为schema时，SchemaName/TableName可为空；当ObjectType为column时，TableName不可为空，其余情况均可为空。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Object;
@@ -44,7 +44,7 @@ class DatabasePrivilege extends AbstractModel
     public $PrivilegeSet;
 
     /**
-     * @param DatabaseObject $Object 数据库对象，当ObjectType为database时，DataseName/SchemaName/TableName可为空；当ObjectType为schema时，SchemaName/TableName可为空；当ObjectType为column时，TableName不可为空，其余情况均可为空。
+     * @param DatabaseObject $Object 数据库对象，当ObjectType为database时，DatabaseName/SchemaName/TableName可为空；当ObjectType为schema时，SchemaName/TableName可为空；当ObjectType为column时，TableName不可为空，其余情况均可为空。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PrivilegeSet 指定账号对数据库对象拥有的权限列表
 注意：此字段可能返回 null，表示取不到有效值。

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquiryPriceModifyAddressesBandwidth请求参数结构体
  *
- * @method array getAddressIds() 获取EIP唯一ID
- * @method void setAddressIds(array $AddressIds) 设置EIP唯一ID
- * @method integer getInternetMaxBandwidthOut() 获取新带宽值
- * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置新带宽值
+ * @method array getAddressIds() 获取EIP唯一ID，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
+ * @method void setAddressIds(array $AddressIds) 设置EIP唯一ID，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
+ * @method integer getInternetMaxBandwidthOut() 获取新带宽值，可调整的带宽上限值参考产品文档[带宽上限](https://cloud.tencent.com/document/product/1199/48333)。
+ * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置新带宽值，可调整的带宽上限值参考产品文档[带宽上限](https://cloud.tencent.com/document/product/1199/48333)。
  */
 class InquiryPriceModifyAddressesBandwidthRequest extends AbstractModel
 {
     /**
-     * @var array EIP唯一ID
+     * @var array EIP唯一ID，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
      */
     public $AddressIds;
 
     /**
-     * @var integer 新带宽值
+     * @var integer 新带宽值，可调整的带宽上限值参考产品文档[带宽上限](https://cloud.tencent.com/document/product/1199/48333)。
      */
     public $InternetMaxBandwidthOut;
 
     /**
-     * @param array $AddressIds EIP唯一ID
-     * @param integer $InternetMaxBandwidthOut 新带宽值
+     * @param array $AddressIds EIP唯一ID，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
+     * @param integer $InternetMaxBandwidthOut 新带宽值，可调整的带宽上限值参考产品文档[带宽上限](https://cloud.tencent.com/document/product/1199/48333)。
      */
     function __construct()
     {

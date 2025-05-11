@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyInstanceAttackLogPost请求参数结构体
  *
-
+ * @method string getInstanceId() 获取实例ID
+ * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method integer getAttackLogPost() 获取攻击日志投递开关
+ * @method void setAttackLogPost(integer $AttackLogPost) 设置攻击日志投递开关
  */
 class ModifyInstanceAttackLogPostRequest extends AbstractModel
 {
-
+    /**
+     * @var string 实例ID
+     */
+    public $InstanceId;
 
     /**
+     * @var integer 攻击日志投递开关
+     */
+    public $AttackLogPost;
 
+    /**
+     * @param string $InstanceId 实例ID
+     * @param integer $AttackLogPost 攻击日志投递开关
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class ModifyInstanceAttackLogPostRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
 
+        if (array_key_exists("AttackLogPost",$param) and $param["AttackLogPost"] !== null) {
+            $this->AttackLogPost = $param["AttackLogPost"];
+        }
     }
 }

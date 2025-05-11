@@ -14,24 +14,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Teo\V20220901\Models;
+namespace TencentCloud\Wedata\V20210820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * VerifyOwnership请求参数结构体
+ * DescribeBaseBizCatalogs请求参数结构体
  *
- * @method string getDomain() 获取站点域名或者站点下的加速域名。
- * @method void setDomain(string $Domain) 设置站点域名或者站点下的加速域名。
+
  */
-class VerifyOwnershipRequest extends AbstractModel
+class DescribeBaseBizCatalogsRequest extends AbstractModel
 {
-    /**
-     * @var string 站点域名或者站点下的加速域名。
-     */
-    public $Domain;
+
 
     /**
-     * @param string $Domain 站点域名或者站点下的加速域名。
+
      */
     function __construct()
     {
@@ -46,8 +42,6 @@ class VerifyOwnershipRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
-        }
+
     }
 }

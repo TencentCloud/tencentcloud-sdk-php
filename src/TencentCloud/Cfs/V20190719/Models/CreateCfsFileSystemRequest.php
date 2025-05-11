@@ -54,6 +54,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) 设置定期快照策略ID
  * @method boolean getEnableAutoScaleUp() 获取是否开启默认扩容，仅Turbo类型文件存储支持
  * @method void setEnableAutoScaleUp(boolean $EnableAutoScaleUp) 设置是否开启默认扩容，仅Turbo类型文件存储支持
+ * @method string getCfsVersion() 获取v1.5：创建普通版的通用文件系统；
+v3.1：创建增强版的通用文件系统
+说明：增强版的通用系统需要开通白名单才能使用，如有需要请提交工单与我们联系。
+ * @method void setCfsVersion(string $CfsVersion) 设置v1.5：创建普通版的通用文件系统；
+v3.1：创建增强版的通用文件系统
+说明：增强版的通用系统需要开通白名单才能使用，如有需要请提交工单与我们联系。
  */
 class CreateCfsFileSystemRequest extends AbstractModel
 {
@@ -143,6 +149,13 @@ class CreateCfsFileSystemRequest extends AbstractModel
     public $EnableAutoScaleUp;
 
     /**
+     * @var string v1.5：创建普通版的通用文件系统；
+v3.1：创建增强版的通用文件系统
+说明：增强版的通用系统需要开通白名单才能使用，如有需要请提交工单与我们联系。
+     */
+    public $CfsVersion;
+
+    /**
      * @param string $Zone 可用区名称，例如ap-beijing-1，请参考 [概览](https://cloud.tencent.com/document/product/582/13225) 文档中的地域与可用区列表
      * @param string $NetInterface 网络类型，可选值为 VPC，CCN；其中 VPC 为私有网络， CCN 为云联网。通用标准型/性能型请选择VPC，Turbo标准型/性能型请选择CCN。
      * @param string $PGroupId 权限组 ID
@@ -160,6 +173,9 @@ class CreateCfsFileSystemRequest extends AbstractModel
      * @param string $SnapshotId 文件系统快照ID
      * @param string $AutoSnapshotPolicyId 定期快照策略ID
      * @param boolean $EnableAutoScaleUp 是否开启默认扩容，仅Turbo类型文件存储支持
+     * @param string $CfsVersion v1.5：创建普通版的通用文件系统；
+v3.1：创建增强版的通用文件系统
+说明：增强版的通用系统需要开通白名单才能使用，如有需要请提交工单与我们联系。
      */
     function __construct()
     {
@@ -245,6 +261,10 @@ class CreateCfsFileSystemRequest extends AbstractModel
 
         if (array_key_exists("EnableAutoScaleUp",$param) and $param["EnableAutoScaleUp"] !== null) {
             $this->EnableAutoScaleUp = $param["EnableAutoScaleUp"];
+        }
+
+        if (array_key_exists("CfsVersion",$param) and $param["CfsVersion"] !== null) {
+            $this->CfsVersion = $param["CfsVersion"];
         }
     }
 }

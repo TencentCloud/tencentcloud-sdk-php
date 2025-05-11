@@ -62,16 +62,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAddressChargePrepaid(AddressChargePrepaid $AddressChargePrepaid) 设置包月按带宽预付费EIP的计费参数。EIP为包月按带宽预付费时，该参数必传，其余场景不需传递
  * @method string getAddressType() 获取EIP类型。各种EIP类型详情可参考：[EIP 的 IP 地址类型](https://cloud.tencent.com/document/product/1199/41646)。默认值：EIP。
 <li>EIP：弹性公网 IP。 </li>
-<li>AnycastEIP：加速 IP，已开通 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)白名单的用户可选。仅部分地域支持加速IP。</li>
-<li>HighQualityEIP：精品 IP。仅部分地域支持精品IP。</li>
-<li>AntiDDoSEIP：高防 IP。仅部分地域支持高防IP。</li>
-
+<li>AnycastEIP：加速 IP，已开通 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)白名单的用户可选。仅部分地域支持加速IP，详情可见Anycast公网加速[购买指南](https://cloud.tencent.com/document/product/644/12617)。</li>
+<li>HighQualityEIP：精品 IP。仅新加坡和中国香港支持精品IP。</li>
+<li>AntiDDoSEIP：高防 IP。仅部分地域支持高防IP，详情可见弹性公网IP[产品概述](https://cloud.tencent.com/document/product/1199/41646)。</li>
  * @method void setAddressType(string $AddressType) 设置EIP类型。各种EIP类型详情可参考：[EIP 的 IP 地址类型](https://cloud.tencent.com/document/product/1199/41646)。默认值：EIP。
 <li>EIP：弹性公网 IP。 </li>
-<li>AnycastEIP：加速 IP，已开通 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)白名单的用户可选。仅部分地域支持加速IP。</li>
-<li>HighQualityEIP：精品 IP。仅部分地域支持精品IP。</li>
-<li>AntiDDoSEIP：高防 IP。仅部分地域支持高防IP。</li>
-
+<li>AnycastEIP：加速 IP，已开通 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)白名单的用户可选。仅部分地域支持加速IP，详情可见Anycast公网加速[购买指南](https://cloud.tencent.com/document/product/644/12617)。</li>
+<li>HighQualityEIP：精品 IP。仅新加坡和中国香港支持精品IP。</li>
+<li>AntiDDoSEIP：高防 IP。仅部分地域支持高防IP，详情可见弹性公网IP[产品概述](https://cloud.tencent.com/document/product/1199/41646)。</li>
  * @method string getAnycastZone() 获取Anycast发布域。
 <ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>ANYCAST_ZONE_GLOBAL：全球发布域（需要额外开通Anycast全球加速白名单）</li><li>ANYCAST_ZONE_OVERSEAS：境外发布域</li><li><b>[已废弃]</b> ANYCAST_ZONE_A：发布域A（已更新为全球发布域）</li><li><b>[已废弃]</b> ANYCAST_ZONE_B：发布域B（已更新为全球发布域）</li></ul>默认值：ANYCAST_ZONE_OVERSEAS。</li></ul>
  * @method void setAnycastZone(string $AnycastZone) 设置Anycast发布域。
@@ -156,10 +154,9 @@ class AllocateAddressesRequest extends AbstractModel
     /**
      * @var string EIP类型。各种EIP类型详情可参考：[EIP 的 IP 地址类型](https://cloud.tencent.com/document/product/1199/41646)。默认值：EIP。
 <li>EIP：弹性公网 IP。 </li>
-<li>AnycastEIP：加速 IP，已开通 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)白名单的用户可选。仅部分地域支持加速IP。</li>
-<li>HighQualityEIP：精品 IP。仅部分地域支持精品IP。</li>
-<li>AntiDDoSEIP：高防 IP。仅部分地域支持高防IP。</li>
-
+<li>AnycastEIP：加速 IP，已开通 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)白名单的用户可选。仅部分地域支持加速IP，详情可见Anycast公网加速[购买指南](https://cloud.tencent.com/document/product/644/12617)。</li>
+<li>HighQualityEIP：精品 IP。仅新加坡和中国香港支持精品IP。</li>
+<li>AntiDDoSEIP：高防 IP。仅部分地域支持高防IP，详情可见弹性公网IP[产品概述](https://cloud.tencent.com/document/product/1199/41646)。</li>
      */
     public $AddressType;
 
@@ -249,10 +246,9 @@ AnycastEIP是否用于绑定负载均衡。
      * @param AddressChargePrepaid $AddressChargePrepaid 包月按带宽预付费EIP的计费参数。EIP为包月按带宽预付费时，该参数必传，其余场景不需传递
      * @param string $AddressType EIP类型。各种EIP类型详情可参考：[EIP 的 IP 地址类型](https://cloud.tencent.com/document/product/1199/41646)。默认值：EIP。
 <li>EIP：弹性公网 IP。 </li>
-<li>AnycastEIP：加速 IP，已开通 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)白名单的用户可选。仅部分地域支持加速IP。</li>
-<li>HighQualityEIP：精品 IP。仅部分地域支持精品IP。</li>
-<li>AntiDDoSEIP：高防 IP。仅部分地域支持高防IP。</li>
-
+<li>AnycastEIP：加速 IP，已开通 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)白名单的用户可选。仅部分地域支持加速IP，详情可见Anycast公网加速[购买指南](https://cloud.tencent.com/document/product/644/12617)。</li>
+<li>HighQualityEIP：精品 IP。仅新加坡和中国香港支持精品IP。</li>
+<li>AntiDDoSEIP：高防 IP。仅部分地域支持高防IP，详情可见弹性公网IP[产品概述](https://cloud.tencent.com/document/product/1199/41646)。</li>
      * @param string $AnycastZone Anycast发布域。
 <ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>ANYCAST_ZONE_GLOBAL：全球发布域（需要额外开通Anycast全球加速白名单）</li><li>ANYCAST_ZONE_OVERSEAS：境外发布域</li><li><b>[已废弃]</b> ANYCAST_ZONE_A：发布域A（已更新为全球发布域）</li><li><b>[已废弃]</b> ANYCAST_ZONE_B：发布域B（已更新为全球发布域）</li></ul>默认值：ANYCAST_ZONE_OVERSEAS。</li></ul>
      * @param array $VipCluster 指定IP地址申请EIP，每个账户每个月只有三次配额

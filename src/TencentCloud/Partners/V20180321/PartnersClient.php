@@ -36,6 +36,7 @@ use TencentCloud\Partners\V20180321\Models as Models;
  * @method Models\DescribeAgentClientGradeResponse DescribeAgentClientGrade(Models\DescribeAgentClientGradeRequest $req) 传入代客uin，查客户级别，客户审核状态，客户实名认证状态
  * @method Models\DescribeAgentClientsResponse DescribeAgentClients(Models\DescribeAgentClientsRequest $req) 代理商可查询自己名下待审核客户列表
  * @method Models\DescribeAgentDealsByCacheResponse DescribeAgentDealsByCache(Models\DescribeAgentDealsByCacheRequest $req) 供代理商拉取缓存的全量预付费客户订单
+ * @method Models\DescribeAgentDealsPriceDetailByDealNameResponse DescribeAgentDealsPriceDetailByDealName(Models\DescribeAgentDealsPriceDetailByDealNameRequest $req) 供代理商使用名下有效普通代客的预付费子订单号查询订单费用详情
  * @method Models\DescribeAgentPayDealsV2Response DescribeAgentPayDealsV2(Models\DescribeAgentPayDealsV2Request $req) 可以查询代理商代付的预付费订单
  * @method Models\DescribeAgentRelateBigDealIdsResponse DescribeAgentRelateBigDealIds(Models\DescribeAgentRelateBigDealIdsRequest $req) 根据大订单号查询关联申请合并支付的其他订单号
  * @method Models\DescribeAgentSelfPayDealsV2Response DescribeAgentSelfPayDealsV2(Models\DescribeAgentSelfPayDealsV2Request $req) 查询代理商名下指定代客的自付订单（预付费）

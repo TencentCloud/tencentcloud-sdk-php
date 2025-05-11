@@ -31,6 +31,7 @@ use TencentCloud\Cat\V20180409\Models as Models;
  * @method Models\DescribeNodesResponse DescribeNodes(Models\DescribeNodesRequest $req) 获取拨测节点
  * @method Models\DescribeProbeMetricDataResponse DescribeProbeMetricData(Models\DescribeProbeMetricDataRequest $req) 查询云拨测指标数据，指标支持使用sum,avg,max,min聚合函数进行指标数据查询
 拨测频率与groupby聚合时间设置关联，如拨测频率为 30 分钟，则 grouby 聚合时间建议设置为大于30分钟，避免出现查询数据为空的情况
+ * @method Models\DescribeProbeMetricTagValuesResponse DescribeProbeMetricTagValues(Models\DescribeProbeMetricTagValuesRequest $req) 查询同个任务类型下的维度标签值，包括查询用户任务信息，具体任务下的多个维度标签信息。（通过为DescribeProbeMetricData接口的Filters参数添加维度筛选条件，可实现多维数据分析）
  * @method Models\DescribeProbeNodesResponse DescribeProbeNodes(Models\DescribeProbeNodesRequest $req) 查询拨测节点
  * @method Models\DescribeProbeTasksResponse DescribeProbeTasks(Models\DescribeProbeTasksRequest $req) 查询拨测任务列表
  * @method Models\ResumeProbeTaskResponse ResumeProbeTask(Models\ResumeProbeTaskRequest $req) 恢复拨测任务

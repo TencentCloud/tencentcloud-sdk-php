@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsDefault(boolean $IsDefault) 设置是否只显示默认场景
  * @method boolean getIsValid() 获取是否仅显示生效场景
  * @method void setIsValid(boolean $IsValid) 设置是否仅显示生效场景
+ * @method string getSceneId() 获取要查询的场景id
+ * @method void setSceneId(string $SceneId) 设置要查询的场景id
  */
 class DescribeBotSceneListRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class DescribeBotSceneListRequest extends AbstractModel
     public $IsValid;
 
     /**
+     * @var string 要查询的场景id
+     */
+    public $SceneId;
+
+    /**
      * @param string $Domain 域名
      * @param integer $Limit 每页数量
      * @param integer $Offset 页码
@@ -80,6 +87,7 @@ class DescribeBotSceneListRequest extends AbstractModel
      * @param string $SceneName 通过场景名称模糊搜索
      * @param boolean $IsDefault 是否只显示默认场景
      * @param boolean $IsValid 是否仅显示生效场景
+     * @param string $SceneId 要查询的场景id
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class DescribeBotSceneListRequest extends AbstractModel
 
         if (array_key_exists("IsValid",$param) and $param["IsValid"] !== null) {
             $this->IsValid = $param["IsValid"];
+        }
+
+        if (array_key_exists("SceneId",$param) and $param["SceneId"] !== null) {
+            $this->SceneId = $param["SceneId"];
         }
     }
 }

@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAreas(array $Areas) 设置区域选择
  * @method string getLang() 获取语言环境
  * @method void setLang(string $Lang) 设置语言环境
+ * @method array getParamCompareList() 获取参数匹配
+ * @method void setParamCompareList(array $ParamCompareList) 设置参数匹配
  */
 class InOutputUCBRuleEntry extends AbstractModel
 {
@@ -87,6 +89,11 @@ class InOutputUCBRuleEntry extends AbstractModel
     public $Lang;
 
     /**
+     * @var array 参数匹配
+     */
+    public $ParamCompareList;
+
+    /**
      * @param string $Key 键
      * @param string $Op 操作符
      * @param UCBEntryValue $Value 值
@@ -96,6 +103,7 @@ class InOutputUCBRuleEntry extends AbstractModel
      * @param string $Name Header参数值时使用
      * @param array $Areas 区域选择
      * @param string $Lang 语言环境
+     * @param array $ParamCompareList 参数匹配
      */
     function __construct()
     {
@@ -150,6 +158,15 @@ class InOutputUCBRuleEntry extends AbstractModel
 
         if (array_key_exists("Lang",$param) and $param["Lang"] !== null) {
             $this->Lang = $param["Lang"];
+        }
+
+        if (array_key_exists("ParamCompareList",$param) and $param["ParamCompareList"] !== null) {
+            $this->ParamCompareList = [];
+            foreach ($param["ParamCompareList"] as $key => $value){
+                $obj = new ParamCompareList();
+                $obj->deserialize($value);
+                array_push($this->ParamCompareList, $obj);
+            }
         }
     }
 }

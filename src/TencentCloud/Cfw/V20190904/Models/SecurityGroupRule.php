@@ -62,8 +62,8 @@ drop：拒绝
  * @method void setDescription(string $Description) 设置规则描述 用于规则使用或者场景的描述，最多支持50个字符
  * @method string getOrderIndex() 获取规则顺序，-1表示最低，1表示最高，请勿和外层Type冲突（和外层的Type配合使用，当中间插入时，指定添加位置）
  * @method void setOrderIndex(string $OrderIndex) 设置规则顺序，-1表示最低，1表示最高，请勿和外层Type冲突（和外层的Type配合使用，当中间插入时，指定添加位置）
- * @method string getProtocol() 获取协议；TCP/UDP/ICMP/ANY
- * @method void setProtocol(string $Protocol) 设置协议；TCP/UDP/ICMP/ANY
+ * @method string getProtocol() 获取协议；TCP/UDP/ICMP/ICMPv6/ANY
+ * @method void setProtocol(string $Protocol) 设置协议；TCP/UDP/ICMP/ICMPv6/ANY
  * @method string getPort() 获取访问控制策略的端口。取值：
 -1/-1：全部端口
 80：80端口
@@ -133,7 +133,7 @@ drop：拒绝
     public $OrderIndex;
 
     /**
-     * @var string 协议；TCP/UDP/ICMP/ANY
+     * @var string 协议；TCP/UDP/ICMP/ICMPv6/ANY
      */
     public $Protocol;
 
@@ -187,7 +187,7 @@ accept：放行
 drop：拒绝
      * @param string $Description 规则描述 用于规则使用或者场景的描述，最多支持50个字符
      * @param string $OrderIndex 规则顺序，-1表示最低，1表示最高，请勿和外层Type冲突（和外层的Type配合使用，当中间插入时，指定添加位置）
-     * @param string $Protocol 协议；TCP/UDP/ICMP/ANY
+     * @param string $Protocol 协议；TCP/UDP/ICMP/ICMPv6/ANY
      * @param string $Port 访问控制策略的端口。取值：
 -1/-1：全部端口
 80：80端口

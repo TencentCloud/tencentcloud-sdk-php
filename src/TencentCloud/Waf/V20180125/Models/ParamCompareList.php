@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gaap\V20180529\Models;
+namespace TencentCloud\Waf\V20180125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteFirstLinkSession请求参数结构体
+ * bot-自定义规则请求参数比对结构体
  *
- * @method string getSessionId() 获取单次加速唯一会话Id
- * @method void setSessionId(string $SessionId) 设置单次加速唯一会话Id
+ * @method string getKey() 获取请求参数比对的匹配参数
+ * @method void setKey(string $Key) 设置请求参数比对的匹配参数
+ * @method string getValue() 获取请求参数比对的匹配值
+ * @method void setValue(string $Value) 设置请求参数比对的匹配值
  */
-class DeleteFirstLinkSessionRequest extends AbstractModel
+class ParamCompareList extends AbstractModel
 {
     /**
-     * @var string 单次加速唯一会话Id
+     * @var string 请求参数比对的匹配参数
      */
-    public $SessionId;
+    public $Key;
 
     /**
-     * @param string $SessionId 单次加速唯一会话Id
+     * @var string 请求参数比对的匹配值
+     */
+    public $Value;
+
+    /**
+     * @param string $Key 请求参数比对的匹配参数
+     * @param string $Value 请求参数比对的匹配值
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DeleteFirstLinkSessionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
-            $this->SessionId = $param["SessionId"];
+        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
+            $this->Key = $param["Key"];
+        }
+
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
         }
     }
 }

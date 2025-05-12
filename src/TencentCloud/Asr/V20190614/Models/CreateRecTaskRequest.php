@@ -347,6 +347,9 @@ use TencentCloud\Common\AbstractModel;
  * @method array getKeyWordLibIdList() 获取关键词识别ID列表，默认空为不进行识别，最多10个
 
  * @method void setKeyWordLibIdList(array $KeyWordLibIdList) 设置关键词识别ID列表，默认空为不进行识别，最多10个
+
+ * @method string getReplaceTextId() 获取替换词汇表id,  适用于热词和自学习场景也无法解决的极端case词组,  会对识别结果强制替换。具体可参考[配置控制台](https://console.cloud.tencent.com/asr/replaceword);强制替换功能可能会影响正常识别结果，请谨慎使用
+ * @method void setReplaceTextId(string $ReplaceTextId) 设置替换词汇表id,  适用于热词和自学习场景也无法解决的极端case词组,  会对识别结果强制替换。具体可参考[配置控制台](https://console.cloud.tencent.com/asr/replaceword);强制替换功能可能会影响正常识别结果，请谨慎使用
  */
 class CreateRecTaskRequest extends AbstractModel
 {
@@ -608,6 +611,11 @@ class CreateRecTaskRequest extends AbstractModel
     public $KeyWordLibIdList;
 
     /**
+     * @var string 替换词汇表id,  适用于热词和自学习场景也无法解决的极端case词组,  会对识别结果强制替换。具体可参考[配置控制台](https://console.cloud.tencent.com/asr/replaceword);强制替换功能可能会影响正常识别结果，请谨慎使用
+     */
+    public $ReplaceTextId;
+
+    /**
      * @param string $EngineModelType 引擎模型类型
 识别引擎采用分级计费方案，标记为“大模型版”的引擎适用大模型计费方案，[点击这里](https://cloud.tencent.com/document/product/1093/35686) 查看产品计费说明
 
@@ -771,6 +779,8 @@ class CreateRecTaskRequest extends AbstractModel
 
 - 热词权重设置为100时，当前热词开启热词增强同音替换功能（仅支持8k_zh,16k_zh），举例：热词配置“蜜制|100”时，与“蜜制”同拼音（mizhi）的“秘制”的识别结果会被强制替换成“蜜制”。因此建议客户根据自己的实际情况开启该功能。建议仅将重要且必须生效的热词设置到100，设置过多权重为100的热词将影响整体字准率。
      * @param array $KeyWordLibIdList 关键词识别ID列表，默认空为不进行识别，最多10个
+
+     * @param string $ReplaceTextId 替换词汇表id,  适用于热词和自学习场景也无法解决的极端case词组,  会对识别结果强制替换。具体可参考[配置控制台](https://console.cloud.tencent.com/asr/replaceword);强制替换功能可能会影响正常识别结果，请谨慎使用
      */
     function __construct()
     {
@@ -875,6 +885,10 @@ class CreateRecTaskRequest extends AbstractModel
 
         if (array_key_exists("KeyWordLibIdList",$param) and $param["KeyWordLibIdList"] !== null) {
             $this->KeyWordLibIdList = $param["KeyWordLibIdList"];
+        }
+
+        if (array_key_exists("ReplaceTextId",$param) and $param["ReplaceTextId"] !== null) {
+            $this->ReplaceTextId = $param["ReplaceTextId"];
         }
     }
 }

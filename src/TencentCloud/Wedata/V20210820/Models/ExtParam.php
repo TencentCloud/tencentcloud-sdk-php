@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gaap\V20180529\Models;
+namespace TencentCloud\Wedata\V20210820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 网络加速的目标地址信息
+ * 扩展参数
  *
- * @method array getDestIp() 获取加速的目标IP，可多ip一起加速
- * @method void setDestIp(array $DestIp) 设置加速的目标IP，可多ip一起加速
+ * @method string getKey() 获取key
+ * @method void setKey(string $Key) 设置key
+ * @method string getValue() 获取具体值
+ * @method void setValue(string $Value) 设置具体值
  */
-class DestAddressInfo extends AbstractModel
+class ExtParam extends AbstractModel
 {
     /**
-     * @var array 加速的目标IP，可多ip一起加速
+     * @var string key
      */
-    public $DestIp;
+    public $Key;
 
     /**
-     * @param array $DestIp 加速的目标IP，可多ip一起加速
+     * @var string 具体值
+     */
+    public $Value;
+
+    /**
+     * @param string $Key key
+     * @param string $Value 具体值
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DestAddressInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DestIp",$param) and $param["DestIp"] !== null) {
-            $this->DestIp = $param["DestIp"];
+        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
+            $this->Key = $param["Key"];
+        }
+
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
         }
     }
 }

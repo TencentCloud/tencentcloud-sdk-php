@@ -38,6 +38,7 @@ class DescribeSlowLogResponse extends AbstractModel
 
     /**
      * @var array 已废弃，该参数存在命名不规范问题，后续用参数InstanceSlowLogDetail取代。慢查询详情。
+     * @deprecated
      */
     public $InstanceSlowlogDetail;
 

@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getFilters() 获取支持的过滤器:	ObjectId: clb实例ID	VIP: clb实例的公网IP	InstanceId: waf实例ID	Domain: 精准域名	Status: waf防护开关状态: 0关闭，1开启	ClsStatus: waf日志开关: 0关闭，1开启   
  * @method void setFilters(array $Filters) 设置支持的过滤器:	ObjectId: clb实例ID	VIP: clb实例的公网IP	InstanceId: waf实例ID	Domain: 精准域名	Status: waf防护开关状态: 0关闭，1开启	ClsStatus: waf日志开关: 0关闭，1开启   
+ * @method string getOrder() 获取排序方式，支持asc或者desc
+ * @method void setOrder(string $Order) 设置排序方式，支持asc或者desc
+ * @method string getBy() 获取根据哪个字段排序
+ * @method void setBy(string $By) 设置根据哪个字段排序
  */
 class DescribeObjectsRequest extends AbstractModel
 {
@@ -31,7 +35,19 @@ class DescribeObjectsRequest extends AbstractModel
     public $Filters;
 
     /**
+     * @var string 排序方式，支持asc或者desc
+     */
+    public $Order;
+
+    /**
+     * @var string 根据哪个字段排序
+     */
+    public $By;
+
+    /**
      * @param array $Filters 支持的过滤器:	ObjectId: clb实例ID	VIP: clb实例的公网IP	InstanceId: waf实例ID	Domain: 精准域名	Status: waf防护开关状态: 0关闭，1开启	ClsStatus: waf日志开关: 0关闭，1开启   
+     * @param string $Order 排序方式，支持asc或者desc
+     * @param string $By 根据哪个字段排序
      */
     function __construct()
     {
@@ -53,6 +69,14 @@ class DescribeObjectsRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("Order",$param) and $param["Order"] !== null) {
+            $this->Order = $param["Order"];
+        }
+
+        if (array_key_exists("By",$param) and $param["By"] !== null) {
+            $this->By = $param["By"];
         }
     }
 }

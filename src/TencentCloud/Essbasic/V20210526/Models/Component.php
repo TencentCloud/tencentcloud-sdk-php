@@ -181,10 +181,10 @@ use TencentCloud\Common\AbstractModel;
 注：
 1. 页码编号是从<font color="red">1</font>开始编号的。
 2.  <font color="red">页面编号不能超过PDF文件的页码总数</font>。如果指定的页码超过了PDF文件的页码总数，在填写和签署时会出现错误，导致无法正常进行操作。
- * @method float getComponentPosX() 获取**在绝对定位方式和关键字定位方式下**，可以指定控件横向位置的位置，单位为pt（点）。
- * @method void setComponentPosX(float $ComponentPosX) 设置**在绝对定位方式和关键字定位方式下**，可以指定控件横向位置的位置，单位为pt（点）。
- * @method float getComponentPosY() 获取**在绝对定位方式和关键字定位方式下**，可以指定控件纵向位置的位置，单位为pt（点）。
- * @method void setComponentPosY(float $ComponentPosY) 设置**在绝对定位方式和关键字定位方式下**，可以指定控件纵向位置的位置，单位为pt（点）。
+ * @method float getComponentPosX() 获取**在绝对定位方式下**，可以指定控件横向位置的位置，单位为pt（点）。
+ * @method void setComponentPosX(float $ComponentPosX) 设置**在绝对定位方式下**，可以指定控件横向位置的位置，单位为pt（点）。
+ * @method float getComponentPosY() 获取**在绝对定位方式下**，可以指定控件纵向位置的位置，单位为pt（点）。
+ * @method void setComponentPosY(float $ComponentPosY) 设置**在绝对定位方式下**，可以指定控件纵向位置的位置，单位为pt（点）。
  * @method string getComponentExtra() 获取**在所有的定位方式下**，控件的扩展参数，为<font color="red">JSON格式</font>，不同类型的控件会有部分非通用参数。
 
 <font color="red">ComponentType为TEXT、MULTI_LINE_TEXT时</font>，支持以下参数：
@@ -639,12 +639,12 @@ class Component extends AbstractModel
     public $ComponentPage;
 
     /**
-     * @var float **在绝对定位方式和关键字定位方式下**，可以指定控件横向位置的位置，单位为pt（点）。
+     * @var float **在绝对定位方式下**，可以指定控件横向位置的位置，单位为pt（点）。
      */
     public $ComponentPosX;
 
     /**
-     * @var float **在绝对定位方式和关键字定位方式下**，可以指定控件纵向位置的位置，单位为pt（点）。
+     * @var float **在绝对定位方式下**，可以指定控件纵向位置的位置，单位为pt（点）。
      */
     public $ComponentPosY;
 
@@ -953,8 +953,8 @@ ChildrenComponent结构体定义:
 注：
 1. 页码编号是从<font color="red">1</font>开始编号的。
 2.  <font color="red">页面编号不能超过PDF文件的页码总数</font>。如果指定的页码超过了PDF文件的页码总数，在填写和签署时会出现错误，导致无法正常进行操作。
-     * @param float $ComponentPosX **在绝对定位方式和关键字定位方式下**，可以指定控件横向位置的位置，单位为pt（点）。
-     * @param float $ComponentPosY **在绝对定位方式和关键字定位方式下**，可以指定控件纵向位置的位置，单位为pt（点）。
+     * @param float $ComponentPosX **在绝对定位方式下**，可以指定控件横向位置的位置，单位为pt（点）。
+     * @param float $ComponentPosY **在绝对定位方式下**，可以指定控件纵向位置的位置，单位为pt（点）。
      * @param string $ComponentExtra **在所有的定位方式下**，控件的扩展参数，为<font color="red">JSON格式</font>，不同类型的控件会有部分非通用参数。
 
 <font color="red">ComponentType为TEXT、MULTI_LINE_TEXT时</font>，支持以下参数：

@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimerType(integer $TimerType) 设置生效方式：0-全部 1-永久生效 2-定时生效 3-周粒度生效 4-月粒度生效
  * @method integer getValidStatus() 获取0-全部 1-生效中 2-已过期
  * @method void setValidStatus(integer $ValidStatus) 设置0-全部 1-生效中 2-已过期
+ * @method string getRuleId() 获取规则id
+ * @method void setRuleId(string $RuleId) 设置规则id
  */
 class DescribeBotSceneUCBRuleRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class DescribeBotSceneUCBRuleRequest extends AbstractModel
     public $ValidStatus;
 
     /**
+     * @var string 规则id
+     */
+    public $RuleId;
+
+    /**
      * @param string $Domain 域名
      * @param integer $Skip 翻页组件的起始页
      * @param integer $Limit 翻页组件的页数据条数
@@ -104,6 +111,7 @@ class DescribeBotSceneUCBRuleRequest extends AbstractModel
      * @param string $VersionFlag 兼容老数据和新旧版前端
      * @param integer $TimerType 生效方式：0-全部 1-永久生效 2-定时生效 3-周粒度生效 4-月粒度生效
      * @param integer $ValidStatus 0-全部 1-生效中 2-已过期
+     * @param string $RuleId 规则id
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class DescribeBotSceneUCBRuleRequest extends AbstractModel
 
         if (array_key_exists("ValidStatus",$param) and $param["ValidStatus"] !== null) {
             $this->ValidStatus = $param["ValidStatus"];
+        }
+
+        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
+            $this->RuleId = $param["RuleId"];
         }
     }
 }

@@ -40,6 +40,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetName(string $SubnetName) 设置需要开通服务的子网名称
  * @method string getCdcClusterId() 获取需要开通实例所属的CDC集群ID
  * @method void setCdcClusterId(string $CdcClusterId) 设置需要开通实例所属的CDC集群ID
+ * @method string getShareClbId() 获取开通堡垒机指定共享的clbId
+ * @method void setShareClbId(string $ShareClbId) 设置开通堡垒机指定共享的clbId
+ * @method integer getWebAccess() 获取0-关闭web访问堡垒机，1-开启web访问堡垒机
+ * @method void setWebAccess(integer $WebAccess) 设置0-关闭web访问堡垒机，1-开启web访问堡垒机
+ * @method integer getClientAccess() 获取0-关闭客户端访问堡垒机，1-开启客户端访问堡垒机
+ * @method void setClientAccess(integer $ClientAccess) 设置0-关闭客户端访问堡垒机，1-开启客户端访问堡垒机
+ * @method integer getIntranetAccess() 获取0-关闭内网访问堡垒机，1-开启内网访问堡垒机
+ * @method void setIntranetAccess(integer $IntranetAccess) 设置0-关闭内网访问堡垒机，1-开启内网访问堡垒机
+ * @method integer getExternalAccess() 获取0-关闭公网访问堡垒机，1-开启公网访问堡垒机
+ * @method void setExternalAccess(integer $ExternalAccess) 设置0-关闭公网访问堡垒机，1-开启公网访问堡垒机
  */
 class DeployResourceRequest extends AbstractModel
 {
@@ -94,6 +104,31 @@ class DeployResourceRequest extends AbstractModel
     public $CdcClusterId;
 
     /**
+     * @var string 开通堡垒机指定共享的clbId
+     */
+    public $ShareClbId;
+
+    /**
+     * @var integer 0-关闭web访问堡垒机，1-开启web访问堡垒机
+     */
+    public $WebAccess;
+
+    /**
+     * @var integer 0-关闭客户端访问堡垒机，1-开启客户端访问堡垒机
+     */
+    public $ClientAccess;
+
+    /**
+     * @var integer 0-关闭内网访问堡垒机，1-开启内网访问堡垒机
+     */
+    public $IntranetAccess;
+
+    /**
+     * @var integer 0-关闭公网访问堡垒机，1-开启公网访问堡垒机
+     */
+    public $ExternalAccess;
+
+    /**
      * @param string $ResourceId 需要开通服务的资源ID
      * @param string $ApCode 需要开通服务的地域
      * @param string $Zone 子网所在可用区
@@ -104,6 +139,11 @@ class DeployResourceRequest extends AbstractModel
      * @param string $VpcCidrBlock 需要开通服务的VPC对应的网段
      * @param string $SubnetName 需要开通服务的子网名称
      * @param string $CdcClusterId 需要开通实例所属的CDC集群ID
+     * @param string $ShareClbId 开通堡垒机指定共享的clbId
+     * @param integer $WebAccess 0-关闭web访问堡垒机，1-开启web访问堡垒机
+     * @param integer $ClientAccess 0-关闭客户端访问堡垒机，1-开启客户端访问堡垒机
+     * @param integer $IntranetAccess 0-关闭内网访问堡垒机，1-开启内网访问堡垒机
+     * @param integer $ExternalAccess 0-关闭公网访问堡垒机，1-开启公网访问堡垒机
      */
     function __construct()
     {
@@ -156,6 +196,26 @@ class DeployResourceRequest extends AbstractModel
 
         if (array_key_exists("CdcClusterId",$param) and $param["CdcClusterId"] !== null) {
             $this->CdcClusterId = $param["CdcClusterId"];
+        }
+
+        if (array_key_exists("ShareClbId",$param) and $param["ShareClbId"] !== null) {
+            $this->ShareClbId = $param["ShareClbId"];
+        }
+
+        if (array_key_exists("WebAccess",$param) and $param["WebAccess"] !== null) {
+            $this->WebAccess = $param["WebAccess"];
+        }
+
+        if (array_key_exists("ClientAccess",$param) and $param["ClientAccess"] !== null) {
+            $this->ClientAccess = $param["ClientAccess"];
+        }
+
+        if (array_key_exists("IntranetAccess",$param) and $param["IntranetAccess"] !== null) {
+            $this->IntranetAccess = $param["IntranetAccess"];
+        }
+
+        if (array_key_exists("ExternalAccess",$param) and $param["ExternalAccess"] !== null) {
+            $this->ExternalAccess = $param["ExternalAccess"];
         }
     }
 }

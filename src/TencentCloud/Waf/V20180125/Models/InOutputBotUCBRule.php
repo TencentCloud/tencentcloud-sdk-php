@@ -66,6 +66,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBlockPageId(integer $BlockPageId) 设置自定义拦截页面ID
  * @method array getActionList() 获取当Action=intercept时，此字段必填
  * @method void setActionList(array $ActionList) 设置当Action=intercept时，此字段必填
+ * @method integer getDelayTime() 获取惩罚时间
+ * @method void setDelayTime(integer $DelayTime) 设置惩罚时间
  */
 class InOutputBotUCBRule extends AbstractModel
 {
@@ -185,6 +187,11 @@ class InOutputBotUCBRule extends AbstractModel
     public $ActionList;
 
     /**
+     * @var integer 惩罚时间
+     */
+    public $DelayTime;
+
+    /**
      * @param string $Domain 域名
      * @param string $Name 规则名称
      * @param array $Rule UCB的具体规则项
@@ -208,6 +215,7 @@ class InOutputBotUCBRule extends AbstractModel
      * @param integer $ValidStatus 生效-1,失效-0
      * @param integer $BlockPageId 自定义拦截页面ID
      * @param array $ActionList 当Action=intercept时，此字段必填
+     * @param integer $DelayTime 惩罚时间
      */
     function __construct()
     {
@@ -323,6 +331,10 @@ class InOutputBotUCBRule extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ActionList, $obj);
             }
+        }
+
+        if (array_key_exists("DelayTime",$param) and $param["DelayTime"] !== null) {
+            $this->DelayTime = $param["DelayTime"];
         }
     }
 }

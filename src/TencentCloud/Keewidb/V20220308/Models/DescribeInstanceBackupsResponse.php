@@ -38,6 +38,7 @@ class DescribeInstanceBackupsResponse extends AbstractModel
 
     /**
      * @var array 废弃字段。
+     * @deprecated
      */
     public $BackupSet;
 

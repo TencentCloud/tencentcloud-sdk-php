@@ -14,36 +14,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gaap\V20180529\Models;
+namespace TencentCloud\Wedata\V20210820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateFirstLinkSession返回参数结构体
+ * CreateCodeTemplate返回参数结构体
  *
- * @method string getSessionId() 获取加速成功时返回，单次加速唯一会话Id。。
+ * @method string getData() 获取模版id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSessionId(string $SessionId) 设置加速成功时返回，单次加速唯一会话Id。。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDuration() 获取剩余的加速时间，单位秒。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDuration(integer $Duration) 设置剩余的加速时间，单位秒。
+ * @method void setData(string $Data) 设置模版id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateFirstLinkSessionResponse extends AbstractModel
+class CreateCodeTemplateResponse extends AbstractModel
 {
     /**
-     * @var string 加速成功时返回，单次加速唯一会话Id。。
+     * @var string 模版id
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $SessionId;
-
-    /**
-     * @var integer 剩余的加速时间，单位秒。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $Duration;
+    public $Data;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -51,9 +41,7 @@ class CreateFirstLinkSessionResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $SessionId 加速成功时返回，单次加速唯一会话Id。。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Duration 剩余的加速时间，单位秒。
+     * @param string $Data 模版id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -70,12 +58,8 @@ class CreateFirstLinkSessionResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
-            $this->SessionId = $param["SessionId"];
-        }
-
-        if (array_key_exists("Duration",$param) and $param["Duration"] !== null) {
-            $this->Duration = $param["Duration"];
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = $param["Data"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

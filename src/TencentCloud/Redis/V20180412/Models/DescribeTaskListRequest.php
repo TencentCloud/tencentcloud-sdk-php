@@ -279,6 +279,7 @@ class DescribeTaskListRequest extends AbstractModel
 
     /**
      * @var array 该字段已废弃，使用OperateUin代替，请忽略。
+     * @deprecated
      */
     public $OperatorUin;
 

@@ -66,6 +66,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInternalAccess(string $InternalAccess) 设置内网访问开关 close | open
  * @method string getInternalDomain() 获取内网域名
  * @method void setInternalDomain(string $InternalDomain) 设置内网域名
+ * @method string getOperationMode() 获取运行模式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOperationMode(string $OperationMode) 设置运行模式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTimerScale() 获取定时扩缩容配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTimerScale(array $TimerScale) 设置定时扩缩容配置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServerBaseConfig extends AbstractModel
 {
@@ -185,6 +193,18 @@ class ServerBaseConfig extends AbstractModel
     public $InternalDomain;
 
     /**
+     * @var string 运行模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OperationMode;
+
+    /**
+     * @var array 定时扩缩容配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TimerScale;
+
+    /**
      * @param string $EnvId 环境 Id
      * @param string $ServerName 服务名
      * @param array $OpenAccessTypes 是否开启公网访问
@@ -208,6 +228,10 @@ class ServerBaseConfig extends AbstractModel
      * @param string $Tag 服务标签, function: 函数托管
      * @param string $InternalAccess 内网访问开关 close | open
      * @param string $InternalDomain 内网域名
+     * @param string $OperationMode 运行模式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TimerScale 定时扩缩容配置
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -317,6 +341,19 @@ class ServerBaseConfig extends AbstractModel
 
         if (array_key_exists("InternalDomain",$param) and $param["InternalDomain"] !== null) {
             $this->InternalDomain = $param["InternalDomain"];
+        }
+
+        if (array_key_exists("OperationMode",$param) and $param["OperationMode"] !== null) {
+            $this->OperationMode = $param["OperationMode"];
+        }
+
+        if (array_key_exists("TimerScale",$param) and $param["TimerScale"] !== null) {
+            $this->TimerScale = [];
+            foreach ($param["TimerScale"] as $key => $value){
+                $obj = new TimerScale();
+                $obj->deserialize($value);
+                array_push($this->TimerScale, $obj);
+            }
         }
     }
 }

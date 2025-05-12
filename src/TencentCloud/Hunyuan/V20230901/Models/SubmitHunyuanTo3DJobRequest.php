@@ -22,10 +22,22 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPrompt() 获取3D内容的描述，中文正向提示词。最多支持200个 utf-8 字符，ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
  * @method void setPrompt(string $Prompt) 设置3D内容的描述，中文正向提示词。最多支持200个 utf-8 字符，ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
- * @method string getImageBase64() 获取输入图 Base64 数据。最多支持200个 utf-8 字符，ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
- * @method void setImageBase64(string $ImageBase64) 设置输入图 Base64 数据。最多支持200个 utf-8 字符，ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
- * @method string getImageUrl() 获取输入图Url。最多支持200个 utf-8 字符，ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
- * @method void setImageUrl(string $ImageUrl) 设置输入图Url。最多支持200个 utf-8 字符，ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
+ * @method string getImageBase64() 获取输入图 Base64 数据。
+大小：单边分辨率要求不小于50，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过6m）
+格式：jpg，png，jpeg，webp。
+ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
+ * @method void setImageBase64(string $ImageBase64) 设置输入图 Base64 数据。
+大小：单边分辨率要求不小于50，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过6m）
+格式：jpg，png，jpeg，webp。
+ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
+ * @method string getImageUrl() 获取输入图Url。
+大小：单边分辨率要求不小于50，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过6m）
+格式：jpg，png，jpeg，webp。
+ImageBase64/ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
+ * @method void setImageUrl(string $ImageUrl) 设置输入图Url。
+大小：单边分辨率要求不小于50，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过6m）
+格式：jpg，png，jpeg，webp。
+ImageBase64/ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
  * @method integer getNum() 获取生成数量。默认1，当前限制只能为1。
  * @method void setNum(integer $Num) 设置生成数量。默认1，当前限制只能为1。
  */
@@ -37,12 +49,18 @@ class SubmitHunyuanTo3DJobRequest extends AbstractModel
     public $Prompt;
 
     /**
-     * @var string 输入图 Base64 数据。最多支持200个 utf-8 字符，ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
+     * @var string 输入图 Base64 数据。
+大小：单边分辨率要求不小于50，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过6m）
+格式：jpg，png，jpeg，webp。
+ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
      */
     public $ImageBase64;
 
     /**
-     * @var string 输入图Url。最多支持200个 utf-8 字符，ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
+     * @var string 输入图Url。
+大小：单边分辨率要求不小于50，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过6m）
+格式：jpg，png，jpeg，webp。
+ImageBase64/ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
      */
     public $ImageUrl;
 
@@ -53,8 +71,14 @@ class SubmitHunyuanTo3DJobRequest extends AbstractModel
 
     /**
      * @param string $Prompt 3D内容的描述，中文正向提示词。最多支持200个 utf-8 字符，ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
-     * @param string $ImageBase64 输入图 Base64 数据。最多支持200个 utf-8 字符，ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
-     * @param string $ImageUrl 输入图Url。最多支持200个 utf-8 字符，ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
+     * @param string $ImageBase64 输入图 Base64 数据。
+大小：单边分辨率要求不小于50，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过6m）
+格式：jpg，png，jpeg，webp。
+ImageBase64、ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
+     * @param string $ImageUrl 输入图Url。
+大小：单边分辨率要求不小于50，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过6m）
+格式：jpg，png，jpeg，webp。
+ImageBase64/ImageUrl和 Prompt必填其一，且Prompt和ImageBase64/ImageUrl不能同时存在。
      * @param integer $Num 生成数量。默认1，当前限制只能为1。
      */
     function __construct()

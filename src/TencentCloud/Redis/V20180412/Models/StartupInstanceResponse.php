@@ -29,6 +29,7 @@ class StartupInstanceResponse extends AbstractModel
 {
     /**
      * @var integer 该字段已废弃，请通过查询实例接口获取到的状态来判断实例是否已解隔离
+     * @deprecated
      */
     public $TaskId;
 

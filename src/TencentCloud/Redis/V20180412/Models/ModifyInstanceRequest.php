@@ -84,16 +84,19 @@ class ModifyInstanceRequest extends AbstractModel
 
     /**
      * @var string 目前在废弃中，存量用户还可以使用，建议新用户使用 InstanceIds。
+     * @deprecated
      */
     public $InstanceId;
 
     /**
      * @var string 已经废弃
+     * @deprecated
      */
     public $InstanceName;
 
     /**
      * @var integer 已经废弃。
+     * @deprecated
      */
     public $AutoRenew;
 

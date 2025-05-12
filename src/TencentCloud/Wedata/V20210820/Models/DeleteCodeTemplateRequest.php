@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Wedata\V20210820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeCpuExpandStrategy请求参数结构体
+ * DeleteCodeTemplate请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID 。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID 。
+ * @method string getProjectId() 获取项目ID
+ * @method void setProjectId(string $ProjectId) 设置项目ID
+ * @method string getCodeTemplateId() 获取模版ID
+ * @method void setCodeTemplateId(string $CodeTemplateId) 设置模版ID
  */
-class DescribeCpuExpandStrategyRequest extends AbstractModel
+class DeleteCodeTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID 。
+     * @var string 项目ID
      */
-    public $InstanceId;
+    public $ProjectId;
 
     /**
-     * @param string $InstanceId 实例 ID 。
+     * @var string 模版ID
+     */
+    public $CodeTemplateId;
+
+    /**
+     * @param string $ProjectId 项目ID
+     * @param string $CodeTemplateId 模版ID
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DescribeCpuExpandStrategyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("CodeTemplateId",$param) and $param["CodeTemplateId"] !== null) {
+            $this->CodeTemplateId = $param["CodeTemplateId"];
         }
     }
 }

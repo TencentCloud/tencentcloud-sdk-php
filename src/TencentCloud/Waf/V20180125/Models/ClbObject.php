@@ -66,6 +66,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setObjectFlowMode(integer $ObjectFlowMode) 设置对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式
  * @method integer getNumericalVpcId() 获取数值形式的私有网络 ID
  * @method void setNumericalVpcId(integer $NumericalVpcId) 设置数值形式的私有网络 ID
+ * @method string getModifyTime() 获取修改时间
+ * @method void setModifyTime(string $ModifyTime) 设置修改时间
+ * @method string getAddTime() 获取创建时间
+ * @method void setAddTime(string $AddTime) 设置创建时间
  */
 class ClbObject extends AbstractModel
 {
@@ -185,6 +189,16 @@ class ClbObject extends AbstractModel
     public $NumericalVpcId;
 
     /**
+     * @var string 修改时间
+     */
+    public $ModifyTime;
+
+    /**
+     * @var string 创建时间
+     */
+    public $AddTime;
+
+    /**
      * @param string $ObjectId 对象ID
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
@@ -208,6 +222,8 @@ class ClbObject extends AbstractModel
      * @param integer $ApiStatus api防护开关
      * @param integer $ObjectFlowMode 对象接入模式，0表示镜像模式，1表示清洗模式，2表示体检模式，默认为清洗模式
      * @param integer $NumericalVpcId 数值形式的私有网络 ID
+     * @param string $ModifyTime 修改时间
+     * @param string $AddTime 创建时间
      */
     function __construct()
     {
@@ -312,6 +328,14 @@ class ClbObject extends AbstractModel
 
         if (array_key_exists("NumericalVpcId",$param) and $param["NumericalVpcId"] !== null) {
             $this->NumericalVpcId = $param["NumericalVpcId"];
+        }
+
+        if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
+            $this->ModifyTime = $param["ModifyTime"];
+        }
+
+        if (array_key_exists("AddTime",$param) and $param["AddTime"] !== null) {
+            $this->AddTime = $param["AddTime"];
         }
     }
 }

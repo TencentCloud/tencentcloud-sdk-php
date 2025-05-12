@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getResourceId() 获取需要开通服务的资源ID
  * @method void setResourceId(string $ResourceId) 设置需要开通服务的资源ID
- * @method string getStatus() 获取已废弃
- * @method void setStatus(string $Status) 设置已废弃
+ * @method string getStatus() 获取状态
+ * @method void setStatus(string $Status) 设置状态
  * @method string getResourceEdition() 获取实例版本
  * @method void setResourceEdition(string $ResourceEdition) 设置实例版本
  * @method integer getResourceNode() 获取资源节点数
@@ -45,7 +45,8 @@ class ModifyResourceRequest extends AbstractModel
     public $ResourceId;
 
     /**
-     * @var string 已废弃
+     * @var string 状态
+     * @deprecated
      */
     public $Status;
 
@@ -81,7 +82,7 @@ class ModifyResourceRequest extends AbstractModel
 
     /**
      * @param string $ResourceId 需要开通服务的资源ID
-     * @param string $Status 已废弃
+     * @param string $Status 状态
      * @param string $ResourceEdition 实例版本
      * @param integer $ResourceNode 资源节点数
      * @param integer $AutoRenewFlag 自动续费

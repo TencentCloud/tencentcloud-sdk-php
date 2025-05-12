@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
  * @method integer getOffset() 获取偏移量，默认值 0
  * @method void setOffset(integer $Offset) 设置偏移量，默认值 0
- * @method integer getLimit() 获取一页限制,moren
- * @method void setLimit(integer $Limit) 设置一页限制,moren
+ * @method integer getLimit() 获取一页限制，默认值 20
+ * @method void setLimit(integer $Limit) 设置一页限制，默认值 20
  * @method string getNodeName() 获取模糊搜索节点名字
  * @method void setNodeName(string $NodeName) 设置模糊搜索节点名字
  * @method array getFilters() 获取过滤参数的名字和数值，当前仅支持根据节点状态筛选。
@@ -60,7 +60,7 @@ class DescribeRabbitMQNodeListRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 一页限制,moren
+     * @var integer 一页限制，默认值 20
      */
     public $Limit;
 
@@ -93,7 +93,7 @@ ascend/descend
     /**
      * @param string $InstanceId 实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
      * @param integer $Offset 偏移量，默认值 0
-     * @param integer $Limit 一页限制,moren
+     * @param integer $Limit 一页限制，默认值 20
      * @param string $NodeName 模糊搜索节点名字
      * @param array $Filters 过滤参数的名字和数值，当前仅支持根据节点状态筛选。
 "Name": "nodeStatus"

@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getValidSceneCount() 获取生效场景数
  * @method void setValidSceneCount(integer $ValidSceneCount) 设置生效场景数
  * @method GlobalSceneInfo getCurrentGlobalScene() 获取当前开启的、匹配范围为全局、优先级最高的场景
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCurrentGlobalScene(GlobalSceneInfo $CurrentGlobalScene) 设置当前开启的、匹配范围为全局、优先级最高的场景
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCustomRuleNums() 获取自定义规则总数，不包括BOT白名单
  * @method void setCustomRuleNums(integer $CustomRuleNums) 设置自定义规则总数，不包括BOT白名单
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -54,7 +52,6 @@ class DescribeBotSceneOverviewResponse extends AbstractModel
 
     /**
      * @var GlobalSceneInfo 当前开启的、匹配范围为全局、优先级最高的场景
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CurrentGlobalScene;
 
@@ -73,7 +70,6 @@ class DescribeBotSceneOverviewResponse extends AbstractModel
      * @param integer $SceneCount 场景总数
      * @param integer $ValidSceneCount 生效场景数
      * @param GlobalSceneInfo $CurrentGlobalScene 当前开启的、匹配范围为全局、优先级最高的场景
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CustomRuleNums 自定义规则总数，不包括BOT白名单
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

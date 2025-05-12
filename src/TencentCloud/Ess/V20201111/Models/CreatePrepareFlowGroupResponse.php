@@ -14,38 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Ess\V20201111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeCpuExpandStrategy返回参数结构体
+ * CreatePrepareFlowGroup返回参数结构体
  *
- * @method string getType() 获取策略类型。可选值 auto、manual。
- * @method void setType(string $Type) 设置策略类型。可选值 auto、manual。
- * @method string getExpandCpu() 获取手动扩容的 CPU 。Type为 manual 时有效。
- * @method void setExpandCpu(string $ExpandCpu) 设置手动扩容的 CPU 。Type为 manual 时有效。
- * @method string getAutoStrategy() 获取自动扩容策略。Type 为 auto 时有效
- * @method void setAutoStrategy(string $AutoStrategy) 设置自动扩容策略。Type 为 auto 时有效
+ * @method string getFlowGroupId() 获取合同(流程)组的合同组Id
+ * @method void setFlowGroupId(string $FlowGroupId) 设置合同(流程)组的合同组Id
+ * @method string getPrepareUrl() 获取嵌入式合同组发起链接
+ * @method void setPrepareUrl(string $PrepareUrl) 设置嵌入式合同组发起链接
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeCpuExpandStrategyResponse extends AbstractModel
+class CreatePrepareFlowGroupResponse extends AbstractModel
 {
     /**
-     * @var string 策略类型。可选值 auto、manual。
+     * @var string 合同(流程)组的合同组Id
      */
-    public $Type;
+    public $FlowGroupId;
 
     /**
-     * @var string 手动扩容的 CPU 。Type为 manual 时有效。
+     * @var string 嵌入式合同组发起链接
      */
-    public $ExpandCpu;
-
-    /**
-     * @var string 自动扩容策略。Type 为 auto 时有效
-     * @deprecated
-     */
-    public $AutoStrategy;
+    public $PrepareUrl;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -53,9 +45,8 @@ class DescribeCpuExpandStrategyResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Type 策略类型。可选值 auto、manual。
-     * @param string $ExpandCpu 手动扩容的 CPU 。Type为 manual 时有效。
-     * @param string $AutoStrategy 自动扩容策略。Type 为 auto 时有效
+     * @param string $FlowGroupId 合同(流程)组的合同组Id
+     * @param string $PrepareUrl 嵌入式合同组发起链接
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -71,16 +62,12 @@ class DescribeCpuExpandStrategyResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
-            $this->Type = $param["Type"];
+        if (array_key_exists("FlowGroupId",$param) and $param["FlowGroupId"] !== null) {
+            $this->FlowGroupId = $param["FlowGroupId"];
         }
 
-        if (array_key_exists("ExpandCpu",$param) and $param["ExpandCpu"] !== null) {
-            $this->ExpandCpu = $param["ExpandCpu"];
-        }
-
-        if (array_key_exists("AutoStrategy",$param) and $param["AutoStrategy"] !== null) {
-            $this->AutoStrategy = $param["AutoStrategy"];
+        if (array_key_exists("PrepareUrl",$param) and $param["PrepareUrl"] !== null) {
+            $this->PrepareUrl = $param["PrepareUrl"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -100,6 +100,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIntranetVpcId(string $IntranetVpcId) 设置开通内网访问的vpc
  * @method string getIntranetVpcCidr() 获取开通内网访问vpc的网段
  * @method void setIntranetVpcCidr(string $IntranetVpcCidr) 设置开通内网访问vpc的网段
+ * @method boolean getShareClb() 获取是否共享clb，true-共享clb，false-独享clb
+ * @method void setShareClb(boolean $ShareClb) 设置是否共享clb，true-共享clb，false-独享clb
+ * @method string getOpenClbId() 获取共享clb id
+ * @method void setOpenClbId(string $OpenClbId) 设置共享clb id
+ * @method string getLbVipIsp() 获取运营商信息
+ * @method void setLbVipIsp(string $LbVipIsp) 设置运营商信息
+ * @method integer getTUICmdPort() 获取linux资产命令行运维端口
+ * @method void setTUICmdPort(integer $TUICmdPort) 设置linux资产命令行运维端口
+ * @method integer getTUIDirectPort() 获取linux资产直连端口
+ * @method void setTUIDirectPort(integer $TUIDirectPort) 设置linux资产直连端口
+ * @method integer getWebAccess() 获取1 默认值，web访问开启，0 web访问关闭，2 web访问开通中，3 web访问关闭中
+ * @method void setWebAccess(integer $WebAccess) 设置1 默认值，web访问开启，0 web访问关闭，2 web访问开通中，3 web访问关闭中
+ * @method integer getClientAccess() 获取1 默认值，客户单访问开启，0 客户端访问关闭，2 客户端访问开通中，3 客户端访问关闭中
+ * @method void setClientAccess(integer $ClientAccess) 设置1 默认值，客户单访问开启，0 客户端访问关闭，2 客户端访问开通中，3 客户端访问关闭中
+ * @method integer getExternalAccess() 获取1 默认值，外网访问开启，0 外网访问关闭，2 外网访问开通中，3 外网访问关闭中
+ * @method void setExternalAccess(integer $ExternalAccess) 设置1 默认值，外网访问开启，0 外网访问关闭，2 外网访问开通中，3 外网访问关闭中
  */
 class Resource extends AbstractModel
 {
@@ -304,6 +320,46 @@ class Resource extends AbstractModel
     public $IntranetVpcCidr;
 
     /**
+     * @var boolean 是否共享clb，true-共享clb，false-独享clb
+     */
+    public $ShareClb;
+
+    /**
+     * @var string 共享clb id
+     */
+    public $OpenClbId;
+
+    /**
+     * @var string 运营商信息
+     */
+    public $LbVipIsp;
+
+    /**
+     * @var integer linux资产命令行运维端口
+     */
+    public $TUICmdPort;
+
+    /**
+     * @var integer linux资产直连端口
+     */
+    public $TUIDirectPort;
+
+    /**
+     * @var integer 1 默认值，web访问开启，0 web访问关闭，2 web访问开通中，3 web访问关闭中
+     */
+    public $WebAccess;
+
+    /**
+     * @var integer 1 默认值，客户单访问开启，0 客户端访问关闭，2 客户端访问开通中，3 客户端访问关闭中
+     */
+    public $ClientAccess;
+
+    /**
+     * @var integer 1 默认值，外网访问开启，0 外网访问关闭，2 外网访问开通中，3 外网访问关闭中
+     */
+    public $ExternalAccess;
+
+    /**
      * @param string $ResourceId 服务实例ID，如bh-saas-s3ed4r5e
      * @param string $ApCode 地域编码
      * @param string $SvArgs 服务实例规格信息
@@ -344,6 +400,14 @@ class Resource extends AbstractModel
      * @param array $IntranetPrivateIpSet 内网访问的ip
      * @param string $IntranetVpcId 开通内网访问的vpc
      * @param string $IntranetVpcCidr 开通内网访问vpc的网段
+     * @param boolean $ShareClb 是否共享clb，true-共享clb，false-独享clb
+     * @param string $OpenClbId 共享clb id
+     * @param string $LbVipIsp 运营商信息
+     * @param integer $TUICmdPort linux资产命令行运维端口
+     * @param integer $TUIDirectPort linux资产直连端口
+     * @param integer $WebAccess 1 默认值，web访问开启，0 web访问关闭，2 web访问开通中，3 web访问关闭中
+     * @param integer $ClientAccess 1 默认值，客户单访问开启，0 客户端访问关闭，2 客户端访问开通中，3 客户端访问关闭中
+     * @param integer $ExternalAccess 1 默认值，外网访问开启，0 外网访问关闭，2 外网访问开通中，3 外网访问关闭中
      */
     function __construct()
     {
@@ -521,6 +585,38 @@ class Resource extends AbstractModel
 
         if (array_key_exists("IntranetVpcCidr",$param) and $param["IntranetVpcCidr"] !== null) {
             $this->IntranetVpcCidr = $param["IntranetVpcCidr"];
+        }
+
+        if (array_key_exists("ShareClb",$param) and $param["ShareClb"] !== null) {
+            $this->ShareClb = $param["ShareClb"];
+        }
+
+        if (array_key_exists("OpenClbId",$param) and $param["OpenClbId"] !== null) {
+            $this->OpenClbId = $param["OpenClbId"];
+        }
+
+        if (array_key_exists("LbVipIsp",$param) and $param["LbVipIsp"] !== null) {
+            $this->LbVipIsp = $param["LbVipIsp"];
+        }
+
+        if (array_key_exists("TUICmdPort",$param) and $param["TUICmdPort"] !== null) {
+            $this->TUICmdPort = $param["TUICmdPort"];
+        }
+
+        if (array_key_exists("TUIDirectPort",$param) and $param["TUIDirectPort"] !== null) {
+            $this->TUIDirectPort = $param["TUIDirectPort"];
+        }
+
+        if (array_key_exists("WebAccess",$param) and $param["WebAccess"] !== null) {
+            $this->WebAccess = $param["WebAccess"];
+        }
+
+        if (array_key_exists("ClientAccess",$param) and $param["ClientAccess"] !== null) {
+            $this->ClientAccess = $param["ClientAccess"];
+        }
+
+        if (array_key_exists("ExternalAccess",$param) and $param["ExternalAccess"] !== null) {
+            $this->ExternalAccess = $param["ExternalAccess"];
         }
     }
 }

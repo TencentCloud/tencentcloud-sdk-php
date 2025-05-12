@@ -31,6 +31,7 @@ class EnableReplicaReadonlyResponse extends AbstractModel
 {
     /**
      * @var string 错误：ERROR，正确OK（已废弃）
+     * @deprecated
      */
     public $Status;
 

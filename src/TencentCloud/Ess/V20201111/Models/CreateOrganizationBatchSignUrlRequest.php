@@ -68,6 +68,8 @@ UserId必须是传入合同（FlowId）中的签署人。
  * @method void setRecipientIds(array $RecipientIds) 设置为签署方经办人在签署合同中的参与方ID，必须与参数FlowIds数组一一对应。
 您可以通过查询合同接口（DescribeFlowInfo）查询此参数。
 若传了此参数，则可以不传 UserId, Name, Mobile等参数
+ * @method string getFlowGroupId() 获取合同组Id，传入此参数则可以不传FlowIds
+ * @method void setFlowGroupId(string $FlowGroupId) 设置合同组Id，传入此参数则可以不传FlowIds
  */
 class CreateOrganizationBatchSignUrlRequest extends AbstractModel
 {
@@ -124,6 +126,11 @@ UserId必须是传入合同（FlowId）中的签署人。
     public $RecipientIds;
 
     /**
+     * @var string 合同组Id，传入此参数则可以不传FlowIds
+     */
+    public $FlowGroupId;
+
+    /**
      * @param UserInfo $Operator 执行本接口操作的员工信息。使用此接口时，必须填写userId。
 支持填入集团子公司经办人 userId 代发合同。
 
@@ -148,6 +155,7 @@ UserId必须是传入合同（FlowId）中的签署人。
      * @param array $RecipientIds 为签署方经办人在签署合同中的参与方ID，必须与参数FlowIds数组一一对应。
 您可以通过查询合同接口（DescribeFlowInfo）查询此参数。
 若传了此参数，则可以不传 UserId, Name, Mobile等参数
+     * @param string $FlowGroupId 合同组Id，传入此参数则可以不传FlowIds
      */
     function __construct()
     {
@@ -190,6 +198,10 @@ UserId必须是传入合同（FlowId）中的签署人。
 
         if (array_key_exists("RecipientIds",$param) and $param["RecipientIds"] !== null) {
             $this->RecipientIds = $param["RecipientIds"];
+        }
+
+        if (array_key_exists("FlowGroupId",$param) and $param["FlowGroupId"] !== null) {
+            $this->FlowGroupId = $param["FlowGroupId"];
         }
     }
 }

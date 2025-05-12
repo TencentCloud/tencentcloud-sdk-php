@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getType() 获取3D文件的格式。取值范围：GIF, OBJ
  * @method void setType(string $Type) 设置3D文件的格式。取值范围：GIF, OBJ
- * @method string getUrl() 获取文件的Url
- * @method void setUrl(string $Url) 设置文件的Url
+ * @method string getUrl() 获取文件的Url（有效期24小时）
+ * @method void setUrl(string $Url) 设置文件的Url（有效期24小时）
  */
 class File3D extends AbstractModel
 {
@@ -33,13 +33,13 @@ class File3D extends AbstractModel
     public $Type;
 
     /**
-     * @var string 文件的Url
+     * @var string 文件的Url（有效期24小时）
      */
     public $Url;
 
     /**
      * @param string $Type 3D文件的格式。取值范围：GIF, OBJ
-     * @param string $Url 文件的Url
+     * @param string $Url 文件的Url（有效期24小时）
      */
     function __construct()
     {

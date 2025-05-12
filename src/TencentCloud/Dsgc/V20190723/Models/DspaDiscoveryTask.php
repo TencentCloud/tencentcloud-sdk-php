@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 分类分级任务相关信息
  *
+ * @method integer getTaskId() 获取任务ID
+ * @method void setTaskId(integer $TaskId) 设置任务ID
  * @method string getName() 获取任务名称
  * @method void setName(string $Name) 设置任务名称
  * @method string getDescription() 获取任务描述
@@ -49,6 +51,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class DspaDiscoveryTask extends AbstractModel
 {
+    /**
+     * @var integer 任务ID
+     */
+    public $TaskId;
+
     /**
      * @var string 任务名称
      */
@@ -103,6 +110,7 @@ class DspaDiscoveryTask extends AbstractModel
     public $ComplianceUpdate;
 
     /**
+     * @param integer $TaskId 任务ID
      * @param string $Name 任务名称
      * @param string $Description 任务描述
      * @param integer $Period 执行周期，0单次 1每天 2每周 3每月
@@ -130,6 +138,10 @@ class DspaDiscoveryTask extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
+        }
+
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
         }

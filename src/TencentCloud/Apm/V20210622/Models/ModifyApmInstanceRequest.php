@@ -72,6 +72,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsRemoteCommandExecutionAnalysis(integer $IsRemoteCommandExecutionAnalysis) 设置是否开启远程命令攻击检测
  * @method integer getIsMemoryHijackingAnalysis() 获取是否开启内存马检测
  * @method void setIsMemoryHijackingAnalysis(integer $IsMemoryHijackingAnalysis) 设置是否开启内存马检测
+ * @method integer getLogIndexType() 获取0=全文索引，1=键值索引
+ * @method void setLogIndexType(integer $LogIndexType) 设置0=全文索引，1=键值索引
+ * @method string getLogTraceIdKey() 获取traceId的索引key
+ * @method void setLogTraceIdKey(string $LogTraceIdKey) 设置traceId的索引key
  */
 class ModifyApmInstanceRequest extends AbstractModel
 {
@@ -206,6 +210,16 @@ class ModifyApmInstanceRequest extends AbstractModel
     public $IsMemoryHijackingAnalysis;
 
     /**
+     * @var integer 0=全文索引，1=键值索引
+     */
+    public $LogIndexType;
+
+    /**
+     * @var string traceId的索引key
+     */
+    public $LogTraceIdKey;
+
+    /**
      * @param string $InstanceId 业务系统 ID
      * @param string $Name 业务系统名
      * @param array $Tags Tag 列表
@@ -232,6 +246,8 @@ class ModifyApmInstanceRequest extends AbstractModel
      * @param integer $IsInstrumentationVulnerabilityScan 是否开启组件漏洞检测（0=关,1=开）
      * @param integer $IsRemoteCommandExecutionAnalysis 是否开启远程命令攻击检测
      * @param integer $IsMemoryHijackingAnalysis 是否开启内存马检测
+     * @param integer $LogIndexType 0=全文索引，1=键值索引
+     * @param string $LogTraceIdKey traceId的索引key
      */
     function __construct()
     {
@@ -353,6 +369,14 @@ class ModifyApmInstanceRequest extends AbstractModel
 
         if (array_key_exists("IsMemoryHijackingAnalysis",$param) and $param["IsMemoryHijackingAnalysis"] !== null) {
             $this->IsMemoryHijackingAnalysis = $param["IsMemoryHijackingAnalysis"];
+        }
+
+        if (array_key_exists("LogIndexType",$param) and $param["LogIndexType"] !== null) {
+            $this->LogIndexType = $param["LogIndexType"];
+        }
+
+        if (array_key_exists("LogTraceIdKey",$param) and $param["LogTraceIdKey"] !== null) {
+            $this->LogTraceIdKey = $param["LogTraceIdKey"];
         }
     }
 }

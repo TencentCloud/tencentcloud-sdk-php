@@ -422,6 +422,11 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 
 嵌入的页面样式如下：
 ![image](https://qcloudimg.tencent-cloud.cn/raw/b2ae013fb4d747891dd3815bbe897208.png)
+ * @method Models\ChannelCreatePrepareFlowGroupResponse ChannelCreatePrepareFlowGroup(Models\ChannelCreatePrepareFlowGroupRequest $req) 接口（ChannelCreatePrepareFlowGroup）用于创建嵌入式合同组签署流程。
+
+- 该接口当前仅支持文件发起
+- 该接口能力和ChannelCreateFlowGroupByFiles，~~ChannelCreateFlowGroupByTemplates~~保持一致。
+- 返回的FlowGroupId 为临时id，只有在页面内成功发起后FlowGroupId才会有效。
  * @method Models\ChannelCreatePreparedPersonalEsignResponse ChannelCreatePreparedPersonalEsign(Models\ChannelCreatePreparedPersonalEsignRequest $req) 本接口（ChannelCreatePreparedPersonalEsign）用于创建导入个人印章（处方单场景专用，使用此接口请与客户经理确认）。
  * @method Models\ChannelCreateReleaseFlowResponse ChannelCreateReleaseFlow(Models\ChannelCreateReleaseFlowRequest $req) 发起解除协议的主要应用场景为：基于一份已经签署的合同(签署流程)，进行解除操作。
 解除协议的模板是官方提供，经过提供法务审核，暂不支持自定义。具体用法可以参考文档[合同解除](https://qian.tencent.com/developers/partner/flow_release)。

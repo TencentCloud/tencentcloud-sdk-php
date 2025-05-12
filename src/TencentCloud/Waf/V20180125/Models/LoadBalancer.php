@@ -28,8 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setListenerId(string $ListenerId) 设置负载均衡监听器的ID
  * @method string getListenerName() 获取负载均衡监听器的名称
  * @method void setListenerName(string $ListenerName) 设置负载均衡监听器的名称
- * @method string getVip() 获取负载均衡实例的IP
- * @method void setVip(string $Vip) 设置负载均衡实例的IP
  * @method integer getVport() 获取负载均衡实例的端口
  * @method void setVport(integer $Vport) 设置负载均衡实例的端口
  * @method string getRegion() 获取负载均衡LD的地域
@@ -38,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProtocol(string $Protocol) 设置监听器协议，http、https
  * @method string getZone() 获取负载均衡监听器所在的zone
  * @method void setZone(string $Zone) 设置负载均衡监听器所在的zone
+ * @method string getVip() 获取负载均衡实例的IP。域名化CLB VIP可填空。
+ * @method void setVip(string $Vip) 设置负载均衡实例的IP。域名化CLB VIP可填空。
  * @method integer getNumericalVpcId() 获取负载均衡的VPCID，公网为-1，内网按实际填写
  * @method void setNumericalVpcId(integer $NumericalVpcId) 设置负载均衡的VPCID，公网为-1，内网按实际填写
  * @method string getLoadBalancerType() 获取负载均衡的网络类型。OPEN： 公网 INTERNAL ：内网
@@ -68,11 +68,6 @@ class LoadBalancer extends AbstractModel
     public $ListenerName;
 
     /**
-     * @var string 负载均衡实例的IP
-     */
-    public $Vip;
-
-    /**
      * @var integer 负载均衡实例的端口
      */
     public $Vport;
@@ -91,6 +86,11 @@ class LoadBalancer extends AbstractModel
      * @var string 负载均衡监听器所在的zone
      */
     public $Zone;
+
+    /**
+     * @var string 负载均衡实例的IP。域名化CLB VIP可填空。
+     */
+    public $Vip;
 
     /**
      * @var integer 负载均衡的VPCID，公网为-1，内网按实际填写
@@ -112,11 +112,11 @@ class LoadBalancer extends AbstractModel
      * @param string $LoadBalancerName 负载均衡LD的名称
      * @param string $ListenerId 负载均衡监听器的ID
      * @param string $ListenerName 负载均衡监听器的名称
-     * @param string $Vip 负载均衡实例的IP
      * @param integer $Vport 负载均衡实例的端口
      * @param string $Region 负载均衡LD的地域
      * @param string $Protocol 监听器协议，http、https
      * @param string $Zone 负载均衡监听器所在的zone
+     * @param string $Vip 负载均衡实例的IP。域名化CLB VIP可填空。
      * @param integer $NumericalVpcId 负载均衡的VPCID，公网为-1，内网按实际填写
      * @param string $LoadBalancerType 负载均衡的网络类型。OPEN： 公网 INTERNAL ：内网
      * @param string $LoadBalancerDomain 负载均衡的域名
@@ -150,10 +150,6 @@ class LoadBalancer extends AbstractModel
             $this->ListenerName = $param["ListenerName"];
         }
 
-        if (array_key_exists("Vip",$param) and $param["Vip"] !== null) {
-            $this->Vip = $param["Vip"];
-        }
-
         if (array_key_exists("Vport",$param) and $param["Vport"] !== null) {
             $this->Vport = $param["Vport"];
         }
@@ -168,6 +164,10 @@ class LoadBalancer extends AbstractModel
 
         if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
             $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("Vip",$param) and $param["Vip"] !== null) {
+            $this->Vip = $param["Vip"];
         }
 
         if (array_key_exists("NumericalVpcId",$param) and $param["NumericalVpcId"] !== null) {

@@ -37,17 +37,20 @@ class DescribeBackupUrlResponse extends AbstractModel
 {
     /**
      * @var array 外网下载地址（6小时内链接有效），该字段正在逐步废弃中。
+     * @deprecated
      */
     public $DownloadUrl;
 
     /**
      * @var array 内网下载地址（6小时内链接有效），该字段正在逐步废弃中。
+     * @deprecated
      */
     public $InnerDownloadUrl;
 
     /**
      * @var array 文件名称，该字段正在逐步废弃中。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $Filenames;
 

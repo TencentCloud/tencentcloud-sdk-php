@@ -48,6 +48,8 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\CommitIntegrationTaskResponse CommitIntegrationTask(Models\CommitIntegrationTaskRequest $req) 提交集成任务
  * @method Models\CommitRuleGroupTaskResponse CommitRuleGroupTask(Models\CommitRuleGroupTaskRequest $req) 提交规则组运行任务接口
  * @method Models\CountOpsInstanceStateResponse CountOpsInstanceState(Models\CountOpsInstanceStateRequest $req) 统计任务实例状态
+ * @method Models\CreateCodeTemplateResponse CreateCodeTemplate(Models\CreateCodeTemplateRequest $req) 创建代码模版
+ * @method Models\CreateCodeTemplateVersionResponse CreateCodeTemplateVersion(Models\CreateCodeTemplateVersionRequest $req) 提交代码模版
  * @method Models\CreateCustomFunctionResponse CreateCustomFunction(Models\CreateCustomFunctionRequest $req) 创建用户自定义函数
  * @method Models\CreateDataModelResponse CreateDataModel(Models\CreateDataModelRequest $req) 创建数据建模，提供给云应用使用，实现“Wedata数据建模”的下单发货
  * @method Models\CreateDataSourceResponse CreateDataSource(Models\CreateDataSourceRequest $req) 创建数据源
@@ -67,6 +69,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\CreateTaskVersionDsResponse CreateTaskVersionDs(Models\CreateTaskVersionDsRequest $req) 提交任务版本
  * @method Models\CreateWorkflowDsResponse CreateWorkflowDs(Models\CreateWorkflowDsRequest $req) 创建工作流
  * @method Models\DagInstancesResponse DagInstances(Models\DagInstancesRequest $req) 拉取dag实例
+ * @method Models\DeleteCodeTemplateResponse DeleteCodeTemplate(Models\DeleteCodeTemplateRequest $req) 删除代码模版
  * @method Models\DeleteCustomFunctionResponse DeleteCustomFunction(Models\DeleteCustomFunctionRequest $req) 删除用户自定义函数
  * @method Models\DeleteDataModelResponse DeleteDataModel(Models\DeleteDataModelRequest $req) 销毁数据建模，提供给云应用使用，实现“Wedata数据建模”的销毁
  * @method Models\DeleteDataSourcesResponse DeleteDataSources(Models\DeleteDataSourcesRequest $req) 删除数据源
@@ -119,6 +122,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DescribeExecStrategyResponse DescribeExecStrategy(Models\DescribeExecStrategyRequest $req) 查询规则组执行策略
  * @method Models\DescribeFieldBasicInfoResponse DescribeFieldBasicInfo(Models\DescribeFieldBasicInfoRequest $req) 元数据模型-字段基础信息查询接口
  * @method Models\DescribeFolderWorkflowListResponse DescribeFolderWorkflowList(Models\DescribeFolderWorkflowListRequest $req) 根据项目id 获取项目下所有工作流列表
+ * @method Models\DescribeFormVersionParamResponse DescribeFormVersionParam(Models\DescribeFormVersionParamRequest $req) 查询模版关联的任务和可填充参数，为下一步代码模版提交做准备
  * @method Models\DescribeFunctionKindsResponse DescribeFunctionKinds(Models\DescribeFunctionKindsRequest $req) 查询函数分类
  * @method Models\DescribeFunctionTypesResponse DescribeFunctionTypes(Models\DescribeFunctionTypesRequest $req) 查询函数类型
  * @method Models\DescribeInstanceByCycleResponse DescribeInstanceByCycle(Models\DescribeInstanceByCycleRequest $req) 根据周期类型查询所有实例
@@ -208,6 +212,7 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
  * @method Models\DescribeTaskRunHistoryResponse DescribeTaskRunHistory(Models\DescribeTaskRunHistoryRequest $req) 分页查询任务运行历史
  * @method Models\DescribeTaskScriptResponse DescribeTaskScript(Models\DescribeTaskScriptRequest $req) 查询任务脚本
  * @method Models\DescribeTaskTableMetricOverviewResponse DescribeTaskTableMetricOverview(Models\DescribeTaskTableMetricOverviewRequest $req) 查询实时任务表粒度指标概览
+ * @method Models\DescribeTasksForCodeTemplateResponse DescribeTasksForCodeTemplate(Models\DescribeTasksForCodeTemplateRequest $req) 分页查询引用模板的任务列表
  * @method Models\DescribeTemplateDimCountResponse DescribeTemplateDimCount(Models\DescribeTemplateDimCountRequest $req) 查询规则模板维度分布情况
  * @method Models\DescribeTenantProjectsResponse DescribeTenantProjects(Models\DescribeTenantProjectsRequest $req) 租户全局范围的项目列表，与用户查看范围无关.
  * @method Models\DescribeThirdTaskRunLogResponse DescribeThirdTaskRunLog(Models\DescribeThirdTaskRunLogRequest $req) 获取第三方运行日志
@@ -268,6 +273,7 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
  * @method Models\RemoveWorkflowDsResponse RemoveWorkflowDs(Models\RemoveWorkflowDsRequest $req) 删除编排空间工作流
  * @method Models\RenewWorkflowOwnerDsResponse RenewWorkflowOwnerDs(Models\RenewWorkflowOwnerDsRequest $req) 批量更新工作流下任务责任人
  * @method Models\RenewWorkflowSchedulerInfoDsResponse RenewWorkflowSchedulerInfoDs(Models\RenewWorkflowSchedulerInfoDsRequest $req) 更新工作流下任务调度信息
+ * @method Models\ReportTaskLineageResponse ReportTaskLineage(Models\ReportTaskLineageRequest $req) 血缘上报接口
  * @method Models\ResumeIntegrationTaskResponse ResumeIntegrationTask(Models\ResumeIntegrationTaskRequest $req) 继续集成任务
  * @method Models\RobAndLockIntegrationTaskResponse RobAndLockIntegrationTask(Models\RobAndLockIntegrationTaskRequest $req) 抢占锁定集成任务
  * @method Models\RunForceSucScheduleInstancesResponse RunForceSucScheduleInstances(Models\RunForceSucScheduleInstancesRequest $req) 实例批量置成功
@@ -291,6 +297,7 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
 触发事件。本接口已废弃，请使用接口TriggerDsEvent。
  * @method Models\TriggerManualTasksResponse TriggerManualTasks(Models\TriggerManualTasksRequest $req) 手动任务触发运行
  * @method Models\UnlockIntegrationTaskResponse UnlockIntegrationTask(Models\UnlockIntegrationTaskRequest $req) 解锁集成任务
+ * @method Models\UpdateCodeTemplateResponse UpdateCodeTemplate(Models\UpdateCodeTemplateRequest $req) 更新模版
  * @method Models\UpdateDataModelRegistryInfoResponse UpdateDataModelRegistryInfo(Models\UpdateDataModelRegistryInfoRequest $req) 数语向wedata注册，提供自身cam角色信息，跳转域名、ip、端口信息等
  * @method Models\UpdateProjectUserRoleResponse UpdateProjectUserRole(Models\UpdateProjectUserRoleRequest $req) 修改项目用户角色
  * @method Models\UpdateWorkflowInfoResponse UpdateWorkflowInfo(Models\UpdateWorkflowInfoRequest $req) <p style="color:red;">[该接口为 ds 中开发]</p>

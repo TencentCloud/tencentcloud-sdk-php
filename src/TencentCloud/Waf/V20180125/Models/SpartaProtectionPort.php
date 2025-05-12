@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * waf斯巴达-编辑防护域名中的端口结构
  *
- * @method integer getNginxServerId() 获取分配的服务器id
- * @method void setNginxServerId(integer $NginxServerId) 设置分配的服务器id
+ * @method integer getNginxServerId() 获取分配的服务器id。首次接入的域名和端口该参数填0，已接入的域名和端口分配的id可以通过DescribeDomainDetailsSaas或DescribeDomains接口获取。
+ * @method void setNginxServerId(integer $NginxServerId) 设置分配的服务器id。首次接入的域名和端口该参数填0，已接入的域名和端口分配的id可以通过DescribeDomainDetailsSaas或DescribeDomains接口获取。
  * @method string getPort() 获取端口
  * @method void setPort(string $Port) 设置端口
  * @method string getProtocol() 获取协议
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class SpartaProtectionPort extends AbstractModel
 {
     /**
-     * @var integer 分配的服务器id
+     * @var integer 分配的服务器id。首次接入的域名和端口该参数填0，已接入的域名和端口分配的id可以通过DescribeDomainDetailsSaas或DescribeDomains接口获取。
      */
     public $NginxServerId;
 
@@ -59,7 +59,7 @@ class SpartaProtectionPort extends AbstractModel
     public $UpstreamProtocol;
 
     /**
-     * @param integer $NginxServerId 分配的服务器id
+     * @param integer $NginxServerId 分配的服务器id。首次接入的域名和端口该参数填0，已接入的域名和端口分配的id可以通过DescribeDomainDetailsSaas或DescribeDomains接口获取。
      * @param string $Port 端口
      * @param string $Protocol 协议
      * @param string $UpstreamPort 后端端口

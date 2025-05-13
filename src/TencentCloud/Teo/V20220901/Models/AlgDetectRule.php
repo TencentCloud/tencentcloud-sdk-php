@@ -29,9 +29,7 @@ use TencentCloud\Common\AbstractModel;
  * @method array getAlgConditions() 获取自定义规则。
  * @method void setAlgConditions(array $AlgConditions) 设置自定义规则。
  * @method AlgDetectSession getAlgDetectSession() 获取Cookie校验和会话行为分析。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlgDetectSession(AlgDetectSession $AlgDetectSession) 设置Cookie校验和会话行为分析。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAlgDetectJS() 获取客户端行为校验。
  * @method void setAlgDetectJS(array $AlgDetectJS) 设置客户端行为校验。
  * @method string getUpdateTime() 获取更新时间。仅出参使用。
@@ -61,7 +59,6 @@ class AlgDetectRule extends AbstractModel
 
     /**
      * @var AlgDetectSession Cookie校验和会话行为分析。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlgDetectSession;
 
@@ -81,7 +78,6 @@ class AlgDetectRule extends AbstractModel
      * @param string $Switch 规则开关。
      * @param array $AlgConditions 自定义规则。
      * @param AlgDetectSession $AlgDetectSession Cookie校验和会话行为分析。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AlgDetectJS 客户端行为校验。
      * @param string $UpdateTime 更新时间。仅出参使用。
      */

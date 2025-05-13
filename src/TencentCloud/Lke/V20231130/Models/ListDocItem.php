@@ -146,6 +146,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCateBizId() 获取文档所属分类ID
  * @method void setCateBizId(string $CateBizId) 设置文档所属分类ID
+ * @method string getCustomerKnowledgeId() 获取文档的用户自定义ID
+ * @method void setCustomerKnowledgeId(string $CustomerKnowledgeId) 设置文档的用户自定义ID
+ * @method array getAttributeFlags() 获取文档的属性标记，0: 不做用户外部权限校验
+ * @method void setAttributeFlags(array $AttributeFlags) 设置文档的属性标记，0: 不做用户外部权限校验
  */
 class ListDocItem extends AbstractModel
 {
@@ -341,6 +345,16 @@ class ListDocItem extends AbstractModel
     public $CateBizId;
 
     /**
+     * @var string 文档的用户自定义ID
+     */
+    public $CustomerKnowledgeId;
+
+    /**
+     * @var array 文档的属性标记，0: 不做用户外部权限校验
+     */
+    public $AttributeFlags;
+
+    /**
      * @param string $DocBizId 文档ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileName 文件名称
@@ -404,6 +418,8 @@ class ListDocItem extends AbstractModel
      * @param string $CreateTime 文档创建落库时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CateBizId 文档所属分类ID
+     * @param string $CustomerKnowledgeId 文档的用户自定义ID
+     * @param array $AttributeFlags 文档的属性标记，0: 不做用户外部权限校验
      */
     function __construct()
     {
@@ -549,6 +565,14 @@ class ListDocItem extends AbstractModel
 
         if (array_key_exists("CateBizId",$param) and $param["CateBizId"] !== null) {
             $this->CateBizId = $param["CateBizId"];
+        }
+
+        if (array_key_exists("CustomerKnowledgeId",$param) and $param["CustomerKnowledgeId"] !== null) {
+            $this->CustomerKnowledgeId = $param["CustomerKnowledgeId"];
+        }
+
+        if (array_key_exists("AttributeFlags",$param) and $param["AttributeFlags"] !== null) {
+            $this->AttributeFlags = $param["AttributeFlags"];
         }
     }
 }

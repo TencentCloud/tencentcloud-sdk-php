@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getIPv6AddressIds() 获取弹性公网IPv6地址唯一ID，可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressId。
  * @method void setIPv6AddressIds(array $IPv6AddressIds) 设置弹性公网IPv6地址唯一ID，可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressId。
- * @method integer getInternetMaxBandwidthOut() 获取弹性公网IPv6地址网络带宽，可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://cloud.tencent.com/document/product/1142/38369)。
- * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置弹性公网IPv6地址网络带宽，可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://cloud.tencent.com/document/product/1142/38369)。
+ * @method integer getInternetMaxBandwidthOut() 获取弹性公网IPv6地址网络带宽，可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://write.woa.com/document/123652708247588864#IPv6)。
+ * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置弹性公网IPv6地址网络带宽，可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://write.woa.com/document/123652708247588864#IPv6)。
  */
 class ModifyIPv6AddressesBandwidthRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ModifyIPv6AddressesBandwidthRequest extends AbstractModel
     public $IPv6AddressIds;
 
     /**
-     * @var integer 弹性公网IPv6地址网络带宽，可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://cloud.tencent.com/document/product/1142/38369)。
+     * @var integer 弹性公网IPv6地址网络带宽，可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://write.woa.com/document/123652708247588864#IPv6)。
      */
     public $InternetMaxBandwidthOut;
 
     /**
      * @param array $IPv6AddressIds 弹性公网IPv6地址唯一ID，可以使用[DescribeIPv6Addresses](https://cloud.tencent.com/document/api/215/113677)接口获取IPv6AddressId。
-     * @param integer $InternetMaxBandwidthOut 弹性公网IPv6地址网络带宽，可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://cloud.tencent.com/document/product/1142/38369)。
+     * @param integer $InternetMaxBandwidthOut 弹性公网IPv6地址网络带宽，可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://write.woa.com/document/123652708247588864#IPv6)。
      */
     function __construct()
     {

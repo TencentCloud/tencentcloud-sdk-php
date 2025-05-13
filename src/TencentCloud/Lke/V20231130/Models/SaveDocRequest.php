@@ -24,8 +24,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBotBizId(string $BotBizId) 设置应用ID
  * @method string getFileName() 获取文件名
  * @method void setFileName(string $FileName) 设置文件名
- * @method string getFileType() 获取文件类型(md|txt|docx|pdf|xlsx)
- * @method void setFileType(string $FileType) 设置文件类型(md|txt|docx|pdf|xlsx)
+ * @method string getFileType() 获取文档支持下面类型
+pdf、doc、docx、ppt、mhtml、pptx、wps、ppsx，单个文件不超过200MB；
+xlsx、xls、md、txt、csv、html，单个文件不超过20MB；
+
+图片支持下面类型：
+jpg、png、jpeg、tiff、bmp、gif，单个文件不超过50MB
+ * @method void setFileType(string $FileType) 设置文档支持下面类型
+pdf、doc、docx、ppt、mhtml、pptx、wps、ppsx，单个文件不超过200MB；
+xlsx、xls、md、txt、csv、html，单个文件不超过20MB；
+
+图片支持下面类型：
+jpg、png、jpeg、tiff、bmp、gif，单个文件不超过50MB
  * @method string getCosUrl() 获取平台cos路径，与DescribeStorageCredential接口查询UploadPath参数保持一致
  * @method void setCosUrl(string $CosUrl) 设置平台cos路径，与DescribeStorageCredential接口查询UploadPath参数保持一致
  * @method string getETag() 获取ETag 全称为 Entity Tag，是对象被创建时标识对象内容的信息标签，可用于检查对象的内容是否发生变化 成功上传cos后，从返回头中获取
@@ -64,6 +74,10 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
  * @method void setOpt(integer $Opt) 设置文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档） 默认为1  <br> 请注意，opt=1的时候请从知识引擎页面下载excel模板
  * @method string getCateBizId() 获取分类ID
  * @method void setCateBizId(string $CateBizId) 设置分类ID
+ * @method string getCustomerKnowledgeId() 获取文档的用户自定义ID
+ * @method void setCustomerKnowledgeId(string $CustomerKnowledgeId) 设置文档的用户自定义ID
+ * @method array getAttributeFlags() 获取文档的属性标记，0: 不做用户外部权限校验
+ * @method void setAttributeFlags(array $AttributeFlags) 设置文档的属性标记，0: 不做用户外部权限校验
  */
 class SaveDocRequest extends AbstractModel
 {
@@ -78,7 +92,12 @@ class SaveDocRequest extends AbstractModel
     public $FileName;
 
     /**
-     * @var string 文件类型(md|txt|docx|pdf|xlsx)
+     * @var string 文档支持下面类型
+pdf、doc、docx、ppt、mhtml、pptx、wps、ppsx，单个文件不超过200MB；
+xlsx、xls、md、txt、csv、html，单个文件不超过20MB；
+
+图片支持下面类型：
+jpg、png、jpeg、tiff、bmp、gif，单个文件不超过50MB
      */
     public $FileType;
 
@@ -158,9 +177,24 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
     public $CateBizId;
 
     /**
+     * @var string 文档的用户自定义ID
+     */
+    public $CustomerKnowledgeId;
+
+    /**
+     * @var array 文档的属性标记，0: 不做用户外部权限校验
+     */
+    public $AttributeFlags;
+
+    /**
      * @param string $BotBizId 应用ID
      * @param string $FileName 文件名
-     * @param string $FileType 文件类型(md|txt|docx|pdf|xlsx)
+     * @param string $FileType 文档支持下面类型
+pdf、doc、docx、ppt、mhtml、pptx、wps、ppsx，单个文件不超过200MB；
+xlsx、xls、md、txt、csv、html，单个文件不超过20MB；
+
+图片支持下面类型：
+jpg、png、jpeg、tiff、bmp、gif，单个文件不超过50MB
      * @param string $CosUrl 平台cos路径，与DescribeStorageCredential接口查询UploadPath参数保持一致
      * @param string $ETag ETag 全称为 Entity Tag，是对象被创建时标识对象内容的信息标签，可用于检查对象的内容是否发生变化 成功上传cos后，从返回头中获取
      * @param string $CosHash cos_hash x-cos-hash-crc64ecma 头部中的 CRC64编码进行校验上传到云端的文件和本地文件的一致性  
@@ -180,6 +214,8 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
      * @param boolean $IsRefer 是否引用链接
      * @param integer $Opt 文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档） 默认为1  <br> 请注意，opt=1的时候请从知识引擎页面下载excel模板
      * @param string $CateBizId 分类ID
+     * @param string $CustomerKnowledgeId 文档的用户自定义ID
+     * @param array $AttributeFlags 文档的属性标记，0: 不做用户外部权限校验
      */
     function __construct()
     {
@@ -265,6 +301,14 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
 
         if (array_key_exists("CateBizId",$param) and $param["CateBizId"] !== null) {
             $this->CateBizId = $param["CateBizId"];
+        }
+
+        if (array_key_exists("CustomerKnowledgeId",$param) and $param["CustomerKnowledgeId"] !== null) {
+            $this->CustomerKnowledgeId = $param["CustomerKnowledgeId"];
+        }
+
+        if (array_key_exists("AttributeFlags",$param) and $param["AttributeFlags"] !== null) {
+            $this->AttributeFlags = $param["AttributeFlags"];
         }
     }
 }

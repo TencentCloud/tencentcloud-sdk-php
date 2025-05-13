@@ -57,9 +57,7 @@ use TencentCloud\Common\AbstractModel;
 <li>equal：精准匹配，等于；</li>
 <li>wildcard：通配符匹配，支持 * 通配。</li>
  * @method array getMatchFrom() 获取匹配Key的值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMatchFrom(array $MatchFrom) 设置匹配Key的值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMatchContentType() 获取匹配Content所使用的匹配方式，取值为：
 <li>equal：精准匹配，等于；</li>
 <li>wildcard：通配符匹配，支持 * 通配。</li>
@@ -67,9 +65,7 @@ use TencentCloud\Common\AbstractModel;
 <li>equal：精准匹配，等于；</li>
 <li>wildcard：通配符匹配，支持 * 通配。</li>
  * @method array getMatchContent() 获取匹配Value的值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMatchContent(array $MatchContent) 设置匹配Value的值。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SkipCondition extends AbstractModel
 {
@@ -105,7 +101,6 @@ class SkipCondition extends AbstractModel
 
     /**
      * @var array 匹配Key的值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MatchFrom;
 
@@ -118,7 +113,6 @@ class SkipCondition extends AbstractModel
 
     /**
      * @var array 匹配Value的值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MatchContent;
 
@@ -142,12 +136,10 @@ class SkipCondition extends AbstractModel
 <li>equal：精准匹配，等于；</li>
 <li>wildcard：通配符匹配，支持 * 通配。</li>
      * @param array $MatchFrom 匹配Key的值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MatchContentType 匹配Content所使用的匹配方式，取值为：
 <li>equal：精准匹配，等于；</li>
 <li>wildcard：通配符匹配，支持 * 通配。</li>
      * @param array $MatchContent 匹配Value的值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

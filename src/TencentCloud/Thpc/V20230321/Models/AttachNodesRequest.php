@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceSet(array $ResourceSet) 设置节点的实例id列表
  * @method string getQueueName() 获取队列名称。不指定则为默认队列：
 SLURM默认队列为：compute。 
-SGE默认队列为：all.q。
+
  * @method void setQueueName(string $QueueName) 设置队列名称。不指定则为默认队列：
 SLURM默认队列为：compute。 
-SGE默认队列为：all.q。
+
  * @method string getImageId() 获取指定有效的镜像ID，格式形如img-xxx。目前仅支持公有镜像和特定自定义镜像。如不指定，则该字段是默认镜像。
  * @method void setImageId(string $ImageId) 设置指定有效的镜像ID，格式形如img-xxx。目前仅支持公有镜像和特定自定义镜像。如不指定，则该字段是默认镜像。
  * @method string getResourceType() 获取要新增节点的资源类型。<li>CVM：CVM实例类型资源</li><li>WORKSPACE：工作空间类型实例资源</li>默认值：CVM。
@@ -50,7 +50,7 @@ class AttachNodesRequest extends AbstractModel
     /**
      * @var string 队列名称。不指定则为默认队列：
 SLURM默认队列为：compute。 
-SGE默认队列为：all.q。
+
      */
     public $QueueName;
 
@@ -69,7 +69,7 @@ SGE默认队列为：all.q。
      * @param array $ResourceSet 节点的实例id列表
      * @param string $QueueName 队列名称。不指定则为默认队列：
 SLURM默认队列为：compute。 
-SGE默认队列为：all.q。
+
      * @param string $ImageId 指定有效的镜像ID，格式形如img-xxx。目前仅支持公有镜像和特定自定义镜像。如不指定，则该字段是默认镜像。
      * @param string $ResourceType 要新增节点的资源类型。<li>CVM：CVM实例类型资源</li><li>WORKSPACE：工作空间类型实例资源</li>默认值：CVM。
      */

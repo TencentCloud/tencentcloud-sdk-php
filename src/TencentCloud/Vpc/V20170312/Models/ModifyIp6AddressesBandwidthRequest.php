@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyIp6AddressesBandwidth请求参数结构体
  *
- * @method integer getInternetMaxBandwidthOut() 获取修改的目标带宽，单位Mbps。可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://cloud.tencent.com/document/product/1142/38369)。
- * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置修改的目标带宽，单位Mbps。可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://cloud.tencent.com/document/product/1142/38369)。
+ * @method integer getInternetMaxBandwidthOut() 获取修改的目标带宽，单位Mbps。可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://write.woa.com/document/123652708247588864#IPv6)。
+ * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置修改的目标带宽，单位Mbps。可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://write.woa.com/document/123652708247588864#IPv6)。
  * @method array getIp6Addresses() 获取IPv6地址。可以使用[DescribeIp6Addresses](https://cloud.tencent.com/document/product/215/40089)接口查询Ip6Addresses。Ip6Addresses和Ip6AddressIds必须且只能传一个。
  * @method void setIp6Addresses(array $Ip6Addresses) 设置IPv6地址。可以使用[DescribeIp6Addresses](https://cloud.tencent.com/document/product/215/40089)接口查询Ip6Addresses。Ip6Addresses和Ip6AddressIds必须且只能传一个。
  * @method array getIp6AddressIds() 获取IPv6地址对应的唯一ID，形如eip-xxxxxxxx。可以使用[DescribeIp6Addresses](https://cloud.tencent.com/document/product/215/40089)接口查询Ip6AddressIds。Ip6Addresses和Ip6AddressIds必须且只能传一个。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyIp6AddressesBandwidthRequest extends AbstractModel
 {
     /**
-     * @var integer 修改的目标带宽，单位Mbps。可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://cloud.tencent.com/document/product/1142/38369)。
+     * @var integer 修改的目标带宽，单位Mbps。可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://write.woa.com/document/123652708247588864#IPv6)。
      */
     public $InternetMaxBandwidthOut;
 
@@ -45,7 +45,7 @@ class ModifyIp6AddressesBandwidthRequest extends AbstractModel
     public $Ip6AddressIds;
 
     /**
-     * @param integer $InternetMaxBandwidthOut 修改的目标带宽，单位Mbps。可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://cloud.tencent.com/document/product/1142/38369)。
+     * @param integer $InternetMaxBandwidthOut 修改的目标带宽，单位Mbps。可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://write.woa.com/document/123652708247588864#IPv6)。
      * @param array $Ip6Addresses IPv6地址。可以使用[DescribeIp6Addresses](https://cloud.tencent.com/document/product/215/40089)接口查询Ip6Addresses。Ip6Addresses和Ip6AddressIds必须且只能传一个。
      * @param array $Ip6AddressIds IPv6地址对应的唯一ID，形如eip-xxxxxxxx。可以使用[DescribeIp6Addresses](https://cloud.tencent.com/document/product/215/40089)接口查询Ip6AddressIds。Ip6Addresses和Ip6AddressIds必须且只能传一个。
      */

@@ -72,10 +72,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsRemoteCommandExecutionAnalysis(integer $IsRemoteCommandExecutionAnalysis) 设置是否开启远程命令攻击检测
  * @method integer getIsMemoryHijackingAnalysis() 获取是否开启内存马检测
  * @method void setIsMemoryHijackingAnalysis(integer $IsMemoryHijackingAnalysis) 设置是否开启内存马检测
- * @method integer getLogIndexType() 获取0=全文索引，1=键值索引
- * @method void setLogIndexType(integer $LogIndexType) 设置0=全文索引，1=键值索引
- * @method string getLogTraceIdKey() 获取traceId的索引key
- * @method void setLogTraceIdKey(string $LogTraceIdKey) 设置traceId的索引key
+ * @method integer getLogIndexType() 获取CLS索引类型(0=全文索引，1=键值索引)
+ * @method void setLogIndexType(integer $LogIndexType) 设置CLS索引类型(0=全文索引，1=键值索引)
+ * @method string getLogTraceIdKey() 获取traceId的索引key: 当CLS索引类型为键值索引时生效
+ * @method void setLogTraceIdKey(string $LogTraceIdKey) 设置traceId的索引key: 当CLS索引类型为键值索引时生效
  */
 class ModifyApmInstanceRequest extends AbstractModel
 {
@@ -210,12 +210,12 @@ class ModifyApmInstanceRequest extends AbstractModel
     public $IsMemoryHijackingAnalysis;
 
     /**
-     * @var integer 0=全文索引，1=键值索引
+     * @var integer CLS索引类型(0=全文索引，1=键值索引)
      */
     public $LogIndexType;
 
     /**
-     * @var string traceId的索引key
+     * @var string traceId的索引key: 当CLS索引类型为键值索引时生效
      */
     public $LogTraceIdKey;
 
@@ -246,8 +246,8 @@ class ModifyApmInstanceRequest extends AbstractModel
      * @param integer $IsInstrumentationVulnerabilityScan 是否开启组件漏洞检测（0=关,1=开）
      * @param integer $IsRemoteCommandExecutionAnalysis 是否开启远程命令攻击检测
      * @param integer $IsMemoryHijackingAnalysis 是否开启内存马检测
-     * @param integer $LogIndexType 0=全文索引，1=键值索引
-     * @param string $LogTraceIdKey traceId的索引key
+     * @param integer $LogIndexType CLS索引类型(0=全文索引，1=键值索引)
+     * @param string $LogTraceIdKey traceId的索引key: 当CLS索引类型为键值索引时生效
      */
     function __construct()
     {

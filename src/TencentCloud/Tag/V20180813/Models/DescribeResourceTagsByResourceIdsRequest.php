@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourcePrefix(string $ResourcePrefix) 设置资源前缀，示例 instance
  * @method array getResourceIds() 获取资源ID数组，大小不超过50
  * @method void setResourceIds(array $ResourceIds) 设置资源ID数组，大小不超过50
- * @method string getResourceRegion() 获取资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填
- * @method void setResourceRegion(string $ResourceRegion) 设置资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填
+ * @method string getResourceRegion() 获取资源所在地域，示例：ap-guangzhou，不区分地域的资源该字段传空字符串，区分地域的资源必填
+ * @method void setResourceRegion(string $ResourceRegion) 设置资源所在地域，示例：ap-guangzhou，不区分地域的资源该字段传空字符串，区分地域的资源必填
  * @method integer getOffset() 获取数据偏移量，默认为 0, 必须为Limit参数的整数倍
  * @method void setOffset(integer $Offset) 设置数据偏移量，默认为 0, 必须为Limit参数的整数倍
  * @method integer getLimit() 获取每页大小，默认为 15
@@ -53,7 +53,7 @@ class DescribeResourceTagsByResourceIdsRequest extends AbstractModel
     public $ResourceIds;
 
     /**
-     * @var string 资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填
+     * @var string 资源所在地域，示例：ap-guangzhou，不区分地域的资源该字段传空字符串，区分地域的资源必填
      */
     public $ResourceRegion;
 
@@ -76,7 +76,7 @@ class DescribeResourceTagsByResourceIdsRequest extends AbstractModel
      * @param string $ServiceType 业务类型，示例 cvm 。资源所属业务名称（资源六段式中的第三段）
      * @param string $ResourcePrefix 资源前缀，示例 instance
      * @param array $ResourceIds 资源ID数组，大小不超过50
-     * @param string $ResourceRegion 资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填
+     * @param string $ResourceRegion 资源所在地域，示例：ap-guangzhou，不区分地域的资源该字段传空字符串，区分地域的资源必填
      * @param integer $Offset 数据偏移量，默认为 0, 必须为Limit参数的整数倍
      * @param integer $Limit 每页大小，默认为 15
      * @param string $Category 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。

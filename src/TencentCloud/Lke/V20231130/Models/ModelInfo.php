@@ -72,6 +72,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsDefault(boolean $IsDefault) 设置是否默认模型
  * @method integer getRoleLenLimit() 获取角色提示词输入长度限制
  * @method void setRoleLenLimit(integer $RoleLenLimit) 设置角色提示词输入长度限制
+ * @method boolean getIsExclusive() 获取是否专属并发模型
+ * @method void setIsExclusive(boolean $IsExclusive) 设置是否专属并发模型
  */
 class ModelInfo extends AbstractModel
 {
@@ -166,6 +168,11 @@ class ModelInfo extends AbstractModel
     public $RoleLenLimit;
 
     /**
+     * @var boolean 是否专属并发模型
+     */
+    public $IsExclusive;
+
+    /**
      * @param string $ModelName 模型名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModelDesc 模型描述
@@ -192,6 +199,7 @@ class ModelInfo extends AbstractModel
      * @param string $ModelCategory 模型类别 generate：生成模型，thought：思考模型
      * @param boolean $IsDefault 是否默认模型
      * @param integer $RoleLenLimit 角色提示词输入长度限制
+     * @param boolean $IsExclusive 是否专属并发模型
      */
     function __construct()
     {
@@ -271,6 +279,10 @@ class ModelInfo extends AbstractModel
 
         if (array_key_exists("RoleLenLimit",$param) and $param["RoleLenLimit"] !== null) {
             $this->RoleLenLimit = $param["RoleLenLimit"];
+        }
+
+        if (array_key_exists("IsExclusive",$param) and $param["IsExclusive"] !== null) {
+            $this->IsExclusive = $param["IsExclusive"];
         }
     }
 }

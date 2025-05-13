@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ScaleInInstances请求参数结构体
  *
- * @method string getAutoScalingGroupId() 获取伸缩组ID。
- * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置伸缩组ID。
- * @method integer getScaleInNumber() 获取希望缩容的实例数量。
- * @method void setScaleInNumber(integer $ScaleInNumber) 设置希望缩容的实例数量。
+ * @method string getAutoScalingGroupId() 获取伸缩组ID。可以通过如下方式获取可用的伸缩组ID:
+<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li>
+<li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
+ * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置伸缩组ID。可以通过如下方式获取可用的伸缩组ID:
+<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li>
+<li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
+ * @method integer getScaleInNumber() 获取希望缩容的实例数量。该参数的静态取值范围是 [1,2000]，同时该参数不得大于期望数与最小值的差值。例如伸缩组期望数为 100，最小值为 20，此时可取值范围为 [1,80]。
+ * @method void setScaleInNumber(integer $ScaleInNumber) 设置希望缩容的实例数量。该参数的静态取值范围是 [1,2000]，同时该参数不得大于期望数与最小值的差值。例如伸缩组期望数为 100，最小值为 20，此时可取值范围为 [1,80]。
  */
 class ScaleInInstancesRequest extends AbstractModel
 {
     /**
-     * @var string 伸缩组ID。
+     * @var string 伸缩组ID。可以通过如下方式获取可用的伸缩组ID:
+<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li>
+<li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
      */
     public $AutoScalingGroupId;
 
     /**
-     * @var integer 希望缩容的实例数量。
+     * @var integer 希望缩容的实例数量。该参数的静态取值范围是 [1,2000]，同时该参数不得大于期望数与最小值的差值。例如伸缩组期望数为 100，最小值为 20，此时可取值范围为 [1,80]。
      */
     public $ScaleInNumber;
 
     /**
-     * @param string $AutoScalingGroupId 伸缩组ID。
-     * @param integer $ScaleInNumber 希望缩容的实例数量。
+     * @param string $AutoScalingGroupId 伸缩组ID。可以通过如下方式获取可用的伸缩组ID:
+<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li>
+<li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
+     * @param integer $ScaleInNumber 希望缩容的实例数量。该参数的静态取值范围是 [1,2000]，同时该参数不得大于期望数与最小值的差值。例如伸缩组期望数为 100，最小值为 20，此时可取值范围为 [1,80]。
      */
     function __construct()
     {

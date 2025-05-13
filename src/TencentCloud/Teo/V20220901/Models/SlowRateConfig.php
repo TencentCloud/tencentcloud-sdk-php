@@ -27,13 +27,9 @@ use TencentCloud\Common\AbstractModel;
 <li>on：开启；</li>
 <li>off：关闭。</li>
  * @method integer getInterval() 获取统计的间隔，单位是秒，即在首段包传输结束后，将数据传输轴按照本参数切分，每个分片独立计算慢速攻击。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInterval(integer $Interval) 设置统计的间隔，单位是秒，即在首段包传输结束后，将数据传输轴按照本参数切分，每个分片独立计算慢速攻击。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getThreshold() 获取统计时应用的速率阈值，单位是bps，即如果本分片中的传输速率没达到本参数的值，则判定为慢速攻击，应用慢速攻击的处置方式。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setThreshold(integer $Threshold) 设置统计时应用的速率阈值，单位是bps，即如果本分片中的传输速率没达到本参数的值，则判定为慢速攻击，应用慢速攻击的处置方式。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SlowRateConfig extends AbstractModel
 {
@@ -46,13 +42,11 @@ class SlowRateConfig extends AbstractModel
 
     /**
      * @var integer 统计的间隔，单位是秒，即在首段包传输结束后，将数据传输轴按照本参数切分，每个分片独立计算慢速攻击。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Interval;
 
     /**
      * @var integer 统计时应用的速率阈值，单位是bps，即如果本分片中的传输速率没达到本参数的值，则判定为慢速攻击，应用慢速攻击的处置方式。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Threshold;
 
@@ -61,9 +55,7 @@ class SlowRateConfig extends AbstractModel
 <li>on：开启；</li>
 <li>off：关闭。</li>
      * @param integer $Interval 统计的间隔，单位是秒，即在首段包传输结束后，将数据传输轴按照本参数切分，每个分片独立计算慢速攻击。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Threshold 统计时应用的速率阈值，单位是bps，即如果本分片中的传输速率没达到本参数的值，则判定为慢速攻击，应用慢速攻击的处置方式。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuery(string $Query) 设置查询标签或相似标签
  * @method string getLastLabelBizId() 获取滚动加载游标的标签ID
  * @method void setLastLabelBizId(string $LastLabelBizId) 设置滚动加载游标的标签ID
+ * @method string getQueryScope() 获取查询范围 all(或者传空):标准词和相似词 standard:标准词 similar:相似词
+ * @method void setQueryScope(string $QueryScope) 设置查询范围 all(或者传空):标准词和相似词 standard:标准词 similar:相似词
  */
 class DescribeAttributeLabelRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class DescribeAttributeLabelRequest extends AbstractModel
     public $LastLabelBizId;
 
     /**
+     * @var string 查询范围 all(或者传空):标准词和相似词 standard:标准词 similar:相似词
+     */
+    public $QueryScope;
+
+    /**
      * @param string $BotBizId 应用ID
      * @param string $AttributeBizId 属性ID
      * @param integer $Limit 每次加载的数量 
@@ -80,6 +87,7 @@ class DescribeAttributeLabelRequest extends AbstractModel
      * @param string $LoginSubAccountUin 登录用户子账号(集成商模式必填)
      * @param string $Query 查询标签或相似标签
      * @param string $LastLabelBizId 滚动加载游标的标签ID
+     * @param string $QueryScope 查询范围 all(或者传空):标准词和相似词 standard:标准词 similar:相似词
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class DescribeAttributeLabelRequest extends AbstractModel
 
         if (array_key_exists("LastLabelBizId",$param) and $param["LastLabelBizId"] !== null) {
             $this->LastLabelBizId = $param["LastLabelBizId"];
+        }
+
+        if (array_key_exists("QueryScope",$param) and $param["QueryScope"] !== null) {
+            $this->QueryScope = $param["QueryScope"];
         }
     }
 }

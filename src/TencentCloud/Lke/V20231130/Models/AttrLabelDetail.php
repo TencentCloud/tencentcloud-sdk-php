@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatusDesc(string $StatusDesc) 设置状态描述
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLabelTotalCount() 获取标签值总数
+ * @method void setLabelTotalCount(string $LabelTotalCount) 设置标签值总数
  */
 class AttrLabelDetail extends AbstractModel
 {
@@ -94,6 +96,11 @@ class AttrLabelDetail extends AbstractModel
     public $StatusDesc;
 
     /**
+     * @var string 标签值总数
+     */
+    public $LabelTotalCount;
+
+    /**
      * @param string $AttrBizId 标签ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AttrKey 标签标识
@@ -108,6 +115,7 @@ class AttrLabelDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StatusDesc 状态描述
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LabelTotalCount 标签值总数
      */
     function __construct()
     {
@@ -148,6 +156,10 @@ class AttrLabelDetail extends AbstractModel
 
         if (array_key_exists("StatusDesc",$param) and $param["StatusDesc"] !== null) {
             $this->StatusDesc = $param["StatusDesc"];
+        }
+
+        if (array_key_exists("LabelTotalCount",$param) and $param["LabelTotalCount"] !== null) {
+            $this->LabelTotalCount = $param["LabelTotalCount"];
         }
     }
 }

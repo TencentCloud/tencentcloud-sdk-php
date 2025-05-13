@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoginSubAccountUin(string $LoginSubAccountUin) 设置登录用户子账号(集成商模式必填)
  * @method string getQuery() 获取查询内容
  * @method void setQuery(string $Query) 设置查询内容
+ * @method integer getLabelSize() 获取每个属性同步拉取的标签值数量
+ * @method void setLabelSize(integer $LabelSize) 设置每个属性同步拉取的标签值数量
  */
 class ListAttributeLabelRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class ListAttributeLabelRequest extends AbstractModel
     public $Query;
 
     /**
+     * @var integer 每个属性同步拉取的标签值数量
+     */
+    public $LabelSize;
+
+    /**
      * @param string $BotBizId 应用ID
      * @param integer $PageNumber 页码
      * @param integer $PageSize 每页数量
      * @param string $LoginUin 登录用户主账号(集成商模式必填)
      * @param string $LoginSubAccountUin 登录用户子账号(集成商模式必填)
      * @param string $Query 查询内容
+     * @param integer $LabelSize 每个属性同步拉取的标签值数量
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class ListAttributeLabelRequest extends AbstractModel
 
         if (array_key_exists("Query",$param) and $param["Query"] !== null) {
             $this->Query = $param["Query"];
+        }
+
+        if (array_key_exists("LabelSize",$param) and $param["LabelSize"] !== null) {
+            $this->LabelSize = $param["LabelSize"];
         }
     }
 }

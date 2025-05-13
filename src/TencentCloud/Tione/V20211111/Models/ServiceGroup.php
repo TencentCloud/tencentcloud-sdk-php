@@ -122,6 +122,8 @@ UPDATING 更新中
  * @method void setAuthorizationEnable(boolean $AuthorizationEnable) 设置是否开启鉴权
  * @method array getAuthTokens() 获取限流鉴权 token 列表
  * @method void setAuthTokens(array $AuthTokens) 设置限流鉴权 token 列表
+ * @method string getMonitorSource() 获取用于监控的创建来源字段
+ * @method void setMonitorSource(string $MonitorSource) 设置用于监控的创建来源字段
  */
 class ServiceGroup extends AbstractModel
 {
@@ -265,6 +267,11 @@ UPDATING 更新中
     public $AuthTokens;
 
     /**
+     * @var string 用于监控的创建来源字段
+     */
+    public $MonitorSource;
+
+    /**
      * @param string $ServiceGroupId 服务组id
      * @param string $ServiceGroupName 服务组名
      * @param string $CreatedBy 创建者
@@ -316,6 +323,7 @@ UPDATING 更新中
      * @param integer $AppId 服务组的app_id
      * @param boolean $AuthorizationEnable 是否开启鉴权
      * @param array $AuthTokens 限流鉴权 token 列表
+     * @param string $MonitorSource 用于监控的创建来源字段
      */
     function __construct()
     {
@@ -431,6 +439,10 @@ UPDATING 更新中
                 $obj->deserialize($value);
                 array_push($this->AuthTokens, $obj);
             }
+        }
+
+        if (array_key_exists("MonitorSource",$param) and $param["MonitorSource"] !== null) {
+            $this->MonitorSource = $param["MonitorSource"];
         }
     }
 }

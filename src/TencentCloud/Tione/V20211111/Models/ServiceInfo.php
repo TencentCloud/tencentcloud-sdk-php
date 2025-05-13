@@ -170,6 +170,8 @@ HYBRID_PAID:
  * @method void setGrpcEnable(boolean $GrpcEnable) 设置是否启用grpc端口
  * @method HealthProbe getHealthProbe() 获取健康探针
  * @method void setHealthProbe(HealthProbe $HealthProbe) 设置健康探针
+ * @method RollingUpdate getRollingUpdate() 获取滚动更新配置
+ * @method void setRollingUpdate(RollingUpdate $RollingUpdate) 设置滚动更新配置
  */
 class ServiceInfo extends AbstractModel
 {
@@ -395,6 +397,11 @@ HYBRID_PAID:
     public $HealthProbe;
 
     /**
+     * @var RollingUpdate 滚动更新配置
+     */
+    public $RollingUpdate;
+
+    /**
      * @param integer $Replicas 期望运行的Pod数量，停止状态是0
 不同计费模式和调节模式下对应关系如下
 PREPAID 和 POSTPAID_BY_HOUR:
@@ -470,6 +477,7 @@ HYBRID_PAID:
      * @param array $PreStopCommand 服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束
      * @param boolean $GrpcEnable 是否启用grpc端口
      * @param HealthProbe $HealthProbe 健康探针
+     * @param RollingUpdate $RollingUpdate 滚动更新配置
      */
     function __construct()
     {
@@ -655,6 +663,11 @@ HYBRID_PAID:
         if (array_key_exists("HealthProbe",$param) and $param["HealthProbe"] !== null) {
             $this->HealthProbe = new HealthProbe();
             $this->HealthProbe->deserialize($param["HealthProbe"]);
+        }
+
+        if (array_key_exists("RollingUpdate",$param) and $param["RollingUpdate"] !== null) {
+            $this->RollingUpdate = new RollingUpdate();
+            $this->RollingUpdate->deserialize($param["RollingUpdate"]);
         }
     }
 }

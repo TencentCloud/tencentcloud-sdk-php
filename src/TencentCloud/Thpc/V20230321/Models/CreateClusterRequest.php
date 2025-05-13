@@ -30,16 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setComputeNode(ComputeNode $ComputeNode) 设置指定计算节点。
  * @method integer getComputeNodeCount() 获取指定计算节点的数量。默认取值：0。
  * @method void setComputeNodeCount(integer $ComputeNodeCount) 设置指定计算节点的数量。默认取值：0。
- * @method string getSchedulerType() 获取调度器类型。默认取值：SLURM。<li>SGE：SGE调度器。</li><li>SLURM：SLURM调度器。</li>
- * @method void setSchedulerType(string $SchedulerType) 设置调度器类型。默认取值：SLURM。<li>SGE：SGE调度器。</li><li>SLURM：SLURM调度器。</li>
+ * @method string getSchedulerType() 获取调度器类型。默认取值：SLURM。<li>SLURM：SLURM调度器。</li>
+ * @method void setSchedulerType(string $SchedulerType) 设置调度器类型。默认取值：SLURM。<li>SLURM：SLURM调度器。</li>
  * @method string getSchedulerVersion() 获取创建调度器的版本号，可填写版本号为“latest” 和 各调度器支持的版本号；如果是"latest", 则代表创建的是平台当前支持的该类型调度器最新版本。如果不填写，默认创建的是“latest”版本调度器
 各调度器支持的集群版本：
 <li>SLURM：21.08.8、23.11.7</li>
-<li>SGE：     8.1.9</li>
  * @method void setSchedulerVersion(string $SchedulerVersion) 设置创建调度器的版本号，可填写版本号为“latest” 和 各调度器支持的版本号；如果是"latest", 则代表创建的是平台当前支持的该类型调度器最新版本。如果不填写，默认创建的是“latest”版本调度器
 各调度器支持的集群版本：
 <li>SLURM：21.08.8、23.11.7</li>
-<li>SGE：     8.1.9</li>
  * @method string getImageId() 获取指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前支持部分公有镜像和自定义镜像。公共镜像请参考[镜像限制](https://cloud.tencent.com/document/product/1527/64818#.E9.95.9C.E5.83.8F)
  * @method void setImageId(string $ImageId) 设置指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前支持部分公有镜像和自定义镜像。公共镜像请参考[镜像限制](https://cloud.tencent.com/document/product/1527/64818#.E9.95.9C.E5.83.8F)
  * @method VirtualPrivateCloud getVirtualPrivateCloud() 获取私有网络相关信息配置。
@@ -109,7 +107,7 @@ class CreateClusterRequest extends AbstractModel
     public $ComputeNodeCount;
 
     /**
-     * @var string 调度器类型。默认取值：SLURM。<li>SGE：SGE调度器。</li><li>SLURM：SLURM调度器。</li>
+     * @var string 调度器类型。默认取值：SLURM。<li>SLURM：SLURM调度器。</li>
      */
     public $SchedulerType;
 
@@ -117,7 +115,6 @@ class CreateClusterRequest extends AbstractModel
      * @var string 创建调度器的版本号，可填写版本号为“latest” 和 各调度器支持的版本号；如果是"latest", 则代表创建的是平台当前支持的该类型调度器最新版本。如果不填写，默认创建的是“latest”版本调度器
 各调度器支持的集群版本：
 <li>SLURM：21.08.8、23.11.7</li>
-<li>SGE：     8.1.9</li>
      */
     public $SchedulerVersion;
 
@@ -207,11 +204,10 @@ false（默认）：发送正常请求，通过检查后直接创建实例
      * @param integer $ManagerNodeCount 指定管理节点的数量。默认取值：1。取值范围：1～2。
      * @param ComputeNode $ComputeNode 指定计算节点。
      * @param integer $ComputeNodeCount 指定计算节点的数量。默认取值：0。
-     * @param string $SchedulerType 调度器类型。默认取值：SLURM。<li>SGE：SGE调度器。</li><li>SLURM：SLURM调度器。</li>
+     * @param string $SchedulerType 调度器类型。默认取值：SLURM。<li>SLURM：SLURM调度器。</li>
      * @param string $SchedulerVersion 创建调度器的版本号，可填写版本号为“latest” 和 各调度器支持的版本号；如果是"latest", 则代表创建的是平台当前支持的该类型调度器最新版本。如果不填写，默认创建的是“latest”版本调度器
 各调度器支持的集群版本：
 <li>SLURM：21.08.8、23.11.7</li>
-<li>SGE：     8.1.9</li>
      * @param string $ImageId 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前支持部分公有镜像和自定义镜像。公共镜像请参考[镜像限制](https://cloud.tencent.com/document/product/1527/64818#.E9.95.9C.E5.83.8F)
      * @param VirtualPrivateCloud $VirtualPrivateCloud 私有网络相关信息配置。
      * @param LoginSettings $LoginSettings 集群登录设置。

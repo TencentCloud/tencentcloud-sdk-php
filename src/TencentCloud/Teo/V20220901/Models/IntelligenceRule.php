@@ -23,15 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSwitch() 获取开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSwitch(string $Switch) 设置开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getIntelligenceRuleItems() 获取规则详情。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIntelligenceRuleItems(array $IntelligenceRuleItems) 设置规则详情。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class IntelligenceRule extends AbstractModel
 {
@@ -39,13 +35,11 @@ class IntelligenceRule extends AbstractModel
      * @var string 开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Switch;
 
     /**
      * @var array 规则详情。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IntelligenceRuleItems;
 
@@ -53,9 +47,7 @@ class IntelligenceRule extends AbstractModel
      * @param string $Switch 开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $IntelligenceRuleItems 规则详情。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

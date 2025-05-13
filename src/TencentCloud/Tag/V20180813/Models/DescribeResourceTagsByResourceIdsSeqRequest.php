@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourcePrefix(string $ResourcePrefix) 设置该业务类型对应的资源前缀，示例 cvm对应instance、image、volume等。也是资源六段式中的第六段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中资源前缀为ckafkaId。cos存储桶为非必填，其他云资源为必填
  * @method array getResourceIds() 获取资源唯一标记
  * @method void setResourceIds(array $ResourceIds) 设置资源唯一标记
- * @method string getResourceRegion() 获取资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填
- * @method void setResourceRegion(string $ResourceRegion) 设置资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填
+ * @method string getResourceRegion() 获取资源所在地域，示例：ap-guangzhou, 不区分地域的资源该字段传空字符串，区分地域的资源必填
+ * @method void setResourceRegion(string $ResourceRegion) 设置资源所在地域，示例：ap-guangzhou, 不区分地域的资源该字段传空字符串，区分地域的资源必填
  * @method integer getOffset() 获取数据偏移量，默认为 0, 必须为Limit参数的整数倍
  * @method void setOffset(integer $Offset) 设置数据偏移量，默认为 0, 必须为Limit参数的整数倍
  * @method integer getLimit() 获取每页大小，默认为 15
@@ -51,7 +51,7 @@ class DescribeResourceTagsByResourceIdsSeqRequest extends AbstractModel
     public $ResourceIds;
 
     /**
-     * @var string 资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填
+     * @var string 资源所在地域，示例：ap-guangzhou, 不区分地域的资源该字段传空字符串，区分地域的资源必填
      */
     public $ResourceRegion;
 
@@ -69,7 +69,7 @@ class DescribeResourceTagsByResourceIdsSeqRequest extends AbstractModel
      * @param string $ServiceType 业务类型，示例 cvm 。指资源所属业务类型，也是资源六段式中的第三段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中业务类型为ckafka
      * @param string $ResourcePrefix 该业务类型对应的资源前缀，示例 cvm对应instance、image、volume等。也是资源六段式中的第六段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中资源前缀为ckafkaId。cos存储桶为非必填，其他云资源为必填
      * @param array $ResourceIds 资源唯一标记
-     * @param string $ResourceRegion 资源所在地域，示例：ap-guangzhou 不区分地域的资源不需要传入该字段，区分地域的资源必填
+     * @param string $ResourceRegion 资源所在地域，示例：ap-guangzhou, 不区分地域的资源该字段传空字符串，区分地域的资源必填
      * @param integer $Offset 数据偏移量，默认为 0, 必须为Limit参数的整数倍
      * @param integer $Limit 每页大小，默认为 15
      */

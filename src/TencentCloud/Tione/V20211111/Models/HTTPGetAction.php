@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPath() 获取http 路径
  * @method void setPath(string $Path) 设置http 路径
+ * @method integer getPort() 获取调用端口
+ * @method void setPort(integer $Port) 设置调用端口
  */
 class HTTPGetAction extends AbstractModel
 {
@@ -31,7 +33,13 @@ class HTTPGetAction extends AbstractModel
     public $Path;
 
     /**
+     * @var integer 调用端口
+     */
+    public $Port;
+
+    /**
      * @param string $Path http 路径
+     * @param integer $Port 调用端口
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class HTTPGetAction extends AbstractModel
         }
         if (array_key_exists("Path",$param) and $param["Path"] !== null) {
             $this->Path = $param["Path"];
+        }
+
+        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
+            $this->Port = $param["Port"];
         }
     }
 }

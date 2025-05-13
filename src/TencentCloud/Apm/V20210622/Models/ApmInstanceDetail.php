@@ -110,6 +110,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsRemoteCommandExecutionAnalysis(integer $IsRemoteCommandExecutionAnalysis) 设置是否开远程命令执行检测（0=关， 1=开）
  * @method integer getIsMemoryHijackingAnalysis() 获取是否开内存马执行检测（0=关， 1=开）
  * @method void setIsMemoryHijackingAnalysis(integer $IsMemoryHijackingAnalysis) 设置是否开内存马执行检测（0=关， 1=开）
+ * @method integer getLogIndexType() 获取CLS索引类型(0=全文索引，1=键值索引)
+ * @method void setLogIndexType(integer $LogIndexType) 设置CLS索引类型(0=全文索引，1=键值索引)
+ * @method string getLogTraceIdKey() 获取traceId的索引key: 当CLS索引类型为键值索引时生效
+ * @method void setLogTraceIdKey(string $LogTraceIdKey) 设置traceId的索引key: 当CLS索引类型为键值索引时生效
  */
 class ApmInstanceDetail extends AbstractModel
 {
@@ -315,6 +319,16 @@ class ApmInstanceDetail extends AbstractModel
     public $IsMemoryHijackingAnalysis;
 
     /**
+     * @var integer CLS索引类型(0=全文索引，1=键值索引)
+     */
+    public $LogIndexType;
+
+    /**
+     * @var string traceId的索引key: 当CLS索引类型为键值索引时生效
+     */
+    public $LogTraceIdKey;
+
+    /**
      * @param string $InstanceId 业务系统 ID
      * @param string $Name 业务系统名
      * @param string $Description 业务系统描述信息
@@ -360,6 +374,8 @@ class ApmInstanceDetail extends AbstractModel
 }
      * @param integer $IsRemoteCommandExecutionAnalysis 是否开远程命令执行检测（0=关， 1=开）
      * @param integer $IsMemoryHijackingAnalysis 是否开内存马执行检测（0=关， 1=开）
+     * @param integer $LogIndexType CLS索引类型(0=全文索引，1=键值索引)
+     * @param string $LogTraceIdKey traceId的索引key: 当CLS索引类型为键值索引时生效
      */
     function __construct()
     {
@@ -533,6 +549,14 @@ class ApmInstanceDetail extends AbstractModel
 
         if (array_key_exists("IsMemoryHijackingAnalysis",$param) and $param["IsMemoryHijackingAnalysis"] !== null) {
             $this->IsMemoryHijackingAnalysis = $param["IsMemoryHijackingAnalysis"];
+        }
+
+        if (array_key_exists("LogIndexType",$param) and $param["LogIndexType"] !== null) {
+            $this->LogIndexType = $param["LogIndexType"];
+        }
+
+        if (array_key_exists("LogTraceIdKey",$param) and $param["LogTraceIdKey"] !== null) {
+            $this->LogTraceIdKey = $param["LogTraceIdKey"];
         }
     }
 }

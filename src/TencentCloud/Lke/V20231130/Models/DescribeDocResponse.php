@@ -68,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAttrLabels(array $AttrLabels) 设置标签
  * @method string getCateBizId() 获取分类ID
  * @method void setCateBizId(string $CateBizId) 设置分类ID
+ * @method string getCustomerKnowledgeId() 获取文档的用户自定义ID
+ * @method void setCustomerKnowledgeId(string $CustomerKnowledgeId) 设置文档的用户自定义ID
+ * @method array getAttributeFlags() 获取文档的属性标记，0: 不做用户外部权限校验
+ * @method void setAttributeFlags(array $AttributeFlags) 设置文档的属性标记，0: 不做用户外部权限校验
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -194,6 +198,16 @@ class DescribeDocResponse extends AbstractModel
     public $CateBizId;
 
     /**
+     * @var string 文档的用户自定义ID
+     */
+    public $CustomerKnowledgeId;
+
+    /**
+     * @var array 文档的属性标记，0: 不做用户外部权限校验
+     */
+    public $AttributeFlags;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -223,6 +237,8 @@ class DescribeDocResponse extends AbstractModel
      * @param integer $AttrRange 标签适用范围 1：全部，2：按条件范围
      * @param array $AttrLabels 标签
      * @param string $CateBizId 分类ID
+     * @param string $CustomerKnowledgeId 文档的用户自定义ID
+     * @param array $AttributeFlags 文档的属性标记，0: 不做用户外部权限校验
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -337,6 +353,14 @@ class DescribeDocResponse extends AbstractModel
 
         if (array_key_exists("CateBizId",$param) and $param["CateBizId"] !== null) {
             $this->CateBizId = $param["CateBizId"];
+        }
+
+        if (array_key_exists("CustomerKnowledgeId",$param) and $param["CustomerKnowledgeId"] !== null) {
+            $this->CustomerKnowledgeId = $param["CustomerKnowledgeId"];
+        }
+
+        if (array_key_exists("AttributeFlags",$param) and $param["AttributeFlags"] !== null) {
+            $this->AttributeFlags = $param["AttributeFlags"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

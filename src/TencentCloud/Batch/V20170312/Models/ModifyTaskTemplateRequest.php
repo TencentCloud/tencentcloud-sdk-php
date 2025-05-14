@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyTaskTemplate请求参数结构体
  *
- * @method string getTaskTemplateId() 获取任务模板ID
- * @method void setTaskTemplateId(string $TaskTemplateId) 设置任务模板ID
- * @method string getTaskTemplateName() 获取任务模板名称
- * @method void setTaskTemplateName(string $TaskTemplateName) 设置任务模板名称
- * @method string getTaskTemplateDescription() 获取任务模板描述
- * @method void setTaskTemplateDescription(string $TaskTemplateDescription) 设置任务模板描述
+ * @method string getTaskTemplateId() 获取任务模板ID; 详见[任务模版](https://cloud.tencent.com/document/product/599/15902)。
+ * @method void setTaskTemplateId(string $TaskTemplateId) 设置任务模板ID; 详见[任务模版](https://cloud.tencent.com/document/product/599/15902)。
+ * @method string getTaskTemplateName() 获取任务模板名称；字节长度限制60。
+ * @method void setTaskTemplateName(string $TaskTemplateName) 设置任务模板名称；字节长度限制60。
+ * @method string getTaskTemplateDescription() 获取任务模板描述；字节长度限制200。
+ * @method void setTaskTemplateDescription(string $TaskTemplateDescription) 设置任务模板描述；字节长度限制200。
  * @method Task getTaskTemplateInfo() 获取任务模板信息
  * @method void setTaskTemplateInfo(Task $TaskTemplateInfo) 设置任务模板信息
  */
 class ModifyTaskTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 任务模板ID
+     * @var string 任务模板ID; 详见[任务模版](https://cloud.tencent.com/document/product/599/15902)。
      */
     public $TaskTemplateId;
 
     /**
-     * @var string 任务模板名称
+     * @var string 任务模板名称；字节长度限制60。
      */
     public $TaskTemplateName;
 
     /**
-     * @var string 任务模板描述
+     * @var string 任务模板描述；字节长度限制200。
      */
     public $TaskTemplateDescription;
 
@@ -52,9 +52,9 @@ class ModifyTaskTemplateRequest extends AbstractModel
     public $TaskTemplateInfo;
 
     /**
-     * @param string $TaskTemplateId 任务模板ID
-     * @param string $TaskTemplateName 任务模板名称
-     * @param string $TaskTemplateDescription 任务模板描述
+     * @param string $TaskTemplateId 任务模板ID; 详见[任务模版](https://cloud.tencent.com/document/product/599/15902)。
+     * @param string $TaskTemplateName 任务模板名称；字节长度限制60。
+     * @param string $TaskTemplateDescription 任务模板描述；字节长度限制200。
      * @param Task $TaskTemplateInfo 任务模板信息
      */
     function __construct()

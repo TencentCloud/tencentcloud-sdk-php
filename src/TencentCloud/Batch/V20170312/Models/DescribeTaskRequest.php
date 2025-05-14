@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTask请求参数结构体
  *
- * @method string getJobId() 获取作业ID
- * @method void setJobId(string $JobId) 设置作业ID
+ * @method string getJobId() 获取作业ID；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)
+ * @method void setJobId(string $JobId) 设置作业ID；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)
  * @method string getTaskName() 获取任务名称
  * @method void setTaskName(string $TaskName) 设置任务名称
  * @method integer getOffset() 获取偏移量
@@ -29,14 +29,32 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLimit() 获取返回数量。默认取值100，最大取值1000。
  * @method void setLimit(integer $Limit) 设置返回数量。默认取值100，最大取值1000。
  * @method array getFilters() 获取过滤条件，详情如下：
-<li> task-instance-type - String - 是否必填： 否 - 按照任务实例状态进行过滤（SUBMITTED：已提交；PENDING：等待中；RUNNABLE：可运行；STARTING：启动中；RUNNING：运行中；SUCCEED：成功；FAILED：失败；FAILED_INTERRUPTED：失败后保留实例）。</li>
+task-instance-state     - String - 是否必填： 否 - 按照任务实例状态进行过滤（
+
+- SUBMITTED：已提交；
+- PENDING：等待中；
+- RUNNABLE：可运行；
+- STARTING：启动中；
+- RUNNING：运行中；
+- SUCCEED：成功；
+- FAILED：失败；
+- FAILED_INTERRUPTED：失败后保留实例）。
  * @method void setFilters(array $Filters) 设置过滤条件，详情如下：
-<li> task-instance-type - String - 是否必填： 否 - 按照任务实例状态进行过滤（SUBMITTED：已提交；PENDING：等待中；RUNNABLE：可运行；STARTING：启动中；RUNNING：运行中；SUCCEED：成功；FAILED：失败；FAILED_INTERRUPTED：失败后保留实例）。</li>
+task-instance-state     - String - 是否必填： 否 - 按照任务实例状态进行过滤（
+
+- SUBMITTED：已提交；
+- PENDING：等待中；
+- RUNNABLE：可运行；
+- STARTING：启动中；
+- RUNNING：运行中；
+- SUCCEED：成功；
+- FAILED：失败；
+- FAILED_INTERRUPTED：失败后保留实例）。
  */
 class DescribeTaskRequest extends AbstractModel
 {
     /**
-     * @var string 作业ID
+     * @var string 作业ID；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)
      */
     public $JobId;
 
@@ -57,17 +75,35 @@ class DescribeTaskRequest extends AbstractModel
 
     /**
      * @var array 过滤条件，详情如下：
-<li> task-instance-type - String - 是否必填： 否 - 按照任务实例状态进行过滤（SUBMITTED：已提交；PENDING：等待中；RUNNABLE：可运行；STARTING：启动中；RUNNING：运行中；SUCCEED：成功；FAILED：失败；FAILED_INTERRUPTED：失败后保留实例）。</li>
+task-instance-state     - String - 是否必填： 否 - 按照任务实例状态进行过滤（
+
+- SUBMITTED：已提交；
+- PENDING：等待中；
+- RUNNABLE：可运行；
+- STARTING：启动中；
+- RUNNING：运行中；
+- SUCCEED：成功；
+- FAILED：失败；
+- FAILED_INTERRUPTED：失败后保留实例）。
      */
     public $Filters;
 
     /**
-     * @param string $JobId 作业ID
+     * @param string $JobId 作业ID；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)
      * @param string $TaskName 任务名称
      * @param integer $Offset 偏移量
      * @param integer $Limit 返回数量。默认取值100，最大取值1000。
      * @param array $Filters 过滤条件，详情如下：
-<li> task-instance-type - String - 是否必填： 否 - 按照任务实例状态进行过滤（SUBMITTED：已提交；PENDING：等待中；RUNNABLE：可运行；STARTING：启动中；RUNNING：运行中；SUCCEED：成功；FAILED：失败；FAILED_INTERRUPTED：失败后保留实例）。</li>
+task-instance-state     - String - 是否必填： 否 - 按照任务实例状态进行过滤（
+
+- SUBMITTED：已提交；
+- PENDING：等待中；
+- RUNNABLE：可运行；
+- STARTING：启动中；
+- RUNNING：运行中；
+- SUCCEED：成功；
+- FAILED：失败；
+- FAILED_INTERRUPTED：失败后保留实例）。
      */
     function __construct()
     {

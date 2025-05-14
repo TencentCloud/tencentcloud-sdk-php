@@ -60,6 +60,7 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\DescribeDomainResponse DescribeDomain(Models\DescribeDomainRequest $req) 获取域名信息
  * @method Models\DescribeDomainAliasListResponse DescribeDomainAliasList(Models\DescribeDomainAliasListRequest $req) 获取域名别名列表
  * @method Models\DescribeDomainAnalyticsResponse DescribeDomainAnalytics(Models\DescribeDomainAnalyticsRequest $req) 统计各个域名的解析量，帮助您了解流量情况、时间段分布。支持查看近 3 个月内的统计情况
+ * @method Models\DescribeDomainAndRecordListResponse DescribeDomainAndRecordList(Models\DescribeDomainAndRecordListRequest $req) 批量操作中搜索域名
  * @method Models\DescribeDomainCustomLineListResponse DescribeDomainCustomLineList(Models\DescribeDomainCustomLineListRequest $req) 获取域名的自定义线路列表
  * @method Models\DescribeDomainFilterListResponse DescribeDomainFilterList(Models\DescribeDomainFilterListRequest $req) 获取域名筛选列表
 备注：新添加的解析记录存在短暂的索引延迟，如果查询不到新增记录，请在 30 秒后重试

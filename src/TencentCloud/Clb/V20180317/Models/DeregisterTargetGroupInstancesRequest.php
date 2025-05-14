@@ -23,8 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTargetGroupId() 获取目标组ID。
  * @method void setTargetGroupId(string $TargetGroupId) 设置目标组ID。
  * @method array getTargetGroupInstances() 获取待解绑的服务器信息，支持批量解除绑定，单次批量解除数量最多为20个。
-
+在这个接口 Port 参数为必填项。
  * @method void setTargetGroupInstances(array $TargetGroupInstances) 设置待解绑的服务器信息，支持批量解除绑定，单次批量解除数量最多为20个。
+在这个接口 Port 参数为必填项。
  */
 class DeregisterTargetGroupInstancesRequest extends AbstractModel
 {
@@ -35,13 +36,14 @@ class DeregisterTargetGroupInstancesRequest extends AbstractModel
 
     /**
      * @var array 待解绑的服务器信息，支持批量解除绑定，单次批量解除数量最多为20个。
-
+在这个接口 Port 参数为必填项。
      */
     public $TargetGroupInstances;
 
     /**
      * @param string $TargetGroupId 目标组ID。
      * @param array $TargetGroupInstances 待解绑的服务器信息，支持批量解除绑定，单次批量解除数量最多为20个。
+在这个接口 Port 参数为必填项。
      */
     function __construct()
     {

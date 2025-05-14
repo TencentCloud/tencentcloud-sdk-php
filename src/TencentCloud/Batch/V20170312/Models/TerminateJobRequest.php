@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TerminateJob请求参数结构体
  *
- * @method string getJobId() 获取作业ID
- * @method void setJobId(string $JobId) 设置作业ID
+ * @method string getJobId() 获取作业ID；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)
+ * @method void setJobId(string $JobId) 设置作业ID；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)
  */
 class TerminateJobRequest extends AbstractModel
 {
     /**
-     * @var string 作业ID
+     * @var string 作业ID；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)
      */
     public $JobId;
 
     /**
-     * @param string $JobId 作业ID
+     * @param string $JobId 作业ID；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)
      */
     function __construct()
     {

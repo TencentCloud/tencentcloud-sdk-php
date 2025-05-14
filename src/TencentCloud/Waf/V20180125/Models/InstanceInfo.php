@@ -128,6 +128,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLast3MaxBandwidth(integer $Last3MaxBandwidth) 设置最近3天最大带宽
  * @method MajorEventsProPkg getMajorEventsProPkg() 获取重保增强包
  * @method void setMajorEventsProPkg(MajorEventsProPkg $MajorEventsProPkg) 设置重保增强包
+ * @method integer getBasicFlag() 获取1是基础2025版本；0不是
+ * @method void setBasicFlag(integer $BasicFlag) 设置1是基础2025版本；0不是
  */
 class InstanceInfo extends AbstractModel
 {
@@ -362,6 +364,11 @@ class InstanceInfo extends AbstractModel
     public $MajorEventsProPkg;
 
     /**
+     * @var integer 1是基础2025版本；0不是
+     */
+    public $BasicFlag;
+
+    /**
      * @param string $InstanceId 实例唯一ID
      * @param string $InstanceName 实例名称
      * @param string $ResourceIds 实例对应资源ID，计费使用
@@ -416,6 +423,7 @@ class InstanceInfo extends AbstractModel
      * @param integer $Last3MaxQPS 最近3天最大qps
      * @param integer $Last3MaxBandwidth 最近3天最大带宽
      * @param MajorEventsProPkg $MajorEventsProPkg 重保增强包
+     * @param integer $BasicFlag 1是基础2025版本；0不是
      */
     function __construct()
     {
@@ -615,6 +623,10 @@ class InstanceInfo extends AbstractModel
         if (array_key_exists("MajorEventsProPkg",$param) and $param["MajorEventsProPkg"] !== null) {
             $this->MajorEventsProPkg = new MajorEventsProPkg();
             $this->MajorEventsProPkg->deserialize($param["MajorEventsProPkg"]);
+        }
+
+        if (array_key_exists("BasicFlag",$param) and $param["BasicFlag"] !== null) {
+            $this->BasicFlag = $param["BasicFlag"];
         }
     }
 }

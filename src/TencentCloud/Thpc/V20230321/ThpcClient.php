@@ -51,6 +51,7 @@ use TencentCloud\Thpc\V20230321\Models as Models;
  * @method Models\DetachNodesResponse DetachNodes(Models\DetachNodesRequest $req) 本接口 (DetachNodes) 用于将一个或者多个计算节点从集群中移除，但是不销毁指定计算资源。
  * @method Models\ModifyInitNodeScriptsResponse ModifyInitNodeScripts(Models\ModifyInitNodeScriptsRequest $req) 本接口 (ModifyInitNodeScripts) 用于修改节点初始化脚本。
  * @method Models\ModifyWorkspacesAttributeResponse ModifyWorkspacesAttribute(Models\ModifyWorkspacesAttributeRequest $req) 本接口 (ModifyWorkspacesAttribute) 用于修改工作空间的属性（目前只支持修改工作空间的名称）。
+ * @method Models\ModifyWorkspacesRenewFlagResponse ModifyWorkspacesRenewFlag(Models\ModifyWorkspacesRenewFlagRequest $req) 本接口 (ModifyWorkspacesAttribute) 用于修改工作空间的属性（目前只支持修改工作空间的名称）。
  * @method Models\SetAutoScalingConfigurationResponse SetAutoScalingConfiguration(Models\SetAutoScalingConfigurationRequest $req) 本接口(SetAutoScalingConfiguration)用于为集群设置集群弹性伸缩配置信息。
  * @method Models\TerminateWorkspacesResponse TerminateWorkspaces(Models\TerminateWorkspacesRequest $req) 本接口 (TerminateWorkspaces) 用于主动退还工作空间。
  */

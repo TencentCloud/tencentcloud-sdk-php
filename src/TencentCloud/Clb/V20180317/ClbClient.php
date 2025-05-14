@@ -97,7 +97,7 @@ BGP带宽包必须传带宽包id
 - 仅七层（HTTP、HTTPS）监听器支持绑定 SCF，四层（TCP、UDP、TCP SSL）监听器和七层 QUIC 监听器不支持。
 - CLB 绑定 SCF 仅支持绑定“Event 函数”类型的云函数。
  * @method Models\DeregisterTargetGroupInstancesResponse DeregisterTargetGroupInstances(Models\DeregisterTargetGroupInstancesRequest $req) 从目标组中解绑服务器。
-本接口为异步接口，本接口返回成功后需以返回的 RequestID 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
+本接口为异步接口，本接口返回成功后需以返回的 RequestID 为入参，调用  [DescribeTaskStatus](https://cloud.tencent.com/document/product/214/30683)  接口查询本次任务是否成功。
  * @method Models\DeregisterTargetsResponse DeregisterTargets(Models\DeregisterTargetsRequest $req) DeregisterTargets 接口用来将一台或多台后端服务从负载均衡的监听器或转发规则上解绑，对于四层监听器，只需指定监听器ID即可，对于七层监听器，还需通过LocationId或Domain+Url指定转发规则。
 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用DescribeTaskStatus接口查询本次任务是否成功。
  * @method Models\DeregisterTargetsFromClassicalLBResponse DeregisterTargetsFromClassicalLB(Models\DeregisterTargetsFromClassicalLBRequest $req) DeregisterTargetsFromClassicalLB 接口用于解绑负载均衡后端服务。本接口为异步接口，接口返回成功后，需以返回的 RequestId 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
@@ -155,13 +155,13 @@ BGP带宽包必须传带宽包id
  * @method Models\ModifyListenerResponse ModifyListener(Models\ModifyListenerRequest $req) ModifyListener接口用来修改负载均衡监听器的属性，包括监听器名称、健康检查参数、证书信息、转发策略等。本接口不支持传统型负载均衡。
 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用 [DescribeTaskStatus](https://cloud.tencent.com/document/product/214/30683) 接口查询本次任务是否成功。
  * @method Models\ModifyLoadBalancerAttributesResponse ModifyLoadBalancerAttributes(Models\ModifyLoadBalancerAttributesRequest $req) 修改负载均衡实例的属性。支持修改负载均衡实例的名称、设置负载均衡的跨域属性。
-注意：非带宽上移用户的 CLB 实例必须加入带宽包才可以设置跨域属性。
+注意：非带宽上移用户的 CLB 实例必须加入带宽包才可以设置跨域属性。修改网络计费模式请到控制台操作。
 本接口为异步接口，接口返回成功后，需以得到的 RequestID 为入参，调用 [DescribeTaskStatus](https://cloud.tencent.com/document/product/214/30683) 接口查询本次任务是否成功。
  * @method Models\ModifyLoadBalancerMixIpTargetResponse ModifyLoadBalancerMixIpTarget(Models\ModifyLoadBalancerMixIpTargetRequest $req) 修改IPv6FullChain负载均衡7层监听器支持混绑IPv4/IPv6目标特性。
- * @method Models\ModifyLoadBalancerSlaResponse ModifyLoadBalancerSla(Models\ModifyLoadBalancerSlaRequest $req) 本接口（ModifyLoadBalancerSla）用于将按量计费模式的共享型实例升级为性能容量型实例。<br/>
+ * @method Models\ModifyLoadBalancerSlaResponse ModifyLoadBalancerSla(Models\ModifyLoadBalancerSlaRequest $req) 本接口（ModifyLoadBalancerSla）用于调整按量计费模式实例的性能容量型规格，如共享型升级性能容量型，性能容量型实例规格调整。<br/>
 限制条件：
-- 本接口只支持升级按量计费的CLB实例，包年包月的CLB实例升级请通过控制台进行升级。
-- 升级为性能容量型实例后，不支持再回退到共享型实例。
+- 本接口只支持调整按量计费的CLB实例，包年包月的CLB实例升级请通过控制台进行调整。
+- 共享型升级为性能容量型实例后，不支持再回退到共享型实例。
 - 传统型负载均衡实例不支持升级为性能容量型实例。
  * @method Models\ModifyLoadBalancersProjectResponse ModifyLoadBalancersProject(Models\ModifyLoadBalancersProjectRequest $req) 修改一个或多个负载均衡实例所属项目。
  * @method Models\ModifyRuleResponse ModifyRule(Models\ModifyRuleRequest $req) ModifyRule 接口用来修改负载均衡七层监听器下的转发规则的各项属性，包括转发路径、健康检查属性、转发策略等。
@@ -174,7 +174,7 @@ BGP带宽包必须传带宽包id
  * @method Models\ModifyTargetPortResponse ModifyTargetPort(Models\ModifyTargetPortRequest $req) ModifyTargetPort接口用于修改监听器绑定的后端服务的端口。
 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用DescribeTaskStatus接口查询本次任务是否成功。
  * @method Models\ModifyTargetWeightResponse ModifyTargetWeight(Models\ModifyTargetWeightRequest $req) ModifyTargetWeight 接口用于修改负载均衡绑定的后端服务的转发权重。
-本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用DescribeTaskStatus接口查询本次任务是否成功。
+本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用 [DescribeTaskStatus](https://cloud.tencent.com/document/product/214/30683) 接口查询本次任务是否成功。
  * @method Models\RegisterFunctionTargetsResponse RegisterFunctionTargets(Models\RegisterFunctionTargetsRequest $req) RegisterFunctionTargets 接口用来将一个云函数绑定到负载均衡的7层转发规则，在此之前您需要先行创建相关的7层监听器（HTTP、HTTPS）和转发规则。
 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用DescribeTaskStatus接口查询本次任务是否成功。<br/>
 限制说明：
@@ -202,7 +202,7 @@ BGP带宽包必须传带宽包id
 绑定操作时，入参需要传入负载均衡实例要绑定的所有安全组（已绑定的+新增绑定的）。
 解绑操作时，入参需要传入负载均衡实例执行解绑后所绑定的所有安全组；如果要解绑所有安全组，可不传此参数，或传入空数组。注意：内网 CLB 绑定 EIP 后，CLB 上的安全组对来自 EIP 的流量不生效，对来自内网 CLB 的流量生效。
  * @method Models\SetLoadBalancerStartStatusResponse SetLoadBalancerStartStatus(Models\SetLoadBalancerStartStatusRequest $req) 启停负载均衡实例或者监听器。
-本接口为异步接口，接口返回成功后，需以得到的 RequestID 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
+本接口为异步接口，接口返回成功后，需以得到的 RequestID 为入参，调用  [DescribeTaskStatus](https://cloud.tencent.com/document/product/214/30683)  接口查询本次任务是否成功。
 该功能正在内测中，如需使用，请通过[工单申请](https://console.cloud.tencent.com/workorder/category?level1_id=6&level2_id=163&source=0&data_title=%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%20LB&step=1)。
  * @method Models\SetSecurityGroupForLoadbalancersResponse SetSecurityGroupForLoadbalancers(Models\SetSecurityGroupForLoadbalancersRequest $req) 绑定或解绑一个安全组到多个公网负载均衡实例。
  */

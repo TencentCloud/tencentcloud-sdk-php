@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquiryPriceRefundLoadBalancer请求参数结构体
  *
- * @method string getLoadBalancerId() 获取负载均衡实例ID
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例ID
+ * @method string getLoadBalancerId() 获取负载均衡实例ID。可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
+ * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例ID。可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
  */
 class InquiryPriceRefundLoadBalancerRequest extends AbstractModel
 {
     /**
-     * @var string 负载均衡实例ID
+     * @var string 负载均衡实例ID。可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
      */
     public $LoadBalancerId;
 
     /**
-     * @param string $LoadBalancerId 负载均衡实例ID
+     * @param string $LoadBalancerId 负载均衡实例ID。可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
      */
     function __construct()
     {

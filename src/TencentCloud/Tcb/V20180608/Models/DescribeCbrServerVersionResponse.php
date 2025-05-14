@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVersionName(string $VersionName) 设置版本名称
  * @method string getRemark() 获取备注
  * @method void setRemark(string $Remark) 设置备注
- * @method string getDockerfilePath() 获取Dockefile的路径
- * @method void setDockerfilePath(string $DockerfilePath) 设置Dockefile的路径
+ * @method string getDockerfilePath() 获取Dockerfile的路径
+ * @method void setDockerfilePath(string $DockerfilePath) 设置Dockerfile的路径
  * @method string getBuildDir() 获取DockerBuild的目录
  * @method void setBuildDir(string $BuildDir) 设置DockerBuild的目录
  * @method float getCpu() 获取Cpu大小
@@ -98,7 +98,7 @@ class DescribeCbrServerVersionResponse extends AbstractModel
     public $Remark;
 
     /**
-     * @var string Dockefile的路径
+     * @var string Dockerfile的路径
      */
     public $DockerfilePath;
 
@@ -250,7 +250,7 @@ class DescribeCbrServerVersionResponse extends AbstractModel
     /**
      * @param string $VersionName 版本名称
      * @param string $Remark 备注
-     * @param string $DockerfilePath Dockefile的路径
+     * @param string $DockerfilePath Dockerfile的路径
      * @param string $BuildDir DockerBuild的目录
      * @param float $Cpu Cpu大小
      * @param float $Mem Mem大小

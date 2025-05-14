@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDiskExtraPerformance请求参数结构体
  *
- * @method integer getThroughputPerformance() 获取额外购买的云硬盘性能值，单位MB/s。
- * @method void setThroughputPerformance(integer $ThroughputPerformance) 设置额外购买的云硬盘性能值，单位MB/s。
- * @method string getDiskId() 获取需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
- * @method void setDiskId(string $DiskId) 设置需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
+ * @method integer getThroughputPerformance() 获取额外购买的云硬盘性能值，单位MiB/s。
+ * @method void setThroughputPerformance(integer $ThroughputPerformance) 设置额外购买的云硬盘性能值，单位MiB/s。
+ * @method string getDiskId() 获取需要购买额外性能值的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。仅大小超过460GiB的增强型SSD（CLOUD_HSSD）和极速型SSD（CLOUD_TSSD）云硬盘才支持购买额外性能。
+ * @method void setDiskId(string $DiskId) 设置需要购买额外性能值的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。仅大小超过460GiB的增强型SSD（CLOUD_HSSD）和极速型SSD（CLOUD_TSSD）云硬盘才支持购买额外性能。
  */
 class ModifyDiskExtraPerformanceRequest extends AbstractModel
 {
     /**
-     * @var integer 额外购买的云硬盘性能值，单位MB/s。
+     * @var integer 额外购买的云硬盘性能值，单位MiB/s。
      */
     public $ThroughputPerformance;
 
     /**
-     * @var string 需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
+     * @var string 需要购买额外性能值的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。仅大小超过460GiB的增强型SSD（CLOUD_HSSD）和极速型SSD（CLOUD_TSSD）云硬盘才支持购买额外性能。
      */
     public $DiskId;
 
     /**
-     * @param integer $ThroughputPerformance 额外购买的云硬盘性能值，单位MB/s。
-     * @param string $DiskId 需要创建快照的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
+     * @param integer $ThroughputPerformance 额外购买的云硬盘性能值，单位MiB/s。
+     * @param string $DiskId 需要购买额外性能值的云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。仅大小超过460GiB的增强型SSD（CLOUD_HSSD）和极速型SSD（CLOUD_TSSD）云硬盘才支持购买额外性能。
      */
     function __construct()
     {

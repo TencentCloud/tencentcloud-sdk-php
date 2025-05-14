@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RetryJobs请求参数结构体
  *
- * @method array getJobIds() 获取作业ID列表。
- * @method void setJobIds(array $JobIds) 设置作业ID列表。
+ * @method array getJobIds() 获取作业ID列表。最大重试作业数100；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)。
+ * @method void setJobIds(array $JobIds) 设置作业ID列表。最大重试作业数100；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)。
  */
 class RetryJobsRequest extends AbstractModel
 {
     /**
-     * @var array 作业ID列表。
+     * @var array 作业ID列表。最大重试作业数100；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)。
      */
     public $JobIds;
 
     /**
-     * @param array $JobIds 作业ID列表。
+     * @param array $JobIds 作业ID列表。最大重试作业数100；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)。
      */
     function __construct()
     {

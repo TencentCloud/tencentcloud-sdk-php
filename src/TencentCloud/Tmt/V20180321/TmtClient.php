@@ -29,6 +29,12 @@ use TencentCloud\Tmt\V20180321\Models as Models;
 • 当采用轮询方式时，需要主动提交任务ID来轮询识别结果，共有任务成功、等待、执行中和失败四种结果，具体信息请参见参数说明。
  * @method Models\ImageTranslateResponse ImageTranslate(Models\ImageTranslateRequest $req) 提供13种语言的图片翻译服务，可自动识别图片中的文本内容并翻译成目标语言，识别后的文本按行翻译，后续会提供可按段落翻译的版本。<br />
 提示：对于一般开发者，我们建议优先使用SDK接入简化开发。SDK使用介绍请直接查看 5. 开发者资源 部分。
+ * @method Models\ImageTranslateLLMResponse ImageTranslateLLM(Models\ImageTranslateLLMRequest $req) 提供18种语言的图片翻译服务，可自动识别图片中的文本内容并翻译成目标语言，识别后的文本按行翻译，后续会提供可按段落翻译的版本。
+
+- 输入图片格式：png、jpg、jpeg等常用图片格式，不支持gif动图。
+- 输出图片格式：jpg。
+
+提示：对于一般开发者，我们建议优先使用SDK接入简化开发。SDK使用介绍请直接查看 5. 开发者资源 部分。
  * @method Models\LanguageDetectResponse LanguageDetect(Models\LanguageDetectRequest $req) 可自动识别文本内容的语言种类，轻量高效，无需额外实现判断方式，使面向客户的服务体验更佳。 <br />
 提示：对于一般开发者，我们建议优先使用SDK接入简化开发。SDK使用介绍请直接查看 5. 开发者资源 部分。
  * @method Models\SpeechTranslateResponse SpeechTranslate(Models\SpeechTranslateRequest $req) 本接口提供上传音频，将音频进行语音识别并翻译成文本的服务，目前开放中英互译的语音翻译服务。

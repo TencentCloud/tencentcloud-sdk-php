@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDiskAssociatedAutoSnapshotPolicy请求参数结构体
  *
- * @method string getDiskId() 获取要查询的云硬盘ID。
- * @method void setDiskId(string $DiskId) 设置要查询的云硬盘ID。
+ * @method string getDiskId() 获取要查询的云硬盘ID，通过[DescribeDisks](https://tcloud4api.woa.com/document/product/362/15601?!preview&!document=1)接口查询。
+ * @method void setDiskId(string $DiskId) 设置要查询的云硬盘ID，通过[DescribeDisks](https://tcloud4api.woa.com/document/product/362/15601?!preview&!document=1)接口查询。
  */
 class DescribeDiskAssociatedAutoSnapshotPolicyRequest extends AbstractModel
 {
     /**
-     * @var string 要查询的云硬盘ID。
+     * @var string 要查询的云硬盘ID，通过[DescribeDisks](https://tcloud4api.woa.com/document/product/362/15601?!preview&!document=1)接口查询。
      */
     public $DiskId;
 
     /**
-     * @param string $DiskId 要查询的云硬盘ID。
+     * @param string $DiskId 要查询的云硬盘ID，通过[DescribeDisks](https://tcloud4api.woa.com/document/product/362/15601?!preview&!document=1)接口查询。
      */
     function __construct()
     {

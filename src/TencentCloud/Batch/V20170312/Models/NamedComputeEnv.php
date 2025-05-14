@@ -22,12 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEnvName() 获取计算环境名称
  * @method void setEnvName(string $EnvName) 设置计算环境名称
- * @method integer getDesiredComputeNodeCount() 获取计算节点期望个数
- * @method void setDesiredComputeNodeCount(integer $DesiredComputeNodeCount) 设置计算节点期望个数
+ * @method integer getDesiredComputeNodeCount() 获取计算节点期望个数，最大上限2000.
+ * @method void setDesiredComputeNodeCount(integer $DesiredComputeNodeCount) 设置计算节点期望个数，最大上限2000.
  * @method string getEnvDescription() 获取计算环境描述
  * @method void setEnvDescription(string $EnvDescription) 设置计算环境描述
- * @method string getEnvType() 获取计算环境管理类型
- * @method void setEnvType(string $EnvType) 设置计算环境管理类型
+ * @method string getEnvType() 获取计算环境管理类型，枚举如下：
+MANAGED: 由客户在Batch平台主动创建；
+THPC_QUEUE: 由THPC平台创建，关联THPC平台的集群队列。
+ * @method void setEnvType(string $EnvType) 设置计算环境管理类型，枚举如下：
+MANAGED: 由客户在Batch平台主动创建；
+THPC_QUEUE: 由THPC平台创建，关联THPC平台的集群队列。
  * @method EnvData getEnvData() 获取计算环境具体参数
  * @method void setEnvData(EnvData $EnvData) 设置计算环境具体参数
  * @method array getMountDataDisks() 获取数据盘挂载选项
@@ -63,7 +67,7 @@ class NamedComputeEnv extends AbstractModel
     public $EnvName;
 
     /**
-     * @var integer 计算节点期望个数
+     * @var integer 计算节点期望个数，最大上限2000.
      */
     public $DesiredComputeNodeCount;
 
@@ -73,7 +77,9 @@ class NamedComputeEnv extends AbstractModel
     public $EnvDescription;
 
     /**
-     * @var string 计算环境管理类型
+     * @var string 计算环境管理类型，枚举如下：
+MANAGED: 由客户在Batch平台主动创建；
+THPC_QUEUE: 由THPC平台创建，关联THPC平台的集群队列。
      */
     public $EnvType;
 
@@ -132,9 +138,11 @@ TDMQ_CMQ：表示向腾讯云TDMQ_CMQ发送消息。<br/>默认值为CMQ。<br/>
 
     /**
      * @param string $EnvName 计算环境名称
-     * @param integer $DesiredComputeNodeCount 计算节点期望个数
+     * @param integer $DesiredComputeNodeCount 计算节点期望个数，最大上限2000.
      * @param string $EnvDescription 计算环境描述
-     * @param string $EnvType 计算环境管理类型
+     * @param string $EnvType 计算环境管理类型，枚举如下：
+MANAGED: 由客户在Batch平台主动创建；
+THPC_QUEUE: 由THPC平台创建，关联THPC平台的集群队列。
      * @param EnvData $EnvData 计算环境具体参数
      * @param array $MountDataDisks 数据盘挂载选项
      * @param array $Authentications 授权信息

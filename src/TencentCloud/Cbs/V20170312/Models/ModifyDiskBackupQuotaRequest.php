@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDiskBackupQuota请求参数结构体
  *
- * @method string getDiskId() 获取云硬盘ID。
- * @method void setDiskId(string $DiskId) 设置云硬盘ID。
- * @method integer getDiskBackupQuota() 获取调整之后的云硬盘备份点配额。
- * @method void setDiskBackupQuota(integer $DiskBackupQuota) 设置调整之后的云硬盘备份点配额。
+ * @method string getDiskId() 获取云硬盘ID。可通过[DescribeDisks](/document/product/362/16315)接口查询。
+ * @method void setDiskId(string $DiskId) 设置云硬盘ID。可通过[DescribeDisks](/document/product/362/16315)接口查询。
+ * @method integer getDiskBackupQuota() 获取调整之后的云硬盘备份点配额。取值范围为1 ~ 1024。
+ * @method void setDiskBackupQuota(integer $DiskBackupQuota) 设置调整之后的云硬盘备份点配额。取值范围为1 ~ 1024。
  */
 class ModifyDiskBackupQuotaRequest extends AbstractModel
 {
     /**
-     * @var string 云硬盘ID。
+     * @var string 云硬盘ID。可通过[DescribeDisks](/document/product/362/16315)接口查询。
      */
     public $DiskId;
 
     /**
-     * @var integer 调整之后的云硬盘备份点配额。
+     * @var integer 调整之后的云硬盘备份点配额。取值范围为1 ~ 1024。
      */
     public $DiskBackupQuota;
 
     /**
-     * @param string $DiskId 云硬盘ID。
-     * @param integer $DiskBackupQuota 调整之后的云硬盘备份点配额。
+     * @param string $DiskId 云硬盘ID。可通过[DescribeDisks](/document/product/362/16315)接口查询。
+     * @param integer $DiskBackupQuota 调整之后的云硬盘备份点配额。取值范围为1 ~ 1024。
      */
     function __construct()
     {

@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 图片编码格式参数
  *
- * @method string getFormat() 获取图片格式，取值范围：JPG、BMP、GIF、PNG、WebP，缺省为原图格式。
+ * @method string getFormat() 获取图片格式，取值范围：JPEG、PNG、BMP、WebP，缺省为原图格式。不支持动画。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFormat(string $Format) 设置图片格式，取值范围：JPG、BMP、GIF、PNG、WebP，缺省为原图格式。
+ * @method void setFormat(string $Format) 设置图片格式，取值范围：JPEG、PNG、BMP、WebP，缺省为原图格式。不支持动画。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getQuality() 获取图片的相对质量，取值范围：1 - 100，数值以原图质量为标准，缺省为原图质量。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class ImageEncodeConfig extends AbstractModel
 {
     /**
-     * @var string 图片格式，取值范围：JPG、BMP、GIF、PNG、WebP，缺省为原图格式。
+     * @var string 图片格式，取值范围：JPEG、PNG、BMP、WebP，缺省为原图格式。不支持动画。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Format;
@@ -44,7 +44,7 @@ class ImageEncodeConfig extends AbstractModel
     public $Quality;
 
     /**
-     * @param string $Format 图片格式，取值范围：JPG、BMP、GIF、PNG、WebP，缺省为原图格式。
+     * @param string $Format 图片格式，取值范围：JPEG、PNG、BMP、WebP，缺省为原图格式。不支持动画。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Quality 图片的相对质量，取值范围：1 - 100，数值以原图质量为标准，缺省为原图质量。
 注意：此字段可能返回 null，表示取不到有效值。

@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSuperResolution(SuperResolutionConfig $SuperResolution) 设置超分配置。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ImageQualityEnhanceConfig getImageQualityEnhance() 获取综合增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setImageQualityEnhance(ImageQualityEnhanceConfig $ImageQualityEnhance) 设置综合增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method ColorEnhanceConfig getColorEnhance() 获取色彩增强配置。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setColorEnhance(ColorEnhanceConfig $ColorEnhance) 设置色彩增强配置。
@@ -46,6 +50,12 @@ class ImageEnhanceConfig extends AbstractModel
     public $SuperResolution;
 
     /**
+     * @var ImageQualityEnhanceConfig 综合增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ImageQualityEnhance;
+
+    /**
      * @var ColorEnhanceConfig 色彩增强配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -65,6 +75,8 @@ class ImageEnhanceConfig extends AbstractModel
 
     /**
      * @param SuperResolutionConfig $SuperResolution 超分配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageQualityEnhanceConfig $ImageQualityEnhance 综合增强配置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ColorEnhanceConfig $ColorEnhance 色彩增强配置。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -89,6 +101,11 @@ class ImageEnhanceConfig extends AbstractModel
         if (array_key_exists("SuperResolution",$param) and $param["SuperResolution"] !== null) {
             $this->SuperResolution = new SuperResolutionConfig();
             $this->SuperResolution->deserialize($param["SuperResolution"]);
+        }
+
+        if (array_key_exists("ImageQualityEnhance",$param) and $param["ImageQualityEnhance"] !== null) {
+            $this->ImageQualityEnhance = new ImageQualityEnhanceConfig();
+            $this->ImageQualityEnhance->deserialize($param["ImageQualityEnhance"]);
         }
 
         if (array_key_exists("ColorEnhance",$param) and $param["ColorEnhance"] !== null) {

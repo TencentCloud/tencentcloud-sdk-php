@@ -50,8 +50,10 @@ use TencentCloud\Common\AbstractModel;
 若后端服务对连接数上限有限制，则建议谨慎开启。此功能目前处于内测中，如需使用，请提交 [内测申请](https://cloud.tencent.com/apply/p/tsodp6qm21)。
  * @method boolean getDeregisterTargetRst() 获取解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
 True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
+不传则表示不修改。
  * @method void setDeregisterTargetRst(boolean $DeregisterTargetRst) 设置解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
 True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
+不传则表示不修改。
  * @method string getSessionType() 获取会话保持类型。NORMAL表示默认会话保持类型。QUIC_CID表示根据Quic Connection ID做会话保持。QUIC_CID只支持UDP协议。
 使用场景：适用于TCP/UDP/TCP_SSL/QUIC监听器。
 默认为 NORMAL。
@@ -71,7 +73,9 @@ True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
  * @method integer getIdleConnectTimeout() 获取空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。默认值：900，取值范围：共享型实例和独占型实例支持：300～900，性能容量型实例支持：300~1980。如需设置超过2000s，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category),最大可设置到3600s。
  * @method void setIdleConnectTimeout(integer $IdleConnectTimeout) 设置空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。默认值：900，取值范围：共享型实例和独占型实例支持：300～900，性能容量型实例支持：300~1980。如需设置超过2000s，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category),最大可设置到3600s。
  * @method boolean getSnatEnable() 获取是否开启SNAT， True 表示开启 SNAT，False 表示不开启 SNAT。
+不传则表示不修改。
  * @method void setSnatEnable(boolean $SnatEnable) 设置是否开启SNAT， True 表示开启 SNAT，False 表示不开启 SNAT。
+不传则表示不修改。
  * @method string getDataCompressMode() 获取数据压缩模式
  * @method void setDataCompressMode(string $DataCompressMode) 设置数据压缩模式
  */
@@ -134,6 +138,7 @@ class ModifyListenerRequest extends AbstractModel
     /**
      * @var boolean 解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
 True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
+不传则表示不修改。
      */
     public $DeregisterTargetRst;
 
@@ -168,6 +173,7 @@ True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
 
     /**
      * @var boolean 是否开启SNAT， True 表示开启 SNAT，False 表示不开启 SNAT。
+不传则表示不修改。
      */
     public $SnatEnable;
 
@@ -193,6 +199,7 @@ True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
 若后端服务对连接数上限有限制，则建议谨慎开启。此功能目前处于内测中，如需使用，请提交 [内测申请](https://cloud.tencent.com/apply/p/tsodp6qm21)。
      * @param boolean $DeregisterTargetRst 解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
 True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
+不传则表示不修改。
      * @param string $SessionType 会话保持类型。NORMAL表示默认会话保持类型。QUIC_CID表示根据Quic Connection ID做会话保持。QUIC_CID只支持UDP协议。
 使用场景：适用于TCP/UDP/TCP_SSL/QUIC监听器。
 默认为 NORMAL。
@@ -203,6 +210,7 @@ True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
 默认为 -1 表示不限速。
      * @param integer $IdleConnectTimeout 空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。默认值：900，取值范围：共享型实例和独占型实例支持：300～900，性能容量型实例支持：300~1980。如需设置超过2000s，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category),最大可设置到3600s。
      * @param boolean $SnatEnable 是否开启SNAT， True 表示开启 SNAT，False 表示不开启 SNAT。
+不传则表示不修改。
      * @param string $DataCompressMode 数据压缩模式
      */
     function __construct()

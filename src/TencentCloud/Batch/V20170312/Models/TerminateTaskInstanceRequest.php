@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TerminateTaskInstance请求参数结构体
  *
- * @method string getJobId() 获取作业ID
- * @method void setJobId(string $JobId) 设置作业ID
- * @method string getTaskName() 获取任务名称
- * @method void setTaskName(string $TaskName) 设置任务名称
+ * @method string getJobId() 获取作业ID；详见[作业列表](https://cloud.tencent.com/document/product/599/15909)。
+ * @method void setJobId(string $JobId) 设置作业ID；详见[作业列表](https://cloud.tencent.com/document/product/599/15909)。
+ * @method string getTaskName() 获取任务名称；详见[作业提交信息](https://cloud.tencent.com/document/product/599/15910)
+ * @method void setTaskName(string $TaskName) 设置任务名称；详见[作业提交信息](https://cloud.tencent.com/document/product/599/15910)
  * @method integer getTaskInstanceIndex() 获取任务实例索引
  * @method void setTaskInstanceIndex(integer $TaskInstanceIndex) 设置任务实例索引
  */
 class TerminateTaskInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 作业ID
+     * @var string 作业ID；详见[作业列表](https://cloud.tencent.com/document/product/599/15909)。
      */
     public $JobId;
 
     /**
-     * @var string 任务名称
+     * @var string 任务名称；详见[作业提交信息](https://cloud.tencent.com/document/product/599/15910)
      */
     public $TaskName;
 
@@ -45,8 +45,8 @@ class TerminateTaskInstanceRequest extends AbstractModel
     public $TaskInstanceIndex;
 
     /**
-     * @param string $JobId 作业ID
-     * @param string $TaskName 任务名称
+     * @param string $JobId 作业ID；详见[作业列表](https://cloud.tencent.com/document/product/599/15909)。
+     * @param string $TaskName 任务名称；详见[作业提交信息](https://cloud.tencent.com/document/product/599/15910)
      * @param integer $TaskInstanceIndex 任务实例索引
      */
     function __construct()

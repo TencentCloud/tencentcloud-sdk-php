@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRequestFromSource(string $RequestFromSource) 设置请求来源，WEB 前端；CLIENT 客户端
  * @method boolean getScriptChange() 获取脚本是否发生变化
  * @method void setScriptChange(boolean $ScriptChange) 设置脚本是否发生变化
+ * @method string getContent() 获取转Base64的代码内容
+ * @method void setContent(string $Content) 设置转Base64的代码内容
  */
 class UpdateCodeTemplateRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class UpdateCodeTemplateRequest extends AbstractModel
     public $ScriptChange;
 
     /**
+     * @var string 转Base64的代码内容
+     */
+    public $Content;
+
+    /**
      * @param string $ProjectId 项目Id
      * @param string $CodeTemplateId 模版id
      * @param string $CodeTemplateName 模版名	
@@ -112,6 +119,7 @@ class UpdateCodeTemplateRequest extends AbstractModel
      * @param string $CodeTemplateDesc 模版描述	
      * @param string $RequestFromSource 请求来源，WEB 前端；CLIENT 客户端
      * @param boolean $ScriptChange 脚本是否发生变化
+     * @param string $Content 转Base64的代码内容
      */
     function __construct()
     {
@@ -169,6 +177,10 @@ class UpdateCodeTemplateRequest extends AbstractModel
 
         if (array_key_exists("ScriptChange",$param) and $param["ScriptChange"] !== null) {
             $this->ScriptChange = $param["ScriptChange"];
+        }
+
+        if (array_key_exists("Content",$param) and $param["Content"] !== null) {
+            $this->Content = $param["Content"];
         }
     }
 }

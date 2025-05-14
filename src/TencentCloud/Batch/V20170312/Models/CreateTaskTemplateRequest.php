@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTaskTemplate请求参数结构体
  *
- * @method string getTaskTemplateName() 获取任务模板名称
- * @method void setTaskTemplateName(string $TaskTemplateName) 设置任务模板名称
+ * @method string getTaskTemplateName() 获取任务模板名称，最大长度限制60个字符。
+ * @method void setTaskTemplateName(string $TaskTemplateName) 设置任务模板名称，最大长度限制60个字符。
  * @method Task getTaskTemplateInfo() 获取任务模板内容，参数要求与任务一致
  * @method void setTaskTemplateInfo(Task $TaskTemplateInfo) 设置任务模板内容，参数要求与任务一致
- * @method string getTaskTemplateDescription() 获取任务模板描述
- * @method void setTaskTemplateDescription(string $TaskTemplateDescription) 设置任务模板描述
+ * @method string getTaskTemplateDescription() 获取任务模板描述，最大长度限制200个字符。
+ * @method void setTaskTemplateDescription(string $TaskTemplateDescription) 设置任务模板描述，最大长度限制200个字符。
  * @method array getTags() 获取标签列表。通过指定该参数可以支持绑定标签到任务模板。每个任务模板最多绑定10个标签。
  * @method void setTags(array $Tags) 设置标签列表。通过指定该参数可以支持绑定标签到任务模板。每个任务模板最多绑定10个标签。
  */
 class CreateTaskTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 任务模板名称
+     * @var string 任务模板名称，最大长度限制60个字符。
      */
     public $TaskTemplateName;
 
@@ -42,7 +42,7 @@ class CreateTaskTemplateRequest extends AbstractModel
     public $TaskTemplateInfo;
 
     /**
-     * @var string 任务模板描述
+     * @var string 任务模板描述，最大长度限制200个字符。
      */
     public $TaskTemplateDescription;
 
@@ -52,9 +52,9 @@ class CreateTaskTemplateRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @param string $TaskTemplateName 任务模板名称
+     * @param string $TaskTemplateName 任务模板名称，最大长度限制60个字符。
      * @param Task $TaskTemplateInfo 任务模板内容，参数要求与任务一致
-     * @param string $TaskTemplateDescription 任务模板描述
+     * @param string $TaskTemplateDescription 任务模板描述，最大长度限制200个字符。
      * @param array $Tags 标签列表。通过指定该参数可以支持绑定标签到任务模板。每个任务模板最多绑定10个标签。
      */
     function __construct()

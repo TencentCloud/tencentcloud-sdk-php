@@ -96,8 +96,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setShareable(boolean $Shareable) 设置云盘是否为共享型云盘。
  * @method string getCreateTime() 获取云硬盘的创建时间。
  * @method void setCreateTime(string $CreateTime) 设置云硬盘的创建时间。
- * @method integer getDeleteSnapshot() 获取销毁云盘时删除关联的非永久保留快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁，默认取0。快照是否永久保留可以通过DescribeSnapshots接口返回的快照详情的IsPermanent字段来判断，true表示永久快照，false表示非永久快照。
- * @method void setDeleteSnapshot(integer $DeleteSnapshot) 设置销毁云盘时删除关联的非永久保留快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁，默认取0。快照是否永久保留可以通过DescribeSnapshots接口返回的快照详情的IsPermanent字段来判断，true表示永久快照，false表示非永久快照。
+ * @method integer getDeleteSnapshot() 获取销毁云盘时删除关联的非永久保留快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁，默认取0。快照是否永久保留可以通过[DescribeSnapshots](https://cloud.tencent.com/document/product/362/15647)接口返回的快照详情的IsPermanent字段来判断，true表示永久快照，false表示非永久快照。
+ * @method void setDeleteSnapshot(integer $DeleteSnapshot) 设置销毁云盘时删除关联的非永久保留快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁，默认取0。快照是否永久保留可以通过[DescribeSnapshots](https://cloud.tencent.com/document/product/362/15647)接口返回的快照详情的IsPermanent字段来判断，true表示永久快照，false表示非永久快照。
  * @method integer getDiskBackupQuota() 获取云硬盘备份点配额。表示最大可以保留的备份点数量。
  * @method void setDiskBackupQuota(integer $DiskBackupQuota) 设置云硬盘备份点配额。表示最大可以保留的备份点数量。
  * @method integer getDiskBackupCount() 获取云硬盘备份点已使用的数量。
@@ -298,7 +298,7 @@ class Disk extends AbstractModel
     public $CreateTime;
 
     /**
-     * @var integer 销毁云盘时删除关联的非永久保留快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁，默认取0。快照是否永久保留可以通过DescribeSnapshots接口返回的快照详情的IsPermanent字段来判断，true表示永久快照，false表示非永久快照。
+     * @var integer 销毁云盘时删除关联的非永久保留快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁，默认取0。快照是否永久保留可以通过[DescribeSnapshots](https://cloud.tencent.com/document/product/362/15647)接口返回的快照详情的IsPermanent字段来判断，true表示永久快照，false表示非永久快照。
      */
     public $DeleteSnapshot;
 
@@ -382,7 +382,7 @@ class Disk extends AbstractModel
      * @param integer $ReturnFailCode 预付费云盘在不支持主动退还的情况下，该参数表明不支持主动退还的具体原因。取值范围：<br><li>1：云硬盘已经退还</li><li>2：云硬盘已过期</li><li>3：云盘不支持退还</li><li>8：超过可退还数量的限制。</li><li>10：非弹性云硬盘、系统盘、后付费云硬盘等不支持退还</li>
      * @param boolean $Shareable 云盘是否为共享型云盘。
      * @param string $CreateTime 云硬盘的创建时间。
-     * @param integer $DeleteSnapshot 销毁云盘时删除关联的非永久保留快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁，默认取0。快照是否永久保留可以通过DescribeSnapshots接口返回的快照详情的IsPermanent字段来判断，true表示永久快照，false表示非永久快照。
+     * @param integer $DeleteSnapshot 销毁云盘时删除关联的非永久保留快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁，默认取0。快照是否永久保留可以通过[DescribeSnapshots](https://cloud.tencent.com/document/product/362/15647)接口返回的快照详情的IsPermanent字段来判断，true表示永久快照，false表示非永久快照。
      * @param integer $DiskBackupQuota 云硬盘备份点配额。表示最大可以保留的备份点数量。
      * @param integer $DiskBackupCount 云硬盘备份点已使用的数量。
      * @param string $InstanceType 云硬盘挂载实例的类型。取值范围：<br><li>CVM</li><li>EKS</li>

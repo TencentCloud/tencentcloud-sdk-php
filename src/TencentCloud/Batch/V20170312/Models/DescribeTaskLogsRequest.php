@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTaskLogs请求参数结构体
  *
- * @method string getJobId() 获取作业ID
- * @method void setJobId(string $JobId) 设置作业ID
+ * @method string getJobId() 获取作业ID。JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)。
+ * @method void setJobId(string $JobId) 设置作业ID。JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)。
  * @method string getTaskName() 获取任务名称
  * @method void setTaskName(string $TaskName) 设置任务名称
- * @method array getTaskInstanceIndexes() 获取任务实例集合
- * @method void setTaskInstanceIndexes(array $TaskInstanceIndexes) 设置任务实例集合
- * @method integer getOffset() 获取起始任务实例
- * @method void setOffset(integer $Offset) 设置起始任务实例
- * @method integer getLimit() 获取最大任务实例数
- * @method void setLimit(integer $Limit) 设置最大任务实例数
+ * @method array getTaskInstanceIndexes() 获取任务实例集合；与Offset不能同时指定。
+ * @method void setTaskInstanceIndexes(array $TaskInstanceIndexes) 设置任务实例集合；与Offset不能同时指定。
+ * @method integer getOffset() 获取起始任务实例。与TaskInstanceIndexes参数不能同时指定。
+ * @method void setOffset(integer $Offset) 设置起始任务实例。与TaskInstanceIndexes参数不能同时指定。
+ * @method integer getLimit() 获取最大任务实例数, 最大值为10.
+ * @method void setLimit(integer $Limit) 设置最大任务实例数, 最大值为10.
  */
 class DescribeTaskLogsRequest extends AbstractModel
 {
     /**
-     * @var string 作业ID
+     * @var string 作业ID。JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)。
      */
     public $JobId;
 
@@ -44,26 +44,26 @@ class DescribeTaskLogsRequest extends AbstractModel
     public $TaskName;
 
     /**
-     * @var array 任务实例集合
+     * @var array 任务实例集合；与Offset不能同时指定。
      */
     public $TaskInstanceIndexes;
 
     /**
-     * @var integer 起始任务实例
+     * @var integer 起始任务实例。与TaskInstanceIndexes参数不能同时指定。
      */
     public $Offset;
 
     /**
-     * @var integer 最大任务实例数
+     * @var integer 最大任务实例数, 最大值为10.
      */
     public $Limit;
 
     /**
-     * @param string $JobId 作业ID
+     * @param string $JobId 作业ID。JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)。
      * @param string $TaskName 任务名称
-     * @param array $TaskInstanceIndexes 任务实例集合
-     * @param integer $Offset 起始任务实例
-     * @param integer $Limit 最大任务实例数
+     * @param array $TaskInstanceIndexes 任务实例集合；与Offset不能同时指定。
+     * @param integer $Offset 起始任务实例。与TaskInstanceIndexes参数不能同时指定。
+     * @param integer $Limit 最大任务实例数, 最大值为10.
      */
     function __construct()
     {

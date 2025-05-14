@@ -212,6 +212,7 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
  * @method Models\DescribeTaskRunHistoryResponse DescribeTaskRunHistory(Models\DescribeTaskRunHistoryRequest $req) 分页查询任务运行历史
  * @method Models\DescribeTaskScriptResponse DescribeTaskScript(Models\DescribeTaskScriptRequest $req) 查询任务脚本
  * @method Models\DescribeTaskTableMetricOverviewResponse DescribeTaskTableMetricOverview(Models\DescribeTaskTableMetricOverviewRequest $req) 查询实时任务表粒度指标概览
+ * @method Models\DescribeTaskTemplatesResponse DescribeTaskTemplates(Models\DescribeTaskTemplatesRequest $req) 查询项目下所有任务列表,包括虚拟任务
  * @method Models\DescribeTasksForCodeTemplateResponse DescribeTasksForCodeTemplate(Models\DescribeTasksForCodeTemplateRequest $req) 分页查询引用模板的任务列表
  * @method Models\DescribeTemplateDimCountResponse DescribeTemplateDimCount(Models\DescribeTemplateDimCountRequest $req) 查询规则模板维度分布情况
  * @method Models\DescribeTenantProjectsResponse DescribeTenantProjects(Models\DescribeTenantProjectsRequest $req) 租户全局范围的项目列表，与用户查看范围无关.
@@ -225,6 +226,7 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
  * @method Models\DescribeWorkflowSchedulerInfoDsResponse DescribeWorkflowSchedulerInfoDs(Models\DescribeWorkflowSchedulerInfoDsRequest $req) 获取工作流调度信息
  * @method Models\DescribeWorkflowTaskCountResponse DescribeWorkflowTaskCount(Models\DescribeWorkflowTaskCountRequest $req) 查询工作流任务数
  * @method Models\DiagnoseProResponse DiagnosePro(Models\DiagnoseProRequest $req) 实例诊断，用于诊断 INITIAL、DEPENDENCE、ALLOCATED、LAUNCHED、EVENT_LISTENING、BEFORE_ASPECT、EXPIRED、FAILED状态的实例
+ * @method Models\DownloadLogByLineResponse DownloadLogByLine(Models\DownloadLogByLineRequest $req) 按行下载日志信息
  * @method Models\DryRunDIOfflineTaskResponse DryRunDIOfflineTask(Models\DryRunDIOfflineTaskRequest $req) 调试运行集成任务
  * @method Models\FindAllFolderResponse FindAllFolder(Models\FindAllFolderRequest $req) 编排空间批量操作页面查找全部的文件夹
  * @method Models\FreezeOpsTasksResponse FreezeOpsTasks(Models\FreezeOpsTasksRequest $req) 任务运维-批量暂停任务

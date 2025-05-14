@@ -22,22 +22,36 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTaskInstanceIndex() 获取任务实例索引
  * @method void setTaskInstanceIndex(integer $TaskInstanceIndex) 设置任务实例索引
- * @method string getTaskInstanceState() 获取任务实例状态
- * @method void setTaskInstanceState(string $TaskInstanceState) 设置任务实例状态
+ * @method string getTaskInstanceState() 获取任务实例状态: 
+- PENDING：等待中；
+- RUNNABLE：可运行；
+- STARTING：启动中；
+- RUNNING：运行中；
+- SUCCEED：成功；
+- FAILED：失败；
+- FAILED_INTERRUPTED：失败后保留实例。
+ * @method void setTaskInstanceState(string $TaskInstanceState) 设置任务实例状态: 
+- PENDING：等待中；
+- RUNNABLE：可运行；
+- STARTING：启动中；
+- RUNNING：运行中；
+- SUCCEED：成功；
+- FAILED：失败；
+- FAILED_INTERRUPTED：失败后保留实例。
  * @method integer getExitCode() 获取应用程序执行结束的exit code
  * @method void setExitCode(integer $ExitCode) 设置应用程序执行结束的exit code
  * @method string getStateReason() 获取任务实例状态原因，任务实例失败时，会记录失败原因
  * @method void setStateReason(string $StateReason) 设置任务实例状态原因，任务实例失败时，会记录失败原因
  * @method string getComputeNodeInstanceId() 获取任务实例运行时所在计算节点（例如CVM）的InstanceId。任务实例未运行或者完结时，本字段为空。任务实例重试时，本字段会随之变化
  * @method void setComputeNodeInstanceId(string $ComputeNodeInstanceId) 设置任务实例运行时所在计算节点（例如CVM）的InstanceId。任务实例未运行或者完结时，本字段为空。任务实例重试时，本字段会随之变化
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method string getLaunchTime() 获取启动时间
- * @method void setLaunchTime(string $LaunchTime) 设置启动时间
- * @method string getRunningTime() 获取开始运行时间
- * @method void setRunningTime(string $RunningTime) 设置开始运行时间
- * @method string getEndTime() 获取结束时间
- * @method void setEndTime(string $EndTime) 设置结束时间
+ * @method string getCreateTime() 获取创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
+ * @method void setCreateTime(string $CreateTime) 设置创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
+ * @method string getLaunchTime() 获取启动时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
+ * @method void setLaunchTime(string $LaunchTime) 设置启动时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
+ * @method string getRunningTime() 获取开始运行时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
+ * @method void setRunningTime(string $RunningTime) 设置开始运行时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
+ * @method string getEndTime() 获取结束时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
+ * @method void setEndTime(string $EndTime) 设置结束时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
  * @method RedirectInfo getRedirectInfo() 获取重定向信息
  * @method void setRedirectInfo(RedirectInfo $RedirectInfo) 设置重定向信息
  * @method string getStateDetailedReason() 获取任务实例状态原因详情，任务实例失败时，会记录失败原因
@@ -51,7 +65,14 @@ class TaskInstanceView extends AbstractModel
     public $TaskInstanceIndex;
 
     /**
-     * @var string 任务实例状态
+     * @var string 任务实例状态: 
+- PENDING：等待中；
+- RUNNABLE：可运行；
+- STARTING：启动中；
+- RUNNING：运行中；
+- SUCCEED：成功；
+- FAILED：失败；
+- FAILED_INTERRUPTED：失败后保留实例。
      */
     public $TaskInstanceState;
 
@@ -71,22 +92,22 @@ class TaskInstanceView extends AbstractModel
     public $ComputeNodeInstanceId;
 
     /**
-     * @var string 创建时间
+     * @var string 创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
      */
     public $CreateTime;
 
     /**
-     * @var string 启动时间
+     * @var string 启动时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
      */
     public $LaunchTime;
 
     /**
-     * @var string 开始运行时间
+     * @var string 开始运行时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
      */
     public $RunningTime;
 
     /**
-     * @var string 结束时间
+     * @var string 结束时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
      */
     public $EndTime;
 
@@ -102,14 +123,21 @@ class TaskInstanceView extends AbstractModel
 
     /**
      * @param integer $TaskInstanceIndex 任务实例索引
-     * @param string $TaskInstanceState 任务实例状态
+     * @param string $TaskInstanceState 任务实例状态: 
+- PENDING：等待中；
+- RUNNABLE：可运行；
+- STARTING：启动中；
+- RUNNING：运行中；
+- SUCCEED：成功；
+- FAILED：失败；
+- FAILED_INTERRUPTED：失败后保留实例。
      * @param integer $ExitCode 应用程序执行结束的exit code
      * @param string $StateReason 任务实例状态原因，任务实例失败时，会记录失败原因
      * @param string $ComputeNodeInstanceId 任务实例运行时所在计算节点（例如CVM）的InstanceId。任务实例未运行或者完结时，本字段为空。任务实例重试时，本字段会随之变化
-     * @param string $CreateTime 创建时间
-     * @param string $LaunchTime 启动时间
-     * @param string $RunningTime 开始运行时间
-     * @param string $EndTime 结束时间
+     * @param string $CreateTime 创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
+     * @param string $LaunchTime 启动时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
+     * @param string $RunningTime 开始运行时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
+     * @param string $EndTime 结束时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
      * @param RedirectInfo $RedirectInfo 重定向信息
      * @param string $StateDetailedReason 任务实例状态原因详情，任务实例失败时，会记录失败原因
      */

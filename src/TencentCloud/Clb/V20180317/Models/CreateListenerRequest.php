@@ -70,14 +70,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxCps(integer $MaxCps) 设置监听器最大新增连接数，当前仅性能容量型实例且仅TCP/UDP/TCP_SSL/QUIC监听器支持，不传或者传-1表示监听器维度不限速。基础网络实例不支持该参数。
  * @method integer getIdleConnectTimeout() 获取空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。取值范围：共享型实例和独占型实例支持：300-900，性能容量型实例支持：300-1980。如需设置请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)。
  * @method void setIdleConnectTimeout(integer $IdleConnectTimeout) 设置空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。取值范围：共享型实例和独占型实例支持：300-900，性能容量型实例支持：300-1980。如需设置请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)。
- * @method boolean getSnatEnable() 获取是否开启SNAT，True（开启）、False（关闭）
- * @method void setSnatEnable(boolean $SnatEnable) 设置是否开启SNAT，True（开启）、False（关闭）
+ * @method boolean getSnatEnable() 获取是否开启SNAT，True（开启）、False（关闭）。
+默认为关闭。
+ * @method void setSnatEnable(boolean $SnatEnable) 设置是否开启SNAT，True（开启）、False（关闭）。
+默认为关闭。
  * @method array getFullEndPorts() 获取全端口段监听器的结束端口，端口范围：2 - 65535
  * @method void setFullEndPorts(array $FullEndPorts) 设置全端口段监听器的结束端口，端口范围：2 - 65535
- * @method boolean getH2cSwitch() 获取内网http监听器开启h2c开关，True（开启）、False（关闭）
- * @method void setH2cSwitch(boolean $H2cSwitch) 设置内网http监听器开启h2c开关，True（开启）、False（关闭）
- * @method boolean getSslCloseSwitch() 获取TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关。True（关闭）、False（开启）
- * @method void setSslCloseSwitch(boolean $SslCloseSwitch) 设置TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关。True（关闭）、False（开启）
+ * @method boolean getH2cSwitch() 获取内网http监听器开启h2c开关，True（开启）、False（关闭）。
+默认为关闭。
+ * @method void setH2cSwitch(boolean $H2cSwitch) 设置内网http监听器开启h2c开关，True（开启）、False（关闭）。
+默认为关闭。
+ * @method boolean getSslCloseSwitch() 获取TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关。True（关闭）、False（开启）.
+默认为关闭。
+ * @method void setSslCloseSwitch(boolean $SslCloseSwitch) 设置TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关。True（关闭）、False（开启）.
+默认为关闭。
  * @method string getDataCompressMode() 获取数据压缩模式。可选值：transparent（透传模式）、compatibility（兼容模式）
  * @method void setDataCompressMode(string $DataCompressMode) 设置数据压缩模式。可选值：transparent（透传模式）、compatibility（兼容模式）
  */
@@ -181,7 +187,8 @@ class CreateListenerRequest extends AbstractModel
     public $IdleConnectTimeout;
 
     /**
-     * @var boolean 是否开启SNAT，True（开启）、False（关闭）
+     * @var boolean 是否开启SNAT，True（开启）、False（关闭）。
+默认为关闭。
      */
     public $SnatEnable;
 
@@ -191,12 +198,14 @@ class CreateListenerRequest extends AbstractModel
     public $FullEndPorts;
 
     /**
-     * @var boolean 内网http监听器开启h2c开关，True（开启）、False（关闭）
+     * @var boolean 内网http监听器开启h2c开关，True（开启）、False（关闭）。
+默认为关闭。
      */
     public $H2cSwitch;
 
     /**
-     * @var boolean TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关。True（关闭）、False（开启）
+     * @var boolean TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关。True（关闭）、False（开启）.
+默认为关闭。
      */
     public $SslCloseSwitch;
 
@@ -231,10 +240,13 @@ class CreateListenerRequest extends AbstractModel
      * @param integer $MaxConn 监听器最大连接数，当前仅性能容量型实例且仅TCP/UDP/TCP_SSL/QUIC监听器支持，不传或者传-1表示监听器维度不限速。基础网络实例不支持该参数。
      * @param integer $MaxCps 监听器最大新增连接数，当前仅性能容量型实例且仅TCP/UDP/TCP_SSL/QUIC监听器支持，不传或者传-1表示监听器维度不限速。基础网络实例不支持该参数。
      * @param integer $IdleConnectTimeout 空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。取值范围：共享型实例和独占型实例支持：300-900，性能容量型实例支持：300-1980。如需设置请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)。
-     * @param boolean $SnatEnable 是否开启SNAT，True（开启）、False（关闭）
+     * @param boolean $SnatEnable 是否开启SNAT，True（开启）、False（关闭）。
+默认为关闭。
      * @param array $FullEndPorts 全端口段监听器的结束端口，端口范围：2 - 65535
-     * @param boolean $H2cSwitch 内网http监听器开启h2c开关，True（开启）、False（关闭）
-     * @param boolean $SslCloseSwitch TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关。True（关闭）、False（开启）
+     * @param boolean $H2cSwitch 内网http监听器开启h2c开关，True（开启）、False（关闭）。
+默认为关闭。
+     * @param boolean $SslCloseSwitch TCP_SSL监听器支持关闭SSL后仍然支持混绑，此参数为关闭开关。True（关闭）、False（开启）.
+默认为关闭。
      * @param string $DataCompressMode 数据压缩模式。可选值：transparent（透传模式）、compatibility（兼容模式）
      */
     function __construct()

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeComputeEnv返回参数结构体
  *
- * @method string getEnvId() 获取计算环境ID
- * @method void setEnvId(string $EnvId) 设置计算环境ID
+ * @method string getEnvId() 获取计算环境ID，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
+ * @method void setEnvId(string $EnvId) 设置计算环境ID，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
  * @method string getEnvName() 获取计算环境名称
  * @method void setEnvName(string $EnvName) 设置计算环境名称
  * @method Placement getPlacement() 获取位置信息
@@ -34,12 +34,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setComputeNodeMetrics(ComputeNodeMetrics $ComputeNodeMetrics) 设置计算节点统计指标
  * @method integer getDesiredComputeNodeCount() 获取计算节点期望个数
  * @method void setDesiredComputeNodeCount(integer $DesiredComputeNodeCount) 设置计算节点期望个数
- * @method string getEnvType() 获取计算环境类型
- * @method void setEnvType(string $EnvType) 设置计算环境类型
+ * @method string getEnvType() 获取计算环境管理类型，枚举如下： MANAGED: 由客户在Batch平台主动创建； THPC_QUEUE: 由thpc平台创建，关联thpc平台集群队列。
+ * @method void setEnvType(string $EnvType) 设置计算环境管理类型，枚举如下： MANAGED: 由客户在Batch平台主动创建； THPC_QUEUE: 由thpc平台创建，关联thpc平台集群队列。
  * @method string getResourceType() 获取计算环境资源类型，当前为CVM和CPM（黑石）
  * @method void setResourceType(string $ResourceType) 设置计算环境资源类型，当前为CVM和CPM（黑石）
- * @method string getNextAction() 获取下一步动作
- * @method void setNextAction(string $NextAction) 设置下一步动作
+ * @method string getNextAction() 获取下一步的动作，枚举如下： DELETING: 删除中
+ * @method void setNextAction(string $NextAction) 设置下一步的动作，枚举如下： DELETING: 删除中
  * @method integer getAttachedComputeNodeCount() 获取用户添加到计算环境中的计算节点个数
  * @method void setAttachedComputeNodeCount(integer $AttachedComputeNodeCount) 设置用户添加到计算环境中的计算节点个数
  * @method array getTags() 获取计算环境绑定的标签列表。
@@ -52,7 +52,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeComputeEnvResponse extends AbstractModel
 {
     /**
-     * @var string 计算环境ID
+     * @var string 计算环境ID，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
      */
     public $EnvId;
 
@@ -87,7 +87,7 @@ class DescribeComputeEnvResponse extends AbstractModel
     public $DesiredComputeNodeCount;
 
     /**
-     * @var string 计算环境类型
+     * @var string 计算环境管理类型，枚举如下： MANAGED: 由客户在Batch平台主动创建； THPC_QUEUE: 由thpc平台创建，关联thpc平台集群队列。
      */
     public $EnvType;
 
@@ -97,7 +97,7 @@ class DescribeComputeEnvResponse extends AbstractModel
     public $ResourceType;
 
     /**
-     * @var string 下一步动作
+     * @var string 下一步的动作，枚举如下： DELETING: 删除中
      */
     public $NextAction;
 
@@ -118,16 +118,16 @@ class DescribeComputeEnvResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $EnvId 计算环境ID
+     * @param string $EnvId 计算环境ID，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
      * @param string $EnvName 计算环境名称
      * @param Placement $Placement 位置信息
      * @param string $CreateTime 计算环境创建时间
      * @param array $ComputeNodeSet 计算节点列表信息
      * @param ComputeNodeMetrics $ComputeNodeMetrics 计算节点统计指标
      * @param integer $DesiredComputeNodeCount 计算节点期望个数
-     * @param string $EnvType 计算环境类型
+     * @param string $EnvType 计算环境管理类型，枚举如下： MANAGED: 由客户在Batch平台主动创建； THPC_QUEUE: 由thpc平台创建，关联thpc平台集群队列。
      * @param string $ResourceType 计算环境资源类型，当前为CVM和CPM（黑石）
-     * @param string $NextAction 下一步动作
+     * @param string $NextAction 下一步的动作，枚举如下： DELETING: 删除中
      * @param integer $AttachedComputeNodeCount 用户添加到计算环境中的计算节点个数
      * @param array $Tags 计算环境绑定的标签列表。
 注意：此字段可能返回 null，表示取不到有效值。

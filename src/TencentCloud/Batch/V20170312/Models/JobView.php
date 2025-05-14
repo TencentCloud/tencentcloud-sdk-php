@@ -20,20 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 作业信息
  *
- * @method string getJobId() 获取作业ID
- * @method void setJobId(string $JobId) 设置作业ID
+ * @method string getJobId() 获取作业ID；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)
+ * @method void setJobId(string $JobId) 设置作业ID；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)
  * @method string getJobName() 获取作业名称
  * @method void setJobName(string $JobName) 设置作业名称
- * @method string getJobState() 获取作业状态
- * @method void setJobState(string $JobState) 设置作业状态
+ * @method string getJobState() 获取作业状态:
+- SUBMITTED：已提交；
+- PENDING：等待中；
+- RUNNABLE：可运行；
+- STARTING：启动中；
+- RUNNING：运行中；
+- SUCCEED：成功；
+- FAILED：失败；
+- FAILED_INTERRUPTED：失败后保留实例。
+ * @method void setJobState(string $JobState) 设置作业状态:
+- SUBMITTED：已提交；
+- PENDING：等待中；
+- RUNNABLE：可运行；
+- STARTING：启动中；
+- RUNNING：运行中；
+- SUCCEED：成功；
+- FAILED：失败；
+- FAILED_INTERRUPTED：失败后保留实例。
  * @method integer getPriority() 获取作业优先级
  * @method void setPriority(integer $Priority) 设置作业优先级
  * @method Placement getPlacement() 获取位置信息
  * @method void setPlacement(Placement $Placement) 设置位置信息
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method string getEndTime() 获取结束时间
- * @method void setEndTime(string $EndTime) 设置结束时间
+ * @method string getCreateTime() 获取创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ
+ * @method void setCreateTime(string $CreateTime) 设置创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ
+ * @method string getEndTime() 获取结束时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ
+ * @method void setEndTime(string $EndTime) 设置结束时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ
  * @method TaskMetrics getTaskMetrics() 获取任务统计指标
  * @method void setTaskMetrics(TaskMetrics $TaskMetrics) 设置任务统计指标
  * @method array getTags() 获取作业绑定的标签列表。
@@ -42,7 +58,7 @@ use TencentCloud\Common\AbstractModel;
 class JobView extends AbstractModel
 {
     /**
-     * @var string 作业ID
+     * @var string 作业ID；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)
      */
     public $JobId;
 
@@ -52,7 +68,15 @@ class JobView extends AbstractModel
     public $JobName;
 
     /**
-     * @var string 作业状态
+     * @var string 作业状态:
+- SUBMITTED：已提交；
+- PENDING：等待中；
+- RUNNABLE：可运行；
+- STARTING：启动中；
+- RUNNING：运行中；
+- SUCCEED：成功；
+- FAILED：失败；
+- FAILED_INTERRUPTED：失败后保留实例。
      */
     public $JobState;
 
@@ -67,12 +91,12 @@ class JobView extends AbstractModel
     public $Placement;
 
     /**
-     * @var string 创建时间
+     * @var string 创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ
      */
     public $CreateTime;
 
     /**
-     * @var string 结束时间
+     * @var string 结束时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ
      */
     public $EndTime;
 
@@ -87,13 +111,21 @@ class JobView extends AbstractModel
     public $Tags;
 
     /**
-     * @param string $JobId 作业ID
+     * @param string $JobId 作业ID；JobId详见[作业列表](https://cloud.tencent.com/document/product/599/15909)
      * @param string $JobName 作业名称
-     * @param string $JobState 作业状态
+     * @param string $JobState 作业状态:
+- SUBMITTED：已提交；
+- PENDING：等待中；
+- RUNNABLE：可运行；
+- STARTING：启动中；
+- RUNNING：运行中；
+- SUCCEED：成功；
+- FAILED：失败；
+- FAILED_INTERRUPTED：失败后保留实例。
      * @param integer $Priority 作业优先级
      * @param Placement $Placement 位置信息
-     * @param string $CreateTime 创建时间
-     * @param string $EndTime 结束时间
+     * @param string $CreateTime 创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ
+     * @param string $EndTime 结束时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ
      * @param TaskMetrics $TaskMetrics 任务统计指标
      * @param array $Tags 作业绑定的标签列表。
      */

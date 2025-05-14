@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnhanceConfig(ImageEnhanceConfig $EnhanceConfig) 设置图片增强配置。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ImageEraseConfig getEraseConfig() 获取图片擦除配置。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEraseConfig(ImageEraseConfig $EraseConfig) 设置图片擦除配置。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImageTaskInput extends AbstractModel
 {
@@ -44,9 +48,17 @@ class ImageTaskInput extends AbstractModel
     public $EnhanceConfig;
 
     /**
+     * @var ImageEraseConfig 图片擦除配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EraseConfig;
+
+    /**
      * @param ImageEncodeConfig $EncodeConfig 图片编码配置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageEnhanceConfig $EnhanceConfig 图片增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageEraseConfig $EraseConfig 图片擦除配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -70,6 +82,11 @@ class ImageTaskInput extends AbstractModel
         if (array_key_exists("EnhanceConfig",$param) and $param["EnhanceConfig"] !== null) {
             $this->EnhanceConfig = new ImageEnhanceConfig();
             $this->EnhanceConfig->deserialize($param["EnhanceConfig"]);
+        }
+
+        if (array_key_exists("EraseConfig",$param) and $param["EraseConfig"] !== null) {
+            $this->EraseConfig = new ImageEraseConfig();
+            $this->EraseConfig->deserialize($param["EraseConfig"]);
         }
     }
 }

@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDeliveryForm() 获取应用程序的交付方式，包括PACKAGE、LOCAL 两种取值，分别指远程存储的软件包、计算环境本地。
  * @method void setDeliveryForm(string $DeliveryForm) 设置应用程序的交付方式，包括PACKAGE、LOCAL 两种取值，分别指远程存储的软件包、计算环境本地。
- * @method string getCommand() 获取任务执行命令。与Commands不能同时指定。
- * @method void setCommand(string $Command) 设置任务执行命令。与Commands不能同时指定。
+ * @method string getCommand() 获取松耦合任务执行命令。与Commands不能同时指定，一般使用Command字段提交任务。
+ * @method void setCommand(string $Command) 设置松耦合任务执行命令。与Commands不能同时指定，一般使用Command字段提交任务。
  * @method string getPackagePath() 获取应用程序软件包的远程存储路径
  * @method void setPackagePath(string $PackagePath) 设置应用程序软件包的远程存储路径
  * @method Docker getDocker() 获取应用使用Docker的相关配置。在使用Docker配置的情况下，DeliveryForm 为 LOCAL 表示直接使用Docker镜像内部的应用软件，通过Docker方式运行；DeliveryForm 为 PACKAGE，表示将远程应用包注入到Docker镜像后，通过Docker方式运行。为避免Docker不同版本的兼容性问题，Docker安装包及相关依赖由Batch统一负责，对于已安装Docker的自定义镜像，请卸载后再使用Docker特性。
  * @method void setDocker(Docker $Docker) 设置应用使用Docker的相关配置。在使用Docker配置的情况下，DeliveryForm 为 LOCAL 表示直接使用Docker镜像内部的应用软件，通过Docker方式运行；DeliveryForm 为 PACKAGE，表示将远程应用包注入到Docker镜像后，通过Docker方式运行。为避免Docker不同版本的兼容性问题，Docker安装包及相关依赖由Batch统一负责，对于已安装Docker的自定义镜像，请卸载后再使用Docker特性。
- * @method array getCommands() 获取任务执行命令信息。与Command不能同时指定。
- * @method void setCommands(array $Commands) 设置任务执行命令信息。与Command不能同时指定。
+ * @method array getCommands() 获取紧耦合任务执行命令信息。与Command不能同时指定。Command和Commands必须指定一个。
+ * @method void setCommands(array $Commands) 设置紧耦合任务执行命令信息。与Command不能同时指定。Command和Commands必须指定一个。
  */
 class Application extends AbstractModel
 {
@@ -39,7 +39,7 @@ class Application extends AbstractModel
     public $DeliveryForm;
 
     /**
-     * @var string 任务执行命令。与Commands不能同时指定。
+     * @var string 松耦合任务执行命令。与Commands不能同时指定，一般使用Command字段提交任务。
      */
     public $Command;
 
@@ -54,16 +54,16 @@ class Application extends AbstractModel
     public $Docker;
 
     /**
-     * @var array 任务执行命令信息。与Command不能同时指定。
+     * @var array 紧耦合任务执行命令信息。与Command不能同时指定。Command和Commands必须指定一个。
      */
     public $Commands;
 
     /**
      * @param string $DeliveryForm 应用程序的交付方式，包括PACKAGE、LOCAL 两种取值，分别指远程存储的软件包、计算环境本地。
-     * @param string $Command 任务执行命令。与Commands不能同时指定。
+     * @param string $Command 松耦合任务执行命令。与Commands不能同时指定，一般使用Command字段提交任务。
      * @param string $PackagePath 应用程序软件包的远程存储路径
      * @param Docker $Docker 应用使用Docker的相关配置。在使用Docker配置的情况下，DeliveryForm 为 LOCAL 表示直接使用Docker镜像内部的应用软件，通过Docker方式运行；DeliveryForm 为 PACKAGE，表示将远程应用包注入到Docker镜像后，通过Docker方式运行。为避免Docker不同版本的兼容性问题，Docker安装包及相关依赖由Batch统一负责，对于已安装Docker的自定义镜像，请卸载后再使用Docker特性。
-     * @param array $Commands 任务执行命令信息。与Command不能同时指定。
+     * @param array $Commands 紧耦合任务执行命令信息。与Command不能同时指定。Command和Commands必须指定一个。
      */
     function __construct()
     {

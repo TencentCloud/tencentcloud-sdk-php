@@ -20,36 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AllocateIp6AddressesBandwidth请求参数结构体
  *
- * @method array getIp6Addresses() 获取需要开通公网访问能力的IPv6地址
- * @method void setIp6Addresses(array $Ip6Addresses) 设置需要开通公网访问能力的IPv6地址
- * @method integer getInternetMaxBandwidthOut() 获取带宽，单位Mbps。默认是1Mbps
- * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置带宽，单位Mbps。默认是1Mbps
- * @method string getInternetChargeType() 获取网络计费模式。IPv6当前支持"TRAFFIC_POSTPAID_BY_HOUR"，"BANDWIDTH_PACKAGE"。默认网络计费模式是"TRAFFIC_POSTPAID_BY_HOUR"。
- * @method void setInternetChargeType(string $InternetChargeType) 设置网络计费模式。IPv6当前支持"TRAFFIC_POSTPAID_BY_HOUR"，"BANDWIDTH_PACKAGE"。默认网络计费模式是"TRAFFIC_POSTPAID_BY_HOUR"。
- * @method string getBandwidthPackageId() 获取带宽包id，上移账号，申请带宽包计费模式的IPv6地址需要传入.
- * @method void setBandwidthPackageId(string $BandwidthPackageId) 设置带宽包id，上移账号，申请带宽包计费模式的IPv6地址需要传入.
+ * @method array getIp6Addresses() 获取需要开通公网访问能力的IPv6地址，可以使用[DescribeIp6Addresses](https://cloud.tencent.com/document/product/215/40089)接口查询Ip6Addresses。
+
+ * @method void setIp6Addresses(array $Ip6Addresses) 设置需要开通公网访问能力的IPv6地址，可以使用[DescribeIp6Addresses](https://cloud.tencent.com/document/product/215/40089)接口查询Ip6Addresses。
+
+ * @method integer getInternetMaxBandwidthOut() 获取带宽上限，单位Mbps。可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://cloud.tencent.com/document/product/1142/38369#IPv6)。
+默认值：1Mbps
+ * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置带宽上限，单位Mbps。可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://cloud.tencent.com/document/product/1142/38369#IPv6)。
+默认值：1Mbps
+ * @method string getInternetChargeType() 获取网络计费模式。IPv6当前支持：<li>TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费</li><li>BANDWIDTH_PACKAGE：共享带宽包付费</li>
+默认值：TRAFFIC_POSTPAID_BY_HOUR
+ * @method void setInternetChargeType(string $InternetChargeType) 设置网络计费模式。IPv6当前支持：<li>TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费</li><li>BANDWIDTH_PACKAGE：共享带宽包付费</li>
+默认值：TRAFFIC_POSTPAID_BY_HOUR
+ * @method string getBandwidthPackageId() 获取带宽包id，设定该参数且InternetChargeType为BANDWIDTH_PACKAGE，则表示创建的IPv6加入该带宽包并采用带宽包计费。可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。
+ * @method void setBandwidthPackageId(string $BandwidthPackageId) 设置带宽包id，设定该参数且InternetChargeType为BANDWIDTH_PACKAGE，则表示创建的IPv6加入该带宽包并采用带宽包计费。可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。
  * @method array getTags() 获取需要关联的标签列表。	
  * @method void setTags(array $Tags) 设置需要关联的标签列表。	
  */
 class AllocateIp6AddressesBandwidthRequest extends AbstractModel
 {
     /**
-     * @var array 需要开通公网访问能力的IPv6地址
+     * @var array 需要开通公网访问能力的IPv6地址，可以使用[DescribeIp6Addresses](https://cloud.tencent.com/document/product/215/40089)接口查询Ip6Addresses。
+
      */
     public $Ip6Addresses;
 
     /**
-     * @var integer 带宽，单位Mbps。默认是1Mbps
+     * @var integer 带宽上限，单位Mbps。可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://cloud.tencent.com/document/product/1142/38369#IPv6)。
+默认值：1Mbps
      */
     public $InternetMaxBandwidthOut;
 
     /**
-     * @var string 网络计费模式。IPv6当前支持"TRAFFIC_POSTPAID_BY_HOUR"，"BANDWIDTH_PACKAGE"。默认网络计费模式是"TRAFFIC_POSTPAID_BY_HOUR"。
+     * @var string 网络计费模式。IPv6当前支持：<li>TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费</li><li>BANDWIDTH_PACKAGE：共享带宽包付费</li>
+默认值：TRAFFIC_POSTPAID_BY_HOUR
      */
     public $InternetChargeType;
 
     /**
-     * @var string 带宽包id，上移账号，申请带宽包计费模式的IPv6地址需要传入.
+     * @var string 带宽包id，设定该参数且InternetChargeType为BANDWIDTH_PACKAGE，则表示创建的IPv6加入该带宽包并采用带宽包计费。可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。
      */
     public $BandwidthPackageId;
 
@@ -59,10 +68,13 @@ class AllocateIp6AddressesBandwidthRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @param array $Ip6Addresses 需要开通公网访问能力的IPv6地址
-     * @param integer $InternetMaxBandwidthOut 带宽，单位Mbps。默认是1Mbps
-     * @param string $InternetChargeType 网络计费模式。IPv6当前支持"TRAFFIC_POSTPAID_BY_HOUR"，"BANDWIDTH_PACKAGE"。默认网络计费模式是"TRAFFIC_POSTPAID_BY_HOUR"。
-     * @param string $BandwidthPackageId 带宽包id，上移账号，申请带宽包计费模式的IPv6地址需要传入.
+     * @param array $Ip6Addresses 需要开通公网访问能力的IPv6地址，可以使用[DescribeIp6Addresses](https://cloud.tencent.com/document/product/215/40089)接口查询Ip6Addresses。
+
+     * @param integer $InternetMaxBandwidthOut 带宽上限，单位Mbps。可调整的带宽上限值参考产品文档中[IPv6 计费限制说明](https://cloud.tencent.com/document/product/1142/38369#IPv6)。
+默认值：1Mbps
+     * @param string $InternetChargeType 网络计费模式。IPv6当前支持：<li>TRAFFIC_POSTPAID_BY_HOUR：流量按小时后付费</li><li>BANDWIDTH_PACKAGE：共享带宽包付费</li>
+默认值：TRAFFIC_POSTPAID_BY_HOUR
+     * @param string $BandwidthPackageId 带宽包id，设定该参数且InternetChargeType为BANDWIDTH_PACKAGE，则表示创建的IPv6加入该带宽包并采用带宽包计费。可以使用[DescribeBandwidthPackages](https://cloud.tencent.com/document/product/215/19209)接口查询BandwidthPackageId。
      * @param array $Tags 需要关联的标签列表。	
      */
     function __construct()

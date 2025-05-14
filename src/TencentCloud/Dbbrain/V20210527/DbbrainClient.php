@@ -25,6 +25,7 @@ use TencentCloud\Dbbrain\V20210527\Models as Models;
 /**
  * @method Models\AddUserContactResponse AddUserContact(Models\AddUserContactRequest $req) 添加邮件接收联系人的姓名， 邮件地址，返回值为添加成功的联系人id。
  * @method Models\CancelDBAutonomyActionResponse CancelDBAutonomyAction(Models\CancelDBAutonomyActionRequest $req) 自治中心-终止自治任务（单次）
+ * @method Models\CancelDBAutonomyEventResponse CancelDBAutonomyEvent(Models\CancelDBAutonomyEventRequest $req) 自治中心-终止自治事件
  * @method Models\CancelKillTaskResponse CancelKillTask(Models\CancelKillTaskRequest $req) 终止中断会话任务。
  * @method Models\CancelRedisBigKeyAnalysisTasksResponse CancelRedisBigKeyAnalysisTasks(Models\CancelRedisBigKeyAnalysisTasksRequest $req) 自治中心-终止自治任务（单次）
  * @method Models\CloseAuditServiceResponse CloseAuditService(Models\CloseAuditServiceRequest $req) 不用审计日志时，关闭数据库审计
@@ -49,6 +50,7 @@ use TencentCloud\Dbbrain\V20210527\Models as Models;
  * @method Models\DescribeAllUserGroupResponse DescribeAllUserGroup(Models\DescribeAllUserGroupRequest $req) 获取邮件发送联系组的相关信息。
  * @method Models\DescribeAuditInstanceListResponse DescribeAuditInstanceList(Models\DescribeAuditInstanceListRequest $req) 查询实例列表
  * @method Models\DescribeAuditLogFilesResponse DescribeAuditLogFiles(Models\DescribeAuditLogFilesRequest $req) 用于创建云数据库实例的审计日志文件
+ * @method Models\DescribeDBAutonomyActionResponse DescribeDBAutonomyAction(Models\DescribeDBAutonomyActionRequest $req) 自治中心-查询自治事件任务详情。
  * @method Models\DescribeDBAutonomyActionsResponse DescribeDBAutonomyActions(Models\DescribeDBAutonomyActionsRequest $req) 自治中心-终止自治任务（单次）
  * @method Models\DescribeDBAutonomyEventsResponse DescribeDBAutonomyEvents(Models\DescribeDBAutonomyEventsRequest $req) 自治中心-终止自治任务（单次）
  * @method Models\DescribeDBDiagEventResponse DescribeDBDiagEvent(Models\DescribeDBDiagEventRequest $req) 获取实例异常诊断事件的详情信息。

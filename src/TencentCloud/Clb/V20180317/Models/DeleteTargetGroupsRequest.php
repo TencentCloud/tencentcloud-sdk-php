@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteTargetGroups请求参数结构体
  *
- * @method array getTargetGroupIds() 获取目标组的ID数组。
- * @method void setTargetGroupIds(array $TargetGroupIds) 设置目标组的ID数组。
+ * @method array getTargetGroupIds() 获取目标组的ID数组，单次最多支持删除20个。
+ * @method void setTargetGroupIds(array $TargetGroupIds) 设置目标组的ID数组，单次最多支持删除20个。
  */
 class DeleteTargetGroupsRequest extends AbstractModel
 {
     /**
-     * @var array 目标组的ID数组。
+     * @var array 目标组的ID数组，单次最多支持删除20个。
      */
     public $TargetGroupIds;
 
     /**
-     * @param array $TargetGroupIds 目标组的ID数组。
+     * @param array $TargetGroupIds 目标组的ID数组，单次最多支持删除20个。
      */
     function __construct()
     {

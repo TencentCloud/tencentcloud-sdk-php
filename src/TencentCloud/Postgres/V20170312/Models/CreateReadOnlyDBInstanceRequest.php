@@ -90,8 +90,8 @@ use TencentCloud\Common\AbstractModel;
 默认值：0
  * @method string getName() 获取实例名(后续支持)
  * @method void setName(string $Name) 设置实例名(后续支持)
- * @method string getDBVersion() 获取【废弃】不再需要指定，内核版本号与主实例保持一致
- * @method void setDBVersion(string $DBVersion) 设置【废弃】不再需要指定，内核版本号与主实例保持一致
+ * @method string getDBVersion() 获取不再需要指定，内核版本号与主实例保持一致
+ * @method void setDBVersion(string $DBVersion) 设置不再需要指定，内核版本号与主实例保持一致
  * @method string getDedicatedClusterId() 获取专属集群ID
  * @method void setDedicatedClusterId(string $DedicatedClusterId) 设置专属集群ID
  */
@@ -209,7 +209,8 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string 【废弃】不再需要指定，内核版本号与主实例保持一致
+     * @var string 不再需要指定，内核版本号与主实例保持一致
+     * @deprecated
      */
     public $DBVersion;
 
@@ -254,7 +255,7 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
 <li>1：是</li>
 默认值：0
      * @param string $Name 实例名(后续支持)
-     * @param string $DBVersion 【废弃】不再需要指定，内核版本号与主实例保持一致
+     * @param string $DBVersion 不再需要指定，内核版本号与主实例保持一致
      * @param string $DedicatedClusterId 专属集群ID
      */
     function __construct()

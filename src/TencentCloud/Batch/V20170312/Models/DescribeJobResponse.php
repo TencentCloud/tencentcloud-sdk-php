@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPriority(integer $Priority) 设置作业优先级
  * @method string getJobState() 获取作业状态
  * @method void setJobState(string $JobState) 设置作业状态
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method string getEndTime() 获取结束时间
- * @method void setEndTime(string $EndTime) 设置结束时间
+ * @method string getCreateTime() 获取创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
+ * @method void setCreateTime(string $CreateTime) 设置创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
+ * @method string getEndTime() 获取结束时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
+ * @method void setEndTime(string $EndTime) 设置结束时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
  * @method array getTaskSet() 获取任务视图信息
  * @method void setTaskSet(array $TaskSet) 设置任务视图信息
  * @method array getDependenceSet() 获取任务间依赖信息
@@ -81,12 +81,12 @@ class DescribeJobResponse extends AbstractModel
     public $JobState;
 
     /**
-     * @var string 创建时间
+     * @var string 创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
      */
     public $CreateTime;
 
     /**
-     * @var string 结束时间
+     * @var string 结束时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
      */
     public $EndTime;
 
@@ -137,8 +137,8 @@ class DescribeJobResponse extends AbstractModel
      * @param string $Zone 可用区信息
      * @param integer $Priority 作业优先级
      * @param string $JobState 作业状态
-     * @param string $CreateTime 创建时间
-     * @param string $EndTime 结束时间
+     * @param string $CreateTime 创建时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
+     * @param string $EndTime 结束时间。按照ISO8601标准表示，并且使用UTC时间。格式为：YYYY-MM-DDThh:mm:ssZ。
      * @param array $TaskSet 任务视图信息
      * @param array $DependenceSet 任务间依赖信息
      * @param TaskMetrics $TaskMetrics 任务统计指标

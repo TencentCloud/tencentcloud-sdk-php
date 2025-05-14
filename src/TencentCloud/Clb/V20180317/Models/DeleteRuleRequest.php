@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口查询。
  * @method string getListenerId() 获取负载均衡监听器ID，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
  * @method void setListenerId(string $ListenerId) 设置负载均衡监听器ID，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
- * @method array getLocationIds() 获取要删除的转发规则的ID组成的数组，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
- * @method void setLocationIds(array $LocationIds) 设置要删除的转发规则的ID组成的数组，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
- * @method string getDomain() 获取要删除的转发规则的域名，如果是多域名，可以指定多域名列表中的任意一个，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
- * @method void setDomain(string $Domain) 设置要删除的转发规则的域名，如果是多域名，可以指定多域名列表中的任意一个，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
- * @method string getUrl() 获取要删除的转发规则的转发路径，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
- * @method void setUrl(string $Url) 设置要删除的转发规则的转发路径，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
+ * @method array getLocationIds() 获取要删除的转发规则的ID组成的数组，可以通过 [DescribeLoadBalancersDetail](https://cloud.tencent.com/document/api/214/46916) 接口查询。
+ * @method void setLocationIds(array $LocationIds) 设置要删除的转发规则的ID组成的数组，可以通过 [DescribeLoadBalancersDetail](https://cloud.tencent.com/document/api/214/46916) 接口查询。
+ * @method string getDomain() 获取要删除的转发规则的域名，如果是多域名，可以指定多域名列表中的任意一个，可以通过 [DescribeLoadBalancersDetail](https://cloud.tencent.com/document/api/214/46916) 接口查询。
+ * @method void setDomain(string $Domain) 设置要删除的转发规则的域名，如果是多域名，可以指定多域名列表中的任意一个，可以通过 [DescribeLoadBalancersDetail](https://cloud.tencent.com/document/api/214/46916) 接口查询。
+ * @method string getUrl() 获取要删除的转发规则的转发路径，可以通过 [DescribeLoadBalancersDetail](https://cloud.tencent.com/document/api/214/46916) 接口查询。
+ * @method void setUrl(string $Url) 设置要删除的转发规则的转发路径，可以通过 [DescribeLoadBalancersDetail](https://cloud.tencent.com/document/api/214/46916) 接口查询。
  * @method string getNewDefaultServerDomain() 获取监听器下必须配置一个默认域名，当需要删除默认域名时，可以指定另一个域名作为新的默认域名，如果新的默认域名是多域名，可以指定多域名列表中的任意一个，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
  * @method void setNewDefaultServerDomain(string $NewDefaultServerDomain) 设置监听器下必须配置一个默认域名，当需要删除默认域名时，可以指定另一个域名作为新的默认域名，如果新的默认域名是多域名，可以指定多域名列表中的任意一个，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
  */
@@ -46,17 +46,17 @@ class DeleteRuleRequest extends AbstractModel
     public $ListenerId;
 
     /**
-     * @var array 要删除的转发规则的ID组成的数组，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
+     * @var array 要删除的转发规则的ID组成的数组，可以通过 [DescribeLoadBalancersDetail](https://cloud.tencent.com/document/api/214/46916) 接口查询。
      */
     public $LocationIds;
 
     /**
-     * @var string 要删除的转发规则的域名，如果是多域名，可以指定多域名列表中的任意一个，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
+     * @var string 要删除的转发规则的域名，如果是多域名，可以指定多域名列表中的任意一个，可以通过 [DescribeLoadBalancersDetail](https://cloud.tencent.com/document/api/214/46916) 接口查询。
      */
     public $Domain;
 
     /**
-     * @var string 要删除的转发规则的转发路径，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
+     * @var string 要删除的转发规则的转发路径，可以通过 [DescribeLoadBalancersDetail](https://cloud.tencent.com/document/api/214/46916) 接口查询。
      */
     public $Url;
 
@@ -68,9 +68,9 @@ class DeleteRuleRequest extends AbstractModel
     /**
      * @param string $LoadBalancerId 负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口查询。
      * @param string $ListenerId 负载均衡监听器ID，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
-     * @param array $LocationIds 要删除的转发规则的ID组成的数组，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
-     * @param string $Domain 要删除的转发规则的域名，如果是多域名，可以指定多域名列表中的任意一个，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
-     * @param string $Url 要删除的转发规则的转发路径，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
+     * @param array $LocationIds 要删除的转发规则的ID组成的数组，可以通过 [DescribeLoadBalancersDetail](https://cloud.tencent.com/document/api/214/46916) 接口查询。
+     * @param string $Domain 要删除的转发规则的域名，如果是多域名，可以指定多域名列表中的任意一个，可以通过 [DescribeLoadBalancersDetail](https://cloud.tencent.com/document/api/214/46916) 接口查询。
+     * @param string $Url 要删除的转发规则的转发路径，可以通过 [DescribeLoadBalancersDetail](https://cloud.tencent.com/document/api/214/46916) 接口查询。
      * @param string $NewDefaultServerDomain 监听器下必须配置一个默认域名，当需要删除默认域名时，可以指定另一个域名作为新的默认域名，如果新的默认域名是多域名，可以指定多域名列表中的任意一个，可以通过 [DescribeListeners](https://cloud.tencent.com/document/product/214/30686) 接口查询。
      */
     function __construct()

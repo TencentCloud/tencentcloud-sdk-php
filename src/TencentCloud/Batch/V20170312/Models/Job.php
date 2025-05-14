@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getTasks() 获取任务信息
  * @method void setTasks(array $Tasks) 设置任务信息
- * @method string getJobName() 获取作业名称
- * @method void setJobName(string $JobName) 设置作业名称
- * @method string getJobDescription() 获取作业描述
- * @method void setJobDescription(string $JobDescription) 设置作业描述
- * @method integer getPriority() 获取作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
- * @method void setPriority(integer $Priority) 设置作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
+ * @method string getJobName() 获取作业名称; 字符串长度限制60.
+ * @method void setJobName(string $JobName) 设置作业名称; 字符串长度限制60.
+ * @method string getJobDescription() 获取作业描述；字符串长度限制200.
+ * @method void setJobDescription(string $JobDescription) 设置作业描述；字符串长度限制200.
+ * @method integer getPriority() 获取作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级；范围0～100，数值越大，优先级越高。
+ * @method void setPriority(integer $Priority) 设置作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级；范围0～100，数值越大，优先级越高。
  * @method array getDependences() 获取依赖信息
  * @method void setDependences(array $Dependences) 设置依赖信息
  * @method array getNotifications() 获取通知信息
@@ -55,17 +55,17 @@ class Job extends AbstractModel
     public $Tasks;
 
     /**
-     * @var string 作业名称
+     * @var string 作业名称; 字符串长度限制60.
      */
     public $JobName;
 
     /**
-     * @var string 作业描述
+     * @var string 作业描述；字符串长度限制200.
      */
     public $JobDescription;
 
     /**
-     * @var integer 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
+     * @var integer 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级；范围0～100，数值越大，优先级越高。
      */
     public $Priority;
 
@@ -104,9 +104,9 @@ TDMQ_CMQ：表示向腾讯云TDMQ_CMQ发送消息。<br/>默认值为CMQ。<br/>
 
     /**
      * @param array $Tasks 任务信息
-     * @param string $JobName 作业名称
-     * @param string $JobDescription 作业描述
-     * @param integer $Priority 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级
+     * @param string $JobName 作业名称; 字符串长度限制60.
+     * @param string $JobDescription 作业描述；字符串长度限制200.
+     * @param integer $Priority 作业优先级，任务（Task）和任务实例（TaskInstance）会继承作业优先级；范围0～100，数值越大，优先级越高。
      * @param array $Dependences 依赖信息
      * @param array $Notifications 通知信息
      * @param string $TaskExecutionDependOn 对于存在依赖关系的任务中，后序任务执行对于前序任务的依赖条件。取值范围包括 PRE_TASK_SUCCEED，PRE_TASK_AT_LEAST_PARTLY_SUCCEED，PRE_TASK_FINISHED，默认值为PRE_TASK_SUCCEED。

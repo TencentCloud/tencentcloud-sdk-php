@@ -68,16 +68,22 @@ use TencentCloud\Common\AbstractModel;
 <li>STOPPED：已关机</li>
 <li>IN_LAUNCHING_HOOK：扩容生命周期挂钩中</li>
 <li>IN_TERMINATING_HOOK：缩容生命周期挂钩中</li>
- * @method string getHealthStatus() 获取健康状态，取值包括HEALTHY和UNHEALTHY
- * @method void setHealthStatus(string $HealthStatus) 设置健康状态，取值包括HEALTHY和UNHEALTHY
+ * @method string getHealthStatus() 获取健康状态，取值范围如下：
+<li>HEALTHY：实例处于健康状态</li>
+<li>UNHEALTHY：实例 ping 不可达</li>
+<li>CLB_UNHEALTHY：CLB 监听的实例端口不健康</li>
+ * @method void setHealthStatus(string $HealthStatus) 设置健康状态，取值范围如下：
+<li>HEALTHY：实例处于健康状态</li>
+<li>UNHEALTHY：实例 ping 不可达</li>
+<li>CLB_UNHEALTHY：CLB 监听的实例端口不健康</li>
  * @method boolean getProtectedFromScaleIn() 获取是否加入缩容保护
  * @method void setProtectedFromScaleIn(boolean $ProtectedFromScaleIn) 设置是否加入缩容保护
  * @method string getZone() 获取可用区
  * @method void setZone(string $Zone) 设置可用区
  * @method string getCreationType() 获取创建类型，取值包括AUTO_CREATION, MANUAL_ATTACHING。
  * @method void setCreationType(string $CreationType) 设置创建类型，取值包括AUTO_CREATION, MANUAL_ATTACHING。
- * @method string getAddTime() 获取实例加入时间
- * @method void setAddTime(string $AddTime) 设置实例加入时间
+ * @method string getAddTime() 获取实例加入时间，按照ISO8601标准表示，并且使用UTC时间。
+ * @method void setAddTime(string $AddTime) 设置实例加入时间，按照ISO8601标准表示，并且使用UTC时间。
  * @method string getInstanceType() 获取实例类型
  * @method void setInstanceType(string $InstanceType) 设置实例类型
  * @method integer getVersionNumber() 获取版本号
@@ -144,7 +150,10 @@ class Instance extends AbstractModel
     public $LifeCycleState;
 
     /**
-     * @var string 健康状态，取值包括HEALTHY和UNHEALTHY
+     * @var string 健康状态，取值范围如下：
+<li>HEALTHY：实例处于健康状态</li>
+<li>UNHEALTHY：实例 ping 不可达</li>
+<li>CLB_UNHEALTHY：CLB 监听的实例端口不健康</li>
      */
     public $HealthStatus;
 
@@ -164,7 +173,7 @@ class Instance extends AbstractModel
     public $CreationType;
 
     /**
-     * @var string 实例加入时间
+     * @var string 实例加入时间，按照ISO8601标准表示，并且使用UTC时间。
      */
     public $AddTime;
 
@@ -222,11 +231,14 @@ class Instance extends AbstractModel
 <li>STOPPED：已关机</li>
 <li>IN_LAUNCHING_HOOK：扩容生命周期挂钩中</li>
 <li>IN_TERMINATING_HOOK：缩容生命周期挂钩中</li>
-     * @param string $HealthStatus 健康状态，取值包括HEALTHY和UNHEALTHY
+     * @param string $HealthStatus 健康状态，取值范围如下：
+<li>HEALTHY：实例处于健康状态</li>
+<li>UNHEALTHY：实例 ping 不可达</li>
+<li>CLB_UNHEALTHY：CLB 监听的实例端口不健康</li>
      * @param boolean $ProtectedFromScaleIn 是否加入缩容保护
      * @param string $Zone 可用区
      * @param string $CreationType 创建类型，取值包括AUTO_CREATION, MANUAL_ATTACHING。
-     * @param string $AddTime 实例加入时间
+     * @param string $AddTime 实例加入时间，按照ISO8601标准表示，并且使用UTC时间。
      * @param string $InstanceType 实例类型
      * @param integer $VersionNumber 版本号
      * @param string $AutoScalingGroupName 伸缩组名称

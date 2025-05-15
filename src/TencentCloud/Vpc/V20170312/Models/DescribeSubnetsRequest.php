@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSubnets请求参数结构体
  *
- * @method array getSubnetIds() 获取子网实例ID查询。形如：subnet-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定SubnetIds和Filters。
- * @method void setSubnetIds(array $SubnetIds) 设置子网实例ID查询。形如：subnet-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定SubnetIds和Filters。
+ * @method array getSubnetIds() 获取子网实例ID查询。形如：subnet-pxir56ns。每次请求的实例的上限为100（该参数指定的子网是否返回，需要结合分页拉取参数Limit和Offset）。参数不支持同时指定SubnetIds和Filters。
+ * @method void setSubnetIds(array $SubnetIds) 设置子网实例ID查询。形如：subnet-pxir56ns。每次请求的实例的上限为100（该参数指定的子网是否返回，需要结合分页拉取参数Limit和Offset）。参数不支持同时指定SubnetIds和Filters。
  * @method array getFilters() 获取过滤条件，参数不支持同时指定SubnetIds和Filters。
 <li>subnet-id - String - （过滤条件）Subnet实例名称。</li>
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
@@ -60,7 +60,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeSubnetsRequest extends AbstractModel
 {
     /**
-     * @var array 子网实例ID查询。形如：subnet-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定SubnetIds和Filters。
+     * @var array 子网实例ID查询。形如：subnet-pxir56ns。每次请求的实例的上限为100（该参数指定的子网是否返回，需要结合分页拉取参数Limit和Offset）。参数不支持同时指定SubnetIds和Filters。
      */
     public $SubnetIds;
 
@@ -94,7 +94,7 @@ class DescribeSubnetsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param array $SubnetIds 子网实例ID查询。形如：subnet-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定SubnetIds和Filters。
+     * @param array $SubnetIds 子网实例ID查询。形如：subnet-pxir56ns。每次请求的实例的上限为100（该参数指定的子网是否返回，需要结合分页拉取参数Limit和Offset）。参数不支持同时指定SubnetIds和Filters。
      * @param array $Filters 过滤条件，参数不支持同时指定SubnetIds和Filters。
 <li>subnet-id - String - （过滤条件）Subnet实例名称。</li>
 <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>

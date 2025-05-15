@@ -32,22 +32,16 @@ use TencentCloud\Common\AbstractModel;
 <li>acl：自定义规则；</li>
 <li>cc：cc攻击防护；</li>
 <li>bot：Bot防护。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModules(array $Modules) 设置生效的模块，该字段取值有：
 <li>waf：托管规则；</li>
 <li>rate：速率限制；</li>
 <li>acl：自定义规则；</li>
 <li>cc：cc攻击防护；</li>
 <li>bot：Bot防护。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPartialModules() 获取跳过部分规则ID的例外规则详情。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPartialModules(array $PartialModules) 设置跳过部分规则ID的例外规则详情。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSkipConditions() 获取跳过具体字段不去扫描的例外规则详情。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSkipConditions(array $SkipConditions) 设置跳过具体字段不去扫描的例外规则详情。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ExceptUserRuleScope extends AbstractModel
 {
@@ -65,19 +59,16 @@ class ExceptUserRuleScope extends AbstractModel
 <li>acl：自定义规则；</li>
 <li>cc：cc攻击防护；</li>
 <li>bot：Bot防护。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Modules;
 
     /**
      * @var array 跳过部分规则ID的例外规则详情。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PartialModules;
 
     /**
      * @var array 跳过具体字段不去扫描的例外规则详情。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SkipConditions;
 
@@ -91,11 +82,8 @@ class ExceptUserRuleScope extends AbstractModel
 <li>acl：自定义规则；</li>
 <li>cc：cc攻击防护；</li>
 <li>bot：Bot防护。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PartialModules 跳过部分规则ID的例外规则详情。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SkipConditions 跳过具体字段不去扫描的例外规则详情。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

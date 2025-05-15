@@ -84,9 +84,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubmit(boolean $Submit) 设置是否提交
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getScriptChange() 获取任务脚本是否发生变化
+ * @method boolean getScriptChange() 获取模版脚本是否发生变化
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScriptChange(boolean $ScriptChange) 设置任务脚本是否发生变化
+ * @method void setScriptChange(boolean $ScriptChange) 设置模版脚本是否发生变化
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getContent() 获取代码模版脚本，base64编码返回
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setContent(string $Content) 设置代码模版脚本，base64编码返回
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class CodeTemplateDetail extends AbstractModel
@@ -188,10 +192,16 @@ class CodeTemplateDetail extends AbstractModel
     public $Submit;
 
     /**
-     * @var boolean 任务脚本是否发生变化
+     * @var boolean 模版脚本是否发生变化
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScriptChange;
+
+    /**
+     * @var string 代码模版脚本，base64编码返回
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Content;
 
     /**
      * @param string $ProjectId 项目id
@@ -226,7 +236,9 @@ class CodeTemplateDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Submit 是否提交
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $ScriptChange 任务脚本是否发生变化
+     * @param boolean $ScriptChange 模版脚本是否发生变化
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Content 代码模版脚本，base64编码返回
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -309,6 +321,10 @@ class CodeTemplateDetail extends AbstractModel
 
         if (array_key_exists("ScriptChange",$param) and $param["ScriptChange"] !== null) {
             $this->ScriptChange = $param["ScriptChange"];
+        }
+
+        if (array_key_exists("Content",$param) and $param["Content"] !== null) {
+            $this->Content = $param["Content"];
         }
     }
 }

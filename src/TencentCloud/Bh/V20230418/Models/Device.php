@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableSSL(integer $EnableSSL) 设置是否启用SSL，仅支持Redis资产。0：禁用 1：启用
  * @method string getSSLCertName() 获取已上传的SSL证书名称
  * @method void setSSLCertName(string $SSLCertName) 设置已上传的SSL证书名称
+ * @method integer getIOAId() 获取IOA侧的资源ID
+ * @method void setIOAId(integer $IOAId) 设置IOA侧的资源ID
  */
 class Device extends AbstractModel
 {
@@ -164,6 +166,11 @@ class Device extends AbstractModel
     public $SSLCertName;
 
     /**
+     * @var integer IOA侧的资源ID
+     */
+    public $IOAId;
+
+    /**
      * @param integer $Id 资产ID
      * @param string $InstanceId 实例ID，对应CVM、CDB等实例ID
      * @param string $Name 资产名
@@ -184,6 +191,7 @@ class Device extends AbstractModel
      * @param string $DomainName 网络域名称
      * @param integer $EnableSSL 是否启用SSL，仅支持Redis资产。0：禁用 1：启用
      * @param string $SSLCertName 已上传的SSL证书名称
+     * @param integer $IOAId IOA侧的资源ID
      */
     function __construct()
     {
@@ -283,6 +291,10 @@ class Device extends AbstractModel
 
         if (array_key_exists("SSLCertName",$param) and $param["SSLCertName"] !== null) {
             $this->SSLCertName = $param["SSLCertName"];
+        }
+
+        if (array_key_exists("IOAId",$param) and $param["IOAId"] !== null) {
+            $this->IOAId = $param["IOAId"];
         }
     }
 }

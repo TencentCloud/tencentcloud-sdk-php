@@ -123,7 +123,7 @@ peakCurrentUsers：峰值同时在线人数。
 -视频卡顿率
 -音频卡顿率
 注意：
-1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，监控仪表盘[版本功能和计费说明]（https://cloud.tencent.com/document/product/647/81331）。
+1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，详情参考[监控仪表盘]（https://cloud.tencent.com/document/product/647/81331）。
 2.查询时间范围根据监控仪表盘功能版本而定，基础版可查近3小时，进阶版可查近12小时。
  * @method Models\DescribeTRTCRealTimeQualityMetricDataResponse DescribeTRTCRealTimeQualityMetricData(Models\DescribeTRTCRealTimeQualityMetricDataRequest $req) 查询TRTC监控仪表盘-实时监控质量指标（会返回下列指标）
 -视频卡顿率
@@ -135,9 +135,8 @@ peakCurrentUsers：峰值同时在线人数。
 -userCount（在线用户数）
 -roomCount（在线房间数）
 注意：
-1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，监控仪表盘[版本功能和计费说明](https://cloud.tencent.com/document/product/647/81331)。
+1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，详情参考[监控仪表盘](https://cloud.tencent.com/document/product/647/81331)。
 2.查询时间范围根据监控仪表盘功能版本而定，基础版可查近3小时，进阶版可查近12小时。
-3.除此之外您也可以通过[订阅TRTC包月套餐](https://buy.cloud.tencent.com/trtc)尊享版或旗舰版解锁此接口的调用能力，请在开通包月套餐后，请[提交工单](https://console.cloud.tencent.com/workorder/category)联系售后解锁调用能力
  * @method Models\DescribeTRTCRealTimeScaleMetricDataResponse DescribeTRTCRealTimeScaleMetricData(Models\DescribeTRTCRealTimeScaleMetricDataRequest $req) 查询TRTC监控仪表盘-实时监控规模指标（会返回下列指标）
 -userCount（在线用户数）
 -roomCount（在线房间数）

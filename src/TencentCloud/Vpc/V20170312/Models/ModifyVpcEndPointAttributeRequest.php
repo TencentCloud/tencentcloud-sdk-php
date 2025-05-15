@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyVpcEndPointAttribute请求参数结构体
  *
- * @method string getEndPointId() 获取终端节点ID。
- * @method void setEndPointId(string $EndPointId) 设置终端节点ID。
- * @method string getEndPointName() 获取终端节点名称。
- * @method void setEndPointName(string $EndPointName) 设置终端节点名称。
- * @method array getSecurityGroupIds() 获取安全组ID列表。
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组ID列表。
+ * @method string getEndPointId() 获取终端节点ID。可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679) 获取。
+ * @method void setEndPointId(string $EndPointId) 设置终端节点ID。可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679) 获取。
+ * @method string getEndPointName() 获取终端节点名称。长度限制为60个字符。
+ * @method void setEndPointName(string $EndPointName) 设置终端节点名称。长度限制为60个字符。
+ * @method array getSecurityGroupIds() 获取安全组ID列表。可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808)接口获取。
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组ID列表。可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808)接口获取。
  * @method string getIpAddressType() 获取协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
  * @method void setIpAddressType(string $IpAddressType) 设置协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
  */
 class ModifyVpcEndPointAttributeRequest extends AbstractModel
 {
     /**
-     * @var string 终端节点ID。
+     * @var string 终端节点ID。可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679) 获取。
      */
     public $EndPointId;
 
     /**
-     * @var string 终端节点名称。
+     * @var string 终端节点名称。长度限制为60个字符。
      */
     public $EndPointName;
 
     /**
-     * @var array 安全组ID列表。
+     * @var array 安全组ID列表。可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808)接口获取。
      */
     public $SecurityGroupIds;
 
@@ -52,9 +52,9 @@ class ModifyVpcEndPointAttributeRequest extends AbstractModel
     public $IpAddressType;
 
     /**
-     * @param string $EndPointId 终端节点ID。
-     * @param string $EndPointName 终端节点名称。
-     * @param array $SecurityGroupIds 安全组ID列表。
+     * @param string $EndPointId 终端节点ID。可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679) 获取。
+     * @param string $EndPointName 终端节点名称。长度限制为60个字符。
+     * @param array $SecurityGroupIds 安全组ID列表。可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808)接口获取。
      * @param string $IpAddressType 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
      */
     function __construct()

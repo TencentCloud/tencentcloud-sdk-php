@@ -116,6 +116,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClientAccess(integer $ClientAccess) 设置1 默认值，客户单访问开启，0 客户端访问关闭，2 客户端访问开通中，3 客户端访问关闭中
  * @method integer getExternalAccess() 获取1 默认值，外网访问开启，0 外网访问关闭，2 外网访问开通中，3 外网访问关闭中
  * @method void setExternalAccess(integer $ExternalAccess) 设置1 默认值，外网访问开启，0 外网访问关闭，2 外网访问开通中，3 外网访问关闭中
+ * @method integer getIOAResource() 获取0默认值。0-免费版（试用版）ioa，1-付费版ioa
+ * @method void setIOAResource(integer $IOAResource) 设置0默认值。0-免费版（试用版）ioa，1-付费版ioa
+ * @method integer getPackageIOAUserCount() 获取零信任堡垒机用户扩展包个数。1个扩展包对应20个用户数
+ * @method void setPackageIOAUserCount(integer $PackageIOAUserCount) 设置零信任堡垒机用户扩展包个数。1个扩展包对应20个用户数
+ * @method integer getPackageIOABandwidth() 获取 零信任堡垒机带宽扩展包个数。一个扩展包表示4M带宽
+ * @method void setPackageIOABandwidth(integer $PackageIOABandwidth) 设置 零信任堡垒机带宽扩展包个数。一个扩展包表示4M带宽
  */
 class Resource extends AbstractModel
 {
@@ -360,6 +366,21 @@ class Resource extends AbstractModel
     public $ExternalAccess;
 
     /**
+     * @var integer 0默认值。0-免费版（试用版）ioa，1-付费版ioa
+     */
+    public $IOAResource;
+
+    /**
+     * @var integer 零信任堡垒机用户扩展包个数。1个扩展包对应20个用户数
+     */
+    public $PackageIOAUserCount;
+
+    /**
+     * @var integer  零信任堡垒机带宽扩展包个数。一个扩展包表示4M带宽
+     */
+    public $PackageIOABandwidth;
+
+    /**
      * @param string $ResourceId 服务实例ID，如bh-saas-s3ed4r5e
      * @param string $ApCode 地域编码
      * @param string $SvArgs 服务实例规格信息
@@ -408,6 +429,9 @@ class Resource extends AbstractModel
      * @param integer $WebAccess 1 默认值，web访问开启，0 web访问关闭，2 web访问开通中，3 web访问关闭中
      * @param integer $ClientAccess 1 默认值，客户单访问开启，0 客户端访问关闭，2 客户端访问开通中，3 客户端访问关闭中
      * @param integer $ExternalAccess 1 默认值，外网访问开启，0 外网访问关闭，2 外网访问开通中，3 外网访问关闭中
+     * @param integer $IOAResource 0默认值。0-免费版（试用版）ioa，1-付费版ioa
+     * @param integer $PackageIOAUserCount 零信任堡垒机用户扩展包个数。1个扩展包对应20个用户数
+     * @param integer $PackageIOABandwidth  零信任堡垒机带宽扩展包个数。一个扩展包表示4M带宽
      */
     function __construct()
     {
@@ -617,6 +641,18 @@ class Resource extends AbstractModel
 
         if (array_key_exists("ExternalAccess",$param) and $param["ExternalAccess"] !== null) {
             $this->ExternalAccess = $param["ExternalAccess"];
+        }
+
+        if (array_key_exists("IOAResource",$param) and $param["IOAResource"] !== null) {
+            $this->IOAResource = $param["IOAResource"];
+        }
+
+        if (array_key_exists("PackageIOAUserCount",$param) and $param["PackageIOAUserCount"] !== null) {
+            $this->PackageIOAUserCount = $param["PackageIOAUserCount"];
+        }
+
+        if (array_key_exists("PackageIOABandwidth",$param) and $param["PackageIOABandwidth"] !== null) {
+            $this->PackageIOABandwidth = $param["PackageIOABandwidth"];
         }
     }
 }

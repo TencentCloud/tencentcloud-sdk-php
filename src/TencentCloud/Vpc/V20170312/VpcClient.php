@@ -327,7 +327,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 * 删除前请确保 VPC 内已经没有相关资源，例如云服务器、云数据库、NoSQL、VPN网关、专线网关、负载均衡、对等连接、与之互通的基础网络设备等。
 * 删除私有网络是不可逆的操作，请谨慎处理。
  * @method Models\DeleteVpcEndPointResponse DeleteVpcEndPoint(Models\DeleteVpcEndPointRequest $req) 本接口（DeleteVpcEndPoint）用于删除终端节点。
- * @method Models\DeleteVpcEndPointServiceResponse DeleteVpcEndPointService(Models\DeleteVpcEndPointServiceRequest $req) 本接口（DeleteVpcEndPointService）用于删除终端节点服务。
+ * @method Models\DeleteVpcEndPointServiceResponse DeleteVpcEndPointService(Models\DeleteVpcEndPointServiceRequest $req) 本接口（DeleteVpcEndPointService）用于删除终端节点服务。限制：当有终端节点关联到终端节点服务时，无法删除终端节点服务。
  * @method Models\DeleteVpcEndPointServiceWhiteListResponse DeleteVpcEndPointServiceWhiteList(Models\DeleteVpcEndPointServiceWhiteListRequest $req) 本接口（DeleteVpcEndPointServiceWhiteList）用于删除终端节点服务白名单。
  * @method Models\DeleteVpcPeeringConnectionResponse DeleteVpcPeeringConnection(Models\DeleteVpcPeeringConnectionRequest $req) 本接口（DeleteVpcPeeringConnection）用于删除私有网络对等连接。
  * @method Models\DeleteVpnConnectionResponse DeleteVpnConnection(Models\DeleteVpnConnectionRequest $req) 本接口（DeleteVpnConnection）用于删除VPN通道。

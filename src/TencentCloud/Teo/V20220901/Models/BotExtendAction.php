@@ -37,9 +37,7 @@ use TencentCloud\Common\AbstractModel;
 <li>shortdelay：短时响应；</li>
 <li>longdelay：长时响应。</li>
  * @method integer getPercent() 获取处置方式的触发概率，范围0-100。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPercent(integer $Percent) 设置处置方式的触发概率，范围0-100。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BotExtendAction extends AbstractModel
 {
@@ -57,7 +55,6 @@ class BotExtendAction extends AbstractModel
 
     /**
      * @var integer 处置方式的触发概率，范围0-100。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Percent;
 
@@ -71,7 +68,6 @@ class BotExtendAction extends AbstractModel
 <li>shortdelay：短时响应；</li>
 <li>longdelay：长时响应。</li>
      * @param integer $Percent 处置方式的触发概率，范围0-100。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

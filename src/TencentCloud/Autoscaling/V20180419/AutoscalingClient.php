@@ -44,9 +44,9 @@ use TencentCloud\Autoscaling\V20180419\Models as Models;
 说明：根据按包年包月计费的实例所创建的伸缩组，其扩容的实例为按量计费实例。
  * @method Models\CreateLaunchConfigurationResponse CreateLaunchConfiguration(Models\CreateLaunchConfigurationRequest $req) 本接口（CreateLaunchConfiguration）用于创建新的启动配置。
 
-* 启动配置，可以通过 `ModifyLaunchConfigurationAttributes` 修改少量字段。如需使用新的启动配置，建议重新创建启动配置。
+* 启动配置，可以通过 [ModifyLaunchConfigurationAttributes](https://cloud.tencent.com/document/api/377/31298) 修改少量字段。如需使用新的启动配置，建议重新创建启动配置。
 
-* 每个项目最多只能创建20个启动配置，详见[使用限制](https://cloud.tencent.com/document/product/377/3120)。
+* 每个地域默认只能创建50个启动配置，详见[使用限制](https://cloud.tencent.com/document/product/377/3120)。
  * @method Models\CreateLifecycleHookResponse CreateLifecycleHook(Models\CreateLifecycleHookRequest $req) 本接口（CreateLifecycleHook）用于创建生命周期挂钩。
 
 * 您可以为生命周期挂钩配置消息通知或执行自动化助手命令。
@@ -59,11 +59,11 @@ use TencentCloud\Autoscaling\V20180419\Models as Models;
 	"Time": "2019-03-14T10:15:11Z",
 	"AppId": "1251783334",
 	"ActivityId": "asa-fznnvrja",
-	"AutoScalingGroupId": "asg-rrrrtttt",
-	"LifecycleHookId": "ash-xxxxyyyy",
+	"AutoScalingGroupId": "asg-ft6y7u8n",
+	"LifecycleHookId": "ash-p9i7y6t5",
 	"LifecycleHookName": "my-hook",
 	"LifecycleActionToken": "3080e1c9-0efe-4dd7-ad3b-90cd6618298f",
-	"InstanceId": "ins-aaaabbbb",
+	"InstanceId": "ins-y6dr5e43",
 	"LifecycleTransition": "INSTANCE_LAUNCHING",
 	"NotificationMetadata": ""
 }
@@ -102,7 +102,6 @@ use TencentCloud\Autoscaling\V20180419\Models as Models;
  * @method Models\DeleteLaunchConfigurationResponse DeleteLaunchConfiguration(Models\DeleteLaunchConfigurationRequest $req) 本接口（DeleteLaunchConfiguration）用于删除启动配置。
 
 * 若启动配置在伸缩组中属于生效状态，则该启动配置不允许删除。
-
  * @method Models\DeleteLifecycleHookResponse DeleteLifecycleHook(Models\DeleteLifecycleHookRequest $req) 本接口（DeleteLifecycleHook）用于删除生命周期挂钩。
  * @method Models\DeleteNotificationConfigurationResponse DeleteNotificationConfiguration(Models\DeleteNotificationConfigurationRequest $req) 本接口（DeleteNotificationConfiguration）用于删除特定的通知。
  * @method Models\DeleteScalingPolicyResponse DeleteScalingPolicy(Models\DeleteScalingPolicyRequest $req) 本接口（DeleteScalingPolicy）用于删除告警触发策略。
@@ -175,7 +174,6 @@ use TencentCloud\Autoscaling\V20180419\Models as Models;
  * @method Models\ModifyLaunchConfigurationAttributesResponse ModifyLaunchConfigurationAttributes(Models\ModifyLaunchConfigurationAttributesRequest $req) 本接口（ModifyLaunchConfigurationAttributes）用于修改启动配置部分属性。
 
 * 修改启动配置后，已经使用该启动配置扩容的存量实例不会发生变更，此后使用该启动配置的新增实例会按照新的配置进行扩容。
-* 本接口支持修改部分简单类型。
  * @method Models\ModifyLifecycleHookResponse ModifyLifecycleHook(Models\ModifyLifecycleHookRequest $req) 此接口用于修改生命周期挂钩。
  * @method Models\ModifyLoadBalancerTargetAttributesResponse ModifyLoadBalancerTargetAttributes(Models\ModifyLoadBalancerTargetAttributesRequest $req) 本接口（ModifyLoadBalancerTargetAttributes）用于修改伸缩组内负载均衡器的目标规则属性。
  * @method Models\ModifyLoadBalancersResponse ModifyLoadBalancers(Models\ModifyLoadBalancersRequest $req) 本接口（ModifyLoadBalancers）用于修改伸缩组的负载均衡器。

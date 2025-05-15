@@ -28,6 +28,7 @@ use TencentCloud\Common\AbstractModel;
 <li>CLOUD_SSD：SSD云硬盘</li>
 <li>CLOUD_HSSD：增强型SSD云硬盘</li>
 <li>CLOUD_TSSD：极速型SSD云硬盘</li>
+<li>CLOUD_BSSD：通用型SSD云硬盘</li>
 默认取值与系统盘类型（SystemDisk.DiskType）保持一致。
  * @method void setDiskType(string $DiskType) 设置数据盘类型。数据盘类型限制详见[云硬盘类型](https://cloud.tencent.com/document/product/362/2353)。取值范围：
 <li>LOCAL_BASIC：本地硬盘</li>
@@ -37,12 +38,13 @@ use TencentCloud\Common\AbstractModel;
 <li>CLOUD_SSD：SSD云硬盘</li>
 <li>CLOUD_HSSD：增强型SSD云硬盘</li>
 <li>CLOUD_TSSD：极速型SSD云硬盘</li>
+<li>CLOUD_BSSD：通用型SSD云硬盘</li>
 默认取值与系统盘类型（SystemDisk.DiskType）保持一致。
- * @method integer getDiskSize() 获取数据盘大小，单位：GB。最小调整步长为10G，不同数据盘类型取值范围不同，具体限制详见：[CVM实例配置](https://cloud.tencent.com/document/product/213/2177)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
- * @method void setDiskSize(integer $DiskSize) 设置数据盘大小，单位：GB。最小调整步长为10G，不同数据盘类型取值范围不同，具体限制详见：[CVM实例配置](https://cloud.tencent.com/document/product/213/2177)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
- * @method string getSnapshotId() 获取数据盘快照 ID，类似 `snap-l8psqwnt`。
+ * @method integer getDiskSize() 获取数据盘大小，单位：GB。不同数据盘类型取值范围不同，具体限制详见：[CVM实例配置](https://cloud.tencent.com/document/product/213/2177)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
+ * @method void setDiskSize(integer $DiskSize) 设置数据盘大小，单位：GB。不同数据盘类型取值范围不同，具体限制详见：[CVM实例配置](https://cloud.tencent.com/document/product/213/2177)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
+ * @method string getSnapshotId() 获取数据盘快照 ID，可通过 [DescribeSnapshots](https://cloud.tencent.com/document/product/362/15647) 接口获取该参数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSnapshotId(string $SnapshotId) 设置数据盘快照 ID，类似 `snap-l8psqwnt`。
+ * @method void setSnapshotId(string $SnapshotId) 设置数据盘快照 ID，可通过 [DescribeSnapshots](https://cloud.tencent.com/document/product/362/15647) 接口获取该参数。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getDeleteWithInstance() 获取数据盘是否随子机销毁。取值范围：
 <li>TRUE：子机销毁时，销毁数据盘，只支持按小时后付费云盘</li>
@@ -66,12 +68,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setThroughputPerformance(integer $ThroughputPerformance) 设置云硬盘性能，单位：MB/s。使用此参数可给云硬盘购买额外的性能，功能介绍和类型限制详见：[增强型 SSD 云硬盘额外性能说明](https://cloud.tencent.com/document/product/362/51896#.E5.A2.9E.E5.BC.BA.E5.9E.8B-ssd-.E4.BA.91.E7.A1.AC.E7.9B.98.E9.A2.9D.E5.A4.96.E6.80.A7.E8.83.BD)。
 当前仅支持极速型云盘（CLOUD_TSSD）和增强型SSD云硬盘（CLOUD_HSSD）且 需容量 > 460GB。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getBurstPerformance() 获取突发性能。是否开启突发性能，默认取值为 false。
-
+ * @method boolean getBurstPerformance() 获取突发性能。是否开启突发性能，默认取值为 false。当前该参数仅支持极速型云盘（CLOUD_TSSD）和增强型SSD云硬盘（CLOUD_HSSD）且需容量 > 460GB。
 注：内测中，需提单申请后使用。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBurstPerformance(boolean $BurstPerformance) 设置突发性能。是否开启突发性能，默认取值为 false。
-
+ * @method void setBurstPerformance(boolean $BurstPerformance) 设置突发性能。是否开启突发性能，默认取值为 false。当前该参数仅支持极速型云盘（CLOUD_TSSD）和增强型SSD云硬盘（CLOUD_HSSD）且需容量 > 460GB。
 注：内测中，需提单申请后使用。
 注意：此字段可能返回 null，表示取不到有效值。
  */
@@ -86,17 +86,18 @@ class DataDisk extends AbstractModel
 <li>CLOUD_SSD：SSD云硬盘</li>
 <li>CLOUD_HSSD：增强型SSD云硬盘</li>
 <li>CLOUD_TSSD：极速型SSD云硬盘</li>
+<li>CLOUD_BSSD：通用型SSD云硬盘</li>
 默认取值与系统盘类型（SystemDisk.DiskType）保持一致。
      */
     public $DiskType;
 
     /**
-     * @var integer 数据盘大小，单位：GB。最小调整步长为10G，不同数据盘类型取值范围不同，具体限制详见：[CVM实例配置](https://cloud.tencent.com/document/product/213/2177)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
+     * @var integer 数据盘大小，单位：GB。不同数据盘类型取值范围不同，具体限制详见：[CVM实例配置](https://cloud.tencent.com/document/product/213/2177)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
      */
     public $DiskSize;
 
     /**
-     * @var string 数据盘快照 ID，类似 `snap-l8psqwnt`。
+     * @var string 数据盘快照 ID，可通过 [DescribeSnapshots](https://cloud.tencent.com/document/product/362/15647) 接口获取该参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SnapshotId;
@@ -125,8 +126,7 @@ class DataDisk extends AbstractModel
     public $ThroughputPerformance;
 
     /**
-     * @var boolean 突发性能。是否开启突发性能，默认取值为 false。
-
+     * @var boolean 突发性能。是否开启突发性能，默认取值为 false。当前该参数仅支持极速型云盘（CLOUD_TSSD）和增强型SSD云硬盘（CLOUD_HSSD）且需容量 > 460GB。
 注：内测中，需提单申请后使用。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -141,9 +141,10 @@ class DataDisk extends AbstractModel
 <li>CLOUD_SSD：SSD云硬盘</li>
 <li>CLOUD_HSSD：增强型SSD云硬盘</li>
 <li>CLOUD_TSSD：极速型SSD云硬盘</li>
+<li>CLOUD_BSSD：通用型SSD云硬盘</li>
 默认取值与系统盘类型（SystemDisk.DiskType）保持一致。
-     * @param integer $DiskSize 数据盘大小，单位：GB。最小调整步长为10G，不同数据盘类型取值范围不同，具体限制详见：[CVM实例配置](https://cloud.tencent.com/document/product/213/2177)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
-     * @param string $SnapshotId 数据盘快照 ID，类似 `snap-l8psqwnt`。
+     * @param integer $DiskSize 数据盘大小，单位：GB。不同数据盘类型取值范围不同，具体限制详见：[CVM实例配置](https://cloud.tencent.com/document/product/213/2177)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
+     * @param string $SnapshotId 数据盘快照 ID，可通过 [DescribeSnapshots](https://cloud.tencent.com/document/product/362/15647) 接口获取该参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $DeleteWithInstance 数据盘是否随子机销毁。取值范围：
 <li>TRUE：子机销毁时，销毁数据盘，只支持按小时后付费云盘</li>
@@ -156,8 +157,7 @@ class DataDisk extends AbstractModel
      * @param integer $ThroughputPerformance 云硬盘性能，单位：MB/s。使用此参数可给云硬盘购买额外的性能，功能介绍和类型限制详见：[增强型 SSD 云硬盘额外性能说明](https://cloud.tencent.com/document/product/362/51896#.E5.A2.9E.E5.BC.BA.E5.9E.8B-ssd-.E4.BA.91.E7.A1.AC.E7.9B.98.E9.A2.9D.E5.A4.96.E6.80.A7.E8.83.BD)。
 当前仅支持极速型云盘（CLOUD_TSSD）和增强型SSD云硬盘（CLOUD_HSSD）且 需容量 > 460GB。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $BurstPerformance 突发性能。是否开启突发性能，默认取值为 false。
-
+     * @param boolean $BurstPerformance 突发性能。是否开启突发性能，默认取值为 false。当前该参数仅支持极速型云盘（CLOUD_TSSD）和增强型SSD云硬盘（CLOUD_HSSD）且需容量 > 460GB。
 注：内测中，需提单申请后使用。
 注意：此字段可能返回 null，表示取不到有效值。
      */

@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * EnableVpcEndPointConnect请求参数结构体
  *
- * @method string getEndPointServiceId() 获取终端节点服务ID。
- * @method void setEndPointServiceId(string $EndPointServiceId) 设置终端节点服务ID。
- * @method array getEndPointId() 获取终端节点ID。
- * @method void setEndPointId(array $EndPointId) 设置终端节点ID。
+ * @method string getEndPointServiceId() 获取终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+ * @method void setEndPointServiceId(string $EndPointServiceId) 设置终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+ * @method array getEndPointId() 获取终端节点ID。可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679) 获取。
+ * @method void setEndPointId(array $EndPointId) 设置终端节点ID。可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679) 获取。
  * @method boolean getAcceptFlag() 获取是否接受终端节点连接请求。
 <li> true：自动接受。</li> <li> false：不自动接受。</li>
  * @method void setAcceptFlag(boolean $AcceptFlag) 设置是否接受终端节点连接请求。
@@ -34,12 +34,12 @@ use TencentCloud\Common\AbstractModel;
 class EnableVpcEndPointConnectRequest extends AbstractModel
 {
     /**
-     * @var string 终端节点服务ID。
+     * @var string 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
      */
     public $EndPointServiceId;
 
     /**
-     * @var array 终端节点ID。
+     * @var array 终端节点ID。可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679) 获取。
      */
     public $EndPointId;
 
@@ -55,8 +55,8 @@ class EnableVpcEndPointConnectRequest extends AbstractModel
     public $IpAddressType;
 
     /**
-     * @param string $EndPointServiceId 终端节点服务ID。
-     * @param array $EndPointId 终端节点ID。
+     * @param string $EndPointServiceId 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+     * @param array $EndPointId 终端节点ID。可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679) 获取。
      * @param boolean $AcceptFlag 是否接受终端节点连接请求。
 <li> true：自动接受。</li> <li> false：不自动接受。</li>
      * @param string $IpAddressType 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。

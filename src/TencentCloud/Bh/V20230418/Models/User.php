@@ -58,6 +58,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置状态 与Filter中一致
  * @method integer getAclVersion() 获取权限版本
  * @method void setAclVersion(integer $AclVersion) 设置权限版本
+ * @method integer getUserFrom() 获取用户来源，0-bh,1-ioa
+ * @method void setUserFrom(integer $UserFrom) 设置用户来源，0-bh,1-ioa
+ * @method IOAUserGroup getIOAUserGroup() 获取ioa同步过来的用户相关信息
+ * @method void setIOAUserGroup(IOAUserGroup $IOAUserGroup) 设置ioa同步过来的用户相关信息
  */
 class User extends AbstractModel
 {
@@ -149,6 +153,16 @@ class User extends AbstractModel
     public $AclVersion;
 
     /**
+     * @var integer 用户来源，0-bh,1-ioa
+     */
+    public $UserFrom;
+
+    /**
+     * @var IOAUserGroup ioa同步过来的用户相关信息
+     */
+    public $IOAUserGroup;
+
+    /**
      * @param string $UserName 用户名, 3-20个字符 必须以英文字母开头，且不能包含字母、数字、.、_、-以外的字符
      * @param string $RealName 用户姓名， 最大20个字符，不能包含空白字符
      * @param integer $Id 用户ID
@@ -168,6 +182,8 @@ class User extends AbstractModel
      * @param integer $UKeyStatus ukey绑定状态 0 - 未绑定 1 - 已绑定
      * @param string $Status 状态 与Filter中一致
      * @param integer $AclVersion 权限版本
+     * @param integer $UserFrom 用户来源，0-bh,1-ioa
+     * @param IOAUserGroup $IOAUserGroup ioa同步过来的用户相关信息
      */
     function __construct()
     {
@@ -254,6 +270,15 @@ class User extends AbstractModel
 
         if (array_key_exists("AclVersion",$param) and $param["AclVersion"] !== null) {
             $this->AclVersion = $param["AclVersion"];
+        }
+
+        if (array_key_exists("UserFrom",$param) and $param["UserFrom"] !== null) {
+            $this->UserFrom = $param["UserFrom"];
+        }
+
+        if (array_key_exists("IOAUserGroup",$param) and $param["IOAUserGroup"] !== null) {
+            $this->IOAUserGroup = new IOAUserGroup();
+            $this->IOAUserGroup->deserialize($param["IOAUserGroup"]);
         }
     }
 }

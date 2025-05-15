@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
 <li>on：开启；</li>
 <li>off：关闭。</li>
  * @method array getExceptUserRules() 获取例外规则详情。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExceptUserRules(array $ExceptUserRules) 设置例外规则详情。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ExceptConfig extends AbstractModel
 {
@@ -42,7 +40,6 @@ class ExceptConfig extends AbstractModel
 
     /**
      * @var array 例外规则详情。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExceptUserRules;
 
@@ -51,7 +48,6 @@ class ExceptConfig extends AbstractModel
 <li>on：开启；</li>
 <li>off：关闭。</li>
      * @param array $ExceptUserRules 例外规则详情。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

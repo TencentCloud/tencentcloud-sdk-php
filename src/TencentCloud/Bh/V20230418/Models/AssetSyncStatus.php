@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLastStatus(integer $LastStatus) 设置上一次同步的结果。 0 - 从未进行, 1 - 成功， 2 - 失败
  * @method boolean getInProcess() 获取同步任务是否正在进行中
  * @method void setInProcess(boolean $InProcess) 设置同步任务是否正在进行中
+ * @method string getErrMsg() 获取任务错误消息
+ * @method void setErrMsg(string $ErrMsg) 设置任务错误消息
  */
 class AssetSyncStatus extends AbstractModel
 {
@@ -45,9 +47,15 @@ class AssetSyncStatus extends AbstractModel
     public $InProcess;
 
     /**
+     * @var string 任务错误消息
+     */
+    public $ErrMsg;
+
+    /**
      * @param string $LastTime 上一次同步完成的时间
      * @param integer $LastStatus 上一次同步的结果。 0 - 从未进行, 1 - 成功， 2 - 失败
      * @param boolean $InProcess 同步任务是否正在进行中
+     * @param string $ErrMsg 任务错误消息
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class AssetSyncStatus extends AbstractModel
 
         if (array_key_exists("InProcess",$param) and $param["InProcess"] !== null) {
             $this->InProcess = $param["InProcess"];
+        }
+
+        if (array_key_exists("ErrMsg",$param) and $param["ErrMsg"] !== null) {
+            $this->ErrMsg = $param["ErrMsg"];
         }
     }
 }

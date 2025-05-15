@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserName(string $UserName) 设置用户名
  * @method string getUserType() 获取用户来源
  * @method void setUserType(string $UserType) 设置用户来源
+ * @method string getGroups() 获取组名
+ * @method void setGroups(string $Groups) 设置组名
  */
 class UserManagerFilter extends AbstractModel
 {
@@ -38,8 +40,14 @@ class UserManagerFilter extends AbstractModel
     public $UserType;
 
     /**
+     * @var string 组名
+     */
+    public $Groups;
+
+    /**
      * @param string $UserName 用户名
      * @param string $UserType 用户来源
+     * @param string $Groups 组名
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class UserManagerFilter extends AbstractModel
 
         if (array_key_exists("UserType",$param) and $param["UserType"] !== null) {
             $this->UserType = $param["UserType"];
+        }
+
+        if (array_key_exists("Groups",$param) and $param["Groups"] !== null) {
+            $this->Groups = $param["Groups"];
         }
     }
 }

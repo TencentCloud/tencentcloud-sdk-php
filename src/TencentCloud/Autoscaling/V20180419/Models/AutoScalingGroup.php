@@ -74,22 +74,32 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(integer $ProjectId) 设置项目ID
  * @method array getSubnetIdSet() 获取子网ID列表
  * @method void setSubnetIdSet(array $SubnetIdSet) 设置子网ID列表
- * @method array getTerminationPolicySet() 获取销毁策略
- * @method void setTerminationPolicySet(array $TerminationPolicySet) 设置销毁策略
- * @method string getVpcId() 获取VPC标识
- * @method void setVpcId(string $VpcId) 设置VPC标识
+ * @method array getTerminationPolicySet() 获取销毁策略。取值范围如下：
+<li>OLDEST_INSTANCE：优先销毁伸缩组中最旧的实例，默认取值。</li>
+<li>NEWEST_INSTANCE：优先销毁伸缩组中最新的实例。</li>
+ * @method void setTerminationPolicySet(array $TerminationPolicySet) 设置销毁策略。取值范围如下：
+<li>OLDEST_INSTANCE：优先销毁伸缩组中最旧的实例，默认取值。</li>
+<li>NEWEST_INSTANCE：优先销毁伸缩组中最新的实例。</li>
+ * @method string getVpcId() 获取私有网络ID。
+ * @method void setVpcId(string $VpcId) 设置私有网络ID。
  * @method array getZoneSet() 获取可用区列表
  * @method void setZoneSet(array $ZoneSet) 设置可用区列表
- * @method string getRetryPolicy() 获取重试策略
- * @method void setRetryPolicy(string $RetryPolicy) 设置重试策略
+ * @method string getRetryPolicy() 获取重试策略，部分成功的伸缩活动判定为一次失败活动。取值范围如下：
+<li>IMMEDIATE_RETRY：默认取值，表示立即重试，在较短时间内快速重试，连续失败超过一定次数（5次）后不再重试。</li>
+<li>INCREMENTAL_INTERVALS：间隔递增重试，随着连续失败次数的增加，重试间隔逐渐增大。前 10 次重试为快速重试，后续重试间隔逐步递增至 10 分钟、30 分钟、60 分钟、一天。</li>
+<li>NO_RETRY，不进行重试，直到再次收到用户调用或者告警信息后才会重试。</li>
+ * @method void setRetryPolicy(string $RetryPolicy) 设置重试策略，部分成功的伸缩活动判定为一次失败活动。取值范围如下：
+<li>IMMEDIATE_RETRY：默认取值，表示立即重试，在较短时间内快速重试，连续失败超过一定次数（5次）后不再重试。</li>
+<li>INCREMENTAL_INTERVALS：间隔递增重试，随着连续失败次数的增加，重试间隔逐渐增大。前 10 次重试为快速重试，后续重试间隔逐步递增至 10 分钟、30 分钟、60 分钟、一天。</li>
+<li>NO_RETRY，不进行重试，直到再次收到用户调用或者告警信息后才会重试。</li>
  * @method string getInActivityStatus() 获取伸缩组是否处于伸缩活动中，`IN_ACTIVITY`表示处于伸缩活动中，`NOT_IN_ACTIVITY`表示不处于伸缩活动中。
  * @method void setInActivityStatus(string $InActivityStatus) 设置伸缩组是否处于伸缩活动中，`IN_ACTIVITY`表示处于伸缩活动中，`NOT_IN_ACTIVITY`表示不处于伸缩活动中。
  * @method array getTags() 获取伸缩组标签列表
  * @method void setTags(array $Tags) 设置伸缩组标签列表
  * @method ServiceSettings getServiceSettings() 获取服务设置
  * @method void setServiceSettings(ServiceSettings $ServiceSettings) 设置服务设置
- * @method integer getIpv6AddressCount() 获取实例具有IPv6地址数量的配置
- * @method void setIpv6AddressCount(integer $Ipv6AddressCount) 设置实例具有IPv6地址数量的配置
+ * @method integer getIpv6AddressCount() 获取实例具有IPv6地址数量的配置，取值包括0、1。默认值为 0，表示实例不分配 IPv6 地址。需使用支持 IPv6 的私有网络，需在子网中开启 IPv6 CIDR，其他使用限制可参考 [IPv6使用限制](https://cloud.tencent.com/document/product/1142/38369)。
+ * @method void setIpv6AddressCount(integer $Ipv6AddressCount) 设置实例具有IPv6地址数量的配置，取值包括0、1。默认值为 0，表示实例不分配 IPv6 地址。需使用支持 IPv6 的私有网络，需在子网中开启 IPv6 CIDR，其他使用限制可参考 [IPv6使用限制](https://cloud.tencent.com/document/product/1142/38369)。
  * @method string getMultiZoneSubnetPolicy() 获取多可用区/子网策略。
 <li> PRIORITY，按照可用区/子网列表的顺序，作为优先级来尝试创建实例，如果优先级最高的可用区/子网可以创建成功，则总在该可用区/子网创建。</li>
 <li> EQUALITY：每次选择当前实例数最少的可用区/子网进行扩容，使得每个可用区/子网都有机会发生扩容，多次扩容出的实例会打散到多个可用区/子网。</li>
@@ -102,8 +112,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHealthCheckType(string $HealthCheckType) 设置伸缩组实例健康检查类型，取值如下：
 <li>CVM：根据实例网络状态判断实例是否处于不健康状态，不健康的网络状态即发生实例 PING 不可达事件，详细判断标准可参考[实例健康检查](https://cloud.tencent.com/document/product/377/8553)</li>
 <li>CLB：根据 CLB 的健康检查状态判断实例是否处于不健康状态，CLB健康检查原理可参考[健康检查](https://cloud.tencent.com/document/product/214/6097)</li>
- * @method integer getLoadBalancerHealthCheckGracePeriod() 获取CLB健康检查宽限期
- * @method void setLoadBalancerHealthCheckGracePeriod(integer $LoadBalancerHealthCheckGracePeriod) 设置CLB健康检查宽限期
+ * @method integer getLoadBalancerHealthCheckGracePeriod() 获取CLB健康检查宽限期.当扩容的实例进入IN_SERVICE后，在宽限期时间范围内将不会被标记为不健康CLB_UNHEALTHY。
+默认值：0。取值范围[0, 7200]，单位：秒。
+ * @method void setLoadBalancerHealthCheckGracePeriod(integer $LoadBalancerHealthCheckGracePeriod) 设置CLB健康检查宽限期.当扩容的实例进入IN_SERVICE后，在宽限期时间范围内将不会被标记为不健康CLB_UNHEALTHY。
+默认值：0。取值范围[0, 7200]，单位：秒。
  * @method string getInstanceAllocationPolicy() 获取实例分配策略，取值包括 LAUNCH_CONFIGURATION 和 SPOT_MIXED。
 <li> LAUNCH_CONFIGURATION，代表传统的按照启动配置模式。</li>
 <li> SPOT_MIXED，代表竞价混合模式。目前仅支持启动配置为按量计费模式时使用混合模式，混合模式下，伸缩组将根据设定扩容按量或竞价机型。使用混合模式时，关联的启动配置的计费类型不可被修改。</li>
@@ -221,12 +233,14 @@ class AutoScalingGroup extends AbstractModel
     public $SubnetIdSet;
 
     /**
-     * @var array 销毁策略
+     * @var array 销毁策略。取值范围如下：
+<li>OLDEST_INSTANCE：优先销毁伸缩组中最旧的实例，默认取值。</li>
+<li>NEWEST_INSTANCE：优先销毁伸缩组中最新的实例。</li>
      */
     public $TerminationPolicySet;
 
     /**
-     * @var string VPC标识
+     * @var string 私有网络ID。
      */
     public $VpcId;
 
@@ -236,7 +250,10 @@ class AutoScalingGroup extends AbstractModel
     public $ZoneSet;
 
     /**
-     * @var string 重试策略
+     * @var string 重试策略，部分成功的伸缩活动判定为一次失败活动。取值范围如下：
+<li>IMMEDIATE_RETRY：默认取值，表示立即重试，在较短时间内快速重试，连续失败超过一定次数（5次）后不再重试。</li>
+<li>INCREMENTAL_INTERVALS：间隔递增重试，随着连续失败次数的增加，重试间隔逐渐增大。前 10 次重试为快速重试，后续重试间隔逐步递增至 10 分钟、30 分钟、60 分钟、一天。</li>
+<li>NO_RETRY，不进行重试，直到再次收到用户调用或者告警信息后才会重试。</li>
      */
     public $RetryPolicy;
 
@@ -256,7 +273,7 @@ class AutoScalingGroup extends AbstractModel
     public $ServiceSettings;
 
     /**
-     * @var integer 实例具有IPv6地址数量的配置
+     * @var integer 实例具有IPv6地址数量的配置，取值包括0、1。默认值为 0，表示实例不分配 IPv6 地址。需使用支持 IPv6 的私有网络，需在子网中开启 IPv6 CIDR，其他使用限制可参考 [IPv6使用限制](https://cloud.tencent.com/document/product/1142/38369)。
      */
     public $Ipv6AddressCount;
 
@@ -275,7 +292,8 @@ class AutoScalingGroup extends AbstractModel
     public $HealthCheckType;
 
     /**
-     * @var integer CLB健康检查宽限期
+     * @var integer CLB健康检查宽限期.当扩容的实例进入IN_SERVICE后，在宽限期时间范围内将不会被标记为不健康CLB_UNHEALTHY。
+默认值：0。取值范围[0, 7200]，单位：秒。
      */
     public $LoadBalancerHealthCheckGracePeriod;
 
@@ -332,21 +350,27 @@ class AutoScalingGroup extends AbstractModel
      * @param integer $MinSize 最小实例数
      * @param integer $ProjectId 项目ID
      * @param array $SubnetIdSet 子网ID列表
-     * @param array $TerminationPolicySet 销毁策略
-     * @param string $VpcId VPC标识
+     * @param array $TerminationPolicySet 销毁策略。取值范围如下：
+<li>OLDEST_INSTANCE：优先销毁伸缩组中最旧的实例，默认取值。</li>
+<li>NEWEST_INSTANCE：优先销毁伸缩组中最新的实例。</li>
+     * @param string $VpcId 私有网络ID。
      * @param array $ZoneSet 可用区列表
-     * @param string $RetryPolicy 重试策略
+     * @param string $RetryPolicy 重试策略，部分成功的伸缩活动判定为一次失败活动。取值范围如下：
+<li>IMMEDIATE_RETRY：默认取值，表示立即重试，在较短时间内快速重试，连续失败超过一定次数（5次）后不再重试。</li>
+<li>INCREMENTAL_INTERVALS：间隔递增重试，随着连续失败次数的增加，重试间隔逐渐增大。前 10 次重试为快速重试，后续重试间隔逐步递增至 10 分钟、30 分钟、60 分钟、一天。</li>
+<li>NO_RETRY，不进行重试，直到再次收到用户调用或者告警信息后才会重试。</li>
      * @param string $InActivityStatus 伸缩组是否处于伸缩活动中，`IN_ACTIVITY`表示处于伸缩活动中，`NOT_IN_ACTIVITY`表示不处于伸缩活动中。
      * @param array $Tags 伸缩组标签列表
      * @param ServiceSettings $ServiceSettings 服务设置
-     * @param integer $Ipv6AddressCount 实例具有IPv6地址数量的配置
+     * @param integer $Ipv6AddressCount 实例具有IPv6地址数量的配置，取值包括0、1。默认值为 0，表示实例不分配 IPv6 地址。需使用支持 IPv6 的私有网络，需在子网中开启 IPv6 CIDR，其他使用限制可参考 [IPv6使用限制](https://cloud.tencent.com/document/product/1142/38369)。
      * @param string $MultiZoneSubnetPolicy 多可用区/子网策略。
 <li> PRIORITY，按照可用区/子网列表的顺序，作为优先级来尝试创建实例，如果优先级最高的可用区/子网可以创建成功，则总在该可用区/子网创建。</li>
 <li> EQUALITY：每次选择当前实例数最少的可用区/子网进行扩容，使得每个可用区/子网都有机会发生扩容，多次扩容出的实例会打散到多个可用区/子网。</li>
      * @param string $HealthCheckType 伸缩组实例健康检查类型，取值如下：
 <li>CVM：根据实例网络状态判断实例是否处于不健康状态，不健康的网络状态即发生实例 PING 不可达事件，详细判断标准可参考[实例健康检查](https://cloud.tencent.com/document/product/377/8553)</li>
 <li>CLB：根据 CLB 的健康检查状态判断实例是否处于不健康状态，CLB健康检查原理可参考[健康检查](https://cloud.tencent.com/document/product/214/6097)</li>
-     * @param integer $LoadBalancerHealthCheckGracePeriod CLB健康检查宽限期
+     * @param integer $LoadBalancerHealthCheckGracePeriod CLB健康检查宽限期.当扩容的实例进入IN_SERVICE后，在宽限期时间范围内将不会被标记为不健康CLB_UNHEALTHY。
+默认值：0。取值范围[0, 7200]，单位：秒。
      * @param string $InstanceAllocationPolicy 实例分配策略，取值包括 LAUNCH_CONFIGURATION 和 SPOT_MIXED。
 <li> LAUNCH_CONFIGURATION，代表传统的按照启动配置模式。</li>
 <li> SPOT_MIXED，代表竞价混合模式。目前仅支持启动配置为按量计费模式时使用混合模式，混合模式下，伸缩组将根据设定扩容按量或竞价机型。使用混合模式时，关联的启动配置的计费类型不可被修改。</li>

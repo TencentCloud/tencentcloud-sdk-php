@@ -35,7 +35,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCreatedTime() 获取添加时间
  * @method void setCreatedTime(string $CreatedTime) 设置添加时间
  * @method string getLanIP() 获取节点内网IP
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLanIP(string $LanIP) 设置节点内网IP
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNodePoolId() 获取资源池ID
  * @method void setNodePoolId(string $NodePoolId) 设置资源池ID
  * @method string getAutoscalingGroupId() 获取自动伸缩组ID
@@ -80,6 +82,7 @@ class Instance extends AbstractModel
 
     /**
      * @var string 节点内网IP
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LanIP;
 
@@ -102,6 +105,7 @@ class Instance extends AbstractModel
      * @param InstanceAdvancedSettings $InstanceAdvancedSettings 节点配置
      * @param string $CreatedTime 添加时间
      * @param string $LanIP 节点内网IP
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NodePoolId 资源池ID
      * @param string $AutoscalingGroupId 自动伸缩组ID
      */

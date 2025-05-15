@@ -40,13 +40,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAuthorizedDeviceIdSet(array $AuthorizedDeviceIdSet) 设置查询具有指定资产ID访问权限的用户
  * @method array getAuthorizedAppAssetIdSet() 获取查询具有指定应用资产ID访问权限的用户
  * @method void setAuthorizedAppAssetIdSet(array $AuthorizedAppAssetIdSet) 设置查询具有指定应用资产ID访问权限的用户
- * @method array getAuthTypeSet() 获取认证方式，0 - 本地, 1 - LDAP, 2 - OAuth, 不传为全部
- * @method void setAuthTypeSet(array $AuthTypeSet) 设置认证方式，0 - 本地, 1 - LDAP, 2 - OAuth, 不传为全部
+ * @method array getAuthTypeSet() 获取认证方式，0 - 本地, 1 - LDAP, 2 - OAuth, 3-ioa 不传为全部
+ * @method void setAuthTypeSet(array $AuthTypeSet) 设置认证方式，0 - 本地, 1 - LDAP, 2 - OAuth, 3-ioa 不传为全部
  * @method string getDepartmentId() 获取部门ID，用于过滤属于某个部门的用户
  * @method void setDepartmentId(string $DepartmentId) 设置部门ID，用于过滤属于某个部门的用户
  * @method array getFilters() 获取参数过滤数组
 
  * @method void setFilters(array $Filters) 设置参数过滤数组
+
+ * @method integer getIsCamUser() 获取是否获取cam用户, 0-否，1-是
+ * @method void setIsCamUser(integer $IsCamUser) 设置是否获取cam用户, 0-否，1-是
+ * @method array getUserFromSet() 获取用户来源，0-bh，1-ioa,不传为全部
+ * @method void setUserFromSet(array $UserFromSet) 设置用户来源，0-bh，1-ioa,不传为全部
  */
 class DescribeUsersRequest extends AbstractModel
 {
@@ -97,7 +102,7 @@ class DescribeUsersRequest extends AbstractModel
     public $AuthorizedAppAssetIdSet;
 
     /**
-     * @var array 认证方式，0 - 本地, 1 - LDAP, 2 - OAuth, 不传为全部
+     * @var array 认证方式，0 - 本地, 1 - LDAP, 2 - OAuth, 3-ioa 不传为全部
      */
     public $AuthTypeSet;
 
@@ -113,6 +118,16 @@ class DescribeUsersRequest extends AbstractModel
     public $Filters;
 
     /**
+     * @var integer 是否获取cam用户, 0-否，1-是
+     */
+    public $IsCamUser;
+
+    /**
+     * @var array 用户来源，0-bh，1-ioa,不传为全部
+     */
+    public $UserFromSet;
+
+    /**
      * @param array $IdSet 如果IdSet不为空，则忽略其他参数
      * @param string $Name 模糊查询，IdSet、UserName、Phone为空时才生效，对用户名和姓名进行模糊查询
      * @param integer $Offset 分页偏移位置，默认值为0
@@ -123,9 +138,12 @@ class DescribeUsersRequest extends AbstractModel
      * @param string $Email 邮箱，精确查询
      * @param array $AuthorizedDeviceIdSet 查询具有指定资产ID访问权限的用户
      * @param array $AuthorizedAppAssetIdSet 查询具有指定应用资产ID访问权限的用户
-     * @param array $AuthTypeSet 认证方式，0 - 本地, 1 - LDAP, 2 - OAuth, 不传为全部
+     * @param array $AuthTypeSet 认证方式，0 - 本地, 1 - LDAP, 2 - OAuth, 3-ioa 不传为全部
      * @param string $DepartmentId 部门ID，用于过滤属于某个部门的用户
      * @param array $Filters 参数过滤数组
+
+     * @param integer $IsCamUser 是否获取cam用户, 0-否，1-是
+     * @param array $UserFromSet 用户来源，0-bh，1-ioa,不传为全部
      */
     function __construct()
     {
@@ -191,6 +209,14 @@ class DescribeUsersRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("IsCamUser",$param) and $param["IsCamUser"] !== null) {
+            $this->IsCamUser = $param["IsCamUser"];
+        }
+
+        if (array_key_exists("UserFromSet",$param) and $param["UserFromSet"] !== null) {
+            $this->UserFromSet = $param["UserFromSet"];
         }
     }
 }

@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyLaunchConfigurationAttributes请求参数结构体
  *
- * @method string getLaunchConfigurationId() 获取启动配置ID
- * @method void setLaunchConfigurationId(string $LaunchConfigurationId) 设置启动配置ID
+ * @method string getLaunchConfigurationId() 获取启动配置ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 或调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。
+ * @method void setLaunchConfigurationId(string $LaunchConfigurationId) 设置启动配置ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 或调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。
  * @method string getImageId() 获取指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-8toqc6s3`。镜像类型分为四种：<br/><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br/>可通过以下方式获取可用的镜像ID：<br/><li>`公共镜像`、`自定义镜像`、`共享镜像`的镜像ID可通过登录[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查询；`服务镜像市场`的镜像ID可通过[云市场](https://market.cloud.tencent.com/list)查询。</li><li>通过调用接口 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) ，取返回信息中的`ImageId`字段。</li>
  * @method void setImageId(string $ImageId) 设置指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-8toqc6s3`。镜像类型分为四种：<br/><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br/>可通过以下方式获取可用的镜像ID：<br/><li>`公共镜像`、`自定义镜像`、`共享镜像`的镜像ID可通过登录[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查询；`服务镜像市场`的镜像ID可通过[云市场](https://market.cloud.tencent.com/list)查询。</li><li>通过调用接口 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) ，取返回信息中的`ImageId`字段。</li>
  * @method array getInstanceTypes() 获取实例类型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
-InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定多实例类型，并使原有的InstanceType失效。
+InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定多实例类型，并使原有的InstanceType失效。具体取值可通过调用接口[DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例规格描述](https://cloud.tencent.com/document/product/213/11518)。
  * @method void setInstanceTypes(array $InstanceTypes) 设置实例类型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
-InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定多实例类型，并使原有的InstanceType失效。
+InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定多实例类型，并使原有的InstanceType失效。具体取值可通过调用接口[DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例规格描述](https://cloud.tencent.com/document/product/213/11518)。
  * @method string getInstanceTypesCheckPolicy() 获取实例类型校验策略，在实际修改 InstanceTypes 时发挥作用，取值包括 ALL 和 ANY，默认取值为ANY。
 <li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。</li> 
 <li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。</li> 
@@ -104,24 +104,24 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
 新增该属性时，必须传递云服务器的实例名称，其它未传递字段会设置为默认值。
  * @method EnhancedService getEnhancedService() 获取增强服务。通过该参数可以指定是否开启云安全、云监控等服务。
  * @method void setEnhancedService(EnhancedService $EnhancedService) 设置增强服务。通过该参数可以指定是否开启云安全、云监控等服务。
- * @method string getCamRoleName() 获取CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
- * @method void setCamRoleName(string $CamRoleName) 设置CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
- * @method string getHpcClusterId() 获取高性能计算集群ID。<br>
+ * @method string getCamRoleName() 获取CAM角色名称。可通过[DescribeRoleList](https://cloud.tencent.com/document/product/598/36223)接口返回值中的roleName获取。
+ * @method void setCamRoleName(string $CamRoleName) 设置CAM角色名称。可通过[DescribeRoleList](https://cloud.tencent.com/document/product/598/36223)接口返回值中的roleName获取。
+ * @method string getHpcClusterId() 获取高性能计算集群ID。可通过调用[DescribeHpcClusters](https://cloud.tencent.com/document/product/213/83220)接口获取该参数。
 注意：此字段默认为空。
- * @method void setHpcClusterId(string $HpcClusterId) 设置高性能计算集群ID。<br>
+ * @method void setHpcClusterId(string $HpcClusterId) 设置高性能计算集群ID。可通过调用[DescribeHpcClusters](https://cloud.tencent.com/document/product/213/83220)接口获取该参数。
 注意：此字段默认为空。
  * @method IPv6InternetAccessible getIPv6InternetAccessible() 获取IPv6公网带宽相关信息设置。若新建实例包含IPv6地址，该参数可为新建实例的IPv6地址分配公网带宽。关联启动配置的伸缩组Ipv6AddressCount参数为0时，该参数不会生效。
  * @method void setIPv6InternetAccessible(IPv6InternetAccessible $IPv6InternetAccessible) 设置IPv6公网带宽相关信息设置。若新建实例包含IPv6地址，该参数可为新建实例的IPv6地址分配公网带宽。关联启动配置的伸缩组Ipv6AddressCount参数为0时，该参数不会生效。
- * @method array getDisasterRecoverGroupIds() 获取置放群组id，仅支持指定一个。
- * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) 设置置放群组id，仅支持指定一个。
+ * @method array getDisasterRecoverGroupIds() 获取置放群组id，仅支持指定一个。可通过调用[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/product/213/17810)接口获取该参数。
+ * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) 设置置放群组id，仅支持指定一个。可通过调用[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/product/213/17810)接口获取该参数。
  * @method LoginSettings getLoginSettings() 获取实例登录设置，包括密码、密钥或保持镜像的原始登录设置。<br>请注意，指定新的登录设置会覆盖原有登录设置。例如，如果您之前使用密码登录，使用该参数将登录设置修改为密钥，则原有密码被清除。
  * @method void setLoginSettings(LoginSettings $LoginSettings) 设置实例登录设置，包括密码、密钥或保持镜像的原始登录设置。<br>请注意，指定新的登录设置会覆盖原有登录设置。例如，如果您之前使用密码登录，使用该参数将登录设置修改为密钥，则原有密码被清除。
  * @method array getInstanceTags() 获取实例标签列表。通过指定该参数，可以为扩容的实例绑定标签。最多支持指定10个标签。
 该参数会覆盖原有的实例标签列表，如需新增标签，需将新标签和原有标签一并传入。
  * @method void setInstanceTags(array $InstanceTags) 设置实例标签列表。通过指定该参数，可以为扩容的实例绑定标签。最多支持指定10个标签。
 该参数会覆盖原有的实例标签列表，如需新增标签，需将新标签和原有标签一并传入。
- * @method string getImageFamily() 获取镜像族名称。
- * @method void setImageFamily(string $ImageFamily) 设置镜像族名称。
+ * @method string getImageFamily() 获取镜像族名称。可通过调用[DescribeImages](https://cloud.tencent.com/document/product/213/15715)接口获取该参数。
+ * @method void setImageFamily(string $ImageFamily) 设置镜像族名称。可通过调用[DescribeImages](https://cloud.tencent.com/document/product/213/15715)接口获取该参数。
  * @method string getDedicatedClusterId() 获取本地专用集群ID。
  * @method void setDedicatedClusterId(string $DedicatedClusterId) 设置本地专用集群ID。
  * @method Metadata getMetadata() 获取自定义metadata。
@@ -130,7 +130,7 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
 class ModifyLaunchConfigurationAttributesRequest extends AbstractModel
 {
     /**
-     * @var string 启动配置ID
+     * @var string 启动配置ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 或调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。
      */
     public $LaunchConfigurationId;
 
@@ -141,7 +141,7 @@ class ModifyLaunchConfigurationAttributesRequest extends AbstractModel
 
     /**
      * @var array 实例类型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
-InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定多实例类型，并使原有的InstanceType失效。
+InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定多实例类型，并使原有的InstanceType失效。具体取值可通过调用接口[DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例规格描述](https://cloud.tencent.com/document/product/213/11518)。
      */
     public $InstanceTypes;
 
@@ -240,12 +240,12 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
     public $EnhancedService;
 
     /**
-     * @var string CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+     * @var string CAM角色名称。可通过[DescribeRoleList](https://cloud.tencent.com/document/product/598/36223)接口返回值中的roleName获取。
      */
     public $CamRoleName;
 
     /**
-     * @var string 高性能计算集群ID。<br>
+     * @var string 高性能计算集群ID。可通过调用[DescribeHpcClusters](https://cloud.tencent.com/document/product/213/83220)接口获取该参数。
 注意：此字段默认为空。
      */
     public $HpcClusterId;
@@ -256,7 +256,7 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
     public $IPv6InternetAccessible;
 
     /**
-     * @var array 置放群组id，仅支持指定一个。
+     * @var array 置放群组id，仅支持指定一个。可通过调用[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/product/213/17810)接口获取该参数。
      */
     public $DisasterRecoverGroupIds;
 
@@ -272,7 +272,7 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
     public $InstanceTags;
 
     /**
-     * @var string 镜像族名称。
+     * @var string 镜像族名称。可通过调用[DescribeImages](https://cloud.tencent.com/document/product/213/15715)接口获取该参数。
      */
     public $ImageFamily;
 
@@ -287,10 +287,10 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
     public $Metadata;
 
     /**
-     * @param string $LaunchConfigurationId 启动配置ID
+     * @param string $LaunchConfigurationId 启动配置ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 或调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。
      * @param string $ImageId 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-8toqc6s3`。镜像类型分为四种：<br/><li>公共镜像</li><li>自定义镜像</li><li>共享镜像</li><li>服务市场镜像</li><br/>可通过以下方式获取可用的镜像ID：<br/><li>`公共镜像`、`自定义镜像`、`共享镜像`的镜像ID可通过登录[控制台](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE)查询；`服务镜像市场`的镜像ID可通过[云市场](https://market.cloud.tencent.com/list)查询。</li><li>通过调用接口 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) ，取返回信息中的`ImageId`字段。</li>
      * @param array $InstanceTypes 实例类型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
-InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定多实例类型，并使原有的InstanceType失效。
+InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定多实例类型，并使原有的InstanceType失效。具体取值可通过调用接口[DescribeInstanceTypeConfigs](https://cloud.tencent.com/document/api/213/15749)来获得最新的规格表或参见[实例规格描述](https://cloud.tencent.com/document/product/213/11518)。
      * @param string $InstanceTypesCheckPolicy 实例类型校验策略，在实际修改 InstanceTypes 时发挥作用，取值包括 ALL 和 ANY，默认取值为ANY。
 <li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。</li> 
 <li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。</li> 
@@ -329,15 +329,15 @@ InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定�
 如果用户在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 参照此字段进行设置，并传递给 CVM；如果用户未在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置，并传递给 CVM。
 新增该属性时，必须传递云服务器的实例名称，其它未传递字段会设置为默认值。
      * @param EnhancedService $EnhancedService 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。
-     * @param string $CamRoleName CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
-     * @param string $HpcClusterId 高性能计算集群ID。<br>
+     * @param string $CamRoleName CAM角色名称。可通过[DescribeRoleList](https://cloud.tencent.com/document/product/598/36223)接口返回值中的roleName获取。
+     * @param string $HpcClusterId 高性能计算集群ID。可通过调用[DescribeHpcClusters](https://cloud.tencent.com/document/product/213/83220)接口获取该参数。
 注意：此字段默认为空。
      * @param IPv6InternetAccessible $IPv6InternetAccessible IPv6公网带宽相关信息设置。若新建实例包含IPv6地址，该参数可为新建实例的IPv6地址分配公网带宽。关联启动配置的伸缩组Ipv6AddressCount参数为0时，该参数不会生效。
-     * @param array $DisasterRecoverGroupIds 置放群组id，仅支持指定一个。
+     * @param array $DisasterRecoverGroupIds 置放群组id，仅支持指定一个。可通过调用[DescribeDisasterRecoverGroups](https://cloud.tencent.com/document/product/213/17810)接口获取该参数。
      * @param LoginSettings $LoginSettings 实例登录设置，包括密码、密钥或保持镜像的原始登录设置。<br>请注意，指定新的登录设置会覆盖原有登录设置。例如，如果您之前使用密码登录，使用该参数将登录设置修改为密钥，则原有密码被清除。
      * @param array $InstanceTags 实例标签列表。通过指定该参数，可以为扩容的实例绑定标签。最多支持指定10个标签。
 该参数会覆盖原有的实例标签列表，如需新增标签，需将新标签和原有标签一并传入。
-     * @param string $ImageFamily 镜像族名称。
+     * @param string $ImageFamily 镜像族名称。可通过调用[DescribeImages](https://cloud.tencent.com/document/product/213/15715)接口获取该参数。
      * @param string $DedicatedClusterId 本地专用集群ID。
      * @param Metadata $Metadata 自定义metadata。
      */

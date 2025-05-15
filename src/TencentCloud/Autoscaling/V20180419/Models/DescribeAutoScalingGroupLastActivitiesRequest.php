@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAutoScalingGroupLastActivities请求参数结构体
  *
- * @method array getAutoScalingGroupIds() 获取伸缩组ID列表
- * @method void setAutoScalingGroupIds(array $AutoScalingGroupIds) 设置伸缩组ID列表
+ * @method array getAutoScalingGroupIds() 获取伸缩组ID列表。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。
+ * @method void setAutoScalingGroupIds(array $AutoScalingGroupIds) 设置伸缩组ID列表。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。
  * @method boolean getExcludeCancelledActivity() 获取查询时排除取消类型活动。默认值为 false，表示不排除取消类型活动。
  * @method void setExcludeCancelledActivity(boolean $ExcludeCancelledActivity) 设置查询时排除取消类型活动。默认值为 false，表示不排除取消类型活动。
  */
 class DescribeAutoScalingGroupLastActivitiesRequest extends AbstractModel
 {
     /**
-     * @var array 伸缩组ID列表
+     * @var array 伸缩组ID列表。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。
      */
     public $AutoScalingGroupIds;
 
@@ -38,7 +38,7 @@ class DescribeAutoScalingGroupLastActivitiesRequest extends AbstractModel
     public $ExcludeCancelledActivity;
 
     /**
-     * @param array $AutoScalingGroupIds 伸缩组ID列表
+     * @param array $AutoScalingGroupIds 伸缩组ID列表。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。
      * @param boolean $ExcludeCancelledActivity 查询时排除取消类型活动。默认值为 false，表示不排除取消类型活动。
      */
     function __construct()

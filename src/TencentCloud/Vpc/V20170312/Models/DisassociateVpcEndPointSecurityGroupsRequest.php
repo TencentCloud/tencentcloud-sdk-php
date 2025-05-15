@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DisassociateVpcEndPointSecurityGroups请求参数结构体
  *
- * @method array getSecurityGroupIds() 获取安全组ID数组。
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组ID数组。
- * @method string getEndPointId() 获取终端节点ID。
- * @method void setEndPointId(string $EndPointId) 设置终端节点ID。
+ * @method array getSecurityGroupIds() 获取安全组ID数组。可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808)接口获取。
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组ID数组。可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808)接口获取。
+ * @method string getEndPointId() 获取终端节点ID。可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679) 获取。
+ * @method void setEndPointId(string $EndPointId) 设置终端节点ID。可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679) 获取。
  */
 class DisassociateVpcEndPointSecurityGroupsRequest extends AbstractModel
 {
     /**
-     * @var array 安全组ID数组。
+     * @var array 安全组ID数组。可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808)接口获取。
      */
     public $SecurityGroupIds;
 
     /**
-     * @var string 终端节点ID。
+     * @var string 终端节点ID。可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679) 获取。
      */
     public $EndPointId;
 
     /**
-     * @param array $SecurityGroupIds 安全组ID数组。
-     * @param string $EndPointId 终端节点ID。
+     * @param array $SecurityGroupIds 安全组ID数组。可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808)接口获取。
+     * @param string $EndPointId 终端节点ID。可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679) 获取。
      */
     function __construct()
     {

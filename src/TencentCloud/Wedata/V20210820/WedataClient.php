@@ -96,6 +96,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DescribeApproveTypeListResponse DescribeApproveTypeList(Models\DescribeApproveTypeListRequest $req) 获取审批分类列表
  * @method Models\DescribeBaseBizCatalogsResponse DescribeBaseBizCatalogs(Models\DescribeBaseBizCatalogsRequest $req) 数据地图-信息配置 数据类目列表
  * @method Models\DescribeBatchOperateTaskResponse DescribeBatchOperateTask(Models\DescribeBatchOperateTaskRequest $req) 批量操作页面获取任务列表
+ * @method Models\DescribeCodeTemplateDetailResponse DescribeCodeTemplateDetail(Models\DescribeCodeTemplateDetailRequest $req) 查询代码模版具体详情
  * @method Models\DescribeColumnLineageResponse DescribeColumnLineage(Models\DescribeColumnLineageRequest $req) 列出字段血缘信息
  * @method Models\DescribeColumnsMetaResponse DescribeColumnsMeta(Models\DescribeColumnsMetaRequest $req) 查询表的所有列元数据
  * @method Models\DescribeDataCheckStatResponse DescribeDataCheckStat(Models\DescribeDataCheckStatRequest $req) 数据质量的概览页面数据监测情况接口
@@ -232,6 +233,7 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
  * @method Models\FreezeOpsTasksResponse FreezeOpsTasks(Models\FreezeOpsTasksRequest $req) 任务运维-批量暂停任务
  * @method Models\FreezeTasksByWorkflowIdsResponse FreezeTasksByWorkflowIds(Models\FreezeTasksByWorkflowIdsRequest $req) 暂停工作流下的所有任务
  * @method Models\GenHiveTableDDLSqlResponse GenHiveTableDDLSql(Models\GenHiveTableDDLSqlRequest $req) 生成建hive表的sql
+ * @method Models\GetBatchDetailErrorLogResponse GetBatchDetailErrorLog(Models\GetBatchDetailErrorLogRequest $req) 获取批量操作错误日志
  * @method Models\GetCosTokenResponse GetCosToken(Models\GetCosTokenRequest $req) 获取cos token
  * @method Models\GetFileInfoResponse GetFileInfo(Models\GetFileInfoRequest $req) 开发空间-获取数据开发脚本信息
  * @method Models\GetInstanceLogResponse GetInstanceLog(Models\GetInstanceLogRequest $req) 获取实例列表
@@ -242,6 +244,7 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
  * @method Models\JudgeResourceFileResponse JudgeResourceFile(Models\JudgeResourceFileRequest $req) 资源管理-判断资源文件是否存在
  * @method Models\KillOpsMakePlanInstancesResponse KillOpsMakePlanInstances(Models\KillOpsMakePlanInstancesRequest $req) 按补录计划批量终止实例。
  * @method Models\KillScheduleInstancesResponse KillScheduleInstances(Models\KillScheduleInstancesRequest $req) 批量终止实例
+ * @method Models\ListBatchDetailResponse ListBatchDetail(Models\ListBatchDetailRequest $req) 获取批量操作详情列表
  * @method Models\ListInstancesResponse ListInstances(Models\ListInstancesRequest $req) 获取实例列表
  * @method Models\LockIntegrationTaskResponse LockIntegrationTask(Models\LockIntegrationTaskRequest $req) 锁定集成任务
  * @method Models\ModifyApproveStatusResponse ModifyApproveStatus(Models\ModifyApproveStatusRequest $req) 修改审批单状态

@@ -20,42 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CompleteLifecycleAction请求参数结构体
  *
- * @method string getLifecycleHookId() 获取生命周期挂钩ID
- * @method void setLifecycleHookId(string $LifecycleHookId) 设置生命周期挂钩ID
- * @method string getLifecycleActionResult() 获取生命周期动作的结果，取值范围为“CONTINUE”或“ABANDON”
- * @method void setLifecycleActionResult(string $LifecycleActionResult) 设置生命周期动作的结果，取值范围为“CONTINUE”或“ABANDON”
- * @method string getInstanceId() 获取实例ID，“InstanceId”和“LifecycleActionToken”必须填充其中一个
- * @method void setInstanceId(string $InstanceId) 设置实例ID，“InstanceId”和“LifecycleActionToken”必须填充其中一个
- * @method string getLifecycleActionToken() 获取“InstanceId”和“LifecycleActionToken”必须填充其中一个
- * @method void setLifecycleActionToken(string $LifecycleActionToken) 设置“InstanceId”和“LifecycleActionToken”必须填充其中一个
+ * @method string getLifecycleHookId() 获取生命周期挂钩ID。可以通过调用接口 [DescribeLifecycleHooks](https://cloud.tencent.com/document/api/377/34452) ，取返回信息中的 LifecycleHookId 获取生命周期挂钩ID。
+ * @method void setLifecycleHookId(string $LifecycleHookId) 设置生命周期挂钩ID。可以通过调用接口 [DescribeLifecycleHooks](https://cloud.tencent.com/document/api/377/34452) ，取返回信息中的 LifecycleHookId 获取生命周期挂钩ID。
+ * @method string getLifecycleActionResult() 获取生命周期动作的结果，取值范围如下：
+<li>CONTINUE: 默认值，表示继续执行扩缩容活动</li>
+<li>ABANDON: 针对扩容挂钩，挂钩超时或 LifecycleCommand 执行失败的 CVM 实例会直接释放或移出；而针对缩容挂钩，会继续执行缩容活动。</li>
+ * @method void setLifecycleActionResult(string $LifecycleActionResult) 设置生命周期动作的结果，取值范围如下：
+<li>CONTINUE: 默认值，表示继续执行扩缩容活动</li>
+<li>ABANDON: 针对扩容挂钩，挂钩超时或 LifecycleCommand 执行失败的 CVM 实例会直接释放或移出；而针对缩容挂钩，会继续执行缩容活动。</li>
+ * @method string getInstanceId() 获取实例ID，`InstanceId` 和 `LifecycleActionToken` 参数必须填写其中一个。可通过登录 [控制台](https://console.cloud.tencent.com/cvm/index) 或调用接口 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) ，取返回信息中的 `InstanceId` 获取实例ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例ID，`InstanceId` 和 `LifecycleActionToken` 参数必须填写其中一个。可通过登录 [控制台](https://console.cloud.tencent.com/cvm/index) 或调用接口 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) ，取返回信息中的 `InstanceId` 获取实例ID。
+ * @method string getLifecycleActionToken() 获取生命周期动作令牌，`InstanceId` 和 `LifecycleActionToken` 必须填充其中一个。
+该参数获取方式如下：配置 `NotificationTarget ` 参数的挂钩被触发时，向  `NotificationTarget `  参数中指定的消息队列投递包含令牌的消息，消息队列的消费者可从消息中获取令牌。
+ * @method void setLifecycleActionToken(string $LifecycleActionToken) 设置生命周期动作令牌，`InstanceId` 和 `LifecycleActionToken` 必须填充其中一个。
+该参数获取方式如下：配置 `NotificationTarget ` 参数的挂钩被触发时，向  `NotificationTarget `  参数中指定的消息队列投递包含令牌的消息，消息队列的消费者可从消息中获取令牌。
  */
 class CompleteLifecycleActionRequest extends AbstractModel
 {
     /**
-     * @var string 生命周期挂钩ID
+     * @var string 生命周期挂钩ID。可以通过调用接口 [DescribeLifecycleHooks](https://cloud.tencent.com/document/api/377/34452) ，取返回信息中的 LifecycleHookId 获取生命周期挂钩ID。
      */
     public $LifecycleHookId;
 
     /**
-     * @var string 生命周期动作的结果，取值范围为“CONTINUE”或“ABANDON”
+     * @var string 生命周期动作的结果，取值范围如下：
+<li>CONTINUE: 默认值，表示继续执行扩缩容活动</li>
+<li>ABANDON: 针对扩容挂钩，挂钩超时或 LifecycleCommand 执行失败的 CVM 实例会直接释放或移出；而针对缩容挂钩，会继续执行缩容活动。</li>
      */
     public $LifecycleActionResult;
 
     /**
-     * @var string 实例ID，“InstanceId”和“LifecycleActionToken”必须填充其中一个
+     * @var string 实例ID，`InstanceId` 和 `LifecycleActionToken` 参数必须填写其中一个。可通过登录 [控制台](https://console.cloud.tencent.com/cvm/index) 或调用接口 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) ，取返回信息中的 `InstanceId` 获取实例ID。
      */
     public $InstanceId;
 
     /**
-     * @var string “InstanceId”和“LifecycleActionToken”必须填充其中一个
+     * @var string 生命周期动作令牌，`InstanceId` 和 `LifecycleActionToken` 必须填充其中一个。
+该参数获取方式如下：配置 `NotificationTarget ` 参数的挂钩被触发时，向  `NotificationTarget `  参数中指定的消息队列投递包含令牌的消息，消息队列的消费者可从消息中获取令牌。
      */
     public $LifecycleActionToken;
 
     /**
-     * @param string $LifecycleHookId 生命周期挂钩ID
-     * @param string $LifecycleActionResult 生命周期动作的结果，取值范围为“CONTINUE”或“ABANDON”
-     * @param string $InstanceId 实例ID，“InstanceId”和“LifecycleActionToken”必须填充其中一个
-     * @param string $LifecycleActionToken “InstanceId”和“LifecycleActionToken”必须填充其中一个
+     * @param string $LifecycleHookId 生命周期挂钩ID。可以通过调用接口 [DescribeLifecycleHooks](https://cloud.tencent.com/document/api/377/34452) ，取返回信息中的 LifecycleHookId 获取生命周期挂钩ID。
+     * @param string $LifecycleActionResult 生命周期动作的结果，取值范围如下：
+<li>CONTINUE: 默认值，表示继续执行扩缩容活动</li>
+<li>ABANDON: 针对扩容挂钩，挂钩超时或 LifecycleCommand 执行失败的 CVM 实例会直接释放或移出；而针对缩容挂钩，会继续执行缩容活动。</li>
+     * @param string $InstanceId 实例ID，`InstanceId` 和 `LifecycleActionToken` 参数必须填写其中一个。可通过登录 [控制台](https://console.cloud.tencent.com/cvm/index) 或调用接口 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) ，取返回信息中的 `InstanceId` 获取实例ID。
+     * @param string $LifecycleActionToken 生命周期动作令牌，`InstanceId` 和 `LifecycleActionToken` 必须填充其中一个。
+该参数获取方式如下：配置 `NotificationTarget ` 参数的挂钩被触发时，向  `NotificationTarget `  参数中指定的消息队列投递包含令牌的消息，消息队列的消费者可从消息中获取令牌。
      */
     function __construct()
     {

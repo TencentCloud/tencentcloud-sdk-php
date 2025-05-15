@@ -66,12 +66,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCause(string $Cause) 设置伸缩活动起因。
  * @method string getDescription() 获取伸缩活动描述。
  * @method void setDescription(string $Description) 设置伸缩活动描述。
- * @method string getStartTime() 获取伸缩活动开始时间。
- * @method void setStartTime(string $StartTime) 设置伸缩活动开始时间。
- * @method string getEndTime() 获取伸缩活动结束时间。
- * @method void setEndTime(string $EndTime) 设置伸缩活动结束时间。
- * @method string getCreatedTime() 获取伸缩活动创建时间。
- * @method void setCreatedTime(string $CreatedTime) 设置伸缩活动创建时间。
+ * @method string getStartTime() 获取伸缩活动开始时间，为 `UTC` 标准时间。
+ * @method void setStartTime(string $StartTime) 设置伸缩活动开始时间，为 `UTC` 标准时间。
+ * @method string getEndTime() 获取伸缩活动结束时间，为 `UTC` 标准时间。
+ * @method void setEndTime(string $EndTime) 设置伸缩活动结束时间，为 `UTC` 标准时间。
+ * @method string getCreatedTime() 获取伸缩活动创建时间，为 `UTC` 标准时间。
+ * @method void setCreatedTime(string $CreatedTime) 设置伸缩活动创建时间，为 `UTC` 标准时间。
  * @method array getActivityRelatedInstanceSet() 获取该参数已废弃，请勿使用。
  * @method void setActivityRelatedInstanceSet(array $ActivityRelatedInstanceSet) 设置该参数已废弃，请勿使用。
  * @method string getStatusMessageSimplified() 获取伸缩活动状态简要描述。
@@ -139,17 +139,17 @@ class Activity extends AbstractModel
     public $Description;
 
     /**
-     * @var string 伸缩活动开始时间。
+     * @var string 伸缩活动开始时间，为 `UTC` 标准时间。
      */
     public $StartTime;
 
     /**
-     * @var string 伸缩活动结束时间。
+     * @var string 伸缩活动结束时间，为 `UTC` 标准时间。
      */
     public $EndTime;
 
     /**
-     * @var string 伸缩活动创建时间。
+     * @var string 伸缩活动创建时间，为 `UTC` 标准时间。
      */
     public $CreatedTime;
 
@@ -208,9 +208,9 @@ class Activity extends AbstractModel
      * @param string $StatusMessage 伸缩活动状态描述。
      * @param string $Cause 伸缩活动起因。
      * @param string $Description 伸缩活动描述。
-     * @param string $StartTime 伸缩活动开始时间。
-     * @param string $EndTime 伸缩活动结束时间。
-     * @param string $CreatedTime 伸缩活动创建时间。
+     * @param string $StartTime 伸缩活动开始时间，为 `UTC` 标准时间。
+     * @param string $EndTime 伸缩活动结束时间，为 `UTC` 标准时间。
+     * @param string $CreatedTime 伸缩活动创建时间，为 `UTC` 标准时间。
      * @param array $ActivityRelatedInstanceSet 该参数已废弃，请勿使用。
      * @param string $StatusMessageSimplified 伸缩活动状态简要描述。
      * @param array $LifecycleActionResultSet 伸缩活动中生命周期挂钩的执行结果。

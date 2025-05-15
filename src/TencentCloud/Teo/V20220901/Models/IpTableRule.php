@@ -81,9 +81,7 @@ use TencentCloud\Common\AbstractModel;
 <li> off：未启用。</li>
 当入参缺省时，按 on 取值。
  * @method string getRuleName() 获取规则名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleName(string $RuleName) 设置规则名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMatchContent() 获取匹配内容。支持多值输入。
 <li>当输入多个匹配值时，请使用英文逗号分隔；</li>
 <li>当 MatchFrom 为 ua 时，不支持多值输入；</li>
@@ -151,7 +149,6 @@ class IpTableRule extends AbstractModel
 
     /**
      * @var string 规则名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleName;
 
@@ -195,7 +192,6 @@ class IpTableRule extends AbstractModel
 <li> off：未启用。</li>
 当入参缺省时，按 on 取值。
      * @param string $RuleName 规则名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MatchContent 匹配内容。支持多值输入。
 <li>当输入多个匹配值时，请使用英文逗号分隔；</li>
 <li>当 MatchFrom 为 ua 时，不支持多值输入；</li>

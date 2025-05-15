@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskInstanceIndexes(array $TaskInstanceIndexes) 设置任务实例集合；与Offset不能同时指定。
  * @method integer getOffset() 获取起始任务实例。与TaskInstanceIndexes参数不能同时指定。
  * @method void setOffset(integer $Offset) 设置起始任务实例。与TaskInstanceIndexes参数不能同时指定。
- * @method integer getLimit() 获取最大任务实例数, 最大值为10.
- * @method void setLimit(integer $Limit) 设置最大任务实例数, 最大值为10.
+ * @method integer getLimit() 获取最大任务实例数；默认值为5， 最大值为10。
+ * @method void setLimit(integer $Limit) 设置最大任务实例数；默认值为5， 最大值为10。
  */
 class DescribeTaskLogsRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class DescribeTaskLogsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 最大任务实例数, 最大值为10.
+     * @var integer 最大任务实例数；默认值为5， 最大值为10。
      */
     public $Limit;
 
@@ -63,7 +63,7 @@ class DescribeTaskLogsRequest extends AbstractModel
      * @param string $TaskName 任务名称
      * @param array $TaskInstanceIndexes 任务实例集合；与Offset不能同时指定。
      * @param integer $Offset 起始任务实例。与TaskInstanceIndexes参数不能同时指定。
-     * @param integer $Limit 最大任务实例数, 最大值为10.
+     * @param integer $Limit 最大任务实例数；默认值为5， 最大值为10。
      */
     function __construct()
     {

@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateVpcEndPointServiceWhiteList请求参数结构体
  *
- * @method string getUserUin() 获取UIN。
- * @method void setUserUin(string $UserUin) 设置UIN。
- * @method string getEndPointServiceId() 获取终端节点服务ID。
- * @method void setEndPointServiceId(string $EndPointServiceId) 设置终端节点服务ID。
- * @method string getDescription() 获取白名单描述。
- * @method void setDescription(string $Description) 设置白名单描述。
+ * @method string getUserUin() 获取UIN。腾讯云账号中心控制台获取。
+ * @method void setUserUin(string $UserUin) 设置UIN。腾讯云账号中心控制台获取。
+ * @method string getEndPointServiceId() 获取终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+ * @method void setEndPointServiceId(string $EndPointServiceId) 设置终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+ * @method string getDescription() 获取白名单描述。长度不超过60个字符。
+ * @method void setDescription(string $Description) 设置白名单描述。长度不超过60个字符。
  */
 class CreateVpcEndPointServiceWhiteListRequest extends AbstractModel
 {
     /**
-     * @var string UIN。
+     * @var string UIN。腾讯云账号中心控制台获取。
      */
     public $UserUin;
 
     /**
-     * @var string 终端节点服务ID。
+     * @var string 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
      */
     public $EndPointServiceId;
 
     /**
-     * @var string 白名单描述。
+     * @var string 白名单描述。长度不超过60个字符。
      */
     public $Description;
 
     /**
-     * @param string $UserUin UIN。
-     * @param string $EndPointServiceId 终端节点服务ID。
-     * @param string $Description 白名单描述。
+     * @param string $UserUin UIN。腾讯云账号中心控制台获取。
+     * @param string $EndPointServiceId 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+     * @param string $Description 白名单描述。长度不超过60个字符。
      */
     function __construct()
     {

@@ -46,7 +46,7 @@ use TencentCloud\Common\AbstractModel;
 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
  * @method array getFlowApproverInfos() 获取流程签署人列表，其中结构体的ApproverType必传。
 若为个人签署方或saas企业签署方，则Name，Mobile必传。OrganizationName 传对应企业名称。
-若为子客企业签署方则需传OpenId、OrganizationOpenId，其他可不传。
+若为子客企业签署方则需传OpenId、OrganizationOpenId，OrganizationName 其他可不传。（如果对应OrganizationOpenId 子客已经认证激活了，则可以省去OrganizationName）
 
 此结构体和发起接口参与方结构体复用，除了上述参数外，可传递的参数有：
 1. RecipientId: 发起合同会返回，可以直接用于指定需要生成链接的签署方。
@@ -59,7 +59,7 @@ use TencentCloud\Common\AbstractModel;
 `2. 生成发起方预览链接时，该字段（FlowApproverInfos）传空或者不传`
  * @method void setFlowApproverInfos(array $FlowApproverInfos) 设置流程签署人列表，其中结构体的ApproverType必传。
 若为个人签署方或saas企业签署方，则Name，Mobile必传。OrganizationName 传对应企业名称。
-若为子客企业签署方则需传OpenId、OrganizationOpenId，其他可不传。
+若为子客企业签署方则需传OpenId、OrganizationOpenId，OrganizationName 其他可不传。（如果对应OrganizationOpenId 子客已经认证激活了，则可以省去OrganizationName）
 
 此结构体和发起接口参与方结构体复用，除了上述参数外，可传递的参数有：
 1. RecipientId: 发起合同会返回，可以直接用于指定需要生成链接的签署方。
@@ -116,7 +116,7 @@ class ChannelCreateFlowSignUrlRequest extends AbstractModel
     /**
      * @var array 流程签署人列表，其中结构体的ApproverType必传。
 若为个人签署方或saas企业签署方，则Name，Mobile必传。OrganizationName 传对应企业名称。
-若为子客企业签署方则需传OpenId、OrganizationOpenId，其他可不传。
+若为子客企业签署方则需传OpenId、OrganizationOpenId，OrganizationName 其他可不传。（如果对应OrganizationOpenId 子客已经认证激活了，则可以省去OrganizationName）
 
 此结构体和发起接口参与方结构体复用，除了上述参数外，可传递的参数有：
 1. RecipientId: 发起合同会返回，可以直接用于指定需要生成链接的签署方。
@@ -173,7 +173,7 @@ class ChannelCreateFlowSignUrlRequest extends AbstractModel
 可登录腾讯电子签控制台，在 "合同"->"合同中心" 中查看某个合同的FlowId(在页面中展示为合同ID)。
      * @param array $FlowApproverInfos 流程签署人列表，其中结构体的ApproverType必传。
 若为个人签署方或saas企业签署方，则Name，Mobile必传。OrganizationName 传对应企业名称。
-若为子客企业签署方则需传OpenId、OrganizationOpenId，其他可不传。
+若为子客企业签署方则需传OpenId、OrganizationOpenId，OrganizationName 其他可不传。（如果对应OrganizationOpenId 子客已经认证激活了，则可以省去OrganizationName）
 
 此结构体和发起接口参与方结构体复用，除了上述参数外，可传递的参数有：
 1. RecipientId: 发起合同会返回，可以直接用于指定需要生成链接的签署方。

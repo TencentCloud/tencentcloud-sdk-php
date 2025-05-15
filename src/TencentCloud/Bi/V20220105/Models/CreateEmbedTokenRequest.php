@@ -126,6 +126,8 @@ Operator 目前支持
 300 单用户多token, 一次创建多个token，UserCorpId和UserId 必填
  * @method integer getTokenNum() 获取一次创建的token数
  * @method void setTokenNum(integer $TokenNum) 设置一次创建的token数
+ * @method string getConfigParam() 获取嵌出显示配置，目前为ChatBI嵌出场景用，TableFilter表示数据表列表过滤，SqlView表示sql查看功能
+ * @method void setConfigParam(string $ConfigParam) 设置嵌出显示配置，目前为ChatBI嵌出场景用，TableFilter表示数据表列表过滤，SqlView表示sql查看功能
  */
 class CreateEmbedTokenRequest extends AbstractModel
 {
@@ -231,6 +233,11 @@ Operator 目前支持
     public $TokenNum;
 
     /**
+     * @var string 嵌出显示配置，目前为ChatBI嵌出场景用，TableFilter表示数据表列表过滤，SqlView表示sql查看功能
+     */
+    public $ConfigParam;
+
+    /**
      * @param integer $ProjectId 分享项目id
      * @param integer $PageId 分享页面id，嵌出看板时此为空值0，ChatBI嵌出时不传
      * @param string $Intention embed表示页面看板嵌出，chatBIEmbed表示ChatBI嵌出
@@ -284,6 +291,7 @@ Operator 目前支持
 200 单用户单token , 一次创建一个token， UserCorpId和UserId 必填
 300 单用户多token, 一次创建多个token，UserCorpId和UserId 必填
      * @param integer $TokenNum 一次创建的token数
+     * @param string $ConfigParam 嵌出显示配置，目前为ChatBI嵌出场景用，TableFilter表示数据表列表过滤，SqlView表示sql查看功能
      */
     function __construct()
     {
@@ -344,6 +352,10 @@ Operator 目前支持
 
         if (array_key_exists("TokenNum",$param) and $param["TokenNum"] !== null) {
             $this->TokenNum = $param["TokenNum"];
+        }
+
+        if (array_key_exists("ConfigParam",$param) and $param["ConfigParam"] !== null) {
+            $this->ConfigParam = $param["ConfigParam"];
         }
     }
 }

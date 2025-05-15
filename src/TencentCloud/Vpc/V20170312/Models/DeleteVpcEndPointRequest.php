@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteVpcEndPoint请求参数结构体
  *
- * @method string getEndPointId() 获取终端节点ID。
- * @method void setEndPointId(string $EndPointId) 设置终端节点ID。
+ * @method string getEndPointId() 获取终端节点ID。可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679) 获取。
+ * @method void setEndPointId(string $EndPointId) 设置终端节点ID。可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679) 获取。
  * @method string getIpAddressType() 获取协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
  * @method void setIpAddressType(string $IpAddressType) 设置协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
  */
 class DeleteVpcEndPointRequest extends AbstractModel
 {
     /**
-     * @var string 终端节点ID。
+     * @var string 终端节点ID。可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679) 获取。
      */
     public $EndPointId;
 
@@ -38,7 +38,7 @@ class DeleteVpcEndPointRequest extends AbstractModel
     public $IpAddressType;
 
     /**
-     * @param string $EndPointId 终端节点ID。
+     * @param string $EndPointId 终端节点ID。可通过[DescribeVpcEndPoint](https://cloud.tencent.com/document/product/215/54679) 获取。
      * @param string $IpAddressType 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
      */
     function __construct()

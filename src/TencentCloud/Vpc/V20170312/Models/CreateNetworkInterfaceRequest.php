@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateNetworkInterface请求参数结构体
  *
- * @method string getVpcId() 获取VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
- * @method void setVpcId(string $VpcId) 设置VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
+ * @method string getVpcId() 获取VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
+ * @method void setVpcId(string $VpcId) 设置VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
  * @method string getNetworkInterfaceName() 获取弹性网卡名称，最大长度不能超过60个字节。
  * @method void setNetworkInterfaceName(string $NetworkInterfaceName) 设置弹性网卡名称，最大长度不能超过60个字节。
  * @method string getSubnetId() 获取弹性网卡所在的子网实例ID，例如：subnet-0ap8nwca。可通过[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)接口获取。
@@ -52,7 +52,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateNetworkInterfaceRequest extends AbstractModel
 {
     /**
-     * @var string VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
+     * @var string VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
      */
     public $VpcId;
 
@@ -114,7 +114,7 @@ class CreateNetworkInterfaceRequest extends AbstractModel
     public $ClientToken;
 
     /**
-     * @param string $VpcId VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
+     * @param string $VpcId VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
      * @param string $NetworkInterfaceName 弹性网卡名称，最大长度不能超过60个字节。
      * @param string $SubnetId 弹性网卡所在的子网实例ID，例如：subnet-0ap8nwca。可通过[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)接口获取。
      * @param string $NetworkInterfaceDescription 弹性网卡描述，可任意命名，但不得超过60个字符。

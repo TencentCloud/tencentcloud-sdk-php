@@ -32,7 +32,6 @@ use TencentCloud\Tbaas\V20180416\Models as Models;
  * @method Models\GetBlockTransactionListForUserResponse GetBlockTransactionListForUser(Models\GetBlockTransactionListForUserRequest $req) 获取区块内交易列表
  * @method Models\GetClusterSummaryResponse GetClusterSummary(Models\GetClusterSummaryRequest $req) 获取区块链网络概要
  * @method Models\GetInvokeTxResponse GetInvokeTx(Models\GetInvokeTxRequest $req) Invoke异步调用结果查询
- * @method Models\GetLatesdTransactionListResponse GetLatesdTransactionList(Models\GetLatesdTransactionListRequest $req) 获取最新交易列表（已废弃）
  * @method Models\GetLatestTransactionListResponse GetLatestTransactionList(Models\GetLatestTransactionListRequest $req) 获取fabric最新交易列表
  * @method Models\GetTransactionDetailForUserResponse GetTransactionDetailForUser(Models\GetTransactionDetailForUserRequest $req) 获取交易的详情
  * @method Models\InvokeResponse Invoke(Models\InvokeRequest $req) 新增交易

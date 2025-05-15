@@ -24,16 +24,38 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置伸缩组ID。
  * @method array getNotificationUserGroupIds() 获取用户组ID列表。
  * @method void setNotificationUserGroupIds(array $NotificationUserGroupIds) 设置用户组ID列表。
- * @method array getNotificationTypes() 获取通知事件列表。
- * @method void setNotificationTypes(array $NotificationTypes) 设置通知事件列表。
+ * @method array getNotificationTypes() 获取通知事件列表。取值范围如下:
+<li>SCALE_OUT_SUCCESSFUL：扩容成功</li>
+<li>SCALE_OUT_FAILED：扩容失败</li>
+<li>SCALE_IN_SUCCESSFUL：缩容成功</li>
+<li>SCALE_IN_FAILED：缩容失败</li>
+<li>REPLACE_UNHEALTHY_INSTANCE_SUCCESSFUL：替换不健康子机成功</li>
+<li>REPLACE_UNHEALTHY_INSTANCE_FAILED：替换不健康子机失败</li>
+ * @method void setNotificationTypes(array $NotificationTypes) 设置通知事件列表。取值范围如下:
+<li>SCALE_OUT_SUCCESSFUL：扩容成功</li>
+<li>SCALE_OUT_FAILED：扩容失败</li>
+<li>SCALE_IN_SUCCESSFUL：缩容成功</li>
+<li>SCALE_IN_FAILED：缩容失败</li>
+<li>REPLACE_UNHEALTHY_INSTANCE_SUCCESSFUL：替换不健康子机成功</li>
+<li>REPLACE_UNHEALTHY_INSTANCE_FAILED：替换不健康子机失败</li>
  * @method string getAutoScalingNotificationId() 获取事件通知ID。
  * @method void setAutoScalingNotificationId(string $AutoScalingNotificationId) 设置事件通知ID。
- * @method string getTargetType() 获取通知接收端类型。
- * @method void setTargetType(string $TargetType) 设置通知接收端类型。
- * @method string getQueueName() 获取CMQ 队列名。
- * @method void setQueueName(string $QueueName) 设置CMQ 队列名。
- * @method string getTopicName() 获取CMQ 主题名。
- * @method void setTopicName(string $TopicName) 设置CMQ 主题名。
+ * @method string getTargetType() 获取通知接收端类型。取值范围如下：
+USER_GROUP：用户组
+TDMQ_CMQ_TOPIC：TDMQ CMQ 主题
+TDMQ_CMQ_QUEUE：TDMQ CMQ 队列
+CMQ_QUEUE：CMQ 队列，[CMQ 接口已下线](https://cloud.tencent.com/document/product/1496/83970)，已无法选用
+CMQ_TOPIC：CMQ 主题，[CMQ 接口已下线](https://cloud.tencent.com/document/product/1496/83970)，已无法选用
+ * @method void setTargetType(string $TargetType) 设置通知接收端类型。取值范围如下：
+USER_GROUP：用户组
+TDMQ_CMQ_TOPIC：TDMQ CMQ 主题
+TDMQ_CMQ_QUEUE：TDMQ CMQ 队列
+CMQ_QUEUE：CMQ 队列，[CMQ 接口已下线](https://cloud.tencent.com/document/product/1496/83970)，已无法选用
+CMQ_TOPIC：CMQ 主题，[CMQ 接口已下线](https://cloud.tencent.com/document/product/1496/83970)，已无法选用
+ * @method string getQueueName() 获取TDMQ CMQ 队列名。
+ * @method void setQueueName(string $QueueName) 设置TDMQ CMQ 队列名。
+ * @method string getTopicName() 获取TDMQ CMQ 主题名。
+ * @method void setTopicName(string $TopicName) 设置TDMQ CMQ 主题名。
  */
 class AutoScalingNotification extends AbstractModel
 {
@@ -48,7 +70,13 @@ class AutoScalingNotification extends AbstractModel
     public $NotificationUserGroupIds;
 
     /**
-     * @var array 通知事件列表。
+     * @var array 通知事件列表。取值范围如下:
+<li>SCALE_OUT_SUCCESSFUL：扩容成功</li>
+<li>SCALE_OUT_FAILED：扩容失败</li>
+<li>SCALE_IN_SUCCESSFUL：缩容成功</li>
+<li>SCALE_IN_FAILED：缩容失败</li>
+<li>REPLACE_UNHEALTHY_INSTANCE_SUCCESSFUL：替换不健康子机成功</li>
+<li>REPLACE_UNHEALTHY_INSTANCE_FAILED：替换不健康子机失败</li>
      */
     public $NotificationTypes;
 
@@ -58,28 +86,44 @@ class AutoScalingNotification extends AbstractModel
     public $AutoScalingNotificationId;
 
     /**
-     * @var string 通知接收端类型。
+     * @var string 通知接收端类型。取值范围如下：
+USER_GROUP：用户组
+TDMQ_CMQ_TOPIC：TDMQ CMQ 主题
+TDMQ_CMQ_QUEUE：TDMQ CMQ 队列
+CMQ_QUEUE：CMQ 队列，[CMQ 接口已下线](https://cloud.tencent.com/document/product/1496/83970)，已无法选用
+CMQ_TOPIC：CMQ 主题，[CMQ 接口已下线](https://cloud.tencent.com/document/product/1496/83970)，已无法选用
      */
     public $TargetType;
 
     /**
-     * @var string CMQ 队列名。
+     * @var string TDMQ CMQ 队列名。
      */
     public $QueueName;
 
     /**
-     * @var string CMQ 主题名。
+     * @var string TDMQ CMQ 主题名。
      */
     public $TopicName;
 
     /**
      * @param string $AutoScalingGroupId 伸缩组ID。
      * @param array $NotificationUserGroupIds 用户组ID列表。
-     * @param array $NotificationTypes 通知事件列表。
+     * @param array $NotificationTypes 通知事件列表。取值范围如下:
+<li>SCALE_OUT_SUCCESSFUL：扩容成功</li>
+<li>SCALE_OUT_FAILED：扩容失败</li>
+<li>SCALE_IN_SUCCESSFUL：缩容成功</li>
+<li>SCALE_IN_FAILED：缩容失败</li>
+<li>REPLACE_UNHEALTHY_INSTANCE_SUCCESSFUL：替换不健康子机成功</li>
+<li>REPLACE_UNHEALTHY_INSTANCE_FAILED：替换不健康子机失败</li>
      * @param string $AutoScalingNotificationId 事件通知ID。
-     * @param string $TargetType 通知接收端类型。
-     * @param string $QueueName CMQ 队列名。
-     * @param string $TopicName CMQ 主题名。
+     * @param string $TargetType 通知接收端类型。取值范围如下：
+USER_GROUP：用户组
+TDMQ_CMQ_TOPIC：TDMQ CMQ 主题
+TDMQ_CMQ_QUEUE：TDMQ CMQ 队列
+CMQ_QUEUE：CMQ 队列，[CMQ 接口已下线](https://cloud.tencent.com/document/product/1496/83970)，已无法选用
+CMQ_TOPIC：CMQ 主题，[CMQ 接口已下线](https://cloud.tencent.com/document/product/1496/83970)，已无法选用
+     * @param string $QueueName TDMQ CMQ 队列名。
+     * @param string $TopicName TDMQ CMQ 主题名。
      */
     function __construct()
     {

@@ -100,6 +100,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSingleUserMultiToken(boolean $SingleUserMultiToken) 设置是否单用户多token
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getConfigParam() 获取嵌出显示配置，目前为ChatBI嵌出场景用，TableFilter表示数据表列表过滤，SqlView表示sql查看功能
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConfigParam(string $ConfigParam) 设置嵌出显示配置，目前为ChatBI嵌出场景用，TableFilter表示数据表列表过滤，SqlView表示sql查看功能
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EmbedTokenInfo extends AbstractModel
 {
@@ -220,6 +224,12 @@ class EmbedTokenInfo extends AbstractModel
     public $SingleUserMultiToken;
 
     /**
+     * @var string 嵌出显示配置，目前为ChatBI嵌出场景用，TableFilter表示数据表列表过滤，SqlView表示sql查看功能
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ConfigParam;
+
+    /**
      * @param integer $Id 信息标识
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BIToken 令牌
@@ -259,6 +269,8 @@ class EmbedTokenInfo extends AbstractModel
      * @param integer $TokenNum token 数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $SingleUserMultiToken 是否单用户多token
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ConfigParam 嵌出显示配置，目前为ChatBI嵌出场景用，TableFilter表示数据表列表过滤，SqlView表示sql查看功能
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -348,6 +360,10 @@ class EmbedTokenInfo extends AbstractModel
 
         if (array_key_exists("SingleUserMultiToken",$param) and $param["SingleUserMultiToken"] !== null) {
             $this->SingleUserMultiToken = $param["SingleUserMultiToken"];
+        }
+
+        if (array_key_exists("ConfigParam",$param) and $param["ConfigParam"] !== null) {
+            $this->ConfigParam = $param["ConfigParam"];
         }
     }
 }

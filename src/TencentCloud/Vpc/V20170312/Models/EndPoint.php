@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEndPointId() 获取终端节点ID。
  * @method void setEndPointId(string $EndPointId) 设置终端节点ID。
- * @method string getVpcId() 获取VPC唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
- * @method void setVpcId(string $VpcId) 设置VPC唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
+ * @method string getVpcId() 获取VPC唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
+ * @method void setVpcId(string $VpcId) 设置VPC唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
  * @method string getSubnetId() 获取子网ID。
  * @method void setSubnetId(string $SubnetId) 设置子网ID。
  * @method string getEndPointOwner() 获取APPID。
@@ -59,7 +59,7 @@ class EndPoint extends AbstractModel
     public $EndPointId;
 
     /**
-     * @var string VPC唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
+     * @var string VPC唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
      */
     public $VpcId;
 
@@ -130,7 +130,7 @@ class EndPoint extends AbstractModel
 
     /**
      * @param string $EndPointId 终端节点ID。
-     * @param string $VpcId VPC唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
+     * @param string $VpcId VPC唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
      * @param string $SubnetId 子网ID。
      * @param string $EndPointOwner APPID。
      * @param string $EndPointName 终端节点名称。

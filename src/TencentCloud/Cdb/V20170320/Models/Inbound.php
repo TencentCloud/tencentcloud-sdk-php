@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDir(string $Dir) 设置规则限定的方向，进站规则为 INPUT
  * @method string getAddressModule() 获取地址模块
  * @method void setAddressModule(string $AddressModule) 设置地址模块
+ * @method string getId() 获取规则ID，嵌套安全组的规则ID
+ * @method void setId(string $Id) 设置规则ID，嵌套安全组的规则ID
  * @method string getDesc() 获取规则描述
  * @method void setDesc(string $Desc) 设置规则描述
  */
@@ -68,6 +70,11 @@ class Inbound extends AbstractModel
     public $AddressModule;
 
     /**
+     * @var string 规则ID，嵌套安全组的规则ID
+     */
+    public $Id;
+
+    /**
      * @var string 规则描述
      */
     public $Desc;
@@ -79,6 +86,7 @@ class Inbound extends AbstractModel
      * @param string $IpProtocol 网络协议，支持 UDP、TCP 等
      * @param string $Dir 规则限定的方向，进站规则为 INPUT
      * @param string $AddressModule 地址模块
+     * @param string $Id 规则ID，嵌套安全组的规则ID
      * @param string $Desc 规则描述
      */
     function __construct()
@@ -116,6 +124,10 @@ class Inbound extends AbstractModel
 
         if (array_key_exists("AddressModule",$param) and $param["AddressModule"] !== null) {
             $this->AddressModule = $param["AddressModule"];
+        }
+
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
         }
 
         if (array_key_exists("Desc",$param) and $param["Desc"] !== null) {

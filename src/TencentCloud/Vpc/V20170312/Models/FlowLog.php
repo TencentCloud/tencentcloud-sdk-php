@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 流日志
  *
- * @method string getVpcId() 获取私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
- * @method void setVpcId(string $VpcId) 设置私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
+ * @method string getVpcId() 获取私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
+ * @method void setVpcId(string $VpcId) 设置私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
  * @method string getFlowLogId() 获取流日志唯一ID。
  * @method void setFlowLogId(string $FlowLogId) 设置流日志唯一ID。
  * @method string getFlowLogName() 获取流日志实例名字。
@@ -54,7 +54,7 @@ use TencentCloud\Common\AbstractModel;
 class FlowLog extends AbstractModel
 {
     /**
-     * @var string 私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
+     * @var string 私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
      */
     public $VpcId;
 
@@ -129,7 +129,7 @@ class FlowLog extends AbstractModel
     public $CloudLogRegion;
 
     /**
-     * @param string $VpcId 私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
+     * @param string $VpcId 私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
      * @param string $FlowLogId 流日志唯一ID。
      * @param string $FlowLogName 流日志实例名字。
      * @param string $ResourceType 流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。

@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHighLogExpireDay(integer $HighLogExpireDay) 设置高频审计日志保存时长。支持值包括：
 7 - 一周
 30 - 一个月；
- * @method array getAuditRuleFilters() 获取审计规则。同RuleTemplateIds都不填是全审计。
- * @method void setAuditRuleFilters(array $AuditRuleFilters) 设置审计规则。同RuleTemplateIds都不填是全审计。
+ * @method array getAuditRuleFilters() 获取审计规则（该参数已废弃，不再生效）。
+ * @method void setAuditRuleFilters(array $AuditRuleFilters) 设置审计规则（该参数已废弃，不再生效）。
  * @method array getRuleTemplateIds() 获取规则模板ID。同AuditRuleFilters都不填是全审计。
  * @method void setRuleTemplateIds(array $RuleTemplateIds) 设置规则模板ID。同AuditRuleFilters都不填是全审计。
  * @method boolean getAuditAll() 获取审计类型。true-全审计；默认false-规则审计。
@@ -78,7 +78,7 @@ class OpenAuditServiceRequest extends AbstractModel
     public $HighLogExpireDay;
 
     /**
-     * @var array 审计规则。同RuleTemplateIds都不填是全审计。
+     * @var array 审计规则（该参数已废弃，不再生效）。
      */
     public $AuditRuleFilters;
 
@@ -105,7 +105,7 @@ class OpenAuditServiceRequest extends AbstractModel
      * @param integer $HighLogExpireDay 高频审计日志保存时长。支持值包括：
 7 - 一周
 30 - 一个月；
-     * @param array $AuditRuleFilters 审计规则。同RuleTemplateIds都不填是全审计。
+     * @param array $AuditRuleFilters 审计规则（该参数已废弃，不再生效）。
      * @param array $RuleTemplateIds 规则模板ID。同AuditRuleFilters都不填是全审计。
      * @param boolean $AuditAll 审计类型。true-全审计；默认false-规则审计。
      */

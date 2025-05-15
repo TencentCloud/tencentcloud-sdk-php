@@ -22,26 +22,26 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAutoScalingGroupName() 获取伸缩组名称，在您账号中必须唯一。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超55个字节。
  * @method void setAutoScalingGroupName(string $AutoScalingGroupName) 设置伸缩组名称，在您账号中必须唯一。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超55个字节。
- * @method string getLaunchConfigurationId() 获取启动配置ID
- * @method void setLaunchConfigurationId(string $LaunchConfigurationId) 设置启动配置ID
- * @method integer getMaxSize() 获取最大实例数，取值范围为0-2000。
- * @method void setMaxSize(integer $MaxSize) 设置最大实例数，取值范围为0-2000。
- * @method integer getMinSize() 获取最小实例数，取值范围为0-2000。
- * @method void setMinSize(integer $MinSize) 设置最小实例数，取值范围为0-2000。
- * @method string getVpcId() 获取VPC ID，基础网络则填空字符串
- * @method void setVpcId(string $VpcId) 设置VPC ID，基础网络则填空字符串
- * @method integer getDefaultCooldown() 获取默认冷却时间，单位秒，默认值为300
- * @method void setDefaultCooldown(integer $DefaultCooldown) 设置默认冷却时间，单位秒，默认值为300
- * @method integer getDesiredCapacity() 获取期望实例数，大小介于最小实例数和最大实例数之间
- * @method void setDesiredCapacity(integer $DesiredCapacity) 设置期望实例数，大小介于最小实例数和最大实例数之间
- * @method array getLoadBalancerIds() 获取传统负载均衡器ID列表，目前长度上限为20，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
- * @method void setLoadBalancerIds(array $LoadBalancerIds) 设置传统负载均衡器ID列表，目前长度上限为20，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
- * @method integer getProjectId() 获取伸缩组内实例所属项目ID。不填为默认项目。
- * @method void setProjectId(integer $ProjectId) 设置伸缩组内实例所属项目ID。不填为默认项目。
- * @method array getForwardLoadBalancers() 获取应用型负载均衡器列表，目前长度上限为100，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
- * @method void setForwardLoadBalancers(array $ForwardLoadBalancers) 设置应用型负载均衡器列表，目前长度上限为100，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
- * @method array getSubnetIds() 获取子网ID列表，VPC场景下必须指定子网。多个子网以填写顺序为优先级，依次进行尝试，直至可以成功创建实例。
- * @method void setSubnetIds(array $SubnetIds) 设置子网ID列表，VPC场景下必须指定子网。多个子网以填写顺序为优先级，依次进行尝试，直至可以成功创建实例。
+ * @method string getLaunchConfigurationId() 获取启动配置ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 或调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。
+ * @method void setLaunchConfigurationId(string $LaunchConfigurationId) 设置启动配置ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 或调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。
+ * @method integer getMaxSize() 获取最大实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
+ * @method void setMaxSize(integer $MaxSize) 设置最大实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
+ * @method integer getMinSize() 获取最小实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
+ * @method void setMinSize(integer $MinSize) 设置最小实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
+ * @method string getVpcId() 获取私有网络ID。有效的VpcId可通过登录[控制台](https://console.cloud.tencent.com/vpc/vpc)查询；也可以调用接口 [DescribeVpc](https://cloud.tencent.com/document/api/215/15778) ，从接口返回中的VpcId字段获取。
+ * @method void setVpcId(string $VpcId) 设置私有网络ID。有效的VpcId可通过登录[控制台](https://console.cloud.tencent.com/vpc/vpc)查询；也可以调用接口 [DescribeVpc](https://cloud.tencent.com/document/api/215/15778) ，从接口返回中的VpcId字段获取。
+ * @method integer getDefaultCooldown() 获取默认冷却时间，单位秒，默认值为300。取值范围为 [0,3600]。
+ * @method void setDefaultCooldown(integer $DefaultCooldown) 设置默认冷却时间，单位秒，默认值为300。取值范围为 [0,3600]。
+ * @method integer getDesiredCapacity() 获取期望实例数，取值范围 [0,2000]，默认值为最小值。需满足最大值大于等于期望值，期望值大于等于最小值。
+ * @method void setDesiredCapacity(integer $DesiredCapacity) 设置期望实例数，取值范围 [0,2000]，默认值为最小值。需满足最大值大于等于期望值，期望值大于等于最小值。
+ * @method array getLoadBalancerIds() 获取传统负载均衡器ID列表，目前长度上限为20，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个。可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
+ * @method void setLoadBalancerIds(array $LoadBalancerIds) 设置传统负载均衡器ID列表，目前长度上限为20，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个。可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
+ * @method integer getProjectId() 获取伸缩组内实例所属项目ID。默认值为0，表示使用默认项目。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 projectId 字段来获取。
+ * @method void setProjectId(integer $ProjectId) 设置伸缩组内实例所属项目ID。默认值为0，表示使用默认项目。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 projectId 字段来获取。
+ * @method array getForwardLoadBalancers() 获取负载均衡器列表，目前长度上限为100，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
+ * @method void setForwardLoadBalancers(array $ForwardLoadBalancers) 设置负载均衡器列表，目前长度上限为100，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
+ * @method array getSubnetIds() 获取子网ID列表，VPC场景下必须指定子网。多个子网以填写顺序为优先级，依次进行尝试，直至可以成功创建实例。有效的私有网络子网ID可通过登录[控制台](https://console.cloud.tencent.com/vpc/subnet)查询；也可以调用接口 [DescribeSubnets](https://cloud.tencent.com/document/product/215/15784) ，从接口返回中的SubnetId字段获取。
+ * @method void setSubnetIds(array $SubnetIds) 设置子网ID列表，VPC场景下必须指定子网。多个子网以填写顺序为优先级，依次进行尝试，直至可以成功创建实例。有效的私有网络子网ID可通过登录[控制台](https://console.cloud.tencent.com/vpc/subnet)查询；也可以调用接口 [DescribeSubnets](https://cloud.tencent.com/document/product/215/15784) ，从接口返回中的SubnetId字段获取。
  * @method array getTerminationPolicies() 获取销毁策略，目前长度上限为1。取值包括 OLDEST_INSTANCE 和 NEWEST_INSTANCE，默认取值为 OLDEST_INSTANCE。
 <li> OLDEST_INSTANCE 优先销毁伸缩组中最旧的实例。</li>
 <li> NEWEST_INSTANCE，优先销毁伸缩组中最新的实例。</li>
@@ -70,12 +70,12 @@ use TencentCloud\Common\AbstractModel;
 
 可用区或子网不可用的常见原因包括该可用区CVM实例类型售罄、该可用区CBS云盘售罄、该可用区配额不足、该子网IP不足等。
 如果 Zones/SubnetIds 中可用区或者子网不存在，则无论 ZonesCheckPolicy 采用何种取值，都会校验报错。
- * @method array getTags() 获取标签描述列表。通过指定该参数可以支持绑定标签到伸缩组。同时绑定标签到相应的资源实例。每个伸缩组最多支持30个标签。
- * @method void setTags(array $Tags) 设置标签描述列表。通过指定该参数可以支持绑定标签到伸缩组。同时绑定标签到相应的资源实例。每个伸缩组最多支持30个标签。
+ * @method array getTags() 获取标签描述列表。通过指定该参数可以支持绑定标签到伸缩组。同时绑定标签到相应的资源实例。每个伸缩组最多支持30个标签。可通过调用接口 [GetTags](https://cloud.tencent.com/document/product/651/72275) ，根据回参获取已有的标签键值对信息。
+ * @method void setTags(array $Tags) 设置标签描述列表。通过指定该参数可以支持绑定标签到伸缩组。同时绑定标签到相应的资源实例。每个伸缩组最多支持30个标签。可通过调用接口 [GetTags](https://cloud.tencent.com/document/product/651/72275) ，根据回参获取已有的标签键值对信息。
  * @method ServiceSettings getServiceSettings() 获取服务设置，包括云监控不健康替换等服务设置。
  * @method void setServiceSettings(ServiceSettings $ServiceSettings) 设置服务设置，包括云监控不健康替换等服务设置。
- * @method integer getIpv6AddressCount() 获取实例具有IPv6地址数量的配置，取值包括 0、1，默认值为0。
- * @method void setIpv6AddressCount(integer $Ipv6AddressCount) 设置实例具有IPv6地址数量的配置，取值包括 0、1，默认值为0。
+ * @method integer getIpv6AddressCount() 获取实例具有IPv6地址数量的配置，取值包括0、1。默认值为 0，表示实例不分配 IPv6 地址。需使用支持 IPv6 的私有网络，需在子网中开启 IPv6 CIDR，其他使用限制可参考 [IPv6使用限制](https://cloud.tencent.com/document/product/1142/38369)。
+ * @method void setIpv6AddressCount(integer $Ipv6AddressCount) 设置实例具有IPv6地址数量的配置，取值包括0、1。默认值为 0，表示实例不分配 IPv6 地址。需使用支持 IPv6 的私有网络，需在子网中开启 IPv6 CIDR，其他使用限制可参考 [IPv6使用限制](https://cloud.tencent.com/document/product/1142/38369)。
  * @method string getMultiZoneSubnetPolicy() 获取多可用区/子网策略，取值包括 PRIORITY 和 EQUALITY，默认为 PRIORITY。
 <li> PRIORITY，按照可用区/子网列表的顺序，作为优先级来尝试创建实例，如果优先级最高的可用区/子网可以创建成功，则总在该可用区/子网创建。</li>
 <li> EQUALITY：扩容出的实例会打散到多个可用区/子网，保证扩容后的各个可用区/子网实例数相对均衡。</li>
@@ -131,52 +131,52 @@ class CreateAutoScalingGroupRequest extends AbstractModel
     public $AutoScalingGroupName;
 
     /**
-     * @var string 启动配置ID
+     * @var string 启动配置ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 或调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。
      */
     public $LaunchConfigurationId;
 
     /**
-     * @var integer 最大实例数，取值范围为0-2000。
+     * @var integer 最大实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
      */
     public $MaxSize;
 
     /**
-     * @var integer 最小实例数，取值范围为0-2000。
+     * @var integer 最小实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
      */
     public $MinSize;
 
     /**
-     * @var string VPC ID，基础网络则填空字符串
+     * @var string 私有网络ID。有效的VpcId可通过登录[控制台](https://console.cloud.tencent.com/vpc/vpc)查询；也可以调用接口 [DescribeVpc](https://cloud.tencent.com/document/api/215/15778) ，从接口返回中的VpcId字段获取。
      */
     public $VpcId;
 
     /**
-     * @var integer 默认冷却时间，单位秒，默认值为300
+     * @var integer 默认冷却时间，单位秒，默认值为300。取值范围为 [0,3600]。
      */
     public $DefaultCooldown;
 
     /**
-     * @var integer 期望实例数，大小介于最小实例数和最大实例数之间
+     * @var integer 期望实例数，取值范围 [0,2000]，默认值为最小值。需满足最大值大于等于期望值，期望值大于等于最小值。
      */
     public $DesiredCapacity;
 
     /**
-     * @var array 传统负载均衡器ID列表，目前长度上限为20，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
+     * @var array 传统负载均衡器ID列表，目前长度上限为20，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个。可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
      */
     public $LoadBalancerIds;
 
     /**
-     * @var integer 伸缩组内实例所属项目ID。不填为默认项目。
+     * @var integer 伸缩组内实例所属项目ID。默认值为0，表示使用默认项目。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 projectId 字段来获取。
      */
     public $ProjectId;
 
     /**
-     * @var array 应用型负载均衡器列表，目前长度上限为100，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
+     * @var array 负载均衡器列表，目前长度上限为100，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
      */
     public $ForwardLoadBalancers;
 
     /**
-     * @var array 子网ID列表，VPC场景下必须指定子网。多个子网以填写顺序为优先级，依次进行尝试，直至可以成功创建实例。
+     * @var array 子网ID列表，VPC场景下必须指定子网。多个子网以填写顺序为优先级，依次进行尝试，直至可以成功创建实例。有效的私有网络子网ID可通过登录[控制台](https://console.cloud.tencent.com/vpc/subnet)查询；也可以调用接口 [DescribeSubnets](https://cloud.tencent.com/document/product/215/15784) ，从接口返回中的SubnetId字段获取。
      */
     public $SubnetIds;
 
@@ -211,7 +211,7 @@ class CreateAutoScalingGroupRequest extends AbstractModel
     public $ZonesCheckPolicy;
 
     /**
-     * @var array 标签描述列表。通过指定该参数可以支持绑定标签到伸缩组。同时绑定标签到相应的资源实例。每个伸缩组最多支持30个标签。
+     * @var array 标签描述列表。通过指定该参数可以支持绑定标签到伸缩组。同时绑定标签到相应的资源实例。每个伸缩组最多支持30个标签。可通过调用接口 [GetTags](https://cloud.tencent.com/document/product/651/72275) ，根据回参获取已有的标签键值对信息。
      */
     public $Tags;
 
@@ -221,7 +221,7 @@ class CreateAutoScalingGroupRequest extends AbstractModel
     public $ServiceSettings;
 
     /**
-     * @var integer 实例具有IPv6地址数量的配置，取值包括 0、1，默认值为0。
+     * @var integer 实例具有IPv6地址数量的配置，取值包括0、1。默认值为 0，表示实例不分配 IPv6 地址。需使用支持 IPv6 的私有网络，需在子网中开启 IPv6 CIDR，其他使用限制可参考 [IPv6使用限制](https://cloud.tencent.com/document/product/1142/38369)。
      */
     public $Ipv6AddressCount;
 
@@ -278,16 +278,16 @@ class CreateAutoScalingGroupRequest extends AbstractModel
 
     /**
      * @param string $AutoScalingGroupName 伸缩组名称，在您账号中必须唯一。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超55个字节。
-     * @param string $LaunchConfigurationId 启动配置ID
-     * @param integer $MaxSize 最大实例数，取值范围为0-2000。
-     * @param integer $MinSize 最小实例数，取值范围为0-2000。
-     * @param string $VpcId VPC ID，基础网络则填空字符串
-     * @param integer $DefaultCooldown 默认冷却时间，单位秒，默认值为300
-     * @param integer $DesiredCapacity 期望实例数，大小介于最小实例数和最大实例数之间
-     * @param array $LoadBalancerIds 传统负载均衡器ID列表，目前长度上限为20，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
-     * @param integer $ProjectId 伸缩组内实例所属项目ID。不填为默认项目。
-     * @param array $ForwardLoadBalancers 应用型负载均衡器列表，目前长度上限为100，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
-     * @param array $SubnetIds 子网ID列表，VPC场景下必须指定子网。多个子网以填写顺序为优先级，依次进行尝试，直至可以成功创建实例。
+     * @param string $LaunchConfigurationId 启动配置ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 或调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。
+     * @param integer $MaxSize 最大实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
+     * @param integer $MinSize 最小实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
+     * @param string $VpcId 私有网络ID。有效的VpcId可通过登录[控制台](https://console.cloud.tencent.com/vpc/vpc)查询；也可以调用接口 [DescribeVpc](https://cloud.tencent.com/document/api/215/15778) ，从接口返回中的VpcId字段获取。
+     * @param integer $DefaultCooldown 默认冷却时间，单位秒，默认值为300。取值范围为 [0,3600]。
+     * @param integer $DesiredCapacity 期望实例数，取值范围 [0,2000]，默认值为最小值。需满足最大值大于等于期望值，期望值大于等于最小值。
+     * @param array $LoadBalancerIds 传统负载均衡器ID列表，目前长度上限为20，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个。可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
+     * @param integer $ProjectId 伸缩组内实例所属项目ID。默认值为0，表示使用默认项目。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 projectId 字段来获取。
+     * @param array $ForwardLoadBalancers 负载均衡器列表，目前长度上限为100，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
+     * @param array $SubnetIds 子网ID列表，VPC场景下必须指定子网。多个子网以填写顺序为优先级，依次进行尝试，直至可以成功创建实例。有效的私有网络子网ID可通过登录[控制台](https://console.cloud.tencent.com/vpc/subnet)查询；也可以调用接口 [DescribeSubnets](https://cloud.tencent.com/document/product/215/15784) ，从接口返回中的SubnetId字段获取。
      * @param array $TerminationPolicies 销毁策略，目前长度上限为1。取值包括 OLDEST_INSTANCE 和 NEWEST_INSTANCE，默认取值为 OLDEST_INSTANCE。
 <li> OLDEST_INSTANCE 优先销毁伸缩组中最旧的实例。</li>
 <li> NEWEST_INSTANCE，优先销毁伸缩组中最新的实例。</li>
@@ -302,9 +302,9 @@ class CreateAutoScalingGroupRequest extends AbstractModel
 
 可用区或子网不可用的常见原因包括该可用区CVM实例类型售罄、该可用区CBS云盘售罄、该可用区配额不足、该子网IP不足等。
 如果 Zones/SubnetIds 中可用区或者子网不存在，则无论 ZonesCheckPolicy 采用何种取值，都会校验报错。
-     * @param array $Tags 标签描述列表。通过指定该参数可以支持绑定标签到伸缩组。同时绑定标签到相应的资源实例。每个伸缩组最多支持30个标签。
+     * @param array $Tags 标签描述列表。通过指定该参数可以支持绑定标签到伸缩组。同时绑定标签到相应的资源实例。每个伸缩组最多支持30个标签。可通过调用接口 [GetTags](https://cloud.tencent.com/document/product/651/72275) ，根据回参获取已有的标签键值对信息。
      * @param ServiceSettings $ServiceSettings 服务设置，包括云监控不健康替换等服务设置。
-     * @param integer $Ipv6AddressCount 实例具有IPv6地址数量的配置，取值包括 0、1，默认值为0。
+     * @param integer $Ipv6AddressCount 实例具有IPv6地址数量的配置，取值包括0、1。默认值为 0，表示实例不分配 IPv6 地址。需使用支持 IPv6 的私有网络，需在子网中开启 IPv6 CIDR，其他使用限制可参考 [IPv6使用限制](https://cloud.tencent.com/document/product/1142/38369)。
      * @param string $MultiZoneSubnetPolicy 多可用区/子网策略，取值包括 PRIORITY 和 EQUALITY，默认为 PRIORITY。
 <li> PRIORITY，按照可用区/子网列表的顺序，作为优先级来尝试创建实例，如果优先级最高的可用区/子网可以创建成功，则总在该可用区/子网创建。</li>
 <li> EQUALITY：扩容出的实例会打散到多个可用区/子网，保证扩容后的各个可用区/子网实例数相对均衡。</li>

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateVpcEndPoint请求参数结构体
  *
- * @method string getVpcId() 获取VPC实例ID。
- * @method void setVpcId(string $VpcId) 设置VPC实例ID。
- * @method string getSubnetId() 获取子网实例ID。
- * @method void setSubnetId(string $SubnetId) 设置子网实例ID。
- * @method string getEndPointName() 获取终端节点名称。
- * @method void setEndPointName(string $EndPointName) 设置终端节点名称。
- * @method string getEndPointServiceId() 获取终端节点服务ID。
- * @method void setEndPointServiceId(string $EndPointServiceId) 设置终端节点服务ID。
+ * @method string getVpcId() 获取VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
+ * @method void setVpcId(string $VpcId) 设置VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
+ * @method string getSubnetId() 获取子网实例ID。可通过[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)接口获取。
+ * @method void setSubnetId(string $SubnetId) 设置子网实例ID。可通过[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)接口获取。
+ * @method string getEndPointName() 获取终端节点名称。限制为60个字符。
+ * @method void setEndPointName(string $EndPointName) 设置终端节点名称。限制为60个字符。
+ * @method string getEndPointServiceId() 获取终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+ * @method void setEndPointServiceId(string $EndPointServiceId) 设置终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
  * @method string getEndPointVip() 获取终端节点VIP，可以指定IP申请。
  * @method void setEndPointVip(string $EndPointVip) 设置终端节点VIP，可以指定IP申请。
- * @method string getSecurityGroupId() 获取安全组ID。
- * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组ID。
+ * @method string getSecurityGroupId() 获取安全组ID。可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808)接口获取。
+ * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组ID。可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808)接口获取。
  * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
  * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
  * @method string getIpAddressType() 获取协议类型，支持 Ipv4，Ipv6，默认 Ipv4
@@ -40,22 +40,22 @@ use TencentCloud\Common\AbstractModel;
 class CreateVpcEndPointRequest extends AbstractModel
 {
     /**
-     * @var string VPC实例ID。
+     * @var string VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
      */
     public $VpcId;
 
     /**
-     * @var string 子网实例ID。
+     * @var string 子网实例ID。可通过[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)接口获取。
      */
     public $SubnetId;
 
     /**
-     * @var string 终端节点名称。
+     * @var string 终端节点名称。限制为60个字符。
      */
     public $EndPointName;
 
     /**
-     * @var string 终端节点服务ID。
+     * @var string 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
      */
     public $EndPointServiceId;
 
@@ -65,7 +65,7 @@ class CreateVpcEndPointRequest extends AbstractModel
     public $EndPointVip;
 
     /**
-     * @var string 安全组ID。
+     * @var string 安全组ID。可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808)接口获取。
      */
     public $SecurityGroupId;
 
@@ -80,12 +80,12 @@ class CreateVpcEndPointRequest extends AbstractModel
     public $IpAddressType;
 
     /**
-     * @param string $VpcId VPC实例ID。
-     * @param string $SubnetId 子网实例ID。
-     * @param string $EndPointName 终端节点名称。
-     * @param string $EndPointServiceId 终端节点服务ID。
+     * @param string $VpcId VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
+     * @param string $SubnetId 子网实例ID。可通过[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)接口获取。
+     * @param string $EndPointName 终端节点名称。限制为60个字符。
+     * @param string $EndPointServiceId 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
      * @param string $EndPointVip 终端节点VIP，可以指定IP申请。
-     * @param string $SecurityGroupId 安全组ID。
+     * @param string $SecurityGroupId 安全组ID。可通过[DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808)接口获取。
      * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
      * @param string $IpAddressType 协议类型，支持 Ipv4，Ipv6，默认 Ipv4
      */

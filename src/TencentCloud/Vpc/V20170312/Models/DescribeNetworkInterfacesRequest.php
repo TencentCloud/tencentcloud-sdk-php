@@ -25,7 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNetworkInterfaceIds(array $NetworkInterfaceIds) 设置弹性网卡实例ID查询。形如：eni-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定NetworkInterfaceIds和Filters。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
 
  * @method array getFilters() 获取过滤条件，参数不支持同时指定NetworkInterfaceIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
+<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。可通过可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
 </li>
 <li>subnet-id - String - （过滤条件）所属子网实例ID，形如：subnet-f49l6u0z。可通过[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)接口获取。
 </li>
@@ -48,7 +48,7 @@ use TencentCloud\Common\AbstractModel;
 <li>public-address-ip - String - （过滤条件）公网IPv4地址，精确匹配。</li>
 <li>address-type - String - （过滤条件）IPv6 Cidr 的类型，精确匹配。`GUA`(全球单播地址), `ULA`(唯一本地地址)。</li>
  * @method void setFilters(array $Filters) 设置过滤条件，参数不支持同时指定NetworkInterfaceIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
+<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。可通过可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
 </li>
 <li>subnet-id - String - （过滤条件）所属子网实例ID，形如：subnet-f49l6u0z。可通过[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)接口获取。
 </li>
@@ -85,7 +85,7 @@ class DescribeNetworkInterfacesRequest extends AbstractModel
 
     /**
      * @var array 过滤条件，参数不支持同时指定NetworkInterfaceIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
+<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。可通过可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
 </li>
 <li>subnet-id - String - （过滤条件）所属子网实例ID，形如：subnet-f49l6u0z。可通过[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)接口获取。
 </li>
@@ -124,7 +124,7 @@ class DescribeNetworkInterfacesRequest extends AbstractModel
      * @param array $NetworkInterfaceIds 弹性网卡实例ID查询。形如：eni-pxir56ns。每次请求的实例的上限为100。参数不支持同时指定NetworkInterfaceIds和Filters。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
 
      * @param array $Filters 过滤条件，参数不支持同时指定NetworkInterfaceIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
+<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。可通过可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
 </li>
 <li>subnet-id - String - （过滤条件）所属子网实例ID，形如：subnet-f49l6u0z。可通过[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)接口获取。
 </li>

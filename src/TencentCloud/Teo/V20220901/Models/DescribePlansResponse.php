@@ -14,30 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tbaas\V20180416\Models;
+namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * GetLatesdTransactionList返回参数结构体
+ * DescribePlans返回参数结构体
  *
- * @method integer getTotalCount() 获取交易总数量
- * @method void setTotalCount(integer $TotalCount) 设置交易总数量
- * @method array getTransactionList() 获取交易列表
- * @method void setTransactionList(array $TransactionList) 设置交易列表
+ * @method integer getTotalCount() 获取符合条件的套餐个数。
+ * @method void setTotalCount(integer $TotalCount) 设置符合条件的套餐个数。
+ * @method array getPlans() 获取套餐信息列表。
+ * @method void setPlans(array $Plans) 设置套餐信息列表。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class GetLatesdTransactionListResponse extends AbstractModel
+class DescribePlansResponse extends AbstractModel
 {
     /**
-     * @var integer 交易总数量
+     * @var integer 符合条件的套餐个数。
      */
     public $TotalCount;
 
     /**
-     * @var array 交易列表
+     * @var array 套餐信息列表。
      */
-    public $TransactionList;
+    public $Plans;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +45,8 @@ class GetLatesdTransactionListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 交易总数量
-     * @param array $TransactionList 交易列表
+     * @param integer $TotalCount 符合条件的套餐个数。
+     * @param array $Plans 套餐信息列表。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -66,12 +66,12 @@ class GetLatesdTransactionListResponse extends AbstractModel
             $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("TransactionList",$param) and $param["TransactionList"] !== null) {
-            $this->TransactionList = [];
-            foreach ($param["TransactionList"] as $key => $value){
-                $obj = new TransactionItem();
+        if (array_key_exists("Plans",$param) and $param["Plans"] !== null) {
+            $this->Plans = [];
+            foreach ($param["Plans"] as $key => $value){
+                $obj = new Plan();
                 $obj->deserialize($value);
-                array_push($this->TransactionList, $obj);
+                array_push($this->Plans, $obj);
             }
         }
 

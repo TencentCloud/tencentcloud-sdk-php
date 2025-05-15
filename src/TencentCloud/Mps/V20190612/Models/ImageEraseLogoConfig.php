@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
 <li>OFF：关闭。</li>
 默认值：ON。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getImageAreaBoxes() 获取需要擦除的多个框选区域，注意：参数数组长度最大为2。
+ * @method array getImageAreaBoxes() 获取需要擦除的多个框选区域，最多开启16个区域。
 注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setImageAreaBoxes(array $ImageAreaBoxes) 设置需要擦除的多个框选区域，注意：参数数组长度最大为2。
+ * @method void setImageAreaBoxes(array $ImageAreaBoxes) 设置需要擦除的多个框选区域，最多开启16个区域。
 注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
  */
@@ -49,7 +49,7 @@ class ImageEraseLogoConfig extends AbstractModel
     public $Switch;
 
     /**
-     * @var array 需要擦除的多个框选区域，注意：参数数组长度最大为2。
+     * @var array 需要擦除的多个框选区域，最多开启16个区域。
 注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -61,7 +61,7 @@ class ImageEraseLogoConfig extends AbstractModel
 <li>OFF：关闭。</li>
 默认值：ON。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ImageAreaBoxes 需要擦除的多个框选区域，注意：参数数组长度最大为2。
+     * @param array $ImageAreaBoxes 需要擦除的多个框选区域，最多开启16个区域。
 注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */

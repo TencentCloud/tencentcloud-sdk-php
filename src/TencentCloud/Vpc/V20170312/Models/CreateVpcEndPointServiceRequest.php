@@ -20,18 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateVpcEndPointService请求参数结构体
  *
- * @method string getVpcId() 获取VPC实例ID。
- * @method void setVpcId(string $VpcId) 设置VPC实例ID。
+ * @method string getVpcId() 获取VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
+ * @method void setVpcId(string $VpcId) 设置VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
  * @method string getEndPointServiceName() 获取终端节点服务名称。
  * @method void setEndPointServiceName(string $EndPointServiceName) 设置终端节点服务名称。
  * @method boolean getAutoAcceptFlag() 获取是否自动接受。
  * @method void setAutoAcceptFlag(boolean $AutoAcceptFlag) 设置是否自动接受。
- * @method string getServiceInstanceId() 获取后端服务ID，比如lb-xxx。
- * @method void setServiceInstanceId(string $ServiceInstanceId) 设置后端服务ID，比如lb-xxx。
+ * @method string getServiceInstanceId() 获取后端服务ID，比如lb-p1hiksdg。CLB可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459)接口获取；CDB可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/240/38568)接口获取；CRS可通过[DescribeInstances](https://cloud.tencent.com/document/product/239/20018)接口获取；GWLB可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/product/1782/111683)接口获取。
+
+ * @method void setServiceInstanceId(string $ServiceInstanceId) 设置后端服务ID，比如lb-p1hiksdg。CLB可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459)接口获取；CDB可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/240/38568)接口获取；CRS可通过[DescribeInstances](https://cloud.tencent.com/document/product/239/20018)接口获取；GWLB可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/product/1782/111683)接口获取。
+
  * @method boolean getIsPassService() 获取~~是否是PassService类型。该字段已废弃，请不要使用该字段。~~
  * @method void setIsPassService(boolean $IsPassService) 设置~~是否是PassService类型。该字段已废弃，请不要使用该字段。~~
- * @method string getServiceType() 获取挂载的PAAS服务类型，CLB,CDB,CRS，不填默认挂载为CLB。
- * @method void setServiceType(string $ServiceType) 设置挂载的PAAS服务类型，CLB,CDB,CRS，不填默认挂载为CLB。
+ * @method string getServiceType() 获取挂载的PAAS服务类型，CLB（负载均衡），CDB（云数据库 MySQL），CRS（云数据库 Redis），GWLB（网关负载均衡）。不填默认挂载为CLB。
+ * @method void setServiceType(string $ServiceType) 设置挂载的PAAS服务类型，CLB（负载均衡），CDB（云数据库 MySQL），CRS（云数据库 Redis），GWLB（网关负载均衡）。不填默认挂载为CLB。
  * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
  * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
  * @method string getIpAddressType() 获取协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
@@ -40,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateVpcEndPointServiceRequest extends AbstractModel
 {
     /**
-     * @var string VPC实例ID。
+     * @var string VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
      */
     public $VpcId;
 
@@ -55,7 +57,8 @@ class CreateVpcEndPointServiceRequest extends AbstractModel
     public $AutoAcceptFlag;
 
     /**
-     * @var string 后端服务ID，比如lb-xxx。
+     * @var string 后端服务ID，比如lb-p1hiksdg。CLB可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459)接口获取；CDB可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/240/38568)接口获取；CRS可通过[DescribeInstances](https://cloud.tencent.com/document/product/239/20018)接口获取；GWLB可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/product/1782/111683)接口获取。
+
      */
     public $ServiceInstanceId;
 
@@ -65,7 +68,7 @@ class CreateVpcEndPointServiceRequest extends AbstractModel
     public $IsPassService;
 
     /**
-     * @var string 挂载的PAAS服务类型，CLB,CDB,CRS，不填默认挂载为CLB。
+     * @var string 挂载的PAAS服务类型，CLB（负载均衡），CDB（云数据库 MySQL），CRS（云数据库 Redis），GWLB（网关负载均衡）。不填默认挂载为CLB。
      */
     public $ServiceType;
 
@@ -80,12 +83,13 @@ class CreateVpcEndPointServiceRequest extends AbstractModel
     public $IpAddressType;
 
     /**
-     * @param string $VpcId VPC实例ID。
+     * @param string $VpcId VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/1108/43663)接口获取。
      * @param string $EndPointServiceName 终端节点服务名称。
      * @param boolean $AutoAcceptFlag 是否自动接受。
-     * @param string $ServiceInstanceId 后端服务ID，比如lb-xxx。
+     * @param string $ServiceInstanceId 后端服务ID，比如lb-p1hiksdg。CLB可通过[DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459)接口获取；CDB可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/240/38568)接口获取；CRS可通过[DescribeInstances](https://cloud.tencent.com/document/product/239/20018)接口获取；GWLB可通过[DescribeGatewayLoadBalancers](https://cloud.tencent.com/document/product/1782/111683)接口获取。
+
      * @param boolean $IsPassService ~~是否是PassService类型。该字段已废弃，请不要使用该字段。~~
-     * @param string $ServiceType 挂载的PAAS服务类型，CLB,CDB,CRS，不填默认挂载为CLB。
+     * @param string $ServiceType 挂载的PAAS服务类型，CLB（负载均衡），CDB（云数据库 MySQL），CRS（云数据库 Redis），GWLB（网关负载均衡）。不填默认挂载为CLB。
      * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
      * @param string $IpAddressType 协议类型，支持 Ipv4，Ipv6，默认 Ipv4。
      */

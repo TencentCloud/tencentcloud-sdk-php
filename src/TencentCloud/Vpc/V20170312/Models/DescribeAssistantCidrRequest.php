@@ -23,9 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method array getVpcIds() 获取`VPC`实例`ID`数组。形如：[`vpc-6v2ht8q5`]
  * @method void setVpcIds(array $VpcIds) 设置`VPC`实例`ID`数组。形如：[`vpc-6v2ht8q5`]
  * @method array getFilters() 获取过滤条件，参数不支持同时指定VpcIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
+
+当前支持的过滤条件如下：
+<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。（当前仅支持该过滤条件）</li>
  * @method void setFilters(array $Filters) 设置过滤条件，参数不支持同时指定VpcIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
+
+当前支持的过滤条件如下：
+<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。（当前仅支持该过滤条件）</li>
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
@@ -40,7 +44,9 @@ class DescribeAssistantCidrRequest extends AbstractModel
 
     /**
      * @var array 过滤条件，参数不支持同时指定VpcIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
+
+当前支持的过滤条件如下：
+<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。（当前仅支持该过滤条件）</li>
      */
     public $Filters;
 
@@ -57,7 +63,9 @@ class DescribeAssistantCidrRequest extends AbstractModel
     /**
      * @param array $VpcIds `VPC`实例`ID`数组。形如：[`vpc-6v2ht8q5`]
      * @param array $Filters 过滤条件，参数不支持同时指定VpcIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
+
+当前支持的过滤条件如下：
+<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。（当前仅支持该过滤条件）</li>
      * @param integer $Offset 偏移量，默认为0。
      * @param integer $Limit 返回数量，默认为20，最大值为100。
      */

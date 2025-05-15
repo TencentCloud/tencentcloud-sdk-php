@@ -33,17 +33,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getRuleID() 获取规则ID。仅出参使用。默认由底层生成。
  * @method void setRuleID(integer $RuleID) 设置规则ID。仅出参使用。默认由底层生成。
  * @method string getUpdateTime() 获取更新时间，如果为null，默认由底层按当前时间生成。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间，如果为null，默认由底层按当前时间生成。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getExceptUserRuleConditions() 获取匹配条件。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExceptUserRuleConditions(array $ExceptUserRuleConditions) 设置匹配条件。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ExceptUserRuleScope getExceptUserRuleScope() 获取规则生效的范围。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExceptUserRuleScope(ExceptUserRuleScope $ExceptUserRuleScope) 设置规则生效的范围。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRulePriority() 获取优先级，取值范围0-100。如果为null，默认由底层设置为0。
  * @method void setRulePriority(integer $RulePriority) 设置优先级，取值范围0-100。如果为null，默认由底层设置为0。
  */
@@ -73,19 +67,16 @@ class ExceptUserRule extends AbstractModel
 
     /**
      * @var string 更新时间，如果为null，默认由底层按当前时间生成。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @var array 匹配条件。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExceptUserRuleConditions;
 
     /**
      * @var ExceptUserRuleScope 规则生效的范围。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExceptUserRuleScope;
 
@@ -102,11 +93,8 @@ class ExceptUserRule extends AbstractModel
 <li>off：失效。</li>
      * @param integer $RuleID 规则ID。仅出参使用。默认由底层生成。
      * @param string $UpdateTime 更新时间，如果为null，默认由底层按当前时间生成。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ExceptUserRuleConditions 匹配条件。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExceptUserRuleScope $ExceptUserRuleScope 规则生效的范围。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RulePriority 优先级，取值范围0-100。如果为null，默认由底层设置为0。
      */
     function __construct()

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ExecuteScalingPolicy请求参数结构体
  *
- * @method string getAutoScalingPolicyId() 获取告警伸缩策略ID，不支持目标追踪策略。
- * @method void setAutoScalingPolicyId(string $AutoScalingPolicyId) 设置告警伸缩策略ID，不支持目标追踪策略。
+ * @method string getAutoScalingPolicyId() 获取告警伸缩策略ID，不支持目标追踪策略。可通过 [DescribeScalingPolicies](https://cloud.tencent.com/document/api/377/33178) 接口返回的 `ScalingPolicyType ` 参数获取告警策略类型。
+ * @method void setAutoScalingPolicyId(string $AutoScalingPolicyId) 设置告警伸缩策略ID，不支持目标追踪策略。可通过 [DescribeScalingPolicies](https://cloud.tencent.com/document/api/377/33178) 接口返回的 `ScalingPolicyType ` 参数获取告警策略类型。
  * @method boolean getHonorCooldown() 获取是否检查伸缩组活动处于冷却时间内，默认值为false
  * @method void setHonorCooldown(boolean $HonorCooldown) 设置是否检查伸缩组活动处于冷却时间内，默认值为false
  * @method string getTriggerSource() 获取执行伸缩策略的触发来源，取值包括 API 和 CLOUD_MONITOR，默认值为 API。CLOUD_MONITOR 专门供云监控触发调用。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ExecuteScalingPolicyRequest extends AbstractModel
 {
     /**
-     * @var string 告警伸缩策略ID，不支持目标追踪策略。
+     * @var string 告警伸缩策略ID，不支持目标追踪策略。可通过 [DescribeScalingPolicies](https://cloud.tencent.com/document/api/377/33178) 接口返回的 `ScalingPolicyType ` 参数获取告警策略类型。
      */
     public $AutoScalingPolicyId;
 
@@ -45,7 +45,7 @@ class ExecuteScalingPolicyRequest extends AbstractModel
     public $TriggerSource;
 
     /**
-     * @param string $AutoScalingPolicyId 告警伸缩策略ID，不支持目标追踪策略。
+     * @param string $AutoScalingPolicyId 告警伸缩策略ID，不支持目标追踪策略。可通过 [DescribeScalingPolicies](https://cloud.tencent.com/document/api/377/33178) 接口返回的 `ScalingPolicyType ` 参数获取告警策略类型。
      * @param boolean $HonorCooldown 是否检查伸缩组活动处于冷却时间内，默认值为false
      * @param string $TriggerSource 执行伸缩策略的触发来源，取值包括 API 和 CLOUD_MONITOR，默认值为 API。CLOUD_MONITOR 专门供云监控触发调用。
      */

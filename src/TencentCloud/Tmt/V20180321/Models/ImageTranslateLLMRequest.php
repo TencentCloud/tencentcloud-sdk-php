@@ -20,6 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ImageTranslateLLM请求参数结构体
  *
+ * @method string getData() 获取图片数据的Base64字符串，经Base64编码后不超过 9M，分辨率建议600*800以上，支持PNG、JPG、JPEG格式。
+ * @method void setData(string $Data) 设置图片数据的Base64字符串，经Base64编码后不超过 9M，分辨率建议600*800以上，支持PNG、JPG、JPEG格式。
+ * @method string getTarget() 获取目标语言，支持语言列表：
+
+- 中文：zh
+- 繁体（台湾）：zh-TW
+- 繁体（香港）：zh-HK
+- 英文：en
+- 日语：ja
+- 韩语：ko
+- 泰语：th
+- 越南语：vi
+- 俄语：ru
+- 德语：de
+- 法语：fr
+- 阿拉伯语：ar
+- 西班牙语：es
+- 意大利语：it
+- 印度尼西亚语：id
+- 马来西亚语：ms
+- 葡萄牙语：pt
+- 土耳其语：tr
+- 
+ * @method void setTarget(string $Target) 设置目标语言，支持语言列表：
+
+- 中文：zh
+- 繁体（台湾）：zh-TW
+- 繁体（香港）：zh-HK
+- 英文：en
+- 日语：ja
+- 韩语：ko
+- 泰语：th
+- 越南语：vi
+- 俄语：ru
+- 德语：de
+- 法语：fr
+- 阿拉伯语：ar
+- 西班牙语：es
+- 意大利语：it
+- 印度尼西亚语：id
+- 马来西亚语：ms
+- 葡萄牙语：pt
+- 土耳其语：tr
+- 
  * @method string getUrl() 获取输入图 Url。 使用Url的时候，Data参数需要传入""。 图片限制：小于 10MB，分辨率建议600*800以上，格式支持 jpg、jpeg、png。
 
  * @method void setUrl(string $Url) 设置输入图 Url。 使用Url的时候，Data参数需要传入""。 图片限制：小于 10MB，分辨率建议600*800以上，格式支持 jpg、jpeg、png。
@@ -27,12 +71,64 @@ use TencentCloud\Common\AbstractModel;
 class ImageTranslateLLMRequest extends AbstractModel
 {
     /**
+     * @var string 图片数据的Base64字符串，经Base64编码后不超过 9M，分辨率建议600*800以上，支持PNG、JPG、JPEG格式。
+     */
+    public $Data;
+
+    /**
+     * @var string 目标语言，支持语言列表：
+
+- 中文：zh
+- 繁体（台湾）：zh-TW
+- 繁体（香港）：zh-HK
+- 英文：en
+- 日语：ja
+- 韩语：ko
+- 泰语：th
+- 越南语：vi
+- 俄语：ru
+- 德语：de
+- 法语：fr
+- 阿拉伯语：ar
+- 西班牙语：es
+- 意大利语：it
+- 印度尼西亚语：id
+- 马来西亚语：ms
+- 葡萄牙语：pt
+- 土耳其语：tr
+- 
+     */
+    public $Target;
+
+    /**
      * @var string 输入图 Url。 使用Url的时候，Data参数需要传入""。 图片限制：小于 10MB，分辨率建议600*800以上，格式支持 jpg、jpeg、png。
 
      */
     public $Url;
 
     /**
+     * @param string $Data 图片数据的Base64字符串，经Base64编码后不超过 9M，分辨率建议600*800以上，支持PNG、JPG、JPEG格式。
+     * @param string $Target 目标语言，支持语言列表：
+
+- 中文：zh
+- 繁体（台湾）：zh-TW
+- 繁体（香港）：zh-HK
+- 英文：en
+- 日语：ja
+- 韩语：ko
+- 泰语：th
+- 越南语：vi
+- 俄语：ru
+- 德语：de
+- 法语：fr
+- 阿拉伯语：ar
+- 西班牙语：es
+- 意大利语：it
+- 印度尼西亚语：id
+- 马来西亚语：ms
+- 葡萄牙语：pt
+- 土耳其语：tr
+- 
      * @param string $Url 输入图 Url。 使用Url的时候，Data参数需要传入""。 图片限制：小于 10MB，分辨率建议600*800以上，格式支持 jpg、jpeg、png。
      */
     function __construct()
@@ -48,6 +144,14 @@ class ImageTranslateLLMRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = $param["Data"];
+        }
+
+        if (array_key_exists("Target",$param) and $param["Target"] !== null) {
+            $this->Target = $param["Target"];
+        }
+
         if (array_key_exists("Url",$param) and $param["Url"] !== null) {
             $this->Url = $param["Url"];
         }

@@ -34,7 +34,7 @@ use TencentCloud\Cfs\V20190719\Models as Models;
 此接口需提交工单，开启白名单之后才能使用。
  * @method Models\DeleteAutoSnapshotPolicyResponse DeleteAutoSnapshotPolicy(Models\DeleteAutoSnapshotPolicyRequest $req) 删除快照定期策略
  * @method Models\DeleteCfsFileSystemResponse DeleteCfsFileSystem(Models\DeleteCfsFileSystemRequest $req) 用于删除文件系统
- * @method Models\DeleteCfsPGroupResponse DeleteCfsPGroup(Models\DeleteCfsPGroupRequest $req) 本接口（DeleteCfsPGroup）用于删除权限组。
+ * @method Models\DeleteCfsPGroupResponse DeleteCfsPGroup(Models\DeleteCfsPGroupRequest $req) 本接口（DeleteCfsPGroup）用于删除权限组，只有未绑定文件系统的权限组才能够被此接口删除。
  * @method Models\DeleteCfsRuleResponse DeleteCfsRule(Models\DeleteCfsRuleRequest $req) 本接口（DeleteCfsRule）用于删除权限组规则。
  * @method Models\DeleteCfsSnapshotResponse DeleteCfsSnapshot(Models\DeleteCfsSnapshotRequest $req) 删除文件系统快照
  * @method Models\DeleteMigrationTaskResponse DeleteMigrationTask(Models\DeleteMigrationTaskRequest $req) 用于删除迁移任务。

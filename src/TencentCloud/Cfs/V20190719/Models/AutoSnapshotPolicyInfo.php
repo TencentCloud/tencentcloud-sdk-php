@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAutoSnapshotPolicyId() 获取快照策略ID
  * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) 设置快照策略ID
- * @method string getPolicyName() 获取快照策略ID
- * @method void setPolicyName(string $PolicyName) 设置快照策略ID
+ * @method string getPolicyName() 获取快照策略名称
+ * @method void setPolicyName(string $PolicyName) 设置快照策略名称
  * @method string getCreationTime() 获取快照策略创建时间
  * @method void setCreationTime(string $CreationTime) 设置快照策略创建时间
  * @method integer getFileSystemNums() 获取关联的文件系统个数
@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsActivated(integer $IsActivated) 设置是否激活定期快照功能,1代表已激活，0代表未激活
  * @method string getNextActiveTime() 获取下一次触发快照时间
  * @method void setNextActiveTime(string $NextActiveTime) 设置下一次触发快照时间
- * @method string getStatus() 获取快照策略状态，1代表快照策略状态正常。这里只有一种状态
- * @method void setStatus(string $Status) 设置快照策略状态，1代表快照策略状态正常。这里只有一种状态
+ * @method string getStatus() 获取快照策略状态，available代表快照策略状态正常。这里只有一种状态
+ * @method void setStatus(string $Status) 设置快照策略状态，available代表快照策略状态正常。这里只有一种状态
  * @method integer getAppId() 获取账号ID
  * @method void setAppId(integer $AppId) 设置账号ID
  * @method integer getAliveDays() 获取保留时间
@@ -65,7 +65,7 @@ class AutoSnapshotPolicyInfo extends AbstractModel
     public $AutoSnapshotPolicyId;
 
     /**
-     * @var string 快照策略ID
+     * @var string 快照策略名称
      */
     public $PolicyName;
 
@@ -100,7 +100,7 @@ class AutoSnapshotPolicyInfo extends AbstractModel
     public $NextActiveTime;
 
     /**
-     * @var string 快照策略状态，1代表快照策略状态正常。这里只有一种状态
+     * @var string 快照策略状态，available代表快照策略状态正常。这里只有一种状态
      */
     public $Status;
 
@@ -143,14 +143,14 @@ class AutoSnapshotPolicyInfo extends AbstractModel
 
     /**
      * @param string $AutoSnapshotPolicyId 快照策略ID
-     * @param string $PolicyName 快照策略ID
+     * @param string $PolicyName 快照策略名称
      * @param string $CreationTime 快照策略创建时间
      * @param integer $FileSystemNums 关联的文件系统个数
      * @param string $DayOfWeek 快照定期备份在一星期哪一天，该参数与DayOfMonth,IntervalDays互斥
      * @param string $Hour 快照定期备份在一天的哪一小时
      * @param integer $IsActivated 是否激活定期快照功能,1代表已激活，0代表未激活
      * @param string $NextActiveTime 下一次触发快照时间
-     * @param string $Status 快照策略状态，1代表快照策略状态正常。这里只有一种状态
+     * @param string $Status 快照策略状态，available代表快照策略状态正常。这里只有一种状态
      * @param integer $AppId 账号ID
      * @param integer $AliveDays 保留时间
      * @param string $RegionName 地域

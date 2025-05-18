@@ -18,7 +18,7 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * EKS Instnace CBS volume
+ * EKS Instance CBS volume
  *
  * @method string getCbsDiskId() 获取腾讯云cbs盘Id
  * @method void setCbsDiskId(string $CbsDiskId) 设置腾讯云cbs盘Id

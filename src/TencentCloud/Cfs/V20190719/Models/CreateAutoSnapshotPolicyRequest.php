@@ -20,23 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAutoSnapshotPolicy请求参数结构体
  *
- * @method string getHour() 获取快照重复时间点,0-23
- * @method void setHour(string $Hour) 设置快照重复时间点,0-23
+ * @method string getHour() 获取快照重复时间点,0-23，小时
+ * @method void setHour(string $Hour) 设置快照重复时间点,0-23，小时
  * @method string getPolicyName() 获取策略名称
  * @method void setPolicyName(string $PolicyName) 设置策略名称
- * @method string getDayOfWeek() 获取快照重复日期，星期一到星期日。 1代表星期一、7代表星期天
- * @method void setDayOfWeek(string $DayOfWeek) 设置快照重复日期，星期一到星期日。 1代表星期一、7代表星期天
- * @method integer getAliveDays() 获取快照保留时长，单位天
- * @method void setAliveDays(integer $AliveDays) 设置快照保留时长，单位天
- * @method string getDayOfMonth() 获取快照按月重复，每月1-31号，选择一天，每月将在这一天自动创建快照。
- * @method void setDayOfMonth(string $DayOfMonth) 设置快照按月重复，每月1-31号，选择一天，每月将在这一天自动创建快照。
- * @method integer getIntervalDays() 获取间隔天数
- * @method void setIntervalDays(integer $IntervalDays) 设置间隔天数
+ * @method string getDayOfWeek() 获取快照重复日期，星期一到星期日。 1代表星期一、7代表星期天，与DayOfMonth，IntervalDays 三者选一
+ * @method void setDayOfWeek(string $DayOfWeek) 设置快照重复日期，星期一到星期日。 1代表星期一、7代表星期天，与DayOfMonth，IntervalDays 三者选一
+ * @method integer getAliveDays() 获取快照保留时长，单位天，默认永久0
+ * @method void setAliveDays(integer $AliveDays) 设置快照保留时长，单位天，默认永久0
+ * @method string getDayOfMonth() 获取快照按月重复，每月1-31号，选择一天，每月将在这一天自动创建快照。与DayOfWeek，IntervalDays 三者选一
+ * @method void setDayOfMonth(string $DayOfMonth) 设置快照按月重复，每月1-31号，选择一天，每月将在这一天自动创建快照。与DayOfWeek，IntervalDays 三者选一
+ * @method integer getIntervalDays() 获取间隔天数，与DayOfWeek，DayOfMonth 三者选一
+ * @method void setIntervalDays(integer $IntervalDays) 设置间隔天数，与DayOfWeek，DayOfMonth 三者选一
  */
 class CreateAutoSnapshotPolicyRequest extends AbstractModel
 {
     /**
-     * @var string 快照重复时间点,0-23
+     * @var string 快照重复时间点,0-23，小时
      */
     public $Hour;
 
@@ -46,32 +46,32 @@ class CreateAutoSnapshotPolicyRequest extends AbstractModel
     public $PolicyName;
 
     /**
-     * @var string 快照重复日期，星期一到星期日。 1代表星期一、7代表星期天
+     * @var string 快照重复日期，星期一到星期日。 1代表星期一、7代表星期天，与DayOfMonth，IntervalDays 三者选一
      */
     public $DayOfWeek;
 
     /**
-     * @var integer 快照保留时长，单位天
+     * @var integer 快照保留时长，单位天，默认永久0
      */
     public $AliveDays;
 
     /**
-     * @var string 快照按月重复，每月1-31号，选择一天，每月将在这一天自动创建快照。
+     * @var string 快照按月重复，每月1-31号，选择一天，每月将在这一天自动创建快照。与DayOfWeek，IntervalDays 三者选一
      */
     public $DayOfMonth;
 
     /**
-     * @var integer 间隔天数
+     * @var integer 间隔天数，与DayOfWeek，DayOfMonth 三者选一
      */
     public $IntervalDays;
 
     /**
-     * @param string $Hour 快照重复时间点,0-23
+     * @param string $Hour 快照重复时间点,0-23，小时
      * @param string $PolicyName 策略名称
-     * @param string $DayOfWeek 快照重复日期，星期一到星期日。 1代表星期一、7代表星期天
-     * @param integer $AliveDays 快照保留时长，单位天
-     * @param string $DayOfMonth 快照按月重复，每月1-31号，选择一天，每月将在这一天自动创建快照。
-     * @param integer $IntervalDays 间隔天数
+     * @param string $DayOfWeek 快照重复日期，星期一到星期日。 1代表星期一、7代表星期天，与DayOfMonth，IntervalDays 三者选一
+     * @param integer $AliveDays 快照保留时长，单位天，默认永久0
+     * @param string $DayOfMonth 快照按月重复，每月1-31号，选择一天，每月将在这一天自动创建快照。与DayOfWeek，IntervalDays 三者选一
+     * @param integer $IntervalDays 间隔天数，与DayOfWeek，DayOfMonth 三者选一
      */
     function __construct()
     {

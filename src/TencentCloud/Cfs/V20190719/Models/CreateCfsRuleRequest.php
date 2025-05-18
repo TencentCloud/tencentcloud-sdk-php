@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCfsRule请求参数结构体
  *
- * @method string getPGroupId() 获取权限组 ID
- * @method void setPGroupId(string $PGroupId) 设置权限组 ID
+ * @method string getPGroupId() 获取权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
+ * @method void setPGroupId(string $PGroupId) 设置权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
  * @method string getAuthClientIp() 获取可以填写单个 IP 或者单个网段，例如 10.1.10.11 或者 10.10.1.0/24。默认来访地址为*表示允许所有。同时需要注意，此处需填写 CVM 的内网 IP。
  * @method void setAuthClientIp(string $AuthClientIp) 设置可以填写单个 IP 或者单个网段，例如 10.1.10.11 或者 10.10.1.0/24。默认来访地址为*表示允许所有。同时需要注意，此处需填写 CVM 的内网 IP。
  * @method integer getPriority() 获取规则优先级，参数范围1-100。 其中 1 为最高，100为最低
@@ -43,7 +43,7 @@ no_root_squash：与 no_all_squash 效果一致，所有访问用户（含 root 
 class CreateCfsRuleRequest extends AbstractModel
 {
     /**
-     * @var string 权限组 ID
+     * @var string 权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
      */
     public $PGroupId;
 
@@ -73,7 +73,7 @@ no_root_squash：与 no_all_squash 效果一致，所有访问用户（含 root 
     public $UserPermission;
 
     /**
-     * @param string $PGroupId 权限组 ID
+     * @param string $PGroupId 权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
      * @param string $AuthClientIp 可以填写单个 IP 或者单个网段，例如 10.1.10.11 或者 10.10.1.0/24。默认来访地址为*表示允许所有。同时需要注意，此处需填写 CVM 的内网 IP。
      * @param integer $Priority 规则优先级，参数范围1-100。 其中 1 为最高，100为最低
      * @param string $RWPermission 读写权限, 值为 RO、RW；其中 RO 为只读，RW 为读写，不填默认为只读

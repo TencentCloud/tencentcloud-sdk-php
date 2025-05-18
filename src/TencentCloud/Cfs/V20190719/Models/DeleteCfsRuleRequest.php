@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteCfsRule请求参数结构体
  *
- * @method string getPGroupId() 获取权限组 ID
- * @method void setPGroupId(string $PGroupId) 设置权限组 ID
- * @method string getRuleId() 获取规则 ID
- * @method void setRuleId(string $RuleId) 设置规则 ID
+ * @method string getPGroupId() 获取权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
+ * @method void setPGroupId(string $PGroupId) 设置权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
+ * @method string getRuleId() 获取规则 ID，通过查询权限组规则接口获取
+ * @method void setRuleId(string $RuleId) 设置规则 ID，通过查询权限组规则接口获取
  */
 class DeleteCfsRuleRequest extends AbstractModel
 {
     /**
-     * @var string 权限组 ID
+     * @var string 权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
      */
     public $PGroupId;
 
     /**
-     * @var string 规则 ID
+     * @var string 规则 ID，通过查询权限组规则接口获取
      */
     public $RuleId;
 
     /**
-     * @param string $PGroupId 权限组 ID
-     * @param string $RuleId 规则 ID
+     * @param string $PGroupId 权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
+     * @param string $RuleId 规则 ID，通过查询权限组规则接口获取
      */
     function __construct()
     {

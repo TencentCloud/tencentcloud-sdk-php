@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BindAutoSnapshotPolicy请求参数结构体
  *
- * @method string getAutoSnapshotPolicyId() 获取快照策略ID
- * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) 设置快照策略ID
- * @method string getFileSystemIds() 获取文件系统列表
- * @method void setFileSystemIds(string $FileSystemIds) 设置文件系统列表
+ * @method string getAutoSnapshotPolicyId() 获取快照策略ID，通过快照策略列表获取
+ * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) 设置快照策略ID，通过快照策略列表获取
+ * @method string getFileSystemIds() 获取文件系统id列表，用“,”分隔，文件系统id通过查询文件系统列表获得
+ * @method void setFileSystemIds(string $FileSystemIds) 设置文件系统id列表，用“,”分隔，文件系统id通过查询文件系统列表获得
  */
 class BindAutoSnapshotPolicyRequest extends AbstractModel
 {
     /**
-     * @var string 快照策略ID
+     * @var string 快照策略ID，通过快照策略列表获取
      */
     public $AutoSnapshotPolicyId;
 
     /**
-     * @var string 文件系统列表
+     * @var string 文件系统id列表，用“,”分隔，文件系统id通过查询文件系统列表获得
      */
     public $FileSystemIds;
 
     /**
-     * @param string $AutoSnapshotPolicyId 快照策略ID
-     * @param string $FileSystemIds 文件系统列表
+     * @param string $AutoSnapshotPolicyId 快照策略ID，通过快照策略列表获取
+     * @param string $FileSystemIds 文件系统id列表，用“,”分隔，文件系统id通过查询文件系统列表获得
      */
     function __construct()
     {

@@ -14,24 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cfs\V20190719\Models;
+namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeCfsRules请求参数结构体
+ * [Vary 特性](https://cloud.tencent.com/document/product/1552/89301) 配置参数。
+该功能灰度中，如需使用，请联系腾讯云客服。
  *
- * @method string getPGroupId() 获取权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
- * @method void setPGroupId(string $PGroupId) 设置权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
+ * @method string getSwitch() 获取Vary 特性配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
+ * @method void setSwitch(string $Switch) 设置Vary 特性配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
  */
-class DescribeCfsRulesRequest extends AbstractModel
+class VaryParameters extends AbstractModel
 {
     /**
-     * @var string 权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
+     * @var string Vary 特性配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
      */
-    public $PGroupId;
+    public $Switch;
 
     /**
-     * @param string $PGroupId 权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
+     * @param string $Switch Vary 特性配置开关，取值有：
+<li>on：开启；</li>
+<li>off：关闭。</li>
      */
     function __construct()
     {
@@ -46,8 +55,8 @@ class DescribeCfsRulesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PGroupId",$param) and $param["PGroupId"] !== null) {
-            $this->PGroupId = $param["PGroupId"];
+        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
+            $this->Switch = $param["Switch"];
         }
     }
 }

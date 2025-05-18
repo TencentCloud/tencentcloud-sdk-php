@@ -29,7 +29,7 @@ use TencentCloud\Clb\V20180317\Models as Models;
 本接口为异步接口，本接口返回成功后需以返回的 RequestID 为入参，调用  [DescribeTaskStatus](https://cloud.tencent.com/document/product/214/30683)  接口查询本次任务是否成功。
 限制说明：
 - 四层监听器绑定旧版目标组需要监听器开启后端目标组。
-- 七层绑定目标组，数据结构 TargetGroupAssosication 中 LocationId 为必填项。
+- 七层绑定目标组，数据结构 TargetGroupAssociation 中 LocationId 为必填项。
 - 负载均衡的 VPC 需要和目标组的 VPC 一致。
  * @method Models\AutoRewriteResponse AutoRewrite(Models\AutoRewriteRequest $req) 用户需要先创建出一个HTTPS:443监听器，并在其下创建转发规则。通过调用本接口，系统会自动创建出一个HTTP:80监听器（如果之前不存在），并在其下创建转发规则，与HTTPS:443监听器下的Domains（在入参中指定）对应。创建成功后可以通过HTTP:80地址自动跳转为HTTPS:443地址进行访问。
 本接口为异步接口，本接口返回成功后需以返回的RequestID为入参，调用DescribeTaskStatus接口查询本次任务是否成功。

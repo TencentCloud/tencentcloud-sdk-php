@@ -70,8 +70,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBandwidthLimit(float $BandwidthLimit) 设置文件系统吞吐上限，吞吐上限是根据文件系统当前已使用存储量、绑定的存储资源包以及吞吐资源包一同确定. 单位MiB/s
  * @method string getAutoSnapshotPolicyId() 获取文件系统关联的快照策略
  * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) 设置文件系统关联的快照策略
- * @method string getSnapStatus() 获取文件系统处理快照状态
- * @method void setSnapStatus(string $SnapStatus) 设置文件系统处理快照状态
+ * @method string getSnapStatus() 获取文件系统处理快照状态,snapping：快照中，normal：正常状态
+ * @method void setSnapStatus(string $SnapStatus) 设置文件系统处理快照状态,snapping：快照中，normal：正常状态
  * @method integer getCapacity() 获取文件系统容量规格上限
 单位:GiB
  * @method void setCapacity(integer $Capacity) 设置文件系统容量规格上限
@@ -195,7 +195,7 @@ class FileSystemInfo extends AbstractModel
     public $AutoSnapshotPolicyId;
 
     /**
-     * @var string 文件系统处理快照状态
+     * @var string 文件系统处理快照状态,snapping：快照中，normal：正常状态
      */
     public $SnapStatus;
 
@@ -258,7 +258,7 @@ Available:可用
      * @param integer $AppId 应用ID
      * @param float $BandwidthLimit 文件系统吞吐上限，吞吐上限是根据文件系统当前已使用存储量、绑定的存储资源包以及吞吐资源包一同确定. 单位MiB/s
      * @param string $AutoSnapshotPolicyId 文件系统关联的快照策略
-     * @param string $SnapStatus 文件系统处理快照状态
+     * @param string $SnapStatus 文件系统处理快照状态,snapping：快照中，normal：正常状态
      * @param integer $Capacity 文件系统容量规格上限
 单位:GiB
      * @param array $Tags 文件系统标签列表

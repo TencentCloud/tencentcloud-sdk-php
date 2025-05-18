@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCfsFileSystemClients请求参数结构体
  *
- * @method string getFileSystemId() 获取文件系统 ID。
- * @method void setFileSystemId(string $FileSystemId) 设置文件系统 ID。
- * @method integer getOffset() 获取Offset 分页码
- * @method void setOffset(integer $Offset) 设置Offset 分页码
- * @method integer getLimit() 获取Limit 页面大小
- * @method void setLimit(integer $Limit) 设置Limit 页面大小
+ * @method string getFileSystemId() 获取文件系统 ID，通过查询文件系统接口获取
+ * @method void setFileSystemId(string $FileSystemId) 设置文件系统 ID，通过查询文件系统接口获取
+ * @method integer getOffset() 获取Offset 分页码，默认为0
+ * @method void setOffset(integer $Offset) 设置Offset 分页码，默认为0
+ * @method integer getLimit() 获取Limit 页面大小，默认为10，最大值为100
+ * @method void setLimit(integer $Limit) 设置Limit 页面大小，默认为10，最大值为100
  */
 class DescribeCfsFileSystemClientsRequest extends AbstractModel
 {
     /**
-     * @var string 文件系统 ID。
+     * @var string 文件系统 ID，通过查询文件系统接口获取
      */
     public $FileSystemId;
 
     /**
-     * @var integer Offset 分页码
+     * @var integer Offset 分页码，默认为0
      */
     public $Offset;
 
     /**
-     * @var integer Limit 页面大小
+     * @var integer Limit 页面大小，默认为10，最大值为100
      */
     public $Limit;
 
     /**
-     * @param string $FileSystemId 文件系统 ID。
-     * @param integer $Offset Offset 分页码
-     * @param integer $Limit Limit 页面大小
+     * @param string $FileSystemId 文件系统 ID，通过查询文件系统接口获取
+     * @param integer $Offset Offset 分页码，默认为0
+     * @param integer $Limit Limit 页面大小，默认为10，最大值为100
      */
     function __construct()
     {

@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAutoScalingGroupId() 获取伸缩组ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置伸缩组ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。
- * @method integer getDesiredCapacity() 获取期望实例数，取值范围 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。
- * @method void setDesiredCapacity(integer $DesiredCapacity) 设置期望实例数，取值范围 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。
- * @method integer getMinSize() 获取最小实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
- * @method void setMinSize(integer $MinSize) 设置最小实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
- * @method integer getMaxSize() 获取最大实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
- * @method void setMaxSize(integer $MaxSize) 设置最大实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
+ * @method integer getDesiredCapacity() 获取期望实例数，取值范围 [0,2000]，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。
+ * @method void setDesiredCapacity(integer $DesiredCapacity) 设置期望实例数，取值范围 [0,2000]，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。
+ * @method integer getMinSize() 获取最小实例数，取值范围为 [0,2000]，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。
+ * @method void setMinSize(integer $MinSize) 设置最小实例数，取值范围为 [0,2000]，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。
+ * @method integer getMaxSize() 获取最大实例数，取值范围为 [0,2000]，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。
+ * @method void setMaxSize(integer $MaxSize) 设置最大实例数，取值范围为 [0,2000]，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。
  */
 class ModifyDesiredCapacityRequest extends AbstractModel
 {
@@ -37,25 +37,25 @@ class ModifyDesiredCapacityRequest extends AbstractModel
     public $AutoScalingGroupId;
 
     /**
-     * @var integer 期望实例数，取值范围 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。
+     * @var integer 期望实例数，取值范围 [0,2000]，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。
      */
     public $DesiredCapacity;
 
     /**
-     * @var integer 最小实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
+     * @var integer 最小实例数，取值范围为 [0,2000]，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。
      */
     public $MinSize;
 
     /**
-     * @var integer 最大实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
+     * @var integer 最大实例数，取值范围为 [0,2000]，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。
      */
     public $MaxSize;
 
     /**
      * @param string $AutoScalingGroupId 伸缩组ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。
-     * @param integer $DesiredCapacity 期望实例数，取值范围 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。
-     * @param integer $MinSize 最小实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
-     * @param integer $MaxSize 最大实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
+     * @param integer $DesiredCapacity 期望实例数，取值范围 [0,2000]，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。
+     * @param integer $MinSize 最小实例数，取值范围为 [0,2000]，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。
+     * @param integer $MaxSize 最大实例数，取值范围为 [0,2000]，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。
      */
     function __construct()
     {

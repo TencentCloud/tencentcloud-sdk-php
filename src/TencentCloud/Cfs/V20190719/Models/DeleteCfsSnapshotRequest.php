@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteCfsSnapshot请求参数结构体
  *
- * @method string getSnapshotId() 获取文件系统快照id
- * @method void setSnapshotId(string $SnapshotId) 设置文件系统快照id
- * @method array getSnapshotIds() 获取需要删除的文件文件系统快照ID 列表，快照ID，跟ID列表至少填一项
- * @method void setSnapshotIds(array $SnapshotIds) 设置需要删除的文件文件系统快照ID 列表，快照ID，跟ID列表至少填一项
+ * @method string getSnapshotId() 获取文件系统快照id，可通过查询快照列表接口获取
+ * @method void setSnapshotId(string $SnapshotId) 设置文件系统快照id，可通过查询快照列表接口获取
+ * @method array getSnapshotIds() 获取需要删除的文件系统快照ID 列表，快照ID，跟ID列表至少填一项
+ * @method void setSnapshotIds(array $SnapshotIds) 设置需要删除的文件系统快照ID 列表，快照ID，跟ID列表至少填一项
  */
 class DeleteCfsSnapshotRequest extends AbstractModel
 {
     /**
-     * @var string 文件系统快照id
+     * @var string 文件系统快照id，可通过查询快照列表接口获取
      */
     public $SnapshotId;
 
     /**
-     * @var array 需要删除的文件文件系统快照ID 列表，快照ID，跟ID列表至少填一项
+     * @var array 需要删除的文件系统快照ID 列表，快照ID，跟ID列表至少填一项
      */
     public $SnapshotIds;
 
     /**
-     * @param string $SnapshotId 文件系统快照id
-     * @param array $SnapshotIds 需要删除的文件文件系统快照ID 列表，快照ID，跟ID列表至少填一项
+     * @param string $SnapshotId 文件系统快照id，可通过查询快照列表接口获取
+     * @param array $SnapshotIds 需要删除的文件系统快照ID 列表，快照ID，跟ID列表至少填一项
      */
     function __construct()
     {

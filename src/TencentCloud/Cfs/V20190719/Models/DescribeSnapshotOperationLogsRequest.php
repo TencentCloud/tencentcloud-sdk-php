@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSnapshotOperationLogs请求参数结构体
  *
- * @method string getSnapshotId() 获取文件系统快照ID
- * @method void setSnapshotId(string $SnapshotId) 设置文件系统快照ID
+ * @method string getSnapshotId() 获取文件系统快照ID，通过快照创建接口获得
+ * @method void setSnapshotId(string $SnapshotId) 设置文件系统快照ID，通过快照创建接口获得
  * @method string getStartTime() 获取起始时间
  * @method void setStartTime(string $StartTime) 设置起始时间
  * @method string getEndTime() 获取结束时间
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeSnapshotOperationLogsRequest extends AbstractModel
 {
     /**
-     * @var string 文件系统快照ID
+     * @var string 文件系统快照ID，通过快照创建接口获得
      */
     public $SnapshotId;
 
@@ -45,7 +45,7 @@ class DescribeSnapshotOperationLogsRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @param string $SnapshotId 文件系统快照ID
+     * @param string $SnapshotId 文件系统快照ID，通过快照创建接口获得
      * @param string $StartTime 起始时间
      * @param string $EndTime 结束时间
      */

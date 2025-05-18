@@ -20,37 +20,37 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateAutoSnapshotPolicy请求参数结构体
  *
- * @method string getAutoSnapshotPolicyId() 获取快照策略ID
- * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) 设置快照策略ID
- * @method string getPolicyName() 获取快照策略名称
- * @method void setPolicyName(string $PolicyName) 设置快照策略名称
- * @method string getDayOfWeek() 获取快照定期备份，按照星期一到星期日。 1代表星期一，7代表星期日
- * @method void setDayOfWeek(string $DayOfWeek) 设置快照定期备份，按照星期一到星期日。 1代表星期一，7代表星期日
+ * @method string getAutoSnapshotPolicyId() 获取快照策略ID,查询快照策略列表获取
+ * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) 设置快照策略ID,查询快照策略列表获取
+ * @method string getPolicyName() 获取快照策略名称，不超过64个字符
+ * @method void setPolicyName(string $PolicyName) 设置快照策略名称，不超过64个字符
+ * @method string getDayOfWeek() 获取快照定期备份，按照星期一到星期日。 1代表星期一，7代表星期日，与DayOfMonth，IntervalDays 三者选一个
+ * @method void setDayOfWeek(string $DayOfWeek) 设置快照定期备份，按照星期一到星期日。 1代表星期一，7代表星期日，与DayOfMonth，IntervalDays 三者选一个
  * @method string getHour() 获取快照定期备份在一天的哪一小时
  * @method void setHour(string $Hour) 设置快照定期备份在一天的哪一小时
- * @method integer getAliveDays() 获取快照保留日期
- * @method void setAliveDays(integer $AliveDays) 设置快照保留日期
+ * @method integer getAliveDays() 获取快照保留天数
+ * @method void setAliveDays(integer $AliveDays) 设置快照保留天数
  * @method integer getIsActivated() 获取是否激活定期快照功能；1代表激活，0代表未激活
  * @method void setIsActivated(integer $IsActivated) 设置是否激活定期快照功能；1代表激活，0代表未激活
- * @method string getDayOfMonth() 获取定期快照在每月的第几天创建快照，该参数与DayOfWeek互斥
- * @method void setDayOfMonth(string $DayOfMonth) 设置定期快照在每月的第几天创建快照，该参数与DayOfWeek互斥
- * @method integer getIntervalDays() 获取间隔天数定期执行快照，该参数与DayOfWeek,DayOfMonth 互斥
- * @method void setIntervalDays(integer $IntervalDays) 设置间隔天数定期执行快照，该参数与DayOfWeek,DayOfMonth 互斥
+ * @method string getDayOfMonth() 获取定期快照在每月的第几天创建快照，该参数与DayOfWeek,IntervalDays 三者选一
+ * @method void setDayOfMonth(string $DayOfMonth) 设置定期快照在每月的第几天创建快照，该参数与DayOfWeek,IntervalDays 三者选一
+ * @method integer getIntervalDays() 获取间隔天数定期执行快照，该参数与DayOfWeek,DayOfMonth 三者选一
+ * @method void setIntervalDays(integer $IntervalDays) 设置间隔天数定期执行快照，该参数与DayOfWeek,DayOfMonth 三者选一
  */
 class UpdateAutoSnapshotPolicyRequest extends AbstractModel
 {
     /**
-     * @var string 快照策略ID
+     * @var string 快照策略ID,查询快照策略列表获取
      */
     public $AutoSnapshotPolicyId;
 
     /**
-     * @var string 快照策略名称
+     * @var string 快照策略名称，不超过64个字符
      */
     public $PolicyName;
 
     /**
-     * @var string 快照定期备份，按照星期一到星期日。 1代表星期一，7代表星期日
+     * @var string 快照定期备份，按照星期一到星期日。 1代表星期一，7代表星期日，与DayOfMonth，IntervalDays 三者选一个
      */
     public $DayOfWeek;
 
@@ -60,7 +60,7 @@ class UpdateAutoSnapshotPolicyRequest extends AbstractModel
     public $Hour;
 
     /**
-     * @var integer 快照保留日期
+     * @var integer 快照保留天数
      */
     public $AliveDays;
 
@@ -70,24 +70,24 @@ class UpdateAutoSnapshotPolicyRequest extends AbstractModel
     public $IsActivated;
 
     /**
-     * @var string 定期快照在每月的第几天创建快照，该参数与DayOfWeek互斥
+     * @var string 定期快照在每月的第几天创建快照，该参数与DayOfWeek,IntervalDays 三者选一
      */
     public $DayOfMonth;
 
     /**
-     * @var integer 间隔天数定期执行快照，该参数与DayOfWeek,DayOfMonth 互斥
+     * @var integer 间隔天数定期执行快照，该参数与DayOfWeek,DayOfMonth 三者选一
      */
     public $IntervalDays;
 
     /**
-     * @param string $AutoSnapshotPolicyId 快照策略ID
-     * @param string $PolicyName 快照策略名称
-     * @param string $DayOfWeek 快照定期备份，按照星期一到星期日。 1代表星期一，7代表星期日
+     * @param string $AutoSnapshotPolicyId 快照策略ID,查询快照策略列表获取
+     * @param string $PolicyName 快照策略名称，不超过64个字符
+     * @param string $DayOfWeek 快照定期备份，按照星期一到星期日。 1代表星期一，7代表星期日，与DayOfMonth，IntervalDays 三者选一个
      * @param string $Hour 快照定期备份在一天的哪一小时
-     * @param integer $AliveDays 快照保留日期
+     * @param integer $AliveDays 快照保留天数
      * @param integer $IsActivated 是否激活定期快照功能；1代表激活，0代表未激活
-     * @param string $DayOfMonth 定期快照在每月的第几天创建快照，该参数与DayOfWeek互斥
-     * @param integer $IntervalDays 间隔天数定期执行快照，该参数与DayOfWeek,DayOfMonth 互斥
+     * @param string $DayOfMonth 定期快照在每月的第几天创建快照，该参数与DayOfWeek,IntervalDays 三者选一
+     * @param integer $IntervalDays 间隔天数定期执行快照，该参数与DayOfWeek,DayOfMonth 三者选一
      */
     function __construct()
     {

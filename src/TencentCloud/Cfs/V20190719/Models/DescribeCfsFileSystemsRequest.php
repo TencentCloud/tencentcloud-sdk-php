@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置私有网络（VPC） ID
  * @method string getSubnetId() 获取子网 ID
  * @method void setSubnetId(string $SubnetId) 设置子网 ID
- * @method integer getOffset() 获取Offset 分页码
- * @method void setOffset(integer $Offset) 设置Offset 分页码
- * @method integer getLimit() 获取Limit 页面大小
- * @method void setLimit(integer $Limit) 设置Limit 页面大小
+ * @method integer getOffset() 获取Offset 分页码,默认0
+ * @method void setOffset(integer $Offset) 设置Offset 分页码,默认0
+ * @method integer getLimit() 获取Limit 页面大小，默认10
+ * @method void setLimit(integer $Limit) 设置Limit 页面大小，默认10
  * @method string getCreationToken() 获取用户自定义名称
  * @method void setCreationToken(string $CreationToken) 设置用户自定义名称
  */
@@ -51,12 +51,12 @@ class DescribeCfsFileSystemsRequest extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var integer Offset 分页码
+     * @var integer Offset 分页码,默认0
      */
     public $Offset;
 
     /**
-     * @var integer Limit 页面大小
+     * @var integer Limit 页面大小，默认10
      */
     public $Limit;
 
@@ -69,8 +69,8 @@ class DescribeCfsFileSystemsRequest extends AbstractModel
      * @param string $FileSystemId 文件系统 ID
      * @param string $VpcId 私有网络（VPC） ID
      * @param string $SubnetId 子网 ID
-     * @param integer $Offset Offset 分页码
-     * @param integer $Limit Limit 页面大小
+     * @param integer $Offset Offset 分页码,默认0
+     * @param integer $Limit Limit 页面大小，默认10
      * @param string $CreationToken 用户自定义名称
      */
     function __construct()

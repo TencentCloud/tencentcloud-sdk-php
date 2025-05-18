@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UnbindAutoSnapshotPolicy请求参数结构体
  *
- * @method string getFileSystemIds() 获取需要解绑的文件系统ID列表，用"," 分割
- * @method void setFileSystemIds(string $FileSystemIds) 设置需要解绑的文件系统ID列表，用"," 分割
- * @method string getAutoSnapshotPolicyId() 获取解绑的快照ID
- * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) 设置解绑的快照ID
+ * @method string getFileSystemIds() 获取需要解绑的文件系统ID列表，用"," 分割，文件系统id 通创建文件系统接口获得
+ * @method void setFileSystemIds(string $FileSystemIds) 设置需要解绑的文件系统ID列表，用"," 分割，文件系统id 通创建文件系统接口获得
+ * @method string getAutoSnapshotPolicyId() 获取解绑的快照ID，通过创建快照策略接口获得
+ * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) 设置解绑的快照ID，通过创建快照策略接口获得
  */
 class UnbindAutoSnapshotPolicyRequest extends AbstractModel
 {
     /**
-     * @var string 需要解绑的文件系统ID列表，用"," 分割
+     * @var string 需要解绑的文件系统ID列表，用"," 分割，文件系统id 通创建文件系统接口获得
      */
     public $FileSystemIds;
 
     /**
-     * @var string 解绑的快照ID
+     * @var string 解绑的快照ID，通过创建快照策略接口获得
      */
     public $AutoSnapshotPolicyId;
 
     /**
-     * @param string $FileSystemIds 需要解绑的文件系统ID列表，用"," 分割
-     * @param string $AutoSnapshotPolicyId 解绑的快照ID
+     * @param string $FileSystemIds 需要解绑的文件系统ID列表，用"," 分割，文件系统id 通创建文件系统接口获得
+     * @param string $AutoSnapshotPolicyId 解绑的快照ID，通过创建快照策略接口获得
      */
     function __construct()
     {

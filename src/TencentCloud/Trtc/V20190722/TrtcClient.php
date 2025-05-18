@@ -123,7 +123,7 @@ peakCurrentUsers：峰值同时在线人数。
 -视频卡顿率
 -音频卡顿率
 注意：
-1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，详情参考[监控仪表盘]（https://cloud.tencent.com/document/product/647/81331）。
+1.调用接口需开通监控仪表盘【基础版】和【进阶版】，监控仪表盘【免费版】不支持调用，详情参考[监控仪表盘](https://cloud.tencent.com/document/product/647/81331)。
 2.查询时间范围根据监控仪表盘功能版本而定，基础版可查近3小时，进阶版可查近12小时。
  * @method Models\DescribeTRTCRealTimeQualityMetricDataResponse DescribeTRTCRealTimeQualityMetricData(Models\DescribeTRTCRealTimeQualityMetricDataRequest $req) 查询TRTC监控仪表盘-实时监控质量指标（会返回下列指标）
 -视频卡顿率

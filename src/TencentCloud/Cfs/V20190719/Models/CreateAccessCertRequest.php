@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAccessCert请求参数结构体
  *
- * @method string getCertDesc() 获取证书描述
- * @method void setCertDesc(string $CertDesc) 设置证书描述
+ * @method string getCertDesc() 获取证书描述，不超过64字符
+ * @method void setCertDesc(string $CertDesc) 设置证书描述，不超过64字符
  */
 class CreateAccessCertRequest extends AbstractModel
 {
     /**
-     * @var string 证书描述
+     * @var string 证书描述，不超过64字符
      */
     public $CertDesc;
 
     /**
-     * @param string $CertDesc 证书描述
+     * @param string $CertDesc 证书描述，不超过64字符
      */
     function __construct()
     {

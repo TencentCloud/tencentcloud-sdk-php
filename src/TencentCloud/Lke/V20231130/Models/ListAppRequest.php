@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListApp请求参数结构体
  *
- * @method string getAppType() 获取应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classifys-知识标签提取
- * @method void setAppType(string $AppType) 设置应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classifys-知识标签提取
+ * @method string getAppType() 获取应用类型；knowledge_qa - 知识问答管理 
+ * @method void setAppType(string $AppType) 设置应用类型；knowledge_qa - 知识问答管理 
  * @method integer getPageSize() 获取每页数目，整型
  * @method void setPageSize(integer $PageSize) 设置每页数目，整型
  * @method integer getPageNumber() 获取页码，整型
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class ListAppRequest extends AbstractModel
 {
     /**
-     * @var string 应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classifys-知识标签提取
+     * @var string 应用类型；knowledge_qa - 知识问答管理 
      */
     public $AppType;
 
@@ -59,7 +59,7 @@ class ListAppRequest extends AbstractModel
     public $LoginSubAccountUin;
 
     /**
-     * @param string $AppType 应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classifys-知识标签提取
+     * @param string $AppType 应用类型；knowledge_qa - 知识问答管理 
      * @param integer $PageSize 每页数目，整型
      * @param integer $PageNumber 页码，整型
      * @param string $Keyword 关键词：应用/修改人

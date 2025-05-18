@@ -24,16 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoScalingGroupName(string $AutoScalingGroupName) 设置伸缩组名称，在您账号中必须唯一。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超55个字节。
  * @method string getLaunchConfigurationId() 获取启动配置ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 或调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。
  * @method void setLaunchConfigurationId(string $LaunchConfigurationId) 设置启动配置ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 或调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。
- * @method integer getMaxSize() 获取最大实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
- * @method void setMaxSize(integer $MaxSize) 设置最大实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
- * @method integer getMinSize() 获取最小实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
- * @method void setMinSize(integer $MinSize) 设置最小实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
+ * @method integer getMaxSize() 获取最大实例数，取值范围为 [0,2000]，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。
+ * @method void setMaxSize(integer $MaxSize) 设置最大实例数，取值范围为 [0,2000]，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。
+ * @method integer getMinSize() 获取最小实例数，取值范围为 [0,2000]，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。
+ * @method void setMinSize(integer $MinSize) 设置最小实例数，取值范围为 [0,2000]，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。
  * @method string getVpcId() 获取私有网络ID。有效的VpcId可通过登录[控制台](https://console.cloud.tencent.com/vpc/vpc)查询；也可以调用接口 [DescribeVpc](https://cloud.tencent.com/document/api/215/15778) ，从接口返回中的VpcId字段获取。
  * @method void setVpcId(string $VpcId) 设置私有网络ID。有效的VpcId可通过登录[控制台](https://console.cloud.tencent.com/vpc/vpc)查询；也可以调用接口 [DescribeVpc](https://cloud.tencent.com/document/api/215/15778) ，从接口返回中的VpcId字段获取。
  * @method integer getDefaultCooldown() 获取默认冷却时间，单位秒，默认值为300。取值范围为 [0,3600]。
  * @method void setDefaultCooldown(integer $DefaultCooldown) 设置默认冷却时间，单位秒，默认值为300。取值范围为 [0,3600]。
- * @method integer getDesiredCapacity() 获取期望实例数，取值范围 [0,2000]，默认值为最小值。需满足最大值大于等于期望值，期望值大于等于最小值。
- * @method void setDesiredCapacity(integer $DesiredCapacity) 设置期望实例数，取值范围 [0,2000]，默认值为最小值。需满足最大值大于等于期望值，期望值大于等于最小值。
+ * @method integer getDesiredCapacity() 获取期望实例数，取值范围 [0,2000]，默认值等于当前 MinSize，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。
+ * @method void setDesiredCapacity(integer $DesiredCapacity) 设置期望实例数，取值范围 [0,2000]，默认值等于当前 MinSize，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。
  * @method array getLoadBalancerIds() 获取传统负载均衡器ID列表，目前长度上限为20，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个。可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
  * @method void setLoadBalancerIds(array $LoadBalancerIds) 设置传统负载均衡器ID列表，目前长度上限为20，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个。可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
  * @method integer getProjectId() 获取伸缩组内实例所属项目ID。默认值为0，表示使用默认项目。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 projectId 字段来获取。
@@ -136,12 +136,12 @@ class CreateAutoScalingGroupRequest extends AbstractModel
     public $LaunchConfigurationId;
 
     /**
-     * @var integer 最大实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
+     * @var integer 最大实例数，取值范围为 [0,2000]，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。
      */
     public $MaxSize;
 
     /**
-     * @var integer 最小实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
+     * @var integer 最小实例数，取值范围为 [0,2000]，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。
      */
     public $MinSize;
 
@@ -156,7 +156,7 @@ class CreateAutoScalingGroupRequest extends AbstractModel
     public $DefaultCooldown;
 
     /**
-     * @var integer 期望实例数，取值范围 [0,2000]，默认值为最小值。需满足最大值大于等于期望值，期望值大于等于最小值。
+     * @var integer 期望实例数，取值范围 [0,2000]，默认值等于当前 MinSize，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。
      */
     public $DesiredCapacity;
 
@@ -279,11 +279,11 @@ class CreateAutoScalingGroupRequest extends AbstractModel
     /**
      * @param string $AutoScalingGroupName 伸缩组名称，在您账号中必须唯一。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超55个字节。
      * @param string $LaunchConfigurationId 启动配置ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 或调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。
-     * @param integer $MaxSize 最大实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
-     * @param integer $MinSize 最小实例数，取值范围为0-2000。需满足最大值大于等于期望值，期望值大于等于最小值。
+     * @param integer $MaxSize 最大实例数，取值范围为 [0,2000]，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。
+     * @param integer $MinSize 最小实例数，取值范围为 [0,2000]，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。
      * @param string $VpcId 私有网络ID。有效的VpcId可通过登录[控制台](https://console.cloud.tencent.com/vpc/vpc)查询；也可以调用接口 [DescribeVpc](https://cloud.tencent.com/document/api/215/15778) ，从接口返回中的VpcId字段获取。
      * @param integer $DefaultCooldown 默认冷却时间，单位秒，默认值为300。取值范围为 [0,3600]。
-     * @param integer $DesiredCapacity 期望实例数，取值范围 [0,2000]，默认值为最小值。需满足最大值大于等于期望值，期望值大于等于最小值。
+     * @param integer $DesiredCapacity 期望实例数，取值范围 [0,2000]，默认值等于当前 MinSize，同时需满足 MaxSize >= DesiredCapacity >= MinSize 。
      * @param array $LoadBalancerIds 传统负载均衡器ID列表，目前长度上限为20，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个。可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
      * @param integer $ProjectId 伸缩组内实例所属项目ID。默认值为0，表示使用默认项目。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 projectId 字段来获取。
      * @param array $ForwardLoadBalancers 负载均衡器列表，目前长度上限为100，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个

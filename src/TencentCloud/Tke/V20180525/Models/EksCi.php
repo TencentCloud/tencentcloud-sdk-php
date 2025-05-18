@@ -36,10 +36,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEipAddress(string $EipAddress) 设置容器实例绑定的Eip地址，注意可能为空
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEksCiId() 获取EKS Cotainer Instance Id
- * @method void setEksCiId(string $EksCiId) 设置EKS Cotainer Instance Id
- * @method string getEksCiName() 获取EKS Cotainer Instance Name
- * @method void setEksCiName(string $EksCiName) 设置EKS Cotainer Instance Name
+ * @method string getEksCiId() 获取EKS Container Instance Id
+ * @method void setEksCiId(string $EksCiId) 设置EKS Container Instance Id
+ * @method string getEksCiName() 获取EKS Container Instance Name
+ * @method void setEksCiName(string $EksCiName) 设置EKS Container Instance Name
  * @method EksCiVolume getEksCiVolume() 获取数据卷信息
  * @method void setEksCiVolume(EksCiVolume $EksCiVolume) 设置数据卷信息
  * @method integer getGpuCount() 获取GPU卡数量
@@ -122,12 +122,12 @@ class EksCi extends AbstractModel
     public $EipAddress;
 
     /**
-     * @var string EKS Cotainer Instance Id
+     * @var string EKS Container Instance Id
      */
     public $EksCiId;
 
     /**
-     * @var string EKS Cotainer Instance Name
+     * @var string EKS Container Instance Name
      */
     public $EksCiName;
 
@@ -217,8 +217,8 @@ Pending是创建中，Running是 运行中。
      * @param string $CreationTime 接到请求后的系统创建时间。
      * @param string $EipAddress 容器实例绑定的Eip地址，注意可能为空
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EksCiId EKS Cotainer Instance Id
-     * @param string $EksCiName EKS Cotainer Instance Name
+     * @param string $EksCiId EKS Container Instance Id
+     * @param string $EksCiName EKS Container Instance Name
      * @param EksCiVolume $EksCiVolume 数据卷信息
      * @param integer $GpuCount GPU卡数量
      * @param string $GpuType GPU类型。如无使用GPU则不返回

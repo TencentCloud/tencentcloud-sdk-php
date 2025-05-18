@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMountTargets请求参数结构体
  *
- * @method string getFileSystemId() 获取文件系统 ID
- * @method void setFileSystemId(string $FileSystemId) 设置文件系统 ID
+ * @method string getFileSystemId() 获取文件系统 ID，查询文件系统列表可以获得id
+ * @method void setFileSystemId(string $FileSystemId) 设置文件系统 ID，查询文件系统列表可以获得id
  */
 class DescribeMountTargetsRequest extends AbstractModel
 {
     /**
-     * @var string 文件系统 ID
+     * @var string 文件系统 ID，查询文件系统列表可以获得id
      */
     public $FileSystemId;
 
     /**
-     * @param string $FileSystemId 文件系统 ID
+     * @param string $FileSystemId 文件系统 ID，查询文件系统列表可以获得id
      */
     function __construct()
     {

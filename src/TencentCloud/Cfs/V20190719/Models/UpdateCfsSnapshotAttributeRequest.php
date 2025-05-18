@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateCfsSnapshotAttribute请求参数结构体
  *
- * @method string getSnapshotId() 获取文件系统快照ID
- * @method void setSnapshotId(string $SnapshotId) 设置文件系统快照ID
- * @method string getSnapshotName() 获取文件系统快照名称
- * @method void setSnapshotName(string $SnapshotName) 设置文件系统快照名称
- * @method integer getAliveDays() 获取文件系统快照保留天数
- * @method void setAliveDays(integer $AliveDays) 设置文件系统快照保留天数
+ * @method string getSnapshotId() 获取文件系统快照ID,查询文件系统快照列表获取
+ * @method void setSnapshotId(string $SnapshotId) 设置文件系统快照ID,查询文件系统快照列表获取
+ * @method string getSnapshotName() 获取文件系统快照名称，与AliveDays 必须填一个
+ * @method void setSnapshotName(string $SnapshotName) 设置文件系统快照名称，与AliveDays 必须填一个
+ * @method integer getAliveDays() 获取文件系统快照保留天数，与SnapshotName必须填一个，如果原来是永久保留时间，不允许修改成短期有效期
+ * @method void setAliveDays(integer $AliveDays) 设置文件系统快照保留天数，与SnapshotName必须填一个，如果原来是永久保留时间，不允许修改成短期有效期
  */
 class UpdateCfsSnapshotAttributeRequest extends AbstractModel
 {
     /**
-     * @var string 文件系统快照ID
+     * @var string 文件系统快照ID,查询文件系统快照列表获取
      */
     public $SnapshotId;
 
     /**
-     * @var string 文件系统快照名称
+     * @var string 文件系统快照名称，与AliveDays 必须填一个
      */
     public $SnapshotName;
 
     /**
-     * @var integer 文件系统快照保留天数
+     * @var integer 文件系统快照保留天数，与SnapshotName必须填一个，如果原来是永久保留时间，不允许修改成短期有效期
      */
     public $AliveDays;
 
     /**
-     * @param string $SnapshotId 文件系统快照ID
-     * @param string $SnapshotName 文件系统快照名称
-     * @param integer $AliveDays 文件系统快照保留天数
+     * @param string $SnapshotId 文件系统快照ID,查询文件系统快照列表获取
+     * @param string $SnapshotName 文件系统快照名称，与AliveDays 必须填一个
+     * @param integer $AliveDays 文件系统快照保留天数，与SnapshotName必须填一个，如果原来是永久保留时间，不允许修改成短期有效期
      */
     function __construct()
     {

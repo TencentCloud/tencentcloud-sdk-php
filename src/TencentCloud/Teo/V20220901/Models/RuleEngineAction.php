@@ -54,9 +54,9 @@ use TencentCloud\Common\AbstractModel;
 <li>ErrorPage：自定义错误页面；</li>
 <li>ModifyResponseHeader：修改 HTTP 节点响应头；</li>
 <li>ModifyRequestHeader：修改 HTTP 节点请求头；</li>
-<li>ResponseSpeedLimit：单连接下载限速。</li>
-<li>SetContentIdentifierParameters：设置内容标识符。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+<li>ResponseSpeedLimit：单连接下载限速；</li>
+<li>SetContentIdentifier：设置内容标识符；</li>
+<li>Vary：Vary 特性配置。该功能灰度中，如需使用，请联系腾讯云客服。</li>
  * @method void setName(string $Name) 设置操作名称。名称需要与参数结构体对应，例如 Name=Cache，则 CacheParameters 必填。
 <li>Cache：节点缓存 TTL；</li>
 <li>CacheKey：自定义 Cache Key；</li>
@@ -91,9 +91,9 @@ use TencentCloud\Common\AbstractModel;
 <li>ErrorPage：自定义错误页面；</li>
 <li>ModifyResponseHeader：修改 HTTP 节点响应头；</li>
 <li>ModifyRequestHeader：修改 HTTP 节点请求头；</li>
-<li>ResponseSpeedLimit：单连接下载限速。</li>
-<li>SetContentIdentifierParameters：设置内容标识符。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+<li>ResponseSpeedLimit：单连接下载限速；</li>
+<li>SetContentIdentifier：设置内容标识符；</li>
+<li>Vary：Vary 特性配置。该功能灰度中，如需使用，请联系腾讯云客服。</li>
  * @method CacheParameters getCacheParameters() 获取节点缓存 TTL 配置参数，当 Name 取值为 Cache 时，该参数必填。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCacheParameters(CacheParameters $CacheParameters) 设置节点缓存 TTL 配置参数，当 Name 取值为 Cache 时，该参数必填。
@@ -226,12 +226,16 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResponseSpeedLimitParameters(ResponseSpeedLimitParameters $ResponseSpeedLimitParameters) 设置单连接下载限速配置参数，当 Name 取值为 ResponseSpeedLimit 时，该参数必填。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method SetContentIdentifierParameters getSetContentIdentifierParameters() 获取内容标识配置参数，当 Name 取值为 HttpResponse 时，该参数必填。
+ * @method SetContentIdentifierParameters getSetContentIdentifierParameters() 获取内容标识配置参数，当 Name 取值为 SetContentIdentifier 时，该参数必填。
 
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSetContentIdentifierParameters(SetContentIdentifierParameters $SetContentIdentifierParameters) 设置内容标识配置参数，当 Name 取值为 HttpResponse 时，该参数必填。
+ * @method void setSetContentIdentifierParameters(SetContentIdentifierParameters $SetContentIdentifierParameters) 设置内容标识配置参数，当 Name 取值为 SetContentIdentifier 时，该参数必填。
 
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method VaryParameters getVaryParameters() 获取Vary 特性配置参数，当 Name 取值为 Vary 时，该参数必填。
+该功能灰度中，如需使用，请联系腾讯云客服。
+ * @method void setVaryParameters(VaryParameters $VaryParameters) 设置Vary 特性配置参数，当 Name 取值为 Vary 时，该参数必填。
+该功能灰度中，如需使用，请联系腾讯云客服。
  */
 class RuleEngineAction extends AbstractModel
 {
@@ -270,9 +274,9 @@ class RuleEngineAction extends AbstractModel
 <li>ErrorPage：自定义错误页面；</li>
 <li>ModifyResponseHeader：修改 HTTP 节点响应头；</li>
 <li>ModifyRequestHeader：修改 HTTP 节点请求头；</li>
-<li>ResponseSpeedLimit：单连接下载限速。</li>
-<li>SetContentIdentifierParameters：设置内容标识符。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+<li>ResponseSpeedLimit：单连接下载限速；</li>
+<li>SetContentIdentifier：设置内容标识符；</li>
+<li>Vary：Vary 特性配置。该功能灰度中，如需使用，请联系腾讯云客服。</li>
      */
     public $Name;
 
@@ -475,11 +479,17 @@ class RuleEngineAction extends AbstractModel
     public $ResponseSpeedLimitParameters;
 
     /**
-     * @var SetContentIdentifierParameters 内容标识配置参数，当 Name 取值为 HttpResponse 时，该参数必填。
+     * @var SetContentIdentifierParameters 内容标识配置参数，当 Name 取值为 SetContentIdentifier 时，该参数必填。
 
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SetContentIdentifierParameters;
+
+    /**
+     * @var VaryParameters Vary 特性配置参数，当 Name 取值为 Vary 时，该参数必填。
+该功能灰度中，如需使用，请联系腾讯云客服。
+     */
+    public $VaryParameters;
 
     /**
      * @param string $Name 操作名称。名称需要与参数结构体对应，例如 Name=Cache，则 CacheParameters 必填。
@@ -516,9 +526,9 @@ class RuleEngineAction extends AbstractModel
 <li>ErrorPage：自定义错误页面；</li>
 <li>ModifyResponseHeader：修改 HTTP 节点响应头；</li>
 <li>ModifyRequestHeader：修改 HTTP 节点请求头；</li>
-<li>ResponseSpeedLimit：单连接下载限速。</li>
-<li>SetContentIdentifierParameters：设置内容标识符。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+<li>ResponseSpeedLimit：单连接下载限速；</li>
+<li>SetContentIdentifier：设置内容标识符；</li>
+<li>Vary：Vary 特性配置。该功能灰度中，如需使用，请联系腾讯云客服。</li>
      * @param CacheParameters $CacheParameters 节点缓存 TTL 配置参数，当 Name 取值为 Cache 时，该参数必填。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CacheKeyParameters $CacheKeyParameters 自定义 Cache Key 配置参数，当 Name 取值为 CacheKey 时，该参数必填。
@@ -585,9 +595,11 @@ class RuleEngineAction extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ResponseSpeedLimitParameters $ResponseSpeedLimitParameters 单连接下载限速配置参数，当 Name 取值为 ResponseSpeedLimit 时，该参数必填。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param SetContentIdentifierParameters $SetContentIdentifierParameters 内容标识配置参数，当 Name 取值为 HttpResponse 时，该参数必填。
+     * @param SetContentIdentifierParameters $SetContentIdentifierParameters 内容标识配置参数，当 Name 取值为 SetContentIdentifier 时，该参数必填。
 
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param VaryParameters $VaryParameters Vary 特性配置参数，当 Name 取值为 Vary 时，该参数必填。
+该功能灰度中，如需使用，请联系腾讯云客服。
      */
     function __construct()
     {
@@ -774,6 +786,11 @@ class RuleEngineAction extends AbstractModel
         if (array_key_exists("SetContentIdentifierParameters",$param) and $param["SetContentIdentifierParameters"] !== null) {
             $this->SetContentIdentifierParameters = new SetContentIdentifierParameters();
             $this->SetContentIdentifierParameters->deserialize($param["SetContentIdentifierParameters"]);
+        }
+
+        if (array_key_exists("VaryParameters",$param) and $param["VaryParameters"] !== null) {
+            $this->VaryParameters = new VaryParameters();
+            $this->VaryParameters->deserialize($param["VaryParameters"]);
         }
     }
 }

@@ -20,28 +20,28 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateFlowLog请求参数结构体
  *
- * @method string getFlowLogName() 获取流日志实例名字。长度为不超过60个字节。
- * @method void setFlowLogName(string $FlowLogName) 设置流日志实例名字。长度为不超过60个字节。
- * @method string getResourceType() 获取流日志所属资源类型，VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。当选择VPC， SUBNET，CCN，DCG时，请通过工单加入白名单。
- * @method void setResourceType(string $ResourceType) 设置流日志所属资源类型，VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。当选择VPC， SUBNET，CCN，DCG时，请通过工单加入白名单。
+ * @method string getFlowLogName() 获取流日志实例名称。长度为不超过60个字符。
+ * @method void setFlowLogName(string $FlowLogName) 设置流日志实例名称。长度为不超过60个字符。
+ * @method string getResourceType() 获取流日志所属资源类型，VPC（私有网络），SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。当选择VPC，SUBNET，CCN，DCG时，请通过工单加入白名单。
+ * @method void setResourceType(string $ResourceType) 设置流日志所属资源类型，VPC（私有网络），SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。当选择VPC，SUBNET，CCN，DCG时，请通过工单加入白名单。
  * @method string getResourceId() 获取资源唯一ID。
  * @method void setResourceId(string $ResourceId) 设置资源唯一ID。
  * @method string getTrafficType() 获取流日志采集类型，ACCEPT（允许），REJECT（拒绝），ALL（全部）。
  * @method void setTrafficType(string $TrafficType) 设置流日志采集类型，ACCEPT（允许），REJECT（拒绝），ALL（全部）。
  * @method string getVpcId() 获取私用网络唯一ID。当ResourceType为CCN时不填，其他类型必填。
  * @method void setVpcId(string $VpcId) 设置私用网络唯一ID。当ResourceType为CCN时不填，其他类型必填。
- * @method string getFlowLogDescription() 获取流日志实例描述。
- * @method void setFlowLogDescription(string $FlowLogDescription) 设置流日志实例描述。
+ * @method string getFlowLogDescription() 获取流日志实例描述。长度不超过512个字符。
+ * @method void setFlowLogDescription(string $FlowLogDescription) 设置流日志实例描述。长度不超过512个字符。
  * @method string getCloudLogId() 获取流日志存储ID（cls的日志主题ID，
-可通过[DescribeTopics](https://cloud.tencent.com/document/api/1179/46086)接口获取。
+可通过[DescribeTopics](https://cloud.tencent.com/document/product/614/56454)接口获取。
 ）。当StorageType为cls时，CloudLogId为必选。
  * @method void setCloudLogId(string $CloudLogId) 设置流日志存储ID（cls的日志主题ID，
-可通过[DescribeTopics](https://cloud.tencent.com/document/api/1179/46086)接口获取。
+可通过[DescribeTopics](https://cloud.tencent.com/document/product/614/56454)接口获取。
 ）。当StorageType为cls时，CloudLogId为必选。
  * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
  * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
- * @method string getStorageType() 获取消费端类型：cls、ckafka。默认值cls。当选择kafka时，请通过工单加入白名单。
- * @method void setStorageType(string $StorageType) 设置消费端类型：cls、ckafka。默认值cls。当选择kafka时，请通过工单加入白名单。
+ * @method string getStorageType() 获取消费端类型：cls、ckafka。默认值cls。当选择ckafka时，请通过工单加入白名单。
+ * @method void setStorageType(string $StorageType) 设置消费端类型：cls、ckafka。默认值cls。当选择ckafka时，请通过工单加入白名单。
  * @method FlowLogStorage getFlowLogStorage() 获取流日志消费端信息，当消费端类型为ckafka时，必填。
  * @method void setFlowLogStorage(FlowLogStorage $FlowLogStorage) 设置流日志消费端信息，当消费端类型为ckafka时，必填。
  * @method string getCloudLogRegion() 获取流日志存储ID对应的地域，不传递默认为本地域。
@@ -50,12 +50,12 @@ use TencentCloud\Common\AbstractModel;
 class CreateFlowLogRequest extends AbstractModel
 {
     /**
-     * @var string 流日志实例名字。长度为不超过60个字节。
+     * @var string 流日志实例名称。长度为不超过60个字符。
      */
     public $FlowLogName;
 
     /**
-     * @var string 流日志所属资源类型，VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。当选择VPC， SUBNET，CCN，DCG时，请通过工单加入白名单。
+     * @var string 流日志所属资源类型，VPC（私有网络），SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。当选择VPC，SUBNET，CCN，DCG时，请通过工单加入白名单。
      */
     public $ResourceType;
 
@@ -75,13 +75,13 @@ class CreateFlowLogRequest extends AbstractModel
     public $VpcId;
 
     /**
-     * @var string 流日志实例描述。
+     * @var string 流日志实例描述。长度不超过512个字符。
      */
     public $FlowLogDescription;
 
     /**
      * @var string 流日志存储ID（cls的日志主题ID，
-可通过[DescribeTopics](https://cloud.tencent.com/document/api/1179/46086)接口获取。
+可通过[DescribeTopics](https://cloud.tencent.com/document/product/614/56454)接口获取。
 ）。当StorageType为cls时，CloudLogId为必选。
      */
     public $CloudLogId;
@@ -92,7 +92,7 @@ class CreateFlowLogRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @var string 消费端类型：cls、ckafka。默认值cls。当选择kafka时，请通过工单加入白名单。
+     * @var string 消费端类型：cls、ckafka。默认值cls。当选择ckafka时，请通过工单加入白名单。
      */
     public $StorageType;
 
@@ -107,17 +107,17 @@ class CreateFlowLogRequest extends AbstractModel
     public $CloudLogRegion;
 
     /**
-     * @param string $FlowLogName 流日志实例名字。长度为不超过60个字节。
-     * @param string $ResourceType 流日志所属资源类型，VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。当选择VPC， SUBNET，CCN，DCG时，请通过工单加入白名单。
+     * @param string $FlowLogName 流日志实例名称。长度为不超过60个字符。
+     * @param string $ResourceType 流日志所属资源类型，VPC（私有网络），SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。当选择VPC，SUBNET，CCN，DCG时，请通过工单加入白名单。
      * @param string $ResourceId 资源唯一ID。
      * @param string $TrafficType 流日志采集类型，ACCEPT（允许），REJECT（拒绝），ALL（全部）。
      * @param string $VpcId 私用网络唯一ID。当ResourceType为CCN时不填，其他类型必填。
-     * @param string $FlowLogDescription 流日志实例描述。
+     * @param string $FlowLogDescription 流日志实例描述。长度不超过512个字符。
      * @param string $CloudLogId 流日志存储ID（cls的日志主题ID，
-可通过[DescribeTopics](https://cloud.tencent.com/document/api/1179/46086)接口获取。
+可通过[DescribeTopics](https://cloud.tencent.com/document/product/614/56454)接口获取。
 ）。当StorageType为cls时，CloudLogId为必选。
      * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
-     * @param string $StorageType 消费端类型：cls、ckafka。默认值cls。当选择kafka时，请通过工单加入白名单。
+     * @param string $StorageType 消费端类型：cls、ckafka。默认值cls。当选择ckafka时，请通过工单加入白名单。
      * @param FlowLogStorage $FlowLogStorage 流日志消费端信息，当消费端类型为ckafka时，必填。
      * @param string $CloudLogRegion 流日志存储ID对应的地域，不传递默认为本地域。
      */

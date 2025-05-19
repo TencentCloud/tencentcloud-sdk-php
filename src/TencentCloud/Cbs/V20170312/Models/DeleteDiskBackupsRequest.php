@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteDiskBackups请求参数结构体
  *
- * @method array getDiskBackupIds() 获取待删除的云硬盘备份点ID。
- * @method void setDiskBackupIds(array $DiskBackupIds) 设置待删除的云硬盘备份点ID。
+ * @method array getDiskBackupIds() 获取待删除的云硬盘备份点ID，可以通过[DescribeDiskBackups](/document/product/362/80278)接口查询。
+ * @method void setDiskBackupIds(array $DiskBackupIds) 设置待删除的云硬盘备份点ID，可以通过[DescribeDiskBackups](/document/product/362/80278)接口查询。
  */
 class DeleteDiskBackupsRequest extends AbstractModel
 {
     /**
-     * @var array 待删除的云硬盘备份点ID。
+     * @var array 待删除的云硬盘备份点ID，可以通过[DescribeDiskBackups](/document/product/362/80278)接口查询。
      */
     public $DiskBackupIds;
 
     /**
-     * @param array $DiskBackupIds 待删除的云硬盘备份点ID。
+     * @param array $DiskBackupIds 待删除的云硬盘备份点ID，可以通过[DescribeDiskBackups](/document/product/362/80278)接口查询。
      */
     function __construct()
     {

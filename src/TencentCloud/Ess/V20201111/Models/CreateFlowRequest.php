@@ -52,8 +52,8 @@ use TencentCloud\Common\AbstractModel;
 此合同类型需要跟模板配置的合同类型保持一致。
  * @method void setFlowType(string $FlowType) 设置合同流程的类别分类（可自定义名称，如销售合同/入职合同等），最大长度为200个字符，仅限中文、字母、数字和下划线组成。
 此合同类型需要跟模板配置的合同类型保持一致。
- * @method string getClientToken() 获取已经废弃字段，客户端Token，保持接口幂等性,最大长度64个字符
- * @method void setClientToken(string $ClientToken) 设置已经废弃字段，客户端Token，保持接口幂等性,最大长度64个字符
+ * @method string getClientToken() 获取该字段已不再使用
+ * @method void setClientToken(string $ClientToken) 设置该字段已不再使用
  * @method integer getDeadLine() 获取合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为合同流程创建后的365天时截止。
 如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
  * @method void setDeadLine(integer $DeadLine) 设置合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为合同流程创建后的365天时截止。
@@ -200,7 +200,7 @@ class CreateFlowRequest extends AbstractModel
     public $FlowType;
 
     /**
-     * @var string 已经废弃字段，客户端Token，保持接口幂等性,最大长度64个字符
+     * @var string 该字段已不再使用
      */
     public $ClientToken;
 
@@ -324,7 +324,7 @@ class CreateFlowRequest extends AbstractModel
      * @param string $FlowDescription 合同流程描述信息(可自定义此描述)，最大长度1000个字符。
      * @param string $FlowType 合同流程的类别分类（可自定义名称，如销售合同/入职合同等），最大长度为200个字符，仅限中文、字母、数字和下划线组成。
 此合同类型需要跟模板配置的合同类型保持一致。
-     * @param string $ClientToken 已经废弃字段，客户端Token，保持接口幂等性,最大长度64个字符
+     * @param string $ClientToken 该字段已不再使用
      * @param integer $DeadLine 合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为合同流程创建后的365天时截止。
 如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
      * @param integer $RemindedOn 合同到期提醒时间，为Unix标准时间戳（秒）格式，支持的范围是从发起时间开始到后10年内。

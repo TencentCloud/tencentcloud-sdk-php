@@ -79,6 +79,7 @@ class DescribeAuditLogsRequest extends AbstractModel
 
     /**
      * @var AuditLogFilter 已废弃。
+     * @deprecated
      */
     public $Filter;
 

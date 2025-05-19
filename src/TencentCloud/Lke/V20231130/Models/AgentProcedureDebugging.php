@@ -40,6 +40,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReferences(array $References) 设置具体的参考来源
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDisplayStatus() 获取展示正在执行的状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDisplayStatus(string $DisplayStatus) 设置展示正在执行的状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSandboxUrl() 获取云桌面的URL地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSandboxUrl(string $SandboxUrl) 设置云桌面的URL地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDisplayUrl() 获取云桌面里面通过浏览器打开的URL地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDisplayUrl(string $DisplayUrl) 设置云桌面里面通过浏览器打开的URL地址
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AgentProcedureDebugging extends AbstractModel
 {
@@ -74,6 +86,24 @@ class AgentProcedureDebugging extends AbstractModel
     public $References;
 
     /**
+     * @var string 展示正在执行的状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DisplayStatus;
+
+    /**
+     * @var string 云桌面的URL地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SandboxUrl;
+
+    /**
+     * @var string 云桌面里面通过浏览器打开的URL地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DisplayUrl;
+
+    /**
      * @param string $Content 模型思考内容
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DisplayContent 展示的具体文本内容
@@ -83,6 +113,12 @@ class AgentProcedureDebugging extends AbstractModel
      * @param array $QuoteInfos 搜索引擎展示的索引
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $References 具体的参考来源
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DisplayStatus 展示正在执行的状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SandboxUrl 云桌面的URL地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DisplayUrl 云桌面里面通过浏览器打开的URL地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -126,6 +162,18 @@ class AgentProcedureDebugging extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->References, $obj);
             }
+        }
+
+        if (array_key_exists("DisplayStatus",$param) and $param["DisplayStatus"] !== null) {
+            $this->DisplayStatus = $param["DisplayStatus"];
+        }
+
+        if (array_key_exists("SandboxUrl",$param) and $param["SandboxUrl"] !== null) {
+            $this->SandboxUrl = $param["SandboxUrl"];
+        }
+
+        if (array_key_exists("DisplayUrl",$param) and $param["DisplayUrl"] !== null) {
+            $this->DisplayUrl = $param["DisplayUrl"];
         }
     }
 }

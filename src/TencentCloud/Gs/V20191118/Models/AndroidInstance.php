@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserId(string $UserId) 设置用户ID
  * @method string getPrivateIP() 获取内网 IP
  * @method void setPrivateIP(string $PrivateIP) 设置内网 IP
+ * @method string getCreateTime() 获取创建时间
+ * @method void setCreateTime(string $CreateTime) 设置创建时间
+ * @method string getHostServerSerialNumber() 获取机箱 ID
+ * @method void setHostServerSerialNumber(string $HostServerSerialNumber) 设置机箱 ID
  */
 class AndroidInstance extends AbstractModel
 {
@@ -122,6 +126,16 @@ class AndroidInstance extends AbstractModel
     public $PrivateIP;
 
     /**
+     * @var string 创建时间
+     */
+    public $CreateTime;
+
+    /**
+     * @var string 机箱 ID
+     */
+    public $HostServerSerialNumber;
+
+    /**
      * @param string $AndroidInstanceId 实例 ID
      * @param string $AndroidInstanceRegion 实例所在区域
      * @param string $AndroidInstanceZone 实例可用区
@@ -136,6 +150,8 @@ class AndroidInstance extends AbstractModel
      * @param string $Name 名称
      * @param string $UserId 用户ID
      * @param string $PrivateIP 内网 IP
+     * @param string $CreateTime 创建时间
+     * @param string $HostServerSerialNumber 机箱 ID
      */
     function __construct()
     {
@@ -209,6 +225,14 @@ class AndroidInstance extends AbstractModel
 
         if (array_key_exists("PrivateIP",$param) and $param["PrivateIP"] !== null) {
             $this->PrivateIP = $param["PrivateIP"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("HostServerSerialNumber",$param) and $param["HostServerSerialNumber"] !== null) {
+            $this->HostServerSerialNumber = $param["HostServerSerialNumber"];
         }
     }
 }

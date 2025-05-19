@@ -120,6 +120,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtraInfo(ExtraInfo $ExtraInfo) 设置扩展信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method WorkflowInfo getWorkFlow() 获取工作流信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWorkFlow(WorkflowInfo $WorkFlow) 设置工作流信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MsgRecord extends AbstractModel
 {
@@ -274,6 +278,12 @@ class MsgRecord extends AbstractModel
     public $ExtraInfo;
 
     /**
+     * @var WorkflowInfo 工作流信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WorkFlow;
+
+    /**
      * @param string $Content 内容
      * @param string $SessionId 当前记录所对应的 Session ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -323,6 +333,8 @@ class MsgRecord extends AbstractModel
      * @param AgentThought $AgentThought Agent的思考过程信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ExtraInfo $ExtraInfo 扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WorkflowInfo $WorkFlow 工作流信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -455,6 +467,11 @@ class MsgRecord extends AbstractModel
         if (array_key_exists("ExtraInfo",$param) and $param["ExtraInfo"] !== null) {
             $this->ExtraInfo = new ExtraInfo();
             $this->ExtraInfo->deserialize($param["ExtraInfo"]);
+        }
+
+        if (array_key_exists("WorkFlow",$param) and $param["WorkFlow"] !== null) {
+            $this->WorkFlow = new WorkflowInfo();
+            $this->WorkFlow->deserialize($param["WorkFlow"]);
         }
     }
 }

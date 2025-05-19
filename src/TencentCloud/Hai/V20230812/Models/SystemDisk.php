@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDiskType() 获取系统盘类型。取值范围：<li>CLOUD_PREMIUM：高性能云硬盘</li><li>CLOUD_HSSD：增强型SSD云盘</li>默认取值：当前有库存的硬盘类型。
  * @method void setDiskType(string $DiskType) 设置系统盘类型。取值范围：<li>CLOUD_PREMIUM：高性能云硬盘</li><li>CLOUD_HSSD：增强型SSD云盘</li>默认取值：当前有库存的硬盘类型。
- * @method integer getDiskSize() 获取系统盘大小，单位：GB。默认值为 80
- * @method void setDiskSize(integer $DiskSize) 设置系统盘大小，单位：GB。默认值为 80
+ * @method integer getDiskSize() 获取系统盘大小，单位：GB。默认值为 80，取值范围：80-1000
+ * @method void setDiskSize(integer $DiskSize) 设置系统盘大小，单位：GB。默认值为 80，取值范围：80-1000
  * @method string getDiskName() 获取系统盘分区盘符
  * @method void setDiskName(string $DiskName) 设置系统盘分区盘符
  */
@@ -35,7 +35,7 @@ class SystemDisk extends AbstractModel
     public $DiskType;
 
     /**
-     * @var integer 系统盘大小，单位：GB。默认值为 80
+     * @var integer 系统盘大小，单位：GB。默认值为 80，取值范围：80-1000
      */
     public $DiskSize;
 
@@ -46,7 +46,7 @@ class SystemDisk extends AbstractModel
 
     /**
      * @param string $DiskType 系统盘类型。取值范围：<li>CLOUD_PREMIUM：高性能云硬盘</li><li>CLOUD_HSSD：增强型SSD云盘</li>默认取值：当前有库存的硬盘类型。
-     * @param integer $DiskSize 系统盘大小，单位：GB。默认值为 80
+     * @param integer $DiskSize 系统盘大小，单位：GB。默认值为 80，取值范围：80-1000
      * @param string $DiskName 系统盘分区盘符
      */
     function __construct()

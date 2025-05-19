@@ -128,6 +128,8 @@ pause
  * @method void setAbility(Ability $Ability) 设置能力
  * @method array getResourcePackages() 获取实例绑定资源包信息（此处只返回存储资源包，即packageType=DISK）	
  * @method void setResourcePackages(array $ResourcePackages) 设置实例绑定资源包信息（此处只返回存储资源包，即packageType=DISK）	
+ * @method string getGdnId() 获取全球数据库唯一标识
+ * @method void setGdnId(string $GdnId) 设置全球数据库唯一标识
  */
 class CynosdbCluster extends AbstractModel
 {
@@ -358,6 +360,11 @@ pause
     public $ResourcePackages;
 
     /**
+     * @var string 全球数据库唯一标识
+     */
+    public $GdnId;
+
+    /**
      * @param string $Status 集群状态， 可选值如下:
 creating: 创建中
 running:运行中
@@ -412,6 +419,7 @@ pause
      * @param string $OrderSource 订单来源
      * @param Ability $Ability 能力
      * @param array $ResourcePackages 实例绑定资源包信息（此处只返回存储资源包，即packageType=DISK）	
+     * @param string $GdnId 全球数据库唯一标识
      */
     function __construct()
     {
@@ -617,6 +625,10 @@ pause
                 $obj->deserialize($value);
                 array_push($this->ResourcePackages, $obj);
             }
+        }
+
+        if (array_key_exists("GdnId",$param) and $param["GdnId"] !== null) {
+            $this->GdnId = $param["GdnId"];
         }
     }
 }

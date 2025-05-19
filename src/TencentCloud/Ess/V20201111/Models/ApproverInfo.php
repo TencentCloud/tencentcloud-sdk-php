@@ -120,12 +120,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApproverRoleName(string $ApproverRoleName) 设置可以自定义签署人角色名：收款人、开具人、见证人等，长度不能超过20，只能由中文、字母、数字和下划线组成。
 
 注: `如果是用模板发起, 优先使用此处上传的, 如果不传则用模板的配置的`
- * @method array getVerifyChannel() 获取<font coloe="red">【已废弃】</font>签署意愿确认渠道，默认为WEIXINAPP:人脸识别
+ * @method array getVerifyChannel() 获取<font color="red">【已不再使用】</font>签署意愿确认渠道，默认为WEIXINAPP:人脸识别
 
-注: 将要废弃, 用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置
- * @method void setVerifyChannel(array $VerifyChannel) 设置<font coloe="red">【已废弃】</font>签署意愿确认渠道，默认为WEIXINAPP:人脸识别
+注: 该字段已不再使用, 请用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置
+ * @method void setVerifyChannel(array $VerifyChannel) 设置<font color="red">【已不再使用】</font>签署意愿确认渠道，默认为WEIXINAPP:人脸识别
 
-注: 将要废弃, 用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置
+注: 该字段已不再使用, 请用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置
  * @method integer getPreReadTime() 获取签署方在签署合同之前，需要强制阅读合同的时长，可指定为3秒至300秒之间的任意值。
 
 若未指定阅读时间，则会按照合同页数大小计算阅读时间，计算规则如下：
@@ -364,9 +364,9 @@ class ApproverInfo extends AbstractModel
     public $ApproverRoleName;
 
     /**
-     * @var array <font coloe="red">【已废弃】</font>签署意愿确认渠道，默认为WEIXINAPP:人脸识别
+     * @var array <font color="red">【已不再使用】</font>签署意愿确认渠道，默认为WEIXINAPP:人脸识别
 
-注: 将要废弃, 用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置
+注: 该字段已不再使用, 请用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置
      */
     public $VerifyChannel;
 
@@ -545,9 +545,9 @@ class ApproverInfo extends AbstractModel
      * @param string $ApproverRoleName 可以自定义签署人角色名：收款人、开具人、见证人等，长度不能超过20，只能由中文、字母、数字和下划线组成。
 
 注: `如果是用模板发起, 优先使用此处上传的, 如果不传则用模板的配置的`
-     * @param array $VerifyChannel <font coloe="red">【已废弃】</font>签署意愿确认渠道，默认为WEIXINAPP:人脸识别
+     * @param array $VerifyChannel <font color="red">【已不再使用】</font>签署意愿确认渠道，默认为WEIXINAPP:人脸识别
 
-注: 将要废弃, 用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置
+注: 该字段已不再使用, 请用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置
      * @param integer $PreReadTime 签署方在签署合同之前，需要强制阅读合同的时长，可指定为3秒至300秒之间的任意值。
 
 若未指定阅读时间，则会按照合同页数大小计算阅读时间，计算规则如下：

@@ -21,7 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * StartInstance请求参数结构体
  *
  * @method string getInstanceId() 获取实例ID
+可通过DescribeInstances获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
+可通过DescribeInstances获取实例ID
  * @method boolean getDryRun() 获取默认为False，True代表只验证接口连通性
  * @method void setDryRun(boolean $DryRun) 设置默认为False，True代表只验证接口连通性
  */
@@ -29,6 +31,7 @@ class StartInstanceRequest extends AbstractModel
 {
     /**
      * @var string 实例ID
+可通过DescribeInstances获取实例ID
      */
     public $InstanceId;
 
@@ -39,6 +42,7 @@ class StartInstanceRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 实例ID
+可通过DescribeInstances获取实例ID
      * @param boolean $DryRun 默认为False，True代表只验证接口连通性
      */
     function __construct()

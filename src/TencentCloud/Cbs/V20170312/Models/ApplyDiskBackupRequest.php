@@ -20,24 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ApplyDiskBackup请求参数结构体
  *
- * @method string getDiskBackupId() 获取云硬盘备份点ID，可通过 DescribeDiskBackups 查询。
- * @method void setDiskBackupId(string $DiskBackupId) 设置云硬盘备份点ID，可通过 DescribeDiskBackups 查询。
- * @method string getDiskId() 获取云硬盘备份点原云硬盘ID，可通过DescribeDisks接口查询。
- * @method void setDiskId(string $DiskId) 设置云硬盘备份点原云硬盘ID，可通过DescribeDisks接口查询。
+ * @method string getDiskBackupId() 获取云硬盘备份点ID，可以通过[DescribeDiskBackups](/document/product/362/80278)接口查询。
+ * @method void setDiskBackupId(string $DiskBackupId) 设置云硬盘备份点ID，可以通过[DescribeDiskBackups](/document/product/362/80278)接口查询。
+ * @method string getDiskId() 获取云硬盘备份点原云硬盘ID，可以通过[DescribeDisks](/document/product/362/16315)接口查。
+ * @method void setDiskId(string $DiskId) 设置云硬盘备份点原云硬盘ID，可以通过[DescribeDisks](/document/product/362/16315)接口查。
  * @method boolean getAutoStopInstance() 获取回滚云硬盘备份点前是否自动关机，默认为FALSE，表示不自动关机
  * @method void setAutoStopInstance(boolean $AutoStopInstance) 设置回滚云硬盘备份点前是否自动关机，默认为FALSE，表示不自动关机
- * @method boolean getAutoStartInstance() 获取回滚云硬盘备份点完成后是否自动开机，默认为FALSE，表示不自动开机
- * @method void setAutoStartInstance(boolean $AutoStartInstance) 设置回滚云硬盘备份点完成后是否自动开机，默认为FALSE，表示不自动开机
+ * @method boolean getAutoStartInstance() 获取回滚云硬盘备份点完成后是否自动开机，默认为FALSE，表示不自动开机; AutoStartInstance参数需要在AutoStopInstance为true时才能为true。
+ * @method void setAutoStartInstance(boolean $AutoStartInstance) 设置回滚云硬盘备份点完成后是否自动开机，默认为FALSE，表示不自动开机; AutoStartInstance参数需要在AutoStopInstance为true时才能为true。
  */
 class ApplyDiskBackupRequest extends AbstractModel
 {
     /**
-     * @var string 云硬盘备份点ID，可通过 DescribeDiskBackups 查询。
+     * @var string 云硬盘备份点ID，可以通过[DescribeDiskBackups](/document/product/362/80278)接口查询。
      */
     public $DiskBackupId;
 
     /**
-     * @var string 云硬盘备份点原云硬盘ID，可通过DescribeDisks接口查询。
+     * @var string 云硬盘备份点原云硬盘ID，可以通过[DescribeDisks](/document/product/362/16315)接口查。
      */
     public $DiskId;
 
@@ -47,15 +47,15 @@ class ApplyDiskBackupRequest extends AbstractModel
     public $AutoStopInstance;
 
     /**
-     * @var boolean 回滚云硬盘备份点完成后是否自动开机，默认为FALSE，表示不自动开机
+     * @var boolean 回滚云硬盘备份点完成后是否自动开机，默认为FALSE，表示不自动开机; AutoStartInstance参数需要在AutoStopInstance为true时才能为true。
      */
     public $AutoStartInstance;
 
     /**
-     * @param string $DiskBackupId 云硬盘备份点ID，可通过 DescribeDiskBackups 查询。
-     * @param string $DiskId 云硬盘备份点原云硬盘ID，可通过DescribeDisks接口查询。
+     * @param string $DiskBackupId 云硬盘备份点ID，可以通过[DescribeDiskBackups](/document/product/362/80278)接口查询。
+     * @param string $DiskId 云硬盘备份点原云硬盘ID，可以通过[DescribeDisks](/document/product/362/16315)接口查。
      * @param boolean $AutoStopInstance 回滚云硬盘备份点前是否自动关机，默认为FALSE，表示不自动关机
-     * @param boolean $AutoStartInstance 回滚云硬盘备份点完成后是否自动开机，默认为FALSE，表示不自动开机
+     * @param boolean $AutoStartInstance 回滚云硬盘备份点完成后是否自动开机，默认为FALSE，表示不自动开机; AutoStartInstance参数需要在AutoStopInstance为true时才能为true。
      */
     function __construct()
     {

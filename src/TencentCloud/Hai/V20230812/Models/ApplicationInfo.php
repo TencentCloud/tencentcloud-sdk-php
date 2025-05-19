@@ -32,18 +32,18 @@ use TencentCloud\Common\AbstractModel;
 
  * @method string getConfigEnvironment() 获取应用的环境配置
  * @method void setConfigEnvironment(string $ConfigEnvironment) 设置应用的环境配置
- * @method integer getMinSystemDiskSize() 获取系统盘大小下限
- * @method void setMinSystemDiskSize(integer $MinSystemDiskSize) 设置系统盘大小下限
- * @method string getApplicationType() 获取应用类型，目前该项取值可以为PRIVATE_APPLICATION或者PUBLIC_APPLICATION
- * @method void setApplicationType(string $ApplicationType) 设置应用类型，目前该项取值可以为PRIVATE_APPLICATION或者PUBLIC_APPLICATION
+ * @method integer getMinSystemDiskSize() 获取系统盘大小下限，单位GB
+ * @method void setMinSystemDiskSize(integer $MinSystemDiskSize) 设置系统盘大小下限，单位GB
+ * @method string getApplicationType() 获取应用类型，目前该项取值可以为PUBLIC_APPLICATION（公共应用）；PRIVATE_APPLICATION（自定义应用）；COMMUNITY_APPLICATION（社区应用）
+ * @method void setApplicationType(string $ApplicationType) 设置应用类型，目前该项取值可以为PUBLIC_APPLICATION（公共应用）；PRIVATE_APPLICATION（自定义应用）；COMMUNITY_APPLICATION（社区应用）
  * @method string getApplicationState() 获取应用状态：CREATING-创建中；ONLINE -正常在线；DELETING -删除中；ARREARS - 欠费隔离
 示例值：ONLINE
  * @method void setApplicationState(string $ApplicationState) 设置应用状态：CREATING-创建中；ONLINE -正常在线；DELETING -删除中；ARREARS - 欠费隔离
 示例值：ONLINE
- * @method string getCreateTime() 获取应用创建时间
- * @method void setCreateTime(string $CreateTime) 设置应用创建时间
- * @method integer getApplicationSize() 获取应用大小
- * @method void setApplicationSize(integer $ApplicationSize) 设置应用大小
+ * @method string getCreateTime() 获取应用创建时间，格式：%Y-%m-%d %H:%M:%S
+ * @method void setCreateTime(string $CreateTime) 设置应用创建时间，格式：%Y-%m-%d %H:%M:%S
+ * @method integer getApplicationSize() 获取应用大小，单位GB
+ * @method void setApplicationSize(integer $ApplicationSize) 设置应用大小，单位GB
  */
 class ApplicationInfo extends AbstractModel
 {
@@ -70,12 +70,12 @@ class ApplicationInfo extends AbstractModel
     public $ConfigEnvironment;
 
     /**
-     * @var integer 系统盘大小下限
+     * @var integer 系统盘大小下限，单位GB
      */
     public $MinSystemDiskSize;
 
     /**
-     * @var string 应用类型，目前该项取值可以为PRIVATE_APPLICATION或者PUBLIC_APPLICATION
+     * @var string 应用类型，目前该项取值可以为PUBLIC_APPLICATION（公共应用）；PRIVATE_APPLICATION（自定义应用）；COMMUNITY_APPLICATION（社区应用）
      */
     public $ApplicationType;
 
@@ -86,12 +86,12 @@ class ApplicationInfo extends AbstractModel
     public $ApplicationState;
 
     /**
-     * @var string 应用创建时间
+     * @var string 应用创建时间，格式：%Y-%m-%d %H:%M:%S
      */
     public $CreateTime;
 
     /**
-     * @var integer 应用大小
+     * @var integer 应用大小，单位GB
      */
     public $ApplicationSize;
 
@@ -102,12 +102,12 @@ class ApplicationInfo extends AbstractModel
      * @param string $Description 应用描述
 
      * @param string $ConfigEnvironment 应用的环境配置
-     * @param integer $MinSystemDiskSize 系统盘大小下限
-     * @param string $ApplicationType 应用类型，目前该项取值可以为PRIVATE_APPLICATION或者PUBLIC_APPLICATION
+     * @param integer $MinSystemDiskSize 系统盘大小下限，单位GB
+     * @param string $ApplicationType 应用类型，目前该项取值可以为PUBLIC_APPLICATION（公共应用）；PRIVATE_APPLICATION（自定义应用）；COMMUNITY_APPLICATION（社区应用）
      * @param string $ApplicationState 应用状态：CREATING-创建中；ONLINE -正常在线；DELETING -删除中；ARREARS - 欠费隔离
 示例值：ONLINE
-     * @param string $CreateTime 应用创建时间
-     * @param integer $ApplicationSize 应用大小
+     * @param string $CreateTime 应用创建时间，格式：%Y-%m-%d %H:%M:%S
+     * @param integer $ApplicationSize 应用大小，单位GB
      */
     function __construct()
     {

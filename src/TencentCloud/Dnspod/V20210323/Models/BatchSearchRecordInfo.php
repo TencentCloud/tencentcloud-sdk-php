@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getArea() 获取解析线路
  * @method void setArea(string $Area) 设置解析线路
  * @method string getRemark() 获取记录备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置记录备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTTL() 获取TTL(秒)
  * @method void setTTL(integer $TTL) 设置TTL(秒)
  * @method string getRecordType() 获取记录类型
@@ -63,7 +61,6 @@ class BatchSearchRecordInfo extends AbstractModel
 
     /**
      * @var string 记录备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
@@ -113,7 +110,6 @@ class BatchSearchRecordInfo extends AbstractModel
      * @param integer $RecordId 解析记录 ID
      * @param string $Area 解析线路
      * @param string $Remark 记录备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TTL TTL(秒)
      * @param string $RecordType 记录类型
      * @param integer $Enabled 记录是否启用

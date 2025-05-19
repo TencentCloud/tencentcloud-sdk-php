@@ -18,83 +18,83 @@ namespace TencentCloud\Lke\V20231130\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 实时上传的文件信息
+ * 工作流信息
  *
- * @method string getFileName() 获取文件名称
+ * @method string getWorkflowId() 获取工作流ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFileName(string $FileName) 设置文件名称
+ * @method void setWorkflowId(string $WorkflowId) 设置工作流ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFileSize() 获取文件大小
+ * @method string getWorkflowName() 获取工作流名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFileSize(string $FileSize) 设置文件大小
+ * @method void setWorkflowName(string $WorkflowName) 设置工作流名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFileUrl() 获取文件的URL地址，COS地址
+ * @method string getWorkflowRunId() 获取工作流运行ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFileUrl(string $FileUrl) 设置文件的URL地址，COS地址
+ * @method void setWorkflowRunId(string $WorkflowRunId) 设置工作流运行ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getFileType() 获取文件类型
+ * @method array getOptionCards() 获取选项卡
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFileType(string $FileType) 设置文件类型
+ * @method void setOptionCards(array $OptionCards) 设置选项卡
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDocId() 获取解析后返回的DocID
+ * @method array getOutputs() 获取多气泡的输出结果
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDocId(string $DocId) 设置解析后返回的DocID
+ * @method void setOutputs(array $Outputs) 设置多气泡的输出结果
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreatedAt() 获取创建时间
+ * @method string getWorkflowReleaseTime() 获取工作流发布时间，unix时间戳
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreatedAt(string $CreatedAt) 设置创建时间
+ * @method void setWorkflowReleaseTime(string $WorkflowReleaseTime) 设置工作流发布时间，unix时间戳
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class FileInfo extends AbstractModel
+class WorkflowInfo extends AbstractModel
 {
     /**
-     * @var string 文件名称
+     * @var string 工作流ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $FileName;
+    public $WorkflowId;
 
     /**
-     * @var string 文件大小
+     * @var string 工作流名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $FileSize;
+    public $WorkflowName;
 
     /**
-     * @var string 文件的URL地址，COS地址
+     * @var string 工作流运行ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $FileUrl;
+    public $WorkflowRunId;
 
     /**
-     * @var string 文件类型
+     * @var array 选项卡
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $FileType;
+    public $OptionCards;
 
     /**
-     * @var string 解析后返回的DocID
+     * @var array 多气泡的输出结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $DocId;
+    public $Outputs;
 
     /**
-     * @var string 创建时间
+     * @var string 工作流发布时间，unix时间戳
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $CreatedAt;
+    public $WorkflowReleaseTime;
 
     /**
-     * @param string $FileName 文件名称
+     * @param string $WorkflowId 工作流ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FileSize 文件大小
+     * @param string $WorkflowName 工作流名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FileUrl 文件的URL地址，COS地址
+     * @param string $WorkflowRunId 工作流运行ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $FileType 文件类型
+     * @param array $OptionCards 选项卡
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DocId 解析后返回的DocID
+     * @param array $Outputs 多气泡的输出结果
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreatedAt 创建时间
+     * @param string $WorkflowReleaseTime 工作流发布时间，unix时间戳
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -110,28 +110,28 @@ class FileInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FileName",$param) and $param["FileName"] !== null) {
-            $this->FileName = $param["FileName"];
+        if (array_key_exists("WorkflowId",$param) and $param["WorkflowId"] !== null) {
+            $this->WorkflowId = $param["WorkflowId"];
         }
 
-        if (array_key_exists("FileSize",$param) and $param["FileSize"] !== null) {
-            $this->FileSize = $param["FileSize"];
+        if (array_key_exists("WorkflowName",$param) and $param["WorkflowName"] !== null) {
+            $this->WorkflowName = $param["WorkflowName"];
         }
 
-        if (array_key_exists("FileUrl",$param) and $param["FileUrl"] !== null) {
-            $this->FileUrl = $param["FileUrl"];
+        if (array_key_exists("WorkflowRunId",$param) and $param["WorkflowRunId"] !== null) {
+            $this->WorkflowRunId = $param["WorkflowRunId"];
         }
 
-        if (array_key_exists("FileType",$param) and $param["FileType"] !== null) {
-            $this->FileType = $param["FileType"];
+        if (array_key_exists("OptionCards",$param) and $param["OptionCards"] !== null) {
+            $this->OptionCards = $param["OptionCards"];
         }
 
-        if (array_key_exists("DocId",$param) and $param["DocId"] !== null) {
-            $this->DocId = $param["DocId"];
+        if (array_key_exists("Outputs",$param) and $param["Outputs"] !== null) {
+            $this->Outputs = $param["Outputs"];
         }
 
-        if (array_key_exists("CreatedAt",$param) and $param["CreatedAt"] !== null) {
-            $this->CreatedAt = $param["CreatedAt"];
+        if (array_key_exists("WorkflowReleaseTime",$param) and $param["WorkflowReleaseTime"] !== null) {
+            $this->WorkflowReleaseTime = $param["WorkflowReleaseTime"];
         }
     }
 }

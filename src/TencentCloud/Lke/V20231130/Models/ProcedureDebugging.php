@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAgent(AgentDebugInfo $Agent) 设置Agent调试信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getCustomVariables() 获取自定义参数
+ * @method void setCustomVariables(array $CustomVariables) 设置自定义参数
  */
 class ProcedureDebugging extends AbstractModel
 {
@@ -94,6 +96,11 @@ class ProcedureDebugging extends AbstractModel
     public $Agent;
 
     /**
+     * @var array 自定义参数
+     */
+    public $CustomVariables;
+
+    /**
      * @param string $Content 检索query
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $System 系统prompt
@@ -108,6 +115,7 @@ class ProcedureDebugging extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AgentDebugInfo $Agent Agent调试信息
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $CustomVariables 自定义参数
      */
     function __construct()
     {
@@ -161,6 +169,10 @@ class ProcedureDebugging extends AbstractModel
         if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
             $this->Agent = new AgentDebugInfo();
             $this->Agent->deserialize($param["Agent"]);
+        }
+
+        if (array_key_exists("CustomVariables",$param) and $param["CustomVariables"] !== null) {
+            $this->CustomVariables = $param["CustomVariables"];
         }
     }
 }

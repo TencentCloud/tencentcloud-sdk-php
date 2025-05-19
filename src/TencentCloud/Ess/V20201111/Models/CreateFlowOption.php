@@ -218,6 +218,10 @@ use TencentCloud\Common\AbstractModel;
  - 签署控件 是否默认展示日期.
  * @method void setSignComponentConfig(SignComponentConfig $SignComponentConfig) 设置签署控件的配置信息，用在嵌入式发起的页面配置，包括 
  - 签署控件 是否默认展示日期.
+ * @method boolean getForbidEditWatermark() 获取是否禁止编辑（展示）水印控件属性
+<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
+ * @method void setForbidEditWatermark(boolean $ForbidEditWatermark) 设置是否禁止编辑（展示）水印控件属性
+<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
  */
 class CreateFlowOption extends AbstractModel
 {
@@ -385,6 +389,12 @@ class CreateFlowOption extends AbstractModel
     public $SignComponentConfig;
 
     /**
+     * @var boolean 是否禁止编辑（展示）水印控件属性
+<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
+     */
+    public $ForbidEditWatermark;
+
+    /**
      * @param boolean $CanEditFlow 是否允许修改发起合同时确认弹窗的合同信息（合同名称、合同类型、签署截止时间），若不允许编辑，则表单字段将被禁止输入。
 <br/>true：允许编辑<br/>false：不允许编辑（默认值）<br/>
      * @param boolean $CanEditFormField 是否允许编辑模板控件
@@ -484,6 +494,8 @@ class CreateFlowOption extends AbstractModel
      * @param array $ResultPageConfig 发起流程的可嵌入页面结果页配置
      * @param SignComponentConfig $SignComponentConfig 签署控件的配置信息，用在嵌入式发起的页面配置，包括 
  - 签署控件 是否默认展示日期.
+     * @param boolean $ForbidEditWatermark 是否禁止编辑（展示）水印控件属性
+<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
      */
     function __construct()
     {
@@ -566,6 +578,10 @@ class CreateFlowOption extends AbstractModel
         if (array_key_exists("SignComponentConfig",$param) and $param["SignComponentConfig"] !== null) {
             $this->SignComponentConfig = new SignComponentConfig();
             $this->SignComponentConfig->deserialize($param["SignComponentConfig"]);
+        }
+
+        if (array_key_exists("ForbidEditWatermark",$param) and $param["ForbidEditWatermark"] !== null) {
+            $this->ForbidEditWatermark = $param["ForbidEditWatermark"];
         }
     }
 }

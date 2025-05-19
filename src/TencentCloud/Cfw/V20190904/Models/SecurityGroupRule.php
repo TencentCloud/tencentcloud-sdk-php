@@ -74,9 +74,9 @@ drop：拒绝
  * @method void setServiceTemplateId(string $ServiceTemplateId) 设置端口协议类型参数模板id；协议端口模板id；与Protocol,Port互斥
  * @method string getId() 获取（入参时无需填写，自动生成）规则对应的唯一id
  * @method void setId(string $Id) 设置（入参时无需填写，自动生成）规则对应的唯一id
- * @method string getEnable() 获取（入参时、Enable已弃用；由通用配置中新增规则启用状态控制）
+ * @method string getEnable() 获取（入参时Enable无意义；由通用配置中新增规则启用状态控制）
 规则状态，true表示启用，false表示禁用
- * @method void setEnable(string $Enable) 设置（入参时、Enable已弃用；由通用配置中新增规则启用状态控制）
+ * @method void setEnable(string $Enable) 设置（入参时Enable无意义；由通用配置中新增规则启用状态控制）
 规则状态，true表示启用，false表示禁用
  * @method string getUid() 获取规则对应的唯一内部id
  * @method void setUid(string $Uid) 设置规则对应的唯一内部id
@@ -155,7 +155,7 @@ drop：拒绝
     public $Id;
 
     /**
-     * @var string （入参时、Enable已弃用；由通用配置中新增规则启用状态控制）
+     * @var string （入参时Enable无意义；由通用配置中新增规则启用状态控制）
 规则状态，true表示启用，false表示禁用
      */
     public $Enable;
@@ -193,7 +193,7 @@ drop：拒绝
 80：80端口
      * @param string $ServiceTemplateId 端口协议类型参数模板id；协议端口模板id；与Protocol,Port互斥
      * @param string $Id （入参时无需填写，自动生成）规则对应的唯一id
-     * @param string $Enable （入参时、Enable已弃用；由通用配置中新增规则启用状态控制）
+     * @param string $Enable （入参时Enable无意义；由通用配置中新增规则启用状态控制）
 规则状态，true表示启用，false表示禁用
      * @param string $Uid 规则对应的唯一内部id
      */

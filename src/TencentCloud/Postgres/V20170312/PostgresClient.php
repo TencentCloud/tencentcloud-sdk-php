@@ -26,9 +26,6 @@ use TencentCloud\Postgres\V20170312\Models as Models;
  * @method Models\AddDBInstanceToReadOnlyGroupResponse AddDBInstanceToReadOnlyGroup(Models\AddDBInstanceToReadOnlyGroupRequest $req) 本接口（AddDBInstanceToReadOnlyGroup）用于添加只读实例到只读组
  * @method Models\CloneDBInstanceResponse CloneDBInstance(Models\CloneDBInstanceRequest $req) 用于克隆实例，支持指定备份集、指定时间点进行克隆。
  * @method Models\CloseDBExtranetAccessResponse CloseDBExtranetAccess(Models\CloseDBExtranetAccessRequest $req) 本接口（CloseDBExtranetAccess）用于关闭实例公网地址。
- * @method Models\CloseServerlessDBExtranetAccessResponse CloseServerlessDBExtranetAccess(Models\CloseServerlessDBExtranetAccessRequest $req) 该产品形态需要下线，已完成客户实例全部下线、后端服务下线等
-
-【接口下线中，请勿使用】本接口（CloseServerlessDBExtranetAccess）用于关闭serverlessDB实例公网地址
  * @method Models\CreateAccountResponse CreateAccount(Models\CreateAccountRequest $req) 此接口用于创建数据账号，返回的Oid为账号唯一标识。与数据库系统表pg_roles中记录的oid一致。
  * @method Models\CreateBackupPlanResponse CreateBackupPlan(Models\CreateBackupPlanRequest $req) 此接口用于创建备份策略。
  * @method Models\CreateBaseBackupResponse CreateBaseBackup(Models\CreateBaseBackupRequest $req) 本接口（CreateBaseBackup）用于创建实例的数据备份。
@@ -55,9 +52,6 @@ use TencentCloud\Postgres\V20170312\Models as Models;
  * @method Models\DeleteParameterTemplateResponse DeleteParameterTemplate(Models\DeleteParameterTemplateRequest $req) 本接口（DeleteParameterTemplate）主要用于删除某个参数模板。
  * @method Models\DeleteReadOnlyGroupResponse DeleteReadOnlyGroup(Models\DeleteReadOnlyGroupRequest $req) 本接口(DeleteReadOnlyGroup)用于删除指定的只读组
  * @method Models\DeleteReadOnlyGroupNetworkAccessResponse DeleteReadOnlyGroupNetworkAccess(Models\DeleteReadOnlyGroupNetworkAccessRequest $req) 可对RO组进行网络的删除操作。
- * @method Models\DeleteServerlessDBInstanceResponse DeleteServerlessDBInstance(Models\DeleteServerlessDBInstanceRequest $req) 该产品形态需要下线，已完成客户实例全部下线、后端服务下线等
-
-【接口下线中，请勿使用】本接口 (DeleteServerlessDBInstance) 用于删除一个ServerlessDB实例。
  * @method Models\DescribeAccountPrivilegesResponse DescribeAccountPrivileges(Models\DescribeAccountPrivilegesRequest $req) 查询数据库账号对某数据库对象拥有的权限列表。
  * @method Models\DescribeAccountsResponse DescribeAccounts(Models\DescribeAccountsRequest $req) 本接口（DescribeAccounts）用于查询实例的数据库账号列表。
  * @method Models\DescribeAvailableRecoveryTimeResponse DescribeAvailableRecoveryTime(Models\DescribeAvailableRecoveryTimeRequest $req) 本接口（DescribeAvailableRecoveryTime）用于查询实例可恢复的时间范围。

@@ -70,14 +70,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImages(array $Images) 设置快照关联的镜像列表。
  * @method integer getShareReference() 获取快照当前被共享数。
  * @method void setShareReference(integer $ShareReference) 设置快照当前被共享数。
- * @method string getSnapshotType() 获取快照类型，目前该项取值可以为PRIVATE_SNAPSHOT或者SHARED_SNAPSHOT
- * @method void setSnapshotType(string $SnapshotType) 设置快照类型，目前该项取值可以为PRIVATE_SNAPSHOT或者SHARED_SNAPSHOT
- * @method integer getDiskSize() 获取创建此快照的云硬盘大小，单位GB。
- * @method void setDiskSize(integer $DiskSize) 设置创建此快照的云硬盘大小，单位GB。
+ * @method string getSnapshotType() 获取快照类型，目前该项取值可以为`PRIVATE_SNAPSHOT`（私有快照）或者`SHARED_SNAPSHOT`（共享快照）
+ * @method void setSnapshotType(string $SnapshotType) 设置快照类型，目前该项取值可以为`PRIVATE_SNAPSHOT`（私有快照）或者`SHARED_SNAPSHOT`（共享快照）
+ * @method integer getDiskSize() 获取创建此快照的云硬盘大小，单位GiB。
+ * @method void setDiskSize(integer $DiskSize) 设置创建此快照的云硬盘大小，单位GiB。
  * @method string getDiskId() 获取创建此快照的云硬盘ID。
  * @method void setDiskId(string $DiskId) 设置创建此快照的云硬盘ID。
- * @method array getCopyingToRegions() 获取快照正在跨地域复制的目的地域，默认取值为[]。
- * @method void setCopyingToRegions(array $CopyingToRegions) 设置快照正在跨地域复制的目的地域，默认取值为[]。
+ * @method array getCopyingToRegions() 获取快照正在跨地域复制的目的地域，若没有则返回`[]`。
+ * @method void setCopyingToRegions(array $CopyingToRegions) 设置快照正在跨地域复制的目的地域，若没有则返回`[]`。
  * @method boolean getEncrypt() 获取是否为加密盘创建的快照。取值范围：
 <ul>
     <li>true：该快照为加密盘创建的</li>
@@ -175,12 +175,12 @@ class Snapshot extends AbstractModel
     public $ShareReference;
 
     /**
-     * @var string 快照类型，目前该项取值可以为PRIVATE_SNAPSHOT或者SHARED_SNAPSHOT
+     * @var string 快照类型，目前该项取值可以为`PRIVATE_SNAPSHOT`（私有快照）或者`SHARED_SNAPSHOT`（共享快照）
      */
     public $SnapshotType;
 
     /**
-     * @var integer 创建此快照的云硬盘大小，单位GB。
+     * @var integer 创建此快照的云硬盘大小，单位GiB。
      */
     public $DiskSize;
 
@@ -190,7 +190,7 @@ class Snapshot extends AbstractModel
     public $DiskId;
 
     /**
-     * @var array 快照正在跨地域复制的目的地域，默认取值为[]。
+     * @var array 快照正在跨地域复制的目的地域，若没有则返回`[]`。
      */
     public $CopyingToRegions;
 
@@ -264,10 +264,10 @@ class Snapshot extends AbstractModel
      * @param integer $Percent 快照创建进度百分比，快照创建成功后此字段恒为100。
      * @param array $Images 快照关联的镜像列表。
      * @param integer $ShareReference 快照当前被共享数。
-     * @param string $SnapshotType 快照类型，目前该项取值可以为PRIVATE_SNAPSHOT或者SHARED_SNAPSHOT
-     * @param integer $DiskSize 创建此快照的云硬盘大小，单位GB。
+     * @param string $SnapshotType 快照类型，目前该项取值可以为`PRIVATE_SNAPSHOT`（私有快照）或者`SHARED_SNAPSHOT`（共享快照）
+     * @param integer $DiskSize 创建此快照的云硬盘大小，单位GiB。
      * @param string $DiskId 创建此快照的云硬盘ID。
-     * @param array $CopyingToRegions 快照正在跨地域复制的目的地域，默认取值为[]。
+     * @param array $CopyingToRegions 快照正在跨地域复制的目的地域，若没有则返回`[]`。
      * @param boolean $Encrypt 是否为加密盘创建的快照。取值范围：
 <ul>
     <li>true：该快照为加密盘创建的</li>

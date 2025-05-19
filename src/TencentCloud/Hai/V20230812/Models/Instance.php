@@ -54,13 +54,13 @@ TERMINATED：表示已销毁
 
  * @method void setGPUPerformance(string $GPUPerformance) 设置算力
 
- * @method string getGPUMemory() 获取显存
- * @method void setGPUMemory(string $GPUMemory) 设置显存
- * @method string getCPU() 获取CPU核数
- * @method void setCPU(string $CPU) 设置CPU核数
- * @method string getMemory() 获取内存
+ * @method string getGPUMemory() 获取显存，单位：GB
+ * @method void setGPUMemory(string $GPUMemory) 设置显存，单位：GB
+ * @method string getCPU() 获取CPU核数，单位：核
+ * @method void setCPU(string $CPU) 设置CPU核数，单位：核
+ * @method string getMemory() 获取内存，单位：GB
 
- * @method void setMemory(string $Memory) 设置内存
+ * @method void setMemory(string $Memory) 设置内存，单位：GB
 
  * @method SystemDisk getSystemDisk() 获取系统盘数据
  * @method void setSystemDisk(SystemDisk $SystemDisk) 设置系统盘数据
@@ -84,18 +84,18 @@ SUCCESS：表示操作成功
 OPERATING：表示操作执行中
 FAILED：表示操作失败
 
- * @method string getCreateTime() 获取实例创建时间
- * @method void setCreateTime(string $CreateTime) 设置实例创建时间
- * @method string getMaxOutBandwidth() 获取公网出带宽上限，默认10Mbps
- * @method void setMaxOutBandwidth(string $MaxOutBandwidth) 设置公网出带宽上限，默认10Mbps
- * @method string getMaxFreeTraffic() 获取每月免费流量，默认500G
- * @method void setMaxFreeTraffic(string $MaxFreeTraffic) 设置每月免费流量，默认500G
+ * @method string getCreateTime() 获取实例创建时间，时间格式："YYYY-MM-DD HH:MM:SS"
+ * @method void setCreateTime(string $CreateTime) 设置实例创建时间，时间格式："YYYY-MM-DD HH:MM:SS"
+ * @method string getMaxOutBandwidth() 获取公网出带宽上限，默认10Mbps，单位：Mbps
+ * @method void setMaxOutBandwidth(string $MaxOutBandwidth) 设置公网出带宽上限，默认10Mbps，单位：Mbps
+ * @method string getMaxFreeTraffic() 获取每月免费流量，默认500G，单位：GB
+ * @method void setMaxFreeTraffic(string $MaxFreeTraffic) 设置每月免费流量，默认500G，单位：GB
  * @method string getConfigurationEnvironment() 获取应用配置环境
  * @method void setConfigurationEnvironment(string $ConfigurationEnvironment) 设置应用配置环境
  * @method array getLoginServices() 获取实例包含的登录服务详情
  * @method void setLoginServices(array $LoginServices) 设置实例包含的登录服务详情
- * @method string getOSType() 获取应用服务的操作系统类型
- * @method void setOSType(string $OSType) 设置应用服务的操作系统类型
+ * @method string getOSType() 获取应用服务的操作系统类型；参数：linux、windows
+ * @method void setOSType(string $OSType) 设置应用服务的操作系统类型；参数：linux、windows
  */
 class Instance extends AbstractModel
 {
@@ -145,17 +145,17 @@ TERMINATED：表示已销毁
     public $GPUPerformance;
 
     /**
-     * @var string 显存
+     * @var string 显存，单位：GB
      */
     public $GPUMemory;
 
     /**
-     * @var string CPU核数
+     * @var string CPU核数，单位：核
      */
     public $CPU;
 
     /**
-     * @var string 内存
+     * @var string 内存，单位：GB
 
      */
     public $Memory;
@@ -196,17 +196,17 @@ FAILED：表示操作失败
     public $LatestOperationState;
 
     /**
-     * @var string 实例创建时间
+     * @var string 实例创建时间，时间格式："YYYY-MM-DD HH:MM:SS"
      */
     public $CreateTime;
 
     /**
-     * @var string 公网出带宽上限，默认10Mbps
+     * @var string 公网出带宽上限，默认10Mbps，单位：Mbps
      */
     public $MaxOutBandwidth;
 
     /**
-     * @var string 每月免费流量，默认500G
+     * @var string 每月免费流量，默认500G，单位：GB
      */
     public $MaxFreeTraffic;
 
@@ -221,7 +221,7 @@ FAILED：表示操作失败
     public $LoginServices;
 
     /**
-     * @var string 应用服务的操作系统类型
+     * @var string 应用服务的操作系统类型；参数：linux、windows
      */
     public $OSType;
 
@@ -243,9 +243,9 @@ TERMINATED：表示已销毁
      * @param integer $GPUCount 实例所包含的GPU卡数
      * @param string $GPUPerformance 算力
 
-     * @param string $GPUMemory 显存
-     * @param string $CPU CPU核数
-     * @param string $Memory 内存
+     * @param string $GPUMemory 显存，单位：GB
+     * @param string $CPU CPU核数，单位：核
+     * @param string $Memory 内存，单位：GB
 
      * @param SystemDisk $SystemDisk 系统盘数据
      * @param array $PrivateIpAddresses 内网ip地址
@@ -258,12 +258,12 @@ SUCCESS：表示操作成功
 OPERATING：表示操作执行中
 FAILED：表示操作失败
 
-     * @param string $CreateTime 实例创建时间
-     * @param string $MaxOutBandwidth 公网出带宽上限，默认10Mbps
-     * @param string $MaxFreeTraffic 每月免费流量，默认500G
+     * @param string $CreateTime 实例创建时间，时间格式："YYYY-MM-DD HH:MM:SS"
+     * @param string $MaxOutBandwidth 公网出带宽上限，默认10Mbps，单位：Mbps
+     * @param string $MaxFreeTraffic 每月免费流量，默认500G，单位：GB
      * @param string $ConfigurationEnvironment 应用配置环境
      * @param array $LoginServices 实例包含的登录服务详情
-     * @param string $OSType 应用服务的操作系统类型
+     * @param string $OSType 应用服务的操作系统类型；参数：linux、windows
      */
     function __construct()
     {

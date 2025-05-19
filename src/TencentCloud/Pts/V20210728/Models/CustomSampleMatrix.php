@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStreams(array $Streams) 设置指标序列数组
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getStep() 获取两个时间点的时间间隔，单位纳秒
+ * @method void setStep(integer $Step) 设置两个时间点的时间间隔，单位纳秒
  */
 class CustomSampleMatrix extends AbstractModel
 {
@@ -55,11 +57,17 @@ class CustomSampleMatrix extends AbstractModel
     public $Streams;
 
     /**
+     * @var integer 两个时间点的时间间隔，单位纳秒
+     */
+    public $Step;
+
+    /**
      * @param string $Metric 指标名字
      * @param string $Aggregation 聚合函数
      * @param string $Unit 指标单位
      * @param array $Streams 指标序列数组
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Step 两个时间点的时间间隔，单位纳秒
      */
     function __construct()
     {
@@ -93,6 +101,10 @@ class CustomSampleMatrix extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Streams, $obj);
             }
+        }
+
+        if (array_key_exists("Step",$param) and $param["Step"] !== null) {
+            $this->Step = $param["Step"];
         }
     }
 }

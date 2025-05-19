@@ -29,6 +29,7 @@ class ModifyDBInstanceVipVportResponse extends AbstractModel
 {
     /**
      * @var string 异步任务ID。(该返回字段目前已废弃)
+     * @deprecated
      */
     public $AsyncRequestId;
 

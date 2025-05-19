@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeServiceLoginSettings请求参数结构体
  *
- * @method string getInstanceId() 获取实例id
- * @method void setInstanceId(string $InstanceId) 设置实例id
+ * @method string getInstanceId() 获取实例ID通过调用接口[DescribeInstances](https://cloud.tencent.com/document/api/1721/101612)获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例ID通过调用接口[DescribeInstances](https://cloud.tencent.com/document/api/1721/101612)获取。
  * @method string getServiceName() 获取服务名称
  * @method void setServiceName(string $ServiceName) 设置服务名称
  */
 class DescribeServiceLoginSettingsRequest extends AbstractModel
 {
     /**
-     * @var string 实例id
+     * @var string 实例ID通过调用接口[DescribeInstances](https://cloud.tencent.com/document/api/1721/101612)获取。
      */
     public $InstanceId;
 
@@ -38,7 +38,7 @@ class DescribeServiceLoginSettingsRequest extends AbstractModel
     public $ServiceName;
 
     /**
-     * @param string $InstanceId 实例id
+     * @param string $InstanceId 实例ID通过调用接口[DescribeInstances](https://cloud.tencent.com/document/api/1721/101612)获取。
      * @param string $ServiceName 服务名称
      */
     function __construct()

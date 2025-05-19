@@ -100,6 +100,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageTextRetrieval(boolean $ImageTextRetrieval) 设置是否开启图文检索
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method AICallConfig getAiCall() 获取配置语音通话参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAiCall(AICallConfig $AiCall) 设置配置语音通话参数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class KnowledgeQaConfig extends AbstractModel
 {
@@ -200,6 +204,12 @@ class KnowledgeQaConfig extends AbstractModel
     public $ImageTextRetrieval;
 
     /**
+     * @var AICallConfig 配置语音通话参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AiCall;
+
+    /**
      * @param string $Greeting 欢迎语，200字符以内
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RoleDescription 角色描述，4000字符以内。通过填写描述，设定应用的 #角色名称、 #风格特点 及可达成的#意图。建议按照下面的模板填写，且自定义意图建议不超过5个。
@@ -239,6 +249,8 @@ class KnowledgeQaConfig extends AbstractModel
      * @param array $IntentAchievements 意图达成方式优先级
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $ImageTextRetrieval 是否开启图文检索
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AICallConfig $AiCall 配置语音通话参数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -330,6 +342,11 @@ class KnowledgeQaConfig extends AbstractModel
 
         if (array_key_exists("ImageTextRetrieval",$param) and $param["ImageTextRetrieval"] !== null) {
             $this->ImageTextRetrieval = $param["ImageTextRetrieval"];
+        }
+
+        if (array_key_exists("AiCall",$param) and $param["AiCall"] !== null) {
+            $this->AiCall = new AICallConfig();
+            $this->AiCall->deserialize($param["AiCall"]);
         }
     }
 }

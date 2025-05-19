@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceNetworkStatus请求参数结构体
  *
- * @method array getInstanceIds() 获取实例ID数组，单次请求最多不超过100个实例
- * @method void setInstanceIds(array $InstanceIds) 设置实例ID数组，单次请求最多不超过100个实例
+ * @method array getInstanceIds() 获取实例ID数组，单次请求最多不超过100个实例；实例ID通过调用接口[DescribeInstances](https://cloud.tencent.com/document/api/1721/101612)获取。
+ * @method void setInstanceIds(array $InstanceIds) 设置实例ID数组，单次请求最多不超过100个实例；实例ID通过调用接口[DescribeInstances](https://cloud.tencent.com/document/api/1721/101612)获取。
  */
 class DescribeInstanceNetworkStatusRequest extends AbstractModel
 {
     /**
-     * @var array 实例ID数组，单次请求最多不超过100个实例
+     * @var array 实例ID数组，单次请求最多不超过100个实例；实例ID通过调用接口[DescribeInstances](https://cloud.tencent.com/document/api/1721/101612)获取。
      */
     public $InstanceIds;
 
     /**
-     * @param array $InstanceIds 实例ID数组，单次请求最多不超过100个实例
+     * @param array $InstanceIds 实例ID数组，单次请求最多不超过100个实例；实例ID通过调用接口[DescribeInstances](https://cloud.tencent.com/document/api/1721/101612)获取。
      */
     function __construct()
     {

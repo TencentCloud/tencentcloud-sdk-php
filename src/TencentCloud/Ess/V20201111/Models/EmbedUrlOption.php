@@ -48,6 +48,11 @@ use TencentCloud\Common\AbstractModel;
  
 
 注意: 此参数仅针对**EmbedType=CREATE_TEMPLATE(创建模板)和EmbedType=CREATE_CONTRACT_DRAFT_COOPEDIT(创建起草合同)有效**，
+ * @method boolean getForbidEditWatermark() 获取是否禁止编辑（展示）水印控件属性
+<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
+
+ * @method void setForbidEditWatermark(boolean $ForbidEditWatermark) 设置是否禁止编辑（展示）水印控件属性
+<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
  */
 class EmbedUrlOption extends AbstractModel
 {
@@ -78,6 +83,13 @@ class EmbedUrlOption extends AbstractModel
     public $SkipUploadFile;
 
     /**
+     * @var boolean 是否禁止编辑（展示）水印控件属性
+<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
+
+     */
+    public $ForbidEditWatermark;
+
+    /**
      * @param boolean $ShowFlowDetailComponent 合同详情预览，允许展示控件信息
 <ul>
 <li><b>true</b>：允许在合同详情页展示控件</li>
@@ -92,6 +104,8 @@ class EmbedUrlOption extends AbstractModel
  
 
 注意: 此参数仅针对**EmbedType=CREATE_TEMPLATE(创建模板)和EmbedType=CREATE_CONTRACT_DRAFT_COOPEDIT(创建起草合同)有效**，
+     * @param boolean $ForbidEditWatermark 是否禁止编辑（展示）水印控件属性
+<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
      */
     function __construct()
     {
@@ -116,6 +130,10 @@ class EmbedUrlOption extends AbstractModel
 
         if (array_key_exists("SkipUploadFile",$param) and $param["SkipUploadFile"] !== null) {
             $this->SkipUploadFile = $param["SkipUploadFile"];
+        }
+
+        if (array_key_exists("ForbidEditWatermark",$param) and $param["ForbidEditWatermark"] !== null) {
+            $this->ForbidEditWatermark = $param["ForbidEditWatermark"];
         }
     }
 }

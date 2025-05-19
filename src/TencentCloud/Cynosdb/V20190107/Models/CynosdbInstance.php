@@ -146,6 +146,8 @@ pause
  * @method void setCynosVersionTag(string $CynosVersionTag) 设置未知字段
  * @method array getNodeList() 获取libradb 节点信息
  * @method void setNodeList(array $NodeList) 设置libradb 节点信息
+ * @method string getGdnId() 获取全球数据库唯一标识
+ * @method void setGdnId(string $GdnId) 设置全球数据库唯一标识
  */
 class CynosdbInstance extends AbstractModel
 {
@@ -445,6 +447,11 @@ pause
     public $NodeList;
 
     /**
+     * @var string 全球数据库唯一标识
+     */
+    public $GdnId;
+
+    /**
      * @param string $Uin 用户Uin
      * @param integer $AppId 用户AppId
      * @param string $ClusterId 集群ID
@@ -508,6 +515,7 @@ pause
      * @param string $InstanceStorageType 实例存储类型
      * @param string $CynosVersionTag 未知字段
      * @param array $NodeList libradb 节点信息
+     * @param string $GdnId 全球数据库唯一标识
      */
     function __construct()
     {
@@ -773,6 +781,10 @@ pause
 
         if (array_key_exists("NodeList",$param) and $param["NodeList"] !== null) {
             $this->NodeList = $param["NodeList"];
+        }
+
+        if (array_key_exists("GdnId",$param) and $param["GdnId"] !== null) {
+            $this->GdnId = $param["GdnId"];
         }
     }
 }

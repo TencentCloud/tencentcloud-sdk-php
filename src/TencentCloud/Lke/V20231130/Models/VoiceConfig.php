@@ -18,59 +18,47 @@ namespace TencentCloud\Lke\V20231130\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 临时密钥结构
+ * 音色参数
  *
- * @method string getToken() 获取token
+ * @method integer getVoiceType() 获取公有云音色id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setToken(string $Token) 设置token
+ * @method void setVoiceType(integer $VoiceType) 设置公有云音色id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTmpSecretId() 获取临时证书密钥ID
+ * @method string getTimbreKey() 获取音色key
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTmpSecretId(string $TmpSecretId) 设置临时证书密钥ID
+ * @method void setTimbreKey(string $TimbreKey) 设置音色key
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTmpSecretKey() 获取临时证书密钥Key
+ * @method string getVoiceName() 获取音色名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTmpSecretKey(string $TmpSecretKey) 设置临时证书密钥Key
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAppId() 获取临时证书appid
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAppId(integer $AppId) 设置临时证书appid
+ * @method void setVoiceName(string $VoiceName) 设置音色名称
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class Credentials extends AbstractModel
+class VoiceConfig extends AbstractModel
 {
     /**
-     * @var string token
+     * @var integer 公有云音色id
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Token;
+    public $VoiceType;
 
     /**
-     * @var string 临时证书密钥ID
+     * @var string 音色key
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $TmpSecretId;
+    public $TimbreKey;
 
     /**
-     * @var string 临时证书密钥Key
+     * @var string 音色名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $TmpSecretKey;
+    public $VoiceName;
 
     /**
-     * @var integer 临时证书appid
+     * @param integer $VoiceType 公有云音色id
 注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $AppId;
-
-    /**
-     * @param string $Token token
+     * @param string $TimbreKey 音色key
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TmpSecretId 临时证书密钥ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TmpSecretKey 临时证书密钥Key
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $AppId 临时证书appid
+     * @param string $VoiceName 音色名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -86,20 +74,16 @@ class Credentials extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Token",$param) and $param["Token"] !== null) {
-            $this->Token = $param["Token"];
+        if (array_key_exists("VoiceType",$param) and $param["VoiceType"] !== null) {
+            $this->VoiceType = $param["VoiceType"];
         }
 
-        if (array_key_exists("TmpSecretId",$param) and $param["TmpSecretId"] !== null) {
-            $this->TmpSecretId = $param["TmpSecretId"];
+        if (array_key_exists("TimbreKey",$param) and $param["TimbreKey"] !== null) {
+            $this->TimbreKey = $param["TimbreKey"];
         }
 
-        if (array_key_exists("TmpSecretKey",$param) and $param["TmpSecretKey"] !== null) {
-            $this->TmpSecretKey = $param["TmpSecretKey"];
-        }
-
-        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
-            $this->AppId = $param["AppId"];
+        if (array_key_exists("VoiceName",$param) and $param["VoiceName"] !== null) {
+            $this->VoiceName = $param["VoiceName"];
         }
     }
 }

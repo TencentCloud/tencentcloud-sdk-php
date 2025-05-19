@@ -20,34 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ImportImage请求参数结构体
  *
- * @method string getArchitecture() 获取导入镜像的操作系统架构，`x86_64` 或 `i386`
- * @method void setArchitecture(string $Architecture) 设置导入镜像的操作系统架构，`x86_64` 或 `i386`
- * @method string getOsType() 获取导入镜像的操作系统类型，通过`DescribeImportImageOs`获取
- * @method void setOsType(string $OsType) 设置导入镜像的操作系统类型，通过`DescribeImportImageOs`获取
- * @method string getOsVersion() 获取导入镜像的操作系统版本，通过`DescribeImportImageOs`获取
- * @method void setOsVersion(string $OsVersion) 设置导入镜像的操作系统版本，通过`DescribeImportImageOs`获取
+ * @method string getArchitecture() 获取导入镜像的操作系统架构。
+取值范围包括：`x86_64` 、`i386`、`arm_64`
+ * @method void setArchitecture(string $Architecture) 设置导入镜像的操作系统架构。
+取值范围包括：`x86_64` 、`i386`、`arm_64`
+ * @method string getOsType() 获取导入镜像的操作系统类型 。
+可通过 [DescribeImportImageOs](https://cloud.tencent.com/document/api/213/15718) 接口返回值中的`ImportImageOsListSupported`获取。
+ * @method void setOsType(string $OsType) 设置导入镜像的操作系统类型 。
+可通过 [DescribeImportImageOs](https://cloud.tencent.com/document/api/213/15718) 接口返回值中的`ImportImageOsListSupported`获取。
+ * @method string getOsVersion() 获取导入镜像的操作系统版本。
+可通过 [DescribeImportImageOs](https://cloud.tencent.com/document/api/213/15718) 接口返回值中的`ImportImageOsVersionSet`获取。
+ * @method void setOsVersion(string $OsVersion) 设置导入镜像的操作系统版本。
+可通过 [DescribeImportImageOs](https://cloud.tencent.com/document/api/213/15718) 接口返回值中的`ImportImageOsVersionSet`获取。
  * @method string getImageUrl() 获取导入镜像存放的cos地址
  * @method void setImageUrl(string $ImageUrl) 设置导入镜像存放的cos地址
- * @method string getImageName() 获取镜像名称
- * @method void setImageName(string $ImageName) 设置镜像名称
- * @method string getImageDescription() 获取镜像描述
- * @method void setImageDescription(string $ImageDescription) 设置镜像描述
- * @method boolean getDryRun() 获取只检查参数，不执行任务
- * @method void setDryRun(boolean $DryRun) 设置只检查参数，不执行任务
+ * @method string getImageName() 获取镜像名称。
+最多支持 60 个字符。
+ * @method void setImageName(string $ImageName) 设置镜像名称。
+最多支持 60 个字符。
+ * @method string getImageDescription() 获取镜像描述。
+最多支持 256 个字符。
+ * @method void setImageDescription(string $ImageDescription) 设置镜像描述。
+最多支持 256 个字符。
+ * @method boolean getDryRun() 获取只检查参数，不执行任务。
+默认值：false
+ * @method void setDryRun(boolean $DryRun) 设置只检查参数，不执行任务。
+默认值：false
  * @method boolean getForce() 获取是否强制导入，参考[强制导入镜像](https://cloud.tencent.com/document/product/213/12849)
+默认值：false
  * @method void setForce(boolean $Force) 设置是否强制导入，参考[强制导入镜像](https://cloud.tencent.com/document/product/213/12849)
+默认值：false
  * @method array getTagSpecification() 获取标签描述列表。通过指定该参数可以同时绑定标签到自定义镜像。
  * @method void setTagSpecification(array $TagSpecification) 设置标签描述列表。通过指定该参数可以同时绑定标签到自定义镜像。
  * @method string getLicenseType() 获取导入镜像后，激活操作系统采用的许可证类型。
-可选项：
+默认值：TencentCloud
+取值范围：
 TencentCloud: 腾讯云官方许可
 BYOL: 自带许可（Bring Your Own License）
  * @method void setLicenseType(string $LicenseType) 设置导入镜像后，激活操作系统采用的许可证类型。
-可选项：
+默认值：TencentCloud
+取值范围：
 TencentCloud: 腾讯云官方许可
 BYOL: 自带许可（Bring Your Own License）
- * @method string getBootMode() 获取启动模式
- * @method void setBootMode(string $BootMode) 设置启动模式
+ * @method string getBootMode() 获取启动模式。
+取值范围：`Legacy BIOS`、`UEFI`
+默认值：Legacy BIOS
+ * @method void setBootMode(string $BootMode) 设置启动模式。
+取值范围：`Legacy BIOS`、`UEFI`
+默认值：Legacy BIOS
  * @method string getImageFamily() 获取 镜像族
  * @method void setImageFamily(string $ImageFamily) 设置 镜像族
  * @method array getImportImageDataDiskList() 获取导入的数据盘列表
@@ -56,17 +76,20 @@ BYOL: 自带许可（Bring Your Own License）
 class ImportImageRequest extends AbstractModel
 {
     /**
-     * @var string 导入镜像的操作系统架构，`x86_64` 或 `i386`
+     * @var string 导入镜像的操作系统架构。
+取值范围包括：`x86_64` 、`i386`、`arm_64`
      */
     public $Architecture;
 
     /**
-     * @var string 导入镜像的操作系统类型，通过`DescribeImportImageOs`获取
+     * @var string 导入镜像的操作系统类型 。
+可通过 [DescribeImportImageOs](https://cloud.tencent.com/document/api/213/15718) 接口返回值中的`ImportImageOsListSupported`获取。
      */
     public $OsType;
 
     /**
-     * @var string 导入镜像的操作系统版本，通过`DescribeImportImageOs`获取
+     * @var string 导入镜像的操作系统版本。
+可通过 [DescribeImportImageOs](https://cloud.tencent.com/document/api/213/15718) 接口返回值中的`ImportImageOsVersionSet`获取。
      */
     public $OsVersion;
 
@@ -76,22 +99,26 @@ class ImportImageRequest extends AbstractModel
     public $ImageUrl;
 
     /**
-     * @var string 镜像名称
+     * @var string 镜像名称。
+最多支持 60 个字符。
      */
     public $ImageName;
 
     /**
-     * @var string 镜像描述
+     * @var string 镜像描述。
+最多支持 256 个字符。
      */
     public $ImageDescription;
 
     /**
-     * @var boolean 只检查参数，不执行任务
+     * @var boolean 只检查参数，不执行任务。
+默认值：false
      */
     public $DryRun;
 
     /**
      * @var boolean 是否强制导入，参考[强制导入镜像](https://cloud.tencent.com/document/product/213/12849)
+默认值：false
      */
     public $Force;
 
@@ -102,14 +129,17 @@ class ImportImageRequest extends AbstractModel
 
     /**
      * @var string 导入镜像后，激活操作系统采用的许可证类型。
-可选项：
+默认值：TencentCloud
+取值范围：
 TencentCloud: 腾讯云官方许可
 BYOL: 自带许可（Bring Your Own License）
      */
     public $LicenseType;
 
     /**
-     * @var string 启动模式
+     * @var string 启动模式。
+取值范围：`Legacy BIOS`、`UEFI`
+默认值：Legacy BIOS
      */
     public $BootMode;
 
@@ -124,20 +154,30 @@ BYOL: 自带许可（Bring Your Own License）
     public $ImportImageDataDiskList;
 
     /**
-     * @param string $Architecture 导入镜像的操作系统架构，`x86_64` 或 `i386`
-     * @param string $OsType 导入镜像的操作系统类型，通过`DescribeImportImageOs`获取
-     * @param string $OsVersion 导入镜像的操作系统版本，通过`DescribeImportImageOs`获取
+     * @param string $Architecture 导入镜像的操作系统架构。
+取值范围包括：`x86_64` 、`i386`、`arm_64`
+     * @param string $OsType 导入镜像的操作系统类型 。
+可通过 [DescribeImportImageOs](https://cloud.tencent.com/document/api/213/15718) 接口返回值中的`ImportImageOsListSupported`获取。
+     * @param string $OsVersion 导入镜像的操作系统版本。
+可通过 [DescribeImportImageOs](https://cloud.tencent.com/document/api/213/15718) 接口返回值中的`ImportImageOsVersionSet`获取。
      * @param string $ImageUrl 导入镜像存放的cos地址
-     * @param string $ImageName 镜像名称
-     * @param string $ImageDescription 镜像描述
-     * @param boolean $DryRun 只检查参数，不执行任务
+     * @param string $ImageName 镜像名称。
+最多支持 60 个字符。
+     * @param string $ImageDescription 镜像描述。
+最多支持 256 个字符。
+     * @param boolean $DryRun 只检查参数，不执行任务。
+默认值：false
      * @param boolean $Force 是否强制导入，参考[强制导入镜像](https://cloud.tencent.com/document/product/213/12849)
+默认值：false
      * @param array $TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到自定义镜像。
      * @param string $LicenseType 导入镜像后，激活操作系统采用的许可证类型。
-可选项：
+默认值：TencentCloud
+取值范围：
 TencentCloud: 腾讯云官方许可
 BYOL: 自带许可（Bring Your Own License）
-     * @param string $BootMode 启动模式
+     * @param string $BootMode 启动模式。
+取值范围：`Legacy BIOS`、`UEFI`
+默认值：Legacy BIOS
      * @param string $ImageFamily  镜像族
      * @param array $ImportImageDataDiskList 导入的数据盘列表
      */

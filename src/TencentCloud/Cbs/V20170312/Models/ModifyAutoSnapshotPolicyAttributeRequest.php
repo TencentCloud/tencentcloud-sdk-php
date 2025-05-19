@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAutoSnapshotPolicyId() 获取定期快照策略ID。可以通过[查询定期快照策略](https://cloud.tencent.com/document/product/362/33556)API查询。
  * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) 设置定期快照策略ID。可以通过[查询定期快照策略](https://cloud.tencent.com/document/product/362/33556)API查询。
- * @method boolean getIsActivated() 获取是否激活定期快照策略，FALSE表示未激活，TRUE表示激活，默认为TRUE。
- * @method void setIsActivated(boolean $IsActivated) 设置是否激活定期快照策略，FALSE表示未激活，TRUE表示激活，默认为TRUE。
- * @method boolean getIsPermanent() 获取通过该定期快照策略创建的快照是否永久保留。FALSE表示非永久保留，TRUE表示永久保留，默认为FALSE。
- * @method void setIsPermanent(boolean $IsPermanent) 设置通过该定期快照策略创建的快照是否永久保留。FALSE表示非永久保留，TRUE表示永久保留，默认为FALSE。
+ * @method boolean getIsActivated() 获取是否激活定期快照策略，`false`表示未激活，`true`表示激活；默认为`true`。
+ * @method void setIsActivated(boolean $IsActivated) 设置是否激活定期快照策略，`false`表示未激活，`true`表示激活；默认为`true`。
+ * @method boolean getIsPermanent() 获取通过该定期快照策略创建的快照是否永久保留。`false`表示非永久保留，`true`表示永久保留，默认为`false`。
+ * @method void setIsPermanent(boolean $IsPermanent) 设置通过该定期快照策略创建的快照是否永久保留。`false`表示非永久保留，`true`表示永久保留，默认为`false`。
  * @method string getAutoSnapshotPolicyName() 获取要创建的定期快照策略名。不传则默认为“未命名”。最大长度不能超60个字节。
  * @method void setAutoSnapshotPolicyName(string $AutoSnapshotPolicyName) 设置要创建的定期快照策略名。不传则默认为“未命名”。最大长度不能超60个字节。
  * @method array getPolicy() 获取定期快照的执行策略。
@@ -41,12 +41,12 @@ class ModifyAutoSnapshotPolicyAttributeRequest extends AbstractModel
     public $AutoSnapshotPolicyId;
 
     /**
-     * @var boolean 是否激活定期快照策略，FALSE表示未激活，TRUE表示激活，默认为TRUE。
+     * @var boolean 是否激活定期快照策略，`false`表示未激活，`true`表示激活；默认为`true`。
      */
     public $IsActivated;
 
     /**
-     * @var boolean 通过该定期快照策略创建的快照是否永久保留。FALSE表示非永久保留，TRUE表示永久保留，默认为FALSE。
+     * @var boolean 通过该定期快照策略创建的快照是否永久保留。`false`表示非永久保留，`true`表示永久保留，默认为`false`。
      */
     public $IsPermanent;
 
@@ -67,8 +67,8 @@ class ModifyAutoSnapshotPolicyAttributeRequest extends AbstractModel
 
     /**
      * @param string $AutoSnapshotPolicyId 定期快照策略ID。可以通过[查询定期快照策略](https://cloud.tencent.com/document/product/362/33556)API查询。
-     * @param boolean $IsActivated 是否激活定期快照策略，FALSE表示未激活，TRUE表示激活，默认为TRUE。
-     * @param boolean $IsPermanent 通过该定期快照策略创建的快照是否永久保留。FALSE表示非永久保留，TRUE表示永久保留，默认为FALSE。
+     * @param boolean $IsActivated 是否激活定期快照策略，`false`表示未激活，`true`表示激活；默认为`true`。
+     * @param boolean $IsPermanent 通过该定期快照策略创建的快照是否永久保留。`false`表示非永久保留，`true`表示永久保留，默认为`false`。
      * @param string $AutoSnapshotPolicyName 要创建的定期快照策略名。不传则默认为“未命名”。最大长度不能超60个字节。
      * @param array $Policy 定期快照的执行策略。
      * @param integer $RetentionDays 通过该定期快照策略创建的快照保留天数。如果指定本参数，则IsPermanent入参不可指定为TRUE，否则会产生冲突。

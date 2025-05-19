@@ -80,6 +80,10 @@ use TencentCloud\Common\AbstractModel;
  - 签署控件 是否默认展示日期.
  * @method void setSignComponentConfig(SignComponentConfig $SignComponentConfig) 设置签署控件的配置信息，用在嵌入式发起的页面配置，包括 
  - 签署控件 是否默认展示日期.
+ * @method boolean getForbidEditWatermark() 获取是否禁止编辑（展示）水印控件属性
+<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
+ * @method void setForbidEditWatermark(boolean $ForbidEditWatermark) 设置是否禁止编辑（展示）水印控件属性
+<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
  */
 class CreateFlowOption extends AbstractModel
 {
@@ -154,6 +158,12 @@ class CreateFlowOption extends AbstractModel
     public $SignComponentConfig;
 
     /**
+     * @var boolean 是否禁止编辑（展示）水印控件属性
+<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
+     */
+    public $ForbidEditWatermark;
+
+    /**
      * @param boolean $CanEditFlow 是否允许修改合同信息，
 **true**：可以
 **false**：（默认）不可以
@@ -184,6 +194,8 @@ class CreateFlowOption extends AbstractModel
 **false**：（默认）不跳过，需要传ResourceId
      * @param SignComponentConfig $SignComponentConfig 签署控件的配置信息，用在嵌入式发起的页面配置，包括 
  - 签署控件 是否默认展示日期.
+     * @param boolean $ForbidEditWatermark 是否禁止编辑（展示）水印控件属性
+<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
      */
     function __construct()
     {
@@ -237,6 +249,10 @@ class CreateFlowOption extends AbstractModel
         if (array_key_exists("SignComponentConfig",$param) and $param["SignComponentConfig"] !== null) {
             $this->SignComponentConfig = new SignComponentConfig();
             $this->SignComponentConfig->deserialize($param["SignComponentConfig"]);
+        }
+
+        if (array_key_exists("ForbidEditWatermark",$param) and $param["ForbidEditWatermark"] !== null) {
+            $this->ForbidEditWatermark = $param["ForbidEditWatermark"];
         }
     }
 }

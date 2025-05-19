@@ -74,8 +74,8 @@ use TencentCloud\Common\AbstractModel;
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
- * @method string getClientToken() 获取已废弃字段，客户端Token，保持接口幂等性,最大长度64个字符
- * @method void setClientToken(string $ClientToken) 设置已废弃字段，客户端Token，保持接口幂等性,最大长度64个字符
+ * @method string getClientToken() 获取该字段已不再使用
+ * @method void setClientToken(string $ClientToken) 设置该字段已不再使用
  */
 class CreateDocumentRequest extends AbstractModel
 {
@@ -139,7 +139,7 @@ class CreateDocumentRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @var string 已废弃字段，客户端Token，保持接口幂等性,最大长度64个字符
+     * @var string 该字段已不再使用
      */
     public $ClientToken;
 
@@ -171,7 +171,7 @@ class CreateDocumentRequest extends AbstractModel
 `2.动态表格控件不支持H5链接方式预览`
      * @param Agent $Agent 代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
-     * @param string $ClientToken 已废弃字段，客户端Token，保持接口幂等性,最大长度64个字符
+     * @param string $ClientToken 该字段已不再使用
      */
     function __construct()
     {

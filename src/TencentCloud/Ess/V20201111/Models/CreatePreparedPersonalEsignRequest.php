@@ -44,18 +44,14 @@ use TencentCloud\Common\AbstractModel;
 <ul><li>ID_CARD : 中国大陆居民身份证 (默认值)</li>
 <li>HONGKONG_AND_MACAO : 中国港澳居民来往内地通行证</li>
 <li>HONGKONG_MACAO_AND_TAIWAN : 中国港澳台居民居住证(格式同 中国大陆居民身份证)</li></ul>
- * @method string getSealImage() 获取印章图片的base64
-注：已废弃
-请先通过UploadFiles接口上传文件，获取 FileId
- * @method void setSealImage(string $SealImage) 设置印章图片的base64
-注：已废弃
-请先通过UploadFiles接口上传文件，获取 FileId
+ * @method string getSealImage() 获取该字段已不再使用
+ * @method void setSealImage(string $SealImage) 设置该字段已不再使用
  * @method boolean getSealImageCompress() 获取是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。
  * @method void setSealImageCompress(boolean $SealImageCompress) 设置是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。
  * @method string getMobile() 获取手机号码；当需要开通自动签时，该参数必传
  * @method void setMobile(string $Mobile) 设置手机号码；当需要开通自动签时，该参数必传
- * @method boolean getEnableAutoSign() 获取此字段已废弃，请勿继续使用。
- * @method void setEnableAutoSign(boolean $EnableAutoSign) 设置此字段已废弃，请勿继续使用。
+ * @method boolean getEnableAutoSign() 获取该字段已不再使用
+ * @method void setEnableAutoSign(boolean $EnableAutoSign) 设置该字段已不再使用
  * @method string getSealColor() 获取印章颜色（参数ProcessSeal=true时生效）
 默认值：BLACK黑色
 取值: 
@@ -136,9 +132,7 @@ class CreatePreparedPersonalEsignRequest extends AbstractModel
     public $IdCardType;
 
     /**
-     * @var string 印章图片的base64
-注：已废弃
-请先通过UploadFiles接口上传文件，获取 FileId
+     * @var string 该字段已不再使用
      * @deprecated
      */
     public $SealImage;
@@ -154,7 +148,7 @@ class CreatePreparedPersonalEsignRequest extends AbstractModel
     public $Mobile;
 
     /**
-     * @var boolean 此字段已废弃，请勿继续使用。
+     * @var boolean 该字段已不再使用
      */
     public $EnableAutoSign;
 
@@ -217,12 +211,10 @@ BLUE 蓝色。
 <ul><li>ID_CARD : 中国大陆居民身份证 (默认值)</li>
 <li>HONGKONG_AND_MACAO : 中国港澳居民来往内地通行证</li>
 <li>HONGKONG_MACAO_AND_TAIWAN : 中国港澳台居民居住证(格式同 中国大陆居民身份证)</li></ul>
-     * @param string $SealImage 印章图片的base64
-注：已废弃
-请先通过UploadFiles接口上传文件，获取 FileId
+     * @param string $SealImage 该字段已不再使用
      * @param boolean $SealImageCompress 是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。
      * @param string $Mobile 手机号码；当需要开通自动签时，该参数必传
-     * @param boolean $EnableAutoSign 此字段已废弃，请勿继续使用。
+     * @param boolean $EnableAutoSign 该字段已不再使用
      * @param string $SealColor 印章颜色（参数ProcessSeal=true时生效）
 默认值：BLACK黑色
 取值: 

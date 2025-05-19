@@ -96,7 +96,7 @@ use TencentCloud\Cdb\V20170320\Models as Models;
  * @method Models\DescribeAuditRulesResponse DescribeAuditRules(Models\DescribeAuditRulesRequest $req) 不再支持审计规则创建
 
 本接口(DescribeAuditRules)用于查询用户在当前地域的审计规则。
- * @method Models\DescribeBackupConfigResponse DescribeBackupConfig(Models\DescribeBackupConfigRequest $req) 本接口(DescribeBackupConfig)用于查询数据库备份配置信息。
+ * @method Models\DescribeBackupConfigResponse DescribeBackupConfig(Models\DescribeBackupConfigRequest $req) 本接口（DescribeBackupConfig）用于查询数据库备份配置信息。
  * @method Models\DescribeBackupDecryptionKeyResponse DescribeBackupDecryptionKey(Models\DescribeBackupDecryptionKeyRequest $req) 本接口（DescribeBackupDecryptionKey）用于查询备份文件解密密钥。
  * @method Models\DescribeBackupDownloadRestrictionResponse DescribeBackupDownloadRestriction(Models\DescribeBackupDownloadRestrictionRequest $req) 该接口用户查询当前地域用户设置的默认备份下载来源限制。
  * @method Models\DescribeBackupEncryptionStatusResponse DescribeBackupEncryptionStatus(Models\DescribeBackupEncryptionStatusRequest $req) 本接口(DescribeBackupEncryptionStatus)用于查询实例默认备份加密状态。

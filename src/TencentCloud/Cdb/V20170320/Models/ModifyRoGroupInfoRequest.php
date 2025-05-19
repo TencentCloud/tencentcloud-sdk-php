@@ -55,6 +55,7 @@ class ModifyRoGroupInfoRequest extends AbstractModel
 
     /**
      * @var integer 废弃参数，无意义。
+     * @deprecated
      */
     public $ReplicationDelayTime;
 

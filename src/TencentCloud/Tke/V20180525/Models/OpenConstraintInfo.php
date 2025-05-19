@@ -20,24 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 策略实例信息
  *
- * @method string getName() 获取策略实例名称
- * @method void setName(string $Name) 设置策略实例名称
  * @method integer getEventNums() 获取策略实例关联事件数
  * @method void setEventNums(integer $EventNums) 设置策略实例关联事件数
+ * @method string getName() 获取策略实例名称
+ * @method void setName(string $Name) 设置策略实例名称
  * @method string getYamlDetail() 获取实例yaml详情base64编码
  * @method void setYamlDetail(string $YamlDetail) 设置实例yaml详情base64编码
  */
 class OpenConstraintInfo extends AbstractModel
 {
     /**
-     * @var string 策略实例名称
-     */
-    public $Name;
-
-    /**
      * @var integer 策略实例关联事件数
      */
     public $EventNums;
+
+    /**
+     * @var string 策略实例名称
+     */
+    public $Name;
 
     /**
      * @var string 实例yaml详情base64编码
@@ -45,8 +45,8 @@ class OpenConstraintInfo extends AbstractModel
     public $YamlDetail;
 
     /**
-     * @param string $Name 策略实例名称
      * @param integer $EventNums 策略实例关联事件数
+     * @param string $Name 策略实例名称
      * @param string $YamlDetail 实例yaml详情base64编码
      */
     function __construct()
@@ -62,12 +62,12 @@ class OpenConstraintInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
-        }
-
         if (array_key_exists("EventNums",$param) and $param["EventNums"] !== null) {
             $this->EventNums = $param["EventNums"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
 
         if (array_key_exists("YamlDetail",$param) and $param["YamlDetail"] !== null) {

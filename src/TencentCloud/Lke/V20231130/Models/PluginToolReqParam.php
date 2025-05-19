@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置参数名称
  * @method string getDesc() 获取参数描述
  * @method void setDesc(string $Desc) 设置参数描述
- * @method integer getType() 获取参数类型，0:string, 1:int, 2:float，3:bool 4:object 5:array_string, 6:array_int, 7:array_float, 8:array_bool, 9:array_object
- * @method void setType(integer $Type) 设置参数类型，0:string, 1:int, 2:float，3:bool 4:object 5:array_string, 6:array_int, 7:array_float, 8:array_bool, 9:array_object
+ * @method integer getType() 获取参数类型，0:string, 1:int, 2:float，3:bool 4:object 5:array_string, 6:array_int, 7:array_float, 8:array_bool, 9:array_object, 99:null, 100:upspecified
+ * @method void setType(integer $Type) 设置参数类型，0:string, 1:int, 2:float，3:bool 4:object 5:array_string, 6:array_int, 7:array_float, 8:array_bool, 9:array_object, 99:null, 100:upspecified
  * @method boolean getIsRequired() 获取参数是否必填
  * @method void setIsRequired(boolean $IsRequired) 设置参数是否必填
  * @method string getDefaultValue() 获取参数默认值
@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubParams(array $SubParams) 设置子参数,ParamType 是OBJECT 或 ARRAY<>类型有用
  * @method boolean getGlobalHidden() 获取插件参数配置是否隐藏不可见，true-隐藏不可见，false-可见
  * @method void setGlobalHidden(boolean $GlobalHidden) 设置插件参数配置是否隐藏不可见，true-隐藏不可见，false-可见
+ * @method array getOneOf() 获取OneOf类型参数
+ * @method void setOneOf(array $OneOf) 设置OneOf类型参数
+ * @method array getAnyOf() 获取AnyOf类型参数
+ * @method void setAnyOf(array $AnyOf) 设置AnyOf类型参数
  */
 class PluginToolReqParam extends AbstractModel
 {
@@ -48,7 +52,7 @@ class PluginToolReqParam extends AbstractModel
     public $Desc;
 
     /**
-     * @var integer 参数类型，0:string, 1:int, 2:float，3:bool 4:object 5:array_string, 6:array_int, 7:array_float, 8:array_bool, 9:array_object
+     * @var integer 参数类型，0:string, 1:int, 2:float，3:bool 4:object 5:array_string, 6:array_int, 7:array_float, 8:array_bool, 9:array_object, 99:null, 100:upspecified
      */
     public $Type;
 
@@ -73,13 +77,25 @@ class PluginToolReqParam extends AbstractModel
     public $GlobalHidden;
 
     /**
+     * @var array OneOf类型参数
+     */
+    public $OneOf;
+
+    /**
+     * @var array AnyOf类型参数
+     */
+    public $AnyOf;
+
+    /**
      * @param string $Name 参数名称
      * @param string $Desc 参数描述
-     * @param integer $Type 参数类型，0:string, 1:int, 2:float，3:bool 4:object 5:array_string, 6:array_int, 7:array_float, 8:array_bool, 9:array_object
+     * @param integer $Type 参数类型，0:string, 1:int, 2:float，3:bool 4:object 5:array_string, 6:array_int, 7:array_float, 8:array_bool, 9:array_object, 99:null, 100:upspecified
      * @param boolean $IsRequired 参数是否必填
      * @param string $DefaultValue 参数默认值
      * @param array $SubParams 子参数,ParamType 是OBJECT 或 ARRAY<>类型有用
      * @param boolean $GlobalHidden 插件参数配置是否隐藏不可见，true-隐藏不可见，false-可见
+     * @param array $OneOf OneOf类型参数
+     * @param array $AnyOf AnyOf类型参数
      */
     function __construct()
     {
@@ -125,6 +141,24 @@ class PluginToolReqParam extends AbstractModel
 
         if (array_key_exists("GlobalHidden",$param) and $param["GlobalHidden"] !== null) {
             $this->GlobalHidden = $param["GlobalHidden"];
+        }
+
+        if (array_key_exists("OneOf",$param) and $param["OneOf"] !== null) {
+            $this->OneOf = [];
+            foreach ($param["OneOf"] as $key => $value){
+                $obj = new PluginToolReqParam();
+                $obj->deserialize($value);
+                array_push($this->OneOf, $obj);
+            }
+        }
+
+        if (array_key_exists("AnyOf",$param) and $param["AnyOf"] !== null) {
+            $this->AnyOf = [];
+            foreach ($param["AnyOf"] as $key => $value){
+                $obj = new PluginToolReqParam();
+                $obj->deserialize($value);
+                array_push($this->AnyOf, $obj);
+            }
         }
     }
 }

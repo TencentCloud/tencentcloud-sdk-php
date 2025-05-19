@@ -72,12 +72,8 @@ use TencentCloud\Common\AbstractModel;
 <li>**false**：无需处理，不会将灰色矩阵置为白色（默认）。</li></ul>
 
 注: `该参数仅在关键字定位时，需要去除关键字所在的灰框场景下使用。`
- * @method array getCustomIds() 获取用户自定义ID数组，与上传文件一一对应
-
-注: `历史遗留问题，已经废弃，调用接口时不用赋值`
- * @method void setCustomIds(array $CustomIds) 设置用户自定义ID数组，与上传文件一一对应
-
-注: `历史遗留问题，已经废弃，调用接口时不用赋值`
+ * @method array getCustomIds() 获取该字段已不再使用
+ * @method void setCustomIds(array $CustomIds) 设置该字段已不再使用
  * @method string getFileUrls() 获取不再使用，上传文件链接数组，最多支持20个URL
  * @method void setFileUrls(string $FileUrls) 设置不再使用，上传文件链接数组，最多支持20个URL
  * @method Agent getAgent() 获取代理企业和员工的信息。
@@ -134,9 +130,7 @@ class UploadFilesRequest extends AbstractModel
     public $CoverRect;
 
     /**
-     * @var array 用户自定义ID数组，与上传文件一一对应
-
-注: `历史遗留问题，已经废弃，调用接口时不用赋值`
+     * @var array 该字段已不再使用
      */
     public $CustomIds;
 
@@ -179,9 +173,7 @@ class UploadFilesRequest extends AbstractModel
 <li>**false**：无需处理，不会将灰色矩阵置为白色（默认）。</li></ul>
 
 注: `该参数仅在关键字定位时，需要去除关键字所在的灰框场景下使用。`
-     * @param array $CustomIds 用户自定义ID数组，与上传文件一一对应
-
-注: `历史遗留问题，已经废弃，调用接口时不用赋值`
+     * @param array $CustomIds 该字段已不再使用
      * @param string $FileUrls 不再使用，上传文件链接数组，最多支持20个URL
      * @param Agent $Agent 代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。

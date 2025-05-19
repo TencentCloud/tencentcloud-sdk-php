@@ -72,6 +72,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargetAgentName(string $TargetAgentName) 设置挂号agent
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAgentIcon() 获取Agent的图标
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAgentIcon(string $AgentIcon) 设置Agent的图标
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AgentProcedure extends AbstractModel
 {
@@ -154,6 +158,12 @@ class AgentProcedure extends AbstractModel
     public $TargetAgentName;
 
     /**
+     * @var string Agent的图标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AgentIcon;
+
+    /**
      * @param integer $Index 索引
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 执行过程英语名
@@ -179,6 +189,8 @@ class AgentProcedure extends AbstractModel
      * @param string $SourceAgentName 主agent
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TargetAgentName 挂号agent
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AgentIcon Agent的图标
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -245,6 +257,10 @@ class AgentProcedure extends AbstractModel
 
         if (array_key_exists("TargetAgentName",$param) and $param["TargetAgentName"] !== null) {
             $this->TargetAgentName = $param["TargetAgentName"];
+        }
+
+        if (array_key_exists("AgentIcon",$param) and $param["AgentIcon"] !== null) {
+            $this->AgentIcon = $param["AgentIcon"];
         }
     }
 }

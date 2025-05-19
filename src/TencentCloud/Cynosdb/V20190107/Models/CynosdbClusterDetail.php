@@ -130,6 +130,16 @@ pausing
  * @method void setSlaveZoneAttr(array $SlaveZoneAttr) 设置备可用区属性
  * @method string getCynosVersionTag() 获取版本标签
  * @method void setCynosVersionTag(string $CynosVersionTag) 设置版本标签
+ * @method string getGdnId() 获取全球数据库网络唯一标识
+ * @method void setGdnId(string $GdnId) 设置全球数据库网络唯一标识
+ * @method string getGdnRole() 获取集群在全球数据网络中的角色。
+主集群- primary
+从集群 - standby
+如为空，该字段无效
+ * @method void setGdnRole(string $GdnRole) 设置集群在全球数据网络中的角色。
+主集群- primary
+从集群 - standby
+如为空，该字段无效
  */
 class CynosdbClusterDetail extends AbstractModel
 {
@@ -393,6 +403,19 @@ pausing
     public $CynosVersionTag;
 
     /**
+     * @var string 全球数据库网络唯一标识
+     */
+    public $GdnId;
+
+    /**
+     * @var string 集群在全球数据网络中的角色。
+主集群- primary
+从集群 - standby
+如为空，该字段无效
+     */
+    public $GdnRole;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $ClusterName 集群名称
      * @param string $Region 地域
@@ -448,6 +471,11 @@ pausing
      * @param string $NetworkType 节点网络类型
      * @param array $SlaveZoneAttr 备可用区属性
      * @param string $CynosVersionTag 版本标签
+     * @param string $GdnId 全球数据库网络唯一标识
+     * @param string $GdnRole 集群在全球数据网络中的角色。
+主集群- primary
+从集群 - standby
+如为空，该字段无效
      */
     function __construct()
     {
@@ -695,6 +723,14 @@ pausing
 
         if (array_key_exists("CynosVersionTag",$param) and $param["CynosVersionTag"] !== null) {
             $this->CynosVersionTag = $param["CynosVersionTag"];
+        }
+
+        if (array_key_exists("GdnId",$param) and $param["GdnId"] !== null) {
+            $this->GdnId = $param["GdnId"];
+        }
+
+        if (array_key_exists("GdnRole",$param) and $param["GdnRole"] !== null) {
+            $this->GdnRole = $param["GdnRole"];
         }
     }
 }

@@ -64,8 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSealImageCompress(boolean $SealImageCompress) 设置是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。
  * @method string getMobile() 获取手机号码；当需要开通自动签时，该参数必传
  * @method void setMobile(string $Mobile) 设置手机号码；当需要开通自动签时，该参数必传
- * @method boolean getEnableAutoSign() 获取此字段已废弃，请勿继续使用。
- * @method void setEnableAutoSign(boolean $EnableAutoSign) 设置此字段已废弃，请勿继续使用。
+ * @method boolean getEnableAutoSign() 获取该字段已不再使用
+ * @method void setEnableAutoSign(boolean $EnableAutoSign) 设置该字段已不再使用
  * @method integer getLicenseType() 获取设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 1-不绑定，发起合同时将按标准合同套餐进行扣减	
  * @method void setLicenseType(integer $LicenseType) 设置设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 1-不绑定，发起合同时将按标准合同套餐进行扣减	
  * @method string getSceneKey() 获取<ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
@@ -132,7 +132,7 @@ class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel
     public $Mobile;
 
     /**
-     * @var boolean 此字段已废弃，请勿继续使用。
+     * @var boolean 该字段已不再使用
      */
     public $EnableAutoSign;
 
@@ -169,7 +169,7 @@ class ChannelCreatePreparedPersonalEsignRequest extends AbstractModel
 注: `其他证件类型为白名单功能，使用前请联系对接的客户经理沟通。`
      * @param boolean $SealImageCompress 是否开启印章图片压缩处理，默认不开启，如需开启请设置为 true。当印章超过 2M 时建议开启，开启后图片的 hash 将发生变化。
      * @param string $Mobile 手机号码；当需要开通自动签时，该参数必传
-     * @param boolean $EnableAutoSign 此字段已废弃，请勿继续使用。
+     * @param boolean $EnableAutoSign 该字段已不再使用
      * @param integer $LicenseType 设置用户开通自动签时是否绑定个人自动签账号许可。一旦绑定后，将扣减购买的个人自动签账号许可一次（1年有效期），不可解绑释放。不传默认为绑定自动签账号许可。 0-绑定个人自动签账号许可，开通后将扣减购买的个人自动签账号许可一次 1-不绑定，发起合同时将按标准合同套餐进行扣减	
      * @param string $SceneKey <ul><li> **E_PRESCRIPTION_AUTO_SIGN** :  电子处方场景</li><li> **OTHER** :  通用场景</li></ul>
      */

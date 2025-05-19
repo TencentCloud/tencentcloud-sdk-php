@@ -24,11 +24,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
  * @method string getFlowLogId() 获取流日志唯一ID。可通过[CreateFlowLog](https://cloud.tencent.com/document/product/215/35015)接口创建。
  * @method void setFlowLogId(string $FlowLogId) 设置流日志唯一ID。可通过[CreateFlowLog](https://cloud.tencent.com/document/product/215/35015)接口创建。
- * @method string getFlowLogName() 获取流日志实例名字。
- * @method void setFlowLogName(string $FlowLogName) 设置流日志实例名字。
- * @method string getResourceType() 获取流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。
+ * @method string getFlowLogName() 获取流日志实例名称。长度不超过60个字符。
+ * @method void setFlowLogName(string $FlowLogName) 设置流日志实例名称。长度不超过60个字符。
+ * @method string getResourceType() 获取流日志所属资源类型，VPC（私有网络），SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。
 
- * @method void setResourceType(string $ResourceType) 设置流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。
+ * @method void setResourceType(string $ResourceType) 设置流日志所属资源类型，VPC（私有网络），SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。
 
  * @method string getResourceId() 获取资源唯一ID。
  * @method void setResourceId(string $ResourceId) 设置资源唯一ID。
@@ -68,12 +68,12 @@ class DescribeFlowLogsRequest extends AbstractModel
     public $FlowLogId;
 
     /**
-     * @var string 流日志实例名字。
+     * @var string 流日志实例名称。长度不超过60个字符。
      */
     public $FlowLogName;
 
     /**
-     * @var string 流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。
+     * @var string 流日志所属资源类型，VPC（私有网络），SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。
 
      */
     public $ResourceType;
@@ -133,8 +133,8 @@ class DescribeFlowLogsRequest extends AbstractModel
     /**
      * @param string $VpcId 私用网络唯一ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取。
      * @param string $FlowLogId 流日志唯一ID。可通过[CreateFlowLog](https://cloud.tencent.com/document/product/215/35015)接口创建。
-     * @param string $FlowLogName 流日志实例名字。
-     * @param string $ResourceType 流日志所属资源类型：VPC(私有网络)，SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。
+     * @param string $FlowLogName 流日志实例名称。长度不超过60个字符。
+     * @param string $ResourceType 流日志所属资源类型，VPC（私有网络），SUBNET（子网），NETWORKINTERFACE（网卡），CCN（云联网），NAT（网络地址转化），DCG（专线网关）。
 
      * @param string $ResourceId 资源唯一ID。
      * @param string $TrafficType 流日志采集类型，ACCEPT（允许），REJECT（拒绝），ALL（全部）。

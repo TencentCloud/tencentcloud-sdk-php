@@ -20,46 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstances请求参数结构体
  *
- * @method array getInstanceIds() 获取实例元组
- * @method void setInstanceIds(array $InstanceIds) 设置实例元组
- * @method array getFilters() 获取描述键值对过滤器，用于条件过滤查询。目前支持的过滤器有：instance-id，实例id；instance-state，实例状态；charge-type，付费方式；public-ip-address，公网IP过滤
- * @method void setFilters(array $Filters) 设置描述键值对过滤器，用于条件过滤查询。目前支持的过滤器有：instance-id，实例id；instance-state，实例状态；charge-type，付费方式；public-ip-address，公网IP过滤
- * @method integer getOffset() 获取偏移量，默认为0
-
- * @method void setOffset(integer $Offset) 设置偏移量，默认为0
-
- * @method integer getLimit() 获取返回量，默认为20
- * @method void setLimit(integer $Limit) 设置返回量，默认为20
+ * @method array getInstanceIds() 获取实例元组，数量上限100
+ * @method void setInstanceIds(array $InstanceIds) 设置实例元组，数量上限100
+ * @method array getFilters() 获取描述键值对过滤器，用于条件过滤查询。目前支持的过滤器有： instance-id，实例id； instance-state，实例状态：RUNNING，PENDING，STOPPED，ARREARS，STOPPED_NO_CHARGE； charge-type，付费方式：PREPAID_BY_MONTH，POSTPAID_BY_HOUR； public-ip-address，公网IP过滤
+ * @method void setFilters(array $Filters) 设置描述键值对过滤器，用于条件过滤查询。目前支持的过滤器有： instance-id，实例id； instance-state，实例状态：RUNNING，PENDING，STOPPED，ARREARS，STOPPED_NO_CHARGE； charge-type，付费方式：PREPAID_BY_MONTH，POSTPAID_BY_HOUR； public-ip-address，公网IP过滤
+ * @method integer getOffset() 获取偏移量，默认为0，不得大于100
+ * @method void setOffset(integer $Offset) 设置偏移量，默认为0，不得大于100
+ * @method integer getLimit() 获取返回量，默认为20，不能小于0
+ * @method void setLimit(integer $Limit) 设置返回量，默认为20，不能小于0
  */
 class DescribeInstancesRequest extends AbstractModel
 {
     /**
-     * @var array 实例元组
+     * @var array 实例元组，数量上限100
      */
     public $InstanceIds;
 
     /**
-     * @var array 描述键值对过滤器，用于条件过滤查询。目前支持的过滤器有：instance-id，实例id；instance-state，实例状态；charge-type，付费方式；public-ip-address，公网IP过滤
+     * @var array 描述键值对过滤器，用于条件过滤查询。目前支持的过滤器有： instance-id，实例id； instance-state，实例状态：RUNNING，PENDING，STOPPED，ARREARS，STOPPED_NO_CHARGE； charge-type，付费方式：PREPAID_BY_MONTH，POSTPAID_BY_HOUR； public-ip-address，公网IP过滤
      */
     public $Filters;
 
     /**
-     * @var integer 偏移量，默认为0
-
+     * @var integer 偏移量，默认为0，不得大于100
      */
     public $Offset;
 
     /**
-     * @var integer 返回量，默认为20
+     * @var integer 返回量，默认为20，不能小于0
      */
     public $Limit;
 
     /**
-     * @param array $InstanceIds 实例元组
-     * @param array $Filters 描述键值对过滤器，用于条件过滤查询。目前支持的过滤器有：instance-id，实例id；instance-state，实例状态；charge-type，付费方式；public-ip-address，公网IP过滤
-     * @param integer $Offset 偏移量，默认为0
-
-     * @param integer $Limit 返回量，默认为20
+     * @param array $InstanceIds 实例元组，数量上限100
+     * @param array $Filters 描述键值对过滤器，用于条件过滤查询。目前支持的过滤器有： instance-id，实例id； instance-state，实例状态：RUNNING，PENDING，STOPPED，ARREARS，STOPPED_NO_CHARGE； charge-type，付费方式：PREPAID_BY_MONTH，POSTPAID_BY_HOUR； public-ip-address，公网IP过滤
+     * @param integer $Offset 偏移量，默认为0，不得大于100
+     * @param integer $Limit 返回量，默认为20，不能小于0
      */
     function __construct()
     {

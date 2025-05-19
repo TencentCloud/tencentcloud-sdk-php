@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifySnapshotAttribute请求参数结构体
  *
- * @method string getSnapshotId() 获取快照ID, 可通过[DescribeSnapshots](/document/product/362/15647)查询。
- * @method void setSnapshotId(string $SnapshotId) 设置快照ID, 可通过[DescribeSnapshots](/document/product/362/15647)查询。
+ * @method string getSnapshotId() 获取快照ID, 可通过[DescribeSnapshots](https://cloud.tencent.com/document/api/362/15647)查询。
+ * @method void setSnapshotId(string $SnapshotId) 设置快照ID, 可通过[DescribeSnapshots](https://cloud.tencent.com/document/api/362/15647)查询。
  * @method boolean getIsPermanent() 获取快照的保留方式，FALSE表示非永久保留，TRUE表示永久保留。
  * @method void setIsPermanent(boolean $IsPermanent) 设置快照的保留方式，FALSE表示非永久保留，TRUE表示永久保留。
  * @method string getSnapshotName() 获取新的快照名称。最长为60个字符。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifySnapshotAttributeRequest extends AbstractModel
 {
     /**
-     * @var string 快照ID, 可通过[DescribeSnapshots](/document/product/362/15647)查询。
+     * @var string 快照ID, 可通过[DescribeSnapshots](https://cloud.tencent.com/document/api/362/15647)查询。
      */
     public $SnapshotId;
 
@@ -52,7 +52,7 @@ class ModifySnapshotAttributeRequest extends AbstractModel
     public $Deadline;
 
     /**
-     * @param string $SnapshotId 快照ID, 可通过[DescribeSnapshots](/document/product/362/15647)查询。
+     * @param string $SnapshotId 快照ID, 可通过[DescribeSnapshots](https://cloud.tencent.com/document/api/362/15647)查询。
      * @param boolean $IsPermanent 快照的保留方式，FALSE表示非永久保留，TRUE表示永久保留。
      * @param string $SnapshotName 新的快照名称。最长为60个字符。
      * @param string $Deadline 快照的到期时间；设置好快照将会被同时设置为非永久保留方式；超过到期时间后快照将会被自动删除。注：该参数仅在参数IsPermanent为False时生效。

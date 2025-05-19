@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowLogId(string $FlowLogId) 设置流日志唯一ID。可通过[CreateFlowLog](https://cloud.tencent.com/document/product/215/35015)接口创建；可通过[DescribeFlowLogs](https://cloud.tencent.com/document/product/215/35012)接口获取。
  * @method string getVpcId() 获取私用网络唯一ID。修改云联网流日志属性时可不填，其他流日志类型必填。
  * @method void setVpcId(string $VpcId) 设置私用网络唯一ID。修改云联网流日志属性时可不填，其他流日志类型必填。
- * @method string getFlowLogName() 获取流日志实例名字。长度为不超过60字节。
- * @method void setFlowLogName(string $FlowLogName) 设置流日志实例名字。长度为不超过60字节。
- * @method string getFlowLogDescription() 获取流日志实例描述。长度为不超过512字节。
- * @method void setFlowLogDescription(string $FlowLogDescription) 设置流日志实例描述。长度为不超过512字节。
+ * @method string getFlowLogName() 获取流日志实例名称。长度为不超过60字符。
+ * @method void setFlowLogName(string $FlowLogName) 设置流日志实例名称。长度为不超过60字符。
+ * @method string getFlowLogDescription() 获取流日志实例描述。长度为不超过512个字符。
+ * @method void setFlowLogDescription(string $FlowLogDescription) 设置流日志实例描述。长度为不超过512个字符。
  */
 class ModifyFlowLogAttributeRequest extends AbstractModel
 {
@@ -42,20 +42,20 @@ class ModifyFlowLogAttributeRequest extends AbstractModel
     public $VpcId;
 
     /**
-     * @var string 流日志实例名字。长度为不超过60字节。
+     * @var string 流日志实例名称。长度为不超过60字符。
      */
     public $FlowLogName;
 
     /**
-     * @var string 流日志实例描述。长度为不超过512字节。
+     * @var string 流日志实例描述。长度为不超过512个字符。
      */
     public $FlowLogDescription;
 
     /**
      * @param string $FlowLogId 流日志唯一ID。可通过[CreateFlowLog](https://cloud.tencent.com/document/product/215/35015)接口创建；可通过[DescribeFlowLogs](https://cloud.tencent.com/document/product/215/35012)接口获取。
      * @param string $VpcId 私用网络唯一ID。修改云联网流日志属性时可不填，其他流日志类型必填。
-     * @param string $FlowLogName 流日志实例名字。长度为不超过60字节。
-     * @param string $FlowLogDescription 流日志实例描述。长度为不超过512字节。
+     * @param string $FlowLogName 流日志实例名称。长度为不超过60字符。
+     * @param string $FlowLogDescription 流日志实例描述。长度为不超过512个字符。
      */
     function __construct()
     {

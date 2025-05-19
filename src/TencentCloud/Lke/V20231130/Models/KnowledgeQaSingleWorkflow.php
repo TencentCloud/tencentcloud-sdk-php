@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置工作流状态，发布状态(UNPUBLISHED: 待发布 PUBLISHING: 发布中 PUBLISHED: 已发布 FAIL:发布失败)
  * @method boolean getIsEnable() 获取工作流是否启用
  * @method void setIsEnable(boolean $IsEnable) 设置工作流是否启用
+ * @method boolean getAsyncWorkflow() 获取是否开启异步调用工作流
+ * @method void setAsyncWorkflow(boolean $AsyncWorkflow) 设置是否开启异步调用工作流
  */
 class KnowledgeQaSingleWorkflow extends AbstractModel
 {
@@ -59,11 +61,17 @@ class KnowledgeQaSingleWorkflow extends AbstractModel
     public $IsEnable;
 
     /**
+     * @var boolean 是否开启异步调用工作流
+     */
+    public $AsyncWorkflow;
+
+    /**
      * @param string $WorkflowId 工作流ID
      * @param string $WorkflowName 工作流名称
      * @param string $WorkflowDesc 工作流描述
      * @param string $Status 工作流状态，发布状态(UNPUBLISHED: 待发布 PUBLISHING: 发布中 PUBLISHED: 已发布 FAIL:发布失败)
      * @param boolean $IsEnable 工作流是否启用
+     * @param boolean $AsyncWorkflow 是否开启异步调用工作流
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class KnowledgeQaSingleWorkflow extends AbstractModel
 
         if (array_key_exists("IsEnable",$param) and $param["IsEnable"] !== null) {
             $this->IsEnable = $param["IsEnable"];
+        }
+
+        if (array_key_exists("AsyncWorkflow",$param) and $param["AsyncWorkflow"] !== null) {
+            $this->AsyncWorkflow = $param["AsyncWorkflow"];
         }
     }
 }

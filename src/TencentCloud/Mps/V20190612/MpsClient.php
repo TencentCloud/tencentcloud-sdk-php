@@ -24,6 +24,8 @@ use TencentCloud\Mps\V20190612\Models as Models;
 
 /**
  * @method Models\BatchDeleteStreamLinkFlowResponse BatchDeleteStreamLinkFlow(Models\BatchDeleteStreamLinkFlowRequest $req) 批量删除媒体传输流。
+ * @method Models\BatchProcessMediaResponse BatchProcessMedia(Models\BatchProcessMediaRequest $req) 对 URL视频链接批量发起处理任务，功能包括：
+智能字幕（语音全文、语音热词、语音翻译）
  * @method Models\BatchStartStreamLinkFlowResponse BatchStartStreamLinkFlow(Models\BatchStartStreamLinkFlowRequest $req) 批量启动媒体传输流。
  * @method Models\BatchStopStreamLinkFlowResponse BatchStopStreamLinkFlow(Models\BatchStopStreamLinkFlowRequest $req) 批量停止媒体传输流。
  * @method Models\CreateAIAnalysisTemplateResponse CreateAIAnalysisTemplate(Models\CreateAIAnalysisTemplateRequest $req) 创建用户自定义内容分析模板，数量上限：50。
@@ -104,9 +106,11 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\DescribeAnimatedGraphicsTemplatesResponse DescribeAnimatedGraphicsTemplates(Models\DescribeAnimatedGraphicsTemplatesRequest $req) 查询转动图模板列表，支持根据条件，分页查询。
  * @method Models\DescribeAsrHotwordsResponse DescribeAsrHotwords(Models\DescribeAsrHotwordsRequest $req) 查询智能字幕热词库
  * @method Models\DescribeAsrHotwordsListResponse DescribeAsrHotwordsList(Models\DescribeAsrHotwordsListRequest $req) 获取热词库列表
+ * @method Models\DescribeBatchTaskDetailResponse DescribeBatchTaskDetail(Models\DescribeBatchTaskDetailRequest $req) 通过任务 ID 查询任务的执行状态和结果的详细信息（最多可以查询7天之内提交的任务）。
  * @method Models\DescribeContentReviewTemplatesResponse DescribeContentReviewTemplates(Models\DescribeContentReviewTemplatesRequest $req) 根据智能审核模板唯一标识，获取智能审核模板详情列表。返回结果包含符合条件的所有用户自定义模板及系统预置智能审核模板。
  * @method Models\DescribeGroupAttachFlowsByIdResponse DescribeGroupAttachFlowsById(Models\DescribeGroupAttachFlowsByIdRequest $req) 根据安全组反差关联的Flow信息。
  * @method Models\DescribeImageSpriteTemplatesResponse DescribeImageSpriteTemplates(Models\DescribeImageSpriteTemplatesRequest $req) 查询雪碧图模板，支持根据条件，分页查询。
+ * @method Models\DescribeImageTaskDetailResponse DescribeImageTaskDetail(Models\DescribeImageTaskDetailRequest $req) 通过任务 ID 查询任务的执行状态和结果的详细信息（最多可以查询7天之内提交的任务）。
  * @method Models\DescribeLiveRecordTemplatesResponse DescribeLiveRecordTemplates(Models\DescribeLiveRecordTemplatesRequest $req) 获取直播录制模板
  * @method Models\DescribeMediaMetaDataResponse DescribeMediaMetaData(Models\DescribeMediaMetaDataRequest $req) 获取媒体的元信息，包括视频画面宽、高、编码格式、时长、帧率等。
  * @method Models\DescribePersonSamplesResponse DescribePersonSamples(Models\DescribePersonSamplesRequest $req) 该接口用于查询素材样本信息，支持根据素材 ID、名称、标签，分页查询。

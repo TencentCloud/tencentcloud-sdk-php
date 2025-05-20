@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(integer $CreateTime) 设置创建时间
  * @method string getLimitMethod() 获取限频方式
  * @method void setLimitMethod(string $LimitMethod) 设置限频方式
+ * @method string getCelRule() 获取cel表达式
+ * @method void setCelRule(string $CelRule) 设置cel表达式
+ * @method string getLogicalOp() 获取逻辑操作符
+ * @method void setLogicalOp(string $LogicalOp) 设置逻辑操作符
  */
 class CCRuleItems extends AbstractModel
 {
@@ -143,6 +147,16 @@ class CCRuleItems extends AbstractModel
     public $LimitMethod;
 
     /**
+     * @var string cel表达式
+     */
+    public $CelRule;
+
+    /**
+     * @var string 逻辑操作符
+     */
+    public $LogicalOp;
+
+    /**
      * @param string $Name 名字
      * @param integer $Status 状态
      * @param integer $Advance 模式
@@ -160,6 +174,8 @@ class CCRuleItems extends AbstractModel
      * @param array $SessionApplied 关联的Session规则
      * @param integer $CreateTime 创建时间
      * @param string $LimitMethod 限频方式
+     * @param string $CelRule cel表达式
+     * @param string $LogicalOp 逻辑操作符
      */
     function __construct()
     {
@@ -240,6 +256,14 @@ class CCRuleItems extends AbstractModel
 
         if (array_key_exists("LimitMethod",$param) and $param["LimitMethod"] !== null) {
             $this->LimitMethod = $param["LimitMethod"];
+        }
+
+        if (array_key_exists("CelRule",$param) and $param["CelRule"] !== null) {
+            $this->CelRule = $param["CelRule"];
+        }
+
+        if (array_key_exists("LogicalOp",$param) and $param["LogicalOp"] !== null) {
+            $this->LogicalOp = $param["LogicalOp"];
         }
     }
 }

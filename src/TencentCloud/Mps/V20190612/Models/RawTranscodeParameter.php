@@ -44,6 +44,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAudioTemplate(AudioTemplateInfo $AudioTemplate) 设置音频流配置参数，当 RemoveAudio 为 0，该字段必填。
  * @method TEHDConfig getTEHDConfig() 获取极速高清转码参数。
  * @method void setTEHDConfig(TEHDConfig $TEHDConfig) 设置极速高清转码参数。
+ * @method string getStdExtInfo() 获取扩展参数，序列化的 json 字符串。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStdExtInfo(string $StdExtInfo) 设置扩展参数，序列化的 json 字符串。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method EnhanceConfig getEnhanceConfig() 获取音视频增强配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnhanceConfig(EnhanceConfig $EnhanceConfig) 设置音视频增强配置
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RawTranscodeParameter extends AbstractModel
 {
@@ -84,6 +92,18 @@ class RawTranscodeParameter extends AbstractModel
     public $TEHDConfig;
 
     /**
+     * @var string 扩展参数，序列化的 json 字符串。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StdExtInfo;
+
+    /**
+     * @var EnhanceConfig 音视频增强配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnhanceConfig;
+
+    /**
      * @param string $Container 封装格式，可选值：mp4、flv、hls、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。
      * @param integer $RemoveVideo 是否去除视频数据，取值：
 <li>0：保留；</li>
@@ -96,6 +116,10 @@ class RawTranscodeParameter extends AbstractModel
      * @param VideoTemplateInfo $VideoTemplate 视频流配置参数，当 RemoveVideo 为 0，该字段必填。
      * @param AudioTemplateInfo $AudioTemplate 音频流配置参数，当 RemoveAudio 为 0，该字段必填。
      * @param TEHDConfig $TEHDConfig 极速高清转码参数。
+     * @param string $StdExtInfo 扩展参数，序列化的 json 字符串。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param EnhanceConfig $EnhanceConfig 音视频增强配置
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -135,6 +159,15 @@ class RawTranscodeParameter extends AbstractModel
         if (array_key_exists("TEHDConfig",$param) and $param["TEHDConfig"] !== null) {
             $this->TEHDConfig = new TEHDConfig();
             $this->TEHDConfig->deserialize($param["TEHDConfig"]);
+        }
+
+        if (array_key_exists("StdExtInfo",$param) and $param["StdExtInfo"] !== null) {
+            $this->StdExtInfo = $param["StdExtInfo"];
+        }
+
+        if (array_key_exists("EnhanceConfig",$param) and $param["EnhanceConfig"] !== null) {
+            $this->EnhanceConfig = new EnhanceConfig();
+            $this->EnhanceConfig->deserialize($param["EnhanceConfig"]);
         }
     }
 }

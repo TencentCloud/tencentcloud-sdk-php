@@ -22,18 +22,29 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getType() 获取类型
  * @method void setType(integer $Type) 设置类型
- * @method integer getCount() 获取数量,  数量需大于2
- * @method void setCount(integer $Count) 设置数量,  数量需大于2
+ * @method integer getCount() 获取数量,  数量需大于2, 最大1000
+ * @method void setCount(integer $Count) 设置数量,  数量需大于2, 最大1000
  * @method string getSessionId() 获取会话sessionid
  * @method void setSessionId(string $SessionId) 设置会话sessionid
- * @method string getLastRecordId() 获取最后一条记录ID
- * @method void setLastRecordId(string $LastRecordId) 设置最后一条记录ID
  * @method string getBotAppKey() 获取应用AppKey, 当Type=5[API访客]时, 该字段必填  :</br>  获取方式:</br>   1、应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取</br>   2、参考 https://cloud.tencent.com/document/product/1759/109469 第二项
  * @method void setBotAppKey(string $BotAppKey) 设置应用AppKey, 当Type=5[API访客]时, 该字段必填  :</br>  获取方式:</br>   1、应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取</br>   2、参考 https://cloud.tencent.com/document/product/1759/109469 第二项
  * @method integer getScene() 获取场景, 体验: 1; 正式: 2
  * @method void setScene(integer $Scene) 设置场景, 体验: 1; 正式: 2
+ * @method string getLastRecordId() 获取最后一条记录ID， 消息从后往前获取
+
+MidRecordId与LastRecordId只能选择一个
+
+ * @method void setLastRecordId(string $LastRecordId) 设置最后一条记录ID， 消息从后往前获取
+
+MidRecordId与LastRecordId只能选择一个
+
  * @method string getMidRecordId() 获取传该值，代表拉取该记录id的前后总共count条消息记录
+
+MidRecordId与LastRecordId只能选择一个
+
  * @method void setMidRecordId(string $MidRecordId) 设置传该值，代表拉取该记录id的前后总共count条消息记录
+
+MidRecordId与LastRecordId只能选择一个
  */
 class GetMsgRecordRequest extends AbstractModel
 {
@@ -43,7 +54,7 @@ class GetMsgRecordRequest extends AbstractModel
     public $Type;
 
     /**
-     * @var integer 数量,  数量需大于2
+     * @var integer 数量,  数量需大于2, 最大1000
      */
     public $Count;
 
@@ -51,11 +62,6 @@ class GetMsgRecordRequest extends AbstractModel
      * @var string 会话sessionid
      */
     public $SessionId;
-
-    /**
-     * @var string 最后一条记录ID
-     */
-    public $LastRecordId;
 
     /**
      * @var string 应用AppKey, 当Type=5[API访客]时, 该字段必填  :</br>  获取方式:</br>   1、应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取</br>   2、参考 https://cloud.tencent.com/document/product/1759/109469 第二项
@@ -68,18 +74,34 @@ class GetMsgRecordRequest extends AbstractModel
     public $Scene;
 
     /**
+     * @var string 最后一条记录ID， 消息从后往前获取
+
+MidRecordId与LastRecordId只能选择一个
+
+     */
+    public $LastRecordId;
+
+    /**
      * @var string 传该值，代表拉取该记录id的前后总共count条消息记录
+
+MidRecordId与LastRecordId只能选择一个
+
      */
     public $MidRecordId;
 
     /**
      * @param integer $Type 类型
-     * @param integer $Count 数量,  数量需大于2
+     * @param integer $Count 数量,  数量需大于2, 最大1000
      * @param string $SessionId 会话sessionid
-     * @param string $LastRecordId 最后一条记录ID
      * @param string $BotAppKey 应用AppKey, 当Type=5[API访客]时, 该字段必填  :</br>  获取方式:</br>   1、应用发布后在应用页面[发布管理]-[调用信息]-[API管理]处获取</br>   2、参考 https://cloud.tencent.com/document/product/1759/109469 第二项
      * @param integer $Scene 场景, 体验: 1; 正式: 2
+     * @param string $LastRecordId 最后一条记录ID， 消息从后往前获取
+
+MidRecordId与LastRecordId只能选择一个
+
      * @param string $MidRecordId 传该值，代表拉取该记录id的前后总共count条消息记录
+
+MidRecordId与LastRecordId只能选择一个
      */
     function __construct()
     {
@@ -106,16 +128,16 @@ class GetMsgRecordRequest extends AbstractModel
             $this->SessionId = $param["SessionId"];
         }
 
-        if (array_key_exists("LastRecordId",$param) and $param["LastRecordId"] !== null) {
-            $this->LastRecordId = $param["LastRecordId"];
-        }
-
         if (array_key_exists("BotAppKey",$param) and $param["BotAppKey"] !== null) {
             $this->BotAppKey = $param["BotAppKey"];
         }
 
         if (array_key_exists("Scene",$param) and $param["Scene"] !== null) {
             $this->Scene = $param["Scene"];
+        }
+
+        if (array_key_exists("LastRecordId",$param) and $param["LastRecordId"] !== null) {
+            $this->LastRecordId = $param["LastRecordId"];
         }
 
         if (array_key_exists("MidRecordId",$param) and $param["MidRecordId"] !== null) {

@@ -57,7 +57,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getFlowGroupId() 获取合同组签署链接对应的合同组id
  * @method void setFlowGroupId(string $FlowGroupId) 设置合同组签署链接对应的合同组id
  * @method string getSignQrcodeUrl() 获取二维码，在生成动态签署人跳转封面页链接时返回
+
+注：`此二维码下载链接有效期为5分钟，可下载二维码后本地保存。`
  * @method void setSignQrcodeUrl(string $SignQrcodeUrl) 设置二维码，在生成动态签署人跳转封面页链接时返回
+
+注：`此二维码下载链接有效期为5分钟，可下载二维码后本地保存。`
  */
 class SignUrlInfo extends AbstractModel
 {
@@ -134,6 +138,8 @@ class SignUrlInfo extends AbstractModel
 
     /**
      * @var string 二维码，在生成动态签署人跳转封面页链接时返回
+
+注：`此二维码下载链接有效期为5分钟，可下载二维码后本地保存。`
      */
     public $SignQrcodeUrl;
 
@@ -157,6 +163,8 @@ class SignUrlInfo extends AbstractModel
      * @param string $OpenId 企业经办人 用户在渠道的编号
      * @param string $FlowGroupId 合同组签署链接对应的合同组id
      * @param string $SignQrcodeUrl 二维码，在生成动态签署人跳转封面页链接时返回
+
+注：`此二维码下载链接有效期为5分钟，可下载二维码后本地保存。`
      */
     function __construct()
     {

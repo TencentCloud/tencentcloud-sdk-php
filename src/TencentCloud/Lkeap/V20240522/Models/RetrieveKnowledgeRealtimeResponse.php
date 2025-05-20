@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Postgres\V20170312\Models;
+namespace TencentCloud\Lkeap\V20240522\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * InitDBInstances返回参数结构体
+ * RetrieveKnowledgeRealtime返回参数结构体
  *
- * @method array getDBInstanceIdSet() 获取实例ID集合。
- * @method void setDBInstanceIdSet(array $DBInstanceIdSet) 设置实例ID集合。
+ * @method array getRecords() 获取检索结果
+ * @method void setRecords(array $Records) 设置检索结果
+ * @method integer getTotalCount() 获取检索结果数量
+ * @method void setTotalCount(integer $TotalCount) 设置检索结果数量
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class InitDBInstancesResponse extends AbstractModel
+class RetrieveKnowledgeRealtimeResponse extends AbstractModel
 {
     /**
-     * @var array 实例ID集合。
+     * @var array 检索结果
      */
-    public $DBInstanceIdSet;
+    public $Records;
+
+    /**
+     * @var integer 检索结果数量
+     */
+    public $TotalCount;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class InitDBInstancesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $DBInstanceIdSet 实例ID集合。
+     * @param array $Records 检索结果
+     * @param integer $TotalCount 检索结果数量
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +62,17 @@ class InitDBInstancesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DBInstanceIdSet",$param) and $param["DBInstanceIdSet"] !== null) {
-            $this->DBInstanceIdSet = $param["DBInstanceIdSet"];
+        if (array_key_exists("Records",$param) and $param["Records"] !== null) {
+            $this->Records = [];
+            foreach ($param["Records"] as $key => $value){
+                $obj = new RetrievalRecord();
+                $obj->deserialize($value);
+                array_push($this->Records, $obj);
+            }
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

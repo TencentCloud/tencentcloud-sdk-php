@@ -78,6 +78,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBirthCert(BirthCert $BirthCert) 设置出生证明
  * @method TimelineInformation getTimeline() 获取时间轴
  * @method void setTimeline(TimelineInformation $Timeline) 设置时间轴
+ * @method Check getEndoscopyV2() 获取内窥镜报告V2
+ * @method void setEndoscopyV2(Check $EndoscopyV2) 设置内窥镜报告V2
  */
 class Template extends AbstractModel
 {
@@ -227,6 +229,11 @@ class Template extends AbstractModel
     public $Timeline;
 
     /**
+     * @var Check 内窥镜报告V2
+     */
+    public $EndoscopyV2;
+
+    /**
      * @param PatientInfo $PatientInfo 患者信息
      * @param ReportInfo $ReportInfo 报告信息
      * @param Check $Check 检查报告
@@ -256,6 +263,7 @@ class Template extends AbstractModel
      * @param EyeItemsInfo $Eye 眼科报告
      * @param BirthCert $BirthCert 出生证明
      * @param TimelineInformation $Timeline 时间轴
+     * @param Check $EndoscopyV2 内窥镜报告V2
      */
     function __construct()
     {
@@ -409,6 +417,11 @@ class Template extends AbstractModel
         if (array_key_exists("Timeline",$param) and $param["Timeline"] !== null) {
             $this->Timeline = new TimelineInformation();
             $this->Timeline->deserialize($param["Timeline"]);
+        }
+
+        if (array_key_exists("EndoscopyV2",$param) and $param["EndoscopyV2"] !== null) {
+            $this->EndoscopyV2 = new Check();
+            $this->EndoscopyV2->deserialize($param["EndoscopyV2"]);
         }
     }
 }

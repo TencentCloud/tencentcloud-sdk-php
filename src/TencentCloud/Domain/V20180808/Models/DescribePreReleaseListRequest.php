@@ -310,13 +310,11 @@ false：否
 1212:"ABAB"
  * @method array getClassFour() 获取四级分类
 1:"仅含2种数字"
-1:"仅含2种数字"
 2:"仅含3种数字"
 4:"仅含1种字母"
 8:"仅含1种数字"
 
  * @method void setClassFour(array $ClassFour) 设置四级分类
-1:"仅含2种数字"
 1:"仅含2种数字"
 2:"仅含3种数字"
 4:"仅含1种字母"
@@ -340,8 +338,8 @@ FilterWords+FilterStart（true）+FilterEnd（true）：使用域名开头或结
 10: 预释放域名
  * @method void setTransType(integer $TransType) 设置交易类型（目前只支持10）
 10: 预释放域名
- * @method boolean getIsTop() 获取是否搜索白金域名
- * @method void setIsTop(boolean $IsTop) 设置是否搜索白金域名
+ * @method boolean getIsTop() 获取是否搜索白金域名（默认值为false）
+ * @method void setIsTop(boolean $IsTop) 设置是否搜索白金域名（默认值为false）
  * @method string getEndTimeSort() 获取结束时间排序 desc:倒序 asc:正序
  * @method void setEndTimeSort(string $EndTimeSort) 设置结束时间排序 desc:倒序 asc:正序
  * @method string getEndTime() 获取结束时间（YYYY-MM-DD）
@@ -552,7 +550,6 @@ false：否
     /**
      * @var array 四级分类
 1:"仅含2种数字"
-1:"仅含2种数字"
 2:"仅含3种数字"
 4:"仅含1种字母"
 8:"仅含1种数字"
@@ -586,7 +583,7 @@ FilterWords+FilterStart（true）+FilterEnd（true）：使用域名开头或结
     public $TransType;
 
     /**
-     * @var boolean 是否搜索白金域名
+     * @var boolean 是否搜索白金域名（默认值为false）
      */
     public $IsTop;
 
@@ -747,7 +744,6 @@ false：否
 1212:"ABAB"
      * @param array $ClassFour 四级分类
 1:"仅含2种数字"
-1:"仅含2种数字"
 2:"仅含3种数字"
 4:"仅含1种字母"
 8:"仅含1种数字"
@@ -761,7 +757,7 @@ FilterWords+FilterEnd（true）：使用域名结尾排除关键词进行搜索
 FilterWords+FilterStart（true）+FilterEnd（true）：使用域名开头或结尾排除关键词进行搜索
      * @param integer $TransType 交易类型（目前只支持10）
 10: 预释放域名
-     * @param boolean $IsTop 是否搜索白金域名
+     * @param boolean $IsTop 是否搜索白金域名（默认值为false）
      * @param string $EndTimeSort 结束时间排序 desc:倒序 asc:正序
      * @param string $EndTime 结束时间（YYYY-MM-DD）
      */

@@ -27,7 +27,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRecipientId(string $RecipientId) 设置签署方经办人在模板中配置的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。
 
  * @method string getOpenId() 获取指定企业经办签署人OpenId
+
+注: `签署人OpenId未实名时，需要传入签署人姓名以及手机号码。`
  * @method void setOpenId(string $OpenId) 设置指定企业经办签署人OpenId
+
+注: `签署人OpenId未实名时，需要传入签署人姓名以及手机号码。`
  * @method string getApproverName() 获取签署人姓名
  * @method void setApproverName(string $ApproverName) 设置签署人姓名
  * @method string getApproverMobile() 获取签署人手机号码
@@ -83,6 +87,8 @@ class FillApproverInfo extends AbstractModel
 
     /**
      * @var string 指定企业经办签署人OpenId
+
+注: `签署人OpenId未实名时，需要传入签署人姓名以及手机号码。`
      */
     public $OpenId;
 
@@ -144,6 +150,8 @@ class FillApproverInfo extends AbstractModel
      * @param string $RecipientId 签署方经办人在模板中配置的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。
 
      * @param string $OpenId 指定企业经办签署人OpenId
+
+注: `签署人OpenId未实名时，需要传入签署人姓名以及手机号码。`
      * @param string $ApproverName 签署人姓名
      * @param string $ApproverMobile 签署人手机号码
      * @param string $OrganizationName 企业名称

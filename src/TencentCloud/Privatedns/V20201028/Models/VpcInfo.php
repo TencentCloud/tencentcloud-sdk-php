@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Vpc信息
  *
- * @method string getUniqVpcId() 获取VpcId： vpc-xadsafsdasd
- * @method void setUniqVpcId(string $UniqVpcId) 设置VpcId： vpc-xadsafsdasd
+ * @method string getUniqVpcId() 获取VpcId
+ * @method void setUniqVpcId(string $UniqVpcId) 设置VpcId
  * @method string getRegion() 获取Vpc所属地区: ap-guangzhou, ap-shanghai
  * @method void setRegion(string $Region) 设置Vpc所属地区: ap-guangzhou, ap-shanghai
  */
 class VpcInfo extends AbstractModel
 {
     /**
-     * @var string VpcId： vpc-xadsafsdasd
+     * @var string VpcId
      */
     public $UniqVpcId;
 
@@ -38,7 +38,7 @@ class VpcInfo extends AbstractModel
     public $Region;
 
     /**
-     * @param string $UniqVpcId VpcId： vpc-xadsafsdasd
+     * @param string $UniqVpcId VpcId
      * @param string $Region Vpc所属地区: ap-guangzhou, ap-shanghai
      */
     function __construct()

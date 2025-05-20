@@ -52,16 +52,16 @@ use TencentCloud\Common\AbstractModel;
 <li>http：使用 HTTP 协议；</li>
 <li>https：使用 HTTPS 协议；</li>
 <li>follow：协议跟随。</li>
- * @method integer getHTTPOriginPort() 获取HTTP 回源端口，取值范围 1～65535。该参数仅当回源协议 OriginProtocol 为 http 或者 follow 时生效。
- * @method void setHTTPOriginPort(integer $HTTPOriginPort) 设置HTTP 回源端口，取值范围 1～65535。该参数仅当回源协议 OriginProtocol 为 http 或者 follow 时生效。
- * @method integer getHTTPSOriginPort() 获取HTTPS 回源端口，取值范围 1～65535。该参数仅当回源协议 OriginProtocol 为 https 或者 follow 时生效。
- * @method void setHTTPSOriginPort(integer $HTTPSOriginPort) 设置HTTPS 回源端口，取值范围 1～65535。该参数仅当回源协议 OriginProtocol 为 https 或者 follow 时生效。
- * @method string getPrivateAccess() 获取指定是否允许访问私有对象存储源站，该参数仅当源站类型 OriginType = COS 或 AWSS3 时会生效，取值有：
+ * @method integer getHTTPOriginPort() 获取HTTP 回源端口，取值范围 1～65535。当回源协议 OriginProtocol 为 http 或者 follow 时该参数必填。
+ * @method void setHTTPOriginPort(integer $HTTPOriginPort) 设置HTTP 回源端口，取值范围 1～65535。当回源协议 OriginProtocol 为 http 或者 follow 时该参数必填。
+ * @method integer getHTTPSOriginPort() 获取HTTPS 回源端口，取值范围 1～65535。当回源协议 OriginProtocol 为 https 或者 follow 时该参数必填。
+ * @method void setHTTPSOriginPort(integer $HTTPSOriginPort) 设置HTTPS 回源端口，取值范围 1～65535。当回源协议 OriginProtocol 为 https 或者 follow 时该参数必填。
+ * @method string getPrivateAccess() 获取指定是否允许访问私有对象存储源站，当源站类型 OriginType = COS 或 AWSS3 时该参数必填，取值有：
 <li>on：使用私有鉴权；</li>
-<li>off：不使用私有鉴权。</li>不填写时，默认值为off。
- * @method void setPrivateAccess(string $PrivateAccess) 设置指定是否允许访问私有对象存储源站，该参数仅当源站类型 OriginType = COS 或 AWSS3 时会生效，取值有：
+<li>off：不使用私有鉴权。</li>
+ * @method void setPrivateAccess(string $PrivateAccess) 设置指定是否允许访问私有对象存储源站，当源站类型 OriginType = COS 或 AWSS3 时该参数必填，取值有：
 <li>on：使用私有鉴权；</li>
-<li>off：不使用私有鉴权。</li>不填写时，默认值为off。
+<li>off：不使用私有鉴权。</li>
  * @method OriginPrivateParameters getPrivateParameters() 获取私有鉴权使用参数，该参数仅当 OriginType = AWSS3 且 PrivateAccess = on 时会生效。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrivateParameters(OriginPrivateParameters $PrivateParameters) 设置私有鉴权使用参数，该参数仅当 OriginType = AWSS3 且 PrivateAccess = on 时会生效。
@@ -98,19 +98,19 @@ class ModifyOriginParameters extends AbstractModel
     public $OriginProtocol;
 
     /**
-     * @var integer HTTP 回源端口，取值范围 1～65535。该参数仅当回源协议 OriginProtocol 为 http 或者 follow 时生效。
+     * @var integer HTTP 回源端口，取值范围 1～65535。当回源协议 OriginProtocol 为 http 或者 follow 时该参数必填。
      */
     public $HTTPOriginPort;
 
     /**
-     * @var integer HTTPS 回源端口，取值范围 1～65535。该参数仅当回源协议 OriginProtocol 为 https 或者 follow 时生效。
+     * @var integer HTTPS 回源端口，取值范围 1～65535。当回源协议 OriginProtocol 为 https 或者 follow 时该参数必填。
      */
     public $HTTPSOriginPort;
 
     /**
-     * @var string 指定是否允许访问私有对象存储源站，该参数仅当源站类型 OriginType = COS 或 AWSS3 时会生效，取值有：
+     * @var string 指定是否允许访问私有对象存储源站，当源站类型 OriginType = COS 或 AWSS3 时该参数必填，取值有：
 <li>on：使用私有鉴权；</li>
-<li>off：不使用私有鉴权。</li>不填写时，默认值为off。
+<li>off：不使用私有鉴权。</li>
      */
     public $PrivateAccess;
 
@@ -137,11 +137,11 @@ class ModifyOriginParameters extends AbstractModel
 <li>http：使用 HTTP 协议；</li>
 <li>https：使用 HTTPS 协议；</li>
 <li>follow：协议跟随。</li>
-     * @param integer $HTTPOriginPort HTTP 回源端口，取值范围 1～65535。该参数仅当回源协议 OriginProtocol 为 http 或者 follow 时生效。
-     * @param integer $HTTPSOriginPort HTTPS 回源端口，取值范围 1～65535。该参数仅当回源协议 OriginProtocol 为 https 或者 follow 时生效。
-     * @param string $PrivateAccess 指定是否允许访问私有对象存储源站，该参数仅当源站类型 OriginType = COS 或 AWSS3 时会生效，取值有：
+     * @param integer $HTTPOriginPort HTTP 回源端口，取值范围 1～65535。当回源协议 OriginProtocol 为 http 或者 follow 时该参数必填。
+     * @param integer $HTTPSOriginPort HTTPS 回源端口，取值范围 1～65535。当回源协议 OriginProtocol 为 https 或者 follow 时该参数必填。
+     * @param string $PrivateAccess 指定是否允许访问私有对象存储源站，当源站类型 OriginType = COS 或 AWSS3 时该参数必填，取值有：
 <li>on：使用私有鉴权；</li>
-<li>off：不使用私有鉴权。</li>不填写时，默认值为off。
+<li>off：不使用私有鉴权。</li>
      * @param OriginPrivateParameters $PrivateParameters 私有鉴权使用参数，该参数仅当 OriginType = AWSS3 且 PrivateAccess = on 时会生效。
 注意：此字段可能返回 null，表示取不到有效值。
      */

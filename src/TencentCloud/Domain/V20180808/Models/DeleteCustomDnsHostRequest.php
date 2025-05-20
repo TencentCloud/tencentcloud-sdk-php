@@ -21,9 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * DeleteCustomDnsHost请求参数结构体
  *
  * @method string getDomainId() 获取域名实例ID
-可通过DescribeDomainNameList接口获取(https://cloud.tencent.com/document/api/242/48941)
+可通过[DescribeDomainNameList](https://cloud.tencent.com/document/api/242/48941)接口获取
  * @method void setDomainId(string $DomainId) 设置域名实例ID
-可通过DescribeDomainNameList接口获取(https://cloud.tencent.com/document/api/242/48941)
+可通过[DescribeDomainNameList](https://cloud.tencent.com/document/api/242/48941)接口获取
  * @method string getDnsName() 获取DNS名称
 例如：<>.test.com;其中<>就是Dns名称，可以是任意域名允许的格式
  * @method void setDnsName(string $DnsName) 设置DNS名称
@@ -33,7 +33,7 @@ class DeleteCustomDnsHostRequest extends AbstractModel
 {
     /**
      * @var string 域名实例ID
-可通过DescribeDomainNameList接口获取(https://cloud.tencent.com/document/api/242/48941)
+可通过[DescribeDomainNameList](https://cloud.tencent.com/document/api/242/48941)接口获取
      */
     public $DomainId;
 
@@ -45,7 +45,7 @@ class DeleteCustomDnsHostRequest extends AbstractModel
 
     /**
      * @param string $DomainId 域名实例ID
-可通过DescribeDomainNameList接口获取(https://cloud.tencent.com/document/api/242/48941)
+可通过[DescribeDomainNameList](https://cloud.tencent.com/document/api/242/48941)接口获取
      * @param string $DnsName DNS名称
 例如：<>.test.com;其中<>就是Dns名称，可以是任意域名允许的格式
      */

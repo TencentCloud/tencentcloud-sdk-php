@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagList(array $TagList) 设置标签信息列表
  * @method OperationDuration getOperationDuration() 获取可维护时间段
  * @method void setOperationDuration(OperationDuration $OperationDuration) 设置可维护时间段
+ * @method array getMultiZoneInfo() 获取多可用区部署时可用区的详细信息
+ * @method void setMultiZoneInfo(array $MultiZoneInfo) 设置多可用区部署时可用区的详细信息
+ * @method integer getDeployMode() 获取部署模式，0：单可用区、1：多可用区
+ * @method void setDeployMode(integer $DeployMode) 设置部署模式，0：单可用区、1：多可用区
  */
 class CreateLogstashInstanceRequest extends AbstractModel
 {
@@ -150,6 +154,16 @@ class CreateLogstashInstanceRequest extends AbstractModel
     public $OperationDuration;
 
     /**
+     * @var array 多可用区部署时可用区的详细信息
+     */
+    public $MultiZoneInfo;
+
+    /**
+     * @var integer 部署模式，0：单可用区、1：多可用区
+     */
+    public $DeployMode;
+
+    /**
      * @param string $InstanceName 实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）
      * @param string $Zone 可用区
      * @param string $LogstashVersion 实例版本（支持"6.8.13"、"7.10.1"）
@@ -168,6 +182,8 @@ class CreateLogstashInstanceRequest extends AbstractModel
      * @param string $LicenseType License类型<li>oss：开源版</li><li>xpack：xpack版</li>默认值xpack
      * @param array $TagList 标签信息列表
      * @param OperationDuration $OperationDuration 可维护时间段
+     * @param array $MultiZoneInfo 多可用区部署时可用区的详细信息
+     * @param integer $DeployMode 部署模式，0：单可用区、1：多可用区
      */
     function __construct()
     {
@@ -258,6 +274,19 @@ class CreateLogstashInstanceRequest extends AbstractModel
         if (array_key_exists("OperationDuration",$param) and $param["OperationDuration"] !== null) {
             $this->OperationDuration = new OperationDuration();
             $this->OperationDuration->deserialize($param["OperationDuration"]);
+        }
+
+        if (array_key_exists("MultiZoneInfo",$param) and $param["MultiZoneInfo"] !== null) {
+            $this->MultiZoneInfo = [];
+            foreach ($param["MultiZoneInfo"] as $key => $value){
+                $obj = new ZoneDetail();
+                $obj->deserialize($value);
+                array_push($this->MultiZoneInfo, $obj);
+            }
+        }
+
+        if (array_key_exists("DeployMode",$param) and $param["DeployMode"] !== null) {
+            $this->DeployMode = $param["DeployMode"];
         }
     }
 }

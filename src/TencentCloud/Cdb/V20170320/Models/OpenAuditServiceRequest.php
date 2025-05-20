@@ -79,6 +79,7 @@ class OpenAuditServiceRequest extends AbstractModel
 
     /**
      * @var array 审计规则（该参数已废弃，不再生效）。
+     * @deprecated
      */
     public $AuditRuleFilters;
 

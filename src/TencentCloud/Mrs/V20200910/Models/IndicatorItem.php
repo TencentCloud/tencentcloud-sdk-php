@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCoords(Coordinate $Coords) 设置指标项坐标位置
  * @method string getInferNormal() 获取推测结果是否异常
  * @method void setInferNormal(string $InferNormal) 设置推测结果是否异常
+ * @method string getSample() 获取标本
+ * @method void setSample(string $Sample) 设置标本
  */
 class IndicatorItem extends AbstractModel
 {
@@ -115,6 +117,11 @@ class IndicatorItem extends AbstractModel
     public $InferNormal;
 
     /**
+     * @var string 标本
+     */
+    public $Sample;
+
+    /**
      * @param string $Code 英文缩写
      * @param string $Scode 标准缩写
      * @param string $Name 项目名称
@@ -128,6 +135,7 @@ class IndicatorItem extends AbstractModel
      * @param integer $Id 指标项ID
      * @param Coordinate $Coords 指标项坐标位置
      * @param string $InferNormal 推测结果是否异常
+     * @param string $Sample 标本
      */
     function __construct()
     {
@@ -193,6 +201,10 @@ class IndicatorItem extends AbstractModel
 
         if (array_key_exists("InferNormal",$param) and $param["InferNormal"] !== null) {
             $this->InferNormal = $param["InferNormal"];
+        }
+
+        if (array_key_exists("Sample",$param) and $param["Sample"] !== null) {
+            $this->Sample = $param["Sample"];
         }
     }
 }

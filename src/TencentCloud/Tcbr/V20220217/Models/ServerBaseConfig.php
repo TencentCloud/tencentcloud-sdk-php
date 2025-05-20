@@ -67,13 +67,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInternalDomain() 获取内网域名
  * @method void setInternalDomain(string $InternalDomain) 设置内网域名
  * @method string getOperationMode() 获取运行模式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperationMode(string $OperationMode) 设置运行模式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTimerScale() 获取定时扩缩容配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimerScale(array $TimerScale) 设置定时扩缩容配置
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServerBaseConfig extends AbstractModel
 {
@@ -194,13 +190,11 @@ class ServerBaseConfig extends AbstractModel
 
     /**
      * @var string 运行模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OperationMode;
 
     /**
      * @var array 定时扩缩容配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimerScale;
 
@@ -229,9 +223,7 @@ class ServerBaseConfig extends AbstractModel
      * @param string $InternalAccess 内网访问开关 close | open
      * @param string $InternalDomain 内网域名
      * @param string $OperationMode 运行模式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TimerScale 定时扩缩容配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

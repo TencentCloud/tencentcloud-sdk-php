@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateRecordBatch请求参数结构体
  *
- * @method array getDomainIdList() 获取域名ID，多个 domain_id 用英文逗号进行分割。
- * @method void setDomainIdList(array $DomainIdList) 设置域名ID，多个 domain_id 用英文逗号进行分割。
+ * @method array getDomainIdList() 获取域名ID，多个域名ID用英文逗号进行分割。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+ * @method void setDomainIdList(array $DomainIdList) 设置域名ID，多个域名ID用英文逗号进行分割。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
  * @method array getRecordList() 获取记录数组
  * @method void setRecordList(array $RecordList) 设置记录数组
  */
 class CreateRecordBatchRequest extends AbstractModel
 {
     /**
-     * @var array 域名ID，多个 domain_id 用英文逗号进行分割。
+     * @var array 域名ID，多个域名ID用英文逗号进行分割。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
      */
     public $DomainIdList;
 
@@ -38,7 +38,7 @@ class CreateRecordBatchRequest extends AbstractModel
     public $RecordList;
 
     /**
-     * @param array $DomainIdList 域名ID，多个 domain_id 用英文逗号进行分割。
+     * @param array $DomainIdList 域名ID，多个域名ID用英文逗号进行分割。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
      * @param array $RecordList 记录数组
      */
     function __construct()

@@ -90,6 +90,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMemSize(integer $MemSize) 设置内存大小
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDeployMode() 获取部署模式，0：单可用区、1：多可用区
+ * @method void setDeployMode(integer $DeployMode) 设置部署模式，0：单可用区、1：多可用区
+ * @method array getMultiZoneInfo() 获取多可用区部署时可用区的详细信息
+ * @method void setMultiZoneInfo(array $MultiZoneInfo) 设置多可用区部署时可用区的详细信息
  */
 class LogstashInstanceInfo extends AbstractModel
 {
@@ -245,6 +249,16 @@ class LogstashInstanceInfo extends AbstractModel
     public $MemSize;
 
     /**
+     * @var integer 部署模式，0：单可用区、1：多可用区
+     */
+    public $DeployMode;
+
+    /**
+     * @var array 多可用区部署时可用区的详细信息
+     */
+    public $MultiZoneInfo;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param string $Region 地域
@@ -280,6 +294,8 @@ class LogstashInstanceInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MemSize 内存大小
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DeployMode 部署模式，0：单可用区、1：多可用区
+     * @param array $MultiZoneInfo 多可用区部署时可用区的详细信息
      */
     function __construct()
     {
@@ -424,6 +440,19 @@ class LogstashInstanceInfo extends AbstractModel
 
         if (array_key_exists("MemSize",$param) and $param["MemSize"] !== null) {
             $this->MemSize = $param["MemSize"];
+        }
+
+        if (array_key_exists("DeployMode",$param) and $param["DeployMode"] !== null) {
+            $this->DeployMode = $param["DeployMode"];
+        }
+
+        if (array_key_exists("MultiZoneInfo",$param) and $param["MultiZoneInfo"] !== null) {
+            $this->MultiZoneInfo = [];
+            foreach ($param["MultiZoneInfo"] as $key => $value){
+                $obj = new ZoneDetail();
+                $obj->deserialize($value);
+                array_push($this->MultiZoneInfo, $obj);
+            }
         }
     }
 }

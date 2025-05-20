@@ -50,10 +50,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRenewFlag() 获取自动续费标识
  * @method void setRenewFlag(string $RenewFlag) 设置自动续费标识
- * @method string getPayMode() 获取节点计费模式（已弃用）
- * @method void setPayMode(string $PayMode) 设置节点计费模式（已弃用）
+ * @method string getPayMode() 获取节点计费模式
+ * @method void setPayMode(string $PayMode) 设置节点计费模式
  * @method integer getMemory() 获取节点内存容量，单位：`GB`
  * @method void setMemory(integer $Memory) 设置节点内存容量，单位：`GB`
+ * @method Disk getSystemDisk() 获取节点系统盘配置信息
+ * @method void setSystemDisk(Disk $SystemDisk) 设置节点系统盘配置信息
  * @method InternetAccessible getInternetAccessible() 获取公网带宽相关信息设置
  * @method void setInternetAccessible(InternetAccessible $InternetAccessible) 设置公网带宽相关信息设置
  * @method string getInstanceFamily() 获取机型所属机型族
@@ -65,6 +67,22 @@ use TencentCloud\Common\AbstractModel;
  * @method string getExpiredTime() 获取包年包月节点计费过期时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpiredTime(string $ExpiredTime) 设置包年包月节点计费过期时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getWanIp() 获取节点外网 IP
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWanIp(string $WanIp) 设置节点外网 IP
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getKeyIds() 获取节点密钥 ID 列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setKeyIds(array $KeyIds) 设置节点密钥 ID 列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method GPUParams getGPUParams() 获取节点GPU相关配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGPUParams(GPUParams $GPUParams) 设置节点GPU相关配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getDataDisks() 获取数据盘列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDataDisks(array $DataDisks) 设置数据盘列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSecurityGroupIDs() 获取安全组列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -78,6 +96,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOsImage(string $OsImage) 设置OS的名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMachineType() 获取**原生节点的 Machine 类型**
+
+- Native 表示 CXM 类型的原生节点
+- NativeCVM 表示 CVM 类型的原生节点
+ * @method void setMachineType(string $MachineType) 设置**原生节点的 Machine 类型**
+
+- Native 表示 CXM 类型的原生节点
+- NativeCVM 表示 CVM 类型的原生节点
  * @method string getInstanceId() 获取**原生节点对应的实例 ID**
 
 - ins-q47ofw6 表示这个实例是一个 CVM 的实例
@@ -151,7 +177,7 @@ class NativeNodeInfo extends AbstractModel
     public $RenewFlag;
 
     /**
-     * @var string 节点计费模式（已弃用）
+     * @var string 节点计费模式
      */
     public $PayMode;
 
@@ -159,6 +185,11 @@ class NativeNodeInfo extends AbstractModel
      * @var integer 节点内存容量，单位：`GB`
      */
     public $Memory;
+
+    /**
+     * @var Disk 节点系统盘配置信息
+     */
+    public $SystemDisk;
 
     /**
      * @var InternetAccessible 公网带宽相关信息设置
@@ -187,6 +218,30 @@ class NativeNodeInfo extends AbstractModel
     public $ExpiredTime;
 
     /**
+     * @var string 节点外网 IP
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WanIp;
+
+    /**
+     * @var array 节点密钥 ID 列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $KeyIds;
+
+    /**
+     * @var GPUParams 节点GPU相关配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GPUParams;
+
+    /**
+     * @var array 数据盘列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DataDisks;
+
+    /**
      * @var array 安全组列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -207,6 +262,14 @@ class NativeNodeInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OsImage;
+
+    /**
+     * @var string **原生节点的 Machine 类型**
+
+- Native 表示 CXM 类型的原生节点
+- NativeCVM 表示 CVM 类型的原生节点
+     */
+    public $MachineType;
 
     /**
      * @var string **原生节点对应的实例 ID**
@@ -233,13 +296,22 @@ class NativeNodeInfo extends AbstractModel
      * @param integer $GPU GPU核数，单位：核
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RenewFlag 自动续费标识
-     * @param string $PayMode 节点计费模式（已弃用）
+     * @param string $PayMode 节点计费模式
      * @param integer $Memory 节点内存容量，单位：`GB`
+     * @param Disk $SystemDisk 节点系统盘配置信息
      * @param InternetAccessible $InternetAccessible 公网带宽相关信息设置
      * @param string $InstanceFamily 机型所属机型族
      * @param string $LanIp 节点内网 IP
      * @param string $InstanceType 机型
      * @param string $ExpiredTime 包年包月节点计费过期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $WanIp 节点外网 IP
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $KeyIds 节点密钥 ID 列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param GPUParams $GPUParams 节点GPU相关配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $DataDisks 数据盘列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SecurityGroupIDs 安全组列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -247,6 +319,10 @@ class NativeNodeInfo extends AbstractModel
      * @param string $SubnetId 子网唯一 ID
      * @param string $OsImage OS的名称
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MachineType **原生节点的 Machine 类型**
+
+- Native 表示 CXM 类型的原生节点
+- NativeCVM 表示 CVM 类型的原生节点
      * @param string $InstanceId **原生节点对应的实例 ID**
 
 - ins-q47ofw6 表示这个实例是一个 CVM 的实例
@@ -318,6 +394,11 @@ class NativeNodeInfo extends AbstractModel
             $this->Memory = $param["Memory"];
         }
 
+        if (array_key_exists("SystemDisk",$param) and $param["SystemDisk"] !== null) {
+            $this->SystemDisk = new Disk();
+            $this->SystemDisk->deserialize($param["SystemDisk"]);
+        }
+
         if (array_key_exists("InternetAccessible",$param) and $param["InternetAccessible"] !== null) {
             $this->InternetAccessible = new InternetAccessible();
             $this->InternetAccessible->deserialize($param["InternetAccessible"]);
@@ -339,6 +420,28 @@ class NativeNodeInfo extends AbstractModel
             $this->ExpiredTime = $param["ExpiredTime"];
         }
 
+        if (array_key_exists("WanIp",$param) and $param["WanIp"] !== null) {
+            $this->WanIp = $param["WanIp"];
+        }
+
+        if (array_key_exists("KeyIds",$param) and $param["KeyIds"] !== null) {
+            $this->KeyIds = $param["KeyIds"];
+        }
+
+        if (array_key_exists("GPUParams",$param) and $param["GPUParams"] !== null) {
+            $this->GPUParams = new GPUParams();
+            $this->GPUParams->deserialize($param["GPUParams"]);
+        }
+
+        if (array_key_exists("DataDisks",$param) and $param["DataDisks"] !== null) {
+            $this->DataDisks = [];
+            foreach ($param["DataDisks"] as $key => $value){
+                $obj = new DataDisk();
+                $obj->deserialize($value);
+                array_push($this->DataDisks, $obj);
+            }
+        }
+
         if (array_key_exists("SecurityGroupIDs",$param) and $param["SecurityGroupIDs"] !== null) {
             $this->SecurityGroupIDs = $param["SecurityGroupIDs"];
         }
@@ -353,6 +456,10 @@ class NativeNodeInfo extends AbstractModel
 
         if (array_key_exists("OsImage",$param) and $param["OsImage"] !== null) {
             $this->OsImage = $param["OsImage"];
+        }
+
+        if (array_key_exists("MachineType",$param) and $param["MachineType"] !== null) {
+            $this->MachineType = $param["MachineType"];
         }
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {

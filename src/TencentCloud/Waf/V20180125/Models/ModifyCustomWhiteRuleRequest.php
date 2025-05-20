@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setJobType(string $JobType) 设置规则执行的方式，TimedJob为定时执行，CronJob为周期执行
  * @method JobDateTime getJobDateTime() 获取定时任务配置
  * @method void setJobDateTime(JobDateTime $JobDateTime) 设置定时任务配置
+ * @method string getLogicalOp() 获取匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+ * @method void setLogicalOp(string $LogicalOp) 设置匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
  */
 class ModifyCustomWhiteRuleRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class ModifyCustomWhiteRuleRequest extends AbstractModel
     public $JobDateTime;
 
     /**
+     * @var string 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+     */
+    public $LogicalOp;
+
+    /**
      * @param string $Domain 编辑的域名
      * @param integer $RuleId 编辑的规则ID
      * @param string $RuleName 编辑的规则名称
@@ -96,6 +103,7 @@ class ModifyCustomWhiteRuleRequest extends AbstractModel
      * @param array $Strategies 匹配条件数组
      * @param string $JobType 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
      * @param JobDateTime $JobDateTime 定时任务配置
+     * @param string $LogicalOp 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
      */
     function __construct()
     {
@@ -150,6 +158,10 @@ class ModifyCustomWhiteRuleRequest extends AbstractModel
         if (array_key_exists("JobDateTime",$param) and $param["JobDateTime"] !== null) {
             $this->JobDateTime = new JobDateTime();
             $this->JobDateTime->deserialize($param["JobDateTime"]);
+        }
+
+        if (array_key_exists("LogicalOp",$param) and $param["LogicalOp"] !== null) {
+            $this->LogicalOp = $param["LogicalOp"];
         }
     }
 }

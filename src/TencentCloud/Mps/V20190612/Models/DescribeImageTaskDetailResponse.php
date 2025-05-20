@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getImageProcessTaskResultSet() 获取图片处理任务的执行状态与结果。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setImageProcessTaskResultSet(array $ImageProcessTaskResultSet) 设置图片处理任务的执行状态与结果。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取任务的创建时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置任务的创建时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
@@ -69,6 +73,12 @@ class DescribeImageTaskDetailResponse extends AbstractModel
     public $Status;
 
     /**
+     * @var array 图片处理任务的执行状态与结果。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ImageProcessTaskResultSet;
+
+    /**
      * @var string 任务的创建时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -95,6 +105,8 @@ class DescribeImageTaskDetailResponse extends AbstractModel
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ImageProcessTaskResultSet 图片处理任务的执行状态与结果。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 任务的创建时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FinishTime 任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
@@ -120,6 +132,15 @@ class DescribeImageTaskDetailResponse extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("ImageProcessTaskResultSet",$param) and $param["ImageProcessTaskResultSet"] !== null) {
+            $this->ImageProcessTaskResultSet = [];
+            foreach ($param["ImageProcessTaskResultSet"] as $key => $value){
+                $obj = new ImageProcessTaskResult();
+                $obj->deserialize($value);
+                array_push($this->ImageProcessTaskResultSet, $obj);
+            }
         }
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {

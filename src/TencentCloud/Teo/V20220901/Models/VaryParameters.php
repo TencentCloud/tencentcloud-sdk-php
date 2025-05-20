@@ -19,7 +19,6 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * [Vary 特性](https://cloud.tencent.com/document/product/1552/89301) 配置参数。
-该功能灰度中，如需使用，请联系腾讯云客服。
  *
  * @method string getSwitch() 获取Vary 特性配置开关，取值有：
 <li>on：开启；</li>

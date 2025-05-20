@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSuperResolution(SuperResolutionConfig $SuperResolution) 设置超分配置。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ImageDenoiseConfig getDenoise() 获取降噪配置。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDenoise(ImageDenoiseConfig $Denoise) 设置降噪配置。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method ImageQualityEnhanceConfig getImageQualityEnhance() 获取综合增强配置。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageQualityEnhance(ImageQualityEnhanceConfig $ImageQualityEnhance) 设置综合增强配置。
@@ -40,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFaceEnhance(FaceEnhanceConfig $FaceEnhance) 设置人脸增强配置。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method LowLightEnhanceConfig getLowLightEnhance() 获取低光照增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLowLightEnhance(LowLightEnhanceConfig $LowLightEnhance) 设置低光照增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImageEnhanceConfig extends AbstractModel
 {
@@ -48,6 +56,12 @@ class ImageEnhanceConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SuperResolution;
+
+    /**
+     * @var ImageDenoiseConfig 降噪配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Denoise;
 
     /**
      * @var ImageQualityEnhanceConfig 综合增强配置。
@@ -74,7 +88,15 @@ class ImageEnhanceConfig extends AbstractModel
     public $FaceEnhance;
 
     /**
+     * @var LowLightEnhanceConfig 低光照增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LowLightEnhance;
+
+    /**
      * @param SuperResolutionConfig $SuperResolution 超分配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageDenoiseConfig $Denoise 降噪配置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageQualityEnhanceConfig $ImageQualityEnhance 综合增强配置。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -83,6 +105,8 @@ class ImageEnhanceConfig extends AbstractModel
      * @param SharpEnhanceConfig $SharpEnhance 细节增强配置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param FaceEnhanceConfig $FaceEnhance 人脸增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param LowLightEnhanceConfig $LowLightEnhance 低光照增强配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -103,6 +127,11 @@ class ImageEnhanceConfig extends AbstractModel
             $this->SuperResolution->deserialize($param["SuperResolution"]);
         }
 
+        if (array_key_exists("Denoise",$param) and $param["Denoise"] !== null) {
+            $this->Denoise = new ImageDenoiseConfig();
+            $this->Denoise->deserialize($param["Denoise"]);
+        }
+
         if (array_key_exists("ImageQualityEnhance",$param) and $param["ImageQualityEnhance"] !== null) {
             $this->ImageQualityEnhance = new ImageQualityEnhanceConfig();
             $this->ImageQualityEnhance->deserialize($param["ImageQualityEnhance"]);
@@ -121,6 +150,11 @@ class ImageEnhanceConfig extends AbstractModel
         if (array_key_exists("FaceEnhance",$param) and $param["FaceEnhance"] !== null) {
             $this->FaceEnhance = new FaceEnhanceConfig();
             $this->FaceEnhance->deserialize($param["FaceEnhance"]);
+        }
+
+        if (array_key_exists("LowLightEnhance",$param) and $param["LowLightEnhance"] !== null) {
+            $this->LowLightEnhance = new LowLightEnhanceConfig();
+            $this->LowLightEnhance->deserialize($param["LowLightEnhance"]);
         }
     }
 }

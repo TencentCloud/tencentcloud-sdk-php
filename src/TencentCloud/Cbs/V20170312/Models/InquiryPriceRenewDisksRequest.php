@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskIds(array $DiskIds) 设置云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
  * @method array getDiskChargePrepaids() 获取预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月云盘的购买时长。如果在该参数中指定CurInstanceDeadline，则会按对齐到子机到期时间来续费。如果是批量续费询价，该参数与Disks参数一一对应，元素数量需保持一致。
  * @method void setDiskChargePrepaids(array $DiskChargePrepaids) 设置预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月云盘的购买时长。如果在该参数中指定CurInstanceDeadline，则会按对齐到子机到期时间来续费。如果是批量续费询价，该参数与Disks参数一一对应，元素数量需保持一致。
- * @method string getNewDeadline() 获取指定云盘新的到期时间，形式如：2017-12-17 00:00:00。参数`NewDeadline`和`DiskChargePrepaids`是两种指定询价时长的方式，两者必传一个。
- * @method void setNewDeadline(string $NewDeadline) 设置指定云盘新的到期时间，形式如：2017-12-17 00:00:00。参数`NewDeadline`和`DiskChargePrepaids`是两种指定询价时长的方式，两者必传一个。
- * @method integer getProjectId() 获取云盘所属项目ID。 如传入则仅用于鉴权。
- * @method void setProjectId(integer $ProjectId) 设置云盘所属项目ID。 如传入则仅用于鉴权。
+ * @method string getNewDeadline() 获取指定云硬盘新的到期时间，形式如：2017-12-17 00:00:00。参数`NewDeadline`和`DiskChargePrepaids`是两种指定询价时长的方式，两者必传一个。
+ * @method void setNewDeadline(string $NewDeadline) 设置指定云硬盘新的到期时间，形式如：2017-12-17 00:00:00。参数`NewDeadline`和`DiskChargePrepaids`是两种指定询价时长的方式，两者必传一个。
+ * @method integer getProjectId() 获取云硬盘所属项目ID。该参数可以通过调用[DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 projectId 字段来获取。 如传入则仅用于鉴权。
+ * @method void setProjectId(integer $ProjectId) 设置云硬盘所属项目ID。该参数可以通过调用[DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 projectId 字段来获取。 如传入则仅用于鉴权。
  */
 class InquiryPriceRenewDisksRequest extends AbstractModel
 {
@@ -42,20 +42,20 @@ class InquiryPriceRenewDisksRequest extends AbstractModel
     public $DiskChargePrepaids;
 
     /**
-     * @var string 指定云盘新的到期时间，形式如：2017-12-17 00:00:00。参数`NewDeadline`和`DiskChargePrepaids`是两种指定询价时长的方式，两者必传一个。
+     * @var string 指定云硬盘新的到期时间，形式如：2017-12-17 00:00:00。参数`NewDeadline`和`DiskChargePrepaids`是两种指定询价时长的方式，两者必传一个。
      */
     public $NewDeadline;
 
     /**
-     * @var integer 云盘所属项目ID。 如传入则仅用于鉴权。
+     * @var integer 云硬盘所属项目ID。该参数可以通过调用[DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 projectId 字段来获取。 如传入则仅用于鉴权。
      */
     public $ProjectId;
 
     /**
      * @param array $DiskIds 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
      * @param array $DiskChargePrepaids 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月云盘的购买时长。如果在该参数中指定CurInstanceDeadline，则会按对齐到子机到期时间来续费。如果是批量续费询价，该参数与Disks参数一一对应，元素数量需保持一致。
-     * @param string $NewDeadline 指定云盘新的到期时间，形式如：2017-12-17 00:00:00。参数`NewDeadline`和`DiskChargePrepaids`是两种指定询价时长的方式，两者必传一个。
-     * @param integer $ProjectId 云盘所属项目ID。 如传入则仅用于鉴权。
+     * @param string $NewDeadline 指定云硬盘新的到期时间，形式如：2017-12-17 00:00:00。参数`NewDeadline`和`DiskChargePrepaids`是两种指定询价时长的方式，两者必传一个。
+     * @param integer $ProjectId 云硬盘所属项目ID。该参数可以通过调用[DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 projectId 字段来获取。 如传入则仅用于鉴权。
      */
     function __construct()
     {

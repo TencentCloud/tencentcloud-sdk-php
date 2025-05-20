@@ -56,7 +56,7 @@ use TencentCloud\Common\AbstractModel;
 <li>ModifyRequestHeader：修改 HTTP 节点请求头；</li>
 <li>ResponseSpeedLimit：单连接下载限速；</li>
 <li>SetContentIdentifier：设置内容标识符；</li>
-<li>Vary：Vary 特性配置。该功能灰度中，如需使用，请联系腾讯云客服。</li>
+<li>Vary：Vary 特性配置。</li>
  * @method void setName(string $Name) 设置操作名称。名称需要与参数结构体对应，例如 Name=Cache，则 CacheParameters 必填。
 <li>Cache：节点缓存 TTL；</li>
 <li>CacheKey：自定义 Cache Key；</li>
@@ -93,7 +93,7 @@ use TencentCloud\Common\AbstractModel;
 <li>ModifyRequestHeader：修改 HTTP 节点请求头；</li>
 <li>ResponseSpeedLimit：单连接下载限速；</li>
 <li>SetContentIdentifier：设置内容标识符；</li>
-<li>Vary：Vary 特性配置。该功能灰度中，如需使用，请联系腾讯云客服。</li>
+<li>Vary：Vary 特性配置。</li>
  * @method CacheParameters getCacheParameters() 获取节点缓存 TTL 配置参数，当 Name 取值为 Cache 时，该参数必填。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCacheParameters(CacheParameters $CacheParameters) 设置节点缓存 TTL 配置参数，当 Name 取值为 Cache 时，该参数必填。
@@ -233,9 +233,7 @@ use TencentCloud\Common\AbstractModel;
 
 注意：此字段可能返回 null，表示取不到有效值。
  * @method VaryParameters getVaryParameters() 获取Vary 特性配置参数，当 Name 取值为 Vary 时，该参数必填。
-该功能灰度中，如需使用，请联系腾讯云客服。
  * @method void setVaryParameters(VaryParameters $VaryParameters) 设置Vary 特性配置参数，当 Name 取值为 Vary 时，该参数必填。
-该功能灰度中，如需使用，请联系腾讯云客服。
  */
 class RuleEngineAction extends AbstractModel
 {
@@ -276,7 +274,7 @@ class RuleEngineAction extends AbstractModel
 <li>ModifyRequestHeader：修改 HTTP 节点请求头；</li>
 <li>ResponseSpeedLimit：单连接下载限速；</li>
 <li>SetContentIdentifier：设置内容标识符；</li>
-<li>Vary：Vary 特性配置。该功能灰度中，如需使用，请联系腾讯云客服。</li>
+<li>Vary：Vary 特性配置。</li>
      */
     public $Name;
 
@@ -487,7 +485,6 @@ class RuleEngineAction extends AbstractModel
 
     /**
      * @var VaryParameters Vary 特性配置参数，当 Name 取值为 Vary 时，该参数必填。
-该功能灰度中，如需使用，请联系腾讯云客服。
      */
     public $VaryParameters;
 
@@ -528,7 +525,7 @@ class RuleEngineAction extends AbstractModel
 <li>ModifyRequestHeader：修改 HTTP 节点请求头；</li>
 <li>ResponseSpeedLimit：单连接下载限速；</li>
 <li>SetContentIdentifier：设置内容标识符；</li>
-<li>Vary：Vary 特性配置。该功能灰度中，如需使用，请联系腾讯云客服。</li>
+<li>Vary：Vary 特性配置。</li>
      * @param CacheParameters $CacheParameters 节点缓存 TTL 配置参数，当 Name 取值为 Cache 时，该参数必填。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CacheKeyParameters $CacheKeyParameters 自定义 Cache Key 配置参数，当 Name 取值为 CacheKey 时，该参数必填。
@@ -599,7 +596,6 @@ class RuleEngineAction extends AbstractModel
 
 注意：此字段可能返回 null，表示取不到有效值。
      * @param VaryParameters $VaryParameters Vary 特性配置参数，当 Name 取值为 Vary 时，该参数必填。
-该功能灰度中，如需使用，请联系腾讯云客服。
      */
     function __construct()
     {

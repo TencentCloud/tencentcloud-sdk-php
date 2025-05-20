@@ -22,24 +22,24 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
- * @method string getRecordLine() 获取记录线路，通过 API 记录线路获得，中文，比如：默认。
- * @method void setRecordLine(string $RecordLine) 设置记录线路，通过 API 记录线路获得，中文，比如：默认。
+ * @method string getRecordLine() 获取记录线路
+ * @method void setRecordLine(string $RecordLine) 设置记录线路
  * @method string getValue() 获取记录值，如 IP : 200.200.200.200， CNAME : cname.dnspod.com.， MX : mail.dnspod.com.。
  * @method void setValue(string $Value) 设置记录值，如 IP : 200.200.200.200， CNAME : cname.dnspod.com.， MX : mail.dnspod.com.。
  * @method integer getDomainId() 获取域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
  * @method void setDomainId(integer $DomainId) 设置域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
  * @method string getSubDomain() 获取主机记录，如 www，如果不传，默认为 @。
  * @method void setSubDomain(string $SubDomain) 设置主机记录，如 www，如果不传，默认为 @。
- * @method string getRecordLineId() 获取线路的 ID，通过 API 记录线路获得，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
- * @method void setRecordLineId(string $RecordLineId) 设置线路的 ID，通过 API 记录线路获得，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
+ * @method string getRecordLineId() 获取线路的 ID，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
+ * @method void setRecordLineId(string $RecordLineId) 设置线路的 ID，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
  * @method integer getTTL() 获取TTL，范围1-604800，不同套餐域名最小值不同。
  * @method void setTTL(integer $TTL) 设置TTL，范围1-604800，不同套餐域名最小值不同。
  * @method string getStatus() 获取记录初始状态，取值范围为 ENABLE 和 DISABLE 。默认为 ENABLE ，如果传入 DISABLE，解析不会生效，也不会验证负载均衡的限制。
  * @method void setStatus(string $Status) 设置记录初始状态，取值范围为 ENABLE 和 DISABLE 。默认为 ENABLE ，如果传入 DISABLE，解析不会生效，也不会验证负载均衡的限制。
  * @method string getRemark() 获取备注
  * @method void setRemark(string $Remark) 设置备注
- * @method integer getGroupId() 获取记录分组 Id。可以通过接口 DescribeRecordGroupList 接口 GroupId 字段获取。
- * @method void setGroupId(integer $GroupId) 设置记录分组 Id。可以通过接口 DescribeRecordGroupList 接口 GroupId 字段获取。
+ * @method integer getGroupId() 获取记录分组 Id。
+ * @method void setGroupId(integer $GroupId) 设置记录分组 Id。
  */
 class CreateTXTRecordRequest extends AbstractModel
 {
@@ -49,7 +49,7 @@ class CreateTXTRecordRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var string 记录线路，通过 API 记录线路获得，中文，比如：默认。
+     * @var string 记录线路
      */
     public $RecordLine;
 
@@ -69,7 +69,7 @@ class CreateTXTRecordRequest extends AbstractModel
     public $SubDomain;
 
     /**
-     * @var string 线路的 ID，通过 API 记录线路获得，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
+     * @var string 线路的 ID，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
      */
     public $RecordLineId;
 
@@ -89,21 +89,21 @@ class CreateTXTRecordRequest extends AbstractModel
     public $Remark;
 
     /**
-     * @var integer 记录分组 Id。可以通过接口 DescribeRecordGroupList 接口 GroupId 字段获取。
+     * @var integer 记录分组 Id。
      */
     public $GroupId;
 
     /**
      * @param string $Domain 域名
-     * @param string $RecordLine 记录线路，通过 API 记录线路获得，中文，比如：默认。
+     * @param string $RecordLine 记录线路
      * @param string $Value 记录值，如 IP : 200.200.200.200， CNAME : cname.dnspod.com.， MX : mail.dnspod.com.。
      * @param integer $DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
      * @param string $SubDomain 主机记录，如 www，如果不传，默认为 @。
-     * @param string $RecordLineId 线路的 ID，通过 API 记录线路获得，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
+     * @param string $RecordLineId 线路的 ID，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
      * @param integer $TTL TTL，范围1-604800，不同套餐域名最小值不同。
      * @param string $Status 记录初始状态，取值范围为 ENABLE 和 DISABLE 。默认为 ENABLE ，如果传入 DISABLE，解析不会生效，也不会验证负载均衡的限制。
      * @param string $Remark 备注
-     * @param integer $GroupId 记录分组 Id。可以通过接口 DescribeRecordGroupList 接口 GroupId 字段获取。
+     * @param integer $GroupId 记录分组 Id。
      */
     function __construct()
     {

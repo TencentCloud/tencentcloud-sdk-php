@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 定时扩缩容配置
  *
  * @method string getCycleType() 获取循环类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCycleType(string $CycleType) 设置循环类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStartDate() 获取循环起始
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartDate(string $StartDate) 设置循环起始
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndDate() 获取循环结束
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndDate(string $EndDate) 设置循环结束
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStartTime() 获取起始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(string $StartTime) 设置起始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndTime() 获取结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getReplicaNum() 获取副本个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReplicaNum(integer $ReplicaNum) 设置副本个数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TimerScale extends AbstractModel
 {
     /**
      * @var string 循环类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CycleType;
 
     /**
      * @var string 循环起始
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartDate;
 
     /**
      * @var string 循环结束
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndDate;
 
     /**
      * @var string 起始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
      * @var string 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
      * @var integer 副本个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReplicaNum;
 
     /**
      * @param string $CycleType 循环类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StartDate 循环起始
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndDate 循环结束
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StartTime 起始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ReplicaNum 副本个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

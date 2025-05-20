@@ -44,8 +44,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvVars(array $EnvVars) 设置自定义环境变量
  * @method array getAuthentications() 获取授权信息
  * @method void setAuthentications(array $Authentications) 设置授权信息
- * @method string getFailedAction() 获取TaskInstance失败后处理方式，取值包括TERMINATE（默认）、INTERRUPT、FAST_INTERRUPT。
- * @method void setFailedAction(string $FailedAction) 设置TaskInstance失败后处理方式，取值包括TERMINATE（默认）、INTERRUPT、FAST_INTERRUPT。
+ * @method string getFailedAction() 获取TaskInstance失败后处理方式，取值包括
+
+- TERMINATE：销毁计算实例（默认）、
+- INTERRUPT：中断任务，保留计算实例、
+- FAST_INTERRUPT： 快速中断任务， 保留计算实例。
+ * @method void setFailedAction(string $FailedAction) 设置TaskInstance失败后处理方式，取值包括
+
+- TERMINATE：销毁计算实例（默认）、
+- INTERRUPT：中断任务，保留计算实例、
+- FAST_INTERRUPT： 快速中断任务， 保留计算实例。
  * @method integer getMaxRetryCount() 获取任务失败后的最大重试次数，默认为0
  * @method void setMaxRetryCount(integer $MaxRetryCount) 设置任务失败后的最大重试次数，默认为0
  * @method integer getTimeout() 获取任务启动后的超时时间，单位秒，默认为86400秒
@@ -134,7 +142,11 @@ class Task extends AbstractModel
     public $Authentications;
 
     /**
-     * @var string TaskInstance失败后处理方式，取值包括TERMINATE（默认）、INTERRUPT、FAST_INTERRUPT。
+     * @var string TaskInstance失败后处理方式，取值包括
+
+- TERMINATE：销毁计算实例（默认）、
+- INTERRUPT：中断任务，保留计算实例、
+- FAST_INTERRUPT： 快速中断任务， 保留计算实例。
      */
     public $FailedAction;
 
@@ -183,7 +195,11 @@ class Task extends AbstractModel
      * @param array $OutputMappingConfigs 输出映射配置
      * @param array $EnvVars 自定义环境变量
      * @param array $Authentications 授权信息
-     * @param string $FailedAction TaskInstance失败后处理方式，取值包括TERMINATE（默认）、INTERRUPT、FAST_INTERRUPT。
+     * @param string $FailedAction TaskInstance失败后处理方式，取值包括
+
+- TERMINATE：销毁计算实例（默认）、
+- INTERRUPT：中断任务，保留计算实例、
+- FAST_INTERRUPT： 快速中断任务， 保留计算实例。
      * @param integer $MaxRetryCount 任务失败后的最大重试次数，默认为0
      * @param integer $Timeout 任务启动后的超时时间，单位秒，默认为86400秒
      * @param integer $MaxConcurrentNum 任务最大并发数限制，默认没有限制。

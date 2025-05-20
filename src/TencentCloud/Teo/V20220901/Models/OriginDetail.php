@@ -66,6 +66,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrivateParameters(array $PrivateParameters) 设置私有鉴权使用参数，该参数仅当源站类型 PrivateAccess = on 时会生效。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getHostHeader() 获取当前配置的回源 HOST 头。
+ * @method void setHostHeader(string $HostHeader) 设置当前配置的回源 HOST 头。
  * @method integer getVodeoSubAppId() 获取MO 子应用 ID
  * @method void setVodeoSubAppId(integer $VodeoSubAppId) 设置MO 子应用 ID
  * @method string getVodeoDistributionRange() 获取MO 分发范围，取值有： <li>All：全部</li> <li>Bucket：存储桶</li>
@@ -133,6 +135,11 @@ class OriginDetail extends AbstractModel
     public $PrivateParameters;
 
     /**
+     * @var string 当前配置的回源 HOST 头。
+     */
+    public $HostHeader;
+
+    /**
      * @var integer MO 子应用 ID
      * @deprecated
      */
@@ -185,6 +192,7 @@ class OriginDetail extends AbstractModel
 不填写，默认值为 off。
      * @param array $PrivateParameters 私有鉴权使用参数，该参数仅当源站类型 PrivateAccess = on 时会生效。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $HostHeader 当前配置的回源 HOST 头。
      * @param integer $VodeoSubAppId MO 子应用 ID
      * @param string $VodeoDistributionRange MO 分发范围，取值有： <li>All：全部</li> <li>Bucket：存储桶</li>
      * @param string $VodeoBucketId MO 存储桶 ID，分发范围(DistributionRange)为存储桶(Bucket)时必填
@@ -236,6 +244,10 @@ class OriginDetail extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->PrivateParameters, $obj);
             }
+        }
+
+        if (array_key_exists("HostHeader",$param) and $param["HostHeader"] !== null) {
+            $this->HostHeader = $param["HostHeader"];
         }
 
         if (array_key_exists("VodeoSubAppId",$param) and $param["VodeoSubAppId"] !== null) {

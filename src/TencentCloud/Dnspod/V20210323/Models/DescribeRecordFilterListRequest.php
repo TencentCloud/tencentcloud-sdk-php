@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() 获取要获取的解析记录所属的域名。
  * @method void setDomain(string $Domain) 设置要获取的解析记录所属的域名。
- * @method integer getDomainId() 获取要获取的解析记录所属的域名 Id，如果传了 DomainId，系统将会忽略 Domain 参数。 可以通过接口 DescribeDomainList 查到所有的 Domain 以及 DomainId。
- * @method void setDomainId(integer $DomainId) 设置要获取的解析记录所属的域名 Id，如果传了 DomainId，系统将会忽略 Domain 参数。 可以通过接口 DescribeDomainList 查到所有的 Domain 以及 DomainId。
+ * @method integer getDomainId() 获取要获取的解析记录所属的域名 Id，如果传了 DomainId，系统将会忽略 Domain 参数。 
+ * @method void setDomainId(integer $DomainId) 设置要获取的解析记录所属的域名 Id，如果传了 DomainId，系统将会忽略 Domain 参数。 
  * @method string getSubDomain() 获取根据解析记录的主机头获取解析记录。默认模糊匹配。可以通过设置 IsExactSubdomain 参数为 true 进行精确查找。
  * @method void setSubDomain(string $SubDomain) 设置根据解析记录的主机头获取解析记录。默认模糊匹配。可以通过设置 IsExactSubdomain 参数为 true 进行精确查找。
  * @method array getRecordType() 获取获取某些类型的解析记录，如 A，CNAME，NS，AAAA，显性URL，隐性URL，CAA，SPF等。
  * @method void setRecordType(array $RecordType) 设置获取某些类型的解析记录，如 A，CNAME，NS，AAAA，显性URL，隐性URL，CAA，SPF等。
- * @method array getRecordLine() 获取获取某些线路ID的解析记录。可以通过接口 DescribeRecordLineList 查看当前域名允许的线路信息。
- * @method void setRecordLine(array $RecordLine) 设置获取某些线路ID的解析记录。可以通过接口 DescribeRecordLineList 查看当前域名允许的线路信息。
- * @method array getGroupId() 获取获取某些分组下的解析记录时，传这个分组 Id。可以通过接口 DescribeRecordGroupList 接口 GroupId 字段获取。
- * @method void setGroupId(array $GroupId) 设置获取某些分组下的解析记录时，传这个分组 Id。可以通过接口 DescribeRecordGroupList 接口 GroupId 字段获取。
+ * @method array getRecordLine() 获取获取某些线路ID的解析记录。
+ * @method void setRecordLine(array $RecordLine) 设置获取某些线路ID的解析记录。
+ * @method array getGroupId() 获取获取某些分组下的解析记录时，传这个分组 Id。
+ * @method void setGroupId(array $GroupId) 设置获取某些分组下的解析记录时，传这个分组 Id。
  * @method string getKeyword() 获取通过关键字搜索解析记录，当前支持搜索主机头和记录值
  * @method void setKeyword(string $Keyword) 设置通过关键字搜索解析记录，当前支持搜索主机头和记录值
  * @method string getSortField() 获取排序字段，支持 NAME，LINE，TYPE，VALUE，WEIGHT，MX，TTL，UPDATED_ON 几个字段。
@@ -56,8 +56,8 @@ UPDATED_ON：解析记录更新时间
 
  * @method string getSortType() 获取排序方式，升序：ASC，降序：DESC。默认值为ASC。
  * @method void setSortType(string $SortType) 设置排序方式，升序：ASC，降序：DESC。默认值为ASC。
- * @method integer getOffset() 获取偏移量，默认值为0。如果入参携带"Domain","ffset","Limit" 这3个以外的参数，记录结果限制最大3000条
- * @method void setOffset(integer $Offset) 设置偏移量，默认值为0。如果入参携带"Domain","ffset","Limit" 这3个以外的参数，记录结果限制最大3000条
+ * @method integer getOffset() 获取偏移量，默认值为0。如果入参携带"Domain","offset","Limit" 这3个以外的参数，记录结果限制最大3000条
+ * @method void setOffset(integer $Offset) 设置偏移量，默认值为0。如果入参携带"Domain","offset","Limit" 这3个以外的参数，记录结果限制最大3000条
  * @method integer getLimit() 获取限制数量，当前Limit最大支持3000。默认值为100。
  * @method void setLimit(integer $Limit) 设置限制数量，当前Limit最大支持3000。默认值为100。
  * @method string getRecordValue() 获取根据解析记录的值获取解析记录
@@ -99,7 +99,7 @@ class DescribeRecordFilterListRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var integer 要获取的解析记录所属的域名 Id，如果传了 DomainId，系统将会忽略 Domain 参数。 可以通过接口 DescribeDomainList 查到所有的 Domain 以及 DomainId。
+     * @var integer 要获取的解析记录所属的域名 Id，如果传了 DomainId，系统将会忽略 Domain 参数。 
      */
     public $DomainId;
 
@@ -114,12 +114,12 @@ class DescribeRecordFilterListRequest extends AbstractModel
     public $RecordType;
 
     /**
-     * @var array 获取某些线路ID的解析记录。可以通过接口 DescribeRecordLineList 查看当前域名允许的线路信息。
+     * @var array 获取某些线路ID的解析记录。
      */
     public $RecordLine;
 
     /**
-     * @var array 获取某些分组下的解析记录时，传这个分组 Id。可以通过接口 DescribeRecordGroupList 接口 GroupId 字段获取。
+     * @var array 获取某些分组下的解析记录时，传这个分组 Id。
      */
     public $GroupId;
 
@@ -148,7 +148,7 @@ UPDATED_ON：解析记录更新时间
     public $SortType;
 
     /**
-     * @var integer 偏移量，默认值为0。如果入参携带"Domain","ffset","Limit" 这3个以外的参数，记录结果限制最大3000条
+     * @var integer 偏移量，默认值为0。如果入参携带"Domain","offset","Limit" 这3个以外的参数，记录结果限制最大3000条
      */
     public $Offset;
 
@@ -226,11 +226,11 @@ DISABLE：暂停
 
     /**
      * @param string $Domain 要获取的解析记录所属的域名。
-     * @param integer $DomainId 要获取的解析记录所属的域名 Id，如果传了 DomainId，系统将会忽略 Domain 参数。 可以通过接口 DescribeDomainList 查到所有的 Domain 以及 DomainId。
+     * @param integer $DomainId 要获取的解析记录所属的域名 Id，如果传了 DomainId，系统将会忽略 Domain 参数。 
      * @param string $SubDomain 根据解析记录的主机头获取解析记录。默认模糊匹配。可以通过设置 IsExactSubdomain 参数为 true 进行精确查找。
      * @param array $RecordType 获取某些类型的解析记录，如 A，CNAME，NS，AAAA，显性URL，隐性URL，CAA，SPF等。
-     * @param array $RecordLine 获取某些线路ID的解析记录。可以通过接口 DescribeRecordLineList 查看当前域名允许的线路信息。
-     * @param array $GroupId 获取某些分组下的解析记录时，传这个分组 Id。可以通过接口 DescribeRecordGroupList 接口 GroupId 字段获取。
+     * @param array $RecordLine 获取某些线路ID的解析记录。
+     * @param array $GroupId 获取某些分组下的解析记录时，传这个分组 Id。
      * @param string $Keyword 通过关键字搜索解析记录，当前支持搜索主机头和记录值
      * @param string $SortField 排序字段，支持 NAME，LINE，TYPE，VALUE，WEIGHT，MX，TTL，UPDATED_ON 几个字段。
 NAME：解析记录的主机头
@@ -243,7 +243,7 @@ TTL：解析记录缓存时间
 UPDATED_ON：解析记录更新时间
 
      * @param string $SortType 排序方式，升序：ASC，降序：DESC。默认值为ASC。
-     * @param integer $Offset 偏移量，默认值为0。如果入参携带"Domain","ffset","Limit" 这3个以外的参数，记录结果限制最大3000条
+     * @param integer $Offset 偏移量，默认值为0。如果入参携带"Domain","offset","Limit" 这3个以外的参数，记录结果限制最大3000条
      * @param integer $Limit 限制数量，当前Limit最大支持3000。默认值为100。
      * @param string $RecordValue 根据解析记录的值获取解析记录
      * @param array $RecordStatus 根据解析记录的状态获取解析记录。可取值为 ENABLE，DISABLE。

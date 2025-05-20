@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChangeTo(string $ChangeTo) 设置修改为，具体依赖 change 字段，必填参数。
  * @method string getValue() 获取要修改到的记录值，仅当 change 字段为 “record_type” 时为必填参数。
  * @method void setValue(string $Value) 设置要修改到的记录值，仅当 change 字段为 “record_type” 时为必填参数。
- * @method string getMX() 获取MX记录优先级，仅当修改为 MX 记录时为必填参数。
- * @method void setMX(string $MX) 设置MX记录优先级，仅当修改为 MX 记录时为必填参数。
+ * @method string getMX() 获取MX 优先级，当记录类型是 MX、HTTPS、SVCB 时必填，范围1-65535。
+ * @method void setMX(string $MX) 设置MX 优先级，当记录类型是 MX、HTTPS、SVCB 时必填，范围1-65535。
  */
 class ModifyRecordBatchRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class ModifyRecordBatchRequest extends AbstractModel
     public $Value;
 
     /**
-     * @var string MX记录优先级，仅当修改为 MX 记录时为必填参数。
+     * @var string MX 优先级，当记录类型是 MX、HTTPS、SVCB 时必填，范围1-65535。
      */
     public $MX;
 
@@ -63,7 +63,7 @@ class ModifyRecordBatchRequest extends AbstractModel
      * @param string $Change 要修改的字段，可选值为 [“sub_domain”、”record_type”、”area”、”value”、”mx”、”ttl”、”status”] 中的某一个。
      * @param string $ChangeTo 修改为，具体依赖 change 字段，必填参数。
      * @param string $Value 要修改到的记录值，仅当 change 字段为 “record_type” 时为必填参数。
-     * @param string $MX MX记录优先级，仅当修改为 MX 记录时为必填参数。
+     * @param string $MX MX 优先级，当记录类型是 MX、HTTPS、SVCB 时必填，范围1-65535。
      */
     function __construct()
     {

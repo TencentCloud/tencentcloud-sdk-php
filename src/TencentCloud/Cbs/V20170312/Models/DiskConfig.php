@@ -30,10 +30,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceFamily(string $InstanceFamily) 设置实例机型系列。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDiskType() 获取云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘</li><br><li>CLOUD_PREMIUM：表示高性能云硬盘</li><br><li>CLOUD_SSD：SSD表示SSD云硬盘。</li>
- * @method void setDiskType(string $DiskType) 设置云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘</li><br><li>CLOUD_PREMIUM：表示高性能云硬盘</li><br><li>CLOUD_SSD：SSD表示SSD云硬盘。</li>
- * @method integer getStepSize() 获取云盘大小变化的最小步长，单位GB。
- * @method void setStepSize(integer $StepSize) 设置云盘大小变化的最小步长，单位GB。
+ * @method string getDiskType() 获取云盘介质类型。取值范围：<br>
+CLOUD_BASIC：表示普通云硬盘<br>
+CLOUD_PREMIUM：表示高性能云硬盘<br>
+CLOUD_BSSD：表示通用型SSD云硬盘<br>
+CLOUD_SSD：表示SSD云硬盘<br>
+CLOUD_HSSD：表示增强型SSD云硬盘<br>
+CLOUD_TSSD：表示极速型SSD云硬盘。
+ * @method void setDiskType(string $DiskType) 设置云盘介质类型。取值范围：<br>
+CLOUD_BASIC：表示普通云硬盘<br>
+CLOUD_PREMIUM：表示高性能云硬盘<br>
+CLOUD_BSSD：表示通用型SSD云硬盘<br>
+CLOUD_SSD：表示SSD云硬盘<br>
+CLOUD_HSSD：表示增强型SSD云硬盘<br>
+CLOUD_TSSD：表示极速型SSD云硬盘。
+ * @method integer getStepSize() 获取云盘大小变化的最小步长，单位GiB。
+ * @method void setStepSize(integer $StepSize) 设置云盘大小变化的最小步长，单位GiB。
  * @method array getExtraPerformanceRange() 获取额外的性能区间。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtraPerformanceRange(array $ExtraPerformanceRange) 设置额外的性能区间。
@@ -44,10 +56,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDiskUsage() 获取云盘类型。取值范围：<br><li>SYSTEM_DISK：表示系统盘</li><br><li>DATA_DISK：表示数据盘。</li>
  * @method void setDiskUsage(string $DiskUsage) 设置云盘类型。取值范围：<br><li>SYSTEM_DISK：表示系统盘</li><br><li>DATA_DISK：表示数据盘。</li>
- * @method integer getMinDiskSize() 获取最小可配置云盘大小，单位GB。
- * @method void setMinDiskSize(integer $MinDiskSize) 设置最小可配置云盘大小，单位GB。
- * @method integer getMaxDiskSize() 获取最大可配置云盘大小，单位GB。
- * @method void setMaxDiskSize(integer $MaxDiskSize) 设置最大可配置云盘大小，单位GB。
+ * @method integer getMinDiskSize() 获取最小可配置云盘大小，单位GiB。
+ * @method void setMinDiskSize(integer $MinDiskSize) 设置最小可配置云盘大小，单位GiB。
+ * @method integer getMaxDiskSize() 获取最大可配置云盘大小，单位GiB。
+ * @method void setMaxDiskSize(integer $MaxDiskSize) 设置最大可配置云盘大小，单位GiB。
  * @method Price getPrice() 获取描述预付费或后付费云盘的价格。
  * @method void setPrice(Price $Price) 设置描述预付费或后付费云盘的价格。
  */
@@ -75,12 +87,18 @@ class DiskConfig extends AbstractModel
     public $InstanceFamily;
 
     /**
-     * @var string 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘</li><br><li>CLOUD_PREMIUM：表示高性能云硬盘</li><br><li>CLOUD_SSD：SSD表示SSD云硬盘。</li>
+     * @var string 云盘介质类型。取值范围：<br>
+CLOUD_BASIC：表示普通云硬盘<br>
+CLOUD_PREMIUM：表示高性能云硬盘<br>
+CLOUD_BSSD：表示通用型SSD云硬盘<br>
+CLOUD_SSD：表示SSD云硬盘<br>
+CLOUD_HSSD：表示增强型SSD云硬盘<br>
+CLOUD_TSSD：表示极速型SSD云硬盘。
      */
     public $DiskType;
 
     /**
-     * @var integer 云盘大小变化的最小步长，单位GB。
+     * @var integer 云盘大小变化的最小步长，单位GiB。
      */
     public $StepSize;
 
@@ -102,12 +120,12 @@ class DiskConfig extends AbstractModel
     public $DiskUsage;
 
     /**
-     * @var integer 最小可配置云盘大小，单位GB。
+     * @var integer 最小可配置云盘大小，单位GiB。
      */
     public $MinDiskSize;
 
     /**
-     * @var integer 最大可配置云盘大小，单位GB。
+     * @var integer 最大可配置云盘大小，单位GiB。
      */
     public $MaxDiskSize;
 
@@ -122,15 +140,21 @@ class DiskConfig extends AbstractModel
      * @param string $Zone 云硬盘所属的[可用区](/document/product/213/15753#ZoneInfo)。
      * @param string $InstanceFamily 实例机型系列。详见[实例类型](https://cloud.tencent.com/document/product/213/11518)
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DiskType 云盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘</li><br><li>CLOUD_PREMIUM：表示高性能云硬盘</li><br><li>CLOUD_SSD：SSD表示SSD云硬盘。</li>
-     * @param integer $StepSize 云盘大小变化的最小步长，单位GB。
+     * @param string $DiskType 云盘介质类型。取值范围：<br>
+CLOUD_BASIC：表示普通云硬盘<br>
+CLOUD_PREMIUM：表示高性能云硬盘<br>
+CLOUD_BSSD：表示通用型SSD云硬盘<br>
+CLOUD_SSD：表示SSD云硬盘<br>
+CLOUD_HSSD：表示增强型SSD云硬盘<br>
+CLOUD_TSSD：表示极速型SSD云硬盘。
+     * @param integer $StepSize 云盘大小变化的最小步长，单位GiB。
      * @param array $ExtraPerformanceRange 额外的性能区间。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceClass 实例机型。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DiskUsage 云盘类型。取值范围：<br><li>SYSTEM_DISK：表示系统盘</li><br><li>DATA_DISK：表示数据盘。</li>
-     * @param integer $MinDiskSize 最小可配置云盘大小，单位GB。
-     * @param integer $MaxDiskSize 最大可配置云盘大小，单位GB。
+     * @param integer $MinDiskSize 最小可配置云盘大小，单位GiB。
+     * @param integer $MaxDiskSize 最大可配置云盘大小，单位GiB。
      * @param Price $Price 描述预付费或后付费云盘的价格。
      */
     function __construct()

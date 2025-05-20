@@ -24,20 +24,34 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskBackupId(string $DiskBackupId) 设置云硬盘备份点的ID。
  * @method string getDiskId() 获取云硬盘备份点关联的云硬盘ID。
  * @method void setDiskId(string $DiskId) 设置云硬盘备份点关联的云硬盘ID。
- * @method integer getDiskSize() 获取云硬盘大小，单位GB。
- * @method void setDiskSize(integer $DiskSize) 设置云硬盘大小，单位GB。
- * @method string getDiskUsage() 获取云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘<br><li>DATA_DISK：数据盘。
- * @method void setDiskUsage(string $DiskUsage) 设置云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘<br><li>DATA_DISK：数据盘。
+ * @method integer getDiskSize() 获取云硬盘大小，单位GiB。
+ * @method void setDiskSize(integer $DiskSize) 设置云硬盘大小，单位GiB。
+ * @method string getDiskUsage() 获取云硬盘类型。取值范围：<br>
+<li>SYSTEM_DISK：系统盘</li>
+<li>DATA_DISK：数据盘。</li>
+ * @method void setDiskUsage(string $DiskUsage) 设置云硬盘类型。取值范围：<br>
+<li>SYSTEM_DISK：系统盘</li>
+<li>DATA_DISK：数据盘。</li>
  * @method string getDiskBackupName() 获取备份点名称。
  * @method void setDiskBackupName(string $DiskBackupName) 设置备份点名称。
- * @method string getDiskBackupState() 获取云硬盘备份点状态。取值范围：<br><li>NORMAL：正常<br><li>CREATING：创建中<br><li>ROLLBACKING：回滚中
- * @method void setDiskBackupState(string $DiskBackupState) 设置云硬盘备份点状态。取值范围：<br><li>NORMAL：正常<br><li>CREATING：创建中<br><li>ROLLBACKING：回滚中
- * @method integer getPercent() 获取云硬盘创建进度百分比。
- * @method void setPercent(integer $Percent) 设置云硬盘创建进度百分比。
+ * @method string getDiskBackupState() 获取<p>云硬盘备份点状态。取值范围：</p>
+<ul>
+  <li>NORMAL：正常</li>
+  <li>CREATING：创建中</li>
+  <li>ROLLBACKING：回滚中</li>
+</ul>
+ * @method void setDiskBackupState(string $DiskBackupState) 设置<p>云硬盘备份点状态。取值范围：</p>
+<ul>
+  <li>NORMAL：正常</li>
+  <li>CREATING：创建中</li>
+  <li>ROLLBACKING：回滚中</li>
+</ul>
+ * @method integer getPercent() 获取云硬盘备份点创建百分比。
+ * @method void setPercent(integer $Percent) 设置云硬盘备份点创建百分比。
  * @method string getCreateTime() 获取云硬盘备份点的创建时间。
  * @method void setCreateTime(string $CreateTime) 设置云硬盘备份点的创建时间。
- * @method boolean getEncrypt() 获取云盘是否为加密盘。取值范围：<br><li>false:表示非加密盘<br><li>true:表示加密盘。
- * @method void setEncrypt(boolean $Encrypt) 设置云盘是否为加密盘。取值范围：<br><li>false:表示非加密盘<br><li>true:表示加密盘。
+ * @method boolean getEncrypt() 获取云盘是否为加密盘。取值范围：<br><li>false:表示非加密盘<br></li>true:表示加密盘。
+ * @method void setEncrypt(boolean $Encrypt) 设置云盘是否为加密盘。取值范围：<br><li>false:表示非加密盘<br></li>true:表示加密盘。
  */
 class DiskBackup extends AbstractModel
 {
@@ -52,12 +66,14 @@ class DiskBackup extends AbstractModel
     public $DiskId;
 
     /**
-     * @var integer 云硬盘大小，单位GB。
+     * @var integer 云硬盘大小，单位GiB。
      */
     public $DiskSize;
 
     /**
-     * @var string 云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘<br><li>DATA_DISK：数据盘。
+     * @var string 云硬盘类型。取值范围：<br>
+<li>SYSTEM_DISK：系统盘</li>
+<li>DATA_DISK：数据盘。</li>
      */
     public $DiskUsage;
 
@@ -67,12 +83,17 @@ class DiskBackup extends AbstractModel
     public $DiskBackupName;
 
     /**
-     * @var string 云硬盘备份点状态。取值范围：<br><li>NORMAL：正常<br><li>CREATING：创建中<br><li>ROLLBACKING：回滚中
+     * @var string <p>云硬盘备份点状态。取值范围：</p>
+<ul>
+  <li>NORMAL：正常</li>
+  <li>CREATING：创建中</li>
+  <li>ROLLBACKING：回滚中</li>
+</ul>
      */
     public $DiskBackupState;
 
     /**
-     * @var integer 云硬盘创建进度百分比。
+     * @var integer 云硬盘备份点创建百分比。
      */
     public $Percent;
 
@@ -82,20 +103,27 @@ class DiskBackup extends AbstractModel
     public $CreateTime;
 
     /**
-     * @var boolean 云盘是否为加密盘。取值范围：<br><li>false:表示非加密盘<br><li>true:表示加密盘。
+     * @var boolean 云盘是否为加密盘。取值范围：<br><li>false:表示非加密盘<br></li>true:表示加密盘。
      */
     public $Encrypt;
 
     /**
      * @param string $DiskBackupId 云硬盘备份点的ID。
      * @param string $DiskId 云硬盘备份点关联的云硬盘ID。
-     * @param integer $DiskSize 云硬盘大小，单位GB。
-     * @param string $DiskUsage 云硬盘类型。取值范围：<br><li>SYSTEM_DISK：系统盘<br><li>DATA_DISK：数据盘。
+     * @param integer $DiskSize 云硬盘大小，单位GiB。
+     * @param string $DiskUsage 云硬盘类型。取值范围：<br>
+<li>SYSTEM_DISK：系统盘</li>
+<li>DATA_DISK：数据盘。</li>
      * @param string $DiskBackupName 备份点名称。
-     * @param string $DiskBackupState 云硬盘备份点状态。取值范围：<br><li>NORMAL：正常<br><li>CREATING：创建中<br><li>ROLLBACKING：回滚中
-     * @param integer $Percent 云硬盘创建进度百分比。
+     * @param string $DiskBackupState <p>云硬盘备份点状态。取值范围：</p>
+<ul>
+  <li>NORMAL：正常</li>
+  <li>CREATING：创建中</li>
+  <li>ROLLBACKING：回滚中</li>
+</ul>
+     * @param integer $Percent 云硬盘备份点创建百分比。
      * @param string $CreateTime 云硬盘备份点的创建时间。
-     * @param boolean $Encrypt 云盘是否为加密盘。取值范围：<br><li>false:表示非加密盘<br><li>true:表示加密盘。
+     * @param boolean $Encrypt 云盘是否为加密盘。取值范围：<br><li>false:表示非加密盘<br></li>true:表示加密盘。
      */
     function __construct()
     {

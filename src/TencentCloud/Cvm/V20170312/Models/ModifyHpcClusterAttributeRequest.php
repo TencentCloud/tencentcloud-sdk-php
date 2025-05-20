@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyHpcClusterAttribute请求参数结构体
  *
- * @method string getHpcClusterId() 获取高性能计算集群ID。
- * @method void setHpcClusterId(string $HpcClusterId) 设置高性能计算集群ID。
- * @method string getName() 获取高性能计算集群新名称。
- * @method void setName(string $Name) 设置高性能计算集群新名称。
- * @method string getRemark() 获取高性能计算集群新备注。
- * @method void setRemark(string $Remark) 设置高性能计算集群新备注。
+ * @method string getHpcClusterId() 获取高性能计算集群ID。集群ID可通过 [查询高性能集群信息](https://cloud.tencent.com/document/api/213/83220) 接口获取。
+ * @method void setHpcClusterId(string $HpcClusterId) 设置高性能计算集群ID。集群ID可通过 [查询高性能集群信息](https://cloud.tencent.com/document/api/213/83220) 接口获取。
+ * @method string getName() 获取高性能计算集群新名称，长度限制[1-60]。
+ * @method void setName(string $Name) 设置高性能计算集群新名称，长度限制[1-60]。
+ * @method string getRemark() 获取高性能计算集群新备注，长度[1-256]。
+ * @method void setRemark(string $Remark) 设置高性能计算集群新备注，长度[1-256]。
  */
 class ModifyHpcClusterAttributeRequest extends AbstractModel
 {
     /**
-     * @var string 高性能计算集群ID。
+     * @var string 高性能计算集群ID。集群ID可通过 [查询高性能集群信息](https://cloud.tencent.com/document/api/213/83220) 接口获取。
      */
     public $HpcClusterId;
 
     /**
-     * @var string 高性能计算集群新名称。
+     * @var string 高性能计算集群新名称，长度限制[1-60]。
      */
     public $Name;
 
     /**
-     * @var string 高性能计算集群新备注。
+     * @var string 高性能计算集群新备注，长度[1-256]。
      */
     public $Remark;
 
     /**
-     * @param string $HpcClusterId 高性能计算集群ID。
-     * @param string $Name 高性能计算集群新名称。
-     * @param string $Remark 高性能计算集群新备注。
+     * @param string $HpcClusterId 高性能计算集群ID。集群ID可通过 [查询高性能集群信息](https://cloud.tencent.com/document/api/213/83220) 接口获取。
+     * @param string $Name 高性能计算集群新名称，长度限制[1-60]。
+     * @param string $Remark 高性能计算集群新备注，长度[1-256]。
      */
     function __construct()
     {

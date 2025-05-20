@@ -22,20 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
- * @method string getRecordType() 获取记录类型，通过 API 记录类型获得，大写英文，比如：A 。
- * @method void setRecordType(string $RecordType) 设置记录类型，通过 API 记录类型获得，大写英文，比如：A 。
- * @method string getRecordLine() 获取记录线路，通过 API 记录线路获得，中文，比如：默认。
- * @method void setRecordLine(string $RecordLine) 设置记录线路，通过 API 记录线路获得，中文，比如：默认。
+ * @method string getRecordType() 获取记录类型，可通过接口DescribeRecordType获得，大写英文，比如：A 。
+ * @method void setRecordType(string $RecordType) 设置记录类型，可通过接口DescribeRecordType获得，大写英文，比如：A 。
+ * @method string getRecordLine() 获取记录线路，可以通过接口DescribeRecordLineList查看当前域名允许的线路信息，中文，比如：默认。
+ * @method void setRecordLine(string $RecordLine) 设置记录线路，可以通过接口DescribeRecordLineList查看当前域名允许的线路信息，中文，比如：默认。
  * @method string getValue() 获取记录值，如 IP : 200.200.200.200， CNAME : cname.dnspod.com.， MX : mail.dnspod.com.。
  * @method void setValue(string $Value) 设置记录值，如 IP : 200.200.200.200， CNAME : cname.dnspod.com.， MX : mail.dnspod.com.。
  * @method integer getDomainId() 获取域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
  * @method void setDomainId(integer $DomainId) 设置域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
  * @method string getSubDomain() 获取主机记录，如 www，如果不传，默认为 @。
  * @method void setSubDomain(string $SubDomain) 设置主机记录，如 www，如果不传，默认为 @。
- * @method string getRecordLineId() 获取线路的 ID，通过 API 记录线路获得，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
- * @method void setRecordLineId(string $RecordLineId) 设置线路的 ID，通过 API 记录线路获得，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
- * @method integer getMX() 获取MX 优先级，当记录类型是 MX 时有效，范围1-20，MX 记录时必选。
- * @method void setMX(integer $MX) 设置MX 优先级，当记录类型是 MX 时有效，范围1-20，MX 记录时必选。
+ * @method string getRecordLineId() 获取线路的 ID，可以通过接口DescribeRecordLineList查看当前域名允许的线路信息，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
+ * @method void setRecordLineId(string $RecordLineId) 设置线路的 ID，可以通过接口DescribeRecordLineList查看当前域名允许的线路信息，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
+ * @method integer getMX() 获取MX 优先级，当记录类型是 MX、HTTPS、SVCB 时必填，范围1-65535。
+ * @method void setMX(integer $MX) 设置MX 优先级，当记录类型是 MX、HTTPS、SVCB 时必填，范围1-65535。
  * @method integer getTTL() 获取TTL，范围1-604800，不同套餐域名最小值不同。
  * @method void setTTL(integer $TTL) 设置TTL，范围1-604800，不同套餐域名最小值不同。
  * @method integer getWeight() 获取权重信息，0到100的整数。0 表示关闭，不传该参数，表示不设置权重信息。
@@ -57,12 +57,12 @@ class CreateRecordRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var string 记录类型，通过 API 记录类型获得，大写英文，比如：A 。
+     * @var string 记录类型，可通过接口DescribeRecordType获得，大写英文，比如：A 。
      */
     public $RecordType;
 
     /**
-     * @var string 记录线路，通过 API 记录线路获得，中文，比如：默认。
+     * @var string 记录线路，可以通过接口DescribeRecordLineList查看当前域名允许的线路信息，中文，比如：默认。
      */
     public $RecordLine;
 
@@ -82,12 +82,12 @@ class CreateRecordRequest extends AbstractModel
     public $SubDomain;
 
     /**
-     * @var string 线路的 ID，通过 API 记录线路获得，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
+     * @var string 线路的 ID，可以通过接口DescribeRecordLineList查看当前域名允许的线路信息，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
      */
     public $RecordLineId;
 
     /**
-     * @var integer MX 优先级，当记录类型是 MX 时有效，范围1-20，MX 记录时必选。
+     * @var integer MX 优先级，当记录类型是 MX、HTTPS、SVCB 时必填，范围1-65535。
      */
     public $MX;
 
@@ -123,13 +123,13 @@ class CreateRecordRequest extends AbstractModel
 
     /**
      * @param string $Domain 域名
-     * @param string $RecordType 记录类型，通过 API 记录类型获得，大写英文，比如：A 。
-     * @param string $RecordLine 记录线路，通过 API 记录线路获得，中文，比如：默认。
+     * @param string $RecordType 记录类型，可通过接口DescribeRecordType获得，大写英文，比如：A 。
+     * @param string $RecordLine 记录线路，可以通过接口DescribeRecordLineList查看当前域名允许的线路信息，中文，比如：默认。
      * @param string $Value 记录值，如 IP : 200.200.200.200， CNAME : cname.dnspod.com.， MX : mail.dnspod.com.。
      * @param integer $DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
      * @param string $SubDomain 主机记录，如 www，如果不传，默认为 @。
-     * @param string $RecordLineId 线路的 ID，通过 API 记录线路获得，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
-     * @param integer $MX MX 优先级，当记录类型是 MX 时有效，范围1-20，MX 记录时必选。
+     * @param string $RecordLineId 线路的 ID，可以通过接口DescribeRecordLineList查看当前域名允许的线路信息，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
+     * @param integer $MX MX 优先级，当记录类型是 MX、HTTPS、SVCB 时必填，范围1-65535。
      * @param integer $TTL TTL，范围1-604800，不同套餐域名最小值不同。
      * @param integer $Weight 权重信息，0到100的整数。0 表示关闭，不传该参数，表示不设置权重信息。
      * @param string $Status 记录初始状态，取值范围为 ENABLE 和 DISABLE 。默认为 ENABLE ，如果传入 DISABLE，解析不会生效，也不会验证负载均衡的限制。

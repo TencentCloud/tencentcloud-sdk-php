@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTextTypeListBlocks(array $TextTypeListBlocks) 设置文本类型列表
  * @method PhysicalExaminationV1 getPhysicalExamination() 获取体检报告信息
  * @method void setPhysicalExamination(PhysicalExaminationV1 $PhysicalExamination) 设置体检报告信息
+ * @method array getEndoscopyV2() 获取内窥镜报告V2
+ * @method void setEndoscopyV2(array $EndoscopyV2) 设置内窥镜报告V2
  */
 class Block extends AbstractModel
 {
@@ -199,6 +201,11 @@ class Block extends AbstractModel
     public $PhysicalExamination;
 
     /**
+     * @var array 内窥镜报告V2
+     */
+    public $EndoscopyV2;
+
+    /**
      * @param array $Check 诊断信息
      * @param array $Pathology 病理报告
      * @param array $MedDoc 医学资料
@@ -224,6 +231,7 @@ class Block extends AbstractModel
      * @param array $BirthCert 出生证明结构化信息
      * @param array $TextTypeListBlocks 文本类型列表
      * @param PhysicalExaminationV1 $PhysicalExamination 体检报告信息
+     * @param array $EndoscopyV2 内窥镜报告V2
      */
     function __construct()
     {
@@ -457,6 +465,15 @@ class Block extends AbstractModel
         if (array_key_exists("PhysicalExamination",$param) and $param["PhysicalExamination"] !== null) {
             $this->PhysicalExamination = new PhysicalExaminationV1();
             $this->PhysicalExamination->deserialize($param["PhysicalExamination"]);
+        }
+
+        if (array_key_exists("EndoscopyV2",$param) and $param["EndoscopyV2"] !== null) {
+            $this->EndoscopyV2 = [];
+            foreach ($param["EndoscopyV2"] as $key => $value){
+                $obj = new Check();
+                $obj->deserialize($value);
+                array_push($this->EndoscopyV2, $obj);
+            }
         }
     }
 }

@@ -24,14 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) 设置域名
  * @method integer getRecordId() 获取记录ID。 可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId
  * @method void setRecordId(integer $RecordId) 设置记录ID。 可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId
- * @method string getRecordLine() 获取记录线路，通过 API 记录线路获得，中文，比如：默认。
- * @method void setRecordLine(string $RecordLine) 设置记录线路，通过 API 记录线路获得，中文，比如：默认。
- * @method integer getDomainId() 获取域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
- * @method void setDomainId(integer $DomainId) 设置域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+ * @method string getRecordLine() 获取记录线路，中文，比如：默认。
+ * @method void setRecordLine(string $RecordLine) 设置记录线路，中文，比如：默认。
+ * @method integer getDomainId() 获取域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
+ * @method void setDomainId(integer $DomainId) 设置域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
  * @method string getSubDomain() 获取主机记录，如 www，如果不传，默认为 @。
  * @method void setSubDomain(string $SubDomain) 设置主机记录，如 www，如果不传，默认为 @。
- * @method string getRecordLineId() 获取线路的 ID，通过 API 记录线路获得，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
- * @method void setRecordLineId(string $RecordLineId) 设置线路的 ID，通过 API 记录线路获得，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
+ * @method string getRecordLineId() 获取线路的 ID，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
+ * @method void setRecordLineId(string $RecordLineId) 设置线路的 ID，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
  * @method string getValue() 获取IP 地址，支持 IPv4、IPv6，例如 119.29.29.29 或者 2402:4e00::
  * @method void setValue(string $Value) 设置IP 地址，支持 IPv4、IPv6，例如 119.29.29.29 或者 2402:4e00::
  * @method integer getTtl() 获取TTL值，如果不传，默认为域名的TTL值。
@@ -50,12 +50,12 @@ class ModifyDynamicDNSRequest extends AbstractModel
     public $RecordId;
 
     /**
-     * @var string 记录线路，通过 API 记录线路获得，中文，比如：默认。
+     * @var string 记录线路，中文，比如：默认。
      */
     public $RecordLine;
 
     /**
-     * @var integer 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+     * @var integer 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
      */
     public $DomainId;
 
@@ -65,7 +65,7 @@ class ModifyDynamicDNSRequest extends AbstractModel
     public $SubDomain;
 
     /**
-     * @var string 线路的 ID，通过 API 记录线路获得，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
+     * @var string 线路的 ID，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
      */
     public $RecordLineId;
 
@@ -82,10 +82,10 @@ class ModifyDynamicDNSRequest extends AbstractModel
     /**
      * @param string $Domain 域名
      * @param integer $RecordId 记录ID。 可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId
-     * @param string $RecordLine 记录线路，通过 API 记录线路获得，中文，比如：默认。
-     * @param integer $DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+     * @param string $RecordLine 记录线路，中文，比如：默认。
+     * @param integer $DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
      * @param string $SubDomain 主机记录，如 www，如果不传，默认为 @。
-     * @param string $RecordLineId 线路的 ID，通过 API 记录线路获得，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
+     * @param string $RecordLineId 线路的 ID，英文字符串，比如：10=1。参数RecordLineId优先级高于RecordLine，如果同时传递二者，优先使用RecordLineId参数。
      * @param string $Value IP 地址，支持 IPv4、IPv6，例如 119.29.29.29 或者 2402:4e00::
      * @param integer $Ttl TTL值，如果不传，默认为域名的TTL值。
      */

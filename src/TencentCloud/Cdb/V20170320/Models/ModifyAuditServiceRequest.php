@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHighLogExpireDay(integer $HighLogExpireDay) 设置高频日志保留时长。
  * @method boolean getAuditAll() 获取修改实例审计规则为全审计。
  * @method void setAuditAll(boolean $AuditAll) 设置修改实例审计规则为全审计。
- * @method array getAuditRuleFilters() 获取审计规则。
- * @method void setAuditRuleFilters(array $AuditRuleFilters) 设置审计规则。
+ * @method array getAuditRuleFilters() 获取废弃。
+ * @method void setAuditRuleFilters(array $AuditRuleFilters) 设置废弃。
  * @method array getRuleTemplateIds() 获取规则模板ID。
  * @method void setRuleTemplateIds(array $RuleTemplateIds) 设置规则模板ID。
  */
@@ -56,7 +56,8 @@ class ModifyAuditServiceRequest extends AbstractModel
     public $AuditAll;
 
     /**
-     * @var array 审计规则。
+     * @var array 废弃。
+     * @deprecated
      */
     public $AuditRuleFilters;
 
@@ -70,7 +71,7 @@ class ModifyAuditServiceRequest extends AbstractModel
      * @param integer $LogExpireDay 日志保留时长。
      * @param integer $HighLogExpireDay 高频日志保留时长。
      * @param boolean $AuditAll 修改实例审计规则为全审计。
-     * @param array $AuditRuleFilters 审计规则。
+     * @param array $AuditRuleFilters 废弃。
      * @param array $RuleTemplateIds 规则模板ID。
      */
     function __construct()

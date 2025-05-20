@@ -23,7 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Hai\V20230812\Models as Models;
 
 /**
- * @method Models\CreateApplicationResponse CreateApplication(Models\CreateApplicationRequest $req) 本接口（CreateApplicaiton）用于对HAI实例制作自定义应用。
+ * @method Models\CreateApplicationResponse CreateApplication(Models\CreateApplicationRequest $req) 本接口（CreateApplication）用于对HAI实例制作自定义应用。
  * @method Models\CreateMuskPromptResponse CreateMuskPrompt(Models\CreateMuskPromptRequest $req) 创建musk prompt 任务
  * @method Models\DescribeApplicationsResponse DescribeApplications(Models\DescribeApplicationsRequest $req) 本接口（DescribeApplications）用于查询应用
  * @method Models\DescribeInstanceNetworkStatusResponse DescribeInstanceNetworkStatus(Models\DescribeInstanceNetworkStatusRequest $req) 本接口（DescribeInstanceNetworkStatus）用于查询实例的网络配置及消耗情况

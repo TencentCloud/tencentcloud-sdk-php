@@ -34,10 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRollbackStrategy(string $RollbackStrategy) 设置回档方式
  * @method string getSnapshotTime() 获取快照时间
  * @method void setSnapshotTime(string $SnapshotTime) 设置快照时间
- * @method integer getMinCpu() 获取回档到serverlessls集群时最小CPU
- * @method void setMinCpu(integer $MinCpu) 设置回档到serverlessls集群时最小CPU
- * @method integer getMaxCpu() 获取回档到serverlessls集群时最大CPU
- * @method void setMaxCpu(integer $MaxCpu) 设置回档到serverlessls集群时最大CPU
+ * @method integer getMinCpu() 获取回档到 Serverless 集群时最小 CPU
+ * @method void setMinCpu(integer $MinCpu) 设置回档到 Serverless 集群时最小 CPU
+ * @method integer getMaxCpu() 获取回档到 Serverless 集群时最大 CPU
+ * @method void setMaxCpu(integer $MaxCpu) 设置回档到 Serverless 集群时最大 CPU
  * @method integer getSnapShotId() 获取快照ID
  * @method void setSnapShotId(integer $SnapShotId) 设置快照ID
  * @method array getRollbackDatabases() 获取回档数据库
@@ -91,12 +91,12 @@ class RollbackData extends AbstractModel
     public $SnapshotTime;
 
     /**
-     * @var integer 回档到serverlessls集群时最小CPU
+     * @var integer 回档到 Serverless 集群时最小 CPU
      */
     public $MinCpu;
 
     /**
-     * @var integer 回档到serverlessls集群时最大CPU
+     * @var integer 回档到 Serverless 集群时最大 CPU
      */
     public $MaxCpu;
 
@@ -135,8 +135,8 @@ class RollbackData extends AbstractModel
      * @param string $OriginalClusterName 原集群名
      * @param string $RollbackStrategy 回档方式
      * @param string $SnapshotTime 快照时间
-     * @param integer $MinCpu 回档到serverlessls集群时最小CPU
-     * @param integer $MaxCpu 回档到serverlessls集群时最大CPU
+     * @param integer $MinCpu 回档到 Serverless 集群时最小 CPU
+     * @param integer $MaxCpu 回档到 Serverless 集群时最大 CPU
      * @param integer $SnapShotId 快照ID
      * @param array $RollbackDatabases 回档数据库
 注意：此字段可能返回 null，表示取不到有效值。

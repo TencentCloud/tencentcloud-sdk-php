@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 创建资源实例时同时绑定的标签对说明
  *
- * @method string getResourceType() 获取标签绑定的资源类型，云服务器为“instance”，专用宿主机为“host”，镜像为“image”，密钥为“keypair”
- * @method void setResourceType(string $ResourceType) 设置标签绑定的资源类型，云服务器为“instance”，专用宿主机为“host”，镜像为“image”，密钥为“keypair”
+ * @method string getResourceType() 获取标签绑定的资源类型，云服务器为“instance”，专用宿主机为“host”，镜像为“image”，密钥为“keypair”，置放群组为“ps”，高性能计算集群为“hpc”。
+ * @method void setResourceType(string $ResourceType) 设置标签绑定的资源类型，云服务器为“instance”，专用宿主机为“host”，镜像为“image”，密钥为“keypair”，置放群组为“ps”，高性能计算集群为“hpc”。
  * @method array getTags() 获取标签对列表
  * @method void setTags(array $Tags) 设置标签对列表
  */
 class TagSpecification extends AbstractModel
 {
     /**
-     * @var string 标签绑定的资源类型，云服务器为“instance”，专用宿主机为“host”，镜像为“image”，密钥为“keypair”
+     * @var string 标签绑定的资源类型，云服务器为“instance”，专用宿主机为“host”，镜像为“image”，密钥为“keypair”，置放群组为“ps”，高性能计算集群为“hpc”。
      */
     public $ResourceType;
 
@@ -38,7 +38,7 @@ class TagSpecification extends AbstractModel
     public $Tags;
 
     /**
-     * @param string $ResourceType 标签绑定的资源类型，云服务器为“instance”，专用宿主机为“host”，镜像为“image”，密钥为“keypair”
+     * @param string $ResourceType 标签绑定的资源类型，云服务器为“instance”，专用宿主机为“host”，镜像为“image”，密钥为“keypair”，置放群组为“ps”，高性能计算集群为“hpc”。
      * @param array $Tags 标签对列表
      */
     function __construct()

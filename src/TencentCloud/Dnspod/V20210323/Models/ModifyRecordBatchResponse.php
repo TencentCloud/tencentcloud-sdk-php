@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getJobId() 获取批量任务ID
  * @method void setJobId(integer $JobId) 设置批量任务ID
- * @method array getDetailList() 获取见modifyRecordBatchDetail
- * @method void setDetailList(array $DetailList) 设置见modifyRecordBatchDetail
+ * @method array getDetailList() 获取见ModifyRecordBatchDetail
+ * @method void setDetailList(array $DetailList) 设置见ModifyRecordBatchDetail
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,7 +35,7 @@ class ModifyRecordBatchResponse extends AbstractModel
     public $JobId;
 
     /**
-     * @var array 见modifyRecordBatchDetail
+     * @var array 见ModifyRecordBatchDetail
      */
     public $DetailList;
 
@@ -46,7 +46,7 @@ class ModifyRecordBatchResponse extends AbstractModel
 
     /**
      * @param integer $JobId 批量任务ID
-     * @param array $DetailList 见modifyRecordBatchDetail
+     * @param array $DetailList 见ModifyRecordBatchDetail
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

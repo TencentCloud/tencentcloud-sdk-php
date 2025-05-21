@@ -129,7 +129,8 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
  * @method Models\ModifyKafkaConsumerResponse ModifyKafkaConsumer(Models\ModifyKafkaConsumerRequest $req) 修改Kafka协议消费信息
  * @method Models\ModifyKafkaRechargeResponse ModifyKafkaRecharge(Models\ModifyKafkaRechargeRequest $req) 本接口用于修改Kafka数据订阅任务
  * @method Models\ModifyLogsetResponse ModifyLogset(Models\ModifyLogsetRequest $req) 本接口用于修改日志集信息
- * @method Models\ModifyMachineGroupResponse ModifyMachineGroup(Models\ModifyMachineGroupRequest $req) 修改机器组
+ * @method Models\ModifyMachineGroupResponse ModifyMachineGroup(Models\ModifyMachineGroupRequest $req) 修改机器组。
+注意：修改接口直接覆盖历史数据，改为本次合法入参数据，请谨慎调用此接口。
  * @method Models\ModifyNoticeContentResponse ModifyNoticeContent(Models\ModifyNoticeContentRequest $req) 该接口用于修改通知内容配置
  * @method Models\ModifyScheduledSqlResponse ModifyScheduledSql(Models\ModifyScheduledSqlRequest $req) 本接口用于修改定时SQL分析任务
  * @method Models\ModifyShipperResponse ModifyShipper(Models\ModifyShipperRequest $req) 修改现有的投递规则，客户如果使用此接口，需要自行处理CLS对指定bucket的写权限。

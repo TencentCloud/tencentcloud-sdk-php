@@ -37,17 +37,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getGeneralRuleSetEnable() 获取通用规则集开关，0 关闭，1 启用
  * @method void setGeneralRuleSetEnable(integer $GeneralRuleSetEnable) 设置通用规则集开关，0 关闭，1 启用
  * @method ScanTaskResult getResult() 获取任务最新的一次执行结果信息，该字段用于查询任务列表接口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResult(ScanTaskResult $Result) 设置任务最新的一次执行结果信息，该字段用于查询任务列表接口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTimingStartTime() 获取定时开始时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimingStartTime(string $TimingStartTime) 设置定时开始时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getComplianceUpdate() 获取关联模板是否更新
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComplianceUpdate(boolean $ComplianceUpdate) 设置关联模板是否更新
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DspaDiscoveryTask extends AbstractModel
 {
@@ -93,7 +89,6 @@ class DspaDiscoveryTask extends AbstractModel
 
     /**
      * @var ScanTaskResult 任务最新的一次执行结果信息，该字段用于查询任务列表接口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Result;
 
@@ -105,7 +100,6 @@ class DspaDiscoveryTask extends AbstractModel
 
     /**
      * @var boolean 关联模板是否更新
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComplianceUpdate;
 
@@ -119,11 +113,9 @@ class DspaDiscoveryTask extends AbstractModel
      * @param DspaDiscoveryTaskDataSource $DataSourceInfo 元数据对象信息
      * @param integer $GeneralRuleSetEnable 通用规则集开关，0 关闭，1 启用
      * @param ScanTaskResult $Result 任务最新的一次执行结果信息，该字段用于查询任务列表接口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TimingStartTime 定时开始时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $ComplianceUpdate 关联模板是否更新
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

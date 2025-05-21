@@ -14,31 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dsgc\V20190723\Models;
+namespace TencentCloud\Goosefs\V20220519\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDSPAAssessmentRiskSideList返回参数结构体
+ * DescribeFilesetGeneralConfig返回参数结构体
  *
- * @method array getRiskSideItmeList() 获取风险面列表
- * @method void setRiskSideItmeList(array $RiskSideItmeList) 设置风险面列表
- * @method array getRiskSideItemList() 获取风险面列表
- * @method void setRiskSideItemList(array $RiskSideItemList) 设置风险面列表
+ * @method string getEnforceQuotaOnRoot() 获取配额对root用户生效
+ * @method void setEnforceQuotaOnRoot(string $EnforceQuotaOnRoot) 设置配额对root用户生效
+ * @method string getStatus() 获取配置状态
+ * @method void setStatus(string $Status) 设置配置状态
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeDSPAAssessmentRiskSideListResponse extends AbstractModel
+class DescribeFilesetGeneralConfigResponse extends AbstractModel
 {
     /**
-     * @var array 风险面列表
-     * @deprecated
+     * @var string 配额对root用户生效
      */
-    public $RiskSideItmeList;
+    public $EnforceQuotaOnRoot;
 
     /**
-     * @var array 风险面列表
+     * @var string 配置状态
      */
-    public $RiskSideItemList;
+    public $Status;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -46,8 +45,8 @@ class DescribeDSPAAssessmentRiskSideListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $RiskSideItmeList 风险面列表
-     * @param array $RiskSideItemList 风险面列表
+     * @param string $EnforceQuotaOnRoot 配额对root用户生效
+     * @param string $Status 配置状态
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -63,22 +62,12 @@ class DescribeDSPAAssessmentRiskSideListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RiskSideItmeList",$param) and $param["RiskSideItmeList"] !== null) {
-            $this->RiskSideItmeList = [];
-            foreach ($param["RiskSideItmeList"] as $key => $value){
-                $obj = new Note();
-                $obj->deserialize($value);
-                array_push($this->RiskSideItmeList, $obj);
-            }
+        if (array_key_exists("EnforceQuotaOnRoot",$param) and $param["EnforceQuotaOnRoot"] !== null) {
+            $this->EnforceQuotaOnRoot = $param["EnforceQuotaOnRoot"];
         }
 
-        if (array_key_exists("RiskSideItemList",$param) and $param["RiskSideItemList"] !== null) {
-            $this->RiskSideItemList = [];
-            foreach ($param["RiskSideItemList"] as $key => $value){
-                $obj = new Note();
-                $obj->deserialize($value);
-                array_push($this->RiskSideItemList, $obj);
-            }
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -46,10 +46,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpireEnd(string $ExpireEnd) 设置有效结束时间，unix时间戳，0代表永久有效
  * @method string getCateBizId() 获取分类ID
  * @method void setCateBizId(string $CateBizId) 设置分类ID
- * @method string getCustomerKnowledgeId() 获取文档的用户自定义ID
- * @method void setCustomerKnowledgeId(string $CustomerKnowledgeId) 设置文档的用户自定义ID
- * @method array getAttributeFlags() 获取文档的属性标记，0: 不做用户外部权限校验
- * @method void setAttributeFlags(array $AttributeFlags) 设置文档的属性标记，0: 不做用户外部权限校验
  */
 class ModifyDocRequest extends AbstractModel
 {
@@ -115,16 +111,6 @@ class ModifyDocRequest extends AbstractModel
     public $CateBizId;
 
     /**
-     * @var string 文档的用户自定义ID
-     */
-    public $CustomerKnowledgeId;
-
-    /**
-     * @var array 文档的属性标记，0: 不做用户外部权限校验
-     */
-    public $AttributeFlags;
-
-    /**
      * @param string $BotBizId 应用ID
      * @param string $DocBizId 文档ID
      * @param boolean $IsRefer 是否引用链接
@@ -138,8 +124,6 @@ class ModifyDocRequest extends AbstractModel
      * @param string $ExpireStart 有效开始时间，unix时间戳
      * @param string $ExpireEnd 有效结束时间，unix时间戳，0代表永久有效
      * @param string $CateBizId 分类ID
-     * @param string $CustomerKnowledgeId 文档的用户自定义ID
-     * @param array $AttributeFlags 文档的属性标记，0: 不做用户外部权限校验
      */
     function __construct()
     {
@@ -205,14 +189,6 @@ class ModifyDocRequest extends AbstractModel
 
         if (array_key_exists("CateBizId",$param) and $param["CateBizId"] !== null) {
             $this->CateBizId = $param["CateBizId"];
-        }
-
-        if (array_key_exists("CustomerKnowledgeId",$param) and $param["CustomerKnowledgeId"] !== null) {
-            $this->CustomerKnowledgeId = $param["CustomerKnowledgeId"];
-        }
-
-        if (array_key_exists("AttributeFlags",$param) and $param["AttributeFlags"] !== null) {
-            $this->AttributeFlags = $param["AttributeFlags"];
         }
     }
 }

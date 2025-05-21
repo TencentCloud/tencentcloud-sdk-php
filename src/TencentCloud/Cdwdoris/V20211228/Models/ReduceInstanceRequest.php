@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) 设置角色（MATER/CORE），MASTER 对应 FE，CORE对应BE
  * @method integer getHaType() 获取缩容后集群高可用类型：0：非高可用，1：读高可用，2：读写高可用。
  * @method void setHaType(integer $HaType) 设置缩容后集群高可用类型：0：非高可用，1：读高可用，2：读写高可用。
+ * @method boolean getCheckAuth() 获取前端鉴权使用
+ * @method void setCheckAuth(boolean $CheckAuth) 设置前端鉴权使用
  */
 class ReduceInstanceRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ReduceInstanceRequest extends AbstractModel
     public $HaType;
 
     /**
+     * @var boolean 前端鉴权使用
+     */
+    public $CheckAuth;
+
+    /**
      * @param string $InstanceId 集群ID
      * @param array $DelHosts 节点列表
      * @param string $Type 角色（MATER/CORE），MASTER 对应 FE，CORE对应BE
      * @param integer $HaType 缩容后集群高可用类型：0：非高可用，1：读高可用，2：读写高可用。
+     * @param boolean $CheckAuth 前端鉴权使用
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class ReduceInstanceRequest extends AbstractModel
 
         if (array_key_exists("HaType",$param) and $param["HaType"] !== null) {
             $this->HaType = $param["HaType"];
+        }
+
+        if (array_key_exists("CheckAuth",$param) and $param["CheckAuth"] !== null) {
+            $this->CheckAuth = $param["CheckAuth"];
         }
     }
 }

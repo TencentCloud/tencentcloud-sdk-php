@@ -24,8 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupId(string $GroupId) 设置机器组ID
  * @method string getGroupName() 获取机器组名称
  * @method void setGroupName(string $GroupName) 设置机器组名称
- * @method MachineGroupTypeInfo getMachineGroupType() 获取机器组类型。Type：ip，Values中为ip字符串列表机器组；Type：label，Values中为标签字符串列表机器组。
- * @method void setMachineGroupType(MachineGroupTypeInfo $MachineGroupType) 设置机器组类型。Type：ip，Values中为ip字符串列表机器组；Type：label，Values中为标签字符串列表机器组。
+ * @method MachineGroupTypeInfo getMachineGroupType() 获取机器组类型。 
+Type：ip，Values中为ip字符串列表机器组；
+Type：label，Values中为标签字符串列表机器组。
+ * @method void setMachineGroupType(MachineGroupTypeInfo $MachineGroupType) 设置机器组类型。 
+Type：ip，Values中为ip字符串列表机器组；
+Type：label，Values中为标签字符串列表机器组。
  * @method array getTags() 获取标签列表
  * @method void setTags(array $Tags) 设置标签列表
  * @method boolean getAutoUpdate() 获取是否开启机器组自动更新
@@ -54,7 +58,9 @@ class ModifyMachineGroupRequest extends AbstractModel
     public $GroupName;
 
     /**
-     * @var MachineGroupTypeInfo 机器组类型。Type：ip，Values中为ip字符串列表机器组；Type：label，Values中为标签字符串列表机器组。
+     * @var MachineGroupTypeInfo 机器组类型。 
+Type：ip，Values中为ip字符串列表机器组；
+Type：label，Values中为标签字符串列表机器组。
      */
     public $MachineGroupType;
 
@@ -96,7 +102,9 @@ class ModifyMachineGroupRequest extends AbstractModel
     /**
      * @param string $GroupId 机器组ID
      * @param string $GroupName 机器组名称
-     * @param MachineGroupTypeInfo $MachineGroupType 机器组类型。Type：ip，Values中为ip字符串列表机器组；Type：label，Values中为标签字符串列表机器组。
+     * @param MachineGroupTypeInfo $MachineGroupType 机器组类型。 
+Type：ip，Values中为ip字符串列表机器组；
+Type：label，Values中为标签字符串列表机器组。
      * @param array $Tags 标签列表
      * @param boolean $AutoUpdate 是否开启机器组自动更新
      * @param string $UpdateStartTime 升级开始时间，建议业务低峰期升级LogListener

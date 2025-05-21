@@ -34,8 +34,8 @@ NOTIFY_AND_AUTO_RENEW：表示自动续费
 DISABLE_NOTIFY_AND_MANUAL_RENEW：表示明确不自动续费(用户设置)
 默认值：NOTIFY_AND_MANUAL_RENEW
 
- * @method string getTimeUnit() 获取时长单位，默认值MONTH
- * @method void setTimeUnit(string $TimeUnit) 设置时长单位，默认值MONTH
+ * @method string getTimeUnit() 获取时长单位，枚举： MONTH, DAY, HOUR；释义：月，日，小时
+ * @method void setTimeUnit(string $TimeUnit) 设置时长单位，枚举： MONTH, DAY, HOUR；释义：月，日，小时
  */
 class InstanceChargePrepaid extends AbstractModel
 {
@@ -55,7 +55,7 @@ DISABLE_NOTIFY_AND_MANUAL_RENEW：表示明确不自动续费(用户设置)
     public $RenewFlag;
 
     /**
-     * @var string 时长单位，默认值MONTH
+     * @var string 时长单位，枚举： MONTH, DAY, HOUR；释义：月，日，小时
      */
     public $TimeUnit;
 
@@ -67,7 +67,7 @@ NOTIFY_AND_AUTO_RENEW：表示自动续费
 DISABLE_NOTIFY_AND_MANUAL_RENEW：表示明确不自动续费(用户设置)
 默认值：NOTIFY_AND_MANUAL_RENEW
 
-     * @param string $TimeUnit 时长单位，默认值MONTH
+     * @param string $TimeUnit 时长单位，枚举： MONTH, DAY, HOUR；释义：月，日，小时
      */
     function __construct()
     {

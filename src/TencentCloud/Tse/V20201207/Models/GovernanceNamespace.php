@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceExportTo(array $ServiceExportTo) 设置该命名空间下的服务对哪些命名空间可见
  * @method boolean getSyncToGlobalRegistry() 获取是否开启同步到全局注册中心	
  * @method void setSyncToGlobalRegistry(boolean $SyncToGlobalRegistry) 设置是否开启同步到全局注册中心	
+ * @method array getMetadatas() 获取元数据
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMetadatas(array $Metadatas) 设置元数据
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class GovernanceNamespace extends AbstractModel
 {
@@ -129,6 +133,12 @@ class GovernanceNamespace extends AbstractModel
     public $SyncToGlobalRegistry;
 
     /**
+     * @var array 元数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Metadatas;
+
+    /**
      * @param string $Name 命名空间名称。
      * @param string $Comment 命名空间描述信息。
      * @param string $CreateTime 创建时间。
@@ -144,6 +154,8 @@ class GovernanceNamespace extends AbstractModel
      * @param array $RemoveGroupIds 移除可以操作此命名空间的用户组ID列表
      * @param array $ServiceExportTo 该命名空间下的服务对哪些命名空间可见
      * @param boolean $SyncToGlobalRegistry 是否开启同步到全局注册中心	
+     * @param array $Metadatas 元数据
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -216,6 +228,15 @@ class GovernanceNamespace extends AbstractModel
 
         if (array_key_exists("SyncToGlobalRegistry",$param) and $param["SyncToGlobalRegistry"] !== null) {
             $this->SyncToGlobalRegistry = $param["SyncToGlobalRegistry"];
+        }
+
+        if (array_key_exists("Metadatas",$param) and $param["Metadatas"] !== null) {
+            $this->Metadatas = [];
+            foreach ($param["Metadatas"] as $key => $value){
+                $obj = new Metadata();
+                $obj->deserialize($value);
+                array_push($this->Metadatas, $obj);
+            }
         }
     }
 }

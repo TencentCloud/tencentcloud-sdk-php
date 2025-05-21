@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSyntaxRule(integer $SyntaxRule) 设置语法规则，0：Lucene语法，1：CQL语法
  * @method integer getHasServicesLog() 获取是否开启投递服务日志。1：关闭，2：开启。
  * @method void setHasServicesLog(integer $HasServicesLog) 设置是否开启投递服务日志。1：关闭，2：开启。
+ * @method integer getFullQuery() 获取全文检索标记。1：关闭，2：打开。
+ * @method void setFullQuery(integer $FullQuery) 设置全文检索标记。1：关闭，2：打开。
  */
 class ScheduledSqlTaskInfo extends AbstractModel
 {
@@ -163,6 +165,11 @@ class ScheduledSqlTaskInfo extends AbstractModel
     public $HasServicesLog;
 
     /**
+     * @var integer 全文检索标记。1：关闭，2：打开。
+     */
+    public $FullQuery;
+
+    /**
      * @param string $TaskId ScheduledSql任务id
      * @param string $Name ScheduledSql任务名称
      * @param string $SrcTopicId 源日志主题id
@@ -184,6 +191,7 @@ class ScheduledSqlTaskInfo extends AbstractModel
      * @param string $SrcTopicRegion 源topicId的地域信息
      * @param integer $SyntaxRule 语法规则，0：Lucene语法，1：CQL语法
      * @param integer $HasServicesLog 是否开启投递服务日志。1：关闭，2：开启。
+     * @param integer $FullQuery 全文检索标记。1：关闭，2：打开。
      */
     function __construct()
     {
@@ -273,6 +281,10 @@ class ScheduledSqlTaskInfo extends AbstractModel
 
         if (array_key_exists("HasServicesLog",$param) and $param["HasServicesLog"] !== null) {
             $this->HasServicesLog = $param["HasServicesLog"];
+        }
+
+        if (array_key_exists("FullQuery",$param) and $param["FullQuery"] !== null) {
+            $this->FullQuery = $param["FullQuery"];
         }
     }
 }

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceType(string $InstanceType) 设置实例机型。
  * @method integer getCPU() 获取实例的CPU核数，单位：核。
  * @method void setCPU(integer $CPU) 设置实例的CPU核数，单位：核。
- * @method integer getMemory() 获取实例内存容量，单位：`GB`。
- * @method void setMemory(integer $Memory) 设置实例内存容量，单位：`GB`。
+ * @method integer getMemory() 获取实例内存容量，单位：`GiB`。
+ * @method void setMemory(integer $Memory) 设置实例内存容量，单位：`GiB`。
  * @method string getRestrictState() 获取实例业务状态。取值范围：<br><li>NORMAL：表示正常状态的实例</li><li>EXPIRED：表示过期的实例</li><li>PROTECTIVELY_ISOLATED：表示被安全隔离的实例。</li>
  * @method void setRestrictState(string $RestrictState) 设置实例业务状态。取值范围：<br><li>NORMAL：表示正常状态的实例</li><li>EXPIRED：表示过期的实例</li><li>PROTECTIVELY_ISOLATED：表示被安全隔离的实例。</li>
  * @method string getInstanceName() 获取实例名称。
@@ -146,7 +146,7 @@ class Instance extends AbstractModel
     public $CPU;
 
     /**
-     * @var integer 实例内存容量，单位：`GB`。
+     * @var integer 实例内存容量，单位：`GiB`。
      */
     public $Memory;
 
@@ -345,7 +345,7 @@ class Instance extends AbstractModel
      * @param string $InstanceId 实例`ID`。
      * @param string $InstanceType 实例机型。
      * @param integer $CPU 实例的CPU核数，单位：核。
-     * @param integer $Memory 实例内存容量，单位：`GB`。
+     * @param integer $Memory 实例内存容量，单位：`GiB`。
      * @param string $RestrictState 实例业务状态。取值范围：<br><li>NORMAL：表示正常状态的实例</li><li>EXPIRED：表示过期的实例</li><li>PROTECTIVELY_ISOLATED：表示被安全隔离的实例。</li>
      * @param string $InstanceName 实例名称。
      * @param string $InstanceChargeType 实例[计费类型](https://cloud.tencent.com/document/product/213/2180)。取值范围：<br><li>PREPAID：预付费，即包年包月</li><br><li>POSTPAID_BY_HOUR：按小时后付费</li><br><li>CDHPAID：独享子机（基于专用宿主机创建，宿主机部分的资源不收费）</li><br><li>SPOTPAID：竞价付费</li><br><li>CDCPAID：专用集群付费</li>

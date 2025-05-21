@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModifyTime(string $ModifyTime) 设置修改时间
  * @method array getInterfaces() 获取契约接口列表
  * @method void setInterfaces(array $Interfaces) 设置契约接口列表
+ * @method array getMetadatas() 获取元数据
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMetadatas(array $Metadatas) 设置元数据
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class GovernanceServiceContract extends AbstractModel
 {
@@ -101,6 +105,12 @@ class GovernanceServiceContract extends AbstractModel
     public $Interfaces;
 
     /**
+     * @var array 元数据
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Metadatas;
+
+    /**
      * @param string $Name 契约名称
      * @param string $Namespace 所属服务命名空间
      * @param string $Protocol 协议
@@ -112,6 +122,8 @@ class GovernanceServiceContract extends AbstractModel
      * @param string $CreateTime 创建时间
      * @param string $ModifyTime 修改时间
      * @param array $Interfaces 契约接口列表
+     * @param array $Metadatas 元数据
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -172,6 +184,15 @@ class GovernanceServiceContract extends AbstractModel
                 $obj = new GovernanceInterfaceDescription();
                 $obj->deserialize($value);
                 array_push($this->Interfaces, $obj);
+            }
+        }
+
+        if (array_key_exists("Metadatas",$param) and $param["Metadatas"] !== null) {
+            $this->Metadatas = [];
+            foreach ($param["Metadatas"] as $key => $value){
+                $obj = new Metadata();
+                $obj->deserialize($value);
+                array_push($this->Metadatas, $obj);
             }
         }
     }

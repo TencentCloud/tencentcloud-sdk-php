@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 套餐价格
  *
- * @method float getUnitPrice() 获取原单价
- * @method void setUnitPrice(float $UnitPrice) 设置原单价
- * @method float getDiscountUnitPrice() 获取折扣后单价
- * @method void setDiscountUnitPrice(float $DiscountUnitPrice) 设置折扣后单价
+ * @method float getUnitPrice() 获取原单价，元
+ * @method void setUnitPrice(float $UnitPrice) 设置原单价，元
+ * @method float getDiscountUnitPrice() 获取折扣后单价，元
+ * @method void setDiscountUnitPrice(float $DiscountUnitPrice) 设置折扣后单价，元
  * @method float getDiscount() 获取折扣
  * @method void setDiscount(float $Discount) 设置折扣
  * @method string getChargeUnit() 获取单位：时/月
@@ -36,12 +36,12 @@ use TencentCloud\Common\AbstractModel;
 class ItemPrice extends AbstractModel
 {
     /**
-     * @var float 原单价
+     * @var float 原单价，元
      */
     public $UnitPrice;
 
     /**
-     * @var float 折扣后单价
+     * @var float 折扣后单价，元
      */
     public $DiscountUnitPrice;
 
@@ -62,8 +62,8 @@ class ItemPrice extends AbstractModel
     public $Amount;
 
     /**
-     * @param float $UnitPrice 原单价
-     * @param float $DiscountUnitPrice 折扣后单价
+     * @param float $UnitPrice 原单价，元
+     * @param float $DiscountUnitPrice 折扣后单价，元
      * @param float $Discount 折扣
      * @param string $ChargeUnit 单位：时/月
 

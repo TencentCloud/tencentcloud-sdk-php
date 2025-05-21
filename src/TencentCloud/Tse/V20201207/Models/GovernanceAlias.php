@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setId(string $Id) 设置服务别名ID
  * @method boolean getEditable() 获取该服务别名是否可以编辑
  * @method void setEditable(boolean $Editable) 设置该服务别名是否可以编辑
+ * @method array getMetadatas() 获取元数据信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMetadatas(array $Metadatas) 设置元数据信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class GovernanceAlias extends AbstractModel
 {
@@ -87,6 +91,12 @@ class GovernanceAlias extends AbstractModel
     public $Editable;
 
     /**
+     * @var array 元数据信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Metadatas;
+
+    /**
      * @param string $Alias 服务别名
      * @param string $AliasNamespace 服务别名命名空间
      * @param string $Service 服务别名指向的服务名
@@ -96,6 +106,8 @@ class GovernanceAlias extends AbstractModel
      * @param string $ModifyTime 服务别名修改时间
      * @param string $Id 服务别名ID
      * @param boolean $Editable 该服务别名是否可以编辑
+     * @param array $Metadatas 元数据信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -144,6 +156,15 @@ class GovernanceAlias extends AbstractModel
 
         if (array_key_exists("Editable",$param) and $param["Editable"] !== null) {
             $this->Editable = $param["Editable"];
+        }
+
+        if (array_key_exists("Metadatas",$param) and $param["Metadatas"] !== null) {
+            $this->Metadatas = [];
+            foreach ($param["Metadatas"] as $key => $value){
+                $obj = new Metadata();
+                $obj->deserialize($value);
+                array_push($this->Metadatas, $obj);
+            }
         }
     }
 }

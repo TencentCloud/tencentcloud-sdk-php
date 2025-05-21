@@ -21,7 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * 续费云硬盘包年包月相关参数设置。
  *
  * @method integer getPeriod() 获取续费周期。
+单位：月。
+取值范围: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36]
  * @method void setPeriod(integer $Period) 设置续费周期。
+单位：月。
+取值范围: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36]
  * @method string getRenewFlag() 获取自动续费标识。
 取值范围：
 <li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费</li>
@@ -47,6 +51,8 @@ class RenewDiskChargePrepaid extends AbstractModel
 {
     /**
      * @var integer 续费周期。
+单位：月。
+取值范围: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36]
      */
     public $Period;
 
@@ -74,6 +80,8 @@ class RenewDiskChargePrepaid extends AbstractModel
 
     /**
      * @param integer $Period 续费周期。
+单位：月。
+取值范围: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36]
      * @param string $RenewFlag 自动续费标识。
 取值范围：
 <li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费</li>

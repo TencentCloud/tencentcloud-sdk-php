@@ -143,9 +143,6 @@ use TencentCloud\Postgres\V20170312\Models as Models;
 <li>通过使用强制切换，可以在备节点延迟不满足切换条件时，强制发起主从切换
 <li>只有主实例可以执行该操作
  * @method Models\UnlockAccountResponse UnlockAccount(Models\UnlockAccountRequest $req) 解除数据库账号的锁定，解锁后账号可以登录数据库。
- * @method Models\UpgradeDBInstanceResponse UpgradeDBInstance(Models\UpgradeDBInstanceRequest $req) 早期接口，不规范，已提供新接口 ModifyDBInstanceSpec 替换
-
-本接口（UpgradeDBInstance）用于升级实例配置。本接口已废弃，推荐使用接口[ModifyDBInstanceSpec](https://cloud.tencent.com/document/api/409/63689)替代。
  * @method Models\UpgradeDBInstanceKernelVersionResponse UpgradeDBInstanceKernelVersion(Models\UpgradeDBInstanceKernelVersionRequest $req) 本接口（UpgradeDBInstanceKernelVersion）用于升级实例的内核版本号。
  * @method Models\UpgradeDBInstanceMajorVersionResponse UpgradeDBInstanceMajorVersion(Models\UpgradeDBInstanceMajorVersionRequest $req) 本接口（UpgradeDBInstanceMajorVersion）用于升级实例内核大版本，例如从PostgreSQL 12升级到PostgreSQL 15。
  */

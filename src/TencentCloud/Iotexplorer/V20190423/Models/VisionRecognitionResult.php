@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TWeSee 语义理解结果
  *
- * @method integer getStatus() 获取任务状态（1：失败；2：成功但结果为空；3：成功且结果非空）
- * @method void setStatus(integer $Status) 设置任务状态（1：失败；2：成功但结果为空；3：成功且结果非空）
+ * @method integer getStatus() 获取任务状态（1：分析失败；2：下载/读取视频/图片失败；3：成功）
+ * @method void setStatus(integer $Status) 设置任务状态（1：分析失败；2：下载/读取视频/图片失败；3：成功）
  * @method array getDetectedClassifications() 获取识别到的目标类型。可能取值：
 
 - `person`：人
@@ -44,13 +44,15 @@ use TencentCloud\Common\AbstractModel;
 - `package`：快递包裹
 - `license_plate`：车牌
 
- * @method string getSummary() 获取视频摘要文本
- * @method void setSummary(string $Summary) 设置视频摘要文本
+ * @method string getSummary() 获取摘要文本
+ * @method void setSummary(string $Summary) 设置摘要文本
+ * @method string getAlternativeSummary() 获取摘要文本（次选语言）
+ * @method void setAlternativeSummary(string $AlternativeSummary) 设置摘要文本（次选语言）
  */
 class VisionRecognitionResult extends AbstractModel
 {
     /**
-     * @var integer 任务状态（1：失败；2：成功但结果为空；3：成功且结果非空）
+     * @var integer 任务状态（1：分析失败；2：下载/读取视频/图片失败；3：成功）
      */
     public $Status;
 
@@ -70,12 +72,17 @@ class VisionRecognitionResult extends AbstractModel
     public $DetectedClassifications;
 
     /**
-     * @var string 视频摘要文本
+     * @var string 摘要文本
      */
     public $Summary;
 
     /**
-     * @param integer $Status 任务状态（1：失败；2：成功但结果为空；3：成功且结果非空）
+     * @var string 摘要文本（次选语言）
+     */
+    public $AlternativeSummary;
+
+    /**
+     * @param integer $Status 任务状态（1：分析失败；2：下载/读取视频/图片失败；3：成功）
      * @param array $DetectedClassifications 识别到的目标类型。可能取值：
 
 - `person`：人
@@ -87,7 +94,8 @@ class VisionRecognitionResult extends AbstractModel
 - `package`：快递包裹
 - `license_plate`：车牌
 
-     * @param string $Summary 视频摘要文本
+     * @param string $Summary 摘要文本
+     * @param string $AlternativeSummary 摘要文本（次选语言）
      */
     function __construct()
     {
@@ -112,6 +120,10 @@ class VisionRecognitionResult extends AbstractModel
 
         if (array_key_exists("Summary",$param) and $param["Summary"] !== null) {
             $this->Summary = $param["Summary"];
+        }
+
+        if (array_key_exists("AlternativeSummary",$param) and $param["AlternativeSummary"] !== null) {
+            $this->AlternativeSummary = $param["AlternativeSummary"];
         }
     }
 }

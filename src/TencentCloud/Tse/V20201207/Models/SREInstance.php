@@ -92,6 +92,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZookeeperRegionInfo(ZookeeperRegionInfo $ZookeeperRegionInfo) 设置Zookeeper的额外环境数据信息
  * @method string getDeployMode() 获取部署架构
  * @method void setDeployMode(string $DeployMode) 设置部署架构
+ * @method string getGlobalType() 获取全局属性
+ * @method void setGlobalType(string $GlobalType) 设置全局属性
+ * @method string getGroupType() 获取所属组类型
+ * @method void setGroupType(string $GroupType) 设置所属组类型
+ * @method array getGroupId() 获取组id
+ * @method void setGroupId(array $GroupId) 设置组id
+ * @method boolean getIsMainRegion() 获取是否为主地域
+ * @method void setIsMainRegion(boolean $IsMainRegion) 设置是否为主地域
  */
 class SREInstance extends AbstractModel
 {
@@ -276,6 +284,26 @@ class SREInstance extends AbstractModel
     public $DeployMode;
 
     /**
+     * @var string 全局属性
+     */
+    public $GlobalType;
+
+    /**
+     * @var string 所属组类型
+     */
+    public $GroupType;
+
+    /**
+     * @var array 组id
+     */
+    public $GroupId;
+
+    /**
+     * @var boolean 是否为主地域
+     */
+    public $IsMainRegion;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $Name 名称
      * @param string $Edition 版本号
@@ -312,6 +340,10 @@ class SREInstance extends AbstractModel
      * @param array $StorageOption 存储额外配置选项
      * @param ZookeeperRegionInfo $ZookeeperRegionInfo Zookeeper的额外环境数据信息
      * @param string $DeployMode 部署架构
+     * @param string $GlobalType 全局属性
+     * @param string $GroupType 所属组类型
+     * @param array $GroupId 组id
+     * @param boolean $IsMainRegion 是否为主地域
      */
     function __construct()
     {
@@ -499,6 +531,22 @@ class SREInstance extends AbstractModel
 
         if (array_key_exists("DeployMode",$param) and $param["DeployMode"] !== null) {
             $this->DeployMode = $param["DeployMode"];
+        }
+
+        if (array_key_exists("GlobalType",$param) and $param["GlobalType"] !== null) {
+            $this->GlobalType = $param["GlobalType"];
+        }
+
+        if (array_key_exists("GroupType",$param) and $param["GroupType"] !== null) {
+            $this->GroupType = $param["GroupType"];
+        }
+
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
+        }
+
+        if (array_key_exists("IsMainRegion",$param) and $param["IsMainRegion"] !== null) {
+            $this->IsMainRegion = $param["IsMainRegion"];
         }
     }
 }

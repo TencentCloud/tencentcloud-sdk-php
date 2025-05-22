@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getKey() 获取维度
  * @method void setKey(string $Key) 设置维度
- * @method string getOperator() 获取操作符，支持等于(eq)、不等于(ne)，以及in
- * @method void setOperator(string $Operator) 设置操作符，支持等于(eq)、不等于(ne)，以及in
- * @method array getValue() 获取维度值，当Op是eq、ne时，只使用第一个元素
- * @method void setValue(array $Value) 设置维度值，当Op是eq、ne时，只使用第一个元素
+ * @method string getOperator() 获取操作符，支持=、in
+ * @method void setOperator(string $Operator) 设置操作符，支持=、in
+ * @method array getValue() 获取维度值，当Op是=时，只使用第一个元素
+ * @method void setValue(array $Value) 设置维度值，当Op是=时，只使用第一个元素
  */
 class MidQueryCondition extends AbstractModel
 {
@@ -35,19 +35,19 @@ class MidQueryCondition extends AbstractModel
     public $Key;
 
     /**
-     * @var string 操作符，支持等于(eq)、不等于(ne)，以及in
+     * @var string 操作符，支持=、in
      */
     public $Operator;
 
     /**
-     * @var array 维度值，当Op是eq、ne时，只使用第一个元素
+     * @var array 维度值，当Op是=时，只使用第一个元素
      */
     public $Value;
 
     /**
      * @param string $Key 维度
-     * @param string $Operator 操作符，支持等于(eq)、不等于(ne)，以及in
-     * @param array $Value 维度值，当Op是eq、ne时，只使用第一个元素
+     * @param string $Operator 操作符，支持=、in
+     * @param array $Value 维度值，当Op是=时，只使用第一个元素
      */
     function __construct()
     {

@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIp(string $Ip) 设置节点IP
  * @method integer getPort() 获取节点端口
  * @method void setPort(integer $Port) 设置节点端口
+ * @method string getZone() 获取节点所在zone
+ * @method void setZone(string $Zone) 设置节点所在zone
  */
 class LogstashNodeInfo extends AbstractModel
 {
@@ -45,9 +47,15 @@ class LogstashNodeInfo extends AbstractModel
     public $Port;
 
     /**
+     * @var string 节点所在zone
+     */
+    public $Zone;
+
+    /**
      * @param string $NodeId 节点ID
      * @param string $Ip 节点IP
      * @param integer $Port 节点端口
+     * @param string $Zone 节点所在zone
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class LogstashNodeInfo extends AbstractModel
 
         if (array_key_exists("Port",$param) and $param["Port"] !== null) {
             $this->Port = $param["Port"];
+        }
+
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
         }
     }
 }

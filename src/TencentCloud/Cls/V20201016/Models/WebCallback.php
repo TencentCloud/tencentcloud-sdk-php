@@ -129,12 +129,14 @@ class WebCallback extends AbstractModel
 
     /**
      * @var array 该参数已废弃，请使用NoticeContentId。
+     * @deprecated
      */
     public $Headers;
 
     /**
      * @var string 该参数已废弃，请使用NoticeContentId。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $Body;
 

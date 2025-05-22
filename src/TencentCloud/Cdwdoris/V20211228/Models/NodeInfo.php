@@ -36,6 +36,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) 设置节点所在可用区
  * @method string getId() 获取Id
  * @method void setId(string $Id) 设置Id
+ * @method string getRIp() 获取RIP
+ * @method void setRIp(string $RIp) 设置RIP
+ * @method string getComputeGroupId() 获取计算组ID
+ * @method void setComputeGroupId(string $ComputeGroupId) 设置计算组ID
+ * @method string getCreateTime() 获取创建时间
+ * @method void setCreateTime(string $CreateTime) 设置创建时间
  */
 class NodeInfo extends AbstractModel
 {
@@ -80,6 +86,21 @@ class NodeInfo extends AbstractModel
     public $Id;
 
     /**
+     * @var string RIP
+     */
+    public $RIp;
+
+    /**
+     * @var string 计算组ID
+     */
+    public $ComputeGroupId;
+
+    /**
+     * @var string 创建时间
+     */
+    public $CreateTime;
+
+    /**
      * @param string $Ip 用户IP
      * @param integer $Status 节点状态
      * @param string $NodeName 节点角色名
@@ -88,6 +109,9 @@ class NodeInfo extends AbstractModel
      * @param string $LastRestartTime 节点上次重启的时间
      * @param string $Zone 节点所在可用区
      * @param string $Id Id
+     * @param string $RIp RIP
+     * @param string $ComputeGroupId 计算组ID
+     * @param string $CreateTime 创建时间
      */
     function __construct()
     {
@@ -132,6 +156,18 @@ class NodeInfo extends AbstractModel
 
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("RIp",$param) and $param["RIp"] !== null) {
+            $this->RIp = $param["RIp"];
+        }
+
+        if (array_key_exists("ComputeGroupId",$param) and $param["ComputeGroupId"] !== null) {
+            $this->ComputeGroupId = $param["ComputeGroupId"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
     }
 }

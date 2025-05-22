@@ -120,6 +120,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVolumeSourceGooseFS(GooseFS $VolumeSourceGooseFS) 设置GooseFS存储配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSubUin() 获取子用户ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubUin(string $SubUin) 设置子用户ID
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubUinName() 获取子用户名称
  * @method void setSubUinName(string $SubUinName) 设置子用户名称
  * @method string getAppId() 获取AppId
@@ -288,6 +292,12 @@ class NotebookSetItem extends AbstractModel
     public $VolumeSourceGooseFS;
 
     /**
+     * @var string 子用户ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubUin;
+
+    /**
      * @var string 子用户名称
      */
     public $SubUinName;
@@ -348,6 +358,8 @@ class NotebookSetItem extends AbstractModel
      * @param SSHConfig $SSHConfig SSH配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param GooseFS $VolumeSourceGooseFS GooseFS存储配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SubUin 子用户ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubUinName 子用户名称
      * @param string $AppId AppId
@@ -481,6 +493,10 @@ class NotebookSetItem extends AbstractModel
         if (array_key_exists("VolumeSourceGooseFS",$param) and $param["VolumeSourceGooseFS"] !== null) {
             $this->VolumeSourceGooseFS = new GooseFS();
             $this->VolumeSourceGooseFS->deserialize($param["VolumeSourceGooseFS"]);
+        }
+
+        if (array_key_exists("SubUin",$param) and $param["SubUin"] !== null) {
+            $this->SubUin = $param["SubUin"];
         }
 
         if (array_key_exists("SubUinName",$param) and $param["SubUinName"] !== null) {

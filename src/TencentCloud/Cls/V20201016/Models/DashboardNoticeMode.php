@@ -31,23 +31,23 @@ use TencentCloud\Common\AbstractModel;
 <li/>Email：自定义Email<br>
 <li/>WeCom: 企业微信回调
  * @method array getValues() 获取知方式对应的值。
-<br> <li/> 当ReceiverType不是 Wecom 时，Values必填。
+<br> <li/> 当ReceiverType不是 WeCom 时，Values必填。
  * @method void setValues(array $Values) 设置知方式对应的值。
-<br> <li/> 当ReceiverType不是 Wecom 时，Values必填。
+<br> <li/> 当ReceiverType不是 WeCom 时，Values必填。
  * @method array getReceiverChannels() 获取仪表盘通知渠道。
 <br><li/> 支持：["Email","Sms","WeChat","Phone"]。
-<br><li/> 当ReceiverType是 Email 或 Wecom 时，ReceiverChannels不能赋值。
+<br><li/> 当ReceiverType是 Email 或 WeCom 时，ReceiverChannels不能赋值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReceiverChannels(array $ReceiverChannels) 设置仪表盘通知渠道。
 <br><li/> 支持：["Email","Sms","WeChat","Phone"]。
-<br><li/> 当ReceiverType是 Email 或 Wecom 时，ReceiverChannels不能赋值。
+<br><li/> 当ReceiverType是 Email 或 WeCom 时，ReceiverChannels不能赋值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUrl() 获取回调Url。
-<br><li/> 当ReceiverType是 Wecom 时，Url必填。
-<br><li/> 当ReceiverType不是 Wecom 时，Url不能填写。
+<br><li/> 当ReceiverType是 WeCom 时，Url必填。
+<br><li/> 当ReceiverType不是 WeCom 时，Url不能填写。
  * @method void setUrl(string $Url) 设置回调Url。
-<br><li/> 当ReceiverType是 Wecom 时，Url必填。
-<br><li/> 当ReceiverType不是 Wecom 时，Url不能填写。
+<br><li/> 当ReceiverType是 WeCom 时，Url必填。
+<br><li/> 当ReceiverType不是 WeCom 时，Url不能填写。
  */
 class DashboardNoticeMode extends AbstractModel
 {
@@ -62,22 +62,22 @@ class DashboardNoticeMode extends AbstractModel
 
     /**
      * @var array 知方式对应的值。
-<br> <li/> 当ReceiverType不是 Wecom 时，Values必填。
+<br> <li/> 当ReceiverType不是 WeCom 时，Values必填。
      */
     public $Values;
 
     /**
      * @var array 仪表盘通知渠道。
 <br><li/> 支持：["Email","Sms","WeChat","Phone"]。
-<br><li/> 当ReceiverType是 Email 或 Wecom 时，ReceiverChannels不能赋值。
+<br><li/> 当ReceiverType是 Email 或 WeCom 时，ReceiverChannels不能赋值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReceiverChannels;
 
     /**
      * @var string 回调Url。
-<br><li/> 当ReceiverType是 Wecom 时，Url必填。
-<br><li/> 当ReceiverType不是 Wecom 时，Url不能填写。
+<br><li/> 当ReceiverType是 WeCom 时，Url必填。
+<br><li/> 当ReceiverType不是 WeCom 时，Url不能填写。
      */
     public $Url;
 
@@ -88,14 +88,14 @@ class DashboardNoticeMode extends AbstractModel
 <li/>Email：自定义Email<br>
 <li/>WeCom: 企业微信回调
      * @param array $Values 知方式对应的值。
-<br> <li/> 当ReceiverType不是 Wecom 时，Values必填。
+<br> <li/> 当ReceiverType不是 WeCom 时，Values必填。
      * @param array $ReceiverChannels 仪表盘通知渠道。
 <br><li/> 支持：["Email","Sms","WeChat","Phone"]。
-<br><li/> 当ReceiverType是 Email 或 Wecom 时，ReceiverChannels不能赋值。
+<br><li/> 当ReceiverType是 Email 或 WeCom 时，ReceiverChannels不能赋值。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Url 回调Url。
-<br><li/> 当ReceiverType是 Wecom 时，Url必填。
-<br><li/> 当ReceiverType不是 Wecom 时，Url不能填写。
+<br><li/> 当ReceiverType是 WeCom 时，Url必填。
+<br><li/> 当ReceiverType不是 WeCom 时，Url不能填写。
      */
     function __construct()
     {

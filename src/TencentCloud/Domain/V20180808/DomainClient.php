@@ -73,7 +73,7 @@ use TencentCloud\Domain\V20180808\Models as Models;
  * @method Models\ModifyDomainDNSBatchResponse ModifyDomainDNSBatch(Models\ModifyDomainDNSBatchRequest $req) 本接口 ( ModifyDomainDNSBatch) 用于批量域名 DNS 修改 。
  * @method Models\ModifyDomainOwnerBatchResponse ModifyDomainOwnerBatch(Models\ModifyDomainOwnerBatchRequest $req) 本接口 ( ModifyDomainOwnerBatch) 用于域名批量账号间转移 。
  * @method Models\ModifyIntlCustomDnsHostResponse ModifyIntlCustomDnsHost(Models\ModifyIntlCustomDnsHostRequest $req) 国际站-修改DNS Host
- * @method Models\ModifyTemplateResponse ModifyTemplate(Models\ModifyTemplateRequest $req) 修改模板信息
+ * @method Models\ModifyTemplateResponse ModifyTemplate(Models\ModifyTemplateRequest $req) 修改模板信息,仅能修改模板未通过审核的，即[模板详情](https://cloud.tencent.com/document/product/242/50018)中：AuditStatus不为Approved状态的
  * @method Models\RenewDomainBatchResponse RenewDomainBatch(Models\RenewDomainBatchRequest $req) 本接口 ( RenewDomainBatch ) 用于批量续费域名 。
  * @method Models\ReservedPreDomainsResponse ReservedPreDomains(Models\ReservedPreDomainsRequest $req) 用于合作商对预释放域名进行预留。
  * @method Models\SendPhoneEmailCodeResponse SendPhoneEmailCode(Models\SendPhoneEmailCodeRequest $req) 此接口用于发送手机邮箱验证码。

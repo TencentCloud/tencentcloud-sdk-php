@@ -55,15 +55,11 @@ use TencentCloud\Common\AbstractModel;
 建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLibType() 获取自定义词库的类型，自定义词库相关的信息可登录控制台中查看；
-
 1：自定义黑白库；
-
-2：自定义库；
+2：公库；
  * @method void setLibType(integer $LibType) 设置自定义词库的类型，自定义词库相关的信息可登录控制台中查看；
-
 1：自定义黑白库；
-
-2：自定义库；
+2：公库；
  * @method string getSubLabel() 获取该字段用于返回当前标签（Lable）下的二级标签。
 注意：此字段可能返回null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -118,10 +114,8 @@ class TextResult extends AbstractModel
 
     /**
      * @var integer 自定义词库的类型，自定义词库相关的信息可登录控制台中查看；
-
 1：自定义黑白库；
-
-2：自定义库；
+2：公库；
      */
     public $LibType;
 
@@ -156,10 +150,8 @@ class TextResult extends AbstractModel
 建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LibType 自定义词库的类型，自定义词库相关的信息可登录控制台中查看；
-
 1：自定义黑白库；
-
-2：自定义库；
+2：公库；
      * @param string $SubLabel 该字段用于返回当前标签（Lable）下的二级标签。
 注意：此字段可能返回null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。

@@ -96,6 +96,14 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCallbackUrl(string $CallbackUrl) 设置回调地址
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSubUin() 获取任务subUin信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubUin(string $SubUin) 设置任务subUin信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSubUinName() 获取任务创建者名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubUinName(string $SubUinName) 设置任务创建者名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TrainingTaskSetItem extends AbstractModel
 {
@@ -234,6 +242,18 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
     public $CallbackUrl;
 
     /**
+     * @var string 任务subUin信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubUin;
+
+    /**
+     * @var string 任务创建者名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubUinName;
+
+    /**
      * @param string $Id 训练任务ID
      * @param string $Name 训练任务名称
      * @param string $FrameworkName 框架名称
@@ -271,6 +291,10 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
      * @param array $Tags 标签配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CallbackUrl 回调地址
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SubUin 任务subUin信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SubUinName 任务创建者名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -392,6 +416,14 @@ STARTING启动中、RUNNING运行中、STOPPING停止中、STOPPED已停止、FA
 
         if (array_key_exists("CallbackUrl",$param) and $param["CallbackUrl"] !== null) {
             $this->CallbackUrl = $param["CallbackUrl"];
+        }
+
+        if (array_key_exists("SubUin",$param) and $param["SubUin"] !== null) {
+            $this->SubUin = $param["SubUin"];
+        }
+
+        if (array_key_exists("SubUinName",$param) and $param["SubUinName"] !== null) {
+            $this->SubUinName = $param["SubUinName"];
         }
     }
 }

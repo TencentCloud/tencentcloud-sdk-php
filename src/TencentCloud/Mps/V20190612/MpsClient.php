@@ -193,6 +193,7 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\ProcessImageResponse ProcessImage(Models\ProcessImageRequest $req) 发起图片处理，功能包括：
 1. 格式转换；
 2. 图像增强；
+3. 图像擦除;
  * @method Models\ProcessLiveStreamResponse ProcessLiveStream(Models\ProcessLiveStreamRequest $req) 对直播流媒体发起处理任务，功能包括：
 
 * 智能内容审核（画面鉴黄、敏感信息检测、声音鉴黄）；

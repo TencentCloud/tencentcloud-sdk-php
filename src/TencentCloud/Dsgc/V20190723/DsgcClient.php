@@ -29,9 +29,6 @@ use TencentCloud\Dsgc\V20190723\Models as Models;
  * @method Models\CopyDSPATemplateResponse CopyDSPATemplate(Models\CopyDSPATemplateRequest $req) 复制合规组模板
  * @method Models\CreateAssetSortingReportRetryTaskResponse CreateAssetSortingReportRetryTask(Models\CreateAssetSortingReportRetryTaskRequest $req) 创建资产梳理报表导出重试任务
  * @method Models\CreateAssetSortingReportTaskResponse CreateAssetSortingReportTask(Models\CreateAssetSortingReportTaskRequest $req) 创建资产梳理报告任务
- * @method Models\CreateClassificationRuleResponse CreateClassificationRule(Models\CreateClassificationRuleRequest $req) 旧版本DSGC接口下线
-
-创建识别规则
  * @method Models\CreateDSPAAssessmentRiskLevelResponse CreateDSPAAssessmentRiskLevel(Models\CreateDSPAAssessmentRiskLevelRequest $req) 风险项页面---创建风险等级
  * @method Models\CreateDSPAAssessmentRiskTemplateResponse CreateDSPAAssessmentRiskTemplate(Models\CreateDSPAAssessmentRiskTemplateRequest $req) 风险评估模板---创建风险评估模板
  * @method Models\CreateDSPAAssessmentTaskResponse CreateDSPAAssessmentTask(Models\CreateDSPAAssessmentTaskRequest $req) 新建DSPA风险评估任务
@@ -48,12 +45,6 @@ use TencentCloud\Dsgc\V20190723\Models as Models;
  * @method Models\CreateDSPAMetaResourcesResponse CreateDSPAMetaResources(Models\CreateDSPAMetaResourcesRequest $req) 添加用户云上资源列表
  * @method Models\CreateDSPASelfBuildMetaResourceResponse CreateDSPASelfBuildMetaResource(Models\CreateDSPASelfBuildMetaResourceRequest $req) 新建用户自建云资源
  * @method Models\CreateIdentifyRuleAnotherNameResponse CreateIdentifyRuleAnotherName(Models\CreateIdentifyRuleAnotherNameRequest $req) 创建规则别名
- * @method Models\CreateNewClassificationResponse CreateNewClassification(Models\CreateNewClassificationRequest $req) 旧版本DSGC接口下线
-
-创建新分类
- * @method Models\CreateOrCopyStandardResponse CreateOrCopyStandard(Models\CreateOrCopyStandardRequest $req) 旧版本DSGC接口下线
-
-创建或复制分级分类模板
  * @method Models\DecribeSuggestRiskLevelMatrixResponse DecribeSuggestRiskLevelMatrix(Models\DecribeSuggestRiskLevelMatrixRequest $req) 风险等级的定义页面-创建风险等级的时候生成的一个默认的矩阵
  * @method Models\DeleteCosMetaResourceResponse DeleteCosMetaResource(Models\DeleteCosMetaResourceRequest $req) 本接口（DeleteCOSMetaData）用于删除COS元数据信息。
  * @method Models\DeleteDSPAAssessmentTaskResponse DeleteDSPAAssessmentTask(Models\DeleteDSPAAssessmentTaskRequest $req) 删除DSPA风险评估任务
@@ -74,13 +65,6 @@ use TencentCloud\Dsgc\V20190723\Models as Models;
  * @method Models\DescribeAssetOverviewResponse DescribeAssetOverview(Models\DescribeAssetOverviewRequest $req) 数据资产报告页面-查询数据资产概览接口（包括数据库资产详情和存储资产详情）
  * @method Models\DescribeBindDBListResponse DescribeBindDBList(Models\DescribeBindDBListRequest $req) 查询DB绑定的列表
  * @method Models\DescribeCOSAssetSensitiveDistributionResponse DescribeCOSAssetSensitiveDistribution(Models\DescribeCOSAssetSensitiveDistributionRequest $req) 数据资产报告-查询cos的资产分布详情接口
- * @method Models\DescribeClassificationInfoResponse DescribeClassificationInfo(Models\DescribeClassificationInfoRequest $req) 旧版本DSGC接口下线
-
-查询分类信息
-
- * @method Models\DescribeClassificationRuleCountResponse DescribeClassificationRuleCount(Models\DescribeClassificationRuleCountRequest $req) 旧版本DSGC接口下线
-
-查询标准下所有分类的识别规则数量(不算子分类下的识别规则)
  * @method Models\DescribeDSPAAssessmentHighRiskTop10OverviewResponse DescribeDSPAAssessmentHighRiskTop10Overview(Models\DescribeDSPAAssessmentHighRiskTop10OverviewRequest $req) 查询高风险资产的top10
  * @method Models\DescribeDSPAAssessmentLatestRiskDetailInfoResponse DescribeDSPAAssessmentLatestRiskDetailInfo(Models\DescribeDSPAAssessmentLatestRiskDetailInfoRequest $req) 查询最新风险项详情数据
  * @method Models\DescribeDSPAAssessmentLatestRiskListResponse DescribeDSPAAssessmentLatestRiskList(Models\DescribeDSPAAssessmentLatestRiskListRequest $req) 查询最新的风险详情列表数据
@@ -149,17 +133,10 @@ use TencentCloud\Dsgc\V20190723\Models as Models;
  * @method Models\DescribeDSPATaskResultDataSampleResponse DescribeDSPATaskResultDataSample(Models\DescribeDSPATaskResultDataSampleRequest $req) 获取扫描结果数据样本
  * @method Models\DescribeESAssetSensitiveDistributionResponse DescribeESAssetSensitiveDistribution(Models\DescribeESAssetSensitiveDistributionRequest $req) 数据资产报告-查询es的敏感资产报告，包含（数据库资产，设敏级别数据库top10，资产详情）
  * @method Models\DescribeExportTaskResultResponse DescribeExportTaskResult(Models\DescribeExportTaskResultRequest $req) 获取导出任务结果
- * @method Models\DescribeLeafClassificationResponse DescribeLeafClassification(Models\DescribeLeafClassificationRequest $req) 旧版本DSGC接口下线
-
-查询标准下所有叶子节点分类
  * @method Models\DescribeMongoAssetSensitiveDistributionResponse DescribeMongoAssetSensitiveDistribution(Models\DescribeMongoAssetSensitiveDistributionRequest $req) 数据资产报告-查询mongo 的敏感资产报告，包含（数据库资产，设敏级别数据库top10，资产详情）
  * @method Models\DescribeRDBAssetSensitiveDistributionResponse DescribeRDBAssetSensitiveDistribution(Models\DescribeRDBAssetSensitiveDistributionRequest $req) 数据资产报告-查询rbd 的敏感资产报告，包含（数据库资产，设敏级别数据库top10，资产详情）
  * @method Models\DescribeReportTaskDownloadUrlResponse DescribeReportTaskDownloadUrl(Models\DescribeReportTaskDownloadUrlRequest $req) 获取报表下载链接
  * @method Models\DescribeReportTasksResponse DescribeReportTasks(Models\DescribeReportTasksRequest $req) 获取资产报表任务列表
- * @method Models\DescribeRuleListResponse DescribeRuleList(Models\DescribeRuleListRequest $req) 旧版本DSGC接口下线
-
-查询分类下规则列表
-
  * @method Models\DescribeSensitiveCOSDataDistributionResponse DescribeSensitiveCOSDataDistribution(Models\DescribeSensitiveCOSDataDistributionRequest $req) 数据资产报告-查询cos的敏感数据分布（分级分布 分类分布 敏感规则分布详情列表）
  * @method Models\DescribeSensitiveRDBDataDistributionResponse DescribeSensitiveRDBDataDistribution(Models\DescribeSensitiveRDBDataDistributionRequest $req) 数据资产报告-查询rdb的敏感数据分布-敏感规则字段分布-敏感分布详情
  * @method Models\DisableDSPAMetaResourceAuthResponse DisableDSPAMetaResourceAuth(Models\DisableDSPAMetaResourceAuthRequest $req) 取消用户云资源授权
@@ -173,12 +150,6 @@ use TencentCloud\Dsgc\V20190723\Models as Models;
  * @method Models\ListDSPAClustersResponse ListDSPAClusters(Models\ListDSPAClustersRequest $req) 拉取DSPA集群列表
  * @method Models\ListDSPACosMetaResourcesResponse ListDSPACosMetaResources(Models\ListDSPACosMetaResourcesRequest $req) 本接口用于获取COS元数据信息，返回COS元数据信息列表。
  * @method Models\ListDSPAMetaResourcesResponse ListDSPAMetaResources(Models\ListDSPAMetaResourcesRequest $req) 拉取用户云资源
- * @method Models\ModifyClassificationRuleResponse ModifyClassificationRule(Models\ModifyClassificationRuleRequest $req) 旧版本DSGC接口下线
-
-编辑识别规则
- * @method Models\ModifyClassificationRuleStateResponse ModifyClassificationRuleState(Models\ModifyClassificationRuleStateRequest $req) 旧版本DSGC接口下线
-
-修改识别规则状态
  * @method Models\ModifyDSPAAssessmentRiskResponse ModifyDSPAAssessmentRisk(Models\ModifyDSPAAssessmentRiskRequest $req) 修改DSPA评估风险项，支持修改Status
  * @method Models\ModifyDSPAAssessmentRiskLatestResponse ModifyDSPAAssessmentRiskLatest(Models\ModifyDSPAAssessmentRiskLatestRequest $req) 修改最新评估风险项状态
  * @method Models\ModifyDSPAAssessmentRiskLevelResponse ModifyDSPAAssessmentRiskLevel(Models\ModifyDSPAAssessmentRiskLevelRequest $req) 风险项页面----修改风险等级的详情数据
@@ -202,24 +173,6 @@ use TencentCloud\Dsgc\V20190723\Models as Models;
 4 扫描失败
  * @method Models\ModifyDSPAESTaskResultResponse ModifyDSPAESTaskResult(Models\ModifyDSPAESTaskResultRequest $req) 调整ES任务扫描结果
  * @method Models\ModifyDSPATaskResultResponse ModifyDSPATaskResult(Models\ModifyDSPATaskResultRequest $req) 调整任务扫描结果
- * @method Models\ModifyLevelInfoResponse ModifyLevelInfo(Models\ModifyLevelInfoRequest $req) 旧版本DSGC接口下线
-
-修改敏感级别信息
- * @method Models\ModifyLevelNameResponse ModifyLevelName(Models\ModifyLevelNameRequest $req) 旧版本DSGC接口下线
-
-修改级别名称
- * @method Models\ModifyLevelStateResponse ModifyLevelState(Models\ModifyLevelStateRequest $req) 旧版本DSGC接口下线
-
-开启级别或关闭级别
- * @method Models\ModifyMergeClassificationResponse ModifyMergeClassification(Models\ModifyMergeClassificationRequest $req) 旧版本DSGC接口下线
-
-一个分类合并到另一个分类中（分类拖拽功能）
- * @method Models\ModifyNewClassificationResponse ModifyNewClassification(Models\ModifyNewClassificationRequest $req) 旧版本DSGC接口下线
-
-修改分类信息
- * @method Models\ModifyStandardInfoResponse ModifyStandardInfo(Models\ModifyStandardInfoRequest $req) 旧版本DSGC接口下线
-
-修改分级分类模板信息
  * @method Models\QueryDSPAMetaResourceDbListResponse QueryDSPAMetaResourceDbList(Models\QueryDSPAMetaResourceDbListRequest $req) 查询DSPA实例的db列表
  * @method Models\QueryResourceDbBindStatusResponse QueryResourceDbBindStatus(Models\QueryResourceDbBindStatusRequest $req) 获取资源绑定DB状态
  * @method Models\RestartDSPAAssessmentTaskResponse RestartDSPAAssessmentTask(Models\RestartDSPAAssessmentTaskRequest $req) 重新启动DSPA风险评估任务

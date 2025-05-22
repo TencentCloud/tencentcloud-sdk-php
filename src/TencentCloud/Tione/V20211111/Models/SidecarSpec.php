@@ -14,20 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dsgc\V20190723\Models;
+namespace TencentCloud\Tione\V20211111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyLevelInfo请求参数结构体
+ * sidecar容器配置
  *
-
+ * @method ImageInfo getImageInfo() 获取镜像配置
+ * @method void setImageInfo(ImageInfo $ImageInfo) 设置镜像配置
  */
-class ModifyLevelInfoRequest extends AbstractModel
+class SidecarSpec extends AbstractModel
 {
-
+    /**
+     * @var ImageInfo 镜像配置
+     */
+    public $ImageInfo;
 
     /**
-
+     * @param ImageInfo $ImageInfo 镜像配置
      */
     function __construct()
     {
@@ -42,6 +46,9 @@ class ModifyLevelInfoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("ImageInfo",$param) and $param["ImageInfo"] !== null) {
+            $this->ImageInfo = new ImageInfo();
+            $this->ImageInfo->deserialize($param["ImageInfo"]);
+        }
     }
 }

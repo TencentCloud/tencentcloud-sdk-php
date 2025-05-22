@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlux(float $Flux) 设置流量，单位MB。
  * @method string getServerIp() 获取推流服务端 IP。
  * @method void setServerIp(string $ServerIp) 设置推流服务端 IP。
+ * @method integer getGopSize() 获取关键帧间隔 GOP ，单位：ms。
+ * @method void setGopSize(integer $GopSize) 设置关键帧间隔 GOP ，单位：ms。
  */
 class PushQualityData extends AbstractModel
 {
@@ -191,6 +193,11 @@ class PushQualityData extends AbstractModel
     public $ServerIp;
 
     /**
+     * @var integer 关键帧间隔 GOP ，单位：ms。
+     */
+    public $GopSize;
+
+    /**
      * @param string $Time 数据时间，使用UTC格式时间，
 例如：2019-01-08T10:00:00Z。
 注意：北京时间值为 UTC 时间值 + 8 小时，格式按照 ISO 8601 标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#I)。
@@ -216,6 +223,7 @@ class PushQualityData extends AbstractModel
      * @param float $Bandwidth 带宽，单位Mbps。
      * @param float $Flux 流量，单位MB。
      * @param string $ServerIp 推流服务端 IP。
+     * @param integer $GopSize 关键帧间隔 GOP ，单位：ms。
      */
     function __construct()
     {
@@ -320,6 +328,10 @@ class PushQualityData extends AbstractModel
 
         if (array_key_exists("ServerIp",$param) and $param["ServerIp"] !== null) {
             $this->ServerIp = $param["ServerIp"];
+        }
+
+        if (array_key_exists("GopSize",$param) and $param["GopSize"] !== null) {
+            $this->GopSize = $param["GopSize"];
         }
     }
 }

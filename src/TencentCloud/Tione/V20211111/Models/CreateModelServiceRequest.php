@@ -144,6 +144,10 @@ HYBRID_PAID:
  * @method void setGrpcEnable(boolean $GrpcEnable) 设置是否启用 grpc 端口
  * @method HealthProbe getHealthProbe() 获取健康探针
  * @method void setHealthProbe(HealthProbe $HealthProbe) 设置健康探针
+ * @method RollingUpdate getRollingUpdate() 获取滚动更新策略
+ * @method void setRollingUpdate(RollingUpdate $RollingUpdate) 设置滚动更新策略
+ * @method SidecarSpec getSidecar() 获取sidecar配置
+ * @method void setSidecar(SidecarSpec $Sidecar) 设置sidecar配置
  */
 class CreateModelServiceRequest extends AbstractModel
 {
@@ -366,6 +370,16 @@ HYBRID_PAID:
     public $HealthProbe;
 
     /**
+     * @var RollingUpdate 滚动更新策略
+     */
+    public $RollingUpdate;
+
+    /**
+     * @var SidecarSpec sidecar配置
+     */
+    public $Sidecar;
+
+    /**
      * @param string $ServiceGroupId 新增版本时需要填写
      * @param string $ServiceGroupName 不超过60个字，仅支持英文、数字、下划线"_"、短横"-"，只能以英文、数字开头
      * @param string $ServiceDescription 模型服务的描述
@@ -428,6 +442,8 @@ HYBRID_PAID:
      * @param array $PreStopCommand ["sleep","60"]
      * @param boolean $GrpcEnable 是否启用 grpc 端口
      * @param HealthProbe $HealthProbe 健康探针
+     * @param RollingUpdate $RollingUpdate 滚动更新策略
+     * @param SidecarSpec $Sidecar sidecar配置
      */
     function __construct()
     {
@@ -621,6 +637,16 @@ HYBRID_PAID:
         if (array_key_exists("HealthProbe",$param) and $param["HealthProbe"] !== null) {
             $this->HealthProbe = new HealthProbe();
             $this->HealthProbe->deserialize($param["HealthProbe"]);
+        }
+
+        if (array_key_exists("RollingUpdate",$param) and $param["RollingUpdate"] !== null) {
+            $this->RollingUpdate = new RollingUpdate();
+            $this->RollingUpdate->deserialize($param["RollingUpdate"]);
+        }
+
+        if (array_key_exists("Sidecar",$param) and $param["Sidecar"] !== null) {
+            $this->Sidecar = new SidecarSpec();
+            $this->Sidecar->deserialize($param["Sidecar"]);
         }
     }
 }

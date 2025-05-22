@@ -38,8 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceName(string $ResourceName) 设置资源别名：用户在控制台为资源设置的名称，如果未设置，则默认为空
  * @method string getActionTypeName() 获取交易类型，如包年包月新购、包年包月续费、按量计费扣费等类型
  * @method void setActionTypeName(string $ActionTypeName) 设置交易类型，如包年包月新购、包年包月续费、按量计费扣费等类型
- * @method string getOrderId() 获取订单ID：包年包月计费模式下订购的订单号
- * @method void setOrderId(string $OrderId) 设置订单ID：包年包月计费模式下订购的订单号
+ * @method string getOrderId() 获取订单ID：包年包月计费模式下对应子订单号。后付费计费模式下账单费用不存在订单概念，可忽略此参数。
+
+ * @method void setOrderId(string $OrderId) 设置订单ID：包年包月计费模式下对应子订单号。后付费计费模式下账单费用不存在订单概念，可忽略此参数。
+
  * @method string getBillId() 获取交易ID：结算扣费单号
  * @method void setBillId(string $BillId) 设置交易ID：结算扣费单号
  * @method string getPayTime() 获取扣费时间：结算扣费时间
@@ -143,7 +145,8 @@ class BillDetail extends AbstractModel
     public $ActionTypeName;
 
     /**
-     * @var string 订单ID：包年包月计费模式下订购的订单号
+     * @var string 订单ID：包年包月计费模式下对应子订单号。后付费计费模式下账单费用不存在订单概念，可忽略此参数。
+
      */
     public $OrderId;
 
@@ -292,7 +295,8 @@ class BillDetail extends AbstractModel
      * @param string $ResourceId 资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID
      * @param string $ResourceName 资源别名：用户在控制台为资源设置的名称，如果未设置，则默认为空
      * @param string $ActionTypeName 交易类型，如包年包月新购、包年包月续费、按量计费扣费等类型
-     * @param string $OrderId 订单ID：包年包月计费模式下订购的订单号
+     * @param string $OrderId 订单ID：包年包月计费模式下对应子订单号。后付费计费模式下账单费用不存在订单概念，可忽略此参数。
+
      * @param string $BillId 交易ID：结算扣费单号
      * @param string $PayTime 扣费时间：结算扣费时间
      * @param string $FeeBeginTime 开始使用时间：产品服务开始使用时间

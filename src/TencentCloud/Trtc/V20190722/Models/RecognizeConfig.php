@@ -160,6 +160,8 @@ use TencentCloud\Common\AbstractModel;
 丹麦语: da
  * @method string getHotWordList() 获取热词表：该参数用于提升识别准确率。 单个热词限制："热词|权重"，单个热词不超过30个字符（最多10个汉字），权重[1-11]或者100，如：“腾讯云|5” 或 “ASR|11”； 热词表限制：多个热词用英文逗号分割，最多支持300个热词，如：“腾讯云|10,语音识别|5,ASR|11”；
  * @method void setHotWordList(string $HotWordList) 设置热词表：该参数用于提升识别准确率。 单个热词限制："热词|权重"，单个热词不超过30个字符（最多10个汉字），权重[1-11]或者100，如：“腾讯云|5” 或 “ASR|11”； 热词表限制：多个热词用英文逗号分割，最多支持300个热词，如：“腾讯云|10,语音识别|5,ASR|11”；
+ * @method integer getVadSilenceTime() 获取语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
+ * @method void setVadSilenceTime(integer $VadSilenceTime) 设置语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
  */
 class RecognizeConfig extends AbstractModel
 {
@@ -256,6 +258,11 @@ class RecognizeConfig extends AbstractModel
     public $HotWordList;
 
     /**
+     * @var integer 语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
+     */
+    public $VadSilenceTime;
+
+    /**
      * @param string $Language 
 语音转文字支持识别的语言，默认是"zh" 中文
 
@@ -326,6 +333,7 @@ class RecognizeConfig extends AbstractModel
 挪威语: no
 丹麦语: da
      * @param string $HotWordList 热词表：该参数用于提升识别准确率。 单个热词限制："热词|权重"，单个热词不超过30个字符（最多10个汉字），权重[1-11]或者100，如：“腾讯云|5” 或 “ASR|11”； 热词表限制：多个热词用英文逗号分割，最多支持300个热词，如：“腾讯云|10,语音识别|5,ASR|11”；
+     * @param integer $VadSilenceTime 语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。
      */
     function __construct()
     {
@@ -358,6 +366,10 @@ class RecognizeConfig extends AbstractModel
 
         if (array_key_exists("HotWordList",$param) and $param["HotWordList"] !== null) {
             $this->HotWordList = $param["HotWordList"];
+        }
+
+        if (array_key_exists("VadSilenceTime",$param) and $param["VadSilenceTime"] !== null) {
+            $this->VadSilenceTime = $param["VadSilenceTime"];
         }
     }
 }

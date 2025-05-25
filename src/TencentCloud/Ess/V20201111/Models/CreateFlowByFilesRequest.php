@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
 <li> 图片控件          </li>
 <li> 水印控件等          </li>
 </ul>
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/e004195ee4cb98a7f9bc12eb4a0a0b77.png)
  * @method void setComponents(array $Components) 设置发起的时候合成到PDF上的填写控件（需要提供填写控件的内容）
 <ul><li> 单行文本控件      </li>
 <li> 多行文本控件      </li>
@@ -70,6 +72,8 @@ use TencentCloud\Common\AbstractModel;
 <li> 图片控件          </li>
 <li> 水印控件等          </li>
 </ul>
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/e004195ee4cb98a7f9bc12eb4a0a0b77.png)
  * @method array getCcInfos() 获取合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
 
 <b>注</b>
@@ -263,6 +267,8 @@ class CreateFlowByFilesRequest extends AbstractModel
 <li> 图片控件          </li>
 <li> 水印控件等          </li>
 </ul>
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/e004195ee4cb98a7f9bc12eb4a0a0b77.png)
      */
     public $Components;
 
@@ -426,6 +432,8 @@ class CreateFlowByFilesRequest extends AbstractModel
 <li> 图片控件          </li>
 <li> 水印控件等          </li>
 </ul>
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/e004195ee4cb98a7f9bc12eb4a0a0b77.png)
      * @param array $CcInfos 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
 
 <b>注</b>

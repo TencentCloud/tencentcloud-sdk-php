@@ -30,16 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRecordLine(string $RecordLine) 设置解析记录的线路，详见 DescribeRecordLineList 接口，RecordLine和RecordLineId都未填时，默认为「默认」线路。
  * @method string getRecordLineId() 获取解析记录的线路 ID，RecordLine和RecordLineId都有时，系统优先取 RecordLineId。
  * @method void setRecordLineId(string $RecordLineId) 设置解析记录的线路 ID，RecordLine和RecordLineId都有时，系统优先取 RecordLineId。
- * @method integer getWeight() 获取记录权重值(暂未支持)。
- * @method void setWeight(integer $Weight) 设置记录权重值(暂未支持)。
  * @method integer getMX() 获取记录的 MX 记录值，非 MX 记录类型，默认为 0，MX记录则必选。
  * @method void setMX(integer $MX) 设置记录的 MX 记录值，非 MX 记录类型，默认为 0，MX记录则必选。
  * @method integer getTTL() 获取记录的 TTL 值，默认600。
  * @method void setTTL(integer $TTL) 设置记录的 TTL 值，默认600。
- * @method integer getEnabled() 获取记录状态(暂未支持)。0表示禁用，1表示启用。默认启用。
- * @method void setEnabled(integer $Enabled) 设置记录状态(暂未支持)。0表示禁用，1表示启用。默认启用。
- * @method string getRemark() 获取记录备注(暂未支持)。
- * @method void setRemark(string $Remark) 设置记录备注(暂未支持)。
  */
 class AddRecordBatch extends AbstractModel
 {
@@ -69,11 +63,6 @@ class AddRecordBatch extends AbstractModel
     public $RecordLineId;
 
     /**
-     * @var integer 记录权重值(暂未支持)。
-     */
-    public $Weight;
-
-    /**
      * @var integer 记录的 MX 记录值，非 MX 记录类型，默认为 0，MX记录则必选。
      */
     public $MX;
@@ -84,26 +73,13 @@ class AddRecordBatch extends AbstractModel
     public $TTL;
 
     /**
-     * @var integer 记录状态(暂未支持)。0表示禁用，1表示启用。默认启用。
-     */
-    public $Enabled;
-
-    /**
-     * @var string 记录备注(暂未支持)。
-     */
-    public $Remark;
-
-    /**
      * @param string $RecordType 记录类型, 详见 DescribeRecordType 接口。
      * @param string $Value 记录值。
      * @param string $SubDomain 子域名(主机记录)，默认为@。
      * @param string $RecordLine 解析记录的线路，详见 DescribeRecordLineList 接口，RecordLine和RecordLineId都未填时，默认为「默认」线路。
      * @param string $RecordLineId 解析记录的线路 ID，RecordLine和RecordLineId都有时，系统优先取 RecordLineId。
-     * @param integer $Weight 记录权重值(暂未支持)。
      * @param integer $MX 记录的 MX 记录值，非 MX 记录类型，默认为 0，MX记录则必选。
      * @param integer $TTL 记录的 TTL 值，默认600。
-     * @param integer $Enabled 记录状态(暂未支持)。0表示禁用，1表示启用。默认启用。
-     * @param string $Remark 记录备注(暂未支持)。
      */
     function __construct()
     {
@@ -138,24 +114,12 @@ class AddRecordBatch extends AbstractModel
             $this->RecordLineId = $param["RecordLineId"];
         }
 
-        if (array_key_exists("Weight",$param) and $param["Weight"] !== null) {
-            $this->Weight = $param["Weight"];
-        }
-
         if (array_key_exists("MX",$param) and $param["MX"] !== null) {
             $this->MX = $param["MX"];
         }
 
         if (array_key_exists("TTL",$param) and $param["TTL"] !== null) {
             $this->TTL = $param["TTL"];
-        }
-
-        if (array_key_exists("Enabled",$param) and $param["Enabled"] !== null) {
-            $this->Enabled = $param["Enabled"];
-        }
-
-        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
-            $this->Remark = $param["Remark"];
         }
     }
 }

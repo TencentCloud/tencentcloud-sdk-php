@@ -56,10 +56,14 @@ use TencentCloud\Common\AbstractModel;
 <ul><li> 个人签名/印章</li>
 <li> 企业印章</li>
 <li> 骑缝章等签署控件</li></ul>
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/91757a7f9188ccf3057a4a8979cf3f93.png)
  * @method void setSignComponents(array $SignComponents) 设置【在用文件发起合同场景下才有效，模板发起场景下需要在模板中配置】合同中的该名签署方的签署控件列表，列表中可支持下列多种签署控件,控件的详细定义参考开发者中心的Component结构体
 <ul><li> 个人签名/印章</li>
 <li> 企业印章</li>
 <li> 骑缝章等签署控件</li></ul>
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/91757a7f9188ccf3057a4a8979cf3f93.png)
  * @method string getApproverIdCardType() 获取签署方经办人的证件类型，支持以下类型，样式可以参考<a href="https://qian.tencent.com/developers/partner/id_card_support/" target="_blank">常见个人证件类型介绍</a>
 <ul><li>ID_CARD 中国大陆居民身份证  (默认值)</li>
 <li>HONGKONG_AND_MACAO 港澳居民来往内地通行证</li>
@@ -255,6 +259,8 @@ use TencentCloud\Common\AbstractModel;
 具体使用说明可参考[为签署方指定填写控件](https://qian.tencent.cn/developers/company/createFlowByFiles/#指定签署方填写控件)
 
 注：`此参数仅在通过文件发起合同或者合同组时生效`
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/e004195ee4cb98a7f9bc12eb4a0a0b77.png)
  * @method void setComponents(array $Components) 设置【在用文件发起合同场景下才有效，模板发起场景下需要在模板中配置】签署人在合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
 <ul><li>单行文本控件</li>
 <li>多行文本控件</li>
@@ -266,6 +272,8 @@ use TencentCloud\Common\AbstractModel;
 具体使用说明可参考[为签署方指定填写控件](https://qian.tencent.cn/developers/company/createFlowByFiles/#指定签署方填写控件)
 
 注：`此参数仅在通过文件发起合同或者合同组时生效`
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/e004195ee4cb98a7f9bc12eb4a0a0b77.png)
  * @method array getSignEndpoints() 获取进入签署流程的限制，目前支持以下选项：
 <ul><li> <b>空值（默认）</b> :无限制，可在任何场景进入签署流程。</li><li> <b>link</b> :选择此选项后，将无法通过控制台或电子签小程序列表进入填写或签署操作，仅可预览合同。填写或签署流程只能通过短信或发起方提供的专用链接进行。</li></ul>
  * @method void setSignEndpoints(array $SignEndpoints) 设置进入签署流程的限制，目前支持以下选项：
@@ -310,6 +318,8 @@ class ApproverInfo extends AbstractModel
 <ul><li> 个人签名/印章</li>
 <li> 企业印章</li>
 <li> 骑缝章等签署控件</li></ul>
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/91757a7f9188ccf3057a4a8979cf3f93.png)
      */
     public $SignComponents;
 
@@ -485,6 +495,8 @@ class ApproverInfo extends AbstractModel
 具体使用说明可参考[为签署方指定填写控件](https://qian.tencent.cn/developers/company/createFlowByFiles/#指定签署方填写控件)
 
 注：`此参数仅在通过文件发起合同或者合同组时生效`
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/e004195ee4cb98a7f9bc12eb4a0a0b77.png)
      */
     public $Components;
 
@@ -515,6 +527,8 @@ class ApproverInfo extends AbstractModel
 <ul><li> 个人签名/印章</li>
 <li> 企业印章</li>
 <li> 骑缝章等签署控件</li></ul>
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/91757a7f9188ccf3057a4a8979cf3f93.png)
      * @param string $ApproverIdCardType 签署方经办人的证件类型，支持以下类型，样式可以参考<a href="https://qian.tencent.com/developers/partner/id_card_support/" target="_blank">常见个人证件类型介绍</a>
 <ul><li>ID_CARD 中国大陆居民身份证  (默认值)</li>
 <li>HONGKONG_AND_MACAO 港澳居民来往内地通行证</li>
@@ -618,6 +632,8 @@ class ApproverInfo extends AbstractModel
 具体使用说明可参考[为签署方指定填写控件](https://qian.tencent.cn/developers/company/createFlowByFiles/#指定签署方填写控件)
 
 注：`此参数仅在通过文件发起合同或者合同组时生效`
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/e004195ee4cb98a7f9bc12eb4a0a0b77.png)
      * @param array $SignEndpoints 进入签署流程的限制，目前支持以下选项：
 <ul><li> <b>空值（默认）</b> :无限制，可在任何场景进入签署流程。</li><li> <b>link</b> :选择此选项后，将无法通过控制台或电子签小程序列表进入填写或签署操作，仅可预览合同。填写或签署流程只能通过短信或发起方提供的专用链接进行。</li></ul>
      */

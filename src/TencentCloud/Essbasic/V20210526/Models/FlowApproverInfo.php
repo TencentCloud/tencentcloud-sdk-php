@@ -129,7 +129,11 @@ RecipientId参数获取：
  * @method string getCallbackUrl() 获取签署完回调url，最大长度1000个字符
  * @method void setCallbackUrl(string $CallbackUrl) 设置签署完回调url，最大长度1000个字符
  * @method array getSignComponents() 获取使用PDF文件直接发起合同时，签署人指定的签署控件；<br/>使用模板发起合同时，指定本企业印章签署控件的印章ID: <br/>通过ComponentId或ComponenetName指定签署控件，ComponentValue为印章ID。
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/91757a7f9188ccf3057a4a8979cf3f93.png)
  * @method void setSignComponents(array $SignComponents) 设置使用PDF文件直接发起合同时，签署人指定的签署控件；<br/>使用模板发起合同时，指定本企业印章签署控件的印章ID: <br/>通过ComponentId或ComponenetName指定签署控件，ComponentValue为印章ID。
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/91757a7f9188ccf3057a4a8979cf3f93.png)
  * @method array getComponentLimitType() 获取当签署方控件类型为 <b>SIGN_SIGNATURE</b> 时，可以指定签署方签名方式。如果不指定，签署人可以使用所有的签名类型，可指定的签名类型包括：
 
 <ul><li> <b>HANDWRITE</b> :需要实时手写的手写签名。</li>
@@ -286,8 +290,9 @@ RecipientId参数获取：
 
 具体使用说明可参考[为签署方指定填写控件](https://qian.tencent.cn/developers/partner/createFlowByFiles#为签署方指定填写控件)
 
-
 注：`此参数仅在通过文件发起合同或者合同组时生效`
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/e004195ee4cb98a7f9bc12eb4a0a0b77.png)
  * @method void setComponents(array $Components) 设置签署人在合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
 <ul><li>单行文本控件</li>
 <li>多行文本控件</li>
@@ -298,8 +303,9 @@ RecipientId参数获取：
 
 具体使用说明可参考[为签署方指定填写控件](https://qian.tencent.cn/developers/partner/createFlowByFiles#为签署方指定填写控件)
 
-
 注：`此参数仅在通过文件发起合同或者合同组时生效`
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/e004195ee4cb98a7f9bc12eb4a0a0b77.png)
  * @method Intention getIntention() 获取<b>只有在生成H5签署链接的情形下</b>（ 如调用<a href="https://qian.tencent.com/developers/partnerApis/operateFlows/ChannelCreateFlowSignUrl" target="_blank">获取H5签署链接</a>、<a href="https://qian.tencent.com/developers/partnerApis/operateFlows/ChannelCreateBatchQuickSignUrl" target="_blank">获取H5批量签署链接</a>等接口），该配置才会生效。
 
 您可以指定H5签署视频核身的意图配置，选择问答模式或点头模式的语音文本。
@@ -422,6 +428,8 @@ class FlowApproverInfo extends AbstractModel
 
     /**
      * @var array 使用PDF文件直接发起合同时，签署人指定的签署控件；<br/>使用模板发起合同时，指定本企业印章签署控件的印章ID: <br/>通过ComponentId或ComponenetName指定签署控件，ComponentValue为印章ID。
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/91757a7f9188ccf3057a4a8979cf3f93.png)
      */
     public $SignComponents;
 
@@ -557,8 +565,9 @@ class FlowApproverInfo extends AbstractModel
 
 具体使用说明可参考[为签署方指定填写控件](https://qian.tencent.cn/developers/partner/createFlowByFiles#为签署方指定填写控件)
 
-
 注：`此参数仅在通过文件发起合同或者合同组时生效`
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/e004195ee4cb98a7f9bc12eb4a0a0b77.png)
      */
     public $Components;
 
@@ -630,6 +639,8 @@ class FlowApproverInfo extends AbstractModel
 注: `若不设置此参数，则默认使用合同的截止时间，此参数暂不支持合同组子合同`
      * @param string $CallbackUrl 签署完回调url，最大长度1000个字符
      * @param array $SignComponents 使用PDF文件直接发起合同时，签署人指定的签署控件；<br/>使用模板发起合同时，指定本企业印章签署控件的印章ID: <br/>通过ComponentId或ComponenetName指定签署控件，ComponentValue为印章ID。
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/91757a7f9188ccf3057a4a8979cf3f93.png)
      * @param array $ComponentLimitType 当签署方控件类型为 <b>SIGN_SIGNATURE</b> 时，可以指定签署方签名方式。如果不指定，签署人可以使用所有的签名类型，可指定的签名类型包括：
 
 <ul><li> <b>HANDWRITE</b> :需要实时手写的手写签名。</li>
@@ -713,8 +724,9 @@ class FlowApproverInfo extends AbstractModel
 
 具体使用说明可参考[为签署方指定填写控件](https://qian.tencent.cn/developers/partner/createFlowByFiles#为签署方指定填写控件)
 
-
 注：`此参数仅在通过文件发起合同或者合同组时生效`
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/e004195ee4cb98a7f9bc12eb4a0a0b77.png)
      * @param Intention $Intention <b>只有在生成H5签署链接的情形下</b>（ 如调用<a href="https://qian.tencent.com/developers/partnerApis/operateFlows/ChannelCreateFlowSignUrl" target="_blank">获取H5签署链接</a>、<a href="https://qian.tencent.com/developers/partnerApis/operateFlows/ChannelCreateBatchQuickSignUrl" target="_blank">获取H5批量签署链接</a>等接口），该配置才会生效。
 
 您可以指定H5签署视频核身的意图配置，选择问答模式或点头模式的语音文本。

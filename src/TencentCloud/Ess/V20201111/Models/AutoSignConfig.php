@@ -25,9 +25,13 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getCertInfoCallback() 获取是否回调证书信息:
 <ul><li>**false**: 不需要(默认)</li>
 <li>**true**:需要</li></ul>
+
+注：`该字段已经失效，请勿设置此参数。`
  * @method void setCertInfoCallback(boolean $CertInfoCallback) 设置是否回调证书信息:
 <ul><li>**false**: 不需要(默认)</li>
 <li>**true**:需要</li></ul>
+
+注：`该字段已经失效，请勿设置此参数。`
  * @method boolean getUserDefineSeal() 获取是否支持用户自定义签名印章:
 <ul><li>**false**: 不能自己定义(默认)</li>
 <li>**true**: 可以自己定义</li></ul>
@@ -48,14 +52,14 @@ use TencentCloud\Common\AbstractModel;
 回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
  * @method array getVerifyChannels() 获取开通时候的身份验证方式, 取值为：
 <ul><li>**WEIXINAPP** : 微信人脸识别</li>
-<li>**INSIGHT** : 慧眼人脸认别</li>
+<li>**INSIGHT** : 慧眼人脸识别</li>
 <li>**TELECOM** : 运营商三要素验证</li></ul>
 注：
 <ul><li>如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。为空默认 WEIXINAPP</li>
 <li>如果是 H5 开通链接，支持传 INSIGHT / TELECOM。为空默认 INSIGHT </li></ul>
  * @method void setVerifyChannels(array $VerifyChannels) 设置开通时候的身份验证方式, 取值为：
 <ul><li>**WEIXINAPP** : 微信人脸识别</li>
-<li>**INSIGHT** : 慧眼人脸认别</li>
+<li>**INSIGHT** : 慧眼人脸识别</li>
 <li>**TELECOM** : 运营商三要素验证</li></ul>
 注：
 <ul><li>如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。为空默认 WEIXINAPP</li>
@@ -63,9 +67,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLicenseType() 获取设置用户自动签合同的扣费方式。
 
 <ul><li><b>1</b>: (默认)使用合同份额进行扣减</li></ul>
+
+注：`该字段已经失效，请勿设置此参数。`
  * @method void setLicenseType(integer $LicenseType) 设置设置用户自动签合同的扣费方式。
 
 <ul><li><b>1</b>: (默认)使用合同份额进行扣减</li></ul>
+
+注：`该字段已经失效，请勿设置此参数。`
  * @method string getJumpUrl() 获取开通成功后前端页面跳转的url，此字段的用法场景请联系客户经理确认。
 
 注：`仅支持H5开通场景`, `跳转链接仅支持 https:// , qianapp:// 开头`
@@ -98,6 +106,8 @@ class AutoSignConfig extends AbstractModel
      * @var boolean 是否回调证书信息:
 <ul><li>**false**: 不需要(默认)</li>
 <li>**true**:需要</li></ul>
+
+注：`该字段已经失效，请勿设置此参数。`
      */
     public $CertInfoCallback;
 
@@ -126,7 +136,7 @@ class AutoSignConfig extends AbstractModel
     /**
      * @var array 开通时候的身份验证方式, 取值为：
 <ul><li>**WEIXINAPP** : 微信人脸识别</li>
-<li>**INSIGHT** : 慧眼人脸认别</li>
+<li>**INSIGHT** : 慧眼人脸识别</li>
 <li>**TELECOM** : 运营商三要素验证</li></ul>
 注：
 <ul><li>如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。为空默认 WEIXINAPP</li>
@@ -138,6 +148,8 @@ class AutoSignConfig extends AbstractModel
      * @var integer 设置用户自动签合同的扣费方式。
 
 <ul><li><b>1</b>: (默认)使用合同份额进行扣减</li></ul>
+
+注：`该字段已经失效，请勿设置此参数。`
      */
     public $LicenseType;
 
@@ -160,6 +172,8 @@ class AutoSignConfig extends AbstractModel
      * @param boolean $CertInfoCallback 是否回调证书信息:
 <ul><li>**false**: 不需要(默认)</li>
 <li>**true**:需要</li></ul>
+
+注：`该字段已经失效，请勿设置此参数。`
      * @param boolean $UserDefineSeal 是否支持用户自定义签名印章:
 <ul><li>**false**: 不能自己定义(默认)</li>
 <li>**true**: 可以自己定义</li></ul>
@@ -171,7 +185,7 @@ class AutoSignConfig extends AbstractModel
 回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
      * @param array $VerifyChannels 开通时候的身份验证方式, 取值为：
 <ul><li>**WEIXINAPP** : 微信人脸识别</li>
-<li>**INSIGHT** : 慧眼人脸认别</li>
+<li>**INSIGHT** : 慧眼人脸识别</li>
 <li>**TELECOM** : 运营商三要素验证</li></ul>
 注：
 <ul><li>如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。为空默认 WEIXINAPP</li>
@@ -179,6 +193,8 @@ class AutoSignConfig extends AbstractModel
      * @param integer $LicenseType 设置用户自动签合同的扣费方式。
 
 <ul><li><b>1</b>: (默认)使用合同份额进行扣减</li></ul>
+
+注：`该字段已经失效，请勿设置此参数。`
      * @param string $JumpUrl 开通成功后前端页面跳转的url，此字段的用法场景请联系客户经理确认。
 
 注：`仅支持H5开通场景`, `跳转链接仅支持 https:// , qianapp:// 开头`

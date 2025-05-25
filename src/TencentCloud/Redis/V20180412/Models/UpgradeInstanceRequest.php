@@ -31,11 +31,11 @@ use TencentCloud\Common\AbstractModel;
  * @method array getNodeSet() 获取多AZ实例，增加副本时的节点信息，包括副本的 ID 编号及可用区信息。非多AZ实例不需要配置该参数。
  * @method void setNodeSet(array $NodeSet) 设置多AZ实例，增加副本时的节点信息，包括副本的 ID 编号及可用区信息。非多AZ实例不需要配置该参数。
  * @method integer getSwitchOption() 获取切换时间。 
-- 1：维护时间窗操作：在设置的维护时间窗内执行操作。请通过接口[DescribeMaintenanceWindow](https://cloud.tencent.com/document/product/239/46336)查询设置的维护时间窗时间段。缩副本、扩缩分片、扩内存均支持在维护时间窗执行操作。
-- 2：立即操作：默认切换时刻。操作将立即执行，无需等待维护时间窗。
+- 1：维护时间窗操作：指升级规格在设置的维护时间窗内执行。请通过接口[DescribeMaintenanceWindow](https://cloud.tencent.com/document/product/239/46336)查询设置的维护时间窗时间段。增减副本、增减分片、扩缩内存均支持在维护时间窗执行操作。维护时间窗升级规格正在分地域逐步测试发布中，部分区域已支持，未覆盖地域若需紧急接入，请[提交工单](https://console.cloud.tencent.com/workorder/category)申请白名单。
+- 2：立即操作：操作将立即执行，无需等待维护时间窗。系统默认设置为立即操作。
  * @method void setSwitchOption(integer $SwitchOption) 设置切换时间。 
-- 1：维护时间窗操作：在设置的维护时间窗内执行操作。请通过接口[DescribeMaintenanceWindow](https://cloud.tencent.com/document/product/239/46336)查询设置的维护时间窗时间段。缩副本、扩缩分片、扩内存均支持在维护时间窗执行操作。
-- 2：立即操作：默认切换时刻。操作将立即执行，无需等待维护时间窗。
+- 1：维护时间窗操作：指升级规格在设置的维护时间窗内执行。请通过接口[DescribeMaintenanceWindow](https://cloud.tencent.com/document/product/239/46336)查询设置的维护时间窗时间段。增减副本、增减分片、扩缩内存均支持在维护时间窗执行操作。维护时间窗升级规格正在分地域逐步测试发布中，部分区域已支持，未覆盖地域若需紧急接入，请[提交工单](https://console.cloud.tencent.com/workorder/category)申请白名单。
+- 2：立即操作：操作将立即执行，无需等待维护时间窗。系统默认设置为立即操作。
  */
 class UpgradeInstanceRequest extends AbstractModel
 {
@@ -66,8 +66,8 @@ class UpgradeInstanceRequest extends AbstractModel
 
     /**
      * @var integer 切换时间。 
-- 1：维护时间窗操作：在设置的维护时间窗内执行操作。请通过接口[DescribeMaintenanceWindow](https://cloud.tencent.com/document/product/239/46336)查询设置的维护时间窗时间段。缩副本、扩缩分片、扩内存均支持在维护时间窗执行操作。
-- 2：立即操作：默认切换时刻。操作将立即执行，无需等待维护时间窗。
+- 1：维护时间窗操作：指升级规格在设置的维护时间窗内执行。请通过接口[DescribeMaintenanceWindow](https://cloud.tencent.com/document/product/239/46336)查询设置的维护时间窗时间段。增减副本、增减分片、扩缩内存均支持在维护时间窗执行操作。维护时间窗升级规格正在分地域逐步测试发布中，部分区域已支持，未覆盖地域若需紧急接入，请[提交工单](https://console.cloud.tencent.com/workorder/category)申请白名单。
+- 2：立即操作：操作将立即执行，无需等待维护时间窗。系统默认设置为立即操作。
      */
     public $SwitchOption;
 
@@ -78,8 +78,8 @@ class UpgradeInstanceRequest extends AbstractModel
      * @param integer $RedisReplicasNum 指实例变更后的副本数量。<ul><li>每次只能修改参数RedisReplicasNum、MemSize和RedisShardNum其中的一个，不能同时修改。且修改其中一个参数时，其他两个参数需输入实例原有的配置规格。</li><li>多AZ实例修改副本时必须要传入NodeSet。</li></ul>
      * @param array $NodeSet 多AZ实例，增加副本时的节点信息，包括副本的 ID 编号及可用区信息。非多AZ实例不需要配置该参数。
      * @param integer $SwitchOption 切换时间。 
-- 1：维护时间窗操作：在设置的维护时间窗内执行操作。请通过接口[DescribeMaintenanceWindow](https://cloud.tencent.com/document/product/239/46336)查询设置的维护时间窗时间段。缩副本、扩缩分片、扩内存均支持在维护时间窗执行操作。
-- 2：立即操作：默认切换时刻。操作将立即执行，无需等待维护时间窗。
+- 1：维护时间窗操作：指升级规格在设置的维护时间窗内执行。请通过接口[DescribeMaintenanceWindow](https://cloud.tencent.com/document/product/239/46336)查询设置的维护时间窗时间段。增减副本、增减分片、扩缩内存均支持在维护时间窗执行操作。维护时间窗升级规格正在分地域逐步测试发布中，部分区域已支持，未覆盖地域若需紧急接入，请[提交工单](https://console.cloud.tencent.com/workorder/category)申请白名单。
+- 2：立即操作：操作将立即执行，无需等待维护时间窗。系统默认设置为立即操作。
      */
     function __construct()
     {

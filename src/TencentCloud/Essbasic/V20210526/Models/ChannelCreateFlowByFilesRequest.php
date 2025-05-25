@@ -59,6 +59,8 @@ use TencentCloud\Common\AbstractModel;
 <li>数字控件</li>
 <li>图片控件</li>
 <li>数据表格等填写控件</li></ul>
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/e004195ee4cb98a7f9bc12eb4a0a0b77.png)
  * @method void setComponents(array $Components) 设置模板或者合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
 <ul><li>单行文本控件</li>
 <li>多行文本控件</li>
@@ -66,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
 <li>数字控件</li>
 <li>图片控件</li>
 <li>数据表格等填写控件</li></ul>
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/e004195ee4cb98a7f9bc12eb4a0a0b77.png)
  * @method integer getDeadline() 获取合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为合同流程创建后的365天时截止。
 如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
  * @method void setDeadline(integer $Deadline) 设置合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为合同流程创建后的365天时截止。
@@ -249,6 +253,8 @@ class ChannelCreateFlowByFilesRequest extends AbstractModel
 <li>数字控件</li>
 <li>图片控件</li>
 <li>数据表格等填写控件</li></ul>
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/e004195ee4cb98a7f9bc12eb4a0a0b77.png)
      */
     public $Components;
 
@@ -419,6 +425,8 @@ MobileCheck：手机号验证，用户手机号和参与方手机号（ApproverM
 <li>数字控件</li>
 <li>图片控件</li>
 <li>数据表格等填写控件</li></ul>
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/e004195ee4cb98a7f9bc12eb4a0a0b77.png)
      * @param integer $Deadline 合同流程的签署截止时间，格式为Unix标准时间戳（秒），如果未设置签署截止时间，则默认为合同流程创建后的365天时截止。
 如果在签署截止时间前未完成签署，则合同状态会变为已过期，导致合同作废。
      * @param string $CallbackUrl 该字段已废弃，请使用【应用号配置】中的回调地址

@@ -60,8 +60,8 @@ BUSINESS：商业库。
 - 设置该参数为true后，核身过程中的视频图片将会存储在人脸核身控制台授权cos的bucket中，拉取结果时会返回对应资源完整cos地址。
 - 开通地址见https://console.cloud.tencent.com/faceid/cos
 - 【注意】选择该参数为true后将不返回base64数据，请根据接入情况谨慎修改。
- * @method Encryption getEncryption() 获取敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
- * @method void setEncryption(Encryption $Encryption) 设置敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+ * @method Encryption getEncryption() 获取敏感数据加密信息。对传入信息（姓名、身份证号、自传照片）有加密需求的用户可使用此参数，详情请点击左侧链接。
+ * @method void setEncryption(Encryption $Encryption) 设置敏感数据加密信息。对传入信息（姓名、身份证号、自传照片）有加密需求的用户可使用此参数，详情请点击左侧链接。
  * @method string getRuleId() 获取用于细分客户使用场景。
 - 申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。
 - 如有疑问，请添加腾讯云人脸核身小助手进行咨询。
@@ -120,7 +120,7 @@ BUSINESS：商业库。
     public $UseCos;
 
     /**
-     * @var Encryption 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * @var Encryption 敏感数据加密信息。对传入信息（姓名、身份证号、自传照片）有加密需求的用户可使用此参数，详情请点击左侧链接。
      */
     public $Encryption;
 
@@ -152,7 +152,7 @@ BUSINESS：商业库。
 - 设置该参数为true后，核身过程中的视频图片将会存储在人脸核身控制台授权cos的bucket中，拉取结果时会返回对应资源完整cos地址。
 - 开通地址见https://console.cloud.tencent.com/faceid/cos
 - 【注意】选择该参数为true后将不返回base64数据，请根据接入情况谨慎修改。
-     * @param Encryption $Encryption 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * @param Encryption $Encryption 敏感数据加密信息。对传入信息（姓名、身份证号、自传照片）有加密需求的用户可使用此参数，详情请点击左侧链接。
      * @param string $RuleId 用于细分客户使用场景。
 - 申请开通服务后，可以在腾讯云慧眼人脸核身控制台（https://console.cloud.tencent.com/faceid） 自助接入里面创建，审核通过后即可调用。
 - 如有疑问，请添加腾讯云人脸核身小助手进行咨询。

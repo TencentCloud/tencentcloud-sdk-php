@@ -32,6 +32,12 @@ use TencentCloud\Common\AbstractModel;
 - 默认false：不需要。
  * @method void setIsNeedBestFrame(boolean $IsNeedBestFrame) 设置是否需要拉取截帧。
 - 默认false：不需要。
+ * @method boolean getIsEncryptResponse() 获取是否对回包整体进行加密。
+ * @method void setIsEncryptResponse(boolean $IsEncryptResponse) 设置是否对回包整体进行加密。
+ * @method Encryption getEncryption() 获取是否需要对返回中的敏感信息进行加密。  
+只需指定加密算法Algorithm即可，其余字段传入默认值。
+ * @method void setEncryption(Encryption $Encryption) 设置是否需要对返回中的敏感信息进行加密。  
+只需指定加密算法Algorithm即可，其余字段传入默认值。
  */
 class GetFaceIdResultRequest extends AbstractModel
 {
@@ -54,12 +60,26 @@ class GetFaceIdResultRequest extends AbstractModel
     public $IsNeedBestFrame;
 
     /**
+     * @var boolean 是否对回包整体进行加密。
+     */
+    public $IsEncryptResponse;
+
+    /**
+     * @var Encryption 是否需要对返回中的敏感信息进行加密。  
+只需指定加密算法Algorithm即可，其余字段传入默认值。
+     */
+    public $Encryption;
+
+    /**
      * @param string $FaceIdToken SDK人脸核身流程的标识。
 - 调用[GetFaceIdToken](https://cloud.tencent.com/document/product/1007/49198)接口时生成。
      * @param boolean $IsNeedVideo 是否需要拉取视频。
 - 默认false：不需要。
      * @param boolean $IsNeedBestFrame 是否需要拉取截帧。
 - 默认false：不需要。
+     * @param boolean $IsEncryptResponse 是否对回包整体进行加密。
+     * @param Encryption $Encryption 是否需要对返回中的敏感信息进行加密。  
+只需指定加密算法Algorithm即可，其余字段传入默认值。
      */
     function __construct()
     {
@@ -84,6 +104,15 @@ class GetFaceIdResultRequest extends AbstractModel
 
         if (array_key_exists("IsNeedBestFrame",$param) and $param["IsNeedBestFrame"] !== null) {
             $this->IsNeedBestFrame = $param["IsNeedBestFrame"];
+        }
+
+        if (array_key_exists("IsEncryptResponse",$param) and $param["IsEncryptResponse"] !== null) {
+            $this->IsEncryptResponse = $param["IsEncryptResponse"];
+        }
+
+        if (array_key_exists("Encryption",$param) and $param["Encryption"] !== null) {
+            $this->Encryption = new Encryption();
+            $this->Encryption->deserialize($param["Encryption"]);
         }
     }
 }

@@ -41,10 +41,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCWPStatus(integer $CWPStatus) 设置防护状态
  * @method string getAssetCreateTime() 获取资产创建时间
  * @method void setAssetCreateTime(string $AssetCreateTime) 设置资产创建时间
- * @method string getPublicIp() 获取公网ip
- * @method void setPublicIp(string $PublicIp) 设置公网ip
- * @method string getPrivateIp() 获取私网ip
- * @method void setPrivateIp(string $PrivateIp) 设置私网ip
+ * @method string getPublicIp() 获取公网IP
+ * @method void setPublicIp(string $PublicIp) 设置公网IP
+ * @method string getPrivateIp() 获取私网IP
+ * @method void setPrivateIp(string $PrivateIp) 设置私网IP
  * @method string getVpcId() 获取vpc id
  * @method void setVpcId(string $VpcId) 设置vpc id
  * @method string getVpcName() 获取vpc 名
@@ -63,10 +63,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(string $SubnetId) 设置子网id
  * @method string getSubnetName() 获取子网名
  * @method void setSubnetName(string $SubnetName) 设置子网名
- * @method string getInstanceUuid() 获取uuid
- * @method void setInstanceUuid(string $InstanceUuid) 设置uuid
- * @method string getInstanceQUuid() 获取qquid
- * @method void setInstanceQUuid(string $InstanceQUuid) 设置qquid
+ * @method string getInstanceUuid() 获取主机安全Agent UUID
+ * @method void setInstanceUuid(string $InstanceUuid) 设置主机安全Agent UUID
+ * @method string getInstanceQUuid() 获取云主机 CVM UUID
+ * @method void setInstanceQUuid(string $InstanceQUuid) 设置云主机 CVM UUID
  * @method string getOsName() 获取os名
  * @method void setOsName(string $OsName) 设置os名
  * @method integer getPartitionCount() 获取分区
@@ -211,12 +211,12 @@ class CVMAssetVO extends AbstractModel
     public $AssetCreateTime;
 
     /**
-     * @var string 公网ip
+     * @var string 公网IP
      */
     public $PublicIp;
 
     /**
-     * @var string 私网ip
+     * @var string 私网IP
      */
     public $PrivateIp;
 
@@ -266,12 +266,12 @@ class CVMAssetVO extends AbstractModel
     public $SubnetName;
 
     /**
-     * @var string uuid
+     * @var string 主机安全Agent UUID
      */
     public $InstanceUuid;
 
     /**
-     * @var string qquid
+     * @var string 云主机 CVM UUID
      */
     public $InstanceQUuid;
 
@@ -529,8 +529,8 @@ class CVMAssetVO extends AbstractModel
      * @param string $Region 地域
      * @param integer $CWPStatus 防护状态
      * @param string $AssetCreateTime 资产创建时间
-     * @param string $PublicIp 公网ip
-     * @param string $PrivateIp 私网ip
+     * @param string $PublicIp 公网IP
+     * @param string $PrivateIp 私网IP
      * @param string $VpcId vpc id
      * @param string $VpcName vpc 名
      * @param integer $AppId appid信息
@@ -540,8 +540,8 @@ class CVMAssetVO extends AbstractModel
      * @param integer $IsCore 是否核心
      * @param string $SubnetId 子网id
      * @param string $SubnetName 子网名
-     * @param string $InstanceUuid uuid
-     * @param string $InstanceQUuid qquid
+     * @param string $InstanceUuid 主机安全Agent UUID
+     * @param string $InstanceQUuid 云主机 CVM UUID
      * @param string $OsName os名
      * @param integer $PartitionCount 分区
      * @param string $CPUInfo cpu信息

@@ -24,10 +24,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPickUpStuff(string $PickUpStuff) 设置自提人员姓名
  * @method string getPickUpStuffContact() 获取自提人电话
  * @method void setPickUpStuffContact(string $PickUpStuffContact) 设置自提人电话
- * @method string getPickUpStuffIDCard() 获取自提人身份证号
- * @method void setPickUpStuffIDCard(string $PickUpStuffIDCard) 设置自提人身份证号
+ * @method string getPickUpStuffIDCard() 获取自提人证件号码
+ * @method void setPickUpStuffIDCard(string $PickUpStuffIDCard) 设置自提人证件号码
  * @method string getPickUpTime() 获取自提时间
  * @method void setPickUpTime(string $PickUpTime) 设置自提时间
+ * @method string getIDCardType() 获取证件类型，非必传，默认为IDENTITY_CARD。
+对应关系如下：IDENTITY_CARD: 身份证,
+HONG_KONG_AND_MACAO_PASS: 港澳通行证',
+PASSPORT: 护照,
+DRIVING_LICENSE: 驾照,
+OTHER: 其他
+ * @method void setIDCardType(string $IDCardType) 设置证件类型，非必传，默认为IDENTITY_CARD。
+对应关系如下：IDENTITY_CARD: 身份证,
+HONG_KONG_AND_MACAO_PASS: 港澳通行证',
+PASSPORT: 护照,
+DRIVING_LICENSE: 驾照,
+OTHER: 其他
  */
 class CustomerReceipt extends AbstractModel
 {
@@ -42,7 +54,7 @@ class CustomerReceipt extends AbstractModel
     public $PickUpStuffContact;
 
     /**
-     * @var string 自提人身份证号
+     * @var string 自提人证件号码
      */
     public $PickUpStuffIDCard;
 
@@ -52,10 +64,26 @@ class CustomerReceipt extends AbstractModel
     public $PickUpTime;
 
     /**
+     * @var string 证件类型，非必传，默认为IDENTITY_CARD。
+对应关系如下：IDENTITY_CARD: 身份证,
+HONG_KONG_AND_MACAO_PASS: 港澳通行证',
+PASSPORT: 护照,
+DRIVING_LICENSE: 驾照,
+OTHER: 其他
+     */
+    public $IDCardType;
+
+    /**
      * @param string $PickUpStuff 自提人员姓名
      * @param string $PickUpStuffContact 自提人电话
-     * @param string $PickUpStuffIDCard 自提人身份证号
+     * @param string $PickUpStuffIDCard 自提人证件号码
      * @param string $PickUpTime 自提时间
+     * @param string $IDCardType 证件类型，非必传，默认为IDENTITY_CARD。
+对应关系如下：IDENTITY_CARD: 身份证,
+HONG_KONG_AND_MACAO_PASS: 港澳通行证',
+PASSPORT: 护照,
+DRIVING_LICENSE: 驾照,
+OTHER: 其他
      */
     function __construct()
     {
@@ -84,6 +112,10 @@ class CustomerReceipt extends AbstractModel
 
         if (array_key_exists("PickUpTime",$param) and $param["PickUpTime"] !== null) {
             $this->PickUpTime = $param["PickUpTime"];
+        }
+
+        if (array_key_exists("IDCardType",$param) and $param["IDCardType"] !== null) {
+            $this->IDCardType = $param["IDCardType"];
         }
     }
 }

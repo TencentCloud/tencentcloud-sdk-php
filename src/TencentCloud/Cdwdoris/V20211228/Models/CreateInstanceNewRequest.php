@@ -58,6 +58,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserMultiZoneInfos(NetworkInfo $UserMultiZoneInfos) 设置开启多可用区后，用户的所有可用区和子网信息
  * @method array getUserMultiZoneInfoArr() 获取开启多可用区后，用户的所有可用区和子网信息
  * @method void setUserMultiZoneInfoArr(array $UserMultiZoneInfoArr) 设置开启多可用区后，用户的所有可用区和子网信息
+ * @method boolean getIsSSC() 获取是否存算分离
+ * @method void setIsSSC(boolean $IsSSC) 设置是否存算分离
+ * @method integer getSSCCU() 获取CU数
+ * @method void setSSCCU(integer $SSCCU) 设置CU数
+ * @method string getCacheDiskSize() 获取缓存盘大小
+ * @method void setCacheDiskSize(string $CacheDiskSize) 设置缓存盘大小
  */
 class CreateInstanceNewRequest extends AbstractModel
 {
@@ -146,6 +152,21 @@ class CreateInstanceNewRequest extends AbstractModel
     public $UserMultiZoneInfoArr;
 
     /**
+     * @var boolean 是否存算分离
+     */
+    public $IsSSC;
+
+    /**
+     * @var integer CU数
+     */
+    public $SSCCU;
+
+    /**
+     * @var string 缓存盘大小
+     */
+    public $CacheDiskSize;
+
+    /**
      * @param string $Zone 可用区
      * @param CreateInstanceSpec $FeSpec FE规格
      * @param CreateInstanceSpec $BeSpec BE规格
@@ -165,6 +186,9 @@ class CreateInstanceNewRequest extends AbstractModel
      * @param boolean $EnableMultiZones 是否开启多可用区
      * @param NetworkInfo $UserMultiZoneInfos 开启多可用区后，用户的所有可用区和子网信息
      * @param array $UserMultiZoneInfoArr 开启多可用区后，用户的所有可用区和子网信息
+     * @param boolean $IsSSC 是否存算分离
+     * @param integer $SSCCU CU数
+     * @param string $CacheDiskSize 缓存盘大小
      */
     function __construct()
     {
@@ -255,6 +279,18 @@ class CreateInstanceNewRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->UserMultiZoneInfoArr, $obj);
             }
+        }
+
+        if (array_key_exists("IsSSC",$param) and $param["IsSSC"] !== null) {
+            $this->IsSSC = $param["IsSSC"];
+        }
+
+        if (array_key_exists("SSCCU",$param) and $param["SSCCU"] !== null) {
+            $this->SSCCU = $param["SSCCU"];
+        }
+
+        if (array_key_exists("CacheDiskSize",$param) and $param["CacheDiskSize"] !== null) {
+            $this->CacheDiskSize = $param["CacheDiskSize"];
         }
     }
 }

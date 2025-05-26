@@ -30,11 +30,13 @@ use TencentCloud\Emr\V20190103\Models as Models;
  * @method Models\AttachDisksResponse AttachDisks(Models\AttachDisksRequest $req) 云盘挂载
  * @method Models\CreateCloudInstanceResponse CreateCloudInstance(Models\CreateCloudInstanceRequest $req) 创建EMR容器集群实例
  * @method Models\CreateClusterResponse CreateCluster(Models\CreateClusterRequest $req) 创建EMR集群实例
+ * @method Models\CreateGroupsSTDResponse CreateGroupsSTD(Models\CreateGroupsSTDRequest $req) 用户管理-批量创建用户组
  * @method Models\CreateInstanceResponse CreateInstance(Models\CreateInstanceRequest $req) 创建EMR集群实例
  * @method Models\CreateSLInstanceResponse CreateSLInstance(Models\CreateSLInstanceRequest $req) 本接口（CreateSLInstance）用于创建Serverless HBase实例
 - 接口调用成功，会创建Serverless HBase实例，创建实例请求成功会返回创建实例的InstaceId和请求的 RequestID。
 - 接口为异步接口，接口返回时操作并未立即完成，实例操作结果可以通过调用DescribeInstancesList查看当前实例的StatusDesc状态。
  * @method Models\DeleteAutoScaleStrategyResponse DeleteAutoScaleStrategy(Models\DeleteAutoScaleStrategyRequest $req) 删除自动扩缩容规则，后台销毁根据该规则扩缩容出来的节点
+ * @method Models\DeleteGroupsSTDResponse DeleteGroupsSTD(Models\DeleteGroupsSTDRequest $req) 批量删除用户组
  * @method Models\DeleteNodeResourceConfigResponse DeleteNodeResourceConfig(Models\DeleteNodeResourceConfigRequest $req) 删除当前集群的节点规格配置
  * @method Models\DeleteUserManagerUserListResponse DeleteUserManagerUserList(Models\DeleteUserManagerUserListRequest $req) 删除用户列表（用户管理）
  * @method Models\DeployYarnConfResponse DeployYarnConf(Models\DeployYarnConfRequest $req) yarn资源调度-部署生效
@@ -95,7 +97,9 @@ use TencentCloud\Emr\V20190103\Models as Models;
 - 接口调用成功，会创建Serverless HBase实例，创建实例请求成功会返回请求的 RequestID。
 - 接口为异步接口，接口返回时操作并未立即完成，实例操作结果可以通过调用DescribeInstancesList查看当前实例的StatusDesc状态。
  * @method Models\ModifySLInstanceBasicResponse ModifySLInstanceBasic(Models\ModifySLInstanceBasicRequest $req) serverless hbase修改实例名称
+ * @method Models\ModifyUserGroupResponse ModifyUserGroup(Models\ModifyUserGroupRequest $req) 用户管理-修改用户组
  * @method Models\ModifyUserManagerPwdResponse ModifyUserManagerPwd(Models\ModifyUserManagerPwdRequest $req) 修改用户密码（用户管理）
+ * @method Models\ModifyUsersOfGroupSTDResponse ModifyUsersOfGroupSTD(Models\ModifyUsersOfGroupSTDRequest $req) 变更用户组用户信息
  * @method Models\ModifyYarnDeployResponse ModifyYarnDeploy(Models\ModifyYarnDeployRequest $req) 部署生效。已废弃，请使用`DeployYarnConf`接口进行部署生效
  * @method Models\ModifyYarnQueueV2Response ModifyYarnQueueV2(Models\ModifyYarnQueueV2Request $req) 修改资源调度中队列信息
  * @method Models\ResetYarnConfigResponse ResetYarnConfig(Models\ResetYarnConfigRequest $req) 修改YARN资源调度的资源配置

@@ -64,6 +64,7 @@ class DescribeInstancesRequest extends AbstractModel
 
     /**
      * @var string 已废弃。匹配标签key值。
+     * @deprecated
      */
     public $TagKey;
 

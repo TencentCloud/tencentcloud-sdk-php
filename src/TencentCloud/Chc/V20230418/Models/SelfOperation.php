@@ -22,12 +22,24 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStuffContact() 获取联系人员电话
  * @method void setStuffContact(string $StuffContact) 设置联系人员电话
- * @method string getStuffIDCard() 获取身份证号
- * @method void setStuffIDCard(string $StuffIDCard) 设置身份证号
+ * @method string getStuffIDCard() 获取证件号码
+ * @method void setStuffIDCard(string $StuffIDCard) 设置证件号码
  * @method string getStuffName() 获取人员姓名
  * @method void setStuffName(string $StuffName) 设置人员姓名
  * @method string getOperationTime() 获取上门时间
  * @method void setOperationTime(string $OperationTime) 设置上门时间
+ * @method string getIDCardType() 获取证件类型，非必传，默认为IDENTITY_CARD。
+对应关系如下：IDENTITY_CARD: 身份证,
+HONG_KONG_AND_MACAO_PASS: 港澳通行证',
+PASSPORT: 护照,
+DRIVING_LICENSE: 驾照,
+OTHER: 其他
+ * @method void setIDCardType(string $IDCardType) 设置证件类型，非必传，默认为IDENTITY_CARD。
+对应关系如下：IDENTITY_CARD: 身份证,
+HONG_KONG_AND_MACAO_PASS: 港澳通行证',
+PASSPORT: 护照,
+DRIVING_LICENSE: 驾照,
+OTHER: 其他
  */
 class SelfOperation extends AbstractModel
 {
@@ -37,7 +49,7 @@ class SelfOperation extends AbstractModel
     public $StuffContact;
 
     /**
-     * @var string 身份证号
+     * @var string 证件号码
      */
     public $StuffIDCard;
 
@@ -52,10 +64,26 @@ class SelfOperation extends AbstractModel
     public $OperationTime;
 
     /**
+     * @var string 证件类型，非必传，默认为IDENTITY_CARD。
+对应关系如下：IDENTITY_CARD: 身份证,
+HONG_KONG_AND_MACAO_PASS: 港澳通行证',
+PASSPORT: 护照,
+DRIVING_LICENSE: 驾照,
+OTHER: 其他
+     */
+    public $IDCardType;
+
+    /**
      * @param string $StuffContact 联系人员电话
-     * @param string $StuffIDCard 身份证号
+     * @param string $StuffIDCard 证件号码
      * @param string $StuffName 人员姓名
      * @param string $OperationTime 上门时间
+     * @param string $IDCardType 证件类型，非必传，默认为IDENTITY_CARD。
+对应关系如下：IDENTITY_CARD: 身份证,
+HONG_KONG_AND_MACAO_PASS: 港澳通行证',
+PASSPORT: 护照,
+DRIVING_LICENSE: 驾照,
+OTHER: 其他
      */
     function __construct()
     {
@@ -84,6 +112,10 @@ class SelfOperation extends AbstractModel
 
         if (array_key_exists("OperationTime",$param) and $param["OperationTime"] !== null) {
             $this->OperationTime = $param["OperationTime"];
+        }
+
+        if (array_key_exists("IDCardType",$param) and $param["IDCardType"] !== null) {
+            $this->IDCardType = $param["IDCardType"];
         }
     }
 }

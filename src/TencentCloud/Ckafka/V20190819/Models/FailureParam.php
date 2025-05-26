@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 数据处理规则失败处理
  *
- * @method string getType() 获取类型，DLQ死信队列，IGNORE_ERROR保留，DROP废弃
- * @method void setType(string $Type) 设置类型，DLQ死信队列，IGNORE_ERROR保留，DROP废弃
+ * @method string getType() 获取类型，DLQ死信队列，IGNORE_ERROR保留，DROP丢弃
+ * @method void setType(string $Type) 设置类型，DLQ死信队列，IGNORE_ERROR保留，DROP丢弃
  * @method KafkaParam getKafkaParam() 获取Ckafka类型死信队列
  * @method void setKafkaParam(KafkaParam $KafkaParam) 设置Ckafka类型死信队列
  * @method integer getRetryInterval() 获取重试间隔
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class FailureParam extends AbstractModel
 {
     /**
-     * @var string 类型，DLQ死信队列，IGNORE_ERROR保留，DROP废弃
+     * @var string 类型，DLQ死信队列，IGNORE_ERROR保留，DROP丢弃
      */
     public $Type;
 
@@ -66,7 +66,7 @@ class FailureParam extends AbstractModel
     public $DlqType;
 
     /**
-     * @param string $Type 类型，DLQ死信队列，IGNORE_ERROR保留，DROP废弃
+     * @param string $Type 类型，DLQ死信队列，IGNORE_ERROR保留，DROP丢弃
      * @param KafkaParam $KafkaParam Ckafka类型死信队列
      * @param integer $RetryInterval 重试间隔
      * @param integer $MaxRetryAttempts 重试次数

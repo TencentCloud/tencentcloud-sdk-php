@@ -66,6 +66,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnv(string $Env) 设置环境变量
  * @method string getNetStatus() 获取网络状态
  * @method void setNetStatus(string $NetStatus) 设置网络状态
+ * @method boolean getWebVitals() 获取是否返回webvitals数据
+ * @method void setWebVitals(boolean $WebVitals) 设置是否返回webvitals数据
  */
 class DescribeDataPerformancePageRequest extends AbstractModel
 {
@@ -185,6 +187,11 @@ class DescribeDataPerformancePageRequest extends AbstractModel
     public $NetStatus;
 
     /**
+     * @var boolean 是否返回webvitals数据
+     */
+    public $WebVitals;
+
+    /**
      * @param integer $ID 项目ID
      * @param integer $StartTime 开始时间
      * @param integer $EndTime 结束时间
@@ -208,6 +215,7 @@ class DescribeDataPerformancePageRequest extends AbstractModel
      * @param string $CostType 耗时计算方式
      * @param string $Env 环境变量
      * @param string $NetStatus 网络状态
+     * @param boolean $WebVitals 是否返回webvitals数据
      */
     function __construct()
     {
@@ -312,6 +320,10 @@ class DescribeDataPerformancePageRequest extends AbstractModel
 
         if (array_key_exists("NetStatus",$param) and $param["NetStatus"] !== null) {
             $this->NetStatus = $param["NetStatus"];
+        }
+
+        if (array_key_exists("WebVitals",$param) and $param["WebVitals"] !== null) {
+            $this->WebVitals = $param["WebVitals"];
         }
     }
 }

@@ -36,14 +36,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInfo(array $Info) 设置实例具体的连接信息，如ip、port、接入方式等
  * @method string getSupplier() 获取实例服务提供商，如:"aliyun","others"
  * @method void setSupplier(string $Supplier) 设置实例服务提供商，如:"aliyun","others"
- * @method array getExtraAttr() 获取MongoDB可定义如下的参数: 	['AuthDatabase':'admin', 
-'AuthFlag': "1",	'AuthMechanism':"SCRAM-SHA-1"]
- * @method void setExtraAttr(array $ExtraAttr) 设置MongoDB可定义如下的参数: 	['AuthDatabase':'admin', 
-'AuthFlag': "1",	'AuthMechanism':"SCRAM-SHA-1"]
+ * @method array getExtraAttr() 获取此参数为数组类型，可以传多个键值对结构对象。
+MongoDB可定义如下的参数：
+'AuthDatabase':'admin',
+'AuthFlag': "1",
+'AuthMechanism':"SCRAM-SHA-1",
+"fetchMethod":"oplog",
+"connectMode":"srv",
+"EncryptedConnProtocol":"mongo_atlas_ssl"；
+其中fetchMethod表示迁移方式，还可支持change_stream；EncryptedConnProtocol值为mongo_atlas_ssl表示使用atlas ssl连接方式。
+ * @method void setExtraAttr(array $ExtraAttr) 设置此参数为数组类型，可以传多个键值对结构对象。
+MongoDB可定义如下的参数：
+'AuthDatabase':'admin',
+'AuthFlag': "1",
+'AuthMechanism':"SCRAM-SHA-1",
+"fetchMethod":"oplog",
+"connectMode":"srv",
+"EncryptedConnProtocol":"mongo_atlas_ssl"；
+其中fetchMethod表示迁移方式，还可支持change_stream；EncryptedConnProtocol值为mongo_atlas_ssl表示使用atlas ssl连接方式。
  * @method string getDatabaseNetEnv() 获取数据库所属网络环境，AccessType为云联网(ccn)时必填， UserIDC表示用户IDC、TencentVPC表示腾讯云VPC；
  * @method void setDatabaseNetEnv(string $DatabaseNetEnv) 设置数据库所属网络环境，AccessType为云联网(ccn)时必填， UserIDC表示用户IDC、TencentVPC表示腾讯云VPC；
- * @method string getConnectType() 获取tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，Info中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，Info中需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。对于mongodb链路，srv表示SRV连接串，为空或不传表示普通连接串，srv仅限于FetchMethod为change_stream的拉取模式
- * @method void setConnectType(string $ConnectType) 设置tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，Info中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，Info中需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。对于mongodb链路，srv表示SRV连接串，为空或不传表示普通连接串，srv仅限于FetchMethod为change_stream的拉取模式
+ * @method string getConnectType() 获取tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，Info中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，Info中需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。
+ * @method void setConnectType(string $ConnectType) 设置tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，Info中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，Info中需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。
  */
 class DBEndpointInfo extends AbstractModel
 {
@@ -80,8 +94,15 @@ class DBEndpointInfo extends AbstractModel
     public $Supplier;
 
     /**
-     * @var array MongoDB可定义如下的参数: 	['AuthDatabase':'admin', 
-'AuthFlag': "1",	'AuthMechanism':"SCRAM-SHA-1"]
+     * @var array 此参数为数组类型，可以传多个键值对结构对象。
+MongoDB可定义如下的参数：
+'AuthDatabase':'admin',
+'AuthFlag': "1",
+'AuthMechanism':"SCRAM-SHA-1",
+"fetchMethod":"oplog",
+"connectMode":"srv",
+"EncryptedConnProtocol":"mongo_atlas_ssl"；
+其中fetchMethod表示迁移方式，还可支持change_stream；EncryptedConnProtocol值为mongo_atlas_ssl表示使用atlas ssl连接方式。
      */
     public $ExtraAttr;
 
@@ -91,7 +112,7 @@ class DBEndpointInfo extends AbstractModel
     public $DatabaseNetEnv;
 
     /**
-     * @var string tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，Info中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，Info中需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。对于mongodb链路，srv表示SRV连接串，为空或不传表示普通连接串，srv仅限于FetchMethod为change_stream的拉取模式
+     * @var string tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，Info中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，Info中需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。
      */
     public $ConnectType;
 
@@ -104,10 +125,17 @@ class DBEndpointInfo extends AbstractModel
 对于redis实例，simple(单节点)、cluster-cache(直连集群)、cluster-proxy(代理集群)；
      * @param array $Info 实例具体的连接信息，如ip、port、接入方式等
      * @param string $Supplier 实例服务提供商，如:"aliyun","others"
-     * @param array $ExtraAttr MongoDB可定义如下的参数: 	['AuthDatabase':'admin', 
-'AuthFlag': "1",	'AuthMechanism':"SCRAM-SHA-1"]
+     * @param array $ExtraAttr 此参数为数组类型，可以传多个键值对结构对象。
+MongoDB可定义如下的参数：
+'AuthDatabase':'admin',
+'AuthFlag': "1",
+'AuthMechanism':"SCRAM-SHA-1",
+"fetchMethod":"oplog",
+"connectMode":"srv",
+"EncryptedConnProtocol":"mongo_atlas_ssl"；
+其中fetchMethod表示迁移方式，还可支持change_stream；EncryptedConnProtocol值为mongo_atlas_ssl表示使用atlas ssl连接方式。
      * @param string $DatabaseNetEnv 数据库所属网络环境，AccessType为云联网(ccn)时必填， UserIDC表示用户IDC、TencentVPC表示腾讯云VPC；
-     * @param string $ConnectType tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，Info中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，Info中需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。对于mongodb链路，srv表示SRV连接串，为空或不传表示普通连接串，srv仅限于FetchMethod为change_stream的拉取模式
+     * @param string $ConnectType tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，Info中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，Info中需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。
      */
     function __construct()
     {

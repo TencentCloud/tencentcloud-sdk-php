@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyRecordBatch请求参数结构体
  *
- * @method array getRecordIdList() 获取记录ID数组。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId
- * @method void setRecordIdList(array $RecordIdList) 设置记录ID数组。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId
+ * @method array getRecordIdList() 获取记录ID数组。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId。单次最多修改5000条记录。
+ * @method void setRecordIdList(array $RecordIdList) 设置记录ID数组。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId。单次最多修改5000条记录。
  * @method string getChange() 获取要修改的字段，可选值为 [“sub_domain”、”record_type”、”area”、”value”、”mx”、”ttl”、”status”] 中的某一个。
  * @method void setChange(string $Change) 设置要修改的字段，可选值为 [“sub_domain”、”record_type”、”area”、”value”、”mx”、”ttl”、”status”] 中的某一个。
  * @method string getChangeTo() 获取修改为，具体依赖 change 字段，必填参数。
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyRecordBatchRequest extends AbstractModel
 {
     /**
-     * @var array 记录ID数组。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId
+     * @var array 记录ID数组。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId。单次最多修改5000条记录。
      */
     public $RecordIdList;
 
@@ -59,7 +59,7 @@ class ModifyRecordBatchRequest extends AbstractModel
     public $MX;
 
     /**
-     * @param array $RecordIdList 记录ID数组。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId
+     * @param array $RecordIdList 记录ID数组。可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId。单次最多修改5000条记录。
      * @param string $Change 要修改的字段，可选值为 [“sub_domain”、”record_type”、”area”、”value”、”mx”、”ttl”、”status”] 中的某一个。
      * @param string $ChangeTo 修改为，具体依赖 change 字段，必填参数。
      * @param string $Value 要修改到的记录值，仅当 change 字段为 “record_type” 时为必填参数。

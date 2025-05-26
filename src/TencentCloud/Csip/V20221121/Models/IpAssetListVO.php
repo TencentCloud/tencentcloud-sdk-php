@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCFWStatus(integer $CFWStatus) 设置云防状态
  * @method string getAssetCreateTime() 获取资产创建时间
  * @method void setAssetCreateTime(string $AssetCreateTime) 设置资产创建时间
- * @method string getPublicIp() 获取公网ip
- * @method void setPublicIp(string $PublicIp) 设置公网ip
+ * @method string getPublicIp() 获取公网IP
+ * @method void setPublicIp(string $PublicIp) 设置公网IP
  * @method integer getPublicIpType() 获取公网ip类型
  * @method void setPublicIpType(integer $PublicIpType) 设置公网ip类型
  * @method string getVpcId() 获取vpc
@@ -82,8 +82,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTag(array $Tag) 设置标签
  * @method string getAddressId() 获取eip主键
  * @method void setAddressId(string $AddressId) 设置eip主键
- * @method string getMemberId() 获取memberid信息
- * @method void setMemberId(string $MemberId) 设置memberid信息
+ * @method string getMemberId() 获取MemberId信息
+ * @method void setMemberId(string $MemberId) 设置MemberId信息
  * @method integer getRiskExposure() 获取风险服务暴露
  * @method void setRiskExposure(integer $RiskExposure) 设置风险服务暴露
  * @method integer getIsNewAsset() 获取是否新资产 1新
@@ -124,7 +124,7 @@ class IpAssetListVO extends AbstractModel
     public $AssetCreateTime;
 
     /**
-     * @var string 公网ip
+     * @var string 公网IP
      */
     public $PublicIp;
 
@@ -249,7 +249,7 @@ class IpAssetListVO extends AbstractModel
     public $AddressId;
 
     /**
-     * @var string memberid信息
+     * @var string MemberId信息
      */
     public $MemberId;
 
@@ -275,7 +275,7 @@ class IpAssetListVO extends AbstractModel
      * @param string $Region 地域
      * @param integer $CFWStatus 云防状态
      * @param string $AssetCreateTime 资产创建时间
-     * @param string $PublicIp 公网ip
+     * @param string $PublicIp 公网IP
      * @param integer $PublicIpType 公网ip类型
      * @param string $VpcId vpc
      * @param string $VpcName vpc名
@@ -300,7 +300,7 @@ class IpAssetListVO extends AbstractModel
      * @param integer $WebContentRisk 内容风险
      * @param array $Tag 标签
      * @param string $AddressId eip主键
-     * @param string $MemberId memberid信息
+     * @param string $MemberId MemberId信息
      * @param integer $RiskExposure 风险服务暴露
      * @param integer $IsNewAsset 是否新资产 1新
      * @param integer $VerifyStatus 资产认证状态，0-待认证，1-认证成功，2-认证中，3+-认证失败

@@ -74,6 +74,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAddressElectronic(string $AddressElectronic) 设置住址
  * @method string getIssueAuthorityElectronic() 获取发证机关
  * @method void setIssueAuthorityElectronic(string $IssueAuthorityElectronic) 设置发证机关
+ * @method string getCarBodyColor() 获取车身颜色
+ * @method void setCarBodyColor(string $CarBodyColor) 设置车身颜色
  */
 class TextVehicleBack extends AbstractModel
 {
@@ -161,6 +163,11 @@ class TextVehicleBack extends AbstractModel
     public $IssueAuthorityElectronic;
 
     /**
+     * @var string 车身颜色
+     */
+    public $CarBodyColor;
+
+    /**
      * @param string $PlateNo 号牌号码
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileNo 档案编号
@@ -188,6 +195,7 @@ class TextVehicleBack extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AddressElectronic 住址
      * @param string $IssueAuthorityElectronic 发证机关
+     * @param string $CarBodyColor 车身颜色
      */
     function __construct()
     {
@@ -256,6 +264,10 @@ class TextVehicleBack extends AbstractModel
 
         if (array_key_exists("IssueAuthorityElectronic",$param) and $param["IssueAuthorityElectronic"] !== null) {
             $this->IssueAuthorityElectronic = $param["IssueAuthorityElectronic"];
+        }
+
+        if (array_key_exists("CarBodyColor",$param) and $param["CarBodyColor"] !== null) {
+            $this->CarBodyColor = $param["CarBodyColor"];
         }
     }
 }

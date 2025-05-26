@@ -20,10 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 子账号详情
  *
- * @method integer getID() 获取主键ID，无业务意义
-仅作为唯一键
- * @method void setID(integer $ID) 设置主键ID，无业务意义
-仅作为唯一键
+ * @method integer getID() 获取主键ID，无业务意义仅作为唯一键
+ * @method void setID(integer $ID) 设置主键ID，无业务意义仅作为唯一键
  * @method string getAppID() 获取子账号Appid
  * @method void setAppID(string $AppID) 设置子账号Appid
  * @method string getUin() 获取子账号UIn
@@ -36,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOwnerUin(string $OwnerUin) 设置主账号Uin
  * @method string getOwnerNickName() 获取主账号名称
  * @method void setOwnerNickName(string $OwnerNickName) 设置主账号名称
- * @method string getOwnerMemberID() 获取所属主账号memberid
- * @method void setOwnerMemberID(string $OwnerMemberID) 设置所属主账号memberid
+ * @method string getOwnerMemberID() 获取所属主账号memberId信息
+ * @method void setOwnerMemberID(string $OwnerMemberID) 设置所属主账号memberId信息
  * @method integer getCloudType() 获取账户类型，0为腾讯云账户，1为AWS账户
  * @method void setCloudType(integer $CloudType) 设置账户类型，0为腾讯云账户，1为AWS账户
  * @method integer getServiceCount() 获取可访问服务数量
@@ -62,8 +60,7 @@ use TencentCloud\Common\AbstractModel;
 class SubUserInfo extends AbstractModel
 {
     /**
-     * @var integer 主键ID，无业务意义
-仅作为唯一键
+     * @var integer 主键ID，无业务意义仅作为唯一键
      */
     public $ID;
 
@@ -98,7 +95,7 @@ class SubUserInfo extends AbstractModel
     public $OwnerNickName;
 
     /**
-     * @var string 所属主账号memberid
+     * @var string 所属主账号memberId信息
      */
     public $OwnerMemberID;
 
@@ -153,15 +150,14 @@ class SubUserInfo extends AbstractModel
     public $IsAccessUeba;
 
     /**
-     * @param integer $ID 主键ID，无业务意义
-仅作为唯一键
+     * @param integer $ID 主键ID，无业务意义仅作为唯一键
      * @param string $AppID 子账号Appid
      * @param string $Uin 子账号UIn
      * @param string $NickName 子账号名称
      * @param string $OwnerAppID 主账号Appid
      * @param string $OwnerUin 主账号Uin
      * @param string $OwnerNickName 主账号名称
-     * @param string $OwnerMemberID 所属主账号memberid
+     * @param string $OwnerMemberID 所属主账号memberId信息
      * @param integer $CloudType 账户类型，0为腾讯云账户，1为AWS账户
      * @param integer $ServiceCount 可访问服务数量
      * @param integer $InterfaceCount 可访问接口数量

@@ -201,6 +201,7 @@ use TencentCloud\Common\AbstractModel;
     2：动作活体
     3：静默活体
     4：一闪活体（动作+光线）
+    5：远近活体
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLivenessMode(integer $LivenessMode) 设置本次流程最终活体类型。
 - 取值范围：
@@ -209,6 +210,7 @@ use TencentCloud\Common\AbstractModel;
     2：动作活体
     3：静默活体
     4：一闪活体（动作+光线）
+    5：远近活体
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getNFCRequestIds() 获取nfc重复计费requestId列表。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -424,6 +426,7 @@ class DetectInfoText extends AbstractModel
     2：动作活体
     3：静默活体
     4：一闪活体（动作+光线）
+    5：远近活体
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LivenessMode;
@@ -547,6 +550,7 @@ class DetectInfoText extends AbstractModel
     2：动作活体
     3：静默活体
     4：一闪活体（动作+光线）
+    5：远近活体
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $NFCRequestIds nfc重复计费requestId列表。
 注意：此字段可能返回 null，表示取不到有效值。

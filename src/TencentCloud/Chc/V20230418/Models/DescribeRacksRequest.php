@@ -92,6 +92,8 @@ hosting-type
 
  * @method string getDstService() 获取传入目标服务，返回允许进行此服务的机架列表；可以和Filters一起使用。允许的值：('rackPowerOn', 'rackPowerOff')
  * @method void setDstService(string $DstService) 设置传入目标服务，返回允许进行此服务的机架列表；可以和Filters一起使用。允许的值：('rackPowerOn', 'rackPowerOff')
+ * @method string getRackName() 获取机架名称关键字实现模糊搜索
+ * @method void setRackName(string $RackName) 设置机架名称关键字实现模糊搜索
  */
 class DescribeRacksRequest extends AbstractModel
 {
@@ -148,6 +150,11 @@ hosting-type
     public $DstService;
 
     /**
+     * @var string 机架名称关键字实现模糊搜索
+     */
+    public $RackName;
+
+    /**
      * @param integer $Offset 偏移量，默认为0。关于Offset的更进一步介绍请参考 API 简介中的相关小节。
      * @param integer $Limit 返回数量，默认为20，最大值为100。关于Limit的更进一步介绍请参考 API 简介中的相关小节。
      * @param array $Filters 过滤条件
@@ -184,6 +191,7 @@ hosting-type
 
 
      * @param string $DstService 传入目标服务，返回允许进行此服务的机架列表；可以和Filters一起使用。允许的值：('rackPowerOn', 'rackPowerOff')
+     * @param string $RackName 机架名称关键字实现模糊搜索
      */
     function __construct()
     {
@@ -217,6 +225,10 @@ hosting-type
 
         if (array_key_exists("DstService",$param) and $param["DstService"] !== null) {
             $this->DstService = $param["DstService"];
+        }
+
+        if (array_key_exists("RackName",$param) and $param["RackName"] !== null) {
+            $this->RackName = $param["RackName"];
         }
     }
 }

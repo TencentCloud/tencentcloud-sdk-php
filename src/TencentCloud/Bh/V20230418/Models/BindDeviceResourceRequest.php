@@ -26,6 +26,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceId(string $ResourceId) 设置堡垒机服务ID
  * @method string getDomainId() 获取网络域ID
  * @method void setDomainId(string $DomainId) 设置网络域ID
+ * @method integer getManageDimension() 获取K8S集群托管账号维度。1-集群，2-命名空间，3-工作负载
+ * @method void setManageDimension(integer $ManageDimension) 设置K8S集群托管账号维度。1-集群，2-命名空间，3-工作负载
+ * @method integer getManageAccountId() 获取K8S集群托管账号id
+ * @method void setManageAccountId(integer $ManageAccountId) 设置K8S集群托管账号id
+ * @method string getManageAccount() 获取K8S集群托管账号名称
+ * @method void setManageAccount(string $ManageAccount) 设置K8S集群托管账号名称
+ * @method string getManageKubeconfig() 获取K8S集群托管账号凭证
+ * @method void setManageKubeconfig(string $ManageKubeconfig) 设置K8S集群托管账号凭证
+ * @method string getNamespace() 获取K8S集群托管的namespace
+ * @method void setNamespace(string $Namespace) 设置K8S集群托管的namespace
+ * @method string getWorkload() 获取K8S集群托管的workload
+ * @method void setWorkload(string $Workload) 设置K8S集群托管的workload
  */
 class BindDeviceResourceRequest extends AbstractModel
 {
@@ -45,9 +57,45 @@ class BindDeviceResourceRequest extends AbstractModel
     public $DomainId;
 
     /**
+     * @var integer K8S集群托管账号维度。1-集群，2-命名空间，3-工作负载
+     */
+    public $ManageDimension;
+
+    /**
+     * @var integer K8S集群托管账号id
+     */
+    public $ManageAccountId;
+
+    /**
+     * @var string K8S集群托管账号名称
+     */
+    public $ManageAccount;
+
+    /**
+     * @var string K8S集群托管账号凭证
+     */
+    public $ManageKubeconfig;
+
+    /**
+     * @var string K8S集群托管的namespace
+     */
+    public $Namespace;
+
+    /**
+     * @var string K8S集群托管的workload
+     */
+    public $Workload;
+
+    /**
      * @param array $DeviceIdSet 资产ID集合
      * @param string $ResourceId 堡垒机服务ID
      * @param string $DomainId 网络域ID
+     * @param integer $ManageDimension K8S集群托管账号维度。1-集群，2-命名空间，3-工作负载
+     * @param integer $ManageAccountId K8S集群托管账号id
+     * @param string $ManageAccount K8S集群托管账号名称
+     * @param string $ManageKubeconfig K8S集群托管账号凭证
+     * @param string $Namespace K8S集群托管的namespace
+     * @param string $Workload K8S集群托管的workload
      */
     function __construct()
     {
@@ -72,6 +120,30 @@ class BindDeviceResourceRequest extends AbstractModel
 
         if (array_key_exists("DomainId",$param) and $param["DomainId"] !== null) {
             $this->DomainId = $param["DomainId"];
+        }
+
+        if (array_key_exists("ManageDimension",$param) and $param["ManageDimension"] !== null) {
+            $this->ManageDimension = $param["ManageDimension"];
+        }
+
+        if (array_key_exists("ManageAccountId",$param) and $param["ManageAccountId"] !== null) {
+            $this->ManageAccountId = $param["ManageAccountId"];
+        }
+
+        if (array_key_exists("ManageAccount",$param) and $param["ManageAccount"] !== null) {
+            $this->ManageAccount = $param["ManageAccount"];
+        }
+
+        if (array_key_exists("ManageKubeconfig",$param) and $param["ManageKubeconfig"] !== null) {
+            $this->ManageKubeconfig = $param["ManageKubeconfig"];
+        }
+
+        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
+            $this->Namespace = $param["Namespace"];
+        }
+
+        if (array_key_exists("Workload",$param) and $param["Workload"] !== null) {
+            $this->Workload = $param["Workload"];
         }
     }
 }

@@ -20,21 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeComputeEnvActivities请求参数结构体
  *
- * @method string getEnvId() 获取计算环境ID，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
- * @method void setEnvId(string $EnvId) 设置计算环境ID，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
+ * @method string getEnvId() 获取计算环境ID，环境ID通过调用接口 [DescribeComputeEnvs](https://cloud.tencent.com/document/api/599/15893)获取。
+ * @method void setEnvId(string $EnvId) 设置计算环境ID，环境ID通过调用接口 [DescribeComputeEnvs](https://cloud.tencent.com/document/api/599/15893)获取。
  * @method integer getOffset() 获取偏移量，默认为0.
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0.
  * @method integer getLimit() 获取返回数量，默认值20，最大值100.
  * @method void setLimit(integer $Limit) 设置返回数量，默认值20，最大值100.
- * @method Filter getFilters() 获取过滤条件
-<li> compute-node-id - String - 是否必填：否 -（过滤条件）按照计算节点ID过滤。</li>
- * @method void setFilters(Filter $Filters) 设置过滤条件
-<li> compute-node-id - String - 是否必填：否 -（过滤条件）按照计算节点ID过滤。</li>
+ * @method Filter getFilters() 获取过滤条件<li> compute-node-id - String - 是否必填：否 -（过滤条件）按照计算节点ID过滤，节点ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。</li>
+ * @method void setFilters(Filter $Filters) 设置过滤条件<li> compute-node-id - String - 是否必填：否 -（过滤条件）按照计算节点ID过滤，节点ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。</li>
  */
 class DescribeComputeEnvActivitiesRequest extends AbstractModel
 {
     /**
-     * @var string 计算环境ID，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
+     * @var string 计算环境ID，环境ID通过调用接口 [DescribeComputeEnvs](https://cloud.tencent.com/document/api/599/15893)获取。
      */
     public $EnvId;
 
@@ -49,17 +47,15 @@ class DescribeComputeEnvActivitiesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var Filter 过滤条件
-<li> compute-node-id - String - 是否必填：否 -（过滤条件）按照计算节点ID过滤。</li>
+     * @var Filter 过滤条件<li> compute-node-id - String - 是否必填：否 -（过滤条件）按照计算节点ID过滤，节点ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。</li>
      */
     public $Filters;
 
     /**
-     * @param string $EnvId 计算环境ID，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
+     * @param string $EnvId 计算环境ID，环境ID通过调用接口 [DescribeComputeEnvs](https://cloud.tencent.com/document/api/599/15893)获取。
      * @param integer $Offset 偏移量，默认为0.
      * @param integer $Limit 返回数量，默认值20，最大值100.
-     * @param Filter $Filters 过滤条件
-<li> compute-node-id - String - 是否必填：否 -（过滤条件）按照计算节点ID过滤。</li>
+     * @param Filter $Filters 过滤条件<li> compute-node-id - String - 是否必填：否 -（过滤条件）按照计算节点ID过滤，节点ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。</li>
      */
     function __construct()
     {

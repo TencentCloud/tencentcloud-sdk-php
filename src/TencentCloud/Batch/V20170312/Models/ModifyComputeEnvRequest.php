@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyComputeEnv请求参数结构体
  *
- * @method string getEnvId() 获取计算环境ID，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
- * @method void setEnvId(string $EnvId) 设置计算环境ID，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
+ * @method string getEnvId() 获取计算环境ID，环境ID通过调用接口 [DescribeComputeEnvs](https://cloud.tencent.com/document/api/599/15893)获取。
+ * @method void setEnvId(string $EnvId) 设置计算环境ID，环境ID通过调用接口 [DescribeComputeEnvs](https://cloud.tencent.com/document/api/599/15893)获取。
  * @method integer getDesiredComputeNodeCount() 获取计算节点期望个数，最大上限2000。
  * @method void setDesiredComputeNodeCount(integer $DesiredComputeNodeCount) 设置计算节点期望个数，最大上限2000。
  * @method string getEnvName() 获取计算环境名称
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyComputeEnvRequest extends AbstractModel
 {
     /**
-     * @var string 计算环境ID，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
+     * @var string 计算环境ID，环境ID通过调用接口 [DescribeComputeEnvs](https://cloud.tencent.com/document/api/599/15893)获取。
      */
     public $EnvId;
 
@@ -59,7 +59,7 @@ class ModifyComputeEnvRequest extends AbstractModel
     public $EnvData;
 
     /**
-     * @param string $EnvId 计算环境ID，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
+     * @param string $EnvId 计算环境ID，环境ID通过调用接口 [DescribeComputeEnvs](https://cloud.tencent.com/document/api/599/15893)获取。
      * @param integer $DesiredComputeNodeCount 计算节点期望个数，最大上限2000。
      * @param string $EnvName 计算环境名称
      * @param string $EnvDescription 计算环境描述

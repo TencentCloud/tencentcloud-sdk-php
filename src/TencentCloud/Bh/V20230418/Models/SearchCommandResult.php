@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSize(integer $Size) 设置会话大小
  * @method string getSignValue() 获取签名值
  * @method void setSignValue(string $SignValue) 设置签名值
+ * @method string getDeviceKind() 获取资产类型
+ * @method void setDeviceKind(string $DeviceKind) 设置资产类型
  */
 class SearchCommandResult extends AbstractModel
 {
@@ -178,6 +180,11 @@ class SearchCommandResult extends AbstractModel
     public $SignValue;
 
     /**
+     * @var string 资产类型
+     */
+    public $DeviceKind;
+
+    /**
      * @param string $Time 命令输入的时间
      * @param string $UserName 用户名
      * @param string $RealName 姓名
@@ -200,6 +207,7 @@ class SearchCommandResult extends AbstractModel
      * @param string $DeviceDepartmentName 设备部门名称
      * @param integer $Size 会话大小
      * @param string $SignValue 签名值
+     * @param string $DeviceKind 资产类型
      */
     function __construct()
     {
@@ -300,6 +308,10 @@ class SearchCommandResult extends AbstractModel
 
         if (array_key_exists("SignValue",$param) and $param["SignValue"] !== null) {
             $this->SignValue = $param["SignValue"];
+        }
+
+        if (array_key_exists("DeviceKind",$param) and $param["DeviceKind"] !== null) {
+            $this->DeviceKind = $param["DeviceKind"];
         }
     }
 }

@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMinRoCount(integer $MinRoCount) 设置只读节点最小个数
  * @method integer getMaxRoCount() 获取只读节点最大个数
  * @method void setMaxRoCount(integer $MaxRoCount) 设置只读节点最大个数
+ * @method string getAutoArchive() 获取是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
+ * @method void setAutoArchive(string $AutoArchive) 设置是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
  */
 class ModifyServerlessStrategyRequest extends AbstractModel
 {
@@ -107,6 +109,11 @@ class ModifyServerlessStrategyRequest extends AbstractModel
     public $MaxRoCount;
 
     /**
+     * @var string 是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
+     */
+    public $AutoArchive;
+
+    /**
      * @param string $ClusterId serverless集群id
      * @param string $AutoPause 集群是否自动暂停，可选范围
 <li>yes</li>
@@ -120,6 +127,7 @@ class ModifyServerlessStrategyRequest extends AbstractModel
      * @param float $MaxRoCpu 只读cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
      * @param integer $MinRoCount 只读节点最小个数
      * @param integer $MaxRoCount 只读节点最大个数
+     * @param string $AutoArchive 是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
      */
     function __construct()
     {
@@ -176,6 +184,10 @@ class ModifyServerlessStrategyRequest extends AbstractModel
 
         if (array_key_exists("MaxRoCount",$param) and $param["MaxRoCount"] !== null) {
             $this->MaxRoCount = $param["MaxRoCount"];
+        }
+
+        if (array_key_exists("AutoArchive",$param) and $param["AutoArchive"] !== null) {
+            $this->AutoArchive = $param["AutoArchive"];
         }
     }
 }

@@ -122,6 +122,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPackageIOAUserCount(integer $PackageIOAUserCount) 设置零信任堡垒机用户扩展包个数。1个扩展包对应20个用户数
  * @method integer getPackageIOABandwidth() 获取 零信任堡垒机带宽扩展包个数。一个扩展包表示4M带宽
  * @method void setPackageIOABandwidth(integer $PackageIOABandwidth) 设置 零信任堡垒机带宽扩展包个数。一个扩展包表示4M带宽
+ * @method string getIOAResourceId() 获取堡垒机实例对应的零信任实例id
+ * @method void setIOAResourceId(string $IOAResourceId) 设置堡垒机实例对应的零信任实例id
  */
 class Resource extends AbstractModel
 {
@@ -381,6 +383,11 @@ class Resource extends AbstractModel
     public $PackageIOABandwidth;
 
     /**
+     * @var string 堡垒机实例对应的零信任实例id
+     */
+    public $IOAResourceId;
+
+    /**
      * @param string $ResourceId 服务实例ID，如bh-saas-s3ed4r5e
      * @param string $ApCode 地域编码
      * @param string $SvArgs 服务实例规格信息
@@ -432,6 +439,7 @@ class Resource extends AbstractModel
      * @param integer $IOAResource 0默认值。0-免费版（试用版）ioa，1-付费版ioa
      * @param integer $PackageIOAUserCount 零信任堡垒机用户扩展包个数。1个扩展包对应20个用户数
      * @param integer $PackageIOABandwidth  零信任堡垒机带宽扩展包个数。一个扩展包表示4M带宽
+     * @param string $IOAResourceId 堡垒机实例对应的零信任实例id
      */
     function __construct()
     {
@@ -653,6 +661,10 @@ class Resource extends AbstractModel
 
         if (array_key_exists("PackageIOABandwidth",$param) and $param["PackageIOABandwidth"] !== null) {
             $this->PackageIOABandwidth = $param["PackageIOABandwidth"];
+        }
+
+        if (array_key_exists("IOAResourceId",$param) and $param["IOAResourceId"] !== null) {
+            $this->IOAResourceId = $param["IOAResourceId"];
         }
     }
 }

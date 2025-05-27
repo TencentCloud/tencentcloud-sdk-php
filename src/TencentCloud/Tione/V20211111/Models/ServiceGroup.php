@@ -124,6 +124,8 @@ UPDATING 更新中
  * @method void setAuthTokens(array $AuthTokens) 设置限流鉴权 token 列表
  * @method string getMonitorSource() 获取用于监控的创建来源字段
  * @method void setMonitorSource(string $MonitorSource) 设置用于监控的创建来源字段
+ * @method string getSubUinName() 获取子用户的 nickname
+ * @method void setSubUinName(string $SubUinName) 设置子用户的 nickname
  */
 class ServiceGroup extends AbstractModel
 {
@@ -272,6 +274,11 @@ UPDATING 更新中
     public $MonitorSource;
 
     /**
+     * @var string 子用户的 nickname
+     */
+    public $SubUinName;
+
+    /**
      * @param string $ServiceGroupId 服务组id
      * @param string $ServiceGroupName 服务组名
      * @param string $CreatedBy 创建者
@@ -324,6 +331,7 @@ UPDATING 更新中
      * @param boolean $AuthorizationEnable 是否开启鉴权
      * @param array $AuthTokens 限流鉴权 token 列表
      * @param string $MonitorSource 用于监控的创建来源字段
+     * @param string $SubUinName 子用户的 nickname
      */
     function __construct()
     {
@@ -443,6 +451,10 @@ UPDATING 更新中
 
         if (array_key_exists("MonitorSource",$param) and $param["MonitorSource"] !== null) {
             $this->MonitorSource = $param["MonitorSource"];
+        }
+
+        if (array_key_exists("SubUinName",$param) and $param["SubUinName"] !== null) {
+            $this->SubUinName = $param["SubUinName"];
         }
     }
 }

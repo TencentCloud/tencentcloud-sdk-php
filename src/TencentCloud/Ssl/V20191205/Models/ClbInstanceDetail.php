@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalancerName(string $LoadBalancerName) 设置CLB实例名称
  * @method array getListeners() 获取CLB监听器列表
  * @method void setListeners(array $Listeners) 设置CLB监听器列表
+ * @method integer getForward() 获取负载均衡类型，0 传统型负载均衡； 1 应用型负载均衡
+ * @method void setForward(integer $Forward) 设置负载均衡类型，0 传统型负载均衡； 1 应用型负载均衡
  */
 class ClbInstanceDetail extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ClbInstanceDetail extends AbstractModel
     public $Listeners;
 
     /**
+     * @var integer 负载均衡类型，0 传统型负载均衡； 1 应用型负载均衡
+     */
+    public $Forward;
+
+    /**
      * @param string $LoadBalancerId CLB实例ID
      * @param string $LoadBalancerName CLB实例名称
      * @param array $Listeners CLB监听器列表
+     * @param integer $Forward 负载均衡类型，0 传统型负载均衡； 1 应用型负载均衡
      */
     function __construct()
     {
@@ -77,6 +85,10 @@ class ClbInstanceDetail extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Listeners, $obj);
             }
+        }
+
+        if (array_key_exists("Forward",$param) and $param["Forward"] !== null) {
+            $this->Forward = $param["Forward"];
         }
     }
 }

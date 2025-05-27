@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSSCCU(integer $SSCCU) 设置CU数
  * @method string getCacheDiskSize() 获取缓存盘大小
  * @method void setCacheDiskSize(string $CacheDiskSize) 设置缓存盘大小
+ * @method integer getCacheDataDiskSize() 获取缓存盘大小
+ * @method void setCacheDataDiskSize(integer $CacheDataDiskSize) 设置缓存盘大小
  */
 class CreateInstanceNewRequest extends AbstractModel
 {
@@ -163,8 +165,14 @@ class CreateInstanceNewRequest extends AbstractModel
 
     /**
      * @var string 缓存盘大小
+     * @deprecated
      */
     public $CacheDiskSize;
+
+    /**
+     * @var integer 缓存盘大小
+     */
+    public $CacheDataDiskSize;
 
     /**
      * @param string $Zone 可用区
@@ -189,6 +197,7 @@ class CreateInstanceNewRequest extends AbstractModel
      * @param boolean $IsSSC 是否存算分离
      * @param integer $SSCCU CU数
      * @param string $CacheDiskSize 缓存盘大小
+     * @param integer $CacheDataDiskSize 缓存盘大小
      */
     function __construct()
     {
@@ -291,6 +300,10 @@ class CreateInstanceNewRequest extends AbstractModel
 
         if (array_key_exists("CacheDiskSize",$param) and $param["CacheDiskSize"] !== null) {
             $this->CacheDiskSize = $param["CacheDiskSize"];
+        }
+
+        if (array_key_exists("CacheDataDiskSize",$param) and $param["CacheDataDiskSize"] !== null) {
+            $this->CacheDataDiskSize = $param["CacheDataDiskSize"];
         }
     }
 }

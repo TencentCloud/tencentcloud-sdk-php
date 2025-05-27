@@ -38,6 +38,8 @@ UTC时间，如'2020-01-01T12:00:00Z'。
 UTC时间，如'2020-01-01T12:00:00Z'。
  * @method void setEndTime(string $EndTime) 设置统计的结束时间，默认为StartTime后一小时，最多支持查询24小时的数据。
 UTC时间，如'2020-01-01T12:00:00Z'。
+ * @method string getRemoteIp() 获取对端客户端或者服务端的IP地址
+ * @method void setRemoteIp(string $RemoteIp) 设置对端客户端或者服务端的IP地址
  */
 class DescribeStreamLinkFlowStatisticsRequest extends AbstractModel
 {
@@ -79,6 +81,11 @@ UTC时间，如'2020-01-01T12:00:00Z'。
     public $EndTime;
 
     /**
+     * @var string 对端客户端或者服务端的IP地址
+     */
+    public $RemoteIp;
+
+    /**
      * @param string $FlowId 传输流ID。
      * @param string $Type 输入或输出类型，可选[input|output]。
      * @param string $InputOutputId 输入或输出Id。
@@ -88,6 +95,7 @@ UTC时间，如'2020-01-01T12:00:00Z'。
 UTC时间，如'2020-01-01T12:00:00Z'。
      * @param string $EndTime 统计的结束时间，默认为StartTime后一小时，最多支持查询24小时的数据。
 UTC时间，如'2020-01-01T12:00:00Z'。
+     * @param string $RemoteIp 对端客户端或者服务端的IP地址
      */
     function __construct()
     {
@@ -128,6 +136,10 @@ UTC时间，如'2020-01-01T12:00:00Z'。
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("RemoteIp",$param) and $param["RemoteIp"] !== null) {
+            $this->RemoteIp = $param["RemoteIp"];
         }
     }
 }

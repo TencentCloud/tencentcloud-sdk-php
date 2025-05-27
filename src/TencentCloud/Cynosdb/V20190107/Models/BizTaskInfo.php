@@ -104,6 +104,8 @@ use TencentCloud\Common\AbstractModel;
 
  * @method TaskProgressInfo getTaskProgressInfo() 获取任务进度信息
  * @method void setTaskProgressInfo(TaskProgressInfo $TaskProgressInfo) 设置任务进度信息
+ * @method GdnTaskInfo getGdnTaskInfo() 获取全球数据库网络任务
+ * @method void setGdnTaskInfo(GdnTaskInfo $GdnTaskInfo) 设置全球数据库网络任务
  */
 class BizTaskInfo extends AbstractModel
 {
@@ -300,6 +302,11 @@ class BizTaskInfo extends AbstractModel
     public $TaskProgressInfo;
 
     /**
+     * @var GdnTaskInfo 全球数据库网络任务
+     */
+    public $GdnTaskInfo;
+
+    /**
      * @param integer $ID 任务id
      * @param integer $AppId 用户appid
      * @param string $ClusterId 集群id
@@ -342,6 +349,7 @@ class BizTaskInfo extends AbstractModel
      * @param array $InstanceCLSDeliveryInfos 实例日志投递信息
 
      * @param TaskProgressInfo $TaskProgressInfo 任务进度信息
+     * @param GdnTaskInfo $GdnTaskInfo 全球数据库网络任务
      */
     function __construct()
     {
@@ -522,6 +530,11 @@ class BizTaskInfo extends AbstractModel
         if (array_key_exists("TaskProgressInfo",$param) and $param["TaskProgressInfo"] !== null) {
             $this->TaskProgressInfo = new TaskProgressInfo();
             $this->TaskProgressInfo->deserialize($param["TaskProgressInfo"]);
+        }
+
+        if (array_key_exists("GdnTaskInfo",$param) and $param["GdnTaskInfo"] !== null) {
+            $this->GdnTaskInfo = new GdnTaskInfo();
+            $this->GdnTaskInfo->deserialize($param["GdnTaskInfo"]);
         }
     }
 }

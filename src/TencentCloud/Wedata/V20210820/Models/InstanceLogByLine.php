@@ -52,6 +52,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJobLogErrorTip(JobLogErrorTip $JobLogErrorTip) 设置日志sql错误信息，包含行列信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getExecutionExtendedProps() 获取执行实例的扩展属性
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExecutionExtendedProps(array $ExecutionExtendedProps) 设置执行实例的扩展属性
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getExtInfo() 获取如果queryFileFlag为1，则ext返回当前页数据的结束行信息，下一页把这个extInfo透传过来
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExtInfo(string $ExtInfo) 设置如果queryFileFlag为1，则ext返回当前页数据的结束行信息，下一页把这个extInfo透传过来
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceLogByLine extends AbstractModel
 {
@@ -104,6 +112,18 @@ class InstanceLogByLine extends AbstractModel
     public $JobLogErrorTip;
 
     /**
+     * @var array 执行实例的扩展属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExecutionExtendedProps;
+
+    /**
+     * @var string 如果queryFileFlag为1，则ext返回当前页数据的结束行信息，下一页把这个extInfo透传过来
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExtInfo;
+
+    /**
      * @param integer $Count 返回行数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Content 内容
@@ -119,6 +139,10 @@ class InstanceLogByLine extends AbstractModel
      * @param integer $WorkerType 执行机类型 0:老执行机loader 1:新执行机woker
 注意：此字段可能返回 null，表示取不到有效值。
      * @param JobLogErrorTip $JobLogErrorTip 日志sql错误信息，包含行列信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ExecutionExtendedProps 执行实例的扩展属性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ExtInfo 如果queryFileFlag为1，则ext返回当前页数据的结束行信息，下一页把这个extInfo透传过来
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -165,6 +189,19 @@ class InstanceLogByLine extends AbstractModel
         if (array_key_exists("JobLogErrorTip",$param) and $param["JobLogErrorTip"] !== null) {
             $this->JobLogErrorTip = new JobLogErrorTip();
             $this->JobLogErrorTip->deserialize($param["JobLogErrorTip"]);
+        }
+
+        if (array_key_exists("ExecutionExtendedProps",$param) and $param["ExecutionExtendedProps"] !== null) {
+            $this->ExecutionExtendedProps = [];
+            foreach ($param["ExecutionExtendedProps"] as $key => $value){
+                $obj = new ExtensionInfoVO();
+                $obj->deserialize($value);
+                array_push($this->ExecutionExtendedProps, $obj);
+            }
+        }
+
+        if (array_key_exists("ExtInfo",$param) and $param["ExtInfo"] !== null) {
+            $this->ExtInfo = $param["ExtInfo"];
         }
     }
 }

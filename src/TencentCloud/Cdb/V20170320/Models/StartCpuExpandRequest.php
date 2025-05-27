@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
 说明：1. Type 为 manual 时必传。2. 扩容的 CPU 核心数上限为当前实例 CPU 核心数，比如8核16G最大可手动扩容的 CPU 核心数为8，即范围为1 - 8。
  * @method AutoStrategy getAutoStrategy() 获取自动扩容策略。Type 为 auto 时必传。
  * @method void setAutoStrategy(AutoStrategy $AutoStrategy) 设置自动扩容策略。Type 为 auto 时必传。
+ * @method TimeIntervalStrategy getTimeIntervalStrategy() 获取按时间段扩容策略
+ * @method void setTimeIntervalStrategy(TimeIntervalStrategy $TimeIntervalStrategy) 设置按时间段扩容策略
+ * @method PeriodStrategy getPeriodStrategy() 获取按周期扩容策略
+ * @method void setPeriodStrategy(PeriodStrategy $PeriodStrategy) 设置按周期扩容策略
  */
 class StartCpuExpandRequest extends AbstractModel
 {
@@ -55,11 +59,23 @@ class StartCpuExpandRequest extends AbstractModel
     public $AutoStrategy;
 
     /**
+     * @var TimeIntervalStrategy 按时间段扩容策略
+     */
+    public $TimeIntervalStrategy;
+
+    /**
+     * @var PeriodStrategy 按周期扩容策略
+     */
+    public $PeriodStrategy;
+
+    /**
      * @param string $InstanceId 实例 ID 。
      * @param string $Type 扩容类型。auto 自动  manual 立即生效 timeInterval 按时间段 period 按周期
      * @param integer $ExpandCpu 手动扩容时，扩容的 CPU 核心数。
 说明：1. Type 为 manual 时必传。2. 扩容的 CPU 核心数上限为当前实例 CPU 核心数，比如8核16G最大可手动扩容的 CPU 核心数为8，即范围为1 - 8。
      * @param AutoStrategy $AutoStrategy 自动扩容策略。Type 为 auto 时必传。
+     * @param TimeIntervalStrategy $TimeIntervalStrategy 按时间段扩容策略
+     * @param PeriodStrategy $PeriodStrategy 按周期扩容策略
      */
     function __construct()
     {
@@ -89,6 +105,16 @@ class StartCpuExpandRequest extends AbstractModel
         if (array_key_exists("AutoStrategy",$param) and $param["AutoStrategy"] !== null) {
             $this->AutoStrategy = new AutoStrategy();
             $this->AutoStrategy->deserialize($param["AutoStrategy"]);
+        }
+
+        if (array_key_exists("TimeIntervalStrategy",$param) and $param["TimeIntervalStrategy"] !== null) {
+            $this->TimeIntervalStrategy = new TimeIntervalStrategy();
+            $this->TimeIntervalStrategy->deserialize($param["TimeIntervalStrategy"]);
+        }
+
+        if (array_key_exists("PeriodStrategy",$param) and $param["PeriodStrategy"] !== null) {
+            $this->PeriodStrategy = new PeriodStrategy();
+            $this->PeriodStrategy->deserialize($param["PeriodStrategy"]);
         }
     }
 }

@@ -36,6 +36,8 @@ no
  * @method void setAutoScaleUp(string $AutoScaleUp) 设置集群是否允许向上扩容，可选范围<li>yes</li><li>no</li>
  * @method string getAutoScaleDown() 获取集群是否允许向下缩容，可选范围<li>yes</li><li>no</li>
  * @method void setAutoScaleDown(string $AutoScaleDown) 设置集群是否允许向下缩容，可选范围<li>yes</li><li>no</li>
+ * @method string getAutoArchive() 获取是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
+ * @method void setAutoArchive(string $AutoArchive) 设置是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -74,6 +76,11 @@ no
     public $AutoScaleDown;
 
     /**
+     * @var string 是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
+     */
+    public $AutoArchive;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -87,6 +94,7 @@ yes
 no
      * @param string $AutoScaleUp 集群是否允许向上扩容，可选范围<li>yes</li><li>no</li>
      * @param string $AutoScaleDown 集群是否允许向下缩容，可选范围<li>yes</li><li>no</li>
+     * @param string $AutoArchive 是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -124,6 +132,10 @@ no
 
         if (array_key_exists("AutoScaleDown",$param) and $param["AutoScaleDown"] !== null) {
             $this->AutoScaleDown = $param["AutoScaleDown"];
+        }
+
+        if (array_key_exists("AutoArchive",$param) and $param["AutoArchive"] !== null) {
+            $this->AutoArchive = $param["AutoArchive"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

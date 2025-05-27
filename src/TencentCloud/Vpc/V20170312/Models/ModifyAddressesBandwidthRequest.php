@@ -46,11 +46,13 @@ class ModifyAddressesBandwidthRequest extends AbstractModel
 
     /**
      * @var string 包月带宽起始时间(已废弃，输入无效)
+     * @deprecated
      */
     public $StartTime;
 
     /**
      * @var string 包月带宽结束时间(已废弃，输入无效)
+     * @deprecated
      */
     public $EndTime;
 

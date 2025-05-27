@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 资源标签
  *
  * @method string getResourceRegion() 获取资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceRegion(string $ResourceRegion) 设置资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getServiceType() 获取业务类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceType(string $ServiceType) 设置业务类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourcePrefix() 获取资源前缀
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourcePrefix(string $ResourcePrefix) 设置资源前缀
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceId() 获取资源唯一标记
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceId(string $ResourceId) 设置资源唯一标记
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取资源标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置资源标签
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ResourceTag extends AbstractModel
 {
     /**
      * @var string 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceRegion;
 
     /**
      * @var string 业务类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceType;
 
     /**
      * @var string 资源前缀
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourcePrefix;
 
     /**
      * @var string 资源唯一标记
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceId;
 
     /**
      * @var array 资源标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
      * @param string $ResourceRegion 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceType 业务类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourcePrefix 资源前缀
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceId 资源唯一标记
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 资源标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

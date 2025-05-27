@@ -110,6 +110,7 @@ use TencentCloud\Cdb\V20170320\Models as Models;
  * @method Models\DescribeCdbZoneConfigResponse DescribeCdbZoneConfig(Models\DescribeCdbZoneConfigRequest $req) 本接口(DescribeCdbZoneConfig)用于查询云数据库各地域可售卖的规格配置。
  * @method Models\DescribeCloneListResponse DescribeCloneList(Models\DescribeCloneListRequest $req) 本接口（DescribeCloneList）用于查询用户实例的克隆任务列表。
  * @method Models\DescribeClusterInfoResponse DescribeClusterInfo(Models\DescribeClusterInfoRequest $req) 本接口（DescribeClusterInfo）用于查询云盘版实例信息。
+ * @method Models\DescribeCpuExpandHistoryResponse DescribeCpuExpandHistory(Models\DescribeCpuExpandHistoryRequest $req) 本接口（DescribeCpuExpandHistory）用于查询扩容历史。
  * @method Models\DescribeDBFeaturesResponse DescribeDBFeatures(Models\DescribeDBFeaturesRequest $req) 本接口（DescribeDBFeatures）用于查询云数据库版本属性，包括是否支持数据库加密、数据库审计等功能。
  * @method Models\DescribeDBImportRecordsResponse DescribeDBImportRecords(Models\DescribeDBImportRecordsRequest $req) 本接口(DescribeDBImportRecords)用于查询云数据库导入任务操作日志。
  * @method Models\DescribeDBInstanceCharsetResponse DescribeDBInstanceCharset(Models\DescribeDBInstanceCharsetRequest $req) 本接口(DescribeDBInstanceCharset)用于查询云数据库实例的字符集，获取字符集的名称。

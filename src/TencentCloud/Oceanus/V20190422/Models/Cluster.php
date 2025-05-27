@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOwnerUin(string $OwnerUin) 设置主账号 UIN
  * @method string getCreatorUin() 获取创建者 UIN
  * @method void setCreatorUin(string $CreatorUin) 设置创建者 UIN
- * @method integer getStatus() 获取集群状态, 1 未初始化,，3 初始化中，2 运行中
- * @method void setStatus(integer $Status) 设置集群状态, 1 未初始化,，3 初始化中，2 运行中
+ * @method integer getStatus() 获取集群状态, 1 未初始化,3 初始化中，2 运行中
+ * @method void setStatus(integer $Status) 设置集群状态, 1 未初始化,3 初始化中，2 运行中
  * @method string getRemark() 获取描述
  * @method void setRemark(string $Remark) 设置描述
  * @method string getCreateTime() 获取集群创建时间
@@ -184,6 +184,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRunningCpu(float $RunningCpu) 设置运行的CPU
  * @method float getRunningMem() 获取运行的内存
  * @method void setRunningMem(float $RunningMem) 设置运行的内存
+ * @method Setats getSetats() 获取setats集群
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSetats(Setats $Setats) 设置setats集群
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Cluster extends AbstractModel
 {
@@ -218,7 +222,7 @@ class Cluster extends AbstractModel
     public $CreatorUin;
 
     /**
-     * @var integer 集群状态, 1 未初始化,，3 初始化中，2 运行中
+     * @var integer 集群状态, 1 未初始化,3 初始化中，2 运行中
      */
     public $Status;
 
@@ -478,13 +482,19 @@ class Cluster extends AbstractModel
     public $RunningMem;
 
     /**
+     * @var Setats setats集群
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Setats;
+
+    /**
      * @param string $ClusterId 集群 ID
      * @param string $Name 集群名称
      * @param string $Region 地域
      * @param integer $AppId 用户 AppID
      * @param string $OwnerUin 主账号 UIN
      * @param string $CreatorUin 创建者 UIN
-     * @param integer $Status 集群状态, 1 未初始化,，3 初始化中，2 运行中
+     * @param integer $Status 集群状态, 1 未初始化,3 初始化中，2 运行中
      * @param string $Remark 描述
      * @param string $CreateTime 集群创建时间
      * @param string $UpdateTime 最后一次操作集群的时间
@@ -560,6 +570,8 @@ class Cluster extends AbstractModel
      * @param float $TotalMem 总的内存
      * @param float $RunningCpu 运行的CPU
      * @param float $RunningMem 运行的内存
+     * @param Setats $Setats setats集群
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -812,6 +824,11 @@ class Cluster extends AbstractModel
 
         if (array_key_exists("RunningMem",$param) and $param["RunningMem"] !== null) {
             $this->RunningMem = $param["RunningMem"];
+        }
+
+        if (array_key_exists("Setats",$param) and $param["Setats"] !== null) {
+            $this->Setats = new Setats();
+            $this->Setats->deserialize($param["Setats"]);
         }
     }
 }

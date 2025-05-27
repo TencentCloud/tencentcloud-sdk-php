@@ -66,6 +66,7 @@ class AccountInfo extends AbstractModel
 
     /**
      * @var string 该值已废弃
+     * @deprecated
      */
     public $CreateTime;
 

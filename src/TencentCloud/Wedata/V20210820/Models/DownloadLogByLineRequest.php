@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setParseErrorTip(boolean $ParseErrorTip) 设置true:解析错误信息。false:不解析错误信息
  * @method integer getFileType() 获取log 0 code 1 result 2 custo 3
  * @method void setFileType(integer $FileType) 设置log 0 code 1 result 2 custo 3
+ * @method integer getQueryFileFlag() 获取查询文件标志：0: 从执行机获取，1: 从cos获取，获取不到会再从执行机获取
+ * @method void setQueryFileFlag(integer $QueryFileFlag) 设置查询文件标志：0: 从执行机获取，1: 从cos获取，获取不到会再从执行机获取
+ * @method string getExtInfo() 获取透传字段，如果queryFileFlag为1，则ext回作为上一页的分页标识offset
+ * @method void setExtInfo(string $ExtInfo) 设置透传字段，如果queryFileFlag为1，则ext回作为上一页的分页标识offset
  */
 class DownloadLogByLineRequest extends AbstractModel
 {
@@ -108,6 +112,16 @@ class DownloadLogByLineRequest extends AbstractModel
     public $FileType;
 
     /**
+     * @var integer 查询文件标志：0: 从执行机获取，1: 从cos获取，获取不到会再从执行机获取
+     */
+    public $QueryFileFlag;
+
+    /**
+     * @var string 透传字段，如果queryFileFlag为1，则ext回作为上一页的分页标识offset
+     */
+    public $ExtInfo;
+
+    /**
      * @param integer $StartLine 开始行
      * @param integer $LineCount 读取行
      * @param string $ProjectId 项目id
@@ -120,6 +134,8 @@ class DownloadLogByLineRequest extends AbstractModel
      * @param string $JobType hiveSql:34,sparkSql:36 dlcSql: 32
      * @param boolean $ParseErrorTip true:解析错误信息。false:不解析错误信息
      * @param integer $FileType log 0 code 1 result 2 custo 3
+     * @param integer $QueryFileFlag 查询文件标志：0: 从执行机获取，1: 从cos获取，获取不到会再从执行机获取
+     * @param string $ExtInfo 透传字段，如果queryFileFlag为1，则ext回作为上一页的分页标识offset
      */
     function __construct()
     {
@@ -180,6 +196,14 @@ class DownloadLogByLineRequest extends AbstractModel
 
         if (array_key_exists("FileType",$param) and $param["FileType"] !== null) {
             $this->FileType = $param["FileType"];
+        }
+
+        if (array_key_exists("QueryFileFlag",$param) and $param["QueryFileFlag"] !== null) {
+            $this->QueryFileFlag = $param["QueryFileFlag"];
+        }
+
+        if (array_key_exists("ExtInfo",$param) and $param["ExtInfo"] !== null) {
+            $this->ExtInfo = $param["ExtInfo"];
         }
     }
 }

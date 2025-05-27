@@ -116,6 +116,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpandCpu(integer $ExpandCpu) 设置当前扩容的CPU核心数。
  * @method array getClusterInfo() 获取实例集群版节点信息
  * @method void setClusterInfo(array $ClusterInfo) 设置实例集群版节点信息
+ * @method array getAnalysisNodeInfos() 获取分析引擎节点列表
+ * @method void setAnalysisNodeInfos(array $AnalysisNodeInfos) 设置分析引擎节点列表
+ * @method integer getDeviceBandwidth() 获取设备带宽，单位G。当DeviceClass不为空时此参数才有效。例：25-表示当前设备带宽为25G；10-表示当前设备带宽为10G。
+ * @method void setDeviceBandwidth(integer $DeviceBandwidth) 设置设备带宽，单位G。当DeviceClass不为空时此参数才有效。例：25-表示当前设备带宽为25G；10-表示当前设备带宽为10G。
  */
 class InstanceInfo extends AbstractModel
 {
@@ -360,6 +364,16 @@ class InstanceInfo extends AbstractModel
     public $ClusterInfo;
 
     /**
+     * @var array 分析引擎节点列表
+     */
+    public $AnalysisNodeInfos;
+
+    /**
+     * @var integer 设备带宽，单位G。当DeviceClass不为空时此参数才有效。例：25-表示当前设备带宽为25G；10-表示当前设备带宽为10G。
+     */
+    public $DeviceBandwidth;
+
+    /**
      * @param integer $WanStatus 外网状态，可能的返回值为：0-未开通外网；1-已开通外网；2-已关闭外网
      * @param string $Zone 可用区信息
      * @param integer $InitFlag 初始化标志，可能的返回值为：0-未初始化；1-已初始化
@@ -408,6 +422,8 @@ class InstanceInfo extends AbstractModel
      * @param string $DiskType 实例磁盘类型，仅云盘版实例才返回该值。可能的值为 CLOUD_SSD：SSD云硬盘， CLOUD_HSSD：增强型SSD云硬盘
      * @param integer $ExpandCpu 当前扩容的CPU核心数。
      * @param array $ClusterInfo 实例集群版节点信息
+     * @param array $AnalysisNodeInfos 分析引擎节点列表
+     * @param integer $DeviceBandwidth 设备带宽，单位G。当DeviceClass不为空时此参数才有效。例：25-表示当前设备带宽为25G；10-表示当前设备带宽为10G。
      */
     function __construct()
     {
@@ -635,6 +651,19 @@ class InstanceInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ClusterInfo, $obj);
             }
+        }
+
+        if (array_key_exists("AnalysisNodeInfos",$param) and $param["AnalysisNodeInfos"] !== null) {
+            $this->AnalysisNodeInfos = [];
+            foreach ($param["AnalysisNodeInfos"] as $key => $value){
+                $obj = new AnalysisNodeInfo();
+                $obj->deserialize($value);
+                array_push($this->AnalysisNodeInfos, $obj);
+            }
+        }
+
+        if (array_key_exists("DeviceBandwidth",$param) and $param["DeviceBandwidth"] !== null) {
+            $this->DeviceBandwidth = $param["DeviceBandwidth"];
         }
     }
 }

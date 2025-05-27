@@ -62,6 +62,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppAssetUrl(string $AppAssetUrl) 设置应用资产url
  * @method integer getReplayType() 获取回放类型 默认0, 1-rfb 2-mp4 3-ssh
  * @method void setReplayType(integer $ReplayType) 设置回放类型 默认0, 1-rfb 2-mp4 3-ssh
+ * @method string getDeviceKind() 获取会话资产类型
+ * @method void setDeviceKind(string $DeviceKind) 设置会话资产类型
+ * @method string getNamespace() 获取K8S集群命名空间
+ * @method void setNamespace(string $Namespace) 设置K8S集群命名空间
+ * @method string getWorkload() 获取K8S集群工作负载
+ * @method void setWorkload(string $Workload) 设置K8S集群工作负载
+ * @method string getPodName() 获取K8S集群容器名称
+ * @method void setPodName(string $PodName) 设置K8S集群容器名称
  */
 class SessionResult extends AbstractModel
 {
@@ -171,6 +179,26 @@ class SessionResult extends AbstractModel
     public $ReplayType;
 
     /**
+     * @var string 会话资产类型
+     */
+    public $DeviceKind;
+
+    /**
+     * @var string K8S集群命名空间
+     */
+    public $Namespace;
+
+    /**
+     * @var string K8S集群工作负载
+     */
+    public $Workload;
+
+    /**
+     * @var string K8S集群容器名称
+     */
+    public $PodName;
+
+    /**
      * @param string $UserName 用户名
      * @param string $RealName 姓名
      * @param string $Account 主机账号
@@ -192,6 +220,10 @@ class SessionResult extends AbstractModel
      * @param integer $AppAssetKind 应用资产类型：1-web
      * @param string $AppAssetUrl 应用资产url
      * @param integer $ReplayType 回放类型 默认0, 1-rfb 2-mp4 3-ssh
+     * @param string $DeviceKind 会话资产类型
+     * @param string $Namespace K8S集群命名空间
+     * @param string $Workload K8S集群工作负载
+     * @param string $PodName K8S集群容器名称
      */
     function __construct()
     {
@@ -288,6 +320,22 @@ class SessionResult extends AbstractModel
 
         if (array_key_exists("ReplayType",$param) and $param["ReplayType"] !== null) {
             $this->ReplayType = $param["ReplayType"];
+        }
+
+        if (array_key_exists("DeviceKind",$param) and $param["DeviceKind"] !== null) {
+            $this->DeviceKind = $param["DeviceKind"];
+        }
+
+        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
+            $this->Namespace = $param["Namespace"];
+        }
+
+        if (array_key_exists("Workload",$param) and $param["Workload"] !== null) {
+            $this->Workload = $param["Workload"];
+        }
+
+        if (array_key_exists("PodName",$param) and $param["PodName"] !== null) {
+            $this->PodName = $param["PodName"];
         }
     }
 }

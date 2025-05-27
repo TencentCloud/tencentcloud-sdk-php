@@ -166,6 +166,10 @@ DEFAULT: 其他来源
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstancePerReplicas(string $InstancePerReplicas) 设置单副本下的实例数，仅在部署类型为DIST时生效，默认1
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMonitorSource() 获取用于监控查询的Source
+枚举值，部分情况下与CreateSource不同，通过该字段兼容
+ * @method void setMonitorSource(string $MonitorSource) 设置用于监控查询的Source
+枚举值，部分情况下与CreateSource不同，通过该字段兼容
  */
 class Service extends AbstractModel
 {
@@ -377,6 +381,12 @@ DEFAULT: 其他来源
     public $InstancePerReplicas;
 
     /**
+     * @var string 用于监控查询的Source
+枚举值，部分情况下与CreateSource不同，通过该字段兼容
+     */
+    public $MonitorSource;
+
+    /**
      * @param string $ServiceGroupId 服务组id
      * @param string $ServiceId 服务id
      * @param string $ServiceGroupName 服务组名
@@ -450,6 +460,8 @@ DEFAULT: 其他来源
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstancePerReplicas 单副本下的实例数，仅在部署类型为DIST时生效，默认1
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MonitorSource 用于监控查询的Source
+枚举值，部分情况下与CreateSource不同，通过该字段兼容
      */
     function __construct()
     {
@@ -602,6 +614,10 @@ DEFAULT: 其他来源
 
         if (array_key_exists("InstancePerReplicas",$param) and $param["InstancePerReplicas"] !== null) {
             $this->InstancePerReplicas = $param["InstancePerReplicas"];
+        }
+
+        if (array_key_exists("MonitorSource",$param) and $param["MonitorSource"] !== null) {
+            $this->MonitorSource = $param["MonitorSource"];
         }
     }
 }

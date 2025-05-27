@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBoundPassword(boolean $BoundPassword) 设置true-已托管密码，false-未托管密码
  * @method boolean getBoundPrivateKey() 获取true-已托管私钥，false-未托管私钥
  * @method void setBoundPrivateKey(boolean $BoundPrivateKey) 设置true-已托管私钥，false-未托管私钥
+ * @method boolean getBoundKubeconfig() 获取是否托管凭证, true-托管，false-未托管
+ * @method void setBoundKubeconfig(boolean $BoundKubeconfig) 设置是否托管凭证, true-托管，false-未托管
+ * @method boolean getIsK8SManageAccount() 获取是否为k8s资产管理账号	
+ * @method void setIsK8SManageAccount(boolean $IsK8SManageAccount) 设置是否为k8s资产管理账号	
  */
 class DeviceAccount extends AbstractModel
 {
@@ -59,11 +63,23 @@ class DeviceAccount extends AbstractModel
     public $BoundPrivateKey;
 
     /**
+     * @var boolean 是否托管凭证, true-托管，false-未托管
+     */
+    public $BoundKubeconfig;
+
+    /**
+     * @var boolean 是否为k8s资产管理账号	
+     */
+    public $IsK8SManageAccount;
+
+    /**
      * @param integer $Id 账号ID
      * @param integer $DeviceId 主机ID
      * @param string $Account 账号名
      * @param boolean $BoundPassword true-已托管密码，false-未托管密码
      * @param boolean $BoundPrivateKey true-已托管私钥，false-未托管私钥
+     * @param boolean $BoundKubeconfig 是否托管凭证, true-托管，false-未托管
+     * @param boolean $IsK8SManageAccount 是否为k8s资产管理账号	
      */
     function __construct()
     {
@@ -96,6 +112,14 @@ class DeviceAccount extends AbstractModel
 
         if (array_key_exists("BoundPrivateKey",$param) and $param["BoundPrivateKey"] !== null) {
             $this->BoundPrivateKey = $param["BoundPrivateKey"];
+        }
+
+        if (array_key_exists("BoundKubeconfig",$param) and $param["BoundKubeconfig"] !== null) {
+            $this->BoundKubeconfig = $param["BoundKubeconfig"];
+        }
+
+        if (array_key_exists("IsK8SManageAccount",$param) and $param["IsK8SManageAccount"] !== null) {
+            $this->IsK8SManageAccount = $param["IsK8SManageAccount"];
         }
     }
 }

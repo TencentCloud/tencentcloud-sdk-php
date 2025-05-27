@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeployZone(string $DeployZone) 设置部署zone
  * @method integer getTrial() 获取0非试用版，1试用版
  * @method void setTrial(integer $Trial) 设置0非试用版，1试用版
+ * @method integer getShareClb() 获取是否共享clb，0：不共享，1：共享
+ * @method void setShareClb(integer $ShareClb) 设置是否共享clb，0：不共享，1：共享
  */
 class CreateResourceRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class CreateResourceRequest extends AbstractModel
     public $Trial;
 
     /**
+     * @var integer 是否共享clb，0：不共享，1：共享
+     */
+    public $ShareClb;
+
+    /**
      * @param string $DeployRegion 部署region
      * @param string $VpcId 部署堡垒机的VpcId
      * @param string $SubnetId 部署堡垒机的SubnetId
@@ -112,6 +119,7 @@ class CreateResourceRequest extends AbstractModel
      * @param integer $AutoRenewFlag 自动续费
      * @param string $DeployZone 部署zone
      * @param integer $Trial 0非试用版，1试用版
+     * @param integer $ShareClb 是否共享clb，0：不共享，1：共享
      */
     function __construct()
     {
@@ -168,6 +176,10 @@ class CreateResourceRequest extends AbstractModel
 
         if (array_key_exists("Trial",$param) and $param["Trial"] !== null) {
             $this->Trial = $param["Trial"];
+        }
+
+        if (array_key_exists("ShareClb",$param) and $param["ShareClb"] !== null) {
+            $this->ShareClb = $param["ShareClb"];
         }
     }
 }

@@ -33,9 +33,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getMail() 获取0: 非邮箱校验 1: 邮箱校验
  * @method void setMail(integer $Mail) 设置0: 非邮箱校验 1: 邮箱校验
  * @method integer getU2FToken() 获取0: 非u2f硬件token 1: u2f硬件token
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setU2FToken(integer $U2FToken) 设置0: 非u2f硬件token 1: u2f硬件token
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class LoginActionFlag extends AbstractModel
 {
@@ -71,7 +69,6 @@ class LoginActionFlag extends AbstractModel
 
     /**
      * @var integer 0: 非u2f硬件token 1: u2f硬件token
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $U2FToken;
 
@@ -83,7 +80,6 @@ class LoginActionFlag extends AbstractModel
      * @param integer $Custom 0: 非自定义校验 1: 自定义校验
      * @param integer $Mail 0: 非邮箱校验 1: 邮箱校验
      * @param integer $U2FToken 0: 非u2f硬件token 1: u2f硬件token
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -78,6 +78,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSameSelfWorkflowDependType(boolean $SameSelfWorkflowDependType) 设置补录扩展属性
  * @method string getSelfWorkflowDependency() 获取补录扩展属性
  * @method void setSelfWorkflowDependency(string $SelfWorkflowDependency) 设置补录扩展属性
+ * @method string getMakeType() 获取任务 TASK； 项目： PROJECT
+ * @method void setMakeType(string $MakeType) 设置任务 TASK； 项目： PROJECT
+ * @method string getStatusList() 获取任务状态
+ * @method void setStatusList(string $StatusList) 设置任务状态
+ * @method string getMakeCheckEventType() 获取补录是否跳过事件检查
+ * @method void setMakeCheckEventType(string $MakeCheckEventType) 设置补录是否跳过事件检查
  */
 class CreateOpsMakePlanRequest extends AbstractModel
 {
@@ -215,6 +221,21 @@ class CreateOpsMakePlanRequest extends AbstractModel
     public $SelfWorkflowDependency;
 
     /**
+     * @var string 任务 TASK； 项目： PROJECT
+     */
+    public $MakeType;
+
+    /**
+     * @var string 任务状态
+     */
+    public $StatusList;
+
+    /**
+     * @var string 补录是否跳过事件检查
+     */
+    public $MakeCheckEventType;
+
+    /**
      * @param string $ProjectId 项目id
      * @param string $MakeName 补录计划名称
      * @param array $TaskIdList 补录任务集合
@@ -244,6 +265,9 @@ class CreateOpsMakePlanRequest extends AbstractModel
      * @param array $MakeExtList 补录扩展属性
      * @param boolean $SameSelfWorkflowDependType 补录扩展属性
      * @param string $SelfWorkflowDependency 补录扩展属性
+     * @param string $MakeType 任务 TASK； 项目： PROJECT
+     * @param string $StatusList 任务状态
+     * @param string $MakeCheckEventType 补录是否跳过事件检查
      */
     function __construct()
     {
@@ -375,6 +399,18 @@ class CreateOpsMakePlanRequest extends AbstractModel
 
         if (array_key_exists("SelfWorkflowDependency",$param) and $param["SelfWorkflowDependency"] !== null) {
             $this->SelfWorkflowDependency = $param["SelfWorkflowDependency"];
+        }
+
+        if (array_key_exists("MakeType",$param) and $param["MakeType"] !== null) {
+            $this->MakeType = $param["MakeType"];
+        }
+
+        if (array_key_exists("StatusList",$param) and $param["StatusList"] !== null) {
+            $this->StatusList = $param["StatusList"];
+        }
+
+        if (array_key_exists("MakeCheckEventType",$param) and $param["MakeCheckEventType"] !== null) {
+            $this->MakeCheckEventType = $param["MakeCheckEventType"];
         }
     }
 }

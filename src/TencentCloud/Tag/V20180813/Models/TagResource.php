@@ -31,13 +31,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTagValueMd5() 获取标签值MD5值
  * @method void setTagValueMd5(string $TagValueMd5) 设置标签值MD5值
  * @method string getServiceType() 获取资源类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceType(string $ServiceType) 设置资源类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCategory() 获取标签类型。取值： Custom：自定义标签。 System：系统标签。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCategory(string $Category) 设置标签类型。取值： Custom：自定义标签。 System：系统标签。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TagResource extends AbstractModel
 {
@@ -68,13 +64,11 @@ class TagResource extends AbstractModel
 
     /**
      * @var string 资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceType;
 
     /**
      * @var string 标签类型。取值： Custom：自定义标签。 System：系统标签。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Category;
 
@@ -85,9 +79,7 @@ class TagResource extends AbstractModel
      * @param string $TagKeyMd5 标签键MD5值
      * @param string $TagValueMd5 标签值MD5值
      * @param string $ServiceType 资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Category 标签类型。取值： Custom：自定义标签。 System：系统标签。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

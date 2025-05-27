@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AttachInstances请求参数结构体
  *
- * @method string getEnvId() 获取计算环境ID，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
- * @method void setEnvId(string $EnvId) 设置计算环境ID，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
+ * @method string getEnvId() 获取计算环境ID，环境ID通过调用接口 [DescribeComputeEnvs](https://cloud.tencent.com/document/api/599/15893)获取。
+ * @method void setEnvId(string $EnvId) 设置计算环境ID，环境ID通过调用接口 [DescribeComputeEnvs](https://cloud.tencent.com/document/api/599/15893)获取。
  * @method array getInstances() 获取加入计算环境实例列表，每次请求的实例的上限为100。
  * @method void setInstances(array $Instances) 设置加入计算环境实例列表，每次请求的实例的上限为100。
  */
 class AttachInstancesRequest extends AbstractModel
 {
     /**
-     * @var string 计算环境ID，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
+     * @var string 计算环境ID，环境ID通过调用接口 [DescribeComputeEnvs](https://cloud.tencent.com/document/api/599/15893)获取。
      */
     public $EnvId;
 
@@ -38,7 +38,7 @@ class AttachInstancesRequest extends AbstractModel
     public $Instances;
 
     /**
-     * @param string $EnvId 计算环境ID，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
+     * @param string $EnvId 计算环境ID，环境ID通过调用接口 [DescribeComputeEnvs](https://cloud.tencent.com/document/api/599/15893)获取。
      * @param array $Instances 加入计算环境实例列表，每次请求的实例的上限为100。
      */
     function __construct()

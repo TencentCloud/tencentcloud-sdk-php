@@ -62,6 +62,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSSLCertName(string $SSLCertName) 设置已上传的SSL证书名称
  * @method integer getIOAId() 获取IOA侧的资源ID
  * @method void setIOAId(integer $IOAId) 设置IOA侧的资源ID
+ * @method integer getManageDimension() 获取K8S集群托管维度。1-集群，2-命名空间，3-工作负载
+ * @method void setManageDimension(integer $ManageDimension) 设置K8S集群托管维度。1-集群，2-命名空间，3-工作负载
+ * @method integer getManageAccountId() 获取K8S集群托管账号id	
+ * @method void setManageAccountId(integer $ManageAccountId) 设置K8S集群托管账号id	
+ * @method string getNamespace() 获取K8S集群命名空间	
+ * @method void setNamespace(string $Namespace) 设置K8S集群命名空间	
+ * @method string getWorkload() 获取K8S集群工作负载	
+ * @method void setWorkload(string $Workload) 设置K8S集群工作负载	
+ * @method integer getSyncPodCount() 获取K8S集群pod已同步数量
+ * @method void setSyncPodCount(integer $SyncPodCount) 设置K8S集群pod已同步数量
+ * @method integer getTotalPodCount() 获取K8S集群pod总数量	
+ * @method void setTotalPodCount(integer $TotalPodCount) 设置K8S集群pod总数量	
  */
 class Device extends AbstractModel
 {
@@ -171,6 +183,36 @@ class Device extends AbstractModel
     public $IOAId;
 
     /**
+     * @var integer K8S集群托管维度。1-集群，2-命名空间，3-工作负载
+     */
+    public $ManageDimension;
+
+    /**
+     * @var integer K8S集群托管账号id	
+     */
+    public $ManageAccountId;
+
+    /**
+     * @var string K8S集群命名空间	
+     */
+    public $Namespace;
+
+    /**
+     * @var string K8S集群工作负载	
+     */
+    public $Workload;
+
+    /**
+     * @var integer K8S集群pod已同步数量
+     */
+    public $SyncPodCount;
+
+    /**
+     * @var integer K8S集群pod总数量	
+     */
+    public $TotalPodCount;
+
+    /**
      * @param integer $Id 资产ID
      * @param string $InstanceId 实例ID，对应CVM、CDB等实例ID
      * @param string $Name 资产名
@@ -192,6 +234,12 @@ class Device extends AbstractModel
      * @param integer $EnableSSL 是否启用SSL，仅支持Redis资产。0：禁用 1：启用
      * @param string $SSLCertName 已上传的SSL证书名称
      * @param integer $IOAId IOA侧的资源ID
+     * @param integer $ManageDimension K8S集群托管维度。1-集群，2-命名空间，3-工作负载
+     * @param integer $ManageAccountId K8S集群托管账号id	
+     * @param string $Namespace K8S集群命名空间	
+     * @param string $Workload K8S集群工作负载	
+     * @param integer $SyncPodCount K8S集群pod已同步数量
+     * @param integer $TotalPodCount K8S集群pod总数量	
      */
     function __construct()
     {
@@ -295,6 +343,30 @@ class Device extends AbstractModel
 
         if (array_key_exists("IOAId",$param) and $param["IOAId"] !== null) {
             $this->IOAId = $param["IOAId"];
+        }
+
+        if (array_key_exists("ManageDimension",$param) and $param["ManageDimension"] !== null) {
+            $this->ManageDimension = $param["ManageDimension"];
+        }
+
+        if (array_key_exists("ManageAccountId",$param) and $param["ManageAccountId"] !== null) {
+            $this->ManageAccountId = $param["ManageAccountId"];
+        }
+
+        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
+            $this->Namespace = $param["Namespace"];
+        }
+
+        if (array_key_exists("Workload",$param) and $param["Workload"] !== null) {
+            $this->Workload = $param["Workload"];
+        }
+
+        if (array_key_exists("SyncPodCount",$param) and $param["SyncPodCount"] !== null) {
+            $this->SyncPodCount = $param["SyncPodCount"];
+        }
+
+        if (array_key_exists("TotalPodCount",$param) and $param["TotalPodCount"] !== null) {
+            $this->TotalPodCount = $param["TotalPodCount"];
         }
     }
 }

@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTagValue() 获取标签值
  * @method void setTagValue(string $TagValue) 设置标签值
  * @method string getCategory() 获取标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCategory(string $Category) 设置标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Tag extends AbstractModel
 {
@@ -43,7 +41,6 @@ class Tag extends AbstractModel
 
     /**
      * @var string 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Category;
 
@@ -51,7 +48,6 @@ class Tag extends AbstractModel
      * @param string $TagKey 标签键
      * @param string $TagValue 标签值
      * @param string $Category 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 描述实例的信息
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getImageId() 获取镜像ID
- * @method void setImageId(string $ImageId) 设置镜像ID
+ * @method string getInstanceId() 获取实例ID，可通过调用接口[DescribeInstances](https://cloud.tencent.com/document/product/213/15728)获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例ID，可通过调用接口[DescribeInstances](https://cloud.tencent.com/document/product/213/15728)获取。
+ * @method string getImageId() 获取镜像ID，可通过调用接口[DescribeImages](https://cloud.tencent.com/document/product/213/15715)获取。
+ * @method void setImageId(string $ImageId) 设置镜像ID，可通过调用接口[DescribeImages](https://cloud.tencent.com/document/product/213/15715)获取。
  * @method LoginSettings getLoginSettings() 获取实例登录设置。
  * @method void setLoginSettings(LoginSettings $LoginSettings) 设置实例登录设置。
  */
 class Instance extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 实例ID，可通过调用接口[DescribeInstances](https://cloud.tencent.com/document/product/213/15728)获取。
      */
     public $InstanceId;
 
     /**
-     * @var string 镜像ID
+     * @var string 镜像ID，可通过调用接口[DescribeImages](https://cloud.tencent.com/document/product/213/15715)获取。
      */
     public $ImageId;
 
@@ -45,8 +45,8 @@ class Instance extends AbstractModel
     public $LoginSettings;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $ImageId 镜像ID
+     * @param string $InstanceId 实例ID，可通过调用接口[DescribeInstances](https://cloud.tencent.com/document/product/213/15728)获取。
+     * @param string $ImageId 镜像ID，可通过调用接口[DescribeImages](https://cloud.tencent.com/document/product/213/15715)获取。
      * @param LoginSettings $LoginSettings 实例登录设置。
      */
     function __construct()

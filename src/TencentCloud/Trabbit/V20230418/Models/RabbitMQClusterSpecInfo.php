@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxBandWidth(integer $MaxBandWidth) 设置峰值带宽，已废弃
  * @method integer getPublicNetworkTps() 获取公网带宽，已废弃
  * @method void setPublicNetworkTps(integer $PublicNetworkTps) 设置公网带宽，已废弃
+ * @method string getFeatures() 获取实例对应的功能列表，true表示支持，false 表示不支持
+ * @method void setFeatures(string $Features) 设置实例对应的功能列表，true表示支持，false 表示不支持
  */
 class RabbitMQClusterSpecInfo extends AbstractModel
 {
@@ -87,6 +89,11 @@ class RabbitMQClusterSpecInfo extends AbstractModel
     public $PublicNetworkTps;
 
     /**
+     * @var string 实例对应的功能列表，true表示支持，false 表示不支持
+     */
+    public $Features;
+
+    /**
      * @param string $SpecName 集群规格名称
      * @param integer $MaxTps 峰值tps
      * @param integer $MaxQueueNum 最大队列数
@@ -96,6 +103,7 @@ class RabbitMQClusterSpecInfo extends AbstractModel
      * @param integer $MaxUserNum 最大用户数
      * @param integer $MaxBandWidth 峰值带宽，已废弃
      * @param integer $PublicNetworkTps 公网带宽，已废弃
+     * @param string $Features 实例对应的功能列表，true表示支持，false 表示不支持
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class RabbitMQClusterSpecInfo extends AbstractModel
 
         if (array_key_exists("PublicNetworkTps",$param) and $param["PublicNetworkTps"] !== null) {
             $this->PublicNetworkTps = $param["PublicNetworkTps"];
+        }
+
+        if (array_key_exists("Features",$param) and $param["Features"] !== null) {
+            $this->Features = $param["Features"];
         }
     }
 }

@@ -14,36 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Bi\V20220105\Models;
+namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 数据
+ * 描述排序，用于排序.
  *
- * @method integer getId() 获取项目Id
- * @method void setId(integer $Id) 设置项目Id
- * @method string getEditUrl() 获取url
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEditUrl(string $EditUrl) 设置url
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getName() 获取排序字段。
+ * @method void setName(string $Name) 设置排序字段。
+ * @method string getDirection() 获取Desc or Asc。
+ * @method void setDirection(string $Direction) 设置Desc or Asc。
  */
-class Data extends AbstractModel
+class Order extends AbstractModel
 {
     /**
-     * @var integer 项目Id
+     * @var string 排序字段。
      */
-    public $Id;
+    public $Name;
 
     /**
-     * @var string url
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string Desc or Asc。
      */
-    public $EditUrl;
+    public $Direction;
 
     /**
-     * @param integer $Id 项目Id
-     * @param string $EditUrl url
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Name 排序字段。
+     * @param string $Direction Desc or Asc。
      */
     function __construct()
     {
@@ -58,12 +54,12 @@ class Data extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
 
-        if (array_key_exists("EditUrl",$param) and $param["EditUrl"] !== null) {
-            $this->EditUrl = $param["EditUrl"];
+        if (array_key_exists("Direction",$param) and $param["Direction"] !== null) {
+            $this->Direction = $param["Direction"];
         }
     }
 }

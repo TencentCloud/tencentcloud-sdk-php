@@ -50,6 +50,7 @@ use TencentCloud\Emr\V20190103\Models as Models;
  * @method Models\DescribeEmrApplicationStaticsResponse DescribeEmrApplicationStatics(Models\DescribeEmrApplicationStaticsRequest $req) yarn application 统计接口查询
  * @method Models\DescribeEmrOverviewMetricsResponse DescribeEmrOverviewMetrics(Models\DescribeEmrOverviewMetricsRequest $req) 查询监控概览页指标数据
  * @method Models\DescribeGlobalConfigResponse DescribeGlobalConfig(Models\DescribeGlobalConfigRequest $req) 查询YARN资源调度的全局配置
+ * @method Models\DescribeGroupsSTDResponse DescribeGroupsSTD(Models\DescribeGroupsSTDRequest $req) 查询用户组
  * @method Models\DescribeHBaseTableOverviewResponse DescribeHBaseTableOverview(Models\DescribeHBaseTableOverviewRequest $req) 获取Hbase表级监控数据概览接口
  * @method Models\DescribeHDFSStorageInfoResponse DescribeHDFSStorageInfo(Models\DescribeHDFSStorageInfoRequest $req) 查询HDFS存储文件信息
  * @method Models\DescribeHiveQueriesResponse DescribeHiveQueries(Models\DescribeHiveQueriesRequest $req) 获取hive查询信息

@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxStorage(integer $MaxStorage) 设置为了兼容托管版，固定值 0
  * @method integer getIsolatedTime() 获取隔离时间
  * @method void setIsolatedTime(integer $IsolatedTime) 设置隔离时间
+ * @method string getServerlessExt() 获取Serverless 扩展字段
+ * @method void setServerlessExt(string $ServerlessExt) 设置Serverless 扩展字段
  */
 class RabbitMQServerlessInstance extends AbstractModel
 {
@@ -167,6 +169,11 @@ class RabbitMQServerlessInstance extends AbstractModel
     public $IsolatedTime;
 
     /**
+     * @var string Serverless 扩展字段
+     */
+    public $ServerlessExt;
+
+    /**
      * @param string $InstanceId 实例Id
      * @param string $InstanceName 实例名称
      * @param string $InstanceVersion 实例版本号
@@ -188,6 +195,7 @@ class RabbitMQServerlessInstance extends AbstractModel
      * @param integer $NodeCount 为了兼容托管版，固定值 0
      * @param integer $MaxStorage 为了兼容托管版，固定值 0
      * @param integer $IsolatedTime 隔离时间
+     * @param string $ServerlessExt Serverless 扩展字段
      */
     function __construct()
     {
@@ -285,6 +293,10 @@ class RabbitMQServerlessInstance extends AbstractModel
 
         if (array_key_exists("IsolatedTime",$param) and $param["IsolatedTime"] !== null) {
             $this->IsolatedTime = $param["IsolatedTime"];
+        }
+
+        if (array_key_exists("ServerlessExt",$param) and $param["ServerlessExt"] !== null) {
+            $this->ServerlessExt = $param["ServerlessExt"];
         }
     }
 }

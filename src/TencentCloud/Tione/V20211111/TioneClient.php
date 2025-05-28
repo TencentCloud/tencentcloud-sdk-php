@@ -24,6 +24,9 @@ use TencentCloud\Tione\V20211111\Models as Models;
 
 /**
  * @method Models\ChatCompletionResponse ChatCompletion(Models\ChatCompletionRequest $req) 该接口支持与自行部署的大模型的聊天。
+
+使用该接口调用时需要携带腾讯云的密钥信息用于身份信息鉴权，建议通过腾讯云的云 API SDK调用，具体可以参考
+https://cloud.tencent.com/document/product/1278/85305
  * @method Models\CreateDatasetResponse CreateDataset(Models\CreateDatasetRequest $req) 创建数据集
  * @method Models\CreateModelServiceResponse CreateModelService(Models\CreateModelServiceRequest $req) 用于创建、发布一个新的模型服务
  * @method Models\CreateNotebookResponse CreateNotebook(Models\CreateNotebookRequest $req) 创建Notebook

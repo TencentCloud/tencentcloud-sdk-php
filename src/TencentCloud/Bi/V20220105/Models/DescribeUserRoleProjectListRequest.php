@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAllPage(boolean $AllPage) 设置是否获取全部数据
  * @method string getRoleCode() 获取角色编码
  * @method void setRoleCode(string $RoleCode) 设置角色编码
+ * @method array getUserIdList() 获取用户id列表
+ * @method void setUserIdList(array $UserIdList) 设置用户id列表
+ * @method string getKeyword() 获取搜索关键词
+ * @method void setKeyword(string $Keyword) 设置搜索关键词
  */
 class DescribeUserRoleProjectListRequest extends AbstractModel
 {
@@ -66,12 +70,24 @@ class DescribeUserRoleProjectListRequest extends AbstractModel
     public $RoleCode;
 
     /**
+     * @var array 用户id列表
+     */
+    public $UserIdList;
+
+    /**
+     * @var string 搜索关键词
+     */
+    public $Keyword;
+
+    /**
      * @param integer $PageNo 页码
      * @param integer $PageSize 页数
      * @param integer $ProjectId 项目ID
      * @param boolean $IsOnlyBindAppUser 是否只获取绑定企微应用的
      * @param boolean $AllPage 是否获取全部数据
      * @param string $RoleCode 角色编码
+     * @param array $UserIdList 用户id列表
+     * @param string $Keyword 搜索关键词
      */
     function __construct()
     {
@@ -108,6 +124,14 @@ class DescribeUserRoleProjectListRequest extends AbstractModel
 
         if (array_key_exists("RoleCode",$param) and $param["RoleCode"] !== null) {
             $this->RoleCode = $param["RoleCode"];
+        }
+
+        if (array_key_exists("UserIdList",$param) and $param["UserIdList"] !== null) {
+            $this->UserIdList = $param["UserIdList"];
+        }
+
+        if (array_key_exists("Keyword",$param) and $param["Keyword"] !== null) {
+            $this->Keyword = $param["Keyword"];
         }
     }
 }

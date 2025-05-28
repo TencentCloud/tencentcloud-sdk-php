@@ -14,44 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gs\V20191118\Models;
+namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateAndroidInstanceWebShell返回参数结构体
+ * DescribeGroupsSTD返回参数结构体
  *
- * @method string getKey() 获取鉴权密钥
- * @method void setKey(string $Key) 设置鉴权密钥
- * @method string getAddress() 获取连接地址
- * @method void setAddress(string $Address) 设置连接地址
- * @method string getZone() 获取连接区域
- * @method void setZone(string $Zone) 设置连接区域
- * @method string getConnectUrl() 获取访问链接，可以直接使用此链接访问 WebShell
- * @method void setConnectUrl(string $ConnectUrl) 设置访问链接，可以直接使用此链接访问 WebShell
+ * @method array getData() 获取用户组信息
+ * @method void setData(array $Data) 设置用户组信息
+ * @method integer getTotalCount() 获取符合条件的用户组数量
+ * @method void setTotalCount(integer $TotalCount) 设置符合条件的用户组数量
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateAndroidInstanceWebShellResponse extends AbstractModel
+class DescribeGroupsSTDResponse extends AbstractModel
 {
     /**
-     * @var string 鉴权密钥
+     * @var array 用户组信息
      */
-    public $Key;
+    public $Data;
 
     /**
-     * @var string 连接地址
+     * @var integer 符合条件的用户组数量
      */
-    public $Address;
-
-    /**
-     * @var string 连接区域
-     */
-    public $Zone;
-
-    /**
-     * @var string 访问链接，可以直接使用此链接访问 WebShell
-     */
-    public $ConnectUrl;
+    public $TotalCount;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -59,10 +45,8 @@ class CreateAndroidInstanceWebShellResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Key 鉴权密钥
-     * @param string $Address 连接地址
-     * @param string $Zone 连接区域
-     * @param string $ConnectUrl 访问链接，可以直接使用此链接访问 WebShell
+     * @param array $Data 用户组信息
+     * @param integer $TotalCount 符合条件的用户组数量
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -78,20 +62,17 @@ class CreateAndroidInstanceWebShellResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
-            $this->Key = $param["Key"];
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = [];
+            foreach ($param["Data"] as $key => $value){
+                $obj = new GroupInfos();
+                $obj->deserialize($value);
+                array_push($this->Data, $obj);
+            }
         }
 
-        if (array_key_exists("Address",$param) and $param["Address"] !== null) {
-            $this->Address = $param["Address"];
-        }
-
-        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
-            $this->Zone = $param["Zone"];
-        }
-
-        if (array_key_exists("ConnectUrl",$param) and $param["ConnectUrl"] !== null) {
-            $this->ConnectUrl = $param["ConnectUrl"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

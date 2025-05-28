@@ -54,10 +54,10 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
  * @method void setSize(string $Size) 设置文件大小
  * @method integer getAttrRange() 获取标签适用范围，需要传参为1
  * @method void setAttrRange(integer $AttrRange) 设置标签适用范围，需要传参为1
- * @method integer getSource() 获取来源(0 源文件导入 1 网页导入)
- * @method void setSource(integer $Source) 设置来源(0 源文件导入 1 网页导入)
- * @method string getWebUrl() 获取网页(或自定义链接)地址
- * @method void setWebUrl(string $WebUrl) 设置网页(或自定义链接)地址
+ * @method integer getSource() 获取来源（0 从本地文档导入），默认值为0
+ * @method void setSource(integer $Source) 设置来源（0 从本地文档导入），默认值为0
+ * @method string getWebUrl() 获取自定义链接地址, IsRefer为true的时候，该值才有意义
+ * @method void setWebUrl(string $WebUrl) 设置自定义链接地址, IsRefer为true的时候，该值才有意义
  * @method array getAttrLabels() 获取标签引用
  * @method void setAttrLabels(array $AttrLabels) 设置标签引用
  * @method integer getReferUrlType() 获取外部引用链接类型 0：系统链接 1：自定义链接
@@ -127,12 +127,12 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
     public $AttrRange;
 
     /**
-     * @var integer 来源(0 源文件导入 1 网页导入)
+     * @var integer 来源（0 从本地文档导入），默认值为0
      */
     public $Source;
 
     /**
-     * @var string 网页(或自定义链接)地址
+     * @var string 自定义链接地址, IsRefer为true的时候，该值才有意义
      */
     public $WebUrl;
 
@@ -190,8 +190,8 @@ jpg、png、jpeg、tiff、bmp、gif，单个文件不超过50MB
 cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判定为重复文档
      * @param string $Size 文件大小
      * @param integer $AttrRange 标签适用范围，需要传参为1
-     * @param integer $Source 来源(0 源文件导入 1 网页导入)
-     * @param string $WebUrl 网页(或自定义链接)地址
+     * @param integer $Source 来源（0 从本地文档导入），默认值为0
+     * @param string $WebUrl 自定义链接地址, IsRefer为true的时候，该值才有意义
      * @param array $AttrLabels 标签引用
      * @param integer $ReferUrlType 外部引用链接类型 0：系统链接 1：自定义链接
 值为1时，WebUrl 字段不能为空，否则不生效。

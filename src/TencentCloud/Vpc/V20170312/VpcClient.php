@@ -74,6 +74,7 @@ use TencentCloud\Vpc\V20170312\Models as Models;
 >?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
 >
  * @method Models\AssociateDirectConnectGatewayNatGatewayResponse AssociateDirectConnectGatewayNatGateway(Models\AssociateDirectConnectGatewayNatGatewayRequest $req) 将专线网关与NAT网关绑定，专线网关默认路由指向NAT网关
+ * @method Models\AssociateHaVipInstanceResponse AssociateHaVipInstance(Models\AssociateHaVipInstanceRequest $req) 本接口（AssociateHaVipInstance）用于HAVIP绑定子机或网卡（限制HaVip的飘移范围）。
  * @method Models\AssociateIPv6AddressResponse AssociateIPv6Address(Models\AssociateIPv6AddressRequest $req) 本接口（AssociateIPv6Address）用于将弹性公网IPv6（简称EIPv6）实例绑定到 CVM 或弹性网卡配置的内网 IPv6 地址上。
 
 - 将 EIPv6 绑定到 CVM 上，其本质是将 EIPv6 绑定到 CVM 弹性网卡所配置的内网 IPv6 地址上。
@@ -532,6 +533,7 @@ LimitTypes取值范围：
 >?本接口为异步接口，可调用 [DescribeVpcTaskResult](https://cloud.tencent.com/document/api/215/59037) 接口查询任务执行结果，待任务执行成功后再进行其他操作。
 >
  * @method Models\DisassociateDirectConnectGatewayNatGatewayResponse DisassociateDirectConnectGatewayNatGateway(Models\DisassociateDirectConnectGatewayNatGatewayRequest $req) 将专线网关与NAT网关解绑，解绑之后，专线网关将不能通过NAT网关访问公网
+ * @method Models\DisassociateHaVipInstanceResponse DisassociateHaVipInstance(Models\DisassociateHaVipInstanceRequest $req) 本接口（DisassociateHaVipInstance）用于HAVIP解绑子机或网卡（去掉HaVip飘移范围）。
  * @method Models\DisassociateIPv6AddressResponse DisassociateIPv6Address(Models\DisassociateIPv6AddressRequest $req) 本接口（DisassociateIPv6Address）用于解绑弹性公网 IPv6（简称EIPv6）实例。
 
 - 支持对 CVM、弹性网卡绑定的 EIPv6 实例进行解绑操作。

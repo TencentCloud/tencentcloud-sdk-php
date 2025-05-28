@@ -93,8 +93,10 @@ cold：低频存储。
  * @method void setClassId(integer $ClassId) 设置点播应用分类
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCosBucketName() 获取存储至 cos 的 bucket 桶名称。
+注：CosBucketName参数值不能包含-[appid] 部分。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCosBucketName(string $CosBucketName) 设置存储至 cos 的 bucket 桶名称。
+注：CosBucketName参数值不能包含-[appid] 部分。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCosBucketRegion() 获取存储至 cos 的 bucket 区域。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -177,6 +179,7 @@ cold：低频存储。
 
     /**
      * @var string 存储至 cos 的 bucket 桶名称。
+注：CosBucketName参数值不能包含-[appid] 部分。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CosBucketName;
@@ -231,6 +234,7 @@ cold：低频存储。
      * @param integer $ClassId 点播应用分类
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CosBucketName 存储至 cos 的 bucket 桶名称。
+注：CosBucketName参数值不能包含-[appid] 部分。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CosBucketRegion 存储至 cos 的 bucket 区域。
 注意：此字段可能返回 null，表示取不到有效值。

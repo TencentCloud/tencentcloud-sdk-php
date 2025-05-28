@@ -114,6 +114,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOwnerName(string $OwnerName) 设置所属人
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getNormalCount() 获取仪表盘页面数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNormalCount(integer $NormalCount) 设置仪表盘页面数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFreeCount() 获取自由画布页面数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFreeCount(integer $FreeCount) 设置自由画布页面数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAdhocCount() 获取即席分析页面数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAdhocCount(integer $AdhocCount) 设置即席分析页面数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getBriefingCount() 获取简报页面数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBriefingCount(integer $BriefingCount) 设置简报页面数
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Project extends AbstractModel
 {
@@ -261,6 +277,30 @@ class Project extends AbstractModel
     public $OwnerName;
 
     /**
+     * @var integer 仪表盘页面数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NormalCount;
+
+    /**
+     * @var integer 自由画布页面数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FreeCount;
+
+    /**
+     * @var integer 即席分析页面数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AdhocCount;
+
+    /**
+     * @var integer 简报页面数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BriefingCount;
+
+    /**
      * @param integer $Id 项目ID
      * @param string $Logo 项目Logo
 注意：此字段可能返回 null，表示取不到有效值。
@@ -307,6 +347,14 @@ class Project extends AbstractModel
      * @param string $Owner 所属人id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OwnerName 所属人
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $NormalCount 仪表盘页面数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FreeCount 自由画布页面数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AdhocCount 即席分析页面数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $BriefingCount 简报页面数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -421,6 +469,22 @@ class Project extends AbstractModel
 
         if (array_key_exists("OwnerName",$param) and $param["OwnerName"] !== null) {
             $this->OwnerName = $param["OwnerName"];
+        }
+
+        if (array_key_exists("NormalCount",$param) and $param["NormalCount"] !== null) {
+            $this->NormalCount = $param["NormalCount"];
+        }
+
+        if (array_key_exists("FreeCount",$param) and $param["FreeCount"] !== null) {
+            $this->FreeCount = $param["FreeCount"];
+        }
+
+        if (array_key_exists("AdhocCount",$param) and $param["AdhocCount"] !== null) {
+            $this->AdhocCount = $param["AdhocCount"];
+        }
+
+        if (array_key_exists("BriefingCount",$param) and $param["BriefingCount"] !== null) {
+            $this->BriefingCount = $param["BriefingCount"];
         }
     }
 }

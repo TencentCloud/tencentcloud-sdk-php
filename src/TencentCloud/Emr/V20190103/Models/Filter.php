@@ -14,36 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Bi\V20220105\Models;
+namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 数据
+ * 键值对过滤器，用于条件过滤查询.
  *
- * @method integer getId() 获取项目Id
- * @method void setId(integer $Id) 设置项目Id
- * @method string getEditUrl() 获取url
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEditUrl(string $EditUrl) 设置url
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getName() 获取需要过滤的字段。
+ * @method void setName(string $Name) 设置需要过滤的字段。
+ * @method array getValues() 获取字段的过滤值。
+ * @method void setValues(array $Values) 设置字段的过滤值。
  */
-class Data extends AbstractModel
+class Filter extends AbstractModel
 {
     /**
-     * @var integer 项目Id
+     * @var string 需要过滤的字段。
      */
-    public $Id;
+    public $Name;
 
     /**
-     * @var string url
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 字段的过滤值。
      */
-    public $EditUrl;
+    public $Values;
 
     /**
-     * @param integer $Id 项目Id
-     * @param string $EditUrl url
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Name 需要过滤的字段。
+     * @param array $Values 字段的过滤值。
      */
     function __construct()
     {
@@ -58,12 +54,12 @@ class Data extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
 
-        if (array_key_exists("EditUrl",$param) and $param["EditUrl"] !== null) {
-            $this->EditUrl = $param["EditUrl"];
+        if (array_key_exists("Values",$param) and $param["Values"] !== null) {
+            $this->Values = $param["Values"];
         }
     }
 }

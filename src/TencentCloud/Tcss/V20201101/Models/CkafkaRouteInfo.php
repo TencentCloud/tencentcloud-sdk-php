@@ -18,7 +18,7 @@ namespace TencentCloud\Tcss\V20201101\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ckafkal路由详情
+ * Ckafka路由详情
  *
  * @method integer getRouteID() 获取路由ID
  * @method void setRouteID(integer $RouteID) 设置路由ID

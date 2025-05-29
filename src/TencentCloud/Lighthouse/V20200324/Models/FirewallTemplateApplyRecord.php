@@ -29,10 +29,12 @@ use TencentCloud\Common\AbstractModel;
  * @method string getApplyState() 获取应用模板的执行状态。
 
 - SUCCESS：成功
+- RUNNING：运行中
 - FAILED：失败
  * @method void setApplyState(string $ApplyState) 设置应用模板的执行状态。
 
 - SUCCESS：成功
+- RUNNING：运行中
 - FAILED：失败
  * @method integer getSuccessCount() 获取应用成功的实例数量。
  * @method void setSuccessCount(integer $SuccessCount) 设置应用成功的实例数量。
@@ -64,6 +66,7 @@ class FirewallTemplateApplyRecord extends AbstractModel
      * @var string 应用模板的执行状态。
 
 - SUCCESS：成功
+- RUNNING：运行中
 - FAILED：失败
      */
     public $ApplyState;
@@ -95,6 +98,7 @@ class FirewallTemplateApplyRecord extends AbstractModel
      * @param string $ApplyState 应用模板的执行状态。
 
 - SUCCESS：成功
+- RUNNING：运行中
 - FAILED：失败
      * @param integer $SuccessCount 应用成功的实例数量。
      * @param integer $FailedCount 应用失败的实例数量。

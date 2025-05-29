@@ -62,7 +62,9 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\DescribeAuditRuleTemplatesResponse DescribeAuditRuleTemplates(Models\DescribeAuditRuleTemplatesRequest $req) 本接口（DescribeAuditRuleTemplates）用于查询审计规则模板信息。
  * @method Models\DescribeAuditRuleWithInstanceIdsResponse DescribeAuditRuleWithInstanceIds(Models\DescribeAuditRuleWithInstanceIdsRequest $req) 本接口（DescribeAuditRuleWithInstanceIds）用于获取实例的审计规则。
  * @method Models\DescribeBackupConfigResponse DescribeBackupConfig(Models\DescribeBackupConfigRequest $req) 本接口（DescribeBackupConfig）用于获取指定集群的备份配置信息，包括全量备份时间段、备份文件保留时间。
+ * @method Models\DescribeBackupDownloadRestrictionResponse DescribeBackupDownloadRestriction(Models\DescribeBackupDownloadRestrictionRequest $req) 该接口用户查询当前地域用户设置的默认备份下载来源限制
  * @method Models\DescribeBackupDownloadUrlResponse DescribeBackupDownloadUrl(Models\DescribeBackupDownloadUrlRequest $req) 本接口（DescribeBackupDownloadUrl）用于查询集群备份文件下载地址。
+ * @method Models\DescribeBackupDownloadUserRestrictionResponse DescribeBackupDownloadUserRestriction(Models\DescribeBackupDownloadUserRestrictionRequest $req) 该接口用户查询当前地域用户级别设置的默认备份下载来源限制
  * @method Models\DescribeBackupListResponse DescribeBackupList(Models\DescribeBackupListRequest $req) 本接口（DescribeBackupList）用于查询集群的备份文件列表。
  * @method Models\DescribeBinlogConfigResponse DescribeBinlogConfig(Models\DescribeBinlogConfigRequest $req) 该接口（DescribeBinlogConfig）用于查询binlog配置
  * @method Models\DescribeBinlogDownloadUrlResponse DescribeBinlogDownloadUrl(Models\DescribeBinlogDownloadUrlRequest $req) 本接口（DescribeBinlogDownloadUrl）用于查询 Binlog 的下载地址。
@@ -78,6 +80,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\DescribeClusterParamLogsResponse DescribeClusterParamLogs(Models\DescribeClusterParamLogsRequest $req) 本接口（DescribeClusterParamLogs）用于查询参数修改记录。
  * @method Models\DescribeClusterParamsResponse DescribeClusterParams(Models\DescribeClusterParamsRequest $req) 本接口（DescribeClusterParams）用于查询集群参数。
  * @method Models\DescribeClusterPasswordComplexityResponse DescribeClusterPasswordComplexity(Models\DescribeClusterPasswordComplexityRequest $req) 本接口（DescribeClusterPasswordComplexity）用于查看集群密码复杂度详情。
+ * @method Models\DescribeClusterReadOnlyResponse DescribeClusterReadOnly(Models\DescribeClusterReadOnlyRequest $req) 本接口（DescribeClusterReadOnly）用于查询集群只读开关。
  * @method Models\DescribeClusterTransparentEncryptInfoResponse DescribeClusterTransparentEncryptInfo(Models\DescribeClusterTransparentEncryptInfoRequest $req) 查询集群透明加密信息
  * @method Models\DescribeClustersResponse DescribeClusters(Models\DescribeClustersRequest $req) 本接口（DescribeClusters）用于查询集群列表。
  * @method Models\DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(Models\DescribeDBSecurityGroupsRequest $req) 本接口（DescribeDBSecurityGroups）用于查询实例安全组信息。
@@ -127,6 +130,8 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\ModifyAuditRuleTemplatesResponse ModifyAuditRuleTemplates(Models\ModifyAuditRuleTemplatesRequest $req) 本接口（ModifyAuditRuleTemplates）用于修改审计规则模板。
  * @method Models\ModifyAuditServiceResponse ModifyAuditService(Models\ModifyAuditServiceRequest $req) 本接口(ModifyAuditService)用于修改云数据库审计日志保存时长、审计规则等服务配置。
  * @method Models\ModifyBackupConfigResponse ModifyBackupConfig(Models\ModifyBackupConfigRequest $req) 本接口（ModifyBackupConfig）用于修改指定集群的备份配置。
+ * @method Models\ModifyBackupDownloadRestrictionResponse ModifyBackupDownloadRestriction(Models\ModifyBackupDownloadRestrictionRequest $req) 该接口用于修改用户当前地域的备份文件限制下载来源，可以设置内外网均可下载、仅内网可下载，或内网指定的vpc、ip可以下载。
+ * @method Models\ModifyBackupDownloadUserRestrictionResponse ModifyBackupDownloadUserRestriction(Models\ModifyBackupDownloadUserRestrictionRequest $req) 该接口用于修改用户当前地域的备份文件限制下载来源，可以设置内外网均可下载、仅内网可下载，或内网指定的vpc、ip可以下载。
  * @method Models\ModifyBackupNameResponse ModifyBackupName(Models\ModifyBackupNameRequest $req) 此接口（ModifyBackupName）用于修改备份文件备注名。
  * @method Models\ModifyBinlogConfigResponse ModifyBinlogConfig(Models\ModifyBinlogConfigRequest $req) 该接口（ModifyBinlogConfig）用于修改Binlog配置
  * @method Models\ModifyBinlogSaveDaysResponse ModifyBinlogSaveDays(Models\ModifyBinlogSaveDaysRequest $req) 此接口（ModifyBinlogSaveDays）用于修改集群Binlog保留天数。
@@ -134,6 +139,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\ModifyClusterNameResponse ModifyClusterName(Models\ModifyClusterNameRequest $req) 本接口（ModifyClusterName）用于修改集群名称。
  * @method Models\ModifyClusterParamResponse ModifyClusterParam(Models\ModifyClusterParamRequest $req) 本接口（ModifyClusterParam）用于修改集群参数。
  * @method Models\ModifyClusterPasswordComplexityResponse ModifyClusterPasswordComplexity(Models\ModifyClusterPasswordComplexityRequest $req) 本接口（ModifyClusterPasswordComplexity）用于修改/开启集群密码复杂度。
+ * @method Models\ModifyClusterReadOnlyResponse ModifyClusterReadOnly(Models\ModifyClusterReadOnlyRequest $req) 本接口（ModifyClusterReadOnly）用于修改集群只读开关。
  * @method Models\ModifyClusterSlaveZoneResponse ModifyClusterSlaveZone(Models\ModifyClusterSlaveZoneRequest $req) 本接口（ModifyClusterSlaveZone）用于变更集群的备可用区。
  * @method Models\ModifyClusterStorageResponse ModifyClusterStorage(Models\ModifyClusterStorageRequest $req) 本接口（ModifyClusterStorage）用于调整包年包月存储容量。
  * @method Models\ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroups(Models\ModifyDBInstanceSecurityGroupsRequest $req) 本接口（ModifyDBInstanceSecurityGroups）用于修改实例绑定的安全组。

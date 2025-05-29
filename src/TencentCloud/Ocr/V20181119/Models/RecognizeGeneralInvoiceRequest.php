@@ -43,6 +43,11 @@ use TencentCloud\Common\AbstractModel;
 18：完税凭证
 19：海关缴款书
 20：银行回单
+21：网约车行程单
+22：海关进/出口货物报关单
+23：海外发票
+24：购物小票
+25：销货清单
 -1：其他发票
  * @method void setTypes(array $Types) 设置需要识别的票据类型列表，为空或不填表示识别全部类型。当传入单个类型时，图片均采用该票类型进行处理。
 暂不支持多个参数进行局部控制。
@@ -63,6 +68,11 @@ use TencentCloud\Common\AbstractModel;
 18：完税凭证
 19：海关缴款书
 20：银行回单
+21：网约车行程单
+22：海关进/出口货物报关单
+23：海外发票
+24：购物小票
+25：销货清单
 -1：其他发票
  * @method boolean getEnableOther() 获取是否开启其他票识别，默认值为true，开启后可支持其他发票的智能识别。	
  * @method void setEnableOther(boolean $EnableOther) 设置是否开启其他票识别，默认值为true，开启后可支持其他发票的智能识别。	
@@ -76,6 +86,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableCutImage(boolean $EnableCutImage) 设置是否返回切割图片base64，默认值为false。
  * @method boolean getEnableItemPolygon() 获取是否打开字段坐标返回。默认为false。
  * @method void setEnableItemPolygon(boolean $EnableItemPolygon) 设置是否打开字段坐标返回。默认为false。
+ * @method boolean getEnableQRCode() 获取是否开启二维码识别。
+ * @method void setEnableQRCode(boolean $EnableQRCode) 设置是否开启二维码识别。
  */
 class RecognizeGeneralInvoiceRequest extends AbstractModel
 {
@@ -109,6 +121,11 @@ class RecognizeGeneralInvoiceRequest extends AbstractModel
 18：完税凭证
 19：海关缴款书
 20：银行回单
+21：网约车行程单
+22：海关进/出口货物报关单
+23：海外发票
+24：购物小票
+25：销货清单
 -1：其他发票
      */
     public $Types;
@@ -144,6 +161,11 @@ class RecognizeGeneralInvoiceRequest extends AbstractModel
     public $EnableItemPolygon;
 
     /**
+     * @var boolean 是否开启二维码识别。
+     */
+    public $EnableQRCode;
+
+    /**
      * @param string $ImageBase64 图片的 Base64 值。支持的图片格式：PNG、JPG、JPEG、PDF，暂不支持 GIF 格式。支持的图片大小：所下载图片经Base64编码后不超过 10M。图片下载时间不超过 3 秒。支持的图片像素：单边介于20-10000px之间。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
      * @param string $ImageUrl 图片的 Url 地址。支持的图片格式：PNG、JPG、JPEG、PDF，暂不支持 GIF 格式。支持的图片大小：所下载图片经 Base64 编码后不超过 10M。图片下载时间不超过 3 秒。支持的图片像素：单边介于20-10000px之间。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
      * @param array $Types 需要识别的票据类型列表，为空或不填表示识别全部类型。当传入单个类型时，图片均采用该票类型进行处理。
@@ -165,6 +187,11 @@ class RecognizeGeneralInvoiceRequest extends AbstractModel
 18：完税凭证
 19：海关缴款书
 20：银行回单
+21：网约车行程单
+22：海关进/出口货物报关单
+23：海外发票
+24：购物小票
+25：销货清单
 -1：其他发票
      * @param boolean $EnableOther 是否开启其他票识别，默认值为true，开启后可支持其他发票的智能识别。	
      * @param boolean $EnablePdf 是否开启PDF识别，默认值为true，开启后可同时支持图片和PDF的识别。
@@ -172,6 +199,7 @@ class RecognizeGeneralInvoiceRequest extends AbstractModel
      * @param boolean $EnableMultiplePage 是否开启PDF多页识别，默认值为false，开启后可同时支持多页PDF的识别返回，仅支持返回文件前30页。开启后EnablePdf和PdfPageNumber入参不进行控制。
      * @param boolean $EnableCutImage 是否返回切割图片base64，默认值为false。
      * @param boolean $EnableItemPolygon 是否打开字段坐标返回。默认为false。
+     * @param boolean $EnableQRCode 是否开启二维码识别。
      */
     function __construct()
     {
@@ -220,6 +248,10 @@ class RecognizeGeneralInvoiceRequest extends AbstractModel
 
         if (array_key_exists("EnableItemPolygon",$param) and $param["EnableItemPolygon"] !== null) {
             $this->EnableItemPolygon = $param["EnableItemPolygon"];
+        }
+
+        if (array_key_exists("EnableQRCode",$param) and $param["EnableQRCode"] !== null) {
+            $this->EnableQRCode = $param["EnableQRCode"];
         }
     }
 }

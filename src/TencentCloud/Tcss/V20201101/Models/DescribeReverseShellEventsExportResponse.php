@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeReverseShellEventsExport返回参数结构体
  *
- * @method string getDownloadUrl() 获取execle下载地址
- * @method void setDownloadUrl(string $DownloadUrl) 设置execle下载地址
+ * @method string getDownloadUrl() 获取excel下载地址
+ * @method void setDownloadUrl(string $DownloadUrl) 设置excel下载地址
  * @method string getJobId() 获取任务ID
  * @method void setJobId(string $JobId) 设置任务ID
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeReverseShellEventsExportResponse extends AbstractModel
 {
     /**
-     * @var string execle下载地址
+     * @var string excel下载地址
      */
     public $DownloadUrl;
 
@@ -45,7 +45,7 @@ class DescribeReverseShellEventsExportResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $DownloadUrl execle下载地址
+     * @param string $DownloadUrl excel下载地址
      * @param string $JobId 任务ID
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

@@ -91,7 +91,9 @@ use TencentCloud\Emr\V20190103\Models as Models;
  * @method Models\ModifyPodNumResponse ModifyPodNum(Models\ModifyPodNumRequest $req) 调整Pod数量
  * @method Models\ModifyResourceResponse ModifyResource(Models\ModifyResourceRequest $req) 变配实例
  * @method Models\ModifyResourcePoolsResponse ModifyResourcePools(Models\ModifyResourcePoolsRequest $req) 刷新YARN的动态资源池。已废弃，请使用`DeployYarnConf`
- * @method Models\ModifyResourceScheduleConfigResponse ModifyResourceScheduleConfig(Models\ModifyResourceScheduleConfigRequest $req) 修改YARN资源调度的资源配置。已废弃，请使用`ModifyYarnQueueV2`来修改队列配置
+ * @method Models\ModifyResourceScheduleConfigResponse ModifyResourceScheduleConfig(Models\ModifyResourceScheduleConfigRequest $req) 已废弃，请使用ModifyYarnQueueV2来修改队列配置，近一年无相关日志
+
+修改YARN资源调度的资源配置。已废弃，请使用`ModifyYarnQueueV2`来修改队列配置
  * @method Models\ModifyResourceSchedulerResponse ModifyResourceScheduler(Models\ModifyResourceSchedulerRequest $req) 修改了yarn的资源调度器，点击部署生效。
  * @method Models\ModifyResourcesTagsResponse ModifyResourcesTags(Models\ModifyResourcesTagsRequest $req) 强制修改标签
  * @method Models\ModifySLInstanceResponse ModifySLInstance(Models\ModifySLInstanceRequest $req) 本接口（ModifySLInstance）用于Serverless HBase变配实例。
@@ -101,7 +103,9 @@ use TencentCloud\Emr\V20190103\Models as Models;
  * @method Models\ModifyUserGroupResponse ModifyUserGroup(Models\ModifyUserGroupRequest $req) 用户管理-修改用户组
  * @method Models\ModifyUserManagerPwdResponse ModifyUserManagerPwd(Models\ModifyUserManagerPwdRequest $req) 修改用户密码（用户管理）
  * @method Models\ModifyUsersOfGroupSTDResponse ModifyUsersOfGroupSTD(Models\ModifyUsersOfGroupSTDRequest $req) 变更用户组用户信息
- * @method Models\ModifyYarnDeployResponse ModifyYarnDeploy(Models\ModifyYarnDeployRequest $req) 部署生效。已废弃，请使用`DeployYarnConf`接口进行部署生效
+ * @method Models\ModifyYarnDeployResponse ModifyYarnDeploy(Models\ModifyYarnDeployRequest $req) 该接口已废弃，请使用DeployYarnConf完成部署生效
+
+部署生效。已废弃，请使用`DeployYarnConf`接口进行部署生效
  * @method Models\ModifyYarnQueueV2Response ModifyYarnQueueV2(Models\ModifyYarnQueueV2Request $req) 修改资源调度中队列信息
  * @method Models\ResetYarnConfigResponse ResetYarnConfig(Models\ResetYarnConfigRequest $req) 修改YARN资源调度的资源配置
  * @method Models\ResizeDataDisksResponse ResizeDataDisks(Models\ResizeDataDisksRequest $req) 云数据盘扩容

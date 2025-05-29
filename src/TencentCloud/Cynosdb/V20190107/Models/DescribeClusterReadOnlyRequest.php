@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cloudaudit\V20190319\Models;
+namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * cos地域信息
+ * DescribeClusterReadOnly请求参数结构体
  *
- * @method string getCosRegion() 获取cos地域
- * @method void setCosRegion(string $CosRegion) 设置cos地域
- * @method string getCosRegionName() 获取地域描述
- * @method void setCosRegionName(string $CosRegionName) 设置地域描述
+ * @method array getClusterIds() 获取集群ID列表
+ * @method void setClusterIds(array $ClusterIds) 设置集群ID列表
  */
-class CosRegionInfo extends AbstractModel
+class DescribeClusterReadOnlyRequest extends AbstractModel
 {
     /**
-     * @var string cos地域
+     * @var array 集群ID列表
      */
-    public $CosRegion;
+    public $ClusterIds;
 
     /**
-     * @var string 地域描述
-     */
-    public $CosRegionName;
-
-    /**
-     * @param string $CosRegion cos地域
-     * @param string $CosRegionName 地域描述
+     * @param array $ClusterIds 集群ID列表
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class CosRegionInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CosRegion",$param) and $param["CosRegion"] !== null) {
-            $this->CosRegion = $param["CosRegion"];
-        }
-
-        if (array_key_exists("CosRegionName",$param) and $param["CosRegionName"] !== null) {
-            $this->CosRegionName = $param["CosRegionName"];
+        if (array_key_exists("ClusterIds",$param) and $param["ClusterIds"] !== null) {
+            $this->ClusterIds = $param["ClusterIds"];
         }
     }
 }

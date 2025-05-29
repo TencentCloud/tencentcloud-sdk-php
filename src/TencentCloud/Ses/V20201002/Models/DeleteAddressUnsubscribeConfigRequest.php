@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cloudaudit\V20190319\Models;
+namespace TencentCloud\Ses\V20201002\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * cos地域信息
+ * DeleteAddressUnsubscribeConfig请求参数结构体
  *
- * @method string getCosRegion() 获取cos地域
- * @method void setCosRegion(string $CosRegion) 设置cos地域
- * @method string getCosRegionName() 获取地域描述
- * @method void setCosRegionName(string $CosRegionName) 设置地域描述
+ * @method string getAddress() 获取需要操作的发信地址
+ * @method void setAddress(string $Address) 设置需要操作的发信地址
  */
-class CosRegionInfo extends AbstractModel
+class DeleteAddressUnsubscribeConfigRequest extends AbstractModel
 {
     /**
-     * @var string cos地域
+     * @var string 需要操作的发信地址
      */
-    public $CosRegion;
+    public $Address;
 
     /**
-     * @var string 地域描述
-     */
-    public $CosRegionName;
-
-    /**
-     * @param string $CosRegion cos地域
-     * @param string $CosRegionName 地域描述
+     * @param string $Address 需要操作的发信地址
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class CosRegionInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CosRegion",$param) and $param["CosRegion"] !== null) {
-            $this->CosRegion = $param["CosRegion"];
-        }
-
-        if (array_key_exists("CosRegionName",$param) and $param["CosRegionName"] !== null) {
-            $this->CosRegionName = $param["CosRegionName"];
+        if (array_key_exists("Address",$param) and $param["Address"] !== null) {
+            $this->Address = $param["Address"];
         }
     }
 }

@@ -94,8 +94,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHandleTaskId(string $HandleTaskId) 设置处置任务ID
  * @method string getEngineSource() 获取引擎来源
  * @method void setEngineSource(string $EngineSource) 设置引擎来源
- * @method string getVulRiskId() 获取新的漏洞风险id(同全网漏洞表的riskid)
- * @method void setVulRiskId(string $VulRiskId) 设置新的漏洞风险id(同全网漏洞表的riskid)
+ * @method string getVulRiskId() 获取新的漏洞风险id(同全网漏洞表的RiskId)
+ * @method void setVulRiskId(string $VulRiskId) 设置新的漏洞风险id(同全网漏洞表的RiskId)
  * @method string getTvdID() 获取新版漏洞id
  * @method void setTvdID(string $TvdID) 设置新版漏洞id
  * @method integer getIsOneClick() 获取是否可以一键体检，1-可以，0-不可以
@@ -291,7 +291,7 @@ class AssetViewVULRiskData extends AbstractModel
     public $EngineSource;
 
     /**
-     * @var string 新的漏洞风险id(同全网漏洞表的riskid)
+     * @var string 新的漏洞风险id(同全网漏洞表的RiskId)
      */
     public $VulRiskId;
 
@@ -348,7 +348,7 @@ class AssetViewVULRiskData extends AbstractModel
      * @param integer $IsSuggest 是否必修漏洞1是，0不是
      * @param string $HandleTaskId 处置任务ID
      * @param string $EngineSource 引擎来源
-     * @param string $VulRiskId 新的漏洞风险id(同全网漏洞表的riskid)
+     * @param string $VulRiskId 新的漏洞风险id(同全网漏洞表的RiskId)
      * @param string $TvdID 新版漏洞id
      * @param integer $IsOneClick 是否可以一键体检，1-可以，0-不可以
      * @param integer $IsPOC 是否POC扫描，0-非POC，1-POC

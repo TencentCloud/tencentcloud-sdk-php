@@ -24,36 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页的偏移量，默认值为0。
  * @method integer getLimit() 获取分页单页限制数目，默认值为20，最大值100。
  * @method void setLimit(integer $Limit) 设置分页单页限制数目，默认值为20，最大值100。
- * @method array getFilters() 获取<br><li> taskId
-
-按照【迁移任务id】进行过滤。
-类型：String
-
-必选：否
-
-<br><li> taskName
-
-按照【迁移任务名字】进行模糊搜索过滤。
-类型：String
-
-必选：否
-
-每次请求的Filters的上限为10，Filter.Values的上限为100。
- * @method void setFilters(array $Filters) 设置<br><li> taskId
-
-按照【迁移任务id】进行过滤。
-类型：String
-
-必选：否
-
-<br><li> taskName
-
-按照【迁移任务名字】进行模糊搜索过滤。
-类型：String
-
-必选：否
-
-每次请求的Filters的上限为10，Filter.Values的上限为100。
+ * @method array getFilters() 获取<br><li> taskId按照【迁移任务id】进行过滤。类型：String必选：否<br></li><br><li>  taskName按照【迁移任务名字】进行模糊搜索过滤。类型：String必选：否每次请求的Filters的上限为10，Filter.Values的上限为100。</li>
+ * @method void setFilters(array $Filters) 设置<br><li> taskId按照【迁移任务id】进行过滤。类型：String必选：否<br></li><br><li>  taskName按照【迁移任务名字】进行模糊搜索过滤。类型：String必选：否每次请求的Filters的上限为10，Filter.Values的上限为100。</li>
  */
 class DescribeMigrationTasksRequest extends AbstractModel
 {
@@ -68,42 +40,14 @@ class DescribeMigrationTasksRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var array <br><li> taskId
-
-按照【迁移任务id】进行过滤。
-类型：String
-
-必选：否
-
-<br><li> taskName
-
-按照【迁移任务名字】进行模糊搜索过滤。
-类型：String
-
-必选：否
-
-每次请求的Filters的上限为10，Filter.Values的上限为100。
+     * @var array <br><li> taskId按照【迁移任务id】进行过滤。类型：String必选：否<br></li><br><li>  taskName按照【迁移任务名字】进行模糊搜索过滤。类型：String必选：否每次请求的Filters的上限为10，Filter.Values的上限为100。</li>
      */
     public $Filters;
 
     /**
      * @param integer $Offset 分页的偏移量，默认值为0。
      * @param integer $Limit 分页单页限制数目，默认值为20，最大值100。
-     * @param array $Filters <br><li> taskId
-
-按照【迁移任务id】进行过滤。
-类型：String
-
-必选：否
-
-<br><li> taskName
-
-按照【迁移任务名字】进行模糊搜索过滤。
-类型：String
-
-必选：否
-
-每次请求的Filters的上限为10，Filter.Values的上限为100。
+     * @param array $Filters <br><li> taskId按照【迁移任务id】进行过滤。类型：String必选：否<br></li><br><li>  taskName按照【迁移任务名字】进行模糊搜索过滤。类型：String必选：否每次请求的Filters的上限为10，Filter.Values的上限为100。</li>
      */
     function __construct()
     {

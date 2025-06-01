@@ -20,12 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyInstanceCertBinding请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getSSLServerCertId() 获取服务端证书id
- * @method void setSSLServerCertId(string $SSLServerCertId) 设置服务端证书id
- * @method string getSSLCaCertId() 获取CA证书id
- * @method void setSSLCaCertId(string $SSLCaCertId) 设置CA证书id
+ * @method string getInstanceId() 获取腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+ * @method void setInstanceId(string $InstanceId) 设置腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
  * @method string getX509Mode() 获取加密通信方式
 TLS：单向证书认证
 mTLS：双向证书认证
@@ -34,31 +30,27 @@ BYOC：一设备一证书认证
 TLS：单向证书认证
 mTLS：双向证书认证
 BYOC：一设备一证书认证
+ * @method string getSSLServerCertId() 获取服务端证书id，从 [获取证书列表](https://cloud.tencent.com/document/api/400/41671) 或者腾讯云证书服务控制台获取。X509Mode为mTLS或BYOC时为必填。
+ * @method void setSSLServerCertId(string $SSLServerCertId) 设置服务端证书id，从 [获取证书列表](https://cloud.tencent.com/document/api/400/41671) 或者腾讯云证书服务控制台获取。X509Mode为mTLS或BYOC时为必填。
+ * @method string getSSLCaCertId() 获取CA证书id，从 [获取证书列表](https://cloud.tencent.com/document/api/400/41671) 或者腾讯云证书服务控制台获取。X509Mode为mTLS时为必填
+ * @method void setSSLCaCertId(string $SSLCaCertId) 设置CA证书id，从 [获取证书列表](https://cloud.tencent.com/document/api/400/41671) 或者腾讯云证书服务控制台获取。X509Mode为mTLS时为必填
  * @method string getDeviceCertificateProvisionType() 获取设备证书注册类型：
-JITP，自动注册；
-MANUAL 手动注册
+JITP：自动注册；
+API：手动注册
+默认值：API
  * @method void setDeviceCertificateProvisionType(string $DeviceCertificateProvisionType) 设置设备证书注册类型：
-JITP，自动注册；
-MANUAL 手动注册
+JITP：自动注册；
+API：手动注册
+默认值：API
  * @method boolean getAutomaticActivation() 获取是否自动激活，默认为false
  * @method void setAutomaticActivation(boolean $AutomaticActivation) 设置是否自动激活，默认为false
  */
 class ModifyInstanceCertBindingRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public $InstanceId;
-
-    /**
-     * @var string 服务端证书id
-     */
-    public $SSLServerCertId;
-
-    /**
-     * @var string CA证书id
-     */
-    public $SSLCaCertId;
 
     /**
      * @var string 加密通信方式
@@ -69,9 +61,20 @@ BYOC：一设备一证书认证
     public $X509Mode;
 
     /**
+     * @var string 服务端证书id，从 [获取证书列表](https://cloud.tencent.com/document/api/400/41671) 或者腾讯云证书服务控制台获取。X509Mode为mTLS或BYOC时为必填。
+     */
+    public $SSLServerCertId;
+
+    /**
+     * @var string CA证书id，从 [获取证书列表](https://cloud.tencent.com/document/api/400/41671) 或者腾讯云证书服务控制台获取。X509Mode为mTLS时为必填
+     */
+    public $SSLCaCertId;
+
+    /**
      * @var string 设备证书注册类型：
-JITP，自动注册；
-MANUAL 手动注册
+JITP：自动注册；
+API：手动注册
+默认值：API
      */
     public $DeviceCertificateProvisionType;
 
@@ -81,16 +84,17 @@ MANUAL 手动注册
     public $AutomaticActivation;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $SSLServerCertId 服务端证书id
-     * @param string $SSLCaCertId CA证书id
+     * @param string $InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      * @param string $X509Mode 加密通信方式
 TLS：单向证书认证
 mTLS：双向证书认证
 BYOC：一设备一证书认证
+     * @param string $SSLServerCertId 服务端证书id，从 [获取证书列表](https://cloud.tencent.com/document/api/400/41671) 或者腾讯云证书服务控制台获取。X509Mode为mTLS或BYOC时为必填。
+     * @param string $SSLCaCertId CA证书id，从 [获取证书列表](https://cloud.tencent.com/document/api/400/41671) 或者腾讯云证书服务控制台获取。X509Mode为mTLS时为必填
      * @param string $DeviceCertificateProvisionType 设备证书注册类型：
-JITP，自动注册；
-MANUAL 手动注册
+JITP：自动注册；
+API：手动注册
+默认值：API
      * @param boolean $AutomaticActivation 是否自动激活，默认为false
      */
     function __construct()
@@ -110,16 +114,16 @@ MANUAL 手动注册
             $this->InstanceId = $param["InstanceId"];
         }
 
+        if (array_key_exists("X509Mode",$param) and $param["X509Mode"] !== null) {
+            $this->X509Mode = $param["X509Mode"];
+        }
+
         if (array_key_exists("SSLServerCertId",$param) and $param["SSLServerCertId"] !== null) {
             $this->SSLServerCertId = $param["SSLServerCertId"];
         }
 
         if (array_key_exists("SSLCaCertId",$param) and $param["SSLCaCertId"] !== null) {
             $this->SSLCaCertId = $param["SSLCaCertId"];
-        }
-
-        if (array_key_exists("X509Mode",$param) and $param["X509Mode"] !== null) {
-            $this->X509Mode = $param["X509Mode"];
         }
 
         if (array_key_exists("DeviceCertificateProvisionType",$param) and $param["DeviceCertificateProvisionType"] !== null) {

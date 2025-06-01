@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyInsPublicEndpoint请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method string getInstanceId() 获取腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+ * @method void setInstanceId(string $InstanceId) 设置腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
  * @method integer getBandwidth() 获取带宽，单位：Mbps
  * @method void setBandwidth(integer $Bandwidth) 设置带宽，单位：Mbps
  * @method array getRules() 获取公网访问规则
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyInsPublicEndpointRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public $InstanceId;
 
@@ -45,7 +45,7 @@ class ModifyInsPublicEndpointRequest extends AbstractModel
     public $Rules;
 
     /**
-     * @param string $InstanceId 实例ID
+     * @param string $InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      * @param integer $Bandwidth 带宽，单位：Mbps
      * @param array $Rules 公网访问规则
      */

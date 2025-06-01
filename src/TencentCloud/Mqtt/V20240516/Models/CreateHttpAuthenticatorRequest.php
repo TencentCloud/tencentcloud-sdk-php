@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateHttpAuthenticator请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getEndpoint() 获取jwks端点
- * @method void setEndpoint(string $Endpoint) 设置jwks端点
- * @method integer getConcurrency() 获取最大并发连接数，默认8，范围：1-20
- * @method void setConcurrency(integer $Concurrency) 设置最大并发连接数，默认8，范围：1-20
- * @method string getMethod() 获取网络请求方法 Get 或 Post，默认post
- * @method void setMethod(string $Method) 设置网络请求方法 Get 或 Post，默认post
- * @method string getStatus() 获取认证器是否开启：open-启用；close-关闭
- * @method void setStatus(string $Status) 设置认证器是否开启：open-启用；close-关闭
- * @method string getRemark() 获取说明
- * @method void setRemark(string $Remark) 设置说明
+ * @method string getInstanceId() 获取腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+ * @method void setInstanceId(string $InstanceId) 设置腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+ * @method string getEndpoint() 获取jwks服务地址
+ * @method void setEndpoint(string $Endpoint) 设置jwks服务地址
+ * @method integer getConcurrency() 获取最大并发连接数，默认8，范围：1-10
+ * @method void setConcurrency(integer $Concurrency) 设置最大并发连接数，默认8，范围：1-10
+ * @method string getMethod() 获取网络请求方法 GET 或 POST，默认POST
+ * @method void setMethod(string $Method) 设置网络请求方法 GET 或 POST，默认POST
+ * @method string getStatus() 获取认证器是否开启：open-启用；close-关闭，默认open-启用
+ * @method void setStatus(string $Status) 设置认证器是否开启：open-启用；close-关闭，默认open-启用
+ * @method string getRemark() 获取说明，最多支持128个字符。
+ * @method void setRemark(string $Remark) 设置说明，最多支持128个字符。
  * @method integer getConnectTimeout() 获取连接超时时间，单位：秒，范围：1-30
  * @method void setConnectTimeout(integer $ConnectTimeout) 设置连接超时时间，单位：秒，范围：1-30
  * @method integer getReadTimeout() 获取请求超时时间，单位：秒，范围：1-30
@@ -44,32 +44,32 @@ use TencentCloud\Common\AbstractModel;
 class CreateHttpAuthenticatorRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public $InstanceId;
 
     /**
-     * @var string jwks端点
+     * @var string jwks服务地址
      */
     public $Endpoint;
 
     /**
-     * @var integer 最大并发连接数，默认8，范围：1-20
+     * @var integer 最大并发连接数，默认8，范围：1-10
      */
     public $Concurrency;
 
     /**
-     * @var string 网络请求方法 Get 或 Post，默认post
+     * @var string 网络请求方法 GET 或 POST，默认POST
      */
     public $Method;
 
     /**
-     * @var string 认证器是否开启：open-启用；close-关闭
+     * @var string 认证器是否开启：open-启用；close-关闭，默认open-启用
      */
     public $Status;
 
     /**
-     * @var string 说明
+     * @var string 说明，最多支持128个字符。
      */
     public $Remark;
 
@@ -94,12 +94,12 @@ class CreateHttpAuthenticatorRequest extends AbstractModel
     public $Body;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $Endpoint jwks端点
-     * @param integer $Concurrency 最大并发连接数，默认8，范围：1-20
-     * @param string $Method 网络请求方法 Get 或 Post，默认post
-     * @param string $Status 认证器是否开启：open-启用；close-关闭
-     * @param string $Remark 说明
+     * @param string $InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * @param string $Endpoint jwks服务地址
+     * @param integer $Concurrency 最大并发连接数，默认8，范围：1-10
+     * @param string $Method 网络请求方法 GET 或 POST，默认POST
+     * @param string $Status 认证器是否开启：open-启用；close-关闭，默认open-启用
+     * @param string $Remark 说明，最多支持128个字符。
      * @param integer $ConnectTimeout 连接超时时间，单位：秒，范围：1-30
      * @param integer $ReadTimeout 请求超时时间，单位：秒，范围：1-30
      * @param array $Header 转发请求header

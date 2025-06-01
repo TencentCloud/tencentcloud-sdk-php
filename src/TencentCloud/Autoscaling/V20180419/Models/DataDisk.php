@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
 <li>CLOUD_TSSD：极速型SSD云硬盘</li>
 <li>CLOUD_BSSD：通用型SSD云硬盘</li>
 默认取值与系统盘类型（SystemDisk.DiskType）保持一致。
- * @method integer getDiskSize() 获取数据盘大小，单位：GB。不同数据盘类型取值范围不同，具体限制详见：[CVM实例配置](https://cloud.tencent.com/document/product/213/2177)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
- * @method void setDiskSize(integer $DiskSize) 设置数据盘大小，单位：GB。不同数据盘类型取值范围不同，具体限制详见：[CVM实例配置](https://cloud.tencent.com/document/product/213/2177)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
+ * @method integer getDiskSize() 获取数据盘大小，单位：GB。不同数据盘类型取值范围不同，具体限制详见：[CVM实例配置](https://cloud.tencent.com/document/product/213/2177)。默认值为0，表示不购买数据盘。更多限制详见[产品文档](https://cloud.tencent.com/document/product/362/5145)。
+ * @method void setDiskSize(integer $DiskSize) 设置数据盘大小，单位：GB。不同数据盘类型取值范围不同，具体限制详见：[CVM实例配置](https://cloud.tencent.com/document/product/213/2177)。默认值为0，表示不购买数据盘。更多限制详见[产品文档](https://cloud.tencent.com/document/product/362/5145)。
  * @method string getSnapshotId() 获取数据盘快照 ID，可通过 [DescribeSnapshots](https://cloud.tencent.com/document/product/362/15647) 接口获取该参数。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSnapshotId(string $SnapshotId) 设置数据盘快照 ID，可通过 [DescribeSnapshots](https://cloud.tencent.com/document/product/362/15647) 接口获取该参数。
@@ -92,7 +92,7 @@ class DataDisk extends AbstractModel
     public $DiskType;
 
     /**
-     * @var integer 数据盘大小，单位：GB。不同数据盘类型取值范围不同，具体限制详见：[CVM实例配置](https://cloud.tencent.com/document/product/213/2177)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
+     * @var integer 数据盘大小，单位：GB。不同数据盘类型取值范围不同，具体限制详见：[CVM实例配置](https://cloud.tencent.com/document/product/213/2177)。默认值为0，表示不购买数据盘。更多限制详见[产品文档](https://cloud.tencent.com/document/product/362/5145)。
      */
     public $DiskSize;
 
@@ -143,7 +143,7 @@ class DataDisk extends AbstractModel
 <li>CLOUD_TSSD：极速型SSD云硬盘</li>
 <li>CLOUD_BSSD：通用型SSD云硬盘</li>
 默认取值与系统盘类型（SystemDisk.DiskType）保持一致。
-     * @param integer $DiskSize 数据盘大小，单位：GB。不同数据盘类型取值范围不同，具体限制详见：[CVM实例配置](https://cloud.tencent.com/document/product/213/2177)。默认值为0，表示不购买数据盘。更多限制详见产品文档。
+     * @param integer $DiskSize 数据盘大小，单位：GB。不同数据盘类型取值范围不同，具体限制详见：[CVM实例配置](https://cloud.tencent.com/document/product/213/2177)。默认值为0，表示不购买数据盘。更多限制详见[产品文档](https://cloud.tencent.com/document/product/362/5145)。
      * @param string $SnapshotId 数据盘快照 ID，可通过 [DescribeSnapshots](https://cloud.tencent.com/document/product/362/15647) 接口获取该参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $DeleteWithInstance 数据盘是否随子机销毁。取值范围：

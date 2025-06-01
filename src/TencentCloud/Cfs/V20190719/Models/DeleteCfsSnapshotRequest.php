@@ -20,26 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteCfsSnapshot请求参数结构体
  *
- * @method string getSnapshotId() 获取文件系统快照id，可通过查询快照列表接口获取
- * @method void setSnapshotId(string $SnapshotId) 设置文件系统快照id，可通过查询快照列表接口获取
+ * @method string getSnapshotId() 获取快照ID，可以通过[DescribeCfsSnapshots](https://cloud.tencent.com/document/api/582/80206) 查询获取
+ * @method void setSnapshotId(string $SnapshotId) 设置快照ID，可以通过[DescribeCfsSnapshots](https://cloud.tencent.com/document/api/582/80206) 查询获取
  * @method array getSnapshotIds() 获取需要删除的文件系统快照ID 列表，快照ID，跟ID列表至少填一项
+快照ID，可以通过[DescribeCfsSnapshots](https://cloud.tencent.com/document/api/582/80206) 查询获取
  * @method void setSnapshotIds(array $SnapshotIds) 设置需要删除的文件系统快照ID 列表，快照ID，跟ID列表至少填一项
+快照ID，可以通过[DescribeCfsSnapshots](https://cloud.tencent.com/document/api/582/80206) 查询获取
  */
 class DeleteCfsSnapshotRequest extends AbstractModel
 {
     /**
-     * @var string 文件系统快照id，可通过查询快照列表接口获取
+     * @var string 快照ID，可以通过[DescribeCfsSnapshots](https://cloud.tencent.com/document/api/582/80206) 查询获取
      */
     public $SnapshotId;
 
     /**
      * @var array 需要删除的文件系统快照ID 列表，快照ID，跟ID列表至少填一项
+快照ID，可以通过[DescribeCfsSnapshots](https://cloud.tencent.com/document/api/582/80206) 查询获取
      */
     public $SnapshotIds;
 
     /**
-     * @param string $SnapshotId 文件系统快照id，可通过查询快照列表接口获取
+     * @param string $SnapshotId 快照ID，可以通过[DescribeCfsSnapshots](https://cloud.tencent.com/document/api/582/80206) 查询获取
      * @param array $SnapshotIds 需要删除的文件系统快照ID 列表，快照ID，跟ID列表至少填一项
+快照ID，可以通过[DescribeCfsSnapshots](https://cloud.tencent.com/document/api/582/80206) 查询获取
      */
     function __construct()
     {

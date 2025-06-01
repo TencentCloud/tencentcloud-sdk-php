@@ -26,27 +26,29 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPolicyName(string $PolicyName) 设置策略名称，不能为空，3-64个字符，支持中文、字母、数字、“-”及“_”。
  * @method integer getPolicyVersion() 获取策略版本,默认为1，当前仅支持1
  * @method void setPolicyVersion(integer $PolicyVersion) 设置策略版本,默认为1，当前仅支持1
- * @method integer getPriority() 获取策略优先级，越小越优先，不能重复
- * @method void setPriority(integer $Priority) 设置策略优先级，越小越优先，不能重复
+ * @method integer getPriority() 获取策略优先级，越小越优先，不能重复，优先级ID越小表示策略越优先检查生效。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+ * @method void setPriority(integer $Priority) 设置策略优先级，越小越优先，不能重复，优先级ID越小表示策略越优先检查生效。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
  * @method string getEffect() 获取决策：
-allow 允许
-deny 拒绝
+allow：允许符合该策略的设备的访问请求。
+deny：拒绝覆盖该策略的设备的访问请求。
+可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
  * @method void setEffect(string $Effect) 设置决策：
-allow 允许
-deny 拒绝
- * @method string getActions() 获取操作
+allow：允许符合该策略的设备的访问请求。
+deny：拒绝覆盖该策略的设备的访问请求。
+可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+ * @method string getActions() 获取操作,支持多选，多个操作用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
 connect：连接
 pub：发布
 sub：订阅
- * @method void setActions(string $Actions) 设置操作
+ * @method void setActions(string $Actions) 设置操作,支持多选，多个操作用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
 connect：连接
 pub：发布
 sub：订阅
- * @method integer getRetain() 获取条件-保留消息
+ * @method integer getRetain() 获取条件-保留消息，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
 1,匹配保留消息；
 2,匹配非保留消息，
 3.匹配保留和非保留消息
- * @method void setRetain(integer $Retain) 设置条件-保留消息
+ * @method void setRetain(integer $Retain) 设置条件-保留消息，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
 1,匹配保留消息；
 2,匹配非保留消息，
 3.匹配保留和非保留消息
@@ -54,18 +56,22 @@ sub：订阅
 0：最多一次
 1：最少一次
 2：精确一次
+可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
  * @method void setQos(string $Qos) 设置条件：服务质量
 0：最多一次
 1：最少一次
 2：精确一次
- * @method string getResources() 获取资源，需要匹配的订阅
- * @method void setResources(string $Resources) 设置资源，需要匹配的订阅
+可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+ * @method string getResources() 获取资源，需要匹配的订阅，支持配置多条匹配规则，多个用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+
+ * @method void setResources(string $Resources) 设置资源，需要匹配的订阅，支持配置多条匹配规则，多个用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+
  * @method string getUsername() 获取条件-用户名
  * @method void setUsername(string $Username) 设置条件-用户名
  * @method string getClientId() 获取条件：客户端ID，支持正则
  * @method void setClientId(string $ClientId) 设置条件：客户端ID，支持正则
- * @method string getIp() 获取条件：客户端IP地址，支持IP或者CIDR
- * @method void setIp(string $Ip) 设置条件：客户端IP地址，支持IP或者CIDR
+ * @method string getIp() 获取条件：客户端IP地址，支持IP或者CIDR，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+ * @method void setIp(string $Ip) 设置条件：客户端IP地址，支持IP或者CIDR，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
  * @method string getRemark() 获取备注信息，最长 128 字符
  * @method void setRemark(string $Remark) 设置备注信息，最长 128 字符
  */
@@ -87,19 +93,20 @@ class CreateAuthorizationPolicyRequest extends AbstractModel
     public $PolicyVersion;
 
     /**
-     * @var integer 策略优先级，越小越优先，不能重复
+     * @var integer 策略优先级，越小越优先，不能重复，优先级ID越小表示策略越优先检查生效。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
      */
     public $Priority;
 
     /**
      * @var string 决策：
-allow 允许
-deny 拒绝
+allow：允许符合该策略的设备的访问请求。
+deny：拒绝覆盖该策略的设备的访问请求。
+可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
      */
     public $Effect;
 
     /**
-     * @var string 操作
+     * @var string 操作,支持多选，多个操作用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
 connect：连接
 pub：发布
 sub：订阅
@@ -107,7 +114,7 @@ sub：订阅
     public $Actions;
 
     /**
-     * @var integer 条件-保留消息
+     * @var integer 条件-保留消息，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
 1,匹配保留消息；
 2,匹配非保留消息，
 3.匹配保留和非保留消息
@@ -119,11 +126,13 @@ sub：订阅
 0：最多一次
 1：最少一次
 2：精确一次
+可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
      */
     public $Qos;
 
     /**
-     * @var string 资源，需要匹配的订阅
+     * @var string 资源，需要匹配的订阅，支持配置多条匹配规则，多个用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+
      */
     public $Resources;
 
@@ -138,7 +147,7 @@ sub：订阅
     public $ClientId;
 
     /**
-     * @var string 条件：客户端IP地址，支持IP或者CIDR
+     * @var string 条件：客户端IP地址，支持IP或者CIDR，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
      */
     public $Ip;
 
@@ -151,15 +160,16 @@ sub：订阅
      * @param string $InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      * @param string $PolicyName 策略名称，不能为空，3-64个字符，支持中文、字母、数字、“-”及“_”。
      * @param integer $PolicyVersion 策略版本,默认为1，当前仅支持1
-     * @param integer $Priority 策略优先级，越小越优先，不能重复
+     * @param integer $Priority 策略优先级，越小越优先，不能重复，优先级ID越小表示策略越优先检查生效。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
      * @param string $Effect 决策：
-allow 允许
-deny 拒绝
-     * @param string $Actions 操作
+allow：允许符合该策略的设备的访问请求。
+deny：拒绝覆盖该策略的设备的访问请求。
+可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+     * @param string $Actions 操作,支持多选，多个操作用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
 connect：连接
 pub：发布
 sub：订阅
-     * @param integer $Retain 条件-保留消息
+     * @param integer $Retain 条件-保留消息，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
 1,匹配保留消息；
 2,匹配非保留消息，
 3.匹配保留和非保留消息
@@ -167,10 +177,12 @@ sub：订阅
 0：最多一次
 1：最少一次
 2：精确一次
-     * @param string $Resources 资源，需要匹配的订阅
+可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+     * @param string $Resources 资源，需要匹配的订阅，支持配置多条匹配规则，多个用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+
      * @param string $Username 条件-用户名
      * @param string $ClientId 条件：客户端ID，支持正则
-     * @param string $Ip 条件：客户端IP地址，支持IP或者CIDR
+     * @param string $Ip 条件：客户端IP地址，支持IP或者CIDR，可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
      * @param string $Remark 备注信息，最长 128 字符
      */
     function __construct()

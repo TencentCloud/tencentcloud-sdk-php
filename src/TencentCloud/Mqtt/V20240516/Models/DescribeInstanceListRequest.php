@@ -24,10 +24,12 @@ use TencentCloud\Common\AbstractModel;
 InstanceName：集群名模糊搜索
 InstanceId：集群id精确搜索
 InstanceStatus：集群状态搜索（RUNNING-运行中，CREATING-创建中，MODIFYING-变配中，DELETING-删除中）
+注意：配置TagFilters时该查询条件不生效。
  * @method void setFilters(array $Filters) 设置查询条件列表,支持以下字段
 InstanceName：集群名模糊搜索
 InstanceId：集群id精确搜索
 InstanceStatus：集群状态搜索（RUNNING-运行中，CREATING-创建中，MODIFYING-变配中，DELETING-删除中）
+注意：配置TagFilters时该查询条件不生效。
  * @method integer getOffset() 获取查询起始位置，默认0
  * @method void setOffset(integer $Offset) 设置查询起始位置，默认0
  * @method integer getLimit() 获取查询结果限制数量，默认20，最大100
@@ -42,6 +44,7 @@ class DescribeInstanceListRequest extends AbstractModel
 InstanceName：集群名模糊搜索
 InstanceId：集群id精确搜索
 InstanceStatus：集群状态搜索（RUNNING-运行中，CREATING-创建中，MODIFYING-变配中，DELETING-删除中）
+注意：配置TagFilters时该查询条件不生效。
      */
     public $Filters;
 
@@ -65,6 +68,7 @@ InstanceStatus：集群状态搜索（RUNNING-运行中，CREATING-创建中，M
 InstanceName：集群名模糊搜索
 InstanceId：集群id精确搜索
 InstanceStatus：集群状态搜索（RUNNING-运行中，CREATING-创建中，MODIFYING-变配中，DELETING-删除中）
+注意：配置TagFilters时该查询条件不生效。
      * @param integer $Offset 查询起始位置，默认0
      * @param integer $Limit 查询结果限制数量，默认20，最大100
      * @param array $TagFilters 标签过滤器

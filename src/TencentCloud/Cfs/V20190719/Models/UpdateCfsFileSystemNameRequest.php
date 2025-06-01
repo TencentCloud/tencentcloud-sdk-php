@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateCfsFileSystemName请求参数结构体
  *
- * @method string getFileSystemId() 获取文件系统 ID
- * @method void setFileSystemId(string $FileSystemId) 设置文件系统 ID
- * @method string getFsName() 获取用户自定义文件系统名称
- * @method void setFsName(string $FsName) 设置用户自定义文件系统名称
+ * @method string getFileSystemId() 获取文件系统 ID,通过[查询文件系统接口](https://cloud.tencent.com/document/api/582/38170)获取
+ * @method void setFileSystemId(string $FileSystemId) 设置文件系统 ID,通过[查询文件系统接口](https://cloud.tencent.com/document/api/582/38170)获取
+ * @method string getFsName() 获取用户自定义文件系统名称，64字节内的中文字母数字或者 _,-,与CreationToken 至少填一个
+ * @method void setFsName(string $FsName) 设置用户自定义文件系统名称，64字节内的中文字母数字或者 _,-,与CreationToken 至少填一个
  */
 class UpdateCfsFileSystemNameRequest extends AbstractModel
 {
     /**
-     * @var string 文件系统 ID
+     * @var string 文件系统 ID,通过[查询文件系统接口](https://cloud.tencent.com/document/api/582/38170)获取
      */
     public $FileSystemId;
 
     /**
-     * @var string 用户自定义文件系统名称
+     * @var string 用户自定义文件系统名称，64字节内的中文字母数字或者 _,-,与CreationToken 至少填一个
      */
     public $FsName;
 
     /**
-     * @param string $FileSystemId 文件系统 ID
-     * @param string $FsName 用户自定义文件系统名称
+     * @param string $FileSystemId 文件系统 ID,通过[查询文件系统接口](https://cloud.tencent.com/document/api/582/38170)获取
+     * @param string $FsName 用户自定义文件系统名称，64字节内的中文字母数字或者 _,-,与CreationToken 至少填一个
      */
     function __construct()
     {

@@ -20,74 +20,83 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyJWTAuthenticator请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getAlgorithm() 获取算法：hmac-based，public-key
- * @method void setAlgorithm(string $Algorithm) 设置算法：hmac-based，public-key
- * @method string getFrom() 获取设备连接时传递jwt的key；
-username-使用用户名字段传递；
-password-使用密码字段传递
- * @method void setFrom(string $From) 设置设备连接时传递jwt的key；
-username-使用用户名字段传递；
-password-使用密码字段传递
- * @method string getSecret() 获取密码
- * @method void setSecret(string $Secret) 设置密码
- * @method string getPublicKey() 获取公钥
- * @method void setPublicKey(string $PublicKey) 设置公钥
+ * @method string getInstanceId() 获取腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+ * @method void setInstanceId(string $InstanceId) 设置腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+ * @method string getAlgorithm() 获取签名方式：hmac-based，public-key
+ * @method void setAlgorithm(string $Algorithm) 设置签名方式：hmac-based，public-key
+ * @method string getFrom() 获取认证字段
+password：对应 MQTT CONNECT Packet 中 password 字段，
+username：对应 MQTT CONNECT Packet 中 username 字段
+ * @method void setFrom(string $From) 设置认证字段
+password：对应 MQTT CONNECT Packet 中 password 字段，
+username：对应 MQTT CONNECT Packet 中 username 字段
+ * @method string getSecret() 获取密钥，Algorithm为hmac-based需要传递该字段。
+ * @method void setSecret(string $Secret) 设置密钥，Algorithm为hmac-based需要传递该字段。
+ * @method string getPublicKey() 获取公钥，Algorithm为public-key时需要传递该字段。
+ * @method void setPublicKey(string $PublicKey) 设置公钥，Algorithm为public-key时需要传递该字段。
+ * @method string getStatus() 获取认证器是否开启：open-启用；close-关闭
+ * @method void setStatus(string $Status) 设置认证器是否开启：open-启用；close-关闭
+ * @method string getRemark() 获取说明，不能超过 128 个字符
+ * @method void setRemark(string $Remark) 设置说明，不能超过 128 个字符
  * @method string getText() 获取JSKS文本
  * @method void setText(string $Text) 设置JSKS文本
- * @method string getRemark() 获取说明
- * @method void setRemark(string $Remark) 设置说明
  */
 class ModifyJWTAuthenticatorRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      */
     public $InstanceId;
 
     /**
-     * @var string 算法：hmac-based，public-key
+     * @var string 签名方式：hmac-based，public-key
      */
     public $Algorithm;
 
     /**
-     * @var string 设备连接时传递jwt的key；
-username-使用用户名字段传递；
-password-使用密码字段传递
+     * @var string 认证字段
+password：对应 MQTT CONNECT Packet 中 password 字段，
+username：对应 MQTT CONNECT Packet 中 username 字段
      */
     public $From;
 
     /**
-     * @var string 密码
+     * @var string 密钥，Algorithm为hmac-based需要传递该字段。
      */
     public $Secret;
 
     /**
-     * @var string 公钥
+     * @var string 公钥，Algorithm为public-key时需要传递该字段。
      */
     public $PublicKey;
 
     /**
-     * @var string JSKS文本
+     * @var string 认证器是否开启：open-启用；close-关闭
      */
-    public $Text;
+    public $Status;
 
     /**
-     * @var string 说明
+     * @var string 说明，不能超过 128 个字符
      */
     public $Remark;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $Algorithm 算法：hmac-based，public-key
-     * @param string $From 设备连接时传递jwt的key；
-username-使用用户名字段传递；
-password-使用密码字段传递
-     * @param string $Secret 密码
-     * @param string $PublicKey 公钥
+     * @var string JSKS文本
+     * @deprecated
+     */
+    public $Text;
+
+    /**
+     * @param string $InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+     * @param string $Algorithm 签名方式：hmac-based，public-key
+     * @param string $From 认证字段
+password：对应 MQTT CONNECT Packet 中 password 字段，
+username：对应 MQTT CONNECT Packet 中 username 字段
+     * @param string $Secret 密钥，Algorithm为hmac-based需要传递该字段。
+     * @param string $PublicKey 公钥，Algorithm为public-key时需要传递该字段。
+     * @param string $Status 认证器是否开启：open-启用；close-关闭
+     * @param string $Remark 说明，不能超过 128 个字符
      * @param string $Text JSKS文本
-     * @param string $Remark 说明
      */
     function __construct()
     {
@@ -122,12 +131,16 @@ password-使用密码字段传递
             $this->PublicKey = $param["PublicKey"];
         }
 
-        if (array_key_exists("Text",$param) and $param["Text"] !== null) {
-            $this->Text = $param["Text"];
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("Text",$param) and $param["Text"] !== null) {
+            $this->Text = $param["Text"];
         }
     }
 }

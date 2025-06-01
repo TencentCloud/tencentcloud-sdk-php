@@ -74,16 +74,19 @@ class MQTTMessageItem extends AbstractModel
 
     /**
      * @var integer 死信重发次数	
+     * @deprecated
      */
     public $DeadLetterResendTimes;
 
     /**
      * @var integer 死信重发成功次数
+     * @deprecated
      */
     public $DeadLetterResendSuccessTimes;
 
     /**
      * @var string 子topic
+     * @deprecated
      */
     public $SubTopic;
 

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUserQuota请求参数结构体
  *
- * @method string getFileSystemId() 获取文件系统 ID,通过查询文件系统列表获取
- * @method void setFileSystemId(string $FileSystemId) 设置文件系统 ID,通过查询文件系统列表获取
+ * @method string getFileSystemId() 获取文件系统 ID,通过[查询文件系统列表](https://cloud.tencent.com/document/api/582/38170)获取
+ * @method void setFileSystemId(string $FileSystemId) 设置文件系统 ID,通过[查询文件系统列表](https://cloud.tencent.com/document/api/582/38170)获取
  * @method array getFilters() 获取过滤条件。
 UserType - Array of String - 是否必填：否 -（过滤条件）按配额类型过滤。(Uid|Gid|Dir，分别对应用户，用户组，目录 )
 UserId- Array of String - 是否必填：否 -（过滤条件）按用户id过滤。
@@ -36,7 +36,7 @@ UserId- Array of String - 是否必填：否 -（过滤条件）按用户id过�
 class DescribeUserQuotaRequest extends AbstractModel
 {
     /**
-     * @var string 文件系统 ID,通过查询文件系统列表获取
+     * @var string 文件系统 ID,通过[查询文件系统列表](https://cloud.tencent.com/document/api/582/38170)获取
      */
     public $FileSystemId;
 
@@ -58,7 +58,7 @@ UserId- Array of String - 是否必填：否 -（过滤条件）按用户id过�
     public $Limit;
 
     /**
-     * @param string $FileSystemId 文件系统 ID,通过查询文件系统列表获取
+     * @param string $FileSystemId 文件系统 ID,通过[查询文件系统列表](https://cloud.tencent.com/document/api/582/38170)获取
      * @param array $Filters 过滤条件。
 UserType - Array of String - 是否必填：否 -（过滤条件）按配额类型过滤。(Uid|Gid|Dir，分别对应用户，用户组，目录 )
 UserId- Array of String - 是否必填：否 -（过滤条件）按用户id过滤。

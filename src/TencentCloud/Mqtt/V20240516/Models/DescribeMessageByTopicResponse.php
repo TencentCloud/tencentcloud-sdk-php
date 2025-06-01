@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cfs\V20190719\Models;
+namespace TencentCloud\Mqtt\V20240516\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeMigrationTasks返回参数结构体
+ * DescribeMessageByTopic返回参数结构体
  *
- * @method integer getTotalCount() 获取迁移任务的总数量
- * @method void setTotalCount(integer $TotalCount) 设置迁移任务的总数量
- * @method array getMigrationTasks() 获取迁移任务详情
- * @method void setMigrationTasks(array $MigrationTasks) 设置迁移任务详情
+ * @method array getData() 获取消息列表
+ * @method void setData(array $Data) 设置消息列表
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeMigrationTasksResponse extends AbstractModel
+class DescribeMessageByTopicResponse extends AbstractModel
 {
     /**
-     * @var integer 迁移任务的总数量
+     * @var array 消息列表
      */
-    public $TotalCount;
-
-    /**
-     * @var array 迁移任务详情
-     */
-    public $MigrationTasks;
+    public $Data;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +38,7 @@ class DescribeMigrationTasksResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 迁移任务的总数量
-     * @param array $MigrationTasks 迁移任务详情
+     * @param array $Data 消息列表
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,16 +54,12 @@ class DescribeMigrationTasksResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
-        if (array_key_exists("MigrationTasks",$param) and $param["MigrationTasks"] !== null) {
-            $this->MigrationTasks = [];
-            foreach ($param["MigrationTasks"] as $key => $value){
-                $obj = new MigrationTaskInfo();
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = [];
+            foreach ($param["Data"] as $key => $value){
+                $obj = new MQTTMessage();
                 $obj->deserialize($value);
-                array_push($this->MigrationTasks, $obj);
+                array_push($this->Data, $obj);
             }
         }
 

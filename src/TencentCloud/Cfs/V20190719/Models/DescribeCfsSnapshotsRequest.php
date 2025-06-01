@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
 (creating：表示创建中 | available：表示可用。| rollbacking：表示回滚。| rollbacking_new：表示由快照创建新文件系统中| create-failed 创建失败）
 <br>tag-key - Array of String - 是否必填：否 -（过滤条件）按照标签键进行过滤。
 <br>tag:tag-key - Array of String - 是否必填：否 -（过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
- * @method string getOrderField() 获取按创建时间排序取值CreationTime
- * @method void setOrderField(string $OrderField) 设置按创建时间排序取值CreationTime
+ * @method string getOrderField() 获取按创建时间排序取值
+ * @method void setOrderField(string $OrderField) 设置按创建时间排序取值
  * @method string getOrder() 获取排序 升序或者降序
  * @method void setOrder(string $Order) 设置排序 升序或者降序
  */
@@ -87,7 +87,7 @@ class DescribeCfsSnapshotsRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var string 按创建时间排序取值CreationTime
+     * @var string 按创建时间排序取值
      */
     public $OrderField;
 
@@ -110,7 +110,7 @@ class DescribeCfsSnapshotsRequest extends AbstractModel
 (creating：表示创建中 | available：表示可用。| rollbacking：表示回滚。| rollbacking_new：表示由快照创建新文件系统中| create-failed 创建失败）
 <br>tag-key - Array of String - 是否必填：否 -（过滤条件）按照标签键进行过滤。
 <br>tag:tag-key - Array of String - 是否必填：否 -（过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。
-     * @param string $OrderField 按创建时间排序取值CreationTime
+     * @param string $OrderField 按创建时间排序取值
      * @param string $Order 排序 升序或者降序
      */
     function __construct()

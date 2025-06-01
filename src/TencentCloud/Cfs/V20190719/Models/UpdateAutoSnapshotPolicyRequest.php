@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateAutoSnapshotPolicy请求参数结构体
  *
- * @method string getAutoSnapshotPolicyId() 获取快照策略ID,查询快照策略列表获取
- * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) 设置快照策略ID,查询快照策略列表获取
+ * @method string getAutoSnapshotPolicyId() 获取解绑的快照策略ID，可以通过[DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/api/582/80208) 查询获取
+ * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) 设置解绑的快照策略ID，可以通过[DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/api/582/80208) 查询获取
  * @method string getPolicyName() 获取快照策略名称，不超过64个字符
  * @method void setPolicyName(string $PolicyName) 设置快照策略名称，不超过64个字符
  * @method string getDayOfWeek() 获取快照定期备份，按照星期一到星期日。 1代表星期一，7代表星期日，与DayOfMonth，IntervalDays 三者选一个
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class UpdateAutoSnapshotPolicyRequest extends AbstractModel
 {
     /**
-     * @var string 快照策略ID,查询快照策略列表获取
+     * @var string 解绑的快照策略ID，可以通过[DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/api/582/80208) 查询获取
      */
     public $AutoSnapshotPolicyId;
 
@@ -80,7 +80,7 @@ class UpdateAutoSnapshotPolicyRequest extends AbstractModel
     public $IntervalDays;
 
     /**
-     * @param string $AutoSnapshotPolicyId 快照策略ID,查询快照策略列表获取
+     * @param string $AutoSnapshotPolicyId 解绑的快照策略ID，可以通过[DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/api/582/80208) 查询获取
      * @param string $PolicyName 快照策略名称，不超过64个字符
      * @param string $DayOfWeek 快照定期备份，按照星期一到星期日。 1代表星期一，7代表星期日，与DayOfMonth，IntervalDays 三者选一个
      * @param string $Hour 快照定期备份在一天的哪一小时

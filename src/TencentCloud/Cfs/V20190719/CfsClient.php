@@ -58,11 +58,11 @@ use TencentCloud\Cfs\V20190719\Models as Models;
  * @method Models\DescribeMountTargetsResponse DescribeMountTargets(Models\DescribeMountTargetsRequest $req) 本接口（DescribeMountTargets）用于查询文件系统挂载点信息
  * @method Models\DescribeSnapshotOperationLogsResponse DescribeSnapshotOperationLogs(Models\DescribeSnapshotOperationLogsRequest $req) 查询快照操作日志
  * @method Models\DescribeUserQuotaResponse DescribeUserQuota(Models\DescribeUserQuotaRequest $req) 查询文件系统配额（仅部分Turbo实例能使用，若需要调用请提交工单与我们联系）
- * @method Models\ModifyFileSystemAutoScaleUpRuleResponse ModifyFileSystemAutoScaleUpRule(Models\ModifyFileSystemAutoScaleUpRuleRequest $req) 用来设置文件系统扩容策略，，该接口只支持turbo文件系统
+ * @method Models\ModifyFileSystemAutoScaleUpRuleResponse ModifyFileSystemAutoScaleUpRule(Models\ModifyFileSystemAutoScaleUpRuleRequest $req) 用来设置文件系统扩容策略，该接口只支持turbo文件系统
  * @method Models\ScaleUpFileSystemResponse ScaleUpFileSystem(Models\ScaleUpFileSystemRequest $req) 该接口用于对turbo 文件系统扩容使用,该接口只支持扩容不支持缩容。turbo标准型扩容步长是10240GIB，turbo性能型扩容步长是5120GIB
  * @method Models\SetUserQuotaResponse SetUserQuota(Models\SetUserQuotaRequest $req) 设置文件系统配额，提供UID/GID的配额设置的接口（仅部分Turbo实例能使用，若需要调用请提交工单与我们联系）
  * @method Models\SignUpCfsServiceResponse SignUpCfsService(Models\SignUpCfsServiceRequest $req) 本接口（SignUpCfsService）用于开通CFS服务。
- * @method Models\StopMigrationTaskResponse StopMigrationTask(Models\StopMigrationTaskRequest $req) 用于终止迁移任务。
+ * @method Models\StopMigrationTaskResponse StopMigrationTask(Models\StopMigrationTaskRequest $req) 用于终止迁移任务，非运行中状态不支持终止。
 此接口需提交工单，开启白名单之后才能使用。
  * @method Models\UnbindAutoSnapshotPolicyResponse UnbindAutoSnapshotPolicy(Models\UnbindAutoSnapshotPolicyRequest $req) 解除文件系统绑定的快照策略
  * @method Models\UpdateAutoSnapshotPolicyResponse UpdateAutoSnapshotPolicy(Models\UpdateAutoSnapshotPolicyRequest $req) 更新定期自动快照策略

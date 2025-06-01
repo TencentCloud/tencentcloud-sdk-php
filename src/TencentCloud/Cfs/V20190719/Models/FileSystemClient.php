@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClientIp(string $ClientIp) 设置客户端IP地址
  * @method string getVpcId() 获取文件系统所属VPCID
  * @method void setVpcId(string $VpcId) 设置文件系统所属VPCID
- * @method string getZone() 获取可用区名称，例如ap-beijing-1，请参考 概览文档中的地域与可用区列表
- * @method void setZone(string $Zone) 设置可用区名称，例如ap-beijing-1，请参考 概览文档中的地域与可用区列表
+ * @method string getZone() 获取可用区名称，例如ap-beijing-1，参考[简介](https://cloud.tencent.com/document/api/582/38144)文档中的地域与可用区列表
+ * @method void setZone(string $Zone) 设置可用区名称，例如ap-beijing-1，参考[简介](https://cloud.tencent.com/document/api/582/38144)文档中的地域与可用区列表
  * @method string getZoneName() 获取可用区中文名称
  * @method void setZoneName(string $ZoneName) 设置可用区中文名称
  * @method string getMountDirectory() 获取该文件系统被挂载到客户端上的路径信息
@@ -51,7 +51,7 @@ class FileSystemClient extends AbstractModel
     public $VpcId;
 
     /**
-     * @var string 可用区名称，例如ap-beijing-1，请参考 概览文档中的地域与可用区列表
+     * @var string 可用区名称，例如ap-beijing-1，参考[简介](https://cloud.tencent.com/document/api/582/38144)文档中的地域与可用区列表
      */
     public $Zone;
 
@@ -69,7 +69,7 @@ class FileSystemClient extends AbstractModel
      * @param string $CfsVip 文件系统IP地址
      * @param string $ClientIp 客户端IP地址
      * @param string $VpcId 文件系统所属VPCID
-     * @param string $Zone 可用区名称，例如ap-beijing-1，请参考 概览文档中的地域与可用区列表
+     * @param string $Zone 可用区名称，例如ap-beijing-1，参考[简介](https://cloud.tencent.com/document/api/582/38144)文档中的地域与可用区列表
      * @param string $ZoneName 可用区中文名称
      * @param string $MountDirectory 该文件系统被挂载到客户端上的路径信息
      */

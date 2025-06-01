@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getIp() 获取IP地址
  * @method void setIp(string $Ip) 设置IP地址
- * @method boolean getAllow() 获取是否允许放行
- * @method void setAllow(boolean $Allow) 设置是否允许放行
+ * @method boolean getAllow() 获取当前仅支持允许，默认允许。
+ * @method void setAllow(boolean $Allow) 设置当前仅支持允许，默认允许。
  * @method string getRemark() 获取备注信息
  * @method void setRemark(string $Remark) 设置备注信息
  */
@@ -35,7 +35,7 @@ class IpRule extends AbstractModel
     public $Ip;
 
     /**
-     * @var boolean 是否允许放行
+     * @var boolean 当前仅支持允许，默认允许。
      */
     public $Allow;
 
@@ -46,7 +46,7 @@ class IpRule extends AbstractModel
 
     /**
      * @param string $Ip IP地址
-     * @param boolean $Allow 是否允许放行
+     * @param boolean $Allow 当前仅支持允许，默认允许。
      * @param string $Remark 备注信息
      */
     function __construct()

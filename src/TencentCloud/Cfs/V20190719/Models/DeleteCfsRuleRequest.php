@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteCfsRule请求参数结构体
  *
- * @method string getPGroupId() 获取权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
- * @method void setPGroupId(string $PGroupId) 设置权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
- * @method string getRuleId() 获取规则 ID，通过查询权限组规则接口获取
- * @method void setRuleId(string $RuleId) 设置规则 ID，通过查询权限组规则接口获取
+ * @method string getPGroupId() 获取权限组 ID，可通过[DescribeCfsPGroups接口](https://cloud.tencent.com/document/api/582/38157)获取
+ * @method void setPGroupId(string $PGroupId) 设置权限组 ID，可通过[DescribeCfsPGroups接口](https://cloud.tencent.com/document/api/582/38157)获取
+ * @method string getRuleId() 获取规则 ID，可通过[DescribeCfsRules](https://cloud.tencent.com/document/api/582/38156)接口获取
+ * @method void setRuleId(string $RuleId) 设置规则 ID，可通过[DescribeCfsRules](https://cloud.tencent.com/document/api/582/38156)接口获取
  */
 class DeleteCfsRuleRequest extends AbstractModel
 {
     /**
-     * @var string 权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
+     * @var string 权限组 ID，可通过[DescribeCfsPGroups接口](https://cloud.tencent.com/document/api/582/38157)获取
      */
     public $PGroupId;
 
     /**
-     * @var string 规则 ID，通过查询权限组规则接口获取
+     * @var string 规则 ID，可通过[DescribeCfsRules](https://cloud.tencent.com/document/api/582/38156)接口获取
      */
     public $RuleId;
 
     /**
-     * @param string $PGroupId 权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
-     * @param string $RuleId 规则 ID，通过查询权限组规则接口获取
+     * @param string $PGroupId 权限组 ID，可通过[DescribeCfsPGroups接口](https://cloud.tencent.com/document/api/582/38157)获取
+     * @param string $RuleId 规则 ID，可通过[DescribeCfsRules](https://cloud.tencent.com/document/api/582/38156)接口获取
      */
     function __construct()
     {

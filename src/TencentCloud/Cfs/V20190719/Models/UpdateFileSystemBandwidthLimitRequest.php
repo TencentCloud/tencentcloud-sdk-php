@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateFileSystemBandwidthLimit请求参数结构体
  *
- * @method string getFileSystemId() 获取文件系统 ID,通过查询文件系统列表获取
- * @method void setFileSystemId(string $FileSystemId) 设置文件系统 ID,通过查询文件系统列表获取
+ * @method string getFileSystemId() 获取文件系统 ID,可通过[DescribeCfsFileSystems](https://cloud.tencent.com/document/api/582/38170)接口获取
+ * @method void setFileSystemId(string $FileSystemId) 设置文件系统 ID,可通过[DescribeCfsFileSystems](https://cloud.tencent.com/document/api/582/38170)接口获取
  * @method integer getBandwidthLimit() 获取文件系统带宽，仅吞吐型可填。单位MiB/s，最小为1GiB/s，最大200GiB/s。
  * @method void setBandwidthLimit(integer $BandwidthLimit) 设置文件系统带宽，仅吞吐型可填。单位MiB/s，最小为1GiB/s，最大200GiB/s。
  */
 class UpdateFileSystemBandwidthLimitRequest extends AbstractModel
 {
     /**
-     * @var string 文件系统 ID,通过查询文件系统列表获取
+     * @var string 文件系统 ID,可通过[DescribeCfsFileSystems](https://cloud.tencent.com/document/api/582/38170)接口获取
      */
     public $FileSystemId;
 
@@ -38,7 +38,7 @@ class UpdateFileSystemBandwidthLimitRequest extends AbstractModel
     public $BandwidthLimit;
 
     /**
-     * @param string $FileSystemId 文件系统 ID,通过查询文件系统列表获取
+     * @param string $FileSystemId 文件系统 ID,可通过[DescribeCfsFileSystems](https://cloud.tencent.com/document/api/582/38170)接口获取
      * @param integer $BandwidthLimit 文件系统带宽，仅吞吐型可填。单位MiB/s，最小为1GiB/s，最大200GiB/s。
      */
     function __construct()

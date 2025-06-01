@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyFileSystemAutoScaleUpRule请求参数结构体
  *
- * @method string getFileSystemId() 获取文件系统id,通过查询文件系统列表获取该参数
- * @method void setFileSystemId(string $FileSystemId) 设置文件系统id,通过查询文件系统列表获取该参数
+ * @method string getFileSystemId() 获取文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
+ * @method void setFileSystemId(string $FileSystemId) 设置文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
  * @method integer getScaleUpThreshold() 获取扩容阈值，范围[10-90]
  * @method void setScaleUpThreshold(integer $ScaleUpThreshold) 设置扩容阈值，范围[10-90]
  * @method integer getTargetThreshold() 获取扩容后目标阈值,范围[10-90],该值要小于ScaleUpThreshold
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyFileSystemAutoScaleUpRuleRequest extends AbstractModel
 {
     /**
-     * @var string 文件系统id,通过查询文件系统列表获取该参数
+     * @var string 文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
      */
     public $FileSystemId;
 
@@ -52,7 +52,7 @@ class ModifyFileSystemAutoScaleUpRuleRequest extends AbstractModel
     public $Status;
 
     /**
-     * @param string $FileSystemId 文件系统id,通过查询文件系统列表获取该参数
+     * @param string $FileSystemId 文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
      * @param integer $ScaleUpThreshold 扩容阈值，范围[10-90]
      * @param integer $TargetThreshold 扩容后目标阈值,范围[10-90],该值要小于ScaleUpThreshold
      * @param integer $Status 规则状态0:关闭，1 开启；不传保留原状态

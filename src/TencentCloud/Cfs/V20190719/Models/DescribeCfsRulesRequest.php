@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCfsRules请求参数结构体
  *
- * @method string getPGroupId() 获取权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
- * @method void setPGroupId(string $PGroupId) 设置权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
+ * @method string getPGroupId() 获取权限组 ID，可通过[DescribeCfsPGroups接口](https://cloud.tencent.com/document/api/582/38157)获取
+ * @method void setPGroupId(string $PGroupId) 设置权限组 ID，可通过[DescribeCfsPGroups接口](https://cloud.tencent.com/document/api/582/38157)获取
  */
 class DescribeCfsRulesRequest extends AbstractModel
 {
     /**
-     * @var string 权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
+     * @var string 权限组 ID，可通过[DescribeCfsPGroups接口](https://cloud.tencent.com/document/api/582/38157)获取
      */
     public $PGroupId;
 
     /**
-     * @param string $PGroupId 权限组 ID，通过创建权限组接口或者创建权限组规则接口获取
+     * @param string $PGroupId 权限组 ID，可通过[DescribeCfsPGroups接口](https://cloud.tencent.com/document/api/582/38157)获取
      */
     function __construct()
     {

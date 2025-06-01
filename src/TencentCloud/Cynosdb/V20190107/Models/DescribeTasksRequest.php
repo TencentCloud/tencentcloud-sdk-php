@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTimeBegin(string $StartTimeBegin) 设置任务开始时间起始值
  * @method string getStartTimeEnd() 获取任务开始时间结束值
  * @method void setStartTimeEnd(string $StartTimeEnd) 设置任务开始时间结束值
- * @method array getFilters() 获取过滤条件
- * @method void setFilters(array $Filters) 设置过滤条件
+ * @method array getFilters() 获取过滤条件，支持的搜索字段："ClusterId"、"ClusterName"、"InstanceId"、"InstanceName"、"Status"、"TaskId"、"TaskType"
+ * @method void setFilters(array $Filters) 设置过滤条件，支持的搜索字段："ClusterId"、"ClusterName"、"InstanceId"、"InstanceName"、"Status"、"TaskId"、"TaskType"
  * @method integer getLimit() 获取查询列表长度
  * @method void setLimit(integer $Limit) 设置查询列表长度
  * @method integer getOffset() 获取查询列表偏移量
@@ -44,7 +44,7 @@ class DescribeTasksRequest extends AbstractModel
     public $StartTimeEnd;
 
     /**
-     * @var array 过滤条件
+     * @var array 过滤条件，支持的搜索字段："ClusterId"、"ClusterName"、"InstanceId"、"InstanceName"、"Status"、"TaskId"、"TaskType"
      */
     public $Filters;
 
@@ -61,7 +61,7 @@ class DescribeTasksRequest extends AbstractModel
     /**
      * @param string $StartTimeBegin 任务开始时间起始值
      * @param string $StartTimeEnd 任务开始时间结束值
-     * @param array $Filters 过滤条件
+     * @param array $Filters 过滤条件，支持的搜索字段："ClusterId"、"ClusterName"、"InstanceId"、"InstanceName"、"Status"、"TaskId"、"TaskType"
      * @param integer $Limit 查询列表长度
      * @param integer $Offset 查询列表偏移量
      */

@@ -18,16 +18,18 @@ namespace TencentCloud\Mqtt\V20240516\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateInsPublicEndpoint请求参数结构体
+ * DescribeMessageByTopic请求参数结构体
  *
  * @method string getInstanceId() 获取腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
  * @method void setInstanceId(string $InstanceId) 设置腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
- * @method integer getBandwidth() 获取带宽,单位Mbps
- * @method void setBandwidth(integer $Bandwidth) 设置带宽,单位Mbps
- * @method array getRules() 获取公网访问规则
- * @method void setRules(array $Rules) 设置公网访问规则
+ * @method string getTopic() 获取home/room
+ * @method void setTopic(string $Topic) 设置home/room
+ * @method integer getStartTime() 获取开始时间，毫秒级时间戳 。
+ * @method void setStartTime(integer $StartTime) 设置开始时间，毫秒级时间戳 。
+ * @method integer getMaxNumber() 获取查询消息条数，最大1024，默认100.
+ * @method void setMaxNumber(integer $MaxNumber) 设置查询消息条数，最大1024，默认100.
  */
-class CreateInsPublicEndpointRequest extends AbstractModel
+class DescribeMessageByTopicRequest extends AbstractModel
 {
     /**
      * @var string 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
@@ -35,19 +37,25 @@ class CreateInsPublicEndpointRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 带宽,单位Mbps
+     * @var string home/room
      */
-    public $Bandwidth;
+    public $Topic;
 
     /**
-     * @var array 公网访问规则
+     * @var integer 开始时间，毫秒级时间戳 。
      */
-    public $Rules;
+    public $StartTime;
+
+    /**
+     * @var integer 查询消息条数，最大1024，默认100.
+     */
+    public $MaxNumber;
 
     /**
      * @param string $InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
-     * @param integer $Bandwidth 带宽,单位Mbps
-     * @param array $Rules 公网访问规则
+     * @param string $Topic home/room
+     * @param integer $StartTime 开始时间，毫秒级时间戳 。
+     * @param integer $MaxNumber 查询消息条数，最大1024，默认100.
      */
     function __construct()
     {
@@ -66,17 +74,16 @@ class CreateInsPublicEndpointRequest extends AbstractModel
             $this->InstanceId = $param["InstanceId"];
         }
 
-        if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
-            $this->Bandwidth = $param["Bandwidth"];
+        if (array_key_exists("Topic",$param) and $param["Topic"] !== null) {
+            $this->Topic = $param["Topic"];
         }
 
-        if (array_key_exists("Rules",$param) and $param["Rules"] !== null) {
-            $this->Rules = [];
-            foreach ($param["Rules"] as $key => $value){
-                $obj = new PublicAccessRule();
-                $obj->deserialize($value);
-                array_push($this->Rules, $obj);
-            }
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("MaxNumber",$param) and $param["MaxNumber"] !== null) {
+            $this->MaxNumber = $param["MaxNumber"];
         }
     }
 }

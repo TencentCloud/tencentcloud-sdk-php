@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateCfsSnapshotAttribute请求参数结构体
  *
- * @method string getSnapshotId() 获取文件系统快照ID,查询文件系统快照列表获取
- * @method void setSnapshotId(string $SnapshotId) 设置文件系统快照ID,查询文件系统快照列表获取
- * @method string getSnapshotName() 获取文件系统快照名称，与AliveDays 必须填一个
- * @method void setSnapshotName(string $SnapshotName) 设置文件系统快照名称，与AliveDays 必须填一个
+ * @method string getSnapshotId() 获取快照ID，可以通过[DescribeCfsSnapshots](https://cloud.tencent.com/document/api/582/80206) 查询获取
+ * @method void setSnapshotId(string $SnapshotId) 设置快照ID，可以通过[DescribeCfsSnapshots](https://cloud.tencent.com/document/api/582/80206) 查询获取
+ * @method string getSnapshotName() 获取文件系统快照名称，与AliveDays 必须填一个，快照名称，支持不超过64字符长度，支持中文、数字、_、-
+ * @method void setSnapshotName(string $SnapshotName) 设置文件系统快照名称，与AliveDays 必须填一个，快照名称，支持不超过64字符长度，支持中文、数字、_、-
  * @method integer getAliveDays() 获取文件系统快照保留天数，与SnapshotName必须填一个，如果原来是永久保留时间，不允许修改成短期有效期
  * @method void setAliveDays(integer $AliveDays) 设置文件系统快照保留天数，与SnapshotName必须填一个，如果原来是永久保留时间，不允许修改成短期有效期
  */
 class UpdateCfsSnapshotAttributeRequest extends AbstractModel
 {
     /**
-     * @var string 文件系统快照ID,查询文件系统快照列表获取
+     * @var string 快照ID，可以通过[DescribeCfsSnapshots](https://cloud.tencent.com/document/api/582/80206) 查询获取
      */
     public $SnapshotId;
 
     /**
-     * @var string 文件系统快照名称，与AliveDays 必须填一个
+     * @var string 文件系统快照名称，与AliveDays 必须填一个，快照名称，支持不超过64字符长度，支持中文、数字、_、-
      */
     public $SnapshotName;
 
@@ -45,8 +45,8 @@ class UpdateCfsSnapshotAttributeRequest extends AbstractModel
     public $AliveDays;
 
     /**
-     * @param string $SnapshotId 文件系统快照ID,查询文件系统快照列表获取
-     * @param string $SnapshotName 文件系统快照名称，与AliveDays 必须填一个
+     * @param string $SnapshotId 快照ID，可以通过[DescribeCfsSnapshots](https://cloud.tencent.com/document/api/582/80206) 查询获取
+     * @param string $SnapshotName 文件系统快照名称，与AliveDays 必须填一个，快照名称，支持不超过64字符长度，支持中文、数字、_、-
      * @param integer $AliveDays 文件系统快照保留天数，与SnapshotName必须填一个，如果原来是永久保留时间，不允许修改成短期有效期
      */
     function __construct()

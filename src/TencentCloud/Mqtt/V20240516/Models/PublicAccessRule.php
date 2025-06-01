@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getIpRule() 获取ip网段信息
  * @method void setIpRule(string $IpRule) 设置ip网段信息
- * @method boolean getAllow() 获取允许或者拒绝
- * @method void setAllow(boolean $Allow) 设置允许或者拒绝
- * @method string getRemark() 获取备注信息
- * @method void setRemark(string $Remark) 设置备注信息
+ * @method boolean getAllow() 获取当前仅支持允许，默认允许（allow）
+ * @method void setAllow(boolean $Allow) 设置当前仅支持允许，默认允许（allow）
+ * @method string getRemark() 获取备注信息，最多64个字符。
+ * @method void setRemark(string $Remark) 设置备注信息，最多64个字符。
  */
 class PublicAccessRule extends AbstractModel
 {
@@ -35,19 +35,19 @@ class PublicAccessRule extends AbstractModel
     public $IpRule;
 
     /**
-     * @var boolean 允许或者拒绝
+     * @var boolean 当前仅支持允许，默认允许（allow）
      */
     public $Allow;
 
     /**
-     * @var string 备注信息
+     * @var string 备注信息，最多64个字符。
      */
     public $Remark;
 
     /**
      * @param string $IpRule ip网段信息
-     * @param boolean $Allow 允许或者拒绝
-     * @param string $Remark 备注信息
+     * @param boolean $Allow 当前仅支持允许，默认允许（allow）
+     * @param string $Remark 备注信息，最多64个字符。
      */
     function __construct()
     {

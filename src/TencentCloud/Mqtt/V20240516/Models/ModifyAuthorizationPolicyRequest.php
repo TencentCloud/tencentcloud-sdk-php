@@ -20,122 +20,174 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAuthorizationPolicy请求参数结构体
  *
- * @method integer getId() 获取策略
- * @method void setId(integer $Id) 设置策略
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getPolicyName() 获取策略名称
- * @method void setPolicyName(string $PolicyName) 设置策略名称
- * @method integer getPolicyVersion() 获取策略版本
- * @method void setPolicyVersion(integer $PolicyVersion) 设置策略版本
- * @method integer getPriority() 获取策略优先级，越小越优先
- * @method void setPriority(integer $Priority) 设置策略优先级，越小越优先
- * @method string getEffect() 获取allow、deny
- * @method void setEffect(string $Effect) 设置allow、deny
- * @method string getActions() 获取connect、pub、sub
- * @method void setActions(string $Actions) 设置connect、pub、sub
- * @method string getResources() 获取资源
- * @method void setResources(string $Resources) 设置资源
- * @method string getUsername() 获取用户名
- * @method void setUsername(string $Username) 设置用户名
- * @method integer getRetain() 获取1.匹配保留消息；2.匹配非保留消息；3.匹配所有消息
- * @method void setRetain(integer $Retain) 设置1.匹配保留消息；2.匹配非保留消息；3.匹配所有消息
- * @method string getClientId() 获取客户端
- * @method void setClientId(string $ClientId) 设置客户端
- * @method string getIp() 获取IP
- * @method void setIp(string $Ip) 设置IP
- * @method string getQos() 获取0、1、2
- * @method void setQos(string $Qos) 设置0、1、2
- * @method string getRemark() 获取备注信息
- * @method void setRemark(string $Remark) 设置备注信息
+ * @method integer getId() 获取授权策略ID，从 [查询授权策略](https://cloud.tencent.com/document/product/1778/111074) 接口获取
+ * @method void setId(integer $Id) 设置授权策略ID，从 [查询授权策略](https://cloud.tencent.com/document/product/1778/111074) 接口获取
+ * @method string getInstanceId() 获取腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+
+ * @method void setInstanceId(string $InstanceId) 设置腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+
+ * @method string getPolicyName() 获取策略名称，不能为空，3-64个字符，支持中文、字母、数字、“-”及“_”。
+ * @method void setPolicyName(string $PolicyName) 设置策略名称，不能为空，3-64个字符，支持中文、字母、数字、“-”及“_”。
+ * @method integer getPolicyVersion() 获取策略版本,默认为1，当前仅支持1
+ * @method void setPolicyVersion(integer $PolicyVersion) 设置策略版本,默认为1，当前仅支持1
+ * @method integer getPriority() 获取策略优先级，越小越优先，不能重复
+ * @method void setPriority(integer $Priority) 设置策略优先级，越小越优先，不能重复
+ * @method string getEffect() 获取决策：
+allow 允许
+deny 拒绝
+ * @method void setEffect(string $Effect) 设置决策：
+allow 允许
+deny 拒绝
+ * @method string getActions() 获取操作,支持多选，多个操作用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+connect：连接
+pub：发布
+sub：订阅
+ * @method void setActions(string $Actions) 设置操作,支持多选，多个操作用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+connect：连接
+pub：发布
+sub：订阅
+ * @method string getResources() 获取资源，需要匹配的订阅，支持配置多条匹配规则，多个用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+
+ * @method void setResources(string $Resources) 设置资源，需要匹配的订阅，支持配置多条匹配规则，多个用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+
+ * @method string getUsername() 获取条件-用户名
+ * @method void setUsername(string $Username) 设置条件-用户名
+ * @method integer getRetain() 获取条件-保留消息
+1,匹配保留消息；
+2,匹配非保留消息，
+3.匹配保留和非保留消息
+ * @method void setRetain(integer $Retain) 设置条件-保留消息
+1,匹配保留消息；
+2,匹配非保留消息，
+3.匹配保留和非保留消息
+ * @method string getClientId() 获取条件：客户端ID，支持正则
+ * @method void setClientId(string $ClientId) 设置条件：客户端ID，支持正则
+ * @method string getIp() 获取条件：客户端IP地址，支持IP或者CIDR
+ * @method void setIp(string $Ip) 设置条件：客户端IP地址，支持IP或者CIDR
+ * @method string getQos() 获取条件：服务质量
+0：最多一次
+1：最少一次
+2：精确一次
+ * @method void setQos(string $Qos) 设置条件：服务质量
+0：最多一次
+1：最少一次
+2：精确一次
+ * @method string getRemark() 获取备注信息，最长 128 字符
+ * @method void setRemark(string $Remark) 设置备注信息，最长 128 字符
  */
 class ModifyAuthorizationPolicyRequest extends AbstractModel
 {
     /**
-     * @var integer 策略
+     * @var integer 授权策略ID，从 [查询授权策略](https://cloud.tencent.com/document/product/1778/111074) 接口获取
      */
     public $Id;
 
     /**
-     * @var string 实例ID
+     * @var string 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+
      */
     public $InstanceId;
 
     /**
-     * @var string 策略名称
+     * @var string 策略名称，不能为空，3-64个字符，支持中文、字母、数字、“-”及“_”。
      */
     public $PolicyName;
 
     /**
-     * @var integer 策略版本
+     * @var integer 策略版本,默认为1，当前仅支持1
      */
     public $PolicyVersion;
 
     /**
-     * @var integer 策略优先级，越小越优先
+     * @var integer 策略优先级，越小越优先，不能重复
      */
     public $Priority;
 
     /**
-     * @var string allow、deny
+     * @var string 决策：
+allow 允许
+deny 拒绝
      */
     public $Effect;
 
     /**
-     * @var string connect、pub、sub
+     * @var string 操作,支持多选，多个操作用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+connect：连接
+pub：发布
+sub：订阅
      */
     public $Actions;
 
     /**
-     * @var string 资源
+     * @var string 资源，需要匹配的订阅，支持配置多条匹配规则，多个用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+
      */
     public $Resources;
 
     /**
-     * @var string 用户名
+     * @var string 条件-用户名
      */
     public $Username;
 
     /**
-     * @var integer 1.匹配保留消息；2.匹配非保留消息；3.匹配所有消息
+     * @var integer 条件-保留消息
+1,匹配保留消息；
+2,匹配非保留消息，
+3.匹配保留和非保留消息
      */
     public $Retain;
 
     /**
-     * @var string 客户端
+     * @var string 条件：客户端ID，支持正则
      */
     public $ClientId;
 
     /**
-     * @var string IP
+     * @var string 条件：客户端IP地址，支持IP或者CIDR
      */
     public $Ip;
 
     /**
-     * @var string 0、1、2
+     * @var string 条件：服务质量
+0：最多一次
+1：最少一次
+2：精确一次
      */
     public $Qos;
 
     /**
-     * @var string 备注信息
+     * @var string 备注信息，最长 128 字符
      */
     public $Remark;
 
     /**
-     * @param integer $Id 策略
-     * @param string $InstanceId 实例ID
-     * @param string $PolicyName 策略名称
-     * @param integer $PolicyVersion 策略版本
-     * @param integer $Priority 策略优先级，越小越优先
-     * @param string $Effect allow、deny
-     * @param string $Actions connect、pub、sub
-     * @param string $Resources 资源
-     * @param string $Username 用户名
-     * @param integer $Retain 1.匹配保留消息；2.匹配非保留消息；3.匹配所有消息
-     * @param string $ClientId 客户端
-     * @param string $Ip IP
-     * @param string $Qos 0、1、2
-     * @param string $Remark 备注信息
+     * @param integer $Id 授权策略ID，从 [查询授权策略](https://cloud.tencent.com/document/product/1778/111074) 接口获取
+     * @param string $InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
+
+     * @param string $PolicyName 策略名称，不能为空，3-64个字符，支持中文、字母、数字、“-”及“_”。
+     * @param integer $PolicyVersion 策略版本,默认为1，当前仅支持1
+     * @param integer $Priority 策略优先级，越小越优先，不能重复
+     * @param string $Effect 决策：
+allow 允许
+deny 拒绝
+     * @param string $Actions 操作,支持多选，多个操作用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+connect：连接
+pub：发布
+sub：订阅
+     * @param string $Resources 资源，需要匹配的订阅，支持配置多条匹配规则，多个用英文逗号隔开。可参考 [数据面授权策略说明](https://cloud.tencent.com/document/product/1778/109715)。
+
+     * @param string $Username 条件-用户名
+     * @param integer $Retain 条件-保留消息
+1,匹配保留消息；
+2,匹配非保留消息，
+3.匹配保留和非保留消息
+     * @param string $ClientId 条件：客户端ID，支持正则
+     * @param string $Ip 条件：客户端IP地址，支持IP或者CIDR
+     * @param string $Qos 条件：服务质量
+0：最多一次
+1：最少一次
+2：精确一次
+     * @param string $Remark 备注信息，最长 128 字符
      */
     function __construct()
     {

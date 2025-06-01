@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteUserQuota请求参数结构体
  *
- * @method string getFileSystemId() 获取文件系统 ID，通过查询文件系统接口获取
- * @method void setFileSystemId(string $FileSystemId) 设置文件系统 ID，通过查询文件系统接口获取
+ * @method string getFileSystemId() 获取文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
+ * @method void setFileSystemId(string $FileSystemId) 设置文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
  * @method string getUserType() 获取指定配额类型，包括Uid（按用户ID限制）、Gid（按用户组ID限制）、Dir（按目录限制）
  * @method void setUserType(string $UserType) 设置指定配额类型，包括Uid（按用户ID限制）、Gid（按用户组ID限制）、Dir（按目录限制）
  * @method string getUserId() 获取UID/GID信息，和DirectoryPath参数，两者必须填写一个
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DeleteUserQuotaRequest extends AbstractModel
 {
     /**
-     * @var string 文件系统 ID，通过查询文件系统接口获取
+     * @var string 文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
      */
     public $FileSystemId;
 
@@ -52,7 +52,7 @@ class DeleteUserQuotaRequest extends AbstractModel
     public $DirectoryPath;
 
     /**
-     * @param string $FileSystemId 文件系统 ID，通过查询文件系统接口获取
+     * @param string $FileSystemId 文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
      * @param string $UserType 指定配额类型，包括Uid（按用户ID限制）、Gid（按用户组ID限制）、Dir（按目录限制）
      * @param string $UserId UID/GID信息，和DirectoryPath参数，两者必须填写一个
      * @param string $DirectoryPath 设置目录配额的目录的绝对路径，和UserId参数，两者必须填写一个

@@ -42,6 +42,10 @@ view-id - String - （过滤条件）view id形如：12342。
  * @method void setStartTime(string $StartTime) 设置按视图更新时间筛选，开始时间，如2021-11-11 00:00:00
  * @method string getEndTime() 获取按视图更新时间筛选，结束时间，如2021-11-12 00:00:00
  * @method void setEndTime(string $EndTime) 设置按视图更新时间筛选，结束时间，如2021-11-12 00:00:00
+ * @method string getDescribeType() 获取查询类型：all：全部数据（默认）、permission：有权限的数据
+注意：此字段需要开启白名单使用，如果需要使用，请提交工单联系我们。
+ * @method void setDescribeType(string $DescribeType) 设置查询类型：all：全部数据（默认）、permission：有权限的数据
+注意：此字段需要开启白名单使用，如果需要使用，请提交工单联系我们。
  */
 class DescribeViewsRequest extends AbstractModel
 {
@@ -93,6 +97,12 @@ view-id - String - （过滤条件）view id形如：12342。
     public $EndTime;
 
     /**
+     * @var string 查询类型：all：全部数据（默认）、permission：有权限的数据
+注意：此字段需要开启白名单使用，如果需要使用，请提交工单联系我们。
+     */
+    public $DescribeType;
+
+    /**
      * @param string $DatabaseName 列出该数据库下所属数据表。
      * @param integer $Limit 返回数量，默认为10，最大值为100。
      * @param integer $Offset 数据偏移量，从0开始，默认为0。
@@ -104,6 +114,8 @@ view-id - String - （过滤条件）view id形如：12342。
      * @param boolean $Asc 排序规则，true:升序；false:降序
      * @param string $StartTime 按视图更新时间筛选，开始时间，如2021-11-11 00:00:00
      * @param string $EndTime 按视图更新时间筛选，结束时间，如2021-11-12 00:00:00
+     * @param string $DescribeType 查询类型：all：全部数据（默认）、permission：有权限的数据
+注意：此字段需要开启白名单使用，如果需要使用，请提交工单联系我们。
      */
     function __construct()
     {
@@ -157,6 +169,10 @@ view-id - String - （过滤条件）view id形如：12342。
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("DescribeType",$param) and $param["DescribeType"] !== null) {
+            $this->DescribeType = $param["DescribeType"];
         }
     }
 }

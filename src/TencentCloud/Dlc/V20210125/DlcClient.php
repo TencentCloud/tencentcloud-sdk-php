@@ -113,6 +113,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DescribeStoreLocationResponse DescribeStoreLocation(Models\DescribeStoreLocationRequest $req) 查询计算结果存储位置。
  * @method Models\DescribeSubUserAccessPolicyResponse DescribeSubUserAccessPolicy(Models\DescribeSubUserAccessPolicyRequest $req) 本接口（DescribeSubUserAccessPolicy）用于开通了第三方平台访问的用户，查询其子用户的访问策略
  * @method Models\DescribeTableResponse DescribeTable(Models\DescribeTableRequest $req) 本接口（DescribeTable），用于查询单个表的详细信息。
+ * @method Models\DescribeTablePartitionsResponse DescribeTablePartitions(Models\DescribeTablePartitionsRequest $req) 本接口（DescribeTablePartitions）用于查询数据表分区信息
  * @method Models\DescribeTablesResponse DescribeTables(Models\DescribeTablesRequest $req) 本接口（DescribeTables）用于查询数据表列表。
  * @method Models\DescribeTablesNameResponse DescribeTablesName(Models\DescribeTablesNameRequest $req) 本接口（DescribeTables）用于查询数据表名称列表
  * @method Models\DescribeTaskLogResponse DescribeTaskLog(Models\DescribeTaskLogRequest $req) 本接口（DescribeTaskLog）用于获取spark 作业任务日志详情

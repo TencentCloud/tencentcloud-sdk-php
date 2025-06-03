@@ -61,6 +61,7 @@ class StorageNewFileCreatedEvent extends AbstractModel
 
     /**
      * @var string 操作者 Id。（废弃，请勿使用）
+     * @deprecated
      */
     public $Operator;
 

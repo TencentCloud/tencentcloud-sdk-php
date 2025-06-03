@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailedUserList(array $FailedUserList) 设置添加失败的用户列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFlowId() 获取流程id。大于0表示启动了流程；等于0表示没有启动流程
+ * @method void setFlowId(integer $FlowId) 设置流程id。大于0表示启动了流程；等于0表示没有启动流程
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -46,6 +48,11 @@ class AddUsersForUserManagerResponse extends AbstractModel
     public $FailedUserList;
 
     /**
+     * @var integer 流程id。大于0表示启动了流程；等于0表示没有启动流程
+     */
+    public $FlowId;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -55,6 +62,7 @@ class AddUsersForUserManagerResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FailedUserList 添加失败的用户列表
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FlowId 流程id。大于0表示启动了流程；等于0表示没有启动流程
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -76,6 +84,10 @@ class AddUsersForUserManagerResponse extends AbstractModel
 
         if (array_key_exists("FailedUserList",$param) and $param["FailedUserList"] !== null) {
             $this->FailedUserList = $param["FailedUserList"];
+        }
+
+        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
+            $this->FlowId = $param["FlowId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -52,6 +52,7 @@ use TencentCloud\Gs\V20191118\Models as Models;
  * @method Models\DescribeAndroidInstancesResponse DescribeAndroidInstances(Models\DescribeAndroidInstancesRequest $req) 查询安卓实例
  * @method Models\DescribeInstancesCountResponse DescribeInstancesCount(Models\DescribeInstancesCountRequest $req) 获取并发总数和运行数
  * @method Models\DestroyAndroidInstancesResponse DestroyAndroidInstances(Models\DestroyAndroidInstancesRequest $req) 销毁安卓实例
+ * @method Models\DistributeFileToAndroidInstancesResponse DistributeFileToAndroidInstances(Models\DistributeFileToAndroidInstancesRequest $req) 分发文件到安卓实例
  * @method Models\ExecuteCommandOnAndroidInstancesResponse ExecuteCommandOnAndroidInstances(Models\ExecuteCommandOnAndroidInstancesRequest $req) 在安卓实例上异步执行命令，命令输出结果如果内容过长会被截断
  * @method Models\FetchAndroidInstancesLogsResponse FetchAndroidInstancesLogs(Models\FetchAndroidInstancesLogsRequest $req) 批量获取安卓实例日志
  * @method Models\InstallAndroidInstancesAppResponse InstallAndroidInstancesApp(Models\InstallAndroidInstancesAppRequest $req) 安装安卓实例应用
@@ -86,6 +87,7 @@ use TencentCloud\Gs\V20191118\Models as Models;
  * @method Models\TrylockWorkerResponse TrylockWorker(Models\TrylockWorkerRequest $req) 尝试锁定机器
  * @method Models\UninstallAndroidInstancesAppResponse UninstallAndroidInstancesApp(Models\UninstallAndroidInstancesAppRequest $req) 卸载安卓实例应用
  * @method Models\UploadFileToAndroidInstancesResponse UploadFileToAndroidInstances(Models\UploadFileToAndroidInstancesRequest $req) 上传文件到安卓实例
+ * @method Models\UploadFilesToAndroidInstancesResponse UploadFilesToAndroidInstances(Models\UploadFilesToAndroidInstancesRequest $req) 批量上传文件到安卓实例
  */
 
 class GsClient extends AbstractClient

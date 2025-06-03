@@ -14,28 +14,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Domain\V20180808\Models;
+namespace TencentCloud\Dlc\V20210125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateDomainRedemption请求参数结构体
+ * DescribeTablePartitions请求参数结构体
  *
- * @method string getDomainId() 获取域名ID
-可通过[DescribeDomainNameList](https://cloud.tencent.com/document/api/242/48941)接口获取
- * @method void setDomainId(string $DomainId) 设置域名ID
-可通过[DescribeDomainNameList](https://cloud.tencent.com/document/api/242/48941)接口获取
+
  */
-class CreateDomainRedemptionRequest extends AbstractModel
+class DescribeTablePartitionsRequest extends AbstractModel
 {
-    /**
-     * @var string 域名ID
-可通过[DescribeDomainNameList](https://cloud.tencent.com/document/api/242/48941)接口获取
-     */
-    public $DomainId;
+
 
     /**
-     * @param string $DomainId 域名ID
-可通过[DescribeDomainNameList](https://cloud.tencent.com/document/api/242/48941)接口获取
+
      */
     function __construct()
     {
@@ -50,8 +42,6 @@ class CreateDomainRedemptionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DomainId",$param) and $param["DomainId"] !== null) {
-            $this->DomainId = $param["DomainId"];
-        }
+
     }
 }

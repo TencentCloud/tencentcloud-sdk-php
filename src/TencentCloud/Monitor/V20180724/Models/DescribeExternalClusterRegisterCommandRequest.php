@@ -14,28 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Domain\V20180808\Models;
+namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateDomainRedemption请求参数结构体
+ * DescribeExternalClusterRegisterCommand请求参数结构体
  *
- * @method string getDomainId() 获取域名ID
-可通过[DescribeDomainNameList](https://cloud.tencent.com/document/api/242/48941)接口获取
- * @method void setDomainId(string $DomainId) 设置域名ID
-可通过[DescribeDomainNameList](https://cloud.tencent.com/document/api/242/48941)接口获取
+ * @method string getInstanceId() 获取实例 ID
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID
+ * @method string getClusterId() 获取集群 ID
+ * @method void setClusterId(string $ClusterId) 设置集群 ID
  */
-class CreateDomainRedemptionRequest extends AbstractModel
+class DescribeExternalClusterRegisterCommandRequest extends AbstractModel
 {
     /**
-     * @var string 域名ID
-可通过[DescribeDomainNameList](https://cloud.tencent.com/document/api/242/48941)接口获取
+     * @var string 实例 ID
      */
-    public $DomainId;
+    public $InstanceId;
 
     /**
-     * @param string $DomainId 域名ID
-可通过[DescribeDomainNameList](https://cloud.tencent.com/document/api/242/48941)接口获取
+     * @var string 集群 ID
+     */
+    public $ClusterId;
+
+    /**
+     * @param string $InstanceId 实例 ID
+     * @param string $ClusterId 集群 ID
      */
     function __construct()
     {
@@ -50,8 +54,12 @@ class CreateDomainRedemptionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DomainId",$param) and $param["DomainId"] !== null) {
-            $this->DomainId = $param["DomainId"];
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
         }
     }
 }

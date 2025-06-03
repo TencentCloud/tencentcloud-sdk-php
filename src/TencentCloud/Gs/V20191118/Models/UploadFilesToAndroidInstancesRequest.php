@@ -14,28 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Domain\V20180808\Models;
+namespace TencentCloud\Gs\V20191118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateDomainRedemption请求参数结构体
+ * UploadFilesToAndroidInstances请求参数结构体
  *
- * @method string getDomainId() 获取域名ID
-可通过[DescribeDomainNameList](https://cloud.tencent.com/document/api/242/48941)接口获取
- * @method void setDomainId(string $DomainId) 设置域名ID
-可通过[DescribeDomainNameList](https://cloud.tencent.com/document/api/242/48941)接口获取
+ * @method array getFiles() 获取上传文件信息列表
+ * @method void setFiles(array $Files) 设置上传文件信息列表
  */
-class CreateDomainRedemptionRequest extends AbstractModel
+class UploadFilesToAndroidInstancesRequest extends AbstractModel
 {
     /**
-     * @var string 域名ID
-可通过[DescribeDomainNameList](https://cloud.tencent.com/document/api/242/48941)接口获取
+     * @var array 上传文件信息列表
      */
-    public $DomainId;
+    public $Files;
 
     /**
-     * @param string $DomainId 域名ID
-可通过[DescribeDomainNameList](https://cloud.tencent.com/document/api/242/48941)接口获取
+     * @param array $Files 上传文件信息列表
      */
     function __construct()
     {
@@ -50,8 +46,13 @@ class CreateDomainRedemptionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DomainId",$param) and $param["DomainId"] !== null) {
-            $this->DomainId = $param["DomainId"];
+        if (array_key_exists("Files",$param) and $param["Files"] !== null) {
+            $this->Files = [];
+            foreach ($param["Files"] as $key => $value){
+                $obj = new AndroidInstanceUploadFile();
+                $obj->deserialize($value);
+                array_push($this->Files, $obj);
+            }
         }
     }
 }

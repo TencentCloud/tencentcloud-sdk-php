@@ -514,11 +514,11 @@ ChildrenComponent结构体定义:
 <ul><li>false（默认）：不锁定控件值，允许在页面编辑控件值</li>
 <li>true：锁定控件值，在页面编辑控件值</li></ul>
  * @method boolean getForbidMoveAndDelete() 获取**web嵌入发起合同场景下**，是否禁止移动和删除填写和签署控件
-<ul><li> <b>false（默认）</b> :不禁止移动和删除控件</li>
-<li> <b>true</b> : 可以移动和删除控件</li></ul>
+<ul><li> <b>false（默认）</b> :可以移动和删除控件</li>
+<li> <b>true</b> : 禁止移动和删除控件</li></ul>
  * @method void setForbidMoveAndDelete(boolean $ForbidMoveAndDelete) 设置**web嵌入发起合同场景下**，是否禁止移动和删除填写和签署控件
-<ul><li> <b>false（默认）</b> :不禁止移动和删除控件</li>
-<li> <b>true</b> : 可以移动和删除控件</li></ul>
+<ul><li> <b>false（默认）</b> :可以移动和删除控件</li>
+<li> <b>true</b> : 禁止移动和删除控件</li></ul>
  * @method integer getComponentDateFontSize() 获取<font color="red">【暂未使用】</font>日期签署控件的字号，默认为 12
  * @method void setComponentDateFontSize(integer $ComponentDateFontSize) 设置<font color="red">【暂未使用】</font>日期签署控件的字号，默认为 12
  * @method string getChannelComponentId() 获取<font color="red">【暂未使用】</font>第三方应用集成平台模板控件 ID 标识
@@ -866,8 +866,8 @@ ChildrenComponent结构体定义:
 
     /**
      * @var boolean **web嵌入发起合同场景下**，是否禁止移动和删除填写和签署控件
-<ul><li> <b>false（默认）</b> :不禁止移动和删除控件</li>
-<li> <b>true</b> : 可以移动和删除控件</li></ul>
+<ul><li> <b>false（默认）</b> :可以移动和删除控件</li>
+<li> <b>true</b> : 禁止移动和删除控件</li></ul>
      */
     public $ForbidMoveAndDelete;
 
@@ -1134,8 +1134,8 @@ ChildrenComponent结构体定义:
 <ul><li>false（默认）：不锁定控件值，允许在页面编辑控件值</li>
 <li>true：锁定控件值，在页面编辑控件值</li></ul>
      * @param boolean $ForbidMoveAndDelete **web嵌入发起合同场景下**，是否禁止移动和删除填写和签署控件
-<ul><li> <b>false（默认）</b> :不禁止移动和删除控件</li>
-<li> <b>true</b> : 可以移动和删除控件</li></ul>
+<ul><li> <b>false（默认）</b> :可以移动和删除控件</li>
+<li> <b>true</b> : 禁止移动和删除控件</li></ul>
      * @param integer $ComponentDateFontSize <font color="red">【暂未使用】</font>日期签署控件的字号，默认为 12
      * @param string $ChannelComponentId <font color="red">【暂未使用】</font>第三方应用集成平台模板控件 ID 标识
      * @param integer $ChannelComponentSource <font color="red">【暂未使用】</font>第三方应用集成中子客企业控件来源。

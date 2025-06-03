@@ -46,6 +46,10 @@ table-id - String - （过滤条件）table id形如：12342。
  * @method void setTableType(string $TableType) 设置table type，表类型查询,可用值:EXTERNAL_TABLE,INDEX_TABLE,MANAGED_TABLE,MATERIALIZED_VIEW,TABLE,VIEW,VIRTUAL_VIEW
  * @method string getTableFormat() 获取筛选字段-表格式：不传（默认）为查全部；LAKEFS：托管表；ICEBERG：非托管iceberg表；HIVE：非托管hive表；OTHER：非托管其它；
  * @method void setTableFormat(string $TableFormat) 设置筛选字段-表格式：不传（默认）为查全部；LAKEFS：托管表；ICEBERG：非托管iceberg表；HIVE：非托管hive表；OTHER：非托管其它；
+ * @method string getDescribeType() 获取查询类型：all：全部数据（默认）、permission：有权限的数据
+注意：此字段需要开启白名单使用，如果需要使用，请提交工单联系我们。
+ * @method void setDescribeType(string $DescribeType) 设置查询类型：all：全部数据（默认）、permission：有权限的数据
+注意：此字段需要开启白名单使用，如果需要使用，请提交工单联系我们。
  */
 class DescribeTablesRequest extends AbstractModel
 {
@@ -107,6 +111,12 @@ table-id - String - （过滤条件）table id形如：12342。
     public $TableFormat;
 
     /**
+     * @var string 查询类型：all：全部数据（默认）、permission：有权限的数据
+注意：此字段需要开启白名单使用，如果需要使用，请提交工单联系我们。
+     */
+    public $DescribeType;
+
+    /**
      * @param string $DatabaseName 列出该数据库下所属数据表。
      * @param integer $Limit 返回数量，默认为10，最大值为100。
      * @param integer $Offset 数据偏移量，从0开始，默认为0。
@@ -120,6 +130,8 @@ table-id - String - （过滤条件）table id形如：12342。
      * @param boolean $Asc 排序字段，false：降序（默认）；true：升序
      * @param string $TableType table type，表类型查询,可用值:EXTERNAL_TABLE,INDEX_TABLE,MANAGED_TABLE,MATERIALIZED_VIEW,TABLE,VIEW,VIRTUAL_VIEW
      * @param string $TableFormat 筛选字段-表格式：不传（默认）为查全部；LAKEFS：托管表；ICEBERG：非托管iceberg表；HIVE：非托管hive表；OTHER：非托管其它；
+     * @param string $DescribeType 查询类型：all：全部数据（默认）、permission：有权限的数据
+注意：此字段需要开启白名单使用，如果需要使用，请提交工单联系我们。
      */
     function __construct()
     {
@@ -181,6 +193,10 @@ table-id - String - （过滤条件）table id形如：12342。
 
         if (array_key_exists("TableFormat",$param) and $param["TableFormat"] !== null) {
             $this->TableFormat = $param["TableFormat"];
+        }
+
+        if (array_key_exists("DescribeType",$param) and $param["DescribeType"] !== null) {
+            $this->DescribeType = $param["DescribeType"];
         }
     }
 }

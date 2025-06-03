@@ -34,10 +34,6 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\CreateDocCateResponse CreateDocCate(Models\CreateDocCateRequest $req) 创建Doc分类
  * @method Models\CreateQAResponse CreateQA(Models\CreateQARequest $req) 录入问答
  * @method Models\CreateQACateResponse CreateQACate(Models\CreateQACateRequest $req) 创建QA分类
- * @method Models\CreateReconstructDocumentFlowResponse CreateReconstructDocumentFlow(Models\CreateReconstructDocumentFlowRequest $req) 本接口为异步接口的发起请求接口，用于发起文档解析任务。
-文档解析支持将图片或PDF文件转换成Markdown格式文件，可解析包括表格、公式、图片、标题、段落、页眉、页脚等内容元素，并将内容智能转换成阅读顺序。
-
-体验期间单账号限制qps仅为1，若有正式接入需要请与产研团队沟通开放。
  * @method Models\CreateRejectedQuestionResponse CreateRejectedQuestion(Models\CreateRejectedQuestionRequest $req) 创建拒答问题
  * @method Models\CreateReleaseResponse CreateRelease(Models\CreateReleaseRequest $req) 创建发布
  * @method Models\CreateVarResponse CreateVar(Models\CreateVarRequest $req) 创建变量

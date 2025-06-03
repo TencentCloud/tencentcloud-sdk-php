@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(integer $CreateTime) 设置创建时间
  * @method integer getEndTime() 获取完成/终止时间
  * @method void setEndTime(integer $EndTime) 设置完成/终止时间
- * @method integer getStatus() 获取迁移状态。0: 已完成；1: 进行中；2: 已终止
- * @method void setStatus(integer $Status) 设置迁移状态。0: 已完成；1: 进行中；2: 已终止
+ * @method integer getStatus() 获取迁移状态。0: 已完成；1: 创建中；2: 运行中；3: 终止中；4: 已终止；5: 创建失败；6: 运行失败；7: 结束中；8: 删除中；9: 等待中
+ * @method void setStatus(integer $Status) 设置迁移状态。0: 已完成；1: 创建中；2: 运行中；3: 终止中；4: 已终止；5: 创建失败；6: 运行失败；7: 结束中；8: 删除中；9: 等待中
  * @method integer getFileTotalCount() 获取文件数量
  * @method void setFileTotalCount(integer $FileTotalCount) 设置文件数量
  * @method integer getFileMigratedCount() 获取已迁移文件数量
@@ -146,7 +146,7 @@ class MigrationTaskInfo extends AbstractModel
     public $EndTime;
 
     /**
-     * @var integer 迁移状态。0: 已完成；1: 进行中；2: 已终止
+     * @var integer 迁移状态。0: 已完成；1: 创建中；2: 运行中；3: 终止中；4: 已终止；5: 创建失败；6: 运行失败；7: 结束中；8: 删除中；9: 等待中
      */
     public $Status;
 
@@ -220,7 +220,7 @@ class MigrationTaskInfo extends AbstractModel
      * @param integer $CoverType 同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖
      * @param integer $CreateTime 创建时间
      * @param integer $EndTime 完成/终止时间
-     * @param integer $Status 迁移状态。0: 已完成；1: 进行中；2: 已终止
+     * @param integer $Status 迁移状态。0: 已完成；1: 创建中；2: 运行中；3: 终止中；4: 已终止；5: 创建失败；6: 运行失败；7: 结束中；8: 删除中；9: 等待中
      * @param integer $FileTotalCount 文件数量
      * @param integer $FileMigratedCount 已迁移文件数量
      * @param integer $FileFailedCount 迁移失败文件数量

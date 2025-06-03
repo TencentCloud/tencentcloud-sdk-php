@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setJobId(string $JobId) 设置任务ID
  * @method integer getTargetRequestsPerSecond() 获取目标 RPS。其取值应大于起始 RPS，并且小于最大 RPS
  * @method void setTargetRequestsPerSecond(integer $TargetRequestsPerSecond) 设置目标 RPS。其取值应大于起始 RPS，并且小于最大 RPS
+ * @method string getProjectId() 获取压测项目ID
+ * @method void setProjectId(string $ProjectId) 设置压测项目ID
+ * @method string getScenarioId() 获取测试场景ID
+ * @method void setScenarioId(string $ScenarioId) 设置测试场景ID
  */
 class AdjustJobSpeedRequest extends AbstractModel
 {
@@ -38,8 +42,20 @@ class AdjustJobSpeedRequest extends AbstractModel
     public $TargetRequestsPerSecond;
 
     /**
+     * @var string 压测项目ID
+     */
+    public $ProjectId;
+
+    /**
+     * @var string 测试场景ID
+     */
+    public $ScenarioId;
+
+    /**
      * @param string $JobId 任务ID
      * @param integer $TargetRequestsPerSecond 目标 RPS。其取值应大于起始 RPS，并且小于最大 RPS
+     * @param string $ProjectId 压测项目ID
+     * @param string $ScenarioId 测试场景ID
      */
     function __construct()
     {
@@ -60,6 +76,14 @@ class AdjustJobSpeedRequest extends AbstractModel
 
         if (array_key_exists("TargetRequestsPerSecond",$param) and $param["TargetRequestsPerSecond"] !== null) {
             $this->TargetRequestsPerSecond = $param["TargetRequestsPerSecond"];
+        }
+
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("ScenarioId",$param) and $param["ScenarioId"] !== null) {
+            $this->ScenarioId = $param["ScenarioId"];
         }
     }
 }

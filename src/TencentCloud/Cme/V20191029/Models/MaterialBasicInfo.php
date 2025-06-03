@@ -118,6 +118,7 @@ class MaterialBasicInfo extends AbstractModel
      * @var array 媒体绑定的标签信息列表 。
 该字段已废弃。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $TagInfoSet;
 

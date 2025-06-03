@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeApplications请求参数结构体
  *
- * @method array getApplicationIds() 获取应用id列表
- * @method void setApplicationIds(array $ApplicationIds) 设置应用id列表
+ * @method array getApplicationIds() 获取应用id列表。单次请求数量上限为100个。
+ * @method void setApplicationIds(array $ApplicationIds) 设置应用id列表。单次请求数量上限为100个。
  * @method array getFilters() 获取过滤器，跟ApplicationIds不能共用，支持的filter主要有：application-id: 精确匹配;scene-id: 精确匹配，通过调用接口 [DescribeScenes](https://cloud.tencent.com/document/api/1721/101608)获取;application-name: 模糊匹配;application-type: 精确匹配，枚举类型如下：PUBLIC_APPLICATION（公共应用）/ PRIVATE_APPLICATION（自定义应用）/ COMMUNITY_APPLICATION（社区应用）;
  * @method void setFilters(array $Filters) 设置过滤器，跟ApplicationIds不能共用，支持的filter主要有：application-id: 精确匹配;scene-id: 精确匹配，通过调用接口 [DescribeScenes](https://cloud.tencent.com/document/api/1721/101608)获取;application-name: 模糊匹配;application-type: 精确匹配，枚举类型如下：PUBLIC_APPLICATION（公共应用）/ PRIVATE_APPLICATION（自定义应用）/ COMMUNITY_APPLICATION（社区应用）;
  * @method integer getOffset() 获取偏移量，不得小于0，默认为0
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeApplicationsRequest extends AbstractModel
 {
     /**
-     * @var array 应用id列表
+     * @var array 应用id列表。单次请求数量上限为100个。
      */
     public $ApplicationIds;
 
@@ -66,7 +66,7 @@ class DescribeApplicationsRequest extends AbstractModel
     public $Order;
 
     /**
-     * @param array $ApplicationIds 应用id列表
+     * @param array $ApplicationIds 应用id列表。单次请求数量上限为100个。
      * @param array $Filters 过滤器，跟ApplicationIds不能共用，支持的filter主要有：application-id: 精确匹配;scene-id: 精确匹配，通过调用接口 [DescribeScenes](https://cloud.tencent.com/document/api/1721/101608)获取;application-name: 模糊匹配;application-type: 精确匹配，枚举类型如下：PUBLIC_APPLICATION（公共应用）/ PRIVATE_APPLICATION（自定义应用）/ COMMUNITY_APPLICATION（社区应用）;
      * @param integer $Offset 偏移量，不得小于0，默认为0
      * @param integer $Limit 返回量，不得大于100，默认为20

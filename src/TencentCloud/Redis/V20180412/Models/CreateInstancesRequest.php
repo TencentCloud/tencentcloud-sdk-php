@@ -124,14 +124,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDryRun(boolean $DryRun) 设置内部参数，标识创建实例是否需要检查。
 - false ：默认值。发送正常请求，通过检查后直接创建实例。
 - true：发送检查请求，不会创建实例。
- * @method string getProductVersion() 获取指定实例的产品版本。
-- local：本地盘版。
-- cloud：云盘版，
-- cdc：独享集群版。如果不传默认发货为本地盘版本。
- * @method void setProductVersion(string $ProductVersion) 设置指定实例的产品版本。
-- local：本地盘版。
-- cloud：云盘版，
-- cdc：独享集群版。如果不传默认发货为本地盘版本。
+ * @method string getProductVersion() 获取指实例部署模式。
+- local：传统架构，默认为 local。
+- cdc：独享集群。
+- cloud：云原生，当前已暂停售卖。
+ * @method void setProductVersion(string $ProductVersion) 设置指实例部署模式。
+- local：传统架构，默认为 local。
+- cdc：独享集群。
+- cloud：云原生，当前已暂停售卖。
  * @method string getRedisClusterId() 获取独享集群 ID。当**ProductVersion**设置为**cdc**时，该参数必须设置。
  * @method void setRedisClusterId(string $RedisClusterId) 设置独享集群 ID。当**ProductVersion**设置为**cdc**时，该参数必须设置。
  * @method array getAlarmPolicyList() 获取告警策略 ID 数组。
@@ -290,10 +290,10 @@ class CreateInstancesRequest extends AbstractModel
     public $DryRun;
 
     /**
-     * @var string 指定实例的产品版本。
-- local：本地盘版。
-- cloud：云盘版，
-- cdc：独享集群版。如果不传默认发货为本地盘版本。
+     * @var string 指实例部署模式。
+- local：传统架构，默认为 local。
+- cdc：独享集群。
+- cloud：云原生，当前已暂停售卖。
      */
     public $ProductVersion;
 
@@ -363,10 +363,10 @@ class CreateInstancesRequest extends AbstractModel
      * @param boolean $DryRun 内部参数，标识创建实例是否需要检查。
 - false ：默认值。发送正常请求，通过检查后直接创建实例。
 - true：发送检查请求，不会创建实例。
-     * @param string $ProductVersion 指定实例的产品版本。
-- local：本地盘版。
-- cloud：云盘版，
-- cdc：独享集群版。如果不传默认发货为本地盘版本。
+     * @param string $ProductVersion 指实例部署模式。
+- local：传统架构，默认为 local。
+- cdc：独享集群。
+- cloud：云原生，当前已暂停售卖。
      * @param string $RedisClusterId 独享集群 ID。当**ProductVersion**设置为**cdc**时，该参数必须设置。
      * @param array $AlarmPolicyList 告警策略 ID 数组。
 

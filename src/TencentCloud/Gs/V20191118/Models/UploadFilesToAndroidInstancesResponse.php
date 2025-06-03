@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Lke\V20231130\Models;
+namespace TencentCloud\Gs\V20191118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateReconstructDocumentFlow返回参数结构体
+ * UploadFilesToAndroidInstances返回参数结构体
  *
- * @method string getTaskId() 获取任务唯一ID。30天内可以通过[GetReconstructDocumentResult](https://cloud.tencent.com/document/product/1759/107505)接口查询TaskId对应的处理结果。
- * @method void setTaskId(string $TaskId) 设置任务唯一ID。30天内可以通过[GetReconstructDocumentResult](https://cloud.tencent.com/document/product/1759/107505)接口查询TaskId对应的处理结果。
+ * @method array getTaskSet() 获取实例任务集合
+ * @method void setTaskSet(array $TaskSet) 设置实例任务集合
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class CreateReconstructDocumentFlowResponse extends AbstractModel
+class UploadFilesToAndroidInstancesResponse extends AbstractModel
 {
     /**
-     * @var string 任务唯一ID。30天内可以通过[GetReconstructDocumentResult](https://cloud.tencent.com/document/product/1759/107505)接口查询TaskId对应的处理结果。
+     * @var array 实例任务集合
      */
-    public $TaskId;
+    public $TaskSet;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class CreateReconstructDocumentFlowResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TaskId 任务唯一ID。30天内可以通过[GetReconstructDocumentResult](https://cloud.tencent.com/document/product/1759/107505)接口查询TaskId对应的处理结果。
+     * @param array $TaskSet 实例任务集合
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +54,13 @@ class CreateReconstructDocumentFlowResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("TaskSet",$param) and $param["TaskSet"] !== null) {
+            $this->TaskSet = [];
+            foreach ($param["TaskSet"] as $key => $value){
+                $obj = new AndroidInstanceTask();
+                $obj->deserialize($value);
+                array_push($this->TaskSet, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

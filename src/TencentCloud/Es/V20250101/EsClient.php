@@ -39,7 +39,6 @@ use TencentCloud\Es\V20250101\Models as Models;
 本接口为异步接口，有单账号调用上限控制，如您有提高并发限制的需求请[联系我们](https://cloud.tencent.com/act/event/Online_service)  。
  * @method Models\RunRerankResponse RunRerank(Models\RunRerankRequest $req) 重排是指在 RAG 过程中，通过评估文档与查询之间的相关性，将最相关的文档放在前面，确保语言模型在生成回答时优先考虑排名靠前的上下文，提高生成结果的准确性和可信度，也可以通过这种方式进行过滤，减少大模型成本。
 本接口有单账号调用上限控制，如您有提高并发限制的需求请[联系我们](https://cloud.tencent.com/act/event/Online_service)  。
- * @method Models\WebSearchResponse WebSearch(Models\WebSearchRequest $req) WebSearch API 是一个网页搜索服务，支持多种搜索引擎，可以获取网页的标题、URL、摘要和正文内容。
  */
 
 class EsClient extends AbstractClient

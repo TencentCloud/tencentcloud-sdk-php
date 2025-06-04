@@ -14,39 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tcss\V20201101\Models;
+namespace TencentCloud\Gs\V20191118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeAssetImageRegistryVulListExport返回参数结构体
+ * ModifyAndroidInstancesProperties返回参数结构体
  *
- * @method string getDownloadUrl() 获取excel文件下载地址
- * @method void setDownloadUrl(string $DownloadUrl) 设置excel文件下载地址
- * @method string getJobId() 获取导出任务id
- * @method void setJobId(string $JobId) 设置导出任务id
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeAssetImageRegistryVulListExportResponse extends AbstractModel
+class ModifyAndroidInstancesPropertiesResponse extends AbstractModel
 {
-    /**
-     * @var string excel文件下载地址
-     */
-    public $DownloadUrl;
-
-    /**
-     * @var string 导出任务id
-     */
-    public $JobId;
-
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param string $DownloadUrl excel文件下载地址
-     * @param string $JobId 导出任务id
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,14 +46,6 @@ class DescribeAssetImageRegistryVulListExportResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DownloadUrl",$param) and $param["DownloadUrl"] !== null) {
-            $this->DownloadUrl = $param["DownloadUrl"];
-        }
-
-        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
-            $this->JobId = $param["JobId"];
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

@@ -20,23 +20,11 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 任务输出标签
  *
- * @method string getLabel() 获取命中的标签
-Porn 色情
-Sexy 性感
-Polity 政治
-Illegal 违法
-Abuse 谩骂
-Terror 暴恐
-Ad 广告
+ * @method string getLabel() 获取该字段用于返回检测结果所对应的恶意标签。
+返回值：Porn：色情，Abuse：谩骂，Ad：广告；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLabel(string $Label) 设置命中的标签
-Porn 色情
-Sexy 性感
-Polity 政治
-Illegal 违法
-Abuse 谩骂
-Terror 暴恐
-Ad 广告
+ * @method void setLabel(string $Label) 设置该字段用于返回检测结果所对应的恶意标签。
+返回值：Porn：色情，Abuse：谩骂，Ad：广告；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSuggestion() 获取审核建议，可选值：
 Pass 通过，
@@ -60,14 +48,8 @@ Block 确认违规
 class TaskLabel extends AbstractModel
 {
     /**
-     * @var string 命中的标签
-Porn 色情
-Sexy 性感
-Polity 政治
-Illegal 违法
-Abuse 谩骂
-Terror 暴恐
-Ad 广告
+     * @var string 该字段用于返回检测结果所对应的恶意标签。
+返回值：Porn：色情，Abuse：谩骂，Ad：广告；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Label;
@@ -94,14 +76,8 @@ Block 确认违规
     public $SubLabel;
 
     /**
-     * @param string $Label 命中的标签
-Porn 色情
-Sexy 性感
-Polity 政治
-Illegal 违法
-Abuse 谩骂
-Terror 暴恐
-Ad 广告
+     * @param string $Label 该字段用于返回检测结果所对应的恶意标签。
+返回值：Porn：色情，Abuse：谩骂，Ad：广告；以及其他令人反感、不安全或不适宜的内容类型。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Suggestion 审核建议，可选值：
 Pass 通过，

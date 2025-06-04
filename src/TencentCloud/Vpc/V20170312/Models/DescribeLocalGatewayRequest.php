@@ -20,8 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLocalGateway请求参数结构体
  *
- * @method array getFilters() 获取支持的过滤条件如下:\n<li>vpc-id:按照VPCID过滤。</li>\n<li>local-gateway-name:本地网关名称,支持模糊查询。</li>\n<li>local-gateway-id:本地网关实例ID。</li>\n<li>cdc-id:cdc实例ID。</li>
- * @method void setFilters(array $Filters) 设置支持的过滤条件如下:\n<li>vpc-id:按照VPCID过滤。</li>\n<li>local-gateway-name:本地网关名称,支持模糊查询。</li>\n<li>local-gateway-id:本地网关实例ID。</li>\n<li>cdc-id:cdc实例ID。</li>
+ * @method array getFilters() 获取支持的过滤条件如下:
+<li>vpc-id:按照VPCID过滤。</li>
+<li>local-gateway-name:本地网关名称,支持模糊查询。</li>
+<li>local-gateway-id:本地网关实例ID。</li>
+<li>cdc-id:cdc实例ID。</li>
+ * @method void setFilters(array $Filters) 设置支持的过滤条件如下:
+<li>vpc-id:按照VPCID过滤。</li>
+<li>local-gateway-name:本地网关名称,支持模糊查询。</li>
+<li>local-gateway-id:本地网关实例ID。</li>
+<li>cdc-id:cdc实例ID。</li>
  * @method integer getOffset() 获取偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/11646)中的相关小节。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/11646)中的相关小节。
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/11646)中的相关小节。
@@ -30,7 +38,11 @@ use TencentCloud\Common\AbstractModel;
 class DescribeLocalGatewayRequest extends AbstractModel
 {
     /**
-     * @var array 支持的过滤条件如下:\n<li>vpc-id:按照VPCID过滤。</li>\n<li>local-gateway-name:本地网关名称,支持模糊查询。</li>\n<li>local-gateway-id:本地网关实例ID。</li>\n<li>cdc-id:cdc实例ID。</li>
+     * @var array 支持的过滤条件如下:
+<li>vpc-id:按照VPCID过滤。</li>
+<li>local-gateway-name:本地网关名称,支持模糊查询。</li>
+<li>local-gateway-id:本地网关实例ID。</li>
+<li>cdc-id:cdc实例ID。</li>
      */
     public $Filters;
 
@@ -45,7 +57,11 @@ class DescribeLocalGatewayRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param array $Filters 支持的过滤条件如下:\n<li>vpc-id:按照VPCID过滤。</li>\n<li>local-gateway-name:本地网关名称,支持模糊查询。</li>\n<li>local-gateway-id:本地网关实例ID。</li>\n<li>cdc-id:cdc实例ID。</li>
+     * @param array $Filters 支持的过滤条件如下:
+<li>vpc-id:按照VPCID过滤。</li>
+<li>local-gateway-name:本地网关名称,支持模糊查询。</li>
+<li>local-gateway-id:本地网关实例ID。</li>
+<li>cdc-id:cdc实例ID。</li>
      * @param integer $Offset 偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/11646)中的相关小节。
      * @param integer $Limit 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/11646)中的相关小节。
      */

@@ -180,6 +180,8 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
  * @method void setNamespace(string $Namespace) 设置Namespace
  * @method string getWorkloadType() 获取工作负载类型
  * @method void setWorkloadType(string $WorkloadType) 设置工作负载类型
+ * @method string getContainerStatus() 获取容器状态
+ * @method void setContainerStatus(string $ContainerStatus) 设置容器状态
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -510,6 +512,11 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
     public $WorkloadType;
 
     /**
+     * @var string 容器状态
+     */
+    public $ContainerStatus;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -595,6 +602,7 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
      * @param string $ClusterName 集群名称
      * @param string $Namespace Namespace
      * @param string $WorkloadType 工作负载类型
+     * @param string $ContainerStatus 容器状态
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -852,6 +860,10 @@ CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
 
         if (array_key_exists("WorkloadType",$param) and $param["WorkloadType"] !== null) {
             $this->WorkloadType = $param["WorkloadType"];
+        }
+
+        if (array_key_exists("ContainerStatus",$param) and $param["ContainerStatus"] !== null) {
+            $this->ContainerStatus = $param["ContainerStatus"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cfs\V20190719\Models;
+namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * StopMigrationTask请求参数结构体
+ * DescribeLBOperateProtect请求参数结构体
  *
- * @method string getTaskId() 获取迁移任务Id
- * @method void setTaskId(string $TaskId) 设置迁移任务Id
+ * @method array getLoadBalancerIds() 获取负载均衡实例ID。
+ * @method void setLoadBalancerIds(array $LoadBalancerIds) 设置负载均衡实例ID。
  */
-class StopMigrationTaskRequest extends AbstractModel
+class DescribeLBOperateProtectRequest extends AbstractModel
 {
     /**
-     * @var string 迁移任务Id
+     * @var array 负载均衡实例ID。
      */
-    public $TaskId;
+    public $LoadBalancerIds;
 
     /**
-     * @param string $TaskId 迁移任务Id
+     * @param array $LoadBalancerIds 负载均衡实例ID。
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class StopMigrationTaskRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("LoadBalancerIds",$param) and $param["LoadBalancerIds"] !== null) {
+            $this->LoadBalancerIds = $param["LoadBalancerIds"];
         }
     }
 }

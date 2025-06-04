@@ -98,21 +98,25 @@ class DedicatedClusterOrder extends AbstractModel
 
     /**
      * @var string 专用集群类型id（移到下一层级，已经废弃，后续将删除）
+     * @deprecated
      */
     public $DedicatedClusterTypeId;
 
     /**
      * @var array 支持的存储类型列表（移到下一层级，已经废弃，后续将删除）
+     * @deprecated
      */
     public $SupportedStorageType;
 
     /**
      * @var array 支持的上连交换机的链路传输速率(GiB)（移到下一层级，已经废弃，后续将删除）
+     * @deprecated
      */
     public $SupportedUplinkSpeed;
 
     /**
      * @var array 支持的实例族列表（移到下一层级，已经废弃，后续将删除）
+     * @deprecated
      */
     public $SupportedInstanceFamily;
 

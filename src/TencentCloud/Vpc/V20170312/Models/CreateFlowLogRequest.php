@@ -33,11 +33,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getFlowLogDescription() 获取流日志实例描述。长度不超过512个字符。
  * @method void setFlowLogDescription(string $FlowLogDescription) 设置流日志实例描述。长度不超过512个字符。
  * @method string getCloudLogId() 获取流日志存储ID（cls的日志主题ID，
-可通过[DescribeTopics](https://cloud.tencent.com/document/product/614/56454)接口获取。
-）。当StorageType为cls时，CloudLogId为必选。
+可通过[DescribeTopics](https://cloud.tencent.com/document/product/614/56454)接口获取）。当StorageType为cls时，CloudLogId为必选。
  * @method void setCloudLogId(string $CloudLogId) 设置流日志存储ID（cls的日志主题ID，
-可通过[DescribeTopics](https://cloud.tencent.com/document/product/614/56454)接口获取。
-）。当StorageType为cls时，CloudLogId为必选。
+可通过[DescribeTopics](https://cloud.tencent.com/document/product/614/56454)接口获取）。当StorageType为cls时，CloudLogId为必选。
  * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
  * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
  * @method string getStorageType() 获取消费端类型：cls、ckafka。默认值cls。当选择ckafka时，请通过工单加入白名单。
@@ -81,8 +79,7 @@ class CreateFlowLogRequest extends AbstractModel
 
     /**
      * @var string 流日志存储ID（cls的日志主题ID，
-可通过[DescribeTopics](https://cloud.tencent.com/document/product/614/56454)接口获取。
-）。当StorageType为cls时，CloudLogId为必选。
+可通过[DescribeTopics](https://cloud.tencent.com/document/product/614/56454)接口获取）。当StorageType为cls时，CloudLogId为必选。
      */
     public $CloudLogId;
 
@@ -114,8 +111,7 @@ class CreateFlowLogRequest extends AbstractModel
      * @param string $VpcId 私用网络唯一ID。当ResourceType为CCN时不填，其他类型必填。
      * @param string $FlowLogDescription 流日志实例描述。长度不超过512个字符。
      * @param string $CloudLogId 流日志存储ID（cls的日志主题ID，
-可通过[DescribeTopics](https://cloud.tencent.com/document/product/614/56454)接口获取。
-）。当StorageType为cls时，CloudLogId为必选。
+可通过[DescribeTopics](https://cloud.tencent.com/document/product/614/56454)接口获取）。当StorageType为cls时，CloudLogId为必选。
      * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
      * @param string $StorageType 消费端类型：cls、ckafka。默认值cls。当选择ckafka时，请通过工单加入白名单。
      * @param FlowLogStorage $FlowLogStorage 流日志消费端信息，当消费端类型为ckafka时，必填。

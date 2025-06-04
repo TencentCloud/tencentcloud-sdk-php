@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cfs\V20190719\Models;
+namespace TencentCloud\Privatedns\V20201028\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * StopMigrationTask请求参数结构体
+ * DescribeRecord请求参数结构体
  *
- * @method string getTaskId() 获取迁移任务Id
- * @method void setTaskId(string $TaskId) 设置迁移任务Id
+ * @method string getZoneId() 获取私有域ID
+ * @method void setZoneId(string $ZoneId) 设置私有域ID
+ * @method string getRecordId() 获取记录ID
+ * @method void setRecordId(string $RecordId) 设置记录ID
  */
-class StopMigrationTaskRequest extends AbstractModel
+class DescribeRecordRequest extends AbstractModel
 {
     /**
-     * @var string 迁移任务Id
+     * @var string 私有域ID
      */
-    public $TaskId;
+    public $ZoneId;
 
     /**
-     * @param string $TaskId 迁移任务Id
+     * @var string 记录ID
+     */
+    public $RecordId;
+
+    /**
+     * @param string $ZoneId 私有域ID
+     * @param string $RecordId 记录ID
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class StopMigrationTaskRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
+            $this->ZoneId = $param["ZoneId"];
+        }
+
+        if (array_key_exists("RecordId",$param) and $param["RecordId"] !== null) {
+            $this->RecordId = $param["RecordId"];
         }
     }
 }

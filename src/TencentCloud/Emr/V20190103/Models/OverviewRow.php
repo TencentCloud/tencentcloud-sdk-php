@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStoreFileSize(float $StoreFileSize) 设置当前region中StroreFile的size
  * @method string getOperation() 获取regions，点击可跳转
  * @method void setOperation(string $Operation) 设置regions，点击可跳转
+ * @method float getStoreFileNum() 获取StoreFile数量
+ * @method void setStoreFileNum(float $StoreFileNum) 设置StoreFile数量
  */
 class OverviewRow extends AbstractModel
 {
@@ -66,12 +68,18 @@ class OverviewRow extends AbstractModel
     public $Operation;
 
     /**
+     * @var float StoreFile数量
+     */
+    public $StoreFileNum;
+
+    /**
      * @param string $Table 表名字
      * @param float $ReadRequestCount 读请求次数
      * @param float $WriteRequestCount 写请求次数
      * @param float $MemstoreSize 当前memstore的size
      * @param float $StoreFileSize 当前region中StroreFile的size
      * @param string $Operation regions，点击可跳转
+     * @param float $StoreFileNum StoreFile数量
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class OverviewRow extends AbstractModel
 
         if (array_key_exists("Operation",$param) and $param["Operation"] !== null) {
             $this->Operation = $param["Operation"];
+        }
+
+        if (array_key_exists("StoreFileNum",$param) and $param["StoreFileNum"] !== null) {
+            $this->StoreFileNum = $param["StoreFileNum"];
         }
     }
 }

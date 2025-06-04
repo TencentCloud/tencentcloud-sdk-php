@@ -40,6 +40,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileMetaData(string $FileMetaData) 设置文档元信息，必须为jsonstring
  * @method string getAuthor() 获取作者
  * @method void setAuthor(string $Author) 设置作者
+ * @method string getDocStatus() 获取上传文件状态
+ * @method void setDocStatus(string $DocStatus) 设置上传文件状态
+ * @method string getErrMsg() 获取文件上传失败的具体原因
+ * @method void setErrMsg(string $ErrMsg) 设置文件上传失败的具体原因
+ * @method string getFileId() 获取Cos存储文件ID
+ * @method void setFileId(string $FileId) 设置Cos存储文件ID
  */
 class KnowledgeDocumentSet extends AbstractModel
 {
@@ -94,6 +100,21 @@ class KnowledgeDocumentSet extends AbstractModel
     public $Author;
 
     /**
+     * @var string 上传文件状态
+     */
+    public $DocStatus;
+
+    /**
+     * @var string 文件上传失败的具体原因
+     */
+    public $ErrMsg;
+
+    /**
+     * @var string Cos存储文件ID
+     */
+    public $FileId;
+
+    /**
      * @param string $DocumentSetId 文档id
      * @param string $DocumentSetName 文档名
      * @param string $Text 文件完整内容。
@@ -104,6 +125,9 @@ class KnowledgeDocumentSet extends AbstractModel
      * @param string $FileTitle 文档标题
      * @param string $FileMetaData 文档元信息，必须为jsonstring
      * @param string $Author 作者
+     * @param string $DocStatus 上传文件状态
+     * @param string $ErrMsg 文件上传失败的具体原因
+     * @param string $FileId Cos存储文件ID
      */
     function __construct()
     {
@@ -158,6 +182,18 @@ class KnowledgeDocumentSet extends AbstractModel
 
         if (array_key_exists("Author",$param) and $param["Author"] !== null) {
             $this->Author = $param["Author"];
+        }
+
+        if (array_key_exists("DocStatus",$param) and $param["DocStatus"] !== null) {
+            $this->DocStatus = $param["DocStatus"];
+        }
+
+        if (array_key_exists("ErrMsg",$param) and $param["ErrMsg"] !== null) {
+            $this->ErrMsg = $param["ErrMsg"];
+        }
+
+        if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
+            $this->FileId = $param["FileId"];
         }
     }
 }

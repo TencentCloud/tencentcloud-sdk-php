@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cfs\V20190719\Models;
+namespace TencentCloud\Gs\V20191118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * StopMigrationTask请求参数结构体
+ * CreateAndroidInstanceADB请求参数结构体
  *
- * @method string getTaskId() 获取迁移任务Id
- * @method void setTaskId(string $TaskId) 设置迁移任务Id
+ * @method string getAndroidInstanceId() 获取安卓实例 ID
+ * @method void setAndroidInstanceId(string $AndroidInstanceId) 设置安卓实例 ID
  */
-class StopMigrationTaskRequest extends AbstractModel
+class CreateAndroidInstanceADBRequest extends AbstractModel
 {
     /**
-     * @var string 迁移任务Id
+     * @var string 安卓实例 ID
      */
-    public $TaskId;
+    public $AndroidInstanceId;
 
     /**
-     * @param string $TaskId 迁移任务Id
+     * @param string $AndroidInstanceId 安卓实例 ID
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class StopMigrationTaskRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("AndroidInstanceId",$param) and $param["AndroidInstanceId"] !== null) {
+            $this->AndroidInstanceId = $param["AndroidInstanceId"];
         }
     }
 }

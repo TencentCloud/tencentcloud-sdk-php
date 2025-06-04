@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cfs\V20190719\Models;
+namespace TencentCloud\Gs\V20191118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * StopMigrationTask请求参数结构体
+ * 安卓实例属性
  *
- * @method string getTaskId() 获取迁移任务Id
- * @method void setTaskId(string $TaskId) 设置迁移任务Id
+ * @method string getKey() 获取属性键
+ * @method void setKey(string $Key) 设置属性键
+ * @method string getValue() 获取属性值
+ * @method void setValue(string $Value) 设置属性值
  */
-class StopMigrationTaskRequest extends AbstractModel
+class AndroidInstanceProperty extends AbstractModel
 {
     /**
-     * @var string 迁移任务Id
+     * @var string 属性键
      */
-    public $TaskId;
+    public $Key;
 
     /**
-     * @param string $TaskId 迁移任务Id
+     * @var string 属性值
+     */
+    public $Value;
+
+    /**
+     * @param string $Key 属性键
+     * @param string $Value 属性值
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class StopMigrationTaskRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
+            $this->Key = $param["Key"];
+        }
+
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
         }
     }
 }

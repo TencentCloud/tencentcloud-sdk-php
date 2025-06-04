@@ -14,44 +14,51 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tcss\V20201101\Models;
+namespace TencentCloud\Gs\V20191118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeAccessControlEvents返回参数结构体
+ * CreateAndroidInstanceADB返回参数结构体
  *
- * @method integer getTotalCount() 获取事件总数量
- * @method void setTotalCount(integer $TotalCount) 设置事件总数量
- * @method array getEventSet() 获取访问控制事件数组
- * @method void setEventSet(array $EventSet) 设置访问控制事件数组
- * @method string getSupportCoreVersion() 获取支持的内核版本
- * @method void setSupportCoreVersion(string $SupportCoreVersion) 设置支持的内核版本
- * @method string getInterceptionFailureTip() 获取拦截失败可能的原因
- * @method void setInterceptionFailureTip(string $InterceptionFailureTip) 设置拦截失败可能的原因
+ * @method string getPrivateKey() 获取连接私钥，需要保存为文件形式，例如 private_key.pem
+ * @method void setPrivateKey(string $PrivateKey) 设置连接私钥，需要保存为文件形式，例如 private_key.pem
+ * @method string getUserName() 获取用户名称
+ * @method void setUserName(string $UserName) 设置用户名称
+ * @method string getHostName() 获取连接地址
+ * @method void setHostName(string $HostName) 设置连接地址
+ * @method integer getPort() 获取连接端口
+ * @method void setPort(integer $Port) 设置连接端口
+ * @method string getConnectCommand() 获取连接参考命令
+ * @method void setConnectCommand(string $ConnectCommand) 设置连接参考命令
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeAccessControlEventsResponse extends AbstractModel
+class CreateAndroidInstanceADBResponse extends AbstractModel
 {
     /**
-     * @var integer 事件总数量
+     * @var string 连接私钥，需要保存为文件形式，例如 private_key.pem
      */
-    public $TotalCount;
+    public $PrivateKey;
 
     /**
-     * @var array 访问控制事件数组
+     * @var string 用户名称
      */
-    public $EventSet;
+    public $UserName;
 
     /**
-     * @var string 支持的内核版本
+     * @var string 连接地址
      */
-    public $SupportCoreVersion;
+    public $HostName;
 
     /**
-     * @var string 拦截失败可能的原因
+     * @var integer 连接端口
      */
-    public $InterceptionFailureTip;
+    public $Port;
+
+    /**
+     * @var string 连接参考命令
+     */
+    public $ConnectCommand;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -59,10 +66,11 @@ class DescribeAccessControlEventsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 事件总数量
-     * @param array $EventSet 访问控制事件数组
-     * @param string $SupportCoreVersion 支持的内核版本
-     * @param string $InterceptionFailureTip 拦截失败可能的原因
+     * @param string $PrivateKey 连接私钥，需要保存为文件形式，例如 private_key.pem
+     * @param string $UserName 用户名称
+     * @param string $HostName 连接地址
+     * @param integer $Port 连接端口
+     * @param string $ConnectCommand 连接参考命令
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -78,25 +86,24 @@ class DescribeAccessControlEventsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("PrivateKey",$param) and $param["PrivateKey"] !== null) {
+            $this->PrivateKey = $param["PrivateKey"];
         }
 
-        if (array_key_exists("EventSet",$param) and $param["EventSet"] !== null) {
-            $this->EventSet = [];
-            foreach ($param["EventSet"] as $key => $value){
-                $obj = new AccessControlEventInfo();
-                $obj->deserialize($value);
-                array_push($this->EventSet, $obj);
-            }
+        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
+            $this->UserName = $param["UserName"];
         }
 
-        if (array_key_exists("SupportCoreVersion",$param) and $param["SupportCoreVersion"] !== null) {
-            $this->SupportCoreVersion = $param["SupportCoreVersion"];
+        if (array_key_exists("HostName",$param) and $param["HostName"] !== null) {
+            $this->HostName = $param["HostName"];
         }
 
-        if (array_key_exists("InterceptionFailureTip",$param) and $param["InterceptionFailureTip"] !== null) {
-            $this->InterceptionFailureTip = $param["InterceptionFailureTip"];
+        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
+            $this->Port = $param["Port"];
+        }
+
+        if (array_key_exists("ConnectCommand",$param) and $param["ConnectCommand"] !== null) {
+            $this->ConnectCommand = $param["ConnectCommand"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSelected(string $Selected) 设置是否选中，”true“ ”false“
  * @method string getEnable() 获取是否开启监控
  * @method void setEnable(string $Enable) 设置是否开启监控
+ * @method string getSettingsJson() 获取事件Json模板
+ * @method void setSettingsJson(string $SettingsJson) 设置事件Json模板
  */
 class InspectionTaskSettings extends AbstractModel
 {
@@ -66,12 +68,18 @@ class InspectionTaskSettings extends AbstractModel
     public $Enable;
 
     /**
+     * @var string 事件Json模板
+     */
+    public $SettingsJson;
+
+    /**
      * @param string $TaskType 巡检任务的唯一标记
      * @param string $Group 巡检任务组名称
      * @param string $Name 巡检任务名称
      * @param array $TaskSettings 巡检任务参数设置
      * @param string $Selected 是否选中，”true“ ”false“
      * @param string $Enable 是否开启监控
+     * @param string $SettingsJson 事件Json模板
      */
     function __construct()
     {
@@ -113,6 +121,10 @@ class InspectionTaskSettings extends AbstractModel
 
         if (array_key_exists("Enable",$param) and $param["Enable"] !== null) {
             $this->Enable = $param["Enable"];
+        }
+
+        if (array_key_exists("SettingsJson",$param) and $param["SettingsJson"] !== null) {
+            $this->SettingsJson = $param["SettingsJson"];
         }
     }
 }

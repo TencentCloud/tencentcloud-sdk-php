@@ -38,6 +38,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置name
  * @method string getAuthor() 获取作者
  * @method void setAuthor(string $Author) 设置作者
+ * @method string getDocStatus() 获取文档上传状态
+ * @method void setDocStatus(string $DocStatus) 设置文档上传状态
+ * @method string getErrMsg() 获取上传文件失败时具体的错误消息
+ * @method void setErrMsg(string $ErrMsg) 设置上传文件失败时具体的错误消息
+ * @method string getFileId() 获取Cos存储文件ID
+ * @method void setFileId(string $FileId) 设置Cos存储文件ID
  */
 class QureyKnowledgeDocumentSet extends AbstractModel
 {
@@ -87,6 +93,21 @@ class QureyKnowledgeDocumentSet extends AbstractModel
     public $Author;
 
     /**
+     * @var string 文档上传状态
+     */
+    public $DocStatus;
+
+    /**
+     * @var string 上传文件失败时具体的错误消息
+     */
+    public $ErrMsg;
+
+    /**
+     * @var string Cos存储文件ID
+     */
+    public $FileId;
+
+    /**
      * @param string $DocumentSetId 文件id
      * @param string $DocumentSetName 文件名
      * @param string $TextPrefix 文件内容前 200个字符。
@@ -96,6 +117,9 @@ class QureyKnowledgeDocumentSet extends AbstractModel
      * @param string $FileMetaData 文件元信息，必须为jsonstring
      * @param string $Name name
      * @param string $Author 作者
+     * @param string $DocStatus 文档上传状态
+     * @param string $ErrMsg 上传文件失败时具体的错误消息
+     * @param string $FileId Cos存储文件ID
      */
     function __construct()
     {
@@ -146,6 +170,18 @@ class QureyKnowledgeDocumentSet extends AbstractModel
 
         if (array_key_exists("Author",$param) and $param["Author"] !== null) {
             $this->Author = $param["Author"];
+        }
+
+        if (array_key_exists("DocStatus",$param) and $param["DocStatus"] !== null) {
+            $this->DocStatus = $param["DocStatus"];
+        }
+
+        if (array_key_exists("ErrMsg",$param) and $param["ErrMsg"] !== null) {
+            $this->ErrMsg = $param["ErrMsg"];
+        }
+
+        if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
+            $this->FileId = $param["FileId"];
         }
     }
 }

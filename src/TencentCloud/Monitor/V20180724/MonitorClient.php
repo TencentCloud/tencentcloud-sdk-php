@@ -35,6 +35,7 @@ use TencentCloud\Monitor\V20180724\Models as Models;
 请注意，**告警对象和告警消息是 Prometheus Rule Annotations 的特殊字段，需要通过 annotations 来传递，对应的 Key 分别为summary/description**，，请参考 [Prometheus Rule更多配置请参考](https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/)。
  * @method Models\CreateConditionsTemplateResponse CreateConditionsTemplate(Models\CreateConditionsTemplateRequest $req) 创建告警条件模板
  * @method Models\CreateExporterIntegrationResponse CreateExporterIntegration(Models\CreateExporterIntegrationRequest $req) 创建集成中心 exporter 集成，因集成较多，建议控制台创建集成。(前提：已授权创建托管 EKS 集群，验证方式：1. 控制台界面确认，未提示授权则表示已授权创建；2. 通过 DescribePrometheusInstanceInitStatus 接口查询集群状态，如果托管集群不存在，可通过 RunPrometheusInstance 接口创建)
+ * @method Models\CreateExternalClusterResponse CreateExternalCluster(Models\CreateExternalClusterRequest $req) 注册外部集群到云上 TMP 实例
  * @method Models\CreateGrafanaInstanceResponse CreateGrafanaInstance(Models\CreateGrafanaInstanceRequest $req) 本接口（CreateGrafanaInstance）用于创建 Grafana 包年包月实例，默认基础版、到期自动续费、不可使用代金券。
  * @method Models\CreateGrafanaIntegrationResponse CreateGrafanaIntegration(Models\CreateGrafanaIntegrationRequest $req) 创建 Grafana 集成配置，其中 Prometheus 集成不通过该接口创建，可参考 BindPrometheusManagedGrafana 接口
  * @method Models\CreateGrafanaNotificationChannelResponse CreateGrafanaNotificationChannel(Models\CreateGrafanaNotificationChannelRequest $req) 创建 Grafana 告警通道
@@ -100,6 +101,7 @@ use TencentCloud\Monitor\V20180724\Models as Models;
  * @method Models\DescribeDNSConfigResponse DescribeDNSConfig(Models\DescribeDNSConfigRequest $req) 列出 Grafana DNS 配置
  * @method Models\DescribeExporterIntegrationsResponse DescribeExporterIntegrations(Models\DescribeExporterIntegrationsRequest $req) 查询集成中心 exporter 集成列表
  * @method Models\DescribeExternalClusterRegisterCommandResponse DescribeExternalClusterRegisterCommand(Models\DescribeExternalClusterRegisterCommandRequest $req) 查看外部集群注册命令
+ * @method Models\DescribeExternalClusterUninstallCommandResponse DescribeExternalClusterUninstallCommand(Models\DescribeExternalClusterUninstallCommandRequest $req) 查看外部集群 Agent 卸载命令
  * @method Models\DescribeGrafanaChannelsResponse DescribeGrafanaChannels(Models\DescribeGrafanaChannelsRequest $req) 列出 Grafana 所有告警通道
  * @method Models\DescribeGrafanaConfigResponse DescribeGrafanaConfig(Models\DescribeGrafanaConfigRequest $req) 列出 Grafana 的设置，即 grafana.ini 文件内容
  * @method Models\DescribeGrafanaEnvironmentsResponse DescribeGrafanaEnvironments(Models\DescribeGrafanaEnvironmentsRequest $req) 列出 Grafana 环境变量

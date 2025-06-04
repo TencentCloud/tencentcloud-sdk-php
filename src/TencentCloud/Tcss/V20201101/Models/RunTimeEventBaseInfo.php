@@ -140,6 +140,8 @@ MountNamespace逃逸、
  * @method void setNamespace(string $Namespace) 设置Namespace
  * @method string getWorkloadType() 获取WorkloadType
  * @method void setWorkloadType(string $WorkloadType) 设置WorkloadType
+ * @method string getContainerStatus() 获取容器运行状态
+ * @method void setContainerStatus(string $ContainerStatus) 设置容器运行状态
  */
 class RunTimeEventBaseInfo extends AbstractModel
 {
@@ -328,6 +330,11 @@ MountNamespace逃逸、
     public $WorkloadType;
 
     /**
+     * @var string 容器运行状态
+     */
+    public $ContainerStatus;
+
+    /**
      * @param string $EventId 事件唯一ID
      * @param string $FoundTime 事件发现时间
      * @param string $ContainerId 容器id
@@ -388,6 +395,7 @@ MountNamespace逃逸、
      * @param string $HostID uuid
      * @param string $Namespace Namespace
      * @param string $WorkloadType WorkloadType
+     * @param string $ContainerStatus 容器运行状态
      */
     function __construct()
     {
@@ -524,6 +532,10 @@ MountNamespace逃逸、
 
         if (array_key_exists("WorkloadType",$param) and $param["WorkloadType"] !== null) {
             $this->WorkloadType = $param["WorkloadType"];
+        }
+
+        if (array_key_exists("ContainerStatus",$param) and $param["ContainerStatus"] !== null) {
+            $this->ContainerStatus = $param["ContainerStatus"];
         }
     }
 }

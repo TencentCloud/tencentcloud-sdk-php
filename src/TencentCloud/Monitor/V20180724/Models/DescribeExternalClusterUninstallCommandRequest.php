@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cfs\V20190719\Models;
+namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * StopMigrationTask请求参数结构体
+ * DescribeExternalClusterUninstallCommand请求参数结构体
  *
- * @method string getTaskId() 获取迁移任务Id
- * @method void setTaskId(string $TaskId) 设置迁移任务Id
+ * @method string getInstanceId() 获取实例 ID
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID
+ * @method string getClusterId() 获取集群 ID
+ * @method void setClusterId(string $ClusterId) 设置集群 ID
  */
-class StopMigrationTaskRequest extends AbstractModel
+class DescribeExternalClusterUninstallCommandRequest extends AbstractModel
 {
     /**
-     * @var string 迁移任务Id
+     * @var string 实例 ID
      */
-    public $TaskId;
+    public $InstanceId;
 
     /**
-     * @param string $TaskId 迁移任务Id
+     * @var string 集群 ID
+     */
+    public $ClusterId;
+
+    /**
+     * @param string $InstanceId 实例 ID
+     * @param string $ClusterId 集群 ID
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class StopMigrationTaskRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
         }
     }
 }

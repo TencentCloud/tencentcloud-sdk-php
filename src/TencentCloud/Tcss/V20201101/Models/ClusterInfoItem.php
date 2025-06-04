@@ -106,6 +106,8 @@ use TencentCloud\Common\AbstractModel;
 已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed
  * @method string getClusterAuditFailedInfo() 获取集群审计开关失败信息
  * @method void setClusterAuditFailedInfo(string $ClusterAuditFailedInfo) 设置集群审计开关失败信息
+ * @method string getOwnerName() 获取所有者名称
+ * @method void setOwnerName(string $OwnerName) 设置所有者名称
  */
 class ClusterInfoItem extends AbstractModel
 {
@@ -277,6 +279,11 @@ class ClusterInfoItem extends AbstractModel
     public $ClusterAuditFailedInfo;
 
     /**
+     * @var string 所有者名称
+     */
+    public $OwnerName;
+
+    /**
      * @param string $ClusterId 集群id
      * @param string $ClusterName 集群名字
      * @param string $ClusterVersion 集群版本
@@ -320,6 +327,7 @@ class ClusterInfoItem extends AbstractModel
      * @param string $ClusterAuditStatus 集群审计开关状态：
 已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed
      * @param string $ClusterAuditFailedInfo 集群审计开关失败信息
+     * @param string $OwnerName 所有者名称
      */
     function __construct()
     {
@@ -456,6 +464,10 @@ class ClusterInfoItem extends AbstractModel
 
         if (array_key_exists("ClusterAuditFailedInfo",$param) and $param["ClusterAuditFailedInfo"] !== null) {
             $this->ClusterAuditFailedInfo = $param["ClusterAuditFailedInfo"];
+        }
+
+        if (array_key_exists("OwnerName",$param) and $param["OwnerName"] !== null) {
+            $this->OwnerName = $param["OwnerName"];
         }
     }
 }

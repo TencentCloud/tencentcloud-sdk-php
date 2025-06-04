@@ -172,6 +172,8 @@ VALIDATION: 参数非法
  * @method void setHostID(string $HostID) 设置普通节点ID
  * @method string getClusterName() 获取集群名称
  * @method void setClusterName(string $ClusterName) 设置集群名称
+ * @method string getHostIP() 获取节点内网IP，同innerIP
+ * @method void setHostIP(string $HostIP) 设置节点内网IP，同innerIP
  */
 class VirusInfo extends AbstractModel
 {
@@ -380,6 +382,11 @@ VALIDATION: 参数非法
     public $ClusterName;
 
     /**
+     * @var string 节点内网IP，同innerIP
+     */
+    public $HostIP;
+
+    /**
      * @param string $FileName 文件名称
      * @param string $FilePath 文件路径
      * @param string $VirusName 病毒名称
@@ -456,6 +463,7 @@ VALIDATION: 参数非法
      * @param string $NodeUniqueID 节点唯一ID
      * @param string $HostID 普通节点ID
      * @param string $ClusterName 集群名称
+     * @param string $HostIP 节点内网IP，同innerIP
      */
     function __construct()
     {
@@ -596,6 +604,10 @@ VALIDATION: 参数非法
 
         if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
             $this->ClusterName = $param["ClusterName"];
+        }
+
+        if (array_key_exists("HostIP",$param) and $param["HostIP"] !== null) {
+            $this->HostIP = $param["HostIP"];
         }
     }
 }

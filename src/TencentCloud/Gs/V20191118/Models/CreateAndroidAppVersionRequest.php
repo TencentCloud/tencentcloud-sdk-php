@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCommand(string $Command) 设置应用 shell 安装命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
  * @method string getUninstallCommand() 获取应用 shell 卸载命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
  * @method void setUninstallCommand(string $UninstallCommand) 设置应用 shell 卸载命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+ * @method string getCleanupMode() 获取应用资源清理模式（实例安装应用所用资源），取值：CLEANUP_ON_UNINSTALL（默认值），卸载 App 时清理；CLEANUP_AFTER_INSTALL，安装 App 后立即清理。普通应用只有 CLEANUP_AFTER_INSTALL 模式。
+ * @method void setCleanupMode(string $CleanupMode) 设置应用资源清理模式（实例安装应用所用资源），取值：CLEANUP_ON_UNINSTALL（默认值），卸载 App 时清理；CLEANUP_AFTER_INSTALL，安装 App 后立即清理。普通应用只有 CLEANUP_AFTER_INSTALL 模式。
  */
 class CreateAndroidAppVersionRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CreateAndroidAppVersionRequest extends AbstractModel
     public $UninstallCommand;
 
     /**
+     * @var string 应用资源清理模式（实例安装应用所用资源），取值：CLEANUP_ON_UNINSTALL（默认值），卸载 App 时清理；CLEANUP_AFTER_INSTALL，安装 App 后立即清理。普通应用只有 CLEANUP_AFTER_INSTALL 模式。
+     */
+    public $CleanupMode;
+
+    /**
      * @param string $AndroidAppId 应用ID
      * @param string $DownloadUrl 应用包下载地址
      * @param string $Command 应用 shell 安装命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
      * @param string $UninstallCommand 应用 shell 卸载命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
+     * @param string $CleanupMode 应用资源清理模式（实例安装应用所用资源），取值：CLEANUP_ON_UNINSTALL（默认值），卸载 App 时清理；CLEANUP_AFTER_INSTALL，安装 App 后立即清理。普通应用只有 CLEANUP_AFTER_INSTALL 模式。
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class CreateAndroidAppVersionRequest extends AbstractModel
 
         if (array_key_exists("UninstallCommand",$param) and $param["UninstallCommand"] !== null) {
             $this->UninstallCommand = $param["UninstallCommand"];
+        }
+
+        if (array_key_exists("CleanupMode",$param) and $param["CleanupMode"] !== null) {
+            $this->CleanupMode = $param["CleanupMode"];
         }
     }
 }

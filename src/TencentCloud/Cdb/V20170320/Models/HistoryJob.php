@@ -25,9 +25,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getExpandType() 获取扩容类型
  * @method void setExpandType(string $ExpandType) 设置扩容类型
  * @method integer getStartTime() 获取扩容开始时间
+说明：此项显示的格式是 int 类型的 unix 时间戳
  * @method void setStartTime(integer $StartTime) 设置扩容开始时间
+说明：此项显示的格式是 int 类型的 unix 时间戳
  * @method integer getEndTime() 获取扩容结束时间
+说明：此项显示的格式是 int 类型的 unix 时间戳
  * @method void setEndTime(integer $EndTime) 设置扩容结束时间
+说明：此项显示的格式是 int 类型的 unix 时间戳
  * @method integer getOldCpu() 获取扩容前核数
  * @method void setOldCpu(integer $OldCpu) 设置扩容前核数
  * @method integer getNewCpu() 获取扩容后核数
@@ -51,11 +55,13 @@ class HistoryJob extends AbstractModel
 
     /**
      * @var integer 扩容开始时间
+说明：此项显示的格式是 int 类型的 unix 时间戳
      */
     public $StartTime;
 
     /**
      * @var integer 扩容结束时间
+说明：此项显示的格式是 int 类型的 unix 时间戳
      */
     public $EndTime;
 
@@ -83,7 +89,9 @@ class HistoryJob extends AbstractModel
      * @param string $OperationType 操作类型
      * @param string $ExpandType 扩容类型
      * @param integer $StartTime 扩容开始时间
+说明：此项显示的格式是 int 类型的 unix 时间戳
      * @param integer $EndTime 扩容结束时间
+说明：此项显示的格式是 int 类型的 unix 时间戳
      * @param integer $OldCpu 扩容前核数
      * @param integer $NewCpu 扩容后核数
      * @param integer $ExtendCPUNum 增减的cpu数

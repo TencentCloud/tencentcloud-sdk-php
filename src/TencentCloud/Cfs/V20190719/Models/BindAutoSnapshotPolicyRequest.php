@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BindAutoSnapshotPolicy请求参数结构体
  *
- * @method string getAutoSnapshotPolicyId() 获取快照策略ID，通过快照策略列表获取
- * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) 设置快照策略ID，通过快照策略列表获取
- * @method string getFileSystemIds() 获取文件系统id列表，用“,”分隔，文件系统id通过查询文件系统列表获得
- * @method void setFileSystemIds(string $FileSystemIds) 设置文件系统id列表，用“,”分隔，文件系统id通过查询文件系统列表获得
+ * @method string getAutoSnapshotPolicyId() 获取需要解绑的文件系统ID列表，用"," 分割，文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
+ * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) 设置需要解绑的文件系统ID列表，用"," 分割，文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
+ * @method string getFileSystemIds() 获取解绑的快照策略ID，可以通过[DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/api/582/80208) 查询获取
+ * @method void setFileSystemIds(string $FileSystemIds) 设置解绑的快照策略ID，可以通过[DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/api/582/80208) 查询获取
  */
 class BindAutoSnapshotPolicyRequest extends AbstractModel
 {
     /**
-     * @var string 快照策略ID，通过快照策略列表获取
+     * @var string 需要解绑的文件系统ID列表，用"," 分割，文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
      */
     public $AutoSnapshotPolicyId;
 
     /**
-     * @var string 文件系统id列表，用“,”分隔，文件系统id通过查询文件系统列表获得
+     * @var string 解绑的快照策略ID，可以通过[DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/api/582/80208) 查询获取
      */
     public $FileSystemIds;
 
     /**
-     * @param string $AutoSnapshotPolicyId 快照策略ID，通过快照策略列表获取
-     * @param string $FileSystemIds 文件系统id列表，用“,”分隔，文件系统id通过查询文件系统列表获得
+     * @param string $AutoSnapshotPolicyId 需要解绑的文件系统ID列表，用"," 分割，文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
+     * @param string $FileSystemIds 解绑的快照策略ID，可以通过[DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/api/582/80208) 查询获取
      */
     function __construct()
     {

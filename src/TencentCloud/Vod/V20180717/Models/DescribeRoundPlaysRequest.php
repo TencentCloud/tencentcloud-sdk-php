@@ -71,6 +71,7 @@ class DescribeRoundPlaysRequest extends AbstractModel
 
     /**
      * @var integer 分页偏移量，默认值：0。已经废弃，请根据 ScrollToken 参数进行分批次查询。
+     * @deprecated
      */
     public $Offset;
 

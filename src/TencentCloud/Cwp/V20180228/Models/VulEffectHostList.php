@@ -56,6 +56,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCloudTags(array $CloudTags) 设置云标签信息
  * @method MachineExtraInfo getMachineExtraInfo() 获取主机额外信息
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置主机额外信息
+ * @method string getMachineType() 获取主机类型
+ * @method void setMachineType(string $MachineType) 设置主机类型
+ * @method integer getRegionId() 获取可用区ID
+ * @method void setRegionId(integer $RegionId) 设置可用区ID
+ * @method integer getHasSnapshot() 获取修复任务是否创建了快照： 0-未创建，其他-已创建
+ * @method void setHasSnapshot(integer $HasSnapshot) 设置修复任务是否创建了快照： 0-未创建，其他-已创建
+ * @method string getLatestFixTime() 获取最后修复时间
+ * @method void setLatestFixTime(string $LatestFixTime) 设置最后修复时间
+ * @method string getDescriptionEn() 获取说明
+ * @method void setDescriptionEn(string $DescriptionEn) 设置说明
  */
 class VulEffectHostList extends AbstractModel
 {
@@ -150,6 +160,31 @@ class VulEffectHostList extends AbstractModel
     public $MachineExtraInfo;
 
     /**
+     * @var string 主机类型
+     */
+    public $MachineType;
+
+    /**
+     * @var integer 可用区ID
+     */
+    public $RegionId;
+
+    /**
+     * @var integer 修复任务是否创建了快照： 0-未创建，其他-已创建
+     */
+    public $HasSnapshot;
+
+    /**
+     * @var string 最后修复时间
+     */
+    public $LatestFixTime;
+
+    /**
+     * @var string 说明
+     */
+    public $DescriptionEn;
+
+    /**
      * @param integer $EventId 事件id
      * @param integer $Status 状态：0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中 7: 回滚中 8:修复失败
      * @param string $LastTime 最后检测时间
@@ -168,6 +203,11 @@ class VulEffectHostList extends AbstractModel
      * @param string $PublicIpAddresses 外网ip
      * @param array $CloudTags 云标签信息
      * @param MachineExtraInfo $MachineExtraInfo 主机额外信息
+     * @param string $MachineType 主机类型
+     * @param integer $RegionId 可用区ID
+     * @param integer $HasSnapshot 修复任务是否创建了快照： 0-未创建，其他-已创建
+     * @param string $LatestFixTime 最后修复时间
+     * @param string $DescriptionEn 说明
      */
     function __construct()
     {
@@ -258,6 +298,26 @@ class VulEffectHostList extends AbstractModel
         if (array_key_exists("MachineExtraInfo",$param) and $param["MachineExtraInfo"] !== null) {
             $this->MachineExtraInfo = new MachineExtraInfo();
             $this->MachineExtraInfo->deserialize($param["MachineExtraInfo"]);
+        }
+
+        if (array_key_exists("MachineType",$param) and $param["MachineType"] !== null) {
+            $this->MachineType = $param["MachineType"];
+        }
+
+        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
+            $this->RegionId = $param["RegionId"];
+        }
+
+        if (array_key_exists("HasSnapshot",$param) and $param["HasSnapshot"] !== null) {
+            $this->HasSnapshot = $param["HasSnapshot"];
+        }
+
+        if (array_key_exists("LatestFixTime",$param) and $param["LatestFixTime"] !== null) {
+            $this->LatestFixTime = $param["LatestFixTime"];
+        }
+
+        if (array_key_exists("DescriptionEn",$param) and $param["DescriptionEn"] !== null) {
+            $this->DescriptionEn = $param["DescriptionEn"];
         }
     }
 }

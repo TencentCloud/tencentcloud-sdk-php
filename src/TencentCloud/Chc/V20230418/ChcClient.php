@@ -59,6 +59,7 @@ use TencentCloud\Chc\V20230418\Models as Models;
  * @method Models\DescribeWorkOrderListResponse DescribeWorkOrderList(Models\DescribeWorkOrderListRequest $req) 查询工单列表
  * @method Models\DescribeWorkOrderStatisticsResponse DescribeWorkOrderStatistics(Models\DescribeWorkOrderStatisticsRequest $req) 工单统计数据查询
  * @method Models\DescribeWorkOrderTypesResponse DescribeWorkOrderTypes(Models\DescribeWorkOrderTypesRequest $req) 获取用户可用的工单类型
+ * @method Models\ExportCustomerWorkOrderDetailResponse ExportCustomerWorkOrderDetail(Models\ExportCustomerWorkOrderDetailRequest $req) 导出工单详情
  * @method Models\ModifyWorkOrderTypeCollectFlagResponse ModifyWorkOrderTypeCollectFlag(Models\ModifyWorkOrderTypeCollectFlagRequest $req) 如果当前该工单类型是收藏状态，调用接口后变成未收藏状态，如果是未收藏状态，调用该接口变为收藏状态
  */
 

@@ -14,33 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Vod\V20180717\Models;
+namespace TencentCloud\Vclm\V20240523\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 提取溯源水印输出信息
+ * 图片
  *
- * @method string getUv() 获取播放者的 ID，以十六进制表示，共6位。
- * @method void setUv(string $Uv) 设置播放者的 ID，以十六进制表示，共6位。
- * @method string getUid() 获取该字段已废弃。
- * @method void setUid(string $Uid) 设置该字段已废弃。
+ * @method string getBase64() 获取图片Base64
+ * @method void setBase64(string $Base64) 设置图片Base64
+ * @method string getUrl() 获取图片Url
+ * @method void setUrl(string $Url) 设置图片Url
  */
-class ExtractTraceWatermarkTaskOutput extends AbstractModel
+class Image extends AbstractModel
 {
     /**
-     * @var string 播放者的 ID，以十六进制表示，共6位。
+     * @var string 图片Base64
      */
-    public $Uv;
+    public $Base64;
 
     /**
-     * @var string 该字段已废弃。
-     * @deprecated
+     * @var string 图片Url
      */
-    public $Uid;
+    public $Url;
 
     /**
-     * @param string $Uv 播放者的 ID，以十六进制表示，共6位。
-     * @param string $Uid 该字段已废弃。
+     * @param string $Base64 图片Base64
+     * @param string $Url 图片Url
      */
     function __construct()
     {
@@ -55,12 +54,12 @@ class ExtractTraceWatermarkTaskOutput extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Uv",$param) and $param["Uv"] !== null) {
-            $this->Uv = $param["Uv"];
+        if (array_key_exists("Base64",$param) and $param["Base64"] !== null) {
+            $this->Base64 = $param["Base64"];
         }
 
-        if (array_key_exists("Uid",$param) and $param["Uid"] !== null) {
-            $this->Uid = $param["Uid"];
+        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
+            $this->Url = $param["Url"];
         }
     }
 }

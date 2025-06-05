@@ -42,6 +42,7 @@ class StopInstancesRequest extends AbstractModel
 
     /**
      * @var boolean 本参数已弃用，推荐使用StopType，不可以与参数StopType同时使用。表示是否在正常关闭失败后选择强制关闭实例。取值范围：<br><li>true：表示在正常关闭失败后进行强制关闭</li><li>false：表示在正常关闭失败后不进行强制关闭</li><br>默认取值：false。
+     * @deprecated
      */
     public $ForceStop;
 

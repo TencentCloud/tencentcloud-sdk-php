@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppAssetKindSet(array $AppAssetKindSet) 设置应用资产类型, 1-web
  * @method string getAppAssetUrl() 获取应用资产Url
  * @method void setAppAssetUrl(string $AppAssetUrl) 设置应用资产Url
+ * @method string getDeviceKind() 获取资产类型
+ * @method void setDeviceKind(string $DeviceKind) 设置资产类型
  */
 class SearchSessionRequest extends AbstractModel
 {
@@ -136,6 +138,11 @@ class SearchSessionRequest extends AbstractModel
     public $AppAssetUrl;
 
     /**
+     * @var string 资产类型
+     */
+    public $DeviceKind;
+
+    /**
      * @param string $PrivateIp 内部Ip
      * @param string $PublicIp 外部Ip
      * @param string $UserName 用户名，长度不超过20
@@ -152,6 +159,7 @@ class SearchSessionRequest extends AbstractModel
      * @param string $Id 若入参为Id，则其他入参字段不作为搜索依据，仅按照Id来搜索会话
      * @param array $AppAssetKindSet 应用资产类型, 1-web
      * @param string $AppAssetUrl 应用资产Url
+     * @param string $DeviceKind 资产类型
      */
     function __construct()
     {
@@ -228,6 +236,10 @@ class SearchSessionRequest extends AbstractModel
 
         if (array_key_exists("AppAssetUrl",$param) and $param["AppAssetUrl"] !== null) {
             $this->AppAssetUrl = $param["AppAssetUrl"];
+        }
+
+        if (array_key_exists("DeviceKind",$param) and $param["DeviceKind"] !== null) {
+            $this->DeviceKind = $param["DeviceKind"];
         }
     }
 }

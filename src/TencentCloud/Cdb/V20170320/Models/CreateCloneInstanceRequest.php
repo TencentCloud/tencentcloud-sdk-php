@@ -72,6 +72,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPeriod(integer $Period) 设置实例时长，PayType为PRE_PAID时必传，单位：月，可选值包括 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
  * @method ClusterTopology getClusterTopology() 获取集群版节点拓扑配置。
  * @method void setClusterTopology(ClusterTopology $ClusterTopology) 设置集群版节点拓扑配置。
+ * @method string getSrcRegion() 获取原实例所在地域名，当传入异地备份时为必选项，例：ap-guangzhou
+ * @method void setSrcRegion(string $SrcRegion) 设置原实例所在地域名，当传入异地备份时为必选项，例：ap-guangzhou
+ * @method integer getSpecifiedSubBackupId() 获取异地数据备份id
+ * @method void setSpecifiedSubBackupId(integer $SpecifiedSubBackupId) 设置异地数据备份id
  */
 class CreateCloneInstanceRequest extends AbstractModel
 {
@@ -198,6 +202,16 @@ class CreateCloneInstanceRequest extends AbstractModel
     public $ClusterTopology;
 
     /**
+     * @var string 原实例所在地域名，当传入异地备份时为必选项，例：ap-guangzhou
+     */
+    public $SrcRegion;
+
+    /**
+     * @var integer 异地数据备份id
+     */
+    public $SpecifiedSubBackupId;
+
+    /**
      * @param string $InstanceId 克隆源实例Id。
      * @param string $SpecifiedRollbackTime 如果需要克隆实例回档到指定时间，则指定该值。时间格式为：yyyy-mm-dd hh:mm:ss。
 说明：此参数和 SpecifiedBackupId 参数需要2选1进行设置。
@@ -224,6 +238,8 @@ class CreateCloneInstanceRequest extends AbstractModel
      * @param string $PayType 付费类型，PRE_PAID：包年包月，USED_PAID：按量计费。默认为按量计费
      * @param integer $Period 实例时长，PayType为PRE_PAID时必传，单位：月，可选值包括 [1,2,3,4,5,6,7,8,9,10,11,12,24,36]。
      * @param ClusterTopology $ClusterTopology 集群版节点拓扑配置。
+     * @param string $SrcRegion 原实例所在地域名，当传入异地备份时为必选项，例：ap-guangzhou
+     * @param integer $SpecifiedSubBackupId 异地数据备份id
      */
     function __construct()
     {
@@ -338,6 +354,14 @@ class CreateCloneInstanceRequest extends AbstractModel
         if (array_key_exists("ClusterTopology",$param) and $param["ClusterTopology"] !== null) {
             $this->ClusterTopology = new ClusterTopology();
             $this->ClusterTopology->deserialize($param["ClusterTopology"]);
+        }
+
+        if (array_key_exists("SrcRegion",$param) and $param["SrcRegion"] !== null) {
+            $this->SrcRegion = $param["SrcRegion"];
+        }
+
+        if (array_key_exists("SpecifiedSubBackupId",$param) and $param["SpecifiedSubBackupId"] !== null) {
+            $this->SpecifiedSubBackupId = $param["SpecifiedSubBackupId"];
         }
     }
 }

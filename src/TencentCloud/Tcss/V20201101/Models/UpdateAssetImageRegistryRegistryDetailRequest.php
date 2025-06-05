@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSyncMode(integer $SyncMode) 设置同步方式，0全量同步，1增量同步
  * @method boolean getNeedScan() 获取是否自动授权&扫描，选择增量同步时参数生效，包含所有新增镜像
  * @method void setNeedScan(boolean $NeedScan) 设置是否自动授权&扫描，选择增量同步时参数生效，包含所有新增镜像
+ * @method string getInstanceId() 获取tcr实例ID
+ * @method void setInstanceId(string $InstanceId) 设置tcr实例ID
  */
 class UpdateAssetImageRegistryRegistryDetailRequest extends AbstractModel
 {
@@ -122,6 +124,11 @@ class UpdateAssetImageRegistryRegistryDetailRequest extends AbstractModel
     public $NeedScan;
 
     /**
+     * @var string tcr实例ID
+     */
+    public $InstanceId;
+
+    /**
      * @param string $Name 仓库名
      * @param string $Username 用户名
      * @param string $Password 密码
@@ -136,6 +143,7 @@ class UpdateAssetImageRegistryRegistryDetailRequest extends AbstractModel
      * @param integer $RegistryId 仓库唯一id
      * @param integer $SyncMode 同步方式，0全量同步，1增量同步
      * @param boolean $NeedScan 是否自动授权&扫描，选择增量同步时参数生效，包含所有新增镜像
+     * @param string $InstanceId tcr实例ID
      */
     function __construct()
     {
@@ -209,6 +217,10 @@ class UpdateAssetImageRegistryRegistryDetailRequest extends AbstractModel
 
         if (array_key_exists("NeedScan",$param) and $param["NeedScan"] !== null) {
             $this->NeedScan = $param["NeedScan"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

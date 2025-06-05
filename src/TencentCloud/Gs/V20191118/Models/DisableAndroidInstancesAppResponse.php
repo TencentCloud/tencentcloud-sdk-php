@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tcss\V20201101\Models;
+namespace TencentCloud\Gs\V20191118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyAsset返回参数结构体
+ * DisableAndroidInstancesApp返回参数结构体
  *
- * @method string getStatus() 获取同步任务发送结果
- * @method void setStatus(string $Status) 设置同步任务发送结果
- * @method integer getTaskId() 获取任务id
- * @method void setTaskId(integer $TaskId) 设置任务id
+ * @method array getAndroidInstanceErrors() 获取错误列表。如果实例操作都成功，则响应没有这个字段；如果有实例操作失败，该字段包含了实例操作的错误信息
+ * @method void setAndroidInstanceErrors(array $AndroidInstanceErrors) 设置错误列表。如果实例操作都成功，则响应没有这个字段；如果有实例操作失败，该字段包含了实例操作的错误信息
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class ModifyAssetResponse extends AbstractModel
+class DisableAndroidInstancesAppResponse extends AbstractModel
 {
     /**
-     * @var string 同步任务发送结果
+     * @var array 错误列表。如果实例操作都成功，则响应没有这个字段；如果有实例操作失败，该字段包含了实例操作的错误信息
      */
-    public $Status;
-
-    /**
-     * @var integer 任务id
-     */
-    public $TaskId;
+    public $AndroidInstanceErrors;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +38,7 @@ class ModifyAssetResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Status 同步任务发送结果
-     * @param integer $TaskId 任务id
+     * @param array $AndroidInstanceErrors 错误列表。如果实例操作都成功，则响应没有这个字段；如果有实例操作失败，该字段包含了实例操作的错误信息
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +54,13 @@ class ModifyAssetResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
-        }
-
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("AndroidInstanceErrors",$param) and $param["AndroidInstanceErrors"] !== null) {
+            $this->AndroidInstanceErrors = [];
+            foreach ($param["AndroidInstanceErrors"] as $key => $value){
+                $obj = new AndroidInstanceError();
+                $obj->deserialize($value);
+                array_push($this->AndroidInstanceErrors, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -31,6 +31,9 @@ use TencentCloud\Common\AbstractModel;
 - "zh": 中文（简体）
 - "zh-TW": 中文（繁体）
 - "en": 英语
+- "16k_zh_edu"：中文教育
+- "16k_zh_medical"：中文医疗
+- "16k_zh_court"：中文法庭
 
 **标准版：**
 - "8k_zh_large": 普方大模型引擎. 当前模型同时支持中文等语言的识别，模型参数量极大，语言模型性能增强，针对电话音频中各类场景、各类中文方言的识别准确率极大提升.
@@ -74,6 +77,9 @@ use TencentCloud\Common\AbstractModel;
 - "zh": 中文（简体）
 - "zh-TW": 中文（繁体）
 - "en": 英语
+- "16k_zh_edu"：中文教育
+- "16k_zh_medical"：中文医疗
+- "16k_zh_court"：中文法庭
 
 **标准版：**
 - "8k_zh_large": 普方大模型引擎. 当前模型同时支持中文等语言的识别，模型参数量极大，语言模型性能增强，针对电话音频中各类场景、各类中文方言的识别准确率极大提升.
@@ -106,10 +112,12 @@ use TencentCloud\Common\AbstractModel;
 
 **注意：**
 如果缺少满足您需求的语言，请联系我们技术人员。
- * @method array getAlternativeLanguage() 获取**发起模糊识别为高级版能力,默认按照高级版收费,仅支持填写基础版和高级版语言.**
-注意：不支持填写"zh-dialect"
- * @method void setAlternativeLanguage(array $AlternativeLanguage) 设置**发起模糊识别为高级版能力,默认按照高级版收费,仅支持填写基础版和高级版语言.**
-注意：不支持填写"zh-dialect"
+ * @method array getAlternativeLanguage() 获取**发起模糊识别为高级版能力,默认按照高级版收费**
+注意：不支持填写"zh-dialect", "16k_zh_edu", "16k_zh_medical", "16k_zh_court", "8k_zh_large", "16k_zh_large","16k_multi_lang", "16k_zh_en"
+
+ * @method void setAlternativeLanguage(array $AlternativeLanguage) 设置**发起模糊识别为高级版能力,默认按照高级版收费**
+注意：不支持填写"zh-dialect", "16k_zh_edu", "16k_zh_medical", "16k_zh_court", "8k_zh_large", "16k_zh_large","16k_multi_lang", "16k_zh_en"
+
  * @method string getCustomParam() 获取自定义参数，联系后台使用
 
  * @method void setCustomParam(string $CustomParam) 设置自定义参数，联系后台使用
@@ -133,6 +141,9 @@ class STTConfig extends AbstractModel
 - "zh": 中文（简体）
 - "zh-TW": 中文（繁体）
 - "en": 英语
+- "16k_zh_edu"：中文教育
+- "16k_zh_medical"：中文医疗
+- "16k_zh_court"：中文法庭
 
 **标准版：**
 - "8k_zh_large": 普方大模型引擎. 当前模型同时支持中文等语言的识别，模型参数量极大，语言模型性能增强，针对电话音频中各类场景、各类中文方言的识别准确率极大提升.
@@ -169,8 +180,9 @@ class STTConfig extends AbstractModel
     public $Language;
 
     /**
-     * @var array **发起模糊识别为高级版能力,默认按照高级版收费,仅支持填写基础版和高级版语言.**
-注意：不支持填写"zh-dialect"
+     * @var array **发起模糊识别为高级版能力,默认按照高级版收费**
+注意：不支持填写"zh-dialect", "16k_zh_edu", "16k_zh_medical", "16k_zh_court", "8k_zh_large", "16k_zh_large","16k_multi_lang", "16k_zh_en"
+
      */
     public $AlternativeLanguage;
 
@@ -202,6 +214,9 @@ class STTConfig extends AbstractModel
 - "zh": 中文（简体）
 - "zh-TW": 中文（繁体）
 - "en": 英语
+- "16k_zh_edu"：中文教育
+- "16k_zh_medical"：中文医疗
+- "16k_zh_court"：中文法庭
 
 **标准版：**
 - "8k_zh_large": 普方大模型引擎. 当前模型同时支持中文等语言的识别，模型参数量极大，语言模型性能增强，针对电话音频中各类场景、各类中文方言的识别准确率极大提升.
@@ -234,8 +249,9 @@ class STTConfig extends AbstractModel
 
 **注意：**
 如果缺少满足您需求的语言，请联系我们技术人员。
-     * @param array $AlternativeLanguage **发起模糊识别为高级版能力,默认按照高级版收费,仅支持填写基础版和高级版语言.**
-注意：不支持填写"zh-dialect"
+     * @param array $AlternativeLanguage **发起模糊识别为高级版能力,默认按照高级版收费**
+注意：不支持填写"zh-dialect", "16k_zh_edu", "16k_zh_medical", "16k_zh_court", "8k_zh_large", "16k_zh_large","16k_multi_lang", "16k_zh_en"
+
      * @param string $CustomParam 自定义参数，联系后台使用
 
      * @param integer $VadSilenceTime 语音识别vad的时间，范围为240-2000，默认为1000，单位为ms。更小的值会让语音识别分句更快。

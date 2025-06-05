@@ -33,6 +33,7 @@ class DescribeRoundPlaysResponse extends AbstractModel
 {
     /**
      * @var integer 符合过滤条件的轮播播单总数。已经废弃，分批次查询请请使用 ScrollToken 参数。
+     * @deprecated
      */
     public $TotalCount;
 

@@ -14,33 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Vod\V20180717\Models;
+namespace TencentCloud\Gs\V20191118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 提取溯源水印输出信息
+ * 错误信息，用于批量接口中返回部分操作错误
  *
- * @method string getUv() 获取播放者的 ID，以十六进制表示，共6位。
- * @method void setUv(string $Uv) 设置播放者的 ID，以十六进制表示，共6位。
- * @method string getUid() 获取该字段已废弃。
- * @method void setUid(string $Uid) 设置该字段已废弃。
+ * @method string getCode() 获取错误码
+ * @method void setCode(string $Code) 设置错误码
+ * @method string getMessage() 获取错误详细信息
+ * @method void setMessage(string $Message) 设置错误详细信息
  */
-class ExtractTraceWatermarkTaskOutput extends AbstractModel
+class Error extends AbstractModel
 {
     /**
-     * @var string 播放者的 ID，以十六进制表示，共6位。
+     * @var string 错误码
      */
-    public $Uv;
+    public $Code;
 
     /**
-     * @var string 该字段已废弃。
-     * @deprecated
+     * @var string 错误详细信息
      */
-    public $Uid;
+    public $Message;
 
     /**
-     * @param string $Uv 播放者的 ID，以十六进制表示，共6位。
-     * @param string $Uid 该字段已废弃。
+     * @param string $Code 错误码
+     * @param string $Message 错误详细信息
      */
     function __construct()
     {
@@ -55,12 +54,12 @@ class ExtractTraceWatermarkTaskOutput extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Uv",$param) and $param["Uv"] !== null) {
-            $this->Uv = $param["Uv"];
+        if (array_key_exists("Code",$param) and $param["Code"] !== null) {
+            $this->Code = $param["Code"];
         }
 
-        if (array_key_exists("Uid",$param) and $param["Uid"] !== null) {
-            $this->Uid = $param["Uid"];
+        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
+            $this->Message = $param["Message"];
         }
     }
 }

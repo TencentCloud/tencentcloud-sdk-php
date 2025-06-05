@@ -20,26 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAsset请求参数结构体
  *
- * @method boolean getAll() 获取全部同步，俩参数必选一个 All优先
- * @method void setAll(boolean $All) 设置全部同步，俩参数必选一个 All优先
- * @method array getHosts() 获取要同步的主机列表uuid ，俩参数必选一个 All优先
- * @method void setHosts(array $Hosts) 设置要同步的主机列表uuid ，俩参数必选一个 All优先
+ * @method boolean getAll() 获取同步全部普通节点
+ * @method void setAll(boolean $All) 设置同步全部普通节点
+ * @method array getHosts() 获取要同步的主机列表uuid 
+ * @method void setHosts(array $Hosts) 设置要同步的主机列表uuid 
+ * @method boolean getAllSuperHost() 获取同步全部超级节点
+ * @method void setAllSuperHost(boolean $AllSuperHost) 设置同步全部超级节点
+ * @method array getNodeUniqueIds() 获取要同步的超级节点唯一id
+ * @method void setNodeUniqueIds(array $NodeUniqueIds) 设置要同步的超级节点唯一id
+ * @method integer getTimeoutSec() 获取超时时间(秒) 最低3600s
+ * @method void setTimeoutSec(integer $TimeoutSec) 设置超时时间(秒) 最低3600s
  */
 class ModifyAssetRequest extends AbstractModel
 {
     /**
-     * @var boolean 全部同步，俩参数必选一个 All优先
+     * @var boolean 同步全部普通节点
      */
     public $All;
 
     /**
-     * @var array 要同步的主机列表uuid ，俩参数必选一个 All优先
+     * @var array 要同步的主机列表uuid 
      */
     public $Hosts;
 
     /**
-     * @param boolean $All 全部同步，俩参数必选一个 All优先
-     * @param array $Hosts 要同步的主机列表uuid ，俩参数必选一个 All优先
+     * @var boolean 同步全部超级节点
+     */
+    public $AllSuperHost;
+
+    /**
+     * @var array 要同步的超级节点唯一id
+     */
+    public $NodeUniqueIds;
+
+    /**
+     * @var integer 超时时间(秒) 最低3600s
+     */
+    public $TimeoutSec;
+
+    /**
+     * @param boolean $All 同步全部普通节点
+     * @param array $Hosts 要同步的主机列表uuid 
+     * @param boolean $AllSuperHost 同步全部超级节点
+     * @param array $NodeUniqueIds 要同步的超级节点唯一id
+     * @param integer $TimeoutSec 超时时间(秒) 最低3600s
      */
     function __construct()
     {
@@ -60,6 +84,18 @@ class ModifyAssetRequest extends AbstractModel
 
         if (array_key_exists("Hosts",$param) and $param["Hosts"] !== null) {
             $this->Hosts = $param["Hosts"];
+        }
+
+        if (array_key_exists("AllSuperHost",$param) and $param["AllSuperHost"] !== null) {
+            $this->AllSuperHost = $param["AllSuperHost"];
+        }
+
+        if (array_key_exists("NodeUniqueIds",$param) and $param["NodeUniqueIds"] !== null) {
+            $this->NodeUniqueIds = $param["NodeUniqueIds"];
+        }
+
+        if (array_key_exists("TimeoutSec",$param) and $param["TimeoutSec"] !== null) {
+            $this->TimeoutSec = $param["TimeoutSec"];
         }
     }
 }

@@ -34,10 +34,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSnapshotId(string $SnapshotId) 设置快照id
  * @method integer getId() 获取记录唯一id
  * @method void setId(integer $Id) 设置记录唯一id
- * @method integer getStatus() 获取快照状态 0-初始状态1-快照创建成功；2-快照创建失败；
- * @method void setStatus(integer $Status) 设置快照状态 0-初始状态1-快照创建成功；2-快照创建失败；
+ * @method integer getStatus() 获取快照状态 0-初始状态1-快照创建成功；2-快照创建失败；10-不支持，11-无需创建
+ * @method void setStatus(integer $Status) 设置快照状态 0-初始状态1-快照创建成功；2-快照创建失败；10-不支持，11-无需创建
  * @method string getFailReason() 获取快照创建失败原因
  * @method void setFailReason(string $FailReason) 设置快照创建失败原因
+ * @method string getMachineType() 获取主机类型
+ * @method void setMachineType(string $MachineType) 设置主机类型
  */
 class VulFixStatusSnapshotInfo extends AbstractModel
 {
@@ -77,7 +79,7 @@ class VulFixStatusSnapshotInfo extends AbstractModel
     public $Id;
 
     /**
-     * @var integer 快照状态 0-初始状态1-快照创建成功；2-快照创建失败；
+     * @var integer 快照状态 0-初始状态1-快照创建成功；2-快照创建失败；10-不支持，11-无需创建
      */
     public $Status;
 
@@ -87,6 +89,11 @@ class VulFixStatusSnapshotInfo extends AbstractModel
     public $FailReason;
 
     /**
+     * @var string 主机类型
+     */
+    public $MachineType;
+
+    /**
      * @param string $Quuid cvm id
      * @param string $HostName 主机名称
      * @param string $HostIp 主机ip
@@ -94,8 +101,9 @@ class VulFixStatusSnapshotInfo extends AbstractModel
      * @param string $ModifyTime 快照创建时间
      * @param string $SnapshotId 快照id
      * @param integer $Id 记录唯一id
-     * @param integer $Status 快照状态 0-初始状态1-快照创建成功；2-快照创建失败；
+     * @param integer $Status 快照状态 0-初始状态1-快照创建成功；2-快照创建失败；10-不支持，11-无需创建
      * @param string $FailReason 快照创建失败原因
+     * @param string $MachineType 主机类型
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class VulFixStatusSnapshotInfo extends AbstractModel
 
         if (array_key_exists("FailReason",$param) and $param["FailReason"] !== null) {
             $this->FailReason = $param["FailReason"];
+        }
+
+        if (array_key_exists("MachineType",$param) and $param["MachineType"] !== null) {
+            $this->MachineType = $param["MachineType"];
         }
     }
 }

@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
 <li>read 读取文件</li>
 <li>write 修改文件</li>
 <li>read-write 读取修改文件</li>
+ * @method string getArgs() 获取命令行参数 没有填*
+ * @method void setArgs(string $Args) 设置命令行参数 没有填*
  */
 class FileTamperRule extends AbstractModel
 {
@@ -61,6 +63,11 @@ class FileTamperRule extends AbstractModel
     public $FileAction;
 
     /**
+     * @var string 命令行参数 没有填*
+     */
+    public $Args;
+
+    /**
      * @param string $ProcessPath 进程路径
      * @param string $Target 被访问文件路径
      * @param string $Action 执行动作 跳过：skip，告警：alert
@@ -68,6 +75,7 @@ class FileTamperRule extends AbstractModel
 <li>read 读取文件</li>
 <li>write 修改文件</li>
 <li>read-write 读取修改文件</li>
+     * @param string $Args 命令行参数 没有填*
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class FileTamperRule extends AbstractModel
 
         if (array_key_exists("FileAction",$param) and $param["FileAction"] !== null) {
             $this->FileAction = $param["FileAction"];
+        }
+
+        if (array_key_exists("Args",$param) and $param["Args"] !== null) {
+            $this->Args = $param["Args"];
         }
     }
 }

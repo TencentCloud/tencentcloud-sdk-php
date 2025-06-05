@@ -28,24 +28,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStorage(integer $Storage) 设置磁盘大小，单位GB
  * @method string getClusterId() 获取独享集群集群uuid
  * @method void setClusterId(string $ClusterId) 设置独享集群集群uuid
- * @method string getZone() 获取（废弃）可用区
- * @method void setZone(string $Zone) 设置（废弃）可用区
+ * @method string getZone() 获取可用区
+ * @method void setZone(string $Zone) 设置可用区
  * @method integer getProjectId() 获取项目ID
  * @method void setProjectId(integer $ProjectId) 设置项目ID
- * @method integer getPid() 获取（废弃）Pid，可通过获取独享集群售卖配置接口得到
- * @method void setPid(integer $Pid) 设置（废弃）Pid，可通过获取独享集群售卖配置接口得到
- * @method string getMachine() 获取（废弃）机型
- * @method void setMachine(string $Machine) 设置（废弃）机型
+ * @method integer getPid() 获取Pid，可通过获取独享集群售卖配置接口得到
+ * @method void setPid(integer $Pid) 设置Pid，可通过获取独享集群售卖配置接口得到
+ * @method string getMachine() 获取机型
+ * @method void setMachine(string $Machine) 设置机型
  * @method string getVpcId() 获取网络Id
  * @method void setVpcId(string $VpcId) 设置网络Id
  * @method string getSubnetId() 获取子网Id
  * @method void setSubnetId(string $SubnetId) 设置子网Id
  * @method string getDbVersionId() 获取db类型，不传默认8.0
  * @method void setDbVersionId(string $DbVersionId) 设置db类型，不传默认8.0
- * @method integer getManual() 获取（废弃）是否手动指定一组服务器分配, 运维使用
- * @method void setManual(integer $Manual) 设置（废弃）是否手动指定一组服务器分配, 运维使用
- * @method string getDeviceNo() 获取（废弃）DeviceNo参数
- * @method void setDeviceNo(string $DeviceNo) 设置（废弃）DeviceNo参数
+ * @method integer getManual() 获取是否手动指定一组服务器分配, 运维使用
+ * @method void setManual(integer $Manual) 设置是否手动指定一组服务器分配, 运维使用
+ * @method string getDeviceNo() 获取DeviceNo参数
+ * @method void setDeviceNo(string $DeviceNo) 设置DeviceNo参数
  * @method array getSecurityGroupIds() 获取安全组ID
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组ID
  * @method string getDcnInstanceId() 获取DCN源实例ID
@@ -96,7 +96,8 @@ class CreateDedicatedClusterDBInstanceRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string （废弃）可用区
+     * @var string 可用区
+     * @deprecated
      */
     public $Zone;
 
@@ -106,12 +107,14 @@ class CreateDedicatedClusterDBInstanceRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var integer （废弃）Pid，可通过获取独享集群售卖配置接口得到
+     * @var integer Pid，可通过获取独享集群售卖配置接口得到
+     * @deprecated
      */
     public $Pid;
 
     /**
-     * @var string （废弃）机型
+     * @var string 机型
+     * @deprecated
      */
     public $Machine;
 
@@ -131,12 +134,14 @@ class CreateDedicatedClusterDBInstanceRequest extends AbstractModel
     public $DbVersionId;
 
     /**
-     * @var integer （废弃）是否手动指定一组服务器分配, 运维使用
+     * @var integer 是否手动指定一组服务器分配, 运维使用
+     * @deprecated
      */
     public $Manual;
 
     /**
-     * @var string （废弃）DeviceNo参数
+     * @var string DeviceNo参数
+     * @deprecated
      */
     public $DeviceNo;
 
@@ -210,15 +215,15 @@ class CreateDedicatedClusterDBInstanceRequest extends AbstractModel
      * @param integer $Memory 內存大小，单位GB
      * @param integer $Storage 磁盘大小，单位GB
      * @param string $ClusterId 独享集群集群uuid
-     * @param string $Zone （废弃）可用区
+     * @param string $Zone 可用区
      * @param integer $ProjectId 项目ID
-     * @param integer $Pid （废弃）Pid，可通过获取独享集群售卖配置接口得到
-     * @param string $Machine （废弃）机型
+     * @param integer $Pid Pid，可通过获取独享集群售卖配置接口得到
+     * @param string $Machine 机型
      * @param string $VpcId 网络Id
      * @param string $SubnetId 子网Id
      * @param string $DbVersionId db类型，不传默认8.0
-     * @param integer $Manual （废弃）是否手动指定一组服务器分配, 运维使用
-     * @param string $DeviceNo （废弃）DeviceNo参数
+     * @param integer $Manual 是否手动指定一组服务器分配, 运维使用
+     * @param string $DeviceNo DeviceNo参数
      * @param array $SecurityGroupIds 安全组ID
      * @param string $DcnInstanceId DCN源实例ID
      * @param string $DcnRegion DCN源实例地域名

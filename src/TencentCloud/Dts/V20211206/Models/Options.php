@@ -34,9 +34,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method ConflictHandleOption getConflictHandleOption() 获取冲突处理的详细选项，如条件覆盖中的条件行和条件操作
  * @method void setConflictHandleOption(ConflictHandleOption $ConflictHandleOption) 设置冲突处理的详细选项，如条件覆盖中的条件行和条件操作
- * @method array getDdlOptions() 获取DDL同步选项，具体描述要同步那些DDL
+ * @method array getDdlOptions() 获取DDL同步选项，具体描述要同步哪些DDL
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDdlOptions(array $DdlOptions) 设置DDL同步选项，具体描述要同步那些DDL
+ * @method void setDdlOptions(array $DdlOptions) 设置DDL同步选项，具体描述要同步哪些DDL
 注意：此字段可能返回 null，表示取不到有效值。
  * @method KafkaOption getKafkaOption() 获取kafka同步选项
  * @method void setKafkaOption(KafkaOption $KafkaOption) 设置kafka同步选项
@@ -85,7 +85,7 @@ class Options extends AbstractModel
     public $ConflictHandleOption;
 
     /**
-     * @var array DDL同步选项，具体描述要同步那些DDL
+     * @var array DDL同步选项，具体描述要同步哪些DDL
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DdlOptions;
@@ -128,7 +128,7 @@ class Options extends AbstractModel
      * @param array $OpTypes 所要同步的DML和DDL的选项，Insert(插入操作)、Update(更新操作)、Delete(删除操作)、DDL(结构同步)， PartialDDL(自定义,和DdlOptions一起配合使用)。注意，这里至少需要包含DML中的一种。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ConflictHandleOption $ConflictHandleOption 冲突处理的详细选项，如条件覆盖中的条件行和条件操作
-     * @param array $DdlOptions DDL同步选项，具体描述要同步那些DDL
+     * @param array $DdlOptions DDL同步选项，具体描述要同步哪些DDL
 注意：此字段可能返回 null，表示取不到有效值。
      * @param KafkaOption $KafkaOption kafka同步选项
      * @param RateLimitOption $RateLimitOption 任务限速信息

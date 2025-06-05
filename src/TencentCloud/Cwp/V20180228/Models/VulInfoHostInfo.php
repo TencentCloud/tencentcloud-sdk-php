@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUuid(string $Uuid) 设置主机uuid
  * @method string getInstanceId() 获取主机InstanceId
  * @method void setInstanceId(string $InstanceId) 设置主机InstanceId
+ * @method string getMachineType() 获取主机类型
+ * @method void setMachineType(string $MachineType) 设置主机类型
  */
 class VulInfoHostInfo extends AbstractModel
 {
@@ -73,6 +75,11 @@ class VulInfoHostInfo extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var string 主机类型
+     */
+    public $MachineType;
+
+    /**
      * @param string $HostName 主机名
      * @param string $HostIp 主机ip
      * @param array $Tags 主机标签
@@ -80,6 +87,7 @@ class VulInfoHostInfo extends AbstractModel
      * @param integer $IsSupportAutoFix 0 :漏洞不可自动修复，  1：可自动修复， 2：客户端已离线， 3：主机不是旗舰版只能手动修复， 4：机型不允许 ，5：修复中 ，6：已修复， 7：检测中, 9:修复失败, 10:已忽略 ,11:漏洞只支持linux不支持Windows, 12：漏洞只支持Windows不支持linux
      * @param string $Uuid 主机uuid
      * @param string $InstanceId 主机InstanceId
+     * @param string $MachineType 主机类型
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class VulInfoHostInfo extends AbstractModel
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("MachineType",$param) and $param["MachineType"] !== null) {
+            $this->MachineType = $param["MachineType"];
         }
     }
 }

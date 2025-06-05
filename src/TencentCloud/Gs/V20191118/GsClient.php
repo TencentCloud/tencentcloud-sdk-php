@@ -24,6 +24,7 @@ use TencentCloud\Gs\V20191118\Models as Models;
 
 /**
  * @method Models\BackUpAndroidInstanceToStorageResponse BackUpAndroidInstanceToStorage(Models\BackUpAndroidInstanceToStorageRequest $req) 备份云手机数据到指定存储，支持 COS 和兼容 AWS S3 协议的对象存储服务。如果是备份到 COS 时，会使用公网流量，授权 COS bucket 请在控制台中操作。
+ * @method Models\CleanAndroidInstancesAppDataResponse CleanAndroidInstancesAppData(Models\CleanAndroidInstancesAppDataRequest $req) 批量清理安卓实例应用数据
  * @method Models\ConnectAndroidInstanceResponse ConnectAndroidInstance(Models\ConnectAndroidInstanceRequest $req) 连接安卓实例
  * @method Models\CopyAndroidInstanceResponse CopyAndroidInstance(Models\CopyAndroidInstanceRequest $req) 复制安卓实例：
 1. 排除和包含文件只能指定 /data 下的文件，不指定时复制整个 /data 目录
@@ -33,7 +34,7 @@ use TencentCloud\Gs\V20191118\Models as Models;
  * @method Models\CreateAndroidAppResponse CreateAndroidApp(Models\CreateAndroidAppRequest $req) 创建安卓应用
  * @method Models\CreateAndroidAppVersionResponse CreateAndroidAppVersion(Models\CreateAndroidAppVersionRequest $req) 创建安卓应用版本
  * @method Models\CreateAndroidInstanceADBResponse CreateAndroidInstanceADB(Models\CreateAndroidInstanceADBRequest $req) 创建云手机实例 ADB 连接信息，请将返回结果的 PrivateKey 字段保存为 pem 文件，并将 pem 文件权限设置为 600，再参考返回结果的 ConnectCommand 使用 adb 连接实例。
- * @method Models\CreateAndroidInstanceImageResponse CreateAndroidInstanceImage(Models\CreateAndroidInstanceImageRequest $req) 创建安卓实例镜像
+ * @method Models\CreateAndroidInstanceImageResponse CreateAndroidInstanceImage(Models\CreateAndroidInstanceImageRequest $req) 使用指定的安卓实例创建镜像，创建镜像时指定的实例会关机，镜像创建完成后实例会自动开机。当镜像的 AndroidInstanceImageState 为 NORMAL 时，镜像创建完成处于可用状态。
  * @method Models\CreateAndroidInstanceLabelResponse CreateAndroidInstanceLabel(Models\CreateAndroidInstanceLabelRequest $req) 创建安卓实例
  * @method Models\CreateAndroidInstanceSSHResponse CreateAndroidInstanceSSH(Models\CreateAndroidInstanceSSHRequest $req) 创建安卓实例 SSH 连接信息，请将返回结果的 PrivateKey 字段保存为 pem 文件，并将 pem 文件权限设置为 600，再参考返回结果的 ConnectCommand 使用 ssh 连接实例。
  * @method Models\CreateAndroidInstanceWebShellResponse CreateAndroidInstanceWebShell(Models\CreateAndroidInstanceWebShellRequest $req) 创建安卓实例 WebShell 连接信息，返回的 ConnectUrl 可通过浏览器直接打开访问，链接有效期 1 小时，链接打开后可持续使用。
@@ -47,13 +48,15 @@ use TencentCloud\Gs\V20191118\Models as Models;
  * @method Models\DeleteAndroidInstanceLabelResponse DeleteAndroidInstanceLabel(Models\DeleteAndroidInstanceLabelRequest $req) 创建安卓实例
  * @method Models\DescribeAndroidAppsResponse DescribeAndroidApps(Models\DescribeAndroidAppsRequest $req) 查询安卓应用信息
  * @method Models\DescribeAndroidInstanceAppsResponse DescribeAndroidInstanceApps(Models\DescribeAndroidInstanceAppsRequest $req) 查询安卓实例应用
- * @method Models\DescribeAndroidInstanceImagesResponse DescribeAndroidInstanceImages(Models\DescribeAndroidInstanceImagesRequest $req) 查询安卓实例镜像
+ * @method Models\DescribeAndroidInstanceImagesResponse DescribeAndroidInstanceImages(Models\DescribeAndroidInstanceImagesRequest $req) 查询安卓实例镜像信息，当镜像的 AndroidInstanceImageState 为 NORMAL 时，镜像处于可用状态。
  * @method Models\DescribeAndroidInstanceLabelsResponse DescribeAndroidInstanceLabels(Models\DescribeAndroidInstanceLabelsRequest $req) 创建安卓实例
  * @method Models\DescribeAndroidInstanceTasksStatusResponse DescribeAndroidInstanceTasksStatus(Models\DescribeAndroidInstanceTasksStatusRequest $req) 查询安卓实例任务状态
  * @method Models\DescribeAndroidInstancesResponse DescribeAndroidInstances(Models\DescribeAndroidInstancesRequest $req) 查询安卓实例
  * @method Models\DescribeInstancesCountResponse DescribeInstancesCount(Models\DescribeInstancesCountRequest $req) 获取并发总数和运行数
  * @method Models\DestroyAndroidInstancesResponse DestroyAndroidInstances(Models\DestroyAndroidInstancesRequest $req) 销毁安卓实例
+ * @method Models\DisableAndroidInstancesAppResponse DisableAndroidInstancesApp(Models\DisableAndroidInstancesAppRequest $req) 批量禁用安卓实例应用
  * @method Models\DistributeFileToAndroidInstancesResponse DistributeFileToAndroidInstances(Models\DistributeFileToAndroidInstancesRequest $req) 将一个文件批量分发到多个实例，一次接口调用触发一次文件分发，一次文件分发只会从公网下载一次，然后文件会走内网分发到实例列表中的实例。
+ * @method Models\EnableAndroidInstancesAppResponse EnableAndroidInstancesApp(Models\EnableAndroidInstancesAppRequest $req) 批量启用安卓实例应用
  * @method Models\ExecuteCommandOnAndroidInstancesResponse ExecuteCommandOnAndroidInstances(Models\ExecuteCommandOnAndroidInstancesRequest $req) 在安卓实例上异步执行命令，命令输出结果如果内容过长会被截断
  * @method Models\FetchAndroidInstancesLogsResponse FetchAndroidInstancesLogs(Models\FetchAndroidInstancesLogsRequest $req) 批量将实例的 logcat 日志文件上传到您已授权的 COS bucket 中，授权 COS bucket 请在控制台中操作。
  * @method Models\InstallAndroidInstancesAppResponse InstallAndroidInstancesApp(Models\InstallAndroidInstancesAppRequest $req) 安装安卓实例应用
@@ -85,7 +88,7 @@ use TencentCloud\Gs\V20191118\Models as Models;
  * @method Models\StopGameResponse StopGame(Models\StopGameRequest $req) 强制退出游戏
  * @method Models\StopPublishStreamResponse StopPublishStream(Models\StopPublishStreamRequest $req) 停止云端推流
  * @method Models\SwitchGameArchiveResponse SwitchGameArchive(Models\SwitchGameArchiveRequest $req) 切换游戏存档
- * @method Models\SyncAndroidInstanceImageResponse SyncAndroidInstanceImage(Models\SyncAndroidInstanceImageRequest $req) 同步安卓实例镜像
+ * @method Models\SyncAndroidInstanceImageResponse SyncAndroidInstanceImage(Models\SyncAndroidInstanceImageRequest $req) 同步安卓实例镜像到其他区域，当镜像的 AndroidInstanceImageState 为 NORMAL 时，镜像已经同步完成处于可用状态。
  * @method Models\SyncExecuteCommandOnAndroidInstancesResponse SyncExecuteCommandOnAndroidInstances(Models\SyncExecuteCommandOnAndroidInstancesRequest $req) 在安卓实例上同步执行命令，仅支持1秒内可以返回结果的命令，例如：ls、cd。同时执行的实例数量不能过多，否则可能云api返回超时。不支持超过1秒无法返回或无法自主结束的命令，例如：top、vim，执行结果最大1KB
  * @method Models\TrylockWorkerResponse TrylockWorker(Models\TrylockWorkerRequest $req) 尝试锁定机器
  * @method Models\UninstallAndroidInstancesAppResponse UninstallAndroidInstancesApp(Models\UninstallAndroidInstancesAppRequest $req) 卸载安卓实例应用

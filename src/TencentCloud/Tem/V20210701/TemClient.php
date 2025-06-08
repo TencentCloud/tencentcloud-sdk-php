@@ -68,6 +68,7 @@ use TencentCloud\Tem\V20210701\Models as Models;
  * @method Models\ModifyApplicationServiceResponse ModifyApplicationService(Models\ModifyApplicationServiceRequest $req) 修改服务访问方式列表
  * @method Models\ModifyConfigDataResponse ModifyConfigData(Models\ModifyConfigDataRequest $req) 编辑配置
  * @method Models\ModifyEnvironmentResponse ModifyEnvironment(Models\ModifyEnvironmentRequest $req) 编辑环境
+ * @method Models\ModifyGatewayIngressResponse ModifyGatewayIngress(Models\ModifyGatewayIngressRequest $req) 修改网关的转发配置
  * @method Models\ModifyIngressResponse ModifyIngress(Models\ModifyIngressRequest $req) 此接口没有被使用了
 
 创建或者更新 Ingress 规则

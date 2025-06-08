@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIssueAddress(string $IssueAddress) 设置签发地点
  * @method string getIssueNumber() 获取签发次数
  * @method void setIssueNumber(string $IssueNumber) 设置签发次数
- * @method string getType() 获取证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证。
- * @method void setType(string $Type) 设置证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证。
+ * @method string getType() 获取证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证、往来港澳通行证。
+ * @method void setType(string $Type) 设置证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证、往来港澳通行证。
  * @method string getProfile() 获取RetProfile为True时返回头像字段， Base64编码
  * @method void setProfile(string $Profile) 设置RetProfile为True时返回头像字段， Base64编码
  * @method string getNationality() 获取国籍
@@ -97,7 +97,7 @@ class MainlandPermitOCRResponse extends AbstractModel
     public $IssueNumber;
 
     /**
-     * @var string 证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证。
+     * @var string 证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证、往来港澳通行证。
      */
     public $Type;
 
@@ -131,7 +131,7 @@ class MainlandPermitOCRResponse extends AbstractModel
      * @param string $Number 证件号
      * @param string $IssueAddress 签发地点
      * @param string $IssueNumber 签发次数
-     * @param string $Type 证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证。
+     * @param string $Type 证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证、往来港澳通行证。
      * @param string $Profile RetProfile为True时返回头像字段， Base64编码
      * @param string $Nationality 国籍
      * @param MainlandTravelPermitBackInfos $MainlandTravelPermitBackInfos 背面字段信息

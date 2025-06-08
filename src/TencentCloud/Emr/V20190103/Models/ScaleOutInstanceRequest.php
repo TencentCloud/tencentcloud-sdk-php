@@ -98,6 +98,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceBaseType(string $ResourceBaseType) 设置类型为ComputeResource和EMR以及默认，默认为EMR,类型为EMR时,InstanceId生效,类型为ComputeResource时,使用ComputeResourceId标识
  * @method string getComputeResourceId() 获取计算资源id
  * @method void setComputeResourceId(string $ComputeResourceId) 设置计算资源id
+ * @method ComputeResourceAdvanceParams getComputeResourceAdvanceParams() 获取计算资源高级设置
+ * @method void setComputeResourceAdvanceParams(ComputeResourceAdvanceParams $ComputeResourceAdvanceParams) 设置计算资源高级设置
  */
 class ScaleOutInstanceRequest extends AbstractModel
 {
@@ -253,6 +255,11 @@ class ScaleOutInstanceRequest extends AbstractModel
     public $ComputeResourceId;
 
     /**
+     * @var ComputeResourceAdvanceParams 计算资源高级设置
+     */
+    public $ComputeResourceAdvanceParams;
+
+    /**
      * @param string $TimeUnit 扩容的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
 <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
@@ -292,6 +299,7 @@ class ScaleOutInstanceRequest extends AbstractModel
      * @param integer $AutoRenew 0表示关闭自动续费，1表示开启自动续费
      * @param string $ResourceBaseType 类型为ComputeResource和EMR以及默认，默认为EMR,类型为EMR时,InstanceId生效,类型为ComputeResource时,使用ComputeResourceId标识
      * @param string $ComputeResourceId 计算资源id
+     * @param ComputeResourceAdvanceParams $ComputeResourceAdvanceParams 计算资源高级设置
      */
     function __construct()
     {
@@ -428,6 +436,11 @@ class ScaleOutInstanceRequest extends AbstractModel
 
         if (array_key_exists("ComputeResourceId",$param) and $param["ComputeResourceId"] !== null) {
             $this->ComputeResourceId = $param["ComputeResourceId"];
+        }
+
+        if (array_key_exists("ComputeResourceAdvanceParams",$param) and $param["ComputeResourceAdvanceParams"] !== null) {
+            $this->ComputeResourceAdvanceParams = new ComputeResourceAdvanceParams();
+            $this->ComputeResourceAdvanceParams->deserialize($param["ComputeResourceAdvanceParams"]);
         }
     }
 }

@@ -76,6 +76,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCompensateFlag(integer $CompensateFlag) 设置补偿扩容，0表示不开启，1表示开启
  * @method integer getGroupId() 获取伸缩组id
  * @method void setGroupId(integer $GroupId) 设置伸缩组id
+ * @method array getGraceDownLabel() 获取优雅缩容业务pod标签，当node不存在上述pod或超过优雅缩容时间时，缩容节点
+ * @method void setGraceDownLabel(array $GraceDownLabel) 设置优雅缩容业务pod标签，当node不存在上述pod或超过优雅缩容时间时，缩容节点
  */
 class TimeAutoScaleStrategy extends AbstractModel
 {
@@ -188,6 +190,11 @@ class TimeAutoScaleStrategy extends AbstractModel
     public $GroupId;
 
     /**
+     * @var array 优雅缩容业务pod标签，当node不存在上述pod或超过优雅缩容时间时，缩容节点
+     */
+    public $GraceDownLabel;
+
+    /**
      * @param string $StrategyName 策略名字，集群内唯一。
      * @param integer $IntervalTime 策略触发后的冷却时间，该段时间内，将不能触发弹性扩缩容。
      * @param integer $ScaleAction 扩缩容动作，1表示扩容，2表示缩容。
@@ -216,6 +223,7 @@ class TimeAutoScaleStrategy extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CompensateFlag 补偿扩容，0表示不开启，1表示开启
      * @param integer $GroupId 伸缩组id
+     * @param array $GraceDownLabel 优雅缩容业务pod标签，当node不存在上述pod或超过优雅缩容时间时，缩容节点
      */
     function __construct()
     {
@@ -314,6 +322,15 @@ class TimeAutoScaleStrategy extends AbstractModel
 
         if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
             $this->GroupId = $param["GroupId"];
+        }
+
+        if (array_key_exists("GraceDownLabel",$param) and $param["GraceDownLabel"] !== null) {
+            $this->GraceDownLabel = [];
+            foreach ($param["GraceDownLabel"] as $key => $value){
+                $obj = new TkeLabel();
+                $obj->deserialize($value);
+                array_push($this->GraceDownLabel, $obj);
+            }
         }
     }
 }

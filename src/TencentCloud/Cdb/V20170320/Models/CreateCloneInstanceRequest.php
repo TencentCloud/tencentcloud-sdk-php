@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
 说明：如果是克隆双节点、三节点实例，备份文件为物理备份，如果是克隆单节点、集群版实例，备份文件为快照备份。
  * @method void setSpecifiedBackupId(integer $SpecifiedBackupId) 设置如果需要克隆实例回档到指定备份集，则指定该值为备份文件的 Id。请使用 [查询数据备份文件列表](/document/api/236/15842)。
 说明：如果是克隆双节点、三节点实例，备份文件为物理备份，如果是克隆单节点、集群版实例，备份文件为快照备份。
- * @method string getUniqVpcId() 获取私有网络 ID，如果不传则默认选择基础网络，请使用 [查询私有网络列表](/document/api/215/15778) 。
- * @method void setUniqVpcId(string $UniqVpcId) 设置私有网络 ID，如果不传则默认选择基础网络，请使用 [查询私有网络列表](/document/api/215/15778) 。
+ * @method string getUniqVpcId() 获取私有网络 ID，请使用 [查询私有网络列表](/document/api/215/15778)。
+ * @method void setUniqVpcId(string $UniqVpcId) 设置私有网络 ID，请使用 [查询私有网络列表](/document/api/215/15778)。
  * @method string getUniqSubnetId() 获取私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用 [查询子网列表](/document/api/215/15784)。
  * @method void setUniqSubnetId(string $UniqSubnetId) 设置私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用 [查询子网列表](/document/api/215/15784)。
  * @method integer getMemory() 获取实例内存大小，单位：MB，需要不低于克隆源实例，默认和源实例相同。
@@ -97,7 +97,7 @@ class CreateCloneInstanceRequest extends AbstractModel
     public $SpecifiedBackupId;
 
     /**
-     * @var string 私有网络 ID，如果不传则默认选择基础网络，请使用 [查询私有网络列表](/document/api/215/15778) 。
+     * @var string 私有网络 ID，请使用 [查询私有网络列表](/document/api/215/15778)。
      */
     public $UniqVpcId;
 
@@ -217,7 +217,7 @@ class CreateCloneInstanceRequest extends AbstractModel
 说明：此参数和 SpecifiedBackupId 参数需要2选1进行设置。
      * @param integer $SpecifiedBackupId 如果需要克隆实例回档到指定备份集，则指定该值为备份文件的 Id。请使用 [查询数据备份文件列表](/document/api/236/15842)。
 说明：如果是克隆双节点、三节点实例，备份文件为物理备份，如果是克隆单节点、集群版实例，备份文件为快照备份。
-     * @param string $UniqVpcId 私有网络 ID，如果不传则默认选择基础网络，请使用 [查询私有网络列表](/document/api/215/15778) 。
+     * @param string $UniqVpcId 私有网络 ID，请使用 [查询私有网络列表](/document/api/215/15778)。
      * @param string $UniqSubnetId 私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用 [查询子网列表](/document/api/215/15784)。
      * @param integer $Memory 实例内存大小，单位：MB，需要不低于克隆源实例，默认和源实例相同。
      * @param integer $Volume 实例硬盘大小，单位：GB，需要不低于克隆源实例，默认和源实例相同。

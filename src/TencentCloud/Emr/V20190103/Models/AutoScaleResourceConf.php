@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScaleUpperBound(integer $ScaleUpperBound) 设置自动扩缩容最大实例数。
  * @method integer getStrategyType() 获取扩容规则类型，1为按负载指标扩容规则，2为按时间扩容规则
  * @method void setStrategyType(integer $StrategyType) 设置扩容规则类型，1为按负载指标扩容规则，2为按时间扩容规则
- * @method integer getNextTimeCanScale() 获取下次能可扩容时间。
- * @method void setNextTimeCanScale(integer $NextTimeCanScale) 设置下次能可扩容时间。
+ * @method integer getNextTimeCanScale() 获取下次可扩容时间。
+ * @method void setNextTimeCanScale(integer $NextTimeCanScale) 设置下次可扩容时间。
  * @method boolean getGraceDownFlag() 获取优雅缩容开关
  * @method void setGraceDownFlag(boolean $GraceDownFlag) 设置优雅缩容开关
  * @method string getHardwareType() 获取"CVM"表示规格全部使用CVM相关类型，"POD"表示规格使用容器相关类型,默认为"CVM"。
@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPayMode(string $PayMode) 设置"POSTPAY"表示只使用按量计费，"SPOT_FIRST"表示竞价实例优先，只有HardwareType为"HOST"时支持竞价实例优先，"POD"只支持纯按量计费。
  * @method integer getPostPayPercentMin() 获取竞价实例优先的场景下，按量计费资源数量的最低百分比，整数
  * @method void setPostPayPercentMin(integer $PostPayPercentMin) 设置竞价实例优先的场景下，按量计费资源数量的最低百分比，整数
- * @method integer getChangeToPod() 获取预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；默认不勾选（0），勾选（1)
- * @method void setChangeToPod(integer $ChangeToPod) 设置预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；默认不勾选（0），勾选（1)
+ * @method integer getChangeToPod() 获取预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；0表示默认不勾选（0），1表示勾选
+ * @method void setChangeToPod(integer $ChangeToPod) 设置预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；0表示默认不勾选（0），1表示勾选
  * @method string getGroupName() 获取伸缩组名
  * @method void setGroupName(string $GroupName) 设置伸缩组名
  * @method string getYarnNodeLabel() 获取标签
@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setParallel(integer $Parallel) 设置并行伸缩 0关闭；1开启
  * @method integer getEnableMNode() 获取是否支持MNode
  * @method void setEnableMNode(integer $EnableMNode) 设置是否支持MNode
+ * @method AutoScaleGroupAdvanceAttrs getExtraAdvanceAttrs() 获取伸缩组更多设置
+ * @method void setExtraAdvanceAttrs(AutoScaleGroupAdvanceAttrs $ExtraAdvanceAttrs) 设置伸缩组更多设置
  */
 class AutoScaleResourceConf extends AbstractModel
 {
@@ -81,7 +83,7 @@ class AutoScaleResourceConf extends AbstractModel
     public $StrategyType;
 
     /**
-     * @var integer 下次能可扩容时间。
+     * @var integer 下次可扩容时间。
      */
     public $NextTimeCanScale;
 
@@ -106,7 +108,7 @@ class AutoScaleResourceConf extends AbstractModel
     public $PostPayPercentMin;
 
     /**
-     * @var integer 预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；默认不勾选（0），勾选（1)
+     * @var integer 预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；0表示默认不勾选（0），1表示勾选
      */
     public $ChangeToPod;
 
@@ -136,22 +138,28 @@ class AutoScaleResourceConf extends AbstractModel
     public $EnableMNode;
 
     /**
+     * @var AutoScaleGroupAdvanceAttrs 伸缩组更多设置
+     */
+    public $ExtraAdvanceAttrs;
+
+    /**
      * @param integer $Id 配置ID。
      * @param integer $ClusterId 集群实例ID。
      * @param integer $ScaleLowerBound 自动扩缩容保留最小实例数。
      * @param integer $ScaleUpperBound 自动扩缩容最大实例数。
      * @param integer $StrategyType 扩容规则类型，1为按负载指标扩容规则，2为按时间扩容规则
-     * @param integer $NextTimeCanScale 下次能可扩容时间。
+     * @param integer $NextTimeCanScale 下次可扩容时间。
      * @param boolean $GraceDownFlag 优雅缩容开关
      * @param string $HardwareType "CVM"表示规格全部使用CVM相关类型，"POD"表示规格使用容器相关类型,默认为"CVM"。
      * @param string $PayMode "POSTPAY"表示只使用按量计费，"SPOT_FIRST"表示竞价实例优先，只有HardwareType为"HOST"时支持竞价实例优先，"POD"只支持纯按量计费。
      * @param integer $PostPayPercentMin 竞价实例优先的场景下，按量计费资源数量的最低百分比，整数
-     * @param integer $ChangeToPod 预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；默认不勾选（0），勾选（1)
+     * @param integer $ChangeToPod 预设资源类型为HOST时，支持勾选“资源不足时切换POD”；支持取消勾选；0表示默认不勾选（0），1表示勾选
      * @param string $GroupName 伸缩组名
      * @param string $YarnNodeLabel 标签
      * @param integer $GroupStatus 伸缩组状态
      * @param integer $Parallel 并行伸缩 0关闭；1开启
      * @param integer $EnableMNode 是否支持MNode
+     * @param AutoScaleGroupAdvanceAttrs $ExtraAdvanceAttrs 伸缩组更多设置
      */
     function __construct()
     {
@@ -228,6 +236,11 @@ class AutoScaleResourceConf extends AbstractModel
 
         if (array_key_exists("EnableMNode",$param) and $param["EnableMNode"] !== null) {
             $this->EnableMNode = $param["EnableMNode"];
+        }
+
+        if (array_key_exists("ExtraAdvanceAttrs",$param) and $param["ExtraAdvanceAttrs"] !== null) {
+            $this->ExtraAdvanceAttrs = new AutoScaleGroupAdvanceAttrs();
+            $this->ExtraAdvanceAttrs->deserialize($param["ExtraAdvanceAttrs"]);
         }
     }
 }

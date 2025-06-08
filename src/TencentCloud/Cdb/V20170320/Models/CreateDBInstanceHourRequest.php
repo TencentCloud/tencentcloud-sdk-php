@@ -30,9 +30,9 @@ use TencentCloud\Common\AbstractModel;
 说明：创建非集群版实例时，请根据需要指定实例版本（推荐5.7或8.0），若此参数不填，则默认值为5.6；若创建的是集群版实例，则此参数仅能指定为5.7或8.0。
  * @method void setEngineVersion(string $EngineVersion) 设置MySQL 版本，值包括：5.5、5.6、5.7和8.0，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的实例版本。
 说明：创建非集群版实例时，请根据需要指定实例版本（推荐5.7或8.0），若此参数不填，则默认值为5.6；若创建的是集群版实例，则此参数仅能指定为5.7或8.0。
- * @method string getUniqVpcId() 获取私有网络 ID，如果不传则默认选择基础网络，请使用 [查询私有网络列表](/document/api/215/15778) 。
+ * @method string getUniqVpcId() 获取私有网络 ID，请使用 [查询私有网络列表](/document/api/215/15778)。
 说明：如果创建的是集群版实例，此参数为必填且为私有网络类型。
- * @method void setUniqVpcId(string $UniqVpcId) 设置私有网络 ID，如果不传则默认选择基础网络，请使用 [查询私有网络列表](/document/api/215/15778) 。
+ * @method void setUniqVpcId(string $UniqVpcId) 设置私有网络 ID，请使用 [查询私有网络列表](/document/api/215/15778)。
 说明：如果创建的是集群版实例，此参数为必填且为私有网络类型。
  * @method string getUniqSubnetId() 获取私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用 [查询子网列表](/document/api/215/15784)。
  * @method void setUniqSubnetId(string $UniqSubnetId) 设置私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用 [查询子网列表](/document/api/215/15784)。
@@ -149,7 +149,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $EngineVersion;
 
     /**
-     * @var string 私有网络 ID，如果不传则默认选择基础网络，请使用 [查询私有网络列表](/document/api/215/15778) 。
+     * @var string 私有网络 ID，请使用 [查询私有网络列表](/document/api/215/15778)。
 说明：如果创建的是集群版实例，此参数为必填且为私有网络类型。
      */
     public $UniqVpcId;
@@ -349,7 +349,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
      * @param integer $Volume 实例硬盘大小，单位：GB，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的硬盘范围。
      * @param string $EngineVersion MySQL 版本，值包括：5.5、5.6、5.7和8.0，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的实例版本。
 说明：创建非集群版实例时，请根据需要指定实例版本（推荐5.7或8.0），若此参数不填，则默认值为5.6；若创建的是集群版实例，则此参数仅能指定为5.7或8.0。
-     * @param string $UniqVpcId 私有网络 ID，如果不传则默认选择基础网络，请使用 [查询私有网络列表](/document/api/215/15778) 。
+     * @param string $UniqVpcId 私有网络 ID，请使用 [查询私有网络列表](/document/api/215/15778)。
 说明：如果创建的是集群版实例，此参数为必填且为私有网络类型。
      * @param string $UniqSubnetId 私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用 [查询子网列表](/document/api/215/15784)。
      * @param integer $ProjectId 项目 ID，不填为默认项目。

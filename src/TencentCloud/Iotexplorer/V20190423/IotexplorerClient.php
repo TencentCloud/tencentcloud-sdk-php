@@ -60,7 +60,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\DeleteLoRaGatewayResponse DeleteLoRaGateway(Models\DeleteLoRaGatewayRequest $req) 删除  LoRa 网关的接口
  * @method Models\DeletePositionFenceResponse DeletePositionFence(Models\DeletePositionFenceRequest $req) 删除围栏
  * @method Models\DeletePositionSpaceResponse DeletePositionSpace(Models\DeletePositionSpaceRequest $req) 删除位置空间
- * @method Models\DeleteProjectResponse DeleteProject(Models\DeleteProjectRequest $req) 提供删除某个项目的能力
+ * @method Models\DeleteProjectResponse DeleteProject(Models\DeleteProjectRequest $req) 提供删除某个项目的能力。
  * @method Models\DeleteStudioProductResponse DeleteStudioProduct(Models\DeleteStudioProductRequest $req) 提供删除某个项目下产品的能力
  * @method Models\DeleteTopicPolicyResponse DeleteTopicPolicy(Models\DeleteTopicPolicyRequest $req) 本接口（DeleteTopicPolicy）用于删除Topic
  * @method Models\DeleteTopicRuleResponse DeleteTopicRule(Models\DeleteTopicRuleRequest $req) 删除规则
@@ -162,7 +162,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\ModifyPositionFenceResponse ModifyPositionFence(Models\ModifyPositionFenceRequest $req) 更新围栏
  * @method Models\ModifyPositionSpaceResponse ModifyPositionSpace(Models\ModifyPositionSpaceRequest $req) 更新位置空间
  * @method Models\ModifyProductCloudStorageAIServiceResponse ModifyProductCloudStorageAIService(Models\ModifyProductCloudStorageAIServiceRequest $req) 修改指定产品的云存 AI 服务开通状态
- * @method Models\ModifyProjectResponse ModifyProject(Models\ModifyProjectRequest $req) 修改项目
+ * @method Models\ModifyProjectResponse ModifyProject(Models\ModifyProjectRequest $req) 修改项目。
  * @method Models\ModifySpacePropertyResponse ModifySpaceProperty(Models\ModifySpacePropertyRequest $req) 更新位置空间产品属性
  * @method Models\ModifyStudioProductResponse ModifyStudioProduct(Models\ModifyStudioProductRequest $req) 提供修改产品的名称和描述等信息的能力，对于已发布产品不允许进行修改。
  * @method Models\ModifyTWeSeeConfigResponse ModifyTWeSeeConfig(Models\ModifyTWeSeeConfigRequest $req) 修改 TWeSee 配置

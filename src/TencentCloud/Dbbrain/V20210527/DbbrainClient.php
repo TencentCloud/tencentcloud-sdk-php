@@ -62,7 +62,7 @@ use TencentCloud\Dbbrain\V20210527\Models as Models;
  * @method Models\DescribeDBSpaceStatusResponse DescribeDBSpaceStatus(Models\DescribeDBSpaceStatusRequest $req) 获取指定时间段内的实例空间使用概览，包括磁盘增长量(MB)、磁盘剩余(MB)、磁盘总量(MB)及预计可用天数。
  * @method Models\DescribeDiagDBInstancesResponse DescribeDiagDBInstances(Models\DescribeDiagDBInstancesRequest $req) 获取实例信息列表。Region统一选择广州。
  * @method Models\DescribeHealthScoreResponse DescribeHealthScore(Models\DescribeHealthScoreRequest $req) 根据实例ID获取指定时间段（30分钟）的健康得分，以及异常扣分项。
- * @method Models\DescribeIndexRecommendAggregationSlowLogsResponse DescribeIndexRecommendAggregationSlowLogs(Models\DescribeIndexRecommendAggregationSlowLogsRequest $req) 查询某张表的慢查模板概览
+ * @method Models\DescribeIndexRecommendAggregationSlowLogsResponse DescribeIndexRecommendAggregationSlowLogs(Models\DescribeIndexRecommendAggregationSlowLogsRequest $req) 查询某张表的慢查模板概览，这个接口是对用户点击对应的推荐索引后，展示慢日志用的
  * @method Models\DescribeIndexRecommendInfoResponse DescribeIndexRecommendInfo(Models\DescribeIndexRecommendInfoRequest $req) 查询实例的索引推荐信息，包括索引统计相关信息，推荐索引列表，无效索引列表等。
  * @method Models\DescribeMailProfileResponse DescribeMailProfile(Models\DescribeMailProfileRequest $req) 获取发送邮件的配置， 包括数据库巡检的邮件配置以及定期生成健康报告的邮件发送配置。
  * @method Models\DescribeMySqlProcessListResponse DescribeMySqlProcessList(Models\DescribeMySqlProcessListRequest $req) 查询关系型数据库的实时线程列表。

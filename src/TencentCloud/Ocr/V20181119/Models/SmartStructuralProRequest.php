@@ -53,6 +53,8 @@ DispatchWeightNote -- 磅单发货单识别模板
 ReceiptWeightNote -- 磅单收货单识别模板
 ArticalRecognize -- 手写作文模版
 Table -- 表格模版
+SteelLabel -- 实物标签识别模板
+CarInsurance -- 车辆保险单识别模板
  * @method void setConfigId(string $ConfigId) 设置配置id支持：
 General -- 通用场景 
 InvoiceEng -- 国际invoice模版 
@@ -70,6 +72,8 @@ DispatchWeightNote -- 磅单发货单识别模板
 ReceiptWeightNote -- 磅单收货单识别模板
 ArticalRecognize -- 手写作文模版
 Table -- 表格模版
+SteelLabel -- 实物标签识别模板
+CarInsurance -- 车辆保险单识别模板
  * @method boolean getEnableCoord() 获取是否开启全文字段坐标值的识别
  * @method void setEnableCoord(boolean $EnableCoord) 设置是否开启全文字段坐标值的识别
  * @method boolean getOutputParentKey() 获取是否开启父子key识别，默认是
@@ -129,6 +133,8 @@ DispatchWeightNote -- 磅单发货单识别模板
 ReceiptWeightNote -- 磅单收货单识别模板
 ArticalRecognize -- 手写作文模版
 Table -- 表格模版
+SteelLabel -- 实物标签识别模板
+CarInsurance -- 车辆保险单识别模板
      */
     public $ConfigId;
 
@@ -173,6 +179,8 @@ DispatchWeightNote -- 磅单发货单识别模板
 ReceiptWeightNote -- 磅单收货单识别模板
 ArticalRecognize -- 手写作文模版
 Table -- 表格模版
+SteelLabel -- 实物标签识别模板
+CarInsurance -- 车辆保险单识别模板
      * @param boolean $EnableCoord 是否开启全文字段坐标值的识别
      * @param boolean $OutputParentKey 是否开启父子key识别，默认是
      * @param ConfigAdvanced $ConfigAdvanced 模版的单个属性配置

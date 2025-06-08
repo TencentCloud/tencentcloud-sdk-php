@@ -52,6 +52,8 @@ use TencentCloud\Gs\V20191118\Models as Models;
  * @method Models\DescribeAndroidInstanceLabelsResponse DescribeAndroidInstanceLabels(Models\DescribeAndroidInstanceLabelsRequest $req) 创建安卓实例
  * @method Models\DescribeAndroidInstanceTasksStatusResponse DescribeAndroidInstanceTasksStatus(Models\DescribeAndroidInstanceTasksStatusRequest $req) 查询安卓实例任务状态
  * @method Models\DescribeAndroidInstancesResponse DescribeAndroidInstances(Models\DescribeAndroidInstancesRequest $req) 查询安卓实例
+ * @method Models\DescribeAndroidInstancesAppBlacklistResponse DescribeAndroidInstancesAppBlacklist(Models\DescribeAndroidInstancesAppBlacklistRequest $req) 查询安卓实例黑名单
+ * @method Models\DescribeAndroidInstancesByAppsResponse DescribeAndroidInstancesByApps(Models\DescribeAndroidInstancesByAppsRequest $req) 查询安装指定应用的安卓实例
  * @method Models\DescribeInstancesCountResponse DescribeInstancesCount(Models\DescribeInstancesCountRequest $req) 获取并发总数和运行数
  * @method Models\DestroyAndroidInstancesResponse DestroyAndroidInstances(Models\DestroyAndroidInstancesRequest $req) 销毁安卓实例
  * @method Models\DisableAndroidInstancesAppResponse DisableAndroidInstancesApp(Models\DisableAndroidInstancesAppRequest $req) 批量禁用安卓实例应用
@@ -59,16 +61,19 @@ use TencentCloud\Gs\V20191118\Models as Models;
  * @method Models\EnableAndroidInstancesAppResponse EnableAndroidInstancesApp(Models\EnableAndroidInstancesAppRequest $req) 批量启用安卓实例应用
  * @method Models\ExecuteCommandOnAndroidInstancesResponse ExecuteCommandOnAndroidInstances(Models\ExecuteCommandOnAndroidInstancesRequest $req) 在安卓实例上异步执行命令，命令输出结果如果内容过长会被截断
  * @method Models\FetchAndroidInstancesLogsResponse FetchAndroidInstancesLogs(Models\FetchAndroidInstancesLogsRequest $req) 批量将实例的 logcat 日志文件上传到您已授权的 COS bucket 中，授权 COS bucket 请在控制台中操作。
+ * @method Models\ImportAndroidInstanceImageResponse ImportAndroidInstanceImage(Models\ImportAndroidInstanceImageRequest $req) 导入安卓实例镜像，当镜像的 AndroidInstanceImageState 为 NORMAL 时，镜像导入完成处于可用状态。
  * @method Models\InstallAndroidInstancesAppResponse InstallAndroidInstancesApp(Models\InstallAndroidInstancesAppRequest $req) 安装安卓实例应用
  * @method Models\InstallAndroidInstancesAppWithURLResponse InstallAndroidInstancesAppWithURL(Models\InstallAndroidInstancesAppWithURLRequest $req) 安装安卓实例应用
  * @method Models\ModifyAndroidAppResponse ModifyAndroidApp(Models\ModifyAndroidAppRequest $req) 修改安卓应用信息
  * @method Models\ModifyAndroidAppVersionResponse ModifyAndroidAppVersion(Models\ModifyAndroidAppVersionRequest $req) 修改安卓应用版本
  * @method Models\ModifyAndroidInstanceInformationResponse ModifyAndroidInstanceInformation(Models\ModifyAndroidInstanceInformationRequest $req) 修改安卓实例的信息
  * @method Models\ModifyAndroidInstanceResolutionResponse ModifyAndroidInstanceResolution(Models\ModifyAndroidInstanceResolutionRequest $req) 修改安卓实例分辨率。需要注意的是该接口可能导致正在运行的应用出现闪退，所以建议在实例维护时期才进行调用。
+ * @method Models\ModifyAndroidInstancesAppBlacklistResponse ModifyAndroidInstancesAppBlacklist(Models\ModifyAndroidInstancesAppBlacklistRequest $req) 修改安卓实例应用黑名单
  * @method Models\ModifyAndroidInstancesInformationResponse ModifyAndroidInstancesInformation(Models\ModifyAndroidInstancesInformationRequest $req) 批量修改安卓实例信息
  * @method Models\ModifyAndroidInstancesLabelsResponse ModifyAndroidInstancesLabels(Models\ModifyAndroidInstancesLabelsRequest $req) 修改安卓实例分辨率。需要注意的是该接口可能导致正在运行的应用出现闪退，所以建议在实例维护时期才进行调用。
  * @method Models\ModifyAndroidInstancesPropertiesResponse ModifyAndroidInstancesProperties(Models\ModifyAndroidInstancesPropertiesRequest $req) 批量修改安卓实例属性
  * @method Models\ModifyAndroidInstancesResolutionResponse ModifyAndroidInstancesResolution(Models\ModifyAndroidInstancesResolutionRequest $req) 修改安卓实例分辨率。需要注意的是该接口需要重启才能生效。
+ * @method Models\ModifyAndroidInstancesResourcesResponse ModifyAndroidInstancesResources(Models\ModifyAndroidInstancesResourcesRequest $req) 批量修改安卓实例资源限制
  * @method Models\ModifyAndroidInstancesUserIdResponse ModifyAndroidInstancesUserId(Models\ModifyAndroidInstancesUserIdRequest $req) 批量修改安卓实例的用户ID
  * @method Models\RebootAndroidInstanceHostsResponse RebootAndroidInstanceHosts(Models\RebootAndroidInstanceHostsRequest $req) 重启安卓实例宿主机。请注意：
 
@@ -79,6 +84,8 @@ use TencentCloud\Gs\V20191118\Models as Models;
  * @method Models\RestartAndroidInstancesAppResponse RestartAndroidInstancesApp(Models\RestartAndroidInstancesAppRequest $req) 启动安卓实例应用
  * @method Models\RestoreAndroidInstanceFromStorageResponse RestoreAndroidInstanceFromStorage(Models\RestoreAndroidInstanceFromStorageRequest $req) 使用指定存储数据还原云手机，支持 COS 和兼容 AWS S3 协议的对象存储服务。如果还原数据来自 COS 时，会使用公网流量，授权 COS bucket 请在控制台中操作。
  * @method Models\SaveGameArchiveResponse SaveGameArchive(Models\SaveGameArchiveRequest $req) 保存游戏存档
+ * @method Models\SetAndroidInstancesBGAppKeepAliveResponse SetAndroidInstancesBGAppKeepAlive(Models\SetAndroidInstancesBGAppKeepAliveRequest $req) 批量设置安卓实例应用后台保活，开启应用保活，只是降低应用被杀死或回收的优先级，并不能保证应用不会被杀死或回收（如出现内存不足等资源限制时，应用也有概率被杀死或回收）
+ * @method Models\SetAndroidInstancesFGAppKeepAliveResponse SetAndroidInstancesFGAppKeepAlive(Models\SetAndroidInstancesFGAppKeepAliveRequest $req) 批量设置安卓实例应用前台保活，开启应用保活，只是降低应用被杀死或回收的优先级，并不能保证应用不会被杀死或回收（如出现内存不足等资源限制时，应用也有概率被杀死或回收）
  * @method Models\StartAndroidInstancesResponse StartAndroidInstances(Models\StartAndroidInstancesRequest $req) 重启安卓实例
  * @method Models\StartAndroidInstancesAppResponse StartAndroidInstancesApp(Models\StartAndroidInstancesAppRequest $req) 启动安卓实例应用
  * @method Models\StartPublishStreamResponse StartPublishStream(Models\StartPublishStreamRequest $req) 开始云端推流

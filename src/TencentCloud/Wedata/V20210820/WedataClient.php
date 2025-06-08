@@ -121,6 +121,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DescribeEventCasesResponse DescribeEventCases(Models\DescribeEventCasesRequest $req) 根据条件查找事件实例
  * @method Models\DescribeEventConsumeTasksResponse DescribeEventConsumeTasks(Models\DescribeEventConsumeTasksRequest $req) 查看事件实例的消费任务
  * @method Models\DescribeExecStrategyResponse DescribeExecStrategy(Models\DescribeExecStrategyRequest $req) 查询规则组执行策略
+ * @method Models\DescribeExecutorGroupMetricResponse DescribeExecutorGroupMetric(Models\DescribeExecutorGroupMetricRequest $req) 商业化版本：根据id查询执行资源组指标
  * @method Models\DescribeFieldBasicInfoResponse DescribeFieldBasicInfo(Models\DescribeFieldBasicInfoRequest $req) 元数据模型-字段基础信息查询接口
  * @method Models\DescribeFolderWorkflowListResponse DescribeFolderWorkflowList(Models\DescribeFolderWorkflowListRequest $req) 根据项目id 获取项目下所有工作流列表
  * @method Models\DescribeFormVersionParamResponse DescribeFormVersionParam(Models\DescribeFormVersionParamRequest $req) 查询模版关联的任务和可填充参数，为下一步代码模版提交做准备

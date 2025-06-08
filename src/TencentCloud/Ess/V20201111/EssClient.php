@@ -131,6 +131,13 @@ use TencentCloud\Ess\V20201111\Models as Models;
 - 企业员工批量签署链接：需要传入签署方所在企业名称，用户名字和手机号（或者身份证件信息）参数来生成签署链接。<font color="red">该签署方企业必须已完成腾讯电子签企业认证</font>
 - 个人批量签署链接：需要传入签署方用户名字和手机号（或者身份证件信息）参数来生成签署链接。个人批量签署进行的合同的签名区， 全部变成<font color="red">手写签名</font>（不管合同里边设置的签名限制）来进行。
 - 不支持签署方含有签批控件，或设置了签署方在签署时自行添加签署控件功能的合同进行批量签署。
+ * @method Models\CreateContractDiffTaskWebUrlResponse CreateContractDiffTaskWebUrl(Models\CreateContractDiffTaskWebUrlRequest $req) 接口（CreateContractDiffTaskWebUrl）用于创建合同对比的可嵌入web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
+注：本接口生成的web页面暂不支持<a href="https://qian.tencent.com/developers/companyApis/embedPages/CreateWebThemeConfig" target="_blank">设置本企业嵌入式页面主题配置</a>
+
+未跳过上传确认的嵌入页面长相如下：
+![image](https://qcloudimg.tencent-cloud.cn/raw/32f3526ad7152757202a7e4e760356db.jpg)
+跳过上传确认的嵌入页面长相如下：
+![image](https://qcloudimg.tencent-cloud.cn/raw/c68047feddbc106e261870687b6ab89d.jpg)
  * @method Models\CreateConvertTaskApiResponse CreateConvertTaskApi(Models\CreateConvertTaskApiRequest $req) 此接口（CreateConvertTaskApi）用来将word、excel、html、图片、txt类型文件转换为PDF文件。<br />
 前提条件：源文件已经通过 <a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles" target="_blank">文件上传接口</a>完成上传，并得到了源文件的资源Id。<br />
 适用场景1：已经上传了一个word文件，希望将该word文件转换成pdf文件后发起合同
@@ -780,6 +787,11 @@ use TencentCloud\Ess\V20201111\Models as Models;
  * @method Models\DescribeBillUsageResponse DescribeBillUsage(Models\DescribeBillUsageRequest $req) 通过此接口（DescribeBillUsage）查询该企业的套餐套餐使用情况。
  * @method Models\DescribeBillUsageDetailResponse DescribeBillUsageDetail(Models\DescribeBillUsageDetailRequest $req) 通过此接口（DescribeBillUsageDetail）查询该企业的套餐消耗详情。
  * @method Models\DescribeCancelFlowsTaskResponse DescribeCancelFlowsTask(Models\DescribeCancelFlowsTaskRequest $req) 通过[获取批量撤销签署流程腾讯电子签小程序链接](https://qian.tencent.com/developers/companyApis/operateFlows/CreateBatchCancelFlowUrl)发起批量撤销任务后，可通过此接口查询批量撤销任务的结果。
+ * @method Models\DescribeContractDiffTaskWebUrlResponse DescribeContractDiffTaskWebUrl(Models\DescribeContractDiffTaskWebUrlRequest $req) 接口（DescribeContractDiffTaskWebUrl）用于获取合同对比结果可嵌入的web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
+注：本接口生成的web页面暂不支持<a href="https://qian.tencent.com/developers/companyApis/embedPages/CreateWebThemeConfig" target="_blank">设置本企业嵌入式页面主题配置</a>
+
+嵌入页面长相如下：
+![image](https://qcloudimg.tencent-cloud.cn/raw/c68047feddbc106e261870687b6ab89d.jpg)
  * @method Models\DescribeExtendedServiceAuthDetailResponse DescribeExtendedServiceAuthDetail(Models\DescribeExtendedServiceAuthDetailRequest $req) 查询企业扩展服务的授权详情（列表），当前支持查询以下内容：
 1. 企业自动签（本企业授权、集团企业授权、合作企业授权）
 2. 批量签署能力

@@ -43,12 +43,14 @@ use TencentCloud\Common\AbstractModel;
 <li>DELETE:  删除</li>
 <li>ENABLE: 启用</li>
 <li>DISABLE: 停用</li>
+<li>COPY: 复制新建</li>
 </ul>
  * @method void setOperateType(string $OperateType) 设置操作类型，可取值如下:
 <ul>
 <li>DELETE:  删除</li>
 <li>ENABLE: 启用</li>
 <li>DISABLE: 停用</li>
+<li>COPY: 复制新建</li>
 </ul>
  */
 class OperateTemplateRequest extends AbstractModel
@@ -76,6 +78,7 @@ class OperateTemplateRequest extends AbstractModel
 <li>DELETE:  删除</li>
 <li>ENABLE: 启用</li>
 <li>DISABLE: 停用</li>
+<li>COPY: 复制新建</li>
 </ul>
      */
     public $OperateType;
@@ -95,6 +98,7 @@ class OperateTemplateRequest extends AbstractModel
 <li>DELETE:  删除</li>
 <li>ENABLE: 启用</li>
 <li>DISABLE: 停用</li>
+<li>COPY: 复制新建</li>
 </ul>
      */
     function __construct()

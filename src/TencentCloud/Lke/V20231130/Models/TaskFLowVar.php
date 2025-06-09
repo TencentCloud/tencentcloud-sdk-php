@@ -33,6 +33,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getVarType() 获取变量类型 (STRING,INT,FLOAT,BOOL,OBJECT,ARRAY_STRING,ARRAY_INT,ARRAY_FLOAT,ARRAY_BOOL,ARRAY_OBJECT,FILE,DOCUMENT,IMAGE,AUDIO)
 
  * @method void setVarType(string $VarType) 设置变量类型 (STRING,INT,FLOAT,BOOL,OBJECT,ARRAY_STRING,ARRAY_INT,ARRAY_FLOAT,ARRAY_BOOL,ARRAY_OBJECT,FILE,DOCUMENT,IMAGE,AUDIO)
+
+ * @method string getVarDefaultValue() 获取自定义变量默认值
+ * @method void setVarDefaultValue(string $VarDefaultValue) 设置自定义变量默认值
+ * @method string getVarDefaultFileName() 获取自定义变量文件默认名称
+ * @method void setVarDefaultFileName(string $VarDefaultFileName) 设置自定义变量文件默认名称
  */
 class TaskFLowVar extends AbstractModel
 {
@@ -60,12 +65,25 @@ class TaskFLowVar extends AbstractModel
     public $VarType;
 
     /**
+     * @var string 自定义变量默认值
+     */
+    public $VarDefaultValue;
+
+    /**
+     * @var string 自定义变量文件默认名称
+     */
+    public $VarDefaultFileName;
+
+    /**
      * @param string $VarId 变量ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VarName 变量名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VarDesc 变量描述（默认为"-"）
      * @param string $VarType 变量类型 (STRING,INT,FLOAT,BOOL,OBJECT,ARRAY_STRING,ARRAY_INT,ARRAY_FLOAT,ARRAY_BOOL,ARRAY_OBJECT,FILE,DOCUMENT,IMAGE,AUDIO)
+
+     * @param string $VarDefaultValue 自定义变量默认值
+     * @param string $VarDefaultFileName 自定义变量文件默认名称
      */
     function __construct()
     {
@@ -94,6 +112,14 @@ class TaskFLowVar extends AbstractModel
 
         if (array_key_exists("VarType",$param) and $param["VarType"] !== null) {
             $this->VarType = $param["VarType"];
+        }
+
+        if (array_key_exists("VarDefaultValue",$param) and $param["VarDefaultValue"] !== null) {
+            $this->VarDefaultValue = $param["VarDefaultValue"];
+        }
+
+        if (array_key_exists("VarDefaultFileName",$param) and $param["VarDefaultFileName"] !== null) {
+            $this->VarDefaultFileName = $param["VarDefaultFileName"];
         }
     }
 }

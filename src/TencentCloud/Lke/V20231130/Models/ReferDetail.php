@@ -72,6 +72,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDocBizId(string $DocBizId) 设置文档ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getKnowledgeBizId() 获取知识库ID
+ * @method void setKnowledgeBizId(string $KnowledgeBizId) 设置知识库ID
  */
 class ReferDetail extends AbstractModel
 {
@@ -154,6 +156,11 @@ class ReferDetail extends AbstractModel
     public $DocBizId;
 
     /**
+     * @var string 知识库ID
+     */
+    public $KnowledgeBizId;
+
+    /**
      * @param string $ReferBizId 引用ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DocType 文档类型 (1 QA, 2 文档段)
@@ -180,6 +187,7 @@ class ReferDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DocBizId 文档ID
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $KnowledgeBizId 知识库ID
      */
     function __construct()
     {
@@ -249,6 +257,10 @@ class ReferDetail extends AbstractModel
 
         if (array_key_exists("DocBizId",$param) and $param["DocBizId"] !== null) {
             $this->DocBizId = $param["DocBizId"];
+        }
+
+        if (array_key_exists("KnowledgeBizId",$param) and $param["KnowledgeBizId"] !== null) {
+            $this->KnowledgeBizId = $param["KnowledgeBizId"];
         }
     }
 }

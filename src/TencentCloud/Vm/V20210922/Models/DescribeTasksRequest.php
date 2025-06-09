@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTasks请求参数结构体
  *
- * @method integer getLimit() 获取该参数表示任务列表每页展示的任务条数，**默认值为10**（每页展示10条任务）。
- * @method void setLimit(integer $Limit) 设置该参数表示任务列表每页展示的任务条数，**默认值为10**（每页展示10条任务）。
+ * @method integer getLimit() 获取该参数表示任务列表每页展示的任务条数，**默认值为10，最大值为100**（每页展示10条任务）。
+ * @method void setLimit(integer $Limit) 设置该参数表示任务列表每页展示的任务条数，**默认值为10，最大值为100**（每页展示10条任务）。
  * @method TaskFilter getFilter() 获取该参数表示任务筛选器的输入参数，可根据业务类型、审核文件类型、处理建议及任务状态筛选想要查看的审核任务，具体参数内容请参见TaskFilter数据结构的详细描述。
  * @method void setFilter(TaskFilter $Filter) 设置该参数表示任务筛选器的输入参数，可根据业务类型、审核文件类型、处理建议及任务状态筛选想要查看的审核任务，具体参数内容请参见TaskFilter数据结构的详细描述。
  * @method string getPageToken() 获取该参数表示翻页时使用的Token信息，由系统自动生成，并在翻页时向下一个生成的页面传递此参数，以方便快速翻页功能的实现。当到最后一页时，该字段为空。
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTasksRequest extends AbstractModel
 {
     /**
-     * @var integer 该参数表示任务列表每页展示的任务条数，**默认值为10**（每页展示10条任务）。
+     * @var integer 该参数表示任务列表每页展示的任务条数，**默认值为10，最大值为100**（每页展示10条任务）。
      */
     public $Limit;
 
@@ -59,7 +59,7 @@ class DescribeTasksRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @param integer $Limit 该参数表示任务列表每页展示的任务条数，**默认值为10**（每页展示10条任务）。
+     * @param integer $Limit 该参数表示任务列表每页展示的任务条数，**默认值为10，最大值为100**（每页展示10条任务）。
      * @param TaskFilter $Filter 该参数表示任务筛选器的输入参数，可根据业务类型、审核文件类型、处理建议及任务状态筛选想要查看的审核任务，具体参数内容请参见TaskFilter数据结构的详细描述。
      * @param string $PageToken 该参数表示翻页时使用的Token信息，由系统自动生成，并在翻页时向下一个生成的页面传递此参数，以方便快速翻页功能的实现。当到最后一页时，该字段为空。
      * @param string $StartTime 该参数表示任务列表的开始时间，格式为ISO8601标准的时间戳。**默认值为最近3天**，若传入该参数，则在这一时间到EndTime之间的任务将会被筛选出来。<br>备注：该参数与Filter共同起到任务筛选作用，二者作用无先后顺序。

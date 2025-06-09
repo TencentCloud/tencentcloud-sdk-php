@@ -27,7 +27,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getPageSize() 获取每页大小
  * @method void setPageSize(integer $PageSize) 设置每页大小
  * @method string getQuery() 获取查询问题
+
+输入特定标识 lke:system:untagged  将查询所有未关联标签的问答
  * @method void setQuery(string $Query) 设置查询问题
+
+输入特定标识 lke:system:untagged  将查询所有未关联标签的问答
  * @method array getAcceptStatus() 获取校验状态(1未校验2采纳3不采纳)
  * @method void setAcceptStatus(array $AcceptStatus) 设置校验状态(1未校验2采纳3不采纳)
  * @method array getReleaseStatus() 获取发布状态(2待发布 3发布中 4已发布 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)
@@ -44,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQaBizIds(array $QaBizIds) 设置QA业务ID列表
  * @method string getQueryType() 获取查询类型 filename 名称、 attribute 标签
  * @method void setQueryType(string $QueryType) 设置查询类型 filename 名称、 attribute 标签
+ * @method integer getShowCurrCate() 获取是否只展示当前分类的数据 0不是，1是
+ * @method void setShowCurrCate(integer $ShowCurrCate) 设置是否只展示当前分类的数据 0不是，1是
  */
 class ListQARequest extends AbstractModel
 {
@@ -64,6 +70,8 @@ class ListQARequest extends AbstractModel
 
     /**
      * @var string 查询问题
+
+输入特定标识 lke:system:untagged  将查询所有未关联标签的问答
      */
     public $Query;
 
@@ -108,10 +116,17 @@ class ListQARequest extends AbstractModel
     public $QueryType;
 
     /**
+     * @var integer 是否只展示当前分类的数据 0不是，1是
+     */
+    public $ShowCurrCate;
+
+    /**
      * @param string $BotBizId 应用ID
      * @param integer $PageNumber 页码
      * @param integer $PageSize 每页大小
      * @param string $Query 查询问题
+
+输入特定标识 lke:system:untagged  将查询所有未关联标签的问答
      * @param array $AcceptStatus 校验状态(1未校验2采纳3不采纳)
      * @param array $ReleaseStatus 发布状态(2待发布 3发布中 4已发布 7审核中 8审核失败 9人工申述中 11人工申述失败 12已过期 13超量失效 14超量失效恢复)
      * @param string $DocBizId 文档ID
@@ -120,6 +135,7 @@ class ListQARequest extends AbstractModel
      * @param string $CateBizId 分类ID
      * @param array $QaBizIds QA业务ID列表
      * @param string $QueryType 查询类型 filename 名称、 attribute 标签
+     * @param integer $ShowCurrCate 是否只展示当前分类的数据 0不是，1是
      */
     function __construct()
     {
@@ -180,6 +196,10 @@ class ListQARequest extends AbstractModel
 
         if (array_key_exists("QueryType",$param) and $param["QueryType"] !== null) {
             $this->QueryType = $param["QueryType"];
+        }
+
+        if (array_key_exists("ShowCurrCate",$param) and $param["ShowCurrCate"] !== null) {
+            $this->ShowCurrCate = $param["ShowCurrCate"];
         }
     }
 }

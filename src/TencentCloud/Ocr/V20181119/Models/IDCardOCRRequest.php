@@ -135,6 +135,7 @@ Config = {"CropIdCard":true,"CropPortrait":true}
 
     /**
      * @var boolean 用于控制是否开启日期校验，默认值为true，打开会进行日期校验。
+     * @deprecated
      */
     public $EnableDateVerify;
 

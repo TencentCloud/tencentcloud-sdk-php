@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置数智人名称
  * @method string getAvatar() 获取图像
  * @method void setAvatar(string $Avatar) 设置图像
+ * @method string getPreviewUrl() 获取预览图
+ * @method void setPreviewUrl(string $PreviewUrl) 设置预览图
  */
 class DigitalHumanConfig extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DigitalHumanConfig extends AbstractModel
     public $Avatar;
 
     /**
+     * @var string 预览图
+     */
+    public $PreviewUrl;
+
+    /**
      * @param string $AssetKey 数智人资产key
      * @param string $Name 数智人名称
      * @param string $Avatar 图像
+     * @param string $PreviewUrl 预览图
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DigitalHumanConfig extends AbstractModel
 
         if (array_key_exists("Avatar",$param) and $param["Avatar"] !== null) {
             $this->Avatar = $param["Avatar"];
+        }
+
+        if (array_key_exists("PreviewUrl",$param) and $param["PreviewUrl"] !== null) {
+            $this->PreviewUrl = $param["PreviewUrl"];
         }
     }
 }

@@ -27,7 +27,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getPageSize() 获取每页数量
  * @method void setPageSize(integer $PageSize) 设置每页数量
  * @method string getQuery() 获取查询内容
+
+输入特定标识 lke:system:untagged  将查询所有未关联标签的文档
  * @method void setQuery(string $Query) 设置查询内容
+
+输入特定标识 lke:system:untagged  将查询所有未关联标签的文档
  * @method array getStatus() 获取文档状态： 1-未生成 2-生成中 3-生成成功 4-生成失败 5-删除中 6-删除成功  7-审核中  8-审核失败 9-审核成功  10-待发布  11-发布中  12-已发布  13-学习中  14-学习失败  15-更新中  16-更新失败  17-解析中  18-解析失败  19-导入失败   20-已过期 21-超量失效 22-超量失效恢复
  * @method void setStatus(array $Status) 设置文档状态： 1-未生成 2-生成中 3-生成成功 4-生成失败 5-删除中 6-删除成功  7-审核中  8-审核失败 9-审核成功  10-待发布  11-发布中  12-已发布  13-学习中  14-学习失败  15-更新中  16-更新失败  17-解析中  18-解析失败  19-导入失败   20-已过期 21-超量失效 22-超量失效恢复
  * @method string getQueryType() 获取查询类型 filename 文档、 attribute 标签
@@ -38,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileTypes(array $FileTypes) 设置文件类型分类筛选
  * @method array getFilterFlag() 获取文档列表筛选标识位
  * @method void setFilterFlag(array $FilterFlag) 设置文档列表筛选标识位
+ * @method integer getShowCurrCate() 获取是否只展示当前分类的数据 0不是，1是
+ * @method void setShowCurrCate(integer $ShowCurrCate) 设置是否只展示当前分类的数据 0不是，1是
  */
 class ListDocRequest extends AbstractModel
 {
@@ -58,6 +64,8 @@ class ListDocRequest extends AbstractModel
 
     /**
      * @var string 查询内容
+
+输入特定标识 lke:system:untagged  将查询所有未关联标签的文档
      */
     public $Query;
 
@@ -87,15 +95,23 @@ class ListDocRequest extends AbstractModel
     public $FilterFlag;
 
     /**
+     * @var integer 是否只展示当前分类的数据 0不是，1是
+     */
+    public $ShowCurrCate;
+
+    /**
      * @param string $BotBizId 应用ID
      * @param integer $PageNumber 页码
      * @param integer $PageSize 每页数量
      * @param string $Query 查询内容
+
+输入特定标识 lke:system:untagged  将查询所有未关联标签的文档
      * @param array $Status 文档状态： 1-未生成 2-生成中 3-生成成功 4-生成失败 5-删除中 6-删除成功  7-审核中  8-审核失败 9-审核成功  10-待发布  11-发布中  12-已发布  13-学习中  14-学习失败  15-更新中  16-更新失败  17-解析中  18-解析失败  19-导入失败   20-已过期 21-超量失效 22-超量失效恢复
      * @param string $QueryType 查询类型 filename 文档、 attribute 标签
      * @param string $CateBizId 分类ID
      * @param array $FileTypes 文件类型分类筛选
      * @param array $FilterFlag 文档列表筛选标识位
+     * @param integer $ShowCurrCate 是否只展示当前分类的数据 0不是，1是
      */
     function __construct()
     {
@@ -149,6 +165,10 @@ class ListDocRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->FilterFlag, $obj);
             }
+        }
+
+        if (array_key_exists("ShowCurrCate",$param) and $param["ShowCurrCate"] !== null) {
+            $this->ShowCurrCate = $param["ShowCurrCate"];
         }
     }
 }

@@ -21,7 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * 描述了定期快照策略的详细信息
  *
  * @method array getDiskIdSet() 获取已绑定当前定期快照策略的云盘ID列表。
+DescribeDiskAssociatedAutoSnapshotPolicy场景下该字段返回为空。
  * @method void setDiskIdSet(array $DiskIdSet) 设置已绑定当前定期快照策略的云盘ID列表。
+DescribeDiskAssociatedAutoSnapshotPolicy场景下该字段返回为空。
  * @method boolean getIsActivated() 获取定期快照策略是否激活。
  * @method void setIsActivated(boolean $IsActivated) 设置定期快照策略是否激活。
  * @method string getAutoSnapshotPolicyState() 获取定期快照策略的状态。取值范围：
@@ -34,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
   <li>NORMAL：正常</li>
   <li>ISOLATED：已隔离</li>
 </ul>
- * @method integer getIsCopyToRemote() 获取是否是跨账号复制快照快照, 1：是, 0: 不是
- * @method void setIsCopyToRemote(integer $IsCopyToRemote) 设置是否是跨账号复制快照快照, 1：是, 0: 不是
+ * @method integer getIsCopyToRemote() 获取是否是跨账号复制快照, 1：是, 0: 不是
+ * @method void setIsCopyToRemote(integer $IsCopyToRemote) 设置是否是跨账号复制快照, 1：是, 0: 不是
  * @method boolean getIsPermanent() 获取使用该定期快照策略创建出来的快照是否永久保留。
  * @method void setIsPermanent(boolean $IsPermanent) 设置使用该定期快照策略创建出来的快照是否永久保留。
  * @method string getNextTriggerTime() 获取定期快照下次触发的时间。
@@ -75,6 +77,7 @@ class AutoSnapshotPolicy extends AbstractModel
 {
     /**
      * @var array 已绑定当前定期快照策略的云盘ID列表。
+DescribeDiskAssociatedAutoSnapshotPolicy场景下该字段返回为空。
      */
     public $DiskIdSet;
 
@@ -93,7 +96,7 @@ class AutoSnapshotPolicy extends AbstractModel
     public $AutoSnapshotPolicyState;
 
     /**
-     * @var integer 是否是跨账号复制快照快照, 1：是, 0: 不是
+     * @var integer 是否是跨账号复制快照, 1：是, 0: 不是
      */
     public $IsCopyToRemote;
 
@@ -172,13 +175,14 @@ class AutoSnapshotPolicy extends AbstractModel
 
     /**
      * @param array $DiskIdSet 已绑定当前定期快照策略的云盘ID列表。
+DescribeDiskAssociatedAutoSnapshotPolicy场景下该字段返回为空。
      * @param boolean $IsActivated 定期快照策略是否激活。
      * @param string $AutoSnapshotPolicyState 定期快照策略的状态。取值范围：
 <ul>
   <li>NORMAL：正常</li>
   <li>ISOLATED：已隔离</li>
 </ul>
-     * @param integer $IsCopyToRemote 是否是跨账号复制快照快照, 1：是, 0: 不是
+     * @param integer $IsCopyToRemote 是否是跨账号复制快照, 1：是, 0: 不是
      * @param boolean $IsPermanent 使用该定期快照策略创建出来的快照是否永久保留。
      * @param string $NextTriggerTime 定期快照下次触发的时间。
      * @param string $AutoSnapshotPolicyName 定期快照策略名称。

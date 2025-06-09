@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVarDesc(string $VarDesc) 设置变量描述，最大支持120个字符
  * @method string getVarType() 获取变量类型定义，支持类型如下：(STRING,INT,FLOAT,BOOL,OBJECT,ARRAY_STRING,ARRAY_INT,ARRAY_FLOAT,ARRAY_BOOL,ARRAY_OBJECT,FILE,DOCUMENT,IMAGE,AUDIO);传输过程是json字符串，标签中仅支持"STRING"类型使用
  * @method void setVarType(string $VarType) 设置变量类型定义，支持类型如下：(STRING,INT,FLOAT,BOOL,OBJECT,ARRAY_STRING,ARRAY_INT,ARRAY_FLOAT,ARRAY_BOOL,ARRAY_OBJECT,FILE,DOCUMENT,IMAGE,AUDIO);传输过程是json字符串，标签中仅支持"STRING"类型使用
+ * @method string getVarDefaultValue() 获取自定义变量默认值
+ * @method void setVarDefaultValue(string $VarDefaultValue) 设置自定义变量默认值
+ * @method string getVarDefaultFileName() 获取自定义变量文件默认名称
+ * @method void setVarDefaultFileName(string $VarDefaultFileName) 设置自定义变量文件默认名称
  */
 class CreateVarRequest extends AbstractModel
 {
@@ -52,10 +56,22 @@ class CreateVarRequest extends AbstractModel
     public $VarType;
 
     /**
+     * @var string 自定义变量默认值
+     */
+    public $VarDefaultValue;
+
+    /**
+     * @var string 自定义变量文件默认名称
+     */
+    public $VarDefaultFileName;
+
+    /**
      * @param string $AppBizId 应用ID
      * @param string $VarName 变量名称，不允许重复，最大支持50个字符
      * @param string $VarDesc 变量描述，最大支持120个字符
      * @param string $VarType 变量类型定义，支持类型如下：(STRING,INT,FLOAT,BOOL,OBJECT,ARRAY_STRING,ARRAY_INT,ARRAY_FLOAT,ARRAY_BOOL,ARRAY_OBJECT,FILE,DOCUMENT,IMAGE,AUDIO);传输过程是json字符串，标签中仅支持"STRING"类型使用
+     * @param string $VarDefaultValue 自定义变量默认值
+     * @param string $VarDefaultFileName 自定义变量文件默认名称
      */
     function __construct()
     {
@@ -84,6 +100,14 @@ class CreateVarRequest extends AbstractModel
 
         if (array_key_exists("VarType",$param) and $param["VarType"] !== null) {
             $this->VarType = $param["VarType"];
+        }
+
+        if (array_key_exists("VarDefaultValue",$param) and $param["VarDefaultValue"] !== null) {
+            $this->VarDefaultValue = $param["VarDefaultValue"];
+        }
+
+        if (array_key_exists("VarDefaultFileName",$param) and $param["VarDefaultFileName"] !== null) {
+            $this->VarDefaultFileName = $param["VarDefaultFileName"];
         }
     }
 }

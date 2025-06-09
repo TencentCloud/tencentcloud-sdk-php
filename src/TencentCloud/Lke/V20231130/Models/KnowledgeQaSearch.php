@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 检索配置
  *
- * @method string getType() 获取知识来源 doc：文档，qa：问答  taskflow：业务流程，search：搜索增强
+ * @method string getType() 获取知识来源 doc：文档，qa：问答  taskflow：业务流程，search：搜索增强，database:数据库
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(string $Type) 设置知识来源 doc：文档，qa：问答  taskflow：业务流程，search：搜索增强
+ * @method void setType(string $Type) 设置知识来源 doc：文档，qa：问答  taskflow：业务流程，search：搜索增强，database:数据库
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getReplyFlexibility() 获取问答-回复灵活度 1：已采纳答案直接回复 2：已采纳润色后回复
 注意：此字段可能返回 null，表示取不到有效值。
@@ -60,7 +60,7 @@ use TencentCloud\Common\AbstractModel;
 class KnowledgeQaSearch extends AbstractModel
 {
     /**
-     * @var string 知识来源 doc：文档，qa：问答  taskflow：业务流程，search：搜索增强
+     * @var string 知识来源 doc：文档，qa：问答  taskflow：业务流程，search：搜索增强，database:数据库
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
@@ -114,7 +114,7 @@ class KnowledgeQaSearch extends AbstractModel
     public $ResourceStatus;
 
     /**
-     * @param string $Type 知识来源 doc：文档，qa：问答  taskflow：业务流程，search：搜索增强
+     * @param string $Type 知识来源 doc：文档，qa：问答  taskflow：业务流程，search：搜索增强，database:数据库
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ReplyFlexibility 问答-回复灵活度 1：已采纳答案直接回复 2：已采纳润色后回复
 注意：此字段可能返回 null，表示取不到有效值。

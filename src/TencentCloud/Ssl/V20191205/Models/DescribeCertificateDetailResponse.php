@@ -340,6 +340,10 @@ null：用户上传证书（没有套餐类型），
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertChainInfo(array $CertChainInfo) 设置证书链信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDomainType() 获取证书域名类型， 1（单域名）；2（多域名）；3（泛域名）；4（多泛域名）
+ * @method void setDomainType(integer $DomainType) 设置证书域名类型， 1（单域名）；2（多域名）；3（泛域名）；4（多泛域名）
+ * @method string getCertType() 获取证书类型，DV（域名型）；OV（企业型）；EV（增强型）
+ * @method void setCertType(string $CertType) 设置证书类型，DV（域名型）；OV（企业型）；EV（增强型）
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -674,6 +678,16 @@ null：用户上传证书（没有套餐类型），
     public $CertChainInfo;
 
     /**
+     * @var integer 证书域名类型， 1（单域名）；2（多域名）；3（泛域名）；4（多泛域名）
+     */
+    public $DomainType;
+
+    /**
+     * @var string 证书类型，DV（域名型）；OV（企业型）；EV（增强型）
+     */
+    public $CertType;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -839,6 +853,8 @@ null：用户上传证书（没有套餐类型），
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CertChainInfo 证书链信息
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DomainType 证书域名类型， 1（单域名）；2（多域名）；3（泛域名）；4（多泛域名）
+     * @param string $CertType 证书类型，DV（域名型）；OV（企业型）；EV（增强型）
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -1039,6 +1055,14 @@ null：用户上传证书（没有套餐类型），
                 $obj->deserialize($value);
                 array_push($this->CertChainInfo, $obj);
             }
+        }
+
+        if (array_key_exists("DomainType",$param) and $param["DomainType"] !== null) {
+            $this->DomainType = $param["DomainType"];
+        }
+
+        if (array_key_exists("CertType",$param) and $param["CertType"] !== null) {
+            $this->CertType = $param["CertType"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

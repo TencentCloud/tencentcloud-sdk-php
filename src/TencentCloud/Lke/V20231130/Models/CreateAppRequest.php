@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppType(string $AppType) 设置应用类型；knowledge_qa-知识问答管理
  * @method BaseConfig getBaseConfig() 获取应用基础配置
  * @method void setBaseConfig(BaseConfig $BaseConfig) 设置应用基础配置
+ * @method string getPattern() 获取应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式
+ * @method void setPattern(string $Pattern) 设置应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式
  */
 class CreateAppRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreateAppRequest extends AbstractModel
     public $BaseConfig;
 
     /**
+     * @var string 应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式
+     */
+    public $Pattern;
+
+    /**
      * @param string $AppType 应用类型；knowledge_qa-知识问答管理
      * @param BaseConfig $BaseConfig 应用基础配置
+     * @param string $Pattern 应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式
      */
     function __construct()
     {
@@ -61,6 +69,10 @@ class CreateAppRequest extends AbstractModel
         if (array_key_exists("BaseConfig",$param) and $param["BaseConfig"] !== null) {
             $this->BaseConfig = new BaseConfig();
             $this->BaseConfig->deserialize($param["BaseConfig"]);
+        }
+
+        if (array_key_exists("Pattern",$param) and $param["Pattern"] !== null) {
+            $this->Pattern = $param["Pattern"];
         }
     }
 }

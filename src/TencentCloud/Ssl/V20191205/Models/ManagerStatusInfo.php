@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method string getExpireTime() 获取过期时间
  * @method void setExpireTime(string $ExpireTime) 设置过期时间
+ * @method array getManagerPreAuditDomains() 获取管理人预审核的域名列表
+ * @method void setManagerPreAuditDomains(array $ManagerPreAuditDomains) 设置管理人预审核的域名列表
  */
 class ManagerStatusInfo extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ManagerStatusInfo extends AbstractModel
     public $ExpireTime;
 
     /**
+     * @var array 管理人预审核的域名列表
+     */
+    public $ManagerPreAuditDomains;
+
+    /**
      * @param string $Type 审核类型，枚举值：ov,ev
      * @param string $Status 审核状态，枚举值：pending,completed,invalid,submitted,expiring,expired
      * @param string $CreateTime 创建时间
      * @param string $ExpireTime 过期时间
+     * @param array $ManagerPreAuditDomains 管理人预审核的域名列表
      */
     function __construct()
     {
@@ -84,6 +92,15 @@ class ManagerStatusInfo extends AbstractModel
 
         if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
             $this->ExpireTime = $param["ExpireTime"];
+        }
+
+        if (array_key_exists("ManagerPreAuditDomains",$param) and $param["ManagerPreAuditDomains"] !== null) {
+            $this->ManagerPreAuditDomains = [];
+            foreach ($param["ManagerPreAuditDomains"] as $key => $value){
+                $obj = new ManagerPreAuditDomain();
+                $obj->deserialize($value);
+                array_push($this->ManagerPreAuditDomains, $obj);
+            }
         }
     }
 }

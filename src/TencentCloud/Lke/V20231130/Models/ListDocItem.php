@@ -150,6 +150,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCustomerKnowledgeId(string $CustomerKnowledgeId) 设置文档的用户自定义ID
  * @method array getAttributeFlags() 获取文档的属性标记，0: 不做用户外部权限校验
  * @method void setAttributeFlags(array $AttributeFlags) 设置文档的属性标记，0: 不做用户外部权限校验
+ * @method boolean getIsDisabled() 获取false:未停用，ture:已停用
+ * @method void setIsDisabled(boolean $IsDisabled) 设置false:未停用，ture:已停用
  */
 class ListDocItem extends AbstractModel
 {
@@ -355,6 +357,11 @@ class ListDocItem extends AbstractModel
     public $AttributeFlags;
 
     /**
+     * @var boolean false:未停用，ture:已停用
+     */
+    public $IsDisabled;
+
+    /**
      * @param string $DocBizId 文档ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileName 文件名称
@@ -420,6 +427,7 @@ class ListDocItem extends AbstractModel
      * @param string $CateBizId 文档所属分类ID
      * @param string $CustomerKnowledgeId 文档的用户自定义ID
      * @param array $AttributeFlags 文档的属性标记，0: 不做用户外部权限校验
+     * @param boolean $IsDisabled false:未停用，ture:已停用
      */
     function __construct()
     {
@@ -573,6 +581,10 @@ class ListDocItem extends AbstractModel
 
         if (array_key_exists("AttributeFlags",$param) and $param["AttributeFlags"] !== null) {
             $this->AttributeFlags = $param["AttributeFlags"];
+        }
+
+        if (array_key_exists("IsDisabled",$param) and $param["IsDisabled"] !== null) {
+            $this->IsDisabled = $param["IsDisabled"];
         }
     }
 }

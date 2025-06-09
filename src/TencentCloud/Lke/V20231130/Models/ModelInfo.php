@@ -76,6 +76,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsExclusive(boolean $IsExclusive) 设置是否专属并发模型
  * @method integer getSupportAiCallStatus() 获取模型支持智能通话效果
  * @method void setSupportAiCallStatus(integer $SupportAiCallStatus) 设置模型支持智能通话效果
+ * @method integer getConcurrency() 获取专属并发数
+ * @method void setConcurrency(integer $Concurrency) 设置专属并发数
  */
 class ModelInfo extends AbstractModel
 {
@@ -180,6 +182,11 @@ class ModelInfo extends AbstractModel
     public $SupportAiCallStatus;
 
     /**
+     * @var integer 专属并发数
+     */
+    public $Concurrency;
+
+    /**
      * @param string $ModelName 模型名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModelDesc 模型描述
@@ -208,6 +215,7 @@ class ModelInfo extends AbstractModel
      * @param integer $RoleLenLimit 角色提示词输入长度限制
      * @param boolean $IsExclusive 是否专属并发模型
      * @param integer $SupportAiCallStatus 模型支持智能通话效果
+     * @param integer $Concurrency 专属并发数
      */
     function __construct()
     {
@@ -295,6 +303,10 @@ class ModelInfo extends AbstractModel
 
         if (array_key_exists("SupportAiCallStatus",$param) and $param["SupportAiCallStatus"] !== null) {
             $this->SupportAiCallStatus = $param["SupportAiCallStatus"];
+        }
+
+        if (array_key_exists("Concurrency",$param) and $param["Concurrency"] !== null) {
+            $this->Concurrency = $param["Concurrency"];
         }
     }
 }

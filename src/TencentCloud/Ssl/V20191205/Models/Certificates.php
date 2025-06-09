@@ -310,6 +310,8 @@ null：用户上传证书（没有套餐类型），
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostingConfig(HostingConfig $HostingConfig) 设置托管配置信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsHostingUploadRenewCert() 获取是否是上传托管续费证书
+ * @method void setIsHostingUploadRenewCert(boolean $IsHostingUploadRenewCert) 设置是否是上传托管续费证书
  */
 class Certificates extends AbstractModel
 {
@@ -683,6 +685,11 @@ null：用户上传证书（没有套餐类型），
     public $HostingConfig;
 
     /**
+     * @var boolean 是否是上传托管续费证书
+     */
+    public $IsHostingUploadRenewCert;
+
+    /**
      * @param string $OwnerUin 用户 UIN。
      * @param string $ProjectId 项目 ID。
      * @param string $From 证书来源：
@@ -828,6 +835,7 @@ null：用户上传证书（没有套餐类型），
      * @param array $HostingResourceTypes 托管资源类型列表
      * @param HostingConfig $HostingConfig 托管配置信息
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsHostingUploadRenewCert 是否是上传托管续费证书
      */
     function __construct()
     {
@@ -1074,6 +1082,10 @@ null：用户上传证书（没有套餐类型），
         if (array_key_exists("HostingConfig",$param) and $param["HostingConfig"] !== null) {
             $this->HostingConfig = new HostingConfig();
             $this->HostingConfig->deserialize($param["HostingConfig"]);
+        }
+
+        if (array_key_exists("IsHostingUploadRenewCert",$param) and $param["IsHostingUploadRenewCert"] !== null) {
+            $this->IsHostingUploadRenewCert = $param["IsHostingUploadRenewCert"];
         }
     }
 }

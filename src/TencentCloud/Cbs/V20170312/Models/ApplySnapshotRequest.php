@@ -25,7 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDiskId() 获取快照原云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
  * @method void setDiskId(string $DiskId) 设置快照原云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
  * @method boolean getAutoStopInstance() 获取回滚前是否执行自动关机，仅支持回滚快照至已挂载的云硬盘时传入。
+此参数为true时，AutoStartInstance才能为true。
  * @method void setAutoStopInstance(boolean $AutoStopInstance) 设置回滚前是否执行自动关机，仅支持回滚快照至已挂载的云硬盘时传入。
+此参数为true时，AutoStartInstance才能为true。
  * @method boolean getAutoStartInstance() 获取回滚完成后是否自动开机，仅支持回滚快照至已挂载的云硬盘时传入。该参数传入时，需要同时传入AutoStopInstance参数。
  * @method void setAutoStartInstance(boolean $AutoStartInstance) 设置回滚完成后是否自动开机，仅支持回滚快照至已挂载的云硬盘时传入。该参数传入时，需要同时传入AutoStopInstance参数。
  */
@@ -43,6 +45,7 @@ class ApplySnapshotRequest extends AbstractModel
 
     /**
      * @var boolean 回滚前是否执行自动关机，仅支持回滚快照至已挂载的云硬盘时传入。
+此参数为true时，AutoStartInstance才能为true。
      */
     public $AutoStopInstance;
 
@@ -55,6 +58,7 @@ class ApplySnapshotRequest extends AbstractModel
      * @param string $SnapshotId 快照ID, 可通过[DescribeSnapshots](/document/product/362/15647)查询。
      * @param string $DiskId 快照原云硬盘ID，可通过[DescribeDisks](/document/product/362/16315)接口查询。
      * @param boolean $AutoStopInstance 回滚前是否执行自动关机，仅支持回滚快照至已挂载的云硬盘时传入。
+此参数为true时，AutoStartInstance才能为true。
      * @param boolean $AutoStartInstance 回滚完成后是否自动开机，仅支持回滚快照至已挂载的云硬盘时传入。该参数传入时，需要同时传入AutoStopInstance参数。
      */
     function __construct()

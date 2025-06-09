@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAttrLabels(array $AttrLabels) 设置标签
  * @method string getCateBizId() 获取分类ID
  * @method void setCateBizId(string $CateBizId) 设置分类ID
+ * @method boolean getIsDisabled() 获取文档是否停用，false:未停用，true:已停用
+ * @method void setIsDisabled(boolean $IsDisabled) 设置文档是否停用，false:未停用，true:已停用
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -194,6 +196,11 @@ class DescribeDocResponse extends AbstractModel
     public $CateBizId;
 
     /**
+     * @var boolean 文档是否停用，false:未停用，true:已停用
+     */
+    public $IsDisabled;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -223,6 +230,7 @@ class DescribeDocResponse extends AbstractModel
      * @param integer $AttrRange 标签适用范围 1：全部，2：按条件范围
      * @param array $AttrLabels 标签
      * @param string $CateBizId 分类ID
+     * @param boolean $IsDisabled 文档是否停用，false:未停用，true:已停用
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -337,6 +345,10 @@ class DescribeDocResponse extends AbstractModel
 
         if (array_key_exists("CateBizId",$param) and $param["CateBizId"] !== null) {
             $this->CateBizId = $param["CateBizId"];
+        }
+
+        if (array_key_exists("IsDisabled",$param) and $param["IsDisabled"] !== null) {
+            $this->IsDisabled = $param["IsDisabled"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

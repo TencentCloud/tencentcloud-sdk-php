@@ -30,8 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页返回，页编号，默认值为第0页
  * @method string getDatabaseName() 获取按照备份的库名称筛选，不填则不筛选此项
  * @method void setDatabaseName(string $DatabaseName) 设置按照备份的库名称筛选，不填则不筛选此项
- * @method string getOrderBy() 获取列表项排序，目前只按照备份大小排序（desc-降序，asc-升序），默认desc
- * @method void setOrderBy(string $OrderBy) 设置列表项排序，目前只按照备份大小排序（desc-降序，asc-升序），默认desc
+ * @method string getOrderBy() 获取列表项排序，desc-降序、asc-升序，按size排序默认desc，按database排序默认asc
+ * @method void setOrderBy(string $OrderBy) 设置列表项排序，desc-降序、asc-升序，按size排序默认desc，按database排序默认asc
+ * @method string getOrderByType() 获取排序字段（Size-按备份大小排序，DBs-按数据库名称排序），默认size
+ * @method void setOrderByType(string $OrderByType) 设置排序字段（Size-按备份大小排序，DBs-按数据库名称排序），默认size
  */
 class DescribeBackupFilesRequest extends AbstractModel
 {
@@ -61,9 +63,14 @@ class DescribeBackupFilesRequest extends AbstractModel
     public $DatabaseName;
 
     /**
-     * @var string 列表项排序，目前只按照备份大小排序（desc-降序，asc-升序），默认desc
+     * @var string 列表项排序，desc-降序、asc-升序，按size排序默认desc，按database排序默认asc
      */
     public $OrderBy;
+
+    /**
+     * @var string 排序字段（Size-按备份大小排序，DBs-按数据库名称排序），默认size
+     */
+    public $OrderByType;
 
     /**
      * @param string $InstanceId 实例ID，形如mssql-njj2mtpl
@@ -71,7 +78,8 @@ class DescribeBackupFilesRequest extends AbstractModel
      * @param integer $Limit 分页返回，每页返回的数目，取值为1-100，默认值为20
      * @param integer $Offset 分页返回，页编号，默认值为第0页
      * @param string $DatabaseName 按照备份的库名称筛选，不填则不筛选此项
-     * @param string $OrderBy 列表项排序，目前只按照备份大小排序（desc-降序，asc-升序），默认desc
+     * @param string $OrderBy 列表项排序，desc-降序、asc-升序，按size排序默认desc，按database排序默认asc
+     * @param string $OrderByType 排序字段（Size-按备份大小排序，DBs-按数据库名称排序），默认size
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DescribeBackupFilesRequest extends AbstractModel
 
         if (array_key_exists("OrderBy",$param) and $param["OrderBy"] !== null) {
             $this->OrderBy = $param["OrderBy"];
+        }
+
+        if (array_key_exists("OrderByType",$param) and $param["OrderByType"] !== null) {
+            $this->OrderByType = $param["OrderByType"];
         }
     }
 }

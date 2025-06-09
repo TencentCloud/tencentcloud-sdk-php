@@ -25,6 +25,7 @@ use TencentCloud\Tke\V20220501\Models as Models;
 /**
  * @method Models\CreateHealthCheckPolicyResponse CreateHealthCheckPolicy(Models\CreateHealthCheckPolicyRequest $req) 创建健康检测策略
  * @method Models\CreateNodePoolResponse CreateNodePool(Models\CreateNodePoolRequest $req) 创建 TKE 节点池
+ * @method Models\DeleteClusterMachinesResponse DeleteClusterMachines(Models\DeleteClusterMachinesRequest $req) 删除原生节点池节点
  * @method Models\DeleteHealthCheckPolicyResponse DeleteHealthCheckPolicy(Models\DeleteHealthCheckPolicyRequest $req) 删除健康检测策略
  * @method Models\DeleteNodePoolResponse DeleteNodePool(Models\DeleteNodePoolRequest $req) 删除 TKE 节点池
  * @method Models\DescribeClusterInstancesResponse DescribeClusterInstances(Models\DescribeClusterInstancesRequest $req) 查询集群下节点实例信息

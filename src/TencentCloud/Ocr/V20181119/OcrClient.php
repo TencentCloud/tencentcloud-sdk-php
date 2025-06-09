@@ -316,9 +316,6 @@ use TencentCloud\Ocr\V20181119\Models as Models;
         </tr>
         <tr>
           <td rowspan="9">告警功能</td>
-          <td>身份证有效日期不合法，即有效日期不符合5年、10年、20年、长期期限
-
-</td>
         </tr>
         <tr>
           <td>身份证边框不完整告警</td>

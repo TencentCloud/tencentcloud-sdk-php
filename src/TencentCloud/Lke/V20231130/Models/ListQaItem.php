@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSimilarQuestionNum(integer $SimilarQuestionNum) 设置相似问个数
  * @method string getSimilarQuestionTips() 获取返回问答关联的相似问,联动搜索,仅展示一条
  * @method void setSimilarQuestionTips(string $SimilarQuestionTips) 设置返回问答关联的相似问,联动搜索,仅展示一条
+ * @method boolean getIsDisabled() 获取问答是否停用，false:未停用，ture:已停用
+ * @method void setIsDisabled(boolean $IsDisabled) 设置问答是否停用，false:未停用，ture:已停用
  */
 class ListQaItem extends AbstractModel
 {
@@ -178,6 +180,11 @@ class ListQaItem extends AbstractModel
     public $SimilarQuestionTips;
 
     /**
+     * @var boolean 问答是否停用，false:未停用，ture:已停用
+     */
+    public $IsDisabled;
+
+    /**
      * @param string $QaBizId 问答ID
      * @param string $Question 问题
      * @param string $Answer 答案
@@ -200,6 +207,7 @@ class ListQaItem extends AbstractModel
      * @param array $AttrLabels 属性标签
      * @param integer $SimilarQuestionNum 相似问个数
      * @param string $SimilarQuestionTips 返回问答关联的相似问,联动搜索,仅展示一条
+     * @param boolean $IsDisabled 问答是否停用，false:未停用，ture:已停用
      */
     function __construct()
     {
@@ -305,6 +313,10 @@ class ListQaItem extends AbstractModel
 
         if (array_key_exists("SimilarQuestionTips",$param) and $param["SimilarQuestionTips"] !== null) {
             $this->SimilarQuestionTips = $param["SimilarQuestionTips"];
+        }
+
+        if (array_key_exists("IsDisabled",$param) and $param["IsDisabled"] !== null) {
+            $this->IsDisabled = $param["IsDisabled"];
         }
     }
 }

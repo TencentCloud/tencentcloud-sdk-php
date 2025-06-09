@@ -1,0 +1,65 @@
+<?php
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Trtc\V20190722\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * 声纹配置参数
+ *
+ * @method integer getMode() 获取默认为0，表示不启用声纹。1表示使用固定声纹，且需要填写voiceprint id。2表示使用动态声纹，不需要使用voiceprint id，内部动态选择主讲人声纹
+ * @method void setMode(integer $Mode) 设置默认为0，表示不启用声纹。1表示使用固定声纹，且需要填写voiceprint id。2表示使用动态声纹，不需要使用voiceprint id，内部动态选择主讲人声纹
+ * @method array getIdList() 获取只有当VoicePrint Mode为1时需要填写，目前仅支持填写一个声纹id
+ * @method void setIdList(array $IdList) 设置只有当VoicePrint Mode为1时需要填写，目前仅支持填写一个声纹id
+ */
+class VoicePrint extends AbstractModel
+{
+    /**
+     * @var integer 默认为0，表示不启用声纹。1表示使用固定声纹，且需要填写voiceprint id。2表示使用动态声纹，不需要使用voiceprint id，内部动态选择主讲人声纹
+     */
+    public $Mode;
+
+    /**
+     * @var array 只有当VoicePrint Mode为1时需要填写，目前仅支持填写一个声纹id
+     */
+    public $IdList;
+
+    /**
+     * @param integer $Mode 默认为0，表示不启用声纹。1表示使用固定声纹，且需要填写voiceprint id。2表示使用动态声纹，不需要使用voiceprint id，内部动态选择主讲人声纹
+     * @param array $IdList 只有当VoicePrint Mode为1时需要填写，目前仅支持填写一个声纹id
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("Mode",$param) and $param["Mode"] !== null) {
+            $this->Mode = $param["Mode"];
+        }
+
+        if (array_key_exists("IdList",$param) and $param["IdList"] !== null) {
+            $this->IdList = $param["IdList"];
+        }
+    }
+}

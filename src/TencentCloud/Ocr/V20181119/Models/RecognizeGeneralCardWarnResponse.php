@@ -54,6 +54,14 @@ MainlandPermit：港澳台来往内地通行证
  * @method void setReflection(GeneralCardWarnInfo $Reflection) 设置反光信息
  * @method GeneralCardWarnInfo getReprint() 获取翻拍件信息
  * @method void setReprint(GeneralCardWarnInfo $Reprint) 设置翻拍件信息
+ * @method GeneralCardWarnInfo getScreenshot() 获取是否截图
+ * @method void setScreenshot(GeneralCardWarnInfo $Screenshot) 设置是否截图
+ * @method GeneralCardWarnInfo getCover() 获取是否遮挡
+ * @method void setCover(GeneralCardWarnInfo $Cover) 设置是否遮挡
+ * @method GeneralCardWarnInfo getOverlap() 获取是否重叠
+ * @method void setOverlap(GeneralCardWarnInfo $Overlap) 设置是否重叠
+ * @method GeneralCardWarnInfo getWatermark() 获取是否水印
+ * @method void setWatermark(GeneralCardWarnInfo $Watermark) 设置是否水印
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -105,6 +113,26 @@ MainlandPermit：港澳台来往内地通行证
     public $Reprint;
 
     /**
+     * @var GeneralCardWarnInfo 是否截图
+     */
+    public $Screenshot;
+
+    /**
+     * @var GeneralCardWarnInfo 是否遮挡
+     */
+    public $Cover;
+
+    /**
+     * @var GeneralCardWarnInfo 是否重叠
+     */
+    public $Overlap;
+
+    /**
+     * @var GeneralCardWarnInfo 是否水印
+     */
+    public $Watermark;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -127,6 +155,10 @@ MainlandPermit：港澳台来往内地通行证
      * @param GeneralCardWarnInfo $Ps ps篡改信息
      * @param GeneralCardWarnInfo $Reflection 反光信息
      * @param GeneralCardWarnInfo $Reprint 翻拍件信息
+     * @param GeneralCardWarnInfo $Screenshot 是否截图
+     * @param GeneralCardWarnInfo $Cover 是否遮挡
+     * @param GeneralCardWarnInfo $Overlap 是否重叠
+     * @param GeneralCardWarnInfo $Watermark 是否水印
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -174,6 +206,26 @@ MainlandPermit：港澳台来往内地通行证
         if (array_key_exists("Reprint",$param) and $param["Reprint"] !== null) {
             $this->Reprint = new GeneralCardWarnInfo();
             $this->Reprint->deserialize($param["Reprint"]);
+        }
+
+        if (array_key_exists("Screenshot",$param) and $param["Screenshot"] !== null) {
+            $this->Screenshot = new GeneralCardWarnInfo();
+            $this->Screenshot->deserialize($param["Screenshot"]);
+        }
+
+        if (array_key_exists("Cover",$param) and $param["Cover"] !== null) {
+            $this->Cover = new GeneralCardWarnInfo();
+            $this->Cover->deserialize($param["Cover"]);
+        }
+
+        if (array_key_exists("Overlap",$param) and $param["Overlap"] !== null) {
+            $this->Overlap = new GeneralCardWarnInfo();
+            $this->Overlap->deserialize($param["Overlap"]);
+        }
+
+        if (array_key_exists("Watermark",$param) and $param["Watermark"] !== null) {
+            $this->Watermark = new GeneralCardWarnInfo();
+            $this->Watermark->deserialize($param["Watermark"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

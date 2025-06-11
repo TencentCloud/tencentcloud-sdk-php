@@ -36,6 +36,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageAreaBoxes(array $ImageAreaBoxes) 设置需要擦除的多个框选区域，最多开启16个区域。
 注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getDetectTypes() 获取图片框选区域类型，可选值：
+<li>logo：图标；</li>
+<li>text：文字；</li>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDetectTypes(array $DetectTypes) 设置图片框选区域类型，可选值：
+<li>logo：图标；</li>
+<li>text：文字；</li>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImageEraseLogoConfig extends AbstractModel
 {
@@ -56,6 +64,14 @@ class ImageEraseLogoConfig extends AbstractModel
     public $ImageAreaBoxes;
 
     /**
+     * @var array 图片框选区域类型，可选值：
+<li>logo：图标；</li>
+<li>text：文字；</li>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DetectTypes;
+
+    /**
      * @param string $Switch 能力配置开关，可选值：
 <li>ON：开启；</li>
 <li>OFF：关闭。</li>
@@ -63,6 +79,10 @@ class ImageEraseLogoConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ImageAreaBoxes 需要擦除的多个框选区域，最多开启16个区域。
 注意：此字段可能返回 null，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $DetectTypes 图片框选区域类型，可选值：
+<li>logo：图标；</li>
+<li>text：文字；</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -89,6 +109,10 @@ class ImageEraseLogoConfig extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ImageAreaBoxes, $obj);
             }
+        }
+
+        if (array_key_exists("DetectTypes",$param) and $param["DetectTypes"] !== null) {
+            $this->DetectTypes = $param["DetectTypes"];
         }
     }
 }

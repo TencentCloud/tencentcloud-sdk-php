@@ -30,6 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemory(float $Memory) 设置节点上的总内存数
  * @method float getGpu() 获取节点上的总 GPU 卡数
  * @method void setGpu(float $Gpu) 设置节点上的总 GPU 卡数
+ * @method string getQuotaType() 获取节点资源的配额类型，exact表示精确配额，fuzzy 表示模糊配额。
+ * @method void setQuotaType(string $QuotaType) 设置节点资源的配额类型，exact表示精确配额，fuzzy 表示模糊配额。
+ * @method string getChargeType() 获取配额的计费类型，PREPAID表示包月，POSTPAID_BY_HOUR表示按量。
+ * @method void setChargeType(string $ChargeType) 设置配额的计费类型，PREPAID表示包月，POSTPAID_BY_HOUR表示按量。
+ * @method string getResourceType() 获取QuotaType为 exact 时，此字段有效，表示精确配额的资源类型。
+ * @method void setResourceType(string $ResourceType) 设置QuotaType为 exact 时，此字段有效，表示精确配额的资源类型。
+ * @method string getDisasterRecoverGroupId() 获取置放群组 ID
+ * @method void setDisasterRecoverGroupId(string $DisasterRecoverGroupId) 设置置放群组 ID
  */
 class SuperNodeResource extends AbstractModel
 {
@@ -59,11 +67,35 @@ class SuperNodeResource extends AbstractModel
     public $Gpu;
 
     /**
+     * @var string 节点资源的配额类型，exact表示精确配额，fuzzy 表示模糊配额。
+     */
+    public $QuotaType;
+
+    /**
+     * @var string 配额的计费类型，PREPAID表示包月，POSTPAID_BY_HOUR表示按量。
+     */
+    public $ChargeType;
+
+    /**
+     * @var string QuotaType为 exact 时，此字段有效，表示精确配额的资源类型。
+     */
+    public $ResourceType;
+
+    /**
+     * @var string 置放群组 ID
+     */
+    public $DisasterRecoverGroupId;
+
+    /**
      * @param string $NodeName 节点名称
      * @param integer $Num 节点上的资源总数
      * @param float $Cpu 节点上的总核数
      * @param float $Memory 节点上的总内存数
      * @param float $Gpu 节点上的总 GPU 卡数
+     * @param string $QuotaType 节点资源的配额类型，exact表示精确配额，fuzzy 表示模糊配额。
+     * @param string $ChargeType 配额的计费类型，PREPAID表示包月，POSTPAID_BY_HOUR表示按量。
+     * @param string $ResourceType QuotaType为 exact 时，此字段有效，表示精确配额的资源类型。
+     * @param string $DisasterRecoverGroupId 置放群组 ID
      */
     function __construct()
     {
@@ -96,6 +128,22 @@ class SuperNodeResource extends AbstractModel
 
         if (array_key_exists("Gpu",$param) and $param["Gpu"] !== null) {
             $this->Gpu = $param["Gpu"];
+        }
+
+        if (array_key_exists("QuotaType",$param) and $param["QuotaType"] !== null) {
+            $this->QuotaType = $param["QuotaType"];
+        }
+
+        if (array_key_exists("ChargeType",$param) and $param["ChargeType"] !== null) {
+            $this->ChargeType = $param["ChargeType"];
+        }
+
+        if (array_key_exists("ResourceType",$param) and $param["ResourceType"] !== null) {
+            $this->ResourceType = $param["ResourceType"];
+        }
+
+        if (array_key_exists("DisasterRecoverGroupId",$param) and $param["DisasterRecoverGroupId"] !== null) {
+            $this->DisasterRecoverGroupId = $param["DisasterRecoverGroupId"];
         }
     }
 }

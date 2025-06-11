@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
 - 敏感信息包括：Response.Text.IdCard、Response.Text.Name、Response.Text.OcrIdCard、Response.Text.OcrName。
  * @method boolean getIsEncryptResponse() 获取是否对回包整体进行加密。
  * @method void setIsEncryptResponse(boolean $IsEncryptResponse) 设置是否对回包整体进行加密。
+ * @method boolean getIsReturnAllVideo() 获取是否需要返回认证中间过程的刷脸重试视频，默认不开启，多段视频需要存储到COS空间中，因此开启后还需要额外开启数据存储服务才可生效。详见[数据存储指引](https://cloud.tencent.com/document/product/1007/104229)。
+ * @method void setIsReturnAllVideo(boolean $IsReturnAllVideo) 设置是否需要返回认证中间过程的刷脸重试视频，默认不开启，多段视频需要存储到COS空间中，因此开启后还需要额外开启数据存储服务才可生效。详见[数据存储指引](https://cloud.tencent.com/document/product/1007/104229)。
  */
 class GetDetectInfoEnhancedRequest extends AbstractModel
 {
@@ -123,6 +125,11 @@ class GetDetectInfoEnhancedRequest extends AbstractModel
     public $IsEncryptResponse;
 
     /**
+     * @var boolean 是否需要返回认证中间过程的刷脸重试视频，默认不开启，多段视频需要存储到COS空间中，因此开启后还需要额外开启数据存储服务才可生效。详见[数据存储指引](https://cloud.tencent.com/document/product/1007/104229)。
+     */
+    public $IsReturnAllVideo;
+
+    /**
      * @param string $BizToken 人脸核身流程的标识，调用[DetectAuth](https://cloud.tencent.com/document/product/1007/31816)接口时生成。
      * @param string $RuleId 用于细分客户使用场景，由腾讯侧在线下对接时分配。
      * @param string $InfoType 指定拉取的结果信息。
@@ -144,6 +151,7 @@ class GetDetectInfoEnhancedRequest extends AbstractModel
 - 只需指定加密算法Algorithm即可，其余字段传入默认值。
 - 敏感信息包括：Response.Text.IdCard、Response.Text.Name、Response.Text.OcrIdCard、Response.Text.OcrName。
      * @param boolean $IsEncryptResponse 是否对回包整体进行加密。
+     * @param boolean $IsReturnAllVideo 是否需要返回认证中间过程的刷脸重试视频，默认不开启，多段视频需要存储到COS空间中，因此开启后还需要额外开启数据存储服务才可生效。详见[数据存储指引](https://cloud.tencent.com/document/product/1007/104229)。
      */
     function __construct()
     {
@@ -193,6 +201,10 @@ class GetDetectInfoEnhancedRequest extends AbstractModel
 
         if (array_key_exists("IsEncryptResponse",$param) and $param["IsEncryptResponse"] !== null) {
             $this->IsEncryptResponse = $param["IsEncryptResponse"];
+        }
+
+        if (array_key_exists("IsReturnAllVideo",$param) and $param["IsReturnAllVideo"] !== null) {
+            $this->IsReturnAllVideo = $param["IsReturnAllVideo"];
         }
     }
 }

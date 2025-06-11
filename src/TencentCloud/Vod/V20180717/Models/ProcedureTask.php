@@ -101,11 +101,13 @@ class ProcedureTask extends AbstractModel
 
     /**
      * @var integer 已弃用，请使用各个具体任务的 ErrCode。
+     * @deprecated
      */
     public $ErrCode;
 
     /**
      * @var string 已弃用，请使用各个具体任务的 Message。
+     * @deprecated
      */
     public $Message;
 

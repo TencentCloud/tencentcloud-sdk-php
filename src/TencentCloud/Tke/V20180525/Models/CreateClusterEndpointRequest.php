@@ -42,6 +42,8 @@ InternetAccessible.InternetChargeType含义：TRAFFIC_POSTPAID_BY_HOUR按流量�
 InternetMaxBandwidthOut含义：最大出带宽，单位Mbps，范围支持0到2048，默认值10。
 VipIsp含义：CMCC | CTCC | CUCC，分别对应 移动 | 电信 | 联通，如果不指定本参数，则默认使用BGP。可通过 DescribeSingleIsp 接口查询一个地域所支持的Isp。如果指定运营商，则网络计费式只能使用按带宽包计费BANDWIDTH_PACKAGE。
 BandwidthPackageId含义：带宽包ID，指定此参数时，网络计费方式InternetAccessible.InternetChargeType只支持按带宽包计费BANDWIDTH_PACKAGE。
+ * @method string getExistedLoadBalancerId() 获取使用已有clb开启内网或外网访问
+ * @method void setExistedLoadBalancerId(string $ExistedLoadBalancerId) 设置使用已有clb开启内网或外网访问
  */
 class CreateClusterEndpointRequest extends AbstractModel
 {
@@ -81,6 +83,11 @@ BandwidthPackageId含义：带宽包ID，指定此参数时，网络计费方式
     public $ExtensiveParameters;
 
     /**
+     * @var string 使用已有clb开启内网或外网访问
+     */
+    public $ExistedLoadBalancerId;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $SubnetId 集群端口所在的子网ID  (仅在开启非外网访问时需要填，必须为集群所在VPC内的子网)
      * @param boolean $IsExtranet 是否为外网访问（TRUE 外网访问 FALSE 内网访问，默认值： FALSE）
@@ -92,6 +99,7 @@ InternetAccessible.InternetChargeType含义：TRAFFIC_POSTPAID_BY_HOUR按流量�
 InternetMaxBandwidthOut含义：最大出带宽，单位Mbps，范围支持0到2048，默认值10。
 VipIsp含义：CMCC | CTCC | CUCC，分别对应 移动 | 电信 | 联通，如果不指定本参数，则默认使用BGP。可通过 DescribeSingleIsp 接口查询一个地域所支持的Isp。如果指定运营商，则网络计费式只能使用按带宽包计费BANDWIDTH_PACKAGE。
 BandwidthPackageId含义：带宽包ID，指定此参数时，网络计费方式InternetAccessible.InternetChargeType只支持按带宽包计费BANDWIDTH_PACKAGE。
+     * @param string $ExistedLoadBalancerId 使用已有clb开启内网或外网访问
      */
     function __construct()
     {
@@ -128,6 +136,10 @@ BandwidthPackageId含义：带宽包ID，指定此参数时，网络计费方式
 
         if (array_key_exists("ExtensiveParameters",$param) and $param["ExtensiveParameters"] !== null) {
             $this->ExtensiveParameters = $param["ExtensiveParameters"];
+        }
+
+        if (array_key_exists("ExistedLoadBalancerId",$param) and $param["ExistedLoadBalancerId"] !== null) {
+            $this->ExistedLoadBalancerId = $param["ExistedLoadBalancerId"];
         }
     }
 }

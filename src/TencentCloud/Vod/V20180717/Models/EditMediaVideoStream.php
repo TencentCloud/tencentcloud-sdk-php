@@ -31,9 +31,9 @@ use TencentCloud\Common\AbstractModel;
 <li>av1：AOMedia Video 1 编码；</li>
 <li>H.266：H.266 编码。</li>
  * @method integer getBitrate() 获取视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
-当取值为 0 或不填时，表示自动选择最佳视频码率。
+当取值为 0 或不填时，表示由云点播自动设置码率。
  * @method void setBitrate(integer $Bitrate) 设置视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
-当取值为 0 或不填时，表示自动选择最佳视频码率。
+当取值为 0 或不填时，表示由云点播自动设置码率。
  * @method string getResolutionAdaptive() 获取分辨率自适应，可选值：
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
@@ -86,7 +86,7 @@ class EditMediaVideoStream extends AbstractModel
 
     /**
      * @var integer 视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
-当取值为 0 或不填时，表示自动选择最佳视频码率。
+当取值为 0 或不填时，表示由云点播自动设置码率。
      */
     public $Bitrate;
 
@@ -132,7 +132,7 @@ class EditMediaVideoStream extends AbstractModel
 <li>av1：AOMedia Video 1 编码；</li>
 <li>H.266：H.266 编码。</li>
      * @param integer $Bitrate 视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
-当取值为 0 或不填时，表示自动选择最佳视频码率。
+当取值为 0 或不填时，表示由云点播自动设置码率。
      * @param string $ResolutionAdaptive 分辨率自适应，可选值：
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>

@@ -59,9 +59,9 @@ use TencentCloud\Common\AbstractModel;
 
 默认值：open。
  * @method integer getBitrate() 获取视频流的码率，取值范围：0 和 [128, 10000]，单位：kbps。
-当取值为 0，表示视频码率和原始视频保持一致。
+当取值为 0，表示由云点播自动设置码率。
  * @method void setBitrate(integer $Bitrate) 设置视频流的码率，取值范围：0 和 [128, 10000]，单位：kbps。
-当取值为 0，表示视频码率和原始视频保持一致。
+当取值为 0，表示由云点播自动设置码率。
  */
 class VideoConfigureInfoForUpdate extends AbstractModel
 {
@@ -98,7 +98,7 @@ class VideoConfigureInfoForUpdate extends AbstractModel
 
     /**
      * @var integer 视频流的码率，取值范围：0 和 [128, 10000]，单位：kbps。
-当取值为 0，表示视频码率和原始视频保持一致。
+当取值为 0，表示由云点播自动设置码率。
      */
     public $Bitrate;
 
@@ -123,7 +123,7 @@ class VideoConfigureInfoForUpdate extends AbstractModel
 
 默认值：open。
      * @param integer $Bitrate 视频流的码率，取值范围：0 和 [128, 10000]，单位：kbps。
-当取值为 0，表示视频码率和原始视频保持一致。
+当取值为 0，表示由云点播自动设置码率。
      */
     function __construct()
     {

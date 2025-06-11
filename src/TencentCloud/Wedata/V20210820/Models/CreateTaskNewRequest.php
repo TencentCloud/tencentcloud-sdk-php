@@ -40,10 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopCoordinate(float $TopCoordinate) 设置画布坐标纵轴
  * @method string getTaskFolderId() 获取工作流目录ID
  * @method void setTaskFolderId(string $TaskFolderId) 设置工作流目录ID
- * @method string getContent() 获取指定脚本内容，base64编码
- * @method void setContent(string $Content) 设置指定脚本内容，base64编码
- * @method string getCodeTemplateId() 获取代码模版ID
- * @method void setCodeTemplateId(string $CodeTemplateId) 设置代码模版ID
+ * @method string getContent() 获取（必填参数）指定脚本内容，base64编码
+ * @method void setContent(string $Content) 设置（必填参数）指定脚本内容，base64编码
+ * @method string getCodeTemplateId() 获取代码模板ID
+ * @method void setCodeTemplateId(string $CodeTemplateId) 设置代码模板ID
  */
 class CreateTaskNewRequest extends AbstractModel
 {
@@ -98,12 +98,12 @@ class CreateTaskNewRequest extends AbstractModel
     public $TaskFolderId;
 
     /**
-     * @var string 指定脚本内容，base64编码
+     * @var string （必填参数）指定脚本内容，base64编码
      */
     public $Content;
 
     /**
-     * @var string 代码模版ID
+     * @var string 代码模板ID
      */
     public $CodeTemplateId;
 
@@ -118,8 +118,8 @@ class CreateTaskNewRequest extends AbstractModel
      * @param float $LeftCoordinate 画布坐标横轴
      * @param float $TopCoordinate 画布坐标纵轴
      * @param string $TaskFolderId 工作流目录ID
-     * @param string $Content 指定脚本内容，base64编码
-     * @param string $CodeTemplateId 代码模版ID
+     * @param string $Content （必填参数）指定脚本内容，base64编码
+     * @param string $CodeTemplateId 代码模板ID
      */
     function __construct()
     {

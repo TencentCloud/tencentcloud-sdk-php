@@ -331,6 +331,7 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\ModifyK8sApiAbnormalRuleStatusResponse ModifyK8sApiAbnormalRuleStatus(Models\ModifyK8sApiAbnormalRuleStatusRequest $req) 修改k8sapi异常事件规则状态
  * @method Models\ModifyRaspRulesResponse ModifyRaspRules(Models\ModifyRaspRulesRequest $req) 编辑或者创建java内存马白名单
  * @method Models\ModifyReverseShellStatusResponse ModifyReverseShellStatus(Models\ModifyReverseShellStatusRequest $req) 修改反弹shell事件的状态信息
+ * @method Models\ModifyRiskDnsEventStatusResponse ModifyRiskDnsEventStatus(Models\ModifyRiskDnsEventStatusRequest $req) 编辑恶意请求事件状态
  * @method Models\ModifyRiskSyscallStatusResponse ModifyRiskSyscallStatus(Models\ModifyRiskSyscallStatusRequest $req) 修改高危系统调用事件的状态信息
  * @method Models\ModifySecLogCleanSettingInfoResponse ModifySecLogCleanSettingInfo(Models\ModifySecLogCleanSettingInfoRequest $req) 修改安全日志清理设置信息
  * @method Models\ModifySecLogDeliveryClsSettingResponse ModifySecLogDeliveryClsSetting(Models\ModifySecLogDeliveryClsSettingRequest $req) 更新安全日志-日志投递cls配置

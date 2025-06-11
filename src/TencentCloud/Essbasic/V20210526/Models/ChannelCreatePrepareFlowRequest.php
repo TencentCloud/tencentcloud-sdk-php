@@ -60,8 +60,8 @@ use TencentCloud\Common\AbstractModel;
 注意：需要同时设置 ResourceType 参数指定资源类型
  * @method CreateFlowOption getFlowOption() 获取合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑
  * @method void setFlowOption(CreateFlowOption $FlowOption) 设置合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑
- * @method array getFlowApproverList() 获取合同签署人信息
- * @method void setFlowApproverList(array $FlowApproverList) 设置合同签署人信息
+ * @method array getFlowApproverList() 获取已废弃，请用FlowInfo.Approvers
+ * @method void setFlowApproverList(array $FlowApproverList) 设置已废弃，请用FlowInfo.Approvers
  * @method string getFlowId() 获取合同Id：用于通过一个已发起的合同快速生成一个发起流程web链接
 注: `该参数必须是一个待发起审核的合同id，并且还未审核通过`
  * @method void setFlowId(string $FlowId) 设置合同Id：用于通过一个已发起的合同快速生成一个发起流程web链接
@@ -124,7 +124,8 @@ class ChannelCreatePrepareFlowRequest extends AbstractModel
     public $FlowOption;
 
     /**
-     * @var array 合同签署人信息
+     * @var array 已废弃，请用FlowInfo.Approvers
+     * @deprecated
      */
     public $FlowApproverList;
 
@@ -182,7 +183,7 @@ class ChannelCreatePrepareFlowRequest extends AbstractModel
 </ul>
 注意：需要同时设置 ResourceType 参数指定资源类型
      * @param CreateFlowOption $FlowOption 合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑
-     * @param array $FlowApproverList 合同签署人信息
+     * @param array $FlowApproverList 已废弃，请用FlowInfo.Approvers
      * @param string $FlowId 合同Id：用于通过一个已发起的合同快速生成一个发起流程web链接
 注: `该参数必须是一个待发起审核的合同id，并且还未审核通过`
      * @param boolean $NeedPreview 该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL

@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLivenessVideo(string $LivenessVideo) 设置活体视频的base64编码。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getLivenessVideos() 获取当次token中所有用户活体视频的COS存储路径，仅当您开启数据存储服务且“IsReturnAllVideo”入参取值为true 时返回。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLivenessVideos(array $LivenessVideos) 设置当次token中所有用户活体视频的COS存储路径，仅当您开启数据存储服务且“IsReturnAllVideo”入参取值为true 时返回。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DetectInfoVideoData extends AbstractModel
 {
@@ -34,7 +38,15 @@ class DetectInfoVideoData extends AbstractModel
     public $LivenessVideo;
 
     /**
+     * @var array 当次token中所有用户活体视频的COS存储路径，仅当您开启数据存储服务且“IsReturnAllVideo”入参取值为true 时返回。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LivenessVideos;
+
+    /**
      * @param string $LivenessVideo 活体视频的base64编码。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $LivenessVideos 当次token中所有用户活体视频的COS存储路径，仅当您开启数据存储服务且“IsReturnAllVideo”入参取值为true 时返回。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -52,6 +64,15 @@ class DetectInfoVideoData extends AbstractModel
         }
         if (array_key_exists("LivenessVideo",$param) and $param["LivenessVideo"] !== null) {
             $this->LivenessVideo = $param["LivenessVideo"];
+        }
+
+        if (array_key_exists("LivenessVideos",$param) and $param["LivenessVideos"] !== null) {
+            $this->LivenessVideos = [];
+            foreach ($param["LivenessVideos"] as $key => $value){
+                $obj = new VideoDetailData();
+                $obj->deserialize($value);
+                array_push($this->LivenessVideos, $obj);
+            }
         }
     }
 }

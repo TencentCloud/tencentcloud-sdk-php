@@ -38,6 +38,8 @@ ENABLED 已启用
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
  * @method string getMeta() 获取知识库的meta信息
  * @method void setMeta(string $Meta) 设置知识库的meta信息
+ * @method string getTotalSize() 获取知识库容量,单位字节
+ * @method void setTotalSize(string $TotalSize) 设置知识库容量,单位字节
  */
 class KnowledgeSet extends AbstractModel
 {
@@ -79,6 +81,11 @@ ENABLED 已启用
     public $Meta;
 
     /**
+     * @var string 知识库容量,单位字节
+     */
+    public $TotalSize;
+
+    /**
      * @param string $Name 知识库标识
      * @param string $Title 知识库名称
      * @param string $Desc 描述
@@ -88,6 +95,7 @@ ENABLED 已启用
      * @param string $CreateTime 创建时间
      * @param string $UpdateTime 更新时间
      * @param string $Meta 知识库的meta信息
+     * @param string $TotalSize 知识库容量,单位字节
      */
     function __construct()
     {
@@ -128,6 +136,10 @@ ENABLED 已启用
 
         if (array_key_exists("Meta",$param) and $param["Meta"] !== null) {
             $this->Meta = $param["Meta"];
+        }
+
+        if (array_key_exists("TotalSize",$param) and $param["TotalSize"] !== null) {
+            $this->TotalSize = $param["TotalSize"];
         }
     }
 }

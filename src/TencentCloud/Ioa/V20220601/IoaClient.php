@@ -33,6 +33,7 @@ use TencentCloud\Ioa\V20220601\Models as Models;
  * @method Models\DescribeLocalAccountsResponse DescribeLocalAccounts(Models\DescribeLocalAccountsRequest $req) 获取账号列表，支持分页，模糊搜索，私有化调用path为：/capi/Assets/Account/DescribeLocalAccounts
  * @method Models\DescribeRootAccountGroupResponse DescribeRootAccountGroup(Models\DescribeRootAccountGroupRequest $req) 查询账号根分组详情。对应“用户与授权管理”里内置不可见的全网根账号组，所有新建的目录，都挂在该全网根账号组下。
  * @method Models\DescribeSoftCensusListByDeviceResponse DescribeSoftCensusListByDevice(Models\DescribeSoftCensusListByDeviceRequest $req) 查看终端树下的软件列表,私有化调用path为：capi/Software/DescribeSoftCensusListByDevice
+ * @method Models\DescribeSoftwareInformationResponse DescribeSoftwareInformation(Models\DescribeSoftwareInformationRequest $req) 查看指定终端的软件详情列表,私有化调用path为：capi/Software/DescribeSoftwareInformation
  */
 
 class IoaClient extends AbstractClient

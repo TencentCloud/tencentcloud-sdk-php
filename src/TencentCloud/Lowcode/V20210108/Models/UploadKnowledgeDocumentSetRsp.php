@@ -28,11 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileTitle(string $FileTitle) 设置文件标题
  * @method string getFileMetaData() 获取文件元信息，为jsonstring
  * @method void setFileMetaData(string $FileMetaData) 设置文件元信息，为jsonstring
+ * @method string getFileId() 获取Cos存储文件ID
+ * @method void setFileId(string $FileId) 设置Cos存储文件ID
  */
 class UploadKnowledgeDocumentSetRsp extends AbstractModel
 {
     /**
      * @var string 给文件分配的 ID 信息。
+     * @deprecated
      */
     public $DocumentSetId;
 
@@ -52,10 +55,16 @@ class UploadKnowledgeDocumentSetRsp extends AbstractModel
     public $FileMetaData;
 
     /**
+     * @var string Cos存储文件ID
+     */
+    public $FileId;
+
+    /**
      * @param string $DocumentSetId 给文件分配的 ID 信息。
      * @param string $DocumentSetName 文件名
      * @param string $FileTitle 文件标题
      * @param string $FileMetaData 文件元信息，为jsonstring
+     * @param string $FileId Cos存储文件ID
      */
     function __construct()
     {
@@ -84,6 +93,10 @@ class UploadKnowledgeDocumentSetRsp extends AbstractModel
 
         if (array_key_exists("FileMetaData",$param) and $param["FileMetaData"] !== null) {
             $this->FileMetaData = $param["FileMetaData"];
+        }
+
+        if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
+            $this->FileId = $param["FileId"];
         }
     }
 }

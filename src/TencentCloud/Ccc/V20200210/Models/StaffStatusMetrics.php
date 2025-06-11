@@ -250,7 +250,7 @@ class StaffStatusMetrics extends AbstractModel
         if (array_key_exists("ClientInfo",$param) and $param["ClientInfo"] !== null) {
             $this->ClientInfo = [];
             foreach ($param["ClientInfo"] as $key => $value){
-                $obj = new Client();
+                $obj = new ClientInfo();
                 $obj->deserialize($value);
                 array_push($this->ClientInfo, $obj);
             }

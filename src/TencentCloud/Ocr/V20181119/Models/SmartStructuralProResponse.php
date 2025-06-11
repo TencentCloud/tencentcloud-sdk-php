@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStructuralList(array $StructuralList) 设置配置结构化文本信息
  * @method array getWordList() 获取还原文本信息
  * @method void setWordList(array $WordList) 设置还原文本信息
+ * @method integer getTokenNum() 获取识别出的token个数
+ * @method void setTokenNum(integer $TokenNum) 设置识别出的token个数
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -47,6 +49,11 @@ class SmartStructuralProResponse extends AbstractModel
     public $WordList;
 
     /**
+     * @var integer 识别出的token个数
+     */
+    public $TokenNum;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -55,6 +62,7 @@ class SmartStructuralProResponse extends AbstractModel
      * @param float $Angle 图片旋转角度(角度制)，文本的水平方向为 0；顺时针为正，逆时针为负
      * @param array $StructuralList 配置结构化文本信息
      * @param array $WordList 还原文本信息
+     * @param integer $TokenNum 识别出的token个数
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -90,6 +98,10 @@ class SmartStructuralProResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->WordList, $obj);
             }
+        }
+
+        if (array_key_exists("TokenNum",$param) and $param["TokenNum"] !== null) {
+            $this->TokenNum = $param["TokenNum"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

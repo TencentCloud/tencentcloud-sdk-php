@@ -52,8 +52,8 @@ use TencentCloud\Common\AbstractModel;
 <li>Pending：部署中；</li>
 <li>Deleting：删除中；</li>
 <li>Running：已生效。</li>
- * @method array getL4UsedList() 获取该负载均衡实例绑的定四层层代理实例的列表。
- * @method void setL4UsedList(array $L4UsedList) 设置该负载均衡实例绑的定四层层代理实例的列表。
+ * @method array getL4UsedList() 获取该负载均衡实例绑的四层代理实例的列表。
+ * @method void setL4UsedList(array $L4UsedList) 设置该负载均衡实例绑的四层代理实例的列表。
  * @method array getL7UsedList() 获取该负载均衡实例绑定的七层域名列表。
  * @method void setL7UsedList(array $L7UsedList) 设置该负载均衡实例绑定的七层域名列表。
  */
@@ -108,7 +108,7 @@ class LoadBalancer extends AbstractModel
     public $Status;
 
     /**
-     * @var array 该负载均衡实例绑的定四层层代理实例的列表。
+     * @var array 该负载均衡实例绑的四层代理实例的列表。
      */
     public $L4UsedList;
 
@@ -134,7 +134,7 @@ class LoadBalancer extends AbstractModel
 <li>Pending：部署中；</li>
 <li>Deleting：删除中；</li>
 <li>Running：已生效。</li>
-     * @param array $L4UsedList 该负载均衡实例绑的定四层层代理实例的列表。
+     * @param array $L4UsedList 该负载均衡实例绑的四层代理实例的列表。
      * @param array $L7UsedList 该负载均衡实例绑定的七层域名列表。
      */
     function __construct()

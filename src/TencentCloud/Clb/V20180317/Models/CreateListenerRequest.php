@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxCps(integer $MaxCps) 设置监听器最大新增连接数，当前仅性能容量型实例且仅TCP/UDP/TCP_SSL/QUIC监听器支持，不传或者传-1表示监听器维度不限速。基础网络实例不支持该参数。
  * @method integer getIdleConnectTimeout() 获取空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。取值范围：共享型实例和独占型实例支持：300-900，性能容量型实例支持：300-1980。如需设置请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)。
  * @method void setIdleConnectTimeout(integer $IdleConnectTimeout) 设置空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。取值范围：共享型实例和独占型实例支持：300-900，性能容量型实例支持：300-1980。如需设置请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)。
+ * @method boolean getProxyProtocol() 获取TCP_SSL和QUIC是否支持PP
+ * @method void setProxyProtocol(boolean $ProxyProtocol) 设置TCP_SSL和QUIC是否支持PP
  * @method boolean getSnatEnable() 获取是否开启SNAT，True（开启）、False（关闭）。
 默认为关闭。
  * @method void setSnatEnable(boolean $SnatEnable) 设置是否开启SNAT，True（开启）、False（关闭）。
@@ -187,6 +189,11 @@ class CreateListenerRequest extends AbstractModel
     public $IdleConnectTimeout;
 
     /**
+     * @var boolean TCP_SSL和QUIC是否支持PP
+     */
+    public $ProxyProtocol;
+
+    /**
      * @var boolean 是否开启SNAT，True（开启）、False（关闭）。
 默认为关闭。
      */
@@ -240,6 +247,7 @@ class CreateListenerRequest extends AbstractModel
      * @param integer $MaxConn 监听器最大连接数，当前仅性能容量型实例且仅TCP/UDP/TCP_SSL/QUIC监听器支持，不传或者传-1表示监听器维度不限速。基础网络实例不支持该参数。
      * @param integer $MaxCps 监听器最大新增连接数，当前仅性能容量型实例且仅TCP/UDP/TCP_SSL/QUIC监听器支持，不传或者传-1表示监听器维度不限速。基础网络实例不支持该参数。
      * @param integer $IdleConnectTimeout 空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。取值范围：共享型实例和独占型实例支持：300-900，性能容量型实例支持：300-1980。如需设置请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)。
+     * @param boolean $ProxyProtocol TCP_SSL和QUIC是否支持PP
      * @param boolean $SnatEnable 是否开启SNAT，True（开启）、False（关闭）。
 默认为关闭。
      * @param array $FullEndPorts 全端口段监听器的结束端口，端口范围：2 - 65535
@@ -335,6 +343,10 @@ class CreateListenerRequest extends AbstractModel
 
         if (array_key_exists("IdleConnectTimeout",$param) and $param["IdleConnectTimeout"] !== null) {
             $this->IdleConnectTimeout = $param["IdleConnectTimeout"];
+        }
+
+        if (array_key_exists("ProxyProtocol",$param) and $param["ProxyProtocol"] !== null) {
+            $this->ProxyProtocol = $param["ProxyProtocol"];
         }
 
         if (array_key_exists("SnatEnable",$param) and $param["SnatEnable"] !== null) {

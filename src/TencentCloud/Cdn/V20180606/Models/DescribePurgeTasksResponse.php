@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePurgeTasks返回参数结构体
  *
- * @method array getPurgeLogs() 获取详细刷新记录
- * @method void setPurgeLogs(array $PurgeLogs) 设置详细刷新记录
+ * @method array getPurgeLogs() 获取详细刷新纪录
+ * @method void setPurgeLogs(array $PurgeLogs) 设置详细刷新纪录
  * @method integer getTotalCount() 获取任务总数，用于分页
  * @method void setTotalCount(integer $TotalCount) 设置任务总数，用于分页
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribePurgeTasksResponse extends AbstractModel
 {
     /**
-     * @var array 详细刷新记录
+     * @var array 详细刷新纪录
      */
     public $PurgeLogs;
 
@@ -45,7 +45,7 @@ class DescribePurgeTasksResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $PurgeLogs 详细刷新记录
+     * @param array $PurgeLogs 详细刷新纪录
      * @param integer $TotalCount 任务总数，用于分页
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

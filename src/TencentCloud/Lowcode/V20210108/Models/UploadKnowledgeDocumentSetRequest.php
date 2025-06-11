@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDocumentSetId(string $DocumentSetId) 设置文件id
  * @method string getDelimiter() 获取使用 regex 分割文档
  * @method void setDelimiter(string $Delimiter) 设置使用 regex 分割文档
+ * @method string getFileId() 获取Cos存储文件ID
+ * @method void setFileId(string $FileId) 设置Cos存储文件ID
  */
 class UploadKnowledgeDocumentSetRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class UploadKnowledgeDocumentSetRequest extends AbstractModel
     public $Delimiter;
 
     /**
+     * @var string Cos存储文件ID
+     */
+    public $FileId;
+
+    /**
      * @param string $EnvId 环境ID
      * @param string $CollectionView 知识库标识
      * @param string $FileName 状态;ENABLED启用；NOT_ENABLED不启用
@@ -104,6 +111,7 @@ class UploadKnowledgeDocumentSetRequest extends AbstractModel
      * @param string $FileMetaData 文件元信息，为jsonstring
      * @param string $DocumentSetId 文件id
      * @param string $Delimiter 使用 regex 分割文档
+     * @param string $FileId Cos存储文件ID
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class UploadKnowledgeDocumentSetRequest extends AbstractModel
 
         if (array_key_exists("Delimiter",$param) and $param["Delimiter"] !== null) {
             $this->Delimiter = $param["Delimiter"];
+        }
+
+        if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
+            $this->FileId = $param["FileId"];
         }
     }
 }

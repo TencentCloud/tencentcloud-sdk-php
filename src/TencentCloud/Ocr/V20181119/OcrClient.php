@@ -80,6 +80,19 @@ use TencentCloud\Ocr\V20181119\Models as Models;
  * @method Models\EstateCertOCRResponse EstateCertOCR(Models\EstateCertOCRRequest $req) 本接口支持不动产权证关键字段的识别，包括使用期限、面积、用途、权利性质、权利类型、坐落、共有情况、权利人、权利其他状况等。
 
 默认接口请求频率限制：5次/秒。
+ * @method Models\ExtractDocBasicResponse ExtractDocBasic(Models\ExtractDocBasicRequest $req) 本接口支持识别并提取制式卡证、票据、表单等结构化场景的字段信息。无需任何配置，灵活高效。适用于各类结构化信息录入场景。点击[立即体验](https://ocrdemo.cloud.tencent.com/)。
+
+接口别名：SmartStructuralOCRV2
+
+默认接口请求频率限制：5次/秒。
+ * @method Models\ExtractDocMultiResponse ExtractDocMulti(Models\ExtractDocMultiRequest $req) 本接口支持识别并提取场景复杂、版式多等结构化场景的字段信息。重点场景包括：金融、医疗、交通、出行、保险。点击[立即体验](https://ocrdemo.cloud.tencent.com/)。
+
+接口别名：SmartStructuralPro
+
+默认接口请求频率限制：5次/秒。
+ * @method Models\ExtractDocMultiProResponse ExtractDocMultiPro(Models\ExtractDocMultiProRequest $req) 本接口当前仅支持复杂磅单收发货单抽取，更多强推理场景支持定制咨询。点击[立即体验](https://ocrdemo.cloud.tencent.com/)。
+
+默认接口请求频率限制：5次/秒。
  * @method Models\FinanBillOCRResponse FinanBillOCR(Models\FinanBillOCRRequest $req) 本接口支持常见银行票据的自动分类和识别。整单识别包括支票（含现金支票、普通支票、转账支票），承兑汇票（含银行承兑汇票、商业承兑汇票）以及进账单等，适用于中国人民银行印发的 2010 版银行票据凭证版式（银发[2010]299 号）。
 
 默认接口请求频率限制：5次/秒。
@@ -290,6 +303,9 @@ use TencentCloud\Ocr\V20181119\Models as Models;
  * @method Models\GetOCRResultResponse GetOCRResult(Models\GetOCRResultRequest $req) 获取ocr结果
  * @method Models\GetOCRTokenResponse GetOCRToken(Models\GetOCRTokenRequest $req) 获取ocr的token值
  * @method Models\HKIDCardOCRResponse HKIDCardOCR(Models\HKIDCardOCRRequest $req) 本接口支持中国香港身份证人像面中关键字段的识别，包括中文姓名、英文姓名、姓名电码、出生日期、性别、证件符号、首次签发日期、最近领用日期、身份证号、是否是永久性居民身份证；具备人像照片裁剪等扩展功能。
+
+默认接口请求频率限制：5次/秒。
+ * @method Models\HandwritingEssayOCRResponse HandwritingEssayOCR(Models\HandwritingEssayOCRRequest $req) 本接口专为教育场景设计，可高精度识别中英文手写字符，智能分栏并按阅读顺序分割内容，自动过滤手写与印刷体混排干扰，精准返回词、行、段落及标题的文本与坐标信息。点击[立即体验](https://ocrdemo.cloud.tencent.com/)。
 
 默认接口请求频率限制：5次/秒。
  * @method Models\HmtResidentPermitOCRResponse HmtResidentPermitOCR(Models\HmtResidentPermitOCRRequest $req) 港澳台居住证OCR支持港澳台居住证正反面全字段内容检测识别功能，包括姓名、性别、出生日期、地址、身份证号、签发机关、有效期限、签发次数、通行证号码关键字段识别。可以应用于港澳台居住证信息识别场景，例如银行开户、用户注册等。
@@ -695,10 +711,10 @@ use TencentCloud\Ocr\V20181119\Models as Models;
  * @method Models\SmartStructuralOCRResponse SmartStructuralOCR(Models\SmartStructuralOCRRequest $req) 本接口支持识别并提取各类证照、票据、表单、合同等结构化场景的字段信息。无需任何配置，灵活高效。适用于各类结构化信息录入场景。
 
 默认接口请求频率限制：5次/秒。
- * @method Models\SmartStructuralOCRV2Response SmartStructuralOCRV2(Models\SmartStructuralOCRV2Request $req) 本接口支持智能提取各类证照、票据、表单、合同等结构化场景的key:value字段信息，并支持提取表格信息的key:value组的结构化，灵活高效，适用于各类非标准材料的信息录入场景，点击[立即体验](https://ocrdemo.cloud.tencent.com/)。
+ * @method Models\SmartStructuralOCRV2Response SmartStructuralOCRV2(Models\SmartStructuralOCRV2Request $req) 本接口支持识别并提取制式卡证、票据、表单等结构化场景的字段信息。无需任何配置，灵活高效。适用于各类结构化信息录入场景。点击[立即体验](https://ocrdemo.cloud.tencent.com/)。
 
 默认接口请求频率限制：5次/秒。
- * @method Models\SmartStructuralProResponse SmartStructuralPro(Models\SmartStructuralProRequest $req) 本接口支持智能提取各类证照、票据、表单、合同等结构化场景的key:value字段信息，并支持提取表格信息的key:value组的结构化，灵活高效，适用于各类非标准材料的信息录入场景，点击[立即体验](https://ocrdemo.cloud.tencent.com/)。
+ * @method Models\SmartStructuralProResponse SmartStructuralPro(Models\SmartStructuralProRequest $req) 本接口支持识别并提取场景复杂、版式多等结构化场景的字段信息。重点场景包括：金融、医疗、交通、出行、保险。点击[立即体验](https://ocrdemo.cloud.tencent.com/)。
 
 默认接口请求频率限制：5次/秒。
  * @method Models\TableOCRResponse TableOCR(Models\TableOCRRequest $req) <b>此接口为表格识别的旧版本服务，不再进行服务升级，建议您使用识别能力更强、服务性能更优的<a href="https://cloud.tencent.com/document/product/866/49525">新版表格识别</a>。</b>

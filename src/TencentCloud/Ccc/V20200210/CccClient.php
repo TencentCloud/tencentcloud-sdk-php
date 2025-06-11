@@ -25,6 +25,7 @@ use TencentCloud\Ccc\V20200210\Models as Models;
 /**
  * @method Models\AbortAgentCruiseDialingCampaignResponse AbortAgentCruiseDialingCampaign(Models\AbortAgentCruiseDialingCampaignRequest $req) 停止座席巡航式外呼任务
  * @method Models\AbortPredictiveDialingCampaignResponse AbortPredictiveDialingCampaign(Models\AbortPredictiveDialingCampaignRequest $req) 停止预测式外呼任务
+ * @method Models\BindNumberCallInInterfaceResponse BindNumberCallInInterface(Models\BindNumberCallInInterfaceRequest $req) 绑定号码呼入回调接口
  * @method Models\BindNumberCallOutSkillGroupResponse BindNumberCallOutSkillGroup(Models\BindNumberCallOutSkillGroupRequest $req) 绑定号码外呼技能组
  * @method Models\BindStaffSkillGroupListResponse BindStaffSkillGroupList(Models\BindStaffSkillGroupListRequest $req) 绑定座席所属技能组
  * @method Models\CreateAIAgentCallResponse CreateAIAgentCall(Models\CreateAIAgentCallRequest $req) 用于调用AI模型发起外呼通话，仅限自有电话号码使用，目前开通高级版座席**限时**免费体验。

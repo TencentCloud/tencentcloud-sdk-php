@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDocDesc(string $DocDesc) 设置文档描述
  * @method integer getFileSize() 获取文档大小
  * @method void setFileSize(integer $FileSize) 设置文档大小
+ * @method string getFileId() 获取Cos存储文件ID
+ * @method void setFileId(string $FileId) 设置Cos存储文件ID
  */
 class SearchDocInfo extends AbstractModel
 {
@@ -80,6 +82,11 @@ class SearchDocInfo extends AbstractModel
     public $FileSize;
 
     /**
+     * @var string Cos存储文件ID
+     */
+    public $FileId;
+
+    /**
      * @param string $CollectionViewName 知识库名称
      * @param string $DocSetId 文档Id
      * @param string $DocSetName 文档Name
@@ -88,6 +95,7 @@ class SearchDocInfo extends AbstractModel
      * @param string $FileMetaData 文档元信息
      * @param string $DocDesc 文档描述
      * @param integer $FileSize 文档大小
+     * @param string $FileId Cos存储文件ID
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class SearchDocInfo extends AbstractModel
 
         if (array_key_exists("FileSize",$param) and $param["FileSize"] !== null) {
             $this->FileSize = $param["FileSize"];
+        }
+
+        if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
+            $this->FileId = $param["FileId"];
         }
     }
 }

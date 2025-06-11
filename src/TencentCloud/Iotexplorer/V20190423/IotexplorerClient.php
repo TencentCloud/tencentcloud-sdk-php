@@ -26,7 +26,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\ActivateTWeCallLicenseResponse ActivateTWeCallLicense(Models\ActivateTWeCallLicenseRequest $req) 激活
  * @method Models\BindCloudStorageUserResponse BindCloudStorageUser(Models\BindCloudStorageUserRequest $req) 绑定云存用户
  * @method Models\BindDevicesResponse BindDevices(Models\BindDevicesRequest $req) 批量绑定子设备
- * @method Models\BindProductsResponse BindProducts(Models\BindProductsRequest $req) 批量绑定子产品
+ * @method Models\BindProductsResponse BindProducts(Models\BindProductsRequest $req) 批量绑定子产品。
  * @method Models\CallDeviceActionAsyncResponse CallDeviceActionAsync(Models\CallDeviceActionAsyncRequest $req) 提供给用户异步调用设备行为的能力
  * @method Models\CallDeviceActionSyncResponse CallDeviceActionSync(Models\CallDeviceActionSyncRequest $req) 为用户提供同步调用设备行为的能力。
  * @method Models\CancelAssignTWeCallLicenseResponse CancelAssignTWeCallLicense(Models\CancelAssignTWeCallLicenseRequest $req) 取消分配
@@ -105,7 +105,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\DescribeFreeCloudStorageNumResponse DescribeFreeCloudStorageNum(Models\DescribeFreeCloudStorageNumRequest $req) 查询云存卡套餐信息
  * @method Models\DescribeGatewayBindDevicesResponse DescribeGatewayBindDevices(Models\DescribeGatewayBindDevicesRequest $req) 获取网关绑定的子设备列表
  * @method Models\DescribeGatewaySubDeviceListResponse DescribeGatewaySubDeviceList(Models\DescribeGatewaySubDeviceListRequest $req) 查询绑定到家庭的网关设备的子设备列表
- * @method Models\DescribeGatewaySubProductsResponse DescribeGatewaySubProducts(Models\DescribeGatewaySubProductsRequest $req) 用于获取网关可绑定或解绑的子产品
+ * @method Models\DescribeGatewaySubProductsResponse DescribeGatewaySubProducts(Models\DescribeGatewaySubProductsRequest $req) 用于获取网关可绑定或解绑的子产品。
  * @method Models\DescribeInstanceResponse DescribeInstance(Models\DescribeInstanceRequest $req) 公共实例过期时间 0001-01-01T00:00:00Z，公共实例是永久有效
  * @method Models\DescribeLoRaFrequencyResponse DescribeLoRaFrequency(Models\DescribeLoRaFrequencyRequest $req) 提供查询LoRa自定义频点详情的能力
  * @method Models\DescribeModelDefinitionResponse DescribeModelDefinition(Models\DescribeModelDefinitionRequest $req) 查询产品配置的数据模板信息
@@ -190,7 +190,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\TransferCloudStorageResponse TransferCloudStorage(Models\TransferCloudStorageRequest $req) 转移云存服务
  * @method Models\TransferTWeCallDeviceResponse TransferTWeCallDevice(Models\TransferTWeCallDeviceRequest $req) 转移设备
  * @method Models\UnbindDevicesResponse UnbindDevices(Models\UnbindDevicesRequest $req) 批量解绑子设备
- * @method Models\UnbindProductsResponse UnbindProducts(Models\UnbindProductsRequest $req) 批量解绑子产品
+ * @method Models\UnbindProductsResponse UnbindProducts(Models\UnbindProductsRequest $req) 批量解绑子产品。
  * @method Models\UpdateDeviceTWeCallAuthorizeStatusResponse UpdateDeviceTWeCallAuthorizeStatus(Models\UpdateDeviceTWeCallAuthorizeStatusRequest $req) 更新用户对设备的TweCall授权状态
  * @method Models\UpdateDevicesEnableStateResponse UpdateDevicesEnableState(Models\UpdateDevicesEnableStateRequest $req) 批量禁用启用设备
  * @method Models\UpdateFirmwareResponse UpdateFirmware(Models\UpdateFirmwareRequest $req) 本接口（UpdateFirmware）用于对指定设备发起固件升级请求

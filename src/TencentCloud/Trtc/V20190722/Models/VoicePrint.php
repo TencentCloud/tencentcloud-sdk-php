@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 声纹配置参数
  *
- * @method integer getMode() 获取默认为0，表示不启用声纹。1表示使用固定声纹，且需要填写voiceprint id。2表示使用动态声纹，不需要使用voiceprint id，内部动态选择主讲人声纹
- * @method void setMode(integer $Mode) 设置默认为0，表示不启用声纹。1表示使用固定声纹，且需要填写voiceprint id。2表示使用动态声纹，不需要使用voiceprint id，内部动态选择主讲人声纹
- * @method array getIdList() 获取只有当VoicePrint Mode为1时需要填写，目前仅支持填写一个声纹id
- * @method void setIdList(array $IdList) 设置只有当VoicePrint Mode为1时需要填写，目前仅支持填写一个声纹id
+ * @method integer getMode() 获取默认为0，表示不启用声纹。1表示启用声纹，此时需要填写voiceprint id。
+ * @method void setMode(integer $Mode) 设置默认为0，表示不启用声纹。1表示启用声纹，此时需要填写voiceprint id。
+ * @method array getIdList() 获取VoicePrint Mode为1时需要填写，目前仅支持填写一个声纹id
+ * @method void setIdList(array $IdList) 设置VoicePrint Mode为1时需要填写，目前仅支持填写一个声纹id
  */
 class VoicePrint extends AbstractModel
 {
     /**
-     * @var integer 默认为0，表示不启用声纹。1表示使用固定声纹，且需要填写voiceprint id。2表示使用动态声纹，不需要使用voiceprint id，内部动态选择主讲人声纹
+     * @var integer 默认为0，表示不启用声纹。1表示启用声纹，此时需要填写voiceprint id。
      */
     public $Mode;
 
     /**
-     * @var array 只有当VoicePrint Mode为1时需要填写，目前仅支持填写一个声纹id
+     * @var array VoicePrint Mode为1时需要填写，目前仅支持填写一个声纹id
      */
     public $IdList;
 
     /**
-     * @param integer $Mode 默认为0，表示不启用声纹。1表示使用固定声纹，且需要填写voiceprint id。2表示使用动态声纹，不需要使用voiceprint id，内部动态选择主讲人声纹
-     * @param array $IdList 只有当VoicePrint Mode为1时需要填写，目前仅支持填写一个声纹id
+     * @param integer $Mode 默认为0，表示不启用声纹。1表示启用声纹，此时需要填写voiceprint id。
+     * @param array $IdList VoicePrint Mode为1时需要填写，目前仅支持填写一个声纹id
      */
     function __construct()
     {

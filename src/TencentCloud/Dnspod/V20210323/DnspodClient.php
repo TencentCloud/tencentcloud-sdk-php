@@ -71,6 +71,7 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\DescribeDomainPurviewResponse DescribeDomainPurview(Models\DescribeDomainPurviewRequest $req) 获取域名权限
  * @method Models\DescribeDomainShareInfoResponse DescribeDomainShareInfo(Models\DescribeDomainShareInfoRequest $req) 获取域名共享信息
  * @method Models\DescribeDomainShareUserListResponse DescribeDomainShareUserList(Models\DescribeDomainShareUserListRequest $req) 获取指定域名的已共享列表
+ * @method Models\DescribeDomainVipListResponse DescribeDomainVipList(Models\DescribeDomainVipListRequest $req) 获取套餐列表
  * @method Models\DescribeDomainWhoisResponse DescribeDomainWhois(Models\DescribeDomainWhoisRequest $req) 获取域名Whois信息
  * @method Models\DescribeFileInfoByJobIdResponse DescribeFileInfoByJobId(Models\DescribeFileInfoByJobIdRequest $req) 根据批量任务ID获取生成文件信息
  * @method Models\DescribeLineGroupListResponse DescribeLineGroupList(Models\DescribeLineGroupListRequest $req) 获取域名的线路分组列表
@@ -98,6 +99,7 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\DescribeSubdomainValidateStatusResponse DescribeSubdomainValidateStatus(Models\DescribeSubdomainValidateStatusRequest $req) 查看添加子域名 Zone 域解析 TXT 记录值验证状态
  * @method Models\DescribeUserDetailResponse DescribeUserDetail(Models\DescribeUserDetailRequest $req) 获取账户信息
  * @method Models\DescribeVASStatisticResponse DescribeVASStatistic(Models\DescribeVASStatisticRequest $req) 获取域名增值服务用量
+ * @method Models\DescribeVasListResponse DescribeVasList(Models\DescribeVasListRequest $req) 获取增值服务列表
  * @method Models\DownloadSnapshotResponse DownloadSnapshot(Models\DownloadSnapshotRequest $req) 下载快照
  * @method Models\ModifyDomainCustomLineResponse ModifyDomainCustomLine(Models\ModifyDomainCustomLineRequest $req) 修改域名的自定义线路
  * @method Models\ModifyDomainLockResponse ModifyDomainLock(Models\ModifyDomainLockRequest $req) 锁定域名

@@ -25,7 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getIsConnected() 获取当前登录的端是否在前台。若登录的端是Web，则该值为true；若登录的端是WeChatMiniProgram，true表示打开着微信小程序，false表示微信小程序退到后台
  * @method void setIsConnected(boolean $IsConnected) 设置当前登录的端是否在前台。若登录的端是Web，则该值为true；若登录的端是WeChatMiniProgram，true表示打开着微信小程序，false表示微信小程序退到后台
  */
-class Client extends AbstractModel
+class ClientInfo extends AbstractModel
 {
     /**
      * @var string 登录的端类型，"Web"表示web工作台，"WeChatMiniProgram"表示微信小程序

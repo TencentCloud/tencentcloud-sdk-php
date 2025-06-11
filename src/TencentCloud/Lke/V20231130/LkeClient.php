@@ -36,6 +36,7 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\CreateQACateResponse CreateQACate(Models\CreateQACateRequest $req) 创建QA分类
  * @method Models\CreateRejectedQuestionResponse CreateRejectedQuestion(Models\CreateRejectedQuestionRequest $req) 创建拒答问题
  * @method Models\CreateReleaseResponse CreateRelease(Models\CreateReleaseRequest $req) 创建发布
+ * @method Models\CreateSharedKnowledgeResponse CreateSharedKnowledge(Models\CreateSharedKnowledgeRequest $req) 创建共享知识库。
  * @method Models\CreateVarResponse CreateVar(Models\CreateVarRequest $req) 创建变量
  * @method Models\DeleteAppResponse DeleteApp(Models\DeleteAppRequest $req) 删除应用
  * @method Models\DeleteAttributeLabelResponse DeleteAttributeLabel(Models\DeleteAttributeLabelRequest $req) 删除属性标签
@@ -44,6 +45,7 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\DeleteQAResponse DeleteQA(Models\DeleteQARequest $req) 删除问答
  * @method Models\DeleteQACateResponse DeleteQACate(Models\DeleteQACateRequest $req) 分类删除
  * @method Models\DeleteRejectedQuestionResponse DeleteRejectedQuestion(Models\DeleteRejectedQuestionRequest $req) 删除拒答问题
+ * @method Models\DeleteSharedKnowledgeResponse DeleteSharedKnowledge(Models\DeleteSharedKnowledgeRequest $req) 删除共享知识库。
  * @method Models\DescribeAppResponse DescribeApp(Models\DescribeAppRequest $req) 获取企业下应用详情
  * @method Models\DescribeAttributeLabelResponse DescribeAttributeLabel(Models\DescribeAttributeLabelRequest $req) 查询属性标签详情
  * @method Models\DescribeCallStatsGraphResponse DescribeCallStatsGraph(Models\DescribeCallStatsGraphRequest $req) 接口调用折线图
@@ -60,6 +62,7 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\DescribeRobotBizIDByAppKeyResponse DescribeRobotBizIDByAppKey(Models\DescribeRobotBizIDByAppKeyRequest $req) 通过appKey获取应用业务ID
  * @method Models\DescribeSearchStatsGraphResponse DescribeSearchStatsGraph(Models\DescribeSearchStatsGraphRequest $req) 查询搜索服务调用折线图
  * @method Models\DescribeSegmentsResponse DescribeSegments(Models\DescribeSegmentsRequest $req) 获取片段详情
+ * @method Models\DescribeSharedKnowledgeResponse DescribeSharedKnowledge(Models\DescribeSharedKnowledgeRequest $req) 查询共享知识库。
  * @method Models\DescribeStorageCredentialResponse DescribeStorageCredential(Models\DescribeStorageCredentialRequest $req) 获取文件上传临时密钥
  * @method Models\DescribeTokenUsageResponse DescribeTokenUsage(Models\DescribeTokenUsageRequest $req) 接口调用token详情
  * @method Models\DescribeTokenUsageGraphResponse DescribeTokenUsageGraph(Models\DescribeTokenUsageGraphRequest $req) 接口调用token折线图
@@ -95,6 +98,7 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\ListModelResponse ListModel(Models\ListModelRequest $req) 获取模型列表
  * @method Models\ListQAResponse ListQA(Models\ListQARequest $req) 问答列表
  * @method Models\ListQACateResponse ListQACate(Models\ListQACateRequest $req) 获取QA分类
+ * @method Models\ListReferShareKnowledgeResponse ListReferShareKnowledge(Models\ListReferShareKnowledgeRequest $req) 查看应用引用了哪些共享知识库，可以看到共享知识库的基础信息，包括名称，id等
  * @method Models\ListRejectedQuestionResponse ListRejectedQuestion(Models\ListRejectedQuestionRequest $req) 获取拒答问题
  * @method Models\ListRejectedQuestionPreviewResponse ListRejectedQuestionPreview(Models\ListRejectedQuestionPreviewRequest $req) 发布拒答问题预览
  * @method Models\ListReleaseResponse ListRelease(Models\ListReleaseRequest $req) 发布列表
@@ -102,6 +106,7 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\ListReleaseDocPreviewResponse ListReleaseDocPreview(Models\ListReleaseDocPreviewRequest $req) 发布文档预览
  * @method Models\ListReleaseQAPreviewResponse ListReleaseQAPreview(Models\ListReleaseQAPreviewRequest $req) 文档列表
  * @method Models\ListSelectDocResponse ListSelectDoc(Models\ListSelectDocRequest $req) 获取账户信息
+ * @method Models\ListSharedKnowledgeResponse ListSharedKnowledge(Models\ListSharedKnowledgeRequest $req) 列举共享知识库。
  * @method Models\ListUnsatisfiedReplyResponse ListUnsatisfiedReply(Models\ListUnsatisfiedReplyRequest $req) 查询不满意回复列表
  * @method Models\ListUsageCallDetailResponse ListUsageCallDetail(Models\ListUsageCallDetailRequest $req) 列表查询单次调用明细
  * @method Models\ModifyAppResponse ModifyApp(Models\ModifyAppRequest $req) 修改应用请求结构体
@@ -119,6 +124,7 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\ReconstructDocumentResponse ReconstructDocument(Models\ReconstructDocumentRequest $req) 支持将图片或PDF文件转换成Markdown格式文件，可解析包括表格、公式、图片、标题、段落、页眉、页脚等内容元素，并将内容智能转换成阅读顺序。
 
 体验期间单账号限制qps仅为1，若有正式接入需要请与产研团队沟通开放。
+ * @method Models\ReferShareKnowledgeResponse ReferShareKnowledge(Models\ReferShareKnowledgeRequest $req) 应用引用共享知识库，可以引用一个或多个，每次都是全量覆盖
  * @method Models\RenameDocResponse RenameDoc(Models\RenameDocRequest $req) 文档重命名
  * @method Models\RetryDocAuditResponse RetryDocAudit(Models\RetryDocAuditRequest $req) 文档解析重试
  * @method Models\RetryDocParseResponse RetryDocParse(Models\RetryDocParseRequest $req) 文档解析重试
@@ -131,6 +137,7 @@ use TencentCloud\Lke\V20231130\Models as Models;
 3.调用本接口，将文件的基础信息存储到智能体开发平台中。
 以上步骤可参考[文档](https://cloud.tencent.com/document/product/1759/108903)，文档最后有[代码demo](https://cloud.tencent.com/document/product/1759/108903#demo)，可作为参考。
  * @method Models\StopDocParseResponse StopDocParse(Models\StopDocParseRequest $req) 终止文档解析
+ * @method Models\UpdateSharedKnowledgeResponse UpdateSharedKnowledge(Models\UpdateSharedKnowledgeRequest $req) 更新共享知识库。
  * @method Models\UploadAttributeLabelResponse UploadAttributeLabel(Models\UploadAttributeLabelRequest $req) 上传导入属性标签
  * @method Models\VerifyQAResponse VerifyQA(Models\VerifyQARequest $req) 校验问答
  */

@@ -72,6 +72,8 @@ True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
 默认为 -1 表示不限速。
  * @method integer getIdleConnectTimeout() 获取空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。默认值：900，取值范围：共享型实例和独占型实例支持：300～900，性能容量型实例支持：300~1980。如需设置超过2000s，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category),最大可设置到3600s。
  * @method void setIdleConnectTimeout(integer $IdleConnectTimeout) 设置空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。默认值：900，取值范围：共享型实例和独占型实例支持：300～900，性能容量型实例支持：300~1980。如需设置超过2000s，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category),最大可设置到3600s。
+ * @method boolean getProxyProtocol() 获取TCP_SSL和QUIC是否支持PP
+ * @method void setProxyProtocol(boolean $ProxyProtocol) 设置TCP_SSL和QUIC是否支持PP
  * @method boolean getSnatEnable() 获取是否开启SNAT， True 表示开启 SNAT，False 表示不开启 SNAT。
 不传则表示不修改。
  * @method void setSnatEnable(boolean $SnatEnable) 设置是否开启SNAT， True 表示开启 SNAT，False 表示不开启 SNAT。
@@ -172,6 +174,11 @@ True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
     public $IdleConnectTimeout;
 
     /**
+     * @var boolean TCP_SSL和QUIC是否支持PP
+     */
+    public $ProxyProtocol;
+
+    /**
      * @var boolean 是否开启SNAT， True 表示开启 SNAT，False 表示不开启 SNAT。
 不传则表示不修改。
      */
@@ -209,6 +216,7 @@ True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
      * @param integer $MaxCps 监听器粒度新建连接数上限，当前仅性能容量型实例且仅TCP/UDP/TCP_SSL/QUIC监听器支持。取值范围：1-实例规格新建连接上限，其中-1表示关闭监听器粒度新建连接数限速。基础网络实例不支持该参数。
 默认为 -1 表示不限速。
      * @param integer $IdleConnectTimeout 空闲连接超时时间，此参数仅适用于TCP监听器，单位：秒。默认值：900，取值范围：共享型实例和独占型实例支持：300～900，性能容量型实例支持：300~1980。如需设置超过2000s，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category),最大可设置到3600s。
+     * @param boolean $ProxyProtocol TCP_SSL和QUIC是否支持PP
      * @param boolean $SnatEnable 是否开启SNAT， True 表示开启 SNAT，False 表示不开启 SNAT。
 不传则表示不修改。
      * @param string $DataCompressMode 数据压缩模式
@@ -291,6 +299,10 @@ True表示发送 RST 给客户端，False表示不发送 RST 给客户端。
 
         if (array_key_exists("IdleConnectTimeout",$param) and $param["IdleConnectTimeout"] !== null) {
             $this->IdleConnectTimeout = $param["IdleConnectTimeout"];
+        }
+
+        if (array_key_exists("ProxyProtocol",$param) and $param["ProxyProtocol"] !== null) {
+            $this->ProxyProtocol = $param["ProxyProtocol"];
         }
 
         if (array_key_exists("SnatEnable",$param) and $param["SnatEnable"] !== null) {

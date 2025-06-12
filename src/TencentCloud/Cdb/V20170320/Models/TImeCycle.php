@@ -20,66 +20,94 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 扩容的周期
  *
- * @method boolean getMonday() 获取周一的扩容时间段
- * @method void setMonday(boolean $Monday) 设置周一的扩容时间段
- * @method boolean getTuesday() 获取周二的扩容时间段
- * @method void setTuesday(boolean $Tuesday) 设置周二的扩容时间段
- * @method boolean getWednesday() 获取周三的扩容时间段
- * @method void setWednesday(boolean $Wednesday) 设置周三的扩容时间段
- * @method boolean getThursday() 获取周四的扩容时间段
- * @method void setThursday(boolean $Thursday) 设置周四的扩容时间段
- * @method boolean getFriday() 获取周五的扩容时间段
- * @method void setFriday(boolean $Friday) 设置周五的扩容时间段
- * @method boolean getSaturday() 获取周六的扩容时间段
- * @method void setSaturday(boolean $Saturday) 设置周六的扩容时间段
- * @method boolean getSunday() 获取周日的扩容时间段
- * @method void setSunday(boolean $Sunday) 设置周日的扩容时间段
+ * @method boolean getMonday() 获取按周期扩容时，是否选择周一扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
+ * @method void setMonday(boolean $Monday) 设置按周期扩容时，是否选择周一扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
+ * @method boolean getTuesday() 获取按周期扩容时，是否选择周二扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
+ * @method void setTuesday(boolean $Tuesday) 设置按周期扩容时，是否选择周二扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
+ * @method boolean getWednesday() 获取按周期扩容时，是否选择周三扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
+ * @method void setWednesday(boolean $Wednesday) 设置按周期扩容时，是否选择周三扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
+ * @method boolean getThursday() 获取按周期扩容时，是否选择周四扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
+ * @method void setThursday(boolean $Thursday) 设置按周期扩容时，是否选择周四扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
+ * @method boolean getFriday() 获取按周期扩容时，是否选择周五扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
+ * @method void setFriday(boolean $Friday) 设置按周期扩容时，是否选择周五扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
+ * @method boolean getSaturday() 获取按周期扩容时，是否选择周六扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
+ * @method void setSaturday(boolean $Saturday) 设置按周期扩容时，是否选择周六扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
+ * @method boolean getSunday() 获取按周期扩容时，是否选择周日扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
+ * @method void setSunday(boolean $Sunday) 设置按周期扩容时，是否选择周日扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
  */
 class TImeCycle extends AbstractModel
 {
     /**
-     * @var boolean 周一的扩容时间段
+     * @var boolean 按周期扩容时，是否选择周一扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
      */
     public $Monday;
 
     /**
-     * @var boolean 周二的扩容时间段
+     * @var boolean 按周期扩容时，是否选择周二扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
      */
     public $Tuesday;
 
     /**
-     * @var boolean 周三的扩容时间段
+     * @var boolean 按周期扩容时，是否选择周三扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
      */
     public $Wednesday;
 
     /**
-     * @var boolean 周四的扩容时间段
+     * @var boolean 按周期扩容时，是否选择周四扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
      */
     public $Thursday;
 
     /**
-     * @var boolean 周五的扩容时间段
+     * @var boolean 按周期扩容时，是否选择周五扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
      */
     public $Friday;
 
     /**
-     * @var boolean 周六的扩容时间段
+     * @var boolean 按周期扩容时，是否选择周六扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
      */
     public $Saturday;
 
     /**
-     * @var boolean 周日的扩容时间段
+     * @var boolean 按周期扩容时，是否选择周日扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
      */
     public $Sunday;
 
     /**
-     * @param boolean $Monday 周一的扩容时间段
-     * @param boolean $Tuesday 周二的扩容时间段
-     * @param boolean $Wednesday 周三的扩容时间段
-     * @param boolean $Thursday 周四的扩容时间段
-     * @param boolean $Friday 周五的扩容时间段
-     * @param boolean $Saturday 周六的扩容时间段
-     * @param boolean $Sunday 周日的扩容时间段
+     * @param boolean $Monday 按周期扩容时，是否选择周一扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
+     * @param boolean $Tuesday 按周期扩容时，是否选择周二扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
+     * @param boolean $Wednesday 按周期扩容时，是否选择周三扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
+     * @param boolean $Thursday 按周期扩容时，是否选择周四扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
+     * @param boolean $Friday 按周期扩容时，是否选择周五扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
+     * @param boolean $Saturday 按周期扩容时，是否选择周六扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
+     * @param boolean $Sunday 按周期扩容时，是否选择周日扩容。
+说明：取值 true，表示选择，取值 false，表示不选择。
      */
     function __construct()
     {

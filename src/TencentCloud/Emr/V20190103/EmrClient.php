@@ -90,7 +90,9 @@ use TencentCloud\Emr\V20190103\Models as Models;
  * @method Models\ModifyInstanceBasicResponse ModifyInstanceBasic(Models\ModifyInstanceBasicRequest $req) 修改集群名称
  * @method Models\ModifyPodNumResponse ModifyPodNum(Models\ModifyPodNumRequest $req) 调整Pod数量
  * @method Models\ModifyResourceResponse ModifyResource(Models\ModifyResourceRequest $req) 变配实例
- * @method Models\ModifyResourcePoolsResponse ModifyResourcePools(Models\ModifyResourcePoolsRequest $req) 刷新YARN的动态资源池。已废弃，请使用`DeployYarnConf`
+ * @method Models\ModifyResourcePoolsResponse ModifyResourcePools(Models\ModifyResourcePoolsRequest $req) 已废弃，请使用DeployYarnConf\\n，近一年未被调用
+
+刷新YARN的动态资源池。已废弃，请使用`DeployYarnConf`
  * @method Models\ModifyResourceScheduleConfigResponse ModifyResourceScheduleConfig(Models\ModifyResourceScheduleConfigRequest $req) 已废弃，请使用ModifyYarnQueueV2来修改队列配置，近一年无相关日志
 
 修改YARN资源调度的资源配置。已废弃，请使用`ModifyYarnQueueV2`来修改队列配置

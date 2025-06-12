@@ -20,41 +20,41 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCPUExpandStrategyInfo返回参数结构体
  *
- * @method string getType() 获取策略类型。可选值 auto、manual。如果返回为NULL说明尚未开通弹性扩容策略
+ * @method string getType() 获取策略类型。输出值 auto、manual。如果返回为 NULL 说明尚未开通弹性扩容策略。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(string $Type) 设置策略类型。可选值 auto、manual。如果返回为NULL说明尚未开通弹性扩容策略
+ * @method void setType(string $Type) 设置策略类型。输出值 auto、manual。如果返回为 NULL 说明尚未开通弹性扩容策略。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getExpandCpu() 获取手动扩容的 CPU 。Type为 manual 时有效。
+ * @method integer getExpandCpu() 获取手动扩容的 CPU 。Type 为 manual 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExpandCpu(integer $ExpandCpu) 设置手动扩容的 CPU 。Type为 manual 时有效。
+ * @method void setExpandCpu(integer $ExpandCpu) 设置手动扩容的 CPU 。Type 为 manual 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AutoStrategy getAutoStrategy() 获取自动扩容策略。Type 为 auto 时有效
+ * @method AutoStrategy getAutoStrategy() 获取自动扩容策略。Type 为 auto 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAutoStrategy(AutoStrategy $AutoStrategy) 设置自动扩容策略。Type 为 auto 时有效
+ * @method void setAutoStrategy(AutoStrategy $AutoStrategy) 设置自动扩容策略。Type 为 auto 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method PeriodStrategy getPeriodStrategy() 获取按周期扩容策略。
  * @method void setPeriodStrategy(PeriodStrategy $PeriodStrategy) 设置按周期扩容策略。
- * @method TimeIntervalStrategy getTimeIntervalStrategy() 获取按时间段扩容策略
- * @method void setTimeIntervalStrategy(TimeIntervalStrategy $TimeIntervalStrategy) 设置按时间段扩容策略
+ * @method TimeIntervalStrategy getTimeIntervalStrategy() 获取按时间段扩容策略。
+ * @method void setTimeIntervalStrategy(TimeIntervalStrategy $TimeIntervalStrategy) 设置按时间段扩容策略。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeCPUExpandStrategyInfoResponse extends AbstractModel
 {
     /**
-     * @var string 策略类型。可选值 auto、manual。如果返回为NULL说明尚未开通弹性扩容策略
+     * @var string 策略类型。输出值 auto、manual。如果返回为 NULL 说明尚未开通弹性扩容策略。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
-     * @var integer 手动扩容的 CPU 。Type为 manual 时有效。
+     * @var integer 手动扩容的 CPU 。Type 为 manual 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpandCpu;
 
     /**
-     * @var AutoStrategy 自动扩容策略。Type 为 auto 时有效
+     * @var AutoStrategy 自动扩容策略。Type 为 auto 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoStrategy;
@@ -65,7 +65,7 @@ class DescribeCPUExpandStrategyInfoResponse extends AbstractModel
     public $PeriodStrategy;
 
     /**
-     * @var TimeIntervalStrategy 按时间段扩容策略
+     * @var TimeIntervalStrategy 按时间段扩容策略。
      */
     public $TimeIntervalStrategy;
 
@@ -75,14 +75,14 @@ class DescribeCPUExpandStrategyInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Type 策略类型。可选值 auto、manual。如果返回为NULL说明尚未开通弹性扩容策略
+     * @param string $Type 策略类型。输出值 auto、manual。如果返回为 NULL 说明尚未开通弹性扩容策略。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ExpandCpu 手动扩容的 CPU 。Type为 manual 时有效。
+     * @param integer $ExpandCpu 手动扩容的 CPU 。Type 为 manual 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AutoStrategy $AutoStrategy 自动扩容策略。Type 为 auto 时有效
+     * @param AutoStrategy $AutoStrategy 自动扩容策略。Type 为 auto 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PeriodStrategy $PeriodStrategy 按周期扩容策略。
-     * @param TimeIntervalStrategy $TimeIntervalStrategy 按时间段扩容策略
+     * @param TimeIntervalStrategy $TimeIntervalStrategy 按时间段扩容策略。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

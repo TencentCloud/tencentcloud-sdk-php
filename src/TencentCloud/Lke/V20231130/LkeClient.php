@@ -38,6 +38,8 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\CreateReleaseResponse CreateRelease(Models\CreateReleaseRequest $req) 创建发布
  * @method Models\CreateSharedKnowledgeResponse CreateSharedKnowledge(Models\CreateSharedKnowledgeRequest $req) 创建共享知识库。
  * @method Models\CreateVarResponse CreateVar(Models\CreateVarRequest $req) 创建变量
+ * @method Models\CreateWorkflowRunResponse CreateWorkflowRun(Models\CreateWorkflowRunRequest $req) 本接口用来创建工作流的异步运行实例，创建成功后工作流会在后台异步运行，接口返回工作流运行实例ID（WorkflowRunId）等信息。后面可通过调用DescribeWorkflowRun接口查工作流运行的详情。
+注意：工作流的异步运行是基于应用的，需要先把对应的应用配置成“单工作流模式”，并且打开“异步调用”的开关，才能创建成功。
  * @method Models\DeleteAppResponse DeleteApp(Models\DeleteAppRequest $req) 删除应用
  * @method Models\DeleteAttributeLabelResponse DeleteAttributeLabel(Models\DeleteAttributeLabelRequest $req) 删除属性标签
  * @method Models\DeleteDocResponse DeleteDoc(Models\DeleteDocRequest $req) 删除文档
@@ -55,6 +57,7 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\DescribeDocResponse DescribeDoc(Models\DescribeDocRequest $req) 文档详情
  * @method Models\DescribeKnowledgeUsageResponse DescribeKnowledgeUsage(Models\DescribeKnowledgeUsageRequest $req) 查询知识库用量
  * @method Models\DescribeKnowledgeUsagePieGraphResponse DescribeKnowledgeUsagePieGraph(Models\DescribeKnowledgeUsagePieGraphRequest $req) 查询企业知识库容量饼图
+ * @method Models\DescribeNodeRunResponse DescribeNodeRun(Models\DescribeNodeRunRequest $req) 通过DescribeWorkflowRun接口获取了工作流异步运行的整体内容，其中包含了基本的节点信息，再通用本接口可查看节点的运行详情（包括输入、输出、日志等）。
  * @method Models\DescribeQAResponse DescribeQA(Models\DescribeQARequest $req) 问答详情
  * @method Models\DescribeReferResponse DescribeRefer(Models\DescribeReferRequest $req) 获取来源详情列表
  * @method Models\DescribeReleaseResponse DescribeRelease(Models\DescribeReleaseRequest $req) 发布详情
@@ -67,6 +70,7 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\DescribeTokenUsageResponse DescribeTokenUsage(Models\DescribeTokenUsageRequest $req) 接口调用token详情
  * @method Models\DescribeTokenUsageGraphResponse DescribeTokenUsageGraph(Models\DescribeTokenUsageGraphRequest $req) 接口调用token折线图
  * @method Models\DescribeUnsatisfiedReplyContextResponse DescribeUnsatisfiedReplyContext(Models\DescribeUnsatisfiedReplyContextRequest $req) 获取不满意回复上下文
+ * @method Models\DescribeWorkflowRunResponse DescribeWorkflowRun(Models\DescribeWorkflowRunRequest $req) 创建了工作流的异步运行实例后，通过本接口可以查询整体的运行详情。
  * @method Models\ExportAttributeLabelResponse ExportAttributeLabel(Models\ExportAttributeLabelRequest $req) 导出属性标签
  * @method Models\ExportQAListResponse ExportQAList(Models\ExportQAListRequest $req) 导出QA列表
  * @method Models\ExportUnsatisfiedReplyResponse ExportUnsatisfiedReply(Models\ExportUnsatisfiedReplyRequest $req) 导出不满意回复
@@ -109,6 +113,7 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\ListSharedKnowledgeResponse ListSharedKnowledge(Models\ListSharedKnowledgeRequest $req) 列举共享知识库。
  * @method Models\ListUnsatisfiedReplyResponse ListUnsatisfiedReply(Models\ListUnsatisfiedReplyRequest $req) 查询不满意回复列表
  * @method Models\ListUsageCallDetailResponse ListUsageCallDetail(Models\ListUsageCallDetailRequest $req) 列表查询单次调用明细
+ * @method Models\ListWorkflowRunsResponse ListWorkflowRuns(Models\ListWorkflowRunsRequest $req) 此接口可查询已创建的所有工作流异步运行实例。
  * @method Models\ModifyAppResponse ModifyApp(Models\ModifyAppRequest $req) 修改应用请求结构体
  * @method Models\ModifyAttributeLabelResponse ModifyAttributeLabel(Models\ModifyAttributeLabelRequest $req) 编辑属性标签
  * @method Models\ModifyDocResponse ModifyDoc(Models\ModifyDocRequest $req) 修改文档
@@ -137,6 +142,7 @@ use TencentCloud\Lke\V20231130\Models as Models;
 3.调用本接口，将文件的基础信息存储到智能体开发平台中。
 以上步骤可参考[文档](https://cloud.tencent.com/document/product/1759/108903)，文档最后有[代码demo](https://cloud.tencent.com/document/product/1759/108903#demo)，可作为参考。
  * @method Models\StopDocParseResponse StopDocParse(Models\StopDocParseRequest $req) 终止文档解析
+ * @method Models\StopWorkflowRunResponse StopWorkflowRun(Models\StopWorkflowRunRequest $req) 此接口用来停止正在进行的工作流异步运行实例。
  * @method Models\UpdateSharedKnowledgeResponse UpdateSharedKnowledge(Models\UpdateSharedKnowledgeRequest $req) 更新共享知识库。
  * @method Models\UploadAttributeLabelResponse UploadAttributeLabel(Models\UploadAttributeLabelRequest $req) 上传导入属性标签
  * @method Models\VerifyQAResponse VerifyQA(Models\VerifyQARequest $req) 校验问答

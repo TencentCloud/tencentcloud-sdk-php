@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Lke\V20231130\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 时间段
+ * 工作流的API参数
  *
- * @method string getStartTime() 获取开始时间。
- * @method void setStartTime(string $StartTime) 设置开始时间。
- * @method string getEndTime() 获取结束时间。
- * @method void setEndTime(string $EndTime) 设置结束时间。
+ * @method string getName() 获取参数名称
+ * @method void setName(string $Name) 设置参数名称
+ * @method string getValue() 获取参数的值
+ * @method void setValue(string $Value) 设置参数的值
  */
-class TimeInterval extends AbstractModel
+class CustomVariable extends AbstractModel
 {
     /**
-     * @var string 开始时间。
+     * @var string 参数名称
      */
-    public $StartTime;
+    public $Name;
 
     /**
-     * @var string 结束时间。
+     * @var string 参数的值
      */
-    public $EndTime;
+    public $Value;
 
     /**
-     * @param string $StartTime 开始时间。
-     * @param string $EndTime 结束时间。
+     * @param string $Name 参数名称
+     * @param string $Value 参数的值
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class TimeInterval extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
         }
     }
 }

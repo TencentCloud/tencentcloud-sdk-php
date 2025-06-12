@@ -36,7 +36,9 @@ use TencentCloud\Goosefs\V20220519\Models as Models;
  * @method Models\DescribeClientNodesResponse DescribeClientNodes(Models\DescribeClientNodesRequest $req) 列出集群中所有的客户端节点
  * @method Models\DescribeClusterClientTokenResponse DescribeClusterClientToken(Models\DescribeClusterClientTokenRequest $req) 查询GooseFS集群客户端凭证
  * @method Models\DescribeClusterRoleTokenResponse DescribeClusterRoleToken(Models\DescribeClusterRoleTokenRequest $req) 查询GooseFS集群角色凭证
- * @method Models\DescribeClusterRolesResponse DescribeClusterRoles(Models\DescribeClusterRolesRequest $req) 查询GooseFS集群角色
+ * @method Models\DescribeClusterRolesResponse DescribeClusterRoles(Models\DescribeClusterRolesRequest $req) 接口废弃
+
+查询GooseFS集群角色
  * @method Models\DescribeDataRepositoryTaskStatusResponse DescribeDataRepositoryTaskStatus(Models\DescribeDataRepositoryTaskStatusRequest $req) 获取数据流通任务实时状态，用作客户端控制
  * @method Models\DescribeFileSystemBucketsResponse DescribeFileSystemBuckets(Models\DescribeFileSystemBucketsRequest $req) 罗列文件系统关联的Bucket映射
  * @method Models\DescribeFileSystemsResponse DescribeFileSystems(Models\DescribeFileSystemsRequest $req) 列出所有的文件系统

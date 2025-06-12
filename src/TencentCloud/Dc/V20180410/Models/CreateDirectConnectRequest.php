@@ -80,6 +80,8 @@ ChinaOther：中国其他；
  * @method void setSignLaw(boolean $SignLaw) 设置物理专线申请者是否签署了用户使用协议。默认已签署。
  * @method array getTags() 获取标签键值对
  * @method void setTags(array $Tags) 设置标签键值对
+ * @method boolean getIsMacSec() 获取是否MACsec需求
+ * @method void setIsMacSec(boolean $IsMacSec) 设置是否MACsec需求
  */
 class CreateDirectConnectRequest extends AbstractModel
 {
@@ -186,6 +188,11 @@ ChinaOther：中国其他；
     public $Tags;
 
     /**
+     * @var boolean 是否MACsec需求
+     */
+    public $IsMacSec;
+
+    /**
      * @param string $DirectConnectName 物理专线的名称。
      * @param string $AccessPointId 物理专线所在的接入点。
 您可以通过调用[DescribeAccessPoints](https://cloud.tencent.com/document/product/216/34827)接口获取接入点ID。
@@ -216,6 +223,7 @@ ChinaOther：中国其他；
      * @param string $FaultReportContactNumber 报障联系电话。
      * @param boolean $SignLaw 物理专线申请者是否签署了用户使用协议。默认已签署。
      * @param array $Tags 标签键值对
+     * @param boolean $IsMacSec 是否MACsec需求
      */
     function __construct()
     {
@@ -305,6 +313,10 @@ ChinaOther：中国其他；
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("IsMacSec",$param) and $param["IsMacSec"] !== null) {
+            $this->IsMacSec = $param["IsMacSec"];
         }
     }
 }

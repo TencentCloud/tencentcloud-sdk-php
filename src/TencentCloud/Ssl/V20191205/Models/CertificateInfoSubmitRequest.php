@@ -130,14 +130,12 @@ FILE：手动添加域名文件验证。 需要用户手动在域名站点根目
  * @method void setContactEmail(string $ContactEmail) 设置联系人邮箱地址。CompanyType为1时， 此字段必传
  * @method integer getAutoRenewFlag() 获取是否开启自动续费： 0， 不开启；  1， 开启； 默认为0
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置是否开启自动续费： 0， 不开启；  1， 开启； 默认为0
- * @method string getCsrKeyParameter() 获取密钥对参数，RSA支持2048，4096。ECC仅支持prime256v1。加密算法选择ECC时，此参数必填
-国密证书类型本字段不用传
- * @method void setCsrKeyParameter(string $CsrKeyParameter) 设置密钥对参数，RSA支持2048，4096。ECC仅支持prime256v1。加密算法选择ECC时，此参数必填
-国密证书类型本字段不用传
- * @method string getCsrEncryptAlgo() 获取加密算法，取值为ECC、RSA， 默认为RSA
-国密证书类型本字段不用传
- * @method void setCsrEncryptAlgo(string $CsrEncryptAlgo) 设置加密算法，取值为ECC、RSA， 默认为RSA
-国密证书类型本字段不用传
+ * @method string getCsrKeyParameter() 获取密钥对参数，RSA支持2048，4096。ECC仅支持prime256v1。当 CSR 生成方式为online的时候，此参数必填。
+
+ * @method void setCsrKeyParameter(string $CsrKeyParameter) 设置密钥对参数，RSA支持2048，4096。ECC仅支持prime256v1。当 CSR 生成方式为online的时候，此参数必填。
+
+ * @method string getCsrEncryptAlgo() 获取加密算法，取值为ECC、RSA， 默认为RSA。当 CSR 生成方式为online的时候，此参数必填。
+ * @method void setCsrEncryptAlgo(string $CsrEncryptAlgo) 设置加密算法，取值为ECC、RSA， 默认为RSA。当 CSR 生成方式为online的时候，此参数必填。
  * @method string getManagerId() 获取管理人ID，在 [腾讯云控制台](https://console.cloud.tencent.com/ssl/info) 可进行查看，若无满足的管理人信息， 则本参数传0 ； 若存在满足当前订单的管理人信息， 可以根据 [DescribeManagers](https://cloud.tencent.com/document/product/400/52672) 查看管理人ID； 若传了管理人ID，则Org开头、Admin开头、Tech开头的参数可不传； 管理人ID会包含公司信息
 
  * @method void setManagerId(string $ManagerId) 设置管理人ID，在 [腾讯云控制台](https://console.cloud.tencent.com/ssl/info) 可进行查看，若无满足的管理人信息， 则本参数传0 ； 若存在满足当前订单的管理人信息， 可以根据 [DescribeManagers](https://cloud.tencent.com/document/product/400/52672) 查看管理人ID； 若传了管理人ID，则Org开头、Admin开头、Tech开头的参数可不传； 管理人ID会包含公司信息
@@ -339,14 +337,13 @@ FILE：手动添加域名文件验证。 需要用户手动在域名站点根目
     public $AutoRenewFlag;
 
     /**
-     * @var string 密钥对参数，RSA支持2048，4096。ECC仅支持prime256v1。加密算法选择ECC时，此参数必填
-国密证书类型本字段不用传
+     * @var string 密钥对参数，RSA支持2048，4096。ECC仅支持prime256v1。当 CSR 生成方式为online的时候，此参数必填。
+
      */
     public $CsrKeyParameter;
 
     /**
-     * @var string 加密算法，取值为ECC、RSA， 默认为RSA
-国密证书类型本字段不用传
+     * @var string 加密算法，取值为ECC、RSA， 默认为RSA。当 CSR 生成方式为online的时候，此参数必填。
      */
     public $CsrEncryptAlgo;
 
@@ -437,10 +434,9 @@ FILE：手动添加域名文件验证。 需要用户手动在域名站点根目
      * @param string $TechLastName 联系人姓。若没有传ManagerId， 则此字段必传
      * @param string $ContactEmail 联系人邮箱地址。CompanyType为1时， 此字段必传
      * @param integer $AutoRenewFlag 是否开启自动续费： 0， 不开启；  1， 开启； 默认为0
-     * @param string $CsrKeyParameter 密钥对参数，RSA支持2048，4096。ECC仅支持prime256v1。加密算法选择ECC时，此参数必填
-国密证书类型本字段不用传
-     * @param string $CsrEncryptAlgo 加密算法，取值为ECC、RSA， 默认为RSA
-国密证书类型本字段不用传
+     * @param string $CsrKeyParameter 密钥对参数，RSA支持2048，4096。ECC仅支持prime256v1。当 CSR 生成方式为online的时候，此参数必填。
+
+     * @param string $CsrEncryptAlgo 加密算法，取值为ECC、RSA， 默认为RSA。当 CSR 生成方式为online的时候，此参数必填。
      * @param string $ManagerId 管理人ID，在 [腾讯云控制台](https://console.cloud.tencent.com/ssl/info) 可进行查看，若无满足的管理人信息， 则本参数传0 ； 若存在满足当前订单的管理人信息， 可以根据 [DescribeManagers](https://cloud.tencent.com/document/product/400/52672) 查看管理人ID； 若传了管理人ID，则Org开头、Admin开头、Tech开头的参数可不传； 管理人ID会包含公司信息
 
      * @param string $TechPhone 联系人电话。若没有传ManagerId， 则此字段必传

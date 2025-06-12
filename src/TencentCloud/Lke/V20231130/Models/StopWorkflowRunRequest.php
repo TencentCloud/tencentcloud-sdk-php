@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Lke\V20231130\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 时间段
+ * StopWorkflowRun请求参数结构体
  *
- * @method string getStartTime() 获取开始时间。
- * @method void setStartTime(string $StartTime) 设置开始时间。
- * @method string getEndTime() 获取结束时间。
- * @method void setEndTime(string $EndTime) 设置结束时间。
+ * @method string getWorkflowRunId() 获取工作流运行实例ID
+ * @method void setWorkflowRunId(string $WorkflowRunId) 设置工作流运行实例ID
  */
-class TimeInterval extends AbstractModel
+class StopWorkflowRunRequest extends AbstractModel
 {
     /**
-     * @var string 开始时间。
+     * @var string 工作流运行实例ID
      */
-    public $StartTime;
+    public $WorkflowRunId;
 
     /**
-     * @var string 结束时间。
-     */
-    public $EndTime;
-
-    /**
-     * @param string $StartTime 开始时间。
-     * @param string $EndTime 结束时间。
+     * @param string $WorkflowRunId 工作流运行实例ID
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class TimeInterval extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
-            $this->StartTime = $param["StartTime"];
-        }
-
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
+        if (array_key_exists("WorkflowRunId",$param) and $param["WorkflowRunId"] !== null) {
+            $this->WorkflowRunId = $param["WorkflowRunId"];
         }
     }
 }

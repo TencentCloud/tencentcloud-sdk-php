@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNatGatewayId(string $NatGatewayId) 设置nat的唯一标识
  * @method string getVpcId() 获取vpc的唯一标识
  * @method void setVpcId(string $VpcId) 设置vpc的唯一标识
- * @method integer getLimit() 获取0到200之间
- * @method void setLimit(integer $Limit) 设置0到200之间
- * @method integer getOffset() 获取大于0
- * @method void setOffset(integer $Offset) 设置大于0
+ * @method integer getLimit() 获取查询NAT网关绑定的路由数量，可选值0-200，默认为10
+ * @method void setLimit(integer $Limit) 设置查询NAT网关绑定的路由数量，可选值0-200，默认为10
+ * @method integer getOffset() 获取数据偏移量，默认为0
+ * @method void setOffset(integer $Offset) 设置数据偏移量，默认为0
  */
 class DescribeNatGatewayDirectConnectGatewayRouteRequest extends AbstractModel
 {
@@ -42,20 +42,20 @@ class DescribeNatGatewayDirectConnectGatewayRouteRequest extends AbstractModel
     public $VpcId;
 
     /**
-     * @var integer 0到200之间
+     * @var integer 查询NAT网关绑定的路由数量，可选值0-200，默认为10
      */
     public $Limit;
 
     /**
-     * @var integer 大于0
+     * @var integer 数据偏移量，默认为0
      */
     public $Offset;
 
     /**
      * @param string $NatGatewayId nat的唯一标识
      * @param string $VpcId vpc的唯一标识
-     * @param integer $Limit 0到200之间
-     * @param integer $Offset 大于0
+     * @param integer $Limit 查询NAT网关绑定的路由数量，可选值0-200，默认为10
+     * @param integer $Offset 数据偏移量，默认为0
      */
     function __construct()
     {

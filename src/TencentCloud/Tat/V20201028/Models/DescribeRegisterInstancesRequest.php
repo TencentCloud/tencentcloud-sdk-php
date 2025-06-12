@@ -47,6 +47,18 @@ use TencentCloud\Common\AbstractModel;
 类型：String
 必选：否
 
+- register-status
+
+按照【托管实例状态】进行过滤，取值：Online | Offline。
+类型：String
+必选：否
+
+- local-ip
+
+按照【托管实例网卡IP】进行过滤。
+类型：String
+必选：否
+
 - register-code-id
 
 按照【托管实例注册码ID】进行过滤。可通过 [DescribeRegisterCodes(查询注册码)](https://cloud.tencent.com/document/api/1340/96925) 接口获取。
@@ -92,6 +104,18 @@ use TencentCloud\Common\AbstractModel;
 - instance-id
 
 按照【托管实例ID】进行过滤。
+类型：String
+必选：否
+
+- register-status
+
+按照【托管实例状态】进行过滤，取值：Online | Offline。
+类型：String
+必选：否
+
+- local-ip
+
+按照【托管实例网卡IP】进行过滤。
 类型：String
 必选：否
 
@@ -161,6 +185,18 @@ class DescribeRegisterInstancesRequest extends AbstractModel
 类型：String
 必选：否
 
+- register-status
+
+按照【托管实例状态】进行过滤，取值：Online | Offline。
+类型：String
+必选：否
+
+- local-ip
+
+按照【托管实例网卡IP】进行过滤。
+类型：String
+必选：否
+
 - register-code-id
 
 按照【托管实例注册码ID】进行过滤。可通过 [DescribeRegisterCodes(查询注册码)](https://cloud.tencent.com/document/api/1340/96925) 接口获取。
@@ -226,6 +262,18 @@ class DescribeRegisterInstancesRequest extends AbstractModel
 - instance-id
 
 按照【托管实例ID】进行过滤。
+类型：String
+必选：否
+
+- register-status
+
+按照【托管实例状态】进行过滤，取值：Online | Offline。
+类型：String
+必选：否
+
+- local-ip
+
+按照【托管实例网卡IP】进行过滤。
 类型：String
 必选：否
 

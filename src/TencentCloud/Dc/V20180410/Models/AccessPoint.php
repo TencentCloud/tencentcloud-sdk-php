@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAvailablePortInfo(array $AvailablePortInfo) 设置端口规格信息。
  * @method string getAddress() 获取接入点地址。
  * @method void setAddress(string $Address) 设置接入点地址。
+ * @method boolean getIsMacSec() 获取是否MACsec
+ * @method void setIsMacSec(boolean $IsMacSec) 设置是否MACsec
  */
 class AccessPoint extends AbstractModel
 {
@@ -115,6 +117,11 @@ class AccessPoint extends AbstractModel
     public $Address;
 
     /**
+     * @var boolean 是否MACsec
+     */
+    public $IsMacSec;
+
+    /**
      * @param string $AccessPointName 接入点的名称。
      * @param string $AccessPointId 接入点唯一ID。
      * @param string $State 接入点的状态。可用，不可用。
@@ -128,6 +135,7 @@ class AccessPoint extends AbstractModel
      * @param string $AccessPointType 接入点类型。VXLAN/QCPL/QCAR
      * @param array $AvailablePortInfo 端口规格信息。
      * @param string $Address 接入点地址。
+     * @param boolean $IsMacSec 是否MACsec
      */
     function __construct()
     {
@@ -198,6 +206,10 @@ class AccessPoint extends AbstractModel
 
         if (array_key_exists("Address",$param) and $param["Address"] !== null) {
             $this->Address = $param["Address"];
+        }
+
+        if (array_key_exists("IsMacSec",$param) and $param["IsMacSec"] !== null) {
+            $this->IsMacSec = $param["IsMacSec"];
         }
     }
 }

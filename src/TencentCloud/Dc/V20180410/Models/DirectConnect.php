@@ -106,6 +106,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccessPointName(string $AccessPointName) 设置物理专线的接入点名称
  * @method boolean getIsThreeArch() 获取是否三层架构
  * @method void setIsThreeArch(boolean $IsThreeArch) 设置是否三层架构
+ * @method boolean getIsMacSec() 获取是否MACsec
+ * @method void setIsMacSec(boolean $IsMacSec) 设置是否MACsec
+ * @method integer getPortSpecification() 获取端口规格(Mbps)
+ * @method void setPortSpecification(integer $PortSpecification) 设置端口规格(Mbps)
  */
 class DirectConnect extends AbstractModel
 {
@@ -293,6 +297,16 @@ class DirectConnect extends AbstractModel
     public $IsThreeArch;
 
     /**
+     * @var boolean 是否MACsec
+     */
+    public $IsMacSec;
+
+    /**
+     * @var integer 端口规格(Mbps)
+     */
+    public $PortSpecification;
+
+    /**
      * @param string $DirectConnectId 物理专线ID。
      * @param string $DirectConnectName 物理专线的名称。
      * @param string $AccessPointId 物理专线的接入点ID。
@@ -336,6 +350,8 @@ class DirectConnect extends AbstractModel
      * @param integer $Construct 建设模式
      * @param string $AccessPointName 物理专线的接入点名称
      * @param boolean $IsThreeArch 是否三层架构
+     * @param boolean $IsMacSec 是否MACsec
+     * @param integer $PortSpecification 端口规格(Mbps)
      */
     function __construct()
     {
@@ -493,6 +509,14 @@ class DirectConnect extends AbstractModel
 
         if (array_key_exists("IsThreeArch",$param) and $param["IsThreeArch"] !== null) {
             $this->IsThreeArch = $param["IsThreeArch"];
+        }
+
+        if (array_key_exists("IsMacSec",$param) and $param["IsMacSec"] !== null) {
+            $this->IsMacSec = $param["IsMacSec"];
+        }
+
+        if (array_key_exists("PortSpecification",$param) and $param["PortSpecification"] !== null) {
+            $this->PortSpecification = $param["PortSpecification"];
         }
     }
 }

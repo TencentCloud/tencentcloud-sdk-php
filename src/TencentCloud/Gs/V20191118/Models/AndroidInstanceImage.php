@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAndroidInstanceImageState(string $AndroidInstanceImageState) 设置镜像状态
  * @method string getAndroidInstanceImageZone() 获取镜像可用区
  * @method void setAndroidInstanceImageZone(string $AndroidInstanceImageZone) 设置镜像可用区
+ * @method string getAndroidVersion() 获取安卓10
+ * @method void setAndroidVersion(string $AndroidVersion) 设置安卓10
  */
 class AndroidInstanceImage extends AbstractModel
 {
@@ -52,10 +54,16 @@ class AndroidInstanceImage extends AbstractModel
     public $AndroidInstanceImageZone;
 
     /**
+     * @var string 安卓10
+     */
+    public $AndroidVersion;
+
+    /**
      * @param string $AndroidInstanceImageId 镜像 ID
      * @param string $AndroidInstanceImageName 镜像名称，由业务方自定义，仅用于展示
      * @param string $AndroidInstanceImageState 镜像状态
      * @param string $AndroidInstanceImageZone 镜像可用区
+     * @param string $AndroidVersion 安卓10
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class AndroidInstanceImage extends AbstractModel
 
         if (array_key_exists("AndroidInstanceImageZone",$param) and $param["AndroidInstanceImageZone"] !== null) {
             $this->AndroidInstanceImageZone = $param["AndroidInstanceImageZone"];
+        }
+
+        if (array_key_exists("AndroidVersion",$param) and $param["AndroidVersion"] !== null) {
+            $this->AndroidVersion = $param["AndroidVersion"];
         }
     }
 }

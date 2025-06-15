@@ -275,7 +275,6 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
 - 使用前提
 1. 仅用于查询由 CreateRecordTask 接口创建的录制任务。
 2. 不能查询被 DeleteRecordTask 接口删除以及已过期（平台侧保留3个月）的录制任务。
-
  * @method Models\DescribeScreenShotSheetNumListResponse DescribeScreenShotSheetNumList(Models\DescribeScreenShotSheetNumListRequest $req) 接口用来查询直播增值业务--截图的张数
  * @method Models\DescribeScreenshotTaskResponse DescribeScreenshotTask(Models\DescribeScreenshotTaskRequest $req) 查询指定时间段范围内启动和结束的截图任务列表。
 - 使用前提

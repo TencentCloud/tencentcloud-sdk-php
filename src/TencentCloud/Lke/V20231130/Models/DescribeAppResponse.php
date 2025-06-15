@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppStatus(integer $AppStatus) 设置应用状态，1：未上线，2：运行中，3：停用
  * @method string getAppStatusDesc() 获取状态说明
  * @method void setAppStatusDesc(string $AppStatusDesc) 设置状态说明
+ * @method boolean getIsCopying() 获取应用是否在复制中
+ * @method void setIsCopying(boolean $IsCopying) 设置应用是否在复制中
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -117,6 +119,11 @@ class DescribeAppResponse extends AbstractModel
     public $AppStatusDesc;
 
     /**
+     * @var boolean 应用是否在复制中
+     */
+    public $IsCopying;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -135,6 +142,7 @@ class DescribeAppResponse extends AbstractModel
      * @param string $AppKey 应用appKey
      * @param integer $AppStatus 应用状态，1：未上线，2：运行中，3：停用
      * @param string $AppStatusDesc 状态说明
+     * @param boolean $IsCopying 应用是否在复制中
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -202,6 +210,10 @@ class DescribeAppResponse extends AbstractModel
 
         if (array_key_exists("AppStatusDesc",$param) and $param["AppStatusDesc"] !== null) {
             $this->AppStatusDesc = $param["AppStatusDesc"];
+        }
+
+        if (array_key_exists("IsCopying",$param) and $param["IsCopying"] !== null) {
+            $this->IsCopying = $param["IsCopying"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

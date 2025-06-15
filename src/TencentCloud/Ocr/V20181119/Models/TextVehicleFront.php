@@ -64,12 +64,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSeal(string $Seal) 设置印章
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStateElectronic() 获取状态
- * @method void setStateElectronic(string $StateElectronic) 设置状态
- * @method string getInspectionValidityTimeElectronic() 获取检验有效期
- * @method void setInspectionValidityTimeElectronic(string $InspectionValidityTimeElectronic) 设置检验有效期
- * @method string getGenerationTimeElectronic() 获取生成时间
- * @method void setGenerationTimeElectronic(string $GenerationTimeElectronic) 设置生成时间
+ * @method string getStateElectronic() 获取状态，该字段仅支持电子行驶证返回
+ * @method void setStateElectronic(string $StateElectronic) 设置状态，该字段仅支持电子行驶证返回
+ * @method string getInspectionValidityTimeElectronic() 获取检验有效期，该字段仅支持电子行驶证返回
+ * @method void setInspectionValidityTimeElectronic(string $InspectionValidityTimeElectronic) 设置检验有效期，该字段仅支持电子行驶证返回
+ * @method string getGenerationTimeElectronic() 获取生成时间，该字段仅支持电子行驶证返回
+ * @method void setGenerationTimeElectronic(string $GenerationTimeElectronic) 设置生成时间，该字段仅支持电子行驶证返回
  */
 class TextVehicleFront extends AbstractModel
 {
@@ -140,17 +140,17 @@ class TextVehicleFront extends AbstractModel
     public $Seal;
 
     /**
-     * @var string 状态
+     * @var string 状态，该字段仅支持电子行驶证返回
      */
     public $StateElectronic;
 
     /**
-     * @var string 检验有效期
+     * @var string 检验有效期，该字段仅支持电子行驶证返回
      */
     public $InspectionValidityTimeElectronic;
 
     /**
-     * @var string 生成时间
+     * @var string 生成时间，该字段仅支持电子行驶证返回
      */
     public $GenerationTimeElectronic;
 
@@ -177,9 +177,9 @@ class TextVehicleFront extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Seal 印章
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $StateElectronic 状态
-     * @param string $InspectionValidityTimeElectronic 检验有效期
-     * @param string $GenerationTimeElectronic 生成时间
+     * @param string $StateElectronic 状态，该字段仅支持电子行驶证返回
+     * @param string $InspectionValidityTimeElectronic 检验有效期，该字段仅支持电子行驶证返回
+     * @param string $GenerationTimeElectronic 生成时间，该字段仅支持电子行驶证返回
      */
     function __construct()
     {

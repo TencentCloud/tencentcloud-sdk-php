@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKnowledge(array $Knowledge) 设置表示用户注入的知识信息
  * @method UserLocation getUserLocation() 获取用户位置详细信息
  * @method void setUserLocation(UserLocation $UserLocation) 设置用户位置详细信息
+ * @method boolean getProcesses() 获取打开开关，会返回搜索状态
+ * @method void setProcesses(boolean $Processes) 设置打开开关，会返回搜索状态
  */
 class WebSearchOptions extends AbstractModel
 {
@@ -38,8 +40,14 @@ class WebSearchOptions extends AbstractModel
     public $UserLocation;
 
     /**
+     * @var boolean 打开开关，会返回搜索状态
+     */
+    public $Processes;
+
+    /**
      * @param array $Knowledge 表示用户注入的知识信息
      * @param UserLocation $UserLocation 用户位置详细信息
+     * @param boolean $Processes 打开开关，会返回搜索状态
      */
     function __construct()
     {
@@ -66,6 +74,10 @@ class WebSearchOptions extends AbstractModel
         if (array_key_exists("UserLocation",$param) and $param["UserLocation"] !== null) {
             $this->UserLocation = new UserLocation();
             $this->UserLocation->deserialize($param["UserLocation"]);
+        }
+
+        if (array_key_exists("Processes",$param) and $param["Processes"] !== null) {
+            $this->Processes = $param["Processes"];
         }
     }
 }

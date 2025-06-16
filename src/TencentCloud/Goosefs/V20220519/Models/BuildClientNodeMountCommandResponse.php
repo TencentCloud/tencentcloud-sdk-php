@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ess\V20201111\Models;
+namespace TencentCloud\Goosefs\V20220519\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * OperateTemplate返回参数结构体
+ * BuildClientNodeMountCommand返回参数结构体
  *
- * @method string getTemplateId() 获取模板ID，为32位字符串，模板复制新建时返回
- * @method void setTemplateId(string $TemplateId) 设置模板ID，为32位字符串，模板复制新建时返回
- * @method string getTemplateName() 获取模板名称，模板复制新建时返回
- * @method void setTemplateName(string $TemplateName) 设置模板名称，模板复制新建时返回
+ * @method string getCommand() 获取挂载命令
+ * @method void setCommand(string $Command) 设置挂载命令
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class OperateTemplateResponse extends AbstractModel
+class BuildClientNodeMountCommandResponse extends AbstractModel
 {
     /**
-     * @var string 模板ID，为32位字符串，模板复制新建时返回
+     * @var string 挂载命令
      */
-    public $TemplateId;
-
-    /**
-     * @var string 模板名称，模板复制新建时返回
-     */
-    public $TemplateName;
+    public $Command;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +38,7 @@ class OperateTemplateResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TemplateId 模板ID，为32位字符串，模板复制新建时返回
-     * @param string $TemplateName 模板名称，模板复制新建时返回
+     * @param string $Command 挂载命令
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +54,8 @@ class OperateTemplateResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
-            $this->TemplateId = $param["TemplateId"];
-        }
-
-        if (array_key_exists("TemplateName",$param) and $param["TemplateName"] !== null) {
-            $this->TemplateName = $param["TemplateName"];
+        if (array_key_exists("Command",$param) and $param["Command"] !== null) {
+            $this->Command = $param["Command"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

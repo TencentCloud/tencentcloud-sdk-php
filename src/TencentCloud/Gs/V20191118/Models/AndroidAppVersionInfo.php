@@ -36,6 +36,8 @@ CREATE_FAIL：创建失败、CREATE_SUCCESS：创建成功）
  * @method void setUninstallCommand(string $UninstallCommand) 设置shell 卸载命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
  * @method string getCleanupMode() 获取应用资源清理模式（实例安装应用所用资源），取值：CLEANUP_ON_UNINSTALL（默认值），卸载 App 时清理；CLEANUP_AFTER_INSTALL，安装 App 后立即清理。普通应用只有 CLEANUP_AFTER_INSTALL 模式。
  * @method void setCleanupMode(string $CleanupMode) 设置应用资源清理模式（实例安装应用所用资源），取值：CLEANUP_ON_UNINSTALL（默认值），卸载 App 时清理；CLEANUP_AFTER_INSTALL，安装 App 后立即清理。普通应用只有 CLEANUP_AFTER_INSTALL 模式。
+ * @method string getAndroidAppVersionName() 获取安卓应用版本名称
+ * @method void setAndroidAppVersionName(string $AndroidAppVersionName) 设置安卓应用版本名称
  */
 class AndroidAppVersionInfo extends AbstractModel
 {
@@ -72,6 +74,11 @@ CREATE_FAIL：创建失败、CREATE_SUCCESS：创建成功）
     public $CleanupMode;
 
     /**
+     * @var string 安卓应用版本名称
+     */
+    public $AndroidAppVersionName;
+
+    /**
      * @param string $AndroidAppVersion 安卓应用版本
      * @param string $State 安卓应用版本创建状态（NORMAL：无、UPLOADING：上传中、
 CREATING： 创建中、
@@ -80,6 +87,7 @@ CREATE_FAIL：创建失败、CREATE_SUCCESS：创建成功）
      * @param string $Command shell 安装命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
      * @param string $UninstallCommand shell 卸载命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
      * @param string $CleanupMode 应用资源清理模式（实例安装应用所用资源），取值：CLEANUP_ON_UNINSTALL（默认值），卸载 App 时清理；CLEANUP_AFTER_INSTALL，安装 App 后立即清理。普通应用只有 CLEANUP_AFTER_INSTALL 模式。
+     * @param string $AndroidAppVersionName 安卓应用版本名称
      */
     function __construct()
     {
@@ -116,6 +124,10 @@ CREATE_FAIL：创建失败、CREATE_SUCCESS：创建成功）
 
         if (array_key_exists("CleanupMode",$param) and $param["CleanupMode"] !== null) {
             $this->CleanupMode = $param["CleanupMode"];
+        }
+
+        if (array_key_exists("AndroidAppVersionName",$param) and $param["AndroidAppVersionName"] !== null) {
+            $this->AndroidAppVersionName = $param["AndroidAppVersionName"];
         }
     }
 }

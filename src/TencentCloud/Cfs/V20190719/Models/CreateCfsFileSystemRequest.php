@@ -54,8 +54,8 @@ use TencentCloud\Common\AbstractModel;
 
  * @method string getCidrBlock() 获取云联网中CFS使用的网段， 若网络类型选择的是Ccn，该字段为必填，且不能和Ccn中已经绑定的网段冲突
  * @method void setCidrBlock(string $CidrBlock) 设置云联网中CFS使用的网段， 若网络类型选择的是Ccn，该字段为必填，且不能和Ccn中已经绑定的网段冲突
- * @method integer getCapacity() 获取文件系统容量，turbo系列必填，单位为GiB。 turbo标准型单位GB，起售20TiB，即20480 GiB；扩容步长20TiB，即20480 GiB。turbo性能型起售10TiB，即10240 GiB；扩容步长10TiB，10240 GiB。
- * @method void setCapacity(integer $Capacity) 设置文件系统容量，turbo系列必填，单位为GiB。 turbo标准型单位GB，起售20TiB，即20480 GiB；扩容步长20TiB，即20480 GiB。turbo性能型起售10TiB，即10240 GiB；扩容步长10TiB，10240 GiB。
+ * @method integer getCapacity() 获取文件系统容量，turbo系列必填，单位为GiB。 turbo标准型单位GB，起售20TiB，即20480 GiB；扩容步长10TiB，即10240 GiB。turbo性能型起售10TiB，即10240 GiB；扩容步长10TiB，10240 GiB。
+ * @method void setCapacity(integer $Capacity) 设置文件系统容量，turbo系列必填，单位为GiB。 turbo标准型单位GB，起售20TiB，即20480 GiB；扩容步长10TiB，即10240 GiB。turbo性能型起售10TiB，即10240 GiB；扩容步长10TiB，10240 GiB。
  * @method string getSnapshotId() 获取文件系统快照ID，通过查询快照列表获取该参数，
 [DescribeCfsSnapshots](https://cloud.tencent.com/document/product/582/80206)
  * @method void setSnapshotId(string $SnapshotId) 设置文件系统快照ID，通过查询快照列表获取该参数，
@@ -145,7 +145,7 @@ class CreateCfsFileSystemRequest extends AbstractModel
     public $CidrBlock;
 
     /**
-     * @var integer 文件系统容量，turbo系列必填，单位为GiB。 turbo标准型单位GB，起售20TiB，即20480 GiB；扩容步长20TiB，即20480 GiB。turbo性能型起售10TiB，即10240 GiB；扩容步长10TiB，10240 GiB。
+     * @var integer 文件系统容量，turbo系列必填，单位为GiB。 turbo标准型单位GB，起售20TiB，即20480 GiB；扩容步长10TiB，即10240 GiB。turbo性能型起售10TiB，即10240 GiB；扩容步长10TiB，10240 GiB。
      */
     public $Capacity;
 
@@ -191,7 +191,7 @@ v3.1：创建增强版的通用文件系统
 [DescribeCcns](https://cloud.tencent.com/document/product/215/19199)
 
      * @param string $CidrBlock 云联网中CFS使用的网段， 若网络类型选择的是Ccn，该字段为必填，且不能和Ccn中已经绑定的网段冲突
-     * @param integer $Capacity 文件系统容量，turbo系列必填，单位为GiB。 turbo标准型单位GB，起售20TiB，即20480 GiB；扩容步长20TiB，即20480 GiB。turbo性能型起售10TiB，即10240 GiB；扩容步长10TiB，10240 GiB。
+     * @param integer $Capacity 文件系统容量，turbo系列必填，单位为GiB。 turbo标准型单位GB，起售20TiB，即20480 GiB；扩容步长10TiB，即10240 GiB。turbo性能型起售10TiB，即10240 GiB；扩容步长10TiB，10240 GiB。
      * @param string $SnapshotId 文件系统快照ID，通过查询快照列表获取该参数，
 [DescribeCfsSnapshots](https://cloud.tencent.com/document/product/582/80206)
      * @param string $AutoSnapshotPolicyId 定期快照策略ID，通过查询快照策略信息获取,

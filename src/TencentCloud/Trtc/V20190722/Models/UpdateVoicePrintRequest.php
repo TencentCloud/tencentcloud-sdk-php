@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReqTimestamp(integer $ReqTimestamp) 设置毫秒时间戳
  * @method integer getAudioFormat() 获取音频格式,目前只支持0,代表wav
  * @method void setAudioFormat(integer $AudioFormat) 设置音频格式,目前只支持0,代表wav
- * @method string getAudio() 获取整个wav音频文件的base64字符串,其中wav文件限定为16k或8k采样率, 16bit位深, 单声道, 8到18秒有效音频时长,编码数据大小不超过2M
- * @method void setAudio(string $Audio) 设置整个wav音频文件的base64字符串,其中wav文件限定为16k或8k采样率, 16bit位深, 单声道, 8到18秒有效音频时长,编码数据大小不超过2M
+ * @method string getAudio() 获取整个wav音频文件的base64字符串,其中wav文件限定为16k采样率, 16bit位深, 单声道, 8到18秒音频时长,有效音频不小于6秒(不能有太多静音段),编码数据大小不超过2M
+ * @method void setAudio(string $Audio) 设置整个wav音频文件的base64字符串,其中wav文件限定为16k采样率, 16bit位深, 单声道, 8到18秒音频时长,有效音频不小于6秒(不能有太多静音段),编码数据大小不超过2M
  * @method string getAudioMetaInfo() 获取和声纹绑定的MetaInfo，长度最大不超过512
  * @method void setAudioMetaInfo(string $AudioMetaInfo) 设置和声纹绑定的MetaInfo，长度最大不超过512
  */
@@ -49,7 +49,7 @@ class UpdateVoicePrintRequest extends AbstractModel
     public $AudioFormat;
 
     /**
-     * @var string 整个wav音频文件的base64字符串,其中wav文件限定为16k或8k采样率, 16bit位深, 单声道, 8到18秒有效音频时长,编码数据大小不超过2M
+     * @var string 整个wav音频文件的base64字符串,其中wav文件限定为16k采样率, 16bit位深, 单声道, 8到18秒音频时长,有效音频不小于6秒(不能有太多静音段),编码数据大小不超过2M
      */
     public $Audio;
 
@@ -62,7 +62,7 @@ class UpdateVoicePrintRequest extends AbstractModel
      * @param string $VoicePrintId 声纹信息ID
      * @param integer $ReqTimestamp 毫秒时间戳
      * @param integer $AudioFormat 音频格式,目前只支持0,代表wav
-     * @param string $Audio 整个wav音频文件的base64字符串,其中wav文件限定为16k或8k采样率, 16bit位深, 单声道, 8到18秒有效音频时长,编码数据大小不超过2M
+     * @param string $Audio 整个wav音频文件的base64字符串,其中wav文件限定为16k采样率, 16bit位深, 单声道, 8到18秒音频时长,有效音频不小于6秒(不能有太多静音段),编码数据大小不超过2M
      * @param string $AudioMetaInfo 和声纹绑定的MetaInfo，长度最大不超过512
      */
     function __construct()

@@ -14,30 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ess\V20201111\Models;
+namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * OperateTemplate返回参数结构体
+ * DescribeExposures返回参数结构体
  *
- * @method string getTemplateId() 获取模板ID，为32位字符串，模板复制新建时返回
- * @method void setTemplateId(string $TemplateId) 设置模板ID，为32位字符串，模板复制新建时返回
- * @method string getTemplateName() 获取模板名称，模板复制新建时返回
- * @method void setTemplateName(string $TemplateName) 设置模板名称，模板复制新建时返回
+ * @method integer getTotalCount() 获取互联网暴露资产数量
+ * @method void setTotalCount(integer $TotalCount) 设置互联网暴露资产数量
+ * @method array getExposeList() 获取互联网暴露资产列表
+ * @method void setExposeList(array $ExposeList) 设置互联网暴露资产列表
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class OperateTemplateResponse extends AbstractModel
+class DescribeExposuresResponse extends AbstractModel
 {
     /**
-     * @var string 模板ID，为32位字符串，模板复制新建时返回
+     * @var integer 互联网暴露资产数量
      */
-    public $TemplateId;
+    public $TotalCount;
 
     /**
-     * @var string 模板名称，模板复制新建时返回
+     * @var array 互联网暴露资产列表
      */
-    public $TemplateName;
+    public $ExposeList;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +45,8 @@ class OperateTemplateResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TemplateId 模板ID，为32位字符串，模板复制新建时返回
-     * @param string $TemplateName 模板名称，模板复制新建时返回
+     * @param integer $TotalCount 互联网暴露资产数量
+     * @param array $ExposeList 互联网暴露资产列表
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +62,17 @@ class OperateTemplateResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
-            $this->TemplateId = $param["TemplateId"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("TemplateName",$param) and $param["TemplateName"] !== null) {
-            $this->TemplateName = $param["TemplateName"];
+        if (array_key_exists("ExposeList",$param) and $param["ExposeList"] !== null) {
+            $this->ExposeList = [];
+            foreach ($param["ExposeList"] as $key => $value){
+                $obj = new ExposesItem();
+                $obj->deserialize($value);
+                array_push($this->ExposeList, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

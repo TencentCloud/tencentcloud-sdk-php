@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+ * @method string getTemplateName() 获取模板名称，长度不超过64字符。<br>
+模板复制时指定有效，若为空，则复制后模板名称为 **原模板名称_副本**。
+ * @method void setTemplateName(string $TemplateName) 设置模板名称，长度不超过64字符。<br>
+模板复制时指定有效，若为空，则复制后模板名称为 **原模板名称_副本**。
  */
 class OperateTemplateRequest extends AbstractModel
 {
@@ -76,6 +80,12 @@ class OperateTemplateRequest extends AbstractModel
     public $Agent;
 
     /**
+     * @var string 模板名称，长度不超过64字符。<br>
+模板复制时指定有效，若为空，则复制后模板名称为 **原模板名称_副本**。
+     */
+    public $TemplateName;
+
+    /**
      * @param UserInfo $Operator 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      * @param string $TemplateId 模板ID，为32位字符串。
@@ -88,6 +98,8 @@ class OperateTemplateRequest extends AbstractModel
 </ul>
      * @param Agent $Agent 代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
+     * @param string $TemplateName 模板名称，长度不超过64字符。<br>
+模板复制时指定有效，若为空，则复制后模板名称为 **原模板名称_副本**。
      */
     function __construct()
     {
@@ -118,6 +130,10 @@ class OperateTemplateRequest extends AbstractModel
         if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
             $this->Agent = new Agent();
             $this->Agent->deserialize($param["Agent"]);
+        }
+
+        if (array_key_exists("TemplateName",$param) and $param["TemplateName"] !== null) {
+            $this->TemplateName = $param["TemplateName"];
         }
     }
 }

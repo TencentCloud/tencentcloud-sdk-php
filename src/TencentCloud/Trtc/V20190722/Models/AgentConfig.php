@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAmbientSound(AmbientSound $AmbientSound) 设置环境音设置
  * @method VoicePrint getVoicePrint() 获取声纹配置
  * @method void setVoicePrint(VoicePrint $VoicePrint) 设置声纹配置
+ * @method TurnDetection getTurnDetection() 获取语义断句检测
+ * @method void setTurnDetection(TurnDetection $TurnDetection) 设置语义断句检测
  */
 class AgentConfig extends AbstractModel
 {
@@ -139,6 +141,11 @@ class AgentConfig extends AbstractModel
     public $VoicePrint;
 
     /**
+     * @var TurnDetection 语义断句检测
+     */
+    public $TurnDetection;
+
+    /**
      * @param string $UserId 机器人的UserId，用于进房发起任务。【注意】这个UserId不能与当前房间内的主播观众[UserId](https://cloud.tencent.com/document/product/647/46351#userid)重复。如果一个房间发起多个任务时，机器人的UserId也不能相互重复，否则会中断前一个任务。需要保证机器人UserId在房间内唯一。
      * @param string $UserSig 机器人UserId对应的校验签名，即UserId和UserSig相当于机器人进房的登录密码，具体计算方法请参考TRTC计算[UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig)的方案。
      * @param string $TargetUserId 机器人拉流的UserId, 填写后，机器人会拉取该UserId的流进行实时处理
@@ -160,6 +167,7 @@ class AgentConfig extends AbstractModel
 默认值为空，表示不进行过滤。
      * @param AmbientSound $AmbientSound 环境音设置
      * @param VoicePrint $VoicePrint 声纹配置
+     * @param TurnDetection $TurnDetection 语义断句检测
      */
     function __construct()
     {
@@ -226,6 +234,11 @@ class AgentConfig extends AbstractModel
         if (array_key_exists("VoicePrint",$param) and $param["VoicePrint"] !== null) {
             $this->VoicePrint = new VoicePrint();
             $this->VoicePrint->deserialize($param["VoicePrint"]);
+        }
+
+        if (array_key_exists("TurnDetection",$param) and $param["TurnDetection"] !== null) {
+            $this->TurnDetection = new TurnDetection();
+            $this->TurnDetection->deserialize($param["TurnDetection"]);
         }
     }
 }

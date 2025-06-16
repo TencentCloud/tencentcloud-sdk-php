@@ -27,6 +27,7 @@ use TencentCloud\Goosefs\V20220519\Models as Models;
  * @method Models\AttachFileSystemBucketResponse AttachFileSystemBucket(Models\AttachFileSystemBucketRequest $req) 为文件系统关联Bucket
  * @method Models\BatchAddClientNodesResponse BatchAddClientNodes(Models\BatchAddClientNodesRequest $req) 批量添加客户端节点
  * @method Models\BatchDeleteClientNodesResponse BatchDeleteClientNodes(Models\BatchDeleteClientNodesRequest $req) 批量删除客户端节点
+ * @method Models\BuildClientNodeMountCommandResponse BuildClientNodeMountCommand(Models\BuildClientNodeMountCommandRequest $req) 生成客户端的挂载命令
  * @method Models\CreateDataRepositoryTaskResponse CreateDataRepositoryTask(Models\CreateDataRepositoryTaskRequest $req) 创建数据流通任务,包括从将文件系统的数据上传到存储桶下, 以及从存储桶下载到文件系统里。
  * @method Models\CreateFileSystemResponse CreateFileSystem(Models\CreateFileSystemRequest $req) 创建文件系统
  * @method Models\CreateFilesetResponse CreateFileset(Models\CreateFilesetRequest $req) 创建Fileset

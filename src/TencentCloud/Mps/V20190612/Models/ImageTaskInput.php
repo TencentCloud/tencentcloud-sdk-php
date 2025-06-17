@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEraseConfig(ImageEraseConfig $EraseConfig) 设置图片擦除配置。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method BlindWatermarkConfig getBlindWatermarkConfig() 获取盲水印配置。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBlindWatermarkConfig(BlindWatermarkConfig $BlindWatermarkConfig) 设置盲水印配置。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImageTaskInput extends AbstractModel
 {
@@ -54,11 +58,19 @@ class ImageTaskInput extends AbstractModel
     public $EraseConfig;
 
     /**
+     * @var BlindWatermarkConfig 盲水印配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BlindWatermarkConfig;
+
+    /**
      * @param ImageEncodeConfig $EncodeConfig 图片编码配置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageEnhanceConfig $EnhanceConfig 图片增强配置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageEraseConfig $EraseConfig 图片擦除配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BlindWatermarkConfig $BlindWatermarkConfig 盲水印配置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -87,6 +99,11 @@ class ImageTaskInput extends AbstractModel
         if (array_key_exists("EraseConfig",$param) and $param["EraseConfig"] !== null) {
             $this->EraseConfig = new ImageEraseConfig();
             $this->EraseConfig->deserialize($param["EraseConfig"]);
+        }
+
+        if (array_key_exists("BlindWatermarkConfig",$param) and $param["BlindWatermarkConfig"] !== null) {
+            $this->BlindWatermarkConfig = new BlindWatermarkConfig();
+            $this->BlindWatermarkConfig->deserialize($param["BlindWatermarkConfig"]);
         }
     }
 }

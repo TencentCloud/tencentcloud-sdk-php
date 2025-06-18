@@ -70,6 +70,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperationMode(string $OperationMode) 设置运行模式
  * @method array getTimerScale() 获取定时扩缩容配置
  * @method void setTimerScale(array $TimerScale) 设置定时扩缩容配置
+ * @method array getEntryPoint() 获取Dockerfile EntryPoint 参数
+ * @method void setEntryPoint(array $EntryPoint) 设置Dockerfile EntryPoint 参数
+ * @method array getCmd() 获取Dockerfile Cmd 参数
+ * @method void setCmd(array $Cmd) 设置Dockerfile Cmd 参数
  */
 class ServerBaseConfig extends AbstractModel
 {
@@ -199,6 +203,16 @@ class ServerBaseConfig extends AbstractModel
     public $TimerScale;
 
     /**
+     * @var array Dockerfile EntryPoint 参数
+     */
+    public $EntryPoint;
+
+    /**
+     * @var array Dockerfile Cmd 参数
+     */
+    public $Cmd;
+
+    /**
      * @param string $EnvId 环境 Id
      * @param string $ServerName 服务名
      * @param array $OpenAccessTypes 是否开启公网访问
@@ -224,6 +238,8 @@ class ServerBaseConfig extends AbstractModel
      * @param string $InternalDomain 内网域名
      * @param string $OperationMode 运行模式
      * @param array $TimerScale 定时扩缩容配置
+     * @param array $EntryPoint Dockerfile EntryPoint 参数
+     * @param array $Cmd Dockerfile Cmd 参数
      */
     function __construct()
     {
@@ -346,6 +362,14 @@ class ServerBaseConfig extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TimerScale, $obj);
             }
+        }
+
+        if (array_key_exists("EntryPoint",$param) and $param["EntryPoint"] !== null) {
+            $this->EntryPoint = $param["EntryPoint"];
+        }
+
+        if (array_key_exists("Cmd",$param) and $param["Cmd"] !== null) {
+            $this->Cmd = $param["Cmd"];
         }
     }
 }

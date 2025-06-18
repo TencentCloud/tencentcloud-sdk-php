@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDocBizId(string $DocBizId) 设置文档ID
  * @method boolean getIsRefer() 获取是否引用链接
  * @method void setIsRefer(boolean $IsRefer) 设置是否引用链接
- * @method integer getAttrRange() 获取标签适用范围 1：全部，2：按条件
- * @method void setAttrRange(integer $AttrRange) 设置标签适用范围 1：全部，2：按条件
+ * @method integer getAttrRange() 获取标签适用范围，需要传参为1
+ * @method void setAttrRange(integer $AttrRange) 设置标签适用范围，需要传参为1
  * @method string getLoginUin() 获取登录用户主账号(集成商模式必填)
  * @method void setLoginUin(string $LoginUin) 设置登录用户主账号(集成商模式必填)
  * @method string getLoginSubAccountUin() 获取登录用户子账号(集成商模式必填)
@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpireEnd(string $ExpireEnd) 设置有效结束时间，unix时间戳，0代表永久有效
  * @method string getCateBizId() 获取分类ID
  * @method void setCateBizId(string $CateBizId) 设置分类ID
+ * @method boolean getIsDownload() 获取是否可下载，IsRefer为true并且ReferUrlType为0时，该值才有意义
+ * @method void setIsDownload(boolean $IsDownload) 设置是否可下载，IsRefer为true并且ReferUrlType为0时，该值才有意义
  */
 class ModifyDocRequest extends AbstractModel
 {
@@ -65,7 +67,7 @@ class ModifyDocRequest extends AbstractModel
     public $IsRefer;
 
     /**
-     * @var integer 标签适用范围 1：全部，2：按条件
+     * @var integer 标签适用范围，需要传参为1
      */
     public $AttrRange;
 
@@ -111,10 +113,15 @@ class ModifyDocRequest extends AbstractModel
     public $CateBizId;
 
     /**
+     * @var boolean 是否可下载，IsRefer为true并且ReferUrlType为0时，该值才有意义
+     */
+    public $IsDownload;
+
+    /**
      * @param string $BotBizId 应用ID
      * @param string $DocBizId 文档ID
      * @param boolean $IsRefer 是否引用链接
-     * @param integer $AttrRange 标签适用范围 1：全部，2：按条件
+     * @param integer $AttrRange 标签适用范围，需要传参为1
      * @param string $LoginUin 登录用户主账号(集成商模式必填)
      * @param string $LoginSubAccountUin 登录用户子账号(集成商模式必填)
      * @param array $AttrLabels 关联的标签
@@ -124,6 +131,7 @@ class ModifyDocRequest extends AbstractModel
      * @param string $ExpireStart 有效开始时间，unix时间戳
      * @param string $ExpireEnd 有效结束时间，unix时间戳，0代表永久有效
      * @param string $CateBizId 分类ID
+     * @param boolean $IsDownload 是否可下载，IsRefer为true并且ReferUrlType为0时，该值才有意义
      */
     function __construct()
     {
@@ -189,6 +197,10 @@ class ModifyDocRequest extends AbstractModel
 
         if (array_key_exists("CateBizId",$param) and $param["CateBizId"] !== null) {
             $this->CateBizId = $param["CateBizId"];
+        }
+
+        if (array_key_exists("IsDownload",$param) and $param["IsDownload"] !== null) {
+            $this->IsDownload = $param["IsDownload"];
         }
     }
 }

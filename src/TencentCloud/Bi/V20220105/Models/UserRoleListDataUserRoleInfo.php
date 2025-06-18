@@ -104,6 +104,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEmailActivationStatus(integer $EmailActivationStatus) 设置邮箱激活状态
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getUserGroupList() 获取用户组信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUserGroupList(array $UserGroupList) 设置用户组信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class UserRoleListDataUserRoleInfo extends AbstractModel
 {
@@ -242,6 +246,12 @@ class UserRoleListDataUserRoleInfo extends AbstractModel
     public $EmailActivationStatus;
 
     /**
+     * @var array 用户组信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UserGroupList;
+
+    /**
      * @param integer $Id 业务ID
      * @param array $RoleList 角色列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -283,6 +293,8 @@ class UserRoleListDataUserRoleInfo extends AbstractModel
      * @param string $AppOpenUserId 用户openid
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EmailActivationStatus 邮箱激活状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $UserGroupList 用户组信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -393,6 +405,15 @@ class UserRoleListDataUserRoleInfo extends AbstractModel
 
         if (array_key_exists("EmailActivationStatus",$param) and $param["EmailActivationStatus"] !== null) {
             $this->EmailActivationStatus = $param["EmailActivationStatus"];
+        }
+
+        if (array_key_exists("UserGroupList",$param) and $param["UserGroupList"] !== null) {
+            $this->UserGroupList = [];
+            foreach ($param["UserGroupList"] as $key => $value){
+                $obj = new UserGroupDTO();
+                $obj->deserialize($value);
+                array_push($this->UserGroupList, $obj);
+            }
         }
     }
 }

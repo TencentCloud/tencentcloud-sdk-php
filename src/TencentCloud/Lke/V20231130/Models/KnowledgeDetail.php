@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExceedCharSize(string $ExceedCharSize) 设置超量字符数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsSharedKnowledge() 获取是否共享知识库类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsSharedKnowledge(boolean $IsSharedKnowledge) 设置是否共享知识库类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class KnowledgeDetail extends AbstractModel
 {
@@ -64,6 +68,12 @@ class KnowledgeDetail extends AbstractModel
     public $ExceedCharSize;
 
     /**
+     * @var boolean 是否共享知识库类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsSharedKnowledge;
+
+    /**
      * @param string $AppName 应用名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UsedCharSize 已用字符数
@@ -71,6 +81,8 @@ class KnowledgeDetail extends AbstractModel
      * @param float $Proportion 使用占比
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExceedCharSize 超量字符数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsSharedKnowledge 是否共享知识库类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -100,6 +112,10 @@ class KnowledgeDetail extends AbstractModel
 
         if (array_key_exists("ExceedCharSize",$param) and $param["ExceedCharSize"] !== null) {
             $this->ExceedCharSize = $param["ExceedCharSize"];
+        }
+
+        if (array_key_exists("IsSharedKnowledge",$param) and $param["IsSharedKnowledge"] !== null) {
+            $this->IsSharedKnowledge = $param["IsSharedKnowledge"];
         }
     }
 }

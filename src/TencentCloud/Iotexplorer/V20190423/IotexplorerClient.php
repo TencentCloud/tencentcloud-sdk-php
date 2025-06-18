@@ -33,6 +33,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\ChangeP2PRouteResponse ChangeP2PRoute(Models\ChangeP2PRouteRequest $req) p2p路线切换（此接口目前处于内测接口，可以联系申请加白 ）
  * @method Models\CheckFirmwareUpdateResponse CheckFirmwareUpdate(Models\CheckFirmwareUpdateRequest $req) 本接口（CheckFirmwareUpdate）用于查询设备可升级固件版本
  * @method Models\ControlDeviceDataResponse ControlDeviceData(Models\ControlDeviceDataRequest $req) 根据设备产品ID、设备名称，设置控制设备的属性数据。
+ * @method Models\CreateAISearchTaskAsyncResponse CreateAISearchTaskAsync(Models\CreateAISearchTaskAsyncRequest $req) 创建视频语义异步搜索任务
  * @method Models\CreateBatchProductionResponse CreateBatchProduction(Models\CreateBatchProductionRequest $req) 用于新建批量生产设备
  * @method Models\CreateCloudStorageAIServiceResponse CreateCloudStorageAIService(Models\CreateCloudStorageAIServiceRequest $req) 开通设备云存AI分析服务
  * @method Models\CreateCloudStorageAIServiceTaskResponse CreateCloudStorageAIServiceTask(Models\CreateCloudStorageAIServiceTaskRequest $req) 创建设备云存 AI 分析任务
@@ -64,6 +65,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\DeleteStudioProductResponse DeleteStudioProduct(Models\DeleteStudioProductRequest $req) 提供删除某个项目下产品的能力
  * @method Models\DeleteTopicPolicyResponse DeleteTopicPolicy(Models\DeleteTopicPolicyRequest $req) 本接口（DeleteTopicPolicy）用于删除Topic
  * @method Models\DeleteTopicRuleResponse DeleteTopicRule(Models\DeleteTopicRuleRequest $req) 删除规则。
+ * @method Models\DescribeAISearchTaskAsyncResponse DescribeAISearchTaskAsync(Models\DescribeAISearchTaskAsyncRequest $req) 获取视频语义异步搜索任务详情
  * @method Models\DescribeActivateDeviceResponse DescribeActivateDevice(Models\DescribeActivateDeviceRequest $req) 获取设备激活详情
  * @method Models\DescribeActivateLicenseServiceResponse DescribeActivateLicenseService(Models\DescribeActivateLicenseServiceRequest $req) 获取增值服务激活码详情
  * @method Models\DescribeBatchProductionResponse DescribeBatchProduction(Models\DescribeBatchProductionRequest $req) 获取量产详情信息。

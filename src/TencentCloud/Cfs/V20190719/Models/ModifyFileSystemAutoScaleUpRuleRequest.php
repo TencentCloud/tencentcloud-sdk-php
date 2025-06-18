@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyFileSystemAutoScaleUpRule请求参数结构体
  *
- * @method string getFileSystemId() 获取文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
- * @method void setFileSystemId(string $FileSystemId) 设置文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
+ * @method string getFileSystemId() 获取文件系统 ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
+ * @method void setFileSystemId(string $FileSystemId) 设置文件系统 ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
  * @method integer getScaleUpThreshold() 获取扩容阈值，范围[10-90]
  * @method void setScaleUpThreshold(integer $ScaleUpThreshold) 设置扩容阈值，范围[10-90]
- * @method integer getTargetThreshold() 获取扩容后目标阈值,范围[10-90],该值要小于ScaleUpThreshold
- * @method void setTargetThreshold(integer $TargetThreshold) 设置扩容后目标阈值,范围[10-90],该值要小于ScaleUpThreshold
- * @method integer getStatus() 获取规则状态0:关闭，1 开启；不传保留原状态
- * @method void setStatus(integer $Status) 设置规则状态0:关闭，1 开启；不传保留原状态
+ * @method integer getTargetThreshold() 获取扩容后目标阈值，范围[1-90]，该值要小于 ScaleUpThreshold
+ * @method void setTargetThreshold(integer $TargetThreshold) 设置扩容后目标阈值，范围[1-90]，该值要小于 ScaleUpThreshold
+ * @method integer getStatus() 获取规则状态 0：关闭，1：开启；不传保留原状态
+ * @method void setStatus(integer $Status) 设置规则状态 0：关闭，1：开启；不传保留原状态
  */
 class ModifyFileSystemAutoScaleUpRuleRequest extends AbstractModel
 {
     /**
-     * @var string 文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
+     * @var string 文件系统 ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
      */
     public $FileSystemId;
 
@@ -42,20 +42,20 @@ class ModifyFileSystemAutoScaleUpRuleRequest extends AbstractModel
     public $ScaleUpThreshold;
 
     /**
-     * @var integer 扩容后目标阈值,范围[10-90],该值要小于ScaleUpThreshold
+     * @var integer 扩容后目标阈值，范围[1-90]，该值要小于 ScaleUpThreshold
      */
     public $TargetThreshold;
 
     /**
-     * @var integer 规则状态0:关闭，1 开启；不传保留原状态
+     * @var integer 规则状态 0：关闭，1：开启；不传保留原状态
      */
     public $Status;
 
     /**
-     * @param string $FileSystemId 文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
+     * @param string $FileSystemId 文件系统 ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
      * @param integer $ScaleUpThreshold 扩容阈值，范围[10-90]
-     * @param integer $TargetThreshold 扩容后目标阈值,范围[10-90],该值要小于ScaleUpThreshold
-     * @param integer $Status 规则状态0:关闭，1 开启；不传保留原状态
+     * @param integer $TargetThreshold 扩容后目标阈值，范围[1-90]，该值要小于 ScaleUpThreshold
+     * @param integer $Status 规则状态 0：关闭，1：开启；不传保留原状态
      */
     function __construct()
     {

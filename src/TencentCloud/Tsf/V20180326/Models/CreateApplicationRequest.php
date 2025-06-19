@@ -77,11 +77,13 @@ class CreateApplicationRequest extends AbstractModel
 
     /**
      * @var string 应用日志配置项，废弃参数
+     * @deprecated
      */
     public $ApplicationLogConfig;
 
     /**
      * @var string 应用资源类型，废弃参数
+     * @deprecated
      */
     public $ApplicationResourceType;
 

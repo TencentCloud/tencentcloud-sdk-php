@@ -18,12 +18,12 @@ namespace TencentCloud\Tdmq\V20200217\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Rabbitmq路由关系列表成员
+ * RabbitMQ 路由关系列表成员
  *
  * @method integer getBindingId() 获取路由关系id
  * @method void setBindingId(integer $BindingId) 设置路由关系id
- * @method string getVirtualHost() 获取Vhost参数
- * @method void setVirtualHost(string $VirtualHost) 设置Vhost参数
+ * @method string getVirtualHost() 获取VhostName
+ * @method void setVirtualHost(string $VirtualHost) 设置VhostName
  * @method string getSource() 获取源exchange名称
  * @method void setSource(string $Source) 设置源exchange名称
  * @method string getDestinationType() 获取目标类型,queue或exchange
@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method string getModifyTime() 获取修改时间
  * @method void setModifyTime(string $ModifyTime) 设置修改时间
+ * @method integer getCreateTs() 获取创建时间时间戳
+ * @method void setCreateTs(integer $CreateTs) 设置创建时间时间戳
+ * @method integer getModifyTs() 获取修改时间时间戳
+ * @method void setModifyTs(integer $ModifyTs) 设置修改时间时间戳
  */
 class RabbitMQBindingListInfo extends AbstractModel
 {
@@ -47,7 +51,7 @@ class RabbitMQBindingListInfo extends AbstractModel
     public $BindingId;
 
     /**
-     * @var string Vhost参数
+     * @var string VhostName
      */
     public $VirtualHost;
 
@@ -87,8 +91,18 @@ class RabbitMQBindingListInfo extends AbstractModel
     public $ModifyTime;
 
     /**
+     * @var integer 创建时间时间戳
+     */
+    public $CreateTs;
+
+    /**
+     * @var integer 修改时间时间戳
+     */
+    public $ModifyTs;
+
+    /**
      * @param integer $BindingId 路由关系id
-     * @param string $VirtualHost Vhost参数
+     * @param string $VirtualHost VhostName
      * @param string $Source 源exchange名称
      * @param string $DestinationType 目标类型,queue或exchange
      * @param string $Destination 目标资源名称
@@ -96,6 +110,8 @@ class RabbitMQBindingListInfo extends AbstractModel
      * @param string $SourceExchangeType 源exchange类型
      * @param string $CreateTime 创建时间
      * @param string $ModifyTime 修改时间
+     * @param integer $CreateTs 创建时间时间戳
+     * @param integer $ModifyTs 修改时间时间戳
      */
     function __construct()
     {
@@ -144,6 +160,14 @@ class RabbitMQBindingListInfo extends AbstractModel
 
         if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
             $this->ModifyTime = $param["ModifyTime"];
+        }
+
+        if (array_key_exists("CreateTs",$param) and $param["CreateTs"] !== null) {
+            $this->CreateTs = $param["CreateTs"];
+        }
+
+        if (array_key_exists("ModifyTs",$param) and $param["ModifyTs"] !== null) {
+            $this->ModifyTs = $param["ModifyTs"];
         }
     }
 }

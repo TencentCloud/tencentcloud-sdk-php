@@ -281,6 +281,13 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 * 接口调用成功时，实例会进入 STOPPING 状态；关闭实例成功时，实例会进入 STOPPED 状态。
 * 支持批量操作。每次请求批量实例的上限为 100。
 * 本接口为异步接口，请求发送成功后会返回一个 RequestId，此时操作并未立即完成。实例操作结果可以通过调用 <a href="https://cloud.tencent.com/document/product/1207/47573" target="_blank">DescribeInstances</a> 接口查询，如果实例的最新操作状态（LatestOperationState）为“SUCCESS”，则代表操作成功。
+ * @method Models\SyncBlueprintResponse SyncBlueprint(Models\SyncBlueprintRequest $req) 本接口 (SyncBlueprint) 用于将自定义镜像同步到其它地域。
+
+* 支持向多个地域同步。最多10个地域。
+* 不支持向源地域同步。
+* 只支持NORMAL状态的镜像进行同步。
+* 不支持中国大陆地域和非中国大陆地域之间同步。
+* 可以通过[DescribeBlueprints](https://cloud.tencent.com/document/api/1207/47689)查询镜像状态，当镜像状态为NORMAL时表示源地域同步结束。
  * @method Models\TerminateDisksResponse TerminateDisks(Models\TerminateDisksRequest $req) 本接口（TerminateDisks）用于销毁一个或多个云硬盘。
 云硬盘状态必须处于SHUTDOWN（已隔离）状态。
  * @method Models\TerminateInstancesResponse TerminateInstances(Models\TerminateInstancesRequest $req) 本接口 (TerminateInstances) 用于销毁实例。

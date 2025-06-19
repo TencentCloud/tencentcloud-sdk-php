@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setArguments(string $Arguments) 设置扩展参数 key-value 对象
  * @method boolean getExclusive() 获取是否独占队列
  * @method void setExclusive(boolean $Exclusive) 设置是否独占队列
+ * @method integer getCreateTs() 获取创建时间时间戳
+ * @method void setCreateTs(integer $CreateTs) 设置创建时间时间戳
+ * @method integer getModifyTs() 获取修改时间时间戳
+ * @method void setModifyTs(integer $ModifyTs) 设置修改时间时间戳
  */
 class RabbitMQQueueListInfo extends AbstractModel
 {
@@ -158,6 +162,16 @@ class RabbitMQQueueListInfo extends AbstractModel
     public $Exclusive;
 
     /**
+     * @var integer 创建时间时间戳
+     */
+    public $CreateTs;
+
+    /**
+     * @var integer 修改时间时间戳
+     */
+    public $ModifyTs;
+
+    /**
      * @param string $QueueName 队列名
      * @param string $Remark 备注说明
 注意：此字段可能返回 null，表示取不到有效值。
@@ -180,6 +194,8 @@ class RabbitMQQueueListInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Arguments 扩展参数 key-value 对象
      * @param boolean $Exclusive 是否独占队列
+     * @param integer $CreateTs 创建时间时间戳
+     * @param integer $ModifyTs 修改时间时间戳
      */
     function __construct()
     {
@@ -261,6 +277,14 @@ class RabbitMQQueueListInfo extends AbstractModel
 
         if (array_key_exists("Exclusive",$param) and $param["Exclusive"] !== null) {
             $this->Exclusive = $param["Exclusive"];
+        }
+
+        if (array_key_exists("CreateTs",$param) and $param["CreateTs"] !== null) {
+            $this->CreateTs = $param["CreateTs"];
+        }
+
+        if (array_key_exists("ModifyTs",$param) and $param["ModifyTs"] !== null) {
+            $this->ModifyTs = $param["ModifyTs"];
         }
     }
 }

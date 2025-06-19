@@ -76,6 +76,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHasScan(string $HasScan) 设置是否进行过安全体检
  * @method integer getAppId() 获取租户ID
  * @method void setAppId(integer $AppId) 设置租户ID
+ * @method string getAppIdStr() 获取租户ID字符串
+ * @method void setAppIdStr(string $AppIdStr) 设置租户ID字符串
  */
 class ExposesItem extends AbstractModel
 {
@@ -220,6 +222,11 @@ class ExposesItem extends AbstractModel
     public $AppId;
 
     /**
+     * @var string 租户ID字符串
+     */
+    public $AppIdStr;
+
+    /**
      * @param string $Provider 云厂商
      * @param string $CloudAccountName 云账号名称
      * @param string $CloudAccountId 云账号
@@ -248,6 +255,7 @@ class ExposesItem extends AbstractModel
      * @param string $Uuid uuid
      * @param string $HasScan 是否进行过安全体检
      * @param integer $AppId 租户ID
+     * @param string $AppIdStr 租户ID字符串
      */
     function __construct()
     {
@@ -372,6 +380,10 @@ class ExposesItem extends AbstractModel
 
         if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
             $this->AppId = $param["AppId"];
+        }
+
+        if (array_key_exists("AppIdStr",$param) and $param["AppIdStr"] !== null) {
+            $this->AppIdStr = $param["AppIdStr"];
         }
     }
 }

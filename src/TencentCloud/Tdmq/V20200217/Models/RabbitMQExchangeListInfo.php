@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RabbitMQ exchange列表成员信息
  *
- * @method string getExchangeName() 获取exchange 名
- * @method void setExchangeName(string $ExchangeName) 设置exchange 名
+ * @method string getExchangeName() 获取exchange 名称
+ * @method void setExchangeName(string $ExchangeName) 设置exchange 名称
  * @method string getRemark() 获取备注说明
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置备注说明
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExchangeType() 获取exchange 类型, 支持 "fanout","direct","topic","headers"
  * @method void setExchangeType(string $ExchangeType) 设置exchange 类型, 支持 "fanout","direct","topic","headers"
- * @method string getVirtualHost() 获取VHost参数
- * @method void setVirtualHost(string $VirtualHost) 设置VHost参数
+ * @method string getVirtualHost() 获取交换机所属 Virtual Host 名称
+ * @method void setVirtualHost(string $VirtualHost) 设置交换机所属 Virtual Host 名称
  * @method string getExchangeCreator() 获取exchange 创建者, "system":"系统创建", "user":"用户创建"
  * @method void setExchangeCreator(string $ExchangeCreator) 设置exchange 创建者, "system":"系统创建", "user":"用户创建"
  * @method string getCreateTimeStamp() 获取exchange 创建时间
@@ -62,11 +62,15 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessagesDelayed(integer $MessagesDelayed) 设置未调度的延时消息数量
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCreateTs() 获取创建时间时间戳
+ * @method void setCreateTs(integer $CreateTs) 设置创建时间时间戳
+ * @method integer getModifyTs() 获取修改时间时间戳
+ * @method void setModifyTs(integer $ModifyTs) 设置修改时间时间戳
  */
 class RabbitMQExchangeListInfo extends AbstractModel
 {
     /**
-     * @var string exchange 名
+     * @var string exchange 名称
      */
     public $ExchangeName;
 
@@ -82,7 +86,7 @@ class RabbitMQExchangeListInfo extends AbstractModel
     public $ExchangeType;
 
     /**
-     * @var string VHost参数
+     * @var string 交换机所属 Virtual Host 名称
      */
     public $VirtualHost;
 
@@ -151,11 +155,21 @@ class RabbitMQExchangeListInfo extends AbstractModel
     public $MessagesDelayed;
 
     /**
-     * @param string $ExchangeName exchange 名
+     * @var integer 创建时间时间戳
+     */
+    public $CreateTs;
+
+    /**
+     * @var integer 修改时间时间戳
+     */
+    public $ModifyTs;
+
+    /**
+     * @param string $ExchangeName exchange 名称
      * @param string $Remark 备注说明
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExchangeType exchange 类型, 支持 "fanout","direct","topic","headers"
-     * @param string $VirtualHost VHost参数
+     * @param string $VirtualHost 交换机所属 Virtual Host 名称
      * @param string $ExchangeCreator exchange 创建者, "system":"系统创建", "user":"用户创建"
      * @param string $CreateTimeStamp exchange 创建时间
      * @param string $ModTimeStamp exchange 修改时间
@@ -172,6 +186,8 @@ class RabbitMQExchangeListInfo extends AbstractModel
      * @param string $Arguments 扩展参数 key-value 对象
      * @param integer $MessagesDelayed 未调度的延时消息数量
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CreateTs 创建时间时间戳
+     * @param integer $ModifyTs 修改时间时间戳
      */
     function __construct()
     {
@@ -248,6 +264,14 @@ class RabbitMQExchangeListInfo extends AbstractModel
 
         if (array_key_exists("MessagesDelayed",$param) and $param["MessagesDelayed"] !== null) {
             $this->MessagesDelayed = $param["MessagesDelayed"];
+        }
+
+        if (array_key_exists("CreateTs",$param) and $param["CreateTs"] !== null) {
+            $this->CreateTs = $param["CreateTs"];
+        }
+
+        if (array_key_exists("ModifyTs",$param) and $param["ModifyTs"] !== null) {
+            $this->ModifyTs = $param["ModifyTs"];
         }
     }
 }

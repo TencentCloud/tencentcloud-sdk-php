@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDesc(string $Desc) 设置可用区描述信息，例如“广州一区”
  * @method integer getZoneId() 获取可用区唯一标记
  * @method void setZoneId(integer $ZoneId) 设置可用区唯一标记
- * @method integer getEncrypt() 获取Encryptid
- * @method void setEncrypt(integer $Encrypt) 设置Encryptid
+ * @method integer getEncrypt() 获取Encrypted
+ * @method void setEncrypt(integer $Encrypt) 设置Encrypted
  * @method boolean getMain() 获取是否为主力园区
  * @method void setMain(boolean $Main) 设置是否为主力园区
  * @method integer getContainerEnabled() 获取0表示未开通容器化，1表示已开通容器化
@@ -51,7 +51,7 @@ class ZoneInfo extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var integer Encryptid
+     * @var integer Encrypted
      */
     public $Encrypt;
 
@@ -69,7 +69,7 @@ class ZoneInfo extends AbstractModel
      * @param string $Name 可用区名称，例如"ap-guangzhou-1"
      * @param string $Desc 可用区描述信息，例如“广州一区”
      * @param integer $ZoneId 可用区唯一标记
-     * @param integer $Encrypt Encryptid
+     * @param integer $Encrypt Encrypted
      * @param boolean $Main 是否为主力园区
      * @param integer $ContainerEnabled 0表示未开通容器化，1表示已开通容器化
      */

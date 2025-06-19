@@ -124,6 +124,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getArguments() 获取扩展参数 key-value
  * @method void setArguments(string $Arguments) 设置扩展参数 key-value
+ * @method integer getCreateTs() 获取创建时间时间戳
+ * @method void setCreateTs(integer $CreateTs) 设置创建时间时间戳
+ * @method integer getModifyTs() 获取修改时间时间戳
+ * @method void setModifyTs(integer $ModifyTs) 设置修改时间时间戳
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -302,6 +306,16 @@ class DescribeRabbitMQQueueDetailResponse extends AbstractModel
     public $Arguments;
 
     /**
+     * @var integer 创建时间时间戳
+     */
+    public $CreateTs;
+
+    /**
+     * @var integer 修改时间时间戳
+     */
+    public $ModifyTs;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -359,6 +373,8 @@ class DescribeRabbitMQQueueDetailResponse extends AbstractModel
      * @param string $Policy 生效的策略名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Arguments 扩展参数 key-value
+     * @param integer $CreateTs 创建时间时间戳
+     * @param integer $ModifyTs 修改时间时间戳
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -492,6 +508,14 @@ class DescribeRabbitMQQueueDetailResponse extends AbstractModel
 
         if (array_key_exists("Arguments",$param) and $param["Arguments"] !== null) {
             $this->Arguments = $param["Arguments"];
+        }
+
+        if (array_key_exists("CreateTs",$param) and $param["CreateTs"] !== null) {
+            $this->CreateTs = $param["CreateTs"];
+        }
+
+        if (array_key_exists("ModifyTs",$param) and $param["ModifyTs"] !== null) {
+            $this->ModifyTs = $param["ModifyTs"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

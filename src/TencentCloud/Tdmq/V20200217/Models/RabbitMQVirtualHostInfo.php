@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessageRateOut(float $MessageRateOut) 设置输出消息速率
  * @method boolean getMirrorQueuePolicyFlag() 获取是否存在镜像队列策略，true 为存在，false 为不存
  * @method void setMirrorQueuePolicyFlag(boolean $MirrorQueuePolicyFlag) 设置是否存在镜像队列策略，true 为存在，false 为不存
+ * @method integer getCreateTs() 获取创建时间时间戳
+ * @method void setCreateTs(integer $CreateTs) 设置创建时间时间戳
+ * @method integer getModifyTs() 获取修改时间时间戳
+ * @method void setModifyTs(integer $ModifyTs) 设置修改时间时间戳
  */
 class RabbitMQVirtualHostInfo extends AbstractModel
 {
@@ -115,6 +119,16 @@ class RabbitMQVirtualHostInfo extends AbstractModel
     public $MirrorQueuePolicyFlag;
 
     /**
+     * @var integer 创建时间时间戳
+     */
+    public $CreateTs;
+
+    /**
+     * @var integer 修改时间时间戳
+     */
+    public $ModifyTs;
+
+    /**
      * @param string $InstanceId 集群实例Id
      * @param string $VirtualHost vhost名
      * @param string $Description vhost描述信息
@@ -128,6 +142,8 @@ class RabbitMQVirtualHostInfo extends AbstractModel
      * @param float $MessageRateIn 输入消息速率
      * @param float $MessageRateOut 输出消息速率
      * @param boolean $MirrorQueuePolicyFlag 是否存在镜像队列策略，true 为存在，false 为不存
+     * @param integer $CreateTs 创建时间时间戳
+     * @param integer $ModifyTs 修改时间时间戳
      */
     function __construct()
     {
@@ -193,6 +209,14 @@ class RabbitMQVirtualHostInfo extends AbstractModel
 
         if (array_key_exists("MirrorQueuePolicyFlag",$param) and $param["MirrorQueuePolicyFlag"] !== null) {
             $this->MirrorQueuePolicyFlag = $param["MirrorQueuePolicyFlag"];
+        }
+
+        if (array_key_exists("CreateTs",$param) and $param["CreateTs"] !== null) {
+            $this->CreateTs = $param["CreateTs"];
+        }
+
+        if (array_key_exists("ModifyTs",$param) and $param["ModifyTs"] !== null) {
+            $this->ModifyTs = $param["ModifyTs"];
         }
     }
 }

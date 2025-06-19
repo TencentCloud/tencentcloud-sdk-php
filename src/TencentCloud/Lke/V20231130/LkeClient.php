@@ -48,6 +48,7 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\DeleteQACateResponse DeleteQACate(Models\DeleteQACateRequest $req) 分类删除
  * @method Models\DeleteRejectedQuestionResponse DeleteRejectedQuestion(Models\DeleteRejectedQuestionRequest $req) 删除拒答问题
  * @method Models\DeleteSharedKnowledgeResponse DeleteSharedKnowledge(Models\DeleteSharedKnowledgeRequest $req) 删除共享知识库。
+ * @method Models\DeleteVarResponse DeleteVar(Models\DeleteVarRequest $req) 删除变量
  * @method Models\DescribeAppResponse DescribeApp(Models\DescribeAppRequest $req) 获取企业下应用详情
  * @method Models\DescribeAttributeLabelResponse DescribeAttributeLabel(Models\DescribeAttributeLabelRequest $req) 查询属性标签详情
  * @method Models\DescribeCallStatsGraphResponse DescribeCallStatsGraph(Models\DescribeCallStatsGraphRequest $req) 接口调用折线图
@@ -144,6 +145,7 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\StopDocParseResponse StopDocParse(Models\StopDocParseRequest $req) 终止文档解析
  * @method Models\StopWorkflowRunResponse StopWorkflowRun(Models\StopWorkflowRunRequest $req) 此接口用来停止正在进行的工作流异步运行实例。
  * @method Models\UpdateSharedKnowledgeResponse UpdateSharedKnowledge(Models\UpdateSharedKnowledgeRequest $req) 更新共享知识库。
+ * @method Models\UpdateVarResponse UpdateVar(Models\UpdateVarRequest $req) 更新变量
  * @method Models\UploadAttributeLabelResponse UploadAttributeLabel(Models\UploadAttributeLabelRequest $req) 上传导入属性标签
  * @method Models\VerifyQAResponse VerifyQA(Models\VerifyQARequest $req) 校验问答
  */

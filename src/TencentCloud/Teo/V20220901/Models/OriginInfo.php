@@ -66,11 +66,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrivateParameters(array $PrivateParameters) 设置私有鉴权使用参数，该参数仅当源站类型 PrivateAccess = on 时会生效。
  * @method string getHostHeader() 获取自定义回源 HOST 头，该参数仅当 OriginType=IP_DOMAIN 时生效。
 如果 OriginType=COS 或 AWS_S3 时，回源 HOST 头将与源站域名保持一致。
-如果OriginType=ORIGIN_GROUP 或 LB 时，回源 HOST 头遵循源站组内配置，如果没有配置则默认为加速域名。
+如果OriginType=ORIGIN_GROUP 时，回源 HOST 头遵循源站组内配置，如果没有配置则默认为加速域名。
 如果 OriginType=VOD 或 SPACE 时，无需配置该头部，按对应的回源域名生效。
  * @method void setHostHeader(string $HostHeader) 设置自定义回源 HOST 头，该参数仅当 OriginType=IP_DOMAIN 时生效。
 如果 OriginType=COS 或 AWS_S3 时，回源 HOST 头将与源站域名保持一致。
-如果OriginType=ORIGIN_GROUP 或 LB 时，回源 HOST 头遵循源站组内配置，如果没有配置则默认为加速域名。
+如果OriginType=ORIGIN_GROUP 时，回源 HOST 头遵循源站组内配置，如果没有配置则默认为加速域名。
 如果 OriginType=VOD 或 SPACE 时，无需配置该头部，按对应的回源域名生效。
  * @method integer getVodeoSubAppId() 获取VODEO 子应用 ID。该参数当 OriginType = VODEO 时必填。
  * @method void setVodeoSubAppId(integer $VodeoSubAppId) 设置VODEO 子应用 ID。该参数当 OriginType = VODEO 时必填。
@@ -136,7 +136,7 @@ class OriginInfo extends AbstractModel
     /**
      * @var string 自定义回源 HOST 头，该参数仅当 OriginType=IP_DOMAIN 时生效。
 如果 OriginType=COS 或 AWS_S3 时，回源 HOST 头将与源站域名保持一致。
-如果OriginType=ORIGIN_GROUP 或 LB 时，回源 HOST 头遵循源站组内配置，如果没有配置则默认为加速域名。
+如果OriginType=ORIGIN_GROUP 时，回源 HOST 头遵循源站组内配置，如果没有配置则默认为加速域名。
 如果 OriginType=VOD 或 SPACE 时，无需配置该头部，按对应的回源域名生效。
      */
     public $HostHeader;
@@ -197,7 +197,7 @@ class OriginInfo extends AbstractModel
      * @param array $PrivateParameters 私有鉴权使用参数，该参数仅当源站类型 PrivateAccess = on 时会生效。
      * @param string $HostHeader 自定义回源 HOST 头，该参数仅当 OriginType=IP_DOMAIN 时生效。
 如果 OriginType=COS 或 AWS_S3 时，回源 HOST 头将与源站域名保持一致。
-如果OriginType=ORIGIN_GROUP 或 LB 时，回源 HOST 头遵循源站组内配置，如果没有配置则默认为加速域名。
+如果OriginType=ORIGIN_GROUP 时，回源 HOST 头遵循源站组内配置，如果没有配置则默认为加速域名。
 如果 OriginType=VOD 或 SPACE 时，无需配置该头部，按对应的回源域名生效。
      * @param integer $VodeoSubAppId VODEO 子应用 ID。该参数当 OriginType = VODEO 时必填。
      * @param string $VodeoDistributionRange VODEO 分发范围，该参数当 OriginType = VODEO 时必填。取值有： 

@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetEmbedding请求参数结构体
  *
- * @method string getModel() 获取模型名称
- * @method void setModel(string $Model) 设置模型名称
- * @method array getInputs() 获取需要 embedding 的文本, 单条文本最大长度500个字符, 总条数最大7条
- * @method void setInputs(array $Inputs) 设置需要 embedding 的文本, 单条文本最大长度500个字符, 总条数最大7条
+ * @method string getModel() 获取说明：选择生成向量的模型
+备注：仅一个模型可选
+ * @method void setModel(string $Model) 设置说明：选择生成向量的模型
+备注：仅一个模型可选
+ * @method array getInputs() 获取说明：需要 embedding 的文本
+备注：单条query最多2000个字符，总条数最多7条
+ * @method void setInputs(array $Inputs) 设置说明：需要 embedding 的文本
+备注：单条query最多2000个字符，总条数最多7条
  */
 class GetEmbeddingRequest extends AbstractModel
 {
     /**
-     * @var string 模型名称
+     * @var string 说明：选择生成向量的模型
+备注：仅一个模型可选
      */
     public $Model;
 
     /**
-     * @var array 需要 embedding 的文本, 单条文本最大长度500个字符, 总条数最大7条
+     * @var array 说明：需要 embedding 的文本
+备注：单条query最多2000个字符，总条数最多7条
      */
     public $Inputs;
 
     /**
-     * @param string $Model 模型名称
-     * @param array $Inputs 需要 embedding 的文本, 单条文本最大长度500个字符, 总条数最大7条
+     * @param string $Model 说明：选择生成向量的模型
+备注：仅一个模型可选
+     * @param array $Inputs 说明：需要 embedding 的文本
+备注：单条query最多2000个字符，总条数最多7条
      */
     function __construct()
     {

@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserId(string $UserId) 设置用户 Id
  * @method string getAppMode() 获取应用模式（NORMAL : 普通模式；ADVANCED : 高级模式）
  * @method void setAppMode(string $AppMode) 设置应用模式（NORMAL : 普通模式；ADVANCED : 高级模式）
+ * @method string getUpdateState() 获取应用更新状态，取值：UPLOADING 上传中、CREATING 创建中、CREATE_FAIL 创建失败、CREATE_SUCCESS 创建成功、NORMAL 默认状态
+ * @method void setUpdateState(string $UpdateState) 设置应用更新状态，取值：UPLOADING 上传中、CREATING 创建中、CREATE_FAIL 创建失败、CREATE_SUCCESS 创建成功、NORMAL 默认状态
  */
 class AndroidApp extends AbstractModel
 {
@@ -73,6 +75,11 @@ class AndroidApp extends AbstractModel
     public $AppMode;
 
     /**
+     * @var string 应用更新状态，取值：UPLOADING 上传中、CREATING 创建中、CREATE_FAIL 创建失败、CREATE_SUCCESS 创建成功、NORMAL 默认状态
+     */
+    public $UpdateState;
+
+    /**
      * @param string $AndroidAppId 安卓应用 Id
      * @param string $Name 安卓应用名称
      * @param string $State 安卓应用状态（上架、下架）
@@ -80,6 +87,7 @@ class AndroidApp extends AbstractModel
      * @param string $CreateTime 安卓应用创建时间
      * @param string $UserId 用户 Id
      * @param string $AppMode 应用模式（NORMAL : 普通模式；ADVANCED : 高级模式）
+     * @param string $UpdateState 应用更新状态，取值：UPLOADING 上传中、CREATING 创建中、CREATE_FAIL 创建失败、CREATE_SUCCESS 创建成功、NORMAL 默认状态
      */
     function __construct()
     {
@@ -125,6 +133,10 @@ class AndroidApp extends AbstractModel
 
         if (array_key_exists("AppMode",$param) and $param["AppMode"] !== null) {
             $this->AppMode = $param["AppMode"];
+        }
+
+        if (array_key_exists("UpdateState",$param) and $param["UpdateState"] !== null) {
+            $this->UpdateState = $param["UpdateState"];
         }
     }
 }

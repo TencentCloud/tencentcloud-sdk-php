@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeout(integer $Timeout) 设置超时信息
  * @method integer getBackupJobId() 获取备份实例id
  * @method void setBackupJobId(integer $BackupJobId) 设置备份实例id
- * @method integer getTaskId() 获取实例对应snapshoit的id
- * @method void setTaskId(integer $TaskId) 设置实例对应snapshoit的id
+ * @method integer getTaskId() 获取实例对应Snapshot的id
+ * @method void setTaskId(integer $TaskId) 设置实例对应Snapshot的id
  */
 class BackupStatus extends AbstractModel
 {
@@ -131,7 +131,7 @@ class BackupStatus extends AbstractModel
     public $BackupJobId;
 
     /**
-     * @var integer 实例对应snapshoit的id
+     * @var integer 实例对应Snapshot的id
      */
     public $TaskId;
 
@@ -151,7 +151,7 @@ class BackupStatus extends AbstractModel
      * @param string $Status 状态
      * @param integer $Timeout 超时信息
      * @param integer $BackupJobId 备份实例id
-     * @param integer $TaskId 实例对应snapshoit的id
+     * @param integer $TaskId 实例对应Snapshot的id
      */
     function __construct()
     {

@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPbKeyLen(integer $PbKeyLen) 设置密钥长度，默认为0，可选[0|16|24|32]。
  * @method array getSourceAddresses() 获取SRT对端地址，当Mode为CALLER时必填，且只能填1组。
  * @method void setSourceAddresses(array $SourceAddresses) 设置SRT对端地址，当Mode为CALLER时必填，且只能填1组。
+ * @method SRTFECSimpleOptions getFEC() 获取SRT FEC 设置
+ * @method void setFEC(SRTFECSimpleOptions $FEC) 设置SRT FEC 设置
  */
 class CreateInputSRTSettings extends AbstractModel
 {
@@ -87,6 +89,11 @@ class CreateInputSRTSettings extends AbstractModel
     public $SourceAddresses;
 
     /**
+     * @var SRTFECSimpleOptions SRT FEC 设置
+     */
+    public $FEC;
+
+    /**
      * @param string $Mode SRT模式，可选[LISTENER|CALLER]，默认为LISTENER。
      * @param string $StreamId 流Id，可选大小写字母、数字和特殊字符（.#!:&,=_-），长度为0~512。具体格式可以参考：https://github.com/Haivision/srt/blob/master/docs/features/access-control.md#standard-keys。
      * @param integer $Latency 延迟，默认120，单位ms，范围为[0, 3000]。
@@ -96,6 +103,7 @@ class CreateInputSRTSettings extends AbstractModel
      * @param string $Passphrase 解密密钥，默认为空，表示不加密。只可填ascii码值，长度为[10, 79]。
      * @param integer $PbKeyLen 密钥长度，默认为0，可选[0|16|24|32]。
      * @param array $SourceAddresses SRT对端地址，当Mode为CALLER时必填，且只能填1组。
+     * @param SRTFECSimpleOptions $FEC SRT FEC 设置
      */
     function __construct()
     {
@@ -149,6 +157,11 @@ class CreateInputSRTSettings extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SourceAddresses, $obj);
             }
+        }
+
+        if (array_key_exists("FEC",$param) and $param["FEC"] !== null) {
+            $this->FEC = new SRTFECSimpleOptions();
+            $this->FEC->deserialize($param["FEC"]);
         }
     }
 }

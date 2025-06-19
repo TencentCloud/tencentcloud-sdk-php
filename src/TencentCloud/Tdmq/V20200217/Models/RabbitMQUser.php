@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RabbitMQ用户实体详情
  *
- * @method string getInstanceId() 获取集群实例Id
- * @method void setInstanceId(string $InstanceId) 设置集群实例Id
+ * @method string getInstanceId() 获取实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
  * @method string getUser() 获取用户名，登录时使用
  * @method void setUser(string $User) 设置用户名，登录时使用
  * @method string getPassword() 获取密码，登录时使用
@@ -44,11 +44,15 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxChannels(integer $MaxChannels) 设置单个用户最大可用通道数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCreateTs() 获取创建时间时间戳
+ * @method void setCreateTs(integer $CreateTs) 设置创建时间时间戳
+ * @method integer getModifyTs() 获取修改时间时间戳
+ * @method void setModifyTs(integer $ModifyTs) 设置修改时间时间戳
  */
 class RabbitMQUser extends AbstractModel
 {
     /**
-     * @var string 集群实例Id
+     * @var string 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
      */
     public $InstanceId;
 
@@ -100,7 +104,17 @@ class RabbitMQUser extends AbstractModel
     public $MaxChannels;
 
     /**
-     * @param string $InstanceId 集群实例Id
+     * @var integer 创建时间时间戳
+     */
+    public $CreateTs;
+
+    /**
+     * @var integer 修改时间时间戳
+     */
+    public $ModifyTs;
+
+    /**
+     * @param string $InstanceId 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
      * @param string $User 用户名，登录时使用
      * @param string $Password 密码，登录时使用
      * @param string $Description 用户描述
@@ -112,6 +126,8 @@ class RabbitMQUser extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxChannels 单个用户最大可用通道数
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CreateTs 创建时间时间戳
+     * @param integer $ModifyTs 修改时间时间戳
      */
     function __construct()
     {
@@ -164,6 +180,14 @@ class RabbitMQUser extends AbstractModel
 
         if (array_key_exists("MaxChannels",$param) and $param["MaxChannels"] !== null) {
             $this->MaxChannels = $param["MaxChannels"];
+        }
+
+        if (array_key_exists("CreateTs",$param) and $param["CreateTs"] !== null) {
+            $this->CreateTs = $param["CreateTs"];
+        }
+
+        if (array_key_exists("ModifyTs",$param) and $param["ModifyTs"] !== null) {
+            $this->ModifyTs = $param["ModifyTs"];
         }
     }
 }

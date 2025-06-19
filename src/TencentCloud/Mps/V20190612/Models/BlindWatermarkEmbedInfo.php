@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 嵌入盲水印配置
  *
- * @method string getEmbedText() 获取盲水印文字，需要经过 URL 安全的 Base64 编码。
+ * @method string getEmbedText() 获取盲水印文字，经过URL安全的Base64编码的4Byte数据。Base64解码之后，少于4Byte将会填充0x00到4Byte，超过4Byte将会截断为4Byte。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEmbedText(string $EmbedText) 设置盲水印文字，需要经过 URL 安全的 Base64 编码。
+ * @method void setEmbedText(string $EmbedText) 设置盲水印文字，经过URL安全的Base64编码的4Byte数据。Base64解码之后，少于4Byte将会填充0x00到4Byte，超过4Byte将会截断为4Byte。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class BlindWatermarkEmbedInfo extends AbstractModel
 {
     /**
-     * @var string 盲水印文字，需要经过 URL 安全的 Base64 编码。
+     * @var string 盲水印文字，经过URL安全的Base64编码的4Byte数据。Base64解码之后，少于4Byte将会填充0x00到4Byte，超过4Byte将会截断为4Byte。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EmbedText;
 
     /**
-     * @param string $EmbedText 盲水印文字，需要经过 URL 安全的 Base64 编码。
+     * @param string $EmbedText 盲水印文字，经过URL安全的Base64编码的4Byte数据。Base64解码之后，少于4Byte将会填充0x00到4Byte，超过4Byte将会截断为4Byte。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

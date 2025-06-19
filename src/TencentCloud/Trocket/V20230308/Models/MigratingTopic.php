@@ -22,8 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTopicName() 获取主题名称
  * @method void setTopicName(string $TopicName) 设置主题名称
- * @method string getMigrationStatus() 获取迁移状态 S_RW_D_NA 源集群读写 S_RW_D_R 源集群读写目标集群读 S_RW_D_RW 源集群读写目标集群读写 S_R_D_RW 源集群读目标集群读写 S_NA_D_RW 目标集群读写
- * @method void setMigrationStatus(string $MigrationStatus) 设置迁移状态 S_RW_D_NA 源集群读写 S_RW_D_R 源集群读写目标集群读 S_RW_D_RW 源集群读写目标集群读写 S_R_D_RW 源集群读目标集群读写 S_NA_D_RW 目标集群读写
+ * @method string getMigrationStatus() 获取迁移状态 
+S_RW_D_NA 源集群读写，
+S_RW_D_R 源集群读写目标集群读，
+S_RW_D_RW 源集群读写目标集群读写，
+S_R_D_RW 源集群读目标集群读写，
+S_NA_D_RW 目标集群读写
+ * @method void setMigrationStatus(string $MigrationStatus) 设置迁移状态 
+S_RW_D_NA 源集群读写，
+S_RW_D_R 源集群读写目标集群读，
+S_RW_D_RW 源集群读写目标集群读写，
+S_R_D_RW 源集群读目标集群读写，
+S_NA_D_RW 目标集群读写
  * @method boolean getHealthCheckPassed() 获取是否完成健康检查	
  * @method void setHealthCheckPassed(boolean $HealthCheckPassed) 设置是否完成健康检查	
  * @method string getHealthCheckError() 获取上次健康检查返回的错误信息，仅在HealthCheckPassed为false时有效。 NotChecked 未执行检查， Unknown 未知错误, TopicNotImported 主题未导入, TopicNotExistsInSourceCluster 主题在源集群中不存在, TopicNotExistsInTargetCluster 主题在目标集群中不存在, ConsumerConnectedOnTarget 目标集群上存在消费者连接, SourceTopicHasNewMessagesIn5Minutes 源集群主题前5分钟内有新消息写入, TargetTopicHasNewMessagesIn5Minutes 目标集群主题前5分钟内有新消息写入, SourceTopicHasNoMessagesIn5Minutes 源集群前5分钟内没有新消息写入, TargetTopicHasNoMessagesIn5Minutes 源集群前5分钟内没有新消息写入, ConsumerGroupCountNotMatch 订阅组数量不一致, SourceTopicHasUnconsumedMessages 源集群主题存在未消费消息,
@@ -53,7 +63,12 @@ class MigratingTopic extends AbstractModel
     public $TopicName;
 
     /**
-     * @var string 迁移状态 S_RW_D_NA 源集群读写 S_RW_D_R 源集群读写目标集群读 S_RW_D_RW 源集群读写目标集群读写 S_R_D_RW 源集群读目标集群读写 S_NA_D_RW 目标集群读写
+     * @var string 迁移状态 
+S_RW_D_NA 源集群读写，
+S_RW_D_R 源集群读写目标集群读，
+S_RW_D_RW 源集群读写目标集群读写，
+S_R_D_RW 源集群读目标集群读写，
+S_NA_D_RW 目标集群读写
      */
     public $MigrationStatus;
 
@@ -97,7 +112,12 @@ class MigratingTopic extends AbstractModel
 
     /**
      * @param string $TopicName 主题名称
-     * @param string $MigrationStatus 迁移状态 S_RW_D_NA 源集群读写 S_RW_D_R 源集群读写目标集群读 S_RW_D_RW 源集群读写目标集群读写 S_R_D_RW 源集群读目标集群读写 S_NA_D_RW 目标集群读写
+     * @param string $MigrationStatus 迁移状态 
+S_RW_D_NA 源集群读写，
+S_RW_D_R 源集群读写目标集群读，
+S_RW_D_RW 源集群读写目标集群读写，
+S_R_D_RW 源集群读目标集群读写，
+S_NA_D_RW 目标集群读写
      * @param boolean $HealthCheckPassed 是否完成健康检查	
      * @param string $HealthCheckError 上次健康检查返回的错误信息，仅在HealthCheckPassed为false时有效。 NotChecked 未执行检查， Unknown 未知错误, TopicNotImported 主题未导入, TopicNotExistsInSourceCluster 主题在源集群中不存在, TopicNotExistsInTargetCluster 主题在目标集群中不存在, ConsumerConnectedOnTarget 目标集群上存在消费者连接, SourceTopicHasNewMessagesIn5Minutes 源集群主题前5分钟内有新消息写入, TargetTopicHasNewMessagesIn5Minutes 目标集群主题前5分钟内有新消息写入, SourceTopicHasNoMessagesIn5Minutes 源集群前5分钟内没有新消息写入, TargetTopicHasNoMessagesIn5Minutes 源集群前5分钟内没有新消息写入, ConsumerGroupCountNotMatch 订阅组数量不一致, SourceTopicHasUnconsumedMessages 源集群主题存在未消费消息,
      * @param string $Namespace 命名空间，仅4.x集群有效

@@ -92,6 +92,11 @@ use TencentCloud\Trocket\V20230308\Models as Models;
 
 查询过滤器，支持TopicName、MigrationStatus、Namespace查询
  * @method Models\DescribeMigratingTopicStatsResponse DescribeMigratingTopicStats(Models\DescribeMigratingTopicStatsRequest $req) 用于查询迁移主题的实时数据
+ * @method Models\DescribeMigrationTaskListResponse DescribeMigrationTaskList(Models\DescribeMigrationTaskListRequest $req) 获取数据迁移任务列表，Filter参数使用说明如下：
+
+TaskId，根据任务ID精确查找
+InstanceId，根据实例ID精确查找
+Type，根据任务类型精确查找
  * @method Models\DescribeProductSKUsResponse DescribeProductSKUs(Models\DescribeProductSKUsRequest $req) 查询产品售卖规格，针对 RocketMQ 5.x 集群。
  * @method Models\DescribeRoleListResponse DescribeRoleList(Models\DescribeRoleListRequest $req) 查询角色列表，Filter参数使用说明如下：
 

@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPbKeyLen(integer $PbKeyLen) 设置转推SRT的密钥长度，默认为0，可选[0|16|24|32]。
  * @method string getMode() 获取SRT模式，可选[LISTENER|CALLER]，默认为CALLER。
  * @method void setMode(string $Mode) 设置SRT模式，可选[LISTENER|CALLER]，默认为CALLER。
+ * @method SRTFECFullOptions getFEC() 获取SRT FEC 设置
+ * @method void setFEC(SRTFECFullOptions $FEC) 设置SRT FEC 设置
  */
 class CreateOutputSRTSettings extends AbstractModel
 {
@@ -87,6 +89,11 @@ class CreateOutputSRTSettings extends AbstractModel
     public $Mode;
 
     /**
+     * @var SRTFECFullOptions SRT FEC 设置
+     */
+    public $FEC;
+
+    /**
      * @param array $Destinations 转推的目标地址，当Mode为CALLER时必填，且只能填1组。
      * @param string $StreamId 转推SRT的流Id，可选大小写字母、数字和特殊字符（.#!:&,=_-），长度为0~512。
      * @param integer $Latency 转推SRT的延迟，默认120，单位ms，范围为[0, 3000]。此参数同时设置了发送方和接收方的延迟（recvlatency和peerlatency）为相同的值。建议配置为至少3倍RTT，以确保在网络拥塞时能够有效处理数据包的重传和确认
@@ -96,6 +103,7 @@ class CreateOutputSRTSettings extends AbstractModel
      * @param string $Passphrase 转推SRT的加密密钥，默认为空，表示不加密。只可填ascii码值，长度为[10, 79]。
      * @param integer $PbKeyLen 转推SRT的密钥长度，默认为0，可选[0|16|24|32]。
      * @param string $Mode SRT模式，可选[LISTENER|CALLER]，默认为CALLER。
+     * @param SRTFECFullOptions $FEC SRT FEC 设置
      */
     function __construct()
     {
@@ -149,6 +157,11 @@ class CreateOutputSRTSettings extends AbstractModel
 
         if (array_key_exists("Mode",$param) and $param["Mode"] !== null) {
             $this->Mode = $param["Mode"];
+        }
+
+        if (array_key_exists("FEC",$param) and $param["FEC"] !== null) {
+            $this->FEC = new SRTFECFullOptions();
+            $this->FEC->deserialize($param["FEC"]);
         }
     }
 }

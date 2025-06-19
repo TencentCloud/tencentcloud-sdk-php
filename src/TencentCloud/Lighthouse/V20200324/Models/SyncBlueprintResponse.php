@@ -14,39 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tdmq\V20200217\Models;
+namespace TencentCloud\Lighthouse\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeRabbitMQQueues返回参数结构体
+ * SyncBlueprint返回参数结构体
  *
- * @method array getQueueInfoList() 获取队列列表信息
- * @method void setQueueInfoList(array $QueueInfoList) 设置队列列表信息
- * @method integer getTotalCount() 获取队列数量
- * @method void setTotalCount(integer $TotalCount) 设置队列数量
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeRabbitMQQueuesResponse extends AbstractModel
+class SyncBlueprintResponse extends AbstractModel
 {
-    /**
-     * @var array 队列列表信息
-     */
-    public $QueueInfoList;
-
-    /**
-     * @var integer 队列数量
-     */
-    public $TotalCount;
-
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param array $QueueInfoList 队列列表信息
-     * @param integer $TotalCount 队列数量
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,19 +46,6 @@ class DescribeRabbitMQQueuesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("QueueInfoList",$param) and $param["QueueInfoList"] !== null) {
-            $this->QueueInfoList = [];
-            foreach ($param["QueueInfoList"] as $key => $value){
-                $obj = new RabbitMQQueueListInfo();
-                $obj->deserialize($value);
-                array_push($this->QueueInfoList, $obj);
-            }
-        }
-
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

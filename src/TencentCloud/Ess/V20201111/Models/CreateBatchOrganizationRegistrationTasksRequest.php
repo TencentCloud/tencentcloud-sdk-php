@@ -50,6 +50,24 @@ use TencentCloud\Common\AbstractModel;
 <li>H5：生成H5跳转长链接</li>
 <li>SHORT_H5：生成H5跳转短链</li>
 </ul>
+ * @method integer getBatchAuthMethod() 获取认证链接使用单链接还是多链接模式
+
+<ul>
+<li>0 - 多链接(默认)，指批量生成链接， 每一个企业会拥有一个认证链接，然后分别认证</li>
+<li>1 - 单链接 ， 指批量生成链接，然后会将多个链接聚合成一个链接，进行认证</li>
+</ul>
+
+p.s.
+请注意， 如果使用单链接的模式并且认证方式是授权书方式的时候，必须在接口中传递超管授权书。
+ * @method void setBatchAuthMethod(integer $BatchAuthMethod) 设置认证链接使用单链接还是多链接模式
+
+<ul>
+<li>0 - 多链接(默认)，指批量生成链接， 每一个企业会拥有一个认证链接，然后分别认证</li>
+<li>1 - 单链接 ， 指批量生成链接，然后会将多个链接聚合成一个链接，进行认证</li>
+</ul>
+
+p.s.
+请注意， 如果使用单链接的模式并且认证方式是授权书方式的时候，必须在接口中传递超管授权书。
  */
 class CreateBatchOrganizationRegistrationTasksRequest extends AbstractModel
 {
@@ -85,6 +103,19 @@ class CreateBatchOrganizationRegistrationTasksRequest extends AbstractModel
     public $Endpoint;
 
     /**
+     * @var integer 认证链接使用单链接还是多链接模式
+
+<ul>
+<li>0 - 多链接(默认)，指批量生成链接， 每一个企业会拥有一个认证链接，然后分别认证</li>
+<li>1 - 单链接 ， 指批量生成链接，然后会将多个链接聚合成一个链接，进行认证</li>
+</ul>
+
+p.s.
+请注意， 如果使用单链接的模式并且认证方式是授权书方式的时候，必须在接口中传递超管授权书。
+     */
+    public $BatchAuthMethod;
+
+    /**
      * @param UserInfo $Operator 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      * @param array $RegistrationOrganizations 组织机构注册信息。
@@ -100,6 +131,15 @@ class CreateBatchOrganizationRegistrationTasksRequest extends AbstractModel
 <li>H5：生成H5跳转长链接</li>
 <li>SHORT_H5：生成H5跳转短链</li>
 </ul>
+     * @param integer $BatchAuthMethod 认证链接使用单链接还是多链接模式
+
+<ul>
+<li>0 - 多链接(默认)，指批量生成链接， 每一个企业会拥有一个认证链接，然后分别认证</li>
+<li>1 - 单链接 ， 指批量生成链接，然后会将多个链接聚合成一个链接，进行认证</li>
+</ul>
+
+p.s.
+请注意， 如果使用单链接的模式并且认证方式是授权书方式的时候，必须在接口中传递超管授权书。
      */
     function __construct()
     {
@@ -135,6 +175,10 @@ class CreateBatchOrganizationRegistrationTasksRequest extends AbstractModel
 
         if (array_key_exists("Endpoint",$param) and $param["Endpoint"] !== null) {
             $this->Endpoint = $param["Endpoint"];
+        }
+
+        if (array_key_exists("BatchAuthMethod",$param) and $param["BatchAuthMethod"] !== null) {
+            $this->BatchAuthMethod = $param["BatchAuthMethod"];
         }
     }
 }

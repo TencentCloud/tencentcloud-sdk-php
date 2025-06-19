@@ -62,8 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterPlanCntFlag(integer $FilterPlanCntFlag) 设置是否标准版2.0 0: 包含标准版2.0 0 1: 只查询标准版2.0 0 2: 不查标准版2.0
  * @method integer getFilterTransRegionFlag() 获取是否跨区域产品 0: 不包含跨区域产品 1: 中国大陆跨区域产品 2: 非中国大陆跨区域产品 3: 包含全部
  * @method void setFilterTransRegionFlag(integer $FilterTransRegionFlag) 设置是否跨区域产品 0: 不包含跨区域产品 1: 中国大陆跨区域产品 2: 非中国大陆跨区域产品 3: 包含全部
- * @method array getFilterZoneIdList() 获取zoenid列表
- * @method void setFilterZoneIdList(array $FilterZoneIdList) 设置zoenid列表
+ * @method array getFilterZoneIdList() 获取ZoneID列表
+ * @method void setFilterZoneIdList(array $FilterZoneIdList) 设置ZoneID列表
  */
 class DescribeListBGPInstancesRequest extends AbstractModel
 {
@@ -173,7 +173,7 @@ class DescribeListBGPInstancesRequest extends AbstractModel
     public $FilterTransRegionFlag;
 
     /**
-     * @var array zoenid列表
+     * @var array ZoneID列表
      */
     public $FilterZoneIdList;
 
@@ -199,7 +199,7 @@ class DescribeListBGPInstancesRequest extends AbstractModel
      * @param integer $FilterBasicPlusFlag 是否包含基础防护增强版 0: 不包含 1: 包含
      * @param integer $FilterPlanCntFlag 是否标准版2.0 0: 包含标准版2.0 0 1: 只查询标准版2.0 0 2: 不查标准版2.0
      * @param integer $FilterTransRegionFlag 是否跨区域产品 0: 不包含跨区域产品 1: 中国大陆跨区域产品 2: 非中国大陆跨区域产品 3: 包含全部
-     * @param array $FilterZoneIdList zoenid列表
+     * @param array $FilterZoneIdList ZoneID列表
      */
     function __construct()
     {

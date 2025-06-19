@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tdmq\V20200217\Models;
+namespace TencentCloud\Lke\V20231130\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeRabbitMQQueues返回参数结构体
+ * UpdateVar返回参数结构体
  *
- * @method array getQueueInfoList() 获取队列列表信息
- * @method void setQueueInfoList(array $QueueInfoList) 设置队列列表信息
- * @method integer getTotalCount() 获取队列数量
- * @method void setTotalCount(integer $TotalCount) 设置队列数量
+ * @method string getVarId() 获取变量ID
+ * @method void setVarId(string $VarId) 设置变量ID
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeRabbitMQQueuesResponse extends AbstractModel
+class UpdateVarResponse extends AbstractModel
 {
     /**
-     * @var array 队列列表信息
+     * @var string 变量ID
      */
-    public $QueueInfoList;
-
-    /**
-     * @var integer 队列数量
-     */
-    public $TotalCount;
+    public $VarId;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +38,7 @@ class DescribeRabbitMQQueuesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $QueueInfoList 队列列表信息
-     * @param integer $TotalCount 队列数量
+     * @param string $VarId 变量ID
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +54,8 @@ class DescribeRabbitMQQueuesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("QueueInfoList",$param) and $param["QueueInfoList"] !== null) {
-            $this->QueueInfoList = [];
-            foreach ($param["QueueInfoList"] as $key => $value){
-                $obj = new RabbitMQQueueListInfo();
-                $obj->deserialize($value);
-                array_push($this->QueueInfoList, $obj);
-            }
-        }
-
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("VarId",$param) and $param["VarId"] !== null) {
+            $this->VarId = $param["VarId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

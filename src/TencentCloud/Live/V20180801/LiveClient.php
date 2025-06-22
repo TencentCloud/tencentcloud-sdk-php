@@ -185,6 +185,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
  * @method Models\DescribeLiveCallbackTemplatesResponse DescribeLiveCallbackTemplates(Models\DescribeLiveCallbackTemplatesRequest $req) 获取回调模板列表
  * @method Models\DescribeLiveCertResponse DescribeLiveCert(Models\DescribeLiveCertRequest $req) 获取证书信息
  * @method Models\DescribeLiveCertsResponse DescribeLiveCerts(Models\DescribeLiveCertsRequest $req) 获取证书信息列表
+ * @method Models\DescribeLiveCloudEffectListResponse DescribeLiveCloudEffectList(Models\DescribeLiveCloudEffectListRequest $req) 使用该接口查询云端特效列表，特效列表中包含一部分官方精品特效，同时包含用户自定义生成的特效。
  * @method Models\DescribeLiveDelayInfoListResponse DescribeLiveDelayInfoList(Models\DescribeLiveDelayInfoListRequest $req) 获取直播延播列表。
  * @method Models\DescribeLiveDomainResponse DescribeLiveDomain(Models\DescribeLiveDomainRequest $req) 查询直播域名信息。
  * @method Models\DescribeLiveDomainCertResponse DescribeLiveDomainCert(Models\DescribeLiveDomainCertRequest $req) 获取域名证书信息。
@@ -201,6 +202,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
  * @method Models\DescribeLivePackageInfoResponse DescribeLivePackageInfo(Models\DescribeLivePackageInfoRequest $req) 查询用户套餐包总量、使用量、剩余量、包状态、购买时间和过期时间等。
  * @method Models\DescribeLivePadProcessorListResponse DescribeLivePadProcessorList(Models\DescribeLivePadProcessorListRequest $req) 使用该接口查询垫片流。垫片流状态更新存在一定延迟，可间隔30秒以上查询，避免频繁查询该接口。
  * @method Models\DescribeLivePadRulesResponse DescribeLivePadRules(Models\DescribeLivePadRulesRequest $req) 获取直播垫片规则列表。
+ * @method Models\DescribeLivePadStreamListResponse DescribeLivePadStreamList(Models\DescribeLivePadStreamListRequest $req) 使用该接口查询垫片流列表。垫片流状态更新存在一定延迟，可间隔30秒以上查询，避免频繁查询该接口。
  * @method Models\DescribeLivePadTemplateResponse DescribeLivePadTemplate(Models\DescribeLivePadTemplateRequest $req) 获取单个直播垫片模板
  * @method Models\DescribeLivePadTemplatesResponse DescribeLivePadTemplates(Models\DescribeLivePadTemplatesRequest $req) 获取直播垫片模板。
  * @method Models\DescribeLivePlayAuthKeyResponse DescribeLivePlayAuthKey(Models\DescribeLivePlayAuthKeyRequest $req) 查询播放鉴权key。
@@ -340,11 +342,14 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
 2. 点播源任务的重启，会根据VodRefreshType决定是续播还是从头开始播。
  * @method Models\ResumeDelayLiveStreamResponse ResumeDelayLiveStream(Models\ResumeDelayLiveStreamRequest $req) 取消直播流设置的延时配置，恢复实时直播画面。
  * @method Models\ResumeLiveStreamResponse ResumeLiveStream(Models\ResumeLiveStreamRequest $req) 恢复某条流的推流。
+ * @method Models\SendLiveCloudEffectResponse SendLiveCloudEffect(Models\SendLiveCloudEffectRequest $req) 使用该接口发送云端特效到线上正活跃的直播流，观众可在播放端看到特效从直播流画面中展示。
+ * @method Models\StartLivePadStreamResponse StartLivePadStream(Models\StartLivePadStreamRequest $req) 使用该接口将直播流开始切入垫片。
  * @method Models\StartLiveStreamMonitorResponse StartLiveStreamMonitor(Models\StartLiveStreamMonitorRequest $req) 该接口用来启动直播流监播任务。
  * @method Models\StopCasterPgmResponse StopCasterPgm(Models\StopCasterPgmRequest $req) 该接口用来停止导播台的主监输出。
 停止主监后，对应的推流到腾讯云直播源站和推流到其他第三方平台均将会停止。
  * @method Models\StopCasterPvwResponse StopCasterPvw(Models\StopCasterPvwRequest $req) 该接口用来停止导播台的预监任务。
  * @method Models\StopLivePadProcessorResponse StopLivePadProcessor(Models\StopLivePadProcessorRequest $req) 使用该接口停止垫片流。
+ * @method Models\StopLivePadStreamResponse StopLivePadStream(Models\StopLivePadStreamRequest $req) 使用该接口将直播流停止切入垫片。
  * @method Models\StopLiveRecordResponse StopLiveRecord(Models\StopLiveRecordRequest $req) 说明：录制后的文件存放于点播平台。用户如需使用录制功能，需首先自行开通点播账号并确保账号可用。录制文件存放后，相关费用（含存储以及下行播放流量）按照点播平台计费方式收取，请参考对应文档。
  * @method Models\StopLiveStreamMonitorResponse StopLiveStreamMonitor(Models\StopLiveStreamMonitorRequest $req) 该接口用来停止直播流监播任务。
  * @method Models\StopRecordTaskResponse StopRecordTask(Models\StopRecordTaskRequest $req) 提前结束录制，中止运行中的录制任务并生成录制文件。任务被成功终止后，本次任务将不再启动。

@@ -847,6 +847,10 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
 法人章的样式可以参考下图索引（也可以自己上传法人印章图片）：
 
 ![image](https://qcloudimg.tencent-cloud.cn/raw/36a0a090750c45bb5cac5047ac461b2c.png)
+ * @method Models\CreateModifyAdminAuthorizationUrlResponse CreateModifyAdminAuthorizationUrl(Models\CreateModifyAdminAuthorizationUrlRequest $req) 本接口（CreateModifyAdminAuthorizationUrl）用于重新上传超管授权书。
+
+注意:
+1. 重新上传超管授权书，必须是审核失败的情况下才能重新上传,可以通过回调[!授权书审核结果回调](https://qian.tencent.com/developers/partner/callback_types_staffs#%E5%9B%9B-%E6%8E%88%E6%9D%83%E4%B9%A6%E5%AE%A1%E6%A0%B8%E7%BB%93%E6%9E%9C%E5%9B%9E%E8%B0%83)得到
  * @method Models\CreateOrganizationAuthFileResponse CreateOrganizationAuthFile(Models\CreateOrganizationAuthFileRequest $req) 生成合成后的各类企业授权书，包括：
 - 企业认证超管授权书
 - 超管变更授权书
@@ -907,6 +911,7 @@ Web链接访问后，会根据子客企业(**Agent中ProxyOrganizationOpenId表�
 
 注意：
 **这个接口的操作人必须跟生成批量认证链接接口的应用号一致，才可以调用，否则会返回当前操作人没有认证中的企业认证流**
+ * @method Models\DescribeBatchOrganizationRegistrationTasksResponse DescribeBatchOrganizationRegistrationTasks(Models\DescribeBatchOrganizationRegistrationTasksRequest $req) 本接口（DescribeBatchOrganizationRegistrationTasks）用于查询企业批量认证任务状态。
  * @method Models\DescribeBatchOrganizationRegistrationUrlsResponse DescribeBatchOrganizationRegistrationUrls(Models\DescribeBatchOrganizationRegistrationUrlsRequest $req) 此接口用于获取企业批量认证异步任务的状态及结果。需要先调用接口<a href="https://qian.tencent.com/developers/partnerApis/accounts/CreateBatchOrganizationRegistrationTasks" target="_blank">提交子企业批量认证链接创建任务</a>获取到任务ID，然后再调用此接口获取到各个子企业的注册认证链接。整体流程如下图。
 ![image](https://qcloudimg.tencent-cloud.cn/raw/654aa2a72ab7d42f06464ea33c50c3bb.png)
 
@@ -1091,7 +1096,9 @@ Agent参数中的OpenId 必须为审批者的openId，且链接必须由审批�
 
 ## 4. 复制模板 (OperateType=COPY)
 此操作将复制一个完全一样的模板，仅支持修改模板名称，若要修改其他模板内容，需到腾讯电子签控制台操作。
- * @method Models\PrepareFlowsResponse PrepareFlows(Models\PrepareFlowsRequest $req) 该接口 (PrepareFlows) 用于创建待发起文件
+ * @method Models\PrepareFlowsResponse PrepareFlows(Models\PrepareFlowsRequest $req) 已经不再使用
+
+该接口 (PrepareFlows) 用于创建待发起文件
 用户通过该接口进入签署流程发起的确认页面，进行发起信息二次确认， 如果确认则进行正常发起。
 目前该接口只支持B2C，<font color='red'> **不建议使用**</font>。
  * @method Models\SyncProxyOrganizationResponse SyncProxyOrganization(Models\SyncProxyOrganizationRequest $req) 此接口（SyncProxyOrganization）用于同步第三方平台子客企业信息，包括企业名称、企业营业执照、企业统一社会信用代码和法人姓名等，便于子客企业在企业激活过程中无需手动上传营业执照或补充企业信息。

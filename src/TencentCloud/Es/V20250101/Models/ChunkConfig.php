@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxChunkSize(integer $MaxChunkSize) 设置最大分片长度
  * @method array getDelimiters() 获取分隔符列表
  * @method void setDelimiters(array $Delimiters) 设置分隔符列表
+ * @method integer getChunkOverlap() 获取相邻切片重合字符数，需要小于分片长度
+ * @method void setChunkOverlap(integer $ChunkOverlap) 设置相邻切片重合字符数，需要小于分片长度
  */
 class ChunkConfig extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ChunkConfig extends AbstractModel
     public $Delimiters;
 
     /**
+     * @var integer 相邻切片重合字符数，需要小于分片长度
+     */
+    public $ChunkOverlap;
+
+    /**
      * @param integer $MaxChunkSize 最大分片长度
      * @param array $Delimiters 分隔符列表
+     * @param integer $ChunkOverlap 相邻切片重合字符数，需要小于分片长度
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ChunkConfig extends AbstractModel
 
         if (array_key_exists("Delimiters",$param) and $param["Delimiters"] !== null) {
             $this->Delimiters = $param["Delimiters"];
+        }
+
+        if (array_key_exists("ChunkOverlap",$param) and $param["ChunkOverlap"] !== null) {
+            $this->ChunkOverlap = $param["ChunkOverlap"];
         }
     }
 }

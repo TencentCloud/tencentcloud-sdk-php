@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置自动扩容策略开启，关闭
  * @method integer getScaleThreshold() 获取集群用量占比，到达这个值后开始扩容,范围[10-90]
  * @method void setScaleThreshold(integer $ScaleThreshold) 设置集群用量占比，到达这个值后开始扩容,范围[10-90]
- * @method integer getTargetThreshold() 获取扩容后使用量跟集群总量比例,范围[1-90]
- * @method void setTargetThreshold(integer $TargetThreshold) 设置扩容后使用量跟集群总量比例,范围[1-90]
+ * @method integer getTargetThreshold() 获取扩容后使用量跟集群总量比例,范围[10-90]
+ * @method void setTargetThreshold(integer $TargetThreshold) 设置扩容后使用量跟集群总量比例,范围[10-90]
  */
 class AutoScaleUpRule extends AbstractModel
 {
@@ -40,14 +40,14 @@ class AutoScaleUpRule extends AbstractModel
     public $ScaleThreshold;
 
     /**
-     * @var integer 扩容后使用量跟集群总量比例,范围[1-90]
+     * @var integer 扩容后使用量跟集群总量比例,范围[10-90]
      */
     public $TargetThreshold;
 
     /**
      * @param string $Status 自动扩容策略开启，关闭
      * @param integer $ScaleThreshold 集群用量占比，到达这个值后开始扩容,范围[10-90]
-     * @param integer $TargetThreshold 扩容后使用量跟集群总量比例,范围[1-90]
+     * @param integer $TargetThreshold 扩容后使用量跟集群总量比例,范围[10-90]
      */
     function __construct()
     {

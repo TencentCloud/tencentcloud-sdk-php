@@ -14,44 +14,36 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cfs\V20190719\Models;
+namespace TencentCloud\Trocket\V20230308\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyFileSystemAutoScaleUpRule返回参数结构体
+ * DescribeSmoothMigrationTaskList返回参数结构体
  *
- * @method string getFileSystemId() 获取文件系统 ID
- * @method void setFileSystemId(string $FileSystemId) 设置文件系统 ID
- * @method integer getStatus() 获取规则状态 0：关闭，1：开启
- * @method void setStatus(integer $Status) 设置规则状态 0：关闭，1：开启
- * @method integer getScaleUpThreshold() 获取扩容阈值，范围[10-90]
- * @method void setScaleUpThreshold(integer $ScaleUpThreshold) 设置扩容阈值，范围[10-90]
- * @method integer getTargetThreshold() 获取扩容后达到阈值，范围[10-90]
- * @method void setTargetThreshold(integer $TargetThreshold) 设置扩容后达到阈值，范围[10-90]
+ * @method integer getTotalCount() 获取查询总数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTotalCount(integer $TotalCount) 设置查询总数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getData() 获取任务列表	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setData(array $Data) 设置任务列表	
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class ModifyFileSystemAutoScaleUpRuleResponse extends AbstractModel
+class DescribeSmoothMigrationTaskListResponse extends AbstractModel
 {
     /**
-     * @var string 文件系统 ID
+     * @var integer 查询总数
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $FileSystemId;
+    public $TotalCount;
 
     /**
-     * @var integer 规则状态 0：关闭，1：开启
+     * @var array 任务列表	
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Status;
-
-    /**
-     * @var integer 扩容阈值，范围[10-90]
-     */
-    public $ScaleUpThreshold;
-
-    /**
-     * @var integer 扩容后达到阈值，范围[10-90]
-     */
-    public $TargetThreshold;
+    public $Data;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -59,10 +51,10 @@ class ModifyFileSystemAutoScaleUpRuleResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $FileSystemId 文件系统 ID
-     * @param integer $Status 规则状态 0：关闭，1：开启
-     * @param integer $ScaleUpThreshold 扩容阈值，范围[10-90]
-     * @param integer $TargetThreshold 扩容后达到阈值，范围[10-90]
+     * @param integer $TotalCount 查询总数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Data 任务列表	
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -78,20 +70,17 @@ class ModifyFileSystemAutoScaleUpRuleResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FileSystemId",$param) and $param["FileSystemId"] !== null) {
-            $this->FileSystemId = $param["FileSystemId"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
-        }
-
-        if (array_key_exists("ScaleUpThreshold",$param) and $param["ScaleUpThreshold"] !== null) {
-            $this->ScaleUpThreshold = $param["ScaleUpThreshold"];
-        }
-
-        if (array_key_exists("TargetThreshold",$param) and $param["TargetThreshold"] !== null) {
-            $this->TargetThreshold = $param["TargetThreshold"];
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = [];
+            foreach ($param["Data"] as $key => $value){
+                $obj = new SmoothMigrationTaskItem();
+                $obj->deserialize($value);
+                array_push($this->Data, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

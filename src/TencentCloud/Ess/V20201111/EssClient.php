@@ -577,6 +577,10 @@ use TencentCloud\Ess\V20201111\Models as Models;
 法人章的样式可以参考下图索引（也可以自己上传法人印章图片）：
 
 ![image](https://qcloudimg.tencent-cloud.cn/raw/36a0a090750c45bb5cac5047ac461b2c.png)
+ * @method Models\CreateModifyAdminAuthorizationUrlResponse CreateModifyAdminAuthorizationUrl(Models\CreateModifyAdminAuthorizationUrlRequest $req) 本接口（CreateModifyAdminAuthorizationUrl）用于重新上传超管授权书。
+
+注意:
+1. 重新上传超管授权书，必须是审核失败的情况下才能重新上传,可以通过回调[!授权书认证审核结果回调](https://qian.tencent.com/developers/company/callback_types_staffs#%E5%8D%81%E5%85%AD-%E6%8E%88%E6%9D%83%E4%B9%A6%E8%AE%A4%E8%AF%81%E5%AE%A1%E6%A0%B8%E7%BB%93%E6%9E%9C%E5%9B%9E%E8%B0%83)得到
  * @method Models\CreateMultiFlowSignQRCodeResponse CreateMultiFlowSignQRCode(Models\CreateMultiFlowSignQRCodeRequest $req) 此接口（CreateMultiFlowSignQRCode）用于创建一码多签签署码。
 
 **适用场景**:
@@ -782,6 +786,7 @@ use TencentCloud\Ess\V20201111\Models as Models;
 注意：
 **这个接口的操作人必须跟生成批量认证链接接口的操作人一致，才可以调用，否则会返回当前操作人没有认证中的企业认证流**
  * @method Models\DeleteSealPoliciesResponse DeleteSealPolicies(Models\DeleteSealPoliciesRequest $req) 本接口（DeleteSealPolicies）用于撤销企业员工持有的印章权限
+ * @method Models\DescribeBatchOrganizationRegistrationTasksResponse DescribeBatchOrganizationRegistrationTasks(Models\DescribeBatchOrganizationRegistrationTasksRequest $req) 本接口（DescribeBatchOrganizationRegistrationTasks）用于查询企业批量认证任务状态。
  * @method Models\DescribeBatchOrganizationRegistrationUrlsResponse DescribeBatchOrganizationRegistrationUrls(Models\DescribeBatchOrganizationRegistrationUrlsRequest $req) 此接口用于获取企业批量认证异步任务的状态及结果。
 
 前提条件：已调用 CreateBatchOrganizationRegistrationTasks创建企业批量认证链接任务接口，并得到了任务Id。

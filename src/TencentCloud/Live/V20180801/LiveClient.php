@@ -200,7 +200,6 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
 
 注意：该接口仅作为直播辅助查询接口，重要业务场景不可强依赖该接口。
  * @method Models\DescribeLivePackageInfoResponse DescribeLivePackageInfo(Models\DescribeLivePackageInfoRequest $req) 查询用户套餐包总量、使用量、剩余量、包状态、购买时间和过期时间等。
- * @method Models\DescribeLivePadProcessorListResponse DescribeLivePadProcessorList(Models\DescribeLivePadProcessorListRequest $req) 使用该接口查询垫片流。垫片流状态更新存在一定延迟，可间隔30秒以上查询，避免频繁查询该接口。
  * @method Models\DescribeLivePadRulesResponse DescribeLivePadRules(Models\DescribeLivePadRulesRequest $req) 获取直播垫片规则列表。
  * @method Models\DescribeLivePadStreamListResponse DescribeLivePadStreamList(Models\DescribeLivePadStreamListRequest $req) 使用该接口查询垫片流列表。垫片流状态更新存在一定延迟，可间隔30秒以上查询，避免频繁查询该接口。
  * @method Models\DescribeLivePadTemplateResponse DescribeLivePadTemplate(Models\DescribeLivePadTemplateRequest $req) 获取单个直播垫片模板
@@ -348,7 +347,6 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
  * @method Models\StopCasterPgmResponse StopCasterPgm(Models\StopCasterPgmRequest $req) 该接口用来停止导播台的主监输出。
 停止主监后，对应的推流到腾讯云直播源站和推流到其他第三方平台均将会停止。
  * @method Models\StopCasterPvwResponse StopCasterPvw(Models\StopCasterPvwRequest $req) 该接口用来停止导播台的预监任务。
- * @method Models\StopLivePadProcessorResponse StopLivePadProcessor(Models\StopLivePadProcessorRequest $req) 使用该接口停止垫片流。
  * @method Models\StopLivePadStreamResponse StopLivePadStream(Models\StopLivePadStreamRequest $req) 使用该接口将直播流停止切入垫片。
  * @method Models\StopLiveRecordResponse StopLiveRecord(Models\StopLiveRecordRequest $req) 说明：录制后的文件存放于点播平台。用户如需使用录制功能，需首先自行开通点播账号并确保账号可用。录制文件存放后，相关费用（含存储以及下行播放流量）按照点播平台计费方式收取，请参考对应文档。
  * @method Models\StopLiveStreamMonitorResponse StopLiveStreamMonitor(Models\StopLiveStreamMonitorRequest $req) 该接口用来停止直播流监播任务。

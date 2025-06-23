@@ -58,6 +58,8 @@ MongoDB可定义如下的参数：
  * @method void setDatabaseNetEnv(string $DatabaseNetEnv) 设置数据库所属网络环境，AccessType为云联网(ccn)时必填， UserIDC表示用户IDC、TencentVPC表示腾讯云VPC；
  * @method string getConnectType() 获取tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，Info中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，Info中需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。
  * @method void setConnectType(string $ConnectType) 设置tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，Info中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，Info中需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。
+ * @method string getCcnOwnerUin() 获取云联网网关所属账号，如果云联网网关为其他账号资源需要填写
+ * @method void setCcnOwnerUin(string $CcnOwnerUin) 设置云联网网关所属账号，如果云联网网关为其他账号资源需要填写
  */
 class DBEndpointInfo extends AbstractModel
 {
@@ -117,6 +119,11 @@ MongoDB可定义如下的参数：
     public $ConnectType;
 
     /**
+     * @var string 云联网网关所属账号，如果云联网网关为其他账号资源需要填写
+     */
+    public $CcnOwnerUin;
+
+    /**
      * @param string $Region 实例所在地域
      * @param string $AccessType 实例网络接入类型，如：extranet(外网)、ipv6(公网ipv6)、cvm(云主机自建)、dcg(专线接入)、vpncloud(vpn接入的实例)、cdb(云数据库)、ccn(云联网)、intranet(自研上云)、vpc(私有网络)等，注意具体可选值依赖当前链路
      * @param string $DatabaseType 实例数据库类型，如：mysql,redis,mongodb,postgresql,mariadb,percona 等
@@ -136,6 +143,7 @@ MongoDB可定义如下的参数：
 其中fetchMethod表示迁移方式，还可支持change_stream；EncryptedConnProtocol值为mongo_atlas_ssl表示使用atlas ssl连接方式。
      * @param string $DatabaseNetEnv 数据库所属网络环境，AccessType为云联网(ccn)时必填， UserIDC表示用户IDC、TencentVPC表示腾讯云VPC；
      * @param string $ConnectType tdsql连接方式：proxy-通过tdsql proxy主机访问各个set节点，注意只有在自研上云的网络环境下才能通过这种方式连接，Info中只需要提供proxy主机信息。set-直连set节点，如选择直连set方式，Info中需要正确填写proxy主机信息及所有set节点信息。源端是tdsqlmysql类型必填。
+     * @param string $CcnOwnerUin 云联网网关所属账号，如果云联网网关为其他账号资源需要填写
      */
     function __construct()
     {
@@ -194,6 +202,10 @@ MongoDB可定义如下的参数：
 
         if (array_key_exists("ConnectType",$param) and $param["ConnectType"] !== null) {
             $this->ConnectType = $param["ConnectType"];
+        }
+
+        if (array_key_exists("CcnOwnerUin",$param) and $param["CcnOwnerUin"] !== null) {
+            $this->CcnOwnerUin = $param["CcnOwnerUin"];
         }
     }
 }

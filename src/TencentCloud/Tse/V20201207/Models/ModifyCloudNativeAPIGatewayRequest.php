@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableCls(boolean $EnableCls) 设置是否开启 CLS 日志。暂时取值只能是 true，即只能从关闭状态变成开启状态。
  * @method string getInternetPayMode() 获取公网计费模式。可选取值 BANDWIDTH | TRAFFIC ，表示按带宽和按流量计费。
  * @method void setInternetPayMode(string $InternetPayMode) 设置公网计费模式。可选取值 BANDWIDTH | TRAFFIC ，表示按带宽和按流量计费。
+ * @method boolean getDeleteProtect() 获取是否开启实例删除保护,默认false
+ * @method void setDeleteProtect(boolean $DeleteProtect) 设置是否开启实例删除保护,默认false
  */
 class ModifyCloudNativeAPIGatewayRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class ModifyCloudNativeAPIGatewayRequest extends AbstractModel
     public $InternetPayMode;
 
     /**
+     * @var boolean 是否开启实例删除保护,默认false
+     */
+    public $DeleteProtect;
+
+    /**
      * @param string $GatewayId 云原生API网关实例ID。
      * @param string $Name 云原生API网关名字, 最多支持60个字符。
      * @param string $Description 云原生API网关描述信息, 最多支持120个字符。
      * @param boolean $EnableCls 是否开启 CLS 日志。暂时取值只能是 true，即只能从关闭状态变成开启状态。
      * @param string $InternetPayMode 公网计费模式。可选取值 BANDWIDTH | TRAFFIC ，表示按带宽和按流量计费。
+     * @param boolean $DeleteProtect 是否开启实例删除保护,默认false
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class ModifyCloudNativeAPIGatewayRequest extends AbstractModel
 
         if (array_key_exists("InternetPayMode",$param) and $param["InternetPayMode"] !== null) {
             $this->InternetPayMode = $param["InternetPayMode"];
+        }
+
+        if (array_key_exists("DeleteProtect",$param) and $param["DeleteProtect"] !== null) {
+            $this->DeleteProtect = $param["DeleteProtect"];
         }
     }
 }

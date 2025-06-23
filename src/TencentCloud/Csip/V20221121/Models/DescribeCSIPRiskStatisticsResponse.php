@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Lkeap\V20240522\Models;
+namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * RetrieveKnowledgeRealtime返回参数结构体
+ * DescribeCSIPRiskStatistics返回参数结构体
  *
- * @method array getRecords() 获取检索结果
- * @method void setRecords(array $Records) 设置检索结果
- * @method integer getTotalCount() 获取检索结果数量
- * @method void setTotalCount(integer $TotalCount) 设置检索结果数量
+ * @method CsipRiskCenterStatistics getData() 获取资产概况数据
+ * @method void setData(CsipRiskCenterStatistics $Data) 设置资产概况数据
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class RetrieveKnowledgeRealtimeResponse extends AbstractModel
+class DescribeCSIPRiskStatisticsResponse extends AbstractModel
 {
     /**
-     * @var array 检索结果
+     * @var CsipRiskCenterStatistics 资产概况数据
      */
-    public $Records;
-
-    /**
-     * @var integer 检索结果数量
-     */
-    public $TotalCount;
+    public $Data;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +38,7 @@ class RetrieveKnowledgeRealtimeResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Records 检索结果
-     * @param integer $TotalCount 检索结果数量
+     * @param CsipRiskCenterStatistics $Data 资产概况数据
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,17 +54,9 @@ class RetrieveKnowledgeRealtimeResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Records",$param) and $param["Records"] !== null) {
-            $this->Records = [];
-            foreach ($param["Records"] as $key => $value){
-                $obj = new RetrievalRecord();
-                $obj->deserialize($value);
-                array_push($this->Records, $obj);
-            }
-        }
-
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = new CsipRiskCenterStatistics();
+            $this->Data->deserialize($param["Data"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

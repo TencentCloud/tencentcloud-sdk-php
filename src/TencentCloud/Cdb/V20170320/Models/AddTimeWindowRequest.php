@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddTimeWindow请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+ * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
  * @method array getMonday() 获取星期一的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起始时间按半个小时对齐；最短半个小时，最长三个小时；可设置多个时间段。 一周中应至少设置一天的时间窗。下同。
  * @method void setMonday(array $Monday) 设置星期一的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起始时间按半个小时对齐；最短半个小时，最长三个小时；可设置多个时间段。 一周中应至少设置一天的时间窗。下同。
  * @method array getTuesday() 获取星期二的可维护时间窗口。 一周中应至少设置一天的时间窗。
@@ -36,13 +36,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSaturday(array $Saturday) 设置星期六的可维护时间窗口。 一周中应至少设置一天的时间窗。
  * @method array getSunday() 获取星期日的可维护时间窗口。 一周中应至少设置一天的时间窗。
  * @method void setSunday(array $Sunday) 设置星期日的可维护时间窗口。 一周中应至少设置一天的时间窗。
- * @method integer getMaxDelayTime() 获取最大延迟阈值，仅对主实例和灾备实例有效。
- * @method void setMaxDelayTime(integer $MaxDelayTime) 设置最大延迟阈值，仅对主实例和灾备实例有效。
+ * @method integer getMaxDelayTime() 获取最大延迟阈值（秒），仅对主实例和灾备实例有效。默认值：10，取值范围：1-10的整数。
+ * @method void setMaxDelayTime(integer $MaxDelayTime) 设置最大延迟阈值（秒），仅对主实例和灾备实例有效。默认值：10，取值范围：1-10的整数。
  */
 class AddTimeWindowRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * @var string 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public $InstanceId;
 
@@ -82,12 +82,12 @@ class AddTimeWindowRequest extends AbstractModel
     public $Sunday;
 
     /**
-     * @var integer 最大延迟阈值，仅对主实例和灾备实例有效。
+     * @var integer 最大延迟阈值（秒），仅对主实例和灾备实例有效。默认值：10，取值范围：1-10的整数。
      */
     public $MaxDelayTime;
 
     /**
-     * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * @param string $InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      * @param array $Monday 星期一的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起始时间按半个小时对齐；最短半个小时，最长三个小时；可设置多个时间段。 一周中应至少设置一天的时间窗。下同。
      * @param array $Tuesday 星期二的可维护时间窗口。 一周中应至少设置一天的时间窗。
      * @param array $Wednesday 星期三的可维护时间窗口。 一周中应至少设置一天的时间窗。
@@ -95,7 +95,7 @@ class AddTimeWindowRequest extends AbstractModel
      * @param array $Friday 星期五的可维护时间窗口。 一周中应至少设置一天的时间窗。
      * @param array $Saturday 星期六的可维护时间窗口。 一周中应至少设置一天的时间窗。
      * @param array $Sunday 星期日的可维护时间窗口。 一周中应至少设置一天的时间窗。
-     * @param integer $MaxDelayTime 最大延迟阈值，仅对主实例和灾备实例有效。
+     * @param integer $MaxDelayTime 最大延迟阈值（秒），仅对主实例和灾备实例有效。默认值：10，取值范围：1-10的整数。
      */
     function __construct()
     {

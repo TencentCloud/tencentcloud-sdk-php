@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUuid(string $Uuid) 设置快照Uuid
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRepository() 获取仓库名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRepository(string $Repository) 设置仓库名称
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVersion() 获取该快照所属集群的版本号
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersion(string $Version) 设置该快照所属集群的版本号
@@ -106,6 +110,12 @@ class Snapshots extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uuid;
+
+    /**
+     * @var string 仓库名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Repository;
 
     /**
      * @var string 该快照所属集群的版本号
@@ -192,6 +202,8 @@ SUCCESS     备份成功
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uuid 快照Uuid
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Repository 仓库名称
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Version 该快照所属集群的版本号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Indices 备份的索引列表
@@ -244,6 +256,10 @@ SUCCESS     备份成功
 
         if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
             $this->Uuid = $param["Uuid"];
+        }
+
+        if (array_key_exists("Repository",$param) and $param["Repository"] !== null) {
+            $this->Repository = $param["Repository"];
         }
 
         if (array_key_exists("Version",$param) and $param["Version"] !== null) {

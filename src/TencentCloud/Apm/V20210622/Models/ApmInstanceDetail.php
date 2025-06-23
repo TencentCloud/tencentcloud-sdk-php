@@ -114,6 +114,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogIndexType(integer $LogIndexType) 设置CLS索引类型(0=全文索引，1=键值索引)
  * @method string getLogTraceIdKey() 获取traceId的索引key: 当CLS索引类型为键值索引时生效
  * @method void setLogTraceIdKey(string $LogTraceIdKey) 设置traceId的索引key: 当CLS索引类型为键值索引时生效
+ * @method string getToken() 获取业务系统鉴权 token
+ * @method void setToken(string $Token) 设置业务系统鉴权 token
  */
 class ApmInstanceDetail extends AbstractModel
 {
@@ -329,6 +331,11 @@ class ApmInstanceDetail extends AbstractModel
     public $LogTraceIdKey;
 
     /**
+     * @var string 业务系统鉴权 token
+     */
+    public $Token;
+
+    /**
      * @param string $InstanceId 业务系统 ID
      * @param string $Name 业务系统名
      * @param string $Description 业务系统描述信息
@@ -376,6 +383,7 @@ class ApmInstanceDetail extends AbstractModel
      * @param integer $IsMemoryHijackingAnalysis 是否开内存马执行检测（0=关， 1=开）
      * @param integer $LogIndexType CLS索引类型(0=全文索引，1=键值索引)
      * @param string $LogTraceIdKey traceId的索引key: 当CLS索引类型为键值索引时生效
+     * @param string $Token 业务系统鉴权 token
      */
     function __construct()
     {
@@ -557,6 +565,10 @@ class ApmInstanceDetail extends AbstractModel
 
         if (array_key_exists("LogTraceIdKey",$param) and $param["LogTraceIdKey"] !== null) {
             $this->LogTraceIdKey = $param["LogTraceIdKey"];
+        }
+
+        if (array_key_exists("Token",$param) and $param["Token"] !== null) {
+            $this->Token = $param["Token"];
         }
     }
 }

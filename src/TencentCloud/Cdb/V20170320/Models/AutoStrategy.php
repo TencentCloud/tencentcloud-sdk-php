@@ -32,10 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setShrinkPeriod(integer $ShrinkPeriod) 设置自动缩容观测周期，单位是分钟，可选值5、10、15、30。后台会按照配置的周期进行缩容判断。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getExpandSecondPeriod() 获取弹性扩容观测周期（秒级）
- * @method void setExpandSecondPeriod(integer $ExpandSecondPeriod) 设置弹性扩容观测周期（秒级）
- * @method integer getShrinkSecondPeriod() 获取缩容观测周期（秒级）
- * @method void setShrinkSecondPeriod(integer $ShrinkSecondPeriod) 设置缩容观测周期（秒级）
+ * @method integer getExpandSecondPeriod() 获取弹性扩容观测周期（秒级），可取值为：5，30，45，60，180，300，600，900，1800。
+ * @method void setExpandSecondPeriod(integer $ExpandSecondPeriod) 设置弹性扩容观测周期（秒级），可取值为：5，30，45，60，180，300，600，900，1800。
+ * @method integer getShrinkSecondPeriod() 获取缩容观测周期（秒级），可取值为：300。
+ * @method void setShrinkSecondPeriod(integer $ShrinkSecondPeriod) 设置缩容观测周期（秒级），可取值为：300。
  */
 class AutoStrategy extends AbstractModel
 {
@@ -64,12 +64,12 @@ class AutoStrategy extends AbstractModel
     public $ShrinkPeriod;
 
     /**
-     * @var integer 弹性扩容观测周期（秒级）
+     * @var integer 弹性扩容观测周期（秒级），可取值为：5，30，45，60，180，300，600，900，1800。
      */
     public $ExpandSecondPeriod;
 
     /**
-     * @var integer 缩容观测周期（秒级）
+     * @var integer 缩容观测周期（秒级），可取值为：300。
      */
     public $ShrinkSecondPeriod;
 
@@ -80,8 +80,8 @@ class AutoStrategy extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ShrinkPeriod 自动缩容观测周期，单位是分钟，可选值5、10、15、30。后台会按照配置的周期进行缩容判断。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ExpandSecondPeriod 弹性扩容观测周期（秒级）
-     * @param integer $ShrinkSecondPeriod 缩容观测周期（秒级）
+     * @param integer $ExpandSecondPeriod 弹性扩容观测周期（秒级），可取值为：5，30，45，60，180，300，600，900，1800。
+     * @param integer $ShrinkSecondPeriod 缩容观测周期（秒级），可取值为：300。
      */
     function __construct()
     {

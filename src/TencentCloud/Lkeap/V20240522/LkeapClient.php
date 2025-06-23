@@ -164,7 +164,6 @@ except TencentCloudSDKException as err:
 开通[产品体验](https://lke.cloud.tencent.com/lke/#/trialProduct)后可获得50wtoken体验额度。本接口（QueryRewrite）有单账号调用上限控制，如您有提高并发限制的需求请 [联系我们](https://cloud.tencent.com/act/event/Online_service) 。
  * @method Models\ReconstructDocumentSSEResponse ReconstructDocumentSSE(Models\ReconstructDocumentSSERequest $req) 准实时文档解析接口，使用HTTP SSE 协议通信。
  * @method Models\RetrieveKnowledgeResponse RetrieveKnowledge(Models\RetrieveKnowledgeRequest $req) 用于检索知识库中的文档和问答对内容。 使用场景：适用于查询长期存储在知识库中的文档和问答对，比如产品手册、用户指南等内容的检索。
- * @method Models\RetrieveKnowledgeRealtimeResponse RetrieveKnowledgeRealtime(Models\RetrieveKnowledgeRealtimeRequest $req) 用于实时检索在UploadDocRealtime接口上传的实时文档内容。 使用场景：适用于在会话中对文档进行问答的场景
  * @method Models\RunRerankResponse RunRerank(Models\RunRerankRequest $req) 基于知识引擎精调模型技术的rerank模型，支持对多路召回的结果进行重排序，根据query与切片内容的相关性，按分数由高到低对切片进行排序，并输出对应的打分结果。
  * @method Models\UploadDocResponse UploadDoc(Models\UploadDocRequest $req) 用于上传文档内容。上传的文档将存储在知识库中，可以通过RetrieveKnowledge[知识库内容检索接口](https://cloud.tencent.com/document/product/1772/115349)进行检索。 
 使用场景：适用于需要长期存储和检索的文档内容，如产品手册、用户指南等。

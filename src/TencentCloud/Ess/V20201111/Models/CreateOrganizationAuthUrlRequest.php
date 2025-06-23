@@ -25,16 +25,14 @@ use TencentCloud\Common\AbstractModel;
  * @method array getAuthorizationTypes() 获取指定授权方式 支持多选:
 
 <ul>
-<li><strong>1</strong>:上传授权书方式</li>
 <li><strong>2</strong>: 法人授权方式</li>
-<li><strong>3</strong>: 法人身份认证方式</li>
+<li><strong>5</strong>: 授权书+对公打款方式</li>
 </ul>
  * @method void setAuthorizationTypes(array $AuthorizationTypes) 设置指定授权方式 支持多选:
 
 <ul>
-<li><strong>1</strong>:上传授权书方式</li>
 <li><strong>2</strong>: 法人授权方式</li>
-<li><strong>3</strong>: 法人身份认证方式</li>
+<li><strong>5</strong>: 授权书+对公打款方式</li>
 </ul>
  * @method string getOrganizationName() 获取认证企业名称，请确认该名称与企业营业执照中注册的名称一致。
 
@@ -170,9 +168,8 @@ class CreateOrganizationAuthUrlRequest extends AbstractModel
      * @var array 指定授权方式 支持多选:
 
 <ul>
-<li><strong>1</strong>:上传授权书方式</li>
 <li><strong>2</strong>: 法人授权方式</li>
-<li><strong>3</strong>: 法人身份认证方式</li>
+<li><strong>5</strong>: 授权书+对公打款方式</li>
 </ul>
      */
     public $AuthorizationTypes;
@@ -319,9 +316,8 @@ p.s. 如果上传授权书 ，需遵循以下条件
      * @param array $AuthorizationTypes 指定授权方式 支持多选:
 
 <ul>
-<li><strong>1</strong>:上传授权书方式</li>
 <li><strong>2</strong>: 法人授权方式</li>
-<li><strong>3</strong>: 法人身份认证方式</li>
+<li><strong>5</strong>: 授权书+对公打款方式</li>
 </ul>
      * @param string $OrganizationName 认证企业名称，请确认该名称与企业营业执照中注册的名称一致。
 

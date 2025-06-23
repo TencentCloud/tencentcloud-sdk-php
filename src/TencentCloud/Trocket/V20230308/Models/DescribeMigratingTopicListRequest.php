@@ -20,42 +20,46 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMigratingTopicList请求参数结构体
  *
- * @method string getTaskId() 获取任务ID
- * @method void setTaskId(string $TaskId) 设置任务ID
- * @method array getFilters() 获取查询条件列表
- * @method void setFilters(array $Filters) 设置查询条件列表
- * @method integer getOffset() 获取查询起始位置
- * @method void setOffset(integer $Offset) 设置查询起始位置
- * @method integer getLimit() 获取查询结果限制数量
- * @method void setLimit(integer $Limit) 设置查询结果限制数量
+ * @method string getTaskId() 获取任务ID，可在[DescribeSmoothMigrationTaskList](https://cloud.tencent.com/document/api/1493/119997)接口返回的[SmoothMigrationTaskItem](https://cloud.tencent.com/document/api/1493/96031#SmoothMigrationTaskItem)或控制台中获得。
+
+ * @method void setTaskId(string $TaskId) 设置任务ID，可在[DescribeSmoothMigrationTaskList](https://cloud.tencent.com/document/api/1493/119997)接口返回的[SmoothMigrationTaskItem](https://cloud.tencent.com/document/api/1493/96031#SmoothMigrationTaskItem)或控制台中获得。
+
+ * @method integer getLimit() 获取查询结果限制数量，默认20。
+ * @method void setLimit(integer $Limit) 设置查询结果限制数量，默认20。
+ * @method integer getOffset() 获取查询起始位置，默认为0。
+ * @method void setOffset(integer $Offset) 设置查询起始位置，默认为0。
+ * @method array getFilters() 获取过滤查询条件列表，请在引用此参数的API说明中了解使用方法。
+ * @method void setFilters(array $Filters) 设置过滤查询条件列表，请在引用此参数的API说明中了解使用方法。
  */
 class DescribeMigratingTopicListRequest extends AbstractModel
 {
     /**
-     * @var string 任务ID
+     * @var string 任务ID，可在[DescribeSmoothMigrationTaskList](https://cloud.tencent.com/document/api/1493/119997)接口返回的[SmoothMigrationTaskItem](https://cloud.tencent.com/document/api/1493/96031#SmoothMigrationTaskItem)或控制台中获得。
+
      */
     public $TaskId;
 
     /**
-     * @var array 查询条件列表
-     */
-    public $Filters;
-
-    /**
-     * @var integer 查询起始位置
-     */
-    public $Offset;
-
-    /**
-     * @var integer 查询结果限制数量
+     * @var integer 查询结果限制数量，默认20。
      */
     public $Limit;
 
     /**
-     * @param string $TaskId 任务ID
-     * @param array $Filters 查询条件列表
-     * @param integer $Offset 查询起始位置
-     * @param integer $Limit 查询结果限制数量
+     * @var integer 查询起始位置，默认为0。
+     */
+    public $Offset;
+
+    /**
+     * @var array 过滤查询条件列表，请在引用此参数的API说明中了解使用方法。
+     */
+    public $Filters;
+
+    /**
+     * @param string $TaskId 任务ID，可在[DescribeSmoothMigrationTaskList](https://cloud.tencent.com/document/api/1493/119997)接口返回的[SmoothMigrationTaskItem](https://cloud.tencent.com/document/api/1493/96031#SmoothMigrationTaskItem)或控制台中获得。
+
+     * @param integer $Limit 查询结果限制数量，默认20。
+     * @param integer $Offset 查询起始位置，默认为0。
+     * @param array $Filters 过滤查询条件列表，请在引用此参数的API说明中了解使用方法。
      */
     function __construct()
     {
@@ -74,6 +78,14 @@ class DescribeMigratingTopicListRequest extends AbstractModel
             $this->TaskId = $param["TaskId"];
         }
 
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
             $this->Filters = [];
             foreach ($param["Filters"] as $key => $value){
@@ -81,14 +93,6 @@ class DescribeMigratingTopicListRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
-        }
-
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
-        }
-
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
         }
     }
 }

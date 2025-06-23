@@ -54,6 +54,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupNamePath(string $GroupNamePath) 设置设备所属分组路径
  * @method integer getCriticalVulListCount() 获取未修复高危漏洞数(只支持32位)
  * @method void setCriticalVulListCount(integer $CriticalVulListCount) 设置未修复高危漏洞数(只支持32位)
+ * @method string getOs() 获取操作系统名称
+ * @method void setOs(string $Os) 设置操作系统名称
+ * @method integer getOsBits() 获取操作系统位数
+ * @method void setOsBits(integer $OsBits) 设置操作系统位数
+ * @method string getOsVersion() 获取操作系统版本
+ * @method void setOsVersion(string $OsVersion) 设置操作系统版本
+ * @method string getOsLanguage() 获取操作系统语言
+ * @method void setOsLanguage(string $OsLanguage) 设置操作系统语言
+ * @method string getOsInstallDate() 获取操作系统安装时间
+ * @method void setOsInstallDate(string $OsInstallDate) 设置操作系统安装时间
  * @method string getComputerName() 获取设备名，和Name相同
  * @method void setComputerName(string $ComputerName) 设置设备名，和Name相同
  * @method string getDomainName() 获取登录域名
@@ -195,6 +205,31 @@ class DeviceDetail extends AbstractModel
      * @var integer 未修复高危漏洞数(只支持32位)
      */
     public $CriticalVulListCount;
+
+    /**
+     * @var string 操作系统名称
+     */
+    public $Os;
+
+    /**
+     * @var integer 操作系统位数
+     */
+    public $OsBits;
+
+    /**
+     * @var string 操作系统版本
+     */
+    public $OsVersion;
+
+    /**
+     * @var string 操作系统语言
+     */
+    public $OsLanguage;
+
+    /**
+     * @var string 操作系统安装时间
+     */
+    public $OsInstallDate;
 
     /**
      * @var string 设备名，和Name相同
@@ -349,6 +384,11 @@ class DeviceDetail extends AbstractModel
      * @param string $GroupName 设备所属分组名
      * @param string $GroupNamePath 设备所属分组路径
      * @param integer $CriticalVulListCount 未修复高危漏洞数(只支持32位)
+     * @param string $Os 操作系统名称
+     * @param integer $OsBits 操作系统位数
+     * @param string $OsVersion 操作系统版本
+     * @param string $OsLanguage 操作系统语言
+     * @param string $OsInstallDate 操作系统安装时间
      * @param string $ComputerName 设备名，和Name相同
      * @param string $DomainName 登录域名
      * @param string $MacAddr MAC地址
@@ -456,6 +496,26 @@ class DeviceDetail extends AbstractModel
 
         if (array_key_exists("CriticalVulListCount",$param) and $param["CriticalVulListCount"] !== null) {
             $this->CriticalVulListCount = $param["CriticalVulListCount"];
+        }
+
+        if (array_key_exists("Os",$param) and $param["Os"] !== null) {
+            $this->Os = $param["Os"];
+        }
+
+        if (array_key_exists("OsBits",$param) and $param["OsBits"] !== null) {
+            $this->OsBits = $param["OsBits"];
+        }
+
+        if (array_key_exists("OsVersion",$param) and $param["OsVersion"] !== null) {
+            $this->OsVersion = $param["OsVersion"];
+        }
+
+        if (array_key_exists("OsLanguage",$param) and $param["OsLanguage"] !== null) {
+            $this->OsLanguage = $param["OsLanguage"];
+        }
+
+        if (array_key_exists("OsInstallDate",$param) and $param["OsInstallDate"] !== null) {
+            $this->OsInstallDate = $param["OsInstallDate"];
         }
 
         if (array_key_exists("ComputerName",$param) and $param["ComputerName"] !== null) {

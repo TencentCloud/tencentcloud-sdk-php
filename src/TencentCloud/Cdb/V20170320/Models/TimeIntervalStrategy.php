@@ -21,33 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 按时间段扩容策略
  *
  * @method integer getStartTime() 获取开始扩容时间。
-说明：此值的格式为 Integer 的时间戳。
+说明：此值的格式为 Integer 的时间戳（秒级）。
  * @method void setStartTime(integer $StartTime) 设置开始扩容时间。
-说明：此值的格式为 Integer 的时间戳。
+说明：此值的格式为 Integer 的时间戳（秒级）。
  * @method integer getEndTime() 获取结束扩容时间。
-说明：此值的格式为 Integer 的时间戳。
+说明：此值的格式为 Integer 的时间戳（秒级）。
  * @method void setEndTime(integer $EndTime) 设置结束扩容时间。
-说明：此值的格式为 Integer 的时间戳。
+说明：此值的格式为 Integer 的时间戳（秒级）。
  */
 class TimeIntervalStrategy extends AbstractModel
 {
     /**
      * @var integer 开始扩容时间。
-说明：此值的格式为 Integer 的时间戳。
+说明：此值的格式为 Integer 的时间戳（秒级）。
      */
     public $StartTime;
 
     /**
      * @var integer 结束扩容时间。
-说明：此值的格式为 Integer 的时间戳。
+说明：此值的格式为 Integer 的时间戳（秒级）。
      */
     public $EndTime;
 
     /**
      * @param integer $StartTime 开始扩容时间。
-说明：此值的格式为 Integer 的时间戳。
+说明：此值的格式为 Integer 的时间戳（秒级）。
      * @param integer $EndTime 结束扩容时间。
-说明：此值的格式为 Integer 的时间戳。
+说明：此值的格式为 Integer 的时间戳（秒级）。
      */
     function __construct()
     {

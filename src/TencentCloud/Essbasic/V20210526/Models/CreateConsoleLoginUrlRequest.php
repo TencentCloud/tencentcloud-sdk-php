@@ -131,12 +131,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoJumpBackEvent(string $AutoJumpBackEvent) 设置触发自动跳转事件，仅对EndPoint为App类型有效，可选值包括：
 <ul><li> **VERIFIED** :企业认证完成/员工认证完成后跳回原App/小程序</li></ul>
  * @method array getAuthorizationTypes() 获取可选的此企业允许的授权方式, 可以设置的方式有:
-<ul><li>1：上传授权书</li>
+<ul>
 <li>2：转法定代表人授权</li>
+<li>5：授权书+对公打款</li>
 </ul>
  * @method void setAuthorizationTypes(array $AuthorizationTypes) 设置可选的此企业允许的授权方式, 可以设置的方式有:
-<ul><li>1：上传授权书</li>
+<ul>
 <li>2：转法定代表人授权</li>
+<li>5：授权书+对公打款</li>
 </ul>
  * @method UserInfo getOperator() 获取暂未开放
  * @method void setOperator(UserInfo $Operator) 设置暂未开放
@@ -286,8 +288,9 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
 
     /**
      * @var array 可选的此企业允许的授权方式, 可以设置的方式有:
-<ul><li>1：上传授权书</li>
+<ul>
 <li>2：转法定代表人授权</li>
+<li>5：授权书+对公打款</li>
 </ul>
      */
     public $AuthorizationTypes;
@@ -414,8 +417,9 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
      * @param string $AutoJumpBackEvent 触发自动跳转事件，仅对EndPoint为App类型有效，可选值包括：
 <ul><li> **VERIFIED** :企业认证完成/员工认证完成后跳回原App/小程序</li></ul>
      * @param array $AuthorizationTypes 可选的此企业允许的授权方式, 可以设置的方式有:
-<ul><li>1：上传授权书</li>
+<ul>
 <li>2：转法定代表人授权</li>
+<li>5：授权书+对公打款</li>
 </ul>
      * @param UserInfo $Operator 暂未开放
      * @param string $ProxyOperatorIdCardNumber 子客经办人身份证

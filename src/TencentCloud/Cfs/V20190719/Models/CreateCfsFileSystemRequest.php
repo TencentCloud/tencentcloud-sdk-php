@@ -72,6 +72,12 @@ v3.1：创建增强版的通用文件系统
  * @method void setCfsVersion(string $CfsVersion) 设置v1.5：创建普通版的通用文件系统；
 v3.1：创建增强版的通用文件系统
 说明：增强版的通用系统需要开通白名单才能使用，如有需要请提交工单与我们联系。
+ * @method string getMetaType() 获取turbo文件系统元数据属性
+basic：创建标准型的元数据
+enhanced：创建增强型的元数据
+ * @method void setMetaType(string $MetaType) 设置turbo文件系统元数据属性
+basic：创建标准型的元数据
+enhanced：创建增强型的元数据
  */
 class CreateCfsFileSystemRequest extends AbstractModel
 {
@@ -174,6 +180,13 @@ v3.1：创建增强版的通用文件系统
     public $CfsVersion;
 
     /**
+     * @var string turbo文件系统元数据属性
+basic：创建标准型的元数据
+enhanced：创建增强型的元数据
+     */
+    public $MetaType;
+
+    /**
      * @param string $Zone 可用区名称，例如ap-beijing-1，请参考 [概览](https://cloud.tencent.com/document/product/582/13225) 文档中的地域与可用区列表
      * @param string $NetInterface 网络类型，可选值为 VPC，CCN；其中 VPC 为私有网络， CCN 为云联网。通用标准型/性能型请选择VPC，Turbo标准型/性能型请选择CCN。
      * @param string $PGroupId 权限组 ID,pgroupbasic 是默认权限组，通过控制查询权限组列表接口获取[DescribeCfsPGroups](https://cloud.tencent.com/document/product/582/38157)
@@ -200,6 +213,9 @@ v3.1：创建增强版的通用文件系统
      * @param string $CfsVersion v1.5：创建普通版的通用文件系统；
 v3.1：创建增强版的通用文件系统
 说明：增强版的通用系统需要开通白名单才能使用，如有需要请提交工单与我们联系。
+     * @param string $MetaType turbo文件系统元数据属性
+basic：创建标准型的元数据
+enhanced：创建增强型的元数据
      */
     function __construct()
     {
@@ -289,6 +305,10 @@ v3.1：创建增强版的通用文件系统
 
         if (array_key_exists("CfsVersion",$param) and $param["CfsVersion"] !== null) {
             $this->CfsVersion = $param["CfsVersion"];
+        }
+
+        if (array_key_exists("MetaType",$param) and $param["MetaType"] !== null) {
+            $this->MetaType = $param["MetaType"];
         }
     }
 }

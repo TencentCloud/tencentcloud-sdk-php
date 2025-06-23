@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyTimeWindow请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+ * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
  * @method array getTimeRanges() 获取修改后的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起止时间按半个小时对齐；最短半个小时，最长三个小时；最多设置两个时间段；起止时间范围为：[00:00, 24:00]。
 说明：设置两个时间段的 json 示例如下。
 [
@@ -46,13 +46,13 @@ use TencentCloud\Common\AbstractModel;
     "monday",
     "tuesday"
   ]
- * @method integer getMaxDelayTime() 获取数据延迟阈值，仅对主实例和灾备实例有效，不传默认修改为10
- * @method void setMaxDelayTime(integer $MaxDelayTime) 设置数据延迟阈值，仅对主实例和灾备实例有效，不传默认修改为10
+ * @method integer getMaxDelayTime() 获取数据延迟阈值（秒），仅对主实例和灾备实例有效。不传默认不修改，保持原来的阈值，取值范围：1-10的整数。
+ * @method void setMaxDelayTime(integer $MaxDelayTime) 设置数据延迟阈值（秒），仅对主实例和灾备实例有效。不传默认不修改，保持原来的阈值，取值范围：1-10的整数。
  */
 class ModifyTimeWindowRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * @var string 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public $InstanceId;
 
@@ -77,12 +77,12 @@ class ModifyTimeWindowRequest extends AbstractModel
     public $Weekdays;
 
     /**
-     * @var integer 数据延迟阈值，仅对主实例和灾备实例有效，不传默认修改为10
+     * @var integer 数据延迟阈值（秒），仅对主实例和灾备实例有效。不传默认不修改，保持原来的阈值，取值范围：1-10的整数。
      */
     public $MaxDelayTime;
 
     /**
-     * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * @param string $InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      * @param array $TimeRanges 修改后的可维护时间段，其中每一个时间段的格式形如：10:00-12:00；起止时间按半个小时对齐；最短半个小时，最长三个小时；最多设置两个时间段；起止时间范围为：[00:00, 24:00]。
 说明：设置两个时间段的 json 示例如下。
 [
@@ -95,7 +95,7 @@ class ModifyTimeWindowRequest extends AbstractModel
     "monday",
     "tuesday"
   ]
-     * @param integer $MaxDelayTime 数据延迟阈值，仅对主实例和灾备实例有效，不传默认修改为10
+     * @param integer $MaxDelayTime 数据延迟阈值（秒），仅对主实例和灾备实例有效。不传默认不修改，保持原来的阈值，取值范围：1-10的整数。
      */
     function __construct()
     {

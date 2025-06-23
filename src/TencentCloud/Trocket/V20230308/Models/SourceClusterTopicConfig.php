@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 源集群主题配置
  *
- * @method string getTopicName() 获取主题名称
- * @method void setTopicName(string $TopicName) 设置主题名称
+ * @method string getTopicName() 获取主题名称，可在[DescribeMigratingTopicList](https://cloud.tencent.com/document/api/1493/118007)接口返回的[MigratingTopic](https://cloud.tencent.com/document/api/1493/96031#MigratingTopic)数据结构中获得。
+ * @method void setTopicName(string $TopicName) 设置主题名称，可在[DescribeMigratingTopicList](https://cloud.tencent.com/document/api/1493/118007)接口返回的[MigratingTopic](https://cloud.tencent.com/document/api/1493/96031#MigratingTopic)数据结构中获得。
  * @method string getTopicType() 获取主题类型，
 5.x版本
 UNSPECIFIED 未指定
@@ -63,11 +63,15 @@ Unknown 未知，
 AlreadyExists 已存在，
 Success 成功，
 Failure 失败
+
+仅作为出参可用
  * @method void setImportStatus(string $ImportStatus) 设置导入状态，
 Unknown 未知，
 AlreadyExists 已存在，
 Success 成功，
 Failure 失败
+
+仅作为出参可用
  * @method string getNamespaceV4() 获取4.x的命名空间，出参使用
  * @method void setNamespaceV4(string $NamespaceV4) 设置4.x的命名空间，出参使用
  * @method string getTopicNameV4() 获取4.x的主题名，出参使用
@@ -78,7 +82,7 @@ Failure 失败
 class SourceClusterTopicConfig extends AbstractModel
 {
     /**
-     * @var string 主题名称
+     * @var string 主题名称，可在[DescribeMigratingTopicList](https://cloud.tencent.com/document/api/1493/118007)接口返回的[MigratingTopic](https://cloud.tencent.com/document/api/1493/96031#MigratingTopic)数据结构中获得。
      */
     public $TopicName;
 
@@ -126,6 +130,8 @@ Unknown 未知，
 AlreadyExists 已存在，
 Success 成功，
 Failure 失败
+
+仅作为出参可用
      */
     public $ImportStatus;
 
@@ -145,7 +151,7 @@ Failure 失败
     public $FullNamespaceV4;
 
     /**
-     * @param string $TopicName 主题名称
+     * @param string $TopicName 主题名称，可在[DescribeMigratingTopicList](https://cloud.tencent.com/document/api/1493/118007)接口返回的[MigratingTopic](https://cloud.tencent.com/document/api/1493/96031#MigratingTopic)数据结构中获得。
      * @param string $TopicType 主题类型，
 5.x版本
 UNSPECIFIED 未指定
@@ -169,6 +175,8 @@ Unknown 未知，
 AlreadyExists 已存在，
 Success 成功，
 Failure 失败
+
+仅作为出参可用
      * @param string $NamespaceV4 4.x的命名空间，出参使用
      * @param string $TopicNameV4 4.x的主题名，出参使用
      * @param string $FullNamespaceV4 4.x的完整命名空间，出参使用

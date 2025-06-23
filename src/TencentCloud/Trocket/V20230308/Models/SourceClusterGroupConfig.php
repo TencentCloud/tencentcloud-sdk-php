@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 消费组配置信息
  *
- * @method string getGroupName() 获取消费组名称
+ * @method string getGroupName() 获取消费组名称，可在[DescribeSourceClusterGroupList](https://cloud.tencent.com/document/api/1493/118006)接口返回的[SourceClusterGroupConfig](https://cloud.tencent.com/document/api/1493/96031#SourceClusterGroupConfig)数据中获取。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGroupName(string $GroupName) 设置消费组名称
+ * @method void setGroupName(string $GroupName) 设置消费组名称，可在[DescribeSourceClusterGroupList](https://cloud.tencent.com/document/api/1493/118006)接口返回的[SourceClusterGroupConfig](https://cloud.tencent.com/document/api/1493/96031#SourceClusterGroupConfig)数据中获取。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRemark() 获取备注信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -41,12 +41,16 @@ Unknown 未知
 Success 成功
 Failure 失败
 AlreadyExists 已存在
+
+仅作为出参时使用
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImportStatus(string $ImportStatus) 设置导入状态
 Unknown 未知
 Success 成功
 Failure 失败
 AlreadyExists 已存在
+
+仅作为出参时使用
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNamespaceV4() 获取4.x的命名空间，出参使用
 注意：此字段可能返回 null，表示取不到有效值。
@@ -68,7 +72,7 @@ AlreadyExists 已存在
 class SourceClusterGroupConfig extends AbstractModel
 {
     /**
-     * @var string 消费组名称
+     * @var string 消费组名称，可在[DescribeSourceClusterGroupList](https://cloud.tencent.com/document/api/1493/118006)接口返回的[SourceClusterGroupConfig](https://cloud.tencent.com/document/api/1493/96031#SourceClusterGroupConfig)数据中获取。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupName;
@@ -97,6 +101,8 @@ Unknown 未知
 Success 成功
 Failure 失败
 AlreadyExists 已存在
+
+仅作为出参时使用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImportStatus;
@@ -126,7 +132,7 @@ AlreadyExists 已存在
     public $ConsumeMessageOrderly;
 
     /**
-     * @param string $GroupName 消费组名称
+     * @param string $GroupName 消费组名称，可在[DescribeSourceClusterGroupList](https://cloud.tencent.com/document/api/1493/118006)接口返回的[SourceClusterGroupConfig](https://cloud.tencent.com/document/api/1493/96031#SourceClusterGroupConfig)数据中获取。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Remark 备注信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -139,6 +145,8 @@ Unknown 未知
 Success 成功
 Failure 失败
 AlreadyExists 已存在
+
+仅作为出参时使用
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NamespaceV4 4.x的命名空间，出参使用
 注意：此字段可能返回 null，表示取不到有效值。

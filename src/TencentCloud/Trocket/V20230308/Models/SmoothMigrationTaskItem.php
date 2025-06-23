@@ -50,9 +50,23 @@ OTHER 其他
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSourceNameServer(string $SourceNameServer) 设置源集群NameServer地址	
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskStatus() 获取任务状态 Configuration 迁移配置 SourceConnecting 连接源集群中 MetaDataImport 元数据导入 EndpointSetup 切换接入点 ServiceMigration 切流中 Completed 已完成 Cancelled 已取消
+ * @method string getTaskStatus() 获取任务状态:
+Configuration 迁移配置,
+SourceConnecting 连接源集群中,
+ MetaDataImport 元数据导入,
+EndpointSetup 切换接入点,
+ServiceMigration 切流中,
+Completed 已完成,
+Cancelled 已取消
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskStatus(string $TaskStatus) 设置任务状态 Configuration 迁移配置 SourceConnecting 连接源集群中 MetaDataImport 元数据导入 EndpointSetup 切换接入点 ServiceMigration 切流中 Completed 已完成 Cancelled 已取消
+ * @method void setTaskStatus(string $TaskStatus) 设置任务状态:
+Configuration 迁移配置,
+SourceConnecting 连接源集群中,
+ MetaDataImport 元数据导入,
+EndpointSetup 切换接入点,
+ServiceMigration 切流中,
+Completed 已完成,
+Cancelled 已取消
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceVersion() 获取目标集群实例版本，
 4 表示4.x版本
@@ -105,7 +119,14 @@ OTHER 其他
     public $SourceNameServer;
 
     /**
-     * @var string 任务状态 Configuration 迁移配置 SourceConnecting 连接源集群中 MetaDataImport 元数据导入 EndpointSetup 切换接入点 ServiceMigration 切流中 Completed 已完成 Cancelled 已取消
+     * @var string 任务状态:
+Configuration 迁移配置,
+SourceConnecting 连接源集群中,
+ MetaDataImport 元数据导入,
+EndpointSetup 切换接入点,
+ServiceMigration 切流中,
+Completed 已完成,
+Cancelled 已取消
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskStatus;
@@ -134,7 +155,14 @@ OTHER 其他
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SourceNameServer 源集群NameServer地址	
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskStatus 任务状态 Configuration 迁移配置 SourceConnecting 连接源集群中 MetaDataImport 元数据导入 EndpointSetup 切换接入点 ServiceMigration 切流中 Completed 已完成 Cancelled 已取消
+     * @param string $TaskStatus 任务状态:
+Configuration 迁移配置,
+SourceConnecting 连接源集群中,
+ MetaDataImport 元数据导入,
+EndpointSetup 切换接入点,
+ServiceMigration 切流中,
+Completed 已完成,
+Cancelled 已取消
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceVersion 目标集群实例版本，
 4 表示4.x版本

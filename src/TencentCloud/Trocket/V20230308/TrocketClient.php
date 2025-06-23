@@ -90,7 +90,10 @@ use TencentCloud\Trocket\V20230308\Models as Models;
  * @method Models\DescribeMigratingGroupStatsResponse DescribeMigratingGroupStats(Models\DescribeMigratingGroupStatsRequest $req) 查看迁移消费组的实时信息
  * @method Models\DescribeMigratingTopicListResponse DescribeMigratingTopicList(Models\DescribeMigratingTopicListRequest $req) 查询Topic迁移状态列表
 
-查询过滤器，支持TopicName、MigrationStatus、Namespace查询
+Filters字段为查询过滤器，支持以下条件：
+TopicName 主题名称，支持模糊查询，
+MigrationStatus 迁移状态，可参考MigratingTopic数据结构，
+Namespace 命名空间，仅4.x集群有效，
  * @method Models\DescribeMigratingTopicStatsResponse DescribeMigratingTopicStats(Models\DescribeMigratingTopicStatsRequest $req) 用于查询迁移主题的实时数据
  * @method Models\DescribeMigrationTaskListResponse DescribeMigrationTaskList(Models\DescribeMigrationTaskListRequest $req) 获取数据迁移任务列表，Filter参数使用说明如下：
 
@@ -105,13 +108,13 @@ Type，根据任务类型精确查找
  * @method Models\DescribeSmoothMigrationTaskListResponse DescribeSmoothMigrationTaskList(Models\DescribeSmoothMigrationTaskListRequest $req) 用于查询平滑迁移任务列表
 
 查询参数Filters， 支持的字段如下：
-TaskStatus, 支持多选 
-ConnectionType，支持多选 
-InstanceId，精确搜索 
-TaskName，支持模糊搜索
+TaskStatus, 任务状态，支持多选 
+ConnectionType，网络连接类型，支持多选 
+InstanceId，实例ID，精确搜索 
+TaskName，任务名称，支持模糊搜索
  * @method Models\DescribeSourceClusterGroupListResponse DescribeSourceClusterGroupList(Models\DescribeSourceClusterGroupListRequest $req) 平滑迁移过程获取源集群group列表接口
 
-查询过滤器，支持字段
+Filters字段为查询过滤器，支持以下字段：
 GroupName，消费组名称模糊搜索
 Imported，是否已导入
 ImportStatus，导入状态

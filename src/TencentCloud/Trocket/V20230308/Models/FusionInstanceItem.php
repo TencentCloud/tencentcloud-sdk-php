@@ -118,6 +118,8 @@ PREPAID，包年包月
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneIds(array $ZoneIds) 设置所属可用区列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getEnableDeletionProtection() 获取是否开启删除保护
+ * @method void setEnableDeletionProtection(boolean $EnableDeletionProtection) 设置是否开启删除保护
  */
 class FusionInstanceItem extends AbstractModel
 {
@@ -259,6 +261,11 @@ PREPAID，包年包月
     public $ZoneIds;
 
     /**
+     * @var boolean 是否开启删除保护
+     */
+    public $EnableDeletionProtection;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param string $Version 实例版本
@@ -308,6 +315,7 @@ PREPAID，包年包月
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ZoneIds 所属可用区列表
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $EnableDeletionProtection 是否开启删除保护
      */
     function __construct()
     {
@@ -414,6 +422,10 @@ PREPAID，包年包月
 
         if (array_key_exists("ZoneIds",$param) and $param["ZoneIds"] !== null) {
             $this->ZoneIds = $param["ZoneIds"];
+        }
+
+        if (array_key_exists("EnableDeletionProtection",$param) and $param["EnableDeletionProtection"] !== null) {
+            $this->EnableDeletionProtection = $param["EnableDeletionProtection"];
         }
     }
 }

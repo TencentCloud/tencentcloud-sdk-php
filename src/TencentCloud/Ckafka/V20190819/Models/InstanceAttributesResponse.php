@@ -102,6 +102,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCustomCertId(string $CustomCertId) 设置ssl自定义证书id
  * @method integer getUncleanLeaderElectionEnable() 获取集群topic默认 unclean.leader.election.enable配置: 1 开启 0 关闭
  * @method void setUncleanLeaderElectionEnable(integer $UncleanLeaderElectionEnable) 设置集群topic默认 unclean.leader.election.enable配置: 1 开启 0 关闭
+ * @method integer getDeleteProtectionEnable() 获取实例删除保护开关: 1 开启 0 关闭
+ * @method void setDeleteProtectionEnable(integer $DeleteProtectionEnable) 设置实例删除保护开关: 1 开启 0 关闭
  */
 class InstanceAttributesResponse extends AbstractModel
 {
@@ -311,6 +313,11 @@ class InstanceAttributesResponse extends AbstractModel
     public $UncleanLeaderElectionEnable;
 
     /**
+     * @var integer 实例删除保护开关: 1 开启 0 关闭
+     */
+    public $DeleteProtectionEnable;
+
+    /**
      * @param string $InstanceId ckafka集群实例Id
      * @param string $InstanceName ckafka集群实例Name
      * @param array $VipList 接入点 VIP 列表信息
@@ -352,6 +359,7 @@ class InstanceAttributesResponse extends AbstractModel
      * @param integer $ElasticFloatBandwidth 弹性带宽上浮值
      * @param string $CustomCertId ssl自定义证书id
      * @param integer $UncleanLeaderElectionEnable 集群topic默认 unclean.leader.election.enable配置: 1 开启 0 关闭
+     * @param integer $DeleteProtectionEnable 实例删除保护开关: 1 开启 0 关闭
      */
     function __construct()
     {
@@ -541,6 +549,10 @@ class InstanceAttributesResponse extends AbstractModel
 
         if (array_key_exists("UncleanLeaderElectionEnable",$param) and $param["UncleanLeaderElectionEnable"] !== null) {
             $this->UncleanLeaderElectionEnable = $param["UncleanLeaderElectionEnable"];
+        }
+
+        if (array_key_exists("DeleteProtectionEnable",$param) and $param["DeleteProtectionEnable"] !== null) {
+            $this->DeleteProtectionEnable = $param["DeleteProtectionEnable"];
         }
     }
 }

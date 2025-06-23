@@ -24,6 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsAutoBackup(boolean $IsAutoBackup) 设置是否开启cos自动备份
  * @method string getBackupTime() 获取自动备份执行时间（精确到小时）, e.g. "22:00"
  * @method void setBackupTime(string $BackupTime) 设置自动备份执行时间（精确到小时）, e.g. "22:00"
+ * @method integer getEsRepositoryType() 获取0 腾讯云仓库; 1 客户仓库
+ * @method void setEsRepositoryType(integer $EsRepositoryType) 设置0 腾讯云仓库; 1 客户仓库
+ * @method string getUserEsRepository() 获取客户快照仓库名称
+ * @method void setUserEsRepository(string $UserEsRepository) 设置客户快照仓库名称
+ * @method integer getStorageDuration() 获取快照存储周期 单位天
+ * @method void setStorageDuration(integer $StorageDuration) 设置快照存储周期 单位天
+ * @method integer getAutoBackupInterval() 获取自动备份频率单位小时
+ * @method void setAutoBackupInterval(integer $AutoBackupInterval) 设置自动备份频率单位小时
  */
 class CosBackup extends AbstractModel
 {
@@ -38,8 +46,32 @@ class CosBackup extends AbstractModel
     public $BackupTime;
 
     /**
+     * @var integer 0 腾讯云仓库; 1 客户仓库
+     */
+    public $EsRepositoryType;
+
+    /**
+     * @var string 客户快照仓库名称
+     */
+    public $UserEsRepository;
+
+    /**
+     * @var integer 快照存储周期 单位天
+     */
+    public $StorageDuration;
+
+    /**
+     * @var integer 自动备份频率单位小时
+     */
+    public $AutoBackupInterval;
+
+    /**
      * @param boolean $IsAutoBackup 是否开启cos自动备份
      * @param string $BackupTime 自动备份执行时间（精确到小时）, e.g. "22:00"
+     * @param integer $EsRepositoryType 0 腾讯云仓库; 1 客户仓库
+     * @param string $UserEsRepository 客户快照仓库名称
+     * @param integer $StorageDuration 快照存储周期 单位天
+     * @param integer $AutoBackupInterval 自动备份频率单位小时
      */
     function __construct()
     {
@@ -60,6 +92,22 @@ class CosBackup extends AbstractModel
 
         if (array_key_exists("BackupTime",$param) and $param["BackupTime"] !== null) {
             $this->BackupTime = $param["BackupTime"];
+        }
+
+        if (array_key_exists("EsRepositoryType",$param) and $param["EsRepositoryType"] !== null) {
+            $this->EsRepositoryType = $param["EsRepositoryType"];
+        }
+
+        if (array_key_exists("UserEsRepository",$param) and $param["UserEsRepository"] !== null) {
+            $this->UserEsRepository = $param["UserEsRepository"];
+        }
+
+        if (array_key_exists("StorageDuration",$param) and $param["StorageDuration"] !== null) {
+            $this->StorageDuration = $param["StorageDuration"];
+        }
+
+        if (array_key_exists("AutoBackupInterval",$param) and $param["AutoBackupInterval"] !== null) {
+            $this->AutoBackupInterval = $param["AutoBackupInterval"];
         }
     }
 }

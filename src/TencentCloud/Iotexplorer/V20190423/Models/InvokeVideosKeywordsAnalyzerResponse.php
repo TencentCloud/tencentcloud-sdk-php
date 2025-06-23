@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Live\V20180801\Models;
+namespace TencentCloud\Iotexplorer\V20190423\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * StopLivePadProcessor返回参数结构体
+ * InvokeVideosKeywordsAnalyzer返回参数结构体
  *
- * @method string getResultMessage() 获取处理结果信息。
- * @method void setResultMessage(string $ResultMessage) 设置处理结果信息。
+ * @method array getKeywords() 获取基于搜索结果的总结
+ * @method void setKeywords(array $Keywords) 设置基于搜索结果的总结
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class StopLivePadProcessorResponse extends AbstractModel
+class InvokeVideosKeywordsAnalyzerResponse extends AbstractModel
 {
     /**
-     * @var string 处理结果信息。
+     * @var array 基于搜索结果的总结
      */
-    public $ResultMessage;
+    public $Keywords;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +38,7 @@ class StopLivePadProcessorResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ResultMessage 处理结果信息。
+     * @param array $Keywords 基于搜索结果的总结
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +54,8 @@ class StopLivePadProcessorResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ResultMessage",$param) and $param["ResultMessage"] !== null) {
-            $this->ResultMessage = $param["ResultMessage"];
+        if (array_key_exists("Keywords",$param) and $param["Keywords"] !== null) {
+            $this->Keywords = $param["Keywords"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

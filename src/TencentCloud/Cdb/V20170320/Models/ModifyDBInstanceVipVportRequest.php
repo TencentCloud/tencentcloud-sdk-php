@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c2nl9rpv 或者 cdbrg-c3nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c2nl9rpv 或者 cdbrg-c3nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
- * @method string getDstIp() 获取目标 IP。该参数和 DstPort 参数，两者必传一个。
- * @method void setDstIp(string $DstIp) 设置目标 IP。该参数和 DstPort 参数，两者必传一个。
- * @method integer getDstPort() 获取目标端口，支持范围为：[1024-65535]。该参数和 DstIp 参数，两者必传一个。
- * @method void setDstPort(integer $DstPort) 设置目标端口，支持范围为：[1024-65535]。该参数和 DstIp 参数，两者必传一个。
+ * @method string getDstIp() 获取目标 IP。
+ * @method void setDstIp(string $DstIp) 设置目标 IP。
+ * @method integer getDstPort() 获取目标端口，支持范围为：[1024-65535]。
+ * @method void setDstPort(integer $DstPort) 设置目标端口，支持范围为：[1024-65535]。
  * @method string getUniqVpcId() 获取私有网络统一 ID。
  * @method void setUniqVpcId(string $UniqVpcId) 设置私有网络统一 ID。
  * @method string getUniqSubnetId() 获取子网统一 ID。
@@ -43,12 +43,12 @@ class ModifyDBInstanceVipVportRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 目标 IP。该参数和 DstPort 参数，两者必传一个。
+     * @var string 目标 IP。
      */
     public $DstIp;
 
     /**
-     * @var integer 目标端口，支持范围为：[1024-65535]。该参数和 DstIp 参数，两者必传一个。
+     * @var integer 目标端口，支持范围为：[1024-65535]。
      */
     public $DstPort;
 
@@ -74,8 +74,8 @@ class ModifyDBInstanceVipVportRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c2nl9rpv 或者 cdbrg-c3nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
-     * @param string $DstIp 目标 IP。该参数和 DstPort 参数，两者必传一个。
-     * @param integer $DstPort 目标端口，支持范围为：[1024-65535]。该参数和 DstIp 参数，两者必传一个。
+     * @param string $DstIp 目标 IP。
+     * @param integer $DstPort 目标端口，支持范围为：[1024-65535]。
      * @param string $UniqVpcId 私有网络统一 ID。
      * @param string $UniqSubnetId 子网统一 ID。
      * @param integer $ReleaseDuration 进行基础网络转 VPC 网络和 VPC 网络下的子网变更时，原网络中旧IP的回收时间，单位为小时，取值范围为0-168，默认值为24小时。

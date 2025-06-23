@@ -72,6 +72,8 @@ use TencentCloud\Ssl\V20191205\Models as Models;
  * @method Models\DescribeHostTkeInstanceListResponse DescribeHostTkeInstanceList(Models\DescribeHostTkeInstanceListRequest $req) 查询证书tke云资源部署实例列表
  * @method Models\DescribeHostUpdateRecordResponse DescribeHostUpdateRecord(Models\DescribeHostUpdateRecordRequest $req) 查询证书云资源更新记录列表
  * @method Models\DescribeHostUpdateRecordDetailResponse DescribeHostUpdateRecordDetail(Models\DescribeHostUpdateRecordDetailRequest $req) 查询证书云资源更新记录详情
+ * @method Models\DescribeHostUploadUpdateRecordResponse DescribeHostUploadUpdateRecord(Models\DescribeHostUploadUpdateRecordRequest $req) 查询证书云资源更新（证书ID不变）记录列表
+ * @method Models\DescribeHostUploadUpdateRecordDetailResponse DescribeHostUploadUpdateRecordDetail(Models\DescribeHostUploadUpdateRecordDetailRequest $req) 查询证书更新（证书ID不变）部署记录详情
  * @method Models\DescribeHostVodInstanceListResponse DescribeHostVodInstanceList(Models\DescribeHostVodInstanceListRequest $req) 查询证书Vod云资源部署实例列表
  * @method Models\DescribeHostWafInstanceListResponse DescribeHostWafInstanceList(Models\DescribeHostWafInstanceListRequest $req) 查询证书waf云资源部署实例列表
  * @method Models\DescribeManagerDetailResponse DescribeManagerDetail(Models\DescribeManagerDetailRequest $req) 查询管理人详情
@@ -93,6 +95,8 @@ use TencentCloud\Ssl\V20191205\Models as Models;
  * @method Models\UploadConfirmLetterResponse UploadConfirmLetter(Models\UploadConfirmLetterRequest $req) 本接口（UploadConfirmLetter）上传证书确认函，不再维护其功能，请用户前往腾讯云证书控制台上传证书确认函
  * @method Models\UploadRevokeLetterResponse UploadRevokeLetter(Models\UploadRevokeLetterRequest $req) 本接口（UploadRevokeLetter）上传证书吊销确认函，不再维护其功能，请用户前往腾讯云证书控制台上传证书吊销确认函
  * @method Models\UploadUpdateCertificateInstanceResponse UploadUpdateCertificateInstance(Models\UploadUpdateCertificateInstanceRequest $req) 更新证书内容（证书ID不变）并更新关联的云资源，本接口为异步接口， 调用之后DeployRecordId为0表示任务进行中， 重复请求这个接口， 当返回DeployRecordId大于0则表示任务创建成功。 未创建成功则会抛出异常
+ * @method Models\UploadUpdateCertificateRecordRetryResponse UploadUpdateCertificateRecordRetry(Models\UploadUpdateCertificateRecordRetryRequest $req) 云资源更新（证书ID不变）重试部署记录
+ * @method Models\UploadUpdateCertificateRecordRollbackResponse UploadUpdateCertificateRecordRollback(Models\UploadUpdateCertificateRecordRollbackRequest $req) 云资源更新成功（证书ID不变）记录回滚， 会对全量任务进行回滚
  * @method Models\VerifyManagerResponse VerifyManager(Models\VerifyManagerRequest $req) 重新核验管理人
  */
 

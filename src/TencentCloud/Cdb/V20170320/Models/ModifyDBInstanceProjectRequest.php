@@ -33,7 +33,9 @@ use TencentCloud\Common\AbstractModel;
     "cdb-93h11efg"
   ]
  * @method integer getNewProjectId() 获取实例所属项目的 ID，可在账号中心下的项目管理页面查询。
+说明：此项为必填。
  * @method void setNewProjectId(integer $NewProjectId) 设置实例所属项目的 ID，可在账号中心下的项目管理页面查询。
+说明：此项为必填。
  */
 class ModifyDBInstanceProjectRequest extends AbstractModel
 {
@@ -49,6 +51,7 @@ class ModifyDBInstanceProjectRequest extends AbstractModel
 
     /**
      * @var integer 实例所属项目的 ID，可在账号中心下的项目管理页面查询。
+说明：此项为必填。
      */
     public $NewProjectId;
 
@@ -60,6 +63,7 @@ class ModifyDBInstanceProjectRequest extends AbstractModel
     "cdb-93h11efg"
   ]
      * @param integer $NewProjectId 实例所属项目的 ID，可在账号中心下的项目管理页面查询。
+说明：此项为必填。
      */
     function __construct()
     {

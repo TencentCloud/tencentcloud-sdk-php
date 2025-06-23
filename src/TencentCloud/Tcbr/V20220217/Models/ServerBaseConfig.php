@@ -74,6 +74,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEntryPoint(array $EntryPoint) 设置Dockerfile EntryPoint 参数
  * @method array getCmd() 获取Dockerfile Cmd 参数
  * @method void setCmd(array $Cmd) 设置Dockerfile Cmd 参数
+ * @method string getSessionAffinity() 获取会话亲和性开关
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSessionAffinity(string $SessionAffinity) 设置会话亲和性开关
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServerBaseConfig extends AbstractModel
 {
@@ -213,6 +217,12 @@ class ServerBaseConfig extends AbstractModel
     public $Cmd;
 
     /**
+     * @var string 会话亲和性开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SessionAffinity;
+
+    /**
      * @param string $EnvId 环境 Id
      * @param string $ServerName 服务名
      * @param array $OpenAccessTypes 是否开启公网访问
@@ -240,6 +250,8 @@ class ServerBaseConfig extends AbstractModel
      * @param array $TimerScale 定时扩缩容配置
      * @param array $EntryPoint Dockerfile EntryPoint 参数
      * @param array $Cmd Dockerfile Cmd 参数
+     * @param string $SessionAffinity 会话亲和性开关
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -370,6 +382,10 @@ class ServerBaseConfig extends AbstractModel
 
         if (array_key_exists("Cmd",$param) and $param["Cmd"] !== null) {
             $this->Cmd = $param["Cmd"];
+        }
+
+        if (array_key_exists("SessionAffinity",$param) and $param["SessionAffinity"] !== null) {
+            $this->SessionAffinity = $param["SessionAffinity"];
         }
     }
 }

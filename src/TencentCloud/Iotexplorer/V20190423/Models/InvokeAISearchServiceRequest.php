@@ -30,6 +30,41 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSummaryLang(string $SummaryLang) 设置搜索结果总结的语言类型，支持的类型有：en-US、zh-CN、id-ID、th-TH
  * @method integer getChannelId() 获取通道ID
  * @method void setChannelId(integer $ChannelId) 设置通道ID
+ * @method boolean getEnableSummary() 获取是否需要返回总结，默认为False；  开启后会加大接口响应时长
+ * @method void setEnableSummary(boolean $EnableSummary) 设置是否需要返回总结，默认为False；  开启后会加大接口响应时长
+ * @method integer getStartTimeMs() 获取开始时间。
+
+注：
+1. 单位为毫秒（ms）
+2. 如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后7天内的数据， 反之EndTimeMs也一样）
+3. 只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为"过去三天关于猫咪的视频"， 则会将"过去三天忽略"）
+ * @method void setStartTimeMs(integer $StartTimeMs) 设置开始时间。
+
+注：
+1. 单位为毫秒（ms）
+2. 如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后7天内的数据， 反之EndTimeMs也一样）
+3. 只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为"过去三天关于猫咪的视频"， 则会将"过去三天忽略"）
+ * @method integer getEndTimeMs() 获取结束时间。
+
+注：
+1. 单位为毫秒（ms）
+2. 如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后7天内的数据， 反之EndTimeMs也一样）
+3. 只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为"过去三天关于猫咪的视频"， 则会将"过去三天忽略"）
+ * @method void setEndTimeMs(integer $EndTimeMs) 设置结束时间。
+
+注：
+1. 单位为毫秒（ms）
+2. 如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后7天内的数据， 反之EndTimeMs也一样）
+3. 只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为"过去三天关于猫咪的视频"， 则会将"过去三天忽略"）
+ * @method string getTimeZone() 获取时区。默认值：Asia/Shanghai
+
+注：
+符合iana标准 https://www.iana.org/time-zones，例如Asia/Shanghai、Asia/Bangkok
+
+ * @method void setTimeZone(string $TimeZone) 设置时区。默认值：Asia/Shanghai
+
+注：
+符合iana标准 https://www.iana.org/time-zones，例如Asia/Shanghai、Asia/Bangkok
  */
 class InvokeAISearchServiceRequest extends AbstractModel
 {
@@ -59,11 +94,62 @@ class InvokeAISearchServiceRequest extends AbstractModel
     public $ChannelId;
 
     /**
+     * @var boolean 是否需要返回总结，默认为False；  开启后会加大接口响应时长
+     */
+    public $EnableSummary;
+
+    /**
+     * @var integer 开始时间。
+
+注：
+1. 单位为毫秒（ms）
+2. 如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后7天内的数据， 反之EndTimeMs也一样）
+3. 只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为"过去三天关于猫咪的视频"， 则会将"过去三天忽略"）
+     */
+    public $StartTimeMs;
+
+    /**
+     * @var integer 结束时间。
+
+注：
+1. 单位为毫秒（ms）
+2. 如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后7天内的数据， 反之EndTimeMs也一样）
+3. 只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为"过去三天关于猫咪的视频"， 则会将"过去三天忽略"）
+     */
+    public $EndTimeMs;
+
+    /**
+     * @var string 时区。默认值：Asia/Shanghai
+
+注：
+符合iana标准 https://www.iana.org/time-zones，例如Asia/Shanghai、Asia/Bangkok
+
+     */
+    public $TimeZone;
+
+    /**
      * @param string $ProductId 产品ID
      * @param string $DeviceName 设备名称
      * @param string $Query 自然语言查询
      * @param string $SummaryLang 搜索结果总结的语言类型，支持的类型有：en-US、zh-CN、id-ID、th-TH
      * @param integer $ChannelId 通道ID
+     * @param boolean $EnableSummary 是否需要返回总结，默认为False；  开启后会加大接口响应时长
+     * @param integer $StartTimeMs 开始时间。
+
+注：
+1. 单位为毫秒（ms）
+2. 如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后7天内的数据， 反之EndTimeMs也一样）
+3. 只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为"过去三天关于猫咪的视频"， 则会将"过去三天忽略"）
+     * @param integer $EndTimeMs 结束时间。
+
+注：
+1. 单位为毫秒（ms）
+2. 如果同时指定了StartTimeMs与EndTimeMs，时间区间不能大于7天；如果只指定其中一个（例如只指定StartTimeMs，则查询自StartTimeMs后7天内的数据， 反之EndTimeMs也一样）
+3. 只要指定了其中一个参数，接口则会忽略Query参数中关于时间的描述；（例如Query为"过去三天关于猫咪的视频"， 则会将"过去三天忽略"）
+     * @param string $TimeZone 时区。默认值：Asia/Shanghai
+
+注：
+符合iana标准 https://www.iana.org/time-zones，例如Asia/Shanghai、Asia/Bangkok
      */
     function __construct()
     {
@@ -96,6 +182,22 @@ class InvokeAISearchServiceRequest extends AbstractModel
 
         if (array_key_exists("ChannelId",$param) and $param["ChannelId"] !== null) {
             $this->ChannelId = $param["ChannelId"];
+        }
+
+        if (array_key_exists("EnableSummary",$param) and $param["EnableSummary"] !== null) {
+            $this->EnableSummary = $param["EnableSummary"];
+        }
+
+        if (array_key_exists("StartTimeMs",$param) and $param["StartTimeMs"] !== null) {
+            $this->StartTimeMs = $param["StartTimeMs"];
+        }
+
+        if (array_key_exists("EndTimeMs",$param) and $param["EndTimeMs"] !== null) {
+            $this->EndTimeMs = $param["EndTimeMs"];
+        }
+
+        if (array_key_exists("TimeZone",$param) and $param["TimeZone"] !== null) {
+            $this->TimeZone = $param["TimeZone"];
         }
     }
 }

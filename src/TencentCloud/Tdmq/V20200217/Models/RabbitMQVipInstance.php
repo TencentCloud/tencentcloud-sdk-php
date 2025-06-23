@@ -18,10 +18,10 @@ namespace TencentCloud\Tdmq\V20200217\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * RabbitMQ专享实例信息
+ * RabbitMQ 托管版实例信息
  *
- * @method string getInstanceId() 获取实例id
- * @method void setInstanceId(string $InstanceId) 设置实例id
+ * @method string getInstanceId() 获取实例 ID
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID
  * @method string getInstanceName() 获取实例名称
  * @method void setInstanceName(string $InstanceName) 设置实例名称
  * @method string getInstanceVersion() 获取实例版本
@@ -38,19 +38,37 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxBandWidth(integer $MaxBandWidth) 设置峰值带宽，Mbps为单位
  * @method integer getMaxStorage() 获取存储容量，GB为单位
  * @method void setMaxStorage(integer $MaxStorage) 设置存储容量，GB为单位
- * @method integer getExpireTime() 获取实例到期时间，毫秒为单位
- * @method void setExpireTime(integer $ExpireTime) 设置实例到期时间，毫秒为单位
+ * @method integer getExpireTime() 获取实例到期时间，按量付费的资源该值为 0，毫秒为单位。unix 时间戳
+ * @method void setExpireTime(integer $ExpireTime) 设置实例到期时间，按量付费的资源该值为 0，毫秒为单位。unix 时间戳
  * @method integer getAutoRenewFlag() 获取自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
- * @method integer getPayMode() 获取0-后付费，1-预付费
- * @method void setPayMode(integer $PayMode) 设置0-后付费，1-预付费
+ * @method integer getPayMode() 获取1 表示预付费，0 表示后付费
+ * @method void setPayMode(integer $PayMode) 设置1 表示预付费，0 表示后付费
  * @method string getRemark() 获取备注信息
  * @method void setRemark(string $Remark) 设置备注信息
- * @method string getSpecName() 获取实例配置ID
- * @method void setSpecName(string $SpecName) 设置实例配置ID
- * @method string getExceptionInformation() 获取集群异常。
+ * @method string getSpecName() 获取集群的节点规格，需要输入对应的规格标识：
+2C8G：rabbit-vip-basic-2c8g
+4C16G：rabbit-vip-basic-4c16g
+8C32G：rabbit-vip-basic-8c32g
+16C32G：rabbit-vip-basic-4
+16C64G：rabbit-vip-basic-16c64g
+2C4G：rabbit-vip-basic-5
+4C8G：rabbit-vip-basic-1
+8C16G（已售罄）：rabbit-vip-basic-2
+不传默认为4C8G：rabbit-vip-basic-1
+ * @method void setSpecName(string $SpecName) 设置集群的节点规格，需要输入对应的规格标识：
+2C8G：rabbit-vip-basic-2c8g
+4C16G：rabbit-vip-basic-4c16g
+8C32G：rabbit-vip-basic-8c32g
+16C32G：rabbit-vip-basic-4
+16C64G：rabbit-vip-basic-16c64g
+2C4G：rabbit-vip-basic-5
+4C8G：rabbit-vip-basic-1
+8C16G（已售罄）：rabbit-vip-basic-2
+不传默认为4C8G：rabbit-vip-basic-1
+ * @method string getExceptionInformation() 获取集群异常信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExceptionInformation(string $ExceptionInformation) 设置集群异常。
+ * @method void setExceptionInformation(string $ExceptionInformation) 设置集群异常信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getClusterStatus() 获取实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
 为了和计费区分开，额外开启一个状态位，用于显示。
@@ -62,8 +80,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getVpcs() 获取VPC 接入点列表
  * @method void setVpcs(array $Vpcs) 设置VPC 接入点列表
- * @method integer getCreateTime() 获取创建时间，毫秒为单位
- * @method void setCreateTime(integer $CreateTime) 设置创建时间，毫秒为单位
+ * @method integer getCreateTime() 获取创建时间，毫秒为单位。unix 时间戳
+ * @method void setCreateTime(integer $CreateTime) 设置创建时间，毫秒为单位。unix 时间戳
  * @method integer getInstanceType() 获取实例类型，0 专享版、1 Serverless 版
  * @method void setInstanceType(integer $InstanceType) 设置实例类型，0 专享版、1 Serverless 版
  * @method integer getIsolatedTime() 获取隔离时间，毫秒为单位
@@ -72,7 +90,7 @@ use TencentCloud\Common\AbstractModel;
 class RabbitMQVipInstance extends AbstractModel
 {
     /**
-     * @var string 实例id
+     * @var string 实例 ID
      */
     public $InstanceId;
 
@@ -117,7 +135,7 @@ class RabbitMQVipInstance extends AbstractModel
     public $MaxStorage;
 
     /**
-     * @var integer 实例到期时间，毫秒为单位
+     * @var integer 实例到期时间，按量付费的资源该值为 0，毫秒为单位。unix 时间戳
      */
     public $ExpireTime;
 
@@ -127,7 +145,7 @@ class RabbitMQVipInstance extends AbstractModel
     public $AutoRenewFlag;
 
     /**
-     * @var integer 0-后付费，1-预付费
+     * @var integer 1 表示预付费，0 表示后付费
      */
     public $PayMode;
 
@@ -137,12 +155,21 @@ class RabbitMQVipInstance extends AbstractModel
     public $Remark;
 
     /**
-     * @var string 实例配置ID
+     * @var string 集群的节点规格，需要输入对应的规格标识：
+2C8G：rabbit-vip-basic-2c8g
+4C16G：rabbit-vip-basic-4c16g
+8C32G：rabbit-vip-basic-8c32g
+16C32G：rabbit-vip-basic-4
+16C64G：rabbit-vip-basic-16c64g
+2C4G：rabbit-vip-basic-5
+4C8G：rabbit-vip-basic-1
+8C16G（已售罄）：rabbit-vip-basic-2
+不传默认为4C8G：rabbit-vip-basic-1
      */
     public $SpecName;
 
     /**
-     * @var string 集群异常。
+     * @var string 集群异常信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExceptionInformation;
@@ -165,7 +192,7 @@ class RabbitMQVipInstance extends AbstractModel
     public $Vpcs;
 
     /**
-     * @var integer 创建时间，毫秒为单位
+     * @var integer 创建时间，毫秒为单位。unix 时间戳
      */
     public $CreateTime;
 
@@ -180,7 +207,7 @@ class RabbitMQVipInstance extends AbstractModel
     public $IsolatedTime;
 
     /**
-     * @param string $InstanceId 实例id
+     * @param string $InstanceId 实例 ID
      * @param string $InstanceName 实例名称
      * @param string $InstanceVersion 实例版本
      * @param integer $Status 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
@@ -189,19 +216,28 @@ class RabbitMQVipInstance extends AbstractModel
      * @param integer $MaxTps 峰值TPS
      * @param integer $MaxBandWidth 峰值带宽，Mbps为单位
      * @param integer $MaxStorage 存储容量，GB为单位
-     * @param integer $ExpireTime 实例到期时间，毫秒为单位
+     * @param integer $ExpireTime 实例到期时间，按量付费的资源该值为 0，毫秒为单位。unix 时间戳
      * @param integer $AutoRenewFlag 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
-     * @param integer $PayMode 0-后付费，1-预付费
+     * @param integer $PayMode 1 表示预付费，0 表示后付费
      * @param string $Remark 备注信息
-     * @param string $SpecName 实例配置ID
-     * @param string $ExceptionInformation 集群异常。
+     * @param string $SpecName 集群的节点规格，需要输入对应的规格标识：
+2C8G：rabbit-vip-basic-2c8g
+4C16G：rabbit-vip-basic-4c16g
+8C32G：rabbit-vip-basic-8c32g
+16C32G：rabbit-vip-basic-4
+16C64G：rabbit-vip-basic-16c64g
+2C4G：rabbit-vip-basic-5
+4C8G：rabbit-vip-basic-1
+8C16G（已售罄）：rabbit-vip-basic-2
+不传默认为4C8G：rabbit-vip-basic-1
+     * @param string $ExceptionInformation 集群异常信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ClusterStatus 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败
 为了和计费区分开，额外开启一个状态位，用于显示。
      * @param string $PublicAccessEndpoint 公网接入点
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Vpcs VPC 接入点列表
-     * @param integer $CreateTime 创建时间，毫秒为单位
+     * @param integer $CreateTime 创建时间，毫秒为单位。unix 时间戳
      * @param integer $InstanceType 实例类型，0 专享版、1 Serverless 版
      * @param integer $IsolatedTime 隔离时间，毫秒为单位
      */

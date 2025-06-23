@@ -30,10 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNick(string $Nick) 设置座席昵称
  * @method string getStaffNumber() 获取座席工号
  * @method void setStaffNumber(string $StaffNumber) 设置座席工号
- * @method integer getRoleId() 获取用户角色id
-一个用户绑定了多个角色时以RoleIdList为准
- * @method void setRoleId(integer $RoleId) 设置用户角色id
-一个用户绑定了多个角色时以RoleIdList为准
+ * @method integer getRoleId() 获取用户角色 ID，一个用户绑定了多个角色时以RoleIdList为准
+ * @method void setRoleId(integer $RoleId) 设置用户角色 ID，一个用户绑定了多个角色时以RoleIdList为准
  * @method integer getRoleIdList() 获取用户角色id列表
  * @method void setRoleIdList(integer $RoleIdList) 设置用户角色id列表
  * @method array getRoleList() 获取用户角色id列表
@@ -44,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLastModifyTimestamp(integer $LastModifyTimestamp) 设置最后修改时间
  * @method string getExtensionNumber() 获取座席分机号（1 到 8 打头，4 - 6 位）
  * @method void setExtensionNumber(string $ExtensionNumber) 设置座席分机号（1 到 8 打头，4 - 6 位）
+ * @method ForwardingConfig getForwardingConfig() 获取呼叫转移配置
+ * @method void setForwardingConfig(ForwardingConfig $ForwardingConfig) 设置呼叫转移配置
  */
 class StaffInfo extends AbstractModel
 {
@@ -73,8 +73,7 @@ class StaffInfo extends AbstractModel
     public $StaffNumber;
 
     /**
-     * @var integer 用户角色id
-一个用户绑定了多个角色时以RoleIdList为准
+     * @var integer 用户角色 ID，一个用户绑定了多个角色时以RoleIdList为准
      * @deprecated
      */
     public $RoleId;
@@ -106,18 +105,23 @@ class StaffInfo extends AbstractModel
     public $ExtensionNumber;
 
     /**
+     * @var ForwardingConfig 呼叫转移配置
+     */
+    public $ForwardingConfig;
+
+    /**
      * @param string $Name 座席名称
      * @param string $Mail 座席邮箱
      * @param string $Phone 座席电话号码
      * @param string $Nick 座席昵称
      * @param string $StaffNumber 座席工号
-     * @param integer $RoleId 用户角色id
-一个用户绑定了多个角色时以RoleIdList为准
+     * @param integer $RoleId 用户角色 ID，一个用户绑定了多个角色时以RoleIdList为准
      * @param integer $RoleIdList 用户角色id列表
      * @param array $RoleList 用户角色id列表
      * @param array $SkillGroupList 所属技能组列表
      * @param integer $LastModifyTimestamp 最后修改时间
      * @param string $ExtensionNumber 座席分机号（1 到 8 打头，4 - 6 位）
+     * @param ForwardingConfig $ForwardingConfig 呼叫转移配置
      */
     function __construct()
     {
@@ -179,6 +183,11 @@ class StaffInfo extends AbstractModel
 
         if (array_key_exists("ExtensionNumber",$param) and $param["ExtensionNumber"] !== null) {
             $this->ExtensionNumber = $param["ExtensionNumber"];
+        }
+
+        if (array_key_exists("ForwardingConfig",$param) and $param["ForwardingConfig"] !== null) {
+            $this->ForwardingConfig = new ForwardingConfig();
+            $this->ForwardingConfig->deserialize($param["ForwardingConfig"]);
         }
     }
 }

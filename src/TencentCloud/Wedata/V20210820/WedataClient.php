@@ -145,6 +145,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DescribeIntegrationTaskResponse DescribeIntegrationTask(Models\DescribeIntegrationTaskRequest $req) 查询集成任务
  * @method Models\DescribeIntegrationTasksResponse DescribeIntegrationTasks(Models\DescribeIntegrationTasksRequest $req) 查询集成任务列表
  * @method Models\DescribeIntegrationVersionNodesInfoResponse DescribeIntegrationVersionNodesInfo(Models\DescribeIntegrationVersionNodesInfoRequest $req) 查询集成任务版本节点信息
+ * @method Models\DescribeManualTriggerRecordPageResponse DescribeManualTriggerRecordPage(Models\DescribeManualTriggerRecordPageRequest $req) 查询手动任务触发记录
  * @method Models\DescribeOfflineTaskTokenResponse DescribeOfflineTaskToken(Models\DescribeOfflineTaskTokenRequest $req) 获取离线任务长连接Token
  * @method Models\DescribeOperateOpsTasksResponse DescribeOperateOpsTasks(Models\DescribeOperateOpsTasksRequest $req) 任务运维列表组合条件查询
  * @method Models\DescribeOpsInstanceLogListResponse DescribeOpsInstanceLogList(Models\DescribeOpsInstanceLogListRequest $req) 实例运维-获取实例日志列表
@@ -268,6 +269,7 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
  * @method Models\ModifyTaskAlarmRegularResponse ModifyTaskAlarmRegular(Models\ModifyTaskAlarmRegularRequest $req) 修改任务告警规则
  * @method Models\ModifyTaskInfoResponse ModifyTaskInfo(Models\ModifyTaskInfoRequest $req) <p style="color:red;">[注意：该版本只满足广州区部分白名单客户使用]</p>
 更新任务。本接口已废弃，请使用接口ModifyTaskInfoDs。
+ * @method Models\ModifyTaskInfoDsResponse ModifyTaskInfoDs(Models\ModifyTaskInfoDsRequest $req) 更新任务Ds
  * @method Models\ModifyTaskLinksResponse ModifyTaskLinks(Models\ModifyTaskLinksRequest $req) <p style="color:red;">[注意：该版本只满足广州区部分白名单客户使用]</p>
 添加父任务依赖。本接口已废弃，请使用接口ModifyTaskLinksDs。
  * @method Models\ModifyTaskLinksDsResponse ModifyTaskLinksDs(Models\ModifyTaskLinksDsRequest $req) 添加父任务依赖

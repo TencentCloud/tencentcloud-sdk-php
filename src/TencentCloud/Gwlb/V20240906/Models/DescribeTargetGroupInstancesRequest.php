@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
 - TargetGroupId - String - 是否必填：否 - （过滤条件）目标组ID，如“lbtg-5xunivs0”。可通过[DescribeTargetGroupList](https://cloud.tencent.com/document/api/1782/111692)接口获取。
 - BindIP - String - 是否必填：否 - （过滤条件）目标组绑定实例的内网IP地址，如“10.1.1.1”。
 - InstanceId - String - 是否必填：否 - （过滤条件）目标组绑定实例的名称，如“ins-mxzlf9ke”。可通过[DescribeInstances](https://cloud.tencent.com/document/product/213/15728) 接口获取。
- * @method integer getLimit() 获取显示数量限制，默认20，最大1000。
- * @method void setLimit(integer $Limit) 设置显示数量限制，默认20，最大1000。
+ * @method integer getLimit() 获取显示数量限制，默认20，最大100。
+ * @method void setLimit(integer $Limit) 设置显示数量限制，默认20，最大100。
  * @method integer getOffset() 获取显示的偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置显示的偏移量，默认为0。
  */
@@ -47,7 +47,7 @@ class DescribeTargetGroupInstancesRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var integer 显示数量限制，默认20，最大1000。
+     * @var integer 显示数量限制，默认20，最大100。
      */
     public $Limit;
 
@@ -62,7 +62,7 @@ class DescribeTargetGroupInstancesRequest extends AbstractModel
 - TargetGroupId - String - 是否必填：否 - （过滤条件）目标组ID，如“lbtg-5xunivs0”。可通过[DescribeTargetGroupList](https://cloud.tencent.com/document/api/1782/111692)接口获取。
 - BindIP - String - 是否必填：否 - （过滤条件）目标组绑定实例的内网IP地址，如“10.1.1.1”。
 - InstanceId - String - 是否必填：否 - （过滤条件）目标组绑定实例的名称，如“ins-mxzlf9ke”。可通过[DescribeInstances](https://cloud.tencent.com/document/product/213/15728) 接口获取。
-     * @param integer $Limit 显示数量限制，默认20，最大1000。
+     * @param integer $Limit 显示数量限制，默认20，最大100。
      * @param integer $Offset 显示的偏移量，默认为0。
      */
     function __construct()

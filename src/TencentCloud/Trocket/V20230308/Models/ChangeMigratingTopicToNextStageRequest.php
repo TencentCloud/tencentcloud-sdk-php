@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ChangeMigratingTopicToNextStage请求参数结构体
  *
- * @method string getTaskId() 获取任务ID
- * @method void setTaskId(string $TaskId) 设置任务ID
- * @method array getTopicNameList() 获取主题名称列表
- * @method void setTopicNameList(array $TopicNameList) 设置主题名称列表
- * @method array getNamespaceList() 获取命名空间列表，仅4.x集群有效，与TopicNameList一一对应
- * @method void setNamespaceList(array $NamespaceList) 设置命名空间列表，仅4.x集群有效，与TopicNameList一一对应
+ * @method string getTaskId() 获取任务ID，可在[DescribeSmoothMigrationTaskList](https://cloud.tencent.com/document/api/1493/119997)接口返回的[SmoothMigrationTaskItem](https://cloud.tencent.com/document/api/1493/96031#SmoothMigrationTaskItem)或控制台中获得。
+
+ * @method void setTaskId(string $TaskId) 设置任务ID，可在[DescribeSmoothMigrationTaskList](https://cloud.tencent.com/document/api/1493/119997)接口返回的[SmoothMigrationTaskItem](https://cloud.tencent.com/document/api/1493/96031#SmoothMigrationTaskItem)或控制台中获得。
+
+ * @method array getTopicNameList() 获取主题名称列表，主题名称可在[DescribeMigratingTopicList](https://cloud.tencent.com/document/api/1493/118007)接口返回的[MigratingTopic](https://cloud.tencent.com/document/api/1493/96031#MigratingTopic)数据结构中获得。
+
+ * @method void setTopicNameList(array $TopicNameList) 设置主题名称列表，主题名称可在[DescribeMigratingTopicList](https://cloud.tencent.com/document/api/1493/118007)接口返回的[MigratingTopic](https://cloud.tencent.com/document/api/1493/96031#MigratingTopic)数据结构中获得。
+
+ * @method array getNamespaceList() 获取命名空间列表，仅4.x集群有效，与TopicNameList一一对应，可在[DescribeMigratingTopicList](https://cloud.tencent.com/document/api/1493/118007)接口返回的[MigratingTopic](https://cloud.tencent.com/document/api/1493/96031#MigratingTopic)数据结构中获得。
+ * @method void setNamespaceList(array $NamespaceList) 设置命名空间列表，仅4.x集群有效，与TopicNameList一一对应，可在[DescribeMigratingTopicList](https://cloud.tencent.com/document/api/1493/118007)接口返回的[MigratingTopic](https://cloud.tencent.com/document/api/1493/96031#MigratingTopic)数据结构中获得。
  */
 class ChangeMigratingTopicToNextStageRequest extends AbstractModel
 {
     /**
-     * @var string 任务ID
+     * @var string 任务ID，可在[DescribeSmoothMigrationTaskList](https://cloud.tencent.com/document/api/1493/119997)接口返回的[SmoothMigrationTaskItem](https://cloud.tencent.com/document/api/1493/96031#SmoothMigrationTaskItem)或控制台中获得。
+
      */
     public $TaskId;
 
     /**
-     * @var array 主题名称列表
+     * @var array 主题名称列表，主题名称可在[DescribeMigratingTopicList](https://cloud.tencent.com/document/api/1493/118007)接口返回的[MigratingTopic](https://cloud.tencent.com/document/api/1493/96031#MigratingTopic)数据结构中获得。
+
      */
     public $TopicNameList;
 
     /**
-     * @var array 命名空间列表，仅4.x集群有效，与TopicNameList一一对应
+     * @var array 命名空间列表，仅4.x集群有效，与TopicNameList一一对应，可在[DescribeMigratingTopicList](https://cloud.tencent.com/document/api/1493/118007)接口返回的[MigratingTopic](https://cloud.tencent.com/document/api/1493/96031#MigratingTopic)数据结构中获得。
      */
     public $NamespaceList;
 
     /**
-     * @param string $TaskId 任务ID
-     * @param array $TopicNameList 主题名称列表
-     * @param array $NamespaceList 命名空间列表，仅4.x集群有效，与TopicNameList一一对应
+     * @param string $TaskId 任务ID，可在[DescribeSmoothMigrationTaskList](https://cloud.tencent.com/document/api/1493/119997)接口返回的[SmoothMigrationTaskItem](https://cloud.tencent.com/document/api/1493/96031#SmoothMigrationTaskItem)或控制台中获得。
+
+     * @param array $TopicNameList 主题名称列表，主题名称可在[DescribeMigratingTopicList](https://cloud.tencent.com/document/api/1493/118007)接口返回的[MigratingTopic](https://cloud.tencent.com/document/api/1493/96031#MigratingTopic)数据结构中获得。
+
+     * @param array $NamespaceList 命名空间列表，仅4.x集群有效，与TopicNameList一一对应，可在[DescribeMigratingTopicList](https://cloud.tencent.com/document/api/1493/118007)接口返回的[MigratingTopic](https://cloud.tencent.com/document/api/1493/96031#MigratingTopic)数据结构中获得。
      */
     function __construct()
     {

@@ -160,6 +160,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSaleInventory(SaleInventory $SaleInventory) 设置销货清单
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method MotorVehicleSaleInvoice getMotorVehicleSaleInvoiceElectronic() 获取机动车销售统一发票（电子）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMotorVehicleSaleInvoiceElectronic(MotorVehicleSaleInvoice $MotorVehicleSaleInvoiceElectronic) 设置机动车销售统一发票（电子）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method UsedCarPurchaseInvoice getUsedCarPurchaseInvoiceElectronic() 获取二手车销售统一发票（电子）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUsedCarPurchaseInvoiceElectronic(UsedCarPurchaseInvoice $UsedCarPurchaseInvoiceElectronic) 设置二手车销售统一发票（电子）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SingleInvoiceItem extends AbstractModel
 {
@@ -374,6 +382,18 @@ class SingleInvoiceItem extends AbstractModel
     public $SaleInventory;
 
     /**
+     * @var MotorVehicleSaleInvoice 机动车销售统一发票（电子）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MotorVehicleSaleInvoiceElectronic;
+
+    /**
+     * @var UsedCarPurchaseInvoice 二手车销售统一发票（电子）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UsedCarPurchaseInvoiceElectronic;
+
+    /**
      * @param VatInvoiceInfo $VatSpecialInvoice 增值税专用发票
 注意：此字段可能返回 null，表示取不到有效值。
      * @param VatInvoiceInfo $VatCommonInvoice 增值税普通发票
@@ -443,6 +463,10 @@ class SingleInvoiceItem extends AbstractModel
      * @param ShoppingReceipt $ShoppingReceipt 购物小票
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SaleInventory $SaleInventory 销货清单
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MotorVehicleSaleInvoice $MotorVehicleSaleInvoiceElectronic 机动车销售统一发票（电子）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UsedCarPurchaseInvoice $UsedCarPurchaseInvoiceElectronic 二手车销售统一发票（电子）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -631,6 +655,16 @@ class SingleInvoiceItem extends AbstractModel
         if (array_key_exists("SaleInventory",$param) and $param["SaleInventory"] !== null) {
             $this->SaleInventory = new SaleInventory();
             $this->SaleInventory->deserialize($param["SaleInventory"]);
+        }
+
+        if (array_key_exists("MotorVehicleSaleInvoiceElectronic",$param) and $param["MotorVehicleSaleInvoiceElectronic"] !== null) {
+            $this->MotorVehicleSaleInvoiceElectronic = new MotorVehicleSaleInvoice();
+            $this->MotorVehicleSaleInvoiceElectronic->deserialize($param["MotorVehicleSaleInvoiceElectronic"]);
+        }
+
+        if (array_key_exists("UsedCarPurchaseInvoiceElectronic",$param) and $param["UsedCarPurchaseInvoiceElectronic"] !== null) {
+            $this->UsedCarPurchaseInvoiceElectronic = new UsedCarPurchaseInvoice();
+            $this->UsedCarPurchaseInvoiceElectronic->deserialize($param["UsedCarPurchaseInvoiceElectronic"]);
         }
     }
 }

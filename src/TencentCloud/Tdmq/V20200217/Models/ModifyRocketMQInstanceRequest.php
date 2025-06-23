@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemark(string $Remark) 设置实例备注信息
  * @method integer getMessageRetention() 获取实例消息保留时间，小时为单位
  * @method void setMessageRetention(integer $MessageRetention) 设置实例消息保留时间，小时为单位
+ * @method boolean getEnableDeletionProtection() 获取是否开启删除保护
+ * @method void setEnableDeletionProtection(boolean $EnableDeletionProtection) 设置是否开启删除保护
  */
 class ModifyRocketMQInstanceRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ModifyRocketMQInstanceRequest extends AbstractModel
     public $MessageRetention;
 
     /**
+     * @var boolean 是否开启删除保护
+     */
+    public $EnableDeletionProtection;
+
+    /**
      * @param string $InstanceId 专享实例ID
      * @param string $Name 实例名称
      * @param string $Remark 实例备注信息
      * @param integer $MessageRetention 实例消息保留时间，小时为单位
+     * @param boolean $EnableDeletionProtection 是否开启删除保护
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class ModifyRocketMQInstanceRequest extends AbstractModel
 
         if (array_key_exists("MessageRetention",$param) and $param["MessageRetention"] !== null) {
             $this->MessageRetention = $param["MessageRetention"];
+        }
+
+        if (array_key_exists("EnableDeletionProtection",$param) and $param["EnableDeletionProtection"] !== null) {
+            $this->EnableDeletionProtection = $param["EnableDeletionProtection"];
         }
     }
 }

@@ -14,23 +14,37 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Live\V20180801\Models;
+namespace TencentCloud\Csip\V20221121\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeLivePadProcessorList返回参数结构体
+ * DescribeRiskRules返回参数结构体
  *
- * @method array getStreamNameList() 获取当前正在拉取垫片的流名称列表。
- * @method void setStreamNameList(array $StreamNameList) 设置当前正在拉取垫片的流名称列表。
+ * @method integer getTotalCount() 获取风险规则数量
+ * @method void setTotalCount(integer $TotalCount) 设置风险规则数量
+ * @method array getRiskRuleList() 获取风险规则列表
+ * @method void setRiskRuleList(array $RiskRuleList) 设置风险规则列表
+ * @method array getInstanceTypeList() 获取实例类型选项
+ * @method void setInstanceTypeList(array $InstanceTypeList) 设置实例类型选项
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeLivePadProcessorListResponse extends AbstractModel
+class DescribeRiskRulesResponse extends AbstractModel
 {
     /**
-     * @var array 当前正在拉取垫片的流名称列表。
+     * @var integer 风险规则数量
      */
-    public $StreamNameList;
+    public $TotalCount;
+
+    /**
+     * @var array 风险规则列表
+     */
+    public $RiskRuleList;
+
+    /**
+     * @var array 实例类型选项
+     */
+    public $InstanceTypeList;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +52,9 @@ class DescribeLivePadProcessorListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $StreamNameList 当前正在拉取垫片的流名称列表。
+     * @param integer $TotalCount 风险规则数量
+     * @param array $RiskRuleList 风险规则列表
+     * @param array $InstanceTypeList 实例类型选项
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +70,26 @@ class DescribeLivePadProcessorListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StreamNameList",$param) and $param["StreamNameList"] !== null) {
-            $this->StreamNameList = $param["StreamNameList"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("RiskRuleList",$param) and $param["RiskRuleList"] !== null) {
+            $this->RiskRuleList = [];
+            foreach ($param["RiskRuleList"] as $key => $value){
+                $obj = new RiskRuleItem();
+                $obj->deserialize($value);
+                array_push($this->RiskRuleList, $obj);
+            }
+        }
+
+        if (array_key_exists("InstanceTypeList",$param) and $param["InstanceTypeList"] !== null) {
+            $this->InstanceTypeList = [];
+            foreach ($param["InstanceTypeList"] as $key => $value){
+                $obj = new AttributeOptionSet();
+                $obj->deserialize($value);
+                array_push($this->InstanceTypeList, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

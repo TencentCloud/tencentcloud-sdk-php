@@ -144,8 +144,8 @@ use TencentCloud\Common\AbstractModel;
 所有参与或签的人员均需具备该标识。
 注意，在合同中，不同的或签参与人必须保证其CustomApproverTag唯一。
 如果或签签署人为本方企业微信参与人，则需要指定ApproverSource参数为WEWORKAPP。
- * @method RegisterInfo getRegisterInfo() 获取<font color="red">不再使用</font >, 快速注册相关信息
- * @method void setRegisterInfo(RegisterInfo $RegisterInfo) 设置<font color="red">不再使用</font >, 快速注册相关信息
+ * @method RegisterInfo getRegisterInfo() 获取快速注册相关信息
+ * @method void setRegisterInfo(RegisterInfo $RegisterInfo) 设置快速注册相关信息
  * @method ApproverOption getApproverOption() 获取签署人个性化能力值，如是否可以转发他人处理、是否可以拒签、是否为动态补充签署人等功能开关。
  * @method void setApproverOption(ApproverOption $ApproverOption) 设置签署人个性化能力值，如是否可以转发他人处理、是否可以拒签、是否为动态补充签署人等功能开关。
  * @method string getJumpUrl() 获取签署完前端跳转的url，暂未使用
@@ -456,7 +456,7 @@ class FlowCreateApprover extends AbstractModel
     public $CustomApproverTag;
 
     /**
-     * @var RegisterInfo <font color="red">不再使用</font >, 快速注册相关信息
+     * @var RegisterInfo 快速注册相关信息
      */
     public $RegisterInfo;
 
@@ -668,7 +668,7 @@ class FlowCreateApprover extends AbstractModel
 所有参与或签的人员均需具备该标识。
 注意，在合同中，不同的或签参与人必须保证其CustomApproverTag唯一。
 如果或签签署人为本方企业微信参与人，则需要指定ApproverSource参数为WEWORKAPP。
-     * @param RegisterInfo $RegisterInfo <font color="red">不再使用</font >, 快速注册相关信息
+     * @param RegisterInfo $RegisterInfo 快速注册相关信息
      * @param ApproverOption $ApproverOption 签署人个性化能力值，如是否可以转发他人处理、是否可以拒签、是否为动态补充签署人等功能开关。
      * @param string $JumpUrl 签署完前端跳转的url，暂未使用
      * @param string $SignId 签署人的签署ID

@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRabbitMQBindings请求参数结构体
  *
- * @method string getInstanceId() 获取实例Id
- * @method void setInstanceId(string $InstanceId) 设置实例Id
- * @method string getVirtualHost() 获取Vhost名称
- * @method void setVirtualHost(string $VirtualHost) 设置Vhost名称
- * @method integer getOffset() 获取分页offset
- * @method void setOffset(integer $Offset) 设置分页offset
- * @method integer getLimit() 获取分页limit
- * @method void setLimit(integer $Limit) 设置分页limit
+ * @method string getInstanceId() 获取实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
+ * @method string getVirtualHost() 获取VirtualHost 名称，形如 testvhost。有效的 VirtualHost 名称可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询，在左侧导航栏点击 Vhost，并在 Vhost 列表中找到Vhost名称。
+ * @method void setVirtualHost(string $VirtualHost) 设置VirtualHost 名称，形如 testvhost。有效的 VirtualHost 名称可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询，在左侧导航栏点击 Vhost，并在 Vhost 列表中找到Vhost名称。
+ * @method integer getOffset() 获取分页 offset，默认 0
+ * @method void setOffset(integer $Offset) 设置分页 offset，默认 0
+ * @method integer getLimit() 获取分页 limit，默认 20
+ * @method void setLimit(integer $Limit) 设置分页 limit，默认 20
  * @method string getSearchWord() 获取搜索关键词，根据源exchange名称/目标资源名称/绑定key进行模糊搜索
  * @method void setSearchWord(string $SearchWord) 设置搜索关键词，根据源exchange名称/目标资源名称/绑定key进行模糊搜索
  * @method string getSourceExchange() 获取根据源Exchange精准搜索过滤
  * @method void setSourceExchange(string $SourceExchange) 设置根据源Exchange精准搜索过滤
- * @method string getQueueName() 获取根据目标QueueName精准搜索过滤，和DestinationExchange过滤不可同时设置
- * @method void setQueueName(string $QueueName) 设置根据目标QueueName精准搜索过滤，和DestinationExchange过滤不可同时设置
+ * @method string getQueueName() 获取根据目标队列名精准搜索过滤，和 DestinationExchange 过滤不可同时设置
+ * @method void setQueueName(string $QueueName) 设置根据目标队列名精准搜索过滤，和 DestinationExchange 过滤不可同时设置
  * @method string getDestinationExchange() 获取根据目标Exchange精准搜索过滤，和QueueName过滤不可同时设置
  * @method void setDestinationExchange(string $DestinationExchange) 设置根据目标Exchange精准搜索过滤，和QueueName过滤不可同时设置
  */
 class DescribeRabbitMQBindingsRequest extends AbstractModel
 {
     /**
-     * @var string 实例Id
+     * @var string 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
      */
     public $InstanceId;
 
     /**
-     * @var string Vhost名称
+     * @var string VirtualHost 名称，形如 testvhost。有效的 VirtualHost 名称可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询，在左侧导航栏点击 Vhost，并在 Vhost 列表中找到Vhost名称。
      */
     public $VirtualHost;
 
     /**
-     * @var integer 分页offset
+     * @var integer 分页 offset，默认 0
      */
     public $Offset;
 
     /**
-     * @var integer 分页limit
+     * @var integer 分页 limit，默认 20
      */
     public $Limit;
 
@@ -70,7 +70,7 @@ class DescribeRabbitMQBindingsRequest extends AbstractModel
     public $SourceExchange;
 
     /**
-     * @var string 根据目标QueueName精准搜索过滤，和DestinationExchange过滤不可同时设置
+     * @var string 根据目标队列名精准搜索过滤，和 DestinationExchange 过滤不可同时设置
      */
     public $QueueName;
 
@@ -80,13 +80,13 @@ class DescribeRabbitMQBindingsRequest extends AbstractModel
     public $DestinationExchange;
 
     /**
-     * @param string $InstanceId 实例Id
-     * @param string $VirtualHost Vhost名称
-     * @param integer $Offset 分页offset
-     * @param integer $Limit 分页limit
+     * @param string $InstanceId 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
+     * @param string $VirtualHost VirtualHost 名称，形如 testvhost。有效的 VirtualHost 名称可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询，在左侧导航栏点击 Vhost，并在 Vhost 列表中找到Vhost名称。
+     * @param integer $Offset 分页 offset，默认 0
+     * @param integer $Limit 分页 limit，默认 20
      * @param string $SearchWord 搜索关键词，根据源exchange名称/目标资源名称/绑定key进行模糊搜索
      * @param string $SourceExchange 根据源Exchange精准搜索过滤
-     * @param string $QueueName 根据目标QueueName精准搜索过滤，和DestinationExchange过滤不可同时设置
+     * @param string $QueueName 根据目标队列名精准搜索过滤，和 DestinationExchange 过滤不可同时设置
      * @param string $DestinationExchange 根据目标Exchange精准搜索过滤，和QueueName过滤不可同时设置
      */
     function __construct()

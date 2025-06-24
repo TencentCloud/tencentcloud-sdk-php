@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStreamName(string $StreamName) 设置流名称。
  * @method string getId() 获取云端特效 ID。
  * @method void setId(string $Id) 设置云端特效 ID。
+ * @method integer getLoopTimes() 获取默认随系统配置，云端特效循环 少于5次。可自定义指定礼物循环次数，不超过100次。
+ * @method void setLoopTimes(integer $LoopTimes) 设置默认随系统配置，云端特效循环 少于5次。可自定义指定礼物循环次数，不超过100次。
  * @method string getOperator() 获取操作人备注信息。
  * @method void setOperator(string $Operator) 设置操作人备注信息。
  * @method integer getZoomFactor() 获取缩小比例，默认0 不缩放。
@@ -66,6 +68,11 @@ class SendLiveCloudEffectRequest extends AbstractModel
     public $Id;
 
     /**
+     * @var integer 默认随系统配置，云端特效循环 少于5次。可自定义指定礼物循环次数，不超过100次。
+     */
+    public $LoopTimes;
+
+    /**
      * @var string 操作人备注信息。
      */
     public $Operator;
@@ -93,6 +100,7 @@ class SendLiveCloudEffectRequest extends AbstractModel
      * @param string $PushDomainName 您的推流域名。
      * @param string $StreamName 流名称。
      * @param string $Id 云端特效 ID。
+     * @param integer $LoopTimes 默认随系统配置，云端特效循环 少于5次。可自定义指定礼物循环次数，不超过100次。
      * @param string $Operator 操作人备注信息。
      * @param integer $ZoomFactor 缩小比例，默认0 不缩放。
 可选值：0-9， 值越大，越缩小。
@@ -128,6 +136,10 @@ class SendLiveCloudEffectRequest extends AbstractModel
 
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("LoopTimes",$param) and $param["LoopTimes"] !== null) {
+            $this->LoopTimes = $param["LoopTimes"];
         }
 
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {

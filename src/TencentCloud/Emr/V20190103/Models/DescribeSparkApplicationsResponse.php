@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Csip\V20221121\Models;
+namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeExposePath返回参数结构体
+ * DescribeSparkApplications返回参数结构体
  *
- * @method string getContent() 获取暴露路径节点内容
- * @method void setContent(string $Content) 设置暴露路径节点内容
+ * @method integer getTotalCount() 获取返回数量
+ * @method void setTotalCount(integer $TotalCount) 设置返回数量
+ * @method array getResultList() 获取spark应用列表
+ * @method void setResultList(array $ResultList) 设置spark应用列表
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeExposePathResponse extends AbstractModel
+class DescribeSparkApplicationsResponse extends AbstractModel
 {
     /**
-     * @var string 暴露路径节点内容
+     * @var integer 返回数量
      */
-    public $Content;
+    public $TotalCount;
+
+    /**
+     * @var array spark应用列表
+     */
+    public $ResultList;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +45,8 @@ class DescribeExposePathResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Content 暴露路径节点内容
+     * @param integer $TotalCount 返回数量
+     * @param array $ResultList spark应用列表
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +62,17 @@ class DescribeExposePathResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Content",$param) and $param["Content"] !== null) {
-            $this->Content = $param["Content"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("ResultList",$param) and $param["ResultList"] !== null) {
+            $this->ResultList = [];
+            foreach ($param["ResultList"] as $key => $value){
+                $obj = new SparkApplicationsList();
+                $obj->deserialize($value);
+                array_push($this->ResultList, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

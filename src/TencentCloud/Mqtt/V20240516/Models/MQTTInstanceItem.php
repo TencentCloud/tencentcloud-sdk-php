@@ -88,6 +88,14 @@ DELETING，删除中
  * @method void setMaxCaNum(integer $MaxCaNum) 设置最大ca配额
  * @method integer getMaxSubscription() 获取最大订阅数
  * @method void setMaxSubscription(integer $MaxSubscription) 设置最大订阅数
+ * @method integer getSharedSubscriptionGroupLimit() 获取共享订阅组数最大限制
+ * @method void setSharedSubscriptionGroupLimit(integer $SharedSubscriptionGroupLimit) 设置共享订阅组数最大限制
+ * @method integer getMaxTopicFilterPerSharedSubscriptionGroup() 获取单个共享订阅组TopicFilter数限制
+ * @method void setMaxTopicFilterPerSharedSubscriptionGroup(integer $MaxTopicFilterPerSharedSubscriptionGroup) 设置单个共享订阅组TopicFilter数限制
+ * @method integer getAutoSubscriptionPolicyLimit() 获取自动订阅规则条数限制
+ * @method void setAutoSubscriptionPolicyLimit(integer $AutoSubscriptionPolicyLimit) 设置自动订阅规则条数限制
+ * @method integer getMaxTopicFilterPerAutoSubscriptionPolicy() 获取单条自动订阅规则TopicFilter数限制
+ * @method void setMaxTopicFilterPerAutoSubscriptionPolicy(integer $MaxTopicFilterPerAutoSubscriptionPolicy) 设置单条自动订阅规则TopicFilter数限制
  */
 class MQTTInstanceItem extends AbstractModel
 {
@@ -206,6 +214,26 @@ DELETING，删除中
     public $MaxSubscription;
 
     /**
+     * @var integer 共享订阅组数最大限制
+     */
+    public $SharedSubscriptionGroupLimit;
+
+    /**
+     * @var integer 单个共享订阅组TopicFilter数限制
+     */
+    public $MaxTopicFilterPerSharedSubscriptionGroup;
+
+    /**
+     * @var integer 自动订阅规则条数限制
+     */
+    public $AutoSubscriptionPolicyLimit;
+
+    /**
+     * @var integer 单条自动订阅规则TopicFilter数限制
+     */
+    public $MaxTopicFilterPerAutoSubscriptionPolicy;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param string $Version 实例版本
@@ -240,6 +268,10 @@ DELETING，删除中
      * @param integer $AuthorizationPolicyLimit 授权规则条数限制
      * @param integer $MaxCaNum 最大ca配额
      * @param integer $MaxSubscription 最大订阅数
+     * @param integer $SharedSubscriptionGroupLimit 共享订阅组数最大限制
+     * @param integer $MaxTopicFilterPerSharedSubscriptionGroup 单个共享订阅组TopicFilter数限制
+     * @param integer $AutoSubscriptionPolicyLimit 自动订阅规则条数限制
+     * @param integer $MaxTopicFilterPerAutoSubscriptionPolicy 单条自动订阅规则TopicFilter数限制
      */
     function __construct()
     {
@@ -332,6 +364,22 @@ DELETING，删除中
 
         if (array_key_exists("MaxSubscription",$param) and $param["MaxSubscription"] !== null) {
             $this->MaxSubscription = $param["MaxSubscription"];
+        }
+
+        if (array_key_exists("SharedSubscriptionGroupLimit",$param) and $param["SharedSubscriptionGroupLimit"] !== null) {
+            $this->SharedSubscriptionGroupLimit = $param["SharedSubscriptionGroupLimit"];
+        }
+
+        if (array_key_exists("MaxTopicFilterPerSharedSubscriptionGroup",$param) and $param["MaxTopicFilterPerSharedSubscriptionGroup"] !== null) {
+            $this->MaxTopicFilterPerSharedSubscriptionGroup = $param["MaxTopicFilterPerSharedSubscriptionGroup"];
+        }
+
+        if (array_key_exists("AutoSubscriptionPolicyLimit",$param) and $param["AutoSubscriptionPolicyLimit"] !== null) {
+            $this->AutoSubscriptionPolicyLimit = $param["AutoSubscriptionPolicyLimit"];
+        }
+
+        if (array_key_exists("MaxTopicFilterPerAutoSubscriptionPolicy",$param) and $param["MaxTopicFilterPerAutoSubscriptionPolicy"] !== null) {
+            $this->MaxTopicFilterPerAutoSubscriptionPolicy = $param["MaxTopicFilterPerAutoSubscriptionPolicy"];
         }
     }
 }

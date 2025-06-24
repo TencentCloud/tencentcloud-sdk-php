@@ -132,6 +132,7 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 <li>此接口需要保证：渠道应用已开启：动态签署人2.0能力</li>
 <li>此接口需要保证：合同发起时指定开启了动态合同</li>
 <li>此接口补充的动态签署人传参规则，请参考接口：<a href="https://qian.tencent.com/developers/partnerApis/startFlows/ChannelCreateFlowByFiles" target="_blank">用PDF文件创建签署流程</a>的签署人传参规则</li>
+<li>此接口补充的动态签署人暂不支持他方企业自动签署。</li>
 </ul>
  * @method Models\ChannelCreateEmbedWebUrlResponse ChannelCreateEmbedWebUrl(Models\ChannelCreateEmbedWebUrlRequest $req) 本接口（ChannelCreateEmbedWebUrl）用于创建可嵌入web页面的URL（此web页面可以通过iframe方式嵌入到贵方系统的网页中），支持以下类型的Web链接创建：
 1. 创建印章

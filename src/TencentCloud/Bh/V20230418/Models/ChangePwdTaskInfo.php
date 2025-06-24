@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFirstTime(string $FirstTime) 设置首次执行时间
  * @method string getNextTime() 获取下次执行时间
  * @method void setNextTime(string $NextTime) 设置下次执行时间
+ * @method string getLastTime() 获取上次执行时间
+ * @method void setLastTime(string $LastTime) 设置上次执行时间
  */
 class ChangePwdTaskInfo extends AbstractModel
 {
@@ -171,6 +173,11 @@ class ChangePwdTaskInfo extends AbstractModel
     public $NextTime;
 
     /**
+     * @var string 上次执行时间
+     */
+    public $LastTime;
+
+    /**
      * @param integer $Id id
      * @param string $OperationId 任务id
      * @param string $TaskName 任务名
@@ -192,6 +199,7 @@ class ChangePwdTaskInfo extends AbstractModel
      * @param integer $Period 周期
      * @param string $FirstTime 首次执行时间
      * @param string $NextTime 下次执行时间
+     * @param string $LastTime 上次执行时间
      */
     function __construct()
     {
@@ -294,6 +302,10 @@ class ChangePwdTaskInfo extends AbstractModel
 
         if (array_key_exists("NextTime",$param) and $param["NextTime"] !== null) {
             $this->NextTime = $param["NextTime"];
+        }
+
+        if (array_key_exists("LastTime",$param) and $param["LastTime"] !== null) {
+            $this->LastTime = $param["LastTime"];
         }
     }
 }

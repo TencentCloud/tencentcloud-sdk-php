@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取限制数目 最大200
  * @method void setLimit(integer $Limit) 设置限制数目 最大200
- * @method string getCreatTimeRangeStart() 获取下单时间范围起始点【请保持时间范围最大90天】
- * @method void setCreatTimeRangeStart(string $CreatTimeRangeStart) 设置下单时间范围起始点【请保持时间范围最大90天】
- * @method string getCreatTimeRangeEnd() 获取下单时间范围终止点【请保持时间范围最大90天】
- * @method void setCreatTimeRangeEnd(string $CreatTimeRangeEnd) 设置下单时间范围终止点【请保持时间范围最大90天】
+ * @method string getCreatTimeRangeStart() 获取下单时间范围起始点【*请必传并控制时间范围最大90天，避免出现超时】
+ * @method void setCreatTimeRangeStart(string $CreatTimeRangeStart) 设置下单时间范围起始点【*请必传并控制时间范围最大90天，避免出现超时】
+ * @method string getCreatTimeRangeEnd() 获取下单时间范围终止点【*请必传并控制时间范围最大90天，避免出现超时】
+ * @method void setCreatTimeRangeEnd(string $CreatTimeRangeEnd) 设置下单时间范围终止点【*请必传并控制时间范围最大90天，避免出现超时】
  * @method integer getOrder() 获取0:下单时间降序；其他：下单时间升序
  * @method void setOrder(integer $Order) 设置0:下单时间降序；其他：下单时间升序
  * @method integer getStatus() 获取订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)
@@ -54,12 +54,12 @@ class DescribeAgentDealsByCacheRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 下单时间范围起始点【请保持时间范围最大90天】
+     * @var string 下单时间范围起始点【*请必传并控制时间范围最大90天，避免出现超时】
      */
     public $CreatTimeRangeStart;
 
     /**
-     * @var string 下单时间范围终止点【请保持时间范围最大90天】
+     * @var string 下单时间范围终止点【*请必传并控制时间范围最大90天，避免出现超时】
      */
     public $CreatTimeRangeEnd;
 
@@ -96,8 +96,8 @@ class DescribeAgentDealsByCacheRequest extends AbstractModel
     /**
      * @param integer $Offset 偏移量
      * @param integer $Limit 限制数目 最大200
-     * @param string $CreatTimeRangeStart 下单时间范围起始点【请保持时间范围最大90天】
-     * @param string $CreatTimeRangeEnd 下单时间范围终止点【请保持时间范围最大90天】
+     * @param string $CreatTimeRangeStart 下单时间范围起始点【*请必传并控制时间范围最大90天，避免出现超时】
+     * @param string $CreatTimeRangeEnd 下单时间范围终止点【*请必传并控制时间范围最大90天，避免出现超时】
      * @param integer $Order 0:下单时间降序；其他：下单时间升序
      * @param integer $Status 订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)
      * @param array $OwnerUins 下单人账号ID列表

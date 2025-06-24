@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateTime(string $UpdateTime) 设置用户的修改时间
  * @method boolean getIsSelected() 获取是否选中
  * @method void setIsSelected(boolean $IsSelected) 设置是否选中
+ * @method string getPassword() 获取用户密码
+ * @method void setPassword(string $Password) 设置用户密码
  */
 class UserInfo extends AbstractModel
 {
@@ -108,6 +110,11 @@ class UserInfo extends AbstractModel
     public $IsSelected;
 
     /**
+     * @var string 用户密码
+     */
+    public $Password;
+
+    /**
      * @param string $UserName 查询username。
      * @param string $FirstName 用户的名。
      * @param string $LastName 用户的姓。
@@ -120,6 +127,7 @@ class UserInfo extends AbstractModel
      * @param string $CreateTime 用户的创建时间
      * @param string $UpdateTime 用户的修改时间
      * @param boolean $IsSelected 是否选中
+     * @param string $Password 用户密码
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class UserInfo extends AbstractModel
 
         if (array_key_exists("IsSelected",$param) and $param["IsSelected"] !== null) {
             $this->IsSelected = $param["IsSelected"];
+        }
+
+        if (array_key_exists("Password",$param) and $param["Password"] !== null) {
+            $this->Password = $param["Password"];
         }
     }
 }

@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getAndroidInstanceImageIds() 获取镜像 ID 列表
  * @method void setAndroidInstanceImageIds(array $AndroidInstanceImageIds) 设置镜像 ID 列表
+ * @method array getAndroidInstanceImageZones() 获取镜像可用区列表
+ * @method void setAndroidInstanceImageZones(array $AndroidInstanceImageZones) 设置镜像可用区列表
  * @method integer getOffset() 获取偏移量，默认为0
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0
  * @method integer getLimit() 获取限制量，默认为20，最大值为100
@@ -35,6 +37,11 @@ class DescribeAndroidInstanceImagesRequest extends AbstractModel
     public $AndroidInstanceImageIds;
 
     /**
+     * @var array 镜像可用区列表
+     */
+    public $AndroidInstanceImageZones;
+
+    /**
      * @var integer 偏移量，默认为0
      */
     public $Offset;
@@ -46,6 +53,7 @@ class DescribeAndroidInstanceImagesRequest extends AbstractModel
 
     /**
      * @param array $AndroidInstanceImageIds 镜像 ID 列表
+     * @param array $AndroidInstanceImageZones 镜像可用区列表
      * @param integer $Offset 偏移量，默认为0
      * @param integer $Limit 限制量，默认为20，最大值为100
      */
@@ -64,6 +72,10 @@ class DescribeAndroidInstanceImagesRequest extends AbstractModel
         }
         if (array_key_exists("AndroidInstanceImageIds",$param) and $param["AndroidInstanceImageIds"] !== null) {
             $this->AndroidInstanceImageIds = $param["AndroidInstanceImageIds"];
+        }
+
+        if (array_key_exists("AndroidInstanceImageZones",$param) and $param["AndroidInstanceImageZones"] !== null) {
+            $this->AndroidInstanceImageZones = $param["AndroidInstanceImageZones"];
         }
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {

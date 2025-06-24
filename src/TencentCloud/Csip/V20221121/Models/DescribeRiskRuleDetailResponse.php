@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * DescribeRiskRuleDetail返回参数结构体
  *
  * @method string getRiskRuleId() 获取风险规则ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskRuleId(string $RiskRuleId) 设置风险规则ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProvider() 获取云厂商
  * @method void setProvider(string $Provider) 设置云厂商
  * @method string getRiskName() 获取风险名称
@@ -39,7 +37,6 @@ class DescribeRiskRuleDetailResponse extends AbstractModel
 {
     /**
      * @var string 风险规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskRuleId;
 
@@ -70,7 +67,6 @@ class DescribeRiskRuleDetailResponse extends AbstractModel
 
     /**
      * @param string $RiskRuleId 风险规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Provider 云厂商
      * @param string $RiskName 风险名称
      * @param string $RiskInfluence 风险危害

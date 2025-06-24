@@ -69,6 +69,7 @@ use TencentCloud\Emr\V20190103\Models as Models;
  * @method Models\DescribeSLInstanceResponse DescribeSLInstance(Models\DescribeSLInstanceRequest $req) 本接口（DescribeSLInstance）用于查询 Serverless HBase实例基本信息
  * @method Models\DescribeSLInstanceListResponse DescribeSLInstanceList(Models\DescribeSLInstanceListRequest $req) 本接口（DescribeSLInstanceList）用于查询Serverless HBase实例列表详细信息
  * @method Models\DescribeServiceNodeInfosResponse DescribeServiceNodeInfos(Models\DescribeServiceNodeInfosRequest $req) 查询服务进程信息
+ * @method Models\DescribeSparkApplicationsResponse DescribeSparkApplications(Models\DescribeSparkApplicationsRequest $req) 获取spark应用列表
  * @method Models\DescribeSparkQueriesResponse DescribeSparkQueries(Models\DescribeSparkQueriesRequest $req) 查询Spark查询信息列表
  * @method Models\DescribeStarRocksQueryInfoResponse DescribeStarRocksQueryInfo(Models\DescribeStarRocksQueryInfoRequest $req) 查询StarRocks查询信息
  * @method Models\DescribeTrinoQueryInfoResponse DescribeTrinoQueryInfo(Models\DescribeTrinoQueryInfoRequest $req) 查询Trino(PrestoSQL)查询信息

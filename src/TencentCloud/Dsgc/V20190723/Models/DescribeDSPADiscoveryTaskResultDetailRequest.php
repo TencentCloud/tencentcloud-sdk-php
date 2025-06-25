@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置返回数量，默认值为20，最大值为100
  * @method array getCategoryIdList() 获取多级分类的分类ID集合
  * @method void setCategoryIdList(array $CategoryIdList) 设置多级分类的分类ID集合
+ * @method integer getScanResultId() 获取任务扫描id
+ * @method void setScanResultId(integer $ScanResultId) 设置任务扫描id
  */
 class DescribeDSPADiscoveryTaskResultDetailRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class DescribeDSPADiscoveryTaskResultDetailRequest extends AbstractModel
     public $CategoryIdList;
 
     /**
+     * @var integer 任务扫描id
+     */
+    public $ScanResultId;
+
+    /**
      * @param string $DspaId DSPA实例ID
      * @param integer $TaskId 任务ID
      * @param integer $DbResultId 扫描数据库结果ID
@@ -112,6 +119,7 @@ class DescribeDSPADiscoveryTaskResultDetailRequest extends AbstractModel
      * @param integer $Offset 偏移量，默认为0
      * @param integer $Limit 返回数量，默认值为20，最大值为100
      * @param array $CategoryIdList 多级分类的分类ID集合
+     * @param integer $ScanResultId 任务扫描id
      */
     function __construct()
     {
@@ -168,6 +176,10 @@ class DescribeDSPADiscoveryTaskResultDetailRequest extends AbstractModel
 
         if (array_key_exists("CategoryIdList",$param) and $param["CategoryIdList"] !== null) {
             $this->CategoryIdList = $param["CategoryIdList"];
+        }
+
+        if (array_key_exists("ScanResultId",$param) and $param["ScanResultId"] !== null) {
+            $this->ScanResultId = $param["ScanResultId"];
         }
     }
 }

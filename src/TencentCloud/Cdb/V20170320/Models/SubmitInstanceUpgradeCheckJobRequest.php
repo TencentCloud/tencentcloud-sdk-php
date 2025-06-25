@@ -20,26 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SubmitInstanceUpgradeCheckJob请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID。
+ * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
  * @method string getDstMysqlVersion() 获取目标数据库版本。
+说明：可选值5.6、5.7、8.0，不支持跨版本升级，升级后不支持版本降级。
  * @method void setDstMysqlVersion(string $DstMysqlVersion) 设置目标数据库版本。
+说明：可选值5.6、5.7、8.0，不支持跨版本升级，升级后不支持版本降级。
  */
 class SubmitInstanceUpgradeCheckJobRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID。
+     * @var string 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public $InstanceId;
 
     /**
      * @var string 目标数据库版本。
+说明：可选值5.6、5.7、8.0，不支持跨版本升级，升级后不支持版本降级。
      */
     public $DstMysqlVersion;
 
     /**
-     * @param string $InstanceId 实例 ID。
+     * @param string $InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      * @param string $DstMysqlVersion 目标数据库版本。
+说明：可选值5.6、5.7、8.0，不支持跨版本升级，升级后不支持版本降级。
      */
     function __construct()
     {

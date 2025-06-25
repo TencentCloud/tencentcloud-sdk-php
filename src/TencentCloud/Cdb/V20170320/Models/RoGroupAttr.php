@@ -22,16 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRoGroupName() 获取RO 组名称。
  * @method void setRoGroupName(string $RoGroupName) 设置RO 组名称。
- * @method integer getRoMaxDelayTime() 获取RO 实例最大延迟阈值。单位为秒，最小值为 1。注意，RO 组必须设置了开启实例延迟剔除策略，该值才有效。
- * @method void setRoMaxDelayTime(integer $RoMaxDelayTime) 设置RO 实例最大延迟阈值。单位为秒，最小值为 1。注意，RO 组必须设置了开启实例延迟剔除策略，该值才有效。
+ * @method integer getRoMaxDelayTime() 获取RO 实例最大延迟阈值。单位为秒，最小值为 1。范围：[1,10000]，整数。
+注意：RO 组必须设置了开启实例延迟剔除策略，该值才有效。
+ * @method void setRoMaxDelayTime(integer $RoMaxDelayTime) 设置RO 实例最大延迟阈值。单位为秒，最小值为 1。范围：[1,10000]，整数。
+注意：RO 组必须设置了开启实例延迟剔除策略，该值才有效。
  * @method integer getRoOfflineDelay() 获取是否开启实例延迟剔除。支持的值包括：1 - 开启；0 - 不开启。注意，若设置开启实例延迟剔除，则必须设置延迟阈值（RoMaxDelayTime）参数。
  * @method void setRoOfflineDelay(integer $RoOfflineDelay) 设置是否开启实例延迟剔除。支持的值包括：1 - 开启；0 - 不开启。注意，若设置开启实例延迟剔除，则必须设置延迟阈值（RoMaxDelayTime）参数。
- * @method integer getMinRoInGroup() 获取最少保留实例数。可设置为小于或等于该 RO 组下 RO 实例个数的任意值。注意，若设置值大于 RO 实例数量将不做剔除；若设置为 0，所有实例延迟超限都会被剔除。
- * @method void setMinRoInGroup(integer $MinRoInGroup) 设置最少保留实例数。可设置为小于或等于该 RO 组下 RO 实例个数的任意值。注意，若设置值大于 RO 实例数量将不做剔除；若设置为 0，所有实例延迟超限都会被剔除。
+ * @method integer getMinRoInGroup() 获取最少保留实例数。可设置为小于或等于该 RO 组下 RO 实例个数的任意值。默认值为1。
+注意：若设置值大于 RO 实例数量将不做剔除；若设置为 0，所有实例延迟超限都会被剔除。
+ * @method void setMinRoInGroup(integer $MinRoInGroup) 设置最少保留实例数。可设置为小于或等于该 RO 组下 RO 实例个数的任意值。默认值为1。
+注意：若设置值大于 RO 实例数量将不做剔除；若设置为 0，所有实例延迟超限都会被剔除。
  * @method string getWeightMode() 获取权重模式。支持值包括："system" - 系统自动分配； "custom" - 用户自定义设置。注意，若设置 "custom" 模式，则必须设置 RO 实例权重配置（RoWeightValues）参数。
  * @method void setWeightMode(string $WeightMode) 设置权重模式。支持值包括："system" - 系统自动分配； "custom" - 用户自定义设置。注意，若设置 "custom" 模式，则必须设置 RO 实例权重配置（RoWeightValues）参数。
- * @method integer getReplicationDelayTime() 获取延迟复制时间。
- * @method void setReplicationDelayTime(integer $ReplicationDelayTime) 设置延迟复制时间。
+ * @method integer getReplicationDelayTime() 获取延迟复制时间。单位：秒，范围：1 - 259200秒，不传此参数表示不开启实例延迟复制。
+ * @method void setReplicationDelayTime(integer $ReplicationDelayTime) 设置延迟复制时间。单位：秒，范围：1 - 259200秒，不传此参数表示不开启实例延迟复制。
  */
 class RoGroupAttr extends AbstractModel
 {
@@ -41,7 +45,8 @@ class RoGroupAttr extends AbstractModel
     public $RoGroupName;
 
     /**
-     * @var integer RO 实例最大延迟阈值。单位为秒，最小值为 1。注意，RO 组必须设置了开启实例延迟剔除策略，该值才有效。
+     * @var integer RO 实例最大延迟阈值。单位为秒，最小值为 1。范围：[1,10000]，整数。
+注意：RO 组必须设置了开启实例延迟剔除策略，该值才有效。
      */
     public $RoMaxDelayTime;
 
@@ -51,7 +56,8 @@ class RoGroupAttr extends AbstractModel
     public $RoOfflineDelay;
 
     /**
-     * @var integer 最少保留实例数。可设置为小于或等于该 RO 组下 RO 实例个数的任意值。注意，若设置值大于 RO 实例数量将不做剔除；若设置为 0，所有实例延迟超限都会被剔除。
+     * @var integer 最少保留实例数。可设置为小于或等于该 RO 组下 RO 实例个数的任意值。默认值为1。
+注意：若设置值大于 RO 实例数量将不做剔除；若设置为 0，所有实例延迟超限都会被剔除。
      */
     public $MinRoInGroup;
 
@@ -61,17 +67,19 @@ class RoGroupAttr extends AbstractModel
     public $WeightMode;
 
     /**
-     * @var integer 延迟复制时间。
+     * @var integer 延迟复制时间。单位：秒，范围：1 - 259200秒，不传此参数表示不开启实例延迟复制。
      */
     public $ReplicationDelayTime;
 
     /**
      * @param string $RoGroupName RO 组名称。
-     * @param integer $RoMaxDelayTime RO 实例最大延迟阈值。单位为秒，最小值为 1。注意，RO 组必须设置了开启实例延迟剔除策略，该值才有效。
+     * @param integer $RoMaxDelayTime RO 实例最大延迟阈值。单位为秒，最小值为 1。范围：[1,10000]，整数。
+注意：RO 组必须设置了开启实例延迟剔除策略，该值才有效。
      * @param integer $RoOfflineDelay 是否开启实例延迟剔除。支持的值包括：1 - 开启；0 - 不开启。注意，若设置开启实例延迟剔除，则必须设置延迟阈值（RoMaxDelayTime）参数。
-     * @param integer $MinRoInGroup 最少保留实例数。可设置为小于或等于该 RO 组下 RO 实例个数的任意值。注意，若设置值大于 RO 实例数量将不做剔除；若设置为 0，所有实例延迟超限都会被剔除。
+     * @param integer $MinRoInGroup 最少保留实例数。可设置为小于或等于该 RO 组下 RO 实例个数的任意值。默认值为1。
+注意：若设置值大于 RO 实例数量将不做剔除；若设置为 0，所有实例延迟超限都会被剔除。
      * @param string $WeightMode 权重模式。支持值包括："system" - 系统自动分配； "custom" - 用户自定义设置。注意，若设置 "custom" 模式，则必须设置 RO 实例权重配置（RoWeightValues）参数。
-     * @param integer $ReplicationDelayTime 延迟复制时间。
+     * @param integer $ReplicationDelayTime 延迟复制时间。单位：秒，范围：1 - 259200秒，不传此参数表示不开启实例延迟复制。
      */
     function __construct()
     {

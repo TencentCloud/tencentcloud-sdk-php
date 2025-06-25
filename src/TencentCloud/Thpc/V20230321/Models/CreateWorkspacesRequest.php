@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVirtualPrivateCloud(SpaceVirtualPrivateCloud $VirtualPrivateCloud) 设置私有网络相关信息
  * @method SpaceInternetAccessible getInternetAccessible() 获取公网带宽相关信息设置
  * @method void setInternetAccessible(SpaceInternetAccessible $InternetAccessible) 设置公网带宽相关信息设置
- * @method integer getSpaceCount() 获取购买工作空间数量
- * @method void setSpaceCount(integer $SpaceCount) 设置购买工作空间数量
+ * @method integer getSpaceCount() 获取购买工作空间实例的数量
+ * @method void setSpaceCount(integer $SpaceCount) 设置购买工作空间实例的数量
  * @method string getSpaceName() 获取工作空间显示名称
  * @method void setSpaceName(string $SpaceName) 设置工作空间显示名称
  * @method LoginSettings getLoginSettings() 获取工作空间登陆设置
@@ -118,7 +118,7 @@ class CreateWorkspacesRequest extends AbstractModel
     public $InternetAccessible;
 
     /**
-     * @var integer 购买工作空间数量
+     * @var integer 购买工作空间实例的数量
      */
     public $SpaceCount;
 
@@ -188,7 +188,7 @@ class CreateWorkspacesRequest extends AbstractModel
      * @param array $DataDisks 工作空间数据盘信息
      * @param SpaceVirtualPrivateCloud $VirtualPrivateCloud 私有网络相关信息
      * @param SpaceInternetAccessible $InternetAccessible 公网带宽相关信息设置
-     * @param integer $SpaceCount 购买工作空间数量
+     * @param integer $SpaceCount 购买工作空间实例的数量
      * @param string $SpaceName 工作空间显示名称
      * @param LoginSettings $LoginSettings 工作空间登陆设置
      * @param array $SecurityGroupIds 工作空间所属安全组

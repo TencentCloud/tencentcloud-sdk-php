@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ResetConsumerGroupOffset请求参数结构体
  *
- * @method string getInstanceId() 获取集群ID
- * @method void setInstanceId(string $InstanceId) 设置集群ID
- * @method string getTopic() 获取主题名称
- * @method void setTopic(string $Topic) 设置主题名称
- * @method integer getResetTimestamp() 获取重置位点时间（单位：毫秒）-1表示重置到最新位点
- * @method void setResetTimestamp(integer $ResetTimestamp) 设置重置位点时间（单位：毫秒）-1表示重置到最新位点
- * @method string getConsumerGroup() 获取消费组名称
- * @method void setConsumerGroup(string $ConsumerGroup) 设置消费组名称
+ * @method string getInstanceId() 获取腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
+ * @method void setInstanceId(string $InstanceId) 设置腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
+ * @method string getTopic() 获取主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口或控制台获得。
+ * @method void setTopic(string $Topic) 设置主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口或控制台获得。
+ * @method integer getResetTimestamp() 获取重置位点的时间戳（单位：毫秒），指定为 -1 时表示重置到最新位点
+ * @method void setResetTimestamp(integer $ResetTimestamp) 设置重置位点的时间戳（单位：毫秒），指定为 -1 时表示重置到最新位点
+ * @method string getConsumerGroup() 获取消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口或控制台获得。
+ * @method void setConsumerGroup(string $ConsumerGroup) 设置消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口或控制台获得。
  */
 class ResetConsumerGroupOffsetRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
      */
     public $InstanceId;
 
     /**
-     * @var string 主题名称
+     * @var string 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口或控制台获得。
      */
     public $Topic;
 
     /**
-     * @var integer 重置位点时间（单位：毫秒）-1表示重置到最新位点
+     * @var integer 重置位点的时间戳（单位：毫秒），指定为 -1 时表示重置到最新位点
      */
     public $ResetTimestamp;
 
     /**
-     * @var string 消费组名称
+     * @var string 消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口或控制台获得。
      */
     public $ConsumerGroup;
 
     /**
-     * @param string $InstanceId 集群ID
-     * @param string $Topic 主题名称
-     * @param integer $ResetTimestamp 重置位点时间（单位：毫秒）-1表示重置到最新位点
-     * @param string $ConsumerGroup 消费组名称
+     * @param string $InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
+     * @param string $Topic 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口或控制台获得。
+     * @param integer $ResetTimestamp 重置位点的时间戳（单位：毫秒），指定为 -1 时表示重置到最新位点
+     * @param string $ConsumerGroup 消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口或控制台获得。
      */
     function __construct()
     {

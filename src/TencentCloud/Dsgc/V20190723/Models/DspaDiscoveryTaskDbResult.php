@@ -50,6 +50,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSensitiveField(integer $SensitiveField) 设置敏感字段数
  * @method integer getTotalField() 获取总的字段数
  * @method void setTotalField(integer $TotalField) 设置总的字段数
+ * @method string getTaskInstanceId() 获取任务实例id
+ * @method void setTaskInstanceId(string $TaskInstanceId) 设置任务实例id
+ * @method string getStartTime() 获取开始时间
+ * @method void setStartTime(string $StartTime) 设置开始时间
+ * @method string getScanRange() 获取扫描范围（full:全量扫描 incre：变更扫描）
+ * @method void setScanRange(string $ScanRange) 设置扫描范围（full:全量扫描 incre：变更扫描）
  */
 class DspaDiscoveryTaskDbResult extends AbstractModel
 {
@@ -129,6 +135,21 @@ class DspaDiscoveryTaskDbResult extends AbstractModel
     public $TotalField;
 
     /**
+     * @var string 任务实例id
+     */
+    public $TaskInstanceId;
+
+    /**
+     * @var string 开始时间
+     */
+    public $StartTime;
+
+    /**
+     * @var string 扫描范围（full:全量扫描 incre：变更扫描）
+     */
+    public $ScanRange;
+
+    /**
      * @param integer $DbResultId 扫描数据库结果ID
      * @param integer $TaskId 任务ID
      * @param string $TaskName 任务名称
@@ -144,6 +165,9 @@ class DspaDiscoveryTaskDbResult extends AbstractModel
      * @param string $ResourceRegion 资源所在地域
      * @param integer $SensitiveField 敏感字段数
      * @param integer $TotalField 总的字段数
+     * @param string $TaskInstanceId 任务实例id
+     * @param string $StartTime 开始时间
+     * @param string $ScanRange 扫描范围（full:全量扫描 incre：变更扫描）
      */
     function __construct()
     {
@@ -216,6 +240,18 @@ class DspaDiscoveryTaskDbResult extends AbstractModel
 
         if (array_key_exists("TotalField",$param) and $param["TotalField"] !== null) {
             $this->TotalField = $param["TotalField"];
+        }
+
+        if (array_key_exists("TaskInstanceId",$param) and $param["TaskInstanceId"] !== null) {
+            $this->TaskInstanceId = $param["TaskInstanceId"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("ScanRange",$param) and $param["ScanRange"] !== null) {
+            $this->ScanRange = $param["ScanRange"];
         }
     }
 }

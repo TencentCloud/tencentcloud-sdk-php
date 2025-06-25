@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSuccessFixCount(integer $SuccessFixCount) 设置全网修复成功次数, 不支持自动修复的漏洞默认返回0
  * @method integer getFixSwitch() 获取修复是否支持：0-windows/linux均不支持修复 ;1-windows/linux 均支持修复 ;2-仅linux支持修复;3-仅windows支持修复
  * @method void setFixSwitch(integer $FixSwitch) 设置修复是否支持：0-windows/linux均不支持修复 ;1-windows/linux 均支持修复 ;2-仅linux支持修复;3-仅windows支持修复
+ * @method integer getSupportDefence() 获取是否支持防御： 0-不支持 1-支持
+ * @method void setSupportDefence(integer $SupportDefence) 设置是否支持防御： 0-不支持 1-支持
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -145,6 +147,11 @@ class DescribeVulInfoCvssResponse extends AbstractModel
     public $FixSwitch;
 
     /**
+     * @var integer 是否支持防御： 0-不支持 1-支持
+     */
+    public $SupportDefence;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -167,6 +174,7 @@ class DescribeVulInfoCvssResponse extends AbstractModel
      * @param integer $DefenseAttackCount 已防御的攻击次数
      * @param integer $SuccessFixCount 全网修复成功次数, 不支持自动修复的漏洞默认返回0
      * @param integer $FixSwitch 修复是否支持：0-windows/linux均不支持修复 ;1-windows/linux 均支持修复 ;2-仅linux支持修复;3-仅windows支持修复
+     * @param integer $SupportDefence 是否支持防御： 0-不支持 1-支持
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -248,6 +256,10 @@ class DescribeVulInfoCvssResponse extends AbstractModel
 
         if (array_key_exists("FixSwitch",$param) and $param["FixSwitch"] !== null) {
             $this->FixSwitch = $param["FixSwitch"];
+        }
+
+        if (array_key_exists("SupportDefence",$param) and $param["SupportDefence"] !== null) {
+            $this->SupportDefence = $param["SupportDefence"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProjectSecurityGroups请求参数结构体
  *
- * @method integer getProjectId() 获取项目ID。
- * @method void setProjectId(integer $ProjectId) 设置项目ID。
+ * @method integer getProjectId() 获取项目 ID。可通过 [DescribeProjects](https://cloud.tencent.com/document/api/651/78725) 接口获取。
+ * @method void setProjectId(integer $ProjectId) 设置项目 ID。可通过 [DescribeProjects](https://cloud.tencent.com/document/api/651/78725) 接口获取。
  */
 class DescribeProjectSecurityGroupsRequest extends AbstractModel
 {
     /**
-     * @var integer 项目ID。
+     * @var integer 项目 ID。可通过 [DescribeProjects](https://cloud.tencent.com/document/api/651/78725) 接口获取。
      */
     public $ProjectId;
 
     /**
-     * @param integer $ProjectId 项目ID。
+     * @param integer $ProjectId 项目 ID。可通过 [DescribeProjects](https://cloud.tencent.com/document/api/651/78725) 接口获取。
      */
     function __construct()
     {

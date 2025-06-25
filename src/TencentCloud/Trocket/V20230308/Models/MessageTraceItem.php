@@ -20,9 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 消息轨迹
  *
- * @method string getStage() 获取步骤
+ * @method string getStage() 获取消息处理阶段，枚举值如下：
+
+- produce：消息生产
+
+- persist：消息存储
+
+- consume：消息消费
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStage(string $Stage) 设置步骤
+ * @method void setStage(string $Stage) 设置消息处理阶段，枚举值如下：
+
+- produce：消息生产
+
+- persist：消息存储
+
+- consume：消息消费
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getData() 获取轨迹详情
 注意：此字段可能返回 null，表示取不到有效值。
@@ -32,7 +44,13 @@ use TencentCloud\Common\AbstractModel;
 class MessageTraceItem extends AbstractModel
 {
     /**
-     * @var string 步骤
+     * @var string 消息处理阶段，枚举值如下：
+
+- produce：消息生产
+
+- persist：消息存储
+
+- consume：消息消费
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Stage;
@@ -44,7 +62,13 @@ class MessageTraceItem extends AbstractModel
     public $Data;
 
     /**
-     * @param string $Stage 步骤
+     * @param string $Stage 消息处理阶段，枚举值如下：
+
+- produce：消息生产
+
+- persist：消息存储
+
+- consume：消息消费
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Data 轨迹详情
 注意：此字段可能返回 null，表示取不到有效值。

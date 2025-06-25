@@ -29,6 +29,7 @@ use TencentCloud\Bh\V20230418\Models as Models;
  * @method Models\BindDeviceAccountPasswordResponse BindDeviceAccountPassword(Models\BindDeviceAccountPasswordRequest $req) 绑定主机账号密码
  * @method Models\BindDeviceAccountPrivateKeyResponse BindDeviceAccountPrivateKey(Models\BindDeviceAccountPrivateKeyRequest $req) 绑定主机账号私钥
  * @method Models\BindDeviceResourceResponse BindDeviceResource(Models\BindDeviceResourceRequest $req) 修改资产绑定的堡垒机服务
+ * @method Models\CheckLDAPConnectionResponse CheckLDAPConnection(Models\CheckLDAPConnectionRequest $req) 测试LDAP连接
  * @method Models\CreateAccessWhiteListRuleResponse CreateAccessWhiteListRule(Models\CreateAccessWhiteListRuleRequest $req) 添加访问白名单规则
  * @method Models\CreateAclResponse CreateAcl(Models\CreateAclRequest $req) 新建访问权限
  * @method Models\CreateAssetSyncJobResponse CreateAssetSyncJob(Models\CreateAssetSyncJobRequest $req) 创建手工资产同步任务
@@ -64,6 +65,7 @@ use TencentCloud\Bh\V20230418\Models as Models;
  * @method Models\DescribeDeviceGroupsResponse DescribeDeviceGroups(Models\DescribeDeviceGroupsRequest $req) 查询资产组列表
  * @method Models\DescribeDevicesResponse DescribeDevices(Models\DescribeDevicesRequest $req) 查询资产列表
  * @method Models\DescribeDomainsResponse DescribeDomains(Models\DescribeDomainsRequest $req) 查询网络域
+ * @method Models\DescribeLDAPUnitSetResponse DescribeLDAPUnitSet(Models\DescribeLDAPUnitSetRequest $req) 获取LDAP ou 列表
  * @method Models\DescribeLoginEventResponse DescribeLoginEvent(Models\DescribeLoginEventRequest $req) 查询登录日志
  * @method Models\DescribeOperationEventResponse DescribeOperationEvent(Models\DescribeOperationEventRequest $req) 查询操作日志
  * @method Models\DescribeOperationTaskResponse DescribeOperationTask(Models\DescribeOperationTaskRequest $req) 获取运维任务列表
@@ -77,11 +79,13 @@ use TencentCloud\Bh\V20230418\Models as Models;
  * @method Models\ModifyCmdTemplateResponse ModifyCmdTemplate(Models\ModifyCmdTemplateRequest $req) 修改高危命令模板
  * @method Models\ModifyDeviceResponse ModifyDevice(Models\ModifyDeviceRequest $req) 修改资产信息
  * @method Models\ModifyDeviceGroupResponse ModifyDeviceGroup(Models\ModifyDeviceGroupRequest $req) 修改资产组
+ * @method Models\ModifyLDAPSettingResponse ModifyLDAPSetting(Models\ModifyLDAPSettingRequest $req) 修改LDAP配置信息
  * @method Models\ModifyOAuthSettingResponse ModifyOAuthSetting(Models\ModifyOAuthSettingRequest $req) 设置OAuth认证参数
  * @method Models\ModifyOperationTaskResponse ModifyOperationTask(Models\ModifyOperationTaskRequest $req) 修改运维任务
  * @method Models\ModifyResourceResponse ModifyResource(Models\ModifyResourceRequest $req) 资源变配
  * @method Models\ModifyUserResponse ModifyUser(Models\ModifyUserRequest $req) 修改用户信息
  * @method Models\ModifyUserGroupResponse ModifyUserGroup(Models\ModifyUserGroupRequest $req) 修改用户组
+ * @method Models\ReplaySessionResponse ReplaySession(Models\ReplaySessionRequest $req) 会话回放
  * @method Models\ResetDeviceAccountPasswordResponse ResetDeviceAccountPassword(Models\ResetDeviceAccountPasswordRequest $req) 清除设备账号绑定密码
  * @method Models\ResetDeviceAccountPrivateKeyResponse ResetDeviceAccountPrivateKey(Models\ResetDeviceAccountPrivateKeyRequest $req) 清除设备账号绑定的密钥
  * @method Models\ResetUserResponse ResetUser(Models\ResetUserRequest $req) 重置用户
@@ -96,6 +100,8 @@ use TencentCloud\Bh\V20230418\Models as Models;
  * @method Models\SearchSessionCommandResponse SearchSessionCommand(Models\SearchSessionCommandRequest $req) 命令检索
  * @method Models\SearchSubtaskResultByIdResponse SearchSubtaskResultById(Models\SearchSubtaskResultByIdRequest $req) 查询运维子任务执行结果
  * @method Models\SearchTaskResultResponse SearchTaskResult(Models\SearchTaskResultRequest $req) 搜索运维任务执行结果
+ * @method Models\SetLDAPSyncFlagResponse SetLDAPSyncFlag(Models\SetLDAPSyncFlagRequest $req) 设置LDAP 立即同步标记
+ * @method Models\UnlockUserResponse UnlockUser(Models\UnlockUserRequest $req) 解锁用户
  */
 
 class BhClient extends AbstractClient

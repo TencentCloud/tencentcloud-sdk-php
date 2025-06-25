@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCdbProxy请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getUniqVpcId() 获取私有网络ID
- * @method void setUniqVpcId(string $UniqVpcId) 设置私有网络ID
- * @method string getUniqSubnetId() 获取私有子网ID
- * @method void setUniqSubnetId(string $UniqSubnetId) 设置私有子网ID
+ * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+ * @method string getUniqVpcId() 获取私有网络 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+ * @method void setUniqVpcId(string $UniqVpcId) 设置私有网络 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+ * @method string getUniqSubnetId() 获取私有子网 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+ * @method void setUniqSubnetId(string $UniqSubnetId) 设置私有子网 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
  * @method array getProxyNodeCustom() 获取节点规格配置。
 示例中参数说明：
 NodeCount：节点个数。
@@ -60,17 +60,17 @@ Mem：单个代理节点内存数（单位：MB）。
 class CreateCdbProxyRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public $InstanceId;
 
     /**
-     * @var string 私有网络ID
+     * @var string 私有网络 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public $UniqVpcId;
 
     /**
-     * @var string 私有子网ID
+     * @var string 私有子网 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public $UniqSubnetId;
 
@@ -110,9 +110,9 @@ Mem：单个代理节点内存数（单位：MB）。
     public $ProxyVersion;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $UniqVpcId 私有网络ID
-     * @param string $UniqSubnetId 私有子网ID
+     * @param string $InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @param string $UniqVpcId 私有网络 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @param string $UniqSubnetId 私有子网 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      * @param array $ProxyNodeCustom 节点规格配置。
 示例中参数说明：
 NodeCount：节点个数。

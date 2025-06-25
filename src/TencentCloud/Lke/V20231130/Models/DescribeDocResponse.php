@@ -70,6 +70,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCateBizId(string $CateBizId) 设置分类ID
  * @method boolean getIsDisabled() 获取文档是否停用，false:未停用，true:已停用
  * @method void setIsDisabled(boolean $IsDisabled) 设置文档是否停用，false:未停用，true:已停用
+ * @method boolean getIsDownload() 获取是否支持下载
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsDownload(boolean $IsDownload) 设置是否支持下载
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -201,6 +205,12 @@ class DescribeDocResponse extends AbstractModel
     public $IsDisabled;
 
     /**
+     * @var boolean 是否支持下载
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsDownload;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -231,6 +241,8 @@ class DescribeDocResponse extends AbstractModel
      * @param array $AttrLabels 标签
      * @param string $CateBizId 分类ID
      * @param boolean $IsDisabled 文档是否停用，false:未停用，true:已停用
+     * @param boolean $IsDownload 是否支持下载
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -349,6 +361,10 @@ class DescribeDocResponse extends AbstractModel
 
         if (array_key_exists("IsDisabled",$param) and $param["IsDisabled"] !== null) {
             $this->IsDisabled = $param["IsDisabled"];
+        }
+
+        if (array_key_exists("IsDownload",$param) and $param["IsDownload"] !== null) {
+            $this->IsDownload = $param["IsDownload"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

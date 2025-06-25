@@ -20,26 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 数据库账号信息
  *
- * @method string getUser() 获取新账户的名称
- * @method void setUser(string $User) 设置新账户的名称
- * @method string getHost() 获取新账户的域名
- * @method void setHost(string $Host) 设置新账户的域名
+ * @method string getUser() 获取账号名，可输入1 - 32个字符。
+ * @method void setUser(string $User) 设置账号名，可输入1 - 32个字符。
+ * @method string getHost() 获取账号的主机。
+说明：
+1. IP 形式，支持填入%。
+2. 多个主机以分隔符分隔，分隔符支持;,|换行符和空格。
+ * @method void setHost(string $Host) 设置账号的主机。
+说明：
+1. IP 形式，支持填入%。
+2. 多个主机以分隔符分隔，分隔符支持;,|换行符和空格。
  */
 class Account extends AbstractModel
 {
     /**
-     * @var string 新账户的名称
+     * @var string 账号名，可输入1 - 32个字符。
      */
     public $User;
 
     /**
-     * @var string 新账户的域名
+     * @var string 账号的主机。
+说明：
+1. IP 形式，支持填入%。
+2. 多个主机以分隔符分隔，分隔符支持;,|换行符和空格。
      */
     public $Host;
 
     /**
-     * @param string $User 新账户的名称
-     * @param string $Host 新账户的域名
+     * @param string $User 账号名，可输入1 - 32个字符。
+     * @param string $Host 账号的主机。
+说明：
+1. IP 形式，支持填入%。
+2. 多个主机以分隔符分隔，分隔符支持;,|换行符和空格。
      */
     function __construct()
     {

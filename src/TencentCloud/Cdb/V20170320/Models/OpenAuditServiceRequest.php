@@ -20,60 +20,78 @@ use TencentCloud\Common\AbstractModel;
 /**
  * OpenAuditService请求参数结构体
  *
- * @method string getInstanceId() 获取CDB实例ID
- * @method void setInstanceId(string $InstanceId) 设置CDB实例ID
+ * @method string getInstanceId() 获取CDB 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置CDB 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
  * @method integer getLogExpireDay() 获取审计日志保存时长。支持值包括：
-7 - 一周
+7 - 一周；
 30 - 一个月；
 90 - 三个月；
 180 - 六个月；
 365 - 一年；
 1095 - 三年；
-1825 - 五年；
+1825 - 五年。
  * @method void setLogExpireDay(integer $LogExpireDay) 设置审计日志保存时长。支持值包括：
-7 - 一周
+7 - 一周；
 30 - 一个月；
 90 - 三个月；
 180 - 六个月；
 365 - 一年；
 1095 - 三年；
-1825 - 五年；
- * @method integer getHighLogExpireDay() 获取高频审计日志保存时长。支持值包括：
-7 - 一周
+1825 - 五年。
+ * @method integer getHighLogExpireDay() 获取高频审计日志保存时长。默认值为7，此项取值需小于等于 LogExpireDay，支持值包括：
+3 - 3天；
+7 - 一周；
 30 - 一个月；
- * @method void setHighLogExpireDay(integer $HighLogExpireDay) 设置高频审计日志保存时长。支持值包括：
-7 - 一周
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。
+ * @method void setHighLogExpireDay(integer $HighLogExpireDay) 设置高频审计日志保存时长。默认值为7，此项取值需小于等于 LogExpireDay，支持值包括：
+3 - 3天；
+7 - 一周；
 30 - 一个月；
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。
  * @method array getAuditRuleFilters() 获取审计规则（该参数已废弃，不再生效）。
  * @method void setAuditRuleFilters(array $AuditRuleFilters) 设置审计规则（该参数已废弃，不再生效）。
- * @method array getRuleTemplateIds() 获取规则模板ID。同AuditRuleFilters都不填是全审计。
- * @method void setRuleTemplateIds(array $RuleTemplateIds) 设置规则模板ID。同AuditRuleFilters都不填是全审计。
- * @method boolean getAuditAll() 获取审计类型。true-全审计；默认false-规则审计。
- * @method void setAuditAll(boolean $AuditAll) 设置审计类型。true-全审计；默认false-规则审计。
+ * @method array getRuleTemplateIds() 获取规则模板 ID。
+ * @method void setRuleTemplateIds(array $RuleTemplateIds) 设置规则模板 ID。
+ * @method boolean getAuditAll() 获取审计类型。true - 全审计；默认 false - 规则审计。
+ * @method void setAuditAll(boolean $AuditAll) 设置审计类型。true - 全审计；默认 false - 规则审计。
  */
 class OpenAuditServiceRequest extends AbstractModel
 {
     /**
-     * @var string CDB实例ID
+     * @var string CDB 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public $InstanceId;
 
     /**
      * @var integer 审计日志保存时长。支持值包括：
-7 - 一周
+7 - 一周；
 30 - 一个月；
 90 - 三个月；
 180 - 六个月；
 365 - 一年；
 1095 - 三年；
-1825 - 五年；
+1825 - 五年。
      */
     public $LogExpireDay;
 
     /**
-     * @var integer 高频审计日志保存时长。支持值包括：
-7 - 一周
+     * @var integer 高频审计日志保存时长。默认值为7，此项取值需小于等于 LogExpireDay，支持值包括：
+3 - 3天；
+7 - 一周；
 30 - 一个月；
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。
      */
     public $HighLogExpireDay;
 
@@ -84,31 +102,37 @@ class OpenAuditServiceRequest extends AbstractModel
     public $AuditRuleFilters;
 
     /**
-     * @var array 规则模板ID。同AuditRuleFilters都不填是全审计。
+     * @var array 规则模板 ID。
      */
     public $RuleTemplateIds;
 
     /**
-     * @var boolean 审计类型。true-全审计；默认false-规则审计。
+     * @var boolean 审计类型。true - 全审计；默认 false - 规则审计。
      */
     public $AuditAll;
 
     /**
-     * @param string $InstanceId CDB实例ID
+     * @param string $InstanceId CDB 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      * @param integer $LogExpireDay 审计日志保存时长。支持值包括：
-7 - 一周
+7 - 一周；
 30 - 一个月；
 90 - 三个月；
 180 - 六个月；
 365 - 一年；
 1095 - 三年；
-1825 - 五年；
-     * @param integer $HighLogExpireDay 高频审计日志保存时长。支持值包括：
-7 - 一周
+1825 - 五年。
+     * @param integer $HighLogExpireDay 高频审计日志保存时长。默认值为7，此项取值需小于等于 LogExpireDay，支持值包括：
+3 - 3天；
+7 - 一周；
 30 - 一个月；
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。
      * @param array $AuditRuleFilters 审计规则（该参数已废弃，不再生效）。
-     * @param array $RuleTemplateIds 规则模板ID。同AuditRuleFilters都不填是全审计。
-     * @param boolean $AuditAll 审计类型。true-全审计；默认false-规则审计。
+     * @param array $RuleTemplateIds 规则模板 ID。
+     * @param boolean $AuditAll 审计类型。true - 全审计；默认 false - 规则审计。
      */
     function __construct()
     {

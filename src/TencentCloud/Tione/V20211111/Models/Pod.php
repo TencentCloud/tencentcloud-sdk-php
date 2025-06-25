@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartScheduleTime(string $StartScheduleTime) 设置实例的开始调度时间
  * @method string getMessage() 获取实例状态的补充信息
  * @method void setMessage(string $Message) 设置实例状态的补充信息
+ * @method string getNodeIP() 获取当前实例所在的节点 IP
+ * @method void setNodeIP(string $NodeIP) 设置当前实例所在的节点 IP
  */
 class Pod extends AbstractModel
 {
@@ -136,6 +138,11 @@ class Pod extends AbstractModel
     public $Message;
 
     /**
+     * @var string 当前实例所在的节点 IP
+     */
+    public $NodeIP;
+
+    /**
      * @param string $Name pod名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uid pod的唯一id
@@ -157,6 +164,7 @@ class Pod extends AbstractModel
      * @param string $Status 实例的状态信息
      * @param string $StartScheduleTime 实例的开始调度时间
      * @param string $Message 实例状态的补充信息
+     * @param string $NodeIP 当前实例所在的节点 IP
      */
     function __construct()
     {
@@ -224,6 +232,10 @@ class Pod extends AbstractModel
 
         if (array_key_exists("Message",$param) and $param["Message"] !== null) {
             $this->Message = $param["Message"];
+        }
+
+        if (array_key_exists("NodeIP",$param) and $param["NodeIP"] !== null) {
+            $this->NodeIP = $param["NodeIP"];
         }
     }
 }

@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AdjustCdbProxy请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getProxyGroupId() 获取代理组ID
- * @method void setProxyGroupId(string $ProxyGroupId) 设置代理组ID
+ * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+ * @method string getProxyGroupId() 获取代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+ * @method void setProxyGroupId(string $ProxyGroupId) 设置代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
  * @method array getProxyNodeCustom() 获取节点规格配置
 备注：数据库代理支持的节点规格为：2C4000MB、4C8000MB、8C16000MB。
 示例中参数说明：
@@ -48,12 +48,12 @@ Mem：单个代理节点内存数（单位：MB）
 class AdjustCdbProxyRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public $InstanceId;
 
     /**
-     * @var string 代理组ID
+     * @var string 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
      */
     public $ProxyGroupId;
 
@@ -80,8 +80,8 @@ Mem：单个代理节点内存数（单位：MB）
     public $UpgradeTime;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $ProxyGroupId 代理组ID
+     * @param string $InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @param string $ProxyGroupId 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
      * @param array $ProxyNodeCustom 节点规格配置
 备注：数据库代理支持的节点规格为：2C4000MB、4C8000MB、8C16000MB。
 示例中参数说明：

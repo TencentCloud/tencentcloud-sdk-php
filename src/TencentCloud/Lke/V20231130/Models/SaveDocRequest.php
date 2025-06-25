@@ -74,6 +74,8 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
  * @method void setOpt(integer $Opt) 设置文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档） 默认为1  <br> 请注意，opt=1的时候请从腾讯云智能体开发平台页面下载excel模板
  * @method string getCateBizId() 获取分类ID
  * @method void setCateBizId(string $CateBizId) 设置分类ID
+ * @method boolean getIsDownload() 获取是否可下载，IsRefer为true并且ReferUrlType为0时，该值才有意义
+ * @method void setIsDownload(boolean $IsDownload) 设置是否可下载，IsRefer为true并且ReferUrlType为0时，该值才有意义
  */
 class SaveDocRequest extends AbstractModel
 {
@@ -173,6 +175,11 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
     public $CateBizId;
 
     /**
+     * @var boolean 是否可下载，IsRefer为true并且ReferUrlType为0时，该值才有意义
+     */
+    public $IsDownload;
+
+    /**
      * @param string $BotBizId 应用ID
      * @param string $FileName 文件名
      * @param string $FileType 文档支持下面类型
@@ -200,6 +207,7 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
      * @param boolean $IsRefer 是否引用链接
      * @param integer $Opt 文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档） 默认为1  <br> 请注意，opt=1的时候请从腾讯云智能体开发平台页面下载excel模板
      * @param string $CateBizId 分类ID
+     * @param boolean $IsDownload 是否可下载，IsRefer为true并且ReferUrlType为0时，该值才有意义
      */
     function __construct()
     {
@@ -285,6 +293,10 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
 
         if (array_key_exists("CateBizId",$param) and $param["CateBizId"] !== null) {
             $this->CateBizId = $param["CateBizId"];
+        }
+
+        if (array_key_exists("IsDownload",$param) and $param["IsDownload"] !== null) {
+            $this->IsDownload = $param["IsDownload"];
         }
     }
 }

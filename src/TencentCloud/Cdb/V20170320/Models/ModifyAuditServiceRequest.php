@@ -20,33 +20,78 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAuditService请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID。
- * @method void setInstanceId(string $InstanceId) 设置实例ID。
- * @method integer getLogExpireDay() 获取日志保留时长。
- * @method void setLogExpireDay(integer $LogExpireDay) 设置日志保留时长。
- * @method integer getHighLogExpireDay() 获取高频日志保留时长。
- * @method void setHighLogExpireDay(integer $HighLogExpireDay) 设置高频日志保留时长。
+ * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+ * @method integer getLogExpireDay() 获取日志保留时长。支持值包括：
+7 - 一周；
+30 - 一个月；
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。
+ * @method void setLogExpireDay(integer $LogExpireDay) 设置日志保留时长。支持值包括：
+7 - 一周；
+30 - 一个月；
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。
+ * @method integer getHighLogExpireDay() 获取高频日志保留时长。默认值为7，此项取值需小于等于 LogExpireDay，支持值包括：
+3 - 3天；
+7 - 一周；
+30 - 一个月；
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。
+ * @method void setHighLogExpireDay(integer $HighLogExpireDay) 设置高频日志保留时长。默认值为7，此项取值需小于等于 LogExpireDay，支持值包括：
+3 - 3天；
+7 - 一周；
+30 - 一个月；
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。
  * @method boolean getAuditAll() 获取修改实例审计规则为全审计。
  * @method void setAuditAll(boolean $AuditAll) 设置修改实例审计规则为全审计。
  * @method array getAuditRuleFilters() 获取废弃。
  * @method void setAuditRuleFilters(array $AuditRuleFilters) 设置废弃。
- * @method array getRuleTemplateIds() 获取规则模板ID。
- * @method void setRuleTemplateIds(array $RuleTemplateIds) 设置规则模板ID。
+ * @method array getRuleTemplateIds() 获取规则模板 ID。可通过 [DescribeAuditRuleTemplates](https://cloud.tencent.com/document/api/236/101811) 接口获取。
+ * @method void setRuleTemplateIds(array $RuleTemplateIds) 设置规则模板 ID。可通过 [DescribeAuditRuleTemplates](https://cloud.tencent.com/document/api/236/101811) 接口获取。
  */
 class ModifyAuditServiceRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID。
+     * @var string 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public $InstanceId;
 
     /**
-     * @var integer 日志保留时长。
+     * @var integer 日志保留时长。支持值包括：
+7 - 一周；
+30 - 一个月；
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。
      */
     public $LogExpireDay;
 
     /**
-     * @var integer 高频日志保留时长。
+     * @var integer 高频日志保留时长。默认值为7，此项取值需小于等于 LogExpireDay，支持值包括：
+3 - 3天；
+7 - 一周；
+30 - 一个月；
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。
      */
     public $HighLogExpireDay;
 
@@ -62,17 +107,32 @@ class ModifyAuditServiceRequest extends AbstractModel
     public $AuditRuleFilters;
 
     /**
-     * @var array 规则模板ID。
+     * @var array 规则模板 ID。可通过 [DescribeAuditRuleTemplates](https://cloud.tencent.com/document/api/236/101811) 接口获取。
      */
     public $RuleTemplateIds;
 
     /**
-     * @param string $InstanceId 实例ID。
-     * @param integer $LogExpireDay 日志保留时长。
-     * @param integer $HighLogExpireDay 高频日志保留时长。
+     * @param string $InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @param integer $LogExpireDay 日志保留时长。支持值包括：
+7 - 一周；
+30 - 一个月；
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。
+     * @param integer $HighLogExpireDay 高频日志保留时长。默认值为7，此项取值需小于等于 LogExpireDay，支持值包括：
+3 - 3天；
+7 - 一周；
+30 - 一个月；
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。
      * @param boolean $AuditAll 修改实例审计规则为全审计。
      * @param array $AuditRuleFilters 废弃。
-     * @param array $RuleTemplateIds 规则模板ID。
+     * @param array $RuleTemplateIds 规则模板 ID。可通过 [DescribeAuditRuleTemplates](https://cloud.tencent.com/document/api/236/101811) 接口获取。
      */
     function __construct()
     {

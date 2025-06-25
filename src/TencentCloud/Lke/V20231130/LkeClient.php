@@ -28,6 +28,7 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\ConvertDocumentResponse ConvertDocument(Models\ConvertDocumentRequest $req) 产品规划
 
 接口支持图片和PDF转可编辑word格式文件，将文件中的图片、文本、表格等元素识别，并根据位置进行还原。
+ * @method Models\CreateAgentResponse CreateAgent(Models\CreateAgentRequest $req) 你创建一个Agent
  * @method Models\CreateAppResponse CreateApp(Models\CreateAppRequest $req) 创建知识引擎应用。
  * @method Models\CreateAttributeLabelResponse CreateAttributeLabel(Models\CreateAttributeLabelRequest $req) 创建标签
  * @method Models\CreateCorpResponse CreateCorp(Models\CreateCorpRequest $req) 创建企业
@@ -40,6 +41,7 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\CreateVarResponse CreateVar(Models\CreateVarRequest $req) 创建变量
  * @method Models\CreateWorkflowRunResponse CreateWorkflowRun(Models\CreateWorkflowRunRequest $req) 本接口用来创建工作流的异步运行实例，创建成功后工作流会在后台异步运行，接口返回工作流运行实例ID（WorkflowRunId）等信息。后面可通过调用DescribeWorkflowRun接口查工作流运行的详情。
 注意：工作流的异步运行是基于应用的，需要先把对应的应用配置成“单工作流模式”，并且打开“异步调用”的开关，才能创建成功。
+ * @method Models\DeleteAgentResponse DeleteAgent(Models\DeleteAgentRequest $req) 删除Agent
  * @method Models\DeleteAppResponse DeleteApp(Models\DeleteAppRequest $req) 删除应用
  * @method Models\DeleteAttributeLabelResponse DeleteAttributeLabel(Models\DeleteAttributeLabelRequest $req) 删除属性标签
  * @method Models\DeleteDocResponse DeleteDoc(Models\DeleteDocRequest $req) 删除文档
@@ -50,6 +52,7 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\DeleteSharedKnowledgeResponse DeleteSharedKnowledge(Models\DeleteSharedKnowledgeRequest $req) 删除共享知识库。
  * @method Models\DeleteVarResponse DeleteVar(Models\DeleteVarRequest $req) 删除变量
  * @method Models\DescribeAppResponse DescribeApp(Models\DescribeAppRequest $req) 获取企业下应用详情
+ * @method Models\DescribeAppAgentListResponse DescribeAppAgentList(Models\DescribeAppAgentListRequest $req) 查询指定应用下的Agent列表
  * @method Models\DescribeAttributeLabelResponse DescribeAttributeLabel(Models\DescribeAttributeLabelRequest $req) 查询属性标签详情
  * @method Models\DescribeCallStatsGraphResponse DescribeCallStatsGraph(Models\DescribeCallStatsGraphRequest $req) 接口调用折线图
  * @method Models\DescribeConcurrencyUsageResponse DescribeConcurrencyUsage(Models\DescribeConcurrencyUsageRequest $req) 并发调用响应
@@ -115,6 +118,7 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\ListUnsatisfiedReplyResponse ListUnsatisfiedReply(Models\ListUnsatisfiedReplyRequest $req) 查询不满意回复列表
  * @method Models\ListUsageCallDetailResponse ListUsageCallDetail(Models\ListUsageCallDetailRequest $req) 列表查询单次调用明细
  * @method Models\ListWorkflowRunsResponse ListWorkflowRuns(Models\ListWorkflowRunsRequest $req) 此接口可查询已创建的所有工作流异步运行实例。
+ * @method Models\ModifyAgentResponse ModifyAgent(Models\ModifyAgentRequest $req) 修改Agent信息
  * @method Models\ModifyAppResponse ModifyApp(Models\ModifyAppRequest $req) 修改应用请求结构体
  * @method Models\ModifyAttributeLabelResponse ModifyAttributeLabel(Models\ModifyAttributeLabelRequest $req) 编辑属性标签
  * @method Models\ModifyDocResponse ModifyDoc(Models\ModifyDocRequest $req) 修改文档

@@ -148,6 +148,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTkeClusterId(string $TkeClusterId) 设置资源类型（HardwareResourceType）为pod时，对应的TKE集群id
  * @method array getConfigurableServices() 获取新挂磁盘时可支持配置的服务名称列表
  * @method void setConfigurableServices(array $ConfigurableServices) 设置新挂磁盘时可支持配置的服务名称列表
+ * @method string getNodeMark() 获取节点标注信息，目前只提供给tf平台使用
+ * @method void setNodeMark(string $NodeMark) 设置节点标注信息，目前只提供给tf平台使用
  */
 class NodeHardwareInfo extends AbstractModel
 {
@@ -444,6 +446,11 @@ class NodeHardwareInfo extends AbstractModel
     public $ConfigurableServices;
 
     /**
+     * @var string 节点标注信息，目前只提供给tf平台使用
+     */
+    public $NodeMark;
+
+    /**
      * @param integer $AppId 用户APPID
      * @param string $SerialNo 序列号
      * @param string $OrderNo 机器实例ID
@@ -508,6 +515,7 @@ class NodeHardwareInfo extends AbstractModel
      * @param boolean $TimingResource 是否是定时销毁资源
      * @param string $TkeClusterId 资源类型（HardwareResourceType）为pod时，对应的TKE集群id
      * @param array $ConfigurableServices 新挂磁盘时可支持配置的服务名称列表
+     * @param string $NodeMark 节点标注信息，目前只提供给tf平台使用
      */
     function __construct()
     {
@@ -760,6 +768,10 @@ class NodeHardwareInfo extends AbstractModel
 
         if (array_key_exists("ConfigurableServices",$param) and $param["ConfigurableServices"] !== null) {
             $this->ConfigurableServices = $param["ConfigurableServices"];
+        }
+
+        if (array_key_exists("NodeMark",$param) and $param["NodeMark"] !== null) {
+            $this->NodeMark = $param["NodeMark"];
         }
     }
 }

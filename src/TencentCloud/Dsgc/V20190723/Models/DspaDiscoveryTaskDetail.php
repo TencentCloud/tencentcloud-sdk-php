@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCustomComplianceInfo(array $CustomComplianceInfo) 设置该任务中用户选择的合规组信息列表
  * @method string getTimingStartTime() 获取定时开始时间
  * @method void setTimingStartTime(string $TimingStartTime) 设置定时开始时间
+ * @method string getScanRange() 获取full:全量扫描 incre:变更扫描
+ * @method void setScanRange(string $ScanRange) 设置full:全量扫描 incre:变更扫描
  */
 class DspaDiscoveryTaskDetail extends AbstractModel
 {
@@ -94,6 +96,11 @@ class DspaDiscoveryTaskDetail extends AbstractModel
     public $TimingStartTime;
 
     /**
+     * @var string full:全量扫描 incre:变更扫描
+     */
+    public $ScanRange;
+
+    /**
      * @param string $Name 任务名称
      * @param string $Description 任务描述
      * @param integer $Period 执行周期，0单次 1每天 2每周 3每月
@@ -104,6 +111,7 @@ class DspaDiscoveryTaskDetail extends AbstractModel
      * @param array $DefaultComplianceInfo 当创建任务时，用户打开了通用规则集开关，则该字段就会保存默认合规组信息
      * @param array $CustomComplianceInfo 该任务中用户选择的合规组信息列表
      * @param string $TimingStartTime 定时开始时间
+     * @param string $ScanRange full:全量扫描 incre:变更扫描
      */
     function __construct()
     {
@@ -167,6 +175,10 @@ class DspaDiscoveryTaskDetail extends AbstractModel
 
         if (array_key_exists("TimingStartTime",$param) and $param["TimingStartTime"] !== null) {
             $this->TimingStartTime = $param["TimingStartTime"];
+        }
+
+        if (array_key_exists("ScanRange",$param) and $param["ScanRange"] !== null) {
+            $this->ScanRange = $param["ScanRange"];
         }
     }
 }

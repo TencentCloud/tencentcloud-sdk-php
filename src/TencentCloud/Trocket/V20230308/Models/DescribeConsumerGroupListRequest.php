@@ -20,36 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeConsumerGroupList请求参数结构体
  *
- * @method string getInstanceId() 获取集群ID
- * @method void setInstanceId(string $InstanceId) 设置集群ID
- * @method array getFilters() 获取查询条件列表
- * @method void setFilters(array $Filters) 设置查询条件列表
- * @method integer getOffset() 获取查询起始位置
- * @method void setOffset(integer $Offset) 设置查询起始位置
- * @method integer getLimit() 获取查询结果限制数量
- * @method void setLimit(integer $Limit) 设置查询结果限制数量
+ * @method string getInstanceId() 获取腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
+ * @method void setInstanceId(string $InstanceId) 设置腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
+ * @method array getFilters() 获取过滤查询条件列表，请在引用此参数的API说明中了解使用方法。
+ * @method void setFilters(array $Filters) 设置过滤查询条件列表，请在引用此参数的API说明中了解使用方法。
+ * @method integer getOffset() 获取查询起始位置，默认为0。
+ * @method void setOffset(integer $Offset) 设置查询起始位置，默认为0。
+ * @method integer getLimit() 获取查询结果限制数量，默认20。
+ * @method void setLimit(integer $Limit) 设置查询结果限制数量，默认20。
  * @method string getFromTopic() 获取查询指定主题下的消费组
  * @method void setFromTopic(string $FromTopic) 设置查询指定主题下的消费组
  */
 class DescribeConsumerGroupListRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
      */
     public $InstanceId;
 
     /**
-     * @var array 查询条件列表
+     * @var array 过滤查询条件列表，请在引用此参数的API说明中了解使用方法。
      */
     public $Filters;
 
     /**
-     * @var integer 查询起始位置
+     * @var integer 查询起始位置，默认为0。
      */
     public $Offset;
 
     /**
-     * @var integer 查询结果限制数量
+     * @var integer 查询结果限制数量，默认20。
      */
     public $Limit;
 
@@ -59,10 +59,10 @@ class DescribeConsumerGroupListRequest extends AbstractModel
     public $FromTopic;
 
     /**
-     * @param string $InstanceId 集群ID
-     * @param array $Filters 查询条件列表
-     * @param integer $Offset 查询起始位置
-     * @param integer $Limit 查询结果限制数量
+     * @param string $InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
+     * @param array $Filters 过滤查询条件列表，请在引用此参数的API说明中了解使用方法。
+     * @param integer $Offset 查询起始位置，默认为0。
+     * @param integer $Limit 查询结果限制数量，默认20。
      * @param string $FromTopic 查询指定主题下的消费组
      */
     function __construct()

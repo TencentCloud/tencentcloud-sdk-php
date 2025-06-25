@@ -58,16 +58,16 @@ https：使用https协议回源
  * @method void setIsWebsocket(integer $IsWebsocket) 设置是否开启WebSocket支持。0：关闭1：开启
  * @method integer getLoadBalance() 获取回源负载均衡策略。0：轮询1：IP hash2：加权轮询
  * @method void setLoadBalance(integer $LoadBalance) 设置回源负载均衡策略。0：轮询1：IP hash2：加权轮询
- * @method integer getIsGray() 获取待废弃，可不填。是否开启灰度，0表示不开启灰度。
- * @method void setIsGray(integer $IsGray) 设置待废弃，可不填。是否开启灰度，0表示不开启灰度。
+ * @method integer getIsGray() 获取是否开启灰度，0表示不开启灰度。
+ * @method void setIsGray(integer $IsGray) 设置是否开启灰度，0表示不开启灰度。
  * @method string getEdition() 获取域名所属实例类型
  * @method void setEdition(string $Edition) 设置域名所属实例类型
  * @method array getPorts() 获取端口信息，可通过DescribeDomains接口获取具体参数信息。
  * @method void setPorts(array $Ports) 设置端口信息，可通过DescribeDomains接口获取具体参数信息。
  * @method string getIsKeepAlive() 获取是否开启长连接。0： 短连接1： 长连接
  * @method void setIsKeepAlive(string $IsKeepAlive) 设置是否开启长连接。0： 短连接1： 长连接
- * @method integer getAnycast() 获取待废弃。目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
- * @method void setAnycast(integer $Anycast) 设置待废弃。目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
+ * @method integer getAnycast() 获取目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
+ * @method void setAnycast(integer $Anycast) 设置目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
  * @method array getWeights() 获取回源IP列表各IP的权重，和SrcList一一对应。当且仅当UpstreamType为0，并且SrcList有多个IP，并且LoadBalance为2时需要填写，否则填 []
  * @method void setWeights(array $Weights) 设置回源IP列表各IP的权重，和SrcList一一对应。当且仅当UpstreamType为0，并且SrcList有多个IP，并且LoadBalance为2时需要填写，否则填 []
  * @method integer getActiveCheck() 获取是否开启主动健康检测。0：不开启1：开启
@@ -124,6 +124,8 @@ https：使用https协议回源
  * @method void setUpstreamPolicy(integer $UpstreamPolicy) 设置回源策略，支持负载均衡回源和分流回源两种方式。0：默认值，负载均衡回源；1：分流回源
  * @method array getUpstreamRules() 获取分流回源时生效，分流回源的规则。
  * @method void setUpstreamRules(array $UpstreamRules) 设置分流回源时生效，分流回源的规则。
+ * @method integer getUseCase() 获取业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
+ * @method void setUseCase(integer $UseCase) 设置业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
  */
 class ModifySpartaProtectionRequest extends AbstractModel
 {
@@ -215,7 +217,8 @@ https：使用https协议回源
     public $LoadBalance;
 
     /**
-     * @var integer 待废弃，可不填。是否开启灰度，0表示不开启灰度。
+     * @var integer 是否开启灰度，0表示不开启灰度。
+     * @deprecated
      */
     public $IsGray;
 
@@ -235,7 +238,8 @@ https：使用https协议回源
     public $IsKeepAlive;
 
     /**
-     * @var integer 待废弃。目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
+     * @var integer 目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
+     * @deprecated
      */
     public $Anycast;
 
@@ -364,6 +368,11 @@ https：使用https协议回源
     public $UpstreamRules;
 
     /**
+     * @var integer 业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
+     */
+    public $UseCase;
+
+    /**
      * @param string $Domain 域名
      * @param string $DomainId 必填项。域名唯一ID
      * @param string $InstanceID 必填项。域名所属实例id
@@ -383,11 +392,11 @@ https：使用https协议回源
      * @param integer $IsHttp2 是否开启HTTP2，需要开启HTTPS协议支持。0：关闭1：开启
      * @param integer $IsWebsocket 是否开启WebSocket支持。0：关闭1：开启
      * @param integer $LoadBalance 回源负载均衡策略。0：轮询1：IP hash2：加权轮询
-     * @param integer $IsGray 待废弃，可不填。是否开启灰度，0表示不开启灰度。
+     * @param integer $IsGray 是否开启灰度，0表示不开启灰度。
      * @param string $Edition 域名所属实例类型
      * @param array $Ports 端口信息，可通过DescribeDomains接口获取具体参数信息。
      * @param string $IsKeepAlive 是否开启长连接。0： 短连接1： 长连接
-     * @param integer $Anycast 待废弃。目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
+     * @param integer $Anycast 目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
      * @param array $Weights 回源IP列表各IP的权重，和SrcList一一对应。当且仅当UpstreamType为0，并且SrcList有多个IP，并且LoadBalance为2时需要填写，否则填 []
      * @param integer $ActiveCheck 是否开启主动健康检测。0：不开启1：开启
      * @param integer $TLSVersion TLS版本信息
@@ -416,6 +425,7 @@ https：使用https协议回源
      * @param string $GmSSLId GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
      * @param integer $UpstreamPolicy 回源策略，支持负载均衡回源和分流回源两种方式。0：默认值，负载均衡回源；1：分流回源
      * @param array $UpstreamRules 分流回源时生效，分流回源的规则。
+     * @param integer $UseCase 业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
      */
     function __construct()
     {
@@ -622,6 +632,10 @@ https：使用https协议回源
                 $obj->deserialize($value);
                 array_push($this->UpstreamRules, $obj);
             }
+        }
+
+        if (array_key_exists("UseCase",$param) and $param["UseCase"] !== null) {
+            $this->UseCase = $param["UseCase"];
         }
     }
 }

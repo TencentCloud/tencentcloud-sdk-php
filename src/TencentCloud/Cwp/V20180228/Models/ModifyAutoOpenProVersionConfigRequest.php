@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoRepurchaseRenewSwitch(integer $AutoRepurchaseRenewSwitch) 设置自动加购的订单是否自动续费,默认0 ,0关闭, 1开启
  * @method integer getRepurchaseRenewSwitch() 获取手动购买的订单是否自动续费,默认0, 0关闭 ,1 开启
  * @method void setRepurchaseRenewSwitch(integer $RepurchaseRenewSwitch) 设置手动购买的订单是否自动续费,默认0, 0关闭 ,1 开启
+ * @method integer getAutoBindRaspSwitch() 获取新增机器自动绑定rasp,0 关闭 1开启
+ * @method void setAutoBindRaspSwitch(integer $AutoBindRaspSwitch) 设置新增机器自动绑定rasp,0 关闭 1开启
+ * @method integer getAutoOpenRaspSwitch() 获取新增机器自动开启rasp防护,默认关闭,0 关闭 1开启
+ * @method void setAutoOpenRaspSwitch(integer $AutoOpenRaspSwitch) 设置新增机器自动开启rasp防护,默认关闭,0 关闭 1开启
  */
 class ModifyAutoOpenProVersionConfigRequest extends AbstractModel
 {
@@ -58,12 +62,24 @@ class ModifyAutoOpenProVersionConfigRequest extends AbstractModel
     public $RepurchaseRenewSwitch;
 
     /**
+     * @var integer 新增机器自动绑定rasp,0 关闭 1开启
+     */
+    public $AutoBindRaspSwitch;
+
+    /**
+     * @var integer 新增机器自动开启rasp防护,默认关闭,0 关闭 1开启
+     */
+    public $AutoOpenRaspSwitch;
+
+    /**
      * @param string $Status 设置自动开通状态。
 <li>CLOSE：关闭</li>
 <li>OPEN：打开</li>
      * @param integer $AutoRepurchaseSwitch 自动加购/扩容授权开关,默认 1, 0关闭, 1开启
      * @param integer $AutoRepurchaseRenewSwitch 自动加购的订单是否自动续费,默认0 ,0关闭, 1开启
      * @param integer $RepurchaseRenewSwitch 手动购买的订单是否自动续费,默认0, 0关闭 ,1 开启
+     * @param integer $AutoBindRaspSwitch 新增机器自动绑定rasp,0 关闭 1开启
+     * @param integer $AutoOpenRaspSwitch 新增机器自动开启rasp防护,默认关闭,0 关闭 1开启
      */
     function __construct()
     {
@@ -92,6 +108,14 @@ class ModifyAutoOpenProVersionConfigRequest extends AbstractModel
 
         if (array_key_exists("RepurchaseRenewSwitch",$param) and $param["RepurchaseRenewSwitch"] !== null) {
             $this->RepurchaseRenewSwitch = $param["RepurchaseRenewSwitch"];
+        }
+
+        if (array_key_exists("AutoBindRaspSwitch",$param) and $param["AutoBindRaspSwitch"] !== null) {
+            $this->AutoBindRaspSwitch = $param["AutoBindRaspSwitch"];
+        }
+
+        if (array_key_exists("AutoOpenRaspSwitch",$param) and $param["AutoOpenRaspSwitch"] !== null) {
+            $this->AutoOpenRaspSwitch = $param["AutoOpenRaspSwitch"];
         }
     }
 }

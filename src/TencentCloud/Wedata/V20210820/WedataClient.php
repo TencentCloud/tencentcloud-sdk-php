@@ -116,6 +116,8 @@ use TencentCloud\Wedata\V20210820\Models as Models;
 分页查询试运行实例列表
  * @method Models\DescribeDsFolderTreeResponse DescribeDsFolderTree(Models\DescribeDsFolderTreeRequest $req) 查询目录树
  * @method Models\DescribeDsParentFolderTreeResponse DescribeDsParentFolderTree(Models\DescribeDsParentFolderTreeRequest $req) 查询父目录树，用于工作流、任务定位
+ * @method Models\DescribeDsTaskVersionInfoResponse DescribeDsTaskVersionInfo(Models\DescribeDsTaskVersionInfoRequest $req) 查看任务版本详细信息
+ * @method Models\DescribeDsTaskVersionListResponse DescribeDsTaskVersionList(Models\DescribeDsTaskVersionListRequest $req) 拉取任务版本列表
  * @method Models\DescribeDutyScheduleDetailsResponse DescribeDutyScheduleDetails(Models\DescribeDutyScheduleDetailsRequest $req) 获取值班日历
  * @method Models\DescribeDutyScheduleListResponse DescribeDutyScheduleList(Models\DescribeDutyScheduleListRequest $req) 获取值班表列表
  * @method Models\DescribeEventResponse DescribeEvent(Models\DescribeEventRequest $req) 根据项目ID和事件名称查看事件详情
@@ -218,7 +220,7 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
  * @method Models\DescribeTaskLineageResponse DescribeTaskLineage(Models\DescribeTaskLineageRequest $req) 通过任务查询表的血缘关系
  * @method Models\DescribeTaskLockStatusResponse DescribeTaskLockStatus(Models\DescribeTaskLockStatusRequest $req) 查看任务锁状态信息
  * @method Models\DescribeTaskRunHistoryResponse DescribeTaskRunHistory(Models\DescribeTaskRunHistoryRequest $req) 分页查询任务运行历史
- * @method Models\DescribeTaskScriptResponse DescribeTaskScript(Models\DescribeTaskScriptRequest $req) 查询任务脚本
+ * @method Models\DescribeTaskScriptResponse DescribeTaskScript(Models\DescribeTaskScriptRequest $req) 查询任务脚本。本接口已废弃，请使用接口GetPaginationTaskScript。
  * @method Models\DescribeTaskTableMetricOverviewResponse DescribeTaskTableMetricOverview(Models\DescribeTaskTableMetricOverviewRequest $req) 查询实时任务表粒度指标概览
  * @method Models\DescribeTaskTemplatesResponse DescribeTaskTemplates(Models\DescribeTaskTemplatesRequest $req) 查询项目下所有任务列表,包括虚拟任务
  * @method Models\DescribeTasksForCodeTemplateResponse DescribeTasksForCodeTemplate(Models\DescribeTasksForCodeTemplateRequest $req) 分页查询引用模板的任务列表
@@ -275,7 +277,7 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
  * @method Models\ModifyTaskLinksDsResponse ModifyTaskLinksDs(Models\ModifyTaskLinksDsRequest $req) 添加父任务依赖
  * @method Models\ModifyTaskNameResponse ModifyTaskName(Models\ModifyTaskNameRequest $req) 重命名任务（任务编辑）
  * @method Models\ModifyTaskScriptResponse ModifyTaskScript(Models\ModifyTaskScriptRequest $req) <p style="color:red;">[注意：该版本只满足广州区部分白名单客户使用]</p>
-修改任务脚本
+修改任务脚本。本接口已废弃，请使用接口ModifyTaskInfoDs。
  * @method Models\ModifyWorkflowInfoResponse ModifyWorkflowInfo(Models\ModifyWorkflowInfoRequest $req) 更新工作流信息。本接口已废弃，请使用接口UpdateWorkflowInfo。
  * @method Models\ModifyWorkflowScheduleResponse ModifyWorkflowSchedule(Models\ModifyWorkflowScheduleRequest $req) 更新工作流调度。本接口已废弃，请使用接口RenewWorkflowSchedulerInfoDs。
  * @method Models\MoveTasksToFolderResponse MoveTasksToFolder(Models\MoveTasksToFolderRequest $req) 编排空间-工作流-移动任务到工作流文件夹

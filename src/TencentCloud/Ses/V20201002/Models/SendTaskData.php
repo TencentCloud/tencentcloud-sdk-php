@@ -43,9 +43,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSubject() 获取邮件主题
  * @method void setSubject(string $Subject) 设置邮件主题
  * @method Template getTemplate() 获取模板和模板数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTemplate(Template $Template) 设置模板和模板数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method CycleEmailParam getCycleParam() 获取周期任务参数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCycleParam(CycleEmailParam $CycleParam) 设置周期任务参数
@@ -55,9 +53,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimedParam(TimedEmailParam $TimedParam) 设置定时任务参数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getErrMsg() 获取任务异常信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrMsg(string $ErrMsg) 设置任务异常信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReceiversName() 获取收件人列表名称
  * @method void setReceiversName(string $ReceiversName) 设置收件人列表名称
  */
@@ -120,7 +116,6 @@ class SendTaskData extends AbstractModel
 
     /**
      * @var Template 模板和模板数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Template;
 
@@ -138,7 +133,6 @@ class SendTaskData extends AbstractModel
 
     /**
      * @var string 任务异常信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrMsg;
 
@@ -160,13 +154,11 @@ class SendTaskData extends AbstractModel
      * @param string $UpdateTime 任务更新时间
      * @param string $Subject 邮件主题
      * @param Template $Template 模板和模板数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CycleEmailParam $CycleParam 周期任务参数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param TimedEmailParam $TimedParam 定时任务参数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrMsg 任务异常信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReceiversName 收件人列表名称
      */
     function __construct()

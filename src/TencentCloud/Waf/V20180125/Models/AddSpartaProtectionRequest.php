@@ -86,8 +86,8 @@ UpstreamProtocol：与Protocol相同
  * @method void setPrivateKey(string $PrivateKey) 设置CertType为1时，需要填充此参数，表示自有证书的私钥
  * @method string getSSLId() 获取CertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
  * @method void setSSLId(string $SSLId) 设置CertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
- * @method string getResourceId() 获取待废弃，可不填。Waf的资源ID。
- * @method void setResourceId(string $ResourceId) 设置待废弃，可不填。Waf的资源ID。
+ * @method string getResourceId() 获取Waf的资源ID。
+ * @method void setResourceId(string $ResourceId) 设置Waf的资源ID。
  * @method array getIpHeaders() 获取IsCdn为3时，需要填此参数，表示自定义header
  * @method void setIpHeaders(array $IpHeaders) 设置IsCdn为3时，需要填此参数，表示自定义header
  * @method string getUpstreamScheme() 获取服务配置有HTTPS端口时，HTTPS的回源协议。
@@ -98,10 +98,10 @@ http：使用http协议回源，和HttpsUpstreamPort配合使用
 https：使用https协议回源
  * @method string getHttpsUpstreamPort() 获取HTTPS回源端口,仅UpstreamScheme为http时需要填当前字段
  * @method void setHttpsUpstreamPort(string $HttpsUpstreamPort) 设置HTTPS回源端口,仅UpstreamScheme为http时需要填当前字段
- * @method integer getIsGray() 获取待废弃，可不填。是否开启灰度，0表示不开启灰度。
- * @method void setIsGray(integer $IsGray) 设置待废弃，可不填。是否开启灰度，0表示不开启灰度。
- * @method array getGrayAreas() 获取待废弃，可不填。灰度的地区
- * @method void setGrayAreas(array $GrayAreas) 设置待废弃，可不填。灰度的地区
+ * @method integer getIsGray() 获取是否开启灰度，0表示不开启灰度。
+ * @method void setIsGray(integer $IsGray) 设置是否开启灰度，0表示不开启灰度。
+ * @method array getGrayAreas() 获取灰度的地区
+ * @method void setGrayAreas(array $GrayAreas) 设置灰度的地区
  * @method integer getHttpsRewrite() 获取必填项，是否开启HTTP强制跳转到HTTPS。
 0：不强制跳转
 1：开启强制跳转
@@ -118,16 +118,16 @@ https：使用https协议回源
  * @method void setIsHttp2(integer $IsHttp2) 设置必填项，是否开启HTTP2，需要开启HTTPS协议支持。
 0：关闭
 1：开启
- * @method string getEdition() 获取待废弃，可不填。WAF实例类型。
+ * @method string getEdition() 获取WAF实例类型。
 sparta-waf：SAAS型WAF
 clb-waf：负载均衡型WAF
 cdn-waf：CDN上的Web防护能力
- * @method void setEdition(string $Edition) 设置待废弃，可不填。WAF实例类型。
+ * @method void setEdition(string $Edition) 设置WAF实例类型。
 sparta-waf：SAAS型WAF
 clb-waf：负载均衡型WAF
 cdn-waf：CDN上的Web防护能力
- * @method integer getAnycast() 获取待废弃，目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
- * @method void setAnycast(integer $Anycast) 设置待废弃，目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
+ * @method integer getAnycast() 获取目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
+ * @method void setAnycast(integer $Anycast) 设置目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
  * @method array getWeights() 获取回源IP列表各IP的权重，和SrcList一一对应。当且仅当UpstreamType为0，并且SrcList有多个IP，并且LoadBalance为2时需要填写，否则填 []
  * @method void setWeights(array $Weights) 设置回源IP列表各IP的权重，和SrcList一一对应。当且仅当UpstreamType为0，并且SrcList有多个IP，并且LoadBalance为2时需要填写，否则填 []
  * @method integer getActiveCheck() 获取必填项，是否开启主动健康检测。
@@ -194,6 +194,8 @@ cdn-waf：CDN上的Web防护能力
  * @method void setUpstreamPolicy(integer $UpstreamPolicy) 设置回源策略，支持负载均衡回源和分流回源两种方式。0：默认值，负载均衡回源；1：分流回源
  * @method array getUpstreamRules() 获取分流回源时生效，分流回源的规则。
  * @method void setUpstreamRules(array $UpstreamRules) 设置分流回源时生效，分流回源的规则。
+ * @method integer getUseCase() 获取业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
+ * @method void setUseCase(integer $UseCase) 设置业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
  */
 class AddSpartaProtectionRequest extends AbstractModel
 {
@@ -279,7 +281,8 @@ UpstreamProtocol：与Protocol相同
     public $SSLId;
 
     /**
-     * @var string 待废弃，可不填。Waf的资源ID。
+     * @var string Waf的资源ID。
+     * @deprecated
      */
     public $ResourceId;
 
@@ -301,12 +304,14 @@ https：使用https协议回源
     public $HttpsUpstreamPort;
 
     /**
-     * @var integer 待废弃，可不填。是否开启灰度，0表示不开启灰度。
+     * @var integer 是否开启灰度，0表示不开启灰度。
+     * @deprecated
      */
     public $IsGray;
 
     /**
-     * @var array 待废弃，可不填。灰度的地区
+     * @var array 灰度的地区
+     * @deprecated
      */
     public $GrayAreas;
 
@@ -335,15 +340,17 @@ https：使用https协议回源
     public $IsHttp2;
 
     /**
-     * @var string 待废弃，可不填。WAF实例类型。
+     * @var string WAF实例类型。
 sparta-waf：SAAS型WAF
 clb-waf：负载均衡型WAF
 cdn-waf：CDN上的Web防护能力
+     * @deprecated
      */
     public $Edition;
 
     /**
-     * @var integer 待废弃，目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
+     * @var integer 目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
+     * @deprecated
      */
     public $Anycast;
 
@@ -473,6 +480,11 @@ cdn-waf：CDN上的Web防护能力
     public $UpstreamRules;
 
     /**
+     * @var integer 业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
+     */
+    public $UseCase;
+
+    /**
      * @param string $Domain 需要防护的域名
      * @param integer $CertType 证书类型。
 0：仅配置HTTP监听端口，没有证书
@@ -506,14 +518,14 @@ UpstreamProtocol：与Protocol相同
      * @param string $Cert CertType为1时，需要填充此参数，表示自有证书的证书链
      * @param string $PrivateKey CertType为1时，需要填充此参数，表示自有证书的私钥
      * @param string $SSLId CertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
-     * @param string $ResourceId 待废弃，可不填。Waf的资源ID。
+     * @param string $ResourceId Waf的资源ID。
      * @param array $IpHeaders IsCdn为3时，需要填此参数，表示自定义header
      * @param string $UpstreamScheme 服务配置有HTTPS端口时，HTTPS的回源协议。
 http：使用http协议回源，和HttpsUpstreamPort配合使用
 https：使用https协议回源
      * @param string $HttpsUpstreamPort HTTPS回源端口,仅UpstreamScheme为http时需要填当前字段
-     * @param integer $IsGray 待废弃，可不填。是否开启灰度，0表示不开启灰度。
-     * @param array $GrayAreas 待废弃，可不填。灰度的地区
+     * @param integer $IsGray 是否开启灰度，0表示不开启灰度。
+     * @param array $GrayAreas 灰度的地区
      * @param integer $HttpsRewrite 必填项，是否开启HTTP强制跳转到HTTPS。
 0：不强制跳转
 1：开启强制跳转
@@ -522,11 +534,11 @@ https：使用https协议回源
      * @param integer $IsHttp2 必填项，是否开启HTTP2，需要开启HTTPS协议支持。
 0：关闭
 1：开启
-     * @param string $Edition 待废弃，可不填。WAF实例类型。
+     * @param string $Edition WAF实例类型。
 sparta-waf：SAAS型WAF
 clb-waf：负载均衡型WAF
 cdn-waf：CDN上的Web防护能力
-     * @param integer $Anycast 待废弃，目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
+     * @param integer $Anycast 目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
      * @param array $Weights 回源IP列表各IP的权重，和SrcList一一对应。当且仅当UpstreamType为0，并且SrcList有多个IP，并且LoadBalance为2时需要填写，否则填 []
      * @param integer $ActiveCheck 必填项，是否开启主动健康检测。
 0：不开启
@@ -560,6 +572,7 @@ cdn-waf：CDN上的Web防护能力
      * @param string $GmSSLId GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
      * @param integer $UpstreamPolicy 回源策略，支持负载均衡回源和分流回源两种方式。0：默认值，负载均衡回源；1：分流回源
      * @param array $UpstreamRules 分流回源时生效，分流回源的规则。
+     * @param integer $UseCase 业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
      */
     function __construct()
     {
@@ -770,6 +783,10 @@ cdn-waf：CDN上的Web防护能力
                 $obj->deserialize($value);
                 array_push($this->UpstreamRules, $obj);
             }
+        }
+
+        if (array_key_exists("UseCase",$param) and $param["UseCase"] !== null) {
+            $this->UseCase = $param["UseCase"];
         }
     }
 }

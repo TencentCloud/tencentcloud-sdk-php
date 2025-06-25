@@ -68,8 +68,8 @@ use TencentCloud\Common\AbstractModel;
 1：有部署代理服务，waf将使用XFF获取客户端IP
 2：有部署代理服务，waf将使用remote_addr获取客户端IP
 3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
- * @method integer getIsGray() 获取是否开启灰度，已废弃。
- * @method void setIsGray(integer $IsGray) 设置是否开启灰度，已废弃。
+ * @method integer getIsGray() 获取是否开启灰度。
+ * @method void setIsGray(integer $IsGray) 设置是否开启灰度。
  * @method integer getIsHttp2() 获取是否开启HTTP2，需要开启HTTPS协议支持。
 0：关闭
 1：开启
@@ -220,6 +220,8 @@ https：使用https协议回源
 1：分流回源
  * @method array getUpstreamRules() 获取分流回源策略
  * @method void setUpstreamRules(array $UpstreamRules) 设置分流回源策略
+ * @method integer getUseCase() 获取业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
+ * @method void setUseCase(integer $UseCase) 设置业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
  */
 class DomainsPartInfo extends AbstractModel
 {
@@ -292,7 +294,8 @@ class DomainsPartInfo extends AbstractModel
     public $IsCdn;
 
     /**
-     * @var integer 是否开启灰度，已废弃。
+     * @var integer 是否开启灰度。
+     * @deprecated
      */
     public $IsGray;
 
@@ -536,6 +539,11 @@ https：使用https协议回源
     public $UpstreamRules;
 
     /**
+     * @var integer 业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
+     */
+    public $UseCase;
+
+    /**
      * @param string $Domain 域名
      * @param string $DomainId 域名唯一ID
      * @param string $InstanceId 域名所属实例唯一ID
@@ -560,7 +568,7 @@ https：使用https协议回源
 1：有部署代理服务，waf将使用XFF获取客户端IP
 2：有部署代理服务，waf将使用remote_addr获取客户端IP
 3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
-     * @param integer $IsGray 是否开启灰度，已废弃。
+     * @param integer $IsGray 是否开启灰度。
      * @param integer $IsHttp2 是否开启HTTP2，需要开启HTTPS协议支持。
 0：关闭
 1：开启
@@ -636,6 +644,7 @@ https：使用https协议回源
 0：负载均衡回源
 1：分流回源
      * @param array $UpstreamRules 分流回源策略
+     * @param integer $UseCase 业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
      */
     function __construct()
     {
@@ -870,6 +879,10 @@ https：使用https协议回源
                 $obj->deserialize($value);
                 array_push($this->UpstreamRules, $obj);
             }
+        }
+
+        if (array_key_exists("UseCase",$param) and $param["UseCase"] !== null) {
+            $this->UseCase = $param["UseCase"];
         }
     }
 }

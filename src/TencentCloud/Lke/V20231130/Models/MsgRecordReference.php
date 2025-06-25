@@ -30,6 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置名称
  * @method string getDocId() 获取来源文档ID
  * @method void setDocId(string $DocId) 设置来源文档ID
+ * @method string getKnowledgeName() 获取知识库名称
+ * @method void setKnowledgeName(string $KnowledgeName) 设置知识库名称
+ * @method string getKnowledgeBizId() 获取知识库业务id
+ * @method void setKnowledgeBizId(string $KnowledgeBizId) 设置知识库业务id
+ * @method string getDocBizId() 获取文档业务id
+ * @method void setDocBizId(string $DocBizId) 设置文档业务id
+ * @method string getQaBizId() 获取问答业务id
+ * @method void setQaBizId(string $QaBizId) 设置问答业务id
  */
 class MsgRecordReference extends AbstractModel
 {
@@ -59,11 +67,35 @@ class MsgRecordReference extends AbstractModel
     public $DocId;
 
     /**
+     * @var string 知识库名称
+     */
+    public $KnowledgeName;
+
+    /**
+     * @var string 知识库业务id
+     */
+    public $KnowledgeBizId;
+
+    /**
+     * @var string 文档业务id
+     */
+    public $DocBizId;
+
+    /**
+     * @var string 问答业务id
+     */
+    public $QaBizId;
+
+    /**
      * @param string $Id id
      * @param string $Url 链接
      * @param integer $Type 类型
      * @param string $Name 名称
      * @param string $DocId 来源文档ID
+     * @param string $KnowledgeName 知识库名称
+     * @param string $KnowledgeBizId 知识库业务id
+     * @param string $DocBizId 文档业务id
+     * @param string $QaBizId 问答业务id
      */
     function __construct()
     {
@@ -96,6 +128,22 @@ class MsgRecordReference extends AbstractModel
 
         if (array_key_exists("DocId",$param) and $param["DocId"] !== null) {
             $this->DocId = $param["DocId"];
+        }
+
+        if (array_key_exists("KnowledgeName",$param) and $param["KnowledgeName"] !== null) {
+            $this->KnowledgeName = $param["KnowledgeName"];
+        }
+
+        if (array_key_exists("KnowledgeBizId",$param) and $param["KnowledgeBizId"] !== null) {
+            $this->KnowledgeBizId = $param["KnowledgeBizId"];
+        }
+
+        if (array_key_exists("DocBizId",$param) and $param["DocBizId"] !== null) {
+            $this->DocBizId = $param["DocBizId"];
+        }
+
+        if (array_key_exists("QaBizId",$param) and $param["QaBizId"] !== null) {
+            $this->QaBizId = $param["QaBizId"];
         }
     }
 }

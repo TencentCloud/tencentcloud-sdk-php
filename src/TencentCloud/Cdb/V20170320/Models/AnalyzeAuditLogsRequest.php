@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AnalyzeAuditLogs请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID。
- * @method void setInstanceId(string $InstanceId) 设置实例ID。
+ * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
  * @method string getStartTime() 获取要分析的日志开始时间，格式为："2023-02-16 00:00:20"。
  * @method void setStartTime(string $StartTime) 设置要分析的日志开始时间，格式为："2023-02-16 00:00:20"。
  * @method string getEndTime() 获取要分析的日志结束时间，格式为："2023-02-16 00:10:20"。
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class AnalyzeAuditLogsRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID。
+     * @var string 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public $InstanceId;
 
@@ -67,7 +67,7 @@ class AnalyzeAuditLogsRequest extends AbstractModel
     public $LogFilter;
 
     /**
-     * @param string $InstanceId 实例ID。
+     * @param string $InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      * @param string $StartTime 要分析的日志开始时间，格式为："2023-02-16 00:00:20"。
      * @param string $EndTime 要分析的日志结束时间，格式为："2023-02-16 00:10:20"。
      * @param array $AggregationConditions 聚合维度的排序条件。

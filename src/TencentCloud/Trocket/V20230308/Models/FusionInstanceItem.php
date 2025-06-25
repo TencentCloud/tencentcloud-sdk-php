@@ -62,15 +62,19 @@ DELETING，删除中
  * @method void setTopicNumLimit(integer $TopicNumLimit) 设置实例主题数上限
  * @method integer getGroupNumLimit() 获取实例消费组数量上限
  * @method void setGroupNumLimit(integer $GroupNumLimit) 设置实例消费组数量上限
- * @method string getPayMode() 获取计费模式，
-POSTPAID，按量计费
-PREPAID，包年包月
- * @method void setPayMode(string $PayMode) 设置计费模式，
-POSTPAID，按量计费
-PREPAID，包年包月
- * @method integer getExpiryTime() 获取到期时间，秒为单位
+ * @method string getPayMode() 获取计费模式，枚举值如下：
+
+- POSTPAID：按量计费
+
+- PREPAID：包年包月
+ * @method void setPayMode(string $PayMode) 设置计费模式，枚举值如下：
+
+- POSTPAID：按量计费
+
+- PREPAID：包年包月
+ * @method integer getExpiryTime() 获取到期时间，**Unix时间戳（毫秒）**
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExpiryTime(integer $ExpiryTime) 设置到期时间，秒为单位
+ * @method void setExpiryTime(integer $ExpiryTime) 设置到期时间，**Unix时间戳（毫秒）**
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRemark() 获取备注信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -91,32 +95,30 @@ PREPAID，包年包月
  * @method void setTpsLimit(integer $TpsLimit) 设置TPS限流值
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScaledTpsLimit() 获取弹性TPS限流值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScaledTpsLimit(integer $ScaledTpsLimit) 设置弹性TPS限流值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMessageRetention() 获取消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessageRetention(integer $MessageRetention) 设置消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxMessageDelay() 获取延迟消息最大时长，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxMessageDelay(integer $MaxMessageDelay) 设置延迟消息最大时长，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRenewFlag() 获取是否自动续费
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRenewFlag(integer $RenewFlag) 设置是否自动续费
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRenewFlag() 获取预付费集群是否自动续费，枚举值如下：
+
+- 0: 不自动续费
+- 1: 自动续费
+ * @method void setRenewFlag(integer $RenewFlag) 设置预付费集群是否自动续费，枚举值如下：
+
+- 0: 不自动续费
+- 1: 自动续费
  * @method InstanceItemExtraInfo getInstanceItemExtraInfo() 获取4.x独有数据
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceItemExtraInfo(InstanceItemExtraInfo $InstanceItemExtraInfo) 设置4.x独有数据
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDestroyTime() 获取预销毁时间
+ * @method integer getDestroyTime() 获取预销毁时间，**Unix时间戳（毫秒）**
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDestroyTime(integer $DestroyTime) 设置预销毁时间
+ * @method void setDestroyTime(integer $DestroyTime) 设置预销毁时间，**Unix时间戳（毫秒）**
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getZoneIds() 获取所属可用区列表
+ * @method array getZoneIds() 获取所属可用区列表，参考 [DescribeZones](https://cloud.tencent.com/document/product/1596/77929) 接口。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setZoneIds(array $ZoneIds) 设置所属可用区列表
+ * @method void setZoneIds(array $ZoneIds) 设置所属可用区列表，参考 [DescribeZones](https://cloud.tencent.com/document/product/1596/77929) 接口。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getEnableDeletionProtection() 获取是否开启删除保护
  * @method void setEnableDeletionProtection(boolean $EnableDeletionProtection) 设置是否开启删除保护
@@ -173,14 +175,16 @@ DELETING，删除中
     public $GroupNumLimit;
 
     /**
-     * @var string 计费模式，
-POSTPAID，按量计费
-PREPAID，包年包月
+     * @var string 计费模式，枚举值如下：
+
+- POSTPAID：按量计费
+
+- PREPAID：包年包月
      */
     public $PayMode;
 
     /**
-     * @var integer 到期时间，秒为单位
+     * @var integer 到期时间，**Unix时间戳（毫秒）**
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpiryTime;
@@ -220,25 +224,24 @@ PREPAID，包年包月
 
     /**
      * @var integer 弹性TPS限流值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScaledTpsLimit;
 
     /**
      * @var integer 消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MessageRetention;
 
     /**
      * @var integer 延迟消息最大时长，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxMessageDelay;
 
     /**
-     * @var integer 是否自动续费
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 预付费集群是否自动续费，枚举值如下：
+
+- 0: 不自动续费
+- 1: 自动续费
      */
     public $RenewFlag;
 
@@ -249,13 +252,13 @@ PREPAID，包年包月
     public $InstanceItemExtraInfo;
 
     /**
-     * @var integer 预销毁时间
+     * @var integer 预销毁时间，**Unix时间戳（毫秒）**
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DestroyTime;
 
     /**
-     * @var array 所属可用区列表
+     * @var array 所属可用区列表，参考 [DescribeZones](https://cloud.tencent.com/document/product/1596/77929) 接口。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneIds;
@@ -287,10 +290,12 @@ MODIFY_FAILURE，变配失败
 DELETING，删除中
      * @param integer $TopicNumLimit 实例主题数上限
      * @param integer $GroupNumLimit 实例消费组数量上限
-     * @param string $PayMode 计费模式，
-POSTPAID，按量计费
-PREPAID，包年包月
-     * @param integer $ExpiryTime 到期时间，秒为单位
+     * @param string $PayMode 计费模式，枚举值如下：
+
+- POSTPAID：按量计费
+
+- PREPAID：包年包月
+     * @param integer $ExpiryTime 到期时间，**Unix时间戳（毫秒）**
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Remark 备注信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -302,18 +307,17 @@ PREPAID，包年包月
      * @param integer $TpsLimit TPS限流值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ScaledTpsLimit 弹性TPS限流值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MessageRetention 消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxMessageDelay 延迟消息最大时长，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RenewFlag 是否自动续费
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RenewFlag 预付费集群是否自动续费，枚举值如下：
+
+- 0: 不自动续费
+- 1: 自动续费
      * @param InstanceItemExtraInfo $InstanceItemExtraInfo 4.x独有数据
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $DestroyTime 预销毁时间
+     * @param integer $DestroyTime 预销毁时间，**Unix时间戳（毫秒）**
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ZoneIds 所属可用区列表
+     * @param array $ZoneIds 所属可用区列表，参考 [DescribeZones](https://cloud.tencent.com/document/product/1596/77929) 接口。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $EnableDeletionProtection 是否开启删除保护
      */

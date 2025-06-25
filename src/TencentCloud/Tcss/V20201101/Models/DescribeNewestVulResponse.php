@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置应急漏洞风险情况：NOT_SCAN：未扫描，SCANNING：扫描中，SCANNED：已扫描
  * @method string getCVEID() 获取漏洞CVEID
  * @method void setCVEID(string $CVEID) 设置漏洞CVEID
+ * @method integer getSupportDefense() 获取漏洞是否支持防御 0:不支持 1:支持
+ * @method void setSupportDefense(integer $SupportDefense) 设置漏洞是否支持防御 0:不支持 1:支持
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -61,6 +63,11 @@ class DescribeNewestVulResponse extends AbstractModel
     public $CVEID;
 
     /**
+     * @var integer 漏洞是否支持防御 0:不支持 1:支持
+     */
+    public $SupportDefense;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -71,6 +78,7 @@ class DescribeNewestVulResponse extends AbstractModel
      * @param string $SubmitTime 披露时间
      * @param string $Status 应急漏洞风险情况：NOT_SCAN：未扫描，SCANNING：扫描中，SCANNED：已扫描
      * @param string $CVEID 漏洞CVEID
+     * @param integer $SupportDefense 漏洞是否支持防御 0:不支持 1:支持
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -104,6 +112,10 @@ class DescribeNewestVulResponse extends AbstractModel
 
         if (array_key_exists("CVEID",$param) and $param["CVEID"] !== null) {
             $this->CVEID = $param["CVEID"];
+        }
+
+        if (array_key_exists("SupportDefense",$param) and $param["SupportDefense"] !== null) {
+            $this->SupportDefense = $param["SupportDefense"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -242,8 +242,8 @@ public：公有云域名
  * @method void setUpstreamDomainList(array $UpstreamDomainList) 设置SAASWAF源站域名列表
  * @method string getSgID() 获取安全组ID
  * @method void setSgID(string $SgID) 设置安全组ID
- * @method integer getAccessStatus() 获取clbwaf接入状态
- * @method void setAccessStatus(integer $AccessStatus) 设置clbwaf接入状态
+ * @method integer getAccessStatus() 获取clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”
+ * @method void setAccessStatus(integer $AccessStatus) 设置clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”
  * @method array getLabels() 获取域名标签
  * @method void setLabels(array $Labels) 设置域名标签
  */
@@ -497,7 +497,7 @@ public：公有云域名
     public $SgID;
 
     /**
-     * @var integer clbwaf接入状态
+     * @var integer clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”
      */
     public $AccessStatus;
 
@@ -618,7 +618,7 @@ public：公有云域名
      * @param array $SrcList SAASWAF源站IP列表
      * @param array $UpstreamDomainList SAASWAF源站域名列表
      * @param string $SgID 安全组ID
-     * @param integer $AccessStatus clbwaf接入状态
+     * @param integer $AccessStatus clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”
      * @param array $Labels 域名标签
      */
     function __construct()

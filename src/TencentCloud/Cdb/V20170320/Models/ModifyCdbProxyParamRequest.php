@@ -20,37 +20,37 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyCdbProxyParam请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getProxyGroupId() 获取代理组ID
- * @method void setProxyGroupId(string $ProxyGroupId) 设置代理组ID
- * @method integer getConnectionPoolLimit() 获取连接池阈值
+ * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+ * @method string getProxyGroupId() 获取代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+ * @method void setProxyGroupId(string $ProxyGroupId) 设置代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+ * @method integer getConnectionPoolLimit() 获取连接池阈值。取值范围：大于0，小于等于300。
 注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
- * @method void setConnectionPoolLimit(integer $ConnectionPoolLimit) 设置连接池阈值
+ * @method void setConnectionPoolLimit(integer $ConnectionPoolLimit) 设置连接池阈值。取值范围：大于0，小于等于300。
 注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
  */
 class ModifyCdbProxyParamRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public $InstanceId;
 
     /**
-     * @var string 代理组ID
+     * @var string 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
      */
     public $ProxyGroupId;
 
     /**
-     * @var integer 连接池阈值
+     * @var integer 连接池阈值。取值范围：大于0，小于等于300。
 注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
      */
     public $ConnectionPoolLimit;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $ProxyGroupId 代理组ID
-     * @param integer $ConnectionPoolLimit 连接池阈值
+     * @param string $InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @param string $ProxyGroupId 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+     * @param integer $ConnectionPoolLimit 连接池阈值。取值范围：大于0，小于等于300。
 注意：如需使用数据库代理连接池能力，MySQL 8.0 主实例的内核小版本要大于等于 MySQL 8.0 20230630。
      */
     function __construct()

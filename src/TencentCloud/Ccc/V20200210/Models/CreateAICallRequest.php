@@ -174,8 +174,8 @@ HoaiMy
 1:   使用ai根据prompt自动生成welcomeMessage并先说话
  * @method void setWelcomeType(integer $WelcomeType) 设置0：使用welcomeMessage(为空时，被叫先说话；不为空时，机器人先说话)
 1:   使用ai根据prompt自动生成welcomeMessage并先说话
- * @method integer getWelcomeMessagePriority() 获取0: 默认可打断， 1：高优先不可打断
- * @method void setWelcomeMessagePriority(integer $WelcomeMessagePriority) 设置0: 默认可打断， 1：高优先不可打断
+ * @method integer getWelcomeMessagePriority() 获取0: 默认可打断， 2：高优先不可打断
+ * @method void setWelcomeMessagePriority(integer $WelcomeMessagePriority) 设置0: 默认可打断， 2：高优先不可打断
  * @method integer getMaxDuration() 获取最大等待时长(毫秒)，默认60秒，超过这个时间用户没说话，自动挂断
  * @method void setMaxDuration(integer $MaxDuration) 设置最大等待时长(毫秒)，默认60秒，超过这个时间用户没说话，自动挂断
  * @method array getLanguages() 获取语音识别支持的语言, 默认是"zh" 中文,
@@ -545,7 +545,7 @@ HoaiMy
     public $WelcomeType;
 
     /**
-     * @var integer 0: 默认可打断， 1：高优先不可打断
+     * @var integer 0: 默认可打断， 2：高优先不可打断
      */
     public $WelcomeMessagePriority;
 
@@ -818,7 +818,7 @@ HoaiMy
      * @param string $WelcomeMessage 用于设定AI座席欢迎语。
      * @param integer $WelcomeType 0：使用welcomeMessage(为空时，被叫先说话；不为空时，机器人先说话)
 1:   使用ai根据prompt自动生成welcomeMessage并先说话
-     * @param integer $WelcomeMessagePriority 0: 默认可打断， 1：高优先不可打断
+     * @param integer $WelcomeMessagePriority 0: 默认可打断， 2：高优先不可打断
      * @param integer $MaxDuration 最大等待时长(毫秒)，默认60秒，超过这个时间用户没说话，自动挂断
      * @param array $Languages 语音识别支持的语言, 默认是"zh" 中文,
 填写数组,最长4个语言，第一个语言为主要识别语言，后面为可选语言，

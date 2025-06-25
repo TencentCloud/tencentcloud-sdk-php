@@ -20,20 +20,28 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateInstance请求参数结构体
  *
- * @method string getInstanceType() 获取实例类型，
-EXPERIMENT 体验版
-BASIC 基础版
-PRO  专业版
-PLATINUM 铂金版
- * @method void setInstanceType(string $InstanceType) 设置实例类型，
-EXPERIMENT 体验版
-BASIC 基础版
-PRO  专业版
-PLATINUM 铂金版
- * @method string getName() 获取集群名称
- * @method void setName(string $Name) 设置集群名称
- * @method string getSkuCode() 获取商品规格，可用规格如下：experiment_500, basic_1k, basic_2k, basic_3k, basic_4k, basic_5k, basic_6k, basic_7k, basic_8k, basic_9k, basic_10k, pro_4k, pro_6k, pro_8k, pro_1w, pro_15k, pro_2w, pro_25k, pro_3w, pro_35k, pro_4w, pro_45k, pro_5w, pro_55k, pro_60k, pro_65k, pro_70k, pro_75k, pro_80k, pro_85k, pro_90k, pro_95k, pro_100k, platinum_1w, platinum_2w, platinum_3w, platinum_4w, platinum_5w, platinum_6w, platinum_7w, platinum_8w, platinum_9w, platinum_10w, platinum_12w, platinum_14w, platinum_16w, platinum_18w, platinum_20w, platinum_25w, platinum_30w, platinum_35w, platinum_40w, platinum_45w, platinum_50w, platinum_60w, platinum_70w, platinum_80w, platinum_90w, platinum_100w
- * @method void setSkuCode(string $SkuCode) 设置商品规格，可用规格如下：experiment_500, basic_1k, basic_2k, basic_3k, basic_4k, basic_5k, basic_6k, basic_7k, basic_8k, basic_9k, basic_10k, pro_4k, pro_6k, pro_8k, pro_1w, pro_15k, pro_2w, pro_25k, pro_3w, pro_35k, pro_4w, pro_45k, pro_5w, pro_55k, pro_60k, pro_65k, pro_70k, pro_75k, pro_80k, pro_85k, pro_90k, pro_95k, pro_100k, platinum_1w, platinum_2w, platinum_3w, platinum_4w, platinum_5w, platinum_6w, platinum_7w, platinum_8w, platinum_9w, platinum_10w, platinum_12w, platinum_14w, platinum_16w, platinum_18w, platinum_20w, platinum_25w, platinum_30w, platinum_35w, platinum_40w, platinum_45w, platinum_50w, platinum_60w, platinum_70w, platinum_80w, platinum_90w, platinum_100w
+ * @method string getInstanceType() 获取实例类型，枚举值如下：
+
+- EXPERIMENT：体验版
+
+- BASIC：基础版
+
+- PRO：专业版
+
+- PLATINUM：铂金版
+ * @method void setInstanceType(string $InstanceType) 设置实例类型，枚举值如下：
+
+- EXPERIMENT：体验版
+
+- BASIC：基础版
+
+- PRO：专业版
+
+- PLATINUM：铂金版
+ * @method string getName() 获取集群名称，不能为空， 3-64个字符，只能包含数字、字母、“-”和“_”
+ * @method void setName(string $Name) 设置集群名称，不能为空， 3-64个字符，只能包含数字、字母、“-”和“_”
+ * @method string getSkuCode() 获取商品规格，从 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参获得。
+ * @method void setSkuCode(string $SkuCode) 设置商品规格，从 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参获得。
  * @method string getRemark() 获取备注信息
  * @method void setRemark(string $Remark) 设置备注信息
  * @method array getTagList() 获取标签列表
@@ -46,39 +54,57 @@ PLATINUM 铂金版
  * @method void setBillingFlow(boolean $BillingFlow) 设置公网是否按流量计费，默认值为false表示不按流量计费
  * @method integer getBandwidth() 获取公网带宽（单位：兆），默认值为0。如果开启公网，该字段必须为大于0的正整数
  * @method void setBandwidth(integer $Bandwidth) 设置公网带宽（单位：兆），默认值为0。如果开启公网，该字段必须为大于0的正整数
- * @method array getIpRules() 获取公网访问白名单
- * @method void setIpRules(array $IpRules) 设置公网访问白名单
- * @method integer getMessageRetention() 获取消息保留时长（单位：小时）
- * @method void setMessageRetention(integer $MessageRetention) 设置消息保留时长（单位：小时）
+ * @method array getIpRules() 获取公网访问白名单，不填表示拒绝所有 IP 访问
+ * @method void setIpRules(array $IpRules) 设置公网访问白名单，不填表示拒绝所有 IP 访问
+ * @method integer getMessageRetention() 获取消息保留时长（单位：小时），取值范围参考 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参：
+
+- 默认值：DefaultRetention 参数
+- 最小值：RetentionLowerLimit 参数
+- 最大值：RetentionUpperLimit 参数
+ * @method void setMessageRetention(integer $MessageRetention) 设置消息保留时长（单位：小时），取值范围参考 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参：
+
+- 默认值：DefaultRetention 参数
+- 最小值：RetentionLowerLimit 参数
+- 最大值：RetentionUpperLimit 参数
  * @method integer getPayMode() 获取付费模式（0: 后付费；1: 预付费），默认值为0
  * @method void setPayMode(integer $PayMode) 设置付费模式（0: 后付费；1: 预付费），默认值为0
- * @method integer getRenewFlag() 获取是否自动续费（0: 不自动续费；1: 自动续费），默认值为0
- * @method void setRenewFlag(integer $RenewFlag) 设置是否自动续费（0: 不自动续费；1: 自动续费），默认值为0
- * @method integer getTimeSpan() 获取购买时长（单位：月），默认值为1
- * @method void setTimeSpan(integer $TimeSpan) 设置购买时长（单位：月），默认值为1
- * @method integer getMaxTopicNum() 获取最大可创建主题数
- * @method void setMaxTopicNum(integer $MaxTopicNum) 设置最大可创建主题数
- * @method array getZoneIds() 获取部署可用区列表
- * @method void setZoneIds(array $ZoneIds) 设置部署可用区列表
+ * @method integer getRenewFlag() 获取预付费集群是否自动续费（0: 不自动续费；1: 自动续费），默认值为0
+ * @method void setRenewFlag(integer $RenewFlag) 设置预付费集群是否自动续费（0: 不自动续费；1: 自动续费），默认值为0
+ * @method integer getTimeSpan() 获取预付费集群的购买时长（单位：月），取值范围为1～60，默认值为1
+ * @method void setTimeSpan(integer $TimeSpan) 设置预付费集群的购买时长（单位：月），取值范围为1～60，默认值为1
+ * @method integer getMaxTopicNum() 获取最大可创建主题数，从 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参：
+
+- 默认值和最小值：TopicNumLimit 参数
+- 最大值：TopicNumUpperLimit 参数
+ * @method void setMaxTopicNum(integer $MaxTopicNum) 设置最大可创建主题数，从 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参：
+
+- 默认值和最小值：TopicNumLimit 参数
+- 最大值：TopicNumUpperLimit 参数
+ * @method array getZoneIds() 获取部署可用区列表，从 [DescribeZones](https://cloud.tencent.com/document/product/1596/77929) 接口获得。
+ * @method void setZoneIds(array $ZoneIds) 设置部署可用区列表，从 [DescribeZones](https://cloud.tencent.com/document/product/1596/77929) 接口获得。
  */
 class CreateInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 实例类型，
-EXPERIMENT 体验版
-BASIC 基础版
-PRO  专业版
-PLATINUM 铂金版
+     * @var string 实例类型，枚举值如下：
+
+- EXPERIMENT：体验版
+
+- BASIC：基础版
+
+- PRO：专业版
+
+- PLATINUM：铂金版
      */
     public $InstanceType;
 
     /**
-     * @var string 集群名称
+     * @var string 集群名称，不能为空， 3-64个字符，只能包含数字、字母、“-”和“_”
      */
     public $Name;
 
     /**
-     * @var string 商品规格，可用规格如下：experiment_500, basic_1k, basic_2k, basic_3k, basic_4k, basic_5k, basic_6k, basic_7k, basic_8k, basic_9k, basic_10k, pro_4k, pro_6k, pro_8k, pro_1w, pro_15k, pro_2w, pro_25k, pro_3w, pro_35k, pro_4w, pro_45k, pro_5w, pro_55k, pro_60k, pro_65k, pro_70k, pro_75k, pro_80k, pro_85k, pro_90k, pro_95k, pro_100k, platinum_1w, platinum_2w, platinum_3w, platinum_4w, platinum_5w, platinum_6w, platinum_7w, platinum_8w, platinum_9w, platinum_10w, platinum_12w, platinum_14w, platinum_16w, platinum_18w, platinum_20w, platinum_25w, platinum_30w, platinum_35w, platinum_40w, platinum_45w, platinum_50w, platinum_60w, platinum_70w, platinum_80w, platinum_90w, platinum_100w
+     * @var string 商品规格，从 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参获得。
      */
     public $SkuCode;
 
@@ -113,12 +139,16 @@ PLATINUM 铂金版
     public $Bandwidth;
 
     /**
-     * @var array 公网访问白名单
+     * @var array 公网访问白名单，不填表示拒绝所有 IP 访问
      */
     public $IpRules;
 
     /**
-     * @var integer 消息保留时长（单位：小时）
+     * @var integer 消息保留时长（单位：小时），取值范围参考 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参：
+
+- 默认值：DefaultRetention 参数
+- 最小值：RetentionLowerLimit 参数
+- 最大值：RetentionUpperLimit 参数
      */
     public $MessageRetention;
 
@@ -128,46 +158,60 @@ PLATINUM 铂金版
     public $PayMode;
 
     /**
-     * @var integer 是否自动续费（0: 不自动续费；1: 自动续费），默认值为0
+     * @var integer 预付费集群是否自动续费（0: 不自动续费；1: 自动续费），默认值为0
      */
     public $RenewFlag;
 
     /**
-     * @var integer 购买时长（单位：月），默认值为1
+     * @var integer 预付费集群的购买时长（单位：月），取值范围为1～60，默认值为1
      */
     public $TimeSpan;
 
     /**
-     * @var integer 最大可创建主题数
+     * @var integer 最大可创建主题数，从 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参：
+
+- 默认值和最小值：TopicNumLimit 参数
+- 最大值：TopicNumUpperLimit 参数
      */
     public $MaxTopicNum;
 
     /**
-     * @var array 部署可用区列表
+     * @var array 部署可用区列表，从 [DescribeZones](https://cloud.tencent.com/document/product/1596/77929) 接口获得。
      */
     public $ZoneIds;
 
     /**
-     * @param string $InstanceType 实例类型，
-EXPERIMENT 体验版
-BASIC 基础版
-PRO  专业版
-PLATINUM 铂金版
-     * @param string $Name 集群名称
-     * @param string $SkuCode 商品规格，可用规格如下：experiment_500, basic_1k, basic_2k, basic_3k, basic_4k, basic_5k, basic_6k, basic_7k, basic_8k, basic_9k, basic_10k, pro_4k, pro_6k, pro_8k, pro_1w, pro_15k, pro_2w, pro_25k, pro_3w, pro_35k, pro_4w, pro_45k, pro_5w, pro_55k, pro_60k, pro_65k, pro_70k, pro_75k, pro_80k, pro_85k, pro_90k, pro_95k, pro_100k, platinum_1w, platinum_2w, platinum_3w, platinum_4w, platinum_5w, platinum_6w, platinum_7w, platinum_8w, platinum_9w, platinum_10w, platinum_12w, platinum_14w, platinum_16w, platinum_18w, platinum_20w, platinum_25w, platinum_30w, platinum_35w, platinum_40w, platinum_45w, platinum_50w, platinum_60w, platinum_70w, platinum_80w, platinum_90w, platinum_100w
+     * @param string $InstanceType 实例类型，枚举值如下：
+
+- EXPERIMENT：体验版
+
+- BASIC：基础版
+
+- PRO：专业版
+
+- PLATINUM：铂金版
+     * @param string $Name 集群名称，不能为空， 3-64个字符，只能包含数字、字母、“-”和“_”
+     * @param string $SkuCode 商品规格，从 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参获得。
      * @param string $Remark 备注信息
      * @param array $TagList 标签列表
      * @param array $VpcList 集群绑定的VPC信息，必填
      * @param boolean $EnablePublic 是否开启公网，默认值为false表示不开启
      * @param boolean $BillingFlow 公网是否按流量计费，默认值为false表示不按流量计费
      * @param integer $Bandwidth 公网带宽（单位：兆），默认值为0。如果开启公网，该字段必须为大于0的正整数
-     * @param array $IpRules 公网访问白名单
-     * @param integer $MessageRetention 消息保留时长（单位：小时）
+     * @param array $IpRules 公网访问白名单，不填表示拒绝所有 IP 访问
+     * @param integer $MessageRetention 消息保留时长（单位：小时），取值范围参考 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参：
+
+- 默认值：DefaultRetention 参数
+- 最小值：RetentionLowerLimit 参数
+- 最大值：RetentionUpperLimit 参数
      * @param integer $PayMode 付费模式（0: 后付费；1: 预付费），默认值为0
-     * @param integer $RenewFlag 是否自动续费（0: 不自动续费；1: 自动续费），默认值为0
-     * @param integer $TimeSpan 购买时长（单位：月），默认值为1
-     * @param integer $MaxTopicNum 最大可创建主题数
-     * @param array $ZoneIds 部署可用区列表
+     * @param integer $RenewFlag 预付费集群是否自动续费（0: 不自动续费；1: 自动续费），默认值为0
+     * @param integer $TimeSpan 预付费集群的购买时长（单位：月），取值范围为1～60，默认值为1
+     * @param integer $MaxTopicNum 最大可创建主题数，从 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参：
+
+- 默认值和最小值：TopicNumLimit 参数
+- 最大值：TopicNumUpperLimit 参数
+     * @param array $ZoneIds 部署可用区列表，从 [DescribeZones](https://cloud.tencent.com/document/product/1596/77929) 接口获得。
      */
     function __construct()
     {

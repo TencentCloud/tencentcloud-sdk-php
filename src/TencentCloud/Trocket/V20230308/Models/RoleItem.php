@@ -32,10 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecretKey(string $SecretKey) 设置Secret Key
  * @method string getRemark() 获取备注信息
  * @method void setRemark(string $Remark) 设置备注信息
- * @method integer getCreatedTime() 获取创建时间，秒为单位
- * @method void setCreatedTime(integer $CreatedTime) 设置创建时间，秒为单位
- * @method integer getModifiedTime() 获取修改时间，秒为单位
- * @method void setModifiedTime(integer $ModifiedTime) 设置修改时间，秒为单位
+ * @method integer getCreatedTime() 获取角色的创建时间，**Unix时间戳（毫秒）**
+ * @method void setCreatedTime(integer $CreatedTime) 设置角色的创建时间，**Unix时间戳（毫秒）**
+ * @method integer getModifiedTime() 获取角色的更新时间，**Unix时间戳（毫秒）**
+ * @method void setModifiedTime(integer $ModifiedTime) 设置角色的更新时间，**Unix时间戳（毫秒）**
  * @method string getPermType() 获取权限类型，默认按集群授权（Cluster：集群级别；TopicAndGroup：主题&消费组级别）
  * @method void setPermType(string $PermType) 设置权限类型，默认按集群授权（Cluster：集群级别；TopicAndGroup：主题&消费组级别）
  * @method array getDetailedRolePerms() 获取Topic和Group维度权限配置
@@ -76,12 +76,12 @@ class RoleItem extends AbstractModel
     public $Remark;
 
     /**
-     * @var integer 创建时间，秒为单位
+     * @var integer 角色的创建时间，**Unix时间戳（毫秒）**
      */
     public $CreatedTime;
 
     /**
-     * @var integer 修改时间，秒为单位
+     * @var integer 角色的更新时间，**Unix时间戳（毫秒）**
      */
     public $ModifiedTime;
 
@@ -103,8 +103,8 @@ class RoleItem extends AbstractModel
      * @param string $AccessKey Access Key
      * @param string $SecretKey Secret Key
      * @param string $Remark 备注信息
-     * @param integer $CreatedTime 创建时间，秒为单位
-     * @param integer $ModifiedTime 修改时间，秒为单位
+     * @param integer $CreatedTime 角色的创建时间，**Unix时间戳（毫秒）**
+     * @param integer $ModifiedTime 角色的更新时间，**Unix时间戳（毫秒）**
      * @param string $PermType 权限类型，默认按集群授权（Cluster：集群级别；TopicAndGroup：主题&消费组级别）
      * @param array $DetailedRolePerms Topic和Group维度权限配置
 注意：此字段可能返回 null，表示取不到有效值。

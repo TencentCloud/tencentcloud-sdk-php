@@ -164,6 +164,8 @@ Hadoop-Hbase
  * @method void setMultiZoneSettings(array $MultiZoneSettings) 设置节点资源的规格，有几个可用区，就填几个，按顺序第一个为主可用区，第二个为备可用区，第三个为仲裁可用区。如果没有开启跨AZ，则长度为1即可。
  * @method string getCosBucket() 获取cos桶路径，创建StarRocks存算分离集群时用到
  * @method void setCosBucket(string $CosBucket) 设置cos桶路径，创建StarRocks存算分离集群时用到
+ * @method array getNodeMarks() 获取节点标识信息，目前只提供给tf平台使用
+ * @method void setNodeMarks(array $NodeMarks) 设置节点标识信息，目前只提供给tf平台使用
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -372,6 +374,11 @@ Hadoop-Hbase
     public $CosBucket;
 
     /**
+     * @var array 节点标识信息，目前只提供给tf平台使用
+     */
+    public $NodeMarks;
+
+    /**
      * @param integer $ProductId 产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
 51:表示STARROCKS-V1.4.0
 54:表示STARROCKS-V2.0.0
@@ -444,6 +451,7 @@ Hadoop-Hbase
      * @param boolean $MultiZone true表示开启跨AZ部署；仅为新建集群时的用户参数，后续不支持调整。
      * @param array $MultiZoneSettings 节点资源的规格，有几个可用区，就填几个，按顺序第一个为主可用区，第二个为备可用区，第三个为仲裁可用区。如果没有开启跨AZ，则长度为1即可。
      * @param string $CosBucket cos桶路径，创建StarRocks存算分离集群时用到
+     * @param array $NodeMarks 节点标识信息，目前只提供给tf平台使用
      */
     function __construct()
     {
@@ -614,6 +622,15 @@ Hadoop-Hbase
 
         if (array_key_exists("CosBucket",$param) and $param["CosBucket"] !== null) {
             $this->CosBucket = $param["CosBucket"];
+        }
+
+        if (array_key_exists("NodeMarks",$param) and $param["NodeMarks"] !== null) {
+            $this->NodeMarks = [];
+            foreach ($param["NodeMarks"] as $key => $value){
+                $obj = new NodeMark();
+                $obj->deserialize($value);
+                array_push($this->NodeMarks, $obj);
+            }
         }
     }
 }

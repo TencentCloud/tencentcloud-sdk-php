@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 节点概览信息。
  *
+ * @method string getClusterId() 获取集群ID
+ * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method string getInstanceId() 获取节点实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置节点实例ID。
@@ -54,9 +56,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNodeAllocateState() 获取节点的工作状态
  * @method void setNodeAllocateState(string $NodeAllocateState) 设置节点的工作状态
+ * @method string getNodeName() 获取节点的名称
+ * @method void setNodeName(string $NodeName) 设置节点的名称
+ * @method string getCreateTime() 获取节点的创建时间
+ * @method void setCreateTime(string $CreateTime) 设置节点的创建时间
  */
 class NodeOverview extends AbstractModel
 {
+    /**
+     * @var string 集群ID
+     */
+    public $ClusterId;
+
     /**
      * @var string 节点实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -111,6 +122,17 @@ class NodeOverview extends AbstractModel
     public $NodeAllocateState;
 
     /**
+     * @var string 节点的名称
+     */
+    public $NodeName;
+
+    /**
+     * @var string 节点的创建时间
+     */
+    public $CreateTime;
+
+    /**
+     * @param string $ClusterId 集群ID
      * @param string $InstanceId 节点实例ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Zone 节点所在可用区信息。
@@ -128,6 +150,8 @@ class NodeOverview extends AbstractModel
      * @param string $NodeId thpc集群节点id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NodeAllocateState 节点的工作状态
+     * @param string $NodeName 节点的名称
+     * @param string $CreateTime 节点的创建时间
      */
     function __construct()
     {
@@ -142,6 +166,10 @@ class NodeOverview extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
+
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
         }
@@ -176,6 +204,14 @@ class NodeOverview extends AbstractModel
 
         if (array_key_exists("NodeAllocateState",$param) and $param["NodeAllocateState"] !== null) {
             $this->NodeAllocateState = $param["NodeAllocateState"];
+        }
+
+        if (array_key_exists("NodeName",$param) and $param["NodeName"] !== null) {
+            $this->NodeName = $param["NodeName"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
     }
 }

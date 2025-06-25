@@ -54,8 +54,8 @@ PLATINUM 铂金版
  * @method void setScaledTpsLimit(integer $ScaledTpsLimit) 设置弹性TPS限流值
  * @method integer getMaxMessageDelay() 获取延迟消息最长时间，小时为单位
  * @method void setMaxMessageDelay(integer $MaxMessageDelay) 设置延迟消息最长时间，小时为单位
- * @method integer getCreatedTime() 获取创建时间，秒为单位
- * @method void setCreatedTime(integer $CreatedTime) 设置创建时间，秒为单位
+ * @method integer getCreatedTime() 获取创建时间，**Unix时间戳（毫秒）**
+ * @method void setCreatedTime(integer $CreatedTime) 设置创建时间，**Unix时间戳（毫秒）**
  * @method float getSendReceiveRatio() 获取消息发送接收比例
  * @method void setSendReceiveRatio(float $SendReceiveRatio) 设置消息发送接收比例
  * @method array getTagList() 获取标签
@@ -72,18 +72,50 @@ PLATINUM 铂金版
  * @method void setTopicQueueNumLowerLimit(integer $TopicQueueNumLowerLimit) 设置主题队列数下限
  * @method string getRemark() 获取备注信息
  * @method void setRemark(string $Remark) 设置备注信息
- * @method string getInstanceStatus() 获取实例状态
- * @method void setInstanceStatus(string $InstanceStatus) 设置实例状态
+ * @method string getInstanceStatus() 获取实例状态，枚举值如下：
+
+- RUNNING：运行中
+- ABNORMAL：异常
+- OVERDUE：隔离中
+- DESTROYED：已销毁
+- CREATING：创建中
+- MODIFYING：变配中
+- CREATE_FAILURE：创建失败
+- MODIFY_FAILURE：变配失败
+- DELETING：删除中
+ * @method void setInstanceStatus(string $InstanceStatus) 设置实例状态，枚举值如下：
+
+- RUNNING：运行中
+- ABNORMAL：异常
+- OVERDUE：隔离中
+- DESTROYED：已销毁
+- CREATING：创建中
+- MODIFYING：变配中
+- CREATE_FAILURE：创建失败
+- MODIFY_FAILURE：变配失败
+- DELETING：删除中
  * @method string getSkuCode() 获取实例规格
  * @method void setSkuCode(string $SkuCode) 设置实例规格
- * @method string getPayMode() 获取计费模式
- * @method void setPayMode(string $PayMode) 设置计费模式
+ * @method string getPayMode() 获取计费模式，枚举值如下：
+
+- POSTPAID：后付费按量计费
+- PREPAID：预付费包年包月
+ * @method void setPayMode(string $PayMode) 设置计费模式，枚举值如下：
+
+- POSTPAID：后付费按量计费
+- PREPAID：预付费包年包月
  * @method boolean getScaledTpsEnabled() 获取是否开启弹性TPS
  * @method void setScaledTpsEnabled(boolean $ScaledTpsEnabled) 设置是否开启弹性TPS
- * @method integer getRenewFlag() 获取是否自动续费
- * @method void setRenewFlag(integer $RenewFlag) 设置是否自动续费
- * @method integer getExpiryTime() 获取到期时间
- * @method void setExpiryTime(integer $ExpiryTime) 设置到期时间
+ * @method integer getRenewFlag() 获取预付费集群是否自动续费，枚举值如下：
+
+- 0: 不自动续费
+- 1: 自动续费
+ * @method void setRenewFlag(integer $RenewFlag) 设置预付费集群是否自动续费，枚举值如下：
+
+- 0: 不自动续费
+- 1: 自动续费
+ * @method integer getExpiryTime() 获取到期时间，**Unix时间戳（毫秒）**
+ * @method void setExpiryTime(integer $ExpiryTime) 设置到期时间，**Unix时间戳（毫秒）**
  * @method integer getRoleNumLimit() 获取角色数量限制
  * @method void setRoleNumLimit(integer $RoleNumLimit) 设置角色数量限制
  * @method boolean getAclEnabled() 获取是否开启 ACL
@@ -98,8 +130,8 @@ PLATINUM 铂金版
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicNumUpperLimit(integer $TopicNumUpperLimit) 设置最大可设置的topic个数
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getZoneIds() 获取可用区列表
- * @method void setZoneIds(array $ZoneIds) 设置可用区列表
+ * @method array getZoneIds() 获取所属可用区列表，参考 [DescribeZones](https://cloud.tencent.com/document/product/1596/77929) 接口。
+ * @method void setZoneIds(array $ZoneIds) 设置所属可用区列表，参考 [DescribeZones](https://cloud.tencent.com/document/product/1596/77929) 接口。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -175,7 +207,7 @@ PLATINUM 铂金版
     public $MaxMessageDelay;
 
     /**
-     * @var integer 创建时间，秒为单位
+     * @var integer 创建时间，**Unix时间戳（毫秒）**
      */
     public $CreatedTime;
 
@@ -212,7 +244,17 @@ PLATINUM 铂金版
     public $Remark;
 
     /**
-     * @var string 实例状态
+     * @var string 实例状态，枚举值如下：
+
+- RUNNING：运行中
+- ABNORMAL：异常
+- OVERDUE：隔离中
+- DESTROYED：已销毁
+- CREATING：创建中
+- MODIFYING：变配中
+- CREATE_FAILURE：创建失败
+- MODIFY_FAILURE：变配失败
+- DELETING：删除中
      */
     public $InstanceStatus;
 
@@ -222,7 +264,10 @@ PLATINUM 铂金版
     public $SkuCode;
 
     /**
-     * @var string 计费模式
+     * @var string 计费模式，枚举值如下：
+
+- POSTPAID：后付费按量计费
+- PREPAID：预付费包年包月
      */
     public $PayMode;
 
@@ -232,12 +277,15 @@ PLATINUM 铂金版
     public $ScaledTpsEnabled;
 
     /**
-     * @var integer 是否自动续费
+     * @var integer 预付费集群是否自动续费，枚举值如下：
+
+- 0: 不自动续费
+- 1: 自动续费
      */
     public $RenewFlag;
 
     /**
-     * @var integer 到期时间
+     * @var integer 到期时间，**Unix时间戳（毫秒）**
      */
     public $ExpiryTime;
 
@@ -265,7 +313,7 @@ PLATINUM 铂金版
     public $TopicNumUpperLimit;
 
     /**
-     * @var array 可用区列表
+     * @var array 所属可用区列表，参考 [DescribeZones](https://cloud.tencent.com/document/product/1596/77929) 接口。
      */
     public $ZoneIds;
 
@@ -292,7 +340,7 @@ PLATINUM 铂金版
      * @param integer $TpsLimit TPS限流值
      * @param integer $ScaledTpsLimit 弹性TPS限流值
      * @param integer $MaxMessageDelay 延迟消息最长时间，小时为单位
-     * @param integer $CreatedTime 创建时间，秒为单位
+     * @param integer $CreatedTime 创建时间，**Unix时间戳（毫秒）**
      * @param float $SendReceiveRatio 消息发送接收比例
      * @param array $TagList 标签
 注意：此字段可能返回 null，表示取不到有效值。
@@ -301,12 +349,28 @@ PLATINUM 铂金版
      * @param integer $TopicQueueNumUpperLimit 主题队列数上限
      * @param integer $TopicQueueNumLowerLimit 主题队列数下限
      * @param string $Remark 备注信息
-     * @param string $InstanceStatus 实例状态
+     * @param string $InstanceStatus 实例状态，枚举值如下：
+
+- RUNNING：运行中
+- ABNORMAL：异常
+- OVERDUE：隔离中
+- DESTROYED：已销毁
+- CREATING：创建中
+- MODIFYING：变配中
+- CREATE_FAILURE：创建失败
+- MODIFY_FAILURE：变配失败
+- DELETING：删除中
      * @param string $SkuCode 实例规格
-     * @param string $PayMode 计费模式
+     * @param string $PayMode 计费模式，枚举值如下：
+
+- POSTPAID：后付费按量计费
+- PREPAID：预付费包年包月
      * @param boolean $ScaledTpsEnabled 是否开启弹性TPS
-     * @param integer $RenewFlag 是否自动续费
-     * @param integer $ExpiryTime 到期时间
+     * @param integer $RenewFlag 预付费集群是否自动续费，枚举值如下：
+
+- 0: 不自动续费
+- 1: 自动续费
+     * @param integer $ExpiryTime 到期时间，**Unix时间戳（毫秒）**
      * @param integer $RoleNumLimit 角色数量限制
      * @param boolean $AclEnabled 是否开启 ACL
 注意：此字段可能返回 null，表示取不到有效值。
@@ -314,7 +378,7 @@ PLATINUM 铂金版
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TopicNumUpperLimit 最大可设置的topic个数
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ZoneIds 可用区列表
+     * @param array $ZoneIds 所属可用区列表，参考 [DescribeZones](https://cloud.tencent.com/document/product/1596/77929) 接口。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

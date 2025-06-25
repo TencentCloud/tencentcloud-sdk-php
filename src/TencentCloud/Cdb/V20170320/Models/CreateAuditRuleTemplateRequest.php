@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAuditRuleTemplate请求参数结构体
  *
- * @method array getRuleFilters() 获取审计规则
- * @method void setRuleFilters(array $RuleFilters) 设置审计规则
- * @method string getRuleTemplateName() 获取规则模板名称
- * @method void setRuleTemplateName(string $RuleTemplateName) 设置规则模板名称
- * @method string getDescription() 获取规则模板描述
- * @method void setDescription(string $Description) 设置规则模板描述
- * @method integer getAlarmLevel() 获取告警等级。1-低风险，2-中风险，3-高风险
- * @method void setAlarmLevel(integer $AlarmLevel) 设置告警等级。1-低风险，2-中风险，3-高风险
- * @method integer getAlarmPolicy() 获取告警策略。0-不告警，1-告警
- * @method void setAlarmPolicy(integer $AlarmPolicy) 设置告警策略。0-不告警，1-告警
+ * @method array getRuleFilters() 获取审计规则。
+ * @method void setRuleFilters(array $RuleFilters) 设置审计规则。
+ * @method string getRuleTemplateName() 获取规则模板名称。最多支持输入30个字符。
+ * @method void setRuleTemplateName(string $RuleTemplateName) 设置规则模板名称。最多支持输入30个字符。
+ * @method string getDescription() 获取规则模板描述。最多支持输入200个字符。
+ * @method void setDescription(string $Description) 设置规则模板描述。最多支持输入200个字符。
+ * @method integer getAlarmLevel() 获取告警等级。1 - 低风险，2 - 中风险，3 - 高风险。默认值为1。
+ * @method void setAlarmLevel(integer $AlarmLevel) 设置告警等级。1 - 低风险，2 - 中风险，3 - 高风险。默认值为1。
+ * @method integer getAlarmPolicy() 获取告警策略。0 - 不告警，1 - 告警。默认值为0。
+ * @method void setAlarmPolicy(integer $AlarmPolicy) 设置告警策略。0 - 不告警，1 - 告警。默认值为0。
  */
 class CreateAuditRuleTemplateRequest extends AbstractModel
 {
     /**
-     * @var array 审计规则
+     * @var array 审计规则。
      */
     public $RuleFilters;
 
     /**
-     * @var string 规则模板名称
+     * @var string 规则模板名称。最多支持输入30个字符。
      */
     public $RuleTemplateName;
 
     /**
-     * @var string 规则模板描述
+     * @var string 规则模板描述。最多支持输入200个字符。
      */
     public $Description;
 
     /**
-     * @var integer 告警等级。1-低风险，2-中风险，3-高风险
+     * @var integer 告警等级。1 - 低风险，2 - 中风险，3 - 高风险。默认值为1。
      */
     public $AlarmLevel;
 
     /**
-     * @var integer 告警策略。0-不告警，1-告警
+     * @var integer 告警策略。0 - 不告警，1 - 告警。默认值为0。
      */
     public $AlarmPolicy;
 
     /**
-     * @param array $RuleFilters 审计规则
-     * @param string $RuleTemplateName 规则模板名称
-     * @param string $Description 规则模板描述
-     * @param integer $AlarmLevel 告警等级。1-低风险，2-中风险，3-高风险
-     * @param integer $AlarmPolicy 告警策略。0-不告警，1-告警
+     * @param array $RuleFilters 审计规则。
+     * @param string $RuleTemplateName 规则模板名称。最多支持输入30个字符。
+     * @param string $Description 规则模板描述。最多支持输入200个字符。
+     * @param integer $AlarmLevel 告警等级。1 - 低风险，2 - 中风险，3 - 高风险。默认值为1。
+     * @param integer $AlarmPolicy 告警策略。0 - 不告警，1 - 告警。默认值为0。
      */
     function __construct()
     {

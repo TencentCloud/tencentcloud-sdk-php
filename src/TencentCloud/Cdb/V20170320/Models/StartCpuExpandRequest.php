@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StartCpuExpand请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID。
+ * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
  * @method string getType() 获取扩容类型，支持自动扩容和自定义扩容。
 说明：1. auto 表示自动扩容。2. manual 表示自定义扩容，扩容时间为立即生效。3. timeInterval 表示自定义扩容，扩容时间为按时间段。4. period 表示自定义扩容，扩容时间为按周期。
  * @method void setType(string $Type) 设置扩容类型，支持自动扩容和自定义扩容。
@@ -33,14 +33,18 @@ use TencentCloud\Common\AbstractModel;
  * @method AutoStrategy getAutoStrategy() 获取自动扩容策略。Type 为 auto 时必传。
  * @method void setAutoStrategy(AutoStrategy $AutoStrategy) 设置自动扩容策略。Type 为 auto 时必传。
  * @method TimeIntervalStrategy getTimeIntervalStrategy() 获取按时间段扩容策略。
+说明：当 Type 为 timeInterval 时，TimeIntervalStrategy 必填。
  * @method void setTimeIntervalStrategy(TimeIntervalStrategy $TimeIntervalStrategy) 设置按时间段扩容策略。
+说明：当 Type 为 timeInterval 时，TimeIntervalStrategy 必填。
  * @method PeriodStrategy getPeriodStrategy() 获取按周期扩容策略。
+说明：当 Type 为 period 时，PeriodStrategy 必填。
  * @method void setPeriodStrategy(PeriodStrategy $PeriodStrategy) 设置按周期扩容策略。
+说明：当 Type 为 period 时，PeriodStrategy 必填。
  */
 class StartCpuExpandRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID。
+     * @var string 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public $InstanceId;
 
@@ -63,23 +67,27 @@ class StartCpuExpandRequest extends AbstractModel
 
     /**
      * @var TimeIntervalStrategy 按时间段扩容策略。
+说明：当 Type 为 timeInterval 时，TimeIntervalStrategy 必填。
      */
     public $TimeIntervalStrategy;
 
     /**
      * @var PeriodStrategy 按周期扩容策略。
+说明：当 Type 为 period 时，PeriodStrategy 必填。
      */
     public $PeriodStrategy;
 
     /**
-     * @param string $InstanceId 实例 ID。
+     * @param string $InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      * @param string $Type 扩容类型，支持自动扩容和自定义扩容。
 说明：1. auto 表示自动扩容。2. manual 表示自定义扩容，扩容时间为立即生效。3. timeInterval 表示自定义扩容，扩容时间为按时间段。4. period 表示自定义扩容，扩容时间为按周期。
      * @param integer $ExpandCpu 自定义扩容时，扩容的 CPU 核心数。
 说明：1. Type 为 manual、timeInterval、period 时必传。2. 扩容的 CPU 核心数上限为当前实例 CPU 核心数，比如8核16G最大可手动扩容的 CPU 核心数为8，即范围为1 - 8。
      * @param AutoStrategy $AutoStrategy 自动扩容策略。Type 为 auto 时必传。
      * @param TimeIntervalStrategy $TimeIntervalStrategy 按时间段扩容策略。
+说明：当 Type 为 timeInterval 时，TimeIntervalStrategy 必填。
      * @param PeriodStrategy $PeriodStrategy 按周期扩容策略。
+说明：当 Type 为 period 时，PeriodStrategy 必填。
      */
     function __construct()
     {

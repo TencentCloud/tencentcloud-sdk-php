@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 发起流程快速注册相关信息
  *
- * @method string getLegalName() 获取法人姓名
- * @method void setLegalName(string $LegalName) 设置法人姓名
+ * @method string getLegalName() 获取<font color="red">字段不再使用</font>，法人姓名
+ * @method void setLegalName(string $LegalName) 设置<font color="red">字段不再使用</font>，法人姓名
  * @method string getUscc() 获取社会统一信用代码
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUscc(string $Uscc) 设置社会统一信用代码
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUnifiedSocialCreditCode() 获取社会统一信用代码
- * @method void setUnifiedSocialCreditCode(string $UnifiedSocialCreditCode) 设置社会统一信用代码
+ * @method string getUnifiedSocialCreditCode() 获取<font color="red">字段不再使用</font>，社会统一信用代码
+ * @method void setUnifiedSocialCreditCode(string $UnifiedSocialCreditCode) 设置<font color="red">字段不再使用</font>，社会统一信用代码
  * @method array getAuthorizationTypes() 获取指定企业认证的授权方式 支持多选:
 
 <ul>
@@ -40,11 +40,23 @@ use TencentCloud\Common\AbstractModel;
 <li><strong>2</strong>: 法人授权方式</li>
 <li><strong>5</strong>: 授权书+对公打款方式</li>
 </ul>
+ * @method integer getAuthorizationType() 获取指定企业认证的授权方式 支持多选:
+
+<ul>
+<li><strong>2</strong>: 法人授权方式</li>
+<li><strong>5</strong>: 授权书+对公打款方式</li>
+</ul>
+ * @method void setAuthorizationType(integer $AuthorizationType) 设置指定企业认证的授权方式 支持多选:
+
+<ul>
+<li><strong>2</strong>: 法人授权方式</li>
+<li><strong>5</strong>: 授权书+对公打款方式</li>
+</ul>
  */
 class RegisterInfo extends AbstractModel
 {
     /**
-     * @var string 法人姓名
+     * @var string <font color="red">字段不再使用</font>，法人姓名
      */
     public $LegalName;
 
@@ -56,7 +68,7 @@ class RegisterInfo extends AbstractModel
     public $Uscc;
 
     /**
-     * @var string 社会统一信用代码
+     * @var string <font color="red">字段不再使用</font>，社会统一信用代码
      */
     public $UnifiedSocialCreditCode;
 
@@ -67,15 +79,32 @@ class RegisterInfo extends AbstractModel
 <li><strong>2</strong>: 法人授权方式</li>
 <li><strong>5</strong>: 授权书+对公打款方式</li>
 </ul>
+     * @deprecated
      */
     public $AuthorizationTypes;
 
     /**
-     * @param string $LegalName 法人姓名
+     * @var integer 指定企业认证的授权方式 支持多选:
+
+<ul>
+<li><strong>2</strong>: 法人授权方式</li>
+<li><strong>5</strong>: 授权书+对公打款方式</li>
+</ul>
+     */
+    public $AuthorizationType;
+
+    /**
+     * @param string $LegalName <font color="red">字段不再使用</font>，法人姓名
      * @param string $Uscc 社会统一信用代码
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UnifiedSocialCreditCode 社会统一信用代码
+     * @param string $UnifiedSocialCreditCode <font color="red">字段不再使用</font>，社会统一信用代码
      * @param array $AuthorizationTypes 指定企业认证的授权方式 支持多选:
+
+<ul>
+<li><strong>2</strong>: 法人授权方式</li>
+<li><strong>5</strong>: 授权书+对公打款方式</li>
+</ul>
+     * @param integer $AuthorizationType 指定企业认证的授权方式 支持多选:
 
 <ul>
 <li><strong>2</strong>: 法人授权方式</li>
@@ -109,6 +138,10 @@ class RegisterInfo extends AbstractModel
 
         if (array_key_exists("AuthorizationTypes",$param) and $param["AuthorizationTypes"] !== null) {
             $this->AuthorizationTypes = $param["AuthorizationTypes"];
+        }
+
+        if (array_key_exists("AuthorizationType",$param) and $param["AuthorizationType"] !== null) {
+            $this->AuthorizationType = $param["AuthorizationType"];
         }
     }
 }

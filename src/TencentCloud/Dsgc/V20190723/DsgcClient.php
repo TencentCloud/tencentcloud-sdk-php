@@ -113,9 +113,7 @@ use TencentCloud\Dsgc\V20190723\Models as Models;
  * @method Models\DescribeDSPADiscoveryRulesResponse DescribeDSPADiscoveryRules(Models\DescribeDSPADiscoveryRulesRequest $req) 获取分类分级规则列表
  * @method Models\DescribeDSPADiscoveryServiceStatusResponse DescribeDSPADiscoveryServiceStatus(Models\DescribeDSPADiscoveryServiceStatusRequest $req) 用于查询该用户是否已开通分类分级服务
  * @method Models\DescribeDSPADiscoveryTaskDetailResponse DescribeDSPADiscoveryTaskDetail(Models\DescribeDSPADiscoveryTaskDetailRequest $req) 获取分类分级任务详情
- * @method Models\DescribeDSPADiscoveryTaskResultResponse DescribeDSPADiscoveryTaskResult(Models\DescribeDSPADiscoveryTaskResultRequest $req) 获取分类分级任务结果，该接口只有在任务状态为以下状态时才支持结果正常查询：
-3 扫描成功，
-4 扫描失败
+ * @method Models\DescribeDSPADiscoveryTaskResultResponse DescribeDSPADiscoveryTaskResult(Models\DescribeDSPADiscoveryTaskResultRequest $req) 获取分类分级任务结果，该接口只有在任务状态为以下状态时才支持结果正常查询：3 扫描成功，4 扫描失败
  * @method Models\DescribeDSPADiscoveryTaskResultDetailResponse DescribeDSPADiscoveryTaskResultDetail(Models\DescribeDSPADiscoveryTaskResultDetailRequest $req) 获取分类分级任务结果详情，该接口只有在任务状态为时才支持结果正确查询：
 3 扫描成功
  * @method Models\DescribeDSPADiscoveryTaskTablesResponse DescribeDSPADiscoveryTaskTables(Models\DescribeDSPADiscoveryTaskTablesRequest $req) 获取分级分级扫描的表集合

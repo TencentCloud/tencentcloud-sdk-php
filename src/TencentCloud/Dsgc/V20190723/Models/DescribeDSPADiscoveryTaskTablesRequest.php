@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDbResultId(integer $DbResultId) 设置数据库扫描结果ID
  * @method string getDbName() 获取db名称
  * @method void setDbName(string $DbName) 设置db名称
+ * @method integer getScanResultId() 获取任务扫描id
+ * @method void setScanResultId(integer $ScanResultId) 设置任务扫描id
  */
 class DescribeDSPADiscoveryTaskTablesRequest extends AbstractModel
 {
@@ -43,6 +45,7 @@ class DescribeDSPADiscoveryTaskTablesRequest extends AbstractModel
 
     /**
      * @var integer 数据库扫描结果ID
+     * @deprecated
      */
     public $DbResultId;
 
@@ -52,10 +55,16 @@ class DescribeDSPADiscoveryTaskTablesRequest extends AbstractModel
     public $DbName;
 
     /**
+     * @var integer 任务扫描id
+     */
+    public $ScanResultId;
+
+    /**
      * @param string $DspaId DSPA实例ID
      * @param integer $TaskId 任务ID
      * @param integer $DbResultId 数据库扫描结果ID
      * @param string $DbName db名称
+     * @param integer $ScanResultId 任务扫描id
      */
     function __construct()
     {
@@ -84,6 +93,10 @@ class DescribeDSPADiscoveryTaskTablesRequest extends AbstractModel
 
         if (array_key_exists("DbName",$param) and $param["DbName"] !== null) {
             $this->DbName = $param["DbName"];
+        }
+
+        if (array_key_exists("ScanResultId",$param) and $param["ScanResultId"] !== null) {
+            $this->ScanResultId = $param["ScanResultId"];
         }
     }
 }

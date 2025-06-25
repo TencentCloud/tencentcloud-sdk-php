@@ -100,6 +100,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setComputeResourceId(string $ComputeResourceId) 设置计算资源id
  * @method ComputeResourceAdvanceParams getComputeResourceAdvanceParams() 获取计算资源高级设置
  * @method void setComputeResourceAdvanceParams(ComputeResourceAdvanceParams $ComputeResourceAdvanceParams) 设置计算资源高级设置
+ * @method NodeMark getNodeMarks() 获取节点标记信息，目前只提供tf平台使用
+ * @method void setNodeMarks(NodeMark $NodeMarks) 设置节点标记信息，目前只提供tf平台使用
  */
 class ScaleOutInstanceRequest extends AbstractModel
 {
@@ -260,6 +262,11 @@ class ScaleOutInstanceRequest extends AbstractModel
     public $ComputeResourceAdvanceParams;
 
     /**
+     * @var NodeMark 节点标记信息，目前只提供tf平台使用
+     */
+    public $NodeMarks;
+
+    /**
      * @param string $TimeUnit 扩容的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
 <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
@@ -300,6 +307,7 @@ class ScaleOutInstanceRequest extends AbstractModel
      * @param string $ResourceBaseType 类型为ComputeResource和EMR以及默认，默认为EMR,类型为EMR时,InstanceId生效,类型为ComputeResource时,使用ComputeResourceId标识
      * @param string $ComputeResourceId 计算资源id
      * @param ComputeResourceAdvanceParams $ComputeResourceAdvanceParams 计算资源高级设置
+     * @param NodeMark $NodeMarks 节点标记信息，目前只提供tf平台使用
      */
     function __construct()
     {
@@ -441,6 +449,11 @@ class ScaleOutInstanceRequest extends AbstractModel
         if (array_key_exists("ComputeResourceAdvanceParams",$param) and $param["ComputeResourceAdvanceParams"] !== null) {
             $this->ComputeResourceAdvanceParams = new ComputeResourceAdvanceParams();
             $this->ComputeResourceAdvanceParams->deserialize($param["ComputeResourceAdvanceParams"]);
+        }
+
+        if (array_key_exists("NodeMarks",$param) and $param["NodeMarks"] !== null) {
+            $this->NodeMarks = new NodeMark();
+            $this->NodeMarks->deserialize($param["NodeMarks"]);
         }
     }
 }

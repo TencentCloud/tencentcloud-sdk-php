@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getComplianceUpdate() 获取关联模板是否更新
  * @method void setComplianceUpdate(boolean $ComplianceUpdate) 设置关联模板是否更新
+ * @method string getScanRange() 获取	full:全量扫描 incre:变更扫描
+ * @method void setScanRange(string $ScanRange) 设置	full:全量扫描 incre:变更扫描
  */
 class DspaDiscoveryTask extends AbstractModel
 {
@@ -104,6 +106,11 @@ class DspaDiscoveryTask extends AbstractModel
     public $ComplianceUpdate;
 
     /**
+     * @var string 	full:全量扫描 incre:变更扫描
+     */
+    public $ScanRange;
+
+    /**
      * @param integer $TaskId 任务ID
      * @param string $Name 任务名称
      * @param string $Description 任务描述
@@ -116,6 +123,7 @@ class DspaDiscoveryTask extends AbstractModel
      * @param string $TimingStartTime 定时开始时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $ComplianceUpdate 关联模板是否更新
+     * @param string $ScanRange 	full:全量扫描 incre:变更扫描
      */
     function __construct()
     {
@@ -174,6 +182,10 @@ class DspaDiscoveryTask extends AbstractModel
 
         if (array_key_exists("ComplianceUpdate",$param) and $param["ComplianceUpdate"] !== null) {
             $this->ComplianceUpdate = $param["ComplianceUpdate"];
+        }
+
+        if (array_key_exists("ScanRange",$param) and $param["ScanRange"] !== null) {
+            $this->ScanRange = $param["ScanRange"];
         }
     }
 }

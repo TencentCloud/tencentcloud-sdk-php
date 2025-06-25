@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessageTracks(array $MessageTracks) 设置消息消费情况列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getShowTopicName() 获取Topic
- * @method void setShowTopicName(string $ShowTopicName) 设置Topic
+ * @method string getShowTopicName() 获取主题名称
+ * @method void setShowTopicName(string $ShowTopicName) 设置主题名称
  * @method integer getMessageTracksCount() 获取消息消费情况列表总条数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessageTracksCount(integer $MessageTracksCount) 设置消息消费情况列表总条数
@@ -80,7 +80,7 @@ class DescribeMessageResponse extends AbstractModel
     public $MessageTracks;
 
     /**
-     * @var string Topic
+     * @var string 主题名称
      */
     public $ShowTopicName;
 
@@ -104,7 +104,7 @@ class DescribeMessageResponse extends AbstractModel
      * @param string $ProducerAddr 生产者地址
      * @param array $MessageTracks 消息消费情况列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ShowTopicName Topic
+     * @param string $ShowTopicName 主题名称
      * @param integer $MessageTracksCount 消息消费情况列表总条数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。

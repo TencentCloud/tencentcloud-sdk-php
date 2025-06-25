@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(integer $TaskId) 设置扫描任务ID
  * @method integer getBucketResultId() 获取扫描Bucket任务结果ID
  * @method void setBucketResultId(integer $BucketResultId) 设置扫描Bucket任务结果ID
+ * @method integer getScanResultId() 获取扫描结果id
+ * @method void setScanResultId(integer $ScanResultId) 设置扫描结果id
  */
 class DescribeDSPACOSDiscoveryTaskFilesRequest extends AbstractModel
 {
@@ -41,13 +43,20 @@ class DescribeDSPACOSDiscoveryTaskFilesRequest extends AbstractModel
 
     /**
      * @var integer 扫描Bucket任务结果ID
+     * @deprecated
      */
     public $BucketResultId;
+
+    /**
+     * @var integer 扫描结果id
+     */
+    public $ScanResultId;
 
     /**
      * @param string $DspaId DSPA实例Id
      * @param integer $TaskId 扫描任务ID
      * @param integer $BucketResultId 扫描Bucket任务结果ID
+     * @param integer $ScanResultId 扫描结果id
      */
     function __construct()
     {
@@ -72,6 +81,10 @@ class DescribeDSPACOSDiscoveryTaskFilesRequest extends AbstractModel
 
         if (array_key_exists("BucketResultId",$param) and $param["BucketResultId"] !== null) {
             $this->BucketResultId = $param["BucketResultId"];
+        }
+
+        if (array_key_exists("ScanResultId",$param) and $param["ScanResultId"] !== null) {
+            $this->ScanResultId = $param["ScanResultId"];
         }
     }
 }

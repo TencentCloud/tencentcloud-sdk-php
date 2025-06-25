@@ -68,6 +68,8 @@ selfbuilt-db 表示自建数据库
  * @method void setRows(integer $Rows) 设置抽样的条数，范围30-1000
  * @method string getGlobalOrderField() 获取抽样的排序字段
  * @method void setGlobalOrderField(string $GlobalOrderField) 设置抽样的排序字段
+ * @method string getScanRange() 获取full:全量扫描 incre:变更扫描
+ * @method void setScanRange(string $ScanRange) 设置full:全量扫描 incre:变更扫描
  */
 class CreateDSPADiscoveryTaskRequest extends AbstractModel
 {
@@ -161,6 +163,11 @@ selfbuilt-db 表示自建数据库
     public $GlobalOrderField;
 
     /**
+     * @var string full:全量扫描 incre:变更扫描
+     */
+    public $ScanRange;
+
+    /**
      * @param string $DspaId DSPA实例ID
      * @param string $Name 任务名称，1-60个字符，仅允许输入中文、英文字母、数字、'_'、'-'，并且开头和结尾需为中文、英文字母或者数字，Name不可重复
      * @param string $DataSourceId 数据源ID
@@ -185,6 +192,7 @@ selfbuilt-db 表示自建数据库
      * @param string $Order random-随机，asc生序，desc降序
      * @param integer $Rows 抽样的条数，范围30-1000
      * @param string $GlobalOrderField 抽样的排序字段
+     * @param string $ScanRange full:全量扫描 incre:变更扫描
      */
     function __construct()
     {
@@ -261,6 +269,10 @@ selfbuilt-db 表示自建数据库
 
         if (array_key_exists("GlobalOrderField",$param) and $param["GlobalOrderField"] !== null) {
             $this->GlobalOrderField = $param["GlobalOrderField"];
+        }
+
+        if (array_key_exists("ScanRange",$param) and $param["ScanRange"] !== null) {
+            $this->ScanRange = $param["ScanRange"];
         }
     }
 }

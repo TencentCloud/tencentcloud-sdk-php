@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDspaId(string $DspaId) 设置DSPA实例ID
  * @method integer getTaskId() 获取任务ID
  * @method void setTaskId(integer $TaskId) 设置任务ID
- * @method integer getBucketResultId() 获取扫描Bucket结果ID
- * @method void setBucketResultId(integer $BucketResultId) 设置扫描Bucket结果ID
  * @method integer getComplianceId() 获取合规组ID
  * @method void setComplianceId(integer $ComplianceId) 设置合规组ID
+ * @method integer getBucketResultId() 获取扫描Bucket结果ID
+ * @method void setBucketResultId(integer $BucketResultId) 设置扫描Bucket结果ID
  * @method string getFileName() 获取文件名
  * @method void setFileName(string $FileName) 设置文件名
  * @method integer getCategoryId() 获取敏感数据分类ID
@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBucketName(string $BucketName) 设置扫描桶名称。
  * @method array getCategoryIdList() 获取多级分类的分类ID集合
  * @method void setCategoryIdList(array $CategoryIdList) 设置多级分类的分类ID集合
+ * @method integer getScanResultId() 获取扫描结果id
+ * @method void setScanResultId(integer $ScanResultId) 设置扫描结果id
  */
 class DescribeDSPACOSTaskResultDetailRequest extends AbstractModel
 {
@@ -56,14 +58,15 @@ class DescribeDSPACOSTaskResultDetailRequest extends AbstractModel
     public $TaskId;
 
     /**
-     * @var integer 扫描Bucket结果ID
-     */
-    public $BucketResultId;
-
-    /**
      * @var integer 合规组ID
      */
     public $ComplianceId;
+
+    /**
+     * @var integer 扫描Bucket结果ID
+     * @deprecated
+     */
+    public $BucketResultId;
 
     /**
      * @var string 文件名
@@ -101,10 +104,15 @@ class DescribeDSPACOSTaskResultDetailRequest extends AbstractModel
     public $CategoryIdList;
 
     /**
+     * @var integer 扫描结果id
+     */
+    public $ScanResultId;
+
+    /**
      * @param string $DspaId DSPA实例ID
      * @param integer $TaskId 任务ID
-     * @param integer $BucketResultId 扫描Bucket结果ID
      * @param integer $ComplianceId 合规组ID
+     * @param integer $BucketResultId 扫描Bucket结果ID
      * @param string $FileName 文件名
      * @param integer $CategoryId 敏感数据分类ID
      * @param integer $LevelId 敏感数据分级ID
@@ -112,6 +120,7 @@ class DescribeDSPACOSTaskResultDetailRequest extends AbstractModel
      * @param integer $Limit 返回数量，默认值为20，最大值为100
      * @param string $BucketName 扫描桶名称。
      * @param array $CategoryIdList 多级分类的分类ID集合
+     * @param integer $ScanResultId 扫描结果id
      */
     function __construct()
     {
@@ -134,12 +143,12 @@ class DescribeDSPACOSTaskResultDetailRequest extends AbstractModel
             $this->TaskId = $param["TaskId"];
         }
 
-        if (array_key_exists("BucketResultId",$param) and $param["BucketResultId"] !== null) {
-            $this->BucketResultId = $param["BucketResultId"];
-        }
-
         if (array_key_exists("ComplianceId",$param) and $param["ComplianceId"] !== null) {
             $this->ComplianceId = $param["ComplianceId"];
+        }
+
+        if (array_key_exists("BucketResultId",$param) and $param["BucketResultId"] !== null) {
+            $this->BucketResultId = $param["BucketResultId"];
         }
 
         if (array_key_exists("FileName",$param) and $param["FileName"] !== null) {
@@ -168,6 +177,10 @@ class DescribeDSPACOSTaskResultDetailRequest extends AbstractModel
 
         if (array_key_exists("CategoryIdList",$param) and $param["CategoryIdList"] !== null) {
             $this->CategoryIdList = $param["CategoryIdList"];
+        }
+
+        if (array_key_exists("ScanResultId",$param) and $param["ScanResultId"] !== null) {
+            $this->ScanResultId = $param["ScanResultId"];
         }
     }
 }

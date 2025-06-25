@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNote(string $Note) 设置域名备注信息
  * @method array getLabels() 获取域名标签
  * @method void setLabels(array $Labels) 设置域名标签
+ * @method integer getAccessStatus() 获取clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”
+ * @method void setAccessStatus(integer $AccessStatus) 设置clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”
  */
 class ClbDomainsInfo extends AbstractModel
 {
@@ -129,6 +131,11 @@ class ClbDomainsInfo extends AbstractModel
     public $Labels;
 
     /**
+     * @var integer clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”
+     */
+    public $AccessStatus;
+
+    /**
      * @param string $Domain 域名
      * @param string $DomainId 域名唯一ID
      * @param string $InstanceId 域名所属实例ID
@@ -144,6 +151,7 @@ class ClbDomainsInfo extends AbstractModel
      * @param string $CloudType 云类型:public:公有云；private:私有云;hybrid:混合云
      * @param string $Note 域名备注信息
      * @param array $Labels 域名标签
+     * @param integer $AccessStatus clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”
      */
     function __construct()
     {
@@ -221,6 +229,10 @@ class ClbDomainsInfo extends AbstractModel
 
         if (array_key_exists("Labels",$param) and $param["Labels"] !== null) {
             $this->Labels = $param["Labels"];
+        }
+
+        if (array_key_exists("AccessStatus",$param) and $param["AccessStatus"] !== null) {
+            $this->AccessStatus = $param["AccessStatus"];
         }
     }
 }

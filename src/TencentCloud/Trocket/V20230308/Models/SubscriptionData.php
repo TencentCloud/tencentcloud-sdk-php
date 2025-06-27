@@ -44,9 +44,17 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsOnline(boolean $IsOnline) 设置是否在线
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getConsumeType() 获取消费类型
+ * @method string getConsumeType() 获取消费类型，枚举值如下：
+
+- PULL：PULL 消费类型
+- PUSH：PUSH 消费类型
+- POP：POP 消费类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setConsumeType(string $ConsumeType) 设置消费类型
+ * @method void setConsumeType(string $ConsumeType) 设置消费类型，枚举值如下：
+
+- PULL：PULL 消费类型
+- PUSH：PUSH 消费类型
+- POP：POP 消费类型
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubString() 获取订阅规则
 注意：此字段可能返回 null，表示取不到有效值。
@@ -56,9 +64,15 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpressionType(string $ExpressionType) 设置过滤类型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getConsistency() 获取订阅一致性
+ * @method integer getConsistency() 获取订阅一致性，枚举如下：
+
+- 0: 订阅一致
+- 1: 订阅不一致
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setConsistency(integer $Consistency) 设置订阅一致性
+ * @method void setConsistency(integer $Consistency) 设置订阅一致性，枚举如下：
+
+- 0: 订阅一致
+- 1: 订阅不一致
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getConsumerLag() 获取消费堆积
 注意：此字段可能返回 null，表示取不到有效值。
@@ -128,7 +142,11 @@ class SubscriptionData extends AbstractModel
     public $IsOnline;
 
     /**
-     * @var string 消费类型
+     * @var string 消费类型，枚举值如下：
+
+- PULL：PULL 消费类型
+- PUSH：PUSH 消费类型
+- POP：POP 消费类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConsumeType;
@@ -146,7 +164,10 @@ class SubscriptionData extends AbstractModel
     public $ExpressionType;
 
     /**
-     * @var integer 订阅一致性
+     * @var integer 订阅一致性，枚举如下：
+
+- 0: 订阅一致
+- 1: 订阅不一致
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Consistency;
@@ -202,13 +223,20 @@ CLUSTERING 集群模式;
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsOnline 是否在线
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ConsumeType 消费类型
+     * @param string $ConsumeType 消费类型，枚举值如下：
+
+- PULL：PULL 消费类型
+- PUSH：PUSH 消费类型
+- POP：POP 消费类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubString 订阅规则
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExpressionType 过滤类型
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Consistency 订阅一致性
+     * @param integer $Consistency 订阅一致性，枚举如下：
+
+- 0: 订阅一致
+- 1: 订阅不一致
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ConsumerLag 消费堆积
 注意：此字段可能返回 null，表示取不到有效值。

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateRole请求参数结构体
  *
- * @method string getInstanceId() 获取集群ID
- * @method void setInstanceId(string $InstanceId) 设置集群ID
+ * @method string getInstanceId() 获取腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
+ * @method void setInstanceId(string $InstanceId) 设置腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
  * @method string getRole() 获取角色名称
  * @method void setRole(string $Role) 设置角色名称
  * @method boolean getPermWrite() 获取是否开启生产权限
@@ -32,13 +32,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemark(string $Remark) 设置备注
  * @method string getPermType() 获取权限类型，默认按集群授权（Cluster：集群级别；TopicAndGroup：主题&消费组级别）
  * @method void setPermType(string $PermType) 设置权限类型，默认按集群授权（Cluster：集群级别；TopicAndGroup：主题&消费组级别）
- * @method array getDetailedPerms() 获取Topic&Group维度权限配置
- * @method void setDetailedPerms(array $DetailedPerms) 设置Topic&Group维度权限配置
+ * @method array getDetailedPerms() 获取Topic&Group维度权限配置，权限类型为 TopicAndGroup 时必填
+ * @method void setDetailedPerms(array $DetailedPerms) 设置Topic&Group维度权限配置，权限类型为 TopicAndGroup 时必填
  */
 class CreateRoleRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
      */
     public $InstanceId;
 
@@ -68,18 +68,18 @@ class CreateRoleRequest extends AbstractModel
     public $PermType;
 
     /**
-     * @var array Topic&Group维度权限配置
+     * @var array Topic&Group维度权限配置，权限类型为 TopicAndGroup 时必填
      */
     public $DetailedPerms;
 
     /**
-     * @param string $InstanceId 集群ID
+     * @param string $InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
      * @param string $Role 角色名称
      * @param boolean $PermWrite 是否开启生产权限
      * @param boolean $PermRead 是否开启消费权限
      * @param string $Remark 备注
      * @param string $PermType 权限类型，默认按集群授权（Cluster：集群级别；TopicAndGroup：主题&消费组级别）
-     * @param array $DetailedPerms Topic&Group维度权限配置
+     * @param array $DetailedPerms Topic&Group维度权限配置，权限类型为 TopicAndGroup 时必填
      */
     function __construct()
     {

@@ -21,93 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * 出行结果
  *
  * @method string getLabel() 获取一级标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabel(string $Label) 设置一级标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubLabel() 获取二级标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubLabel(string $SubLabel) 设置二级标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRiskLevel() 获取风险等级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskLevel(string $RiskLevel) 设置风险等级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAudioRole() 获取出行音频角色
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAudioRole(string $AudioRole) 设置出行音频角色
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAudioText() 获取出行语音文本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAudioText(string $AudioText) 设置出行语音文本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getStartTime() 获取开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(float $StartTime) 设置开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getEndTime() 获取结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(float $EndTime) 设置结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TravelResults extends AbstractModel
 {
     /**
      * @var string 一级标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Label;
 
     /**
      * @var string 二级标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubLabel;
 
     /**
      * @var string 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskLevel;
 
     /**
      * @var string 出行音频角色
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AudioRole;
 
     /**
      * @var string 出行语音文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AudioText;
 
     /**
      * @var float 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
      * @var float 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
      * @param string $Label 一级标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubLabel 二级标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RiskLevel 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AudioRole 出行音频角色
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AudioText 出行语音文本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $StartTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $EndTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

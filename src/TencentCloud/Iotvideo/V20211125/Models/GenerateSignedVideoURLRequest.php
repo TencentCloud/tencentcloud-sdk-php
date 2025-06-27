@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getVideoURL() 获取视频播放原始URL地址
  * @method void setVideoURL(string $VideoURL) 设置视频播放原始URL地址
- * @method integer getExpireTime() 获取播放链接过期时间
- * @method void setExpireTime(integer $ExpireTime) 设置播放链接过期时间
+ * @method integer getExpireTime() 获取播放链接过期时间（时间戳，单位秒）
+ * @method void setExpireTime(integer $ExpireTime) 设置播放链接过期时间（时间戳，单位秒）
  * @method integer getChannelId() 获取通道ID 非NVR设备不填 NVR设备必填 默认为无	
  * @method void setChannelId(integer $ChannelId) 设置通道ID 非NVR设备不填 NVR设备必填 默认为无	
  */
@@ -35,7 +35,7 @@ class GenerateSignedVideoURLRequest extends AbstractModel
     public $VideoURL;
 
     /**
-     * @var integer 播放链接过期时间
+     * @var integer 播放链接过期时间（时间戳，单位秒）
      */
     public $ExpireTime;
 
@@ -46,7 +46,7 @@ class GenerateSignedVideoURLRequest extends AbstractModel
 
     /**
      * @param string $VideoURL 视频播放原始URL地址
-     * @param integer $ExpireTime 播放链接过期时间
+     * @param integer $ExpireTime 播放链接过期时间（时间戳，单位秒）
      * @param integer $ChannelId 通道ID 非NVR设备不填 NVR设备必填 默认为无	
      */
     function __construct()

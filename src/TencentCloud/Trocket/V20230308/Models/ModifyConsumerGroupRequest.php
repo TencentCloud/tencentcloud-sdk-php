@@ -20,30 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyConsumerGroup请求参数结构体
  *
- * @method string getInstanceId() 获取集群ID
- * @method void setInstanceId(string $InstanceId) 设置集群ID
- * @method string getConsumerGroup() 获取消费组名称
- * @method void setConsumerGroup(string $ConsumerGroup) 设置消费组名称
+ * @method string getInstanceId() 获取腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
+ * @method void setInstanceId(string $InstanceId) 设置腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
+ * @method string getConsumerGroup() 获取消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口或控制台获得。
+ * @method void setConsumerGroup(string $ConsumerGroup) 设置消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口或控制台获得。
  * @method boolean getConsumeEnable() 获取是否开启消费
  * @method void setConsumeEnable(boolean $ConsumeEnable) 设置是否开启消费
  * @method boolean getConsumeMessageOrderly() 获取顺序投递：true
 并发投递：false
  * @method void setConsumeMessageOrderly(boolean $ConsumeMessageOrderly) 设置顺序投递：true
 并发投递：false
- * @method integer getMaxRetryTimes() 获取最大重试次数
- * @method void setMaxRetryTimes(integer $MaxRetryTimes) 设置最大重试次数
- * @method string getRemark() 获取备注
- * @method void setRemark(string $Remark) 设置备注
+ * @method integer getMaxRetryTimes() 获取最大重试次数，取值范围0～1000
+ * @method void setMaxRetryTimes(integer $MaxRetryTimes) 设置最大重试次数，取值范围0～1000
+ * @method string getRemark() 获取备注信息，最多 128 个字符
+ * @method void setRemark(string $Remark) 设置备注信息，最多 128 个字符
  */
 class ModifyConsumerGroupRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
      */
     public $InstanceId;
 
     /**
-     * @var string 消费组名称
+     * @var string 消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口或控制台获得。
      */
     public $ConsumerGroup;
 
@@ -59,23 +59,23 @@ class ModifyConsumerGroupRequest extends AbstractModel
     public $ConsumeMessageOrderly;
 
     /**
-     * @var integer 最大重试次数
+     * @var integer 最大重试次数，取值范围0～1000
      */
     public $MaxRetryTimes;
 
     /**
-     * @var string 备注
+     * @var string 备注信息，最多 128 个字符
      */
     public $Remark;
 
     /**
-     * @param string $InstanceId 集群ID
-     * @param string $ConsumerGroup 消费组名称
+     * @param string $InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
+     * @param string $ConsumerGroup 消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口或控制台获得。
      * @param boolean $ConsumeEnable 是否开启消费
      * @param boolean $ConsumeMessageOrderly 顺序投递：true
 并发投递：false
-     * @param integer $MaxRetryTimes 最大重试次数
-     * @param string $Remark 备注
+     * @param integer $MaxRetryTimes 最大重试次数，取值范围0～1000
+     * @param string $Remark 备注信息，最多 128 个字符
      */
     function __construct()
     {

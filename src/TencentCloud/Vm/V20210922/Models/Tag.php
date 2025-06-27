@@ -23,23 +23,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getName() 获取根据Label字段确定具体名称：
 当Label 为Teenager 时 Name可能取值有：Teenager 
 当Label 为Gender 时 Name可能取值有：Male 、Female
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置根据Label字段确定具体名称：
 当Label 为Teenager 时 Name可能取值有：Teenager 
 当Label 为Gender 时 Name可能取值有：Male 、Female
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScore() 获取置信分：0～100，数值越大表示置信度越高
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScore(integer $Score) 设置置信分：0～100，数值越大表示置信度越高
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getStartTime() 获取识别开始偏移时间，单位：毫秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(float $StartTime) 设置识别开始偏移时间，单位：毫秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getEndTime() 获取识别结束偏移时间，单位：毫秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(float $EndTime) 设置识别结束偏移时间，单位：毫秒
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Tag extends AbstractModel
 {
@@ -47,25 +39,21 @@ class Tag extends AbstractModel
      * @var string 根据Label字段确定具体名称：
 当Label 为Teenager 时 Name可能取值有：Teenager 
 当Label 为Gender 时 Name可能取值有：Male 、Female
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var integer 置信分：0～100，数值越大表示置信度越高
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Score;
 
     /**
      * @var float 识别开始偏移时间，单位：毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
      * @var float 识别结束偏移时间，单位：毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
@@ -73,13 +61,9 @@ class Tag extends AbstractModel
      * @param string $Name 根据Label字段确定具体名称：
 当Label 为Teenager 时 Name可能取值有：Teenager 
 当Label 为Gender 时 Name可能取值有：Male 、Female
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Score 置信分：0～100，数值越大表示置信度越高
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $StartTime 识别开始偏移时间，单位：毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $EndTime 识别结束偏移时间，单位：毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

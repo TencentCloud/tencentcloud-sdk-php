@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSummaryLang(string $SummaryLang) 设置搜索结果总结的语言类型，支持的类型有：en-US、zh-CN、id-ID、th-TH
  * @method integer getChannelId() 获取通道ID
  * @method void setChannelId(integer $ChannelId) 设置通道ID
- * @method boolean getEnableSummary() 获取是否需要返回总结，默认为False；  开启后会加大接口响应时长
- * @method void setEnableSummary(boolean $EnableSummary) 设置是否需要返回总结，默认为False；  开启后会加大接口响应时长
+ * @method boolean getEnableSummary() 获取是否需要返回总结，默认为True；  开启后会加大接口响应时长
+ * @method void setEnableSummary(boolean $EnableSummary) 设置是否需要返回总结，默认为True；  开启后会加大接口响应时长
  * @method integer getStartTimeMs() 获取开始时间。
 
 注：
@@ -94,7 +94,7 @@ class InvokeAISearchServiceRequest extends AbstractModel
     public $ChannelId;
 
     /**
-     * @var boolean 是否需要返回总结，默认为False；  开启后会加大接口响应时长
+     * @var boolean 是否需要返回总结，默认为True；  开启后会加大接口响应时长
      */
     public $EnableSummary;
 
@@ -133,7 +133,7 @@ class InvokeAISearchServiceRequest extends AbstractModel
      * @param string $Query 自然语言查询
      * @param string $SummaryLang 搜索结果总结的语言类型，支持的类型有：en-US、zh-CN、id-ID、th-TH
      * @param integer $ChannelId 通道ID
-     * @param boolean $EnableSummary 是否需要返回总结，默认为False；  开启后会加大接口响应时长
+     * @param boolean $EnableSummary 是否需要返回总结，默认为True；  开启后会加大接口响应时长
      * @param integer $StartTimeMs 开始时间。
 
 注：

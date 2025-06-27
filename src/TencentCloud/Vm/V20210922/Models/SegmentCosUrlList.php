@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 明细数据相关的cos url
  *
  * @method string getImageAllUrl() 获取全量图片片段的cos url
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageAllUrl(string $ImageAllUrl) 设置全量图片片段的cos url
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAudioAllUrl() 获取全量音频片段的cos url
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAudioAllUrl(string $AudioAllUrl) 设置全量音频片段的cos url
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getImageBlockUrl() 获取违规图片片段的cos url
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageBlockUrl(string $ImageBlockUrl) 设置违规图片片段的cos url
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAudioBlockUrl() 获取违规音频片段的cos url
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAudioBlockUrl(string $AudioBlockUrl) 设置违规音频片段的cos url
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAsrUrl() 获取全量音频识别文本的cos url
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAsrUrl(string $AsrUrl) 设置全量音频识别文本的cos url
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SegmentCosUrlList extends AbstractModel
 {
     /**
      * @var string 全量图片片段的cos url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageAllUrl;
 
     /**
      * @var string 全量音频片段的cos url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AudioAllUrl;
 
     /**
      * @var string 违规图片片段的cos url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageBlockUrl;
 
     /**
      * @var string 违规音频片段的cos url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AudioBlockUrl;
 
     /**
      * @var string 全量音频识别文本的cos url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AsrUrl;
 
     /**
      * @param string $ImageAllUrl 全量图片片段的cos url
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AudioAllUrl 全量音频片段的cos url
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ImageBlockUrl 违规图片片段的cos url
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AudioBlockUrl 违规音频片段的cos url
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AsrUrl 全量音频识别文本的cos url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

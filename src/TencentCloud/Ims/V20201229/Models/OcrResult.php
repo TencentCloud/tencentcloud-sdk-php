@@ -31,9 +31,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getScore() 获取该字段用于返回当前标签（Label）下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容；*色情 0*，则表明该文本不属于色情内容。
  * @method void setScore(integer $Score) 设置该字段用于返回当前标签（Label）下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容；*色情 0*，则表明该文本不属于色情内容。
  * @method array getDetails() 获取该字段用于返回OCR识别出的结果的详细内容，如：文本内容、对应标签、识别框位置等信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDetails(array $Details) 设置该字段用于返回OCR识别出的结果的详细内容，如：文本内容、对应标签、识别框位置等信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getText() 获取该字段用于返回OCR识别出的文字信息。
  * @method void setText(string $Text) 设置该字段用于返回OCR识别出的文字信息。
  */
@@ -66,7 +64,6 @@ class OcrResult extends AbstractModel
 
     /**
      * @var array 该字段用于返回OCR识别出的结果的详细内容，如：文本内容、对应标签、识别框位置等信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Details;
 
@@ -82,7 +79,6 @@ class OcrResult extends AbstractModel
      * @param string $SubLabel 该字段用于返回当前标签（Label）下对应的子标签的检测结果，如：*Porn-SexBehavior*等子标签。
      * @param integer $Score 该字段用于返回当前标签（Label）下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容；*色情 0*，则表明该文本不属于色情内容。
      * @param array $Details 该字段用于返回OCR识别出的结果的详细内容，如：文本内容、对应标签、识别框位置等信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Text 该字段用于返回OCR识别出的文字信息。
      */
     function __construct()

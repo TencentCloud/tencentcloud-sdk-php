@@ -32,10 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSQL(string $SQL) 设置任务SQL语句
  * @method string getDataEngineName() 获取计算资源名字
  * @method void setDataEngineName(string $DataEngineName) 设置计算资源名字
- * @method integer getJobTimeSum() 获取单位毫秒，引擎内执行耗时
- * @method void setJobTimeSum(integer $JobTimeSum) 设置单位毫秒，引擎内执行耗时
- * @method integer getTaskTimeSum() 获取单位秒，统计参与计算所用 Spark Executor 每个 core 的 CPU 执行时长总和
- * @method void setTaskTimeSum(integer $TaskTimeSum) 设置单位秒，统计参与计算所用 Spark Executor 每个 core 的 CPU 执行时长总和
+ * @method integer getJobTimeSum() 获取单位毫秒，引擎内执行耗时, 反映真正用于计算所需的耗时，即从  Spark 任务第一个 Task  开始执行到任务结束之间的耗时。
+具体的：会统计任务的每个 Spark Stage 第一个 Task 到最后一个 Task 完成时长之和，不包含任务开始的排队耗时（即剔除从任务提交到 Spark Task 开始执行之间的调度等其他耗时），也不包含任务执行过程中多个 Spark Stage 之间因 executor 资源不足而等待执行 Task 所消耗的时间。
+ * @method void setJobTimeSum(integer $JobTimeSum) 设置单位毫秒，引擎内执行耗时, 反映真正用于计算所需的耗时，即从  Spark 任务第一个 Task  开始执行到任务结束之间的耗时。
+具体的：会统计任务的每个 Spark Stage 第一个 Task 到最后一个 Task 完成时长之和，不包含任务开始的排队耗时（即剔除从任务提交到 Spark Task 开始执行之间的调度等其他耗时），也不包含任务执行过程中多个 Spark Stage 之间因 executor 资源不足而等待执行 Task 所消耗的时间。
+ * @method integer getTaskTimeSum() 获取单位秒，累计 CPU* 秒 ( 累计 CPU * 时 = 累计 CPU* 秒/ 3600)，统计参与计算所用 Spark Executor 每个 core 的 CPU 执行时长总和
+ * @method void setTaskTimeSum(integer $TaskTimeSum) 设置单位秒，累计 CPU* 秒 ( 累计 CPU * 时 = 累计 CPU* 秒/ 3600)，统计参与计算所用 Spark Executor 每个 core 的 CPU 执行时长总和
  * @method integer getInputRecordsSum() 获取数据扫描总行数
  * @method void setInputRecordsSum(integer $InputRecordsSum) 设置数据扫描总行数
  * @method integer getInputBytesSum() 获取数据扫描总 bytes
@@ -88,12 +90,13 @@ class AnalysisTaskResults extends AbstractModel
     public $DataEngineName;
 
     /**
-     * @var integer 单位毫秒，引擎内执行耗时
+     * @var integer 单位毫秒，引擎内执行耗时, 反映真正用于计算所需的耗时，即从  Spark 任务第一个 Task  开始执行到任务结束之间的耗时。
+具体的：会统计任务的每个 Spark Stage 第一个 Task 到最后一个 Task 完成时长之和，不包含任务开始的排队耗时（即剔除从任务提交到 Spark Task 开始执行之间的调度等其他耗时），也不包含任务执行过程中多个 Spark Stage 之间因 executor 资源不足而等待执行 Task 所消耗的时间。
      */
     public $JobTimeSum;
 
     /**
-     * @var integer 单位秒，统计参与计算所用 Spark Executor 每个 core 的 CPU 执行时长总和
+     * @var integer 单位秒，累计 CPU* 秒 ( 累计 CPU * 时 = 累计 CPU* 秒/ 3600)，统计参与计算所用 Spark Executor 每个 core 的 CPU 执行时长总和
      */
     public $TaskTimeSum;
 
@@ -149,8 +152,9 @@ class AnalysisTaskResults extends AbstractModel
      * @param integer $State 任务状态：0 初始化， 1 执行中， 2 执行成功，3 数据写入中，4 排队中。-1 执行失败，-3 已取消。
      * @param string $SQL 任务SQL语句
      * @param string $DataEngineName 计算资源名字
-     * @param integer $JobTimeSum 单位毫秒，引擎内执行耗时
-     * @param integer $TaskTimeSum 单位秒，统计参与计算所用 Spark Executor 每个 core 的 CPU 执行时长总和
+     * @param integer $JobTimeSum 单位毫秒，引擎内执行耗时, 反映真正用于计算所需的耗时，即从  Spark 任务第一个 Task  开始执行到任务结束之间的耗时。
+具体的：会统计任务的每个 Spark Stage 第一个 Task 到最后一个 Task 完成时长之和，不包含任务开始的排队耗时（即剔除从任务提交到 Spark Task 开始执行之间的调度等其他耗时），也不包含任务执行过程中多个 Spark Stage 之间因 executor 资源不足而等待执行 Task 所消耗的时间。
+     * @param integer $TaskTimeSum 单位秒，累计 CPU* 秒 ( 累计 CPU * 时 = 累计 CPU* 秒/ 3600)，统计参与计算所用 Spark Executor 每个 core 的 CPU 执行时长总和
      * @param integer $InputRecordsSum 数据扫描总行数
      * @param integer $InputBytesSum 数据扫描总 bytes
      * @param integer $OutputRecordsSum 输出总行数

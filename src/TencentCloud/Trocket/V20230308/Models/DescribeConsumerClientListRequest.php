@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeConsumerClientList请求参数结构体
  *
- * @method string getInstanceId() 获取集群ID
- * @method void setInstanceId(string $InstanceId) 设置集群ID
- * @method string getConsumerGroup() 获取消费组名称
- * @method void setConsumerGroup(string $ConsumerGroup) 设置消费组名称
- * @method array getFilters() 获取查询条件列表
- * @method void setFilters(array $Filters) 设置查询条件列表
- * @method integer getOffset() 获取查询起始位置
- * @method void setOffset(integer $Offset) 设置查询起始位置
- * @method integer getLimit() 获取查询结果限制数量
- * @method void setLimit(integer $Limit) 设置查询结果限制数量
+ * @method string getInstanceId() 获取腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
+ * @method void setInstanceId(string $InstanceId) 设置腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
+ * @method string getConsumerGroup() 获取消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口或控制台获得。
+ * @method void setConsumerGroup(string $ConsumerGroup) 设置消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口或控制台获得。
+ * @method array getFilters() 获取过滤查询条件列表，请在引用此参数的API说明中了解使用方法。
+ * @method void setFilters(array $Filters) 设置过滤查询条件列表，请在引用此参数的API说明中了解使用方法。
+ * @method integer getOffset() 获取查询起始位置，默认为0。
+ * @method void setOffset(integer $Offset) 设置查询起始位置，默认为0。
+ * @method integer getLimit() 获取查询结果限制数量，默认20。
+ * @method void setLimit(integer $Limit) 设置查询结果限制数量，默认20。
  */
 class DescribeConsumerClientListRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
      */
     public $InstanceId;
 
     /**
-     * @var string 消费组名称
+     * @var string 消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口或控制台获得。
      */
     public $ConsumerGroup;
 
     /**
-     * @var array 查询条件列表
+     * @var array 过滤查询条件列表，请在引用此参数的API说明中了解使用方法。
      */
     public $Filters;
 
     /**
-     * @var integer 查询起始位置
+     * @var integer 查询起始位置，默认为0。
      */
     public $Offset;
 
     /**
-     * @var integer 查询结果限制数量
+     * @var integer 查询结果限制数量，默认20。
      */
     public $Limit;
 
     /**
-     * @param string $InstanceId 集群ID
-     * @param string $ConsumerGroup 消费组名称
-     * @param array $Filters 查询条件列表
-     * @param integer $Offset 查询起始位置
-     * @param integer $Limit 查询结果限制数量
+     * @param string $InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
+     * @param string $ConsumerGroup 消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口或控制台获得。
+     * @param array $Filters 过滤查询条件列表，请在引用此参数的API说明中了解使用方法。
+     * @param integer $Offset 查询起始位置，默认为0。
+     * @param integer $Limit 查询结果限制数量，默认20。
      */
     function __construct()
     {

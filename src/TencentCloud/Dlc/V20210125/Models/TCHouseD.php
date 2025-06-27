@@ -18,7 +18,7 @@ namespace TencentCloud\Dlc\V20210125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Doirs数据源详细信息
+ * Doris数据源详细信息
  *
  * @method string getInstanceId() 获取数据源实例的唯一ID
  * @method void setInstanceId(string $InstanceId) 设置数据源实例的唯一ID

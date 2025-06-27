@@ -61,6 +61,7 @@ use TencentCloud\Mqtt\V20240516\Models as Models;
 
 当使用TagFilters查询时，Filters参数失效。
  * @method Models\DescribeMessageByTopicResponse DescribeMessageByTopic(Models\DescribeMessageByTopicRequest $req) 根据订阅查询消息
+ * @method Models\DescribeMessageDetailsResponse DescribeMessageDetails(Models\DescribeMessageDetailsRequest $req) 查询MQTT消息详情
  * @method Models\DescribeMessageListResponse DescribeMessageList(Models\DescribeMessageListRequest $req) 根据一级Topic查询消息列表
  * @method Models\DescribeProductSKUListResponse DescribeProductSKUList(Models\DescribeProductSKUListRequest $req) 获取产品售卖规格
  * @method Models\DescribeSharedSubscriptionLagResponse DescribeSharedSubscriptionLag(Models\DescribeSharedSubscriptionLagRequest $req) 查询共享订阅消息堆积量

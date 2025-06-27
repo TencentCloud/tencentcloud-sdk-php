@@ -52,6 +52,12 @@ use TencentCloud\Common\AbstractModel;
 - clusterIP
  * @method void setCiliumMode(string $CiliumMode) 设置集群Cilium Mode配置
 - clusterIP
+ * @method string getSubnetId() 获取控制面子网信息，仅在以下场景返回。
+- 容器网络插件为CiliumOverlay。
+- 支持CDC的托管集群，且网络插件为VPC-CNI。
+ * @method void setSubnetId(string $SubnetId) 设置控制面子网信息，仅在以下场景返回。
+- 容器网络插件为CiliumOverlay。
+- 支持CDC的托管集群，且网络插件为VPC-CNI。
  */
 class ClusterNetworkSettings extends AbstractModel
 {
@@ -128,6 +134,13 @@ class ClusterNetworkSettings extends AbstractModel
     public $CiliumMode;
 
     /**
+     * @var string 控制面子网信息，仅在以下场景返回。
+- 容器网络插件为CiliumOverlay。
+- 支持CDC的托管集群，且网络插件为VPC-CNI。
+     */
+    public $SubnetId;
+
+    /**
      * @param string $ClusterCIDR 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
      * @param boolean $IgnoreClusterCIDRConflict 是否忽略 ClusterCIDR 冲突错误, 默认不忽略
      * @param integer $MaxNodePodNum 集群中每个Node上最大的Pod数量(默认为256)
@@ -144,6 +157,9 @@ class ClusterNetworkSettings extends AbstractModel
      * @param string $Ipv6ServiceCIDR 用于分配service的IP range，由系统自动分配
      * @param string $CiliumMode 集群Cilium Mode配置
 - clusterIP
+     * @param string $SubnetId 控制面子网信息，仅在以下场景返回。
+- 容器网络插件为CiliumOverlay。
+- 支持CDC的托管集群，且网络插件为VPC-CNI。
      */
     function __construct()
     {
@@ -212,6 +228,10 @@ class ClusterNetworkSettings extends AbstractModel
 
         if (array_key_exists("CiliumMode",$param) and $param["CiliumMode"] !== null) {
             $this->CiliumMode = $param["CiliumMode"];
+        }
+
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
         }
     }
 }

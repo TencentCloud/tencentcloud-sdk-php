@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * 输入信息详情
  *
  * @method string getType() 获取该字段表示文件访问类型，取值为**URL**（资源链接）和**COS** (腾讯云对象存储)。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置该字段表示文件访问类型，取值为**URL**（资源链接）和**COS** (腾讯云对象存储)。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUrl() 获取该字段表示文件访问的链接地址，格式为标准URL格式。<br> 备注：当Type为URL时此字段不为空。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUrl(string $Url) 设置该字段表示文件访问的链接地址，格式为标准URL格式。<br> 备注：当Type为URL时此字段不为空。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BucketInfo getBucketInfo() 获取该字段表示文件访问的腾讯云存储桶信息。<br> 备注：当Type为COS时此字段不为空。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBucketInfo(BucketInfo $BucketInfo) 设置该字段表示文件访问的腾讯云存储桶信息。<br> 备注：当Type为COS时此字段不为空。
@@ -37,13 +33,11 @@ class InputInfo extends AbstractModel
 {
     /**
      * @var string 该字段表示文件访问类型，取值为**URL**（资源链接）和**COS** (腾讯云对象存储)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 该字段表示文件访问的链接地址，格式为标准URL格式。<br> 备注：当Type为URL时此字段不为空。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Url;
 
@@ -55,9 +49,7 @@ class InputInfo extends AbstractModel
 
     /**
      * @param string $Type 该字段表示文件访问类型，取值为**URL**（资源链接）和**COS** (腾讯云对象存储)。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Url 该字段表示文件访问的链接地址，格式为标准URL格式。<br> 备注：当Type为URL时此字段不为空。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BucketInfo $BucketInfo 该字段表示文件访问的腾讯云存储桶信息。<br> 备注：当Type为COS时此字段不为空。
 注意：此字段可能返回 null，表示取不到有效值。
      */

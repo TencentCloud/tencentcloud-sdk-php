@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyTopic请求参数结构体
  *
- * @method string getInstanceId() 获取集群ID
- * @method void setInstanceId(string $InstanceId) 设置集群ID
- * @method string getTopic() 获取主题名称
- * @method void setTopic(string $Topic) 设置主题名称
- * @method integer getQueueNum() 获取队列数量
- * @method void setQueueNum(integer $QueueNum) 设置队列数量
- * @method string getRemark() 获取备注信息
- * @method void setRemark(string $Remark) 设置备注信息
- * @method integer getMsgTTL() 获取消息保留时长
- * @method void setMsgTTL(integer $MsgTTL) 设置消息保留时长
+ * @method string getInstanceId() 获取腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
+ * @method void setInstanceId(string $InstanceId) 设置腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
+ * @method string getTopic() 获取主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口或控制台获得。
+ * @method void setTopic(string $Topic) 设置主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口或控制台获得。
+ * @method integer getQueueNum() 获取队列数量，取值范围3～16
+ * @method void setQueueNum(integer $QueueNum) 设置队列数量，取值范围3～16
+ * @method string getRemark() 获取备注信息，最多 128 个字符
+ * @method void setRemark(string $Remark) 设置备注信息，最多 128 个字符
+ * @method integer getMsgTTL() 获取消息保留时长（单位：小时）
+ * @method void setMsgTTL(integer $MsgTTL) 设置消息保留时长（单位：小时）
  */
 class ModifyTopicRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
      */
     public $InstanceId;
 
     /**
-     * @var string 主题名称
+     * @var string 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口或控制台获得。
      */
     public $Topic;
 
     /**
-     * @var integer 队列数量
+     * @var integer 队列数量，取值范围3～16
      */
     public $QueueNum;
 
     /**
-     * @var string 备注信息
+     * @var string 备注信息，最多 128 个字符
      */
     public $Remark;
 
     /**
-     * @var integer 消息保留时长
+     * @var integer 消息保留时长（单位：小时）
      */
     public $MsgTTL;
 
     /**
-     * @param string $InstanceId 集群ID
-     * @param string $Topic 主题名称
-     * @param integer $QueueNum 队列数量
-     * @param string $Remark 备注信息
-     * @param integer $MsgTTL 消息保留时长
+     * @param string $InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
+     * @param string $Topic 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口或控制台获得。
+     * @param integer $QueueNum 队列数量，取值范围3～16
+     * @param string $Remark 备注信息，最多 128 个字符
+     * @param integer $MsgTTL 消息保留时长（单位：小时）
      */
     function __construct()
     {

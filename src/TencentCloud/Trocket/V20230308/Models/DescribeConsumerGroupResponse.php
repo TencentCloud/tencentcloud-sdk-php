@@ -26,10 +26,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTps(integer $Tps) 设置TPS
  * @method integer getConsumerLag() 获取消息堆积数量
  * @method void setConsumerLag(integer $ConsumerLag) 设置消息堆积数量
- * @method string getConsumeType() 获取消费者类型
- * @method void setConsumeType(string $ConsumeType) 设置消费者类型
- * @method integer getCreatedTime() 获取创建时间，秒为单位
- * @method void setCreatedTime(integer $CreatedTime) 设置创建时间，秒为单位
+ * @method string getConsumeType() 获取消费类型，枚举值如下：
+
+- PULL：PULL 消费类型
+- PUSH：PUSH 消费类型
+- POP：POP 消费类型
+ * @method void setConsumeType(string $ConsumeType) 设置消费类型，枚举值如下：
+
+- PULL：PULL 消费类型
+- PUSH：PUSH 消费类型
+- POP：POP 消费类型
+ * @method integer getCreatedTime() 获取创建时间，**Unix时间戳（毫秒）**
+ * @method void setCreatedTime(integer $CreatedTime) 设置创建时间，**Unix时间戳（毫秒）**
  * @method boolean getConsumeMessageOrderly() 获取顺序投递：true
 并发投递：false
  * @method void setConsumeMessageOrderly(boolean $ConsumeMessageOrderly) 设置顺序投递：true
@@ -67,12 +75,16 @@ class DescribeConsumerGroupResponse extends AbstractModel
     public $ConsumerLag;
 
     /**
-     * @var string 消费者类型
+     * @var string 消费类型，枚举值如下：
+
+- PULL：PULL 消费类型
+- PUSH：PUSH 消费类型
+- POP：POP 消费类型
      */
     public $ConsumeType;
 
     /**
-     * @var integer 创建时间，秒为单位
+     * @var integer 创建时间，**Unix时间戳（毫秒）**
      */
     public $CreatedTime;
 
@@ -113,8 +125,12 @@ CLUSTERING 集群模式
      * @param integer $ConsumerNum 在线消费者数量
      * @param integer $Tps TPS
      * @param integer $ConsumerLag 消息堆积数量
-     * @param string $ConsumeType 消费者类型
-     * @param integer $CreatedTime 创建时间，秒为单位
+     * @param string $ConsumeType 消费类型，枚举值如下：
+
+- PULL：PULL 消费类型
+- PUSH：PUSH 消费类型
+- POP：POP 消费类型
+     * @param integer $CreatedTime 创建时间，**Unix时间戳（毫秒）**
      * @param boolean $ConsumeMessageOrderly 顺序投递：true
 并发投递：false
      * @param boolean $ConsumeEnable 是否开启消费

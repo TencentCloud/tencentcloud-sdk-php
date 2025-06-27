@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubTagCode(string $SubTagCode) 设置该字段用于返回音频文件的三级标签码
  * @method array getLabelResults() 获取该字段用于返回音频文件歌曲识别的详细审核结果
  * @method void setLabelResults(array $LabelResults) 设置该字段用于返回音频文件歌曲识别的详细审核结果
+ * @method string getHitType() 获取审核命中类型
+ * @method void setHitType(string $HitType) 设置审核命中类型
  */
 class AudioResult extends AbstractModel
 {
@@ -153,6 +155,11 @@ class AudioResult extends AbstractModel
     public $LabelResults;
 
     /**
+     * @var string 审核命中类型
+     */
+    public $HitType;
+
+    /**
      * @param integer $HitFlag 该字段用于返回审核内容是否命中审核模型；取值：0（**未命中**）、1（**命中**）。
      * @param string $Label 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
      * @param string $Suggestion 该字段用于返回后续操作建议。当您获取到判定结果后，返回值表示具体的后续建议操作。<br>
@@ -172,6 +179,7 @@ class AudioResult extends AbstractModel
      * @param string $SubTag 该字段用于返回音频文件的三级标签
      * @param string $SubTagCode 该字段用于返回音频文件的三级标签码
      * @param array $LabelResults 该字段用于返回音频文件歌曲识别的详细审核结果
+     * @param string $HitType 审核命中类型
      */
     function __construct()
     {
@@ -291,6 +299,10 @@ class AudioResult extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->LabelResults, $obj);
             }
+        }
+
+        if (array_key_exists("HitType",$param) and $param["HitType"] !== null) {
+            $this->HitType = $param["HitType"];
         }
     }
 }

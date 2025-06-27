@@ -21,93 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * 歌曲识别结果
  *
  * @method string getScene() 获取场景
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScene(string $Scene) 设置场景
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSuggestion() 获取建议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSuggestion(integer $Suggestion) 设置建议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLabel() 获取标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabel(string $Label) 设置标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取名称：歌曲名，语种名，说话人名 等
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置名称：歌曲名，语种名，说话人名 等
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScore() 获取得分
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScore(integer $Score) 设置得分
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getStartTime() 获取开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(float $StartTime) 设置开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getEndTime() 获取结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(float $EndTime) 设置结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class LabelResults extends AbstractModel
 {
     /**
      * @var string 场景
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Scene;
 
     /**
      * @var integer 建议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Suggestion;
 
     /**
      * @var string 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Label;
 
     /**
      * @var string 名称：歌曲名，语种名，说话人名 等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var integer 得分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Score;
 
     /**
      * @var float 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
      * @var float 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
      * @param string $Scene 场景
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Suggestion 建议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Label 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 名称：歌曲名，语种名，说话人名 等
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Score 得分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $StartTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $EndTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -31,9 +31,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getScore() 获取该字段用于返回当前标签（Label）下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表图片越有可能属于当前返回的标签；如：*色情 99*，则表明该图片非常有可能属于色情内容；*色情 0*，则表明该图片不属于色情内容。
  * @method void setScore(integer $Score) 设置该字段用于返回当前标签（Label）下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表图片越有可能属于当前返回的标签；如：*色情 99*，则表明该图片非常有可能属于色情内容；*色情 0*，则表明该图片不属于色情内容。
  * @method array getDetails() 获取该字段用于返回分类模型命中子标签的详细信息，如：序号、命中标签名称、分数等信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDetails(array $Details) 设置该字段用于返回分类模型命中子标签的详细信息，如：序号、命中标签名称、分数等信息。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class LabelResult extends AbstractModel
 {
@@ -64,7 +62,6 @@ class LabelResult extends AbstractModel
 
     /**
      * @var array 该字段用于返回分类模型命中子标签的详细信息，如：序号、命中标签名称、分数等信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Details;
 
@@ -75,7 +72,6 @@ class LabelResult extends AbstractModel
      * @param string $SubLabel 该字段用于返回对应恶意标签下的子标签的检测结果，如：*Porn-SexBehavior*等子标签。
      * @param integer $Score 该字段用于返回当前标签（Label）下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表图片越有可能属于当前返回的标签；如：*色情 99*，则表明该图片非常有可能属于色情内容；*色情 0*，则表明该图片不属于色情内容。
      * @param array $Details 该字段用于返回分类模型命中子标签的详细信息，如：序号、命中标签名称、分数等信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

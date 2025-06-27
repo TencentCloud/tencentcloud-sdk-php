@@ -21,45 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 具体场景下的图片识别结果
  *
  * @method string getName() 获取任务名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置任务名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getText() 获取OCR识别文本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setText(string $Text) 设置OCR识别文本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ImageResultsResultDetailLocation getLocation() 获取位置信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocation(ImageResultsResultDetailLocation $Location) 设置位置信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLabel() 获取标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabel(string $Label) 设置标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLibId() 获取库ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLibId(string $LibId) 设置库ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLibName() 获取库名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLibName(string $LibName) 设置库名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getKeywords() 获取命中的关键词
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeywords(array $Keywords) 设置命中的关键词
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSuggestion() 获取建议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSuggestion(string $Suggestion) 设置建议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScore() 获取得分
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScore(integer $Score) 设置得分
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubLabelCode() 获取子标签码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubLabelCode(string $SubLabelCode) 设置子标签码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubLabel() 获取子标签
  * @method void setSubLabel(string $SubLabel) 设置子标签
  * @method array getOcrHitInfos() 获取Ocr文本命中信息
@@ -69,61 +49,51 @@ class ImageResultsResultDetail extends AbstractModel
 {
     /**
      * @var string 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string OCR识别文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Text;
 
     /**
      * @var ImageResultsResultDetailLocation 位置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Location;
 
     /**
      * @var string 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Label;
 
     /**
      * @var string 库ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LibId;
 
     /**
      * @var string 库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LibName;
 
     /**
      * @var array 命中的关键词
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Keywords;
 
     /**
      * @var string 建议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Suggestion;
 
     /**
      * @var integer 得分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Score;
 
     /**
      * @var string 子标签码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubLabelCode;
 
@@ -139,25 +109,15 @@ class ImageResultsResultDetail extends AbstractModel
 
     /**
      * @param string $Name 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Text OCR识别文本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageResultsResultDetailLocation $Location 位置信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Label 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LibId 库ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LibName 库名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Keywords 命中的关键词
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Suggestion 建议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Score 得分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubLabelCode 子标签码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubLabel 子标签
      * @param array $OcrHitInfos Ocr文本命中信息
      */

@@ -104,8 +104,8 @@ use TencentCloud\Common\AbstractModel;
 3. 关闭时将直接由主模型生成回复内容，可以降低响应时延（对于流式输出时的首字时延尤为明显）。但在少数场景里，回复效果可能会下降。
 4. 安全审核能力不属于功能增强范围，不受此字段影响。
 5. 2025-04-20 00:00:00起，由默认开启状态转为默认关闭状态。
- * @method array getTools() 获取可调用的工具列表，仅对 hunyuan-turbo、hunyuan-functioncall 模型生效。
- * @method void setTools(array $Tools) 设置可调用的工具列表，仅对 hunyuan-turbo、hunyuan-functioncall 模型生效。
+ * @method array getTools() 获取可调用的工具列表，仅对 hunyuan-turbos、hunyuan-t1、hunyuan-functioncall 模型生效。
+ * @method void setTools(array $Tools) 设置可调用的工具列表，仅对 hunyuan-turbos、hunyuan-t1、hunyuan-functioncall 模型生效。
  * @method string getToolChoice() 获取工具使用选项，可选值包括 none、auto、custom。说明：1. 仅对 hunyuan-turbo、hunyuan-functioncall 模型生效。2. none：不调用工具；auto：模型自行选择生成回复或调用工具；custom：强制模型调用指定的工具。3. 未设置时，默认值为auto
  * @method void setToolChoice(string $ToolChoice) 设置工具使用选项，可选值包括 none、auto、custom。说明：1. 仅对 hunyuan-turbo、hunyuan-functioncall 模型生效。2. none：不调用工具；auto：模型自行选择生成回复或调用工具；custom：强制模型调用指定的工具。3. 未设置时，默认值为auto
  * @method Tool getCustomTool() 获取强制模型调用指定的工具，当参数ToolChoice为custom时，此参数为必填
@@ -182,6 +182,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWebSearchOptions(WebSearchOptions $WebSearchOptions) 设置知识注入相关的参数信息
  * @method string getTopicChoice() 获取用户传入Topic
  * @method void setTopicChoice(string $TopicChoice) 设置用户传入Topic
+ * @method boolean getEnableThinking() 获取模型思维链开关 说明： 1. 未传值时默认开启，打开模型思维链推理能力。 2. 关闭后，关闭模型思维链推理能力。  开关当前仅对hunyuan-a13b模型生效 示例值：ture
+ * @method void setEnableThinking(boolean $EnableThinking) 设置模型思维链开关 说明： 1. 未传值时默认开启，打开模型思维链推理能力。 2. 关闭后，关闭模型思维链推理能力。  开关当前仅对hunyuan-a13b模型生效 示例值：ture
  */
 class ChatCompletionsRequest extends AbstractModel
 {
@@ -256,7 +258,7 @@ class ChatCompletionsRequest extends AbstractModel
     public $EnableEnhancement;
 
     /**
-     * @var array 可调用的工具列表，仅对 hunyuan-turbo、hunyuan-functioncall 模型生效。
+     * @var array 可调用的工具列表，仅对 hunyuan-turbos、hunyuan-t1、hunyuan-functioncall 模型生效。
      */
     public $Tools;
 
@@ -355,6 +357,11 @@ class ChatCompletionsRequest extends AbstractModel
     public $TopicChoice;
 
     /**
+     * @var boolean 模型思维链开关 说明： 1. 未传值时默认开启，打开模型思维链推理能力。 2. 关闭后，关闭模型思维链推理能力。  开关当前仅对hunyuan-a13b模型生效 示例值：ture
+     */
+    public $EnableThinking;
+
+    /**
      * @param string $Model 模型名称，可选值参考 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中混元生文模型列表。
 示例值：hunyuan-turbos-latest
 各模型介绍请阅读 [产品概述](https://cloud.tencent.com/document/product/1729/104753) 中的说明。注意：不同的模型计费不同，请根据 [购买指南](https://cloud.tencent.com/document/product/1729/97731) 按需调用。
@@ -397,7 +404,7 @@ class ChatCompletionsRequest extends AbstractModel
 3. 关闭时将直接由主模型生成回复内容，可以降低响应时延（对于流式输出时的首字时延尤为明显）。但在少数场景里，回复效果可能会下降。
 4. 安全审核能力不属于功能增强范围，不受此字段影响。
 5. 2025-04-20 00:00:00起，由默认开启状态转为默认关闭状态。
-     * @param array $Tools 可调用的工具列表，仅对 hunyuan-turbo、hunyuan-functioncall 模型生效。
+     * @param array $Tools 可调用的工具列表，仅对 hunyuan-turbos、hunyuan-t1、hunyuan-functioncall 模型生效。
      * @param string $ToolChoice 工具使用选项，可选值包括 none、auto、custom。说明：1. 仅对 hunyuan-turbo、hunyuan-functioncall 模型生效。2. none：不调用工具；auto：模型自行选择生成回复或调用工具；custom：强制模型调用指定的工具。3. 未设置时，默认值为auto
      * @param Tool $CustomTool 强制模型调用指定的工具，当参数ToolChoice为custom时，此参数为必填
      * @param boolean $SearchInfo 默认是false，在值为true且命中搜索时，接口会返回SearchInfo
@@ -436,6 +443,7 @@ class ChatCompletionsRequest extends AbstractModel
      * @param boolean $EnableDeepRead 是否开启深度阅读，默认是false，在值为true时，会返回深度阅读的结果信息。说明:1.深度阅读需要开启插件增强,即设置EnableEnhancement为true,当设置EnableDeepRead为true时EnableEnhancement默认为true；2.目前暂时只支持单文档单轮的深度阅读；3.深度阅读功能的文件上传可以使用FilesUploads接口，具体参数详见FilesUploads接口文档
      * @param WebSearchOptions $WebSearchOptions 知识注入相关的参数信息
      * @param string $TopicChoice 用户传入Topic
+     * @param boolean $EnableThinking 模型思维链开关 说明： 1. 未传值时默认开启，打开模型思维链推理能力。 2. 关闭后，关闭模型思维链推理能力。  开关当前仅对hunyuan-a13b模型生效 示例值：ture
      */
     function __construct()
     {
@@ -548,6 +556,10 @@ class ChatCompletionsRequest extends AbstractModel
 
         if (array_key_exists("TopicChoice",$param) and $param["TopicChoice"] !== null) {
             $this->TopicChoice = $param["TopicChoice"];
+        }
+
+        if (array_key_exists("EnableThinking",$param) and $param["EnableThinking"] !== null) {
+            $this->EnableThinking = $param["EnableThinking"];
         }
     }
 }

@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 音频语言种类检测结果
  *
  * @method string getLabel() 获取该字段用于返回对应的语言种类信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabel(string $Label) 设置该字段用于返回对应的语言种类信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScore() 获取该参数用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表音频越有可能属于当前返回的语种标签；
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScore(integer $Score) 设置该参数用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表音频越有可能属于当前返回的语种标签；
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getStartTime() 获取该参数用于返回对应语种标签的片段在音频文件内的开始时间，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(float $StartTime) 设置该参数用于返回对应语种标签的片段在音频文件内的开始时间，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getEndTime() 获取该参数用于返回对应语种标签的片段在音频文件内的结束时间，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(float $EndTime) 设置该参数用于返回对应语种标签的片段在音频文件内的结束时间，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubLabelCode() 获取*内测中，敬请期待*
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubLabelCode(string $SubLabelCode) 设置*内测中，敬请期待*
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AudioResultDetailLanguageResult extends AbstractModel
 {
     /**
      * @var string 该字段用于返回对应的语言种类信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Label;
 
     /**
      * @var integer 该参数用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表音频越有可能属于当前返回的语种标签；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Score;
 
     /**
      * @var float 该参数用于返回对应语种标签的片段在音频文件内的开始时间，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
      * @var float 该参数用于返回对应语种标签的片段在音频文件内的结束时间，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
      * @var string *内测中，敬请期待*
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubLabelCode;
 
     /**
      * @param string $Label 该字段用于返回对应的语言种类信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Score 该参数用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表音频越有可能属于当前返回的语种标签；
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $StartTime 该参数用于返回对应语种标签的片段在音频文件内的开始时间，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $EndTime 该参数用于返回对应语种标签的片段在音频文件内的结束时间，单位为秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubLabelCode *内测中，敬请期待*
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

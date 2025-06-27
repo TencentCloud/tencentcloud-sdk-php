@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 图片详情位置信息
  *
  * @method float getX() 获取x坐标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setX(float $X) 设置x坐标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getY() 获取y坐标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setY(float $Y) 设置y坐标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWidth() 获取宽度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWidth(integer $Width) 设置宽度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHeight() 获取高度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeight(integer $Height) 设置高度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getRotate() 获取旋转角度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRotate(float $Rotate) 设置旋转角度
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImageResultsResultDetailLocation extends AbstractModel
 {
     /**
      * @var float x坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $X;
 
     /**
      * @var float y坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Y;
 
     /**
      * @var integer 宽度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Width;
 
     /**
      * @var integer 高度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Height;
 
     /**
      * @var float 旋转角度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Rotate;
 
     /**
      * @param float $X x坐标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Y y坐标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Width 宽度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Height 高度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Rotate 旋转角度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

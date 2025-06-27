@@ -36,8 +36,8 @@ DELAY:延时消息,
 TRANSACTION:事务消息
  * @method integer getQueueNum() 获取队列数量
  * @method void setQueueNum(integer $QueueNum) 设置队列数量
- * @method string getRemark() 获取描述
- * @method void setRemark(string $Remark) 设置描述
+ * @method string getRemark() 获取备注信息
+ * @method void setRemark(string $Remark) 设置备注信息
  * @method string getClusterIdV4() 获取4.x的集群id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterIdV4(string $ClusterIdV4) 设置4.x的集群id
@@ -55,9 +55,7 @@ TRANSACTION:事务消息
  * @method void setFullNamespaceV4(string $FullNamespaceV4) 设置4.x的完整命名空间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMsgTTL() 获取消息保留时长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMsgTTL(integer $MsgTTL) 设置消息保留时长
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TopicItem extends AbstractModel
 {
@@ -86,7 +84,7 @@ TRANSACTION:事务消息
     public $QueueNum;
 
     /**
-     * @var string 描述
+     * @var string 备注信息
      */
     public $Remark;
 
@@ -116,7 +114,6 @@ TRANSACTION:事务消息
 
     /**
      * @var integer 消息保留时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MsgTTL;
 
@@ -129,7 +126,7 @@ FIFO:顺序消息,
 DELAY:延时消息,
 TRANSACTION:事务消息
      * @param integer $QueueNum 队列数量
-     * @param string $Remark 描述
+     * @param string $Remark 备注信息
      * @param string $ClusterIdV4 4.x的集群id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NamespaceV4 4.x的命名空间
@@ -139,7 +136,6 @@ TRANSACTION:事务消息
      * @param string $FullNamespaceV4 4.x的完整命名空间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MsgTTL 消息保留时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

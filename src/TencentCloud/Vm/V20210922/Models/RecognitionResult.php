@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 识别类标签结果信息
  *
  * @method string getLabel() 获取可能的取值有：Teenager 、Gender
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabel(string $Label) 设置可能的取值有：Teenager 、Gender
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取识别标签列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置识别标签列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RecognitionResult extends AbstractModel
 {
     /**
      * @var string 可能的取值有：Teenager 、Gender
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Label;
 
     /**
      * @var array 识别标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
      * @param string $Label 可能的取值有：Teenager 、Gender
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 识别标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

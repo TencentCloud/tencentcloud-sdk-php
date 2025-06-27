@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProportion(float $Proportion) 设置当前应用对于总用量的占比
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getKnowledgeType() 获取知识库类型:0默认1共享
+ * @method void setKnowledgeType(integer $KnowledgeType) 设置知识库类型:0默认1共享
  */
 class KnowledgeCapacityPieGraphDetail extends AbstractModel
 {
@@ -54,12 +56,18 @@ class KnowledgeCapacityPieGraphDetail extends AbstractModel
     public $Proportion;
 
     /**
+     * @var integer 知识库类型:0默认1共享
+     */
+    public $KnowledgeType;
+
+    /**
      * @param string $AppName 当前应用名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UsedCharSize 当前应用使用的字符数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Proportion 当前应用对于总用量的占比
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $KnowledgeType 知识库类型:0默认1共享
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class KnowledgeCapacityPieGraphDetail extends AbstractModel
 
         if (array_key_exists("Proportion",$param) and $param["Proportion"] !== null) {
             $this->Proportion = $param["Proportion"];
+        }
+
+        if (array_key_exists("KnowledgeType",$param) and $param["KnowledgeType"] !== null) {
+            $this->KnowledgeType = $param["KnowledgeType"];
         }
     }
 }

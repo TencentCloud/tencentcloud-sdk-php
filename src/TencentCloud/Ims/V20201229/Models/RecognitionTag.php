@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 识别类型标签信息
  *
  * @method string getName() 获取标签名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置标签名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScore() 获取置信分：0～100，数值越大表示置信度越高
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScore(integer $Score) 设置置信分：0～100，数值越大表示置信度越高
-注意：此字段可能返回 null，表示取不到有效值。
  * @method Location getLocation() 获取标签位置信息，若模型无位置信息，则可能为零值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocation(Location $Location) 设置标签位置信息，若模型无位置信息，则可能为零值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RecognitionTag extends AbstractModel
 {
     /**
      * @var string 标签名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var integer 置信分：0～100，数值越大表示置信度越高
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Score;
 
     /**
      * @var Location 标签位置信息，若模型无位置信息，则可能为零值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Location;
 
     /**
      * @param string $Name 标签名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Score 置信分：0～100，数值越大表示置信度越高
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Location $Location 标签位置信息，若模型无位置信息，则可能为零值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

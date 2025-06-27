@@ -25,9 +25,17 @@ use TencentCloud\Common\AbstractModel;
  * @method array getAccounts() 获取云数据库账号。
  * @method void setAccounts(array $Accounts) 设置云数据库账号。
  * @method string getPassword() 获取新账户的密码。
+说明：
+1. 在8 ～ 64位字符数以内（推荐12位以上）。
+2. 至少包含其中两项：小写字母 a ~ z 或 大写字母 A ～ Z。数字0 ～ 9。_+-,&=!@#$%^*().|。
+3. 不能包含非法字符。
  * @method void setPassword(string $Password) 设置新账户的密码。
- * @method string getDescription() 获取备注信息。
- * @method void setDescription(string $Description) 设置备注信息。
+说明：
+1. 在8 ～ 64位字符数以内（推荐12位以上）。
+2. 至少包含其中两项：小写字母 a ~ z 或 大写字母 A ～ Z。数字0 ～ 9。_+-,&=!@#$%^*().|。
+3. 不能包含非法字符。
+ * @method string getDescription() 获取备注信息。最多支持输入255个字符。
+ * @method void setDescription(string $Description) 设置备注信息。最多支持输入255个字符。
  * @method integer getMaxUserConnections() 获取新账户最大可用连接数，默认值为10240，最大可设置值为10240。
  * @method void setMaxUserConnections(integer $MaxUserConnections) 设置新账户最大可用连接数，默认值为10240，最大可设置值为10240。
  */
@@ -45,11 +53,15 @@ class CreateAccountsRequest extends AbstractModel
 
     /**
      * @var string 新账户的密码。
+说明：
+1. 在8 ～ 64位字符数以内（推荐12位以上）。
+2. 至少包含其中两项：小写字母 a ~ z 或 大写字母 A ～ Z。数字0 ～ 9。_+-,&=!@#$%^*().|。
+3. 不能包含非法字符。
      */
     public $Password;
 
     /**
-     * @var string 备注信息。
+     * @var string 备注信息。最多支持输入255个字符。
      */
     public $Description;
 
@@ -62,7 +74,11 @@ class CreateAccountsRequest extends AbstractModel
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      * @param array $Accounts 云数据库账号。
      * @param string $Password 新账户的密码。
-     * @param string $Description 备注信息。
+说明：
+1. 在8 ～ 64位字符数以内（推荐12位以上）。
+2. 至少包含其中两项：小写字母 a ~ z 或 大写字母 A ～ Z。数字0 ～ 9。_+-,&=!@#$%^*().|。
+3. 不能包含非法字符。
+     * @param string $Description 备注信息。最多支持输入255个字符。
      * @param integer $MaxUserConnections 新账户最大可用连接数，默认值为10240，最大可设置值为10240。
      */
     function __construct()

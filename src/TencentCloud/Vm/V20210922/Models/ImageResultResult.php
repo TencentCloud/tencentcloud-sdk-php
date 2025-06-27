@@ -28,7 +28,6 @@ Illegal 违法
 Abuse 谩骂
 Terror 暴恐
 Ad 广告
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScene(string $Scene) 设置场景
 Porn 色情
 Sexy 性感
@@ -37,49 +36,34 @@ Illegal 违法
 Abuse 谩骂
 Terror 暴恐
 Ad 广告
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHitFlag() 获取是否命中
 0 未命中
 1 命中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHitFlag(integer $HitFlag) 设置是否命中
 0 未命中
 1 命中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSuggestion() 获取审核建议，可选值：
 Pass 通过，
 Review 建议人审，
 Block 确认违规
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSuggestion(string $Suggestion) 设置审核建议，可选值：
 Pass 通过，
 Review 建议人审，
 Block 确认违规
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLabel() 获取标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabel(string $Label) 设置标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubLabel() 获取子标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubLabel(string $SubLabel) 设置子标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScore() 获取分数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScore(integer $Score) 设置分数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getNames() 获取人物名称列表，如未识别，则为null
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNames(array $Names) 设置人物名称列表，如未识别，则为null
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getText() 获取图片OCR文本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setText(string $Text) 设置图片OCR文本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDetails() 获取其他详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDetails(array $Details) 设置其他详情
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getHitType() 获取审核命中类型
+ * @method void setHitType(string $HitType) 设置审核命中类型
  */
 class ImageResultResult extends AbstractModel
 {
@@ -92,7 +76,6 @@ Illegal 违法
 Abuse 谩骂
 Terror 暴恐
 Ad 广告
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Scene;
 
@@ -100,7 +83,6 @@ Ad 广告
      * @var integer 是否命中
 0 未命中
 1 命中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HitFlag;
 
@@ -109,45 +91,43 @@ Ad 广告
 Pass 通过，
 Review 建议人审，
 Block 确认违规
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Suggestion;
 
     /**
      * @var string 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Label;
 
     /**
      * @var string 子标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubLabel;
 
     /**
      * @var integer 分数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Score;
 
     /**
      * @var array 人物名称列表，如未识别，则为null
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Names;
 
     /**
      * @var string 图片OCR文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Text;
 
     /**
      * @var array 其他详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Details;
+
+    /**
+     * @var string 审核命中类型
+     */
+    public $HitType;
 
     /**
      * @param string $Scene 场景
@@ -158,28 +138,20 @@ Illegal 违法
 Abuse 谩骂
 Terror 暴恐
 Ad 广告
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HitFlag 是否命中
 0 未命中
 1 命中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Suggestion 审核建议，可选值：
 Pass 通过，
 Review 建议人审，
 Block 确认违规
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Label 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubLabel 子标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Score 分数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Names 人物名称列表，如未识别，则为null
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Text 图片OCR文本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Details 其他详情
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $HitType 审核命中类型
      */
     function __construct()
     {
@@ -233,6 +205,10 @@ Block 确认违规
                 $obj->deserialize($value);
                 array_push($this->Details, $obj);
             }
+        }
+
+        if (array_key_exists("HitType",$param) and $param["HitType"] !== null) {
+            $this->HitType = $param["HitType"];
         }
     }
 }

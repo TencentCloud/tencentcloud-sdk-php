@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParagraphs(array $Paragraphs) 设置分段结果。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMindMapUrl() 获取摘要思维导图地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMindMapUrl(string $MindMapUrl) 设置摘要思维导图地址
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MediaAiAnalysisDescriptionItem extends AbstractModel
 {
@@ -62,11 +66,19 @@ class MediaAiAnalysisDescriptionItem extends AbstractModel
     public $Paragraphs;
 
     /**
+     * @var string 摘要思维导图地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MindMapUrl;
+
+    /**
      * @param string $Description 智能描述。
      * @param float $Confidence 智能描述的可信度，取值范围是 0 到 100。
      * @param string $Title 智能描述标题
      * @param array $Keywords 智能描述关键词
      * @param array $Paragraphs 分段结果。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MindMapUrl 摘要思维导图地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -105,6 +117,10 @@ class MediaAiAnalysisDescriptionItem extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Paragraphs, $obj);
             }
+        }
+
+        if (array_key_exists("MindMapUrl",$param) and $param["MindMapUrl"] !== null) {
+            $this->MindMapUrl = $param["MindMapUrl"];
         }
     }
 }

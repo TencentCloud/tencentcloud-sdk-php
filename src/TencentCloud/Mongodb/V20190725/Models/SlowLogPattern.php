@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPattern() 获取慢日志模式
  * @method void setPattern(string $Pattern) 设置慢日志模式
+ * @method string getQueryHash() 获取queryHash
+ * @method void setQueryHash(string $QueryHash) 设置queryHash
  * @method integer getMaxTime() 获取最大执行时间
  * @method void setMaxTime(integer $MaxTime) 设置最大执行时间
  * @method integer getAverageTime() 获取平均执行时间
@@ -35,6 +37,11 @@ class SlowLogPattern extends AbstractModel
      * @var string 慢日志模式
      */
     public $Pattern;
+
+    /**
+     * @var string queryHash
+     */
+    public $QueryHash;
 
     /**
      * @var integer 最大执行时间
@@ -53,6 +60,7 @@ class SlowLogPattern extends AbstractModel
 
     /**
      * @param string $Pattern 慢日志模式
+     * @param string $QueryHash queryHash
      * @param integer $MaxTime 最大执行时间
      * @param integer $AverageTime 平均执行时间
      * @param integer $Total 该模式慢日志条数
@@ -72,6 +80,10 @@ class SlowLogPattern extends AbstractModel
         }
         if (array_key_exists("Pattern",$param) and $param["Pattern"] !== null) {
             $this->Pattern = $param["Pattern"];
+        }
+
+        if (array_key_exists("QueryHash",$param) and $param["QueryHash"] !== null) {
+            $this->QueryHash = $param["QueryHash"];
         }
 
         if (array_key_exists("MaxTime",$param) and $param["MaxTime"] !== null) {

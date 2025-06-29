@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 关键词命中位置信息
  *
  * @method string getType() 获取标识模型命中还是关键词命中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置标识模型命中还是关键词命中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getKeyword() 获取命中关键词
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeyword(string $Keyword) 设置命中关键词
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLibName() 获取自定义词库名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLibName(string $LibName) 设置自定义词库名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPositions() 获取位置信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPositions(array $Positions) 设置位置信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class HitInfo extends AbstractModel
 {
     /**
      * @var string 标识模型命中还是关键词命中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 命中关键词
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Keyword;
 
     /**
      * @var string 自定义词库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LibName;
 
     /**
      * @var array 位置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Positions;
 
     /**
      * @param string $Type 标识模型命中还是关键词命中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Keyword 命中关键词
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LibName 自定义词库名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Positions 位置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tms\V20201229\Models;
+namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 情感分析明细
+ * IP 网段详情。
  *
- * @method integer getPositive() 获取正向分数，取值范围0到100
- * @method void setPositive(integer $Positive) 设置正向分数，取值范围0到100
- * @method integer getNegative() 获取负向分数，取值范围0到100
- * @method void setNegative(integer $Negative) 设置负向分数，取值范围0到100
+ * @method array getIPv4() 获取IPv4 网段列表。
+ * @method void setIPv4(array $IPv4) 设置IPv4 网段列表。
+ * @method array getIPv6() 获取IPv6 网段列表。
+ * @method void setIPv6(array $IPv6) 设置IPv6 网段列表。
  */
-class SentimentDetail extends AbstractModel
+class Addresses extends AbstractModel
 {
     /**
-     * @var integer 正向分数，取值范围0到100
+     * @var array IPv4 网段列表。
      */
-    public $Positive;
+    public $IPv4;
 
     /**
-     * @var integer 负向分数，取值范围0到100
+     * @var array IPv6 网段列表。
      */
-    public $Negative;
+    public $IPv6;
 
     /**
-     * @param integer $Positive 正向分数，取值范围0到100
-     * @param integer $Negative 负向分数，取值范围0到100
+     * @param array $IPv4 IPv4 网段列表。
+     * @param array $IPv6 IPv6 网段列表。
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class SentimentDetail extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Positive",$param) and $param["Positive"] !== null) {
-            $this->Positive = $param["Positive"];
+        if (array_key_exists("IPv4",$param) and $param["IPv4"] !== null) {
+            $this->IPv4 = $param["IPv4"];
         }
 
-        if (array_key_exists("Negative",$param) and $param["Negative"] !== null) {
-            $this->Negative = $param["Negative"];
+        if (array_key_exists("IPv6",$param) and $param["IPv6"] !== null) {
+            $this->IPv6 = $param["IPv6"];
         }
     }
 }

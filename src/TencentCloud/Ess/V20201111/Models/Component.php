@@ -519,10 +519,10 @@ ChildrenComponent结构体定义:
 注意：关键字索引是从0开始计数的
  * @method boolean getLockComponentValue() 获取**web嵌入发起合同场景下**， 是否锁定填写和签署控件值不允许嵌入页面进行编辑
 <ul><li>false（默认）：不锁定控件值，允许在页面编辑控件值</li>
-<li>true：锁定控件值，在页面编辑控件值</li></ul>
+<li>true：锁定控件值，在页面无法编辑控件值</li></ul>
  * @method void setLockComponentValue(boolean $LockComponentValue) 设置**web嵌入发起合同场景下**， 是否锁定填写和签署控件值不允许嵌入页面进行编辑
 <ul><li>false（默认）：不锁定控件值，允许在页面编辑控件值</li>
-<li>true：锁定控件值，在页面编辑控件值</li></ul>
+<li>true：锁定控件值，在页面无法编辑控件值</li></ul>
  * @method boolean getForbidMoveAndDelete() 获取**web嵌入发起合同场景下**，是否禁止移动和删除填写和签署控件
 <ul><li> <b>false（默认）</b> :可以移动和删除控件</li>
 <li> <b>true</b> : 禁止移动和删除控件</li></ul>
@@ -875,7 +875,7 @@ ChildrenComponent结构体定义:
     /**
      * @var boolean **web嵌入发起合同场景下**， 是否锁定填写和签署控件值不允许嵌入页面进行编辑
 <ul><li>false（默认）：不锁定控件值，允许在页面编辑控件值</li>
-<li>true：锁定控件值，在页面编辑控件值</li></ul>
+<li>true：锁定控件值，在页面无法编辑控件值</li></ul>
      */
     public $LockComponentValue;
 
@@ -1152,7 +1152,7 @@ ChildrenComponent结构体定义:
 注意：关键字索引是从0开始计数的
      * @param boolean $LockComponentValue **web嵌入发起合同场景下**， 是否锁定填写和签署控件值不允许嵌入页面进行编辑
 <ul><li>false（默认）：不锁定控件值，允许在页面编辑控件值</li>
-<li>true：锁定控件值，在页面编辑控件值</li></ul>
+<li>true：锁定控件值，在页面无法编辑控件值</li></ul>
      * @param boolean $ForbidMoveAndDelete **web嵌入发起合同场景下**，是否禁止移动和删除填写和签署控件
 <ul><li> <b>false（默认）</b> :可以移动和删除控件</li>
 <li> <b>true</b> : 禁止移动和删除控件</li></ul>

@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ResetRootAccount请求参数结构体
+ * ConfirmOriginACLUpdate请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+ * @method string getZoneId() 获取站点 ID。
+ * @method void setZoneId(string $ZoneId) 设置站点 ID。
  */
-class ResetRootAccountRequest extends AbstractModel
+class ConfirmOriginACLUpdateRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @var string 站点 ID。
      */
-    public $InstanceId;
+    public $ZoneId;
 
     /**
-     * @param string $InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @param string $ZoneId 站点 ID。
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class ResetRootAccountRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
+            $this->ZoneId = $param["ZoneId"];
         }
     }
 }

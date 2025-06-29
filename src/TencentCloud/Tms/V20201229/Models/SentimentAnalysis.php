@@ -21,41 +21,30 @@ use TencentCloud\Common\AbstractModel;
  * 情感分析结果
  *
  * @method string getLabel() 获取情感标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabel(string $Label) 设置情感标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScore() 获取标签分数，取值范围0到100
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScore(integer $Score) 设置标签分数，取值范围0到100
-注意：此字段可能返回 null，表示取不到有效值。
  * @method SentimentDetail getDetail() 获取情感分析明细
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDetail(SentimentDetail $Detail) 设置情感分析明细
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCode() 获取响应码，成功为"OK"，失败为"InternalError"
  * @method void setCode(string $Code) 设置响应码，成功为"OK"，失败为"InternalError"
  * @method string getMessage() 获取异常信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置异常信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SentimentAnalysis extends AbstractModel
 {
     /**
      * @var string 情感标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Label;
 
     /**
      * @var integer 标签分数，取值范围0到100
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Score;
 
     /**
      * @var SentimentDetail 情感分析明细
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Detail;
 
@@ -66,20 +55,15 @@ class SentimentAnalysis extends AbstractModel
 
     /**
      * @var string 异常信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
     /**
      * @param string $Label 情感标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Score 标签分数，取值范围0到100
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SentimentDetail $Detail 情感分析明细
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Code 响应码，成功为"OK"，失败为"InternalError"
      * @param string $Message 异常信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

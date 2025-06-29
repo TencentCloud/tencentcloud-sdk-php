@@ -41,21 +41,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRiskDetails(array $RiskDetails) 设置该字段用于返回文本检测中存在违规风险的账号检测结果，主要包括违规风险类别和风险等级信息，具体内容可参阅对应数据结构（RiskDetails）的详细描述
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExtra() 获取该字段用于返回根据您的需求配置的额外附加信息（Extra），如未配置则默认返回值为空。<br>备注：不同客户或Biztype下返回信息不同，如需配置该字段请提交工单咨询或联系售后专员处理
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtra(string $Extra) 设置该字段用于返回根据您的需求配置的额外附加信息（Extra），如未配置则默认返回值为空。<br>备注：不同客户或Biztype下返回信息不同，如需配置该字段请提交工单咨询或联系售后专员处理
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDataId() 获取该字段用于返回检测对象对应请求参数中的DataId，与输入的DataId字段中的内容对应
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataId(string $DataId) 设置该字段用于返回检测对象对应请求参数中的DataId，与输入的DataId字段中的内容对应
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubLabel() 获取该字段用于返回当前标签（Label）下的二级标签。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubLabel(string $SubLabel) 设置该字段用于返回当前标签（Label）下的二级标签。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContextText() 获取该字段用于返回上下文关联文本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContextText(string $ContextText) 设置该字段用于返回上下文关联文本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method SentimentAnalysis getSentimentAnalysis() 获取情感分析结果
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSentimentAnalysis(SentimentAnalysis $SentimentAnalysis) 设置情感分析结果
@@ -107,25 +99,21 @@ class TextModerationResponse extends AbstractModel
 
     /**
      * @var string 该字段用于返回根据您的需求配置的额外附加信息（Extra），如未配置则默认返回值为空。<br>备注：不同客户或Biztype下返回信息不同，如需配置该字段请提交工单咨询或联系售后专员处理
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Extra;
 
     /**
      * @var string 该字段用于返回检测对象对应请求参数中的DataId，与输入的DataId字段中的内容对应
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataId;
 
     /**
      * @var string 该字段用于返回当前标签（Label）下的二级标签。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubLabel;
 
     /**
      * @var string 该字段用于返回上下文关联文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContextText;
 
@@ -157,13 +145,9 @@ class TextModerationResponse extends AbstractModel
      * @param array $RiskDetails 该字段用于返回文本检测中存在违规风险的账号检测结果，主要包括违规风险类别和风险等级信息，具体内容可参阅对应数据结构（RiskDetails）的详细描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Extra 该字段用于返回根据您的需求配置的额外附加信息（Extra），如未配置则默认返回值为空。<br>备注：不同客户或Biztype下返回信息不同，如需配置该字段请提交工单咨询或联系售后专员处理
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataId 该字段用于返回检测对象对应请求参数中的DataId，与输入的DataId字段中的内容对应
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubLabel 该字段用于返回当前标签（Label）下的二级标签。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContextText 该字段用于返回上下文关联文本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SentimentAnalysis $SentimentAnalysis 情感分析结果
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HitType 该字段用于标识本次审核决策归因，比如text_nlp_tianji标识是由nlp tianji模型给出的审核决策，text_keyword_public标识命中了业务的关键词库

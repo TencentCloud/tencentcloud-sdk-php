@@ -48,6 +48,7 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
 **说明：DescribeDBInstanceParamTplDetail  API正在公测中，在此期间，该接口仅对公测用户开放**
  * @method Models\DescribeDBInstanceURLResponse DescribeDBInstanceURL(Models\DescribeDBInstanceURLRequest $req) 本接口（DescribeDBInstanceURL）用于获取指定实例的 URI 形式的连接串访问地址示例。
  * @method Models\DescribeDBInstancesResponse DescribeDBInstances(Models\DescribeDBInstancesRequest $req) 本接口（DescribeDBInstances）用于查询云数据库实例列表，支持通过项目ID、实例ID、实例状态等过滤条件来筛选主实例、灾备实例和只读实例信息列表。
+ * @method Models\DescribeDetailedSlowLogsResponse DescribeDetailedSlowLogs(Models\DescribeDetailedSlowLogsRequest $req) 查询实例慢日志详情
  * @method Models\DescribeInstanceParamsResponse DescribeInstanceParams(Models\DescribeInstanceParamsRequest $req) 本接口（DescribeInstanceParams）用于查询当前实例可修改的参数列表。
  * @method Models\DescribeSecurityGroupResponse DescribeSecurityGroup(Models\DescribeSecurityGroupRequest $req) 本接口（DescribeSecurityGroup）用于查询实例绑定的安全组。
  * @method Models\DescribeSlowLogPatternsResponse DescribeSlowLogPatterns(Models\DescribeSlowLogPatternsRequest $req) 本接口（DescribeSlowLogPatterns）用于获取数据库实例慢日志的统计信息。

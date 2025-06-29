@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 标识命中的违规关键词位置信息
  *
  * @method integer getStart() 获取关键词起始位置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStart(integer $Start) 设置关键词起始位置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEnd() 获取关键词结束位置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnd(integer $End) 设置关键词结束位置
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Positions extends AbstractModel
 {
     /**
      * @var integer 关键词起始位置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Start;
 
     /**
      * @var integer 关键词结束位置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $End;
 
     /**
      * @param integer $Start 关键词起始位置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $End 关键词结束位置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

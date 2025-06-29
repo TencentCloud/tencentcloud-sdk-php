@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTitle(string $Title) 设置发票名称
  * @method array getContent() 获取识别出的字段名称(关键字)，支持以下字段： 税号 、纳税人识别号 、纳税人名称 、金额合计大写 、金额合计小写 、填发日期 、税务机关 、填票人。 示例值：纳税人识别号
  * @method void setContent(array $Content) 设置识别出的字段名称(关键字)，支持以下字段： 税号 、纳税人识别号 、纳税人名称 、金额合计大写 、金额合计小写 、填发日期 、税务机关 、填票人。 示例值：纳税人识别号
+ * @method array getCommonContent() 获取海关缴款书常用字段
+ * @method void setCommonContent(array $CommonContent) 设置海关缴款书常用字段
  */
 class CustomsPaymentReceipt extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CustomsPaymentReceipt extends AbstractModel
     public $Content;
 
     /**
+     * @var array 海关缴款书常用字段
+     */
+    public $CommonContent;
+
+    /**
      * @param string $Title 发票名称
      * @param array $Content 识别出的字段名称(关键字)，支持以下字段： 税号 、纳税人识别号 、纳税人名称 、金额合计大写 、金额合计小写 、填发日期 、税务机关 、填票人。 示例值：纳税人识别号
+     * @param array $CommonContent 海关缴款书常用字段
      */
     function __construct()
     {
@@ -64,6 +72,15 @@ class CustomsPaymentReceipt extends AbstractModel
                 $obj = new OtherInvoiceItem();
                 $obj->deserialize($value);
                 array_push($this->Content, $obj);
+            }
+        }
+
+        if (array_key_exists("CommonContent",$param) and $param["CommonContent"] !== null) {
+            $this->CommonContent = [];
+            foreach ($param["CommonContent"] as $key => $value){
+                $obj = new OtherInvoiceItem();
+                $obj->deserialize($value);
+                array_push($this->CommonContent, $obj);
             }
         }
     }

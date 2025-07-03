@@ -20,22 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAuditLogFile请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID，与云数据库控制台页面中显示的实例 ID 相同。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID，与云数据库控制台页面中显示的实例 ID 相同。
- * @method string getStartTime() 获取开始时间。
- * @method void setStartTime(string $StartTime) 设置开始时间。
- * @method string getEndTime() 获取结束时间。
- * @method void setEndTime(string $EndTime) 设置结束时间。
- * @method string getOrder() 获取排序方式。支持值包括："ASC" - 升序，"DESC" - 降序。
- * @method void setOrder(string $Order) 设置排序方式。支持值包括："ASC" - 升序，"DESC" - 降序。
- * @method string getOrderBy() 获取排序字段。支持值包括：
-"timestamp" - 时间戳；
-"affectRows" - 影响行数；
-"execTime" - 执行时间。
- * @method void setOrderBy(string $OrderBy) 设置排序字段。支持值包括：
-"timestamp" - 时间戳；
-"affectRows" - 影响行数；
-"execTime" - 执行时间。
+ * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+ * @method string getStartTime() 获取开始时间(建议开始到结束时间区间最大7天)。
+ * @method void setStartTime(string $StartTime) 设置开始时间(建议开始到结束时间区间最大7天)。
+ * @method string getEndTime() 获取结束时间(建议开始到结束时间区间最大7天）。
+ * @method void setEndTime(string $EndTime) 设置结束时间(建议开始到结束时间区间最大7天）。
+ * @method string getOrder() 获取排序方式。支持值包括："ASC" - 升序，"DESC" - 降序，默认降序排序。
+ * @method void setOrder(string $Order) 设置排序方式。支持值包括："ASC" - 升序，"DESC" - 降序，默认降序排序。
+ * @method string getOrderBy() 获取排序字段。支持值包括(默认按照时间戳排序)： "timestamp" - 时间戳； "affectRows" - 影响行数； "execTime" - 执行时间。
+ * @method void setOrderBy(string $OrderBy) 设置排序字段。支持值包括(默认按照时间戳排序)： "timestamp" - 时间戳； "affectRows" - 影响行数； "execTime" - 执行时间。
  * @method AuditLogFilter getFilter() 获取已废弃。
  * @method void setFilter(AuditLogFilter $Filter) 设置已废弃。
  * @method array getLogFilter() 获取过滤条件。可按设置的过滤条件过滤日志。
@@ -46,30 +40,27 @@ use TencentCloud\Common\AbstractModel;
 class CreateAuditLogFileRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID，与云数据库控制台页面中显示的实例 ID 相同。
+     * @var string 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public $InstanceId;
 
     /**
-     * @var string 开始时间。
+     * @var string 开始时间(建议开始到结束时间区间最大7天)。
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间。
+     * @var string 结束时间(建议开始到结束时间区间最大7天）。
      */
     public $EndTime;
 
     /**
-     * @var string 排序方式。支持值包括："ASC" - 升序，"DESC" - 降序。
+     * @var string 排序方式。支持值包括："ASC" - 升序，"DESC" - 降序，默认降序排序。
      */
     public $Order;
 
     /**
-     * @var string 排序字段。支持值包括：
-"timestamp" - 时间戳；
-"affectRows" - 影响行数；
-"execTime" - 执行时间。
+     * @var string 排序字段。支持值包括(默认按照时间戳排序)： "timestamp" - 时间戳； "affectRows" - 影响行数； "execTime" - 执行时间。
      */
     public $OrderBy;
 
@@ -90,14 +81,11 @@ class CreateAuditLogFileRequest extends AbstractModel
     public $ColumnFilter;
 
     /**
-     * @param string $InstanceId 实例 ID，与云数据库控制台页面中显示的实例 ID 相同。
-     * @param string $StartTime 开始时间。
-     * @param string $EndTime 结束时间。
-     * @param string $Order 排序方式。支持值包括："ASC" - 升序，"DESC" - 降序。
-     * @param string $OrderBy 排序字段。支持值包括：
-"timestamp" - 时间戳；
-"affectRows" - 影响行数；
-"execTime" - 执行时间。
+     * @param string $InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @param string $StartTime 开始时间(建议开始到结束时间区间最大7天)。
+     * @param string $EndTime 结束时间(建议开始到结束时间区间最大7天）。
+     * @param string $Order 排序方式。支持值包括："ASC" - 升序，"DESC" - 降序，默认降序排序。
+     * @param string $OrderBy 排序字段。支持值包括(默认按照时间戳排序)： "timestamp" - 时间戳； "affectRows" - 影响行数； "execTime" - 执行时间。
      * @param AuditLogFilter $Filter 已废弃。
      * @param array $LogFilter 过滤条件。可按设置的过滤条件过滤日志。
      * @param array $ColumnFilter 下载筛选列

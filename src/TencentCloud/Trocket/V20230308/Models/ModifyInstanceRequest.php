@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemark(string $Remark) 设置备注信息，最多 128 个字符
  * @method float getSendReceiveRatio() 获取消息发送和接收的比例
  * @method void setSendReceiveRatio(float $SendReceiveRatio) 设置消息发送和接收的比例
- * @method string getSkuCode() 获取商品规格，从 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参获得。
- * @method void setSkuCode(string $SkuCode) 设置商品规格，从 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参获得。
+ * @method string getSkuCode() 获取商品规格，从 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/96031#ProductSKU) 出参获得。
+ * @method void setSkuCode(string $SkuCode) 设置商品规格，从 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/96031#ProductSKU) 出参获得。
  * @method integer getMessageRetention() 获取消息保留时长（单位：小时），取值范围参考 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/96031#ProductSKU) 出参：
 
 - 默认值：DefaultRetention 参数
@@ -80,7 +80,7 @@ class ModifyInstanceRequest extends AbstractModel
     public $SendReceiveRatio;
 
     /**
-     * @var string 商品规格，从 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参获得。
+     * @var string 商品规格，从 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/96031#ProductSKU) 出参获得。
      */
     public $SkuCode;
 
@@ -126,7 +126,7 @@ class ModifyInstanceRequest extends AbstractModel
      * @param string $Name 实例名称，不能为空, 3-64个字符，只能包含数字、字母、“-”和“_”
      * @param string $Remark 备注信息，最多 128 个字符
      * @param float $SendReceiveRatio 消息发送和接收的比例
-     * @param string $SkuCode 商品规格，从 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/107676) 出参获得。
+     * @param string $SkuCode 商品规格，从 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/96031#ProductSKU) 出参获得。
      * @param integer $MessageRetention 消息保留时长（单位：小时），取值范围参考 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/96031#ProductSKU) 出参：
 
 - 默认值：DefaultRetention 参数

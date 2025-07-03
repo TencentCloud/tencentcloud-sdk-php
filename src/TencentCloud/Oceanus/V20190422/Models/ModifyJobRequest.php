@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWorkSpaceId(string $WorkSpaceId) 设置工作空间 SerialId
  * @method string getDescription() 获取作业描述
  * @method void setDescription(string $Description) 设置作业描述
+ * @method integer getContinueAlarm() 获取停止持续告警
+ * @method void setContinueAlarm(integer $ContinueAlarm) 设置停止持续告警
  */
 class ModifyJobRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class ModifyJobRequest extends AbstractModel
     public $Description;
 
     /**
+     * @var integer 停止持续告警
+     */
+    public $ContinueAlarm;
+
+    /**
      * @param string $JobId 作业Id
      * @param string $Name 作业名称，支持长度小于50的中文/英文/数字/”-”/”_”/”.”，不能重名
      * @param string $Remark 描述
      * @param string $TargetFolderId 拖拽文件需传入此参数
      * @param string $WorkSpaceId 工作空间 SerialId
      * @param string $Description 作业描述
+     * @param integer $ContinueAlarm 停止持续告警
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class ModifyJobRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("ContinueAlarm",$param) and $param["ContinueAlarm"] !== null) {
+            $this->ContinueAlarm = $param["ContinueAlarm"];
         }
     }
 }

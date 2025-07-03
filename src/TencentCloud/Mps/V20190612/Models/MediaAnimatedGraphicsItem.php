@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStorage(TaskOutputStorage $Storage) 设置转动图文件的存储位置。
  * @method string getPath() 获取转动图的文件路径。
  * @method void setPath(string $Path) 设置转动图的文件路径。
- * @method integer getDefinition() 获取转动图模板 ID，参见[转动图参数模板](https://cloud.tencent.com/document/product/862/37042#.E9.A2.84.E7.BD.AE.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
- * @method void setDefinition(integer $Definition) 设置转动图模板 ID，参见[转动图参数模板](https://cloud.tencent.com/document/product/862/37042#.E9.A2.84.E7.BD.AE.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+ * @method integer getDefinition() 获取转动图模板 ID，参见[转动图参数模板](https://cloud.tencent.com/document/product/862/77168#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF.5B.5D(id.3Amove))。
+ * @method void setDefinition(integer $Definition) 设置转动图模板 ID，参见[转动图参数模板](https://cloud.tencent.com/document/product/862/77168#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF.5B.5D(id.3Amove))。
  * @method string getContainer() 获取动图格式，如 gif。
  * @method void setContainer(string $Container) 设置动图格式，如 gif。
  * @method integer getHeight() 获取动图的高度，单位：px。
@@ -56,7 +56,7 @@ class MediaAnimatedGraphicsItem extends AbstractModel
     public $Path;
 
     /**
-     * @var integer 转动图模板 ID，参见[转动图参数模板](https://cloud.tencent.com/document/product/862/37042#.E9.A2.84.E7.BD.AE.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+     * @var integer 转动图模板 ID，参见[转动图参数模板](https://cloud.tencent.com/document/product/862/77168#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF.5B.5D(id.3Amove))。
      */
     public $Definition;
 
@@ -103,7 +103,7 @@ class MediaAnimatedGraphicsItem extends AbstractModel
     /**
      * @param TaskOutputStorage $Storage 转动图文件的存储位置。
      * @param string $Path 转动图的文件路径。
-     * @param integer $Definition 转动图模板 ID，参见[转动图参数模板](https://cloud.tencent.com/document/product/862/37042#.E9.A2.84.E7.BD.AE.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF)。
+     * @param integer $Definition 转动图模板 ID，参见[转动图参数模板](https://cloud.tencent.com/document/product/862/77168#.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF.5B.5D(id.3Amove))。
      * @param string $Container 动图格式，如 gif。
      * @param integer $Height 动图的高度，单位：px。
      * @param integer $Width 动图的宽度，单位：px。

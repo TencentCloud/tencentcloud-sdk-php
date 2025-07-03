@@ -26,26 +26,56 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAuditStatus(string $AuditStatus) 设置审计状态。ON-表示审计已开启，OFF-表示审计关闭
  * @method integer getAuditTask() 获取任务状态。0-无任务；1-审计开启中，2-审计关闭中。
  * @method void setAuditTask(integer $AuditTask) 设置任务状态。0-无任务；1-审计开启中，2-审计关闭中。
- * @method integer getLogExpireDay() 获取日志保留时长。
- * @method void setLogExpireDay(integer $LogExpireDay) 设置日志保留时长。
- * @method integer getHighLogExpireDay() 获取高频存储时长。
- * @method void setHighLogExpireDay(integer $HighLogExpireDay) 设置高频存储时长。
- * @method integer getLowLogExpireDay() 获取低频存储时长。
- * @method void setLowLogExpireDay(integer $LowLogExpireDay) 设置低频存储时长。
- * @method float getBillingAmount() 获取日志存储量。
- * @method void setBillingAmount(float $BillingAmount) 设置日志存储量。
- * @method float getHighRealStorage() 获取高频存储量。
- * @method void setHighRealStorage(float $HighRealStorage) 设置高频存储量。
- * @method float getLowRealStorage() 获取低频存储量。
- * @method void setLowRealStorage(float $LowRealStorage) 设置低频存储量。
+ * @method integer getLogExpireDay() 获取日志保留时长。支持值包括：
+7 - 一周；
+30 - 一个月；
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。
+ * @method void setLogExpireDay(integer $LogExpireDay) 设置日志保留时长。支持值包括：
+7 - 一周；
+30 - 一个月；
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。
+ * @method integer getHighLogExpireDay() 获取高频存储时长。支持值包括：
+3 - 3天；
+7 - 一周；
+30 - 一个月；
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。
+ * @method void setHighLogExpireDay(integer $HighLogExpireDay) 设置高频存储时长。支持值包括：
+3 - 3天；
+7 - 一周；
+30 - 一个月；
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。
+ * @method integer getLowLogExpireDay() 获取低频存储时长。单位：天，等于日志保存时长减去高频存储时长。
+ * @method void setLowLogExpireDay(integer $LowLogExpireDay) 设置低频存储时长。单位：天，等于日志保存时长减去高频存储时长。
+ * @method float getBillingAmount() 获取日志存储量(单位：GB)。
+ * @method void setBillingAmount(float $BillingAmount) 设置日志存储量(单位：GB)。
+ * @method float getHighRealStorage() 获取高频存储量(单位：GB)。
+ * @method void setHighRealStorage(float $HighRealStorage) 设置高频存储量(单位：GB)。
+ * @method float getLowRealStorage() 获取低频存储量(单位：GB)。
+ * @method void setLowRealStorage(float $LowRealStorage) 设置低频存储量(单位：GB)。
  * @method boolean getAuditAll() 获取是否为全审计。true-表示全审计。
  * @method void setAuditAll(boolean $AuditAll) 设置是否为全审计。true-表示全审计。
  * @method string getCreateAt() 获取审计开通时间。
  * @method void setCreateAt(string $CreateAt) 设置审计开通时间。
  * @method AuditInstanceInfo getInstanceInfo() 获取实例相关信息
  * @method void setInstanceInfo(AuditInstanceInfo $InstanceInfo) 设置实例相关信息
- * @method float getRealStorage() 获取总存储量。
- * @method void setRealStorage(float $RealStorage) 设置总存储量。
+ * @method float getRealStorage() 获取总存储量(单位：GB)。
+ * @method void setRealStorage(float $RealStorage) 设置总存储量(单位：GB)。
  * @method boolean getOldRule() 获取是否包含审计策略
  * @method void setOldRule(boolean $OldRule) 设置是否包含审计策略
  * @method array getRuleTemplateIds() 获取实例所应用的规则模板。
@@ -69,32 +99,47 @@ class InstanceDbAuditStatus extends AbstractModel
     public $AuditTask;
 
     /**
-     * @var integer 日志保留时长。
+     * @var integer 日志保留时长。支持值包括：
+7 - 一周；
+30 - 一个月；
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。
      */
     public $LogExpireDay;
 
     /**
-     * @var integer 高频存储时长。
+     * @var integer 高频存储时长。支持值包括：
+3 - 3天；
+7 - 一周；
+30 - 一个月；
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。
      */
     public $HighLogExpireDay;
 
     /**
-     * @var integer 低频存储时长。
+     * @var integer 低频存储时长。单位：天，等于日志保存时长减去高频存储时长。
      */
     public $LowLogExpireDay;
 
     /**
-     * @var float 日志存储量。
+     * @var float 日志存储量(单位：GB)。
      */
     public $BillingAmount;
 
     /**
-     * @var float 高频存储量。
+     * @var float 高频存储量(单位：GB)。
      */
     public $HighRealStorage;
 
     /**
-     * @var float 低频存储量。
+     * @var float 低频存储量(单位：GB)。
      */
     public $LowRealStorage;
 
@@ -114,7 +159,7 @@ class InstanceDbAuditStatus extends AbstractModel
     public $InstanceInfo;
 
     /**
-     * @var float 总存储量。
+     * @var float 总存储量(单位：GB)。
      */
     public $RealStorage;
 
@@ -132,16 +177,31 @@ class InstanceDbAuditStatus extends AbstractModel
      * @param string $InstanceId 实例ID。
      * @param string $AuditStatus 审计状态。ON-表示审计已开启，OFF-表示审计关闭
      * @param integer $AuditTask 任务状态。0-无任务；1-审计开启中，2-审计关闭中。
-     * @param integer $LogExpireDay 日志保留时长。
-     * @param integer $HighLogExpireDay 高频存储时长。
-     * @param integer $LowLogExpireDay 低频存储时长。
-     * @param float $BillingAmount 日志存储量。
-     * @param float $HighRealStorage 高频存储量。
-     * @param float $LowRealStorage 低频存储量。
+     * @param integer $LogExpireDay 日志保留时长。支持值包括：
+7 - 一周；
+30 - 一个月；
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。
+     * @param integer $HighLogExpireDay 高频存储时长。支持值包括：
+3 - 3天；
+7 - 一周；
+30 - 一个月；
+90 - 三个月；
+180 - 六个月；
+365 - 一年；
+1095 - 三年；
+1825 - 五年。
+     * @param integer $LowLogExpireDay 低频存储时长。单位：天，等于日志保存时长减去高频存储时长。
+     * @param float $BillingAmount 日志存储量(单位：GB)。
+     * @param float $HighRealStorage 高频存储量(单位：GB)。
+     * @param float $LowRealStorage 低频存储量(单位：GB)。
      * @param boolean $AuditAll 是否为全审计。true-表示全审计。
      * @param string $CreateAt 审计开通时间。
      * @param AuditInstanceInfo $InstanceInfo 实例相关信息
-     * @param float $RealStorage 总存储量。
+     * @param float $RealStorage 总存储量(单位：GB)。
      * @param boolean $OldRule 是否包含审计策略
      * @param array $RuleTemplateIds 实例所应用的规则模板。
      */

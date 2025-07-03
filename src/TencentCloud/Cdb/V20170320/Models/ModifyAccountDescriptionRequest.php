@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
- * @method array getAccounts() 获取云数据库账号。
- * @method void setAccounts(array $Accounts) 设置云数据库账号。
- * @method string getDescription() 获取数据库账号的备注信息。
- * @method void setDescription(string $Description) 设置数据库账号的备注信息。
+ * @method array getAccounts() 获取云数据库账号。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
+ * @method void setAccounts(array $Accounts) 设置云数据库账号。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
+ * @method string getDescription() 获取数据库账号的备注信息。最多支持输入255个字符。
+ * @method void setDescription(string $Description) 设置数据库账号的备注信息。最多支持输入255个字符。
  */
 class ModifyAccountDescriptionRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class ModifyAccountDescriptionRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var array 云数据库账号。
+     * @var array 云数据库账号。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
      */
     public $Accounts;
 
     /**
-     * @var string 数据库账号的备注信息。
+     * @var string 数据库账号的备注信息。最多支持输入255个字符。
      */
     public $Description;
 
     /**
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
-     * @param array $Accounts 云数据库账号。
-     * @param string $Description 数据库账号的备注信息。
+     * @param array $Accounts 云数据库账号。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
+     * @param string $Description 数据库账号的备注信息。最多支持输入255个字符。
      */
     function __construct()
     {

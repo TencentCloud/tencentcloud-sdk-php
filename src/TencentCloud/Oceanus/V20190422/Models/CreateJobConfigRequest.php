@@ -86,6 +86,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskManagerCpu(float $TaskManagerCpu) 设置TaskManager cpu
  * @method float getTaskManagerMem() 获取TaskManager 内存
  * @method void setTaskManagerMem(float $TaskManagerMem) 设置TaskManager 内存
+ * @method integer getUseOldSystemConnector() 获取0=默认使用老的 1=使用新的
+ * @method void setUseOldSystemConnector(integer $UseOldSystemConnector) 设置0=默认使用老的 1=使用新的
+ * @method string getProgramArgsAfterGzip() 获取压缩参数
+ * @method void setProgramArgsAfterGzip(string $ProgramArgsAfterGzip) 设置压缩参数
+ * @method integer getCheckpointTimeoutSecond() 获取checkpoint 超时时间
+ * @method void setCheckpointTimeoutSecond(integer $CheckpointTimeoutSecond) 设置checkpoint 超时时间
  */
 class CreateJobConfigRequest extends AbstractModel
 {
@@ -255,6 +261,21 @@ class CreateJobConfigRequest extends AbstractModel
     public $TaskManagerMem;
 
     /**
+     * @var integer 0=默认使用老的 1=使用新的
+     */
+    public $UseOldSystemConnector;
+
+    /**
+     * @var string 压缩参数
+     */
+    public $ProgramArgsAfterGzip;
+
+    /**
+     * @var integer checkpoint 超时时间
+     */
+    public $CheckpointTimeoutSecond;
+
+    /**
      * @param string $JobId 作业Id
      * @param string $EntrypointClass 主类
      * @param string $ProgramArgs 主类入参，需要区分下Sql作业配置，Jar作业配置，Python作业配置，具体参考下面的示例值
@@ -288,6 +309,9 @@ class CreateJobConfigRequest extends AbstractModel
      * @param float $JobManagerMem JobManager 内存
      * @param float $TaskManagerCpu TaskManager cpu
      * @param float $TaskManagerMem TaskManager 内存
+     * @param integer $UseOldSystemConnector 0=默认使用老的 1=使用新的
+     * @param string $ProgramArgsAfterGzip 压缩参数
+     * @param integer $CheckpointTimeoutSecond checkpoint 超时时间
      */
     function __construct()
     {
@@ -450,6 +474,18 @@ class CreateJobConfigRequest extends AbstractModel
 
         if (array_key_exists("TaskManagerMem",$param) and $param["TaskManagerMem"] !== null) {
             $this->TaskManagerMem = $param["TaskManagerMem"];
+        }
+
+        if (array_key_exists("UseOldSystemConnector",$param) and $param["UseOldSystemConnector"] !== null) {
+            $this->UseOldSystemConnector = $param["UseOldSystemConnector"];
+        }
+
+        if (array_key_exists("ProgramArgsAfterGzip",$param) and $param["ProgramArgsAfterGzip"] !== null) {
+            $this->ProgramArgsAfterGzip = $param["ProgramArgsAfterGzip"];
+        }
+
+        if (array_key_exists("CheckpointTimeoutSecond",$param) and $param["CheckpointTimeoutSecond"] !== null) {
+            $this->CheckpointTimeoutSecond = $param["CheckpointTimeoutSecond"];
         }
     }
 }

@@ -27,7 +27,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getFlowDescription() 获取合同流程描述信息。
  * @method void setFlowDescription(string $FlowDescription) 设置合同流程描述信息。
  * @method string getFlowType() 获取合同流程的类别分类（如销售合同/入职合同等）。
+该字段将被废弃，不建议使用。	请使用 UserFlowType。
  * @method void setFlowType(string $FlowType) 设置合同流程的类别分类（如销售合同/入职合同等）。
+该字段将被废弃，不建议使用。	请使用 UserFlowType。
  * @method integer getFlowStatus() 获取合同流程当前的签署状态, 会存在下列的状态值
 <ul><li> **0** : 未开启流程(合同中不存在填写环节)</li>
 <li> **1** : 待签署</li>
@@ -62,6 +64,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreator(string $Creator) 设置 合同流程发起方的员工编号, 即员工在腾讯电子签平台的唯一身份标识。
  * @method integer getDeadline() 获取合同流程的签署截止时间，格式为Unix标准时间戳（秒）。
  * @method void setDeadline(integer $Deadline) 设置合同流程的签署截止时间，格式为Unix标准时间戳（秒）。
+ * @method UserFlowType getUserFlowType() 获取用户合同的自定义分类。
+
+自定义合同类型的位置，在下图所示地方:
+![image](https://qcloudimg.tencent-cloud.cn/raw/00d72934c31bd49115a566e4e1a4530d.png)
+ * @method void setUserFlowType(UserFlowType $UserFlowType) 设置用户合同的自定义分类。
+
+自定义合同类型的位置，在下图所示地方:
+![image](https://qcloudimg.tencent-cloud.cn/raw/00d72934c31bd49115a566e4e1a4530d.png)
+ * @method string getTemplateId() 获取发起模板时,使用的模板Id
+ * @method void setTemplateId(string $TemplateId) 设置发起模板时,使用的模板Id
  */
 class FlowBrief extends AbstractModel
 {
@@ -82,6 +94,7 @@ class FlowBrief extends AbstractModel
 
     /**
      * @var string 合同流程的类别分类（如销售合同/入职合同等）。
+该字段将被废弃，不建议使用。	请使用 UserFlowType。
      */
     public $FlowType;
 
@@ -123,10 +136,24 @@ class FlowBrief extends AbstractModel
     public $Deadline;
 
     /**
+     * @var UserFlowType 用户合同的自定义分类。
+
+自定义合同类型的位置，在下图所示地方:
+![image](https://qcloudimg.tencent-cloud.cn/raw/00d72934c31bd49115a566e4e1a4530d.png)
+     */
+    public $UserFlowType;
+
+    /**
+     * @var string 发起模板时,使用的模板Id
+     */
+    public $TemplateId;
+
+    /**
      * @param string $FlowId 合同流程ID，为32位字符串。
      * @param string $FlowName 合同流程的名称。
      * @param string $FlowDescription 合同流程描述信息。
      * @param string $FlowType 合同流程的类别分类（如销售合同/入职合同等）。
+该字段将被废弃，不建议使用。	请使用 UserFlowType。
      * @param integer $FlowStatus 合同流程当前的签署状态, 会存在下列的状态值
 <ul><li> **0** : 未开启流程(合同中不存在填写环节)</li>
 <li> **1** : 待签署</li>
@@ -144,6 +171,11 @@ class FlowBrief extends AbstractModel
      * @param string $FlowMessage 当合同流程状态为已拒签（即 FlowStatus=3）或已撤销（即 FlowStatus=6）时，此字段 FlowMessage 为拒签或撤销原因。
      * @param string $Creator  合同流程发起方的员工编号, 即员工在腾讯电子签平台的唯一身份标识。
      * @param integer $Deadline 合同流程的签署截止时间，格式为Unix标准时间戳（秒）。
+     * @param UserFlowType $UserFlowType 用户合同的自定义分类。
+
+自定义合同类型的位置，在下图所示地方:
+![image](https://qcloudimg.tencent-cloud.cn/raw/00d72934c31bd49115a566e4e1a4530d.png)
+     * @param string $TemplateId 发起模板时,使用的模板Id
      */
     function __construct()
     {
@@ -192,6 +224,15 @@ class FlowBrief extends AbstractModel
 
         if (array_key_exists("Deadline",$param) and $param["Deadline"] !== null) {
             $this->Deadline = $param["Deadline"];
+        }
+
+        if (array_key_exists("UserFlowType",$param) and $param["UserFlowType"] !== null) {
+            $this->UserFlowType = new UserFlowType();
+            $this->UserFlowType->deserialize($param["UserFlowType"]);
+        }
+
+        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
+            $this->TemplateId = $param["TemplateId"];
         }
     }
 }

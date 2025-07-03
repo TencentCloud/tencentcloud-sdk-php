@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteAuditRuleTemplates请求参数结构体
  *
- * @method array getRuleTemplateIds() 获取审计规则模板ID。
- * @method void setRuleTemplateIds(array $RuleTemplateIds) 设置审计规则模板ID。
+ * @method array getRuleTemplateIds() 获取审计规则模板ID,可通过[DescribeAuditRuleTemplates](https://cloud.tencent.com/document/api/236/101811)接口获取，单次允许最多删除5个规则模板。
+ * @method void setRuleTemplateIds(array $RuleTemplateIds) 设置审计规则模板ID,可通过[DescribeAuditRuleTemplates](https://cloud.tencent.com/document/api/236/101811)接口获取，单次允许最多删除5个规则模板。
  */
 class DeleteAuditRuleTemplatesRequest extends AbstractModel
 {
     /**
-     * @var array 审计规则模板ID。
+     * @var array 审计规则模板ID,可通过[DescribeAuditRuleTemplates](https://cloud.tencent.com/document/api/236/101811)接口获取，单次允许最多删除5个规则模板。
      */
     public $RuleTemplateIds;
 
     /**
-     * @param array $RuleTemplateIds 审计规则模板ID。
+     * @param array $RuleTemplateIds 审计规则模板ID,可通过[DescribeAuditRuleTemplates](https://cloud.tencent.com/document/api/236/101811)接口获取，单次允许最多删除5个规则模板。
      */
     function __construct()
     {

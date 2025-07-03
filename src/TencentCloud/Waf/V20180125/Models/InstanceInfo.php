@@ -130,6 +130,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMajorEventsProPkg(MajorEventsProPkg $MajorEventsProPkg) 设置重保增强包
  * @method integer getBasicFlag() 获取1是基础2025版本；0不是
  * @method void setBasicFlag(integer $BasicFlag) 设置1是基础2025版本；0不是
+ * @method NetworkConfig getNetworkConfig() 获取实例的网络配置
+ * @method void setNetworkConfig(NetworkConfig $NetworkConfig) 设置实例的网络配置
  */
 class InstanceInfo extends AbstractModel
 {
@@ -369,6 +371,11 @@ class InstanceInfo extends AbstractModel
     public $BasicFlag;
 
     /**
+     * @var NetworkConfig 实例的网络配置
+     */
+    public $NetworkConfig;
+
+    /**
      * @param string $InstanceId 实例唯一ID
      * @param string $InstanceName 实例名称
      * @param string $ResourceIds 实例对应资源ID，计费使用
@@ -424,6 +431,7 @@ class InstanceInfo extends AbstractModel
      * @param integer $Last3MaxBandwidth 最近3天最大带宽
      * @param MajorEventsProPkg $MajorEventsProPkg 重保增强包
      * @param integer $BasicFlag 1是基础2025版本；0不是
+     * @param NetworkConfig $NetworkConfig 实例的网络配置
      */
     function __construct()
     {
@@ -627,6 +635,11 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("BasicFlag",$param) and $param["BasicFlag"] !== null) {
             $this->BasicFlag = $param["BasicFlag"];
+        }
+
+        if (array_key_exists("NetworkConfig",$param) and $param["NetworkConfig"] !== null) {
+            $this->NetworkConfig = new NetworkConfig();
+            $this->NetworkConfig->deserialize($param["NetworkConfig"]);
         }
     }
 }

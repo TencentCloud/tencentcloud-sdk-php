@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCpuExpandHistory请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID
- * @method void setInstanceId(string $InstanceId) 设置实例 ID
+ * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
  * @method string getExpandStrategy() 获取扩容策略，值包括：all，manual，auto
  * @method void setExpandStrategy(string $ExpandStrategy) 设置扩容策略，值包括：all，manual，auto
  * @method string getStatus() 获取扩容状态，值包括：all，extend，reduce，extend_failed
  * @method void setStatus(string $Status) 设置扩容状态，值包括：all，extend，reduce，extend_failed
- * @method integer getStartTime() 获取查询的开始时间。只能查看30天内的扩容历史
- * @method void setStartTime(integer $StartTime) 设置查询的开始时间。只能查看30天内的扩容历史
- * @method integer getEndTime() 获取查询的结束时间。只能查看30天内的扩容历史
- * @method void setEndTime(integer $EndTime) 设置查询的结束时间。只能查看30天内的扩容历史
+ * @method integer getStartTime() 获取查询的开始时间。只能查看30天内的扩容历史，格式为 Integer 的时间戳（秒级）。
+ * @method void setStartTime(integer $StartTime) 设置查询的开始时间。只能查看30天内的扩容历史，格式为 Integer 的时间戳（秒级）。
+ * @method integer getEndTime() 获取查询的结束时间。只能查看30天内的扩容历史，格式为 Integer 的时间戳（秒级）。
+ * @method void setEndTime(integer $EndTime) 设置查询的结束时间。只能查看30天内的扩容历史，格式为 Integer 的时间戳（秒级）。
  * @method integer getOffset() 获取分页入参
  * @method void setOffset(integer $Offset) 设置分页入参
  * @method integer getLimit() 获取分页入参
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeCpuExpandHistoryRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID
+     * @var string 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public $InstanceId;
 
@@ -53,12 +53,12 @@ class DescribeCpuExpandHistoryRequest extends AbstractModel
     public $Status;
 
     /**
-     * @var integer 查询的开始时间。只能查看30天内的扩容历史
+     * @var integer 查询的开始时间。只能查看30天内的扩容历史，格式为 Integer 的时间戳（秒级）。
      */
     public $StartTime;
 
     /**
-     * @var integer 查询的结束时间。只能查看30天内的扩容历史
+     * @var integer 查询的结束时间。只能查看30天内的扩容历史，格式为 Integer 的时间戳（秒级）。
      */
     public $EndTime;
 
@@ -73,11 +73,11 @@ class DescribeCpuExpandHistoryRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param string $InstanceId 实例 ID
+     * @param string $InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      * @param string $ExpandStrategy 扩容策略，值包括：all，manual，auto
      * @param string $Status 扩容状态，值包括：all，extend，reduce，extend_failed
-     * @param integer $StartTime 查询的开始时间。只能查看30天内的扩容历史
-     * @param integer $EndTime 查询的结束时间。只能查看30天内的扩容历史
+     * @param integer $StartTime 查询的开始时间。只能查看30天内的扩容历史，格式为 Integer 的时间戳（秒级）。
+     * @param integer $EndTime 查询的结束时间。只能查看30天内的扩容历史，格式为 Integer 的时间戳（秒级）。
      * @param integer $Offset 分页入参
      * @param integer $Limit 分页入参
      */

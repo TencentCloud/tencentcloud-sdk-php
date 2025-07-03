@@ -166,6 +166,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJobConfigItem(JobConfig $JobConfigItem) 设置运行中配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCheckpointTimeoutSecond() 获取checkpoint 超时时间
+ * @method void setCheckpointTimeoutSecond(integer $CheckpointTimeoutSecond) 设置checkpoint 超时时间
  */
 class JobConfig extends AbstractModel
 {
@@ -395,6 +397,11 @@ class JobConfig extends AbstractModel
     public $JobConfigItem;
 
     /**
+     * @var integer checkpoint 超时时间
+     */
+    public $CheckpointTimeoutSecond;
+
+    /**
      * @param string $JobId 作业Id
      * @param string $EntrypointClass 主类
 注意：此字段可能返回 null，表示取不到有效值。
@@ -468,6 +475,7 @@ class JobConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param JobConfig $JobConfigItem 运行中配置
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CheckpointTimeoutSecond checkpoint 超时时间
      */
     function __construct()
     {
@@ -651,6 +659,10 @@ class JobConfig extends AbstractModel
         if (array_key_exists("JobConfigItem",$param) and $param["JobConfigItem"] !== null) {
             $this->JobConfigItem = new JobConfig();
             $this->JobConfigItem->deserialize($param["JobConfigItem"]);
+        }
+
+        if (array_key_exists("CheckpointTimeoutSecond",$param) and $param["CheckpointTimeoutSecond"] !== null) {
+            $this->CheckpointTimeoutSecond = $param["CheckpointTimeoutSecond"];
         }
     }
 }

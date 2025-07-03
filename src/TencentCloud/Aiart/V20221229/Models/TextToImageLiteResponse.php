@@ -14,30 +14,36 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Aiart\V20221229\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeInstanceUpgradeType返回参数结构体
+ * TextToImageLite返回参数结构体
  *
- * @method string getInstanceId() 获取实例 ID。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID。
- * @method string getUpgradeType() 获取实例升级类型。Trsf - 迁移升级，InPlace - 原地升级，Topology - 架构升级。
- * @method void setUpgradeType(string $UpgradeType) 设置实例升级类型。Trsf - 迁移升级，InPlace - 原地升级，Topology - 架构升级。
+ * @method string getResultImage() 获取根据入参 RspImgType 填入不同，返回不同的内容。
+如果传入 base64 则返回生成图 Base64 编码。
+如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。
+ * @method void setResultImage(string $ResultImage) 设置根据入参 RspImgType 填入不同，返回不同的内容。
+如果传入 base64 则返回生成图 Base64 编码。
+如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。
+ * @method integer getSeed() 获取Seed
+ * @method void setSeed(integer $Seed) 设置Seed
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeInstanceUpgradeTypeResponse extends AbstractModel
+class TextToImageLiteResponse extends AbstractModel
 {
     /**
-     * @var string 实例 ID。
+     * @var string 根据入参 RspImgType 填入不同，返回不同的内容。
+如果传入 base64 则返回生成图 Base64 编码。
+如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。
      */
-    public $InstanceId;
+    public $ResultImage;
 
     /**
-     * @var string 实例升级类型。Trsf - 迁移升级，InPlace - 原地升级，Topology - 架构升级。
+     * @var integer Seed
      */
-    public $UpgradeType;
+    public $Seed;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -45,8 +51,10 @@ class DescribeInstanceUpgradeTypeResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $InstanceId 实例 ID。
-     * @param string $UpgradeType 实例升级类型。Trsf - 迁移升级，InPlace - 原地升级，Topology - 架构升级。
+     * @param string $ResultImage 根据入参 RspImgType 填入不同，返回不同的内容。
+如果传入 base64 则返回生成图 Base64 编码。
+如果传入 url 则返回的生成图 URL , 有效期1小时，请及时保存。
+     * @param integer $Seed Seed
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,12 +70,12 @@ class DescribeInstanceUpgradeTypeResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists("ResultImage",$param) and $param["ResultImage"] !== null) {
+            $this->ResultImage = $param["ResultImage"];
         }
 
-        if (array_key_exists("UpgradeType",$param) and $param["UpgradeType"] !== null) {
-            $this->UpgradeType = $param["UpgradeType"];
+        if (array_key_exists("Seed",$param) and $param["Seed"] !== null) {
+            $this->Seed = $param["Seed"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

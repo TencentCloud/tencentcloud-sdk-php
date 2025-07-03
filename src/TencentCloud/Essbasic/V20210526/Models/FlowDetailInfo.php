@@ -25,7 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getFlowName() 获取合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
  * @method void setFlowName(string $FlowName) 设置合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
  * @method string getFlowType() 获取合同流程的类别分类（如销售合同/入职合同等）。
+该字段将被废弃，不建议使用。	请使用 UserFlowType
  * @method void setFlowType(string $FlowType) 设置合同流程的类别分类（如销售合同/入职合同等）。
+该字段将被废弃，不建议使用。	请使用 UserFlowType
  * @method string getFlowStatus() 获取合同流程当前的签署状态, 会存在下列的状态值
 <ul><li> **INIT** :合同创建</li>
 <li> **PART** :合同签署中(至少有一个签署方已经签署)</li>
@@ -64,6 +66,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNeedCreateReview(boolean $NeedCreateReview) 设置是否需要发起前审批
 <ul><li>当NeedCreateReview为true，表明当前流程是需要发起前审核的合同，可能无法进行查看，签署操作，需要等审核完成后，才可以继续后续流程</li>
 <li>当NeedCreateReview为false，不需要发起前审核的合同</li></ul>
+ * @method UserFlowType getUserFlowType() 获取用户合同的自定义分类。
+
+自定义合同类型的位置，在下图所示地方:
+![image](https://qcloudimg.tencent-cloud.cn/raw/37138cc5f3c38e6f788f4b82f695cebf.png)
+ * @method void setUserFlowType(UserFlowType $UserFlowType) 设置用户合同的自定义分类。
+
+自定义合同类型的位置，在下图所示地方:
+![image](https://qcloudimg.tencent-cloud.cn/raw/37138cc5f3c38e6f788f4b82f695cebf.png)
+ * @method string getTemplateId() 获取发起模板时,使用的模板Id
+ * @method void setTemplateId(string $TemplateId) 设置发起模板时,使用的模板Id
  */
 class FlowDetailInfo extends AbstractModel
 {
@@ -79,6 +91,7 @@ class FlowDetailInfo extends AbstractModel
 
     /**
      * @var string 合同流程的类别分类（如销售合同/入职合同等）。
+该字段将被废弃，不建议使用。	请使用 UserFlowType
      */
     public $FlowType;
 
@@ -134,9 +147,23 @@ class FlowDetailInfo extends AbstractModel
     public $NeedCreateReview;
 
     /**
+     * @var UserFlowType 用户合同的自定义分类。
+
+自定义合同类型的位置，在下图所示地方:
+![image](https://qcloudimg.tencent-cloud.cn/raw/37138cc5f3c38e6f788f4b82f695cebf.png)
+     */
+    public $UserFlowType;
+
+    /**
+     * @var string 发起模板时,使用的模板Id
+     */
+    public $TemplateId;
+
+    /**
      * @param string $FlowId 合同流程ID，为32位字符串。
      * @param string $FlowName 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
      * @param string $FlowType 合同流程的类别分类（如销售合同/入职合同等）。
+该字段将被废弃，不建议使用。	请使用 UserFlowType
      * @param string $FlowStatus 合同流程当前的签署状态, 会存在下列的状态值
 <ul><li> **INIT** :合同创建</li>
 <li> **PART** :合同签署中(至少有一个签署方已经签署)</li>
@@ -156,6 +183,11 @@ class FlowDetailInfo extends AbstractModel
      * @param boolean $NeedCreateReview 是否需要发起前审批
 <ul><li>当NeedCreateReview为true，表明当前流程是需要发起前审核的合同，可能无法进行查看，签署操作，需要等审核完成后，才可以继续后续流程</li>
 <li>当NeedCreateReview为false，不需要发起前审核的合同</li></ul>
+     * @param UserFlowType $UserFlowType 用户合同的自定义分类。
+
+自定义合同类型的位置，在下图所示地方:
+![image](https://qcloudimg.tencent-cloud.cn/raw/37138cc5f3c38e6f788f4b82f695cebf.png)
+     * @param string $TemplateId 发起模板时,使用的模板Id
      */
     function __construct()
     {
@@ -222,6 +254,15 @@ class FlowDetailInfo extends AbstractModel
 
         if (array_key_exists("NeedCreateReview",$param) and $param["NeedCreateReview"] !== null) {
             $this->NeedCreateReview = $param["NeedCreateReview"];
+        }
+
+        if (array_key_exists("UserFlowType",$param) and $param["UserFlowType"] !== null) {
+            $this->UserFlowType = new UserFlowType();
+            $this->UserFlowType->deserialize($param["UserFlowType"]);
+        }
+
+        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
+            $this->TemplateId = $param["TemplateId"];
         }
     }
 }

@@ -20,23 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAuditLogs请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID。
- * @method string getStartTime() 获取开始时间。
- * @method void setStartTime(string $StartTime) 设置开始时间。
- * @method string getEndTime() 获取结束时间。
- * @method void setEndTime(string $EndTime) 设置结束时间。
+ * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+ * @method string getStartTime() 获取开始时间(建议开始到结束时间区间最大7天)。
+ * @method void setStartTime(string $StartTime) 设置开始时间(建议开始到结束时间区间最大7天)。
+ * @method string getEndTime() 获取结束时间(建议开始到结束时间区间最大7天）。
+ * @method void setEndTime(string $EndTime) 设置结束时间(建议开始到结束时间区间最大7天）。
  * @method integer getLimit() 获取分页参数，单次返回的数据条数。默认值为100，最大值为100。
  * @method void setLimit(integer $Limit) 设置分页参数，单次返回的数据条数。默认值为100，最大值为100。
  * @method integer getOffset() 获取日志偏移量，最多支持偏移查询65535条日志。可填写范围：0 - 65535。
  * @method void setOffset(integer $Offset) 设置日志偏移量，最多支持偏移查询65535条日志。可填写范围：0 - 65535。
- * @method string getOrder() 获取排序方式。支持值包括："ASC" - 升序，"DESC" - 降序。
- * @method void setOrder(string $Order) 设置排序方式。支持值包括："ASC" - 升序，"DESC" - 降序。
- * @method string getOrderBy() 获取排序字段。支持值包括：
+ * @method string getOrder() 获取排序方式。支持值包括："ASC" - 升序，"DESC" - 降序，默认降序排序。
+ * @method void setOrder(string $Order) 设置排序方式。支持值包括："ASC" - 升序，"DESC" - 降序，默认降序排序。
+ * @method string getOrderBy() 获取排序字段。支持值包括(默认按照时间戳排序)：
 "timestamp" - 时间戳；
 "affectRows" - 影响行数；
 "execTime" - 执行时间。
- * @method void setOrderBy(string $OrderBy) 设置排序字段。支持值包括：
+ * @method void setOrderBy(string $OrderBy) 设置排序字段。支持值包括(默认按照时间戳排序)：
 "timestamp" - 时间戳；
 "affectRows" - 影响行数；
 "execTime" - 执行时间。
@@ -46,17 +46,17 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAuditLogsRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID。
+     * @var string 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public $InstanceId;
 
     /**
-     * @var string 开始时间。
+     * @var string 开始时间(建议开始到结束时间区间最大7天)。
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间。
+     * @var string 结束时间(建议开始到结束时间区间最大7天）。
      */
     public $EndTime;
 
@@ -71,12 +71,12 @@ class DescribeAuditLogsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var string 排序方式。支持值包括："ASC" - 升序，"DESC" - 降序。
+     * @var string 排序方式。支持值包括："ASC" - 升序，"DESC" - 降序，默认降序排序。
      */
     public $Order;
 
     /**
-     * @var string 排序字段。支持值包括：
+     * @var string 排序字段。支持值包括(默认按照时间戳排序)：
 "timestamp" - 时间戳；
 "affectRows" - 影响行数；
 "execTime" - 执行时间。
@@ -89,13 +89,13 @@ class DescribeAuditLogsRequest extends AbstractModel
     public $LogFilter;
 
     /**
-     * @param string $InstanceId 实例 ID。
-     * @param string $StartTime 开始时间。
-     * @param string $EndTime 结束时间。
+     * @param string $InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @param string $StartTime 开始时间(建议开始到结束时间区间最大7天)。
+     * @param string $EndTime 结束时间(建议开始到结束时间区间最大7天）。
      * @param integer $Limit 分页参数，单次返回的数据条数。默认值为100，最大值为100。
      * @param integer $Offset 日志偏移量，最多支持偏移查询65535条日志。可填写范围：0 - 65535。
-     * @param string $Order 排序方式。支持值包括："ASC" - 升序，"DESC" - 降序。
-     * @param string $OrderBy 排序字段。支持值包括：
+     * @param string $Order 排序方式。支持值包括："ASC" - 升序，"DESC" - 降序，默认降序排序。
+     * @param string $OrderBy 排序字段。支持值包括(默认按照时间戳排序)：
 "timestamp" - 时间戳；
 "affectRows" - 影响行数；
 "execTime" - 执行时间。

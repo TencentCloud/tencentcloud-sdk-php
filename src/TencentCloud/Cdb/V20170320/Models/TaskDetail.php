@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实例任务详情
  *
- * @method integer getCode() 获取错误码。
- * @method void setCode(integer $Code) 设置错误码。
+ * @method integer getCode() 获取错误码。0代表成功，其他对应不同的报错场景。
+ * @method void setCode(integer $Code) 设置错误码。0代表成功，其他对应不同的报错场景。
  * @method string getMessage() 获取错误信息。
  * @method void setMessage(string $Message) 设置错误信息。
  * @method integer getJobId() 获取实例任务 ID。
@@ -88,7 +88,7 @@ use TencentCloud\Common\AbstractModel;
 class TaskDetail extends AbstractModel
 {
     /**
-     * @var integer 错误码。
+     * @var integer 错误码。0代表成功，其他对应不同的报错场景。
      */
     public $Code;
 
@@ -164,7 +164,7 @@ class TaskDetail extends AbstractModel
     public $TaskAttachInfo;
 
     /**
-     * @param integer $Code 错误码。
+     * @param integer $Code 错误码。0代表成功，其他对应不同的报错场景。
      * @param string $Message 错误信息。
      * @param integer $JobId 实例任务 ID。
      * @param integer $Progress 实例任务进度。

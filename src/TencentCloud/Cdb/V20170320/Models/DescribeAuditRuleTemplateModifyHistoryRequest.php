@@ -20,23 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAuditRuleTemplateModifyHistory请求参数结构体
  *
- * @method array getRuleTemplateIds() 获取模板ID
- * @method void setRuleTemplateIds(array $RuleTemplateIds) 设置模板ID
+ * @method array getRuleTemplateIds() 获取审计规则模板ID,可通过[DescribeAuditRuleTemplates](https://cloud.tencent.com/document/api/236/101811)接口获取。
+ * @method void setRuleTemplateIds(array $RuleTemplateIds) 设置审计规则模板ID,可通过[DescribeAuditRuleTemplates](https://cloud.tencent.com/document/api/236/101811)接口获取。
  * @method string getStartTime() 获取查询范围的开始时间。
  * @method void setStartTime(string $StartTime) 设置查询范围的开始时间。
  * @method string getEndTime() 获取查询范围的结束时间。
  * @method void setEndTime(string $EndTime) 设置查询范围的结束时间。
- * @method integer getLimit() 获取返回条数。
- * @method void setLimit(integer $Limit) 设置返回条数。
+ * @method integer getLimit() 获取返回条数,默认值-20，最大值-1000。
+ * @method void setLimit(integer $Limit) 设置返回条数,默认值-20，最大值-1000。
  * @method integer getOffset() 获取偏移量。
  * @method void setOffset(integer $Offset) 设置偏移量。
- * @method string getOrder() 获取排序方式。DESC-按修改时间倒排，ASC-正序。
- * @method void setOrder(string $Order) 设置排序方式。DESC-按修改时间倒排，ASC-正序。
+ * @method string getOrder() 获取排序方式，DESC-按修改时间倒排，ASC-正序，默认：DESC。
+ * @method void setOrder(string $Order) 设置排序方式，DESC-按修改时间倒排，ASC-正序，默认：DESC。
  */
 class DescribeAuditRuleTemplateModifyHistoryRequest extends AbstractModel
 {
     /**
-     * @var array 模板ID
+     * @var array 审计规则模板ID,可通过[DescribeAuditRuleTemplates](https://cloud.tencent.com/document/api/236/101811)接口获取。
      */
     public $RuleTemplateIds;
 
@@ -51,7 +51,7 @@ class DescribeAuditRuleTemplateModifyHistoryRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var integer 返回条数。
+     * @var integer 返回条数,默认值-20，最大值-1000。
      */
     public $Limit;
 
@@ -61,17 +61,17 @@ class DescribeAuditRuleTemplateModifyHistoryRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var string 排序方式。DESC-按修改时间倒排，ASC-正序。
+     * @var string 排序方式，DESC-按修改时间倒排，ASC-正序，默认：DESC。
      */
     public $Order;
 
     /**
-     * @param array $RuleTemplateIds 模板ID
+     * @param array $RuleTemplateIds 审计规则模板ID,可通过[DescribeAuditRuleTemplates](https://cloud.tencent.com/document/api/236/101811)接口获取。
      * @param string $StartTime 查询范围的开始时间。
      * @param string $EndTime 查询范围的结束时间。
-     * @param integer $Limit 返回条数。
+     * @param integer $Limit 返回条数,默认值-20，最大值-1000。
      * @param integer $Offset 偏移量。
-     * @param string $Order 排序方式。DESC-按修改时间倒排，ASC-正序。
+     * @param string $Order 排序方式，DESC-按修改时间倒排，ASC-正序，默认：DESC。
      */
     function __construct()
     {

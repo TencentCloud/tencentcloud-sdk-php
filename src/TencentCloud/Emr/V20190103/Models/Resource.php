@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLocalDiskNum(integer $LocalDiskNum) 设置本地盘数量，该字段已废弃
  * @method integer getDiskNum() 获取本地盘数量，如2
  * @method void setDiskNum(integer $DiskNum) 设置本地盘数量，如2
+ * @method string getGpuDesc() 获取GPU信息
+ * @method void setGpuDesc(string $GpuDesc) 设置GPU信息
  */
 class Resource extends AbstractModel
 {
@@ -144,6 +146,11 @@ class Resource extends AbstractModel
     public $DiskNum;
 
     /**
+     * @var string GPU信息
+     */
+    public $GpuDesc;
+
+    /**
      * @param string $Spec 节点规格描述，如CVM.SA2。
      * @param integer $StorageType 存储类型
 取值范围：
@@ -168,6 +175,7 @@ class Resource extends AbstractModel
      * @param string $InstanceType 规格类型，如S2.MEDIUM8
      * @param integer $LocalDiskNum 本地盘数量，该字段已废弃
      * @param integer $DiskNum 本地盘数量，如2
+     * @param string $GpuDesc GPU信息
      */
     function __construct()
     {
@@ -238,6 +246,10 @@ class Resource extends AbstractModel
 
         if (array_key_exists("DiskNum",$param) and $param["DiskNum"] !== null) {
             $this->DiskNum = $param["DiskNum"];
+        }
+
+        if (array_key_exists("GpuDesc",$param) and $param["GpuDesc"] !== null) {
+            $this->GpuDesc = $param["GpuDesc"];
         }
     }
 }

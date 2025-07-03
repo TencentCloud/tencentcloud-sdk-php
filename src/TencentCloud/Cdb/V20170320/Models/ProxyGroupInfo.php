@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProxyVersion(string $ProxyVersion) 设置代理版本
  * @method string getSupportUpgradeProxyVersion() 获取代理支持升级版本
  * @method void setSupportUpgradeProxyVersion(string $SupportUpgradeProxyVersion) 设置代理支持升级版本
- * @method string getStatus() 获取代理状态
- * @method void setStatus(string $Status) 设置代理状态
- * @method string getTaskStatus() 获取代理任务状态
- * @method void setTaskStatus(string $TaskStatus) 设置代理任务状态
+ * @method string getStatus() 获取代理状态。0 - 初始化中，1 - 在线中，2 - 在线中-读写分离中，3 - 下线，4 - 销毁。
+ * @method void setStatus(string $Status) 设置代理状态。0 - 初始化中，1 - 在线中，2 - 在线中-读写分离中，3 - 下线，4 - 销毁。
+ * @method string getTaskStatus() 获取代理任务状态，Upgrading - 升级中，UpgradeTo - 升级待切换，UpgradeSwitching - 升级切换中，ProxyCreateAddress - 配置地址中，ProxyModifyAddress - 修改地址中，ProxyCloseAddress - 关闭地址中。
+ * @method void setTaskStatus(string $TaskStatus) 设置代理任务状态，Upgrading - 升级中，UpgradeTo - 升级待切换，UpgradeSwitching - 升级切换中，ProxyCreateAddress - 配置地址中，ProxyModifyAddress - 修改地址中，ProxyCloseAddress - 关闭地址中。
  * @method array getProxyNode() 获取代理组节点信息
  * @method void setProxyNode(array $ProxyNode) 设置代理组节点信息
  * @method array getProxyAddress() 获取代理组地址信息
@@ -59,12 +59,12 @@ class ProxyGroupInfo extends AbstractModel
     public $SupportUpgradeProxyVersion;
 
     /**
-     * @var string 代理状态
+     * @var string 代理状态。0 - 初始化中，1 - 在线中，2 - 在线中-读写分离中，3 - 下线，4 - 销毁。
      */
     public $Status;
 
     /**
-     * @var string 代理任务状态
+     * @var string 代理任务状态，Upgrading - 升级中，UpgradeTo - 升级待切换，UpgradeSwitching - 升级切换中，ProxyCreateAddress - 配置地址中，ProxyModifyAddress - 修改地址中，ProxyCloseAddress - 关闭地址中。
      */
     public $TaskStatus;
 
@@ -97,8 +97,8 @@ class ProxyGroupInfo extends AbstractModel
      * @param string $ProxyGroupId 代理组ID
      * @param string $ProxyVersion 代理版本
      * @param string $SupportUpgradeProxyVersion 代理支持升级版本
-     * @param string $Status 代理状态
-     * @param string $TaskStatus 代理任务状态
+     * @param string $Status 代理状态。0 - 初始化中，1 - 在线中，2 - 在线中-读写分离中，3 - 下线，4 - 销毁。
+     * @param string $TaskStatus 代理任务状态，Upgrading - 升级中，UpgradeTo - 升级待切换，UpgradeSwitching - 升级切换中，ProxyCreateAddress - 配置地址中，ProxyModifyAddress - 修改地址中，ProxyCloseAddress - 关闭地址中。
      * @param array $ProxyNode 代理组节点信息
      * @param array $ProxyAddress 代理组地址信息
      * @param integer $ConnectionPoolLimit 连接池阈值

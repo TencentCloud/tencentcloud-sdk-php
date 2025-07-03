@@ -24,11 +24,17 @@ use TencentCloud\Common\AbstractModel;
 <li>image：图片水印。</li>
  * @method void setType(string $Type) 设置水印类型，可选值：
 <li>image：图片水印。</li>
- * @method string getCoordinateOrigin() 获取原点位置，目前仅支持：
+ * @method string getCoordinateOrigin() 获取原点位置，可选值：
 <li>TopLeft：表示坐标原点位于视频图像左上角，水印原点为图片或文字的左上角。</li>
+<li>TopRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
+<li>BottomLeft：表示坐标原点位于视频图像的左下角，水印原点为图片或文字的左下角；</li>
+<li>BottomRight：表示坐标原点位于视频图像的右下角，水印原点为图片或文字的右下角。</li>
 默认值：TopLeft。
- * @method void setCoordinateOrigin(string $CoordinateOrigin) 设置原点位置，目前仅支持：
+ * @method void setCoordinateOrigin(string $CoordinateOrigin) 设置原点位置，可选值：
 <li>TopLeft：表示坐标原点位于视频图像左上角，水印原点为图片或文字的左上角。</li>
+<li>TopRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
+<li>BottomLeft：表示坐标原点位于视频图像的左下角，水印原点为图片或文字的左下角；</li>
+<li>BottomRight：表示坐标原点位于视频图像的右下角，水印原点为图片或文字的右下角。</li>
 默认值：TopLeft。
  * @method string getXPos() 获取水印原点距离视频图像坐标原点的水平位置。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示水印 XPos 为视频宽度指定百分比，如 10% 表示 XPos 为视频宽度的 10%；</li>
@@ -58,8 +64,11 @@ class RawWatermarkParameter extends AbstractModel
     public $Type;
 
     /**
-     * @var string 原点位置，目前仅支持：
+     * @var string 原点位置，可选值：
 <li>TopLeft：表示坐标原点位于视频图像左上角，水印原点为图片或文字的左上角。</li>
+<li>TopRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
+<li>BottomLeft：表示坐标原点位于视频图像的左下角，水印原点为图片或文字的左下角；</li>
+<li>BottomRight：表示坐标原点位于视频图像的右下角，水印原点为图片或文字的右下角。</li>
 默认值：TopLeft。
      */
     public $CoordinateOrigin;
@@ -88,8 +97,11 @@ class RawWatermarkParameter extends AbstractModel
     /**
      * @param string $Type 水印类型，可选值：
 <li>image：图片水印。</li>
-     * @param string $CoordinateOrigin 原点位置，目前仅支持：
+     * @param string $CoordinateOrigin 原点位置，可选值：
 <li>TopLeft：表示坐标原点位于视频图像左上角，水印原点为图片或文字的左上角。</li>
+<li>TopRight：表示坐标原点位于视频图像的右上角，水印原点为图片或文字的右上角；</li>
+<li>BottomLeft：表示坐标原点位于视频图像的左下角，水印原点为图片或文字的左下角；</li>
+<li>BottomRight：表示坐标原点位于视频图像的右下角，水印原点为图片或文字的右下角。</li>
 默认值：TopLeft。
      * @param string $XPos 水印原点距离视频图像坐标原点的水平位置。支持 %、px 两种格式：
 <li>当字符串以 % 结尾，表示水印 XPos 为视频宽度指定百分比，如 10% 表示 XPos 为视频宽度的 10%；</li>

@@ -188,6 +188,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSetats(Setats $Setats) 设置setats集群
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getYarns() 获取[]
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setYarns(array $Yarns) 设置[]
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Cluster extends AbstractModel
 {
@@ -488,6 +492,12 @@ class Cluster extends AbstractModel
     public $Setats;
 
     /**
+     * @var array []
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Yarns;
+
+    /**
      * @param string $ClusterId 集群 ID
      * @param string $Name 集群名称
      * @param string $Region 地域
@@ -571,6 +581,8 @@ class Cluster extends AbstractModel
      * @param float $RunningCpu 运行的CPU
      * @param float $RunningMem 运行的内存
      * @param Setats $Setats setats集群
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Yarns []
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -829,6 +841,15 @@ class Cluster extends AbstractModel
         if (array_key_exists("Setats",$param) and $param["Setats"] !== null) {
             $this->Setats = new Setats();
             $this->Setats->deserialize($param["Setats"]);
+        }
+
+        if (array_key_exists("Yarns",$param) and $param["Yarns"] !== null) {
+            $this->Yarns = [];
+            foreach ($param["Yarns"] as $key => $value){
+                $obj = new HadoopYarnItem();
+                $obj->deserialize($value);
+                array_push($this->Yarns, $obj);
+            }
         }
     }
 }

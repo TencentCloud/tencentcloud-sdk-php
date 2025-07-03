@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetFaceidRiskInfoToken请求参数结构体
  *
- * @method string getMeta() 获取SDK中生成的Meta字符串
- * @method void setMeta(string $Meta) 设置SDK中生成的Meta字符串
- * @method string getExtra() 获取透传参数 1000长度字符串
- * @method void setExtra(string $Extra) 设置透传参数 1000长度字符串
+ * @method string getMeta() 获取SDK中生成的Meta字符串。
+ * @method void setMeta(string $Meta) 设置SDK中生成的Meta字符串。
+ * @method string getExtra() 获取透传参数 1000长度字符串。
+ * @method void setExtra(string $Extra) 设置透传参数 1000长度字符串。
  */
 class GetFaceidRiskInfoTokenRequest extends AbstractModel
 {
     /**
-     * @var string SDK中生成的Meta字符串
+     * @var string SDK中生成的Meta字符串。
      */
     public $Meta;
 
     /**
-     * @var string 透传参数 1000长度字符串
+     * @var string 透传参数 1000长度字符串。
      */
     public $Extra;
 
     /**
-     * @param string $Meta SDK中生成的Meta字符串
-     * @param string $Extra 透传参数 1000长度字符串
+     * @param string $Meta SDK中生成的Meta字符串。
+     * @param string $Extra 透传参数 1000长度字符串。
      */
     function __construct()
     {

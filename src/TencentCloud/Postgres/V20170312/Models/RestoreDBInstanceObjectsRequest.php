@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDBInstanceId() 获取实例ID。
  * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID。
- * @method array getRestoreObjects() 获取需要恢复的对象列表。假设需要恢复的对象名为test，则恢复后的名称为test_bak_${LinuxTime}。${LinuxTime}无法指定，由系统根据任务发起的linux时间设定。
- * @method void setRestoreObjects(array $RestoreObjects) 设置需要恢复的对象列表。假设需要恢复的对象名为test，则恢复后的名称为test_bak_${LinuxTime}。${LinuxTime}无法指定，由系统根据任务发起的linux时间设定。
+ * @method array getRestoreObjects() 获取需要恢复的对象列表。假设需要恢复的对象名为user，则恢复后的名称为user_bak_${LinuxTime}。${LinuxTime}无法指定，由系统根据任务发起的linux时间设定。
+ * @method void setRestoreObjects(array $RestoreObjects) 设置需要恢复的对象列表。假设需要恢复的对象名为user，则恢复后的名称为user_bak_${LinuxTime}。${LinuxTime}无法指定，由系统根据任务发起的linux时间设定。
  * @method string getBackupSetId() 获取恢复所用备份集。BackupSetId与RestoreTargetTime有且只能传一个。
  * @method void setBackupSetId(string $BackupSetId) 设置恢复所用备份集。BackupSetId与RestoreTargetTime有且只能传一个。
  * @method string getRestoreTargetTime() 获取恢复目标时间，北京时间。BackupSetId与RestoreTargetTime有且只能传一个。
@@ -37,7 +37,7 @@ class RestoreDBInstanceObjectsRequest extends AbstractModel
     public $DBInstanceId;
 
     /**
-     * @var array 需要恢复的对象列表。假设需要恢复的对象名为test，则恢复后的名称为test_bak_${LinuxTime}。${LinuxTime}无法指定，由系统根据任务发起的linux时间设定。
+     * @var array 需要恢复的对象列表。假设需要恢复的对象名为user，则恢复后的名称为user_bak_${LinuxTime}。${LinuxTime}无法指定，由系统根据任务发起的linux时间设定。
      */
     public $RestoreObjects;
 
@@ -53,7 +53,7 @@ class RestoreDBInstanceObjectsRequest extends AbstractModel
 
     /**
      * @param string $DBInstanceId 实例ID。
-     * @param array $RestoreObjects 需要恢复的对象列表。假设需要恢复的对象名为test，则恢复后的名称为test_bak_${LinuxTime}。${LinuxTime}无法指定，由系统根据任务发起的linux时间设定。
+     * @param array $RestoreObjects 需要恢复的对象列表。假设需要恢复的对象名为user，则恢复后的名称为user_bak_${LinuxTime}。${LinuxTime}无法指定，由系统根据任务发起的linux时间设定。
      * @param string $BackupSetId 恢复所用备份集。BackupSetId与RestoreTargetTime有且只能传一个。
      * @param string $RestoreTargetTime 恢复目标时间，北京时间。BackupSetId与RestoreTargetTime有且只能传一个。
      */

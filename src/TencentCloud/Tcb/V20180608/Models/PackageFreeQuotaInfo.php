@@ -25,41 +25,29 @@ use TencentCloud\Common\AbstractModel;
 <li>CDN</li>
 <li>FLEXDB</li>
 <li>SCF</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceType(string $ResourceType) 设置资源类型
 <li>COS</li>
 <li>CDN</li>
 <li>FLEXDB</li>
 <li>SCF</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceMetric() 获取资源指标名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceMetric(string $ResourceMetric) 设置资源指标名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFreeQuota() 获取资源指标免费量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFreeQuota(integer $FreeQuota) 设置资源指标免费量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMetricUnit() 获取指标单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetricUnit(string $MetricUnit) 设置指标单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeductType() 获取免费量抵扣周期
 <li>sum-month:以月为单位抵扣</li>
 <li>sum-day:以天为单位抵扣</li>
 <li>totalize:总容量抵扣</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeductType(string $DeductType) 设置免费量抵扣周期
 <li>sum-month:以月为单位抵扣</li>
 <li>sum-day:以天为单位抵扣</li>
 <li>totalize:总容量抵扣</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFreeQuotaType() 获取免费量类型
 <li>basic:通用量抵扣</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFreeQuotaType(string $FreeQuotaType) 设置免费量类型
 <li>basic:通用量抵扣</li>
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PackageFreeQuotaInfo extends AbstractModel
 {
@@ -69,25 +57,21 @@ class PackageFreeQuotaInfo extends AbstractModel
 <li>CDN</li>
 <li>FLEXDB</li>
 <li>SCF</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceType;
 
     /**
      * @var string 资源指标名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceMetric;
 
     /**
      * @var integer 资源指标免费量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FreeQuota;
 
     /**
      * @var string 指标单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MetricUnit;
 
@@ -96,14 +80,12 @@ class PackageFreeQuotaInfo extends AbstractModel
 <li>sum-month:以月为单位抵扣</li>
 <li>sum-day:以天为单位抵扣</li>
 <li>totalize:总容量抵扣</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeductType;
 
     /**
      * @var string 免费量类型
 <li>basic:通用量抵扣</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FreeQuotaType;
 
@@ -113,21 +95,15 @@ class PackageFreeQuotaInfo extends AbstractModel
 <li>CDN</li>
 <li>FLEXDB</li>
 <li>SCF</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceMetric 资源指标名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FreeQuota 资源指标免费量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MetricUnit 指标单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeductType 免费量抵扣周期
 <li>sum-month:以月为单位抵扣</li>
 <li>sum-day:以天为单位抵扣</li>
 <li>totalize:总容量抵扣</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FreeQuotaType 免费量类型
 <li>basic:通用量抵扣</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

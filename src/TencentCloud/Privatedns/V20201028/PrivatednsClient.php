@@ -24,10 +24,9 @@ use TencentCloud\Privatedns\V20201028\Models as Models;
 
 /**
  * @method Models\AddSpecifyPrivateZoneVpcResponse AddSpecifyPrivateZoneVpc(Models\AddSpecifyPrivateZoneVpcRequest $req) 追加与私有域关联的VPC
- * @method Models\CreatePrivateDNSAccountResponse CreatePrivateDNSAccount(Models\CreatePrivateDNSAccountRequest $req) 创建私有域解析账号
+ * @method Models\CreatePrivateDNSAccountResponse CreatePrivateDNSAccount(Models\CreatePrivateDNSAccountRequest $req) 跨账号关联VPC时绑定其他账号
  * @method Models\CreatePrivateZoneResponse CreatePrivateZone(Models\CreatePrivateZoneRequest $req) 创建私有域
  * @method Models\CreatePrivateZoneRecordResponse CreatePrivateZoneRecord(Models\CreatePrivateZoneRecordRequest $req) 添加私有域解析记录
- * @method Models\DeleteEndPointResponse DeleteEndPoint(Models\DeleteEndPointRequest $req) 删除终端节点
  * @method Models\DeletePrivateDNSAccountResponse DeletePrivateDNSAccount(Models\DeletePrivateDNSAccountRequest $req) 删除私有域解析账号
  * @method Models\DeletePrivateZoneResponse DeletePrivateZone(Models\DeletePrivateZoneRequest $req) 删除私有域并停止解析
  * @method Models\DeletePrivateZoneRecordResponse DeletePrivateZoneRecord(Models\DeletePrivateZoneRecordRequest $req) 删除私有域解析记录
@@ -41,6 +40,7 @@ use TencentCloud\Privatedns\V20201028\Models as Models;
  * @method Models\DescribePrivateZoneRecordListResponse DescribePrivateZoneRecordList(Models\DescribePrivateZoneRecordListRequest $req) 获取私有域记录列表
  * @method Models\DescribePrivateZoneServiceResponse DescribePrivateZoneService(Models\DescribePrivateZoneServiceRequest $req) 查询私有域解析开通状态
  * @method Models\DescribeQuotaUsageResponse DescribeQuotaUsage(Models\DescribeQuotaUsageRequest $req) 查询额度使用情况
+ * @method Models\DescribeRecordResponse DescribeRecord(Models\DescribeRecordRequest $req) 获取私有域记录
  * @method Models\DescribeRequestDataResponse DescribeRequestData(Models\DescribeRequestDataRequest $req) 获取私有域解析请求量
  * @method Models\ModifyPrivateZoneResponse ModifyPrivateZone(Models\ModifyPrivateZoneRequest $req) 修改私有域信息
  * @method Models\ModifyPrivateZoneRecordResponse ModifyPrivateZoneRecord(Models\ModifyPrivateZoneRecordRequest $req) 修改私有域解析记录

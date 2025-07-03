@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 定期快照高级保留策略，四个参数都为必选参数
  *
  * @method integer getDays() 获取保留最新快照Days天内的每天最新的一个快照，取值范围：[0, 100]
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDays(integer $Days) 设置保留最新快照Days天内的每天最新的一个快照，取值范围：[0, 100]
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWeeks() 获取保留最新快照Weeks周内的每周最新的一个快照，取值范围：[0, 100]
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWeeks(integer $Weeks) 设置保留最新快照Weeks周内的每周最新的一个快照，取值范围：[0, 100]
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMonths() 获取保留最新快照Months月内的每月最新的一个快照， 取值范围：[0, 100]
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMonths(integer $Months) 设置保留最新快照Months月内的每月最新的一个快照， 取值范围：[0, 100]
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getYears() 获取保留最新快照Years年内的每年最新的一个快照，取值范围：[0, 100]
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setYears(integer $Years) 设置保留最新快照Years年内的每年最新的一个快照，取值范围：[0, 100]
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AdvancedRetentionPolicy extends AbstractModel
 {
     /**
      * @var integer 保留最新快照Days天内的每天最新的一个快照，取值范围：[0, 100]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Days;
 
     /**
      * @var integer 保留最新快照Weeks周内的每周最新的一个快照，取值范围：[0, 100]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Weeks;
 
     /**
      * @var integer 保留最新快照Months月内的每月最新的一个快照， 取值范围：[0, 100]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Months;
 
     /**
      * @var integer 保留最新快照Years年内的每年最新的一个快照，取值范围：[0, 100]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Years;
 
     /**
      * @param integer $Days 保留最新快照Days天内的每天最新的一个快照，取值范围：[0, 100]
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Weeks 保留最新快照Weeks周内的每周最新的一个快照，取值范围：[0, 100]
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Months 保留最新快照Months月内的每月最新的一个快照， 取值范围：[0, 100]
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Years 保留最新快照Years年内的每年最新的一个快照，取值范围：[0, 100]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

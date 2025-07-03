@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
- * @method integer getStatus() 获取状态
- * @method void setStatus(integer $Status) 设置状态
+ * @method integer getStatus() 获取1：开启WAF开关，0：关闭WAF开关
+ * @method void setStatus(integer $Status) 设置1：开启WAF开关，0：关闭WAF开关
  * @method string getEdition() 获取WAF的版本，clb-waf代表负载均衡WAF、sparta-waf代表SaaS WAF，默认是sparta-waf。
  * @method void setEdition(string $Edition) 设置WAF的版本，clb-waf代表负载均衡WAF、sparta-waf代表SaaS WAF，默认是sparta-waf。
  */
@@ -35,7 +35,7 @@ class ModifyProtectionStatusRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var integer 状态
+     * @var integer 1：开启WAF开关，0：关闭WAF开关
      */
     public $Status;
 
@@ -46,7 +46,7 @@ class ModifyProtectionStatusRequest extends AbstractModel
 
     /**
      * @param string $Domain 域名
-     * @param integer $Status 状态
+     * @param integer $Status 1：开启WAF开关，0：关闭WAF开关
      * @param string $Edition WAF的版本，clb-waf代表负载均衡WAF、sparta-waf代表SaaS WAF，默认是sparta-waf。
      */
     function __construct()

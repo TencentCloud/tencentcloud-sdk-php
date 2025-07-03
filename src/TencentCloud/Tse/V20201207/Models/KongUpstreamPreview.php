@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 云原生网关Upstream信息
  *
  * @method string getID() 获取服务ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setID(string $ID) 设置服务ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取服务名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置服务名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTarget() 获取后端配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTarget(array $Target) 设置后端配置
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class KongUpstreamPreview extends AbstractModel
 {
     /**
      * @var string 服务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ID;
 
     /**
      * @var string 服务名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var array 后端配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Target;
 
     /**
      * @param string $ID 服务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 服务名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Target 后端配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

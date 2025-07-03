@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEngineType(string $EngineType) 设置运行的执行引擎，不传时会请求该数据源下默认的执行引擎
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDlcGroupName() 获取DLC执行引擎资源组
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDlcGroupName(string $DlcGroupName) 设置DLC执行引擎资源组
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleExecConfig extends AbstractModel
 {
@@ -54,11 +58,19 @@ class RuleExecConfig extends AbstractModel
     public $EngineType;
 
     /**
+     * @var string DLC执行引擎资源组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DlcGroupName;
+
+    /**
      * @param string $QueueName 计算队列名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExecutorGroupId 执行资源组
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EngineType 运行的执行引擎，不传时会请求该数据源下默认的执行引擎
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DlcGroupName DLC执行引擎资源组
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -84,6 +96,10 @@ class RuleExecConfig extends AbstractModel
 
         if (array_key_exists("EngineType",$param) and $param["EngineType"] !== null) {
             $this->EngineType = $param["EngineType"];
+        }
+
+        if (array_key_exists("DlcGroupName",$param) and $param["DlcGroupName"] !== null) {
+            $this->DlcGroupName = $param["DlcGroupName"];
         }
     }
 }

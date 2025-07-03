@@ -21,81 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * 敏感数据扫描任务识别规则详情
  *
  * @method integer getRuleId() 获取规则ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleId(integer $RuleId) 设置规则ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取规则名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置规则名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取规则描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置规则描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSource() 获取规则来源，取值：0 内置, 1 自定义
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSource(integer $Source) 设置规则来源，取值：0 内置, 1 自定义
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DspaDiscoveryRDBRules getRDBRules() 获取RDB规则详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRDBRules(DspaDiscoveryRDBRules $RDBRules) 设置RDB规则详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DspaDiscoveryCOSRules getCOSRules() 获取COS规则详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCOSRules(DspaDiscoveryCOSRules $COSRules) 设置COS规则详情
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getStatus() 获取0关闭，1开启
+ * @method void setStatus(integer $Status) 设置0关闭，1开启
  */
 class DspaDiscoveryRuleDetail extends AbstractModel
 {
     /**
      * @var integer 规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleId;
 
     /**
      * @var string 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 规则描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var integer 规则来源，取值：0 内置, 1 自定义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Source;
 
     /**
      * @var DspaDiscoveryRDBRules RDB规则详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RDBRules;
 
     /**
      * @var DspaDiscoveryCOSRules COS规则详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $COSRules;
 
     /**
+     * @var integer 0关闭，1开启
+     */
+    public $Status;
+
+    /**
      * @param integer $RuleId 规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 规则描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Source 规则来源，取值：0 内置, 1 自定义
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DspaDiscoveryRDBRules $RDBRules RDB规则详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DspaDiscoveryCOSRules $COSRules COS规则详情
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Status 0关闭，1开启
      */
     function __construct()
     {
@@ -134,6 +118,10 @@ class DspaDiscoveryRuleDetail extends AbstractModel
         if (array_key_exists("COSRules",$param) and $param["COSRules"] !== null) {
             $this->COSRules = new DspaDiscoveryCOSRules();
             $this->COSRules->deserialize($param["COSRules"]);
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

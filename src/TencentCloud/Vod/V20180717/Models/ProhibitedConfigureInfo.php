@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 违禁任务控制参数
  *
  * @method ProhibitedAsrReviewTemplateInfo getAsrReviewInfo() 获取语音违禁控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAsrReviewInfo(ProhibitedAsrReviewTemplateInfo $AsrReviewInfo) 设置语音违禁控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ProhibitedOcrReviewTemplateInfo getOcrReviewInfo() 获取文本违禁控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOcrReviewInfo(ProhibitedOcrReviewTemplateInfo $OcrReviewInfo) 设置文本违禁控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProhibitedConfigureInfo extends AbstractModel
 {
     /**
      * @var ProhibitedAsrReviewTemplateInfo 语音违禁控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AsrReviewInfo;
 
     /**
      * @var ProhibitedOcrReviewTemplateInfo 文本违禁控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OcrReviewInfo;
 
     /**
      * @param ProhibitedAsrReviewTemplateInfo $AsrReviewInfo 语音违禁控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProhibitedOcrReviewTemplateInfo $OcrReviewInfo 文本违禁控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

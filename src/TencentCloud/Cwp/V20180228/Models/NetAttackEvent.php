@@ -37,9 +37,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMergeTime() 获取攻击时间
  * @method void setMergeTime(string $MergeTime) 设置攻击时间
  * @method MachineExtraInfo getMachineExtraInfo() 获取主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getType() 获取攻击状态，0: 尝试攻击 1: 实锤攻击(攻击成功)
  * @method void setType(integer $Type) 设置攻击状态，0: 尝试攻击 1: 实锤攻击(攻击成功)
  * @method integer getStatus() 获取处理状态，0 待处理 1 已处理 2 已加白  3 已忽略 4 已删除 5: 已开启防御
@@ -48,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVulSupportDefense(integer $VulSupportDefense) 设置漏洞是否支持防御，0:不支持 1:支持
  * @method integer getVulDefenceStatus() 获取是否开启漏洞防御，0关1开
  * @method void setVulDefenceStatus(integer $VulDefenceStatus) 设置是否开启漏洞防御，0关1开
- * @method integer getPayVersion() 获取机器付费版本，0 基础版，1专业版，2旗舰版，3普惠版
- * @method void setPayVersion(integer $PayVersion) 设置机器付费版本，0 基础版，1专业版，2旗舰版，3普惠版
+ * @method integer getPayVersion() 获取机器付费版本，0 基础版，1专业版，2旗舰版，3轻量版
+ * @method void setPayVersion(integer $PayVersion) 设置机器付费版本，0 基础版，1专业版，2旗舰版，3轻量版
  * @method string getQuuid() 获取cvm uuid
  * @method void setQuuid(string $Quuid) 设置cvm uuid
  * @method integer getCount() 获取攻击次数
@@ -101,7 +99,6 @@ class NetAttackEvent extends AbstractModel
 
     /**
      * @var MachineExtraInfo 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineExtraInfo;
 
@@ -126,7 +123,7 @@ class NetAttackEvent extends AbstractModel
     public $VulDefenceStatus;
 
     /**
-     * @var integer 机器付费版本，0 基础版，1专业版，2旗舰版，3普惠版
+     * @var integer 机器付费版本，0 基础版，1专业版，2旗舰版，3轻量版
      */
     public $PayVersion;
 
@@ -155,12 +152,11 @@ class NetAttackEvent extends AbstractModel
      * @param string $VulName 漏洞名称
      * @param string $MergeTime 攻击时间
      * @param MachineExtraInfo $MachineExtraInfo 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Type 攻击状态，0: 尝试攻击 1: 实锤攻击(攻击成功)
      * @param integer $Status 处理状态，0 待处理 1 已处理 2 已加白  3 已忽略 4 已删除 5: 已开启防御
      * @param integer $VulSupportDefense 漏洞是否支持防御，0:不支持 1:支持
      * @param integer $VulDefenceStatus 是否开启漏洞防御，0关1开
-     * @param integer $PayVersion 机器付费版本，0 基础版，1专业版，2旗舰版，3普惠版
+     * @param integer $PayVersion 机器付费版本，0 基础版，1专业版，2旗舰版，3轻量版
      * @param string $Quuid cvm uuid
      * @param integer $Count 攻击次数
      * @param boolean $New 是否今日新增主机

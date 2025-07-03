@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getBotAppKey() 获取应用appKey
  * @method void setBotAppKey(string $BotAppKey) 设置应用appKey
- * @method string getRecordId() 获取消息ID
- * @method void setRecordId(string $RecordId) 设置消息ID
+ * @method string getRecordId() 获取消息ID 【大模型回复答案的RecordID】
+ * @method void setRecordId(string $RecordId) 设置消息ID 【大模型回复答案的RecordID】
  * @method integer getScore() 获取1点赞2点踩
  * @method void setScore(integer $Score) 设置1点赞2点踩
  * @method array getReasons() 获取原因
@@ -37,7 +37,7 @@ class RateMsgRecordRequest extends AbstractModel
     public $BotAppKey;
 
     /**
-     * @var string 消息ID
+     * @var string 消息ID 【大模型回复答案的RecordID】
      */
     public $RecordId;
 
@@ -53,7 +53,7 @@ class RateMsgRecordRequest extends AbstractModel
 
     /**
      * @param string $BotAppKey 应用appKey
-     * @param string $RecordId 消息ID
+     * @param string $RecordId 消息ID 【大模型回复答案的RecordID】
      * @param integer $Score 1点赞2点踩
      * @param array $Reasons 原因
      */

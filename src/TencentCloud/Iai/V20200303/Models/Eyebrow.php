@@ -21,45 +21,45 @@ use TencentCloud\Common\AbstractModel;
  * 眉毛信息
  *
  * @method AttributeItem getEyebrowDensity() 获取眉毛浓密。
-AttributeItem对应的Type为 —— 0：淡眉，1：浓眉。
+- AttributeItem对应的Type为 —— 0：淡眉，1：浓眉。
  * @method void setEyebrowDensity(AttributeItem $EyebrowDensity) 设置眉毛浓密。
-AttributeItem对应的Type为 —— 0：淡眉，1：浓眉。
+- AttributeItem对应的Type为 —— 0：淡眉，1：浓眉。
  * @method AttributeItem getEyebrowCurve() 获取眉毛弯曲。
-AttributeItem对应的Type为 —— 0：不弯，1：弯眉。
+- AttributeItem对应的Type为 —— 0：不弯，1：弯眉。
  * @method void setEyebrowCurve(AttributeItem $EyebrowCurve) 设置眉毛弯曲。
-AttributeItem对应的Type为 —— 0：不弯，1：弯眉。
+- AttributeItem对应的Type为 —— 0：不弯，1：弯眉。
  * @method AttributeItem getEyebrowLength() 获取眉毛长短。
-AttributeItem对应的Type为 —— 0：短眉毛，1：长眉毛。
+- AttributeItem对应的Type为 —— 0：短眉毛，1：长眉毛。
  * @method void setEyebrowLength(AttributeItem $EyebrowLength) 设置眉毛长短。
-AttributeItem对应的Type为 —— 0：短眉毛，1：长眉毛。
+- AttributeItem对应的Type为 —— 0：短眉毛，1：长眉毛。
  */
 class Eyebrow extends AbstractModel
 {
     /**
      * @var AttributeItem 眉毛浓密。
-AttributeItem对应的Type为 —— 0：淡眉，1：浓眉。
+- AttributeItem对应的Type为 —— 0：淡眉，1：浓眉。
      */
     public $EyebrowDensity;
 
     /**
      * @var AttributeItem 眉毛弯曲。
-AttributeItem对应的Type为 —— 0：不弯，1：弯眉。
+- AttributeItem对应的Type为 —— 0：不弯，1：弯眉。
      */
     public $EyebrowCurve;
 
     /**
      * @var AttributeItem 眉毛长短。
-AttributeItem对应的Type为 —— 0：短眉毛，1：长眉毛。
+- AttributeItem对应的Type为 —— 0：短眉毛，1：长眉毛。
      */
     public $EyebrowLength;
 
     /**
      * @param AttributeItem $EyebrowDensity 眉毛浓密。
-AttributeItem对应的Type为 —— 0：淡眉，1：浓眉。
+- AttributeItem对应的Type为 —— 0：淡眉，1：浓眉。
      * @param AttributeItem $EyebrowCurve 眉毛弯曲。
-AttributeItem对应的Type为 —— 0：不弯，1：弯眉。
+- AttributeItem对应的Type为 —— 0：不弯，1：弯眉。
      * @param AttributeItem $EyebrowLength 眉毛长短。
-AttributeItem对应的Type为 —— 0：短眉毛，1：长眉毛。
+- AttributeItem对应的Type为 —— 0：短眉毛，1：长眉毛。
      */
     function __construct()
     {

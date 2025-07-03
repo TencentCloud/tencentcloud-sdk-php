@@ -20,35 +20,32 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateConsumerGroup请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getConsumerGroup() 获取消费组名称
- * @method void setConsumerGroup(string $ConsumerGroup) 设置消费组名称
- * @method integer getMaxRetryTimes() 获取最大重试次数
- * @method void setMaxRetryTimes(integer $MaxRetryTimes) 设置最大重试次数
+ * @method string getInstanceId() 获取腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
+ * @method void setInstanceId(string $InstanceId) 设置腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
+ * @method integer getMaxRetryTimes() 获取最大重试次数，取值范围0～1000
+ * @method void setMaxRetryTimes(integer $MaxRetryTimes) 设置最大重试次数，取值范围0～1000
  * @method boolean getConsumeEnable() 获取是否开启消费
  * @method void setConsumeEnable(boolean $ConsumeEnable) 设置是否开启消费
  * @method boolean getConsumeMessageOrderly() 获取顺序投递：true
 并发投递：false
  * @method void setConsumeMessageOrderly(boolean $ConsumeMessageOrderly) 设置顺序投递：true
 并发投递：false
- * @method string getRemark() 获取备注
- * @method void setRemark(string $Remark) 设置备注
+ * @method string getConsumerGroup() 获取消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口或控制台获得。
+ * @method void setConsumerGroup(string $ConsumerGroup) 设置消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口或控制台获得。
+ * @method string getRemark() 获取备注信息，最多 128 个字符
+ * @method void setRemark(string $Remark) 设置备注信息，最多 128 个字符
+ * @method array getTagList() 获取标签列表
+ * @method void setTagList(array $TagList) 设置标签列表
  */
 class CreateConsumerGroupRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
      */
     public $InstanceId;
 
     /**
-     * @var string 消费组名称
-     */
-    public $ConsumerGroup;
-
-    /**
-     * @var integer 最大重试次数
+     * @var integer 最大重试次数，取值范围0～1000
      */
     public $MaxRetryTimes;
 
@@ -64,18 +61,29 @@ class CreateConsumerGroupRequest extends AbstractModel
     public $ConsumeMessageOrderly;
 
     /**
-     * @var string 备注
+     * @var string 消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口或控制台获得。
+     */
+    public $ConsumerGroup;
+
+    /**
+     * @var string 备注信息，最多 128 个字符
      */
     public $Remark;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $ConsumerGroup 消费组名称
-     * @param integer $MaxRetryTimes 最大重试次数
+     * @var array 标签列表
+     */
+    public $TagList;
+
+    /**
+     * @param string $InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
+     * @param integer $MaxRetryTimes 最大重试次数，取值范围0～1000
      * @param boolean $ConsumeEnable 是否开启消费
      * @param boolean $ConsumeMessageOrderly 顺序投递：true
 并发投递：false
-     * @param string $Remark 备注
+     * @param string $ConsumerGroup 消费组名称，从 [DescribeConsumerGroupList](https://cloud.tencent.com/document/api/1493/101535) 接口或控制台获得。
+     * @param string $Remark 备注信息，最多 128 个字符
+     * @param array $TagList 标签列表
      */
     function __construct()
     {
@@ -94,10 +102,6 @@ class CreateConsumerGroupRequest extends AbstractModel
             $this->InstanceId = $param["InstanceId"];
         }
 
-        if (array_key_exists("ConsumerGroup",$param) and $param["ConsumerGroup"] !== null) {
-            $this->ConsumerGroup = $param["ConsumerGroup"];
-        }
-
         if (array_key_exists("MaxRetryTimes",$param) and $param["MaxRetryTimes"] !== null) {
             $this->MaxRetryTimes = $param["MaxRetryTimes"];
         }
@@ -110,8 +114,21 @@ class CreateConsumerGroupRequest extends AbstractModel
             $this->ConsumeMessageOrderly = $param["ConsumeMessageOrderly"];
         }
 
+        if (array_key_exists("ConsumerGroup",$param) and $param["ConsumerGroup"] !== null) {
+            $this->ConsumerGroup = $param["ConsumerGroup"];
+        }
+
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("TagList",$param) and $param["TagList"] !== null) {
+            $this->TagList = [];
+            foreach ($param["TagList"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagList, $obj);
+            }
         }
     }
 }

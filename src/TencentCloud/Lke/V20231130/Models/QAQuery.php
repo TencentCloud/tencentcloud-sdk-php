@@ -63,6 +63,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getQueryAnswer() 获取查询答案
 
  * @method void setQueryAnswer(string $QueryAnswer) 设置查询答案
+
+ * @method string getQueryType() 获取查询类型 filename 名称、 attribute 标签
+ * @method void setQueryType(string $QueryType) 设置查询类型 filename 名称、 attribute 标签
  */
 class QAQuery extends AbstractModel
 {
@@ -133,6 +136,11 @@ class QAQuery extends AbstractModel
     public $QueryAnswer;
 
     /**
+     * @var string 查询类型 filename 名称、 attribute 标签
+     */
+    public $QueryType;
+
+    /**
      * @param integer $PageNumber 页码
 
 
@@ -154,6 +162,8 @@ class QAQuery extends AbstractModel
      * @param integer $Source 来源
 
      * @param string $QueryAnswer 查询答案
+
+     * @param string $QueryType 查询类型 filename 名称、 attribute 标签
      */
     function __construct()
     {
@@ -210,6 +220,10 @@ class QAQuery extends AbstractModel
 
         if (array_key_exists("QueryAnswer",$param) and $param["QueryAnswer"] !== null) {
             $this->QueryAnswer = $param["QueryAnswer"];
+        }
+
+        if (array_key_exists("QueryType",$param) and $param["QueryType"] !== null) {
+            $this->QueryType = $param["QueryType"];
         }
     }
 }

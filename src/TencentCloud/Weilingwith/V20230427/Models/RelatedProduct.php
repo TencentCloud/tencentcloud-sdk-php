@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 关联产品信息
  *
  * @method integer getId() 获取关联产品pid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(integer $Id) 设置关联产品pid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取关联产品名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置关联产品名字
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RelatedProduct extends AbstractModel
 {
     /**
      * @var integer 关联产品pid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var string 关联产品名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @param integer $Id 关联产品pid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 关联产品名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

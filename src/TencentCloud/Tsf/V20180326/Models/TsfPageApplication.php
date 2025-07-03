@@ -21,33 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 应用分页信息
  *
  * @method integer getTotalCount() 获取应用总数目
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置应用总数目
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getContent() 获取应用信息列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContent(array $Content) 设置应用信息列表
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSpecTotalCount() 获取获取部署组实例列表返回的原始批次个数
+ * @method void setSpecTotalCount(integer $SpecTotalCount) 设置获取部署组实例列表返回的原始批次个数
  */
 class TsfPageApplication extends AbstractModel
 {
     /**
      * @var integer 应用总数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
      * @var array 应用信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Content;
 
     /**
+     * @var integer 获取部署组实例列表返回的原始批次个数
+     */
+    public $SpecTotalCount;
+
+    /**
      * @param integer $TotalCount 应用总数目
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Content 应用信息列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SpecTotalCount 获取部署组实例列表返回的原始批次个数
      */
     function __construct()
     {
@@ -73,6 +73,10 @@ class TsfPageApplication extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Content, $obj);
             }
+        }
+
+        if (array_key_exists("SpecTotalCount",$param) and $param["SpecTotalCount"] !== null) {
+            $this->SpecTotalCount = $param["SpecTotalCount"];
         }
     }
 }

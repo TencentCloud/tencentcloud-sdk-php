@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
 <li> TkeMemUsedPkgDay: 当天容器托管内存使用量，单位MB*秒 </li>
 <li> CodingBuildTimePkgDay: 当天容器托管构建时间使用量，单位毫秒 </li>
 <li> TkeHttpServiceNatPkgDay: 当天容器托管流量使用量，单位B </li>
+<li> CynosdbCcupkg: 当月微信云托管MySQL CCU使用量，单位个  （需要除以1000）</li>
+<li> CynosdbStoragepkg: 当月微信云托管MySQL 存储使用量，单位MB  （需要除以1000）</li>
+<li> CynosdbCcupkgDay: 当天微信云托管MySQL 存储使用量，单位个 （需要除以1000） </li>
+<li> CynosdbStoragepkgDay: 当天微信云托管MySQL 存储使用量，单位MB （需要除以1000） </li>
  * @method void setMetricName(string $MetricName) 设置<li> 指标名: </li>
 <li> StorageSizepkg: 当月存储空间容量, 单位MB </li>
 <li> StorageReadpkg: 当月存储读请求次数 </li>
@@ -78,6 +82,10 @@ use TencentCloud\Common\AbstractModel;
 <li> TkeMemUsedPkgDay: 当天容器托管内存使用量，单位MB*秒 </li>
 <li> CodingBuildTimePkgDay: 当天容器托管构建时间使用量，单位毫秒 </li>
 <li> TkeHttpServiceNatPkgDay: 当天容器托管流量使用量，单位B </li>
+<li> CynosdbCcupkg: 当月微信云托管MySQL CCU使用量，单位个  （需要除以1000）</li>
+<li> CynosdbStoragepkg: 当月微信云托管MySQL 存储使用量，单位MB  （需要除以1000）</li>
+<li> CynosdbCcupkgDay: 当天微信云托管MySQL 存储使用量，单位个 （需要除以1000） </li>
+<li> CynosdbStoragepkgDay: 当天微信云托管MySQL 存储使用量，单位MB （需要除以1000） </li>
  * @method string getResourceID() 获取资源ID, 目前仅对云函数、容器托管相关的指标有意义。云函数(FunctionInvocationpkg, FunctionGBspkg, FunctionFluxpkg)、容器托管（服务名称）。如果想查询某个云函数的指标则在ResourceId中传入函数名; 如果只想查询整个namespace的指标, 则留空或不传。
  * @method void setResourceID(string $ResourceID) 设置资源ID, 目前仅对云函数、容器托管相关的指标有意义。云函数(FunctionInvocationpkg, FunctionGBspkg, FunctionFluxpkg)、容器托管（服务名称）。如果想查询某个云函数的指标则在ResourceId中传入函数名; 如果只想查询整个namespace的指标, 则留空或不传。
  */
@@ -117,6 +125,10 @@ class DescribeQuotaDataRequest extends AbstractModel
 <li> TkeMemUsedPkgDay: 当天容器托管内存使用量，单位MB*秒 </li>
 <li> CodingBuildTimePkgDay: 当天容器托管构建时间使用量，单位毫秒 </li>
 <li> TkeHttpServiceNatPkgDay: 当天容器托管流量使用量，单位B </li>
+<li> CynosdbCcupkg: 当月微信云托管MySQL CCU使用量，单位个  （需要除以1000）</li>
+<li> CynosdbStoragepkg: 当月微信云托管MySQL 存储使用量，单位MB  （需要除以1000）</li>
+<li> CynosdbCcupkgDay: 当天微信云托管MySQL 存储使用量，单位个 （需要除以1000） </li>
+<li> CynosdbStoragepkgDay: 当天微信云托管MySQL 存储使用量，单位MB （需要除以1000） </li>
      */
     public $MetricName;
 
@@ -155,6 +167,10 @@ class DescribeQuotaDataRequest extends AbstractModel
 <li> TkeMemUsedPkgDay: 当天容器托管内存使用量，单位MB*秒 </li>
 <li> CodingBuildTimePkgDay: 当天容器托管构建时间使用量，单位毫秒 </li>
 <li> TkeHttpServiceNatPkgDay: 当天容器托管流量使用量，单位B </li>
+<li> CynosdbCcupkg: 当月微信云托管MySQL CCU使用量，单位个  （需要除以1000）</li>
+<li> CynosdbStoragepkg: 当月微信云托管MySQL 存储使用量，单位MB  （需要除以1000）</li>
+<li> CynosdbCcupkgDay: 当天微信云托管MySQL 存储使用量，单位个 （需要除以1000） </li>
+<li> CynosdbStoragepkgDay: 当天微信云托管MySQL 存储使用量，单位MB （需要除以1000） </li>
      * @param string $ResourceID 资源ID, 目前仅对云函数、容器托管相关的指标有意义。云函数(FunctionInvocationpkg, FunctionGBspkg, FunctionFluxpkg)、容器托管（服务名称）。如果想查询某个云函数的指标则在ResourceId中传入函数名; 如果只想查询整个namespace的指标, 则留空或不传。
      */
     function __construct()

@@ -20,14 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 分账条件子产品筛选
  *
-
+ * @method string getProductCode() 获取子产品编码
+ * @method void setProductCode(string $ProductCode) 设置子产品编码
+ * @method string getProductCodeName() 获取子产品名称
+ * @method void setProductCodeName(string $ProductCodeName) 设置子产品名称
+ * @method array getChildren() 获取组件名称
+ * @method void setChildren(array $Children) 设置组件名称
  */
 class BillProductLink extends AbstractModel
 {
-
+    /**
+     * @var string 子产品编码
+     */
+    public $ProductCode;
 
     /**
+     * @var string 子产品名称
+     */
+    public $ProductCodeName;
 
+    /**
+     * @var array 组件名称
+     */
+    public $Children;
+
+    /**
+     * @param string $ProductCode 子产品编码
+     * @param string $ProductCodeName 子产品名称
+     * @param array $Children 组件名称
      */
     function __construct()
     {
@@ -42,6 +62,21 @@ class BillProductLink extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ProductCode",$param) and $param["ProductCode"] !== null) {
+            $this->ProductCode = $param["ProductCode"];
+        }
 
+        if (array_key_exists("ProductCodeName",$param) and $param["ProductCodeName"] !== null) {
+            $this->ProductCodeName = $param["ProductCodeName"];
+        }
+
+        if (array_key_exists("Children",$param) and $param["Children"] !== null) {
+            $this->Children = [];
+            foreach ($param["Children"] as $key => $value){
+                $obj = new BillItem();
+                $obj->deserialize($value);
+                array_push($this->Children, $obj);
+            }
+        }
     }
 }

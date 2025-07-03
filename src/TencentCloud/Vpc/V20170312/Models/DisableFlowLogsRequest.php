@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DisableFlowLogs请求参数结构体
  *
- * @method array getFlowLogIds() 获取流日志Id。
- * @method void setFlowLogIds(array $FlowLogIds) 设置流日志Id。
+ * @method array getFlowLogIds() 获取流日志Id。可通过[CreateFlowLog](https://cloud.tencent.com/document/product/215/35015)接口创建；可通过[DescribeFlowLogs](https://cloud.tencent.com/document/product/215/35012)接口获取。
+ * @method void setFlowLogIds(array $FlowLogIds) 设置流日志Id。可通过[CreateFlowLog](https://cloud.tencent.com/document/product/215/35015)接口创建；可通过[DescribeFlowLogs](https://cloud.tencent.com/document/product/215/35012)接口获取。
  */
 class DisableFlowLogsRequest extends AbstractModel
 {
     /**
-     * @var array 流日志Id。
+     * @var array 流日志Id。可通过[CreateFlowLog](https://cloud.tencent.com/document/product/215/35015)接口创建；可通过[DescribeFlowLogs](https://cloud.tencent.com/document/product/215/35012)接口获取。
      */
     public $FlowLogIds;
 
     /**
-     * @param array $FlowLogIds 流日志Id。
+     * @param array $FlowLogIds 流日志Id。可通过[CreateFlowLog](https://cloud.tencent.com/document/product/215/35015)接口创建；可通过[DescribeFlowLogs](https://cloud.tencent.com/document/product/215/35012)接口获取。
      */
     function __construct()
     {

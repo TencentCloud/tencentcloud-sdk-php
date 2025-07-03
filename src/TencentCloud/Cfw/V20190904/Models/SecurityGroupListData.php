@@ -47,61 +47,35 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getIsNew() 获取是否是正常规则，0：正常，1：异常
  * @method void setIsNew(integer $IsNew) 设置是否是正常规则，0：正常，1：异常
  * @method string getVpcId() 获取私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(string $VpcId) 设置私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubnetId() 获取子网ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetId(string $SubnetId) 设置子网ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceName() 获取实例名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceName(string $InstanceName) 设置实例名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPublicIp() 获取公网IP，多个以英文逗号分隔
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicIp(string $PublicIp) 设置公网IP，多个以英文逗号分隔
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPrivateIp() 获取内网IP，多个以英文逗号分隔
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrivateIp(string $PrivateIp) 设置内网IP，多个以英文逗号分隔
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCidr() 获取掩码地址，多个以英文逗号分隔
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCidr(string $Cidr) 设置掩码地址，多个以英文逗号分隔
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getServiceTemplateId() 获取端口协议类型参数模板id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceTemplateId(string $ServiceTemplateId) 设置端口协议类型参数模板id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getBothWayInfo() 获取生成双向下发规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBothWayInfo(array $BothWayInfo) 设置生成双向下发规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDirection() 获取方向，0：出站，1：入站，默认1
  * @method void setDirection(integer $Direction) 设置方向，0：出站，1：入站，默认1
  * @method integer getProtocolPortType() 获取是否使用端口协议模板，0：否，1：是
  * @method void setProtocolPortType(integer $ProtocolPortType) 设置是否使用端口协议模板，0：否，1：是
  * @method string getUuid() 获取Uuid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUuid(string $Uuid) 设置Uuid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegion() 获取地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAssetGroupNameIn() 获取资产分组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssetGroupNameIn(string $AssetGroupNameIn) 设置资产分组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAssetGroupNameOut() 获取资产分组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssetGroupNameOut(string $AssetGroupNameOut) 设置资产分组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getParameterName() 获取模板名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParameterName(string $ParameterName) 设置模板名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProtocolPortName() 获取端口协议类型参数模板名称
  * @method void setProtocolPortName(string $ProtocolPortName) 设置端口协议类型参数模板名称
  */
@@ -174,49 +148,41 @@ class SecurityGroupListData extends AbstractModel
 
     /**
      * @var string 私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
     /**
      * @var string 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetId;
 
     /**
      * @var string 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceName;
 
     /**
      * @var string 公网IP，多个以英文逗号分隔
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicIp;
 
     /**
      * @var string 内网IP，多个以英文逗号分隔
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PrivateIp;
 
     /**
      * @var string 掩码地址，多个以英文逗号分隔
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Cidr;
 
     /**
      * @var string 端口协议类型参数模板id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceTemplateId;
 
     /**
      * @var array 生成双向下发规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BothWayInfo;
 
@@ -232,31 +198,26 @@ class SecurityGroupListData extends AbstractModel
 
     /**
      * @var string Uuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uuid;
 
     /**
      * @var string 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
      * @var string 资产分组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AssetGroupNameIn;
 
     /**
      * @var string 资产分组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AssetGroupNameOut;
 
     /**
      * @var string 模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParameterName;
 
@@ -280,33 +241,20 @@ class SecurityGroupListData extends AbstractModel
      * @param integer $Status 是否开关开启，0：未开启，1：开启
      * @param integer $IsNew 是否是正常规则，0：正常，1：异常
      * @param string $VpcId 私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PublicIp 公网IP，多个以英文逗号分隔
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PrivateIp 内网IP，多个以英文逗号分隔
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Cidr 掩码地址，多个以英文逗号分隔
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceTemplateId 端口协议类型参数模板id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $BothWayInfo 生成双向下发规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Direction 方向，0：出站，1：入站，默认1
      * @param integer $ProtocolPortType 是否使用端口协议模板，0：否，1：是
      * @param string $Uuid Uuid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AssetGroupNameIn 资产分组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AssetGroupNameOut 资产分组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ParameterName 模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProtocolPortName 端口协议类型参数模板名称
      */
     function __construct()

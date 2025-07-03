@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 传入录制RecordId来标识此次任务， 小于32字节，若携带RecordId发起两次以上的开始录制请求，任务只会启动一个，第二个报错FailedOperation.TaskExist。注意StartWebRecord调用失败时而非FailedOperation.TaskExist错误，请更换RecordId重新发起。
  * @method array getPublishCdnParams() 获取若您想要推流到CDN，可以使用PublishCdnParams.N参数设置，支持最多同时推流到10个CDN地址。若转推地址是腾讯云CDN时，请将IsTencentCdn明确设置为1
  * @method void setPublishCdnParams(array $PublishCdnParams) 设置若您想要推流到CDN，可以使用PublishCdnParams.N参数设置，支持最多同时推流到10个CDN地址。若转推地址是腾讯云CDN时，请将IsTencentCdn明确设置为1
+ * @method integer getReadyTimeout() 获取录制页面资源加载的超时时间，单位：秒。默认值为 0 秒，该值需大于等于 0秒，且小于等于 60秒。录制页面未启用页面加载超时检测时，请勿设置此参数。
+ * @method void setReadyTimeout(integer $ReadyTimeout) 设置录制页面资源加载的超时时间，单位：秒。默认值为 0 秒，该值需大于等于 0秒，且小于等于 60秒。录制页面未启用页面加载超时检测时，请勿设置此参数。
+ * @method EmulateMobileParams getEmulateMobileParams() 获取渲染移动模式参数；不准备渲染移动模式页面时，请勿设置此参数。
+ * @method void setEmulateMobileParams(EmulateMobileParams $EmulateMobileParams) 设置渲染移动模式参数；不准备渲染移动模式页面时，请勿设置此参数。
  */
 class StartWebRecordRequest extends AbstractModel
 {
@@ -82,6 +86,16 @@ class StartWebRecordRequest extends AbstractModel
     public $PublishCdnParams;
 
     /**
+     * @var integer 录制页面资源加载的超时时间，单位：秒。默认值为 0 秒，该值需大于等于 0秒，且小于等于 60秒。录制页面未启用页面加载超时检测时，请勿设置此参数。
+     */
+    public $ReadyTimeout;
+
+    /**
+     * @var EmulateMobileParams 渲染移动模式参数；不准备渲染移动模式页面时，请勿设置此参数。
+     */
+    public $EmulateMobileParams;
+
+    /**
      * @param string $RecordUrl 需要录制的网页URL
 
      * @param integer $MaxDurationLimit 录制最大时长限制， 单位 s, 合法取值范围[1800, 36000], 默认 36000s(10 小时)
@@ -92,6 +106,8 @@ class StartWebRecordRequest extends AbstractModel
      * @param string $RecordId 当对重复任务敏感时，请关注此值： 为了避免任务在短时间内重复发起，导致任务重复
 传入录制RecordId来标识此次任务， 小于32字节，若携带RecordId发起两次以上的开始录制请求，任务只会启动一个，第二个报错FailedOperation.TaskExist。注意StartWebRecord调用失败时而非FailedOperation.TaskExist错误，请更换RecordId重新发起。
      * @param array $PublishCdnParams 若您想要推流到CDN，可以使用PublishCdnParams.N参数设置，支持最多同时推流到10个CDN地址。若转推地址是腾讯云CDN时，请将IsTencentCdn明确设置为1
+     * @param integer $ReadyTimeout 录制页面资源加载的超时时间，单位：秒。默认值为 0 秒，该值需大于等于 0秒，且小于等于 60秒。录制页面未启用页面加载超时检测时，请勿设置此参数。
+     * @param EmulateMobileParams $EmulateMobileParams 渲染移动模式参数；不准备渲染移动模式页面时，请勿设置此参数。
      */
     function __construct()
     {
@@ -139,6 +155,15 @@ class StartWebRecordRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->PublishCdnParams, $obj);
             }
+        }
+
+        if (array_key_exists("ReadyTimeout",$param) and $param["ReadyTimeout"] !== null) {
+            $this->ReadyTimeout = $param["ReadyTimeout"];
+        }
+
+        if (array_key_exists("EmulateMobileParams",$param) and $param["EmulateMobileParams"] !== null) {
+            $this->EmulateMobileParams = new EmulateMobileParams();
+            $this->EmulateMobileParams->deserialize($param["EmulateMobileParams"]);
         }
     }
 }

@@ -30,6 +30,16 @@ use TencentCloud\Common\AbstractModel;
 1：点头模式，DetectAuth接口需要传入IntentionActions字段；
  * @method boolean getMouthOpenRecognition() 获取用户语音回答过程中是否开启张嘴识别检测，默认不开启，仅在意愿核身问答模式中使用。
  * @method void setMouthOpenRecognition(boolean $MouthOpenRecognition) 设置用户语音回答过程中是否开启张嘴识别检测，默认不开启，仅在意愿核身问答模式中使用。
+ * @method integer getSpeed() 获取意愿核身语音播报速度，配置后问答模式和点头模式的语音播报环节都会生效，默认值为0：
+0：智能语速（根据播报文案的长度自动调整语音播报速度）
+1：固定1倍速
+2：固定1.2倍速
+3：固定1.5倍速
+ * @method void setSpeed(integer $Speed) 设置意愿核身语音播报速度，配置后问答模式和点头模式的语音播报环节都会生效，默认值为0：
+0：智能语速（根据播报文案的长度自动调整语音播报速度）
+1：固定1倍速
+2：固定1.2倍速
+3：固定1.5倍速
  */
 class RuleIdConfig extends AbstractModel
 {
@@ -51,11 +61,25 @@ class RuleIdConfig extends AbstractModel
     public $MouthOpenRecognition;
 
     /**
+     * @var integer 意愿核身语音播报速度，配置后问答模式和点头模式的语音播报环节都会生效，默认值为0：
+0：智能语速（根据播报文案的长度自动调整语音播报速度）
+1：固定1倍速
+2：固定1.2倍速
+3：固定1.5倍速
+     */
+    public $Speed;
+
+    /**
      * @param boolean $IntentionRecognition 意愿核身过程中识别用户的回答意图，开启后除了IntentionQuestions的Answers列表中的标准回答会通过，近似意图的回答也会通过，默认开启。
      * @param integer $IntentionType 意愿核身类型，默认为0：
 0：问答模式，DetectAuth接口需要传入IntentionQuestions字段；
 1：点头模式，DetectAuth接口需要传入IntentionActions字段；
      * @param boolean $MouthOpenRecognition 用户语音回答过程中是否开启张嘴识别检测，默认不开启，仅在意愿核身问答模式中使用。
+     * @param integer $Speed 意愿核身语音播报速度，配置后问答模式和点头模式的语音播报环节都会生效，默认值为0：
+0：智能语速（根据播报文案的长度自动调整语音播报速度）
+1：固定1倍速
+2：固定1.2倍速
+3：固定1.5倍速
      */
     function __construct()
     {
@@ -80,6 +104,10 @@ class RuleIdConfig extends AbstractModel
 
         if (array_key_exists("MouthOpenRecognition",$param) and $param["MouthOpenRecognition"] !== null) {
             $this->MouthOpenRecognition = $param["MouthOpenRecognition"];
+        }
+
+        if (array_key_exists("Speed",$param) and $param["Speed"] !== null) {
+            $this->Speed = $param["Speed"];
         }
     }
 }

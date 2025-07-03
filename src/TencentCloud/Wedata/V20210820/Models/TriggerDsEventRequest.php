@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEventCaseList(array $EventCaseList) 设置事件实例信息
  * @method array getEventBatchCaseList() 获取事件实例信息(连续时间)
  * @method void setEventBatchCaseList(array $EventBatchCaseList) 设置事件实例信息(连续时间)
+ * @method string getScheduleTimeZone() 获取触发时区
+ * @method void setScheduleTimeZone(string $ScheduleTimeZone) 设置触发时区
  */
 class TriggerDsEventRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class TriggerDsEventRequest extends AbstractModel
     public $EventBatchCaseList;
 
     /**
+     * @var string 触发时区
+     */
+    public $ScheduleTimeZone;
+
+    /**
      * @param string $ProjectId 项目id
      * @param array $EventCaseList 事件实例信息
      * @param array $EventBatchCaseList 事件实例信息(连续时间)
+     * @param string $ScheduleTimeZone 触发时区
      */
     function __construct()
     {
@@ -82,6 +90,10 @@ class TriggerDsEventRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->EventBatchCaseList, $obj);
             }
+        }
+
+        if (array_key_exists("ScheduleTimeZone",$param) and $param["ScheduleTimeZone"] !== null) {
+            $this->ScheduleTimeZone = $param["ScheduleTimeZone"];
         }
     }
 }

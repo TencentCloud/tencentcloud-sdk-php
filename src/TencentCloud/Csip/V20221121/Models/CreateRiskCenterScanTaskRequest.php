@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScanPlanContent(string $ScanPlanContent) 设置扫描计划详情
  * @method array getSelfDefiningAssets() 获取ip/域名/url数组
  * @method void setSelfDefiningAssets(array $SelfDefiningAssets) 设置ip/域名/url数组
- * @method string getScanFrom() 获取请求发起源，默认为vss表示漏洞扫描服务，云安全中心的用户请填充csip
- * @method void setScanFrom(string $ScanFrom) 设置请求发起源，默认为vss表示漏洞扫描服务，云安全中心的用户请填充csip
+ * @method string getScanFrom() 获取请求发起源，vss表示漏洞扫描服务，云安全中心的用户请填充csip，默认csip
+ * @method void setScanFrom(string $ScanFrom) 设置请求发起源，vss表示漏洞扫描服务，云安全中心的用户请填充csip，默认csip
  * @method TaskAdvanceCFG getTaskAdvanceCFG() 获取高级配置
  * @method void setTaskAdvanceCFG(TaskAdvanceCFG $TaskAdvanceCFG) 设置高级配置
  * @method integer getTaskMode() 获取体检模式，0-标准模式，1-快速模式，2-高级模式，默认标准模式
@@ -90,7 +90,7 @@ class CreateRiskCenterScanTaskRequest extends AbstractModel
     public $SelfDefiningAssets;
 
     /**
-     * @var string 请求发起源，默认为vss表示漏洞扫描服务，云安全中心的用户请填充csip
+     * @var string 请求发起源，vss表示漏洞扫描服务，云安全中心的用户请填充csip，默认csip
      */
     public $ScanFrom;
 
@@ -123,7 +123,7 @@ class CreateRiskCenterScanTaskRequest extends AbstractModel
      * @param array $Assets 扫描资产信息列表
      * @param string $ScanPlanContent 扫描计划详情
      * @param array $SelfDefiningAssets ip/域名/url数组
-     * @param string $ScanFrom 请求发起源，默认为vss表示漏洞扫描服务，云安全中心的用户请填充csip
+     * @param string $ScanFrom 请求发起源，vss表示漏洞扫描服务，云安全中心的用户请填充csip，默认csip
      * @param TaskAdvanceCFG $TaskAdvanceCFG 高级配置
      * @param integer $TaskMode 体检模式，0-标准模式，1-快速模式，2-高级模式，默认标准模式
      * @param AssetTag $Tags 资产标签

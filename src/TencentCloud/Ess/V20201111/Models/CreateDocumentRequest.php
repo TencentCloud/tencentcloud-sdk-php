@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDocument请求参数结构体
  *
- * @method UserInfo getOperator() 获取调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
- * @method void setOperator(UserInfo $Operator) 设置调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
+ * @method UserInfo getOperator() 获取本合同的发起人，<a href="https://qcloudimg.tencent-cloud.cn/raw/f850cfbe163a1cb38439a9f551c2505c.png" target="_blank">点击查看合同发起人展示的位置</a>
+
+注：支持填入集团子公司经办人 userId代发合同。
+ * @method void setOperator(UserInfo $Operator) 设置本合同的发起人，<a href="https://qcloudimg.tencent-cloud.cn/raw/f850cfbe163a1cb38439a9f551c2505c.png" target="_blank">点击查看合同发起人展示的位置</a>
+
+注：支持填入集团子公司经办人 userId代发合同。
  * @method string getTemplateId() 获取用户配置的合同模板ID，会基于此模板创建合同文档，为32位字符串。
 
 [点击查看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/253071cc2f7becb063c7cf71b37b7861.png)
@@ -70,13 +74,15 @@ use TencentCloud\Common\AbstractModel;
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
- * @method string getClientToken() 获取已废弃字段，客户端Token，保持接口幂等性,最大长度64个字符
- * @method void setClientToken(string $ClientToken) 设置已废弃字段，客户端Token，保持接口幂等性,最大长度64个字符
+ * @method string getClientToken() 获取该字段已不再使用
+ * @method void setClientToken(string $ClientToken) 设置该字段已不再使用
  */
 class CreateDocumentRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
+     * @var UserInfo 本合同的发起人，<a href="https://qcloudimg.tencent-cloud.cn/raw/f850cfbe163a1cb38439a9f551c2505c.png" target="_blank">点击查看合同发起人展示的位置</a>
+
+注：支持填入集团子公司经办人 userId代发合同。
      */
     public $Operator;
 
@@ -133,12 +139,14 @@ class CreateDocumentRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @var string 已废弃字段，客户端Token，保持接口幂等性,最大长度64个字符
+     * @var string 该字段已不再使用
      */
     public $ClientToken;
 
     /**
-     * @param UserInfo $Operator 调用方用户信息，userId 必填。支持填入集团子公司经办人 userId代发合同。
+     * @param UserInfo $Operator 本合同的发起人，<a href="https://qcloudimg.tencent-cloud.cn/raw/f850cfbe163a1cb38439a9f551c2505c.png" target="_blank">点击查看合同发起人展示的位置</a>
+
+注：支持填入集团子公司经办人 userId代发合同。
      * @param string $TemplateId 用户配置的合同模板ID，会基于此模板创建合同文档，为32位字符串。
 
 [点击查看模板Id在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/253071cc2f7becb063c7cf71b37b7861.png)
@@ -163,7 +171,7 @@ class CreateDocumentRequest extends AbstractModel
 `2.动态表格控件不支持H5链接方式预览`
      * @param Agent $Agent 代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
-     * @param string $ClientToken 已废弃字段，客户端Token，保持接口幂等性,最大长度64个字符
+     * @param string $ClientToken 该字段已不再使用
      */
     function __construct()
     {

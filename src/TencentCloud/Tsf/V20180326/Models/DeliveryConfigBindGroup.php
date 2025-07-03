@@ -25,17 +25,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getConfigName() 获取配置名
  * @method void setConfigName(string $ConfigName) 设置配置名
  * @method array getCollectPath() 获取采集路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCollectPath(array $CollectPath) 设置采集路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getGroups() 获取关联部署组信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroups(array $Groups) 设置关联部署组信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getKafkaVIp() 获取KafkaVIp
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKafkaVIp(string $KafkaVIp) 设置KafkaVIp
@@ -49,9 +43,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKafkaVPort(string $KafkaVPort) 设置KafkaVPort
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTopic() 获取Topic
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopic(string $Topic) 设置Topic
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLineRule() 获取LineRule
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLineRule(string $LineRule) 设置LineRule
@@ -65,9 +57,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableGlobalLineRule(boolean $EnableGlobalLineRule) 设置EnableGlobalLineRule
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getEnableAuth() 获取EnableAuth
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableAuth(boolean $EnableAuth) 设置EnableAuth
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUsername() 获取Username
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsername(string $Username) 设置Username
@@ -95,19 +85,16 @@ class DeliveryConfigBindGroup extends AbstractModel
 
     /**
      * @var array 采集路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CollectPath;
 
     /**
      * @var array 关联部署组信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Groups;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
@@ -131,7 +118,6 @@ class DeliveryConfigBindGroup extends AbstractModel
 
     /**
      * @var string Topic
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Topic;
 
@@ -155,7 +141,6 @@ class DeliveryConfigBindGroup extends AbstractModel
 
     /**
      * @var boolean EnableAuth
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableAuth;
 
@@ -181,11 +166,8 @@ class DeliveryConfigBindGroup extends AbstractModel
      * @param string $ConfigId 配置id
      * @param string $ConfigName 配置名
      * @param array $CollectPath 采集路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Groups 关联部署组信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $KafkaVIp KafkaVIp
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $KafkaAddress KafkaAddress
@@ -193,7 +175,6 @@ class DeliveryConfigBindGroup extends AbstractModel
      * @param string $KafkaVPort KafkaVPort
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Topic Topic
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LineRule LineRule
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CustomRule CustomRule
@@ -201,7 +182,6 @@ class DeliveryConfigBindGroup extends AbstractModel
      * @param boolean $EnableGlobalLineRule EnableGlobalLineRule
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $EnableAuth EnableAuth
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Username Username
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Password Password

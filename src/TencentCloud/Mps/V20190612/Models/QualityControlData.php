@@ -28,9 +28,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNoVideo(boolean $NoVideo) 设置为true时表示视频无视频轨。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getQualityEvaluationScore() 获取视频无参考质量打分，百分制。
+ * @method integer getQualityEvaluationScore() 获取视频无参考质量评分，百分制。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setQualityEvaluationScore(integer $QualityEvaluationScore) 设置视频无参考质量打分，百分制。
+ * @method void setQualityEvaluationScore(integer $QualityEvaluationScore) 设置视频无参考质量评分，百分制。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getQualityEvaluationMeanOpinionScore() 获取视频无参考质量评分，MOS分数。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setQualityEvaluationMeanOpinionScore(float $QualityEvaluationMeanOpinionScore) 设置视频无参考质量评分，MOS分数。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getQualityControlResultSet() 获取内容质检检出异常项。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -56,10 +60,16 @@ class QualityControlData extends AbstractModel
     public $NoVideo;
 
     /**
-     * @var integer 视频无参考质量打分，百分制。
+     * @var integer 视频无参考质量评分，百分制。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QualityEvaluationScore;
+
+    /**
+     * @var float 视频无参考质量评分，MOS分数。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $QualityEvaluationMeanOpinionScore;
 
     /**
      * @var array 内容质检检出异常项。
@@ -78,7 +88,9 @@ class QualityControlData extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $NoVideo 为true时表示视频无视频轨。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $QualityEvaluationScore 视频无参考质量打分，百分制。
+     * @param integer $QualityEvaluationScore 视频无参考质量评分，百分制。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $QualityEvaluationMeanOpinionScore 视频无参考质量评分，MOS分数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $QualityControlResultSet 内容质检检出异常项。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -108,6 +120,10 @@ class QualityControlData extends AbstractModel
 
         if (array_key_exists("QualityEvaluationScore",$param) and $param["QualityEvaluationScore"] !== null) {
             $this->QualityEvaluationScore = $param["QualityEvaluationScore"];
+        }
+
+        if (array_key_exists("QualityEvaluationMeanOpinionScore",$param) and $param["QualityEvaluationMeanOpinionScore"] !== null) {
+            $this->QualityEvaluationMeanOpinionScore = $param["QualityEvaluationMeanOpinionScore"];
         }
 
         if (array_key_exists("QualityControlResultSet",$param) and $param["QualityControlResultSet"] !== null) {

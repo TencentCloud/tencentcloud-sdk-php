@@ -21,93 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * 服务级账号
  *
  * @method string getName() 获取服务级账号名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置服务级账号名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getDisable() 获取是否禁用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDisable(boolean $Disable) 设置是否禁用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getExpiresAt() 获取过期时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpiresAt(integer $ExpiresAt) 设置过期时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPermissions() 获取策略
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPermissions(array $Permissions) 设置策略
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServiceAccount extends AbstractModel
 {
     /**
      * @var string 服务级账号名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var boolean 是否禁用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Disable;
 
     /**
      * @var integer 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpiresAt;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @var array 策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Permissions;
 
     /**
      * @param string $Name 服务级账号名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Disable 是否禁用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ExpiresAt 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Permissions 策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

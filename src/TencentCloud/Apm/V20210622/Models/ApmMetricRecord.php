@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 指标列表单元
  *
- * @method array getFields() 获取field数组
- * @method void setFields(array $Fields) 设置field数组
- * @method array getTags() 获取tag数组
- * @method void setTags(array $Tags) 设置tag数组
+ * @method array getFields() 获取field数组，用于指标的查询结果
+ * @method void setFields(array $Fields) 设置field数组，用于指标的查询结果
+ * @method array getTags() 获取tag数组，用于区分 Groupby 的对象
+ * @method void setTags(array $Tags) 设置tag数组，用于区分 Groupby 的对象
  */
 class ApmMetricRecord extends AbstractModel
 {
     /**
-     * @var array field数组
+     * @var array field数组，用于指标的查询结果
      */
     public $Fields;
 
     /**
-     * @var array tag数组
+     * @var array tag数组，用于区分 Groupby 的对象
      */
     public $Tags;
 
     /**
-     * @param array $Fields field数组
-     * @param array $Tags tag数组
+     * @param array $Fields field数组，用于指标的查询结果
+     * @param array $Tags tag数组，用于区分 Groupby 的对象
      */
     function __construct()
     {

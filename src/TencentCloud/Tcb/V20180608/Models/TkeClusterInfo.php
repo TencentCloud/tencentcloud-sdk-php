@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * tke集群信息
  *
  * @method string getClusterId() 获取集群ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterId(string $ClusterId) 设置集群ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVpcId() 获取集群的vpcId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(string $VpcId) 设置集群的vpcId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVersionClbSubnetId() 获取版本内网CLB所在子网Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersionClbSubnetId(string $VersionClbSubnetId) 设置版本内网CLB所在子网Id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TkeClusterInfo extends AbstractModel
 {
     /**
      * @var string 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterId;
 
     /**
      * @var string 集群的vpcId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
     /**
      * @var string 版本内网CLB所在子网Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VersionClbSubnetId;
 
     /**
      * @param string $ClusterId 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcId 集群的vpcId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VersionClbSubnetId 版本内网CLB所在子网Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

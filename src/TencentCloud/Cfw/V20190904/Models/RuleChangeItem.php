@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderIndex(integer $OrderIndex) 设置原始sequence 值
  * @method integer getNewOrderIndex() 获取新的sequence 值
  * @method void setNewOrderIndex(integer $NewOrderIndex) 设置新的sequence 值
+ * @method integer getIpVersion() 获取Ip版本，0：IPv4，1：IPv6，默认为IPv4
+ * @method void setIpVersion(integer $IpVersion) 设置Ip版本，0：IPv4，1：IPv6，默认为IPv4
  */
 class RuleChangeItem extends AbstractModel
 {
@@ -38,8 +40,14 @@ class RuleChangeItem extends AbstractModel
     public $NewOrderIndex;
 
     /**
+     * @var integer Ip版本，0：IPv4，1：IPv6，默认为IPv4
+     */
+    public $IpVersion;
+
+    /**
      * @param integer $OrderIndex 原始sequence 值
      * @param integer $NewOrderIndex 新的sequence 值
+     * @param integer $IpVersion Ip版本，0：IPv4，1：IPv6，默认为IPv4
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class RuleChangeItem extends AbstractModel
 
         if (array_key_exists("NewOrderIndex",$param) and $param["NewOrderIndex"] !== null) {
             $this->NewOrderIndex = $param["NewOrderIndex"];
+        }
+
+        if (array_key_exists("IpVersion",$param) and $param["IpVersion"] !== null) {
+            $this->IpVersion = $param["IpVersion"];
         }
     }
 }

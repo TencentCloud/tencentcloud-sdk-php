@@ -20,82 +20,70 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 返回参数键为 DvAuths 的内容。
  *
- * @method string getDvAuthKey() 获取DV 认证密钥。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDvAuthKey(string $DvAuthKey) 设置DV 认证密钥。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDvAuthValue() 获取DV 认证值。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDvAuthValue(string $DvAuthValue) 设置DV 认证值。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDvAuthDomain() 获取DV 认证值域名。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDvAuthDomain(string $DvAuthDomain) 设置DV 认证值域名。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDvAuthPath() 获取DV 认证值路径。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDvAuthPath(string $DvAuthPath) 设置DV 认证值路径。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDvAuthSubDomain() 获取DV 认证子域名，
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDvAuthSubDomain(string $DvAuthSubDomain) 设置DV 认证子域名，
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDvAuthVerifyType() 获取DV 认证类型。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDvAuthVerifyType(string $DvAuthVerifyType) 设置DV 认证类型。
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDvAuthKey() 获取证书域名验证记录Key
+ * @method void setDvAuthKey(string $DvAuthKey) 设置证书域名验证记录Key
+ * @method string getDvAuthValue() 获取证书域名验证记录值
+ * @method void setDvAuthValue(string $DvAuthValue) 设置证书域名验证记录值
+ * @method string getDvAuthDomain() 获取证书域名验证域名值
+ * @method void setDvAuthDomain(string $DvAuthDomain) 设置证书域名验证域名值
+ * @method string getDvAuthPath() 获取证书域名验证文件路径， 仅FILE、FILE_PROXY使用
+ * @method void setDvAuthPath(string $DvAuthPath) 设置证书域名验证文件路径， 仅FILE、FILE_PROXY使用
+ * @method string getDvAuthSubDomain() 获取证书域名验证子域名
+ * @method void setDvAuthSubDomain(string $DvAuthSubDomain) 设置证书域名验证子域名
+ * @method string getDvAuthVerifyType() 获取证书域名验证类型，取值：
+TXT：DNS域名验证添加TXT记录
+FILE：域名文件验证
+CNAME：DNS域名验证添加CNAME记录
+ * @method void setDvAuthVerifyType(string $DvAuthVerifyType) 设置证书域名验证类型，取值：
+TXT：DNS域名验证添加TXT记录
+FILE：域名文件验证
+CNAME：DNS域名验证添加CNAME记录
  */
 class DvAuths extends AbstractModel
 {
     /**
-     * @var string DV 认证密钥。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 证书域名验证记录Key
      */
     public $DvAuthKey;
 
     /**
-     * @var string DV 认证值。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 证书域名验证记录值
      */
     public $DvAuthValue;
 
     /**
-     * @var string DV 认证值域名。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 证书域名验证域名值
      */
     public $DvAuthDomain;
 
     /**
-     * @var string DV 认证值路径。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 证书域名验证文件路径， 仅FILE、FILE_PROXY使用
      */
     public $DvAuthPath;
 
     /**
-     * @var string DV 认证子域名，
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 证书域名验证子域名
      */
     public $DvAuthSubDomain;
 
     /**
-     * @var string DV 认证类型。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 证书域名验证类型，取值：
+TXT：DNS域名验证添加TXT记录
+FILE：域名文件验证
+CNAME：DNS域名验证添加CNAME记录
      */
     public $DvAuthVerifyType;
 
     /**
-     * @param string $DvAuthKey DV 认证密钥。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DvAuthValue DV 认证值。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DvAuthDomain DV 认证值域名。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DvAuthPath DV 认证值路径。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DvAuthSubDomain DV 认证子域名，
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DvAuthVerifyType DV 认证类型。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DvAuthKey 证书域名验证记录Key
+     * @param string $DvAuthValue 证书域名验证记录值
+     * @param string $DvAuthDomain 证书域名验证域名值
+     * @param string $DvAuthPath 证书域名验证文件路径， 仅FILE、FILE_PROXY使用
+     * @param string $DvAuthSubDomain 证书域名验证子域名
+     * @param string $DvAuthVerifyType 证书域名验证类型，取值：
+TXT：DNS域名验证添加TXT记录
+FILE：域名文件验证
+CNAME：DNS域名验证添加CNAME记录
      */
     function __construct()
     {

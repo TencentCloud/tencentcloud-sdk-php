@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDetail(string $Detail) 设置问题详情。
  * @method string getSolution() 获取建议解决方案。
  * @method void setSolution(string $Solution) 设置建议解决方案。
- * @method string getLevel() 获取伸缩建议警告级别。取值范围：<br>
-<li>WARNING：警告级别<br>
-<li>CRITICAL：严重级别<br>
- * @method void setLevel(string $Level) 设置伸缩建议警告级别。取值范围：<br>
-<li>WARNING：警告级别<br>
-<li>CRITICAL：严重级别<br>
+ * @method string getLevel() 获取伸缩建议警告级别。取值范围：
+<li>WARNING：警告级别</li>
+<li>CRITICAL：严重级别</li>
+ * @method void setLevel(string $Level) 设置伸缩建议警告级别。取值范围：
+<li>WARNING：警告级别</li>
+<li>CRITICAL：严重级别</li>
  */
 class Advice extends AbstractModel
 {
@@ -51,9 +51,9 @@ class Advice extends AbstractModel
     public $Solution;
 
     /**
-     * @var string 伸缩建议警告级别。取值范围：<br>
-<li>WARNING：警告级别<br>
-<li>CRITICAL：严重级别<br>
+     * @var string 伸缩建议警告级别。取值范围：
+<li>WARNING：警告级别</li>
+<li>CRITICAL：严重级别</li>
      */
     public $Level;
 
@@ -61,9 +61,9 @@ class Advice extends AbstractModel
      * @param string $Problem 问题描述。
      * @param string $Detail 问题详情。
      * @param string $Solution 建议解决方案。
-     * @param string $Level 伸缩建议警告级别。取值范围：<br>
-<li>WARNING：警告级别<br>
-<li>CRITICAL：严重级别<br>
+     * @param string $Level 伸缩建议警告级别。取值范围：
+<li>WARNING：警告级别</li>
+<li>CRITICAL：严重级别</li>
      */
     function __construct()
     {

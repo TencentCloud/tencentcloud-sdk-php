@@ -25,13 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getValue() 获取数量
  * @method void setValue(integer $Value) 设置数量
  * @method string getDesc() 获取描述信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDesc(string $Desc) 设置描述信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNewCount() 获取今日新增数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNewCount(integer $NewCount) 设置今日新增数量
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssetKeyVal extends AbstractModel
 {
@@ -47,13 +43,11 @@ class AssetKeyVal extends AbstractModel
 
     /**
      * @var string 描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Desc;
 
     /**
      * @var integer 今日新增数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NewCount;
 
@@ -61,9 +55,7 @@ class AssetKeyVal extends AbstractModel
      * @param string $Key 标签
      * @param integer $Value 数量
      * @param string $Desc 描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NewCount 今日新增数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

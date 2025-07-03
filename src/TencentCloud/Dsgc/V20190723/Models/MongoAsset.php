@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * mongo的资产统计结果
  *
  * @method integer getDbNums() 获取DB总数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDbNums(integer $DbNums) 设置DB总数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSensitiveDbNums() 获取敏感DB数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSensitiveDbNums(integer $SensitiveDbNums) 设置敏感DB数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getColNums() 获取集合数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setColNums(integer $ColNums) 设置集合数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSensitiveColNums() 获取敏感集合的数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSensitiveColNums(integer $SensitiveColNums) 设置敏感集合的数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFieldNums() 获取字段数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFieldNums(integer $FieldNums) 设置字段数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSensitiveFieldNums() 获取敏感的字段数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSensitiveFieldNums(integer $SensitiveFieldNums) 设置敏感的字段数量
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MongoAsset extends AbstractModel
 {
     /**
      * @var integer DB总数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DbNums;
 
     /**
      * @var integer 敏感DB数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SensitiveDbNums;
 
     /**
      * @var integer 集合数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ColNums;
 
     /**
      * @var integer 敏感集合的数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SensitiveColNums;
 
     /**
      * @var integer 字段数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FieldNums;
 
     /**
      * @var integer 敏感的字段数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SensitiveFieldNums;
 
     /**
      * @param integer $DbNums DB总数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SensitiveDbNums 敏感DB数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ColNums 集合数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SensitiveColNums 敏感集合的数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FieldNums 字段数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SensitiveFieldNums 敏感的字段数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProVersionNum(integer $ProVersionNum) 设置专业版数量
  * @method integer getUltimateVersionNum() 获取旗舰版数量
  * @method void setUltimateVersionNum(integer $UltimateVersionNum) 设置旗舰版数量
- * @method integer getGeneralVersionNum() 获取普惠版数量
- * @method void setGeneralVersionNum(integer $GeneralVersionNum) 设置普惠版数量
+ * @method integer getGeneralVersionNum() 获取轻量版数量
+ * @method void setGeneralVersionNum(integer $GeneralVersionNum) 设置轻量版数量
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -49,7 +49,7 @@ class DescribeVersionStatisticsResponse extends AbstractModel
     public $UltimateVersionNum;
 
     /**
-     * @var integer 普惠版数量
+     * @var integer 轻量版数量
      */
     public $GeneralVersionNum;
 
@@ -62,7 +62,7 @@ class DescribeVersionStatisticsResponse extends AbstractModel
      * @param integer $BasicVersionNum 基础版数量
      * @param integer $ProVersionNum 专业版数量
      * @param integer $UltimateVersionNum 旗舰版数量
-     * @param integer $GeneralVersionNum 普惠版数量
+     * @param integer $GeneralVersionNum 轻量版数量
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

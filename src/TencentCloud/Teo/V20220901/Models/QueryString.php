@@ -29,15 +29,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getAction() 获取CacheKey使用QueryString的方式，取值有：
 <li>includeCustom：使用部分url参数；</li>
 <li>excludeCustom：排除部分url参数。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAction(string $Action) 设置CacheKey使用QueryString的方式，取值有：
 <li>includeCustom：使用部分url参数；</li>
 <li>excludeCustom：排除部分url参数。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getValue() 获取使用/排除的url参数数组。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(array $Value) 设置使用/排除的url参数数组。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class QueryString extends AbstractModel
 {
@@ -52,13 +48,11 @@ class QueryString extends AbstractModel
      * @var string CacheKey使用QueryString的方式，取值有：
 <li>includeCustom：使用部分url参数；</li>
 <li>excludeCustom：排除部分url参数。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Action;
 
     /**
      * @var array 使用/排除的url参数数组。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
@@ -69,9 +63,7 @@ class QueryString extends AbstractModel
      * @param string $Action CacheKey使用QueryString的方式，取值有：
 <li>includeCustom：使用部分url参数；</li>
 <li>excludeCustom：排除部分url参数。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Value 使用/排除的url参数数组。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

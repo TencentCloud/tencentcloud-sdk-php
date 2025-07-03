@@ -24,8 +24,10 @@ use TencentCloud\Cdc\V20201214\Models as Models;
 
 /**
  * @method Models\CreateDedicatedClusterResponse CreateDedicatedCluster(Models\CreateDedicatedClusterRequest $req) 创建专用集群
+ * @method Models\CreateDedicatedClusterImageCacheResponse CreateDedicatedClusterImageCache(Models\CreateDedicatedClusterImageCacheRequest $req) 创建云上镜像缓存到本地专用集群中
  * @method Models\CreateDedicatedClusterOrderResponse CreateDedicatedClusterOrder(Models\CreateDedicatedClusterOrderRequest $req) 创建专用集群订单
  * @method Models\CreateSiteResponse CreateSite(Models\CreateSiteRequest $req) 创建站点
+ * @method Models\DeleteDedicatedClusterImageCacheResponse DeleteDedicatedClusterImageCache(Models\DeleteDedicatedClusterImageCacheRequest $req) 删除本地专用集群的云上镜像缓存
  * @method Models\DeleteDedicatedClustersResponse DeleteDedicatedClusters(Models\DeleteDedicatedClustersRequest $req) 删除专用集群
  * @method Models\DeleteSitesResponse DeleteSites(Models\DeleteSitesRequest $req) 删除站点
  * @method Models\DescribeDedicatedClusterCbsStatisticsResponse DescribeDedicatedClusterCbsStatistics(Models\DescribeDedicatedClusterCbsStatisticsRequest $req) 查询本地专用集群云硬盘仓库信息

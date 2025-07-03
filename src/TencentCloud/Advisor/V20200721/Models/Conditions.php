@@ -21,17 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * 评估项警告条件
  *
  * @method integer getConditionId() 获取警告条件ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConditionId(integer $ConditionId) 设置警告条件ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLevel() 获取警告级别，2:中风险，3:高风险
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevel(integer $Level) 设置警告级别，2:中风险，3:高风险
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLevelDesc() 获取警告级别描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevelDesc(string $LevelDesc) 设置警告级别描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDesc() 获取警告条件描述
  * @method void setDesc(string $Desc) 设置警告条件描述
  */
@@ -39,19 +33,16 @@ class Conditions extends AbstractModel
 {
     /**
      * @var integer 警告条件ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConditionId;
 
     /**
      * @var integer 警告级别，2:中风险，3:高风险
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Level;
 
     /**
      * @var string 警告级别描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LevelDesc;
 
@@ -62,11 +53,8 @@ class Conditions extends AbstractModel
 
     /**
      * @param integer $ConditionId 警告条件ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Level 警告级别，2:中风险，3:高风险
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LevelDesc 警告级别描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Desc 警告条件描述
      */
     function __construct()

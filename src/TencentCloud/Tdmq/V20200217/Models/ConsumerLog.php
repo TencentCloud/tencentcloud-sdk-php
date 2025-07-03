@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMsgId(string $MsgId) 设置消息ID。
  * @method string getConsumerGroup() 获取消费组。
  * @method void setConsumerGroup(string $ConsumerGroup) 设置消费组。
- * @method string getConsumerName() 获取消费组名称。
- * @method void setConsumerName(string $ConsumerName) 设置消费组名称。
+ * @method string getConsumerName() 获取消费者名称。
+ * @method void setConsumerName(string $ConsumerName) 设置消费者名称。
  * @method string getConsumeTime() 获取消费时间。
  * @method void setConsumeTime(string $ConsumeTime) 设置消费时间。
  * @method string getConsumerAddr() 获取消费者客户端地址。
@@ -48,7 +48,7 @@ class ConsumerLog extends AbstractModel
     public $ConsumerGroup;
 
     /**
-     * @var string 消费组名称。
+     * @var string 消费者名称。
      */
     public $ConsumerName;
 
@@ -75,7 +75,7 @@ class ConsumerLog extends AbstractModel
     /**
      * @param string $MsgId 消息ID。
      * @param string $ConsumerGroup 消费组。
-     * @param string $ConsumerName 消费组名称。
+     * @param string $ConsumerName 消费者名称。
      * @param string $ConsumeTime 消费时间。
      * @param string $ConsumerAddr 消费者客户端地址。
      * @param integer $ConsumeUseTime 消费耗时（毫秒）。

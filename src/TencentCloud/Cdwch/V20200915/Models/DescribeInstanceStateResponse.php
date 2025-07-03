@@ -23,25 +23,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInstanceState() 获取集群状态，例如：Serving
  * @method void setInstanceState(string $InstanceState) 设置集群状态，例如：Serving
  * @method string getFlowCreateTime() 获取集群操作创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowCreateTime(string $FlowCreateTime) 设置集群操作创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFlowName() 获取集群操作名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowName(string $FlowName) 设置集群操作名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getFlowProgress() 获取集群操作进度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowProgress(float $FlowProgress) 设置集群操作进度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceStateDesc() 获取集群状态描述，例如：运行中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceStateDesc(string $InstanceStateDesc) 设置集群状态描述，例如：运行中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFlowMsg() 获取集群流程错误信息，例如：“创建失败，资源不足”
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowMsg(string $FlowMsg) 设置集群流程错误信息，例如：“创建失败，资源不足”
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProcessName() 获取当前步骤的名称，例如：”购买资源中“
+ * @method void setProcessName(string $ProcessName) 设置当前步骤的名称，例如：”购买资源中“
+ * @method string getProcessSubName() 获取当前步骤的名称，例如：”购买资源中“
+ * @method void setProcessSubName(string $ProcessSubName) 设置当前步骤的名称，例如：”购买资源中“
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -54,33 +48,38 @@ class DescribeInstanceStateResponse extends AbstractModel
 
     /**
      * @var string 集群操作创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowCreateTime;
 
     /**
      * @var string 集群操作名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowName;
 
     /**
      * @var float 集群操作进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowProgress;
 
     /**
      * @var string 集群状态描述，例如：运行中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceStateDesc;
 
     /**
      * @var string 集群流程错误信息，例如：“创建失败，资源不足”
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowMsg;
+
+    /**
+     * @var string 当前步骤的名称，例如：”购买资源中“
+     */
+    public $ProcessName;
+
+    /**
+     * @var string 当前步骤的名称，例如：”购买资源中“
+     */
+    public $ProcessSubName;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -90,15 +89,12 @@ class DescribeInstanceStateResponse extends AbstractModel
     /**
      * @param string $InstanceState 集群状态，例如：Serving
      * @param string $FlowCreateTime 集群操作创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FlowName 集群操作名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $FlowProgress 集群操作进度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceStateDesc 集群状态描述，例如：运行中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FlowMsg 集群流程错误信息，例如：“创建失败，资源不足”
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProcessName 当前步骤的名称，例如：”购买资源中“
+     * @param string $ProcessSubName 当前步骤的名称，例如：”购买资源中“
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -136,6 +132,14 @@ class DescribeInstanceStateResponse extends AbstractModel
 
         if (array_key_exists("FlowMsg",$param) and $param["FlowMsg"] !== null) {
             $this->FlowMsg = $param["FlowMsg"];
+        }
+
+        if (array_key_exists("ProcessName",$param) and $param["ProcessName"] !== null) {
+            $this->ProcessName = $param["ProcessName"];
+        }
+
+        if (array_key_exists("ProcessSubName",$param) and $param["ProcessSubName"] !== null) {
+            $this->ProcessSubName = $param["ProcessSubName"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

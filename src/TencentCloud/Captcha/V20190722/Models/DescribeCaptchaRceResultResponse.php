@@ -37,21 +37,15 @@ use TencentCloud\Common\AbstractModel;
 21 diff 票据校验异常，可能的原因是（1）若Ticket包含trerror前缀，一般是由于用户网络较差，导致前端自动容灾，而生成了容灾票据，业务侧可根据需要进行跳过或二次处理。（2）若Ticket不包含trerror前缀，则是由于验证码风控系统发现请求有安全风险，业务侧可根据需要进行拦截。
 100 appid-secretkey-ticket mismatch 参数校验错误，（1）请检查CaptchaAppId与AppSecretKey是否正确，CaptchaAppId、AppSecretKey需要在验证码控制台【验证管理】>【基础配置】中获取（2）请检查传入的Ticket是否由传入的CaptchaAppId生成
  * @method string getCaptchaMsg() 获取状态描述及验证错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCaptchaMsg(string $CaptchaMsg) 设置状态描述及验证错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEvilLevel() 获取无感验证模式下，该参数返回验证结果：
 EvilLevel=0 请求无恶意
 EvilLevel=100 请求有恶意
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEvilLevel(integer $EvilLevel) 设置无感验证模式下，该参数返回验证结果：
 EvilLevel=0 请求无恶意
 EvilLevel=100 请求有恶意
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getGetCaptchaTime() 获取前端获取验证码时间，时间戳格式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGetCaptchaTime(integer $GetCaptchaTime) 设置前端获取验证码时间，时间戳格式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEvilBitmap() 获取拦截类型
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEvilBitmap(integer $EvilBitmap) 设置拦截类型
@@ -59,9 +53,9 @@ EvilLevel=100 请求有恶意
  * @method integer getSubmitCaptchaTime() 获取提交验证码时间
  * @method void setSubmitCaptchaTime(integer $SubmitCaptchaTime) 设置提交验证码时间
  * @method RceResult getRceResult() 获取rce检测结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRceResult(RceResult $RceResult) 设置rce检测结果
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDeviceRiskCategory() 获取设备风险大类
+ * @method void setDeviceRiskCategory(string $DeviceRiskCategory) 设置设备风险大类
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -81,7 +75,6 @@ class DescribeCaptchaRceResultResponse extends AbstractModel
 
     /**
      * @var string 状态描述及验证错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CaptchaMsg;
 
@@ -89,13 +82,11 @@ class DescribeCaptchaRceResultResponse extends AbstractModel
      * @var integer 无感验证模式下，该参数返回验证结果：
 EvilLevel=0 请求无恶意
 EvilLevel=100 请求有恶意
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EvilLevel;
 
     /**
      * @var integer 前端获取验证码时间，时间戳格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GetCaptchaTime;
 
@@ -112,9 +103,13 @@ EvilLevel=100 请求有恶意
 
     /**
      * @var RceResult rce检测结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RceResult;
+
+    /**
+     * @var string 设备风险大类
+     */
+    public $DeviceRiskCategory;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -131,18 +126,15 @@ EvilLevel=100 请求有恶意
 21 diff 票据校验异常，可能的原因是（1）若Ticket包含trerror前缀，一般是由于用户网络较差，导致前端自动容灾，而生成了容灾票据，业务侧可根据需要进行跳过或二次处理。（2）若Ticket不包含trerror前缀，则是由于验证码风控系统发现请求有安全风险，业务侧可根据需要进行拦截。
 100 appid-secretkey-ticket mismatch 参数校验错误，（1）请检查CaptchaAppId与AppSecretKey是否正确，CaptchaAppId、AppSecretKey需要在验证码控制台【验证管理】>【基础配置】中获取（2）请检查传入的Ticket是否由传入的CaptchaAppId生成
      * @param string $CaptchaMsg 状态描述及验证错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EvilLevel 无感验证模式下，该参数返回验证结果：
 EvilLevel=0 请求无恶意
 EvilLevel=100 请求有恶意
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $GetCaptchaTime 前端获取验证码时间，时间戳格式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EvilBitmap 拦截类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SubmitCaptchaTime 提交验证码时间
      * @param RceResult $RceResult rce检测结果
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DeviceRiskCategory 设备风险大类
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -185,6 +177,10 @@ EvilLevel=100 请求有恶意
         if (array_key_exists("RceResult",$param) and $param["RceResult"] !== null) {
             $this->RceResult = new RceResult();
             $this->RceResult->deserialize($param["RceResult"]);
+        }
+
+        if (array_key_exists("DeviceRiskCategory",$param) and $param["DeviceRiskCategory"] !== null) {
+            $this->DeviceRiskCategory = $param["DeviceRiskCategory"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

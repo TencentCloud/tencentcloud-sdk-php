@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyVirusAutoIsolateExampleSwitch请求参数结构体
  *
- * @method string getMD5() 获取文件Md5值
- * @method void setMD5(string $MD5) 设置文件Md5值
+ * @method string getMD5() 获取文件MD5值
+ * @method void setMD5(string $MD5) 设置文件MD5值
  * @method boolean getStatus() 获取开关(开:true 关: false)
  * @method void setStatus(boolean $Status) 设置开关(开:true 关: false)
  */
 class ModifyVirusAutoIsolateExampleSwitchRequest extends AbstractModel
 {
     /**
-     * @var string 文件Md5值
+     * @var string 文件MD5值
      */
     public $MD5;
 
@@ -38,7 +38,7 @@ class ModifyVirusAutoIsolateExampleSwitchRequest extends AbstractModel
     public $Status;
 
     /**
-     * @param string $MD5 文件Md5值
+     * @param string $MD5 文件MD5值
      * @param boolean $Status 开关(开:true 关: false)
      */
     function __construct()

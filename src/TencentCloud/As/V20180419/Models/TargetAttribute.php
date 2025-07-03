@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 负载均衡器目标属性
  *
- * @method integer getPort() 获取端口
- * @method void setPort(integer $Port) 设置端口
- * @method integer getWeight() 获取权重
- * @method void setWeight(integer $Weight) 设置权重
+ * @method integer getPort() 获取端口。取值范围为 [1,65535]。作为入参时，该参数必填。
+ * @method void setPort(integer $Port) 设置端口。取值范围为 [1,65535]。作为入参时，该参数必填。
+ * @method integer getWeight() 获取权重。取值范围为 [0,100]。作为入参时，该参数必填。
+ * @method void setWeight(integer $Weight) 设置权重。取值范围为 [0,100]。作为入参时，该参数必填。
  */
 class TargetAttribute extends AbstractModel
 {
     /**
-     * @var integer 端口
+     * @var integer 端口。取值范围为 [1,65535]。作为入参时，该参数必填。
      */
     public $Port;
 
     /**
-     * @var integer 权重
+     * @var integer 权重。取值范围为 [0,100]。作为入参时，该参数必填。
      */
     public $Weight;
 
     /**
-     * @param integer $Port 端口
-     * @param integer $Weight 权重
+     * @param integer $Port 端口。取值范围为 [1,65535]。作为入参时，该参数必填。
+     * @param integer $Weight 权重。取值范围为 [0,100]。作为入参时，该参数必填。
      */
     function __construct()
     {

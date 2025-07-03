@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyMQTTInstance请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method string getInstanceId() 获取集群ID
+ * @method void setInstanceId(string $InstanceId) 设置集群ID
  * @method string getName() 获取实例名称
  * @method void setName(string $Name) 设置实例名称
  * @method string getRemark() 获取备注信息
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyMQTTInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 集群ID
      */
     public $InstanceId;
 
@@ -45,7 +45,7 @@ class ModifyMQTTInstanceRequest extends AbstractModel
     public $Remark;
 
     /**
-     * @param string $InstanceId 实例ID
+     * @param string $InstanceId 集群ID
      * @param string $Name 实例名称
      * @param string $Remark 备注信息
      */

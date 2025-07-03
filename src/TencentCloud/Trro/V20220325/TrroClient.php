@@ -26,8 +26,10 @@ use TencentCloud\Trro\V20220325\Models as Models;
  * @method Models\BatchDeleteDevicesResponse BatchDeleteDevices(Models\BatchDeleteDevicesRequest $req) 用于批量删除设备
  * @method Models\BatchDeletePolicyResponse BatchDeletePolicy(Models\BatchDeletePolicyRequest $req) 用于批量删除修改权限配置
  * @method Models\BoundLicensesResponse BoundLicenses(Models\BoundLicensesRequest $req) 为推流设备绑定license，优先绑定到期时间最近的，到期时间相同优先绑定月包
+ * @method Models\CreateCloudRecordingResponse CreateCloudRecording(Models\CreateCloudRecordingRequest $req) 启动云端录制功能，完成房间内的音视频录制，并上传到指定的云存储。
  * @method Models\CreateDeviceResponse CreateDevice(Models\CreateDeviceRequest $req) 用于创建设备
  * @method Models\CreateProjectResponse CreateProject(Models\CreateProjectRequest $req) 用于创建项目
+ * @method Models\DeleteCloudRecordingResponse DeleteCloudRecording(Models\DeleteCloudRecordingRequest $req) 成功开启录制后，可以使用此接口来停止录制任务。停止录制成功后不代表文件全部传输完成，如果未完成后台将会继续上传文件，成功后通过事件回调通知客户文件全部传输完成状态。
  * @method Models\DeleteProjectResponse DeleteProject(Models\DeleteProjectRequest $req) 用于删除项目
  * @method Models\DescribeDeviceInfoResponse DescribeDeviceInfo(Models\DescribeDeviceInfoRequest $req) 用于获取指定设备信息
  * @method Models\DescribeDeviceListResponse DescribeDeviceList(Models\DescribeDeviceListRequest $req) 用于获取设备信息列表
@@ -43,9 +45,17 @@ use TencentCloud\Trro\V20220325\Models as Models;
  * @method Models\GetDevicesResponse GetDevices(Models\GetDevicesRequest $req) 查询用户设备的授权绑定情况
  * @method Models\GetLicenseStatResponse GetLicenseStat(Models\GetLicenseStatRequest $req) 统计license类型数量
  * @method Models\GetLicensesResponse GetLicenses(Models\GetLicensesRequest $req) 按授权查看license列表
+ * @method Models\ModifyCallbackUrlResponse ModifyCallbackUrl(Models\ModifyCallbackUrlRequest $req) 设置回调URL
+录制回调事件内容参考：https://cloud.tencent.com/document/product/647/81113
+转推回调事件内容参考：https://cloud.tencent.com/document/product/647/88552
  * @method Models\ModifyDeviceResponse ModifyDevice(Models\ModifyDeviceRequest $req) 用于修改设备信息
  * @method Models\ModifyPolicyResponse ModifyPolicy(Models\ModifyPolicyRequest $req) 用于修改权限配置
  * @method Models\ModifyProjectResponse ModifyProject(Models\ModifyProjectRequest $req) 用于修改项目信息
+ * @method Models\ModifyProjectSecModeResponse ModifyProjectSecMode(Models\ModifyProjectSecModeRequest $req) 使用项目共享密钥可动态生成设备登录密钥，登录前无需对设备进行提前注册，适合希望简化业务流程的客户。由于是公共密钥，请务必注意保护项目共享密钥，并及时更新。建议项目共享密钥保存在服务器侧。由服务器生成设备登录密码下发给设备，避免密钥保存在客户端侧产生的密钥泄露风险。
+
+开启项目共享密钥后，对于已注册的设备，仍可使用原设备密码登录。若希望仅能通过共享密钥生成密码登录，请通过云 API 将设备密码更新为"USEPROJECTKEYPWD"。
+ * @method Models\StartPublishLiveStreamResponse StartPublishLiveStream(Models\StartPublishLiveStreamRequest $req) 启动一个混流转推任务，将 TRTC 房间的多路音视频流混成一路音视频流，编码后推到直播 CDN 或者回推到 TRTC 房间。也支持不转码直接转推 TRTC 房间的单路流。启动成功后，会返回一个 SdkAppid 维度唯一的任务 Id（TaskId）。您需要保存该 TaskId，后续需要依赖此 TaskId 更新和结束任务。
+ * @method Models\StopPublishLiveStreamResponse StopPublishLiveStream(Models\StopPublishLiveStreamRequest $req) 停止指定的混流转推任务。如果没有调用 Stop 接口停止任务，所有参与混流转推的主播离开房间超过MaxIdleTime 设置的时间后，任务也会自动停止。
  */
 
 class TrroClient extends AbstractClient

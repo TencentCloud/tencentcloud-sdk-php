@@ -30,7 +30,9 @@ use TencentCloud\Ms\V20180408\Models as Models;
  * @method Models\CreateOrderInstanceResponse CreateOrderInstance(Models\CreateOrderInstanceRequest $req) 该接口供渠道合作应用加固使用，接口调用有白名单用户限制。
 订单类型有：免费试用、按年收费、按次收费。
 应用加固支持的平台类型有：android加固 、ios源码混淆 、sdk加固、applet小程序加固
- * @method Models\CreateResourceInstancesResponse CreateResourceInstances(Models\CreateResourceInstancesRequest $req) 用户可以使用该接口自建资源，只支持白名单用户
+ * @method Models\CreateResourceInstancesResponse CreateResourceInstances(Models\CreateResourceInstancesRequest $req) 不再使用
+
+用户可以使用该接口自建资源，只支持白名单用户
  * @method Models\CreateShieldInstanceResponse CreateShieldInstance(Models\CreateShieldInstanceRequest $req) 用户通过该接口提交应用进行应用加固，加固后需通过DescribeShieldResult接口查询加固结果。（注意：根据国家互联网用户实名制相关要求，使用该产品前，需先完成实名认证。）
  * @method Models\CreateShieldPlanInstanceResponse CreateShieldPlanInstance(Models\CreateShieldPlanInstanceRequest $req) 对资源进行策略新增。（注意：根据国家互联网用户实名制相关要求，使用该产品前，需先完成实名认证。）
  * @method Models\DeleteShieldInstancesResponse DeleteShieldInstances(Models\DeleteShieldInstancesRequest $req) 删除一个或者多个app加固信息。（注意：根据国家互联网用户实名制相关要求，使用该产品前，需先完成实名认证。）
@@ -45,7 +47,6 @@ use TencentCloud\Ms\V20180408\Models as Models;
  * @method Models\DescribeResourceInstancesResponse DescribeResourceInstances(Models\DescribeResourceInstancesRequest $req) 获取某个用户的所有资源信息。（注意：根据国家互联网用户实名制相关要求，使用该产品前，需先完成实名认证。）
  * @method Models\DescribeShieldInstancesResponse DescribeShieldInstances(Models\DescribeShieldInstancesRequest $req) 本接口用于查看app列表。
 可以通过指定任务唯一标识ItemId来查询指定app的详细信息，或通过设定过滤器来查询满足过滤条件的app的详细信息。 指定偏移(Offset)和限制(Limit)来选择结果中的一部分，默认返回满足条件的前20个app信息。（注意：根据国家互联网用户实名制相关要求，使用该产品前，需先完成实名认证。）
-
  * @method Models\DescribeShieldPlanInstanceResponse DescribeShieldPlanInstance(Models\DescribeShieldPlanInstanceRequest $req) 查询加固策略。（注意：根据国家互联网用户实名制相关要求，使用该产品前，需先完成实名认证。）
  * @method Models\DescribeShieldResultResponse DescribeShieldResult(Models\DescribeShieldResultRequest $req) 通过唯一标识获取加固的结果。（注意：根据国家互联网用户实名制相关要求，使用该产品前，需先完成实名认证。）
  * @method Models\DescribeUrlDetectionResultResponse DescribeUrlDetectionResult(Models\DescribeUrlDetectionResultRequest $req) 移动安全-网址检测服务

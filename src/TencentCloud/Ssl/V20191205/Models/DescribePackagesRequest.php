@@ -24,14 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认0。
  * @method integer getLimit() 获取限制数目，默认20。
  * @method void setLimit(integer $Limit) 设置限制数目，默认20。
- * @method string getStatus() 获取按状态筛选。
- * @method void setStatus(string $Status) 设置按状态筛选。
- * @method string getExpireTime() 获取按过期时间升序或降序排列。
- * @method void setExpireTime(string $ExpireTime) 设置按过期时间升序或降序排列。
+ * @method string getStatus() 获取按状态筛选。状态值包括usable(可用)，used(已用)，expired(已过期)，refund(已退款)
+
+ * @method void setStatus(string $Status) 设置按状态筛选。状态值包括usable(可用)，used(已用)，expired(已过期)，refund(已退款)
+
+ * @method string getExpireTime() 获取按过期时间升序或降序排列，可选值为asc(升序)和desc(降序)
+ * @method void setExpireTime(string $ExpireTime) 设置按过期时间升序或降序排列，可选值为asc(升序)和desc(降序)
  * @method string getPackageId() 获取按权益包ID搜索。
  * @method void setPackageId(string $PackageId) 设置按权益包ID搜索。
- * @method string getType() 获取按权益包类型搜索。
- * @method void setType(string $Type) 设置按权益包类型搜索。
+ * @method string getType() 获取按权益包类型搜索。类型包括：ssl_100(证书批量权益100点)，ssl_500(证书批量权益500点），ssl_2000(证书批量权益2000点）
+ * @method void setType(string $Type) 设置按权益包类型搜索。类型包括：ssl_100(证书批量权益100点)，ssl_500(证书批量权益500点），ssl_2000(证书批量权益2000点）
  * @method integer getPid() 获取子产品编号
  * @method void setPid(integer $Pid) 设置子产品编号
  */
@@ -48,12 +50,13 @@ class DescribePackagesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 按状态筛选。
+     * @var string 按状态筛选。状态值包括usable(可用)，used(已用)，expired(已过期)，refund(已退款)
+
      */
     public $Status;
 
     /**
-     * @var string 按过期时间升序或降序排列。
+     * @var string 按过期时间升序或降序排列，可选值为asc(升序)和desc(降序)
      */
     public $ExpireTime;
 
@@ -63,7 +66,7 @@ class DescribePackagesRequest extends AbstractModel
     public $PackageId;
 
     /**
-     * @var string 按权益包类型搜索。
+     * @var string 按权益包类型搜索。类型包括：ssl_100(证书批量权益100点)，ssl_500(证书批量权益500点），ssl_2000(证书批量权益2000点）
      */
     public $Type;
 
@@ -75,10 +78,11 @@ class DescribePackagesRequest extends AbstractModel
     /**
      * @param integer $Offset 偏移量，默认0。
      * @param integer $Limit 限制数目，默认20。
-     * @param string $Status 按状态筛选。
-     * @param string $ExpireTime 按过期时间升序或降序排列。
+     * @param string $Status 按状态筛选。状态值包括usable(可用)，used(已用)，expired(已过期)，refund(已退款)
+
+     * @param string $ExpireTime 按过期时间升序或降序排列，可选值为asc(升序)和desc(降序)
      * @param string $PackageId 按权益包ID搜索。
-     * @param string $Type 按权益包类型搜索。
+     * @param string $Type 按权益包类型搜索。类型包括：ssl_100(证书批量权益100点)，ssl_500(证书批量权益500点），ssl_2000(证书批量权益2000点）
      * @param integer $Pid 子产品编号
      */
     function __construct()

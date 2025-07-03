@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleName(string $RuleName) 设置规则名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAlarmMessageRule() 获取发送对象
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAlarmMessageRule(string $AlarmMessageRule) 设置发送对象
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleGroupSubscribe extends AbstractModel
 {
@@ -84,6 +88,12 @@ class RuleGroupSubscribe extends AbstractModel
     public $RuleName;
 
     /**
+     * @var string 发送对象
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AlarmMessageRule;
+
+    /**
      * @param integer $RuleGroupId 规则组Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Receivers 订阅接收人列表
@@ -95,6 +105,8 @@ class RuleGroupSubscribe extends AbstractModel
      * @param integer $RuleId 规则Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RuleName 规则名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AlarmMessageRule 发送对象
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -142,6 +154,10 @@ class RuleGroupSubscribe extends AbstractModel
 
         if (array_key_exists("RuleName",$param) and $param["RuleName"] !== null) {
             $this->RuleName = $param["RuleName"];
+        }
+
+        if (array_key_exists("AlarmMessageRule",$param) and $param["AlarmMessageRule"] !== null) {
+            $this->AlarmMessageRule = $param["AlarmMessageRule"];
         }
     }
 }

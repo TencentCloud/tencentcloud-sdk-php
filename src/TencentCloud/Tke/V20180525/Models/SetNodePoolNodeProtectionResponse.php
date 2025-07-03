@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * SetNodePoolNodeProtection返回参数结构体
  *
  * @method array getSucceedInstanceIds() 获取成功设置的节点id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSucceedInstanceIds(array $SucceedInstanceIds) 设置成功设置的节点id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getFailedInstanceIds() 获取没有成功设置的节点id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailedInstanceIds(array $FailedInstanceIds) 设置没有成功设置的节点id
@@ -35,7 +33,6 @@ class SetNodePoolNodeProtectionResponse extends AbstractModel
 {
     /**
      * @var array 成功设置的节点id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SucceedInstanceIds;
 
@@ -52,7 +49,6 @@ class SetNodePoolNodeProtectionResponse extends AbstractModel
 
     /**
      * @param array $SucceedInstanceIds 成功设置的节点id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FailedInstanceIds 没有成功设置的节点id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。

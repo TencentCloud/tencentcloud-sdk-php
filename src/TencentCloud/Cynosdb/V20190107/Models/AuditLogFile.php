@@ -33,17 +33,13 @@ use TencentCloud\Common\AbstractModel;
 "failed" - 创建失败;
 "success" - 已生成;
  * @method integer getFileSize() 获取文件大小，单位为 KB。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileSize(integer $FileSize) 设置文件大小，单位为 KB。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDownloadUrl() 获取审计日志下载地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDownloadUrl(string $DownloadUrl) 设置审计日志下载地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getErrMsg() 获取错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrMsg(string $ErrMsg) 设置错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getProgressRate() 获取日志下载进度。
+ * @method void setProgressRate(integer $ProgressRate) 设置日志下载进度。
  */
 class AuditLogFile extends AbstractModel
 {
@@ -67,21 +63,23 @@ class AuditLogFile extends AbstractModel
 
     /**
      * @var integer 文件大小，单位为 KB。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileSize;
 
     /**
      * @var string 审计日志下载地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DownloadUrl;
 
     /**
      * @var string 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrMsg;
+
+    /**
+     * @var integer 日志下载进度。
+     */
+    public $ProgressRate;
 
     /**
      * @param string $FileName 审计日志文件名称
@@ -91,11 +89,9 @@ class AuditLogFile extends AbstractModel
 "failed" - 创建失败;
 "success" - 已生成;
      * @param integer $FileSize 文件大小，单位为 KB。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DownloadUrl 审计日志下载地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrMsg 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ProgressRate 日志下载进度。
      */
     function __construct()
     {
@@ -132,6 +128,10 @@ class AuditLogFile extends AbstractModel
 
         if (array_key_exists("ErrMsg",$param) and $param["ErrMsg"] !== null) {
             $this->ErrMsg = $param["ErrMsg"];
+        }
+
+        if (array_key_exists("ProgressRate",$param) and $param["ProgressRate"] !== null) {
+            $this->ProgressRate = $param["ProgressRate"];
         }
     }
 }

@@ -33,9 +33,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getScore() 获取该字段用于返回图片检索模型识别的分值，取值为**0-100**，表示该审核图片**与库中样本的相似分值**，得分越高，代表当前内容越有可能命中相似图库内的样本。
  * @method void setScore(integer $Score) 设置该字段用于返回图片检索模型识别的分值，取值为**0-100**，表示该审核图片**与库中样本的相似分值**，得分越高，代表当前内容越有可能命中相似图库内的样本。
  * @method array getDetails() 获取该字段用于返回黑白库比对结果的详细信息，如：序号、库名称、恶意标签等信息；详细返回信息敬请参考对应数据结构（[LibDetail](https://cloud.tencent.com/document/product/1125/53274#LibDetail)）的描述文档
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDetails(array $Details) 设置该字段用于返回黑白库比对结果的详细信息，如：序号、库名称、恶意标签等信息；详细返回信息敬请参考对应数据结构（[LibDetail](https://cloud.tencent.com/document/product/1125/53274#LibDetail)）的描述文档
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class LibResult extends AbstractModel
 {
@@ -67,7 +65,6 @@ class LibResult extends AbstractModel
 
     /**
      * @var array 该字段用于返回黑白库比对结果的详细信息，如：序号、库名称、恶意标签等信息；详细返回信息敬请参考对应数据结构（[LibDetail](https://cloud.tencent.com/document/product/1125/53274#LibDetail)）的描述文档
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Details;
 
@@ -79,7 +76,6 @@ class LibResult extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Score 该字段用于返回图片检索模型识别的分值，取值为**0-100**，表示该审核图片**与库中样本的相似分值**，得分越高，代表当前内容越有可能命中相似图库内的样本。
      * @param array $Details 该字段用于返回黑白库比对结果的详细信息，如：序号、库名称、恶意标签等信息；详细返回信息敬请参考对应数据结构（[LibDetail](https://cloud.tencent.com/document/product/1125/53274#LibDetail)）的描述文档
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSchemaName(string $SchemaName) 设置数据库schema名称
  * @method string getName() 获取表名称
  * @method void setName(string $Name) 设置表名称
- * @method string getCatalog() 获取数据目录
- * @method void setCatalog(string $Catalog) 设置数据目录
+ * @method string getCatalog() 获取catalog类型
+ * @method void setCatalog(string $Catalog) 设置catalog类型
  * @method string getKeyword() 获取查询关键词
  * @method void setKeyword(string $Keyword) 设置查询关键词
- * @method string getPattern() 获取查询模式
- * @method void setPattern(string $Pattern) 设置查询模式
+ * @method string getPattern() 获取查询模式，只支持填*
+ * @method void setPattern(string $Pattern) 设置查询模式，只支持填*
  * @method string getType() 获取表类型
  * @method void setType(string $Type) 设置表类型
  * @method string getStartTime() 获取筛选参数：更新开始时间
@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSort(string $Sort) 设置排序字段：create_time：创建时间
  * @method boolean getAsc() 获取排序字段：true：升序（默认），false：降序
  * @method void setAsc(boolean $Asc) 设置排序字段：true：升序（默认），false：降序
+ * @method string getDatasourceConnectionName() 获取数据源连接名
+ * @method void setDatasourceConnectionName(string $DatasourceConnectionName) 设置数据源连接名
  */
 class DescribeDMSTablesRequest extends AbstractModel
 {
@@ -65,7 +67,7 @@ class DescribeDMSTablesRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string 数据目录
+     * @var string catalog类型
      */
     public $Catalog;
 
@@ -75,7 +77,7 @@ class DescribeDMSTablesRequest extends AbstractModel
     public $Keyword;
 
     /**
-     * @var string 查询模式
+     * @var string 查询模式，只支持填*
      */
     public $Pattern;
 
@@ -115,12 +117,17 @@ class DescribeDMSTablesRequest extends AbstractModel
     public $Asc;
 
     /**
+     * @var string 数据源连接名
+     */
+    public $DatasourceConnectionName;
+
+    /**
      * @param string $DbName 数据库名称
      * @param string $SchemaName 数据库schema名称
      * @param string $Name 表名称
-     * @param string $Catalog 数据目录
+     * @param string $Catalog catalog类型
      * @param string $Keyword 查询关键词
-     * @param string $Pattern 查询模式
+     * @param string $Pattern 查询模式，只支持填*
      * @param string $Type 表类型
      * @param string $StartTime 筛选参数：更新开始时间
      * @param string $EndTime 筛选参数：更新结束时间
@@ -128,6 +135,7 @@ class DescribeDMSTablesRequest extends AbstractModel
      * @param integer $Offset 分页参数
      * @param string $Sort 排序字段：create_time：创建时间
      * @param boolean $Asc 排序字段：true：升序（默认），false：降序
+     * @param string $DatasourceConnectionName 数据源连接名
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class DescribeDMSTablesRequest extends AbstractModel
 
         if (array_key_exists("Asc",$param) and $param["Asc"] !== null) {
             $this->Asc = $param["Asc"];
+        }
+
+        if (array_key_exists("DatasourceConnectionName",$param) and $param["DatasourceConnectionName"] !== null) {
+            $this->DatasourceConnectionName = $param["DatasourceConnectionName"];
         }
     }
 }

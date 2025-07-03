@@ -32,8 +32,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVolumes(array $Volumes) 设置容器加载本地卷列表
  * @method string getCommand() 获取运行的命令
  * @method void setCommand(string $Command) 设置运行的命令
- * @method string getRestartPolicy() 获取容器重启策略
- * @method void setRestartPolicy(string $RestartPolicy) 设置容器重启策略
+ * @method string getRestartPolicy() 获取容器重启策略。
+- no -默认策略，在容器退出时不重启容器
+- on-failure -在容器非正常退出时（退出状态非0），才会重启容器
+- on-failure:3 -在容器非正常退出时重启容器，最多重启3次
+- always -在容器退出时总是重启容器
+ * @method void setRestartPolicy(string $RestartPolicy) 设置容器重启策略。
+- no -默认策略，在容器退出时不重启容器
+- on-failure -在容器非正常退出时（退出状态非0），才会重启容器
+- on-failure:3 -在容器非正常退出时重启容器，最多重启3次
+- always -在容器退出时总是重启容器
  */
 class DockerContainerConfiguration extends AbstractModel
 {
@@ -68,7 +76,11 @@ class DockerContainerConfiguration extends AbstractModel
     public $Command;
 
     /**
-     * @var string 容器重启策略
+     * @var string 容器重启策略。
+- no -默认策略，在容器退出时不重启容器
+- on-failure -在容器非正常退出时（退出状态非0），才会重启容器
+- on-failure:3 -在容器非正常退出时重启容器，最多重启3次
+- always -在容器退出时总是重启容器
      */
     public $RestartPolicy;
 
@@ -79,7 +91,11 @@ class DockerContainerConfiguration extends AbstractModel
      * @param array $PublishPorts 容器端口主机端口映射列表
      * @param array $Volumes 容器加载本地卷列表
      * @param string $Command 运行的命令
-     * @param string $RestartPolicy 容器重启策略
+     * @param string $RestartPolicy 容器重启策略。
+- no -默认策略，在容器退出时不重启容器
+- on-failure -在容器非正常退出时（退出状态非0），才会重启容器
+- on-failure:3 -在容器非正常退出时重启容器，最多重启3次
+- always -在容器退出时总是重启容器
      */
     function __construct()
     {

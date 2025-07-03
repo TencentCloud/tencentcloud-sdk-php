@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * k8s env 的 ResourceFieldRef
  *
  * @method string getResource() 获取k8s 的 Resource
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResource(string $Resource) 设置k8s 的 Resource
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ResourceFieldRef extends AbstractModel
 {
     /**
      * @var string k8s 的 Resource
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Resource;
 
     /**
      * @param string $Resource k8s 的 Resource
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

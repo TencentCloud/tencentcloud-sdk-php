@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取需要停止的实例id
  * @method void setInstanceId(string $InstanceId) 设置需要停止的实例id
+ * @method boolean getIsModifyAll() 获取修改是否包括白名单
+ * @method void setIsModifyAll(boolean $IsModifyAll) 设置修改是否包括白名单
  */
 class StopInstanceRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class StopInstanceRequest extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var boolean 修改是否包括白名单
+     */
+    public $IsModifyAll;
+
+    /**
      * @param string $InstanceId 需要停止的实例id
+     * @param boolean $IsModifyAll 修改是否包括白名单
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class StopInstanceRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("IsModifyAll",$param) and $param["IsModifyAll"] !== null) {
+            $this->IsModifyAll = $param["IsModifyAll"];
         }
     }
 }

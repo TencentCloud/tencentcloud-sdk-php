@@ -23,7 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method Agent getAgent() 获取关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容
 此接口下面信息必填。
 <ul>
-<li>渠道应用标识:  Agent.AppId</li>
+<li>渠道应用标识:  <a href="https://qcloudimg.tencent-cloud.cn/raw/a71872de3d540d55451e3e73a2ad1a6e.png" target="_blank">Agent.AppId</a></li>
 <li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
 <li>第三方平台子客企业中的员工标识: Agent.ProxyOperator.OpenId</li>
 </ul>注:
@@ -33,7 +33,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAgent(Agent $Agent) 设置关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容
 此接口下面信息必填。
 <ul>
-<li>渠道应用标识:  Agent.AppId</li>
+<li>渠道应用标识:  <a href="https://qcloudimg.tencent-cloud.cn/raw/a71872de3d540d55451e3e73a2ad1a6e.png" target="_blank">Agent.AppId</a></li>
 <li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
 <li>第三方平台子客企业中的员工标识: Agent.ProxyOperator.OpenId</li>
 </ul>注:
@@ -41,14 +41,18 @@ use TencentCloud\Common\AbstractModel;
 `2. 员工认证时， 此时的Agent.ProxyOperator.OpenId将会是员工认证加入企业后的唯一标识，建议开发者保存此员工的OpenId，后续各项接口调用皆需要此参数。 `
 `3. 同渠道应用(Agent.AppId)下，企业唯一标识ProxyOrganizationOpenId需要保持唯一，员工唯一标识OpenId也要保持唯一 (而不是企业下唯一)。 `
  * @method string getProxyOrganizationName() 获取第三方平台子客的企业名称，请确认该企业名称与企业营业执照中注册的名称完全一致。
-<font color="red">在测试环境联调的过程中，企业名称请使用以下名称 
+<font color="red">
+在测试环境联调的过程中，企业名称请统一加上“测试”二字，如：典子谦示例企业测试，否则将无法审核通过。
+企业名称请使用以下名称, 以下名称可以不用走收录。
 **子客测试专用企业1 - 子客测试专用企业9**</font>
 
 注:
  `1. 如果名称中包含英文括号()，请使用中文括号（）代替。`
  `2、该名称需要与Agent.ProxyOrganizationOpenId相匹配,  企业激活后Agent.ProxyOrganizationOpenId会跟此企业名称一一绑定; 如果您的企业已经在认证授权中或者激活完成，这里修改子客企业名字将不会生效。 `
  * @method void setProxyOrganizationName(string $ProxyOrganizationName) 设置第三方平台子客的企业名称，请确认该企业名称与企业营业执照中注册的名称完全一致。
-<font color="red">在测试环境联调的过程中，企业名称请使用以下名称 
+<font color="red">
+在测试环境联调的过程中，企业名称请统一加上“测试”二字，如：典子谦示例企业测试，否则将无法审核通过。
+企业名称请使用以下名称, 以下名称可以不用走收录。
 **子客测试专用企业1 - 子客测试专用企业9**</font>
 
 注:
@@ -110,6 +114,7 @@ use TencentCloud\Common\AbstractModel;
 <ul><li>**PC**：(默认)<font color="red">web控制台</font>链接, 需要在PC浏览器中打开</li>
 <li>**CHANNEL**：H5跳转到电子签小程序链接, 一般用于发送短信中带的链接, 打开后进入腾讯电子签小程序</li>
 <li>**SHORT_URL**：<font color="red">H5</font>跳转到电子签小程序链接的短链形式, 一般用于发送短信中带的链接, 打开后进入腾讯电子签小程序</li>
+<li>**WEIXIN_QRCODE_URL**：直接跳转至电子签小程序的二维码链接，无需通过中转页。<font color="red">您需要自行将其转换为二维码，使用微信扫码后可直接进入。请注意，直接点击链接是无效的。</font></li>
 <li>**APP**：<font color="red">APP或小程序</font>跳转电子签小程序链接, 一般用于贵方小程序或者APP跳转过来,  打开后进入腾讯电子签小程序</li>
 <li>**H5**：<font color="red">H5长链接</font>跳转H5链接, 一般用于贵方H5跳转过来,  打开后进入腾讯电子签H5页面</li>
 <li>**SHORT_H5**：<font color="red">H5短链</font>跳转H5的短链形式, 一般用于发送短信中带的链接, 打开后进入腾讯电子签H5页面</li></ul>
@@ -117,6 +122,7 @@ use TencentCloud\Common\AbstractModel;
 <ul><li>**PC**：(默认)<font color="red">web控制台</font>链接, 需要在PC浏览器中打开</li>
 <li>**CHANNEL**：H5跳转到电子签小程序链接, 一般用于发送短信中带的链接, 打开后进入腾讯电子签小程序</li>
 <li>**SHORT_URL**：<font color="red">H5</font>跳转到电子签小程序链接的短链形式, 一般用于发送短信中带的链接, 打开后进入腾讯电子签小程序</li>
+<li>**WEIXIN_QRCODE_URL**：直接跳转至电子签小程序的二维码链接，无需通过中转页。<font color="red">您需要自行将其转换为二维码，使用微信扫码后可直接进入。请注意，直接点击链接是无效的。</font></li>
 <li>**APP**：<font color="red">APP或小程序</font>跳转电子签小程序链接, 一般用于贵方小程序或者APP跳转过来,  打开后进入腾讯电子签小程序</li>
 <li>**H5**：<font color="red">H5长链接</font>跳转H5链接, 一般用于贵方H5跳转过来,  打开后进入腾讯电子签H5页面</li>
 <li>**SHORT_H5**：<font color="red">H5短链</font>跳转H5的短链形式, 一般用于发送短信中带的链接, 打开后进入腾讯电子签H5页面</li></ul>
@@ -125,35 +131,63 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoJumpBackEvent(string $AutoJumpBackEvent) 设置触发自动跳转事件，仅对EndPoint为App类型有效，可选值包括：
 <ul><li> **VERIFIED** :企业认证完成/员工认证完成后跳回原App/小程序</li></ul>
  * @method array getAuthorizationTypes() 获取可选的此企业允许的授权方式, 可以设置的方式有:
-<ul><li>1：上传授权书</li>
+<ul>
 <li>2：转法定代表人授权</li>
-<li>4：企业实名认证（信任第三方认证源）（此项有排他性, 选择后不能增添其他的方式）</li></ul>
-注:<ul>
-<li>未选择信任第三方认证源时，如果是法人进行企业激活，仅支持法人扫脸直接授权，该配置不对此法人生效`</li>
-<li>选择信任第三方认证源时，请先通过<a href="https://qian.tencent.com/developers/partnerApis/accounts/SyncProxyOrganization" target="_blank">同步企业信息</a>接口同步信息。</li>
-<li>该参数仅在企业未激活时生效</li>
+<li>5：授权书+对公打款</li>
 </ul>
  * @method void setAuthorizationTypes(array $AuthorizationTypes) 设置可选的此企业允许的授权方式, 可以设置的方式有:
-<ul><li>1：上传授权书</li>
+<ul>
 <li>2：转法定代表人授权</li>
-<li>4：企业实名认证（信任第三方认证源）（此项有排他性, 选择后不能增添其他的方式）</li></ul>
-注:<ul>
-<li>未选择信任第三方认证源时，如果是法人进行企业激活，仅支持法人扫脸直接授权，该配置不对此法人生效`</li>
-<li>选择信任第三方认证源时，请先通过<a href="https://qian.tencent.com/developers/partnerApis/accounts/SyncProxyOrganization" target="_blank">同步企业信息</a>接口同步信息。</li>
-<li>该参数仅在企业未激活时生效</li>
+<li>5：授权书+对公打款</li>
 </ul>
  * @method UserInfo getOperator() 获取暂未开放
  * @method void setOperator(UserInfo $Operator) 设置暂未开放
  * @method string getProxyOperatorIdCardNumber() 获取子客经办人身份证
-注意：`如果已同步，这里非空会更新同步的经办人身份证号，暂时只支持居民身份证类型`。
+注意：`如果已同步，这里非空会更新同步的经办人身份证号，暂时只支持中国大陆居民身份证类型`。
  * @method void setProxyOperatorIdCardNumber(string $ProxyOperatorIdCardNumber) 设置子客经办人身份证
-注意：`如果已同步，这里非空会更新同步的经办人身份证号，暂时只支持居民身份证类型`。
+注意：`如果已同步，这里非空会更新同步的经办人身份证号，暂时只支持中国大陆居民身份证类型`。
  * @method string getAutoJumpUrl() 获取认证完成跳转链接。
-注意：`目前仅支持 H5 和 PC`。
+注意：`此功能仅在Endpoint参数设置成 H5 或 PC时才有效`。
  * @method void setAutoJumpUrl(string $AutoJumpUrl) 设置认证完成跳转链接。
-注意：`目前仅支持 H5 和 PC`。
+注意：`此功能仅在Endpoint参数设置成 H5 或 PC时才有效`。
  * @method string getTopNavigationStatus() 获取是否展示头顶导航栏  <ul><li> **ENABLE** : (默认)进入web控制台展示头顶导航栏</li> <li> **DISABLE** : 进入web控制台不展示头顶导航栏</li></ul> 注：该参数**仅在企业和员工激活完成，登录控制台场景才生效**。
+
+<a href="https://qcloudimg.tencent-cloud.cn/raw/dd54f333140c711cf6a88e3801bcd178.png" target="_blank">点击查看头顶导航栏位置</a>
  * @method void setTopNavigationStatus(string $TopNavigationStatus) 设置是否展示头顶导航栏  <ul><li> **ENABLE** : (默认)进入web控制台展示头顶导航栏</li> <li> **DISABLE** : 进入web控制台不展示头顶导航栏</li></ul> 注：该参数**仅在企业和员工激活完成，登录控制台场景才生效**。
+
+<a href="https://qcloudimg.tencent-cloud.cn/raw/dd54f333140c711cf6a88e3801bcd178.png" target="_blank">点击查看头顶导航栏位置</a>
+ * @method boolean getAutoActive() 获取是否自动激活子客企业，有下面两种选项：
+
+**false（默认设置）**：不自动激活子客户。您需要通过控制台或调用[激活或者续期子企业](https://qian.tencent.com/developers/partnerApis/accounts/CreateChannelSubOrganizationActive)接口手动完成激活过程。
+
+**true**：若持有的许可证充足，子客户企业注册完成后将自动激活，无需手动操作或访问控制台。
+
+<b>注</b>：如果<b>应用扩展服务</b>中的<b>自动激活子客企业</b>为打开态， 则忽略本接口的AutoActive这个参数（若持有的许可证充足，子客户企业注册完成后将自动激活），具体位置参考下图：
+![image](https://qcloudimg.tencent-cloud.cn/raw/c3639b05503d3735bac483d17aa6b0a3.png)
+ * @method void setAutoActive(boolean $AutoActive) 设置是否自动激活子客企业，有下面两种选项：
+
+**false（默认设置）**：不自动激活子客户。您需要通过控制台或调用[激活或者续期子企业](https://qian.tencent.com/developers/partnerApis/accounts/CreateChannelSubOrganizationActive)接口手动完成激活过程。
+
+**true**：若持有的许可证充足，子客户企业注册完成后将自动激活，无需手动操作或访问控制台。
+
+<b>注</b>：如果<b>应用扩展服务</b>中的<b>自动激活子客企业</b>为打开态， 则忽略本接口的AutoActive这个参数（若持有的许可证充足，子客户企业注册完成后将自动激活），具体位置参考下图：
+![image](https://qcloudimg.tencent-cloud.cn/raw/c3639b05503d3735bac483d17aa6b0a3.png)
+ * @method string getBusinessLicense() 获取营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。
+ * @method void setBusinessLicense(string $BusinessLicense) 设置营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。
+ * @method string getProxyAddress() 获取组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。	
+ * @method void setProxyAddress(string $ProxyAddress) 设置组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。	
+ * @method string getProxyLegalName() 获取组织机构法人的姓名。 请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。	
+ * @method void setProxyLegalName(string $ProxyLegalName) 设置组织机构法人的姓名。 请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。	
+ * @method array getPowerOfAttorneys() 获取授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。
+ p.s. 如果上传授权书 ，需遵循以下条件 
+1. 超管的信息（超管姓名，超管手机号）必须为必填参数。 
+2. 认证方式AuthorizationTypes必须只能是上传授权书方式	
+ * @method void setPowerOfAttorneys(array $PowerOfAttorneys) 设置授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。
+ p.s. 如果上传授权书 ，需遵循以下条件 
+1. 超管的信息（超管姓名，超管手机号）必须为必填参数。 
+2. 认证方式AuthorizationTypes必须只能是上传授权书方式	
+ * @method OrganizationAuthorizationOptions getOrganizationAuthorizationOptions() 获取企业认证时个性化能力信息
+ * @method void setOrganizationAuthorizationOptions(OrganizationAuthorizationOptions $OrganizationAuthorizationOptions) 设置企业认证时个性化能力信息
  */
 class CreateConsoleLoginUrlRequest extends AbstractModel
 {
@@ -161,7 +195,7 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
      * @var Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容
 此接口下面信息必填。
 <ul>
-<li>渠道应用标识:  Agent.AppId</li>
+<li>渠道应用标识:  <a href="https://qcloudimg.tencent-cloud.cn/raw/a71872de3d540d55451e3e73a2ad1a6e.png" target="_blank">Agent.AppId</a></li>
 <li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
 <li>第三方平台子客企业中的员工标识: Agent.ProxyOperator.OpenId</li>
 </ul>注:
@@ -173,7 +207,9 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
 
     /**
      * @var string 第三方平台子客的企业名称，请确认该企业名称与企业营业执照中注册的名称完全一致。
-<font color="red">在测试环境联调的过程中，企业名称请使用以下名称 
+<font color="red">
+在测试环境联调的过程中，企业名称请统一加上“测试”二字，如：典子谦示例企业测试，否则将无法审核通过。
+企业名称请使用以下名称, 以下名称可以不用走收录。
 **子客测试专用企业1 - 子客测试专用企业9**</font>
 
 注:
@@ -237,6 +273,7 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
 <ul><li>**PC**：(默认)<font color="red">web控制台</font>链接, 需要在PC浏览器中打开</li>
 <li>**CHANNEL**：H5跳转到电子签小程序链接, 一般用于发送短信中带的链接, 打开后进入腾讯电子签小程序</li>
 <li>**SHORT_URL**：<font color="red">H5</font>跳转到电子签小程序链接的短链形式, 一般用于发送短信中带的链接, 打开后进入腾讯电子签小程序</li>
+<li>**WEIXIN_QRCODE_URL**：直接跳转至电子签小程序的二维码链接，无需通过中转页。<font color="red">您需要自行将其转换为二维码，使用微信扫码后可直接进入。请注意，直接点击链接是无效的。</font></li>
 <li>**APP**：<font color="red">APP或小程序</font>跳转电子签小程序链接, 一般用于贵方小程序或者APP跳转过来,  打开后进入腾讯电子签小程序</li>
 <li>**H5**：<font color="red">H5长链接</font>跳转H5链接, 一般用于贵方H5跳转过来,  打开后进入腾讯电子签H5页面</li>
 <li>**SHORT_H5**：<font color="red">H5短链</font>跳转H5的短链形式, 一般用于发送短信中带的链接, 打开后进入腾讯电子签H5页面</li></ul>
@@ -251,13 +288,9 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
 
     /**
      * @var array 可选的此企业允许的授权方式, 可以设置的方式有:
-<ul><li>1：上传授权书</li>
+<ul>
 <li>2：转法定代表人授权</li>
-<li>4：企业实名认证（信任第三方认证源）（此项有排他性, 选择后不能增添其他的方式）</li></ul>
-注:<ul>
-<li>未选择信任第三方认证源时，如果是法人进行企业激活，仅支持法人扫脸直接授权，该配置不对此法人生效`</li>
-<li>选择信任第三方认证源时，请先通过<a href="https://qian.tencent.com/developers/partnerApis/accounts/SyncProxyOrganization" target="_blank">同步企业信息</a>接口同步信息。</li>
-<li>该参数仅在企业未激活时生效</li>
+<li>5：授权书+对公打款</li>
 </ul>
      */
     public $AuthorizationTypes;
@@ -270,26 +303,68 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
 
     /**
      * @var string 子客经办人身份证
-注意：`如果已同步，这里非空会更新同步的经办人身份证号，暂时只支持居民身份证类型`。
+注意：`如果已同步，这里非空会更新同步的经办人身份证号，暂时只支持中国大陆居民身份证类型`。
      */
     public $ProxyOperatorIdCardNumber;
 
     /**
      * @var string 认证完成跳转链接。
-注意：`目前仅支持 H5 和 PC`。
+注意：`此功能仅在Endpoint参数设置成 H5 或 PC时才有效`。
      */
     public $AutoJumpUrl;
 
     /**
      * @var string 是否展示头顶导航栏  <ul><li> **ENABLE** : (默认)进入web控制台展示头顶导航栏</li> <li> **DISABLE** : 进入web控制台不展示头顶导航栏</li></ul> 注：该参数**仅在企业和员工激活完成，登录控制台场景才生效**。
+
+<a href="https://qcloudimg.tencent-cloud.cn/raw/dd54f333140c711cf6a88e3801bcd178.png" target="_blank">点击查看头顶导航栏位置</a>
      */
     public $TopNavigationStatus;
+
+    /**
+     * @var boolean 是否自动激活子客企业，有下面两种选项：
+
+**false（默认设置）**：不自动激活子客户。您需要通过控制台或调用[激活或者续期子企业](https://qian.tencent.com/developers/partnerApis/accounts/CreateChannelSubOrganizationActive)接口手动完成激活过程。
+
+**true**：若持有的许可证充足，子客户企业注册完成后将自动激活，无需手动操作或访问控制台。
+
+<b>注</b>：如果<b>应用扩展服务</b>中的<b>自动激活子客企业</b>为打开态， 则忽略本接口的AutoActive这个参数（若持有的许可证充足，子客户企业注册完成后将自动激活），具体位置参考下图：
+![image](https://qcloudimg.tencent-cloud.cn/raw/c3639b05503d3735bac483d17aa6b0a3.png)
+     */
+    public $AutoActive;
+
+    /**
+     * @var string 营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。
+     */
+    public $BusinessLicense;
+
+    /**
+     * @var string 组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。	
+     */
+    public $ProxyAddress;
+
+    /**
+     * @var string 组织机构法人的姓名。 请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。	
+     */
+    public $ProxyLegalName;
+
+    /**
+     * @var array 授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。
+ p.s. 如果上传授权书 ，需遵循以下条件 
+1. 超管的信息（超管姓名，超管手机号）必须为必填参数。 
+2. 认证方式AuthorizationTypes必须只能是上传授权书方式	
+     */
+    public $PowerOfAttorneys;
+
+    /**
+     * @var OrganizationAuthorizationOptions 企业认证时个性化能力信息
+     */
+    public $OrganizationAuthorizationOptions;
 
     /**
      * @param Agent $Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容
 此接口下面信息必填。
 <ul>
-<li>渠道应用标识:  Agent.AppId</li>
+<li>渠道应用标识:  <a href="https://qcloudimg.tencent-cloud.cn/raw/a71872de3d540d55451e3e73a2ad1a6e.png" target="_blank">Agent.AppId</a></li>
 <li>第三方平台子客企业标识: Agent.ProxyOrganizationOpenId</li>
 <li>第三方平台子客企业中的员工标识: Agent.ProxyOperator.OpenId</li>
 </ul>注:
@@ -297,7 +372,9 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
 `2. 员工认证时， 此时的Agent.ProxyOperator.OpenId将会是员工认证加入企业后的唯一标识，建议开发者保存此员工的OpenId，后续各项接口调用皆需要此参数。 `
 `3. 同渠道应用(Agent.AppId)下，企业唯一标识ProxyOrganizationOpenId需要保持唯一，员工唯一标识OpenId也要保持唯一 (而不是企业下唯一)。 `
      * @param string $ProxyOrganizationName 第三方平台子客的企业名称，请确认该企业名称与企业营业执照中注册的名称完全一致。
-<font color="red">在测试环境联调的过程中，企业名称请使用以下名称 
+<font color="red">
+在测试环境联调的过程中，企业名称请统一加上“测试”二字，如：典子谦示例企业测试，否则将无法审核通过。
+企业名称请使用以下名称, 以下名称可以不用走收录。
 **子客测试专用企业1 - 子客测试专用企业9**</font>
 
 注:
@@ -333,26 +410,41 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
 <ul><li>**PC**：(默认)<font color="red">web控制台</font>链接, 需要在PC浏览器中打开</li>
 <li>**CHANNEL**：H5跳转到电子签小程序链接, 一般用于发送短信中带的链接, 打开后进入腾讯电子签小程序</li>
 <li>**SHORT_URL**：<font color="red">H5</font>跳转到电子签小程序链接的短链形式, 一般用于发送短信中带的链接, 打开后进入腾讯电子签小程序</li>
+<li>**WEIXIN_QRCODE_URL**：直接跳转至电子签小程序的二维码链接，无需通过中转页。<font color="red">您需要自行将其转换为二维码，使用微信扫码后可直接进入。请注意，直接点击链接是无效的。</font></li>
 <li>**APP**：<font color="red">APP或小程序</font>跳转电子签小程序链接, 一般用于贵方小程序或者APP跳转过来,  打开后进入腾讯电子签小程序</li>
 <li>**H5**：<font color="red">H5长链接</font>跳转H5链接, 一般用于贵方H5跳转过来,  打开后进入腾讯电子签H5页面</li>
 <li>**SHORT_H5**：<font color="red">H5短链</font>跳转H5的短链形式, 一般用于发送短信中带的链接, 打开后进入腾讯电子签H5页面</li></ul>
      * @param string $AutoJumpBackEvent 触发自动跳转事件，仅对EndPoint为App类型有效，可选值包括：
 <ul><li> **VERIFIED** :企业认证完成/员工认证完成后跳回原App/小程序</li></ul>
      * @param array $AuthorizationTypes 可选的此企业允许的授权方式, 可以设置的方式有:
-<ul><li>1：上传授权书</li>
+<ul>
 <li>2：转法定代表人授权</li>
-<li>4：企业实名认证（信任第三方认证源）（此项有排他性, 选择后不能增添其他的方式）</li></ul>
-注:<ul>
-<li>未选择信任第三方认证源时，如果是法人进行企业激活，仅支持法人扫脸直接授权，该配置不对此法人生效`</li>
-<li>选择信任第三方认证源时，请先通过<a href="https://qian.tencent.com/developers/partnerApis/accounts/SyncProxyOrganization" target="_blank">同步企业信息</a>接口同步信息。</li>
-<li>该参数仅在企业未激活时生效</li>
+<li>5：授权书+对公打款</li>
 </ul>
      * @param UserInfo $Operator 暂未开放
      * @param string $ProxyOperatorIdCardNumber 子客经办人身份证
-注意：`如果已同步，这里非空会更新同步的经办人身份证号，暂时只支持居民身份证类型`。
+注意：`如果已同步，这里非空会更新同步的经办人身份证号，暂时只支持中国大陆居民身份证类型`。
      * @param string $AutoJumpUrl 认证完成跳转链接。
-注意：`目前仅支持 H5 和 PC`。
+注意：`此功能仅在Endpoint参数设置成 H5 或 PC时才有效`。
      * @param string $TopNavigationStatus 是否展示头顶导航栏  <ul><li> **ENABLE** : (默认)进入web控制台展示头顶导航栏</li> <li> **DISABLE** : 进入web控制台不展示头顶导航栏</li></ul> 注：该参数**仅在企业和员工激活完成，登录控制台场景才生效**。
+
+<a href="https://qcloudimg.tencent-cloud.cn/raw/dd54f333140c711cf6a88e3801bcd178.png" target="_blank">点击查看头顶导航栏位置</a>
+     * @param boolean $AutoActive 是否自动激活子客企业，有下面两种选项：
+
+**false（默认设置）**：不自动激活子客户。您需要通过控制台或调用[激活或者续期子企业](https://qian.tencent.com/developers/partnerApis/accounts/CreateChannelSubOrganizationActive)接口手动完成激活过程。
+
+**true**：若持有的许可证充足，子客户企业注册完成后将自动激活，无需手动操作或访问控制台。
+
+<b>注</b>：如果<b>应用扩展服务</b>中的<b>自动激活子客企业</b>为打开态， 则忽略本接口的AutoActive这个参数（若持有的许可证充足，子客户企业注册完成后将自动激活），具体位置参考下图：
+![image](https://qcloudimg.tencent-cloud.cn/raw/c3639b05503d3735bac483d17aa6b0a3.png)
+     * @param string $BusinessLicense 营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。
+     * @param string $ProxyAddress 组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。	
+     * @param string $ProxyLegalName 组织机构法人的姓名。 请确认该企业统一社会信用代码与企业营业执照中注册的法人姓名一致。	
+     * @param array $PowerOfAttorneys 授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。
+ p.s. 如果上传授权书 ，需遵循以下条件 
+1. 超管的信息（超管姓名，超管手机号）必须为必填参数。 
+2. 认证方式AuthorizationTypes必须只能是上传授权书方式	
+     * @param OrganizationAuthorizationOptions $OrganizationAuthorizationOptions 企业认证时个性化能力信息
      */
     function __construct()
     {
@@ -427,6 +519,31 @@ class CreateConsoleLoginUrlRequest extends AbstractModel
 
         if (array_key_exists("TopNavigationStatus",$param) and $param["TopNavigationStatus"] !== null) {
             $this->TopNavigationStatus = $param["TopNavigationStatus"];
+        }
+
+        if (array_key_exists("AutoActive",$param) and $param["AutoActive"] !== null) {
+            $this->AutoActive = $param["AutoActive"];
+        }
+
+        if (array_key_exists("BusinessLicense",$param) and $param["BusinessLicense"] !== null) {
+            $this->BusinessLicense = $param["BusinessLicense"];
+        }
+
+        if (array_key_exists("ProxyAddress",$param) and $param["ProxyAddress"] !== null) {
+            $this->ProxyAddress = $param["ProxyAddress"];
+        }
+
+        if (array_key_exists("ProxyLegalName",$param) and $param["ProxyLegalName"] !== null) {
+            $this->ProxyLegalName = $param["ProxyLegalName"];
+        }
+
+        if (array_key_exists("PowerOfAttorneys",$param) and $param["PowerOfAttorneys"] !== null) {
+            $this->PowerOfAttorneys = $param["PowerOfAttorneys"];
+        }
+
+        if (array_key_exists("OrganizationAuthorizationOptions",$param) and $param["OrganizationAuthorizationOptions"] !== null) {
+            $this->OrganizationAuthorizationOptions = new OrganizationAuthorizationOptions();
+            $this->OrganizationAuthorizationOptions->deserialize($param["OrganizationAuthorizationOptions"]);
         }
     }
 }

@@ -26,18 +26,22 @@ use TencentCloud\Common\AbstractModel;
 您可以输入最多3个 LipColorInfo 来实现给一张图中的最多3张人脸试唇色。
  * @method string getImage() 获取图片 base64 数据，base64 编码后大小不可超过6M。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+暂不支持带有alpha透明通道的图片。
  * @method void setImage(string $Image) 设置图片 base64 数据，base64 编码后大小不可超过6M。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+暂不支持带有alpha透明通道的图片。
  * @method string getUrl() 获取图片的 Url ，对应图片 base64 编码后大小不可超过6M。 
 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
 图片存储于腾讯云的 Url 可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+暂不支持带有alpha透明通道的图片。
  * @method void setUrl(string $Url) 设置图片的 Url ，对应图片 base64 编码后大小不可超过6M。 
 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
 图片存储于腾讯云的 Url 可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+暂不支持带有alpha透明通道的图片。
  * @method string getRspImgType() 获取返回图像方式（base64 或 url ) ，二选一。url有效期为1天。
  * @method void setRspImgType(string $RspImgType) 设置返回图像方式（base64 或 url ) ，二选一。url有效期为1天。
  */
@@ -52,6 +56,7 @@ class TryLipstickPicRequest extends AbstractModel
     /**
      * @var string 图片 base64 数据，base64 编码后大小不可超过6M。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+暂不支持带有alpha透明通道的图片。
      */
     public $Image;
 
@@ -61,6 +66,7 @@ class TryLipstickPicRequest extends AbstractModel
 图片存储于腾讯云的 Url 可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+暂不支持带有alpha透明通道的图片。
      */
     public $Url;
 
@@ -74,11 +80,13 @@ class TryLipstickPicRequest extends AbstractModel
 您可以输入最多3个 LipColorInfo 来实现给一张图中的最多3张人脸试唇色。
      * @param string $Image 图片 base64 数据，base64 编码后大小不可超过6M。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+暂不支持带有alpha透明通道的图片。
      * @param string $Url 图片的 Url ，对应图片 base64 编码后大小不可超过6M。 
 图片的 Url、Image必须提供一个，如果都提供，只使用 Url。 
 图片存储于腾讯云的 Url 可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
 非腾讯云存储的Url速度和稳定性可能受一定影响。 
 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+暂不支持带有alpha透明通道的图片。
      * @param string $RspImgType 返回图像方式（base64 或 url ) ，二选一。url有效期为1天。
      */
     function __construct()

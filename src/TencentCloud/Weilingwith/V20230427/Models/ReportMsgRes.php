@@ -22,40 +22,30 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getReportId() 获取上报消息对应下标的16位标识Id, 即第几个消息
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReportId(string $ReportId) 设置上报消息对应下标的16位标识Id, 即第几个消息
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getReportStatus() 获取上报消息结果，1表示成功推送，0表示推送失败
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReportStatus(integer $ReportStatus) 设置上报消息结果，1表示成功推送，0表示推送失败
-
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ReportMsgRes extends AbstractModel
 {
     /**
      * @var string 上报消息对应下标的16位标识Id, 即第几个消息
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReportId;
 
     /**
      * @var integer 上报消息结果，1表示成功推送，0表示推送失败
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReportStatus;
 
     /**
      * @param string $ReportId 上报消息对应下标的16位标识Id, 即第几个消息
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ReportStatus 上报消息结果，1表示成功推送，0表示推送失败
-
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -23,17 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTime() 获取每天开始的时间
  * @method void setTime(integer $Time) 设置每天开始的时间
  * @method integer getUserNumber() 获取房间人数，用户重复进入同一个房间为1次
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserNumber(integer $UserNumber) 设置房间人数，用户重复进入同一个房间为1次
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUserCount() 获取房间人次，用户每次进入房间为一次
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserCount(integer $UserCount) 设置房间人次，用户每次进入房间为一次
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRoomNumbers() 获取sdkappid下一天内的房间数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoomNumbers(integer $RoomNumbers) 设置sdkappid下一天内的房间数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ScaleInfomation extends AbstractModel
 {
@@ -44,30 +38,24 @@ class ScaleInfomation extends AbstractModel
 
     /**
      * @var integer 房间人数，用户重复进入同一个房间为1次
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserNumber;
 
     /**
      * @var integer 房间人次，用户每次进入房间为一次
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserCount;
 
     /**
      * @var integer sdkappid下一天内的房间数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoomNumbers;
 
     /**
      * @param integer $Time 每天开始的时间
      * @param integer $UserNumber 房间人数，用户重复进入同一个房间为1次
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UserCount 房间人次，用户每次进入房间为一次
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RoomNumbers sdkappid下一天内的房间数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -74,6 +74,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModel(string $Model) 设置项目类型，SIMPLE：简单模式 STANDARD：标准模式
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSecondModuleList() 获取二级菜单
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSecondModuleList(array $SecondModuleList) 设置二级菜单
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method BaseUser getOwner() 获取项目负责人
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOwner(BaseUser $Owner) 设置项目负责人
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Project extends AbstractModel
 {
@@ -161,6 +169,18 @@ class Project extends AbstractModel
     public $Model;
 
     /**
+     * @var array 二级菜单
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SecondModuleList;
+
+    /**
+     * @var BaseUser 项目负责人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Owner;
+
+    /**
      * @param string $TenantId 项目的所在租户ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectId 项目id
@@ -187,6 +207,10 @@ class Project extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 项目状态：0：禁用，1：启用，-3:禁用中，2：启用中
      * @param string $Model 项目类型，SIMPLE：简单模式 STANDARD：标准模式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SecondModuleList 二级菜单
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param BaseUser $Owner 项目负责人
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -268,6 +292,15 @@ class Project extends AbstractModel
 
         if (array_key_exists("Model",$param) and $param["Model"] !== null) {
             $this->Model = $param["Model"];
+        }
+
+        if (array_key_exists("SecondModuleList",$param) and $param["SecondModuleList"] !== null) {
+            $this->SecondModuleList = $param["SecondModuleList"];
+        }
+
+        if (array_key_exists("Owner",$param) and $param["Owner"] !== null) {
+            $this->Owner = new BaseUser();
+            $this->Owner->deserialize($param["Owner"]);
         }
     }
 }

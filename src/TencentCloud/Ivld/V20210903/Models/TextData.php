@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTextTagSet(MultiLevelTag $TextTagSet) 设置文本标签信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getWebMediaURL() 获取文档下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWebMediaURL(string $WebMediaURL) 设置文档下载地址
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TextData extends AbstractModel
 {
@@ -54,11 +58,19 @@ class TextData extends AbstractModel
     public $TextTagSet;
 
     /**
+     * @var string 文档下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WebMediaURL;
+
+    /**
      * @param string $Content 文本内容信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Summary 文本概要信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MultiLevelTag $TextTagSet 文本标签信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $WebMediaURL 文档下载地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -85,6 +97,10 @@ class TextData extends AbstractModel
         if (array_key_exists("TextTagSet",$param) and $param["TextTagSet"] !== null) {
             $this->TextTagSet = new MultiLevelTag();
             $this->TextTagSet->deserialize($param["TextTagSet"]);
+        }
+
+        if (array_key_exists("WebMediaURL",$param) and $param["WebMediaURL"] !== null) {
+            $this->WebMediaURL = $param["WebMediaURL"];
         }
     }
 }

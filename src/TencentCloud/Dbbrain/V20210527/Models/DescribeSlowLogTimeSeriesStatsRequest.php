@@ -26,8 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置开始时间，如“2019-09-10 12:13:14”。
  * @method string getEndTime() 获取结束时间，如“2019-09-10 12:13:14”，结束时间与开始时间的间隔最大可为7天。
  * @method void setEndTime(string $EndTime) 设置结束时间，如“2019-09-10 12:13:14”，结束时间与开始时间的间隔最大可为7天。
- * @method string getProduct() 获取服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
- * @method void setProduct(string $Product) 设置服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
+ * @method string getProduct() 获取服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，"redis" - 云数据库 Redis，"mongodb" - 云数据库 MongoDB，默认为"mysql"。
+ * @method void setProduct(string $Product) 设置服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，"redis" - 云数据库 Redis，"mongodb" - 云数据库 MongoDB，默认为"mysql"。
+ * @method string getInstanceProxyId() 获取Proxy节点ID。	
+ * @method void setInstanceProxyId(string $InstanceProxyId) 设置Proxy节点ID。	
+ * @method string getInstanceNodeId() 获取实列节点ID。	
+ * @method void setInstanceNodeId(string $InstanceNodeId) 设置实列节点ID。	
+ * @method string getType() 获取查询类型，目前支持值：mongod，mongos。
+ * @method void setType(string $Type) 设置查询类型，目前支持值：mongod，mongos。
  */
 class DescribeSlowLogTimeSeriesStatsRequest extends AbstractModel
 {
@@ -47,15 +53,33 @@ class DescribeSlowLogTimeSeriesStatsRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
+     * @var string 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，"redis" - 云数据库 Redis，"mongodb" - 云数据库 MongoDB，默认为"mysql"。
      */
     public $Product;
+
+    /**
+     * @var string Proxy节点ID。	
+     */
+    public $InstanceProxyId;
+
+    /**
+     * @var string 实列节点ID。	
+     */
+    public $InstanceNodeId;
+
+    /**
+     * @var string 查询类型，目前支持值：mongod，mongos。
+     */
+    public $Type;
 
     /**
      * @param string $InstanceId 实例 ID 。
      * @param string $StartTime 开始时间，如“2019-09-10 12:13:14”。
      * @param string $EndTime 结束时间，如“2019-09-10 12:13:14”，结束时间与开始时间的间隔最大可为7天。
-     * @param string $Product 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
+     * @param string $Product 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，"redis" - 云数据库 Redis，"mongodb" - 云数据库 MongoDB，默认为"mysql"。
+     * @param string $InstanceProxyId Proxy节点ID。	
+     * @param string $InstanceNodeId 实列节点ID。	
+     * @param string $Type 查询类型，目前支持值：mongod，mongos。
      */
     function __construct()
     {
@@ -84,6 +108,18 @@ class DescribeSlowLogTimeSeriesStatsRequest extends AbstractModel
 
         if (array_key_exists("Product",$param) and $param["Product"] !== null) {
             $this->Product = $param["Product"];
+        }
+
+        if (array_key_exists("InstanceProxyId",$param) and $param["InstanceProxyId"] !== null) {
+            $this->InstanceProxyId = $param["InstanceProxyId"];
+        }
+
+        if (array_key_exists("InstanceNodeId",$param) and $param["InstanceNodeId"] !== null) {
+            $this->InstanceNodeId = $param["InstanceNodeId"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

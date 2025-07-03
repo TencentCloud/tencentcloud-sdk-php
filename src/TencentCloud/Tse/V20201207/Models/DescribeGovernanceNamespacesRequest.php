@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置tse实例id
  * @method string getName() 获取根据命名空间名称过滤。
  * @method void setName(string $Name) 设置根据命名空间名称过滤。
+ * @method string getSyncToGlobalRegistry() 获取是否开启同步到全局注册中心	
+ * @method void setSyncToGlobalRegistry(string $SyncToGlobalRegistry) 设置是否开启同步到全局注册中心	
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
@@ -42,6 +44,11 @@ class DescribeGovernanceNamespacesRequest extends AbstractModel
     public $Name;
 
     /**
+     * @var string 是否开启同步到全局注册中心	
+     */
+    public $SyncToGlobalRegistry;
+
+    /**
      * @var integer 偏移量，默认为0。
      */
     public $Offset;
@@ -54,6 +61,7 @@ class DescribeGovernanceNamespacesRequest extends AbstractModel
     /**
      * @param string $InstanceId tse实例id
      * @param string $Name 根据命名空间名称过滤。
+     * @param string $SyncToGlobalRegistry 是否开启同步到全局注册中心	
      * @param integer $Offset 偏移量，默认为0。
      * @param integer $Limit 返回数量，默认为20，最大值为100。
      */
@@ -76,6 +84,10 @@ class DescribeGovernanceNamespacesRequest extends AbstractModel
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("SyncToGlobalRegistry",$param) and $param["SyncToGlobalRegistry"] !== null) {
+            $this->SyncToGlobalRegistry = $param["SyncToGlobalRegistry"];
         }
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {

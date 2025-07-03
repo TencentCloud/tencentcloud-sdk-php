@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 获取CVM配额
  *
  * @method integer getUsedQuota() 获取已使用配额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsedQuota(integer $UsedQuota) 设置已使用配额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRemainingQuota() 获取剩余配额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemainingQuota(integer $RemainingQuota) 设置剩余配额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalQuota() 获取总配额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalQuota(integer $TotalQuota) 设置总配额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getZone() 获取可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZone(string $Zone) 设置可用区
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class QuotaEntity extends AbstractModel
 {
     /**
      * @var integer 已使用配额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UsedQuota;
 
     /**
      * @var integer 剩余配额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RemainingQuota;
 
     /**
      * @var integer 总配额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalQuota;
 
     /**
      * @var string 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Zone;
 
     /**
      * @param integer $UsedQuota 已使用配额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RemainingQuota 剩余配额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalQuota 总配额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Zone 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

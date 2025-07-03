@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(integer $ProjectId) 设置通道组所属项目ID
  * @method string getGroupName() 获取通道组别名
  * @method void setGroupName(string $GroupName) 设置通道组别名
- * @method string getRealServerRegion() 获取源站地域，参考接口DescribeDestRegions 返回参数RegionDetail中的RegionId
- * @method void setRealServerRegion(string $RealServerRegion) 设置源站地域，参考接口DescribeDestRegions 返回参数RegionDetail中的RegionId
+ * @method string getRealServerRegion() 获取源站地域，参考接口 [https://cloud.tencent.com/document/api/608/36964] 返回参数RegionDetail中的RegionId
+ * @method void setRealServerRegion(string $RealServerRegion) 设置源站地域，参考接口 [https://cloud.tencent.com/document/api/608/36964] 返回参数RegionDetail中的RegionId
  * @method array getTagSet() 获取标签列表
  * @method void setTagSet(array $TagSet) 设置标签列表
  * @method array getAccessRegionSet() 获取加速地域列表，包括加速地域名，及该地域对应的带宽和并发配置。
@@ -50,7 +50,7 @@ class CreateProxyGroupRequest extends AbstractModel
     public $GroupName;
 
     /**
-     * @var string 源站地域，参考接口DescribeDestRegions 返回参数RegionDetail中的RegionId
+     * @var string 源站地域，参考接口 [https://cloud.tencent.com/document/api/608/36964] 返回参数RegionDetail中的RegionId
      */
     public $RealServerRegion;
 
@@ -82,7 +82,7 @@ class CreateProxyGroupRequest extends AbstractModel
     /**
      * @param integer $ProjectId 通道组所属项目ID
      * @param string $GroupName 通道组别名
-     * @param string $RealServerRegion 源站地域，参考接口DescribeDestRegions 返回参数RegionDetail中的RegionId
+     * @param string $RealServerRegion 源站地域，参考接口 [https://cloud.tencent.com/document/api/608/36964] 返回参数RegionDetail中的RegionId
      * @param array $TagSet 标签列表
      * @param array $AccessRegionSet 加速地域列表，包括加速地域名，及该地域对应的带宽和并发配置。
      * @param string $IPAddressVersion IP版本，可取值：IPv4、IPv6，默认值IPv4

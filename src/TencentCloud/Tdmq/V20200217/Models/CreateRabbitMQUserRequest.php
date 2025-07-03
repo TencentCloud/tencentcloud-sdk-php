@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateRabbitMQUser请求参数结构体
  *
- * @method string getInstanceId() 获取集群实例Id
- * @method void setInstanceId(string $InstanceId) 设置集群实例Id
+ * @method string getInstanceId() 获取实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
  * @method string getUser() 获取用户名，登录时使用
  * @method void setUser(string $User) 设置用户名，登录时使用
- * @method string getPassword() 获取密码，登录时使用
- * @method void setPassword(string $Password) 设置密码，登录时使用
+ * @method string getPassword() 获取密码，登录时使用。规范：不能为空，8-64个字符，至少要包含小写字母、大写字母、数字、特殊字符【()`~!@#$%^&*_=|{}[]:;',.?/】中的两项
+ * @method void setPassword(string $Password) 设置密码，登录时使用。规范：不能为空，8-64个字符，至少要包含小写字母、大写字母、数字、特殊字符【()`~!@#$%^&*_=|{}[]:;',.?/】中的两项
  * @method string getDescription() 获取描述
  * @method void setDescription(string $Description) 设置描述
  * @method array getTags() 获取用户标签，用于决定改用户访问RabbitMQ Management的权限范围
@@ -40,7 +40,7 @@ management：普通控制台用户，monitoring：管理型控制台用户，其
 class CreateRabbitMQUserRequest extends AbstractModel
 {
     /**
-     * @var string 集群实例Id
+     * @var string 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
      */
     public $InstanceId;
 
@@ -50,7 +50,7 @@ class CreateRabbitMQUserRequest extends AbstractModel
     public $User;
 
     /**
-     * @var string 密码，登录时使用
+     * @var string 密码，登录时使用。规范：不能为空，8-64个字符，至少要包含小写字母、大写字母、数字、特殊字符【()`~!@#$%^&*_=|{}[]:;',.?/】中的两项
      */
     public $Password;
 
@@ -76,9 +76,9 @@ management：普通控制台用户，monitoring：管理型控制台用户，其
     public $MaxChannels;
 
     /**
-     * @param string $InstanceId 集群实例Id
+     * @param string $InstanceId 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
      * @param string $User 用户名，登录时使用
-     * @param string $Password 密码，登录时使用
+     * @param string $Password 密码，登录时使用。规范：不能为空，8-64个字符，至少要包含小写字母、大写字母、数字、特殊字符【()`~!@#$%^&*_=|{}[]:;',.?/】中的两项
      * @param string $Description 描述
      * @param array $Tags 用户标签，用于决定改用户访问RabbitMQ Management的权限范围
 management：普通控制台用户，monitoring：管理型控制台用户，其他值：非控制台用户

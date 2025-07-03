@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * DSPA分类分级任务扫描的表信息
  *
  * @method string getTableName() 获取表名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTableName(string $TableName) 设置表名
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DSPATableInfo extends AbstractModel
 {
     /**
      * @var string 表名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TableName;
 
     /**
      * @param string $TableName 表名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -35,33 +35,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDiskDesc() 获取磁盘描述
  * @method void setDiskDesc(string $DiskDesc) 设置磁盘描述
  * @method AttachCBSSpec getAttachCBSSpec() 获取挂载云盘信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAttachCBSSpec(AttachCBSSpec $AttachCBSSpec) 设置挂载云盘信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubProductType() 获取子产品类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubProductType(string $SubProductType) 设置子产品类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSpecCore() 获取规格对应的核数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpecCore(integer $SpecCore) 设置规格对应的核数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSpecMemory() 获取规格对应的内存大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpecMemory(integer $SpecMemory) 设置规格对应的内存大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDiskCount() 获取磁盘的数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskCount(integer $DiskCount) 设置磁盘的数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxDiskSize() 获取磁盘的最大大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxDiskSize(integer $MaxDiskSize) 设置磁盘的最大大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEncrypt() 获取是否为加密云盘
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEncrypt(integer $Encrypt) 设置是否为加密云盘
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NodesSummary extends AbstractModel
 {
@@ -102,43 +88,36 @@ class NodesSummary extends AbstractModel
 
     /**
      * @var AttachCBSSpec 挂载云盘信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AttachCBSSpec;
 
     /**
      * @var string 子产品类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubProductType;
 
     /**
      * @var integer 规格对应的核数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SpecCore;
 
     /**
      * @var integer 规格对应的内存大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SpecMemory;
 
     /**
      * @var integer 磁盘的数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskCount;
 
     /**
      * @var integer 磁盘的最大大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxDiskSize;
 
     /**
      * @var integer 是否为加密云盘
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Encrypt;
 
@@ -151,19 +130,12 @@ class NodesSummary extends AbstractModel
      * @param string $DiskType 磁盘类型
      * @param string $DiskDesc 磁盘描述
      * @param AttachCBSSpec $AttachCBSSpec 挂载云盘信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubProductType 子产品类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SpecCore 规格对应的核数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SpecMemory 规格对应的内存大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DiskCount 磁盘的数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxDiskSize 磁盘的最大大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Encrypt 是否为加密云盘
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,39 +21,34 @@ use TencentCloud\Common\AbstractModel;
  * 带有技能组优先级的座席信息
  *
  * @method string getName() 获取座席名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置座席名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMail() 获取座席邮箱
  * @method void setMail(string $Mail) 设置座席邮箱
  * @method string getPhone() 获取座席电话号码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPhone(string $Phone) 设置座席电话号码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNick() 获取座席昵称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNick(string $Nick) 设置座席昵称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStaffNumber() 获取座席工号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStaffNumber(string $StaffNumber) 设置座席工号
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRoleId() 获取用户角色id
- * @method void setRoleId(integer $RoleId) 设置用户角色id
+ * @method integer getRoleId() 获取用户角色 ID，一个用户绑定了多个角色时以RoleIdList为准
+ * @method void setRoleId(integer $RoleId) 设置用户角色 ID，一个用户绑定了多个角色时以RoleIdList为准
+ * @method integer getRoleIdList() 获取用户角色id列表
+ * @method void setRoleIdList(integer $RoleIdList) 设置用户角色id列表
+ * @method array getRoleList() 获取用户角色id列表
+ * @method void setRoleList(array $RoleList) 设置用户角色id列表
  * @method array getSkillGroupList() 获取所属技能组列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSkillGroupList(array $SkillGroupList) 设置所属技能组列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLastModifyTimestamp() 获取最后修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastModifyTimestamp(integer $LastModifyTimestamp) 设置最后修改时间
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getExtensionNumber() 获取座席分机号（1 到 8 打头，4 - 6 位）
+ * @method void setExtensionNumber(string $ExtensionNumber) 设置座席分机号（1 到 8 打头，4 - 6 位）
+ * @method ForwardingConfig getForwardingConfig() 获取呼叫转移配置
+ * @method void setForwardingConfig(ForwardingConfig $ForwardingConfig) 设置呼叫转移配置
  */
 class StaffInfo extends AbstractModel
 {
     /**
      * @var string 座席名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
@@ -64,54 +59,69 @@ class StaffInfo extends AbstractModel
 
     /**
      * @var string 座席电话号码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Phone;
 
     /**
      * @var string 座席昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Nick;
 
     /**
      * @var string 座席工号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StaffNumber;
 
     /**
-     * @var integer 用户角色id
+     * @var integer 用户角色 ID，一个用户绑定了多个角色时以RoleIdList为准
+     * @deprecated
      */
     public $RoleId;
 
     /**
+     * @var integer 用户角色id列表
+     * @deprecated
+     */
+    public $RoleIdList;
+
+    /**
+     * @var array 用户角色id列表
+     */
+    public $RoleList;
+
+    /**
      * @var array 所属技能组列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SkillGroupList;
 
     /**
      * @var integer 最后修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastModifyTimestamp;
 
     /**
+     * @var string 座席分机号（1 到 8 打头，4 - 6 位）
+     */
+    public $ExtensionNumber;
+
+    /**
+     * @var ForwardingConfig 呼叫转移配置
+     */
+    public $ForwardingConfig;
+
+    /**
      * @param string $Name 座席名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Mail 座席邮箱
      * @param string $Phone 座席电话号码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Nick 座席昵称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StaffNumber 座席工号
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RoleId 用户角色id
+     * @param integer $RoleId 用户角色 ID，一个用户绑定了多个角色时以RoleIdList为准
+     * @param integer $RoleIdList 用户角色id列表
+     * @param array $RoleList 用户角色id列表
      * @param array $SkillGroupList 所属技能组列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LastModifyTimestamp 最后修改时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ExtensionNumber 座席分机号（1 到 8 打头，4 - 6 位）
+     * @param ForwardingConfig $ForwardingConfig 呼叫转移配置
      */
     function __construct()
     {
@@ -150,6 +160,14 @@ class StaffInfo extends AbstractModel
             $this->RoleId = $param["RoleId"];
         }
 
+        if (array_key_exists("RoleIdList",$param) and $param["RoleIdList"] !== null) {
+            $this->RoleIdList = $param["RoleIdList"];
+        }
+
+        if (array_key_exists("RoleList",$param) and $param["RoleList"] !== null) {
+            $this->RoleList = $param["RoleList"];
+        }
+
         if (array_key_exists("SkillGroupList",$param) and $param["SkillGroupList"] !== null) {
             $this->SkillGroupList = [];
             foreach ($param["SkillGroupList"] as $key => $value){
@@ -161,6 +179,15 @@ class StaffInfo extends AbstractModel
 
         if (array_key_exists("LastModifyTimestamp",$param) and $param["LastModifyTimestamp"] !== null) {
             $this->LastModifyTimestamp = $param["LastModifyTimestamp"];
+        }
+
+        if (array_key_exists("ExtensionNumber",$param) and $param["ExtensionNumber"] !== null) {
+            $this->ExtensionNumber = $param["ExtensionNumber"];
+        }
+
+        if (array_key_exists("ForwardingConfig",$param) and $param["ForwardingConfig"] !== null) {
+            $this->ForwardingConfig = new ForwardingConfig();
+            $this->ForwardingConfig->deserialize($param["ForwardingConfig"]);
         }
     }
 }

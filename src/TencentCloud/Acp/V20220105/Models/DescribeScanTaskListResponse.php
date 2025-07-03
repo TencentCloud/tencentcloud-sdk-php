@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTotal() 获取任务总数量
  * @method void setTotal(integer $Total) 设置任务总数量
  * @method array getData() 获取诊断任务数据列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(array $Data) 设置诊断任务数据列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -45,7 +43,6 @@ class DescribeScanTaskListResponse extends AbstractModel
 
     /**
      * @var array 诊断任务数据列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
 
@@ -58,7 +55,6 @@ class DescribeScanTaskListResponse extends AbstractModel
      * @param integer $Result 返回值, 0:成功, 其他值请查看“返回值”定义
      * @param integer $Total 任务总数量
      * @param array $Data 诊断任务数据列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

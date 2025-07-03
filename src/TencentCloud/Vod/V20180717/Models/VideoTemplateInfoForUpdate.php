@@ -40,10 +40,10 @@ use TencentCloud\Common\AbstractModel;
 当取值为 0，表示帧率和原始视频保持一致。
  * @method void setFps(integer $Fps) 设置视频帧率，取值范围：[0, 100]，单位：Hz。
 当取值为 0，表示帧率和原始视频保持一致。
- * @method integer getBitrate() 获取视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
-当取值为 0，表示视频码率和原始视频保持一致。
- * @method void setBitrate(integer $Bitrate) 设置视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
-当取值为 0，表示视频码率和原始视频保持一致。
+ * @method integer getBitrate() 获取视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
+当取值为 0，表示由云点播自动设置码率。
+ * @method void setBitrate(integer $Bitrate) 设置视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
+当取值为 0，表示由云点播自动设置码率。
  * @method string getResolutionAdaptive() 获取分辨率自适应，可选值：
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
@@ -124,8 +124,8 @@ class VideoTemplateInfoForUpdate extends AbstractModel
     public $Fps;
 
     /**
-     * @var integer 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
-当取值为 0，表示视频码率和原始视频保持一致。
+     * @var integer 视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
+当取值为 0，表示由云点播自动设置码率。
      */
     public $Bitrate;
 
@@ -201,8 +201,8 @@ class VideoTemplateInfoForUpdate extends AbstractModel
 <li> H.266 目前只支持恒定 CRF 码率控制方式。 </li>
      * @param integer $Fps 视频帧率，取值范围：[0, 100]，单位：Hz。
 当取值为 0，表示帧率和原始视频保持一致。
-     * @param integer $Bitrate 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
-当取值为 0，表示视频码率和原始视频保持一致。
+     * @param integer $Bitrate 视频流的码率，取值范围：0 和 [128, 100000]，单位：kbps。
+当取值为 0，表示由云点播自动设置码率。
      * @param string $ResolutionAdaptive 分辨率自适应，可选值：
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>

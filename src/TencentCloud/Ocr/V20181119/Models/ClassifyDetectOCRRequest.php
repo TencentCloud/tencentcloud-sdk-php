@@ -57,6 +57,8 @@ HmtResidentPermitFront: 港澳台居住证正面
 HmtResidentPermitBack: 港澳台居住证背面
 EstateCert: 不动产证
 BizLicense: 营业执照
+ForeignPermanentResidentFront: 外国人永居证正面识别
+ForeignPermanentResidentBack: 外国人永居证背面识别
  * @method void setDiscernType(array $DiscernType) 设置可以指定要识别的票证类型,指定后不出现在此列表的票证将不返回类型。不指定时默认返回所有支持类别票证的识别信息。
 
 以下是当前支持的类型：
@@ -76,6 +78,8 @@ HmtResidentPermitFront: 港澳台居住证正面
 HmtResidentPermitBack: 港澳台居住证背面
 EstateCert: 不动产证
 BizLicense: 营业执照
+ForeignPermanentResidentFront: 外国人永居证正面识别
+ForeignPermanentResidentBack: 外国人永居证背面识别
  */
 class ClassifyDetectOCRRequest extends AbstractModel
 {
@@ -116,6 +120,8 @@ HmtResidentPermitFront: 港澳台居住证正面
 HmtResidentPermitBack: 港澳台居住证背面
 EstateCert: 不动产证
 BizLicense: 营业执照
+ForeignPermanentResidentFront: 外国人永居证正面识别
+ForeignPermanentResidentBack: 外国人永居证背面识别
      */
     public $DiscernType;
 
@@ -148,6 +154,8 @@ HmtResidentPermitFront: 港澳台居住证正面
 HmtResidentPermitBack: 港澳台居住证背面
 EstateCert: 不动产证
 BizLicense: 营业执照
+ForeignPermanentResidentFront: 外国人永居证正面识别
+ForeignPermanentResidentBack: 外国人永居证背面识别
      */
     function __construct()
     {

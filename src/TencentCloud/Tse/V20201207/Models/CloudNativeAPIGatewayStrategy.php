@@ -23,33 +23,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStrategyId() 获取策略ID
  * @method void setStrategyId(string $StrategyId) 设置策略ID
  * @method string getStrategyName() 获取策略名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStrategyName(string $StrategyName) 设置策略名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifyTime() 获取更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyTime(string $ModifyTime) 设置更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取策略描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置策略描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method CloudNativeAPIGatewayStrategyAutoScalerConfig getConfig() 获取弹性伸缩配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfig(CloudNativeAPIGatewayStrategyAutoScalerConfig $Config) 设置弹性伸缩配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGatewayId() 获取网关实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGatewayId(string $GatewayId) 设置网关实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method CloudNativeAPIGatewayStrategyCronScalerConfig getCronConfig() 获取定时伸缩配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCronConfig(CloudNativeAPIGatewayStrategyCronScalerConfig $CronConfig) 设置定时伸缩配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxReplicas() 获取最大节点数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxReplicas(integer $MaxReplicas) 设置最大节点数
@@ -64,43 +50,36 @@ class CloudNativeAPIGatewayStrategy extends AbstractModel
 
     /**
      * @var string 策略名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StrategyName;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyTime;
 
     /**
      * @var string 策略描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var CloudNativeAPIGatewayStrategyAutoScalerConfig 弹性伸缩配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Config;
 
     /**
      * @var string 网关实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GatewayId;
 
     /**
      * @var CloudNativeAPIGatewayStrategyCronScalerConfig 定时伸缩配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CronConfig;
 
@@ -114,19 +93,12 @@ class CloudNativeAPIGatewayStrategy extends AbstractModel
     /**
      * @param string $StrategyId 策略ID
      * @param string $StrategyName 策略名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 策略描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CloudNativeAPIGatewayStrategyAutoScalerConfig $Config 弹性伸缩配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GatewayId 网关实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CloudNativeAPIGatewayStrategyCronScalerConfig $CronConfig 定时伸缩配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxReplicas 最大节点数
 注意：此字段可能返回 null，表示取不到有效值。
      */

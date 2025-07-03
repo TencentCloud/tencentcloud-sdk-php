@@ -23,15 +23,27 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
  * @method string getStatus() 获取域名类型
+pay：等待支持
+sub：已经预订
+wait：等待出价
+finish：完成出价
  * @method void setStatus(string $Status) 设置域名类型
- * @method string getEndTime() 获取支付结束时间
- * @method void setEndTime(string $EndTime) 设置支付结束时间
- * @method string getRegTime() 获取域名注册时间
- * @method void setRegTime(string $RegTime) 设置域名注册时间
- * @method float getPrice() 获取域名成交价格
- * @method void setPrice(float $Price) 设置域名成交价格
- * @method float getRetDeposit() 获取待退还保证金
- * @method void setRetDeposit(float $RetDeposit) 设置待退还保证金
+pay：等待支持
+sub：已经预订
+wait：等待出价
+finish：完成出价
+ * @method string getEndTime() 获取支付结束时间 
+格式:YYYY-MM-DD HH:mm:ss
+ * @method void setEndTime(string $EndTime) 设置支付结束时间 
+格式:YYYY-MM-DD HH:mm:ss
+ * @method string getRegTime() 获取域名注册时间 
+格式:YYYY-MM-DD HH:mm:ss
+ * @method void setRegTime(string $RegTime) 设置域名注册时间 
+格式:YYYY-MM-DD HH:mm:ss
+ * @method float getPrice() 获取域名成交价格 单位元
+ * @method void setPrice(float $Price) 设置域名成交价格 单位元
+ * @method float getRetDeposit() 获取待退还保证金 单位元
+ * @method void setRetDeposit(float $RetDeposit) 设置待退还保证金 单位元
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -44,26 +56,32 @@ class DescribePayWaitDetailResponse extends AbstractModel
 
     /**
      * @var string 域名类型
+pay：等待支持
+sub：已经预订
+wait：等待出价
+finish：完成出价
      */
     public $Status;
 
     /**
-     * @var string 支付结束时间
+     * @var string 支付结束时间 
+格式:YYYY-MM-DD HH:mm:ss
      */
     public $EndTime;
 
     /**
-     * @var string 域名注册时间
+     * @var string 域名注册时间 
+格式:YYYY-MM-DD HH:mm:ss
      */
     public $RegTime;
 
     /**
-     * @var float 域名成交价格
+     * @var float 域名成交价格 单位元
      */
     public $Price;
 
     /**
-     * @var float 待退还保证金
+     * @var float 待退还保证金 单位元
      */
     public $RetDeposit;
 
@@ -75,10 +93,16 @@ class DescribePayWaitDetailResponse extends AbstractModel
     /**
      * @param string $Domain 域名
      * @param string $Status 域名类型
-     * @param string $EndTime 支付结束时间
-     * @param string $RegTime 域名注册时间
-     * @param float $Price 域名成交价格
-     * @param float $RetDeposit 待退还保证金
+pay：等待支持
+sub：已经预订
+wait：等待出价
+finish：完成出价
+     * @param string $EndTime 支付结束时间 
+格式:YYYY-MM-DD HH:mm:ss
+     * @param string $RegTime 域名注册时间 
+格式:YYYY-MM-DD HH:mm:ss
+     * @param float $Price 域名成交价格 单位元
+     * @param float $RetDeposit 待退还保证金 单位元
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

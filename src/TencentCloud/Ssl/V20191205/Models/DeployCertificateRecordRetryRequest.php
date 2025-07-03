@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeployCertificateRecordRetry请求参数结构体
  *
- * @method integer getDeployRecordId() 获取待重试部署记录ID
- * @method void setDeployRecordId(integer $DeployRecordId) 设置待重试部署记录ID
- * @method integer getDeployRecordDetailId() 获取待重试部署记录详情ID
- * @method void setDeployRecordDetailId(integer $DeployRecordDetailId) 设置待重试部署记录详情ID
+ * @method integer getDeployRecordId() 获取待重试部署记录ID，通过DeployCertificateInstance获得
+ * @method void setDeployRecordId(integer $DeployRecordId) 设置待重试部署记录ID，通过DeployCertificateInstance获得
+ * @method integer getDeployRecordDetailId() 获取待重试部署记录详情ID，通过DescribeHostDeployRecordDetail获得
+ * @method void setDeployRecordDetailId(integer $DeployRecordDetailId) 设置待重试部署记录详情ID，通过DescribeHostDeployRecordDetail获得
  */
 class DeployCertificateRecordRetryRequest extends AbstractModel
 {
     /**
-     * @var integer 待重试部署记录ID
+     * @var integer 待重试部署记录ID，通过DeployCertificateInstance获得
      */
     public $DeployRecordId;
 
     /**
-     * @var integer 待重试部署记录详情ID
+     * @var integer 待重试部署记录详情ID，通过DescribeHostDeployRecordDetail获得
      */
     public $DeployRecordDetailId;
 
     /**
-     * @param integer $DeployRecordId 待重试部署记录ID
-     * @param integer $DeployRecordDetailId 待重试部署记录详情ID
+     * @param integer $DeployRecordId 待重试部署记录ID，通过DeployCertificateInstance获得
+     * @param integer $DeployRecordDetailId 待重试部署记录详情ID，通过DescribeHostDeployRecordDetail获得
      */
     function __construct()
     {

@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 上链数据
  *
  * @method string getBlockHash() 获取区块hash
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBlockHash(string $BlockHash) 设置区块hash
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBlockHeight() 获取区块高度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBlockHeight(string $BlockHeight) 设置区块高度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBlockTime() 获取区块时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBlockTime(string $BlockTime) 设置区块时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ChainData extends AbstractModel
 {
     /**
      * @var string 区块hash
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BlockHash;
 
     /**
      * @var string 区块高度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BlockHeight;
 
     /**
      * @var string 区块时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BlockTime;
 
     /**
      * @param string $BlockHash 区块hash
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BlockHeight 区块高度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BlockTime 区块时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

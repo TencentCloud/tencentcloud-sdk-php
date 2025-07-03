@@ -21,96 +21,67 @@ use TencentCloud\Common\AbstractModel;
  * 缓存卷。
  *
  * @method string getVolumeId() 获取缓存卷ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVolumeId(string $VolumeId) 设置缓存卷ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEnvironmentId() 获取环境ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnvironmentId(string $EnvironmentId) 设置环境ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取缓存卷类型，取值范围：
 * SHARED：多点挂载共享存储
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置缓存卷类型，取值范围：
 * SHARED：多点挂载共享存储
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSpec() 获取缓存卷规格，取值范围：
 
 - SD：通用标准型
 - HP：通用性能型
 - TB：turbo标准型
 - TP：turbo性能型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpec(string $Spec) 设置缓存卷规格，取值范围：
 
 - SD：通用标准型
 - HP：通用性能型
 - TB：turbo标准型
 - TP：turbo性能型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCapacity() 获取缓存卷大小（GB）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCapacity(integer $Capacity) 设置缓存卷大小（GB）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUsage() 获取缓存卷使用量（Byte）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsage(integer $Usage) 设置缓存卷使用量（Byte）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getBandwidthLimit() 获取缓存卷吞吐上限（MiB/s）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBandwidthLimit(float $BandwidthLimit) 设置缓存卷吞吐上限（MiB/s）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDefaultMountPath() 获取默认挂载路径。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefaultMountPath(string $DefaultMountPath) 设置默认挂载路径。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsDefault() 获取是否为默认缓存卷。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsDefault(boolean $IsDefault) 设置是否为默认缓存卷。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取状态。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置状态。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Volume extends AbstractModel
 {
     /**
      * @var string 缓存卷ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VolumeId;
 
     /**
      * @var string 名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var string 环境ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnvironmentId;
 
     /**
      * @var string 缓存卷类型，取值范围：
 * SHARED：多点挂载共享存储
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
@@ -121,77 +92,58 @@ class Volume extends AbstractModel
 - HP：通用性能型
 - TB：turbo标准型
 - TP：turbo性能型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Spec;
 
     /**
      * @var integer 缓存卷大小（GB）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Capacity;
 
     /**
      * @var integer 缓存卷使用量（Byte）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Usage;
 
     /**
      * @var float 缓存卷吞吐上限（MiB/s）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BandwidthLimit;
 
     /**
      * @var string 默认挂载路径。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DefaultMountPath;
 
     /**
      * @var boolean 是否为默认缓存卷。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsDefault;
 
     /**
      * @var string 状态。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @param string $VolumeId 缓存卷ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EnvironmentId 环境ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 缓存卷类型，取值范围：
 * SHARED：多点挂载共享存储
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Spec 缓存卷规格，取值范围：
 
 - SD：通用标准型
 - HP：通用性能型
 - TB：turbo标准型
 - TP：turbo性能型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Capacity 缓存卷大小（GB）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Usage 缓存卷使用量（Byte）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $BandwidthLimit 缓存卷吞吐上限（MiB/s）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DefaultMountPath 默认挂载路径。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsDefault 是否为默认缓存卷。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 状态。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

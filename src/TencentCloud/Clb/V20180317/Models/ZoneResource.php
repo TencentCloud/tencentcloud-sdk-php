@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMasterZone() 获取主可用区，如"ap-guangzhou-1"。
  * @method void setMasterZone(string $MasterZone) 设置主可用区，如"ap-guangzhou-1"。
  * @method array getResourceSet() 获取资源列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceSet(array $ResourceSet) 设置资源列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSlaveZone() 获取备可用区，如"ap-guangzhou-2"，单可用区时，备可用区为null。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSlaveZone(string $SlaveZone) 设置备可用区，如"ap-guangzhou-2"，单可用区时，备可用区为null。
@@ -41,9 +39,7 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getEdgeZone() 获取可用区是否是EdgeZone可用区，如：false
  * @method void setEdgeZone(boolean $EdgeZone) 设置可用区是否是EdgeZone可用区，如：false
  * @method string getEgress() 获取网络出口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEgress(string $Egress) 设置网络出口
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ZoneResource extends AbstractModel
 {
@@ -54,7 +50,6 @@ class ZoneResource extends AbstractModel
 
     /**
      * @var array 资源列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceSet;
 
@@ -91,14 +86,12 @@ class ZoneResource extends AbstractModel
 
     /**
      * @var string 网络出口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Egress;
 
     /**
      * @param string $MasterZone 主可用区，如"ap-guangzhou-1"。
      * @param array $ResourceSet 资源列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SlaveZone 备可用区，如"ap-guangzhou-2"，单可用区时，备可用区为null。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IPVersion IP版本，如IPv4，IPv6，IPv6_Nat。
@@ -107,7 +100,6 @@ class ZoneResource extends AbstractModel
      * @param string $ZoneResourceType 可用区资源的类型，SHARED表示共享资源，EXCLUSIVE表示独占资源。
      * @param boolean $EdgeZone 可用区是否是EdgeZone可用区，如：false
      * @param string $Egress 网络出口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置分页参数，默认10
  * @method integer getOffset() 获取分页参数，默认0
  * @method void setOffset(integer $Offset) 设置分页参数，默认0
+ * @method array getFilters() 获取过滤类型，支持如下的过滤类型，传参Name应为以下其中一个, engine-generation - String（引擎时代： supersql：supersql引擎，native：标准引擎）：notebook-keyword - String（数据引擎名称或sessionid或sessionname的模糊搜索）
+ * @method void setFilters(array $Filters) 设置过滤类型，支持如下的过滤类型，传参Name应为以下其中一个, engine-generation - String（引擎时代： supersql：supersql引擎，native：标准引擎）：notebook-keyword - String（数据引擎名称或sessionid或sessionname的模糊搜索）
  */
 class DescribeNotebookSessionsRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DescribeNotebookSessionsRequest extends AbstractModel
     public $Offset;
 
     /**
+     * @var array 过滤类型，支持如下的过滤类型，传参Name应为以下其中一个, engine-generation - String（引擎时代： supersql：supersql引擎，native：标准引擎）：notebook-keyword - String（数据引擎名称或sessionid或sessionname的模糊搜索）
+     */
+    public $Filters;
+
+    /**
      * @param string $DataEngineName DLC Spark作业引擎名称
      * @param array $State Session状态，包含：not_started（未启动）、starting（已启动）、idle（等待输入）、busy(正在运行statement)、shutting_down（停止）、error（异常）、dead（已退出）、killed（被杀死）、success（正常停止）
      * @param array $SortFields 排序字段（默认按创建时间）
      * @param boolean $Asc 排序字段：true：升序、false：降序（默认）
      * @param integer $Limit 分页参数，默认10
      * @param integer $Offset 分页参数，默认0
+     * @param array $Filters 过滤类型，支持如下的过滤类型，传参Name应为以下其中一个, engine-generation - String（引擎时代： supersql：supersql引擎，native：标准引擎）：notebook-keyword - String（数据引擎名称或sessionid或sessionname的模糊搜索）
      */
     function __construct()
     {
@@ -108,6 +116,15 @@ class DescribeNotebookSessionsRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

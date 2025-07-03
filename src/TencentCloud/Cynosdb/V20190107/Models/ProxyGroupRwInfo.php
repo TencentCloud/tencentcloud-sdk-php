@@ -33,9 +33,7 @@ use TencentCloud\Common\AbstractModel;
  * @method array getInstanceWeights() 获取实例权重数组
  * @method void setInstanceWeights(array $InstanceWeights) 设置实例权重数组
  * @method string getOpenRw() 获取是否开通读写节点，yse-是，no-否
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOpenRw(string $OpenRw) 设置是否开通读写节点，yse-是，no-否
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRwType() 获取读写属性，可选值：READWRITE,READONLY
  * @method void setRwType(string $RwType) 设置读写属性，可选值：READWRITE,READONLY
  * @method boolean getTransSplit() 获取事务拆分
@@ -77,7 +75,6 @@ class ProxyGroupRwInfo extends AbstractModel
 
     /**
      * @var string 是否开通读写节点，yse-是，no-否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OpenRw;
 
@@ -104,7 +101,6 @@ class ProxyGroupRwInfo extends AbstractModel
      * @param string $AutoAddRo 是否自动添加只读实例，yes-是，no-不自动添加
      * @param array $InstanceWeights 实例权重数组
      * @param string $OpenRw 是否开通读写节点，yse-是，no-否
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RwType 读写属性，可选值：READWRITE,READONLY
      * @param boolean $TransSplit 事务拆分
      * @param string $AccessMode 连接模式，可选值：balance，nearby

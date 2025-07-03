@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getAssistantType() 获取辅助CIDR类型（0：普通辅助CIDR，1：容器辅助CIDR），默认都是0。
  * @method void setAssistantType(integer $AssistantType) 设置辅助CIDR类型（0：普通辅助CIDR，1：容器辅助CIDR），默认都是0。
  * @method array getSubnetSet() 获取辅助CIDR拆分的子网。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetSet(array $SubnetSet) 设置辅助CIDR拆分的子网。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssistantCidr extends AbstractModel
 {
@@ -50,7 +48,6 @@ class AssistantCidr extends AbstractModel
 
     /**
      * @var array 辅助CIDR拆分的子网。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetSet;
 
@@ -59,7 +56,6 @@ class AssistantCidr extends AbstractModel
      * @param string $CidrBlock 辅助CIDR。形如：`172.16.0.0/16`
      * @param integer $AssistantType 辅助CIDR类型（0：普通辅助CIDR，1：容器辅助CIDR），默认都是0。
      * @param array $SubnetSet 辅助CIDR拆分的子网。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

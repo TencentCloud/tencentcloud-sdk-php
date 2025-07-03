@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEdition() 获取版本
  * @method void setEdition(string $Edition) 设置版本
  * @method string getInstanceID() 获取实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceID(string $InstanceID) 设置实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DomainURI extends AbstractModel
 {
@@ -43,7 +41,6 @@ class DomainURI extends AbstractModel
 
     /**
      * @var string 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceID;
 
@@ -51,7 +48,6 @@ class DomainURI extends AbstractModel
      * @param string $Domain 域名
      * @param string $Edition 版本
      * @param string $InstanceID 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -23,15 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSwitch() 获取开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭；</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSwitch(string $Switch) 设置开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭；</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getIpTableRules() 获取基础管控规则。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpTableRules(array $IpTableRules) 设置基础管控规则。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class IpTableConfig extends AbstractModel
 {
@@ -39,13 +35,11 @@ class IpTableConfig extends AbstractModel
      * @var string 开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭；</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Switch;
 
     /**
      * @var array 基础管控规则。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IpTableRules;
 
@@ -53,9 +47,7 @@ class IpTableConfig extends AbstractModel
      * @param string $Switch 开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭；</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $IpTableRules 基础管控规则。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -27,13 +27,9 @@ use TencentCloud\Common\AbstractModel;
 <li>on：开启；</li>
 <li>off：关闭。</li>
  * @method DropPageDetail getWafDropPageDetail() 获取Waf(托管规则)模块的拦截页面配置。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWafDropPageDetail(DropPageDetail $WafDropPageDetail) 设置Waf(托管规则)模块的拦截页面配置。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DropPageDetail getAclDropPageDetail() 获取自定义页面的拦截页面配置。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAclDropPageDetail(DropPageDetail $AclDropPageDetail) 设置自定义页面的拦截页面配置。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DropPageConfig extends AbstractModel
 {
@@ -46,13 +42,11 @@ class DropPageConfig extends AbstractModel
 
     /**
      * @var DropPageDetail Waf(托管规则)模块的拦截页面配置。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WafDropPageDetail;
 
     /**
      * @var DropPageDetail 自定义页面的拦截页面配置。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AclDropPageDetail;
 
@@ -61,9 +55,7 @@ class DropPageConfig extends AbstractModel
 <li>on：开启；</li>
 <li>off：关闭。</li>
      * @param DropPageDetail $WafDropPageDetail Waf(托管规则)模块的拦截页面配置。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DropPageDetail $AclDropPageDetail 自定义页面的拦截页面配置。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

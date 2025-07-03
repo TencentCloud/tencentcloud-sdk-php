@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 描述对象存储类敏感识别扫描人元数据条件。
  *
  * @method string getBucket() 获取数据桶名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBucket(string $Bucket) 设置数据桶名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getFileTypes() 获取文件类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileTypes(array $FileTypes) 设置文件类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFileSizeLimit() 获取文件大小上限，单位为KB，如1000, 目前单个文件最大只支持1GB（1048576KB）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileSizeLimit(integer $FileSizeLimit) 设置文件大小上限，单位为KB，如1000, 目前单个文件最大只支持1GB（1048576KB）
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DspaDiscoveryTaskCOSCondition extends AbstractModel
 {
     /**
      * @var string 数据桶名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Bucket;
 
     /**
      * @var array 文件类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileTypes;
 
     /**
      * @var integer 文件大小上限，单位为KB，如1000, 目前单个文件最大只支持1GB（1048576KB）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileSizeLimit;
 
     /**
      * @param string $Bucket 数据桶名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FileTypes 文件类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FileSizeLimit 文件大小上限，单位为KB，如1000, 目前单个文件最大只支持1GB（1048576KB）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

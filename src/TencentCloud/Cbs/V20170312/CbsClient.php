@@ -25,14 +25,18 @@ use TencentCloud\Cbs\V20170312\Models as Models;
 /**
  * @method Models\ApplyDiskBackupResponse ApplyDiskBackup(Models\ApplyDiskBackupRequest $req) 本接口（ApplyDiskBackup）用于回滚备份点到原云硬盘。
 
-* 仅支持回滚到原云硬盘上。对于数据盘备份点，如果您需要复制备份点数据到其它云硬盘上，请先使用 CreateSnapshot 将备份点转换为快照，然后使用 CreateDisks 接口创建新的弹性云硬盘，将快照数据复制到新购云硬盘上。
-* 用于回滚的备份点必须处于NORMAL状态。备份点状态可以通过DescribeDiskBackups接口查询，见输出参数中BackupState字段解释。
-* 如果是弹性云硬盘，则云硬盘必须处于未挂载状态，云硬盘挂载状态可以通过DescribeDisks接口查询，见Attached字段解释；如果是随实例一起购买的非弹性云硬盘，则实例必须处于关机状态，实例状态可以通过DescribeInstancesStatus接口查询。
+* 仅支持回滚到原云硬盘上。对于数据盘备份点，如果您需要复制备份点数据到其它云硬盘上，请先使用[CreateSnapshot](/document/product/362/15648) 将备份点转换为快照，然后使用[CreateDisks](/document/product/362/16312) 接口创建新的弹性云硬盘，将快照数据复制到新购云硬盘上。
+* 用于回滚的备份点必须处于NORMAL状态。备份点状态可以通过[DescribeDiskBackups](/document/product/362/80278)接口查询，见输出参数中BackupState字段解释。
+* 如果是弹性云硬盘，则云硬盘必须处于未挂载状态，云硬盘挂载状态可以通[DescribeDisks](/document/product/362/16315)接口查询，见Attached字段解释；如果是随实例一起购买的非弹性云硬盘，则实例必须处于关机状态，实例状态可以通过[DescribeInstancesStatus](/document/product/213/15738)接口查询。
  * @method Models\ApplySnapshotResponse ApplySnapshot(Models\ApplySnapshotRequest $req) 本接口（ApplySnapshot）用于回滚快照到原云硬盘。
 
 * 仅支持回滚到原云硬盘上。对于数据盘快照，如果您需要复制快照数据到其它云硬盘上，请使用[CreateDisks](/document/product/362/16312)接口创建新的弹性云盘，将快照数据复制到新购云盘上。 
 * 用于回滚的快照必须处于NORMAL状态。快照状态可以通过[DescribeSnapshots](/document/product/362/15647)接口查询，见输出参数中SnapshotState字段解释。
 * 如果是弹性云盘，则云盘必须处于未挂载状态，云硬盘挂载状态可以通过[DescribeDisks](/document/product/362/16315)接口查询，见Attached字段解释；如果是随实例一起购买的非弹性云盘，则实例必须处于关机状态，实例状态可以通过[DescribeInstancesStatus](/document/product/213/15738)接口查询。
+ * @method Models\ApplySnapshotGroupResponse ApplySnapshotGroup(Models\ApplySnapshotGroupRequest $req) 本接口（ApplySnapshotGroup）用于回滚快照组，将实例恢复到创建快照组时刻的状态。
+* 1.可选择快照组全部或部分盘进行回滚；
+* 2.如果回滚的盘中包含已挂载的盘，要求这些盘必须挂载在同一实例上，且要求该实例已关机才能回滚；
+* 3.回滚为异步操作，接口返回成功不代表回滚成功，可通过调DescribeSnapshotGroups接口查询快照组的状态。
  * @method Models\AttachDisksResponse AttachDisks(Models\AttachDisksRequest $req) 本接口（AttachDisks）用于挂载云硬盘。
  
 * 支持批量操作，将多块云盘挂载到同一云主机。如果多个云盘中存在不允许挂载的云盘，则操作不执行，返回特定的错误码。
@@ -44,7 +48,7 @@ use TencentCloud\Cbs\V20170312\Models as Models;
  * @method Models\CopySnapshotCrossRegionsResponse CopySnapshotCrossRegions(Models\CopySnapshotCrossRegionsRequest $req) 本接口（CopySnapshotCrossRegions）用于快照跨地域复制。
 
 * 本接口为异步接口，当跨地域复制的请求下发成功后会返回一个新的快照ID，此时快照未立即复制到目标地域，可请求目标地域的[DescribeSnapshots](/document/product/362/15647)接口查询新快照的状态，判断是否复制完成。如果快照的状态为“NORMAL”，表示快照复制完成。
-* 本接口实现的快照跨地域复制操作将产生跨地域流量，预计2022年第三季度会针对此功能进行商业化计费；请留意后续站内信公告，避免产生预期外扣费。
+* 本接口实现的快照跨地域复制操作将产生跨地域流量，预计2025年第三季度会针对此功能进行商业化计费；请留意后续站内信公告，避免产生预期外扣费。
  * @method Models\CreateAutoSnapshotPolicyResponse CreateAutoSnapshotPolicy(Models\CreateAutoSnapshotPolicyRequest $req) 本接口（CreateAutoSnapshotPolicy）用于创建定期快照策略。
 
 * 每个地域可创建的定期快照策略数量限制请参考文档[定期快照](/document/product/362/8191)。
@@ -60,10 +64,16 @@ use TencentCloud\Cbs\V20170312\Models as Models;
 * 只有具有快照能力的云硬盘才能创建快照。云硬盘是否具有快照能力可由[DescribeDisks](/document/product/362/16315)接口查询，见SnapshotAbility字段。
 * 可创建快照数量限制见[产品使用限制](https://cloud.tencent.com/doc/product/362/5145)。
 * 当前支持将备份点转化为普通快照，转化之后可能会收取快照使用费用，备份点不保留，其占用的备份点配额也将被释放。
+ * @method Models\CreateSnapshotGroupResponse CreateSnapshotGroup(Models\CreateSnapshotGroupRequest $req) 本接口（CreateSnapshotGroup）用于创建快照组。
+* 创建快照组的云硬盘列表必须挂载在同一实例上；
+* 可选择挂载在实例上的全部或部分盘创建快照组。
  * @method Models\DeleteAutoSnapshotPoliciesResponse DeleteAutoSnapshotPolicies(Models\DeleteAutoSnapshotPoliciesRequest $req) 本接口（DeleteAutoSnapshotPolicies）用于删除定期快照策略。
 
 *  支持批量操作。如果多个定期快照策略存在无法删除的，则操作不执行，以特定错误码返回。
  * @method Models\DeleteDiskBackupsResponse DeleteDiskBackups(Models\DeleteDiskBackupsRequest $req) 批量删除指定的云硬盘备份点。
+ * @method Models\DeleteSnapshotGroupResponse DeleteSnapshotGroup(Models\DeleteSnapshotGroupRequest $req) 本接口（DeleteSnapshotGroup）用于删除快照组，一次调用仅支持删除一个快照组。
+* 默认会删除快照组内的所有快照；
+* 如果快照组内的快照有关联镜像，则删除失败，所有快照均不会删除；如果需要同时删除快照绑定的镜像，可传入参数DeleteBindImages等于true。
  * @method Models\DeleteSnapshotsResponse DeleteSnapshots(Models\DeleteSnapshotsRequest $req) 本接口（DeleteSnapshots）用于删除快照。
 
 * 快照必须处于NORMAL状态，快照状态可以通过[DescribeSnapshots](/document/product/362/15647)接口查询，见输出参数中SnapshotState字段解释。
@@ -89,6 +99,10 @@ use TencentCloud\Cbs\V20170312\Models as Models;
  * @method Models\DescribeInstancesDiskNumResponse DescribeInstancesDiskNum(Models\DescribeInstancesDiskNumRequest $req) 本接口（DescribeInstancesDiskNum）用于查询实例已挂载云硬盘数量。
 
 * 支持批量操作，当传入多个云服务器实例ID，返回结果会分别列出每个云服务器挂载的云硬盘数量。
+ * @method Models\DescribeSnapshotGroupsResponse DescribeSnapshotGroups(Models\DescribeSnapshotGroupsRequest $req) 本接口（DescribeSnapshotGroups）用于查询快照组列表。
+* 可以根据快照组ID、快照组状态、快照组关联的快照ID等来查询快照组列表，不同条件之间为与(AND)的关系，过滤信息详细请见过滤器`Filter`。
+* 如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的快照组列表。
+ * @method Models\DescribeSnapshotOverviewResponse DescribeSnapshotOverview(Models\DescribeSnapshotOverviewRequest $req) 该接口用于查询用户快照使用概览，包括快照总容量、计费容量等信息。
  * @method Models\DescribeSnapshotSharePermissionResponse DescribeSnapshotSharePermission(Models\DescribeSnapshotSharePermissionRequest $req) 本接口（DescribeSnapshotSharePermission）用于查询快照的分享信息。
  * @method Models\DescribeSnapshotsResponse DescribeSnapshots(Models\DescribeSnapshotsRequest $req) 本接口（DescribeSnapshots）用于查询快照的详细信息。
 
@@ -98,7 +112,9 @@ use TencentCloud\Cbs\V20170312\Models as Models;
 
 * 支持批量操作，卸载挂载在同一主机上的多块云盘。如果多块云盘中存在不允许卸载的云盘，则操作不执行，返回特定的错误码。
 * 本接口为异步接口，当请求成功返回时，云盘并未立即从主机卸载，可通过接口[DescribeDisks](/document/product/362/16315)来查询对应云盘的状态，如果云盘的状态由“ATTACHED”变为“UNATTACHED”，则为卸载成功。
- * @method Models\GetSnapOverviewResponse GetSnapOverview(Models\GetSnapOverviewRequest $req) 获取快照概览信息
+ * @method Models\GetSnapOverviewResponse GetSnapOverview(Models\GetSnapOverviewRequest $req) 为进一步规范化API命名，该接口决定预下线，新接口命名为：DescribeSnapshotOverview
+
+获取快照概览信息
  * @method Models\InitializeDisksResponse InitializeDisks(Models\InitializeDisksRequest $req) 重新初始化云硬盘至云硬盘初始创建时的状态。使用云硬盘的重新初始化功能时需要注意以下4点：
 1. 如果云硬盘是由快照创建的，则重新初始化会通过此快照重新回滚此云硬盘，即将云硬盘恢复为与快照一致的状态；
 2. 如果云硬盘不是通过快照创建的，则重新初始化会清空此云硬盘的数据；请在重新初始化云硬盘前检查并备份必要的数据；
@@ -119,7 +135,7 @@ use TencentCloud\Cbs\V20170312\Models as Models;
 
 * 可通过该接口修改定期快照策略的执行策略、名称、是否激活等属性。
 * 修改保留天数时必须保证不与是否永久保留属性冲突，否则整个操作失败，以特定的错误码返回。
- * @method Models\ModifyDiskAttributesResponse ModifyDiskAttributes(Models\ModifyDiskAttributesRequest $req) * 只支持修改弹性云盘的项目ID。随云主机创建的云硬盘项目ID与云主机联动。可以通过[DescribeDisks](/document/product/362/16315)接口查询，见输出参数中Portable字段解释。
+ * @method Models\ModifyDiskAttributesResponse ModifyDiskAttributes(Models\ModifyDiskAttributesRequest $req) * 只支持修改弹性云盘的项目ID。随云主机创建的云硬盘项目ID与云主机联动。是否是弹性云盘可以通过[DescribeDisks](/document/product/362/16315)接口查询，见输出参数中Portable字段解释。
 * “云硬盘名称”仅为方便用户自己管理之用，腾讯云并不以此名称作为提交工单或是进行云盘管理操作的依据。
 * 支持批量操作，如果传入多个云盘ID，则所有云盘修改为同一属性。如果存在不允许操作的云盘，则操作不执行，以特定错误码返回。
  * @method Models\ModifyDiskBackupQuotaResponse ModifyDiskBackupQuota(Models\ModifyDiskBackupQuotaRequest $req) 此接口 (ModifyDiskBackupQuota) 用于修改云硬盘备份点配额。
@@ -129,7 +145,6 @@ use TencentCloud\Cbs\V20170312\Models as Models;
  * @method Models\ModifyDisksChargeTypeResponse ModifyDisksChargeType(Models\ModifyDisksChargeTypeRequest $req) 本接口 (ModifyDisksChargeType) 用于切换云硬盘的计费模式。
 
 非弹性云硬盘不支持此接口，请通过修改实例计费模式接口将实例连同非弹性云硬盘一起转换。
-默认接口请求频率限制：10次/秒。
  * @method Models\ModifyDisksRenewFlagResponse ModifyDisksRenewFlag(Models\ModifyDisksRenewFlagRequest $req) 本接口（ModifyDisksRenewFlag）用于修改云硬盘续费标识，支持批量修改。
  * @method Models\ModifySnapshotAttributeResponse ModifySnapshotAttribute(Models\ModifySnapshotAttributeRequest $req) 本接口（ModifySnapshotAttribute）用于修改指定快照的属性。
 

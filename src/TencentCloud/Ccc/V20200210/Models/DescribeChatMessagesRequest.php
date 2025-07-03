@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeChatMessages请求参数结构体
  *
- * @method integer getInstanceId() 获取实例 ID（废弃）
- * @method void setInstanceId(integer $InstanceId) 设置实例 ID（废弃）
  * @method integer getSdkAppId() 获取应用 ID，可以查看 https://console.cloud.tencent.com/ccc
  * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID，可以查看 https://console.cloud.tencent.com/ccc
+ * @method integer getInstanceId() 获取实例 ID（废弃）
+ * @method void setInstanceId(integer $InstanceId) 设置实例 ID（废弃）
  * @method string getCdrId() 获取服务记录ID（废弃）
  * @method void setCdrId(string $CdrId) 设置服务记录ID（废弃）
  * @method integer getLimit() 获取返回记录条数，最大为100 默认20
@@ -38,15 +38,15 @@ use TencentCloud\Common\AbstractModel;
 class DescribeChatMessagesRequest extends AbstractModel
 {
     /**
+     * @var integer 应用 ID，可以查看 https://console.cloud.tencent.com/ccc
+     */
+    public $SdkAppId;
+
+    /**
      * @var integer 实例 ID（废弃）
      * @deprecated
      */
     public $InstanceId;
-
-    /**
-     * @var integer 应用 ID，可以查看 https://console.cloud.tencent.com/ccc
-     */
-    public $SdkAppId;
 
     /**
      * @var string 服务记录ID（废弃）
@@ -75,8 +75,8 @@ class DescribeChatMessagesRequest extends AbstractModel
     public $SessionId;
 
     /**
-     * @param integer $InstanceId 实例 ID（废弃）
      * @param integer $SdkAppId 应用 ID，可以查看 https://console.cloud.tencent.com/ccc
+     * @param integer $InstanceId 实例 ID（废弃）
      * @param string $CdrId 服务记录ID（废弃）
      * @param integer $Limit 返回记录条数，最大为100 默认20
      * @param integer $Offset 返回记录偏移，默认为 0
@@ -96,12 +96,12 @@ class DescribeChatMessagesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
-        }
-
         if (array_key_exists("SdkAppId",$param) and $param["SdkAppId"] !== null) {
             $this->SdkAppId = $param["SdkAppId"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
 
         if (array_key_exists("CdrId",$param) and $param["CdrId"] !== null) {

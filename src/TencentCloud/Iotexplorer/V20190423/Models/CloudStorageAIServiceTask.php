@@ -30,26 +30,36 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChannelId(integer $ChannelId) 设置通道 ID
  * @method string getServiceType() 获取云存 AI 服务类型。可能取值：
 
-- `PackageDetect`：包裹检测
+- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
+- `VideoToText`：视频语义理解
  * @method void setServiceType(string $ServiceType) 设置云存 AI 服务类型。可能取值：
 
-- `PackageDetect`：包裹检测
+- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
- * @method integer getStartTime() 获取对应云存视频的起始时间
- * @method void setStartTime(integer $StartTime) 设置对应云存视频的起始时间
- * @method integer getEndTime() 获取对应云存视频的结束时间
- * @method void setEndTime(integer $EndTime) 设置对应云存视频的结束时间
+- `VideoToText`：视频语义理解
+ * @method integer getStartTime() 获取对应云存视频的起始时间（秒级 UNIX 时间戳）
+ * @method void setStartTime(integer $StartTime) 设置对应云存视频的起始时间（秒级 UNIX 时间戳）
+ * @method integer getStartTimeMs() 获取对应云存视频的起始时间（毫秒级 UNIX 时间戳）
+ * @method void setStartTimeMs(integer $StartTimeMs) 设置对应云存视频的起始时间（毫秒级 UNIX 时间戳）
+ * @method integer getEndTime() 获取对应云存视频的结束时间（秒级 UNIX 时间戳）
+ * @method void setEndTime(integer $EndTime) 设置对应云存视频的结束时间（秒级 UNIX 时间戳）
+ * @method integer getEndTimeMs() 获取对应云存视频的结束时间（毫秒级 UNIX 时间戳）
+ * @method void setEndTimeMs(integer $EndTimeMs) 设置对应云存视频的结束时间（毫秒级 UNIX 时间戳）
  * @method integer getStatus() 获取任务状态（1：失败；2：成功但结果为空；3：成功且结果非空；4：执行中）
  * @method void setStatus(integer $Status) 设置任务状态（1：失败；2：成功但结果为空；3：成功且结果非空；4：执行中）
  * @method string getResult() 获取任务结果
  * @method void setResult(string $Result) 设置任务结果
  * @method array getFiles() 获取任务输出文件列表
  * @method void setFiles(array $Files) 设置任务输出文件列表
+ * @method array getFilesInfo() 获取任务输出文件信息列表
+ * @method void setFilesInfo(array $FilesInfo) 设置任务输出文件信息列表
  * @method integer getCreateTime() 获取创建时间
  * @method void setCreateTime(integer $CreateTime) 设置创建时间
  * @method integer getUpdateTime() 获取最后更新时间
  * @method void setUpdateTime(integer $UpdateTime) 设置最后更新时间
+ * @method string getCustomId() 获取自定义任务 ID
+ * @method void setCustomId(string $CustomId) 设置自定义任务 ID
  */
 class CloudStorageAIServiceTask extends AbstractModel
 {
@@ -76,20 +86,31 @@ class CloudStorageAIServiceTask extends AbstractModel
     /**
      * @var string 云存 AI 服务类型。可能取值：
 
-- `PackageDetect`：包裹检测
+- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
+- `VideoToText`：视频语义理解
      */
     public $ServiceType;
 
     /**
-     * @var integer 对应云存视频的起始时间
+     * @var integer 对应云存视频的起始时间（秒级 UNIX 时间戳）
      */
     public $StartTime;
 
     /**
-     * @var integer 对应云存视频的结束时间
+     * @var integer 对应云存视频的起始时间（毫秒级 UNIX 时间戳）
+     */
+    public $StartTimeMs;
+
+    /**
+     * @var integer 对应云存视频的结束时间（秒级 UNIX 时间戳）
      */
     public $EndTime;
+
+    /**
+     * @var integer 对应云存视频的结束时间（毫秒级 UNIX 时间戳）
+     */
+    public $EndTimeMs;
 
     /**
      * @var integer 任务状态（1：失败；2：成功但结果为空；3：成功且结果非空；4：执行中）
@@ -107,6 +128,11 @@ class CloudStorageAIServiceTask extends AbstractModel
     public $Files;
 
     /**
+     * @var array 任务输出文件信息列表
+     */
+    public $FilesInfo;
+
+    /**
      * @var integer 创建时间
      */
     public $CreateTime;
@@ -117,21 +143,31 @@ class CloudStorageAIServiceTask extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var string 自定义任务 ID
+     */
+    public $CustomId;
+
+    /**
      * @param string $TaskId 云存 AI 服务任务 ID
      * @param string $ProductId 产品 ID
      * @param string $DeviceName 设备名称
      * @param integer $ChannelId 通道 ID
      * @param string $ServiceType 云存 AI 服务类型。可能取值：
 
-- `PackageDetect`：包裹检测
+- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
-     * @param integer $StartTime 对应云存视频的起始时间
-     * @param integer $EndTime 对应云存视频的结束时间
+- `VideoToText`：视频语义理解
+     * @param integer $StartTime 对应云存视频的起始时间（秒级 UNIX 时间戳）
+     * @param integer $StartTimeMs 对应云存视频的起始时间（毫秒级 UNIX 时间戳）
+     * @param integer $EndTime 对应云存视频的结束时间（秒级 UNIX 时间戳）
+     * @param integer $EndTimeMs 对应云存视频的结束时间（毫秒级 UNIX 时间戳）
      * @param integer $Status 任务状态（1：失败；2：成功但结果为空；3：成功且结果非空；4：执行中）
      * @param string $Result 任务结果
      * @param array $Files 任务输出文件列表
+     * @param array $FilesInfo 任务输出文件信息列表
      * @param integer $CreateTime 创建时间
      * @param integer $UpdateTime 最后更新时间
+     * @param string $CustomId 自定义任务 ID
      */
     function __construct()
     {
@@ -170,8 +206,16 @@ class CloudStorageAIServiceTask extends AbstractModel
             $this->StartTime = $param["StartTime"];
         }
 
+        if (array_key_exists("StartTimeMs",$param) and $param["StartTimeMs"] !== null) {
+            $this->StartTimeMs = $param["StartTimeMs"];
+        }
+
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("EndTimeMs",$param) and $param["EndTimeMs"] !== null) {
+            $this->EndTimeMs = $param["EndTimeMs"];
         }
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
@@ -186,12 +230,25 @@ class CloudStorageAIServiceTask extends AbstractModel
             $this->Files = $param["Files"];
         }
 
+        if (array_key_exists("FilesInfo",$param) and $param["FilesInfo"] !== null) {
+            $this->FilesInfo = [];
+            foreach ($param["FilesInfo"] as $key => $value){
+                $obj = new CloudStorageAIServiceTaskFileInfo();
+                $obj->deserialize($value);
+                array_push($this->FilesInfo, $obj);
+            }
+        }
+
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
         }
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("CustomId",$param) and $param["CustomId"] !== null) {
+            $this->CustomId = $param["CustomId"];
         }
     }
 }

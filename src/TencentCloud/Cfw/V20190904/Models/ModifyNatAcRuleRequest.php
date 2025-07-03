@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyNatAcRule请求参数结构体
  *
- * @method array getRules() 获取需要编辑的规则数组
- * @method void setRules(array $Rules) 设置需要编辑的规则数组
+ * @method array getRules() 获取需要编辑的规则数组,基于Uuid唯一id来修改该规则
+ * @method void setRules(array $Rules) 设置需要编辑的规则数组,基于Uuid唯一id来修改该规则
  */
 class ModifyNatAcRuleRequest extends AbstractModel
 {
     /**
-     * @var array 需要编辑的规则数组
+     * @var array 需要编辑的规则数组,基于Uuid唯一id来修改该规则
      */
     public $Rules;
 
     /**
-     * @param array $Rules 需要编辑的规则数组
+     * @param array $Rules 需要编辑的规则数组,基于Uuid唯一id来修改该规则
      */
     function __construct()
     {

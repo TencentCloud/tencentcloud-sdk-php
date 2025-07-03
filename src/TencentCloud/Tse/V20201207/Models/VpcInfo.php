@@ -25,13 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSubnetId() 获取子网ID
  * @method void setSubnetId(string $SubnetId) 设置子网ID
  * @method string getIntranetAddress() 获取内网访问地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIntranetAddress(string $IntranetAddress) 设置内网访问地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLbSubnetId() 获取负载均衡均衡接入点子网ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLbSubnetId(string $LbSubnetId) 设置负载均衡均衡接入点子网ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VpcInfo extends AbstractModel
 {
@@ -47,13 +43,11 @@ class VpcInfo extends AbstractModel
 
     /**
      * @var string 内网访问地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IntranetAddress;
 
     /**
      * @var string 负载均衡均衡接入点子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LbSubnetId;
 
@@ -61,9 +55,7 @@ class VpcInfo extends AbstractModel
      * @param string $VpcId Vpc Id
      * @param string $SubnetId 子网ID
      * @param string $IntranetAddress 内网访问地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LbSubnetId 负载均衡均衡接入点子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

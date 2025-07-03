@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 云联网实例对象，该对象特用于运营端使用，不建议给租户的接口中提供该复杂类型。
  *
-
+ * @method string getCcnId() 获取云联网唯一ID。
+ * @method void setCcnId(string $CcnId) 设置云联网唯一ID。
  */
 class CcnInstanceInfo extends AbstractModel
 {
-
+    /**
+     * @var string 云联网唯一ID。
+     */
+    public $CcnId;
 
     /**
-
+     * @param string $CcnId 云联网唯一ID。
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class CcnInstanceInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("CcnId",$param) and $param["CcnId"] !== null) {
+            $this->CcnId = $param["CcnId"];
+        }
     }
 }

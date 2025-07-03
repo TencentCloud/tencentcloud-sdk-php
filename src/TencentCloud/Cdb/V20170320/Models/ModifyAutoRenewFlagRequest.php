@@ -21,7 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * ModifyAutoRenewFlag请求参数结构体
  *
  * @method array getInstanceIds() 获取实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+说明：可输入多个实例 ID 进行修改，json 格式如下。
+[
+    "cdb-30z11v8s",
+    "cdb-93h11efg"
+  ]
  * @method void setInstanceIds(array $InstanceIds) 设置实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+说明：可输入多个实例 ID 进行修改，json 格式如下。
+[
+    "cdb-30z11v8s",
+    "cdb-93h11efg"
+  ]
  * @method integer getAutoRenew() 获取自动续费标记，可取值的有：0 - 不自动续费，1 - 自动续费。
  * @method void setAutoRenew(integer $AutoRenew) 设置自动续费标记，可取值的有：0 - 不自动续费，1 - 自动续费。
  */
@@ -29,6 +39,11 @@ class ModifyAutoRenewFlagRequest extends AbstractModel
 {
     /**
      * @var array 实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+说明：可输入多个实例 ID 进行修改，json 格式如下。
+[
+    "cdb-30z11v8s",
+    "cdb-93h11efg"
+  ]
      */
     public $InstanceIds;
 
@@ -39,6 +54,11 @@ class ModifyAutoRenewFlagRequest extends AbstractModel
 
     /**
      * @param array $InstanceIds 实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+说明：可输入多个实例 ID 进行修改，json 格式如下。
+[
+    "cdb-30z11v8s",
+    "cdb-93h11efg"
+  ]
      * @param integer $AutoRenew 自动续费标记，可取值的有：0 - 不自动续费，1 - 自动续费。
      */
     function __construct()

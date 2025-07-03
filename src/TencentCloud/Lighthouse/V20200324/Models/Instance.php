@@ -50,10 +50,10 @@ PREPAID：表示预付费，即包年包月。
  * @method void setInternetAccessible(InternetAccessible $InternetAccessible) 设置实例带宽信息。
  * @method string getRenewFlag() 获取自动续费标识。取值范围： 
 NOTIFY_AND_MANUAL_RENEW：表示通知即将过期，但不自动续费  
-NOTIFY_AND_AUTO_RENEW：表示通知即将过期，而且自动续费 。
+NOTIFY_AND_AUTO_RENEW：表示通知即将过期，而且自动续费 DISABLE_NOTIFY_AND_MANUAL_RENEW：不自动续费，且不通知。
  * @method void setRenewFlag(string $RenewFlag) 设置自动续费标识。取值范围： 
 NOTIFY_AND_MANUAL_RENEW：表示通知即将过期，但不自动续费  
-NOTIFY_AND_AUTO_RENEW：表示通知即将过期，而且自动续费 。
+NOTIFY_AND_AUTO_RENEW：表示通知即将过期，而且自动续费 DISABLE_NOTIFY_AND_MANUAL_RENEW：不自动续费，且不通知。
  * @method LoginSettings getLoginSettings() 获取实例登录设置。
  * @method void setLoginSettings(LoginSettings $LoginSettings) 设置实例登录设置。
  * @method string getInstanceState() 获取实例状态。取值范围： 
@@ -114,8 +114,14 @@ FAILED：表示操作失败
 <li>NORMAL实例正常。</li><li>NETWORK_RESTRICT：网络封禁。</li>
  * @method void setInstanceRestrictState(string $InstanceRestrictState) 设置实例封禁状态。取值范围：
 <li>NORMAL实例正常。</li><li>NETWORK_RESTRICT：网络封禁。</li>
+ * @method SupportIpv6Detail getSupportIpv6Detail() 获取描述实例是否支持IPv6。
+ * @method void setSupportIpv6Detail(SupportIpv6Detail $SupportIpv6Detail) 设置描述实例是否支持IPv6。
+ * @method array getPublicIpv6Addresses() 获取公网IPv6地址列表。
+ * @method void setPublicIpv6Addresses(array $PublicIpv6Addresses) 设置公网IPv6地址列表。
  * @method string getInitInvocationId() 获取创建实例后自动执行TAT命令的调用ID。
  * @method void setInitInvocationId(string $InitInvocationId) 设置创建实例后自动执行TAT命令的调用ID。
+ * @method InstanceViolationDetail getInstanceViolationDetail() 获取实例违规详情。
+ * @method void setInstanceViolationDetail(InstanceViolationDetail $InstanceViolationDetail) 设置实例违规详情。
  */
 class Instance extends AbstractModel
 {
@@ -180,7 +186,7 @@ PREPAID：表示预付费，即包年包月。
     /**
      * @var string 自动续费标识。取值范围： 
 NOTIFY_AND_MANUAL_RENEW：表示通知即将过期，但不自动续费  
-NOTIFY_AND_AUTO_RENEW：表示通知即将过期，而且自动续费 。
+NOTIFY_AND_AUTO_RENEW：表示通知即将过期，而且自动续费 DISABLE_NOTIFY_AND_MANUAL_RENEW：不自动续费，且不通知。
      */
     public $RenewFlag;
 
@@ -279,9 +285,24 @@ FAILED：表示操作失败
     public $InstanceRestrictState;
 
     /**
+     * @var SupportIpv6Detail 描述实例是否支持IPv6。
+     */
+    public $SupportIpv6Detail;
+
+    /**
+     * @var array 公网IPv6地址列表。
+     */
+    public $PublicIpv6Addresses;
+
+    /**
      * @var string 创建实例后自动执行TAT命令的调用ID。
      */
     public $InitInvocationId;
+
+    /**
+     * @var InstanceViolationDetail 实例违规详情。
+     */
+    public $InstanceViolationDetail;
 
     /**
      * @param string $InstanceId 实例 ID。
@@ -300,7 +321,7 @@ PREPAID：表示预付费，即包年包月。
      * @param InternetAccessible $InternetAccessible 实例带宽信息。
      * @param string $RenewFlag 自动续费标识。取值范围： 
 NOTIFY_AND_MANUAL_RENEW：表示通知即将过期，但不自动续费  
-NOTIFY_AND_AUTO_RENEW：表示通知即将过期，而且自动续费 。
+NOTIFY_AND_AUTO_RENEW：表示通知即将过期，而且自动续费 DISABLE_NOTIFY_AND_MANUAL_RENEW：不自动续费，且不通知。
      * @param LoginSettings $LoginSettings 实例登录设置。
      * @param string $InstanceState 实例状态。取值范围： 
 <li>PENDING：表示创建中</li><li>LAUNCH_FAILED：表示创建失败</li><li>RUNNING：表示运行中</li><li>STOPPED：表示关机</li><li>STARTING：表示开机中</li><li>STOPPING：表示关机中</li><li>REBOOTING：表示重启中</li><li>SHUTDOWN：表示停止待销毁</li><li>TERMINATING：表示销毁中</li><li>DELETING：表示删除中</li><li>FREEZING：表示冻结中</li><li>ENTER_RESCUE_MODE：表示进入救援模式中</li><li>RESCUE_MODE：表示救援模式</li><li>EXIT_RESCUE_MODE：表示退出救援模式中</li>
@@ -331,7 +352,10 @@ FAILED：表示操作失败
      * @param array $Tags 实例绑定的标签列表。
      * @param string $InstanceRestrictState 实例封禁状态。取值范围：
 <li>NORMAL实例正常。</li><li>NETWORK_RESTRICT：网络封禁。</li>
+     * @param SupportIpv6Detail $SupportIpv6Detail 描述实例是否支持IPv6。
+     * @param array $PublicIpv6Addresses 公网IPv6地址列表。
      * @param string $InitInvocationId 创建实例后自动执行TAT命令的调用ID。
+     * @param InstanceViolationDetail $InstanceViolationDetail 实例违规详情。
      */
     function __construct()
     {
@@ -466,8 +490,22 @@ FAILED：表示操作失败
             $this->InstanceRestrictState = $param["InstanceRestrictState"];
         }
 
+        if (array_key_exists("SupportIpv6Detail",$param) and $param["SupportIpv6Detail"] !== null) {
+            $this->SupportIpv6Detail = new SupportIpv6Detail();
+            $this->SupportIpv6Detail->deserialize($param["SupportIpv6Detail"]);
+        }
+
+        if (array_key_exists("PublicIpv6Addresses",$param) and $param["PublicIpv6Addresses"] !== null) {
+            $this->PublicIpv6Addresses = $param["PublicIpv6Addresses"];
+        }
+
         if (array_key_exists("InitInvocationId",$param) and $param["InitInvocationId"] !== null) {
             $this->InitInvocationId = $param["InitInvocationId"];
+        }
+
+        if (array_key_exists("InstanceViolationDetail",$param) and $param["InstanceViolationDetail"] !== null) {
+            $this->InstanceViolationDetail = new InstanceViolationDetail();
+            $this->InstanceViolationDetail->deserialize($param["InstanceViolationDetail"]);
         }
     }
 }

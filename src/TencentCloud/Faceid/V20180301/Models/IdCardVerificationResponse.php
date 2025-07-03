@@ -21,7 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * IdCardVerification返回参数结构体
  *
  * @method string getResult() 获取认证结果码，收费情况如下。
-收费结果码：
+- 收费结果码：
 0: 姓名和身份证号一致
 -1: 姓名和身份证号不一致
 不收费结果码：
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 -6: 权威比对系统升级中，请稍后再试
 -7: 认证次数超过当日限制
  * @method void setResult(string $Result) 设置认证结果码，收费情况如下。
-收费结果码：
+- 收费结果码：
 0: 姓名和身份证号一致
 -1: 姓名和身份证号不一致
 不收费结果码：
@@ -51,7 +51,7 @@ class IdCardVerificationResponse extends AbstractModel
 {
     /**
      * @var string 认证结果码，收费情况如下。
-收费结果码：
+- 收费结果码：
 0: 姓名和身份证号一致
 -1: 姓名和身份证号不一致
 不收费结果码：
@@ -76,7 +76,7 @@ class IdCardVerificationResponse extends AbstractModel
 
     /**
      * @param string $Result 认证结果码，收费情况如下。
-收费结果码：
+- 收费结果码：
 0: 姓名和身份证号一致
 -1: 姓名和身份证号不一致
 不收费结果码：

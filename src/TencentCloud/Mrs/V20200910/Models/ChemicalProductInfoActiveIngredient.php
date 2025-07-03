@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 活性成份消息定义，如果是复方制剂，可以不列出每个活性成份的详细信息
  *
  * @method string getText() 获取文本内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setText(string $Text) 设置文本内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getChemicalName() 获取活性成份的化学名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChemicalName(string $ChemicalName) 设置活性成份的化学名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getChemicalFormula() 获取活性成份的化学结构式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChemicalFormula(string $ChemicalFormula) 设置活性成份的化学结构式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMolecularFormula() 获取活性成份的分子式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMolecularFormula(string $MolecularFormula) 设置活性成份的分子式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMolecularWeight() 获取活性成份的分子量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMolecularWeight(string $MolecularWeight) 设置活性成份的分子量
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ChemicalProductInfoActiveIngredient extends AbstractModel
 {
     /**
      * @var string 文本内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Text;
 
     /**
      * @var string 活性成份的化学名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChemicalName;
 
     /**
      * @var string 活性成份的化学结构式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChemicalFormula;
 
     /**
      * @var string 活性成份的分子式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MolecularFormula;
 
     /**
      * @var string 活性成份的分子量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MolecularWeight;
 
     /**
      * @param string $Text 文本内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChemicalName 活性成份的化学名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChemicalFormula 活性成份的化学结构式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MolecularFormula 活性成份的分子式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MolecularWeight 活性成份的分子量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

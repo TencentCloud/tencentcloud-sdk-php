@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SwitchProxy请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getProxyID() 获取实例ProxyID
- * @method void setProxyID(string $ProxyID) 设置实例ProxyID
+ * @method string getInstanceId() 获取实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+ * @method string getProxyID() 获取实例 ProxyID，请通过接口[DescribeInstanceNodeInfo](https://cloud.tencent.com/document/product/239/48603)的返回参数**Proxy**中的**NodeId**获取。  
+ * @method void setProxyID(string $ProxyID) 设置实例 ProxyID，请通过接口[DescribeInstanceNodeInfo](https://cloud.tencent.com/document/product/239/48603)的返回参数**Proxy**中的**NodeId**获取。  
  */
 class SwitchProxyRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public $InstanceId;
 
     /**
-     * @var string 实例ProxyID
+     * @var string 实例 ProxyID，请通过接口[DescribeInstanceNodeInfo](https://cloud.tencent.com/document/product/239/48603)的返回参数**Proxy**中的**NodeId**获取。  
      */
     public $ProxyID;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $ProxyID 实例ProxyID
+     * @param string $InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+     * @param string $ProxyID 实例 ProxyID，请通过接口[DescribeInstanceNodeInfo](https://cloud.tencent.com/document/product/239/48603)的返回参数**Proxy**中的**NodeId**获取。  
      */
     function __construct()
     {

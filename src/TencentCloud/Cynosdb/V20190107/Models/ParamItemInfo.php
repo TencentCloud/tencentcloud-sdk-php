@@ -21,69 +21,51 @@ use TencentCloud\Common\AbstractModel;
  * 参数变化信息
  *
  * @method string getParamName() 获取参数名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParamName(string $ParamName) 设置参数名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNewValue() 获取参数新值
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNewValue(string $NewValue) 设置参数新值
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOldValue() 获取参数旧值
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOldValue(string $OldValue) 设置参数旧值
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValueFunction() 获取参数公式
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValueFunction(string $ValueFunction) 设置参数公式
-
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ParamItemInfo extends AbstractModel
 {
     /**
      * @var string 参数名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParamName;
 
     /**
      * @var string 参数新值
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NewValue;
 
     /**
      * @var string 参数旧值
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OldValue;
 
     /**
      * @var string 参数公式
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ValueFunction;
 
     /**
      * @param string $ParamName 参数名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NewValue 参数新值
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OldValue 参数旧值
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ValueFunction 参数公式
-
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

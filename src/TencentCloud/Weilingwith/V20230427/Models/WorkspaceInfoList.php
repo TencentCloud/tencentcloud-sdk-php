@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 项目空间列表
  *
  * @method array getList() 获取项目空间列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setList(array $List) 设置项目空间列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkspaceInfoList extends AbstractModel
 {
     /**
      * @var array 项目空间列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $List;
 
     /**
      * @param array $List 项目空间列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

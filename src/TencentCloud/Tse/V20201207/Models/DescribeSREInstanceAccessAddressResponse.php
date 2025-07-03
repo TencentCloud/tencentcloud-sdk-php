@@ -27,29 +27,19 @@ use TencentCloud\Common\AbstractModel;
  * @method array getEnvAddressInfos() 获取apollo多环境公网ip
  * @method void setEnvAddressInfos(array $EnvAddressInfos) 设置apollo多环境公网ip
  * @method string getConsoleInternetAddress() 获取控制台公网访问地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConsoleInternetAddress(string $ConsoleInternetAddress) 设置控制台公网访问地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConsoleIntranetAddress() 获取控制台内网访问地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConsoleIntranetAddress(string $ConsoleIntranetAddress) 设置控制台内网访问地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getInternetBandWidth() 获取客户端公网带宽
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInternetBandWidth(integer $InternetBandWidth) 设置客户端公网带宽
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getConsoleInternetBandWidth() 获取控制台公网带宽
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConsoleInternetBandWidth(integer $ConsoleInternetBandWidth) 设置控制台公网带宽
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLimiterAddressInfos() 获取北极星限流server节点接入IP
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLimiterAddressInfos(array $LimiterAddressInfos) 设置北极星限流server节点接入IP
 注意：此字段可能返回 null，表示取不到有效值。
  * @method CLBMultiRegion getCLBMultiRegion() 获取InternetAddress 的公网 CLB 多可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCLBMultiRegion(CLBMultiRegion $CLBMultiRegion) 设置InternetAddress 的公网 CLB 多可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -72,25 +62,21 @@ class DescribeSREInstanceAccessAddressResponse extends AbstractModel
 
     /**
      * @var string 控制台公网访问地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConsoleInternetAddress;
 
     /**
      * @var string 控制台内网访问地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConsoleIntranetAddress;
 
     /**
      * @var integer 客户端公网带宽
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InternetBandWidth;
 
     /**
      * @var integer 控制台公网带宽
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConsoleInternetBandWidth;
 
@@ -102,7 +88,6 @@ class DescribeSREInstanceAccessAddressResponse extends AbstractModel
 
     /**
      * @var CLBMultiRegion InternetAddress 的公网 CLB 多可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CLBMultiRegion;
 
@@ -116,17 +101,12 @@ class DescribeSREInstanceAccessAddressResponse extends AbstractModel
      * @param string $InternetAddress 公网访问地址
      * @param array $EnvAddressInfos apollo多环境公网ip
      * @param string $ConsoleInternetAddress 控制台公网访问地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConsoleIntranetAddress 控制台内网访问地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InternetBandWidth 客户端公网带宽
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ConsoleInternetBandWidth 控制台公网带宽
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $LimiterAddressInfos 北极星限流server节点接入IP
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CLBMultiRegion $CLBMultiRegion InternetAddress 的公网 CLB 多可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

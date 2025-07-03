@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
 <li>不填或填0，表示转码后的视频持续到原始视频的末尾终止；</li>
 <li>当数值大于0时（假设为 n），表示转码后的视频持续到原始视频第 n 秒时终止；</li>
 <li>当数值小于0时（假设为 -n），表示转码后的视频持续到原始视频结束 n 秒前终止。</li>
- * @method string getProcedureName() 获取[任务流模板](/document/product/266/11700#.E4.BB.BB.E5.8A.A1.E6.B5.81.E6.A8.A1.E6.9D.BF)名字，如果要对生成的新视频执行任务流时填写。
- * @method void setProcedureName(string $ProcedureName) 设置[任务流模板](/document/product/266/11700#.E4.BB.BB.E5.8A.A1.E6.B5.81.E6.A8.A1.E6.9D.BF)名字，如果要对生成的新视频执行任务流时填写。
+ * @method string getProcedureName() 获取[任务流](https://cloud.tencent.com/document/product/266/33475#.E4.BB.BB.E5.8A.A1.E6.B5.81)名称。要对生成的新视频自动执行任务流时填写。
+ * @method void setProcedureName(string $ProcedureName) 设置[任务流](https://cloud.tencent.com/document/product/266/33475#.E4.BB.BB.E5.8A.A1.E6.B5.81)名称。要对生成的新视频自动执行任务流时填写。
  * @method SplitMediaOutputConfig getOutputConfig() 获取视频拆条输出信息。
  * @method void setOutputConfig(SplitMediaOutputConfig $OutputConfig) 设置视频拆条输出信息。
  */
@@ -60,7 +60,7 @@ class SplitMediaTaskConfig extends AbstractModel
     public $EndTimeOffset;
 
     /**
-     * @var string [任务流模板](/document/product/266/11700#.E4.BB.BB.E5.8A.A1.E6.B5.81.E6.A8.A1.E6.9D.BF)名字，如果要对生成的新视频执行任务流时填写。
+     * @var string [任务流](https://cloud.tencent.com/document/product/266/33475#.E4.BB.BB.E5.8A.A1.E6.B5.81)名称。要对生成的新视频自动执行任务流时填写。
      */
     public $ProcedureName;
 
@@ -78,7 +78,7 @@ class SplitMediaTaskConfig extends AbstractModel
 <li>不填或填0，表示转码后的视频持续到原始视频的末尾终止；</li>
 <li>当数值大于0时（假设为 n），表示转码后的视频持续到原始视频第 n 秒时终止；</li>
 <li>当数值小于0时（假设为 -n），表示转码后的视频持续到原始视频结束 n 秒前终止。</li>
-     * @param string $ProcedureName [任务流模板](/document/product/266/11700#.E4.BB.BB.E5.8A.A1.E6.B5.81.E6.A8.A1.E6.9D.BF)名字，如果要对生成的新视频执行任务流时填写。
+     * @param string $ProcedureName [任务流](https://cloud.tencent.com/document/product/266/33475#.E4.BB.BB.E5.8A.A1.E6.B5.81)名称。要对生成的新视频自动执行任务流时填写。
      * @param SplitMediaOutputConfig $OutputConfig 视频拆条输出信息。
      */
     function __construct()

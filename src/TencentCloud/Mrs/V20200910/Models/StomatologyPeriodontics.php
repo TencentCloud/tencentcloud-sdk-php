@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 体检报告-口腔科-牙周
  *
  * @method KeyValueItem getText() 获取牙周总体描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setText(KeyValueItem $Text) 设置牙周总体描述
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class StomatologyPeriodontics extends AbstractModel
 {
     /**
      * @var KeyValueItem 牙周总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Text;
 
     /**
      * @param KeyValueItem $Text 牙周总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

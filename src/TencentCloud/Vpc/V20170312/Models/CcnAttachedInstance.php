@@ -69,13 +69,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDescription() 获取备注
  * @method void setDescription(string $Description) 设置备注
  * @method string getRouteTableId() 获取路由表ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRouteTableId(string $RouteTableId) 设置路由表ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRouteTableName() 获取路由表名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRouteTableName(string $RouteTableName) 设置路由表名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CcnAttachedInstance extends AbstractModel
 {
@@ -153,13 +149,11 @@ class CcnAttachedInstance extends AbstractModel
 
     /**
      * @var string 路由表ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RouteTableId;
 
     /**
      * @var string 路由表名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RouteTableName;
 
@@ -189,9 +183,7 @@ class CcnAttachedInstance extends AbstractModel
      * @param string $InstanceArea 关联实例所属的大地域，如: CHINA_MAINLAND
      * @param string $Description 备注
      * @param string $RouteTableId 路由表ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RouteTableName 路由表名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method integer getLimit() 获取返回数量，最大值为100。
  * @method void setLimit(integer $Limit) 设置返回数量，最大值为100。
+ * @method array getLogTypes() 获取日志类型列表
+ * @method void setLogTypes(array $LogTypes) 设置日志类型列表
  */
 class DescribeESHitsRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeESHitsRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var array 日志类型列表
+     */
+    public $LogTypes;
+
+    /**
      * @param string $Query ES查询条件JSON
      * @param integer $Offset 偏移量，默认为0。
      * @param integer $Limit 返回数量，最大值为100。
+     * @param array $LogTypes 日志类型列表
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeESHitsRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("LogTypes",$param) and $param["LogTypes"] !== null) {
+            $this->LogTypes = $param["LogTypes"];
         }
     }
 }

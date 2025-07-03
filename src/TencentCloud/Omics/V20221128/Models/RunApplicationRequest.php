@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOption(RunOption $Option) 设置WDL运行选项。
  * @method NFOption getNFOption() 获取Nextflow运行选项。
  * @method void setNFOption(NFOption $NFOption) 设置Nextflow运行选项。
- * @method string getWorkDir() 获取工作目录，可填写指定缓存卷内的绝对路径，不填使用默认缓存卷内的默认路径，暂时仅支持Nextflow。
- * @method void setWorkDir(string $WorkDir) 设置工作目录，可填写指定缓存卷内的绝对路径，不填使用默认缓存卷内的默认路径，暂时仅支持Nextflow。
+ * @method string getWorkDir() 获取工作目录，当前仅支持Nextflow。可填写指定缓存卷内的绝对路径或者COS路径，不填使用默认缓存卷内的默认路径。如果使用COS路径，NFOption中LaunchDir需填写指定缓存卷内的绝对路径作为启动路径。
+ * @method void setWorkDir(string $WorkDir) 设置工作目录，当前仅支持Nextflow。可填写指定缓存卷内的绝对路径或者COS路径，不填使用默认缓存卷内的默认路径。如果使用COS路径，NFOption中LaunchDir需填写指定缓存卷内的绝对路径作为启动路径。
  * @method string getAccessMode() 获取访问模式，不填默认私有。取值范围
 - PRIVATE：私有应用
 - PUBLIC：公共应用
@@ -125,7 +125,7 @@ class RunApplicationRequest extends AbstractModel
     public $NFOption;
 
     /**
-     * @var string 工作目录，可填写指定缓存卷内的绝对路径，不填使用默认缓存卷内的默认路径，暂时仅支持Nextflow。
+     * @var string 工作目录，当前仅支持Nextflow。可填写指定缓存卷内的绝对路径或者COS路径，不填使用默认缓存卷内的默认路径。如果使用COS路径，NFOption中LaunchDir需填写指定缓存卷内的绝对路径作为启动路径。
      */
     public $WorkDir;
 
@@ -155,7 +155,7 @@ class RunApplicationRequest extends AbstractModel
      * @param string $ApplicationVersionId 应用版本ID。不填表示使用当前最新版本。
      * @param RunOption $Option WDL运行选项。
      * @param NFOption $NFOption Nextflow运行选项。
-     * @param string $WorkDir 工作目录，可填写指定缓存卷内的绝对路径，不填使用默认缓存卷内的默认路径，暂时仅支持Nextflow。
+     * @param string $WorkDir 工作目录，当前仅支持Nextflow。可填写指定缓存卷内的绝对路径或者COS路径，不填使用默认缓存卷内的默认路径。如果使用COS路径，NFOption中LaunchDir需填写指定缓存卷内的绝对路径作为启动路径。
      * @param string $AccessMode 访问模式，不填默认私有。取值范围
 - PRIVATE：私有应用
 - PUBLIC：公共应用

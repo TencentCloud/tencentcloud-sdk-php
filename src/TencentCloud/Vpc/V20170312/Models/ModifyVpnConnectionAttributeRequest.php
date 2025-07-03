@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCustomerGatewayId(string $CustomerGatewayId) 设置对端网关ID，4.0及以上网关下的通道支持更新。
  * @method HealthCheckConfig getHealthCheckConfig() 获取健康检查配置
  * @method void setHealthCheckConfig(HealthCheckConfig $HealthCheckConfig) 设置健康检查配置
+ * @method BgpConfig getBgpConfig() 获取BGP隧道配置
+ * @method void setBgpConfig(BgpConfig $BgpConfig) 设置BGP隧道配置
  */
 class ModifyVpnConnectionAttributeRequest extends AbstractModel
 {
@@ -129,6 +131,11 @@ class ModifyVpnConnectionAttributeRequest extends AbstractModel
     public $HealthCheckConfig;
 
     /**
+     * @var BgpConfig BGP隧道配置
+     */
+    public $BgpConfig;
+
+    /**
      * @param string $VpnConnectionId VPN通道实例ID。形如：vpnx-f49l6u0z。
      * @param string $VpnConnectionName VPN通道名称，可任意命名，但不得超过60个字符。
      * @param string $PreShareKey 预共享密钥。
@@ -144,6 +151,7 @@ class ModifyVpnConnectionAttributeRequest extends AbstractModel
      * @param string $DpdAction DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
      * @param string $CustomerGatewayId 对端网关ID，4.0及以上网关下的通道支持更新。
      * @param HealthCheckConfig $HealthCheckConfig 健康检查配置
+     * @param BgpConfig $BgpConfig BGP隧道配置
      */
     function __construct()
     {
@@ -224,6 +232,11 @@ class ModifyVpnConnectionAttributeRequest extends AbstractModel
         if (array_key_exists("HealthCheckConfig",$param) and $param["HealthCheckConfig"] !== null) {
             $this->HealthCheckConfig = new HealthCheckConfig();
             $this->HealthCheckConfig->deserialize($param["HealthCheckConfig"]);
+        }
+
+        if (array_key_exists("BgpConfig",$param) and $param["BgpConfig"] !== null) {
+            $this->BgpConfig = new BgpConfig();
+            $this->BgpConfig->deserialize($param["BgpConfig"]);
         }
     }
 }

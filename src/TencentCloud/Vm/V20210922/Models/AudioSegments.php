@@ -23,15 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getOffsetTime() 获取截帧时间。
 点播文件：该值为相对于视频偏移时间，单位为秒，例如：0，5，10
 直播流：该值为时间戳，例如：1594650717
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOffsetTime(string $OffsetTime) 设置截帧时间。
 点播文件：该值为相对于视频偏移时间，单位为秒，例如：0，5，10
 直播流：该值为时间戳，例如：1594650717
-注意：此字段可能返回 null，表示取不到有效值。
  * @method AudioResult getResult() 获取结果集
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResult(AudioResult $Result) 设置结果集
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreatedAt() 获取创建时间
+ * @method void setCreatedAt(string $CreatedAt) 设置创建时间
  */
 class AudioSegments extends AbstractModel
 {
@@ -39,23 +37,25 @@ class AudioSegments extends AbstractModel
      * @var string 截帧时间。
 点播文件：该值为相对于视频偏移时间，单位为秒，例如：0，5，10
 直播流：该值为时间戳，例如：1594650717
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OffsetTime;
 
     /**
      * @var AudioResult 结果集
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Result;
+
+    /**
+     * @var string 创建时间
+     */
+    public $CreatedAt;
 
     /**
      * @param string $OffsetTime 截帧时间。
 点播文件：该值为相对于视频偏移时间，单位为秒，例如：0，5，10
 直播流：该值为时间戳，例如：1594650717
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AudioResult $Result 结果集
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreatedAt 创建时间
      */
     function __construct()
     {
@@ -77,6 +77,10 @@ class AudioSegments extends AbstractModel
         if (array_key_exists("Result",$param) and $param["Result"] !== null) {
             $this->Result = new AudioResult();
             $this->Result->deserialize($param["Result"]);
+        }
+
+        if (array_key_exists("CreatedAt",$param) and $param["CreatedAt"] !== null) {
+            $this->CreatedAt = $param["CreatedAt"];
         }
     }
 }

@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * NodePool的运行时配置
  *
  * @method string getNodePoolId() 获取节点池ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodePoolId(string $NodePoolId) 设置节点池ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRuntimeType() 获取运行时类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuntimeType(string $RuntimeType) 设置运行时类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRuntimeVersion() 获取运行时版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuntimeVersion(string $RuntimeVersion) 设置运行时版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNodePoolName() 获取节点池名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodePoolName(string $NodePoolName) 设置节点池名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NodePoolRuntime extends AbstractModel
 {
     /**
      * @var string 节点池ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodePoolId;
 
     /**
      * @var string 运行时类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuntimeType;
 
     /**
      * @var string 运行时版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuntimeVersion;
 
     /**
      * @var string 节点池名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodePoolName;
 
     /**
      * @param string $NodePoolId 节点池ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RuntimeType 运行时类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RuntimeVersion 运行时版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NodePoolName 节点池名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

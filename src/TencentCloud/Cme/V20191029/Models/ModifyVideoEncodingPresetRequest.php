@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyVideoEncodingPreset请求参数结构体
  *
- * @method string getPlatform() 获取平台名称，指定访问的平台。
- * @method void setPlatform(string $Platform) 设置平台名称，指定访问的平台。
+ * @method string getPlatform() 获取平台名称，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+ * @method void setPlatform(string $Platform) 设置平台名称，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
  * @method integer getId() 获取配置 ID。
  * @method void setId(integer $Id) 设置配置 ID。
  * @method string getName() 获取更改后的视频编码配置名，不填则不修改。
@@ -50,7 +50,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyVideoEncodingPresetRequest extends AbstractModel
 {
     /**
-     * @var string 平台名称，指定访问的平台。
+     * @var string 平台名称，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      */
     public $Platform;
 
@@ -91,7 +91,7 @@ class ModifyVideoEncodingPresetRequest extends AbstractModel
     public $AudioSetting;
 
     /**
-     * @param string $Platform 平台名称，指定访问的平台。
+     * @param string $Platform 平台名称，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
      * @param integer $Id 配置 ID。
      * @param string $Name 更改后的视频编码配置名，不填则不修改。
      * @param integer $RemoveVideo 是否去除视频数据，可选值：

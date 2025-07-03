@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getZoneName() 获取站点名称。
  * @method void setZoneName(string $ZoneName) 设置站点名称。
  * @method string getDomain() 获取验证子域名。验证站点时，该值为空。验证子域名是为具体子域名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomain(string $Domain) 设置验证子域名。验证站点时，该值为空。验证子域名是为具体子域名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取验证状态，取值有：
 <li> pending：验证中；</li>
 <li> finished：验证完成。</li>
@@ -35,9 +33,7 @@ use TencentCloud\Common\AbstractModel;
  * @method AscriptionInfo getAscription() 获取站点归属权校验：Dns校验信息。
  * @method void setAscription(AscriptionInfo $Ascription) 设置站点归属权校验：Dns校验信息。
  * @method array getOriginalNameServers() 获取域名当前的 NS 记录。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOriginalNameServers(array $OriginalNameServers) 设置域名当前的 NS 记录。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method FileAscriptionInfo getFileAscription() 获取站点归属权校验：文件校验信息。
  * @method void setFileAscription(FileAscriptionInfo $FileAscription) 设置站点归属权校验：文件校验信息。
  */
@@ -50,7 +46,6 @@ class Identification extends AbstractModel
 
     /**
      * @var string 验证子域名。验证站点时，该值为空。验证子域名是为具体子域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Domain;
 
@@ -68,7 +63,6 @@ class Identification extends AbstractModel
 
     /**
      * @var array 域名当前的 NS 记录。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OriginalNameServers;
 
@@ -80,13 +74,11 @@ class Identification extends AbstractModel
     /**
      * @param string $ZoneName 站点名称。
      * @param string $Domain 验证子域名。验证站点时，该值为空。验证子域名是为具体子域名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 验证状态，取值有：
 <li> pending：验证中；</li>
 <li> finished：验证完成。</li>
      * @param AscriptionInfo $Ascription 站点归属权校验：Dns校验信息。
      * @param array $OriginalNameServers 域名当前的 NS 记录。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FileAscriptionInfo $FileAscription 站点归属权校验：文件校验信息。
      */
     function __construct()

@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 灰度规则列表
  *
  * @method array getCanaryRuleList() 获取灰度规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCanaryRuleList(array $CanaryRuleList) 设置灰度规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置总数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudAPIGatewayCanaryRuleList extends AbstractModel
 {
     /**
      * @var array 灰度规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CanaryRuleList;
 
     /**
      * @var integer 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
      * @param array $CanaryRuleList 灰度规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

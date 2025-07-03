@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 设备标签信息
  *
  * @method integer getTagId() 获取标签Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagId(integer $TagId) 设置标签Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTagName() 获取标签名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagName(string $TagName) 设置标签名字
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DeviceTagInfo extends AbstractModel
 {
     /**
      * @var integer 标签Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagId;
 
     /**
      * @var string 标签名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagName;
 
     /**
      * @param integer $TagId 标签Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TagName 标签名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

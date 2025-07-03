@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
- * @method integer getGroupId() 获取分组 ID
- * @method void setGroupId(integer $GroupId) 设置分组 ID
- * @method string getRecordId() 获取记录 ID，多个 ID 用竖线“|”分割
- * @method void setRecordId(string $RecordId) 设置记录 ID，多个 ID 用竖线“|”分割
- * @method integer getDomainId() 获取域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
- * @method void setDomainId(integer $DomainId) 设置域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
+ * @method integer getGroupId() 获取分组 ID，可通过DescribeRecordGroupList接口获取所有记录分组
+ * @method void setGroupId(integer $GroupId) 设置分组 ID，可通过DescribeRecordGroupList接口获取所有记录分组
+ * @method string getRecordId() 获取记录 ID，多个 ID 用竖线“|”分割，可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId
+ * @method void setRecordId(string $RecordId) 设置记录 ID，多个 ID 用竖线“|”分割，可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId
+ * @method integer getDomainId() 获取域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+ * @method void setDomainId(integer $DomainId) 设置域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
  */
 class ModifyRecordToGroupRequest extends AbstractModel
 {
@@ -37,25 +37,25 @@ class ModifyRecordToGroupRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var integer 分组 ID
+     * @var integer 分组 ID，可通过DescribeRecordGroupList接口获取所有记录分组
      */
     public $GroupId;
 
     /**
-     * @var string 记录 ID，多个 ID 用竖线“|”分割
+     * @var string 记录 ID，多个 ID 用竖线“|”分割，可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId
      */
     public $RecordId;
 
     /**
-     * @var integer 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
+     * @var integer 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
      */
     public $DomainId;
 
     /**
      * @param string $Domain 域名
-     * @param integer $GroupId 分组 ID
-     * @param string $RecordId 记录 ID，多个 ID 用竖线“|”分割
-     * @param integer $DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
+     * @param integer $GroupId 分组 ID，可通过DescribeRecordGroupList接口获取所有记录分组
+     * @param string $RecordId 记录 ID，多个 ID 用竖线“|”分割，可以通过接口DescribeRecordList查到所有的解析记录列表以及对应的RecordId
+     * @param integer $DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
      */
     function __construct()
     {

@@ -76,12 +76,24 @@ WECHAT-微信通知
 <ul><li> 1 :人脸认证</li>
 <li> 2 :签署密码</li>
 <li> 3 :运营商三要素认证</li>
-<li> 4 :UKey认证</li></ul>
+<li> 4 :UKey认证</li>
+<li> 5 :设备指纹识别</li>
+<li> 6 :设备面容识别</li></ul>
  * @method void setApproverSignTypes(array $ApproverSignTypes) 设置签署人进行合同签署时的认证方式，支持的类型如下:
 <ul><li> 1 :人脸认证</li>
 <li> 2 :签署密码</li>
 <li> 3 :运营商三要素认证</li>
-<li> 4 :UKey认证</li></ul>
+<li> 4 :UKey认证</li>
+<li> 5 :设备指纹识别</li>
+<li> 6 :设备面容识别</li></ul>
+ * @method boolean getNoTransfer() 获取签署方是否可以转他人处理
+
+<ul><li> **false** : ( 默认)可以转他人处理</li>
+<li> **true** :不可以转他人处理</li></ul>
+ * @method void setNoTransfer(boolean $NoTransfer) 设置签署方是否可以转他人处理
+
+<ul><li> **false** : ( 默认)可以转他人处理</li>
+<li> **true** :不可以转他人处理</li></ul>
  */
 class Recipient extends AbstractModel
 {
@@ -172,9 +184,19 @@ WECHAT-微信通知
 <ul><li> 1 :人脸认证</li>
 <li> 2 :签署密码</li>
 <li> 3 :运营商三要素认证</li>
-<li> 4 :UKey认证</li></ul>
+<li> 4 :UKey认证</li>
+<li> 5 :设备指纹识别</li>
+<li> 6 :设备面容识别</li></ul>
      */
     public $ApproverSignTypes;
+
+    /**
+     * @var boolean 签署方是否可以转他人处理
+
+<ul><li> **false** : ( 默认)可以转他人处理</li>
+<li> **true** :不可以转他人处理</li></ul>
+     */
+    public $NoTransfer;
 
     /**
      * @param string $RecipientId 签署参与者ID，唯一标识
@@ -207,7 +229,13 @@ WECHAT-微信通知
 <ul><li> 1 :人脸认证</li>
 <li> 2 :签署密码</li>
 <li> 3 :运营商三要素认证</li>
-<li> 4 :UKey认证</li></ul>
+<li> 4 :UKey认证</li>
+<li> 5 :设备指纹识别</li>
+<li> 6 :设备面容识别</li></ul>
+     * @param boolean $NoTransfer 签署方是否可以转他人处理
+
+<ul><li> **false** : ( 默认)可以转他人处理</li>
+<li> **true** :不可以转他人处理</li></ul>
      */
     function __construct()
     {
@@ -280,6 +308,10 @@ WECHAT-微信通知
 
         if (array_key_exists("ApproverSignTypes",$param) and $param["ApproverSignTypes"] !== null) {
             $this->ApproverSignTypes = $param["ApproverSignTypes"];
+        }
+
+        if (array_key_exists("NoTransfer",$param) and $param["NoTransfer"] !== null) {
+            $this->NoTransfer = $param["NoTransfer"];
         }
     }
 }

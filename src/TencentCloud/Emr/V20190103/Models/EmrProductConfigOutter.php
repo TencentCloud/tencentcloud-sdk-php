@@ -76,9 +76,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecurityOn(boolean $SecurityOn) 设置是否支持安全模式
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSecurityGroup() 获取安全组名称
+ * @method string getSecurityGroup() 获取集群初始安全组id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSecurityGroup(string $SecurityGroup) 设置安全组名称
+ * @method void setSecurityGroup(string $SecurityGroup) 设置集群初始安全组id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCbsEncrypt() 获取是否开启Cbs加密
 注意：此字段可能返回 null，表示取不到有效值。
@@ -88,9 +88,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationRole(string $ApplicationRole) 设置自定义应用角色。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getSecurityGroups() 获取安全组
+ * @method array getSecurityGroups() 获取安全组id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSecurityGroups(array $SecurityGroups) 设置安全组
+ * @method void setSecurityGroups(array $SecurityGroups) 设置安全组id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPublicKeyId() 获取SSH密钥Id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -184,7 +184,7 @@ class EmrProductConfigOutter extends AbstractModel
     public $SecurityOn;
 
     /**
-     * @var string 安全组名称
+     * @var string 集群初始安全组id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecurityGroup;
@@ -202,7 +202,7 @@ class EmrProductConfigOutter extends AbstractModel
     public $ApplicationRole;
 
     /**
-     * @var array 安全组
+     * @var array 安全组id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecurityGroups;
@@ -242,13 +242,13 @@ class EmrProductConfigOutter extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $SecurityOn 是否支持安全模式
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SecurityGroup 安全组名称
+     * @param string $SecurityGroup 集群初始安全组id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CbsEncrypt 是否开启Cbs加密
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationRole 自定义应用角色。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $SecurityGroups 安全组
+     * @param array $SecurityGroups 安全组id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PublicKeyId SSH密钥Id
 注意：此字段可能返回 null，表示取不到有效值。

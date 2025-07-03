@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 空间分类列表响应体
  *
  * @method array getSpaceTypeList() 获取空间分类列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpaceTypeList(array $SpaceTypeList) 设置空间分类列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SpaceTypeListRes extends AbstractModel
 {
     /**
      * @var array 空间分类列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SpaceTypeList;
 
     /**
      * @param array $SpaceTypeList 空间分类列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

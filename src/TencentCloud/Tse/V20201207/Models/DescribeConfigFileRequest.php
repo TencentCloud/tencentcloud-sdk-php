@@ -26,8 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNamespace(string $Namespace) 设置命名空间
  * @method string getGroup() 获取组
  * @method void setGroup(string $Group) 设置组
- * @method string getName() 获取名称
- * @method void setName(string $Name) 设置名称
+ * @method string getName() 获取配置文件名称
+ * @method void setName(string $Name) 设置配置文件名称
+ * @method string getId() 获取配置文件Id
+ * @method void setId(string $Id) 设置配置文件Id
  */
 class DescribeConfigFileRequest extends AbstractModel
 {
@@ -47,15 +49,21 @@ class DescribeConfigFileRequest extends AbstractModel
     public $Group;
 
     /**
-     * @var string 名称
+     * @var string 配置文件名称
      */
     public $Name;
+
+    /**
+     * @var string 配置文件Id
+     */
+    public $Id;
 
     /**
      * @param string $InstanceId TSE实例id
      * @param string $Namespace 命名空间
      * @param string $Group 组
-     * @param string $Name 名称
+     * @param string $Name 配置文件名称
+     * @param string $Id 配置文件Id
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeConfigFileRequest extends AbstractModel
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
         }
     }
 }

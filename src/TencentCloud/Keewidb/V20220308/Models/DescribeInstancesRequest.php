@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUniqSubnetIds(array $UniqSubnetIds) 设置子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
  * @method array getStatus() 获取实例状态。<ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul>
  * @method void setStatus(array $Status) 设置实例状态。<ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul>
- * @method array getAutoRenew() 获取包年包月计费的续费模式。<ul><li>0：默认状态，指手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</ul>
- * @method void setAutoRenew(array $AutoRenew) 设置包年包月计费的续费模式。<ul><li>0：默认状态，指手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</ul>
+ * @method array getAutoRenew() 获取续费模式。- 0：手动续费。- 1：自动续费。- 2：到期不再续费。
+ * @method void setAutoRenew(array $AutoRenew) 设置续费模式。- 0：手动续费。- 1：自动续费。- 2：到期不再续费。
  * @method string getBillingMode() 获取计费模式。<ul><li>postpaid：按量计费。</li><li>prepaid：包年包月。</li></ul>
  * @method void setBillingMode(string $BillingMode) 设置计费模式。<ul><li>postpaid：按量计费。</li><li>prepaid：包年包月。</li></ul>
  * @method integer getType() 获取实例类型。<ul><li>13：标准版。</li><li>14：集群版。</li></ul>
@@ -60,10 +60,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTypeList(array $TypeList) 设置内部参数，用户可忽略。
  * @method string getMonitorVersion() 获取内部参数，用户可忽略。
  * @method void setMonitorVersion(string $MonitorVersion) 设置内部参数，用户可忽略。
- * @method InstanceTagInfo getInstanceTags() 获取根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。
- * @method void setInstanceTags(InstanceTagInfo $InstanceTags) 设置根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。
+ * @method InstanceTagInfo getInstanceTags() 获取废弃字段。请使用TagList传参。
+ * @method void setInstanceTags(InstanceTagInfo $InstanceTags) 设置废弃字段。请使用TagList传参。
  * @method array getTagKeys() 获取根据标签的 Key 筛选资源，该参数不配置或者数组设置为空值，则不根据标签Key进行过滤。
  * @method void setTagKeys(array $TagKeys) 设置根据标签的 Key 筛选资源，该参数不配置或者数组设置为空值，则不根据标签Key进行过滤。
+ * @method array getTagList() 获取根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。
+ * @method void setTagList(array $TagList) 设置根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。
  */
 class DescribeInstancesRequest extends AbstractModel
 {
@@ -134,7 +136,7 @@ class DescribeInstancesRequest extends AbstractModel
     public $Status;
 
     /**
-     * @var array 包年包月计费的续费模式。<ul><li>0：默认状态，指手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</ul>
+     * @var array 续费模式。- 0：手动续费。- 1：自动续费。- 2：到期不再续费。
      */
     public $AutoRenew;
 
@@ -164,7 +166,8 @@ class DescribeInstancesRequest extends AbstractModel
     public $MonitorVersion;
 
     /**
-     * @var InstanceTagInfo 根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。
+     * @var InstanceTagInfo 废弃字段。请使用TagList传参。
+     * @deprecated
      */
     public $InstanceTags;
 
@@ -172,6 +175,11 @@ class DescribeInstancesRequest extends AbstractModel
      * @var array 根据标签的 Key 筛选资源，该参数不配置或者数组设置为空值，则不根据标签Key进行过滤。
      */
     public $TagKeys;
+
+    /**
+     * @var array 根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。
+     */
+    public $TagList;
 
     /**
      * @param integer $Limit 每页输出的实例列表的大小，即每页输出的实例数量，默认值20，取值范围为[1,1000]。
@@ -188,14 +196,15 @@ class DescribeInstancesRequest extends AbstractModel
      * @param array $UniqVpcIds 私有网络ID数组，数组下标从0开始，如果不传则默认选择基础网络，如：vpc-sad23jfdfk
      * @param array $UniqSubnetIds 子网ID数组，数组下标从0开始，如：subnet-fdj24n34j2
      * @param array $Status 实例状态。<ul><li>0：待初始化。</li><li>1：流程中。</li><li>2：运行中。</li><li>-2：已隔离。</li><li>-3：待删除。</li></ul>
-     * @param array $AutoRenew 包年包月计费的续费模式。<ul><li>0：默认状态，指手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</ul>
+     * @param array $AutoRenew 续费模式。- 0：手动续费。- 1：自动续费。- 2：到期不再续费。
      * @param string $BillingMode 计费模式。<ul><li>postpaid：按量计费。</li><li>prepaid：包年包月。</li></ul>
      * @param integer $Type 实例类型。<ul><li>13：标准版。</li><li>14：集群版。</li></ul>
      * @param array $SearchKeys 搜索关键词：支持实例 ID、实例名称、私有网络IP地址。
      * @param array $TypeList 内部参数，用户可忽略。
      * @param string $MonitorVersion 内部参数，用户可忽略。
-     * @param InstanceTagInfo $InstanceTags 根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。
+     * @param InstanceTagInfo $InstanceTags 废弃字段。请使用TagList传参。
      * @param array $TagKeys 根据标签的 Key 筛选资源，该参数不配置或者数组设置为空值，则不根据标签Key进行过滤。
+     * @param array $TagList 根据标签的 Key 和 Value 筛选资源。该参数不配置或者数组设置为空值，则不根据标签进行过滤。
      */
     function __construct()
     {
@@ -293,6 +302,15 @@ class DescribeInstancesRequest extends AbstractModel
 
         if (array_key_exists("TagKeys",$param) and $param["TagKeys"] !== null) {
             $this->TagKeys = $param["TagKeys"];
+        }
+
+        if (array_key_exists("TagList",$param) and $param["TagList"] !== null) {
+            $this->TagList = [];
+            foreach ($param["TagList"] as $key => $value){
+                $obj = new InstanceTagInfo();
+                $obj->deserialize($value);
+                array_push($this->TagList, $obj);
+            }
         }
     }
 }

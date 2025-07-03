@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApplicationId(string $ApplicationId) 设置服务id
  * @method string getEnvironmentId() 获取环境ID
  * @method void setEnvironmentId(string $EnvironmentId) 设置环境ID
- * @method integer getSourceChannel() 获取来源渠道
- * @method void setSourceChannel(integer $SourceChannel) 设置来源渠道
  * @method Autoscaler getAutoscaler() 获取弹性伸缩策略
  * @method void setAutoscaler(Autoscaler $Autoscaler) 设置弹性伸缩策略
+ * @method integer getSourceChannel() 获取来源渠道
+ * @method void setSourceChannel(integer $SourceChannel) 设置来源渠道
  */
 class CreateApplicationAutoscalerRequest extends AbstractModel
 {
@@ -42,20 +42,20 @@ class CreateApplicationAutoscalerRequest extends AbstractModel
     public $EnvironmentId;
 
     /**
-     * @var integer 来源渠道
-     */
-    public $SourceChannel;
-
-    /**
      * @var Autoscaler 弹性伸缩策略
      */
     public $Autoscaler;
 
     /**
+     * @var integer 来源渠道
+     */
+    public $SourceChannel;
+
+    /**
      * @param string $ApplicationId 服务id
      * @param string $EnvironmentId 环境ID
-     * @param integer $SourceChannel 来源渠道
      * @param Autoscaler $Autoscaler 弹性伸缩策略
+     * @param integer $SourceChannel 来源渠道
      */
     function __construct()
     {
@@ -78,13 +78,13 @@ class CreateApplicationAutoscalerRequest extends AbstractModel
             $this->EnvironmentId = $param["EnvironmentId"];
         }
 
-        if (array_key_exists("SourceChannel",$param) and $param["SourceChannel"] !== null) {
-            $this->SourceChannel = $param["SourceChannel"];
-        }
-
         if (array_key_exists("Autoscaler",$param) and $param["Autoscaler"] !== null) {
             $this->Autoscaler = new Autoscaler();
             $this->Autoscaler->deserialize($param["Autoscaler"]);
+        }
+
+        if (array_key_exists("SourceChannel",$param) and $param["SourceChannel"] !== null) {
+            $this->SourceChannel = $param["SourceChannel"];
         }
     }
 }

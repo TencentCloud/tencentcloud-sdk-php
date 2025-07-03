@@ -27,21 +27,17 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getPartitions() 获取0或1：非分区topic，无分区；大于1：具体分区topic的分区数。（存量非分区主题返回0，增量非分区主题返回1）
  * @method void setPartitions(integer $Partitions) 设置0或1：非分区topic，无分区；大于1：具体分区topic的分区数。（存量非分区主题返回0，增量非分区主题返回1）
  * @method string getRemark() 获取备注，128字符以内。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置备注，128字符以内。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTopicType() 获取0： 普通消息；
 1 ：全局顺序消息；
 2 ：局部顺序消息；
 3 ：重试队列；
 4 ：死信队列；
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicType(integer $TopicType) 设置0： 普通消息；
 1 ：全局顺序消息；
 2 ：局部顺序消息；
 3 ：重试队列；
 4 ：死信队列；
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -64,7 +60,6 @@ class CreateTopicResponse extends AbstractModel
 
     /**
      * @var string 备注，128字符以内。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
@@ -74,7 +69,6 @@ class CreateTopicResponse extends AbstractModel
 2 ：局部顺序消息；
 3 ：重试队列；
 4 ：死信队列；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicType;
 
@@ -88,13 +82,11 @@ class CreateTopicResponse extends AbstractModel
      * @param string $TopicName 主题名。
      * @param integer $Partitions 0或1：非分区topic，无分区；大于1：具体分区topic的分区数。（存量非分区主题返回0，增量非分区主题返回1）
      * @param string $Remark 备注，128字符以内。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TopicType 0： 普通消息；
 1 ：全局顺序消息；
 2 ：局部顺序消息；
 3 ：重试队列；
 4 ：死信队列；
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

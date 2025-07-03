@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TerminateInstances请求参数结构体
  *
- * @method array getInstanceIds() 获取实例ID列表
- * @method void setInstanceIds(array $InstanceIds) 设置实例ID列表
+ * @method array getInstanceIds() 获取实例ID列表。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1721/101612) API获取实例ID列表。单次能查询100个InstanceId。
+ * @method void setInstanceIds(array $InstanceIds) 设置实例ID列表。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1721/101612) API获取实例ID列表。单次能查询100个InstanceId。
  * @method boolean getDryRun() 获取默认为False，True代表只验证接口连通性
  * @method void setDryRun(boolean $DryRun) 设置默认为False，True代表只验证接口连通性
  */
 class TerminateInstancesRequest extends AbstractModel
 {
     /**
-     * @var array 实例ID列表
+     * @var array 实例ID列表。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1721/101612) API获取实例ID列表。单次能查询100个InstanceId。
      */
     public $InstanceIds;
 
@@ -38,7 +38,7 @@ class TerminateInstancesRequest extends AbstractModel
     public $DryRun;
 
     /**
-     * @param array $InstanceIds 实例ID列表
+     * @param array $InstanceIds 实例ID列表。可通过[DescribeInstances](https://cloud.tencent.com/document/api/1721/101612) API获取实例ID列表。单次能查询100个InstanceId。
      * @param boolean $DryRun 默认为False，True代表只验证接口连通性
      */
     function __construct()

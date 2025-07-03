@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConfidence(float $Confidence) 设置识别片段置信度。取值：0~100。
  * @method array getAreaCoordSet() 获取识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
  * @method void setAreaCoordSet(array $AreaCoordSet) 设置识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
+ * @method string getUrl() 获取截图链接。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUrl(string $Url) 设置截图链接。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LiveStreamObjectRecognitionResult extends AbstractModel
 {
@@ -59,11 +63,19 @@ class LiveStreamObjectRecognitionResult extends AbstractModel
     public $AreaCoordSet;
 
     /**
+     * @var string 截图链接。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Url;
+
+    /**
      * @param string $Name 识别的物体名称。
      * @param float $StartPtsOffset 识别片段起始的 PTS 时间，单位：秒。
      * @param float $EndPtsOffset 识别片段终止的 PTS 时间，单位：秒。
      * @param float $Confidence 识别片段置信度。取值：0~100。
      * @param array $AreaCoordSet 识别结果的区域坐标。数组包含 4 个元素 [x1,y1,x2,y2]，依次表示区域左上点、右下点的横纵坐标。
+     * @param string $Url 截图链接。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -96,6 +108,10 @@ class LiveStreamObjectRecognitionResult extends AbstractModel
 
         if (array_key_exists("AreaCoordSet",$param) and $param["AreaCoordSet"] !== null) {
             $this->AreaCoordSet = $param["AreaCoordSet"];
+        }
+
+        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
+            $this->Url = $param["Url"];
         }
     }
 }

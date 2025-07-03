@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 数据处理规则失败处理
  *
- * @method string getType() 获取类型，DLQ死信队列，IGNORE_ERROR保留，DROP废弃
- * @method void setType(string $Type) 设置类型，DLQ死信队列，IGNORE_ERROR保留，DROP废弃
+ * @method string getType() 获取类型，DLQ死信队列，IGNORE_ERROR保留，DROP丢弃
+ * @method void setType(string $Type) 设置类型，DLQ死信队列，IGNORE_ERROR保留，DROP丢弃
  * @method KafkaParam getKafkaParam() 获取Ckafka类型死信队列
  * @method void setKafkaParam(KafkaParam $KafkaParam) 设置Ckafka类型死信队列
  * @method integer getRetryInterval() 获取重试间隔
@@ -29,18 +29,14 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getMaxRetryAttempts() 获取重试次数
  * @method void setMaxRetryAttempts(integer $MaxRetryAttempts) 设置重试次数
  * @method TopicParam getTopicParam() 获取DIP Topic类型死信队列
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicParam(TopicParam $TopicParam) 设置DIP Topic类型死信队列
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDlqType() 获取死信队列类型，CKAFKA，TOPIC
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDlqType(string $DlqType) 设置死信队列类型，CKAFKA，TOPIC
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class FailureParam extends AbstractModel
 {
     /**
-     * @var string 类型，DLQ死信队列，IGNORE_ERROR保留，DROP废弃
+     * @var string 类型，DLQ死信队列，IGNORE_ERROR保留，DROP丢弃
      */
     public $Type;
 
@@ -61,25 +57,21 @@ class FailureParam extends AbstractModel
 
     /**
      * @var TopicParam DIP Topic类型死信队列
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicParam;
 
     /**
      * @var string 死信队列类型，CKAFKA，TOPIC
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DlqType;
 
     /**
-     * @param string $Type 类型，DLQ死信队列，IGNORE_ERROR保留，DROP废弃
+     * @param string $Type 类型，DLQ死信队列，IGNORE_ERROR保留，DROP丢弃
      * @param KafkaParam $KafkaParam Ckafka类型死信队列
      * @param integer $RetryInterval 重试间隔
      * @param integer $MaxRetryAttempts 重试次数
      * @param TopicParam $TopicParam DIP Topic类型死信队列
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DlqType 死信队列类型，CKAFKA，TOPIC
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

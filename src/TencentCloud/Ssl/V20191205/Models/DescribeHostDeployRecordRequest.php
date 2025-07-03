@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页偏移量，从0开始。
  * @method integer getLimit() 获取每页数量，默认10。
  * @method void setLimit(integer $Limit) 设置每页数量，默认10。
- * @method string getResourceType() 获取资源类型
- * @method void setResourceType(string $ResourceType) 设置资源类型
+ * @method string getResourceType() 获取支持的资源类型如下,clb,cdn,ddos,waf,apigateway,teo,tke,cos,lighthouse,vod,tcb,tse,live
+ * @method void setResourceType(string $ResourceType) 设置支持的资源类型如下,clb,cdn,ddos,waf,apigateway,teo,tke,cos,lighthouse,vod,tcb,tse,live
  */
 class DescribeHostDeployRecordRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeHostDeployRecordRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 资源类型
+     * @var string 支持的资源类型如下,clb,cdn,ddos,waf,apigateway,teo,tke,cos,lighthouse,vod,tcb,tse,live
      */
     public $ResourceType;
 
@@ -55,7 +55,7 @@ class DescribeHostDeployRecordRequest extends AbstractModel
      * @param string $CertificateId 待部署的证书ID
      * @param integer $Offset 分页偏移量，从0开始。
      * @param integer $Limit 每页数量，默认10。
-     * @param string $ResourceType 资源类型
+     * @param string $ResourceType 支持的资源类型如下,clb,cdn,ddos,waf,apigateway,teo,tke,cos,lighthouse,vod,tcb,tse,live
      */
     function __construct()
     {

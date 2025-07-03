@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotalCount() 获取慢查询总数。
  * @method void setTotalCount(integer $TotalCount) 设置慢查询总数。
- * @method array getInstanceProxySlowLogDetail() 获取慢查询详情。
- * @method void setInstanceProxySlowLogDetail(array $InstanceProxySlowLogDetail) 设置慢查询详情。
+ * @method array getInstanceProxySlowLogDetail() 获取慢查询详情，注意：TotalCount大于1W，即慢日志超过1万条，不支持返回日志详情，返回数据为空。 建议缩小BeginTime和EndTime的时间间隔，多次查询。
+ * @method void setInstanceProxySlowLogDetail(array $InstanceProxySlowLogDetail) 设置慢查询详情，注意：TotalCount大于1W，即慢日志超过1万条，不支持返回日志详情，返回数据为空。 建议缩小BeginTime和EndTime的时间间隔，多次查询。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,7 +35,7 @@ class DescribeProxySlowLogResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var array 慢查询详情。
+     * @var array 慢查询详情，注意：TotalCount大于1W，即慢日志超过1万条，不支持返回日志详情，返回数据为空。 建议缩小BeginTime和EndTime的时间间隔，多次查询。
      */
     public $InstanceProxySlowLogDetail;
 
@@ -46,7 +46,7 @@ class DescribeProxySlowLogResponse extends AbstractModel
 
     /**
      * @param integer $TotalCount 慢查询总数。
-     * @param array $InstanceProxySlowLogDetail 慢查询详情。
+     * @param array $InstanceProxySlowLogDetail 慢查询详情，注意：TotalCount大于1W，即慢日志超过1万条，不支持返回日志详情，返回数据为空。 建议缩小BeginTime和EndTime的时间间隔，多次查询。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

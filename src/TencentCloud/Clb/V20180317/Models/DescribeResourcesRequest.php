@@ -25,11 +25,35 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getOffset() 获取返回可用区资源列表起始偏移量，默认0。
  * @method void setOffset(integer $Offset) 设置返回可用区资源列表起始偏移量，默认0。
  * @method array getFilters() 获取查询可用区资源列表条件，详细的过滤条件如下：
-<li>master-zone -- String - 是否必填：否 - （过滤条件）按照 地区 类型过滤，如："ap-guangzhou-2"。</li><li>ip-version -- String - 是否必填：否 - （过滤条件）按照 IP 类型过滤，可选值："IPv4"、"IPv6"、"IPv6_Nat"。</li>
-<li> isp -- String - 是否必填：否 - （过滤条件）按照 Isp 类型过滤，如："BGP","CMCC","CUCC","CTCC"。</li>
+- master-zone
+按照【地域可用区】进行过滤，例如：ap-guangzhou-2。
+类型：String
+必选：否
+- ip-version
+按照【IP 类型】进行过滤，例如：IPv4。
+类型：String
+必选：否
+可选项：IPv4、IPv6、IPv6_Nat
+- isp
+按照【ISP 类型】进行过滤，例如：BGP。
+类型：String
+必选：否
+可选项：BGP、CMCC（中国移动）、CUCC（中国联通）、CTCC（中国电信）、BGP_PRO、INTERNAL（内网）
  * @method void setFilters(array $Filters) 设置查询可用区资源列表条件，详细的过滤条件如下：
-<li>master-zone -- String - 是否必填：否 - （过滤条件）按照 地区 类型过滤，如："ap-guangzhou-2"。</li><li>ip-version -- String - 是否必填：否 - （过滤条件）按照 IP 类型过滤，可选值："IPv4"、"IPv6"、"IPv6_Nat"。</li>
-<li> isp -- String - 是否必填：否 - （过滤条件）按照 Isp 类型过滤，如："BGP","CMCC","CUCC","CTCC"。</li>
+- master-zone
+按照【地域可用区】进行过滤，例如：ap-guangzhou-2。
+类型：String
+必选：否
+- ip-version
+按照【IP 类型】进行过滤，例如：IPv4。
+类型：String
+必选：否
+可选项：IPv4、IPv6、IPv6_Nat
+- isp
+按照【ISP 类型】进行过滤，例如：BGP。
+类型：String
+必选：否
+可选项：BGP、CMCC（中国移动）、CUCC（中国联通）、CTCC（中国电信）、BGP_PRO、INTERNAL（内网）
  */
 class DescribeResourcesRequest extends AbstractModel
 {
@@ -45,8 +69,20 @@ class DescribeResourcesRequest extends AbstractModel
 
     /**
      * @var array 查询可用区资源列表条件，详细的过滤条件如下：
-<li>master-zone -- String - 是否必填：否 - （过滤条件）按照 地区 类型过滤，如："ap-guangzhou-2"。</li><li>ip-version -- String - 是否必填：否 - （过滤条件）按照 IP 类型过滤，可选值："IPv4"、"IPv6"、"IPv6_Nat"。</li>
-<li> isp -- String - 是否必填：否 - （过滤条件）按照 Isp 类型过滤，如："BGP","CMCC","CUCC","CTCC"。</li>
+- master-zone
+按照【地域可用区】进行过滤，例如：ap-guangzhou-2。
+类型：String
+必选：否
+- ip-version
+按照【IP 类型】进行过滤，例如：IPv4。
+类型：String
+必选：否
+可选项：IPv4、IPv6、IPv6_Nat
+- isp
+按照【ISP 类型】进行过滤，例如：BGP。
+类型：String
+必选：否
+可选项：BGP、CMCC（中国移动）、CUCC（中国联通）、CTCC（中国电信）、BGP_PRO、INTERNAL（内网）
      */
     public $Filters;
 
@@ -54,8 +90,20 @@ class DescribeResourcesRequest extends AbstractModel
      * @param integer $Limit 返回可用区资源列表数目，默认20，最大值100。
      * @param integer $Offset 返回可用区资源列表起始偏移量，默认0。
      * @param array $Filters 查询可用区资源列表条件，详细的过滤条件如下：
-<li>master-zone -- String - 是否必填：否 - （过滤条件）按照 地区 类型过滤，如："ap-guangzhou-2"。</li><li>ip-version -- String - 是否必填：否 - （过滤条件）按照 IP 类型过滤，可选值："IPv4"、"IPv6"、"IPv6_Nat"。</li>
-<li> isp -- String - 是否必填：否 - （过滤条件）按照 Isp 类型过滤，如："BGP","CMCC","CUCC","CTCC"。</li>
+- master-zone
+按照【地域可用区】进行过滤，例如：ap-guangzhou-2。
+类型：String
+必选：否
+- ip-version
+按照【IP 类型】进行过滤，例如：IPv4。
+类型：String
+必选：否
+可选项：IPv4、IPv6、IPv6_Nat
+- isp
+按照【ISP 类型】进行过滤，例如：BGP。
+类型：String
+必选：否
+可选项：BGP、CMCC（中国移动）、CUCC（中国联通）、CTCC（中国电信）、BGP_PRO、INTERNAL（内网）
      */
     function __construct()
     {

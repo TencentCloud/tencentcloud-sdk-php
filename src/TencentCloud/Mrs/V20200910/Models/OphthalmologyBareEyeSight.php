@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 体检报告-眼科-裸眼视力
  *
  * @method KeyValueItem getLeftEyeVisual() 获取左眼视力
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLeftEyeVisual(KeyValueItem $LeftEyeVisual) 设置左眼视力
-注意：此字段可能返回 null，表示取不到有效值。
  * @method KeyValueItem getText() 获取裸眼视力
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setText(KeyValueItem $Text) 设置裸眼视力
-注意：此字段可能返回 null，表示取不到有效值。
  * @method KeyValueItem getRightEyeVisual() 获取右眼视力
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRightEyeVisual(KeyValueItem $RightEyeVisual) 设置右眼视力
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OphthalmologyBareEyeSight extends AbstractModel
 {
     /**
      * @var KeyValueItem 左眼视力
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LeftEyeVisual;
 
     /**
      * @var KeyValueItem 裸眼视力
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Text;
 
     /**
      * @var KeyValueItem 右眼视力
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RightEyeVisual;
 
     /**
      * @param KeyValueItem $LeftEyeVisual 左眼视力
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyValueItem $Text 裸眼视力
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyValueItem $RightEyeVisual 右眼视力
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

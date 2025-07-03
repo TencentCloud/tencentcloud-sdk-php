@@ -116,6 +116,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectName(string $ProjectName) 设置项目名字
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getUpgradeProInstance() 获取是否支持升级专业版实例
+ * @method void setUpgradeProInstance(boolean $UpgradeProInstance) 设置是否支持升级专业版实例
  */
 class Cluster extends AbstractModel
 {
@@ -284,6 +286,11 @@ class Cluster extends AbstractModel
     public $ProjectName;
 
     /**
+     * @var boolean 是否支持升级专业版实例
+     */
+    public $UpgradeProInstance;
+
+    /**
      * @param string $ClusterId 集群Id。
      * @param string $ClusterName 集群名称。
      * @param string $Remark 说明信息。
@@ -332,6 +339,7 @@ class Cluster extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectName 项目名字
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $UpgradeProInstance 是否支持升级专业版实例
      */
     function __construct()
     {
@@ -465,6 +473,10 @@ class Cluster extends AbstractModel
 
         if (array_key_exists("ProjectName",$param) and $param["ProjectName"] !== null) {
             $this->ProjectName = $param["ProjectName"];
+        }
+
+        if (array_key_exists("UpgradeProInstance",$param) and $param["UpgradeProInstance"] !== null) {
+            $this->UpgradeProInstance = $param["UpgradeProInstance"];
         }
     }
 }

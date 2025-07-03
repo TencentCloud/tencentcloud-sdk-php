@@ -23,6 +23,11 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Live\V20180801\Models as Models;
 
 /**
+ * @method Models\AddCasterInputInfoResponse AddCasterInputInfo(Models\AddCasterInputInfoRequest $req) 该接口用来向导播台中添加一个输入源，该输入源可以是拉流地址、或是一个文件链接
+ * @method Models\AddCasterLayoutInfoResponse AddCasterLayoutInfo(Models\AddCasterLayoutInfoRequest $req) 该接口用来增加导播台的布局参数。
+ * @method Models\AddCasterMarkPicInfoResponse AddCasterMarkPicInfo(Models\AddCasterMarkPicInfoRequest $req) 该接口用来新增图片水印。
+ * @method Models\AddCasterMarkWordInfoResponse AddCasterMarkWordInfo(Models\AddCasterMarkWordInfoRequest $req) 为导播台添加文本配置。
+ * @method Models\AddCasterOutputInfoResponse AddCasterOutputInfo(Models\AddCasterOutputInfoRequest $req) 该接口用来新增导播台推流信息。导播台主监启动后，将会将主监画面推向该接口设置的地址。
  * @method Models\AddDelayLiveStreamResponse AddDelayLiveStream(Models\AddDelayLiveStreamRequest $req) 针对大型活动直播，通过对直播流设置延时来控制现场与观众播放画面的时间间隔，避免突发状况造成影响。
 
 注意：如果在推流前设置延播，需要提前5分钟设置，目前该接口只支持流粒度。
@@ -30,6 +35,13 @@ use TencentCloud\Live\V20180801\Models as Models;
  * @method Models\AddLiveWatermarkResponse AddLiveWatermark(Models\AddLiveWatermarkRequest $req) 添加水印，成功返回水印 ID 后，需要调用[CreateLiveWatermarkRule](/document/product/267/32629)接口将水印 ID 绑定到流使用。 水印数量上限 100，超过后需要先删除，再添加。
  * @method Models\AuthenticateDomainOwnerResponse AuthenticateDomainOwner(Models\AuthenticateDomainOwnerRequest $req) 验证用户是否拥有特定直播域名。
  * @method Models\CancelCommonMixStreamResponse CancelCommonMixStream(Models\CancelCommonMixStreamRequest $req) 该接口用来取消混流。用法与 mix_streamv2.cancel_mix_stream 基本一致。
+ * @method Models\CopyCasterResponse CopyCaster(Models\CopyCasterRequest $req) 该接口用来复制导播台配置
+ * @method Models\CreateCasterResponse CreateCaster(Models\CreateCasterRequest $req) 该接口用来创建新的导播台
+ * @method Models\CreateCasterInputPushUrlResponse CreateCasterInputPushUrl(Models\CreateCasterInputPushUrlRequest $req) 该接口用来生成导播台推流地址
+ * @method Models\CreateCasterPgmResponse CreateCasterPgm(Models\CreateCasterPgmRequest $req) 该接口用来启动主监任务，并将获取主监画面的播放地址。
+ * @method Models\CreateCasterPgmFromPvwResponse CreateCasterPgmFromPvw(Models\CreateCasterPgmFromPvwRequest $req) 该接口用来将预监画面的布局、水印、字幕等配置，复制到主监画面中。
+该接口使用时，预监任务需处于运行状态。
+ * @method Models\CreateCasterPvwResponse CreateCasterPvw(Models\CreateCasterPvwRequest $req) 该接口用来启动预监任务，并将获取预监画面的播放地址。
  * @method Models\CreateCommonMixStreamResponse CreateCommonMixStream(Models\CreateCommonMixStreamRequest $req) 该接口用来创建通用混流。用法与旧接口 mix_streamv2.start_mix_stream_advanced 基本一致。
 注意：当前最多支持16路混流。
 最佳实践：https://cloud.tencent.com/document/product/267/45566
@@ -90,7 +102,7 @@ use TencentCloud\Live\V20180801\Models as Models;
 但转推目标地址即 ToUrl 目前限制为已注册的腾讯直播域名。
  * @method Models\CreateRecordTaskResponse CreateRecordTask(Models\CreateRecordTaskRequest $req) 创建一个在指定时间启动、结束的录制任务，并使用指定录制模板ID对应的配置进行录制。
 - 使用前提
-1. 录制文件存放于点播平台，所以用户如需使用录制功能，需首先自行开通点播服务。
+1. 录制文件存放于点播平台或对象存储内，所以用户如需使用录制功能，需首先自行开通点播服务或对象存储服务。
 2. 录制文件存放后相关费用（含存储以及下行播放流量）按照点播平台计费方式收取，具体请参考[对应文档](https://cloud.tencent.com/document/product/266/2837)。
 - 注意事项
 1. 断流会结束当前录制并生成录制文件。在结束时间到达之前任务仍然有效，期间只要正常推流都会正常录制，与是否多次推、断流无关。
@@ -105,6 +117,14 @@ use TencentCloud\Live\V20180801\Models as Models;
 3. 创建的截图任务记录在平台侧只保留3个月。
 4. 当前截图任务管理API（CreateScreenshotTask/StopScreenshotTask/DeleteScreenshotTask）与旧API（CreateLiveInstantSnapshot/StopLiveInstantSnapshot）不兼容，两套接口不能混用。
 5. 避免 创建截图任务 与 推流 操作同时进行，可能导致因截图任务未生效而引起任务延迟启动问题，两者操作间隔建议大于3秒。
+ * @method Models\DeleteCasterResponse DeleteCaster(Models\DeleteCasterRequest $req) 该接口用来删除一个导播台的所有信息。
+注意，调用该接口后，所有的导播台信息将被清除，包括正在直播的内容也将直接中断。
+ * @method Models\DeleteCasterInputInfoResponse DeleteCasterInputInfo(Models\DeleteCasterInputInfoRequest $req) 该接口用来删除导播台中的输入源信息。
+ * @method Models\DeleteCasterLayoutInfoResponse DeleteCasterLayoutInfo(Models\DeleteCasterLayoutInfoRequest $req) 该接口用来将布局信息从导播台中删除
+ * @method Models\DeleteCasterMarkPicInfoResponse DeleteCasterMarkPicInfo(Models\DeleteCasterMarkPicInfoRequest $req) 该接口用来删除导播台某个Index对应的水印。
+ * @method Models\DeleteCasterMarkWordInfoResponse DeleteCasterMarkWordInfo(Models\DeleteCasterMarkWordInfoRequest $req) 该接口用来删除导播台的文本配置。
+ * @method Models\DeleteCasterOutputInfoResponse DeleteCasterOutputInfo(Models\DeleteCasterOutputInfoRequest $req) 该接口用来删除导播台的推流信息。
+注：若删除推流到腾讯云直播源站配置，即OutputIndex为0，OutputType为1的推流配置，在重新启动主监后，系统会自动重新生成一个推流到腾讯云直播源站配置。
  * @method Models\DeleteLiveCallbackRuleResponse DeleteLiveCallbackRule(Models\DeleteLiveCallbackRuleRequest $req) 删除回调规则。
  * @method Models\DeleteLiveCallbackTemplateResponse DeleteLiveCallbackTemplate(Models\DeleteLiveCallbackTemplateRequest $req) 删除回调模板。
  * @method Models\DeleteLiveDomainResponse DeleteLiveDomain(Models\DeleteLiveDomainRequest $req) 删除已添加的直播域名
@@ -141,6 +161,17 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
  * @method Models\DescribeBillBandwidthAndFluxListResponse DescribeBillBandwidthAndFluxList(Models\DescribeBillBandwidthAndFluxListRequest $req) 直播播放带宽和流量数据查询。
  * @method Models\DescribeCallbackRecordsListResponse DescribeCallbackRecordsList(Models\DescribeCallbackRecordsListRequest $req) 该接口为监控数据接口，数据采集及统计方式与计费数据不同，仅供运营分析使用，不能用于计费对账参考。
 用于查询回调事件。
+ * @method Models\DescribeCasterResponse DescribeCaster(Models\DescribeCasterRequest $req) 查询导播台信息接口，用来查询导播台状态、描述、输出长、宽等信息
+ * @method Models\DescribeCasterDisplayInfoResponse DescribeCasterDisplayInfo(Models\DescribeCasterDisplayInfoRequest $req) 查询导播台PVW任务和PGM任务的展示信息，包括使用的布局、水印、字幕等信息。
+ * @method Models\DescribeCasterInputInfosResponse DescribeCasterInputInfos(Models\DescribeCasterInputInfosRequest $req) 该接口用来查询导播台的输入源信息列表。
+ * @method Models\DescribeCasterLayoutInfosResponse DescribeCasterLayoutInfos(Models\DescribeCasterLayoutInfosRequest $req) 该接口用来查询某个导播台的布局列表
+ * @method Models\DescribeCasterListResponse DescribeCasterList(Models\DescribeCasterListRequest $req) 该接口用来查询账号下所有的导播台列表
+ * @method Models\DescribeCasterMarkPicInfosResponse DescribeCasterMarkPicInfos(Models\DescribeCasterMarkPicInfosRequest $req) 该接口用来查询某个导播台的水印列表。
+ * @method Models\DescribeCasterMarkWordInfosResponse DescribeCasterMarkWordInfos(Models\DescribeCasterMarkWordInfosRequest $req) 该接口用来查询某个导播台的文本列表。
+ * @method Models\DescribeCasterOutputInfosResponse DescribeCasterOutputInfos(Models\DescribeCasterOutputInfosRequest $req) 该接口用来查询某个导播台的推流信息列表。
+ * @method Models\DescribeCasterPlayUrlResponse DescribeCasterPlayUrl(Models\DescribeCasterPlayUrlRequest $req) 该接口用来获取导播台视频流的播放url，用来在页面上拉流展示。
+ * @method Models\DescribeCasterTransitionTypesResponse DescribeCasterTransitionTypes(Models\DescribeCasterTransitionTypesRequest $req) 该接口用来获取所有的转场名称及其对应的素材url。
+ * @method Models\DescribeCasterUserStatusResponse DescribeCasterUserStatus(Models\DescribeCasterUserStatusRequest $req) 本接口用来查询当前APPID导播台业务状态
  * @method Models\DescribeConcurrentRecordStreamNumResponse DescribeConcurrentRecordStreamNum(Models\DescribeConcurrentRecordStreamNumRequest $req) 查询并发录制路数，对慢直播和普通直播适用。
  * @method Models\DescribeDeliverBandwidthListResponse DescribeDeliverBandwidthList(Models\DescribeDeliverBandwidthListRequest $req) 查询直播转推计费带宽，查询时间范围最大支持3个月内的数据，时间跨度最长31天。
  * @method Models\DescribeDeliverLogDownListResponse DescribeDeliverLogDownList(Models\DescribeDeliverLogDownListRequest $req) 批量获取转推日志的URL。
@@ -154,6 +185,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
  * @method Models\DescribeLiveCallbackTemplatesResponse DescribeLiveCallbackTemplates(Models\DescribeLiveCallbackTemplatesRequest $req) 获取回调模板列表
  * @method Models\DescribeLiveCertResponse DescribeLiveCert(Models\DescribeLiveCertRequest $req) 获取证书信息
  * @method Models\DescribeLiveCertsResponse DescribeLiveCerts(Models\DescribeLiveCertsRequest $req) 获取证书信息列表
+ * @method Models\DescribeLiveCloudEffectListResponse DescribeLiveCloudEffectList(Models\DescribeLiveCloudEffectListRequest $req) 使用该接口查询云端特效列表，特效列表中包含一部分官方精品特效，同时包含用户自定义生成的特效。
  * @method Models\DescribeLiveDelayInfoListResponse DescribeLiveDelayInfoList(Models\DescribeLiveDelayInfoListRequest $req) 获取直播延播列表。
  * @method Models\DescribeLiveDomainResponse DescribeLiveDomain(Models\DescribeLiveDomainRequest $req) 查询直播域名信息。
  * @method Models\DescribeLiveDomainCertResponse DescribeLiveDomainCert(Models\DescribeLiveDomainCertRequest $req) 获取域名证书信息。
@@ -163,12 +195,13 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
  * @method Models\DescribeLiveDomainRefererResponse DescribeLiveDomainReferer(Models\DescribeLiveDomainRefererRequest $req) 查询直播域名 Referer 黑白名单配置。
 由于 Referer 信息包含在 http 协议中，在开启配置后，播放协议为 rtmp 或 WebRTC 不会校验 Referer 配置，仍可正常播放。如需配置 Referer 鉴权建议使用 http-flv 或 http-hls 协议播放。
  * @method Models\DescribeLiveDomainsResponse DescribeLiveDomains(Models\DescribeLiveDomainsRequest $req) 根据域名状态、类型等信息查询用户的域名信息。
+ * @method Models\DescribeLiveEnhanceInfoListResponse DescribeLiveEnhanceInfoList(Models\DescribeLiveEnhanceInfoListRequest $req) 查询直播增强用量明细信息。
  * @method Models\DescribeLiveForbidStreamListResponse DescribeLiveForbidStreamList(Models\DescribeLiveForbidStreamListRequest $req) 获取禁推流列表。
 
 注意：该接口仅作为直播辅助查询接口，重要业务场景不可强依赖该接口。
  * @method Models\DescribeLivePackageInfoResponse DescribeLivePackageInfo(Models\DescribeLivePackageInfoRequest $req) 查询用户套餐包总量、使用量、剩余量、包状态、购买时间和过期时间等。
- * @method Models\DescribeLivePadProcessorListResponse DescribeLivePadProcessorList(Models\DescribeLivePadProcessorListRequest $req) 使用该接口查询垫片流。垫片流状态更新存在一定延迟，可间隔30秒以上查询，避免频繁查询该接口。
  * @method Models\DescribeLivePadRulesResponse DescribeLivePadRules(Models\DescribeLivePadRulesRequest $req) 获取直播垫片规则列表。
+ * @method Models\DescribeLivePadStreamListResponse DescribeLivePadStreamList(Models\DescribeLivePadStreamListRequest $req) 使用该接口查询垫片流列表。垫片流状态更新存在一定延迟，可间隔30秒以上查询，避免频繁查询该接口。
  * @method Models\DescribeLivePadTemplateResponse DescribeLivePadTemplate(Models\DescribeLivePadTemplateRequest $req) 获取单个直播垫片模板
  * @method Models\DescribeLivePadTemplatesResponse DescribeLivePadTemplates(Models\DescribeLivePadTemplatesRequest $req) 获取直播垫片模板。
  * @method Models\DescribeLivePlayAuthKeyResponse DescribeLivePlayAuthKey(Models\DescribeLivePlayAuthKeyRequest $req) 查询播放鉴权key。
@@ -194,7 +227,6 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
 注意：
 1. 该接口仅提供辅助查询在线流列表功能，业务重要场景不可强依赖该接口。
 2. 该接口仅适用于流数少于2万路的情况，对于流数较大用户请联系售后。
-
  * @method Models\DescribeLiveStreamPublishedListResponse DescribeLiveStreamPublishedList(Models\DescribeLiveStreamPublishedListRequest $req) 返回已经推过流的流列表。<br>
 注意：分页最多支持查询1万条记录，可通过调整查询时间范围来获取更多数据。
  * @method Models\DescribeLiveStreamPushInfoListResponse DescribeLiveStreamPushInfoList(Models\DescribeLiveStreamPushInfoListRequest $req) 该接口为监控数据接口，数据采集及统计方式与计费数据不同，仅供运营分析使用，不能用于计费对账参考。
@@ -212,6 +244,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
  * @method Models\DescribeLiveTimeShiftBillInfoListResponse DescribeLiveTimeShiftBillInfoList(Models\DescribeLiveTimeShiftBillInfoListRequest $req) 提供给客户对账，按天统计，维度：推流域名、时移文件时长（累加）、配置天数（不累加）、时移总时长（累加）。
  * @method Models\DescribeLiveTimeShiftRulesResponse DescribeLiveTimeShiftRules(Models\DescribeLiveTimeShiftRulesRequest $req) 获取直播时移规则列表。
  * @method Models\DescribeLiveTimeShiftTemplatesResponse DescribeLiveTimeShiftTemplates(Models\DescribeLiveTimeShiftTemplatesRequest $req) 获取直播时移模板。
+ * @method Models\DescribeLiveTimeShiftWriteSizeInfoListResponse DescribeLiveTimeShiftWriteSizeInfoList(Models\DescribeLiveTimeShiftWriteSizeInfoListRequest $req) 支持直播时移写入量数据查询。
  * @method Models\DescribeLiveTranscodeDetailInfoResponse DescribeLiveTranscodeDetailInfo(Models\DescribeLiveTranscodeDetailInfoRequest $req) 该接口为监控数据接口，数据采集及统计方式与计费数据不同，仅供运营分析使用，不能用于计费对账参考。
 支持查询某天或某段时间的转码详细信息。由于转码数据量较大，如果查询时间跨度太长可能会拉不到数据，可以尝试将查询时间范围缩小些再重试。
  * @method Models\DescribeLiveTranscodeRulesResponse DescribeLiveTranscodeRules(Models\DescribeLiveTranscodeRulesRequest $req) 获取转码规则列表
@@ -243,7 +276,6 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
 - 使用前提
 1. 仅用于查询由 CreateRecordTask 接口创建的录制任务。
 2. 不能查询被 DeleteRecordTask 接口删除以及已过期（平台侧保留3个月）的录制任务。
-
  * @method Models\DescribeScreenShotSheetNumListResponse DescribeScreenShotSheetNumList(Models\DescribeScreenShotSheetNumListRequest $req) 接口用来查询直播增值业务--截图的张数
  * @method Models\DescribeScreenshotTaskResponse DescribeScreenshotTask(Models\DescribeScreenshotTaskRequest $req) 查询指定时间段范围内启动和结束的截图任务列表。
 - 使用前提
@@ -273,6 +305,15 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
 1. 默认只要流名称正确，禁推就会生效。
 2. 如需要推流域名+推流路径+流名称 强匹配生效禁推，需提单联系售后开启配置。
 3. 如果配置了域名分组，需填写准确推流域名，才可断掉当前推流。
+ * @method Models\ModifyCasterResponse ModifyCaster(Models\ModifyCasterRequest $req) 该接口用来设置导播台的描述、名称、录制模板id等参数。
+ * @method Models\ModifyCasterInputInfoResponse ModifyCasterInputInfo(Models\ModifyCasterInputInfoRequest $req) 该接口用来修改已经设置过的输入源信息，如源地址，源类型等。
+设置前，需保证待修改的输入源已经存在。若不存在，需使用AddCasterInputInfo接口。
+ * @method Models\ModifyCasterLayoutInfoResponse ModifyCasterLayoutInfo(Models\ModifyCasterLayoutInfoRequest $req) 该接口用来修改布局参数
+ * @method Models\ModifyCasterMarkPicInfoResponse ModifyCasterMarkPicInfo(Models\ModifyCasterMarkPicInfoRequest $req) 该接口用来修改导播台水印信息。
+注意，修改的Index对应的水印需已存在
+ * @method Models\ModifyCasterMarkWordInfoResponse ModifyCasterMarkWordInfo(Models\ModifyCasterMarkWordInfoRequest $req) 该接口用来修改导播台文本配置。
+ * @method Models\ModifyCasterOutputInfoResponse ModifyCasterOutputInfo(Models\ModifyCasterOutputInfoRequest $req) 该接口用来修改导播台的推流信息。
+注：只有在主监启动前设置才生效，主监启动后设置，下次推流生效。
  * @method Models\ModifyLiveCallbackTemplateResponse ModifyLiveCallbackTemplate(Models\ModifyLiveCallbackTemplateRequest $req) 修改回调模板。
  * @method Models\ModifyLiveDomainCertBindingsResponse ModifyLiveDomainCertBindings(Models\ModifyLiveDomainCertBindingsRequest $req) 批量绑定证书对应的播放域名，并更新启用状态。
 新建自有证书将自动上传至腾讯云ssl。
@@ -289,16 +330,24 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
  * @method Models\ModifyLiveStreamMonitorResponse ModifyLiveStreamMonitor(Models\ModifyLiveStreamMonitorRequest $req) 该接口用来修改直播流监播任务的配置。
  * @method Models\ModifyLiveTimeShiftTemplateResponse ModifyLiveTimeShiftTemplate(Models\ModifyLiveTimeShiftTemplateRequest $req) 修改直播时移模板。
  * @method Models\ModifyLiveTranscodeTemplateResponse ModifyLiveTranscodeTemplate(Models\ModifyLiveTranscodeTemplateRequest $req) 修改转码模板配置。
- * @method Models\ModifyPullStreamConfigResponse ModifyPullStreamConfig(Models\ModifyPullStreamConfigRequest $req) 更新拉流配置。该接口为已下线接口，请使用新接口 ModifyLivePullStreamTask。 
+ * @method Models\ModifyPullStreamConfigResponse ModifyPullStreamConfig(Models\ModifyPullStreamConfigRequest $req) 更新拉流配置。该接口为已下线接口，请使用新接口 ModifyLivePullStreamTask。
  * @method Models\ModifyPullStreamStatusResponse ModifyPullStreamStatus(Models\ModifyPullStreamStatusRequest $req) 修改直播拉流配置的状态。该接口已下线,请使用新接口 ModifyLivePullStreamTask。
+ * @method Models\ReleaseCasterResponse ReleaseCaster(Models\ReleaseCasterRequest $req) 调用该接口，释放导播台实例，但保留所有的配置。
+执行该接口，预监与主监画面停止，第三方推流停止。
+点播文件与直播地址将停止展示，客户自行推到导播台的流需要手动停止。
  * @method Models\RestartLivePullStreamTaskResponse RestartLivePullStreamTask(Models\RestartLivePullStreamTaskRequest $req) 将正在运行的拉流转推任务进行重启。
 注意：
 1. 重启任务会造成推流中断。
 2. 点播源任务的重启，会根据VodRefreshType决定是续播还是从头开始播。
  * @method Models\ResumeDelayLiveStreamResponse ResumeDelayLiveStream(Models\ResumeDelayLiveStreamRequest $req) 取消直播流设置的延时配置，恢复实时直播画面。
  * @method Models\ResumeLiveStreamResponse ResumeLiveStream(Models\ResumeLiveStreamRequest $req) 恢复某条流的推流。
+ * @method Models\SendLiveCloudEffectResponse SendLiveCloudEffect(Models\SendLiveCloudEffectRequest $req) 使用该接口发送云端特效到线上正活跃的直播流，观众可在播放端看到特效从直播流画面中展示。
+ * @method Models\StartLivePadStreamResponse StartLivePadStream(Models\StartLivePadStreamRequest $req) 使用该接口将直播流开始切入垫片。
  * @method Models\StartLiveStreamMonitorResponse StartLiveStreamMonitor(Models\StartLiveStreamMonitorRequest $req) 该接口用来启动直播流监播任务。
- * @method Models\StopLivePadProcessorResponse StopLivePadProcessor(Models\StopLivePadProcessorRequest $req) 使用该接口停止垫片流。
+ * @method Models\StopCasterPgmResponse StopCasterPgm(Models\StopCasterPgmRequest $req) 该接口用来停止导播台的主监输出。
+停止主监后，对应的推流到腾讯云直播源站和推流到其他第三方平台均将会停止。
+ * @method Models\StopCasterPvwResponse StopCasterPvw(Models\StopCasterPvwRequest $req) 该接口用来停止导播台的预监任务。
+ * @method Models\StopLivePadStreamResponse StopLivePadStream(Models\StopLivePadStreamRequest $req) 使用该接口将直播流停止切入垫片。
  * @method Models\StopLiveRecordResponse StopLiveRecord(Models\StopLiveRecordRequest $req) 说明：录制后的文件存放于点播平台。用户如需使用录制功能，需首先自行开通点播账号并确保账号可用。录制文件存放后，相关费用（含存储以及下行播放流量）按照点播平台计费方式收取，请参考对应文档。
  * @method Models\StopLiveStreamMonitorResponse StopLiveStreamMonitor(Models\StopLiveStreamMonitorRequest $req) 该接口用来停止直播流监播任务。
  * @method Models\StopRecordTaskResponse StopRecordTask(Models\StopRecordTaskRequest $req) 提前结束录制，中止运行中的录制任务并生成录制文件。任务被成功终止后，本次任务将不再启动。

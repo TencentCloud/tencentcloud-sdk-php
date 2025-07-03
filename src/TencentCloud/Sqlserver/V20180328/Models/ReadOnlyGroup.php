@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDnsPodDomain(string $DnsPodDomain) 设置RO组外网地址域名
  * @method integer getTgwWanVPort() 获取RO组外网地址端口
  * @method void setTgwWanVPort(integer $TgwWanVPort) 设置RO组外网地址端口
+ * @method integer getReadOnlyGroupType() 获取RO只读组类型，1-按照一个实例一个只读组的方式发货，2-新建只读组后发货的所有实例都在这个只读组下面， 3-发货的所有实例都在已有的只读组下面
+ * @method void setReadOnlyGroupType(integer $ReadOnlyGroupType) 设置RO只读组类型，1-按照一个实例一个只读组的方式发货，2-新建只读组后发货的所有实例都在这个只读组下面， 3-发货的所有实例都在已有的只读组下面
+ * @method integer getReadOnlyGroupForcedUpgrade() 获取部署RO副本模式，0-默认不升级主实例，1-强制升级主实例完成RO部署
+ * @method void setReadOnlyGroupForcedUpgrade(integer $ReadOnlyGroupForcedUpgrade) 设置部署RO副本模式，0-默认不升级主实例，1-强制升级主实例完成RO部署
  */
 class ReadOnlyGroup extends AbstractModel
 {
@@ -136,6 +140,16 @@ class ReadOnlyGroup extends AbstractModel
     public $TgwWanVPort;
 
     /**
+     * @var integer RO只读组类型，1-按照一个实例一个只读组的方式发货，2-新建只读组后发货的所有实例都在这个只读组下面， 3-发货的所有实例都在已有的只读组下面
+     */
+    public $ReadOnlyGroupType;
+
+    /**
+     * @var integer 部署RO副本模式，0-默认不升级主实例，1-强制升级主实例完成RO部署
+     */
+    public $ReadOnlyGroupForcedUpgrade;
+
+    /**
      * @param string $ReadOnlyGroupId 只读组ID
      * @param string $ReadOnlyGroupName 只读组名称
      * @param string $RegionId 只读组的地域ID，与主实例相同
@@ -152,6 +166,8 @@ class ReadOnlyGroup extends AbstractModel
      * @param array $ReadOnlyInstanceSet 只读实例副本集合
      * @param string $DnsPodDomain RO组外网地址域名
      * @param integer $TgwWanVPort RO组外网地址端口
+     * @param integer $ReadOnlyGroupType RO只读组类型，1-按照一个实例一个只读组的方式发货，2-新建只读组后发货的所有实例都在这个只读组下面， 3-发货的所有实例都在已有的只读组下面
+     * @param integer $ReadOnlyGroupForcedUpgrade 部署RO副本模式，0-默认不升级主实例，1-强制升级主实例完成RO部署
      */
     function __construct()
     {
@@ -233,6 +249,14 @@ class ReadOnlyGroup extends AbstractModel
 
         if (array_key_exists("TgwWanVPort",$param) and $param["TgwWanVPort"] !== null) {
             $this->TgwWanVPort = $param["TgwWanVPort"];
+        }
+
+        if (array_key_exists("ReadOnlyGroupType",$param) and $param["ReadOnlyGroupType"] !== null) {
+            $this->ReadOnlyGroupType = $param["ReadOnlyGroupType"];
+        }
+
+        if (array_key_exists("ReadOnlyGroupForcedUpgrade",$param) and $param["ReadOnlyGroupForcedUpgrade"] !== null) {
+            $this->ReadOnlyGroupForcedUpgrade = $param["ReadOnlyGroupForcedUpgrade"];
         }
     }
 }

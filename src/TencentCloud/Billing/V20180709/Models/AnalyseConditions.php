@@ -21,121 +21,86 @@ use TencentCloud\Common\AbstractModel;
  * 成本分析查询条件
  *
  * @method string getBusinessCodes() 获取产品名称代码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBusinessCodes(string $BusinessCodes) 设置产品名称代码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProductCodes() 获取子产品名称代码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductCodes(string $ProductCodes) 设置子产品名称代码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getComponentCode() 获取组件类型代码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComponentCode(string $ComponentCode) 设置组件类型代码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getZoneIds() 获取可用区ID：资源所属可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneIds(string $ZoneIds) 设置可用区ID：资源所属可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegionIds() 获取地域ID:资源所属地域ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionIds(string $RegionIds) 设置地域ID:资源所属地域ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProjectIds() 获取项目ID:资源所属项目ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectIds(string $ProjectIds) 设置项目ID:资源所属项目ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPayModes() 获取计费模式 prePay(表示包年包月)/postPay(表示按量计费)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayModes(string $PayModes) 设置计费模式 prePay(表示包年包月)/postPay(表示按量计费)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getActionTypes() 获取交易类型，查询交易类型（请使用交易类型code入参）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActionTypes(string $ActionTypes) 设置交易类型，查询交易类型（请使用交易类型code入参）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTags() 获取分账标签键
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(string $Tags) 设置分账标签键
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFeeType() 获取费用类型，查询费用类型（请使用费用类型code入参)入参枚举如下：
 cashPayAmount:现金 
 incentivePayAmount:赠送金 
 voucherPayAmount:优惠券 
 tax:税金 
 costBeforeTax:税前价
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFeeType(string $FeeType) 设置费用类型，查询费用类型（请使用费用类型code入参)入参枚举如下：
 cashPayAmount:现金 
 incentivePayAmount:赠送金 
 voucherPayAmount:优惠券 
 tax:税金 
 costBeforeTax:税前价
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPayerUins() 获取查询成本分析数据的用户UIN
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayerUins(string $PayerUins) 设置查询成本分析数据的用户UIN
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOwnerUins() 获取使用资源的用户UIN
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOwnerUins(string $OwnerUins) 设置使用资源的用户UIN
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConsumptionTypes() 获取消耗类型，查询消耗类型（请使用消耗类型code入参）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConsumptionTypes(string $ConsumptionTypes) 设置消耗类型，查询消耗类型（请使用消耗类型code入参）
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AnalyseConditions extends AbstractModel
 {
     /**
      * @var string 产品名称代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BusinessCodes;
 
     /**
      * @var string 子产品名称代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductCodes;
 
     /**
      * @var string 组件类型代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComponentCode;
 
     /**
      * @var string 可用区ID：资源所属可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneIds;
 
     /**
      * @var string 地域ID:资源所属地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionIds;
 
     /**
      * @var string 项目ID:资源所属项目ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectIds;
 
     /**
      * @var string 计费模式 prePay(表示包年包月)/postPay(表示按量计费)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PayModes;
 
     /**
      * @var string 交易类型，查询交易类型（请使用交易类型code入参）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActionTypes;
 
     /**
      * @var string 分账标签键
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
@@ -146,60 +111,43 @@ incentivePayAmount:赠送金
 voucherPayAmount:优惠券 
 tax:税金 
 costBeforeTax:税前价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FeeType;
 
     /**
      * @var string 查询成本分析数据的用户UIN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PayerUins;
 
     /**
      * @var string 使用资源的用户UIN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OwnerUins;
 
     /**
      * @var string 消耗类型，查询消耗类型（请使用消耗类型code入参）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConsumptionTypes;
 
     /**
      * @param string $BusinessCodes 产品名称代码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProductCodes 子产品名称代码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ComponentCode 组件类型代码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ZoneIds 可用区ID：资源所属可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegionIds 地域ID:资源所属地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectIds 项目ID:资源所属项目ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PayModes 计费模式 prePay(表示包年包月)/postPay(表示按量计费)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ActionTypes 交易类型，查询交易类型（请使用交易类型code入参）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Tags 分账标签键
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FeeType 费用类型，查询费用类型（请使用费用类型code入参)入参枚举如下：
 cashPayAmount:现金 
 incentivePayAmount:赠送金 
 voucherPayAmount:优惠券 
 tax:税金 
 costBeforeTax:税前价
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PayerUins 查询成本分析数据的用户UIN
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OwnerUins 使用资源的用户UIN
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConsumptionTypes 消耗类型，查询消耗类型（请使用消耗类型code入参）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

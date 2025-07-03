@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGroupInfo请求参数结构体
  *
- * @method string getInstanceId() 获取（过滤条件）按照实例 ID 过滤。
- * @method void setInstanceId(string $InstanceId) 设置（过滤条件）按照实例 ID 过滤。
- * @method array getGroupList() 获取Kafka 消费分组，Consumer-group，这里是数组形式，示例：["xxx","yyy"]
- * @method void setGroupList(array $GroupList) 设置Kafka 消费分组，Consumer-group，这里是数组形式，示例：["xxx","yyy"]
+ * @method string getInstanceId() 获取ckafka集群实例Id
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
+ * @method array getGroupList() 获取Kafka 消费分组列表
+ * @method void setGroupList(array $GroupList) 设置Kafka 消费分组列表
  */
 class DescribeGroupInfoRequest extends AbstractModel
 {
     /**
-     * @var string （过滤条件）按照实例 ID 过滤。
+     * @var string ckafka集群实例Id
      */
     public $InstanceId;
 
     /**
-     * @var array Kafka 消费分组，Consumer-group，这里是数组形式，示例：["xxx","yyy"]
+     * @var array Kafka 消费分组列表
      */
     public $GroupList;
 
     /**
-     * @param string $InstanceId （过滤条件）按照实例 ID 过滤。
-     * @param array $GroupList Kafka 消费分组，Consumer-group，这里是数组形式，示例：["xxx","yyy"]
+     * @param string $InstanceId ckafka集群实例Id
+     * @param array $GroupList Kafka 消费分组列表
      */
     function __construct()
     {

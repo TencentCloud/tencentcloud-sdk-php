@@ -23,21 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method SwitchInfo getAudit() 获取审计开关的详细信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAudit(SwitchInfo $Audit) 设置审计开关的详细信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method SwitchInfo getEvent() 获取事件开关的详细信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEvent(SwitchInfo $Event) 设置事件开关的详细信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method SwitchInfo getLog() 获取普通日志的详细信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLog(SwitchInfo $Log) 设置普通日志的详细信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method SwitchInfo getMasterLog() 获取master 日志详细信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMasterLog(SwitchInfo $MasterLog) 设置master 日志详细信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Switch extends AbstractModel
 {
@@ -48,38 +40,30 @@ class Switch extends AbstractModel
 
     /**
      * @var SwitchInfo 审计开关的详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Audit;
 
     /**
      * @var SwitchInfo 事件开关的详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Event;
 
     /**
      * @var SwitchInfo 普通日志的详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Log;
 
     /**
      * @var SwitchInfo master 日志详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MasterLog;
 
     /**
      * @param string $ClusterId 集群ID
      * @param SwitchInfo $Audit 审计开关的详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SwitchInfo $Event 事件开关的详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SwitchInfo $Log 普通日志的详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SwitchInfo $MasterLog master 日志详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

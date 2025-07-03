@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 自定义参数。
  *
  * @method string getParameterName() 获取参数名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParameterName(string $ParameterName) 设置参数名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getParameterValue() 获取参数默认值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParameterValue(string $ParameterValue) 设置参数默认值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getParameterDescription() 获取参数描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParameterDescription(string $ParameterDescription) 设置参数描述。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DefaultParameterConf extends AbstractModel
 {
     /**
      * @var string 参数名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParameterName;
 
     /**
      * @var string 参数默认值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParameterValue;
 
     /**
      * @var string 参数描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParameterDescription;
 
     /**
      * @param string $ParameterName 参数名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ParameterValue 参数默认值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ParameterDescription 参数描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

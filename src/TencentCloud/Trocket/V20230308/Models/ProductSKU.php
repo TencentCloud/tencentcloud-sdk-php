@@ -33,45 +33,27 @@ PLATINUM，铂金版
  * @method string getSkuCode() 获取规格代码
  * @method void setSkuCode(string $SkuCode) 设置规格代码
  * @method integer getTpsLimit() 获取TPS上限
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTpsLimit(integer $TpsLimit) 设置TPS上限
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScaledTpsLimit() 获取弹性TPS上限
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScaledTpsLimit(integer $ScaledTpsLimit) 设置弹性TPS上限
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTopicNumLimit() 获取主题数量上限默认值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicNumLimit(integer $TopicNumLimit) 设置主题数量上限默认值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getGroupNumLimit() 获取消费组数量上限
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupNumLimit(integer $GroupNumLimit) 设置消费组数量上限
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDefaultRetention() 获取默认消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefaultRetention(integer $DefaultRetention) 设置默认消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRetentionUpperLimit() 获取可调整消息保留时间上限，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRetentionUpperLimit(integer $RetentionUpperLimit) 设置可调整消息保留时间上限，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRetentionLowerLimit() 获取可调整消息保留时间下限，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRetentionLowerLimit(integer $RetentionLowerLimit) 设置可调整消息保留时间下限，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxMessageDelay() 获取延时消息最大时长，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxMessageDelay(integer $MaxMessageDelay) 设置延时消息最大时长，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getOnSale() 获取是否可购买
  * @method void setOnSale(boolean $OnSale) 设置是否可购买
  * @method array getPriceTags() 获取计费项信息
  * @method void setPriceTags(array $PriceTags) 设置计费项信息
  * @method integer getTopicNumUpperLimit() 获取主题数量上限默认最大值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicNumUpperLimit(integer $TopicNumUpperLimit) 设置主题数量上限默认最大值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProductSKU extends AbstractModel
 {
@@ -91,49 +73,41 @@ PLATINUM，铂金版
 
     /**
      * @var integer TPS上限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TpsLimit;
 
     /**
      * @var integer 弹性TPS上限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScaledTpsLimit;
 
     /**
      * @var integer 主题数量上限默认值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicNumLimit;
 
     /**
      * @var integer 消费组数量上限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupNumLimit;
 
     /**
      * @var integer 默认消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DefaultRetention;
 
     /**
      * @var integer 可调整消息保留时间上限，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RetentionUpperLimit;
 
     /**
      * @var integer 可调整消息保留时间下限，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RetentionLowerLimit;
 
     /**
      * @var integer 延时消息最大时长，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxMessageDelay;
 
@@ -149,7 +123,6 @@ PLATINUM，铂金版
 
     /**
      * @var integer 主题数量上限默认最大值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicNumUpperLimit;
 
@@ -161,25 +134,16 @@ PRO，专业版
 PLATINUM，铂金版
      * @param string $SkuCode 规格代码
      * @param integer $TpsLimit TPS上限
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ScaledTpsLimit 弹性TPS上限
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TopicNumLimit 主题数量上限默认值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $GroupNumLimit 消费组数量上限
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DefaultRetention 默认消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RetentionUpperLimit 可调整消息保留时间上限，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RetentionLowerLimit 可调整消息保留时间下限，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxMessageDelay 延时消息最大时长，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $OnSale 是否可购买
      * @param array $PriceTags 计费项信息
      * @param integer $TopicNumUpperLimit 主题数量上限默认最大值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

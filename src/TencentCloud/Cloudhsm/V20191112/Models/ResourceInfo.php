@@ -21,285 +21,193 @@ use TencentCloud\Common\AbstractModel;
  * 资源信息
  *
  * @method string getResourceId() 获取资源Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceId(string $ResourceId) 设置资源Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceName() 获取资源名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceName(string $ResourceName) 设置资源名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取资源状态，1-正常，2-隔离，3-销毁
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置资源状态，1-正常，2-隔离，3-销毁
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVip() 获取资源IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVip(string $Vip) 设置资源IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVpcId() 获取资源所属Vpc
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(string $VpcId) 设置资源所属Vpc
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubnetId() 获取资源所属子网
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetId(string $SubnetId) 设置资源所属子网
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModel() 获取资源所属HSM规格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModel(string $Model) 设置资源所属HSM规格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVsmType() 获取云加密机类型id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVsmType(integer $VsmType) 设置云加密机类型id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRegionId() 获取地域Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionId(integer $RegionId) 设置地域Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getZoneId() 获取区域Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneId(integer $ZoneId) 设置区域Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getExpireTime() 获取过期时间（Epoch Unix Timestamp）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpireTime(integer $ExpireTime) 设置过期时间（Epoch Unix Timestamp）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegionName() 获取地域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionName(string $RegionName) 设置地域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getZoneName() 获取区域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneName(string $ZoneName) 设置区域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSgList() 获取实例的安全组列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSgList(array $SgList) 设置实例的安全组列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubnetName() 获取子网名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetName(string $SubnetName) 设置子网名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getExpired() 获取当前实例是否已经过期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpired(boolean $Expired) 设置当前实例是否已经过期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRemainSeconds() 获取为正数表示实例距离过期时间还剩余多少秒，为负数表示已经过期多少秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemainSeconds(integer $RemainSeconds) 设置为正数表示实例距离过期时间还剩余多少秒，为负数表示已经过期多少秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVpcName() 获取Vpc名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcName(string $VpcName) 设置Vpc名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateUin() 获取创建者Uin账号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateUin(string $CreateUin) 设置创建者Uin账号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRenewFlag() 获取自动续费状态标识， 0-手动续费，1-自动续费，2-到期不续
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRenewFlag(integer $RenewFlag) 设置自动续费状态标识， 0-手动续费，1-自动续费，2-到期不续
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取标签列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getManufacturer() 获取厂商
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setManufacturer(string $Manufacturer) 设置厂商
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAlarmStatus() 获取告警状态，0：停用，1：启用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlarmStatus(integer $AlarmStatus) 设置告警状态，0：停用，1：启用
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ResourceInfo extends AbstractModel
 {
     /**
      * @var string 资源Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceId;
 
     /**
      * @var string 资源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceName;
 
     /**
      * @var integer 资源状态，1-正常，2-隔离，3-销毁
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 资源IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Vip;
 
     /**
      * @var string 资源所属Vpc
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
     /**
      * @var string 资源所属子网
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetId;
 
     /**
      * @var string 资源所属HSM规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Model;
 
     /**
      * @var integer 云加密机类型id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VsmType;
 
     /**
      * @var integer 地域Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionId;
 
     /**
      * @var integer 区域Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneId;
 
     /**
      * @var integer 过期时间（Epoch Unix Timestamp）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpireTime;
 
     /**
      * @var string 地域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionName;
 
     /**
      * @var string 区域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneName;
 
     /**
      * @var array 实例的安全组列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SgList;
 
     /**
      * @var string 子网名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetName;
 
     /**
      * @var boolean 当前实例是否已经过期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Expired;
 
     /**
      * @var integer 为正数表示实例距离过期时间还剩余多少秒，为负数表示已经过期多少秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RemainSeconds;
 
     /**
      * @var string Vpc名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcName;
 
     /**
      * @var string 创建者Uin账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateUin;
 
     /**
      * @var integer 自动续费状态标识， 0-手动续费，1-自动续费，2-到期不续
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RenewFlag;
 
     /**
      * @var array 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
      * @var string 厂商
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Manufacturer;
 
     /**
      * @var integer 告警状态，0：停用，1：启用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlarmStatus;
 
     /**
      * @param string $ResourceId 资源Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceName 资源名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 资源状态，1-正常，2-隔离，3-销毁
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Vip 资源IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcId 资源所属Vpc
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 资源所属子网
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Model 资源所属HSM规格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VsmType 云加密机类型id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RegionId 地域Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ZoneId 区域Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ExpireTime 过期时间（Epoch Unix Timestamp）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegionName 地域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ZoneName 区域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SgList 实例的安全组列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetName 子网名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Expired 当前实例是否已经过期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RemainSeconds 为正数表示实例距离过期时间还剩余多少秒，为负数表示已经过期多少秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcName Vpc名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateUin 创建者Uin账号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RenewFlag 自动续费状态标识， 0-手动续费，1-自动续费，2-到期不续
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Manufacturer 厂商
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AlarmStatus 告警状态，0：停用，1：启用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

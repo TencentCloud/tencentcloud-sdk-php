@@ -22,8 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTimeSpan() 获取计费时长。
  * @method void setTimeSpan(integer $TimeSpan) 设置计费时长。
- * @method string getTimeUnit() 获取计费单元。
- * @method void setTimeUnit(string $TimeUnit) 设置计费单元。
+ * @method string getTimeUnit() 获取时间单位。
+取值为：
+- m - 月
+- d - 日
+ * @method void setTimeUnit(string $TimeUnit) 设置时间单位。
+取值为：
+- m - 月
+- d - 日
  * @method float getTotalCost() 获取总价。
  * @method void setTotalCost(float $TotalCost) 设置总价。
  * @method float getRealTotalCost() 获取折后总价。
@@ -41,7 +47,10 @@ class DiscountDetail extends AbstractModel
     public $TimeSpan;
 
     /**
-     * @var string 计费单元。
+     * @var string 时间单位。
+取值为：
+- m - 月
+- d - 日
      */
     public $TimeUnit;
 
@@ -67,7 +76,10 @@ class DiscountDetail extends AbstractModel
 
     /**
      * @param integer $TimeSpan 计费时长。
-     * @param string $TimeUnit 计费单元。
+     * @param string $TimeUnit 时间单位。
+取值为：
+- m - 月
+- d - 日
      * @param float $TotalCost 总价。
      * @param float $RealTotalCost 折后总价。
      * @param float $Discount 折扣。

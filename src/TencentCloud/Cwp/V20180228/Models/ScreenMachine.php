@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMachineName(string $MachineName) 设置主机名称。
  * @method string getMachineOs() 获取主机系统。
  * @method void setMachineOs(string $MachineOs) 设置主机系统。
- * @method string getUuid() 获取云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
- * @method void setUuid(string $Uuid) 设置云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
+ * @method string getUuid() 获取主机安全Uuid，若客户端长时间不在线将返回空字符。
+ * @method void setUuid(string $Uuid) 设置主机安全Uuid，若客户端长时间不在线将返回空字符。
  * @method integer getMachineStatus() 获取大屏主机状态 0：未安装agent，1：离线状态，2:离线-风险，3：离线-严重
 4：安装设备-正常，5：安装设备-正常 且是专业版或旗舰版，6：安装设备-风险（网络攻击事件>0） ，
  7：安装设备-风险（网络攻击事件>0 且是专业版或旗舰版，8：安装设备-严重（入侵检测事件>0），
@@ -73,9 +73,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCoreVersion() 获取内核版本
  * @method void setCoreVersion(string $CoreVersion) 设置内核版本
  * @method MachineExtraInfo getMachineExtraInfo() 获取附加信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置附加信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ScreenMachine extends AbstractModel
 {
@@ -90,7 +88,7 @@ class ScreenMachine extends AbstractModel
     public $MachineOs;
 
     /**
-     * @var string 云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
+     * @var string 主机安全Uuid，若客户端长时间不在线将返回空字符。
      */
     public $Uuid;
 
@@ -187,14 +185,13 @@ class ScreenMachine extends AbstractModel
 
     /**
      * @var MachineExtraInfo 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineExtraInfo;
 
     /**
      * @param string $MachineName 主机名称。
      * @param string $MachineOs 主机系统。
-     * @param string $Uuid 云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
+     * @param string $Uuid 主机安全Uuid，若客户端长时间不在线将返回空字符。
      * @param integer $MachineStatus 大屏主机状态 0：未安装agent，1：离线状态，2:离线-风险，3：离线-严重
 4：安装设备-正常，5：安装设备-正常 且是专业版或旗舰版，6：安装设备-风险（网络攻击事件>0） ，
  7：安装设备-风险（网络攻击事件>0 且是专业版或旗舰版，8：安装设备-严重（入侵检测事件>0），
@@ -219,7 +216,6 @@ class ScreenMachine extends AbstractModel
      * @param float $MemSize 内存容量 GB
      * @param string $CoreVersion 内核版本
      * @param MachineExtraInfo $MachineExtraInfo 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

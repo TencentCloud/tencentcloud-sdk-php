@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 时间
  *
  * @method string getName() 获取具体时间类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置具体时间类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取时间值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置时间值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Time extends AbstractModel
 {
     /**
      * @var string 具体时间类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 时间值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @param string $Name 具体时间类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 时间值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置每页容量
  * @method string getKey() 获取过滤条件
  * @method void setKey(string $Key) 设置过滤条件
- * @method string getIsWafDomain() 获取是否接入waf
- * @method void setIsWafDomain(string $IsWafDomain) 设置是否接入waf
+ * @method string getIsWafDomain() 获取是否接入waf；传"1"返回接入域名的详情，传"0"返回未接入域名的详情，传""返回接入和未接入域名的详情
+ * @method void setIsWafDomain(string $IsWafDomain) 设置是否接入waf；传"1"返回接入域名的详情，传"0"返回未接入域名的详情，传""返回接入和未接入域名的详情
  * @method string getBy() 获取排序参数
  * @method void setBy(string $By) 设置排序参数
  * @method string getOrder() 获取排序方式
@@ -51,7 +51,7 @@ class DescribeFindDomainListRequest extends AbstractModel
     public $Key;
 
     /**
-     * @var string 是否接入waf
+     * @var string 是否接入waf；传"1"返回接入域名的详情，传"0"返回未接入域名的详情，传""返回接入和未接入域名的详情
      */
     public $IsWafDomain;
 
@@ -69,7 +69,7 @@ class DescribeFindDomainListRequest extends AbstractModel
      * @param integer $Offset 分页
      * @param integer $Limit 每页容量
      * @param string $Key 过滤条件
-     * @param string $IsWafDomain 是否接入waf
+     * @param string $IsWafDomain 是否接入waf；传"1"返回接入域名的详情，传"0"返回未接入域名的详情，传""返回接入和未接入域名的详情
      * @param string $By 排序参数
      * @param string $Order 排序方式
      */

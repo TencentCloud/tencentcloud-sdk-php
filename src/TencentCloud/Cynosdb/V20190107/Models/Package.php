@@ -21,29 +21,19 @@ use TencentCloud\Common\AbstractModel;
  * 资源包
  *
  * @method integer getAppId() 获取AppID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppId(integer $AppId) 设置AppID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPackageId() 获取资源包唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPackageId(string $PackageId) 设置资源包唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPackageName() 获取资源包名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPackageName(string $PackageName) 设置资源包名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPackageType() 获取资源包类型
 CCU-计算资源包，DISK-存储资源包
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPackageType(string $PackageType) 设置资源包类型
 CCU-计算资源包，DISK-存储资源包
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPackageRegion() 获取资源包使用地域
 china-中国内地通用，overseas-港澳台及海外通用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPackageRegion(string $PackageRegion) 设置资源包使用地域
 china-中国内地通用，overseas-港澳台及海外通用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取资源包状态
 creating-创建中；
 using-使用中；
@@ -51,7 +41,6 @@ expired-已过期；
 normal_finish-使用完；
 apply_refund-申请退费中；
 refund-已退费。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置资源包状态
 creating-创建中；
 using-使用中；
@@ -59,67 +48,47 @@ expired-已过期；
 normal_finish-使用完；
 apply_refund-申请退费中；
 refund-已退费。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getPackageTotalSpec() 获取资源包总量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPackageTotalSpec(float $PackageTotalSpec) 设置资源包总量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getPackageUsedSpec() 获取资源包已使用量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPackageUsedSpec(float $PackageUsedSpec) 设置资源包已使用量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getHasQuota() 获取是否还有库存余量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHasQuota(boolean $HasQuota) 设置是否还有库存余量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getBindInstanceInfos() 获取绑定实例信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBindInstanceInfos(array $BindInstanceInfos) 设置绑定实例信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStartTime() 获取生效时间：2022-07-01 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(string $StartTime) 设置生效时间：2022-07-01 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExpireTime() 获取失效时间：2022-08-01 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpireTime(string $ExpireTime) 设置失效时间：2022-08-01 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getHistoryBindResourceInfos() 获取资源包历史绑定（已解绑）实例信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHistoryBindResourceInfos(array $HistoryBindResourceInfos) 设置资源包历史绑定（已解绑）实例信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Package extends AbstractModel
 {
     /**
      * @var integer AppID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppId;
 
     /**
      * @var string 资源包唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PackageId;
 
     /**
      * @var string 资源包名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PackageName;
 
     /**
      * @var string 资源包类型
 CCU-计算资源包，DISK-存储资源包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PackageType;
 
     /**
      * @var string 资源包使用地域
 china-中国内地通用，overseas-港澳台及海外通用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PackageRegion;
 
@@ -131,65 +100,52 @@ expired-已过期；
 normal_finish-使用完；
 apply_refund-申请退费中；
 refund-已退费。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var float 资源包总量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PackageTotalSpec;
 
     /**
      * @var float 资源包已使用量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PackageUsedSpec;
 
     /**
      * @var boolean 是否还有库存余量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HasQuota;
 
     /**
      * @var array 绑定实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BindInstanceInfos;
 
     /**
      * @var string 生效时间：2022-07-01 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
      * @var string 失效时间：2022-08-01 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpireTime;
 
     /**
      * @var array 资源包历史绑定（已解绑）实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HistoryBindResourceInfos;
 
     /**
      * @param integer $AppId AppID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PackageId 资源包唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PackageName 资源包名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PackageType 资源包类型
 CCU-计算资源包，DISK-存储资源包
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PackageRegion 资源包使用地域
 china-中国内地通用，overseas-港澳台及海外通用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 资源包状态
 creating-创建中；
 using-使用中；
@@ -197,21 +153,13 @@ expired-已过期；
 normal_finish-使用完；
 apply_refund-申请退费中；
 refund-已退费。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $PackageTotalSpec 资源包总量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $PackageUsedSpec 资源包已使用量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $HasQuota 是否还有库存余量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $BindInstanceInfos 绑定实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StartTime 生效时间：2022-07-01 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExpireTime 失效时间：2022-08-01 00:00:00
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $HistoryBindResourceInfos 资源包历史绑定（已解绑）实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

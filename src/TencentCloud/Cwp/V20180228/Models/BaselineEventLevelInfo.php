@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 服务器风险Top的主机信息
  *
  * @method integer getEventLevel() 获取危害等级：1-低危；2-中危；3-高危；4-严重
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEventLevel(integer $EventLevel) 设置危害等级：1-低危；2-中危；3-高危；4-严重
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEventCount() 获取漏洞数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEventCount(integer $EventCount) 设置漏洞数量
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BaselineEventLevelInfo extends AbstractModel
 {
     /**
      * @var integer 危害等级：1-低危；2-中危；3-高危；4-严重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventLevel;
 
     /**
      * @var integer 漏洞数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventCount;
 
     /**
      * @param integer $EventLevel 危害等级：1-低危；2-中危；3-高危；4-严重
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EventCount 漏洞数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

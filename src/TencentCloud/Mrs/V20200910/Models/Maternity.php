@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 孕产报告
  *
  * @method MaternityDesc getDesc() 获取描述部分
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDesc(MaternityDesc $Desc) 设置描述部分
-注意：此字段可能返回 null，表示取不到有效值。
  * @method MaternitySummary getSummary() 获取结论部分
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSummary(MaternitySummary $Summary) 设置结论部分
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOcrText() 获取报告原文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOcrText(string $OcrText) 设置报告原文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPage() 获取数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPage(integer $Page) 设置数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Maternity extends AbstractModel
 {
     /**
      * @var MaternityDesc 描述部分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Desc;
 
     /**
      * @var MaternitySummary 结论部分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Summary;
 
     /**
      * @var string 报告原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OcrText;
 
     /**
      * @var integer 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Page;
 
     /**
      * @param MaternityDesc $Desc 描述部分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MaternitySummary $Summary 结论部分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OcrText 报告原文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

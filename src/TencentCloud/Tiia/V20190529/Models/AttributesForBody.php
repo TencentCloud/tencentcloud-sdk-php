@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRect(ImageRect $Rect) 设置人体框。当不开启人体检测时，内部参数默认为0。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method float getDetectConfidence() 获取人体检测置信度。取值0-1之间，当不开启人体检测开关时默认为0。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDetectConfidence(float $DetectConfidence) 设置人体检测置信度。取值0-1之间，当不开启人体检测开关时默认为0。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAttributes() 获取属性信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAttributes(array $Attributes) 设置属性信息。
@@ -43,7 +41,6 @@ class AttributesForBody extends AbstractModel
 
     /**
      * @var float 人体检测置信度。取值0-1之间，当不开启人体检测开关时默认为0。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DetectConfidence;
 
@@ -57,7 +54,6 @@ class AttributesForBody extends AbstractModel
      * @param ImageRect $Rect 人体框。当不开启人体检测时，内部参数默认为0。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $DetectConfidence 人体检测置信度。取值0-1之间，当不开启人体检测开关时默认为0。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Attributes 属性信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */

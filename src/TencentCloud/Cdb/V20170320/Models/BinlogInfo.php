@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置备份任务状态。可能的值有 "SUCCESS": 备份成功， "FAILED": 备份失败， "RUNNING": 备份进行中。
  * @method array getRemoteInfo() 获取binlog异地备份详细信息
  * @method void setRemoteInfo(array $RemoteInfo) 设置binlog异地备份详细信息
- * @method integer getCosStorageType() 获取存储方式，0-常规存储，1-归档存储，默认为0
- * @method void setCosStorageType(integer $CosStorageType) 设置存储方式，0-常规存储，1-归档存储，默认为0
+ * @method integer getCosStorageType() 获取存储方式，0-常规存储，1-归档存储，2-标准存储，默认为0
+ * @method void setCosStorageType(integer $CosStorageType) 设置存储方式，0-常规存储，1-归档存储，2-标准存储，默认为0
  * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
  */
@@ -105,7 +105,7 @@ class BinlogInfo extends AbstractModel
     public $RemoteInfo;
 
     /**
-     * @var integer 存储方式，0-常规存储，1-归档存储，默认为0
+     * @var integer 存储方式，0-常规存储，1-归档存储，2-标准存储，默认为0
      */
     public $CosStorageType;
 
@@ -126,7 +126,7 @@ class BinlogInfo extends AbstractModel
      * @param string $Region 本地binlog文件所在地域
      * @param string $Status 备份任务状态。可能的值有 "SUCCESS": 备份成功， "FAILED": 备份失败， "RUNNING": 备份进行中。
      * @param array $RemoteInfo binlog异地备份详细信息
-     * @param integer $CosStorageType 存储方式，0-常规存储，1-归档存储，默认为0
+     * @param integer $CosStorageType 存储方式，0-常规存储，1-归档存储，2-标准存储，默认为0
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
      */
     function __construct()

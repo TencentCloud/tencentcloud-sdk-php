@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setParentProcGroup(string $ParentProcGroup) 设置父进程用户组
  * @method string getParentProcPath() 获取父进程路径
  * @method void setParentProcPath(string $ParentProcPath) 设置父进程路径
- * @method integer getStatus() 获取处理状态：0-待处理 2-白名单 3-已处理 4-已忽略
- * @method void setStatus(integer $Status) 设置处理状态：0-待处理 2-白名单 3-已处理 4-已忽略
+ * @method integer getStatus() 获取处理状态：0-待处理 2-白名单 3-已处理 4-已忽略 6-已拦截
+ * @method void setStatus(integer $Status) 设置处理状态：0-待处理 2-白名单 3-已处理 4-已忽略 6-已拦截
  * @method string getCreateTime() 获取产生时间
  * @method void setCreateTime(string $CreateTime) 设置产生时间
  * @method string getMachineName() 获取主机名
@@ -61,17 +61,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getDetectBy() 获取检测方法: 0行为分析; 1命令特征检测
  * @method void setDetectBy(integer $DetectBy) 设置检测方法: 0行为分析; 1命令特征检测
  * @method MachineExtraInfo getMachineExtraInfo() 获取 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPid() 获取进程id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPid(integer $Pid) 设置进程id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRiskLevel() 获取威胁等级：0中危，1高危
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskLevel(integer $RiskLevel) 设置威胁等级：0中危，1高危
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCmdLineQuote() 获取命令详情的转义后内容，供正则加白全字符串匹配使用	
+ * @method void setCmdLineQuote(string $CmdLineQuote) 设置命令详情的转义后内容，供正则加白全字符串匹配使用	
  */
 class ReverseShell extends AbstractModel
 {
@@ -151,7 +147,7 @@ class ReverseShell extends AbstractModel
     public $ParentProcPath;
 
     /**
-     * @var integer 处理状态：0-待处理 2-白名单 3-已处理 4-已忽略
+     * @var integer 处理状态：0-待处理 2-白名单 3-已处理 4-已忽略 6-已拦截
      */
     public $Status;
 
@@ -177,21 +173,23 @@ class ReverseShell extends AbstractModel
 
     /**
      * @var MachineExtraInfo  主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineExtraInfo;
 
     /**
      * @var integer 进程id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Pid;
 
     /**
      * @var integer 威胁等级：0中危，1高危
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskLevel;
+
+    /**
+     * @var string 命令详情的转义后内容，供正则加白全字符串匹配使用	
+     */
+    public $CmdLineQuote;
 
     /**
      * @param integer $Id ID 主键
@@ -209,17 +207,15 @@ class ReverseShell extends AbstractModel
      * @param string $ParentProcUser 父进程用户
      * @param string $ParentProcGroup 父进程用户组
      * @param string $ParentProcPath 父进程路径
-     * @param integer $Status 处理状态：0-待处理 2-白名单 3-已处理 4-已忽略
+     * @param integer $Status 处理状态：0-待处理 2-白名单 3-已处理 4-已忽略 6-已拦截
      * @param string $CreateTime 产生时间
      * @param string $MachineName 主机名
      * @param string $ProcTree 进程树
      * @param integer $DetectBy 检测方法: 0行为分析; 1命令特征检测
      * @param MachineExtraInfo $MachineExtraInfo  主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Pid 进程id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RiskLevel 威胁等级：0中危，1高危
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CmdLineQuote 命令详情的转义后内容，供正则加白全字符串匹配使用	
      */
     function __construct()
     {
@@ -325,6 +321,10 @@ class ReverseShell extends AbstractModel
 
         if (array_key_exists("RiskLevel",$param) and $param["RiskLevel"] !== null) {
             $this->RiskLevel = $param["RiskLevel"];
+        }
+
+        if (array_key_exists("CmdLineQuote",$param) and $param["CmdLineQuote"] !== null) {
+            $this->CmdLineQuote = $param["CmdLineQuote"];
         }
     }
 }

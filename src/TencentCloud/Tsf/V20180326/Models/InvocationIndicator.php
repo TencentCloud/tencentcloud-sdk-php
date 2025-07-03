@@ -33,25 +33,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInvocationAvgDuration(float $InvocationAvgDuration) 设置请求平均耗时，单位毫秒
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getInvocationSuccessDistribution() 获取成功请求数时间分布
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInvocationSuccessDistribution(array $InvocationSuccessDistribution) 设置成功请求数时间分布
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getInvocationFailedDistribution() 获取失败请求数时间分布
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInvocationFailedDistribution(array $InvocationFailedDistribution) 设置失败请求数时间分布
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getInvocationStatusDistribution() 获取状态码分布
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInvocationStatusDistribution(array $InvocationStatusDistribution) 设置状态码分布
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getInvocationDurationDistribution() 获取时延分布
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInvocationDurationDistribution(array $InvocationDurationDistribution) 设置时延分布
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getInvocationQuantityDistribution() 获取并发请求次数时间分布
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInvocationQuantityDistribution(array $InvocationQuantityDistribution) 设置并发请求次数时间分布
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InvocationIndicator extends AbstractModel
 {
@@ -75,31 +65,26 @@ class InvocationIndicator extends AbstractModel
 
     /**
      * @var array 成功请求数时间分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InvocationSuccessDistribution;
 
     /**
      * @var array 失败请求数时间分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InvocationFailedDistribution;
 
     /**
      * @var array 状态码分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InvocationStatusDistribution;
 
     /**
      * @var array 时延分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InvocationDurationDistribution;
 
     /**
      * @var array 并发请求次数时间分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InvocationQuantityDistribution;
 
@@ -111,15 +96,10 @@ class InvocationIndicator extends AbstractModel
      * @param float $InvocationAvgDuration 请求平均耗时，单位毫秒
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $InvocationSuccessDistribution 成功请求数时间分布
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $InvocationFailedDistribution 失败请求数时间分布
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $InvocationStatusDistribution 状态码分布
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $InvocationDurationDistribution 时延分布
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $InvocationQuantityDistribution 并发请求次数时间分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

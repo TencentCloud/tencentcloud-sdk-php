@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getParentCategoryId() 获取父分类ID,如果为0则没有父分类
  * @method void setParentCategoryId(integer $ParentCategoryId) 设置父分类ID,如果为0则没有父分类
  * @method integer getItemCount() 获取子分类下检测项总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setItemCount(integer $ItemCount) 设置子分类下检测项总数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BaselineCategory extends AbstractModel
 {
@@ -50,7 +48,6 @@ class BaselineCategory extends AbstractModel
 
     /**
      * @var integer 子分类下检测项总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ItemCount;
 
@@ -59,7 +56,6 @@ class BaselineCategory extends AbstractModel
      * @param string $CategoryName 分类名称
      * @param integer $ParentCategoryId 父分类ID,如果为0则没有父分类
      * @param integer $ItemCount 子分类下检测项总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

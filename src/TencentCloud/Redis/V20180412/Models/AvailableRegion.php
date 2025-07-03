@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 可使用的地域信息
  *
  * @method string getRegion() 获取地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAvailableZones() 获取可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAvailableZones(array $AvailableZones) 设置可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AvailableRegion extends AbstractModel
 {
     /**
      * @var string 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
      * @var array 可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AvailableZones;
 
     /**
      * @param string $Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AvailableZones 可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

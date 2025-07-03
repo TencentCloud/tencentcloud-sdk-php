@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTask请求参数结构体
  *
- * @method string getMediaId() 获取媒资文件ID，最长32B
- * @method void setMediaId(string $MediaId) 设置媒资文件ID，最长32B
+ * @method string getMediaId() 获取媒资文件ID
+ * @method void setMediaId(string $MediaId) 设置媒资文件ID
  * @method MediaPreknownInfo getMediaPreknownInfo() 获取媒资素材先验知识，相关限制参考MediaPreknownInfo
  * @method void setMediaPreknownInfo(MediaPreknownInfo $MediaPreknownInfo) 设置媒资素材先验知识，相关限制参考MediaPreknownInfo
  * @method string getTaskName() 获取任务名称，最长100个中文字符
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateTaskRequest extends AbstractModel
 {
     /**
-     * @var string 媒资文件ID，最长32B
+     * @var string 媒资文件ID
      */
     public $MediaId;
 
@@ -66,7 +66,7 @@ class CreateTaskRequest extends AbstractModel
     public $CallbackURL;
 
     /**
-     * @param string $MediaId 媒资文件ID，最长32B
+     * @param string $MediaId 媒资文件ID
      * @param MediaPreknownInfo $MediaPreknownInfo 媒资素材先验知识，相关限制参考MediaPreknownInfo
      * @param string $TaskName 任务名称，最长100个中文字符
      * @param boolean $UploadVideo 是否上传转码后的视频，仅设置true时上传，默认为false

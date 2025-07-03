@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method array getSummary() 获取企业套餐余额及使用情况
  * @method void setSummary(array $Summary) 设置企业套餐余额及使用情况
  * @method array getSubOrgSummary() 获取集团子企业套餐使用情况
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubOrgSummary(array $SubOrgSummary) 设置集团子企业套餐使用情况
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -38,7 +36,6 @@ class DescribeBillUsageResponse extends AbstractModel
 
     /**
      * @var array 集团子企业套餐使用情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubOrgSummary;
 
@@ -50,7 +47,6 @@ class DescribeBillUsageResponse extends AbstractModel
     /**
      * @param array $Summary 企业套餐余额及使用情况
      * @param array $SubOrgSummary 集团子企业套餐使用情况
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) 设置需要修改的域名
  * @method array getAreas() 获取需要调整的地域信息，一个字符串数组
  * @method void setAreas(array $Areas) 设置需要调整的地域信息，一个字符串数组
- * @method string getJobType() 获取定时任务类型
- * @method void setJobType(string $JobType) 设置定时任务类型
+ * @method string getJobType() 获取规则执行的方式，TimedJob为定时执行，CronJob为周期执行
+ * @method void setJobType(string $JobType) 设置规则执行的方式，TimedJob为定时执行，CronJob为周期执行
  * @method JobDateTime getJobDateTime() 获取定时任务配置
  * @method void setJobDateTime(JobDateTime $JobDateTime) 设置定时任务配置
  */
@@ -42,7 +42,7 @@ class ModifyAreaBanAreasRequest extends AbstractModel
     public $Areas;
 
     /**
-     * @var string 定时任务类型
+     * @var string 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
      */
     public $JobType;
 
@@ -54,7 +54,7 @@ class ModifyAreaBanAreasRequest extends AbstractModel
     /**
      * @param string $Domain 需要修改的域名
      * @param array $Areas 需要调整的地域信息，一个字符串数组
-     * @param string $JobType 定时任务类型
+     * @param string $JobType 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
      * @param JobDateTime $JobDateTime 定时任务配置
      */
     function __construct()

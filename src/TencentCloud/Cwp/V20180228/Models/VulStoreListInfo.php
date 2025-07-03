@@ -37,9 +37,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getAttackLevel() 获取漏洞攻击热度
  * @method void setAttackLevel(integer $AttackLevel) 设置漏洞攻击热度
  * @method integer getFixSwitch() 获取漏洞是否支持自动修复
-0-windows/linux均关闭; 1-windows/linux均打开; 2-仅linux; 3-仅windows
+0-Windows/Linux均关闭; 1-Windows/Linux均打开; 2-仅Linux; 3-仅Windows
  * @method void setFixSwitch(integer $FixSwitch) 设置漏洞是否支持自动修复
-0-windows/linux均关闭; 1-windows/linux均打开; 2-仅linux; 3-仅windows
+0-Windows/Linux均关闭; 1-Windows/Linux均打开; 2-仅Linux; 3-仅Windows
  * @method integer getSupportDefense() 获取漏洞是否支持防御
 0:不支持 1:支持
  * @method void setSupportDefense(integer $SupportDefense) 设置漏洞是否支持防御
@@ -89,7 +89,7 @@ class VulStoreListInfo extends AbstractModel
 
     /**
      * @var integer 漏洞是否支持自动修复
-0-windows/linux均关闭; 1-windows/linux均打开; 2-仅linux; 3-仅windows
+0-Windows/Linux均关闭; 1-Windows/Linux均打开; 2-仅Linux; 3-仅Windows
      */
     public $FixSwitch;
 
@@ -109,7 +109,7 @@ class VulStoreListInfo extends AbstractModel
      * @param integer $Method 漏洞检测方法 0 - 版本比对, 1 - POC验证
      * @param integer $AttackLevel 漏洞攻击热度
      * @param integer $FixSwitch 漏洞是否支持自动修复
-0-windows/linux均关闭; 1-windows/linux均打开; 2-仅linux; 3-仅windows
+0-Windows/Linux均关闭; 1-Windows/Linux均打开; 2-仅Linux; 3-仅Windows
      * @param integer $SupportDefense 漏洞是否支持防御
 0:不支持 1:支持
      */

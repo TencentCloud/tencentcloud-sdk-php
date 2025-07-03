@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDisksRenewFlag请求参数结构体
  *
- * @method array getDiskIds() 获取一个或多个待操作的云硬盘ID。
- * @method void setDiskIds(array $DiskIds) 设置一个或多个待操作的云硬盘ID。
- * @method string getRenewFlag() 获取	云硬盘的自动续费标识。取值范围：<ul><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费</li><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费</li></ul>
- * @method void setRenewFlag(string $RenewFlag) 设置	云硬盘的自动续费标识。取值范围：<ul><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费</li><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费</li></ul>
- * @method integer getAutoRenewPeriod() 获取该参数支持设置云硬盘的自动续费周期，单位为月。
- * @method void setAutoRenewPeriod(integer $AutoRenewPeriod) 设置该参数支持设置云硬盘的自动续费周期，单位为月。
+ * @method array getDiskIds() 获取一个或多个待操作的云硬盘ID，该参数可以通过[DescribeDisks](/document/product/362/16315)接口查询。
+ * @method void setDiskIds(array $DiskIds) 设置一个或多个待操作的云硬盘ID，该参数可以通过[DescribeDisks](/document/product/362/16315)接口查询。
+ * @method string getRenewFlag() 获取云硬盘的自动续费标识。取值范围：<ul><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费</li><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费</li></ul>
+ * @method void setRenewFlag(string $RenewFlag) 设置云硬盘的自动续费标识。取值范围：<ul><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费</li><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费</li></ul>
+ * @method integer getAutoRenewPeriod() 获取该参数支持设置云硬盘的自动续费周期，单位为月。取值范围：[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36]
+ * @method void setAutoRenewPeriod(integer $AutoRenewPeriod) 设置该参数支持设置云硬盘的自动续费周期，单位为月。取值范围：[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36]
  */
 class ModifyDisksRenewFlagRequest extends AbstractModel
 {
     /**
-     * @var array 一个或多个待操作的云硬盘ID。
+     * @var array 一个或多个待操作的云硬盘ID，该参数可以通过[DescribeDisks](/document/product/362/16315)接口查询。
      */
     public $DiskIds;
 
     /**
-     * @var string 	云硬盘的自动续费标识。取值范围：<ul><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费</li><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费</li></ul>
+     * @var string 云硬盘的自动续费标识。取值范围：<ul><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费</li><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费</li></ul>
      */
     public $RenewFlag;
 
     /**
-     * @var integer 该参数支持设置云硬盘的自动续费周期，单位为月。
+     * @var integer 该参数支持设置云硬盘的自动续费周期，单位为月。取值范围：[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36]
      */
     public $AutoRenewPeriod;
 
     /**
-     * @param array $DiskIds 一个或多个待操作的云硬盘ID。
-     * @param string $RenewFlag 	云硬盘的自动续费标识。取值范围：<ul><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费</li><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费</li></ul>
-     * @param integer $AutoRenewPeriod 该参数支持设置云硬盘的自动续费周期，单位为月。
+     * @param array $DiskIds 一个或多个待操作的云硬盘ID，该参数可以通过[DescribeDisks](/document/product/362/16315)接口查询。
+     * @param string $RenewFlag 云硬盘的自动续费标识。取值范围：<ul><li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费</li><li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费</li></ul>
+     * @param integer $AutoRenewPeriod 该参数支持设置云硬盘的自动续费周期，单位为月。取值范围：[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36]
      */
     function __construct()
     {

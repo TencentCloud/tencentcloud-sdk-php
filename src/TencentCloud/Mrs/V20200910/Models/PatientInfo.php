@@ -21,195 +21,136 @@ use TencentCloud\Common\AbstractModel;
  * 患者信息
  *
  * @method string getName() 获取患者姓名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置患者姓名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSex() 获取患者性别
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSex(string $Sex) 设置患者性别
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAge() 获取患者年龄
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAge(string $Age) 设置患者年龄
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPhone() 获取患者手机号码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPhone(string $Phone) 设置患者手机号码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAddress() 获取患者地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddress(string $Address) 设置患者地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIdCard() 获取患者身份证
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIdCard(string $IdCard) 设置患者身份证
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHealthCardNo() 获取健康卡号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHealthCardNo(string $HealthCardNo) 设置健康卡号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSocialSecurityCardNo() 获取社保卡号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSocialSecurityCardNo(string $SocialSecurityCardNo) 设置社保卡号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBirthday() 获取出生日期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBirthday(string $Birthday) 设置出生日期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEthnicity() 获取民族
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEthnicity(string $Ethnicity) 设置民族
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMarried() 获取婚姻状况
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMarried(string $Married) 设置婚姻状况
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProfession() 获取职业
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProfession(string $Profession) 设置职业
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEducationBackground() 获取教育程度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEducationBackground(string $EducationBackground) 设置教育程度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNationality() 获取国籍
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNationality(string $Nationality) 设置国籍
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBirthPlace() 获取籍贯
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBirthPlace(string $BirthPlace) 设置籍贯
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMedicalInsuranceType() 获取医保类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMedicalInsuranceType(string $MedicalInsuranceType) 设置医保类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAgeNorm() 获取标准化年龄
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAgeNorm(string $AgeNorm) 设置标准化年龄
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNation() 获取民族。该字段已不再使用，请从Ethnicity取值
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNation(string $Nation) 设置民族。该字段已不再使用，请从Ethnicity取值
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMarriedCode() 获取婚姻代码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMarriedCode(string $MarriedCode) 设置婚姻代码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProfessionCode() 获取职业代码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProfessionCode(string $ProfessionCode) 设置职业代码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMedicalInsuranceTypeCode() 获取居民医保代码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMedicalInsuranceTypeCode(string $MedicalInsuranceTypeCode) 设置居民医保代码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBedNo() 获取床号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBedNo(string $BedNo) 设置床号
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PatientInfo extends AbstractModel
 {
     /**
      * @var string 患者姓名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 患者性别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Sex;
 
     /**
      * @var string 患者年龄
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Age;
 
     /**
      * @var string 患者手机号码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Phone;
 
     /**
      * @var string 患者地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Address;
 
     /**
      * @var string 患者身份证
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IdCard;
 
     /**
      * @var string 健康卡号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HealthCardNo;
 
     /**
      * @var string 社保卡号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SocialSecurityCardNo;
 
     /**
      * @var string 出生日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Birthday;
 
     /**
      * @var string 民族
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ethnicity;
 
     /**
      * @var string 婚姻状况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Married;
 
     /**
      * @var string 职业
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Profession;
 
     /**
      * @var string 教育程度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EducationBackground;
 
     /**
      * @var string 国籍
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Nationality;
 
     /**
      * @var string 籍贯
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BirthPlace;
 
     /**
      * @var string 医保类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MedicalInsuranceType;
 
     /**
      * @var string 标准化年龄
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AgeNorm;
 
@@ -222,73 +163,48 @@ class PatientInfo extends AbstractModel
 
     /**
      * @var string 婚姻代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MarriedCode;
 
     /**
      * @var string 职业代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProfessionCode;
 
     /**
      * @var string 居民医保代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MedicalInsuranceTypeCode;
 
     /**
      * @var string 床号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BedNo;
 
     /**
      * @param string $Name 患者姓名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Sex 患者性别
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Age 患者年龄
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Phone 患者手机号码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Address 患者地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IdCard 患者身份证
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HealthCardNo 健康卡号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SocialSecurityCardNo 社保卡号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Birthday 出生日期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Ethnicity 民族
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Married 婚姻状况
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Profession 职业
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EducationBackground 教育程度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Nationality 国籍
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BirthPlace 籍贯
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MedicalInsuranceType 医保类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AgeNorm 标准化年龄
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Nation 民族。该字段已不再使用，请从Ethnicity取值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MarriedCode 婚姻代码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProfessionCode 职业代码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MedicalInsuranceTypeCode 居民医保代码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BedNo 床号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

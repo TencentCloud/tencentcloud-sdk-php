@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEmailAddress() 获取被拉黑的邮箱地址
  * @method void setEmailAddress(string $EmailAddress) 设置被拉黑的邮箱地址
  * @method string getIspDesc() 获取被拉黑的理由
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIspDesc(string $IspDesc) 设置被拉黑的理由
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BlackEmailAddress extends AbstractModel
 {
@@ -43,7 +41,6 @@ class BlackEmailAddress extends AbstractModel
 
     /**
      * @var string 被拉黑的理由
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IspDesc;
 
@@ -51,7 +48,6 @@ class BlackEmailAddress extends AbstractModel
      * @param string $BounceTime 邮箱被拉黑时间
      * @param string $EmailAddress 被拉黑的邮箱地址
      * @param string $IspDesc 被拉黑的理由
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

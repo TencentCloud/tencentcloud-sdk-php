@@ -47,17 +47,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLevel() 获取码层级 0: 最小级, 1: 一级, 2: 二级
  * @method void setLevel(integer $Level) 设置码层级 0: 最小级, 1: 一级, 2: 二级
  * @method array getPackSpec() 获取码层级详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPackSpec(array $PackSpec) 设置码层级详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSceneCode() 获取场景码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSceneCode(integer $SceneCode) 设置场景码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSerialCode() 获取流水码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSerialCode(integer $SerialCode) 设置流水码
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TraceCode extends AbstractModel
 {
@@ -128,19 +122,16 @@ class TraceCode extends AbstractModel
 
     /**
      * @var array 码层级详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PackSpec;
 
     /**
      * @var integer 场景码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SceneCode;
 
     /**
      * @var integer 流水码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SerialCode;
 
@@ -159,11 +150,8 @@ class TraceCode extends AbstractModel
      * @param integer $AgentId 渠道商ID
      * @param integer $Level 码层级 0: 最小级, 1: 一级, 2: 二级
      * @param array $PackSpec 码层级详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SceneCode 场景码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SerialCode 流水码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

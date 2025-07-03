@@ -31,9 +31,7 @@ use TencentCloud\Common\AbstractModel;
  * @method AiRecognitionTaskOcrWordsResultInput getInput() 获取文本关键词识别任务输入信息。
  * @method void setInput(AiRecognitionTaskOcrWordsResultInput $Input) 设置文本关键词识别任务输入信息。
  * @method AiRecognitionTaskOcrWordsResultOutput getOutput() 获取文本关键词识别任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutput(AiRecognitionTaskOcrWordsResultOutput $Output) 设置文本关键词识别任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProgress() 获取文本关键词识别任务进度，取值范围 [0-100] 。
  * @method void setProgress(integer $Progress) 设置文本关键词识别任务进度，取值范围 [0-100] 。
  * @method string getBeginProcessTime() 获取文本关键词识别任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
@@ -70,7 +68,6 @@ class AiRecognitionTaskOcrWordsResult extends AbstractModel
 
     /**
      * @var AiRecognitionTaskOcrWordsResultOutput 文本关键词识别任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Output;
 
@@ -96,7 +93,6 @@ class AiRecognitionTaskOcrWordsResult extends AbstractModel
      * @param string $Message 错误信息。
      * @param AiRecognitionTaskOcrWordsResultInput $Input 文本关键词识别任务输入信息。
      * @param AiRecognitionTaskOcrWordsResultOutput $Output 文本关键词识别任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Progress 文本关键词识别任务进度，取值范围 [0-100] 。
      * @param string $BeginProcessTime 文本关键词识别任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      * @param string $FinishTime 文本关键词识别任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。

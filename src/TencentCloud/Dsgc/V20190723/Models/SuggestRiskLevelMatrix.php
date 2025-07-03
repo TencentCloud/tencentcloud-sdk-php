@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 生成的建议的风险等级矩阵
  *
  * @method array getRiskLevelMatrix() 获取矩阵
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskLevelMatrix(array $RiskLevelMatrix) 设置矩阵
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SuggestRiskLevelMatrix extends AbstractModel
 {
     /**
      * @var array 矩阵
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskLevelMatrix;
 
     /**
      * @param array $RiskLevelMatrix 矩阵
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

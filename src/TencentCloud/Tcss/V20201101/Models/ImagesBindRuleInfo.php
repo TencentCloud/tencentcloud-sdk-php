@@ -27,21 +27,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getContainerCnt() 获取关联容器数量
  * @method void setContainerCnt(integer $ContainerCnt) 设置关联容器数量
  * @method string getRuleId() 获取绑定规则id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleId(string $RuleId) 设置绑定规则id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRuleName() 获取规则名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleName(string $RuleName) 设置规则名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getImageSize() 获取镜像大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageSize(integer $ImageSize) 设置镜像大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getScanTime() 获取最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScanTime(string $ScanTime) 设置最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImagesBindRuleInfo extends AbstractModel
 {
@@ -62,25 +54,21 @@ class ImagesBindRuleInfo extends AbstractModel
 
     /**
      * @var string 绑定规则id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleId;
 
     /**
      * @var string 规则名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleName;
 
     /**
      * @var integer 镜像大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageSize;
 
     /**
      * @var string 最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScanTime;
 
@@ -89,13 +77,9 @@ class ImagesBindRuleInfo extends AbstractModel
      * @param string $ImageName 镜像名称
      * @param integer $ContainerCnt 关联容器数量
      * @param string $RuleId 绑定规则id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RuleName 规则名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ImageSize 镜像大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScanTime 最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

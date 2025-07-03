@@ -27,7 +27,9 @@ use TencentCloud\Common\AbstractModel;
  * @method array getData() 获取配置内容
  * @method void setData(array $Data) 设置配置内容
  * @method string getSecretDataName() 获取加密配置名称
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecretDataName(string $SecretDataName) 设置加密配置名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MountedSettingConf extends AbstractModel
 {
@@ -48,6 +50,7 @@ class MountedSettingConf extends AbstractModel
 
     /**
      * @var string 加密配置名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecretDataName;
 
@@ -56,6 +59,7 @@ class MountedSettingConf extends AbstractModel
      * @param string $MountedPath 挂载路径
      * @param array $Data 配置内容
      * @param string $SecretDataName 加密配置名称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -25,11 +25,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLimit() 获取单页返回数量，默认为20，最大值为100。
  * @method void setLimit(integer $Limit) 设置单页返回数量，默认为20，最大值为100。
  * @method array getFilters() 获取过滤条件。
-<li> user-uin String - （过滤条件）用户UIN。</li>
-<li> end-point-service-id String - （过滤条件）终端节点服务ID。</li>
+<li> user-uin String - （过滤条件）用户UIN。登录 腾讯云账号中心控制台 获取。</li>
+<li> end-point-service-id String - （过滤条件）终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+</li>
  * @method void setFilters(array $Filters) 设置过滤条件。
-<li> user-uin String - （过滤条件）用户UIN。</li>
-<li> end-point-service-id String - （过滤条件）终端节点服务ID。</li>
+<li> user-uin String - （过滤条件）用户UIN。登录 腾讯云账号中心控制台 获取。</li>
+<li> end-point-service-id String - （过滤条件）终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+</li>
  */
 class DescribeVpcEndPointServiceWhiteListRequest extends AbstractModel
 {
@@ -45,8 +47,9 @@ class DescribeVpcEndPointServiceWhiteListRequest extends AbstractModel
 
     /**
      * @var array 过滤条件。
-<li> user-uin String - （过滤条件）用户UIN。</li>
-<li> end-point-service-id String - （过滤条件）终端节点服务ID。</li>
+<li> user-uin String - （过滤条件）用户UIN。登录 腾讯云账号中心控制台 获取。</li>
+<li> end-point-service-id String - （过滤条件）终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+</li>
      */
     public $Filters;
 
@@ -54,8 +57,9 @@ class DescribeVpcEndPointServiceWhiteListRequest extends AbstractModel
      * @param integer $Offset 偏移量，默认为0。
      * @param integer $Limit 单页返回数量，默认为20，最大值为100。
      * @param array $Filters 过滤条件。
-<li> user-uin String - （过滤条件）用户UIN。</li>
-<li> end-point-service-id String - （过滤条件）终端节点服务ID。</li>
+<li> user-uin String - （过滤条件）用户UIN。登录 腾讯云账号中心控制台 获取。</li>
+<li> end-point-service-id String - （过滤条件）终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+</li>
      */
     function __construct()
     {

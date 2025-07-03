@@ -28,10 +28,8 @@ use TencentCloud\Common\AbstractModel;
 <li>off：关闭。</li>
  * @method integer getCacheTime() 获取缓存过期时间设置。
 单位为秒，最大可设置为 365 天。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCacheTime(integer $CacheTime) 设置缓存过期时间设置。
 单位为秒，最大可设置为 365 天。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIgnoreCacheControl() 获取是否开启强制缓存，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
@@ -53,7 +51,6 @@ class Cache extends AbstractModel
     /**
      * @var integer 缓存过期时间设置。
 单位为秒，最大可设置为 365 天。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CacheTime;
 
@@ -72,7 +69,6 @@ class Cache extends AbstractModel
 <li>off：关闭。</li>
      * @param integer $CacheTime 缓存过期时间设置。
 单位为秒，最大可设置为 365 天。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IgnoreCacheControl 是否开启强制缓存，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>

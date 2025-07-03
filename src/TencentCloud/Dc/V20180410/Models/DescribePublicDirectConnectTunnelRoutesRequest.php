@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePublicDirectConnectTunnelRoutes请求参数结构体
  *
- * @method string getDirectConnectTunnelId() 获取专用通道ID
- * @method void setDirectConnectTunnelId(string $DirectConnectTunnelId) 设置专用通道ID
+ * @method string getDirectConnectTunnelId() 获取专用通道ID。
+ * @method void setDirectConnectTunnelId(string $DirectConnectTunnelId) 设置专用通道ID。
  * @method array getFilters() 获取过滤条件：
-route-type：路由类型，取值：BGP/STATIC
-route-subnet：路由cidr，取值如：192.68.1.0/24
+route-type：路由类型，取值：BGP/STATIC；
+route-subnet：路由cidr，取值如：192.68.1.0/24。
  * @method void setFilters(array $Filters) 设置过滤条件：
-route-type：路由类型，取值：BGP/STATIC
-route-subnet：路由cidr，取值如：192.68.1.0/24
- * @method integer getOffset() 获取偏移量，默认为0
- * @method void setOffset(integer $Offset) 设置偏移量，默认为0
- * @method integer getLimit() 获取返回数量，默认为20，最大值为100
- * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100
+route-type：路由类型，取值：BGP/STATIC；
+route-subnet：路由cidr，取值如：192.68.1.0/24。
+ * @method integer getOffset() 获取偏移量，默认为0。
+ * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
+ * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
+ * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
  */
 class DescribePublicDirectConnectTunnelRoutesRequest extends AbstractModel
 {
     /**
-     * @var string 专用通道ID
+     * @var string 专用通道ID。
      */
     public $DirectConnectTunnelId;
 
     /**
      * @var array 过滤条件：
-route-type：路由类型，取值：BGP/STATIC
-route-subnet：路由cidr，取值如：192.68.1.0/24
+route-type：路由类型，取值：BGP/STATIC；
+route-subnet：路由cidr，取值如：192.68.1.0/24。
      */
     public $Filters;
 
     /**
-     * @var integer 偏移量，默认为0
+     * @var integer 偏移量，默认为0。
      */
     public $Offset;
 
     /**
-     * @var integer 返回数量，默认为20，最大值为100
+     * @var integer 返回数量，默认为20，最大值为100。
      */
     public $Limit;
 
     /**
-     * @param string $DirectConnectTunnelId 专用通道ID
+     * @param string $DirectConnectTunnelId 专用通道ID。
      * @param array $Filters 过滤条件：
-route-type：路由类型，取值：BGP/STATIC
-route-subnet：路由cidr，取值如：192.68.1.0/24
-     * @param integer $Offset 偏移量，默认为0
-     * @param integer $Limit 返回数量，默认为20，最大值为100
+route-type：路由类型，取值：BGP/STATIC；
+route-subnet：路由cidr，取值如：192.68.1.0/24。
+     * @param integer $Offset 偏移量，默认为0。
+     * @param integer $Limit 返回数量，默认为20，最大值为100。
      */
     function __construct()
     {

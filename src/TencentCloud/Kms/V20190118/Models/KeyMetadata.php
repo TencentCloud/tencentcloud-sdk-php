@@ -43,23 +43,19 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getNextRotateTime() 获取在密钥轮换开启状态下，下次轮换的时间
  * @method void setNextRotateTime(integer $NextRotateTime) 设置在密钥轮换开启状态下，下次轮换的时间
  * @method integer getDeletionDate() 获取计划删除的时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeletionDate(integer $DeletionDate) 设置计划删除的时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOrigin() 获取CMK 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrigin(string $Origin) 设置CMK 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getValidTo() 获取在Origin为  EXTERNAL 时有效，表示密钥材料的有效日期， 0 表示不过期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValidTo(integer $ValidTo) 设置在Origin为  EXTERNAL 时有效，表示密钥材料的有效日期， 0 表示不过期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceId() 获取资源ID，格式：creatorUin/$creatorUin/$keyId
  * @method void setResourceId(string $ResourceId) 设置资源ID，格式：creatorUin/$creatorUin/$keyId
  * @method string getHsmClusterId() 获取HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHsmClusterId(string $HsmClusterId) 设置HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRotateDays() 获取密钥轮转周期（天）
+ * @method void setRotateDays(integer $RotateDays) 设置密钥轮转周期（天）
+ * @method integer getLastRotateTime() 获取上次乱转时间（Unix timestamp）
+ * @method void setLastRotateTime(integer $LastRotateTime) 设置上次乱转时间（Unix timestamp）
  */
 class KeyMetadata extends AbstractModel
 {
@@ -120,19 +116,16 @@ class KeyMetadata extends AbstractModel
 
     /**
      * @var integer 计划删除的时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeletionDate;
 
     /**
      * @var string CMK 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Origin;
 
     /**
      * @var integer 在Origin为  EXTERNAL 时有效，表示密钥材料的有效日期， 0 表示不过期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ValidTo;
 
@@ -143,9 +136,18 @@ class KeyMetadata extends AbstractModel
 
     /**
      * @var string HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HsmClusterId;
+
+    /**
+     * @var integer 密钥轮转周期（天）
+     */
+    public $RotateDays;
+
+    /**
+     * @var integer 上次乱转时间（Unix timestamp）
+     */
+    public $LastRotateTime;
 
     /**
      * @param string $KeyId CMK的全局唯一标识
@@ -160,14 +162,12 @@ class KeyMetadata extends AbstractModel
      * @param string $Owner CMK的创建者，用户创建的为 user，授权各云产品自动创建的为对应的产品名
      * @param integer $NextRotateTime 在密钥轮换开启状态下，下次轮换的时间
      * @param integer $DeletionDate 计划删除的时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Origin CMK 密钥材料类型，由KMS创建的为： TENCENT_KMS， 由用户导入的类型为：EXTERNAL
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ValidTo 在Origin为  EXTERNAL 时有效，表示密钥材料的有效日期， 0 表示不过期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceId 资源ID，格式：creatorUin/$creatorUin/$keyId
      * @param string $HsmClusterId HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RotateDays 密钥轮转周期（天）
+     * @param integer $LastRotateTime 上次乱转时间（Unix timestamp）
      */
     function __construct()
     {
@@ -244,6 +244,14 @@ class KeyMetadata extends AbstractModel
 
         if (array_key_exists("HsmClusterId",$param) and $param["HsmClusterId"] !== null) {
             $this->HsmClusterId = $param["HsmClusterId"];
+        }
+
+        if (array_key_exists("RotateDays",$param) and $param["RotateDays"] !== null) {
+            $this->RotateDays = $param["RotateDays"];
+        }
+
+        if (array_key_exists("LastRotateTime",$param) and $param["LastRotateTime"] !== null) {
+            $this->LastRotateTime = $param["LastRotateTime"];
         }
     }
 }

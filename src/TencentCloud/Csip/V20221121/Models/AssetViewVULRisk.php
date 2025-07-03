@@ -49,13 +49,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getAppId() 获取用户appid
  * @method void setAppId(string $AppId) 设置用户appid
  * @method string getNick() 获取用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNick(string $Nick) 设置用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUin() 获取用户uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUin(string $Uin) 设置用户uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVULType() 获取漏洞类型
  * @method void setVULType(string $VULType) 设置漏洞类型
  * @method string getPort() 获取端口
@@ -91,9 +87,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPayload() 获取攻击载荷
  * @method void setPayload(string $Payload) 设置攻击载荷
  * @method integer getEMGCVulType() 获取应急漏洞类型，1-应急漏洞，0-非应急漏洞
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEMGCVulType(integer $EMGCVulType) 设置应急漏洞类型，1-应急漏洞，0-非应急漏洞
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssetViewVULRisk extends AbstractModel
 {
@@ -165,13 +159,11 @@ class AssetViewVULRisk extends AbstractModel
 
     /**
      * @var string 用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Nick;
 
     /**
      * @var string 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uin;
 
@@ -262,7 +254,6 @@ class AssetViewVULRisk extends AbstractModel
 
     /**
      * @var integer 应急漏洞类型，1-应急漏洞，0-非应急漏洞
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EMGCVulType;
 
@@ -282,9 +273,7 @@ class AssetViewVULRisk extends AbstractModel
      * @param string $InstanceName 实例名
      * @param string $AppId 用户appid
      * @param string $Nick 用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uin 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VULType 漏洞类型
      * @param string $Port 端口
      * @param string $Describe 漏洞描述
@@ -303,7 +292,6 @@ class AssetViewVULRisk extends AbstractModel
      * @param string $InstanceUUID 实例uuid
      * @param string $Payload 攻击载荷
      * @param integer $EMGCVulType 应急漏洞类型，1-应急漏洞，0-非应急漏洞
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

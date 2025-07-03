@@ -21,93 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * API参数信息
  *
  * @method string getId() 获取所属API的id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(string $Id) 设置所属API的id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取参数名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置参数名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取参数类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置参数类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getDynamic() 获取是否为动态值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDynamic(boolean $Dynamic) 设置是否为动态值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getRequired() 获取是否必填
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRequired(boolean $Required) 设置是否必填
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取参数值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置参数值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDefaultValue() 获取默认值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefaultValue(string $DefaultValue) 设置默认值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApiContent extends AbstractModel
 {
     /**
      * @var string 所属API的id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var string 参数名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 参数类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var boolean 是否为动态值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Dynamic;
 
     /**
      * @var boolean 是否必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Required;
 
     /**
      * @var string 参数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @var string 默认值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DefaultValue;
 
     /**
      * @param string $Id 所属API的id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 参数名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 参数类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Dynamic 是否为动态值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Required 是否必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 参数值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DefaultValue 默认值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

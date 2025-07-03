@@ -35,13 +35,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIncludeLabels(array $IncludeLabels) 设置pod标签信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method ContainerWorkLoadInfo getWorkLoad() 获取工作负载信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWorkLoad(ContainerWorkLoadInfo $WorkLoad) 设置工作负载信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExcludeNamespace() 获取需要排除的namespace可以多个，用分隔号分割,例如A,B
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExcludeNamespace(string $ExcludeNamespace) 设置需要排除的namespace可以多个，用分隔号分割,例如A,B
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getExcludeLabels() 获取需要排除的pod标签信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExcludeLabels(array $ExcludeLabels) 设置需要排除的pod标签信息
@@ -86,13 +82,11 @@ class ContainerFileInfo extends AbstractModel
 
     /**
      * @var ContainerWorkLoadInfo 工作负载信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkLoad;
 
     /**
      * @var string 需要排除的namespace可以多个，用分隔号分割,例如A,B
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExcludeNamespace;
 
@@ -117,9 +111,7 @@ class ContainerFileInfo extends AbstractModel
      * @param array $IncludeLabels pod标签信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ContainerWorkLoadInfo $WorkLoad 工作负载信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExcludeNamespace 需要排除的namespace可以多个，用分隔号分割,例如A,B
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ExcludeLabels 需要排除的pod标签信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CustomLabels metadata信息

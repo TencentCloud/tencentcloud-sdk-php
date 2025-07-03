@@ -21,45 +21,89 @@ use TencentCloud\Common\AbstractModel;
  * 多云盘参数
  *
  * @method integer getCount() 获取该类型云盘个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCount(integer $Count) 设置该类型云盘个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getType() 获取磁盘类型
-注意：此字段可能返回 null，表示取不到有效值。
+1  :本地盘
+2  :云硬盘
+3  : 本地SSD
+4  : 云SSD
+5  : 高效云盘
+6  : 增强型SSD云硬盘
+11 : 吞吐型云硬盘
+12 : 极速型SSD云硬盘
+13 : 通用型SSD云硬盘
+14 : 大数据型云硬盘
+15 : 高IO型云硬盘
+16 : 远端SSD盘
  * @method void setType(integer $Type) 设置磁盘类型
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getVolume() 获取云盘大小
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVolume(integer $Volume) 设置云盘大小
-注意：此字段可能返回 null，表示取不到有效值。
+1  :本地盘
+2  :云硬盘
+3  : 本地SSD
+4  : 云SSD
+5  : 高效云盘
+6  : 增强型SSD云硬盘
+11 : 吞吐型云硬盘
+12 : 极速型SSD云硬盘
+13 : 通用型SSD云硬盘
+14 : 大数据型云硬盘
+15 : 高IO型云硬盘
+16 : 远端SSD盘
+ * @method string getSize() 获取磁盘大小
+ * @method void setSize(string $Size) 设置磁盘大小
+ * @method integer getVolume() 获取云盘大小,单位b
+ * @method void setVolume(integer $Volume) 设置云盘大小,单位b
  */
 class MultiDiskMC extends AbstractModel
 {
     /**
      * @var integer 该类型云盘个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Count;
 
     /**
      * @var integer 磁盘类型
-注意：此字段可能返回 null，表示取不到有效值。
+1  :本地盘
+2  :云硬盘
+3  : 本地SSD
+4  : 云SSD
+5  : 高效云盘
+6  : 增强型SSD云硬盘
+11 : 吞吐型云硬盘
+12 : 极速型SSD云硬盘
+13 : 通用型SSD云硬盘
+14 : 大数据型云硬盘
+15 : 高IO型云硬盘
+16 : 远端SSD盘
      */
     public $Type;
 
     /**
-     * @var integer 云盘大小
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 磁盘大小
+     */
+    public $Size;
+
+    /**
+     * @var integer 云盘大小,单位b
      */
     public $Volume;
 
     /**
      * @param integer $Count 该类型云盘个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Type 磁盘类型
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Volume 云盘大小
-注意：此字段可能返回 null，表示取不到有效值。
+1  :本地盘
+2  :云硬盘
+3  : 本地SSD
+4  : 云SSD
+5  : 高效云盘
+6  : 增强型SSD云硬盘
+11 : 吞吐型云硬盘
+12 : 极速型SSD云硬盘
+13 : 通用型SSD云硬盘
+14 : 大数据型云硬盘
+15 : 高IO型云硬盘
+16 : 远端SSD盘
+     * @param string $Size 磁盘大小
+     * @param integer $Volume 云盘大小,单位b
      */
     function __construct()
     {
@@ -80,6 +124,10 @@ class MultiDiskMC extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("Size",$param) and $param["Size"] !== null) {
+            $this->Size = $param["Size"];
         }
 
         if (array_key_exists("Volume",$param) and $param["Volume"] !== null) {

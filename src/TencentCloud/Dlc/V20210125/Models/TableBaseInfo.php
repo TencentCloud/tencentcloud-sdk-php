@@ -25,29 +25,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTableName() 获取数据表名字
  * @method void setTableName(string $TableName) 设置数据表名字
  * @method string getDatasourceConnectionName() 获取该数据表所属数据源名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatasourceConnectionName(string $DatasourceConnectionName) 设置该数据表所属数据源名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTableComment() 获取该数据表备注
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTableComment(string $TableComment) 设置该数据表备注
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取具体类型，表or视图
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置具体类型，表or视图
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTableFormat() 获取数据格式类型，hive，iceberg等
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTableFormat(string $TableFormat) 设置数据格式类型，hive，iceberg等
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserAlias() 获取建表用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserAlias(string $UserAlias) 设置建表用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserSubUin() 获取建表用户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserSubUin(string $UserSubUin) 设置建表用户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DataGovernPolicy getGovernPolicy() 获取数据治理配置项
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGovernPolicy(DataGovernPolicy $GovernPolicy) 设置数据治理配置项
@@ -59,6 +49,10 @@ use TencentCloud\Common\AbstractModel;
  * @method SmartPolicy getSmartPolicy() 获取智能数据治理配置项
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSmartPolicy(SmartPolicy $SmartPolicy) 设置智能数据治理配置项
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getPrimaryKeys() 获取T-ICEBERG表的主键
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPrimaryKeys(array $PrimaryKeys) 设置T-ICEBERG表的主键
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class TableBaseInfo extends AbstractModel
@@ -75,7 +69,6 @@ class TableBaseInfo extends AbstractModel
 
     /**
      * @var string 该数据表所属数据源名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DatasourceConnectionName;
 
@@ -87,25 +80,21 @@ class TableBaseInfo extends AbstractModel
 
     /**
      * @var string 具体类型，表or视图
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 数据格式类型，hive，iceberg等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TableFormat;
 
     /**
      * @var string 建表用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserAlias;
 
     /**
      * @var string 建表用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserSubUin;
 
@@ -130,25 +119,28 @@ class TableBaseInfo extends AbstractModel
     public $SmartPolicy;
 
     /**
+     * @var array T-ICEBERG表的主键
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PrimaryKeys;
+
+    /**
      * @param string $DatabaseName 该数据表所属数据库名字
      * @param string $TableName 数据表名字
      * @param string $DatasourceConnectionName 该数据表所属数据源名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TableComment 该数据表备注
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 具体类型，表or视图
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TableFormat 数据格式类型，hive，iceberg等
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserAlias 建表用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserSubUin 建表用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataGovernPolicy $GovernPolicy 数据治理配置项
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DbGovernPolicyIsDisable 库数据治理是否关闭，关闭：true，开启：false
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SmartPolicy $SmartPolicy 智能数据治理配置项
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $PrimaryKeys T-ICEBERG表的主键
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -208,6 +200,10 @@ class TableBaseInfo extends AbstractModel
         if (array_key_exists("SmartPolicy",$param) and $param["SmartPolicy"] !== null) {
             $this->SmartPolicy = new SmartPolicy();
             $this->SmartPolicy->deserialize($param["SmartPolicy"]);
+        }
+
+        if (array_key_exists("PrimaryKeys",$param) and $param["PrimaryKeys"] !== null) {
+            $this->PrimaryKeys = $param["PrimaryKeys"];
         }
     }
 }

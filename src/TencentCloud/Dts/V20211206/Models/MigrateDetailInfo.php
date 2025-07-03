@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 迁移执行过程信息
  *
  * @method integer getStepAll() 获取总步骤数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStepAll(integer $StepAll) 设置总步骤数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStepNow() 获取当前步骤
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStepNow(integer $StepNow) 设置当前步骤
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMasterSlaveDistance() 获取主从差距，MB；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMasterSlaveDistance(integer $MasterSlaveDistance) 设置主从差距，MB；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSecondsBehindMaster() 获取主从差距，秒；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecondsBehindMaster(integer $SecondsBehindMaster) 设置主从差距，秒；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getStepInfo() 获取步骤信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStepInfo(array $StepInfo) 设置步骤信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MigrateDetailInfo extends AbstractModel
 {
     /**
      * @var integer 总步骤数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StepAll;
 
     /**
      * @var integer 当前步骤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StepNow;
 
     /**
      * @var integer 主从差距，MB；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MasterSlaveDistance;
 
     /**
      * @var integer 主从差距，秒；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecondsBehindMaster;
 
     /**
      * @var array 步骤信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StepInfo;
 
     /**
      * @param integer $StepAll 总步骤数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StepNow 当前步骤
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MasterSlaveDistance 主从差距，MB；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SecondsBehindMaster 主从差距，秒；只在任务正常，迁移或者同步的最后一步（追Binlog的阶段才有校），如果是非法值，返回-1
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $StepInfo 步骤信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

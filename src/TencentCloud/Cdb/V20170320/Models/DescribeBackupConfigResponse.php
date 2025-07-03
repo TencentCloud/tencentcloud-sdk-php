@@ -65,11 +65,13 @@ class DescribeBackupConfigResponse extends AbstractModel
 {
     /**
      * @var integer 自动备份开始的最早时间点，单位为时刻。例如，2 - 凌晨 2:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
+     * @deprecated
      */
     public $StartTimeMin;
 
     /**
      * @var integer 自动备份开始的最晚时间点，单位为时刻。例如，6 - 凌晨 6:00。（该字段已废弃，建议使用 BackupTimeWindow 字段）
+     * @deprecated
      */
     public $StartTimeMax;
 

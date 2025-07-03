@@ -21,41 +21,29 @@ use TencentCloud\Common\AbstractModel;
  * 直播流监播输出流信息
  *
  * @method integer getOutputStreamWidth() 获取监播任务输出流宽度像素。范围[1,1920]。建议至少大于100像素。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutputStreamWidth(integer $OutputStreamWidth) 设置监播任务输出流宽度像素。范围[1,1920]。建议至少大于100像素。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getOutputStreamHeight() 获取监播任务输出流长度像素。范围[1,1080]，建议至少大于100像素。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutputStreamHeight(integer $OutputStreamHeight) 设置监播任务输出流长度像素。范围[1,1080]，建议至少大于100像素。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOutputStreamName() 获取监播任务输出流名称。
 不填时，系统会自动生成。
 256字节以内，只允许包含字母、数字、‘-’，‘_’，'.'字符。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutputStreamName(string $OutputStreamName) 设置监播任务输出流名称。
 不填时，系统会自动生成。
 256字节以内，只允许包含字母、数字、‘-’，‘_’，'.'字符。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOutputDomain() 获取监播任务播放域名。128字节以内，只允许填处于启用状态的播放域名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutputDomain(string $OutputDomain) 设置监播任务播放域名。128字节以内，只允许填处于启用状态的播放域名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOutputApp() 获取监播任务播放路径。32字节以内，只允许包含字母、数字、‘-’，‘_’，'.'字符。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutputApp(string $OutputApp) 设置监播任务播放路径。32字节以内，只允许包含字母、数字、‘-’，‘_’，'.'字符。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class LiveStreamMonitorOutputInfo extends AbstractModel
 {
     /**
      * @var integer 监播任务输出流宽度像素。范围[1,1920]。建议至少大于100像素。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutputStreamWidth;
 
     /**
      * @var integer 监播任务输出流长度像素。范围[1,1080]，建议至少大于100像素。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutputStreamHeight;
 
@@ -63,35 +51,27 @@ class LiveStreamMonitorOutputInfo extends AbstractModel
      * @var string 监播任务输出流名称。
 不填时，系统会自动生成。
 256字节以内，只允许包含字母、数字、‘-’，‘_’，'.'字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutputStreamName;
 
     /**
      * @var string 监播任务播放域名。128字节以内，只允许填处于启用状态的播放域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutputDomain;
 
     /**
      * @var string 监播任务播放路径。32字节以内，只允许包含字母、数字、‘-’，‘_’，'.'字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutputApp;
 
     /**
      * @param integer $OutputStreamWidth 监播任务输出流宽度像素。范围[1,1920]。建议至少大于100像素。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $OutputStreamHeight 监播任务输出流长度像素。范围[1,1080]，建议至少大于100像素。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OutputStreamName 监播任务输出流名称。
 不填时，系统会自动生成。
 256字节以内，只允许包含字母、数字、‘-’，‘_’，'.'字符。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OutputDomain 监播任务播放域名。128字节以内，只允许填处于启用状态的播放域名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OutputApp 监播任务播放路径。32字节以内，只允许包含字母、数字、‘-’，‘_’，'.'字符。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

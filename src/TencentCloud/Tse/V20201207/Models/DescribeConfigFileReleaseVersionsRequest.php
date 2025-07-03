@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroup(string $Group) 设置配置分组
  * @method string getFileName() 获取文件名称
  * @method void setFileName(string $FileName) 设置文件名称
+ * @method string getConfigFileId() 获取配置文件ID
+ * @method void setConfigFileId(string $ConfigFileId) 设置配置文件ID
  */
 class DescribeConfigFileReleaseVersionsRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeConfigFileReleaseVersionsRequest extends AbstractModel
     public $FileName;
 
     /**
+     * @var string 配置文件ID
+     */
+    public $ConfigFileId;
+
+    /**
      * @param string $InstanceId 实例id
      * @param string $Namespace 命名空间
      * @param string $Group 配置分组
      * @param string $FileName 文件名称
+     * @param string $ConfigFileId 配置文件ID
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeConfigFileReleaseVersionsRequest extends AbstractModel
 
         if (array_key_exists("FileName",$param) and $param["FileName"] !== null) {
             $this->FileName = $param["FileName"];
+        }
+
+        if (array_key_exists("ConfigFileId",$param) and $param["ConfigFileId"] !== null) {
+            $this->ConfigFileId = $param["ConfigFileId"];
         }
     }
 }

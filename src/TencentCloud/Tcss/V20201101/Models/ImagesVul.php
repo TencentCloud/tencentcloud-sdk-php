@@ -51,17 +51,11 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getIsSuggest() 获取是否是重点关注：true：是，false：不是
  * @method void setIsSuggest(boolean $IsSuggest) 设置是否是重点关注：true：是，false：不是
  * @method string getFixedVersions() 获取修复版本号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFixedVersions(string $FixedVersions) 设置修复版本号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTag() 获取漏洞标签:"CanBeFixed","DynamicLevelPoc","DynamicLevelExp"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTag(array $Tag) 设置漏洞标签:"CanBeFixed","DynamicLevelPoc","DynamicLevelExp"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAttackLevel() 获取攻击热度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAttackLevel(integer $AttackLevel) 设置攻击热度
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImagesVul extends AbstractModel
 {
@@ -142,19 +136,16 @@ class ImagesVul extends AbstractModel
 
     /**
      * @var string 修复版本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FixedVersions;
 
     /**
      * @var array 漏洞标签:"CanBeFixed","DynamicLevelPoc","DynamicLevelExp"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tag;
 
     /**
      * @var integer 攻击热度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AttackLevel;
 
@@ -175,11 +166,8 @@ class ImagesVul extends AbstractModel
      * @param string $CVSSV3Desc CVSS V3描述
      * @param boolean $IsSuggest 是否是重点关注：true：是，false：不是
      * @param string $FixedVersions 修复版本号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tag 漏洞标签:"CanBeFixed","DynamicLevelPoc","DynamicLevelExp"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AttackLevel 攻击热度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

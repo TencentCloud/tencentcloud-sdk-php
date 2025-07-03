@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskId(string $TaskId) 设置任务id
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTaskName() 获取任务名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskName(string $TaskName) 设置任务名
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCurRunDate() 获取数据时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCurRunDate(string $CurRunDate) 设置数据时间
@@ -64,6 +68,24 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceState(string $InstanceState) 设置实例状态
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getScheduleRunType() 获取调度运行方式, 0: 周期调度, 1: 空跑调度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setScheduleRunType(integer $ScheduleRunType) 设置调度运行方式, 0: 周期调度, 1: 空跑调度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getExecutionJobId() 获取统一执行平台，下发执行Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExecutionJobId(string $ExecutionJobId) 设置统一执行平台，下发执行Id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getInstanceRunType() 获取实例运行类型: 0: 普通运行, 1: 空跑运行
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceRunType(integer $InstanceRunType) 设置实例运行类型: 0: 普通运行, 1: 空跑运行
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTotalLifeRound() 获取实例当前总生命周期数
+ * @method void setTotalLifeRound(integer $TotalLifeRound) 设置实例当前总生命周期数
+ * @method TaskTypeOpsDto getTaskType() 获取任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskType(TaskTypeOpsDto $TaskType) 设置任务类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceLifeCycleOpsDto extends AbstractModel
 {
@@ -72,6 +94,12 @@ class InstanceLifeCycleOpsDto extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskId;
+
+    /**
+     * @var string 任务名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskName;
 
     /**
      * @var string 数据时间
@@ -134,7 +162,38 @@ class InstanceLifeCycleOpsDto extends AbstractModel
     public $InstanceState;
 
     /**
+     * @var integer 调度运行方式, 0: 周期调度, 1: 空跑调度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ScheduleRunType;
+
+    /**
+     * @var string 统一执行平台，下发执行Id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExecutionJobId;
+
+    /**
+     * @var integer 实例运行类型: 0: 普通运行, 1: 空跑运行
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceRunType;
+
+    /**
+     * @var integer 实例当前总生命周期数
+     */
+    public $TotalLifeRound;
+
+    /**
+     * @var TaskTypeOpsDto 任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskType;
+
+    /**
      * @param string $TaskId 任务id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TaskName 任务名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CurRunDate 数据时间
 注意：此字段可能返回 null，表示取不到有效值。
@@ -156,6 +215,15 @@ class InstanceLifeCycleOpsDto extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceState 实例状态
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ScheduleRunType 调度运行方式, 0: 周期调度, 1: 空跑调度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ExecutionJobId 统一执行平台，下发执行Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $InstanceRunType 实例运行类型: 0: 普通运行, 1: 空跑运行
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TotalLifeRound 实例当前总生命周期数
+     * @param TaskTypeOpsDto $TaskType 任务类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -172,6 +240,10 @@ class InstanceLifeCycleOpsDto extends AbstractModel
         }
         if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
             $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("TaskName",$param) and $param["TaskName"] !== null) {
+            $this->TaskName = $param["TaskName"];
         }
 
         if (array_key_exists("CurRunDate",$param) and $param["CurRunDate"] !== null) {
@@ -218,6 +290,27 @@ class InstanceLifeCycleOpsDto extends AbstractModel
 
         if (array_key_exists("InstanceState",$param) and $param["InstanceState"] !== null) {
             $this->InstanceState = $param["InstanceState"];
+        }
+
+        if (array_key_exists("ScheduleRunType",$param) and $param["ScheduleRunType"] !== null) {
+            $this->ScheduleRunType = $param["ScheduleRunType"];
+        }
+
+        if (array_key_exists("ExecutionJobId",$param) and $param["ExecutionJobId"] !== null) {
+            $this->ExecutionJobId = $param["ExecutionJobId"];
+        }
+
+        if (array_key_exists("InstanceRunType",$param) and $param["InstanceRunType"] !== null) {
+            $this->InstanceRunType = $param["InstanceRunType"];
+        }
+
+        if (array_key_exists("TotalLifeRound",$param) and $param["TotalLifeRound"] !== null) {
+            $this->TotalLifeRound = $param["TotalLifeRound"];
+        }
+
+        if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
+            $this->TaskType = new TaskTypeOpsDto();
+            $this->TaskType->deserialize($param["TaskType"]);
         }
     }
 }

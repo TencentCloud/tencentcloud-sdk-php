@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * DescribeInstances返回参数结构体
  *
  * @method array getItems() 获取实例列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setItems(array $Items) 设置实例列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取实例总数。
  * @method void setTotalCount(integer $TotalCount) 设置实例总数。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -33,7 +31,6 @@ class DescribeInstancesResponse extends AbstractModel
 {
     /**
      * @var array 实例列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Items;
 
@@ -49,7 +46,6 @@ class DescribeInstancesResponse extends AbstractModel
 
     /**
      * @param array $Items 实例列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 实例总数。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

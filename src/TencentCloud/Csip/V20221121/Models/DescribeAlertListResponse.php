@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlertTypeCount(array $AlertTypeCount) 设置告警大类数量
  * @method integer getTotalCount() 获取告警总数
  * @method void setTotalCount(integer $TotalCount) 设置告警总数
+ * @method integer getReturnCode() 获取0：succeed 1：timeout
+ * @method void setReturnCode(integer $ReturnCode) 设置0：succeed 1：timeout
+ * @method string getReturnMsg() 获取返回状态信息
+ * @method void setReturnMsg(string $ReturnMsg) 设置返回状态信息
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -47,6 +51,16 @@ class DescribeAlertListResponse extends AbstractModel
     public $TotalCount;
 
     /**
+     * @var integer 0：succeed 1：timeout
+     */
+    public $ReturnCode;
+
+    /**
+     * @var string 返回状态信息
+     */
+    public $ReturnMsg;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -55,6 +69,8 @@ class DescribeAlertListResponse extends AbstractModel
      * @param array $AlertList 全量告警列表
      * @param array $AlertTypeCount 告警大类数量
      * @param integer $TotalCount 告警总数
+     * @param integer $ReturnCode 0：succeed 1：timeout
+     * @param string $ReturnMsg 返回状态信息
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -90,6 +106,14 @@ class DescribeAlertListResponse extends AbstractModel
 
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("ReturnCode",$param) and $param["ReturnCode"] !== null) {
+            $this->ReturnCode = $param["ReturnCode"];
+        }
+
+        if (array_key_exists("ReturnMsg",$param) and $param["ReturnMsg"] !== null) {
+            $this->ReturnMsg = $param["ReturnMsg"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

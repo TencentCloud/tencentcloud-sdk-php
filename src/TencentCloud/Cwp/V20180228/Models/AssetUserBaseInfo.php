@@ -48,10 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置账号名称
  * @method integer getProjectId() 获取主机业务组ID
  * @method void setProjectId(integer $ProjectId) 设置主机业务组ID
- * @method integer getUserType() 获取账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅windows
- * @method void setUserType(integer $UserType) 设置账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅windows
- * @method integer getIsDomain() 获取是否域账号：0否， 1是，2否, 999为空  仅windows
- * @method void setIsDomain(integer $IsDomain) 设置是否域账号：0否， 1是，2否, 999为空  仅windows
+ * @method integer getUserType() 获取账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅Windows
+ * @method void setUserType(integer $UserType) 设置账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅Windows
+ * @method integer getIsDomain() 获取是否域账号：0否， 1是，2否, 999为空  仅Windows
+ * @method void setIsDomain(integer $IsDomain) 设置是否域账号：0否， 1是，2否, 999为空  仅Windows
  * @method integer getIsSudo() 获取是否有sudo权限，1是，0否, 999为空, 仅linux
  * @method void setIsSudo(integer $IsSudo) 设置是否有sudo权限，1是，0否, 999为空, 仅linux
  * @method integer getIsSshLogin() 获取是否允许ssh登录，1是，0否, 999为空, 仅linux
@@ -71,19 +71,15 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getPasswordStatus() 获取密码状态：1正常 2即将过期 3已过期 4已锁定 999为空 仅linux
  * @method void setPasswordStatus(integer $PasswordStatus) 设置密码状态：1正常 2即将过期 3已过期 4已锁定 999为空 仅linux
  * @method string getUpdateTime() 获取更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFirstTime() 获取首次采集时间
  * @method void setFirstTime(string $FirstTime) 设置首次采集时间
  * @method integer getIsNew() 获取是否新增[0:否|1:是]
  * @method void setIsNew(integer $IsNew) 设置是否新增[0:否|1:是]
  * @method MachineExtraInfo getMachineExtraInfo() 获取
  附加信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置
  附加信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssetUserBaseInfo extends AbstractModel
 {
@@ -158,12 +154,12 @@ class AssetUserBaseInfo extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var integer 账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅windows
+     * @var integer 账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅Windows
      */
     public $UserType;
 
     /**
-     * @var integer 是否域账号：0否， 1是，2否, 999为空  仅windows
+     * @var integer 是否域账号：0否， 1是，2否, 999为空  仅Windows
      */
     public $IsDomain;
 
@@ -214,7 +210,6 @@ class AssetUserBaseInfo extends AbstractModel
 
     /**
      * @var string 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
@@ -231,7 +226,6 @@ class AssetUserBaseInfo extends AbstractModel
     /**
      * @var MachineExtraInfo 
  附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineExtraInfo;
 
@@ -250,8 +244,8 @@ class AssetUserBaseInfo extends AbstractModel
      * @param string $LastLoginTime 上次登录时间
      * @param string $Name 账号名称
      * @param integer $ProjectId 主机业务组ID
-     * @param integer $UserType 账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅windows
-     * @param integer $IsDomain 是否域账号：0否， 1是，2否, 999为空  仅windows
+     * @param integer $UserType 账号类型：0访客用户，1标准用户，2管理员用户 ,999为空,仅Windows
+     * @param integer $IsDomain 是否域账号：0否， 1是，2否, 999为空  仅Windows
      * @param integer $IsSudo 是否有sudo权限，1是，0否, 999为空, 仅linux
      * @param integer $IsSshLogin 是否允许ssh登录，1是，0否, 999为空, 仅linux
      * @param string $HomePath Home目录
@@ -262,12 +256,10 @@ class AssetUserBaseInfo extends AbstractModel
      * @param integer $PasswordLockDays 密码锁定时间：单位天, -1为永不锁定 999为空，仅linux
      * @param integer $PasswordStatus 密码状态：1正常 2即将过期 3已过期 4已锁定 999为空 仅linux
      * @param string $UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FirstTime 首次采集时间
      * @param integer $IsNew 是否新增[0:否|1:是]
      * @param MachineExtraInfo $MachineExtraInfo 
  附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

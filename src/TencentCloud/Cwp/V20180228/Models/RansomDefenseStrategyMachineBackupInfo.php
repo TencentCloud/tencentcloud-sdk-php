@@ -31,67 +31,41 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMachineIp() 获取内网ip
  * @method void setMachineIp(string $MachineIp) 设置内网ip
  * @method string getMachineWanIp() 获取外网ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineWanIp(string $MachineWanIp) 设置外网ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCloudTags() 获取云标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCloudTags(array $CloudTags) 设置云标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method RegionInfo getRegionInfo() 获取可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionInfo(RegionInfo $RegionInfo) 设置可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTag() 获取主机安全标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTag(array $Tag) 设置主机安全标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取防护状态：0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置防护状态：0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStrategyId() 获取策略id，为0时未绑定策略
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStrategyId(integer $StrategyId) 设置策略id，为0时未绑定策略
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDiskInfo() 获取硬盘信息，为空时所有硬盘生效：
 ;分割 diskId1|diskName1;diskId2|diskName2
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskInfo(string $DiskInfo) 设置硬盘信息，为空时所有硬盘生效：
 ;分割 diskId1|diskName1;diskId2|diskName2
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStrategyName() 获取策略名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStrategyName(string $StrategyName) 设置策略名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBackupCount() 获取备份数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackupCount(integer $BackupCount) 设置备份数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLastBackupStatus() 获取最近一次备份状态：0备份中，1正常，2失败，9暂无备份
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastBackupStatus(integer $LastBackupStatus) 设置最近一次备份状态：0备份中，1正常，2失败，9暂无备份
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLastBackupMessage() 获取最近一次备份失败原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastBackupMessage(string $LastBackupMessage) 设置最近一次备份失败原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLastBackupTime() 获取最近一次备份时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastBackupTime(string $LastBackupTime) 设置最近一次备份时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRollBackPercent() 获取最近一次回滚进度百分比
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRollBackPercent(integer $RollBackPercent) 设置最近一次回滚进度百分比
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRollBackStatus() 获取最近一次回滚状态：0进行中，1成功，2失败
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRollBackStatus(integer $RollBackStatus) 设置最近一次回滚状态：0进行中，1成功，2失败
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBackupSuccessCount() 获取备份成功次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackupSuccessCount(integer $BackupSuccessCount) 设置备份成功次数
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getHostVersion() 获取版本信息：0-基础版 1-专业版 2-旗舰版 3-轻量版
+ * @method void setHostVersion(integer $HostVersion) 设置版本信息：0-基础版 1-专业版 2-旗舰版 3-轻量版
+ * @method string getMachineType() 获取机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
+ * @method void setMachineType(string $MachineType) 设置机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
  */
 class RansomDefenseStrategyMachineBackupInfo extends AbstractModel
 {
@@ -122,94 +96,89 @@ class RansomDefenseStrategyMachineBackupInfo extends AbstractModel
 
     /**
      * @var string 外网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineWanIp;
 
     /**
      * @var array 云标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CloudTags;
 
     /**
      * @var RegionInfo 可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionInfo;
 
     /**
      * @var array 主机安全标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tag;
 
     /**
      * @var integer 防护状态：0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var integer 策略id，为0时未绑定策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StrategyId;
 
     /**
      * @var string 硬盘信息，为空时所有硬盘生效：
 ;分割 diskId1|diskName1;diskId2|diskName2
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskInfo;
 
     /**
      * @var string 策略名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StrategyName;
 
     /**
      * @var integer 备份数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BackupCount;
 
     /**
      * @var integer 最近一次备份状态：0备份中，1正常，2失败，9暂无备份
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastBackupStatus;
 
     /**
      * @var string 最近一次备份失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastBackupMessage;
 
     /**
      * @var string 最近一次备份时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastBackupTime;
 
     /**
      * @var integer 最近一次回滚进度百分比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RollBackPercent;
 
     /**
      * @var integer 最近一次回滚状态：0进行中，1成功，2失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RollBackStatus;
 
     /**
      * @var integer 备份成功次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BackupSuccessCount;
+
+    /**
+     * @var integer 版本信息：0-基础版 1-专业版 2-旗舰版 3-轻量版
+     */
+    public $HostVersion;
+
+    /**
+     * @var string 机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
+     */
+    public $MachineType;
 
     /**
      * @param string $Uuid 主机Uuid
@@ -218,36 +187,23 @@ class RansomDefenseStrategyMachineBackupInfo extends AbstractModel
      * @param string $InstanceId 主机实例id
      * @param string $MachineIp 内网ip
      * @param string $MachineWanIp 外网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CloudTags 云标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RegionInfo $RegionInfo 可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tag 主机安全标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 防护状态：0关闭，1开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StrategyId 策略id，为0时未绑定策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DiskInfo 硬盘信息，为空时所有硬盘生效：
 ;分割 diskId1|diskName1;diskId2|diskName2
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StrategyName 策略名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BackupCount 备份数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LastBackupStatus 最近一次备份状态：0备份中，1正常，2失败，9暂无备份
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastBackupMessage 最近一次备份失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastBackupTime 最近一次备份时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RollBackPercent 最近一次回滚进度百分比
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RollBackStatus 最近一次回滚状态：0进行中，1成功，2失败
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BackupSuccessCount 备份成功次数
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $HostVersion 版本信息：0-基础版 1-专业版 2-旗舰版 3-轻量版
+     * @param string $MachineType 机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
      */
     function __construct()
     {
@@ -351,6 +307,14 @@ class RansomDefenseStrategyMachineBackupInfo extends AbstractModel
 
         if (array_key_exists("BackupSuccessCount",$param) and $param["BackupSuccessCount"] !== null) {
             $this->BackupSuccessCount = $param["BackupSuccessCount"];
+        }
+
+        if (array_key_exists("HostVersion",$param) and $param["HostVersion"] !== null) {
+            $this->HostVersion = $param["HostVersion"];
+        }
+
+        if (array_key_exists("MachineType",$param) and $param["MachineType"] !== null) {
+            $this->MachineType = $param["MachineType"];
         }
     }
 }

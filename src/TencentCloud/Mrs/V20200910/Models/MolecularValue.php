@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 分子病理详细信息
  *
  * @method string getExon() 获取外显子
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExon(string $Exon) 设置外显子
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPosition() 获取点位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPosition(string $Position) 设置点位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPositive() 获取阳性或阴性
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPositive(string $Positive) 设置阳性或阴性
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSrc() 获取基因名称原文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSrc(string $Src) 设置基因名称原文
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MolecularValue extends AbstractModel
 {
     /**
      * @var string 外显子
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Exon;
 
     /**
      * @var string 点位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Position;
 
     /**
      * @var string 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 阳性或阴性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Positive;
 
     /**
      * @var string 基因名称原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Src;
 
     /**
      * @param string $Exon 外显子
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Position 点位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Positive 阳性或阴性
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Src 基因名称原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

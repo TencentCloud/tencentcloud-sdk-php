@@ -20,58 +20,43 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeHostUpdateRecordDetail返回参数结构体
  *
- * @method integer getTotalCount() 获取总数
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotalCount(integer $TotalCount) 设置总数
-注意：此字段可能返回 null，表示取不到有效值。
- * @method array getRecordDetailList() 获取证书部署记录列表
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRecordDetailList(array $RecordDetailList) 设置证书部署记录列表
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getSuccessTotalCount() 获取成功总数
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSuccessTotalCount(integer $SuccessTotalCount) 设置成功总数
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getFailedTotalCount() 获取失败总数
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFailedTotalCount(integer $FailedTotalCount) 设置失败总数
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRunningTotalCount() 获取部署中总数
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRunningTotalCount(integer $RunningTotalCount) 设置部署中总数
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTotalCount() 获取总数,如果取不到返回0
+ * @method void setTotalCount(integer $TotalCount) 设置总数,如果取不到返回0
+ * @method array getRecordDetailList() 获取证书部署记录列表，如果取不到值返回空数组
+ * @method void setRecordDetailList(array $RecordDetailList) 设置证书部署记录列表，如果取不到值返回空数组
+ * @method integer getSuccessTotalCount() 获取成功总数,如果取不到返回0
+ * @method void setSuccessTotalCount(integer $SuccessTotalCount) 设置成功总数,如果取不到返回0
+ * @method integer getFailedTotalCount() 获取失败总数,如果取不到返回0
+ * @method void setFailedTotalCount(integer $FailedTotalCount) 设置失败总数,如果取不到返回0
+ * @method integer getRunningTotalCount() 获取部署中总数,如果取不到返回0
+ * @method void setRunningTotalCount(integer $RunningTotalCount) 设置部署中总数,如果取不到返回0
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeHostUpdateRecordDetailResponse extends AbstractModel
 {
     /**
-     * @var integer 总数
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 总数,如果取不到返回0
      */
     public $TotalCount;
 
     /**
-     * @var array 证书部署记录列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 证书部署记录列表，如果取不到值返回空数组
      */
     public $RecordDetailList;
 
     /**
-     * @var integer 成功总数
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 成功总数,如果取不到返回0
      */
     public $SuccessTotalCount;
 
     /**
-     * @var integer 失败总数
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 失败总数,如果取不到返回0
      */
     public $FailedTotalCount;
 
     /**
-     * @var integer 部署中总数
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 部署中总数,如果取不到返回0
      */
     public $RunningTotalCount;
 
@@ -81,16 +66,11 @@ class DescribeHostUpdateRecordDetailResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 总数
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $RecordDetailList 证书部署记录列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $SuccessTotalCount 成功总数
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $FailedTotalCount 失败总数
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RunningTotalCount 部署中总数
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TotalCount 总数,如果取不到返回0
+     * @param array $RecordDetailList 证书部署记录列表，如果取不到值返回空数组
+     * @param integer $SuccessTotalCount 成功总数,如果取不到返回0
+     * @param integer $FailedTotalCount 失败总数,如果取不到返回0
+     * @param integer $RunningTotalCount 部署中总数,如果取不到返回0
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

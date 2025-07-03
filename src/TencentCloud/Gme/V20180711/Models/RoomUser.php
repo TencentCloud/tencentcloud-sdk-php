@@ -23,17 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getRoomId() 获取房间id
  * @method void setRoomId(integer $RoomId) 设置房间id
  * @method array getUins() 获取房间里用户uin列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUins(array $Uins) 设置房间里用户uin列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStrRoomId() 获取字符串房间id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStrRoomId(string $StrRoomId) 设置字符串房间id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getStrUins() 获取房间里用户字符串uin列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStrUins(array $StrUins) 设置房间里用户字符串uin列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RoomUser extends AbstractModel
 {
@@ -44,30 +38,24 @@ class RoomUser extends AbstractModel
 
     /**
      * @var array 房间里用户uin列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uins;
 
     /**
      * @var string 字符串房间id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StrRoomId;
 
     /**
      * @var array 房间里用户字符串uin列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StrUins;
 
     /**
      * @param integer $RoomId 房间id
      * @param array $Uins 房间里用户uin列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StrRoomId 字符串房间id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $StrUins 房间里用户字符串uin列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -58,31 +58,25 @@ drop：拒绝
  * @method void setRuleAction(string $RuleAction) 设置访问控制策略中设置的流量通过云防火墙的方式。取值：
 accept：放行
 drop：拒绝
- * @method string getDescription() 获取描述
- * @method void setDescription(string $Description) 设置描述
+ * @method string getDescription() 获取规则描述 用于规则使用或者场景的描述，最多支持50个字符
+ * @method void setDescription(string $Description) 设置规则描述 用于规则使用或者场景的描述，最多支持50个字符
  * @method string getOrderIndex() 获取规则顺序，-1表示最低，1表示最高，请勿和外层Type冲突（和外层的Type配合使用，当中间插入时，指定添加位置）
  * @method void setOrderIndex(string $OrderIndex) 设置规则顺序，-1表示最低，1表示最高，请勿和外层Type冲突（和外层的Type配合使用，当中间插入时，指定添加位置）
- * @method string getProtocol() 获取协议；TCP/UDP/ICMP/ANY
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProtocol(string $Protocol) 设置协议；TCP/UDP/ICMP/ANY
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProtocol() 获取协议；TCP/UDP/ICMP/ICMPv6/ANY
+ * @method void setProtocol(string $Protocol) 设置协议；TCP/UDP/ICMP/ICMPv6/ANY
  * @method string getPort() 获取访问控制策略的端口。取值：
 -1/-1：全部端口
 80：80端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPort(string $Port) 设置访问控制策略的端口。取值：
 -1/-1：全部端口
 80：80端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getServiceTemplateId() 获取端口协议类型参数模板id；协议端口模板id；与Protocol,Port互斥
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceTemplateId(string $ServiceTemplateId) 设置端口协议类型参数模板id；协议端口模板id；与Protocol,Port互斥
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getId() 获取（入参时无需填写，自动生成）规则对应的唯一id
  * @method void setId(string $Id) 设置（入参时无需填写，自动生成）规则对应的唯一id
- * @method string getEnable() 获取（入参时、Enable已弃用；由通用配置中新增规则启用状态控制）
+ * @method string getEnable() 获取（入参时Enable无意义；由通用配置中新增规则启用状态控制）
 规则状态，true表示启用，false表示禁用
- * @method void setEnable(string $Enable) 设置（入参时、Enable已弃用；由通用配置中新增规则启用状态控制）
+ * @method void setEnable(string $Enable) 设置（入参时Enable无意义；由通用配置中新增规则启用状态控制）
 规则状态，true表示启用，false表示禁用
  * @method string getUid() 获取规则对应的唯一内部id
  * @method void setUid(string $Uid) 设置规则对应的唯一内部id
@@ -129,7 +123,7 @@ drop：拒绝
     public $RuleAction;
 
     /**
-     * @var string 描述
+     * @var string 规则描述 用于规则使用或者场景的描述，最多支持50个字符
      */
     public $Description;
 
@@ -139,8 +133,7 @@ drop：拒绝
     public $OrderIndex;
 
     /**
-     * @var string 协议；TCP/UDP/ICMP/ANY
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 协议；TCP/UDP/ICMP/ICMPv6/ANY
      */
     public $Protocol;
 
@@ -148,13 +141,11 @@ drop：拒绝
      * @var string 访问控制策略的端口。取值：
 -1/-1：全部端口
 80：80端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Port;
 
     /**
      * @var string 端口协议类型参数模板id；协议端口模板id；与Protocol,Port互斥
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceTemplateId;
 
@@ -164,7 +155,7 @@ drop：拒绝
     public $Id;
 
     /**
-     * @var string （入参时、Enable已弃用；由通用配置中新增规则启用状态控制）
+     * @var string （入参时Enable无意义；由通用配置中新增规则启用状态控制）
 规则状态，true表示启用，false表示禁用
      */
     public $Enable;
@@ -194,18 +185,15 @@ region：地域(ap-gaungzhou)
      * @param string $RuleAction 访问控制策略中设置的流量通过云防火墙的方式。取值：
 accept：放行
 drop：拒绝
-     * @param string $Description 描述
+     * @param string $Description 规则描述 用于规则使用或者场景的描述，最多支持50个字符
      * @param string $OrderIndex 规则顺序，-1表示最低，1表示最高，请勿和外层Type冲突（和外层的Type配合使用，当中间插入时，指定添加位置）
-     * @param string $Protocol 协议；TCP/UDP/ICMP/ANY
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Protocol 协议；TCP/UDP/ICMP/ICMPv6/ANY
      * @param string $Port 访问控制策略的端口。取值：
 -1/-1：全部端口
 80：80端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceTemplateId 端口协议类型参数模板id；协议端口模板id；与Protocol,Port互斥
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Id （入参时无需填写，自动生成）规则对应的唯一id
-     * @param string $Enable （入参时、Enable已弃用；由通用配置中新增规则启用状态控制）
+     * @param string $Enable （入参时Enable无意义；由通用配置中新增规则启用状态控制）
 规则状态，true表示启用，false表示禁用
      * @param string $Uid 规则对应的唯一内部id
      */

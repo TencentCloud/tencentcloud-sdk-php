@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TerminateComputeNodes请求参数结构体
  *
- * @method string getEnvId() 获取计算环境ID
- * @method void setEnvId(string $EnvId) 设置计算环境ID
- * @method array getComputeNodeIds() 获取计算节点ID列表
- * @method void setComputeNodeIds(array $ComputeNodeIds) 设置计算节点ID列表
+ * @method string getEnvId() 获取计算环境ID，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
+ * @method void setEnvId(string $EnvId) 设置计算环境ID，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
+ * @method array getComputeNodeIds() 获取计算节点ID列表，最大数量上限100，节点ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
+ * @method void setComputeNodeIds(array $ComputeNodeIds) 设置计算节点ID列表，最大数量上限100，节点ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
  */
 class TerminateComputeNodesRequest extends AbstractModel
 {
     /**
-     * @var string 计算环境ID
+     * @var string 计算环境ID，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
      */
     public $EnvId;
 
     /**
-     * @var array 计算节点ID列表
+     * @var array 计算节点ID列表，最大数量上限100，节点ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
      */
     public $ComputeNodeIds;
 
     /**
-     * @param string $EnvId 计算环境ID
-     * @param array $ComputeNodeIds 计算节点ID列表
+     * @param string $EnvId 计算环境ID，环境ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
+     * @param array $ComputeNodeIds 计算节点ID列表，最大数量上限100，节点ID通过调用接口 [DescribeComputeEnv](https://cloud.tencent.com/document/api/599/15892)获取。
      */
     function __construct()
     {

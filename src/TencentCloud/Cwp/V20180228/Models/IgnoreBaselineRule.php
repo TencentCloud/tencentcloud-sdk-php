@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 忽略的基线检测项信息
  *
  * @method string getRuleName() 获取基线检测项名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleName(string $RuleName) 设置基线检测项名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRuleId() 获取基线检测项id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleId(integer $RuleId) 设置基线检测项id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifyTime() 获取更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyTime(string $ModifyTime) 设置更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFix() 获取修复建议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFix(string $Fix) 设置修复建议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEffectHostCount() 获取影响主机数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEffectHostCount(integer $EffectHostCount) 设置影响主机数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class IgnoreBaselineRule extends AbstractModel
 {
     /**
      * @var string 基线检测项名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleName;
 
     /**
      * @var integer 基线检测项id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleId;
 
     /**
      * @var string 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyTime;
 
     /**
      * @var string 修复建议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Fix;
 
     /**
      * @var integer 影响主机数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EffectHostCount;
 
     /**
      * @param string $RuleName 基线检测项名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleId 基线检测项id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Fix 修复建议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EffectHostCount 影响主机数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

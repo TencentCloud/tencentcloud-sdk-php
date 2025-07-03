@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 自定义字段
  *
  * @method integer getId() 获取字段id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(integer $Id) 设置字段id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getKey() 获取字段key
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKey(string $Key) 设置字段key
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取字段名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置字段名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVal() 获取字段值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVal(string $Val) 设置字段值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CustomFieldInfo extends AbstractModel
 {
     /**
      * @var integer 字段id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var string 字段key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Key;
 
     /**
      * @var string 字段名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 字段值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Val;
 
     /**
      * @param integer $Id 字段id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Key 字段key
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 字段名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Val 字段值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

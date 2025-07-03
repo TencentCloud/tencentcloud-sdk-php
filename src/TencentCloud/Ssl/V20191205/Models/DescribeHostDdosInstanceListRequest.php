@@ -22,14 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getCertificateId() 获取待部署的证书ID
  * @method void setCertificateId(string $CertificateId) 设置待部署的证书ID
- * @method string getResourceType() 获取部署资源类型
- * @method void setResourceType(string $ResourceType) 设置部署资源类型
  * @method integer getIsCache() 获取是否查询缓存，1：是； 0：否， 默认为查询缓存，缓存半小时
  * @method void setIsCache(integer $IsCache) 设置是否查询缓存，1：是； 0：否， 默认为查询缓存，缓存半小时
  * @method array getFilters() 获取过滤参数列表； FilterKey：domainMatch（查询域名是否匹配的实例列表） FilterValue：1，表示查询匹配； 0，表示查询不匹配； 默认查询匹配
  * @method void setFilters(array $Filters) 设置过滤参数列表； FilterKey：domainMatch（查询域名是否匹配的实例列表） FilterValue：1，表示查询匹配； 0，表示查询不匹配； 默认查询匹配
+ * @method string getResourceType() 获取部署资源类型ddos
+ * @method void setResourceType(string $ResourceType) 设置部署资源类型ddos
  * @method string getOldCertificateId() 获取已部署的证书ID
  * @method void setOldCertificateId(string $OldCertificateId) 设置已部署的证书ID
+ * @method integer getOffset() 获取分页偏移量，从0开始。	
+ * @method void setOffset(integer $Offset) 设置分页偏移量，从0开始。	
+ * @method integer getLimit() 获取每页数量，默认10。	
+ * @method void setLimit(integer $Limit) 设置每页数量，默认10。	
  */
 class DescribeHostDdosInstanceListRequest extends AbstractModel
 {
@@ -37,11 +41,6 @@ class DescribeHostDdosInstanceListRequest extends AbstractModel
      * @var string 待部署的证书ID
      */
     public $CertificateId;
-
-    /**
-     * @var string 部署资源类型
-     */
-    public $ResourceType;
 
     /**
      * @var integer 是否查询缓存，1：是； 0：否， 默认为查询缓存，缓存半小时
@@ -54,16 +53,33 @@ class DescribeHostDdosInstanceListRequest extends AbstractModel
     public $Filters;
 
     /**
+     * @var string 部署资源类型ddos
+     */
+    public $ResourceType;
+
+    /**
      * @var string 已部署的证书ID
      */
     public $OldCertificateId;
 
     /**
+     * @var integer 分页偏移量，从0开始。	
+     */
+    public $Offset;
+
+    /**
+     * @var integer 每页数量，默认10。	
+     */
+    public $Limit;
+
+    /**
      * @param string $CertificateId 待部署的证书ID
-     * @param string $ResourceType 部署资源类型
      * @param integer $IsCache 是否查询缓存，1：是； 0：否， 默认为查询缓存，缓存半小时
      * @param array $Filters 过滤参数列表； FilterKey：domainMatch（查询域名是否匹配的实例列表） FilterValue：1，表示查询匹配； 0，表示查询不匹配； 默认查询匹配
+     * @param string $ResourceType 部署资源类型ddos
      * @param string $OldCertificateId 已部署的证书ID
+     * @param integer $Offset 分页偏移量，从0开始。	
+     * @param integer $Limit 每页数量，默认10。	
      */
     function __construct()
     {
@@ -82,10 +98,6 @@ class DescribeHostDdosInstanceListRequest extends AbstractModel
             $this->CertificateId = $param["CertificateId"];
         }
 
-        if (array_key_exists("ResourceType",$param) and $param["ResourceType"] !== null) {
-            $this->ResourceType = $param["ResourceType"];
-        }
-
         if (array_key_exists("IsCache",$param) and $param["IsCache"] !== null) {
             $this->IsCache = $param["IsCache"];
         }
@@ -99,8 +111,20 @@ class DescribeHostDdosInstanceListRequest extends AbstractModel
             }
         }
 
+        if (array_key_exists("ResourceType",$param) and $param["ResourceType"] !== null) {
+            $this->ResourceType = $param["ResourceType"];
+        }
+
         if (array_key_exists("OldCertificateId",$param) and $param["OldCertificateId"] !== null) {
             $this->OldCertificateId = $param["OldCertificateId"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
     }
 }

@@ -31,47 +31,31 @@ use TencentCloud\Common\AbstractModel;
  * @method string getNodeName() 获取节点名称
  * @method void setNodeName(string $NodeName) 设置节点名称
  * @method string getAgentStatus() 获取agent安装状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAgentStatus(string $AgentStatus) 设置agent安装状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPublicIP() 获取公网ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicIP(string $PublicIP) 设置公网ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHostID() 获取节点ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostID(string $HostID) 设置节点ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMachineType() 获取主机类型(普通节点情况)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineType(string $MachineType) 设置主机类型(普通节点情况)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNodeType() 获取节点类型(
 NORMAL: 普通节点
 SUPER:超级节点
 )
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodeType(string $NodeType) 设置节点类型(
 NORMAL: 普通节点
 SUPER:超级节点
 )
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUUID() 获取uuid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUUID(string $UUID) 设置uuid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getChargeCoresCnt() 获取计费核数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChargeCoresCnt(integer $ChargeCoresCnt) 设置计费核数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDefendStatus() 获取防护状态:
 已防护: Defended
 未防护: UnDefended
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefendStatus(string $DefendStatus) 设置防护状态:
 已防护: Defended
 未防护: UnDefended
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterNodeInfo extends AbstractModel
 {
@@ -102,25 +86,21 @@ class ClusterNodeInfo extends AbstractModel
 
     /**
      * @var string agent安装状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AgentStatus;
 
     /**
      * @var string 公网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicIP;
 
     /**
      * @var string 节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostID;
 
     /**
      * @var string 主机类型(普通节点情况)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineType;
 
@@ -129,19 +109,16 @@ class ClusterNodeInfo extends AbstractModel
 NORMAL: 普通节点
 SUPER:超级节点
 )
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeType;
 
     /**
      * @var string uuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UUID;
 
     /**
      * @var integer 计费核数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChargeCoresCnt;
 
@@ -149,7 +126,6 @@ SUPER:超级节点
      * @var string 防护状态:
 已防护: Defended
 未防护: UnDefended
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DefendStatus;
 
@@ -160,26 +136,18 @@ SUPER:超级节点
      * @param string $InstanceState 实例的状态（running 运行中，initializing 初始化中，failed 异常）
      * @param string $NodeName 节点名称
      * @param string $AgentStatus agent安装状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PublicIP 公网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HostID 节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MachineType 主机类型(普通节点情况)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NodeType 节点类型(
 NORMAL: 普通节点
 SUPER:超级节点
 )
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UUID uuid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ChargeCoresCnt 计费核数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DefendStatus 防护状态:
 已防护: Defended
 未防护: UnDefended
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

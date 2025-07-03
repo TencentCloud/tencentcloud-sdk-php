@@ -54,18 +54,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) 设置本地备份所在地域
  * @method array getRemoteInfo() 获取异地备份详细信息
  * @method void setRemoteInfo(array $RemoteInfo) 设置异地备份详细信息
- * @method integer getCosStorageType() 获取存储方式，0-常规存储，1-归档存储，默认为0
- * @method void setCosStorageType(integer $CosStorageType) 设置存储方式，0-常规存储，1-归档存储，默认为0
+ * @method integer getCosStorageType() 获取存储方式，0-常规存储，1-归档存储，2-标准存储，默认为0
+ * @method void setCosStorageType(integer $CosStorageType) 设置存储方式，0-常规存储，1-归档存储，2-标准存储，默认为0
  * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
  * @method string getEncryptionFlag() 获取备份文件是否加密， on-加密， off-未加密
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEncryptionFlag(string $EncryptionFlag) 设置备份文件是否加密， on-加密， off-未加密
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExecutedGTIDSet() 获取备份GTID点位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExecutedGTIDSet(string $ExecutedGTIDSet) 设置备份GTID点位
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMD5() 获取备份文件MD5值
+ * @method void setMD5(string $MD5) 设置备份文件MD5值
  */
 class BackupInfo extends AbstractModel
 {
@@ -155,7 +153,7 @@ class BackupInfo extends AbstractModel
     public $RemoteInfo;
 
     /**
-     * @var integer 存储方式，0-常规存储，1-归档存储，默认为0
+     * @var integer 存储方式，0-常规存储，1-归档存储，2-标准存储，默认为0
      */
     public $CosStorageType;
 
@@ -166,15 +164,18 @@ class BackupInfo extends AbstractModel
 
     /**
      * @var string 备份文件是否加密， on-加密， off-未加密
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EncryptionFlag;
 
     /**
      * @var string 备份GTID点位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecutedGTIDSet;
+
+    /**
+     * @var string 备份文件MD5值
+     */
+    public $MD5;
 
     /**
      * @param string $Name 备份文件名
@@ -194,12 +195,11 @@ class BackupInfo extends AbstractModel
      * @param string $SaveMode 备份保留类型，save_mode_regular - 常规保存备份，save_mode_period - 定期保存备份
      * @param string $Region 本地备份所在地域
      * @param array $RemoteInfo 异地备份详细信息
-     * @param integer $CosStorageType 存储方式，0-常规存储，1-归档存储，默认为0
+     * @param integer $CosStorageType 存储方式，0-常规存储，1-归档存储，2-标准存储，默认为0
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
      * @param string $EncryptionFlag 备份文件是否加密， on-加密， off-未加密
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExecutedGTIDSet 备份GTID点位
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MD5 备份文件MD5值
      */
     function __construct()
     {
@@ -301,6 +301,10 @@ class BackupInfo extends AbstractModel
 
         if (array_key_exists("ExecutedGTIDSet",$param) and $param["ExecutedGTIDSet"] !== null) {
             $this->ExecutedGTIDSet = $param["ExecutedGTIDSet"];
+        }
+
+        if (array_key_exists("MD5",$param) and $param["MD5"] !== null) {
+            $this->MD5 = $param["MD5"];
         }
     }
 }

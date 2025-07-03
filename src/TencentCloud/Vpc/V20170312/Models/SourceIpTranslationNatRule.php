@@ -20,43 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * NAT的SNAT规则
  *
- * @method string getResourceId() 获取资源ID，如果ResourceType为USERDEFINED，可以为空
- * @method void setResourceId(string $ResourceId) 设置资源ID，如果ResourceType为USERDEFINED，可以为空
+ * @method string getResourceId() 获取资源ID，如果ResourceType为USERDEFINED，可以为空字符串
+ * @method void setResourceId(string $ResourceId) 设置资源ID，如果ResourceType为USERDEFINED，可以为空字符串
  * @method string getResourceType() 获取资源类型，目前包含SUBNET、NETWORKINTERFACE、USERDEFINED
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceType(string $ResourceType) 设置资源类型，目前包含SUBNET、NETWORKINTERFACE、USERDEFINED
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPrivateIpAddress() 获取源IP/网段
  * @method void setPrivateIpAddress(string $PrivateIpAddress) 设置源IP/网段
  * @method array getPublicIpAddresses() 获取弹性IP地址池
  * @method void setPublicIpAddresses(array $PublicIpAddresses) 设置弹性IP地址池
- * @method string getDescription() 获取描述
- * @method void setDescription(string $Description) 设置描述
+ * @method string getDescription() 获取规则描述
+ * @method void setDescription(string $Description) 设置规则描述
  * @method string getNatGatewaySnatId() 获取Snat规则ID
  * @method void setNatGatewaySnatId(string $NatGatewaySnatId) 设置Snat规则ID
  * @method string getNatGatewayId() 获取NAT网关的ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNatGatewayId(string $NatGatewayId) 设置NAT网关的ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVpcId() 获取私有网络VPC的ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(string $VpcId) 设置私有网络VPC的ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedTime() 获取NAT网关SNAT规则创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedTime(string $CreatedTime) 设置NAT网关SNAT规则创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SourceIpTranslationNatRule extends AbstractModel
 {
     /**
-     * @var string 资源ID，如果ResourceType为USERDEFINED，可以为空
+     * @var string 资源ID，如果ResourceType为USERDEFINED，可以为空字符串
      */
     public $ResourceId;
 
     /**
      * @var string 资源类型，目前包含SUBNET、NETWORKINTERFACE、USERDEFINED
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceType;
 
@@ -71,7 +62,7 @@ class SourceIpTranslationNatRule extends AbstractModel
     public $PublicIpAddresses;
 
     /**
-     * @var string 描述
+     * @var string 规则描述
      */
     public $Description;
 
@@ -82,36 +73,29 @@ class SourceIpTranslationNatRule extends AbstractModel
 
     /**
      * @var string NAT网关的ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NatGatewayId;
 
     /**
      * @var string 私有网络VPC的ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
     /**
      * @var string NAT网关SNAT规则创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedTime;
 
     /**
-     * @param string $ResourceId 资源ID，如果ResourceType为USERDEFINED，可以为空
+     * @param string $ResourceId 资源ID，如果ResourceType为USERDEFINED，可以为空字符串
      * @param string $ResourceType 资源类型，目前包含SUBNET、NETWORKINTERFACE、USERDEFINED
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PrivateIpAddress 源IP/网段
      * @param array $PublicIpAddresses 弹性IP地址池
-     * @param string $Description 描述
+     * @param string $Description 规则描述
      * @param string $NatGatewaySnatId Snat规则ID
      * @param string $NatGatewayId NAT网关的ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcId 私有网络VPC的ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedTime NAT网关SNAT规则创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

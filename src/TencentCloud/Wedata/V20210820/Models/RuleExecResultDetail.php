@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatasourceType(integer $DatasourceType) 设置2.HIVE 3.DLC
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClusterDeployType() 获取集群部署类型，CVM/TKE
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterDeployType(string $ClusterDeployType) 设置集群部署类型，CVM/TKE
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleExecResultDetail extends AbstractModel
 {
@@ -124,6 +128,12 @@ class RuleExecResultDetail extends AbstractModel
     public $DatasourceType;
 
     /**
+     * @var string 集群部署类型，CVM/TKE
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterDeployType;
+
+    /**
      * @param integer $DatasourceId 数据源id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatasourceName 数据源名称
@@ -143,6 +153,8 @@ class RuleExecResultDetail extends AbstractModel
      * @param integer $TableOwnerUserId 表负责人userId
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DatasourceType 2.HIVE 3.DLC
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClusterDeployType 集群部署类型，CVM/TKE
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -197,6 +209,10 @@ class RuleExecResultDetail extends AbstractModel
 
         if (array_key_exists("DatasourceType",$param) and $param["DatasourceType"] !== null) {
             $this->DatasourceType = $param["DatasourceType"];
+        }
+
+        if (array_key_exists("ClusterDeployType",$param) and $param["ClusterDeployType"] !== null) {
+            $this->ClusterDeployType = $param["ClusterDeployType"];
         }
     }
 }

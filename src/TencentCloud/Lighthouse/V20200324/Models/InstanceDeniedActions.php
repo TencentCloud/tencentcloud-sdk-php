@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 实例操作限制列表。
  *
  * @method string getInstanceId() 获取实例 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDeniedActions() 获取操作限制列表。
  * @method void setDeniedActions(array $DeniedActions) 设置操作限制列表。
  */
@@ -31,7 +29,6 @@ class InstanceDeniedActions extends AbstractModel
 {
     /**
      * @var string 实例 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
@@ -42,7 +39,6 @@ class InstanceDeniedActions extends AbstractModel
 
     /**
      * @param string $InstanceId 实例 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DeniedActions 操作限制列表。
      */
     function __construct()

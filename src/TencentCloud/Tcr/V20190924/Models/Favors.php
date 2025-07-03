@@ -25,29 +25,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRepoType() 获取仓库类型
  * @method void setRepoType(string $RepoType) 设置仓库类型
  * @method integer getPullCount() 获取Pull总共的次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPullCount(integer $PullCount) 设置Pull总共的次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFavorCount() 获取仓库收藏次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFavorCount(integer $FavorCount) 设置仓库收藏次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPublic() 获取仓库是否公开
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublic(integer $Public) 设置仓库是否公开
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsQcloudOfficial() 获取是否为官方所有
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsQcloudOfficial(boolean $IsQcloudOfficial) 设置是否为官方所有
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTagCount() 获取仓库Tag的数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagCount(integer $TagCount) 设置仓库Tag的数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLogo() 获取Logo
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogo(string $Logo) 设置Logo
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegion() 获取地域
  * @method void setRegion(string $Region) 设置地域
  * @method integer getRegionId() 获取地域的Id
@@ -67,37 +55,31 @@ class Favors extends AbstractModel
 
     /**
      * @var integer Pull总共的次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PullCount;
 
     /**
      * @var integer 仓库收藏次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FavorCount;
 
     /**
      * @var integer 仓库是否公开
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Public;
 
     /**
      * @var boolean 是否为官方所有
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsQcloudOfficial;
 
     /**
      * @var integer 仓库Tag的数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagCount;
 
     /**
      * @var string Logo
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Logo;
 
@@ -115,17 +97,11 @@ class Favors extends AbstractModel
      * @param string $RepoName 仓库名字
      * @param string $RepoType 仓库类型
      * @param integer $PullCount Pull总共的次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FavorCount 仓库收藏次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Public 仓库是否公开
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsQcloudOfficial 是否为官方所有
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TagCount 仓库Tag的数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Logo Logo
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 地域
      * @param integer $RegionId 地域的Id
      */

@@ -51,13 +51,9 @@ use TencentCloud\Common\AbstractModel;
  * @method array getTagSet() 获取标签键值对。
  * @method void setTagSet(array $TagSet) 设置标签键值对。
  * @method string getCdcId() 获取CDC实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCdcId(string $CdcId) 设置CDC实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsCdcSubnet() 获取是否是CDC所属子网。0:否 1:是
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsCdcSubnet(integer $IsCdcSubnet) 设置是否是CDC所属子网。0:否 1:是
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Subnet extends AbstractModel
 {
@@ -138,13 +134,11 @@ class Subnet extends AbstractModel
 
     /**
      * @var string CDC实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CdcId;
 
     /**
      * @var integer 是否是CDC所属子网。0:否 1:是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsCdcSubnet;
 
@@ -165,9 +159,7 @@ class Subnet extends AbstractModel
      * @param integer $TotalIpAddressCount 子网`IPv4`总数。
      * @param array $TagSet 标签键值对。
      * @param string $CdcId CDC实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsCdcSubnet 是否是CDC所属子网。0:否 1:是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

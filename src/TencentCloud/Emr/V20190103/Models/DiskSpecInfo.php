@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 节点磁盘信息
  *
  * @method integer getCount() 获取磁盘数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCount(integer $Count) 设置磁盘数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDiskType() 获取系统盘类型 取值范围：
 <li>CLOUD_SSD：表示云SSD。</li>
 <li>CLOUD_PREMIUM：表示高效云盘。</li>
@@ -40,7 +38,11 @@ use TencentCloud\Common\AbstractModel;
 <li>CLOUD_HSSD：表示增强型SSD云硬盘。</li>
 <li>CLOUD_THROUGHPUT：表示吞吐型云硬盘。</li>
 <li>CLOUD_TSSD：表示极速型SSD云硬盘。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+<li>CLOUD_BIGDATA：表示大数据型云硬盘。</li>
+<li>CLOUD_HIGHIO：表示高IO型云硬盘。</li>
+<li>CLOUD_BSSD：表示通用型SSD云硬盘。</li>
+<li>REMOTE_SSD：表示远端SSD盘。</li>
+
  * @method void setDiskType(string $DiskType) 设置系统盘类型 取值范围：
 <li>CLOUD_SSD：表示云SSD。</li>
 <li>CLOUD_PREMIUM：表示高效云盘。</li>
@@ -57,17 +59,20 @@ use TencentCloud\Common\AbstractModel;
 <li>CLOUD_HSSD：表示增强型SSD云硬盘。</li>
 <li>CLOUD_THROUGHPUT：表示吞吐型云硬盘。</li>
 <li>CLOUD_TSSD：表示极速型SSD云硬盘。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+<li>CLOUD_BIGDATA：表示大数据型云硬盘。</li>
+<li>CLOUD_HIGHIO：表示高IO型云硬盘。</li>
+<li>CLOUD_BSSD：表示通用型SSD云硬盘。</li>
+<li>REMOTE_SSD：表示远端SSD盘。</li>
+
  * @method integer getDiskSize() 获取数据容量，单位为GB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskSize(integer $DiskSize) 设置数据容量，单位为GB
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getExtraPerformance() 获取额外性能
+ * @method void setExtraPerformance(integer $ExtraPerformance) 设置额外性能
  */
 class DiskSpecInfo extends AbstractModel
 {
     /**
      * @var integer 磁盘数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Count;
 
@@ -88,19 +93,26 @@ class DiskSpecInfo extends AbstractModel
 <li>CLOUD_HSSD：表示增强型SSD云硬盘。</li>
 <li>CLOUD_THROUGHPUT：表示吞吐型云硬盘。</li>
 <li>CLOUD_TSSD：表示极速型SSD云硬盘。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+<li>CLOUD_BIGDATA：表示大数据型云硬盘。</li>
+<li>CLOUD_HIGHIO：表示高IO型云硬盘。</li>
+<li>CLOUD_BSSD：表示通用型SSD云硬盘。</li>
+<li>REMOTE_SSD：表示远端SSD盘。</li>
+
      */
     public $DiskType;
 
     /**
      * @var integer 数据容量，单位为GB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskSize;
 
     /**
+     * @var integer 额外性能
+     */
+    public $ExtraPerformance;
+
+    /**
      * @param integer $Count 磁盘数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DiskType 系统盘类型 取值范围：
 <li>CLOUD_SSD：表示云SSD。</li>
 <li>CLOUD_PREMIUM：表示高效云盘。</li>
@@ -117,9 +129,13 @@ class DiskSpecInfo extends AbstractModel
 <li>CLOUD_HSSD：表示增强型SSD云硬盘。</li>
 <li>CLOUD_THROUGHPUT：表示吞吐型云硬盘。</li>
 <li>CLOUD_TSSD：表示极速型SSD云硬盘。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+<li>CLOUD_BIGDATA：表示大数据型云硬盘。</li>
+<li>CLOUD_HIGHIO：表示高IO型云硬盘。</li>
+<li>CLOUD_BSSD：表示通用型SSD云硬盘。</li>
+<li>REMOTE_SSD：表示远端SSD盘。</li>
+
      * @param integer $DiskSize 数据容量，单位为GB
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ExtraPerformance 额外性能
      */
     function __construct()
     {
@@ -144,6 +160,10 @@ class DiskSpecInfo extends AbstractModel
 
         if (array_key_exists("DiskSize",$param) and $param["DiskSize"] !== null) {
             $this->DiskSize = $param["DiskSize"];
+        }
+
+        if (array_key_exists("ExtraPerformance",$param) and $param["ExtraPerformance"] !== null) {
+            $this->ExtraPerformance = $param["ExtraPerformance"];
         }
     }
 }

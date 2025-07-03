@@ -19,72 +19,51 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * 拉流地址，只有在推流情况下才有
-
  *
  * @method string getStreamId() 获取流ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStreamId(string $StreamId) 设置流ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRtspAddr() 获取rtsp流地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRtspAddr(string $RtspAddr) 设置rtsp流地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRtmpAddr() 获取rtmp流地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRtmpAddr(string $RtmpAddr) 设置rtmp流地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHlsAddr() 获取hls流地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHlsAddr(string $HlsAddr) 设置hls流地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFlvAddr() 获取flv流地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlvAddr(string $FlvAddr) 设置flv流地址
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class StreamAddress extends AbstractModel
 {
     /**
      * @var string 流ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StreamId;
 
     /**
      * @var string rtsp流地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RtspAddr;
 
     /**
      * @var string rtmp流地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RtmpAddr;
 
     /**
      * @var string hls流地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HlsAddr;
 
     /**
      * @var string flv流地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlvAddr;
 
     /**
      * @param string $StreamId 流ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RtspAddr rtsp流地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RtmpAddr rtmp流地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HlsAddr hls流地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FlvAddr flv流地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 属性列表。
  *
  * @method string getLabel() 获取属性值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabel(string $Label) 设置属性值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getConfidence() 获取置信度，取值0-1之间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfidence(float $Confidence) 设置置信度，取值0-1之间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取属性名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置属性名称。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BodyAttributes extends AbstractModel
 {
     /**
      * @var string 属性值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Label;
 
     /**
      * @var float 置信度，取值0-1之间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Confidence;
 
     /**
      * @var string 属性名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @param string $Label 属性值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Confidence 置信度，取值0-1之间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 属性名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

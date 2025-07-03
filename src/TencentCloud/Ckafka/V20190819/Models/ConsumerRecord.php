@@ -35,9 +35,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setValue(string $Value) 设置消息value
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTimestamp() 获取消息时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimestamp(integer $Timestamp) 设置消息时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHeaders() 获取消息headers
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeaders(string $Headers) 设置消息headers
@@ -74,7 +72,6 @@ class ConsumerRecord extends AbstractModel
 
     /**
      * @var integer 消息时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Timestamp;
 
@@ -93,7 +90,6 @@ class ConsumerRecord extends AbstractModel
      * @param string $Value 消息value
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Timestamp 消息时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Headers 消息headers
 注意：此字段可能返回 null，表示取不到有效值。
      */

@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * tsf-privilege模块 Program数据集
  *
  * @method string getProgramId() 获取数据集ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProgramId(string $ProgramId) 设置数据集ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProgramName() 获取数据集名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProgramName(string $ProgramName) 设置数据集名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProgramDesc() 获取数据集描述
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProgramDesc(string $ProgramDesc) 设置数据集描述
@@ -37,29 +33,21 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeleteFlag(boolean $DeleteFlag) 设置删除标识，true: 可以删除; false: 不可删除
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreationTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreationTime(integer $CreationTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLastUpdateTime() 获取最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastUpdateTime(integer $LastUpdateTime) 设置最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getProgramItemList() 获取数据项列表，无值时返回空数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProgramItemList(array $ProgramItemList) 设置数据项列表，无值时返回空数组
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Program extends AbstractModel
 {
     /**
      * @var string 数据集ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProgramId;
 
     /**
      * @var string 数据集名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProgramName;
 
@@ -77,37 +65,29 @@ class Program extends AbstractModel
 
     /**
      * @var integer 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreationTime;
 
     /**
      * @var integer 最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastUpdateTime;
 
     /**
      * @var array 数据项列表，无值时返回空数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProgramItemList;
 
     /**
      * @param string $ProgramId 数据集ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProgramName 数据集名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProgramDesc 数据集描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $DeleteFlag 删除标识，true: 可以删除; false: 不可删除
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreationTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LastUpdateTime 最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ProgramItemList 数据项列表，无值时返回空数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

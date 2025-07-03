@@ -24,18 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMachineName(string $MachineName) 设置主机名称。
  * @method string getMachineOs() 获取主机系统。
  * @method void setMachineOs(string $MachineOs) 设置主机系统。
- * @method string getMachineStatus() 获取主机状态。
-<li>OFFLINE: 离线  </li>
-<li>ONLINE: 在线</li>
-<li>SHUTDOWN: 已关机</li>
-<li>UNINSTALLED: 未防护</li>
- * @method void setMachineStatus(string $MachineStatus) 设置主机状态。
-<li>OFFLINE: 离线  </li>
-<li>ONLINE: 在线</li>
-<li>SHUTDOWN: 已关机</li>
-<li>UNINSTALLED: 未防护</li>
- * @method string getUuid() 获取云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
- * @method void setUuid(string $Uuid) 设置云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
+ * @method string getMachineStatus() 获取主机状态。 <li>OFFLINE: 离线 </li> <li>ONLINE: 在线</li> <li>SHUTDOWN: 已关机</li> <li>UNINSTALLED: 未防护</li>	
+ * @method void setMachineStatus(string $MachineStatus) 设置主机状态。 <li>OFFLINE: 离线 </li> <li>ONLINE: 在线</li> <li>SHUTDOWN: 已关机</li> <li>UNINSTALLED: 未防护</li>	
+ * @method string getAgentStatus() 获取ONLINE 防护中; OFFLINE 已离线;UNINStALLED 未安装
+ * @method void setAgentStatus(string $AgentStatus) 设置ONLINE 防护中; OFFLINE 已离线;UNINStALLED 未安装
+ * @method string getInstanceStatus() 获取RUNNING 运行中; STOPED 已关机; EXPIRED 待回收	
+ * @method void setInstanceStatus(string $InstanceStatus) 设置RUNNING 运行中; STOPED 已关机; EXPIRED 待回收	
+ * @method string getUuid() 获取主机安全Uuid，若客户端长时间不在线将返回空字符。
+ * @method void setUuid(string $Uuid) 设置主机安全Uuid，若客户端长时间不在线将返回空字符。
  * @method string getQuuid() 获取CVM或BM机器唯一Uuid。
  * @method void setQuuid(string $Quuid) 设置CVM或BM机器唯一Uuid。
  * @method integer getVulNum() 获取漏洞数。
@@ -88,34 +84,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMachineType(string $MachineType) 设置机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
  * @method string getKernelVersion() 获取内核版本
  * @method void setKernelVersion(string $KernelVersion) 设置内核版本
- * @method string getProtectType() 获取防护版本：BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版
- * @method void setProtectType(string $ProtectType) 设置防护版本：BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版
+ * @method string getProtectType() 获取防护版本：BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版
+ * @method void setProtectType(string $ProtectType) 设置防护版本：BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版
  * @method array getCloudTags() 获取云标签信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCloudTags(array $CloudTags) 设置云标签信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsAddedOnTheFifteen() 获取是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsAddedOnTheFifteen(integer $IsAddedOnTheFifteen) 设置是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIpList() 获取主机ip列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpList(string $IpList) 设置主机ip列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVpcId() 获取所属网络
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(string $VpcId) 设置所属网络
-注意：此字段可能返回 null，表示取不到有效值。
  * @method MachineExtraInfo getMachineExtraInfo() 获取附加信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置附加信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method string getRemark() 获取备注信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置备注信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Machine extends AbstractModel
 {
@@ -130,16 +114,22 @@ class Machine extends AbstractModel
     public $MachineOs;
 
     /**
-     * @var string 主机状态。
-<li>OFFLINE: 离线  </li>
-<li>ONLINE: 在线</li>
-<li>SHUTDOWN: 已关机</li>
-<li>UNINSTALLED: 未防护</li>
+     * @var string 主机状态。 <li>OFFLINE: 离线 </li> <li>ONLINE: 在线</li> <li>SHUTDOWN: 已关机</li> <li>UNINSTALLED: 未防护</li>	
      */
     public $MachineStatus;
 
     /**
-     * @var string 云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
+     * @var string ONLINE 防护中; OFFLINE 已离线;UNINStALLED 未安装
+     */
+    public $AgentStatus;
+
+    /**
+     * @var string RUNNING 运行中; STOPED 已关机; EXPIRED 待回收	
+     */
+    public $InstanceStatus;
+
+    /**
+     * @var string 主机安全Uuid，若客户端长时间不在线将返回空字符。
      */
     public $Uuid;
 
@@ -246,37 +236,32 @@ class Machine extends AbstractModel
     public $KernelVersion;
 
     /**
-     * @var string 防护版本：BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版
+     * @var string 防护版本：BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版
      */
     public $ProtectType;
 
     /**
      * @var array 云标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CloudTags;
 
     /**
      * @var integer 是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsAddedOnTheFifteen;
 
     /**
      * @var string 主机ip列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IpList;
 
     /**
      * @var string 所属网络
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
     /**
      * @var MachineExtraInfo 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineExtraInfo;
 
@@ -287,19 +272,16 @@ class Machine extends AbstractModel
 
     /**
      * @var string 备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
     /**
      * @param string $MachineName 主机名称。
      * @param string $MachineOs 主机系统。
-     * @param string $MachineStatus 主机状态。
-<li>OFFLINE: 离线  </li>
-<li>ONLINE: 在线</li>
-<li>SHUTDOWN: 已关机</li>
-<li>UNINSTALLED: 未防护</li>
-     * @param string $Uuid 云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
+     * @param string $MachineStatus 主机状态。 <li>OFFLINE: 离线 </li> <li>ONLINE: 在线</li> <li>SHUTDOWN: 已关机</li> <li>UNINSTALLED: 未防护</li>	
+     * @param string $AgentStatus ONLINE 防护中; OFFLINE 已离线;UNINStALLED 未安装
+     * @param string $InstanceStatus RUNNING 运行中; STOPED 已关机; EXPIRED 待回收	
+     * @param string $Uuid 主机安全Uuid，若客户端长时间不在线将返回空字符。
      * @param string $Quuid CVM或BM机器唯一Uuid。
      * @param integer $VulNum 漏洞数。
      * @param string $MachineIp 主机IP。
@@ -326,20 +308,14 @@ class Machine extends AbstractModel
      * @param integer $HasAssetScan 是否有资产扫描接口，0无，1有
      * @param string $MachineType 机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
      * @param string $KernelVersion 内核版本
-     * @param string $ProtectType 防护版本：BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版
+     * @param string $ProtectType 防护版本：BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版
      * @param array $CloudTags 云标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsAddedOnTheFifteen 是否15天内新增的主机 0：非15天内新增的主机，1：15天内增加的主机
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IpList 主机ip列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcId 所属网络
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineExtraInfo $MachineExtraInfo 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 实例ID
      * @param string $Remark 备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -364,6 +340,14 @@ class Machine extends AbstractModel
 
         if (array_key_exists("MachineStatus",$param) and $param["MachineStatus"] !== null) {
             $this->MachineStatus = $param["MachineStatus"];
+        }
+
+        if (array_key_exists("AgentStatus",$param) and $param["AgentStatus"] !== null) {
+            $this->AgentStatus = $param["AgentStatus"];
+        }
+
+        if (array_key_exists("InstanceStatus",$param) and $param["InstanceStatus"] !== null) {
+            $this->InstanceStatus = $param["InstanceStatus"];
         }
 
         if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {

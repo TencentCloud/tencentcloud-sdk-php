@@ -52,6 +52,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubTax(string $SubTax) 设置小计税额
  * @method array getVatElectronicItems() 获取电子发票详细条目信息
  * @method void setVatElectronicItems(array $VatElectronicItems) 设置电子发票详细条目信息
+ * @method string getServiceTypeLabel() 获取业务类型标志
+ * @method void setServiceTypeLabel(string $ServiceTypeLabel) 设置业务类型标志
+ * @method string getTotalCnMark() 获取价税合计(大写)前符号
+ * @method void setTotalCnMark(string $TotalCnMark) 设置价税合计(大写)前符号
+ * @method string getTotalMark() 获取价税合计(小写)前字样
+ * @method void setTotalMark(string $TotalMark) 设置价税合计(小写)前字样
+ * @method string getPretaxAmountMark() 获取合计金额前字样
+ * @method void setPretaxAmountMark(string $PretaxAmountMark) 设置合计金额前字样
+ * @method string getTaxMark() 获取合计税额前字样
+ * @method void setTaxMark(string $TaxMark) 设置合计税额前字样
+ * @method integer getCompanySealMark() 获取是否有公司印章（0：没有，1：有）
+ * @method void setCompanySealMark(integer $CompanySealMark) 设置是否有公司印章（0：没有，1：有）
  */
 class VatElectronicInfo extends AbstractModel
 {
@@ -136,6 +148,36 @@ class VatElectronicInfo extends AbstractModel
     public $VatElectronicItems;
 
     /**
+     * @var string 业务类型标志
+     */
+    public $ServiceTypeLabel;
+
+    /**
+     * @var string 价税合计(大写)前符号
+     */
+    public $TotalCnMark;
+
+    /**
+     * @var string 价税合计(小写)前字样
+     */
+    public $TotalMark;
+
+    /**
+     * @var string 合计金额前字样
+     */
+    public $PretaxAmountMark;
+
+    /**
+     * @var string 合计税额前字样
+     */
+    public $TaxMark;
+
+    /**
+     * @var integer 是否有公司印章（0：没有，1：有）
+     */
+    public $CompanySealMark;
+
+    /**
      * @param string $Title 发票名称
      * @param string $Number 发票号码
      * @param string $Date 开票日期
@@ -152,6 +194,12 @@ class VatElectronicInfo extends AbstractModel
      * @param string $SubTotal 小计金额
      * @param string $SubTax 小计税额
      * @param array $VatElectronicItems 电子发票详细条目信息
+     * @param string $ServiceTypeLabel 业务类型标志
+     * @param string $TotalCnMark 价税合计(大写)前符号
+     * @param string $TotalMark 价税合计(小写)前字样
+     * @param string $PretaxAmountMark 合计金额前字样
+     * @param string $TaxMark 合计税额前字样
+     * @param integer $CompanySealMark 是否有公司印章（0：没有，1：有）
      */
     function __construct()
     {
@@ -233,6 +281,30 @@ class VatElectronicInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->VatElectronicItems, $obj);
             }
+        }
+
+        if (array_key_exists("ServiceTypeLabel",$param) and $param["ServiceTypeLabel"] !== null) {
+            $this->ServiceTypeLabel = $param["ServiceTypeLabel"];
+        }
+
+        if (array_key_exists("TotalCnMark",$param) and $param["TotalCnMark"] !== null) {
+            $this->TotalCnMark = $param["TotalCnMark"];
+        }
+
+        if (array_key_exists("TotalMark",$param) and $param["TotalMark"] !== null) {
+            $this->TotalMark = $param["TotalMark"];
+        }
+
+        if (array_key_exists("PretaxAmountMark",$param) and $param["PretaxAmountMark"] !== null) {
+            $this->PretaxAmountMark = $param["PretaxAmountMark"];
+        }
+
+        if (array_key_exists("TaxMark",$param) and $param["TaxMark"] !== null) {
+            $this->TaxMark = $param["TaxMark"];
+        }
+
+        if (array_key_exists("CompanySealMark",$param) and $param["CompanySealMark"] !== null) {
+            $this->CompanySealMark = $param["CompanySealMark"];
         }
     }
 }

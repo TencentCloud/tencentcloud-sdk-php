@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 多值数据
  *
  * @method array getValues() 获取数据点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValues(array $Values) 设置数据点
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MultiValue extends AbstractModel
 {
     /**
      * @var array 数据点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Values;
 
     /**
      * @param array $Values 数据点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyMQTTInstanceCertBinding请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method string getInstanceId() 获取集群ID
+ * @method void setInstanceId(string $InstanceId) 设置集群ID
  * @method string getSSLServerCertId() 获取服务端证书id
  * @method void setSSLServerCertId(string $SSLServerCertId) 设置服务端证书id
  * @method string getSSLCaCertId() 获取CA证书id
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyMQTTInstanceCertBindingRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 集群ID
      */
     public $InstanceId;
 
@@ -45,7 +45,7 @@ class ModifyMQTTInstanceCertBindingRequest extends AbstractModel
     public $SSLCaCertId;
 
     /**
-     * @param string $InstanceId 实例ID
+     * @param string $InstanceId 集群ID
      * @param string $SSLServerCertId 服务端证书id
      * @param string $SSLCaCertId CA证书id
      */

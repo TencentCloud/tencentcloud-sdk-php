@@ -39,13 +39,35 @@ false 不是
 1：已设置
 2：设置后，关闭
  * @method string getCreationDate() 获取注册时间。
+格式:YYYY-MM-DD HH:mm:ss
  * @method void setCreationDate(string $CreationDate) 设置注册时间。
+格式:YYYY-MM-DD HH:mm:ss
  * @method string getExpirationDate() 获取到期时间。
+格式:YYYY-MM-DD HH:mm:ss
  * @method void setExpirationDate(string $ExpirationDate) 设置到期时间。
- * @method string getTld() 获取域名后缀
- * @method void setTld(string $Tld) 设置域名后缀
- * @method string getCodeTld() 获取编码后的后缀（中文会进行编码）
- * @method void setCodeTld(string $CodeTld) 设置编码后的后缀（中文会进行编码）
+格式:YYYY-MM-DD HH:mm:ss
+ * @method string getTld() 获取域名后缀，根据具体域名确定
+例如:
+123.com 后缀则为.com
+123.com.cn 后缀则为.com.cn
+123.中国 后缀则为.中国
+
+ * @method void setTld(string $Tld) 设置域名后缀，根据具体域名确定
+例如:
+123.com 后缀则为.com
+123.com.cn 后缀则为.com.cn
+123.中国 后缀则为.中国
+
+ * @method string getCodeTld() 获取编码后的后缀（中文会进行Punycode编码）根据具体域名确定
+例如:
+123.com 后缀则为.com
+123.com.cn 后缀则为.com.cn
+123.中国 后缀则为.xn--fiqs8s
+ * @method void setCodeTld(string $CodeTld) 设置编码后的后缀（中文会进行Punycode编码）根据具体域名确定
+例如:
+123.com 后缀则为.com
+123.com.cn 后缀则为.com.cn
+123.中国 后缀则为.xn--fiqs8s
  * @method string getBuyStatus() 获取域名购买状态。
 ok：正常
 AboutToExpire: 即将到期
@@ -102,21 +124,32 @@ false 不是
 
     /**
      * @var string 注册时间。
+格式:YYYY-MM-DD HH:mm:ss
      */
     public $CreationDate;
 
     /**
      * @var string 到期时间。
+格式:YYYY-MM-DD HH:mm:ss
      */
     public $ExpirationDate;
 
     /**
-     * @var string 域名后缀
+     * @var string 域名后缀，根据具体域名确定
+例如:
+123.com 后缀则为.com
+123.com.cn 后缀则为.com.cn
+123.中国 后缀则为.中国
+
      */
     public $Tld;
 
     /**
-     * @var string 编码后的后缀（中文会进行编码）
+     * @var string 编码后的后缀（中文会进行Punycode编码）根据具体域名确定
+例如:
+123.com 后缀则为.com
+123.com.cn 后缀则为.com.cn
+123.中国 后缀则为.xn--fiqs8s
      */
     public $CodeTld;
 
@@ -148,9 +181,20 @@ false 不是
 1：已设置
 2：设置后，关闭
      * @param string $CreationDate 注册时间。
+格式:YYYY-MM-DD HH:mm:ss
      * @param string $ExpirationDate 到期时间。
-     * @param string $Tld 域名后缀
-     * @param string $CodeTld 编码后的后缀（中文会进行编码）
+格式:YYYY-MM-DD HH:mm:ss
+     * @param string $Tld 域名后缀，根据具体域名确定
+例如:
+123.com 后缀则为.com
+123.com.cn 后缀则为.com.cn
+123.中国 后缀则为.中国
+
+     * @param string $CodeTld 编码后的后缀（中文会进行Punycode编码）根据具体域名确定
+例如:
+123.com 后缀则为.com
+123.com.cn 后缀则为.com.cn
+123.中国 后缀则为.xn--fiqs8s
      * @param string $BuyStatus 域名购买状态。
 ok：正常
 AboutToExpire: 即将到期

@@ -21,55 +21,42 @@ use TencentCloud\Common\AbstractModel;
  * 脚本信息
  *
  * @method string getName() 获取文件名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置文件名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSize() 获取文件大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSize(integer $Size) 设置文件大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取文件类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置文件类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdatedAt() 获取更新时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdatedAt(string $UpdatedAt) 设置更新时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEncodedContent() 获取base64编码后的文件内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEncodedContent(string $EncodedContent) 设置base64编码后的文件内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEncodedHttpArchive() 获取base64编码后的har结构体
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEncodedHttpArchive(string $EncodedHttpArchive) 设置base64编码后的har结构体
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLoadWeight() 获取脚本权重，范围 1-100
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLoadWeight(integer $LoadWeight) 设置脚本权重，范围 1-100
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileId() 获取文件 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileId(string $FileId) 设置文件 ID
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getUploaded() 获取文件是否已上传，如果已上传，则可以不必填写 EncodedContent,EncodedHar 等内容。
+主要用于较大长度脚本上传。
+ * @method void setUploaded(boolean $Uploaded) 设置文件是否已上传，如果已上传，则可以不必填写 EncodedContent,EncodedHar 等内容。
+主要用于较大长度脚本上传。
  */
 class ScriptInfo extends AbstractModel
 {
     /**
      * @var string 文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var integer 文件大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Size;
 
     /**
      * @var string 文件类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
@@ -81,45 +68,42 @@ class ScriptInfo extends AbstractModel
 
     /**
      * @var string base64编码后的文件内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EncodedContent;
 
     /**
      * @var string base64编码后的har结构体
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EncodedHttpArchive;
 
     /**
      * @var integer 脚本权重，范围 1-100
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LoadWeight;
 
     /**
      * @var string 文件 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileId;
 
     /**
+     * @var boolean 文件是否已上传，如果已上传，则可以不必填写 EncodedContent,EncodedHar 等内容。
+主要用于较大长度脚本上传。
+     */
+    public $Uploaded;
+
+    /**
      * @param string $Name 文件名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Size 文件大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 文件类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdatedAt 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EncodedContent base64编码后的文件内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EncodedHttpArchive base64编码后的har结构体
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LoadWeight 脚本权重，范围 1-100
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileId 文件 ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $Uploaded 文件是否已上传，如果已上传，则可以不必填写 EncodedContent,EncodedHar 等内容。
+主要用于较大长度脚本上传。
      */
     function __construct()
     {
@@ -164,6 +148,10 @@ class ScriptInfo extends AbstractModel
 
         if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
             $this->FileId = $param["FileId"];
+        }
+
+        if (array_key_exists("Uploaded",$param) and $param["Uploaded"] !== null) {
+            $this->Uploaded = $param["Uploaded"];
         }
     }
 }

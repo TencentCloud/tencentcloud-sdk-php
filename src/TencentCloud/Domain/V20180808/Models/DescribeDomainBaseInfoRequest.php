@@ -21,17 +21,21 @@ use TencentCloud\Common\AbstractModel;
  * DescribeDomainBaseInfo请求参数结构体
  *
  * @method string getDomain() 获取域名
+可通过[DescribeDomainNameList](https://cloud.tencent.com/document/api/242/48941)接口获取
  * @method void setDomain(string $Domain) 设置域名
+可通过[DescribeDomainNameList](https://cloud.tencent.com/document/api/242/48941)接口获取
  */
 class DescribeDomainBaseInfoRequest extends AbstractModel
 {
     /**
      * @var string 域名
+可通过[DescribeDomainNameList](https://cloud.tencent.com/document/api/242/48941)接口获取
      */
     public $Domain;
 
     /**
      * @param string $Domain 域名
+可通过[DescribeDomainNameList](https://cloud.tencent.com/document/api/242/48941)接口获取
      */
     function __construct()
     {

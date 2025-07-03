@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 成本分析产品返回复杂类型
  *
  * @method string getBusinessCode() 获取产品码code
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBusinessCode(string $BusinessCode) 设置产品码code
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBusinessCodeName() 获取产品名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBusinessCodeName(string $BusinessCodeName) 设置产品名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AnalyseBusinessDetail extends AbstractModel
 {
     /**
      * @var string 产品码code
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BusinessCode;
 
     /**
      * @var string 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BusinessCodeName;
 
     /**
      * @param string $BusinessCode 产品码code
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BusinessCodeName 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

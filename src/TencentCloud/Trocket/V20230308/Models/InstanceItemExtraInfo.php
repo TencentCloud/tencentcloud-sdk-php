@@ -44,18 +44,20 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxStorage(integer $MaxStorage) 设置专享集群最大存储
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMaxRetention() 获取专享集群最大保留时间
+ * @method integer getMaxRetention() 获取专享集群最大保留时间，单位：小时
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMaxRetention(integer $MaxRetention) 设置专享集群最大保留时间
+ * @method void setMaxRetention(integer $MaxRetention) 设置专享集群最大保留时间，单位：小时
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMinRetention() 获取专项集群最大保留时间
+ * @method integer getMinRetention() 获取专项集群最大保留时间，单位：小时
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMinRetention(integer $MinRetention) 设置专项集群最大保留时间
+ * @method void setMinRetention(integer $MinRetention) 设置专项集群最大保留时间，单位：小时
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getInstanceStatus() 获取4.0共享集群
+ * @method integer getInstanceStatus() 获取4.0共享集群状态
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceStatus(integer $InstanceStatus) 设置4.0共享集群
+ * @method void setInstanceStatus(integer $InstanceStatus) 设置4.0共享集群状态
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsFrozen() 获取是否已冻结
+ * @method void setIsFrozen(boolean $IsFrozen) 设置是否已冻结
  */
 class InstanceItemExtraInfo extends AbstractModel
 {
@@ -96,22 +98,27 @@ class InstanceItemExtraInfo extends AbstractModel
     public $MaxStorage;
 
     /**
-     * @var integer 专享集群最大保留时间
+     * @var integer 专享集群最大保留时间，单位：小时
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxRetention;
 
     /**
-     * @var integer 专项集群最大保留时间
+     * @var integer 专项集群最大保留时间，单位：小时
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MinRetention;
 
     /**
-     * @var integer 4.0共享集群
+     * @var integer 4.0共享集群状态
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceStatus;
+
+    /**
+     * @var boolean 是否已冻结
+     */
+    public $IsFrozen;
 
     /**
      * @param boolean $IsVip 是否vip
@@ -126,12 +133,13 @@ class InstanceItemExtraInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxStorage 专享集群最大存储
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MaxRetention 专享集群最大保留时间
+     * @param integer $MaxRetention 专享集群最大保留时间，单位：小时
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MinRetention 专项集群最大保留时间
+     * @param integer $MinRetention 专项集群最大保留时间，单位：小时
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $InstanceStatus 4.0共享集群
+     * @param integer $InstanceStatus 4.0共享集群状态
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsFrozen 是否已冻结
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class InstanceItemExtraInfo extends AbstractModel
 
         if (array_key_exists("InstanceStatus",$param) and $param["InstanceStatus"] !== null) {
             $this->InstanceStatus = $param["InstanceStatus"];
+        }
+
+        if (array_key_exists("IsFrozen",$param) and $param["IsFrozen"] !== null) {
+            $this->IsFrozen = $param["IsFrozen"];
         }
     }
 }

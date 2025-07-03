@@ -25,23 +25,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getType() 获取共享资源类型。
  * @method void setType(string $Type) 设置共享资源类型。
  * @method string getCreateTime() 获取创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProductResourceId() 获取产品资源ID。
  * @method void setProductResourceId(string $ProductResourceId) 设置产品资源ID。
  * @method integer getSharedMemberNum() 获取共享单元成员数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSharedMemberNum(integer $SharedMemberNum) 设置共享单元成员数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSharedMemberUseNum() 获取使用中共享单元成员数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSharedMemberUseNum(integer $SharedMemberUseNum) 设置使用中共享单元成员数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getShareManagerUin() 获取共享管理员OwnerUin。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setShareManagerUin(integer $ShareManagerUin) 设置共享管理员OwnerUin。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ShareUnitResource extends AbstractModel
 {
@@ -57,7 +49,6 @@ class ShareUnitResource extends AbstractModel
 
     /**
      * @var string 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
@@ -68,19 +59,16 @@ class ShareUnitResource extends AbstractModel
 
     /**
      * @var integer 共享单元成员数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SharedMemberNum;
 
     /**
      * @var integer 使用中共享单元成员数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SharedMemberUseNum;
 
     /**
      * @var integer 共享管理员OwnerUin。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ShareManagerUin;
 
@@ -88,14 +76,10 @@ class ShareUnitResource extends AbstractModel
      * @param string $ResourceId 共享资源ID。
      * @param string $Type 共享资源类型。
      * @param string $CreateTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProductResourceId 产品资源ID。
      * @param integer $SharedMemberNum 共享单元成员数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SharedMemberUseNum 使用中共享单元成员数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ShareManagerUin 共享管理员OwnerUin。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

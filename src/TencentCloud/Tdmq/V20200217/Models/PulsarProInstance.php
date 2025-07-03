@@ -72,6 +72,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBillingLabelVersion(string $BillingLabelVersion) 设置代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTenant() 获取自定义租户
+ * @method void setTenant(string $Tenant) 设置自定义租户
  */
 class PulsarProInstance extends AbstractModel
 {
@@ -178,6 +180,11 @@ class PulsarProInstance extends AbstractModel
     public $BillingLabelVersion;
 
     /**
+     * @var string 自定义租户
+     */
+    public $Tenant;
+
+    /**
      * @param string $InstanceId 实例id
      * @param string $InstanceName 实例名称
      * @param string $InstanceVersion 实例版本
@@ -204,6 +211,7 @@ class PulsarProInstance extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BillingLabelVersion 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Tenant 自定义租户
      */
     function __construct()
     {
@@ -297,6 +305,10 @@ class PulsarProInstance extends AbstractModel
 
         if (array_key_exists("BillingLabelVersion",$param) and $param["BillingLabelVersion"] !== null) {
             $this->BillingLabelVersion = $param["BillingLabelVersion"];
+        }
+
+        if (array_key_exists("Tenant",$param) and $param["Tenant"] !== null) {
+            $this->Tenant = $param["Tenant"];
         }
     }
 }

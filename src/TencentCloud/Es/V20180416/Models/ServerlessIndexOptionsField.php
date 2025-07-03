@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSinkCycleAge(string $SinkCycleAge) 设置标准存储时长
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStandardStorageAge() 获取标准存储时长
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStandardStorageAge(string $StandardStorageAge) 设置标准存储时长
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServerlessIndexOptionsField extends AbstractModel
 {
@@ -54,11 +58,19 @@ class ServerlessIndexOptionsField extends AbstractModel
     public $SinkCycleAge;
 
     /**
+     * @var string 标准存储时长
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StandardStorageAge;
+
+    /**
      * @param string $ExpireMaxAge 过期时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TimestampField 时间分区字段
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SinkCycleAge 标准存储时长
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $StandardStorageAge 标准存储时长
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -84,6 +96,10 @@ class ServerlessIndexOptionsField extends AbstractModel
 
         if (array_key_exists("SinkCycleAge",$param) and $param["SinkCycleAge"] !== null) {
             $this->SinkCycleAge = $param["SinkCycleAge"];
+        }
+
+        if (array_key_exists("StandardStorageAge",$param) and $param["StandardStorageAge"] !== null) {
+            $this->StandardStorageAge = $param["StandardStorageAge"];
         }
     }
 }

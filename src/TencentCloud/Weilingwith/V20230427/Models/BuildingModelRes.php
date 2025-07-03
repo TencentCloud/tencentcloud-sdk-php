@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 建模模型信息响应体
  *
  * @method array getModels() 获取建模模型信息出参
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModels(array $Models) 设置建模模型信息出参
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BuildingModelRes extends AbstractModel
 {
     /**
      * @var array 建模模型信息出参
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Models;
 
     /**
      * @param array $Models 建模模型信息出参
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

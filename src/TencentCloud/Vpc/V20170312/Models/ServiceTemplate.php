@@ -28,8 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceSet(array $ServiceSet) 设置协议端口信息。
  * @method string getCreatedTime() 获取创建时间。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
+ * @method string getUpdatedTime() 获取最后更新时间。
+ * @method void setUpdatedTime(string $UpdatedTime) 设置最后更新时间。
  * @method array getServiceExtraSet() 获取带备注的协议端口信息。
  * @method void setServiceExtraSet(array $ServiceExtraSet) 设置带备注的协议端口信息。
+ * @method array getTagSet() 获取标签键值对。	
+ * @method void setTagSet(array $TagSet) 设置标签键值对。	
  */
 class ServiceTemplate extends AbstractModel
 {
@@ -54,16 +58,28 @@ class ServiceTemplate extends AbstractModel
     public $CreatedTime;
 
     /**
+     * @var string 最后更新时间。
+     */
+    public $UpdatedTime;
+
+    /**
      * @var array 带备注的协议端口信息。
      */
     public $ServiceExtraSet;
+
+    /**
+     * @var array 标签键值对。	
+     */
+    public $TagSet;
 
     /**
      * @param string $ServiceTemplateId 协议端口实例ID，例如：ppm-f5n1f8da。
      * @param string $ServiceTemplateName 模板名称。
      * @param array $ServiceSet 协议端口信息。
      * @param string $CreatedTime 创建时间。
+     * @param string $UpdatedTime 最后更新时间。
      * @param array $ServiceExtraSet 带备注的协议端口信息。
+     * @param array $TagSet 标签键值对。	
      */
     function __construct()
     {
@@ -94,12 +110,25 @@ class ServiceTemplate extends AbstractModel
             $this->CreatedTime = $param["CreatedTime"];
         }
 
+        if (array_key_exists("UpdatedTime",$param) and $param["UpdatedTime"] !== null) {
+            $this->UpdatedTime = $param["UpdatedTime"];
+        }
+
         if (array_key_exists("ServiceExtraSet",$param) and $param["ServiceExtraSet"] !== null) {
             $this->ServiceExtraSet = [];
             foreach ($param["ServiceExtraSet"] as $key => $value){
                 $obj = new ServicesInfo();
                 $obj->deserialize($value);
                 array_push($this->ServiceExtraSet, $obj);
+            }
+        }
+
+        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+            $this->TagSet = [];
+            foreach ($param["TagSet"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagSet, $obj);
             }
         }
     }

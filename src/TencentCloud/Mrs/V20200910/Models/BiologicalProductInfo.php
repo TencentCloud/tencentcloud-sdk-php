@@ -21,189 +21,129 @@ use TencentCloud\Common\AbstractModel;
  * 预防用生物制品说明书
  *
  * @method BiologicalProductInfoName getName() 获取药品名称，包括通用名和商品名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(BiologicalProductInfoName $Name) 设置药品名称，包括通用名和商品名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BiologicalProductInfoIngredientAndAppearance getIngredientAndAppearance() 获取成份和性状
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIngredientAndAppearance(BiologicalProductInfoIngredientAndAppearance $IngredientAndAppearance) 设置成份和性状
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BiologicalProductInfoVaccinationTarget getVaccinationTarget() 获取接种对象
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVaccinationTarget(BiologicalProductInfoVaccinationTarget $VaccinationTarget) 设置接种对象
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BiologicalProductInfoIndications getIndications() 获取作用与用途
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIndications(BiologicalProductInfoIndications $Indications) 设置作用与用途
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BiologicalProductInfoBrochure getBrochure() 获取规格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBrochure(BiologicalProductInfoBrochure $Brochure) 设置规格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BiologicalProductInfoDosage getDosage() 获取免疫程序和剂量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDosage(BiologicalProductInfoDosage $Dosage) 设置免疫程序和剂量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BiologicalProductInfoAdverseReaction getAdverseReaction() 获取不良反应
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdverseReaction(BiologicalProductInfoAdverseReaction $AdverseReaction) 设置不良反应
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BiologicalProductInfoContraindications getContraindications() 获取禁忌情况
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContraindications(BiologicalProductInfoContraindications $Contraindications) 设置禁忌情况
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BiologicalProductInfoPrecautions getPrecautions() 获取注意事项
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrecautions(BiologicalProductInfoPrecautions $Precautions) 设置注意事项
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BiologicalProductInfoStorage getStorage() 获取储存条件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStorage(BiologicalProductInfoStorage $Storage) 设置储存条件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BiologicalProductInfoPackaging getPackaging() 获取包装信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPackaging(BiologicalProductInfoPackaging $Packaging) 设置包装信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BiologicalProductInfoValidityPeriod getValidityPeriod() 获取有效期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValidityPeriod(BiologicalProductInfoValidityPeriod $ValidityPeriod) 设置有效期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BiologicalProductInfoExecutiveStandards getExecutiveStandards() 获取执行标准
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExecutiveStandards(BiologicalProductInfoExecutiveStandards $ExecutiveStandards) 设置执行标准
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BiologicalProductInfoApproval getApproval() 获取批准文号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApproval(BiologicalProductInfoApproval $Approval) 设置批准文号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BiologicalProductInfoManufacturer getManufacturer() 获取生产企业名称和地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setManufacturer(BiologicalProductInfoManufacturer $Manufacturer) 设置生产企业名称和地址
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BiologicalProductInfo extends AbstractModel
 {
     /**
      * @var BiologicalProductInfoName 药品名称，包括通用名和商品名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var BiologicalProductInfoIngredientAndAppearance 成份和性状
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IngredientAndAppearance;
 
     /**
      * @var BiologicalProductInfoVaccinationTarget 接种对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VaccinationTarget;
 
     /**
      * @var BiologicalProductInfoIndications 作用与用途
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Indications;
 
     /**
      * @var BiologicalProductInfoBrochure 规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Brochure;
 
     /**
      * @var BiologicalProductInfoDosage 免疫程序和剂量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Dosage;
 
     /**
      * @var BiologicalProductInfoAdverseReaction 不良反应
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AdverseReaction;
 
     /**
      * @var BiologicalProductInfoContraindications 禁忌情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Contraindications;
 
     /**
      * @var BiologicalProductInfoPrecautions 注意事项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Precautions;
 
     /**
      * @var BiologicalProductInfoStorage 储存条件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Storage;
 
     /**
      * @var BiologicalProductInfoPackaging 包装信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Packaging;
 
     /**
      * @var BiologicalProductInfoValidityPeriod 有效期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ValidityPeriod;
 
     /**
      * @var BiologicalProductInfoExecutiveStandards 执行标准
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecutiveStandards;
 
     /**
      * @var BiologicalProductInfoApproval 批准文号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Approval;
 
     /**
      * @var BiologicalProductInfoManufacturer 生产企业名称和地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Manufacturer;
 
     /**
      * @param BiologicalProductInfoName $Name 药品名称，包括通用名和商品名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BiologicalProductInfoIngredientAndAppearance $IngredientAndAppearance 成份和性状
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BiologicalProductInfoVaccinationTarget $VaccinationTarget 接种对象
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BiologicalProductInfoIndications $Indications 作用与用途
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BiologicalProductInfoBrochure $Brochure 规格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BiologicalProductInfoDosage $Dosage 免疫程序和剂量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BiologicalProductInfoAdverseReaction $AdverseReaction 不良反应
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BiologicalProductInfoContraindications $Contraindications 禁忌情况
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BiologicalProductInfoPrecautions $Precautions 注意事项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BiologicalProductInfoStorage $Storage 储存条件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BiologicalProductInfoPackaging $Packaging 包装信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BiologicalProductInfoValidityPeriod $ValidityPeriod 有效期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BiologicalProductInfoExecutiveStandards $ExecutiveStandards 执行标准
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BiologicalProductInfoApproval $Approval 批准文号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BiologicalProductInfoManufacturer $Manufacturer 生产企业名称和地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,19 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * SearchCosRechargeInfo返回参数结构体
  *
  * @method array getData() 获取匹配到的存储桶下的某个文件的前几行数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(array $Data) 设置匹配到的存储桶下的某个文件的前几行数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSum() 获取匹配到的存储桶下的文件个数
  * @method void setSum(integer $Sum) 设置匹配到的存储桶下的文件个数
  * @method string getPath() 获取当前预览文件路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPath(string $Path) 设置当前预览文件路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMsg() 获取预览获取数据失败原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMsg(string $Msg) 设置预览获取数据失败原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取状态
  * @method void setStatus(integer $Status) 设置状态
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -43,7 +37,6 @@ class SearchCosRechargeInfoResponse extends AbstractModel
 {
     /**
      * @var array 匹配到的存储桶下的某个文件的前几行数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
 
@@ -54,13 +47,11 @@ class SearchCosRechargeInfoResponse extends AbstractModel
 
     /**
      * @var string 当前预览文件路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Path;
 
     /**
      * @var string 预览获取数据失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Msg;
 
@@ -76,12 +67,9 @@ class SearchCosRechargeInfoResponse extends AbstractModel
 
     /**
      * @param array $Data 匹配到的存储桶下的某个文件的前几行数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Sum 匹配到的存储桶下的文件个数
      * @param string $Path 当前预览文件路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Msg 预览获取数据失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 状态
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

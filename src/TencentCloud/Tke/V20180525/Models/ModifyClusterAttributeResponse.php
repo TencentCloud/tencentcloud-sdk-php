@@ -21,33 +21,19 @@ use TencentCloud\Common\AbstractModel;
  * ModifyClusterAttribute返回参数结构体
  *
  * @method integer getProjectId() 获取集群所属项目
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectId(integer $ProjectId) 设置集群所属项目
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterName() 获取集群名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterName(string $ClusterName) 设置集群名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterDesc() 获取集群描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterDesc(string $ClusterDesc) 设置集群描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterLevel() 获取集群等级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterLevel(string $ClusterLevel) 设置集群等级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method AutoUpgradeClusterLevel getAutoUpgradeClusterLevel() 获取自动变配集群等级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoUpgradeClusterLevel(AutoUpgradeClusterLevel $AutoUpgradeClusterLevel) 设置自动变配集群等级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getQGPUShareEnable() 获取是否开启QGPU共享
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQGPUShareEnable(boolean $QGPUShareEnable) 设置是否开启QGPU共享
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ClusterProperty getClusterProperty() 获取集群属性
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterProperty(ClusterProperty $ClusterProperty) 设置集群属性
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -55,43 +41,36 @@ class ModifyClusterAttributeResponse extends AbstractModel
 {
     /**
      * @var integer 集群所属项目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectId;
 
     /**
      * @var string 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterName;
 
     /**
      * @var string 集群描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterDesc;
 
     /**
      * @var string 集群等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterLevel;
 
     /**
      * @var AutoUpgradeClusterLevel 自动变配集群等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoUpgradeClusterLevel;
 
     /**
      * @var boolean 是否开启QGPU共享
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QGPUShareEnable;
 
     /**
      * @var ClusterProperty 集群属性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterProperty;
 
@@ -102,19 +81,12 @@ class ModifyClusterAttributeResponse extends AbstractModel
 
     /**
      * @param integer $ProjectId 集群所属项目
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterName 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterDesc 集群描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterLevel 集群等级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoUpgradeClusterLevel $AutoUpgradeClusterLevel 自动变配集群等级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $QGPUShareEnable 是否开启QGPU共享
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ClusterProperty $ClusterProperty 集群属性
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

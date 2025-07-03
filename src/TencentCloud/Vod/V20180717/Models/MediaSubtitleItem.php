@@ -25,14 +25,34 @@ use TencentCloud\Common\AbstractModel;
  * @method string getName() 获取字幕名字。
  * @method void setName(string $Name) 设置字幕名字。
  * @method string getLanguage() 获取字幕语言。常见的取值如下：
-<li>cn：中文</li>
-<li>ja：日文</li>
-<li>en-US：英文</li>
+<li>zh：中文；</li>
+<li>en：英文；</li>
+<li>ja：日文；</li>
+<li>ko：韩文；</li>
+<li>vi：越南语；</li>
+<li>ms：马来语；</li>
+<li>th：泰语；</li>
+<li>pt：葡萄牙语；</li>
+<li>tr：土耳其语；</li>
+<li>ar：阿拉伯语；</li>
+<li>es：西班牙语；</li>
+<li>hi：印地语；</li>
+<li>fr：法语。</li>
 其他取值参考 [RFC5646](https://tools.ietf.org/html/rfc5646)
  * @method void setLanguage(string $Language) 设置字幕语言。常见的取值如下：
-<li>cn：中文</li>
-<li>ja：日文</li>
-<li>en-US：英文</li>
+<li>zh：中文；</li>
+<li>en：英文；</li>
+<li>ja：日文；</li>
+<li>ko：韩文；</li>
+<li>vi：越南语；</li>
+<li>ms：马来语；</li>
+<li>th：泰语；</li>
+<li>pt：葡萄牙语；</li>
+<li>tr：土耳其语；</li>
+<li>ar：阿拉伯语；</li>
+<li>es：西班牙语；</li>
+<li>hi：印地语；</li>
+<li>fr：法语。</li>
 其他取值参考 [RFC5646](https://tools.ietf.org/html/rfc5646)
  * @method string getFormat() 获取字幕格式。取值范围如下：
 <li>vtt</li>
@@ -40,6 +60,12 @@ use TencentCloud\Common\AbstractModel;
 <li>vtt</li>
  * @method string getUrl() 获取字幕 URL。
  * @method void setUrl(string $Url) 设置字幕 URL。
+ * @method string getSource() 获取字幕来源，取值范围：
+<li>UserUploaded：用户上传；</li>
+<li>AIRecognition：AI 识别，通过语音识别或语音翻译生成。</li>
+ * @method void setSource(string $Source) 设置字幕来源，取值范围：
+<li>UserUploaded：用户上传；</li>
+<li>AIRecognition：AI 识别，通过语音识别或语音翻译生成。</li>
  */
 class MediaSubtitleItem extends AbstractModel
 {
@@ -55,9 +81,19 @@ class MediaSubtitleItem extends AbstractModel
 
     /**
      * @var string 字幕语言。常见的取值如下：
-<li>cn：中文</li>
-<li>ja：日文</li>
-<li>en-US：英文</li>
+<li>zh：中文；</li>
+<li>en：英文；</li>
+<li>ja：日文；</li>
+<li>ko：韩文；</li>
+<li>vi：越南语；</li>
+<li>ms：马来语；</li>
+<li>th：泰语；</li>
+<li>pt：葡萄牙语；</li>
+<li>tr：土耳其语；</li>
+<li>ar：阿拉伯语；</li>
+<li>es：西班牙语；</li>
+<li>hi：印地语；</li>
+<li>fr：法语。</li>
 其他取值参考 [RFC5646](https://tools.ietf.org/html/rfc5646)
      */
     public $Language;
@@ -74,16 +110,36 @@ class MediaSubtitleItem extends AbstractModel
     public $Url;
 
     /**
+     * @var string 字幕来源，取值范围：
+<li>UserUploaded：用户上传；</li>
+<li>AIRecognition：AI 识别，通过语音识别或语音翻译生成。</li>
+     */
+    public $Source;
+
+    /**
      * @param string $Id 字幕的唯一标识。
      * @param string $Name 字幕名字。
      * @param string $Language 字幕语言。常见的取值如下：
-<li>cn：中文</li>
-<li>ja：日文</li>
-<li>en-US：英文</li>
+<li>zh：中文；</li>
+<li>en：英文；</li>
+<li>ja：日文；</li>
+<li>ko：韩文；</li>
+<li>vi：越南语；</li>
+<li>ms：马来语；</li>
+<li>th：泰语；</li>
+<li>pt：葡萄牙语；</li>
+<li>tr：土耳其语；</li>
+<li>ar：阿拉伯语；</li>
+<li>es：西班牙语；</li>
+<li>hi：印地语；</li>
+<li>fr：法语。</li>
 其他取值参考 [RFC5646](https://tools.ietf.org/html/rfc5646)
      * @param string $Format 字幕格式。取值范围如下：
 <li>vtt</li>
      * @param string $Url 字幕 URL。
+     * @param string $Source 字幕来源，取值范围：
+<li>UserUploaded：用户上传；</li>
+<li>AIRecognition：AI 识别，通过语音识别或语音翻译生成。</li>
      */
     function __construct()
     {
@@ -116,6 +172,10 @@ class MediaSubtitleItem extends AbstractModel
 
         if (array_key_exists("Url",$param) and $param["Url"] !== null) {
             $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("Source",$param) and $param["Source"] !== null) {
+            $this->Source = $param["Source"];
         }
     }
 }

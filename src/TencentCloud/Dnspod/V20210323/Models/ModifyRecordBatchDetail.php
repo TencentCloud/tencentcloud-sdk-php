@@ -21,41 +21,30 @@ use TencentCloud\Common\AbstractModel;
  * 批量添加记录返回结构
  *
  * @method array getRecordList() 获取见RecordInfoBatchModify
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordList(array $RecordList) 设置见RecordInfoBatchModify
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getId() 获取任务编号
  * @method void setId(integer $Id) 设置任务编号
  * @method string getDomain() 获取域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomain(string $Domain) 设置域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDomainGrade() 获取域名等级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomainGrade(string $DomainGrade) 设置域名等级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getErrMsg() 获取错误信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrMsg(string $ErrMsg) 设置错误信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取该条任务运行状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置该条任务运行状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOperation() 获取操作类型
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperation(string $Operation) 设置操作类型
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDomainId() 获取域名ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomainId(integer $DomainId) 设置域名ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ModifyRecordBatchDetail extends AbstractModel
 {
     /**
      * @var array 见RecordInfoBatchModify
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecordList;
 
@@ -66,13 +55,11 @@ class ModifyRecordBatchDetail extends AbstractModel
 
     /**
      * @var string 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Domain;
 
     /**
      * @var string 域名等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DomainGrade;
 
@@ -84,7 +71,6 @@ class ModifyRecordBatchDetail extends AbstractModel
 
     /**
      * @var string 该条任务运行状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
@@ -96,26 +82,20 @@ class ModifyRecordBatchDetail extends AbstractModel
 
     /**
      * @var integer 域名ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DomainId;
 
     /**
      * @param array $RecordList 见RecordInfoBatchModify
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Id 任务编号
      * @param string $Domain 域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DomainGrade 域名等级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrMsg 错误信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 该条任务运行状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Operation 操作类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DomainId 域名ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

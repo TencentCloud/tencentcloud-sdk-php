@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAllPage(boolean $AllPage) 设置是否全部展示，如果是ture，则忽略分页
  * @method string getModuleCollection() 获取角色信息
  * @method void setModuleCollection(string $ModuleCollection) 设置角色信息
+ * @method array getModuleIdList() 获取moduleId集合
+ * @method void setModuleIdList(array $ModuleIdList) 设置moduleId集合
  */
 class DescribeProjectListRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DescribeProjectListRequest extends AbstractModel
     public $ModuleCollection;
 
     /**
+     * @var array moduleId集合
+     */
+    public $ModuleIdList;
+
+    /**
      * @param integer $PageSize 页容，初版默认20，将来可能根据屏幕宽度动态变化
      * @param integer $PageNo 页标
      * @param string $Keyword 检索模糊字段
      * @param boolean $AllPage 是否全部展示，如果是ture，则忽略分页
      * @param string $ModuleCollection 角色信息
+     * @param array $ModuleIdList moduleId集合
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DescribeProjectListRequest extends AbstractModel
 
         if (array_key_exists("ModuleCollection",$param) and $param["ModuleCollection"] !== null) {
             $this->ModuleCollection = $param["ModuleCollection"];
+        }
+
+        if (array_key_exists("ModuleIdList",$param) and $param["ModuleIdList"] !== null) {
+            $this->ModuleIdList = $param["ModuleIdList"];
         }
     }
 }

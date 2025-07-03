@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置开始时间
  * @method string getEndTime() 获取结束时间
  * @method void setEndTime(string $EndTime) 设置结束时间
- * @method array getMetricDimensionValues() 获取维度
- * @method void setMetricDimensionValues(array $MetricDimensionValues) 设置维度
- * @method array getMetrics() 获取指标
- * @method void setMetrics(array $Metrics) 设置指标
+ * @method array getMetricDimensionValues() 获取维度，并且 维度 key value 不能为空
+ * @method void setMetricDimensionValues(array $MetricDimensionValues) 设置维度，并且 维度 key value 不能为空
+ * @method array getMetrics() 获取指标，并且 key, value 不能为空
+ * @method void setMetrics(array $Metrics) 设置指标，并且 key, value 不能为空
  * @method string getKind() 获取调用视角。可选值：SERVER, CLIENT。默认为SERVER
  * @method void setKind(string $Kind) 设置调用视角。可选值：SERVER, CLIENT。默认为SERVER
  */
@@ -44,12 +44,12 @@ class DescribeInvocationMetricDataPointRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var array 维度
+     * @var array 维度，并且 维度 key value 不能为空
      */
     public $MetricDimensionValues;
 
     /**
-     * @var array 指标
+     * @var array 指标，并且 key, value 不能为空
      */
     public $Metrics;
 
@@ -61,8 +61,8 @@ class DescribeInvocationMetricDataPointRequest extends AbstractModel
     /**
      * @param string $StartTime 开始时间
      * @param string $EndTime 结束时间
-     * @param array $MetricDimensionValues 维度
-     * @param array $Metrics 指标
+     * @param array $MetricDimensionValues 维度，并且 维度 key value 不能为空
+     * @param array $Metrics 指标，并且 key, value 不能为空
      * @param string $Kind 调用视角。可选值：SERVER, CLIENT。默认为SERVER
      */
     function __construct()

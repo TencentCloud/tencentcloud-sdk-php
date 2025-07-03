@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateScheduledAction请求参数结构体
  *
- * @method string getAutoScalingGroupId() 获取伸缩组ID
- * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置伸缩组ID
+ * @method string getAutoScalingGroupId() 获取伸缩组ID。可以通过如下方式获取可用的伸缩组ID:
+<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li>
+<li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
+ * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置伸缩组ID。可以通过如下方式获取可用的伸缩组ID:
+<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li>
+<li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
  * @method string getScheduledActionName() 获取定时任务名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。同一伸缩组下必须唯一。
  * @method void setScheduledActionName(string $ScheduledActionName) 设置定时任务名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。同一伸缩组下必须唯一。
  * @method integer getMaxSize() 获取当定时任务触发时，设置的伸缩组最大实例数。
@@ -34,13 +38,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置定时任务的首次触发时间，取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
  * @method string getEndTime() 获取定时任务的结束时间，取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。<br><br>此参数与`Recurrence`需要同时指定，到达结束时间之后，定时任务将不再生效。
  * @method void setEndTime(string $EndTime) 设置定时任务的结束时间，取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。<br><br>此参数与`Recurrence`需要同时指定，到达结束时间之后，定时任务将不再生效。
- * @method string getRecurrence() 获取定时任务的重复方式。为标准 Cron 格式<br><br>此参数与`EndTime`需要同时指定。
- * @method void setRecurrence(string $Recurrence) 设置定时任务的重复方式。为标准 Cron 格式<br><br>此参数与`EndTime`需要同时指定。
+ * @method string getRecurrence() 获取定时任务的重复方式。为标准 Cron 格式。定时任务中的 [Recurrence参数限制](https://cloud.tencent.com/document/product/377/88119) 为5个字段，由空格分开，结构为：分，小时，日期，月份，星期。此参数与`EndTime`需要同时指定。
+ * @method void setRecurrence(string $Recurrence) 设置定时任务的重复方式。为标准 Cron 格式。定时任务中的 [Recurrence参数限制](https://cloud.tencent.com/document/product/377/88119) 为5个字段，由空格分开，结构为：分，小时，日期，月份，星期。此参数与`EndTime`需要同时指定。
  */
 class CreateScheduledActionRequest extends AbstractModel
 {
     /**
-     * @var string 伸缩组ID
+     * @var string 伸缩组ID。可以通过如下方式获取可用的伸缩组ID:
+<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li>
+<li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
      */
     public $AutoScalingGroupId;
 
@@ -75,19 +81,21 @@ class CreateScheduledActionRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string 定时任务的重复方式。为标准 Cron 格式<br><br>此参数与`EndTime`需要同时指定。
+     * @var string 定时任务的重复方式。为标准 Cron 格式。定时任务中的 [Recurrence参数限制](https://cloud.tencent.com/document/product/377/88119) 为5个字段，由空格分开，结构为：分，小时，日期，月份，星期。此参数与`EndTime`需要同时指定。
      */
     public $Recurrence;
 
     /**
-     * @param string $AutoScalingGroupId 伸缩组ID
+     * @param string $AutoScalingGroupId 伸缩组ID。可以通过如下方式获取可用的伸缩组ID:
+<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li>
+<li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
      * @param string $ScheduledActionName 定时任务名称。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超60个字节。同一伸缩组下必须唯一。
      * @param integer $MaxSize 当定时任务触发时，设置的伸缩组最大实例数。
      * @param integer $MinSize 当定时任务触发时，设置的伸缩组最小实例数。
      * @param integer $DesiredCapacity 当定时任务触发时，设置的伸缩组期望实例数。
      * @param string $StartTime 定时任务的首次触发时间，取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
      * @param string $EndTime 定时任务的结束时间，取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。<br><br>此参数与`Recurrence`需要同时指定，到达结束时间之后，定时任务将不再生效。
-     * @param string $Recurrence 定时任务的重复方式。为标准 Cron 格式<br><br>此参数与`EndTime`需要同时指定。
+     * @param string $Recurrence 定时任务的重复方式。为标准 Cron 格式。定时任务中的 [Recurrence参数限制](https://cloud.tencent.com/document/product/377/88119) 为5个字段，由空格分开，结构为：分，小时，日期，月份，星期。此参数与`EndTime`需要同时指定。
      */
     function __construct()
     {

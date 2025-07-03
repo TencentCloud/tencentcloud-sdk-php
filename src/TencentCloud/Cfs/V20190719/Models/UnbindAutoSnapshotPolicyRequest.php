@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UnbindAutoSnapshotPolicy请求参数结构体
  *
- * @method string getFileSystemIds() 获取需要解绑的文件系统ID列表，用"," 分割
- * @method void setFileSystemIds(string $FileSystemIds) 设置需要解绑的文件系统ID列表，用"," 分割
- * @method string getAutoSnapshotPolicyId() 获取解绑的快照ID
- * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) 设置解绑的快照ID
+ * @method string getFileSystemIds() 获取需要解绑的文件系统ID列表，用"," 分割，文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
+ * @method void setFileSystemIds(string $FileSystemIds) 设置需要解绑的文件系统ID列表，用"," 分割，文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
+ * @method string getAutoSnapshotPolicyId() 获取解绑的快照策略ID，可以通过[DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/api/582/80208) 查询获取
+ * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) 设置解绑的快照策略ID，可以通过[DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/api/582/80208) 查询获取
  */
 class UnbindAutoSnapshotPolicyRequest extends AbstractModel
 {
     /**
-     * @var string 需要解绑的文件系统ID列表，用"," 分割
+     * @var string 需要解绑的文件系统ID列表，用"," 分割，文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
      */
     public $FileSystemIds;
 
     /**
-     * @var string 解绑的快照ID
+     * @var string 解绑的快照策略ID，可以通过[DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/api/582/80208) 查询获取
      */
     public $AutoSnapshotPolicyId;
 
     /**
-     * @param string $FileSystemIds 需要解绑的文件系统ID列表，用"," 分割
-     * @param string $AutoSnapshotPolicyId 解绑的快照ID
+     * @param string $FileSystemIds 需要解绑的文件系统ID列表，用"," 分割，文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
+     * @param string $AutoSnapshotPolicyId 解绑的快照策略ID，可以通过[DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/api/582/80208) 查询获取
      */
     function __construct()
     {

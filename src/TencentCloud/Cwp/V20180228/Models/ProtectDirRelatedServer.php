@@ -47,9 +47,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getExceptionMessage() 获取异常信息
  * @method void setExceptionMessage(string $ExceptionMessage) 设置异常信息
  * @method MachineExtraInfo getMachineExtraInfo() 获取主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProtectDirRelatedServer extends AbstractModel
 {
@@ -120,7 +118,6 @@ class ProtectDirRelatedServer extends AbstractModel
 
     /**
      * @var MachineExtraInfo 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineExtraInfo;
 
@@ -139,7 +136,6 @@ class ProtectDirRelatedServer extends AbstractModel
      * @param integer $Progress 过渡进度
      * @param string $ExceptionMessage 异常信息
      * @param MachineExtraInfo $MachineExtraInfo 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

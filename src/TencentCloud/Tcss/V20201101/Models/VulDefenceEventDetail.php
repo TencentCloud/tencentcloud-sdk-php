@@ -63,37 +63,21 @@ use TencentCloud\Common\AbstractModel;
  * @method string getNetworkPayload() 获取攻击包
  * @method void setNetworkPayload(string $NetworkPayload) 设置攻击包
  * @method integer getPID() 获取进程PID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPID(integer $PID) 设置进程PID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMainClass() 获取进程主类名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMainClass(string $MainClass) 设置进程主类名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStackTrace() 获取堆栈信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStackTrace(string $StackTrace) 设置堆栈信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getServerAccount() 获取监听账号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServerAccount(string $ServerAccount) 设置监听账号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getServerPort() 获取监听端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServerPort(string $ServerPort) 设置监听端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getServerExe() 获取进程路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServerExe(string $ServerExe) 设置进程路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getServerArg() 获取进程命令行参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServerArg(string $ServerArg) 设置进程命令行参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getQUUID() 获取主机QUUID/超级节点ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQUUID(string $QUUID) 设置主机QUUID/超级节点ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContainerNetStatus() 获取隔离状态
 未隔离  	NORMAL
 已隔离		ISOLATED
@@ -101,7 +85,6 @@ use TencentCloud\Common\AbstractModel;
 隔离失败	ISOLATE_FAILED
 解除隔离中  RESTORING
 解除隔离失败 RESTORE_FAILED
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainerNetStatus(string $ContainerNetStatus) 设置隔离状态
 未隔离  	NORMAL
 已隔离		ISOLATED
@@ -109,7 +92,6 @@ use TencentCloud\Common\AbstractModel;
 隔离失败	ISOLATE_FAILED
 解除隔离中  RESTORING
 解除隔离失败 RESTORE_FAILED
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContainerNetSubStatus() 获取容器子状态
 "AGENT_OFFLINE"       //Agent离线
 	"NODE_DESTROYED"      //节点已销毁
@@ -118,7 +100,6 @@ use TencentCloud\Common\AbstractModel;
 	"SHARED_HOST"         // 容器与主机共享网络
 	"RESOURCE_LIMIT"      //隔离操作资源超限
 	"UNKNOW"              // 原因未知
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainerNetSubStatus(string $ContainerNetSubStatus) 设置容器子状态
 "AGENT_OFFLINE"       //Agent离线
 	"NODE_DESTROYED"      //节点已销毁
@@ -127,11 +108,8 @@ use TencentCloud\Common\AbstractModel;
 	"SHARED_HOST"         // 容器与主机共享网络
 	"RESOURCE_LIMIT"      //隔离操作资源超限
 	"UNKNOW"              // 原因未知
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContainerIsolateOperationSrc() 获取容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainerIsolateOperationSrc(string $ContainerIsolateOperationSrc) 设置容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContainerStatus() 获取容器状态
 正在运行: RUNNING
 暂停: PAUSED
@@ -140,7 +118,6 @@ use TencentCloud\Common\AbstractModel;
 已经销毁: DESTROYED
 正在重启中: RESTARTING
 迁移中: REMOVING
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainerStatus(string $ContainerStatus) 设置容器状态
 正在运行: RUNNING
 暂停: PAUSED
@@ -149,15 +126,10 @@ use TencentCloud\Common\AbstractModel;
 已经销毁: DESTROYED
 正在重启中: RESTARTING
 迁移中: REMOVING
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getJNDIUrl() 获取接口Url
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJNDIUrl(string $JNDIUrl) 设置接口Url
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRaspDetail() 获取rasp detail
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRaspDetail(array $RaspDetail) 设置rasp detail
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNodeSubNetName() 获取超级节点子网名称
  * @method void setNodeSubNetName(string $NodeSubNetName) 设置超级节点子网名称
  * @method string getNodeSubNetCIDR() 获取超级节点子网网段
@@ -290,49 +262,41 @@ class VulDefenceEventDetail extends AbstractModel
 
     /**
      * @var integer 进程PID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PID;
 
     /**
      * @var string 进程主类名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MainClass;
 
     /**
      * @var string 堆栈信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StackTrace;
 
     /**
      * @var string 监听账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServerAccount;
 
     /**
      * @var string 监听端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServerPort;
 
     /**
      * @var string 进程路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServerExe;
 
     /**
      * @var string 进程命令行参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServerArg;
 
     /**
      * @var string 主机QUUID/超级节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QUUID;
 
@@ -344,7 +308,6 @@ class VulDefenceEventDetail extends AbstractModel
 隔离失败	ISOLATE_FAILED
 解除隔离中  RESTORING
 解除隔离失败 RESTORE_FAILED
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContainerNetStatus;
 
@@ -357,13 +320,11 @@ class VulDefenceEventDetail extends AbstractModel
 	"SHARED_HOST"         // 容器与主机共享网络
 	"RESOURCE_LIMIT"      //隔离操作资源超限
 	"UNKNOW"              // 原因未知
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContainerNetSubStatus;
 
     /**
      * @var string 容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContainerIsolateOperationSrc;
 
@@ -376,19 +337,16 @@ class VulDefenceEventDetail extends AbstractModel
 已经销毁: DESTROYED
 正在重启中: RESTARTING
 迁移中: REMOVING
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContainerStatus;
 
     /**
      * @var string 接口Url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JNDIUrl;
 
     /**
      * @var array rasp detail
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RaspDetail;
 
@@ -470,21 +428,13 @@ class VulDefenceEventDetail extends AbstractModel
      * @param string $OfficialSolution 修复建议
      * @param string $NetworkPayload 攻击包
      * @param integer $PID 进程PID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MainClass 进程主类名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StackTrace 堆栈信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServerAccount 监听账号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServerPort 监听端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServerExe 进程路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServerArg 进程命令行参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $QUUID 主机QUUID/超级节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContainerNetStatus 隔离状态
 未隔离  	NORMAL
 已隔离		ISOLATED
@@ -492,7 +442,6 @@ class VulDefenceEventDetail extends AbstractModel
 隔离失败	ISOLATE_FAILED
 解除隔离中  RESTORING
 解除隔离失败 RESTORE_FAILED
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContainerNetSubStatus 容器子状态
 "AGENT_OFFLINE"       //Agent离线
 	"NODE_DESTROYED"      //节点已销毁
@@ -501,9 +450,7 @@ class VulDefenceEventDetail extends AbstractModel
 	"SHARED_HOST"         // 容器与主机共享网络
 	"RESOURCE_LIMIT"      //隔离操作资源超限
 	"UNKNOW"              // 原因未知
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContainerIsolateOperationSrc 容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContainerStatus 容器状态
 正在运行: RUNNING
 暂停: PAUSED
@@ -512,11 +459,8 @@ class VulDefenceEventDetail extends AbstractModel
 已经销毁: DESTROYED
 正在重启中: RESTARTING
 迁移中: REMOVING
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $JNDIUrl 接口Url
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RaspDetail rasp detail
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NodeSubNetName 超级节点子网名称
      * @param string $NodeSubNetCIDR 超级节点子网网段
      * @param string $PodIP pod ip

@@ -43,9 +43,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getModifyTime() 获取最后修改时间
  * @method void setModifyTime(string $ModifyTime) 设置最后修改时间
  * @method string getUsrDomainName() 获取域名名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsrDomainName(string $UsrDomainName) 设置域名名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SchedulingDomainInfo extends AbstractModel
 {
@@ -90,7 +88,6 @@ class SchedulingDomainInfo extends AbstractModel
 
     /**
      * @var string 域名名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UsrDomainName;
 
@@ -107,7 +104,6 @@ class SchedulingDomainInfo extends AbstractModel
      * @param string $CreatedTime 创建时间
      * @param string $ModifyTime 最后修改时间
      * @param string $UsrDomainName 域名名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

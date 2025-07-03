@@ -30,10 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method string getGroupDesc() 获取部署组描述
  * @method void setGroupDesc(string $GroupDesc) 设置部署组描述
- * @method string getGroupResourceType() 获取部署组资源类型
- * @method void setGroupResourceType(string $GroupResourceType) 设置部署组资源类型
+ * @method string getGroupResourceType() 获取部署组资源类型；DEF 表示默认资源类型；GW 表示网关资源类型
+ * @method void setGroupResourceType(string $GroupResourceType) 设置部署组资源类型；DEF 表示默认资源类型；GW 表示网关资源类型
  * @method string getAlias() 获取部署组备注
  * @method void setAlias(string $Alias) 设置部署组备注
+ * @method array getTags() 获取标签列表
+ * @method void setTags(array $Tags) 设置标签列表
  */
 class CreateGroupRequest extends AbstractModel
 {
@@ -63,7 +65,7 @@ class CreateGroupRequest extends AbstractModel
     public $GroupDesc;
 
     /**
-     * @var string 部署组资源类型
+     * @var string 部署组资源类型；DEF 表示默认资源类型；GW 表示网关资源类型
      */
     public $GroupResourceType;
 
@@ -73,13 +75,19 @@ class CreateGroupRequest extends AbstractModel
     public $Alias;
 
     /**
+     * @var array 标签列表
+     */
+    public $Tags;
+
+    /**
      * @param string $ApplicationId 部署组所属的应用ID
      * @param string $NamespaceId 部署组所属命名空间ID
      * @param string $GroupName 部署组名称
      * @param string $ClusterId 集群ID
      * @param string $GroupDesc 部署组描述
-     * @param string $GroupResourceType 部署组资源类型
+     * @param string $GroupResourceType 部署组资源类型；DEF 表示默认资源类型；GW 表示网关资源类型
      * @param string $Alias 部署组备注
+     * @param array $Tags 标签列表
      */
     function __construct()
     {
@@ -120,6 +128,15 @@ class CreateGroupRequest extends AbstractModel
 
         if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
             $this->Alias = $param["Alias"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

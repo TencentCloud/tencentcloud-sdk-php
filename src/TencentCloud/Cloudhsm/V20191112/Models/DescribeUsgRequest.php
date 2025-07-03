@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，当Offset和Limit均为0时将一次性返回用户所有的安全组列表。
  * @method integer getLimit() 获取返回量，当Offset和Limit均为0时将一次性返回用户所有的安全组列表。
  * @method void setLimit(integer $Limit) 设置返回量，当Offset和Limit均为0时将一次性返回用户所有的安全组列表。
- * @method string getSearchWord() 获取搜索关键字
- * @method void setSearchWord(string $SearchWord) 设置搜索关键字
+ * @method string getSearchWord() 获取过滤条件，支持安全组id
+ * @method void setSearchWord(string $SearchWord) 设置过滤条件，支持安全组id
  */
 class DescribeUsgRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DescribeUsgRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 搜索关键字
+     * @var string 过滤条件，支持安全组id
      */
     public $SearchWord;
 
     /**
      * @param integer $Offset 偏移量，当Offset和Limit均为0时将一次性返回用户所有的安全组列表。
      * @param integer $Limit 返回量，当Offset和Limit均为0时将一次性返回用户所有的安全组列表。
-     * @param string $SearchWord 搜索关键字
+     * @param string $SearchWord 过滤条件，支持安全组id
      */
     function __construct()
     {

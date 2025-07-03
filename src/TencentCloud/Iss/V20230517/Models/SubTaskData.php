@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getStatus() 获取任务状态1:NEW,2:RUNNING,3:COMPLETED ,4:FAILED
  * @method void setStatus(integer $Status) 设置任务状态1:NEW,2:RUNNING,3:COMPLETED ,4:FAILED
  * @method string getFailReason() 获取任务失败原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailReason(string $FailReason) 设置任务失败原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getProgress() 获取任务进度
  * @method void setProgress(float $Progress) 设置任务进度
  * @method string getAction() 获取操作类型
@@ -45,21 +43,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getRuntime() 获取任务运行时间，单位ms
  * @method void setRuntime(integer $Runtime) 设置任务运行时间，单位ms
  * @method string getDeviceId() 获取设备ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceId(string $DeviceId) 设置设备ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeviceName() 获取设备名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceName(string $DeviceName) 设置设备名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getChannelId() 获取通道ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChannelId(string $ChannelId) 设置通道ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getChannelName() 获取通道名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChannelName(string $ChannelName) 设置通道名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SubTaskData extends AbstractModel
 {
@@ -75,7 +65,6 @@ class SubTaskData extends AbstractModel
 
     /**
      * @var string 任务失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailReason;
 
@@ -121,25 +110,21 @@ class SubTaskData extends AbstractModel
 
     /**
      * @var string 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceId;
 
     /**
      * @var string 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceName;
 
     /**
      * @var string 通道ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChannelId;
 
     /**
      * @var string 通道名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChannelName;
 
@@ -147,7 +132,6 @@ class SubTaskData extends AbstractModel
      * @param string $SubTaskId 子任务ID
      * @param integer $Status 任务状态1:NEW,2:RUNNING,3:COMPLETED ,4:FAILED
      * @param string $FailReason 任务失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Progress 任务进度
      * @param string $Action 操作类型
      * @param string $ActionZhDesc 操作类型中文描述
@@ -157,13 +141,9 @@ class SubTaskData extends AbstractModel
      * @param string $UpdatedAt 更新任务时间
      * @param integer $Runtime 任务运行时间，单位ms
      * @param string $DeviceId 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceName 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChannelId 通道ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChannelName 通道名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

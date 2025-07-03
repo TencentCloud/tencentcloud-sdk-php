@@ -41,14 +41,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getExpireTime() 获取到期时间
  * @method void setExpireTime(string $ExpireTime) 设置到期时间
  * @method string getHostId() 获取宿主机id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostId(string $HostId) 设置宿主机id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class HostInfo extends AbstractModel
 {
     /**
      * @var string 宿主机IP（废弃）
+     * @deprecated
      */
     public $HostIp;
 
@@ -99,7 +98,6 @@ class HostInfo extends AbstractModel
 
     /**
      * @var string 宿主机id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostId;
 
@@ -115,7 +113,6 @@ class HostInfo extends AbstractModel
      * @param string $RunTime 运行时间
      * @param string $ExpireTime 到期时间
      * @param string $HostId 宿主机id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

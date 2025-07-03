@@ -67,57 +67,37 @@ use TencentCloud\Common\AbstractModel;
  * @method string getModifyDate() 获取修改时间
  * @method void setModifyDate(string $ModifyDate) 设置修改时间
  * @method array getStorageMountConfs() 获取挂载配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStorageMountConfs(array $StorageMountConfs) 设置挂载配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVersionName() 获取版本名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersionName(string $VersionName) 设置版本名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method LogOutputConf getLogOutputConf() 获取日志输出配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogOutputConf(LogOutputConf $LogOutputConf) 设置日志输出配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApplicationName() 获取服务名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationName(string $ApplicationName) 设置服务名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApplicationDescription() 获取服务描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationDescription(string $ApplicationDescription) 设置服务描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEnvironmentName() 获取环境名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnvironmentName(string $EnvironmentName) 设置环境名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEnvironmentId() 获取环境ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnvironmentId(string $EnvironmentId) 设置环境ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPublicDomain() 获取公网地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicDomain(string $PublicDomain) 设置公网地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getEnablePublicAccess() 获取是否开通公网访问
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnablePublicAccess(boolean $EnablePublicAccess) 设置是否开通公网访问
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCurrentInstances() 获取现有的实例
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCurrentInstances(integer $CurrentInstances) 设置现有的实例
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getExpectedInstances() 获取期望的实例
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpectedInstances(integer $ExpectedInstances) 设置期望的实例
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCodingLanguage() 获取编程语言
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCodingLanguage(string $CodingLanguage) 设置编程语言
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPkgName() 获取程序包名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPkgName(string $PkgName) 设置程序包名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEsEnable() 获取是否启用弹性伸缩
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEsEnable(integer $EsEnable) 设置是否启用弹性伸缩
@@ -127,53 +107,33 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEsStrategy(integer $EsStrategy) 设置弹性策略
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getImageTag() 获取镜像tag
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageTag(string $ImageTag) 设置镜像tag
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLogEnable() 获取是否启用log
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogEnable(integer $LogEnable) 设置是否启用log
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMinAliveInstances() 获取最小实例数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMinAliveInstances(string $MinAliveInstances) 设置最小实例数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSecurityGroupIds() 获取安全组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getImageCommand() 获取镜像命令
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageCommand(string $ImageCommand) 设置镜像命令
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getImageArgs() 获取镜像命令参数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageArgs(array $ImageArgs) 设置镜像命令参数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getUseRegistryDefaultConfig() 获取是否使用默认注册中心配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUseRegistryDefaultConfig(boolean $UseRegistryDefaultConfig) 设置是否使用默认注册中心配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method EksService getService() 获取eks 访问设置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setService(EksService $Service) 设置eks 访问设置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSettingConfs() 获取挂载配置信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSettingConfs(array $SettingConfs) 设置挂载配置信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLogConfs() 获取log path数组信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogConfs(array $LogConfs) 设置log path数组信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPostStart() 获取启动后立即执行的脚本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPostStart(string $PostStart) 设置启动后立即执行的脚本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPreStop() 获取停止前执行的脚本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPreStop(string $PreStop) 设置停止前执行的脚本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method HealthCheckConfig getLiveness() 获取存活探针配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLiveness(HealthCheckConfig $Liveness) 设置存活探针配置
@@ -183,61 +143,33 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReadiness(HealthCheckConfig $Readiness) 设置就绪探针配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getHorizontalAutoscaler() 获取弹性策略
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHorizontalAutoscaler(array $HorizontalAutoscaler) 设置弹性策略
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCronHorizontalAutoscaler() 获取定时弹性策略
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCronHorizontalAutoscaler(array $CronHorizontalAutoscaler) 设置定时弹性策略
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getZones() 获取应用实际可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZones(array $Zones) 设置应用实际可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLastDeployDate() 获取最新部署时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastDeployDate(string $LastDeployDate) 设置最新部署时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLastDeploySuccessDate() 获取最新部署成功时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastDeploySuccessDate(string $LastDeploySuccessDate) 设置最新部署成功时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getNodeInfos() 获取应用所在node信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodeInfos(array $NodeInfos) 设置应用所在node信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getImageType() 获取image类型 -0 为demo -1为正常image
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageType(integer $ImageType) 设置image类型 -0 为demo -1为正常image
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEnableTracing() 获取是否启用调用链组件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableTracing(integer $EnableTracing) 设置是否启用调用链组件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEnableTracingReport() 获取是否开启调用链上报，只有 EnableTracing=1 时生效（参数已弃用）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableTracingReport(integer $EnableTracingReport) 设置是否开启调用链上报，只有 EnableTracing=1 时生效（参数已弃用）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRepoType() 获取镜像类型：0-个人镜像、1-企业镜像、2-公有镜像
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRepoType(integer $RepoType) 设置镜像类型：0-个人镜像、1-企业镜像、2-公有镜像
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBatchDeployStatus() 获取分批发布子状态：batch_updating、batch_updating_waiting_confirm
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBatchDeployStatus(string $BatchDeployStatus) 设置分批发布子状态：batch_updating、batch_updating_waiting_confirm
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApmInstanceId() 获取APM 资源 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApmInstanceId(string $ApmInstanceId) 设置APM 资源 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method WorkloadInfo getWorkloadInfo() 获取工作负载信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWorkloadInfo(WorkloadInfo $WorkloadInfo) 设置工作负载信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getSpeedUp() 获取是否启用应用加速
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpeedUp(boolean $SpeedUp) 设置是否启用应用加速
-注意：此字段可能返回 null，表示取不到有效值。
  * @method HealthCheckConfig getStartupProbe() 获取启动检测探针配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartupProbe(HealthCheckConfig $StartupProbe) 设置启动检测探针配置
@@ -245,97 +177,59 @@ use TencentCloud\Common\AbstractModel;
  * @method string getOsFlavour() 获取操作系统版本，可选参数：
 - ALPINE
 - CENTOS
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOsFlavour(string $OsFlavour) 设置操作系统版本，可选参数：
 - ALPINE
 - CENTOS
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRepoServer() 获取镜像仓库server
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRepoServer(string $RepoServer) 设置镜像仓库server
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getUnderDeploying() 获取是否正在发布中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnderDeploying(boolean $UnderDeploying) 设置是否正在发布中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method EnablePrometheusConf getEnablePrometheusConf() 获取监控业务指标监控
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnablePrometheusConf(EnablePrometheusConf $EnablePrometheusConf) 设置监控业务指标监控
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getStoppedManually() 获取是否为手动停止
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStoppedManually(boolean $StoppedManually) 设置是否为手动停止
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTcrInstanceId() 获取tcr实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTcrInstanceId(string $TcrInstanceId) 设置tcr实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEnableMetrics() 获取1：开始自动metrics采集（open-telemetry）；
 0：关闭metrics采集；
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableMetrics(integer $EnableMetrics) 设置1：开始自动metrics采集（open-telemetry）；
 0：关闭metrics采集；
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAppId() 获取用户AppId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppId(string $AppId) 设置用户AppId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubAccountUin() 获取用户SubAccountUin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubAccountUin(string $SubAccountUin) 设置用户SubAccountUin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUin() 获取用户Uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUin(string $Uin) 设置用户Uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegion() 获取地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupId() 获取应用分组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupId(string $GroupId) 设置应用分组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEnableRegistry() 获取是否启用注册中心
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableRegistry(integer $EnableRegistry) 设置是否启用注册中心
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAutoscalerList() 获取弹性伸缩数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoscalerList(array $AutoscalerList) 设置弹性伸缩数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifier() 获取修改人
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifier(string $Modifier) 设置修改人
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreator() 获取创建人
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreator(string $Creator) 设置创建人
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DeployStrategyConf getDeployStrategyConf() 获取部署策略
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeployStrategyConf(DeployStrategyConf $DeployStrategyConf) 设置部署策略
 注意：此字段可能返回 null，表示取不到有效值。
  * @method DescribeRunPodPage getPodList() 获取实例列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPodList(DescribeRunPodPage $PodList) 设置实例列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getConfEdited() 获取发布时配置是否有修改
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfEdited(boolean $ConfEdited) 设置发布时配置是否有修改
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPreStopEncoded() 获取是否编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPreStopEncoded(string $PreStopEncoded) 设置是否编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPostStartEncoded() 获取是否编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPostStartEncoded(string $PostStartEncoded) 设置是否编码
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TemServiceVersionInfo extends AbstractModel
 {
@@ -452,13 +346,11 @@ class TemServiceVersionInfo extends AbstractModel
 
     /**
      * @var array 挂载配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StorageMountConfs;
 
     /**
      * @var string 版本名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VersionName;
 
@@ -470,31 +362,26 @@ class TemServiceVersionInfo extends AbstractModel
 
     /**
      * @var string 服务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationName;
 
     /**
      * @var string 服务描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationDescription;
 
     /**
      * @var string 环境名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnvironmentName;
 
     /**
      * @var string 环境ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnvironmentId;
 
     /**
      * @var string 公网地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicDomain;
 
@@ -506,7 +393,6 @@ class TemServiceVersionInfo extends AbstractModel
 
     /**
      * @var integer 现有的实例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CurrentInstances;
 
@@ -518,13 +404,11 @@ class TemServiceVersionInfo extends AbstractModel
 
     /**
      * @var string 编程语言
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CodingLanguage;
 
     /**
      * @var string 程序包名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PkgName;
 
@@ -542,7 +426,6 @@ class TemServiceVersionInfo extends AbstractModel
 
     /**
      * @var string 镜像tag
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageTag;
 
@@ -554,19 +437,16 @@ class TemServiceVersionInfo extends AbstractModel
 
     /**
      * @var string 最小实例数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MinAliveInstances;
 
     /**
      * @var array 安全组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecurityGroupIds;
 
     /**
      * @var string 镜像命令
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageCommand;
 
@@ -578,37 +458,31 @@ class TemServiceVersionInfo extends AbstractModel
 
     /**
      * @var boolean 是否使用默认注册中心配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UseRegistryDefaultConfig;
 
     /**
      * @var EksService eks 访问设置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Service;
 
     /**
      * @var array 挂载配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SettingConfs;
 
     /**
      * @var array log path数组信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogConfs;
 
     /**
      * @var string 启动后立即执行的脚本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PostStart;
 
     /**
      * @var string 停止前执行的脚本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PreStop;
 
@@ -626,85 +500,71 @@ class TemServiceVersionInfo extends AbstractModel
 
     /**
      * @var array 弹性策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HorizontalAutoscaler;
 
     /**
      * @var array 定时弹性策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CronHorizontalAutoscaler;
 
     /**
      * @var array 应用实际可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Zones;
 
     /**
      * @var string 最新部署时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastDeployDate;
 
     /**
      * @var string 最新部署成功时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastDeploySuccessDate;
 
     /**
      * @var array 应用所在node信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeInfos;
 
     /**
      * @var integer image类型 -0 为demo -1为正常image
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageType;
 
     /**
      * @var integer 是否启用调用链组件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableTracing;
 
     /**
      * @var integer 是否开启调用链上报，只有 EnableTracing=1 时生效（参数已弃用）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableTracingReport;
 
     /**
      * @var integer 镜像类型：0-个人镜像、1-企业镜像、2-公有镜像
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RepoType;
 
     /**
      * @var string 分批发布子状态：batch_updating、batch_updating_waiting_confirm
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BatchDeployStatus;
 
     /**
      * @var string APM 资源 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApmInstanceId;
 
     /**
      * @var WorkloadInfo 工作负载信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkloadInfo;
 
     /**
      * @var boolean 是否启用应用加速
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SpeedUp;
 
@@ -718,19 +578,16 @@ class TemServiceVersionInfo extends AbstractModel
      * @var string 操作系统版本，可选参数：
 - ALPINE
 - CENTOS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OsFlavour;
 
     /**
      * @var string 镜像仓库server
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RepoServer;
 
     /**
      * @var boolean 是否正在发布中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UnderDeploying;
 
@@ -742,74 +599,62 @@ class TemServiceVersionInfo extends AbstractModel
 
     /**
      * @var boolean 是否为手动停止
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StoppedManually;
 
     /**
      * @var string tcr实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TcrInstanceId;
 
     /**
      * @var integer 1：开始自动metrics采集（open-telemetry）；
 0：关闭metrics采集；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableMetrics;
 
     /**
      * @var string 用户AppId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppId;
 
     /**
      * @var string 用户SubAccountUin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubAccountUin;
 
     /**
      * @var string 用户Uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uin;
 
     /**
      * @var string 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
      * @var string 应用分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupId;
 
     /**
      * @var integer 是否启用注册中心
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableRegistry;
 
     /**
      * @var array 弹性伸缩数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoscalerList;
 
     /**
      * @var string 修改人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Modifier;
 
     /**
      * @var string 创建人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Creator;
 
@@ -821,7 +666,6 @@ class TemServiceVersionInfo extends AbstractModel
 
     /**
      * @var DescribeRunPodPage 实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PodList;
 
@@ -833,19 +677,16 @@ class TemServiceVersionInfo extends AbstractModel
 
     /**
      * @var array 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
      * @var string 是否编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PreStopEncoded;
 
     /**
      * @var string 是否编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PostStartEncoded;
 
@@ -874,140 +715,87 @@ class TemServiceVersionInfo extends AbstractModel
      * @param string $CreateDate 创建时间
      * @param string $ModifyDate 修改时间
      * @param array $StorageMountConfs 挂载配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VersionName 版本名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogOutputConf $LogOutputConf 日志输出配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationName 服务名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationDescription 服务描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EnvironmentName 环境名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EnvironmentId 环境ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PublicDomain 公网地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $EnablePublicAccess 是否开通公网访问
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CurrentInstances 现有的实例
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ExpectedInstances 期望的实例
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CodingLanguage 编程语言
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PkgName 程序包名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EsEnable 是否启用弹性伸缩
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EsStrategy 弹性策略
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ImageTag 镜像tag
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LogEnable 是否启用log
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MinAliveInstances 最小实例数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SecurityGroupIds 安全组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ImageCommand 镜像命令
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ImageArgs 镜像命令参数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $UseRegistryDefaultConfig 是否使用默认注册中心配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EksService $Service eks 访问设置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SettingConfs 挂载配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $LogConfs log path数组信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PostStart 启动后立即执行的脚本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PreStop 停止前执行的脚本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HealthCheckConfig $Liveness 存活探针配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param HealthCheckConfig $Readiness 就绪探针配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $HorizontalAutoscaler 弹性策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CronHorizontalAutoscaler 定时弹性策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Zones 应用实际可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastDeployDate 最新部署时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastDeploySuccessDate 最新部署成功时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $NodeInfos 应用所在node信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ImageType image类型 -0 为demo -1为正常image
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EnableTracing 是否启用调用链组件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EnableTracingReport 是否开启调用链上报，只有 EnableTracing=1 时生效（参数已弃用）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RepoType 镜像类型：0-个人镜像、1-企业镜像、2-公有镜像
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BatchDeployStatus 分批发布子状态：batch_updating、batch_updating_waiting_confirm
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApmInstanceId APM 资源 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WorkloadInfo $WorkloadInfo 工作负载信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $SpeedUp 是否启用应用加速
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HealthCheckConfig $StartupProbe 启动检测探针配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OsFlavour 操作系统版本，可选参数：
 - ALPINE
 - CENTOS
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RepoServer 镜像仓库server
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $UnderDeploying 是否正在发布中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnablePrometheusConf $EnablePrometheusConf 监控业务指标监控
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $StoppedManually 是否为手动停止
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TcrInstanceId tcr实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EnableMetrics 1：开始自动metrics采集（open-telemetry）；
 0：关闭metrics采集；
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AppId 用户AppId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubAccountUin 用户SubAccountUin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uin 用户Uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupId 应用分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EnableRegistry 是否启用注册中心
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AutoscalerList 弹性伸缩数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Modifier 修改人
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Creator 创建人
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DeployStrategyConf $DeployStrategyConf 部署策略
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DescribeRunPodPage $PodList 实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $ConfEdited 发布时配置是否有修改
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PreStopEncoded 是否编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PostStartEncoded 是否编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

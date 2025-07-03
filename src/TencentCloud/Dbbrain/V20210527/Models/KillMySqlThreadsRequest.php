@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSqlExecId(string $SqlExecId) 设置执行ID，此参数用于Commit阶段。
  * @method string getProduct() 获取服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
  * @method void setProduct(string $Product) 设置服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
- * @method boolean getRecordHistory() 获取默认是ture, 记录下kill的记录，为了加快kill，可设置为false。
- * @method void setRecordHistory(boolean $RecordHistory) 设置默认是ture, 记录下kill的记录，为了加快kill，可设置为false。
+ * @method boolean getRecordHistory() 获取默认是true，会记录下kill的记录；该参数为true, 则在kill操作前校验目标会话是否存在，存在则继续kill，否则取消kill。为了加快kill速度，可设置为false。
+ * @method void setRecordHistory(boolean $RecordHistory) 设置默认是true，会记录下kill的记录；该参数为true, 则在kill操作前校验目标会话是否存在，存在则继续kill，否则取消kill。为了加快kill速度，可设置为false。
  */
 class KillMySqlThreadsRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class KillMySqlThreadsRequest extends AbstractModel
     public $Product;
 
     /**
-     * @var boolean 默认是ture, 记录下kill的记录，为了加快kill，可设置为false。
+     * @var boolean 默认是true，会记录下kill的记录；该参数为true, 则在kill操作前校验目标会话是否存在，存在则继续kill，否则取消kill。为了加快kill速度，可设置为false。
      */
     public $RecordHistory;
 
@@ -71,7 +71,7 @@ class KillMySqlThreadsRequest extends AbstractModel
      * @param array $Threads 需要kill的sql会话ID列表，此参数用于Prepare阶段。
      * @param string $SqlExecId 执行ID，此参数用于Commit阶段。
      * @param string $Product 服务产品类型，支持值包括： "mysql" - 云数据库 MySQL， "cynosdb" - 云数据库 CynosDB  for MySQL，默认为"mysql"。
-     * @param boolean $RecordHistory 默认是ture, 记录下kill的记录，为了加快kill，可设置为false。
+     * @param boolean $RecordHistory 默认是true，会记录下kill的记录；该参数为true, 则在kill操作前校验目标会话是否存在，存在则继续kill，否则取消kill。为了加快kill速度，可设置为false。
      */
     function __construct()
     {

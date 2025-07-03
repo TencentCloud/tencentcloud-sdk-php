@@ -18,22 +18,34 @@ namespace TencentCloud\Tmt\V20180321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 查询文件翻译任务
+ * 文件翻译任务结果
  *
  * @method string getTaskId() 获取任务ID
  * @method void setTaskId(string $TaskId) 设置任务ID
- * @method string getStatus() 获取状态
- * @method void setStatus(string $Status) 设置状态
- * @method string getFileData() 获取文件数据
+ * @method string getStatus() 获取任务状态
+
+- init：任务已初始化
+- wait：任务等待执行
+- success：任务执行成功
+- fail：任务执行失败
+ * @method void setStatus(string $Status) 设置任务状态
+
+- init：任务已初始化
+- wait：任务等待执行
+- success：任务执行成功
+- fail：任务执行失败
+ * @method string getFileData() 获取文件数据，目标文件必须小于50M，否则请通过回调方式请求文件翻译接口
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFileData(string $FileData) 设置文件数据
+ * @method void setFileData(string $FileData) 设置文件数据，目标文件必须小于50M，否则请通过回调方式请求文件翻译接口
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMessage() 获取错误提示
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置错误提示
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getProgress() 获取翻译进度
- * @method void setProgress(integer $Progress) 设置翻译进度
+ * @method integer getProgress() 获取任务进度
+ * @method void setProgress(integer $Progress) 设置任务进度
+ * @method integer getUsedAmount() 获取本次翻译消耗的字符数	
+ * @method void setUsedAmount(integer $UsedAmount) 设置本次翻译消耗的字符数	
  */
 class GetFileTranslateData extends AbstractModel
 {
@@ -43,12 +55,17 @@ class GetFileTranslateData extends AbstractModel
     public $TaskId;
 
     /**
-     * @var string 状态
+     * @var string 任务状态
+
+- init：任务已初始化
+- wait：任务等待执行
+- success：任务执行成功
+- fail：任务执行失败
      */
     public $Status;
 
     /**
-     * @var string 文件数据
+     * @var string 文件数据，目标文件必须小于50M，否则请通过回调方式请求文件翻译接口
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileData;
@@ -60,18 +77,29 @@ class GetFileTranslateData extends AbstractModel
     public $Message;
 
     /**
-     * @var integer 翻译进度
+     * @var integer 任务进度
      */
     public $Progress;
 
     /**
+     * @var integer 本次翻译消耗的字符数	
+     */
+    public $UsedAmount;
+
+    /**
      * @param string $TaskId 任务ID
-     * @param string $Status 状态
-     * @param string $FileData 文件数据
+     * @param string $Status 任务状态
+
+- init：任务已初始化
+- wait：任务等待执行
+- success：任务执行成功
+- fail：任务执行失败
+     * @param string $FileData 文件数据，目标文件必须小于50M，否则请通过回调方式请求文件翻译接口
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message 错误提示
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Progress 翻译进度
+     * @param integer $Progress 任务进度
+     * @param integer $UsedAmount 本次翻译消耗的字符数	
      */
     function __construct()
     {
@@ -104,6 +132,10 @@ class GetFileTranslateData extends AbstractModel
 
         if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
             $this->Progress = $param["Progress"];
+        }
+
+        if (array_key_exists("UsedAmount",$param) and $param["UsedAmount"] !== null) {
+            $this->UsedAmount = $param["UsedAmount"];
         }
     }
 }

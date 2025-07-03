@@ -33,9 +33,7 @@ use TencentCloud\Common\AbstractModel;
  * @method Bundle getBundle() 获取套餐信息。
  * @method void setBundle(Bundle $Bundle) 设置套餐信息。
  * @method string getNotSupportModifyMessage() 获取不支持套餐变更原因信息。变更套餐状态为"AVAILABLE"时, 该信息为空
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNotSupportModifyMessage(string $NotSupportModifyMessage) 设置不支持套餐变更原因信息。变更套餐状态为"AVAILABLE"时, 该信息为空
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ModifyBundle extends AbstractModel
 {
@@ -59,7 +57,6 @@ class ModifyBundle extends AbstractModel
 
     /**
      * @var string 不支持套餐变更原因信息。变更套餐状态为"AVAILABLE"时, 该信息为空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NotSupportModifyMessage;
 
@@ -71,7 +68,6 @@ class ModifyBundle extends AbstractModel
 <li>UNAVAILABLE：暂不支持套餐变更</li>
      * @param Bundle $Bundle 套餐信息。
      * @param string $NotSupportModifyMessage 不支持套餐变更原因信息。变更套餐状态为"AVAILABLE"时, 该信息为空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

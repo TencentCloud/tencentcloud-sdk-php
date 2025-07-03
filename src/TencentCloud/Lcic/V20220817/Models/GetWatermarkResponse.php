@@ -21,21 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * GetWatermark返回参数结构体
  *
  * @method WatermarkConfig getTeacherLogo() 获取老师视频区域的水印参数配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTeacherLogo(WatermarkConfig $TeacherLogo) 设置老师视频区域的水印参数配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method WatermarkConfig getBoardLogo() 获取白板区域的水印参数配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBoardLogo(WatermarkConfig $BoardLogo) 设置白板区域的水印参数配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BackgroundPictureConfig getBackgroundPicture() 获取背景图片配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackgroundPicture(BackgroundPictureConfig $BackgroundPicture) 设置背景图片配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method TextMarkConfig getText() 获取文字水印配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setText(TextMarkConfig $Text) 设置文字水印配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -43,25 +35,21 @@ class GetWatermarkResponse extends AbstractModel
 {
     /**
      * @var WatermarkConfig 老师视频区域的水印参数配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TeacherLogo;
 
     /**
      * @var WatermarkConfig 白板区域的水印参数配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BoardLogo;
 
     /**
      * @var BackgroundPictureConfig 背景图片配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BackgroundPicture;
 
     /**
      * @var TextMarkConfig 文字水印配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Text;
 
@@ -72,13 +60,9 @@ class GetWatermarkResponse extends AbstractModel
 
     /**
      * @param WatermarkConfig $TeacherLogo 老师视频区域的水印参数配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WatermarkConfig $BoardLogo 白板区域的水印参数配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BackgroundPictureConfig $BackgroundPicture 背景图片配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TextMarkConfig $Text 文字水印配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

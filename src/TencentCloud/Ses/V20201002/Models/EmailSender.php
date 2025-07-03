@@ -23,13 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEmailAddress() 获取发信地址
  * @method void setEmailAddress(string $EmailAddress) 设置发信地址
  * @method string getEmailSenderName() 获取发信人别名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEmailSenderName(string $EmailSenderName) 设置发信人别名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreatedTimestamp() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedTimestamp(integer $CreatedTimestamp) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSmtpPwdType() 获取smtp密码类型,0=没有设置密码,1=已经设置了密码
+ * @method void setSmtpPwdType(integer $SmtpPwdType) 设置smtp密码类型,0=没有设置密码,1=已经设置了密码
  */
 class EmailSender extends AbstractModel
 {
@@ -40,22 +38,24 @@ class EmailSender extends AbstractModel
 
     /**
      * @var string 发信人别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EmailSenderName;
 
     /**
      * @var integer 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedTimestamp;
 
     /**
+     * @var integer smtp密码类型,0=没有设置密码,1=已经设置了密码
+     */
+    public $SmtpPwdType;
+
+    /**
      * @param string $EmailAddress 发信地址
      * @param string $EmailSenderName 发信人别名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreatedTimestamp 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SmtpPwdType smtp密码类型,0=没有设置密码,1=已经设置了密码
      */
     function __construct()
     {
@@ -80,6 +80,10 @@ class EmailSender extends AbstractModel
 
         if (array_key_exists("CreatedTimestamp",$param) and $param["CreatedTimestamp"] !== null) {
             $this->CreatedTimestamp = $param["CreatedTimestamp"];
+        }
+
+        if (array_key_exists("SmtpPwdType",$param) and $param["SmtpPwdType"] !== null) {
+            $this->SmtpPwdType = $param["SmtpPwdType"];
         }
     }
 }

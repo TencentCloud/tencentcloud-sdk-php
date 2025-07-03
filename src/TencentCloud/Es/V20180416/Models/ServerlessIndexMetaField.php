@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIndexName(string $IndexName) 设置索引名
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIndexMetaJson() 获取索引元数据JSON
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIndexMetaJson(string $IndexMetaJson) 设置索引元数据JSON
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIndexDocs() 获取索引文档数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIndexDocs(integer $IndexDocs) 设置索引文档数
@@ -86,6 +90,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTagList() 获取标签信息
  * @method void setTagList(array $TagList) 设置标签信息
+ * @method float getIndexTraffic() 获取索引流量，单位byte
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIndexTraffic(float $IndexTraffic) 设置索引流量，单位byte
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServerlessIndexMetaField extends AbstractModel
 {
@@ -100,6 +108,12 @@ class ServerlessIndexMetaField extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IndexName;
+
+    /**
+     * @var string 索引元数据JSON
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IndexMetaJson;
 
     /**
      * @var integer 索引文档数
@@ -191,9 +205,17 @@ class ServerlessIndexMetaField extends AbstractModel
     public $TagList;
 
     /**
+     * @var float 索引流量，单位byte
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IndexTraffic;
+
+    /**
      * @param integer $AppId 索引所属集群APP ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IndexName 索引名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IndexMetaJson 索引元数据JSON
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IndexDocs 索引文档数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -224,6 +246,8 @@ class ServerlessIndexMetaField extends AbstractModel
      * @param integer $StorageType 存储类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TagList 标签信息
+     * @param float $IndexTraffic 索引流量，单位byte
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -244,6 +268,10 @@ class ServerlessIndexMetaField extends AbstractModel
 
         if (array_key_exists("IndexName",$param) and $param["IndexName"] !== null) {
             $this->IndexName = $param["IndexName"];
+        }
+
+        if (array_key_exists("IndexMetaJson",$param) and $param["IndexMetaJson"] !== null) {
+            $this->IndexMetaJson = $param["IndexMetaJson"];
         }
 
         if (array_key_exists("IndexDocs",$param) and $param["IndexDocs"] !== null) {
@@ -312,6 +340,10 @@ class ServerlessIndexMetaField extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagList, $obj);
             }
+        }
+
+        if (array_key_exists("IndexTraffic",$param) and $param["IndexTraffic"] !== null) {
+            $this->IndexTraffic = $param["IndexTraffic"];
         }
     }
 }

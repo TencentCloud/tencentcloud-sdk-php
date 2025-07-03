@@ -29,13 +29,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTaskGroupActionOrder() 获取分组动作顺序
  * @method void setTaskGroupActionOrder(integer $TaskGroupActionOrder) 设置分组动作顺序
  * @method string getTaskGroupActionGeneralConfiguration() 获取分组动作通用配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskGroupActionGeneralConfiguration(string $TaskGroupActionGeneralConfiguration) 设置分组动作通用配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTaskGroupActionCustomConfiguration() 获取分组动作自定义配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskGroupActionCustomConfiguration(string $TaskGroupActionCustomConfiguration) 设置分组动作自定义配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTaskGroupActionStatus() 获取分组动作状态
  * @method void setTaskGroupActionStatus(integer $TaskGroupActionStatus) 设置分组动作状态
  * @method string getTaskGroupActionCreateTime() 获取动作分组创建时间
@@ -47,41 +43,25 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTaskGroupActionStatusType() 获取状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止，4--跳过
  * @method void setTaskGroupActionStatusType(integer $TaskGroupActionStatusType) 设置状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止，4--跳过
  * @method integer getTaskGroupActionRandomId() 获取RandomId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskGroupActionRandomId(integer $TaskGroupActionRandomId) 设置RandomId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTaskGroupActionRecoverId() 获取RecoverId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskGroupActionRecoverId(integer $TaskGroupActionRecoverId) 设置RecoverId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTaskGroupActionExecuteId() 获取ExecuteId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskGroupActionExecuteId(integer $TaskGroupActionExecuteId) 设置ExecuteId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getActionApiType() 获取调用api类型，0:tat, 1:云api
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActionApiType(integer $ActionApiType) 设置调用api类型，0:tat, 1:云api
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getActionAttribute() 获取1:故障，2:恢复
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActionAttribute(integer $ActionAttribute) 设置1:故障，2:恢复
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getActionType() 获取动作类型：平台、自定义
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActionType(string $ActionType) 设置动作类型：平台、自定义
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsExecuteRedo() 获取是否可重试
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsExecuteRedo(boolean $IsExecuteRedo) 设置是否可重试
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getActionRisk() 获取动作风险级别
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActionRisk(string $ActionRisk) 设置动作风险级别
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTaskGroupActionExecuteTime() 获取动作运行时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskGroupActionExecuteTime(integer $TaskGroupActionExecuteTime) 设置动作运行时间
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTaskGroupActionStartTime() 获取动作开始执行时间
+ * @method void setTaskGroupActionStartTime(string $TaskGroupActionStartTime) 设置动作开始执行时间
  */
 class TaskGroupAction extends AbstractModel
 {
@@ -107,13 +87,11 @@ class TaskGroupAction extends AbstractModel
 
     /**
      * @var string 分组动作通用配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskGroupActionGeneralConfiguration;
 
     /**
      * @var string 分组动作自定义配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskGroupActionCustomConfiguration;
 
@@ -144,57 +122,53 @@ class TaskGroupAction extends AbstractModel
 
     /**
      * @var integer RandomId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskGroupActionRandomId;
 
     /**
      * @var integer RecoverId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskGroupActionRecoverId;
 
     /**
      * @var integer ExecuteId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskGroupActionExecuteId;
 
     /**
      * @var integer 调用api类型，0:tat, 1:云api
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActionApiType;
 
     /**
      * @var integer 1:故障，2:恢复
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActionAttribute;
 
     /**
      * @var string 动作类型：平台、自定义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActionType;
 
     /**
      * @var boolean 是否可重试
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsExecuteRedo;
 
     /**
      * @var string 动作风险级别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActionRisk;
 
     /**
      * @var integer 动作运行时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskGroupActionExecuteTime;
+
+    /**
+     * @var string 动作开始执行时间
+     */
+    public $TaskGroupActionStartTime;
 
     /**
      * @param integer $TaskGroupActionId 任务分组动作ID
@@ -202,32 +176,22 @@ class TaskGroupAction extends AbstractModel
      * @param integer $ActionId 动作ID
      * @param integer $TaskGroupActionOrder 分组动作顺序
      * @param string $TaskGroupActionGeneralConfiguration 分组动作通用配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskGroupActionCustomConfiguration 分组动作自定义配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TaskGroupActionStatus 分组动作状态
      * @param string $TaskGroupActionCreateTime 动作分组创建时间
      * @param string $TaskGroupActionUpdateTime 动作分组更新时间
      * @param string $ActionTitle 动作名称
      * @param integer $TaskGroupActionStatusType 状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止，4--跳过
      * @param integer $TaskGroupActionRandomId RandomId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TaskGroupActionRecoverId RecoverId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TaskGroupActionExecuteId ExecuteId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ActionApiType 调用api类型，0:tat, 1:云api
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ActionAttribute 1:故障，2:恢复
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ActionType 动作类型：平台、自定义
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsExecuteRedo 是否可重试
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ActionRisk 动作风险级别
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TaskGroupActionExecuteTime 动作运行时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TaskGroupActionStartTime 动作开始执行时间
      */
     function __construct()
     {
@@ -325,6 +289,10 @@ class TaskGroupAction extends AbstractModel
 
         if (array_key_exists("TaskGroupActionExecuteTime",$param) and $param["TaskGroupActionExecuteTime"] !== null) {
             $this->TaskGroupActionExecuteTime = $param["TaskGroupActionExecuteTime"];
+        }
+
+        if (array_key_exists("TaskGroupActionStartTime",$param) and $param["TaskGroupActionStartTime"] !== null) {
+            $this->TaskGroupActionStartTime = $param["TaskGroupActionStartTime"];
         }
     }
 }

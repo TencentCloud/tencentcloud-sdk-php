@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDetectedText(string $DetectedText) 设置文本块内容
  * @method Polygon getCoord() 获取四点坐标
  * @method void setCoord(Polygon $Coord) 设置四点坐标
+ * @method string getAdvancedInfo() 获取描述性信息
+ * @method void setAdvancedInfo(string $AdvancedInfo) 设置描述性信息
+ * @method array getWordCoord() 获取单词的四点坐标
+ * @method void setWordCoord(array $WordCoord) 设置单词的四点坐标
  */
 class WordItem extends AbstractModel
 {
@@ -38,8 +42,20 @@ class WordItem extends AbstractModel
     public $Coord;
 
     /**
+     * @var string 描述性信息
+     */
+    public $AdvancedInfo;
+
+    /**
+     * @var array 单词的四点坐标
+     */
+    public $WordCoord;
+
+    /**
      * @param string $DetectedText 文本块内容
      * @param Polygon $Coord 四点坐标
+     * @param string $AdvancedInfo 描述性信息
+     * @param array $WordCoord 单词的四点坐标
      */
     function __construct()
     {
@@ -61,6 +77,19 @@ class WordItem extends AbstractModel
         if (array_key_exists("Coord",$param) and $param["Coord"] !== null) {
             $this->Coord = new Polygon();
             $this->Coord->deserialize($param["Coord"]);
+        }
+
+        if (array_key_exists("AdvancedInfo",$param) and $param["AdvancedInfo"] !== null) {
+            $this->AdvancedInfo = $param["AdvancedInfo"];
+        }
+
+        if (array_key_exists("WordCoord",$param) and $param["WordCoord"] !== null) {
+            $this->WordCoord = [];
+            foreach ($param["WordCoord"] as $key => $value){
+                $obj = new WordPolygon();
+                $obj->deserialize($value);
+                array_push($this->WordCoord, $obj);
+            }
         }
     }
 }

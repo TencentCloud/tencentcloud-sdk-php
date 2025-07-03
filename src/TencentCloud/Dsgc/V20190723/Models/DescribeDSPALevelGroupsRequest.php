@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDspaId(string $DspaId) 设置DSPA实例ID
  * @method string getName() 获取分级组名称
  * @method void setName(string $Name) 设置分级组名称
+ * @method integer getLimit() 获取每页返回的记录数
+ * @method void setLimit(integer $Limit) 设置每页返回的记录数
+ * @method integer getOffset() 获取从第几条记录开始返回
+ * @method void setOffset(integer $Offset) 设置从第几条记录开始返回
  */
 class DescribeDSPALevelGroupsRequest extends AbstractModel
 {
@@ -38,8 +42,20 @@ class DescribeDSPALevelGroupsRequest extends AbstractModel
     public $Name;
 
     /**
+     * @var integer 每页返回的记录数
+     */
+    public $Limit;
+
+    /**
+     * @var integer 从第几条记录开始返回
+     */
+    public $Offset;
+
+    /**
      * @param string $DspaId DSPA实例ID
      * @param string $Name 分级组名称
+     * @param integer $Limit 每页返回的记录数
+     * @param integer $Offset 从第几条记录开始返回
      */
     function __construct()
     {
@@ -60,6 +76,14 @@ class DescribeDSPALevelGroupsRequest extends AbstractModel
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
     }
 }

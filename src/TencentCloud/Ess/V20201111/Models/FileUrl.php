@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUrl() 获取下载文件的URL，有效期为输入的UrlTtl，默认5分钟
  * @method void setUrl(string $Url) 设置下载文件的URL，有效期为输入的UrlTtl，默认5分钟
  * @method string getOption() 获取下载文件的附加信息。如果是pdf文件，会返回pdf文件每页的有效高宽
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOption(string $Option) 设置下载文件的附加信息。如果是pdf文件，会返回pdf文件每页的有效高宽
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class FileUrl extends AbstractModel
 {
@@ -36,14 +34,12 @@ class FileUrl extends AbstractModel
 
     /**
      * @var string 下载文件的附加信息。如果是pdf文件，会返回pdf文件每页的有效高宽
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Option;
 
     /**
      * @param string $Url 下载文件的URL，有效期为输入的UrlTtl，默认5分钟
      * @param string $Option 下载文件的附加信息。如果是pdf文件，会返回pdf文件每页的有效高宽
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

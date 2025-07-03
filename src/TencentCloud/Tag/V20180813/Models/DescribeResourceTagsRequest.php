@@ -20,47 +20,47 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeResourceTags请求参数结构体
  *
- * @method integer getCreateUin() 获取创建者uin
- * @method void setCreateUin(integer $CreateUin) 设置创建者uin
- * @method string getResourceRegion() 获取资源所在地域
- * @method void setResourceRegion(string $ResourceRegion) 设置资源所在地域
- * @method string getServiceType() 获取业务类型
- * @method void setServiceType(string $ServiceType) 设置业务类型
- * @method string getResourcePrefix() 获取资源前缀
- * @method void setResourcePrefix(string $ResourcePrefix) 设置资源前缀
- * @method string getResourceId() 获取资源唯一标识。只输入ResourceId进行查询可能会查询较慢，或者无法匹配到结果，建议在输入ResourceId的同时也输入ServiceType、ResourcePrefix和ResourceRegion（不区分地域的资源可忽略该参数）
- * @method void setResourceId(string $ResourceId) 设置资源唯一标识。只输入ResourceId进行查询可能会查询较慢，或者无法匹配到结果，建议在输入ResourceId的同时也输入ServiceType、ResourcePrefix和ResourceRegion（不区分地域的资源可忽略该参数）
+ * @method integer getCreateUin() 获取资源创建者UIN
+ * @method void setCreateUin(integer $CreateUin) 设置资源创建者UIN
+ * @method string getResourceRegion() 获取资源所在地域，示例：ap-guangzhou 。不区分地域的资源则不需要传入该字段，区分地域的资源必填
+ * @method void setResourceRegion(string $ResourceRegion) 设置资源所在地域，示例：ap-guangzhou 。不区分地域的资源则不需要传入该字段，区分地域的资源必填
+ * @method string getServiceType() 获取业务类型，示例 ckafka。指资源所属业务类型，也是资源六段式中的第三段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中业务类型为ckafka
+ * @method void setServiceType(string $ServiceType) 设置业务类型，示例 ckafka。指资源所属业务类型，也是资源六段式中的第三段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中业务类型为ckafka
+ * @method string getResourcePrefix() 获取该业务类型对应的资源前缀，示例 cvm对应instance、image、volume等。也是资源六段式中的第六段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中资源前缀为ckafkaId
+ * @method void setResourcePrefix(string $ResourcePrefix) 设置该业务类型对应的资源前缀，示例 cvm对应instance、image、volume等。也是资源六段式中的第六段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中资源前缀为ckafkaId
+ * @method string getResourceId() 获取资源唯一标识（资源六段式中最后一段"/"后面的部分）。注：只输入ResourceId查询时，如资源量大可能较慢，或无法匹配到结果，建议在输入ResourceId的同时也输入ServiceType、ResourcePrefix和ResourceRegion（不区分地域的资源可忽略该参数）。若传入的是cos资源的Id，则CosResourceId 字段请同时传1。
+ * @method void setResourceId(string $ResourceId) 设置资源唯一标识（资源六段式中最后一段"/"后面的部分）。注：只输入ResourceId查询时，如资源量大可能较慢，或无法匹配到结果，建议在输入ResourceId的同时也输入ServiceType、ResourcePrefix和ResourceRegion（不区分地域的资源可忽略该参数）。若传入的是cos资源的Id，则CosResourceId 字段请同时传1。
  * @method integer getOffset() 获取数据偏移量，默认为 0, 必须为Limit参数的整数倍
  * @method void setOffset(integer $Offset) 设置数据偏移量，默认为 0, 必须为Limit参数的整数倍
  * @method integer getLimit() 获取每页大小，默认为 15
  * @method void setLimit(integer $Limit) 设置每页大小，默认为 15
- * @method integer getCosResourceId() 获取是否是cos的资源（0或者1），输入的ResourceId为cos资源时必填
- * @method void setCosResourceId(integer $CosResourceId) 设置是否是cos的资源（0或者1），输入的ResourceId为cos资源时必填
+ * @method integer getCosResourceId() 获取是否为cos的资源，取值 0 表示：非cos资源。取值1 表示：cos资源，且此时ResourceId也为必填。不填则默认为 0 
+ * @method void setCosResourceId(integer $CosResourceId) 设置是否为cos的资源，取值 0 表示：非cos资源。取值1 表示：cos资源，且此时ResourceId也为必填。不填则默认为 0 
  */
 class DescribeResourceTagsRequest extends AbstractModel
 {
     /**
-     * @var integer 创建者uin
+     * @var integer 资源创建者UIN
      */
     public $CreateUin;
 
     /**
-     * @var string 资源所在地域
+     * @var string 资源所在地域，示例：ap-guangzhou 。不区分地域的资源则不需要传入该字段，区分地域的资源必填
      */
     public $ResourceRegion;
 
     /**
-     * @var string 业务类型
+     * @var string 业务类型，示例 ckafka。指资源所属业务类型，也是资源六段式中的第三段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中业务类型为ckafka
      */
     public $ServiceType;
 
     /**
-     * @var string 资源前缀
+     * @var string 该业务类型对应的资源前缀，示例 cvm对应instance、image、volume等。也是资源六段式中的第六段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中资源前缀为ckafkaId
      */
     public $ResourcePrefix;
 
     /**
-     * @var string 资源唯一标识。只输入ResourceId进行查询可能会查询较慢，或者无法匹配到结果，建议在输入ResourceId的同时也输入ServiceType、ResourcePrefix和ResourceRegion（不区分地域的资源可忽略该参数）
+     * @var string 资源唯一标识（资源六段式中最后一段"/"后面的部分）。注：只输入ResourceId查询时，如资源量大可能较慢，或无法匹配到结果，建议在输入ResourceId的同时也输入ServiceType、ResourcePrefix和ResourceRegion（不区分地域的资源可忽略该参数）。若传入的是cos资源的Id，则CosResourceId 字段请同时传1。
      */
     public $ResourceId;
 
@@ -75,19 +75,19 @@ class DescribeResourceTagsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer 是否是cos的资源（0或者1），输入的ResourceId为cos资源时必填
+     * @var integer 是否为cos的资源，取值 0 表示：非cos资源。取值1 表示：cos资源，且此时ResourceId也为必填。不填则默认为 0 
      */
     public $CosResourceId;
 
     /**
-     * @param integer $CreateUin 创建者uin
-     * @param string $ResourceRegion 资源所在地域
-     * @param string $ServiceType 业务类型
-     * @param string $ResourcePrefix 资源前缀
-     * @param string $ResourceId 资源唯一标识。只输入ResourceId进行查询可能会查询较慢，或者无法匹配到结果，建议在输入ResourceId的同时也输入ServiceType、ResourcePrefix和ResourceRegion（不区分地域的资源可忽略该参数）
+     * @param integer $CreateUin 资源创建者UIN
+     * @param string $ResourceRegion 资源所在地域，示例：ap-guangzhou 。不区分地域的资源则不需要传入该字段，区分地域的资源必填
+     * @param string $ServiceType 业务类型，示例 ckafka。指资源所属业务类型，也是资源六段式中的第三段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中业务类型为ckafka
+     * @param string $ResourcePrefix 该业务类型对应的资源前缀，示例 cvm对应instance、image、volume等。也是资源六段式中的第六段，例如qcs::ckafka:ap-shanghai:uin/123456789:ckafkaId/ckafka-o85jq584中资源前缀为ckafkaId
+     * @param string $ResourceId 资源唯一标识（资源六段式中最后一段"/"后面的部分）。注：只输入ResourceId查询时，如资源量大可能较慢，或无法匹配到结果，建议在输入ResourceId的同时也输入ServiceType、ResourcePrefix和ResourceRegion（不区分地域的资源可忽略该参数）。若传入的是cos资源的Id，则CosResourceId 字段请同时传1。
      * @param integer $Offset 数据偏移量，默认为 0, 必须为Limit参数的整数倍
      * @param integer $Limit 每页大小，默认为 15
-     * @param integer $CosResourceId 是否是cos的资源（0或者1），输入的ResourceId为cos资源时必填
+     * @param integer $CosResourceId 是否为cos的资源，取值 0 表示：非cos资源。取值1 表示：cos资源，且此时ResourceId也为必填。不填则默认为 0 
      */
     function __construct()
     {

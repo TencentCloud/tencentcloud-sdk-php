@@ -23,73 +23,41 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTaskId() 获取任务ID
  * @method void setTaskId(integer $TaskId) 设置任务ID
  * @method integer getFileResultId() 获取扫描File结果详情ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileResultId(integer $FileResultId) 设置扫描File结果详情ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBucketName() 获取所属桶名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBucketName(string $BucketName) 设置所属桶名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileName() 获取所属文件名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileName(string $FileName) 设置所属文件名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCategoryId() 获取敏感数据分类ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCategoryId(integer $CategoryId) 设置敏感数据分类ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCategoryName() 获取敏感数据分类名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCategoryName(string $CategoryName) 设置敏感数据分类名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLevelId() 获取敏感数据分级ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevelId(integer $LevelId) 设置敏感数据分级ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLevelName() 获取敏感数据分级名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevelName(string $LevelName) 设置敏感数据分级名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getKMSEncrypted() 获取KMS加密，true or false
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKMSEncrypted(boolean $KMSEncrypted) 设置KMS加密，true or false
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRuleName() 获取规则名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleName(string $RuleName) 设置规则名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRuleId() 获取规则ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleId(integer $RuleId) 设置规则ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLevelRiskScore() 获取敏感数据分级分数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevelRiskScore(integer $LevelRiskScore) 设置敏感数据分级分数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFileSize() 获取文件大小，单位为KB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileSize(integer $FileSize) 设置文件大小，单位为KB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileType() 获取文件类型，如csv，txt
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileType(string $FileType) 设置文件类型，如csv，txt
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSensitiveDataCount() 获取敏感数据出现次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSensitiveDataCount(integer $SensitiveDataCount) 设置敏感数据出现次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCategoryFullPath() 获取分类树路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCategoryFullPath(array $CategoryFullPath) 设置分类树路径
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getCategoryArr() 获取分类树路径
+ * @method void setCategoryArr(array $CategoryArr) 设置分类树路径
  * @method integer getComplianceId() 获取合规组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComplianceId(integer $ComplianceId) 设置合规组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getResultId() 获取结果id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResultId(integer $ResultId) 设置结果id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DspaDiscoveryCOSTaskResultDetail extends AbstractModel
 {
@@ -100,142 +68,114 @@ class DspaDiscoveryCOSTaskResultDetail extends AbstractModel
 
     /**
      * @var integer 扫描File结果详情ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileResultId;
 
     /**
      * @var string 所属桶名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BucketName;
 
     /**
      * @var string 所属文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileName;
 
     /**
      * @var integer 敏感数据分类ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CategoryId;
 
     /**
      * @var string 敏感数据分类名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CategoryName;
 
     /**
      * @var integer 敏感数据分级ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LevelId;
 
     /**
      * @var string 敏感数据分级名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LevelName;
 
     /**
      * @var boolean KMS加密，true or false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KMSEncrypted;
 
     /**
      * @var string 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleName;
 
     /**
      * @var integer 规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleId;
 
     /**
      * @var integer 敏感数据分级分数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LevelRiskScore;
 
     /**
      * @var integer 文件大小，单位为KB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileSize;
 
     /**
      * @var string 文件类型，如csv，txt
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileType;
 
     /**
      * @var integer 敏感数据出现次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SensitiveDataCount;
 
     /**
      * @var array 分类树路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CategoryFullPath;
 
     /**
+     * @var array 分类树路径
+     */
+    public $CategoryArr;
+
+    /**
      * @var integer 合规组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComplianceId;
 
     /**
      * @var integer 结果id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResultId;
 
     /**
      * @param integer $TaskId 任务ID
      * @param integer $FileResultId 扫描File结果详情ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BucketName 所属桶名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileName 所属文件名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CategoryId 敏感数据分类ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CategoryName 敏感数据分类名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LevelId 敏感数据分级ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LevelName 敏感数据分级名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $KMSEncrypted KMS加密，true or false
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RuleName 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleId 规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LevelRiskScore 敏感数据分级分数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FileSize 文件大小，单位为KB
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileType 文件类型，如csv，txt
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SensitiveDataCount 敏感数据出现次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CategoryFullPath 分类树路径
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $CategoryArr 分类树路径
      * @param integer $ComplianceId 合规组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ResultId 结果id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -312,6 +252,10 @@ class DspaDiscoveryCOSTaskResultDetail extends AbstractModel
 
         if (array_key_exists("CategoryFullPath",$param) and $param["CategoryFullPath"] !== null) {
             $this->CategoryFullPath = $param["CategoryFullPath"];
+        }
+
+        if (array_key_exists("CategoryArr",$param) and $param["CategoryArr"] !== null) {
+            $this->CategoryArr = $param["CategoryArr"];
         }
 
         if (array_key_exists("ComplianceId",$param) and $param["ComplianceId"] !== null) {

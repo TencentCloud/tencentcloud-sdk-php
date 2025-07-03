@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 服务开关状态
  *
  * @method StatusInfo getRealTimeSpeech() 获取实时语音服务开关状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealTimeSpeech(StatusInfo $RealTimeSpeech) 设置实时语音服务开关状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method StatusInfo getVoiceMessage() 获取语音消息服务开关状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVoiceMessage(StatusInfo $VoiceMessage) 设置语音消息服务开关状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method StatusInfo getPorn() 获取语音内容安全服务开关状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPorn(StatusInfo $Porn) 设置语音内容安全服务开关状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method StatusInfo getLive() 获取语音录制服务开关状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLive(StatusInfo $Live) 设置语音录制服务开关状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method StatusInfo getRealTimeAsr() 获取语音转文本服务开关状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealTimeAsr(StatusInfo $RealTimeAsr) 设置语音转文本服务开关状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method StatusInfo getTextTranslate() 获取文本翻译服务开关状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTextTranslate(StatusInfo $TextTranslate) 设置文本翻译服务开关状态
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServiceStatus extends AbstractModel
 {
     /**
      * @var StatusInfo 实时语音服务开关状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RealTimeSpeech;
 
     /**
      * @var StatusInfo 语音消息服务开关状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VoiceMessage;
 
     /**
      * @var StatusInfo 语音内容安全服务开关状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Porn;
 
     /**
      * @var StatusInfo 语音录制服务开关状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Live;
 
     /**
      * @var StatusInfo 语音转文本服务开关状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RealTimeAsr;
 
     /**
      * @var StatusInfo 文本翻译服务开关状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TextTranslate;
 
     /**
      * @param StatusInfo $RealTimeSpeech 实时语音服务开关状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StatusInfo $VoiceMessage 语音消息服务开关状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StatusInfo $Porn 语音内容安全服务开关状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StatusInfo $Live 语音录制服务开关状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StatusInfo $RealTimeAsr 语音转文本服务开关状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StatusInfo $TextTranslate 文本翻译服务开关状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

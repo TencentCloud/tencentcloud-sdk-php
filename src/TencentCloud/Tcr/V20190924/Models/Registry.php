@@ -26,8 +26,30 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegistryName(string $RegistryName) 设置实例名称
  * @method string getRegistryType() 获取实例规格
  * @method void setRegistryType(string $RegistryType) 设置实例规格
- * @method string getStatus() 获取实例状态
- * @method void setStatus(string $Status) 设置实例状态
+ * @method string getStatus() 获取实例状态。有以下状态：
+Pending, 初始化中
+Deploying, 创建中
+Running, 运行中
+Unhealthy, 状态异常
+FailedCreated, 创建失败
+FailedUpdated, 更新失败
+Bucket-Error, 存储桶异常
+Isolate, 待回收
+Deleting, 删除中
+DeleteBucketFailed, 实例删除存储桶失败
+DeleteFailed, 实例删除失败
+ * @method void setStatus(string $Status) 设置实例状态。有以下状态：
+Pending, 初始化中
+Deploying, 创建中
+Running, 运行中
+Unhealthy, 状态异常
+FailedCreated, 创建失败
+FailedUpdated, 更新失败
+Bucket-Error, 存储桶异常
+Isolate, 待回收
+Deleting, 删除中
+DeleteBucketFailed, 实例删除存储桶失败
+DeleteFailed, 实例删除失败
  * @method string getPublicDomain() 获取实例的公共访问地址
  * @method void setPublicDomain(string $PublicDomain) 设置实例的公共访问地址
  * @method string getCreatedAt() 获取实例创建时间
@@ -43,21 +65,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInternalEndpoint() 获取实例内部访问地址
  * @method void setInternalEndpoint(string $InternalEndpoint) 设置实例内部访问地址
  * @method TagSpecification getTagSpecification() 获取实例云标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagSpecification(TagSpecification $TagSpecification) 设置实例云标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExpiredAt() 获取实例过期时间（预付费）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpiredAt(string $ExpiredAt) 设置实例过期时间（预付费）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPayMod() 获取实例付费类型，0表示后付费，1表示预付费
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayMod(integer $PayMod) 设置实例付费类型，0表示后付费，1表示预付费
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRenewFlag() 获取预付费续费标识，0表示手动续费，1表示自动续费，2不续费并且不通知
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRenewFlag(integer $RenewFlag) 设置预付费续费标识，0表示手动续费，1表示自动续费，2不续费并且不通知
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getDeletionProtection() 获取是否开启实例删除保护，false表示不开启
  * @method void setDeletionProtection(boolean $DeletionProtection) 设置是否开启实例删除保护，false表示不开启
  */
@@ -79,7 +93,18 @@ class Registry extends AbstractModel
     public $RegistryType;
 
     /**
-     * @var string 实例状态
+     * @var string 实例状态。有以下状态：
+Pending, 初始化中
+Deploying, 创建中
+Running, 运行中
+Unhealthy, 状态异常
+FailedCreated, 创建失败
+FailedUpdated, 更新失败
+Bucket-Error, 存储桶异常
+Isolate, 待回收
+Deleting, 删除中
+DeleteBucketFailed, 实例删除存储桶失败
+DeleteFailed, 实例删除失败
      */
     public $Status;
 
@@ -120,25 +145,21 @@ class Registry extends AbstractModel
 
     /**
      * @var TagSpecification 实例云标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagSpecification;
 
     /**
      * @var string 实例过期时间（预付费）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpiredAt;
 
     /**
      * @var integer 实例付费类型，0表示后付费，1表示预付费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PayMod;
 
     /**
      * @var integer 预付费续费标识，0表示手动续费，1表示自动续费，2不续费并且不通知
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RenewFlag;
 
@@ -151,7 +172,18 @@ class Registry extends AbstractModel
      * @param string $RegistryId 实例ID
      * @param string $RegistryName 实例名称
      * @param string $RegistryType 实例规格
-     * @param string $Status 实例状态
+     * @param string $Status 实例状态。有以下状态：
+Pending, 初始化中
+Deploying, 创建中
+Running, 运行中
+Unhealthy, 状态异常
+FailedCreated, 创建失败
+FailedUpdated, 更新失败
+Bucket-Error, 存储桶异常
+Isolate, 待回收
+Deleting, 删除中
+DeleteBucketFailed, 实例删除存储桶失败
+DeleteFailed, 实例删除失败
      * @param string $PublicDomain 实例的公共访问地址
      * @param string $CreatedAt 实例创建时间
      * @param string $RegionName 地域名称
@@ -160,13 +192,9 @@ class Registry extends AbstractModel
      * @param integer $TokenValidTime Token有效时间
      * @param string $InternalEndpoint 实例内部访问地址
      * @param TagSpecification $TagSpecification 实例云标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExpiredAt 实例过期时间（预付费）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PayMod 实例付费类型，0表示后付费，1表示预付费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RenewFlag 预付费续费标识，0表示手动续费，1表示自动续费，2不续费并且不通知
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $DeletionProtection 是否开启实例删除保护，false表示不开启
      */
     function __construct()

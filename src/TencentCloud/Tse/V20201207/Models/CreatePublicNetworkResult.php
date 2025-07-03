@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 创建kong客户端公网结果
  *
  * @method string getGatewayId() 获取网关实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGatewayId(string $GatewayId) 设置网关实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupId() 获取分组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupId(string $GroupId) 设置分组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNetworkId() 获取客户端公网网络ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetworkId(string $NetworkId) 设置客户端公网网络ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CreatePublicNetworkResult extends AbstractModel
 {
     /**
      * @var string 网关实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GatewayId;
 
     /**
      * @var string 分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupId;
 
     /**
      * @var string 客户端公网网络ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NetworkId;
 
     /**
      * @param string $GatewayId 网关实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupId 分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NetworkId 客户端公网网络ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

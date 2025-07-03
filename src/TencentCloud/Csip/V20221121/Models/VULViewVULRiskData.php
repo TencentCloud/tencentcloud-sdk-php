@@ -55,63 +55,35 @@ use TencentCloud\Common\AbstractModel;
  * @method string getVULURL() 获取风险点
  * @method void setVULURL(string $VULURL) 设置风险点
  * @method string getNick() 获取用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNick(string $Nick) 设置用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAppId() 获取用户appid
  * @method void setAppId(string $AppId) 设置用户appid
  * @method string getUin() 获取用户uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUin(string $Uin) 设置用户uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEMGCVulType() 获取应急漏洞类型，1-应急漏洞，0-非应急漏洞
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEMGCVulType(integer $EMGCVulType) 设置应急漏洞类型，1-应急漏洞，0-非应急漏洞
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getCVSS() 获取CVSS评分
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCVSS(float $CVSS) 设置CVSS评分
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPCMGRId() 获取PCMGRId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPCMGRId(string $PCMGRId) 设置PCMGRId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getVulTag() 获取漏洞标签。搜索时应急 必修传参VulTag=SuggestRepair/EMGCVul
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVulTag(array $VulTag) 设置漏洞标签。搜索时应急 必修传参VulTag=SuggestRepair/EMGCVul
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDisclosureTime() 获取漏洞披露时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDisclosureTime(string $DisclosureTime) 设置漏洞披露时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAttackHeat() 获取攻击热度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAttackHeat(integer $AttackHeat) 设置攻击热度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsSuggest() 获取是否必修漏洞，1-是，0-不是
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsSuggest(integer $IsSuggest) 设置是否必修漏洞，1-是，0-不是
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHandleTaskId() 获取处置任务id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHandleTaskId(string $HandleTaskId) 设置处置任务id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEngineSource() 获取引擎来源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEngineSource(string $EngineSource) 设置引擎来源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVulRiskId() 获取新的漏洞风险id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVulRiskId(string $VulRiskId) 设置新的漏洞风险id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTvdID() 获取新版漏洞id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTvdID(string $TvdID) 设置新版漏洞id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsOneClick() 获取是否可以一键体检，1-可以，0-不可以
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsOneClick(integer $IsOneClick) 设置是否可以一键体检，1-可以，0-不可以
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VULViewVULRiskData extends AbstractModel
 {
@@ -202,7 +174,6 @@ class VULViewVULRiskData extends AbstractModel
 
     /**
      * @var string 用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Nick;
 
@@ -213,79 +184,66 @@ class VULViewVULRiskData extends AbstractModel
 
     /**
      * @var string 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uin;
 
     /**
      * @var integer 应急漏洞类型，1-应急漏洞，0-非应急漏洞
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EMGCVulType;
 
     /**
      * @var float CVSS评分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CVSS;
 
     /**
      * @var string PCMGRId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PCMGRId;
 
     /**
      * @var array 漏洞标签。搜索时应急 必修传参VulTag=SuggestRepair/EMGCVul
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VulTag;
 
     /**
      * @var string 漏洞披露时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DisclosureTime;
 
     /**
      * @var integer 攻击热度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AttackHeat;
 
     /**
      * @var integer 是否必修漏洞，1-是，0-不是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsSuggest;
 
     /**
      * @var string 处置任务id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HandleTaskId;
 
     /**
      * @var string 引擎来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EngineSource;
 
     /**
      * @var string 新的漏洞风险id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VulRiskId;
 
     /**
      * @var string 新版漏洞id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TvdID;
 
     /**
      * @var integer 是否可以一键体检，1-可以，0-不可以
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsOneClick;
 
@@ -308,34 +266,20 @@ class VULViewVULRiskData extends AbstractModel
      * @param string $AppVersion 漏洞影响版本
      * @param string $VULURL 风险点
      * @param string $Nick 用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AppId 用户appid
      * @param string $Uin 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EMGCVulType 应急漏洞类型，1-应急漏洞，0-非应急漏洞
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $CVSS CVSS评分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PCMGRId PCMGRId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $VulTag 漏洞标签。搜索时应急 必修传参VulTag=SuggestRepair/EMGCVul
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DisclosureTime 漏洞披露时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AttackHeat 攻击热度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsSuggest 是否必修漏洞，1-是，0-不是
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HandleTaskId 处置任务id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EngineSource 引擎来源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VulRiskId 新的漏洞风险id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TvdID 新版漏洞id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsOneClick 是否可以一键体检，1-可以，0-不可以
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

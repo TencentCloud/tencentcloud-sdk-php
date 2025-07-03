@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 设备分组信息
  *
  * @method array getList() 获取设备分组list
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setList(array $List) 设置设备分组list
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeDeviceGroupListRes extends AbstractModel
 {
     /**
      * @var array 设备分组list
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $List;
 
     /**
      * @param array $List 设备分组list
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

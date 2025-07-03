@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getContainerId() 获取容器在主机上的ID。
  * @method void setContainerId(string $ContainerId) 设置容器在主机上的ID。
  * @method string getPodName() 获取容器所属的Pod的名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPodName(string $PodName) 设置容器所属的Pod的名称。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ComplianceContainerDetailInfo extends AbstractModel
 {
@@ -36,14 +34,12 @@ class ComplianceContainerDetailInfo extends AbstractModel
 
     /**
      * @var string 容器所属的Pod的名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PodName;
 
     /**
      * @param string $ContainerId 容器在主机上的ID。
      * @param string $PodName 容器所属的Pod的名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

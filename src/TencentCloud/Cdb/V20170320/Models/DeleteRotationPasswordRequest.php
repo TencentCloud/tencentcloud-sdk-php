@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHost(string $Host) 设置关闭密码轮转的实例账户域名，例如%
  * @method string getPassword() 获取关闭密码轮转后实例账户的最新密码
  * @method void setPassword(string $Password) 设置关闭密码轮转后实例账户的最新密码
+ * @method string getEncryptMethod() 获取传入不为空则对密码进行了加密处理
+ * @method void setEncryptMethod(string $EncryptMethod) 设置传入不为空则对密码进行了加密处理
  */
 class DeleteRotationPasswordRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DeleteRotationPasswordRequest extends AbstractModel
     public $Password;
 
     /**
+     * @var string 传入不为空则对密码进行了加密处理
+     */
+    public $EncryptMethod;
+
+    /**
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同
      * @param string $User 关闭密码轮转的实例账户名,例如root
      * @param string $Host 关闭密码轮转的实例账户域名，例如%
      * @param string $Password 关闭密码轮转后实例账户的最新密码
+     * @param string $EncryptMethod 传入不为空则对密码进行了加密处理
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DeleteRotationPasswordRequest extends AbstractModel
 
         if (array_key_exists("Password",$param) and $param["Password"] !== null) {
             $this->Password = $param["Password"];
+        }
+
+        if (array_key_exists("EncryptMethod",$param) and $param["EncryptMethod"] !== null) {
+            $this->EncryptMethod = $param["EncryptMethod"];
         }
     }
 }

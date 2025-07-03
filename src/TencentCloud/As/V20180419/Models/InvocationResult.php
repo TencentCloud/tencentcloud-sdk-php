@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 执行命令结果。
  *
  * @method string getInstanceId() 获取实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInvocationId() 获取执行活动ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInvocationId(string $InvocationId) 设置执行活动ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInvocationTaskId() 获取执行任务ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInvocationTaskId(string $InvocationTaskId) 设置执行任务ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCommandId() 获取命令ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCommandId(string $CommandId) 设置命令ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTaskStatus() 获取执行任务状态。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskStatus(string $TaskStatus) 设置执行任务状态。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getErrorMessage() 获取执行异常信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorMessage(string $ErrorMessage) 设置执行异常信息。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InvocationResult extends AbstractModel
 {
     /**
      * @var string 实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var string 执行活动ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InvocationId;
 
     /**
      * @var string 执行任务ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InvocationTaskId;
 
     /**
      * @var string 命令ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CommandId;
 
     /**
      * @var string 执行任务状态。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskStatus;
 
     /**
      * @var string 执行异常信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrorMessage;
 
     /**
      * @param string $InstanceId 实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InvocationId 执行活动ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InvocationTaskId 执行任务ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CommandId 命令ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskStatus 执行任务状态。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrorMessage 执行异常信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

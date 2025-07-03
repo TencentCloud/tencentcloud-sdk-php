@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) 设置工具调用类型，当前只支持function
  * @method ToolCallFunction getFunction() 获取具体的function调用
  * @method void setFunction(ToolCallFunction $Function) 设置具体的function调用
+ * @method integer getIndex() 获取索引值
+ * @method void setIndex(integer $Index) 设置索引值
  */
 class ToolCall extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ToolCall extends AbstractModel
     public $Function;
 
     /**
+     * @var integer 索引值
+     */
+    public $Index;
+
+    /**
      * @param string $Id 工具调用id
      * @param string $Type 工具调用类型，当前只支持function
      * @param ToolCallFunction $Function 具体的function调用
+     * @param integer $Index 索引值
      */
     function __construct()
     {
@@ -73,6 +81,10 @@ class ToolCall extends AbstractModel
         if (array_key_exists("Function",$param) and $param["Function"] !== null) {
             $this->Function = new ToolCallFunction();
             $this->Function->deserialize($param["Function"]);
+        }
+
+        if (array_key_exists("Index",$param) and $param["Index"] !== null) {
+            $this->Index = $param["Index"];
         }
     }
 }

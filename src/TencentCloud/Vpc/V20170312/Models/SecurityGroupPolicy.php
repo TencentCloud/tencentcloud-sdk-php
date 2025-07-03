@@ -30,18 +30,18 @@ use TencentCloud\Common\AbstractModel;
 说明：如果Protocol设置为ALL，则Port也需要设置为all。
  * @method ServiceTemplateSpecification getServiceTemplate() 获取协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
  * @method void setServiceTemplate(ServiceTemplateSpecification $ServiceTemplate) 设置协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
- * @method string getCidrBlock() 获取网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。
- * @method void setCidrBlock(string $CidrBlock) 设置网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。
- * @method string getIpv6CidrBlock() 获取网段或IPv6(互斥)。
- * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) 设置网段或IPv6(互斥)。
+ * @method string getCidrBlock() 获取网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IP地址。
+ * @method void setCidrBlock(string $CidrBlock) 设置网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IP地址。
+ * @method string getIpv6CidrBlock() 获取网段或IPv6(互斥)。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IPv6地址。
+ * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) 设置网段或IPv6(互斥)。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IPv6地址。
  * @method string getSecurityGroupId() 获取安全组实例ID，例如：sg-ohuuioma。
  * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组实例ID，例如：sg-ohuuioma。
  * @method AddressTemplateSpecification getAddressTemplate() 获取IP地址ID或者IP地址组ID。
  * @method void setAddressTemplate(AddressTemplateSpecification $AddressTemplate) 设置IP地址ID或者IP地址组ID。
  * @method string getAction() 获取ACCEPT 或 DROP。
  * @method void setAction(string $Action) 设置ACCEPT 或 DROP。
- * @method string getPolicyDescription() 获取安全组规则描述。
- * @method void setPolicyDescription(string $PolicyDescription) 设置安全组规则描述。
+ * @method string getPolicyDescription() 获取安全组规则描述。作为入参时，当未传递该参数或值为空，且参数CidrBlock或Ipv6CidrBlock值为MY_PUBLIC_IP时，该参数的值将会被自动填充为Replaced-From-MY_PUBLIC_IP。
+ * @method void setPolicyDescription(string $PolicyDescription) 设置安全组规则描述。作为入参时，当未传递该参数或值为空，且参数CidrBlock或Ipv6CidrBlock值为MY_PUBLIC_IP时，该参数的值将会被自动填充为Replaced-From-MY_PUBLIC_IP。
  * @method string getModifyTime() 获取安全组最近修改时间。
  * @method void setModifyTime(string $ModifyTime) 设置安全组最近修改时间。
  */
@@ -69,12 +69,12 @@ class SecurityGroupPolicy extends AbstractModel
     public $ServiceTemplate;
 
     /**
-     * @var string 网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。
+     * @var string 网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IP地址。
      */
     public $CidrBlock;
 
     /**
-     * @var string 网段或IPv6(互斥)。
+     * @var string 网段或IPv6(互斥)。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IPv6地址。
      */
     public $Ipv6CidrBlock;
 
@@ -94,7 +94,7 @@ class SecurityGroupPolicy extends AbstractModel
     public $Action;
 
     /**
-     * @var string 安全组规则描述。
+     * @var string 安全组规则描述。作为入参时，当未传递该参数或值为空，且参数CidrBlock或Ipv6CidrBlock值为MY_PUBLIC_IP时，该参数的值将会被自动填充为Replaced-From-MY_PUBLIC_IP。
      */
     public $PolicyDescription;
 
@@ -109,12 +109,12 @@ class SecurityGroupPolicy extends AbstractModel
      * @param string $Port 端口(all, 离散port,  range)。
 说明：如果Protocol设置为ALL，则Port也需要设置为all。
      * @param ServiceTemplateSpecification $ServiceTemplate 协议端口ID或者协议端口组ID。ServiceTemplate和Protocol+Port互斥。
-     * @param string $CidrBlock 网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。
-     * @param string $Ipv6CidrBlock 网段或IPv6(互斥)。
+     * @param string $CidrBlock 网段或IP(互斥)，特殊说明：0.0.0.0/n 都会映射为0.0.0.0/0。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IP地址。
+     * @param string $Ipv6CidrBlock 网段或IPv6(互斥)。作为入参时，可使用字符串`MY_PUBLIC_IP`指代发起请求的公网IPv6地址。
      * @param string $SecurityGroupId 安全组实例ID，例如：sg-ohuuioma。
      * @param AddressTemplateSpecification $AddressTemplate IP地址ID或者IP地址组ID。
      * @param string $Action ACCEPT 或 DROP。
-     * @param string $PolicyDescription 安全组规则描述。
+     * @param string $PolicyDescription 安全组规则描述。作为入参时，当未传递该参数或值为空，且参数CidrBlock或Ipv6CidrBlock值为MY_PUBLIC_IP时，该参数的值将会被自动填充为Replaced-From-MY_PUBLIC_IP。
      * @param string $ModifyTime 安全组最近修改时间。
      */
     function __construct()

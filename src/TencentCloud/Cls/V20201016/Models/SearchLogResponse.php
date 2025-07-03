@@ -61,9 +61,7 @@ use TencentCloud\Common\AbstractModel;
 当UseNewAnalysis为true时生效
 注意：此字段可能返回 null，表示取不到有效值。
  * @method float getSamplingRate() 获取本次统计分析使用的采样率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSamplingRate(float $SamplingRate) 设置本次统计分析使用的采样率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method SearchLogTopics getTopics() 获取使用多日志主题检索时，各个日志主题的基本信息，例如报错信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopics(SearchLogTopics $Topics) 设置使用多日志主题检索时，各个日志主题的基本信息，例如报错信息。
@@ -127,7 +125,6 @@ class SearchLogResponse extends AbstractModel
 
     /**
      * @var float 本次统计分析使用的采样率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SamplingRate;
 
@@ -164,7 +161,6 @@ class SearchLogResponse extends AbstractModel
 当UseNewAnalysis为true时生效
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $SamplingRate 本次统计分析使用的采样率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SearchLogTopics $Topics 使用多日志主题检索时，各个日志主题的基本信息，例如报错信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。

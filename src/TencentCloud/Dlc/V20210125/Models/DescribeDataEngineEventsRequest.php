@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置返回数量，默认为10，最大为100
  * @method integer getOffset() 获取偏移量，默认为0
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0
+ * @method string getSessionId() 获取资源组id
+ * @method void setSessionId(string $SessionId) 设置资源组id
  */
 class DescribeDataEngineEventsRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeDataEngineEventsRequest extends AbstractModel
     public $Offset;
 
     /**
+     * @var string 资源组id
+     */
+    public $SessionId;
+
+    /**
      * @param string $DataEngineName 虚拟集群名称
      * @param integer $Limit 返回数量，默认为10，最大为100
      * @param integer $Offset 偏移量，默认为0
+     * @param string $SessionId 资源组id
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeDataEngineEventsRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
+            $this->SessionId = $param["SessionId"];
         }
     }
 }

@@ -33,6 +33,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getDRNetwork() 获取目标节点，0-修改主节点网络，1-修改备节点网络，默认取值0
 
  * @method void setDRNetwork(integer $DRNetwork) 设置目标节点，0-修改主节点网络，1-修改备节点网络，默认取值0
+
+ * @method string getDrInstanceId() 获取备机资源ID。当DRNetwork = 1时必填
+ * @method void setDrInstanceId(string $DrInstanceId) 设置备机资源ID。当DRNetwork = 1时必填
  */
 class ModifyDBInstanceNetworkRequest extends AbstractModel
 {
@@ -68,12 +71,19 @@ class ModifyDBInstanceNetworkRequest extends AbstractModel
     public $DRNetwork;
 
     /**
+     * @var string 备机资源ID。当DRNetwork = 1时必填
+     */
+    public $DrInstanceId;
+
+    /**
      * @param string $InstanceId 实例id
      * @param string $NewVpcId 新VPC网络Id
      * @param string $NewSubnetId 新子网Id
      * @param integer $OldIpRetainTime 原vip保留时长，单位小时，默认为0，代表立即回收，最大为168小时
      * @param string $Vip 指定VIP地址
      * @param integer $DRNetwork 目标节点，0-修改主节点网络，1-修改备节点网络，默认取值0
+
+     * @param string $DrInstanceId 备机资源ID。当DRNetwork = 1时必填
      */
     function __construct()
     {
@@ -110,6 +120,10 @@ class ModifyDBInstanceNetworkRequest extends AbstractModel
 
         if (array_key_exists("DRNetwork",$param) and $param["DRNetwork"] !== null) {
             $this->DRNetwork = $param["DRNetwork"];
+        }
+
+        if (array_key_exists("DrInstanceId",$param) and $param["DrInstanceId"] !== null) {
+            $this->DrInstanceId = $param["DrInstanceId"];
         }
     }
 }

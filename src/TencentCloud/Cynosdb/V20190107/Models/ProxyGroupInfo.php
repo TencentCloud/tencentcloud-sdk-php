@@ -21,41 +21,31 @@ use TencentCloud\Common\AbstractModel;
  * 数据库代理组详细信息
  *
  * @method ProxyGroup getProxyGroup() 获取数据库代理组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProxyGroup(ProxyGroup $ProxyGroup) 设置数据库代理组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ProxyGroupRwInfo getProxyGroupRwInfo() 获取数据库代理组读写分离信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProxyGroupRwInfo(ProxyGroupRwInfo $ProxyGroupRwInfo) 设置数据库代理组读写分离信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getProxyNodes() 获取数据库代理节点信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProxyNodes(array $ProxyNodes) 设置数据库代理节点信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method ProxyConnectionPoolInfo getConnectionPool() 获取数据库代理连接池信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConnectionPool(ProxyConnectionPoolInfo $ConnectionPool) 设置数据库代理连接池信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getNetAddrInfos() 获取数据库代理网络信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetAddrInfos(array $NetAddrInfos) 设置数据库代理网络信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTasks() 获取数据库代理任务集
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTasks(array $Tasks) 设置数据库代理任务集
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProxyGroupInfo extends AbstractModel
 {
     /**
      * @var ProxyGroup 数据库代理组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProxyGroup;
 
     /**
      * @var ProxyGroupRwInfo 数据库代理组读写分离信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProxyGroupRwInfo;
 
@@ -67,7 +57,6 @@ class ProxyGroupInfo extends AbstractModel
 
     /**
      * @var ProxyConnectionPoolInfo 数据库代理连接池信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConnectionPool;
 
@@ -79,23 +68,18 @@ class ProxyGroupInfo extends AbstractModel
 
     /**
      * @var array 数据库代理任务集
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tasks;
 
     /**
      * @param ProxyGroup $ProxyGroup 数据库代理组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ProxyGroupRwInfo $ProxyGroupRwInfo 数据库代理组读写分离信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ProxyNodes 数据库代理节点信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ProxyConnectionPoolInfo $ConnectionPool 数据库代理连接池信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $NetAddrInfos 数据库代理网络信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tasks 数据库代理任务集
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

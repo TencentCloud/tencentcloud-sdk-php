@@ -21,189 +21,129 @@ use TencentCloud\Common\AbstractModel;
  * tsf-privilege 模块，资源
  *
  * @method string getResourceId() 获取资源ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceId(string $ResourceId) 设置资源ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceCode() 获取资源编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceCode(string $ResourceCode) 设置资源编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceName() 获取资源名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceName(string $ResourceName) 设置资源名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getServiceCode() 获取资源所属产品编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceCode(string $ServiceCode) 设置资源所属产品编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceAction() 获取选取资源使用的Action
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceAction(string $ResourceAction) 设置选取资源使用的Action
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIdField() 获取资源数据查询的ID字段名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIdField(string $IdField) 设置资源数据查询的ID字段名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNameField() 获取资源数据查询的名称字段名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNameField(string $NameField) 设置资源数据查询的名称字段名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSelectIdsField() 获取资源数据查询的ID过滤字段名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSelectIdsField(string $SelectIdsField) 设置资源数据查询的ID过滤字段名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreationTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreationTime(integer $CreationTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLastUpdateTime() 获取最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastUpdateTime(integer $LastUpdateTime) 设置最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getDeleteFlag() 获取删除标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeleteFlag(boolean $DeleteFlag) 设置删除标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceDesc() 获取资源描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceDesc(string $ResourceDesc) 设置资源描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getCanSelectAll() 获取是否可以选择全部
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCanSelectAll(boolean $CanSelectAll) 设置是否可以选择全部
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSearchWordField() 获取资源数据查询的模糊查询字段名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSearchWordField(string $SearchWordField) 设置资源数据查询的模糊查询字段名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIndex() 获取排序
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIndex(integer $Index) 设置排序
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Resource extends AbstractModel
 {
     /**
      * @var string 资源ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceId;
 
     /**
      * @var string 资源编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceCode;
 
     /**
      * @var string 资源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceName;
 
     /**
      * @var string 资源所属产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceCode;
 
     /**
      * @var string 选取资源使用的Action
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceAction;
 
     /**
      * @var string 资源数据查询的ID字段名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IdField;
 
     /**
      * @var string 资源数据查询的名称字段名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NameField;
 
     /**
      * @var string 资源数据查询的ID过滤字段名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SelectIdsField;
 
     /**
      * @var integer 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreationTime;
 
     /**
      * @var integer 最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastUpdateTime;
 
     /**
      * @var boolean 删除标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeleteFlag;
 
     /**
      * @var string 资源描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceDesc;
 
     /**
      * @var boolean 是否可以选择全部
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CanSelectAll;
 
     /**
      * @var string 资源数据查询的模糊查询字段名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SearchWordField;
 
     /**
      * @var integer 排序
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Index;
 
     /**
      * @param string $ResourceId 资源ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceCode 资源编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceName 资源名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceCode 资源所属产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceAction 选取资源使用的Action
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IdField 资源数据查询的ID字段名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NameField 资源数据查询的名称字段名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SelectIdsField 资源数据查询的ID过滤字段名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreationTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LastUpdateTime 最后更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $DeleteFlag 删除标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceDesc 资源描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $CanSelectAll 是否可以选择全部
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SearchWordField 资源数据查询的模糊查询字段名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Index 排序
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

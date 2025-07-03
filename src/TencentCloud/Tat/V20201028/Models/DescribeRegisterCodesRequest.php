@@ -21,7 +21,15 @@ use TencentCloud\Common\AbstractModel;
  * DescribeRegisterCodes请求参数结构体
  *
  * @method array getRegisterCodeIds() 获取注册码ID。
+
+每次请求的上限为 100。
+
+参数不支持同时指定 `RegisterCodeIds ` 和 `Filters ` 。
  * @method void setRegisterCodeIds(array $RegisterCodeIds) 设置注册码ID。
+
+每次请求的上限为 100。
+
+参数不支持同时指定 `RegisterCodeIds ` 和 `Filters ` 。
  * @method integer getOffset() 获取偏移量，默认为 0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为 0。
  * @method integer getLimit() 获取返回数量，默认为 20，最大值为 100。
@@ -31,6 +39,10 @@ class DescribeRegisterCodesRequest extends AbstractModel
 {
     /**
      * @var array 注册码ID。
+
+每次请求的上限为 100。
+
+参数不支持同时指定 `RegisterCodeIds ` 和 `Filters ` 。
      */
     public $RegisterCodeIds;
 
@@ -46,6 +58,10 @@ class DescribeRegisterCodesRequest extends AbstractModel
 
     /**
      * @param array $RegisterCodeIds 注册码ID。
+
+每次请求的上限为 100。
+
+参数不支持同时指定 `RegisterCodeIds ` 和 `Filters ` 。
      * @param integer $Offset 偏移量，默认为 0。
      * @param integer $Limit 返回数量，默认为 20，最大值为 100。
      */

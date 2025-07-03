@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 漏洞风险信息
  *
  * @method string getFix() 获取修复建议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFix(string $Fix) 设置修复建议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReferences() 获取技术参考/参考链接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReferences(string $References) 设置技术参考/参考链接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescribe() 获取漏洞描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescribe(string $Describe) 设置漏洞描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getImpactComponent() 获取受影响组件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImpactComponent(array $ImpactComponent) 设置受影响组件
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VULRiskInfo extends AbstractModel
 {
     /**
      * @var string 修复建议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Fix;
 
     /**
      * @var string 技术参考/参考链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $References;
 
     /**
      * @var string 漏洞描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Describe;
 
     /**
      * @var array 受影响组件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImpactComponent;
 
     /**
      * @param string $Fix 修复建议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $References 技术参考/参考链接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Describe 漏洞描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ImpactComponent 受影响组件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

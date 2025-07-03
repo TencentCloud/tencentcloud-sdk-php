@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 用户侧网段地址
  *
  * @method string getCidr() 获取用户侧网段地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCidr(string $Cidr) 设置用户侧网段地址
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RouteFilterPrefix extends AbstractModel
 {
     /**
      * @var string 用户侧网段地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Cidr;
 
     /**
      * @param string $Cidr 用户侧网段地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

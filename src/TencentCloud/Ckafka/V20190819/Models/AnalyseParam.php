@@ -23,17 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getFormat() 获取解析格式，JSON，DELIMITER分隔符，REGULAR正则提取，SOURCE处理上层所有结果
  * @method void setFormat(string $Format) 设置解析格式，JSON，DELIMITER分隔符，REGULAR正则提取，SOURCE处理上层所有结果
  * @method string getRegex() 获取分隔符、正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegex(string $Regex) 设置分隔符、正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInputValueType() 获取需再次处理的KEY——模式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInputValueType(string $InputValueType) 设置需再次处理的KEY——模式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInputValue() 获取需再次处理的KEY——KEY表达式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInputValue(string $InputValue) 设置需再次处理的KEY——KEY表达式
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AnalyseParam extends AbstractModel
 {
@@ -44,30 +38,24 @@ class AnalyseParam extends AbstractModel
 
     /**
      * @var string 分隔符、正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Regex;
 
     /**
      * @var string 需再次处理的KEY——模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InputValueType;
 
     /**
      * @var string 需再次处理的KEY——KEY表达式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InputValue;
 
     /**
      * @param string $Format 解析格式，JSON，DELIMITER分隔符，REGULAR正则提取，SOURCE处理上层所有结果
      * @param string $Regex 分隔符、正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InputValueType 需再次处理的KEY——模式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InputValue 需再次处理的KEY——KEY表达式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

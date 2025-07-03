@@ -20,202 +20,138 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 集群信息
  *
- * @method integer getID() 获取1
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setID(integer $ID) 设置1
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceId() 获取1
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceId(string $InstanceId) 设置1
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceName() 获取1
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceName(string $InstanceName) 设置1
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVersion() 获取1
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVersion(string $Version) 设置1
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRegion() 获取1
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRegion(string $Region) 设置1
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getZone() 获取1
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setZone(string $Zone) 设置1
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUserVPCID() 获取1
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUserVPCID(string $UserVPCID) 设置1
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUserSubnetID() 获取1
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUserSubnetID(string $UserSubnetID) 设置1
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateTime() 获取1
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateTime(string $CreateTime) 设置1
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExpireTime() 获取1
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExpireTime(string $ExpireTime) 设置1
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAccessInfo() 获取1
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAccessInfo(string $AccessInfo) 设置1
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRenewFlag() 获取1
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRenewFlag(integer $RenewFlag) 设置1
-注意：此字段可能返回 null，表示取不到有效值。
- * @method ChargeProperties getChargeProperties() 获取1
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setChargeProperties(ChargeProperties $ChargeProperties) 设置1
-注意：此字段可能返回 null，表示取不到有效值。
- * @method array getResources() 获取1
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResources(array $Resources) 设置1
-注意：此字段可能返回 null，表示取不到有效值。
- * @method array getTags() 获取1
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTags(array $Tags) 设置1
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取1
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置1
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getID() 获取ID
+ * @method void setID(integer $ID) 设置ID
+ * @method string getInstanceId() 获取集群Id
+ * @method void setInstanceId(string $InstanceId) 设置集群Id
+ * @method string getInstanceName() 获取集群名字
+ * @method void setInstanceName(string $InstanceName) 设置集群名字
+ * @method string getVersion() 获取内核版本
+ * @method void setVersion(string $Version) 设置内核版本
+ * @method string getRegion() 获取地域
+ * @method void setRegion(string $Region) 设置地域
+ * @method string getZone() 获取地区
+ * @method void setZone(string $Zone) 设置地区
+ * @method string getUserVPCID() 获取私有网络
+ * @method void setUserVPCID(string $UserVPCID) 设置私有网络
+ * @method string getUserSubnetID() 获取子网
+ * @method void setUserSubnetID(string $UserSubnetID) 设置子网
+ * @method string getCreateTime() 获取开始时间
+ * @method void setCreateTime(string $CreateTime) 设置开始时间
+ * @method string getExpireTime() 获取到期时间
+ * @method void setExpireTime(string $ExpireTime) 设置到期时间
+ * @method string getAccessInfo() 获取访问地址
+ * @method void setAccessInfo(string $AccessInfo) 设置访问地址
+ * @method integer getRenewFlag() 获取自动续费开关，0为不自动续费，1为自动续费
+ * @method void setRenewFlag(integer $RenewFlag) 设置自动续费开关，0为不自动续费，1为自动续费
+ * @method ChargeProperties getChargeProperties() 获取计费方式
+ * @method void setChargeProperties(ChargeProperties $ChargeProperties) 设置计费方式
+ * @method array getResources() 获取资源集合
+ * @method void setResources(array $Resources) 设置资源集合
+ * @method array getTags() 获取标签列表
+ * @method void setTags(array $Tags) 设置标签列表
+ * @method integer getStatus() 获取集群状态
+ * @method void setStatus(integer $Status) 设置集群状态
  */
 class SimpleInstanceInfo extends AbstractModel
 {
     /**
-     * @var integer 1
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer ID
      */
     public $ID;
 
     /**
-     * @var string 1
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 集群Id
      */
     public $InstanceId;
 
     /**
-     * @var string 1
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 集群名字
      */
     public $InstanceName;
 
     /**
-     * @var string 1
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 内核版本
      */
     public $Version;
 
     /**
-     * @var string 1
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 地域
      */
     public $Region;
 
     /**
-     * @var string 1
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 地区
      */
     public $Zone;
 
     /**
-     * @var string 1
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 私有网络
      */
     public $UserVPCID;
 
     /**
-     * @var string 1
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 子网
      */
     public $UserSubnetID;
 
     /**
-     * @var string 1
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 开始时间
      */
     public $CreateTime;
 
     /**
-     * @var string 1
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 到期时间
      */
     public $ExpireTime;
 
     /**
-     * @var string 1
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 访问地址
      */
     public $AccessInfo;
 
     /**
-     * @var integer 1
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 自动续费开关，0为不自动续费，1为自动续费
      */
     public $RenewFlag;
 
     /**
-     * @var ChargeProperties 1
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var ChargeProperties 计费方式
      */
     public $ChargeProperties;
 
     /**
-     * @var array 1
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 资源集合
      */
     public $Resources;
 
     /**
-     * @var array 1
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 标签列表
      */
     public $Tags;
 
     /**
-     * @var integer 1
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 集群状态
      */
     public $Status;
 
     /**
-     * @param integer $ID 1
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceId 1
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceName 1
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Version 1
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Region 1
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Zone 1
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UserVPCID 1
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UserSubnetID 1
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateTime 1
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ExpireTime 1
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AccessInfo 1
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RenewFlag 1
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param ChargeProperties $ChargeProperties 1
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Resources 1
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Tags 1
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 1
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ID ID
+     * @param string $InstanceId 集群Id
+     * @param string $InstanceName 集群名字
+     * @param string $Version 内核版本
+     * @param string $Region 地域
+     * @param string $Zone 地区
+     * @param string $UserVPCID 私有网络
+     * @param string $UserSubnetID 子网
+     * @param string $CreateTime 开始时间
+     * @param string $ExpireTime 到期时间
+     * @param string $AccessInfo 访问地址
+     * @param integer $RenewFlag 自动续费开关，0为不自动续费，1为自动续费
+     * @param ChargeProperties $ChargeProperties 计费方式
+     * @param array $Resources 资源集合
+     * @param array $Tags 标签列表
+     * @param integer $Status 集群状态
      */
     function __construct()
     {

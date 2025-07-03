@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDatahubTopic请求参数结构体
  *
- * @method string getName() 获取名称
- * @method void setName(string $Name) 设置名称
+ * @method string getName() 获取弹性topic名称
+ * @method void setName(string $Name) 设置弹性topic名称
  */
 class DescribeDatahubTopicRequest extends AbstractModel
 {
     /**
-     * @var string 名称
+     * @var string 弹性topic名称
      */
     public $Name;
 
     /**
-     * @param string $Name 名称
+     * @param string $Name 弹性topic名称
      */
     function __construct()
     {

@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 上传音频文件失败信息
  *
  * @method string getFileName() 获取文件名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileName(string $FileName) 设置文件名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFailedMsg() 获取失败原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailedMsg(string $FailedMsg) 设置失败原因
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class UploadIvrAudioFailedInfo extends AbstractModel
 {
     /**
      * @var string 文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileName;
 
     /**
      * @var string 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailedMsg;
 
     /**
      * @param string $FileName 文件名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FailedMsg 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

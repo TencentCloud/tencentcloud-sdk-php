@@ -28,9 +28,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegistryId(string $RegistryId) 设置用于企业版TCR获取镜像拉取临时凭证，ImageType为"enterprise"时必填
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEntryPoint() 获取参数已废弃
+ * @method string getEntryPoint() 获取该参数即将下线，不推荐用户使用
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEntryPoint(string $EntryPoint) 设置参数已废弃
+ * @method void setEntryPoint(string $EntryPoint) 设置该参数即将下线，不推荐用户使用
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCommand() 获取容器的启动命令。该参数为可选参数，如果不填写，则默认使用 Dockerfile 中的 Entrypoint。传入规范，填写可运行的指令，例如 python
 注意：此字段可能返回 null，表示取不到有效值。
@@ -44,15 +44,19 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainerImageAccelerate(boolean $ContainerImageAccelerate) 设置镜像加速开关，默认False
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getImagePort() 获取镜像函数端口设置
-默认值: 9000
--1: 无端口镜像函数
-其他: 取值范围 0 ~ 65535
+ * @method integer getImagePort() 获取镜像函数端口设置，可指定镜像类型
+Web Server镜像：9000
+Job 镜像：-1
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setImagePort(integer $ImagePort) 设置镜像函数端口设置
-默认值: 9000
--1: 无端口镜像函数
-其他: 取值范围 0 ~ 65535
+默认值：9000
+示例值：9000
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setImagePort(integer $ImagePort) 设置镜像函数端口设置，可指定镜像类型
+Web Server镜像：9000
+Job 镜像：-1
+注意：此字段可能返回 null，表示取不到有效值。
+默认值：9000
+示例值：9000
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImageConfig extends AbstractModel
@@ -74,7 +78,7 @@ class ImageConfig extends AbstractModel
     public $RegistryId;
 
     /**
-     * @var string 参数已废弃
+     * @var string 该参数即将下线，不推荐用户使用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EntryPoint;
@@ -98,10 +102,12 @@ class ImageConfig extends AbstractModel
     public $ContainerImageAccelerate;
 
     /**
-     * @var integer 镜像函数端口设置
-默认值: 9000
--1: 无端口镜像函数
-其他: 取值范围 0 ~ 65535
+     * @var integer 镜像函数端口设置，可指定镜像类型
+Web Server镜像：9000
+Job 镜像：-1
+注意：此字段可能返回 null，表示取不到有效值。
+默认值：9000
+示例值：9000
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImagePort;
@@ -111,7 +117,7 @@ class ImageConfig extends AbstractModel
      * @param string $ImageUri {domain}/{namespace}/{imageName}:{tag}@{digest}
      * @param string $RegistryId 用于企业版TCR获取镜像拉取临时凭证，ImageType为"enterprise"时必填
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EntryPoint 参数已废弃
+     * @param string $EntryPoint 该参数即将下线，不推荐用户使用
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Command 容器的启动命令。该参数为可选参数，如果不填写，则默认使用 Dockerfile 中的 Entrypoint。传入规范，填写可运行的指令，例如 python
 注意：此字段可能返回 null，表示取不到有效值。
@@ -119,10 +125,12 @@ class ImageConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $ContainerImageAccelerate 镜像加速开关，默认False
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ImagePort 镜像函数端口设置
-默认值: 9000
--1: 无端口镜像函数
-其他: 取值范围 0 ~ 65535
+     * @param integer $ImagePort 镜像函数端口设置，可指定镜像类型
+Web Server镜像：9000
+Job 镜像：-1
+注意：此字段可能返回 null，表示取不到有效值。
+默认值：9000
+示例值：9000
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

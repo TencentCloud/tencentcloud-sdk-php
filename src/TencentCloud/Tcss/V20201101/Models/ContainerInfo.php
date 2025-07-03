@@ -69,13 +69,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getNetSubStatus() 获取网络子状态
  * @method void setNetSubStatus(string $NetSubStatus) 设置网络子状态
  * @method string getIsolateSource() 获取隔离来源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsolateSource(string $IsolateSource) 设置隔离来源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIsolateTime() 获取隔离时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsolateTime(string $IsolateTime) 设置隔离时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNodeID() 获取超级节点id
  * @method void setNodeID(string $NodeID) 设置超级节点id
  * @method string getPodIP() 获取podip
@@ -95,9 +91,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getClusterID() 获取集群ID
  * @method void setClusterID(string $ClusterID) 设置集群ID
  * @method string getPodUid() 获取pod uid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPodUid(string $PodUid) 设置pod uid
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ContainerInfo extends AbstractModel
 {
@@ -199,13 +193,11 @@ class ContainerInfo extends AbstractModel
 
     /**
      * @var string 隔离来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsolateSource;
 
     /**
      * @var string 隔离时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsolateTime;
 
@@ -256,7 +248,6 @@ class ContainerInfo extends AbstractModel
 
     /**
      * @var string pod uid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PodUid;
 
@@ -286,9 +277,7 @@ class ContainerInfo extends AbstractModel
 解除隔离失败 RESTORE_FAILED
      * @param string $NetSubStatus 网络子状态
      * @param string $IsolateSource 隔离来源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IsolateTime 隔离时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NodeID 超级节点id
      * @param string $PodIP podip
      * @param string $PodName pod名称
@@ -299,7 +288,6 @@ class ContainerInfo extends AbstractModel
      * @param string $ClusterName 集群名称
      * @param string $ClusterID 集群ID
      * @param string $PodUid pod uid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

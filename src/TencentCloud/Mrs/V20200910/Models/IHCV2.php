@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * IHC
  *
  * @method array getIndex() 获取索引
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIndex(array $Index) 设置索引
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSrc() 获取原文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSrc(string $Src) 设置原文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取ihc归一化
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置ihc归一化
-注意：此字段可能返回 null，表示取不到有效值。
  * @method Value getValue() 获取ihc详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(Value $Value) 设置ihc详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCoords() 获取原文对应坐标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCoords(array $Coords) 设置原文对应坐标
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class IHCV2 extends AbstractModel
 {
     /**
      * @var array 索引
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Index;
 
     /**
      * @var string 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Src;
 
     /**
      * @var string ihc归一化
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var Value ihc详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @var array 原文对应坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Coords;
 
     /**
      * @param array $Index 索引
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name ihc归一化
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Value $Value ihc详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Coords 原文对应坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -47,23 +47,23 @@ use TencentCloud\Common\AbstractModel;
  * @method string getName() 获取签署人姓名，最大长度50个字。
  * @method void setName(string $Name) 设置签署人姓名，最大长度50个字。
  * @method string getIdCardType() 获取签署方经办人的证件类型，支持以下类型
-<ul><li>ID_CARD : 居民身份证(默认值)</li>
-<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
+<ul><li>ID_CARD : 中国大陆居民身份证(默认值)</li>
+<li>HONGKONG_AND_MACAO : 中国港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 中国港澳台居民居住证(格式同中国大陆居民身份证)</li></ul>
  * @method void setIdCardType(string $IdCardType) 设置签署方经办人的证件类型，支持以下类型
-<ul><li>ID_CARD : 居民身份证(默认值)</li>
-<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
+<ul><li>ID_CARD : 中国大陆居民身份证(默认值)</li>
+<li>HONGKONG_AND_MACAO : 中国港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 中国港澳台居民居住证(格式同中国大陆居民身份证)</li></ul>
  * @method string getIdCardNumber() 获取证件号码，应符合以下规则
-<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成(如存在X，请大写)。</li>
-<li>港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给香港居民，“M”字头签发给澳门居民；第2位至第11位为数字。
+<ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成(如存在X，请大写)。</li>
+<li>中国港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。
 </li>
-<li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
+<li>中国港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
  * @method void setIdCardNumber(string $IdCardNumber) 设置证件号码，应符合以下规则
-<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成(如存在X，请大写)。</li>
-<li>港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给香港居民，“M”字头签发给澳门居民；第2位至第11位为数字。
+<ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成(如存在X，请大写)。</li>
+<li>中国港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。
 </li>
-<li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
+<li>中国港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
  * @method string getMobile() 获取签署人手机号。
  * @method void setMobile(string $Mobile) 设置签署人手机号。
  * @method string getOrganizationName() 获取组织机构名称。
@@ -75,13 +75,13 @@ use TencentCloud\Common\AbstractModel;
 如果名称中包含英文括号()，请使用中文括号（）代替。
 如果签署方是企业签署方(approverType = 0 或者 approverType = 3)， 则企业名称必填。
  * @method string getOrganizationOpenId() 获取第三方平台子客企业的唯一标识，定义Agent中的ProxyOrganizationOpenId一样, 可以参考<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#agent" target="_blank">Agent结构体</a>。
-当为子客企业指定经办人时，此OrganizationOpenId必传。
+<font color="red">当为子客企业指定经办人时，此OrganizationOpenId必传。</font>
  * @method void setOrganizationOpenId(string $OrganizationOpenId) 设置第三方平台子客企业的唯一标识，定义Agent中的ProxyOrganizationOpenId一样, 可以参考<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#agent" target="_blank">Agent结构体</a>。
-当为子客企业指定经办人时，此OrganizationOpenId必传。
+<font color="red">当为子客企业指定经办人时，此OrganizationOpenId必传。</font>
  * @method string getOpenId() 获取第三方平台子客企业员工的唯一标识，长度不能超过64，只能由字母和数字组成。
-当签署方为同一第三方平台下的员工时，此OpenId必传。
+<font color="red">当签署方为同一第三方平台下的员工时，此OpenId必传。</font>
  * @method void setOpenId(string $OpenId) 设置第三方平台子客企业员工的唯一标识，长度不能超过64，只能由字母和数字组成。
-当签署方为同一第三方平台下的员工时，此OpenId必传。
+<font color="red">当签署方为同一第三方平台下的员工时，此OpenId必传。</font>
  * @method string getApproverSignComponentType() 获取签署控件类型，支持自定义企业签署方的签署控件类型
 <ul><li> **SIGN_SEAL**：默认为印章控件类型(默认值)</li>
 <li> **SIGN_SIGNATURE**：手写签名控件类型</li></ul>
@@ -90,8 +90,12 @@ use TencentCloud\Common\AbstractModel;
 <li> **SIGN_SIGNATURE**：手写签名控件类型</li></ul>
  * @method string getApproverSignRole() 获取参与方在合同中的角色是按照创建合同的时候来排序的，解除协议默认会将第一个参与人叫`甲方`,第二个叫`乙方`,  第三个叫`丙方`，以此类推。
 如果需改动此参与人的角色名字，可用此字段指定，由汉字,英文字符,数字组成，最大20个字。
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/973a820ab66d1ce57082c160c2b2d44a.png)
  * @method void setApproverSignRole(string $ApproverSignRole) 设置参与方在合同中的角色是按照创建合同的时候来排序的，解除协议默认会将第一个参与人叫`甲方`,第二个叫`乙方`,  第三个叫`丙方`，以此类推。
 如果需改动此参与人的角色名字，可用此字段指定，由汉字,英文字符,数字组成，最大20个字。
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/973a820ab66d1ce57082c160c2b2d44a.png)
  * @method string getApproverSignSealId() 获取印章Id，签署控件类型为印章时，用于指定本企业签署方在解除协议中使用那个印章进行签署
  * @method void setApproverSignSealId(string $ApproverSignSealId) 设置印章Id，签署控件类型为印章时，用于指定本企业签署方在解除协议中使用那个印章进行签署
  */
@@ -123,18 +127,18 @@ class ReleasedApprover extends AbstractModel
 
     /**
      * @var string 签署方经办人的证件类型，支持以下类型
-<ul><li>ID_CARD : 居民身份证(默认值)</li>
-<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
+<ul><li>ID_CARD : 中国大陆居民身份证(默认值)</li>
+<li>HONGKONG_AND_MACAO : 中国港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 中国港澳台居民居住证(格式同中国大陆居民身份证)</li></ul>
      */
     public $IdCardType;
 
     /**
      * @var string 证件号码，应符合以下规则
-<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成(如存在X，请大写)。</li>
-<li>港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给香港居民，“M”字头签发给澳门居民；第2位至第11位为数字。
+<ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成(如存在X，请大写)。</li>
+<li>中国港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。
 </li>
-<li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
+<li>中国港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
      */
     public $IdCardNumber;
 
@@ -153,13 +157,13 @@ class ReleasedApprover extends AbstractModel
 
     /**
      * @var string 第三方平台子客企业的唯一标识，定义Agent中的ProxyOrganizationOpenId一样, 可以参考<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#agent" target="_blank">Agent结构体</a>。
-当为子客企业指定经办人时，此OrganizationOpenId必传。
+<font color="red">当为子客企业指定经办人时，此OrganizationOpenId必传。</font>
      */
     public $OrganizationOpenId;
 
     /**
      * @var string 第三方平台子客企业员工的唯一标识，长度不能超过64，只能由字母和数字组成。
-当签署方为同一第三方平台下的员工时，此OpenId必传。
+<font color="red">当签署方为同一第三方平台下的员工时，此OpenId必传。</font>
      */
     public $OpenId;
 
@@ -173,6 +177,8 @@ class ReleasedApprover extends AbstractModel
     /**
      * @var string 参与方在合同中的角色是按照创建合同的时候来排序的，解除协议默认会将第一个参与人叫`甲方`,第二个叫`乙方`,  第三个叫`丙方`，以此类推。
 如果需改动此参与人的角色名字，可用此字段指定，由汉字,英文字符,数字组成，最大20个字。
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/973a820ab66d1ce57082c160c2b2d44a.png)
      */
     public $ApproverSignRole;
 
@@ -191,28 +197,30 @@ class ReleasedApprover extends AbstractModel
 **注意**：当指定了此参数后，ApproverNumber即失效，会以本参数作为原合同参与人的选取。与ApproverNumber二选一。
      * @param string $Name 签署人姓名，最大长度50个字。
      * @param string $IdCardType 签署方经办人的证件类型，支持以下类型
-<ul><li>ID_CARD : 居民身份证(默认值)</li>
-<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
+<ul><li>ID_CARD : 中国大陆居民身份证(默认值)</li>
+<li>HONGKONG_AND_MACAO : 中国港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 中国港澳台居民居住证(格式同中国大陆居民身份证)</li></ul>
      * @param string $IdCardNumber 证件号码，应符合以下规则
-<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成(如存在X，请大写)。</li>
-<li>港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给香港居民，“M”字头签发给澳门居民；第2位至第11位为数字。
+<ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成(如存在X，请大写)。</li>
+<li>中国港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。
 </li>
-<li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
+<li>中国港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
      * @param string $Mobile 签署人手机号。
      * @param string $OrganizationName 组织机构名称。
 请确认该名称与企业营业执照中注册的名称一致。
 如果名称中包含英文括号()，请使用中文括号（）代替。
 如果签署方是企业签署方(approverType = 0 或者 approverType = 3)， 则企业名称必填。
      * @param string $OrganizationOpenId 第三方平台子客企业的唯一标识，定义Agent中的ProxyOrganizationOpenId一样, 可以参考<a href="https://qian.tencent.com/developers/partnerApis/dataTypes/#agent" target="_blank">Agent结构体</a>。
-当为子客企业指定经办人时，此OrganizationOpenId必传。
+<font color="red">当为子客企业指定经办人时，此OrganizationOpenId必传。</font>
      * @param string $OpenId 第三方平台子客企业员工的唯一标识，长度不能超过64，只能由字母和数字组成。
-当签署方为同一第三方平台下的员工时，此OpenId必传。
+<font color="red">当签署方为同一第三方平台下的员工时，此OpenId必传。</font>
      * @param string $ApproverSignComponentType 签署控件类型，支持自定义企业签署方的签署控件类型
 <ul><li> **SIGN_SEAL**：默认为印章控件类型(默认值)</li>
 <li> **SIGN_SIGNATURE**：手写签名控件类型</li></ul>
      * @param string $ApproverSignRole 参与方在合同中的角色是按照创建合同的时候来排序的，解除协议默认会将第一个参与人叫`甲方`,第二个叫`乙方`,  第三个叫`丙方`，以此类推。
 如果需改动此参与人的角色名字，可用此字段指定，由汉字,英文字符,数字组成，最大20个字。
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/973a820ab66d1ce57082c160c2b2d44a.png)
      * @param string $ApproverSignSealId 印章Id，签署控件类型为印章时，用于指定本企业签署方在解除协议中使用那个印章进行签署
      */
     function __construct()

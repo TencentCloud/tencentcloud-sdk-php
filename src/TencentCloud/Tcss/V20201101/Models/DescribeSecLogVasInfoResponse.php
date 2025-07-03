@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsPurchased(boolean $IsPurchased) 设置是否曾经购买过(false:未曾 true:曾经购买过)
  * @method integer getTrialCapacity() 获取试用存储容量(GB)
  * @method void setTrialCapacity(integer $TrialCapacity) 设置试用存储容量(GB)
+ * @method array getResourceDetailList() 获取资源详情数组对象
+ * @method void setResourceDetailList(array $ResourceDetailList) 设置资源详情数组对象
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -91,6 +93,11 @@ class DescribeSecLogVasInfoResponse extends AbstractModel
     public $TrialCapacity;
 
     /**
+     * @var array 资源详情数组对象
+     */
+    public $ResourceDetailList;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -107,6 +114,7 @@ class DescribeSecLogVasInfoResponse extends AbstractModel
      * @param string $ResourceID 资源ID
      * @param boolean $IsPurchased 是否曾经购买过(false:未曾 true:曾经购买过)
      * @param integer $TrialCapacity 试用存储容量(GB)
+     * @param array $ResourceDetailList 资源详情数组对象
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -152,6 +160,15 @@ class DescribeSecLogVasInfoResponse extends AbstractModel
 
         if (array_key_exists("TrialCapacity",$param) and $param["TrialCapacity"] !== null) {
             $this->TrialCapacity = $param["TrialCapacity"];
+        }
+
+        if (array_key_exists("ResourceDetailList",$param) and $param["ResourceDetailList"] !== null) {
+            $this->ResourceDetailList = [];
+            foreach ($param["ResourceDetailList"] as $key => $value){
+                $obj = new VasInfoResourceDetail();
+                $obj->deserialize($value);
+                array_push($this->ResourceDetailList, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

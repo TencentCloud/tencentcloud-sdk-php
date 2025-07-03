@@ -21,137 +21,71 @@ use TencentCloud\Common\AbstractModel;
  * DescribeAssetImageRegistryDetail返回参数结构体
  *
  * @method string getImageDigest() 获取镜像Digest
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageDigest(string $ImageDigest) 设置镜像Digest
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getImageRepoAddress() 获取镜像地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageRepoAddress(string $ImageRepoAddress) 设置镜像地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegistryType() 获取镜像类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegistryType(string $RegistryType) 设置镜像类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getImageName() 获取仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageName(string $ImageName) 设置仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getImageTag() 获取镜像版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageTag(string $ImageTag) 设置镜像版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getScanTime() 获取扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScanTime(string $ScanTime) 设置扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getScanStatus() 获取扫描状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScanStatus(string $ScanStatus) 设置扫描状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVulCnt() 获取安全漏洞数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVulCnt(integer $VulCnt) 设置安全漏洞数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVirusCnt() 获取木马病毒数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVirusCnt(integer $VirusCnt) 设置木马病毒数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRiskCnt() 获取风险行为数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskCnt(integer $RiskCnt) 设置风险行为数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSentiveInfoCnt() 获取敏感信息数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSentiveInfoCnt(integer $SentiveInfoCnt) 设置敏感信息数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOsName() 获取镜像系统
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOsName(string $OsName) 设置镜像系统
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getScanVirusError() 获取木马扫描错误
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScanVirusError(string $ScanVirusError) 设置木马扫描错误
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getScanVulError() 获取漏洞扫描错误
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScanVulError(string $ScanVulError) 设置漏洞扫描错误
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLayerInfo() 获取层文件信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLayerInfo(string $LayerInfo) 设置层文件信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取实例id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置实例id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceName() 获取实例名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceName(string $InstanceName) 设置实例名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNamespace() 获取命名空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespace(string $Namespace) 设置命名空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getScanRiskError() 获取高危扫描错误
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScanRiskError(string $ScanRiskError) 设置高危扫描错误
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScanVirusProgress() 获取木马信息扫描进度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScanVirusProgress(integer $ScanVirusProgress) 设置木马信息扫描进度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScanVulProgress() 获取漏洞扫描进度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScanVulProgress(integer $ScanVulProgress) 设置漏洞扫描进度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScanRiskProgress() 获取敏感扫描进度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScanRiskProgress(integer $ScanRiskProgress) 设置敏感扫描进度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScanRemainTime() 获取剩余扫描时间秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScanRemainTime(integer $ScanRemainTime) 设置剩余扫描时间秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCveStatus() 获取cve扫描状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCveStatus(string $CveStatus) 设置cve扫描状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRiskStatus() 获取高危扫描状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskStatus(string $RiskStatus) 设置高危扫描状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVirusStatus() 获取木马扫描状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVirusStatus(string $VirusStatus) 设置木马扫描状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProgress() 获取总进度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProgress(integer $Progress) 设置总进度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsAuthorized() 获取授权状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsAuthorized(integer $IsAuthorized) 设置授权状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getImageSize() 获取镜像大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageSize(integer $ImageSize) 设置镜像大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getImageId() 获取镜像Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageId(string $ImageId) 设置镜像Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegistryRegion() 获取镜像区域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegistryRegion(string $RegistryRegion) 设置镜像区域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getImageCreateTime() 获取镜像创建的时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageCreateTime(string $ImageCreateTime) 设置镜像创建的时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSensitiveInfoCnt() 获取敏感信息数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSensitiveInfoCnt(integer $SensitiveInfoCnt) 设置敏感信息数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getId() 获取Id
  * @method void setId(integer $Id) 设置Id
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -161,200 +95,167 @@ class DescribeAssetImageRegistryDetailResponse extends AbstractModel
 {
     /**
      * @var string 镜像Digest
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageDigest;
 
     /**
      * @var string 镜像地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageRepoAddress;
 
     /**
      * @var string 镜像类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegistryType;
 
     /**
      * @var string 仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageName;
 
     /**
      * @var string 镜像版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageTag;
 
     /**
      * @var string 扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScanTime;
 
     /**
      * @var string 扫描状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScanStatus;
 
     /**
      * @var integer 安全漏洞数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VulCnt;
 
     /**
      * @var integer 木马病毒数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VirusCnt;
 
     /**
      * @var integer 风险行为数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskCnt;
 
     /**
      * @var integer 敏感信息数
-注意：此字段可能返回 null，表示取不到有效值。
      * @deprecated
      */
     public $SentiveInfoCnt;
 
     /**
      * @var string 镜像系统
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OsName;
 
     /**
      * @var string 木马扫描错误
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScanVirusError;
 
     /**
      * @var string 漏洞扫描错误
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScanVulError;
 
     /**
      * @var string 层文件信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LayerInfo;
 
     /**
      * @var string 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var string 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceName;
 
     /**
      * @var string 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Namespace;
 
     /**
      * @var string 高危扫描错误
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScanRiskError;
 
     /**
      * @var integer 木马信息扫描进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScanVirusProgress;
 
     /**
      * @var integer 漏洞扫描进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScanVulProgress;
 
     /**
      * @var integer 敏感扫描进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScanRiskProgress;
 
     /**
      * @var integer 剩余扫描时间秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScanRemainTime;
 
     /**
      * @var string cve扫描状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CveStatus;
 
     /**
      * @var string 高危扫描状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskStatus;
 
     /**
      * @var string 木马扫描状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VirusStatus;
 
     /**
      * @var integer 总进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Progress;
 
     /**
      * @var integer 授权状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsAuthorized;
 
     /**
      * @var integer 镜像大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageSize;
 
     /**
      * @var string 镜像Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageId;
 
     /**
      * @var string 镜像区域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegistryRegion;
 
     /**
      * @var string 镜像创建的时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageCreateTime;
 
     /**
      * @var integer 敏感信息数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SensitiveInfoCnt;
 
@@ -370,71 +271,38 @@ class DescribeAssetImageRegistryDetailResponse extends AbstractModel
 
     /**
      * @param string $ImageDigest 镜像Digest
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ImageRepoAddress 镜像地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegistryType 镜像类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ImageName 仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ImageTag 镜像版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScanTime 扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScanStatus 扫描状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VulCnt 安全漏洞数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VirusCnt 木马病毒数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RiskCnt 风险行为数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SentiveInfoCnt 敏感信息数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OsName 镜像系统
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScanVirusError 木马扫描错误
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScanVulError 漏洞扫描错误
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LayerInfo 层文件信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Namespace 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScanRiskError 高危扫描错误
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ScanVirusProgress 木马信息扫描进度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ScanVulProgress 漏洞扫描进度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ScanRiskProgress 敏感扫描进度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ScanRemainTime 剩余扫描时间秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CveStatus cve扫描状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RiskStatus 高危扫描状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VirusStatus 木马扫描状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Progress 总进度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsAuthorized 授权状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ImageSize 镜像大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ImageId 镜像Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegistryRegion 镜像区域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ImageCreateTime 镜像创建的时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SensitiveInfoCnt 敏感信息数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Id Id
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

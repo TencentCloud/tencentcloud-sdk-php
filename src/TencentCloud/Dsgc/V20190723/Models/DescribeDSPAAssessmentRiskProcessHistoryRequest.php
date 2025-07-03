@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDspaId() 获取dspa实例id
  * @method void setDspaId(string $DspaId) 设置dspa实例id
- * @method integer getRiskId() 获取xxx
- * @method void setRiskId(integer $RiskId) 设置xxx
+ * @method integer getRiskId() 获取风险id
+ * @method void setRiskId(integer $RiskId) 设置风险id
  */
 class DescribeDSPAAssessmentRiskProcessHistoryRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DescribeDSPAAssessmentRiskProcessHistoryRequest extends AbstractModel
     public $DspaId;
 
     /**
-     * @var integer xxx
+     * @var integer 风险id
      */
     public $RiskId;
 
     /**
      * @param string $DspaId dspa实例id
-     * @param integer $RiskId xxx
+     * @param integer $RiskId 风险id
      */
     function __construct()
     {

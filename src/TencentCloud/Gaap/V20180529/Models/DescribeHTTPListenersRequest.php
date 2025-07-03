@@ -20,10 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeHTTPListeners请求参数结构体
  *
- * @method string getProxyId() 获取通道ID
- * @method void setProxyId(string $ProxyId) 设置通道ID
- * @method string getListenerId() 获取过滤条件，按照监听器ID进行精确查询
- * @method void setListenerId(string $ListenerId) 设置过滤条件，按照监听器ID进行精确查询
+ * @method string getProxyId() 获取通道ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
+ * @method void setProxyId(string $ProxyId) 设置通道ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
+ * @method string getGroupId() 获取通道组ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
+ * @method void setGroupId(string $GroupId) 设置通道组ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
+ * @method string getListenerId() 获取过滤条件，按照监听器ID进行精确查询。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
+ * @method void setListenerId(string $ListenerId) 设置过滤条件，按照监听器ID进行精确查询。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
  * @method string getListenerName() 获取过滤条件，按照监听器名称进行精确查询
  * @method void setListenerName(string $ListenerName) 设置过滤条件，按照监听器名称进行精确查询
  * @method integer getPort() 获取过滤条件，按照监听器端口进行精确查询
@@ -34,18 +36,21 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置限制数量，默认为20个
  * @method string getSearchValue() 获取过滤条件，支持按照端口或监听器名称进行模糊查询，该参数不能与ListenerName和Port同时使用
  * @method void setSearchValue(string $SearchValue) 设置过滤条件，支持按照端口或监听器名称进行模糊查询，该参数不能与ListenerName和Port同时使用
- * @method string getGroupId() 获取通道组ID
- * @method void setGroupId(string $GroupId) 设置通道组ID
  */
 class DescribeHTTPListenersRequest extends AbstractModel
 {
     /**
-     * @var string 通道ID
+     * @var string 通道ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
      */
     public $ProxyId;
 
     /**
-     * @var string 过滤条件，按照监听器ID进行精确查询
+     * @var string 通道组ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
+     */
+    public $GroupId;
+
+    /**
+     * @var string 过滤条件，按照监听器ID进行精确查询。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
      */
     public $ListenerId;
 
@@ -75,19 +80,14 @@ class DescribeHTTPListenersRequest extends AbstractModel
     public $SearchValue;
 
     /**
-     * @var string 通道组ID
-     */
-    public $GroupId;
-
-    /**
-     * @param string $ProxyId 通道ID
-     * @param string $ListenerId 过滤条件，按照监听器ID进行精确查询
+     * @param string $ProxyId 通道ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
+     * @param string $GroupId 通道组ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
+     * @param string $ListenerId 过滤条件，按照监听器ID进行精确查询。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
      * @param string $ListenerName 过滤条件，按照监听器名称进行精确查询
      * @param integer $Port 过滤条件，按照监听器端口进行精确查询
      * @param integer $Offset 偏移量，默认为0
      * @param integer $Limit 限制数量，默认为20个
      * @param string $SearchValue 过滤条件，支持按照端口或监听器名称进行模糊查询，该参数不能与ListenerName和Port同时使用
-     * @param string $GroupId 通道组ID
      */
     function __construct()
     {
@@ -104,6 +104,10 @@ class DescribeHTTPListenersRequest extends AbstractModel
         }
         if (array_key_exists("ProxyId",$param) and $param["ProxyId"] !== null) {
             $this->ProxyId = $param["ProxyId"];
+        }
+
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
         }
 
         if (array_key_exists("ListenerId",$param) and $param["ListenerId"] !== null) {
@@ -128,10 +132,6 @@ class DescribeHTTPListenersRequest extends AbstractModel
 
         if (array_key_exists("SearchValue",$param) and $param["SearchValue"] !== null) {
             $this->SearchValue = $param["SearchValue"];
-        }
-
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
         }
     }
 }

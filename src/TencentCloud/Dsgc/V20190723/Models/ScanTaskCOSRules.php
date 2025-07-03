@@ -21,19 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * 敏感识别任务COS识别规则
  *
  * @method COSDataRule getRegexRule() 获取regex规则内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegexRule(COSDataRule $RegexRule) 设置regex规则内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取规则状态；0 不启用, 1 启用
  * @method void setStatus(integer $Status) 设置规则状态；0 不启用, 1 启用
  * @method COSDataRule getKeywordRule() 获取关键词规则内容组，最大支持5个关键词。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeywordRule(COSDataRule $KeywordRule) 设置关键词规则内容组，最大支持5个关键词。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method COSDataRule getIgnoreStringRule() 获取忽略词规则内容组，最大支持5个忽略词。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIgnoreStringRule(COSDataRule $IgnoreStringRule) 设置忽略词规则内容组，最大支持5个忽略词。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxMatch() 获取最大匹配距离，默认值为100。上限为500.
  * @method void setMaxMatch(integer $MaxMatch) 设置最大匹配距离，默认值为100。上限为500.
  */
@@ -41,7 +35,6 @@ class ScanTaskCOSRules extends AbstractModel
 {
     /**
      * @var COSDataRule regex规则内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegexRule;
 
@@ -52,13 +45,11 @@ class ScanTaskCOSRules extends AbstractModel
 
     /**
      * @var COSDataRule 关键词规则内容组，最大支持5个关键词。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KeywordRule;
 
     /**
      * @var COSDataRule 忽略词规则内容组，最大支持5个忽略词。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IgnoreStringRule;
 
@@ -69,12 +60,9 @@ class ScanTaskCOSRules extends AbstractModel
 
     /**
      * @param COSDataRule $RegexRule regex规则内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 规则状态；0 不启用, 1 启用
      * @param COSDataRule $KeywordRule 关键词规则内容组，最大支持5个关键词。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param COSDataRule $IgnoreStringRule 忽略词规则内容组，最大支持5个忽略词。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxMatch 最大匹配距离，默认值为100。上限为500.
      */
     function __construct()

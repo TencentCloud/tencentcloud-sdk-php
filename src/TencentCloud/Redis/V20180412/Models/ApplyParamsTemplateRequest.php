@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ApplyParamsTemplate请求参数结构体
  *
- * @method array getInstanceIds() 获取实例ID列表
- * @method void setInstanceIds(array $InstanceIds) 设置实例ID列表
- * @method string getTemplateId() 获取应用的参数模板ID
- * @method void setTemplateId(string $TemplateId) 设置应用的参数模板ID
+ * @method array getInstanceIds() 获取实例 ID 列表，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+ * @method void setInstanceIds(array $InstanceIds) 设置实例 ID 列表，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+ * @method string getTemplateId() 获取应用的参数模板ID，请通过接口[DescribeParamTemplateInfo](https://cloud.tencent.com/document/product/239/58748)的返回参数 **TemplateId** 获取参数模板 ID。
+ * @method void setTemplateId(string $TemplateId) 设置应用的参数模板ID，请通过接口[DescribeParamTemplateInfo](https://cloud.tencent.com/document/product/239/58748)的返回参数 **TemplateId** 获取参数模板 ID。
  */
 class ApplyParamsTemplateRequest extends AbstractModel
 {
     /**
-     * @var array 实例ID列表
+     * @var array 实例 ID 列表，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public $InstanceIds;
 
     /**
-     * @var string 应用的参数模板ID
+     * @var string 应用的参数模板ID，请通过接口[DescribeParamTemplateInfo](https://cloud.tencent.com/document/product/239/58748)的返回参数 **TemplateId** 获取参数模板 ID。
      */
     public $TemplateId;
 
     /**
-     * @param array $InstanceIds 实例ID列表
-     * @param string $TemplateId 应用的参数模板ID
+     * @param array $InstanceIds 实例 ID 列表，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+     * @param string $TemplateId 应用的参数模板ID，请通过接口[DescribeParamTemplateInfo](https://cloud.tencent.com/document/product/239/58748)的返回参数 **TemplateId** 获取参数模板 ID。
      */
     function __construct()
     {

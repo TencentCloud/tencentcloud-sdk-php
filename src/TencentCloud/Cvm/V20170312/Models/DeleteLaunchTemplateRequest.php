@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteLaunchTemplate请求参数结构体
  *
- * @method string getLaunchTemplateId() 获取启动模板ID。
- * @method void setLaunchTemplateId(string $LaunchTemplateId) 设置启动模板ID。
+ * @method string getLaunchTemplateId() 获取启动模板ID。可通过 [DescribeLaunchTemplates](https://cloud.tencent.com/document/api/213/66322) 接口返回值中的`LaunchTemplateId`获取。
+ * @method void setLaunchTemplateId(string $LaunchTemplateId) 设置启动模板ID。可通过 [DescribeLaunchTemplates](https://cloud.tencent.com/document/api/213/66322) 接口返回值中的`LaunchTemplateId`获取。
  */
 class DeleteLaunchTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 启动模板ID。
+     * @var string 启动模板ID。可通过 [DescribeLaunchTemplates](https://cloud.tencent.com/document/api/213/66322) 接口返回值中的`LaunchTemplateId`获取。
      */
     public $LaunchTemplateId;
 
     /**
-     * @param string $LaunchTemplateId 启动模板ID。
+     * @param string $LaunchTemplateId 启动模板ID。可通过 [DescribeLaunchTemplates](https://cloud.tencent.com/document/api/213/66322) 接口返回值中的`LaunchTemplateId`获取。
      */
     function __construct()
     {

@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetPersonGroupInfo请求参数结构体
  *
- * @method string getPersonId() 获取人员ID，取值为创建人员接口中的PersonId
- * @method void setPersonId(string $PersonId) 设置人员ID，取值为创建人员接口中的PersonId
- * @method integer getOffset() 获取起始序号，默认值为0
- * @method void setOffset(integer $Offset) 设置起始序号，默认值为0
- * @method integer getLimit() 获取返回数量，默认值为10，最大值为100
- * @method void setLimit(integer $Limit) 设置返回数量，默认值为10，最大值为100
+ * @method string getPersonId() 获取人员ID，取值为创建人员接口中的PersonId。
+ * @method void setPersonId(string $PersonId) 设置人员ID，取值为创建人员接口中的PersonId。
+ * @method integer getOffset() 获取起始序号，默认值为0。
+ * @method void setOffset(integer $Offset) 设置起始序号，默认值为0。
+ * @method integer getLimit() 获取返回数量，默认值为10，最大值为100。
+ * @method void setLimit(integer $Limit) 设置返回数量，默认值为10，最大值为100。
  */
 class GetPersonGroupInfoRequest extends AbstractModel
 {
     /**
-     * @var string 人员ID，取值为创建人员接口中的PersonId
+     * @var string 人员ID，取值为创建人员接口中的PersonId。
      */
     public $PersonId;
 
     /**
-     * @var integer 起始序号，默认值为0
+     * @var integer 起始序号，默认值为0。
      */
     public $Offset;
 
     /**
-     * @var integer 返回数量，默认值为10，最大值为100
+     * @var integer 返回数量，默认值为10，最大值为100。
      */
     public $Limit;
 
     /**
-     * @param string $PersonId 人员ID，取值为创建人员接口中的PersonId
-     * @param integer $Offset 起始序号，默认值为0
-     * @param integer $Limit 返回数量，默认值为10，最大值为100
+     * @param string $PersonId 人员ID，取值为创建人员接口中的PersonId。
+     * @param integer $Offset 起始序号，默认值为0。
+     * @param integer $Limit 返回数量，默认值为10，最大值为100。
      */
     function __construct()
     {

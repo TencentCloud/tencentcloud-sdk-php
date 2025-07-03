@@ -43,13 +43,9 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getPosixAcl() 获取POSIX权限控制
  * @method void setPosixAcl(boolean $PosixAcl) 设置POSIX权限控制
  * @method boolean getEnableRanger() 获取是否打开Ranger地址校验
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableRanger(boolean $EnableRanger) 设置是否打开Ranger地址校验
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRangerServiceAddresses() 获取Ranger地址列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRangerServiceAddresses(array $RangerServiceAddresses) 设置Ranger地址列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class FileSystem extends AbstractModel
 {
@@ -110,13 +106,11 @@ class FileSystem extends AbstractModel
 
     /**
      * @var boolean 是否打开Ranger地址校验
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableRanger;
 
     /**
      * @var array Ranger地址列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RangerServiceAddresses;
 
@@ -133,9 +127,7 @@ class FileSystem extends AbstractModel
      * @param array $SuperUsers 超级用户名列表
      * @param boolean $PosixAcl POSIX权限控制
      * @param boolean $EnableRanger 是否打开Ranger地址校验
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RangerServiceAddresses Ranger地址列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

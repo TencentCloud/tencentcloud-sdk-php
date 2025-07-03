@@ -46,6 +46,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
  * @method string getBusiness() 获取使用havip的业务标识。
  * @method void setBusiness(string $Business) 设置使用havip的业务标识。
+ * @method array getHaVipAssociationSet() 获取`HAVIP`的飘移范围。
+ * @method void setHaVipAssociationSet(array $HaVipAssociationSet) 设置`HAVIP`的飘移范围。
+ * @method boolean getCheckAssociate() 获取是否开启`HAVIP`的飘移范围校验。
+ * @method void setCheckAssociate(boolean $CheckAssociate) 设置是否开启`HAVIP`的飘移范围校验。
+ * @method string getCdcId() 获取CDC实例ID。
+ * @method void setCdcId(string $CdcId) 设置CDC实例ID。
+ * @method string getFlushedTime() 获取HAVIP 刷新时间。该参数只作为出参数。以下场景会触发 FlushTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
+ * @method void setFlushedTime(string $FlushedTime) 设置HAVIP 刷新时间。该参数只作为出参数。以下场景会触发 FlushTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
+ * @method array getTagSet() 获取标签键值对。	
+ * @method void setTagSet(array $TagSet) 设置标签键值对。	
  */
 class HaVip extends AbstractModel
 {
@@ -107,6 +117,31 @@ class HaVip extends AbstractModel
     public $Business;
 
     /**
+     * @var array `HAVIP`的飘移范围。
+     */
+    public $HaVipAssociationSet;
+
+    /**
+     * @var boolean 是否开启`HAVIP`的飘移范围校验。
+     */
+    public $CheckAssociate;
+
+    /**
+     * @var string CDC实例ID。
+     */
+    public $CdcId;
+
+    /**
+     * @var string HAVIP 刷新时间。该参数只作为出参数。以下场景会触发 FlushTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
+     */
+    public $FlushedTime;
+
+    /**
+     * @var array 标签键值对。	
+     */
+    public $TagSet;
+
+    /**
      * @param string $HaVipId `HAVIP`的`ID`，是`HAVIP`的唯一标识。
      * @param string $HaVipName `HAVIP`名称。
      * @param string $Vip 虚拟IP地址。
@@ -120,6 +155,11 @@ class HaVip extends AbstractModel
 <li>`UNBIND`：未绑定</li>
      * @param string $CreatedTime 创建时间。
      * @param string $Business 使用havip的业务标识。
+     * @param array $HaVipAssociationSet `HAVIP`的飘移范围。
+     * @param boolean $CheckAssociate 是否开启`HAVIP`的飘移范围校验。
+     * @param string $CdcId CDC实例ID。
+     * @param string $FlushedTime HAVIP 刷新时间。该参数只作为出参数。以下场景会触发 FlushTime 被刷新：1）子机发出免费 ARP 触发 HAVIP 漂移；2）手动HAVIP解绑网卡; 没有更新时默认值：0000-00-00 00:00:00
+     * @param array $TagSet 标签键值对。	
      */
     function __construct()
     {
@@ -176,6 +216,36 @@ class HaVip extends AbstractModel
 
         if (array_key_exists("Business",$param) and $param["Business"] !== null) {
             $this->Business = $param["Business"];
+        }
+
+        if (array_key_exists("HaVipAssociationSet",$param) and $param["HaVipAssociationSet"] !== null) {
+            $this->HaVipAssociationSet = [];
+            foreach ($param["HaVipAssociationSet"] as $key => $value){
+                $obj = new HaVipAssociation();
+                $obj->deserialize($value);
+                array_push($this->HaVipAssociationSet, $obj);
+            }
+        }
+
+        if (array_key_exists("CheckAssociate",$param) and $param["CheckAssociate"] !== null) {
+            $this->CheckAssociate = $param["CheckAssociate"];
+        }
+
+        if (array_key_exists("CdcId",$param) and $param["CdcId"] !== null) {
+            $this->CdcId = $param["CdcId"];
+        }
+
+        if (array_key_exists("FlushedTime",$param) and $param["FlushedTime"] !== null) {
+            $this->FlushedTime = $param["FlushedTime"];
+        }
+
+        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+            $this->TagSet = [];
+            foreach ($param["TagSet"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagSet, $obj);
+            }
         }
     }
 }

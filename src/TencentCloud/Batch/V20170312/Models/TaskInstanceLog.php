@@ -23,29 +23,17 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTaskInstanceIndex() 获取任务实例
  * @method void setTaskInstanceIndex(integer $TaskInstanceIndex) 设置任务实例
  * @method string getStdoutLog() 获取标准输出日志（Base64编码，解码后最大日志长度2048字节）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStdoutLog(string $StdoutLog) 设置标准输出日志（Base64编码，解码后最大日志长度2048字节）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStderrLog() 获取标准错误日志（Base64编码，解码后最大日志长度2048字节）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStderrLog(string $StderrLog) 设置标准错误日志（Base64编码，解码后最大日志长度2048字节）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStdoutRedirectPath() 获取标准输出重定向路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStdoutRedirectPath(string $StdoutRedirectPath) 设置标准输出重定向路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStderrRedirectPath() 获取标准错误重定向路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStderrRedirectPath(string $StderrRedirectPath) 设置标准错误重定向路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStdoutRedirectFileName() 获取标准输出重定向文件名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStdoutRedirectFileName(string $StdoutRedirectFileName) 设置标准输出重定向文件名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStderrRedirectFileName() 获取标准错误重定向文件名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStderrRedirectFileName(string $StderrRedirectFileName) 设置标准错误重定向文件名
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskInstanceLog extends AbstractModel
 {
@@ -56,54 +44,42 @@ class TaskInstanceLog extends AbstractModel
 
     /**
      * @var string 标准输出日志（Base64编码，解码后最大日志长度2048字节）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StdoutLog;
 
     /**
      * @var string 标准错误日志（Base64编码，解码后最大日志长度2048字节）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StderrLog;
 
     /**
      * @var string 标准输出重定向路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StdoutRedirectPath;
 
     /**
      * @var string 标准错误重定向路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StderrRedirectPath;
 
     /**
      * @var string 标准输出重定向文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StdoutRedirectFileName;
 
     /**
      * @var string 标准错误重定向文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StderrRedirectFileName;
 
     /**
      * @param integer $TaskInstanceIndex 任务实例
      * @param string $StdoutLog 标准输出日志（Base64编码，解码后最大日志长度2048字节）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StderrLog 标准错误日志（Base64编码，解码后最大日志长度2048字节）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StdoutRedirectPath 标准输出重定向路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StderrRedirectPath 标准错误重定向路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StdoutRedirectFileName 标准输出重定向文件名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StderrRedirectFileName 标准错误重定向文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

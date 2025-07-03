@@ -39,9 +39,7 @@ use TencentCloud\Common\AbstractModel;
  * @method array getChannels() 获取任务的设备通道id
  * @method void setChannels(array $Channels) 设置任务的设备通道id
  * @method string getDescribe() 获取任务描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescribe(string $Describe) 设置任务描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getChannelCount() 获取任务通道数量
  * @method void setChannelCount(integer $ChannelCount) 设置任务通道数量
  */
@@ -94,7 +92,6 @@ class DescribeRecordRetrieveTaskData extends AbstractModel
 
     /**
      * @var string 任务描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Describe;
 
@@ -114,7 +111,6 @@ class DescribeRecordRetrieveTaskData extends AbstractModel
      * @param float $Capacity 取回容量，单位MB
      * @param array $Channels 任务的设备通道id
      * @param string $Describe 任务描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ChannelCount 任务通道数量
      */
     function __construct()

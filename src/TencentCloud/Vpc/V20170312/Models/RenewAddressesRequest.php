@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RenewAddresses请求参数结构体
  *
- * @method array getAddressIds() 获取EIP唯一标识ID列表，形如'eip-xxxx'
- * @method void setAddressIds(array $AddressIds) 设置EIP唯一标识ID列表，形如'eip-xxxx'
+ * @method array getAddressIds() 获取EIP唯一标识ID列表，形如'eip-xxxx'，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
+ * @method void setAddressIds(array $AddressIds) 设置EIP唯一标识ID列表，形如'eip-xxxx'，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
  * @method AddressChargePrepaid getAddressChargePrepaid() 获取续费参数
  * @method void setAddressChargePrepaid(AddressChargePrepaid $AddressChargePrepaid) 设置续费参数
  */
 class RenewAddressesRequest extends AbstractModel
 {
     /**
-     * @var array EIP唯一标识ID列表，形如'eip-xxxx'
+     * @var array EIP唯一标识ID列表，形如'eip-xxxx'，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
      */
     public $AddressIds;
 
@@ -38,7 +38,7 @@ class RenewAddressesRequest extends AbstractModel
     public $AddressChargePrepaid;
 
     /**
-     * @param array $AddressIds EIP唯一标识ID列表，形如'eip-xxxx'
+     * @param array $AddressIds EIP唯一标识ID列表，形如'eip-xxxx'，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。
      * @param AddressChargePrepaid $AddressChargePrepaid 续费参数
      */
     function __construct()

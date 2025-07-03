@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 凭据版本号列表信息
  *
- * @method string getVersionId() 获取版本号。
- * @method void setVersionId(string $VersionId) 设置版本号。
+ * @method string getVersionId() 获取版本号
+ * @method void setVersionId(string $VersionId) 设置版本号
  * @method integer getCreateTime() 获取创建时间，unix时间戳。
  * @method void setCreateTime(integer $CreateTime) 设置创建时间，unix时间戳。
  */
 class VersionInfo extends AbstractModel
 {
     /**
-     * @var string 版本号。
+     * @var string 版本号
      */
     public $VersionId;
 
@@ -38,7 +38,7 @@ class VersionInfo extends AbstractModel
     public $CreateTime;
 
     /**
-     * @param string $VersionId 版本号。
+     * @param string $VersionId 版本号
      * @param integer $CreateTime 创建时间，unix时间戳。
      */
     function __construct()

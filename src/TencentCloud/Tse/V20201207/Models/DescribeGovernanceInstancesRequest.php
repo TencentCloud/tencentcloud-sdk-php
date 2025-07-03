@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
+ * @method Location getLocation() 获取地域
+ * @method void setLocation(Location $Location) 设置地域
  */
 class DescribeGovernanceInstancesRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class DescribeGovernanceInstancesRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var Location 地域
+     */
+    public $Location;
+
+    /**
      * @param string $Service 实例所在的服务名。
      * @param string $Namespace 实例所在命名空间名。
      * @param string $InstanceId tse实例id。
@@ -112,6 +119,7 @@ class DescribeGovernanceInstancesRequest extends AbstractModel
      * @param array $Metadatas 根据元数据信息过滤。目前只支持一组元数据键值，若传了多个键值对，只会以第一个过滤。
      * @param integer $Offset 偏移量，默认为0。
      * @param integer $Limit 返回数量，默认为20，最大值为100。
+     * @param Location $Location 地域
      */
     function __construct()
     {
@@ -173,6 +181,11 @@ class DescribeGovernanceInstancesRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Location",$param) and $param["Location"] !== null) {
+            $this->Location = new Location();
+            $this->Location->deserialize($param["Location"]);
         }
     }
 }

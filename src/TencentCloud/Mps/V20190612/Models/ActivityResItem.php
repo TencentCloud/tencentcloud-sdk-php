@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQualityControlTask(ScheduleQualityControlTaskResult $QualityControlTask) 设置媒体质检任务输出
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ScheduleSmartSubtitleTaskResult getSmartSubtitlesTask() 获取智能字幕任务输出
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSmartSubtitlesTask(ScheduleSmartSubtitleTaskResult $SmartSubtitlesTask) 设置智能字幕任务输出
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ActivityResItem extends AbstractModel
 {
@@ -124,6 +128,12 @@ class ActivityResItem extends AbstractModel
     public $QualityControlTask;
 
     /**
+     * @var ScheduleSmartSubtitleTaskResult 智能字幕任务输出
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SmartSubtitlesTask;
+
+    /**
      * @param MediaProcessTaskTranscodeResult $TranscodeTask 转码任务输出
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaProcessTaskAnimatedGraphicResult $AnimatedGraphicTask 转动图任务输出
@@ -143,6 +153,8 @@ class ActivityResItem extends AbstractModel
      * @param ScheduleAnalysisTaskResult $AnalysisTask 分析任务输出
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ScheduleQualityControlTaskResult $QualityControlTask 媒体质检任务输出
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScheduleSmartSubtitleTaskResult $SmartSubtitlesTask 智能字幕任务输出
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -206,6 +218,11 @@ class ActivityResItem extends AbstractModel
         if (array_key_exists("QualityControlTask",$param) and $param["QualityControlTask"] !== null) {
             $this->QualityControlTask = new ScheduleQualityControlTaskResult();
             $this->QualityControlTask->deserialize($param["QualityControlTask"]);
+        }
+
+        if (array_key_exists("SmartSubtitlesTask",$param) and $param["SmartSubtitlesTask"] !== null) {
+            $this->SmartSubtitlesTask = new ScheduleSmartSubtitleTaskResult();
+            $this->SmartSubtitlesTask->deserialize($param["SmartSubtitlesTask"]);
         }
     }
 }

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeImageSharePermission请求参数结构体
  *
- * @method string getImageId() 获取需要共享的镜像Id
- * @method void setImageId(string $ImageId) 设置需要共享的镜像Id
+ * @method string getImageId() 获取需要共享的镜像 ID，可通过 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) 接口返回的`ImageId`获取。
+ * @method void setImageId(string $ImageId) 设置需要共享的镜像 ID，可通过 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) 接口返回的`ImageId`获取。
  */
 class DescribeImageSharePermissionRequest extends AbstractModel
 {
     /**
-     * @var string 需要共享的镜像Id
+     * @var string 需要共享的镜像 ID，可通过 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) 接口返回的`ImageId`获取。
      */
     public $ImageId;
 
     /**
-     * @param string $ImageId 需要共享的镜像Id
+     * @param string $ImageId 需要共享的镜像 ID，可通过 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) 接口返回的`ImageId`获取。
      */
     function __construct()
     {

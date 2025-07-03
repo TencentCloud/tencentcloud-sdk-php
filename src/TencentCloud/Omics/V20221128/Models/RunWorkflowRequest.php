@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWorkDir(string $WorkDir) 设置工作目录，可填写指定缓存卷内的绝对路径，不填使用默认缓存卷内的默认路径，暂时仅支持Nextflow。
  * @method array getVolumeIds() 获取缓存卷ID，不填使用默认缓存卷，暂时仅支持Nextflow。
  * @method void setVolumeIds(array $VolumeIds) 设置缓存卷ID，不填使用默认缓存卷，暂时仅支持Nextflow。
+ * @method string getEntrypoint() 获取工作流入口文件，不填使用默认入口文件。
+ * @method void setEntrypoint(string $Entrypoint) 设置工作流入口文件，不填使用默认入口文件。
  */
 class RunWorkflowRequest extends AbstractModel
 {
@@ -126,6 +128,11 @@ class RunWorkflowRequest extends AbstractModel
     public $VolumeIds;
 
     /**
+     * @var string 工作流入口文件，不填使用默认入口文件。
+     */
+    public $Entrypoint;
+
+    /**
      * @param string $Name 任务批次名称。
      * @param string $EnvironmentId 投递环境ID。
      * @param GitInfo $GitSource 工作流Git仓库信息。
@@ -144,6 +151,7 @@ class RunWorkflowRequest extends AbstractModel
      * @param integer $CacheClearDelay 任务缓存清理时间（小时）。不填或0表示不清理。
      * @param string $WorkDir 工作目录，可填写指定缓存卷内的绝对路径，不填使用默认缓存卷内的默认路径，暂时仅支持Nextflow。
      * @param array $VolumeIds 缓存卷ID，不填使用默认缓存卷，暂时仅支持Nextflow。
+     * @param string $Entrypoint 工作流入口文件，不填使用默认入口文件。
      */
     function __construct()
     {
@@ -206,6 +214,10 @@ class RunWorkflowRequest extends AbstractModel
 
         if (array_key_exists("VolumeIds",$param) and $param["VolumeIds"] !== null) {
             $this->VolumeIds = $param["VolumeIds"];
+        }
+
+        if (array_key_exists("Entrypoint",$param) and $param["Entrypoint"] !== null) {
+            $this->Entrypoint = $param["Entrypoint"];
         }
     }
 }

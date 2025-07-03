@@ -31,17 +31,13 @@ use TencentCloud\Common\AbstractModel;
  * @method BotPortraitRule getBotPortraitRule() 获取用户画像规则。如果为null，默认使用历史配置。
  * @method void setBotPortraitRule(BotPortraitRule $BotPortraitRule) 设置用户画像规则。如果为null，默认使用历史配置。
  * @method IntelligenceRule getIntelligenceRule() 获取Bot智能分析。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIntelligenceRule(IntelligenceRule $IntelligenceRule) 设置Bot智能分析。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getBotUserRules() 获取Bot自定义规则。如果为null，默认使用历史配置。
  * @method void setBotUserRules(array $BotUserRules) 设置Bot自定义规则。如果为null，默认使用历史配置。
  * @method array getAlgDetectRule() 获取Bot主动特征识别规则。
  * @method void setAlgDetectRule(array $AlgDetectRule) 设置Bot主动特征识别规则。
  * @method array getCustomizes() 获取Bot托管定制策略，入参可不填，仅出参使用。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCustomizes(array $Customizes) 设置Bot托管定制策略，入参可不填，仅出参使用。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BotConfig extends AbstractModel
 {
@@ -64,7 +60,6 @@ class BotConfig extends AbstractModel
 
     /**
      * @var IntelligenceRule Bot智能分析。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IntelligenceRule;
 
@@ -80,7 +75,6 @@ class BotConfig extends AbstractModel
 
     /**
      * @var array Bot托管定制策略，入参可不填，仅出参使用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Customizes;
 
@@ -91,11 +85,9 @@ class BotConfig extends AbstractModel
      * @param BotManagedRule $BotManagedRule 通用详细基础规则。如果为null，默认使用历史配置。
      * @param BotPortraitRule $BotPortraitRule 用户画像规则。如果为null，默认使用历史配置。
      * @param IntelligenceRule $IntelligenceRule Bot智能分析。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $BotUserRules Bot自定义规则。如果为null，默认使用历史配置。
      * @param array $AlgDetectRule Bot主动特征识别规则。
      * @param array $Customizes Bot托管定制策略，入参可不填，仅出参使用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

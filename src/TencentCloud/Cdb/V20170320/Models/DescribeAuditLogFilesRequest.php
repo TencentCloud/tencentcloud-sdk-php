@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
- * @method integer getLimit() 获取分页大小参数。默认值为 20，最小值为 1，最大值为 100。
- * @method void setLimit(integer $Limit) 设置分页大小参数。默认值为 20，最小值为 1，最大值为 100。
+ * @method integer getLimit() 获取分页大小参数。默认值为20，最小值为1，最大值为300。
+ * @method void setLimit(integer $Limit) 设置分页大小参数。默认值为20，最小值为1，最大值为300。
  * @method integer getOffset() 获取分页偏移量。
  * @method void setOffset(integer $Offset) 设置分页偏移量。
  * @method string getFileName() 获取审计日志文件名。
@@ -37,7 +37,7 @@ class DescribeAuditLogFilesRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 分页大小参数。默认值为 20，最小值为 1，最大值为 100。
+     * @var integer 分页大小参数。默认值为20，最小值为1，最大值为300。
      */
     public $Limit;
 
@@ -53,7 +53,7 @@ class DescribeAuditLogFilesRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
-     * @param integer $Limit 分页大小参数。默认值为 20，最小值为 1，最大值为 100。
+     * @param integer $Limit 分页大小参数。默认值为20，最小值为1，最大值为300。
      * @param integer $Offset 分页偏移量。
      * @param string $FileName 审计日志文件名。
      */

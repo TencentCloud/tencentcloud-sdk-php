@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 引擎规格详情
  *
  * @method string getDataEngineId() 获取引擎ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataEngineId(string $DataEngineId) 设置引擎ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDataEngineName() 获取引擎名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataEngineName(string $DataEngineName) 设置引擎名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getScaleDetail() 获取引擎规格详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScaleDetail(array $ScaleDetail) 设置引擎规格详情
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataEngineScaleInfo extends AbstractModel
 {
     /**
      * @var string 引擎ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataEngineId;
 
     /**
      * @var string 引擎名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataEngineName;
 
     /**
      * @var array 引擎规格详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScaleDetail;
 
     /**
      * @param string $DataEngineId 引擎ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataEngineName 引擎名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ScaleDetail 引擎规格详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

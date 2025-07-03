@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 呻吟低俗检测结果
  *
  * @method string getLabel() 获取固定取值为Moan（呻吟/娇喘），如音频中无复杂类型「MoanResult」的返回则代表该音频中无呻吟/娇喘相关违规内容；
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabel(string $Label) 设置固定取值为Moan（呻吟/娇喘），如音频中无复杂类型「MoanResult」的返回则代表该音频中无呻吟/娇喘相关违规内容；
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScore() 获取机器判断当前分类的置信度，取值范围：0~100。分数越高，表示越有可能属于当前分类。
 （如：Moan 99，则该样本属于呻吟/娇喘的置信度非常高。）
  * @method void setScore(integer $Score) 设置机器判断当前分类的置信度，取值范围：0~100。分数越高，表示越有可能属于当前分类。
@@ -37,17 +35,12 @@ use TencentCloud\Common\AbstractModel;
  * @method float getEndTime() 获取违规事件结束时间，单位为秒（s）；
  * @method void setEndTime(float $EndTime) 设置违规事件结束时间，单位为秒（s）；
  * @method string getSubLabel() 获取该字段用于返回当前标签（Lable）下的二级标签。
-注意：此字段可能返回null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubLabel(string $SubLabel) 设置该字段用于返回当前标签（Lable）下的二级标签。
-注意：此字段可能返回null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MoanResult extends AbstractModel
 {
     /**
      * @var string 固定取值为Moan（呻吟/娇喘），如音频中无复杂类型「MoanResult」的返回则代表该音频中无呻吟/娇喘相关违规内容；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Label;
 
@@ -75,14 +68,11 @@ class MoanResult extends AbstractModel
 
     /**
      * @var string 该字段用于返回当前标签（Lable）下的二级标签。
-注意：此字段可能返回null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubLabel;
 
     /**
      * @param string $Label 固定取值为Moan（呻吟/娇喘），如音频中无复杂类型「MoanResult」的返回则代表该音频中无呻吟/娇喘相关违规内容；
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Score 机器判断当前分类的置信度，取值范围：0~100。分数越高，表示越有可能属于当前分类。
 （如：Moan 99，则该样本属于呻吟/娇喘的置信度非常高。）
      * @param string $Suggestion 建议您拿到判断结果后的执行操作。
@@ -90,8 +80,6 @@ class MoanResult extends AbstractModel
      * @param float $StartTime 违规事件开始时间，单位为秒（s）；
      * @param float $EndTime 违规事件结束时间，单位为秒（s）；
      * @param string $SubLabel 该字段用于返回当前标签（Lable）下的二级标签。
-注意：此字段可能返回null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(string $SubnetId) 设置VPC子网ID，形如subnet-bdoe83fa
  * @method string getVpcId() 获取VPC网络ID，形如vpc-dsp338hz
  * @method void setVpcId(string $VpcId) 设置VPC网络ID，形如vpc-dsp338hz
- * @method string getMachineType() 获取购买实例的宿主机类型，CLOUD_PREMIUM-虚拟机高性能云盘，CLOUD_SSD-虚拟机SSD云盘,CLOUD_HSSD-虚拟机加强型SSD云盘，CLOUD_TSSD-虚拟机极速型SSD云盘，CLOUD_BSSD-虚拟机通用型SSD云盘
- * @method void setMachineType(string $MachineType) 设置购买实例的宿主机类型，CLOUD_PREMIUM-虚拟机高性能云盘，CLOUD_SSD-虚拟机SSD云盘,CLOUD_HSSD-虚拟机加强型SSD云盘，CLOUD_TSSD-虚拟机极速型SSD云盘，CLOUD_BSSD-虚拟机通用型SSD云盘
+ * @method string getMachineType() 获取购买实例的宿主机类型，CLOUD_PREMIUM-虚拟机高性能云硬盘，CLOUD_SSD-虚拟机SSD云硬盘,CLOUD_HSSD-虚拟机增强型SSD云硬盘，CLOUD_BSSD-虚拟机通用型SSD云盘
+ * @method void setMachineType(string $MachineType) 设置购买实例的宿主机类型，CLOUD_PREMIUM-虚拟机高性能云硬盘，CLOUD_SSD-虚拟机SSD云硬盘,CLOUD_HSSD-虚拟机增强型SSD云硬盘，CLOUD_BSSD-虚拟机通用型SSD云盘
  * @method string getInstanceChargeType() 获取付费模式，取值支持 PREPAID（预付费），POSTPAID（后付费）。
  * @method void setInstanceChargeType(string $InstanceChargeType) 设置付费模式，取值支持 PREPAID（预付费），POSTPAID（后付费）。
  * @method integer getProjectId() 获取项目ID
@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCollation(string $Collation) 设置系统字符集排序规则，默认：Chinese_PRC_CI_AS
  * @method string getTimeZone() 获取系统时区，默认：China Standard Time
  * @method void setTimeZone(string $TimeZone) 设置系统时区，默认：China Standard Time
+ * @method integer getDiskEncryptFlag() 获取磁盘加密标识，0-不加密，1-加密
+ * @method void setDiskEncryptFlag(integer $DiskEncryptFlag) 设置磁盘加密标识，0-不加密，1-加密
  */
 class CreateBasicDBInstancesRequest extends AbstractModel
 {
@@ -98,7 +100,7 @@ class CreateBasicDBInstancesRequest extends AbstractModel
     public $VpcId;
 
     /**
-     * @var string 购买实例的宿主机类型，CLOUD_PREMIUM-虚拟机高性能云盘，CLOUD_SSD-虚拟机SSD云盘,CLOUD_HSSD-虚拟机加强型SSD云盘，CLOUD_TSSD-虚拟机极速型SSD云盘，CLOUD_BSSD-虚拟机通用型SSD云盘
+     * @var string 购买实例的宿主机类型，CLOUD_PREMIUM-虚拟机高性能云硬盘，CLOUD_SSD-虚拟机SSD云硬盘,CLOUD_HSSD-虚拟机增强型SSD云硬盘，CLOUD_BSSD-虚拟机通用型SSD云盘
      */
     public $MachineType;
 
@@ -178,13 +180,18 @@ class CreateBasicDBInstancesRequest extends AbstractModel
     public $TimeZone;
 
     /**
+     * @var integer 磁盘加密标识，0-不加密，1-加密
+     */
+    public $DiskEncryptFlag;
+
+    /**
      * @param string $Zone 实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取
      * @param integer $Cpu 实例的CPU核心数
      * @param integer $Memory 实例内存大小，单位GB
      * @param integer $Storage 实例磁盘大小，单位GB
      * @param string $SubnetId VPC子网ID，形如subnet-bdoe83fa
      * @param string $VpcId VPC网络ID，形如vpc-dsp338hz
-     * @param string $MachineType 购买实例的宿主机类型，CLOUD_PREMIUM-虚拟机高性能云盘，CLOUD_SSD-虚拟机SSD云盘,CLOUD_HSSD-虚拟机加强型SSD云盘，CLOUD_TSSD-虚拟机极速型SSD云盘，CLOUD_BSSD-虚拟机通用型SSD云盘
+     * @param string $MachineType 购买实例的宿主机类型，CLOUD_PREMIUM-虚拟机高性能云硬盘，CLOUD_SSD-虚拟机SSD云硬盘,CLOUD_HSSD-虚拟机增强型SSD云硬盘，CLOUD_BSSD-虚拟机通用型SSD云盘
      * @param string $InstanceChargeType 付费模式，取值支持 PREPAID（预付费），POSTPAID（后付费）。
      * @param integer $ProjectId 项目ID
      * @param integer $GoodsNum 本次购买几个实例，默认值为1。取值不超过10
@@ -200,6 +207,7 @@ class CreateBasicDBInstancesRequest extends AbstractModel
      * @param array $ResourceTags 新建实例绑定的标签集合
      * @param string $Collation 系统字符集排序规则，默认：Chinese_PRC_CI_AS
      * @param string $TimeZone 系统时区，默认：China Standard Time
+     * @param integer $DiskEncryptFlag 磁盘加密标识，0-不加密，1-加密
      */
     function __construct()
     {
@@ -305,6 +313,10 @@ class CreateBasicDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("TimeZone",$param) and $param["TimeZone"] !== null) {
             $this->TimeZone = $param["TimeZone"];
+        }
+
+        if (array_key_exists("DiskEncryptFlag",$param) and $param["DiskEncryptFlag"] !== null) {
+            $this->DiskEncryptFlag = $param["DiskEncryptFlag"];
         }
     }
 }

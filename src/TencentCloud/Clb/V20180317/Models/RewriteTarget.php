@@ -20,78 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 重定向目标的信息
  *
- * @method string getTargetListenerId() 获取重定向目标的监听器ID
-注意：此字段可能返回 null，表示无重定向。
+ * @method string getTargetListenerId() 获取重定向目标的监听器ID，该字段仅配置了重定向时有效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTargetListenerId(string $TargetListenerId) 设置重定向目标的监听器ID
-注意：此字段可能返回 null，表示无重定向。
+ * @method void setTargetListenerId(string $TargetListenerId) 设置重定向目标的监听器ID，该字段仅配置了重定向时有效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTargetLocationId() 获取重定向目标的转发规则ID
-注意：此字段可能返回 null，表示无重定向。
+ * @method string getTargetLocationId() 获取重定向目标的转发规则ID，该字段仅配置了重定向时有效。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTargetLocationId(string $TargetLocationId) 设置重定向目标的转发规则ID
-注意：此字段可能返回 null，表示无重定向。
+ * @method void setTargetLocationId(string $TargetLocationId) 设置重定向目标的转发规则ID，该字段仅配置了重定向时有效。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRewriteCode() 获取重定向状态码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRewriteCode(integer $RewriteCode) 设置重定向状态码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getTakeUrl() 获取重定向是否携带匹配的url
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTakeUrl(boolean $TakeUrl) 设置重定向是否携带匹配的url
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRewriteType() 获取重定向类型，Manual: 手动重定向，Auto:  自动重定向
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRewriteType(string $RewriteType) 设置重定向类型，Manual: 手动重定向，Auto:  自动重定向
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RewriteTarget extends AbstractModel
 {
     /**
-     * @var string 重定向目标的监听器ID
-注意：此字段可能返回 null，表示无重定向。
+     * @var string 重定向目标的监听器ID，该字段仅配置了重定向时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetListenerId;
 
     /**
-     * @var string 重定向目标的转发规则ID
-注意：此字段可能返回 null，表示无重定向。
+     * @var string 重定向目标的转发规则ID，该字段仅配置了重定向时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetLocationId;
 
     /**
      * @var integer 重定向状态码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RewriteCode;
 
     /**
      * @var boolean 重定向是否携带匹配的url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TakeUrl;
 
     /**
      * @var string 重定向类型，Manual: 手动重定向，Auto:  自动重定向
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RewriteType;
 
     /**
-     * @param string $TargetListenerId 重定向目标的监听器ID
-注意：此字段可能返回 null，表示无重定向。
+     * @param string $TargetListenerId 重定向目标的监听器ID，该字段仅配置了重定向时有效。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TargetLocationId 重定向目标的转发规则ID
-注意：此字段可能返回 null，表示无重定向。
+     * @param string $TargetLocationId 重定向目标的转发规则ID，该字段仅配置了重定向时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RewriteCode 重定向状态码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $TakeUrl 重定向是否携带匹配的url
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RewriteType 重定向类型，Manual: 手动重定向，Auto:  自动重定向
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 空间层级关系响应体
  *
  * @method SpaceRelation getSpaceRelation() 获取空间层级关系
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpaceRelation(SpaceRelation $SpaceRelation) 设置空间层级关系
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SpaceRelationRes extends AbstractModel
 {
     /**
      * @var SpaceRelation 空间层级关系
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SpaceRelation;
 
     /**
      * @param SpaceRelation $SpaceRelation 空间层级关系
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

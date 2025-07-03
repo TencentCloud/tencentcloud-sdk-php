@@ -59,13 +59,9 @@ use TencentCloud\Common\AbstractModel;
  * @method ResourceIds getResourceIds() 获取云资源ID。
  * @method void setResourceIds(ResourceIds $ResourceIds) 设置云资源ID。
  * @method string getLastWorkflowUuid() 获取上个工作流UUID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastWorkflowUuid(string $LastWorkflowUuid) 设置上个工作流UUID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreationTime() 获取创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreationTime(string $CreationTime) 设置创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Environment extends AbstractModel
 {
@@ -134,13 +130,11 @@ class Environment extends AbstractModel
 
     /**
      * @var string 上个工作流UUID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastWorkflowUuid;
 
     /**
      * @var string 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreationTime;
 
@@ -165,9 +159,7 @@ class Environment extends AbstractModel
      * @param string $Message 环境信息。
      * @param ResourceIds $ResourceIds 云资源ID。
      * @param string $LastWorkflowUuid 上个工作流UUID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreationTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

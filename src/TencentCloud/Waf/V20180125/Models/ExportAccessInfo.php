@@ -21,31 +21,19 @@ use TencentCloud\Common\AbstractModel;
  * DescribeAccessExports接口
  *
  * @method string getExportId() 获取日志导出任务ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExportId(string $ExportId) 设置日志导出任务ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getQuery() 获取日志导出查询语句
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQuery(string $Query) 设置日志导出查询语句
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileName() 获取日志导出文件名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileName(string $FileName) 设置日志导出文件名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFileSize() 获取日志文件大小
  * @method void setFileSize(integer $FileSize) 设置日志文件大小
  * @method string getOrder() 获取日志导出时间排序
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrder(string $Order) 设置日志导出时间排序
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFormat() 获取日志导出格式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFormat(string $Format) 设置日志导出格式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCount() 获取日志导出数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCount(integer $Count) 设置日志导出数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取日志下载状态。Processing:导出正在进行中，Complete:导出完成，Failed:导出失败，Expired:日志导出已过期（三天有效期）
  * @method void setStatus(string $Status) 设置日志下载状态。Processing:导出正在进行中，Complete:导出完成，Failed:导出失败，Expired:日志导出已过期（三天有效期）
  * @method integer getFrom() 获取日志导出起始时间
@@ -61,19 +49,16 @@ class ExportAccessInfo extends AbstractModel
 {
     /**
      * @var string 日志导出任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExportId;
 
     /**
      * @var string 日志导出查询语句
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Query;
 
     /**
      * @var string 日志导出文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileName;
 
@@ -84,19 +69,16 @@ class ExportAccessInfo extends AbstractModel
 
     /**
      * @var string 日志导出时间排序
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Order;
 
     /**
      * @var string 日志导出格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Format;
 
     /**
      * @var integer 日志导出数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Count;
 
@@ -127,18 +109,12 @@ class ExportAccessInfo extends AbstractModel
 
     /**
      * @param string $ExportId 日志导出任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Query 日志导出查询语句
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileName 日志导出文件名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FileSize 日志文件大小
      * @param string $Order 日志导出时间排序
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Format 日志导出格式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Count 日志导出数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 日志下载状态。Processing:导出正在进行中，Complete:导出完成，Failed:导出失败，Expired:日志导出已过期（三天有效期）
      * @param integer $From 日志导出起始时间
      * @param integer $To 日志导出结束时间

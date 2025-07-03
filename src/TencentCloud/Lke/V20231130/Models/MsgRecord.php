@@ -57,7 +57,9 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getIsLlmGenerated() 获取是否大模型
  * @method void setIsLlmGenerated(boolean $IsLlmGenerated) 设置是否大模型
  * @method array getImageUrls() 获取图片链接，可公有读
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageUrls(array $ImageUrls) 设置图片链接，可公有读
+注意：此字段可能返回 null，表示取不到有效值。
  * @method TokenStat getTokenStat() 获取当次 token 统计信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTokenStat(TokenStat $TokenStat) 设置当次 token 统计信息
@@ -105,6 +107,22 @@ use TencentCloud\Common\AbstractModel;
  * @method array getFileInfos() 获取用户传入的文件信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileInfos(array $FileInfos) 设置用户传入的文件信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getQuoteInfos() 获取参考来源引用位置信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setQuoteInfos(array $QuoteInfos) 设置参考来源引用位置信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method AgentThought getAgentThought() 获取Agent的思考过程信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAgentThought(AgentThought $AgentThought) 设置Agent的思考过程信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method ExtraInfo getExtraInfo() 获取扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExtraInfo(ExtraInfo $ExtraInfo) 设置扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method WorkflowInfo getWorkFlow() 获取工作流信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWorkFlow(WorkflowInfo $WorkFlow) 设置工作流信息
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class MsgRecord extends AbstractModel
@@ -193,6 +211,7 @@ class MsgRecord extends AbstractModel
 
     /**
      * @var array 图片链接，可公有读
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageUrls;
 
@@ -241,6 +260,30 @@ class MsgRecord extends AbstractModel
     public $FileInfos;
 
     /**
+     * @var array 参考来源引用位置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $QuoteInfos;
+
+    /**
+     * @var AgentThought Agent的思考过程信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AgentThought;
+
+    /**
+     * @var ExtraInfo 扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExtraInfo;
+
+    /**
+     * @var WorkflowInfo 工作流信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WorkFlow;
+
+    /**
      * @param string $Content 内容
      * @param string $SessionId 当前记录所对应的 Session ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -260,6 +303,7 @@ class MsgRecord extends AbstractModel
      * @param array $Reasons 评价原因
      * @param boolean $IsLlmGenerated 是否大模型
      * @param array $ImageUrls 图片链接，可公有读
+注意：此字段可能返回 null，表示取不到有效值。
      * @param TokenStat $TokenStat 当次 token 统计信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ReplyMethod 回复方式
@@ -283,6 +327,14 @@ class MsgRecord extends AbstractModel
      * @param TaskFlowInfo $TaskFlow 任务信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FileInfos 用户传入的文件信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $QuoteInfos 参考来源引用位置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param AgentThought $AgentThought Agent的思考过程信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExtraInfo $ExtraInfo 扩展信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param WorkflowInfo $WorkFlow 工作流信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -396,6 +448,30 @@ class MsgRecord extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->FileInfos, $obj);
             }
+        }
+
+        if (array_key_exists("QuoteInfos",$param) and $param["QuoteInfos"] !== null) {
+            $this->QuoteInfos = [];
+            foreach ($param["QuoteInfos"] as $key => $value){
+                $obj = new QuoteInfo();
+                $obj->deserialize($value);
+                array_push($this->QuoteInfos, $obj);
+            }
+        }
+
+        if (array_key_exists("AgentThought",$param) and $param["AgentThought"] !== null) {
+            $this->AgentThought = new AgentThought();
+            $this->AgentThought->deserialize($param["AgentThought"]);
+        }
+
+        if (array_key_exists("ExtraInfo",$param) and $param["ExtraInfo"] !== null) {
+            $this->ExtraInfo = new ExtraInfo();
+            $this->ExtraInfo->deserialize($param["ExtraInfo"]);
+        }
+
+        if (array_key_exists("WorkFlow",$param) and $param["WorkFlow"] !== null) {
+            $this->WorkFlow = new WorkflowInfo();
+            $this->WorkFlow->deserialize($param["WorkFlow"]);
         }
     }
 }

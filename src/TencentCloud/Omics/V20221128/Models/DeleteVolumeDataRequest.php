@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getVolumeId() 获取缓存卷ID。
  * @method void setVolumeId(string $VolumeId) 设置缓存卷ID。
- * @method string getPath() 获取需要删除的路径
- * @method void setPath(string $Path) 设置需要删除的路径
+ * @method string getPath() 获取需要删除的路径。
+ * @method void setPath(string $Path) 设置需要删除的路径。
  */
 class DeleteVolumeDataRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DeleteVolumeDataRequest extends AbstractModel
     public $VolumeId;
 
     /**
-     * @var string 需要删除的路径
+     * @var string 需要删除的路径。
      */
     public $Path;
 
     /**
      * @param string $VolumeId 缓存卷ID。
-     * @param string $Path 需要删除的路径
+     * @param string $Path 需要删除的路径。
      */
     function __construct()
     {

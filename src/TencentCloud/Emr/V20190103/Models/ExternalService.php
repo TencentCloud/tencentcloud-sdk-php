@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getShareType() 获取共用组件类型，EMR/CUSTOM
  * @method void setShareType(string $ShareType) 设置共用组件类型，EMR/CUSTOM
- * @method array getCustomServiceDefineList() 获取自定义参数集合
- * @method void setCustomServiceDefineList(array $CustomServiceDefineList) 设置自定义参数集合
  * @method string getService() 获取共用组件名
  * @method void setService(string $Service) 设置共用组件名
  * @method string getInstanceId() 获取共用组件集群
  * @method void setInstanceId(string $InstanceId) 设置共用组件集群
+ * @method array getCustomServiceDefineList() 获取自定义参数集合
+ * @method void setCustomServiceDefineList(array $CustomServiceDefineList) 设置自定义参数集合
  */
 class ExternalService extends AbstractModel
 {
@@ -35,11 +35,6 @@ class ExternalService extends AbstractModel
      * @var string 共用组件类型，EMR/CUSTOM
      */
     public $ShareType;
-
-    /**
-     * @var array 自定义参数集合
-     */
-    public $CustomServiceDefineList;
 
     /**
      * @var string 共用组件名
@@ -52,10 +47,15 @@ class ExternalService extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var array 自定义参数集合
+     */
+    public $CustomServiceDefineList;
+
+    /**
      * @param string $ShareType 共用组件类型，EMR/CUSTOM
-     * @param array $CustomServiceDefineList 自定义参数集合
      * @param string $Service 共用组件名
      * @param string $InstanceId 共用组件集群
+     * @param array $CustomServiceDefineList 自定义参数集合
      */
     function __construct()
     {
@@ -74,6 +74,14 @@ class ExternalService extends AbstractModel
             $this->ShareType = $param["ShareType"];
         }
 
+        if (array_key_exists("Service",$param) and $param["Service"] !== null) {
+            $this->Service = $param["Service"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
         if (array_key_exists("CustomServiceDefineList",$param) and $param["CustomServiceDefineList"] !== null) {
             $this->CustomServiceDefineList = [];
             foreach ($param["CustomServiceDefineList"] as $key => $value){
@@ -81,14 +89,6 @@ class ExternalService extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->CustomServiceDefineList, $obj);
             }
-        }
-
-        if (array_key_exists("Service",$param) and $param["Service"] !== null) {
-            $this->Service = $param["Service"];
-        }
-
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

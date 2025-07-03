@@ -23,27 +23,19 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getId() 获取规则id
  * @method void setId(integer $Id) 设置规则id
  * @method string getType() 获取规则类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置规则类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLevel() 获取规则等级
  * @method void setLevel(string $Level) 设置规则等级
  * @method string getDescription() 获取规则描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置规则描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCVE() 获取规则防护的CVE编号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCVE(string $CVE) 设置规则防护的CVE编号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取规则的状态
  * @method void setStatus(integer $Status) 设置规则的状态
  * @method string getModifyTime() 获取规则修改的时间
  * @method void setModifyTime(string $ModifyTime) 设置规则修改的时间
  * @method string getAddTime() 获取门神规则新增/更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddTime(string $AddTime) 设置门神规则新增/更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Rule extends AbstractModel
 {
@@ -54,7 +46,6 @@ class Rule extends AbstractModel
 
     /**
      * @var string 规则类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
@@ -65,13 +56,11 @@ class Rule extends AbstractModel
 
     /**
      * @var string 规则描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var string 规则防护的CVE编号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CVE;
 
@@ -87,23 +76,18 @@ class Rule extends AbstractModel
 
     /**
      * @var string 门神规则新增/更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AddTime;
 
     /**
      * @param integer $Id 规则id
      * @param string $Type 规则类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Level 规则等级
      * @param string $Description 规则描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CVE 规则防护的CVE编号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 规则的状态
      * @param string $ModifyTime 规则修改的时间
      * @param string $AddTime 门神规则新增/更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

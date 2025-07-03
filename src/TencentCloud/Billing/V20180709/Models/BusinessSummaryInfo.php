@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getBusinessCodeName() 获取产品名称：用户所采购的各类云产品，例如：云服务器 CVM
  * @method void setBusinessCodeName(string $BusinessCodeName) 设置产品名称：用户所采购的各类云产品，例如：云服务器 CVM
  * @method string getTotalCost() 获取原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCost(string $TotalCost) 设置原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRealTotalCost() 获取优惠后总价
  * @method void setRealTotalCost(string $RealTotalCost) 设置优惠后总价
  * @method string getCashPayAmount() 获取现金账户支出：通过现金账户支付的金额
@@ -37,9 +35,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getVoucherPayAmount() 获取优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
  * @method void setVoucherPayAmount(string $VoucherPayAmount) 设置优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
  * @method string getTransferPayAmount() 获取分成金账户支出：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTransferPayAmount(string $TransferPayAmount) 设置分成金账户支出：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BusinessSummaryInfo extends AbstractModel
 {
@@ -55,7 +51,6 @@ class BusinessSummaryInfo extends AbstractModel
 
     /**
      * @var string 原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCost;
 
@@ -81,7 +76,6 @@ class BusinessSummaryInfo extends AbstractModel
 
     /**
      * @var string 分成金账户支出：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TransferPayAmount;
 
@@ -89,13 +83,11 @@ class BusinessSummaryInfo extends AbstractModel
      * @param string $BusinessCode 产品编码
      * @param string $BusinessCodeName 产品名称：用户所采购的各类云产品，例如：云服务器 CVM
      * @param string $TotalCost 原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RealTotalCost 优惠后总价
      * @param string $CashPayAmount 现金账户支出：通过现金账户支付的金额
      * @param string $IncentivePayAmount 赠送账户支出：使用赠送金支付的金额
      * @param string $VoucherPayAmount 优惠券支出：使用各类优惠券（如代金券、现金券等）支付的金额
      * @param string $TransferPayAmount 分成金账户支出：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

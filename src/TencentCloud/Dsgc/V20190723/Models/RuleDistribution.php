@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 数据资产报告-rdb的敏感数据规则分布
  *
  * @method integer getRuleId() 获取规则id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleId(integer $RuleId) 设置规则id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRuleName() 获取规则名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleName(string $RuleName) 设置规则名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLevelId() 获取分级id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevelId(integer $LevelId) 设置分级id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLevelName() 获取分级名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevelName(string $LevelName) 设置分级名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRuleCnt() 获取规则数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleCnt(integer $RuleCnt) 设置规则数量
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleDistribution extends AbstractModel
 {
     /**
      * @var integer 规则id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleId;
 
     /**
      * @var string 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleName;
 
     /**
      * @var integer 分级id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LevelId;
 
     /**
      * @var string 分级名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LevelName;
 
     /**
      * @var integer 规则数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleCnt;
 
     /**
      * @param integer $RuleId 规则id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RuleName 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LevelId 分级id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LevelName 分级名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleCnt 规则数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

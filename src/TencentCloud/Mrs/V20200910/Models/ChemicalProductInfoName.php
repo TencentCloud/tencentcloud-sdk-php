@@ -21,69 +21,62 @@ use TencentCloud\Common\AbstractModel;
  * 药品名称，包括通用名和商品名
  *
  * @method string getText() 获取文本内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setText(string $Text) 设置文本内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGenericName() 获取通用名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGenericName(string $GenericName) 设置通用名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBarndName() 获取品牌名
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBarndName(string $BarndName) 设置品牌名
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEnName() 获取英文名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnName(string $EnName) 设置英文名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPinyin() 获取拼音
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPinyin(string $Pinyin) 设置拼音
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBrandName() 获取品牌名
+ * @method void setBrandName(string $BrandName) 设置品牌名
  */
 class ChemicalProductInfoName extends AbstractModel
 {
     /**
      * @var string 文本内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Text;
 
     /**
      * @var string 通用名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GenericName;
 
     /**
      * @var string 品牌名
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $BarndName;
 
     /**
      * @var string 英文名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnName;
 
     /**
      * @var string 拼音
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Pinyin;
 
     /**
+     * @var string 品牌名
+     */
+    public $BrandName;
+
+    /**
      * @param string $Text 文本内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GenericName 通用名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BarndName 品牌名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EnName 英文名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Pinyin 拼音
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BrandName 品牌名
      */
     function __construct()
     {
@@ -116,6 +109,10 @@ class ChemicalProductInfoName extends AbstractModel
 
         if (array_key_exists("Pinyin",$param) and $param["Pinyin"] !== null) {
             $this->Pinyin = $param["Pinyin"];
+        }
+
+        if (array_key_exists("BrandName",$param) and $param["BrandName"] !== null) {
+            $this->BrandName = $param["BrandName"];
         }
     }
 }

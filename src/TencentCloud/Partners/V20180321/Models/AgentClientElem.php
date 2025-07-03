@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClientUin(string $ClientUin) 设置代客账号ID
  * @method integer getApplyTime() 获取代客申请时间戳
  * @method void setApplyTime(integer $ApplyTime) 设置代客申请时间戳
- * @method string getClientFlag() 获取代客类型，可能值为a/b/c
- * @method void setClientFlag(string $ClientFlag) 设置代客类型，可能值为a/b/c
+ * @method string getClientFlag() 获取代客类型，可能值为a/b/c/other
+ * @method void setClientFlag(string $ClientFlag) 设置代客类型，可能值为a/b/c/other
  * @method string getMail() 获取代客邮箱，打码显示
  * @method void setMail(string $Mail) 设置代客邮箱，打码显示
  * @method string getPhone() 获取代客手机，打码显示
@@ -37,17 +37,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getStatus() 获取1:待代理商审核;2:待腾讯云审核4:待腾讯云渠道审批
  * @method void setStatus(integer $Status) 设置1:待代理商审核;2:待腾讯云审核4:待腾讯云渠道审批
  * @method string getSalesUin() 获取业务员ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSalesUin(string $SalesUin) 设置业务员ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSalesName() 获取业务员姓名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSalesName(string $SalesName) 设置业务员姓名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClientName() 获取客户名称，此字段和控制台返回一致。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClientName(string $ClientName) 设置客户名称，此字段和控制台返回一致。
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIncreaseGoal() 获取增量目标金额(分)
+ * @method void setIncreaseGoal(string $IncreaseGoal) 设置增量目标金额(分)
  */
 class AgentClientElem extends AbstractModel
 {
@@ -67,7 +63,7 @@ class AgentClientElem extends AbstractModel
     public $ApplyTime;
 
     /**
-     * @var string 代客类型，可能值为a/b/c
+     * @var string 代客类型，可能值为a/b/c/other
      */
     public $ClientFlag;
 
@@ -93,37 +89,37 @@ class AgentClientElem extends AbstractModel
 
     /**
      * @var string 业务员ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SalesUin;
 
     /**
      * @var string 业务员姓名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SalesName;
 
     /**
      * @var string 客户名称，此字段和控制台返回一致。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClientName;
+
+    /**
+     * @var string 增量目标金额(分)
+     */
+    public $IncreaseGoal;
 
     /**
      * @param string $Uin 代理商账号ID
      * @param string $ClientUin 代客账号ID
      * @param integer $ApplyTime 代客申请时间戳
-     * @param string $ClientFlag 代客类型，可能值为a/b/c
+     * @param string $ClientFlag 代客类型，可能值为a/b/c/other
      * @param string $Mail 代客邮箱，打码显示
      * @param string $Phone 代客手机，打码显示
      * @param integer $HasOverdueBill 0表示不欠费，1表示欠费
      * @param integer $Status 1:待代理商审核;2:待腾讯云审核4:待腾讯云渠道审批
      * @param string $SalesUin 业务员ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SalesName 业务员姓名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClientName 客户名称，此字段和控制台返回一致。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IncreaseGoal 增量目标金额(分)
      */
     function __construct()
     {
@@ -180,6 +176,10 @@ class AgentClientElem extends AbstractModel
 
         if (array_key_exists("ClientName",$param) and $param["ClientName"] !== null) {
             $this->ClientName = $param["ClientName"];
+        }
+
+        if (array_key_exists("IncreaseGoal",$param) and $param["IncreaseGoal"] !== null) {
+            $this->IncreaseGoal = $param["IncreaseGoal"];
         }
     }
 }

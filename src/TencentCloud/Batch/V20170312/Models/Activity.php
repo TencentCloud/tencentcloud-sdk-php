@@ -30,20 +30,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvId(string $EnvId) 设置计算环境ID
  * @method string getCause() 获取起因
  * @method void setCause(string $Cause) 设置起因
- * @method string getActivityState() 获取活动状态
- * @method void setActivityState(string $ActivityState) 设置活动状态
+ * @method string getActivityState() 获取活动状态。取值范围：<br><li>SUBMITTED：已提交</li><li>PROCESSING：处理中</li><li>SUCCEED：成功</li><li>FAILED：失败</li>
+ * @method void setActivityState(string $ActivityState) 设置活动状态。取值范围：<br><li>SUBMITTED：已提交</li><li>PROCESSING：处理中</li><li>SUCCEED：成功</li><li>FAILED：失败</li>
  * @method string getStateReason() 获取状态原因
  * @method void setStateReason(string $StateReason) 设置状态原因
  * @method string getStartTime() 获取活动开始时间
  * @method void setStartTime(string $StartTime) 设置活动开始时间
  * @method string getEndTime() 获取活动结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置活动结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取云服务器实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置云服务器实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Activity extends AbstractModel
 {
@@ -73,7 +69,7 @@ class Activity extends AbstractModel
     public $Cause;
 
     /**
-     * @var string 活动状态
+     * @var string 活动状态。取值范围：<br><li>SUBMITTED：已提交</li><li>PROCESSING：处理中</li><li>SUCCEED：成功</li><li>FAILED：失败</li>
      */
     public $ActivityState;
 
@@ -89,13 +85,11 @@ class Activity extends AbstractModel
 
     /**
      * @var string 活动结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
      * @var string 云服务器实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
@@ -105,13 +99,11 @@ class Activity extends AbstractModel
      * @param string $ComputeNodeActivityType 计算节点活动类型，创建或者销毁
      * @param string $EnvId 计算环境ID
      * @param string $Cause 起因
-     * @param string $ActivityState 活动状态
+     * @param string $ActivityState 活动状态。取值范围：<br><li>SUBMITTED：已提交</li><li>PROCESSING：处理中</li><li>SUCCEED：成功</li><li>FAILED：失败</li>
      * @param string $StateReason 状态原因
      * @param string $StartTime 活动开始时间
      * @param string $EndTime 活动结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 云服务器实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

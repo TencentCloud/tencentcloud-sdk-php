@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getBotBizId() 获取应用ID
  * @method void setBotBizId(string $BotBizId) 设置应用ID
- * @method string getAttrKey() 获取属性标识
- * @method void setAttrKey(string $AttrKey) 设置属性标识
- * @method string getAttrName() 获取属性名称
- * @method void setAttrName(string $AttrName) 设置属性名称
- * @method array getLabels() 获取属性标签
- * @method void setLabels(array $Labels) 设置属性标签
+ * @method string getAttrName() 获取标签名
+ * @method void setAttrName(string $AttrName) 设置标签名
+ * @method array getLabels() 获取标签值
+ * @method void setLabels(array $Labels) 设置标签值
+ * @method string getAttrKey() 获取标签标识（不生效，无需填写） 已作废
+ * @method void setAttrKey(string $AttrKey) 设置标签标识（不生效，无需填写） 已作废
  * @method string getLoginUin() 获取登录用户主账号(集成商模式必填)
  * @method void setLoginUin(string $LoginUin) 设置登录用户主账号(集成商模式必填)
  * @method string getLoginSubAccountUin() 获取登录用户子账号(集成商模式必填)
@@ -41,19 +41,19 @@ class CreateAttributeLabelRequest extends AbstractModel
     public $BotBizId;
 
     /**
-     * @var string 属性标识
-     */
-    public $AttrKey;
-
-    /**
-     * @var string 属性名称
+     * @var string 标签名
      */
     public $AttrName;
 
     /**
-     * @var array 属性标签
+     * @var array 标签值
      */
     public $Labels;
+
+    /**
+     * @var string 标签标识（不生效，无需填写） 已作废
+     */
+    public $AttrKey;
 
     /**
      * @var string 登录用户主账号(集成商模式必填)
@@ -67,9 +67,9 @@ class CreateAttributeLabelRequest extends AbstractModel
 
     /**
      * @param string $BotBizId 应用ID
-     * @param string $AttrKey 属性标识
-     * @param string $AttrName 属性名称
-     * @param array $Labels 属性标签
+     * @param string $AttrName 标签名
+     * @param array $Labels 标签值
+     * @param string $AttrKey 标签标识（不生效，无需填写） 已作废
      * @param string $LoginUin 登录用户主账号(集成商模式必填)
      * @param string $LoginSubAccountUin 登录用户子账号(集成商模式必填)
      */
@@ -90,10 +90,6 @@ class CreateAttributeLabelRequest extends AbstractModel
             $this->BotBizId = $param["BotBizId"];
         }
 
-        if (array_key_exists("AttrKey",$param) and $param["AttrKey"] !== null) {
-            $this->AttrKey = $param["AttrKey"];
-        }
-
         if (array_key_exists("AttrName",$param) and $param["AttrName"] !== null) {
             $this->AttrName = $param["AttrName"];
         }
@@ -105,6 +101,10 @@ class CreateAttributeLabelRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Labels, $obj);
             }
+        }
+
+        if (array_key_exists("AttrKey",$param) and $param["AttrKey"] !== null) {
+            $this->AttrKey = $param["AttrKey"];
         }
 
         if (array_key_exists("LoginUin",$param) and $param["LoginUin"] !== null) {

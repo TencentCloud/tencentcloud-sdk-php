@@ -27,13 +27,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getStatus() 获取状态：0:审核中；1：已解绑；2：已撤销 3：关联撤销 4: 已驳回
  * @method void setStatus(integer $Status) 设置状态：0:审核中；1：已解绑；2：已撤销 3：关联撤销 4: 已驳回
  * @method string getApplyTime() 获取申请时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplyTime(string $ApplyTime) 设置申请时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getActionTime() 获取解绑/撤销时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActionTime(string $ActionTime) 设置解绑/撤销时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class UnbindClientElem extends AbstractModel
 {
@@ -54,13 +50,11 @@ class UnbindClientElem extends AbstractModel
 
     /**
      * @var string 申请时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplyTime;
 
     /**
      * @var string 解绑/撤销时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActionTime;
 
@@ -69,9 +63,7 @@ class UnbindClientElem extends AbstractModel
      * @param string $Name 名称
      * @param integer $Status 状态：0:审核中；1：已解绑；2：已撤销 3：关联撤销 4: 已驳回
      * @param string $ApplyTime 申请时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ActionTime 解绑/撤销时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

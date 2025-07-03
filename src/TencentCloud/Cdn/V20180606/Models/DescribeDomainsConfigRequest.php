@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getOffset() 获取分页查询偏移量，默认为 0
  * @method void setOffset(integer $Offset) 设置分页查询偏移量，默认为 0
- * @method integer getLimit() 获取分页查询限制数目，默认为 100，最大可设置为 1000
- * @method void setLimit(integer $Limit) 设置分页查询限制数目，默认为 100，最大可设置为 1000
+ * @method integer getLimit() 获取分页查询限制数目，默认为 100，最大可设置为 100
+ * @method void setLimit(integer $Limit) 设置分页查询限制数目，默认为 100，最大可设置为 100
  * @method array getFilters() 获取查询条件过滤器，复杂类型
  * @method void setFilters(array $Filters) 设置查询条件过滤器，复杂类型
  * @method Sort getSort() 获取排序规则
@@ -37,7 +37,7 @@ class DescribeDomainsConfigRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 分页查询限制数目，默认为 100，最大可设置为 1000
+     * @var integer 分页查询限制数目，默认为 100，最大可设置为 100
      */
     public $Limit;
 
@@ -53,7 +53,7 @@ class DescribeDomainsConfigRequest extends AbstractModel
 
     /**
      * @param integer $Offset 分页查询偏移量，默认为 0
-     * @param integer $Limit 分页查询限制数目，默认为 100，最大可设置为 1000
+     * @param integer $Limit 分页查询限制数目，默认为 100，最大可设置为 100
      * @param array $Filters 查询条件过滤器，复杂类型
      * @param Sort $Sort 排序规则
      */

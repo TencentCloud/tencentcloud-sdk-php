@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAll(boolean $All) 设置列出所有服务级账号
  * @method boolean getEmbedPermission() 获取是否填充权限信息
  * @method void setEmbedPermission(boolean $EmbedPermission) 设置是否填充权限信息
- * @method array getFilters() 获取过滤条件
- * @method void setFilters(array $Filters) 设置过滤条件
+ * @method array getFilters() 获取过滤条件，key 目前只支持ServiceAccountName
+ * @method void setFilters(array $Filters) 设置过滤条件，key 目前只支持ServiceAccountName
  * @method integer getOffset() 获取偏移量,默认0
  * @method void setOffset(integer $Offset) 设置偏移量,默认0
  * @method integer getLimit() 获取最大输出条数，默认20，最大为100（超出最大值，调整到最大值）
@@ -51,7 +51,7 @@ class DescribeServiceAccountsRequest extends AbstractModel
     public $EmbedPermission;
 
     /**
-     * @var array 过滤条件
+     * @var array 过滤条件，key 目前只支持ServiceAccountName
      */
     public $Filters;
 
@@ -69,7 +69,7 @@ class DescribeServiceAccountsRequest extends AbstractModel
      * @param string $RegistryId 实例Id
      * @param boolean $All 列出所有服务级账号
      * @param boolean $EmbedPermission 是否填充权限信息
-     * @param array $Filters 过滤条件
+     * @param array $Filters 过滤条件，key 目前只支持ServiceAccountName
      * @param integer $Offset 偏移量,默认0
      * @param integer $Limit 最大输出条数，默认20，最大为100（超出最大值，调整到最大值）
      */

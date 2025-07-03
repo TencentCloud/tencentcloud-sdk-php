@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemory(integer $Memory) 设置实例内存大小，单位GB
  * @method integer getStorage() 获取实例磁盘大小，单位GB
  * @method void setStorage(integer $Storage) 设置实例磁盘大小，单位GB
- * @method string getInstanceType() 获取购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-单节点型,BI-商业智能服务,cvmHA-新版高可用,cvmRO-新版只读
- * @method void setInstanceType(string $InstanceType) 设置购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-单节点型,BI-商业智能服务,cvmHA-新版高可用,cvmRO-新版只读
+ * @method string getInstanceType() 获取购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-单节点型,BI-商业智能服务,cvmHA-新版高可用,cvmRO-新版只读，MultiHA-多节点，cvmMultiHA-云盘多节点
+ * @method void setInstanceType(string $InstanceType) 设置购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-单节点型,BI-商业智能服务,cvmHA-新版高可用,cvmRO-新版只读，MultiHA-多节点，cvmMultiHA-云盘多节点
  * @method string getMachineType() 获取购买实例的宿主机磁盘类型,CLOUD_HSSD-云服务器加强型SSD云盘，CLOUD_TSSD-云服务器极速型SSD云盘，CLOUD_BSSD-云服务器通用型SSD云盘
  * @method void setMachineType(string $MachineType) 设置购买实例的宿主机磁盘类型,CLOUD_HSSD-云服务器加强型SSD云盘，CLOUD_TSSD-云服务器极速型SSD云盘，CLOUD_BSSD-云服务器通用型SSD云盘
  * @method string getInstanceChargeType() 获取付费模式，取值支持 PREPAID（预付费），POSTPAID（后付费）。
@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeZone(string $TimeZone) 设置系统时区，默认：China Standard Time
  * @method string getCollation() 获取系统字符集排序规则，默认：Chinese_PRC_CI_AS
  * @method void setCollation(string $Collation) 设置系统字符集排序规则，默认：Chinese_PRC_CI_AS
+ * @method boolean getMultiNodes() 获取是否多节点架构，默认值为false
+ * @method void setMultiNodes(boolean $MultiNodes) 设置是否多节点架构，默认值为false
+ * @method array getDrZones() 获取备节点可用区，默认为空。如果是多节点架构时必传，并且当MultiZones=true时备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
+ * @method void setDrZones(array $DrZones) 设置备节点可用区，默认为空。如果是多节点架构时必传，并且当MultiZones=true时备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
  */
 class DescribeInstanceTradeParameterRequest extends AbstractModel
 {
@@ -88,7 +92,7 @@ class DescribeInstanceTradeParameterRequest extends AbstractModel
     public $Storage;
 
     /**
-     * @var string 购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-单节点型,BI-商业智能服务,cvmHA-新版高可用,cvmRO-新版只读
+     * @var string 购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-单节点型,BI-商业智能服务,cvmHA-新版高可用,cvmRO-新版只读，MultiHA-多节点，cvmMultiHA-云盘多节点
      */
     public $InstanceType;
 
@@ -178,11 +182,21 @@ class DescribeInstanceTradeParameterRequest extends AbstractModel
     public $Collation;
 
     /**
+     * @var boolean 是否多节点架构，默认值为false
+     */
+    public $MultiNodes;
+
+    /**
+     * @var array 备节点可用区，默认为空。如果是多节点架构时必传，并且当MultiZones=true时备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
+     */
+    public $DrZones;
+
+    /**
      * @param string $Zone 实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取
      * @param integer $Cpu 实例核心数
      * @param integer $Memory 实例内存大小，单位GB
      * @param integer $Storage 实例磁盘大小，单位GB
-     * @param string $InstanceType 购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-单节点型,BI-商业智能服务,cvmHA-新版高可用,cvmRO-新版只读
+     * @param string $InstanceType 购买实例的类型 HA-高可用型(包括双机高可用，alwaysOn集群)，RO-只读副本型，SI-单节点型,BI-商业智能服务,cvmHA-新版高可用,cvmRO-新版只读，MultiHA-多节点，cvmMultiHA-云盘多节点
      * @param string $MachineType 购买实例的宿主机磁盘类型,CLOUD_HSSD-云服务器加强型SSD云盘，CLOUD_TSSD-云服务器极速型SSD云盘，CLOUD_BSSD-云服务器通用型SSD云盘
      * @param string $InstanceChargeType 付费模式，取值支持 PREPAID（预付费），POSTPAID（后付费）。
      * @param integer $ProjectId 项目ID
@@ -200,6 +214,8 @@ class DescribeInstanceTradeParameterRequest extends AbstractModel
      * @param array $ResourceTags 新建实例绑定的标签集合
      * @param string $TimeZone 系统时区，默认：China Standard Time
      * @param string $Collation 系统字符集排序规则，默认：Chinese_PRC_CI_AS
+     * @param boolean $MultiNodes 是否多节点架构，默认值为false
+     * @param array $DrZones 备节点可用区，默认为空。如果是多节点架构时必传，并且当MultiZones=true时备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
      */
     function __construct()
     {
@@ -305,6 +321,14 @@ class DescribeInstanceTradeParameterRequest extends AbstractModel
 
         if (array_key_exists("Collation",$param) and $param["Collation"] !== null) {
             $this->Collation = $param["Collation"];
+        }
+
+        if (array_key_exists("MultiNodes",$param) and $param["MultiNodes"] !== null) {
+            $this->MultiNodes = $param["MultiNodes"];
+        }
+
+        if (array_key_exists("DrZones",$param) and $param["DrZones"] !== null) {
+            $this->DrZones = $param["DrZones"];
         }
     }
 }

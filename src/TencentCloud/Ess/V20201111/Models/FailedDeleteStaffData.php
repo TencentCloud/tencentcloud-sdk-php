@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * 删除员工失败数据
  *
  * @method string getUserId() 获取员工在电子签的userId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserId(string $UserId) 设置员工在电子签的userId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOpenId() 获取员工在第三方平台的openId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOpenId(string $OpenId) 设置员工在第三方平台的openId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReason() 获取失败原因
  * @method void setReason(string $Reason) 设置失败原因
  */
@@ -35,13 +31,11 @@ class FailedDeleteStaffData extends AbstractModel
 {
     /**
      * @var string 员工在电子签的userId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserId;
 
     /**
      * @var string 员工在第三方平台的openId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OpenId;
 
@@ -52,9 +46,7 @@ class FailedDeleteStaffData extends AbstractModel
 
     /**
      * @param string $UserId 员工在电子签的userId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OpenId 员工在第三方平台的openId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Reason 失败原因
      */
     function __construct()

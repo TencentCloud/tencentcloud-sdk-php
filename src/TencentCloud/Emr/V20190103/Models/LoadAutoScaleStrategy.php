@@ -21,59 +21,23 @@ use TencentCloud\Common\AbstractModel;
  * 自动扩缩容基于负载指标的规则
  *
  * @method integer getStrategyId() 获取规则ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStrategyId(integer $StrategyId) 设置规则ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStrategyName() 获取规则名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStrategyName(string $StrategyName) 设置规则名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCalmDownTime() 获取规则生效冷却时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCalmDownTime(integer $CalmDownTime) 设置规则生效冷却时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScaleAction() 获取扩缩容动作，1表示扩容，2表示缩容。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScaleAction(integer $ScaleAction) 设置扩缩容动作，1表示扩容，2表示缩容。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScaleNum() 获取每次规则生效时的扩缩容数量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScaleNum(integer $ScaleNum) 设置每次规则生效时的扩缩容数量。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLoadMetrics() 获取扩缩容负载指标。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLoadMetrics(string $LoadMetrics) 设置扩缩容负载指标。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMetricId() 获取规则元数据记录ID。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMetricId(integer $MetricId) 设置规则元数据记录ID。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatisticPeriod() 获取规则统计周期，提供300s,600s,900s。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatisticPeriod(integer $StatisticPeriod) 设置规则统计周期，提供300s,600s,900s。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProcessMethod() 获取指标处理方法，1表示MAX，2表示MIN，3表示AVG。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProcessMethod(integer $ProcessMethod) 设置指标处理方法，1表示MAX，2表示MIN，3表示AVG。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTriggerThreshold() 获取触发次数，当连续触发超过TriggerThreshold次后才开始扩缩容。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
- * @method void setTriggerThreshold(integer $TriggerThreshold) 设置触发次数，当连续触发超过TriggerThreshold次后才开始扩缩容。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
- * @method TriggerConditions getTriggerConditions() 获取条件触发数组。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTriggerConditions(TriggerConditions $TriggerConditions) 设置条件触发数组。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPriority() 获取规则优先级，添加时无效，默认为自增。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPriority(integer $Priority) 设置规则优先级，添加时无效，默认为自增。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStrategyStatus() 获取规则状态，1表示启动，3表示禁用。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStrategyStatus(integer $StrategyStatus) 设置规则状态，1表示启动，3表示禁用。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getYarnNodeLabel() 获取规则扩容指定 yarn node label
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setYarnNodeLabel(string $YarnNodeLabel) 设置规则扩容指定 yarn node label
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPeriodValid() 获取规则生效的有效时间
  * @method void setPeriodValid(string $PeriodValid) 设置规则生效的有效时间
  * @method boolean getGraceDownFlag() 获取优雅缩容开关
@@ -85,108 +49,84 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置绑定标签列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConfigGroupAssigned() 获取预设配置组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigGroupAssigned(string $ConfigGroupAssigned) 设置预设配置组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMeasureMethod() 获取扩容资源计算方法，"DEFAULT","INSTANCE", "CPU", "MEMORYGB"。
 "DEFAULT"表示默认方式，与"INSTANCE"意义相同。
 "INSTANCE"表示按照节点计算，默认方式。
 "CPU"表示按照机器的核数计算。
 "MEMORYGB"表示按照机器内存数计算。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMeasureMethod(string $MeasureMethod) 设置扩容资源计算方法，"DEFAULT","INSTANCE", "CPU", "MEMORYGB"。
 "DEFAULT"表示默认方式，与"INSTANCE"意义相同。
 "INSTANCE"表示按照节点计算，默认方式。
 "CPU"表示按照机器的核数计算。
 "MEMORYGB"表示按照机器内存数计算。
+ * @method array getSoftDeployDesc() 获取节点部署服务列表，例如["HDFS-3.1.2","YARN-3.1.2"]。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSoftDeployDesc(array $SoftDeployDesc) 设置节点部署服务列表，例如["HDFS-3.1.2","YARN-3.1.2"]。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getServiceNodeDesc() 获取启动进程列表，例如["NodeManager"]。
+ * @method void setServiceNodeDesc(string $ServiceNodeDesc) 设置启动进程列表，例如["NodeManager"]。
+ * @method array getServiceNodeInfo() 获取启动进程列表。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setServiceNodeInfo(array $ServiceNodeInfo) 设置启动进程列表。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSoftDeployInfo() 获取节点部署服务列表。部署服务仅填写HDFS、YARN。[组件名对应的映射关系表](https://cloud.tencent.com/document/product/589/98760)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSoftDeployInfo(array $SoftDeployInfo) 设置节点部署服务列表。部署服务仅填写HDFS、YARN。[组件名对应的映射关系表](https://cloud.tencent.com/document/product/589/98760)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method LoadMetricsConditions getLoadMetricsConditions() 获取多指标触发条件
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLoadMetricsConditions(LoadMetricsConditions $LoadMetricsConditions) 设置多指标触发条件
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getGroupId() 获取伸缩组Id
+ * @method void setGroupId(integer $GroupId) 设置伸缩组Id
+ * @method string getSoft() 获取soft例如yarn
+ * @method void setSoft(string $Soft) 设置soft例如yarn
  */
 class LoadAutoScaleStrategy extends AbstractModel
 {
     /**
      * @var integer 规则ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StrategyId;
 
     /**
      * @var string 规则名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StrategyName;
 
     /**
      * @var integer 规则生效冷却时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CalmDownTime;
 
     /**
      * @var integer 扩缩容动作，1表示扩容，2表示缩容。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScaleAction;
 
     /**
      * @var integer 每次规则生效时的扩缩容数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScaleNum;
 
     /**
-     * @var string 扩缩容负载指标。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $LoadMetrics;
-
-    /**
-     * @var integer 规则元数据记录ID。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $MetricId;
-
-    /**
-     * @var integer 规则统计周期，提供300s,600s,900s。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $StatisticPeriod;
-
-    /**
      * @var integer 指标处理方法，1表示MAX，2表示MIN，3表示AVG。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProcessMethod;
 
     /**
-     * @var integer 触发次数，当连续触发超过TriggerThreshold次后才开始扩缩容。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
-     */
-    public $TriggerThreshold;
-
-    /**
-     * @var TriggerConditions 条件触发数组。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $TriggerConditions;
-
-    /**
      * @var integer 规则优先级，添加时无效，默认为自增。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Priority;
 
     /**
      * @var integer 规则状态，1表示启动，3表示禁用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StrategyStatus;
 
     /**
      * @var string 规则扩容指定 yarn node label
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $YarnNodeLabel;
 
@@ -213,7 +153,6 @@ class LoadAutoScaleStrategy extends AbstractModel
 
     /**
      * @var string 预设配置组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigGroupAssigned;
 
@@ -223,9 +162,31 @@ class LoadAutoScaleStrategy extends AbstractModel
 "INSTANCE"表示按照节点计算，默认方式。
 "CPU"表示按照机器的核数计算。
 "MEMORYGB"表示按照机器内存数计算。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MeasureMethod;
+
+    /**
+     * @var array 节点部署服务列表，例如["HDFS-3.1.2","YARN-3.1.2"]。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SoftDeployDesc;
+
+    /**
+     * @var string 启动进程列表，例如["NodeManager"]。
+     */
+    public $ServiceNodeDesc;
+
+    /**
+     * @var array 启动进程列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ServiceNodeInfo;
+
+    /**
+     * @var array 节点部署服务列表。部署服务仅填写HDFS、YARN。[组件名对应的映射关系表](https://cloud.tencent.com/document/product/589/98760)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SoftDeployInfo;
 
     /**
      * @var LoadMetricsConditions 多指标触发条件
@@ -234,48 +195,47 @@ class LoadAutoScaleStrategy extends AbstractModel
     public $LoadMetricsConditions;
 
     /**
+     * @var integer 伸缩组Id
+     */
+    public $GroupId;
+
+    /**
+     * @var string soft例如yarn
+     */
+    public $Soft;
+
+    /**
      * @param integer $StrategyId 规则ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StrategyName 规则名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CalmDownTime 规则生效冷却时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ScaleAction 扩缩容动作，1表示扩容，2表示缩容。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ScaleNum 每次规则生效时的扩缩容数量。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LoadMetrics 扩缩容负载指标。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MetricId 规则元数据记录ID。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $StatisticPeriod 规则统计周期，提供300s,600s,900s。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProcessMethod 指标处理方法，1表示MAX，2表示MIN，3表示AVG。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TriggerThreshold 触发次数，当连续触发超过TriggerThreshold次后才开始扩缩容。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
-     * @param TriggerConditions $TriggerConditions 条件触发数组。注:不推荐使用此属性，和LoadMetricsConditions属性配置互斥，配置了LoadMetricsConditions，这个属性不生效。请优先使用LoadMetricsConditions属性支持多指标。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Priority 规则优先级，添加时无效，默认为自增。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StrategyStatus 规则状态，1表示启动，3表示禁用。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $YarnNodeLabel 规则扩容指定 yarn node label
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PeriodValid 规则生效的有效时间
      * @param boolean $GraceDownFlag 优雅缩容开关
      * @param integer $GraceDownTime 优雅缩容等待时间
      * @param array $Tags 绑定标签列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConfigGroupAssigned 预设配置组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MeasureMethod 扩容资源计算方法，"DEFAULT","INSTANCE", "CPU", "MEMORYGB"。
 "DEFAULT"表示默认方式，与"INSTANCE"意义相同。
 "INSTANCE"表示按照节点计算，默认方式。
 "CPU"表示按照机器的核数计算。
 "MEMORYGB"表示按照机器内存数计算。
+     * @param array $SoftDeployDesc 节点部署服务列表，例如["HDFS-3.1.2","YARN-3.1.2"]。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ServiceNodeDesc 启动进程列表，例如["NodeManager"]。
+     * @param array $ServiceNodeInfo 启动进程列表。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SoftDeployInfo 节点部署服务列表。部署服务仅填写HDFS、YARN。[组件名对应的映射关系表](https://cloud.tencent.com/document/product/589/98760)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param LoadMetricsConditions $LoadMetricsConditions 多指标触发条件
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $GroupId 伸缩组Id
+     * @param string $Soft soft例如yarn
      */
     function __construct()
     {
@@ -310,29 +270,8 @@ class LoadAutoScaleStrategy extends AbstractModel
             $this->ScaleNum = $param["ScaleNum"];
         }
 
-        if (array_key_exists("LoadMetrics",$param) and $param["LoadMetrics"] !== null) {
-            $this->LoadMetrics = $param["LoadMetrics"];
-        }
-
-        if (array_key_exists("MetricId",$param) and $param["MetricId"] !== null) {
-            $this->MetricId = $param["MetricId"];
-        }
-
-        if (array_key_exists("StatisticPeriod",$param) and $param["StatisticPeriod"] !== null) {
-            $this->StatisticPeriod = $param["StatisticPeriod"];
-        }
-
         if (array_key_exists("ProcessMethod",$param) and $param["ProcessMethod"] !== null) {
             $this->ProcessMethod = $param["ProcessMethod"];
-        }
-
-        if (array_key_exists("TriggerThreshold",$param) and $param["TriggerThreshold"] !== null) {
-            $this->TriggerThreshold = $param["TriggerThreshold"];
-        }
-
-        if (array_key_exists("TriggerConditions",$param) and $param["TriggerConditions"] !== null) {
-            $this->TriggerConditions = new TriggerConditions();
-            $this->TriggerConditions->deserialize($param["TriggerConditions"]);
         }
 
         if (array_key_exists("Priority",$param) and $param["Priority"] !== null) {
@@ -376,9 +315,33 @@ class LoadAutoScaleStrategy extends AbstractModel
             $this->MeasureMethod = $param["MeasureMethod"];
         }
 
+        if (array_key_exists("SoftDeployDesc",$param) and $param["SoftDeployDesc"] !== null) {
+            $this->SoftDeployDesc = $param["SoftDeployDesc"];
+        }
+
+        if (array_key_exists("ServiceNodeDesc",$param) and $param["ServiceNodeDesc"] !== null) {
+            $this->ServiceNodeDesc = $param["ServiceNodeDesc"];
+        }
+
+        if (array_key_exists("ServiceNodeInfo",$param) and $param["ServiceNodeInfo"] !== null) {
+            $this->ServiceNodeInfo = $param["ServiceNodeInfo"];
+        }
+
+        if (array_key_exists("SoftDeployInfo",$param) and $param["SoftDeployInfo"] !== null) {
+            $this->SoftDeployInfo = $param["SoftDeployInfo"];
+        }
+
         if (array_key_exists("LoadMetricsConditions",$param) and $param["LoadMetricsConditions"] !== null) {
             $this->LoadMetricsConditions = new LoadMetricsConditions();
             $this->LoadMetricsConditions->deserialize($param["LoadMetricsConditions"]);
+        }
+
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
+        }
+
+        if (array_key_exists("Soft",$param) and $param["Soft"] !== null) {
+            $this->Soft = $param["Soft"];
         }
     }
 }

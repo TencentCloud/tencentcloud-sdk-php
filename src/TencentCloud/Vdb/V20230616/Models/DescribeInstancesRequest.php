@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEngineNames(array $EngineNames) 设置按照引擎筛选实例。
  * @method array getEngineVersions() 获取按照版本筛选实例。
  * @method void setEngineVersions(array $EngineVersions) 设置按照版本筛选实例。
+ * @method array getApiVersions() 获取按照api版本筛选实例
+ * @method void setApiVersions(array $ApiVersions) 设置按照api版本筛选实例
  * @method string getCreateAt() 获取按照创建时间筛选实例。
  * @method void setCreateAt(string $CreateAt) 设置按照创建时间筛选实例。
  * @method array getZones() 获取按照可用区筛选实例。
@@ -46,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置列表查询数量。
  * @method array getResourceTags() 获取按照标签筛选实例
  * @method void setResourceTags(array $ResourceTags) 设置按照标签筛选实例
+ * @method array getTaskStatus() 获取任务状态：1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中
+ * @method void setTaskStatus(array $TaskStatus) 设置任务状态：1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中
  */
 class DescribeInstancesRequest extends AbstractModel
 {
@@ -71,6 +75,7 @@ class DescribeInstancesRequest extends AbstractModel
 
     /**
      * @var array 按照引擎筛选实例。
+     * @deprecated
      */
     public $EngineNames;
 
@@ -80,12 +85,18 @@ class DescribeInstancesRequest extends AbstractModel
     public $EngineVersions;
 
     /**
+     * @var array 按照api版本筛选实例
+     */
+    public $ApiVersions;
+
+    /**
      * @var string 按照创建时间筛选实例。
      */
     public $CreateAt;
 
     /**
      * @var array 按照可用区筛选实例。
+     * @deprecated
      */
     public $Zones;
 
@@ -115,12 +126,18 @@ class DescribeInstancesRequest extends AbstractModel
     public $ResourceTags;
 
     /**
+     * @var array 任务状态：1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中
+     */
+    public $TaskStatus;
+
+    /**
      * @param array $InstanceIds 实例ID数组。
      * @param array $InstanceNames 实例名称，支持模糊搜索。
      * @param array $InstanceKeys 实例模糊搜索字段。
      * @param array $Status 根据状态获取实例， 为空则获取全部非隔离和非下线的实例。
      * @param array $EngineNames 按照引擎筛选实例。
      * @param array $EngineVersions 按照版本筛选实例。
+     * @param array $ApiVersions 按照api版本筛选实例
      * @param string $CreateAt 按照创建时间筛选实例。
      * @param array $Zones 按照可用区筛选实例。
      * @param string $OrderBy 排序字段。
@@ -128,6 +145,7 @@ class DescribeInstancesRequest extends AbstractModel
      * @param integer $Offset 查询开始位置。
      * @param integer $Limit 列表查询数量。
      * @param array $ResourceTags 按照标签筛选实例
+     * @param array $TaskStatus 任务状态：1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中
      */
     function __construct()
     {
@@ -166,6 +184,10 @@ class DescribeInstancesRequest extends AbstractModel
             $this->EngineVersions = $param["EngineVersions"];
         }
 
+        if (array_key_exists("ApiVersions",$param) and $param["ApiVersions"] !== null) {
+            $this->ApiVersions = $param["ApiVersions"];
+        }
+
         if (array_key_exists("CreateAt",$param) and $param["CreateAt"] !== null) {
             $this->CreateAt = $param["CreateAt"];
         }
@@ -197,6 +219,10 @@ class DescribeInstancesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ResourceTags, $obj);
             }
+        }
+
+        if (array_key_exists("TaskStatus",$param) and $param["TaskStatus"] !== null) {
+            $this->TaskStatus = $param["TaskStatus"];
         }
     }
 }

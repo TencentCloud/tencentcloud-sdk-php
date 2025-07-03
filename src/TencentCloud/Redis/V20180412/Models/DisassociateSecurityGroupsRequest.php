@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProduct() 获取数据库引擎名称，本接口取值：redis。
  * @method void setProduct(string $Product) 设置数据库引擎名称，本接口取值：redis。
- * @method string getSecurityGroupId() 获取安全组 ID。
- * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组 ID。
- * @method array getInstanceIds() 获取实例ID列表，一个或者多个实例 ID 组成的数组。
- * @method void setInstanceIds(array $InstanceIds) 设置实例ID列表，一个或者多个实例 ID 组成的数组。
+ * @method string getSecurityGroupId() 获取安全组 ID，请通过接口[DescribeInstanceSecurityGroup](https://cloud.tencent.com/document/product/239/34447)的返回参数InstanceSecurityGroupsDetail 的子参数**SecurityGroupId**获取。
+ * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组 ID，请通过接口[DescribeInstanceSecurityGroup](https://cloud.tencent.com/document/product/239/34447)的返回参数InstanceSecurityGroupsDetail 的子参数**SecurityGroupId**获取。
+ * @method array getInstanceIds() 获取实例ID列表，一个或者多个实例 ID 组成的数组。请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+ * @method void setInstanceIds(array $InstanceIds) 设置实例ID列表，一个或者多个实例 ID 组成的数组。请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
  */
 class DisassociateSecurityGroupsRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class DisassociateSecurityGroupsRequest extends AbstractModel
     public $Product;
 
     /**
-     * @var string 安全组 ID。
+     * @var string 安全组 ID，请通过接口[DescribeInstanceSecurityGroup](https://cloud.tencent.com/document/product/239/34447)的返回参数InstanceSecurityGroupsDetail 的子参数**SecurityGroupId**获取。
      */
     public $SecurityGroupId;
 
     /**
-     * @var array 实例ID列表，一个或者多个实例 ID 组成的数组。
+     * @var array 实例ID列表，一个或者多个实例 ID 组成的数组。请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public $InstanceIds;
 
     /**
      * @param string $Product 数据库引擎名称，本接口取值：redis。
-     * @param string $SecurityGroupId 安全组 ID。
-     * @param array $InstanceIds 实例ID列表，一个或者多个实例 ID 组成的数组。
+     * @param string $SecurityGroupId 安全组 ID，请通过接口[DescribeInstanceSecurityGroup](https://cloud.tencent.com/document/product/239/34447)的返回参数InstanceSecurityGroupsDetail 的子参数**SecurityGroupId**获取。
+     * @param array $InstanceIds 实例ID列表，一个或者多个实例 ID 组成的数组。请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     function __construct()
     {

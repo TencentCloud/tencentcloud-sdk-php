@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteBashEvents请求参数结构体
  *
- * @method array getIds() 获取ID数组，最大100条。
- * @method void setIds(array $Ids) 设置ID数组，最大100条。
+ * @method array getIds() 获取ID数组，最大1000条。
+ * @method void setIds(array $Ids) 设置ID数组，最大1000条。
+ * @method boolean getAll() 获取是否删除全部
+ * @method void setAll(boolean $All) 设置是否删除全部
  */
 class DeleteBashEventsRequest extends AbstractModel
 {
     /**
-     * @var array ID数组，最大100条。
+     * @var array ID数组，最大1000条。
      */
     public $Ids;
 
     /**
-     * @param array $Ids ID数组，最大100条。
+     * @var boolean 是否删除全部
+     */
+    public $All;
+
+    /**
+     * @param array $Ids ID数组，最大1000条。
+     * @param boolean $All 是否删除全部
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DeleteBashEventsRequest extends AbstractModel
         }
         if (array_key_exists("Ids",$param) and $param["Ids"] !== null) {
             $this->Ids = $param["Ids"];
+        }
+
+        if (array_key_exists("All",$param) and $param["All"] !== null) {
+            $this->All = $param["All"];
         }
     }
 }

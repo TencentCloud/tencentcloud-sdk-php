@@ -33,17 +33,11 @@ use TencentCloud\Common\AbstractModel;
 "failed" - 创建失败;
 "success" - 已生成;
  * @method integer getFileSize() 获取文件大小，单位为 KB。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileSize(integer $FileSize) 设置文件大小，单位为 KB。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDownloadUrl() 获取审计日志下载地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDownloadUrl(string $DownloadUrl) 设置审计日志下载地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getErrMsg() 获取错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrMsg(string $ErrMsg) 设置错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AuditLogFile extends AbstractModel
 {
@@ -67,19 +61,16 @@ class AuditLogFile extends AbstractModel
 
     /**
      * @var integer 文件大小，单位为 KB。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileSize;
 
     /**
      * @var string 审计日志下载地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DownloadUrl;
 
     /**
      * @var string 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrMsg;
 
@@ -91,11 +82,8 @@ class AuditLogFile extends AbstractModel
 "failed" - 创建失败;
 "success" - 已生成;
      * @param integer $FileSize 文件大小，单位为 KB。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DownloadUrl 审计日志下载地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrMsg 错误信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

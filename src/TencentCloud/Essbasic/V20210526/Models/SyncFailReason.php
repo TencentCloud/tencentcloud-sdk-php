@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getId() 获取企业员工标识(即OpenId)
  * @method void setId(string $Id) 设置企业员工标识(即OpenId)
  * @method string getMessage() 获取新增员工或者员工离职失败原因, 可能存证ID不符合规范、证件号码不合法等原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置新增员工或者员工离职失败原因, 可能存证ID不符合规范、证件号码不合法等原因
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SyncFailReason extends AbstractModel
 {
@@ -36,14 +34,12 @@ class SyncFailReason extends AbstractModel
 
     /**
      * @var string 新增员工或者员工离职失败原因, 可能存证ID不符合规范、证件号码不合法等原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
     /**
      * @param string $Id 企业员工标识(即OpenId)
      * @param string $Message 新增员工或者员工离职失败原因, 可能存证ID不符合规范、证件号码不合法等原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

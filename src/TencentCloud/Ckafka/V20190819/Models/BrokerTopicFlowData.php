@@ -20,46 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * broker维度topic 流量排行指标
  *
- * @method string getTopicName() 获取Topic 名称
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTopicName(string $TopicName) 设置Topic 名称
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTopicId() 获取Topic Id
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTopicId(string $TopicId) 设置Topic Id
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTopicName() 获取主题名
+ * @method void setTopicName(string $TopicName) 设置主题名
+ * @method string getTopicId() 获取主题Id
+ * @method void setTopicId(string $TopicId) 设置主题Id
  * @method string getTopicTraffic() 获取Topic 流量(MB)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicTraffic(string $TopicTraffic) 设置Topic 流量(MB)
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BrokerTopicFlowData extends AbstractModel
 {
     /**
-     * @var string Topic 名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 主题名
      */
     public $TopicName;
 
     /**
-     * @var string Topic Id
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 主题Id
      */
     public $TopicId;
 
     /**
      * @var string Topic 流量(MB)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicTraffic;
 
     /**
-     * @param string $TopicName Topic 名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TopicId Topic Id
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TopicName 主题名
+     * @param string $TopicId 主题Id
      * @param string $TopicTraffic Topic 流量(MB)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFieldName(string $FieldName) 设置配置字段，可取值cgi， ua， cookie， referer， accept,  srcip
  * @method string getValue() 获取配置取值
  * @method void setValue(string $Value) 设置配置取值
- * @method string getValueOperator() 获取配置项值比对方式，可取值equal ，not_equal， include
- * @method void setValueOperator(string $ValueOperator) 设置配置项值比对方式，可取值equal ，not_equal， include
+ * @method string getValueOperator() 获取配置项值比对方式，可取值equal：相等，not_equal：不相等， include：包含
+ * @method void setValueOperator(string $ValueOperator) 设置配置项值比对方式，可取值equal：相等，not_equal：不相等， include：包含
  */
 class CCPrecisionPlyRecord extends AbstractModel
 {
@@ -47,7 +47,7 @@ class CCPrecisionPlyRecord extends AbstractModel
     public $Value;
 
     /**
-     * @var string 配置项值比对方式，可取值equal ，not_equal， include
+     * @var string 配置项值比对方式，可取值equal：相等，not_equal：不相等， include：包含
      */
     public $ValueOperator;
 
@@ -55,7 +55,7 @@ class CCPrecisionPlyRecord extends AbstractModel
      * @param string $FieldType 配置项类型，当前仅支持value
      * @param string $FieldName 配置字段，可取值cgi， ua， cookie， referer， accept,  srcip
      * @param string $Value 配置取值
-     * @param string $ValueOperator 配置项值比对方式，可取值equal ，not_equal， include
+     * @param string $ValueOperator 配置项值比对方式，可取值equal：相等，not_equal：不相等， include：包含
      */
     function __construct()
     {

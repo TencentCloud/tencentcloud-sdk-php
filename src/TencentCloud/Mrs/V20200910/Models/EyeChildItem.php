@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 眼科子结构
  *
  * @method array getSph() 获取球镜
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSph(array $Sph) 设置球镜
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCyl() 获取柱镜
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCyl(array $Cyl) 设置柱镜
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAx() 获取轴位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAx(array $Ax) 设置轴位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BaseItem2 getSe() 获取等效球镜
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSe(BaseItem2 $Se) 设置等效球镜
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class EyeChildItem extends AbstractModel
 {
     /**
      * @var array 球镜
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Sph;
 
     /**
      * @var array 柱镜
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Cyl;
 
     /**
      * @var array 轴位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ax;
 
     /**
      * @var BaseItem2 等效球镜
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Se;
 
     /**
      * @param array $Sph 球镜
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Cyl 柱镜
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Ax 轴位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BaseItem2 $Se 等效球镜
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

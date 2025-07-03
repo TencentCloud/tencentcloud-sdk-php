@@ -114,6 +114,18 @@ UPDATING 更新中
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAvailableReplicasCount(integer $AvailableReplicasCount) 设置服务组下期望的pod数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSubUin() 获取服务组的subuin
+ * @method void setSubUin(string $SubUin) 设置服务组的subuin
+ * @method integer getAppId() 获取服务组的app_id
+ * @method void setAppId(integer $AppId) 设置服务组的app_id
+ * @method boolean getAuthorizationEnable() 获取是否开启鉴权
+ * @method void setAuthorizationEnable(boolean $AuthorizationEnable) 设置是否开启鉴权
+ * @method array getAuthTokens() 获取限流鉴权 token 列表
+ * @method void setAuthTokens(array $AuthTokens) 设置限流鉴权 token 列表
+ * @method string getMonitorSource() 获取用于监控的创建来源字段
+ * @method void setMonitorSource(string $MonitorSource) 设置用于监控的创建来源字段
+ * @method string getSubUinName() 获取子用户的 nickname
+ * @method void setSubUinName(string $SubUinName) 设置子用户的 nickname
  */
 class ServiceGroup extends AbstractModel
 {
@@ -237,6 +249,36 @@ UPDATING 更新中
     public $AvailableReplicasCount;
 
     /**
+     * @var string 服务组的subuin
+     */
+    public $SubUin;
+
+    /**
+     * @var integer 服务组的app_id
+     */
+    public $AppId;
+
+    /**
+     * @var boolean 是否开启鉴权
+     */
+    public $AuthorizationEnable;
+
+    /**
+     * @var array 限流鉴权 token 列表
+     */
+    public $AuthTokens;
+
+    /**
+     * @var string 用于监控的创建来源字段
+     */
+    public $MonitorSource;
+
+    /**
+     * @var string 子用户的 nickname
+     */
+    public $SubUinName;
+
+    /**
      * @param string $ServiceGroupId 服务组id
      * @param string $ServiceGroupName 服务组名
      * @param string $CreatedBy 创建者
@@ -284,6 +326,12 @@ UPDATING 更新中
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AvailableReplicasCount 服务组下期望的pod数
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SubUin 服务组的subuin
+     * @param integer $AppId 服务组的app_id
+     * @param boolean $AuthorizationEnable 是否开启鉴权
+     * @param array $AuthTokens 限流鉴权 token 列表
+     * @param string $MonitorSource 用于监控的创建来源字段
+     * @param string $SubUinName 子用户的 nickname
      */
     function __construct()
     {
@@ -378,6 +426,35 @@ UPDATING 更新中
 
         if (array_key_exists("AvailableReplicasCount",$param) and $param["AvailableReplicasCount"] !== null) {
             $this->AvailableReplicasCount = $param["AvailableReplicasCount"];
+        }
+
+        if (array_key_exists("SubUin",$param) and $param["SubUin"] !== null) {
+            $this->SubUin = $param["SubUin"];
+        }
+
+        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
+            $this->AppId = $param["AppId"];
+        }
+
+        if (array_key_exists("AuthorizationEnable",$param) and $param["AuthorizationEnable"] !== null) {
+            $this->AuthorizationEnable = $param["AuthorizationEnable"];
+        }
+
+        if (array_key_exists("AuthTokens",$param) and $param["AuthTokens"] !== null) {
+            $this->AuthTokens = [];
+            foreach ($param["AuthTokens"] as $key => $value){
+                $obj = new AuthToken();
+                $obj->deserialize($value);
+                array_push($this->AuthTokens, $obj);
+            }
+        }
+
+        if (array_key_exists("MonitorSource",$param) and $param["MonitorSource"] !== null) {
+            $this->MonitorSource = $param["MonitorSource"];
+        }
+
+        if (array_key_exists("SubUinName",$param) and $param["SubUinName"] !== null) {
+            $this->SubUinName = $param["SubUinName"];
         }
     }
 }

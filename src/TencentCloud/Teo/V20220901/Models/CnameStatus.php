@@ -26,14 +26,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCname(string $Cname) 设置CNAME 地址。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取Cname状态信息，取值有：
+ * @method string getStatus() 获取CNAME 状态信息，取值有：
 <li>active：生效；</li>
-<li>moved：不生效。</li>
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(string $Status) 设置Cname状态信息，取值有：
+<li>moved：不生效；</li>
+ * @method void setStatus(string $Status) 设置CNAME 状态信息，取值有：
 <li>active：生效；</li>
-<li>moved：不生效。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+<li>moved：不生效；</li>
  */
 class CnameStatus extends AbstractModel
 {
@@ -49,10 +47,9 @@ class CnameStatus extends AbstractModel
     public $Cname;
 
     /**
-     * @var string Cname状态信息，取值有：
+     * @var string CNAME 状态信息，取值有：
 <li>active：生效；</li>
-<li>moved：不生效。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+<li>moved：不生效；</li>
      */
     public $Status;
 
@@ -60,10 +57,9 @@ class CnameStatus extends AbstractModel
      * @param string $RecordName 记录名称。
      * @param string $Cname CNAME 地址。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status Cname状态信息，取值有：
+     * @param string $Status CNAME 状态信息，取值有：
 <li>active：生效；</li>
-<li>moved：不生效。</li>
-注意：此字段可能返回 null，表示取不到有效值。
+<li>moved：不生效；</li>
      */
     function __construct()
     {

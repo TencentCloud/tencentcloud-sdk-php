@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getAssetName() 获取资产的名称。
  * @method void setAssetName(string $AssetName) 设置资产的名称。
  * @method string getImageTag() 获取当资产为镜像时，这个字段为镜像Tag。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageTag(string $ImageTag) 设置当资产为镜像时，这个字段为镜像Tag。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHostIP() 获取资产所在的主机IP。
  * @method void setHostIP(string $HostIP) 设置资产所在的主机IP。
  * @method string getNodeName() 获取资产所属的节点的名称
@@ -53,29 +51,25 @@ CHECK_FINISHED, 检测完成
 
 CHECK_FAILED, 检测失败
  * @method integer getPassedPolicyItemCount() 获取此类资产通过的检测项的数目。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPassedPolicyItemCount(integer $PassedPolicyItemCount) 设置此类资产通过的检测项的数目。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFailedPolicyItemCount() 获取此类资产未通过的检测的数目。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailedPolicyItemCount(integer $FailedPolicyItemCount) 设置此类资产未通过的检测的数目。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLastCheckTime() 获取上次检测的时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastCheckTime(string $LastCheckTime) 设置上次检测的时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCheckResult() 获取检测结果：
 RESULT_FAILED: 未通过。
 RESULT_PASSED: 通过。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCheckResult(string $CheckResult) 设置检测结果：
 RESULT_FAILED: 未通过。
 RESULT_PASSED: 通过。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取主机节点的实例id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置主机节点的实例id
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method ImageRegistryInfo getImageRegistryInfo() 获取镜像仓库信息
+ * @method void setImageRegistryInfo(ImageRegistryInfo $ImageRegistryInfo) 设置镜像仓库信息
+ * @method string getClusterID() 获取集群id
+ * @method void setClusterID(string $ClusterID) 设置集群id
+ * @method string getClusterName() 获取集群名称
+ * @method void setClusterName(string $ClusterName) 设置集群名称
  */
 class ComplianceAssetInfo extends AbstractModel
 {
@@ -96,7 +90,6 @@ class ComplianceAssetInfo extends AbstractModel
 
     /**
      * @var string 当资产为镜像时，这个字段为镜像Tag。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageTag;
 
@@ -125,19 +118,16 @@ CHECK_FAILED, 检测失败
 
     /**
      * @var integer 此类资产通过的检测项的数目。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PassedPolicyItemCount;
 
     /**
      * @var integer 此类资产未通过的检测的数目。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailedPolicyItemCount;
 
     /**
      * @var string 上次检测的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastCheckTime;
 
@@ -145,22 +135,34 @@ CHECK_FAILED, 检测失败
      * @var string 检测结果：
 RESULT_FAILED: 未通过。
 RESULT_PASSED: 通过。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CheckResult;
 
     /**
      * @var string 主机节点的实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
+
+    /**
+     * @var ImageRegistryInfo 镜像仓库信息
+     */
+    public $ImageRegistryInfo;
+
+    /**
+     * @var string 集群id
+     */
+    public $ClusterID;
+
+    /**
+     * @var string 集群名称
+     */
+    public $ClusterName;
 
     /**
      * @param integer $CustomerAssetId 客户资产的ID。
      * @param string $AssetType 资产类别。
      * @param string $AssetName 资产的名称。
      * @param string $ImageTag 当资产为镜像时，这个字段为镜像Tag。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HostIP 资产所在的主机IP。
      * @param string $NodeName 资产所属的节点的名称
      * @param string $CheckStatus 检测状态
@@ -173,17 +175,15 @@ CHECK_FINISHED, 检测完成
 
 CHECK_FAILED, 检测失败
      * @param integer $PassedPolicyItemCount 此类资产通过的检测项的数目。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FailedPolicyItemCount 此类资产未通过的检测的数目。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastCheckTime 上次检测的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CheckResult 检测结果：
 RESULT_FAILED: 未通过。
 RESULT_PASSED: 通过。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 主机节点的实例id
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param ImageRegistryInfo $ImageRegistryInfo 镜像仓库信息
+     * @param string $ClusterID 集群id
+     * @param string $ClusterName 集群名称
      */
     function __construct()
     {
@@ -244,6 +244,19 @@ RESULT_PASSED: 通过。
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("ImageRegistryInfo",$param) and $param["ImageRegistryInfo"] !== null) {
+            $this->ImageRegistryInfo = new ImageRegistryInfo();
+            $this->ImageRegistryInfo->deserialize($param["ImageRegistryInfo"]);
+        }
+
+        if (array_key_exists("ClusterID",$param) and $param["ClusterID"] !== null) {
+            $this->ClusterID = $param["ClusterID"];
+        }
+
+        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
+            $this->ClusterName = $param["ClusterName"];
         }
     }
 }

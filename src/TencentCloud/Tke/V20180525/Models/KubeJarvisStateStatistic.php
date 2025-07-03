@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 集群巡检统计结果
  *
  * @method string getHealthyLevel() 获取诊断结果的健康水平
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHealthyLevel(string $HealthyLevel) 设置诊断结果的健康水平
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCount() 获取诊断结果的统计
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCount(integer $Count) 设置诊断结果的统计
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class KubeJarvisStateStatistic extends AbstractModel
 {
     /**
      * @var string 诊断结果的健康水平
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HealthyLevel;
 
     /**
      * @var integer 诊断结果的统计
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Count;
 
     /**
      * @param string $HealthyLevel 诊断结果的健康水平
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Count 诊断结果的统计
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

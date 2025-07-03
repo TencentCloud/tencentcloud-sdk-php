@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * Proxy节点信息。
  *
  * @method string getNodeId() 获取节点 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodeId(string $NodeId) 设置节点 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getZoneId() 获取可用区 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneId(integer $ZoneId) 设置可用区 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProxyNodes extends AbstractModel
 {
     /**
      * @var string 节点 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeId;
 
     /**
      * @var integer 可用区 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneId;
 
     /**
      * @param string $NodeId 节点 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ZoneId 可用区 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,81 +21,52 @@ use TencentCloud\Common\AbstractModel;
  * 灰度规则
  *
  * @method integer getPriority() 获取优先级，值范围为 0 到 100；值越大，优先级越高；不同规则间优先级不可重复
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPriority(integer $Priority) 设置优先级，值范围为 0 到 100；值越大，优先级越高；不同规则间优先级不可重复
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getEnabled() 获取是否启用规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnabled(boolean $Enabled) 设置是否启用规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getConditionList() 获取参数匹配条件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConditionList(array $ConditionList) 设置参数匹配条件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getBalancedServiceList() 获取服务的流量百分比配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBalancedServiceList(array $BalancedServiceList) 设置服务的流量百分比配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getServiceId() 获取归属服务 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceId(string $ServiceId) 设置归属服务 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getServiceName() 获取归属服务名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceName(string $ServiceName) 设置归属服务名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRuleType() 获取灰度规则类别
 Standard｜Lane
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleType(string $RuleType) 设置灰度规则类别
 Standard｜Lane
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMatchType() 获取全链路灰度策略多个条件之间的匹配方式，与AND，或OR
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMatchType(string $MatchType) 设置全链路灰度策略多个条件之间的匹配方式，与AND，或OR
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupId() 获取泳道组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupId(string $GroupId) 设置泳道组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupName() 获取泳道组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupName(string $GroupName) 设置泳道组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLaneId() 获取泳道ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLaneId(string $LaneId) 设置泳道ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLaneName() 获取泳道名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLaneName(string $LaneName) 设置泳道名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMatchMode() 获取泳道匹配规则：严格STRICT｜宽松PERMISSIVE
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMatchMode(string $MatchMode) 设置泳道匹配规则：严格STRICT｜宽松PERMISSIVE
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLaneTag() 获取泳道标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLaneTag(string $LaneTag) 设置泳道标签
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudNativeAPIGatewayCanaryRule extends AbstractModel
 {
     /**
      * @var integer 优先级，值范围为 0 到 100；值越大，优先级越高；不同规则间优先级不可重复
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Priority;
 
     /**
      * @var boolean 是否启用规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Enabled;
 
     /**
      * @var array 参数匹配条件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConditionList;
 
@@ -107,95 +78,72 @@ class CloudNativeAPIGatewayCanaryRule extends AbstractModel
 
     /**
      * @var string 归属服务 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceId;
 
     /**
      * @var string 归属服务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceName;
 
     /**
      * @var string 灰度规则类别
 Standard｜Lane
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleType;
 
     /**
      * @var string 全链路灰度策略多个条件之间的匹配方式，与AND，或OR
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MatchType;
 
     /**
      * @var string 泳道组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupId;
 
     /**
      * @var string 泳道组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupName;
 
     /**
      * @var string 泳道ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LaneId;
 
     /**
      * @var string 泳道名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LaneName;
 
     /**
      * @var string 泳道匹配规则：严格STRICT｜宽松PERMISSIVE
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MatchMode;
 
     /**
      * @var string 泳道标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LaneTag;
 
     /**
      * @param integer $Priority 优先级，值范围为 0 到 100；值越大，优先级越高；不同规则间优先级不可重复
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Enabled 是否启用规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ConditionList 参数匹配条件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $BalancedServiceList 服务的流量百分比配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceId 归属服务 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceName 归属服务名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RuleType 灰度规则类别
 Standard｜Lane
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MatchType 全链路灰度策略多个条件之间的匹配方式，与AND，或OR
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupId 泳道组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 泳道组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LaneId 泳道ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LaneName 泳道名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MatchMode 泳道匹配规则：严格STRICT｜宽松PERMISSIVE
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LaneTag 泳道标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

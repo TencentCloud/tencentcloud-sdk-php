@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 异动事件走势元素
  *
  * @method integer getKey() 获取类型值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKey(integer $Key) 设置类型值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCount() 获取类型总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCount(integer $Count) 设置类型总数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AbnormalEventsInfo extends AbstractModel
 {
     /**
      * @var integer 类型值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Key;
 
     /**
      * @var integer 类型总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Count;
 
     /**
      * @param integer $Key 类型值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Count 类型总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -83,17 +83,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getQps() 获取最大 Qps 值
  * @method void setQps(integer $Qps) 设置最大 Qps 值
  * @method string getPaymode() 获取付费模式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPaymode(string $Paymode) 设置付费模式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLocker() 获取实例处于异步任务时的异步任务流程ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocker(integer $Locker) 设置实例处于异步任务时的异步任务流程ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatusDesc() 获取实例目前运行状态描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatusDesc(string $StatusDesc) 设置实例目前运行状态描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWanStatus() 获取外网状态，0-未开通；1-已开通；2-关闭；3-开通中
  * @method void setWanStatus(integer $WanStatus) 设置外网状态，0-未开通；1-已开通；2-关闭；3-开通中
  * @method integer getIsAuditSupported() 获取该实例是否支持审计。1-支持；0-不支持
@@ -105,57 +99,31 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getCpu() 获取实例CPU核数
  * @method void setCpu(integer $Cpu) 设置实例CPU核数
  * @method integer getIpv6Flag() 获取实例IPv6标志
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpv6Flag(integer $Ipv6Flag) 设置实例IPv6标志
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVipv6() 获取内网IPv6
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVipv6(string $Vipv6) 设置内网IPv6
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWanVipv6() 获取外网IPv6
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWanVipv6(string $WanVipv6) 设置外网IPv6
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWanPortIpv6() 获取外网IPv6端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWanPortIpv6(integer $WanPortIpv6) 设置外网IPv6端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWanStatusIpv6() 获取外网IPv6状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWanStatusIpv6(integer $WanStatusIpv6) 设置外网IPv6状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDbEngine() 获取数据库引擎
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDbEngine(string $DbEngine) 设置数据库引擎
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDbVersion() 获取数据库版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDbVersion(string $DbVersion) 设置数据库版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDcnFlag() 获取DCN标志，0-无，1-主实例，2-灾备实例
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDcnFlag(integer $DcnFlag) 设置DCN标志，0-无，1-主实例，2-灾备实例
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDcnStatus() 获取DCN状态，0-无，1-创建中，2-同步中，3-已断开
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDcnStatus(integer $DcnStatus) 设置DCN状态，0-无，1-创建中，2-同步中，3-已断开
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDcnDstNum() 获取DCN灾备实例数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDcnDstNum(integer $DcnDstNum) 设置DCN灾备实例数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getInstanceType() 获取1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceType(integer $InstanceType) 设置1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getResourceTags() 获取实例标签信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceTags(array $ResourceTags) 设置实例标签信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDbVersionId() 获取数据库版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDbVersionId(string $DbVersionId) 设置数据库版本
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DBInstance extends AbstractModel
 {
@@ -316,19 +284,16 @@ class DBInstance extends AbstractModel
 
     /**
      * @var string 付费模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Paymode;
 
     /**
      * @var integer 实例处于异步任务时的异步任务流程ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Locker;
 
     /**
      * @var string 实例目前运行状态描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StatusDesc;
 
@@ -359,79 +324,66 @@ class DBInstance extends AbstractModel
 
     /**
      * @var integer 实例IPv6标志
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ipv6Flag;
 
     /**
      * @var string 内网IPv6
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Vipv6;
 
     /**
      * @var string 外网IPv6
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WanVipv6;
 
     /**
      * @var integer 外网IPv6端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WanPortIpv6;
 
     /**
      * @var integer 外网IPv6状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WanStatusIpv6;
 
     /**
      * @var string 数据库引擎
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DbEngine;
 
     /**
      * @var string 数据库版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DbVersion;
 
     /**
      * @var integer DCN标志，0-无，1-主实例，2-灾备实例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DcnFlag;
 
     /**
      * @var integer DCN状态，0-无，1-创建中，2-同步中，3-已断开
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DcnStatus;
 
     /**
      * @var integer DCN灾备实例数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DcnDstNum;
 
     /**
      * @var integer 1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceType;
 
     /**
      * @var array 实例标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceTags;
 
     /**
      * @var string 数据库版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DbVersionId;
 
@@ -468,42 +420,26 @@ class DBInstance extends AbstractModel
      * @param integer $Pid 产品类型 ID
      * @param integer $Qps 最大 Qps 值
      * @param string $Paymode 付费模式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Locker 实例处于异步任务时的异步任务流程ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StatusDesc 实例目前运行状态描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $WanStatus 外网状态，0-未开通；1-已开通；2-关闭；3-开通中
      * @param integer $IsAuditSupported 该实例是否支持审计。1-支持；0-不支持
      * @param string $Machine 机器型号
      * @param integer $IsEncryptSupported 是否支持数据加密。1-支持；0-不支持
      * @param integer $Cpu 实例CPU核数
      * @param integer $Ipv6Flag 实例IPv6标志
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Vipv6 内网IPv6
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WanVipv6 外网IPv6
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $WanPortIpv6 外网IPv6端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $WanStatusIpv6 外网IPv6状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DbEngine 数据库引擎
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DbVersion 数据库版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DcnFlag DCN标志，0-无，1-主实例，2-灾备实例
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DcnStatus DCN状态，0-无，1-创建中，2-同步中，3-已断开
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DcnDstNum DCN灾备实例数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InstanceType 1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ResourceTags 实例标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DbVersionId 数据库版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

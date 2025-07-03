@@ -37,13 +37,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getCreateTime() 获取创建时间
  * @method void setCreateTime(integer $CreateTime) 设置创建时间
  * @method integer getGroupStatus() 获取分组状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupStatus(integer $GroupStatus) 设置分组状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getError() 获取设备不存在时产生的错误
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setError(string $Error) 设置设备不存在时产生的错误
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class GroupInfo extends AbstractModel
 {
@@ -89,13 +85,11 @@ class GroupInfo extends AbstractModel
 
     /**
      * @var integer 分组状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupStatus;
 
     /**
      * @var string 设备不存在时产生的错误
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Error;
 
@@ -109,9 +103,7 @@ class GroupInfo extends AbstractModel
      * @param string $ExtraInformation 扩展信息
      * @param integer $CreateTime 创建时间
      * @param integer $GroupStatus 分组状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Error 设备不存在时产生的错误
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

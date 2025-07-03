@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 报告类型
  *
  * @method string getName() 获取项目名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置项目名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getIndex() 获取索引
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIndex(array $Index) 设置索引
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSrc() 获取原文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSrc(string $Src) 设置原文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取报告类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置报告类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCoords() 获取原文对应坐标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCoords(array $Coords) 设置原文对应坐标
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Report extends AbstractModel
 {
     /**
      * @var string 项目名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var array 索引
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Index;
 
     /**
      * @var string 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Src;
 
     /**
      * @var string 报告类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @var array 原文对应坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Coords;
 
     /**
      * @param string $Name 项目名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Index 索引
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 报告类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Coords 原文对应坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

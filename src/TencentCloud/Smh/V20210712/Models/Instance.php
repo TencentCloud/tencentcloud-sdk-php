@@ -52,6 +52,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSuperAdminAccount(string $SuperAdminAccount) 设置超级管理员账号，如果未选择查询实例绑定的超级管理员账号或当前实例未绑定超级管理员账号，则该属性为 null。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBucket() 获取自选桶模式下，展示存储桶使用
+ * @method void setBucket(string $Bucket) 设置自选桶模式下，展示存储桶使用
+ * @method string getLogBucket() 获取自选桶模式下，展示日志桶使用
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLogBucket(string $LogBucket) 设置自选桶模式下，展示日志桶使用
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Instance extends AbstractModel
 {
@@ -112,6 +118,17 @@ class Instance extends AbstractModel
     public $SuperAdminAccount;
 
     /**
+     * @var string 自选桶模式下，展示存储桶使用
+     */
+    public $Bucket;
+
+    /**
+     * @var string 自选桶模式下，展示日志桶使用
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LogBucket;
+
+    /**
      * @param string $InstanceId 实例 ID
      * @param string $Domain 专属域名。如果实例无专属域名，则该属性为 null。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -127,6 +144,9 @@ class Instance extends AbstractModel
      * @param boolean $Isolated 是否过期隔离
      * @param integer $AutoRenew 续费标识。0：手动续费；1：自动续费；2：到期不续。
      * @param string $SuperAdminAccount 超级管理员账号，如果未选择查询实例绑定的超级管理员账号或当前实例未绑定超级管理员账号，则该属性为 null。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Bucket 自选桶模式下，展示存储桶使用
+     * @param string $LogBucket 自选桶模式下，展示日志桶使用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -180,6 +200,14 @@ class Instance extends AbstractModel
 
         if (array_key_exists("SuperAdminAccount",$param) and $param["SuperAdminAccount"] !== null) {
             $this->SuperAdminAccount = $param["SuperAdminAccount"];
+        }
+
+        if (array_key_exists("Bucket",$param) and $param["Bucket"] !== null) {
+            $this->Bucket = $param["Bucket"];
+        }
+
+        if (array_key_exists("LogBucket",$param) and $param["LogBucket"] !== null) {
+            $this->LogBucket = $param["LogBucket"];
         }
     }
 }

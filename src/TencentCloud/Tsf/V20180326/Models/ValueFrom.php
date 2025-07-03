@@ -21,19 +21,20 @@ use TencentCloud\Common\AbstractModel;
  * k8s env 的 ValueFrom
  *
  * @method FieldRef getFieldRef() 获取k8s env 的 FieldRef
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFieldRef(FieldRef $FieldRef) 设置k8s env 的 FieldRef
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ResourceFieldRef getResourceFieldRef() 获取k8s env 的 ResourceFieldRef
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceFieldRef(ResourceFieldRef $ResourceFieldRef) 设置k8s env 的 ResourceFieldRef
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method CommonRef getConfigMapKeyRef() 获取k8s env的configMapKeyRef
+ * @method void setConfigMapKeyRef(CommonRef $ConfigMapKeyRef) 设置k8s env的configMapKeyRef
+ * @method CommonRef getSecretKeyRef() 获取k8s env 的 secretKeyRef
+ * @method void setSecretKeyRef(CommonRef $SecretKeyRef) 设置k8s env 的 secretKeyRef
  */
 class ValueFrom extends AbstractModel
 {
     /**
      * @var FieldRef k8s env 的 FieldRef
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FieldRef;
 
@@ -44,10 +45,21 @@ class ValueFrom extends AbstractModel
     public $ResourceFieldRef;
 
     /**
+     * @var CommonRef k8s env的configMapKeyRef
+     */
+    public $ConfigMapKeyRef;
+
+    /**
+     * @var CommonRef k8s env 的 secretKeyRef
+     */
+    public $SecretKeyRef;
+
+    /**
      * @param FieldRef $FieldRef k8s env 的 FieldRef
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ResourceFieldRef $ResourceFieldRef k8s env 的 ResourceFieldRef
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param CommonRef $ConfigMapKeyRef k8s env的configMapKeyRef
+     * @param CommonRef $SecretKeyRef k8s env 的 secretKeyRef
      */
     function __construct()
     {
@@ -70,6 +82,16 @@ class ValueFrom extends AbstractModel
         if (array_key_exists("ResourceFieldRef",$param) and $param["ResourceFieldRef"] !== null) {
             $this->ResourceFieldRef = new ResourceFieldRef();
             $this->ResourceFieldRef->deserialize($param["ResourceFieldRef"]);
+        }
+
+        if (array_key_exists("ConfigMapKeyRef",$param) and $param["ConfigMapKeyRef"] !== null) {
+            $this->ConfigMapKeyRef = new CommonRef();
+            $this->ConfigMapKeyRef->deserialize($param["ConfigMapKeyRef"]);
+        }
+
+        if (array_key_exists("SecretKeyRef",$param) and $param["SecretKeyRef"] !== null) {
+            $this->SecretKeyRef = new CommonRef();
+            $this->SecretKeyRef->deserialize($param["SecretKeyRef"]);
         }
     }
 }

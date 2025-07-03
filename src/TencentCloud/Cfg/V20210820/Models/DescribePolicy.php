@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTaskPolicyRule() 获取策略规则
  * @method void setTaskPolicyRule(string $TaskPolicyRule) 设置策略规则
  * @method integer getTaskPolicyDealType() 获取护栏策略生效处理策略 1:顺序执行，2:暂停
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskPolicyDealType(integer $TaskPolicyDealType) 设置护栏策略生效处理策略 1:顺序执行，2:暂停
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribePolicy extends AbstractModel
 {
@@ -50,7 +48,6 @@ class DescribePolicy extends AbstractModel
 
     /**
      * @var integer 护栏策略生效处理策略 1:顺序执行，2:暂停
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskPolicyDealType;
 
@@ -59,7 +56,6 @@ class DescribePolicy extends AbstractModel
      * @param string $TaskPolicyStatus 保护策略状态
      * @param string $TaskPolicyRule 策略规则
      * @param integer $TaskPolicyDealType 护栏策略生效处理策略 1:顺序执行，2:暂停
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

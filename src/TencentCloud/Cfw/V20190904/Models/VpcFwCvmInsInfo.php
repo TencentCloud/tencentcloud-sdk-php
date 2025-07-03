@@ -21,117 +21,81 @@ use TencentCloud\Common\AbstractModel;
  * VPC防火墙实例的CVM信息
  *
  * @method string getFwInsId() 获取VPC防火墙实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFwInsId(string $FwInsId) 设置VPC防火墙实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegion() 获取CVM所在地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置CVM所在地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegionZh() 获取CVM所在地域中文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionZh(string $RegionZh) 设置CVM所在地域中文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegionDetail() 获取CVM所在地域详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionDetail(string $RegionDetail) 设置CVM所在地域详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getZoneZh() 获取主机所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneZh(string $ZoneZh) 设置主机所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getZoneZhBack() 获取备机所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneZhBack(string $ZoneZhBack) 设置备机所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBandWidth() 获取防火墙CVM带宽值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBandWidth(integer $BandWidth) 设置防火墙CVM带宽值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getZone() 获取实例主机所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZone(string $Zone) 设置实例主机所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getZoneBak() 获取实例备机所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneBak(string $ZoneBak) 设置实例备机所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VpcFwCvmInsInfo extends AbstractModel
 {
     /**
      * @var string VPC防火墙实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FwInsId;
 
     /**
      * @var string CVM所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
      * @var string CVM所在地域中文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionZh;
 
     /**
      * @var string CVM所在地域详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionDetail;
 
     /**
      * @var string 主机所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneZh;
 
     /**
      * @var string 备机所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneZhBack;
 
     /**
      * @var integer 防火墙CVM带宽值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BandWidth;
 
     /**
      * @var string 实例主机所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Zone;
 
     /**
      * @var string 实例备机所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneBak;
 
     /**
      * @param string $FwInsId VPC防火墙实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region CVM所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegionZh CVM所在地域中文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegionDetail CVM所在地域详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ZoneZh 主机所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ZoneZhBack 备机所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BandWidth 防火墙CVM带宽值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Zone 实例主机所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ZoneBak 实例备机所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

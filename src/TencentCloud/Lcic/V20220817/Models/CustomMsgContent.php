@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 自定义消息
  *
  * @method string getData() 获取自定义消息数据。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(string $Data) 设置自定义消息数据。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDesc() 获取自定义消息描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDesc(string $Desc) 设置自定义消息描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExt() 获取扩展字段。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExt(string $Ext) 设置扩展字段。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CustomMsgContent extends AbstractModel
 {
     /**
      * @var string 自定义消息数据。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
 
     /**
      * @var string 自定义消息描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Desc;
 
     /**
      * @var string 扩展字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ext;
 
     /**
      * @param string $Data 自定义消息数据。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Desc 自定义消息描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Ext 扩展字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

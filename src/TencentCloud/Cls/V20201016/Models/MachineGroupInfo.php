@@ -29,29 +29,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method array getTags() 获取机器组绑定的标签列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置机器组绑定的标签列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAutoUpdate() 获取是否开启机器组自动更新
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoUpdate(string $AutoUpdate) 设置是否开启机器组自动更新
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateStartTime() 获取升级开始时间，建议业务低峰期升级LogListener
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateStartTime(string $UpdateStartTime) 设置升级开始时间，建议业务低峰期升级LogListener
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateEndTime() 获取升级结束时间，建议业务低峰期升级LogListener
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateEndTime(string $UpdateEndTime) 设置升级结束时间，建议业务低峰期升级LogListener
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getServiceLogging() 获取是否开启服务日志，用于记录因Loglistener 服务自身产生的log，开启后，会创建内部日志集cls_service_logging和日志主题loglistener_status,loglistener_alarm,loglistener_business，不产生计费
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceLogging(boolean $ServiceLogging) 设置是否开启服务日志，用于记录因Loglistener 服务自身产生的log，开启后，会创建内部日志集cls_service_logging和日志主题loglistener_status,loglistener_alarm,loglistener_business，不产生计费
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDelayCleanupTime() 获取机器组中机器离线定期清理时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDelayCleanupTime(integer $DelayCleanupTime) 设置机器组中机器离线定期清理时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getMetaTags() 获取机器组元数据信息列表
  * @method void setMetaTags(array $MetaTags) 设置机器组元数据信息列表
  * @method integer getOSType() 获取操作系统类型，0: Linux，1: windows
@@ -81,37 +69,31 @@ class MachineGroupInfo extends AbstractModel
 
     /**
      * @var array 机器组绑定的标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
      * @var string 是否开启机器组自动更新
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoUpdate;
 
     /**
      * @var string 升级开始时间，建议业务低峰期升级LogListener
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateStartTime;
 
     /**
      * @var string 升级结束时间，建议业务低峰期升级LogListener
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateEndTime;
 
     /**
      * @var boolean 是否开启服务日志，用于记录因Loglistener 服务自身产生的log，开启后，会创建内部日志集cls_service_logging和日志主题loglistener_status,loglistener_alarm,loglistener_business，不产生计费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceLogging;
 
     /**
      * @var integer 机器组中机器离线定期清理时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DelayCleanupTime;
 
@@ -131,17 +113,11 @@ class MachineGroupInfo extends AbstractModel
      * @param MachineGroupTypeInfo $MachineGroupType 机器组类型
      * @param string $CreateTime 创建时间
      * @param array $Tags 机器组绑定的标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AutoUpdate 是否开启机器组自动更新
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateStartTime 升级开始时间，建议业务低峰期升级LogListener
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateEndTime 升级结束时间，建议业务低峰期升级LogListener
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $ServiceLogging 是否开启服务日志，用于记录因Loglistener 服务自身产生的log，开启后，会创建内部日志集cls_service_logging和日志主题loglistener_status,loglistener_alarm,loglistener_business，不产生计费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DelayCleanupTime 机器组中机器离线定期清理时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $MetaTags 机器组元数据信息列表
      * @param integer $OSType 操作系统类型，0: Linux，1: windows
      */

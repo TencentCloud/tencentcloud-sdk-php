@@ -32,13 +32,21 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatusStr(string $StatusStr) 设置任务状态，waiting：任务等待，doing：任务执行中，success：任务成功，failed：任务失败。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getVoiceType() 获取音色id。
+ * @method integer getVoiceType() 获取音色id。（若为一句话复刻时，该值为固定值“200000000”）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVoiceType(integer $VoiceType) 设置音色id。
+ * @method void setVoiceType(integer $VoiceType) 设置音色id。（若为一句话复刻时，该值为固定值“200000000”）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getErrorMsg() 获取失败原因说明。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorMsg(string $ErrorMsg) 设置失败原因说明。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getExpireTime() 获取任务过期时间。（当复刻类型为一句话复刻时展示）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExpireTime(string $ExpireTime) 设置任务过期时间。（当复刻类型为一句话复刻时展示）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFastVoiceType() 获取快速复刻音色ID。（当复刻类型为一句话复刻时展示）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFastVoiceType(string $FastVoiceType) 设置快速复刻音色ID。（当复刻类型为一句话复刻时展示）
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeVRSTaskStatusRespData extends AbstractModel
@@ -62,7 +70,7 @@ class DescribeVRSTaskStatusRespData extends AbstractModel
     public $StatusStr;
 
     /**
-     * @var integer 音色id。
+     * @var integer 音色id。（若为一句话复刻时，该值为固定值“200000000”）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VoiceType;
@@ -74,15 +82,31 @@ class DescribeVRSTaskStatusRespData extends AbstractModel
     public $ErrorMsg;
 
     /**
+     * @var string 任务过期时间。（当复刻类型为一句话复刻时展示）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExpireTime;
+
+    /**
+     * @var string 快速复刻音色ID。（当复刻类型为一句话复刻时展示）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FastVoiceType;
+
+    /**
      * @param string $TaskId 任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 任务状态码，0：任务等待，1：任务执行中，2：任务成功，3：任务失败。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StatusStr 任务状态，waiting：任务等待，doing：任务执行中，success：任务成功，failed：任务失败。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $VoiceType 音色id。
+     * @param integer $VoiceType 音色id。（若为一句话复刻时，该值为固定值“200000000”）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrorMsg 失败原因说明。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ExpireTime 任务过期时间。（当复刻类型为一句话复刻时展示）
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FastVoiceType 快速复刻音色ID。（当复刻类型为一句话复刻时展示）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -116,6 +140,14 @@ class DescribeVRSTaskStatusRespData extends AbstractModel
 
         if (array_key_exists("ErrorMsg",$param) and $param["ErrorMsg"] !== null) {
             $this->ErrorMsg = $param["ErrorMsg"];
+        }
+
+        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
+            $this->ExpireTime = $param["ExpireTime"];
+        }
+
+        if (array_key_exists("FastVoiceType",$param) and $param["FastVoiceType"] !== null) {
+            $this->FastVoiceType = $param["FastVoiceType"];
         }
     }
 }

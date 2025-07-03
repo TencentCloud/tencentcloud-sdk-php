@@ -35,9 +35,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTableRows() 获取行数。
  * @method void setTableRows(integer $TableRows) 设置行数。
  * @method float getPhysicalFileSize() 获取库中所有表对应的独立物理文件大小加和（MB）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPhysicalFileSize(float $PhysicalFileSize) 设置库中所有表对应的独立物理文件大小加和（MB）。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SchemaSpaceData extends AbstractModel
 {
@@ -78,7 +76,6 @@ class SchemaSpaceData extends AbstractModel
 
     /**
      * @var float 库中所有表对应的独立物理文件大小加和（MB）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PhysicalFileSize;
 
@@ -91,7 +88,6 @@ class SchemaSpaceData extends AbstractModel
      * @param float $FragRatio 碎片率（%）。
      * @param integer $TableRows 行数。
      * @param float $PhysicalFileSize 库中所有表对应的独立物理文件大小加和（MB）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

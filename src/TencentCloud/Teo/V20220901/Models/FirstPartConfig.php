@@ -23,15 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSwitch() 获取开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSwitch(string $Switch) 设置开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatTime() 获取首段包的统计时长，单位是秒，即期望首段包的统计时长是多少，默认5秒。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatTime(integer $StatTime) 设置首段包的统计时长，单位是秒，即期望首段包的统计时长是多少，默认5秒。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class FirstPartConfig extends AbstractModel
 {
@@ -39,13 +35,11 @@ class FirstPartConfig extends AbstractModel
      * @var string 开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Switch;
 
     /**
      * @var integer 首段包的统计时长，单位是秒，即期望首段包的统计时长是多少，默认5秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StatTime;
 
@@ -53,9 +47,7 @@ class FirstPartConfig extends AbstractModel
      * @param string $Switch 开关，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StatTime 首段包的统计时长，单位是秒，即期望首段包的统计时长是多少，默认5秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

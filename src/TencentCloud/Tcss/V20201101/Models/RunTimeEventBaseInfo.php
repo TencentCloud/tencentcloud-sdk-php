@@ -77,13 +77,9 @@ MountNamespace逃逸、
  * @method string getLatestFoundTime() 获取最近生成时间
  * @method void setLatestFoundTime(string $LatestFoundTime) 设置最近生成时间
  * @method string getHostIP() 获取内网ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostIP(string $HostIP) 设置内网ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClientIP() 获取外网ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClientIP(string $ClientIP) 设置外网ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContainerNetStatus() 获取网络状态
 未隔离  	NORMAL
 已隔离		ISOLATED
@@ -91,7 +87,6 @@ MountNamespace逃逸、
 隔离失败	ISOLATE_FAILED
 解除隔离中  RESTORING
 解除隔离失败 RESTORE_FAILED
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainerNetStatus(string $ContainerNetStatus) 设置网络状态
 未隔离  	NORMAL
 已隔离		ISOLATED
@@ -99,7 +94,6 @@ MountNamespace逃逸、
 隔离失败	ISOLATE_FAILED
 解除隔离中  RESTORING
 解除隔离失败 RESTORE_FAILED
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContainerNetSubStatus() 获取容器子状态
 "AGENT_OFFLINE"       //Agent离线
 "NODE_DESTROYED"      //节点已销毁
@@ -108,7 +102,6 @@ MountNamespace逃逸、
 "SHARED_HOST"         // 容器与主机共享网络
 "RESOURCE_LIMIT"      //隔离操作资源超限
 "UNKNOW"              // 原因未知
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainerNetSubStatus(string $ContainerNetSubStatus) 设置容器子状态
 "AGENT_OFFLINE"       //Agent离线
 "NODE_DESTROYED"      //节点已销毁
@@ -117,11 +110,8 @@ MountNamespace逃逸、
 "SHARED_HOST"         // 容器与主机共享网络
 "RESOURCE_LIMIT"      //隔离操作资源超限
 "UNKNOW"              // 原因未知
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContainerIsolateOperationSrc() 获取容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainerIsolateOperationSrc(string $ContainerIsolateOperationSrc) 设置容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNodeID() 获取节点ID
  * @method void setNodeID(string $NodeID) 设置节点ID
  * @method string getNodeType() 获取节点类型:NORMAL:普通节点;SUPER:超级节点
@@ -150,6 +140,8 @@ MountNamespace逃逸、
  * @method void setNamespace(string $Namespace) 设置Namespace
  * @method string getWorkloadType() 获取WorkloadType
  * @method void setWorkloadType(string $WorkloadType) 设置WorkloadType
+ * @method string getContainerStatus() 获取容器运行状态
+ * @method void setContainerStatus(string $ContainerStatus) 设置容器运行状态
  */
 class RunTimeEventBaseInfo extends AbstractModel
 {
@@ -231,13 +223,11 @@ MountNamespace逃逸、
 
     /**
      * @var string 内网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostIP;
 
     /**
      * @var string 外网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClientIP;
 
@@ -249,7 +239,6 @@ MountNamespace逃逸、
 隔离失败	ISOLATE_FAILED
 解除隔离中  RESTORING
 解除隔离失败 RESTORE_FAILED
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContainerNetStatus;
 
@@ -262,13 +251,11 @@ MountNamespace逃逸、
 "SHARED_HOST"         // 容器与主机共享网络
 "RESOURCE_LIMIT"      //隔离操作资源超限
 "UNKNOW"              // 原因未知
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContainerNetSubStatus;
 
     /**
      * @var string 容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContainerIsolateOperationSrc;
 
@@ -343,6 +330,11 @@ MountNamespace逃逸、
     public $WorkloadType;
 
     /**
+     * @var string 容器运行状态
+     */
+    public $ContainerStatus;
+
+    /**
      * @param string $EventId 事件唯一ID
      * @param string $FoundTime 事件发现时间
      * @param string $ContainerId 容器id
@@ -372,9 +364,7 @@ MountNamespace逃逸、
      * @param integer $EventCount 事件数量
      * @param string $LatestFoundTime 最近生成时间
      * @param string $HostIP 内网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClientIP 外网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContainerNetStatus 网络状态
 未隔离  	NORMAL
 已隔离		ISOLATED
@@ -382,7 +372,6 @@ MountNamespace逃逸、
 隔离失败	ISOLATE_FAILED
 解除隔离中  RESTORING
 解除隔离失败 RESTORE_FAILED
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContainerNetSubStatus 容器子状态
 "AGENT_OFFLINE"       //Agent离线
 "NODE_DESTROYED"      //节点已销毁
@@ -391,9 +380,7 @@ MountNamespace逃逸、
 "SHARED_HOST"         // 容器与主机共享网络
 "RESOURCE_LIMIT"      //隔离操作资源超限
 "UNKNOW"              // 原因未知
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContainerIsolateOperationSrc 容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NodeID 节点ID
      * @param string $NodeType 节点类型:NORMAL:普通节点;SUPER:超级节点
      * @param string $NodeSubNetID 节点子网ID
@@ -408,6 +395,7 @@ MountNamespace逃逸、
      * @param string $HostID uuid
      * @param string $Namespace Namespace
      * @param string $WorkloadType WorkloadType
+     * @param string $ContainerStatus 容器运行状态
      */
     function __construct()
     {
@@ -544,6 +532,10 @@ MountNamespace逃逸、
 
         if (array_key_exists("WorkloadType",$param) and $param["WorkloadType"] !== null) {
             $this->WorkloadType = $param["WorkloadType"];
+        }
+
+        if (array_key_exists("ContainerStatus",$param) and $param["ContainerStatus"] !== null) {
+            $this->ContainerStatus = $param["ContainerStatus"];
         }
     }
 }

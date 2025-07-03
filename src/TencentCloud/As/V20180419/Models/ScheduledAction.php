@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置定时任务所在伸缩组ID。
  * @method string getStartTime() 获取定时任务的开始时间。取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
  * @method void setStartTime(string $StartTime) 设置定时任务的开始时间。取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
- * @method string getRecurrence() 获取定时任务的重复方式。
- * @method void setRecurrence(string $Recurrence) 设置定时任务的重复方式。
+ * @method string getRecurrence() 获取定时任务的重复方式。定时任务中的[Recurrence参数限制](https://cloud.tencent.com/document/product/377/88119)为5个字段，由空格分开，结构为：分，小时，日期，月份，星期。
+ * @method void setRecurrence(string $Recurrence) 设置定时任务的重复方式。定时任务中的[Recurrence参数限制](https://cloud.tencent.com/document/product/377/88119)为5个字段，由空格分开，结构为：分，小时，日期，月份，星期。
  * @method string getEndTime() 获取定时任务的结束时间。取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
  * @method void setEndTime(string $EndTime) 设置定时任务的结束时间。取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
  * @method integer getMaxSize() 获取定时任务设置的最大实例数。
@@ -38,10 +38,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDesiredCapacity(integer $DesiredCapacity) 设置定时任务设置的期望实例数。
  * @method integer getMinSize() 获取定时任务设置的最小实例数。
  * @method void setMinSize(integer $MinSize) 设置定时任务设置的最小实例数。
- * @method string getCreatedTime() 获取定时任务的创建时间。取值为`UTC`时间，按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ssZ`。
- * @method void setCreatedTime(string $CreatedTime) 设置定时任务的创建时间。取值为`UTC`时间，按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ssZ`。
- * @method string getScheduledType() 获取定时任务的执行类型。取值范围：<br><li>CRONTAB：代表定时任务为重复执行。<br><li>ONCE：代表定时任务为单次执行。
- * @method void setScheduledType(string $ScheduledType) 设置定时任务的执行类型。取值范围：<br><li>CRONTAB：代表定时任务为重复执行。<br><li>ONCE：代表定时任务为单次执行。
+ * @method string getCreatedTime() 获取定时任务的创建时间。取值为标准`UTC`时间，按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ssZ`。
+ * @method void setCreatedTime(string $CreatedTime) 设置定时任务的创建时间。取值为标准`UTC`时间，按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ssZ`。
+ * @method string getScheduledType() 获取定时任务的执行类型。取值范围：
+<li>CRONTAB：代表定时任务为重复执行。</li>
+<li>ONCE：代表定时任务为单次执行。</li>
+ * @method void setScheduledType(string $ScheduledType) 设置定时任务的执行类型。取值范围：
+<li>CRONTAB：代表定时任务为重复执行。</li>
+<li>ONCE：代表定时任务为单次执行。</li>
  */
 class ScheduledAction extends AbstractModel
 {
@@ -66,7 +70,7 @@ class ScheduledAction extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string 定时任务的重复方式。
+     * @var string 定时任务的重复方式。定时任务中的[Recurrence参数限制](https://cloud.tencent.com/document/product/377/88119)为5个字段，由空格分开，结构为：分，小时，日期，月份，星期。
      */
     public $Recurrence;
 
@@ -91,12 +95,14 @@ class ScheduledAction extends AbstractModel
     public $MinSize;
 
     /**
-     * @var string 定时任务的创建时间。取值为`UTC`时间，按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ssZ`。
+     * @var string 定时任务的创建时间。取值为标准`UTC`时间，按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ssZ`。
      */
     public $CreatedTime;
 
     /**
-     * @var string 定时任务的执行类型。取值范围：<br><li>CRONTAB：代表定时任务为重复执行。<br><li>ONCE：代表定时任务为单次执行。
+     * @var string 定时任务的执行类型。取值范围：
+<li>CRONTAB：代表定时任务为重复执行。</li>
+<li>ONCE：代表定时任务为单次执行。</li>
      */
     public $ScheduledType;
 
@@ -105,13 +111,15 @@ class ScheduledAction extends AbstractModel
      * @param string $ScheduledActionName 定时任务名称。
      * @param string $AutoScalingGroupId 定时任务所在伸缩组ID。
      * @param string $StartTime 定时任务的开始时间。取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
-     * @param string $Recurrence 定时任务的重复方式。
+     * @param string $Recurrence 定时任务的重复方式。定时任务中的[Recurrence参数限制](https://cloud.tencent.com/document/product/377/88119)为5个字段，由空格分开，结构为：分，小时，日期，月份，星期。
      * @param string $EndTime 定时任务的结束时间。取值为`北京时间`（UTC+8），按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ss+08:00`。
      * @param integer $MaxSize 定时任务设置的最大实例数。
      * @param integer $DesiredCapacity 定时任务设置的期望实例数。
      * @param integer $MinSize 定时任务设置的最小实例数。
-     * @param string $CreatedTime 定时任务的创建时间。取值为`UTC`时间，按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ssZ`。
-     * @param string $ScheduledType 定时任务的执行类型。取值范围：<br><li>CRONTAB：代表定时任务为重复执行。<br><li>ONCE：代表定时任务为单次执行。
+     * @param string $CreatedTime 定时任务的创建时间。取值为标准`UTC`时间，按照`ISO8601`标准，格式：`YYYY-MM-DDThh:mm:ssZ`。
+     * @param string $ScheduledType 定时任务的执行类型。取值范围：
+<li>CRONTAB：代表定时任务为重复执行。</li>
+<li>ONCE：代表定时任务为单次执行。</li>
      */
     function __construct()
     {

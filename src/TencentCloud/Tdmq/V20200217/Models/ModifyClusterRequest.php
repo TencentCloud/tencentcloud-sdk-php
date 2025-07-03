@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置Pulsar 集群的ID，需要更新的集群Id。
  * @method string getClusterName() 获取更新后的集群名称。
  * @method void setClusterName(string $ClusterName) 设置更新后的集群名称。
- * @method string getRemark() 获取说明信息。
- * @method void setRemark(string $Remark) 设置说明信息。
+ * @method string getRemark() 获取说明信息。长度限制为 128 字节
+ * @method void setRemark(string $Remark) 设置说明信息。长度限制为 128 字节
  * @method boolean getPublicAccessEnabled() 获取开启公网访问，只能为true
  * @method void setPublicAccessEnabled(boolean $PublicAccessEnabled) 设置开启公网访问，只能为true
  */
@@ -42,7 +42,7 @@ class ModifyClusterRequest extends AbstractModel
     public $ClusterName;
 
     /**
-     * @var string 说明信息。
+     * @var string 说明信息。长度限制为 128 字节
      */
     public $Remark;
 
@@ -54,7 +54,7 @@ class ModifyClusterRequest extends AbstractModel
     /**
      * @param string $ClusterId Pulsar 集群的ID，需要更新的集群Id。
      * @param string $ClusterName 更新后的集群名称。
-     * @param string $Remark 说明信息。
+     * @param string $Remark 说明信息。长度限制为 128 字节
      * @param boolean $PublicAccessEnabled 开启公网访问，只能为true
      */
     function __construct()

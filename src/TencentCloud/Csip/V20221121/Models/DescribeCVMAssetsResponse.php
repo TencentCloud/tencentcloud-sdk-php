@@ -20,140 +20,108 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCVMAssets返回参数结构体
  *
- * @method integer getTotal() 获取-
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotal(integer $Total) 设置-
-注意：此字段可能返回 null，表示取不到有效值。
- * @method array getData() 获取-
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setData(array $Data) 设置-
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTotal() 获取总数
+ * @method void setTotal(integer $Total) 设置总数
+ * @method array getData() 获取机器列表
+ * @method void setData(array $Data) 设置机器列表
  * @method array getRegionList() 获取地域列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionList(array $RegionList) 设置地域列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDefenseStatusList() 获取防护状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefenseStatusList(array $DefenseStatusList) 设置防护状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getVpcList() 获取vpc枚举
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcList(array $VpcList) 设置vpc枚举
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAssetTypeList() 获取资产类型枚举
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssetTypeList(array $AssetTypeList) 设置资产类型枚举
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSystemTypeList() 获取操作系统枚举
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSystemTypeList(array $SystemTypeList) 设置操作系统枚举
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getIpTypeList() 获取ip列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpTypeList(array $IpTypeList) 设置ip列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAppIdList() 获取appid列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppIdList(array $AppIdList) 设置appid列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getZoneList() 获取可用区列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneList(array $ZoneList) 设置可用区列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getOsList() 获取os列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOsList(array $OsList) 设置os列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAssetMapInstanceTypeList() 获取资产类型和实例类型的对应关系
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssetMapInstanceTypeList(array $AssetMapInstanceTypeList) 设置资产类型和实例类型的对应关系
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPublicPrivateAttr() 获取公网内网枚举
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicPrivateAttr(array $PublicPrivateAttr) 设置公网内网枚举
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getProtectStatusList() 获取主机防护状态
+ * @method void setProtectStatusList(array $ProtectStatusList) 设置主机防护状态
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeCVMAssetsResponse extends AbstractModel
 {
     /**
-     * @var integer -
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 总数
      */
     public $Total;
 
     /**
-     * @var array -
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 机器列表
      */
     public $Data;
 
     /**
      * @var array 地域列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionList;
 
     /**
      * @var array 防护状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DefenseStatusList;
 
     /**
      * @var array vpc枚举
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcList;
 
     /**
      * @var array 资产类型枚举
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AssetTypeList;
 
     /**
      * @var array 操作系统枚举
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SystemTypeList;
 
     /**
      * @var array ip列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IpTypeList;
 
     /**
      * @var array appid列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppIdList;
 
     /**
      * @var array 可用区列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneList;
 
     /**
      * @var array os列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OsList;
 
     /**
      * @var array 资产类型和实例类型的对应关系
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AssetMapInstanceTypeList;
 
     /**
      * @var array 公网内网枚举
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicPrivateAttr;
+
+    /**
+     * @var array 主机防护状态
+     */
+    public $ProtectStatusList;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -161,32 +129,20 @@ class DescribeCVMAssetsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Total -
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Data -
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Total 总数
+     * @param array $Data 机器列表
      * @param array $RegionList 地域列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DefenseStatusList 防护状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $VpcList vpc枚举
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AssetTypeList 资产类型枚举
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SystemTypeList 操作系统枚举
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $IpTypeList ip列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AppIdList appid列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ZoneList 可用区列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $OsList os列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AssetMapInstanceTypeList 资产类型和实例类型的对应关系
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PublicPrivateAttr 公网内网枚举
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ProtectStatusList 主机防护状态
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -311,6 +267,15 @@ class DescribeCVMAssetsResponse extends AbstractModel
                 $obj = new FilterDataObject();
                 $obj->deserialize($value);
                 array_push($this->PublicPrivateAttr, $obj);
+            }
+        }
+
+        if (array_key_exists("ProtectStatusList",$param) and $param["ProtectStatusList"] !== null) {
+            $this->ProtectStatusList = [];
+            foreach ($param["ProtectStatusList"] as $key => $value){
+                $obj = new FilterDataObject();
+                $obj->deserialize($value);
+                array_push($this->ProtectStatusList, $obj);
             }
         }
 

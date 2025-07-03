@@ -62,15 +62,19 @@ DELETING，删除中
  * @method void setTopicNumLimit(integer $TopicNumLimit) 设置实例主题数上限
  * @method integer getGroupNumLimit() 获取实例消费组数量上限
  * @method void setGroupNumLimit(integer $GroupNumLimit) 设置实例消费组数量上限
- * @method string getPayMode() 获取计费模式，
-POSTPAID，按量计费
-PREPAID，包年包月
- * @method void setPayMode(string $PayMode) 设置计费模式，
-POSTPAID，按量计费
-PREPAID，包年包月
- * @method integer getExpiryTime() 获取到期时间，秒为单位
+ * @method string getPayMode() 获取计费模式，枚举值如下：
+
+- POSTPAID：按量计费
+
+- PREPAID：包年包月
+ * @method void setPayMode(string $PayMode) 设置计费模式，枚举值如下：
+
+- POSTPAID：按量计费
+
+- PREPAID：包年包月
+ * @method integer getExpiryTime() 获取到期时间戳，**Unix时间戳（毫秒）**
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExpiryTime(integer $ExpiryTime) 设置到期时间，秒为单位
+ * @method void setExpiryTime(integer $ExpiryTime) 设置到期时间戳，**Unix时间戳（毫秒）**
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRemark() 获取备注信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -87,25 +91,15 @@ PREPAID，包年包月
  * @method string getSkuCode() 获取商品规格
  * @method void setSkuCode(string $SkuCode) 设置商品规格
  * @method integer getTpsLimit() 获取TPS限流值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTpsLimit(integer $TpsLimit) 设置TPS限流值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScaledTpsLimit() 获取弹性TPS限流值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScaledTpsLimit(integer $ScaledTpsLimit) 设置弹性TPS限流值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMessageRetention() 获取消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessageRetention(integer $MessageRetention) 设置消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxMessageDelay() 获取延迟消息最大时长，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxMessageDelay(integer $MaxMessageDelay) 设置延迟消息最大时长，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRenewFlag() 获取是否自动续费
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRenewFlag(integer $RenewFlag) 设置是否自动续费
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRenewFlag() 获取是否自动续费，仅针对预付费集群（0: 不自动续费；1:自动续费）
+ * @method void setRenewFlag(integer $RenewFlag) 设置是否自动续费，仅针对预付费集群（0: 不自动续费；1:自动续费）
  */
 class InstanceItem extends AbstractModel
 {
@@ -159,14 +153,16 @@ DELETING，删除中
     public $GroupNumLimit;
 
     /**
-     * @var string 计费模式，
-POSTPAID，按量计费
-PREPAID，包年包月
+     * @var string 计费模式，枚举值如下：
+
+- POSTPAID：按量计费
+
+- PREPAID：包年包月
      */
     public $PayMode;
 
     /**
-     * @var integer 到期时间，秒为单位
+     * @var integer 到期时间戳，**Unix时间戳（毫秒）**
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpiryTime;
@@ -200,31 +196,26 @@ PREPAID，包年包月
 
     /**
      * @var integer TPS限流值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TpsLimit;
 
     /**
      * @var integer 弹性TPS限流值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScaledTpsLimit;
 
     /**
      * @var integer 消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MessageRetention;
 
     /**
      * @var integer 延迟消息最大时长，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxMessageDelay;
 
     /**
-     * @var integer 是否自动续费
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 是否自动续费，仅针对预付费集群（0: 不自动续费；1:自动续费）
      */
     public $RenewFlag;
 
@@ -250,10 +241,12 @@ MODIFY_FAILURE，变配失败
 DELETING，删除中
      * @param integer $TopicNumLimit 实例主题数上限
      * @param integer $GroupNumLimit 实例消费组数量上限
-     * @param string $PayMode 计费模式，
-POSTPAID，按量计费
-PREPAID，包年包月
-     * @param integer $ExpiryTime 到期时间，秒为单位
+     * @param string $PayMode 计费模式，枚举值如下：
+
+- POSTPAID：按量计费
+
+- PREPAID：包年包月
+     * @param integer $ExpiryTime 到期时间戳，**Unix时间戳（毫秒）**
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Remark 备注信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -263,15 +256,10 @@ PREPAID，包年包月
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SkuCode 商品规格
      * @param integer $TpsLimit TPS限流值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ScaledTpsLimit 弹性TPS限流值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MessageRetention 消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxMessageDelay 延迟消息最大时长，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RenewFlag 是否自动续费
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RenewFlag 是否自动续费，仅针对预付费集群（0: 不自动续费；1:自动续费）
      */
     function __construct()
     {

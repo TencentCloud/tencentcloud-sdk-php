@@ -25,21 +25,65 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCreatedOn() 获取操作时间。
  * @method void setCreatedOn(string $CreatedOn) 设置操作时间。
  * @method string getUin() 获取主账号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUin(string $Uin) 设置主账号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubAccountUin() 获取子账号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubAccountUin(string $SubAccountUin) 设置子账号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCertId() 获取证书ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertId(string $CertId) 设置证书ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getType() 获取操作
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(string $Type) 设置操作
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getType() 获取每个操作类型都对应一个具体的操作描述。以下是对每个操作类型及其描述的文字说明：
+1. apply - 表示申请一个免费的证书。
+2. delete - 表示删除操作。
+3. download - 表示下载操作。
+4. upload - 表示上传操作。
+5. revoke - 表示吊销证书。
+6. cancelRevoke - 表示取消吊销操作。
+7. updateAlias - 表示更新备注信息。
+8. changeProject - 表示将证书分配到某个项目。
+9. uploadConfirmLetter - 表示上传确认函。
+10. cancel - 表示取消订单操作。
+11. replace - 表示重颁发证书。
+12. downloadConfirmLetter - 表示下载证书吊销确认函。
+13. editRevokeLetter - 表示上传证书吊销确认函。
+14. renewVIP - 表示续费付费证书。
+15. applyVIP - 表示申请付费证书。
+16. submitInfo - 表示提交资料。
+17. downloadConfirmLetter - 表示下载确认函模版。
+18. uploadFromYunAPI - 表示通过云 API 上传。
+19. transferIn - 表示证书转入操作。
+20. transferOut - 表示证书转出操作。
+21. refund - 表示申请退款。
+22. multiYearsRenew - 表示多年期自动续期。
+23. modifyDownloadLimit - 表示修改下载限制开关。
+24. issued - 表示证书签发。
+25. domainValidationPassed - 表示域名验证完成。
+26. Resubmit - 表示证书重新申请。
+ * @method void setType(string $Type) 设置每个操作类型都对应一个具体的操作描述。以下是对每个操作类型及其描述的文字说明：
+1. apply - 表示申请一个免费的证书。
+2. delete - 表示删除操作。
+3. download - 表示下载操作。
+4. upload - 表示上传操作。
+5. revoke - 表示吊销证书。
+6. cancelRevoke - 表示取消吊销操作。
+7. updateAlias - 表示更新备注信息。
+8. changeProject - 表示将证书分配到某个项目。
+9. uploadConfirmLetter - 表示上传确认函。
+10. cancel - 表示取消订单操作。
+11. replace - 表示重颁发证书。
+12. downloadConfirmLetter - 表示下载证书吊销确认函。
+13. editRevokeLetter - 表示上传证书吊销确认函。
+14. renewVIP - 表示续费付费证书。
+15. applyVIP - 表示申请付费证书。
+16. submitInfo - 表示提交资料。
+17. downloadConfirmLetter - 表示下载确认函模版。
+18. uploadFromYunAPI - 表示通过云 API 上传。
+19. transferIn - 表示证书转入操作。
+20. transferOut - 表示证书转出操作。
+21. refund - 表示申请退款。
+22. multiYearsRenew - 表示多年期自动续期。
+23. modifyDownloadLimit - 表示修改下载限制开关。
+24. issued - 表示证书签发。
+25. domainValidationPassed - 表示域名验证完成。
+26. Resubmit - 表示证书重新申请。
  */
 class OperationLog extends AbstractModel
 {
@@ -55,25 +99,47 @@ class OperationLog extends AbstractModel
 
     /**
      * @var string 主账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uin;
 
     /**
      * @var string 子账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubAccountUin;
 
     /**
      * @var string 证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CertId;
 
     /**
-     * @var string 操作
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 每个操作类型都对应一个具体的操作描述。以下是对每个操作类型及其描述的文字说明：
+1. apply - 表示申请一个免费的证书。
+2. delete - 表示删除操作。
+3. download - 表示下载操作。
+4. upload - 表示上传操作。
+5. revoke - 表示吊销证书。
+6. cancelRevoke - 表示取消吊销操作。
+7. updateAlias - 表示更新备注信息。
+8. changeProject - 表示将证书分配到某个项目。
+9. uploadConfirmLetter - 表示上传确认函。
+10. cancel - 表示取消订单操作。
+11. replace - 表示重颁发证书。
+12. downloadConfirmLetter - 表示下载证书吊销确认函。
+13. editRevokeLetter - 表示上传证书吊销确认函。
+14. renewVIP - 表示续费付费证书。
+15. applyVIP - 表示申请付费证书。
+16. submitInfo - 表示提交资料。
+17. downloadConfirmLetter - 表示下载确认函模版。
+18. uploadFromYunAPI - 表示通过云 API 上传。
+19. transferIn - 表示证书转入操作。
+20. transferOut - 表示证书转出操作。
+21. refund - 表示申请退款。
+22. multiYearsRenew - 表示多年期自动续期。
+23. modifyDownloadLimit - 表示修改下载限制开关。
+24. issued - 表示证书签发。
+25. domainValidationPassed - 表示域名验证完成。
+26. Resubmit - 表示证书重新申请。
      */
     public $Type;
 
@@ -81,13 +147,35 @@ class OperationLog extends AbstractModel
      * @param string $Action 操作证书动作。
      * @param string $CreatedOn 操作时间。
      * @param string $Uin 主账号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubAccountUin 子账号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CertId 证书ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Type 操作
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Type 每个操作类型都对应一个具体的操作描述。以下是对每个操作类型及其描述的文字说明：
+1. apply - 表示申请一个免费的证书。
+2. delete - 表示删除操作。
+3. download - 表示下载操作。
+4. upload - 表示上传操作。
+5. revoke - 表示吊销证书。
+6. cancelRevoke - 表示取消吊销操作。
+7. updateAlias - 表示更新备注信息。
+8. changeProject - 表示将证书分配到某个项目。
+9. uploadConfirmLetter - 表示上传确认函。
+10. cancel - 表示取消订单操作。
+11. replace - 表示重颁发证书。
+12. downloadConfirmLetter - 表示下载证书吊销确认函。
+13. editRevokeLetter - 表示上传证书吊销确认函。
+14. renewVIP - 表示续费付费证书。
+15. applyVIP - 表示申请付费证书。
+16. submitInfo - 表示提交资料。
+17. downloadConfirmLetter - 表示下载确认函模版。
+18. uploadFromYunAPI - 表示通过云 API 上传。
+19. transferIn - 表示证书转入操作。
+20. transferOut - 表示证书转出操作。
+21. refund - 表示申请退款。
+22. multiYearsRenew - 表示多年期自动续期。
+23. modifyDownloadLimit - 表示修改下载限制开关。
+24. issued - 表示证书签发。
+25. domainValidationPassed - 表示域名验证完成。
+26. Resubmit - 表示证书重新申请。
      */
     function __construct()
     {

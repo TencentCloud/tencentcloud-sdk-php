@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 出入院结构体
  *
  * @method DiseaseHistoryBlock getDiseaseHistory() 获取疾病史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiseaseHistory(DiseaseHistoryBlock $DiseaseHistory) 设置疾病史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method PersonalHistoryBlock getPersonalHistory() 获取个人史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPersonalHistory(PersonalHistoryBlock $PersonalHistory) 设置个人史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DrugHistoryBlock getDrugHistory() 获取药物史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDrugHistory(DrugHistoryBlock $DrugHistory) 设置药物史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method TreatmentRecordBlock getTreatmentRecord() 获取治疗相关
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTreatmentRecord(TreatmentRecordBlock $TreatmentRecord) 设置治疗相关
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ParagraphBlock getParagraphBlock() 获取文本段落
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParagraphBlock(ParagraphBlock $ParagraphBlock) 设置文本段落
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPage() 获取数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPage(integer $Page) 设置数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DischargeInfoBlock extends AbstractModel
 {
     /**
      * @var DiseaseHistoryBlock 疾病史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiseaseHistory;
 
     /**
      * @var PersonalHistoryBlock 个人史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PersonalHistory;
 
     /**
      * @var DrugHistoryBlock 药物史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DrugHistory;
 
     /**
      * @var TreatmentRecordBlock 治疗相关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TreatmentRecord;
 
     /**
      * @var ParagraphBlock 文本段落
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParagraphBlock;
 
     /**
      * @var integer 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Page;
 
     /**
      * @param DiseaseHistoryBlock $DiseaseHistory 疾病史
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PersonalHistoryBlock $PersonalHistory 个人史
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DrugHistoryBlock $DrugHistory 药物史
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TreatmentRecordBlock $TreatmentRecord 治疗相关
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParagraphBlock $ParagraphBlock 文本段落
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

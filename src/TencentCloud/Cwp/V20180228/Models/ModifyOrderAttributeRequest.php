@@ -24,10 +24,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLicenseType(integer $LicenseType) 设置授权类型 0 专业版-按量计费, 1专业版-包年包月 , 2 旗舰版-包年包月
  * @method string getResourceId() 获取资源ID
  * @method void setResourceId(string $ResourceId) 设置资源ID
- * @method string getAttrName() 获取可编辑的属性名称 ,当前支持的有: alias 资源别名
- * @method void setAttrName(string $AttrName) 设置可编辑的属性名称 ,当前支持的有: alias 资源别名
+ * @method string getAttrName() 获取可编辑的属性名称 ,当前支持的有: 
+alias 资源别名
+projectId 项目ID
+ * @method void setAttrName(string $AttrName) 设置可编辑的属性名称 ,当前支持的有: 
+alias 资源别名
+projectId 项目ID
  * @method string getAttrValue() 获取属性值
+AttrName=alias时,任意字符串,最大字符15长度
+AttrName=projectId时,项目ID必须是真实存在的
  * @method void setAttrValue(string $AttrValue) 设置属性值
+AttrName=alias时,任意字符串,最大字符15长度
+AttrName=projectId时,项目ID必须是真实存在的
  */
 class ModifyOrderAttributeRequest extends AbstractModel
 {
@@ -42,20 +50,28 @@ class ModifyOrderAttributeRequest extends AbstractModel
     public $ResourceId;
 
     /**
-     * @var string 可编辑的属性名称 ,当前支持的有: alias 资源别名
+     * @var string 可编辑的属性名称 ,当前支持的有: 
+alias 资源别名
+projectId 项目ID
      */
     public $AttrName;
 
     /**
      * @var string 属性值
+AttrName=alias时,任意字符串,最大字符15长度
+AttrName=projectId时,项目ID必须是真实存在的
      */
     public $AttrValue;
 
     /**
      * @param integer $LicenseType 授权类型 0 专业版-按量计费, 1专业版-包年包月 , 2 旗舰版-包年包月
      * @param string $ResourceId 资源ID
-     * @param string $AttrName 可编辑的属性名称 ,当前支持的有: alias 资源别名
+     * @param string $AttrName 可编辑的属性名称 ,当前支持的有: 
+alias 资源别名
+projectId 项目ID
      * @param string $AttrValue 属性值
+AttrName=alias时,任意字符串,最大字符15长度
+AttrName=projectId时,项目ID必须是真实存在的
      */
     function __construct()
     {

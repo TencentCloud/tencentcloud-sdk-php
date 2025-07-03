@@ -21,73 +21,53 @@ use TencentCloud\Common\AbstractModel;
  * 告警对象
  *
  * @method string getTopicId() 获取日志主题ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicId(string $TopicId) 设置日志主题ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getQuery() 获取查询语句。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQuery(string $Query) 设置查询语句。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNumber() 获取告警对象序号；从1开始递增。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNumber(integer $Number) 设置告警对象序号；从1开始递增。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStartTimeOffset() 获取查询范围起始时间相对于告警执行时间的偏移，单位为分钟，取值为非正，最大值为0，最小值为-1440。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTimeOffset(integer $StartTimeOffset) 设置查询范围起始时间相对于告警执行时间的偏移，单位为分钟，取值为非正，最大值为0，最小值为-1440。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEndTimeOffset() 获取查询范围终止时间相对于告警执行时间的偏移，单位为分钟，取值为非正，须大于StartTimeOffset，最大值为0，最小值为-1440。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTimeOffset(integer $EndTimeOffset) 设置查询范围终止时间相对于告警执行时间的偏移，单位为分钟，取值为非正，须大于StartTimeOffset，最大值为0，最小值为-1440。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLogsetId() 获取日志集ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogsetId(string $LogsetId) 设置日志集ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSyntaxRule() 获取检索语法规则，默认值为0。
 0：Lucene语法，1：CQL语法。
 详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSyntaxRule(integer $SyntaxRule) 设置检索语法规则，默认值为0。
 0：Lucene语法，1：CQL语法。
 详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmTarget extends AbstractModel
 {
     /**
      * @var string 日志主题ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicId;
 
     /**
      * @var string 查询语句。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Query;
 
     /**
      * @var integer 告警对象序号；从1开始递增。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Number;
 
     /**
      * @var integer 查询范围起始时间相对于告警执行时间的偏移，单位为分钟，取值为非正，最大值为0，最小值为-1440。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTimeOffset;
 
     /**
      * @var integer 查询范围终止时间相对于告警执行时间的偏移，单位为分钟，取值为非正，须大于StartTimeOffset，最大值为0，最小值为-1440。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTimeOffset;
 
     /**
      * @var string 日志集ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogsetId;
 
@@ -95,27 +75,19 @@ class AlarmTarget extends AbstractModel
      * @var integer 检索语法规则，默认值为0。
 0：Lucene语法，1：CQL语法。
 详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SyntaxRule;
 
     /**
      * @param string $TopicId 日志主题ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Query 查询语句。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Number 告警对象序号；从1开始递增。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StartTimeOffset 查询范围起始时间相对于告警执行时间的偏移，单位为分钟，取值为非正，最大值为0，最小值为-1440。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EndTimeOffset 查询范围终止时间相对于告警执行时间的偏移，单位为分钟，取值为非正，须大于StartTimeOffset，最大值为0，最小值为-1440。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LogsetId 日志集ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SyntaxRule 检索语法规则，默认值为0。
 0：Lucene语法，1：CQL语法。
 详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

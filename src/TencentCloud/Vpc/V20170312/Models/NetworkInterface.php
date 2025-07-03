@@ -48,6 +48,20 @@ use TencentCloud\Common\AbstractModel;
 <li>`ATTACHING`：绑定中</li>
 <li>`DETACHING`：解绑中</li>
 <li>`DELETING`：删除中</li>
+ * @method string getNetworkInterfaceState() 获取弹性网卡状态：
+<li>`PENDING`：创建中</li>
+<li>`AVAILABLE`：可用的</li>
+<li>`ATTACHING`：绑定中</li>
+<li>`DETACHING`：解绑中</li>
+<li>`DELETING`：删除中</li>
+<li>`INUSE`：已绑定</li>
+ * @method void setNetworkInterfaceState(string $NetworkInterfaceState) 设置弹性网卡状态：
+<li>`PENDING`：创建中</li>
+<li>`AVAILABLE`：可用的</li>
+<li>`ATTACHING`：绑定中</li>
+<li>`DETACHING`：解绑中</li>
+<li>`DELETING`：删除中</li>
+<li>`INUSE`：已绑定</li>
  * @method array getPrivateIpAddressSet() 获取内网IP信息。
  * @method void setPrivateIpAddressSet(array $PrivateIpAddressSet) 设置内网IP信息。
  * @method NetworkInterfaceAttachment getAttachment() 获取绑定的云服务器对象。
@@ -56,42 +70,31 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getZone() 获取可用区。
  * @method void setZone(string $Zone) 设置可用区。
- * @method string getCreatedTime() 获取创建时间。
- * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
+ * @method string getCreatedTime() 获取创建时间。格式：YYYY-MM-DD hh:mm:ss。示例值：2020-10-28 08:23:59
+ * @method void setCreatedTime(string $CreatedTime) 设置创建时间。格式：YYYY-MM-DD hh:mm:ss。示例值：2020-10-28 08:23:59
  * @method array getIpv6AddressSet() 获取`IPv6`地址列表。
  * @method void setIpv6AddressSet(array $Ipv6AddressSet) 设置`IPv6`地址列表。
  * @method array getTagSet() 获取标签键值对。
  * @method void setTagSet(array $TagSet) 设置标签键值对。
- * @method integer getEniType() 获取网卡类型。0 - 弹性网卡；1 - evm弹性网卡。
- * @method void setEniType(integer $EniType) 设置网卡类型。0 - 弹性网卡；1 - evm弹性网卡。
- * @method string getBusiness() 获取网卡绑定的子机类型：cvm，eks。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBusiness(string $Business) 设置网卡绑定的子机类型：cvm，eks。
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getEniType() 获取网卡类型。“0”-辅助网卡，“1”-主网卡，“2”：中继网卡
+ * @method void setEniType(integer $EniType) 设置网卡类型。“0”-辅助网卡，“1”-主网卡，“2”：中继网卡
+ * @method string getBusiness() 获取网卡绑定的子机类型：cvm（普通CVM子机），eks（弹性容器服务Elastic Kubernetes Service）， hai（高性能应用服务Hyper Application Inventor）。
+ * @method void setBusiness(string $Business) 设置网卡绑定的子机类型：cvm（普通CVM子机），eks（弹性容器服务Elastic Kubernetes Service）， hai（高性能应用服务Hyper Application Inventor）。
  * @method string getCdcId() 获取网卡所关联的CDC实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCdcId(string $CdcId) 设置网卡所关联的CDC实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAttachType() 获取弹性网卡类型：0:标准型/1:扩展型。默认值为0。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAttachType(integer $AttachType) 设置弹性网卡类型：0:标准型/1:扩展型。默认值为0。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceId() 获取用于保留网卡主IP的资源ID用于保留网卡主IP的资源ID。用于删除网卡时作为入参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceId(string $ResourceId) 设置用于保留网卡主IP的资源ID用于保留网卡主IP的资源ID。用于删除网卡时作为入参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getQosLevel() 获取服务质量级别：
-<li>`DEFAULT`：默认</li>
-<li>`PT`：云金</li>
-<li>`AU`：云银</li>
-<li>`AG`：云铜</li>
-注意：此字段可能返回 null，表示取不到有效值。
+PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
+
+可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
+
  * @method void setQosLevel(string $QosLevel) 设置服务质量级别：
-<li>`DEFAULT`：默认</li>
-<li>`PT`：云金</li>
-<li>`AU`：云银</li>
-<li>`AG`：云铜</li>
-注意：此字段可能返回 null，表示取不到有效值。
+PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
+
+可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
  */
 class NetworkInterface extends AbstractModel
 {
@@ -146,6 +149,17 @@ class NetworkInterface extends AbstractModel
     public $State;
 
     /**
+     * @var string 弹性网卡状态：
+<li>`PENDING`：创建中</li>
+<li>`AVAILABLE`：可用的</li>
+<li>`ATTACHING`：绑定中</li>
+<li>`DETACHING`：解绑中</li>
+<li>`DELETING`：删除中</li>
+<li>`INUSE`：已绑定</li>
+     */
+    public $NetworkInterfaceState;
+
+    /**
      * @var array 内网IP信息。
      */
     public $PrivateIpAddressSet;
@@ -162,7 +176,7 @@ class NetworkInterface extends AbstractModel
     public $Zone;
 
     /**
-     * @var string 创建时间。
+     * @var string 创建时间。格式：YYYY-MM-DD hh:mm:ss。示例值：2020-10-28 08:23:59
      */
     public $CreatedTime;
 
@@ -177,41 +191,36 @@ class NetworkInterface extends AbstractModel
     public $TagSet;
 
     /**
-     * @var integer 网卡类型。0 - 弹性网卡；1 - evm弹性网卡。
+     * @var integer 网卡类型。“0”-辅助网卡，“1”-主网卡，“2”：中继网卡
      */
     public $EniType;
 
     /**
-     * @var string 网卡绑定的子机类型：cvm，eks。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 网卡绑定的子机类型：cvm（普通CVM子机），eks（弹性容器服务Elastic Kubernetes Service）， hai（高性能应用服务Hyper Application Inventor）。
      */
     public $Business;
 
     /**
      * @var string 网卡所关联的CDC实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CdcId;
 
     /**
      * @var integer 弹性网卡类型：0:标准型/1:扩展型。默认值为0。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AttachType;
 
     /**
      * @var string 用于保留网卡主IP的资源ID用于保留网卡主IP的资源ID。用于删除网卡时作为入参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceId;
 
     /**
      * @var string 服务质量级别：
-<li>`DEFAULT`：默认</li>
-<li>`PT`：云金</li>
-<li>`AU`：云银</li>
-<li>`AG`：云铜</li>
-注意：此字段可能返回 null，表示取不到有效值。
+PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
+
+可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
+
      */
     public $QosLevel;
 
@@ -230,28 +239,29 @@ class NetworkInterface extends AbstractModel
 <li>`ATTACHING`：绑定中</li>
 <li>`DETACHING`：解绑中</li>
 <li>`DELETING`：删除中</li>
+     * @param string $NetworkInterfaceState 弹性网卡状态：
+<li>`PENDING`：创建中</li>
+<li>`AVAILABLE`：可用的</li>
+<li>`ATTACHING`：绑定中</li>
+<li>`DETACHING`：解绑中</li>
+<li>`DELETING`：删除中</li>
+<li>`INUSE`：已绑定</li>
      * @param array $PrivateIpAddressSet 内网IP信息。
      * @param NetworkInterfaceAttachment $Attachment 绑定的云服务器对象。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Zone 可用区。
-     * @param string $CreatedTime 创建时间。
+     * @param string $CreatedTime 创建时间。格式：YYYY-MM-DD hh:mm:ss。示例值：2020-10-28 08:23:59
      * @param array $Ipv6AddressSet `IPv6`地址列表。
      * @param array $TagSet 标签键值对。
-     * @param integer $EniType 网卡类型。0 - 弹性网卡；1 - evm弹性网卡。
-     * @param string $Business 网卡绑定的子机类型：cvm，eks。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $EniType 网卡类型。“0”-辅助网卡，“1”-主网卡，“2”：中继网卡
+     * @param string $Business 网卡绑定的子机类型：cvm（普通CVM子机），eks（弹性容器服务Elastic Kubernetes Service）， hai（高性能应用服务Hyper Application Inventor）。
      * @param string $CdcId 网卡所关联的CDC实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AttachType 弹性网卡类型：0:标准型/1:扩展型。默认值为0。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceId 用于保留网卡主IP的资源ID用于保留网卡主IP的资源ID。用于删除网卡时作为入参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $QosLevel 服务质量级别：
-<li>`DEFAULT`：默认</li>
-<li>`PT`：云金</li>
-<li>`AU`：云银</li>
-<li>`AG`：云铜</li>
-注意：此字段可能返回 null，表示取不到有效值。
+PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
+
+可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
      */
     function __construct()
     {
@@ -300,6 +310,10 @@ class NetworkInterface extends AbstractModel
 
         if (array_key_exists("State",$param) and $param["State"] !== null) {
             $this->State = $param["State"];
+        }
+
+        if (array_key_exists("NetworkInterfaceState",$param) and $param["NetworkInterfaceState"] !== null) {
+            $this->NetworkInterfaceState = $param["NetworkInterfaceState"];
         }
 
         if (array_key_exists("PrivateIpAddressSet",$param) and $param["PrivateIpAddressSet"] !== null) {

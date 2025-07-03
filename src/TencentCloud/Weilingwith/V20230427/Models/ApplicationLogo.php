@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 应用logo
  *
  * @method string getFileId() 获取logo图片对应的fileId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileId(string $FileId) 设置logo图片对应的fileId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUrl() 获取logo图片地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUrl(string $Url) 设置logo图片地址
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApplicationLogo extends AbstractModel
 {
     /**
      * @var string logo图片对应的fileId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileId;
 
     /**
      * @var string logo图片地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Url;
 
     /**
      * @param string $FileId logo图片对应的fileId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Url logo图片地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 实例启动模板版本集合
  *
  * @method integer getLaunchTemplateVersion() 获取实例启动模板版本号。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLaunchTemplateVersion(integer $LaunchTemplateVersion) 设置实例启动模板版本号。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method LaunchTemplateVersionData getLaunchTemplateVersionData() 获取实例启动模板版本数据详情。
  * @method void setLaunchTemplateVersionData(LaunchTemplateVersionData $LaunchTemplateVersionData) 设置实例启动模板版本数据详情。
  * @method string getCreationTime() 获取实例启动模板版本创建时间。
@@ -33,17 +31,14 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getIsDefaultVersion() 获取是否为默认启动模板版本。
  * @method void setIsDefaultVersion(boolean $IsDefaultVersion) 设置是否为默认启动模板版本。
  * @method string getLaunchTemplateVersionDescription() 获取实例启动模板版本描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLaunchTemplateVersionDescription(string $LaunchTemplateVersionDescription) 设置实例启动模板版本描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreatedBy() 获取创建者。
- * @method void setCreatedBy(string $CreatedBy) 设置创建者。
+ * @method string getCreatedBy() 获取创建者的AppId。
+ * @method void setCreatedBy(string $CreatedBy) 设置创建者的AppId。
  */
 class LaunchTemplateVersionInfo extends AbstractModel
 {
     /**
      * @var integer 实例启动模板版本号。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LaunchTemplateVersion;
 
@@ -69,25 +64,22 @@ class LaunchTemplateVersionInfo extends AbstractModel
 
     /**
      * @var string 实例启动模板版本描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LaunchTemplateVersionDescription;
 
     /**
-     * @var string 创建者。
+     * @var string 创建者的AppId。
      */
     public $CreatedBy;
 
     /**
      * @param integer $LaunchTemplateVersion 实例启动模板版本号。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LaunchTemplateVersionData $LaunchTemplateVersionData 实例启动模板版本数据详情。
      * @param string $CreationTime 实例启动模板版本创建时间。
      * @param string $LaunchTemplateId 实例启动模板ID。
      * @param boolean $IsDefaultVersion 是否为默认启动模板版本。
      * @param string $LaunchTemplateVersionDescription 实例启动模板版本描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreatedBy 创建者。
+     * @param string $CreatedBy 创建者的AppId。
      */
     function __construct()
     {

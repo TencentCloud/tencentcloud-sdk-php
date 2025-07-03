@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRegex() 获取key-value二次解析分隔符
  * @method void setRegex(string $Regex) 设置key-value二次解析分隔符
  * @method string getKeepOriginalKey() 获取保留源Key，默认为false不保留
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeepOriginalKey(string $KeepOriginalKey) 设置保留源Key，默认为false不保留
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class KVParam extends AbstractModel
 {
@@ -43,7 +41,6 @@ class KVParam extends AbstractModel
 
     /**
      * @var string 保留源Key，默认为false不保留
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KeepOriginalKey;
 
@@ -51,7 +48,6 @@ class KVParam extends AbstractModel
      * @param string $Delimiter 分隔符
      * @param string $Regex key-value二次解析分隔符
      * @param string $KeepOriginalKey 保留源Key，默认为false不保留
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

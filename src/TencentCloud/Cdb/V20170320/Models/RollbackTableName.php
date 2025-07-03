@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 用于回档的数据库表名
  *
  * @method string getTableName() 获取回档前的原数据库表名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTableName(string $TableName) 设置回档前的原数据库表名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNewTableName() 获取回档后的新数据库表名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNewTableName(string $NewTableName) 设置回档后的新数据库表名
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RollbackTableName extends AbstractModel
 {
     /**
      * @var string 回档前的原数据库表名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TableName;
 
     /**
      * @var string 回档后的新数据库表名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NewTableName;
 
     /**
      * @param string $TableName 回档前的原数据库表名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NewTableName 回档后的新数据库表名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

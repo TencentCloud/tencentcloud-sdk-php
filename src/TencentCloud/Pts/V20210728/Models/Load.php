@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 施压配置
  *
  * @method LoadSpec getLoadSpec() 获取施压配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLoadSpec(LoadSpec $LoadSpec) 设置施压配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method VpcLoadDistribution getVpcLoadDistribution() 获取压力来源
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcLoadDistribution(VpcLoadDistribution $VpcLoadDistribution) 设置压力来源
@@ -37,7 +35,6 @@ class Load extends AbstractModel
 {
     /**
      * @var LoadSpec 施压配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LoadSpec;
 
@@ -55,7 +52,6 @@ class Load extends AbstractModel
 
     /**
      * @param LoadSpec $LoadSpec 施压配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpcLoadDistribution $VpcLoadDistribution 压力来源
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $GeoRegionsLoadDistribution 多地域压力分布

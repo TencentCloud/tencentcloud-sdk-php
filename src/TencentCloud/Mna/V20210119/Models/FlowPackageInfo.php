@@ -45,9 +45,7 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
  * @method integer getStatus() 获取流量包状态，0：未生效，1：有效期内，2：已过期
  * @method void setStatus(integer $Status) 设置流量包状态，0：未生效，1：有效期内，2：已过期
  * @method integer getCreateTime() 获取购买时间，Unix时间戳格式，单位：秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(integer $CreateTime) 设置购买时间，Unix时间戳格式，单位：秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getActiveTime() 获取生效时间，Unix时间戳格式，单位：秒
  * @method void setActiveTime(integer $ActiveTime) 设置生效时间，Unix时间戳格式，单位：秒
  * @method integer getExpireTime() 获取过期时间，Unix时间戳格式，单位：秒
@@ -99,7 +97,6 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
 
     /**
      * @var integer 购买时间，Unix时间戳格式，单位：秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
@@ -162,7 +159,6 @@ DEVICE_5_FLOW_500G，分别代表20G、50G、100G、500G档位的流量包。
 500G：最多绑定5个设备
      * @param integer $Status 流量包状态，0：未生效，1：有效期内，2：已过期
      * @param integer $CreateTime 购买时间，Unix时间戳格式，单位：秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ActiveTime 生效时间，Unix时间戳格式，单位：秒
      * @param integer $ExpireTime 过期时间，Unix时间戳格式，单位：秒
      * @param array $DeviceList 流量包绑定的设备ID列表

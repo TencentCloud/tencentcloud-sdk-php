@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 分账账单趋势图平均值
  *
  * @method string getBeginMonth() 获取起始月份
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBeginMonth(string $BeginMonth) 设置起始月份
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndMonth() 获取结束月份
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndMonth(string $EndMonth) 设置结束月份
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRealTotalCost() 获取合计费用(折后总额)平均值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealTotalCost(string $RealTotalCost) 设置合计费用(折后总额)平均值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AllocationAverageData extends AbstractModel
 {
     /**
      * @var string 起始月份
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BeginMonth;
 
     /**
      * @var string 结束月份
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndMonth;
 
     /**
      * @var string 合计费用(折后总额)平均值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RealTotalCost;
 
     /**
      * @param string $BeginMonth 起始月份
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndMonth 结束月份
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RealTotalCost 合计费用(折后总额)平均值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

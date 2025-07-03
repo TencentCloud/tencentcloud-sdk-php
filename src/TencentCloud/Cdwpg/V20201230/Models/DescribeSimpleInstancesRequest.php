@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSimpleInstances请求参数结构体
  *
- * @method string getSearchInstanceId() 获取11
- * @method void setSearchInstanceId(string $SearchInstanceId) 设置11
- * @method string getSearchInstanceName() 获取11
- * @method void setSearchInstanceName(string $SearchInstanceName) 设置11
- * @method integer getOffset() 获取11
- * @method void setOffset(integer $Offset) 设置11
- * @method integer getLimit() 获取11
- * @method void setLimit(integer $Limit) 设置11
- * @method array getSearchTags() 获取11
- * @method void setSearchTags(array $SearchTags) 设置11
+ * @method string getSearchInstanceId() 获取用集群id搜索
+ * @method void setSearchInstanceId(string $SearchInstanceId) 设置用集群id搜索
+ * @method string getSearchInstanceName() 获取用集群名字搜索
+ * @method void setSearchInstanceName(string $SearchInstanceName) 设置用集群名字搜索
+ * @method integer getOffset() 获取分页参数，第一页为0，第二页为10
+ * @method void setOffset(integer $Offset) 设置分页参数，第一页为0，第二页为10
+ * @method integer getLimit() 获取分页参数，分页步长，默认为10
+ * @method void setLimit(integer $Limit) 设置分页参数，分页步长，默认为10
+ * @method array getSearchTags() 获取用标签列表搜索
+ * @method void setSearchTags(array $SearchTags) 设置用标签列表搜索
  */
 class DescribeSimpleInstancesRequest extends AbstractModel
 {
     /**
-     * @var string 11
+     * @var string 用集群id搜索
      */
     public $SearchInstanceId;
 
     /**
-     * @var string 11
+     * @var string 用集群名字搜索
      */
     public $SearchInstanceName;
 
     /**
-     * @var integer 11
+     * @var integer 分页参数，第一页为0，第二页为10
      */
     public $Offset;
 
     /**
-     * @var integer 11
+     * @var integer 分页参数，分页步长，默认为10
      */
     public $Limit;
 
     /**
-     * @var array 11
+     * @var array 用标签列表搜索
      */
     public $SearchTags;
 
     /**
-     * @param string $SearchInstanceId 11
-     * @param string $SearchInstanceName 11
-     * @param integer $Offset 11
-     * @param integer $Limit 11
-     * @param array $SearchTags 11
+     * @param string $SearchInstanceId 用集群id搜索
+     * @param string $SearchInstanceName 用集群名字搜索
+     * @param integer $Offset 分页参数，第一页为0，第二页为10
+     * @param integer $Limit 分页参数，分页步长，默认为10
+     * @param array $SearchTags 用标签列表搜索
      */
     function __construct()
     {

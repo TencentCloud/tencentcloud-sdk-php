@@ -69,13 +69,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getZone() 获取可用区
  * @method void setZone(string $Zone) 设置可用区
  * @method string getFenceId() 获取金融围笼ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFenceId(string $FenceId) 设置金融围笼ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterId() 获取所属集群ID(默认集群为空)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterId(string $ClusterId) 设置所属集群ID(默认集群为空)
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeInstanceDetail extends AbstractModel
 {
@@ -201,13 +197,11 @@ class DescribeInstanceDetail extends AbstractModel
 
     /**
      * @var string 金融围笼ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FenceId;
 
     /**
      * @var string 所属集群ID(默认集群为空)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterId;
 
@@ -237,9 +231,7 @@ class DescribeInstanceDetail extends AbstractModel
      * @param integer $DiskAssignable 总可分配磁盘(单位:GB)
      * @param string $Zone 可用区
      * @param string $FenceId 金融围笼ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterId 所属集群ID(默认集群为空)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

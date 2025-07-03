@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 告警状态列表返回
  *
  * @method array getList() 获取告警状态返回结构
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setList(array $List) 设置告警状态返回结构
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeAlarmStatusListRes extends AbstractModel
 {
     /**
      * @var array 告警状态返回结构
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $List;
 
     /**
      * @param array $List 告警状态返回结构
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

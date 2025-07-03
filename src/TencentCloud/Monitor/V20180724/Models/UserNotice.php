@@ -76,6 +76,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOnCallFormIDs(array $OnCallFormIDs) 设置值班表id列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVoiceConfirmKey() 获取电话按键确认
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVoiceConfirmKey(string $VoiceConfirmKey) 设置电话按键确认
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class UserNotice extends AbstractModel
 {
@@ -164,6 +168,12 @@ class UserNotice extends AbstractModel
     public $OnCallFormIDs;
 
     /**
+     * @var string 电话按键确认
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VoiceConfirmKey;
+
+    /**
      * @param string $ReceiverType 接收者类型 USER=用户 GROUP=用户组
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StartTime 通知开始时间 00:00:00 开始的秒数（取值范围0-86399）
@@ -191,6 +201,8 @@ class UserNotice extends AbstractModel
      * @param array $Weekday 通知周期 1-7表示周一到周日
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $OnCallFormIDs 值班表id列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VoiceConfirmKey 电话按键确认
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -260,6 +272,10 @@ class UserNotice extends AbstractModel
 
         if (array_key_exists("OnCallFormIDs",$param) and $param["OnCallFormIDs"] !== null) {
             $this->OnCallFormIDs = $param["OnCallFormIDs"];
+        }
+
+        if (array_key_exists("VoiceConfirmKey",$param) and $param["VoiceConfirmKey"] !== null) {
+            $this->VoiceConfirmKey = $param["VoiceConfirmKey"];
         }
     }
 }

@@ -21,53 +21,36 @@ use TencentCloud\Common\AbstractModel;
  * 应用用量统计数据
  *
  * @method RealTimeSpeechStatisticsItem getRealtimeSpeechStatisticsItem() 获取实时语音统计数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealtimeSpeechStatisticsItem(RealTimeSpeechStatisticsItem $RealtimeSpeechStatisticsItem) 设置实时语音统计数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method VoiceMessageStatisticsItem getVoiceMessageStatisticsItem() 获取语音消息统计数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVoiceMessageStatisticsItem(VoiceMessageStatisticsItem $VoiceMessageStatisticsItem) 设置语音消息统计数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method VoiceFilterStatisticsItem getVoiceFilterStatisticsItem() 获取语音过滤统计数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVoiceFilterStatisticsItem(VoiceFilterStatisticsItem $VoiceFilterStatisticsItem) 设置语音过滤统计数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDate() 获取统计时间
  * @method void setDate(string $Date) 设置统计时间
  * @method AudioTextStatisticsItem getAudioTextStatisticsItem() 获取录音转文本用量统计数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAudioTextStatisticsItem(AudioTextStatisticsItem $AudioTextStatisticsItem) 设置录音转文本用量统计数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method StreamTextStatisticsItem getStreamTextStatisticsItem() 获取流式转文本用量数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStreamTextStatisticsItem(StreamTextStatisticsItem $StreamTextStatisticsItem) 设置流式转文本用量数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method OverseaTextStatisticsItem getOverseaTextStatisticsItem() 获取海外转文本用量数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOverseaTextStatisticsItem(OverseaTextStatisticsItem $OverseaTextStatisticsItem) 设置海外转文本用量数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method RealtimeTextStatisticsItem getRealtimeTextStatisticsItem() 获取实时语音转文本用量数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealtimeTextStatisticsItem(RealtimeTextStatisticsItem $RealtimeTextStatisticsItem) 设置实时语音转文本用量数据
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AppStatisticsItem extends AbstractModel
 {
     /**
      * @var RealTimeSpeechStatisticsItem 实时语音统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RealtimeSpeechStatisticsItem;
 
     /**
      * @var VoiceMessageStatisticsItem 语音消息统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VoiceMessageStatisticsItem;
 
     /**
      * @var VoiceFilterStatisticsItem 语音过滤统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VoiceFilterStatisticsItem;
 
@@ -78,44 +61,33 @@ class AppStatisticsItem extends AbstractModel
 
     /**
      * @var AudioTextStatisticsItem 录音转文本用量统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AudioTextStatisticsItem;
 
     /**
      * @var StreamTextStatisticsItem 流式转文本用量数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StreamTextStatisticsItem;
 
     /**
      * @var OverseaTextStatisticsItem 海外转文本用量数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OverseaTextStatisticsItem;
 
     /**
      * @var RealtimeTextStatisticsItem 实时语音转文本用量数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RealtimeTextStatisticsItem;
 
     /**
      * @param RealTimeSpeechStatisticsItem $RealtimeSpeechStatisticsItem 实时语音统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VoiceMessageStatisticsItem $VoiceMessageStatisticsItem 语音消息统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VoiceFilterStatisticsItem $VoiceFilterStatisticsItem 语音过滤统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Date 统计时间
      * @param AudioTextStatisticsItem $AudioTextStatisticsItem 录音转文本用量统计数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StreamTextStatisticsItem $StreamTextStatisticsItem 流式转文本用量数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OverseaTextStatisticsItem $OverseaTextStatisticsItem 海外转文本用量数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RealtimeTextStatisticsItem $RealtimeTextStatisticsItem 实时语音转文本用量数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

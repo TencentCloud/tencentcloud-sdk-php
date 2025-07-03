@@ -66,6 +66,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBuyerTaxID(string $BuyerTaxID) 设置统一社会信用代码
  * @method array getFlightItems() 获取机票详细信息元组
  * @method void setFlightItems(array $FlightItems) 设置机票详细信息元组
+ * @method string getInvoiceStatus() 获取机票开具状态
+ * @method void setInvoiceStatus(string $InvoiceStatus) 设置机票开具状态
  */
 class ElectronicFlightTicketFull extends AbstractModel
 {
@@ -185,6 +187,11 @@ class ElectronicFlightTicketFull extends AbstractModel
     public $FlightItems;
 
     /**
+     * @var string 机票开具状态
+     */
+    public $InvoiceStatus;
+
+    /**
      * @param string $UserName 旅客姓名
      * @param string $UserID 有效身份证件号码
      * @param string $Endorsement 签注
@@ -208,6 +215,7 @@ class ElectronicFlightTicketFull extends AbstractModel
      * @param string $Seller 销售方名称
      * @param string $BuyerTaxID 统一社会信用代码
      * @param array $FlightItems 机票详细信息元组
+     * @param string $InvoiceStatus 机票开具状态
      */
     function __construct()
     {
@@ -317,6 +325,10 @@ class ElectronicFlightTicketFull extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->FlightItems, $obj);
             }
+        }
+
+        if (array_key_exists("InvoiceStatus",$param) and $param["InvoiceStatus"] !== null) {
+            $this->InvoiceStatus = $param["InvoiceStatus"];
         }
     }
 }

@@ -21,41 +21,23 @@ use TencentCloud\Common\AbstractModel;
  * DescribeCaptchaMiniDataSum返回参数结构体
  *
  * @method integer getGetSum() 获取请求总量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGetSum(integer $GetSum) 设置请求总量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVfySuccSum() 获取请求验证成功量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVfySuccSum(integer $VfySuccSum) 设置请求验证成功量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVfySum() 获取请求验证量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVfySum(integer $VfySum) 设置请求验证量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAttackSum() 获取拦截攻击量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAttackSum(integer $AttackSum) 设置拦截攻击量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCaptchaMsg() 获取返回信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCaptchaMsg(string $CaptchaMsg) 设置返回信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCaptchaCode() 获取成功返回0  其它失败
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCaptchaCode(integer $CaptchaCode) 设置成功返回0  其它失败
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCheckTicketSum() 获取票据校验总量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCheckTicketSum(integer $CheckTicketSum) 设置票据校验总量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTicketThroughputSum() 获取票据验证通过量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTicketThroughputSum(integer $TicketThroughputSum) 设置票据验证通过量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTicketInterceptSum() 获取票据验证拦截量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTicketInterceptSum(integer $TicketInterceptSum) 设置票据验证拦截量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -63,55 +45,46 @@ class DescribeCaptchaMiniDataSumResponse extends AbstractModel
 {
     /**
      * @var integer 请求总量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GetSum;
 
     /**
      * @var integer 请求验证成功量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VfySuccSum;
 
     /**
      * @var integer 请求验证量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VfySum;
 
     /**
      * @var integer 拦截攻击量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AttackSum;
 
     /**
      * @var string 返回信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CaptchaMsg;
 
     /**
      * @var integer 成功返回0  其它失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CaptchaCode;
 
     /**
      * @var integer 票据校验总量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CheckTicketSum;
 
     /**
      * @var integer 票据验证通过量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TicketThroughputSum;
 
     /**
      * @var integer 票据验证拦截量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TicketInterceptSum;
 
@@ -122,23 +95,14 @@ class DescribeCaptchaMiniDataSumResponse extends AbstractModel
 
     /**
      * @param integer $GetSum 请求总量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VfySuccSum 请求验证成功量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VfySum 请求验证量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AttackSum 拦截攻击量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CaptchaMsg 返回信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CaptchaCode 成功返回0  其它失败
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CheckTicketSum 票据校验总量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TicketThroughputSum 票据验证通过量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TicketInterceptSum 票据验证拦截量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

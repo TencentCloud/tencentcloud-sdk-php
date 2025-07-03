@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 告警接收人的关联策略使用信息
  *
  * @method integer getReceiverId() 获取接收人id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReceiverId(integer $ReceiverId) 设置接收人id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReceiverName() 获取接收人名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReceiverName(string $ReceiverName) 设置接收人名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPolicyName() 获取策略名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolicyName(string $PolicyName) 设置策略名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class WebHookReceiverUsage extends AbstractModel
 {
     /**
      * @var integer 接收人id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReceiverId;
 
     /**
      * @var string 接收人名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReceiverName;
 
     /**
      * @var string 策略名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PolicyName;
 
     /**
      * @param integer $ReceiverId 接收人id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReceiverName 接收人名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PolicyName 策略名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

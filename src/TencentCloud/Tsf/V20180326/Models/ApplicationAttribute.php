@@ -21,45 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 应用列表其它字段
  *
  * @method integer getInstanceCount() 获取总实例个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceCount(integer $InstanceCount) 设置总实例个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRunInstanceCount() 获取运行实例个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRunInstanceCount(integer $RunInstanceCount) 设置运行实例个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getGroupCount() 获取应用下部署组个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupCount(integer $GroupCount) 设置应用下部署组个数
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRunningGroupCount() 获取运行中部署组个数
+ * @method void setRunningGroupCount(string $RunningGroupCount) 设置运行中部署组个数
+ * @method string getAbnormalCount() 获取异常部署组个数
+ * @method void setAbnormalCount(string $AbnormalCount) 设置异常部署组个数
  */
 class ApplicationAttribute extends AbstractModel
 {
     /**
      * @var integer 总实例个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceCount;
 
     /**
      * @var integer 运行实例个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RunInstanceCount;
 
     /**
      * @var integer 应用下部署组个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupCount;
 
     /**
+     * @var string 运行中部署组个数
+     */
+    public $RunningGroupCount;
+
+    /**
+     * @var string 异常部署组个数
+     */
+    public $AbnormalCount;
+
+    /**
      * @param integer $InstanceCount 总实例个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RunInstanceCount 运行实例个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $GroupCount 应用下部署组个数
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RunningGroupCount 运行中部署组个数
+     * @param string $AbnormalCount 异常部署组个数
      */
     function __construct()
     {
@@ -84,6 +88,14 @@ class ApplicationAttribute extends AbstractModel
 
         if (array_key_exists("GroupCount",$param) and $param["GroupCount"] !== null) {
             $this->GroupCount = $param["GroupCount"];
+        }
+
+        if (array_key_exists("RunningGroupCount",$param) and $param["RunningGroupCount"] !== null) {
+            $this->RunningGroupCount = $param["RunningGroupCount"];
+        }
+
+        if (array_key_exists("AbnormalCount",$param) and $param["AbnormalCount"] !== null) {
+            $this->AbnormalCount = $param["AbnormalCount"];
         }
     }
 }

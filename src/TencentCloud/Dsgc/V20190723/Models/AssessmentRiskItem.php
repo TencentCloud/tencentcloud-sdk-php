@@ -21,117 +21,81 @@ use TencentCloud\Common\AbstractModel;
  * 风险项列表详细数据
  *
  * @method integer getId() 获取脆弱项id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(integer $Id) 设置脆弱项id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRiskName() 获取名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskName(string $RiskName) 设置名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLevel() 获取脆弱性级别
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevel(string $Level) 设置脆弱性级别
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取说明
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置说明
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRiskType() 获取风险类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskType(string $RiskType) 设置风险类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getReferTemplateCount() 获取关联模板个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReferTemplateCount(integer $ReferTemplateCount) 设置关联模板个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSupportDataSource() 获取支持的数据源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSupportDataSource(array $SupportDataSource) 设置支持的数据源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRiskSide() 获取风险面
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskSide(string $RiskSide) 设置风险面
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getReferTemplateList() 获取关联模板列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReferTemplateList(array $ReferTemplateList) 设置关联模板列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssessmentRiskItem extends AbstractModel
 {
     /**
      * @var integer 脆弱项id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var string 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskName;
 
     /**
      * @var string 脆弱性级别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Level;
 
     /**
      * @var string 说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var string 风险类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskType;
 
     /**
      * @var integer 关联模板个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReferTemplateCount;
 
     /**
      * @var array 支持的数据源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SupportDataSource;
 
     /**
      * @var string 风险面
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskSide;
 
     /**
      * @var array 关联模板列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReferTemplateList;
 
     /**
      * @param integer $Id 脆弱项id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RiskName 名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Level 脆弱性级别
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 说明
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RiskType 风险类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ReferTemplateCount 关联模板个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SupportDataSource 支持的数据源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RiskSide 风险面
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ReferTemplateList 关联模板列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

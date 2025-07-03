@@ -33,9 +33,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getProjectId() 获取主机业务组ID
  * @method void setProjectId(integer $ProjectId) 设置主机业务组ID
  * @method array getTag() 获取主机标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTag(array $Tag) 设置主机标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProcessName() 获取进程名称
  * @method void setProcessName(string $ProcessName) 设置进程名称
  * @method string getProcessVersion() 获取进程版本
@@ -69,17 +67,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMachineName() 获取主机名称
  * @method void setMachineName(string $MachineName) 设置主机名称
  * @method string getUpdateTime() 获取数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFirstTime() 获取首次采集时间
  * @method void setFirstTime(string $FirstTime) 设置首次采集时间
  * @method integer getIsNew() 获取是否新增[0:否|1:是]
  * @method void setIsNew(integer $IsNew) 设置是否新增[0:否|1:是]
  * @method MachineExtraInfo getMachineExtraInfo() 获取 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssetPortBaseInfo extends AbstractModel
 {
@@ -115,7 +109,6 @@ class AssetPortBaseInfo extends AbstractModel
 
     /**
      * @var array 主机标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tag;
 
@@ -201,7 +194,6 @@ class AssetPortBaseInfo extends AbstractModel
 
     /**
      * @var string 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
@@ -217,7 +209,6 @@ class AssetPortBaseInfo extends AbstractModel
 
     /**
      * @var MachineExtraInfo  附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineExtraInfo;
 
@@ -229,7 +220,6 @@ class AssetPortBaseInfo extends AbstractModel
      * @param string $OsInfo 操作系统信息
      * @param integer $ProjectId 主机业务组ID
      * @param array $Tag 主机标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProcessName 进程名称
      * @param string $ProcessVersion 进程版本
      * @param string $ProcessPath 进程路径
@@ -247,11 +237,9 @@ class AssetPortBaseInfo extends AbstractModel
      * @param string $BindIp 绑定IP
      * @param string $MachineName 主机名称
      * @param string $UpdateTime 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FirstTime 首次采集时间
      * @param integer $IsNew 是否新增[0:否|1:是]
      * @param MachineExtraInfo $MachineExtraInfo  附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

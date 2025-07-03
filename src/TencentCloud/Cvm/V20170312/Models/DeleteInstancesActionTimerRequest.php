@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteInstancesActionTimer请求参数结构体
  *
- * @method array getActionTimerIds() 获取定时任务ID列表，可以通过DescribeInstancesActionTimer接口查询。只能删除未执行的定时任务。
- * @method void setActionTimerIds(array $ActionTimerIds) 设置定时任务ID列表，可以通过DescribeInstancesActionTimer接口查询。只能删除未执行的定时任务。
+ * @method array getActionTimerIds() 获取定时任务ID列表，可以通过[ DescribeInstancesActionTimer ](https://cloud.tencent.com/document/product/213/103950)接口查询。只能删除未执行的定时任务。
+ * @method void setActionTimerIds(array $ActionTimerIds) 设置定时任务ID列表，可以通过[ DescribeInstancesActionTimer ](https://cloud.tencent.com/document/product/213/103950)接口查询。只能删除未执行的定时任务。
  */
 class DeleteInstancesActionTimerRequest extends AbstractModel
 {
     /**
-     * @var array 定时任务ID列表，可以通过DescribeInstancesActionTimer接口查询。只能删除未执行的定时任务。
+     * @var array 定时任务ID列表，可以通过[ DescribeInstancesActionTimer ](https://cloud.tencent.com/document/product/213/103950)接口查询。只能删除未执行的定时任务。
      */
     public $ActionTimerIds;
 
     /**
-     * @param array $ActionTimerIds 定时任务ID列表，可以通过DescribeInstancesActionTimer接口查询。只能删除未执行的定时任务。
+     * @param array $ActionTimerIds 定时任务ID列表，可以通过[ DescribeInstancesActionTimer ](https://cloud.tencent.com/document/product/213/103950)接口查询。只能删除未执行的定时任务。
      */
     function __construct()
     {

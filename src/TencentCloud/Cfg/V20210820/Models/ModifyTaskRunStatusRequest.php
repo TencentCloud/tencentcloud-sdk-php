@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsExpect(boolean $IsExpect) 设置执行结果是否符合预期（当前扭转状态为执行结束时，需要必传此字段）
  * @method string getSummary() 获取演习结论（当演习状态转变为执行结束时，需要填写此字段）
  * @method void setSummary(string $Summary) 设置演习结论（当演习状态转变为执行结束时，需要填写此字段）
+ * @method string getIssue() 获取问题以及改进
+ * @method void setIssue(string $Issue) 设置问题以及改进
+ * @method string getRecord() 获取演练记录
+ * @method void setRecord(string $Record) 设置演练记录
  */
 class ModifyTaskRunStatusRequest extends AbstractModel
 {
@@ -52,10 +56,22 @@ class ModifyTaskRunStatusRequest extends AbstractModel
     public $Summary;
 
     /**
+     * @var string 问题以及改进
+     */
+    public $Issue;
+
+    /**
+     * @var string 演练记录
+     */
+    public $Record;
+
+    /**
      * @param integer $TaskId 任务ID
      * @param integer $Status 任务状态, 1001--未开始 1002--进行中（执行）1003--进行中（暂停）1004--执行结束
      * @param boolean $IsExpect 执行结果是否符合预期（当前扭转状态为执行结束时，需要必传此字段）
      * @param string $Summary 演习结论（当演习状态转变为执行结束时，需要填写此字段）
+     * @param string $Issue 问题以及改进
+     * @param string $Record 演练记录
      */
     function __construct()
     {
@@ -84,6 +100,14 @@ class ModifyTaskRunStatusRequest extends AbstractModel
 
         if (array_key_exists("Summary",$param) and $param["Summary"] !== null) {
             $this->Summary = $param["Summary"];
+        }
+
+        if (array_key_exists("Issue",$param) and $param["Issue"] !== null) {
+            $this->Issue = $param["Issue"];
+        }
+
+        if (array_key_exists("Record",$param) and $param["Record"] !== null) {
+            $this->Record = $param["Record"];
         }
     }
 }

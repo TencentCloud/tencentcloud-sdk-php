@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDbName(string $DbName) 设置数据库名称
  * @method string getProjectId() 获取项目ID
  * @method void setProjectId(string $ProjectId) 设置项目ID
+ * @method string getFunctionResourceFileType() 获取函数资源文件类型
+ * @method void setFunctionResourceFileType(string $FunctionResourceFileType) 设置函数资源文件类型
  */
 class CreateCustomFunctionRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class CreateCustomFunctionRequest extends AbstractModel
     public $ProjectId;
 
     /**
+     * @var string 函数资源文件类型
+     */
+    public $FunctionResourceFileType;
+
+    /**
      * @param string $Type 枚举值：HIVE、SPARK、DLC
      * @param string $Kind 枚举值：ANALYSIS(函数)、ENCRYPTION(加密函数)、AGGREGATE(聚合函数)、LOGIC(逻辑函数)、DATE_AND_TIME(日期与时间函数)、MATH(数学函数)、CONVERSION(转换函数)、STRING(字符串函数)、IP_AND_DOMAIN(IP和域名函数)、WINDOW(窗口函数)、OTHER(其他函数)
      * @param string $Name 函数名称
      * @param string $ClusterIdentifier 集群实例引擎 ID
      * @param string $DbName 数据库名称
      * @param string $ProjectId 项目ID
+     * @param string $FunctionResourceFileType 函数资源文件类型
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class CreateCustomFunctionRequest extends AbstractModel
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("FunctionResourceFileType",$param) and $param["FunctionResourceFileType"] !== null) {
+            $this->FunctionResourceFileType = $param["FunctionResourceFileType"];
         }
     }
 }

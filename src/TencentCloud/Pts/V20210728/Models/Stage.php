@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 分阶段施压时，对单个阶段的配置
  *
  * @method integer getDurationSeconds() 获取施压时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDurationSeconds(integer $DurationSeconds) 设置施压时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTargetVirtualUsers() 获取虚拟用户数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargetVirtualUsers(integer $TargetVirtualUsers) 设置虚拟用户数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Stage extends AbstractModel
 {
     /**
      * @var integer 施压时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DurationSeconds;
 
     /**
      * @var integer 虚拟用户数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetVirtualUsers;
 
     /**
      * @param integer $DurationSeconds 施压时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TargetVirtualUsers 虚拟用户数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

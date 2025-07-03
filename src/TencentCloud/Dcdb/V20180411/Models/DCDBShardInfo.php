@@ -61,17 +61,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getProxyVersion() 获取Proxy版本
  * @method void setProxyVersion(string $ProxyVersion) 设置Proxy版本
  * @method string getPaymode() 获取付费模型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPaymode(string $Paymode) 设置付费模型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getShardMasterZone() 获取分片的主可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setShardMasterZone(string $ShardMasterZone) 设置分片的主可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getShardSlaveZones() 获取分片的从可用区列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setShardSlaveZones(array $ShardSlaveZones) 设置分片的从可用区列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCpu() 获取CPU核数
  * @method void setCpu(integer $Cpu) 设置CPU核数
  * @method string getRange() 获取分片ShardKey的范围（总共64个哈希值），例如： 0-31，32-63
@@ -181,19 +175,16 @@ class DCDBShardInfo extends AbstractModel
 
     /**
      * @var string 付费模型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Paymode;
 
     /**
      * @var string 分片的主可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ShardMasterZone;
 
     /**
      * @var array 分片的从可用区列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ShardSlaveZones;
 
@@ -229,11 +220,8 @@ class DCDBShardInfo extends AbstractModel
      * @param integer $Pid 产品ProductID
      * @param string $ProxyVersion Proxy版本
      * @param string $Paymode 付费模型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ShardMasterZone 分片的主可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ShardSlaveZones 分片的从可用区列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Cpu CPU核数
      * @param string $Range 分片ShardKey的范围（总共64个哈希值），例如： 0-31，32-63
      */

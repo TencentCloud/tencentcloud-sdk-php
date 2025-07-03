@@ -36,6 +36,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setShowTemplateComponent(boolean $ShowTemplateComponent) 设置模板预览，允许展示模板控件信息
 <ul><li> <b>true</b> :允许在模板预览页展示控件</li>
 <li> <b>false</b> :（默认）不允许在模板预览页展示控件</li></ul>
+ * @method string getSkipUploadFile() 获取跳过上传文件，默认为false(展示上传文件页）![image](https://qcloudimg.tencent-cloud.cn/raw/8ca33745cf772e79831dbe5a70e82400.png)
+- false: 展示上传文件页
+- true: 不展示上传文件页
+ 
+
+注意: 此参数仅针对**EmbedType=CREATE_TEMPLATE(创建模板)有效**，
+ * @method void setSkipUploadFile(string $SkipUploadFile) 设置跳过上传文件，默认为false(展示上传文件页）![image](https://qcloudimg.tencent-cloud.cn/raw/8ca33745cf772e79831dbe5a70e82400.png)
+- false: 展示上传文件页
+- true: 不展示上传文件页
+ 
+
+注意: 此参数仅针对**EmbedType=CREATE_TEMPLATE(创建模板)有效**，
+ * @method boolean getForbidEditWatermark() 获取是否禁止编辑（展示）水印控件属性
+<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
+ * @method void setForbidEditWatermark(boolean $ForbidEditWatermark) 设置是否禁止编辑（展示）水印控件属性
+<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
  */
 class EmbedUrlOption extends AbstractModel
 {
@@ -56,6 +72,22 @@ class EmbedUrlOption extends AbstractModel
     public $ShowTemplateComponent;
 
     /**
+     * @var string 跳过上传文件，默认为false(展示上传文件页）![image](https://qcloudimg.tencent-cloud.cn/raw/8ca33745cf772e79831dbe5a70e82400.png)
+- false: 展示上传文件页
+- true: 不展示上传文件页
+ 
+
+注意: 此参数仅针对**EmbedType=CREATE_TEMPLATE(创建模板)有效**，
+     */
+    public $SkipUploadFile;
+
+    /**
+     * @var boolean 是否禁止编辑（展示）水印控件属性
+<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
+     */
+    public $ForbidEditWatermark;
+
+    /**
      * @param boolean $ShowFlowDetailComponent 合同详情预览，允许展示控件信息
 <ul>
 <li><b>true</b>：允许在合同详情页展示控件</li>
@@ -64,6 +96,14 @@ class EmbedUrlOption extends AbstractModel
      * @param boolean $ShowTemplateComponent 模板预览，允许展示模板控件信息
 <ul><li> <b>true</b> :允许在模板预览页展示控件</li>
 <li> <b>false</b> :（默认）不允许在模板预览页展示控件</li></ul>
+     * @param string $SkipUploadFile 跳过上传文件，默认为false(展示上传文件页）![image](https://qcloudimg.tencent-cloud.cn/raw/8ca33745cf772e79831dbe5a70e82400.png)
+- false: 展示上传文件页
+- true: 不展示上传文件页
+ 
+
+注意: 此参数仅针对**EmbedType=CREATE_TEMPLATE(创建模板)有效**，
+     * @param boolean $ForbidEditWatermark 是否禁止编辑（展示）水印控件属性
+<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
      */
     function __construct()
     {
@@ -84,6 +124,14 @@ class EmbedUrlOption extends AbstractModel
 
         if (array_key_exists("ShowTemplateComponent",$param) and $param["ShowTemplateComponent"] !== null) {
             $this->ShowTemplateComponent = $param["ShowTemplateComponent"];
+        }
+
+        if (array_key_exists("SkipUploadFile",$param) and $param["SkipUploadFile"] !== null) {
+            $this->SkipUploadFile = $param["SkipUploadFile"];
+        }
+
+        if (array_key_exists("ForbidEditWatermark",$param) and $param["ForbidEditWatermark"] !== null) {
+            $this->ForbidEditWatermark = $param["ForbidEditWatermark"];
         }
     }
 }

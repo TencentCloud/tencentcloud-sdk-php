@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 引擎规格详情
  *
  * @method string getStartTime() 获取统计开始时间，格式为：yyyy-MM-dd HH:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(string $StartTime) 设置统计开始时间，格式为：yyyy-MM-dd HH:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndTime() 获取统计结束时间，格式为：yyyy-MM-dd HH:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置统计结束时间，格式为：yyyy-MM-dd HH:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCU() 获取当前统计时间段，引擎规格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCU(integer $CU) 设置当前统计时间段，引擎规格
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataEngineScaleInfoDetail extends AbstractModel
 {
     /**
      * @var string 统计开始时间，格式为：yyyy-MM-dd HH:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
      * @var string 统计结束时间，格式为：yyyy-MM-dd HH:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
      * @var integer 当前统计时间段，引擎规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CU;
 
     /**
      * @param string $StartTime 统计开始时间，格式为：yyyy-MM-dd HH:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndTime 统计结束时间，格式为：yyyy-MM-dd HH:mm:ss
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CU 当前统计时间段，引擎规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

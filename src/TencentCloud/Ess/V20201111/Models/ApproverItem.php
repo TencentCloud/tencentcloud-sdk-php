@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 签署方信息，发起合同后可获取到对应的签署方信息，如角色ID，角色名称
  *
  * @method string getSignId() 获取签署方唯一编号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSignId(string $SignId) 设置签署方唯一编号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRecipientId() 获取签署方角色编号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecipientId(string $RecipientId) 设置签署方角色编号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApproverRoleName() 获取签署方角色名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApproverRoleName(string $ApproverRoleName) 设置签署方角色名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApproverItem extends AbstractModel
 {
     /**
      * @var string 签署方唯一编号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SignId;
 
     /**
      * @var string 签署方角色编号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecipientId;
 
     /**
      * @var string 签署方角色名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApproverRoleName;
 
     /**
      * @param string $SignId 签署方唯一编号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RecipientId 签署方角色编号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApproverRoleName 签署方角色名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

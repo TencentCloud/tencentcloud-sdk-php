@@ -31,9 +31,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTemplateType() 获取参数模板类型
  * @method void setTemplateType(string $TemplateType) 设置参数模板类型
  * @method string getEngineType() 获取参数模板引擎
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEngineType(string $EngineType) 设置参数模板引擎
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ParamTemplateInfo extends AbstractModel
 {
@@ -64,7 +62,6 @@ class ParamTemplateInfo extends AbstractModel
 
     /**
      * @var string 参数模板引擎
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EngineType;
 
@@ -75,7 +72,6 @@ class ParamTemplateInfo extends AbstractModel
      * @param string $EngineVersion 实例引擎版本
      * @param string $TemplateType 参数模板类型
      * @param string $EngineType 参数模板引擎
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

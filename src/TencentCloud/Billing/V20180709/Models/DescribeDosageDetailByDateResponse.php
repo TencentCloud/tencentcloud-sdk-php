@@ -21,21 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * DescribeDosageDetailByDate返回参数结构体
  *
  * @method string getUnit() 获取计量单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnit(string $Unit) 设置计量单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDetailSets() 获取用量数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDetailSets(array $DetailSets) 设置用量数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRetCode() 获取错误码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRetCode(integer $RetCode) 设置错误码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRetMsg() 获取错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRetMsg(string $RetMsg) 设置错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -43,25 +35,21 @@ class DescribeDosageDetailByDateResponse extends AbstractModel
 {
     /**
      * @var string 计量单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Unit;
 
     /**
      * @var array 用量数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DetailSets;
 
     /**
      * @var integer 错误码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RetCode;
 
     /**
      * @var string 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RetMsg;
 
@@ -72,13 +60,9 @@ class DescribeDosageDetailByDateResponse extends AbstractModel
 
     /**
      * @param string $Unit 计量单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DetailSets 用量数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RetCode 错误码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RetMsg 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

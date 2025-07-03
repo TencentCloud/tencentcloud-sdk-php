@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 异地登录合并后白名单
  *
  * @method array getPlaces() 获取白名单地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPlaces(array $Places) 设置白名单地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserName() 获取白名单用户（多个用户逗号隔开）
  * @method void setUserName(string $UserName) 设置白名单用户（多个用户逗号隔开）
  * @method string getSrcIp() 获取白名单IP（多个IP逗号隔开）
@@ -57,7 +55,6 @@ class LoginWhiteCombinedInfo extends AbstractModel
 {
     /**
      * @var array 白名单地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Places;
 
@@ -133,7 +130,6 @@ class LoginWhiteCombinedInfo extends AbstractModel
 
     /**
      * @param array $Places 白名单地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserName 白名单用户（多个用户逗号隔开）
      * @param string $SrcIp 白名单IP（多个IP逗号隔开）
      * @param string $Locale 地域字符串

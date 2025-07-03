@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 批量修改topic参数
  *
- * @method string getTopicName() 获取topic名称
- * @method void setTopicName(string $TopicName) 设置topic名称
+ * @method string getTopicName() 获取主题名
+ * @method void setTopicName(string $TopicName) 设置主题名
  * @method integer getPartitionNum() 获取分区数
  * @method void setPartitionNum(integer $PartitionNum) 设置分区数
  * @method string getNote() 获取备注
@@ -42,11 +42,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSegmentMs(integer $SegmentMs) 设置Segment分片滚动的时长（毫秒），范围1 到90 天
  * @method integer getMaxMessageBytes() 获取批次的消息大小，范围1 KB到12 MB
  * @method void setMaxMessageBytes(integer $MaxMessageBytes) 设置批次的消息大小，范围1 KB到12 MB
+ * @method string getLogMsgTimestampType() 获取消息保存的时间类型：CreateTime/LogAppendTime
+ * @method void setLogMsgTimestampType(string $LogMsgTimestampType) 设置消息保存的时间类型：CreateTime/LogAppendTime
  */
 class BatchModifyTopicInfo extends AbstractModel
 {
     /**
-     * @var string topic名称
+     * @var string 主题名
      */
     public $TopicName;
 
@@ -101,7 +103,12 @@ class BatchModifyTopicInfo extends AbstractModel
     public $MaxMessageBytes;
 
     /**
-     * @param string $TopicName topic名称
+     * @var string 消息保存的时间类型：CreateTime/LogAppendTime
+     */
+    public $LogMsgTimestampType;
+
+    /**
+     * @param string $TopicName 主题名
      * @param integer $PartitionNum 分区数
      * @param string $Note 备注
      * @param integer $ReplicaNum 副本数
@@ -112,6 +119,7 @@ class BatchModifyTopicInfo extends AbstractModel
      * @param integer $RetentionBytes topic维度的消息保留大小，范围1 MB到1024 GB
      * @param integer $SegmentMs Segment分片滚动的时长（毫秒），范围1 到90 天
      * @param integer $MaxMessageBytes 批次的消息大小，范围1 KB到12 MB
+     * @param string $LogMsgTimestampType 消息保存的时间类型：CreateTime/LogAppendTime
      */
     function __construct()
     {
@@ -168,6 +176,10 @@ class BatchModifyTopicInfo extends AbstractModel
 
         if (array_key_exists("MaxMessageBytes",$param) and $param["MaxMessageBytes"] !== null) {
             $this->MaxMessageBytes = $param["MaxMessageBytes"];
+        }
+
+        if (array_key_exists("LogMsgTimestampType",$param) and $param["LogMsgTimestampType"] !== null) {
+            $this->LogMsgTimestampType = $param["LogMsgTimestampType"];
         }
     }
 }

@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * SmartOptimizerIndexPolicy
  *
  * @method string getIndexEnable() 获取开启索引
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIndexEnable(string $IndexEnable) 设置开启索引
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SmartOptimizerIndexPolicy extends AbstractModel
 {
     /**
      * @var string 开启索引
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IndexEnable;
 
     /**
      * @param string $IndexEnable 开启索引
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

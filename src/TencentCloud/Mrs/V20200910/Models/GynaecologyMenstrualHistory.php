@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 体检报告-妇科-月经史
  *
  * @method KeyValueItem getText() 获取妇科月经史总体描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setText(KeyValueItem $Text) 设置妇科月经史总体描述
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class GynaecologyMenstrualHistory extends AbstractModel
 {
     /**
      * @var KeyValueItem 妇科月经史总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Text;
 
     /**
      * @param KeyValueItem $Text 妇科月经史总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 设备控制后返回结果集合
  *
  * @method array getSet() 获取设备控制后返回结果集合
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSet(array $Set) 设置设备控制后返回结果集合
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ControlDeviceSet extends AbstractModel
 {
     /**
      * @var array 设备控制后返回结果集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Set;
 
     /**
      * @param array $Set 设备控制后返回结果集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

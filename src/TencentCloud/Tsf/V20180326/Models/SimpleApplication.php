@@ -21,141 +21,113 @@ use TencentCloud\Common\AbstractModel;
  * 简单应用
  *
  * @method string getApplicationId() 获取应用ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationId(string $ApplicationId) 设置应用ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApplicationName() 获取应用名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationName(string $ApplicationName) 设置应用名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApplicationType() 获取应用类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationType(string $ApplicationType) 设置应用类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMicroserviceType() 获取应用微服务类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMicroserviceType(string $MicroserviceType) 设置应用微服务类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApplicationDesc() 获取ApplicationDesc
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationDesc(string $ApplicationDesc) 设置ApplicationDesc
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProgLang() 获取ProgLang
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProgLang(string $ProgLang) 设置ProgLang
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApplicationResourceType() 获取ApplicationResourceType
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationResourceType(string $ApplicationResourceType) 设置ApplicationResourceType
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取CreateTime
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置CreateTime
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取UpdateTime
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置UpdateTime
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApigatewayServiceId() 获取ApigatewayServiceId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApigatewayServiceId(string $ApigatewayServiceId) 设置ApigatewayServiceId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApplicationRuntimeType() 获取ApplicationRuntimeType
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationRuntimeType(string $ApplicationRuntimeType) 设置ApplicationRuntimeType
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAmpInstanceId() 获取Apm业务系统id
+ * @method void setAmpInstanceId(string $AmpInstanceId) 设置Apm业务系统id
+ * @method string getApmInstanceName() 获取Apm业务系统Name
+ * @method void setApmInstanceName(string $ApmInstanceName) 设置Apm业务系统Name
  */
 class SimpleApplication extends AbstractModel
 {
     /**
      * @var string 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationId;
 
     /**
      * @var string 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationName;
 
     /**
      * @var string 应用类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationType;
 
     /**
      * @var string 应用微服务类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MicroserviceType;
 
     /**
      * @var string ApplicationDesc
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationDesc;
 
     /**
      * @var string ProgLang
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProgLang;
 
     /**
      * @var string ApplicationResourceType
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationResourceType;
 
     /**
      * @var string CreateTime
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string UpdateTime
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @var string ApigatewayServiceId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApigatewayServiceId;
 
     /**
      * @var string ApplicationRuntimeType
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationRuntimeType;
 
     /**
+     * @var string Apm业务系统id
+     */
+    public $AmpInstanceId;
+
+    /**
+     * @var string Apm业务系统Name
+     */
+    public $ApmInstanceName;
+
+    /**
      * @param string $ApplicationId 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationName 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationType 应用类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MicroserviceType 应用微服务类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationDesc ApplicationDesc
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProgLang ProgLang
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationResourceType ApplicationResourceType
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime CreateTime
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime UpdateTime
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApigatewayServiceId ApigatewayServiceId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationRuntimeType ApplicationRuntimeType
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AmpInstanceId Apm业务系统id
+     * @param string $ApmInstanceName Apm业务系统Name
      */
     function __construct()
     {
@@ -212,6 +184,14 @@ class SimpleApplication extends AbstractModel
 
         if (array_key_exists("ApplicationRuntimeType",$param) and $param["ApplicationRuntimeType"] !== null) {
             $this->ApplicationRuntimeType = $param["ApplicationRuntimeType"];
+        }
+
+        if (array_key_exists("AmpInstanceId",$param) and $param["AmpInstanceId"] !== null) {
+            $this->AmpInstanceId = $param["AmpInstanceId"];
+        }
+
+        if (array_key_exists("ApmInstanceName",$param) and $param["ApmInstanceName"] !== null) {
+            $this->ApmInstanceName = $param["ApmInstanceName"];
         }
     }
 }

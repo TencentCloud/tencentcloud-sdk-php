@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 边缘容器集群可用的自定义参数
  *
  * @method array getKubeAPIServer() 获取kube-apiserver可用的自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKubeAPIServer(array $KubeAPIServer) 设置kube-apiserver可用的自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getKubeControllerManager() 获取kube-controller-manager可用的自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKubeControllerManager(array $KubeControllerManager) 设置kube-controller-manager可用的自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getKubeScheduler() 获取kube-scheduler可用的自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKubeScheduler(array $KubeScheduler) 设置kube-scheduler可用的自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getKubelet() 获取kubelet可用的自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKubelet(array $Kubelet) 设置kubelet可用的自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class EdgeAvailableExtraArgs extends AbstractModel
 {
     /**
      * @var array kube-apiserver可用的自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KubeAPIServer;
 
     /**
      * @var array kube-controller-manager可用的自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KubeControllerManager;
 
     /**
      * @var array kube-scheduler可用的自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KubeScheduler;
 
     /**
      * @var array kubelet可用的自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Kubelet;
 
     /**
      * @param array $KubeAPIServer kube-apiserver可用的自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $KubeControllerManager kube-controller-manager可用的自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $KubeScheduler kube-scheduler可用的自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Kubelet kubelet可用的自定义参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

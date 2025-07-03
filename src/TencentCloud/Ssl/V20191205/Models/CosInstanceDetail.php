@@ -23,21 +23,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
  * @method string getCertId() 获取已绑定的证书ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertId(string $CertId) 设置已绑定的证书ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取ENABLED: 域名上线状态
 DISABLED:域名下线状态
  * @method void setStatus(string $Status) 设置ENABLED: 域名上线状态
 DISABLED:域名下线状态
  * @method string getBucket() 获取存储桶名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBucket(string $Bucket) 设置存储桶名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegion() 获取存储桶地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置存储桶地域
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CosInstanceDetail extends AbstractModel
 {
@@ -48,7 +42,6 @@ class CosInstanceDetail extends AbstractModel
 
     /**
      * @var string 已绑定的证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CertId;
 
@@ -60,26 +53,21 @@ DISABLED:域名下线状态
 
     /**
      * @var string 存储桶名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Bucket;
 
     /**
      * @var string 存储桶地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
      * @param string $Domain 域名
      * @param string $CertId 已绑定的证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status ENABLED: 域名上线状态
 DISABLED:域名下线状态
      * @param string $Bucket 存储桶名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 存储桶地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

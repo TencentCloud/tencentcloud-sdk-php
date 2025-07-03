@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 数据库地址
  *
  * @method string getVip() 获取IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVip(string $Vip) 设置IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVport() 获取端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVport(integer $Vport) 设置端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReturnTime() 获取期望执行回收时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReturnTime(string $ReturnTime) 设置期望执行回收时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OldAddrInfo extends AbstractModel
 {
     /**
      * @var string IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Vip;
 
     /**
      * @var integer 端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Vport;
 
     /**
      * @var string 期望执行回收时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReturnTime;
 
     /**
      * @param string $Vip IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Vport 端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReturnTime 期望执行回收时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

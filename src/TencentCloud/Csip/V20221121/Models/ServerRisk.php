@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getServiceTag() 获取测绘标签
  * @method void setServiceTag(string $ServiceTag) 设置测绘标签
  * @method integer getPort() 获取端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPort(integer $Port) 设置端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAffectAsset() 获取影响资产
  * @method void setAffectAsset(string $AffectAsset) 设置影响资产
  * @method string getInstanceId() 获取实例id
@@ -47,49 +45,35 @@ use TencentCloud\Common\AbstractModel;
  * @method string getFirstTime() 获取首次识别时间
  * @method void setFirstTime(string $FirstTime) 设置首次识别时间
  * @method string getRiskDetails() 获取风险详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskDetails(string $RiskDetails) 设置风险详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSuggestion() 获取处置建议
  * @method void setSuggestion(string $Suggestion) 设置处置建议
- * @method integer getStatus() 获取状态，0未处理、1已处置、2已忽略
- * @method void setStatus(integer $Status) 设置状态，0未处理、1已处置、2已忽略
+ * @method integer getStatus() 获取状态，0未处理、1已处置、2已忽略、3云防已防护
+ * @method void setStatus(integer $Status) 设置状态，0未处理、1已处置、2已忽略、3云防已防护
  * @method string getId() 获取资产唯一id
  * @method void setId(string $Id) 设置资产唯一id
  * @method string getAppId() 获取用户appid
  * @method void setAppId(string $AppId) 设置用户appid
  * @method string getNick() 获取用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNick(string $Nick) 设置用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUin() 获取用户uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUin(string $Uin) 设置用户uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getServiceSnapshot() 获取服务快照
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceSnapshot(string $ServiceSnapshot) 设置服务快照
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUrl() 获取服务访问的url
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUrl(string $Url) 设置服务访问的url
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIndex() 获取列表索引值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIndex(string $Index) 设置列表索引值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRiskList() 获取风险列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskList(array $RiskList) 设置风险列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSuggestionList() 获取建议列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSuggestionList(array $SuggestionList) 设置建议列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatusCode() 获取HTTP响应状态码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatusCode(string $StatusCode) 设置HTTP响应状态码
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNewLevel() 获取新风险等级,high_risk 高危 suspect 疑似 Normal 暂无风险
+ * @method void setNewLevel(string $NewLevel) 设置新风险等级,high_risk 高危 suspect 疑似 Normal 暂无风险
+ * @method integer getXspmStatus() 获取状态，0未处理、1已处置、2已忽略、3云防已防护、4无需处理
+ * @method void setXspmStatus(integer $XspmStatus) 设置状态，0未处理、1已处置、2已忽略、3云防已防护、4无需处理
  */
 class ServerRisk extends AbstractModel
 {
@@ -100,7 +84,6 @@ class ServerRisk extends AbstractModel
 
     /**
      * @var integer 端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Port;
 
@@ -156,7 +139,6 @@ class ServerRisk extends AbstractModel
 
     /**
      * @var string 风险详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskDetails;
 
@@ -166,7 +148,7 @@ class ServerRisk extends AbstractModel
     public $Suggestion;
 
     /**
-     * @var integer 状态，0未处理、1已处置、2已忽略
+     * @var integer 状态，0未处理、1已处置、2已忽略、3云防已防护
      */
     public $Status;
 
@@ -182,56 +164,57 @@ class ServerRisk extends AbstractModel
 
     /**
      * @var string 用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Nick;
 
     /**
      * @var string 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uin;
 
     /**
      * @var string 服务快照
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceSnapshot;
 
     /**
      * @var string 服务访问的url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Url;
 
     /**
      * @var string 列表索引值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Index;
 
     /**
      * @var array 风险列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskList;
 
     /**
      * @var array 建议列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SuggestionList;
 
     /**
      * @var string HTTP响应状态码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StatusCode;
 
     /**
+     * @var string 新风险等级,high_risk 高危 suspect 疑似 Normal 暂无风险
+     */
+    public $NewLevel;
+
+    /**
+     * @var integer 状态，0未处理、1已处置、2已忽略、3云防已防护、4无需处理
+     */
+    public $XspmStatus;
+
+    /**
      * @param string $ServiceTag 测绘标签
      * @param integer $Port 端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AffectAsset 影响资产
      * @param string $InstanceId 实例id
      * @param string $InstanceName 实例名
@@ -243,27 +226,20 @@ class ServerRisk extends AbstractModel
      * @param string $RecentTime 最近识别时间
      * @param string $FirstTime 首次识别时间
      * @param string $RiskDetails 风险详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Suggestion 处置建议
-     * @param integer $Status 状态，0未处理、1已处置、2已忽略
+     * @param integer $Status 状态，0未处理、1已处置、2已忽略、3云防已防护
      * @param string $Id 资产唯一id
      * @param string $AppId 用户appid
      * @param string $Nick 用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uin 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceSnapshot 服务快照
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Url 服务访问的url
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Index 列表索引值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RiskList 风险列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SuggestionList 建议列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StatusCode HTTP响应状态码
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NewLevel 新风险等级,high_risk 高危 suspect 疑似 Normal 暂无风险
+     * @param integer $XspmStatus 状态，0未处理、1已处置、2已忽略、3云防已防护、4无需处理
      */
     function __construct()
     {
@@ -386,6 +362,14 @@ class ServerRisk extends AbstractModel
 
         if (array_key_exists("StatusCode",$param) and $param["StatusCode"] !== null) {
             $this->StatusCode = $param["StatusCode"];
+        }
+
+        if (array_key_exists("NewLevel",$param) and $param["NewLevel"] !== null) {
+            $this->NewLevel = $param["NewLevel"];
+        }
+
+        if (array_key_exists("XspmStatus",$param) and $param["XspmStatus"] !== null) {
+            $this->XspmStatus = $param["XspmStatus"];
         }
     }
 }

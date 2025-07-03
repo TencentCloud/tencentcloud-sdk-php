@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTaskId() 获取迁移任务Id
  * @method void setTaskId(string $TaskId) 设置迁移任务Id
- * @method integer getStatus() 获取迁移状态。0: 已完成；1: 进行中；2: 已终止
- * @method void setStatus(integer $Status) 设置迁移状态。0: 已完成；1: 进行中；2: 已终止
+ * @method integer getStatus() 获取迁移状态。0: 已完成；1: 创建中；2: 运行中；3: 终止中；4: 已终止；5: 创建失败；6: 运行失败；7: 结束中；8: 删除中；9: 等待中
+ * @method void setStatus(integer $Status) 设置迁移状态。0: 已完成；1: 创建中；2: 运行中；3: 终止中；4: 已终止；5: 创建失败；6: 运行失败；7: 结束中；8: 删除中；9: 等待中
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,7 +35,7 @@ class StopMigrationTaskResponse extends AbstractModel
     public $TaskId;
 
     /**
-     * @var integer 迁移状态。0: 已完成；1: 进行中；2: 已终止
+     * @var integer 迁移状态。0: 已完成；1: 创建中；2: 运行中；3: 终止中；4: 已终止；5: 创建失败；6: 运行失败；7: 结束中；8: 删除中；9: 等待中
      */
     public $Status;
 
@@ -46,7 +46,7 @@ class StopMigrationTaskResponse extends AbstractModel
 
     /**
      * @param string $TaskId 迁移任务Id
-     * @param integer $Status 迁移状态。0: 已完成；1: 进行中；2: 已终止
+     * @param integer $Status 迁移状态。0: 已完成；1: 创建中；2: 运行中；3: 终止中；4: 已终止；5: 创建失败；6: 运行失败；7: 结束中；8: 删除中；9: 等待中
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -25,31 +25,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getProductId() 获取产品ID
  * @method void setProductId(string $ProductId) 设置产品ID
  * @method string getName() 获取固件名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置固件名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取固件描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置固件描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMd5sum() 获取固件Md5值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMd5sum(string $Md5sum) 设置固件Md5值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreatetime() 获取固件上传的秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatetime(integer $Createtime) 设置固件上传的秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProductName() 获取产品名称
  * @method void setProductName(string $ProductName) 设置产品名称
  * @method string getFwType() 获取固件升级模块
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFwType(string $FwType) 设置固件升级模块
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserDefined() 获取固件用户自定义配置信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserDefined(string $UserDefined) 设置固件用户自定义配置信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -67,25 +55,21 @@ class DescribeFirmwareResponse extends AbstractModel
 
     /**
      * @var string 固件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 固件描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var string 固件Md5值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Md5sum;
 
     /**
      * @var integer 固件上传的秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Createtime;
 
@@ -96,13 +80,11 @@ class DescribeFirmwareResponse extends AbstractModel
 
     /**
      * @var string 固件升级模块
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FwType;
 
     /**
      * @var string 固件用户自定义配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserDefined;
 
@@ -115,18 +97,12 @@ class DescribeFirmwareResponse extends AbstractModel
      * @param string $Version 固件版本号
      * @param string $ProductId 产品ID
      * @param string $Name 固件名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 固件描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Md5sum 固件Md5值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Createtime 固件上传的秒级时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProductName 产品名称
      * @param string $FwType 固件升级模块
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserDefined 固件用户自定义配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

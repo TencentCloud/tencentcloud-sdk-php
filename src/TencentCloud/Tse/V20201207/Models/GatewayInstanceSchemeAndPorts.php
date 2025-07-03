@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 网关实例协议端口列表
  *
  * @method string getScheme() 获取端口协议，可选HTTP、HTTPS、TCP和UDP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScheme(string $Scheme) 设置端口协议，可选HTTP、HTTPS、TCP和UDP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPortList() 获取端口列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPortList(array $PortList) 设置端口列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class GatewayInstanceSchemeAndPorts extends AbstractModel
 {
     /**
      * @var string 端口协议，可选HTTP、HTTPS、TCP和UDP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Scheme;
 
     /**
      * @var array 端口列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PortList;
 
     /**
      * @param string $Scheme 端口协议，可选HTTP、HTTPS、TCP和UDP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PortList 端口列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

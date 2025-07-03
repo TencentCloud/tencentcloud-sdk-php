@@ -24,18 +24,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRole(string $Role) 设置角色，可选值包括 system、user、assistant、 tool。
  * @method string getContent() 获取文本内容
  * @method void setContent(string $Content) 设置文本内容
- * @method array getContents() 获取多种类型内容（目前支持图片和文本），仅 hunyuan-vision 模型支持
+ * @method array getContents() 获取多种类型内容（目前支持图片和文本），仅 hunyuan-vision 和 hunyuan-turbo-vision 模型支持
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setContents(array $Contents) 设置多种类型内容（目前支持图片和文本），仅 hunyuan-vision 模型支持
+ * @method void setContents(array $Contents) 设置多种类型内容（目前支持图片和文本），仅 hunyuan-vision 和 hunyuan-turbo-vision 模型支持
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getToolCallId() 获取当role为tool时传入，标识具体的函数调用
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setToolCallId(string $ToolCallId) 设置当role为tool时传入，标识具体的函数调用
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getToolCalls() 获取模型生成的工具调用，仅 hunyuan-functioncall 模型支持
+ * @method array getToolCalls() 获取模型生成的工具调用，仅 hunyuan-pro 或者 hunyuan-functioncall 模型支持
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setToolCalls(array $ToolCalls) 设置模型生成的工具调用，仅 hunyuan-functioncall 模型支持
+ * @method void setToolCalls(array $ToolCalls) 设置模型生成的工具调用，仅 hunyuan-pro 或者 hunyuan-functioncall 模型支持
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getFileIDs() 获取文件标识符。单次最大 50 个文件。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFileIDs(array $FileIDs) 设置文件标识符。单次最大 50 个文件。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getReasoningContent() 获取思维链内容。用于展示模型思考过程，仅 Hunyuan-T1 系列模型可用。注意：在进行多轮对话时，请**不要**将此字段拼接到 messages 中。请求 messages 的请求参数中包含 reasoning_content，接口将报错。
+ * @method void setReasoningContent(string $ReasoningContent) 设置思维链内容。用于展示模型思考过程，仅 Hunyuan-T1 系列模型可用。注意：在进行多轮对话时，请**不要**将此字段拼接到 messages 中。请求 messages 的请求参数中包含 reasoning_content，接口将报错。
  */
 class Message extends AbstractModel
 {
@@ -50,7 +56,7 @@ class Message extends AbstractModel
     public $Content;
 
     /**
-     * @var array 多种类型内容（目前支持图片和文本），仅 hunyuan-vision 模型支持
+     * @var array 多种类型内容（目前支持图片和文本），仅 hunyuan-vision 和 hunyuan-turbo-vision 模型支持
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Contents;
@@ -62,20 +68,34 @@ class Message extends AbstractModel
     public $ToolCallId;
 
     /**
-     * @var array 模型生成的工具调用，仅 hunyuan-functioncall 模型支持
+     * @var array 模型生成的工具调用，仅 hunyuan-pro 或者 hunyuan-functioncall 模型支持
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ToolCalls;
 
     /**
+     * @var array 文件标识符。单次最大 50 个文件。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FileIDs;
+
+    /**
+     * @var string 思维链内容。用于展示模型思考过程，仅 Hunyuan-T1 系列模型可用。注意：在进行多轮对话时，请**不要**将此字段拼接到 messages 中。请求 messages 的请求参数中包含 reasoning_content，接口将报错。
+     */
+    public $ReasoningContent;
+
+    /**
      * @param string $Role 角色，可选值包括 system、user、assistant、 tool。
      * @param string $Content 文本内容
-     * @param array $Contents 多种类型内容（目前支持图片和文本），仅 hunyuan-vision 模型支持
+     * @param array $Contents 多种类型内容（目前支持图片和文本），仅 hunyuan-vision 和 hunyuan-turbo-vision 模型支持
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ToolCallId 当role为tool时传入，标识具体的函数调用
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ToolCalls 模型生成的工具调用，仅 hunyuan-functioncall 模型支持
+     * @param array $ToolCalls 模型生成的工具调用，仅 hunyuan-pro 或者 hunyuan-functioncall 模型支持
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $FileIDs 文件标识符。单次最大 50 个文件。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ReasoningContent 思维链内容。用于展示模型思考过程，仅 Hunyuan-T1 系列模型可用。注意：在进行多轮对话时，请**不要**将此字段拼接到 messages 中。请求 messages 的请求参数中包含 reasoning_content，接口将报错。
      */
     function __construct()
     {
@@ -118,6 +138,14 @@ class Message extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ToolCalls, $obj);
             }
+        }
+
+        if (array_key_exists("FileIDs",$param) and $param["FileIDs"] !== null) {
+            $this->FileIDs = $param["FileIDs"];
+        }
+
+        if (array_key_exists("ReasoningContent",$param) and $param["ReasoningContent"] !== null) {
+            $this->ReasoningContent = $param["ReasoningContent"];
         }
     }
 }

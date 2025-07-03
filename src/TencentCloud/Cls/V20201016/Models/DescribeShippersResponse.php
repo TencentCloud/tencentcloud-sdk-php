@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * DescribeShippers返回参数结构体
  *
  * @method array getShippers() 获取投递规则列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setShippers(array $Shippers) 设置投递规则列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取本次查询获取到的总数
  * @method void setTotalCount(integer $TotalCount) 设置本次查询获取到的总数
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -33,7 +31,6 @@ class DescribeShippersResponse extends AbstractModel
 {
     /**
      * @var array 投递规则列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Shippers;
 
@@ -49,7 +46,6 @@ class DescribeShippersResponse extends AbstractModel
 
     /**
      * @param array $Shippers 投递规则列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 本次查询获取到的总数
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

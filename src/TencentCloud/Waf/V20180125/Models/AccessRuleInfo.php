@@ -22,21 +22,15 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method AccessFullTextInfo getFullText() 获取全文索引配置
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFullText(AccessFullTextInfo $FullText) 设置全文索引配置
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method AccessRuleKeyValueInfo getKeyValue() 获取键值索引配置
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeyValue(AccessRuleKeyValueInfo $KeyValue) 设置键值索引配置
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method AccessRuleTagInfo getTag() 获取元字段索引配置
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTag(AccessRuleTagInfo $Tag) 设置元字段索引配置
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AccessRuleInfo extends AbstractModel
@@ -44,13 +38,11 @@ class AccessRuleInfo extends AbstractModel
     /**
      * @var AccessFullTextInfo 全文索引配置
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FullText;
 
     /**
      * @var AccessRuleKeyValueInfo 键值索引配置
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KeyValue;
@@ -58,19 +50,15 @@ class AccessRuleInfo extends AbstractModel
     /**
      * @var AccessRuleTagInfo 元字段索引配置
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tag;
 
     /**
      * @param AccessFullTextInfo $FullText 全文索引配置
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccessRuleKeyValueInfo $KeyValue 键值索引配置
 注意：此字段可能返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccessRuleTagInfo $Tag 元字段索引配置
-注意：此字段可能返回 null，表示取不到有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

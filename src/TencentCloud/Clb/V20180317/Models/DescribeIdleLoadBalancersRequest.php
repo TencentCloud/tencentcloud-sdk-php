@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置数据偏移量，默认为0。
  * @method integer getLimit() 获取返回负载均衡实例的数量，默认为20，最大值为100。
  * @method void setLimit(integer $Limit) 设置返回负载均衡实例的数量，默认为20，最大值为100。
- * @method string getLoadBalancerRegion() 获取负载均衡所在地域。
- * @method void setLoadBalancerRegion(string $LoadBalancerRegion) 设置负载均衡所在地域。
+ * @method string getLoadBalancerRegion() 获取负载均衡所在地域，可以通过 [DescribeRegions](https://cloud.tencent.com/document/product/1596/77930) 接口返回值 `RegionSet.Region` 字段获取。
+ * @method void setLoadBalancerRegion(string $LoadBalancerRegion) 设置负载均衡所在地域，可以通过 [DescribeRegions](https://cloud.tencent.com/document/product/1596/77930) 接口返回值 `RegionSet.Region` 字段获取。
  */
 class DescribeIdleLoadBalancersRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DescribeIdleLoadBalancersRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 负载均衡所在地域。
+     * @var string 负载均衡所在地域，可以通过 [DescribeRegions](https://cloud.tencent.com/document/product/1596/77930) 接口返回值 `RegionSet.Region` 字段获取。
      */
     public $LoadBalancerRegion;
 
     /**
      * @param integer $Offset 数据偏移量，默认为0。
      * @param integer $Limit 返回负载均衡实例的数量，默认为20，最大值为100。
-     * @param string $LoadBalancerRegion 负载均衡所在地域。
+     * @param string $LoadBalancerRegion 负载均衡所在地域，可以通过 [DescribeRegions](https://cloud.tencent.com/document/product/1596/77930) 接口返回值 `RegionSet.Region` 字段获取。
      */
     function __construct()
     {

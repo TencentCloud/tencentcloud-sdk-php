@@ -33,9 +33,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getProjectId() 获取所属项目
  * @method void setProjectId(integer $ProjectId) 设置所属项目
  * @method string getDefaultValue() 获取默认入口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefaultValue(string $DefaultValue) 设置默认入口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProxyCount() 获取通道数量
  * @method void setProxyCount(integer $ProxyCount) 设置通道数量
  * @method integer getCreateTime() 获取创建时间，使用UNIX时间戳
@@ -45,13 +43,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateTime(integer $UpdateTime) 设置更新时间，使用UNIX时间戳
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTagSet() 获取标签列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagSet(array $TagSet) 设置标签列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBanStatus() 获取封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBanStatus(string $BanStatus) 设置封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Domain extends AbstractModel
 {
@@ -87,7 +81,6 @@ class Domain extends AbstractModel
 
     /**
      * @var string 默认入口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DefaultValue;
 
@@ -109,13 +102,11 @@ class Domain extends AbstractModel
 
     /**
      * @var array 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagSet;
 
     /**
      * @var string 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BanStatus;
 
@@ -127,15 +118,12 @@ class Domain extends AbstractModel
      * @param integer $Status 状态，1表示关闭，0表示开启，2表示关闭中，3表示开启中
      * @param integer $ProjectId 所属项目
      * @param string $DefaultValue 默认入口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProxyCount 通道数量
      * @param integer $CreateTime 创建时间，使用UNIX时间戳
      * @param integer $UpdateTime 更新时间，使用UNIX时间戳
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TagSet 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BanStatus 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

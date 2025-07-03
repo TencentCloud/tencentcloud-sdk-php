@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * InquirePriceRunInstances返回参数结构体
  *
  * @method Price getPrice() 获取发货参数对应的价格组合，当DryRun=True，会返回空
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrice(Price $Price) 设置发货参数对应的价格组合，当DryRun=True，会返回空
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -31,7 +29,6 @@ class InquirePriceRunInstancesResponse extends AbstractModel
 {
     /**
      * @var Price 发货参数对应的价格组合，当DryRun=True，会返回空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Price;
 
@@ -42,7 +39,6 @@ class InquirePriceRunInstancesResponse extends AbstractModel
 
     /**
      * @param Price $Price 发货参数对应的价格组合，当DryRun=True，会返回空
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

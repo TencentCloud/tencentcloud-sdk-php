@@ -20,28 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeHostTkeInstanceList请求参数结构体
  *
- * @method string getCertificateId() 获取待部署的证书ID
- * @method void setCertificateId(string $CertificateId) 设置待部署的证书ID
  * @method integer getOffset() 获取分页偏移量，从0开始。
  * @method void setOffset(integer $Offset) 设置分页偏移量，从0开始。
  * @method integer getLimit() 获取每页数量，默认10。
  * @method void setLimit(integer $Limit) 设置每页数量，默认10。
+ * @method string getCertificateId() 获取待部署的证书ID
+ * @method void setCertificateId(string $CertificateId) 设置待部署的证书ID
  * @method integer getIsCache() 获取是否查询缓存，1：是； 0：否， 默认为查询缓存，缓存半小时
  * @method void setIsCache(integer $IsCache) 设置是否查询缓存，1：是； 0：否， 默认为查询缓存，缓存半小时
  * @method array getFilters() 获取过滤参数列表； FilterKey：domainMatch（查询域名是否匹配的实例列表） FilterValue：1，表示查询匹配； 0，表示查询不匹配； 默认查询匹配
  * @method void setFilters(array $Filters) 设置过滤参数列表； FilterKey：domainMatch（查询域名是否匹配的实例列表） FilterValue：1，表示查询匹配； 0，表示查询不匹配； 默认查询匹配
- * @method integer getAsyncCache() 获取是否异步缓存
- * @method void setAsyncCache(integer $AsyncCache) 设置是否异步缓存
+ * @method integer getAsyncCache() 获取是否异步缓存，0表示否，1表示是，默认为0
+ * @method void setAsyncCache(integer $AsyncCache) 设置是否异步缓存，0表示否，1表示是，默认为0
  * @method string getOldCertificateId() 获取原证书ID
  * @method void setOldCertificateId(string $OldCertificateId) 设置原证书ID
  */
 class DescribeHostTkeInstanceListRequest extends AbstractModel
 {
-    /**
-     * @var string 待部署的证书ID
-     */
-    public $CertificateId;
-
     /**
      * @var integer 分页偏移量，从0开始。
      */
@@ -51,6 +46,11 @@ class DescribeHostTkeInstanceListRequest extends AbstractModel
      * @var integer 每页数量，默认10。
      */
     public $Limit;
+
+    /**
+     * @var string 待部署的证书ID
+     */
+    public $CertificateId;
 
     /**
      * @var integer 是否查询缓存，1：是； 0：否， 默认为查询缓存，缓存半小时
@@ -63,7 +63,7 @@ class DescribeHostTkeInstanceListRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var integer 是否异步缓存
+     * @var integer 是否异步缓存，0表示否，1表示是，默认为0
      */
     public $AsyncCache;
 
@@ -73,12 +73,12 @@ class DescribeHostTkeInstanceListRequest extends AbstractModel
     public $OldCertificateId;
 
     /**
-     * @param string $CertificateId 待部署的证书ID
      * @param integer $Offset 分页偏移量，从0开始。
      * @param integer $Limit 每页数量，默认10。
+     * @param string $CertificateId 待部署的证书ID
      * @param integer $IsCache 是否查询缓存，1：是； 0：否， 默认为查询缓存，缓存半小时
      * @param array $Filters 过滤参数列表； FilterKey：domainMatch（查询域名是否匹配的实例列表） FilterValue：1，表示查询匹配； 0，表示查询不匹配； 默认查询匹配
-     * @param integer $AsyncCache 是否异步缓存
+     * @param integer $AsyncCache 是否异步缓存，0表示否，1表示是，默认为0
      * @param string $OldCertificateId 原证书ID
      */
     function __construct()
@@ -94,16 +94,16 @@ class DescribeHostTkeInstanceListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CertificateId",$param) and $param["CertificateId"] !== null) {
-            $this->CertificateId = $param["CertificateId"];
-        }
-
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
         }
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("CertificateId",$param) and $param["CertificateId"] !== null) {
+            $this->CertificateId = $param["CertificateId"];
         }
 
         if (array_key_exists("IsCache",$param) and $param["IsCache"] !== null) {

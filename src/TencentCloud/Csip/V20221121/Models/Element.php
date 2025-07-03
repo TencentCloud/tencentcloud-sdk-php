@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 统计条目
  *
  * @method string getKey() 获取统计类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKey(string $Key) 设置统计类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取统计对象
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置统计对象
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Element extends AbstractModel
 {
     /**
      * @var string 统计类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Key;
 
     /**
      * @var string 统计对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @param string $Key 统计类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 统计对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

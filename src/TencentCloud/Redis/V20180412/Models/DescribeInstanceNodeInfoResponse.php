@@ -23,21 +23,15 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getProxyCount() 获取Proxy节点数量。
  * @method void setProxyCount(integer $ProxyCount) 设置Proxy节点数量。
  * @method array getProxy() 获取Proxy节点信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProxy(array $Proxy) 设置Proxy节点信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRedisCount() 获取Redis节点数量。
  * @method void setRedisCount(integer $RedisCount) 设置Redis节点数量。
  * @method array getRedis() 获取Redis节点信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRedis(array $Redis) 设置Redis节点信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTendisCount() 获取该参数不再使用，请忽略。
  * @method void setTendisCount(integer $TendisCount) 设置该参数不再使用，请忽略。
  * @method array getTendis() 获取该参数不再使用，请忽略。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTendis(array $Tendis) 设置该参数不再使用，请忽略。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -50,7 +44,6 @@ class DescribeInstanceNodeInfoResponse extends AbstractModel
 
     /**
      * @var array Proxy节点信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Proxy;
 
@@ -61,7 +54,6 @@ class DescribeInstanceNodeInfoResponse extends AbstractModel
 
     /**
      * @var array Redis节点信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Redis;
 
@@ -72,7 +64,6 @@ class DescribeInstanceNodeInfoResponse extends AbstractModel
 
     /**
      * @var array 该参数不再使用，请忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tendis;
 
@@ -84,13 +75,10 @@ class DescribeInstanceNodeInfoResponse extends AbstractModel
     /**
      * @param integer $ProxyCount Proxy节点数量。
      * @param array $Proxy Proxy节点信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RedisCount Redis节点数量。
      * @param array $Redis Redis节点信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TendisCount 该参数不再使用，请忽略。
      * @param array $Tendis 该参数不再使用，请忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

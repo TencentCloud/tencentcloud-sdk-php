@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAudioAuditNotifyUrl(string $AudioAuditNotifyUrl) 设置音频审核回调 URL。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRecordExceptionNotifyUrl() 获取录制异常回调 URL。
+ * @method void setRecordExceptionNotifyUrl(string $RecordExceptionNotifyUrl) 设置录制异常回调 URL。
+ * @method array getRecordExceptionLevels() 获取录制异常回调级别，可选择：error: 错误。alarm: 告警。
+ * @method void setRecordExceptionLevels(array $RecordExceptionLevels) 设置录制异常回调级别，可选择：error: 错误。alarm: 告警。
  */
 class CallBackTemplateInfo extends AbstractModel
 {
@@ -114,6 +118,16 @@ class CallBackTemplateInfo extends AbstractModel
     public $AudioAuditNotifyUrl;
 
     /**
+     * @var string 录制异常回调 URL。
+     */
+    public $RecordExceptionNotifyUrl;
+
+    /**
+     * @var array 录制异常回调级别，可选择：error: 错误。alarm: 告警。
+     */
+    public $RecordExceptionLevels;
+
+    /**
      * @param integer $TemplateId 模板 ID。
      * @param string $TemplateName 模板名称。
      * @param string $Description 描述信息。
@@ -128,6 +142,8 @@ class CallBackTemplateInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AudioAuditNotifyUrl 音频审核回调 URL。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RecordExceptionNotifyUrl 录制异常回调 URL。
+     * @param array $RecordExceptionLevels 录制异常回调级别，可选择：error: 错误。alarm: 告警。
      */
     function __construct()
     {
@@ -188,6 +204,14 @@ class CallBackTemplateInfo extends AbstractModel
 
         if (array_key_exists("AudioAuditNotifyUrl",$param) and $param["AudioAuditNotifyUrl"] !== null) {
             $this->AudioAuditNotifyUrl = $param["AudioAuditNotifyUrl"];
+        }
+
+        if (array_key_exists("RecordExceptionNotifyUrl",$param) and $param["RecordExceptionNotifyUrl"] !== null) {
+            $this->RecordExceptionNotifyUrl = $param["RecordExceptionNotifyUrl"];
+        }
+
+        if (array_key_exists("RecordExceptionLevels",$param) and $param["RecordExceptionLevels"] !== null) {
+            $this->RecordExceptionLevels = $param["RecordExceptionLevels"];
         }
     }
 }

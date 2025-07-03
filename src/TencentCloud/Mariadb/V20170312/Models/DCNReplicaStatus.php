@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * DCN的状态信息
  *
  * @method string getStatus() 获取DCN 的运行状态，START为正常运行，STOP为暂停，
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置DCN 的运行状态，START为正常运行，STOP为暂停，
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDelay() 获取当前延迟情况，取备实例的 master 节点的 delay 值
  * @method void setDelay(integer $Delay) 设置当前延迟情况，取备实例的 master 节点的 delay 值
  */
@@ -31,7 +29,6 @@ class DCNReplicaStatus extends AbstractModel
 {
     /**
      * @var string DCN 的运行状态，START为正常运行，STOP为暂停，
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
@@ -42,7 +39,6 @@ class DCNReplicaStatus extends AbstractModel
 
     /**
      * @param string $Status DCN 的运行状态，START为正常运行，STOP为暂停，
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Delay 当前延迟情况，取备实例的 master 节点的 delay 值
      */
     function __construct()

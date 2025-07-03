@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPartitions(array $Partitions) 设置分区
  * @method string getName() 获取当前表名
  * @method void setName(string $Name) 设置当前表名
+ * @method string getDatasourceConnectionName() 获取数据源连接名
+ * @method void setDatasourceConnectionName(string $DatasourceConnectionName) 设置数据源连接名
  */
 class AlterDMSTableRequest extends AbstractModel
 {
@@ -150,6 +152,11 @@ class AlterDMSTableRequest extends AbstractModel
     public $Name;
 
     /**
+     * @var string 数据源连接名
+     */
+    public $DatasourceConnectionName;
+
+    /**
      * @param string $CurrentName 当前名称
      * @param string $CurrentDbName 当前数据库名称
      * @param Asset $Asset 基础对象
@@ -168,6 +175,7 @@ class AlterDMSTableRequest extends AbstractModel
      * @param string $ViewExpandedText 视图文本
      * @param array $Partitions 分区
      * @param string $Name 当前表名
+     * @param string $DatasourceConnectionName 数据源连接名
      */
     function __construct()
     {
@@ -269,6 +277,10 @@ class AlterDMSTableRequest extends AbstractModel
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("DatasourceConnectionName",$param) and $param["DatasourceConnectionName"] !== null) {
+            $this->DatasourceConnectionName = $param["DatasourceConnectionName"];
         }
     }
 }

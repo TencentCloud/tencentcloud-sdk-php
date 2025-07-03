@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAction(integer $Action) 设置状态
  * @method string getActionDesc() 获取状态描述
  * @method void setActionDesc(string $ActionDesc) 设置状态描述
- * @method integer getSource() 获取来源
- * @method void setSource(integer $Source) 设置来源
+ * @method integer getSource() 获取来源1:文档生成，2：批量导入，3：手动添加
+ * @method void setSource(integer $Source) 设置来源1:文档生成，2：批量导入，3：手动添加
  * @method string getSourceDesc() 获取来源描述
  * @method void setSourceDesc(string $SourceDesc) 设置来源描述
  * @method string getFileName() 获取文件名字
@@ -68,7 +68,7 @@ class ReleaseQA extends AbstractModel
     public $ActionDesc;
 
     /**
-     * @var integer 来源
+     * @var integer 来源1:文档生成，2：批量导入，3：手动添加
      */
     public $Source;
 
@@ -112,7 +112,7 @@ class ReleaseQA extends AbstractModel
      * @param string $UpdateTime 更新时间
      * @param integer $Action 状态
      * @param string $ActionDesc 状态描述
-     * @param integer $Source 来源
+     * @param integer $Source 来源1:文档生成，2：批量导入，3：手动添加
      * @param string $SourceDesc 来源描述
      * @param string $FileName 文件名字
      * @param string $FileType 文档类型

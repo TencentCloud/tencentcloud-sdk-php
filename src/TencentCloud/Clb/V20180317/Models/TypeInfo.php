@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 运营商类型信息
  *
  * @method string getType() 获取运营商类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置运营商类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSpecAvailabilitySet() 获取规格可用性
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpecAvailabilitySet(array $SpecAvailabilitySet) 设置规格可用性
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TypeInfo extends AbstractModel
 {
     /**
      * @var string 运营商类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var array 规格可用性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SpecAvailabilitySet;
 
     /**
      * @param string $Type 运营商类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SpecAvailabilitySet 规格可用性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

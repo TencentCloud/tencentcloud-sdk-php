@@ -21,17 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * 虚拟机部署组信息
  *
  * @method string getGroupId() 获取部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupId(string $GroupId) 设置部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupName() 获取部署组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupName(string $GroupName) 设置部署组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupStatus() 获取部署组状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupStatus(string $GroupStatus) 设置部署组状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPackageId() 获取程序包ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPackageId(string $PackageId) 设置程序包ID
@@ -45,101 +39,59 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPackageVersion(string $PackageVersion) 设置程序包版本号
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterId() 获取集群ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterId(string $ClusterId) 设置集群ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterName() 获取集群名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterName(string $ClusterName) 设置集群名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNamespaceId() 获取命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespaceId(string $NamespaceId) 设置命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNamespaceName() 获取命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespaceName(string $NamespaceName) 设置命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApplicationId() 获取应用ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationId(string $ApplicationId) 设置应用ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApplicationName() 获取应用名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationName(string $ApplicationName) 设置应用名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getInstanceCount() 获取部署组机器数目
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceCount(integer $InstanceCount) 设置部署组机器数目
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRunInstanceCount() 获取部署组运行中机器数目
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRunInstanceCount(integer $RunInstanceCount) 设置部署组运行中机器数目
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStartupParameters() 获取部署组启动参数信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartupParameters(string $StartupParameters) 设置部署组启动参数信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取部署组创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置部署组创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取部署组更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置部署组更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getOffInstanceCount() 获取部署组停止机器数目
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOffInstanceCount(integer $OffInstanceCount) 设置部署组停止机器数目
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupDesc() 获取部署组描述信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupDesc(string $GroupDesc) 设置部署组描述信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMicroserviceType() 获取微服务类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMicroserviceType(string $MicroserviceType) 设置微服务类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApplicationType() 获取应用类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationType(string $ApplicationType) 设置应用类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupResourceType() 获取部署组资源类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupResourceType(string $GroupResourceType) 设置部署组资源类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUpdatedTime() 获取部署组更新时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdatedTime(integer $UpdatedTime) 设置部署组更新时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeployDesc() 获取部署应用描述信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeployDesc(string $DeployDesc) 设置部署应用描述信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUpdateType() 获取滚动发布的更新方式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateType(integer $UpdateType) 设置滚动发布的更新方式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getDeployBetaEnable() 获取发布是否启用beta批次
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeployBetaEnable(boolean $DeployBetaEnable) 设置发布是否启用beta批次
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDeployBatch() 获取滚动发布的批次比例列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeployBatch(array $DeployBatch) 设置滚动发布的批次比例列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeployExeMode() 获取滚动发布的批次执行方式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeployExeMode(string $DeployExeMode) 设置滚动发布的批次执行方式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDeployWaitTime() 获取滚动发布的每个批次的等待时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeployWaitTime(integer $DeployWaitTime) 设置滚动发布的每个批次的等待时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getEnableHealthCheck() 获取是否开启了健康检查
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableHealthCheck(boolean $EnableHealthCheck) 设置是否开启了健康检查
-注意：此字段可能返回 null，表示取不到有效值。
  * @method HealthCheckSettings getHealthCheckSettings() 获取健康检查配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHealthCheckSettings(HealthCheckSettings $HealthCheckSettings) 设置健康检查配置
@@ -161,39 +113,42 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlias(string $Alias) 设置部署组备注
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAgentProfileList() 获取javaagent信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAgentProfileList(array $AgentProfileList) 设置javaagent信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method WarmupSetting getWarmupSetting() 获取预热属性配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWarmupSetting(WarmupSetting $WarmupSetting) 设置预热属性配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method GatewayConfig getGatewayConfig() 获取Envoy网关配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGatewayConfig(GatewayConfig $GatewayConfig) 设置Envoy网关配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getEnableBatchHealthCheck() 获取批次是否开启健康检查
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableBatchHealthCheck(boolean $EnableBatchHealthCheck) 设置批次是否开启健康检查
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getFilebeatCgroupEnable() 获取是否开启cgroup控制内存cpu
+ * @method void setFilebeatCgroupEnable(boolean $FilebeatCgroupEnable) 设置是否开启cgroup控制内存cpu
+ * @method float getFilebeatMaxCpu() 获取filebeat使用cpu上限
+ * @method void setFilebeatMaxCpu(float $FilebeatMaxCpu) 设置filebeat使用cpu上限
+ * @method integer getFilebeatMaxMem() 获取filebeat使用内存上限
+ * @method void setFilebeatMaxMem(integer $FilebeatMaxMem) 设置filebeat使用内存上限
+ * @method string getRepositoryId() 获取仓库ID
+ * @method void setRepositoryId(string $RepositoryId) 设置仓库ID
+ * @method string getRepositoryName() 获取仓库名称
+ * @method void setRepositoryName(string $RepositoryName) 设置仓库名称
+ * @method string getRepositoryType() 获取仓库类型
+ * @method void setRepositoryType(string $RepositoryType) 设置仓库类型
  */
 class VmGroup extends AbstractModel
 {
     /**
      * @var string 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupId;
 
     /**
      * @var string 部署组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupName;
 
     /**
      * @var string 部署组状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupStatus;
 
@@ -217,49 +172,41 @@ class VmGroup extends AbstractModel
 
     /**
      * @var string 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterId;
 
     /**
      * @var string 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterName;
 
     /**
      * @var string 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NamespaceId;
 
     /**
      * @var string 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NamespaceName;
 
     /**
      * @var string 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationId;
 
     /**
      * @var string 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationName;
 
     /**
      * @var integer 部署组机器数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceCount;
 
     /**
      * @var integer 部署组运行中机器数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RunInstanceCount;
 
@@ -271,19 +218,16 @@ class VmGroup extends AbstractModel
 
     /**
      * @var string 部署组创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 部署组更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @var integer 部署组停止机器数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OffInstanceCount;
 
@@ -295,25 +239,21 @@ class VmGroup extends AbstractModel
 
     /**
      * @var string 微服务类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MicroserviceType;
 
     /**
      * @var string 应用类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationType;
 
     /**
      * @var string 部署组资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupResourceType;
 
     /**
      * @var integer 部署组更新时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdatedTime;
 
@@ -325,37 +265,31 @@ class VmGroup extends AbstractModel
 
     /**
      * @var integer 滚动发布的更新方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateType;
 
     /**
      * @var boolean 发布是否启用beta批次
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeployBetaEnable;
 
     /**
      * @var array 滚动发布的批次比例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeployBatch;
 
     /**
      * @var string 滚动发布的批次执行方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeployExeMode;
 
     /**
      * @var integer 滚动发布的每个批次的等待时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeployWaitTime;
 
     /**
      * @var boolean 是否开启了健康检查
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableHealthCheck;
 
@@ -391,13 +325,11 @@ class VmGroup extends AbstractModel
 
     /**
      * @var array javaagent信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AgentProfileList;
 
     /**
      * @var WarmupSetting 预热属性配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WarmupSetting;
 
@@ -409,17 +341,43 @@ class VmGroup extends AbstractModel
 
     /**
      * @var boolean 批次是否开启健康检查
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableBatchHealthCheck;
 
     /**
+     * @var boolean 是否开启cgroup控制内存cpu
+     */
+    public $FilebeatCgroupEnable;
+
+    /**
+     * @var float filebeat使用cpu上限
+     */
+    public $FilebeatMaxCpu;
+
+    /**
+     * @var integer filebeat使用内存上限
+     */
+    public $FilebeatMaxMem;
+
+    /**
+     * @var string 仓库ID
+     */
+    public $RepositoryId;
+
+    /**
+     * @var string 仓库名称
+     */
+    public $RepositoryName;
+
+    /**
+     * @var string 仓库类型
+     */
+    public $RepositoryType;
+
+    /**
      * @param string $GroupId 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 部署组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupStatus 部署组状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PackageId 程序包ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PackageName 程序包名称
@@ -427,53 +385,32 @@ class VmGroup extends AbstractModel
      * @param string $PackageVersion 程序包版本号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterId 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterName 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NamespaceId 命名空间ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NamespaceName 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationId 应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationName 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InstanceCount 部署组机器数目
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RunInstanceCount 部署组运行中机器数目
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StartupParameters 部署组启动参数信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 部署组创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 部署组更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $OffInstanceCount 部署组停止机器数目
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupDesc 部署组描述信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MicroserviceType 微服务类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationType 应用类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupResourceType 部署组资源类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UpdatedTime 部署组更新时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeployDesc 部署应用描述信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UpdateType 滚动发布的更新方式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $DeployBetaEnable 发布是否启用beta批次
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DeployBatch 滚动发布的批次比例列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeployExeMode 滚动发布的批次执行方式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DeployWaitTime 滚动发布的每个批次的等待时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $EnableHealthCheck 是否开启了健康检查
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HealthCheckSettings $HealthCheckSettings 健康检查配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PackageType 程序包类型
@@ -485,13 +422,16 @@ class VmGroup extends AbstractModel
      * @param string $Alias 部署组备注
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AgentProfileList javaagent信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WarmupSetting $WarmupSetting 预热属性配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GatewayConfig $GatewayConfig Envoy网关配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $EnableBatchHealthCheck 批次是否开启健康检查
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $FilebeatCgroupEnable 是否开启cgroup控制内存cpu
+     * @param float $FilebeatMaxCpu filebeat使用cpu上限
+     * @param integer $FilebeatMaxMem filebeat使用内存上限
+     * @param string $RepositoryId 仓库ID
+     * @param string $RepositoryName 仓库名称
+     * @param string $RepositoryType 仓库类型
      */
     function __construct()
     {
@@ -668,6 +608,30 @@ class VmGroup extends AbstractModel
 
         if (array_key_exists("EnableBatchHealthCheck",$param) and $param["EnableBatchHealthCheck"] !== null) {
             $this->EnableBatchHealthCheck = $param["EnableBatchHealthCheck"];
+        }
+
+        if (array_key_exists("FilebeatCgroupEnable",$param) and $param["FilebeatCgroupEnable"] !== null) {
+            $this->FilebeatCgroupEnable = $param["FilebeatCgroupEnable"];
+        }
+
+        if (array_key_exists("FilebeatMaxCpu",$param) and $param["FilebeatMaxCpu"] !== null) {
+            $this->FilebeatMaxCpu = $param["FilebeatMaxCpu"];
+        }
+
+        if (array_key_exists("FilebeatMaxMem",$param) and $param["FilebeatMaxMem"] !== null) {
+            $this->FilebeatMaxMem = $param["FilebeatMaxMem"];
+        }
+
+        if (array_key_exists("RepositoryId",$param) and $param["RepositoryId"] !== null) {
+            $this->RepositoryId = $param["RepositoryId"];
+        }
+
+        if (array_key_exists("RepositoryName",$param) and $param["RepositoryName"] !== null) {
+            $this->RepositoryName = $param["RepositoryName"];
+        }
+
+        if (array_key_exists("RepositoryType",$param) and $param["RepositoryType"] !== null) {
+            $this->RepositoryType = $param["RepositoryType"];
         }
     }
 }

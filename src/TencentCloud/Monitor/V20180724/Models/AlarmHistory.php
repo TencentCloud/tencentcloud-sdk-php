@@ -108,6 +108,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetricName(string $MetricName) 设置指标名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPolicyPermissions() 获取策略是否有权限
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPolicyPermissions(integer $PolicyPermissions) 设置策略是否有权限
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmHistory extends AbstractModel
 {
@@ -288,6 +292,12 @@ class AlarmHistory extends AbstractModel
     public $MetricName;
 
     /**
+     * @var integer 策略是否有权限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PolicyPermissions;
+
+    /**
      * @param string $AlarmId 告警历史Id
      * @param string $MonitorType 监控类型
      * @param string $Namespace 策略类型
@@ -331,6 +341,8 @@ class AlarmHistory extends AbstractModel
      * @param string $InternalDimensions 告警实例的维度信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MetricName 指标名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $PolicyPermissions 策略是否有权限
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -486,6 +498,10 @@ class AlarmHistory extends AbstractModel
 
         if (array_key_exists("MetricName",$param) and $param["MetricName"] !== null) {
             $this->MetricName = $param["MetricName"];
+        }
+
+        if (array_key_exists("PolicyPermissions",$param) and $param["PolicyPermissions"] !== null) {
+            $this->PolicyPermissions = $param["PolicyPermissions"];
         }
     }
 }

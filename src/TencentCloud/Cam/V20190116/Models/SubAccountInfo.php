@@ -37,13 +37,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEmail() 获取邮箱
  * @method void setEmail(string $Email) 设置邮箱
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNickName() 获取昵称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNickName(string $NickName) 设置昵称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SubAccountInfo extends AbstractModel
 {
@@ -89,13 +85,11 @@ class SubAccountInfo extends AbstractModel
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NickName;
 
@@ -109,9 +103,7 @@ class SubAccountInfo extends AbstractModel
      * @param string $CountryCode 区号
      * @param string $Email 邮箱
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NickName 昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

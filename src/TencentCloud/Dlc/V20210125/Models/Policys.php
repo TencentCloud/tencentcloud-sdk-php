@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPolicySet(array $PolicySet) 设置策略集合
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取策略总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置策略总数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Policys extends AbstractModel
 {
@@ -39,7 +37,6 @@ class Policys extends AbstractModel
 
     /**
      * @var integer 策略总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
@@ -47,7 +44,6 @@ class Policys extends AbstractModel
      * @param array $PolicySet 策略集合
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 策略总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

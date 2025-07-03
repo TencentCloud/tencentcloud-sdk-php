@@ -23,33 +23,21 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getId() 获取申请单ID
  * @method void setId(integer $Id) 设置申请单ID
  * @method string getCompanyName() 获取公司名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCompanyName(string $CompanyName) 设置公司名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(integer $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCheckTime() 获取审核时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCheckTime(integer $CheckTime) 设置审核时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCheckMsg() 获取审核备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCheckMsg(string $CheckMsg) 设置审核备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getState() 获取审核状态，1-待审核，2-审核通过，3-驳回
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setState(integer $State) 设置审核状态，1-待审核，2-审核通过，3-驳回
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBusinessId() 获取公司统一社会信用代码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBusinessId(string $BusinessId) 设置公司统一社会信用代码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getModifyTime() 获取修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyTime(integer $ModifyTime) 设置修改时间
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getContractNo() 获取合同编号
+ * @method void setContractNo(string $ContractNo) 设置合同编号
  */
 class CompanyStateInfo extends AbstractModel
 {
@@ -60,62 +48,54 @@ class CompanyStateInfo extends AbstractModel
 
     /**
      * @var string 公司名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CompanyName;
 
     /**
      * @var integer 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var integer 审核时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CheckTime;
 
     /**
      * @var string 审核备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CheckMsg;
 
     /**
      * @var integer 审核状态，1-待审核，2-审核通过，3-驳回
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $State;
 
     /**
      * @var string 公司统一社会信用代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BusinessId;
 
     /**
      * @var integer 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyTime;
 
     /**
+     * @var string 合同编号
+     */
+    public $ContractNo;
+
+    /**
      * @param integer $Id 申请单ID
      * @param string $CompanyName 公司名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CheckTime 审核时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CheckMsg 审核备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $State 审核状态，1-待审核，2-审核通过，3-驳回
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BusinessId 公司统一社会信用代码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ModifyTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ContractNo 合同编号
      */
     function __construct()
     {
@@ -160,6 +140,10 @@ class CompanyStateInfo extends AbstractModel
 
         if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
             $this->ModifyTime = $param["ModifyTime"];
+        }
+
+        if (array_key_exists("ContractNo",$param) and $param["ContractNo"] !== null) {
+            $this->ContractNo = $param["ContractNo"];
         }
     }
 }

@@ -60,6 +60,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdatedTime(string $UpdatedTime) 设置更新时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getLimit() 获取分页参数limit
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLimit(integer $Limit) 设置分页参数limit
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getOffset() 获取分页参数offset
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOffset(integer $Offset) 设置分页参数offset
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAppId() 获取AppId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAppId(string $AppId) 设置AppId
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApiRateLimitRule extends AbstractModel
 {
@@ -124,6 +136,24 @@ class ApiRateLimitRule extends AbstractModel
     public $UpdatedTime;
 
     /**
+     * @var integer 分页参数limit
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Limit;
+
+    /**
+     * @var integer 分页参数offset
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Offset;
+
+    /**
+     * @var string AppId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AppId;
+
+    /**
      * @param string $RuleId rule Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApiId API ID
@@ -143,6 +173,12 @@ class ApiRateLimitRule extends AbstractModel
      * @param string $CreatedTime 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdatedTime 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Limit 分页参数limit
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Offset 分页参数offset
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AppId AppId
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -196,6 +232,18 @@ class ApiRateLimitRule extends AbstractModel
 
         if (array_key_exists("UpdatedTime",$param) and $param["UpdatedTime"] !== null) {
             $this->UpdatedTime = $param["UpdatedTime"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
+            $this->AppId = $param["AppId"];
         }
     }
 }

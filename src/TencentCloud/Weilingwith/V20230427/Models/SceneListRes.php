@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 场景列表响应体
  *
  * @method array getSceneList() 获取场景列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSceneList(array $SceneList) 设置场景列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SceneListRes extends AbstractModel
 {
     /**
      * @var array 场景列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SceneList;
 
     /**
      * @param array $SceneList 场景列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

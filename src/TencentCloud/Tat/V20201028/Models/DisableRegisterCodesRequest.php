@@ -21,17 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * DisableRegisterCodes请求参数结构体
  *
  * @method array getRegisterCodeIds() 获取注册码ID。
+
+可通过 [DescribeRegisterCodes(查询注册码)](https://cloud.tencent.com/document/api/1340/96925) 接口获取。
  * @method void setRegisterCodeIds(array $RegisterCodeIds) 设置注册码ID。
+
+可通过 [DescribeRegisterCodes(查询注册码)](https://cloud.tencent.com/document/api/1340/96925) 接口获取。
  */
 class DisableRegisterCodesRequest extends AbstractModel
 {
     /**
      * @var array 注册码ID。
+
+可通过 [DescribeRegisterCodes(查询注册码)](https://cloud.tencent.com/document/api/1340/96925) 接口获取。
      */
     public $RegisterCodeIds;
 
     /**
      * @param array $RegisterCodeIds 注册码ID。
+
+可通过 [DescribeRegisterCodes(查询注册码)](https://cloud.tencent.com/document/api/1340/96925) 接口获取。
      */
     function __construct()
     {

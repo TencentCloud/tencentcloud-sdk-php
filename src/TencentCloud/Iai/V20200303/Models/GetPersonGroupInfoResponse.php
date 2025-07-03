@@ -20,11 +20,11 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetPersonGroupInfo返回参数结构体
  *
- * @method array getPersonGroupInfos() 获取包含此人员的人员库及描述字段内容列表
- * @method void setPersonGroupInfos(array $PersonGroupInfos) 设置包含此人员的人员库及描述字段内容列表
- * @method integer getGroupNum() 获取人员库总数量
+ * @method array getPersonGroupInfos() 获取包含此人员的人员库及描述字段内容列表。
+ * @method void setPersonGroupInfos(array $PersonGroupInfos) 设置包含此人员的人员库及描述字段内容列表。
+ * @method integer getGroupNum() 获取人员库总数量。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGroupNum(integer $GroupNum) 设置人员库总数量
+ * @method void setGroupNum(integer $GroupNum) 设置人员库总数量。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFaceModelVersion() 获取人脸识别服务所用的算法模型版本。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -36,12 +36,12 @@ use TencentCloud\Common\AbstractModel;
 class GetPersonGroupInfoResponse extends AbstractModel
 {
     /**
-     * @var array 包含此人员的人员库及描述字段内容列表
+     * @var array 包含此人员的人员库及描述字段内容列表。
      */
     public $PersonGroupInfos;
 
     /**
-     * @var integer 人员库总数量
+     * @var integer 人员库总数量。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupNum;
@@ -58,8 +58,8 @@ class GetPersonGroupInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $PersonGroupInfos 包含此人员的人员库及描述字段内容列表
-     * @param integer $GroupNum 人员库总数量
+     * @param array $PersonGroupInfos 包含此人员的人员库及描述字段内容列表。
+     * @param integer $GroupNum 人员库总数量。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FaceModelVersion 人脸识别服务所用的算法模型版本。
 注意：此字段可能返回 null，表示取不到有效值。

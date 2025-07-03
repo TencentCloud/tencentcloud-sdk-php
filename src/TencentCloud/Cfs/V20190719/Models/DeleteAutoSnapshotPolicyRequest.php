@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteAutoSnapshotPolicy请求参数结构体
  *
- * @method string getAutoSnapshotPolicyId() 获取快照策略ID
- * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) 设置快照策略ID
+ * @method string getAutoSnapshotPolicyId() 获取快照策略ID，查询快照策略接口获取,[DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/api/582/80208)
+ * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) 设置快照策略ID，查询快照策略接口获取,[DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/api/582/80208)
  */
 class DeleteAutoSnapshotPolicyRequest extends AbstractModel
 {
     /**
-     * @var string 快照策略ID
+     * @var string 快照策略ID，查询快照策略接口获取,[DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/api/582/80208)
      */
     public $AutoSnapshotPolicyId;
 
     /**
-     * @param string $AutoSnapshotPolicyId 快照策略ID
+     * @param string $AutoSnapshotPolicyId 快照策略ID，查询快照策略接口获取,[DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/api/582/80208)
      */
     function __construct()
     {

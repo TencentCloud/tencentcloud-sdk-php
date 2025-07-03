@@ -20,15 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetTWeCallActiveStatus请求参数结构体
  *
- * @method string getMiniProgramAppId() 获取appId
- * @method void setMiniProgramAppId(string $MiniProgramAppId) 设置appId
+ * @method string getMiniProgramAppId() 获取参数已弃用，不用传参
+ * @method void setMiniProgramAppId(string $MiniProgramAppId) 设置参数已弃用，不用传参
  * @method array getDeviceList() 获取设备列表
  * @method void setDeviceList(array $DeviceList) 设置设备列表
  */
 class GetTWeCallActiveStatusRequest extends AbstractModel
 {
     /**
-     * @var string appId
+     * @var string 参数已弃用，不用传参
+     * @deprecated
      */
     public $MiniProgramAppId;
 
@@ -38,7 +39,7 @@ class GetTWeCallActiveStatusRequest extends AbstractModel
     public $DeviceList;
 
     /**
-     * @param string $MiniProgramAppId appId
+     * @param string $MiniProgramAppId 参数已弃用，不用传参
      * @param array $DeviceList 设备列表
      */
     function __construct()

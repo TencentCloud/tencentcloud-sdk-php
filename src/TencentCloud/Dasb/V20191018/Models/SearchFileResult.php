@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileCurr(string $FileCurr) 设置下载的文件（夹）路径及名称
  * @method string getFileNew() 获取上传或新建文件（夹）路径及名称
  * @method void setFileNew(string $FileNew) 设置上传或新建文件（夹）路径及名称
+ * @method string getSignValue() 获取签名值
+ * @method void setSignValue(string $SignValue) 设置签名值
  */
 class SearchFileResult extends AbstractModel
 {
@@ -101,6 +103,11 @@ class SearchFileResult extends AbstractModel
     public $FileNew;
 
     /**
+     * @var string 签名值
+     */
+    public $SignValue;
+
+    /**
      * @param string $Time 文件传输的时间
      * @param string $UserName 用户名
      * @param string $RealName 姓名
@@ -112,6 +119,7 @@ class SearchFileResult extends AbstractModel
      * @param integer $Method 操作类型：1 - 文件上传，2 - 文件下载，3 - 文件删除，4 - 文件(夹)移动，5 - 文件(夹)重命名，6 - 新建文件夹，9 - 删除文件夹
      * @param string $FileCurr 下载的文件（夹）路径及名称
      * @param string $FileNew 上传或新建文件（夹）路径及名称
+     * @param string $SignValue 签名值
      */
     function __construct()
     {
@@ -168,6 +176,10 @@ class SearchFileResult extends AbstractModel
 
         if (array_key_exists("FileNew",$param) and $param["FileNew"] !== null) {
             $this->FileNew = $param["FileNew"];
+        }
+
+        if (array_key_exists("SignValue",$param) and $param["SignValue"] !== null) {
+            $this->SignValue = $param["SignValue"];
         }
     }
 }

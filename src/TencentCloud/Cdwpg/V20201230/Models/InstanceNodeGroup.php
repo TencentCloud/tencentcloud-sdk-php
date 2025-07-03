@@ -20,14 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 集群节点信息
  *
-
+ * @method string getSpecName() 获取机型
+ * @method void setSpecName(string $SpecName) 设置机型
+ * @method DiskSpecPlus getDataDisk() 获取磁盘信息
+ * @method void setDataDisk(DiskSpecPlus $DataDisk) 设置磁盘信息
+ * @method integer getCvmCount() 获取机器个数
+ * @method void setCvmCount(integer $CvmCount) 设置机器个数
  */
 class InstanceNodeGroup extends AbstractModel
 {
-
+    /**
+     * @var string 机型
+     */
+    public $SpecName;
 
     /**
+     * @var DiskSpecPlus 磁盘信息
+     */
+    public $DataDisk;
 
+    /**
+     * @var integer 机器个数
+     */
+    public $CvmCount;
+
+    /**
+     * @param string $SpecName 机型
+     * @param DiskSpecPlus $DataDisk 磁盘信息
+     * @param integer $CvmCount 机器个数
      */
     function __construct()
     {
@@ -42,6 +62,17 @@ class InstanceNodeGroup extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("SpecName",$param) and $param["SpecName"] !== null) {
+            $this->SpecName = $param["SpecName"];
+        }
 
+        if (array_key_exists("DataDisk",$param) and $param["DataDisk"] !== null) {
+            $this->DataDisk = new DiskSpecPlus();
+            $this->DataDisk->deserialize($param["DataDisk"]);
+        }
+
+        if (array_key_exists("CvmCount",$param) and $param["CvmCount"] !== null) {
+            $this->CvmCount = $param["CvmCount"];
+        }
     }
 }

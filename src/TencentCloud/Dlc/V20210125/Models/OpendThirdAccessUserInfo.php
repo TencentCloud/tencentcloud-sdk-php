@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 开通了第三方访问的用户信息
  *
  * @method integer getId() 获取id信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(integer $Id) 设置id信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUin() 获取用户主UIN
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUin(string $Uin) 设置用户主UIN
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAppId() 获取用户AppId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppId(string $AppId) 设置用户AppId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取开通时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置开通时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OpendThirdAccessUserInfo extends AbstractModel
 {
     /**
      * @var integer id信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var string 用户主UIN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uin;
 
     /**
      * @var string 用户AppId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppId;
 
     /**
      * @var string 开通时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @param integer $Id id信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uin 用户主UIN
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AppId 用户AppId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 开通时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

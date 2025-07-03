@@ -21,21 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * DescribeSensitiveRDBDataDistribution返回参数结构体
  *
  * @method array getLevelDistribution() 获取分级分布
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevelDistribution(array $LevelDistribution) 设置分级分布
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCategoryDistribution() 获取分类分布
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCategoryDistribution(array $CategoryDistribution) 设置分类分布
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRuleDistribution() 获取敏感规则分布详情列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleDistribution(array $RuleDistribution) 设置敏感规则分布详情列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSensitiveDataNum() 获取计算占比字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSensitiveDataNum(integer $SensitiveDataNum) 设置计算占比字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -43,25 +35,21 @@ class DescribeSensitiveRDBDataDistributionResponse extends AbstractModel
 {
     /**
      * @var array 分级分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LevelDistribution;
 
     /**
      * @var array 分类分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CategoryDistribution;
 
     /**
      * @var array 敏感规则分布详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleDistribution;
 
     /**
      * @var integer 计算占比字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SensitiveDataNum;
 
@@ -72,13 +60,9 @@ class DescribeSensitiveRDBDataDistributionResponse extends AbstractModel
 
     /**
      * @param array $LevelDistribution 分级分布
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CategoryDistribution 分类分布
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RuleDistribution 敏感规则分布详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SensitiveDataNum 计算占比字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

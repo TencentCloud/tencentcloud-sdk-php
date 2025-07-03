@@ -28,13 +28,13 @@ use TencentCloud\Common\AbstractModel;
 员工的姓名将用于身份认证和电子签名，请确保填写的姓名为真实姓名，而非昵称等代名。
  * @method string getIdCardType() 获取签署方经办人的证件类型，支持以下类型
 <ul><li>ID_CARD : 中国大陆居民身份证  (默认值)</li>
-<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
+<li>HONGKONG_AND_MACAO :  中国港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN :  中国港澳台居民居住证(格式同中国大陆居民身份证)</li></ul>
 
  * @method void setIdCardType(string $IdCardType) 设置签署方经办人的证件类型，支持以下类型
 <ul><li>ID_CARD : 中国大陆居民身份证  (默认值)</li>
-<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
+<li>HONGKONG_AND_MACAO :  中国港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN :  中国港澳台居民居住证(格式同中国大陆居民身份证)</li></ul>
 
  * @method string getIdCardNumber() 获取经办人证件号
  * @method void setIdCardNumber(string $IdCardNumber) 设置经办人证件号
@@ -61,8 +61,8 @@ class ProxyOrganizationOperator extends AbstractModel
     /**
      * @var string 签署方经办人的证件类型，支持以下类型
 <ul><li>ID_CARD : 中国大陆居民身份证  (默认值)</li>
-<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
+<li>HONGKONG_AND_MACAO :  中国港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN :  中国港澳台居民居住证(格式同中国大陆居民身份证)</li></ul>
 
      */
     public $IdCardType;
@@ -89,8 +89,8 @@ class ProxyOrganizationOperator extends AbstractModel
 员工的姓名将用于身份认证和电子签名，请确保填写的姓名为真实姓名，而非昵称等代名。
      * @param string $IdCardType 签署方经办人的证件类型，支持以下类型
 <ul><li>ID_CARD : 中国大陆居民身份证  (默认值)</li>
-<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
+<li>HONGKONG_AND_MACAO :  中国港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN :  中国港澳台居民居住证(格式同中国大陆居民身份证)</li></ul>
 
      * @param string $IdCardNumber 经办人证件号
      * @param string $Mobile 员工的手机号，支持国内手机号11位数字(无需加+86前缀或其他字符)，不支持海外手机号。

@@ -23,15 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCatalogueLevel() 获取目录级别，支持参数：
 first：一级目录
 second：二级目录
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCatalogueLevel(string $CatalogueLevel) 设置目录级别，支持参数：
 first：一级目录
 second：二级目录
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCatalogueName() 获取目录名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCatalogueName(string $CatalogueName) 设置目录名
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class KubeJarvisStateCatalogue extends AbstractModel
 {
@@ -39,13 +35,11 @@ class KubeJarvisStateCatalogue extends AbstractModel
      * @var string 目录级别，支持参数：
 first：一级目录
 second：二级目录
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CatalogueLevel;
 
     /**
      * @var string 目录名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CatalogueName;
 
@@ -53,9 +47,7 @@ second：二级目录
      * @param string $CatalogueLevel 目录级别，支持参数：
 first：一级目录
 second：二级目录
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CatalogueName 目录名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

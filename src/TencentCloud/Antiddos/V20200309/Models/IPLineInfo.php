@@ -41,9 +41,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getResourceFlag() 获取资源flag，0：高防包资源，1：高防IP资源，2：非高防资源IP
  * @method void setResourceFlag(integer $ResourceFlag) 设置资源flag，0：高防包资源，1：高防IP资源，2：非高防资源IP
  * @method string getDomain() 获取域名化资产对应的域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomain(string $Domain) 设置域名化资产对应的域名
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class IPLineInfo extends AbstractModel
 {
@@ -75,7 +73,6 @@ class IPLineInfo extends AbstractModel
 
     /**
      * @var string 域名化资产对应的域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Domain;
 
@@ -91,7 +88,6 @@ class IPLineInfo extends AbstractModel
      * @param string $Cname 实例对应的cname
      * @param integer $ResourceFlag 资源flag，0：高防包资源，1：高防IP资源，2：非高防资源IP
      * @param string $Domain 域名化资产对应的域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

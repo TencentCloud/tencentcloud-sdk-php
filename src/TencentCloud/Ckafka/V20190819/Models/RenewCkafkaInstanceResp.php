@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * RenewCkafkaInstance接口出参bigDealIds
  *
  * @method string getBigDealId() 获取订单号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBigDealId(string $BigDealId) 设置订单号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDealName() 获取子订单号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDealName(string $DealName) 设置子订单号
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RenewCkafkaInstanceResp extends AbstractModel
 {
     /**
      * @var string 订单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BigDealId;
 
     /**
      * @var string 子订单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DealName;
 
     /**
      * @param string $BigDealId 订单号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DealName 子订单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

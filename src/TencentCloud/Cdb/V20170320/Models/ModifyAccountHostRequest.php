@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
- * @method string getUser() 获取账户的名称
- * @method void setUser(string $User) 设置账户的名称
- * @method string getHost() 获取账户的旧主机
- * @method void setHost(string $Host) 设置账户的旧主机
- * @method string getNewHost() 获取账户的新主机
- * @method void setNewHost(string $NewHost) 设置账户的新主机
+ * @method string getUser() 获取账户的名称。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
+ * @method void setUser(string $User) 设置账户的名称。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
+ * @method string getHost() 获取账户的旧主机。格式：IP 形式，支持单个 IP 地址或者%。
+ * @method void setHost(string $Host) 设置账户的旧主机。格式：IP 形式，支持单个 IP 地址或者%。
+ * @method string getNewHost() 获取账户的新主机。格式：IP 形式，支持单个 IP 地址或者%。
+ * @method void setNewHost(string $NewHost) 设置账户的新主机。格式：IP 形式，支持单个 IP 地址或者%。
  */
 class ModifyAccountHostRequest extends AbstractModel
 {
@@ -37,25 +37,25 @@ class ModifyAccountHostRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 账户的名称
+     * @var string 账户的名称。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
      */
     public $User;
 
     /**
-     * @var string 账户的旧主机
+     * @var string 账户的旧主机。格式：IP 形式，支持单个 IP 地址或者%。
      */
     public $Host;
 
     /**
-     * @var string 账户的新主机
+     * @var string 账户的新主机。格式：IP 形式，支持单个 IP 地址或者%。
      */
     public $NewHost;
 
     /**
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
-     * @param string $User 账户的名称
-     * @param string $Host 账户的旧主机
-     * @param string $NewHost 账户的新主机
+     * @param string $User 账户的名称。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
+     * @param string $Host 账户的旧主机。格式：IP 形式，支持单个 IP 地址或者%。
+     * @param string $NewHost 账户的新主机。格式：IP 形式，支持单个 IP 地址或者%。
      */
     function __construct()
     {

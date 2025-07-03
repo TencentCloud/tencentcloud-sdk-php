@@ -33,6 +33,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getMsgTTL() 获取未消费消息过期时间，单位：秒，取值范围：60秒~15天。
 
  * @method void setMsgTTL(integer $MsgTTL) 设置未消费消息过期时间，单位：秒，取值范围：60秒~15天。
+
+ * @method string getUnackPolicy() 获取不传默认是原生策略，DefaultPolicy表示当订阅下达到最大未确认消息数 5000 时，服务端将不再向当前订阅下的所有消费者推送消息，DynamicPolicy表示动态调整订阅下的最大未确认消息数，具体配额是在 5000 和消费者数量*20之间取最大值。每个消费者默认最大 unack 消息数为 20，超过该限制时仅影响该消费者，不影响其他消费者。
+ * @method void setUnackPolicy(string $UnackPolicy) 设置不传默认是原生策略，DefaultPolicy表示当订阅下达到最大未确认消息数 5000 时，服务端将不再向当前订阅下的所有消费者推送消息，DynamicPolicy表示动态调整订阅下的最大未确认消息数，具体配额是在 5000 和消费者数量*20之间取最大值。每个消费者默认最大 unack 消息数为 20，超过该限制时仅影响该消费者，不影响其他消费者。
+ * @method boolean getIsolateConsumerEnable() 获取是否开启异常消费者隔离
+ * @method void setIsolateConsumerEnable(boolean $IsolateConsumerEnable) 设置是否开启异常消费者隔离
+ * @method integer getAckTimeOut() 获取消费者 Ack 超时时间，单位：秒，范围60-（3600*24
+ * @method void setAckTimeOut(integer $AckTimeOut) 设置消费者 Ack 超时时间，单位：秒，范围60-（3600*24
  */
 class ModifyTopicRequest extends AbstractModel
 {
@@ -68,12 +75,31 @@ class ModifyTopicRequest extends AbstractModel
     public $MsgTTL;
 
     /**
+     * @var string 不传默认是原生策略，DefaultPolicy表示当订阅下达到最大未确认消息数 5000 时，服务端将不再向当前订阅下的所有消费者推送消息，DynamicPolicy表示动态调整订阅下的最大未确认消息数，具体配额是在 5000 和消费者数量*20之间取最大值。每个消费者默认最大 unack 消息数为 20，超过该限制时仅影响该消费者，不影响其他消费者。
+     */
+    public $UnackPolicy;
+
+    /**
+     * @var boolean 是否开启异常消费者隔离
+     */
+    public $IsolateConsumerEnable;
+
+    /**
+     * @var integer 消费者 Ack 超时时间，单位：秒，范围60-（3600*24
+     */
+    public $AckTimeOut;
+
+    /**
      * @param string $EnvironmentId 环境（命名空间）名称。
      * @param string $TopicName 主题名。
      * @param integer $Partitions 分区数，必须大于或者等于原分区数，若想维持原分区数请输入原数目，修改分区数仅对非全局顺序消息起效果，不允许超过32个分区。
      * @param string $ClusterId Pulsar 集群的ID
      * @param string $Remark 备注，128字符以内。
      * @param integer $MsgTTL 未消费消息过期时间，单位：秒，取值范围：60秒~15天。
+
+     * @param string $UnackPolicy 不传默认是原生策略，DefaultPolicy表示当订阅下达到最大未确认消息数 5000 时，服务端将不再向当前订阅下的所有消费者推送消息，DynamicPolicy表示动态调整订阅下的最大未确认消息数，具体配额是在 5000 和消费者数量*20之间取最大值。每个消费者默认最大 unack 消息数为 20，超过该限制时仅影响该消费者，不影响其他消费者。
+     * @param boolean $IsolateConsumerEnable 是否开启异常消费者隔离
+     * @param integer $AckTimeOut 消费者 Ack 超时时间，单位：秒，范围60-（3600*24
      */
     function __construct()
     {
@@ -110,6 +136,18 @@ class ModifyTopicRequest extends AbstractModel
 
         if (array_key_exists("MsgTTL",$param) and $param["MsgTTL"] !== null) {
             $this->MsgTTL = $param["MsgTTL"];
+        }
+
+        if (array_key_exists("UnackPolicy",$param) and $param["UnackPolicy"] !== null) {
+            $this->UnackPolicy = $param["UnackPolicy"];
+        }
+
+        if (array_key_exists("IsolateConsumerEnable",$param) and $param["IsolateConsumerEnable"] !== null) {
+            $this->IsolateConsumerEnable = $param["IsolateConsumerEnable"];
+        }
+
+        if (array_key_exists("AckTimeOut",$param) and $param["AckTimeOut"] !== null) {
+            $this->AckTimeOut = $param["AckTimeOut"];
         }
     }
 }

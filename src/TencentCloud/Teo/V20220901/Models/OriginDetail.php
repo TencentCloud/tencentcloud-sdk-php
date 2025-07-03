@@ -25,7 +25,6 @@ use TencentCloud\Common\AbstractModel;
 <li>COS：腾讯云 COS 对象存储源站；</li>
 <li>AWS_S3：AWS S3 对象存储源站；</li>
 <li>ORIGIN_GROUP：源站组类型源站；</li>
-<li>VODEO：云点播-混合云版；</li>
 <li>VOD：云点播；</li>
 <li>SPACE：源站卸载，当前仅白名单开放；</li>
 <li>LB：负载均衡，当前仅白名单开放。</li>
@@ -34,7 +33,6 @@ use TencentCloud\Common\AbstractModel;
 <li>COS：腾讯云 COS 对象存储源站；</li>
 <li>AWS_S3：AWS S3 对象存储源站；</li>
 <li>ORIGIN_GROUP：源站组类型源站；</li>
-<li>VODEO：云点播-混合云版；</li>
 <li>VOD：云点播；</li>
 <li>SPACE：源站卸载，当前仅白名单开放；</li>
 <li>LB：负载均衡，当前仅白名单开放。</li>
@@ -44,14 +42,12 @@ use TencentCloud\Common\AbstractModel;
 <li>当 OriginType = AWS_S3，该参数为 S3 桶的访问域名；</li>
 <li>当 OriginType = ORIGIN_GROUP 时，该参数为源站组 ID；</li>
 <li>当 OriginType = VOD 时，该参数请填写云点播应用 ID ；</li>
-<li>当 OriginType = VODEO 时，如果 VodeoDistributionRange = ALL，则该参数为 "all-buckets-in-vodeo-application"；如果 VodeoDistributionRange = Bucket，则该参数为对应存储桶域名。</li>
  * @method void setOrigin(string $Origin) 设置源站地址，根据 OriginType 的取值分为以下情况：
 <li>当 OriginType = IP_DOMAIN 时，该参数为 IPv4、IPv6 地址或域名；</li>
 <li>当 OriginType = COS 时，该参数为 COS 桶的访问域名；</li>
 <li>当 OriginType = AWS_S3，该参数为 S3 桶的访问域名；</li>
 <li>当 OriginType = ORIGIN_GROUP 时，该参数为源站组 ID；</li>
 <li>当 OriginType = VOD 时，该参数请填写云点播应用 ID ；</li>
-<li>当 OriginType = VODEO 时，如果 VodeoDistributionRange = ALL，则该参数为 "all-buckets-in-vodeo-application"；如果 VodeoDistributionRange = Bucket，则该参数为对应存储桶域名。</li>
  * @method string getBackupOrigin() 获取备用源站组 ID，该参数仅在 OriginType = ORIGIN_GROUP 且配置了备源站组时会生效。
  * @method void setBackupOrigin(string $BackupOrigin) 设置备用源站组 ID，该参数仅在 OriginType = ORIGIN_GROUP 且配置了备源站组时会生效。
  * @method string getOriginGroupName() 获取主源源站组名称，当 OriginType = ORIGIN_GROUP 时该参数会返回值。
@@ -70,12 +66,20 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrivateParameters(array $PrivateParameters) 设置私有鉴权使用参数，该参数仅当源站类型 PrivateAccess = on 时会生效。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getHostHeader() 获取当前配置的回源 HOST 头。
+ * @method void setHostHeader(string $HostHeader) 设置当前配置的回源 HOST 头。
  * @method integer getVodeoSubAppId() 获取MO 子应用 ID
  * @method void setVodeoSubAppId(integer $VodeoSubAppId) 设置MO 子应用 ID
  * @method string getVodeoDistributionRange() 获取MO 分发范围，取值有： <li>All：全部</li> <li>Bucket：存储桶</li>
  * @method void setVodeoDistributionRange(string $VodeoDistributionRange) 设置MO 分发范围，取值有： <li>All：全部</li> <li>Bucket：存储桶</li>
  * @method string getVodeoBucketId() 获取MO 存储桶 ID，分发范围(DistributionRange)为存储桶(Bucket)时必填
  * @method void setVodeoBucketId(string $VodeoBucketId) 设置MO 存储桶 ID，分发范围(DistributionRange)为存储桶(Bucket)时必填
+ * @method string getVodOriginScope() 获取云点播回源范围，当 OriginType = VOD 时该参数会返回值。取值有:<li>all：当前源站对应的云点播应用内所有文件，默认值为 all；</li> <li>bucket：当前源站对应的云点播应用下指定某一个存储桶内的文件。通过参数 VodBucketId 来指定存储桶。
+</li>
+ * @method void setVodOriginScope(string $VodOriginScope) 设置云点播回源范围，当 OriginType = VOD 时该参数会返回值。取值有:<li>all：当前源站对应的云点播应用内所有文件，默认值为 all；</li> <li>bucket：当前源站对应的云点播应用下指定某一个存储桶内的文件。通过参数 VodBucketId 来指定存储桶。
+</li>
+ * @method string getVodBucketId() 获取云点播存储桶 ID，该参数当 OriginType = VOD 且 VodOriginScope = bucket 时必填。数据来源：云点播专业版应用下存储桶的存储 ID 。
+ * @method void setVodBucketId(string $VodBucketId) 设置云点播存储桶 ID，该参数当 OriginType = VOD 且 VodOriginScope = bucket 时必填。数据来源：云点播专业版应用下存储桶的存储 ID 。
  */
 class OriginDetail extends AbstractModel
 {
@@ -85,7 +89,6 @@ class OriginDetail extends AbstractModel
 <li>COS：腾讯云 COS 对象存储源站；</li>
 <li>AWS_S3：AWS S3 对象存储源站；</li>
 <li>ORIGIN_GROUP：源站组类型源站；</li>
-<li>VODEO：云点播-混合云版；</li>
 <li>VOD：云点播；</li>
 <li>SPACE：源站卸载，当前仅白名单开放；</li>
 <li>LB：负载均衡，当前仅白名单开放。</li>
@@ -99,7 +102,6 @@ class OriginDetail extends AbstractModel
 <li>当 OriginType = AWS_S3，该参数为 S3 桶的访问域名；</li>
 <li>当 OriginType = ORIGIN_GROUP 时，该参数为源站组 ID；</li>
 <li>当 OriginType = VOD 时，该参数请填写云点播应用 ID ；</li>
-<li>当 OriginType = VODEO 时，如果 VodeoDistributionRange = ALL，则该参数为 "all-buckets-in-vodeo-application"；如果 VodeoDistributionRange = Bucket，则该参数为对应存储桶域名。</li>
      */
     public $Origin;
 
@@ -133,19 +135,38 @@ class OriginDetail extends AbstractModel
     public $PrivateParameters;
 
     /**
+     * @var string 当前配置的回源 HOST 头。
+     */
+    public $HostHeader;
+
+    /**
      * @var integer MO 子应用 ID
+     * @deprecated
      */
     public $VodeoSubAppId;
 
     /**
      * @var string MO 分发范围，取值有： <li>All：全部</li> <li>Bucket：存储桶</li>
+     * @deprecated
      */
     public $VodeoDistributionRange;
 
     /**
      * @var string MO 存储桶 ID，分发范围(DistributionRange)为存储桶(Bucket)时必填
+     * @deprecated
      */
     public $VodeoBucketId;
+
+    /**
+     * @var string 云点播回源范围，当 OriginType = VOD 时该参数会返回值。取值有:<li>all：当前源站对应的云点播应用内所有文件，默认值为 all；</li> <li>bucket：当前源站对应的云点播应用下指定某一个存储桶内的文件。通过参数 VodBucketId 来指定存储桶。
+</li>
+     */
+    public $VodOriginScope;
+
+    /**
+     * @var string 云点播存储桶 ID，该参数当 OriginType = VOD 且 VodOriginScope = bucket 时必填。数据来源：云点播专业版应用下存储桶的存储 ID 。
+     */
+    public $VodBucketId;
 
     /**
      * @param string $OriginType 源站类型，取值有：
@@ -153,7 +174,6 @@ class OriginDetail extends AbstractModel
 <li>COS：腾讯云 COS 对象存储源站；</li>
 <li>AWS_S3：AWS S3 对象存储源站；</li>
 <li>ORIGIN_GROUP：源站组类型源站；</li>
-<li>VODEO：云点播-混合云版；</li>
 <li>VOD：云点播；</li>
 <li>SPACE：源站卸载，当前仅白名单开放；</li>
 <li>LB：负载均衡，当前仅白名单开放。</li>
@@ -163,7 +183,6 @@ class OriginDetail extends AbstractModel
 <li>当 OriginType = AWS_S3，该参数为 S3 桶的访问域名；</li>
 <li>当 OriginType = ORIGIN_GROUP 时，该参数为源站组 ID；</li>
 <li>当 OriginType = VOD 时，该参数请填写云点播应用 ID ；</li>
-<li>当 OriginType = VODEO 时，如果 VodeoDistributionRange = ALL，则该参数为 "all-buckets-in-vodeo-application"；如果 VodeoDistributionRange = Bucket，则该参数为对应存储桶域名。</li>
      * @param string $BackupOrigin 备用源站组 ID，该参数仅在 OriginType = ORIGIN_GROUP 且配置了备源站组时会生效。
      * @param string $OriginGroupName 主源源站组名称，当 OriginType = ORIGIN_GROUP 时该参数会返回值。
      * @param string $BackOriginGroupName 备用源站组名称，该参数仅当 OriginType = ORIGIN_GROUP 且配置了备用源站组时会生效。
@@ -173,9 +192,13 @@ class OriginDetail extends AbstractModel
 不填写，默认值为 off。
      * @param array $PrivateParameters 私有鉴权使用参数，该参数仅当源站类型 PrivateAccess = on 时会生效。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $HostHeader 当前配置的回源 HOST 头。
      * @param integer $VodeoSubAppId MO 子应用 ID
      * @param string $VodeoDistributionRange MO 分发范围，取值有： <li>All：全部</li> <li>Bucket：存储桶</li>
      * @param string $VodeoBucketId MO 存储桶 ID，分发范围(DistributionRange)为存储桶(Bucket)时必填
+     * @param string $VodOriginScope 云点播回源范围，当 OriginType = VOD 时该参数会返回值。取值有:<li>all：当前源站对应的云点播应用内所有文件，默认值为 all；</li> <li>bucket：当前源站对应的云点播应用下指定某一个存储桶内的文件。通过参数 VodBucketId 来指定存储桶。
+</li>
+     * @param string $VodBucketId 云点播存储桶 ID，该参数当 OriginType = VOD 且 VodOriginScope = bucket 时必填。数据来源：云点播专业版应用下存储桶的存储 ID 。
      */
     function __construct()
     {
@@ -223,6 +246,10 @@ class OriginDetail extends AbstractModel
             }
         }
 
+        if (array_key_exists("HostHeader",$param) and $param["HostHeader"] !== null) {
+            $this->HostHeader = $param["HostHeader"];
+        }
+
         if (array_key_exists("VodeoSubAppId",$param) and $param["VodeoSubAppId"] !== null) {
             $this->VodeoSubAppId = $param["VodeoSubAppId"];
         }
@@ -233,6 +260,14 @@ class OriginDetail extends AbstractModel
 
         if (array_key_exists("VodeoBucketId",$param) and $param["VodeoBucketId"] !== null) {
             $this->VodeoBucketId = $param["VodeoBucketId"];
+        }
+
+        if (array_key_exists("VodOriginScope",$param) and $param["VodOriginScope"] !== null) {
+            $this->VodOriginScope = $param["VodOriginScope"];
+        }
+
+        if (array_key_exists("VodBucketId",$param) and $param["VodBucketId"] !== null) {
+            $this->VodBucketId = $param["VodBucketId"];
         }
     }
 }

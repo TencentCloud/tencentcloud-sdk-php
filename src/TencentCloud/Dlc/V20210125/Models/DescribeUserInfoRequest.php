@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getUserId() 获取用户Id
  * @method void setUserId(string $UserId) 设置用户Id
- * @method string getType() 获取查询的信息类型，Group：工作组 DataAuth：数据权限 EngineAuth:引擎权限
- * @method void setType(string $Type) 设置查询的信息类型，Group：工作组 DataAuth：数据权限 EngineAuth:引擎权限
+ * @method string getType() 获取必传字段，查询的信息类型，Group：工作组 DataAuth：数据权限 EngineAuth:引擎权限 RowFilter：行级别权限
+ * @method void setType(string $Type) 设置必传字段，查询的信息类型，Group：工作组 DataAuth：数据权限 EngineAuth:引擎权限 RowFilter：行级别权限
  * @method array getFilters() 获取查询的过滤条件。
 
 当Type为Group时，支持Key为workgroup-name的模糊搜索；
@@ -91,7 +91,7 @@ class DescribeUserInfoRequest extends AbstractModel
     public $UserId;
 
     /**
-     * @var string 查询的信息类型，Group：工作组 DataAuth：数据权限 EngineAuth:引擎权限
+     * @var string 必传字段，查询的信息类型，Group：工作组 DataAuth：数据权限 EngineAuth:引擎权限 RowFilter：行级别权限
      */
     public $Type;
 
@@ -146,7 +146,7 @@ engine-name：库表的模糊搜索。
 
     /**
      * @param string $UserId 用户Id
-     * @param string $Type 查询的信息类型，Group：工作组 DataAuth：数据权限 EngineAuth:引擎权限
+     * @param string $Type 必传字段，查询的信息类型，Group：工作组 DataAuth：数据权限 EngineAuth:引擎权限 RowFilter：行级别权限
      * @param array $Filters 查询的过滤条件。
 
 当Type为Group时，支持Key为workgroup-name的模糊搜索；

@@ -56,6 +56,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCrossTenantENIInfo(CrossTenantENIInfo $CrossTenantENIInfo) 设置容器调用信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStatus() 获取实例的状态信息
+ * @method void setStatus(string $Status) 设置实例的状态信息
+ * @method string getStartScheduleTime() 获取实例的开始调度时间
+ * @method void setStartScheduleTime(string $StartScheduleTime) 设置实例的开始调度时间
+ * @method string getMessage() 获取实例状态的补充信息
+ * @method void setMessage(string $Message) 设置实例状态的补充信息
+ * @method string getNodeIP() 获取当前实例所在的节点 IP
+ * @method void setNodeIP(string $NodeIP) 设置当前实例所在的节点 IP
  */
 class Pod extends AbstractModel
 {
@@ -98,6 +106,7 @@ class Pod extends AbstractModel
     /**
      * @var Container 容器列表
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $Containers;
 
@@ -112,6 +121,26 @@ class Pod extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CrossTenantENIInfo;
+
+    /**
+     * @var string 实例的状态信息
+     */
+    public $Status;
+
+    /**
+     * @var string 实例的开始调度时间
+     */
+    public $StartScheduleTime;
+
+    /**
+     * @var string 实例状态的补充信息
+     */
+    public $Message;
+
+    /**
+     * @var string 当前实例所在的节点 IP
+     */
+    public $NodeIP;
 
     /**
      * @param string $Name pod名
@@ -132,6 +161,10 @@ class Pod extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CrossTenantENIInfo $CrossTenantENIInfo 容器调用信息
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Status 实例的状态信息
+     * @param string $StartScheduleTime 实例的开始调度时间
+     * @param string $Message 实例状态的补充信息
+     * @param string $NodeIP 当前实例所在的节点 IP
      */
     function __construct()
     {
@@ -187,6 +220,22 @@ class Pod extends AbstractModel
         if (array_key_exists("CrossTenantENIInfo",$param) and $param["CrossTenantENIInfo"] !== null) {
             $this->CrossTenantENIInfo = new CrossTenantENIInfo();
             $this->CrossTenantENIInfo->deserialize($param["CrossTenantENIInfo"]);
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("StartScheduleTime",$param) and $param["StartScheduleTime"] !== null) {
+            $this->StartScheduleTime = $param["StartScheduleTime"];
+        }
+
+        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
+            $this->Message = $param["Message"];
+        }
+
+        if (array_key_exists("NodeIP",$param) and $param["NodeIP"] !== null) {
+            $this->NodeIP = $param["NodeIP"];
         }
     }
 }

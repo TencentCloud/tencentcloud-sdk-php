@@ -37,9 +37,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) 设置所属地域。
 当前支持ap-shanghai
  * @method string getUpdateTime() 获取更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DatabasesInfo extends AbstractModel
 {
@@ -65,7 +63,6 @@ class DatabasesInfo extends AbstractModel
 
     /**
      * @var string 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
@@ -79,7 +76,6 @@ class DatabasesInfo extends AbstractModel
      * @param string $Region 所属地域。
 当前支持ap-shanghai
      * @param string $UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

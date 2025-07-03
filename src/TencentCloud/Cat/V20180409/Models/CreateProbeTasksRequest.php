@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskType(integer $TaskType) 设置任务类型，如1、2、3、4、5、6、7；1-页面性能、2-文件上传、3-文件下载、4-端口性能、5-网络质量、6-音视频体验、7-域名whois
  * @method array getNodes() 获取拨测节点，如10001，具体拨测地域运营商对应的拨测点编号可联系云拨测确认。
  * @method void setNodes(array $Nodes) 设置拨测节点，如10001，具体拨测地域运营商对应的拨测点编号可联系云拨测确认。
- * @method integer getInterval() 获取拨测间隔
- * @method void setInterval(integer $Interval) 设置拨测间隔
+ * @method integer getInterval() 获取拨测间隔，单位为分钟
+ * @method void setInterval(integer $Interval) 设置拨测间隔，单位为分钟
  * @method string getParameters() 获取拨测参数，详细可参考云拨测官方文档,链接:https://cloud.tencent.com/document/product/248/87308#createprobetasks。
  * @method void setParameters(string $Parameters) 设置拨测参数，详细可参考云拨测官方文档,链接:https://cloud.tencent.com/document/product/248/87308#createprobetasks。
  * @method integer getTaskCategory() 获取任务分类
@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClientNum(string $ClientNum) 设置客户端ID
  * @method integer getNodeIpType() 获取拨测点IP类型：0-不限制IP类型，1-IPv4，2-IPv6
  * @method void setNodeIpType(integer $NodeIpType) 设置拨测点IP类型：0-不限制IP类型，1-IPv4，2-IPv6
+ * @method integer getSubSyncFlag() 获取供应商子账户同步标志
+ * @method void setSubSyncFlag(integer $SubSyncFlag) 设置供应商子账户同步标志
+ * @method string getRtxName() 获取创建者名称
+ * @method void setRtxName(string $RtxName) 设置创建者名称
  */
 class CreateProbeTasksRequest extends AbstractModel
 {
@@ -67,7 +71,7 @@ class CreateProbeTasksRequest extends AbstractModel
     public $Nodes;
 
     /**
-     * @var integer 拨测间隔
+     * @var integer 拨测间隔，单位为分钟
      */
     public $Interval;
 
@@ -114,10 +118,20 @@ class CreateProbeTasksRequest extends AbstractModel
     public $NodeIpType;
 
     /**
+     * @var integer 供应商子账户同步标志
+     */
+    public $SubSyncFlag;
+
+    /**
+     * @var string 创建者名称
+     */
+    public $RtxName;
+
+    /**
      * @param array $BatchTasks 批量任务名-地址
      * @param integer $TaskType 任务类型，如1、2、3、4、5、6、7；1-页面性能、2-文件上传、3-文件下载、4-端口性能、5-网络质量、6-音视频体验、7-域名whois
      * @param array $Nodes 拨测节点，如10001，具体拨测地域运营商对应的拨测点编号可联系云拨测确认。
-     * @param integer $Interval 拨测间隔
+     * @param integer $Interval 拨测间隔，单位为分钟
      * @param string $Parameters 拨测参数，详细可参考云拨测官方文档,链接:https://cloud.tencent.com/document/product/248/87308#createprobetasks。
      * @param integer $TaskCategory 任务分类
 <li>1 = PC</li>
@@ -128,6 +142,8 @@ class CreateProbeTasksRequest extends AbstractModel
      * @param string $PluginSource 插件类型，如CDN，详情参考云拨测官方文档。
      * @param string $ClientNum 客户端ID
      * @param integer $NodeIpType 拨测点IP类型：0-不限制IP类型，1-IPv4，2-IPv6
+     * @param integer $SubSyncFlag 供应商子账户同步标志
+     * @param string $RtxName 创建者名称
      */
     function __construct()
     {
@@ -198,6 +214,14 @@ class CreateProbeTasksRequest extends AbstractModel
 
         if (array_key_exists("NodeIpType",$param) and $param["NodeIpType"] !== null) {
             $this->NodeIpType = $param["NodeIpType"];
+        }
+
+        if (array_key_exists("SubSyncFlag",$param) and $param["SubSyncFlag"] !== null) {
+            $this->SubSyncFlag = $param["SubSyncFlag"];
+        }
+
+        if (array_key_exists("RtxName",$param) and $param["RtxName"] !== null) {
+            $this->RtxName = $param["RtxName"];
         }
     }
 }

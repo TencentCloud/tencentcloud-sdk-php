@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 查询设备可接入集群信息
  *
  * @method string getLabel() 获取服务节点描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabel(string $Label) 设置服务节点描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取服务节点 ID（对应为其他接口中所需的 ClusterId）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置服务节点 ID（对应为其他接口中所需的 ClusterId）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegion() 获取地域信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置地域信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeDeviceRegion extends AbstractModel
 {
     /**
      * @var string 服务节点描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Label;
 
     /**
      * @var string 服务节点 ID（对应为其他接口中所需的 ClusterId）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @var string 地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
      * @param string $Label 服务节点描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 服务节点 ID（对应为其他接口中所需的 ClusterId）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

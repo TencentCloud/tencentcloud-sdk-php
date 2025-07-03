@@ -33,9 +33,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getStatus() 获取开关状态
  * @method void setStatus(integer $Status) 设置开关状态
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleList extends AbstractModel
 {
@@ -71,7 +69,6 @@ class RuleList extends AbstractModel
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
@@ -83,7 +80,6 @@ class RuleList extends AbstractModel
      * @param string $Time 时间戳
      * @param integer $Status 开关状态
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 创建媒体传输流的输出SRT的目标地址。
  *
- * @method string getIp() 获取输出的IP。
- * @method void setIp(string $Ip) 设置输出的IP。
+ * @method string getIp() 获取输出的IP或域名。
+ * @method void setIp(string $Ip) 设置输出的IP或域名。
  * @method integer getPort() 获取输出的端口。
  * @method void setPort(integer $Port) 设置输出的端口。
  */
 class CreateOutputSRTSettingsDestinations extends AbstractModel
 {
     /**
-     * @var string 输出的IP。
+     * @var string 输出的IP或域名。
      */
     public $Ip;
 
@@ -38,7 +38,7 @@ class CreateOutputSRTSettingsDestinations extends AbstractModel
     public $Port;
 
     /**
-     * @param string $Ip 输出的IP。
+     * @param string $Ip 输出的IP或域名。
      * @param integer $Port 输出的端口。
      */
     function __construct()

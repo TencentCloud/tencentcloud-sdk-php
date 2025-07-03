@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 边缘计算集群内网访问LB信息
  *
  * @method boolean getEnabled() 获取是否开启内网访问LB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnabled(boolean $Enabled) 设置是否开启内网访问LB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSubnetId() 获取内网访问LB关联的子网Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetId(array $SubnetId) 设置内网访问LB关联的子网Id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class EdgeClusterInternalLB extends AbstractModel
 {
     /**
      * @var boolean 是否开启内网访问LB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Enabled;
 
     /**
      * @var array 内网访问LB关联的子网Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetId;
 
     /**
      * @param boolean $Enabled 是否开启内网访问LB
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SubnetId 内网访问LB关联的子网Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

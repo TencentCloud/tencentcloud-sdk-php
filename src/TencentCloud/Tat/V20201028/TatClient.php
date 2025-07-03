@@ -23,9 +23,9 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Tat\V20201028\Models as Models;
 
 /**
- * @method Models\CancelInvocationResponse CancelInvocation(Models\CancelInvocationRequest $req) 取消一台或多台CVM实例执行的命令
+ * @method Models\CancelInvocationResponse CancelInvocation(Models\CancelInvocationRequest $req) 取消一台或多台实例执行的命令
 
-* 如果命令还未下发到agent，任务状态处于处于PENDING、DELIVERING、DELIVER_DELAYED，取消后任务状态是CANCELLED
+* 如果命令还未下发到agent，任务状态处于PENDING、DELIVERING、DELIVER_DELAYED，取消后任务状态是CANCELLED
 * 如果命令已下发到agent，任务状态处于RUNNING， 取消后任务状态是TERMINATED
  * @method Models\CreateCommandResponse CreateCommand(Models\CreateCommandRequest $req) 此接口用于创建命令。
  * @method Models\CreateInvokerResponse CreateInvoker(Models\CreateInvokerRequest $req) 此接口用于创建执行器。
@@ -47,6 +47,7 @@ use TencentCloud\Tat\V20201028\Models as Models;
 RegionState 为 AVAILABLE，代表该地域的 TAT 后台服务已经可用；未返回，代表该地域的 TAT 后台服务尚不可用。
  * @method Models\DescribeRegisterCodesResponse DescribeRegisterCodes(Models\DescribeRegisterCodesRequest $req) 接口用于查询注册码信息。
  * @method Models\DescribeRegisterInstancesResponse DescribeRegisterInstances(Models\DescribeRegisterInstancesRequest $req) 接口用于查询被托管的实例信息。
+ * @method Models\DescribeScenesResponse DescribeScenes(Models\DescribeScenesRequest $req) 此接口用于查询场景详情。
  * @method Models\DisableInvokerResponse DisableInvoker(Models\DisableInvokerRequest $req) 此接口用于停止执行器。
  * @method Models\DisableRegisterCodesResponse DisableRegisterCodes(Models\DisableRegisterCodesRequest $req) 此接口用于批量禁用注册码。
  * @method Models\EnableInvokerResponse EnableInvoker(Models\EnableInvokerRequest $req) 此接口用于启用执行器。

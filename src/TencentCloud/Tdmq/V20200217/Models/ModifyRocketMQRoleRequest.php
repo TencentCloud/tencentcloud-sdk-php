@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置必填字段，集群Id
  * @method string getRemark() 获取备注说明，长度必须大等于0且小等于128。
  * @method void setRemark(string $Remark) 设置备注说明，长度必须大等于0且小等于128。
+ * @method string getPermType() 获取权限类型，默认按集群授权（Cluster：集群级别；TopicAndGroup：主题&消费组级别）
+ * @method void setPermType(string $PermType) 设置权限类型，默认按集群授权（Cluster：集群级别；TopicAndGroup：主题&消费组级别）
  */
 class ModifyRocketMQRoleRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ModifyRocketMQRoleRequest extends AbstractModel
     public $Remark;
 
     /**
+     * @var string 权限类型，默认按集群授权（Cluster：集群级别；TopicAndGroup：主题&消费组级别）
+     */
+    public $PermType;
+
+    /**
      * @param string $RoleName 角色名称，不支持中字以及除了短线和下划线外的特殊字符且长度必须大于0且小等于32。
      * @param string $ClusterId 必填字段，集群Id
      * @param string $Remark 备注说明，长度必须大等于0且小等于128。
+     * @param string $PermType 权限类型，默认按集群授权（Cluster：集群级别；TopicAndGroup：主题&消费组级别）
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ModifyRocketMQRoleRequest extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("PermType",$param) and $param["PermType"] !== null) {
+            $this->PermType = $param["PermType"];
         }
     }
 }

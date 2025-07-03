@@ -83,6 +83,7 @@ class MediaContentReviewSegmentItem extends AbstractModel
 
     /**
      * @var integer 该字段已废弃，请使用 PicUrlExpireTime。
+     * @deprecated
      */
     public $PicUrlExpireTimeStamp;
 

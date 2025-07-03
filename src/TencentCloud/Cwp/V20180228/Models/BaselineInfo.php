@@ -21,117 +21,81 @@ use TencentCloud\Common\AbstractModel;
  * 基线信息
  *
  * @method string getName() 获取基线名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置基线名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLevel() 获取危害等级：1-低危；2-中危；3-高危；4-严重
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevel(integer $Level) 设置危害等级：1-低危；2-中危；3-高危；4-严重
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRuleCount() 获取检测项数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleCount(integer $RuleCount) 设置检测项数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHostCount() 获取影响服务器数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostCount(integer $HostCount) 设置影响服务器数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取通过状态:0:未通过,1:已通过
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置通过状态:0:未通过,1:已通过
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCategoryId() 获取基线id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCategoryId(integer $CategoryId) 设置基线id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLastScanTime() 获取最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastScanTime(string $LastScanTime) 设置最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxStatus() 获取检测中状态: 5
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxStatus(integer $MaxStatus) 设置检测中状态: 5
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBaselineFailCount() 获取基线风险项
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBaselineFailCount(integer $BaselineFailCount) 设置基线风险项
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BaselineInfo extends AbstractModel
 {
     /**
      * @var string 基线名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var integer 危害等级：1-低危；2-中危；3-高危；4-严重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Level;
 
     /**
      * @var integer 检测项数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleCount;
 
     /**
      * @var integer 影响服务器数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostCount;
 
     /**
      * @var integer 通过状态:0:未通过,1:已通过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var integer 基线id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CategoryId;
 
     /**
      * @var string 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastScanTime;
 
     /**
      * @var integer 检测中状态: 5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxStatus;
 
     /**
      * @var integer 基线风险项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BaselineFailCount;
 
     /**
      * @param string $Name 基线名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Level 危害等级：1-低危；2-中危；3-高危；4-严重
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleCount 检测项数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HostCount 影响服务器数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 通过状态:0:未通过,1:已通过
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CategoryId 基线id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastScanTime 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxStatus 检测中状态: 5
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BaselineFailCount 基线风险项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

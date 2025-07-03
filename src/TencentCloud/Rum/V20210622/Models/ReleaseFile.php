@@ -29,9 +29,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getFileHash() 获取文件哈希值
  * @method void setFileHash(string $FileHash) 设置文件哈希值
  * @method integer getID() 获取文件 id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setID(integer $ID) 设置文件 id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ReleaseFile extends AbstractModel
 {
@@ -57,7 +55,6 @@ class ReleaseFile extends AbstractModel
 
     /**
      * @var integer 文件 id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ID;
 
@@ -67,7 +64,6 @@ class ReleaseFile extends AbstractModel
      * @param string $FileName 文件名
      * @param string $FileHash 文件哈希值
      * @param integer $ID 文件 id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

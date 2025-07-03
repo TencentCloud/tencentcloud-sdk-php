@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 历史消息列表
  *
  * @method integer getTimestamp() 获取消息时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimestamp(integer $Timestamp) 设置消息时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFromAccount() 获取消息发送者
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFromAccount(string $FromAccount) 设置消息发送者
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSeq() 获取消息序列号，当前课堂内唯一且单调递增
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSeq(integer $Seq) 设置消息序列号，当前课堂内唯一且单调递增
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getMessageBody() 获取历史消息列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessageBody(array $MessageBody) 设置历史消息列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MessageList extends AbstractModel
 {
     /**
      * @var integer 消息时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Timestamp;
 
     /**
      * @var string 消息发送者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FromAccount;
 
     /**
      * @var integer 消息序列号，当前课堂内唯一且单调递增
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Seq;
 
     /**
      * @var array 历史消息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MessageBody;
 
     /**
      * @param integer $Timestamp 消息时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FromAccount 消息发送者
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Seq 消息序列号，当前课堂内唯一且单调递增
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $MessageBody 历史消息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

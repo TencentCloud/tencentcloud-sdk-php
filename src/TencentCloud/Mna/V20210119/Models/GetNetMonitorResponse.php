@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * GetNetMonitor返回参数结构体
  *
  * @method array getMonitorData() 获取监控数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMonitorData(array $MonitorData) 设置监控数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAccessRegion() 获取接入区域。取值范围：['MC','AP','EU','AM']
 MC=中国大陆
 AP=亚太
@@ -41,7 +39,6 @@ class GetNetMonitorResponse extends AbstractModel
 {
     /**
      * @var array 监控数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MonitorData;
 
@@ -61,7 +58,6 @@ AM=美洲
 
     /**
      * @param array $MonitorData 监控数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AccessRegion 接入区域。取值范围：['MC','AP','EU','AM']
 MC=中国大陆
 AP=亚太

@@ -21,93 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * 安心计划二维码扫码记录
  *
  * @method string getUrl() 获取二维码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUrl(string $Url) 设置二维码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOpenId() 获取OpenID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOpenId(string $OpenId) 设置OpenID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getScanTime() 获取扫码时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScanTime(string $ScanTime) 设置扫码时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIp() 获取IP 地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIp(string $Ip) 设置IP 地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCountry() 获取国家
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCountry(string $Country) 设置国家
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProvince() 获取省份
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProvince(string $Province) 设置省份
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCity() 获取城市
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCity(string $City) 设置城市
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PlanQRCodeRecord extends AbstractModel
 {
     /**
      * @var string 二维码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Url;
 
     /**
      * @var string OpenID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OpenId;
 
     /**
      * @var string 扫码时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScanTime;
 
     /**
      * @var string IP 地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ip;
 
     /**
      * @var string 国家
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Country;
 
     /**
      * @var string 省份
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Province;
 
     /**
      * @var string 城市
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $City;
 
     /**
      * @param string $Url 二维码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OpenId OpenID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScanTime 扫码时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Ip IP 地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Country 国家
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Province 省份
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $City 城市
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

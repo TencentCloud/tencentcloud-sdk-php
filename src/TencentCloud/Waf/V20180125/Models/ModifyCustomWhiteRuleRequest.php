@@ -30,14 +30,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBypass(string $Bypass) 设置放行时是否继续执行其它检查逻辑，继续执行地域封禁防护：geoip、继续执行CC策略防护：cc、继续执行WEB应用防护：owasp、继续执行AI引擎防护：ai、继续执行信息防泄漏防护：antileakage。如果勾选多个，则以“，”串接。
  * @method integer getSortId() 获取优先级，1~100的整数，数字越小，代表这条规则的执行优先级越高。
  * @method void setSortId(integer $SortId) 设置优先级，1~100的整数，数字越小，代表这条规则的执行优先级越高。
- * @method integer getExpireTime() 获取规则生效截止时间，0：永久生效，其它值为对应时间的时间戳。
- * @method void setExpireTime(integer $ExpireTime) 设置规则生效截止时间，0：永久生效，其它值为对应时间的时间戳。
+ * @method integer getExpireTime() 获取如果没有设置JobDateTime字段则用此字段，0表示永久生效，其它表示定时生效的截止时间（单位为秒）
+ * @method void setExpireTime(integer $ExpireTime) 设置如果没有设置JobDateTime字段则用此字段，0表示永久生效，其它表示定时生效的截止时间（单位为秒）
  * @method array getStrategies() 获取匹配条件数组
  * @method void setStrategies(array $Strategies) 设置匹配条件数组
- * @method string getJobType() 获取定时任务类型
- * @method void setJobType(string $JobType) 设置定时任务类型
+ * @method string getJobType() 获取规则执行的方式，TimedJob为定时执行，CronJob为周期执行
+ * @method void setJobType(string $JobType) 设置规则执行的方式，TimedJob为定时执行，CronJob为周期执行
  * @method JobDateTime getJobDateTime() 获取定时任务配置
  * @method void setJobDateTime(JobDateTime $JobDateTime) 设置定时任务配置
+ * @method string getLogicalOp() 获取匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+ * @method void setLogicalOp(string $LogicalOp) 设置匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
  */
 class ModifyCustomWhiteRuleRequest extends AbstractModel
 {
@@ -67,7 +69,7 @@ class ModifyCustomWhiteRuleRequest extends AbstractModel
     public $SortId;
 
     /**
-     * @var integer 规则生效截止时间，0：永久生效，其它值为对应时间的时间戳。
+     * @var integer 如果没有设置JobDateTime字段则用此字段，0表示永久生效，其它表示定时生效的截止时间（单位为秒）
      */
     public $ExpireTime;
 
@@ -77,7 +79,7 @@ class ModifyCustomWhiteRuleRequest extends AbstractModel
     public $Strategies;
 
     /**
-     * @var string 定时任务类型
+     * @var string 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
      */
     public $JobType;
 
@@ -87,15 +89,21 @@ class ModifyCustomWhiteRuleRequest extends AbstractModel
     public $JobDateTime;
 
     /**
+     * @var string 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
+     */
+    public $LogicalOp;
+
+    /**
      * @param string $Domain 编辑的域名
      * @param integer $RuleId 编辑的规则ID
      * @param string $RuleName 编辑的规则名称
      * @param string $Bypass 放行时是否继续执行其它检查逻辑，继续执行地域封禁防护：geoip、继续执行CC策略防护：cc、继续执行WEB应用防护：owasp、继续执行AI引擎防护：ai、继续执行信息防泄漏防护：antileakage。如果勾选多个，则以“，”串接。
      * @param integer $SortId 优先级，1~100的整数，数字越小，代表这条规则的执行优先级越高。
-     * @param integer $ExpireTime 规则生效截止时间，0：永久生效，其它值为对应时间的时间戳。
+     * @param integer $ExpireTime 如果没有设置JobDateTime字段则用此字段，0表示永久生效，其它表示定时生效的截止时间（单位为秒）
      * @param array $Strategies 匹配条件数组
-     * @param string $JobType 定时任务类型
+     * @param string $JobType 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
      * @param JobDateTime $JobDateTime 定时任务配置
+     * @param string $LogicalOp 匹配条件的逻辑关系，支持and、or，分别表示多个逻辑匹配条件是与、或的关系
      */
     function __construct()
     {
@@ -150,6 +158,10 @@ class ModifyCustomWhiteRuleRequest extends AbstractModel
         if (array_key_exists("JobDateTime",$param) and $param["JobDateTime"] !== null) {
             $this->JobDateTime = new JobDateTime();
             $this->JobDateTime->deserialize($param["JobDateTime"]);
+        }
+
+        if (array_key_exists("LogicalOp",$param) and $param["LogicalOp"] !== null) {
+            $this->LogicalOp = $param["LogicalOp"];
         }
     }
 }

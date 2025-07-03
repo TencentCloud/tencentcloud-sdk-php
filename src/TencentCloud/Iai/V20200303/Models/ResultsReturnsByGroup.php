@@ -19,16 +19,17 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * 识别结果。
-
  *
  * @method FaceRect getFaceRect() 获取检测出的人脸框位置。
  * @method void setFaceRect(FaceRect $FaceRect) 设置检测出的人脸框位置。
  * @method array getGroupCandidates() 获取识别结果。
  * @method void setGroupCandidates(array $GroupCandidates) 设置识别结果。
- * @method integer getRetCode() 获取检测出的人脸图片状态返回码。0 表示正常。 
--1601代表不符合图片质量控制要求，此时Candidate内容为空。
- * @method void setRetCode(integer $RetCode) 设置检测出的人脸图片状态返回码。0 表示正常。 
--1601代表不符合图片质量控制要求，此时Candidate内容为空。
+ * @method integer getRetCode() 获取检测出的人脸图片状态返回码。
+- 0 表示正常。 
+- -1601代表不符合图片质量控制要求，此时Candidate内容为空。
+ * @method void setRetCode(integer $RetCode) 设置检测出的人脸图片状态返回码。
+- 0 表示正常。 
+- -1601代表不符合图片质量控制要求，此时Candidate内容为空。
  */
 class ResultsReturnsByGroup extends AbstractModel
 {
@@ -43,16 +44,18 @@ class ResultsReturnsByGroup extends AbstractModel
     public $GroupCandidates;
 
     /**
-     * @var integer 检测出的人脸图片状态返回码。0 表示正常。 
--1601代表不符合图片质量控制要求，此时Candidate内容为空。
+     * @var integer 检测出的人脸图片状态返回码。
+- 0 表示正常。 
+- -1601代表不符合图片质量控制要求，此时Candidate内容为空。
      */
     public $RetCode;
 
     /**
      * @param FaceRect $FaceRect 检测出的人脸框位置。
      * @param array $GroupCandidates 识别结果。
-     * @param integer $RetCode 检测出的人脸图片状态返回码。0 表示正常。 
--1601代表不符合图片质量控制要求，此时Candidate内容为空。
+     * @param integer $RetCode 检测出的人脸图片状态返回码。
+- 0 表示正常。 
+- -1601代表不符合图片质量控制要求，此时Candidate内容为空。
      */
     function __construct()
     {

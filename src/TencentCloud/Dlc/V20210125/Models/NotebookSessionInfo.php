@@ -47,29 +47,17 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProgramArchives(array $ProgramArchives) 设置依赖的pyspark虚拟环境地址，当前支持：cosn://和lakefs://两种路径
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDriverSize() 获取指定的Driver规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDriverSize(string $DriverSize) 设置指定的Driver规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExecutorSize() 获取指定的Executor规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExecutorSize(string $ExecutorSize) 设置指定的Executor规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getExecutorNumbers() 获取指定的Executor数量，默认为1
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExecutorNumbers(integer $ExecutorNumbers) 设置指定的Executor数量，默认为1
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProxyUser() 获取代理用户，默认为root
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProxyUser(string $ProxyUser) 设置代理用户，默认为root
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTimeoutInSecond() 获取指定的Session超时时间，单位秒，默认3600秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeoutInSecond(integer $TimeoutInSecond) 设置指定的Session超时时间，单位秒，默认3600秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSparkAppId() 获取Spark任务返回的AppId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSparkAppId(string $SparkAppId) 设置Spark任务返回的AppId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSessionId() 获取Session唯一标识
  * @method void setSessionId(string $SessionId) 设置Session唯一标识
  * @method string getState() 获取Session状态，包含：not_started（未启动）、starting（已启动）、idle（等待输入）、busy(正在运行statement)、shutting_down（停止）、error（异常）、dead（已退出）、killed（被杀死）、success（正常停止）
@@ -81,13 +69,21 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppInfo(array $AppInfo) 设置其它信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSparkUiUrl() 获取Spark ui地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSparkUiUrl(string $SparkUiUrl) 设置Spark ui地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getExecutorMaxNumbers() 获取指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于ExecutorNumbers
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExecutorMaxNumbers(integer $ExecutorMaxNumbers) 设置指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于ExecutorNumbers
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSessionType() 获取session类型，group：资源组下session independent：独立资源session， 不依赖资源组
+ * @method void setSessionType(string $SessionType) 设置session类型，group：资源组下session independent：独立资源session， 不依赖资源组
+ * @method string getDataEngineId() 获取引擎id
+ * @method void setDataEngineId(string $DataEngineId) 设置引擎id
+ * @method string getResourceGroupId() 获取资源组id
+ * @method void setResourceGroupId(string $ResourceGroupId) 设置资源组id
+ * @method string getResourceGroupName() 获取资源组名称
+ * @method void setResourceGroupName(string $ResourceGroupName) 设置资源组名称
+ * @method integer getPodSize() 获取session，pod大小
+ * @method void setPodSize(integer $PodSize) 设置session，pod大小
+ * @method integer getPodNumbers() 获取pod数量
+ * @method void setPodNumbers(integer $PodNumbers) 设置pod数量
  */
 class NotebookSessionInfo extends AbstractModel
 {
@@ -138,37 +134,31 @@ class NotebookSessionInfo extends AbstractModel
 
     /**
      * @var string 指定的Driver规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DriverSize;
 
     /**
      * @var string 指定的Executor规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecutorSize;
 
     /**
      * @var integer 指定的Executor数量，默认为1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecutorNumbers;
 
     /**
      * @var string 代理用户，默认为root
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProxyUser;
 
     /**
      * @var integer 指定的Session超时时间，单位秒，默认3600秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeoutInSecond;
 
     /**
      * @var string Spark任务返回的AppId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SparkAppId;
 
@@ -195,15 +185,43 @@ class NotebookSessionInfo extends AbstractModel
 
     /**
      * @var string Spark ui地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SparkUiUrl;
 
     /**
      * @var integer 指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于ExecutorNumbers
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecutorMaxNumbers;
+
+    /**
+     * @var string session类型，group：资源组下session independent：独立资源session， 不依赖资源组
+     */
+    public $SessionType;
+
+    /**
+     * @var string 引擎id
+     */
+    public $DataEngineId;
+
+    /**
+     * @var string 资源组id
+     */
+    public $ResourceGroupId;
+
+    /**
+     * @var string 资源组名称
+     */
+    public $ResourceGroupName;
+
+    /**
+     * @var integer session，pod大小
+     */
+    public $PodSize;
+
+    /**
+     * @var integer pod数量
+     */
+    public $PodNumbers;
 
     /**
      * @param string $Name Session名称
@@ -220,26 +238,24 @@ class NotebookSessionInfo extends AbstractModel
      * @param array $ProgramArchives 依赖的pyspark虚拟环境地址，当前支持：cosn://和lakefs://两种路径
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DriverSize 指定的Driver规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExecutorSize 指定的Executor规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ExecutorNumbers 指定的Executor数量，默认为1
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProxyUser 代理用户，默认为root
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TimeoutInSecond 指定的Session超时时间，单位秒，默认3600秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SparkAppId Spark任务返回的AppId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SessionId Session唯一标识
      * @param string $State Session状态，包含：not_started（未启动）、starting（已启动）、idle（等待输入）、busy(正在运行statement)、shutting_down（停止）、error（异常）、dead（已退出）、killed（被杀死）、success（正常停止）
      * @param string $CreateTime Session创建时间
      * @param array $AppInfo 其它信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SparkUiUrl Spark ui地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ExecutorMaxNumbers 指定的Executor数量（最大值），默认为1，当开启动态分配有效，若未开启，则该值等于ExecutorNumbers
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SessionType session类型，group：资源组下session independent：独立资源session， 不依赖资源组
+     * @param string $DataEngineId 引擎id
+     * @param string $ResourceGroupId 资源组id
+     * @param string $ResourceGroupName 资源组名称
+     * @param integer $PodSize session，pod大小
+     * @param integer $PodNumbers pod数量
      */
     function __construct()
     {
@@ -342,6 +358,30 @@ class NotebookSessionInfo extends AbstractModel
 
         if (array_key_exists("ExecutorMaxNumbers",$param) and $param["ExecutorMaxNumbers"] !== null) {
             $this->ExecutorMaxNumbers = $param["ExecutorMaxNumbers"];
+        }
+
+        if (array_key_exists("SessionType",$param) and $param["SessionType"] !== null) {
+            $this->SessionType = $param["SessionType"];
+        }
+
+        if (array_key_exists("DataEngineId",$param) and $param["DataEngineId"] !== null) {
+            $this->DataEngineId = $param["DataEngineId"];
+        }
+
+        if (array_key_exists("ResourceGroupId",$param) and $param["ResourceGroupId"] !== null) {
+            $this->ResourceGroupId = $param["ResourceGroupId"];
+        }
+
+        if (array_key_exists("ResourceGroupName",$param) and $param["ResourceGroupName"] !== null) {
+            $this->ResourceGroupName = $param["ResourceGroupName"];
+        }
+
+        if (array_key_exists("PodSize",$param) and $param["PodSize"] !== null) {
+            $this->PodSize = $param["PodSize"];
+        }
+
+        if (array_key_exists("PodNumbers",$param) and $param["PodNumbers"] !== null) {
+            $this->PodNumbers = $param["PodNumbers"];
         }
     }
 }

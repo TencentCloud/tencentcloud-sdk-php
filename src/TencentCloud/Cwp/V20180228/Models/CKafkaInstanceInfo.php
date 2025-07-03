@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getKafkaVersion() 获取版本号
  * @method void setKafkaVersion(string $KafkaVersion) 设置版本号
  * @method array getTopicList() 获取主题列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicList(array $TopicList) 设置主题列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRouteList() 获取路由列表
  * @method void setRouteList(array $RouteList) 设置路由列表
  * @method integer getDiskSize() 获取磁盘容量，单位GB
@@ -66,7 +64,6 @@ class CKafkaInstanceInfo extends AbstractModel
 
     /**
      * @var array 主题列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicList;
 
@@ -115,7 +112,6 @@ class CKafkaInstanceInfo extends AbstractModel
      * @param string $InstanceName 实例名称
      * @param string $KafkaVersion 版本号
      * @param array $TopicList 主题列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RouteList 路由列表
      * @param integer $DiskSize 磁盘容量，单位GB
      * @param string $VpcId vpcId，如果为空，说明是基础网络

@@ -27,25 +27,19 @@ use TencentCloud\Common\AbstractModel;
 <li>on：开启；</li>
 <li>off：关闭。</li>
  * @method integer getMaxAge() 获取MaxAge 数值。单位为秒，最大值为1天。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxAge(integer $MaxAge) 设置MaxAge 数值。单位为秒，最大值为1天。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIncludeSubDomains() 获取是否包含子域名，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIncludeSubDomains(string $IncludeSubDomains) 设置是否包含子域名，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPreload() 获取是否开启预加载，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPreload(string $Preload) 设置是否开启预加载，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Hsts extends AbstractModel
 {
@@ -58,7 +52,6 @@ class Hsts extends AbstractModel
 
     /**
      * @var integer MaxAge 数值。单位为秒，最大值为1天。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxAge;
 
@@ -66,7 +59,6 @@ class Hsts extends AbstractModel
      * @var string 是否包含子域名，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IncludeSubDomains;
 
@@ -74,7 +66,6 @@ class Hsts extends AbstractModel
      * @var string 是否开启预加载，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Preload;
 
@@ -83,15 +74,12 @@ class Hsts extends AbstractModel
 <li>on：开启；</li>
 <li>off：关闭。</li>
      * @param integer $MaxAge MaxAge 数值。单位为秒，最大值为1天。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IncludeSubDomains 是否包含子域名，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Preload 是否开启预加载，取值有：
 <li>on：开启；</li>
 <li>off：关闭。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

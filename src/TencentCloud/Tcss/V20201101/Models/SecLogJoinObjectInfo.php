@@ -23,35 +23,29 @@ use TencentCloud\Common\AbstractModel;
  * @method string getHostID() 获取主机ID
  * @method void setHostID(string $HostID) 设置主机ID
  * @method string getHostName() 获取主机名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostName(string $HostName) 设置主机名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHostIP() 获取主机IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostIP(string $HostIP) 设置主机IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHostStatus() 获取主机状态
  * @method void setHostStatus(string $HostStatus) 设置主机状态
  * @method string getClusterID() 获取集群ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterID(string $ClusterID) 设置集群ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterName() 获取集群名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterName(string $ClusterName) 设置集群名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPublicIP() 获取外网IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicIP(string $PublicIP) 设置外网IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getJoinState() 获取接入状态(true:已接入  false:未接入)
  * @method void setJoinState(boolean $JoinState) 设置接入状态(true:已接入  false:未接入)
  * @method string getClusterVersion() 获取集群版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterVersion(string $ClusterVersion) 设置集群版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterMainAddress() 获取集群主节点地址
  * @method void setClusterMainAddress(string $ClusterMainAddress) 设置集群主节点地址
+ * @method integer getContainerCnt() 获取容器数
+ * @method void setContainerCnt(integer $ContainerCnt) 设置容器数
+ * @method string getClusterType() 获取集群类型
+ * @method void setClusterType(string $ClusterType) 设置集群类型
+ * @method string getClusterStatus() 获取集群状态
+ * @method void setClusterStatus(string $ClusterStatus) 设置集群状态
  */
 class SecLogJoinObjectInfo extends AbstractModel
 {
@@ -62,13 +56,11 @@ class SecLogJoinObjectInfo extends AbstractModel
 
     /**
      * @var string 主机名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostName;
 
     /**
      * @var string 主机IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostIP;
 
@@ -79,19 +71,16 @@ class SecLogJoinObjectInfo extends AbstractModel
 
     /**
      * @var string 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterID;
 
     /**
      * @var string 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterName;
 
     /**
      * @var string 外网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicIP;
 
@@ -102,7 +91,6 @@ class SecLogJoinObjectInfo extends AbstractModel
 
     /**
      * @var string 集群版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterVersion;
 
@@ -112,22 +100,34 @@ class SecLogJoinObjectInfo extends AbstractModel
     public $ClusterMainAddress;
 
     /**
+     * @var integer 容器数
+     */
+    public $ContainerCnt;
+
+    /**
+     * @var string 集群类型
+     */
+    public $ClusterType;
+
+    /**
+     * @var string 集群状态
+     */
+    public $ClusterStatus;
+
+    /**
      * @param string $HostID 主机ID
      * @param string $HostName 主机名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HostIP 主机IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HostStatus 主机状态
      * @param string $ClusterID 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterName 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PublicIP 外网IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $JoinState 接入状态(true:已接入  false:未接入)
      * @param string $ClusterVersion 集群版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterMainAddress 集群主节点地址
+     * @param integer $ContainerCnt 容器数
+     * @param string $ClusterType 集群类型
+     * @param string $ClusterStatus 集群状态
      */
     function __construct()
     {
@@ -180,6 +180,18 @@ class SecLogJoinObjectInfo extends AbstractModel
 
         if (array_key_exists("ClusterMainAddress",$param) and $param["ClusterMainAddress"] !== null) {
             $this->ClusterMainAddress = $param["ClusterMainAddress"];
+        }
+
+        if (array_key_exists("ContainerCnt",$param) and $param["ContainerCnt"] !== null) {
+            $this->ContainerCnt = $param["ContainerCnt"];
+        }
+
+        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
+            $this->ClusterType = $param["ClusterType"];
+        }
+
+        if (array_key_exists("ClusterStatus",$param) and $param["ClusterStatus"] !== null) {
+            $this->ClusterStatus = $param["ClusterStatus"];
         }
     }
 }

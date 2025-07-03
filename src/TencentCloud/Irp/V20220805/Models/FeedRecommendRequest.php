@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setItemCnt(integer $ItemCnt) 设置推荐返回数量，默认10个，最多支持50个的内容返回。如果有更多数量要求，<a href="https://console.cloud.tencent.com/workorder/category" target="_blank">提单</a>沟通解决
  * @method string getCurrentItemId() 获取当场景是相关推荐时该值必填，场景是非相关推荐时该值无效
  * @method void setCurrentItemId(string $CurrentItemId) 设置当场景是相关推荐时该值必填，场景是非相关推荐时该值无效
+ * @method string getExtension() 获取扩展字段，json字符串，需要base64加密
+ * @method void setExtension(string $Extension) 设置扩展字段，json字符串，需要base64加密
  */
 class FeedRecommendRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class FeedRecommendRequest extends AbstractModel
     public $CurrentItemId;
 
     /**
+     * @var string 扩展字段，json字符串，需要base64加密
+     */
+    public $Extension;
+
+    /**
      * @param string $InstanceId 实例ID，在控制台获取
      * @param string $SceneId 场景ID，在控制台创建场景后获取
      * @param string $UserId 用户唯一ID，客户自定义用户ID，作为一个用户的唯一标识
      * @param array $UserIdList 用户设备ID数组，可传入用户的多个类型ID，用于关联画像信息
      * @param integer $ItemCnt 推荐返回数量，默认10个，最多支持50个的内容返回。如果有更多数量要求，<a href="https://console.cloud.tencent.com/workorder/category" target="_blank">提单</a>沟通解决
      * @param string $CurrentItemId 当场景是相关推荐时该值必填，场景是非相关推荐时该值无效
+     * @param string $Extension 扩展字段，json字符串，需要base64加密
      */
     function __construct()
     {
@@ -113,6 +121,10 @@ class FeedRecommendRequest extends AbstractModel
 
         if (array_key_exists("CurrentItemId",$param) and $param["CurrentItemId"] !== null) {
             $this->CurrentItemId = $param["CurrentItemId"];
+        }
+
+        if (array_key_exists("Extension",$param) and $param["Extension"] !== null) {
+            $this->Extension = $param["Extension"];
         }
     }
 }

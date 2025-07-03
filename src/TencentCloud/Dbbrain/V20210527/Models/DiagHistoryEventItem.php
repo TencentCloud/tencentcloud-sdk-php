@@ -37,9 +37,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInstanceId() 获取实例 ID 。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID 。
  * @method string getMetric() 获取保留字段。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetric(string $Metric) 设置保留字段。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegion() 获取地域。
  * @method void setRegion(string $Region) 设置地域。
  */
@@ -87,7 +85,6 @@ class DiagHistoryEventItem extends AbstractModel
 
     /**
      * @var string 保留字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Metric;
 
@@ -106,7 +103,6 @@ class DiagHistoryEventItem extends AbstractModel
      * @param string $DiagItem 诊断项说明。
      * @param string $InstanceId 实例 ID 。
      * @param string $Metric 保留字段。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 地域。
      */
     function __construct()

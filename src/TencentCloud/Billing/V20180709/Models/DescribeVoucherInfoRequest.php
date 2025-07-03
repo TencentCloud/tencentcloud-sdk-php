@@ -54,6 +54,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVoucherMainType(string $VoucherMainType) 设置代金券主类型 has_price 为有价现金券 no_price 为无价代金券
  * @method string getVoucherSubType() 获取代金券副类型 discount 为折扣券 deduct 为抵扣券
  * @method void setVoucherSubType(string $VoucherSubType) 设置代金券副类型 discount 为折扣券 deduct 为抵扣券
+ * @method string getStartTimeFrom() 获取券有效时间开始时间
+ * @method void setStartTimeFrom(string $StartTimeFrom) 设置券有效时间开始时间
+ * @method string getStartTimeTo() 获取券有效时间结束时间
+ * @method void setStartTimeTo(string $StartTimeTo) 设置券有效时间结束时间
+ * @method string getEndTimeFrom() 获取券失效时间开始时间
+ * @method void setEndTimeFrom(string $EndTimeFrom) 设置券失效时间开始时间
+ * @method string getEndTimeTo() 获取券失效时间结束时间
+ * @method void setEndTimeTo(string $EndTimeTo) 设置券失效时间结束时间
+ * @method string getCreateTimeFrom() 获取发券时间开始时间
+ * @method void setCreateTimeFrom(string $CreateTimeFrom) 设置发券时间开始时间
+ * @method string getCreateTimeTo() 获取发券时间结束时间
+ * @method void setCreateTimeTo(string $CreateTimeTo) 设置发券时间结束时间
  */
 class DescribeVoucherInfoRequest extends AbstractModel
 {
@@ -143,6 +155,36 @@ class DescribeVoucherInfoRequest extends AbstractModel
     public $VoucherSubType;
 
     /**
+     * @var string 券有效时间开始时间
+     */
+    public $StartTimeFrom;
+
+    /**
+     * @var string 券有效时间结束时间
+     */
+    public $StartTimeTo;
+
+    /**
+     * @var string 券失效时间开始时间
+     */
+    public $EndTimeFrom;
+
+    /**
+     * @var string 券失效时间结束时间
+     */
+    public $EndTimeTo;
+
+    /**
+     * @var string 发券时间开始时间
+     */
+    public $CreateTimeFrom;
+
+    /**
+     * @var string 发券时间结束时间
+     */
+    public $CreateTimeTo;
+
+    /**
      * @param integer $Limit 一页多少条数据，默认是20条，最大不超过1000
      * @param integer $Offset 第多少页，默认是1
      * @param string $Status 券状态：待使用：unUsed，已使用： used，已发货：delivered，已作废： cancel，已过期：overdue
@@ -160,6 +202,12 @@ class DescribeVoucherInfoRequest extends AbstractModel
      * @param string $Operator 操作人，默认就是用户uin
      * @param string $VoucherMainType 代金券主类型 has_price 为有价现金券 no_price 为无价代金券
      * @param string $VoucherSubType 代金券副类型 discount 为折扣券 deduct 为抵扣券
+     * @param string $StartTimeFrom 券有效时间开始时间
+     * @param string $StartTimeTo 券有效时间结束时间
+     * @param string $EndTimeFrom 券失效时间开始时间
+     * @param string $EndTimeTo 券失效时间结束时间
+     * @param string $CreateTimeFrom 发券时间开始时间
+     * @param string $CreateTimeTo 发券时间结束时间
      */
     function __construct()
     {
@@ -240,6 +288,30 @@ class DescribeVoucherInfoRequest extends AbstractModel
 
         if (array_key_exists("VoucherSubType",$param) and $param["VoucherSubType"] !== null) {
             $this->VoucherSubType = $param["VoucherSubType"];
+        }
+
+        if (array_key_exists("StartTimeFrom",$param) and $param["StartTimeFrom"] !== null) {
+            $this->StartTimeFrom = $param["StartTimeFrom"];
+        }
+
+        if (array_key_exists("StartTimeTo",$param) and $param["StartTimeTo"] !== null) {
+            $this->StartTimeTo = $param["StartTimeTo"];
+        }
+
+        if (array_key_exists("EndTimeFrom",$param) and $param["EndTimeFrom"] !== null) {
+            $this->EndTimeFrom = $param["EndTimeFrom"];
+        }
+
+        if (array_key_exists("EndTimeTo",$param) and $param["EndTimeTo"] !== null) {
+            $this->EndTimeTo = $param["EndTimeTo"];
+        }
+
+        if (array_key_exists("CreateTimeFrom",$param) and $param["CreateTimeFrom"] !== null) {
+            $this->CreateTimeFrom = $param["CreateTimeFrom"];
+        }
+
+        if (array_key_exists("CreateTimeTo",$param) and $param["CreateTimeTo"] !== null) {
+            $this->CreateTimeTo = $param["CreateTimeTo"];
         }
     }
 }

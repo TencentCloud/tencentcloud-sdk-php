@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageNumber(integer $PageNumber) 设置页码
  * @method integer getPageSize() 获取每页数目
  * @method void setPageSize(integer $PageSize) 设置每页数目
+ * @method string getProjectId() 获取项目ID
+ * @method void setProjectId(string $ProjectId) 设置项目ID
  */
 class DescribeEventConsumeTasksRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeEventConsumeTasksRequest extends AbstractModel
     public $PageSize;
 
     /**
+     * @var string 项目ID
+     */
+    public $ProjectId;
+
+    /**
      * @param string $EventCaseId 事件实例ID
      * @param integer $PageNumber 页码
      * @param integer $PageSize 每页数目
+     * @param string $ProjectId 项目ID
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeEventConsumeTasksRequest extends AbstractModel
 
         if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
             $this->PageSize = $param["PageSize"];
+        }
+
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
         }
     }
 }

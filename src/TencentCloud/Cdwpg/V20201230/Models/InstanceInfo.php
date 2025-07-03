@@ -21,261 +21,221 @@ use TencentCloud\Common\AbstractModel;
  * 云原生实例详情
  *
  * @method integer getID() 获取ID值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setID(integer $ID) 设置ID值
+ * @method string getInstanceType() 获取内核版本类型
+ * @method void setInstanceType(string $InstanceType) 设置内核版本类型
+ * @method string getInstanceName() 获取集群名字
+ * @method void setInstanceName(string $InstanceName) 设置集群名字
+ * @method string getStatus() 获取集群状态
+ * @method void setStatus(string $Status) 设置集群状态
+ * @method string getStatusDesc() 获取集群状态详情
+ * @method void setStatusDesc(string $StatusDesc) 设置集群状态详情
+ * @method InstanceStateInfo getInstanceStateInfo() 获取集群状态信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceType() 获取cdwpg-cn或者其他
+ * @method void setInstanceStateInfo(InstanceStateInfo $InstanceStateInfo) 设置集群状态信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceType(string $InstanceType) 设置cdwpg-cn或者其他
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceName() 获取cdwpg-cn或者其他
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceName(string $InstanceName) 设置cdwpg-cn或者其他
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取Running
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(string $Status) 设置Running
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatusDesc() 获取运行中
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatusDesc(string $StatusDesc) 设置运行中
-注意：此字段可能返回 null，表示取不到有效值。
- * @method InstanceStateInfo getInstanceStateInfo() 获取无
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceStateInfo(InstanceStateInfo $InstanceStateInfo) 设置无
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceID() 获取-
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceID(string $InstanceID) 设置-
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateTime() 获取2022-09-05 20:00:01
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateTime(string $CreateTime) 设置2022-09-05 20:00:01
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRegion() 获取ap-chongqing
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRegion(string $Region) 设置ap-chongqing
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getZone() 获取ap
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setZone(string $Zone) 设置ap
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRegionDesc() 获取region
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRegionDesc(string $RegionDesc) 设置region
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getZoneDesc() 获取zone
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setZoneDesc(string $ZoneDesc) 设置zone
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceID() 获取集群id
+ * @method void setInstanceID(string $InstanceID) 设置集群id
+ * @method string getCreateTime() 获取创建时间
+ * @method void setCreateTime(string $CreateTime) 设置创建时间
+ * @method string getRegion() 获取地域
+ * @method void setRegion(string $Region) 设置地域
+ * @method string getZone() 获取地区
+ * @method void setZone(string $Zone) 设置地区
+ * @method string getRegionDesc() 获取地域详情
+ * @method void setRegionDesc(string $RegionDesc) 设置地域详情
+ * @method string getZoneDesc() 获取地区详情
+ * @method void setZoneDesc(string $ZoneDesc) 设置地区详情
  * @method array getTags() 获取标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVersion() 获取v3
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVersion(string $Version) 设置v3
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVersion() 获取内核版本
+ * @method void setVersion(string $Version) 设置内核版本
  * @method string getCharset() 获取字符集
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCharset(string $Charset) 设置字符集
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getEngineVersion() 获取引擎版本
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEngineVersion(string $EngineVersion) 设置引擎版本
-注意：此字段可能返回 null，表示取不到有效值。
- * @method array getGTMNodes() 获取GTM节点列表
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGTMNodes(array $GTMNodes) 设置GTM节点列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCNNodes() 获取CN节点列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCNNodes(array $CNNodes) 设置CN节点列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDNNodes() 获取DN节点列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDNNodes(array $DNNodes) 设置DN节点列表
-注意：此字段可能返回 null，表示取不到有效值。
- * @method array getBackupStorage() 获取备份存储
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBackupStorage(array $BackupStorage) 设置备份存储
-注意：此字段可能返回 null，表示取不到有效值。
- * @method array getFNNodes() 获取FN节点列表
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFNNodes(array $FNNodes) 设置FN节点列表
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRegionId() 获取地域id
+ * @method void setRegionId(integer $RegionId) 设置地域id
+ * @method integer getZoneId() 获取地区id
+ * @method void setZoneId(integer $ZoneId) 设置地区id
+ * @method string getVpcId() 获取私有网络
+ * @method void setVpcId(string $VpcId) 设置私有网络
+ * @method string getSubnetId() 获取子网
+ * @method void setSubnetId(string $SubnetId) 设置子网
+ * @method string getExpireTime() 获取过期时间
+ * @method void setExpireTime(string $ExpireTime) 设置过期时间
+ * @method string getPayMode() 获取计费方式
+ * @method void setPayMode(string $PayMode) 设置计费方式
+ * @method boolean getRenewFlag() 获取自动续费
+ * @method void setRenewFlag(boolean $RenewFlag) 设置自动续费
+ * @method string getInstanceId() 获取集群id
+ * @method void setInstanceId(string $InstanceId) 设置集群id
+ * @method array getAccessDetails() 获取访问信息
+ * @method void setAccessDetails(array $AccessDetails) 设置访问信息
  */
 class InstanceInfo extends AbstractModel
 {
     /**
      * @var integer ID值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ID;
 
     /**
-     * @var string cdwpg-cn或者其他
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 内核版本类型
      */
     public $InstanceType;
 
     /**
-     * @var string cdwpg-cn或者其他
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 集群名字
      */
     public $InstanceName;
 
     /**
-     * @var string Running
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 集群状态
      */
     public $Status;
 
     /**
-     * @var string 运行中
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 集群状态详情
      */
     public $StatusDesc;
 
     /**
-     * @var InstanceStateInfo 无
+     * @var InstanceStateInfo 集群状态信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceStateInfo;
 
     /**
-     * @var string -
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 集群id
      */
     public $InstanceID;
 
     /**
-     * @var string 2022-09-05 20:00:01
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 创建时间
      */
     public $CreateTime;
 
     /**
-     * @var string ap-chongqing
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 地域
      */
     public $Region;
 
     /**
-     * @var string ap
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 地区
      */
     public $Zone;
 
     /**
-     * @var string region
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 地域详情
      */
     public $RegionDesc;
 
     /**
-     * @var string zone
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 地区详情
      */
     public $ZoneDesc;
 
     /**
      * @var array 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
-     * @var string v3
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 内核版本
      */
     public $Version;
 
     /**
      * @var string 字符集
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Charset;
 
     /**
-     * @var string 引擎版本
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $EngineVersion;
-
-    /**
-     * @var array GTM节点列表
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $GTMNodes;
-
-    /**
      * @var array CN节点列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CNNodes;
 
     /**
      * @var array DN节点列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DNNodes;
 
     /**
-     * @var array 备份存储
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 地域id
      */
-    public $BackupStorage;
+    public $RegionId;
 
     /**
-     * @var array FN节点列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 地区id
      */
-    public $FNNodes;
+    public $ZoneId;
+
+    /**
+     * @var string 私有网络
+     */
+    public $VpcId;
+
+    /**
+     * @var string 子网
+     */
+    public $SubnetId;
+
+    /**
+     * @var string 过期时间
+     */
+    public $ExpireTime;
+
+    /**
+     * @var string 计费方式
+     */
+    public $PayMode;
+
+    /**
+     * @var boolean 自动续费
+     */
+    public $RenewFlag;
+
+    /**
+     * @var string 集群id
+     */
+    public $InstanceId;
+
+    /**
+     * @var array 访问信息
+     */
+    public $AccessDetails;
 
     /**
      * @param integer $ID ID值
+     * @param string $InstanceType 内核版本类型
+     * @param string $InstanceName 集群名字
+     * @param string $Status 集群状态
+     * @param string $StatusDesc 集群状态详情
+     * @param InstanceStateInfo $InstanceStateInfo 集群状态信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceType cdwpg-cn或者其他
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceName cdwpg-cn或者其他
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status Running
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $StatusDesc 运行中
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param InstanceStateInfo $InstanceStateInfo 无
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceID -
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateTime 2022-09-05 20:00:01
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Region ap-chongqing
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Zone ap
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RegionDesc region
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ZoneDesc zone
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceID 集群id
+     * @param string $CreateTime 创建时间
+     * @param string $Region 地域
+     * @param string $Zone 地区
+     * @param string $RegionDesc 地域详情
+     * @param string $ZoneDesc 地区详情
      * @param array $Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Version v3
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Version 内核版本
      * @param string $Charset 字符集
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $EngineVersion 引擎版本
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $GTMNodes GTM节点列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CNNodes CN节点列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DNNodes DN节点列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $BackupStorage 备份存储
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $FNNodes FN节点列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RegionId 地域id
+     * @param integer $ZoneId 地区id
+     * @param string $VpcId 私有网络
+     * @param string $SubnetId 子网
+     * @param string $ExpireTime 过期时间
+     * @param string $PayMode 计费方式
+     * @param boolean $RenewFlag 自动续费
+     * @param string $InstanceId 集群id
+     * @param array $AccessDetails 访问信息
      */
     function __construct()
     {
@@ -356,19 +316,6 @@ class InstanceInfo extends AbstractModel
             $this->Charset = $param["Charset"];
         }
 
-        if (array_key_exists("EngineVersion",$param) and $param["EngineVersion"] !== null) {
-            $this->EngineVersion = $param["EngineVersion"];
-        }
-
-        if (array_key_exists("GTMNodes",$param) and $param["GTMNodes"] !== null) {
-            $this->GTMNodes = [];
-            foreach ($param["GTMNodes"] as $key => $value){
-                $obj = new InstanceNodeGroup();
-                $obj->deserialize($value);
-                array_push($this->GTMNodes, $obj);
-            }
-        }
-
         if (array_key_exists("CNNodes",$param) and $param["CNNodes"] !== null) {
             $this->CNNodes = [];
             foreach ($param["CNNodes"] as $key => $value){
@@ -387,21 +334,44 @@ class InstanceInfo extends AbstractModel
             }
         }
 
-        if (array_key_exists("BackupStorage",$param) and $param["BackupStorage"] !== null) {
-            $this->BackupStorage = [];
-            foreach ($param["BackupStorage"] as $key => $value){
-                $obj = new InstanceNodeGroup();
-                $obj->deserialize($value);
-                array_push($this->BackupStorage, $obj);
-            }
+        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
+            $this->RegionId = $param["RegionId"];
         }
 
-        if (array_key_exists("FNNodes",$param) and $param["FNNodes"] !== null) {
-            $this->FNNodes = [];
-            foreach ($param["FNNodes"] as $key => $value){
-                $obj = new InstanceNodeGroup();
+        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
+            $this->ZoneId = $param["ZoneId"];
+        }
+
+        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
+            $this->VpcId = $param["VpcId"];
+        }
+
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
+            $this->ExpireTime = $param["ExpireTime"];
+        }
+
+        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
+            $this->PayMode = $param["PayMode"];
+        }
+
+        if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
+            $this->RenewFlag = $param["RenewFlag"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("AccessDetails",$param) and $param["AccessDetails"] !== null) {
+            $this->AccessDetails = [];
+            foreach ($param["AccessDetails"] as $key => $value){
+                $obj = new AccessInfo();
                 $obj->deserialize($value);
-                array_push($this->FNNodes, $obj);
+                array_push($this->AccessDetails, $obj);
             }
         }
     }

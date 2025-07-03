@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroups(array $SecurityGroups) 设置安全组。
  * @method string getAddressIPVersion() 获取仅适用于公网负载均衡。IP版本，可取值：IPV4、IPv6FullChain，默认值 IPV4。说明：取值为IPv6FullChain，表示为IPv6版本。
  * @method void setAddressIPVersion(string $AddressIPVersion) 设置仅适用于公网负载均衡。IP版本，可取值：IPV4、IPv6FullChain，默认值 IPV4。说明：取值为IPv6FullChain，表示为IPv6版本。
- * @method string getSubnetId() 获取在购买IPV6负载均衡实例的情况下，必须指定子网 ID, 此参数必填。
- * @method void setSubnetId(string $SubnetId) 设置在购买IPV6负载均衡实例的情况下，必须指定子网 ID, 此参数必填。
+ * @method string getSubnetId() 获取在购买IPV6负载均衡实例的情况下，必须指定子网 ID, 此参数必填；IPv4实例不支持该参数。
+ * @method void setSubnetId(string $SubnetId) 设置在购买IPV6负载均衡实例的情况下，必须指定子网 ID, 此参数必填；IPv4实例不支持该参数。
  */
 class CreateLoadBalancerRequest extends AbstractModel
 {
@@ -99,7 +99,7 @@ class CreateLoadBalancerRequest extends AbstractModel
     public $AddressIPVersion;
 
     /**
-     * @var string 在购买IPV6负载均衡实例的情况下，必须指定子网 ID, 此参数必填。
+     * @var string 在购买IPV6负载均衡实例的情况下，必须指定子网 ID, 此参数必填；IPv4实例不支持该参数。
      */
     public $SubnetId;
 
@@ -115,7 +115,7 @@ class CreateLoadBalancerRequest extends AbstractModel
      * @param array $Tags 标签。
      * @param array $SecurityGroups 安全组。
      * @param string $AddressIPVersion 仅适用于公网负载均衡。IP版本，可取值：IPV4、IPv6FullChain，默认值 IPV4。说明：取值为IPv6FullChain，表示为IPv6版本。
-     * @param string $SubnetId 在购买IPV6负载均衡实例的情况下，必须指定子网 ID, 此参数必填。
+     * @param string $SubnetId 在购买IPV6负载均衡实例的情况下，必须指定子网 ID, 此参数必填；IPv4实例不支持该参数。
      */
     function __construct()
     {

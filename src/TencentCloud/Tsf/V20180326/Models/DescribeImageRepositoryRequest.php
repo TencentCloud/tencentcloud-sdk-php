@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApplicationId(string $ApplicationId) 设置应用id
  * @method TcrRepoInfo getTcrRepoInfo() 获取TcrRepoInfo值
  * @method void setTcrRepoInfo(TcrRepoInfo $TcrRepoInfo) 设置TcrRepoInfo值
- * @method string getRepoName() 获取镜像仓库
- * @method void setRepoName(string $RepoName) 设置镜像仓库
+ * @method string getRepoName() 获取镜像仓库名称
+ * @method void setRepoName(string $RepoName) 设置镜像仓库名称
  */
 class DescribeImageRepositoryRequest extends AbstractModel
 {
@@ -68,7 +68,7 @@ class DescribeImageRepositoryRequest extends AbstractModel
     public $TcrRepoInfo;
 
     /**
-     * @var string 镜像仓库
+     * @var string 镜像仓库名称
      */
     public $RepoName;
 
@@ -79,7 +79,7 @@ class DescribeImageRepositoryRequest extends AbstractModel
      * @param string $RepoType 企业: tcr ；个人: personal或者不填
      * @param string $ApplicationId 应用id
      * @param TcrRepoInfo $TcrRepoInfo TcrRepoInfo值
-     * @param string $RepoName 镜像仓库
+     * @param string $RepoName 镜像仓库名称
      */
     function __construct()
     {

@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * VPC子网信息
  *
  * @method string getCidrId() 获取子网Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCidrId(string $CidrId) 设置子网Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCidrAddr() 获取子网网段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCidrAddr(string $CidrAddr) 设置子网网段
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VpcCidrBlock extends AbstractModel
 {
     /**
      * @var string 子网Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CidrId;
 
     /**
      * @var string 子网网段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CidrAddr;
 
     /**
      * @param string $CidrId 子网Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CidrAddr 子网网段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

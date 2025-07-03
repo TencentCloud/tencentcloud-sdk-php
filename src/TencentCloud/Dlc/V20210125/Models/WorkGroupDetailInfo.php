@@ -21,104 +21,84 @@ use TencentCloud\Common\AbstractModel;
  * 工作组详细信息
  *
  * @method integer getWorkGroupId() 获取工作组Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWorkGroupId(integer $WorkGroupId) 设置工作组Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWorkGroupName() 获取工作组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWorkGroupName(string $WorkGroupName) 设置工作组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取包含的信息类型。User：用户信息；DataAuth：数据权限；EngineAuth:引擎权限
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置包含的信息类型。User：用户信息；DataAuth：数据权限；EngineAuth:引擎权限
-注意：此字段可能返回 null，表示取不到有效值。
  * @method Users getUserInfo() 获取工作组上绑定的用户集合
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserInfo(Users $UserInfo) 设置工作组上绑定的用户集合
-注意：此字段可能返回 null，表示取不到有效值。
  * @method Policys getDataPolicyInfo() 获取数据权限集合
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataPolicyInfo(Policys $DataPolicyInfo) 设置数据权限集合
-注意：此字段可能返回 null，表示取不到有效值。
  * @method Policys getEnginePolicyInfo() 获取引擎权限集合
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnginePolicyInfo(Policys $EnginePolicyInfo) 设置引擎权限集合
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWorkGroupDescription() 获取工作组描述信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWorkGroupDescription(string $WorkGroupDescription) 设置工作组描述信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method Policys getRowFilterInfo() 获取行过滤信息集合
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRowFilterInfo(Policys $RowFilterInfo) 设置行过滤信息集合
+ * @method Policy getCatalogPolicyInfo() 获取数据目录权限集
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCatalogPolicyInfo(Policy $CatalogPolicyInfo) 设置数据目录权限集
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkGroupDetailInfo extends AbstractModel
 {
     /**
      * @var integer 工作组Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkGroupId;
 
     /**
      * @var string 工作组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkGroupName;
 
     /**
      * @var string 包含的信息类型。User：用户信息；DataAuth：数据权限；EngineAuth:引擎权限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var Users 工作组上绑定的用户集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserInfo;
 
     /**
      * @var Policys 数据权限集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataPolicyInfo;
 
     /**
      * @var Policys 引擎权限集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnginePolicyInfo;
 
     /**
      * @var string 工作组描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkGroupDescription;
 
     /**
      * @var Policys 行过滤信息集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RowFilterInfo;
 
     /**
+     * @var Policy 数据目录权限集
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CatalogPolicyInfo;
+
+    /**
      * @param integer $WorkGroupId 工作组Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WorkGroupName 工作组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 包含的信息类型。User：用户信息；DataAuth：数据权限；EngineAuth:引擎权限
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Users $UserInfo 工作组上绑定的用户集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Policys $DataPolicyInfo 数据权限集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Policys $EnginePolicyInfo 引擎权限集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WorkGroupDescription 工作组描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Policys $RowFilterInfo 行过滤信息集合
+     * @param Policy $CatalogPolicyInfo 数据目录权限集
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -168,6 +148,11 @@ class WorkGroupDetailInfo extends AbstractModel
         if (array_key_exists("RowFilterInfo",$param) and $param["RowFilterInfo"] !== null) {
             $this->RowFilterInfo = new Policys();
             $this->RowFilterInfo->deserialize($param["RowFilterInfo"]);
+        }
+
+        if (array_key_exists("CatalogPolicyInfo",$param) and $param["CatalogPolicyInfo"] !== null) {
+            $this->CatalogPolicyInfo = new Policy();
+            $this->CatalogPolicyInfo->deserialize($param["CatalogPolicyInfo"]);
         }
     }
 }

@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * SecurityPolicyDatabase策略
  *
  * @method string getLocalCidrBlock() 获取本端网段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocalCidrBlock(string $LocalCidrBlock) 设置本端网段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRemoteCidrBlock() 获取对端网段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemoteCidrBlock(array $RemoteCidrBlock) 设置对端网段
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SecurityPolicyDatabase extends AbstractModel
 {
     /**
      * @var string 本端网段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LocalCidrBlock;
 
     /**
      * @var array 对端网段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RemoteCidrBlock;
 
     /**
      * @param string $LocalCidrBlock 本端网段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RemoteCidrBlock 对端网段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

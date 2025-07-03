@@ -55,6 +55,7 @@ use TencentCloud\Sts\V20180813\Models as Models;
 1. 临时访问凭据在有效期内都可以使用，建议在有效期内重复使用，以避免业务请求速率上升后被限频
 2. 授予临时访问凭证权限的CAM策略，建议按权限最小化原则
 3. 调用接口的永久密钥，建议不要使用主账号
+ * @method Models\GetSessionTokenResponse GetSessionToken(Models\GetSessionTokenRequest $req) 获取MFA临时证书
  * @method Models\QueryApiKeyResponse QueryApiKey(Models\QueryApiKeyRequest $req) 拉取API密钥列表
  */
 

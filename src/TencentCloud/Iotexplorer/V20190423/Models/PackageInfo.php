@@ -31,27 +31,17 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getCSExpiredTime() 获取云存套餐过期时间
  * @method void setCSExpiredTime(integer $CSExpiredTime) 设置云存套餐过期时间
  * @method integer getCreatedAt() 获取云存套餐创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedAt(integer $CreatedAt) 设置云存套餐创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUpdatedAt() 获取云存套餐更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdatedAt(integer $UpdatedAt) 设置云存套餐更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPackageId() 获取套餐id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPackageId(string $PackageId) 设置套餐id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOrderId() 获取订单id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrderId(string $OrderId) 设置订单id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getChannelId() 获取通道id
  * @method void setChannelId(integer $ChannelId) 设置通道id
  * @method string getCSUserId() 获取用户id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCSUserId(string $CSUserId) 设置用户id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PackageInfo extends AbstractModel
 {
@@ -78,25 +68,21 @@ class PackageInfo extends AbstractModel
 
     /**
      * @var integer 云存套餐创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedAt;
 
     /**
      * @var integer 云存套餐更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdatedAt;
 
     /**
      * @var string 套餐id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PackageId;
 
     /**
      * @var string 订单id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OrderId;
 
@@ -107,7 +93,6 @@ class PackageInfo extends AbstractModel
 
     /**
      * @var string 用户id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CSUserId;
 
@@ -118,16 +103,11 @@ class PackageInfo extends AbstractModel
      * @param integer $CSShiftDuration 云存回看时长
      * @param integer $CSExpiredTime 云存套餐过期时间
      * @param integer $CreatedAt 云存套餐创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UpdatedAt 云存套餐更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PackageId 套餐id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OrderId 订单id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ChannelId 通道id
      * @param string $CSUserId 用户id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

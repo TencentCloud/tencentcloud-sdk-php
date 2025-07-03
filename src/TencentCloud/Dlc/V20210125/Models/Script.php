@@ -21,41 +21,31 @@ use TencentCloud\Common\AbstractModel;
  * script实例。
  *
  * @method string getScriptId() 获取脚本Id，长度36字节。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScriptId(string $ScriptId) 设置脚本Id，长度36字节。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getScriptName() 获取脚本名称，长度0-25。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScriptName(string $ScriptName) 设置脚本名称，长度0-25。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getScriptDesc() 获取脚本描述，长度0-50。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScriptDesc(string $ScriptDesc) 设置脚本描述，长度0-50。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDatabaseName() 获取默认关联数据库。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatabaseName(string $DatabaseName) 设置默认关联数据库。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSQLStatement() 获取SQL描述，长度0-10000。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSQLStatement(string $SQLStatement) 设置SQL描述，长度0-10000。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUpdateTime() 获取更新时间戳， 单位：ms。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(integer $UpdateTime) 设置更新时间戳， 单位：ms。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Script extends AbstractModel
 {
     /**
      * @var string 脚本Id，长度36字节。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScriptId;
 
     /**
      * @var string 脚本名称，长度0-25。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScriptName;
 
@@ -67,7 +57,6 @@ class Script extends AbstractModel
 
     /**
      * @var string 默认关联数据库。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DatabaseName;
 
@@ -79,23 +68,18 @@ class Script extends AbstractModel
 
     /**
      * @var integer 更新时间戳， 单位：ms。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @param string $ScriptId 脚本Id，长度36字节。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScriptName 脚本名称，长度0-25。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScriptDesc 脚本描述，长度0-50。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatabaseName 默认关联数据库。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SQLStatement SQL描述，长度0-10000。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UpdateTime 更新时间戳， 单位：ms。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

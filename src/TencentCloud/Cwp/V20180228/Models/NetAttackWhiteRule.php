@@ -21,105 +21,73 @@ use TencentCloud\Common\AbstractModel;
  * 网络攻击白名单规则
  *
  * @method integer getId() 获取规则id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(integer $Id) 设置规则id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取规则描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置规则描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScope() 获取0: 一组quuid 1: 所有主机
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScope(integer $Scope) 设置0: 一组quuid 1: 所有主机
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDealOldEvents() 获取是否处理之前的事件 0: 不处理 1:处理
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDealOldEvents(integer $DealOldEvents) 设置是否处理之前的事件 0: 不处理 1:处理
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getQuuids() 获取主机quuid 多个用;隔开
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQuuids(string $Quuids) 设置主机quuid 多个用;隔开
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSrcIP() 获取来源IP 单IP:1.1.1.1  IP范围:1.1.1.1-1.1.2.1  IP范围：1.1.1.0/24 多个用;隔开
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSrcIP(string $SrcIP) 设置来源IP 单IP:1.1.1.1  IP范围:1.1.1.1-1.1.2.1  IP范围：1.1.1.0/24 多个用;隔开
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifyTime() 获取修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyTime(string $ModifyTime) 设置修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NetAttackWhiteRule extends AbstractModel
 {
     /**
      * @var integer 规则id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var string 规则描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var integer 0: 一组quuid 1: 所有主机
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Scope;
 
     /**
      * @var integer 是否处理之前的事件 0: 不处理 1:处理
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DealOldEvents;
 
     /**
      * @var string 主机quuid 多个用;隔开
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Quuids;
 
     /**
      * @var string 来源IP 单IP:1.1.1.1  IP范围:1.1.1.1-1.1.2.1  IP范围：1.1.1.0/24 多个用;隔开
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SrcIP;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyTime;
 
     /**
      * @param integer $Id 规则id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 规则描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Scope 0: 一组quuid 1: 所有主机
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DealOldEvents 是否处理之前的事件 0: 不处理 1:处理
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Quuids 主机quuid 多个用;隔开
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SrcIP 来源IP 单IP:1.1.1.1  IP范围:1.1.1.1-1.1.2.1  IP范围：1.1.1.0/24 多个用;隔开
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

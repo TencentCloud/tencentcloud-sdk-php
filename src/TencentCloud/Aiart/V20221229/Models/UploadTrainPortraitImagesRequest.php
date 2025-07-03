@@ -34,16 +34,14 @@ use TencentCloud\Common\AbstractModel;
 图片内容：单人，脸部清晰。
 图片限制：单边分辨率小于2000，转成 Base64 字符串后小于 5MB。
 
- * @method array getUrls() 获取写真模型训练用的图像 URL 列表。
+ * @method array getUrls() 获取写真模型训练用的图像 URL 列表，仅常规训练模式需要上传。
 图片数量：19 - 24 张。
 图片内容：单人，脸部清晰，和基础图像中的人物为同一人。
 图片限制：单边分辨率小于2000，转成 Base64 字符串后小于 5MB。
-
- * @method void setUrls(array $Urls) 设置写真模型训练用的图像 URL 列表。
+ * @method void setUrls(array $Urls) 设置写真模型训练用的图像 URL 列表，仅常规训练模式需要上传。
 图片数量：19 - 24 张。
 图片内容：单人，脸部清晰，和基础图像中的人物为同一人。
 图片限制：单边分辨率小于2000，转成 Base64 字符串后小于 5MB。
-
  * @method Filter getFilter() 获取训练图像质量过滤开关配置。
 支持开启或关闭对训练图像分辨率下限、脸部区域大小、脸部遮挡的过滤，默认开启以上过滤。
 如果训练图像内包含多人脸或无人脸、和 Base 人像不为同一人也将被过滤，不可关闭该过滤条件。
@@ -52,14 +50,16 @@ use TencentCloud\Common\AbstractModel;
 支持开启或关闭对训练图像分辨率下限、脸部区域大小、脸部遮挡的过滤，默认开启以上过滤。
 如果训练图像内包含多人脸或无人脸、和 Base 人像不为同一人也将被过滤，不可关闭该过滤条件。
 建议：关闭以上过滤可能导致写真生成效果受损，建议使用单人、正脸、脸部区域占比较大、脸部清晰无遮挡、无大角度偏转、无夸张表情的图像进行训练。
- * @method integer getTrainMode() 获取是否开启快速训练模式。
-默认不开启。开启后只需要在 BaseUrl 中传入1张图片，Urls.N 中无需传入图片。  
-0：不开启  
-1：开启
- * @method void setTrainMode(integer $TrainMode) 设置是否开启快速训练模式。
-默认不开启。开启后只需要在 BaseUrl 中传入1张图片，Urls.N 中无需传入图片。  
-0：不开启  
-1：开启
+ * @method integer getTrainMode() 获取训练模式。
+默认使用常规训练模式。如果使用快速训练模式和免训练模式，只需要在 BaseUrl 中传入1张图片，Urls.N 中无需传入图片。
+0：常规训练模式，上传多张图片用于模型训练，完成训练后可生成写真图片。
+1：快速训练模式，仅需上传1张图片用于模型训练，训练速度更快，完成训练后可生成写真图片。
+2：免训练模式，仅需上传1张图片，跳过模型训练环节，直接生成写真图片。
+ * @method void setTrainMode(integer $TrainMode) 设置训练模式。
+默认使用常规训练模式。如果使用快速训练模式和免训练模式，只需要在 BaseUrl 中传入1张图片，Urls.N 中无需传入图片。
+0：常规训练模式，上传多张图片用于模型训练，完成训练后可生成写真图片。
+1：快速训练模式，仅需上传1张图片用于模型训练，训练速度更快，完成训练后可生成写真图片。
+2：免训练模式，仅需上传1张图片，跳过模型训练环节，直接生成写真图片。
  */
 class UploadTrainPortraitImagesRequest extends AbstractModel
 {
@@ -79,11 +79,10 @@ class UploadTrainPortraitImagesRequest extends AbstractModel
     public $BaseUrl;
 
     /**
-     * @var array 写真模型训练用的图像 URL 列表。
+     * @var array 写真模型训练用的图像 URL 列表，仅常规训练模式需要上传。
 图片数量：19 - 24 张。
 图片内容：单人，脸部清晰，和基础图像中的人物为同一人。
 图片限制：单边分辨率小于2000，转成 Base64 字符串后小于 5MB。
-
      */
     public $Urls;
 
@@ -96,10 +95,11 @@ class UploadTrainPortraitImagesRequest extends AbstractModel
     public $Filter;
 
     /**
-     * @var integer 是否开启快速训练模式。
-默认不开启。开启后只需要在 BaseUrl 中传入1张图片，Urls.N 中无需传入图片。  
-0：不开启  
-1：开启
+     * @var integer 训练模式。
+默认使用常规训练模式。如果使用快速训练模式和免训练模式，只需要在 BaseUrl 中传入1张图片，Urls.N 中无需传入图片。
+0：常规训练模式，上传多张图片用于模型训练，完成训练后可生成写真图片。
+1：快速训练模式，仅需上传1张图片用于模型训练，训练速度更快，完成训练后可生成写真图片。
+2：免训练模式，仅需上传1张图片，跳过模型训练环节，直接生成写真图片。
      */
     public $TrainMode;
 
@@ -111,19 +111,19 @@ class UploadTrainPortraitImagesRequest extends AbstractModel
 图片内容：单人，脸部清晰。
 图片限制：单边分辨率小于2000，转成 Base64 字符串后小于 5MB。
 
-     * @param array $Urls 写真模型训练用的图像 URL 列表。
+     * @param array $Urls 写真模型训练用的图像 URL 列表，仅常规训练模式需要上传。
 图片数量：19 - 24 张。
 图片内容：单人，脸部清晰，和基础图像中的人物为同一人。
 图片限制：单边分辨率小于2000，转成 Base64 字符串后小于 5MB。
-
      * @param Filter $Filter 训练图像质量过滤开关配置。
 支持开启或关闭对训练图像分辨率下限、脸部区域大小、脸部遮挡的过滤，默认开启以上过滤。
 如果训练图像内包含多人脸或无人脸、和 Base 人像不为同一人也将被过滤，不可关闭该过滤条件。
 建议：关闭以上过滤可能导致写真生成效果受损，建议使用单人、正脸、脸部区域占比较大、脸部清晰无遮挡、无大角度偏转、无夸张表情的图像进行训练。
-     * @param integer $TrainMode 是否开启快速训练模式。
-默认不开启。开启后只需要在 BaseUrl 中传入1张图片，Urls.N 中无需传入图片。  
-0：不开启  
-1：开启
+     * @param integer $TrainMode 训练模式。
+默认使用常规训练模式。如果使用快速训练模式和免训练模式，只需要在 BaseUrl 中传入1张图片，Urls.N 中无需传入图片。
+0：常规训练模式，上传多张图片用于模型训练，完成训练后可生成写真图片。
+1：快速训练模式，仅需上传1张图片用于模型训练，训练速度更快，完成训练后可生成写真图片。
+2：免训练模式，仅需上传1张图片，跳过模型训练环节，直接生成写真图片。
      */
     function __construct()
     {

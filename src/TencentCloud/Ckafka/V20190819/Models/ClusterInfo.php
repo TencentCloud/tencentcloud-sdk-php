@@ -25,29 +25,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getClusterName() 获取集群名称
  * @method void setClusterName(string $ClusterName) 设置集群名称
  * @method integer getMaxDiskSize() 获取集群最大磁盘 单位GB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxDiskSize(integer $MaxDiskSize) 设置集群最大磁盘 单位GB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxBandWidth() 获取集群最大带宽 单位MB/s
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxBandWidth(integer $MaxBandWidth) 设置集群最大带宽 单位MB/s
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAvailableDiskSize() 获取集群当前可用磁盘  单位GB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAvailableDiskSize(integer $AvailableDiskSize) 设置集群当前可用磁盘  单位GB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAvailableBandWidth() 获取集群当前可用带宽 单位MB/s
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAvailableBandWidth(integer $AvailableBandWidth) 设置集群当前可用带宽 单位MB/s
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getZoneId() 获取集群所属可用区，表明集群归属的可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneId(integer $ZoneId) 设置集群所属可用区，表明集群归属的可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getZoneIds() 获取集群节点所在的可用区，若该集群为跨可用区集群，则包含该集群节点所在的多个可用区。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneIds(array $ZoneIds) 设置集群节点所在的可用区，若该集群为跨可用区集群，则包含该集群节点所在的多个可用区。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterInfo extends AbstractModel
 {
@@ -63,37 +51,31 @@ class ClusterInfo extends AbstractModel
 
     /**
      * @var integer 集群最大磁盘 单位GB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxDiskSize;
 
     /**
      * @var integer 集群最大带宽 单位MB/s
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxBandWidth;
 
     /**
      * @var integer 集群当前可用磁盘  单位GB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AvailableDiskSize;
 
     /**
      * @var integer 集群当前可用带宽 单位MB/s
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AvailableBandWidth;
 
     /**
      * @var integer 集群所属可用区，表明集群归属的可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneId;
 
     /**
      * @var array 集群节点所在的可用区，若该集群为跨可用区集群，则包含该集群节点所在的多个可用区。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneIds;
 
@@ -101,17 +83,11 @@ class ClusterInfo extends AbstractModel
      * @param integer $ClusterId 集群Id
      * @param string $ClusterName 集群名称
      * @param integer $MaxDiskSize 集群最大磁盘 单位GB
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxBandWidth 集群最大带宽 单位MB/s
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AvailableDiskSize 集群当前可用磁盘  单位GB
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AvailableBandWidth 集群当前可用带宽 单位MB/s
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ZoneId 集群所属可用区，表明集群归属的可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ZoneIds 集群节点所在的可用区，若该集群为跨可用区集群，则包含该集群节点所在的多个可用区。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

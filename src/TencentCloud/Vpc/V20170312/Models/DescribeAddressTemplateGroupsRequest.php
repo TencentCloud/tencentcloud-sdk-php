@@ -32,6 +32,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(string $Limit) 设置返回数量，默认为20，最大值为100。
  * @method boolean getNeedMemberInfo() 获取是否查询IP地址模板成员标识。
  * @method void setNeedMemberInfo(boolean $NeedMemberInfo) 设置是否查询IP地址模板成员标识。
+ * @method string getOrderField() 获取排序字段。支持：`AddressTemplateGroupId ` `CreatedTime` `UpdateTime`。注意：该字段没有默认值。
+ * @method void setOrderField(string $OrderField) 设置排序字段。支持：`AddressTemplateGroupId ` `CreatedTime` `UpdateTime`。注意：该字段没有默认值。
+ * @method string getOrderDirection() 获取排序方法。升序：`ASC`，倒序：`DESC`。注意：该字段没有默认值。
+ * @method void setOrderDirection(string $OrderDirection) 设置排序方法。升序：`ASC`，倒序：`DESC`。注意：该字段没有默认值。
+ * @method string getMemberOrderField() 获取IP地址成员排序字段。支持：`AddressTemplateId` `UpdateTime`。注意：该字段没有默认值。
+ * @method void setMemberOrderField(string $MemberOrderField) 设置IP地址成员排序字段。支持：`AddressTemplateId` `UpdateTime`。注意：该字段没有默认值。
+ * @method string getMemberOrderDirection() 获取IP地址成员排序方法。升序：`ASC`，倒序：`DESC`。注意：该字段没有默认值。
+ * @method void setMemberOrderDirection(string $MemberOrderDirection) 设置IP地址成员排序方法。升序：`ASC`，倒序：`DESC`。注意：该字段没有默认值。
  */
 class DescribeAddressTemplateGroupsRequest extends AbstractModel
 {
@@ -58,12 +66,36 @@ class DescribeAddressTemplateGroupsRequest extends AbstractModel
     public $NeedMemberInfo;
 
     /**
+     * @var string 排序字段。支持：`AddressTemplateGroupId ` `CreatedTime` `UpdateTime`。注意：该字段没有默认值。
+     */
+    public $OrderField;
+
+    /**
+     * @var string 排序方法。升序：`ASC`，倒序：`DESC`。注意：该字段没有默认值。
+     */
+    public $OrderDirection;
+
+    /**
+     * @var string IP地址成员排序字段。支持：`AddressTemplateId` `UpdateTime`。注意：该字段没有默认值。
+     */
+    public $MemberOrderField;
+
+    /**
+     * @var string IP地址成员排序方法。升序：`ASC`，倒序：`DESC`。注意：该字段没有默认值。
+     */
+    public $MemberOrderDirection;
+
+    /**
      * @param array $Filters 过滤条件。
 <li>address-template-group-name - String - （过滤条件）IP地址模板集合名称。</li>
 <li>address-template-group-id - String - （过滤条件）IP地址模板实集合例ID，例如：ipmg-mdunqeb6。</li>
      * @param string $Offset 偏移量，默认为0。
      * @param string $Limit 返回数量，默认为20，最大值为100。
      * @param boolean $NeedMemberInfo 是否查询IP地址模板成员标识。
+     * @param string $OrderField 排序字段。支持：`AddressTemplateGroupId ` `CreatedTime` `UpdateTime`。注意：该字段没有默认值。
+     * @param string $OrderDirection 排序方法。升序：`ASC`，倒序：`DESC`。注意：该字段没有默认值。
+     * @param string $MemberOrderField IP地址成员排序字段。支持：`AddressTemplateId` `UpdateTime`。注意：该字段没有默认值。
+     * @param string $MemberOrderDirection IP地址成员排序方法。升序：`ASC`，倒序：`DESC`。注意：该字段没有默认值。
      */
     function __construct()
     {
@@ -97,6 +129,22 @@ class DescribeAddressTemplateGroupsRequest extends AbstractModel
 
         if (array_key_exists("NeedMemberInfo",$param) and $param["NeedMemberInfo"] !== null) {
             $this->NeedMemberInfo = $param["NeedMemberInfo"];
+        }
+
+        if (array_key_exists("OrderField",$param) and $param["OrderField"] !== null) {
+            $this->OrderField = $param["OrderField"];
+        }
+
+        if (array_key_exists("OrderDirection",$param) and $param["OrderDirection"] !== null) {
+            $this->OrderDirection = $param["OrderDirection"];
+        }
+
+        if (array_key_exists("MemberOrderField",$param) and $param["MemberOrderField"] !== null) {
+            $this->MemberOrderField = $param["MemberOrderField"];
+        }
+
+        if (array_key_exists("MemberOrderDirection",$param) and $param["MemberOrderDirection"] !== null) {
+            $this->MemberOrderDirection = $param["MemberOrderDirection"];
         }
     }
 }

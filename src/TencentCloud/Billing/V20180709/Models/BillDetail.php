@@ -38,8 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceName(string $ResourceName) 设置资源别名：用户在控制台为资源设置的名称，如果未设置，则默认为空
  * @method string getActionTypeName() 获取交易类型，如包年包月新购、包年包月续费、按量计费扣费等类型
  * @method void setActionTypeName(string $ActionTypeName) 设置交易类型，如包年包月新购、包年包月续费、按量计费扣费等类型
- * @method string getOrderId() 获取订单ID：包年包月计费模式下订购的订单号
- * @method void setOrderId(string $OrderId) 设置订单ID：包年包月计费模式下订购的订单号
+ * @method string getOrderId() 获取订单ID：包年包月计费模式下对应子订单号。后付费计费模式下账单费用不存在订单概念，可忽略此参数。
+
+ * @method void setOrderId(string $OrderId) 设置订单ID：包年包月计费模式下对应子订单号。后付费计费模式下账单费用不存在订单概念，可忽略此参数。
+
  * @method string getBillId() 获取交易ID：结算扣费单号
  * @method void setBillId(string $BillId) 设置交易ID：结算扣费单号
  * @method string getPayTime() 获取扣费时间：结算扣费时间
@@ -57,67 +59,43 @@ use TencentCloud\Common\AbstractModel;
  * @method string getOperateUin() 获取操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
  * @method void setOperateUin(string $OperateUin) 设置操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
  * @method array getTags() 获取标签信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBusinessCode() 获取产品编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBusinessCode(string $BusinessCode) 设置产品编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProductCode() 获取子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductCode(string $ProductCode) 设置子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getActionType() 获取交易类型编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActionType(string $ActionType) 设置交易类型编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegionId() 获取地域ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionId(string $RegionId) 设置地域ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProjectId() 获取项目ID
  * @method void setProjectId(integer $ProjectId) 设置项目ID
  * @method array getPriceInfo() 获取价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPriceInfo(array $PriceInfo) 设置价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BillDetailAssociatedOrder getAssociatedOrder() 获取关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssociatedOrder(BillDetailAssociatedOrder $AssociatedOrder) 设置关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFormula() 获取计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFormula(string $Formula) 设置计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFormulaUrl() 获取计费规则：各产品详细的计费规则官网说明链接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFormulaUrl(string $FormulaUrl) 设置计费规则：各产品详细的计费规则官网说明链接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBillDay() 获取账单归属日
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBillDay(string $BillDay) 设置账单归属日
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBillMonth() 获取账单归属月
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBillMonth(string $BillMonth) 设置账单归属月
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getId() 获取账单记录ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(string $Id) 设置账单记录ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegionType() 获取国内国际编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionType(string $RegionType) 设置国内国际编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegionTypeName() 获取国内国际：资源所属区域类型（国内、国际）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionTypeName(string $RegionTypeName) 设置国内国际：资源所属区域类型（国内、国际）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReserveDetail() 获取备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReserveDetail(string $ReserveDetail) 设置备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDiscountObject() 获取优惠对象
+ * @method void setDiscountObject(string $DiscountObject) 设置优惠对象
+ * @method string getDiscountType() 获取优惠类型
+ * @method void setDiscountType(string $DiscountType) 设置优惠类型
+ * @method string getDiscountContent() 获取优惠内容
+ * @method void setDiscountContent(string $DiscountContent) 设置优惠内容
  */
 class BillDetail extends AbstractModel
 {
@@ -167,7 +145,8 @@ class BillDetail extends AbstractModel
     public $ActionTypeName;
 
     /**
-     * @var string 订单ID：包年包月计费模式下订购的订单号
+     * @var string 订单ID：包年包月计费模式下对应子订单号。后付费计费模式下账单费用不存在订单概念，可忽略此参数。
+
      */
     public $OrderId;
 
@@ -213,31 +192,26 @@ class BillDetail extends AbstractModel
 
     /**
      * @var array 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
      * @var string 产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BusinessCode;
 
     /**
      * @var string 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductCode;
 
     /**
      * @var string 交易类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActionType;
 
     /**
      * @var string 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionId;
 
@@ -248,63 +222,68 @@ class BillDetail extends AbstractModel
 
     /**
      * @var array 价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PriceInfo;
 
     /**
      * @var BillDetailAssociatedOrder 关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AssociatedOrder;
 
     /**
      * @var string 计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Formula;
 
     /**
      * @var string 计费规则：各产品详细的计费规则官网说明链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FormulaUrl;
 
     /**
      * @var string 账单归属日
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BillDay;
 
     /**
      * @var string 账单归属月
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BillMonth;
 
     /**
      * @var string 账单记录ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var string 国内国际编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionType;
 
     /**
      * @var string 国内国际：资源所属区域类型（国内、国际）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionTypeName;
 
     /**
      * @var string 备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReserveDetail;
+
+    /**
+     * @var string 优惠对象
+     */
+    public $DiscountObject;
+
+    /**
+     * @var string 优惠类型
+     */
+    public $DiscountType;
+
+    /**
+     * @var string 优惠内容
+     */
+    public $DiscountContent;
 
     /**
      * @param string $BusinessCodeName 产品名称：用户所采购的各类云产品，例如：云服务器 CVM
@@ -316,7 +295,8 @@ class BillDetail extends AbstractModel
      * @param string $ResourceId 资源 ID：账单中出账对象 ID，不同产品因资源形态不同，资源内容不完全相同，如云服务器 CVM 为对应的实例 ID
      * @param string $ResourceName 资源别名：用户在控制台为资源设置的名称，如果未设置，则默认为空
      * @param string $ActionTypeName 交易类型，如包年包月新购、包年包月续费、按量计费扣费等类型
-     * @param string $OrderId 订单ID：包年包月计费模式下订购的订单号
+     * @param string $OrderId 订单ID：包年包月计费模式下对应子订单号。后付费计费模式下账单费用不存在订单概念，可忽略此参数。
+
      * @param string $BillId 交易ID：结算扣费单号
      * @param string $PayTime 扣费时间：结算扣费时间
      * @param string $FeeBeginTime 开始使用时间：产品服务开始使用时间
@@ -326,36 +306,24 @@ class BillDetail extends AbstractModel
      * @param string $OwnerUin 使用者UIN：实际使用资源的账号 ID
      * @param string $OperateUin 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
      * @param array $Tags 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BusinessCode 产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProductCode 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ActionType 交易类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegionId 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProjectId 项目ID
      * @param array $PriceInfo 价格属性：该组件除单价、时长外的其他影响折扣定价的属性信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BillDetailAssociatedOrder $AssociatedOrder 关联交易单据ID：和本笔交易关联单据 ID，如，冲销订单，记录原订单、重结订单，退费单记录对应的原购买订单号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Formula 计算说明：特殊交易类型计费结算的详细计算说明，如退费及变配
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FormulaUrl 计费规则：各产品详细的计费规则官网说明链接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BillDay 账单归属日
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BillMonth 账单归属月
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Id 账单记录ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegionType 国内国际编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegionTypeName 国内国际：资源所属区域类型（国内、国际）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReserveDetail 备注属性（实例配置）：其他备注信息，如预留实例的预留实例类型和交易类型、CCN 产品的两端地域信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DiscountObject 优惠对象
+     * @param string $DiscountType 优惠类型
+     * @param string $DiscountContent 优惠内容
      */
     function __construct()
     {
@@ -515,6 +483,18 @@ class BillDetail extends AbstractModel
 
         if (array_key_exists("ReserveDetail",$param) and $param["ReserveDetail"] !== null) {
             $this->ReserveDetail = $param["ReserveDetail"];
+        }
+
+        if (array_key_exists("DiscountObject",$param) and $param["DiscountObject"] !== null) {
+            $this->DiscountObject = $param["DiscountObject"];
+        }
+
+        if (array_key_exists("DiscountType",$param) and $param["DiscountType"] !== null) {
+            $this->DiscountType = $param["DiscountType"];
+        }
+
+        if (array_key_exists("DiscountContent",$param) and $param["DiscountContent"] !== null) {
+            $this->DiscountContent = $param["DiscountContent"];
         }
     }
 }

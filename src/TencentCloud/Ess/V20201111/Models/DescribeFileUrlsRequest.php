@@ -24,36 +24,10 @@ use TencentCloud\Common\AbstractModel;
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
  * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
- * @method string getBusinessType() 获取文件对应的业务类型，目前支持：
-<ul>
-<li>**FLOW ** : <font color="red">如需下载合同文件请选择此项</font></li>
-<li>**TEMPLATE ** : 如需下载模板文件请选择此项</li>
-<li>**DOCUMENT  **: 如需下载文档文件请选择此项</li>
-<li>**SEAL  **: 如需下载印章图片请选择此项</li>
-</ul>
- * @method void setBusinessType(string $BusinessType) 设置文件对应的业务类型，目前支持：
-<ul>
-<li>**FLOW ** : <font color="red">如需下载合同文件请选择此项</font></li>
-<li>**TEMPLATE ** : 如需下载模板文件请选择此项</li>
-<li>**DOCUMENT  **: 如需下载文档文件请选择此项</li>
-<li>**SEAL  **: 如需下载印章图片请选择此项</li>
-</ul>
- * @method array getBusinessIds() 获取业务编号的数组，取值如下：
-<ul>
-<li>流程编号</li>
-<li>模板编号</li>
-<li>文档编号</li>
-<li>印章编号</li>
-<li>如需下载合同文件请传入FlowId，最大支持20个资源</li>
-</ul>
- * @method void setBusinessIds(array $BusinessIds) 设置业务编号的数组，取值如下：
-<ul>
-<li>流程编号</li>
-<li>模板编号</li>
-<li>文档编号</li>
-<li>印章编号</li>
-<li>如需下载合同文件请传入FlowId，最大支持20个资源</li>
-</ul>
+ * @method string getBusinessType() 获取文件对应的业务类型，目前支持：<ul><li>**FLOW ** : <font color="red">如需下载合同文件请选择此项</font></li><li>**TEMPLATE ** : 如需下载模板文件请选择此项</li><li>**DOCUMENT  **: 如需下载文档文件请选择此项</li><li>**SEAL  **: 如需下载印章图片请选择此项</li><li>**DIGITFILE**: 如需下载加签文件请选择此项</li></ul>
+ * @method void setBusinessType(string $BusinessType) 设置文件对应的业务类型，目前支持：<ul><li>**FLOW ** : <font color="red">如需下载合同文件请选择此项</font></li><li>**TEMPLATE ** : 如需下载模板文件请选择此项</li><li>**DOCUMENT  **: 如需下载文档文件请选择此项</li><li>**SEAL  **: 如需下载印章图片请选择此项</li><li>**DIGITFILE**: 如需下载加签文件请选择此项</li></ul>
+ * @method array getBusinessIds() 获取业务编号的数组，取值如下：<ul><li>流程编号</li><li>模板编号</li><li>文档编号</li><li>印章编号</li><li>加签文件编号</li><li>如需下载合同文件请传入FlowId，最大支持20个资源</li></ul>
+ * @method void setBusinessIds(array $BusinessIds) 设置业务编号的数组，取值如下：<ul><li>流程编号</li><li>模板编号</li><li>文档编号</li><li>印章编号</li><li>加签文件编号</li><li>如需下载合同文件请传入FlowId，最大支持20个资源</li></ul>
  * @method string getFileName() 获取下载后的文件命名，只有FileType为zip的时候生效
  * @method void setFileName(string $FileName) 设置下载后的文件命名，只有FileType为zip的时候生效
  * @method string getFileType() 获取要下载的文件类型，取值如下：
@@ -92,25 +66,12 @@ class DescribeFileUrlsRequest extends AbstractModel
     public $Operator;
 
     /**
-     * @var string 文件对应的业务类型，目前支持：
-<ul>
-<li>**FLOW ** : <font color="red">如需下载合同文件请选择此项</font></li>
-<li>**TEMPLATE ** : 如需下载模板文件请选择此项</li>
-<li>**DOCUMENT  **: 如需下载文档文件请选择此项</li>
-<li>**SEAL  **: 如需下载印章图片请选择此项</li>
-</ul>
+     * @var string 文件对应的业务类型，目前支持：<ul><li>**FLOW ** : <font color="red">如需下载合同文件请选择此项</font></li><li>**TEMPLATE ** : 如需下载模板文件请选择此项</li><li>**DOCUMENT  **: 如需下载文档文件请选择此项</li><li>**SEAL  **: 如需下载印章图片请选择此项</li><li>**DIGITFILE**: 如需下载加签文件请选择此项</li></ul>
      */
     public $BusinessType;
 
     /**
-     * @var array 业务编号的数组，取值如下：
-<ul>
-<li>流程编号</li>
-<li>模板编号</li>
-<li>文档编号</li>
-<li>印章编号</li>
-<li>如需下载合同文件请传入FlowId，最大支持20个资源</li>
-</ul>
+     * @var array 业务编号的数组，取值如下：<ul><li>流程编号</li><li>模板编号</li><li>文档编号</li><li>印章编号</li><li>加签文件编号</li><li>如需下载合同文件请传入FlowId，最大支持20个资源</li></ul>
      */
     public $BusinessIds;
 
@@ -165,21 +126,8 @@ class DescribeFileUrlsRequest extends AbstractModel
     /**
      * @param UserInfo $Operator 执行本接口操作的员工信息。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
-     * @param string $BusinessType 文件对应的业务类型，目前支持：
-<ul>
-<li>**FLOW ** : <font color="red">如需下载合同文件请选择此项</font></li>
-<li>**TEMPLATE ** : 如需下载模板文件请选择此项</li>
-<li>**DOCUMENT  **: 如需下载文档文件请选择此项</li>
-<li>**SEAL  **: 如需下载印章图片请选择此项</li>
-</ul>
-     * @param array $BusinessIds 业务编号的数组，取值如下：
-<ul>
-<li>流程编号</li>
-<li>模板编号</li>
-<li>文档编号</li>
-<li>印章编号</li>
-<li>如需下载合同文件请传入FlowId，最大支持20个资源</li>
-</ul>
+     * @param string $BusinessType 文件对应的业务类型，目前支持：<ul><li>**FLOW ** : <font color="red">如需下载合同文件请选择此项</font></li><li>**TEMPLATE ** : 如需下载模板文件请选择此项</li><li>**DOCUMENT  **: 如需下载文档文件请选择此项</li><li>**SEAL  **: 如需下载印章图片请选择此项</li><li>**DIGITFILE**: 如需下载加签文件请选择此项</li></ul>
+     * @param array $BusinessIds 业务编号的数组，取值如下：<ul><li>流程编号</li><li>模板编号</li><li>文档编号</li><li>印章编号</li><li>加签文件编号</li><li>如需下载合同文件请传入FlowId，最大支持20个资源</li></ul>
      * @param string $FileName 下载后的文件命名，只有FileType为zip的时候生效
      * @param string $FileType 要下载的文件类型，取值如下：
 <ul>

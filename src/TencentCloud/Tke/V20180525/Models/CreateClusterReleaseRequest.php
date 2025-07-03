@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChart(string $Chart) 设置制品名称或从第三方repo 安装chart时，制品压缩包下载地址, 不支持重定向类型chart 地址，结尾为*.tgz
  * @method ReleaseValues getValues() 获取自定义参数
  * @method void setValues(ReleaseValues $Values) 设置自定义参数
- * @method string getChartFrom() 获取制品来源，范围：tke-market 或 other
- * @method void setChartFrom(string $ChartFrom) 设置制品来源，范围：tke-market 或 other
+ * @method string getChartFrom() 获取制品来源，范围：tke-market 或 other默认值：tke-market。
+ * @method void setChartFrom(string $ChartFrom) 设置制品来源，范围：tke-market 或 other默认值：tke-market。
  * @method string getChartVersion() 获取制品版本
  * @method void setChartVersion(string $ChartVersion) 设置制品版本
  * @method string getChartRepoURL() 获取制品仓库URL地址
@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUsername(string $Username) 设置制品访问用户名
  * @method string getPassword() 获取制品访问密码
  * @method void setPassword(string $Password) 设置制品访问密码
- * @method string getChartNamespace() 获取制品命名空间
- * @method void setChartNamespace(string $ChartNamespace) 设置制品命名空间
+ * @method string getChartNamespace() 获取制品命名空间，ChartFrom为tke-market时ChartNamespace不为空，值为DescribeProducts接口反馈的Namespace
+ * @method void setChartNamespace(string $ChartNamespace) 设置制品命名空间，ChartFrom为tke-market时ChartNamespace不为空，值为DescribeProducts接口反馈的Namespace
  * @method string getClusterType() 获取集群类型，支持传 tke, eks, tkeedge, external(注册集群）
  * @method void setClusterType(string $ClusterType) 设置集群类型，支持传 tke, eks, tkeedge, external(注册集群）
  */
@@ -73,7 +73,7 @@ class CreateClusterReleaseRequest extends AbstractModel
     public $Values;
 
     /**
-     * @var string 制品来源，范围：tke-market 或 other
+     * @var string 制品来源，范围：tke-market 或 other默认值：tke-market。
      */
     public $ChartFrom;
 
@@ -98,7 +98,7 @@ class CreateClusterReleaseRequest extends AbstractModel
     public $Password;
 
     /**
-     * @var string 制品命名空间
+     * @var string 制品命名空间，ChartFrom为tke-market时ChartNamespace不为空，值为DescribeProducts接口反馈的Namespace
      */
     public $ChartNamespace;
 
@@ -113,12 +113,12 @@ class CreateClusterReleaseRequest extends AbstractModel
      * @param string $Namespace 应用命名空间
      * @param string $Chart 制品名称或从第三方repo 安装chart时，制品压缩包下载地址, 不支持重定向类型chart 地址，结尾为*.tgz
      * @param ReleaseValues $Values 自定义参数
-     * @param string $ChartFrom 制品来源，范围：tke-market 或 other
+     * @param string $ChartFrom 制品来源，范围：tke-market 或 other默认值：tke-market。
      * @param string $ChartVersion 制品版本
      * @param string $ChartRepoURL 制品仓库URL地址
      * @param string $Username 制品访问用户名
      * @param string $Password 制品访问密码
-     * @param string $ChartNamespace 制品命名空间
+     * @param string $ChartNamespace 制品命名空间，ChartFrom为tke-market时ChartNamespace不为空，值为DescribeProducts接口反馈的Namespace
      * @param string $ClusterType 集群类型，支持传 tke, eks, tkeedge, external(注册集群）
      */
     function __construct()

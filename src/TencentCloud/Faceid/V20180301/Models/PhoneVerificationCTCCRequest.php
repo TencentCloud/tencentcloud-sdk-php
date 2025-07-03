@@ -20,42 +20,46 @@ use TencentCloud\Common\AbstractModel;
 /**
  * PhoneVerificationCTCC请求参数结构体
  *
- * @method string getIdCard() 获取身份证号
- * @method void setIdCard(string $IdCard) 设置身份证号
- * @method string getName() 获取姓名
- * @method void setName(string $Name) 设置姓名
- * @method string getPhone() 获取手机号
- * @method void setPhone(string $Phone) 设置手机号
- * @method Encryption getEncryption() 获取敏感数据加密信息。对传入信息（姓名、身份证号、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
- * @method void setEncryption(Encryption $Encryption) 设置敏感数据加密信息。对传入信息（姓名、身份证号、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+ * @method string getIdCard() 获取身份证号。
+ * @method void setIdCard(string $IdCard) 设置身份证号。
+ * @method string getName() 获取姓名。
+ * @method void setName(string $Name) 设置姓名。
+ * @method string getPhone() 获取手机号。
+ * @method void setPhone(string $Phone) 设置手机号。
+ * @method Encryption getEncryption() 获取敏感数据加密信息。
+- 对传入信息（姓名、身份证号、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+ * @method void setEncryption(Encryption $Encryption) 设置敏感数据加密信息。
+- 对传入信息（姓名、身份证号、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
  */
 class PhoneVerificationCTCCRequest extends AbstractModel
 {
     /**
-     * @var string 身份证号
+     * @var string 身份证号。
      */
     public $IdCard;
 
     /**
-     * @var string 姓名
+     * @var string 姓名。
      */
     public $Name;
 
     /**
-     * @var string 手机号
+     * @var string 手机号。
      */
     public $Phone;
 
     /**
-     * @var Encryption 敏感数据加密信息。对传入信息（姓名、身份证号、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * @var Encryption 敏感数据加密信息。
+- 对传入信息（姓名、身份证号、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
      */
     public $Encryption;
 
     /**
-     * @param string $IdCard 身份证号
-     * @param string $Name 姓名
-     * @param string $Phone 手机号
-     * @param Encryption $Encryption 敏感数据加密信息。对传入信息（姓名、身份证号、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * @param string $IdCard 身份证号。
+     * @param string $Name 姓名。
+     * @param string $Phone 手机号。
+     * @param Encryption $Encryption 敏感数据加密信息。
+- 对传入信息（姓名、身份证号、手机号）有加密需求的用户可使用此参数，详情请点击左侧链接。
      */
     function __construct()
     {

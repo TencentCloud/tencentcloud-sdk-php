@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTemplateDescription() 获取经验库描述
  * @method void setTemplateDescription(string $TemplateDescription) 设置经验库描述
  * @method string getTemplateTag() 获取自定义标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTemplateTag(string $TemplateTag) 设置自定义标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTemplateIsUsed() 获取使用状态。1 ---- 使用中，2 --- 停用
  * @method void setTemplateIsUsed(integer $TemplateIsUsed) 设置使用状态。1 ---- 使用中，2 --- 停用
  * @method string getTemplateCreateTime() 获取经验库创建时间
@@ -53,25 +51,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTemplatePolicy(TemplatePolicy $TemplatePolicy) 设置护栏监控
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取标签列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTemplateSource() 获取经验来源 0-自建 1-专家推荐
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTemplateSource(integer $TemplateSource) 设置经验来源 0-自建 1-专家推荐
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getApmServiceList() 获取apm应用信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApmServiceList(array $ApmServiceList) 设置apm应用信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAlarmPolicy() 获取告警指标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlarmPolicy(array $AlarmPolicy) 设置告警指标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPolicyDealType() 获取护栏处理方式，1--顺序回滚，2--演练暂停
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolicyDealType(integer $PolicyDealType) 设置护栏处理方式，1--顺序回滚，2--演练暂停
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Template extends AbstractModel
 {
@@ -92,7 +80,6 @@ class Template extends AbstractModel
 
     /**
      * @var string 自定义标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TemplateTag;
 
@@ -149,31 +136,26 @@ class Template extends AbstractModel
 
     /**
      * @var array 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
      * @var integer 经验来源 0-自建 1-专家推荐
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TemplateSource;
 
     /**
      * @var array apm应用信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApmServiceList;
 
     /**
      * @var array 告警指标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlarmPolicy;
 
     /**
      * @var integer 护栏处理方式，1--顺序回滚，2--演练暂停
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PolicyDealType;
 
@@ -182,7 +164,6 @@ class Template extends AbstractModel
      * @param string $TemplateTitle 经验库标题
      * @param string $TemplateDescription 经验库描述
      * @param string $TemplateTag 自定义标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TemplateIsUsed 使用状态。1 ---- 使用中，2 --- 停用
      * @param string $TemplateCreateTime 经验库创建时间
      * @param string $TemplateUpdateTime 经验库更新时间
@@ -195,15 +176,10 @@ class Template extends AbstractModel
      * @param TemplatePolicy $TemplatePolicy 护栏监控
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TemplateSource 经验来源 0-自建 1-专家推荐
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ApmServiceList apm应用信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AlarmPolicy 告警指标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PolicyDealType 护栏处理方式，1--顺序回滚，2--演练暂停
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

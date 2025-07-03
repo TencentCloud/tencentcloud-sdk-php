@@ -59,9 +59,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCreateTime() 获取数据库创建时间
  * @method void setCreateTime(string $CreateTime) 设置数据库创建时间
  * @method string getIsFullTextEnabled() 获取是否全文启用 0：否 1：是
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsFullTextEnabled(string $IsFullTextEnabled) 设置是否全文启用 0：否 1：是
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DbNormalDetail extends AbstractModel
 {
@@ -163,7 +161,6 @@ class DbNormalDetail extends AbstractModel
 
     /**
      * @var string 是否全文启用 0：否 1：是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsFullTextEnabled;
 
@@ -188,7 +185,6 @@ class DbNormalDetail extends AbstractModel
      * @param string $UserAccessDesc 用户类型
      * @param string $CreateTime 数据库创建时间
      * @param string $IsFullTextEnabled 是否全文启用 0：否 1：是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

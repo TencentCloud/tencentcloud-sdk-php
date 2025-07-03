@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 告警级别详情
  *
  * @method integer getLevelId() 获取级别id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevelId(integer $LevelId) 设置级别id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLevelName() 获取级别名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevelName(string $LevelName) 设置级别名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmLevelInfo extends AbstractModel
 {
     /**
      * @var integer 级别id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LevelId;
 
     /**
      * @var string 级别名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LevelName;
 
     /**
      * @param integer $LevelId 级别id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LevelName 级别名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

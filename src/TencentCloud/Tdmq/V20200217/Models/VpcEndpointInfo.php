@@ -26,12 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(string $SubnetId) 设置子网id
  * @method string getVpcEndpoint() 获取vpc接入点信息
  * @method void setVpcEndpoint(string $VpcEndpoint) 设置vpc接入点信息
- * @method string getVpcDataStreamEndpointStatus() 获取vpc接入点状态
-OFF/ON/CREATING/DELETING
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVpcDataStreamEndpointStatus(string $VpcDataStreamEndpointStatus) 设置vpc接入点状态
-OFF/ON/CREATING/DELETING
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVpcDataStreamEndpointStatus() 获取vpc接入点状态 OFF/ON/CREATING/DELETING
+ * @method void setVpcDataStreamEndpointStatus(string $VpcDataStreamEndpointStatus) 设置vpc接入点状态 OFF/ON/CREATING/DELETING
  */
 class VpcEndpointInfo extends AbstractModel
 {
@@ -51,9 +47,7 @@ class VpcEndpointInfo extends AbstractModel
     public $VpcEndpoint;
 
     /**
-     * @var string vpc接入点状态
-OFF/ON/CREATING/DELETING
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string vpc接入点状态 OFF/ON/CREATING/DELETING
      */
     public $VpcDataStreamEndpointStatus;
 
@@ -61,9 +55,7 @@ OFF/ON/CREATING/DELETING
      * @param string $VpcId vpc的id
      * @param string $SubnetId 子网id
      * @param string $VpcEndpoint vpc接入点信息
-     * @param string $VpcDataStreamEndpointStatus vpc接入点状态
-OFF/ON/CREATING/DELETING
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $VpcDataStreamEndpointStatus vpc接入点状态 OFF/ON/CREATING/DELETING
      */
     function __construct()
     {

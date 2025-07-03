@@ -48,6 +48,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResultBytes(string $ResultBytes) 设置ResultBytes排序字段
  * @method string getMemoryUsage() 获取MemoryUsage排序字段
  * @method void setMemoryUsage(string $MemoryUsage) 设置MemoryUsage排序字段
+ * @method string getSortField() 获取排序字段
+ * @method void setSortField(string $SortField) 设置排序字段
+ * @method string getSortOrder() 获取排序方式
+ * @method void setSortOrder(string $SortOrder) 设置排序方式
+ * @method string getUserName() 获取user
+ * @method void setUserName(string $UserName) 设置user
+ * @method array getComputeGroups() 获取计算组列表
+ * @method void setComputeGroups(array $ComputeGroups) 设置计算组列表
  */
 class DescribeSlowQueryRecordsRequest extends AbstractModel
 {
@@ -122,6 +130,26 @@ class DescribeSlowQueryRecordsRequest extends AbstractModel
     public $MemoryUsage;
 
     /**
+     * @var string 排序字段
+     */
+    public $SortField;
+
+    /**
+     * @var string 排序方式
+     */
+    public $SortOrder;
+
+    /**
+     * @var string user
+     */
+    public $UserName;
+
+    /**
+     * @var array 计算组列表
+     */
+    public $ComputeGroups;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param integer $QueryDurationMs 慢查询时间
      * @param string $StartTime 开始时间
@@ -136,6 +164,10 @@ class DescribeSlowQueryRecordsRequest extends AbstractModel
      * @param string $ReadRows ReadRows排序字段
      * @param string $ResultBytes ResultBytes排序字段
      * @param string $MemoryUsage MemoryUsage排序字段
+     * @param string $SortField 排序字段
+     * @param string $SortOrder 排序方式
+     * @param string $UserName user
+     * @param array $ComputeGroups 计算组列表
      */
     function __construct()
     {
@@ -204,6 +236,22 @@ class DescribeSlowQueryRecordsRequest extends AbstractModel
 
         if (array_key_exists("MemoryUsage",$param) and $param["MemoryUsage"] !== null) {
             $this->MemoryUsage = $param["MemoryUsage"];
+        }
+
+        if (array_key_exists("SortField",$param) and $param["SortField"] !== null) {
+            $this->SortField = $param["SortField"];
+        }
+
+        if (array_key_exists("SortOrder",$param) and $param["SortOrder"] !== null) {
+            $this->SortOrder = $param["SortOrder"];
+        }
+
+        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
+            $this->UserName = $param["UserName"];
+        }
+
+        if (array_key_exists("ComputeGroups",$param) and $param["ComputeGroups"] !== null) {
+            $this->ComputeGroups = $param["ComputeGroups"];
         }
     }
 }

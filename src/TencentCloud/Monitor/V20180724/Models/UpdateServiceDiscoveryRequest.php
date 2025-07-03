@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
 <li> 1 = ServiceMonitor</li>
 <li> 2 = PodMonitor</li>
 <li> 3 = JobMonitor</li>
- * @method string getYaml() 获取服务发现配置信息
- * @method void setYaml(string $Yaml) 设置服务发现配置信息
+ * @method string getYaml() 获取服务发现配置信息，YAML 格式，[具体YAML参数内容请参考](https://cloud.tencent.com/document/product/1416/55995#service-monitor)
+ * @method void setYaml(string $Yaml) 设置服务发现配置信息，YAML 格式，[具体YAML参数内容请参考](https://cloud.tencent.com/document/product/1416/55995#service-monitor)
  */
 class UpdateServiceDiscoveryRequest extends AbstractModel
 {
@@ -66,7 +66,7 @@ class UpdateServiceDiscoveryRequest extends AbstractModel
     public $Type;
 
     /**
-     * @var string 服务发现配置信息
+     * @var string 服务发现配置信息，YAML 格式，[具体YAML参数内容请参考](https://cloud.tencent.com/document/product/1416/55995#service-monitor)
      */
     public $Yaml;
 
@@ -79,7 +79,7 @@ class UpdateServiceDiscoveryRequest extends AbstractModel
 <li> 1 = ServiceMonitor</li>
 <li> 2 = PodMonitor</li>
 <li> 3 = JobMonitor</li>
-     * @param string $Yaml 服务发现配置信息
+     * @param string $Yaml 服务发现配置信息，YAML 格式，[具体YAML参数内容请参考](https://cloud.tencent.com/document/product/1416/55995#service-monitor)
      */
     function __construct()
     {

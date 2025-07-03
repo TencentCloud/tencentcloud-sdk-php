@@ -25,13 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method array getDnsNames() 获取证书绑定的域名
  * @method void setDnsNames(array $DnsNames) 设置证书绑定的域名
  * @method string getCertCaId() 获取根证书ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertCaId(string $CertCaId) 设置根证书ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSSLMode() 获取证书认证模式：UNIDIRECTIONAL单向认证，MUTUAL双向认证
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSSLMode(string $SSLMode) 设置证书认证模式：UNIDIRECTIONAL单向认证，MUTUAL双向认证
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Certificate extends AbstractModel
 {
@@ -47,13 +43,11 @@ class Certificate extends AbstractModel
 
     /**
      * @var string 根证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CertCaId;
 
     /**
      * @var string 证书认证模式：UNIDIRECTIONAL单向认证，MUTUAL双向认证
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SSLMode;
 
@@ -61,9 +55,7 @@ class Certificate extends AbstractModel
      * @param string $CertId 证书ID
      * @param array $DnsNames 证书绑定的域名
      * @param string $CertCaId 根证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SSLMode 证书认证模式：UNIDIRECTIONAL单向认证，MUTUAL双向认证
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

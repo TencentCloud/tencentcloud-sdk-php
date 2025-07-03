@@ -21,7 +21,15 @@ use TencentCloud\Common\AbstractModel;
  * DescribeComplianceAssetList请求参数结构体
  *
  * @method array getAssetTypeSet() 获取资产类型列表。
+ASSET_CONTAINER, 容器
+ASSET_IMAGE, 镜像
+ASSET_HOST, 主机
+ASSET_K8S, K8S资产
  * @method void setAssetTypeSet(array $AssetTypeSet) 设置资产类型列表。
+ASSET_CONTAINER, 容器
+ASSET_IMAGE, 镜像
+ASSET_HOST, 主机
+ASSET_K8S, K8S资产
  * @method integer getOffset() 获取起始偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置起始偏移量，默认为0。
  * @method integer getLimit() 获取返回的数据量，默认为10，最大为100。
@@ -33,6 +41,10 @@ class DescribeComplianceAssetListRequest extends AbstractModel
 {
     /**
      * @var array 资产类型列表。
+ASSET_CONTAINER, 容器
+ASSET_IMAGE, 镜像
+ASSET_HOST, 主机
+ASSET_K8S, K8S资产
      */
     public $AssetTypeSet;
 
@@ -53,6 +65,10 @@ class DescribeComplianceAssetListRequest extends AbstractModel
 
     /**
      * @param array $AssetTypeSet 资产类型列表。
+ASSET_CONTAINER, 容器
+ASSET_IMAGE, 镜像
+ASSET_HOST, 主机
+ASSET_K8S, K8S资产
      * @param integer $Offset 起始偏移量，默认为0。
      * @param integer $Limit 返回的数据量，默认为10，最大为100。
      * @param array $Filters 查询过滤器

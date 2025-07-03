@@ -20,10 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeHTTPSListeners请求参数结构体
  *
- * @method string getProxyId() 获取过滤条件，通道ID
- * @method void setProxyId(string $ProxyId) 设置过滤条件，通道ID
- * @method string getListenerId() 获取过滤条件，根据监听器ID进行精确查询。
- * @method void setListenerId(string $ListenerId) 设置过滤条件，根据监听器ID进行精确查询。
+ * @method string getProxyId() 获取通道ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
+ * @method void setProxyId(string $ProxyId) 设置通道ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
+ * @method string getGroupId() 获取通道组ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
+ * @method void setGroupId(string $GroupId) 设置通道组ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
+ * @method string getListenerId() 获取过滤条件，根据监听器ID进行精确查询。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
+ * @method void setListenerId(string $ListenerId) 设置过滤条件，根据监听器ID进行精确查询。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
  * @method string getListenerName() 获取过滤条件，根据监听器名称进行精确查询。
  * @method void setListenerName(string $ListenerName) 设置过滤条件，根据监听器名称进行精确查询。
  * @method integer getPort() 获取过滤条件，根据监听器端口进行精确查询。
@@ -34,8 +36,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置限制数量，默认为20
  * @method string getSearchValue() 获取过滤条件，支持按照端口或监听器名称进行模糊查询
  * @method void setSearchValue(string $SearchValue) 设置过滤条件，支持按照端口或监听器名称进行模糊查询
- * @method string getGroupId() 获取过滤条件，通道组ID
- * @method void setGroupId(string $GroupId) 设置过滤条件，通道组ID
  * @method integer getHttp3Supported() 获取支持Http3的开关，其中：
 0，表示不需要支持Http3接入；
 1，表示需要支持Http3接入。
@@ -50,12 +50,17 @@ use TencentCloud\Common\AbstractModel;
 class DescribeHTTPSListenersRequest extends AbstractModel
 {
     /**
-     * @var string 过滤条件，通道ID
+     * @var string 通道ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
      */
     public $ProxyId;
 
     /**
-     * @var string 过滤条件，根据监听器ID进行精确查询。
+     * @var string 通道组ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
+     */
+    public $GroupId;
+
+    /**
+     * @var string 过滤条件，根据监听器ID进行精确查询。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
      */
     public $ListenerId;
 
@@ -85,11 +90,6 @@ class DescribeHTTPSListenersRequest extends AbstractModel
     public $SearchValue;
 
     /**
-     * @var string 过滤条件，通道组ID
-     */
-    public $GroupId;
-
-    /**
      * @var integer 支持Http3的开关，其中：
 0，表示不需要支持Http3接入；
 1，表示需要支持Http3接入。
@@ -99,14 +99,14 @@ class DescribeHTTPSListenersRequest extends AbstractModel
     public $Http3Supported;
 
     /**
-     * @param string $ProxyId 过滤条件，通道ID
-     * @param string $ListenerId 过滤条件，根据监听器ID进行精确查询。
+     * @param string $ProxyId 通道ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
+     * @param string $GroupId 通道组ID。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
+     * @param string $ListenerId 过滤条件，根据监听器ID进行精确查询。ListenerId、ProxyId、GroupId须至少填写一个，且ProxyId与GroupId至多只能填写其中一个。
      * @param string $ListenerName 过滤条件，根据监听器名称进行精确查询。
      * @param integer $Port 过滤条件，根据监听器端口进行精确查询。
      * @param integer $Offset 偏移量， 默认为0
      * @param integer $Limit 限制数量，默认为20
      * @param string $SearchValue 过滤条件，支持按照端口或监听器名称进行模糊查询
-     * @param string $GroupId 过滤条件，通道组ID
      * @param integer $Http3Supported 支持Http3的开关，其中：
 0，表示不需要支持Http3接入；
 1，表示需要支持Http3接入。
@@ -128,6 +128,10 @@ class DescribeHTTPSListenersRequest extends AbstractModel
         }
         if (array_key_exists("ProxyId",$param) and $param["ProxyId"] !== null) {
             $this->ProxyId = $param["ProxyId"];
+        }
+
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
         }
 
         if (array_key_exists("ListenerId",$param) and $param["ListenerId"] !== null) {
@@ -152,10 +156,6 @@ class DescribeHTTPSListenersRequest extends AbstractModel
 
         if (array_key_exists("SearchValue",$param) and $param["SearchValue"] !== null) {
             $this->SearchValue = $param["SearchValue"];
-        }
-
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
         }
 
         if (array_key_exists("Http3Supported",$param) and $param["Http3Supported"] !== null) {

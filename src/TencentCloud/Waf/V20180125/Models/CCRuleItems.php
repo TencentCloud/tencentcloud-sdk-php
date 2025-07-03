@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUrl(string $Url) 设置网址
  * @method integer getMatchFunc() 获取匹配类型
  * @method void setMatchFunc(integer $MatchFunc) 设置匹配类型
- * @method integer getActionType() 获取动作
- * @method void setActionType(integer $ActionType) 设置动作
+ * @method integer getActionType() 获取动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截，24表示JS校验
+ * @method void setActionType(integer $ActionType) 设置动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截，24表示JS校验
  * @method integer getPriority() 获取优先级
  * @method void setPriority(integer $Priority) 设置优先级
  * @method integer getValidTime() 获取有效时间
@@ -47,17 +47,17 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getRuleId() 获取规则ID
  * @method void setRuleId(integer $RuleId) 设置规则ID
  * @method string getEventId() 获取事件id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEventId(string $EventId) 设置事件id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSessionApplied() 获取关联的Session规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSessionApplied(array $SessionApplied) 设置关联的Session规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(integer $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLimitMethod() 获取限频方式
+ * @method void setLimitMethod(string $LimitMethod) 设置限频方式
+ * @method string getCelRule() 获取cel表达式
+ * @method void setCelRule(string $CelRule) 设置cel表达式
+ * @method string getLogicalOp() 获取逻辑操作符
+ * @method void setLogicalOp(string $LogicalOp) 设置逻辑操作符
  */
 class CCRuleItems extends AbstractModel
 {
@@ -97,7 +97,7 @@ class CCRuleItems extends AbstractModel
     public $MatchFunc;
 
     /**
-     * @var integer 动作
+     * @var integer 动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截，24表示JS校验
      */
     public $ActionType;
 
@@ -128,21 +128,33 @@ class CCRuleItems extends AbstractModel
 
     /**
      * @var string 事件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventId;
 
     /**
      * @var array 关联的Session规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SessionApplied;
 
     /**
      * @var integer 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
+
+    /**
+     * @var string 限频方式
+     */
+    public $LimitMethod;
+
+    /**
+     * @var string cel表达式
+     */
+    public $CelRule;
+
+    /**
+     * @var string 逻辑操作符
+     */
+    public $LogicalOp;
 
     /**
      * @param string $Name 名字
@@ -152,18 +164,18 @@ class CCRuleItems extends AbstractModel
      * @param integer $Interval 范围
      * @param string $Url 网址
      * @param integer $MatchFunc 匹配类型
-     * @param integer $ActionType 动作
+     * @param integer $ActionType 动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截，24表示JS校验
      * @param integer $Priority 优先级
      * @param integer $ValidTime 有效时间
      * @param integer $TsVersion 版本
      * @param string $Options 规则详情
      * @param integer $RuleId 规则ID
      * @param string $EventId 事件id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SessionApplied 关联的Session规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LimitMethod 限频方式
+     * @param string $CelRule cel表达式
+     * @param string $LogicalOp 逻辑操作符
      */
     function __construct()
     {
@@ -240,6 +252,18 @@ class CCRuleItems extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("LimitMethod",$param) and $param["LimitMethod"] !== null) {
+            $this->LimitMethod = $param["LimitMethod"];
+        }
+
+        if (array_key_exists("CelRule",$param) and $param["CelRule"] !== null) {
+            $this->CelRule = $param["CelRule"];
+        }
+
+        if (array_key_exists("LogicalOp",$param) and $param["LogicalOp"] !== null) {
+            $this->LogicalOp = $param["LogicalOp"];
         }
     }
 }

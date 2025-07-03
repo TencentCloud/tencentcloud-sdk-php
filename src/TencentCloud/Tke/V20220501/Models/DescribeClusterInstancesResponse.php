@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method array getInstanceSet() 获取集群中实例列表
  * @method void setInstanceSet(array $InstanceSet) 设置集群中实例列表
  * @method array getErrors() 获取错误信息集合
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrors(array $Errors) 设置错误信息集合
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -45,7 +43,6 @@ class DescribeClusterInstancesResponse extends AbstractModel
 
     /**
      * @var array 错误信息集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Errors;
 
@@ -58,7 +55,6 @@ class DescribeClusterInstancesResponse extends AbstractModel
      * @param integer $TotalCount 集群中实例总数
      * @param array $InstanceSet 集群中实例列表
      * @param array $Errors 错误信息集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

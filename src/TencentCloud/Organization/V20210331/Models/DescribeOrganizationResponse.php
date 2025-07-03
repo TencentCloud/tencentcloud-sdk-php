@@ -21,69 +21,37 @@ use TencentCloud\Common\AbstractModel;
  * DescribeOrganization返回参数结构体
  *
  * @method integer getOrgId() 获取企业组织ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrgId(integer $OrgId) 设置企业组织ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHostUin() 获取创建者UIN。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostUin(integer $HostUin) 设置创建者UIN。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNickName() 获取创建者昵称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNickName(string $NickName) 设置创建者昵称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getOrgType() 获取企业组织类型。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrgType(integer $OrgType) 设置企业组织类型。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsManager() 获取是否组织管理员。是：true ，否：false
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsManager(boolean $IsManager) 设置是否组织管理员。是：true ，否：false
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOrgPolicyType() 获取策略类型。财务管理：Financial
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrgPolicyType(string $OrgPolicyType) 设置策略类型。财务管理：Financial
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOrgPolicyName() 获取策略名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrgPolicyName(string $OrgPolicyName) 设置策略名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getOrgPermission() 获取成员财务权限列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrgPermission(array $OrgPermission) 设置成员财务权限列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRootNodeId() 获取组织根节点ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRootNodeId(integer $RootNodeId) 设置组织根节点ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取组织创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置组织创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getJoinTime() 获取成员加入时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJoinTime(string $JoinTime) 设置成员加入时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIsAllowQuit() 获取成员是否允许退出。允许：Allow，不允许：Denied
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsAllowQuit(string $IsAllowQuit) 设置成员是否允许退出。允许：Allow，不允许：Denied
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPayUin() 获取代付者Uin。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayUin(string $PayUin) 设置代付者Uin。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPayName() 获取代付者名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayName(string $PayName) 设置代付者名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsAssignManager() 获取是否可信服务管理员。是：true，否：false
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsAssignManager(boolean $IsAssignManager) 设置是否可信服务管理员。是：true，否：false
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsAuthManager() 获取是否实名主体管理员。是：true，否：false
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsAuthManager(boolean $IsAuthManager) 设置是否实名主体管理员。是：true，否：false
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -91,97 +59,81 @@ class DescribeOrganizationResponse extends AbstractModel
 {
     /**
      * @var integer 企业组织ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OrgId;
 
     /**
      * @var integer 创建者UIN。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostUin;
 
     /**
      * @var string 创建者昵称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NickName;
 
     /**
      * @var integer 企业组织类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OrgType;
 
     /**
      * @var boolean 是否组织管理员。是：true ，否：false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsManager;
 
     /**
      * @var string 策略类型。财务管理：Financial
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OrgPolicyType;
 
     /**
      * @var string 策略名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OrgPolicyName;
 
     /**
      * @var array 成员财务权限列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OrgPermission;
 
     /**
      * @var integer 组织根节点ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RootNodeId;
 
     /**
      * @var string 组织创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 成员加入时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JoinTime;
 
     /**
      * @var string 成员是否允许退出。允许：Allow，不允许：Denied
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsAllowQuit;
 
     /**
      * @var string 代付者Uin。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PayUin;
 
     /**
      * @var string 代付者名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PayName;
 
     /**
      * @var boolean 是否可信服务管理员。是：true，否：false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsAssignManager;
 
     /**
      * @var boolean 是否实名主体管理员。是：true，否：false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsAuthManager;
 
@@ -192,37 +144,21 @@ class DescribeOrganizationResponse extends AbstractModel
 
     /**
      * @param integer $OrgId 企业组织ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HostUin 创建者UIN。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NickName 创建者昵称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $OrgType 企业组织类型。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsManager 是否组织管理员。是：true ，否：false
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OrgPolicyType 策略类型。财务管理：Financial
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OrgPolicyName 策略名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $OrgPermission 成员财务权限列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RootNodeId 组织根节点ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 组织创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $JoinTime 成员加入时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IsAllowQuit 成员是否允许退出。允许：Allow，不允许：Denied
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PayUin 代付者Uin。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PayName 代付者名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsAssignManager 是否可信服务管理员。是：true，否：false
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsAuthManager 是否实名主体管理员。是：true，否：false
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -25,21 +25,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEvents(array $Events) 设置事件详细信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPage() 获取分页号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPage(integer $Page) 设置分页号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSize() 获取分页大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSize(integer $Size) 设置分页大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalPages() 获取总页数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalPages(integer $TotalPages) 设置总页数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取总条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置总条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -53,25 +45,21 @@ class DescribeDataEngineEventsResponse extends AbstractModel
 
     /**
      * @var integer 分页号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Page;
 
     /**
      * @var integer 分页大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Size;
 
     /**
      * @var integer 总页数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalPages;
 
     /**
      * @var integer 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
@@ -84,13 +72,9 @@ class DescribeDataEngineEventsResponse extends AbstractModel
      * @param array $Events 事件详细信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Page 分页号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Size 分页大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalPages 总页数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

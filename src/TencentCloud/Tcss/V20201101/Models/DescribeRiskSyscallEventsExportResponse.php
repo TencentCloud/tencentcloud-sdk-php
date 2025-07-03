@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * DescribeRiskSyscallEventsExport返回参数结构体
  *
  * @method string getDownloadUrl() 获取Excel下载地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDownloadUrl(string $DownloadUrl) 设置Excel下载地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getJobId() 获取任务Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJobId(string $JobId) 设置任务Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,13 +31,11 @@ class DescribeRiskSyscallEventsExportResponse extends AbstractModel
 {
     /**
      * @var string Excel下载地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DownloadUrl;
 
     /**
      * @var string 任务Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JobId;
 
@@ -52,9 +46,7 @@ class DescribeRiskSyscallEventsExportResponse extends AbstractModel
 
     /**
      * @param string $DownloadUrl Excel下载地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $JobId 任务Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

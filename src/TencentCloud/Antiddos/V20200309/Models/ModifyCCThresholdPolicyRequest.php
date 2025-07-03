@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIp(string $Ip) 设置IP地址
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
- * @method string getProtocol() 获取协议，可取值HTTP，HTTPS
- * @method void setProtocol(string $Protocol) 设置协议，可取值HTTP，HTTPS
+ * @method string getProtocol() 获取协议，可取值http，https，http/https
+ * @method void setProtocol(string $Protocol) 设置协议，可取值http，https，http/https
  * @method integer getThreshold() 获取清洗阈值，-1表示开启“默认”模式
  * @method void setThreshold(integer $Threshold) 设置清洗阈值，-1表示开启“默认”模式
  */
@@ -49,7 +49,7 @@ class ModifyCCThresholdPolicyRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var string 协议，可取值HTTP，HTTPS
+     * @var string 协议，可取值http，https，http/https
      */
     public $Protocol;
 
@@ -62,7 +62,7 @@ class ModifyCCThresholdPolicyRequest extends AbstractModel
      * @param string $InstanceId 实例Id
      * @param string $Ip IP地址
      * @param string $Domain 域名
-     * @param string $Protocol 协议，可取值HTTP，HTTPS
+     * @param string $Protocol 协议，可取值http，https，http/https
      * @param integer $Threshold 清洗阈值，-1表示开启“默认”模式
      */
     function __construct()

@@ -43,9 +43,7 @@ use TencentCloud\Common\AbstractModel;
 3表示源站调整中；
 4表示配置变更中。
  * @method string getProxyId() 获取监听器的通道ID，如果监听器属于通道组，则为null
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProxyId(string $ProxyId) 设置监听器的通道ID，如果监听器属于通道组，则为null
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupId() 获取监听器的通道组ID，如果监听器属于通道，则为null
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupId(string $GroupId) 设置监听器的通道组ID，如果监听器属于通道，则为null
@@ -90,7 +88,6 @@ class HTTPListener extends AbstractModel
 
     /**
      * @var string 监听器的通道ID，如果监听器属于通道组，则为null
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProxyId;
 
@@ -113,7 +110,6 @@ class HTTPListener extends AbstractModel
 3表示源站调整中；
 4表示配置变更中。
      * @param string $ProxyId 监听器的通道ID，如果监听器属于通道组，则为null
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupId 监听器的通道组ID，如果监听器属于通道，则为null
 注意：此字段可能返回 null，表示取不到有效值。
      */

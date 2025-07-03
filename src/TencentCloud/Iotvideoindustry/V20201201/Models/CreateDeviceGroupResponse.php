@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * CreateDeviceGroup返回参数结构体
  *
  * @method string getStatus() 获取响应结果，“OK”为成功，其他为失败
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置响应结果，“OK”为成功，其他为失败
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupId() 获取分组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupId(string $GroupId) 设置分组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,13 +31,11 @@ class CreateDeviceGroupResponse extends AbstractModel
 {
     /**
      * @var string 响应结果，“OK”为成功，其他为失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupId;
 
@@ -52,9 +46,7 @@ class CreateDeviceGroupResponse extends AbstractModel
 
     /**
      * @param string $Status 响应结果，“OK”为成功，其他为失败
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupId 分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

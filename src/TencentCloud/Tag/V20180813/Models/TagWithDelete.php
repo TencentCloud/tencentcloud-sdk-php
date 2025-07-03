@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getCanDelete() 获取是否可以删除
  * @method void setCanDelete(integer $CanDelete) 设置是否可以删除
  * @method string getCategory() 获取标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCategory(string $Category) 设置标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TagWithDelete extends AbstractModel
 {
@@ -50,7 +48,6 @@ class TagWithDelete extends AbstractModel
 
     /**
      * @var string 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Category;
 
@@ -59,7 +56,6 @@ class TagWithDelete extends AbstractModel
      * @param string $TagValue 标签值
      * @param integer $CanDelete 是否可以删除
      * @param string $Category 标签类型。取值： Custom：自定义标签。 System：系统标签。 All：全部标签。 默认值：All。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

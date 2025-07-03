@@ -22,8 +22,28 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getId() 获取详情ID
  * @method void setId(integer $Id) 设置详情ID
- * @method string getAction() 获取类型  new: 注册域名 batch_transfer_prohibition_on:开启禁止转移  batch_transfer_prohibition_off:关闭禁止转移 batch_update_prohibition_on:开启禁止更新   batch_update_prohibition_off:关闭禁止更新
- * @method void setAction(string $Action) 设置类型  new: 注册域名 batch_transfer_prohibition_on:开启禁止转移  batch_transfer_prohibition_off:关闭禁止转移 batch_update_prohibition_on:开启禁止更新   batch_update_prohibition_off:关闭禁止更新
+ * @method string getAction() 获取类型  
+new：注册域名
+renew：续费域名
+batch_transfer_prohibition_on：开启禁止转移锁
+batch_transfer_prohibition_off：关闭禁止转移锁
+batch_update_prohibition_on：开启禁止更新锁
+batch_update_prohibition_off：关闭禁止更新锁
+batch_modify_owner：域名转移
+batch_modify_domain_info：域名信息修改
+batch_transfer_in：域名转入
+batch_cancel_transfer_out：域名取消转出
+ * @method void setAction(string $Action) 设置类型  
+new：注册域名
+renew：续费域名
+batch_transfer_prohibition_on：开启禁止转移锁
+batch_transfer_prohibition_off：关闭禁止转移锁
+batch_update_prohibition_on：开启禁止更新锁
+batch_update_prohibition_off：关闭禁止更新锁
+batch_modify_owner：域名转移
+batch_modify_domain_info：域名信息修改
+batch_transfer_in：域名转入
+batch_cancel_transfer_out：域名取消转出
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
  * @method string getStatus() 获取执行状态：
@@ -34,18 +54,14 @@ success  操作成功。
 doing 执行中。
 failed 操作失败。
 success  操作成功。
- * @method string getReason() 获取失败原因
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReason(string $Reason) 设置失败原因
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getReason() 获取失败原因，如果状态成功(Status:success),则该字段为空
+ * @method void setReason(string $Reason) 设置失败原因，如果状态成功(Status:success),则该字段为空
  * @method string getCreatedOn() 获取创建时间
  * @method void setCreatedOn(string $CreatedOn) 设置创建时间
  * @method string getUpdatedOn() 获取更新时间
  * @method void setUpdatedOn(string $UpdatedOn) 设置更新时间
  * @method string getBigDealId() 获取订单号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBigDealId(string $BigDealId) 设置订单号
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DomainBatchDetailSet extends AbstractModel
 {
@@ -55,7 +71,17 @@ class DomainBatchDetailSet extends AbstractModel
     public $Id;
 
     /**
-     * @var string 类型  new: 注册域名 batch_transfer_prohibition_on:开启禁止转移  batch_transfer_prohibition_off:关闭禁止转移 batch_update_prohibition_on:开启禁止更新   batch_update_prohibition_off:关闭禁止更新
+     * @var string 类型  
+new：注册域名
+renew：续费域名
+batch_transfer_prohibition_on：开启禁止转移锁
+batch_transfer_prohibition_off：关闭禁止转移锁
+batch_update_prohibition_on：开启禁止更新锁
+batch_update_prohibition_off：关闭禁止更新锁
+batch_modify_owner：域名转移
+batch_modify_domain_info：域名信息修改
+batch_transfer_in：域名转入
+batch_cancel_transfer_out：域名取消转出
      */
     public $Action;
 
@@ -73,8 +99,7 @@ success  操作成功。
     public $Status;
 
     /**
-     * @var string 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 失败原因，如果状态成功(Status:success),则该字段为空
      */
     public $Reason;
 
@@ -90,24 +115,31 @@ success  操作成功。
 
     /**
      * @var string 订单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BigDealId;
 
     /**
      * @param integer $Id 详情ID
-     * @param string $Action 类型  new: 注册域名 batch_transfer_prohibition_on:开启禁止转移  batch_transfer_prohibition_off:关闭禁止转移 batch_update_prohibition_on:开启禁止更新   batch_update_prohibition_off:关闭禁止更新
+     * @param string $Action 类型  
+new：注册域名
+renew：续费域名
+batch_transfer_prohibition_on：开启禁止转移锁
+batch_transfer_prohibition_off：关闭禁止转移锁
+batch_update_prohibition_on：开启禁止更新锁
+batch_update_prohibition_off：关闭禁止更新锁
+batch_modify_owner：域名转移
+batch_modify_domain_info：域名信息修改
+batch_transfer_in：域名转入
+batch_cancel_transfer_out：域名取消转出
      * @param string $Domain 域名
      * @param string $Status 执行状态：
 doing 执行中。
 failed 操作失败。
 success  操作成功。
-     * @param string $Reason 失败原因
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Reason 失败原因，如果状态成功(Status:success),则该字段为空
      * @param string $CreatedOn 创建时间
      * @param string $UpdatedOn 更新时间
      * @param string $BigDealId 订单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

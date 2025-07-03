@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 构件属性信息
  *
  * @method string getName() 获取属性名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置属性名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取属性描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置属性描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContent() 获取属性内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContent(string $Content) 设置属性内容
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ElementProperty extends AbstractModel
 {
     /**
      * @var string 属性名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 属性描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var string 属性内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Content;
 
     /**
      * @param string $Name 属性名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 属性描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Content 属性内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -60,6 +60,20 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrgData(string $OrgData) 设置原始内容
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getPageInfos() 获取页码信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPageInfos(array $PageInfos) 设置页码信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSheetInfos() 获取sheet信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSheetInfos(array $SheetInfos) 设置sheet信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDocBizId() 获取文档ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDocBizId(string $DocBizId) 设置文档ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getKnowledgeBizId() 获取知识库ID
+ * @method void setKnowledgeBizId(string $KnowledgeBizId) 设置知识库ID
  */
 class ReferDetail extends AbstractModel
 {
@@ -124,6 +138,29 @@ class ReferDetail extends AbstractModel
     public $OrgData;
 
     /**
+     * @var array 页码信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PageInfos;
+
+    /**
+     * @var array sheet信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SheetInfos;
+
+    /**
+     * @var string 文档ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DocBizId;
+
+    /**
+     * @var string 知识库ID
+     */
+    public $KnowledgeBizId;
+
+    /**
      * @param string $ReferBizId 引用ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DocType 文档类型 (1 QA, 2 文档段)
@@ -144,6 +181,13 @@ class ReferDetail extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OrgData 原始内容
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $PageInfos 页码信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SheetInfos sheet信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DocBizId 文档ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $KnowledgeBizId 知识库ID
      */
     function __construct()
     {
@@ -201,6 +245,22 @@ class ReferDetail extends AbstractModel
 
         if (array_key_exists("OrgData",$param) and $param["OrgData"] !== null) {
             $this->OrgData = $param["OrgData"];
+        }
+
+        if (array_key_exists("PageInfos",$param) and $param["PageInfos"] !== null) {
+            $this->PageInfos = $param["PageInfos"];
+        }
+
+        if (array_key_exists("SheetInfos",$param) and $param["SheetInfos"] !== null) {
+            $this->SheetInfos = $param["SheetInfos"];
+        }
+
+        if (array_key_exists("DocBizId",$param) and $param["DocBizId"] !== null) {
+            $this->DocBizId = $param["DocBizId"];
+        }
+
+        if (array_key_exists("KnowledgeBizId",$param) and $param["KnowledgeBizId"] !== null) {
+            $this->KnowledgeBizId = $param["KnowledgeBizId"];
         }
     }
 }

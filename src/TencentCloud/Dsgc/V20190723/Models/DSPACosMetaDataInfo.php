@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBindStatus(string $BindStatus) 设置COS桶绑定状态
  * @method float getStorage() 获取COS桶存储量
  * @method void setStorage(float $Storage) 设置COS桶存储量
+ * @method integer getGovernAuthStatus() 获取治理授权状态，0:关闭 1：开启
+ * @method void setGovernAuthStatus(integer $GovernAuthStatus) 设置治理授权状态，0:关闭 1：开启
  */
 class DSPACosMetaDataInfo extends AbstractModel
 {
@@ -73,6 +75,11 @@ class DSPACosMetaDataInfo extends AbstractModel
     public $Storage;
 
     /**
+     * @var integer 治理授权状态，0:关闭 1：开启
+     */
+    public $GovernAuthStatus;
+
+    /**
      * @param string $Bucket COS桶名
      * @param string $CreateTime COS桶创建时间
      * @param integer $Valid 1 -- 有效，0 -- 无效，资源可能已被删除。
@@ -80,6 +87,7 @@ class DSPACosMetaDataInfo extends AbstractModel
      * @param string $ResourceRegion COS资源所处的地域
      * @param string $BindStatus COS桶绑定状态
      * @param float $Storage COS桶存储量
+     * @param integer $GovernAuthStatus 治理授权状态，0:关闭 1：开启
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class DSPACosMetaDataInfo extends AbstractModel
 
         if (array_key_exists("Storage",$param) and $param["Storage"] !== null) {
             $this->Storage = $param["Storage"];
+        }
+
+        if (array_key_exists("GovernAuthStatus",$param) and $param["GovernAuthStatus"] !== null) {
+            $this->GovernAuthStatus = $param["GovernAuthStatus"];
         }
     }
 }

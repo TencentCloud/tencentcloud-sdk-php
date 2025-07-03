@@ -29,17 +29,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPackageVersion() 获取包版本
  * @method void setPackageVersion(string $PackageVersion) 设置包版本
  * @method string getDownloadUrl() 获取下载链接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDownloadUrl(string $DownloadUrl) 设置下载链接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDownloadHeaders() 获取下载Httpheader
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDownloadHeaders(array $DownloadHeaders) 设置下载Httpheader
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getOutDate() 获取下载链接是否过期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutDate(boolean $OutDate) 设置下载链接是否过期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -67,19 +61,16 @@ class DescribeCloudBaseBuildServiceResponse extends AbstractModel
 
     /**
      * @var string 下载链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DownloadUrl;
 
     /**
      * @var array 下载Httpheader
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DownloadHeaders;
 
     /**
      * @var boolean 下载链接是否过期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutDate;
 
@@ -94,11 +85,8 @@ class DescribeCloudBaseBuildServiceResponse extends AbstractModel
      * @param string $PackageName 包名
      * @param string $PackageVersion 包版本
      * @param string $DownloadUrl 下载链接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DownloadHeaders 下载Httpheader
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $OutDate 下载链接是否过期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -27,13 +27,9 @@ use TencentCloud\Common\AbstractModel;
  * @method float getLatitude() 获取位置点的纬度
  * @method void setLatitude(float $Latitude) 设置位置点的纬度
  * @method string getLocationType() 获取位置点的定位类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocationType(string $LocationType) 设置位置点的定位类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getAccuracy() 获取位置点的精度预估，单位为米
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccuracy(float $Accuracy) 设置位置点的精度预估，单位为米
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PositionItem extends AbstractModel
 {
@@ -54,13 +50,11 @@ class PositionItem extends AbstractModel
 
     /**
      * @var string 位置点的定位类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LocationType;
 
     /**
      * @var float 位置点的精度预估，单位为米
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Accuracy;
 
@@ -69,9 +63,7 @@ class PositionItem extends AbstractModel
      * @param float $Longitude 位置点的经度
      * @param float $Latitude 位置点的纬度
      * @param string $LocationType 位置点的定位类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Accuracy 位置点的精度预估，单位为米
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

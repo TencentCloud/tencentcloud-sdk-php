@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataEngineIds(array $DataEngineIds) 设置引擎ID
  * @method string getDataEngineConfigCommand() 获取引擎配置命令，支持UpdateSparkSQLLakefsPath（更新原生表配置）、UpdateSparkSQLResultPath（更新结果路径配置）
  * @method void setDataEngineConfigCommand(string $DataEngineConfigCommand) 设置引擎配置命令，支持UpdateSparkSQLLakefsPath（更新原生表配置）、UpdateSparkSQLResultPath（更新结果路径配置）
+ * @method boolean getUseLakeFs() 获取是否使用lakefs作为结果存储
+ * @method void setUseLakeFs(boolean $UseLakeFs) 设置是否使用lakefs作为结果存储
+ * @method string getCustomResultPath() 获取用户自定义结果路径
+ * @method void setCustomResultPath(string $CustomResultPath) 设置用户自定义结果路径
  */
 class UpdateDataEngineConfigRequest extends AbstractModel
 {
@@ -38,8 +42,20 @@ class UpdateDataEngineConfigRequest extends AbstractModel
     public $DataEngineConfigCommand;
 
     /**
+     * @var boolean 是否使用lakefs作为结果存储
+     */
+    public $UseLakeFs;
+
+    /**
+     * @var string 用户自定义结果路径
+     */
+    public $CustomResultPath;
+
+    /**
      * @param array $DataEngineIds 引擎ID
      * @param string $DataEngineConfigCommand 引擎配置命令，支持UpdateSparkSQLLakefsPath（更新原生表配置）、UpdateSparkSQLResultPath（更新结果路径配置）
+     * @param boolean $UseLakeFs 是否使用lakefs作为结果存储
+     * @param string $CustomResultPath 用户自定义结果路径
      */
     function __construct()
     {
@@ -60,6 +76,14 @@ class UpdateDataEngineConfigRequest extends AbstractModel
 
         if (array_key_exists("DataEngineConfigCommand",$param) and $param["DataEngineConfigCommand"] !== null) {
             $this->DataEngineConfigCommand = $param["DataEngineConfigCommand"];
+        }
+
+        if (array_key_exists("UseLakeFs",$param) and $param["UseLakeFs"] !== null) {
+            $this->UseLakeFs = $param["UseLakeFs"];
+        }
+
+        if (array_key_exists("CustomResultPath",$param) and $param["CustomResultPath"] !== null) {
+            $this->CustomResultPath = $param["CustomResultPath"];
         }
     }
 }

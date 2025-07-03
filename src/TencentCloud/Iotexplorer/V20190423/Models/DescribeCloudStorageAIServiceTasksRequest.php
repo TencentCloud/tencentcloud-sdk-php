@@ -25,11 +25,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDeviceName() 获取设备名称
  * @method void setDeviceName(string $DeviceName) 设置设备名称
  * @method string getServiceType() 获取云存 AI 服务类型。可选值：
-- `PackageDetect`：包裹检测
+- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
+- `VideoToText`：视频语义理解
  * @method void setServiceType(string $ServiceType) 设置云存 AI 服务类型。可选值：
-- `PackageDetect`：包裹检测
+- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
+- `VideoToText`：视频语义理解
  * @method integer getLimit() 获取分页拉取数量
  * @method void setLimit(integer $Limit) 设置分页拉取数量
  * @method integer getOffset() 获取分页拉取偏移
@@ -46,10 +48,26 @@ use TencentCloud\Common\AbstractModel;
 - `2`：成功但结果为空
 - `3`：成功且结果非空
 - `4`：执行中
- * @method string getUserId() 获取用户ID
- * @method void setUserId(string $UserId) 设置用户ID
- * @method integer getChannelId() 获取通道ID 非NVR设备则不填 NVR设备则必填 默认为无
- * @method void setChannelId(integer $ChannelId) 设置通道ID 非NVR设备则不填 NVR设备则必填 默认为无
+ * @method string getUserId() 获取用户 ID
+ * @method void setUserId(string $UserId) 设置用户 ID
+ * @method integer getChannelId() 获取通道 ID
+ * @method void setChannelId(integer $ChannelId) 设置通道 ID
+ * @method array getDeviceNames() 获取设备名称列表。
+
+当需要同时查询多台设备的任务列表时传入，优先级高于参数 `DeviceName`
+ * @method void setDeviceNames(array $DeviceNames) 设置设备名称列表。
+
+当需要同时查询多台设备的任务列表时传入，优先级高于参数 `DeviceName`
+ * @method integer getStartTime() 获取查询任务时间范围的起始时间（秒级 UNIX 时间戳）
+ * @method void setStartTime(integer $StartTime) 设置查询任务时间范围的起始时间（秒级 UNIX 时间戳）
+ * @method integer getEndTime() 获取查询任务时间范围的结束时间（秒级 UNIX 时间戳）
+ * @method void setEndTime(integer $EndTime) 设置查询任务时间范围的结束时间（秒级 UNIX 时间戳）
+ * @method integer getFileURLExpireTime() 获取下载 URL 的过期时间。
+
+若传入该参数，则响应中将包含所有文件的下载 URL
+ * @method void setFileURLExpireTime(integer $FileURLExpireTime) 设置下载 URL 的过期时间。
+
+若传入该参数，则响应中将包含所有文件的下载 URL
  */
 class DescribeCloudStorageAIServiceTasksRequest extends AbstractModel
 {
@@ -65,8 +83,9 @@ class DescribeCloudStorageAIServiceTasksRequest extends AbstractModel
 
     /**
      * @var string 云存 AI 服务类型。可选值：
-- `PackageDetect`：包裹检测
+- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
+- `VideoToText`：视频语义理解
      */
     public $ServiceType;
 
@@ -91,21 +110,46 @@ class DescribeCloudStorageAIServiceTasksRequest extends AbstractModel
     public $Status;
 
     /**
-     * @var string 用户ID
+     * @var string 用户 ID
      */
     public $UserId;
 
     /**
-     * @var integer 通道ID 非NVR设备则不填 NVR设备则必填 默认为无
+     * @var integer 通道 ID
      */
     public $ChannelId;
+
+    /**
+     * @var array 设备名称列表。
+
+当需要同时查询多台设备的任务列表时传入，优先级高于参数 `DeviceName`
+     */
+    public $DeviceNames;
+
+    /**
+     * @var integer 查询任务时间范围的起始时间（秒级 UNIX 时间戳）
+     */
+    public $StartTime;
+
+    /**
+     * @var integer 查询任务时间范围的结束时间（秒级 UNIX 时间戳）
+     */
+    public $EndTime;
+
+    /**
+     * @var integer 下载 URL 的过期时间。
+
+若传入该参数，则响应中将包含所有文件的下载 URL
+     */
+    public $FileURLExpireTime;
 
     /**
      * @param string $ProductId 产品 ID
      * @param string $DeviceName 设备名称
      * @param string $ServiceType 云存 AI 服务类型。可选值：
-- `PackageDetect`：包裹检测
+- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
+- `VideoToText`：视频语义理解
      * @param integer $Limit 分页拉取数量
      * @param integer $Offset 分页拉取偏移
      * @param integer $Status 任务状态。可选值：
@@ -114,8 +158,16 @@ class DescribeCloudStorageAIServiceTasksRequest extends AbstractModel
 - `2`：成功但结果为空
 - `3`：成功且结果非空
 - `4`：执行中
-     * @param string $UserId 用户ID
-     * @param integer $ChannelId 通道ID 非NVR设备则不填 NVR设备则必填 默认为无
+     * @param string $UserId 用户 ID
+     * @param integer $ChannelId 通道 ID
+     * @param array $DeviceNames 设备名称列表。
+
+当需要同时查询多台设备的任务列表时传入，优先级高于参数 `DeviceName`
+     * @param integer $StartTime 查询任务时间范围的起始时间（秒级 UNIX 时间戳）
+     * @param integer $EndTime 查询任务时间范围的结束时间（秒级 UNIX 时间戳）
+     * @param integer $FileURLExpireTime 下载 URL 的过期时间。
+
+若传入该参数，则响应中将包含所有文件的下载 URL
      */
     function __construct()
     {
@@ -160,6 +212,22 @@ class DescribeCloudStorageAIServiceTasksRequest extends AbstractModel
 
         if (array_key_exists("ChannelId",$param) and $param["ChannelId"] !== null) {
             $this->ChannelId = $param["ChannelId"];
+        }
+
+        if (array_key_exists("DeviceNames",$param) and $param["DeviceNames"] !== null) {
+            $this->DeviceNames = $param["DeviceNames"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("FileURLExpireTime",$param) and $param["FileURLExpireTime"] !== null) {
+            $this->FileURLExpireTime = $param["FileURLExpireTime"];
         }
     }
 }

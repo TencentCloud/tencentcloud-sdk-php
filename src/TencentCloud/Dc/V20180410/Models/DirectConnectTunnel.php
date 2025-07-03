@@ -60,8 +60,8 @@ REJECTED:拒绝
  * @method void setDirectConnectGatewayId(string $DirectConnectGatewayId) 设置专线网关 ID
  * @method string getRouteType() 获取BGP ：BGP路由 STATIC：静态 默认为 BGP 路由
  * @method void setRouteType(string $RouteType) 设置BGP ：BGP路由 STATIC：静态 默认为 BGP 路由
- * @method BgpPeer getBgpPeer() 获取用户侧BGP，Asn，AuthKey
- * @method void setBgpPeer(BgpPeer $BgpPeer) 设置用户侧BGP，Asn，AuthKey
+ * @method BgpPeer getBgpPeer() 获取用户侧BGP，包括： CloudAsn，Asn，AuthKey
+ * @method void setBgpPeer(BgpPeer $BgpPeer) 设置用户侧BGP，包括： CloudAsn，Asn，AuthKey
  * @method array getRouteFilterPrefixes() 获取用户侧网段地址
  * @method void setRouteFilterPrefixes(array $RouteFilterPrefixes) 设置用户侧网段地址
  * @method integer getVlan() 获取专用通道的Vlan
@@ -79,53 +79,29 @@ REJECTED:拒绝
  * @method array getTagSet() 获取专用通道标签值
  * @method void setTagSet(array $TagSet) 设置专用通道标签值
  * @method string getNetDetectId() 获取关联的网络自定义探测ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetDetectId(string $NetDetectId) 设置关联的网络自定义探测ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getEnableBGPCommunity() 获取BGP community开关
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableBGPCommunity(boolean $EnableBGPCommunity) 设置BGP community开关
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNatType() 获取是否为Nat通道
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNatType(integer $NatType) 设置是否为Nat通道
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVpcRegion() 获取VPC地域简码，如gz、cd
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcRegion(string $VpcRegion) 设置VPC地域简码，如gz、cd
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBfdEnable() 获取是否开启BFD
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBfdEnable(integer $BfdEnable) 设置是否开启BFD
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAccessPointType() 获取专用通道接入点类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccessPointType(string $AccessPointType) 设置专用通道接入点类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDirectConnectGatewayName() 获取专线网关名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDirectConnectGatewayName(string $DirectConnectGatewayName) 设置专线网关名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVpcName() 获取VPC名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcName(string $VpcName) 设置VPC名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTencentBackupAddress() 获取TencentBackupAddress，腾讯侧备用互联 IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTencentBackupAddress(string $TencentBackupAddress) 设置TencentBackupAddress，腾讯侧备用互联 IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getSignLaw() 获取专用通道关联的物理专线是否签署了用户协议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSignLaw(boolean $SignLaw) 设置专用通道关联的物理专线是否签署了用户协议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCloudAttachId() 获取高速上云服务ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCloudAttachId(string $CloudAttachId) 设置高速上云服务ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getShareOrNot() 获取是否共享通道
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setShareOrNot(integer $ShareOrNot) 设置是否共享通道
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DirectConnectTunnel extends AbstractModel
 {
@@ -190,7 +166,7 @@ REJECTED:拒绝
     public $RouteType;
 
     /**
-     * @var BgpPeer 用户侧BGP，Asn，AuthKey
+     * @var BgpPeer 用户侧BGP，包括： CloudAsn，Asn，AuthKey
      */
     public $BgpPeer;
 
@@ -236,73 +212,61 @@ REJECTED:拒绝
 
     /**
      * @var string 关联的网络自定义探测ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NetDetectId;
 
     /**
      * @var boolean BGP community开关
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableBGPCommunity;
 
     /**
      * @var integer 是否为Nat通道
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NatType;
 
     /**
      * @var string VPC地域简码，如gz、cd
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcRegion;
 
     /**
      * @var integer 是否开启BFD
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BfdEnable;
 
     /**
      * @var string 专用通道接入点类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccessPointType;
 
     /**
      * @var string 专线网关名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DirectConnectGatewayName;
 
     /**
      * @var string VPC名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcName;
 
     /**
      * @var string TencentBackupAddress，腾讯侧备用互联 IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TencentBackupAddress;
 
     /**
      * @var boolean 专用通道关联的物理专线是否签署了用户协议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SignLaw;
 
     /**
      * @var string 高速上云服务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CloudAttachId;
 
     /**
      * @var integer 是否共享通道
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ShareOrNot;
 
@@ -327,7 +291,7 @@ REJECTED:拒绝
      * @param string $VpcId 私有网络统一 ID 或者黑石网络统一 ID
      * @param string $DirectConnectGatewayId 专线网关 ID
      * @param string $RouteType BGP ：BGP路由 STATIC：静态 默认为 BGP 路由
-     * @param BgpPeer $BgpPeer 用户侧BGP，Asn，AuthKey
+     * @param BgpPeer $BgpPeer 用户侧BGP，包括： CloudAsn，Asn，AuthKey
      * @param array $RouteFilterPrefixes 用户侧网段地址
      * @param integer $Vlan 专用通道的Vlan
      * @param string $TencentAddress TencentAddress，腾讯侧互联 IP
@@ -337,29 +301,17 @@ REJECTED:拒绝
      * @param integer $Bandwidth 专用通道带宽值
      * @param array $TagSet 专用通道标签值
      * @param string $NetDetectId 关联的网络自定义探测ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $EnableBGPCommunity BGP community开关
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NatType 是否为Nat通道
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcRegion VPC地域简码，如gz、cd
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BfdEnable 是否开启BFD
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AccessPointType 专用通道接入点类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DirectConnectGatewayName 专线网关名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcName VPC名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TencentBackupAddress TencentBackupAddress，腾讯侧备用互联 IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $SignLaw 专用通道关联的物理专线是否签署了用户协议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CloudAttachId 高速上云服务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ShareOrNot 是否共享通道
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

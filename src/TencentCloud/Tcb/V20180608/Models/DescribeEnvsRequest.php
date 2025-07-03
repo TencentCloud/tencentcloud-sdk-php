@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 如只想获取渠道A的环境 就填写IsVisible= true,Channels = ["A"], 过滤渠道A拉取其他渠道环境时填写IsVisible= false,Channels = ["A"]
  * @method array getChannels() 获取渠道列表，代表可见或不可见渠道由IsVisible参数指定
  * @method void setChannels(array $Channels) 设置渠道列表，代表可见或不可见渠道由IsVisible参数指定
+ * @method integer getLimit() 获取分页参数，单页限制个数
+ * @method void setLimit(integer $Limit) 设置分页参数，单页限制个数
+ * @method integer getOffset() 获取分页参数，偏移量
+ * @method void setOffset(integer $Offset) 设置分页参数，偏移量
  */
 class DescribeEnvsRequest extends AbstractModel
 {
@@ -48,10 +52,22 @@ class DescribeEnvsRequest extends AbstractModel
     public $Channels;
 
     /**
+     * @var integer 分页参数，单页限制个数
+     */
+    public $Limit;
+
+    /**
+     * @var integer 分页参数，偏移量
+     */
+    public $Offset;
+
+    /**
      * @param string $EnvId 环境ID，如果传了这个参数则只返回该环境的相关信息
      * @param boolean $IsVisible 指定Channels字段为可见渠道列表或不可见渠道列表
 如只想获取渠道A的环境 就填写IsVisible= true,Channels = ["A"], 过滤渠道A拉取其他渠道环境时填写IsVisible= false,Channels = ["A"]
      * @param array $Channels 渠道列表，代表可见或不可见渠道由IsVisible参数指定
+     * @param integer $Limit 分页参数，单页限制个数
+     * @param integer $Offset 分页参数，偏移量
      */
     function __construct()
     {
@@ -76,6 +92,14 @@ class DescribeEnvsRequest extends AbstractModel
 
         if (array_key_exists("Channels",$param) and $param["Channels"] !== null) {
             $this->Channels = $param["Channels"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
     }
 }

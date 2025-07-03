@@ -29,9 +29,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTime(string $Time) 设置连结时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsUnSupportVersion() 获取是否支持的版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsUnSupportVersion(boolean $IsUnSupportVersion) 设置是否支持的版本
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeConnectInfoResultDTO extends AbstractModel
 {
@@ -49,7 +47,6 @@ class DescribeConnectInfoResultDTO extends AbstractModel
 
     /**
      * @var boolean 是否支持的版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsUnSupportVersion;
 
@@ -59,7 +56,6 @@ class DescribeConnectInfoResultDTO extends AbstractModel
      * @param string $Time 连结时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsUnSupportVersion 是否支持的版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

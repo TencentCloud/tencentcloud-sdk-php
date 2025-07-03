@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setJobId(string $JobId) 设置迁移任务 Id
  * @method string getCompareTaskId() 获取对比任务 ID，形如：dts-8yv4w2i1-cmp-37skmii9
  * @method void setCompareTaskId(string $CompareTaskId) 设置对比任务 ID，形如：dts-8yv4w2i1-cmp-37skmii9
+ * @method boolean getForceStop() 获取是否强制停止。如果填true，同步任务增量阶段会跳过一致性校验产生的binlog，达到快速恢复任务的效果
+ * @method void setForceStop(boolean $ForceStop) 设置是否强制停止。如果填true，同步任务增量阶段会跳过一致性校验产生的binlog，达到快速恢复任务的效果
  */
 class StopCompareRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class StopCompareRequest extends AbstractModel
     public $CompareTaskId;
 
     /**
+     * @var boolean 是否强制停止。如果填true，同步任务增量阶段会跳过一致性校验产生的binlog，达到快速恢复任务的效果
+     */
+    public $ForceStop;
+
+    /**
      * @param string $JobId 迁移任务 Id
      * @param string $CompareTaskId 对比任务 ID，形如：dts-8yv4w2i1-cmp-37skmii9
+     * @param boolean $ForceStop 是否强制停止。如果填true，同步任务增量阶段会跳过一致性校验产生的binlog，达到快速恢复任务的效果
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class StopCompareRequest extends AbstractModel
 
         if (array_key_exists("CompareTaskId",$param) and $param["CompareTaskId"] !== null) {
             $this->CompareTaskId = $param["CompareTaskId"];
+        }
+
+        if (array_key_exists("ForceStop",$param) and $param["ForceStop"] !== null) {
+            $this->ForceStop = $param["ForceStop"];
         }
     }
 }

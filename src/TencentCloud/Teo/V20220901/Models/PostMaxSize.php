@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
 <li>on：开启限制；</li>
 <li>off：关闭限制。</li>
  * @method integer getMaxSize() 获取最大限制，取值在1MB和500MB之间。单位字节。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxSize(integer $MaxSize) 设置最大限制，取值在1MB和500MB之间。单位字节。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PostMaxSize extends AbstractModel
 {
@@ -42,7 +40,6 @@ class PostMaxSize extends AbstractModel
 
     /**
      * @var integer 最大限制，取值在1MB和500MB之间。单位字节。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxSize;
 
@@ -51,7 +48,6 @@ class PostMaxSize extends AbstractModel
 <li>on：开启限制；</li>
 <li>off：关闭限制。</li>
      * @param integer $MaxSize 最大限制，取值在1MB和500MB之间。单位字节。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

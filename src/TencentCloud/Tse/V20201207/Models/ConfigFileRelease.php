@@ -21,201 +21,161 @@ use TencentCloud\Common\AbstractModel;
  * 配置文件发布
  *
  * @method integer getId() 获取配置文件发布id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(integer $Id) 设置配置文件发布id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取配置文件发布名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置配置文件发布名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNamespace() 获取配置文件发布命名空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespace(string $Namespace) 设置配置文件发布命名空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroup() 获取配置文件发布组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroup(string $Group) 设置配置文件发布组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileName() 获取配置文件发布文件名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileName(string $FileName) 设置配置文件发布文件名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContent() 获取配置文件发布内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContent(string $Content) 设置配置文件发布内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getComment() 获取配置文件发布注释
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComment(string $Comment) 设置配置文件发布注释
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMd5() 获取配置文件发布Md5
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMd5(string $Md5) 设置配置文件发布Md5
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVersion() 获取配置文件发布版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersion(integer $Version) 设置配置文件发布版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取配置文件发布创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置配置文件发布创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateBy() 获取配置文件发布创建者
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateBy(string $CreateBy) 设置配置文件发布创建者
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifyTime() 获取配置文件发布修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyTime(string $ModifyTime) 设置配置文件发布修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifyBy() 获取配置文件发布修改者
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyBy(string $ModifyBy) 设置配置文件发布修改者
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReleaseDescription() 获取发布描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReleaseDescription(string $ReleaseDescription) 设置发布描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getActive() 获取是否生效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActive(boolean $Active) 设置是否生效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFormat() 获取格式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFormat(string $Format) 设置格式
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getConfigFileId() 获取配置文件ID
+ * @method void setConfigFileId(string $ConfigFileId) 设置配置文件ID
+ * @method integer getConfigFileSupportedClient() 获取配置文件类型
+ * @method void setConfigFileSupportedClient(integer $ConfigFileSupportedClient) 设置配置文件类型
+ * @method ConfigFilePersistent getConfigFilePersistent() 获取配置文件持久化
+ * @method void setConfigFilePersistent(ConfigFilePersistent $ConfigFilePersistent) 设置配置文件持久化
  */
 class ConfigFileRelease extends AbstractModel
 {
     /**
      * @var integer 配置文件发布id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var string 配置文件发布名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 配置文件发布命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Namespace;
 
     /**
      * @var string 配置文件发布组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Group;
 
     /**
      * @var string 配置文件发布文件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileName;
 
     /**
      * @var string 配置文件发布内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Content;
 
     /**
      * @var string 配置文件发布注释
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Comment;
 
     /**
      * @var string 配置文件发布Md5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Md5;
 
     /**
      * @var integer 配置文件发布版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Version;
 
     /**
      * @var string 配置文件发布创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 配置文件发布创建者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateBy;
 
     /**
      * @var string 配置文件发布修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyTime;
 
     /**
      * @var string 配置文件发布修改者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyBy;
 
     /**
      * @var string 发布描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReleaseDescription;
 
     /**
      * @var boolean 是否生效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Active;
 
     /**
      * @var string 格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Format;
 
     /**
+     * @var string 配置文件ID
+     */
+    public $ConfigFileId;
+
+    /**
+     * @var integer 配置文件类型
+     */
+    public $ConfigFileSupportedClient;
+
+    /**
+     * @var ConfigFilePersistent 配置文件持久化
+     */
+    public $ConfigFilePersistent;
+
+    /**
      * @param integer $Id 配置文件发布id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 配置文件发布名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Namespace 配置文件发布命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Group 配置文件发布组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileName 配置文件发布文件名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Content 配置文件发布内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Comment 配置文件发布注释
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Md5 配置文件发布Md5
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Version 配置文件发布版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 配置文件发布创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateBy 配置文件发布创建者
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyTime 配置文件发布修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyBy 配置文件发布修改者
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReleaseDescription 发布描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Active 是否生效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Format 格式
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ConfigFileId 配置文件ID
+     * @param integer $ConfigFileSupportedClient 配置文件类型
+     * @param ConfigFilePersistent $ConfigFilePersistent 配置文件持久化
      */
     function __construct()
     {
@@ -292,6 +252,19 @@ class ConfigFileRelease extends AbstractModel
 
         if (array_key_exists("Format",$param) and $param["Format"] !== null) {
             $this->Format = $param["Format"];
+        }
+
+        if (array_key_exists("ConfigFileId",$param) and $param["ConfigFileId"] !== null) {
+            $this->ConfigFileId = $param["ConfigFileId"];
+        }
+
+        if (array_key_exists("ConfigFileSupportedClient",$param) and $param["ConfigFileSupportedClient"] !== null) {
+            $this->ConfigFileSupportedClient = $param["ConfigFileSupportedClient"];
+        }
+
+        if (array_key_exists("ConfigFilePersistent",$param) and $param["ConfigFilePersistent"] !== null) {
+            $this->ConfigFilePersistent = new ConfigFilePersistent();
+            $this->ConfigFilePersistent->deserialize($param["ConfigFilePersistent"]);
         }
     }
 }

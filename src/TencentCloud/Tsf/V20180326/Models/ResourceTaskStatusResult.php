@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 资源任务转态结果
  *
  * @method integer getTaskStatus() 获取任务的执行状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskStatus(integer $TaskStatus) 设置任务的执行状态
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ResourceTaskStatusResult extends AbstractModel
 {
     /**
      * @var integer 任务的执行状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskStatus;
 
     /**
      * @param integer $TaskStatus 任务的执行状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

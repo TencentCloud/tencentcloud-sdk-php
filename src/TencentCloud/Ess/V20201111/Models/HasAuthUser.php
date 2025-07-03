@@ -21,27 +21,20 @@ use TencentCloud\Common\AbstractModel;
  * 被授权的用户信息
  *
  * @method string getUserId() 获取员工在腾讯电子签平台的唯一身份标识，为32位字符串。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserId(string $UserId) 设置员工在腾讯电子签平台的唯一身份标识，为32位字符串。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBelongTo() 获取当前员工的归属情况，可能值是：
 MainOrg：在集团企业的场景下，返回此值代表是归属主企业
 CurrentOrg：在普通企业场景下返回此值；或者在集团企业的场景下，返回此值代表归属子企业
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBelongTo(string $BelongTo) 设置当前员工的归属情况，可能值是：
 MainOrg：在集团企业的场景下，返回此值代表是归属主企业
 CurrentOrg：在普通企业场景下返回此值；或者在集团企业的场景下，返回此值代表归属子企业
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMainOrganizationId() 获取集团主企业id，当前企业为集团子企业时，该字段有值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMainOrganizationId(string $MainOrganizationId) 设置集团主企业id，当前企业为集团子企业时，该字段有值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class HasAuthUser extends AbstractModel
 {
     /**
      * @var string 员工在腾讯电子签平台的唯一身份标识，为32位字符串。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserId;
 
@@ -49,25 +42,20 @@ class HasAuthUser extends AbstractModel
      * @var string 当前员工的归属情况，可能值是：
 MainOrg：在集团企业的场景下，返回此值代表是归属主企业
 CurrentOrg：在普通企业场景下返回此值；或者在集团企业的场景下，返回此值代表归属子企业
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BelongTo;
 
     /**
      * @var string 集团主企业id，当前企业为集团子企业时，该字段有值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MainOrganizationId;
 
     /**
      * @param string $UserId 员工在腾讯电子签平台的唯一身份标识，为32位字符串。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BelongTo 当前员工的归属情况，可能值是：
 MainOrg：在集团企业的场景下，返回此值代表是归属主企业
 CurrentOrg：在普通企业场景下返回此值；或者在集团企业的场景下，返回此值代表归属子企业
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MainOrganizationId 集团主企业id，当前企业为集团子企业时，该字段有值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,129 +21,89 @@ use TencentCloud\Common\AbstractModel;
  * 详细动作信息
  *
  * @method integer getId() 获取动作id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(integer $Id) 设置动作id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取动作名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置动作名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getActionType() 获取动作类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActionType(string $ActionType) 设置动作类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getActionDesc() 获取动作说明
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActionDesc(string $ActionDesc) 设置动作说明
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMsgType() 获取消息类型，orgin/custom/model
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMsgType(string $MsgType) 设置消息类型，orgin/custom/model
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMsgContent() 获取消息内容,有效值为x-json:后的字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMsgContent(string $MsgContent) 设置消息内容,有效值为x-json:后的字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWID() 获取设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWID(string $WID) 设置设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLinkRuleSet() 获取关联故障列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLinkRuleSet(array $LinkRuleSet) 设置关联故障列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSinkConfig() 获取动作下沉配置,有效值为x-json:后的字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSinkConfig(string $SinkConfig) 设置动作下沉配置,有效值为x-json:后的字段
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ActionDetail extends AbstractModel
 {
     /**
      * @var integer 动作id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var string 动作名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 动作类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActionType;
 
     /**
      * @var string 动作说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActionDesc;
 
     /**
      * @var string 消息类型，orgin/custom/model
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MsgType;
 
     /**
      * @var string 消息内容,有效值为x-json:后的字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MsgContent;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WID;
 
     /**
      * @var array 关联故障列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LinkRuleSet;
 
     /**
      * @var string 动作下沉配置,有效值为x-json:后的字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SinkConfig;
 
     /**
      * @param integer $Id 动作id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 动作名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ActionType 动作类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ActionDesc 动作说明
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MsgType 消息类型，orgin/custom/model
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MsgContent 消息内容,有效值为x-json:后的字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WID 设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $LinkRuleSet 关联故障列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SinkConfig 动作下沉配置,有效值为x-json:后的字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

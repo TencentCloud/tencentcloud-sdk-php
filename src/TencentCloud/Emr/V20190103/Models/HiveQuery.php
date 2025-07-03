@@ -21,77 +21,55 @@ use TencentCloud\Common\AbstractModel;
  * Hive查询详情
  *
  * @method string getStatement() 获取查询语句
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatement(string $Statement) 设置查询语句
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDuration() 获取执行时长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDuration(string $Duration) 设置执行时长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStartTime() 获取开始时间毫秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(integer $StartTime) 设置开始时间毫秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEndTime() 获取结束时间毫秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(integer $EndTime) 设置结束时间毫秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getState() 获取状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setState(string $State) 设置状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUser() 获取用户
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUser(string $User) 设置用户
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getJobIds() 获取appId列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJobIds(array $JobIds) 设置appId列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExecutionEngine() 获取执行引擎
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExecutionEngine(string $ExecutionEngine) 设置执行引擎
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getId() 获取查询ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(string $Id) 设置查询ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class HiveQuery extends AbstractModel
 {
     /**
      * @var string 查询语句
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Statement;
 
     /**
      * @var string 执行时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Duration;
 
     /**
      * @var integer 开始时间毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
      * @var integer 结束时间毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
      * @var string 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $State;
 
     /**
      * @var string 用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $User;
 
@@ -103,35 +81,25 @@ class HiveQuery extends AbstractModel
 
     /**
      * @var string 执行引擎
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecutionEngine;
 
     /**
      * @var string 查询ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @param string $Statement 查询语句
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Duration 执行时长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StartTime 开始时间毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EndTime 结束时间毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $State 状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $User 用户
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $JobIds appId列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExecutionEngine 执行引擎
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Id 查询ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

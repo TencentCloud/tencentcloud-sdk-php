@@ -35,13 +35,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUsedAmountUnit() 获取组件用量单位：组件用量对应的单位
  * @method void setUsedAmountUnit(string $UsedAmountUnit) 设置组件用量单位：组件用量对应的单位
  * @method string getRealTotalMeasure() 获取原始用量/时长：组件被资源包抵扣前的原始用量/时长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealTotalMeasure(string $RealTotalMeasure) 设置原始用量/时长：组件被资源包抵扣前的原始用量/时长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeductedMeasure() 获取抵扣用量/时长（含资源包）：组件被资源包抵扣的用量/时长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeductedMeasure(string $DeductedMeasure) 设置抵扣用量/时长（含资源包）：组件被资源包抵扣的用量/时长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTimeSpan() 获取使用时长：资源使用的时长
  * @method void setTimeSpan(string $TimeSpan) 设置使用时长：资源使用的时长
  * @method string getTimeUnitName() 获取时长单位：资源使用时长的单位
@@ -61,53 +57,31 @@ use TencentCloud\Common\AbstractModel;
  * @method string getIncentivePayAmount() 获取赠送账户支出：使用赠送金支付的金额
  * @method void setIncentivePayAmount(string $IncentivePayAmount) 设置赠送账户支出：使用赠送金支付的金额
  * @method string getTransferPayAmount() 获取分成金账户支出：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTransferPayAmount(string $TransferPayAmount) 设置分成金账户支出：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getItemCode() 获取组件类型编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setItemCode(string $ItemCode) 设置组件类型编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getComponentCode() 获取组件名称编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComponentCode(string $ComponentCode) 设置组件名称编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContractPrice() 获取组件单价：组件的折后单价，组件单价 = 刊例价 * 折扣
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContractPrice(string $ContractPrice) 设置组件单价：组件的折后单价，组件单价 = 刊例价 * 折扣
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceType() 获取实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。正常的实例展示默认为不展示
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceType(string $InstanceType) 设置实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。正常的实例展示默认为不展示
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRiTimeSpan() 获取预留实例抵扣的使用时长：本产品或服务使用预留实例抵扣的使用时长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiTimeSpan(string $RiTimeSpan) 设置预留实例抵扣的使用时长：本产品或服务使用预留实例抵扣的使用时长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOriginalCostWithRI() 获取预留实例抵扣组件原价：本产品或服务使用预留实例抵扣的组件原价金额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOriginalCostWithRI(string $OriginalCostWithRI) 设置预留实例抵扣组件原价：本产品或服务使用预留实例抵扣的组件原价金额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSPDeductionRate() 获取节省计划抵扣率：节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSPDeductionRate(string $SPDeductionRate) 设置节省计划抵扣率：节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSPDeduction() 获取节省计划抵扣金额（已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSPDeduction(string $SPDeduction) 设置节省计划抵扣金额（已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOriginalCostWithSP() 获取节省计划抵扣组件原价：节省计划抵扣原价=节省计划包抵扣金额/节省计划抵扣率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOriginalCostWithSP(string $OriginalCostWithSP) 设置节省计划抵扣组件原价：节省计划抵扣原价=节省计划包抵扣金额/节省计划抵扣率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBlendedDiscount() 获取混合折扣率：综合各类折扣抵扣信息后的最终折扣率，混合折扣率 = 优惠后总价 / 组件原价
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBlendedDiscount(string $BlendedDiscount) 设置混合折扣率：综合各类折扣抵扣信息后的最终折扣率，混合折扣率 = 优惠后总价 / 组件原价
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getComponentConfig() 获取配置描述：资源配置规格信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComponentConfig(array $ComponentConfig) 设置配置描述：资源配置规格信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BillDetailComponent extends AbstractModel
 {
@@ -149,13 +123,11 @@ class BillDetailComponent extends AbstractModel
 
     /**
      * @var string 原始用量/时长：组件被资源包抵扣前的原始用量/时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RealTotalMeasure;
 
     /**
      * @var string 抵扣用量/时长（含资源包）：组件被资源包抵扣的用量/时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeductedMeasure;
 
@@ -206,49 +178,41 @@ class BillDetailComponent extends AbstractModel
 
     /**
      * @var string 分成金账户支出：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TransferPayAmount;
 
     /**
      * @var string 组件类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ItemCode;
 
     /**
      * @var string 组件名称编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComponentCode;
 
     /**
      * @var string 组件单价：组件的折后单价，组件单价 = 刊例价 * 折扣
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContractPrice;
 
     /**
      * @var string 实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。正常的实例展示默认为不展示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceType;
 
     /**
      * @var string 预留实例抵扣的使用时长：本产品或服务使用预留实例抵扣的使用时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiTimeSpan;
 
     /**
      * @var string 预留实例抵扣组件原价：本产品或服务使用预留实例抵扣的组件原价金额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OriginalCostWithRI;
 
     /**
      * @var string 节省计划抵扣率：节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SPDeductionRate;
 
@@ -261,19 +225,16 @@ class BillDetailComponent extends AbstractModel
 
     /**
      * @var string 节省计划抵扣组件原价：节省计划抵扣原价=节省计划包抵扣金额/节省计划抵扣率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OriginalCostWithSP;
 
     /**
      * @var string 混合折扣率：综合各类折扣抵扣信息后的最终折扣率，混合折扣率 = 优惠后总价 / 组件原价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BlendedDiscount;
 
     /**
      * @var array 配置描述：资源配置规格信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComponentConfig;
 
@@ -286,9 +247,7 @@ class BillDetailComponent extends AbstractModel
      * @param string $UsedAmount 组件用量：该组件实际结算用量，组件用量 = 组件原始用量 - 抵扣用量（含资源包
      * @param string $UsedAmountUnit 组件用量单位：组件用量对应的单位
      * @param string $RealTotalMeasure 原始用量/时长：组件被资源包抵扣前的原始用量/时长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeductedMeasure 抵扣用量/时长（含资源包）：组件被资源包抵扣的用量/时长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TimeSpan 使用时长：资源使用的时长
      * @param string $TimeUnitName 时长单位：资源使用时长的单位
      * @param string $Cost 组件原价：原价 = 组件刊例价 * 组件用量 * 使用时长（如果客户享受一口价/合同价则默认不展示，退费类场景也默认不展示）
@@ -299,29 +258,18 @@ class BillDetailComponent extends AbstractModel
      * @param string $CashPayAmount 现金账户支出：通过现金账户支付的金额
      * @param string $IncentivePayAmount 赠送账户支出：使用赠送金支付的金额
      * @param string $TransferPayAmount 分成金账户支出：通过分成金账户支付的金额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ItemCode 组件类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ComponentCode 组件名称编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContractPrice 组件单价：组件的折后单价，组件单价 = 刊例价 * 折扣
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceType 实例类型：购买的产品服务对应的实例类型，包括资源包、RI、SP、竞价实例。正常的实例展示默认为不展示
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RiTimeSpan 预留实例抵扣的使用时长：本产品或服务使用预留实例抵扣的使用时长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OriginalCostWithRI 预留实例抵扣组件原价：本产品或服务使用预留实例抵扣的组件原价金额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SPDeductionRate 节省计划抵扣率：节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SPDeduction 节省计划抵扣金额（已废弃）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OriginalCostWithSP 节省计划抵扣组件原价：节省计划抵扣原价=节省计划包抵扣金额/节省计划抵扣率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BlendedDiscount 混合折扣率：综合各类折扣抵扣信息后的最终折扣率，混合折扣率 = 优惠后总价 / 组件原价
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ComponentConfig 配置描述：资源配置规格信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

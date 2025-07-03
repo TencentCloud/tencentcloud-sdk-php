@@ -33,13 +33,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getStatus() 获取状态
  * @method void setStatus(integer $Status) 设置状态
  * @method string getModifyTime() 获取修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyTime(string $ModifyTime) 设置修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CacheUrlItems extends AbstractModel
 {
@@ -75,13 +71,11 @@ class CacheUrlItems extends AbstractModel
 
     /**
      * @var string 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyTime;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
@@ -93,9 +87,7 @@ class CacheUrlItems extends AbstractModel
      * @param string $Protocol 协议
      * @param integer $Status 状态
      * @param string $ModifyTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

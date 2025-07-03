@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(integer $EndTime) 设置句子结束时间
  * @method boolean getIsEnd() 获取 当前句子是否已结束
  * @method void setIsEnd(boolean $IsEnd) 设置 当前句子是否已结束
+ * @method string getAudio() 获取base64编码的wav/mp3音频数据
+ * @method void setAudio(string $Audio) 设置base64编码的wav/mp3音频数据
  */
 class DisplayInfo extends AbstractModel
 {
@@ -73,6 +75,11 @@ class DisplayInfo extends AbstractModel
     public $IsEnd;
 
     /**
+     * @var string base64编码的wav/mp3音频数据
+     */
+    public $Audio;
+
+    /**
      * @param string $SeId 句子 ID
      * @param integer $SeVer 句子版本号
      * @param string $SourceText 识别结果
@@ -80,6 +87,7 @@ class DisplayInfo extends AbstractModel
      * @param integer $StartTime 句子开始时间
      * @param integer $EndTime 句子结束时间
      * @param boolean $IsEnd  当前句子是否已结束
+     * @param string $Audio base64编码的wav/mp3音频数据
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class DisplayInfo extends AbstractModel
 
         if (array_key_exists("IsEnd",$param) and $param["IsEnd"] !== null) {
             $this->IsEnd = $param["IsEnd"];
+        }
+
+        if (array_key_exists("Audio",$param) and $param["Audio"] !== null) {
+            $this->Audio = $param["Audio"];
         }
     }
 }

@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Trocket\V20230308\Models as Models;
 
 /**
+ * @method Models\ChangeMigratingTopicToNextStageResponse ChangeMigratingTopicToNextStage(Models\ChangeMigratingTopicToNextStageRequest $req) 修改迁移中的Topic状态进入下一步
  * @method Models\CreateConsumerGroupResponse CreateConsumerGroup(Models\CreateConsumerGroupRequest $req) 创建消费组
  * @method Models\CreateInstanceResponse CreateInstance(Models\CreateInstanceRequest $req) 创建 RocketMQ 5.x 集群
  * @method Models\CreateMQTTInsPublicEndpointResponse CreateMQTTInsPublicEndpoint(Models\CreateMQTTInsPublicEndpointRequest $req) 为MQTT实例创建公网接入点
@@ -31,27 +32,30 @@ use TencentCloud\Trocket\V20230308\Models as Models;
  * @method Models\CreateMQTTUserResponse CreateMQTTUser(Models\CreateMQTTUserRequest $req) 添加mqtt角色
  * @method Models\CreateRoleResponse CreateRole(Models\CreateRoleRequest $req) 添加角色
  * @method Models\CreateTopicResponse CreateTopic(Models\CreateTopicRequest $req) 创建主题
- * @method Models\DeleteConsumerGroupResponse DeleteConsumerGroup(Models\DeleteConsumerGroupRequest $req) 删除消费组
- * @method Models\DeleteInstanceResponse DeleteInstance(Models\DeleteInstanceRequest $req) 删除实例
+ * @method Models\DeleteConsumerGroupResponse DeleteConsumerGroup(Models\DeleteConsumerGroupRequest $req) 删除消费组。消费者组删除后，消费者组的所有配置和相关数据都会被清空，且无法找回。删除后，在线的消费者客户端会出现报错，建议您提前下线客户端。
+ * @method Models\DeleteInstanceResponse DeleteInstance(Models\DeleteInstanceRequest $req) 删除 RocketMQ 5.x 集群，删除前请先删除正在使用的主题、消费组和角色信息。
  * @method Models\DeleteMQTTInsPublicEndpointResponse DeleteMQTTInsPublicEndpoint(Models\DeleteMQTTInsPublicEndpointRequest $req) 删除MQTT实例的公网接入点
  * @method Models\DeleteMQTTInstanceResponse DeleteMQTTInstance(Models\DeleteMQTTInstanceRequest $req) 删除MQTT实例
  * @method Models\DeleteMQTTTopicResponse DeleteMQTTTopic(Models\DeleteMQTTTopicRequest $req) 删除MQTT主题
  * @method Models\DeleteMQTTUserResponse DeleteMQTTUser(Models\DeleteMQTTUserRequest $req) 删除MQTT访问用户
  * @method Models\DeleteRoleResponse DeleteRole(Models\DeleteRoleRequest $req) 删除角色
- * @method Models\DeleteTopicResponse DeleteTopic(Models\DeleteTopicRequest $req) 删除主题
+ * @method Models\DeleteSmoothMigrationTaskResponse DeleteSmoothMigrationTask(Models\DeleteSmoothMigrationTaskRequest $req) 删除平滑迁移任务，只有被取消的任务才可删除
+ * @method Models\DeleteTopicResponse DeleteTopic(Models\DeleteTopicRequest $req) 删除主题。主题删除后，主题的所有配置和相关数据都会被清空，且无法找回。
+ * @method Models\DescribeConsumerClientResponse DescribeConsumerClient(Models\DescribeConsumerClientRequest $req) 查询消费者客户端详情
+ * @method Models\DescribeConsumerClientListResponse DescribeConsumerClientList(Models\DescribeConsumerClientListRequest $req) 查询消费组下的客户端连接列表。
  * @method Models\DescribeConsumerGroupResponse DescribeConsumerGroup(Models\DescribeConsumerGroupRequest $req) 查询消费组详情
  * @method Models\DescribeConsumerGroupListResponse DescribeConsumerGroupList(Models\DescribeConsumerGroupListRequest $req) 获取消费组列表，Filter参数使用说明如下：
 
 1. ConsumerGroupName，名称模糊查询
 2. ConsumeMessageOrderly，投递顺序性。"true":顺序投递；"false":并发投递
- * @method Models\DescribeFusionInstanceListResponse DescribeFusionInstanceList(Models\DescribeFusionInstanceListRequest $req) 获取实例列表，Filters参数使用说明如下：
+ * @method Models\DescribeConsumerLagResponse DescribeConsumerLag(Models\DescribeConsumerLagRequest $req) 查询指定消费组堆积数。
+ * @method Models\DescribeFusionInstanceListResponse DescribeFusionInstanceList(Models\DescribeFusionInstanceListRequest $req) 查询集群列表，支持 4.x 和 5.x 集群，其中 Filters 参数使用说明如下：
 1. InstanceName, 名称模糊查询
-2. InstanceId，实例ID查询
-3. InstanceType, 实例类型查询，支持多选
-4. Version，实例版本查询
-当使用TagFilters查询时，Filters参数失效。
- * @method Models\DescribeInstanceResponse DescribeInstance(Models\DescribeInstanceRequest $req) 查询实例信息
- * @method Models\DescribeInstanceListResponse DescribeInstanceList(Models\DescribeInstanceListRequest $req) 获取集群列表，仅支持 5.x 集群，Filters参数使用说明如下：
+2. InstanceId，集群ID查询
+3. InstanceType, 集群类型查询，支持多选
+4. Version，集群版本查询
+ * @method Models\DescribeInstanceResponse DescribeInstance(Models\DescribeInstanceRequest $req) 查询 RocketMQ 5.x 集群信息。
+ * @method Models\DescribeInstanceListResponse DescribeInstanceList(Models\DescribeInstanceListRequest $req) 查询集群列表，仅支持 5.x 集群。Filters参数使用说明如下：
 1. InstanceName, 名称模糊查询
 2. InstanceId，集群ID查询
 3. InstanceType, 集群类型查询，支持多选
@@ -81,10 +85,59 @@ use TencentCloud\Trocket\V20230308\Models as Models;
  * @method Models\DescribeMQTTUserListResponse DescribeMQTTUserList(Models\DescribeMQTTUserListRequest $req) 查询用户列表，Filter参数使用说明如下：
 
 1. Username，用户名称模糊搜索
+ * @method Models\DescribeMessageResponse DescribeMessage(Models\DescribeMessageRequest $req) 查询消息详情
+ * @method Models\DescribeMessageListResponse DescribeMessageList(Models\DescribeMessageListRequest $req) 查询消息列表。如果查询死信消息，请设置ConsumerGroup参数。
+ * @method Models\DescribeMessageTraceResponse DescribeMessageTrace(Models\DescribeMessageTraceRequest $req) 根据消息 ID 查询消息轨迹。
+ * @method Models\DescribeMigratingGroupStatsResponse DescribeMigratingGroupStats(Models\DescribeMigratingGroupStatsRequest $req) 查看迁移消费组的实时信息
+ * @method Models\DescribeMigratingTopicListResponse DescribeMigratingTopicList(Models\DescribeMigratingTopicListRequest $req) 查询Topic迁移状态列表。
+
+Filters字段为查询过滤器，支持以下条件：
+* TopicName 主题名称，支持模糊查询
+* MigrationStatus 迁移状态，可参考[MigratingTopic](https://cloud.tencent.com/document/api/1493/96031#MigratingTopic)数据结构
+* Namespace 命名空间，仅4.x集群有效
+
+Filters示例：
+[{
+    "Name": "TopicName",
+    "Values": ["topic-a"]
+}]
+ * @method Models\DescribeMigratingTopicStatsResponse DescribeMigratingTopicStats(Models\DescribeMigratingTopicStatsRequest $req) 用于查询迁移主题的实时数据
+ * @method Models\DescribeMigrationTaskListResponse DescribeMigrationTaskList(Models\DescribeMigrationTaskListRequest $req) 获取数据迁移任务列表，Filter参数使用说明如下：
+
+TaskId，根据任务ID精确查找
+InstanceId，根据实例ID精确查找
+Type，根据任务类型精确查找
  * @method Models\DescribeProductSKUsResponse DescribeProductSKUs(Models\DescribeProductSKUsRequest $req) 查询产品售卖规格，针对 RocketMQ 5.x 集群。
  * @method Models\DescribeRoleListResponse DescribeRoleList(Models\DescribeRoleListRequest $req) 查询角色列表，Filter参数使用说明如下：
 
 1. RoleName，角色名称模糊搜索
+2. AccessKey，AccessKey模糊搜索
+ * @method Models\DescribeSmoothMigrationTaskListResponse DescribeSmoothMigrationTaskList(Models\DescribeSmoothMigrationTaskListRequest $req) 用于查询平滑迁移任务列表。
+
+查询参数Filters， 支持的字段如下：
+* TaskStatus, 任务状态，支持多选 
+* ConnectionType，网络连接类型，支持多选，参考[SmoothMigrationTaskItem](https://cloud.tencent.com/document/api/1493/96031#SmoothMigrationTaskItem)的说明
+* InstanceId，实例ID，精确搜索 
+* TaskName，任务名称，支持模糊搜索
+
+Filters示例：
+[{
+    "Name": "InstanceId",
+    "Values": ["rmq-1gzecldfg"]
+}]
+ * @method Models\DescribeSourceClusterGroupListResponse DescribeSourceClusterGroupList(Models\DescribeSourceClusterGroupListRequest $req) 平滑迁移过程获取源集群group列表接口。
+
+Filters字段为查询过滤器，支持以下字段：
+* GroupName，消费组名称，支持模糊搜索
+* Imported，是否已导入
+* ImportStatus，导入状态，参考[SourceClusterGroupConfig](https://cloud.tencent.com/document/api/1493/96031#SourceClusterGroupConfig)的说明
+* Namespace，命名空间，仅4.x集群有效
+
+Filters示例：
+[{
+    "Name": "GroupName",
+    "Values": ["group-a"]
+}]
  * @method Models\DescribeTopicResponse DescribeTopic(Models\DescribeTopicRequest $req) 查询主题详情，Offset和Limit参数是指订阅该主题的消费组查询分页参数，Filter参数使用说明如下：
 
 ConsumerGroup，消费组名称过滤
@@ -92,10 +145,15 @@ ConsumerGroup，消费组名称过滤
 
 1. TopicName，主题名称模糊搜索
 2. TopicType，主题类型查询，支持多选，可选值：Normal,Order,Transaction,DelayScheduled
+ * @method Models\DescribeTopicListByGroupResponse DescribeTopicListByGroup(Models\DescribeTopicListByGroupRequest $req) 根据消费组获取主题列表，Filter参数使用说明如下：
+
+TopicName，主题名称过滤
+ * @method Models\DoHealthCheckOnMigratingTopicResponse DoHealthCheckOnMigratingTopic(Models\DoHealthCheckOnMigratingTopicRequest $req) 检查迁移中的主题是否处于正常状态，只有处于正常状态的主题，才可以进入下一个迁移阶段
  * @method Models\ImportSourceClusterConsumerGroupsResponse ImportSourceClusterConsumerGroups(Models\ImportSourceClusterConsumerGroupsRequest $req) 导入消费者组列表
  * @method Models\ImportSourceClusterTopicsResponse ImportSourceClusterTopics(Models\ImportSourceClusterTopicsRequest $req) 导入topic列表
  * @method Models\ModifyConsumerGroupResponse ModifyConsumerGroup(Models\ModifyConsumerGroupRequest $req) 修改消费组属性
- * @method Models\ModifyInstanceResponse ModifyInstance(Models\ModifyInstanceRequest $req) 修改实例属性
+ * @method Models\ModifyInstanceResponse ModifyInstance(Models\ModifyInstanceRequest $req) 修改 RocketMQ 5.x 集群属性，仅支持修改运行中的集群。
+ * @method Models\ModifyInstanceEndpointResponse ModifyInstanceEndpoint(Models\ModifyInstanceEndpointRequest $req) 修改 RocketMQ 5.x 集群接入点，操作前请先确认接入点已存在。
  * @method Models\ModifyMQTTInsPublicEndpointResponse ModifyMQTTInsPublicEndpoint(Models\ModifyMQTTInsPublicEndpointRequest $req) 更新MQTT实例公网接入点
  * @method Models\ModifyMQTTInstanceResponse ModifyMQTTInstance(Models\ModifyMQTTInstanceRequest $req) 修改实例属性
  * @method Models\ModifyMQTTInstanceCertBindingResponse ModifyMQTTInstanceCertBinding(Models\ModifyMQTTInstanceCertBindingRequest $req) 更新MQTT集群绑定证书
@@ -104,6 +162,10 @@ ConsumerGroup，消费组名称过滤
  * @method Models\ModifyMQTTUserResponse ModifyMQTTUser(Models\ModifyMQTTUserRequest $req) 修改MQTT角色
  * @method Models\ModifyRoleResponse ModifyRole(Models\ModifyRoleRequest $req) 修改角色
  * @method Models\ModifyTopicResponse ModifyTopic(Models\ModifyTopicRequest $req) 修改主题属性
+ * @method Models\RemoveMigratingTopicResponse RemoveMigratingTopic(Models\RemoveMigratingTopicRequest $req) 从迁移列表中移除主题，仅当主题处于初始状态时有效
+ * @method Models\ResendDeadLetterMessageResponse ResendDeadLetterMessage(Models\ResendDeadLetterMessageRequest $req) 重新发送死信消息
+ * @method Models\ResetConsumerGroupOffsetResponse ResetConsumerGroupOffset(Models\ResetConsumerGroupOffsetRequest $req) 重置消费位点
+ * @method Models\RollbackMigratingTopicStageResponse RollbackMigratingTopicStage(Models\RollbackMigratingTopicStageRequest $req) 回滚正在迁移的主题至前一个阶段
  */
 
 class TrocketClient extends AbstractClient

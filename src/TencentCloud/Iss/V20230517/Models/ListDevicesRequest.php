@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCurrentUin(integer $CurrentUin) 设置当前用户Uin
  * @method integer getPageNumber() 获取页码，默认为1。
  * @method void setPageNumber(integer $PageNumber) 设置页码，默认为1。
- * @method integer getPageSize() 获取每页数量，默认为20。
- * @method void setPageSize(integer $PageSize) 设置每页数量，默认为20。
+ * @method integer getPageSize() 获取每页数量，默认为20，单页最大10000条
+ * @method void setPageSize(integer $PageSize) 设置每页数量，默认为20，单页最大10000条
  */
 class ListDevicesRequest extends AbstractModel
 {
@@ -96,7 +96,7 @@ class ListDevicesRequest extends AbstractModel
     public $PageNumber;
 
     /**
-     * @var integer 每页数量，默认为20。
+     * @var integer 每页数量，默认为20，单页最大10000条
      */
     public $PageSize;
 
@@ -111,7 +111,7 @@ class ListDevicesRequest extends AbstractModel
      * @param string $Keyword 模糊搜索设备的关键字
      * @param integer $CurrentUin 当前用户Uin
      * @param integer $PageNumber 页码，默认为1。
-     * @param integer $PageSize 每页数量，默认为20。
+     * @param integer $PageSize 每页数量，默认为20，单页最大10000条
      */
     function __construct()
     {

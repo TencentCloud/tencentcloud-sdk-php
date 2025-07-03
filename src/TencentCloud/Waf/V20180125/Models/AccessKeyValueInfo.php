@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 用于 DescribeAccessIndex 的出参
  *
  * @method string getKey() 获取需要配置键值或者元字段索引的字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKey(string $Key) 设置需要配置键值或者元字段索引的字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method AccessValueInfo getValue() 获取字段的索引描述信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(AccessValueInfo $Value) 设置字段的索引描述信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AccessKeyValueInfo extends AbstractModel
 {
     /**
      * @var string 需要配置键值或者元字段索引的字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Key;
 
     /**
      * @var AccessValueInfo 字段的索引描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @param string $Key 需要配置键值或者元字段索引的字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AccessValueInfo $Value 字段的索引描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置TKE集群ID
  * @method string getKubeletRootDir() 获取kubelet根目录
  * @method void setKubeletRootDir(string $KubeletRootDir) 设置kubelet根目录
+ * @method string getClusterType() 获取集群类型 tke/eks，默认tke
+ * @method void setClusterType(string $ClusterType) 设置集群类型 tke/eks，默认tke
  */
 class InstallLogAgentRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class InstallLogAgentRequest extends AbstractModel
     public $KubeletRootDir;
 
     /**
+     * @var string 集群类型 tke/eks，默认tke
+     */
+    public $ClusterType;
+
+    /**
      * @param string $ClusterId TKE集群ID
      * @param string $KubeletRootDir kubelet根目录
+     * @param string $ClusterType 集群类型 tke/eks，默认tke
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class InstallLogAgentRequest extends AbstractModel
 
         if (array_key_exists("KubeletRootDir",$param) and $param["KubeletRootDir"] !== null) {
             $this->KubeletRootDir = $param["KubeletRootDir"];
+        }
+
+        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
+            $this->ClusterType = $param["ClusterType"];
         }
     }
 }

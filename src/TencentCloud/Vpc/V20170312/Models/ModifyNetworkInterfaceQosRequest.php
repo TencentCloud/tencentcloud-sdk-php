@@ -20,34 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyNetworkInterfaceQos请求参数结构体
  *
- * @method array getNetworkInterfaceIds() 获取弹性网卡ID，支持批量修改。
- * @method void setNetworkInterfaceIds(array $NetworkInterfaceIds) 设置弹性网卡ID，支持批量修改。
- * @method string getQosLevel() 获取服务质量，可选值：PT、AU、AG、DEFAULT，分别代表云金、云银、云铜、默认四个等级。
- * @method void setQosLevel(string $QosLevel) 设置服务质量，可选值：PT、AU、AG、DEFAULT，分别代表云金、云银、云铜、默认四个等级。
- * @method integer getDirectSendMaxPort() 获取DirectSend端口范围最大值。
- * @method void setDirectSendMaxPort(integer $DirectSendMaxPort) 设置DirectSend端口范围最大值。
+ * @method array getNetworkInterfaceIds() 获取弹性网卡ID，支持批量修改。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
+
+ * @method void setNetworkInterfaceIds(array $NetworkInterfaceIds) 设置弹性网卡ID，支持批量修改。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
+
+ * @method string getQosLevel() 获取服务质量，可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
+ * @method void setQosLevel(string $QosLevel) 设置服务质量，可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
+ * @method integer getDirectSendMaxPort() 获取DirectSend端口范围最大值。最大值: 65535。
+ * @method void setDirectSendMaxPort(integer $DirectSendMaxPort) 设置DirectSend端口范围最大值。最大值: 65535。
  */
 class ModifyNetworkInterfaceQosRequest extends AbstractModel
 {
     /**
-     * @var array 弹性网卡ID，支持批量修改。
+     * @var array 弹性网卡ID，支持批量修改。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
+
      */
     public $NetworkInterfaceIds;
 
     /**
-     * @var string 服务质量，可选值：PT、AU、AG、DEFAULT，分别代表云金、云银、云铜、默认四个等级。
+     * @var string 服务质量，可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
      */
     public $QosLevel;
 
     /**
-     * @var integer DirectSend端口范围最大值。
+     * @var integer DirectSend端口范围最大值。最大值: 65535。
      */
     public $DirectSendMaxPort;
 
     /**
-     * @param array $NetworkInterfaceIds 弹性网卡ID，支持批量修改。
-     * @param string $QosLevel 服务质量，可选值：PT、AU、AG、DEFAULT，分别代表云金、云银、云铜、默认四个等级。
-     * @param integer $DirectSendMaxPort DirectSend端口范围最大值。
+     * @param array $NetworkInterfaceIds 弹性网卡ID，支持批量修改。可通过[DescribeNetworkInterfaces](https://cloud.tencent.com/document/product/215/15817)接口获取。
+
+     * @param string $QosLevel 服务质量，可选值：PT（云金）、AU（云银）、AG(云铜）、DEFAULT（默认）。
+     * @param integer $DirectSendMaxPort DirectSend端口范围最大值。最大值: 65535。
      */
     function __construct()
     {

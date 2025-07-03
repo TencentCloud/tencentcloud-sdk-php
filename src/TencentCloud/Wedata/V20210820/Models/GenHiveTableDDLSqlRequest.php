@@ -68,6 +68,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTableBaseInfo(TableBaseInfo $TableBaseInfo) 设置dlc表治理信息
  * @method string getSinkSchemaName() 获取目标端schema名称
  * @method void setSinkSchemaName(string $SinkSchemaName) 设置目标端schema名称
+ * @method string getEnv() 获取获取源信息的环境
+ * @method void setEnv(string $Env) 设置获取源信息的环境
+ * @method string getWriteMode() 获取doris写入模式配置
+ * @method void setWriteMode(string $WriteMode) 设置doris写入模式配置
+ * @method integer getTaskType() 获取任务类型 201（实时）， 202（离线） 
+ * @method void setTaskType(integer $TaskType) 设置任务类型 201（实时）， 202（离线） 
+ * @method string getSinkTableName() 获取目标端table名称
+ * @method void setSinkTableName(string $SinkTableName) 设置目标端table名称
  */
 class GenHiveTableDDLSqlRequest extends AbstractModel
 {
@@ -192,6 +200,26 @@ class GenHiveTableDDLSqlRequest extends AbstractModel
     public $SinkSchemaName;
 
     /**
+     * @var string 获取源信息的环境
+     */
+    public $Env;
+
+    /**
+     * @var string doris写入模式配置
+     */
+    public $WriteMode;
+
+    /**
+     * @var integer 任务类型 201（实时）， 202（离线） 
+     */
+    public $TaskType;
+
+    /**
+     * @var string 目标端table名称
+     */
+    public $SinkTableName;
+
+    /**
      * @param string $ProjectId 项目id
      * @param string $SinkDatabase 目标数据库
      * @param string $Id 节点id
@@ -216,6 +244,10 @@ class GenHiveTableDDLSqlRequest extends AbstractModel
      * @param array $UpsertKeys dlc upsert主键
      * @param TableBaseInfo $TableBaseInfo dlc表治理信息
      * @param string $SinkSchemaName 目标端schema名称
+     * @param string $Env 获取源信息的环境
+     * @param string $WriteMode doris写入模式配置
+     * @param integer $TaskType 任务类型 201（实时）， 202（离线） 
+     * @param string $SinkTableName 目标端table名称
      */
     function __construct()
     {
@@ -340,6 +372,22 @@ class GenHiveTableDDLSqlRequest extends AbstractModel
 
         if (array_key_exists("SinkSchemaName",$param) and $param["SinkSchemaName"] !== null) {
             $this->SinkSchemaName = $param["SinkSchemaName"];
+        }
+
+        if (array_key_exists("Env",$param) and $param["Env"] !== null) {
+            $this->Env = $param["Env"];
+        }
+
+        if (array_key_exists("WriteMode",$param) and $param["WriteMode"] !== null) {
+            $this->WriteMode = $param["WriteMode"];
+        }
+
+        if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
+            $this->TaskType = $param["TaskType"];
+        }
+
+        if (array_key_exists("SinkTableName",$param) and $param["SinkTableName"] !== null) {
+            $this->SinkTableName = $param["SinkTableName"];
         }
     }
 }

@@ -31,9 +31,7 @@ use TencentCloud\Common\AbstractModel;
  * @method float getOutBandwidth() 获取最大出带宽，单位：Mbps
  * @method void setOutBandwidth(float $OutBandwidth) 设置最大出带宽，单位：Mbps
  * @method string getDomain() 获取CLB域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomain(string $Domain) 设置CLB域名
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class LoadBalancerTraffic extends AbstractModel
 {
@@ -64,7 +62,6 @@ class LoadBalancerTraffic extends AbstractModel
 
     /**
      * @var string CLB域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Domain;
 
@@ -75,7 +72,6 @@ class LoadBalancerTraffic extends AbstractModel
      * @param string $Vip 负载均衡的vip
      * @param float $OutBandwidth 最大出带宽，单位：Mbps
      * @param string $Domain CLB域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

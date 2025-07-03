@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTask请求参数结构体
  *
- * @method string getTaskId() 获取CreateTask返回的任务ID，最长32B
- * @method void setTaskId(string $TaskId) 设置CreateTask返回的任务ID，最长32B
+ * @method string getTaskId() 获取CreateTask返回的任务ID
+ * @method void setTaskId(string $TaskId) 设置CreateTask返回的任务ID
  */
 class DescribeTaskRequest extends AbstractModel
 {
     /**
-     * @var string CreateTask返回的任务ID，最长32B
+     * @var string CreateTask返回的任务ID
      */
     public $TaskId;
 
     /**
-     * @param string $TaskId CreateTask返回的任务ID，最长32B
+     * @param string $TaskId CreateTask返回的任务ID
      */
     function __construct()
     {

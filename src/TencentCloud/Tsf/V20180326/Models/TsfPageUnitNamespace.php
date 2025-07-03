@@ -19,7 +19,6 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * 单元化命名空间翻页对象
-
  *
  * @method integer getTotalCount() 获取记录总数
  * @method void setTotalCount(integer $TotalCount) 设置记录总数

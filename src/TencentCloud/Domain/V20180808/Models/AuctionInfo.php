@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 用于域名预释放详情页面
  *
  * @method string getBidder() 获取竞拍人
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBidder(string $Bidder) 设置竞拍人
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAuctionTime() 获取竞拍时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuctionTime(string $AuctionTime) 设置竞拍时间
-注意：此字段可能返回 null，表示取不到有效值。
- * @method float getAuctionPrice() 获取竞拍价格
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAuctionPrice(float $AuctionPrice) 设置竞拍价格
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getAuctionPrice() 获取竞拍价格 单位元
+ * @method void setAuctionPrice(float $AuctionPrice) 设置竞拍价格 单位元
  * @method string getStatus() 获取状态 up: 领先 down: 落后
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置状态 up: 领先 down: 落后
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AuctionInfo extends AbstractModel
 {
     /**
      * @var string 竞拍人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Bidder;
 
     /**
      * @var string 竞拍时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AuctionTime;
 
     /**
-     * @var float 竞拍价格
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var float 竞拍价格 单位元
      */
     public $AuctionPrice;
 
     /**
      * @var string 状态 up: 领先 down: 落后
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @param string $Bidder 竞拍人
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AuctionTime 竞拍时间
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $AuctionPrice 竞拍价格
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $AuctionPrice 竞拍价格 单位元
      * @param string $Status 状态 up: 领先 down: 落后
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

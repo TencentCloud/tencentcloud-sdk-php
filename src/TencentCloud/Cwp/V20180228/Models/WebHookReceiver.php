@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 告警接收人
  *
  * @method integer getId() 获取id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(integer $Id) 设置id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取接收人名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置接收人名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAddr() 获取webhook地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddr(string $Addr) 设置webhook地址
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class WebHookReceiver extends AbstractModel
 {
     /**
      * @var integer id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var string 接收人名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string webhook地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Addr;
 
     /**
      * @param integer $Id id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 接收人名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Addr webhook地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

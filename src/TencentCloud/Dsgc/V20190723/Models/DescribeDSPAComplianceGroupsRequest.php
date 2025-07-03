@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置返回结果集数量，默认值是10000，最大值为10000，根据该资源的个数限制条件，该资源的个数不会超过10000，所以如果不输入该字段，默认获取全量数据
  * @method array getComplianceGroupTypeList() 获取合规组类型可选值：0 默认合规组, 1 系统合规组, 2 自定义合规组
  * @method void setComplianceGroupTypeList(array $ComplianceGroupTypeList) 设置合规组类型可选值：0 默认合规组, 1 系统合规组, 2 自定义合规组
+ * @method boolean getIsFilterCloseComplianceGroup() 获取是否仅显示已开启模版
+ * @method void setIsFilterCloseComplianceGroup(boolean $IsFilterCloseComplianceGroup) 设置是否仅显示已开启模版
  */
 class DescribeDSPAComplianceGroupsRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DescribeDSPAComplianceGroupsRequest extends AbstractModel
     public $ComplianceGroupTypeList;
 
     /**
+     * @var boolean 是否仅显示已开启模版
+     */
+    public $IsFilterCloseComplianceGroup;
+
+    /**
      * @param string $DspaId DSPA实例ID
      * @param integer $ComplianceGroupId 合规组ID
      * @param string $Name 合规组名称
      * @param integer $Offset 偏移量，默认值为0
      * @param integer $Limit 返回结果集数量，默认值是10000，最大值为10000，根据该资源的个数限制条件，该资源的个数不会超过10000，所以如果不输入该字段，默认获取全量数据
      * @param array $ComplianceGroupTypeList 合规组类型可选值：0 默认合规组, 1 系统合规组, 2 自定义合规组
+     * @param boolean $IsFilterCloseComplianceGroup 是否仅显示已开启模版
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DescribeDSPAComplianceGroupsRequest extends AbstractModel
 
         if (array_key_exists("ComplianceGroupTypeList",$param) and $param["ComplianceGroupTypeList"] !== null) {
             $this->ComplianceGroupTypeList = $param["ComplianceGroupTypeList"];
+        }
+
+        if (array_key_exists("IsFilterCloseComplianceGroup",$param) and $param["IsFilterCloseComplianceGroup"] !== null) {
+            $this->IsFilterCloseComplianceGroup = $param["IsFilterCloseComplianceGroup"];
         }
     }
 }

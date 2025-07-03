@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTaskStatus请求参数结构体
  *
- * @method integer getFlowId() 获取任务唯一标记
- * @method void setFlowId(integer $FlowId) 设置任务唯一标记
+ * @method integer getFlowId() 获取流程Id
+ * @method void setFlowId(integer $FlowId) 设置流程Id
  */
 class DescribeTaskStatusRequest extends AbstractModel
 {
     /**
-     * @var integer 任务唯一标记
+     * @var integer 流程Id
      */
     public $FlowId;
 
     /**
-     * @param integer $FlowId 任务唯一标记
+     * @param integer $FlowId 流程Id
      */
     function __construct()
     {

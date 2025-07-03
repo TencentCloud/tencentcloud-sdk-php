@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 查询设备统计返回值
  *
  * @method float getValue() 获取统计值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(float $Value) 设置统计值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTime() 获取统计时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTime(integer $Time) 设置统计时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DeviceMonitorValue extends AbstractModel
 {
     /**
      * @var float 统计值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @var integer 统计时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Time;
 
     /**
      * @param float $Value 统计值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Time 统计时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

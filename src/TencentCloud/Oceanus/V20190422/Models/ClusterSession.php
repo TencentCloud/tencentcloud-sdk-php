@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProperties(array $Properties) 设置session集群高级参数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getResourceRefs() 获取引用资源
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceRefs(array $ResourceRefs) 设置引用资源
+注意：此字段可能返回 null，表示取不到有效值。
  * @method float getJobManagerCuSpec() 获取JobManager的规格
  * @method void setJobManagerCuSpec(float $JobManagerCuSpec) 设置JobManager的规格
  * @method float getTaskManagerCuSpec() 获取TaskManager的规格
@@ -54,6 +58,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method string getUpdateTime() 获取更新时间
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
+ * @method float getJobManagerCpu() 获取JobManagerCpu
+ * @method void setJobManagerCpu(float $JobManagerCpu) 设置JobManagerCpu
+ * @method float getJobManagerMem() 获取JobManagerMem
+ * @method void setJobManagerMem(float $JobManagerMem) 设置JobManagerMem
+ * @method float getTaskManagerCpu() 获取TaskManagerCpu
+ * @method void setTaskManagerCpu(float $TaskManagerCpu) 设置TaskManagerCpu
+ * @method float getTaskManagerMem() 获取TaskManagerMem
+ * @method void setTaskManagerMem(float $TaskManagerMem) 设置TaskManagerMem
  */
 class ClusterSession extends AbstractModel
 {
@@ -114,6 +126,12 @@ class ClusterSession extends AbstractModel
     public $Properties;
 
     /**
+     * @var array 引用资源
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceRefs;
+
+    /**
      * @var float JobManager的规格
      */
     public $JobManagerCuSpec;
@@ -139,6 +157,26 @@ class ClusterSession extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var float JobManagerCpu
+     */
+    public $JobManagerCpu;
+
+    /**
+     * @var float JobManagerMem
+     */
+    public $JobManagerMem;
+
+    /**
+     * @var float TaskManagerCpu
+     */
+    public $TaskManagerCpu;
+
+    /**
+     * @var float TaskManagerMem
+     */
+    public $TaskManagerMem;
+
+    /**
      * @param string $ClusterGroupSerialId 集群SerialId
      * @param integer $AppId 创建者appId
      * @param string $OwnerUin 创建者主账号
@@ -151,11 +189,17 @@ class ClusterSession extends AbstractModel
      * @param string $WebUIUrl session集群FlinkUi地址
      * @param array $Properties session集群高级参数
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ResourceRefs 引用资源
+注意：此字段可能返回 null，表示取不到有效值。
      * @param float $JobManagerCuSpec JobManager的规格
      * @param float $TaskManagerCuSpec TaskManager的规格
      * @param integer $TaskManagerNum TaskManager启动的数量
      * @param string $CreateTime 创建时间
      * @param string $UpdateTime 更新时间
+     * @param float $JobManagerCpu JobManagerCpu
+     * @param float $JobManagerMem JobManagerMem
+     * @param float $TaskManagerCpu TaskManagerCpu
+     * @param float $TaskManagerMem TaskManagerMem
      */
     function __construct()
     {
@@ -219,6 +263,15 @@ class ClusterSession extends AbstractModel
             }
         }
 
+        if (array_key_exists("ResourceRefs",$param) and $param["ResourceRefs"] !== null) {
+            $this->ResourceRefs = [];
+            foreach ($param["ResourceRefs"] as $key => $value){
+                $obj = new SessionClusterRefItem();
+                $obj->deserialize($value);
+                array_push($this->ResourceRefs, $obj);
+            }
+        }
+
         if (array_key_exists("JobManagerCuSpec",$param) and $param["JobManagerCuSpec"] !== null) {
             $this->JobManagerCuSpec = $param["JobManagerCuSpec"];
         }
@@ -237,6 +290,22 @@ class ClusterSession extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("JobManagerCpu",$param) and $param["JobManagerCpu"] !== null) {
+            $this->JobManagerCpu = $param["JobManagerCpu"];
+        }
+
+        if (array_key_exists("JobManagerMem",$param) and $param["JobManagerMem"] !== null) {
+            $this->JobManagerMem = $param["JobManagerMem"];
+        }
+
+        if (array_key_exists("TaskManagerCpu",$param) and $param["TaskManagerCpu"] !== null) {
+            $this->TaskManagerCpu = $param["TaskManagerCpu"];
+        }
+
+        if (array_key_exists("TaskManagerMem",$param) and $param["TaskManagerMem"] !== null) {
+            $this->TaskManagerMem = $param["TaskManagerMem"];
         }
     }
 }

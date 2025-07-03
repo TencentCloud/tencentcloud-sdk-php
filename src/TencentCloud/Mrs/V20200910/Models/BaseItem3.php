@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 基础类型
  *
  * @method string getName() 获取类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSrc() 获取原始文本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSrc(string $Src) 设置原始文本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取归一化后值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置归一化后值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCoords() 获取四点坐标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCoords(array $Coords) 设置四点坐标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getOrder() 获取第几次
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrder(integer $Order) 设置第几次
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BaseItem3 extends AbstractModel
 {
     /**
      * @var string 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 原始文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Src;
 
     /**
      * @var string 归一化后值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @var array 四点坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Coords;
 
     /**
      * @var integer 第几次
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Order;
 
     /**
      * @param string $Name 类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Src 原始文本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 归一化后值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Coords 四点坐标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Order 第几次
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

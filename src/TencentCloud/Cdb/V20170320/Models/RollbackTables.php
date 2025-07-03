@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 用于回档的数据库表详情
  *
  * @method string getDatabase() 获取数据库名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatabase(string $Database) 设置数据库名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTable() 获取数据库表详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTable(array $Table) 设置数据库表详情
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RollbackTables extends AbstractModel
 {
     /**
      * @var string 数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Database;
 
     /**
      * @var array 数据库表详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Table;
 
     /**
      * @param string $Database 数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Table 数据库表详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

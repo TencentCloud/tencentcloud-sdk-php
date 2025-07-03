@@ -66,6 +66,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置结束时间
  * @method integer getStatus() 获取回档状态，0-初始化，1-运行中，2-成功，3-失败
  * @method void setStatus(integer $Status) 设置回档状态，0-初始化，1-运行中，2-成功，3-失败
+ * @method integer getFlowId() 获取回档异步任务ID
+ * @method void setFlowId(integer $FlowId) 设置回档异步任务ID
  */
 class RestoreTask extends AbstractModel
 {
@@ -137,6 +139,11 @@ class RestoreTask extends AbstractModel
     public $Status;
 
     /**
+     * @var integer 回档异步任务ID
+     */
+    public $FlowId;
+
+    /**
      * @param string $TargetInstanceId 目标实例ID
      * @param string $TargetInstanceName 目标实例名称
      * @param integer $TargetInstanceStatus 目标实例状态。取值范围：
@@ -160,6 +167,7 @@ class RestoreTask extends AbstractModel
      * @param string $StartTime 开始时间
      * @param string $EndTime 结束时间
      * @param integer $Status 回档状态，0-初始化，1-运行中，2-成功，3-失败
+     * @param integer $FlowId 回档异步任务ID
      */
     function __construct()
     {
@@ -216,6 +224,10 @@ class RestoreTask extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
+            $this->FlowId = $param["FlowId"];
         }
     }
 }

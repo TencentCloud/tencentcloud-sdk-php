@@ -24,10 +24,30 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(string $ProjectId) 设置项目Id
  * @method string getFolderName() 获取文件夹名称
  * @method void setFolderName(string $FolderName) 设置文件夹名称
- * @method string getWorkflowId() 获取工作量ID
- * @method void setWorkflowId(string $WorkflowId) 设置工作量ID
+ * @method string getWorkflowId() 获取工作流ID
+ * @method void setWorkflowId(string $WorkflowId) 设置工作流ID
  * @method string getParentFolderId() 获取父文件夹ID
  * @method void setParentFolderId(string $ParentFolderId) 设置父文件夹ID
+ * @method string getTaskNodeType() 获取目录分类，该值必传，枚举值如下：
+ETL：数据集成
+EMR：EMR
+TBDS：TBDS
+DLC：DLC
+TDSQL：TDSQL
+TCHOUSE：TCHOUSE
+GENERAL：通用
+TI_ONE：TI-ONE机器学习
+ACROSS_WORKFLOWS：跨工作流
+ * @method void setTaskNodeType(string $TaskNodeType) 设置目录分类，该值必传，枚举值如下：
+ETL：数据集成
+EMR：EMR
+TBDS：TBDS
+DLC：DLC
+TDSQL：TDSQL
+TCHOUSE：TCHOUSE
+GENERAL：通用
+TI_ONE：TI-ONE机器学习
+ACROSS_WORKFLOWS：跨工作流
  */
 class CreateTaskFolderRequest extends AbstractModel
 {
@@ -42,7 +62,7 @@ class CreateTaskFolderRequest extends AbstractModel
     public $FolderName;
 
     /**
-     * @var string 工作量ID
+     * @var string 工作流ID
      */
     public $WorkflowId;
 
@@ -52,10 +72,34 @@ class CreateTaskFolderRequest extends AbstractModel
     public $ParentFolderId;
 
     /**
+     * @var string 目录分类，该值必传，枚举值如下：
+ETL：数据集成
+EMR：EMR
+TBDS：TBDS
+DLC：DLC
+TDSQL：TDSQL
+TCHOUSE：TCHOUSE
+GENERAL：通用
+TI_ONE：TI-ONE机器学习
+ACROSS_WORKFLOWS：跨工作流
+     */
+    public $TaskNodeType;
+
+    /**
      * @param string $ProjectId 项目Id
      * @param string $FolderName 文件夹名称
-     * @param string $WorkflowId 工作量ID
+     * @param string $WorkflowId 工作流ID
      * @param string $ParentFolderId 父文件夹ID
+     * @param string $TaskNodeType 目录分类，该值必传，枚举值如下：
+ETL：数据集成
+EMR：EMR
+TBDS：TBDS
+DLC：DLC
+TDSQL：TDSQL
+TCHOUSE：TCHOUSE
+GENERAL：通用
+TI_ONE：TI-ONE机器学习
+ACROSS_WORKFLOWS：跨工作流
      */
     function __construct()
     {
@@ -84,6 +128,10 @@ class CreateTaskFolderRequest extends AbstractModel
 
         if (array_key_exists("ParentFolderId",$param) and $param["ParentFolderId"] !== null) {
             $this->ParentFolderId = $param["ParentFolderId"];
+        }
+
+        if (array_key_exists("TaskNodeType",$param) and $param["TaskNodeType"] !== null) {
+            $this->TaskNodeType = $param["TaskNodeType"];
         }
     }
 }

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置结束时间。
  * @method integer getLimit() 获取分页参数，单次返回的数据条数。默认值为100，最大值为100。
  * @method void setLimit(integer $Limit) 设置分页参数，单次返回的数据条数。默认值为100，最大值为100。
- * @method integer getOffset() 获取分页偏移量。
- * @method void setOffset(integer $Offset) 设置分页偏移量。
+ * @method integer getOffset() 获取日志偏移量，最多支持偏移查询65535条日志。可填写范围：0 - 65535。
+ * @method void setOffset(integer $Offset) 设置日志偏移量，最多支持偏移查询65535条日志。可填写范围：0 - 65535。
  * @method string getOrder() 获取排序方式。支持值包括："ASC" - 升序，"DESC" - 降序。
  * @method void setOrder(string $Order) 设置排序方式。支持值包括："ASC" - 升序，"DESC" - 降序。
  * @method string getOrderBy() 获取排序字段。支持值包括：
@@ -66,7 +66,7 @@ class DescribeAuditLogsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer 分页偏移量。
+     * @var integer 日志偏移量，最多支持偏移查询65535条日志。可填写范围：0 - 65535。
      */
     public $Offset;
 
@@ -93,7 +93,7 @@ class DescribeAuditLogsRequest extends AbstractModel
      * @param string $StartTime 开始时间。
      * @param string $EndTime 结束时间。
      * @param integer $Limit 分页参数，单次返回的数据条数。默认值为100，最大值为100。
-     * @param integer $Offset 分页偏移量。
+     * @param integer $Offset 日志偏移量，最多支持偏移查询65535条日志。可填写范围：0 - 65535。
      * @param string $Order 排序方式。支持值包括："ASC" - 升序，"DESC" - 降序。
      * @param string $OrderBy 排序字段。支持值包括：
 "timestamp" - 时间戳；

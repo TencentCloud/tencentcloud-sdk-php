@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTimeOffset(float $EndTimeOffset) 设置识别片段终止的偏移时间，单位：秒。
  * @method string getText() 获取识别文本。
  * @method void setText(string $Text) 设置识别文本。
+ * @method array getWordlist() 获取字词时间戳信息。
+ * @method void setWordlist(array $Wordlist) 设置字词时间戳信息。
  */
 class AiRecognitionTaskAsrFullTextSegmentItem extends AbstractModel
 {
@@ -52,10 +54,16 @@ class AiRecognitionTaskAsrFullTextSegmentItem extends AbstractModel
     public $Text;
 
     /**
+     * @var array 字词时间戳信息。
+     */
+    public $Wordlist;
+
+    /**
      * @param float $Confidence 识别片段置信度。取值：0~100。
      * @param float $StartTimeOffset 识别片段起始的偏移时间，单位：秒。
      * @param float $EndTimeOffset 识别片段终止的偏移时间，单位：秒。
      * @param string $Text 识别文本。
+     * @param array $Wordlist 字词时间戳信息。
      */
     function __construct()
     {
@@ -84,6 +92,15 @@ class AiRecognitionTaskAsrFullTextSegmentItem extends AbstractModel
 
         if (array_key_exists("Text",$param) and $param["Text"] !== null) {
             $this->Text = $param["Text"];
+        }
+
+        if (array_key_exists("Wordlist",$param) and $param["Wordlist"] !== null) {
+            $this->Wordlist = [];
+            foreach ($param["Wordlist"] as $key => $value){
+                $obj = new WordResult();
+                $obj->deserialize($value);
+                array_push($this->Wordlist, $obj);
+            }
         }
     }
 }

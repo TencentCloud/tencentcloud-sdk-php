@@ -23,17 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPodName() 获取pod名字
  * @method void setPodName(string $PodName) 设置pod名字
  * @method string getNamespace() 获取pod空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespace(string $Namespace) 设置pod空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLabels() 获取pod标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabels(string $Labels) 设置pod标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWorkloadKind() 获取pod类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWorkloadKind(string $WorkloadKind) 设置pod类型
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NetworkClusterPodInfo extends AbstractModel
 {
@@ -44,30 +38,24 @@ class NetworkClusterPodInfo extends AbstractModel
 
     /**
      * @var string pod空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Namespace;
 
     /**
      * @var string pod标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Labels;
 
     /**
      * @var string pod类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkloadKind;
 
     /**
      * @param string $PodName pod名字
      * @param string $Namespace pod空间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Labels pod标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WorkloadKind pod类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

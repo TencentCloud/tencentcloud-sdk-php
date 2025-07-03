@@ -20,71 +20,87 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyApmInstance请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getName() 获取实例名
- * @method void setName(string $Name) 设置实例名
- * @method array getTags() 获取标签列表
- * @method void setTags(array $Tags) 设置标签列表
- * @method string getDescription() 获取实例详情
- * @method void setDescription(string $Description) 设置实例详情
- * @method integer getTraceDuration() 获取Trace数据保存时长
- * @method void setTraceDuration(integer $TraceDuration) 设置Trace数据保存时长
+ * @method string getInstanceId() 获取业务系统 ID
+ * @method void setInstanceId(string $InstanceId) 设置业务系统 ID
+ * @method string getName() 获取业务系统名
+ * @method void setName(string $Name) 设置业务系统名
+ * @method array getTags() 获取Tag 列表
+ * @method void setTags(array $Tags) 设置Tag 列表
+ * @method string getDescription() 获取业务系统描述
+ * @method void setDescription(string $Description) 设置业务系统描述
+ * @method integer getTraceDuration() 获取Trace 数据保存时长（单位：天）
+ * @method void setTraceDuration(integer $TraceDuration) 设置Trace 数据保存时长（单位：天）
  * @method boolean getOpenBilling() 获取是否开启计费
  * @method void setOpenBilling(boolean $OpenBilling) 设置是否开启计费
- * @method integer getSpanDailyCounters() 获取实例上报额度
- * @method void setSpanDailyCounters(integer $SpanDailyCounters) 设置实例上报额度
- * @method integer getErrRateThreshold() 获取错误率阈值
- * @method void setErrRateThreshold(integer $ErrRateThreshold) 设置错误率阈值
- * @method integer getSampleRate() 获取采样率
- * @method void setSampleRate(integer $SampleRate) 设置采样率
- * @method integer getErrorSample() 获取是否开启错误采样 0 关 1 开
- * @method void setErrorSample(integer $ErrorSample) 设置是否开启错误采样 0 关 1 开
- * @method integer getSlowRequestSavedThreshold() 获取慢请求阈值
- * @method void setSlowRequestSavedThreshold(integer $SlowRequestSavedThreshold) 设置慢请求阈值
- * @method integer getIsRelatedLog() 获取是否开启日志功能 0 关 1 开
- * @method void setIsRelatedLog(integer $IsRelatedLog) 设置是否开启日志功能 0 关 1 开
- * @method string getLogRegion() 获取日志地域
- * @method void setLogRegion(string $LogRegion) 设置日志地域
- * @method string getLogTopicID() 获取CLS日志主题ID | ES 索引名
- * @method void setLogTopicID(string $LogTopicID) 设置CLS日志主题ID | ES 索引名
- * @method string getLogSet() 获取CLS日志集 | ES集群ID
- * @method void setLogSet(string $LogSet) 设置CLS日志集 | ES集群ID
- * @method string getLogSource() 获取CLS | ES
- * @method void setLogSource(string $LogSource) 设置CLS | ES
+ * @method integer getSpanDailyCounters() 获取业务系统上报额度
+ * @method void setSpanDailyCounters(integer $SpanDailyCounters) 设置业务系统上报额度
+ * @method integer getErrRateThreshold() 获取错误率警示线，当应用的平均错误率超出该阈值时，系统会给出异常提示。
+ * @method void setErrRateThreshold(integer $ErrRateThreshold) 设置错误率警示线，当应用的平均错误率超出该阈值时，系统会给出异常提示。
+ * @method integer getSampleRate() 获取采样率（单位：%）
+ * @method void setSampleRate(integer $SampleRate) 设置采样率（单位：%）
+ * @method integer getErrorSample() 获取是否开启错误采样（0=关, 1=开）
+ * @method void setErrorSample(integer $ErrorSample) 设置是否开启错误采样（0=关, 1=开）
+ * @method integer getSlowRequestSavedThreshold() 获取采样慢调用保存阈值（单位：ms）
+ * @method void setSlowRequestSavedThreshold(integer $SlowRequestSavedThreshold) 设置采样慢调用保存阈值（单位：ms）
+ * @method integer getIsRelatedLog() 获取是否开启日志功能（0=关, 1=开）
+ * @method void setIsRelatedLog(integer $IsRelatedLog) 设置是否开启日志功能（0=关, 1=开）
+ * @method string getLogRegion() 获取日志地域，开启日志功能后才会生效
+ * @method void setLogRegion(string $LogRegion) 设置日志地域，开启日志功能后才会生效
+ * @method string getLogTopicID() 获取CLS 日志主题 ID，开启日志功能后才会生效
+ * @method void setLogTopicID(string $LogTopicID) 设置CLS 日志主题 ID，开启日志功能后才会生效
+ * @method string getLogSet() 获取日志集，开启日志功能后才会生效
+ * @method void setLogSet(string $LogSet) 设置日志集，开启日志功能后才会生效
+ * @method string getLogSource() 获取日志源，开启日志功能后才会生效
+ * @method void setLogSource(string $LogSource) 设置日志源，开启日志功能后才会生效
  * @method array getCustomShowTags() 获取用户自定义展示标签列表
  * @method void setCustomShowTags(array $CustomShowTags) 设置用户自定义展示标签列表
- * @method integer getPayMode() 获取修改计费模式
-1为预付费
-0为按量付费
- * @method void setPayMode(integer $PayMode) 设置修改计费模式
-1为预付费
-0为按量付费
+ * @method integer getPayMode() 获取修改计费模式（1为预付费，0为按量付费）
+ * @method void setPayMode(integer $PayMode) 设置修改计费模式（1为预付费，0为按量付费）
+ * @method integer getResponseDurationWarningThreshold() 获取响应时间警示线
+ * @method void setResponseDurationWarningThreshold(integer $ResponseDurationWarningThreshold) 设置响应时间警示线
+ * @method integer getFree() 获取是否免费（0=付费版；1=TSF 受限免费版；2=免费版），默认0
+ * @method void setFree(integer $Free) 设置是否免费（0=付费版；1=TSF 受限免费版；2=免费版），默认0
+ * @method integer getIsRelatedDashboard() 获取是否关联 Dashboard（0=关,1=开）
+ * @method void setIsRelatedDashboard(integer $IsRelatedDashboard) 设置是否关联 Dashboard（0=关,1=开）
+ * @method string getDashboardTopicID() 获取关联的 Dashboard ID，开启关联 Dashboard 后才会生效
+ * @method void setDashboardTopicID(string $DashboardTopicID) 设置关联的 Dashboard ID，开启关联 Dashboard 后才会生效
+ * @method integer getIsSqlInjectionAnalysis() 获取是否开启 SQL 注入检测（0=关,1=开）
+ * @method void setIsSqlInjectionAnalysis(integer $IsSqlInjectionAnalysis) 设置是否开启 SQL 注入检测（0=关,1=开）
+ * @method integer getIsInstrumentationVulnerabilityScan() 获取是否开启组件漏洞检测（0=关,1=开）
+ * @method void setIsInstrumentationVulnerabilityScan(integer $IsInstrumentationVulnerabilityScan) 设置是否开启组件漏洞检测（0=关,1=开）
+ * @method integer getIsRemoteCommandExecutionAnalysis() 获取是否开启远程命令攻击检测
+ * @method void setIsRemoteCommandExecutionAnalysis(integer $IsRemoteCommandExecutionAnalysis) 设置是否开启远程命令攻击检测
+ * @method integer getIsMemoryHijackingAnalysis() 获取是否开启内存马检测
+ * @method void setIsMemoryHijackingAnalysis(integer $IsMemoryHijackingAnalysis) 设置是否开启内存马检测
+ * @method integer getLogIndexType() 获取CLS索引类型(0=全文索引，1=键值索引)
+ * @method void setLogIndexType(integer $LogIndexType) 设置CLS索引类型(0=全文索引，1=键值索引)
+ * @method string getLogTraceIdKey() 获取traceId的索引key: 当CLS索引类型为键值索引时生效
+ * @method void setLogTraceIdKey(string $LogTraceIdKey) 设置traceId的索引key: 当CLS索引类型为键值索引时生效
  */
 class ModifyApmInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 业务系统 ID
      */
     public $InstanceId;
 
     /**
-     * @var string 实例名
+     * @var string 业务系统名
      */
     public $Name;
 
     /**
-     * @var array 标签列表
+     * @var array Tag 列表
      */
     public $Tags;
 
     /**
-     * @var string 实例详情
+     * @var string 业务系统描述
      */
     public $Description;
 
     /**
-     * @var integer Trace数据保存时长
+     * @var integer Trace 数据保存时长（单位：天）
      */
     public $TraceDuration;
 
@@ -94,52 +110,52 @@ class ModifyApmInstanceRequest extends AbstractModel
     public $OpenBilling;
 
     /**
-     * @var integer 实例上报额度
+     * @var integer 业务系统上报额度
      */
     public $SpanDailyCounters;
 
     /**
-     * @var integer 错误率阈值
+     * @var integer 错误率警示线，当应用的平均错误率超出该阈值时，系统会给出异常提示。
      */
     public $ErrRateThreshold;
 
     /**
-     * @var integer 采样率
+     * @var integer 采样率（单位：%）
      */
     public $SampleRate;
 
     /**
-     * @var integer 是否开启错误采样 0 关 1 开
+     * @var integer 是否开启错误采样（0=关, 1=开）
      */
     public $ErrorSample;
 
     /**
-     * @var integer 慢请求阈值
+     * @var integer 采样慢调用保存阈值（单位：ms）
      */
     public $SlowRequestSavedThreshold;
 
     /**
-     * @var integer 是否开启日志功能 0 关 1 开
+     * @var integer 是否开启日志功能（0=关, 1=开）
      */
     public $IsRelatedLog;
 
     /**
-     * @var string 日志地域
+     * @var string 日志地域，开启日志功能后才会生效
      */
     public $LogRegion;
 
     /**
-     * @var string CLS日志主题ID | ES 索引名
+     * @var string CLS 日志主题 ID，开启日志功能后才会生效
      */
     public $LogTopicID;
 
     /**
-     * @var string CLS日志集 | ES集群ID
+     * @var string 日志集，开启日志功能后才会生效
      */
     public $LogSet;
 
     /**
-     * @var string CLS | ES
+     * @var string 日志源，开启日志功能后才会生效
      */
     public $LogSource;
 
@@ -149,33 +165,89 @@ class ModifyApmInstanceRequest extends AbstractModel
     public $CustomShowTags;
 
     /**
-     * @var integer 修改计费模式
-1为预付费
-0为按量付费
+     * @var integer 修改计费模式（1为预付费，0为按量付费）
      */
     public $PayMode;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $Name 实例名
-     * @param array $Tags 标签列表
-     * @param string $Description 实例详情
-     * @param integer $TraceDuration Trace数据保存时长
+     * @var integer 响应时间警示线
+     */
+    public $ResponseDurationWarningThreshold;
+
+    /**
+     * @var integer 是否免费（0=付费版；1=TSF 受限免费版；2=免费版），默认0
+     */
+    public $Free;
+
+    /**
+     * @var integer 是否关联 Dashboard（0=关,1=开）
+     */
+    public $IsRelatedDashboard;
+
+    /**
+     * @var string 关联的 Dashboard ID，开启关联 Dashboard 后才会生效
+     */
+    public $DashboardTopicID;
+
+    /**
+     * @var integer 是否开启 SQL 注入检测（0=关,1=开）
+     */
+    public $IsSqlInjectionAnalysis;
+
+    /**
+     * @var integer 是否开启组件漏洞检测（0=关,1=开）
+     */
+    public $IsInstrumentationVulnerabilityScan;
+
+    /**
+     * @var integer 是否开启远程命令攻击检测
+     */
+    public $IsRemoteCommandExecutionAnalysis;
+
+    /**
+     * @var integer 是否开启内存马检测
+     */
+    public $IsMemoryHijackingAnalysis;
+
+    /**
+     * @var integer CLS索引类型(0=全文索引，1=键值索引)
+     */
+    public $LogIndexType;
+
+    /**
+     * @var string traceId的索引key: 当CLS索引类型为键值索引时生效
+     */
+    public $LogTraceIdKey;
+
+    /**
+     * @param string $InstanceId 业务系统 ID
+     * @param string $Name 业务系统名
+     * @param array $Tags Tag 列表
+     * @param string $Description 业务系统描述
+     * @param integer $TraceDuration Trace 数据保存时长（单位：天）
      * @param boolean $OpenBilling 是否开启计费
-     * @param integer $SpanDailyCounters 实例上报额度
-     * @param integer $ErrRateThreshold 错误率阈值
-     * @param integer $SampleRate 采样率
-     * @param integer $ErrorSample 是否开启错误采样 0 关 1 开
-     * @param integer $SlowRequestSavedThreshold 慢请求阈值
-     * @param integer $IsRelatedLog 是否开启日志功能 0 关 1 开
-     * @param string $LogRegion 日志地域
-     * @param string $LogTopicID CLS日志主题ID | ES 索引名
-     * @param string $LogSet CLS日志集 | ES集群ID
-     * @param string $LogSource CLS | ES
+     * @param integer $SpanDailyCounters 业务系统上报额度
+     * @param integer $ErrRateThreshold 错误率警示线，当应用的平均错误率超出该阈值时，系统会给出异常提示。
+     * @param integer $SampleRate 采样率（单位：%）
+     * @param integer $ErrorSample 是否开启错误采样（0=关, 1=开）
+     * @param integer $SlowRequestSavedThreshold 采样慢调用保存阈值（单位：ms）
+     * @param integer $IsRelatedLog 是否开启日志功能（0=关, 1=开）
+     * @param string $LogRegion 日志地域，开启日志功能后才会生效
+     * @param string $LogTopicID CLS 日志主题 ID，开启日志功能后才会生效
+     * @param string $LogSet 日志集，开启日志功能后才会生效
+     * @param string $LogSource 日志源，开启日志功能后才会生效
      * @param array $CustomShowTags 用户自定义展示标签列表
-     * @param integer $PayMode 修改计费模式
-1为预付费
-0为按量付费
+     * @param integer $PayMode 修改计费模式（1为预付费，0为按量付费）
+     * @param integer $ResponseDurationWarningThreshold 响应时间警示线
+     * @param integer $Free 是否免费（0=付费版；1=TSF 受限免费版；2=免费版），默认0
+     * @param integer $IsRelatedDashboard 是否关联 Dashboard（0=关,1=开）
+     * @param string $DashboardTopicID 关联的 Dashboard ID，开启关联 Dashboard 后才会生效
+     * @param integer $IsSqlInjectionAnalysis 是否开启 SQL 注入检测（0=关,1=开）
+     * @param integer $IsInstrumentationVulnerabilityScan 是否开启组件漏洞检测（0=关,1=开）
+     * @param integer $IsRemoteCommandExecutionAnalysis 是否开启远程命令攻击检测
+     * @param integer $IsMemoryHijackingAnalysis 是否开启内存马检测
+     * @param integer $LogIndexType CLS索引类型(0=全文索引，1=键值索引)
+     * @param string $LogTraceIdKey traceId的索引key: 当CLS索引类型为键值索引时生效
      */
     function __construct()
     {
@@ -265,6 +337,46 @@ class ModifyApmInstanceRequest extends AbstractModel
 
         if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
             $this->PayMode = $param["PayMode"];
+        }
+
+        if (array_key_exists("ResponseDurationWarningThreshold",$param) and $param["ResponseDurationWarningThreshold"] !== null) {
+            $this->ResponseDurationWarningThreshold = $param["ResponseDurationWarningThreshold"];
+        }
+
+        if (array_key_exists("Free",$param) and $param["Free"] !== null) {
+            $this->Free = $param["Free"];
+        }
+
+        if (array_key_exists("IsRelatedDashboard",$param) and $param["IsRelatedDashboard"] !== null) {
+            $this->IsRelatedDashboard = $param["IsRelatedDashboard"];
+        }
+
+        if (array_key_exists("DashboardTopicID",$param) and $param["DashboardTopicID"] !== null) {
+            $this->DashboardTopicID = $param["DashboardTopicID"];
+        }
+
+        if (array_key_exists("IsSqlInjectionAnalysis",$param) and $param["IsSqlInjectionAnalysis"] !== null) {
+            $this->IsSqlInjectionAnalysis = $param["IsSqlInjectionAnalysis"];
+        }
+
+        if (array_key_exists("IsInstrumentationVulnerabilityScan",$param) and $param["IsInstrumentationVulnerabilityScan"] !== null) {
+            $this->IsInstrumentationVulnerabilityScan = $param["IsInstrumentationVulnerabilityScan"];
+        }
+
+        if (array_key_exists("IsRemoteCommandExecutionAnalysis",$param) and $param["IsRemoteCommandExecutionAnalysis"] !== null) {
+            $this->IsRemoteCommandExecutionAnalysis = $param["IsRemoteCommandExecutionAnalysis"];
+        }
+
+        if (array_key_exists("IsMemoryHijackingAnalysis",$param) and $param["IsMemoryHijackingAnalysis"] !== null) {
+            $this->IsMemoryHijackingAnalysis = $param["IsMemoryHijackingAnalysis"];
+        }
+
+        if (array_key_exists("LogIndexType",$param) and $param["LogIndexType"] !== null) {
+            $this->LogIndexType = $param["LogIndexType"];
+        }
+
+        if (array_key_exists("LogTraceIdKey",$param) and $param["LogTraceIdKey"] !== null) {
+            $this->LogTraceIdKey = $param["LogTraceIdKey"];
         }
     }
 }

@@ -21,117 +21,81 @@ use TencentCloud\Common\AbstractModel;
  * 包信息
  *
  * @method string getPkgId() 获取程序包ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPkgId(string $PkgId) 设置程序包ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPkgName() 获取程序包名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPkgName(string $PkgName) 设置程序包名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPkgType() 获取程序包类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPkgType(string $PkgType) 设置程序包类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPkgVersion() 获取程序包版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPkgVersion(string $PkgVersion) 设置程序包版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPkgDesc() 获取程序包描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPkgDesc(string $PkgDesc) 设置程序包描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUploadTime() 获取上传时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUploadTime(string $UploadTime) 设置上传时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMd5() 获取程序包MD5
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMd5(string $Md5) 设置程序包MD5
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPkgPubStatus() 获取程序包状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPkgPubStatus(integer $PkgPubStatus) 设置程序包状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPkgBindInfo() 获取程序包关联关系
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPkgBindInfo(array $PkgBindInfo) 设置程序包关联关系
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PkgInfo extends AbstractModel
 {
     /**
      * @var string 程序包ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PkgId;
 
     /**
      * @var string 程序包名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PkgName;
 
     /**
      * @var string 程序包类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PkgType;
 
     /**
      * @var string 程序包版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PkgVersion;
 
     /**
      * @var string 程序包描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PkgDesc;
 
     /**
      * @var string 上传时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UploadTime;
 
     /**
      * @var string 程序包MD5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Md5;
 
     /**
      * @var integer 程序包状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PkgPubStatus;
 
     /**
      * @var array 程序包关联关系
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PkgBindInfo;
 
     /**
      * @param string $PkgId 程序包ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PkgName 程序包名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PkgType 程序包类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PkgVersion 程序包版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PkgDesc 程序包描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UploadTime 上传时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Md5 程序包MD5
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PkgPubStatus 程序包状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PkgBindInfo 程序包关联关系
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

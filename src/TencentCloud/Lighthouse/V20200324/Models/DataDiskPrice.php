@@ -31,9 +31,7 @@ use TencentCloud\Common\AbstractModel;
  * @method float getDiscountPrice() 获取折后总价。
  * @method void setDiscountPrice(float $DiscountPrice) 设置折后总价。
  * @method string getInstanceId() 获取数据盘挂载的实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置数据盘挂载的实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataDiskPrice extends AbstractModel
 {
@@ -64,7 +62,6 @@ class DataDiskPrice extends AbstractModel
 
     /**
      * @var string 数据盘挂载的实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
@@ -75,7 +72,6 @@ class DataDiskPrice extends AbstractModel
      * @param float $Discount 折扣。
      * @param float $DiscountPrice 折后总价。
      * @param string $InstanceId 数据盘挂载的实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

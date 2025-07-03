@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 成本分析地域返回复杂类型
  *
  * @method string getRegionId() 获取地域id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionId(string $RegionId) 设置地域id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegionName() 获取地域名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionName(string $RegionName) 设置地域名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AnalyseRegionDetail extends AbstractModel
 {
     /**
      * @var string 地域id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionId;
 
     /**
      * @var string 地域名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionName;
 
     /**
      * @param string $RegionId 地域id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegionName 地域名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

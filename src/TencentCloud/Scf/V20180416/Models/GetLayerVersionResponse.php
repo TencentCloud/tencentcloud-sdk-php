@@ -28,16 +28,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLocation(string $Location) 设置层中版本文件的下载地址
  * @method string getAddTime() 获取版本的创建时间
  * @method void setAddTime(string $AddTime) 设置版本的创建时间
- * @method string getDescription() 获取版本的描述
- * @method void setDescription(string $Description) 设置版本的描述
+ * @method string getDescription() 获取版本的描述信息
+ * @method void setDescription(string $Description) 设置版本的描述信息
  * @method string getLicenseInfo() 获取许可证信息
  * @method void setLicenseInfo(string $LicenseInfo) 设置许可证信息
  * @method integer getLayerVersion() 获取版本号
  * @method void setLayerVersion(integer $LayerVersion) 设置版本号
  * @method string getLayerName() 获取层名称
  * @method void setLayerName(string $LayerName) 设置层名称
- * @method string getStatus() 获取层的具体版本当前状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/47175#.E5.B1.82.EF.BC.88layer.EF.BC.89.E7.8A.B6.E6.80.81)
- * @method void setStatus(string $Status) 设置层的具体版本当前状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/47175#.E5.B1.82.EF.BC.88layer.EF.BC.89.E7.8A.B6.E6.80.81)
+ * @method string getStatus() 获取层的具体版本当前状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/115197#.E5.B1.82.EF.BC.88Layer.EF.BC.89.E7.8A.B6.E6.80.81)
+ * @method void setStatus(string $Status) 设置层的具体版本当前状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/115197#.E5.B1.82.EF.BC.88Layer.EF.BC.89.E7.8A.B6.E6.80.81)
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -64,7 +64,7 @@ class GetLayerVersionResponse extends AbstractModel
     public $AddTime;
 
     /**
-     * @var string 版本的描述
+     * @var string 版本的描述信息
      */
     public $Description;
 
@@ -84,7 +84,7 @@ class GetLayerVersionResponse extends AbstractModel
     public $LayerName;
 
     /**
-     * @var string 层的具体版本当前状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/47175#.E5.B1.82.EF.BC.88layer.EF.BC.89.E7.8A.B6.E6.80.81)
+     * @var string 层的具体版本当前状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/115197#.E5.B1.82.EF.BC.88Layer.EF.BC.89.E7.8A.B6.E6.80.81)
      */
     public $Status;
 
@@ -98,11 +98,11 @@ class GetLayerVersionResponse extends AbstractModel
      * @param string $CodeSha256 层中版本文件的SHA256编码
      * @param string $Location 层中版本文件的下载地址
      * @param string $AddTime 版本的创建时间
-     * @param string $Description 版本的描述
+     * @param string $Description 版本的描述信息
      * @param string $LicenseInfo 许可证信息
      * @param integer $LayerVersion 版本号
      * @param string $LayerName 层名称
-     * @param string $Status 层的具体版本当前状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/47175#.E5.B1.82.EF.BC.88layer.EF.BC.89.E7.8A.B6.E6.80.81)
+     * @param string $Status 层的具体版本当前状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/115197#.E5.B1.82.EF.BC.88Layer.EF.BC.89.E7.8A.B6.E6.80.81)
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

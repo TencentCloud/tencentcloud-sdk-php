@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTotalCount() 获取总数据条数
  * @method void setTotalCount(integer $TotalCount) 设置总数据条数
  * @method array getAclRuleList() 获取AclRule列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAclRuleList(array $AclRuleList) 设置AclRule列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AclRuleResp extends AbstractModel
 {
@@ -36,14 +34,12 @@ class AclRuleResp extends AbstractModel
 
     /**
      * @var array AclRule列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AclRuleList;
 
     /**
      * @param integer $TotalCount 总数据条数
      * @param array $AclRuleList AclRule列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

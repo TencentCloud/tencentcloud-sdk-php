@@ -20,43 +20,43 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListAttachedUserAllPolicies请求参数结构体
  *
- * @method integer getTargetUin() 获取目标用户ID
- * @method void setTargetUin(integer $TargetUin) 设置目标用户ID
- * @method integer getRp() 获取每页数量，必须大于 0 且小于或等于 200
- * @method void setRp(integer $Rp) 设置每页数量，必须大于 0 且小于或等于 200
- * @method integer getPage() 获取页码，从 1开始，不能大于 200
- * @method void setPage(integer $Page) 设置页码，从 1开始，不能大于 200
- * @method integer getAttachType() 获取0:返回直接关联和随组关联策略，1:只返回直接关联策略，2:只返回随组关联策略
- * @method void setAttachType(integer $AttachType) 设置0:返回直接关联和随组关联策略，1:只返回直接关联策略，2:只返回随组关联策略
- * @method integer getStrategyType() 获取策略类型
- * @method void setStrategyType(integer $StrategyType) 设置策略类型
+ * @method integer getTargetUin() 获取目标用户Uin
+ * @method void setTargetUin(integer $TargetUin) 设置目标用户Uin
+ * @method integer getRp() 获取每页数量，必须大于 0 且小于等于 200。
+ * @method void setRp(integer $Rp) 设置每页数量，必须大于 0 且小于等于 200。
+ * @method integer getPage() 获取页码，从 1开始，不能大于 200。
+ * @method void setPage(integer $Page) 设置页码，从 1开始，不能大于 200。
+ * @method integer getAttachType() 获取关联类型。0:返回直接关联和随组关联策略，1:只返回直接关联策略，2:只返回随组关联策略。
+ * @method void setAttachType(integer $AttachType) 设置关联类型。0:返回直接关联和随组关联策略，1:只返回直接关联策略，2:只返回随组关联策略。
+ * @method integer getStrategyType() 获取策略类型。1表示自定义策略，2表示预设策略。
+ * @method void setStrategyType(integer $StrategyType) 设置策略类型。1表示自定义策略，2表示预设策略。
  * @method string getKeyword() 获取搜索关键字
  * @method void setKeyword(string $Keyword) 设置搜索关键字
  */
 class ListAttachedUserAllPoliciesRequest extends AbstractModel
 {
     /**
-     * @var integer 目标用户ID
+     * @var integer 目标用户Uin
      */
     public $TargetUin;
 
     /**
-     * @var integer 每页数量，必须大于 0 且小于或等于 200
+     * @var integer 每页数量，必须大于 0 且小于等于 200。
      */
     public $Rp;
 
     /**
-     * @var integer 页码，从 1开始，不能大于 200
+     * @var integer 页码，从 1开始，不能大于 200。
      */
     public $Page;
 
     /**
-     * @var integer 0:返回直接关联和随组关联策略，1:只返回直接关联策略，2:只返回随组关联策略
+     * @var integer 关联类型。0:返回直接关联和随组关联策略，1:只返回直接关联策略，2:只返回随组关联策略。
      */
     public $AttachType;
 
     /**
-     * @var integer 策略类型
+     * @var integer 策略类型。1表示自定义策略，2表示预设策略。
      */
     public $StrategyType;
 
@@ -66,11 +66,11 @@ class ListAttachedUserAllPoliciesRequest extends AbstractModel
     public $Keyword;
 
     /**
-     * @param integer $TargetUin 目标用户ID
-     * @param integer $Rp 每页数量，必须大于 0 且小于或等于 200
-     * @param integer $Page 页码，从 1开始，不能大于 200
-     * @param integer $AttachType 0:返回直接关联和随组关联策略，1:只返回直接关联策略，2:只返回随组关联策略
-     * @param integer $StrategyType 策略类型
+     * @param integer $TargetUin 目标用户Uin
+     * @param integer $Rp 每页数量，必须大于 0 且小于等于 200。
+     * @param integer $Page 页码，从 1开始，不能大于 200。
+     * @param integer $AttachType 关联类型。0:返回直接关联和随组关联策略，1:只返回直接关联策略，2:只返回随组关联策略。
+     * @param integer $StrategyType 策略类型。1表示自定义策略，2表示预设策略。
      * @param string $Keyword 搜索关键字
      */
     function __construct()

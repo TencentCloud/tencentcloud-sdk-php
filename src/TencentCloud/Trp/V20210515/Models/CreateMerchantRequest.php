@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemark(string $Remark) 设置备注
  * @method integer getCorpId() 获取企业ID
  * @method void setCorpId(integer $CorpId) 设置企业ID
- * @method integer getCodeType() 获取码包来源 0:自建, 1:第三发
- * @method void setCodeType(integer $CodeType) 设置码包来源 0:自建, 1:第三发
+ * @method integer getCodeType() 获取码包来源 0:自建, 1:第三方
+ * @method void setCodeType(integer $CodeType) 设置码包来源 0:自建, 1:第三方
  * @method string getCodeUrl() 获取码包前缀地址 第三方码包时必填
  * @method void setCodeUrl(string $CodeUrl) 设置码包前缀地址 第三方码包时必填
  */
@@ -49,7 +49,7 @@ class CreateMerchantRequest extends AbstractModel
     public $CorpId;
 
     /**
-     * @var integer 码包来源 0:自建, 1:第三发
+     * @var integer 码包来源 0:自建, 1:第三方
      */
     public $CodeType;
 
@@ -62,7 +62,7 @@ class CreateMerchantRequest extends AbstractModel
      * @param string $Name 商户名称
      * @param string $Remark 备注
      * @param integer $CorpId 企业ID
-     * @param integer $CodeType 码包来源 0:自建, 1:第三发
+     * @param integer $CodeType 码包来源 0:自建, 1:第三方
      * @param string $CodeUrl 码包前缀地址 第三方码包时必填
      */
     function __construct()

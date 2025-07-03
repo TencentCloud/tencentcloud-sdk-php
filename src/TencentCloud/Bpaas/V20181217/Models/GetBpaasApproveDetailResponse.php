@@ -25,41 +25,25 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getApplyOwnUin() 获取申请人主账号
  * @method void setApplyOwnUin(integer $ApplyOwnUin) 设置申请人主账号
  * @method string getApplyUinNick() 获取申请人昵称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplyUinNick(string $ApplyUinNick) 设置申请人昵称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBpaasId() 获取审批流id
  * @method void setBpaasId(integer $BpaasId) 设置审批流id
  * @method string getBpaasName() 获取审批流名称
  * @method void setBpaasName(string $BpaasName) 设置审批流名称
  * @method array getApplicationParams() 获取申请参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationParams(array $ApplicationParams) 设置申请参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReason() 获取申请原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReason(string $Reason) 设置申请原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取申请时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置申请时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取申请单状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置申请单状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getNodes() 获取节点信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodes(array $Nodes) 设置节点信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApprovingNodeId() 获取正在审批的节点id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApprovingNodeId(string $ApprovingNodeId) 设置正在审批的节点id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifyTime() 获取更新时间，时间格式：2021-12-12 10:12:10	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyTime(string $ModifyTime) 设置更新时间，时间格式：2021-12-12 10:12:10	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -77,7 +61,6 @@ class GetBpaasApproveDetailResponse extends AbstractModel
 
     /**
      * @var string 申请人昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplyUinNick;
 
@@ -93,43 +76,36 @@ class GetBpaasApproveDetailResponse extends AbstractModel
 
     /**
      * @var array 申请参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationParams;
 
     /**
      * @var string 申请原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Reason;
 
     /**
      * @var string 申请时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var integer 申请单状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var array 节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Nodes;
 
     /**
      * @var string 正在审批的节点id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApprovingNodeId;
 
     /**
      * @var string 更新时间，时间格式：2021-12-12 10:12:10	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyTime;
 
@@ -142,23 +118,15 @@ class GetBpaasApproveDetailResponse extends AbstractModel
      * @param integer $ApplyUin 申请人uin
      * @param integer $ApplyOwnUin 申请人主账号
      * @param string $ApplyUinNick 申请人昵称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BpaasId 审批流id
      * @param string $BpaasName 审批流名称
      * @param array $ApplicationParams 申请参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Reason 申请原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 申请时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 申请单状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Nodes 节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApprovingNodeId 正在审批的节点id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyTime 更新时间，时间格式：2021-12-12 10:12:10	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

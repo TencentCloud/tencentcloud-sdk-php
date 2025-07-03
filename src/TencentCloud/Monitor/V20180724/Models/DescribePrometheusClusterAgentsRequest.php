@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例id
  * @method void setInstanceId(string $InstanceId) 设置实例id
- * @method integer getOffset() 获取用于分页
- * @method void setOffset(integer $Offset) 设置用于分页
- * @method integer getLimit() 获取用于分页
- * @method void setLimit(integer $Limit) 设置用于分页
+ * @method integer getOffset() 获取偏移量，默认为0。
+ * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
+ * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
+ * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
  * @method array getClusterIds() 获取用于通过集群id过滤被绑定集群
  * @method void setClusterIds(array $ClusterIds) 设置用于通过集群id过滤被绑定集群
  * @method array getClusterTypes() 获取用于通过集群类型过滤被绑定集群
@@ -41,12 +41,12 @@ class DescribePrometheusClusterAgentsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 用于分页
+     * @var integer 偏移量，默认为0。
      */
     public $Offset;
 
     /**
-     * @var integer 用于分页
+     * @var integer 返回数量，默认为20，最大值为100。
      */
     public $Limit;
 
@@ -67,8 +67,8 @@ class DescribePrometheusClusterAgentsRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 实例id
-     * @param integer $Offset 用于分页
-     * @param integer $Limit 用于分页
+     * @param integer $Offset 偏移量，默认为0。
+     * @param integer $Limit 返回数量，默认为20，最大值为100。
      * @param array $ClusterIds 用于通过集群id过滤被绑定集群
      * @param array $ClusterTypes 用于通过集群类型过滤被绑定集群
      * @param string $ClusterName 用于通过名称搜索被绑定集群

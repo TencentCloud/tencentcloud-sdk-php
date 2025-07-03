@@ -58,6 +58,8 @@ offlining 下线中
 offlined 已下线
  * @method array getInstanceIds() 获取实例id列表
  * @method void setInstanceIds(array $InstanceIds) 设置实例id列表
+ * @method string getClusterType() 获取集群类型，取值范围<li> CYNOSDB：事务集群 </li><li> LIBRADB：分析集群 </li><li> ALL：全部 </li>，缺省为 ALL
+ * @method void setClusterType(string $ClusterType) 设置集群类型，取值范围<li> CYNOSDB：事务集群 </li><li> LIBRADB：分析集群 </li><li> ALL：全部 </li>，缺省为 ALL
  */
 class DescribeInstancesRequest extends AbstractModel
 {
@@ -113,6 +115,11 @@ offlined 已下线
     public $InstanceIds;
 
     /**
+     * @var string 集群类型，取值范围<li> CYNOSDB：事务集群 </li><li> LIBRADB：分析集群 </li><li> ALL：全部 </li>，缺省为 ALL
+     */
+    public $ClusterType;
+
+    /**
      * @param integer $Limit 返回数量，默认为 20，取值范围为(0,100]
      * @param integer $Offset 记录偏移量，默认值为0
      * @param string $OrderBy 排序字段，取值范围：
@@ -132,6 +139,7 @@ activating 恢复中
 offlining 下线中
 offlined 已下线
      * @param array $InstanceIds 实例id列表
+     * @param string $ClusterType 集群类型，取值范围<li> CYNOSDB：事务集群 </li><li> LIBRADB：分析集群 </li><li> ALL：全部 </li>，缺省为 ALL
      */
     function __construct()
     {
@@ -181,6 +189,10 @@ offlined 已下线
 
         if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
             $this->InstanceIds = $param["InstanceIds"];
+        }
+
+        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
+            $this->ClusterType = $param["ClusterType"];
         }
     }
 }

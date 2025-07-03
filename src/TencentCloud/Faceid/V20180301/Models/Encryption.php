@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEncryptList(array $EncryptList) 设置在使用加密服务时，填入要被加密的字段。本接口中可填入加密后的一个或多个字段
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCiphertextBlob() 获取有加密需求的用户，接入传入kms的CiphertextBlob，关于数据加密可查阅<a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。
+ * @method string getCiphertextBlob() 获取加密后的对称密钥，关于密钥的生成和使用请查阅<a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCiphertextBlob(string $CiphertextBlob) 设置有加密需求的用户，接入传入kms的CiphertextBlob，关于数据加密可查阅<a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。
+ * @method void setCiphertextBlob(string $CiphertextBlob) 设置加密后的对称密钥，关于密钥的生成和使用请查阅<a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIv() 获取有加密需求的用户，传入CBC加密的初始向量（客户自定义字符串，长度16字符）。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -50,7 +50,7 @@ class Encryption extends AbstractModel
     public $EncryptList;
 
     /**
-     * @var string 有加密需求的用户，接入传入kms的CiphertextBlob，关于数据加密可查阅<a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。
+     * @var string 加密后的对称密钥，关于密钥的生成和使用请查阅<a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CiphertextBlob;
@@ -76,7 +76,7 @@ class Encryption extends AbstractModel
     /**
      * @param array $EncryptList 在使用加密服务时，填入要被加密的字段。本接口中可填入加密后的一个或多个字段
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CiphertextBlob 有加密需求的用户，接入传入kms的CiphertextBlob，关于数据加密可查阅<a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。
+     * @param string $CiphertextBlob 加密后的对称密钥，关于密钥的生成和使用请查阅<a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Iv 有加密需求的用户，传入CBC加密的初始向量（客户自定义字符串，长度16字符）。
 注意：此字段可能返回 null，表示取不到有效值。

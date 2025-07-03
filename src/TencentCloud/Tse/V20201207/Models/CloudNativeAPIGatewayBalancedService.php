@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 含百分比流量配置的服务
  *
  * @method string getServiceID() 获取服务 ID，作为入参时，必填
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceID(string $ServiceID) 设置服务 ID，作为入参时，必填
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getServiceName() 获取服务名称，作为入参时，无意义
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceName(string $ServiceName) 设置服务名称，作为入参时，无意义
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpstreamName() 获取Upstream 名称，作为入参时，无意义
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpstreamName(string $UpstreamName) 设置Upstream 名称，作为入参时，无意义
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getPercent() 获取百分比，10 即 10%，范围0-100
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPercent(float $Percent) 设置百分比，10 即 10%，范围0-100
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudNativeAPIGatewayBalancedService extends AbstractModel
 {
     /**
      * @var string 服务 ID，作为入参时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceID;
 
     /**
      * @var string 服务名称，作为入参时，无意义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceName;
 
     /**
      * @var string Upstream 名称，作为入参时，无意义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpstreamName;
 
     /**
      * @var float 百分比，10 即 10%，范围0-100
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Percent;
 
     /**
      * @param string $ServiceID 服务 ID，作为入参时，必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceName 服务名称，作为入参时，无意义
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpstreamName Upstream 名称，作为入参时，无意义
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Percent 百分比，10 即 10%，范围0-100
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

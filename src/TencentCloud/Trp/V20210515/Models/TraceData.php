@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getType() 获取码类型 0: 批次, 1: 码, 2: 生产任务
  * @method void setType(integer $Type) 设置码类型 0: 批次, 1: 码, 2: 生产任务
  * @method string getCode() 获取码值，跟码类型一一对应
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCode(string $Code) 设置码值，跟码类型一一对应
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRank() 获取排序，在Phase相同情况下，值越小排名靠前
  * @method void setRank(integer $Rank) 设置排序，在Phase相同情况下，值越小排名靠前
  * @method integer getPhase() 获取溯源阶段 0:商品 1:通用 2:生产溯源 3:销售溯源
@@ -37,29 +35,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPhaseName() 获取溯源环节名称
  * @method void setPhaseName(string $PhaseName) 设置溯源环节名称
  * @method string getTraceTime() 获取溯源时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTraceTime(string $TraceTime) 设置溯源时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getChainStatus() 获取上链状态 0: 未上链 1: 上链中 2: 已上链 -1: 异常
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChainStatus(integer $ChainStatus) 设置上链状态 0: 未上链 1: 上链中 2: 已上链 -1: 异常
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getChainTime() 获取上链时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChainTime(string $ChainTime) 设置上链时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ChainData getChainData() 获取上链数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChainData(ChainData $ChainData) 设置上链数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method PhaseData getPhaseData() 获取溯源阶段配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPhaseData(PhaseData $PhaseData) 设置溯源阶段配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取溯源阶段状态 0: 无效, 1: 有效
  * @method void setStatus(integer $Status) 设置溯源阶段状态 0: 无效, 1: 有效
  * @method array getTraceItems() 获取无
@@ -84,7 +70,6 @@ class TraceData extends AbstractModel
 
     /**
      * @var string 码值，跟码类型一一对应
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Code;
 
@@ -105,37 +90,31 @@ class TraceData extends AbstractModel
 
     /**
      * @var string 溯源时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TraceTime;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var integer 上链状态 0: 未上链 1: 上链中 2: 已上链 -1: 异常
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChainStatus;
 
     /**
      * @var string 上链时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChainTime;
 
     /**
      * @var ChainData 上链数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChainData;
 
     /**
      * @var PhaseData 溯源阶段配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PhaseData;
 
@@ -154,22 +133,15 @@ class TraceData extends AbstractModel
      * @param integer $CorpId 企业ID
      * @param integer $Type 码类型 0: 批次, 1: 码, 2: 生产任务
      * @param string $Code 码值，跟码类型一一对应
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Rank 排序，在Phase相同情况下，值越小排名靠前
      * @param integer $Phase 溯源阶段 0:商品 1:通用 2:生产溯源 3:销售溯源
      * @param string $PhaseName 溯源环节名称
      * @param string $TraceTime 溯源时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ChainStatus 上链状态 0: 未上链 1: 上链中 2: 已上链 -1: 异常
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChainTime 上链时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ChainData $ChainData 上链数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PhaseData $PhaseData 溯源阶段配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 溯源阶段状态 0: 无效, 1: 有效
      * @param array $TraceItems 无
      */

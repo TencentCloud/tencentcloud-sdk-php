@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method string getFlinkVersion() 获取查询对应Flink版本的内置connector
  * @method void setFlinkVersion(string $FlinkVersion) 设置查询对应Flink版本的内置connector
+ * @method string getWorkSpaceId() 获取空间
+ * @method void setWorkSpaceId(string $WorkSpaceId) 设置空间
  */
 class DescribeSystemResourcesRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DescribeSystemResourcesRequest extends AbstractModel
     public $FlinkVersion;
 
     /**
+     * @var string 空间
+     */
+    public $WorkSpaceId;
+
+    /**
      * @param array $ResourceIds 需要查询的资源ID数组
      * @param integer $Offset 偏移量，仅当设置 Limit 参数时有效
      * @param integer $Limit 条数限制，默认返回 20 条
      * @param array $Filters 查询资源配置列表， 如果不填写，返回该 ResourceIds.N 下所有作业配置列表
      * @param string $ClusterId 集群ID
      * @param string $FlinkVersion 查询对应Flink版本的内置connector
+     * @param string $WorkSpaceId 空间
      */
     function __construct()
     {
@@ -113,6 +121,10 @@ class DescribeSystemResourcesRequest extends AbstractModel
 
         if (array_key_exists("FlinkVersion",$param) and $param["FlinkVersion"] !== null) {
             $this->FlinkVersion = $param["FlinkVersion"];
+        }
+
+        if (array_key_exists("WorkSpaceId",$param) and $param["WorkSpaceId"] !== null) {
+            $this->WorkSpaceId = $param["WorkSpaceId"];
         }
     }
 }

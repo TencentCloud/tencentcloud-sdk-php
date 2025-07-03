@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
 暂不支持其余接收者类型。
  * @method array getReceiverIds() 获取接收者。
 当ReceiverType为Uin时，ReceiverIds的值为用户uid。[子用户信息查询](https://cloud.tencent.com/document/api/598/53486)
-当ReceiverType为Group时，ReceiverIds的值为用户组id。[CAM用户组](https://cloud.tencent.com/document/product/598/14985)
+当ReceiverType为Group时，ReceiverIds的值为用户组id。[CAM用户组](https://cloud.tencent.com/document/product/598/34589)
  * @method void setReceiverIds(array $ReceiverIds) 设置接收者。
 当ReceiverType为Uin时，ReceiverIds的值为用户uid。[子用户信息查询](https://cloud.tencent.com/document/api/598/53486)
-当ReceiverType为Group时，ReceiverIds的值为用户组id。[CAM用户组](https://cloud.tencent.com/document/product/598/14985)
+当ReceiverType为Group时，ReceiverIds的值为用户组id。[CAM用户组](https://cloud.tencent.com/document/product/598/34589)
  * @method array getReceiverChannels() 获取通知接收渠道。
 - Email - 邮件
 - Sms - 短信
@@ -44,10 +44,12 @@ use TencentCloud\Common\AbstractModel;
 - Sms - 短信
 - WeChat - 微信
 - Phone - 电话
- * @method string getStartTime() 获取允许接收信息的开始时间。格式：`15:04:05`，必填。
- * @method void setStartTime(string $StartTime) 设置允许接收信息的开始时间。格式：`15:04:05`，必填。
- * @method string getEndTime() 获取允许接收信息的结束时间。格式：`15:04:05`，必填。
- * @method void setEndTime(string $EndTime) 设置允许接收信息的结束时间。格式：`15:04:05`，必填。
+ * @method string getNoticeContentId() 获取通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。
+ * @method void setNoticeContentId(string $NoticeContentId) 设置通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。
+ * @method string getStartTime() 获取允许接收信息的开始时间。格式：`15:04:05`。必填
+ * @method void setStartTime(string $StartTime) 设置允许接收信息的开始时间。格式：`15:04:05`。必填
+ * @method string getEndTime() 获取允许接收信息的结束时间。格式：`15:04:05`。必填
+ * @method void setEndTime(string $EndTime) 设置允许接收信息的结束时间。格式：`15:04:05`。必填
  * @method integer getIndex() 获取位序。
 
 - 入参时无效。
@@ -70,7 +72,7 @@ class NoticeReceiver extends AbstractModel
     /**
      * @var array 接收者。
 当ReceiverType为Uin时，ReceiverIds的值为用户uid。[子用户信息查询](https://cloud.tencent.com/document/api/598/53486)
-当ReceiverType为Group时，ReceiverIds的值为用户组id。[CAM用户组](https://cloud.tencent.com/document/product/598/14985)
+当ReceiverType为Group时，ReceiverIds的值为用户组id。[CAM用户组](https://cloud.tencent.com/document/product/598/34589)
      */
     public $ReceiverIds;
 
@@ -84,12 +86,17 @@ class NoticeReceiver extends AbstractModel
     public $ReceiverChannels;
 
     /**
-     * @var string 允许接收信息的开始时间。格式：`15:04:05`，必填。
+     * @var string 通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。
+     */
+    public $NoticeContentId;
+
+    /**
+     * @var string 允许接收信息的开始时间。格式：`15:04:05`。必填
      */
     public $StartTime;
 
     /**
-     * @var string 允许接收信息的结束时间。格式：`15:04:05`，必填。
+     * @var string 允许接收信息的结束时间。格式：`15:04:05`。必填
      */
     public $EndTime;
 
@@ -108,14 +115,15 @@ class NoticeReceiver extends AbstractModel
 暂不支持其余接收者类型。
      * @param array $ReceiverIds 接收者。
 当ReceiverType为Uin时，ReceiverIds的值为用户uid。[子用户信息查询](https://cloud.tencent.com/document/api/598/53486)
-当ReceiverType为Group时，ReceiverIds的值为用户组id。[CAM用户组](https://cloud.tencent.com/document/product/598/14985)
+当ReceiverType为Group时，ReceiverIds的值为用户组id。[CAM用户组](https://cloud.tencent.com/document/product/598/34589)
      * @param array $ReceiverChannels 通知接收渠道。
 - Email - 邮件
 - Sms - 短信
 - WeChat - 微信
 - Phone - 电话
-     * @param string $StartTime 允许接收信息的开始时间。格式：`15:04:05`，必填。
-     * @param string $EndTime 允许接收信息的结束时间。格式：`15:04:05`，必填。
+     * @param string $NoticeContentId 通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。
+     * @param string $StartTime 允许接收信息的开始时间。格式：`15:04:05`。必填
+     * @param string $EndTime 允许接收信息的结束时间。格式：`15:04:05`。必填
      * @param integer $Index 位序。
 
 - 入参时无效。
@@ -144,6 +152,10 @@ class NoticeReceiver extends AbstractModel
 
         if (array_key_exists("ReceiverChannels",$param) and $param["ReceiverChannels"] !== null) {
             $this->ReceiverChannels = $param["ReceiverChannels"];
+        }
+
+        if (array_key_exists("NoticeContentId",$param) and $param["NoticeContentId"] !== null) {
+            $this->NoticeContentId = $param["NoticeContentId"];
         }
 
         if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {

@@ -36,22 +36,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCtsMax(integer $CtsMax) 设置最大创建时间的时间戳
  * @method integer getOffSet() 获取分页偏移量，取Limit整数倍。最小值为0，最大值= Total/Limit向上取整
  * @method void setOffSet(integer $OffSet) 设置分页偏移量，取Limit整数倍。最小值为0，最大值= Total/Limit向上取整
- * @method integer getLimit() 获取每页返回的数量
- * @method void setLimit(integer $Limit) 设置每页返回的数量
+ * @method integer getLimit() 获取每页返回的数量，默认为20
+ * @method void setLimit(integer $Limit) 设置每页返回的数量，默认为20
  * @method string getSource() 获取来源
  * @method void setSource(string $Source) 设置来源
  * @method string getSort() 获取排序参数
  * @method void setSort(string $Sort) 设置排序参数
  * @method string getIp() 获取IP
  * @method void setIp(string $Ip) 设置IP
- * @method integer getValidStatus() 获取生效状态
- * @method void setValidStatus(integer $ValidStatus) 设置生效状态
+ * @method integer getValidStatus() 获取生效状态，1表示生效中，2表示过期，0表示全部
+ * @method void setValidStatus(integer $ValidStatus) 设置生效状态，1表示生效中，2表示过期，0表示全部
  * @method string getValidTimeStampMin() 获取最小有效时间的时间戳
  * @method void setValidTimeStampMin(string $ValidTimeStampMin) 设置最小有效时间的时间戳
  * @method string getValidTimeStampMax() 获取最大有效时间的时间戳
  * @method void setValidTimeStampMax(string $ValidTimeStampMax) 设置最大有效时间的时间戳
  * @method integer getRuleId() 获取规则ID
  * @method void setRuleId(integer $RuleId) 设置规则ID
+ * @method integer getTimerType() 获取0表示全部，1表示永久生效，2表示定时生效，3表示周粒度生效，4表示月粒度生效
+ * @method void setTimerType(integer $TimerType) 设置0表示全部，1表示永久生效，2表示定时生效，3表示周粒度生效，4表示月粒度生效
  */
 class DescribeIpAccessControlRequest extends AbstractModel
 {
@@ -98,7 +100,7 @@ class DescribeIpAccessControlRequest extends AbstractModel
     public $OffSet;
 
     /**
-     * @var integer 每页返回的数量
+     * @var integer 每页返回的数量，默认为20
      */
     public $Limit;
 
@@ -118,7 +120,7 @@ class DescribeIpAccessControlRequest extends AbstractModel
     public $Ip;
 
     /**
-     * @var integer 生效状态
+     * @var integer 生效状态，1表示生效中，2表示过期，0表示全部
      */
     public $ValidStatus;
 
@@ -138,6 +140,11 @@ class DescribeIpAccessControlRequest extends AbstractModel
     public $RuleId;
 
     /**
+     * @var integer 0表示全部，1表示永久生效，2表示定时生效，3表示周粒度生效，4表示月粒度生效
+     */
+    public $TimerType;
+
+    /**
      * @param string $Domain 域名
      * @param integer $Count 计数标识
      * @param integer $ActionType 动作，40表示查询白名单，42表示查询黑名单
@@ -146,14 +153,15 @@ class DescribeIpAccessControlRequest extends AbstractModel
      * @param integer $CtsMin 最小创建时间的时间戳
      * @param integer $CtsMax 最大创建时间的时间戳
      * @param integer $OffSet 分页偏移量，取Limit整数倍。最小值为0，最大值= Total/Limit向上取整
-     * @param integer $Limit 每页返回的数量
+     * @param integer $Limit 每页返回的数量，默认为20
      * @param string $Source 来源
      * @param string $Sort 排序参数
      * @param string $Ip IP
-     * @param integer $ValidStatus 生效状态
+     * @param integer $ValidStatus 生效状态，1表示生效中，2表示过期，0表示全部
      * @param string $ValidTimeStampMin 最小有效时间的时间戳
      * @param string $ValidTimeStampMax 最大有效时间的时间戳
      * @param integer $RuleId 规则ID
+     * @param integer $TimerType 0表示全部，1表示永久生效，2表示定时生效，3表示周粒度生效，4表示月粒度生效
      */
     function __construct()
     {
@@ -230,6 +238,10 @@ class DescribeIpAccessControlRequest extends AbstractModel
 
         if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
             $this->RuleId = $param["RuleId"];
+        }
+
+        if (array_key_exists("TimerType",$param) and $param["TimerType"] !== null) {
+            $this->TimerType = $param["TimerType"];
         }
     }
 }

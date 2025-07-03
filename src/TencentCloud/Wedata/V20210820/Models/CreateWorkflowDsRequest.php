@@ -28,6 +28,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFolderId(string $FolderId) 设置文件夹ID
  * @method string getWorkflowDesc() 获取工作流描述
  * @method void setWorkflowDesc(string $WorkflowDesc) 设置工作流描述
+ * @method string getWorkflowType() 获取工作流类型,取值示例
+
+- cycle 周期工作流
+- manual 手动工作流
+
+ * @method void setWorkflowType(string $WorkflowType) 设置工作流类型,取值示例
+
+- cycle 周期工作流
+- manual 手动工作流
  */
 class CreateWorkflowDsRequest extends AbstractModel
 {
@@ -52,10 +61,23 @@ class CreateWorkflowDsRequest extends AbstractModel
     public $WorkflowDesc;
 
     /**
+     * @var string 工作流类型,取值示例
+
+- cycle 周期工作流
+- manual 手动工作流
+
+     */
+    public $WorkflowType;
+
+    /**
      * @param string $ProjectId 项目ID
      * @param string $WorkflowName 工作流名称
      * @param string $FolderId 文件夹ID
      * @param string $WorkflowDesc 工作流描述
+     * @param string $WorkflowType 工作流类型,取值示例
+
+- cycle 周期工作流
+- manual 手动工作流
      */
     function __construct()
     {
@@ -84,6 +106,10 @@ class CreateWorkflowDsRequest extends AbstractModel
 
         if (array_key_exists("WorkflowDesc",$param) and $param["WorkflowDesc"] !== null) {
             $this->WorkflowDesc = $param["WorkflowDesc"];
+        }
+
+        if (array_key_exists("WorkflowType",$param) and $param["WorkflowType"] !== null) {
+            $this->WorkflowType = $param["WorkflowType"];
         }
     }
 }

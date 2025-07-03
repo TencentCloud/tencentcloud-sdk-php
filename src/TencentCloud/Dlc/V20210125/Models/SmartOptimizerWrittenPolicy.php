@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SmartOptimizerWrittenPolicy
  *
-
+ * @method string getWrittenEnable() 获取none/enable/disable/default
+ * @method void setWrittenEnable(string $WrittenEnable) 设置none/enable/disable/default
  */
 class SmartOptimizerWrittenPolicy extends AbstractModel
 {
-
+    /**
+     * @var string none/enable/disable/default
+     */
+    public $WrittenEnable;
 
     /**
-
+     * @param string $WrittenEnable none/enable/disable/default
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class SmartOptimizerWrittenPolicy extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("WrittenEnable",$param) and $param["WrittenEnable"] !== null) {
+            $this->WrittenEnable = $param["WrittenEnable"];
+        }
     }
 }

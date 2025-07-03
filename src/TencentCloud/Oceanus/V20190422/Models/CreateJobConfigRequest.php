@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setJobId(string $JobId) 设置作业Id
  * @method string getEntrypointClass() 获取主类
  * @method void setEntrypointClass(string $EntrypointClass) 设置主类
- * @method string getProgramArgs() 获取主类入参
- * @method void setProgramArgs(string $ProgramArgs) 设置主类入参
+ * @method string getProgramArgs() 获取主类入参，需要区分下Sql作业配置，Jar作业配置，Python作业配置，具体参考下面的示例值
+ * @method void setProgramArgs(string $ProgramArgs) 设置主类入参，需要区分下Sql作业配置，Jar作业配置，Python作业配置，具体参考下面的示例值
  * @method string getRemark() 获取备注
  * @method void setRemark(string $Remark) 设置备注
  * @method array getResourceRefs() 获取资源引用数组
@@ -76,6 +76,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEsServerlessIndex(string $EsServerlessIndex) 设置es索引名称
  * @method string getEsServerlessSpace() 获取es索引空间
  * @method void setEsServerlessSpace(string $EsServerlessSpace) 设置es索引空间
+ * @method string getFlinkVersion() 获取flink版本
+ * @method void setFlinkVersion(string $FlinkVersion) 设置flink版本
+ * @method float getJobManagerCpu() 获取JobManager cpu
+ * @method void setJobManagerCpu(float $JobManagerCpu) 设置JobManager cpu
+ * @method float getJobManagerMem() 获取JobManager 内存
+ * @method void setJobManagerMem(float $JobManagerMem) 设置JobManager 内存
+ * @method float getTaskManagerCpu() 获取TaskManager cpu
+ * @method void setTaskManagerCpu(float $TaskManagerCpu) 设置TaskManager cpu
+ * @method float getTaskManagerMem() 获取TaskManager 内存
+ * @method void setTaskManagerMem(float $TaskManagerMem) 设置TaskManager 内存
  */
 class CreateJobConfigRequest extends AbstractModel
 {
@@ -90,7 +100,7 @@ class CreateJobConfigRequest extends AbstractModel
     public $EntrypointClass;
 
     /**
-     * @var string 主类入参
+     * @var string 主类入参，需要区分下Sql作业配置，Jar作业配置，Python作业配置，具体参考下面的示例值
      */
     public $ProgramArgs;
 
@@ -220,9 +230,34 @@ class CreateJobConfigRequest extends AbstractModel
     public $EsServerlessSpace;
 
     /**
+     * @var string flink版本
+     */
+    public $FlinkVersion;
+
+    /**
+     * @var float JobManager cpu
+     */
+    public $JobManagerCpu;
+
+    /**
+     * @var float JobManager 内存
+     */
+    public $JobManagerMem;
+
+    /**
+     * @var float TaskManager cpu
+     */
+    public $TaskManagerCpu;
+
+    /**
+     * @var float TaskManager 内存
+     */
+    public $TaskManagerMem;
+
+    /**
      * @param string $JobId 作业Id
      * @param string $EntrypointClass 主类
-     * @param string $ProgramArgs 主类入参
+     * @param string $ProgramArgs 主类入参，需要区分下Sql作业配置，Jar作业配置，Python作业配置，具体参考下面的示例值
      * @param string $Remark 备注
      * @param array $ResourceRefs 资源引用数组
      * @param integer $DefaultParallelism 作业默认并行度
@@ -248,6 +283,11 @@ class CreateJobConfigRequest extends AbstractModel
      * @param JobGraph $JobGraph 算子拓扑图
      * @param string $EsServerlessIndex es索引名称
      * @param string $EsServerlessSpace es索引空间
+     * @param string $FlinkVersion flink版本
+     * @param float $JobManagerCpu JobManager cpu
+     * @param float $JobManagerMem JobManager 内存
+     * @param float $TaskManagerCpu TaskManager cpu
+     * @param float $TaskManagerMem TaskManager 内存
      */
     function __construct()
     {
@@ -390,6 +430,26 @@ class CreateJobConfigRequest extends AbstractModel
 
         if (array_key_exists("EsServerlessSpace",$param) and $param["EsServerlessSpace"] !== null) {
             $this->EsServerlessSpace = $param["EsServerlessSpace"];
+        }
+
+        if (array_key_exists("FlinkVersion",$param) and $param["FlinkVersion"] !== null) {
+            $this->FlinkVersion = $param["FlinkVersion"];
+        }
+
+        if (array_key_exists("JobManagerCpu",$param) and $param["JobManagerCpu"] !== null) {
+            $this->JobManagerCpu = $param["JobManagerCpu"];
+        }
+
+        if (array_key_exists("JobManagerMem",$param) and $param["JobManagerMem"] !== null) {
+            $this->JobManagerMem = $param["JobManagerMem"];
+        }
+
+        if (array_key_exists("TaskManagerCpu",$param) and $param["TaskManagerCpu"] !== null) {
+            $this->TaskManagerCpu = $param["TaskManagerCpu"];
+        }
+
+        if (array_key_exists("TaskManagerMem",$param) and $param["TaskManagerMem"] !== null) {
+            $this->TaskManagerMem = $param["TaskManagerMem"];
         }
     }
 }

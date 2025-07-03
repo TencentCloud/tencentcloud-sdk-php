@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getSelfBuilt() 获取是否为自建集群
  * @method void setSelfBuilt(boolean $SelfBuilt) 设置是否为自建集群
- * @method string getResource() 获取实例资源
- * @method void setResource(string $Resource) 设置实例资源
- * @method string getTopic() 获取Topic名称，多个以“,”分隔
- * @method void setTopic(string $Topic) 设置Topic名称，多个以“,”分隔
+ * @method string getResource() 获取ckafka集群实例Id
+ * @method void setResource(string $Resource) 设置ckafka集群实例Id
+ * @method string getTopic() 获取主题名，多个以“,”分隔
+ * @method void setTopic(string $Topic) 设置主题名，多个以“,”分隔
  * @method string getOffsetType() 获取Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOffsetType(string $OffsetType) 设置Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp
@@ -38,13 +38,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceName(string $ResourceName) 设置实例资源名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getZoneId() 获取Zone ID
+ * @method integer getZoneId() 获取可用区
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setZoneId(integer $ZoneId) 设置Zone ID
+ * @method void setZoneId(integer $ZoneId) 设置可用区
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTopicId() 获取Topic的Id
+ * @method string getTopicId() 获取主题Id
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTopicId(string $TopicId) 设置Topic的Id
+ * @method void setTopicId(string $TopicId) 设置主题Id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPartitionNum() 获取Topic的分区数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -55,37 +55,25 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableToleration(boolean $EnableToleration) 设置启用容错实例/开启死信队列
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getQpsLimit() 获取Qps 限制
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQpsLimit(integer $QpsLimit) 设置Qps 限制
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTableMappings() 获取Table到Topic的路由，「分发到多个topic」开关打开时必传
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTableMappings(array $TableMappings) 设置Table到Topic的路由，「分发到多个topic」开关打开时必传
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getUseTableMapping() 获取「分发到多个topic」开关，默认为false
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUseTableMapping(boolean $UseTableMapping) 设置「分发到多个topic」开关，默认为false
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getUseAutoCreateTopic() 获取使用的Topic是否需要自动创建（目前只支持SOURCE流入任务，如果不使用分发到多个topic，需要在Topic字段填写需要自动创建的topic名）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUseAutoCreateTopic(boolean $UseAutoCreateTopic) 设置使用的Topic是否需要自动创建（目前只支持SOURCE流入任务，如果不使用分发到多个topic，需要在Topic字段填写需要自动创建的topic名）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCompressionType() 获取写入Topic时是否进行压缩，不开启填"none"，开启的话，填写"open"。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCompressionType(string $CompressionType) 设置写入Topic时是否进行压缩，不开启填"none"，开启的话，填写"open"。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMsgMultiple() 获取源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMsgMultiple(integer $MsgMultiple) 设置源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConnectorSyncType() 获取数据同步专用参数, 正常数据处理可为空, 实例级别同步: 仅同步元数据填写"META_SYNC_INSTANCE_TYPE", 同步元数据及全部topic内消息的填写"META_AND_DATA_SYNC_INSTANCE_TYPE"; topic级别同步: 选中的源和目标topic中的消息(需要目标实例也包含该topic)填写"DATA_SYNC_TYPE"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConnectorSyncType(string $ConnectorSyncType) 设置数据同步专用参数, 正常数据处理可为空, 实例级别同步: 仅同步元数据填写"META_SYNC_INSTANCE_TYPE", 同步元数据及全部topic内消息的填写"META_AND_DATA_SYNC_INSTANCE_TYPE"; topic级别同步: 选中的源和目标topic中的消息(需要目标实例也包含该topic)填写"DATA_SYNC_TYPE"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getKeepPartition() 获取数据同步专用参数, 当通过时,希望下游的消息写入分区与上游的一致,则填true,但下游分区小于上游时,会报错; 不需要一致则为false, 默认为false
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeepPartition(boolean $KeepPartition) 设置数据同步专用参数, 当通过时,希望下游的消息写入分区与上游的一致,则填true,但下游分区小于上游时,会报错; 不需要一致则为false, 默认为false
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTopicRegularExpression() 获取正则匹配Topic列表
+ * @method void setTopicRegularExpression(string $TopicRegularExpression) 设置正则匹配Topic列表
  */
 class KafkaParam extends AbstractModel
 {
@@ -95,12 +83,12 @@ class KafkaParam extends AbstractModel
     public $SelfBuilt;
 
     /**
-     * @var string 实例资源
+     * @var string ckafka集群实例Id
      */
     public $Resource;
 
     /**
-     * @var string Topic名称，多个以“,”分隔
+     * @var string 主题名，多个以“,”分隔
      */
     public $Topic;
 
@@ -123,13 +111,13 @@ class KafkaParam extends AbstractModel
     public $ResourceName;
 
     /**
-     * @var integer Zone ID
+     * @var integer 可用区
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneId;
 
     /**
-     * @var string Topic的Id
+     * @var string 主题Id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicId;
@@ -148,7 +136,6 @@ class KafkaParam extends AbstractModel
 
     /**
      * @var integer Qps 限制
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QpsLimit;
 
@@ -160,74 +147,67 @@ class KafkaParam extends AbstractModel
 
     /**
      * @var boolean 「分发到多个topic」开关，默认为false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UseTableMapping;
 
     /**
      * @var boolean 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务，如果不使用分发到多个topic，需要在Topic字段填写需要自动创建的topic名）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UseAutoCreateTopic;
 
     /**
      * @var string 写入Topic时是否进行压缩，不开启填"none"，开启的话，填写"open"。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CompressionType;
 
     /**
      * @var integer 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MsgMultiple;
 
     /**
      * @var string 数据同步专用参数, 正常数据处理可为空, 实例级别同步: 仅同步元数据填写"META_SYNC_INSTANCE_TYPE", 同步元数据及全部topic内消息的填写"META_AND_DATA_SYNC_INSTANCE_TYPE"; topic级别同步: 选中的源和目标topic中的消息(需要目标实例也包含该topic)填写"DATA_SYNC_TYPE"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConnectorSyncType;
 
     /**
      * @var boolean 数据同步专用参数, 当通过时,希望下游的消息写入分区与上游的一致,则填true,但下游分区小于上游时,会报错; 不需要一致则为false, 默认为false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KeepPartition;
 
     /**
+     * @var string 正则匹配Topic列表
+     */
+    public $TopicRegularExpression;
+
+    /**
      * @param boolean $SelfBuilt 是否为自建集群
-     * @param string $Resource 实例资源
-     * @param string $Topic Topic名称，多个以“,”分隔
+     * @param string $Resource ckafka集群实例Id
+     * @param string $Topic 主题名，多个以“,”分隔
      * @param string $OffsetType Offset类型，最开始位置earliest，最新位置latest，时间点位置timestamp
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StartTime Offset类型为timestamp时必传，传时间戳，精确到秒
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceName 实例资源名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ZoneId Zone ID
+     * @param integer $ZoneId 可用区
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TopicId Topic的Id
+     * @param string $TopicId 主题Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PartitionNum Topic的分区数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $EnableToleration 启用容错实例/开启死信队列
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $QpsLimit Qps 限制
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TableMappings Table到Topic的路由，「分发到多个topic」开关打开时必传
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $UseTableMapping 「分发到多个topic」开关，默认为false
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $UseAutoCreateTopic 使用的Topic是否需要自动创建（目前只支持SOURCE流入任务，如果不使用分发到多个topic，需要在Topic字段填写需要自动创建的topic名）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CompressionType 写入Topic时是否进行压缩，不开启填"none"，开启的话，填写"open"。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MsgMultiple 源topic消息1条扩增成msgMultiple条写入目标topic(该参数目前只有ckafka流入ckafka适用)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConnectorSyncType 数据同步专用参数, 正常数据处理可为空, 实例级别同步: 仅同步元数据填写"META_SYNC_INSTANCE_TYPE", 同步元数据及全部topic内消息的填写"META_AND_DATA_SYNC_INSTANCE_TYPE"; topic级别同步: 选中的源和目标topic中的消息(需要目标实例也包含该topic)填写"DATA_SYNC_TYPE"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $KeepPartition 数据同步专用参数, 当通过时,希望下游的消息写入分区与上游的一致,则填true,但下游分区小于上游时,会报错; 不需要一致则为false, 默认为false
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TopicRegularExpression 正则匹配Topic列表
      */
     function __construct()
     {
@@ -317,6 +297,10 @@ class KafkaParam extends AbstractModel
 
         if (array_key_exists("KeepPartition",$param) and $param["KeepPartition"] !== null) {
             $this->KeepPartition = $param["KeepPartition"];
+        }
+
+        if (array_key_exists("TopicRegularExpression",$param) and $param["TopicRegularExpression"] !== null) {
+            $this->TopicRegularExpression = $param["TopicRegularExpression"];
         }
     }
 }

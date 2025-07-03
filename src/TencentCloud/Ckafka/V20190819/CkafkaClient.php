@@ -36,7 +36,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\CreateConsumerResponse CreateConsumer(Models\CreateConsumerRequest $req) 创建消费者组
  * @method Models\CreateDatahubTaskResponse CreateDatahubTask(Models\CreateDatahubTaskRequest $req) 创建DIP转储任务
  * @method Models\CreateDatahubTopicResponse CreateDatahubTopic(Models\CreateDatahubTopicRequest $req) 创建DIP主题
- * @method Models\CreateInstancePostResponse CreateInstancePost(Models\CreateInstancePostRequest $req) 由于出参需要更新，当前接口将会在未来版本中废弃，建议用户迁移使用 CreatePostPaidInstance 接口。创建按量计费实例。通常用于 SDK 或云 API 控制台调用接口，创建后付费 CKafka 实例。调用接口与在 CKafka 控制台购买按量付费实例效果相同。
+ * @method Models\CreateInstancePostResponse CreateInstancePost(Models\CreateInstancePostRequest $req) 由于出参需要更新，建议用户迁移使用 CreatePostPaidInstance 接口。创建按量计费实例。通常用于 SDK 或云 API 控制台调用接口，创建后付费 CKafka 实例。调用接口与在 CKafka 控制台购买按量付费实例效果相同。
  * @method Models\CreateInstancePreResponse CreateInstancePre(Models\CreateInstancePreRequest $req) 创建实例(预付费包年包月),  仅支持创建专业版实例
  * @method Models\CreatePartitionResponse CreatePartition(Models\CreatePartitionRequest $req) 本接口用于增加主题中的分区
  * @method Models\CreatePostPaidInstanceResponse CreatePostPaidInstance(Models\CreatePostPaidInstanceRequest $req) 当前接口用来替代 CreateInstancePost 接口。创建按量计费实例。通常用于 SDK 或云 API 控制台调用接口，创建后付费 CKafka 实例。调用接口与在 CKafka 控制台购买按量付费实例效果相同。
@@ -50,10 +50,10 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\DeleteAclRuleResponse DeleteAclRule(Models\DeleteAclRuleRequest $req) 删除ACL规则
  * @method Models\DeleteConnectResourceResponse DeleteConnectResource(Models\DeleteConnectResourceRequest $req) 删除Datahub连接源
  * @method Models\DeleteDatahubTaskResponse DeleteDatahubTask(Models\DeleteDatahubTaskRequest $req) 删除Dip任务
- * @method Models\DeleteDatahubTopicResponse DeleteDatahubTopic(Models\DeleteDatahubTopicRequest $req) 删除Datahub主题
+ * @method Models\DeleteDatahubTopicResponse DeleteDatahubTopic(Models\DeleteDatahubTopicRequest $req) 删除DIP主题
  * @method Models\DeleteGroupResponse DeleteGroup(Models\DeleteGroupRequest $req) 删除消费组
  * @method Models\DeleteInstancePostResponse DeleteInstancePost(Models\DeleteInstancePostRequest $req) 删除后付费实例
- * @method Models\DeleteInstancePreResponse DeleteInstancePre(Models\DeleteInstancePreRequest $req) 删除预付费实例
+ * @method Models\DeleteInstancePreResponse DeleteInstancePre(Models\DeleteInstancePreRequest $req) 删除预付费实例，该接口会对实例执行隔离并删除的动作，执行成功后实例会被直接删除销毁
  * @method Models\DeleteRouteResponse DeleteRoute(Models\DeleteRouteRequest $req) 删除路由
  * @method Models\DeleteRouteTriggerTimeResponse DeleteRouteTriggerTime(Models\DeleteRouteTriggerTimeRequest $req) 修改删除路由延迟触发时间
  * @method Models\DeleteTopicResponse DeleteTopic(Models\DeleteTopicRequest $req) 删除ckafka主题
@@ -66,9 +66,10 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\DescribeConnectResourceResponse DescribeConnectResource(Models\DescribeConnectResourceRequest $req) 查询Datahub连接源
  * @method Models\DescribeConnectResourcesResponse DescribeConnectResources(Models\DescribeConnectResourcesRequest $req) 查询Datahub连接源列表
  * @method Models\DescribeConsumerGroupResponse DescribeConsumerGroup(Models\DescribeConsumerGroupRequest $req) 查询消费分组信息
+ * @method Models\DescribeCvmInfoResponse DescribeCvmInfo(Models\DescribeCvmInfoRequest $req) 本接口用于获取实例对应后端CVM信息，包括cvmId和ip等。用于专业版，标准版返回数据为空
  * @method Models\DescribeDatahubGroupOffsetsResponse DescribeDatahubGroupOffsets(Models\DescribeDatahubGroupOffsetsRequest $req) 获取Datahub消费分组offset
  * @method Models\DescribeDatahubTaskResponse DescribeDatahubTask(Models\DescribeDatahubTaskRequest $req) 查询Datahub任务信息
- * @method Models\DescribeDatahubTasksResponse DescribeDatahubTasks(Models\DescribeDatahubTasksRequest $req) 查询Datahub任务列表 
+ * @method Models\DescribeDatahubTasksResponse DescribeDatahubTasks(Models\DescribeDatahubTasksRequest $req) 查询Datahub任务列表
  * @method Models\DescribeDatahubTopicResponse DescribeDatahubTopic(Models\DescribeDatahubTopicRequest $req) 获取DIP主题属性
  * @method Models\DescribeDatahubTopicsResponse DescribeDatahubTopics(Models\DescribeDatahubTopicsRequest $req) 查询DIP主题列表
  * @method Models\DescribeGroupResponse DescribeGroup(Models\DescribeGroupRequest $req) 枚举消费分组(精简版)
@@ -80,6 +81,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\DescribePrometheusResponse DescribePrometheus(Models\DescribePrometheusRequest $req) 获取实例Prometheus信息
  * @method Models\DescribeRegionResponse DescribeRegion(Models\DescribeRegionRequest $req) 枚举地域,只支持广州地域
  * @method Models\DescribeRouteResponse DescribeRoute(Models\DescribeRouteRequest $req) 查看路由信息
+ * @method Models\DescribeSecurityGroupRoutesResponse DescribeSecurityGroupRoutes(Models\DescribeSecurityGroupRoutesRequest $req) 获取安全组路由信息列表
  * @method Models\DescribeTaskStatusResponse DescribeTaskStatus(Models\DescribeTaskStatusRequest $req) 查询任务状态
  * @method Models\DescribeTopicResponse DescribeTopic(Models\DescribeTopicRequest $req) 接口请求域名：https://ckafka.tencentcloudapi.com
 本接口（DescribeTopic）用于在用户获取消息队列 CKafka 实例的主题列表
@@ -89,11 +91,13 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\DescribeTopicProduceConnectionResponse DescribeTopicProduceConnection(Models\DescribeTopicProduceConnectionRequest $req) 查询topic 生产端连接信息
  * @method Models\DescribeTopicSubscribeGroupResponse DescribeTopicSubscribeGroup(Models\DescribeTopicSubscribeGroupRequest $req) 查询订阅某主题消息分组信息
  * @method Models\DescribeTopicSyncReplicaResponse DescribeTopicSyncReplica(Models\DescribeTopicSyncReplicaRequest $req) 获取Topic 副本详情信息
+ * @method Models\DescribeTypeInstancesResponse DescribeTypeInstances(Models\DescribeTypeInstancesRequest $req) 本接口（DescribeTypeInstances）用于在用户账户下获取指定类型消息队列 CKafka 实例列表
  * @method Models\DescribeUserResponse DescribeUser(Models\DescribeUserRequest $req) 查询用户信息
  * @method Models\FetchDatahubMessageByOffsetResponse FetchDatahubMessageByOffset(Models\FetchDatahubMessageByOffsetRequest $req) 根据指定offset位置的消息
  * @method Models\FetchLatestDatahubMessageListResponse FetchLatestDatahubMessageList(Models\FetchLatestDatahubMessageListRequest $req) 查询最新消息列表
  * @method Models\FetchMessageByOffsetResponse FetchMessageByOffset(Models\FetchMessageByOffsetRequest $req) 根据指定offset位置的消息
  * @method Models\FetchMessageListByOffsetResponse FetchMessageListByOffset(Models\FetchMessageListByOffsetRequest $req) 根据位点查询消息列表
+ * @method Models\FetchMessageListByTimestampResponse FetchMessageListByTimestamp(Models\FetchMessageListByTimestampRequest $req) 根据时间戳查询消息列表
  * @method Models\InquireCkafkaPriceResponse InquireCkafkaPrice(Models\InquireCkafkaPriceRequest $req) Ckafka实例购买/续费询价
  * @method Models\InstanceScalingDownResponse InstanceScalingDown(Models\InstanceScalingDownRequest $req) 按量实例缩容
  * @method Models\ModifyAclRuleResponse ModifyAclRule(Models\ModifyAclRuleRequest $req) 修改ACL策略，目前只支持预设规则的是否应用到新增topic这一项的修改
@@ -104,6 +108,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\ModifyInstanceAttributesResponse ModifyInstanceAttributes(Models\ModifyInstanceAttributesRequest $req) 设置实例属性
  * @method Models\ModifyInstancePreResponse ModifyInstancePre(Models\ModifyInstancePreRequest $req) 预付费实例变配接口，调整磁盘，带宽
  * @method Models\ModifyPasswordResponse ModifyPassword(Models\ModifyPasswordRequest $req) 修改密码
+ * @method Models\ModifyRoutineMaintenanceTaskResponse ModifyRoutineMaintenanceTask(Models\ModifyRoutineMaintenanceTaskRequest $req) 设置自动化运维属性
  * @method Models\ModifyTopicAttributesResponse ModifyTopicAttributes(Models\ModifyTopicAttributesRequest $req) 本接口用于修改主题属性。
  * @method Models\RenewCkafkaInstanceResponse RenewCkafkaInstance(Models\RenewCkafkaInstanceRequest $req) 续费Ckafka实例, 目前只支持国内站包年包月实例续费
  * @method Models\SendMessageResponse SendMessage(Models\SendMessageRequest $req) 通过HTTP接入层发送消息

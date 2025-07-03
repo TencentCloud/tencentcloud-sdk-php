@@ -24,16 +24,16 @@ use TencentCloud\Common\AbstractModel;
 
  * @method void setInstanceId(string $InstanceId) 设置指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
 
- * @method string getBeginTime() 获取慢查询的开始时间。
- * @method void setBeginTime(string $BeginTime) 设置慢查询的开始时间。
- * @method string getEndTime() 获取慢查询的结束时间。
- * @method void setEndTime(string $EndTime) 设置慢查询的结束时间。
+ * @method string getBeginTime() 获取慢查询的开始时间，查询时间最大跨度30天。
+ * @method void setBeginTime(string $BeginTime) 设置慢查询的开始时间，查询时间最大跨度30天。
+ * @method string getEndTime() 获取慢查询的结束时间，查询时间最大跨度30天。
+ * @method void setEndTime(string $EndTime) 设置慢查询的结束时间，查询时间最大跨度30天。
  * @method integer getMinQueryTime() 获取慢查询阈值，单位：毫秒。
  * @method void setMinQueryTime(integer $MinQueryTime) 设置慢查询阈值，单位：毫秒。
- * @method integer getLimit() 获取分页大小。默认为 20，取值范围[20,1000]。
- * @method void setLimit(integer $Limit) 设置分页大小。默认为 20，取值范围[20,1000]。
- * @method integer getOffset() 获取偏移量，取Limit整数倍。
- * @method void setOffset(integer $Offset) 设置偏移量，取Limit整数倍。
+ * @method integer getLimit() 获取每页输出的任务列表大小，默认为 20，最多输出100条。
+ * @method void setLimit(integer $Limit) 设置每页输出的任务列表大小，默认为 20，最多输出100条。
+ * @method integer getOffset() 获取分页偏移量，取Limit整数倍，计算公式：offset=limit*(页码-1)。
+ * @method void setOffset(integer $Offset) 设置分页偏移量，取Limit整数倍，计算公式：offset=limit*(页码-1)。
  */
 class DescribeProxySlowLogRequest extends AbstractModel
 {
@@ -44,12 +44,12 @@ class DescribeProxySlowLogRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 慢查询的开始时间。
+     * @var string 慢查询的开始时间，查询时间最大跨度30天。
      */
     public $BeginTime;
 
     /**
-     * @var string 慢查询的结束时间。
+     * @var string 慢查询的结束时间，查询时间最大跨度30天。
      */
     public $EndTime;
 
@@ -59,23 +59,23 @@ class DescribeProxySlowLogRequest extends AbstractModel
     public $MinQueryTime;
 
     /**
-     * @var integer 分页大小。默认为 20，取值范围[20,1000]。
+     * @var integer 每页输出的任务列表大小，默认为 20，最多输出100条。
      */
     public $Limit;
 
     /**
-     * @var integer 偏移量，取Limit整数倍。
+     * @var integer 分页偏移量，取Limit整数倍，计算公式：offset=limit*(页码-1)。
      */
     public $Offset;
 
     /**
      * @param string $InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
 
-     * @param string $BeginTime 慢查询的开始时间。
-     * @param string $EndTime 慢查询的结束时间。
+     * @param string $BeginTime 慢查询的开始时间，查询时间最大跨度30天。
+     * @param string $EndTime 慢查询的结束时间，查询时间最大跨度30天。
      * @param integer $MinQueryTime 慢查询阈值，单位：毫秒。
-     * @param integer $Limit 分页大小。默认为 20，取值范围[20,1000]。
-     * @param integer $Offset 偏移量，取Limit整数倍。
+     * @param integer $Limit 每页输出的任务列表大小，默认为 20，最多输出100条。
+     * @param integer $Offset 分页偏移量，取Limit整数倍，计算公式：offset=limit*(页码-1)。
      */
     function __construct()
     {

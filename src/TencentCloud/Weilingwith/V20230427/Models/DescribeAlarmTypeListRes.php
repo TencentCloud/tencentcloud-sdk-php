@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 告警类型列表回包
  *
  * @method array getAlarmTypeSet() 获取告警类型查询列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlarmTypeSet(array $AlarmTypeSet) 设置告警类型查询列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeAlarmTypeListRes extends AbstractModel
 {
     /**
      * @var array 告警类型查询列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlarmTypeSet;
 
     /**
      * @param array $AlarmTypeSet 告警类型查询列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

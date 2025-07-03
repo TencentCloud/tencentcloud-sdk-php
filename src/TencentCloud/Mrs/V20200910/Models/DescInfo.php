@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 描述段落
  *
  * @method BaseInfo getText() 获取描述段落文本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setText(BaseInfo $Text) 设置描述段落文本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getInfos() 获取描述段落详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInfos(array $Infos) 设置描述段落详情
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescInfo extends AbstractModel
 {
     /**
      * @var BaseInfo 描述段落文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Text;
 
     /**
      * @var array 描述段落详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Infos;
 
     /**
      * @param BaseInfo $Text 描述段落文本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Infos 描述段落详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

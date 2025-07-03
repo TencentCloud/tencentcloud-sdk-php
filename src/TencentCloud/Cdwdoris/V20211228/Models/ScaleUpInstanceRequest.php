@@ -24,8 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置集群ID
  * @method string getSpecName() 获取节点规格
  * @method void setSpecName(string $SpecName) 设置节点规格
- * @method string getType() 获取角色（MATER/CORE），MASTER 对应 FE，CORE对应BE
- * @method void setType(string $Type) 设置角色（MATER/CORE），MASTER 对应 FE，CORE对应BE
+ * @method string getType() 获取角色（MASTER/CORE），MASTER 对应 FE，CORE对应BE
+ * @method void setType(string $Type) 设置角色（MASTER/CORE），MASTER 对应 FE，CORE对应BE
+ * @method boolean getCheckAuth() 获取前端鉴权使用，后端API调用传false，传true不会执行变配
+ * @method void setCheckAuth(boolean $CheckAuth) 设置前端鉴权使用，后端API调用传false，传true不会执行变配
+ * @method boolean getRollingRestart() 获取是否滚动重启
+ * @method void setRollingRestart(boolean $RollingRestart) 设置是否滚动重启
  */
 class ScaleUpInstanceRequest extends AbstractModel
 {
@@ -40,14 +44,26 @@ class ScaleUpInstanceRequest extends AbstractModel
     public $SpecName;
 
     /**
-     * @var string 角色（MATER/CORE），MASTER 对应 FE，CORE对应BE
+     * @var string 角色（MASTER/CORE），MASTER 对应 FE，CORE对应BE
      */
     public $Type;
 
     /**
+     * @var boolean 前端鉴权使用，后端API调用传false，传true不会执行变配
+     */
+    public $CheckAuth;
+
+    /**
+     * @var boolean 是否滚动重启
+     */
+    public $RollingRestart;
+
+    /**
      * @param string $InstanceId 集群ID
      * @param string $SpecName 节点规格
-     * @param string $Type 角色（MATER/CORE），MASTER 对应 FE，CORE对应BE
+     * @param string $Type 角色（MASTER/CORE），MASTER 对应 FE，CORE对应BE
+     * @param boolean $CheckAuth 前端鉴权使用，后端API调用传false，传true不会执行变配
+     * @param boolean $RollingRestart 是否滚动重启
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class ScaleUpInstanceRequest extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("CheckAuth",$param) and $param["CheckAuth"] !== null) {
+            $this->CheckAuth = $param["CheckAuth"];
+        }
+
+        if (array_key_exists("RollingRestart",$param) and $param["RollingRestart"] !== null) {
+            $this->RollingRestart = $param["RollingRestart"];
         }
     }
 }

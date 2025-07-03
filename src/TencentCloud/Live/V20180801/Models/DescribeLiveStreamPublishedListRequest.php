@@ -22,20 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomainName() 获取您的推流域名。
  * @method void setDomainName(string $DomainName) 设置您的推流域名。
- * @method string getEndTime() 获取结束时间。
-UTC 格式，例如：2016-06-30T19:00:00Z。
-不超过当前时间。
-注意：EndTime和StartTime相差不可超过30天。
- * @method void setEndTime(string $EndTime) 设置结束时间。
-UTC 格式，例如：2016-06-30T19:00:00Z。
-不超过当前时间。
-注意：EndTime和StartTime相差不可超过30天。
- * @method string getStartTime() 获取起始时间。 
-UTC 格式，例如：2016-06-29T19:00:00Z。
-最长支持查询60天内数据。
- * @method void setStartTime(string $StartTime) 设置起始时间。 
-UTC 格式，例如：2016-06-29T19:00:00Z。
-最长支持查询60天内数据。
+ * @method string getEndTime() 获取结束时间。UTC 格式，例如：2016-06-30T19:00:00Z。不超过当前时间。注意：EndTime和StartTime相差不可超过1个月。
+ * @method void setEndTime(string $EndTime) 设置结束时间。UTC 格式，例如：2016-06-30T19:00:00Z。不超过当前时间。注意：EndTime和StartTime相差不可超过1个月。
+ * @method string getStartTime() 获取起始时间。 UTC 格式，例如：2016-06-29T19:00:00Z。最长支持查询2个月内数据。
+ * @method void setStartTime(string $StartTime) 设置起始时间。 UTC 格式，例如：2016-06-29T19:00:00Z。最长支持查询2个月内数据。
  * @method string getAppName() 获取推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。不支持模糊匹配。
  * @method void setAppName(string $AppName) 设置推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。不支持模糊匹配。
  * @method integer getPageNum() 获取取得第几页。
@@ -61,17 +51,12 @@ class DescribeLiveStreamPublishedListRequest extends AbstractModel
     public $DomainName;
 
     /**
-     * @var string 结束时间。
-UTC 格式，例如：2016-06-30T19:00:00Z。
-不超过当前时间。
-注意：EndTime和StartTime相差不可超过30天。
+     * @var string 结束时间。UTC 格式，例如：2016-06-30T19:00:00Z。不超过当前时间。注意：EndTime和StartTime相差不可超过1个月。
      */
     public $EndTime;
 
     /**
-     * @var string 起始时间。 
-UTC 格式，例如：2016-06-29T19:00:00Z。
-最长支持查询60天内数据。
+     * @var string 起始时间。 UTC 格式，例如：2016-06-29T19:00:00Z。最长支持查询2个月内数据。
      */
     public $StartTime;
 
@@ -101,13 +86,8 @@ UTC 格式，例如：2016-06-29T19:00:00Z。
 
     /**
      * @param string $DomainName 您的推流域名。
-     * @param string $EndTime 结束时间。
-UTC 格式，例如：2016-06-30T19:00:00Z。
-不超过当前时间。
-注意：EndTime和StartTime相差不可超过30天。
-     * @param string $StartTime 起始时间。 
-UTC 格式，例如：2016-06-29T19:00:00Z。
-最长支持查询60天内数据。
+     * @param string $EndTime 结束时间。UTC 格式，例如：2016-06-30T19:00:00Z。不超过当前时间。注意：EndTime和StartTime相差不可超过1个月。
+     * @param string $StartTime 起始时间。 UTC 格式，例如：2016-06-29T19:00:00Z。最长支持查询2个月内数据。
      * @param string $AppName 推流路径，与推流和播放地址中的 AppName 保持一致，默认为 live。不支持模糊匹配。
      * @param integer $PageNum 取得第几页。
 默认值：1。

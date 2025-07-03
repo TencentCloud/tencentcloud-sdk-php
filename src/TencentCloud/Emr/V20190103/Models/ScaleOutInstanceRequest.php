@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPayMode(integer $PayMode) 设置实例计费模式。取值范围：
 <li>0：表示按量计费。</li>
 <li>1：表示包年包月。</li>
- * @method string getClientToken() 获取唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-751a-41b6-aad6-fae36063280
- * @method void setClientToken(string $ClientToken) 设置唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-751a-41b6-aad6-fae36063280
+ * @method string getClientToken() 获取唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-****-****-****-fae36063280
+ * @method void setClientToken(string $ClientToken) 设置唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-****-****-****-fae36063280
  * @method array getPreExecutedFileSettings() 获取引导操作脚本设置。
  * @method void setPreExecutedFileSettings(array $PreExecutedFileSettings) 设置引导操作脚本设置。
  * @method integer getTaskCount() 获取扩容的Task节点数量。
@@ -64,8 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) 设置分散置放群组ID列表，当前仅支持指定一个。
  * @method array getTags() 获取扩容节点绑定标签列表。
  * @method void setTags(array $Tags) 设置扩容节点绑定标签列表。
- * @method string getHardwareResourceType() 获取扩容所选资源类型，可选范围为"host","pod"，host为普通的CVM资源，Pod为TKE集群或EKS集群提供的资源
- * @method void setHardwareResourceType(string $HardwareResourceType) 设置扩容所选资源类型，可选范围为"host","pod"，host为普通的CVM资源，Pod为TKE集群或EKS集群提供的资源
+ * @method string getHardwareResourceType() 获取扩容所选资源类型，可选范围为"HOST","POD","MNode"，HOST为普通的CVM资源，POD为TKE集群或EKS集群提供的资源,MNode为全托管资源类型
+ * @method void setHardwareResourceType(string $HardwareResourceType) 设置扩容所选资源类型，可选范围为"HOST","POD","MNode"，HOST为普通的CVM资源，POD为TKE集群或EKS集群提供的资源,MNode为全托管资源类型
  * @method PodSpec getPodSpec() 获取使用Pod资源扩容时，指定的Pod规格以及来源等信息
  * @method void setPodSpec(PodSpec $PodSpec) 设置使用Pod资源扩容时，指定的Pod规格以及来源等信息
  * @method string getClickHouseClusterName() 获取使用clickhouse集群扩容时，选择的机器分组名称
@@ -98,6 +98,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceBaseType(string $ResourceBaseType) 设置类型为ComputeResource和EMR以及默认，默认为EMR,类型为EMR时,InstanceId生效,类型为ComputeResource时,使用ComputeResourceId标识
  * @method string getComputeResourceId() 获取计算资源id
  * @method void setComputeResourceId(string $ComputeResourceId) 设置计算资源id
+ * @method ComputeResourceAdvanceParams getComputeResourceAdvanceParams() 获取计算资源高级设置
+ * @method void setComputeResourceAdvanceParams(ComputeResourceAdvanceParams $ComputeResourceAdvanceParams) 设置计算资源高级设置
+ * @method NodeMark getNodeMarks() 获取节点标记信息，目前只提供tf平台使用
+ * @method void setNodeMarks(NodeMark $NodeMarks) 设置节点标记信息，目前只提供tf平台使用
  */
 class ScaleOutInstanceRequest extends AbstractModel
 {
@@ -128,7 +132,7 @@ class ScaleOutInstanceRequest extends AbstractModel
     public $PayMode;
 
     /**
-     * @var string 唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-751a-41b6-aad6-fae36063280
+     * @var string 唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-****-****-****-fae36063280
      */
     public $ClientToken;
 
@@ -180,7 +184,7 @@ class ScaleOutInstanceRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @var string 扩容所选资源类型，可选范围为"host","pod"，host为普通的CVM资源，Pod为TKE集群或EKS集群提供的资源
+     * @var string 扩容所选资源类型，可选范围为"HOST","POD","MNode"，HOST为普通的CVM资源，POD为TKE集群或EKS集群提供的资源,MNode为全托管资源类型
      */
     public $HardwareResourceType;
 
@@ -253,6 +257,16 @@ class ScaleOutInstanceRequest extends AbstractModel
     public $ComputeResourceId;
 
     /**
+     * @var ComputeResourceAdvanceParams 计算资源高级设置
+     */
+    public $ComputeResourceAdvanceParams;
+
+    /**
+     * @var NodeMark 节点标记信息，目前只提供tf平台使用
+     */
+    public $NodeMarks;
+
+    /**
      * @param string $TimeUnit 扩容的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
 <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
@@ -263,7 +277,7 @@ class ScaleOutInstanceRequest extends AbstractModel
      * @param integer $PayMode 实例计费模式。取值范围：
 <li>0：表示按量计费。</li>
 <li>1：表示包年包月。</li>
-     * @param string $ClientToken 唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-751a-41b6-aad6-fae36063280
+     * @param string $ClientToken 唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-****-****-****-fae36063280
      * @param array $PreExecutedFileSettings 引导操作脚本设置。
      * @param integer $TaskCount 扩容的Task节点数量。
      * @param integer $CoreCount 扩容的Core节点数量。
@@ -275,7 +289,7 @@ class ScaleOutInstanceRequest extends AbstractModel
      * @param array $ServiceNodeInfo 启动的进程。
      * @param array $DisasterRecoverGroupIds 分散置放群组ID列表，当前仅支持指定一个。
      * @param array $Tags 扩容节点绑定标签列表。
-     * @param string $HardwareResourceType 扩容所选资源类型，可选范围为"host","pod"，host为普通的CVM资源，Pod为TKE集群或EKS集群提供的资源
+     * @param string $HardwareResourceType 扩容所选资源类型，可选范围为"HOST","POD","MNode"，HOST为普通的CVM资源，POD为TKE集群或EKS集群提供的资源,MNode为全托管资源类型
      * @param PodSpec $PodSpec 使用Pod资源扩容时，指定的Pod规格以及来源等信息
      * @param string $ClickHouseClusterName 使用clickhouse集群扩容时，选择的机器分组名称
      * @param string $ClickHouseClusterType 使用clickhouse集群扩容时，选择的机器分组类型。new为新增，old为选择旧分组
@@ -292,6 +306,8 @@ class ScaleOutInstanceRequest extends AbstractModel
      * @param integer $AutoRenew 0表示关闭自动续费，1表示开启自动续费
      * @param string $ResourceBaseType 类型为ComputeResource和EMR以及默认，默认为EMR,类型为EMR时,InstanceId生效,类型为ComputeResource时,使用ComputeResourceId标识
      * @param string $ComputeResourceId 计算资源id
+     * @param ComputeResourceAdvanceParams $ComputeResourceAdvanceParams 计算资源高级设置
+     * @param NodeMark $NodeMarks 节点标记信息，目前只提供tf平台使用
      */
     function __construct()
     {
@@ -428,6 +444,16 @@ class ScaleOutInstanceRequest extends AbstractModel
 
         if (array_key_exists("ComputeResourceId",$param) and $param["ComputeResourceId"] !== null) {
             $this->ComputeResourceId = $param["ComputeResourceId"];
+        }
+
+        if (array_key_exists("ComputeResourceAdvanceParams",$param) and $param["ComputeResourceAdvanceParams"] !== null) {
+            $this->ComputeResourceAdvanceParams = new ComputeResourceAdvanceParams();
+            $this->ComputeResourceAdvanceParams->deserialize($param["ComputeResourceAdvanceParams"]);
+        }
+
+        if (array_key_exists("NodeMarks",$param) and $param["NodeMarks"] !== null) {
+            $this->NodeMarks = new NodeMark();
+            $this->NodeMarks->deserialize($param["NodeMarks"]);
         }
     }
 }

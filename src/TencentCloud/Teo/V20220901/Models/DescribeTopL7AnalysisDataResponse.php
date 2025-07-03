@@ -22,9 +22,9 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotalCount() 获取查询结果的总条数。
  * @method void setTotalCount(integer $TotalCount) 设置查询结果的总条数。
- * @method array getData() 获取七层流量前topN数据列表。
+ * @method array getData() 获取七层访问数据按照 MetricName 指定统计维度的前 topN 数据列表。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setData(array $Data) 设置七层流量前topN数据列表。
+ * @method void setData(array $Data) 设置七层访问数据按照 MetricName 指定统计维度的前 topN 数据列表。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -37,7 +37,7 @@ class DescribeTopL7AnalysisDataResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var array 七层流量前topN数据列表。
+     * @var array 七层访问数据按照 MetricName 指定统计维度的前 topN 数据列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
@@ -49,7 +49,7 @@ class DescribeTopL7AnalysisDataResponse extends AbstractModel
 
     /**
      * @param integer $TotalCount 查询结果的总条数。
-     * @param array $Data 七层流量前topN数据列表。
+     * @param array $Data 七层访问数据按照 MetricName 指定统计维度的前 topN 数据列表。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

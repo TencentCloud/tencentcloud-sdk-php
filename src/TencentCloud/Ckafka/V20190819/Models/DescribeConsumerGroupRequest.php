@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeConsumerGroup请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka实例id。
- * @method void setInstanceId(string $InstanceId) 设置ckafka实例id。
+ * @method string getInstanceId() 获取ckafka集群实例Id
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
  * @method string getGroupName() 获取可选，用户需要查询的group名称。
  * @method void setGroupName(string $GroupName) 设置可选，用户需要查询的group名称。
  * @method string getTopicName() 获取可选，用户需要查询的group中的对应的topic名称，如果指定了该参数，而group又未指定则忽略该参数。
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeConsumerGroupRequest extends AbstractModel
 {
     /**
-     * @var string ckafka实例id。
+     * @var string ckafka集群实例Id
      */
     public $InstanceId;
 
@@ -59,7 +59,7 @@ class DescribeConsumerGroupRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @param string $InstanceId ckafka实例id。
+     * @param string $InstanceId ckafka集群实例Id
      * @param string $GroupName 可选，用户需要查询的group名称。
      * @param string $TopicName 可选，用户需要查询的group中的对应的topic名称，如果指定了该参数，而group又未指定则忽略该参数。
      * @param integer $Limit 本次返回个数限制，最大支持50

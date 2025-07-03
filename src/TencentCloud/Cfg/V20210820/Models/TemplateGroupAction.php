@@ -27,13 +27,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getOrder() 获取分组动作顺序
  * @method void setOrder(integer $Order) 设置分组动作顺序
  * @method string getGeneralConfiguration() 获取分组动作通用配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGeneralConfiguration(string $GeneralConfiguration) 设置分组动作通用配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCustomConfiguration() 获取分组动作自定义配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCustomConfiguration(string $CustomConfiguration) 设置分组动作自定义配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取动作分组创建时间
  * @method void setCreateTime(string $CreateTime) 设置动作分组创建时间
  * @method string getUpdateTime() 获取动作分组更新时间
@@ -41,29 +37,21 @@ use TencentCloud\Common\AbstractModel;
  * @method string getActionTitle() 获取动作名称
  * @method void setActionTitle(string $ActionTitle) 设置动作名称
  * @method integer getRandomId() 获取自身随机id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRandomId(integer $RandomId) 设置自身随机id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRecoverId() 获取恢复动作id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecoverId(integer $RecoverId) 设置恢复动作id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getExecuteId() 获取执行动作id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExecuteId(integer $ExecuteId) 设置执行动作id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getActionApiType() 获取调用api类型，0:tat, 1:云api
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActionApiType(integer $ActionApiType) 设置调用api类型，0:tat, 1:云api
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getActionAttribute() 获取1:故障，2:恢复
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActionAttribute(integer $ActionAttribute) 设置1:故障，2:恢复
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getActionType() 获取动作类型：平台和自定义
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActionType(string $ActionType) 设置动作类型：平台和自定义
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getActionRisk() 获取动作风险等级，1:低风险 2:中风险 3:高风险
+ * @method void setActionRisk(string $ActionRisk) 设置动作风险等级，1:低风险 2:中风险 3:高风险
+ * @method string getFailurePerformance() 获取故障表现
+ * @method void setFailurePerformance(string $FailurePerformance) 设置故障表现
  */
 class TemplateGroupAction extends AbstractModel
 {
@@ -84,13 +72,11 @@ class TemplateGroupAction extends AbstractModel
 
     /**
      * @var string 分组动作通用配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GeneralConfiguration;
 
     /**
      * @var string 分组动作自定义配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CustomConfiguration;
 
@@ -111,63 +97,61 @@ class TemplateGroupAction extends AbstractModel
 
     /**
      * @var integer 自身随机id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RandomId;
 
     /**
      * @var integer 恢复动作id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecoverId;
 
     /**
      * @var integer 执行动作id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecuteId;
 
     /**
      * @var integer 调用api类型，0:tat, 1:云api
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActionApiType;
 
     /**
      * @var integer 1:故障，2:恢复
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActionAttribute;
 
     /**
      * @var string 动作类型：平台和自定义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActionType;
+
+    /**
+     * @var string 动作风险等级，1:低风险 2:中风险 3:高风险
+     */
+    public $ActionRisk;
+
+    /**
+     * @var string 故障表现
+     */
+    public $FailurePerformance;
 
     /**
      * @param integer $TemplateGroupActionId 经验库分组动作ID
      * @param integer $ActionId 动作ID
      * @param integer $Order 分组动作顺序
      * @param string $GeneralConfiguration 分组动作通用配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CustomConfiguration 分组动作自定义配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 动作分组创建时间
      * @param string $UpdateTime 动作分组更新时间
      * @param string $ActionTitle 动作名称
      * @param integer $RandomId 自身随机id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RecoverId 恢复动作id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ExecuteId 执行动作id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ActionApiType 调用api类型，0:tat, 1:云api
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ActionAttribute 1:故障，2:恢复
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ActionType 动作类型：平台和自定义
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ActionRisk 动作风险等级，1:低风险 2:中风险 3:高风险
+     * @param string $FailurePerformance 故障表现
      */
     function __construct()
     {
@@ -236,6 +220,14 @@ class TemplateGroupAction extends AbstractModel
 
         if (array_key_exists("ActionType",$param) and $param["ActionType"] !== null) {
             $this->ActionType = $param["ActionType"];
+        }
+
+        if (array_key_exists("ActionRisk",$param) and $param["ActionRisk"] !== null) {
+            $this->ActionRisk = $param["ActionRisk"];
+        }
+
+        if (array_key_exists("FailurePerformance",$param) and $param["FailurePerformance"] !== null) {
+            $this->FailurePerformance = $param["FailurePerformance"];
         }
     }
 }

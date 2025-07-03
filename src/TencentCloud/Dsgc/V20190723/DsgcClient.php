@@ -29,7 +29,6 @@ use TencentCloud\Dsgc\V20190723\Models as Models;
  * @method Models\CopyDSPATemplateResponse CopyDSPATemplate(Models\CopyDSPATemplateRequest $req) 复制合规组模板
  * @method Models\CreateAssetSortingReportRetryTaskResponse CreateAssetSortingReportRetryTask(Models\CreateAssetSortingReportRetryTaskRequest $req) 创建资产梳理报表导出重试任务
  * @method Models\CreateAssetSortingReportTaskResponse CreateAssetSortingReportTask(Models\CreateAssetSortingReportTaskRequest $req) 创建资产梳理报告任务
- * @method Models\CreateClassificationRuleResponse CreateClassificationRule(Models\CreateClassificationRuleRequest $req) 创建识别规则
  * @method Models\CreateDSPAAssessmentRiskLevelResponse CreateDSPAAssessmentRiskLevel(Models\CreateDSPAAssessmentRiskLevelRequest $req) 风险项页面---创建风险等级
  * @method Models\CreateDSPAAssessmentRiskTemplateResponse CreateDSPAAssessmentRiskTemplate(Models\CreateDSPAAssessmentRiskTemplateRequest $req) 风险评估模板---创建风险评估模板
  * @method Models\CreateDSPAAssessmentTaskResponse CreateDSPAAssessmentTask(Models\CreateDSPAAssessmentTaskRequest $req) 新建DSPA风险评估任务
@@ -41,14 +40,11 @@ use TencentCloud\Dsgc\V20190723\Models as Models;
  * @method Models\CreateDSPACosMetaResourcesResponse CreateDSPACosMetaResources(Models\CreateDSPACosMetaResourcesRequest $req) 添加COS元数据
  * @method Models\CreateDSPADbMetaResourcesResponse CreateDSPADbMetaResources(Models\CreateDSPADbMetaResourcesRequest $req) 添加用户云上数据库类型资源
  * @method Models\CreateDSPADiscoveryRuleResponse CreateDSPADiscoveryRule(Models\CreateDSPADiscoveryRuleRequest $req) 新增分类分级规则，单个用户最多允许创建200个规则。
-
  * @method Models\CreateDSPADiscoveryTaskResponse CreateDSPADiscoveryTask(Models\CreateDSPADiscoveryTaskRequest $req) 新增分类分级任务，单个用户最多允许创建100个任务。
  * @method Models\CreateDSPALevelGroupResponse CreateDSPALevelGroup(Models\CreateDSPALevelGroupRequest $req) 新增分级，单个Casb实例最多允许创建100个数据分级
  * @method Models\CreateDSPAMetaResourcesResponse CreateDSPAMetaResources(Models\CreateDSPAMetaResourcesRequest $req) 添加用户云上资源列表
  * @method Models\CreateDSPASelfBuildMetaResourceResponse CreateDSPASelfBuildMetaResource(Models\CreateDSPASelfBuildMetaResourceRequest $req) 新建用户自建云资源
  * @method Models\CreateIdentifyRuleAnotherNameResponse CreateIdentifyRuleAnotherName(Models\CreateIdentifyRuleAnotherNameRequest $req) 创建规则别名
- * @method Models\CreateNewClassificationResponse CreateNewClassification(Models\CreateNewClassificationRequest $req) 创建新分类
- * @method Models\CreateOrCopyStandardResponse CreateOrCopyStandard(Models\CreateOrCopyStandardRequest $req) 创建或复制分级分类模板
  * @method Models\DecribeSuggestRiskLevelMatrixResponse DecribeSuggestRiskLevelMatrix(Models\DecribeSuggestRiskLevelMatrixRequest $req) 风险等级的定义页面-创建风险等级的时候生成的一个默认的矩阵
  * @method Models\DeleteCosMetaResourceResponse DeleteCosMetaResource(Models\DeleteCosMetaResourceRequest $req) 本接口（DeleteCOSMetaData）用于删除COS元数据信息。
  * @method Models\DeleteDSPAAssessmentTaskResponse DeleteDSPAAssessmentTask(Models\DeleteDSPAAssessmentTaskRequest $req) 删除DSPA风险评估任务
@@ -69,9 +65,6 @@ use TencentCloud\Dsgc\V20190723\Models as Models;
  * @method Models\DescribeAssetOverviewResponse DescribeAssetOverview(Models\DescribeAssetOverviewRequest $req) 数据资产报告页面-查询数据资产概览接口（包括数据库资产详情和存储资产详情）
  * @method Models\DescribeBindDBListResponse DescribeBindDBList(Models\DescribeBindDBListRequest $req) 查询DB绑定的列表
  * @method Models\DescribeCOSAssetSensitiveDistributionResponse DescribeCOSAssetSensitiveDistribution(Models\DescribeCOSAssetSensitiveDistributionRequest $req) 数据资产报告-查询cos的资产分布详情接口
- * @method Models\DescribeClassificationInfoResponse DescribeClassificationInfo(Models\DescribeClassificationInfoRequest $req) 查询分类信息
-
- * @method Models\DescribeClassificationRuleCountResponse DescribeClassificationRuleCount(Models\DescribeClassificationRuleCountRequest $req) 查询标准下所有分类的识别规则数量(不算子分类下的识别规则)
  * @method Models\DescribeDSPAAssessmentHighRiskTop10OverviewResponse DescribeDSPAAssessmentHighRiskTop10Overview(Models\DescribeDSPAAssessmentHighRiskTop10OverviewRequest $req) 查询高风险资产的top10
  * @method Models\DescribeDSPAAssessmentLatestRiskDetailInfoResponse DescribeDSPAAssessmentLatestRiskDetailInfo(Models\DescribeDSPAAssessmentLatestRiskDetailInfoRequest $req) 查询最新风险项详情数据
  * @method Models\DescribeDSPAAssessmentLatestRiskListResponse DescribeDSPAAssessmentLatestRiskList(Models\DescribeDSPAAssessmentLatestRiskListRequest $req) 查询最新的风险详情列表数据
@@ -88,7 +81,7 @@ use TencentCloud\Dsgc\V20190723\Models as Models;
  * @method Models\DescribeDSPAAssessmentRiskLevelListResponse DescribeDSPAAssessmentRiskLevelList(Models\DescribeDSPAAssessmentRiskLevelListRequest $req) 风险项页面----查询风险等级的列表
  * @method Models\DescribeDSPAAssessmentRiskLevelTrendResponse DescribeDSPAAssessmentRiskLevelTrend(Models\DescribeDSPAAssessmentRiskLevelTrendRequest $req) 风险级别趋势统计
  * @method Models\DescribeDSPAAssessmentRiskOverviewResponse DescribeDSPAAssessmentRiskOverview(Models\DescribeDSPAAssessmentRiskOverviewRequest $req) 风险数量概览统计
- * @method Models\DescribeDSPAAssessmentRiskProcessHistoryResponse DescribeDSPAAssessmentRiskProcessHistory(Models\DescribeDSPAAssessmentRiskProcessHistoryRequest $req) 修改最新评估风险项状态
+ * @method Models\DescribeDSPAAssessmentRiskProcessHistoryResponse DescribeDSPAAssessmentRiskProcessHistory(Models\DescribeDSPAAssessmentRiskProcessHistoryRequest $req) 查询风险的处理历史
  * @method Models\DescribeDSPAAssessmentRiskSideDistributedResponse DescribeDSPAAssessmentRiskSideDistributed(Models\DescribeDSPAAssessmentRiskSideDistributedRequest $req) 风险评估概览页，查询风险面的分布
  * @method Models\DescribeDSPAAssessmentRiskSideListResponse DescribeDSPAAssessmentRiskSideList(Models\DescribeDSPAAssessmentRiskSideListRequest $req) 风险评估概览页，查询风险面的分布
  * @method Models\DescribeDSPAAssessmentRiskTemplateDetailResponse DescribeDSPAAssessmentRiskTemplateDetail(Models\DescribeDSPAAssessmentRiskTemplateDetailRequest $req) 风险项页面--查看评估模板详情
@@ -120,12 +113,11 @@ use TencentCloud\Dsgc\V20190723\Models as Models;
  * @method Models\DescribeDSPADiscoveryRulesResponse DescribeDSPADiscoveryRules(Models\DescribeDSPADiscoveryRulesRequest $req) 获取分类分级规则列表
  * @method Models\DescribeDSPADiscoveryServiceStatusResponse DescribeDSPADiscoveryServiceStatus(Models\DescribeDSPADiscoveryServiceStatusRequest $req) 用于查询该用户是否已开通分类分级服务
  * @method Models\DescribeDSPADiscoveryTaskDetailResponse DescribeDSPADiscoveryTaskDetail(Models\DescribeDSPADiscoveryTaskDetailRequest $req) 获取分类分级任务详情
- * @method Models\DescribeDSPADiscoveryTaskResultResponse DescribeDSPADiscoveryTaskResult(Models\DescribeDSPADiscoveryTaskResultRequest $req) 获取分类分级任务结果，该接口只有在任务状态为以下状态时才支持结果正常查询：
-3 扫描成功，
-4 扫描失败
+ * @method Models\DescribeDSPADiscoveryTaskResultResponse DescribeDSPADiscoveryTaskResult(Models\DescribeDSPADiscoveryTaskResultRequest $req) 获取分类分级任务结果，该接口只有在任务状态为以下状态时才支持结果正常查询：3 扫描成功，4 扫描失败
  * @method Models\DescribeDSPADiscoveryTaskResultDetailResponse DescribeDSPADiscoveryTaskResultDetail(Models\DescribeDSPADiscoveryTaskResultDetailRequest $req) 获取分类分级任务结果详情，该接口只有在任务状态为时才支持结果正确查询：
 3 扫描成功
  * @method Models\DescribeDSPADiscoveryTaskTablesResponse DescribeDSPADiscoveryTaskTables(Models\DescribeDSPADiscoveryTaskTablesRequest $req) 获取分级分级扫描的表集合
+ * @method Models\DescribeDSPADiscoveryTasksResponse DescribeDSPADiscoveryTasks(Models\DescribeDSPADiscoveryTasksRequest $req) 获取分类分级任务列表
  * @method Models\DescribeDSPAESDataAssetByComplianceIdResponse DescribeDSPAESDataAssetByComplianceId(Models\DescribeDSPAESDataAssetByComplianceIdRequest $req) 根据合规组id，去查询ES的概览页统计数据
  * @method Models\DescribeDSPAESDataAssetDetailResponse DescribeDSPAESDataAssetDetail(Models\DescribeDSPAESDataAssetDetailRequest $req) 根据合规组id，去查询ES的概览页下的统计列表数据
  * @method Models\DescribeDSPAESDataSampleResponse DescribeDSPAESDataSample(Models\DescribeDSPAESDataSampleRequest $req) 获取ES扫描结果数据样本
@@ -139,22 +131,15 @@ use TencentCloud\Dsgc\V20190723\Models as Models;
  * @method Models\DescribeDSPATaskResultDataSampleResponse DescribeDSPATaskResultDataSample(Models\DescribeDSPATaskResultDataSampleRequest $req) 获取扫描结果数据样本
  * @method Models\DescribeESAssetSensitiveDistributionResponse DescribeESAssetSensitiveDistribution(Models\DescribeESAssetSensitiveDistributionRequest $req) 数据资产报告-查询es的敏感资产报告，包含（数据库资产，设敏级别数据库top10，资产详情）
  * @method Models\DescribeExportTaskResultResponse DescribeExportTaskResult(Models\DescribeExportTaskResultRequest $req) 获取导出任务结果
- * @method Models\DescribeLeafClassificationResponse DescribeLeafClassification(Models\DescribeLeafClassificationRequest $req) 查询标准下所有叶子节点分类
  * @method Models\DescribeMongoAssetSensitiveDistributionResponse DescribeMongoAssetSensitiveDistribution(Models\DescribeMongoAssetSensitiveDistributionRequest $req) 数据资产报告-查询mongo 的敏感资产报告，包含（数据库资产，设敏级别数据库top10，资产详情）
  * @method Models\DescribeRDBAssetSensitiveDistributionResponse DescribeRDBAssetSensitiveDistribution(Models\DescribeRDBAssetSensitiveDistributionRequest $req) 数据资产报告-查询rbd 的敏感资产报告，包含（数据库资产，设敏级别数据库top10，资产详情）
  * @method Models\DescribeReportTaskDownloadUrlResponse DescribeReportTaskDownloadUrl(Models\DescribeReportTaskDownloadUrlRequest $req) 获取报表下载链接
  * @method Models\DescribeReportTasksResponse DescribeReportTasks(Models\DescribeReportTasksRequest $req) 获取资产报表任务列表
- * @method Models\DescribeRuleDetailResponse DescribeRuleDetail(Models\DescribeRuleDetailRequest $req) 查询分类规则详情
-
- * @method Models\DescribeRuleListResponse DescribeRuleList(Models\DescribeRuleListRequest $req) 查询分类下规则列表
-
  * @method Models\DescribeSensitiveCOSDataDistributionResponse DescribeSensitiveCOSDataDistribution(Models\DescribeSensitiveCOSDataDistributionRequest $req) 数据资产报告-查询cos的敏感数据分布（分级分布 分类分布 敏感规则分布详情列表）
  * @method Models\DescribeSensitiveRDBDataDistributionResponse DescribeSensitiveRDBDataDistribution(Models\DescribeSensitiveRDBDataDistributionRequest $req) 数据资产报告-查询rdb的敏感数据分布-敏感规则字段分布-敏感分布详情
  * @method Models\DisableDSPAMetaResourceAuthResponse DisableDSPAMetaResourceAuth(Models\DisableDSPAMetaResourceAuthRequest $req) 取消用户云资源授权
  * @method Models\EnableDSPADiscoveryRuleResponse EnableDSPADiscoveryRule(Models\EnableDSPADiscoveryRuleRequest $req) 打开或者关闭分类分级规则
 注：此API同时对该规则下的RDB跟COS规则操作。
-
-
  * @method Models\EnableTrialVersionResponse EnableTrialVersion(Models\EnableTrialVersionRequest $req) 启用版本体验
  * @method Models\ExportAssetDetailDataResponse ExportAssetDetailData(Models\ExportAssetDetailDataRequest $req) 创建敏感数据导出任务
  * @method Models\GetResourceConnectionStatusResponse GetResourceConnectionStatus(Models\GetResourceConnectionStatusRequest $req) 获取授权资源的连接状态
@@ -163,8 +148,6 @@ use TencentCloud\Dsgc\V20190723\Models as Models;
  * @method Models\ListDSPAClustersResponse ListDSPAClusters(Models\ListDSPAClustersRequest $req) 拉取DSPA集群列表
  * @method Models\ListDSPACosMetaResourcesResponse ListDSPACosMetaResources(Models\ListDSPACosMetaResourcesRequest $req) 本接口用于获取COS元数据信息，返回COS元数据信息列表。
  * @method Models\ListDSPAMetaResourcesResponse ListDSPAMetaResources(Models\ListDSPAMetaResourcesRequest $req) 拉取用户云资源
- * @method Models\ModifyClassificationRuleResponse ModifyClassificationRule(Models\ModifyClassificationRuleRequest $req) 编辑识别规则
- * @method Models\ModifyClassificationRuleStateResponse ModifyClassificationRuleState(Models\ModifyClassificationRuleStateRequest $req) 修改识别规则状态
  * @method Models\ModifyDSPAAssessmentRiskResponse ModifyDSPAAssessmentRisk(Models\ModifyDSPAAssessmentRiskRequest $req) 修改DSPA评估风险项，支持修改Status
  * @method Models\ModifyDSPAAssessmentRiskLatestResponse ModifyDSPAAssessmentRiskLatest(Models\ModifyDSPAAssessmentRiskLatestRequest $req) 修改最新评估风险项状态
  * @method Models\ModifyDSPAAssessmentRiskLevelResponse ModifyDSPAAssessmentRiskLevel(Models\ModifyDSPAAssessmentRiskLevelRequest $req) 风险项页面----修改风险等级的详情数据
@@ -174,7 +157,6 @@ use TencentCloud\Dsgc\V20190723\Models as Models;
 2 扫描终止， 
 3 扫描成功，
 4 扫描失败
-
  * @method Models\ModifyDSPACOSTaskResultResponse ModifyDSPACOSTaskResult(Models\ModifyDSPACOSTaskResultRequest $req) 调整COS任务扫描结果
  * @method Models\ModifyDSPACategoryResponse ModifyDSPACategory(Models\ModifyDSPACategoryRequest $req) 修改分类，内置分类不支持修改。
  * @method Models\ModifyDSPACategoryRelationResponse ModifyDSPACategoryRelation(Models\ModifyDSPACategoryRelationRequest $req) 修改分类分级关系
@@ -187,15 +169,8 @@ use TencentCloud\Dsgc\V20190723\Models as Models;
 2 扫描终止， 
 3 扫描成功，
 4 扫描失败
-
  * @method Models\ModifyDSPAESTaskResultResponse ModifyDSPAESTaskResult(Models\ModifyDSPAESTaskResultRequest $req) 调整ES任务扫描结果
  * @method Models\ModifyDSPATaskResultResponse ModifyDSPATaskResult(Models\ModifyDSPATaskResultRequest $req) 调整任务扫描结果
- * @method Models\ModifyLevelInfoResponse ModifyLevelInfo(Models\ModifyLevelInfoRequest $req) 修改敏感级别信息
- * @method Models\ModifyLevelNameResponse ModifyLevelName(Models\ModifyLevelNameRequest $req) 修改级别名称
- * @method Models\ModifyLevelStateResponse ModifyLevelState(Models\ModifyLevelStateRequest $req) 开启级别或关闭级别
- * @method Models\ModifyMergeClassificationResponse ModifyMergeClassification(Models\ModifyMergeClassificationRequest $req) 一个分类合并到另一个分类中（分类拖拽功能）
- * @method Models\ModifyNewClassificationResponse ModifyNewClassification(Models\ModifyNewClassificationRequest $req) 修改分类信息
- * @method Models\ModifyStandardInfoResponse ModifyStandardInfo(Models\ModifyStandardInfoRequest $req) 修改分级分类模板信息
  * @method Models\QueryDSPAMetaResourceDbListResponse QueryDSPAMetaResourceDbList(Models\QueryDSPAMetaResourceDbListRequest $req) 查询DSPA实例的db列表
  * @method Models\QueryResourceDbBindStatusResponse QueryResourceDbBindStatus(Models\QueryResourceDbBindStatusRequest $req) 获取资源绑定DB状态
  * @method Models\RestartDSPAAssessmentTaskResponse RestartDSPAAssessmentTask(Models\RestartDSPAAssessmentTaskRequest $req) 重新启动DSPA风险评估任务

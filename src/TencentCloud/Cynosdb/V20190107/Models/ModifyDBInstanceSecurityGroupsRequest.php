@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDBInstanceSecurityGroups请求参数结构体
  *
- * @method string getInstanceId() 获取实例组ID
- * @method void setInstanceId(string $InstanceId) 设置实例组ID
+ * @method string getInstanceId() 获取网络组id(cynosdbmysql-grp-前缀开头)或集群id
+ * @method void setInstanceId(string $InstanceId) 设置网络组id(cynosdbmysql-grp-前缀开头)或集群id
  * @method array getSecurityGroupIds() 获取要修改的安全组ID列表，一个或者多个安全组ID组成的数组。
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置要修改的安全组ID列表，一个或者多个安全组ID组成的数组。
  * @method string getZone() 获取可用区
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel
 {
     /**
-     * @var string 实例组ID
+     * @var string 网络组id(cynosdbmysql-grp-前缀开头)或集群id
      */
     public $InstanceId;
 
@@ -45,7 +45,7 @@ class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel
     public $Zone;
 
     /**
-     * @param string $InstanceId 实例组ID
+     * @param string $InstanceId 网络组id(cynosdbmysql-grp-前缀开头)或集群id
      * @param array $SecurityGroupIds 要修改的安全组ID列表，一个或者多个安全组ID组成的数组。
      * @param string $Zone 可用区
      */

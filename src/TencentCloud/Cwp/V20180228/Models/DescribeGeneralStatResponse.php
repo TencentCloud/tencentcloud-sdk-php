@@ -43,17 +43,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getOffline() 获取已离线总数
  * @method void setOffline(integer $Offline) 设置已离线总数
  * @method integer getFlagshipMachineCnt() 获取旗舰版主机数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlagshipMachineCnt(integer $FlagshipMachineCnt) 设置旗舰版主机数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProtectDays() 获取保护天数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProtectDays(integer $ProtectDays) 设置保护天数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAddedOnTheFifteen() 获取15天内新增的主机数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddedOnTheFifteen(integer $AddedOnTheFifteen) 设置15天内新增的主机数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -116,19 +110,16 @@ class DescribeGeneralStatResponse extends AbstractModel
 
     /**
      * @var integer 旗舰版主机数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlagshipMachineCnt;
 
     /**
      * @var integer 保护天数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProtectDays;
 
     /**
      * @var integer 15天内新增的主机数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AddedOnTheFifteen;
 
@@ -150,11 +141,8 @@ class DescribeGeneralStatResponse extends AbstractModel
      * @param integer $Shutdown 已关机总数
      * @param integer $Offline 已离线总数
      * @param integer $FlagshipMachineCnt 旗舰版主机数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProtectDays 保护天数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AddedOnTheFifteen 15天内新增的主机数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

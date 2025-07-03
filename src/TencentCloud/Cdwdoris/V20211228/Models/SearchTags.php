@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagKey(string $TagKey) 设置标签的键
  * @method string getTagValue() 获取标签的值
  * @method void setTagValue(string $TagValue) 设置标签的值
- * @method integer getAllValue() 获取1表示只输入标签的键，没有输入值；0表示输入键时且输入值
- * @method void setAllValue(integer $AllValue) 设置1表示只输入标签的键，没有输入值；0表示输入键时且输入值
+ * @method integer getAllValue() 获取1表示只输入标签的键，没有输入值；非1则表示输入键时且输入值
+ * @method void setAllValue(integer $AllValue) 设置1表示只输入标签的键，没有输入值；非1则表示输入键时且输入值
  */
 class SearchTags extends AbstractModel
 {
@@ -40,14 +40,14 @@ class SearchTags extends AbstractModel
     public $TagValue;
 
     /**
-     * @var integer 1表示只输入标签的键，没有输入值；0表示输入键时且输入值
+     * @var integer 1表示只输入标签的键，没有输入值；非1则表示输入键时且输入值
      */
     public $AllValue;
 
     /**
      * @param string $TagKey 标签的键
      * @param string $TagValue 标签的值
-     * @param integer $AllValue 1表示只输入标签的键，没有输入值；0表示输入键时且输入值
+     * @param integer $AllValue 1表示只输入标签的键，没有输入值；非1则表示输入键时且输入值
      */
     function __construct()
     {

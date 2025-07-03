@@ -43,13 +43,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getProgress() 获取编辑视频任务进度，取值范围 [0-100] 。
  * @method void setProgress(integer $Progress) 设置编辑视频任务进度，取值范围 [0-100] 。
  * @method EditMediaTaskInput getInput() 获取视频编辑任务的输入。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInput(EditMediaTaskInput $Input) 设置视频编辑任务的输入。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method EditMediaTaskOutput getOutput() 获取视频编辑任务的输出。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutput(EditMediaTaskOutput $Output) 设置视频编辑任务的输出。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method MediaMetaData getMetaData() 获取输出视频的元信息。
  * @method void setMetaData(MediaMetaData $MetaData) 设置输出视频的元信息。
  * @method string getProcedureTaskId() 获取任务类型为 Procedure 的任务 ID。若发起[编辑视频](https://cloud.tencent.com/document/api/266/34783)任务时指定了任务流模板(ProcedureName)，当该任务流模板指定了 MediaProcessTask、AiAnalysisTask、AiRecognitionTask 中的一个或多个时发起该任务。
@@ -100,13 +96,11 @@ class EditMediaTask extends AbstractModel
 
     /**
      * @var EditMediaTaskInput 视频编辑任务的输入。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Input;
 
     /**
      * @var EditMediaTaskOutput 视频编辑任务的输出。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Output;
 
@@ -148,9 +142,7 @@ class EditMediaTask extends AbstractModel
      * @param string $Message 错误信息。
      * @param integer $Progress 编辑视频任务进度，取值范围 [0-100] 。
      * @param EditMediaTaskInput $Input 视频编辑任务的输入。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EditMediaTaskOutput $Output 视频编辑任务的输出。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaMetaData $MetaData 输出视频的元信息。
      * @param string $ProcedureTaskId 任务类型为 Procedure 的任务 ID。若发起[编辑视频](https://cloud.tencent.com/document/api/266/34783)任务时指定了任务流模板(ProcedureName)，当该任务流模板指定了 MediaProcessTask、AiAnalysisTask、AiRecognitionTask 中的一个或多个时发起该任务。
      * @param string $ReviewAudioVideoTaskId 任务类型为 ReviewAudioVideo 的任务 ID。若发起[编辑视频](https://cloud.tencent.com/document/api/266/34783)任务时指定了任务流模板(ProcedureName)，当该任务流模板指定了 ReviewAudioVideoTask 时，发起该任务。

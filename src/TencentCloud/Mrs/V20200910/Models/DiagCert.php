@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 诊断证明
  *
  * @method Advice getAdvice() 获取建议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdvice(Advice $Advice) 设置建议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDiagnosis() 获取诊断
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiagnosis(array $Diagnosis) 设置诊断
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPage() 获取数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPage(integer $Page) 设置数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DiagCert extends AbstractModel
 {
     /**
      * @var Advice 建议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Advice;
 
     /**
      * @var array 诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Diagnosis;
 
     /**
      * @var integer 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Page;
 
     /**
      * @param Advice $Advice 建议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Diagnosis 诊断
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

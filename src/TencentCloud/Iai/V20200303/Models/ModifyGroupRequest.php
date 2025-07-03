@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyGroup请求参数结构体
  *
- * @method string getGroupId() 获取人员库ID，取值为创建人员库接口中的GroupId
- * @method void setGroupId(string $GroupId) 设置人员库ID，取值为创建人员库接口中的GroupId
- * @method string getGroupName() 获取人员库名称
- * @method void setGroupName(string $GroupName) 设置人员库名称
- * @method array getGroupExDescriptionInfos() 获取需要修改的人员库自定义描述字段，key-value
- * @method void setGroupExDescriptionInfos(array $GroupExDescriptionInfos) 设置需要修改的人员库自定义描述字段，key-value
- * @method string getTag() 获取人员库信息备注
- * @method void setTag(string $Tag) 设置人员库信息备注
+ * @method string getGroupId() 获取人员库ID，取值为创建人员库接口中的GroupId。
+ * @method void setGroupId(string $GroupId) 设置人员库ID，取值为创建人员库接口中的GroupId。
+ * @method string getGroupName() 获取人员库名称。
+ * @method void setGroupName(string $GroupName) 设置人员库名称。
+ * @method array getGroupExDescriptionInfos() 获取需要修改的人员库自定义描述字段，key-value。
+ * @method void setGroupExDescriptionInfos(array $GroupExDescriptionInfos) 设置需要修改的人员库自定义描述字段，key-value。
+ * @method string getTag() 获取人员库信息备注。
+ * @method void setTag(string $Tag) 设置人员库信息备注。
  */
 class ModifyGroupRequest extends AbstractModel
 {
     /**
-     * @var string 人员库ID，取值为创建人员库接口中的GroupId
+     * @var string 人员库ID，取值为创建人员库接口中的GroupId。
      */
     public $GroupId;
 
     /**
-     * @var string 人员库名称
+     * @var string 人员库名称。
      */
     public $GroupName;
 
     /**
-     * @var array 需要修改的人员库自定义描述字段，key-value
+     * @var array 需要修改的人员库自定义描述字段，key-value。
      */
     public $GroupExDescriptionInfos;
 
     /**
-     * @var string 人员库信息备注
+     * @var string 人员库信息备注。
      */
     public $Tag;
 
     /**
-     * @param string $GroupId 人员库ID，取值为创建人员库接口中的GroupId
-     * @param string $GroupName 人员库名称
-     * @param array $GroupExDescriptionInfos 需要修改的人员库自定义描述字段，key-value
-     * @param string $Tag 人员库信息备注
+     * @param string $GroupId 人员库ID，取值为创建人员库接口中的GroupId。
+     * @param string $GroupName 人员库名称。
+     * @param array $GroupExDescriptionInfos 需要修改的人员库自定义描述字段，key-value。
+     * @param string $Tag 人员库信息备注。
      */
     function __construct()
     {

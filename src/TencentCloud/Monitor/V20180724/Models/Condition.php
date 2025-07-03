@@ -58,6 +58,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHierarchicalValue(AlarmHierarchicalValue $HierarchicalValue) 设置告警分级阈值配置
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRuleType() 获取指标类型，用于区分动态指标
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRuleType(string $RuleType) 设置指标类型，用于区分动态指标
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Condition extends AbstractModel
 {
@@ -137,6 +141,12 @@ class Condition extends AbstractModel
     public $HierarchicalValue;
 
     /**
+     * @var string 指标类型，用于区分动态指标
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RuleType;
+
+    /**
      * @param integer $AlarmNotifyPeriod 告警通知频率
      * @param integer $AlarmNotifyType 重复通知策略预定义（0 - 只告警一次， 1 - 指数告警，2 - 连接告警）
      * @param string $CalcType 检测方式
@@ -155,6 +165,8 @@ class Condition extends AbstractModel
      * @param string $ProductId 产品ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AlarmHierarchicalValue $HierarchicalValue 告警分级阈值配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RuleType 指标类型，用于区分动态指标
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -225,6 +237,10 @@ class Condition extends AbstractModel
         if (array_key_exists("HierarchicalValue",$param) and $param["HierarchicalValue"] !== null) {
             $this->HierarchicalValue = new AlarmHierarchicalValue();
             $this->HierarchicalValue->deserialize($param["HierarchicalValue"]);
+        }
+
+        if (array_key_exists("RuleType",$param) and $param["RuleType"] !== null) {
+            $this->RuleType = $param["RuleType"];
         }
     }
 }

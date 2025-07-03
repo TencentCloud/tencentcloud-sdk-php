@@ -21,261 +21,177 @@ use TencentCloud\Common\AbstractModel;
  * 容器安全镜像漏洞信息
  *
  * @method string getCVEID() 获取漏洞id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCVEID(string $CVEID) 设置漏洞id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPOCID() 获取观点验证程序id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPOCID(string $POCID) 设置观点验证程序id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取漏洞名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置漏洞名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getComponents() 获取涉及组件信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComponents(array $Components) 设置涉及组件信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCategory() 获取分类
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCategory(string $Category) 设置分类
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCategoryType() 获取分类2
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCategoryType(string $CategoryType) 设置分类2
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLevel() 获取风险等级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevel(string $Level) 设置风险等级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDes() 获取描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDes(string $Des) 设置描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOfficialSolution() 获取解决方案
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOfficialSolution(string $OfficialSolution) 设置解决方案
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReference() 获取引用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReference(string $Reference) 设置引用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDefenseSolution() 获取防御方案
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefenseSolution(string $DefenseSolution) 设置防御方案
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubmitTime() 获取提交时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubmitTime(string $SubmitTime) 设置提交时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCvssScore() 获取Cvss分数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCvssScore(string $CvssScore) 设置Cvss分数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCvssVector() 获取Cvss信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCvssVector(string $CvssVector) 设置Cvss信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIsSuggest() 获取是否建议修复
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsSuggest(string $IsSuggest) 设置是否建议修复
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFixedVersions() 获取修复版本号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFixedVersions(string $FixedVersions) 设置修复版本号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTag() 获取漏洞标签:"CanBeFixed","DynamicLevelPoc","DynamicLevelExp"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTag(array $Tag) 设置漏洞标签:"CanBeFixed","DynamicLevelPoc","DynamicLevelExp"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getComponent() 获取组件名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComponent(string $Component) 设置组件名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVersion() 获取组件版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersion(string $Version) 设置组件版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAttackLevel() 获取攻击热度 0-3
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAttackLevel(integer $AttackLevel) 设置攻击热度 0-3
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLayerInfos() 获取镜像层信息列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLayerInfos(array $LayerInfos) 设置镜像层信息列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImageVul extends AbstractModel
 {
     /**
      * @var string 漏洞id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CVEID;
 
     /**
      * @var string 观点验证程序id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $POCID;
 
     /**
      * @var string 漏洞名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var array 涉及组件信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Components;
 
     /**
      * @var string 分类
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Category;
 
     /**
      * @var string 分类2
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CategoryType;
 
     /**
      * @var string 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Level;
 
     /**
      * @var string 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Des;
 
     /**
      * @var string 解决方案
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OfficialSolution;
 
     /**
      * @var string 引用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Reference;
 
     /**
      * @var string 防御方案
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DefenseSolution;
 
     /**
      * @var string 提交时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubmitTime;
 
     /**
      * @var string Cvss分数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CvssScore;
 
     /**
      * @var string Cvss信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CvssVector;
 
     /**
      * @var string 是否建议修复
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsSuggest;
 
     /**
      * @var string 修复版本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FixedVersions;
 
     /**
      * @var array 漏洞标签:"CanBeFixed","DynamicLevelPoc","DynamicLevelExp"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tag;
 
     /**
      * @var string 组件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Component;
 
     /**
      * @var string 组件版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Version;
 
     /**
      * @var integer 攻击热度 0-3
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AttackLevel;
 
     /**
      * @var array 镜像层信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LayerInfos;
 
     /**
      * @param string $CVEID 漏洞id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $POCID 观点验证程序id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 漏洞名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Components 涉及组件信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Category 分类
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CategoryType 分类2
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Level 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Des 描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OfficialSolution 解决方案
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Reference 引用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DefenseSolution 防御方案
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubmitTime 提交时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CvssScore Cvss分数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CvssVector Cvss信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IsSuggest 是否建议修复
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FixedVersions 修复版本号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tag 漏洞标签:"CanBeFixed","DynamicLevelPoc","DynamicLevelExp"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Component 组件名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Version 组件版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AttackLevel 攻击热度 0-3
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $LayerInfos 镜像层信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

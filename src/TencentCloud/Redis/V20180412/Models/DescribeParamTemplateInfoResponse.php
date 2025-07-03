@@ -27,27 +27,31 @@ use TencentCloud\Common\AbstractModel;
  * @method string getName() 获取参数模板名称。
  * @method void setName(string $Name) 设置参数模板名称。
  * @method integer getProductType() 获取产品类型。
-- 2：Redis 2.8内存版（标准架构）。
-- 3：CKV 3.2内存版（标准架构）。
-- 4：CKV 3.2内存版（集群架构）。
-- 5：Redis 2.8内存版（单机）。
-- 6：Redis 4.0内存版（标准架构）。
-- 7：Redis 4.0内存版（集群架构）。
-- 8：Redis 5.0内存版（标准架构）。
-- 9：Redis 5.0内存版（集群架构）。
-- 15：Redis 6.2内存版（标准架构）。
-- 16：Redis 6.2内存版（集群架构）。
+- 2：Redis 2.8 内存版（标准架构）。
+- 3：CKV 3.2 内存版（标准架构）。
+- 4：CKV 3.2 内存版（集群架构）。
+- 5：Redis 2.8 内存版（单机）。
+- 6：Redis 4.0 内存版（标准架构）。
+- 7：Redis 4.0 内存版（集群架构）。
+- 8：Redis 5.0 内存版（标准架构）。
+- 9：Redis 5.0 内存版（集群架构）。
+- 15：Redis 6.2 内存版（标准架构）。
+- 16：Redis 6.2 内存版（集群架构）。
+- 17：Redis 7.0 内存版（标准架构）。
+- 18：Redis 7.0 内存版（集群架构）。
  * @method void setProductType(integer $ProductType) 设置产品类型。
-- 2：Redis 2.8内存版（标准架构）。
-- 3：CKV 3.2内存版（标准架构）。
-- 4：CKV 3.2内存版（集群架构）。
-- 5：Redis 2.8内存版（单机）。
-- 6：Redis 4.0内存版（标准架构）。
-- 7：Redis 4.0内存版（集群架构）。
-- 8：Redis 5.0内存版（标准架构）。
-- 9：Redis 5.0内存版（集群架构）。
-- 15：Redis 6.2内存版（标准架构）。
-- 16：Redis 6.2内存版（集群架构）。
+- 2：Redis 2.8 内存版（标准架构）。
+- 3：CKV 3.2 内存版（标准架构）。
+- 4：CKV 3.2 内存版（集群架构）。
+- 5：Redis 2.8 内存版（单机）。
+- 6：Redis 4.0 内存版（标准架构）。
+- 7：Redis 4.0 内存版（集群架构）。
+- 8：Redis 5.0 内存版（标准架构）。
+- 9：Redis 5.0 内存版（集群架构）。
+- 15：Redis 6.2 内存版（标准架构）。
+- 16：Redis 6.2 内存版（集群架构）。
+- 17：Redis 7.0 内存版（标准架构）。
+- 18：Redis 7.0 内存版（集群架构）。
  * @method string getDescription() 获取参数模板描述。
  * @method void setDescription(string $Description) 设置参数模板描述。
  * @method array getItems() 获取参数详情。包含：参数的名称，当前运行值，默认值，最大值、最小值、枚举值等信息。
@@ -74,16 +78,18 @@ class DescribeParamTemplateInfoResponse extends AbstractModel
 
     /**
      * @var integer 产品类型。
-- 2：Redis 2.8内存版（标准架构）。
-- 3：CKV 3.2内存版（标准架构）。
-- 4：CKV 3.2内存版（集群架构）。
-- 5：Redis 2.8内存版（单机）。
-- 6：Redis 4.0内存版（标准架构）。
-- 7：Redis 4.0内存版（集群架构）。
-- 8：Redis 5.0内存版（标准架构）。
-- 9：Redis 5.0内存版（集群架构）。
-- 15：Redis 6.2内存版（标准架构）。
-- 16：Redis 6.2内存版（集群架构）。
+- 2：Redis 2.8 内存版（标准架构）。
+- 3：CKV 3.2 内存版（标准架构）。
+- 4：CKV 3.2 内存版（集群架构）。
+- 5：Redis 2.8 内存版（单机）。
+- 6：Redis 4.0 内存版（标准架构）。
+- 7：Redis 4.0 内存版（集群架构）。
+- 8：Redis 5.0 内存版（标准架构）。
+- 9：Redis 5.0 内存版（集群架构）。
+- 15：Redis 6.2 内存版（标准架构）。
+- 16：Redis 6.2 内存版（集群架构）。
+- 17：Redis 7.0 内存版（标准架构）。
+- 18：Redis 7.0 内存版（集群架构）。
      */
     public $ProductType;
 
@@ -107,16 +113,18 @@ class DescribeParamTemplateInfoResponse extends AbstractModel
      * @param string $TemplateId 参数模板 ID。
      * @param string $Name 参数模板名称。
      * @param integer $ProductType 产品类型。
-- 2：Redis 2.8内存版（标准架构）。
-- 3：CKV 3.2内存版（标准架构）。
-- 4：CKV 3.2内存版（集群架构）。
-- 5：Redis 2.8内存版（单机）。
-- 6：Redis 4.0内存版（标准架构）。
-- 7：Redis 4.0内存版（集群架构）。
-- 8：Redis 5.0内存版（标准架构）。
-- 9：Redis 5.0内存版（集群架构）。
-- 15：Redis 6.2内存版（标准架构）。
-- 16：Redis 6.2内存版（集群架构）。
+- 2：Redis 2.8 内存版（标准架构）。
+- 3：CKV 3.2 内存版（标准架构）。
+- 4：CKV 3.2 内存版（集群架构）。
+- 5：Redis 2.8 内存版（单机）。
+- 6：Redis 4.0 内存版（标准架构）。
+- 7：Redis 4.0 内存版（集群架构）。
+- 8：Redis 5.0 内存版（标准架构）。
+- 9：Redis 5.0 内存版（集群架构）。
+- 15：Redis 6.2 内存版（标准架构）。
+- 16：Redis 6.2 内存版（集群架构）。
+- 17：Redis 7.0 内存版（标准架构）。
+- 18：Redis 7.0 内存版（集群架构）。
      * @param string $Description 参数模板描述。
      * @param array $Items 参数详情。包含：参数的名称，当前运行值，默认值，最大值、最小值、枚举值等信息。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。

@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getCount() 获取该等级风险项数量
  * @method void setCount(integer $Count) 设置该等级风险项数量
  * @method string getRiskLevelName() 获取风险等级名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskLevelName(string $RiskLevelName) 设置风险等级名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RiskCountInfo extends AbstractModel
 {
@@ -43,7 +41,6 @@ class RiskCountInfo extends AbstractModel
 
     /**
      * @var string 风险等级名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskLevelName;
 
@@ -51,7 +48,6 @@ class RiskCountInfo extends AbstractModel
      * @param string $RiskLevel 风险等级
      * @param integer $Count 该等级风险项数量
      * @param string $RiskLevelName 风险等级名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

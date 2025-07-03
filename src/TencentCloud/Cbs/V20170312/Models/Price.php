@@ -52,9 +52,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnitPriceDiscountHigh(string $UnitPriceDiscountHigh) 设置高精度后付费云盘折扣单价, 单位：元
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getChargeUnit() 获取后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。
+ * @method string getChargeUnit() 获取后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setChargeUnit(string $ChargeUnit) 设置后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。
+ * @method void setChargeUnit(string $ChargeUnit) 设置后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。</li>
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Price extends AbstractModel
@@ -108,7 +108,7 @@ class Price extends AbstractModel
     public $UnitPriceDiscountHigh;
 
     /**
-     * @var string 后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。
+     * @var string 后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChargeUnit;
@@ -130,7 +130,7 @@ class Price extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UnitPriceDiscountHigh 高精度后付费云盘折扣单价, 单位：元
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ChargeUnit 后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。
+     * @param string $ChargeUnit 后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

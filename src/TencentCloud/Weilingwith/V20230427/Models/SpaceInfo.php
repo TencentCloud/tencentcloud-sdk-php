@@ -21,141 +21,97 @@ use TencentCloud\Common\AbstractModel;
  * 项目空间详细信息
  *
  * @method integer getWorkspaceId() 获取项目空间id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWorkspaceId(integer $WorkspaceId) 设置项目空间id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTenantId() 获取租户id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTenantId(integer $TenantId) 设置租户id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEnglishName() 获取英文名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnglishName(string $EnglishName) 设置英文名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getChineseName() 获取中文名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChineseName(string $ChineseName) 设置中文名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取项目空间描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置项目空间描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取项目空间状态:0 启用 1 停用 -1 已删除
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置项目空间状态:0 启用 1 停用 -1 已删除
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsCommWorkspace() 获取是否是公共空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsCommWorkspace(boolean $IsCommWorkspace) 设置是否是公共空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValidityStartTime() 获取有效期开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValidityStartTime(string $ValidityStartTime) 设置有效期开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValidityEndTime() 获取有效期结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValidityEndTime(string $ValidityEndTime) 设置有效期结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSelected() 获取选中状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSelected(integer $Selected) 设置选中状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsSystem() 获取系统生成状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsSystem(integer $IsSystem) 设置系统生成状态
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SpaceInfo extends AbstractModel
 {
     /**
      * @var integer 项目空间id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkspaceId;
 
     /**
      * @var integer 租户id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TenantId;
 
     /**
      * @var string 英文名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnglishName;
 
     /**
      * @var string 中文名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChineseName;
 
     /**
      * @var string 项目空间描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var integer 项目空间状态:0 启用 1 停用 -1 已删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var boolean 是否是公共空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsCommWorkspace;
 
     /**
      * @var string 有效期开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ValidityStartTime;
 
     /**
      * @var string 有效期结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ValidityEndTime;
 
     /**
      * @var integer 选中状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Selected;
 
     /**
      * @var integer 系统生成状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsSystem;
 
     /**
      * @param integer $WorkspaceId 项目空间id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TenantId 租户id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EnglishName 英文名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChineseName 中文名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 项目空间描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 项目空间状态:0 启用 1 停用 -1 已删除
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsCommWorkspace 是否是公共空间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ValidityStartTime 有效期开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ValidityEndTime 有效期结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Selected 选中状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsSystem 系统生成状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDisplayType(string $DisplayType) 设置任务展示形式, 示例取值
 -    classification:分类展示
 -    catalog:目录展示
+ * @method boolean getNewFolderTreeMode() 获取是否新模式展示目录树
+ * @method void setNewFolderTreeMode(boolean $NewFolderTreeMode) 设置是否新模式展示目录树
  */
 class DescribeDsParentFolderTreeRequest extends AbstractModel
 {
@@ -65,6 +67,11 @@ class DescribeDsParentFolderTreeRequest extends AbstractModel
     public $DisplayType;
 
     /**
+     * @var boolean 是否新模式展示目录树
+     */
+    public $NewFolderTreeMode;
+
+    /**
      * @param string $ProjectId 项目id
      * @param string $FolderId 文件夹ID
      * @param string $WorkflowId 工作流ID
@@ -72,6 +79,7 @@ class DescribeDsParentFolderTreeRequest extends AbstractModel
      * @param string $DisplayType 任务展示形式, 示例取值
 -    classification:分类展示
 -    catalog:目录展示
+     * @param boolean $NewFolderTreeMode 是否新模式展示目录树
      */
     function __construct()
     {
@@ -104,6 +112,10 @@ class DescribeDsParentFolderTreeRequest extends AbstractModel
 
         if (array_key_exists("DisplayType",$param) and $param["DisplayType"] !== null) {
             $this->DisplayType = $param["DisplayType"];
+        }
+
+        if (array_key_exists("NewFolderTreeMode",$param) and $param["NewFolderTreeMode"] !== null) {
+            $this->NewFolderTreeMode = $param["NewFolderTreeMode"];
         }
     }
 }

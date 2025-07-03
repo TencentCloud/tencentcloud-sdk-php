@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 音频小语种检测结果
  *
  * @method string getLabel() 获取语种
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabel(string $Label) 设置语种
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScore() 获取得分
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScore(integer $Score) 设置得分
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getStartTime() 获取开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(float $StartTime) 设置开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getEndTime() 获取结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(float $EndTime) 设置结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubLabelCode() 获取子标签码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubLabelCode(string $SubLabelCode) 设置子标签码
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AudioResultDetailLanguageResult extends AbstractModel
 {
     /**
      * @var string 语种
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Label;
 
     /**
      * @var integer 得分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Score;
 
     /**
      * @var float 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
      * @var float 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
      * @var string 子标签码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubLabelCode;
 
     /**
      * @param string $Label 语种
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Score 得分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $StartTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $EndTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubLabelCode 子标签码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

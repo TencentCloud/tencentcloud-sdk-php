@@ -21,93 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * 设备状态统计结果
  *
  * @method integer getWorkspaceId() 获取工作空间Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWorkspaceId(integer $WorkspaceId) 设置工作空间Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotal() 获取汇总数。在线（正常+故障） + 离线
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotal(integer $Total) 设置汇总数。在线（正常+故障） + 离线
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNormalSum() 获取正常数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNormalSum(integer $NormalSum) 设置正常数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getOfflineSum() 获取离线数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOfflineSum(integer $OfflineSum) 设置离线数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFaultSum() 获取故障数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFaultSum(integer $FaultSum) 设置故障数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDeviceTypeOverviewSet() 获取设备类型概览列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceTypeOverviewSet(array $DeviceTypeOverviewSet) 设置设备类型概览列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getStatLevelSet() 获取设备类型统计列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatLevelSet(array $StatLevelSet) 设置设备类型统计列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DeviceStatusStatRes extends AbstractModel
 {
     /**
      * @var integer 工作空间Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkspaceId;
 
     /**
      * @var integer 汇总数。在线（正常+故障） + 离线
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Total;
 
     /**
      * @var integer 正常数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NormalSum;
 
     /**
      * @var integer 离线数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OfflineSum;
 
     /**
      * @var integer 故障数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FaultSum;
 
     /**
      * @var array 设备类型概览列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceTypeOverviewSet;
 
     /**
      * @var array 设备类型统计列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StatLevelSet;
 
     /**
      * @param integer $WorkspaceId 工作空间Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Total 汇总数。在线（正常+故障） + 离线
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NormalSum 正常数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $OfflineSum 离线数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FaultSum 故障数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DeviceTypeOverviewSet 设备类型概览列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $StatLevelSet 设备类型统计列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

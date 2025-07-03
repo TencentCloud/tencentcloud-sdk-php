@@ -20,28 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteRabbitMQVipInstance返回参数结构体
  *
- * @method string getTranId() 获取订单号Id
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTranId(string $TranId) 设置订单号Id
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceId() 获取实例Id
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceId(string $InstanceId) 设置实例Id
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTranId() 获取订单号 ID
+ * @method void setTranId(string $TranId) 设置订单号 ID
+ * @method string getInstanceId() 获取实例 ID
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DeleteRabbitMQVipInstanceResponse extends AbstractModel
 {
     /**
-     * @var string 订单号Id
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 订单号 ID
      */
     public $TranId;
 
     /**
-     * @var string 实例Id
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 实例 ID
      */
     public $InstanceId;
 
@@ -51,10 +45,8 @@ class DeleteRabbitMQVipInstanceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TranId 订单号Id
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceId 实例Id
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TranId 订单号 ID
+     * @param string $InstanceId 实例 ID
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * DescribeCompanyList返回参数结构体
  *
  * @method integer getTotalCount() 获取总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCompanyInfo() 获取企业资质审核信息
  * @method void setCompanyInfo(array $CompanyInfo) 设置企业资质审核信息
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -33,7 +31,6 @@ class DescribeCompanyListResponse extends AbstractModel
 {
     /**
      * @var integer 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
@@ -49,7 +46,6 @@ class DescribeCompanyListResponse extends AbstractModel
 
     /**
      * @param integer $TotalCount 总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CompanyInfo 企业资质审核信息
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

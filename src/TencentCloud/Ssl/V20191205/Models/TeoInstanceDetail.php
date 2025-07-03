@@ -29,7 +29,17 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneId(string $ZoneId) 设置区域ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取域名状态
+deployed：已部署；
+processing：部署中；
+applying：申请中；
+failed：申请失败；
+issued：绑定失败。
  * @method void setStatus(string $Status) 设置域名状态
+deployed：已部署；
+processing：部署中；
+applying：申请中；
+failed：申请失败；
+issued：绑定失败。
  */
 class TeoInstanceDetail extends AbstractModel
 {
@@ -51,6 +61,11 @@ class TeoInstanceDetail extends AbstractModel
 
     /**
      * @var string 域名状态
+deployed：已部署；
+processing：部署中；
+applying：申请中；
+failed：申请失败；
+issued：绑定失败。
      */
     public $Status;
 
@@ -60,6 +75,11 @@ class TeoInstanceDetail extends AbstractModel
      * @param string $ZoneId 区域ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 域名状态
+deployed：已部署；
+processing：部署中；
+applying：申请中；
+failed：申请失败；
+issued：绑定失败。
      */
     function __construct()
     {

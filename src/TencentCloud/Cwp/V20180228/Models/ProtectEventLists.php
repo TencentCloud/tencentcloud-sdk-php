@@ -39,13 +39,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getFileType() 获取文件类型 0-常规文件；1-目录；2-软链
  * @method void setFileType(integer $FileType) 设置文件类型 0-常规文件；1-目录；2-软链
  * @method MachineExtraInfo getMachineExtraInfo() 获取主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getQuuid() 获取机器实例uuid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQuuid(string $Quuid) 设置机器实例uuid
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProtectEventLists extends AbstractModel
 {
@@ -96,13 +92,11 @@ class ProtectEventLists extends AbstractModel
 
     /**
      * @var MachineExtraInfo 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineExtraInfo;
 
     /**
      * @var string 机器实例uuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Quuid;
 
@@ -117,9 +111,7 @@ class ProtectEventLists extends AbstractModel
      * @param integer $Id 唯一ID
      * @param integer $FileType 文件类型 0-常规文件；1-目录；2-软链
      * @param MachineExtraInfo $MachineExtraInfo 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Quuid 机器实例uuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

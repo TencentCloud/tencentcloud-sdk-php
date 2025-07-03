@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSize(integer $Size) 设置快照大小
  * @method integer getAliveDay() 获取保留时长天
  * @method void setAliveDay(integer $AliveDay) 设置保留时长天
- * @method integer getPercent() 获取快照进度百分比，1表示1%
- * @method void setPercent(integer $Percent) 设置快照进度百分比，1表示1%
+ * @method integer getPercent() 获取快照进度百分比，1表示1% 范围1-100
+ * @method void setPercent(integer $Percent) 设置快照进度百分比，1表示1% 范围1-100
  * @method integer getAppId() 获取账号ID
  * @method void setAppId(integer $AppId) 设置账号ID
  * @method string getDeleteTime() 获取快照删除时间
@@ -98,7 +98,7 @@ class SnapshotInfo extends AbstractModel
     public $AliveDay;
 
     /**
-     * @var integer 快照进度百分比，1表示1%
+     * @var integer 快照进度百分比，1表示1% 范围1-100
      */
     public $Percent;
 
@@ -143,7 +143,7 @@ class SnapshotInfo extends AbstractModel
      * @param string $FileSystemId 文件系统ID
      * @param integer $Size 快照大小
      * @param integer $AliveDay 保留时长天
-     * @param integer $Percent 快照进度百分比，1表示1%
+     * @param integer $Percent 快照进度百分比，1表示1% 范围1-100
      * @param integer $AppId 账号ID
      * @param string $DeleteTime 快照删除时间
      * @param string $FsName 文件系统名称

@@ -31,27 +31,27 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRegistryType() 获取仓库类型，列表：harbor
  * @method void setRegistryType(string $RegistryType) 设置仓库类型，列表：harbor
  * @method string getRegistryVersion() 获取仓库版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegistryVersion(string $RegistryVersion) 设置仓库版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNetType() 获取网络类型，列表：public（公网）,private（私网）
  * @method void setNetType(string $NetType) 设置网络类型，列表：public（公网）,private（私网）
  * @method string getRegistryRegion() 获取区域，列表:default（默认）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegistryRegion(string $RegistryRegion) 设置区域，列表:default（默认）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSpeedLimit() 获取限速
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpeedLimit(integer $SpeedLimit) 设置限速
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getInsecure() 获取安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInsecure(integer $Insecure) 设置安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getConnDetectDetail() 获取联通性检测结果详情
  * @method void setConnDetectDetail(array $ConnDetectDetail) 设置联通性检测结果详情
  * @method string getInstanceID() 获取tcr情况下instance_id
  * @method void setInstanceID(string $InstanceID) 设置tcr情况下instance_id
+ * @method integer getSyncMode() 获取同步方式，0全量同步，1增量同步
+ * @method void setSyncMode(integer $SyncMode) 设置同步方式，0全量同步，1增量同步
+ * @method boolean getNeedScan() 获取是否自动授权&扫描，选择全量同步时只针对最新版本镜像，增量同步时则包含所有新增镜像
+ * @method void setNeedScan(boolean $NeedScan) 设置是否自动授权&扫描，选择全量同步时只针对最新版本镜像，增量同步时则包含所有新增镜像
+ * @method string getWebhookUrl() 获取webhook接入地址
+ * @method void setWebhookUrl(string $WebhookUrl) 设置webhook接入地址
+ * @method string getWebhookToken() 获取webhook接入token	
+ * @method void setWebhookToken(string $WebhookToken) 设置webhook接入token	
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -84,7 +84,6 @@ class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractModel
 
     /**
      * @var string 仓库版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegistryVersion;
 
@@ -95,19 +94,16 @@ class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractModel
 
     /**
      * @var string 区域，列表:default（默认）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegistryRegion;
 
     /**
      * @var integer 限速
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SpeedLimit;
 
     /**
      * @var integer 安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Insecure;
 
@@ -122,6 +118,26 @@ class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractModel
     public $InstanceID;
 
     /**
+     * @var integer 同步方式，0全量同步，1增量同步
+     */
+    public $SyncMode;
+
+    /**
+     * @var boolean 是否自动授权&扫描，选择全量同步时只针对最新版本镜像，增量同步时则包含所有新增镜像
+     */
+    public $NeedScan;
+
+    /**
+     * @var string webhook接入地址
+     */
+    public $WebhookUrl;
+
+    /**
+     * @var string webhook接入token	
+     */
+    public $WebhookToken;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -133,16 +149,16 @@ class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractModel
      * @param string $Url 仓库url
      * @param string $RegistryType 仓库类型，列表：harbor
      * @param string $RegistryVersion 仓库版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NetType 网络类型，列表：public（公网）,private（私网）
      * @param string $RegistryRegion 区域，列表:default（默认）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SpeedLimit 限速
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Insecure 安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ConnDetectDetail 联通性检测结果详情
      * @param string $InstanceID tcr情况下instance_id
+     * @param integer $SyncMode 同步方式，0全量同步，1增量同步
+     * @param boolean $NeedScan 是否自动授权&扫描，选择全量同步时只针对最新版本镜像，增量同步时则包含所有新增镜像
+     * @param string $WebhookUrl webhook接入地址
+     * @param string $WebhookToken webhook接入token	
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -209,6 +225,22 @@ class DescribeAssetImageRegistryRegistryDetailResponse extends AbstractModel
 
         if (array_key_exists("InstanceID",$param) and $param["InstanceID"] !== null) {
             $this->InstanceID = $param["InstanceID"];
+        }
+
+        if (array_key_exists("SyncMode",$param) and $param["SyncMode"] !== null) {
+            $this->SyncMode = $param["SyncMode"];
+        }
+
+        if (array_key_exists("NeedScan",$param) and $param["NeedScan"] !== null) {
+            $this->NeedScan = $param["NeedScan"];
+        }
+
+        if (array_key_exists("WebhookUrl",$param) and $param["WebhookUrl"] !== null) {
+            $this->WebhookUrl = $param["WebhookUrl"];
+        }
+
+        if (array_key_exists("WebhookToken",$param) and $param["WebhookToken"] !== null) {
+            $this->WebhookToken = $param["WebhookToken"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

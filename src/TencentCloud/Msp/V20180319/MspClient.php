@@ -23,7 +23,9 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Msp\V20180319\Models as Models;
 
 /**
- * @method Models\DeregisterMigrationTaskResponse DeregisterMigrationTask(Models\DeregisterMigrationTaskRequest $req) 取消注册迁移任务
+ * @method Models\DeregisterMigrationTaskResponse DeregisterMigrationTask(Models\DeregisterMigrationTaskRequest $req) 接口已经废弃不再使用
+
+取消注册迁移任务
  * @method Models\DescribeMigrationTaskResponse DescribeMigrationTask(Models\DescribeMigrationTaskRequest $req) 获取指定迁移任务详情
  * @method Models\ListMigrationProjectResponse ListMigrationProject(Models\ListMigrationProjectRequest $req) 获取迁移项目名称列表
  * @method Models\ListMigrationTaskResponse ListMigrationTask(Models\ListMigrationTaskRequest $req) 获取迁移任务列表

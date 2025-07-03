@@ -200,6 +200,30 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDsEnvType(integer $DsEnvType) 设置0或者未返回或者null：未定义，1：生产，2：开发
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDatasourceType() 获取数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDatasourceType(integer $DatasourceType) 设置数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSchemaName() 获取模式名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSchemaName(string $SchemaName) 设置模式名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTargetSchemaName() 获取目标模式名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTargetSchemaName(string $TargetSchemaName) 设置目标模式名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProjectId() 获取项目id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProjectId(string $ProjectId) 设置项目id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProjectName() 获取项目名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProjectName(string $ProjectName) 设置项目名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUpdateTime() 获取更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUpdateTime(string $UpdateTime) 设置更新时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Rule extends AbstractModel
 {
@@ -474,6 +498,42 @@ class Rule extends AbstractModel
     public $DsEnvType;
 
     /**
+     * @var integer 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DatasourceType;
+
+    /**
+     * @var string 模式名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SchemaName;
+
+    /**
+     * @var string 目标模式名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TargetSchemaName;
+
+    /**
+     * @var string 项目id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProjectId;
+
+    /**
+     * @var string 项目名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ProjectName;
+
+    /**
+     * @var string 更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UpdateTime;
+
+    /**
      * @param integer $RuleId 规则ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleGroupId 规则组ID
@@ -563,6 +623,18 @@ class Rule extends AbstractModel
      * @param string $TriggerCondition 触发条件
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DsEnvType 0或者未返回或者null：未定义，1：生产，2：开发
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DatasourceType 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SchemaName 模式名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TargetSchemaName 目标模式名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProjectId 项目id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProjectName 项目名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UpdateTime 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -760,6 +832,30 @@ class Rule extends AbstractModel
 
         if (array_key_exists("DsEnvType",$param) and $param["DsEnvType"] !== null) {
             $this->DsEnvType = $param["DsEnvType"];
+        }
+
+        if (array_key_exists("DatasourceType",$param) and $param["DatasourceType"] !== null) {
+            $this->DatasourceType = $param["DatasourceType"];
+        }
+
+        if (array_key_exists("SchemaName",$param) and $param["SchemaName"] !== null) {
+            $this->SchemaName = $param["SchemaName"];
+        }
+
+        if (array_key_exists("TargetSchemaName",$param) and $param["TargetSchemaName"] !== null) {
+            $this->TargetSchemaName = $param["TargetSchemaName"];
+        }
+
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("ProjectName",$param) and $param["ProjectName"] !== null) {
+            $this->ProjectName = $param["ProjectName"];
+        }
+
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = $param["UpdateTime"];
         }
     }
 }

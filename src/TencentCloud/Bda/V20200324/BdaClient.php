@@ -69,7 +69,6 @@ use TencentCloud\Bda\V20200324\Models as Models;
 - 构成人体动作轨迹单张图片大小不得超过2M，分辨率不得超过1920*1080。
  * @method Models\SegmentCustomizedPortraitPicResponse SegmentCustomizedPortraitPic(Models\SegmentCustomizedPortraitPicRequest $req) 在前后景分割的基础上优化多分类分割，支持对头发、五官等的分割，既作为换发型、挂件等底层技术，也可用于抠人头、抠人脸等玩法
  * @method Models\SegmentPortraitPicResponse SegmentPortraitPic(Models\SegmentPortraitPicRequest $req) 即二分类人像分割，识别传入图片中人体的完整轮廓，进行抠像。
-
  * @method Models\TerminateSegmentationTaskResponse TerminateSegmentationTask(Models\TerminateSegmentationTaskRequest $req) 终止指定视频人像分割处理任务
  */
 

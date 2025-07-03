@@ -24,13 +24,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExitCode(integer $ExitCode) 设置命令执行ExitCode。
  * @method string getOutput() 获取Base64编码后的命令输出。最大长度24KB。
  * @method void setOutput(string $Output) 设置Base64编码后的命令输出。最大长度24KB。
- * @method string getExecStartTime() 获取命令执行开始时间。
+ * @method string getExecStartTime() 获取命令执行开始时间。格式为：YYYY-MM-DDThh:mm:ssZ
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExecStartTime(string $ExecStartTime) 设置命令执行开始时间。
+ * @method void setExecStartTime(string $ExecStartTime) 设置命令执行开始时间。格式为：YYYY-MM-DDThh:mm:ssZ
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getExecEndTime() 获取命令执行结束时间。
+ * @method string getExecEndTime() 获取命令执行结束时间。格式为：YYYY-MM-DDThh:mm:ssZ
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setExecEndTime(string $ExecEndTime) 设置命令执行结束时间。
+ * @method void setExecEndTime(string $ExecEndTime) 设置命令执行结束时间。格式为：YYYY-MM-DDThh:mm:ssZ
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDropped() 获取命令最终输出被截断的字节数。
  * @method void setDropped(integer $Dropped) 设置命令最终输出被截断的字节数。
@@ -52,13 +52,13 @@ class TaskResult extends AbstractModel
     public $Output;
 
     /**
-     * @var string 命令执行开始时间。
+     * @var string 命令执行开始时间。格式为：YYYY-MM-DDThh:mm:ssZ
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecStartTime;
 
     /**
-     * @var string 命令执行结束时间。
+     * @var string 命令执行结束时间。格式为：YYYY-MM-DDThh:mm:ssZ
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecEndTime;
@@ -81,9 +81,9 @@ class TaskResult extends AbstractModel
     /**
      * @param integer $ExitCode 命令执行ExitCode。
      * @param string $Output Base64编码后的命令输出。最大长度24KB。
-     * @param string $ExecStartTime 命令执行开始时间。
+     * @param string $ExecStartTime 命令执行开始时间。格式为：YYYY-MM-DDThh:mm:ssZ
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ExecEndTime 命令执行结束时间。
+     * @param string $ExecEndTime 命令执行结束时间。格式为：YYYY-MM-DDThh:mm:ssZ
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Dropped 命令最终输出被截断的字节数。
      * @param string $OutputUrl 日志在cos中的地址

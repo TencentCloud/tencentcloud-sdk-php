@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteVpcEndPointServiceWhiteList请求参数结构体
  *
- * @method array getUserUin() 获取用户UIN数组。
- * @method void setUserUin(array $UserUin) 设置用户UIN数组。
- * @method string getEndPointServiceId() 获取终端节点服务ID。
- * @method void setEndPointServiceId(string $EndPointServiceId) 设置终端节点服务ID。
+ * @method array getUserUin() 获取用户UIN数组。登录 腾讯云账号中心控制台
+ * @method void setUserUin(array $UserUin) 设置用户UIN数组。登录 腾讯云账号中心控制台
+ * @method string getEndPointServiceId() 获取终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+ * @method void setEndPointServiceId(string $EndPointServiceId) 设置终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
  */
 class DeleteVpcEndPointServiceWhiteListRequest extends AbstractModel
 {
     /**
-     * @var array 用户UIN数组。
+     * @var array 用户UIN数组。登录 腾讯云账号中心控制台
      */
     public $UserUin;
 
     /**
-     * @var string 终端节点服务ID。
+     * @var string 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
      */
     public $EndPointServiceId;
 
     /**
-     * @param array $UserUin 用户UIN数组。
-     * @param string $EndPointServiceId 终端节点服务ID。
+     * @param array $UserUin 用户UIN数组。登录 腾讯云账号中心控制台
+     * @param string $EndPointServiceId 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
      */
     function __construct()
     {

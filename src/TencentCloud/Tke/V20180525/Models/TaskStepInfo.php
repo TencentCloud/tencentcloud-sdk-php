@@ -33,17 +33,11 @@ running: 步骤执行中
 success: 步骤成功完成
 failed: 步骤失败
  * @method string getStartAt() 获取步骤开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartAt(string $StartAt) 设置步骤开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndAt() 获取步骤结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndAt(string $EndAt) 设置步骤结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFailedMsg() 获取若步骤生命周期为failed,则此字段显示错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailedMsg(string $FailedMsg) 设置若步骤生命周期为failed,则此字段显示错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskStepInfo extends AbstractModel
 {
@@ -63,19 +57,16 @@ failed: 步骤失败
 
     /**
      * @var string 步骤开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartAt;
 
     /**
      * @var string 步骤结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndAt;
 
     /**
      * @var string 若步骤生命周期为failed,则此字段显示错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailedMsg;
 
@@ -87,11 +78,8 @@ running: 步骤执行中
 success: 步骤成功完成
 failed: 步骤失败
      * @param string $StartAt 步骤开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndAt 步骤结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FailedMsg 若步骤生命周期为failed,则此字段显示错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getWorkGroupName() 获取工作组名称
  * @method void setWorkGroupName(string $WorkGroupName) 设置工作组名称
  * @method string getWorkGroupDescription() 获取工作组描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWorkGroupDescription(string $WorkGroupDescription) 设置工作组描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUserNum() 获取工作组关联的用户数量
  * @method void setUserNum(integer $UserNum) 设置工作组关联的用户数量
  * @method array getUserSet() 获取工作组关联的用户集合
@@ -57,7 +55,6 @@ class WorkGroupInfo extends AbstractModel
 
     /**
      * @var string 工作组描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkGroupDescription;
 
@@ -92,7 +89,6 @@ class WorkGroupInfo extends AbstractModel
      * @param integer $WorkGroupId 查询到的工作组唯一Id
      * @param string $WorkGroupName 工作组名称
      * @param string $WorkGroupDescription 工作组描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UserNum 工作组关联的用户数量
      * @param array $UserSet 工作组关联的用户集合
 注意：此字段可能返回 null，表示取不到有效值。

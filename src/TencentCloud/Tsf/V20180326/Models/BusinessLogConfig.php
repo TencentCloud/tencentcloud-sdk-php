@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getConfigName() 获取配置项名称
  * @method void setConfigName(string $ConfigName) 设置配置项名称
  * @method string getConfigPath() 获取配置项日志路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigPath(string $ConfigPath) 设置配置项日志路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConfigDesc() 获取配置项描述
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigDesc(string $ConfigDesc) 设置配置项描述
@@ -37,9 +35,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConfigTags(string $ConfigTags) 设置配置项标签
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConfigPipeline() 获取配置项对应的ES管道
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigPipeline(string $ConfigPipeline) 设置配置项对应的ES管道
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConfigCreateTime() 获取配置项创建时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigCreateTime(string $ConfigCreateTime) 设置配置项创建时间
@@ -49,17 +45,17 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConfigUpdateTime(string $ConfigUpdateTime) 设置配置项更新时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method BusinessLogConfigSchema getConfigSchema() 获取配置项解析规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigSchema(BusinessLogConfigSchema $ConfigSchema) 设置配置项解析规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getConfigAssociatedGroups() 获取配置项关联部署组
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigAssociatedGroups(array $ConfigAssociatedGroups) 设置配置项关联部署组
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getConfigAssociatedGroupList() 获取配置项关联部署组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigAssociatedGroupList(array $ConfigAssociatedGroupList) 设置配置项关联部署组
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getFilebeatConfigEnable() 获取是否开启filebeat高级配置开关
+ * @method void setFilebeatConfigEnable(boolean $FilebeatConfigEnable) 设置是否开启filebeat高级配置开关
+ * @method integer getFilebeatCloseTimeout() 获取close_timeout参数
+ * @method void setFilebeatCloseTimeout(integer $FilebeatCloseTimeout) 设置close_timeout参数
  */
 class BusinessLogConfig extends AbstractModel
 {
@@ -75,7 +71,6 @@ class BusinessLogConfig extends AbstractModel
 
     /**
      * @var string 配置项日志路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigPath;
 
@@ -93,7 +88,6 @@ class BusinessLogConfig extends AbstractModel
 
     /**
      * @var string 配置项对应的ES管道
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigPipeline;
 
@@ -111,7 +105,6 @@ class BusinessLogConfig extends AbstractModel
 
     /**
      * @var BusinessLogConfigSchema 配置项解析规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigSchema;
 
@@ -124,31 +117,38 @@ class BusinessLogConfig extends AbstractModel
 
     /**
      * @var array 配置项关联部署组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigAssociatedGroupList;
+
+    /**
+     * @var boolean 是否开启filebeat高级配置开关
+     */
+    public $FilebeatConfigEnable;
+
+    /**
+     * @var integer close_timeout参数
+     */
+    public $FilebeatCloseTimeout;
 
     /**
      * @param string $ConfigId 配置项ID
      * @param string $ConfigName 配置项名称
      * @param string $ConfigPath 配置项日志路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConfigDesc 配置项描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConfigTags 配置项标签
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConfigPipeline 配置项对应的ES管道
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConfigCreateTime 配置项创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConfigUpdateTime 配置项更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param BusinessLogConfigSchema $ConfigSchema 配置项解析规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ConfigAssociatedGroups 配置项关联部署组
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ConfigAssociatedGroupList 配置项关联部署组
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $FilebeatConfigEnable 是否开启filebeat高级配置开关
+     * @param integer $FilebeatCloseTimeout close_timeout参数
      */
     function __construct()
     {
@@ -216,6 +216,14 @@ class BusinessLogConfig extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ConfigAssociatedGroupList, $obj);
             }
+        }
+
+        if (array_key_exists("FilebeatConfigEnable",$param) and $param["FilebeatConfigEnable"] !== null) {
+            $this->FilebeatConfigEnable = $param["FilebeatConfigEnable"];
+        }
+
+        if (array_key_exists("FilebeatCloseTimeout",$param) and $param["FilebeatCloseTimeout"] !== null) {
+            $this->FilebeatCloseTimeout = $param["FilebeatCloseTimeout"];
         }
     }
 }

@@ -38,10 +38,8 @@ use TencentCloud\Common\AbstractModel;
 <dx-alert infotype="notice" title="注意"> 如您未申请过特殊配置，则该字段为必填 </dx-alert>
  * @method void setTemplate(Template $Template) 设置使用模板发送时，填写的模板相关参数
 <dx-alert infotype="notice" title="注意"> 如您未申请过特殊配置，则该字段为必填 </dx-alert>
- * @method Simple getSimple() 获取已废弃
-<dx-alert infotype="notice" title="说明"> 仅部分历史上申请了特殊配置的客户需要使用。如您未申请过特殊配置，则不存在该字段。</dx-alert> 
- * @method void setSimple(Simple $Simple) 设置已废弃
-<dx-alert infotype="notice" title="说明"> 仅部分历史上申请了特殊配置的客户需要使用。如您未申请过特殊配置，则不存在该字段。</dx-alert> 
+ * @method Simple getSimple() 获取已废弃<dx-alert infotype="notice" title="说明"> 仅部分历史上申请了特殊配置的客户需要使用。如您未申请过特殊配置，则不存在该字段。</dx-alert>
+ * @method void setSimple(Simple $Simple) 设置已废弃<dx-alert infotype="notice" title="说明"> 仅部分历史上申请了特殊配置的客户需要使用。如您未申请过特殊配置，则不存在该字段。</dx-alert>
  * @method array getAttachments() 获取需要发送附件时，填写附件相关参数（暂未支持）
  * @method void setAttachments(array $Attachments) 设置需要发送附件时，填写附件相关参数（暂未支持）
  * @method CycleEmailParam getCycleParam() 获取周期发送任务的必要参数
@@ -89,8 +87,7 @@ class BatchSendEmailRequest extends AbstractModel
     public $Template;
 
     /**
-     * @var Simple 已废弃
-<dx-alert infotype="notice" title="说明"> 仅部分历史上申请了特殊配置的客户需要使用。如您未申请过特殊配置，则不存在该字段。</dx-alert> 
+     * @var Simple 已废弃<dx-alert infotype="notice" title="说明"> 仅部分历史上申请了特殊配置的客户需要使用。如您未申请过特殊配置，则不存在该字段。</dx-alert>
      */
     public $Simple;
 
@@ -129,8 +126,7 @@ class BatchSendEmailRequest extends AbstractModel
      * @param string $ReplyToAddresses 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。
      * @param Template $Template 使用模板发送时，填写的模板相关参数
 <dx-alert infotype="notice" title="注意"> 如您未申请过特殊配置，则该字段为必填 </dx-alert>
-     * @param Simple $Simple 已废弃
-<dx-alert infotype="notice" title="说明"> 仅部分历史上申请了特殊配置的客户需要使用。如您未申请过特殊配置，则不存在该字段。</dx-alert> 
+     * @param Simple $Simple 已废弃<dx-alert infotype="notice" title="说明"> 仅部分历史上申请了特殊配置的客户需要使用。如您未申请过特殊配置，则不存在该字段。</dx-alert>
      * @param array $Attachments 需要发送附件时，填写附件相关参数（暂未支持）
      * @param CycleEmailParam $CycleParam 周期发送任务的必要参数
      * @param TimedEmailParam $TimedParam 定时发送任务的必要参数

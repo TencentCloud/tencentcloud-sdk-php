@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalCount(integer $TotalCount) 设置事件总数量
  * @method array getEventSet() 获取访问控制事件数组
  * @method void setEventSet(array $EventSet) 设置访问控制事件数组
+ * @method string getSupportCoreVersion() 获取支持的内核版本
+ * @method void setSupportCoreVersion(string $SupportCoreVersion) 设置支持的内核版本
+ * @method string getInterceptionFailureTip() 获取拦截失败可能的原因
+ * @method void setInterceptionFailureTip(string $InterceptionFailureTip) 设置拦截失败可能的原因
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +44,16 @@ class DescribeAccessControlEventsResponse extends AbstractModel
     public $EventSet;
 
     /**
+     * @var string 支持的内核版本
+     */
+    public $SupportCoreVersion;
+
+    /**
+     * @var string 拦截失败可能的原因
+     */
+    public $InterceptionFailureTip;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +61,8 @@ class DescribeAccessControlEventsResponse extends AbstractModel
     /**
      * @param integer $TotalCount 事件总数量
      * @param array $EventSet 访问控制事件数组
+     * @param string $SupportCoreVersion 支持的内核版本
+     * @param string $InterceptionFailureTip 拦截失败可能的原因
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -73,6 +89,14 @@ class DescribeAccessControlEventsResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->EventSet, $obj);
             }
+        }
+
+        if (array_key_exists("SupportCoreVersion",$param) and $param["SupportCoreVersion"] !== null) {
+            $this->SupportCoreVersion = $param["SupportCoreVersion"];
+        }
+
+        if (array_key_exists("InterceptionFailureTip",$param) and $param["InterceptionFailureTip"] !== null) {
+            $this->InterceptionFailureTip = $param["InterceptionFailureTip"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

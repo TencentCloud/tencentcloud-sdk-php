@@ -20,58 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 预释放价格区间配置
  *
- * @method float getMaxPrice() 获取最高价格
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMaxPrice(float $MaxPrice) 设置最高价格
-注意：此字段可能返回 null，表示取不到有效值。
- * @method float getMinPrice() 获取最低价格
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMinPrice(float $MinPrice) 设置最低价格
-注意：此字段可能返回 null，表示取不到有效值。
- * @method float getPrice() 获取价格幅度
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPrice(float $Price) 设置价格幅度
-注意：此字段可能返回 null，表示取不到有效值。
- * @method float getDepositPrice() 获取保证金
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDepositPrice(float $DepositPrice) 设置保证金
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getMaxPrice() 获取最高价格 单位元
+ * @method void setMaxPrice(float $MaxPrice) 设置最高价格 单位元
+ * @method float getMinPrice() 获取最低价格 单位元
+ * @method void setMinPrice(float $MinPrice) 设置最低价格 单位元
+ * @method float getPrice() 获取价格幅度 单位元
+ * @method void setPrice(float $Price) 设置价格幅度 单位元
+ * @method float getDepositPrice() 获取保证金 单位元
+ * @method void setDepositPrice(float $DepositPrice) 设置保证金 单位元
  */
 class PriceScopeConf extends AbstractModel
 {
     /**
-     * @var float 最高价格
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var float 最高价格 单位元
      */
     public $MaxPrice;
 
     /**
-     * @var float 最低价格
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var float 最低价格 单位元
      */
     public $MinPrice;
 
     /**
-     * @var float 价格幅度
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var float 价格幅度 单位元
      */
     public $Price;
 
     /**
-     * @var float 保证金
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var float 保证金 单位元
      */
     public $DepositPrice;
 
     /**
-     * @param float $MaxPrice 最高价格
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $MinPrice 最低价格
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $Price 价格幅度
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $DepositPrice 保证金
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $MaxPrice 最高价格 单位元
+     * @param float $MinPrice 最低价格 单位元
+     * @param float $Price 价格幅度 单位元
+     * @param float $DepositPrice 保证金 单位元
      */
     function __construct()
     {

@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 文档内的填充控件返回结构体，返回控件的基本信息和填写内容值
  *
  * @method string getComponentId() 获取控件Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComponentId(string $ComponentId) 设置控件Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getComponentName() 获取控件名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComponentName(string $ComponentName) 设置控件名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getComponentFillStatus() 获取控件填写状态；0-未填写；1-已填写
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComponentFillStatus(string $ComponentFillStatus) 设置控件填写状态；0-未填写；1-已填写
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getComponentValue() 获取控件填写内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComponentValue(string $ComponentValue) 设置控件填写内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getComponentRecipientId() 获取控件所属参与方Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComponentRecipientId(string $ComponentRecipientId) 设置控件所属参与方Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getImageUrl() 获取图片填充控件下载链接，如果是图片填充控件时，这里返回图片的下载链接。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageUrl(string $ImageUrl) 设置图片填充控件下载链接，如果是图片填充控件时，这里返回图片的下载链接。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class FilledComponent extends AbstractModel
 {
     /**
      * @var string 控件Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComponentId;
 
     /**
      * @var string 控件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComponentName;
 
     /**
      * @var string 控件填写状态；0-未填写；1-已填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComponentFillStatus;
 
     /**
      * @var string 控件填写内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComponentValue;
 
     /**
      * @var string 控件所属参与方Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComponentRecipientId;
 
     /**
      * @var string 图片填充控件下载链接，如果是图片填充控件时，这里返回图片的下载链接。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageUrl;
 
     /**
      * @param string $ComponentId 控件Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ComponentName 控件名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ComponentFillStatus 控件填写状态；0-未填写；1-已填写
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ComponentValue 控件填写内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ComponentRecipientId 控件所属参与方Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ImageUrl 图片填充控件下载链接，如果是图片填充控件时，这里返回图片的下载链接。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

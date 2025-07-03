@@ -23,107 +23,139 @@ use TencentCloud\Common\AbstractModel;
  * @method UserInfo getOperator() 获取操作人信息
  * @method void setOperator(UserInfo $Operator) 设置操作人信息
  * @method array getAuthorizationTypes() 获取指定授权方式 支持多选:
-1-上传授权书方式
-2- 法人授权方式
-3- 法人身份认证方式
- * @method void setAuthorizationTypes(array $AuthorizationTypes) 设置指定授权方式 支持多选:
-1-上传授权书方式
-2- 法人授权方式
-3- 法人身份认证方式
- * @method string getOrganizationName() 获取企业名称
-EndPointType=“H5”或者"SHORT_H5"时，该参数必填
 
- * @method void setOrganizationName(string $OrganizationName) 设置企业名称
-EndPointType=“H5”或者"SHORT_H5"时，该参数必填
+<ul>
+<li><strong>2</strong>: 法人授权方式</li>
+<li><strong>5</strong>: 授权书+对公打款方式</li>
+</ul>
+ * @method void setAuthorizationTypes(array $AuthorizationTypes) 设置指定授权方式 支持多选:
+
+<ul>
+<li><strong>2</strong>: 法人授权方式</li>
+<li><strong>5</strong>: 授权书+对公打款方式</li>
+</ul>
+ * @method string getOrganizationName() 获取认证企业名称，请确认该名称与企业营业执照中注册的名称一致。
+
+注：
+
+1. `如果名称中包含英文括号()，请使用中文括号（）代替。`
+
+2. `EndPointType=“H5”或者"SHORT_H5"时，该参数必填`
+
+ * @method void setOrganizationName(string $OrganizationName) 设置认证企业名称，请确认该名称与企业营业执照中注册的名称一致。
+
+注：
+
+1. `如果名称中包含英文括号()，请使用中文括号（）代替。`
+
+2. `EndPointType=“H5”或者"SHORT_H5"时，该参数必填`
 
  * @method string getUniformSocialCreditCode() 获取企业统一社会信用代码
  * @method void setUniformSocialCreditCode(string $UniformSocialCreditCode) 设置企业统一社会信用代码
- * @method string getLegalName() 获取法人姓名
- * @method void setLegalName(string $LegalName) 设置法人姓名
- * @method string getAutoJumpUrl() 获取认证完成跳转链接
- * @method void setAutoJumpUrl(string $AutoJumpUrl) 设置认证完成跳转链接
+ * @method string getLegalName() 获取企业法人的姓名
+ * @method void setLegalName(string $LegalName) 设置企业法人的姓名
+ * @method string getAutoJumpUrl() 获取认证完成跳回的链接，最长500个字符
+ * @method void setAutoJumpUrl(string $AutoJumpUrl) 设置认证完成跳回的链接，最长500个字符
  * @method string getOrganizationAddress() 获取营业执照企业地址
-示例：xx省xx市xx县/区xx街道
  * @method void setOrganizationAddress(string $OrganizationAddress) 设置营业执照企业地址
-示例：xx省xx市xx县/区xx街道
  * @method string getAdminName() 获取认证人姓名
  * @method void setAdminName(string $AdminName) 设置认证人姓名
  * @method string getAdminMobile() 获取认证人手机号
  * @method void setAdminMobile(string $AdminMobile) 设置认证人手机号
  * @method string getAdminIdCardNumber() 获取认证人身份证号
  * @method void setAdminIdCardNumber(string $AdminIdCardNumber) 设置认证人身份证号
- * @method string getAdminIdCardType() 获取认证人证件类型
-支持以下类型
-<ul><li>ID_CARD : 中国大陆居民身份证  (默认值)</li>
-<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
+ * @method string getAdminIdCardType() 获取认证人证件类型， 支持以下类型
+<ul><li><b>ID_CARD</b> : 中国大陆居民身份证  (默认值)</li>
+<li><b>HONGKONG_AND_MACAO</b>  : 中国港澳居民来往内地通行证</li>
+<li><b>HONGKONG_MACAO_AND_TAIWAN</b>  : 中国港澳台居民居住证(格式同中国大陆居民身份证)</li></ul>
 
- * @method void setAdminIdCardType(string $AdminIdCardType) 设置认证人证件类型
-支持以下类型
-<ul><li>ID_CARD : 中国大陆居民身份证  (默认值)</li>
-<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
+ * @method void setAdminIdCardType(string $AdminIdCardType) 设置认证人证件类型， 支持以下类型
+<ul><li><b>ID_CARD</b> : 中国大陆居民身份证  (默认值)</li>
+<li><b>HONGKONG_AND_MACAO</b>  : 中国港澳居民来往内地通行证</li>
+<li><b>HONGKONG_MACAO_AND_TAIWAN</b>  : 中国港澳台居民居住证(格式同中国大陆居民身份证)</li></ul>
 
- * @method boolean getUniformSocialCreditCodeSame() 获取营业执照的社会信用代码保持一致
-false 关闭-默认
-true 开启
- * @method void setUniformSocialCreditCodeSame(boolean $UniformSocialCreditCodeSame) 设置营业执照的社会信用代码保持一致
-false 关闭-默认
-true 开启
- * @method boolean getLegalNameSame() 获取法人姓名保持一致
-false 关闭-默认
-true 开启
- * @method void setLegalNameSame(boolean $LegalNameSame) 设置法人姓名保持一致
-false 关闭-默认
-true 开启
- * @method boolean getAdminNameSame() 获取认证人姓名一致
-false 关闭-默认
-true 开启
-注意：
-开启后在认证过程前会校验拦截
- * @method void setAdminNameSame(boolean $AdminNameSame) 设置认证人姓名一致
-false 关闭-默认
-true 开启
-注意：
-开启后在认证过程前会校验拦截
- * @method boolean getAdminIdCardNumberSame() 获取认证人居民身份证件号一致
-false 关闭-默认
-true 开启
-注意：
-开启后在认证过程前会校验拦截
- * @method void setAdminIdCardNumberSame(boolean $AdminIdCardNumberSame) 设置认证人居民身份证件号一致
-false 关闭-默认
-true 开启
-注意：
-开启后在认证过程前会校验拦截
- * @method boolean getAdminMobileSame() 获取认证人手机号一致
-false 关闭-默认
-true 开启
-注意：
-开启后在认证过程前会校验拦截
- * @method void setAdminMobileSame(boolean $AdminMobileSame) 设置认证人手机号一致
-false 关闭-默认
-true 开启
-注意：
-开启后在认证过程前会校验拦截
- * @method boolean getOrganizationNameSame() 获取企业名称保持一致
-false 关闭-默认
-true 开启
- * @method void setOrganizationNameSame(boolean $OrganizationNameSame) 设置企业名称保持一致
-false 关闭-默认
-true 开启
- * @method string getBusinessLicense() 获取营业执照正面照(PNG或JPG) base64格式, 大小不超过5M
- * @method void setBusinessLicense(string $BusinessLicense) 设置营业执照正面照(PNG或JPG) base64格式, 大小不超过5M
+ * @method boolean getUniformSocialCreditCodeSame() 获取对方打开链接认证时，对方填写的营业执照的社会信用代码是否与接口上传上来的要保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+ * @method void setUniformSocialCreditCodeSame(boolean $UniformSocialCreditCodeSame) 设置对方打开链接认证时，对方填写的营业执照的社会信用代码是否与接口上传上来的要保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+ * @method boolean getLegalNameSame() 获取对方打开链接认证时，法人姓名是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+p.s. 仅在法人姓名不为空时有效
+ * @method void setLegalNameSame(boolean $LegalNameSame) 设置对方打开链接认证时，法人姓名是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+p.s. 仅在法人姓名不为空时有效
+ * @method boolean getAdminNameSame() 获取对方打开链接认证时，认证人姓名是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+p.s. 仅在认证人姓名不为空时有效
+ * @method void setAdminNameSame(boolean $AdminNameSame) 设置对方打开链接认证时，认证人姓名是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+p.s. 仅在认证人姓名不为空时有效
+ * @method boolean getAdminIdCardNumberSame() 获取对方打开链接认证时，认证人居民身份证件号是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+p.s. 仅在认证人身份证号不为空时有效
+
+ * @method void setAdminIdCardNumberSame(boolean $AdminIdCardNumberSame) 设置对方打开链接认证时，认证人居民身份证件号是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+p.s. 仅在认证人身份证号不为空时有效
+
+ * @method boolean getAdminMobileSame() 获取对方打开链接认证时，认证人手机号是否要与接口传递上来的保持一致。<ul>
+<li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li>
+<li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li>
+</ul>
+
+p.s. 仅在认证人手机号不为空时有效
+ * @method void setAdminMobileSame(boolean $AdminMobileSame) 设置对方打开链接认证时，认证人手机号是否要与接口传递上来的保持一致。<ul>
+<li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li>
+<li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li>
+</ul>
+
+p.s. 仅在认证人手机号不为空时有效
+ * @method boolean getOrganizationNameSame() 获取对方打开链接认证时，企业名称是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+
+p.s. 仅在企业名称不为空时有效
+ * @method void setOrganizationNameSame(boolean $OrganizationNameSame) 设置对方打开链接认证时，企业名称是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+
+p.s. 仅在企业名称不为空时有效
+ * @method string getBusinessLicense() 获取营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。
+ * @method void setBusinessLicense(string $BusinessLicense) 设置营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。
  * @method string getEndpoint() 获取跳转链接类型：
-"PC"-PC端认证链接 
-"APP"-全屏或半屏跳转小程序链接
-“H5”-H5页面认证链接 "SHORT_H5"- H5认证短链
-"SHORT_URL"- 跳转小程序短链	
+
+<ul>
+<li><b>PC</b>：适用于PC端的认证链接</li>
+<li><b>APP</b>：用于全屏或半屏跳转的小程序链接</li>
+<li><b>SHORT_URL</b>：跳转小程序的链接的短链形式</li>
+<li><b>H5</b>：适用于H5页面的认证链接</li>
+<li><b>SHORT_H5</b>：H5认证链接的短链形式</li>
+</ul>
+
  * @method void setEndpoint(string $Endpoint) 设置跳转链接类型：
-"PC"-PC端认证链接 
-"APP"-全屏或半屏跳转小程序链接
-“H5”-H5页面认证链接 "SHORT_H5"- H5认证短链
-"SHORT_URL"- 跳转小程序短链	
+
+<ul>
+<li><b>PC</b>：适用于PC端的认证链接</li>
+<li><b>APP</b>：用于全屏或半屏跳转的小程序链接</li>
+<li><b>SHORT_URL</b>：跳转小程序的链接的短链形式</li>
+<li><b>H5</b>：适用于H5页面的认证链接</li>
+<li><b>SHORT_H5</b>：H5认证链接的短链形式</li>
+</ul>
+
+ * @method array getInitialization() 获取指定企业初始化引导，现在可以配置如下的选项：
+
+<b>1</b>: 启用此选项后，在企业认证的最终步骤将添加创建印章的引导。如下图的位置
+![image](https://qcloudimg.tencent-cloud.cn/raw/88e0b45095a5c589de8995462ad755dc.jpg)
+ * @method void setInitialization(array $Initialization) 设置指定企业初始化引导，现在可以配置如下的选项：
+
+<b>1</b>: 启用此选项后，在企业认证的最终步骤将添加创建印章的引导。如下图的位置
+![image](https://qcloudimg.tencent-cloud.cn/raw/88e0b45095a5c589de8995462ad755dc.jpg)
+ * @method array getPowerOfAttorneys() 获取授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。 
+授权书可以通过接口[生成企业授权书](https://qian.tencent.com/developers/companyApis/organizations/CreateOrganizationAuthFile) 来获得。
+p.s. 如果上传授权书 ，需遵循以下条件 
+1.  超管的信息（超管姓名，超管手机号）必须为必填参数。
+2.  认证方式AuthorizationTypes必须只能是上传授权书方式 
+ * @method void setPowerOfAttorneys(array $PowerOfAttorneys) 设置授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。 
+授权书可以通过接口[生成企业授权书](https://qian.tencent.com/developers/companyApis/organizations/CreateOrganizationAuthFile) 来获得。
+p.s. 如果上传授权书 ，需遵循以下条件 
+1.  超管的信息（超管姓名，超管手机号）必须为必填参数。
+2.  认证方式AuthorizationTypes必须只能是上传授权书方式 
  */
 class CreateOrganizationAuthUrlRequest extends AbstractModel
 {
@@ -134,15 +166,22 @@ class CreateOrganizationAuthUrlRequest extends AbstractModel
 
     /**
      * @var array 指定授权方式 支持多选:
-1-上传授权书方式
-2- 法人授权方式
-3- 法人身份认证方式
+
+<ul>
+<li><strong>2</strong>: 法人授权方式</li>
+<li><strong>5</strong>: 授权书+对公打款方式</li>
+</ul>
      */
     public $AuthorizationTypes;
 
     /**
-     * @var string 企业名称
-EndPointType=“H5”或者"SHORT_H5"时，该参数必填
+     * @var string 认证企业名称，请确认该名称与企业营业执照中注册的名称一致。
+
+注：
+
+1. `如果名称中包含英文括号()，请使用中文括号（）代替。`
+
+2. `EndPointType=“H5”或者"SHORT_H5"时，该参数必填`
 
      */
     public $OrganizationName;
@@ -153,18 +192,17 @@ EndPointType=“H5”或者"SHORT_H5"时，该参数必填
     public $UniformSocialCreditCode;
 
     /**
-     * @var string 法人姓名
+     * @var string 企业法人的姓名
      */
     public $LegalName;
 
     /**
-     * @var string 认证完成跳转链接
+     * @var string 认证完成跳回的链接，最长500个字符
      */
     public $AutoJumpUrl;
 
     /**
      * @var string 营业执照企业地址
-示例：xx省xx市xx县/区xx街道
      */
     public $OrganizationAddress;
 
@@ -184,130 +222,164 @@ EndPointType=“H5”或者"SHORT_H5"时，该参数必填
     public $AdminIdCardNumber;
 
     /**
-     * @var string 认证人证件类型
-支持以下类型
-<ul><li>ID_CARD : 中国大陆居民身份证  (默认值)</li>
-<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
+     * @var string 认证人证件类型， 支持以下类型
+<ul><li><b>ID_CARD</b> : 中国大陆居民身份证  (默认值)</li>
+<li><b>HONGKONG_AND_MACAO</b>  : 中国港澳居民来往内地通行证</li>
+<li><b>HONGKONG_MACAO_AND_TAIWAN</b>  : 中国港澳台居民居住证(格式同中国大陆居民身份证)</li></ul>
 
      */
     public $AdminIdCardType;
 
     /**
-     * @var boolean 营业执照的社会信用代码保持一致
-false 关闭-默认
-true 开启
+     * @var boolean 对方打开链接认证时，对方填写的营业执照的社会信用代码是否与接口上传上来的要保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
      */
     public $UniformSocialCreditCodeSame;
 
     /**
-     * @var boolean 法人姓名保持一致
-false 关闭-默认
-true 开启
+     * @var boolean 对方打开链接认证时，法人姓名是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+p.s. 仅在法人姓名不为空时有效
      */
     public $LegalNameSame;
 
     /**
-     * @var boolean 认证人姓名一致
-false 关闭-默认
-true 开启
-注意：
-开启后在认证过程前会校验拦截
+     * @var boolean 对方打开链接认证时，认证人姓名是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+p.s. 仅在认证人姓名不为空时有效
      */
     public $AdminNameSame;
 
     /**
-     * @var boolean 认证人居民身份证件号一致
-false 关闭-默认
-true 开启
-注意：
-开启后在认证过程前会校验拦截
+     * @var boolean 对方打开链接认证时，认证人居民身份证件号是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+p.s. 仅在认证人身份证号不为空时有效
+
      */
     public $AdminIdCardNumberSame;
 
     /**
-     * @var boolean 认证人手机号一致
-false 关闭-默认
-true 开启
-注意：
-开启后在认证过程前会校验拦截
+     * @var boolean 对方打开链接认证时，认证人手机号是否要与接口传递上来的保持一致。<ul>
+<li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li>
+<li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li>
+</ul>
+
+p.s. 仅在认证人手机号不为空时有效
      */
     public $AdminMobileSame;
 
     /**
-     * @var boolean 企业名称保持一致
-false 关闭-默认
-true 开启
+     * @var boolean 对方打开链接认证时，企业名称是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+
+p.s. 仅在企业名称不为空时有效
      */
     public $OrganizationNameSame;
 
     /**
-     * @var string 营业执照正面照(PNG或JPG) base64格式, 大小不超过5M
+     * @var string 营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。
      */
     public $BusinessLicense;
 
     /**
      * @var string 跳转链接类型：
-"PC"-PC端认证链接 
-"APP"-全屏或半屏跳转小程序链接
-“H5”-H5页面认证链接 "SHORT_H5"- H5认证短链
-"SHORT_URL"- 跳转小程序短链	
+
+<ul>
+<li><b>PC</b>：适用于PC端的认证链接</li>
+<li><b>APP</b>：用于全屏或半屏跳转的小程序链接</li>
+<li><b>SHORT_URL</b>：跳转小程序的链接的短链形式</li>
+<li><b>H5</b>：适用于H5页面的认证链接</li>
+<li><b>SHORT_H5</b>：H5认证链接的短链形式</li>
+</ul>
+
      */
     public $Endpoint;
 
     /**
+     * @var array 指定企业初始化引导，现在可以配置如下的选项：
+
+<b>1</b>: 启用此选项后，在企业认证的最终步骤将添加创建印章的引导。如下图的位置
+![image](https://qcloudimg.tencent-cloud.cn/raw/88e0b45095a5c589de8995462ad755dc.jpg)
+     */
+    public $Initialization;
+
+    /**
+     * @var array 授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。 
+授权书可以通过接口[生成企业授权书](https://qian.tencent.com/developers/companyApis/organizations/CreateOrganizationAuthFile) 来获得。
+p.s. 如果上传授权书 ，需遵循以下条件 
+1.  超管的信息（超管姓名，超管手机号）必须为必填参数。
+2.  认证方式AuthorizationTypes必须只能是上传授权书方式 
+     */
+    public $PowerOfAttorneys;
+
+    /**
      * @param UserInfo $Operator 操作人信息
      * @param array $AuthorizationTypes 指定授权方式 支持多选:
-1-上传授权书方式
-2- 法人授权方式
-3- 法人身份认证方式
-     * @param string $OrganizationName 企业名称
-EndPointType=“H5”或者"SHORT_H5"时，该参数必填
+
+<ul>
+<li><strong>2</strong>: 法人授权方式</li>
+<li><strong>5</strong>: 授权书+对公打款方式</li>
+</ul>
+     * @param string $OrganizationName 认证企业名称，请确认该名称与企业营业执照中注册的名称一致。
+
+注：
+
+1. `如果名称中包含英文括号()，请使用中文括号（）代替。`
+
+2. `EndPointType=“H5”或者"SHORT_H5"时，该参数必填`
 
      * @param string $UniformSocialCreditCode 企业统一社会信用代码
-     * @param string $LegalName 法人姓名
-     * @param string $AutoJumpUrl 认证完成跳转链接
+     * @param string $LegalName 企业法人的姓名
+     * @param string $AutoJumpUrl 认证完成跳回的链接，最长500个字符
      * @param string $OrganizationAddress 营业执照企业地址
-示例：xx省xx市xx县/区xx街道
      * @param string $AdminName 认证人姓名
      * @param string $AdminMobile 认证人手机号
      * @param string $AdminIdCardNumber 认证人身份证号
-     * @param string $AdminIdCardType 认证人证件类型
-支持以下类型
-<ul><li>ID_CARD : 中国大陆居民身份证  (默认值)</li>
-<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
+     * @param string $AdminIdCardType 认证人证件类型， 支持以下类型
+<ul><li><b>ID_CARD</b> : 中国大陆居民身份证  (默认值)</li>
+<li><b>HONGKONG_AND_MACAO</b>  : 中国港澳居民来往内地通行证</li>
+<li><b>HONGKONG_MACAO_AND_TAIWAN</b>  : 中国港澳台居民居住证(格式同中国大陆居民身份证)</li></ul>
 
-     * @param boolean $UniformSocialCreditCodeSame 营业执照的社会信用代码保持一致
-false 关闭-默认
-true 开启
-     * @param boolean $LegalNameSame 法人姓名保持一致
-false 关闭-默认
-true 开启
-     * @param boolean $AdminNameSame 认证人姓名一致
-false 关闭-默认
-true 开启
-注意：
-开启后在认证过程前会校验拦截
-     * @param boolean $AdminIdCardNumberSame 认证人居民身份证件号一致
-false 关闭-默认
-true 开启
-注意：
-开启后在认证过程前会校验拦截
-     * @param boolean $AdminMobileSame 认证人手机号一致
-false 关闭-默认
-true 开启
-注意：
-开启后在认证过程前会校验拦截
-     * @param boolean $OrganizationNameSame 企业名称保持一致
-false 关闭-默认
-true 开启
-     * @param string $BusinessLicense 营业执照正面照(PNG或JPG) base64格式, 大小不超过5M
+     * @param boolean $UniformSocialCreditCodeSame 对方打开链接认证时，对方填写的营业执照的社会信用代码是否与接口上传上来的要保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+     * @param boolean $LegalNameSame 对方打开链接认证时，法人姓名是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+p.s. 仅在法人姓名不为空时有效
+     * @param boolean $AdminNameSame 对方打开链接认证时，认证人姓名是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+p.s. 仅在认证人姓名不为空时有效
+     * @param boolean $AdminIdCardNumberSame 对方打开链接认证时，认证人居民身份证件号是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+p.s. 仅在认证人身份证号不为空时有效
+
+     * @param boolean $AdminMobileSame 对方打开链接认证时，认证人手机号是否要与接口传递上来的保持一致。<ul>
+<li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li>
+<li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li>
+</ul>
+
+p.s. 仅在认证人手机号不为空时有效
+     * @param boolean $OrganizationNameSame 对方打开链接认证时，企业名称是否要与接口传递上来的保持一致。<ul><li><b>false（默认值）</b>：关闭状态，实际认证时允许与接口传递的信息存在不一致。</li><li><b>true</b>：启用状态，实际认证时必须与接口传递的信息完全相符。</li></ul>
+
+
+p.s. 仅在企业名称不为空时有效
+     * @param string $BusinessLicense 营业执照正面照（支持PNG或JPG格式）需以base64格式提供，且文件大小不得超过5MB。
      * @param string $Endpoint 跳转链接类型：
-"PC"-PC端认证链接 
-"APP"-全屏或半屏跳转小程序链接
-“H5”-H5页面认证链接 "SHORT_H5"- H5认证短链
-"SHORT_URL"- 跳转小程序短链	
+
+<ul>
+<li><b>PC</b>：适用于PC端的认证链接</li>
+<li><b>APP</b>：用于全屏或半屏跳转的小程序链接</li>
+<li><b>SHORT_URL</b>：跳转小程序的链接的短链形式</li>
+<li><b>H5</b>：适用于H5页面的认证链接</li>
+<li><b>SHORT_H5</b>：H5认证链接的短链形式</li>
+</ul>
+
+     * @param array $Initialization 指定企业初始化引导，现在可以配置如下的选项：
+
+<b>1</b>: 启用此选项后，在企业认证的最终步骤将添加创建印章的引导。如下图的位置
+![image](https://qcloudimg.tencent-cloud.cn/raw/88e0b45095a5c589de8995462ad755dc.jpg)
+     * @param array $PowerOfAttorneys 授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。 
+授权书可以通过接口[生成企业授权书](https://qian.tencent.com/developers/companyApis/organizations/CreateOrganizationAuthFile) 来获得。
+p.s. 如果上传授权书 ，需遵循以下条件 
+1.  超管的信息（超管姓名，超管手机号）必须为必填参数。
+2.  认证方式AuthorizationTypes必须只能是上传授权书方式 
      */
     function __construct()
     {
@@ -397,6 +469,14 @@ true 开启
 
         if (array_key_exists("Endpoint",$param) and $param["Endpoint"] !== null) {
             $this->Endpoint = $param["Endpoint"];
+        }
+
+        if (array_key_exists("Initialization",$param) and $param["Initialization"] !== null) {
+            $this->Initialization = $param["Initialization"];
+        }
+
+        if (array_key_exists("PowerOfAttorneys",$param) and $param["PowerOfAttorneys"] !== null) {
+            $this->PowerOfAttorneys = $param["PowerOfAttorneys"];
         }
     }
 }

@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 描述镜像软件详细信息。
  *
- * @method string getKey() 获取详情唯一键。
- * @method void setKey(string $Key) 设置详情唯一键。
- * @method string getTitle() 获取详情标题。
- * @method void setTitle(string $Title) 设置详情标题。
- * @method string getValue() 获取详情值。
- * @method void setValue(string $Value) 设置详情值。
+ * @method string getKey() 获取软件的属性标识
+ * @method void setKey(string $Key) 设置软件的属性标识
+ * @method string getTitle() 获取软件的属性标识描述
+ * @method void setTitle(string $Title) 设置软件的属性标识描述
+ * @method string getValue() 获取软件的属性值
+ * @method void setValue(string $Value) 设置软件的属性值
  */
 class SoftwareDetail extends AbstractModel
 {
     /**
-     * @var string 详情唯一键。
+     * @var string 软件的属性标识
      */
     public $Key;
 
     /**
-     * @var string 详情标题。
+     * @var string 软件的属性标识描述
      */
     public $Title;
 
     /**
-     * @var string 详情值。
+     * @var string 软件的属性值
      */
     public $Value;
 
     /**
-     * @param string $Key 详情唯一键。
-     * @param string $Title 详情标题。
-     * @param string $Value 详情值。
+     * @param string $Key 软件的属性标识
+     * @param string $Title 软件的属性标识描述
+     * @param string $Value 软件的属性值
      */
     function __construct()
     {

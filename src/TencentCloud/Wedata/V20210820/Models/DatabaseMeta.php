@@ -96,6 +96,42 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTableCount() 获取总表数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTableCount(integer $TableCount) 设置总表数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getDatasourceList() 获取数据源信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDatasourceList(array $DatasourceList) 设置数据源信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCollectJobId() 获取采集任务id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCollectJobId(string $CollectJobId) 设置采集任务id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCollectJobName() 获取采集任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCollectJobName(string $CollectJobName) 设置采集任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClusterId() 获取引擎id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterId(string $ClusterId) 设置引擎id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClusterName() 获取引擎名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterName(string $ClusterName) 设置引擎名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getModifiedTimeByTables() 获取库下表的最新更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setModifiedTimeByTables(integer $ModifiedTimeByTables) 设置库下表的最新更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getLastAccessTimeByTables() 获取库下表的最新访问时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLastAccessTimeByTables(integer $LastAccessTimeByTables) 设置库下表的最新访问时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDatabaseGuid() 获取库guid
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDatabaseGuid(string $DatabaseGuid) 设置库guid
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DatabaseMeta extends AbstractModel
 {
@@ -214,6 +250,60 @@ class DatabaseMeta extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var integer 总表数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TableCount;
+
+    /**
+     * @var array 数据源信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DatasourceList;
+
+    /**
+     * @var string 采集任务id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CollectJobId;
+
+    /**
+     * @var string 采集任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CollectJobName;
+
+    /**
+     * @var string 引擎id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterId;
+
+    /**
+     * @var string 引擎名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterName;
+
+    /**
+     * @var integer 库下表的最新更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ModifiedTimeByTables;
+
+    /**
+     * @var integer 库下表的最新访问时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LastAccessTimeByTables;
+
+    /**
+     * @var string 库guid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DatabaseGuid;
+
+    /**
      * @param string $ProjectId 项目Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MetastoreType 技术类型
@@ -251,6 +341,24 @@ class DatabaseMeta extends AbstractModel
      * @param string $StorageSizeWithUnit 格式化后的存储量大小，带单位，如 12B
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TableCount 总表数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $DatasourceList 数据源信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CollectJobId 采集任务id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CollectJobName 采集任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClusterId 引擎id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClusterName 引擎名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ModifiedTimeByTables 库下表的最新更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $LastAccessTimeByTables 库下表的最新访问时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DatabaseGuid 库guid
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -340,6 +448,47 @@ class DatabaseMeta extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("TableCount",$param) and $param["TableCount"] !== null) {
+            $this->TableCount = $param["TableCount"];
+        }
+
+        if (array_key_exists("DatasourceList",$param) and $param["DatasourceList"] !== null) {
+            $this->DatasourceList = [];
+            foreach ($param["DatasourceList"] as $key => $value){
+                $obj = new GovDatasourceInfo();
+                $obj->deserialize($value);
+                array_push($this->DatasourceList, $obj);
+            }
+        }
+
+        if (array_key_exists("CollectJobId",$param) and $param["CollectJobId"] !== null) {
+            $this->CollectJobId = $param["CollectJobId"];
+        }
+
+        if (array_key_exists("CollectJobName",$param) and $param["CollectJobName"] !== null) {
+            $this->CollectJobName = $param["CollectJobName"];
+        }
+
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
+            $this->ClusterName = $param["ClusterName"];
+        }
+
+        if (array_key_exists("ModifiedTimeByTables",$param) and $param["ModifiedTimeByTables"] !== null) {
+            $this->ModifiedTimeByTables = $param["ModifiedTimeByTables"];
+        }
+
+        if (array_key_exists("LastAccessTimeByTables",$param) and $param["LastAccessTimeByTables"] !== null) {
+            $this->LastAccessTimeByTables = $param["LastAccessTimeByTables"];
+        }
+
+        if (array_key_exists("DatabaseGuid",$param) and $param["DatabaseGuid"] !== null) {
+            $this->DatabaseGuid = $param["DatabaseGuid"];
         }
     }
 }

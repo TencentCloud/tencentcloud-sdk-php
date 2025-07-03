@@ -26,7 +26,9 @@ use TencentCloud\Mrs\V20200910\Models as Models;
  * @method Models\DrugInstructionObjectResponse DrugInstructionObject(Models\DrugInstructionObjectRequest $req) 药品说明书PDF文件结构化
  * @method Models\ImageMaskResponse ImageMask(Models\ImageMaskRequest $req) 医疗报告图片脱敏接口
  * @method Models\ImageMaskAsyncResponse ImageMaskAsync(Models\ImageMaskAsyncRequest $req) 图片脱敏-异步接口
+短时间大批量调用（例如>100上传/10分钟），如果遇到错误码“FalledOperation.AsyncQueueFullError”，请于数分钟后再次尝试提交。
  * @method Models\ImageMaskAsyncGetResultResponse ImageMaskAsyncGetResult(Models\ImageMaskAsyncGetResultRequest $req) 图片脱敏-异步获取结果接口
+请于上传请求后24小时内获取结果。
  * @method Models\ImageToClassResponse ImageToClass(Models\ImageToClassRequest $req) 图片分类
  * @method Models\ImageToObjectResponse ImageToObject(Models\ImageToObjectRequest $req) 图片转结构化对象
  * @method Models\TextToClassResponse TextToClass(Models\TextToClassRequest $req) 文本分类

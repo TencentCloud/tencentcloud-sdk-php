@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceName(string $InstanceName) 设置新名称
  * @method string getInstanceID() 获取实例id
  * @method void setInstanceID(string $InstanceID) 设置实例id
- * @method string getEdition() 获取版本
- * @method void setEdition(string $Edition) 设置版本
+ * @method string getEdition() 获取实例版本，支持clb-waf、sparta-waf
+ * @method void setEdition(string $Edition) 设置实例版本，支持clb-waf、sparta-waf
  */
 class ModifyInstanceNameRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class ModifyInstanceNameRequest extends AbstractModel
     public $InstanceID;
 
     /**
-     * @var string 版本
+     * @var string 实例版本，支持clb-waf、sparta-waf
      */
     public $Edition;
 
     /**
      * @param string $InstanceName 新名称
      * @param string $InstanceID 实例id
-     * @param string $Edition 版本
+     * @param string $Edition 实例版本，支持clb-waf、sparta-waf
      */
     function __construct()
     {

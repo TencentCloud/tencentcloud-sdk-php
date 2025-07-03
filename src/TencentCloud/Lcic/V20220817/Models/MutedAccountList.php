@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 禁言用户信息数组，内容包括被禁言的成员 ID，及其被禁言到的时间（使用 UTC 时间，即世界协调时间）
  *
  * @method string getMemberAccount() 获取用户 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMemberAccount(string $MemberAccount) 设置用户 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMutedUntil() 获取禁言到的时间（使用 UTC 时间，即世界协调时间）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMutedUntil(integer $MutedUntil) 设置禁言到的时间（使用 UTC 时间，即世界协调时间）
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MutedAccountList extends AbstractModel
 {
     /**
      * @var string 用户 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MemberAccount;
 
     /**
      * @var integer 禁言到的时间（使用 UTC 时间，即世界协调时间）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MutedUntil;
 
     /**
      * @param string $MemberAccount 用户 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MutedUntil 禁言到的时间（使用 UTC 时间，即世界协调时间）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

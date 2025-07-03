@@ -31,9 +31,7 @@ use TencentCloud\Common\AbstractModel;
  * @method AiRecognitionTaskObjectResultInput getInput() 获取物体识别任务输入信息。
  * @method void setInput(AiRecognitionTaskObjectResultInput $Input) 设置物体识别任务输入信息。
  * @method AiRecognitionTaskObjectResultOutput getOutput() 获取物体识别任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutput(AiRecognitionTaskObjectResultOutput $Output) 设置物体识别任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProgress() 获取物体识别任务进度，取值范围 [0-100] 。
  * @method void setProgress(integer $Progress) 设置物体识别任务进度，取值范围 [0-100] 。
  * @method string getBeginProcessTime() 获取物体识别任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
@@ -70,7 +68,6 @@ class AiRecognitionTaskObjectResult extends AbstractModel
 
     /**
      * @var AiRecognitionTaskObjectResultOutput 物体识别任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Output;
 
@@ -96,7 +93,6 @@ class AiRecognitionTaskObjectResult extends AbstractModel
      * @param string $Message 错误信息。
      * @param AiRecognitionTaskObjectResultInput $Input 物体识别任务输入信息。
      * @param AiRecognitionTaskObjectResultOutput $Output 物体识别任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Progress 物体识别任务进度，取值范围 [0-100] 。
      * @param string $BeginProcessTime 物体识别任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      * @param string $FinishTime 物体识别任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。

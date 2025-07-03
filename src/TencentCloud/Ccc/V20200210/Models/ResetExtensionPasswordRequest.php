@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ResetExtensionPassword请求参数结构体
  *
- * @method integer getSdkAppId() 获取TCCC 实例应用 ID
- * @method void setSdkAppId(integer $SdkAppId) 设置TCCC 实例应用 ID
+ * @method integer getSdkAppId() 获取应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+ * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
  * @method string getExtensionId() 获取分机号
  * @method void setExtensionId(string $ExtensionId) 设置分机号
  */
 class ResetExtensionPasswordRequest extends AbstractModel
 {
     /**
-     * @var integer TCCC 实例应用 ID
+     * @var integer 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
     public $SdkAppId;
 
@@ -38,7 +38,7 @@ class ResetExtensionPasswordRequest extends AbstractModel
     public $ExtensionId;
 
     /**
-     * @param integer $SdkAppId TCCC 实例应用 ID
+     * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param string $ExtensionId 分机号
      */
     function __construct()

@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 查询客户端公网信息
  *
  * @method string getGatewayId() 获取网关实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGatewayId(string $GatewayId) 设置网关实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupId() 获取网关分组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupId(string $GroupId) 设置网关分组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method CloudNativeAPIGatewayConfig getPublicNetwork() 获取客户端公网信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicNetwork(CloudNativeAPIGatewayConfig $PublicNetwork) 设置客户端公网信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribePublicNetworkResult extends AbstractModel
 {
     /**
      * @var string 网关实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GatewayId;
 
     /**
      * @var string 网关分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupId;
 
     /**
      * @var CloudNativeAPIGatewayConfig 客户端公网信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicNetwork;
 
     /**
      * @param string $GatewayId 网关实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupId 网关分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CloudNativeAPIGatewayConfig $PublicNetwork 客户端公网信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

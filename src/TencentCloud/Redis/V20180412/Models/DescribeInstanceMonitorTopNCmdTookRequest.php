@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceMonitorTopNCmdTook请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID。
+ * @method string getInstanceId() 获取实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
  * @method integer getSpanType() 获取查询时间范围。
 - 1：实时。
 - 2：近30分钟。
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeInstanceMonitorTopNCmdTookRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID。
+     * @var string 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public $InstanceId;
 
@@ -50,7 +50,7 @@ class DescribeInstanceMonitorTopNCmdTookRequest extends AbstractModel
     public $SpanType;
 
     /**
-     * @param string $InstanceId 实例 ID。
+     * @param string $InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      * @param integer $SpanType 查询时间范围。
 - 1：实时。
 - 2：近30分钟。

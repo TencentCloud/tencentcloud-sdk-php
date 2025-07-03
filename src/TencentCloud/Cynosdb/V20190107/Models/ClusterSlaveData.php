@@ -21,35 +21,26 @@ use TencentCloud\Common\AbstractModel;
  * 集群从可用区信息
  *
  * @method string getOldMasterZone() 获取旧主可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOldMasterZone(string $OldMasterZone) 设置旧主可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getOldSlaveZone() 获取旧从可用区
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOldSlaveZone(array $OldSlaveZone) 设置旧从可用区
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNewMasterZone() 获取新主可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNewMasterZone(string $NewMasterZone) 设置新主可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getNewSlaveZone() 获取新从可用区
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNewSlaveZone(array $NewSlaveZone) 设置新从可用区
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getNewSlaveZoneAttr() 获取新从可用区属性
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNewSlaveZoneAttr(array $NewSlaveZoneAttr) 设置新从可用区属性
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getOldSlaveZoneAttr() 获取旧可用区属性
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOldSlaveZoneAttr(array $OldSlaveZoneAttr) 设置旧可用区属性
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterSlaveData extends AbstractModel
 {
     /**
      * @var string 旧主可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OldMasterZone;
 
@@ -61,7 +52,6 @@ class ClusterSlaveData extends AbstractModel
 
     /**
      * @var string 新主可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NewMasterZone;
 
@@ -73,29 +63,23 @@ class ClusterSlaveData extends AbstractModel
 
     /**
      * @var array 新从可用区属性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NewSlaveZoneAttr;
 
     /**
      * @var array 旧可用区属性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OldSlaveZoneAttr;
 
     /**
      * @param string $OldMasterZone 旧主可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $OldSlaveZone 旧从可用区
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NewMasterZone 新主可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $NewSlaveZone 新从可用区
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $NewSlaveZoneAttr 新从可用区属性
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $OldSlaveZoneAttr 旧可用区属性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

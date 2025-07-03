@@ -21,29 +21,19 @@ use TencentCloud\Common\AbstractModel;
  * BidDetailPage返回参数结构体
  *
  * @method string getDomain() 获取域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomain(string $Domain) 设置域名
-注意：此字段可能返回 null，表示取不到有效值。
- * @method float getCurrentPrice() 获取当前域名价格
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCurrentPrice(float $CurrentPrice) 设置当前域名价格
-注意：此字段可能返回 null，表示取不到有效值。
- * @method float getBidPrice() 获取用户上次出价
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBidPrice(float $BidPrice) 设置用户上次出价
-注意：此字段可能返回 null，表示取不到有效值。
- * @method float getCurrentPriceScope() 获取当前加价幅度
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCurrentPriceScope(float $CurrentPriceScope) 设置当前加价幅度
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getCurrentPrice() 获取当前域名价格 单位元
+ * @method void setCurrentPrice(float $CurrentPrice) 设置当前域名价格 单位元
+ * @method float getBidPrice() 获取用户上次出价 单位元
+ * @method void setBidPrice(float $BidPrice) 设置用户上次出价 单位元
+ * @method float getCurrentPriceScope() 获取当前加价幅度 单位元
+ * @method void setCurrentPriceScope(float $CurrentPriceScope) 设置当前加价幅度 单位元
  * @method array getPriceScope() 获取加价幅度区间配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPriceScope(array $PriceScope) 设置加价幅度区间配置
 注意：此字段可能返回 null，表示取不到有效值。
- * @method float getDepositPrice() 获取用户当前已经支付了的保证金
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDepositPrice(float $DepositPrice) 设置用户当前已经支付了的保证金
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getDepositPrice() 获取用户当前已经支付了的保证金 单位元
+ * @method void setDepositPrice(float $DepositPrice) 设置用户当前已经支付了的保证金 单位元
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -51,25 +41,21 @@ class BidDetailPageResponse extends AbstractModel
 {
     /**
      * @var string 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Domain;
 
     /**
-     * @var float 当前域名价格
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var float 当前域名价格 单位元
      */
     public $CurrentPrice;
 
     /**
-     * @var float 用户上次出价
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var float 用户上次出价 单位元
      */
     public $BidPrice;
 
     /**
-     * @var float 当前加价幅度
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var float 当前加价幅度 单位元
      */
     public $CurrentPriceScope;
 
@@ -80,8 +66,7 @@ class BidDetailPageResponse extends AbstractModel
     public $PriceScope;
 
     /**
-     * @var float 用户当前已经支付了的保证金
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var float 用户当前已经支付了的保证金 单位元
      */
     public $DepositPrice;
 
@@ -92,17 +77,12 @@ class BidDetailPageResponse extends AbstractModel
 
     /**
      * @param string $Domain 域名
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $CurrentPrice 当前域名价格
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $BidPrice 用户上次出价
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $CurrentPriceScope 当前加价幅度
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $CurrentPrice 当前域名价格 单位元
+     * @param float $BidPrice 用户上次出价 单位元
+     * @param float $CurrentPriceScope 当前加价幅度 单位元
      * @param array $PriceScope 加价幅度区间配置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $DepositPrice 用户当前已经支付了的保证金
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $DepositPrice 用户当前已经支付了的保证金 单位元
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

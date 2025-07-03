@@ -77,21 +77,29 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getPackageNode() 获取授权点数扩展包个数(50点)
  * @method void setPackageNode(integer $PackageNode) 设置授权点数扩展包个数(50点)
  * @method string getLogDeliveryArgs() 获取日志投递规格信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogDeliveryArgs(string $LogDeliveryArgs) 设置日志投递规格信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getClbSet() 获取堡垒机资源LB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClbSet(array $ClbSet) 设置堡垒机资源LB
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDomainCount() 获取网络域个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomainCount(integer $DomainCount) 设置网络域个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUsedDomainCount() 获取已使用网络域个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsedDomainCount(integer $UsedDomainCount) 设置已使用网络域个数
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTrial() 获取0 非试用版，1 试用版
+ * @method void setTrial(integer $Trial) 设置0 非试用版，1 试用版
+ * @method string getCdcClusterId() 获取cdc集群id
+ * @method void setCdcClusterId(string $CdcClusterId) 设置cdc集群id
+ * @method string getLogDelivery() 获取日志投递规格信息
+ * @method void setLogDelivery(string $LogDelivery) 设置日志投递规格信息
+ * @method integer getDeployModel() 获取部署模式
+ * @method void setDeployModel(integer $DeployModel) 设置部署模式
+ * @method integer getIntranetAccess() 获取0 默认值，非内网访问，1 内网访问，2 内网访问开通中，3 内网访问关闭中
+ * @method void setIntranetAccess(integer $IntranetAccess) 设置0 默认值，非内网访问，1 内网访问，2 内网访问开通中，3 内网访问关闭中
+ * @method array getIntranetPrivateIpSet() 获取内网访问的ip
+ * @method void setIntranetPrivateIpSet(array $IntranetPrivateIpSet) 设置内网访问的ip
+ * @method string getIntranetVpcId() 获取开通内网访问的vpc
+ * @method void setIntranetVpcId(string $IntranetVpcId) 设置开通内网访问的vpc
+ * @method string getIntranetVpcCidr() 获取开通内网访问vpc的网段
+ * @method void setIntranetVpcCidr(string $IntranetVpcCidr) 设置开通内网访问vpc的网段
  */
 class Resource extends AbstractModel
 {
@@ -237,27 +245,63 @@ class Resource extends AbstractModel
 
     /**
      * @var string 日志投递规格信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogDeliveryArgs;
 
     /**
      * @var array 堡垒机资源LB
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClbSet;
 
     /**
      * @var integer 网络域个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DomainCount;
 
     /**
      * @var integer 已使用网络域个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UsedDomainCount;
+
+    /**
+     * @var integer 0 非试用版，1 试用版
+     */
+    public $Trial;
+
+    /**
+     * @var string cdc集群id
+     */
+    public $CdcClusterId;
+
+    /**
+     * @var string 日志投递规格信息
+     */
+    public $LogDelivery;
+
+    /**
+     * @var integer 部署模式
+     */
+    public $DeployModel;
+
+    /**
+     * @var integer 0 默认值，非内网访问，1 内网访问，2 内网访问开通中，3 内网访问关闭中
+     */
+    public $IntranetAccess;
+
+    /**
+     * @var array 内网访问的ip
+     */
+    public $IntranetPrivateIpSet;
+
+    /**
+     * @var string 开通内网访问的vpc
+     */
+    public $IntranetVpcId;
+
+    /**
+     * @var string 开通内网访问vpc的网段
+     */
+    public $IntranetVpcCidr;
 
     /**
      * @param string $ResourceId 服务实例ID，如bh-saas-s3ed4r5e
@@ -289,13 +333,17 @@ class Resource extends AbstractModel
      * @param integer $PackageBandwidth 带宽扩展包个数(4M)
      * @param integer $PackageNode 授权点数扩展包个数(50点)
      * @param string $LogDeliveryArgs 日志投递规格信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ClbSet 堡垒机资源LB
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DomainCount 网络域个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UsedDomainCount 已使用网络域个数
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Trial 0 非试用版，1 试用版
+     * @param string $CdcClusterId cdc集群id
+     * @param string $LogDelivery 日志投递规格信息
+     * @param integer $DeployModel 部署模式
+     * @param integer $IntranetAccess 0 默认值，非内网访问，1 内网访问，2 内网访问开通中，3 内网访问关闭中
+     * @param array $IntranetPrivateIpSet 内网访问的ip
+     * @param string $IntranetVpcId 开通内网访问的vpc
+     * @param string $IntranetVpcCidr 开通内网访问vpc的网段
      */
     function __construct()
     {
@@ -441,6 +489,38 @@ class Resource extends AbstractModel
 
         if (array_key_exists("UsedDomainCount",$param) and $param["UsedDomainCount"] !== null) {
             $this->UsedDomainCount = $param["UsedDomainCount"];
+        }
+
+        if (array_key_exists("Trial",$param) and $param["Trial"] !== null) {
+            $this->Trial = $param["Trial"];
+        }
+
+        if (array_key_exists("CdcClusterId",$param) and $param["CdcClusterId"] !== null) {
+            $this->CdcClusterId = $param["CdcClusterId"];
+        }
+
+        if (array_key_exists("LogDelivery",$param) and $param["LogDelivery"] !== null) {
+            $this->LogDelivery = $param["LogDelivery"];
+        }
+
+        if (array_key_exists("DeployModel",$param) and $param["DeployModel"] !== null) {
+            $this->DeployModel = $param["DeployModel"];
+        }
+
+        if (array_key_exists("IntranetAccess",$param) and $param["IntranetAccess"] !== null) {
+            $this->IntranetAccess = $param["IntranetAccess"];
+        }
+
+        if (array_key_exists("IntranetPrivateIpSet",$param) and $param["IntranetPrivateIpSet"] !== null) {
+            $this->IntranetPrivateIpSet = $param["IntranetPrivateIpSet"];
+        }
+
+        if (array_key_exists("IntranetVpcId",$param) and $param["IntranetVpcId"] !== null) {
+            $this->IntranetVpcId = $param["IntranetVpcId"];
+        }
+
+        if (array_key_exists("IntranetVpcCidr",$param) and $param["IntranetVpcCidr"] !== null) {
+            $this->IntranetVpcCidr = $param["IntranetVpcCidr"];
         }
     }
 }

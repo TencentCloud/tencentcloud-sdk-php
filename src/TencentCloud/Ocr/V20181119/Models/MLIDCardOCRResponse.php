@@ -72,10 +72,13 @@ IKAD   劳工证
 MyKid 儿童卡
  * @method string getBirthday() 获取出生日期（目前该字段仅支持IKAD劳工证、MyKad 身份证）
  * @method void setBirthday(string $Birthday) 设置出生日期（目前该字段仅支持IKAD劳工证、MyKad 身份证）
+ * @method string getMyKadNumber() 获取马来身份证背面号码
+ * @method void setMyKadNumber(string $MyKadNumber) 设置马来身份证背面号码
  * @method array getWarnCardInfos() 获取告警码
 -9101 证件边框不完整告警
 -9102 证件复印件告警
 -9103 证件翻拍告警
+-9104 证件PS告警
 -9107 证件反光告警
 -9108 证件模糊告警
 -9109 告警能力未开通
@@ -83,6 +86,7 @@ MyKid 儿童卡
 -9101 证件边框不完整告警
 -9102 证件复印件告警
 -9103 证件翻拍告警
+-9104 证件PS告警
 -9107 证件反光告警
 -9108 证件模糊告警
 -9109 告警能力未开通
@@ -155,10 +159,16 @@ MyKid 儿童卡
     public $Birthday;
 
     /**
+     * @var string 马来身份证背面号码
+     */
+    public $MyKadNumber;
+
+    /**
      * @var array 告警码
 -9101 证件边框不完整告警
 -9102 证件复印件告警
 -9103 证件翻拍告警
+-9104 证件PS告警
 -9107 证件反光告警
 -9108 证件模糊告警
 -9109 告警能力未开通
@@ -197,10 +207,12 @@ POLIS  警察证
 IKAD   劳工证
 MyKid 儿童卡
      * @param string $Birthday 出生日期（目前该字段仅支持IKAD劳工证、MyKad 身份证）
+     * @param string $MyKadNumber 马来身份证背面号码
      * @param array $WarnCardInfos 告警码
 -9101 证件边框不完整告警
 -9102 证件复印件告警
 -9103 证件翻拍告警
+-9104 证件PS告警
 -9107 证件反光告警
 -9108 证件模糊告警
 -9109 告警能力未开通
@@ -253,6 +265,10 @@ MyKid 儿童卡
 
         if (array_key_exists("Birthday",$param) and $param["Birthday"] !== null) {
             $this->Birthday = $param["Birthday"];
+        }
+
+        if (array_key_exists("MyKadNumber",$param) and $param["MyKadNumber"] !== null) {
+            $this->MyKadNumber = $param["MyKadNumber"];
         }
 
         if (array_key_exists("WarnCardInfos",$param) and $param["WarnCardInfos"] !== null) {

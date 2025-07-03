@@ -49,27 +49,49 @@ ANNOTATION_TYPE_CLASSIFICATION，图片分类
 ANNOTATION_TYPE_DETECTION，目标检测
 ANNOTATION_TYPE_SEGMENTATION，图片分割
 ANNOTATION_TYPE_TRACKING，目标跟踪
+ANNOTATION_TYPE_OCR，OCR
+ANNOTATION_TYPE_TEXT_CLASSIFICATION，文本分类
  * @method void setAnnotationType(string $AnnotationType) 设置标注类型:
 ANNOTATION_TYPE_CLASSIFICATION，图片分类
 ANNOTATION_TYPE_DETECTION，目标检测
 ANNOTATION_TYPE_SEGMENTATION，图片分割
 ANNOTATION_TYPE_TRACKING，目标跟踪
+ANNOTATION_TYPE_OCR，OCR
+ANNOTATION_TYPE_TEXT_CLASSIFICATION，文本分类
  * @method string getAnnotationFormat() 获取标注格式:
 ANNOTATION_FORMAT_TI，TI平台格式
 ANNOTATION_FORMAT_PASCAL，Pascal Voc
 ANNOTATION_FORMAT_COCO，COCO
 ANNOTATION_FORMAT_FILE，文件目录结构
+ANNOTATION_FORMAT_TEXT_TI，文本类型TI平台格式
+ANNOTATION_FORMAT_TXT，文本类型TXT格式
+ANNOTATION_FORMAT_CSV，文本类型CSV格式
+ANNOTATION_FORMAT_JSON，文本类型JSON格式
  * @method void setAnnotationFormat(string $AnnotationFormat) 设置标注格式:
 ANNOTATION_FORMAT_TI，TI平台格式
 ANNOTATION_FORMAT_PASCAL，Pascal Voc
 ANNOTATION_FORMAT_COCO，COCO
 ANNOTATION_FORMAT_FILE，文件目录结构
+ANNOTATION_FORMAT_TEXT_TI，文本类型TI平台格式
+ANNOTATION_FORMAT_TXT，文本类型TXT格式
+ANNOTATION_FORMAT_CSV，文本类型CSV格式
+ANNOTATION_FORMAT_JSON，文本类型JSON格式
  * @method array getSchemaInfos() 获取表头信息
  * @method void setSchemaInfos(array $SchemaInfos) 设置表头信息
  * @method boolean getIsSchemaExisted() 获取数据是否存在表头
  * @method void setIsSchemaExisted(boolean $IsSchemaExisted) 设置数据是否存在表头
- * @method string getContentType() 获取导入文件粒度，按行或者按文件
- * @method void setContentType(string $ContentType) 设置导入文件粒度，按行或者按文件
+ * @method string getContentType() 获取导入文件粒度
+TYPE_TEXT_LINE，按行
+TYPE_TEXT_FILE，按文件
+ * @method void setContentType(string $ContentType) 设置导入文件粒度
+TYPE_TEXT_LINE，按行
+TYPE_TEXT_FILE，按文件
+ * @method string getDatasetScene() 获取数据集建模一级类别。LLM,CV,STRUCTURE,OTHER
+ * @method void setDatasetScene(string $DatasetScene) 设置数据集建模一级类别。LLM,CV,STRUCTURE,OTHER
+ * @method array getSceneTags() 获取数据集标签。
+ * @method void setSceneTags(array $SceneTags) 设置数据集标签。
+ * @method CFSConfig getCFSConfig() 获取数据集CFS配置。仅支持LLM场景
+ * @method void setCFSConfig(CFSConfig $CFSConfig) 设置数据集CFS配置。仅支持LLM场景
  */
 class CreateDatasetRequest extends AbstractModel
 {
@@ -115,6 +137,8 @@ ANNOTATION_TYPE_CLASSIFICATION，图片分类
 ANNOTATION_TYPE_DETECTION，目标检测
 ANNOTATION_TYPE_SEGMENTATION，图片分割
 ANNOTATION_TYPE_TRACKING，目标跟踪
+ANNOTATION_TYPE_OCR，OCR
+ANNOTATION_TYPE_TEXT_CLASSIFICATION，文本分类
      */
     public $AnnotationType;
 
@@ -124,6 +148,10 @@ ANNOTATION_FORMAT_TI，TI平台格式
 ANNOTATION_FORMAT_PASCAL，Pascal Voc
 ANNOTATION_FORMAT_COCO，COCO
 ANNOTATION_FORMAT_FILE，文件目录结构
+ANNOTATION_FORMAT_TEXT_TI，文本类型TI平台格式
+ANNOTATION_FORMAT_TXT，文本类型TXT格式
+ANNOTATION_FORMAT_CSV，文本类型CSV格式
+ANNOTATION_FORMAT_JSON，文本类型JSON格式
      */
     public $AnnotationFormat;
 
@@ -138,9 +166,26 @@ ANNOTATION_FORMAT_FILE，文件目录结构
     public $IsSchemaExisted;
 
     /**
-     * @var string 导入文件粒度，按行或者按文件
+     * @var string 导入文件粒度
+TYPE_TEXT_LINE，按行
+TYPE_TEXT_FILE，按文件
      */
     public $ContentType;
+
+    /**
+     * @var string 数据集建模一级类别。LLM,CV,STRUCTURE,OTHER
+     */
+    public $DatasetScene;
+
+    /**
+     * @var array 数据集标签。
+     */
+    public $SceneTags;
+
+    /**
+     * @var CFSConfig 数据集CFS配置。仅支持LLM场景
+     */
+    public $CFSConfig;
 
     /**
      * @param string $DatasetName 数据集名称，不超过60个字符，仅支持中英文、数字、下划线"_"、短横"-"，只能以中英文、数字开头
@@ -160,14 +205,25 @@ ANNOTATION_TYPE_CLASSIFICATION，图片分类
 ANNOTATION_TYPE_DETECTION，目标检测
 ANNOTATION_TYPE_SEGMENTATION，图片分割
 ANNOTATION_TYPE_TRACKING，目标跟踪
+ANNOTATION_TYPE_OCR，OCR
+ANNOTATION_TYPE_TEXT_CLASSIFICATION，文本分类
      * @param string $AnnotationFormat 标注格式:
 ANNOTATION_FORMAT_TI，TI平台格式
 ANNOTATION_FORMAT_PASCAL，Pascal Voc
 ANNOTATION_FORMAT_COCO，COCO
 ANNOTATION_FORMAT_FILE，文件目录结构
+ANNOTATION_FORMAT_TEXT_TI，文本类型TI平台格式
+ANNOTATION_FORMAT_TXT，文本类型TXT格式
+ANNOTATION_FORMAT_CSV，文本类型CSV格式
+ANNOTATION_FORMAT_JSON，文本类型JSON格式
      * @param array $SchemaInfos 表头信息
      * @param boolean $IsSchemaExisted 数据是否存在表头
-     * @param string $ContentType 导入文件粒度，按行或者按文件
+     * @param string $ContentType 导入文件粒度
+TYPE_TEXT_LINE，按行
+TYPE_TEXT_FILE，按文件
+     * @param string $DatasetScene 数据集建模一级类别。LLM,CV,STRUCTURE,OTHER
+     * @param array $SceneTags 数据集标签。
+     * @param CFSConfig $CFSConfig 数据集CFS配置。仅支持LLM场景
      */
     function __construct()
     {
@@ -236,6 +292,19 @@ ANNOTATION_FORMAT_FILE，文件目录结构
 
         if (array_key_exists("ContentType",$param) and $param["ContentType"] !== null) {
             $this->ContentType = $param["ContentType"];
+        }
+
+        if (array_key_exists("DatasetScene",$param) and $param["DatasetScene"] !== null) {
+            $this->DatasetScene = $param["DatasetScene"];
+        }
+
+        if (array_key_exists("SceneTags",$param) and $param["SceneTags"] !== null) {
+            $this->SceneTags = $param["SceneTags"];
+        }
+
+        if (array_key_exists("CFSConfig",$param) and $param["CFSConfig"] !== null) {
+            $this->CFSConfig = new CFSConfig();
+            $this->CFSConfig->deserialize($param["CFSConfig"]);
         }
     }
 }

@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 数据样本
  *
  * @method string getDataSample() 获取数据样本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataSample(string $DataSample) 设置数据样本
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DspaFieldResultDataSample extends AbstractModel
 {
     /**
      * @var string 数据样本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataSample;
 
     /**
      * @param string $DataSample 数据样本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

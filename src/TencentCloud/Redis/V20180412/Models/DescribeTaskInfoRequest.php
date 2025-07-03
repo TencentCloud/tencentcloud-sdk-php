@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTaskInfo请求参数结构体
  *
- * @method integer getTaskId() 获取任务 ID。
- * @method void setTaskId(integer $TaskId) 设置任务 ID。
+ * @method integer getTaskId() 获取任务 ID, 请通过接口[DescribeTaskList](https://cloud.tencent.com/document/product/239/39374) 的返回参数 **Tasks** 的子参数 **TaskId** 获取。
+ * @method void setTaskId(integer $TaskId) 设置任务 ID, 请通过接口[DescribeTaskList](https://cloud.tencent.com/document/product/239/39374) 的返回参数 **Tasks** 的子参数 **TaskId** 获取。
  */
 class DescribeTaskInfoRequest extends AbstractModel
 {
     /**
-     * @var integer 任务 ID。
+     * @var integer 任务 ID, 请通过接口[DescribeTaskList](https://cloud.tencent.com/document/product/239/39374) 的返回参数 **Tasks** 的子参数 **TaskId** 获取。
      */
     public $TaskId;
 
     /**
-     * @param integer $TaskId 任务 ID。
+     * @param integer $TaskId 任务 ID, 请通过接口[DescribeTaskList](https://cloud.tencent.com/document/product/239/39374) 的返回参数 **Tasks** 的子参数 **TaskId** 获取。
      */
     function __construct()
     {

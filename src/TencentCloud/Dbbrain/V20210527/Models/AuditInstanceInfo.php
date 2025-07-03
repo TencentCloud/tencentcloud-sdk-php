@@ -33,9 +33,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRegion() 获取实例所在地域。
  * @method void setRegion(string $Region) 设置实例所在地域。
  * @method array getResourceTags() 获取资源Tags。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceTags(array $ResourceTags) 设置资源Tags。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AuditInstanceInfo extends AbstractModel
 {
@@ -71,7 +69,6 @@ class AuditInstanceInfo extends AbstractModel
 
     /**
      * @var array 资源Tags。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceTags;
 
@@ -83,7 +80,6 @@ class AuditInstanceInfo extends AbstractModel
      * @param integer $ProjectId 项目Id。
      * @param string $Region 实例所在地域。
      * @param array $ResourceTags 资源Tags。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

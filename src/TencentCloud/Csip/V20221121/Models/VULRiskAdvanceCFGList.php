@@ -29,63 +29,37 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCheckFrom() 获取识别来源
  * @method void setCheckFrom(string $CheckFrom) 设置识别来源
  * @method integer getEnable() 获取是否启用，1-启用，0-禁用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnable(integer $Enable) 设置是否启用，1-启用，0-禁用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVULType() 获取风险类型
  * @method void setVULType(string $VULType) 设置风险类型
  * @method string getImpactVersion() 获取影响版本
  * @method void setImpactVersion(string $ImpactVersion) 设置影响版本
  * @method string getCVE() 获取CVE
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCVE(string $CVE) 设置CVE
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getVULTag() 获取漏洞标签
  * @method void setVULTag(array $VULTag) 设置漏洞标签
  * @method array getFixMethod() 获取修复方式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFixMethod(array $FixMethod) 设置修复方式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReleaseTime() 获取披露时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReleaseTime(string $ReleaseTime) 设置披露时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEMGCVulType() 获取应急漏洞类型，1-应急漏洞，0-非应急漏洞
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEMGCVulType(integer $EMGCVulType) 设置应急漏洞类型，1-应急漏洞，0-非应急漏洞
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVULDescribe() 获取漏洞描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVULDescribe(string $VULDescribe) 设置漏洞描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getImpactComponent() 获取影响组件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImpactComponent(string $ImpactComponent) 设置影响组件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPayload() 获取漏洞Payload
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayload(string $Payload) 设置漏洞Payload
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReferences() 获取技术参考
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReferences(string $References) 设置技术参考
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCVSS() 获取cvss评分
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCVSS(string $CVSS) 设置cvss评分
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAttackHeat() 获取攻击热度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAttackHeat(string $AttackHeat) 设置攻击热度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getServiceSupport() 获取安全产品支持情况
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceSupport(array $ServiceSupport) 设置安全产品支持情况
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRecentScanTime() 获取最新检测时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecentScanTime(string $RecentScanTime) 设置最新检测时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VULRiskAdvanceCFGList extends AbstractModel
 {
@@ -111,7 +85,6 @@ class VULRiskAdvanceCFGList extends AbstractModel
 
     /**
      * @var integer 是否启用，1-启用，0-禁用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Enable;
 
@@ -127,7 +100,6 @@ class VULRiskAdvanceCFGList extends AbstractModel
 
     /**
      * @var string CVE
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CVE;
 
@@ -138,67 +110,56 @@ class VULRiskAdvanceCFGList extends AbstractModel
 
     /**
      * @var array 修复方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FixMethod;
 
     /**
      * @var string 披露时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReleaseTime;
 
     /**
      * @var integer 应急漏洞类型，1-应急漏洞，0-非应急漏洞
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EMGCVulType;
 
     /**
      * @var string 漏洞描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VULDescribe;
 
     /**
      * @var string 影响组件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImpactComponent;
 
     /**
      * @var string 漏洞Payload
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Payload;
 
     /**
      * @var string 技术参考
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $References;
 
     /**
      * @var string cvss评分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CVSS;
 
     /**
      * @var string 攻击热度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AttackHeat;
 
     /**
      * @var array 安全产品支持情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceSupport;
 
     /**
      * @var string 最新检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecentScanTime;
 
@@ -208,34 +169,21 @@ class VULRiskAdvanceCFGList extends AbstractModel
      * @param string $RiskLevel 风险等级，low-低危，high-高危，middle-中危，info-提示，extreme-严重。
      * @param string $CheckFrom 识别来源
      * @param integer $Enable 是否启用，1-启用，0-禁用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VULType 风险类型
      * @param string $ImpactVersion 影响版本
      * @param string $CVE CVE
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $VULTag 漏洞标签
      * @param array $FixMethod 修复方式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReleaseTime 披露时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EMGCVulType 应急漏洞类型，1-应急漏洞，0-非应急漏洞
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VULDescribe 漏洞描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ImpactComponent 影响组件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Payload 漏洞Payload
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $References 技术参考
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CVSS cvss评分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AttackHeat 攻击热度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ServiceSupport 安全产品支持情况
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RecentScanTime 最新检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

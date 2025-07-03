@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * InquireCkafkaPrice接口询价返回值
  *
  * @method InquiryPrice getInstancePrice() 获取实例价格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstancePrice(InquiryPrice $InstancePrice) 设置实例价格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method InquiryPrice getPublicNetworkBandwidthPrice() 获取公网带宽价格
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicNetworkBandwidthPrice(InquiryPrice $PublicNetworkBandwidthPrice) 设置公网带宽价格
@@ -33,7 +31,6 @@ class InquireCkafkaPriceResp extends AbstractModel
 {
     /**
      * @var InquiryPrice 实例价格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstancePrice;
 
@@ -45,7 +42,6 @@ class InquireCkafkaPriceResp extends AbstractModel
 
     /**
      * @param InquiryPrice $InstancePrice 实例价格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InquiryPrice $PublicNetworkBandwidthPrice 公网带宽价格
 注意：此字段可能返回 null，表示取不到有效值。
      */

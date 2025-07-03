@@ -21,129 +21,89 @@ use TencentCloud\Common\AbstractModel;
  * 企业安全组关联实例信息
  *
  * @method string getInstanceId() 获取实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceName() 获取实例名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceName(string $InstanceName) 设置实例名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getType() 获取实例类型，3是cvm实例,4是clb实例,5是eni实例,6是云数据库
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(integer $Type) 设置实例类型，3是cvm实例,4是clb实例,5是eni实例,6是云数据库
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVpcId() 获取私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(string $VpcId) 设置私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVpcName() 获取私有网络名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcName(string $VpcName) 设置私有网络名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPublicIp() 获取公网IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicIp(string $PublicIp) 设置公网IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIp() 获取内网IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIp(string $Ip) 设置内网IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSecurityGroupCount() 获取关联安全组数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecurityGroupCount(integer $SecurityGroupCount) 设置关联安全组数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSecurityGroupRuleCount() 获取关联安全组规则数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecurityGroupRuleCount(integer $SecurityGroupRuleCount) 设置关联安全组规则数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCdbId() 获取关联数据库代理Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCdbId(string $CdbId) 设置关联数据库代理Id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssociatedInstanceInfo extends AbstractModel
 {
     /**
      * @var string 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var string 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceName;
 
     /**
      * @var integer 实例类型，3是cvm实例,4是clb实例,5是eni实例,6是云数据库
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
     /**
      * @var string 私有网络名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcName;
 
     /**
      * @var string 公网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicIp;
 
     /**
      * @var string 内网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ip;
 
     /**
      * @var integer 关联安全组数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecurityGroupCount;
 
     /**
      * @var integer 关联安全组规则数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecurityGroupRuleCount;
 
     /**
      * @var string 关联数据库代理Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CdbId;
 
     /**
      * @param string $InstanceId 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Type 实例类型，3是cvm实例,4是clb实例,5是eni实例,6是云数据库
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcId 私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcName 私有网络名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PublicIp 公网IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Ip 内网IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SecurityGroupCount 关联安全组数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SecurityGroupRuleCount 关联安全组规则数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CdbId 关联数据库代理Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

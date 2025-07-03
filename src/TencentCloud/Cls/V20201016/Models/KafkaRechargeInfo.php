@@ -21,105 +21,70 @@ use TencentCloud\Common\AbstractModel;
  * Kafka导入配置信息
  *
  * @method string getId() 获取Kafka数据订阅配置的ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(string $Id) 设置Kafka数据订阅配置的ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTopicId() 获取日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicId(string $TopicId) 设置日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取Kafka导入任务名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置Kafka导入任务名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getKafkaType() 获取导入Kafka类型，0: 腾讯云CKafka，1: 用户自建Kafka
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKafkaType(integer $KafkaType) 设置导入Kafka类型，0: 腾讯云CKafka，1: 用户自建Kafka
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getKafkaInstance() 获取腾讯云CKafka实例ID，KafkaType为0时必填
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKafkaInstance(string $KafkaInstance) 设置腾讯云CKafka实例ID，KafkaType为0时必填
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getServerAddr() 获取服务地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServerAddr(string $ServerAddr) 设置服务地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsEncryptionAddr() 获取ServerAddr是否为加密连接	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsEncryptionAddr(boolean $IsEncryptionAddr) 设置ServerAddr是否为加密连接	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method KafkaProtocolInfo getProtocol() 获取加密访问协议，IsEncryptionAddr参数为true时必填
  * @method void setProtocol(KafkaProtocolInfo $Protocol) 设置加密访问协议，IsEncryptionAddr参数为true时必填
  * @method string getUserKafkaTopics() 获取用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserKafkaTopics(string $UserKafkaTopics) 设置用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConsumerGroupName() 获取用户Kafka消费组名称	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConsumerGroupName(string $ConsumerGroupName) 设置用户Kafka消费组名称	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取状态 ，1：运行中；2：暂停。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置状态 ，1：运行中；2：暂停。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getOffset() 获取导入数据位置，-2:最早（默认），-1：最晚
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOffset(integer $Offset) 设置导入数据位置，-2:最早（默认），-1：最晚
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method LogRechargeRuleInfo getLogRechargeRule() 获取日志导入规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogRechargeRule(LogRechargeRuleInfo $LogRechargeRule) 设置日志导入规则
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class KafkaRechargeInfo extends AbstractModel
 {
     /**
      * @var string Kafka数据订阅配置的ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var string 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicId;
 
     /**
      * @var string Kafka导入任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var integer 导入Kafka类型，0: 腾讯云CKafka，1: 用户自建Kafka
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KafkaType;
 
     /**
      * @var string 腾讯云CKafka实例ID，KafkaType为0时必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KafkaInstance;
 
     /**
      * @var string 服务地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServerAddr;
 
     /**
      * @var boolean ServerAddr是否为加密连接	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsEncryptionAddr;
 
@@ -130,76 +95,55 @@ class KafkaRechargeInfo extends AbstractModel
 
     /**
      * @var string 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserKafkaTopics;
 
     /**
      * @var string 用户Kafka消费组名称	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConsumerGroupName;
 
     /**
      * @var integer 状态 ，1：运行中；2：暂停。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var integer 导入数据位置，-2:最早（默认），-1：最晚
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Offset;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @var LogRechargeRuleInfo 日志导入规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogRechargeRule;
 
     /**
      * @param string $Id Kafka数据订阅配置的ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TopicId 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name Kafka导入任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $KafkaType 导入Kafka类型，0: 腾讯云CKafka，1: 用户自建Kafka
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $KafkaInstance 腾讯云CKafka实例ID，KafkaType为0时必填
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServerAddr 服务地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsEncryptionAddr ServerAddr是否为加密连接	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KafkaProtocolInfo $Protocol 加密访问协议，IsEncryptionAddr参数为true时必填
      * @param string $UserKafkaTopics 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConsumerGroupName 用户Kafka消费组名称	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 状态 ，1：运行中；2：暂停。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Offset 导入数据位置，-2:最早（默认），-1：最晚
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LogRechargeRuleInfo $LogRechargeRule 日志导入规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

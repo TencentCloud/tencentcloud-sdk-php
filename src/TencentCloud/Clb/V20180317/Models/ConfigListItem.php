@@ -22,18 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getUconfigId() 获取配置ID
  * @method void setUconfigId(string $UconfigId) 设置配置ID
- * @method string getConfigType() 获取配置类型
- * @method void setConfigType(string $ConfigType) 设置配置类型
+ * @method string getConfigType() 获取配置类型， 可选值：CLB（实例维度配置）， SERVER（服务维度配置），LOCATION（规则维度配置）
+ * @method void setConfigType(string $ConfigType) 设置配置类型， 可选值：CLB（实例维度配置）， SERVER（服务维度配置），LOCATION（规则维度配置）
  * @method string getConfigName() 获取配置名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigName(string $ConfigName) 设置配置名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConfigContent() 获取配置内容
  * @method void setConfigContent(string $ConfigContent) 设置配置内容
- * @method string getCreateTimestamp() 获取增加配置时间
- * @method void setCreateTimestamp(string $CreateTimestamp) 设置增加配置时间
- * @method string getUpdateTimestamp() 获取修改配置时间
- * @method void setUpdateTimestamp(string $UpdateTimestamp) 设置修改配置时间
+ * @method string getCreateTimestamp() 获取配置的创建时间。
+格式：YYYY-MM-DD HH:mm:ss
+ * @method void setCreateTimestamp(string $CreateTimestamp) 设置配置的创建时间。
+格式：YYYY-MM-DD HH:mm:ss
+ * @method string getUpdateTimestamp() 获取配置的修改时间。
+格式：YYYY-MM-DD HH:mm:ss
+ * @method void setUpdateTimestamp(string $UpdateTimestamp) 设置配置的修改时间。
+格式：YYYY-MM-DD HH:mm:ss
  */
 class ConfigListItem extends AbstractModel
 {
@@ -43,13 +45,12 @@ class ConfigListItem extends AbstractModel
     public $UconfigId;
 
     /**
-     * @var string 配置类型
+     * @var string 配置类型， 可选值：CLB（实例维度配置）， SERVER（服务维度配置），LOCATION（规则维度配置）
      */
     public $ConfigType;
 
     /**
      * @var string 配置名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigName;
 
@@ -59,23 +60,26 @@ class ConfigListItem extends AbstractModel
     public $ConfigContent;
 
     /**
-     * @var string 增加配置时间
+     * @var string 配置的创建时间。
+格式：YYYY-MM-DD HH:mm:ss
      */
     public $CreateTimestamp;
 
     /**
-     * @var string 修改配置时间
+     * @var string 配置的修改时间。
+格式：YYYY-MM-DD HH:mm:ss
      */
     public $UpdateTimestamp;
 
     /**
      * @param string $UconfigId 配置ID
-     * @param string $ConfigType 配置类型
+     * @param string $ConfigType 配置类型， 可选值：CLB（实例维度配置）， SERVER（服务维度配置），LOCATION（规则维度配置）
      * @param string $ConfigName 配置名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConfigContent 配置内容
-     * @param string $CreateTimestamp 增加配置时间
-     * @param string $UpdateTimestamp 修改配置时间
+     * @param string $CreateTimestamp 配置的创建时间。
+格式：YYYY-MM-DD HH:mm:ss
+     * @param string $UpdateTimestamp 配置的修改时间。
+格式：YYYY-MM-DD HH:mm:ss
      */
     function __construct()
     {

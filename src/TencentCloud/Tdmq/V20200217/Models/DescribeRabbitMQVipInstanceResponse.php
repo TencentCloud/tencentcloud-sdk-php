@@ -25,13 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method RabbitMQClusterSpecInfo getClusterSpecInfo() 获取集群规格信息
  * @method void setClusterSpecInfo(RabbitMQClusterSpecInfo $ClusterSpecInfo) 设置集群规格信息
  * @method RabbitMQClusterAccessInfo getClusterNetInfo() 获取集群访问
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterNetInfo(RabbitMQClusterAccessInfo $ClusterNetInfo) 设置集群访问
-注意：此字段可能返回 null，表示取不到有效值。
  * @method RabbitMQClusterWhiteListInfo getClusterWhiteListInfo() 获取集群白名单
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterWhiteListInfo(RabbitMQClusterWhiteListInfo $ClusterWhiteListInfo) 设置集群白名单
-注意：此字段可能返回 null，表示取不到有效值。
  * @method VirtualHostQuota getVirtualHostQuota() 获取vhost配额信息
  * @method void setVirtualHostQuota(VirtualHostQuota $VirtualHostQuota) 设置vhost配额信息
  * @method ExchangeQuota getExchangeQuota() 获取exchange配额信息
@@ -55,13 +51,11 @@ class DescribeRabbitMQVipInstanceResponse extends AbstractModel
 
     /**
      * @var RabbitMQClusterAccessInfo 集群访问
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterNetInfo;
 
     /**
      * @var RabbitMQClusterWhiteListInfo 集群白名单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterWhiteListInfo;
 
@@ -89,9 +83,7 @@ class DescribeRabbitMQVipInstanceResponse extends AbstractModel
      * @param RabbitMQClusterInfo $ClusterInfo 集群信息
      * @param RabbitMQClusterSpecInfo $ClusterSpecInfo 集群规格信息
      * @param RabbitMQClusterAccessInfo $ClusterNetInfo 集群访问
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RabbitMQClusterWhiteListInfo $ClusterWhiteListInfo 集群白名单
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VirtualHostQuota $VirtualHostQuota vhost配额信息
      * @param ExchangeQuota $ExchangeQuota exchange配额信息
      * @param QueueQuota $QueueQuota queue配额信息

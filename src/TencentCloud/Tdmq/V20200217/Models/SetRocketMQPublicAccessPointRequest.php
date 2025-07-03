@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPayMode(integer $PayMode) 设置付费模式，开启公网时必须指定，0为按小时计费，1为包年包月，当前只支持按小时计费
  * @method array getRules() 获取公网访问安全规则列表，Enabled为true时必须传入
  * @method void setRules(array $Rules) 设置公网访问安全规则列表，Enabled为true时必须传入
+ * @method boolean getBillingFlow() 获取公网是否按流量计费
+ * @method void setBillingFlow(boolean $BillingFlow) 设置公网是否按流量计费
  */
 class SetRocketMQPublicAccessPointRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class SetRocketMQPublicAccessPointRequest extends AbstractModel
     public $Rules;
 
     /**
+     * @var boolean 公网是否按流量计费
+     */
+    public $BillingFlow;
+
+    /**
      * @param string $InstanceId 集群ID，当前只支持专享集群
      * @param boolean $Enabled 开启或关闭访问
      * @param integer $Bandwidth 带宽大小，开启或者调整公网时必须指定，Mbps为单位
      * @param integer $PayMode 付费模式，开启公网时必须指定，0为按小时计费，1为包年包月，当前只支持按小时计费
      * @param array $Rules 公网访问安全规则列表，Enabled为true时必须传入
+     * @param boolean $BillingFlow 公网是否按流量计费
      */
     function __construct()
     {
@@ -101,6 +109,10 @@ class SetRocketMQPublicAccessPointRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Rules, $obj);
             }
+        }
+
+        if (array_key_exists("BillingFlow",$param) and $param["BillingFlow"] !== null) {
+            $this->BillingFlow = $param["BillingFlow"];
         }
     }
 }

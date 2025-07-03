@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 复刻音色详情
  *
- * @method integer getVoiceType() 获取音色id
- * @method void setVoiceType(integer $VoiceType) 设置音色id
+ * @method integer getVoiceType() 获取音色id。（若为一句话复刻时，该值为固定值“200000000”）
+ * @method void setVoiceType(integer $VoiceType) 设置音色id。（若为一句话复刻时，该值为固定值“200000000”）
  * @method string getVoiceName() 获取音色名称
  * @method void setVoiceName(string $VoiceName) 设置音色名称
  * @method integer getVoiceGender() 获取音色性别: 1-male 2-female
@@ -34,11 +34,21 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDateCreated(string $DateCreated) 设置创建时间
  * @method boolean getIsDeployed() 获取部署状态。若已部署，则可通过语音合成接口调用该音色
  * @method void setIsDeployed(boolean $IsDeployed) 设置部署状态。若已部署，则可通过语音合成接口调用该音色
+ * @method string getExpireTime() 获取任务过期时间。（当复刻类型为一句话复刻时展示）
+
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExpireTime(string $ExpireTime) 设置任务过期时间。（当复刻类型为一句话复刻时展示）
+
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFastVoiceType() 获取快速复刻音色ID。（当复刻类型为一句话复刻时展示）
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFastVoiceType(string $FastVoiceType) 设置快速复刻音色ID。（当复刻类型为一句话复刻时展示）
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VoiceTypeInfo extends AbstractModel
 {
     /**
-     * @var integer 音色id
+     * @var integer 音色id。（若为一句话复刻时，该值为固定值“200000000”）
      */
     public $VoiceType;
 
@@ -73,13 +83,31 @@ class VoiceTypeInfo extends AbstractModel
     public $IsDeployed;
 
     /**
-     * @param integer $VoiceType 音色id
+     * @var string 任务过期时间。（当复刻类型为一句话复刻时展示）
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExpireTime;
+
+    /**
+     * @var string 快速复刻音色ID。（当复刻类型为一句话复刻时展示）
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FastVoiceType;
+
+    /**
+     * @param integer $VoiceType 音色id。（若为一句话复刻时，该值为固定值“200000000”）
      * @param string $VoiceName 音色名称
      * @param integer $VoiceGender 音色性别: 1-male 2-female
      * @param integer $TaskType 复刻类型: 0-轻量版复刻 1-基础版复刻
      * @param string $TaskID 复刻任务 ID
      * @param string $DateCreated 创建时间
      * @param boolean $IsDeployed 部署状态。若已部署，则可通过语音合成接口调用该音色
+     * @param string $ExpireTime 任务过期时间。（当复刻类型为一句话复刻时展示）
+
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FastVoiceType 快速复刻音色ID。（当复刻类型为一句话复刻时展示）
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -120,6 +148,14 @@ class VoiceTypeInfo extends AbstractModel
 
         if (array_key_exists("IsDeployed",$param) and $param["IsDeployed"] !== null) {
             $this->IsDeployed = $param["IsDeployed"];
+        }
+
+        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
+            $this->ExpireTime = $param["ExpireTime"];
+        }
+
+        if (array_key_exists("FastVoiceType",$param) and $param["FastVoiceType"] !== null) {
+            $this->FastVoiceType = $param["FastVoiceType"];
         }
     }
 }

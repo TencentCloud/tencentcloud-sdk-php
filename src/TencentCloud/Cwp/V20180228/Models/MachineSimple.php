@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMachineName(string $MachineName) 设置主机名称。
  * @method string getMachineOs() 获取主机系统。
  * @method void setMachineOs(string $MachineOs) 设置主机系统。
- * @method string getUuid() 获取云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
- * @method void setUuid(string $Uuid) 设置云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
+ * @method string getUuid() 获取主机安全uuid，若客户端长时间不在线将返回空字符。
+ * @method void setUuid(string $Uuid) 设置主机安全uuid，若客户端长时间不在线将返回空字符。
  * @method string getQuuid() 获取CVM或BM机器唯一Uuid。
  * @method void setQuuid(string $Quuid) 设置CVM或BM机器唯一Uuid。
  * @method string getMachineIp() 获取主机IP。
@@ -48,28 +48,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTag(array $Tag) 设置标签信息
  * @method RegionInfo getRegionInfo() 获取地域信息
  * @method void setRegionInfo(RegionInfo $RegionInfo) 设置地域信息
- * @method string getInstanceState() 获取实例状态 TERMINATED_PRO_VERSION 已销毁
- * @method void setInstanceState(string $InstanceState) 设置实例状态 TERMINATED_PRO_VERSION 已销毁
+ * @method string getInstanceState() 获取实例状态请参考CVM实例列表InstanceState值
+https://cloud.tencent.com/document/api/213/15753#Instance
+ * @method void setInstanceState(string $InstanceState) 设置实例状态请参考CVM实例列表InstanceState值
+https://cloud.tencent.com/document/api/213/15753#Instance
  * @method integer getProjectId() 获取项目ID
  * @method void setProjectId(integer $ProjectId) 设置项目ID
  * @method string getMachineType() 获取机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
  * @method void setMachineType(string $MachineType) 设置机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
  * @method string getKernelVersion() 获取内核版本
  * @method void setKernelVersion(string $KernelVersion) 设置内核版本
- * @method string getProtectType() 获取防护版本 BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版.
- * @method void setProtectType(string $ProtectType) 设置防护版本 BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版.
+ * @method string getProtectType() 获取防护版本 BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版.
+ * @method void setProtectType(string $ProtectType) 设置防护版本 BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版.
  * @method LicenseOrder getLicenseOrder() 获取授权订单对象
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLicenseOrder(LicenseOrder $LicenseOrder) 设置授权订单对象
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCloudTags() 获取云标签信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCloudTags(array $CloudTags) 设置云标签信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MachineSimple extends AbstractModel
 {
@@ -84,7 +80,7 @@ class MachineSimple extends AbstractModel
     public $MachineOs;
 
     /**
-     * @var string 云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
+     * @var string 主机安全uuid，若客户端长时间不在线将返回空字符。
      */
     public $Uuid;
 
@@ -128,7 +124,8 @@ class MachineSimple extends AbstractModel
     public $RegionInfo;
 
     /**
-     * @var string 实例状态 TERMINATED_PRO_VERSION 已销毁
+     * @var string 实例状态请参考CVM实例列表InstanceState值
+https://cloud.tencent.com/document/api/213/15753#Instance
      */
     public $InstanceState;
 
@@ -148,32 +145,29 @@ class MachineSimple extends AbstractModel
     public $KernelVersion;
 
     /**
-     * @var string 防护版本 BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版.
+     * @var string 防护版本 BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版.
      */
     public $ProtectType;
 
     /**
      * @var LicenseOrder 授权订单对象
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LicenseOrder;
 
     /**
      * @var array 云标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CloudTags;
 
     /**
      * @var string 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @param string $MachineName 主机名称。
      * @param string $MachineOs 主机系统。
-     * @param string $Uuid 云镜客户端唯一Uuid，若客户端长时间不在线将返回空字符。
+     * @param string $Uuid 主机安全uuid，若客户端长时间不在线将返回空字符。
      * @param string $Quuid CVM或BM机器唯一Uuid。
      * @param string $MachineIp 主机IP。
      * @param boolean $IsProVersion 是否是专业版。
@@ -185,17 +179,15 @@ class MachineSimple extends AbstractModel
 <li>PREPAY: 表示预付费，即包年包月</li>
      * @param array $Tag 标签信息
      * @param RegionInfo $RegionInfo 地域信息
-     * @param string $InstanceState 实例状态 TERMINATED_PRO_VERSION 已销毁
+     * @param string $InstanceState 实例状态请参考CVM实例列表InstanceState值
+https://cloud.tencent.com/document/api/213/15753#Instance
      * @param integer $ProjectId 项目ID
      * @param string $MachineType 机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
      * @param string $KernelVersion 内核版本
-     * @param string $ProtectType 防护版本 BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版.
+     * @param string $ProtectType 防护版本 BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 轻量版.
      * @param LicenseOrder $LicenseOrder 授权订单对象
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CloudTags 云标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

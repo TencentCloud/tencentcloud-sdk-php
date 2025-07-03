@@ -47,21 +47,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getProjectType() 获取项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
  * @method void setProjectType(string $ProjectType) 设置项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
  * @method string getSalesUin() 获取业务员ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSalesUin(string $SalesUin) 设置业务员ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSalesName() 获取业务员姓名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSalesName(string $SalesName) 设置业务员姓名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMail() 获取代客邮箱
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMail(string $Mail) 设置代客邮箱
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTransactionType() 获取交易类型:交易类型 1-原类型 2-代理型  3-代采型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTransactionType(string $TransactionType) 设置交易类型:交易类型 1-原类型 2-代理型  3-代采型
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AgentAuditedClient extends AbstractModel
 {
@@ -132,25 +124,21 @@ class AgentAuditedClient extends AbstractModel
 
     /**
      * @var string 业务员ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SalesUin;
 
     /**
      * @var string 业务员姓名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SalesName;
 
     /**
      * @var string 代客邮箱
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Mail;
 
     /**
      * @var string 交易类型:交易类型 1-原类型 2-代理型  3-代采型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TransactionType;
 
@@ -169,13 +157,9 @@ class AgentAuditedClient extends AbstractModel
      * @param string $ClientType 客户类型：可以为new(自拓)/assign(指派)/old(官网)/direct(直销)/direct_newopp(直销(新商机))/空
      * @param string $ProjectType 项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
      * @param string $SalesUin 业务员ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SalesName 业务员姓名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Mail 代客邮箱
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TransactionType 交易类型:交易类型 1-原类型 2-代理型  3-代采型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

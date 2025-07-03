@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setParams(array $Params) 设置附件属性
  * @method DMSSds getSds() 获取存储对象
  * @method void setSds(DMSSds $Sds) 设置存储对象
+ * @method string getDatasourceConnectionName() 获取数据源连接名
+ * @method void setDatasourceConnectionName(string $DatasourceConnectionName) 设置数据源连接名
  */
 class DMSPartition extends AbstractModel
 {
@@ -115,6 +117,11 @@ class DMSPartition extends AbstractModel
     public $Sds;
 
     /**
+     * @var string 数据源连接名
+     */
+    public $DatasourceConnectionName;
+
+    /**
      * @param string $DatabaseName 数据库名称
      * @param string $SchemaName 数据目录名称
      * @param string $TableName 表名称
@@ -128,6 +135,7 @@ class DMSPartition extends AbstractModel
      * @param string $LastAccessTime 最后访问时间
      * @param array $Params 附件属性
      * @param DMSSds $Sds 存储对象
+     * @param string $DatasourceConnectionName 数据源连接名
      */
     function __construct()
     {
@@ -198,6 +206,10 @@ class DMSPartition extends AbstractModel
         if (array_key_exists("Sds",$param) and $param["Sds"] !== null) {
             $this->Sds = new DMSSds();
             $this->Sds->deserialize($param["Sds"]);
+        }
+
+        if (array_key_exists("DatasourceConnectionName",$param) and $param["DatasourceConnectionName"] !== null) {
+            $this->DatasourceConnectionName = $param["DatasourceConnectionName"];
         }
     }
 }

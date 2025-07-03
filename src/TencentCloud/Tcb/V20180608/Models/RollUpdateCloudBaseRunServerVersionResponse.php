@@ -23,13 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getResult() 获取succ为成功
  * @method void setResult(string $Result) 设置succ为成功
  * @method string getVersionName() 获取滚动更新的VersionName
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersionName(string $VersionName) 设置滚动更新的VersionName
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRunId() 获取操作记录id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRunId(string $RunId) 设置操作记录id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -42,13 +38,11 @@ class RollUpdateCloudBaseRunServerVersionResponse extends AbstractModel
 
     /**
      * @var string 滚动更新的VersionName
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VersionName;
 
     /**
      * @var string 操作记录id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RunId;
 
@@ -60,9 +54,7 @@ class RollUpdateCloudBaseRunServerVersionResponse extends AbstractModel
     /**
      * @param string $Result succ为成功
      * @param string $VersionName 滚动更新的VersionName
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RunId 操作记录id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

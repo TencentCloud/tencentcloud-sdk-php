@@ -27,7 +27,6 @@ CustomQuery：检索语句。 QueryIndex为-1时有效且必填，value示例：
 Fields：字段。value支持 __SOURCE__；__FILENAME__；__HOSTNAME__；__TIMESTAMP__；__INDEX_STATUS__；__PKG_LOGID__；__TOPIC__。
 Format：显示形式。value支持 1：每条日志一行；2：每条日志每个字段一行。
 Limit：最大日志条数。 value示例： 5。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKey(string $Key) 设置键。支持以下key：
 SyntaxRule：语法规则，value支持 0：Lucene语法；1： CQL语法。
 QueryIndex：执行语句序号。value支持  -1：自定义； 1：执行语句1； 2：执行语句2。
@@ -35,7 +34,6 @@ CustomQuery：检索语句。 QueryIndex为-1时有效且必填，value示例：
 Fields：字段。value支持 __SOURCE__；__FILENAME__；__HOSTNAME__；__TIMESTAMP__；__INDEX_STATUS__；__PKG_LOGID__；__TOPIC__。
 Format：显示形式。value支持 1：每条日志一行；2：每条日志每个字段一行。
 Limit：最大日志条数。 value示例： 5。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取值。
 键对应值如下：
 SyntaxRule：语法规则，value支持 0：Lucene语法；1： CQL语法。
@@ -44,7 +42,6 @@ CustomQuery：检索语句。 QueryIndex为-1时有效且必填，value示例：
 Fields：字段。value支持 __SOURCE__；__FILENAME__；__HOSTNAME__；__TIMESTAMP__；__INDEX_STATUS__；__PKG_LOGID__；__TOPIC__。
 Format：显示形式。value支持 1：每条日志一行；2：每条日志每个字段一行。
 Limit：最大日志条数。 value示例： 5。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置值。
 键对应值如下：
 SyntaxRule：语法规则，value支持 0：Lucene语法；1： CQL语法。
@@ -53,7 +50,6 @@ CustomQuery：检索语句。 QueryIndex为-1时有效且必填，value示例：
 Fields：字段。value支持 __SOURCE__；__FILENAME__；__HOSTNAME__；__TIMESTAMP__；__INDEX_STATUS__；__PKG_LOGID__；__TOPIC__。
 Format：显示形式。value支持 1：每条日志一行；2：每条日志每个字段一行。
 Limit：最大日志条数。 value示例： 5。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmAnalysisConfig extends AbstractModel
 {
@@ -65,7 +61,6 @@ CustomQuery：检索语句。 QueryIndex为-1时有效且必填，value示例：
 Fields：字段。value支持 __SOURCE__；__FILENAME__；__HOSTNAME__；__TIMESTAMP__；__INDEX_STATUS__；__PKG_LOGID__；__TOPIC__。
 Format：显示形式。value支持 1：每条日志一行；2：每条日志每个字段一行。
 Limit：最大日志条数。 value示例： 5。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Key;
 
@@ -78,7 +73,6 @@ CustomQuery：检索语句。 QueryIndex为-1时有效且必填，value示例：
 Fields：字段。value支持 __SOURCE__；__FILENAME__；__HOSTNAME__；__TIMESTAMP__；__INDEX_STATUS__；__PKG_LOGID__；__TOPIC__。
 Format：显示形式。value支持 1：每条日志一行；2：每条日志每个字段一行。
 Limit：最大日志条数。 value示例： 5。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
@@ -90,7 +84,6 @@ CustomQuery：检索语句。 QueryIndex为-1时有效且必填，value示例：
 Fields：字段。value支持 __SOURCE__；__FILENAME__；__HOSTNAME__；__TIMESTAMP__；__INDEX_STATUS__；__PKG_LOGID__；__TOPIC__。
 Format：显示形式。value支持 1：每条日志一行；2：每条日志每个字段一行。
 Limit：最大日志条数。 value示例： 5。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 值。
 键对应值如下：
 SyntaxRule：语法规则，value支持 0：Lucene语法；1： CQL语法。
@@ -99,7 +92,6 @@ CustomQuery：检索语句。 QueryIndex为-1时有效且必填，value示例：
 Fields：字段。value支持 __SOURCE__；__FILENAME__；__HOSTNAME__；__TIMESTAMP__；__INDEX_STATUS__；__PKG_LOGID__；__TOPIC__。
 Format：显示形式。value支持 1：每条日志一行；2：每条日志每个字段一行。
 Limit：最大日志条数。 value示例： 5。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

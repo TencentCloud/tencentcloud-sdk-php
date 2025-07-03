@@ -40,18 +40,14 @@ use TencentCloud\Common\AbstractModel;
 <li>sum-month:以月为单位抵扣</li>
 <li>sum-day:以天为单位抵扣</li>
 <li>totalize:总容量抵扣</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeductType(string $DeductType) 设置免费量抵扣周期
 <li>sum-month:以月为单位抵扣</li>
 <li>sum-day:以天为单位抵扣</li>
 <li>totalize:总容量抵扣</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFreeQuotaType() 获取免费量类型
 <li>basic:通用量抵扣</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFreeQuotaType(string $FreeQuotaType) 设置免费量类型
 <li>basic:通用量抵扣</li>
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class FreequotaInfo extends AbstractModel
 {
@@ -84,14 +80,12 @@ class FreequotaInfo extends AbstractModel
 <li>sum-month:以月为单位抵扣</li>
 <li>sum-day:以天为单位抵扣</li>
 <li>totalize:总容量抵扣</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeductType;
 
     /**
      * @var string 免费量类型
 <li>basic:通用量抵扣</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FreeQuotaType;
 
@@ -108,10 +102,8 @@ class FreequotaInfo extends AbstractModel
 <li>sum-month:以月为单位抵扣</li>
 <li>sum-day:以天为单位抵扣</li>
 <li>totalize:总容量抵扣</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FreeQuotaType 免费量类型
 <li>basic:通用量抵扣</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

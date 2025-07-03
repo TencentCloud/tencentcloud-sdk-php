@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRate(string $Rate) 设置该场景下概率[0.00,100.00],分值越大违规概率越高
  * @method string getKeyWord() 获取违规关键字
  * @method void setKeyWord(string $KeyWord) 设置违规关键字
- * @method integer getStartTime() 获取关键字在音频的开始时间，从0开始的偏移量，单位为毫秒
- * @method void setStartTime(integer $StartTime) 设置关键字在音频的开始时间，从0开始的偏移量，单位为毫秒
- * @method integer getEndTime() 获取关键字在音频的结束时间，从0开始的偏移量,，单位为毫秒
- * @method void setEndTime(integer $EndTime) 设置关键字在音频的结束时间，从0开始的偏移量,，单位为毫秒
+ * @method integer getStartTime() 获取关键字在音频的开始时间，从0开始的偏移量，单位为毫秒，Label=moan时有效
+ * @method void setStartTime(integer $StartTime) 设置关键字在音频的开始时间，从0开始的偏移量，单位为毫秒，Label=moan时有效
+ * @method integer getEndTime() 获取关键字在音频的结束时间，从0开始的偏移量,，单位为毫秒，Label=moan时有效
+ * @method void setEndTime(integer $EndTime) 设置关键字在音频的结束时间，从0开始的偏移量,，单位为毫秒，Label=moan时有效
  */
 class ScanDetail extends AbstractModel
 {
@@ -49,12 +49,12 @@ class ScanDetail extends AbstractModel
     public $KeyWord;
 
     /**
-     * @var integer 关键字在音频的开始时间，从0开始的偏移量，单位为毫秒
+     * @var integer 关键字在音频的开始时间，从0开始的偏移量，单位为毫秒，Label=moan时有效
      */
     public $StartTime;
 
     /**
-     * @var integer 关键字在音频的结束时间，从0开始的偏移量,，单位为毫秒
+     * @var integer 关键字在音频的结束时间，从0开始的偏移量,，单位为毫秒，Label=moan时有效
      */
     public $EndTime;
 
@@ -62,8 +62,8 @@ class ScanDetail extends AbstractModel
      * @param string $Label 违规场景，参照<a href="https://cloud.tencent.com/document/product/607/37622#Label_Value">Label</a>定义
      * @param string $Rate 该场景下概率[0.00,100.00],分值越大违规概率越高
      * @param string $KeyWord 违规关键字
-     * @param integer $StartTime 关键字在音频的开始时间，从0开始的偏移量，单位为毫秒
-     * @param integer $EndTime 关键字在音频的结束时间，从0开始的偏移量,，单位为毫秒
+     * @param integer $StartTime 关键字在音频的开始时间，从0开始的偏移量，单位为毫秒，Label=moan时有效
+     * @param integer $EndTime 关键字在音频的结束时间，从0开始的偏移量,，单位为毫秒，Label=moan时有效
      */
     function __construct()
     {

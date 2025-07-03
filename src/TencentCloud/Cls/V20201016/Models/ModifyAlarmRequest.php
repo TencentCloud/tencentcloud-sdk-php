@@ -163,6 +163,7 @@ class ModifyAlarmRequest extends AbstractModel
 
     /**
      * @var boolean 该参数已废弃，请使用Status参数控制是否开启告警策略。
+     * @deprecated
      */
     public $Enable;
 

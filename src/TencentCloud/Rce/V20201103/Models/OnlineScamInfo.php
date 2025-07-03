@@ -34,8 +34,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContentType(integer $ContentType) 设置内容产生形式：
 0：对话。
 1：广播。
- * @method integer getFraudType() 获取类型
- * @method void setFraudType(integer $FraudType) 设置类型
+ * @method integer getFraudType() 获取账号类型
+1：手机号
+2：uin账号
+ * @method void setFraudType(integer $FraudType) 设置账号类型
+1：手机号
+2：uin账号
  * @method string getFraudAccount() 获取账号
  * @method void setFraudAccount(string $FraudAccount) 设置账号
  */
@@ -61,7 +65,9 @@ class OnlineScamInfo extends AbstractModel
     public $ContentType;
 
     /**
-     * @var integer 类型
+     * @var integer 账号类型
+1：手机号
+2：uin账号
      */
     public $FraudType;
 
@@ -78,7 +84,9 @@ class OnlineScamInfo extends AbstractModel
      * @param integer $ContentType 内容产生形式：
 0：对话。
 1：广播。
-     * @param integer $FraudType 类型
+     * @param integer $FraudType 账号类型
+1：手机号
+2：uin账号
      * @param string $FraudAccount 账号
      */
     function __construct()

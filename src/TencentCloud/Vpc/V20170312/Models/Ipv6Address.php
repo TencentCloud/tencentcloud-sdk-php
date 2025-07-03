@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAddress(string $Address) 设置`IPv6`地址，形如：`3402:4e00:20:100:0:8cd9:2a67:71f3`
  * @method boolean getPrimary() 获取是否是主`IP`。
  * @method void setPrimary(boolean $Primary) 设置是否是主`IP`。
- * @method string getAddressId() 获取`EIP`实例`ID`，形如：`eip-hxlqja90`。
- * @method void setAddressId(string $AddressId) 设置`EIP`实例`ID`，形如：`eip-hxlqja90`。
+ * @method string getAddressId() 获取`EIP`实例`ID`，形如：`eip-hxlqja90`。作为入参数时，可通过[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取。
+ * @method void setAddressId(string $AddressId) 设置`EIP`实例`ID`，形如：`eip-hxlqja90`。作为入参数时，可通过[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取。
  * @method string getDescription() 获取描述信息。
  * @method void setDescription(string $Description) 设置描述信息。
  * @method boolean getIsWanIpBlocked() 获取公网IP是否被封堵。
@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 <li>`MIGRATING`：迁移中</li>
 <li>`DELETING`：删除中</li>
 <li>`AVAILABLE`：可用的</li>
+ * @method string getPublicIpAddress() 获取如果 IPv6地址是 ULA 类型，绑定的公网IP地址。
+ * @method void setPublicIpAddress(string $PublicIpAddress) 设置如果 IPv6地址是 ULA 类型，绑定的公网IP地址。
+ * @method string getAddressType() 获取`IPv6`地址的类型: `GUA`(全球单播地址), `ULA`(唯一本地地址)
+ * @method void setAddressType(string $AddressType) 设置`IPv6`地址的类型: `GUA`(全球单播地址), `ULA`(唯一本地地址)
  */
 class Ipv6Address extends AbstractModel
 {
@@ -54,7 +58,7 @@ class Ipv6Address extends AbstractModel
     public $Primary;
 
     /**
-     * @var string `EIP`实例`ID`，形如：`eip-hxlqja90`。
+     * @var string `EIP`实例`ID`，形如：`eip-hxlqja90`。作为入参数时，可通过[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取。
      */
     public $AddressId;
 
@@ -78,9 +82,19 @@ class Ipv6Address extends AbstractModel
     public $State;
 
     /**
+     * @var string 如果 IPv6地址是 ULA 类型，绑定的公网IP地址。
+     */
+    public $PublicIpAddress;
+
+    /**
+     * @var string `IPv6`地址的类型: `GUA`(全球单播地址), `ULA`(唯一本地地址)
+     */
+    public $AddressType;
+
+    /**
      * @param string $Address `IPv6`地址，形如：`3402:4e00:20:100:0:8cd9:2a67:71f3`
      * @param boolean $Primary 是否是主`IP`。
-     * @param string $AddressId `EIP`实例`ID`，形如：`eip-hxlqja90`。
+     * @param string $AddressId `EIP`实例`ID`，形如：`eip-hxlqja90`。作为入参数时，可通过[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取。
      * @param string $Description 描述信息。
      * @param boolean $IsWanIpBlocked 公网IP是否被封堵。
      * @param string $State `IPv6`地址状态：
@@ -88,6 +102,8 @@ class Ipv6Address extends AbstractModel
 <li>`MIGRATING`：迁移中</li>
 <li>`DELETING`：删除中</li>
 <li>`AVAILABLE`：可用的</li>
+     * @param string $PublicIpAddress 如果 IPv6地址是 ULA 类型，绑定的公网IP地址。
+     * @param string $AddressType `IPv6`地址的类型: `GUA`(全球单播地址), `ULA`(唯一本地地址)
      */
     function __construct()
     {
@@ -124,6 +140,14 @@ class Ipv6Address extends AbstractModel
 
         if (array_key_exists("State",$param) and $param["State"] !== null) {
             $this->State = $param["State"];
+        }
+
+        if (array_key_exists("PublicIpAddress",$param) and $param["PublicIpAddress"] !== null) {
+            $this->PublicIpAddress = $param["PublicIpAddress"];
+        }
+
+        if (array_key_exists("AddressType",$param) and $param["AddressType"] !== null) {
+            $this->AddressType = $param["AddressType"];
         }
     }
 }

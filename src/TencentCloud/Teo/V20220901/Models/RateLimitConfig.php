@@ -29,17 +29,11 @@ use TencentCloud\Common\AbstractModel;
  * @method array getRateLimitUserRules() 获取速率限制-用户规则列表。如果为null，默认使用历史配置。
  * @method void setRateLimitUserRules(array $RateLimitUserRules) 设置速率限制-用户规则列表。如果为null，默认使用历史配置。
  * @method RateLimitTemplate getRateLimitTemplate() 获取速率限制模板功能。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRateLimitTemplate(RateLimitTemplate $RateLimitTemplate) 设置速率限制模板功能。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method RateLimitIntelligence getRateLimitIntelligence() 获取智能客户端过滤。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRateLimitIntelligence(RateLimitIntelligence $RateLimitIntelligence) 设置智能客户端过滤。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRateLimitCustomizes() 获取速率限制-托管定制规则。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRateLimitCustomizes(array $RateLimitCustomizes) 设置速率限制-托管定制规则。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RateLimitConfig extends AbstractModel
 {
@@ -57,19 +51,16 @@ class RateLimitConfig extends AbstractModel
 
     /**
      * @var RateLimitTemplate 速率限制模板功能。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RateLimitTemplate;
 
     /**
      * @var RateLimitIntelligence 智能客户端过滤。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RateLimitIntelligence;
 
     /**
      * @var array 速率限制-托管定制规则。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RateLimitCustomizes;
 
@@ -79,11 +70,8 @@ class RateLimitConfig extends AbstractModel
 <li>off：关闭。</li>
      * @param array $RateLimitUserRules 速率限制-用户规则列表。如果为null，默认使用历史配置。
      * @param RateLimitTemplate $RateLimitTemplate 速率限制模板功能。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RateLimitIntelligence $RateLimitIntelligence 智能客户端过滤。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RateLimitCustomizes 速率限制-托管定制规则。如果为null，默认使用历史配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

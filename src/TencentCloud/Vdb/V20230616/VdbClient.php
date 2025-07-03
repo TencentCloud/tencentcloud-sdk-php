@@ -23,7 +23,20 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Vdb\V20230616\Models as Models;
 
 /**
+ * @method Models\AssociateSecurityGroupsResponse AssociateSecurityGroups(Models\AssociateSecurityGroupsRequest $req) 本接口 (AssociateSecurityGroups) 用于安全组批量绑定多个指定实例。
+ * @method Models\CreateInstanceResponse CreateInstance(Models\CreateInstanceRequest $req) 本接口（CreateInstance）用于创建向量数据库实例。
+ * @method Models\DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(Models\DescribeDBSecurityGroupsRequest $req) 本接口(DescribeDBSecurityGroups)用于查询实例的安全组详情。
+ * @method Models\DescribeInstanceMaintenanceWindowResponse DescribeInstanceMaintenanceWindow(Models\DescribeInstanceMaintenanceWindowRequest $req) 本接口（DescribeInstanceMaintenanceWindow）用于查看实例维护时间窗。
+ * @method Models\DescribeInstanceNodesResponse DescribeInstanceNodes(Models\DescribeInstanceNodesRequest $req) 查询实例pod列表
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 查询实例列表
+ * @method Models\DestroyInstancesResponse DestroyInstances(Models\DestroyInstancesRequest $req) 本接口（DestroyInstances）用于销毁实例。
+ * @method Models\DisassociateSecurityGroupsResponse DisassociateSecurityGroups(Models\DisassociateSecurityGroupsRequest $req) 本接口(DisassociateSecurityGroups)用于安全组批量解绑实例。
+ * @method Models\IsolateInstanceResponse IsolateInstance(Models\IsolateInstanceRequest $req) 本接口（IsolateInstance）用于隔离实例于回收站，在回收站保护时长内可恢复实例。
+ * @method Models\ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroups(Models\ModifyDBInstanceSecurityGroupsRequest $req) 本接口(ModifyDBInstanceSecurityGroups)用于修改实例绑定的安全组。
+ * @method Models\ModifyInstanceMaintenanceWindowResponse ModifyInstanceMaintenanceWindow(Models\ModifyInstanceMaintenanceWindowRequest $req) 本接口（ModifyInstanceMaintenanceWindow）用于修改实例维护时间窗范围。
+ * @method Models\RecoverInstanceResponse RecoverInstance(Models\RecoverInstanceRequest $req) 本接口（RecoverInstance）用于恢复在回收站隔离的实例。
+ * @method Models\ScaleOutInstanceResponse ScaleOutInstance(Models\ScaleOutInstanceRequest $req) 本接口（ScaleOutInstance）用于水平扩容节点数量。
+ * @method Models\ScaleUpInstanceResponse ScaleUpInstance(Models\ScaleUpInstanceRequest $req) 本接口（ScaleUpInstance）用于升级节点配置规格。
  */
 
 class VdbClient extends AbstractClient

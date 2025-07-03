@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileSystemId(string $FileSystemId) 设置文件系统ID
  * @method integer getExpandedCapacity() 获取新增扩容的系统容量
  * @method void setExpandedCapacity(integer $ExpandedCapacity) 设置新增扩容的系统容量
+ * @method string getModifyType() 获取容量修改类型：add/sub
+ * @method void setModifyType(string $ModifyType) 设置容量修改类型：add/sub
  */
 class ExpandCapacityRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ExpandCapacityRequest extends AbstractModel
     public $ExpandedCapacity;
 
     /**
+     * @var string 容量修改类型：add/sub
+     */
+    public $ModifyType;
+
+    /**
      * @param string $FileSystemId 文件系统ID
      * @param integer $ExpandedCapacity 新增扩容的系统容量
+     * @param string $ModifyType 容量修改类型：add/sub
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ExpandCapacityRequest extends AbstractModel
 
         if (array_key_exists("ExpandedCapacity",$param) and $param["ExpandedCapacity"] !== null) {
             $this->ExpandedCapacity = $param["ExpandedCapacity"];
+        }
+
+        if (array_key_exists("ModifyType",$param) and $param["ModifyType"] !== null) {
+            $this->ModifyType = $param["ModifyType"];
         }
     }
 }

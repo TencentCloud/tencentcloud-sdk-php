@@ -27,7 +27,6 @@ use TencentCloud\Common\AbstractModel;
 <li>normal：适中；</li>
 <li>strict：严格；</li>
 <li>close：关闭，仅精准速率限制生效。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMode(string $Mode) 设置模板等级名称，取值有：
 <li>sup_loose：超级宽松；</li>
 <li>loose：宽松；</li>
@@ -35,21 +34,16 @@ use TencentCloud\Common\AbstractModel;
 <li>normal：适中；</li>
 <li>strict：严格；</li>
 <li>close：关闭，仅精准速率限制生效。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getID() 获取唯一id。
  * @method void setID(integer $ID) 设置唯一id。
  * @method string getAction() 获取模板处置方式，取值有：
 <li>alg：JavaScript挑战；</li>
 <li>monitor：观察。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAction(string $Action) 设置模板处置方式，取值有：
 <li>alg：JavaScript挑战；</li>
 <li>monitor：观察。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPunishTime() 获取惩罚时间，取值范围0-2天，单位秒。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPunishTime(integer $PunishTime) 设置惩罚时间，取值范围0-2天，单位秒。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getThreshold() 获取统计阈值，单位是次，取值范围0-4294967294。
  * @method void setThreshold(integer $Threshold) 设置统计阈值，单位是次，取值范围0-4294967294。
  * @method integer getPeriod() 获取统计周期，取值范围0-120秒。
@@ -65,7 +59,6 @@ class RateLimitTemplateDetail extends AbstractModel
 <li>normal：适中；</li>
 <li>strict：严格；</li>
 <li>close：关闭，仅精准速率限制生效。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Mode;
 
@@ -78,13 +71,11 @@ class RateLimitTemplateDetail extends AbstractModel
      * @var string 模板处置方式，取值有：
 <li>alg：JavaScript挑战；</li>
 <li>monitor：观察。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Action;
 
     /**
      * @var integer 惩罚时间，取值范围0-2天，单位秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PunishTime;
 
@@ -106,14 +97,11 @@ class RateLimitTemplateDetail extends AbstractModel
 <li>normal：适中；</li>
 <li>strict：严格；</li>
 <li>close：关闭，仅精准速率限制生效。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ID 唯一id。
      * @param string $Action 模板处置方式，取值有：
 <li>alg：JavaScript挑战；</li>
 <li>monitor：观察。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PunishTime 惩罚时间，取值范围0-2天，单位秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Threshold 统计阈值，单位是次，取值范围0-4294967294。
      * @param integer $Period 统计周期，取值范围0-120秒。
      */

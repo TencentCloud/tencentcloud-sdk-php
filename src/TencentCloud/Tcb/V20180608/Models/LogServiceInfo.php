@@ -31,9 +31,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRegion() 获取cls日志所属地域
  * @method void setRegion(string $Region) 设置cls日志所属地域
  * @method integer getPeriod() 获取topic保存时长 默认7天
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPeriod(integer $Period) 设置topic保存时长 默认7天
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class LogServiceInfo extends AbstractModel
 {
@@ -64,7 +62,6 @@ class LogServiceInfo extends AbstractModel
 
     /**
      * @var integer topic保存时长 默认7天
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Period;
 
@@ -75,7 +72,6 @@ class LogServiceInfo extends AbstractModel
      * @param string $TopicId topic-id
      * @param string $Region cls日志所属地域
      * @param integer $Period topic保存时长 默认7天
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

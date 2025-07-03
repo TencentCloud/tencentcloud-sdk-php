@@ -21,105 +21,73 @@ use TencentCloud\Common\AbstractModel;
  * 时间轴事件
  *
  * @method string getType() 获取事件类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置事件类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSrc() 获取原文本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSrc(string $Src) 设置原文本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubType() 获取事件子类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubType(string $SubType) 设置事件子类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTime() 获取事件发生时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTime(string $Time) 设置事件发生时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取事件值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置事件值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method Rectangle getRectangle() 获取位置坐标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRectangle(Rectangle $Rectangle) 设置位置坐标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPlace() 获取事件发生地点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPlace(string $Place) 设置事件发生地点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndTime() 获取结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TimelineEvent extends AbstractModel
 {
     /**
      * @var string 事件类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 原文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Src;
 
     /**
      * @var string 事件子类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubType;
 
     /**
      * @var string 事件发生时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Time;
 
     /**
      * @var string 事件值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @var Rectangle 位置坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Rectangle;
 
     /**
      * @var string 事件发生地点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Place;
 
     /**
      * @var string 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
      * @param string $Type 事件类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Src 原文本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubType 事件子类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Time 事件发生时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 事件值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Rectangle $Rectangle 位置坐标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Place 事件发生地点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndTime 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

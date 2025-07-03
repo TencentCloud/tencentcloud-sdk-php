@@ -20,28 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRabbitMQQueues返回参数结构体
  *
- * @method array getQueueInfoList() 获取列表信息
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setQueueInfoList(array $QueueInfoList) 设置列表信息
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotalCount() 获取数量
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotalCount(integer $TotalCount) 设置数量
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getQueueInfoList() 获取队列列表信息
+ * @method void setQueueInfoList(array $QueueInfoList) 设置队列列表信息
+ * @method integer getTotalCount() 获取队列数量
+ * @method void setTotalCount(integer $TotalCount) 设置队列数量
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeRabbitMQQueuesResponse extends AbstractModel
 {
     /**
-     * @var array 列表信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 队列列表信息
      */
     public $QueueInfoList;
 
     /**
-     * @var integer 数量
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 队列数量
      */
     public $TotalCount;
 
@@ -51,10 +45,8 @@ class DescribeRabbitMQQueuesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $QueueInfoList 列表信息
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TotalCount 数量
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $QueueInfoList 队列列表信息
+     * @param integer $TotalCount 队列数量
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

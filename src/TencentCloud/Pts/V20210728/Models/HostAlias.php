@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHostNames(array $HostNames) 设置需绑定的域名列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIP() 获取需绑定的 IP 地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIP(string $IP) 设置需绑定的 IP 地址
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class HostAlias extends AbstractModel
 {
@@ -39,7 +37,6 @@ class HostAlias extends AbstractModel
 
     /**
      * @var string 需绑定的 IP 地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IP;
 
@@ -47,7 +44,6 @@ class HostAlias extends AbstractModel
      * @param array $HostNames 需绑定的域名列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IP 需绑定的 IP 地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

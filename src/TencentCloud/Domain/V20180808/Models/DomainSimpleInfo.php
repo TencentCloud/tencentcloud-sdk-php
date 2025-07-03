@@ -37,9 +37,7 @@ Approved：实名审核通过
 Reject：实名审核失败
 NoAudit: 无需实名认证
  * @method string getRealNameAuditUnpassReason() 获取域名实名认证不通过原因。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealNameAuditUnpassReason(string $RealNameAuditUnpassReason) 设置域名实名认证不通过原因。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDomainNameAuditStatus() 获取域名命名审核状态。
 NotAudit：命名审核未上传
 Pending：命名审核待上传
@@ -53,9 +51,7 @@ Auditing：域名命名审核中
 Approved：域名命名审核通过
 Rejected：域名命名审核拒绝
  * @method string getDomainNameAuditUnpassReason() 获取域名命名审核不通过原因。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomainNameAuditUnpassReason(string $DomainNameAuditUnpassReason) 设置域名命名审核不通过原因。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreationDate() 获取注册时间。
  * @method void setCreationDate(string $CreationDate) 设置注册时间。
  * @method string getExpirationDate() 获取到期时间
@@ -75,7 +71,7 @@ clientTransferProhibited：注册商禁止转移
 clientUpdateProhibited：注册商禁止更新
 clientDeleteProhibited：注册商禁止删除
 serverRenewProhibited: 注册局禁止续费
-clientRenewProhobited: 注册商禁止续费
+clientRenewProhibited: 注册商禁止续费
  * @method void setDomainStatus(array $DomainStatus) 设置域名状态。
 ok：正常
 serverHold：注册局暂停解析 
@@ -91,7 +87,7 @@ clientTransferProhibited：注册商禁止转移
 clientUpdateProhibited：注册商禁止更新
 clientDeleteProhibited：注册商禁止删除
 serverRenewProhibited: 注册局禁止续费
-clientRenewProhobited: 注册商禁止续费
+clientRenewProhibited: 注册商禁止续费
  * @method string getBuyStatus() 获取域名购买状态。
 ok：正常
 RegisterPending：待注册
@@ -171,7 +167,6 @@ NoAudit: 无需实名认证
 
     /**
      * @var string 域名实名认证不通过原因。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RealNameAuditUnpassReason;
 
@@ -187,7 +182,6 @@ Rejected：域名命名审核拒绝
 
     /**
      * @var string 域名命名审核不通过原因。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DomainNameAuditUnpassReason;
 
@@ -217,7 +211,7 @@ clientTransferProhibited：注册商禁止转移
 clientUpdateProhibited：注册商禁止更新
 clientDeleteProhibited：注册商禁止删除
 serverRenewProhibited: 注册局禁止续费
-clientRenewProhobited: 注册商禁止续费
+clientRenewProhibited: 注册商禁止续费
      */
     public $DomainStatus;
 
@@ -298,7 +292,6 @@ Approved：实名审核通过
 Reject：实名审核失败
 NoAudit: 无需实名认证
      * @param string $RealNameAuditUnpassReason 域名实名认证不通过原因。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DomainNameAuditStatus 域名命名审核状态。
 NotAudit：命名审核未上传
 Pending：命名审核待上传
@@ -306,7 +299,6 @@ Auditing：域名命名审核中
 Approved：域名命名审核通过
 Rejected：域名命名审核拒绝
      * @param string $DomainNameAuditUnpassReason 域名命名审核不通过原因。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreationDate 注册时间。
      * @param string $ExpirationDate 到期时间
      * @param array $DomainStatus 域名状态。
@@ -324,7 +316,7 @@ clientTransferProhibited：注册商禁止转移
 clientUpdateProhibited：注册商禁止更新
 clientDeleteProhibited：注册商禁止删除
 serverRenewProhibited: 注册局禁止续费
-clientRenewProhobited: 注册商禁止续费
+clientRenewProhibited: 注册商禁止续费
      * @param string $BuyStatus 域名购买状态。
 ok：正常
 RegisterPending：待注册

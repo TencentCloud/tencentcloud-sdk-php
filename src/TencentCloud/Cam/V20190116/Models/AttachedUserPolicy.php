@@ -33,17 +33,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCreateMode() 获取创建模式(1表示按产品或项目权限创建的策略，其他表示策略语法创建的策略)
  * @method void setCreateMode(string $CreateMode) 设置创建模式(1表示按产品或项目权限创建的策略，其他表示策略语法创建的策略)
  * @method array getGroups() 获取随组关联信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroups(array $Groups) 设置随组关联信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDeactived() 获取是否已下线(0:否 1:是)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeactived(integer $Deactived) 设置是否已下线(0:否 1:是)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDeactivedDetail() 获取已下线的产品列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeactivedDetail(array $DeactivedDetail) 设置已下线的产品列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AttachedUserPolicy extends AbstractModel
 {
@@ -79,19 +73,16 @@ class AttachedUserPolicy extends AbstractModel
 
     /**
      * @var array 随组关联信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Groups;
 
     /**
      * @var integer 是否已下线(0:否 1:是)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Deactived;
 
     /**
      * @var array 已下线的产品列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeactivedDetail;
 
@@ -103,11 +94,8 @@ class AttachedUserPolicy extends AbstractModel
      * @param string $StrategyType 策略类型(1表示自定义策略，2表示预设策略)
      * @param string $CreateMode 创建模式(1表示按产品或项目权限创建的策略，其他表示策略语法创建的策略)
      * @param array $Groups 随组关联信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Deactived 是否已下线(0:否 1:是)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DeactivedDetail 已下线的产品列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

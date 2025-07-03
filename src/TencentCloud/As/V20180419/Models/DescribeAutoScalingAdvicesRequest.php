@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAutoScalingAdvices请求参数结构体
  *
- * @method array getAutoScalingGroupIds() 获取待查询的伸缩组列表，上限100。
- * @method void setAutoScalingGroupIds(array $AutoScalingGroupIds) 设置待查询的伸缩组列表，上限100。
+ * @method array getAutoScalingGroupIds() 获取待查询的伸缩组列表，上限100。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。
+ * @method void setAutoScalingGroupIds(array $AutoScalingGroupIds) 设置待查询的伸缩组列表，上限100。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。
  */
 class DescribeAutoScalingAdvicesRequest extends AbstractModel
 {
     /**
-     * @var array 待查询的伸缩组列表，上限100。
+     * @var array 待查询的伸缩组列表，上限100。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。
      */
     public $AutoScalingGroupIds;
 
     /**
-     * @param array $AutoScalingGroupIds 待查询的伸缩组列表，上限100。
+     * @param array $AutoScalingGroupIds 待查询的伸缩组列表，上限100。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。
      */
     function __construct()
     {

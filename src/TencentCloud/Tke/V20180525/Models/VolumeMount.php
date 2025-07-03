@@ -20,13 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 数据卷挂载路径信息
  *
+ * @method string getMountPath() 获取挂载路径
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMountPath(string $MountPath) 设置挂载路径
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取volume名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置volume名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMountPath() 获取挂载路径
+ * @method string getMountPropagation() 获取传播挂载方式
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMountPath(string $MountPath) 设置挂载路径
+ * @method void setMountPropagation(string $MountPropagation) 设置传播挂载方式
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getReadOnly() 获取是否只读
 注意：此字段可能返回 null，表示取不到有效值。
@@ -36,10 +40,6 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubPath(string $SubPath) 设置子路径
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMountPropagation() 获取传播挂载方式
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMountPropagation(string $MountPropagation) 设置传播挂载方式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubPathExpr() 获取子路径表达式
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubPathExpr(string $SubPathExpr) 设置子路径表达式
@@ -48,16 +48,22 @@ use TencentCloud\Common\AbstractModel;
 class VolumeMount extends AbstractModel
 {
     /**
+     * @var string 挂载路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MountPath;
+
+    /**
      * @var string volume名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
-     * @var string 挂载路径
+     * @var string 传播挂载方式
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $MountPath;
+    public $MountPropagation;
 
     /**
      * @var boolean 是否只读
@@ -72,27 +78,21 @@ class VolumeMount extends AbstractModel
     public $SubPath;
 
     /**
-     * @var string 传播挂载方式
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $MountPropagation;
-
-    /**
      * @var string 子路径表达式
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubPathExpr;
 
     /**
+     * @param string $MountPath 挂载路径
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name volume名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MountPath 挂载路径
+     * @param string $MountPropagation 传播挂载方式
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $ReadOnly 是否只读
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubPath 子路径
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MountPropagation 传播挂载方式
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubPathExpr 子路径表达式
 注意：此字段可能返回 null，表示取不到有效值。
@@ -110,12 +110,16 @@ class VolumeMount extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("MountPath",$param) and $param["MountPath"] !== null) {
+            $this->MountPath = $param["MountPath"];
+        }
+
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
         }
 
-        if (array_key_exists("MountPath",$param) and $param["MountPath"] !== null) {
-            $this->MountPath = $param["MountPath"];
+        if (array_key_exists("MountPropagation",$param) and $param["MountPropagation"] !== null) {
+            $this->MountPropagation = $param["MountPropagation"];
         }
 
         if (array_key_exists("ReadOnly",$param) and $param["ReadOnly"] !== null) {
@@ -124,10 +128,6 @@ class VolumeMount extends AbstractModel
 
         if (array_key_exists("SubPath",$param) and $param["SubPath"] !== null) {
             $this->SubPath = $param["SubPath"];
-        }
-
-        if (array_key_exists("MountPropagation",$param) and $param["MountPropagation"] !== null) {
-            $this->MountPropagation = $param["MountPropagation"];
         }
 
         if (array_key_exists("SubPathExpr",$param) and $param["SubPathExpr"] !== null) {

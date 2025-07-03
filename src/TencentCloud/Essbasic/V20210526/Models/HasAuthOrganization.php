@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 授权企业列表（目前仅用于“企业自动签 -> 合作企业授权”）
  *
  * @method string getOrganizationOpenId() 获取授权企业openid，
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrganizationOpenId(string $OrganizationOpenId) 设置授权企业openid，
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOrganizationName() 获取授权企业名称	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrganizationName(string $OrganizationName) 设置授权企业名称	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAuthorizedOrganizationOpenId() 获取被授权企业openid，
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuthorizedOrganizationOpenId(string $AuthorizedOrganizationOpenId) 设置被授权企业openid，
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAuthorizedOrganizationName() 获取被授权企业名称	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuthorizedOrganizationName(string $AuthorizedOrganizationName) 设置被授权企业名称	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAuthorizeTime() 获取授权时间，格式为时间戳，单位s	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuthorizeTime(integer $AuthorizeTime) 设置授权时间，格式为时间戳，单位s	
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class HasAuthOrganization extends AbstractModel
 {
     /**
      * @var string 授权企业openid，
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OrganizationOpenId;
 
     /**
      * @var string 授权企业名称	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OrganizationName;
 
     /**
      * @var string 被授权企业openid，
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AuthorizedOrganizationOpenId;
 
     /**
      * @var string 被授权企业名称	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AuthorizedOrganizationName;
 
     /**
      * @var integer 授权时间，格式为时间戳，单位s	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AuthorizeTime;
 
     /**
      * @param string $OrganizationOpenId 授权企业openid，
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OrganizationName 授权企业名称	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AuthorizedOrganizationOpenId 被授权企业openid，
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AuthorizedOrganizationName 被授权企业名称	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AuthorizeTime 授权时间，格式为时间戳，单位s	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

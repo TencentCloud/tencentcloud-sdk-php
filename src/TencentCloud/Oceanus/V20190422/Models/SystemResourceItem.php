@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) 设置资源所属地域
  * @method integer getLatestResourceConfigVersion() 获取资源的最新版本
  * @method void setLatestResourceConfigVersion(integer $LatestResourceConfigVersion) 设置资源的最新版本
+ * @method integer getSystemProvide() 获取1 是系统提供资源 2 用户提供CONNECTOR
+ * @method void setSystemProvide(integer $SystemProvide) 设置1 是系统提供资源 2 用户提供CONNECTOR
  */
 class SystemResourceItem extends AbstractModel
 {
@@ -66,12 +68,18 @@ class SystemResourceItem extends AbstractModel
     public $LatestResourceConfigVersion;
 
     /**
+     * @var integer 1 是系统提供资源 2 用户提供CONNECTOR
+     */
+    public $SystemProvide;
+
+    /**
      * @param string $ResourceId 资源ID
      * @param string $Name 资源名称
      * @param integer $ResourceType 资源类型。1 表示 JAR 包，目前只支持该值。
      * @param string $Remark 资源备注
      * @param string $Region 资源所属地域
      * @param integer $LatestResourceConfigVersion 资源的最新版本
+     * @param integer $SystemProvide 1 是系统提供资源 2 用户提供CONNECTOR
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class SystemResourceItem extends AbstractModel
 
         if (array_key_exists("LatestResourceConfigVersion",$param) and $param["LatestResourceConfigVersion"] !== null) {
             $this->LatestResourceConfigVersion = $param["LatestResourceConfigVersion"];
+        }
+
+        if (array_key_exists("SystemProvide",$param) and $param["SystemProvide"] !== null) {
+            $this->SystemProvide = $param["SystemProvide"];
         }
     }
 }

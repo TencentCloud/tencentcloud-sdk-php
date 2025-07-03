@@ -21,21 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * DescribeScanTaskList返回参数结构体
  *
  * @method integer getTotalCount() 获取总条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置总条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getData() 获取任务日志列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(array $Data) 设置任务日志列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getUINList() 获取主账户ID列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUINList(array $UINList) 设置主账户ID列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTaskModeList() 获取体检模式过滤列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskModeList(array $TaskModeList) 设置体检模式过滤列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -43,25 +35,21 @@ class DescribeScanTaskListResponse extends AbstractModel
 {
     /**
      * @var integer 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
      * @var array 任务日志列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
 
     /**
      * @var array 主账户ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UINList;
 
     /**
      * @var array 体检模式过滤列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskModeList;
 
@@ -72,13 +60,9 @@ class DescribeScanTaskListResponse extends AbstractModel
 
     /**
      * @param integer $TotalCount 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Data 任务日志列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $UINList 主账户ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TaskModeList 体检模式过滤列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

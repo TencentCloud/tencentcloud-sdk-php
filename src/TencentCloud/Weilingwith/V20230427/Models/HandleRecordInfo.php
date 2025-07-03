@@ -22,128 +22,90 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getId() 获取告警处理记录id
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(integer $Id) 设置告警处理记录id
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOperationType() 获取操作类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperationType(string $OperationType) 设置操作类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTime() 获取处理时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTime(string $Time) 设置处理时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getFileSet() 获取文件列表
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileSet(array $FileSet) 设置文件列表
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAppId() 获取应用appid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppId(integer $AppId) 设置应用appid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExtendOne() 获取扩展字段1，存非孪生中台用户id
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtendOne(string $ExtendOne) 设置扩展字段1，存非孪生中台用户id
-
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class HandleRecordInfo extends AbstractModel
 {
     /**
      * @var integer 告警处理记录id
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var string 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var string 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 操作类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OperationType;
 
     /**
      * @var string 处理时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Time;
 
     /**
      * @var string 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var array 文件列表
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileSet;
 
     /**
      * @var integer 应用appid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppId;
 
     /**
      * @var string 扩展字段1，存非孪生中台用户id
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExtendOne;
 
     /**
      * @param integer $Id 告警处理记录id
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OperationType 操作类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Time 处理时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FileSet 文件列表
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AppId 应用appid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExtendOne 扩展字段1，存非孪生中台用户id
-
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

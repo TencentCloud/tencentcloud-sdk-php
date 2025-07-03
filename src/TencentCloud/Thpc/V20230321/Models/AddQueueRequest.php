@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取集群ID。
  * @method void setClusterId(string $ClusterId) 设置集群ID。
- * @method string getQueueName() 获取队列名称。<br><li>最多支持32个字符。
- * @method void setQueueName(string $QueueName) 设置队列名称。<br><li>最多支持32个字符。
+ * @method string getQueueName() 获取队列名称。<br><li>最多支持32个字符。</li>
+ * @method void setQueueName(string $QueueName) 设置队列名称。<br><li>最多支持32个字符。</li>
  */
 class AddQueueRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class AddQueueRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string 队列名称。<br><li>最多支持32个字符。
+     * @var string 队列名称。<br><li>最多支持32个字符。</li>
      */
     public $QueueName;
 
     /**
      * @param string $ClusterId 集群ID。
-     * @param string $QueueName 队列名称。<br><li>最多支持32个字符。
+     * @param string $QueueName 队列名称。<br><li>最多支持32个字符。</li>
      */
     function __construct()
     {

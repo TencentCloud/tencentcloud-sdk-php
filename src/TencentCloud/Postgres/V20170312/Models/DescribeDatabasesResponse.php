@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setItems(array $Items) 设置数据库信息
  * @method integer getTotalCount() 获取数据库总数
  * @method void setTotalCount(integer $TotalCount) 设置数据库总数
+ * @method array getDatabases() 获取数据库详情列表
+ * @method void setDatabases(array $Databases) 设置数据库详情列表
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +42,11 @@ class DescribeDatabasesResponse extends AbstractModel
     public $TotalCount;
 
     /**
+     * @var array 数据库详情列表
+     */
+    public $Databases;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +54,7 @@ class DescribeDatabasesResponse extends AbstractModel
     /**
      * @param array $Items 数据库信息
      * @param integer $TotalCount 数据库总数
+     * @param array $Databases 数据库详情列表
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -68,6 +76,15 @@ class DescribeDatabasesResponse extends AbstractModel
 
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("Databases",$param) and $param["Databases"] !== null) {
+            $this->Databases = [];
+            foreach ($param["Databases"] as $key => $value){
+                $obj = new Database();
+                $obj->deserialize($value);
+                array_push($this->Databases, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

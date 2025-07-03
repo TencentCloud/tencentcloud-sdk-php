@@ -22,12 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomainName() 获取推流域名。
  * @method void setDomainName(string $DomainName) 设置推流域名。
- * @method string getAppName() 获取推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
- * @method void setAppName(string $AppName) 设置推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
- * @method string getStreamName() 获取流名称。
-注：如果本参数设置为非空字符串，规则将只对此推流起作用。
- * @method void setStreamName(string $StreamName) 设置流名称。
-注：如果本参数设置为非空字符串，规则将只对此推流起作用。
+ * @method string getAppName() 获取推流路径，与推流和播放地址中的AppName保持一致，默认为 live。注：如果需要对所有AppName生效，可填写“*”。
+ * @method void setAppName(string $AppName) 设置推流路径，与推流和播放地址中的AppName保持一致，默认为 live。注：如果需要对所有AppName生效，可填写“*”。
+ * @method string getStreamName() 获取流名称。注：如果本参数设置为非空字符串，规则将只对此推流起作用。如果需要对所有StreamName生效，可填写“*”。
+ * @method void setStreamName(string $StreamName) 设置流名称。注：如果本参数设置为非空字符串，规则将只对此推流起作用。如果需要对所有StreamName生效，可填写“*”。
  * @method integer getTemplateId() 获取模板 ID。
  * @method void setTemplateId(integer $TemplateId) 设置模板 ID。
  */
@@ -39,13 +37,12 @@ class CreateLiveTimeShiftRuleRequest extends AbstractModel
     public $DomainName;
 
     /**
-     * @var string 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
+     * @var string 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。注：如果需要对所有AppName生效，可填写“*”。
      */
     public $AppName;
 
     /**
-     * @var string 流名称。
-注：如果本参数设置为非空字符串，规则将只对此推流起作用。
+     * @var string 流名称。注：如果本参数设置为非空字符串，规则将只对此推流起作用。如果需要对所有StreamName生效，可填写“*”。
      */
     public $StreamName;
 
@@ -56,9 +53,8 @@ class CreateLiveTimeShiftRuleRequest extends AbstractModel
 
     /**
      * @param string $DomainName 推流域名。
-     * @param string $AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。
-     * @param string $StreamName 流名称。
-注：如果本参数设置为非空字符串，规则将只对此推流起作用。
+     * @param string $AppName 推流路径，与推流和播放地址中的AppName保持一致，默认为 live。注：如果需要对所有AppName生效，可填写“*”。
+     * @param string $StreamName 流名称。注：如果本参数设置为非空字符串，规则将只对此推流起作用。如果需要对所有StreamName生效，可填写“*”。
      * @param integer $TemplateId 模板 ID。
      */
     function __construct()

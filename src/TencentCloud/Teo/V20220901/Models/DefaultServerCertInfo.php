@@ -21,69 +21,47 @@ use TencentCloud\Common\AbstractModel;
  * https 服务端证书配置
  *
  * @method string getCertId() 获取服务器证书 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertId(string $CertId) 设置服务器证书 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAlias() 获取证书备注名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlias(string $Alias) 设置证书备注名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取证书类型，取值有：
 <li>default: 默认证书;</li>
 <li>upload:用户上传;</li>
 <li>managed:腾讯云托管。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置证书类型，取值有：
 <li>default: 默认证书;</li>
 <li>upload:用户上传;</li>
 <li>managed:腾讯云托管。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExpireTime() 获取证书过期时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpireTime(string $ExpireTime) 设置证书过期时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEffectiveTime() 获取证书生效时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEffectiveTime(string $EffectiveTime) 设置证书生效时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCommonName() 获取证书公用名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCommonName(string $CommonName) 设置证书公用名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSubjectAltName() 获取证书SAN域名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubjectAltName(array $SubjectAltName) 设置证书SAN域名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取部署状态，取值有：
 <li>processing: 部署中；</li>
 <li>deployed: 已部署；</li>
 <li>failed: 部署失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置部署状态，取值有：
 <li>processing: 部署中；</li>
 <li>deployed: 已部署；</li>
 <li>failed: 部署失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMessage() 获取Status为失败时,此字段返回失败原因。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置Status为失败时,此字段返回失败原因。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSignAlgo() 获取证书算法。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSignAlgo(string $SignAlgo) 设置证书算法。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DefaultServerCertInfo extends AbstractModel
 {
     /**
      * @var string 服务器证书 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CertId;
 
     /**
      * @var string 证书备注名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Alias;
 
@@ -92,31 +70,26 @@ class DefaultServerCertInfo extends AbstractModel
 <li>default: 默认证书;</li>
 <li>upload:用户上传;</li>
 <li>managed:腾讯云托管。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 证书过期时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpireTime;
 
     /**
      * @var string 证书生效时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EffectiveTime;
 
     /**
      * @var string 证书公用名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CommonName;
 
     /**
      * @var array 证书SAN域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubjectAltName;
 
@@ -125,49 +98,36 @@ class DefaultServerCertInfo extends AbstractModel
 <li>processing: 部署中；</li>
 <li>deployed: 已部署；</li>
 <li>failed: 部署失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string Status为失败时,此字段返回失败原因。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
     /**
      * @var string 证书算法。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SignAlgo;
 
     /**
      * @param string $CertId 服务器证书 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Alias 证书备注名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 证书类型，取值有：
 <li>default: 默认证书;</li>
 <li>upload:用户上传;</li>
 <li>managed:腾讯云托管。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExpireTime 证书过期时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EffectiveTime 证书生效时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CommonName 证书公用名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SubjectAltName 证书SAN域名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 部署状态，取值有：
 <li>processing: 部署中；</li>
 <li>deployed: 已部署；</li>
 <li>failed: 部署失败。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message Status为失败时,此字段返回失败原因。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SignAlgo 证书算法。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

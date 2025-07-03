@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 定时伸缩配置参数
  *
  * @method string getPeriod() 获取定时伸缩周期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPeriod(string $Period) 设置定时伸缩周期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStartAt() 获取定时伸缩开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartAt(string $StartAt) 设置定时伸缩开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTargetReplicas() 获取定时伸缩目标节点数，不超过指标伸缩中定义的最大节点数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargetReplicas(integer $TargetReplicas) 设置定时伸缩目标节点数，不超过指标伸缩中定义的最大节点数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCrontab() 获取定时伸缩cron表达式，无需输入
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCrontab(string $Crontab) 设置定时伸缩cron表达式，无需输入
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudNativeAPIGatewayStrategyCronScalerConfigParam extends AbstractModel
 {
     /**
      * @var string 定时伸缩周期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Period;
 
     /**
      * @var string 定时伸缩开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartAt;
 
     /**
      * @var integer 定时伸缩目标节点数，不超过指标伸缩中定义的最大节点数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TargetReplicas;
 
     /**
      * @var string 定时伸缩cron表达式，无需输入
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Crontab;
 
     /**
      * @param string $Period 定时伸缩周期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StartAt 定时伸缩开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TargetReplicas 定时伸缩目标节点数，不超过指标伸缩中定义的最大节点数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Crontab 定时伸缩cron表达式，无需输入
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

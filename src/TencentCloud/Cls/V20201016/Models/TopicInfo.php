@@ -31,9 +31,7 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getIndex() 获取主题是否开启索引（主题类型需为日志主题）
  * @method void setIndex(boolean $Index) 设置主题是否开启索引（主题类型需为日志主题）
  * @method string getAssumerName() 获取云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssumerName(string $AssumerName) 设置云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method boolean getStatus() 获取主题是否开启采集，true：开启采集；false：关闭采集。
@@ -43,59 +41,49 @@ use TencentCloud\Common\AbstractModel;
 创建日志主题时默认开启，可通过SDK调用ModifyTopic修改此字段。
 控制台目前不支持修改此参数。
  * @method array getTags() 获取主题绑定的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置主题绑定的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getAutoSplit() 获取该主题是否开启自动分裂
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoSplit(boolean $AutoSplit) 设置该主题是否开启自动分裂
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxSplitPartitions() 获取若开启自动分裂的话，该主题能够允许的最大分区数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxSplitPartitions(integer $MaxSplitPartitions) 设置若开启自动分裂的话，该主题能够允许的最大分区数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStorageType() 获取主题的存储类型
-注意：此字段可能返回 null，表示取不到有效值。
+
+- hot: 标准存储
+- cold: 低频存储
  * @method void setStorageType(string $StorageType) 设置主题的存储类型
-注意：此字段可能返回 null，表示取不到有效值。
+
+- hot: 标准存储
+- cold: 低频存储
  * @method integer getPeriod() 获取生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPeriod(integer $Period) 设置生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubAssumerName() 获取云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubAssumerName(string $SubAssumerName) 设置云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescribes() 获取主题描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescribes(string $Describes) 设置主题描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHotPeriod() 获取开启日志沉降，标准存储的生命周期， hotPeriod < Period。
 标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）
 HotPeriod=0为没有开启日志沉降。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHotPeriod(integer $HotPeriod) 设置开启日志沉降，标准存储的生命周期， hotPeriod < Period。
 标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）
 HotPeriod=0为没有开启日志沉降。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBizType() 获取主题类型。
 - 0: 日志主题 
 - 1: 指标主题
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBizType(integer $BizType) 设置主题类型。
 - 0: 日志主题 
 - 1: 指标主题
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsWebTracking() 获取免鉴权开关。 false：关闭； true：开启。
 开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsWebTracking(boolean $IsWebTracking) 设置免鉴权开关。 false：关闭； true：开启。
 开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method TopicExtendInfo getExtends() 获取日志主题扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtends(TopicExtendInfo $Extends) 设置日志主题扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTopicAsyncTaskID() 获取异步迁移任务ID
+ * @method void setTopicAsyncTaskID(string $TopicAsyncTaskID) 设置异步迁移任务ID
+ * @method integer getMigrationStatus() 获取异步迁移状态
+ * @method void setMigrationStatus(integer $MigrationStatus) 设置异步迁移状态
+ * @method string getEffectiveDate() 获取异步迁移完成后，预计生效日期
+ * @method void setEffectiveDate(string $EffectiveDate) 设置异步迁移完成后，预计生效日期
  */
 class TopicInfo extends AbstractModel
 {
@@ -126,7 +114,6 @@ class TopicInfo extends AbstractModel
 
     /**
      * @var string 云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AssumerName;
 
@@ -144,43 +131,39 @@ class TopicInfo extends AbstractModel
 
     /**
      * @var array 主题绑定的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
      * @var boolean 该主题是否开启自动分裂
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoSplit;
 
     /**
      * @var integer 若开启自动分裂的话，该主题能够允许的最大分区数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxSplitPartitions;
 
     /**
      * @var string 主题的存储类型
-注意：此字段可能返回 null，表示取不到有效值。
+
+- hot: 标准存储
+- cold: 低频存储
      */
     public $StorageType;
 
     /**
      * @var integer 生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Period;
 
     /**
      * @var string 云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubAssumerName;
 
     /**
      * @var string 主题描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Describes;
 
@@ -188,7 +171,6 @@ class TopicInfo extends AbstractModel
      * @var integer 开启日志沉降，标准存储的生命周期， hotPeriod < Period。
 标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）
 HotPeriod=0为没有开启日志沉降。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HotPeriod;
 
@@ -196,22 +178,34 @@ HotPeriod=0为没有开启日志沉降。
      * @var integer 主题类型。
 - 0: 日志主题 
 - 1: 指标主题
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BizType;
 
     /**
      * @var boolean 免鉴权开关。 false：关闭； true：开启。
 开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsWebTracking;
 
     /**
      * @var TopicExtendInfo 日志主题扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Extends;
+
+    /**
+     * @var string 异步迁移任务ID
+     */
+    public $TopicAsyncTaskID;
+
+    /**
+     * @var integer 异步迁移状态
+     */
+    public $MigrationStatus;
+
+    /**
+     * @var string 异步迁移完成后，预计生效日期
+     */
+    public $EffectiveDate;
 
     /**
      * @param string $LogsetId 日志集ID
@@ -220,38 +214,32 @@ HotPeriod=0为没有开启日志沉降。
      * @param integer $PartitionCount 主题分区个数
      * @param boolean $Index 主题是否开启索引（主题类型需为日志主题）
      * @param string $AssumerName 云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
      * @param boolean $Status 主题是否开启采集，true：开启采集；false：关闭采集。
 创建日志主题时默认开启，可通过SDK调用ModifyTopic修改此字段。
 控制台目前不支持修改此参数。
      * @param array $Tags 主题绑定的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $AutoSplit 该主题是否开启自动分裂
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxSplitPartitions 若开启自动分裂的话，该主题能够允许的最大分区数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StorageType 主题的存储类型
-注意：此字段可能返回 null，表示取不到有效值。
+
+- hot: 标准存储
+- cold: 低频存储
      * @param integer $Period 生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubAssumerName 云产品二级标识，日志主题由其它云产品创建时，该字段会显示云产品名称及其日志类型的二级分类，例如TKE-Audit、TKE-Event。部分云产品仅有云产品标识(AssumerName)，无该字段。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Describes 主题描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HotPeriod 开启日志沉降，标准存储的生命周期， hotPeriod < Period。
 标准存储为 hotPeriod, 低频存储则为 Period-hotPeriod。（主题类型需为日志主题）
 HotPeriod=0为没有开启日志沉降。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BizType 主题类型。
 - 0: 日志主题 
 - 1: 指标主题
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsWebTracking 免鉴权开关。 false：关闭； true：开启。
 开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TopicExtendInfo $Extends 日志主题扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TopicAsyncTaskID 异步迁移任务ID
+     * @param integer $MigrationStatus 异步迁移状态
+     * @param string $EffectiveDate 异步迁移完成后，预计生效日期
      */
     function __construct()
     {
@@ -346,6 +334,18 @@ HotPeriod=0为没有开启日志沉降。
         if (array_key_exists("Extends",$param) and $param["Extends"] !== null) {
             $this->Extends = new TopicExtendInfo();
             $this->Extends->deserialize($param["Extends"]);
+        }
+
+        if (array_key_exists("TopicAsyncTaskID",$param) and $param["TopicAsyncTaskID"] !== null) {
+            $this->TopicAsyncTaskID = $param["TopicAsyncTaskID"];
+        }
+
+        if (array_key_exists("MigrationStatus",$param) and $param["MigrationStatus"] !== null) {
+            $this->MigrationStatus = $param["MigrationStatus"];
+        }
+
+        if (array_key_exists("EffectiveDate",$param) and $param["EffectiveDate"] !== null) {
+            $this->EffectiveDate = $param["EffectiveDate"];
         }
     }
 }

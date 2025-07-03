@@ -38,11 +38,11 @@ use TencentCloud\Common\AbstractModel;
 第三方平台子客企业必须已经经过实名认证
  * @method string getOperatorType() 获取操作类型，对应的操作
 <ul><li> **CREATE** :新增员工</li>
-<li> **UPDATE** :修改员工</li>
+<li> **UPDATE** :修改员工（仅支持修改未实名员工的信息，如果已经实名并加入企业的员工基础信息修改需要到小程序中进行）</li>
 <li> **RESIGN** :离职员工</li></ul>
  * @method void setOperatorType(string $OperatorType) 设置操作类型，对应的操作
 <ul><li> **CREATE** :新增员工</li>
-<li> **UPDATE** :修改员工</li>
+<li> **UPDATE** :修改员工（仅支持修改未实名员工的信息，如果已经实名并加入企业的员工基础信息修改需要到小程序中进行）</li>
 <li> **RESIGN** :离职员工</li></ul>
  * @method array getProxyOrganizationOperators() 获取员工信息列表，最多支持200个
  * @method void setProxyOrganizationOperators(array $ProxyOrganizationOperators) 设置员工信息列表，最多支持200个
@@ -66,7 +66,7 @@ class SyncProxyOrganizationOperatorsRequest extends AbstractModel
     /**
      * @var string 操作类型，对应的操作
 <ul><li> **CREATE** :新增员工</li>
-<li> **UPDATE** :修改员工</li>
+<li> **UPDATE** :修改员工（仅支持修改未实名员工的信息，如果已经实名并加入企业的员工基础信息修改需要到小程序中进行）</li>
 <li> **RESIGN** :离职员工</li></ul>
      */
     public $OperatorType;
@@ -93,7 +93,7 @@ class SyncProxyOrganizationOperatorsRequest extends AbstractModel
 第三方平台子客企业必须已经经过实名认证
      * @param string $OperatorType 操作类型，对应的操作
 <ul><li> **CREATE** :新增员工</li>
-<li> **UPDATE** :修改员工</li>
+<li> **UPDATE** :修改员工（仅支持修改未实名员工的信息，如果已经实名并加入企业的员工基础信息修改需要到小程序中进行）</li>
 <li> **RESIGN** :离职员工</li></ul>
      * @param array $ProxyOrganizationOperators 员工信息列表，最多支持200个
      * @param UserInfo $Operator 暂未开放

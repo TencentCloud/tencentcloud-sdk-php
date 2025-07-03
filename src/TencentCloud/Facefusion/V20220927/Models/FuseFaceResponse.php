@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * FuseFace返回参数结构体
  *
- * @method string getFusedImage() 获取RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
- * @method void setFusedImage(string $FusedImage) 设置RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
+ * @method string getFusedImage() 获取RspImgType 为 url 时，返回结果的 url（有效期7天）， RspImgType 为 base64 时返回 base64 数据。
+ * @method void setFusedImage(string $FusedImage) 设置RspImgType 为 url 时，返回结果的 url（有效期7天）， RspImgType 为 base64 时返回 base64 数据。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class FuseFaceResponse extends AbstractModel
 {
     /**
-     * @var string RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
+     * @var string RspImgType 为 url 时，返回结果的 url（有效期7天）， RspImgType 为 base64 时返回 base64 数据。
      */
     public $FusedImage;
 
@@ -38,7 +38,7 @@ class FuseFaceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $FusedImage RspImgType 为 url 时，返回结果的 url， RspImgType 为 base64 时返回 base64 数据。
+     * @param string $FusedImage RspImgType 为 url 时，返回结果的 url（有效期7天）， RspImgType 为 base64 时返回 base64 数据。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

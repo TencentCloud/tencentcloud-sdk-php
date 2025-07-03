@@ -21,7 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * DescribeInvokerRecords请求参数结构体
  *
  * @method array getInvokerIds() 获取执行器ID列表。列表上限 100。
+
+可通过 [DescribeInvokers(查询执行器)](https://cloud.tencent.com/document/api/1340/61759) 接口获取。
  * @method void setInvokerIds(array $InvokerIds) 设置执行器ID列表。列表上限 100。
+
+可通过 [DescribeInvokers(查询执行器)](https://cloud.tencent.com/document/api/1340/61759) 接口获取。
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
  * @method integer getOffset() 获取偏移量，默认为0。
@@ -31,6 +35,8 @@ class DescribeInvokerRecordsRequest extends AbstractModel
 {
     /**
      * @var array 执行器ID列表。列表上限 100。
+
+可通过 [DescribeInvokers(查询执行器)](https://cloud.tencent.com/document/api/1340/61759) 接口获取。
      */
     public $InvokerIds;
 
@@ -46,6 +52,8 @@ class DescribeInvokerRecordsRequest extends AbstractModel
 
     /**
      * @param array $InvokerIds 执行器ID列表。列表上限 100。
+
+可通过 [DescribeInvokers(查询执行器)](https://cloud.tencent.com/document/api/1340/61759) 接口获取。
      * @param integer $Limit 返回数量，默认为20，最大值为100。
      * @param integer $Offset 偏移量，默认为0。
      */

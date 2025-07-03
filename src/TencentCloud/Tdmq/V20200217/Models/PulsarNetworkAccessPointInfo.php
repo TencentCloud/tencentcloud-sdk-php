@@ -56,6 +56,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccessPointsType(string $AccessPointsType) 设置接入点类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getBandwidth() 获取带宽，目前只有公网会有这个值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBandwidth(integer $Bandwidth) 设置带宽，目前只有公网会有这个值
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSecurityPolicy() 获取类
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSecurityPolicy(array $SecurityPolicy) 设置类
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getStandardAccessPoint() 获取是否是标准的接入点 true是标准的 false不是标准的
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStandardAccessPoint(boolean $StandardAccessPoint) 设置是否是标准的接入点 true是标准的 false不是标准的
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getZoneName() 获取可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setZoneName(string $ZoneName) 设置可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class PulsarNetworkAccessPointInfo extends AbstractModel
 {
@@ -106,6 +122,30 @@ class PulsarNetworkAccessPointInfo extends AbstractModel
     public $AccessPointsType;
 
     /**
+     * @var integer 带宽，目前只有公网会有这个值
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Bandwidth;
+
+    /**
+     * @var array 类
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SecurityPolicy;
+
+    /**
+     * @var boolean 是否是标准的接入点 true是标准的 false不是标准的
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $StandardAccessPoint;
+
+    /**
+     * @var string 可用区信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ZoneName;
+
+    /**
      * @param string $VpcId vpc的id，支撑网和公网接入点，该字段为空
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 子网id，支撑网和公网接入点，该字段为空
@@ -123,6 +163,14 @@ class PulsarNetworkAccessPointInfo extends AbstractModel
 4:跨地域访问，目标集群已经完成异地切回，等待删除状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AccessPointsType 接入点类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Bandwidth 带宽，目前只有公网会有这个值
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SecurityPolicy 类
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $StandardAccessPoint 是否是标准的接入点 true是标准的 false不是标准的
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ZoneName 可用区信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -164,6 +212,27 @@ class PulsarNetworkAccessPointInfo extends AbstractModel
 
         if (array_key_exists("AccessPointsType",$param) and $param["AccessPointsType"] !== null) {
             $this->AccessPointsType = $param["AccessPointsType"];
+        }
+
+        if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
+            $this->Bandwidth = $param["Bandwidth"];
+        }
+
+        if (array_key_exists("SecurityPolicy",$param) and $param["SecurityPolicy"] !== null) {
+            $this->SecurityPolicy = [];
+            foreach ($param["SecurityPolicy"] as $key => $value){
+                $obj = new SecurityPolicy();
+                $obj->deserialize($value);
+                array_push($this->SecurityPolicy, $obj);
+            }
+        }
+
+        if (array_key_exists("StandardAccessPoint",$param) and $param["StandardAccessPoint"] !== null) {
+            $this->StandardAccessPoint = $param["StandardAccessPoint"];
+        }
+
+        if (array_key_exists("ZoneName",$param) and $param["ZoneName"] !== null) {
+            $this->ZoneName = $param["ZoneName"];
         }
     }
 }

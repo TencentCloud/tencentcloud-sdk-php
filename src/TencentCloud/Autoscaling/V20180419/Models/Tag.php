@@ -24,10 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKey(string $Key) 设置标签键
  * @method string getValue() 获取标签值
  * @method void setValue(string $Value) 设置标签值
- * @method string getResourceType() 获取标签绑定的资源类型，当前支持类型："auto-scaling-group
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setResourceType(string $ResourceType) 设置标签绑定的资源类型，当前支持类型："auto-scaling-group
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getResourceType() 获取标签绑定的资源类型，当前支持类型："auto-scaling-group", "launch-configuration"。分别表示：伸缩组资源，启动配置资源。
+ * @method void setResourceType(string $ResourceType) 设置标签绑定的资源类型，当前支持类型："auto-scaling-group", "launch-configuration"。分别表示：伸缩组资源，启动配置资源。
  */
 class Tag extends AbstractModel
 {
@@ -42,16 +40,14 @@ class Tag extends AbstractModel
     public $Value;
 
     /**
-     * @var string 标签绑定的资源类型，当前支持类型："auto-scaling-group
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 标签绑定的资源类型，当前支持类型："auto-scaling-group", "launch-configuration"。分别表示：伸缩组资源，启动配置资源。
      */
     public $ResourceType;
 
     /**
      * @param string $Key 标签键
      * @param string $Value 标签值
-     * @param string $ResourceType 标签绑定的资源类型，当前支持类型："auto-scaling-group
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ResourceType 标签绑定的资源类型，当前支持类型："auto-scaling-group", "launch-configuration"。分别表示：伸缩组资源，启动配置资源。
      */
     function __construct()
     {

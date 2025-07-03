@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTopicFlowRanking返回参数结构体
  *
- * @method TopicFlowRankingResult getResult() 获取流量排行
- * @method void setResult(TopicFlowRankingResult $Result) 设置流量排行
+ * @method TopicFlowRankingResult getResult() 获取流量排行返回结果
+ * @method void setResult(TopicFlowRankingResult $Result) 设置流量排行返回结果
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeTopicFlowRankingResponse extends AbstractModel
 {
     /**
-     * @var TopicFlowRankingResult 流量排行
+     * @var TopicFlowRankingResult 流量排行返回结果
      */
     public $Result;
 
@@ -38,7 +38,7 @@ class DescribeTopicFlowRankingResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param TopicFlowRankingResult $Result 流量排行
+     * @param TopicFlowRankingResult $Result 流量排行返回结果
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

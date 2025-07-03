@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getCreateTime() 获取创建时间
  * @method void setCreateTime(integer $CreateTime) 设置创建时间
  * @method string getNote() 获取主题备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNote(string $Note) 设置主题备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPartitionNum() 获取分区个数
  * @method void setPartitionNum(integer $PartitionNum) 设置分区个数
  * @method integer getEnableWhiteList() 获取IP 白名单开关，1：打开； 0：关闭
@@ -39,21 +37,13 @@ use TencentCloud\Common\AbstractModel;
  * @method array getPartitions() 获取分区详情
  * @method void setPartitions(array $Partitions) 设置分区详情
  * @method integer getEnableAclRule() 获取ACL预设策略开关，1：打开； 0：关闭
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableAclRule(integer $EnableAclRule) 设置ACL预设策略开关，1：打开； 0：关闭
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAclRuleList() 获取预设策略列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAclRuleList(array $AclRuleList) 设置预设策略列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method InstanceQuotaConfigResp getQuotaConfig() 获取topic 限流策略
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQuotaConfig(InstanceQuotaConfigResp $QuotaConfig) 设置topic 限流策略
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getReplicaNum() 获取副本数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReplicaNum(integer $ReplicaNum) 设置副本数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TopicAttributesResponse extends AbstractModel
 {
@@ -69,7 +59,6 @@ class TopicAttributesResponse extends AbstractModel
 
     /**
      * @var string 主题备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Note;
 
@@ -100,25 +89,21 @@ class TopicAttributesResponse extends AbstractModel
 
     /**
      * @var integer ACL预设策略开关，1：打开； 0：关闭
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableAclRule;
 
     /**
      * @var array 预设策略列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AclRuleList;
 
     /**
      * @var InstanceQuotaConfigResp topic 限流策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QuotaConfig;
 
     /**
      * @var integer 副本数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReplicaNum;
 
@@ -126,20 +111,15 @@ class TopicAttributesResponse extends AbstractModel
      * @param string $TopicId 主题 ID
      * @param integer $CreateTime 创建时间
      * @param string $Note 主题备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PartitionNum 分区个数
      * @param integer $EnableWhiteList IP 白名单开关，1：打开； 0：关闭
      * @param array $IpWhiteList IP 白名单列表
      * @param Config $Config topic 配置数组
      * @param array $Partitions 分区详情
      * @param integer $EnableAclRule ACL预设策略开关，1：打开； 0：关闭
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AclRuleList 预设策略列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceQuotaConfigResp $QuotaConfig topic 限流策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ReplicaNum 副本数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

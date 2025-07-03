@@ -89,47 +89,37 @@ use TencentCloud\Common\AbstractModel;
 1：开启
 0：关闭
  * @method integer getLevel() 获取防护等级，可选值100,200,300
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevel(integer $Level) 设置防护等级，可选值100,200,300
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCdcClusters() 获取域名需要下发到的cdc集群列表。仅CDC场景下填充
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCdcClusters(array $CdcClusters) 设置域名需要下发到的cdc集群列表。仅CDC场景下填充
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAlbType() 获取应用型负载均衡类型，默认clb。 
 clb：七层负载均衡器类型 
 apisix：apisix网关型
-注意：此字段可能返回 null，表示取不到有效值。
+tsegw：云原生API网关
+scf：云函数
  * @method void setAlbType(string $AlbType) 设置应用型负载均衡类型，默认clb。 
 clb：七层负载均衡器类型 
 apisix：apisix网关型
-注意：此字段可能返回 null，表示取不到有效值。
+tsegw：云原生API网关
+scf：云函数
  * @method array getIpHeaders() 获取IsCdn=3时，需要填此参数，表示自定义header
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpHeaders(array $IpHeaders) 设置IsCdn=3时，需要填此参数，表示自定义header
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEngineType() 获取规则引擎类型。
 1: menshen
 2: tiga
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEngineType(integer $EngineType) 设置规则引擎类型。
 1: menshen
 2: tiga
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCloudType() 获取云类型。
 public:公有云
 private:私有云
 hybrid:混合云
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCloudType(string $CloudType) 设置云类型。
 public:公有云
 private:私有云
 hybrid:混合云
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNote() 获取域名备注信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNote(string $Note) 设置域名备注信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class HostRecord extends AbstractModel
 {
@@ -221,13 +211,11 @@ class HostRecord extends AbstractModel
 
     /**
      * @var integer 防护等级，可选值100,200,300
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Level;
 
     /**
      * @var array 域名需要下发到的cdc集群列表。仅CDC场景下填充
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CdcClusters;
 
@@ -235,13 +223,13 @@ class HostRecord extends AbstractModel
      * @var string 应用型负载均衡类型，默认clb。 
 clb：七层负载均衡器类型 
 apisix：apisix网关型
-注意：此字段可能返回 null，表示取不到有效值。
+tsegw：云原生API网关
+scf：云函数
      */
     public $AlbType;
 
     /**
      * @var array IsCdn=3时，需要填此参数，表示自定义header
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IpHeaders;
 
@@ -249,7 +237,6 @@ apisix：apisix网关型
      * @var integer 规则引擎类型。
 1: menshen
 2: tiga
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EngineType;
 
@@ -258,13 +245,11 @@ apisix：apisix网关型
 public:公有云
 private:私有云
 hybrid:混合云
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CloudType;
 
     /**
      * @var string 域名备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Note;
 
@@ -304,26 +289,21 @@ hybrid:混合云
 1：开启
 0：关闭
      * @param integer $Level 防护等级，可选值100,200,300
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CdcClusters 域名需要下发到的cdc集群列表。仅CDC场景下填充
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AlbType 应用型负载均衡类型，默认clb。 
 clb：七层负载均衡器类型 
 apisix：apisix网关型
-注意：此字段可能返回 null，表示取不到有效值。
+tsegw：云原生API网关
+scf：云函数
      * @param array $IpHeaders IsCdn=3时，需要填此参数，表示自定义header
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EngineType 规则引擎类型。
 1: menshen
 2: tiga
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CloudType 云类型。
 public:公有云
 private:私有云
 hybrid:混合云
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Note 域名备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

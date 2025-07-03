@@ -18,10 +18,12 @@ namespace TencentCloud\Cls\V20201016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 告警通知模板类型
+ * 告警通知渠道组详细配置
  *
- * @method string getName() 获取告警通知模板名称。
- * @method void setName(string $Name) 设置告警通知模板名称。
+ * @method string getName() 获取告警通知渠道组名称。
+ * @method void setName(string $Name) 设置告警通知渠道组名称。
+ * @method array getTags() 获取告警通知渠道组绑定的标签信息。
+ * @method void setTags(array $Tags) 设置告警通知渠道组绑定的标签信息。
  * @method string getType() 获取告警模板的类型。可选值：
 <br><li> Trigger - 告警触发</li>
 <br><li> Recovery - 告警恢复</li>
@@ -31,36 +33,39 @@ use TencentCloud\Common\AbstractModel;
 <br><li> Recovery - 告警恢复</li>
 <br><li> All - 告警触发和告警恢复</li>
  * @method array getNoticeReceivers() 获取告警通知模板接收者信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNoticeReceivers(array $NoticeReceivers) 设置告警通知模板接收者信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getWebCallbacks() 获取告警通知模板回调信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWebCallbacks(array $WebCallbacks) 设置告警通知模板回调信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAlarmNoticeId() 获取告警通知模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlarmNoticeId(string $AlarmNoticeId) 设置告警通知模板ID。
+ * @method array getNoticeRules() 获取通知规则。
+ * @method void setNoticeRules(array $NoticeRules) 设置通知规则。
+ * @method integer getAlarmShieldStatus() 获取免登录操作告警开关。
+参数值： 1：关闭 2：开启（默认开启）
+ * @method void setAlarmShieldStatus(integer $AlarmShieldStatus) 设置免登录操作告警开关。
+参数值： 1：关闭 2：开启（默认开启）
+ * @method string getJumpDomain() 获取调用链接域名。http:// 或者 https:// 开头，不能/结尾
+ * @method void setJumpDomain(string $JumpDomain) 设置调用链接域名。http:// 或者 https:// 开头，不能/结尾
+ * @method AlarmNoticeDeliverConfig getAlarmNoticeDeliverConfig() 获取投递相关信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAlarmNoticeDeliverConfig(AlarmNoticeDeliverConfig $AlarmNoticeDeliverConfig) 设置投递相关信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取最近更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置最近更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method array getNoticeRules() 获取通知规则。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNoticeRules(array $NoticeRules) 设置通知规则。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmNotice extends AbstractModel
 {
     /**
-     * @var string 告警通知模板名称。
+     * @var string 告警通知渠道组名称。
      */
     public $Name;
+
+    /**
+     * @var array 告警通知渠道组绑定的标签信息。
+     */
+    public $Tags;
 
     /**
      * @var string 告警模板的类型。可选值：
@@ -72,58 +77,69 @@ class AlarmNotice extends AbstractModel
 
     /**
      * @var array 告警通知模板接收者信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NoticeReceivers;
 
     /**
      * @var array 告警通知模板回调信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WebCallbacks;
 
     /**
      * @var string 告警通知模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlarmNoticeId;
 
     /**
-     * @var string 创建时间。
+     * @var array 通知规则。
+     */
+    public $NoticeRules;
+
+    /**
+     * @var integer 免登录操作告警开关。
+参数值： 1：关闭 2：开启（默认开启）
+     */
+    public $AlarmShieldStatus;
+
+    /**
+     * @var string 调用链接域名。http:// 或者 https:// 开头，不能/结尾
+     */
+    public $JumpDomain;
+
+    /**
+     * @var AlarmNoticeDeliverConfig 投递相关信息。
 注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AlarmNoticeDeliverConfig;
+
+    /**
+     * @var string 创建时间。
      */
     public $CreateTime;
 
     /**
      * @var string 最近更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
-     * @var array 通知规则。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $NoticeRules;
-
-    /**
-     * @param string $Name 告警通知模板名称。
+     * @param string $Name 告警通知渠道组名称。
+     * @param array $Tags 告警通知渠道组绑定的标签信息。
      * @param string $Type 告警模板的类型。可选值：
 <br><li> Trigger - 告警触发</li>
 <br><li> Recovery - 告警恢复</li>
 <br><li> All - 告警触发和告警恢复</li>
      * @param array $NoticeReceivers 告警通知模板接收者信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $WebCallbacks 告警通知模板回调信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AlarmNoticeId 告警通知模板ID。
+     * @param array $NoticeRules 通知规则。
+     * @param integer $AlarmShieldStatus 免登录操作告警开关。
+参数值： 1：关闭 2：开启（默认开启）
+     * @param string $JumpDomain 调用链接域名。http:// 或者 https:// 开头，不能/结尾
+     * @param AlarmNoticeDeliverConfig $AlarmNoticeDeliverConfig 投递相关信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 最近更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $NoticeRules 通知规则。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -140,6 +156,15 @@ class AlarmNotice extends AbstractModel
         }
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
@@ -168,14 +193,6 @@ class AlarmNotice extends AbstractModel
             $this->AlarmNoticeId = $param["AlarmNoticeId"];
         }
 
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
-        }
-
-        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
-            $this->UpdateTime = $param["UpdateTime"];
-        }
-
         if (array_key_exists("NoticeRules",$param) and $param["NoticeRules"] !== null) {
             $this->NoticeRules = [];
             foreach ($param["NoticeRules"] as $key => $value){
@@ -183,6 +200,27 @@ class AlarmNotice extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->NoticeRules, $obj);
             }
+        }
+
+        if (array_key_exists("AlarmShieldStatus",$param) and $param["AlarmShieldStatus"] !== null) {
+            $this->AlarmShieldStatus = $param["AlarmShieldStatus"];
+        }
+
+        if (array_key_exists("JumpDomain",$param) and $param["JumpDomain"] !== null) {
+            $this->JumpDomain = $param["JumpDomain"];
+        }
+
+        if (array_key_exists("AlarmNoticeDeliverConfig",$param) and $param["AlarmNoticeDeliverConfig"] !== null) {
+            $this->AlarmNoticeDeliverConfig = new AlarmNoticeDeliverConfig();
+            $this->AlarmNoticeDeliverConfig->deserialize($param["AlarmNoticeDeliverConfig"]);
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = $param["UpdateTime"];
         }
     }
 }

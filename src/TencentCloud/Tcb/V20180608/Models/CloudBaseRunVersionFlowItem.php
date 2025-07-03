@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 版本流量占比
  *
  * @method string getVersionName() 获取版本名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersionName(string $VersionName) 设置版本名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFlowRatio() 获取流量占比
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowRatio(integer $FlowRatio) 设置流量占比
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ObjectKV getUrlParam() 获取流量参数键值对（URL参数/HEADERS参数）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUrlParam(ObjectKV $UrlParam) 设置流量参数键值对（URL参数/HEADERS参数）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPriority() 获取优先级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPriority(integer $Priority) 设置优先级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsDefaultPriority() 获取是否是默认兜底版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsDefaultPriority(boolean $IsDefaultPriority) 设置是否是默认兜底版本
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudBaseRunVersionFlowItem extends AbstractModel
 {
     /**
      * @var string 版本名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VersionName;
 
     /**
      * @var integer 流量占比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowRatio;
 
     /**
      * @var ObjectKV 流量参数键值对（URL参数/HEADERS参数）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UrlParam;
 
     /**
      * @var integer 优先级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Priority;
 
     /**
      * @var boolean 是否是默认兜底版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsDefaultPriority;
 
     /**
      * @param string $VersionName 版本名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FlowRatio 流量占比
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ObjectKV $UrlParam 流量参数键值对（URL参数/HEADERS参数）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Priority 优先级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsDefaultPriority 是否是默认兜底版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

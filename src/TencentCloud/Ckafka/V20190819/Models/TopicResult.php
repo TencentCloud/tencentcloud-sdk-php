@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 统一返回的TopicResponse
  *
  * @method array getTopicList() 获取返回的主题信息列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicList(array $TopicList) 设置返回的主题信息列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取符合条件的 topic 数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置符合条件的 topic 数量
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TopicResult extends AbstractModel
 {
     /**
      * @var array 返回的主题信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicList;
 
     /**
      * @var integer 符合条件的 topic 数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
      * @param array $TopicList 返回的主题信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 符合条件的 topic 数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

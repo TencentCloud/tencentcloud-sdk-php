@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 设备状态信息
  *
  * @method string getWID() 获取设备ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWID(string $WID) 设置设备ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeviceStatus() 获取设备状态（online=normal+fault、offline）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceStatus(string $DeviceStatus) 设置设备状态（online=normal+fault、offline）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeviceStatusUpdateTime() 获取设备状态更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceStatusUpdateTime(string $DeviceStatusUpdateTime) 设置设备状态更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取设备业务状态（normal、fault、offline）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置设备业务状态（normal、fault、offline）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsAlive() 获取推流状态。推流中-true，未推流-false
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsAlive(boolean $IsAlive) 设置推流状态。推流中-true，未推流-false
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DeviceStatusInfo extends AbstractModel
 {
     /**
      * @var string 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WID;
 
     /**
      * @var string 设备状态（online=normal+fault、offline）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceStatus;
 
     /**
      * @var string 设备状态更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceStatusUpdateTime;
 
     /**
      * @var string 设备业务状态（normal、fault、offline）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var boolean 推流状态。推流中-true，未推流-false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsAlive;
 
     /**
      * @param string $WID 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceStatus 设备状态（online=normal+fault、offline）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceStatusUpdateTime 设备状态更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 设备业务状态（normal、fault、offline）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsAlive 推流状态。推流中-true，未推流-false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

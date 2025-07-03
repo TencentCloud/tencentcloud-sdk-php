@@ -35,9 +35,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMessage() 获取发布结果信息。
  * @method void setMessage(string $Message) 设置发布结果信息。
  * @method string getRecordId() 获取发布记录 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordId(string $RecordId) 设置发布记录 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取变更说明。
  * @method void setDescription(string $Description) 设置变更说明。
  */
@@ -68,7 +66,6 @@ class DeployRecord extends AbstractModel
 
     /**
      * @var string 发布记录 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecordId;
 
@@ -86,7 +83,6 @@ class DeployRecord extends AbstractModel
 <li>success： 发布成功。</li>
      * @param string $Message 发布结果信息。
      * @param string $RecordId 发布记录 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 变更说明。
      */
     function __construct()

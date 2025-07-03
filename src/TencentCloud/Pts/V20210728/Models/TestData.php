@@ -21,33 +21,23 @@ use TencentCloud\Common\AbstractModel;
  * 测试数据集
  *
  * @method string getName() 获取测试数据集所在的文件名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置测试数据集所在的文件名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getSplit() 获取测试数据集是否分片
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSplit(boolean $Split) 设置测试数据集是否分片
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getHeaderInFile() 获取首行是否为参数名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeaderInFile(boolean $HeaderInFile) 设置首行是否为参数名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getHeaderColumns() 获取参数名数组
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeaderColumns(array $HeaderColumns) 设置参数名数组
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLineCount() 获取文件行数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLineCount(integer $LineCount) 设置文件行数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdatedAt() 获取更新时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdatedAt(string $UpdatedAt) 设置更新时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSize() 获取文件字节数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSize(integer $Size) 设置文件字节数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getHeadLines() 获取头部数据行
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeadLines(array $HeadLines) 设置头部数据行
@@ -57,31 +47,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTailLines(array $TailLines) 设置尾部数据行
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取文件类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置文件类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileId() 获取文件 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileId(string $FileId) 设置文件 ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TestData extends AbstractModel
 {
     /**
      * @var string 测试数据集所在的文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var boolean 测试数据集是否分片
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Split;
 
     /**
      * @var boolean 首行是否为参数名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HeaderInFile;
 
@@ -93,7 +76,6 @@ class TestData extends AbstractModel
 
     /**
      * @var integer 文件行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LineCount;
 
@@ -105,7 +87,6 @@ class TestData extends AbstractModel
 
     /**
      * @var integer 文件字节数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Size;
 
@@ -123,39 +104,30 @@ class TestData extends AbstractModel
 
     /**
      * @var string 文件类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 文件 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileId;
 
     /**
      * @param string $Name 测试数据集所在的文件名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Split 测试数据集是否分片
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $HeaderInFile 首行是否为参数名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $HeaderColumns 参数名数组
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LineCount 文件行数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdatedAt 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Size 文件字节数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $HeadLines 头部数据行
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TailLines 尾部数据行
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 文件类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileId 文件 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

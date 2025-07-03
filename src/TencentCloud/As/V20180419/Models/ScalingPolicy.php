@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAdjustmentType(string $AdjustmentType) 设置告警触发后，期望实例数修改方式，仅适用于简单策略。取值范围：<br><li>CHANGE_IN_CAPACITY：增加或减少若干期望实例数</li><li>EXACT_CAPACITY：调整至指定期望实例数</li> <li>PERCENT_CHANGE_IN_CAPACITY：按百分比调整期望实例数</li>
  * @method integer getAdjustmentValue() 获取告警触发后，期望实例数的调整值，仅适用于简单策略。
  * @method void setAdjustmentValue(integer $AdjustmentValue) 设置告警触发后，期望实例数的调整值，仅适用于简单策略。
- * @method integer getCooldown() 获取冷却时间，仅适用于简单策略。
- * @method void setCooldown(integer $Cooldown) 设置冷却时间，仅适用于简单策略。
+ * @method integer getCooldown() 获取冷却时间，单位为秒，仅适用于简单策略。取值范围 [0,3600]，默认冷却时间300秒。
+ * @method void setCooldown(integer $Cooldown) 设置冷却时间，单位为秒，仅适用于简单策略。取值范围 [0,3600]，默认冷却时间300秒。
  * @method MetricAlarm getMetricAlarm() 获取简单告警触发策略告警监控指标，仅适用于简单策略。
  * @method void setMetricAlarm(MetricAlarm $MetricAlarm) 设置简单告警触发策略告警监控指标，仅适用于简单策略。
  * @method string getPredefinedMetricType() 获取预定义监控项，仅适用于目标追踪策略。取值范围：<br><li>ASG_AVG_CPU_UTILIZATION：平均CPU使用率</li><li>ASG_AVG_LAN_TRAFFIC_OUT：平均内网出带宽</li><li>ASG_AVG_LAN_TRAFFIC_IN：平均内网入带宽</li><li>ASG_AVG_WAN_TRAFFIC_OUT：平均外网出带宽</li><li>ASG_AVG_WAN_TRAFFIC_IN：平均外网出带宽</li>
@@ -98,7 +98,7 @@ class ScalingPolicy extends AbstractModel
     public $AdjustmentValue;
 
     /**
-     * @var integer 冷却时间，仅适用于简单策略。
+     * @var integer 冷却时间，单位为秒，仅适用于简单策略。取值范围 [0,3600]，默认冷却时间300秒。
      */
     public $Cooldown;
 
@@ -151,7 +151,7 @@ class ScalingPolicy extends AbstractModel
      * @param string $ScalingPolicyName 告警触发策略名称。
      * @param string $AdjustmentType 告警触发后，期望实例数修改方式，仅适用于简单策略。取值范围：<br><li>CHANGE_IN_CAPACITY：增加或减少若干期望实例数</li><li>EXACT_CAPACITY：调整至指定期望实例数</li> <li>PERCENT_CHANGE_IN_CAPACITY：按百分比调整期望实例数</li>
      * @param integer $AdjustmentValue 告警触发后，期望实例数的调整值，仅适用于简单策略。
-     * @param integer $Cooldown 冷却时间，仅适用于简单策略。
+     * @param integer $Cooldown 冷却时间，单位为秒，仅适用于简单策略。取值范围 [0,3600]，默认冷却时间300秒。
      * @param MetricAlarm $MetricAlarm 简单告警触发策略告警监控指标，仅适用于简单策略。
      * @param string $PredefinedMetricType 预定义监控项，仅适用于目标追踪策略。取值范围：<br><li>ASG_AVG_CPU_UTILIZATION：平均CPU使用率</li><li>ASG_AVG_LAN_TRAFFIC_OUT：平均内网出带宽</li><li>ASG_AVG_LAN_TRAFFIC_IN：平均内网入带宽</li><li>ASG_AVG_WAN_TRAFFIC_OUT：平均外网出带宽</li><li>ASG_AVG_WAN_TRAFFIC_IN：平均外网出带宽</li>
 注意：此字段可能返回 null，表示取不到有效值。

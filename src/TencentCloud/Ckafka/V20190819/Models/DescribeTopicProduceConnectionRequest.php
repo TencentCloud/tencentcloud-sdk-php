@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTopicProduceConnection请求参数结构体
  *
- * @method string getInstanceId() 获取实例id
- * @method void setInstanceId(string $InstanceId) 设置实例id
- * @method string getTopicName() 获取topic名称
- * @method void setTopicName(string $TopicName) 设置topic名称
+ * @method string getInstanceId() 获取ckafka集群实例Id
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
+ * @method string getTopicName() 获取主题名
+ * @method void setTopicName(string $TopicName) 设置主题名
  */
 class DescribeTopicProduceConnectionRequest extends AbstractModel
 {
     /**
-     * @var string 实例id
+     * @var string ckafka集群实例Id
      */
     public $InstanceId;
 
     /**
-     * @var string topic名称
+     * @var string 主题名
      */
     public $TopicName;
 
     /**
-     * @param string $InstanceId 实例id
-     * @param string $TopicName topic名称
+     * @param string $InstanceId ckafka集群实例Id
+     * @param string $TopicName 主题名
      */
     function __construct()
     {

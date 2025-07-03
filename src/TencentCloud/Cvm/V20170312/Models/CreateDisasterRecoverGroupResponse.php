@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDisasterRecoverGroupId() 获取分散置放群组ID列表。
  * @method void setDisasterRecoverGroupId(string $DisasterRecoverGroupId) 设置分散置放群组ID列表。
- * @method string getType() 获取分散置放群组类型，取值范围：<br><li>HOST：物理机<br><li>SW：交换机<br><li>RACK：机架
- * @method void setType(string $Type) 设置分散置放群组类型，取值范围：<br><li>HOST：物理机<br><li>SW：交换机<br><li>RACK：机架
+ * @method string getType() 获取分散置放群组类型，取值范围：<br><li>HOST：物理机</li><li>SW：交换机</li><li>RACK：机架</li>
+ * @method void setType(string $Type) 设置分散置放群组类型，取值范围：<br><li>HOST：物理机</li><li>SW：交换机</li><li>RACK：机架</li>
  * @method string getName() 获取分散置放群组名称，长度1-60个字符，支持中、英文。
  * @method void setName(string $Name) 设置分散置放群组名称，长度1-60个字符，支持中、英文。
  * @method integer getCvmQuotaTotal() 获取置放群组内可容纳的云服务器数量。
@@ -43,7 +43,7 @@ class CreateDisasterRecoverGroupResponse extends AbstractModel
     public $DisasterRecoverGroupId;
 
     /**
-     * @var string 分散置放群组类型，取值范围：<br><li>HOST：物理机<br><li>SW：交换机<br><li>RACK：机架
+     * @var string 分散置放群组类型，取值范围：<br><li>HOST：物理机</li><li>SW：交换机</li><li>RACK：机架</li>
      */
     public $Type;
 
@@ -74,7 +74,7 @@ class CreateDisasterRecoverGroupResponse extends AbstractModel
 
     /**
      * @param string $DisasterRecoverGroupId 分散置放群组ID列表。
-     * @param string $Type 分散置放群组类型，取值范围：<br><li>HOST：物理机<br><li>SW：交换机<br><li>RACK：机架
+     * @param string $Type 分散置放群组类型，取值范围：<br><li>HOST：物理机</li><li>SW：交换机</li><li>RACK：机架</li>
      * @param string $Name 分散置放群组名称，长度1-60个字符，支持中、英文。
      * @param integer $CvmQuotaTotal 置放群组内可容纳的云服务器数量。
      * @param integer $CurrentNum 置放群组内已有的云服务器数量。

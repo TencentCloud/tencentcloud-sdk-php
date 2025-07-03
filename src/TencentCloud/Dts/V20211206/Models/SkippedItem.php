@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 跳过校验的表详情
  *
  * @method string getDb() 获取数据库名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDb(string $Db) 设置数据库名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTable() 获取表名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTable(string $Table) 设置表名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReason() 获取未发起检查的原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReason(string $Reason) 设置未发起检查的原因
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SkippedItem extends AbstractModel
 {
     /**
      * @var string 数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Db;
 
     /**
      * @var string 表名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Table;
 
     /**
      * @var string 未发起检查的原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Reason;
 
     /**
      * @param string $Db 数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Table 表名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Reason 未发起检查的原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

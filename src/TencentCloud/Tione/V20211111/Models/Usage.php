@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 大模型生成Token统计
  *
  * @method integer getCompletionTokens() 获取生成的token数目
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCompletionTokens(integer $CompletionTokens) 设置生成的token数目
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPromptTokens() 获取输入的token数目
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPromptTokens(integer $PromptTokens) 设置输入的token数目
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalTokens() 获取总共token数目
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalTokens(integer $TotalTokens) 设置总共token数目
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Usage extends AbstractModel
 {
     /**
      * @var integer 生成的token数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CompletionTokens;
 
     /**
      * @var integer 输入的token数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PromptTokens;
 
     /**
      * @var integer 总共token数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalTokens;
 
     /**
      * @param integer $CompletionTokens 生成的token数目
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PromptTokens 输入的token数目
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalTokens 总共token数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

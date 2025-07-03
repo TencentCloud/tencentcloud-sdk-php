@@ -34,18 +34,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置轮播播单名称，长度限制：64 个字符。
  * @method string getDesc() 获取轮播播单描述信息，长度限制：256 个字符。
  * @method void setDesc(string $Desc) 设置轮播播单描述信息，长度限制：256 个字符。
- * @method string getStatus() 获取播放状态，可选值：
-<li>Disabled：结束播放，结束后轮播任务不能再次启动。</li>
-
- * @method void setStatus(string $Status) 设置播放状态，可选值：
-<li>Disabled：结束播放，结束后轮播任务不能再次启动。</li>
-
+ * @method string getStatus() 获取播放状态，可选值：<li>Disabled：停止播放。</li><li>Enabled：启播时长到达后启动播放。</li>
+ * @method void setStatus(string $Status) 设置播放状态，可选值：<li>Disabled：停止播放。</li><li>Enabled：启播时长到达后启动播放。</li>
  * @method string getPlayBackMode() 获取播放模式，可选值：
 <li>Loop：循环播放播单；</li>
 <li>Linear：单次播放，播单播放完停止播放。</li>
  * @method void setPlayBackMode(string $PlayBackMode) 设置播放模式，可选值：
 <li>Loop：循环播放播单；</li>
 <li>Linear：单次播放，播单播放完停止播放。</li>
+ * @method string getExpiredTime() 获取过期时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)，过期后将停止播放。“9999-12-31T23:59:59+08:00”表示不过期。
+ * @method void setExpiredTime(string $ExpiredTime) 设置过期时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)，过期后将停止播放。“9999-12-31T23:59:59+08:00”表示不过期。
  */
 class ModifyRoundPlayRequest extends AbstractModel
 {
@@ -81,9 +79,7 @@ class ModifyRoundPlayRequest extends AbstractModel
     public $Desc;
 
     /**
-     * @var string 播放状态，可选值：
-<li>Disabled：结束播放，结束后轮播任务不能再次启动。</li>
-
+     * @var string 播放状态，可选值：<li>Disabled：停止播放。</li><li>Enabled：启播时长到达后启动播放。</li>
      */
     public $Status;
 
@@ -95,6 +91,11 @@ class ModifyRoundPlayRequest extends AbstractModel
     public $PlayBackMode;
 
     /**
+     * @var string 过期时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)，过期后将停止播放。“9999-12-31T23:59:59+08:00”表示不过期。
+     */
+    public $ExpiredTime;
+
+    /**
      * @param string $RoundPlayId 轮播播单唯一标识。
      * @param integer $SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
      * @param string $StartTime 启播时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
@@ -102,12 +103,11 @@ class ModifyRoundPlayRequest extends AbstractModel
 <li>数组长度限制：100。</li>
      * @param string $Name 轮播播单名称，长度限制：64 个字符。
      * @param string $Desc 轮播播单描述信息，长度限制：256 个字符。
-     * @param string $Status 播放状态，可选值：
-<li>Disabled：结束播放，结束后轮播任务不能再次启动。</li>
-
+     * @param string $Status 播放状态，可选值：<li>Disabled：停止播放。</li><li>Enabled：启播时长到达后启动播放。</li>
      * @param string $PlayBackMode 播放模式，可选值：
 <li>Loop：循环播放播单；</li>
 <li>Linear：单次播放，播单播放完停止播放。</li>
+     * @param string $ExpiredTime 过期时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)，过期后将停止播放。“9999-12-31T23:59:59+08:00”表示不过期。
      */
     function __construct()
     {
@@ -157,6 +157,10 @@ class ModifyRoundPlayRequest extends AbstractModel
 
         if (array_key_exists("PlayBackMode",$param) and $param["PlayBackMode"] !== null) {
             $this->PlayBackMode = $param["PlayBackMode"];
+        }
+
+        if (array_key_exists("ExpiredTime",$param) and $param["ExpiredTime"] !== null) {
+            $this->ExpiredTime = $param["ExpiredTime"];
         }
     }
 }

@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getOffset() 获取consumer 提交的 offset 位置
  * @method void setOffset(integer $Offset) 设置consumer 提交的 offset 位置
  * @method string getMetadata() 获取支持消费者提交消息时，传入 metadata 作为它用，当前一般为空字符串
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetadata(string $Metadata) 设置支持消费者提交消息时，传入 metadata 作为它用，当前一般为空字符串
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getErrorCode() 获取错误码
  * @method void setErrorCode(integer $ErrorCode) 设置错误码
  * @method integer getLogEndOffset() 获取当前 partition 最新的 offset
@@ -49,7 +47,6 @@ class GroupOffsetPartition extends AbstractModel
 
     /**
      * @var string 支持消费者提交消息时，传入 metadata 作为它用，当前一般为空字符串
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Metadata;
 
@@ -72,7 +69,6 @@ class GroupOffsetPartition extends AbstractModel
      * @param integer $Partition topic 的 partitionId
      * @param integer $Offset consumer 提交的 offset 位置
      * @param string $Metadata 支持消费者提交消息时，传入 metadata 作为它用，当前一般为空字符串
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ErrorCode 错误码
      * @param integer $LogEndOffset 当前 partition 最新的 offset
      * @param integer $Lag 未消费的消息个数

@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 基线检测项TOP信息
  *
  * @method string getRuleName() 获取基线检测项名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleName(string $RuleName) 设置基线检测项名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLevel() 获取检测项危害等级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevel(integer $Level) 设置检测项危害等级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEventCount() 获取事件总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEventCount(integer $EventCount) 设置事件总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRuleId() 获取检测项id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleId(integer $RuleId) 设置检测项id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BaselineRuleTopInfo extends AbstractModel
 {
     /**
      * @var string 基线检测项名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleName;
 
     /**
      * @var integer 检测项危害等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Level;
 
     /**
      * @var integer 事件总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventCount;
 
     /**
      * @var integer 检测项id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleId;
 
     /**
      * @param string $RuleName 基线检测项名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Level 检测项危害等级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EventCount 事件总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleId 检测项id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

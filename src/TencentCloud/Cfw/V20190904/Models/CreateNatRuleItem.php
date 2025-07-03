@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setParamTemplateId(string $ParamTemplateId) 设置端口协议组ID
  * @method integer getInternalUuid() 获取内部id
  * @method void setInternalUuid(integer $InternalUuid) 设置内部id
+ * @method string getScope() 获取规则生效的范围：ALL，全局生效；ap-guangzhou，生效的地域；cfwnat-xxx，生效基于实例维度
+ * @method void setScope(string $Scope) 设置规则生效的范围：ALL，全局生效；ap-guangzhou，生效的地域；cfwnat-xxx，生效基于实例维度
  */
 class CreateNatRuleItem extends AbstractModel
 {
@@ -122,6 +124,11 @@ class CreateNatRuleItem extends AbstractModel
     public $InternalUuid;
 
     /**
+     * @var string 规则生效的范围：ALL，全局生效；ap-guangzhou，生效的地域；cfwnat-xxx，生效基于实例维度
+     */
+    public $Scope;
+
+    /**
      * @param string $SourceContent 访问源示例： net：IP/CIDR(192.168.0.2)
      * @param string $SourceType 访问源类型：入向规则时类型可以为 ip,net,template,location；出向规则时可以为 ip,net,template,instance,group,tag
      * @param string $TargetContent 访问目的示例： net：IP/CIDR(192.168.0.2) domain：域名规则，例如*.qq.com
@@ -136,6 +143,7 @@ class CreateNatRuleItem extends AbstractModel
      * @param string $Description 描述
      * @param string $ParamTemplateId 端口协议组ID
      * @param integer $InternalUuid 内部id
+     * @param string $Scope 规则生效的范围：ALL，全局生效；ap-guangzhou，生效的地域；cfwnat-xxx，生效基于实例维度
      */
     function __construct()
     {
@@ -204,6 +212,10 @@ class CreateNatRuleItem extends AbstractModel
 
         if (array_key_exists("InternalUuid",$param) and $param["InternalUuid"] !== null) {
             $this->InternalUuid = $param["InternalUuid"];
+        }
+
+        if (array_key_exists("Scope",$param) and $param["Scope"] !== null) {
+            $this->Scope = $param["Scope"];
         }
     }
 }

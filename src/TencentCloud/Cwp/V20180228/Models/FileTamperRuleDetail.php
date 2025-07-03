@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 核心文件监控规则详情
  *
  * @method string getName() 获取规则名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置规则名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifyTime() 获取更新时间
  * @method void setModifyTime(string $ModifyTime) 设置更新时间
  * @method string getCreateTime() 获取创建时间
@@ -33,9 +31,7 @@ use TencentCloud\Common\AbstractModel;
  * @method array getRule() 获取规则
  * @method void setRule(array $Rule) 设置规则
  * @method array getUuids() 获取生效主机uuid,空表示全部主机，通过参数可控制返回的条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUuids(array $Uuids) 设置生效主机uuid,空表示全部主机，通过参数可控制返回的条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getId() 获取规则id
  * @method void setId(integer $Id) 设置规则id
  * @method integer getIsGlobal() 获取是否全局规则(默认否) 0：否 ，1：是
@@ -47,17 +43,14 @@ use TencentCloud\Common\AbstractModel;
  * @method string getAddWhiteType() 获取加白处理类型
 <li>cur 仅对当前加白</li>
 <li>all 所有符合条件加白</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddWhiteType(string $AddWhiteType) 设置加白处理类型
 <li>cur 仅对当前加白</li>
 <li>all 所有符合条件加白</li>
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class FileTamperRuleDetail extends AbstractModel
 {
     /**
      * @var string 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
@@ -83,7 +76,6 @@ class FileTamperRuleDetail extends AbstractModel
 
     /**
      * @var array 生效主机uuid,空表示全部主机，通过参数可控制返回的条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uuids;
 
@@ -111,19 +103,16 @@ class FileTamperRuleDetail extends AbstractModel
      * @var string 加白处理类型
 <li>cur 仅对当前加白</li>
 <li>all 所有符合条件加白</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AddWhiteType;
 
     /**
      * @param string $Name 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyTime 更新时间
      * @param string $CreateTime 创建时间
      * @param integer $Status 状态 0: 启用 1: 已关闭
      * @param array $Rule 规则
      * @param array $Uuids 生效主机uuid,空表示全部主机，通过参数可控制返回的条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Id 规则id
      * @param integer $IsGlobal 是否全局规则(默认否) 0：否 ，1：是
      * @param integer $Level 风险等级 0：无， 1: 高危， 2:中危， 3: 低危
@@ -131,7 +120,6 @@ class FileTamperRuleDetail extends AbstractModel
      * @param string $AddWhiteType 加白处理类型
 <li>cur 仅对当前加白</li>
 <li>all 所有符合条件加白</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

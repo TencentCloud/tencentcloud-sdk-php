@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccessTypes(array $AccessTypes) 设置公网访问类型
  * @method array getCustomDomainNames() 获取展示自定义域名
  * @method void setCustomDomainNames(array $CustomDomainNames) 设置展示自定义域名
+ * @method string getServerType() 获取服务类型: function 云函数2.0；container 容器服务
+ * @method void setServerType(string $ServerType) 设置服务类型: function 云函数2.0；container 容器服务
+ * @method string getTrafficType() 获取流量类型，目前只有 FLOW
+ * @method void setTrafficType(string $TrafficType) 设置流量类型，目前只有 FLOW
  */
 class ServerBaseInfo extends AbstractModel
 {
@@ -73,6 +77,16 @@ class ServerBaseInfo extends AbstractModel
     public $CustomDomainNames;
 
     /**
+     * @var string 服务类型: function 云函数2.0；container 容器服务
+     */
+    public $ServerType;
+
+    /**
+     * @var string 流量类型，目前只有 FLOW
+     */
+    public $TrafficType;
+
+    /**
      * @param string $ServerName 服务名
      * @param string $DefaultDomainName 默认服务域名
      * @param string $CustomDomainName 自定义域名
@@ -80,6 +94,8 @@ class ServerBaseInfo extends AbstractModel
      * @param string $UpdateTime 更新时间
      * @param array $AccessTypes 公网访问类型
      * @param array $CustomDomainNames 展示自定义域名
+     * @param string $ServerType 服务类型: function 云函数2.0；container 容器服务
+     * @param string $TrafficType 流量类型，目前只有 FLOW
      */
     function __construct()
     {
@@ -120,6 +136,14 @@ class ServerBaseInfo extends AbstractModel
 
         if (array_key_exists("CustomDomainNames",$param) and $param["CustomDomainNames"] !== null) {
             $this->CustomDomainNames = $param["CustomDomainNames"];
+        }
+
+        if (array_key_exists("ServerType",$param) and $param["ServerType"] !== null) {
+            $this->ServerType = $param["ServerType"];
+        }
+
+        if (array_key_exists("TrafficType",$param) and $param["TrafficType"] !== null) {
+            $this->TrafficType = $param["TrafficType"];
         }
     }
 }

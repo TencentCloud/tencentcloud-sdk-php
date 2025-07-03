@@ -20,34 +20,46 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteImages请求参数结构体
  *
- * @method array getImageIds() 获取准备删除的镜像Id列表
- * @method void setImageIds(array $ImageIds) 设置准备删除的镜像Id列表
- * @method boolean getDeleteBindedSnap() 获取是否删除镜像关联的快照
- * @method void setDeleteBindedSnap(boolean $DeleteBindedSnap) 设置是否删除镜像关联的快照
- * @method boolean getDryRun() 获取检测是否支持删除镜像
- * @method void setDryRun(boolean $DryRun) 设置检测是否支持删除镜像
+ * @method array getImageIds() 获取删除的镜像 ID 列表。
+可通过 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) 接口返回值中的`ImageId`获取。
+ * @method void setImageIds(array $ImageIds) 设置删除的镜像 ID 列表。
+可通过 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) 接口返回值中的`ImageId`获取。
+ * @method boolean getDeleteBindedSnap() 获取是否删除镜像关联的快照。
+默认值：false
+ * @method void setDeleteBindedSnap(boolean $DeleteBindedSnap) 设置是否删除镜像关联的快照。
+默认值：false
+ * @method boolean getDryRun() 获取检测是否支持删除镜像。
+默认值：false
+ * @method void setDryRun(boolean $DryRun) 设置检测是否支持删除镜像。
+默认值：false
  */
 class DeleteImagesRequest extends AbstractModel
 {
     /**
-     * @var array 准备删除的镜像Id列表
+     * @var array 删除的镜像 ID 列表。
+可通过 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) 接口返回值中的`ImageId`获取。
      */
     public $ImageIds;
 
     /**
-     * @var boolean 是否删除镜像关联的快照
+     * @var boolean 是否删除镜像关联的快照。
+默认值：false
      */
     public $DeleteBindedSnap;
 
     /**
-     * @var boolean 检测是否支持删除镜像
+     * @var boolean 检测是否支持删除镜像。
+默认值：false
      */
     public $DryRun;
 
     /**
-     * @param array $ImageIds 准备删除的镜像Id列表
-     * @param boolean $DeleteBindedSnap 是否删除镜像关联的快照
-     * @param boolean $DryRun 检测是否支持删除镜像
+     * @param array $ImageIds 删除的镜像 ID 列表。
+可通过 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) 接口返回值中的`ImageId`获取。
+     * @param boolean $DeleteBindedSnap 是否删除镜像关联的快照。
+默认值：false
+     * @param boolean $DryRun 检测是否支持删除镜像。
+默认值：false
      */
     function __construct()
     {

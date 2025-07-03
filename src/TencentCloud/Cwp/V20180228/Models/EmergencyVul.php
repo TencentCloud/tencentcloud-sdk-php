@@ -37,41 +37,23 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getProgress() 获取扫描进度
  * @method void setProgress(integer $Progress) 设置扫描进度
  * @method string getCveId() 获取cve编号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCveId(string $CveId) 设置cve编号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getCvssScore() 获取CVSS评分
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCvssScore(float $CvssScore) 设置CVSS评分
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLabels() 获取漏洞标签 多个逗号分割
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabels(string $Labels) 设置漏洞标签 多个逗号分割
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHostCount() 获取影响机器数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostCount(integer $HostCount) 设置影响机器数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsSupportDefense() 获取是否支持防御， 0:不支持 1:支持
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsSupportDefense(integer $IsSupportDefense) 设置是否支持防御， 0:不支持 1:支持
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDefenseAttackCount() 获取已防御的攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefenseAttackCount(integer $DefenseAttackCount) 设置已防御的攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMethod() 获取检测规则 0 - 版本比对, 1 - POC验证
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMethod(integer $Method) 设置检测规则 0 - 版本比对, 1 - POC验证
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAttackLevel() 获取攻击热度级别
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAttackLevel(integer $AttackLevel) 设置攻击热度级别
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getDefenseState() 获取是否有漏洞主机开启漏洞防御
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefenseState(boolean $DefenseState) 设置是否有漏洞主机开启漏洞防御
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class EmergencyVul extends AbstractModel
 {
@@ -117,55 +99,46 @@ class EmergencyVul extends AbstractModel
 
     /**
      * @var string cve编号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CveId;
 
     /**
      * @var float CVSS评分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CvssScore;
 
     /**
      * @var string 漏洞标签 多个逗号分割
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Labels;
 
     /**
      * @var integer 影响机器数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostCount;
 
     /**
      * @var integer 是否支持防御， 0:不支持 1:支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsSupportDefense;
 
     /**
      * @var integer 已防御的攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DefenseAttackCount;
 
     /**
      * @var integer 检测规则 0 - 版本比对, 1 - POC验证
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Method;
 
     /**
      * @var integer 攻击热度级别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AttackLevel;
 
     /**
      * @var boolean 是否有漏洞主机开启漏洞防御
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DefenseState;
 
@@ -179,23 +152,14 @@ class EmergencyVul extends AbstractModel
      * @param string $LastScanTime 最后扫描时间
      * @param integer $Progress 扫描进度
      * @param string $CveId cve编号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $CvssScore CVSS评分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Labels 漏洞标签 多个逗号分割
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HostCount 影响机器数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsSupportDefense 是否支持防御， 0:不支持 1:支持
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DefenseAttackCount 已防御的攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Method 检测规则 0 - 版本比对, 1 - POC验证
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AttackLevel 攻击热度级别
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $DefenseState 是否有漏洞主机开启漏洞防御
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

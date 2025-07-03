@@ -20,43 +20,51 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 回调地址
  *
- * @method string getUrl() 获取回调地址。最大支持1024个字节数。
- * @method void setUrl(string $Url) 设置回调地址。最大支持1024个字节数。
  * @method string getCallbackType() 获取回调的类型。可选值：
-- WeCom
 - Http
+- WeCom
 - DingTalk
 - Lark
  * @method void setCallbackType(string $CallbackType) 设置回调的类型。可选值：
-- WeCom
 - Http
+- WeCom
 - DingTalk
 - Lark
+ * @method string getUrl() 获取回调地址，最大支持1024个字节。
+也可使用WebCallbackId引用集成配置中的URL，此时该字段请填写为空字符串。
+ * @method void setUrl(string $Url) 设置回调地址，最大支持1024个字节。
+也可使用WebCallbackId引用集成配置中的URL，此时该字段请填写为空字符串。
+ * @method string getWebCallbackId() 获取集成配置ID。
+ * @method void setWebCallbackId(string $WebCallbackId) 设置集成配置ID。
  * @method string getMethod() 获取回调方法。可选值：
 - POST（默认值）
 - PUT
 
 注意：
-- 参数CallbackType为Http时为必选。
-注意：此字段可能返回 null，表示取不到有效值。
+- 参数CallbackType为Http时为必选，其它回调方式无需填写。
  * @method void setMethod(string $Method) 设置回调方法。可选值：
 - POST（默认值）
 - PUT
 
 注意：
-- 参数CallbackType为Http时为必选。
+- 参数CallbackType为Http时为必选，其它回调方式无需填写。
+ * @method string getNoticeContentId() 获取通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。
+ * @method void setNoticeContentId(string $NoticeContentId) 设置通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。
+ * @method integer getRemindType() 获取提醒类型。
+
+0：不提醒；1：指定人；2：所有人
+ * @method void setRemindType(integer $RemindType) 设置提醒类型。
+
+0：不提醒；1：指定人；2：所有人
+ * @method array getMobiles() 获取电话列表。
+ * @method void setMobiles(array $Mobiles) 设置电话列表。
+ * @method array getUserIds() 获取用户ID列表。
+ * @method void setUserIds(array $UserIds) 设置用户ID列表。
+ * @method array getHeaders() 获取该参数已废弃，请使用NoticeContentId。
+ * @method void setHeaders(array $Headers) 设置该参数已废弃，请使用NoticeContentId。
+ * @method string getBody() 获取该参数已废弃，请使用NoticeContentId。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getHeaders() 获取请求头。
-注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求头。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHeaders(array $Headers) 设置请求头。
-注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求头。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBody() 获取请求内容。
-注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求内容。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBody(string $Body) 设置请求内容。
-注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求内容。
+ * @method void setBody(string $Body) 设置该参数已废弃，请使用NoticeContentId。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIndex() 获取序号。
 - 入参无效。
@@ -68,18 +76,24 @@ use TencentCloud\Common\AbstractModel;
 class WebCallback extends AbstractModel
 {
     /**
-     * @var string 回调地址。最大支持1024个字节数。
-     */
-    public $Url;
-
-    /**
      * @var string 回调的类型。可选值：
-- WeCom
 - Http
+- WeCom
 - DingTalk
 - Lark
      */
     public $CallbackType;
+
+    /**
+     * @var string 回调地址，最大支持1024个字节。
+也可使用WebCallbackId引用集成配置中的URL，此时该字段请填写为空字符串。
+     */
+    public $Url;
+
+    /**
+     * @var string 集成配置ID。
+     */
+    public $WebCallbackId;
 
     /**
      * @var string 回调方法。可选值：
@@ -87,22 +101,42 @@ class WebCallback extends AbstractModel
 - PUT
 
 注意：
-- 参数CallbackType为Http时为必选。
-注意：此字段可能返回 null，表示取不到有效值。
+- 参数CallbackType为Http时为必选，其它回调方式无需填写。
      */
     public $Method;
 
     /**
-     * @var array 请求头。
-注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求头。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。
+     */
+    public $NoticeContentId;
+
+    /**
+     * @var integer 提醒类型。
+
+0：不提醒；1：指定人；2：所有人
+     */
+    public $RemindType;
+
+    /**
+     * @var array 电话列表。
+     */
+    public $Mobiles;
+
+    /**
+     * @var array 用户ID列表。
+     */
+    public $UserIds;
+
+    /**
+     * @var array 该参数已废弃，请使用NoticeContentId。
+     * @deprecated
      */
     public $Headers;
 
     /**
-     * @var string 请求内容。
-注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求内容。
+     * @var string 该参数已废弃，请使用NoticeContentId。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $Body;
 
@@ -114,24 +148,28 @@ class WebCallback extends AbstractModel
     public $Index;
 
     /**
-     * @param string $Url 回调地址。最大支持1024个字节数。
      * @param string $CallbackType 回调的类型。可选值：
-- WeCom
 - Http
+- WeCom
 - DingTalk
 - Lark
+     * @param string $Url 回调地址，最大支持1024个字节。
+也可使用WebCallbackId引用集成配置中的URL，此时该字段请填写为空字符串。
+     * @param string $WebCallbackId 集成配置ID。
      * @param string $Method 回调方法。可选值：
 - POST（默认值）
 - PUT
 
 注意：
-- 参数CallbackType为Http时为必选。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Headers 请求头。
-注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求头。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Body 请求内容。
-注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求内容。
+- 参数CallbackType为Http时为必选，其它回调方式无需填写。
+     * @param string $NoticeContentId 通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。
+     * @param integer $RemindType 提醒类型。
+
+0：不提醒；1：指定人；2：所有人
+     * @param array $Mobiles 电话列表。
+     * @param array $UserIds 用户ID列表。
+     * @param array $Headers 该参数已废弃，请使用NoticeContentId。
+     * @param string $Body 该参数已废弃，请使用NoticeContentId。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Index 序号。
 - 入参无效。
@@ -150,16 +188,36 @@ class WebCallback extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
-        }
-
         if (array_key_exists("CallbackType",$param) and $param["CallbackType"] !== null) {
             $this->CallbackType = $param["CallbackType"];
         }
 
+        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
+            $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("WebCallbackId",$param) and $param["WebCallbackId"] !== null) {
+            $this->WebCallbackId = $param["WebCallbackId"];
+        }
+
         if (array_key_exists("Method",$param) and $param["Method"] !== null) {
             $this->Method = $param["Method"];
+        }
+
+        if (array_key_exists("NoticeContentId",$param) and $param["NoticeContentId"] !== null) {
+            $this->NoticeContentId = $param["NoticeContentId"];
+        }
+
+        if (array_key_exists("RemindType",$param) and $param["RemindType"] !== null) {
+            $this->RemindType = $param["RemindType"];
+        }
+
+        if (array_key_exists("Mobiles",$param) and $param["Mobiles"] !== null) {
+            $this->Mobiles = $param["Mobiles"];
+        }
+
+        if (array_key_exists("UserIds",$param) and $param["UserIds"] !== null) {
+            $this->UserIds = $param["UserIds"];
         }
 
         if (array_key_exists("Headers",$param) and $param["Headers"] !== null) {

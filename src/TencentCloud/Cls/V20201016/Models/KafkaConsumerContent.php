@@ -41,7 +41,6 @@ TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 平铺示例：
 TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 平铺：`{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagTransaction(integer $TagTransaction) 设置tag数据处理方式：1:不平铺（默认值）；2:平铺。
 
 不平铺示例：
@@ -51,7 +50,6 @@ TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 平铺示例：
 TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 平铺：`{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getJsonType() 获取消费数据Json格式：
 1：不转义（默认格式）
 2：转义
@@ -107,7 +105,6 @@ TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 平铺示例：
 TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 平铺：`{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagTransaction;
 
@@ -143,7 +140,6 @@ TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 平铺示例：
 TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 平铺：`{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $JsonType 消费数据Json格式：
 1：不转义（默认格式）
 2：转义

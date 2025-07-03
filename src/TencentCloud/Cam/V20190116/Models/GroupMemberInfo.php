@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置创建时间。
  * @method integer getIsReceiverOwner() 获取是否为主消息接收人。0-否 1-是
  * @method void setIsReceiverOwner(integer $IsReceiverOwner) 设置是否为主消息接收人。0-否 1-是
+ * @method string getRemark() 获取昵称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRemark(string $Remark) 设置昵称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class GroupMemberInfo extends AbstractModel
 {
@@ -101,6 +105,12 @@ class GroupMemberInfo extends AbstractModel
     public $IsReceiverOwner;
 
     /**
+     * @var string 昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Remark;
+
+    /**
      * @param integer $Uid 子用户 Uid。
      * @param integer $Uin 子用户 Uin。
      * @param string $Name 子用户名称。
@@ -112,6 +122,8 @@ class GroupMemberInfo extends AbstractModel
      * @param integer $UserType 用户类型。1-全局协作者 2-项目协作者 3-消息接收者
      * @param string $CreateTime 创建时间。
      * @param integer $IsReceiverOwner 是否为主消息接收人。0-否 1-是
+     * @param string $Remark 昵称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -168,6 +180,10 @@ class GroupMemberInfo extends AbstractModel
 
         if (array_key_exists("IsReceiverOwner",$param) and $param["IsReceiverOwner"] !== null) {
             $this->IsReceiverOwner = $param["IsReceiverOwner"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
         }
     }
 }

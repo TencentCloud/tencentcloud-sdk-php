@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTotalCount() 获取符合要求的所有AppId数量
  * @method void setTotalCount(integer $TotalCount) 设置符合要求的所有AppId数量
  * @method array getAppIdList() 获取符合要求的App Id列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppIdList(array $AppIdList) 设置符合要求的App Id列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AppIdResponse extends AbstractModel
 {
@@ -36,14 +34,12 @@ class AppIdResponse extends AbstractModel
 
     /**
      * @var array 符合要求的App Id列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppIdList;
 
     /**
      * @param integer $TotalCount 符合要求的所有AppId数量
      * @param array $AppIdList 符合要求的App Id列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

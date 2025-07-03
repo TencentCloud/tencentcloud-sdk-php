@@ -29,7 +29,15 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTimestamp() 获取时间，用户选择自定义时间类型时，需要指定时间
  * @method void setTimestamp(integer $Timestamp) 设置时间，用户选择自定义时间类型时，需要指定时间
  * @method array getEventIDs() 获取事件ID过滤列表
+	
+选填，为空表示不做过滤
+支持正向过滤单个值（例：20）或范围（例：0-20），也支持反向过滤单个值(例：-20)
+多个过滤项之间可由逗号隔开，例：1-200,-100表示采集1-200范围内除了100以外的事件日志
  * @method void setEventIDs(array $EventIDs) 设置事件ID过滤列表
+	
+选填，为空表示不做过滤
+支持正向过滤单个值（例：20）或范围（例：0-20），也支持反向过滤单个值(例：-20)
+多个过滤项之间可由逗号隔开，例：1-200,-100表示采集1-200范围内除了100以外的事件日志
  */
 class EventLog extends AbstractModel
 {
@@ -51,6 +59,10 @@ class EventLog extends AbstractModel
 
     /**
      * @var array 事件ID过滤列表
+	
+选填，为空表示不做过滤
+支持正向过滤单个值（例：20）或范围（例：0-20），也支持反向过滤单个值(例：-20)
+多个过滤项之间可由逗号隔开，例：1-200,-100表示采集1-200范围内除了100以外的事件日志
      */
     public $EventIDs;
 
@@ -60,6 +72,10 @@ class EventLog extends AbstractModel
      * @param integer $TimeType 时间类型，1:用户自定义，2:当前时间
      * @param integer $Timestamp 时间，用户选择自定义时间类型时，需要指定时间
      * @param array $EventIDs 事件ID过滤列表
+	
+选填，为空表示不做过滤
+支持正向过滤单个值（例：20）或范围（例：0-20），也支持反向过滤单个值(例：-20)
+多个过滤项之间可由逗号隔开，例：1-200,-100表示采集1-200范围内除了100以外的事件日志
      */
     function __construct()
     {

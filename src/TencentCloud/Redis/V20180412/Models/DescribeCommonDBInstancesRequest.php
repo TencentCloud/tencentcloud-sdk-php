@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetIds(array $SubnetIds) 设置子网ID信息列表
  * @method integer getPayMode() 获取计费类型过滤列表；0表示包年包月，1表示按量计费
  * @method void setPayMode(integer $PayMode) 设置计费类型过滤列表；0表示包年包月，1表示按量计费
- * @method array getInstanceIds() 获取实例ID过滤信息列表
- * @method void setInstanceIds(array $InstanceIds) 设置实例ID过滤信息列表
+ * @method array getInstanceIds() 获取实例ID过滤信息列表，数组最大长度限制为100
+ * @method void setInstanceIds(array $InstanceIds) 设置实例ID过滤信息列表，数组最大长度限制为100
  * @method array getInstanceNames() 获取实例名称过滤信息列表
  * @method void setInstanceNames(array $InstanceNames) 设置实例名称过滤信息列表
  * @method array getStatus() 获取实例状态信息过滤列表
@@ -65,7 +65,7 @@ class DescribeCommonDBInstancesRequest extends AbstractModel
     public $PayMode;
 
     /**
-     * @var array 实例ID过滤信息列表
+     * @var array 实例ID过滤信息列表，数组最大长度限制为100
      */
     public $InstanceIds;
 
@@ -118,7 +118,7 @@ class DescribeCommonDBInstancesRequest extends AbstractModel
      * @param array $VpcIds vpc网络ID信息列表
      * @param array $SubnetIds 子网ID信息列表
      * @param integer $PayMode 计费类型过滤列表；0表示包年包月，1表示按量计费
-     * @param array $InstanceIds 实例ID过滤信息列表
+     * @param array $InstanceIds 实例ID过滤信息列表，数组最大长度限制为100
      * @param array $InstanceNames 实例名称过滤信息列表
      * @param array $Status 实例状态信息过滤列表
      * @param string $OrderBy 排序字段

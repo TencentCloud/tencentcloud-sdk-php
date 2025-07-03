@@ -28,9 +28,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContent(string $Content) 设置集成内容
  * @method string getDescription() 获取集成描述
  * @method void setDescription(string $Description) 设置集成描述
- * @method string getGrafanaURL() 获取Grafana 跳转地址
+ * @method string getGrafanaURL() 获取Grafana 跳转地址(目前未使用，默认为空)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGrafanaURL(string $GrafanaURL) 设置Grafana 跳转地址
+ * @method void setGrafanaURL(string $GrafanaURL) 设置Grafana 跳转地址(目前未使用，默认为空)
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class GrafanaIntegrationConfig extends AbstractModel
@@ -56,7 +56,7 @@ class GrafanaIntegrationConfig extends AbstractModel
     public $Description;
 
     /**
-     * @var string Grafana 跳转地址
+     * @var string Grafana 跳转地址(目前未使用，默认为空)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GrafanaURL;
@@ -66,7 +66,7 @@ class GrafanaIntegrationConfig extends AbstractModel
      * @param string $Kind 集成类型
      * @param string $Content 集成内容
      * @param string $Description 集成描述
-     * @param string $GrafanaURL Grafana 跳转地址
+     * @param string $GrafanaURL Grafana 跳转地址(目前未使用，默认为空)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

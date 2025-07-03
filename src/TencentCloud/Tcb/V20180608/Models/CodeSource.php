@@ -21,129 +21,89 @@ use TencentCloud\Common\AbstractModel;
  * 云开发项目来源
  *
  * @method string getType() 获取类型, 可能的枚举: "coding","package","package_url","github","gitlab","gitee","rawcode"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置类型, 可能的枚举: "coding","package","package_url","github","gitlab","gitee","rawcode"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUrl() 获取下载链接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUrl(string $Url) 设置下载链接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWorkDir() 获取工作目录
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWorkDir(string $WorkDir) 设置工作目录
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCodingPackageName() 获取code包名, type为coding的时候需要填写
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCodingPackageName(string $CodingPackageName) 设置code包名, type为coding的时候需要填写
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCodingPackageVersion() 获取coding版本名, type为coding的时候需要填写
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCodingPackageVersion(string $CodingPackageVersion) 设置coding版本名, type为coding的时候需要填写
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRawCode() 获取源码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRawCode(string $RawCode) 设置源码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBranch() 获取代码分支
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBranch(string $Branch) 设置代码分支
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProjectId() 获取coding项目ID，type为coding时需要填写
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectId(integer $ProjectId) 设置coding项目ID，type为coding时需要填写
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProjectName() 获取coding项目
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectName(string $ProjectName) 设置coding项目
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CodeSource extends AbstractModel
 {
     /**
      * @var string 类型, 可能的枚举: "coding","package","package_url","github","gitlab","gitee","rawcode"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 下载链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Url;
 
     /**
      * @var string 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 工作目录
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkDir;
 
     /**
      * @var string code包名, type为coding的时候需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CodingPackageName;
 
     /**
      * @var string coding版本名, type为coding的时候需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CodingPackageVersion;
 
     /**
      * @var string 源码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RawCode;
 
     /**
      * @var string 代码分支
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Branch;
 
     /**
      * @var integer coding项目ID，type为coding时需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectId;
 
     /**
      * @var string coding项目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectName;
 
     /**
      * @param string $Type 类型, 可能的枚举: "coding","package","package_url","github","gitlab","gitee","rawcode"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Url 下载链接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WorkDir 工作目录
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CodingPackageName code包名, type为coding的时候需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CodingPackageVersion coding版本名, type为coding的时候需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RawCode 源码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Branch 代码分支
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProjectId coding项目ID，type为coding时需要填写
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectName coding项目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

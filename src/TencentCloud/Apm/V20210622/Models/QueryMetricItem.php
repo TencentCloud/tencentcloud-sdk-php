@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getMetricName() 获取指标名
  * @method void setMetricName(string $MetricName) 设置指标名
+ * @method array getCompares() 获取同比，现支持 CompareByYesterday (与昨天相比)和CompareByLastWeek (与上周相比) 
+ * @method void setCompares(array $Compares) 设置同比，现支持 CompareByYesterday (与昨天相比)和CompareByLastWeek (与上周相比) 
  * @method string getCompare() 获取同比，已弃用，不建议使用
  * @method void setCompare(string $Compare) 设置同比，已弃用，不建议使用
- * @method array getCompares() 获取同比，支持多种同比方式
- * @method void setCompares(array $Compares) 设置同比，支持多种同比方式
  */
 class QueryMetricItem extends AbstractModel
 {
@@ -35,19 +35,19 @@ class QueryMetricItem extends AbstractModel
     public $MetricName;
 
     /**
+     * @var array 同比，现支持 CompareByYesterday (与昨天相比)和CompareByLastWeek (与上周相比) 
+     */
+    public $Compares;
+
+    /**
      * @var string 同比，已弃用，不建议使用
      */
     public $Compare;
 
     /**
-     * @var array 同比，支持多种同比方式
-     */
-    public $Compares;
-
-    /**
      * @param string $MetricName 指标名
+     * @param array $Compares 同比，现支持 CompareByYesterday (与昨天相比)和CompareByLastWeek (与上周相比) 
      * @param string $Compare 同比，已弃用，不建议使用
-     * @param array $Compares 同比，支持多种同比方式
      */
     function __construct()
     {
@@ -66,12 +66,12 @@ class QueryMetricItem extends AbstractModel
             $this->MetricName = $param["MetricName"];
         }
 
-        if (array_key_exists("Compare",$param) and $param["Compare"] !== null) {
-            $this->Compare = $param["Compare"];
-        }
-
         if (array_key_exists("Compares",$param) and $param["Compares"] !== null) {
             $this->Compares = $param["Compares"];
+        }
+
+        if (array_key_exists("Compare",$param) and $param["Compare"] !== null) {
+            $this->Compare = $param["Compare"];
         }
     }
 }

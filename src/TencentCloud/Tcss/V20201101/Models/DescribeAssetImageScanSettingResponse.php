@@ -43,9 +43,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getScanEndTime() 获取扫描结束时间 02:00 时分
  * @method void setScanEndTime(string $ScanEndTime) 设置扫描结束时间 02:00 时分
  * @method array getExcludeImages() 获取排除的扫描镜像
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExcludeImages(array $ExcludeImages) 设置排除的扫描镜像
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLastScanTime() 获取最后一次扫描时间
+ * @method void setLastScanTime(string $LastScanTime) 设置最后一次扫描时间
+ * @method string getScanResult() 获取扫描结果(Success|InsufficientLicense|ImageNeedIsEmpty|InternalError)
+ * @method void setScanResult(string $ScanResult) 设置扫描结果(Success|InsufficientLicense|ImageNeedIsEmpty|InternalError)
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -109,9 +111,18 @@ class DescribeAssetImageScanSettingResponse extends AbstractModel
 
     /**
      * @var array 排除的扫描镜像
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExcludeImages;
+
+    /**
+     * @var string 最后一次扫描时间
+     */
+    public $LastScanTime;
+
+    /**
+     * @var string 扫描结果(Success|InsufficientLicense|ImageNeedIsEmpty|InternalError)
+     */
+    public $ScanResult;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -131,7 +142,8 @@ class DescribeAssetImageScanSettingResponse extends AbstractModel
      * @param integer $ScanScope 扫描范围 0 全部授权镜像，1自选镜像，2 推荐扫描
      * @param string $ScanEndTime 扫描结束时间 02:00 时分
      * @param array $ExcludeImages 排除的扫描镜像
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LastScanTime 最后一次扫描时间
+     * @param string $ScanResult 扫描结果(Success|InsufficientLicense|ImageNeedIsEmpty|InternalError)
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -193,6 +205,14 @@ class DescribeAssetImageScanSettingResponse extends AbstractModel
 
         if (array_key_exists("ExcludeImages",$param) and $param["ExcludeImages"] !== null) {
             $this->ExcludeImages = $param["ExcludeImages"];
+        }
+
+        if (array_key_exists("LastScanTime",$param) and $param["LastScanTime"] !== null) {
+            $this->LastScanTime = $param["LastScanTime"];
+        }
+
+        if (array_key_exists("ScanResult",$param) and $param["ScanResult"] !== null) {
+            $this->ScanResult = $param["ScanResult"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

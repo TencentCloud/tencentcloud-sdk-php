@@ -23,13 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method array getClusterParamList() 获取集群参数修改数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterParamList(array $ClusterParamList) 设置集群参数修改数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getModifyInstanceParams() 获取实例参数修改数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyInstanceParams(array $ModifyInstanceParams) 设置实例参数修改数据
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BizTaskModifyParamsData extends AbstractModel
 {
@@ -40,22 +36,18 @@ class BizTaskModifyParamsData extends AbstractModel
 
     /**
      * @var array 集群参数修改数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterParamList;
 
     /**
      * @var array 实例参数修改数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyInstanceParams;
 
     /**
      * @param string $ClusterId 集群ID
      * @param array $ClusterParamList 集群参数修改数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ModifyInstanceParams 实例参数修改数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

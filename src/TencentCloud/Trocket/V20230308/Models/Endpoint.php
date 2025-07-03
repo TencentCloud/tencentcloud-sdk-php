@@ -20,14 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 接入点信息
  *
- * @method string getType() 获取接入点类型，枚举值如下
-VPC: VPC;
-PUBLIC: 公网;
-INTERNAL: 支撑网;
- * @method void setType(string $Type) 设置接入点类型，枚举值如下
-VPC: VPC;
-PUBLIC: 公网;
-INTERNAL: 支撑网;
+ * @method string getType() 获取接入点类型，枚举值如下：
+
+- VPC：VPC 网络
+
+- PUBLIC：公网
+
+- INTERNAL：支撑网
+ * @method void setType(string $Type) 设置接入点类型，枚举值如下：
+
+- VPC：VPC 网络
+
+- PUBLIC：公网
+
+- INTERNAL：支撑网
  * @method string getStatus() 获取状态，
 OPEN 开启，
 CLOSE 关闭，
@@ -64,14 +70,21 @@ POSTPAID 按量付费
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpRules(array $IpRules) 设置公网放通规则
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getBillingFlow() 获取公网是否按流量计费
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBillingFlow(boolean $BillingFlow) 设置公网是否按流量计费
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Endpoint extends AbstractModel
 {
     /**
-     * @var string 接入点类型，枚举值如下
-VPC: VPC;
-PUBLIC: 公网;
-INTERNAL: 支撑网;
+     * @var string 接入点类型，枚举值如下：
+
+- VPC：VPC 网络
+
+- PUBLIC：公网
+
+- INTERNAL：支撑网
      */
     public $Type;
 
@@ -122,10 +135,19 @@ POSTPAID 按量付费
     public $IpRules;
 
     /**
-     * @param string $Type 接入点类型，枚举值如下
-VPC: VPC;
-PUBLIC: 公网;
-INTERNAL: 支撑网;
+     * @var boolean 公网是否按流量计费
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BillingFlow;
+
+    /**
+     * @param string $Type 接入点类型，枚举值如下：
+
+- VPC：VPC 网络
+
+- PUBLIC：公网
+
+- INTERNAL：支撑网
      * @param string $Status 状态，
 OPEN 开启，
 CLOSE 关闭，
@@ -143,6 +165,8 @@ POSTPAID 按量付费
      * @param integer $Bandwidth 公网带宽，Mbps为单位
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $IpRules 公网放通规则
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $BillingFlow 公网是否按流量计费
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -193,6 +217,10 @@ POSTPAID 按量付费
                 $obj->deserialize($value);
                 array_push($this->IpRules, $obj);
             }
+        }
+
+        if (array_key_exists("BillingFlow",$param) and $param["BillingFlow"] !== null) {
+            $this->BillingFlow = $param["BillingFlow"];
         }
     }
 }

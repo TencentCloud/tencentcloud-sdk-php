@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInCharge(string $InCharge) 设置1
  * @method string getWorkflowId() 获取工作流ID
  * @method void setWorkflowId(string $WorkflowId) 设置工作流ID
+ * @method array getProjectIds() 获取项目ID列表，如果传了 ProjectIds ，ProjectId 不会生效
+ * @method void setProjectIds(array $ProjectIds) 设置项目ID列表，如果传了 ProjectIds ，ProjectId 不会生效
+ * @method array getResourceGroupIds() 获取资源组ID筛选
+ * @method void setResourceGroupIds(array $ResourceGroupIds) 设置资源组ID筛选
  */
 class DescribeSchedulerTaskCntByStatusRequest extends AbstractModel
 {
@@ -59,11 +63,23 @@ class DescribeSchedulerTaskCntByStatusRequest extends AbstractModel
     public $WorkflowId;
 
     /**
+     * @var array 项目ID列表，如果传了 ProjectIds ，ProjectId 不会生效
+     */
+    public $ProjectIds;
+
+    /**
+     * @var array 资源组ID筛选
+     */
+    public $ResourceGroupIds;
+
+    /**
      * @param integer $TaskType 1
      * @param string $TypeName Y
      * @param string $ProjectId 111
      * @param string $InCharge 1
      * @param string $WorkflowId 工作流ID
+     * @param array $ProjectIds 项目ID列表，如果传了 ProjectIds ，ProjectId 不会生效
+     * @param array $ResourceGroupIds 资源组ID筛选
      */
     function __construct()
     {
@@ -96,6 +112,14 @@ class DescribeSchedulerTaskCntByStatusRequest extends AbstractModel
 
         if (array_key_exists("WorkflowId",$param) and $param["WorkflowId"] !== null) {
             $this->WorkflowId = $param["WorkflowId"];
+        }
+
+        if (array_key_exists("ProjectIds",$param) and $param["ProjectIds"] !== null) {
+            $this->ProjectIds = $param["ProjectIds"];
+        }
+
+        if (array_key_exists("ResourceGroupIds",$param) and $param["ResourceGroupIds"] !== null) {
+            $this->ResourceGroupIds = $param["ResourceGroupIds"];
         }
     }
 }

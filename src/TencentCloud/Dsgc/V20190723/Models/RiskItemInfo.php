@@ -23,81 +23,43 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getId() 获取最新风险项id
  * @method void setId(integer $Id) 设置最新风险项id
  * @method string getDataSourceId() 获取数据源id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataSourceId(string $DataSourceId) 设置数据源id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDataSourceName() 获取数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataSourceName(string $DataSourceName) 设置数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDataSourceType() 获取数据源类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataSourceType(string $DataSourceType) 设置数据源类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceRegion() 获取资源地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceRegion(string $ResourceRegion) 设置资源地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAssetName() 获取资产名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssetName(string $AssetName) 设置资产名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRiskType() 获取风险类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskType(string $RiskType) 设置风险类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRiskName() 获取风险项
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskName(string $RiskName) 设置风险项
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRiskLevel() 获取风险级别
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskLevel(string $RiskLevel) 设置风险级别
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRiskDescription() 获取风险描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskDescription(string $RiskDescription) 设置风险描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSuggestAction() 获取建议措施
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSuggestAction(string $SuggestAction) 设置建议措施
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSecurityProduct() 获取安全产品（可能有多个）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecurityProduct(array $SecurityProduct) 设置安全产品（可能有多个）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取状态(waiting:待处理，processing:处理中，finished:已处理，ignored:已忽略)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置状态(waiting:待处理，processing:处理中，finished:已处理，ignored:已忽略)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getScanTime() 获取扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScanTime(string $ScanTime) 设置扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLastProcessTime() 获取最后处置时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastProcessTime(string $LastProcessTime) 设置最后处置时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIdentifyComplianceId() 获取分类分级合规组Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIdentifyComplianceId(integer $IdentifyComplianceId) 设置分类分级合规组Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getItemSubType() 获取类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setItemSubType(string $ItemSubType) 设置类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRiskSide() 获取风险面
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskSide(string $RiskSide) 设置风险面
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAPIRiskLinkURL() 获取API安全风险链接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAPIRiskLinkURL(string $APIRiskLinkURL) 设置API安全风险链接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRemark() 获取备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置备注
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RiskItemInfo extends AbstractModel
 {
@@ -108,158 +70,120 @@ class RiskItemInfo extends AbstractModel
 
     /**
      * @var string 数据源id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataSourceId;
 
     /**
      * @var string 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataSourceName;
 
     /**
      * @var string 数据源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataSourceType;
 
     /**
      * @var string 资源地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceRegion;
 
     /**
      * @var string 资产名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AssetName;
 
     /**
      * @var string 风险类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskType;
 
     /**
      * @var string 风险项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskName;
 
     /**
      * @var string 风险级别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskLevel;
 
     /**
      * @var string 风险描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskDescription;
 
     /**
      * @var string 建议措施
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SuggestAction;
 
     /**
      * @var array 安全产品（可能有多个）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecurityProduct;
 
     /**
      * @var integer 状态(waiting:待处理，processing:处理中，finished:已处理，ignored:已忽略)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScanTime;
 
     /**
      * @var string 最后处置时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastProcessTime;
 
     /**
      * @var integer 分类分级合规组Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IdentifyComplianceId;
 
     /**
      * @var string 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ItemSubType;
 
     /**
      * @var string 风险面
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskSide;
 
     /**
      * @var string API安全风险链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $APIRiskLinkURL;
 
     /**
      * @var string 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
     /**
      * @param integer $Id 最新风险项id
      * @param string $DataSourceId 数据源id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataSourceName 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataSourceType 数据源类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceRegion 资源地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AssetName 资产名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RiskType 风险类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RiskName 风险项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RiskLevel 风险级别
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RiskDescription 风险描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SuggestAction 建议措施
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SecurityProduct 安全产品（可能有多个）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 状态(waiting:待处理，processing:处理中，finished:已处理，ignored:已忽略)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScanTime 扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastProcessTime 最后处置时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IdentifyComplianceId 分类分级合规组Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ItemSubType 类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RiskSide 风险面
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $APIRiskLinkURL API安全风险链接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Remark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

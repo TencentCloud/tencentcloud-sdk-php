@@ -120,6 +120,7 @@ class CreateProjectRequest extends AbstractModel
     /**
      * @var string 画布宽高比。
 该字段已经废弃，请使用具体项目输入中的 AspectRatio 字段。
+     * @deprecated
      */
     public $AspectRatio;
 

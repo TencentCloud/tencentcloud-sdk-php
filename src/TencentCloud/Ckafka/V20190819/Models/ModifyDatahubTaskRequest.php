@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(string $TaskId) 设置任务id
  * @method string getTaskName() 获取任务名称
  * @method void setTaskName(string $TaskName) 设置任务名称
+ * @method string getDescription() 获取任务描述信息
+ * @method void setDescription(string $Description) 设置任务描述信息
  */
 class ModifyDatahubTaskRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ModifyDatahubTaskRequest extends AbstractModel
     public $TaskName;
 
     /**
+     * @var string 任务描述信息
+     */
+    public $Description;
+
+    /**
      * @param string $TaskId 任务id
      * @param string $TaskName 任务名称
+     * @param string $Description 任务描述信息
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ModifyDatahubTaskRequest extends AbstractModel
 
         if (array_key_exists("TaskName",$param) and $param["TaskName"] !== null) {
             $this->TaskName = $param["TaskName"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

@@ -39,29 +39,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getVpcWebConsoleEndpoint() 获取Vpc管控台访问地址，示例值，http://1.1.1.1:15672
  * @method void setVpcWebConsoleEndpoint(string $VpcWebConsoleEndpoint) 设置Vpc管控台访问地址，示例值，http://1.1.1.1:15672
  * @method string getPublicWebConsoleSwitchStatus() 获取公网管控台开关状态，示例值，OFF/ON/CREATING/DELETING
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicWebConsoleSwitchStatus(string $PublicWebConsoleSwitchStatus) 设置公网管控台开关状态，示例值，OFF/ON/CREATING/DELETING
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVpcWebConsoleSwitchStatus() 获取Vpc管控台开关状态，示例值，
 OFF/ON/CREATING/DELETING
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcWebConsoleSwitchStatus(string $VpcWebConsoleSwitchStatus) 设置Vpc管控台开关状态，示例值，
 OFF/ON/CREATING/DELETING
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPublicDataStreamStatus() 获取公网管控台开关状态，示例值，OFF/ON/CREATING/DELETING
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicDataStreamStatus(string $PublicDataStreamStatus) 设置公网管控台开关状态，示例值，OFF/ON/CREATING/DELETING
-注意：此字段可能返回 null，表示取不到有效值。
  * @method PrometheusEndpointInfo getPrometheusEndpointInfo() 获取Prometheus信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrometheusEndpointInfo(PrometheusEndpointInfo $PrometheusEndpointInfo) 设置Prometheus信息
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getWebConsoleDomainEndpoint() 获取http://amqp-k3eb47gm.dashboard.rabbitmq.cq.public.tencenttdmq.com:15672/
-公网域名接入点
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWebConsoleDomainEndpoint(string $WebConsoleDomainEndpoint) 设置http://amqp-k3eb47gm.dashboard.rabbitmq.cq.public.tencenttdmq.com:15672/
-公网域名接入点
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getWebConsoleDomainEndpoint() 获取公网域名接入点
+ * @method void setWebConsoleDomainEndpoint(string $WebConsoleDomainEndpoint) 设置公网域名接入点
+ * @method VpcEndpointInfo getControlPlaneEndpointInfo() 获取控制面所使用的VPC信息
+ * @method void setControlPlaneEndpointInfo(VpcEndpointInfo $ControlPlaneEndpointInfo) 设置控制面所使用的VPC信息
  */
 class RabbitMQClusterAccessInfo extends AbstractModel
 {
@@ -108,35 +98,34 @@ class RabbitMQClusterAccessInfo extends AbstractModel
 
     /**
      * @var string 公网管控台开关状态，示例值，OFF/ON/CREATING/DELETING
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicWebConsoleSwitchStatus;
 
     /**
      * @var string Vpc管控台开关状态，示例值，
 OFF/ON/CREATING/DELETING
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcWebConsoleSwitchStatus;
 
     /**
      * @var string 公网管控台开关状态，示例值，OFF/ON/CREATING/DELETING
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicDataStreamStatus;
 
     /**
      * @var PrometheusEndpointInfo Prometheus信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PrometheusEndpointInfo;
 
     /**
-     * @var string http://amqp-k3eb47gm.dashboard.rabbitmq.cq.public.tencenttdmq.com:15672/
-公网域名接入点
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 公网域名接入点
      */
     public $WebConsoleDomainEndpoint;
+
+    /**
+     * @var VpcEndpointInfo 控制面所使用的VPC信息
+     */
+    public $ControlPlaneEndpointInfo;
 
     /**
      * @param string $PublicAccessEndpoint 集群公网接入地址
@@ -149,17 +138,12 @@ OFF/ON/CREATING/DELETING
      * @param boolean $VpcControlConsoleSwitchStatus 已废弃
      * @param string $VpcWebConsoleEndpoint Vpc管控台访问地址，示例值，http://1.1.1.1:15672
      * @param string $PublicWebConsoleSwitchStatus 公网管控台开关状态，示例值，OFF/ON/CREATING/DELETING
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcWebConsoleSwitchStatus Vpc管控台开关状态，示例值，
 OFF/ON/CREATING/DELETING
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PublicDataStreamStatus 公网管控台开关状态，示例值，OFF/ON/CREATING/DELETING
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PrometheusEndpointInfo $PrometheusEndpointInfo Prometheus信息
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $WebConsoleDomainEndpoint http://amqp-k3eb47gm.dashboard.rabbitmq.cq.public.tencenttdmq.com:15672/
-公网域名接入点
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $WebConsoleDomainEndpoint 公网域名接入点
+     * @param VpcEndpointInfo $ControlPlaneEndpointInfo 控制面所使用的VPC信息
      */
     function __construct()
     {
@@ -225,6 +209,11 @@ OFF/ON/CREATING/DELETING
 
         if (array_key_exists("WebConsoleDomainEndpoint",$param) and $param["WebConsoleDomainEndpoint"] !== null) {
             $this->WebConsoleDomainEndpoint = $param["WebConsoleDomainEndpoint"];
+        }
+
+        if (array_key_exists("ControlPlaneEndpointInfo",$param) and $param["ControlPlaneEndpointInfo"] !== null) {
+            $this->ControlPlaneEndpointInfo = new VpcEndpointInfo();
+            $this->ControlPlaneEndpointInfo->deserialize($param["ControlPlaneEndpointInfo"]);
         }
     }
 }

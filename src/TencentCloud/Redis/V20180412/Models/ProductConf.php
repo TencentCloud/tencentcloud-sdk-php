@@ -81,11 +81,9 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getEnableReplicaReadOnly() 获取是否支持副本只读。
 - true：支持副本只读。
 - false：不支持。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableReplicaReadOnly(boolean $EnableReplicaReadOnly) 设置是否支持副本只读。
 - true：支持副本只读。
 - false：不支持。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProductConf extends AbstractModel
 {
@@ -167,6 +165,7 @@ class ProductConf extends AbstractModel
      * @var boolean 该参数名因存在拼写不规范的问题，建议使用**EnableReplicaReadOnly**参数取代。其含义为是否支持副本只读。
 - true：支持副本只读。
 - false：不支持。
+     * @deprecated
      */
     public $EnableRepicaReadOnly;
 
@@ -174,7 +173,6 @@ class ProductConf extends AbstractModel
      * @var boolean 是否支持副本只读。
 - true：支持副本只读。
 - false：不支持。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableReplicaReadOnly;
 
@@ -211,7 +209,6 @@ class ProductConf extends AbstractModel
      * @param boolean $EnableReplicaReadOnly 是否支持副本只读。
 - true：支持副本只读。
 - false：不支持。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

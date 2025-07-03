@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getInstanceStatus() 获取实例状态
  * @method void setInstanceStatus(integer $InstanceStatus) 设置实例状态
  * @method string getShardId() 获取分片ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setShardId(string $ShardId) 设置分片ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFilePath() 获取文件路径
  * @method void setFilePath(string $FilePath) 设置文件路径
  * @method string getFileName() 获取文件名
@@ -66,7 +64,6 @@ class InstanceBackupFileItem extends AbstractModel
 
     /**
      * @var string 分片ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ShardId;
 
@@ -115,7 +112,6 @@ class InstanceBackupFileItem extends AbstractModel
      * @param string $InstanceName 实例名称
      * @param integer $InstanceStatus 实例状态
      * @param string $ShardId 分片ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FilePath 文件路径
      * @param string $FileName 文件名
      * @param integer $FileSize 文件大小

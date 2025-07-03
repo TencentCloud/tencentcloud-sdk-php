@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 泳道分页查询
  *
  * @method integer getTotalCount() 获取总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getContent() 获取泳道信息列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContent(array $Content) 设置泳道信息列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class LaneInfos extends AbstractModel
 {
     /**
      * @var integer 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
      * @var array 泳道信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Content;
 
     /**
      * @param integer $TotalCount 总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Content 泳道信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

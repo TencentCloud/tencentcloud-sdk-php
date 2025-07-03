@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * Clb-waf地域信息
  *
  * @method string getId() 获取地域ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(string $Id) 设置地域ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getText() 获取地域中文说明
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setText(string $Text) 设置地域中文说明
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取地域英文全拼
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置地域英文全拼
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCode() 获取地域编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCode(string $Code) 设置地域编码
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClbWafRegionItem extends AbstractModel
 {
     /**
      * @var string 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var string 地域中文说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Text;
 
     /**
      * @var string 地域英文全拼
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @var string 地域编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Code;
 
     /**
      * @param string $Id 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Text 地域中文说明
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 地域英文全拼
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Code 地域编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

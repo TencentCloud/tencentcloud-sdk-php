@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(string $ProjectId) 设置项目ID
  * @method string getPlanId() 获取补录计划ID
  * @method void setPlanId(string $PlanId) 设置补录计划ID
+ * @method array getStateList() 获取实例状态过滤条件
+ * @method void setStateList(array $StateList) 设置实例状态过滤条件
  * @method integer getPageNumber() 获取分页页码，默认值1
  * @method void setPageNumber(integer $PageNumber) 设置分页页码，默认值1
  * @method integer getPageSize() 获取分页大小，默认值10
@@ -42,6 +44,11 @@ class DescribeOpsMakePlanTasksRequest extends AbstractModel
     public $PlanId;
 
     /**
+     * @var array 实例状态过滤条件
+     */
+    public $StateList;
+
+    /**
      * @var integer 分页页码，默认值1
      */
     public $PageNumber;
@@ -54,6 +61,7 @@ class DescribeOpsMakePlanTasksRequest extends AbstractModel
     /**
      * @param string $ProjectId 项目ID
      * @param string $PlanId 补录计划ID
+     * @param array $StateList 实例状态过滤条件
      * @param integer $PageNumber 分页页码，默认值1
      * @param integer $PageSize 分页大小，默认值10
      */
@@ -76,6 +84,10 @@ class DescribeOpsMakePlanTasksRequest extends AbstractModel
 
         if (array_key_exists("PlanId",$param) and $param["PlanId"] !== null) {
             $this->PlanId = $param["PlanId"];
+        }
+
+        if (array_key_exists("StateList",$param) and $param["StateList"] !== null) {
+            $this->StateList = $param["StateList"];
         }
 
         if (array_key_exists("PageNumber",$param) and $param["PageNumber"] !== null) {

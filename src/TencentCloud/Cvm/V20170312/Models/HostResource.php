@@ -39,9 +39,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getGpuAvailable() 获取专用宿主机实例可用GPU卡数
  * @method void setGpuAvailable(integer $GpuAvailable) 设置专用宿主机实例可用GPU卡数
  * @method string getExclusiveOwner() 获取CDH owner
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExclusiveOwner(string $ExclusiveOwner) 设置CDH owner
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class HostResource extends AbstractModel
 {
@@ -92,7 +90,6 @@ class HostResource extends AbstractModel
 
     /**
      * @var string CDH owner
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExclusiveOwner;
 
@@ -107,7 +104,6 @@ class HostResource extends AbstractModel
      * @param integer $GpuTotal 专用宿主机实例总GPU卡数
      * @param integer $GpuAvailable 专用宿主机实例可用GPU卡数
      * @param string $ExclusiveOwner CDH owner
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

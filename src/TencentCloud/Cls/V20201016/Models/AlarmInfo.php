@@ -47,35 +47,25 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessageTemplate(string $MessageTemplate) 设置自定义通知模板
 注意：此字段可能返回 null，表示取不到有效值。
  * @method CallBackInfo getCallBack() 获取自定义回调模板
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCallBack(CallBackInfo $CallBack) 设置自定义回调模板
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAnalysis() 获取多维分析设置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAnalysis(array $Analysis) 设置多维分析设置
-注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getGroupTriggerStatus() 获取分组触发状态。1：开启，0：关闭（默认）
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGroupTriggerStatus(boolean $GroupTriggerStatus) 设置分组触发状态。1：开启，0：关闭（默认）
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getGroupTriggerStatus() 获取分组触发状态。true：开启，false：关闭（默认）
+ * @method void setGroupTriggerStatus(boolean $GroupTriggerStatus) 设置分组触发状态。true：开启，false：关闭（默认）
  * @method array getGroupTriggerCondition() 获取分组触发条件。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupTriggerCondition(array $GroupTriggerCondition) 设置分组触发条件。
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTags() 获取告警策略绑定的标签信息。
+ * @method void setTags(array $Tags) 设置告警策略绑定的标签信息。
  * @method integer getMonitorObjectType() 获取监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMonitorObjectType(integer $MonitorObjectType) 设置监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAlarmLevel() 获取告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlarmLevel(integer $AlarmLevel) 设置告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getClassifications() 获取告警附加分类字段。
+ * @method void setClassifications(array $Classifications) 设置告警附加分类字段。
  * @method array getMultiConditions() 获取多触发条件。与
 Condition互斥。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMultiConditions(array $MultiConditions) 设置多触发条件。与
 Condition互斥。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmInfo extends AbstractModel
 {
@@ -142,44 +132,47 @@ class AlarmInfo extends AbstractModel
 
     /**
      * @var CallBackInfo 自定义回调模板
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CallBack;
 
     /**
      * @var array 多维分析设置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Analysis;
 
     /**
-     * @var boolean 分组触发状态。1：开启，0：关闭（默认）
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var boolean 分组触发状态。true：开启，false：关闭（默认）
      */
     public $GroupTriggerStatus;
 
     /**
      * @var array 分组触发条件。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupTriggerCondition;
 
     /**
+     * @var array 告警策略绑定的标签信息。
+     */
+    public $Tags;
+
+    /**
      * @var integer 监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MonitorObjectType;
 
     /**
      * @var integer 告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlarmLevel;
 
     /**
+     * @var array 告警附加分类字段。
+     */
+    public $Classifications;
+
+    /**
      * @var array 多触发条件。与
 Condition互斥。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MultiConditions;
 
@@ -198,20 +191,15 @@ Condition互斥。
      * @param string $MessageTemplate 自定义通知模板
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CallBackInfo $CallBack 自定义回调模板
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Analysis 多维分析设置
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $GroupTriggerStatus 分组触发状态。1：开启，0：关闭（默认）
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $GroupTriggerStatus 分组触发状态。true：开启，false：关闭（默认）
      * @param array $GroupTriggerCondition 分组触发条件。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags 告警策略绑定的标签信息。
      * @param integer $MonitorObjectType 监控对象类型。0:执行语句共用监控对象;1:每个执行语句单独选择监控对象。 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AlarmLevel 告警级别。0:警告(Warn);1:提醒(Info);2:紧急 (Critical)。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Classifications 告警附加分类字段。
      * @param array $MultiConditions 多触发条件。与
 Condition互斥。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -302,12 +290,30 @@ Condition互斥。
             $this->GroupTriggerCondition = $param["GroupTriggerCondition"];
         }
 
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
         if (array_key_exists("MonitorObjectType",$param) and $param["MonitorObjectType"] !== null) {
             $this->MonitorObjectType = $param["MonitorObjectType"];
         }
 
         if (array_key_exists("AlarmLevel",$param) and $param["AlarmLevel"] !== null) {
             $this->AlarmLevel = $param["AlarmLevel"];
+        }
+
+        if (array_key_exists("Classifications",$param) and $param["Classifications"] !== null) {
+            $this->Classifications = [];
+            foreach ($param["Classifications"] as $key => $value){
+                $obj = new AlarmClassification();
+                $obj->deserialize($value);
+                array_push($this->Classifications, $obj);
+            }
         }
 
         if (array_key_exists("MultiConditions",$param) and $param["MultiConditions"] !== null) {

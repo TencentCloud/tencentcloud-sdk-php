@@ -59,7 +59,6 @@ China-Mainland（中国大陆）
 China-Hong Kong, Macao and Taiwan（港澳台地区）
 America（美国）
 Europe（欧洲）
-India（印度）
 Other-Overseas（其他境外地区）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductRegion(string $ProductRegion) 设置产品地域
@@ -67,7 +66,6 @@ China-Mainland（中国大陆）
 China-Hong Kong, Macao and Taiwan（港澳台地区）
 America（美国）
 Europe（欧洲）
-India（印度）
 Other-Overseas（其他境外地区）
 注意：此字段可能返回 null，表示取不到有效值。
  */
@@ -132,7 +130,6 @@ China-Mainland（中国大陆）
 China-Hong Kong, Macao and Taiwan（港澳台地区）
 America（美国）
 Europe（欧洲）
-India（印度）
 Other-Overseas（其他境外地区）
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -161,7 +158,6 @@ China-Mainland（中国大陆）
 China-Hong Kong, Macao and Taiwan（港澳台地区）
 America（美国）
 Europe（欧洲）
-India（印度）
 Other-Overseas（其他境外地区）
 注意：此字段可能返回 null，表示取不到有效值。
      */

@@ -47,12 +47,18 @@ use TencentCloud\Common\AbstractModel;
 
 如果需改动此参与人的角色名字，可用此字段指定，由汉字,英文字符,数字组成，最大20个字。
 
+![image](https://qcloudimg.tencent-cloud.cn/raw/973a820ab66d1ce57082c160c2b2d44a.png)
+
  * @method void setApproverSignRole(string $ApproverSignRole) 设置参与方在合同中的角色是按照创建合同的时候来排序的，解除协议默认会将第一个参与人叫`甲方`,第二个叫`乙方`,  第三个叫`丙方`，以此类推。
 
 如果需改动此参与人的角色名字，可用此字段指定，由汉字,英文字符,数字组成，最大20个字。
 
+![image](https://qcloudimg.tencent-cloud.cn/raw/973a820ab66d1ce57082c160c2b2d44a.png)
+
  * @method string getApproverSignSealId() 获取印章Id，签署控件类型为印章时，用于指定本企业签署方在解除协议中使用那个印章进行签署
  * @method void setApproverSignSealId(string $ApproverSignSealId) 设置印章Id，签署控件类型为印章时，用于指定本企业签署方在解除协议中使用那个印章进行签署
+ * @method string getRelievedApproverRecipientId() 获取要更换的原合同参与人RecipientId编号。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
+ * @method void setRelievedApproverRecipientId(string $RelievedApproverRecipientId) 设置要更换的原合同参与人RecipientId编号。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
  */
 class ReleasedApprover extends AbstractModel
 {
@@ -69,6 +75,7 @@ class ReleasedApprover extends AbstractModel
 
     /**
      * @var string 要更换的原合同参与人RecipientId编号。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
+     * @deprecated
      */
     public $RelievedApproverReceiptId;
 
@@ -91,6 +98,8 @@ class ReleasedApprover extends AbstractModel
 
 如果需改动此参与人的角色名字，可用此字段指定，由汉字,英文字符,数字组成，最大20个字。
 
+![image](https://qcloudimg.tencent-cloud.cn/raw/973a820ab66d1ce57082c160c2b2d44a.png)
+
      */
     public $ApproverSignRole;
 
@@ -98,6 +107,11 @@ class ReleasedApprover extends AbstractModel
      * @var string 印章Id，签署控件类型为印章时，用于指定本企业签署方在解除协议中使用那个印章进行签署
      */
     public $ApproverSignSealId;
+
+    /**
+     * @var string 要更换的原合同参与人RecipientId编号。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
+     */
+    public $RelievedApproverRecipientId;
 
     /**
      * @param string $Name 签署人姓名，最大长度50个字。
@@ -114,7 +128,10 @@ class ReleasedApprover extends AbstractModel
 
 如果需改动此参与人的角色名字，可用此字段指定，由汉字,英文字符,数字组成，最大20个字。
 
+![image](https://qcloudimg.tencent-cloud.cn/raw/973a820ab66d1ce57082c160c2b2d44a.png)
+
      * @param string $ApproverSignSealId 印章Id，签署控件类型为印章时，用于指定本企业签署方在解除协议中使用那个印章进行签署
+     * @param string $RelievedApproverRecipientId 要更换的原合同参与人RecipientId编号。(可通过接口<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeFlowInfo/">DescribeFlowInfo</a>查询签署人的RecipientId编号)<br/>
      */
     function __construct()
     {
@@ -155,6 +172,10 @@ class ReleasedApprover extends AbstractModel
 
         if (array_key_exists("ApproverSignSealId",$param) and $param["ApproverSignSealId"] !== null) {
             $this->ApproverSignSealId = $param["ApproverSignSealId"];
+        }
+
+        if (array_key_exists("RelievedApproverRecipientId",$param) and $param["RelievedApproverRecipientId"] !== null) {
+            $this->RelievedApproverRecipientId = $param["RelievedApproverRecipientId"];
         }
     }
 }

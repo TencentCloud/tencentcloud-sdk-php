@@ -31,9 +31,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPayModeDesc() 获取付费模式描述
  * @method void setPayModeDesc(string $PayModeDesc) 设置付费模式描述
  * @method string getResourceId() 获取流量包ID，仅当付费模式为流量包类型时才有。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceId(string $ResourceId) 设置流量包ID，仅当付费模式为流量包类型时才有。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DevicePayModeInfo extends AbstractModel
 {
@@ -56,7 +54,6 @@ class DevicePayModeInfo extends AbstractModel
 
     /**
      * @var string 流量包ID，仅当付费模式为流量包类型时才有。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceId;
 
@@ -67,7 +64,6 @@ class DevicePayModeInfo extends AbstractModel
 0：按流量后付费
      * @param string $PayModeDesc 付费模式描述
      * @param string $ResourceId 流量包ID，仅当付费模式为流量包类型时才有。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

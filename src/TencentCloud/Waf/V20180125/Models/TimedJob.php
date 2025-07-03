@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 规则定时任务数据结构
  *
  * @method integer getStartDateTime() 获取开始时间戳，单位为秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartDateTime(integer $StartDateTime) 设置开始时间戳，单位为秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEndDateTime() 获取结束时间戳，单位为秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndDateTime(integer $EndDateTime) 设置结束时间戳，单位为秒
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TimedJob extends AbstractModel
 {
     /**
      * @var integer 开始时间戳，单位为秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartDateTime;
 
     /**
      * @var integer 结束时间戳，单位为秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndDateTime;
 
     /**
      * @param integer $StartDateTime 开始时间戳，单位为秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EndDateTime 结束时间戳，单位为秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

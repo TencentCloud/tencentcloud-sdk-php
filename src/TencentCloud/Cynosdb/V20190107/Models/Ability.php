@@ -23,27 +23,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getIsSupportSlaveZone() 获取是否支持从可用区
  * @method void setIsSupportSlaveZone(string $IsSupportSlaveZone) 设置是否支持从可用区
  * @method string getNonsupportSlaveZoneReason() 获取不支持从可用区的原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNonsupportSlaveZoneReason(string $NonsupportSlaveZoneReason) 设置不支持从可用区的原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIsSupportRo() 获取是否支持RO实例
  * @method void setIsSupportRo(string $IsSupportRo) 设置是否支持RO实例
  * @method string getNonsupportRoReason() 获取不支持RO实例的原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNonsupportRoReason(string $NonsupportRoReason) 设置不支持RO实例的原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIsSupportManualSnapshot() 获取是否支持手动发起快照备份
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsSupportManualSnapshot(string $IsSupportManualSnapshot) 设置是否支持手动发起快照备份
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIsSupportTransparentDataEncryption() 获取是否支持透明数据加密
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsSupportTransparentDataEncryption(string $IsSupportTransparentDataEncryption) 设置是否支持透明数据加密
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNoSupportTransparentDataEncryptionReason() 获取不支持透明数据加密原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNoSupportTransparentDataEncryptionReason(string $NoSupportTransparentDataEncryptionReason) 设置不支持透明数据加密原因
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIsSupportManualLogic() 获取是否支持手动发起逻辑备份
+ * @method void setIsSupportManualLogic(string $IsSupportManualLogic) 设置是否支持手动发起逻辑备份
  */
 class Ability extends AbstractModel
 {
@@ -54,7 +46,6 @@ class Ability extends AbstractModel
 
     /**
      * @var string 不支持从可用区的原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NonsupportSlaveZoneReason;
 
@@ -65,41 +56,38 @@ class Ability extends AbstractModel
 
     /**
      * @var string 不支持RO实例的原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NonsupportRoReason;
 
     /**
      * @var string 是否支持手动发起快照备份
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsSupportManualSnapshot;
 
     /**
      * @var string 是否支持透明数据加密
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsSupportTransparentDataEncryption;
 
     /**
      * @var string 不支持透明数据加密原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NoSupportTransparentDataEncryptionReason;
 
     /**
+     * @var string 是否支持手动发起逻辑备份
+     */
+    public $IsSupportManualLogic;
+
+    /**
      * @param string $IsSupportSlaveZone 是否支持从可用区
      * @param string $NonsupportSlaveZoneReason 不支持从可用区的原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IsSupportRo 是否支持RO实例
      * @param string $NonsupportRoReason 不支持RO实例的原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IsSupportManualSnapshot 是否支持手动发起快照备份
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IsSupportTransparentDataEncryption 是否支持透明数据加密
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NoSupportTransparentDataEncryptionReason 不支持透明数据加密原因
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IsSupportManualLogic 是否支持手动发起逻辑备份
      */
     function __construct()
     {
@@ -140,6 +128,10 @@ class Ability extends AbstractModel
 
         if (array_key_exists("NoSupportTransparentDataEncryptionReason",$param) and $param["NoSupportTransparentDataEncryptionReason"] !== null) {
             $this->NoSupportTransparentDataEncryptionReason = $param["NoSupportTransparentDataEncryptionReason"];
+        }
+
+        if (array_key_exists("IsSupportManualLogic",$param) and $param["IsSupportManualLogic"] !== null) {
+            $this->IsSupportManualLogic = $param["IsSupportManualLogic"];
         }
     }
 }

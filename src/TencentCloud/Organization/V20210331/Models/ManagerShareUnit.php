@@ -31,25 +31,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getArea() 获取共享单元地域。
  * @method void setArea(string $Area) 设置共享单元地域。
  * @method string getDescription() 获取描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getShareResourceNum() 获取共享单元资源数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setShareResourceNum(integer $ShareResourceNum) 设置共享单元资源数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getShareMemberNum() 获取共享单元成员数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setShareMemberNum(integer $ShareMemberNum) 设置共享单元成员数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getShareScope() 获取共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setShareScope(integer $ShareScope) 设置共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ManagerShareUnit extends AbstractModel
 {
@@ -80,31 +70,26 @@ class ManagerShareUnit extends AbstractModel
 
     /**
      * @var string 描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var string 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var integer 共享单元资源数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ShareResourceNum;
 
     /**
      * @var integer 共享单元成员数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ShareMemberNum;
 
     /**
      * @var integer 共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ShareScope;
 
@@ -115,15 +100,10 @@ class ManagerShareUnit extends AbstractModel
      * @param integer $OwnerUin 共享单元管理员OwnerUin。
      * @param string $Area 共享单元地域。
      * @param string $Description 描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ShareResourceNum 共享单元资源数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ShareMemberNum 共享单元成员数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ShareScope 共享范围。取值：1-仅允许集团组织内共享 2-允许共享给任意账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

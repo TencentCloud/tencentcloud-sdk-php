@@ -21,45 +21,27 @@ use TencentCloud\Common\AbstractModel;
  * cmq topic返回信息展示字段
  *
  * @method string getTopicId() 获取主题的 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicId(string $TopicId) 设置主题的 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTopicName() 获取主题名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicName(string $TopicName) 设置主题名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMsgRetentionSeconds() 获取消息在主题中最长存活时间，从发送到该主题开始经过此参数指定的时间后，不论消息是否被成功推送给用户都将被删除，单位为秒。固定为一天（86400秒），该属性不能修改。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMsgRetentionSeconds(integer $MsgRetentionSeconds) 设置消息在主题中最长存活时间，从发送到该主题开始经过此参数指定的时间后，不论消息是否被成功推送给用户都将被删除，单位为秒。固定为一天（86400秒），该属性不能修改。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMaxMsgSize() 获取消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为65536。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMaxMsgSize(integer $MaxMsgSize) 设置消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为65536。
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMaxMsgSize() 获取消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为1048576。
+ * @method void setMaxMsgSize(integer $MaxMsgSize) 设置消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为1048576。
  * @method integer getQps() 获取每秒钟发布消息的条数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQps(integer $Qps) 设置每秒钟发布消息的条数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFilterType() 获取描述用户创建订阅时选择的过滤策略：
 FilterType = 1表示用户使用 FilterTag 标签过滤;
 FilterType = 2表示用户使用 BindingKey 过滤。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFilterType(integer $FilterType) 设置描述用户创建订阅时选择的过滤策略：
 FilterType = 1表示用户使用 FilterTag 标签过滤;
 FilterType = 2表示用户使用 BindingKey 过滤。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreateTime() 获取主题的创建时间。返回 Unix 时间戳，精确到毫秒。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(integer $CreateTime) 设置主题的创建时间。返回 Unix 时间戳，精确到毫秒。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLastModifyTime() 获取最后一次修改主题属性的时间。返回 Unix 时间戳，精确到毫秒。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastModifyTime(integer $LastModifyTime) 设置最后一次修改主题属性的时间。返回 Unix 时间戳，精确到毫秒。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMsgCount() 获取当前该主题中消息数目（消息堆积数）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMsgCount(integer $MsgCount) 设置当前该主题中消息数目（消息堆积数）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreateUin() 获取创建者 Uin，CAM 鉴权 resource 由该字段组合而成。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateUin(integer $CreateUin) 设置创建者 Uin，CAM 鉴权 resource 由该字段组合而成。
@@ -73,55 +55,40 @@ FilterType = 2表示用户使用 BindingKey 过滤。
  * @method void setTrace(boolean $Trace) 设置消息轨迹。true表示开启，false表示不开启。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTenantId() 获取租户id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTenantId(string $TenantId) 设置租户id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNamespaceName() 获取命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespaceName(string $NamespaceName) 设置命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBrokerType() 获取0表示pulsar，1表示rocketmq
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBrokerType(integer $BrokerType) 设置0表示pulsar，1表示rocketmq
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSubscriptionCount() 获取订阅数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubscriptionCount(integer $SubscriptionCount) 设置订阅数量
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CmqTopic extends AbstractModel
 {
     /**
      * @var string 主题的 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicId;
 
     /**
      * @var string 主题名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicName;
 
     /**
      * @var integer 消息在主题中最长存活时间，从发送到该主题开始经过此参数指定的时间后，不论消息是否被成功推送给用户都将被删除，单位为秒。固定为一天（86400秒），该属性不能修改。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MsgRetentionSeconds;
 
     /**
-     * @var integer 消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为65536。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为1048576。
      */
     public $MaxMsgSize;
 
     /**
      * @var integer 每秒钟发布消息的条数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Qps;
 
@@ -129,25 +96,21 @@ class CmqTopic extends AbstractModel
      * @var integer 描述用户创建订阅时选择的过滤策略：
 FilterType = 1表示用户使用 FilterTag 标签过滤;
 FilterType = 2表示用户使用 BindingKey 过滤。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FilterType;
 
     /**
      * @var integer 主题的创建时间。返回 Unix 时间戳，精确到毫秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var integer 最后一次修改主题属性的时间。返回 Unix 时间戳，精确到毫秒。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastModifyTime;
 
     /**
      * @var integer 当前该主题中消息数目（消息堆积数）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MsgCount;
 
@@ -171,55 +134,41 @@ FilterType = 2表示用户使用 BindingKey 过滤。
 
     /**
      * @var string 租户id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TenantId;
 
     /**
      * @var string 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NamespaceName;
 
     /**
      * @var integer 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var integer 0表示pulsar，1表示rocketmq
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BrokerType;
 
     /**
      * @var integer 订阅数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubscriptionCount;
 
     /**
      * @param string $TopicId 主题的 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TopicName 主题名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MsgRetentionSeconds 消息在主题中最长存活时间，从发送到该主题开始经过此参数指定的时间后，不论消息是否被成功推送给用户都将被删除，单位为秒。固定为一天（86400秒），该属性不能修改。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MaxMsgSize 消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为65536。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MaxMsgSize 消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为1048576。
      * @param integer $Qps 每秒钟发布消息的条数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FilterType 描述用户创建订阅时选择的过滤策略：
 FilterType = 1表示用户使用 FilterTag 标签过滤;
 FilterType = 2表示用户使用 BindingKey 过滤。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateTime 主题的创建时间。返回 Unix 时间戳，精确到毫秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LastModifyTime 最后一次修改主题属性的时间。返回 Unix 时间戳，精确到毫秒。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MsgCount 当前该主题中消息数目（消息堆积数）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateUin 创建者 Uin，CAM 鉴权 resource 由该字段组合而成。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 关联的标签。
@@ -227,15 +176,10 @@ FilterType = 2表示用户使用 BindingKey 过滤。
      * @param boolean $Trace 消息轨迹。true表示开启，false表示不开启。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TenantId 租户id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NamespaceName 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BrokerType 0表示pulsar，1表示rocketmq
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SubscriptionCount 订阅数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

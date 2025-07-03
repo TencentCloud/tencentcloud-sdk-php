@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(string $TaskId) 设置任务ID 用于外部溯源
  * @method integer getPageNumber() 获取页数
  * @method void setPageNumber(integer $PageNumber) 设置页数
- * @method string getCode() 获取二维码
- * @method void setCode(string $Code) 设置二维码
+ * @method string getCode() 获取溯源码
+ * @method void setCode(string $Code) 设置溯源码
  * @method integer getPhase() 获取溯源阶段 0:商品 1:通用 2:内部溯源 3:外部溯源
  * @method void setPhase(integer $Phase) 设置溯源阶段 0:商品 1:通用 2:内部溯源 3:外部溯源
  * @method integer getPageSize() 获取数量
@@ -58,7 +58,7 @@ class DescribeTraceDataListRequest extends AbstractModel
     public $PageNumber;
 
     /**
-     * @var string 二维码
+     * @var string 溯源码
      */
     public $Code;
 
@@ -77,7 +77,7 @@ class DescribeTraceDataListRequest extends AbstractModel
      * @param string $BatchId 批次ID
      * @param string $TaskId 任务ID 用于外部溯源
      * @param integer $PageNumber 页数
-     * @param string $Code 二维码
+     * @param string $Code 溯源码
      * @param integer $Phase 溯源阶段 0:商品 1:通用 2:内部溯源 3:外部溯源
      * @param integer $PageSize 数量
      */

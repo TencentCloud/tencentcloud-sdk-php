@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 内窥镜描述
  *
  * @method string getText() 获取描述内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setText(string $Text) 设置描述内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getOrgan() 获取器官
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrgan(array $Organ) 设置器官
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCoords() 获取坐标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCoords(array $Coords) 设置坐标
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class EndoscopyDesc extends AbstractModel
 {
     /**
      * @var string 描述内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Text;
 
     /**
      * @var array 器官
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Organ;
 
     /**
      * @var array 坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Coords;
 
     /**
      * @param string $Text 描述内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Organ 器官
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Coords 坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

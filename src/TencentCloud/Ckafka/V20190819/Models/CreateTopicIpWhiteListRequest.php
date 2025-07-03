@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTopicIpWhiteList请求参数结构体
  *
- * @method string getInstanceId() 获取实例Id
- * @method void setInstanceId(string $InstanceId) 设置实例Id
+ * @method string getInstanceId() 获取ckafka集群实例Id
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
  * @method string getTopicName() 获取主题名称
  * @method void setTopicName(string $TopicName) 设置主题名称
  * @method array getIpWhiteList() 获取ip白名单列表
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateTopicIpWhiteListRequest extends AbstractModel
 {
     /**
-     * @var string 实例Id
+     * @var string ckafka集群实例Id
      */
     public $InstanceId;
 
@@ -45,7 +45,7 @@ class CreateTopicIpWhiteListRequest extends AbstractModel
     public $IpWhiteList;
 
     /**
-     * @param string $InstanceId 实例Id
+     * @param string $InstanceId ckafka集群实例Id
      * @param string $TopicName 主题名称
      * @param array $IpWhiteList ip白名单列表
      */

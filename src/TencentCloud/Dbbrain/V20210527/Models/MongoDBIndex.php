@@ -31,13 +31,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getScore() 获取得分。
  * @method void setScore(integer $Score) 设置得分。
  * @method array getIndexesToBuild() 获取推荐索引列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIndexesToBuild(array $IndexesToBuild) 设置推荐索引列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getIndexesToDrop() 获取无效索引列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIndexesToDrop(array $IndexesToDrop) 设置无效索引列表。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MongoDBIndex extends AbstractModel
 {
@@ -68,13 +64,11 @@ class MongoDBIndex extends AbstractModel
 
     /**
      * @var array 推荐索引列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IndexesToBuild;
 
     /**
      * @var array 无效索引列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IndexesToDrop;
 
@@ -85,9 +79,7 @@ class MongoDBIndex extends AbstractModel
      * @param integer $Level 优化级别，1-4，优先级从高到低。
      * @param integer $Score 得分。
      * @param array $IndexesToBuild 推荐索引列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $IndexesToDrop 无效索引列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

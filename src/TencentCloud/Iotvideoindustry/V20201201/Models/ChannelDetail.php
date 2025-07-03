@@ -25,33 +25,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getChannelId() 获取通道唯一标识
  * @method void setChannelId(string $ChannelId) 设置通道唯一标识
  * @method integer getChannelType() 获取通道类型 0：未知；1：视频通道；2：音频通道；3：告警通道
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChannelType(integer $ChannelType) 设置通道类型 0：未知；1：视频通道；2：音频通道；3：告警通道
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getChannelCode() 获取20位国标通道编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChannelCode(string $ChannelCode) 设置20位国标通道编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExtraInformation() 获取通道扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtraInformation(string $ExtraInformation) 设置通道扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取通道在线状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置通道在线状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsRecord() 获取通道是否存在录像标识 0：无录像；1：有录像
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsRecord(integer $IsRecord) 设置通道是否存在录像标识 0：无录像；1：有录像
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeviceId() 获取通道所属设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceId(string $DeviceId) 设置通道所属设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBusinessGroupId() 获取通道所属虚拟组织的ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBusinessGroupId(string $BusinessGroupId) 设置通道所属虚拟组织的ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ChannelDetail extends AbstractModel
 {
@@ -67,43 +53,36 @@ class ChannelDetail extends AbstractModel
 
     /**
      * @var integer 通道类型 0：未知；1：视频通道；2：音频通道；3：告警通道
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChannelType;
 
     /**
      * @var string 20位国标通道编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChannelCode;
 
     /**
      * @var string 通道扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExtraInformation;
 
     /**
      * @var integer 通道在线状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var integer 通道是否存在录像标识 0：无录像；1：有录像
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsRecord;
 
     /**
      * @var string 通道所属设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceId;
 
     /**
      * @var string 通道所属虚拟组织的ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BusinessGroupId;
 
@@ -111,19 +90,12 @@ class ChannelDetail extends AbstractModel
      * @param string $ChannelName 通道名称
      * @param string $ChannelId 通道唯一标识
      * @param integer $ChannelType 通道类型 0：未知；1：视频通道；2：音频通道；3：告警通道
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChannelCode 20位国标通道编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExtraInformation 通道扩展信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 通道在线状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsRecord 通道是否存在录像标识 0：无录像；1：有录像
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceId 通道所属设备唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BusinessGroupId 通道所属虚拟组织的ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

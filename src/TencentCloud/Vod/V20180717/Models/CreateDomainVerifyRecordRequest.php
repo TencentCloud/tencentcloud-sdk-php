@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() 获取需要接入点播的加速域名。
  * @method void setDomain(string $Domain) 设置需要接入点播的加速域名。
+ * @method integer getSubAppId() 获取<b>点播[应用](/document/product/266/14574) ID。从2024年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>	
+ * @method void setSubAppId(integer $SubAppId) 设置<b>点播[应用](/document/product/266/14574) ID。从2024年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>	
  */
 class CreateDomainVerifyRecordRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class CreateDomainVerifyRecordRequest extends AbstractModel
     public $Domain;
 
     /**
+     * @var integer <b>点播[应用](/document/product/266/14574) ID。从2024年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>	
+     */
+    public $SubAppId;
+
+    /**
      * @param string $Domain 需要接入点播的加速域名。
+     * @param integer $SubAppId <b>点播[应用](/document/product/266/14574) ID。从2024年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>	
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class CreateDomainVerifyRecordRequest extends AbstractModel
         }
         if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
             $this->Domain = $param["Domain"];
+        }
+
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

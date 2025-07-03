@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 对话结果
  *
  * @method Message getMessage() 获取对话结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(Message $Message) 设置对话结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFinishReason() 获取结束理由: stop, length, content_filter, null
  * @method void setFinishReason(string $FinishReason) 设置结束理由: stop, length, content_filter, null
  * @method integer getIndex() 获取序号
@@ -33,7 +31,6 @@ class Choice extends AbstractModel
 {
     /**
      * @var Message 对话结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
@@ -49,7 +46,6 @@ class Choice extends AbstractModel
 
     /**
      * @param Message $Message 对话结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FinishReason 结束理由: stop, length, content_filter, null
      * @param integer $Index 序号
      */

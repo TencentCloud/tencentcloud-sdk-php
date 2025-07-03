@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIp(string $Ip) 设置暂未使用
  * @method array getApCodeSet() 获取地域码集合
  * @method void setApCodeSet(array $ApCodeSet) 设置地域码集合
- * @method integer getKind() 获取操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
- * @method void setKind(integer $Kind) 设置操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
+ * @method integer getKind() 获取操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer, 5 - TDSQL MySQL, 6 - TDSQL-C MySQL, 7 - MariaDB, 8 - PostgreSQL, 9 - MongoDB副本集群, 10 - MongoDB分片集群, 11 - Redis
+ * @method void setKind(integer $Kind) 设置操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer, 5 - TDSQL MySQL, 6 - TDSQL-C MySQL, 7 - MariaDB, 8 - PostgreSQL, 9 - MongoDB副本集群, 10 - MongoDB分片集群, 11 - Redis
  * @method integer getOffset() 获取分页偏移位置，默认值为0
  * @method void setOffset(integer $Offset) 设置分页偏移位置，默认值为0
  * @method integer getLimit() 获取每页条目数量，默认20
@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAuthorizedUserIdSet(array $AuthorizedUserIdSet) 设置有该资产访问权限的用户ID集合
  * @method array getResourceIdSet() 获取过滤条件，资产绑定的堡垒机服务ID集合
  * @method void setResourceIdSet(array $ResourceIdSet) 设置过滤条件，资产绑定的堡垒机服务ID集合
- * @method array getKindSet() 获取可提供按照多种类型过滤, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
- * @method void setKindSet(array $KindSet) 设置可提供按照多种类型过滤, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
+ * @method array getKindSet() 获取可提供按照多种类型过滤, 取值范围与Kind一致
+ * @method void setKindSet(array $KindSet) 设置可提供按照多种类型过滤, 取值范围与Kind一致
  * @method string getManagedAccount() 获取资产是否包含托管账号。1，包含；0，不包含
  * @method void setManagedAccount(string $ManagedAccount) 设置资产是否包含托管账号。1，包含；0，不包含
  * @method string getDepartmentId() 获取过滤条件，可按照部门ID进行过滤
@@ -74,7 +74,7 @@ class DescribeDevicesRequest extends AbstractModel
     public $ApCodeSet;
 
     /**
-     * @var integer 操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
+     * @var integer 操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer, 5 - TDSQL MySQL, 6 - TDSQL-C MySQL, 7 - MariaDB, 8 - PostgreSQL, 9 - MongoDB副本集群, 10 - MongoDB分片集群, 11 - Redis
      */
     public $Kind;
 
@@ -99,7 +99,7 @@ class DescribeDevicesRequest extends AbstractModel
     public $ResourceIdSet;
 
     /**
-     * @var array 可提供按照多种类型过滤, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
+     * @var array 可提供按照多种类型过滤, 取值范围与Kind一致
      */
     public $KindSet;
 
@@ -129,12 +129,12 @@ BindingStatus 绑定状态
      * @param string $Name 资产名或资产IP，模糊查询
      * @param string $Ip 暂未使用
      * @param array $ApCodeSet 地域码集合
-     * @param integer $Kind 操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
+     * @param integer $Kind 操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer, 5 - TDSQL MySQL, 6 - TDSQL-C MySQL, 7 - MariaDB, 8 - PostgreSQL, 9 - MongoDB副本集群, 10 - MongoDB分片集群, 11 - Redis
      * @param integer $Offset 分页偏移位置，默认值为0
      * @param integer $Limit 每页条目数量，默认20
      * @param array $AuthorizedUserIdSet 有该资产访问权限的用户ID集合
      * @param array $ResourceIdSet 过滤条件，资产绑定的堡垒机服务ID集合
-     * @param array $KindSet 可提供按照多种类型过滤, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
+     * @param array $KindSet 可提供按照多种类型过滤, 取值范围与Kind一致
      * @param string $ManagedAccount 资产是否包含托管账号。1，包含；0，不包含
      * @param string $DepartmentId 过滤条件，可按照部门ID进行过滤
      * @param array $TagFilters 过滤条件，可按照标签键、标签进行过滤。如果同时指定标签键和标签过滤条件，它们之间为“AND”的关系

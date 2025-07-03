@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDocId(string $DocId) 设置解析后返回的DocID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreatedAt() 获取创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreatedAt(string $CreatedAt) 设置创建时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class FileInfo extends AbstractModel
 {
@@ -74,6 +78,12 @@ class FileInfo extends AbstractModel
     public $DocId;
 
     /**
+     * @var string 创建时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreatedAt;
+
+    /**
      * @param string $FileName 文件名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileSize 文件大小
@@ -83,6 +93,8 @@ class FileInfo extends AbstractModel
      * @param string $FileType 文件类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DocId 解析后返回的DocID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreatedAt 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -116,6 +128,10 @@ class FileInfo extends AbstractModel
 
         if (array_key_exists("DocId",$param) and $param["DocId"] !== null) {
             $this->DocId = $param["DocId"];
+        }
+
+        if (array_key_exists("CreatedAt",$param) and $param["CreatedAt"] !== null) {
+            $this->CreatedAt = $param["CreatedAt"];
         }
     }
 }

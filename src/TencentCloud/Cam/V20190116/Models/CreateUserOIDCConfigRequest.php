@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIdentityKey(string $IdentityKey) 设置签名公钥，需要base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的账号安全，建议您定期轮换签名公钥。
  * @method array getScope() 获取授权请求Scope。openid; email;profile。授权请求信息范围。默认必选openid。
  * @method void setScope(array $Scope) 设置授权请求Scope。openid; email;profile。授权请求信息范围。默认必选openid。
- * @method string getDescription() 获取描述
- * @method void setDescription(string $Description) 设置描述
+ * @method string getDescription() 获取描述信息。由用户自行定义。
+ * @method void setDescription(string $Description) 设置描述信息。由用户自行定义。
  */
 class CreateUserOIDCConfigRequest extends AbstractModel
 {
@@ -85,7 +85,7 @@ class CreateUserOIDCConfigRequest extends AbstractModel
     public $Scope;
 
     /**
-     * @var string 描述
+     * @var string 描述信息。由用户自行定义。
      */
     public $Description;
 
@@ -99,7 +99,7 @@ class CreateUserOIDCConfigRequest extends AbstractModel
      * @param string $MappingFiled 映射字段名称。IdP的id_token中哪一个字段映射到子用户的用户名，通常是sub或者name字段
      * @param string $IdentityKey 签名公钥，需要base64_encode。验证OpenID Connect身份提供商ID Token签名的公钥。为了您的账号安全，建议您定期轮换签名公钥。
      * @param array $Scope 授权请求Scope。openid; email;profile。授权请求信息范围。默认必选openid。
-     * @param string $Description 描述
+     * @param string $Description 描述信息。由用户自行定义。
      */
     function __construct()
     {

@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 网关部署组、分组、API列表数据
  *
  * @method string getGatewayDeployGroupId() 获取网关部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGatewayDeployGroupId(string $GatewayDeployGroupId) 设置网关部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGatewayDeployGroupName() 获取网关部署组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGatewayDeployGroupName(string $GatewayDeployGroupName) 设置网关部署组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getGroupNum() 获取API 分组个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupNum(integer $GroupNum) 设置API 分组个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getGroups() 获取API 分组列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroups(array $Groups) 设置API 分组列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class GatewayVo extends AbstractModel
 {
     /**
      * @var string 网关部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GatewayDeployGroupId;
 
     /**
      * @var string 网关部署组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GatewayDeployGroupName;
 
     /**
      * @var integer API 分组个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupNum;
 
     /**
      * @var array API 分组列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Groups;
 
     /**
      * @param string $GatewayDeployGroupId 网关部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GatewayDeployGroupName 网关部署组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $GroupNum API 分组个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Groups API 分组列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

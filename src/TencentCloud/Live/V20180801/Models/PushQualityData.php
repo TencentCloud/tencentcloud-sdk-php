@@ -69,9 +69,9 @@ use TencentCloud\Common\AbstractModel;
  * @method float getFlux() 获取流量，单位MB。
  * @method void setFlux(float $Flux) 设置流量，单位MB。
  * @method string getServerIp() 获取推流服务端 IP。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServerIp(string $ServerIp) 设置推流服务端 IP。
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getGopSize() 获取关键帧间隔 GOP ，单位：ms。
+ * @method void setGopSize(integer $GopSize) 设置关键帧间隔 GOP ，单位：ms。
  */
 class PushQualityData extends AbstractModel
 {
@@ -189,9 +189,13 @@ class PushQualityData extends AbstractModel
 
     /**
      * @var string 推流服务端 IP。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServerIp;
+
+    /**
+     * @var integer 关键帧间隔 GOP ，单位：ms。
+     */
+    public $GopSize;
 
     /**
      * @param string $Time 数据时间，使用UTC格式时间，
@@ -219,7 +223,7 @@ class PushQualityData extends AbstractModel
      * @param float $Bandwidth 带宽，单位Mbps。
      * @param float $Flux 流量，单位MB。
      * @param string $ServerIp 推流服务端 IP。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $GopSize 关键帧间隔 GOP ，单位：ms。
      */
     function __construct()
     {
@@ -324,6 +328,10 @@ class PushQualityData extends AbstractModel
 
         if (array_key_exists("ServerIp",$param) and $param["ServerIp"] !== null) {
             $this->ServerIp = $param["ServerIp"];
+        }
+
+        if (array_key_exists("GopSize",$param) and $param["GopSize"] !== null) {
+            $this->GopSize = $param["GopSize"];
         }
     }
 }

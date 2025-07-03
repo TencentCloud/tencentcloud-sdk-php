@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIds(array $Ids) 设置需要修改的事件id 数组，支持批量
  * @method boolean getAll() 获取是否更新全部，即是否对所有的事件进行操作，当ids 不为空时，此参数无效
  * @method void setAll(boolean $All) 设置是否更新全部，即是否对所有的事件进行操作，当ids 不为空时，此参数无效
- * @method integer getStatus() 获取0：待处理 1：已处理 2： 已加白 3： 已忽略 4：已删除 
- * @method void setStatus(integer $Status) 设置0：待处理 1：已处理 2： 已加白 3： 已忽略 4：已删除 
+ * @method integer getStatus() 获取0：待处理 1：已处理 3： 已忽略 4：已删除 
+ * @method void setStatus(integer $Status) 设置0：待处理 1：已处理 3： 已忽略 4：已删除 
  * @method array getFilters() 获取过滤条件。
 <li>Type - String 攻击状态 0: 尝试攻击 1: 攻击成功 - 是否必填: 否</li>
 <li>Status - String 事件处理状态 0：待处理 1：已处理 2： 已加白 3： 已忽略 4：已删除  - 是否必填: 否</li>
@@ -60,7 +60,7 @@ class ModifyEventAttackStatusRequest extends AbstractModel
     public $All;
 
     /**
-     * @var integer 0：待处理 1：已处理 2： 已加白 3： 已忽略 4：已删除 
+     * @var integer 0：待处理 1：已处理 3： 已忽略 4：已删除 
      */
     public $Status;
 
@@ -85,7 +85,7 @@ class ModifyEventAttackStatusRequest extends AbstractModel
     /**
      * @param array $Ids 需要修改的事件id 数组，支持批量
      * @param boolean $All 是否更新全部，即是否对所有的事件进行操作，当ids 不为空时，此参数无效
-     * @param integer $Status 0：待处理 1：已处理 2： 已加白 3： 已忽略 4：已删除 
+     * @param integer $Status 0：待处理 1：已处理 3： 已忽略 4：已删除 
      * @param array $Filters 过滤条件。
 <li>Type - String 攻击状态 0: 尝试攻击 1: 攻击成功 - 是否必填: 否</li>
 <li>Status - String 事件处理状态 0：待处理 1：已处理 2： 已加白 3： 已忽略 4：已删除  - 是否必填: 否</li>

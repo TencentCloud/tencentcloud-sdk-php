@@ -20,16 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyRabbitMQUser请求参数结构体
  *
- * @method string getInstanceId() 获取集群实例Id
- * @method void setInstanceId(string $InstanceId) 设置集群实例Id
- * @method string getUser() 获取用户名，登录时使用
- * @method void setUser(string $User) 设置用户名，登录时使用
- * @method string getPassword() 获取密码，登录时使用
- * @method void setPassword(string $Password) 设置密码，登录时使用
+ * @method string getInstanceId() 获取实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
+ * @method string getUser() 获取用户名，形如 admin。有效的 User 名称可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询，点击集群列表中的集群，进入集群详情，并在用户与权限页签中找到用户列表，从而找到用户名称。
+ * @method void setUser(string $User) 设置用户名，形如 admin。有效的 User 名称可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询，点击集群列表中的集群，进入集群详情，并在用户与权限页签中找到用户列表，从而找到用户名称。
+ * @method string getPassword() 获取密码，登录时使用。规范：不能为空，8-64个字符，至少要包含小写字母、大写字母、数字、特殊字符【()`~!@#$%^&*_=|{}[]:;',.?/】中的两项
+ * @method void setPassword(string $Password) 设置密码，登录时使用。规范：不能为空，8-64个字符，至少要包含小写字母、大写字母、数字、特殊字符【()`~!@#$%^&*_=|{}[]:;',.?/】中的两项
  * @method string getDescription() 获取描述，不传则不修改
  * @method void setDescription(string $Description) 设置描述，不传则不修改
- * @method array getTags() 获取用户标签，用于决定改用户访问RabbitMQ Management的权限范围，不传则不修改
- * @method void setTags(array $Tags) 设置用户标签，用于决定改用户访问RabbitMQ Management的权限范围，不传则不修改
+ * @method array getTags() 获取用户标签，用于决定改用户访问 RabbitMQ Management 的权限范围
+management：普通控制台用户，monitoring：管理型控制台用户，其他值：非控制台用户
+ * @method void setTags(array $Tags) 设置用户标签，用于决定改用户访问 RabbitMQ Management 的权限范围
+management：普通控制台用户，monitoring：管理型控制台用户，其他值：非控制台用户
  * @method integer getMaxConnections() 获取该用户的最大连接数，不传则不修改
  * @method void setMaxConnections(integer $MaxConnections) 设置该用户的最大连接数，不传则不修改
  * @method integer getMaxChannels() 获取该用户的最大channel数，不传则不修改
@@ -38,17 +40,17 @@ use TencentCloud\Common\AbstractModel;
 class ModifyRabbitMQUserRequest extends AbstractModel
 {
     /**
-     * @var string 集群实例Id
+     * @var string 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
      */
     public $InstanceId;
 
     /**
-     * @var string 用户名，登录时使用
+     * @var string 用户名，形如 admin。有效的 User 名称可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询，点击集群列表中的集群，进入集群详情，并在用户与权限页签中找到用户列表，从而找到用户名称。
      */
     public $User;
 
     /**
-     * @var string 密码，登录时使用
+     * @var string 密码，登录时使用。规范：不能为空，8-64个字符，至少要包含小写字母、大写字母、数字、特殊字符【()`~!@#$%^&*_=|{}[]:;',.?/】中的两项
      */
     public $Password;
 
@@ -58,7 +60,8 @@ class ModifyRabbitMQUserRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var array 用户标签，用于决定改用户访问RabbitMQ Management的权限范围，不传则不修改
+     * @var array 用户标签，用于决定改用户访问 RabbitMQ Management 的权限范围
+management：普通控制台用户，monitoring：管理型控制台用户，其他值：非控制台用户
      */
     public $Tags;
 
@@ -73,11 +76,12 @@ class ModifyRabbitMQUserRequest extends AbstractModel
     public $MaxChannels;
 
     /**
-     * @param string $InstanceId 集群实例Id
-     * @param string $User 用户名，登录时使用
-     * @param string $Password 密码，登录时使用
+     * @param string $InstanceId 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
+     * @param string $User 用户名，形如 admin。有效的 User 名称可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询，点击集群列表中的集群，进入集群详情，并在用户与权限页签中找到用户列表，从而找到用户名称。
+     * @param string $Password 密码，登录时使用。规范：不能为空，8-64个字符，至少要包含小写字母、大写字母、数字、特殊字符【()`~!@#$%^&*_=|{}[]:;',.?/】中的两项
      * @param string $Description 描述，不传则不修改
-     * @param array $Tags 用户标签，用于决定改用户访问RabbitMQ Management的权限范围，不传则不修改
+     * @param array $Tags 用户标签，用于决定改用户访问 RabbitMQ Management 的权限范围
+management：普通控制台用户，monitoring：管理型控制台用户，其他值：非控制台用户
      * @param integer $MaxConnections 该用户的最大连接数，不传则不修改
      * @param integer $MaxChannels 该用户的最大channel数，不传则不修改
      */

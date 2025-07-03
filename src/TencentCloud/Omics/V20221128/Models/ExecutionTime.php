@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 执行时间。
  *
  * @method string getSubmitTime() 获取提交时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubmitTime(string $SubmitTime) 设置提交时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStartTime() 获取开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(string $StartTime) 设置开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndTime() 获取结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ExecutionTime extends AbstractModel
 {
     /**
      * @var string 提交时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubmitTime;
 
     /**
      * @var string 开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
      * @var string 结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
      * @param string $SubmitTime 提交时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StartTime 开始时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndTime 结束时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

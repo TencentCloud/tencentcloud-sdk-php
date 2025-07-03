@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SetPassword请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
- * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+ * @method string getInstanceId() 获取实例ID，格式如：cmgo-p8vn****。与云数据库控制台页面中显示的实例ID相同
+ * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cmgo-p8vn****。与云数据库控制台页面中显示的实例ID相同
  * @method string getUserName() 获取实例账户名。初始化实例密码，本参数传mongouser。
  * @method void setUserName(string $UserName) 设置实例账户名。初始化实例密码，本参数传mongouser。
- * @method string getPassword() 获取实例新密码，至少包含字母、数字和字符（!@#%^*()）中的两种，长度为8-16个字符
- * @method void setPassword(string $Password) 设置实例新密码，至少包含字母、数字和字符（!@#%^*()）中的两种，长度为8-16个字符
+ * @method string getPassword() 获取指定账户的新密码， 密码格式为8-32个字符长度，至少包含字母、数字和字符（!@#%^*()_）中的两种
+ * @method void setPassword(string $Password) 设置指定账户的新密码， 密码格式为8-32个字符长度，至少包含字母、数字和字符（!@#%^*()_）中的两种
  */
 class SetPasswordRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+     * @var string 实例ID，格式如：cmgo-p8vn****。与云数据库控制台页面中显示的实例ID相同
      */
     public $InstanceId;
 
@@ -40,14 +40,14 @@ class SetPasswordRequest extends AbstractModel
     public $UserName;
 
     /**
-     * @var string 实例新密码，至少包含字母、数字和字符（!@#%^*()）中的两种，长度为8-16个字符
+     * @var string 指定账户的新密码， 密码格式为8-32个字符长度，至少包含字母、数字和字符（!@#%^*()_）中的两种
      */
     public $Password;
 
     /**
-     * @param string $InstanceId 实例ID，格式如：cmgo-p8vnipr5。与云数据库控制台页面中显示的实例ID相同
+     * @param string $InstanceId 实例ID，格式如：cmgo-p8vn****。与云数据库控制台页面中显示的实例ID相同
      * @param string $UserName 实例账户名。初始化实例密码，本参数传mongouser。
-     * @param string $Password 实例新密码，至少包含字母、数字和字符（!@#%^*()）中的两种，长度为8-16个字符
+     * @param string $Password 指定账户的新密码， 密码格式为8-32个字符长度，至少包含字母、数字和字符（!@#%^*()_）中的两种
      */
     function __construct()
     {

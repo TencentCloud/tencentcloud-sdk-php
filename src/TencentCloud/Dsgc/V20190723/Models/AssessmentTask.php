@@ -24,10 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(string $TaskId) 设置评估任务Id
  * @method integer getTaskUid() 获取评估任务的自增ID
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskUid(integer $TaskUid) 设置评估任务的自增ID
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTaskName() 获取评估任务名称
  * @method void setTaskName(string $TaskName) 设置评估任务名称
  * @method string getBusinessName() 获取业务名称
@@ -49,9 +47,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getRiskCount() 获取风险项数量（仅状态为finished的风险项不计入总数，其余状态均算入该数量）
  * @method void setRiskCount(integer $RiskCount) 设置风险项数量（仅状态为finished的风险项不计入总数，其余状态均算入该数量）
  * @method string getFinishedTime() 获取评估任务完成时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFinishedTime(string $FinishedTime) 设置评估任务完成时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedTime() 获取评估任务发起时间
  * @method void setCreatedTime(string $CreatedTime) 设置评估任务发起时间
  * @method string getStatus() 获取评估状态。(waiting待评估，processing评估中, , finished已评估, failed评估失败)
@@ -59,19 +55,13 @@ use TencentCloud\Common\AbstractModel;
  * @method array getRiskCountInfoList() 获取待处理各等级风险项信息
  * @method void setRiskCountInfoList(array $RiskCountInfoList) 设置待处理各等级风险项信息
  * @method DiscoveryCondition getDiscoveryCondition() 获取数据源信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiscoveryCondition(DiscoveryCondition $DiscoveryCondition) 设置数据源信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getErrorInfo() 获取评估任务失败信息
  * @method void setErrorInfo(string $ErrorInfo) 设置评估任务失败信息
  * @method integer getTemplateUid() 获取模板主键id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTemplateUid(integer $TemplateUid) 设置模板主键id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProgressPercent() 获取进度百分比
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProgressPercent(integer $ProgressPercent) 设置进度百分比
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssessmentTask extends AbstractModel
 {
@@ -83,7 +73,6 @@ class AssessmentTask extends AbstractModel
     /**
      * @var integer 评估任务的自增ID
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskUid;
 
@@ -139,7 +128,6 @@ class AssessmentTask extends AbstractModel
 
     /**
      * @var string 评估任务完成时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FinishedTime;
 
@@ -160,7 +148,6 @@ class AssessmentTask extends AbstractModel
 
     /**
      * @var DiscoveryCondition 数据源信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiscoveryCondition;
 
@@ -171,13 +158,11 @@ class AssessmentTask extends AbstractModel
 
     /**
      * @var integer 模板主键id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TemplateUid;
 
     /**
      * @var integer 进度百分比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProgressPercent;
 
@@ -185,7 +170,6 @@ class AssessmentTask extends AbstractModel
      * @param string $TaskId 评估任务Id
      * @param integer $TaskUid 评估任务的自增ID
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskName 评估任务名称
      * @param string $BusinessName 业务名称
      * @param string $BusinessDept 业务所属部门
@@ -197,17 +181,13 @@ class AssessmentTask extends AbstractModel
      * @param integer $ControlItemCount 评估项数量
      * @param integer $RiskCount 风险项数量（仅状态为finished的风险项不计入总数，其余状态均算入该数量）
      * @param string $FinishedTime 评估任务完成时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedTime 评估任务发起时间
      * @param string $Status 评估状态。(waiting待评估，processing评估中, , finished已评估, failed评估失败)
      * @param array $RiskCountInfoList 待处理各等级风险项信息
      * @param DiscoveryCondition $DiscoveryCondition 数据源信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrorInfo 评估任务失败信息
      * @param integer $TemplateUid 模板主键id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProgressPercent 进度百分比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

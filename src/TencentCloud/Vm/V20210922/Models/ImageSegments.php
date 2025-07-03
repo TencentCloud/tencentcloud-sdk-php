@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 直播流：该值为时间戳，例如：1594650717
  * @method ImageResult getResult() 获取画面截帧结果详情
  * @method void setResult(ImageResult $Result) 设置画面截帧结果详情
+ * @method string getCreatedAt() 获取时间
+ * @method void setCreatedAt(string $CreatedAt) 设置时间
+ * @method string getOffsetusTime() 获取截帧毫秒时间
+ * @method void setOffsetusTime(string $OffsetusTime) 设置截帧毫秒时间
  */
 class ImageSegments extends AbstractModel
 {
@@ -44,10 +48,22 @@ class ImageSegments extends AbstractModel
     public $Result;
 
     /**
+     * @var string 时间
+     */
+    public $CreatedAt;
+
+    /**
+     * @var string 截帧毫秒时间
+     */
+    public $OffsetusTime;
+
+    /**
      * @param string $OffsetTime 截帧时间。
 点播文件：该值为相对于视频偏移时间，单位为秒，例如：0，5，10
 直播流：该值为时间戳，例如：1594650717
      * @param ImageResult $Result 画面截帧结果详情
+     * @param string $CreatedAt 时间
+     * @param string $OffsetusTime 截帧毫秒时间
      */
     function __construct()
     {
@@ -69,6 +85,14 @@ class ImageSegments extends AbstractModel
         if (array_key_exists("Result",$param) and $param["Result"] !== null) {
             $this->Result = new ImageResult();
             $this->Result->deserialize($param["Result"]);
+        }
+
+        if (array_key_exists("CreatedAt",$param) and $param["CreatedAt"] !== null) {
+            $this->CreatedAt = $param["CreatedAt"];
+        }
+
+        if (array_key_exists("OffsetusTime",$param) and $param["OffsetusTime"] !== null) {
+            $this->OffsetusTime = $param["OffsetusTime"];
         }
     }
 }

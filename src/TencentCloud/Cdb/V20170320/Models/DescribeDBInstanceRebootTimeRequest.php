@@ -21,17 +21,37 @@ use TencentCloud\Common\AbstractModel;
  * DescribeDBInstanceRebootTime请求参数结构体
  *
  * @method array getInstanceIds() 获取实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+说明：可输入多个实例 ID 进行查询，json 格式如下。
+[
+    "cdb-30z11v8s",
+    "cdb-93h11efg"
+  ]
  * @method void setInstanceIds(array $InstanceIds) 设置实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+说明：可输入多个实例 ID 进行查询，json 格式如下。
+[
+    "cdb-30z11v8s",
+    "cdb-93h11efg"
+  ]
  */
 class DescribeDBInstanceRebootTimeRequest extends AbstractModel
 {
     /**
      * @var array 实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+说明：可输入多个实例 ID 进行查询，json 格式如下。
+[
+    "cdb-30z11v8s",
+    "cdb-93h11efg"
+  ]
      */
     public $InstanceIds;
 
     /**
      * @param array $InstanceIds 实例的 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+说明：可输入多个实例 ID 进行查询，json 格式如下。
+[
+    "cdb-30z11v8s",
+    "cdb-93h11efg"
+  ]
      */
     function __construct()
     {

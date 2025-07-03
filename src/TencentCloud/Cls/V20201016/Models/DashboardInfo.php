@@ -25,39 +25,23 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDashboardName() 获取仪表盘名字
  * @method void setDashboardName(string $DashboardName) 设置仪表盘名字
  * @method string getData() 获取仪表盘数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(string $Data) 设置仪表盘数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建仪表盘的时间
  * @method void setCreateTime(string $CreateTime) 设置创建仪表盘的时间
  * @method integer getAssumerUin() 获取AssumerUin非空则表示创建该日志主题的服务方Uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssumerUin(integer $AssumerUin) 设置AssumerUin非空则表示创建该日志主题的服务方Uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRoleName() 获取RoleName非空则表示创建该日志主题的服务方使用的角色
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoleName(string $RoleName) 设置RoleName非空则表示创建该日志主题的服务方使用的角色
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAssumerName() 获取AssumerName非空则表示创建该日志主题的服务方名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssumerName(string $AssumerName) 设置AssumerName非空则表示创建该日志主题的服务方名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取日志主题绑定的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置日志主题绑定的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDashboardRegion() 获取仪表盘所在地域： 为了兼容老的地域。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDashboardRegion(string $DashboardRegion) 设置仪表盘所在地域： 为了兼容老的地域。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取修改仪表盘的时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置修改仪表盘的时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDashboardTopicInfos() 获取仪表盘对应的topic相关信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDashboardTopicInfos(array $DashboardTopicInfos) 设置仪表盘对应的topic相关信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DashboardInfo extends AbstractModel
 {
@@ -73,7 +57,6 @@ class DashboardInfo extends AbstractModel
 
     /**
      * @var string 仪表盘数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
 
@@ -84,43 +67,36 @@ class DashboardInfo extends AbstractModel
 
     /**
      * @var integer AssumerUin非空则表示创建该日志主题的服务方Uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AssumerUin;
 
     /**
      * @var string RoleName非空则表示创建该日志主题的服务方使用的角色
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoleName;
 
     /**
      * @var string AssumerName非空则表示创建该日志主题的服务方名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AssumerName;
 
     /**
      * @var array 日志主题绑定的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
      * @var string 仪表盘所在地域： 为了兼容老的地域。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DashboardRegion;
 
     /**
      * @var string 修改仪表盘的时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @var array 仪表盘对应的topic相关信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DashboardTopicInfos;
 
@@ -128,22 +104,14 @@ class DashboardInfo extends AbstractModel
      * @param string $DashboardId 仪表盘id
      * @param string $DashboardName 仪表盘名字
      * @param string $Data 仪表盘数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建仪表盘的时间
      * @param integer $AssumerUin AssumerUin非空则表示创建该日志主题的服务方Uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RoleName RoleName非空则表示创建该日志主题的服务方使用的角色
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AssumerName AssumerName非空则表示创建该日志主题的服务方名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 日志主题绑定的标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DashboardRegion 仪表盘所在地域： 为了兼容老的地域。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 修改仪表盘的时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DashboardTopicInfos 仪表盘对应的topic相关信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

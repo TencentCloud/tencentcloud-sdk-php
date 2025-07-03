@@ -35,9 +35,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getVpcName() 获取私有网络名
  * @method void setVpcName(string $VpcName) 设置私有网络名
  * @method array getTag() 获取标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTag(array $Tag) 设置标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNick() 获取昵称
  * @method void setNick(string $Nick) 设置昵称
  * @method string getCIDR() 获取cidr
@@ -57,13 +55,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getLastScanTime() 获取最后扫描时间
  * @method void setLastScanTime(string $LastScanTime) 设置最后扫描时间
  * @method integer getIsCore() 获取是否核心
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsCore(integer $IsCore) 设置是否核心
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsNewAsset() 获取是否新资产 1新
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsNewAsset(integer $IsNewAsset) 设置是否新资产 1新
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SubnetAsset extends AbstractModel
 {
@@ -104,7 +98,6 @@ class SubnetAsset extends AbstractModel
 
     /**
      * @var array 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tag;
 
@@ -155,13 +148,11 @@ class SubnetAsset extends AbstractModel
 
     /**
      * @var integer 是否核心
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsCore;
 
     /**
      * @var integer 是否新资产 1新
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsNewAsset;
 
@@ -174,7 +165,6 @@ class SubnetAsset extends AbstractModel
      * @param string $VpcId 私有网络id
      * @param string $VpcName 私有网络名
      * @param array $Tag 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Nick 昵称
      * @param string $CIDR cidr
      * @param string $Zone 可用区
@@ -185,9 +175,7 @@ class SubnetAsset extends AbstractModel
      * @param integer $ScanTask 任务数
      * @param string $LastScanTime 最后扫描时间
      * @param integer $IsCore 是否核心
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsNewAsset 是否新资产 1新
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -69,13 +69,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRegion() 获取地域
  * @method void setRegion(string $Region) 设置地域
  * @method array getTags() 获取订阅实例的标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置订阅实例的标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAutoRenewFlag() 获取自动续费标识,0-不自动续费，1-自动续费
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标识,0-不自动续费，1-自动续费
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubscribeVersion() 获取数据订阅版本。老版订阅填txdts，kafka版填kafka
  * @method void setSubscribeVersion(string $SubscribeVersion) 设置数据订阅版本。老版订阅填txdts，kafka版填kafka
  * @method array getErrors() 获取错误信息
@@ -209,13 +205,11 @@ class DescribeSubscribeConfResponse extends AbstractModel
 
     /**
      * @var array 订阅实例的标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
      * @var integer 自动续费标识,0-不自动续费，1-自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoRenewFlag;
 
@@ -261,9 +255,7 @@ class DescribeSubscribeConfResponse extends AbstractModel
      * @param string $ModifyTime 修改时间
      * @param string $Region 地域
      * @param array $Tags 订阅实例的标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AutoRenewFlag 自动续费标识,0-不自动续费，1-自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubscribeVersion 数据订阅版本。老版订阅填txdts，kafka版填kafka
      * @param array $Errors 错误信息
 注意：此字段可能返回 null，表示取不到有效值。

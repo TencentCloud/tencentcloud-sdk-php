@@ -29,9 +29,7 @@ use TencentCloud\Common\AbstractModel;
  * @method array getAclUserRules() 获取用户自定义规则。
  * @method void setAclUserRules(array $AclUserRules) 设置用户自定义规则。
  * @method array getCustomizes() 获取托管定制规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCustomizes(array $Customizes) 设置托管定制规则
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AclConfig extends AbstractModel
 {
@@ -49,7 +47,6 @@ class AclConfig extends AbstractModel
 
     /**
      * @var array 托管定制规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Customizes;
 
@@ -59,7 +56,6 @@ class AclConfig extends AbstractModel
 <li> off：关闭。</li>
      * @param array $AclUserRules 用户自定义规则。
      * @param array $Customizes 托管定制规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

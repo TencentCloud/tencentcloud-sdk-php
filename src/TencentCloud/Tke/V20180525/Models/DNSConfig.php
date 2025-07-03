@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 自定义DNS配置
  *
  * @method array getNameservers() 获取DNS 服务器IP地址列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNameservers(array $Nameservers) 设置DNS 服务器IP地址列表
-注意：此字段可能返回 null，表示取不到有效值。
- * @method array getSearches() 获取DNS搜索域列表
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSearches(array $Searches) 设置DNS搜索域列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getOptions() 获取对象选项列表，每个对象由name和value（可选）构成
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOptions(array $Options) 设置对象选项列表，每个对象由name和value（可选）构成
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSearches() 获取DNS搜索域列表
+ * @method void setSearches(array $Searches) 设置DNS搜索域列表
  */
 class DNSConfig extends AbstractModel
 {
     /**
      * @var array DNS 服务器IP地址列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Nameservers;
 
     /**
-     * @var array DNS搜索域列表
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $Searches;
-
-    /**
      * @var array 对象选项列表，每个对象由name和value（可选）构成
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Options;
 
     /**
+     * @var array DNS搜索域列表
+     */
+    public $Searches;
+
+    /**
      * @param array $Nameservers DNS 服务器IP地址列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Searches DNS搜索域列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Options 对象选项列表，每个对象由name和value（可选）构成
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Searches DNS搜索域列表
      */
     function __construct()
     {
@@ -78,10 +66,6 @@ class DNSConfig extends AbstractModel
             $this->Nameservers = $param["Nameservers"];
         }
 
-        if (array_key_exists("Searches",$param) and $param["Searches"] !== null) {
-            $this->Searches = $param["Searches"];
-        }
-
         if (array_key_exists("Options",$param) and $param["Options"] !== null) {
             $this->Options = [];
             foreach ($param["Options"] as $key => $value){
@@ -89,6 +73,10 @@ class DNSConfig extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Options, $obj);
             }
+        }
+
+        if (array_key_exists("Searches",$param) and $param["Searches"] !== null) {
+            $this->Searches = $param["Searches"];
         }
     }
 }

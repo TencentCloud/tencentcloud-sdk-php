@@ -18,10 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 审核模版详情
+ * 审核模板详情
  *
- * @method integer getDefinition() 获取审核模版唯一标签。
- * @method void setDefinition(integer $Definition) 设置审核模版唯一标签。
+ * @method integer getDefinition() 获取审核模板唯一标签。
+ * @method void setDefinition(integer $Definition) 设置审核模板唯一标签。
  * @method string getName() 获取模板名称。
  * @method void setName(string $Name) 设置模板名称。
  * @method string getComment() 获取模板描述信息。
@@ -42,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 class ReviewTemplate extends AbstractModel
 {
     /**
-     * @var integer 审核模版唯一标签。
+     * @var integer 审核模板唯一标签。
      */
     public $Definition;
 
@@ -79,7 +79,7 @@ class ReviewTemplate extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @param integer $Definition 审核模版唯一标签。
+     * @param integer $Definition 审核模板唯一标签。
      * @param string $Name 模板名称。
      * @param string $Comment 模板描述信息。
      * @param string $Type 模板类型，可选值：

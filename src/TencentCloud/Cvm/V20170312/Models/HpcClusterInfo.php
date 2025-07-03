@@ -23,13 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getHpcClusterId() 获取高性能计算集群ID
  * @method void setHpcClusterId(string $HpcClusterId) 设置高性能计算集群ID
  * @method string getName() 获取高性能计算集群名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置高性能计算集群名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRemark() 获取高性能计算集群备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置高性能计算集群备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCvmQuotaTotal() 获取集群下设备容量
  * @method void setCvmQuotaTotal(integer $CvmQuotaTotal) 设置集群下设备容量
  * @method string getZone() 获取集群所在可用区
@@ -37,21 +33,17 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getCurrentNum() 获取集群当前已有设备量
  * @method void setCurrentNum(integer $CurrentNum) 设置集群当前已有设备量
  * @method string getCreateTime() 获取集群创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置集群创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getInstanceIds() 获取集群内实例ID列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceIds(array $InstanceIds) 设置集群内实例ID列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHpcClusterType() 获取高性能计算集群类型。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHpcClusterType(string $HpcClusterType) 设置高性能计算集群类型。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHpcClusterBusinessId() 获取高性能计算集群对应的业务场景标识，当前只支持CDC。	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHpcClusterBusinessId(string $HpcClusterBusinessId) 设置高性能计算集群对应的业务场景标识，当前只支持CDC。	
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getHpcClusterNetMode() 获取高性能计算集群网络模式
+ * @method void setHpcClusterNetMode(integer $HpcClusterNetMode) 设置高性能计算集群网络模式
+ * @method array getTags() 获取高性能计算集群关联的标签列表
+ * @method void setTags(array $Tags) 设置高性能计算集群关联的标签列表
  */
 class HpcClusterInfo extends AbstractModel
 {
@@ -62,13 +54,11 @@ class HpcClusterInfo extends AbstractModel
 
     /**
      * @var string 高性能计算集群名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 高性能计算集群备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
@@ -89,45 +79,47 @@ class HpcClusterInfo extends AbstractModel
 
     /**
      * @var string 集群创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var array 集群内实例ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceIds;
 
     /**
      * @var string 高性能计算集群类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HpcClusterType;
 
     /**
      * @var string 高性能计算集群对应的业务场景标识，当前只支持CDC。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HpcClusterBusinessId;
 
     /**
+     * @var integer 高性能计算集群网络模式
+     */
+    public $HpcClusterNetMode;
+
+    /**
+     * @var array 高性能计算集群关联的标签列表
+     */
+    public $Tags;
+
+    /**
      * @param string $HpcClusterId 高性能计算集群ID
      * @param string $Name 高性能计算集群名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Remark 高性能计算集群备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CvmQuotaTotal 集群下设备容量
      * @param string $Zone 集群所在可用区
      * @param integer $CurrentNum 集群当前已有设备量
      * @param string $CreateTime 集群创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $InstanceIds 集群内实例ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HpcClusterType 高性能计算集群类型。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HpcClusterBusinessId 高性能计算集群对应的业务场景标识，当前只支持CDC。	
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $HpcClusterNetMode 高性能计算集群网络模式
+     * @param array $Tags 高性能计算集群关联的标签列表
      */
     function __construct()
     {
@@ -180,6 +172,19 @@ class HpcClusterInfo extends AbstractModel
 
         if (array_key_exists("HpcClusterBusinessId",$param) and $param["HpcClusterBusinessId"] !== null) {
             $this->HpcClusterBusinessId = $param["HpcClusterBusinessId"];
+        }
+
+        if (array_key_exists("HpcClusterNetMode",$param) and $param["HpcClusterNetMode"] !== null) {
+            $this->HpcClusterNetMode = $param["HpcClusterNetMode"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

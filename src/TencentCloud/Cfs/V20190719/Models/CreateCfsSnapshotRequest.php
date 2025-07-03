@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCfsSnapshot请求参数结构体
  *
- * @method string getFileSystemId() 获取文件系统id
- * @method void setFileSystemId(string $FileSystemId) 设置文件系统id
- * @method string getSnapshotName() 获取快照名称
- * @method void setSnapshotName(string $SnapshotName) 设置快照名称
+ * @method string getFileSystemId() 获取文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
+ * @method void setFileSystemId(string $FileSystemId) 设置文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
+ * @method string getSnapshotName() 获取快照名称，支持不超过64字符长度，支持中文、数字、_、-
+ * @method void setSnapshotName(string $SnapshotName) 设置快照名称，支持不超过64字符长度，支持中文、数字、_、-
  * @method array getResourceTags() 获取快照标签
  * @method void setResourceTags(array $ResourceTags) 设置快照标签
  */
 class CreateCfsSnapshotRequest extends AbstractModel
 {
     /**
-     * @var string 文件系统id
+     * @var string 文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
      */
     public $FileSystemId;
 
     /**
-     * @var string 快照名称
+     * @var string 快照名称，支持不超过64字符长度，支持中文、数字、_、-
      */
     public $SnapshotName;
 
@@ -45,8 +45,8 @@ class CreateCfsSnapshotRequest extends AbstractModel
     public $ResourceTags;
 
     /**
-     * @param string $FileSystemId 文件系统id
-     * @param string $SnapshotName 快照名称
+     * @param string $FileSystemId 文件系统ID，通过查询文件系统列表获取；[DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170)
+     * @param string $SnapshotName 快照名称，支持不超过64字符长度，支持中文、数字、_、-
      * @param array $ResourceTags 快照标签
      */
     function __construct()

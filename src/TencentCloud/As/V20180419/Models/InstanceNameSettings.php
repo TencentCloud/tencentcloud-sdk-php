@@ -32,6 +32,14 @@ UNIQUE，入参所填的 InstanceName 相当于实例名前缀，AS 和 CVM 会�
 ORIGINAL，AS 直接将入参中所填的 InstanceName 传递给 CVM，CVM 可能会对 InstanceName 追加序列号，伸缩组中实例的 InstanceName 会出现冲突的情况。
 
 UNIQUE，入参所填的 InstanceName 相当于实例名前缀，AS 和 CVM 会对其进行拓展，伸缩组中实例的 InstanceName 可以保证唯一。
+ * @method string getInstanceNameSuffix() 获取云服务器实例名后缀。字符长度为[1,105]，且与 InstanceName 的长度和不能超过107。
+
+假设后缀名称为 suffix，原实例名为 test.0，最终实例名为 test.0.suffix。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceNameSuffix(string $InstanceNameSuffix) 设置云服务器实例名后缀。字符长度为[1,105]，且与 InstanceName 的长度和不能超过107。
+
+假设后缀名称为 suffix，原实例名为 test.0，最终实例名为 test.0.suffix。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceNameSettings extends AbstractModel
 {
@@ -50,12 +58,24 @@ UNIQUE，入参所填的 InstanceName 相当于实例名前缀，AS 和 CVM 会�
     public $InstanceNameStyle;
 
     /**
+     * @var string 云服务器实例名后缀。字符长度为[1,105]，且与 InstanceName 的长度和不能超过107。
+
+假设后缀名称为 suffix，原实例名为 test.0，最终实例名为 test.0.suffix。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceNameSuffix;
+
+    /**
      * @param string $InstanceName 云服务器的实例名。字符长度为[2, 108]。
      * @param string $InstanceNameStyle 云服务器实例名的风格，取值范围包括 ORIGINAL 和 UNIQUE，默认为 ORIGINAL。
 
 ORIGINAL，AS 直接将入参中所填的 InstanceName 传递给 CVM，CVM 可能会对 InstanceName 追加序列号，伸缩组中实例的 InstanceName 会出现冲突的情况。
 
 UNIQUE，入参所填的 InstanceName 相当于实例名前缀，AS 和 CVM 会对其进行拓展，伸缩组中实例的 InstanceName 可以保证唯一。
+     * @param string $InstanceNameSuffix 云服务器实例名后缀。字符长度为[1,105]，且与 InstanceName 的长度和不能超过107。
+
+假设后缀名称为 suffix，原实例名为 test.0，最终实例名为 test.0.suffix。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -76,6 +96,10 @@ UNIQUE，入参所填的 InstanceName 相当于实例名前缀，AS 和 CVM 会�
 
         if (array_key_exists("InstanceNameStyle",$param) and $param["InstanceNameStyle"] !== null) {
             $this->InstanceNameStyle = $param["InstanceNameStyle"];
+        }
+
+        if (array_key_exists("InstanceNameSuffix",$param) and $param["InstanceNameSuffix"] !== null) {
+            $this->InstanceNameSuffix = $param["InstanceNameSuffix"];
         }
     }
 }

@@ -21,93 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * 血压
  *
  * @method string getName() 获取名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSrc() 获取原文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSrc(string $Src) 设置原文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNorm() 获取归一化值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNorm(string $Norm) 设置归一化值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUnit() 获取单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnit(string $Unit) 设置单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取对外输出值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置对外输出值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNormDiastolic() 获取舒张压
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNormDiastolic(string $NormDiastolic) 设置舒张压
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNormSystolic() 获取收缩压
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNormSystolic(string $NormSystolic) 设置收缩压
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BloodPressureBlock extends AbstractModel
 {
     /**
      * @var string 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Src;
 
     /**
      * @var string 归一化值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Norm;
 
     /**
      * @var string 单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Unit;
 
     /**
      * @var string 对外输出值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @var string 舒张压
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NormDiastolic;
 
     /**
      * @var string 收缩压
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NormSystolic;
 
     /**
      * @param string $Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Norm 归一化值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Unit 单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 对外输出值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NormDiastolic 舒张压
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NormSystolic 收缩压
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

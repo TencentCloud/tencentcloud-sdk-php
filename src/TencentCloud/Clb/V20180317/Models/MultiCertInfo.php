@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSSLMode(string $SSLMode) 设置认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
  * @method array getCertList() 获取监听器或规则证书列表，单双向认证，多本服务端证书算法类型不能重复;若SSLMode为双向认证，证书列表必须包含一本ca证书。
  * @method void setCertList(array $CertList) 设置监听器或规则证书列表，单双向认证，多本服务端证书算法类型不能重复;若SSLMode为双向认证，证书列表必须包含一本ca证书。
+ * @method string getSSLVerifyClient() 获取双向认证时，是否开启客户端认证，ON:开启，OPTIONAL:自适应，默认ON
+ * @method void setSSLVerifyClient(string $SSLVerifyClient) 设置双向认证时，是否开启客户端认证，ON:开启，OPTIONAL:自适应，默认ON
  */
 class MultiCertInfo extends AbstractModel
 {
@@ -38,8 +40,14 @@ class MultiCertInfo extends AbstractModel
     public $CertList;
 
     /**
+     * @var string 双向认证时，是否开启客户端认证，ON:开启，OPTIONAL:自适应，默认ON
+     */
+    public $SSLVerifyClient;
+
+    /**
      * @param string $SSLMode 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
      * @param array $CertList 监听器或规则证书列表，单双向认证，多本服务端证书算法类型不能重复;若SSLMode为双向认证，证书列表必须包含一本ca证书。
+     * @param string $SSLVerifyClient 双向认证时，是否开启客户端认证，ON:开启，OPTIONAL:自适应，默认ON
      */
     function __construct()
     {
@@ -65,6 +73,10 @@ class MultiCertInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->CertList, $obj);
             }
+        }
+
+        if (array_key_exists("SSLVerifyClient",$param) and $param["SSLVerifyClient"] !== null) {
+            $this->SSLVerifyClient = $param["SSLVerifyClient"];
         }
     }
 }

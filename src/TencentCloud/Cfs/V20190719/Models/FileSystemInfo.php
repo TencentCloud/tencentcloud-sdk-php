@@ -68,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppId(integer $AppId) 设置应用ID
  * @method float getBandwidthLimit() 获取文件系统吞吐上限，吞吐上限是根据文件系统当前已使用存储量、绑定的存储资源包以及吞吐资源包一同确定. 单位MiB/s
  * @method void setBandwidthLimit(float $BandwidthLimit) 设置文件系统吞吐上限，吞吐上限是根据文件系统当前已使用存储量、绑定的存储资源包以及吞吐资源包一同确定. 单位MiB/s
+ * @method string getAutoSnapshotPolicyId() 获取文件系统关联的快照策略
+ * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) 设置文件系统关联的快照策略
+ * @method string getSnapStatus() 获取文件系统处理快照状态,snapping：快照中，normal：正常状态
+ * @method void setSnapStatus(string $SnapStatus) 设置文件系统处理快照状态,snapping：快照中，normal：正常状态
  * @method integer getCapacity() 获取文件系统容量规格上限
 单位:GiB
  * @method void setCapacity(integer $Capacity) 设置文件系统容量规格上限
@@ -81,9 +85,11 @@ Available:可用
 NotAvailable：不可用
 Available:可用
  * @method TieringDetailInfo getTieringDetail() 获取分层存储详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTieringDetail(TieringDetailInfo $TieringDetail) 设置分层存储详情
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method AutoScaleUpRule getAutoScaleUpRule() 获取文件系统自动扩容策略
+ * @method void setAutoScaleUpRule(AutoScaleUpRule $AutoScaleUpRule) 设置文件系统自动扩容策略
+ * @method string getVersion() 获取文件系统版本
+ * @method void setVersion(string $Version) 设置文件系统版本
  */
 class FileSystemInfo extends AbstractModel
 {
@@ -184,6 +190,16 @@ class FileSystemInfo extends AbstractModel
     public $BandwidthLimit;
 
     /**
+     * @var string 文件系统关联的快照策略
+     */
+    public $AutoSnapshotPolicyId;
+
+    /**
+     * @var string 文件系统处理快照状态,snapping：快照中，normal：正常状态
+     */
+    public $SnapStatus;
+
+    /**
      * @var integer 文件系统容量规格上限
 单位:GiB
      */
@@ -203,9 +219,18 @@ Available:可用
 
     /**
      * @var TieringDetailInfo 分层存储详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TieringDetail;
+
+    /**
+     * @var AutoScaleUpRule 文件系统自动扩容策略
+     */
+    public $AutoScaleUpRule;
+
+    /**
+     * @var string 文件系统版本
+     */
+    public $Version;
 
     /**
      * @param string $CreationTime 创建时间
@@ -232,6 +257,8 @@ Available:可用
      * @param string $KmsKeyId 加密所使用的密钥，可以为密钥的 ID 或者 ARN
      * @param integer $AppId 应用ID
      * @param float $BandwidthLimit 文件系统吞吐上限，吞吐上限是根据文件系统当前已使用存储量、绑定的存储资源包以及吞吐资源包一同确定. 单位MiB/s
+     * @param string $AutoSnapshotPolicyId 文件系统关联的快照策略
+     * @param string $SnapStatus 文件系统处理快照状态,snapping：快照中，normal：正常状态
      * @param integer $Capacity 文件系统容量规格上限
 单位:GiB
      * @param array $Tags 文件系统标签列表
@@ -239,7 +266,8 @@ Available:可用
 NotAvailable：不可用
 Available:可用
      * @param TieringDetailInfo $TieringDetail 分层存储详情
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param AutoScaleUpRule $AutoScaleUpRule 文件系统自动扩容策略
+     * @param string $Version 文件系统版本
      */
     function __construct()
     {
@@ -327,6 +355,14 @@ Available:可用
             $this->BandwidthLimit = $param["BandwidthLimit"];
         }
 
+        if (array_key_exists("AutoSnapshotPolicyId",$param) and $param["AutoSnapshotPolicyId"] !== null) {
+            $this->AutoSnapshotPolicyId = $param["AutoSnapshotPolicyId"];
+        }
+
+        if (array_key_exists("SnapStatus",$param) and $param["SnapStatus"] !== null) {
+            $this->SnapStatus = $param["SnapStatus"];
+        }
+
         if (array_key_exists("Capacity",$param) and $param["Capacity"] !== null) {
             $this->Capacity = $param["Capacity"];
         }
@@ -347,6 +383,15 @@ Available:可用
         if (array_key_exists("TieringDetail",$param) and $param["TieringDetail"] !== null) {
             $this->TieringDetail = new TieringDetailInfo();
             $this->TieringDetail->deserialize($param["TieringDetail"]);
+        }
+
+        if (array_key_exists("AutoScaleUpRule",$param) and $param["AutoScaleUpRule"] !== null) {
+            $this->AutoScaleUpRule = new AutoScaleUpRule();
+            $this->AutoScaleUpRule->deserialize($param["AutoScaleUpRule"]);
+        }
+
+        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
+            $this->Version = $param["Version"];
         }
     }
 }

@@ -44,8 +44,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQueryBindToApp(integer $QueryBindToApp) 设置查询应用绑定数据源: 0: 否,1: 是
  * @method integer getQueryConnector() 获取查询连接器 0 数据模型 1 连接器 2 自定义连接器
  * @method void setQueryConnector(integer $QueryConnector) 设置查询连接器 0 数据模型 1 连接器 2 自定义连接器
- * @method array getNotQuerySubTypeList() 获取查询数据源黑名单机制，比如不想要系统数据源["system"]
- * @method void setNotQuerySubTypeList(array $NotQuerySubTypeList) 设置查询数据源黑名单机制，比如不想要系统数据源["system"]
+ * @method array getNotQuerySubTypeList() 获取废弃中
+ * @method void setNotQuerySubTypeList(array $NotQuerySubTypeList) 设置废弃中
+ * @method array getChannelList() 获取查询channelList
+ * @method void setChannelList(array $ChannelList) 设置查询channelList
+ * @method boolean getQueryDataSourceRelationList() 获取是否查询数据源关联关系
+ * @method void setQueryDataSourceRelationList(boolean $QueryDataSourceRelationList) 设置是否查询数据源关联关系
+ * @method string getDbInstanceType() 获取db实例类型
+ * @method void setDbInstanceType(string $DbInstanceType) 设置db实例类型
+ * @method array getDatabaseTableNames() 获取数据库表名列表
+ * @method void setDatabaseTableNames(array $DatabaseTableNames) 设置数据库表名列表
+ * @method boolean getQuerySystemModel() 获取是否查询系统模型，默认为true，需要显示设置为False才能过滤系统模型
+ * @method void setQuerySystemModel(boolean $QuerySystemModel) 设置是否查询系统模型，默认为true，需要显示设置为False才能过滤系统模型
  */
 class DescribeDataSourceListRequest extends AbstractModel
 {
@@ -110,9 +120,34 @@ class DescribeDataSourceListRequest extends AbstractModel
     public $QueryConnector;
 
     /**
-     * @var array 查询数据源黑名单机制，比如不想要系统数据源["system"]
+     * @var array 废弃中
      */
     public $NotQuerySubTypeList;
+
+    /**
+     * @var array 查询channelList
+     */
+    public $ChannelList;
+
+    /**
+     * @var boolean 是否查询数据源关联关系
+     */
+    public $QueryDataSourceRelationList;
+
+    /**
+     * @var string db实例类型
+     */
+    public $DbInstanceType;
+
+    /**
+     * @var array 数据库表名列表
+     */
+    public $DatabaseTableNames;
+
+    /**
+     * @var boolean 是否查询系统模型，默认为true，需要显示设置为False才能过滤系统模型
+     */
+    public $QuerySystemModel;
 
     /**
      * @param integer $PageSize 每页条数
@@ -127,7 +162,12 @@ class DescribeDataSourceListRequest extends AbstractModel
      * @param integer $AppLinkStatus 查询未关联应用的数据源，0:未关联，该参数配合 AppIds 参数一块使用
      * @param integer $QueryBindToApp 查询应用绑定数据源: 0: 否,1: 是
      * @param integer $QueryConnector 查询连接器 0 数据模型 1 连接器 2 自定义连接器
-     * @param array $NotQuerySubTypeList 查询数据源黑名单机制，比如不想要系统数据源["system"]
+     * @param array $NotQuerySubTypeList 废弃中
+     * @param array $ChannelList 查询channelList
+     * @param boolean $QueryDataSourceRelationList 是否查询数据源关联关系
+     * @param string $DbInstanceType db实例类型
+     * @param array $DatabaseTableNames 数据库表名列表
+     * @param boolean $QuerySystemModel 是否查询系统模型，默认为true，需要显示设置为False才能过滤系统模型
      */
     function __construct()
     {
@@ -193,6 +233,26 @@ class DescribeDataSourceListRequest extends AbstractModel
 
         if (array_key_exists("NotQuerySubTypeList",$param) and $param["NotQuerySubTypeList"] !== null) {
             $this->NotQuerySubTypeList = $param["NotQuerySubTypeList"];
+        }
+
+        if (array_key_exists("ChannelList",$param) and $param["ChannelList"] !== null) {
+            $this->ChannelList = $param["ChannelList"];
+        }
+
+        if (array_key_exists("QueryDataSourceRelationList",$param) and $param["QueryDataSourceRelationList"] !== null) {
+            $this->QueryDataSourceRelationList = $param["QueryDataSourceRelationList"];
+        }
+
+        if (array_key_exists("DbInstanceType",$param) and $param["DbInstanceType"] !== null) {
+            $this->DbInstanceType = $param["DbInstanceType"];
+        }
+
+        if (array_key_exists("DatabaseTableNames",$param) and $param["DatabaseTableNames"] !== null) {
+            $this->DatabaseTableNames = $param["DatabaseTableNames"];
+        }
+
+        if (array_key_exists("QuerySystemModel",$param) and $param["QuerySystemModel"] !== null) {
+            $this->QuerySystemModel = $param["QuerySystemModel"];
         }
     }
 }

@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 地域属性信息
  *
  * @method string getRegionName() 获取地域名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionName(string $RegionName) 设置地域名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRegionId() 获取地域ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionId(integer $RegionId) 设置地域ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取地域状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置地域状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFeatureGates() 获取地域特性开关(按照JSON的形式返回所有属性)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFeatureGates(string $FeatureGates) 设置地域特性开关(按照JSON的形式返回所有属性)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAlias() 获取地域简称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlias(string $Alias) 设置地域简称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRemark() 获取地域白名单
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置地域白名单
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RegionInstance extends AbstractModel
 {
     /**
      * @var string 地域名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionName;
 
     /**
      * @var integer 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionId;
 
     /**
      * @var string 地域状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 地域特性开关(按照JSON的形式返回所有属性)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FeatureGates;
 
     /**
      * @var string 地域简称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Alias;
 
     /**
      * @var string 地域白名单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
     /**
      * @param string $RegionName 地域名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RegionId 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 地域状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FeatureGates 地域特性开关(按照JSON的形式返回所有属性)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Alias 地域简称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Remark 地域白名单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

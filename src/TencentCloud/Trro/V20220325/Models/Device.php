@@ -21,105 +21,81 @@ use TencentCloud\Common\AbstractModel;
  * 查询用户设备的授权绑定情况
  *
  * @method string getDeviceId() 获取设备ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceId(string $DeviceId) 设置设备ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeviceName() 获取设备名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceName(string $DeviceName) 设置设备名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLicenseCount() 获取已经绑定license数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLicenseCount(integer $LicenseCount) 设置已经绑定license数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRemainDay() 获取剩余天数：天
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemainDay(integer $RemainDay) 设置剩余天数：天
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExpireTime() 获取过期时间：s
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpireTime(string $ExpireTime) 设置过期时间：s
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDuration() 获取服务时长：s
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDuration(string $Duration) 设置服务时长：s
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLicenseIds() 获取已经绑定licenseId列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLicenseIds(array $LicenseIds) 设置已经绑定licenseId列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMonthlyRemainTime() 获取每月license的限定时长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMonthlyRemainTime(integer $MonthlyRemainTime) 设置每月license的限定时长
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getLimitedTime() 获取月封顶时长（分钟)
+ * @method void setLimitedTime(integer $LimitedTime) 设置月封顶时长（分钟)
  */
 class Device extends AbstractModel
 {
     /**
      * @var string 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceId;
 
     /**
      * @var string 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceName;
 
     /**
      * @var integer 已经绑定license数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LicenseCount;
 
     /**
      * @var integer 剩余天数：天
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RemainDay;
 
     /**
      * @var string 过期时间：s
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpireTime;
 
     /**
      * @var string 服务时长：s
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Duration;
 
     /**
      * @var array 已经绑定licenseId列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LicenseIds;
 
     /**
      * @var integer 每月license的限定时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MonthlyRemainTime;
 
     /**
+     * @var integer 月封顶时长（分钟)
+     */
+    public $LimitedTime;
+
+    /**
      * @param string $DeviceId 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceName 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LicenseCount 已经绑定license数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RemainDay 剩余天数：天
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExpireTime 过期时间：s
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Duration 服务时长：s
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $LicenseIds 已经绑定licenseId列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MonthlyRemainTime 每月license的限定时长
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $LimitedTime 月封顶时长（分钟)
      */
     function __construct()
     {
@@ -164,6 +140,10 @@ class Device extends AbstractModel
 
         if (array_key_exists("MonthlyRemainTime",$param) and $param["MonthlyRemainTime"] !== null) {
             $this->MonthlyRemainTime = $param["MonthlyRemainTime"];
+        }
+
+        if (array_key_exists("LimitedTime",$param) and $param["LimitedTime"] !== null) {
+            $this->LimitedTime = $param["LimitedTime"];
         }
     }
 }

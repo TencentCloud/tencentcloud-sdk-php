@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getHandled() 获取已解决数量
  * @method void setHandled(integer $Handled) 设置已解决数量
  * @method integer getNewDiscoveryHandled() 获取新发现
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNewDiscoveryHandled(integer $NewDiscoveryHandled) 设置新发现
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RiskDealedTrendItem extends AbstractModel
 {
@@ -50,7 +48,6 @@ class RiskDealedTrendItem extends AbstractModel
 
     /**
      * @var integer 新发现
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NewDiscoveryHandled;
 
@@ -59,7 +56,6 @@ class RiskDealedTrendItem extends AbstractModel
      * @param integer $Unhandled 未解决数量
      * @param integer $Handled 已解决数量
      * @param integer $NewDiscoveryHandled 新发现
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

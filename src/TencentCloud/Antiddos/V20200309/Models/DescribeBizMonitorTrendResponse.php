@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMetricName() 获取统计纬度
  * @method void setMetricName(string $MetricName) 设置统计纬度
  * @method integer getMaxData() 获取返回DataList中的最大值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxData(integer $MaxData) 设置返回DataList中的最大值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -45,7 +43,6 @@ class DescribeBizMonitorTrendResponse extends AbstractModel
 
     /**
      * @var integer 返回DataList中的最大值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxData;
 
@@ -58,7 +55,6 @@ class DescribeBizMonitorTrendResponse extends AbstractModel
      * @param array $DataList 曲线图各个时间点的值
      * @param string $MetricName 统计纬度
      * @param integer $MaxData 返回DataList中的最大值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

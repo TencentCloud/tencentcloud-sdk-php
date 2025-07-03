@@ -21,21 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * 获取部署组
  *
  * @method string getGroupId() 获取部署组id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupId(string $GroupId) 设置部署组id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupName() 获取分组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupName(string $GroupName) 设置分组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getInstanceNum() 获取实例总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceNum(integer $InstanceNum) 设置实例总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCurrentNum() 获取已启动实例总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCurrentNum(integer $CurrentNum) 设置已启动实例总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getServer() 获取镜像server
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServer(string $Server) 设置镜像server
@@ -69,9 +61,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccessType(integer $AccessType) 设置0:公网 1:集群内访问 2：NodePort
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getProtocolPorts() 获取端口映射
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProtocolPorts(array $ProtocolPorts) 设置端口映射
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUpdateType() 获取更新方式：0:快速更新 1:滚动更新
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateType(integer $UpdateType) 设置更新方式：0:快速更新 1:滚动更新
@@ -129,21 +119,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHealthCheckSettings(HealthCheckSettings $HealthCheckSettings) 设置健康检查配置信息，若不指定该参数，则默认不设置健康检查。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getDeployAgent() 获取是否部署Agent容器
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeployAgent(boolean $DeployAgent) 设置是否部署Agent容器
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAlias() 获取部署组备注
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlias(string $Alias) 设置部署组备注
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getDisableService() 获取是否创建 k8s service
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDisableService(boolean $DisableService) 设置是否创建 k8s service
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getHeadlessService() 获取service 是否为 headless 类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeadlessService(boolean $HeadlessService) 设置service 是否为 headless 类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method TcrRepoInfo getTcrRepoInfo() 获取TcrRepoInfo值
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTcrRepoInfo(TcrRepoInfo $TcrRepoInfo) 设置TcrRepoInfo值
@@ -161,53 +145,41 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKubeInjectEnable(boolean $KubeInjectEnable) 设置KubeInjectEnable值
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRepoType() 获取仓库类型 (person, tcr)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRepoType(string $RepoType) 设置仓库类型 (person, tcr)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method WarmupSetting getWarmupSetting() 获取预热配置设置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWarmupSetting(WarmupSetting $WarmupSetting) 设置预热配置设置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method GatewayConfig getGatewayConfig() 获取Envoy网关服务配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGatewayConfig(GatewayConfig $GatewayConfig) 设置Envoy网关服务配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContainerName() 获取容器名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainerName(string $ContainerName) 设置容器名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAdditionalContainerList() 获取附加容器列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdditionalContainerList(array $AdditionalContainerList) 设置附加容器列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getInternalContainerList() 获取内部容器列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInternalContainerList(array $InternalContainerList) 设置内部容器列表
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getServiceSettingList() 获取service列表
+ * @method void setServiceSettingList(array $ServiceSettingList) 设置service列表
  */
 class ContainerGroupDeploy extends AbstractModel
 {
     /**
      * @var string 部署组id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupId;
 
     /**
      * @var string 分组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupName;
 
     /**
      * @var integer 实例总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceNum;
 
     /**
      * @var integer 已启动实例总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CurrentNum;
 
@@ -261,7 +233,6 @@ class ContainerGroupDeploy extends AbstractModel
 
     /**
      * @var array 端口映射
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProtocolPorts;
 
@@ -351,7 +322,6 @@ class ContainerGroupDeploy extends AbstractModel
 
     /**
      * @var boolean 是否部署Agent容器
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeployAgent;
 
@@ -363,13 +333,11 @@ class ContainerGroupDeploy extends AbstractModel
 
     /**
      * @var boolean 是否创建 k8s service
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DisableService;
 
     /**
      * @var boolean service 是否为 headless 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HeadlessService;
 
@@ -399,13 +367,11 @@ class ContainerGroupDeploy extends AbstractModel
 
     /**
      * @var string 仓库类型 (person, tcr)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RepoType;
 
     /**
      * @var WarmupSetting 预热配置设置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WarmupSetting;
 
@@ -417,31 +383,29 @@ class ContainerGroupDeploy extends AbstractModel
 
     /**
      * @var string 容器名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContainerName;
 
     /**
      * @var array 附加容器列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AdditionalContainerList;
 
     /**
      * @var array 内部容器列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InternalContainerList;
 
     /**
+     * @var array service列表
+     */
+    public $ServiceSettingList;
+
+    /**
      * @param string $GroupId 部署组id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 分组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InstanceNum 实例总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CurrentNum 已启动实例总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Server 镜像server
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Reponame 镜像名，如/tsf/nginx
@@ -459,7 +423,6 @@ class ContainerGroupDeploy extends AbstractModel
      * @param integer $AccessType 0:公网 1:集群内访问 2：NodePort
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ProtocolPorts 端口映射
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UpdateType 更新方式：0:快速更新 1:滚动更新
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UpdateIvl 更新间隔,单位秒
@@ -489,13 +452,10 @@ class ContainerGroupDeploy extends AbstractModel
      * @param HealthCheckSettings $HealthCheckSettings 健康检查配置信息，若不指定该参数，则默认不设置健康检查。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $DeployAgent 是否部署Agent容器
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Alias 部署组备注
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $DisableService 是否创建 k8s service
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $HeadlessService service 是否为 headless 类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TcrRepoInfo $TcrRepoInfo TcrRepoInfo值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $VolumeInfos 数据卷信息，list
@@ -505,17 +465,13 @@ class ContainerGroupDeploy extends AbstractModel
      * @param boolean $KubeInjectEnable KubeInjectEnable值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RepoType 仓库类型 (person, tcr)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WarmupSetting $WarmupSetting 预热配置设置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GatewayConfig $GatewayConfig Envoy网关服务配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContainerName 容器名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AdditionalContainerList 附加容器列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $InternalContainerList 内部容器列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ServiceSettingList service列表
      */
     function __construct()
     {
@@ -725,6 +681,15 @@ class ContainerGroupDeploy extends AbstractModel
                 $obj = new GroupContainerInfo();
                 $obj->deserialize($value);
                 array_push($this->InternalContainerList, $obj);
+            }
+        }
+
+        if (array_key_exists("ServiceSettingList",$param) and $param["ServiceSettingList"] !== null) {
+            $this->ServiceSettingList = [];
+            foreach ($param["ServiceSettingList"] as $key => $value){
+                $obj = new ServiceSetting();
+                $obj->deserialize($value);
+                array_push($this->ServiceSettingList, $obj);
             }
         }
     }

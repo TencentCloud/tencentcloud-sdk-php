@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 可用区筛选列表
  *
  * @method integer getZoneId() 获取可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneId(integer $ZoneId) 设置可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getZoneName() 获取可用区：资源所属可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneName(string $ZoneName) 设置可用区：资源所属可用区
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BillZoneId extends AbstractModel
 {
     /**
      * @var integer 可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneId;
 
     /**
      * @var string 可用区：资源所属可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneName;
 
     /**
      * @param integer $ZoneId 可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ZoneName 可用区：资源所属可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

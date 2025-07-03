@@ -23,33 +23,19 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTotalCount() 获取符合条件的消费组数量
  * @method void setTotalCount(integer $TotalCount) 设置符合条件的消费组数量
  * @method array getTopicList() 获取主题列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicList(array $TopicList) 设置主题列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getGroupList() 获取消费分组List
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupList(array $GroupList) 设置消费分组List
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalPartition() 获取所有分区数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalPartition(integer $TotalPartition) 设置所有分区数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPartitionListForMonitor() 获取监控的分区列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPartitionListForMonitor(array $PartitionListForMonitor) 设置监控的分区列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalTopic() 获取主题总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalTopic(integer $TotalTopic) 设置主题总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTopicListForMonitor() 获取监控的主题列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicListForMonitor(array $TopicListForMonitor) 设置监控的主题列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getGroupListForMonitor() 获取监控的组列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupListForMonitor(array $GroupListForMonitor) 设置监控的组列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ConsumerGroupResponse extends AbstractModel
 {
@@ -60,62 +46,48 @@ class ConsumerGroupResponse extends AbstractModel
 
     /**
      * @var array 主题列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicList;
 
     /**
      * @var array 消费分组List
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupList;
 
     /**
      * @var integer 所有分区数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalPartition;
 
     /**
      * @var array 监控的分区列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PartitionListForMonitor;
 
     /**
      * @var integer 主题总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalTopic;
 
     /**
      * @var array 监控的主题列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicListForMonitor;
 
     /**
      * @var array 监控的组列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupListForMonitor;
 
     /**
      * @param integer $TotalCount 符合条件的消费组数量
      * @param array $TopicList 主题列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $GroupList 消费分组List
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalPartition 所有分区数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PartitionListForMonitor 监控的分区列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalTopic 主题总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TopicListForMonitor 监控的主题列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $GroupListForMonitor 监控的组列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

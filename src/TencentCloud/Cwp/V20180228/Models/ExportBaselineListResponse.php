@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * ExportBaselineList返回参数结构体
  *
  * @method string getDownloadUrl() 获取导出文件下载地址（已弃用）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDownloadUrl(string $DownloadUrl) 设置导出文件下载地址（已弃用）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTaskId() 获取任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
  * @method void setTaskId(string $TaskId) 设置任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -33,7 +31,6 @@ class ExportBaselineListResponse extends AbstractModel
 {
     /**
      * @var string 导出文件下载地址（已弃用）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DownloadUrl;
 
@@ -49,7 +46,6 @@ class ExportBaselineListResponse extends AbstractModel
 
     /**
      * @param string $DownloadUrl 导出文件下载地址（已弃用）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskId 任务ID,需要到接口“异步导出任务”ExportTasks获取DownloadUrl下载地址
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

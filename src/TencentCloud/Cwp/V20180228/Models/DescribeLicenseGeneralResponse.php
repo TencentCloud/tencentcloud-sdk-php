@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlagshipVersionLicenseCnt(integer $FlagshipVersionLicenseCnt) 设置旗舰版总授权数(有效订单)
  * @method integer getProVersionLicenseCnt() 获取专业版总授权数(有效订单)
  * @method void setProVersionLicenseCnt(integer $ProVersionLicenseCnt) 设置专业版总授权数(有效订单)
- * @method integer getCwpVersionLicenseCnt() 获取普惠版总授权数(有效订单的授权数)
- * @method void setCwpVersionLicenseCnt(integer $CwpVersionLicenseCnt) 设置普惠版总授权数(有效订单的授权数)
+ * @method integer getCwpVersionLicenseCnt() 获取轻量版总授权数(有效订单的授权数)
+ * @method void setCwpVersionLicenseCnt(integer $CwpVersionLicenseCnt) 设置轻量版总授权数(有效订单的授权数)
  * @method integer getAvailableLHLicenseCnt() 获取可用惠普版授权数
  * @method void setAvailableLHLicenseCnt(integer $AvailableLHLicenseCnt) 设置可用惠普版授权数
  * @method boolean getAutoRepurchaseSwitch() 获取自动加购开关, true 开启, false 关闭
@@ -56,8 +56,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoRepurchaseRenewSwitch(boolean $AutoRepurchaseRenewSwitch) 设置自动加购订单是否自动续费 ,true 开启, false 关闭
  * @method integer getDestroyOrderNum() 获取已销毁订单数
  * @method void setDestroyOrderNum(integer $DestroyOrderNum) 设置已销毁订单数
- * @method boolean getRepurchaseRenewSwitch() 获取是否自动续费开关,true 开启,false 关闭
- * @method void setRepurchaseRenewSwitch(boolean $RepurchaseRenewSwitch) 设置是否自动续费开关,true 开启,false 关闭
+ * @method boolean getRepurchaseRenewSwitch() 获取自动加购是否自动续费开关,true 开启,false 关闭
+ * @method void setRepurchaseRenewSwitch(boolean $RepurchaseRenewSwitch) 设置自动加购是否自动续费开关,true 开启,false 关闭
+ * @method boolean getAutoBindRaspSwitch() 获取是否自动新增机器绑定rasp防护,false 关闭 true 开启
+ * @method void setAutoBindRaspSwitch(boolean $AutoBindRaspSwitch) 设置是否自动新增机器绑定rasp防护,false 关闭 true 开启
+ * @method boolean getAutoOpenRaspSwitch() 获取是否自动新增机器开启rasp防护,false 关闭 true 开启
+ * @method void setAutoOpenRaspSwitch(boolean $AutoOpenRaspSwitch) 设置是否自动新增机器开启rasp防护,false 关闭 true 开启
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -129,7 +133,7 @@ class DescribeLicenseGeneralResponse extends AbstractModel
     public $ProVersionLicenseCnt;
 
     /**
-     * @var integer 普惠版总授权数(有效订单的授权数)
+     * @var integer 轻量版总授权数(有效订单的授权数)
      */
     public $CwpVersionLicenseCnt;
 
@@ -154,9 +158,19 @@ class DescribeLicenseGeneralResponse extends AbstractModel
     public $DestroyOrderNum;
 
     /**
-     * @var boolean 是否自动续费开关,true 开启,false 关闭
+     * @var boolean 自动加购是否自动续费开关,true 开启,false 关闭
      */
     public $RepurchaseRenewSwitch;
+
+    /**
+     * @var boolean 是否自动新增机器绑定rasp防护,false 关闭 true 开启
+     */
+    public $AutoBindRaspSwitch;
+
+    /**
+     * @var boolean 是否自动新增机器开启rasp防护,false 关闭 true 开启
+     */
+    public $AutoOpenRaspSwitch;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -177,12 +191,14 @@ class DescribeLicenseGeneralResponse extends AbstractModel
      * @param integer $NotExpiredLicenseCnt 未到期授权数
      * @param integer $FlagshipVersionLicenseCnt 旗舰版总授权数(有效订单)
      * @param integer $ProVersionLicenseCnt 专业版总授权数(有效订单)
-     * @param integer $CwpVersionLicenseCnt 普惠版总授权数(有效订单的授权数)
+     * @param integer $CwpVersionLicenseCnt 轻量版总授权数(有效订单的授权数)
      * @param integer $AvailableLHLicenseCnt 可用惠普版授权数
      * @param boolean $AutoRepurchaseSwitch 自动加购开关, true 开启, false 关闭
      * @param boolean $AutoRepurchaseRenewSwitch 自动加购订单是否自动续费 ,true 开启, false 关闭
      * @param integer $DestroyOrderNum 已销毁订单数
-     * @param boolean $RepurchaseRenewSwitch 是否自动续费开关,true 开启,false 关闭
+     * @param boolean $RepurchaseRenewSwitch 自动加购是否自动续费开关,true 开启,false 关闭
+     * @param boolean $AutoBindRaspSwitch 是否自动新增机器绑定rasp防护,false 关闭 true 开启
+     * @param boolean $AutoOpenRaspSwitch 是否自动新增机器开启rasp防护,false 关闭 true 开启
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -272,6 +288,14 @@ class DescribeLicenseGeneralResponse extends AbstractModel
 
         if (array_key_exists("RepurchaseRenewSwitch",$param) and $param["RepurchaseRenewSwitch"] !== null) {
             $this->RepurchaseRenewSwitch = $param["RepurchaseRenewSwitch"];
+        }
+
+        if (array_key_exists("AutoBindRaspSwitch",$param) and $param["AutoBindRaspSwitch"] !== null) {
+            $this->AutoBindRaspSwitch = $param["AutoBindRaspSwitch"];
+        }
+
+        if (array_key_exists("AutoOpenRaspSwitch",$param) and $param["AutoOpenRaspSwitch"] !== null) {
+            $this->AutoOpenRaspSwitch = $param["AutoOpenRaspSwitch"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

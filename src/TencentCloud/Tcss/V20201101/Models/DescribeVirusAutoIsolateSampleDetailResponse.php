@@ -23,37 +23,21 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMD5() 获取文件Md5值
  * @method void setMD5(string $MD5) 设置文件Md5值
  * @method integer getSize() 获取文件大小(B)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSize(integer $Size) 设置文件大小(B)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVirusName() 获取病毒名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVirusName(string $VirusName) 设置病毒名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRiskLevel() 获取风险等级 RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, RISK_NOTICE。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskLevel(string $RiskLevel) 设置风险等级 RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, RISK_NOTICE。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getKillEngine() 获取查杀引擎
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKillEngine(array $KillEngine) 设置查杀引擎
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHarmDescribe() 获取事件描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHarmDescribe(string $HarmDescribe) 设置事件描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSuggestScheme() 获取建议方案
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSuggestScheme(string $SuggestScheme) 设置建议方案
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReferenceLink() 获取参考链接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReferenceLink(string $ReferenceLink) 设置参考链接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -66,49 +50,41 @@ class DescribeVirusAutoIsolateSampleDetailResponse extends AbstractModel
 
     /**
      * @var integer 文件大小(B)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Size;
 
     /**
      * @var string 病毒名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VirusName;
 
     /**
      * @var string 风险等级 RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, RISK_NOTICE。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskLevel;
 
     /**
      * @var array 查杀引擎
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KillEngine;
 
     /**
      * @var array 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
      * @var string 事件描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HarmDescribe;
 
     /**
      * @var string 建议方案
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SuggestScheme;
 
     /**
      * @var string 参考链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReferenceLink;
 
@@ -120,21 +96,13 @@ class DescribeVirusAutoIsolateSampleDetailResponse extends AbstractModel
     /**
      * @param string $MD5 文件Md5值
      * @param integer $Size 文件大小(B)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VirusName 病毒名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RiskLevel 风险等级 RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, RISK_NOTICE。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $KillEngine 查杀引擎
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HarmDescribe 事件描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SuggestScheme 建议方案
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReferenceLink 参考链接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

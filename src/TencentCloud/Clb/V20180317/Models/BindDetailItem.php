@@ -23,37 +23,23 @@ use TencentCloud\Common\AbstractModel;
  * @method string getLoadBalancerId() 获取配置绑定的CLB ID
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置配置绑定的CLB ID
  * @method string getListenerId() 获取配置绑定的监听器ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setListenerId(string $ListenerId) 设置配置绑定的监听器ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDomain() 获取配置绑定的域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomain(string $Domain) 设置配置绑定的域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLocationId() 获取配置绑定的规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocationId(string $LocationId) 设置配置绑定的规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getListenerName() 获取监听器名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setListenerName(string $ListenerName) 设置监听器名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProtocol() 获取监听器协议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProtocol(string $Protocol) 设置监听器协议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVport() 获取监听器端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVport(integer $Vport) 设置监听器端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUrl() 获取location的url
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUrl(string $Url) 设置location的url
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUconfigId() 获取配置ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUconfigId(string $UconfigId) 设置配置ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BindDetailItem extends AbstractModel
 {
@@ -64,37 +50,31 @@ class BindDetailItem extends AbstractModel
 
     /**
      * @var string 配置绑定的监听器ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ListenerId;
 
     /**
      * @var string 配置绑定的域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Domain;
 
     /**
      * @var string 配置绑定的规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LocationId;
 
     /**
      * @var string 监听器名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ListenerName;
 
     /**
      * @var string 监听器协议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Protocol;
 
     /**
      * @var integer 监听器端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Vport;
 
@@ -106,28 +86,20 @@ class BindDetailItem extends AbstractModel
 
     /**
      * @var string 配置ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UconfigId;
 
     /**
      * @param string $LoadBalancerId 配置绑定的CLB ID
      * @param string $ListenerId 配置绑定的监听器ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Domain 配置绑定的域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LocationId 配置绑定的规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ListenerName 监听器名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Protocol 监听器协议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Vport 监听器端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Url location的url
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UconfigId 配置ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

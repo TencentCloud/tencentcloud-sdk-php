@@ -20,50 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeApmInstances请求参数结构体
  *
- * @method array getTags() 获取Tag列表
- * @method void setTags(array $Tags) 设置Tag列表
- * @method string getInstanceName() 获取搜索实例名
- * @method void setInstanceName(string $InstanceName) 设置搜索实例名
- * @method array getInstanceIds() 获取过滤实例ID
- * @method void setInstanceIds(array $InstanceIds) 设置过滤实例ID
- * @method integer getDemoInstanceFlag() 获取是否查询官方demo实例
- * @method void setDemoInstanceFlag(integer $DemoInstanceFlag) 设置是否查询官方demo实例
- * @method integer getAllRegionsFlag() 获取是否查询全地域实例
- * @method void setAllRegionsFlag(integer $AllRegionsFlag) 设置是否查询全地域实例
+ * @method array getTags() 获取Tag 列表
+ * @method void setTags(array $Tags) 设置Tag 列表
+ * @method string getInstanceName() 获取按业务系统名过滤，支持模糊检索
+ * @method void setInstanceName(string $InstanceName) 设置按业务系统名过滤，支持模糊检索
+ * @method string getInstanceId() 获取按业务系统 ID 过滤，支持模糊检索
+ * @method void setInstanceId(string $InstanceId) 设置按业务系统 ID 过滤，支持模糊检索
+ * @method array getInstanceIds() 获取按业务系统 ID 过滤
+ * @method void setInstanceIds(array $InstanceIds) 设置按业务系统 ID 过滤
+ * @method integer getDemoInstanceFlag() 获取是否查询官方 Demo 业务系统（0=非 Demo 业务系统，1=Demo 业务系统，默认为0）
+ * @method void setDemoInstanceFlag(integer $DemoInstanceFlag) 设置是否查询官方 Demo 业务系统（0=非 Demo 业务系统，1=Demo 业务系统，默认为0）
+ * @method integer getAllRegionsFlag() 获取是否查询全地域业务系统（0=不查询全地域，1=查询全地域，默认为0）
+ * @method void setAllRegionsFlag(integer $AllRegionsFlag) 设置是否查询全地域业务系统（0=不查询全地域，1=查询全地域，默认为0）
  */
 class DescribeApmInstancesRequest extends AbstractModel
 {
     /**
-     * @var array Tag列表
+     * @var array Tag 列表
      */
     public $Tags;
 
     /**
-     * @var string 搜索实例名
+     * @var string 按业务系统名过滤，支持模糊检索
      */
     public $InstanceName;
 
     /**
-     * @var array 过滤实例ID
+     * @var string 按业务系统 ID 过滤，支持模糊检索
+     */
+    public $InstanceId;
+
+    /**
+     * @var array 按业务系统 ID 过滤
      */
     public $InstanceIds;
 
     /**
-     * @var integer 是否查询官方demo实例
+     * @var integer 是否查询官方 Demo 业务系统（0=非 Demo 业务系统，1=Demo 业务系统，默认为0）
      */
     public $DemoInstanceFlag;
 
     /**
-     * @var integer 是否查询全地域实例
+     * @var integer 是否查询全地域业务系统（0=不查询全地域，1=查询全地域，默认为0）
      */
     public $AllRegionsFlag;
 
     /**
-     * @param array $Tags Tag列表
-     * @param string $InstanceName 搜索实例名
-     * @param array $InstanceIds 过滤实例ID
-     * @param integer $DemoInstanceFlag 是否查询官方demo实例
-     * @param integer $AllRegionsFlag 是否查询全地域实例
+     * @param array $Tags Tag 列表
+     * @param string $InstanceName 按业务系统名过滤，支持模糊检索
+     * @param string $InstanceId 按业务系统 ID 过滤，支持模糊检索
+     * @param array $InstanceIds 按业务系统 ID 过滤
+     * @param integer $DemoInstanceFlag 是否查询官方 Demo 业务系统（0=非 Demo 业务系统，1=Demo 业务系统，默认为0）
+     * @param integer $AllRegionsFlag 是否查询全地域业务系统（0=不查询全地域，1=查询全地域，默认为0）
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class DescribeApmInstancesRequest extends AbstractModel
 
         if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
             $this->InstanceName = $param["InstanceName"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
 
         if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {

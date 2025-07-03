@@ -21,11 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * 修改实例节点详情
  *
  * @method string getRole() 获取需要删除的节点角色。
-- SECONDARY：Mongod 节点。
+- SECONDARY：Mongod 从节点。
 - READONLY：只读节点。
 - MONGOS：Mongos 节点。
  * @method void setRole(string $Role) 设置需要删除的节点角色。
-- SECONDARY：Mongod 节点。
+- SECONDARY：Mongod 从节点。
 - READONLY：只读节点。
 - MONGOS：Mongos 节点。
  * @method string getNodeName() 获取要删除的节点 ID。分片集群须指定一组分片要删除的节点名称即可，其余分片对改组对齐。
@@ -47,7 +47,7 @@ class RemoveNodeList extends AbstractModel
 {
     /**
      * @var string 需要删除的节点角色。
-- SECONDARY：Mongod 节点。
+- SECONDARY：Mongod 从节点。
 - READONLY：只读节点。
 - MONGOS：Mongos 节点。
      */
@@ -70,7 +70,7 @@ class RemoveNodeList extends AbstractModel
 
     /**
      * @param string $Role 需要删除的节点角色。
-- SECONDARY：Mongod 节点。
+- SECONDARY：Mongod 从节点。
 - READONLY：只读节点。
 - MONGOS：Mongos 节点。
      * @param string $NodeName 要删除的节点 ID。分片集群须指定一组分片要删除的节点名称即可，其余分片对改组对齐。

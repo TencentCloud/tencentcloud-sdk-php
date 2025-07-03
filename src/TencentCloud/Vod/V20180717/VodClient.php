@@ -43,7 +43,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
  * @method Models\ConfirmEventsResponse ConfirmEvents(Models\ConfirmEventsRequest $req) * 开发者调用拉取事件通知，获取到事件后，必须调用该接口来确认消息已经收到；
 * 开发者获取到事件句柄后，等待确认的有效时间为 30 秒，超出 30 秒会报参数错误（4000）；
 * 更多参考事件通知的[可靠回调](https://cloud.tencent.com/document/product/266/33779#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83)。
- * @method Models\CreateAIAnalysisTemplateResponse CreateAIAnalysisTemplate(Models\CreateAIAnalysisTemplateRequest $req) 创建用户自定义音视频内容分析模板，数量上限：50。
+ * @method Models\CreateAIAnalysisTemplateResponse CreateAIAnalysisTemplate(Models\CreateAIAnalysisTemplateRequest $req) 创建用户自定义音视频内容分析模板，数量上限：50。暂时不支持 HLS 格式。
  * @method Models\CreateAIRecognitionTemplateResponse CreateAIRecognitionTemplate(Models\CreateAIRecognitionTemplateRequest $req) 创建用户自定义音视频内容识别模板，数量上限：50。
  * @method Models\CreateAdaptiveDynamicStreamingTemplateResponse CreateAdaptiveDynamicStreamingTemplate(Models\CreateAdaptiveDynamicStreamingTemplateRequest $req) 创建转自适应码流模板，数量上限：100。
  * @method Models\CreateAnimatedGraphicsTemplateResponse CreateAnimatedGraphicsTemplate(Models\CreateAnimatedGraphicsTemplateRequest $req) 创建用户自定义转动图模板，数量上限：16。
@@ -53,13 +53,25 @@ use TencentCloud\Vod\V20180717\Models as Models;
 * 该接口不影响既有媒体的分类，如需修改媒体分类，请调用[修改媒体文件属性](/document/product/266/31762)接口。
 * 分类层次不可超过 4 层。
 * 每个分类的子类数量不可超过 500 个。
+ * @method Models\CreateComplexAdaptiveDynamicStreamingTaskResponse CreateComplexAdaptiveDynamicStreamingTask(Models\CreateComplexAdaptiveDynamicStreamingTaskRequest $req) 发起复杂自适应码流处理任务，功能包括：
+1. 按指定的自适应码流模板输出 HLS、DASH 自适应码流；
+2. 自适应码流的内容保护方案可选择无加密、Widevine 或 FairPlay；
+3. 支持添加片头片尾；
+4. 输出的自适应码流可包含多语言音频流，每种语言分别来自不同的媒体文件；
+5. 输出的自适应码流可包含多语言字幕流。
+
+注意事项：
+1. 当使用片头时，片头媒体中的视频流需要和音频流对齐，否则将导致输出的内容音画不同步；
+2. 如果输出的自适应码流需要包含主媒体的音频，那么需要在 AudioSet 参数中指定主媒体的 FileId；
+3. 使用字幕时，需要先将字幕添加到主媒体，可通过 ModifyMediaInfo 接口或控制台的音视频详情页进行添加；
+4. 暂不支持极速高清、水印。
  * @method Models\CreateContentReviewTemplateResponse CreateContentReviewTemplate(Models\CreateContentReviewTemplateRequest $req) 该 API 已经<font color=red>不再维护</font>，新版审核模板支持音视频审核和图片审核，详细请参考 [创建审核模板](https://cloud.tencent.com/document/api/266/84391)。
 创建用户自定义音视频内容审核模板，数量上限：50。
  * @method Models\CreateDomainVerifyRecordResponse CreateDomainVerifyRecord(Models\CreateDomainVerifyRecordRequest $req) 该接口用于生成一条子域名解析，提示客户添加到域名解析上，用于泛域名及域名取回校验归属权。
  * @method Models\CreateEnhanceMediaTemplateResponse CreateEnhanceMediaTemplate(Models\CreateEnhanceMediaTemplateRequest $req) 该 API 已经<font color=red>不再维护</font>，新版 [音画质重生](https://cloud.tencent.com/document/product/266/102571) 接口使用预置模板，详情请参见 [音画质重生模板](https://cloud.tencent.com/document/product/266/102586#50604b3f-0286-4a10-a3f7-18218116aff7)。
 创建音画质重生模板。
  * @method Models\CreateHeadTailTemplateResponse CreateHeadTailTemplate(Models\CreateHeadTailTemplateRequest $req) 创建片头片尾模板。
-- 最大支持模版数量为 100 个。
+- 最大支持模板数量为 100 个。
  * @method Models\CreateImageProcessingTemplateResponse CreateImageProcessingTemplate(Models\CreateImageProcessingTemplateRequest $req) 创建一个用户自定义的图片处理模板，数量上限：16。最多支持十次操作，例如：裁剪-缩略-裁剪-模糊-缩略-裁剪-缩略-裁剪-模糊-缩略。
  * @method Models\CreateImageSpriteTemplateResponse CreateImageSpriteTemplate(Models\CreateImageSpriteTemplateRequest $req) 创建用户自定义雪碧图模板，数量上限：16。
  * @method Models\CreateJustInTimeTranscodeTemplateResponse CreateJustInTimeTranscodeTemplate(Models\CreateJustInTimeTranscodeTemplateRequest $req) 创建即时转码模板。
@@ -133,15 +145,17 @@ use TencentCloud\Vod\V20180717\Models as Models;
 * 查询的起始时间和结束时间跨度不超过90天。
 * 可以查询不同服务区域的数据。
 * 中国境内的数据支持查询指定地区、运营商的统计数据。
+* 播放统计仅针对 VOD 域名（即 EdgeOne 域名的分发不计入播放统计）。
  * @method Models\DescribeCDNUsageDataResponse DescribeCDNUsageData(Models\DescribeCDNUsageDataRequest $req) 该接口用于查询点播 CDN 的流量、带宽等统计数据。
    1. 可以查询最近365天内的 CDN 用量数据。
-   2.  查询时间跨度不超过90天。
+   2. 查询时间跨度不超过90天。
    3. 可以指定用量数据的时间粒度，支持5分钟、1小时、1天的时间粒度。
-   4.  流量为查询时间粒度内的总流量，带宽为查询时间粒度内的峰值带宽。
+   4. 流量为查询时间粒度内的总流量，带宽为查询时间粒度内的峰值带宽。
+   5. 播放统计仅针对 VOD 域名（即 EdgeOne 域名的分发不计入播放统计）。
  * @method Models\DescribeCLSLogsetsResponse DescribeCLSLogsets(Models\DescribeCLSLogsetsRequest $req) 查询 VOD 创建的 CLS 日志集。
  * @method Models\DescribeCLSPushTargetsResponse DescribeCLSPushTargets(Models\DescribeCLSPushTargetsRequest $req) 查询点播域名下日志投递的目标主题。
  * @method Models\DescribeCLSTopicsResponse DescribeCLSTopics(Models\DescribeCLSTopicsRequest $req) 查询 VOD 创建的 CLS 日志主题列表。
- * @method Models\DescribeCdnLogsResponse DescribeCdnLogs(Models\DescribeCdnLogsRequest $req) 查询点播域名的 CDN 访问日志的下载链接。
+ * @method Models\DescribeCdnLogsResponse DescribeCdnLogs(Models\DescribeCdnLogsRequest $req) 查询点播域名的 CDN （不含 EdgeOne 回源到 VOD 域名）访问日志的下载链接。
     1. 可以查询最近30天内的 CDN 日志下载链接。
     2. 默认情况下 CDN 每小时生成一个日志文件，如果某一个小时没有 CDN 访问，不会生成日志文件。    
     3. CDN 日志下载链接的有效期为24小时。
@@ -151,15 +165,18 @@ use TencentCloud\Vod\V20180717\Models as Models;
    3. 查询时间跨度超过1天的，返回以天为粒度的数据，否则，返回以5分钟为粒度的数据。
  * @method Models\DescribeContentReviewTemplatesResponse DescribeContentReviewTemplates(Models\DescribeContentReviewTemplatesRequest $req) 该 API 已经<font color=red>不再维护</font>，新版审核模板支持音视频审核和图片审核，详细请参考 [获取审核模板列表](https://cloud.tencent.com/document/api/266/84389)。
 根据音视频内容审核模板唯一标识，获取音视频内容审核模板详情列表。返回结果包含符合条件的所有用户自定义模板及[系统预置内容审核模板](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E5.AE.A1.E6.A0.B8.E6.A8.A1.E6.9D.BF)。
+ * @method Models\DescribeCurrentPlaylistResponse DescribeCurrentPlaylist(Models\DescribeCurrentPlaylistRequest $req) 查询轮播当前播放列表。
  * @method Models\DescribeDailyMediaPlayStatResponse DescribeDailyMediaPlayStat(Models\DescribeDailyMediaPlayStatRequest $req) 该接口用于查询指定日期范围内每天的播放统计数据。
 * 可以查询最近一年的播放统计数据。
 * 结束日期和起始日期的时间跨度最大为90天。
+* 播放统计仅针对 VOD 域名（即 EdgeOne 域名的分发不计入播放统计）。
  * @method Models\DescribeDailyMostPlayedStatResponse DescribeDailyMostPlayedStat(Models\DescribeDailyMostPlayedStatRequest $req) 该接口用于查询每日播放Top100 的媒体文件的播放统计数据。
 * 可以查询最近一年的播放统计数据。
 * 可以按播放次数或者播放流量查询。
 * 播放次数统计说明：
     1. HLS 文件：访问 M3U8 文件时统计播放次数；访问 TS 文件不统计播放次数。
     2. 其它文件（如 MP4 文件）：播放请求带有 range 参数且 range 的 start 参数不等于0时不统计播放次数，其它情况统计播放次数。
+* 播放统计仅针对 VOD 域名（即 EdgeOne 域名的分发不计入播放统计）。
  * @method Models\DescribeDailyPlayStatFileListResponse DescribeDailyPlayStatFileList(Models\DescribeDailyPlayStatFileListRequest $req) 该接口用于查询播放统计文件的下载地址。
 * 可以查询最近一年的播放统计文件下载地址，查询的起始日期和结束日期的时间跨度不超过90天。
 * 云点播每天对前一天的 CDN 请求日志进行分析处理，生成播放统计文件。
@@ -168,6 +185,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
     1. HLS 文件：访问M3U8 文件时统计播放次数；访问TS 文件不统计播放次数。
     2. 其它文件（如 MP4 文件）：播放请求带有 range 参数且 range 的 start 参数不等于0时不统计播放次数，其它情况统计播放次数。
 * 播放设备的统计：播放请求带了 UserAgent 参数，并且 UserAgent 包含 Android 或者 iPhone 等标识，会统计为移动端播放次数，否则统计为 PC 端播放次数。
+* 播放统计仅针对 VOD 域名（即 EdgeOne 域名的分发不计入播放统计）。
  * @method Models\DescribeDefaultDistributionConfigResponse DescribeDefaultDistributionConfig(Models\DescribeDefaultDistributionConfigRequest $req) 该接口用于查询默认分发配置。
 * 分发域名和分发协议，即媒体文件分发 URL 中的域名和协议。媒体文件按默认分发配置进行分发。
 * 播放密钥，用于计算播放器签名。
@@ -214,6 +232,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
 * 可以查询最近一年的播放统计数据。
 * 时间粒度为小时，结束时间和起始时间的跨度最大为7天。
 * 时间粒度为天，结束时间和起始时间的跨度最大为90天。
+* 播放统计仅针对 VOD 域名（即 EdgeOne 域名的分发不计入播放统计）。
  * @method Models\DescribeMediaProcessUsageDataResponse DescribeMediaProcessUsageData(Models\DescribeMediaProcessUsageDataRequest $req) 该接口返回查询时间范围内每天使用的视频处理用量信息。
    1. 可以查询最近365天内的视频处理统计数据。
    2. 查询时间跨度不超过90天。
@@ -275,10 +294,17 @@ use TencentCloud\Vod\V20180717\Models as Models;
 使用模板发起音画质重生。
  * @method Models\EnhanceMediaQualityResponse EnhanceMediaQuality(Models\EnhanceMediaQualityRequest $req) 对点播中的音视频媒体发起音画质重生任务。
  * @method Models\ExecuteFunctionResponse ExecuteFunction(Models\ExecuteFunctionRequest $req) 本接口仅用于定制开发的特殊场景，除非云点播客服人员主动告知您需要使用本接口，其它情况请勿调用。
- * @method Models\ExtractCopyRightWatermarkResponse ExtractCopyRightWatermark(Models\ExtractCopyRightWatermarkRequest $req) 提取版权水印信息。
- * @method Models\ExtractTraceWatermarkResponse ExtractTraceWatermark(Models\ExtractTraceWatermarkRequest $req) 用于提取溯源水印。
+ * @method Models\ExtractCopyRightWatermarkResponse ExtractCopyRightWatermark(Models\ExtractCopyRightWatermarkRequest $req) 如果有盗录溯源需求，请参考 [幽灵水印](https://cloud.tencent.com/document/product/266/94228)。
+ * @method Models\ExtractTraceWatermarkResponse ExtractTraceWatermark(Models\ExtractTraceWatermarkRequest $req) 如果有盗录溯源需求，推荐使用 [幽灵水印](https://cloud.tencent.com/document/product/266/94228)。
+ * @method Models\FastEditMediaResponse FastEditMedia(Models\FastEditMediaRequest $req) 对云点播的 HLS 视频实现快速拼接和快速剪辑，生成新的 HLS 格式的媒体。
+
+快速拼接或剪辑生成的视频，将产生新的 FileId 并进行固化，固化成功后新视频的文件独立于原始输入视频存在，不受原始视频删除等影响。
+
+<font color='red'>注意：</font>通过 ModifyEventConfig 接口启用接收剪辑固化事件通知，固化成功后将会收到一个 PersistenceComplete 类型的事件通知。在收到这个事件通知之前，不应该对原始输入的视频进行删除、降冷等操作，否则拼接剪辑生成的视频播放可能出现异常。
  * @method Models\ForbidMediaDistributionResponse ForbidMediaDistribution(Models\ForbidMediaDistributionRequest $req) * 对媒体禁播后，除了点播控制台预览，其他场景访问视频各种资源的 URL（原始文件、转码输出文件、截图等）均会返回 403。
   禁播/解禁操作全网生效时间约 5~10 分钟。
+* 注意：禁播媒体仅能操作标准存储和低频存储的媒体。低频存储媒体，必须存储至少 30 天，提前删除或变更存储类型，仍旧按照 30 天计费；如果禁播低频存储媒体，该媒体低频存储的时长不足 30 天，会产生提前删除计费；同时，禁播后该媒体的低频存储时长会从当前时间重新开始计算，如果不满 30 天继续对该媒体进行删除或变更存储类型，也将产生提前删除计费。例：媒体 001 已经低频存储了 10 天，此时对 001 进行禁播，低频存储的计费仍旧按 30 天计算（提前删除计费时长为 30 - 10 = 20 天）；禁播后 001 的低频存储时长重新开始计算，如果禁播后第 5 天删除了 001，低频存储计费也会按 30 天计算（提前删除计费时长为 30 - 5 = 25 天）；001 实际的低频存储时长为 10 + 5 = 15 天，低频存储计费时长为 10 + 20(提前删除计费)+ 5 + 25(提前删除计费) = 60 天。
+ * @method Models\HandleCurrentPlaylistResponse HandleCurrentPlaylist(Models\HandleCurrentPlaylistRequest $req) 操作轮播当前播放列表。支持的操作有：<li> Insert：向当前播列表插入播放节目。</li><li> Delete：删除播列表中的播放节目。</li>
  * @method Models\InspectMediaQualityResponse InspectMediaQuality(Models\InspectMediaQualityRequest $req) 对点播中的音视频媒体发起音画质检测任务。
  * @method Models\LiveRealTimeClipResponse LiveRealTimeClip(Models\LiveRealTimeClipRequest $req) 直播即时剪辑，是指在直播过程中（即直播尚未结束时），客户可以在过往直播内容中选择一段，实时生成一个新的视频（HLS 格式），开发者可以将其立即分享出去，或者长久保存起来。
 
@@ -297,6 +323,8 @@ use TencentCloud\Vod\V20180717\Models as Models;
 举例如下：一场完整的足球比赛，直播录制出来的原始视频可能长达 2 个小时，客户出于节省成本的目的可以对这个视频存储 2 个月，但对于直播即时剪辑的「精彩时刻」视频却可以指定存储更长时间，同时可以单独对「精彩时刻」视频进行转码、微信发布等额外的点播操作，这时候可以选择直播即时剪辑并且固化的方案。
 
 剪辑固化的优势在于其生命周期与原始录制视频相互独立，可以独立管理、长久保存。
+
+<font color='red'>注意：</font>如果剪辑时指定进行固化，通过 ModifyEventConfig 接口启用接收剪辑固化事件通知，固化成功后将会收到一个 PersistenceComplete 类型的事件通知。在收到这个事件通知之前，不应该对直播录制视频进行删除、降冷等操作，否则剪辑生成的视频播放可能出现异常。
 
 ### 剪辑不固化
 所谓剪辑不固化，是指剪辑所得到的结果（m3u8 文件）与直播录制视频共享相同的 ts 分片，新生成的视频不是一个独立完整的视频（没有独立 FileId，只有播放 URL），其有效期与直播录制的完整视频有效期是一致的。一旦直播录制出来的视频被删除，也会导致该片段无法播放。
@@ -384,7 +412,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
 6. 对视频截取一张图做封面；
 7. 对视频转自适应码流（并加密）；
 8. 内容审核（令人反感的信息、不安全的信息、不适宜的信息），<font color=red>不建议</font> 使用该接口发起，推荐使用 [音视频审核(ReviewAudioVideo)](https://cloud.tencent.com/document/api/266/80283) 或 [图片审核(ReviewImage)](https://cloud.tencent.com/document/api/266/73217)；
-9. 内容分析（标签、分类、封面、按帧标签）；
+9. 内容分析（标签、分类、封面、按帧标签），暂时不支持 HLS 格式；
 10. 内容识别（视频片头片尾、人脸、文本全文、文本关键词、语音全文、语音关键词、物体）。
 
 如使用事件通知，事件通知的类型为 [任务流状态变更](https://cloud.tencent.com/document/product/266/9636)。
@@ -457,6 +485,7 @@ use TencentCloud\Vod\V20180717\Models as Models;
 - 允许对结果根据创建时间进行排序并分页返回，通过 Offset 和 Limit （见输入参数）来控制分页。
 
 <div id="maxResultsDesc">接口返回结果数限制：</div>
+
 - <b><a href="#p_offset">Offset</a> 和 <a href="#p_limit">Limit</a> 两个参数影响单次分页查询结果数。特别注意：当这2个值都缺省时，本接口最多只返回10条查询结果。</b>
 - <b>最大支持返回5000条搜索结果，超出部分不再支持查询。如果搜索结果量太大，建议使用更精细的筛选条件来减少搜索结果。</b>
 
@@ -485,6 +514,8 @@ use TencentCloud\Vod\V20180717\Models as Models;
 举例如下：一场完整的足球比赛，原始视频可能长达 2 个小时，客户出于节省成本的目的可以对这个视频存储 2 个月，但对于剪辑的「精彩时刻」视频却可以指定存储更长时间，同时可以单独对「精彩时刻」视频进行转码、微信发布等额外的点播操作，这时候可以选择剪辑并且固化的方案。
 
 剪辑固化的优势在于其生命周期与原始输入视频相互独立，可以独立管理、长久保存。
+
+<font color='red'>注意：</font>如果剪辑时指定进行固化，通过 ModifyEventConfig 接口启用接收剪辑固化事件通知，固化成功后将会收到一个 PersistenceComplete 类型的事件通知。在收到这个事件通知之前，不应该对原始输入的视频进行删除、降冷等操作，否则剪辑生成的视频播放可能出现异常。
 
 ### 剪辑不固化
 所谓剪辑不固化，是指剪辑所得到的结果（m3u8 文件）与原始输入视频共享相同的 ts 分片，新生成的视频不是一个独立完整的视频（没有独立 FileId，只有播放 URL），其有效期与原始输入的完整视频有效期是一致的。一旦原始输入的视频被删除，也会导致该片段无法播放。

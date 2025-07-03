@@ -35,9 +35,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getUnhandledMaliciousConnectionEventCnt() 获取未处理恶意外连事件
  * @method void setUnhandledMaliciousConnectionEventCnt(integer $UnhandledMaliciousConnectionEventCnt) 设置未处理恶意外连事件
  * @method integer getUnhandledK8sApiEventCnt() 获取未处理k8sApi事件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnhandledK8sApiEventCnt(integer $UnhandledK8sApiEventCnt) 设置未处理k8sApi事件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -80,7 +78,6 @@ class DescribeContainerSecEventSummaryResponse extends AbstractModel
 
     /**
      * @var integer 未处理k8sApi事件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UnhandledK8sApiEventCnt;
 
@@ -98,7 +95,6 @@ class DescribeContainerSecEventSummaryResponse extends AbstractModel
      * @param integer $UnhandledVirusEventCnt 未处理木马事件
      * @param integer $UnhandledMaliciousConnectionEventCnt 未处理恶意外连事件
      * @param integer $UnhandledK8sApiEventCnt 未处理k8sApi事件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

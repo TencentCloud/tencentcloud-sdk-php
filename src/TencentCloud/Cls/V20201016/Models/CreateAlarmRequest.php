@@ -66,8 +66,8 @@ use TencentCloud\Common\AbstractModel;
 默认值为true
  * @method void setStatus(boolean $Status) 设置是否开启告警策略。
 默认值为true
- * @method boolean getEnable() 获取该参数已废弃，请使用Status参数控制是否开启告警策略。
- * @method void setEnable(boolean $Enable) 设置该参数已废弃，请使用Status参数控制是否开启告警策略。
+ * @method boolean getEnable() 获取请使用Status参数控制是否开启告警策略。
+ * @method void setEnable(boolean $Enable) 设置请使用Status参数控制是否开启告警策略。
  * @method string getMessageTemplate() 获取用户自定义告警内容
  * @method void setMessageTemplate(string $MessageTemplate) 设置用户自定义告警内容
  * @method CallBackInfo getCallBack() 获取用户自定义回调
@@ -169,7 +169,8 @@ class CreateAlarmRequest extends AbstractModel
     public $Status;
 
     /**
-     * @var boolean 该参数已废弃，请使用Status参数控制是否开启告警策略。
+     * @var boolean 请使用Status参数控制是否开启告警策略。
+     * @deprecated
      */
     public $Enable;
 
@@ -246,7 +247,7 @@ Classifications元素的Value长度不能超过200个字符。
 
      * @param boolean $Status 是否开启告警策略。
 默认值为true
-     * @param boolean $Enable 该参数已废弃，请使用Status参数控制是否开启告警策略。
+     * @param boolean $Enable 请使用Status参数控制是否开启告警策略。
      * @param string $MessageTemplate 用户自定义告警内容
      * @param CallBackInfo $CallBack 用户自定义回调
      * @param array $Analysis 多维分析

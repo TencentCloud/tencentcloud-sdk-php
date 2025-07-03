@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTEHDConfig(TEHDConfig $TEHDConfig) 设置极速高清转码参数。
  * @method EnhanceConfig getEnhanceConfig() 获取音视频增强配置。
  * @method void setEnhanceConfig(EnhanceConfig $EnhanceConfig) 设置音视频增强配置。
+ * @method string getStdExtInfo() 获取扩展参数，序列化的 json 字符串。
+ * @method void setStdExtInfo(string $StdExtInfo) 设置扩展参数，序列化的 json 字符串。
  */
 class CreateTranscodeTemplateRequest extends AbstractModel
 {
@@ -105,6 +107,11 @@ class CreateTranscodeTemplateRequest extends AbstractModel
     public $EnhanceConfig;
 
     /**
+     * @var string 扩展参数，序列化的 json 字符串。
+     */
+    public $StdExtInfo;
+
+    /**
      * @param string $Container 封装格式，可选值：mp4、flv、hls、ts、webm、mkv、mxf、mov、mp3、flac、ogg、m4a。其中，mp3、flac、ogg、m4a 为纯音频文件。
      * @param string $Name 转码模板名称，长度限制：64 个字符。
      * @param string $Comment 模板描述信息，长度限制：256 个字符。
@@ -120,6 +127,7 @@ class CreateTranscodeTemplateRequest extends AbstractModel
      * @param AudioTemplateInfo $AudioTemplate 音频流配置参数，当 RemoveAudio 为 0，该字段必填。
      * @param TEHDConfig $TEHDConfig 极速高清转码参数。
      * @param EnhanceConfig $EnhanceConfig 音视频增强配置。
+     * @param string $StdExtInfo 扩展参数，序列化的 json 字符串。
      */
     function __construct()
     {
@@ -172,6 +180,10 @@ class CreateTranscodeTemplateRequest extends AbstractModel
         if (array_key_exists("EnhanceConfig",$param) and $param["EnhanceConfig"] !== null) {
             $this->EnhanceConfig = new EnhanceConfig();
             $this->EnhanceConfig->deserialize($param["EnhanceConfig"]);
+        }
+
+        if (array_key_exists("StdExtInfo",$param) and $param["StdExtInfo"] !== null) {
+            $this->StdExtInfo = $param["StdExtInfo"];
         }
     }
 }

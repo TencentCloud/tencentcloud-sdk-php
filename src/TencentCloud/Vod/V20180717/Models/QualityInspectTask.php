@@ -37,13 +37,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMetaData(MediaMetaData $MetaData) 设置音画质检测输入音视频的元信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method QualityInspectTaskInput getInput() 获取音画质检测任务输入。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInput(QualityInspectTaskInput $Input) 设置音画质检测任务输入。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method QualityInspectTaskOutput getOutput() 获取音画质检测任务输出。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutput(QualityInspectTaskOutput $Output) 设置音画质检测任务输出。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSessionId() 获取用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
  * @method void setSessionId(string $SessionId) 设置用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
  * @method string getSessionContext() 获取来源上下文，用于透传用户请求信息，音画质检测完成回调将返回该字段值，最长 1000 个字符。
@@ -81,13 +77,11 @@ class QualityInspectTask extends AbstractModel
 
     /**
      * @var QualityInspectTaskInput 音画质检测任务输入。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Input;
 
     /**
      * @var QualityInspectTaskOutput 音画质检测任务输出。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Output;
 
@@ -111,9 +105,7 @@ class QualityInspectTask extends AbstractModel
      * @param MediaMetaData $MetaData 音画质检测输入音视频的元信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param QualityInspectTaskInput $Input 音画质检测任务输入。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param QualityInspectTaskOutput $Output 音画质检测任务输出。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      * @param string $SessionContext 来源上下文，用于透传用户请求信息，音画质检测完成回调将返回该字段值，最长 1000 个字符。
      */

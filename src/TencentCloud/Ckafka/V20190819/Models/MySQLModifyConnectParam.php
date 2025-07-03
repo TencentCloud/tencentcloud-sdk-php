@@ -21,117 +21,81 @@ use TencentCloud\Common\AbstractModel;
  * MySQL修改连接源参数
  *
  * @method string getResource() 获取MySQL连接源的实例资源【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResource(string $Resource) 设置MySQL连接源的实例资源【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPort() 获取MySQL的连接port【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPort(integer $Port) 设置MySQL的连接port【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getServiceVip() 获取MySQL连接源的实例vip【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceVip(string $ServiceVip) 设置MySQL连接源的实例vip【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUniqVpcId() 获取MySQL连接源的vpcId【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUniqVpcId(string $UniqVpcId) 设置MySQL连接源的vpcId【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserName() 获取MySQL连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserName(string $UserName) 设置MySQL连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPassword() 获取MySQL连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPassword(string $Password) 设置MySQL连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsUpdate() 获取是否更新到关联的Datahub任务
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsUpdate(boolean $IsUpdate) 设置是否更新到关联的Datahub任务
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterId() 获取当type为TDSQL_C_MYSQL时
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterId(string $ClusterId) 设置当type为TDSQL_C_MYSQL时
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getSelfBuilt() 获取是否是自建的集群
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSelfBuilt(boolean $SelfBuilt) 设置是否是自建的集群
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MySQLModifyConnectParam extends AbstractModel
 {
     /**
      * @var string MySQL连接源的实例资源【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Resource;
 
     /**
      * @var integer MySQL的连接port【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Port;
 
     /**
      * @var string MySQL连接源的实例vip【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceVip;
 
     /**
      * @var string MySQL连接源的vpcId【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UniqVpcId;
 
     /**
      * @var string MySQL连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserName;
 
     /**
      * @var string MySQL连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Password;
 
     /**
      * @var boolean 是否更新到关联的Datahub任务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsUpdate;
 
     /**
      * @var string 当type为TDSQL_C_MYSQL时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterId;
 
     /**
      * @var boolean 是否是自建的集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SelfBuilt;
 
     /**
      * @param string $Resource MySQL连接源的实例资源【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Port MySQL的连接port【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceVip MySQL连接源的实例vip【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UniqVpcId MySQL连接源的vpcId【不支持修改】
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserName MySQL连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Password MySQL连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsUpdate 是否更新到关联的Datahub任务
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterId 当type为TDSQL_C_MYSQL时
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $SelfBuilt 是否是自建的集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

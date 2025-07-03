@@ -23,8 +23,13 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Cfg\V20210820\Models as Models;
 
 /**
+ * @method Models\CreateTaskFromActionResponse CreateTaskFromAction(Models\CreateTaskFromActionRequest $req) 从动作创建演练
+ * @method Models\CreateTaskFromMultiActionResponse CreateTaskFromMultiAction(Models\CreateTaskFromMultiActionRequest $req) 以多个动作创建演练
  * @method Models\CreateTaskFromTemplateResponse CreateTaskFromTemplate(Models\CreateTaskFromTemplateRequest $req) 从经验库创建演练
  * @method Models\DeleteTaskResponse DeleteTask(Models\DeleteTaskRequest $req) 删除任务
+ * @method Models\DescribeActionFieldConfigListResponse DescribeActionFieldConfigList(Models\DescribeActionFieldConfigListRequest $req) 根据动作ID获取动作栏位动态配置参数信息，里面包含动作自有和通用两部分参数。
+ * @method Models\DescribeActionLibraryListResponse DescribeActionLibraryList(Models\DescribeActionLibraryListRequest $req) 获取混沌演练平台的动作库列表
+ * @method Models\DescribeObjectTypeListResponse DescribeObjectTypeList(Models\DescribeObjectTypeListRequest $req) 查询对象类型列表
  * @method Models\DescribeTaskResponse DescribeTask(Models\DescribeTaskRequest $req) 查询任务
  * @method Models\DescribeTaskExecuteLogsResponse DescribeTaskExecuteLogs(Models\DescribeTaskExecuteLogsRequest $req) 获取演练过程中的所有日志
  * @method Models\DescribeTaskListResponse DescribeTaskList(Models\DescribeTaskListRequest $req) 查询任务列表

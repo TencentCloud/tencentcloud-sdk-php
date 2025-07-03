@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getCertificateIds() 获取证书ID
  * @method void setCertificateIds(array $CertificateIds) 设置证书ID
- * @method string getResourceType() 获取资源类型:clb,cdn,live,waf,antiddos
- * @method void setResourceType(string $ResourceType) 设置资源类型:clb,cdn,live,waf,antiddos
+ * @method string getResourceType() 获取资源类型:clb,cdn,live,waf,antiddos,teo
+ * @method void setResourceType(string $ResourceType) 设置资源类型:clb,cdn,live,waf,antiddos,teo
  */
 class DescribeDeployedResourcesRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DescribeDeployedResourcesRequest extends AbstractModel
     public $CertificateIds;
 
     /**
-     * @var string 资源类型:clb,cdn,live,waf,antiddos
+     * @var string 资源类型:clb,cdn,live,waf,antiddos,teo
      */
     public $ResourceType;
 
     /**
      * @param array $CertificateIds 证书ID
-     * @param string $ResourceType 资源类型:clb,cdn,live,waf,antiddos
+     * @param string $ResourceType 资源类型:clb,cdn,live,waf,antiddos,teo
      */
     function __construct()
     {

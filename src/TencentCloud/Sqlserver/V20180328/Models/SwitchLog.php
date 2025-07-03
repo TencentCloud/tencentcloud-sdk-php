@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 主备切换日志
  *
  * @method string getEventId() 获取切换事件ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEventId(string $EventId) 设置切换事件ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSwitchType() 获取切换模式 0-系统自动切换，1-手动切换
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSwitchType(integer $SwitchType) 设置切换模式 0-系统自动切换，1-手动切换
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStartTime() 获取切换开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(string $StartTime) 设置切换开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndTime() 获取切换结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置切换结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReason() 获取机器故障导致自动切换
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReason(string $Reason) 设置机器故障导致自动切换
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SwitchLog extends AbstractModel
 {
     /**
      * @var string 切换事件ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventId;
 
     /**
      * @var integer 切换模式 0-系统自动切换，1-手动切换
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SwitchType;
 
     /**
      * @var string 切换开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
      * @var string 切换结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
      * @var string 机器故障导致自动切换
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Reason;
 
     /**
      * @param string $EventId 切换事件ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SwitchType 切换模式 0-系统自动切换，1-手动切换
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StartTime 切换开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndTime 切换结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Reason 机器故障导致自动切换
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

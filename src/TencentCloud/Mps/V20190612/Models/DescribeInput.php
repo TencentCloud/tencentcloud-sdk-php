@@ -72,6 +72,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getZones() 获取可用区配置，开启容灾情况下最多有两个，顺序和pipeline 0、1对应，否则最多只有一个可用区。	
  * @method void setZones(array $Zones) 设置可用区配置，开启容灾情况下最多有两个，顺序和pipeline 0、1对应，否则最多只有一个可用区。	
+ * @method DescribeInputRISTSettings getRISTSettings() 获取输入的RIST配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRISTSettings(DescribeInputRISTSettings $RISTSettings) 设置输入的RIST配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getStreamUrls() 获取输入模块配置相关的URL信息，包含提供的推流地址，或者配置的第三方源流地址
+ * @method void setStreamUrls(array $StreamUrls) 设置输入模块配置相关的URL信息，包含提供的推流地址，或者配置的第三方源流地址
  */
 class DescribeInput extends AbstractModel
 {
@@ -170,6 +176,17 @@ class DescribeInput extends AbstractModel
     public $Zones;
 
     /**
+     * @var DescribeInputRISTSettings 输入的RIST配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RISTSettings;
+
+    /**
+     * @var array 输入模块配置相关的URL信息，包含提供的推流地址，或者配置的第三方源流地址
+     */
+    public $StreamUrls;
+
+    /**
      * @param string $InputId 输入Id。
      * @param string $InputName 输入名称。
      * @param string $Description 输入描述。
@@ -196,6 +213,9 @@ class DescribeInput extends AbstractModel
      * @param array $SecurityGroupIds 绑定的输入安全组 ID。	
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Zones 可用区配置，开启容灾情况下最多有两个，顺序和pipeline 0、1对应，否则最多只有一个可用区。	
+     * @param DescribeInputRISTSettings $RISTSettings 输入的RIST配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $StreamUrls 输入模块配置相关的URL信息，包含提供的推流地址，或者配置的第三方源流地址
      */
     function __construct()
     {
@@ -288,6 +308,20 @@ class DescribeInput extends AbstractModel
 
         if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
             $this->Zones = $param["Zones"];
+        }
+
+        if (array_key_exists("RISTSettings",$param) and $param["RISTSettings"] !== null) {
+            $this->RISTSettings = new DescribeInputRISTSettings();
+            $this->RISTSettings->deserialize($param["RISTSettings"]);
+        }
+
+        if (array_key_exists("StreamUrls",$param) and $param["StreamUrls"] !== null) {
+            $this->StreamUrls = [];
+            foreach ($param["StreamUrls"] as $key => $value){
+                $obj = new StreamUrlDetail();
+                $obj->deserialize($value);
+                array_push($this->StreamUrls, $obj);
+            }
         }
     }
 }

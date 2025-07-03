@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 数据一致性校验选项， 默认为不开启一致性校验
  *
  * @method string getMode() 获取一致性检测类型: full(全量检测迁移对象)、noCheck(不检测)、notConfigured(未配置)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMode(string $Mode) 设置一致性检测类型: full(全量检测迁移对象)、noCheck(不检测)、notConfigured(未配置)
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ConsistencyOption extends AbstractModel
 {
     /**
      * @var string 一致性检测类型: full(全量检测迁移对象)、noCheck(不检测)、notConfigured(未配置)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Mode;
 
     /**
      * @param string $Mode 一致性检测类型: full(全量检测迁移对象)、noCheck(不检测)、notConfigured(未配置)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

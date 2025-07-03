@@ -27,65 +27,35 @@ use TencentCloud\Common\AbstractModel;
  * @method string getNamespace() 获取实例所在命名空间名。
  * @method void setNamespace(string $Namespace) 设置实例所在命名空间名。
  * @method string getHost() 获取实例ip地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHost(string $Host) 设置实例ip地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPort() 获取实例端口信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPort(integer $Port) 设置实例端口信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProtocol() 获取通信协议。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProtocol(string $Protocol) 设置通信协议。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVersion() 获取版本信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersion(string $Version) 设置版本信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWeight() 获取负载均衡权重。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWeight(integer $Weight) 设置负载均衡权重。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getEnableHealthCheck() 获取是否开启健康检查。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableHealthCheck(boolean $EnableHealthCheck) 设置是否开启健康检查。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getHealthy() 获取实例是否健康。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHealthy(boolean $Healthy) 设置实例是否健康。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsolate() 获取实例是否隔离。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsolate(boolean $Isolate) 设置实例是否隔离。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取实例创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置实例创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifyTime() 获取实例修改时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyTime(string $ModifyTime) 设置实例修改时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getMetadatas() 获取元数据数组。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetadatas(array $Metadatas) 设置元数据数组。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTtl() 获取上报心跳间隔。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTtl(integer $Ttl) 设置上报心跳间隔。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceVersion() 获取版本信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceVersion(string $InstanceVersion) 设置版本信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHealthStatus() 获取状态信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHealthStatus(string $HealthStatus) 设置状态信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getComment() 获取描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComment(string $Comment) 设置描述
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class GovernanceInstance extends AbstractModel
 {
@@ -106,91 +76,76 @@ class GovernanceInstance extends AbstractModel
 
     /**
      * @var string 实例ip地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Host;
 
     /**
      * @var integer 实例端口信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Port;
 
     /**
      * @var string 通信协议。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Protocol;
 
     /**
      * @var string 版本信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Version;
 
     /**
      * @var integer 负载均衡权重。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Weight;
 
     /**
      * @var boolean 是否开启健康检查。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableHealthCheck;
 
     /**
      * @var boolean 实例是否健康。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Healthy;
 
     /**
      * @var boolean 实例是否隔离。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Isolate;
 
     /**
      * @var string 实例创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 实例修改时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyTime;
 
     /**
      * @var array 元数据数组。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Metadatas;
 
     /**
      * @var integer 上报心跳间隔。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ttl;
 
     /**
      * @var string 版本信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceVersion;
 
     /**
      * @var string 状态信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HealthStatus;
 
     /**
      * @var string 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Comment;
 
@@ -199,35 +154,20 @@ class GovernanceInstance extends AbstractModel
      * @param string $Service 实例所在服务名。
      * @param string $Namespace 实例所在命名空间名。
      * @param string $Host 实例ip地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Port 实例端口信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Protocol 通信协议。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Version 版本信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Weight 负载均衡权重。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $EnableHealthCheck 是否开启健康检查。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Healthy 实例是否健康。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Isolate 实例是否隔离。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 实例创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyTime 实例修改时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Metadatas 元数据数组。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Ttl 上报心跳间隔。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceVersion 版本信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HealthStatus 状态信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Comment 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

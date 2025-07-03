@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RocketMQ集群配置
  *
- * @method integer getMaxTpsPerNamespace() 获取单命名空间TPS上线
- * @method void setMaxTpsPerNamespace(integer $MaxTpsPerNamespace) 设置单命名空间TPS上线
+ * @method integer getMaxTpsPerNamespace() 获取单命名空间TPS上限
+ * @method void setMaxTpsPerNamespace(integer $MaxTpsPerNamespace) 设置单命名空间TPS上限
  * @method integer getMaxNamespaceNum() 获取最大命名空间数量
  * @method void setMaxNamespaceNum(integer $MaxNamespaceNum) 设置最大命名空间数量
  * @method integer getUsedNamespaceNum() 获取已使用命名空间数量
@@ -46,11 +46,16 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicDistribution(array $TopicDistribution) 设置topic分布
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMaxRoleNum() 获取最大角色数量
+ * @method void setMaxRoleNum(integer $MaxRoleNum) 设置最大角色数量
+ * @method integer getMaxTpsLimit() 获取TPS限额
+ * @method void setMaxTpsLimit(integer $MaxTpsLimit) 设置TPS限额
  */
 class RocketMQClusterConfig extends AbstractModel
 {
     /**
-     * @var integer 单命名空间TPS上线
+     * @var integer 单命名空间TPS上限
+     * @deprecated
      */
     public $MaxTpsPerNamespace;
 
@@ -107,7 +112,17 @@ class RocketMQClusterConfig extends AbstractModel
     public $TopicDistribution;
 
     /**
-     * @param integer $MaxTpsPerNamespace 单命名空间TPS上线
+     * @var integer 最大角色数量
+     */
+    public $MaxRoleNum;
+
+    /**
+     * @var integer TPS限额
+     */
+    public $MaxTpsLimit;
+
+    /**
+     * @param integer $MaxTpsPerNamespace 单命名空间TPS上限
      * @param integer $MaxNamespaceNum 最大命名空间数量
      * @param integer $UsedNamespaceNum 已使用命名空间数量
      * @param integer $MaxTopicNum 最大Topic数量
@@ -120,6 +135,8 @@ class RocketMQClusterConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TopicDistribution topic分布
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MaxRoleNum 最大角色数量
+     * @param integer $MaxTpsLimit TPS限额
      */
     function __construct()
     {
@@ -181,6 +198,14 @@ class RocketMQClusterConfig extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TopicDistribution, $obj);
             }
+        }
+
+        if (array_key_exists("MaxRoleNum",$param) and $param["MaxRoleNum"] !== null) {
+            $this->MaxRoleNum = $param["MaxRoleNum"];
+        }
+
+        if (array_key_exists("MaxTpsLimit",$param) and $param["MaxTpsLimit"] !== null) {
+            $this->MaxTpsLimit = $param["MaxTpsLimit"];
         }
     }
 }

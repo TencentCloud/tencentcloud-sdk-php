@@ -31,7 +31,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLimit() 获取每页个数，用于分页，默认20
  * @method void setLimit(integer $Limit) 设置每页个数，用于分页，默认20
  * @method integer getOffset() 获取页数，默认值为1
+补充说明：limit指的是每页的大小，offset指的是具体第几页。
+举例：limit 20 offset 1指的是1-20；limit 20 offset 2 指的是21-40；limit 30 offset 4 是指 90-120。
  * @method void setOffset(integer $Offset) 设置页数，默认值为1
+补充说明：limit指的是每页的大小，offset指的是具体第几页。
+举例：limit 20 offset 1指的是1-20；limit 20 offset 2 指的是21-40；limit 30 offset 4 是指 90-120。
  * @method string getDigest() 获取指定镜像 Digest 进行查找
  * @method void setDigest(string $Digest) 设置指定镜像 Digest 进行查找
  * @method boolean getExactMatch() 获取指定是否为精准匹配，true为精准匹配，不填为模糊匹配
@@ -66,6 +70,8 @@ class DescribeImagesRequest extends AbstractModel
 
     /**
      * @var integer 页数，默认值为1
+补充说明：limit指的是每页的大小，offset指的是具体第几页。
+举例：limit 20 offset 1指的是1-20；limit 20 offset 2 指的是21-40；limit 30 offset 4 是指 90-120。
      */
     public $Offset;
 
@@ -86,6 +92,8 @@ class DescribeImagesRequest extends AbstractModel
      * @param string $ImageVersion 指定镜像版本进行查找，当前为模糊搜索
      * @param integer $Limit 每页个数，用于分页，默认20
      * @param integer $Offset 页数，默认值为1
+补充说明：limit指的是每页的大小，offset指的是具体第几页。
+举例：limit 20 offset 1指的是1-20；limit 20 offset 2 指的是21-40；limit 30 offset 4 是指 90-120。
      * @param string $Digest 指定镜像 Digest 进行查找
      * @param boolean $ExactMatch 指定是否为精准匹配，true为精准匹配，不填为模糊匹配
      */

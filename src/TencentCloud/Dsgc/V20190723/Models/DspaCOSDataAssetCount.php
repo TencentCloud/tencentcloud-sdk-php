@@ -21,117 +21,81 @@ use TencentCloud\Common\AbstractModel;
  * COS对象存储敏感数据资产统计
  *
  * @method integer getDataAssetType() 获取数组资产类型，0代表关系型数据库资产，1代表对象存储COS资产
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataAssetType(integer $DataAssetType) 设置数组资产类型，0代表关系型数据库资产，1代表对象存储COS资产
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalBucketCnt() 获取已扫描的存储桶的个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalBucketCnt(integer $TotalBucketCnt) 设置已扫描的存储桶的个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalObjectCnt() 获取对象总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalObjectCnt(integer $TotalObjectCnt) 设置对象总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSensitiveCategoryCnt() 获取敏感数据类型个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSensitiveCategoryCnt(integer $SensitiveCategoryCnt) 设置敏感数据类型个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSensitiveDataCnt() 获取敏感数据条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSensitiveDataCnt(integer $SensitiveDataCnt) 设置敏感数据条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSensitiveLevel() 获取敏感等级分布
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSensitiveLevel(array $SensitiveLevel) 设置敏感等级分布
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSensitiveBucketCnt() 获取敏感存储桶个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSensitiveBucketCnt(integer $SensitiveBucketCnt) 设置敏感存储桶个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSensitiveObjectCnt() 获取敏感对象个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSensitiveObjectCnt(integer $SensitiveObjectCnt) 设置敏感对象个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCategoryDistributed() 获取数据分类分布
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCategoryDistributed(array $CategoryDistributed) 设置数据分类分布
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DspaCOSDataAssetCount extends AbstractModel
 {
     /**
      * @var integer 数组资产类型，0代表关系型数据库资产，1代表对象存储COS资产
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataAssetType;
 
     /**
      * @var integer 已扫描的存储桶的个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalBucketCnt;
 
     /**
      * @var integer 对象总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalObjectCnt;
 
     /**
      * @var integer 敏感数据类型个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SensitiveCategoryCnt;
 
     /**
      * @var integer 敏感数据条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SensitiveDataCnt;
 
     /**
      * @var array 敏感等级分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SensitiveLevel;
 
     /**
      * @var integer 敏感存储桶个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SensitiveBucketCnt;
 
     /**
      * @var integer 敏感对象个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SensitiveObjectCnt;
 
     /**
      * @var array 数据分类分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CategoryDistributed;
 
     /**
      * @param integer $DataAssetType 数组资产类型，0代表关系型数据库资产，1代表对象存储COS资产
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalBucketCnt 已扫描的存储桶的个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalObjectCnt 对象总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SensitiveCategoryCnt 敏感数据类型个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SensitiveDataCnt 敏感数据条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SensitiveLevel 敏感等级分布
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SensitiveBucketCnt 敏感存储桶个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SensitiveObjectCnt 敏感对象个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CategoryDistributed 数据分类分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

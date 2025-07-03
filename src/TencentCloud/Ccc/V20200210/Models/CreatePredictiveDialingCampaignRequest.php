@@ -46,6 +46,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIVRId(integer $IVRId) 设置指定的 IVR Id
  * @method integer getRetryTimes() 获取呼叫重试次数，0 - 2
  * @method void setRetryTimes(integer $RetryTimes) 设置呼叫重试次数，0 - 2
+ * @method array getVariables() 获取自定义变量
+ * @method void setVariables(array $Variables) 设置自定义变量
+ * @method string getUUI() 获取UUI
+ * @method void setUUI(string $UUI) 设置UUI
+ * @method array getCalleeAttributes() 获取被叫属性
+ * @method void setCalleeAttributes(array $CalleeAttributes) 设置被叫属性
+ * @method string getTimeZone() 获取IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones
+ * @method void setTimeZone(string $TimeZone) 设置IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones
+ * @method array getAvailableTime() 获取可用时间段
+ * @method void setAvailableTime(array $AvailableTime) 设置可用时间段
  */
 class CreatePredictiveDialingCampaignRequest extends AbstractModel
 {
@@ -115,6 +125,31 @@ class CreatePredictiveDialingCampaignRequest extends AbstractModel
     public $RetryTimes;
 
     /**
+     * @var array 自定义变量
+     */
+    public $Variables;
+
+    /**
+     * @var string UUI
+     */
+    public $UUI;
+
+    /**
+     * @var array 被叫属性
+     */
+    public $CalleeAttributes;
+
+    /**
+     * @var string IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones
+     */
+    public $TimeZone;
+
+    /**
+     * @var array 可用时间段
+     */
+    public $AvailableTime;
+
+    /**
      * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param string $Name 任务名称
      * @param array $Callees 被叫列表，支持 E.164 或不带国家码形式的号码
@@ -128,6 +163,11 @@ class CreatePredictiveDialingCampaignRequest extends AbstractModel
      * @param integer $EndTime 任务结束时间，Unix 时间戳，到此时间后会自动终止任务
      * @param integer $IVRId 指定的 IVR Id
      * @param integer $RetryTimes 呼叫重试次数，0 - 2
+     * @param array $Variables 自定义变量
+     * @param string $UUI UUI
+     * @param array $CalleeAttributes 被叫属性
+     * @param string $TimeZone IANA 时区名称，参考 https://datatracker.ietf.org/doc/html/draft-ietf-netmod-iana-timezones
+     * @param array $AvailableTime 可用时间段
      */
     function __construct()
     {
@@ -192,6 +232,41 @@ class CreatePredictiveDialingCampaignRequest extends AbstractModel
 
         if (array_key_exists("RetryTimes",$param) and $param["RetryTimes"] !== null) {
             $this->RetryTimes = $param["RetryTimes"];
+        }
+
+        if (array_key_exists("Variables",$param) and $param["Variables"] !== null) {
+            $this->Variables = [];
+            foreach ($param["Variables"] as $key => $value){
+                $obj = new Variable();
+                $obj->deserialize($value);
+                array_push($this->Variables, $obj);
+            }
+        }
+
+        if (array_key_exists("UUI",$param) and $param["UUI"] !== null) {
+            $this->UUI = $param["UUI"];
+        }
+
+        if (array_key_exists("CalleeAttributes",$param) and $param["CalleeAttributes"] !== null) {
+            $this->CalleeAttributes = [];
+            foreach ($param["CalleeAttributes"] as $key => $value){
+                $obj = new CalleeAttribute();
+                $obj->deserialize($value);
+                array_push($this->CalleeAttributes, $obj);
+            }
+        }
+
+        if (array_key_exists("TimeZone",$param) and $param["TimeZone"] !== null) {
+            $this->TimeZone = $param["TimeZone"];
+        }
+
+        if (array_key_exists("AvailableTime",$param) and $param["AvailableTime"] !== null) {
+            $this->AvailableTime = [];
+            foreach ($param["AvailableTime"] as $key => $value){
+                $obj = new TimeRange();
+                $obj->deserialize($value);
+                array_push($this->AvailableTime, $obj);
+            }
         }
     }
 }

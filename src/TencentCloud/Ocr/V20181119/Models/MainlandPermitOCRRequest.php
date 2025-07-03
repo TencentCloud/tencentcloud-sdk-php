@@ -41,9 +41,13 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getRetProfile() 获取是否返回头像。默认不返回。
  * @method void setRetProfile(boolean $RetProfile) 设置是否返回头像。默认不返回。
  * @method string getCardSide() 获取图片正反面
-FRONT：正面、BACK：反面，默认为FRONT
+FRONT：正面
+BACK：反面
+默认为FRONT
  * @method void setCardSide(string $CardSide) 设置图片正反面
-FRONT：正面、BACK：反面，默认为FRONT
+FRONT：正面
+BACK：反面
+默认为FRONT
  */
 class MainlandPermitOCRRequest extends AbstractModel
 {
@@ -71,7 +75,9 @@ class MainlandPermitOCRRequest extends AbstractModel
 
     /**
      * @var string 图片正反面
-FRONT：正面、BACK：反面，默认为FRONT
+FRONT：正面
+BACK：反面
+默认为FRONT
      */
     public $CardSide;
 
@@ -87,7 +93,9 @@ FRONT：正面、BACK：反面，默认为FRONT
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
      * @param boolean $RetProfile 是否返回头像。默认不返回。
      * @param string $CardSide 图片正反面
-FRONT：正面、BACK：反面，默认为FRONT
+FRONT：正面
+BACK：反面
+默认为FRONT
      */
     function __construct()
     {

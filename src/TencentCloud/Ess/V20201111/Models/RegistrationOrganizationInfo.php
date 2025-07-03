@@ -78,27 +78,27 @@ use TencentCloud\Common\AbstractModel;
 
  * @method string getAdminIdCardType() 获取认证人证件类型 
 支持以下类型
-<ul><li>ID_CARD : 居民身份证  (默认值)</li>
-<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
+<ul><li>ID_CARD : 中国大陆居民身份证  (默认值)</li>
+<li>HONGKONG_AND_MACAO : 中国港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 中国港澳台居民居住证(格式同中国大陆居民身份证)</li></ul>
 
  * @method void setAdminIdCardType(string $AdminIdCardType) 设置认证人证件类型 
 支持以下类型
-<ul><li>ID_CARD : 居民身份证  (默认值)</li>
-<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
+<ul><li>ID_CARD : 中国大陆居民身份证  (默认值)</li>
+<li>HONGKONG_AND_MACAO : 中国港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 中国港澳台居民居住证(格式同中国大陆居民身份证)</li></ul>
 
  * @method string getBusinessLicense() 获取营业执照正面照(PNG或JPG) base64格式, 大小不超过5M
  * @method void setBusinessLicense(string $BusinessLicense) 设置营业执照正面照(PNG或JPG) base64格式, 大小不超过5M
  * @method array getPowerOfAttorneys() 获取授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。
 p.s. 如果上传授权书 ，需遵循以下条件
-1. 超管的信息（超管姓名，超管身份证，超管手机号）必须为必填参数。
+1. 超管的信息（超管姓名，超管手机号）必须为必填参数。
 2. 超管的个人身份必须在电子签已经实名。
 2. 认证方式AuthorizationTypes必须只能是上传授权书方式 
 
  * @method void setPowerOfAttorneys(array $PowerOfAttorneys) 设置授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。
 p.s. 如果上传授权书 ，需遵循以下条件
-1. 超管的信息（超管姓名，超管身份证，超管手机号）必须为必填参数。
+1. 超管的信息（超管姓名，超管手机号）必须为必填参数。
 2. 超管的个人身份必须在电子签已经实名。
 2. 认证方式AuthorizationTypes必须只能是上传授权书方式 
  */
@@ -167,9 +167,9 @@ class RegistrationOrganizationInfo extends AbstractModel
     /**
      * @var string 认证人证件类型 
 支持以下类型
-<ul><li>ID_CARD : 居民身份证  (默认值)</li>
-<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
+<ul><li>ID_CARD : 中国大陆居民身份证  (默认值)</li>
+<li>HONGKONG_AND_MACAO : 中国港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 中国港澳台居民居住证(格式同中国大陆居民身份证)</li></ul>
 
      */
     public $AdminIdCardType;
@@ -182,7 +182,7 @@ class RegistrationOrganizationInfo extends AbstractModel
     /**
      * @var array 授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。
 p.s. 如果上传授权书 ，需遵循以下条件
-1. 超管的信息（超管姓名，超管身份证，超管手机号）必须为必填参数。
+1. 超管的信息（超管姓名，超管手机号）必须为必填参数。
 2. 超管的个人身份必须在电子签已经实名。
 2. 认证方式AuthorizationTypes必须只能是上传授权书方式 
 
@@ -220,14 +220,14 @@ p.s. 如果上传授权书 ，需遵循以下条件
 
      * @param string $AdminIdCardType 认证人证件类型 
 支持以下类型
-<ul><li>ID_CARD : 居民身份证  (默认值)</li>
-<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
+<ul><li>ID_CARD : 中国大陆居民身份证  (默认值)</li>
+<li>HONGKONG_AND_MACAO : 中国港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 中国港澳台居民居住证(格式同中国大陆居民身份证)</li></ul>
 
      * @param string $BusinessLicense 营业执照正面照(PNG或JPG) base64格式, 大小不超过5M
      * @param array $PowerOfAttorneys 授权书(PNG或JPG或PDF) base64格式, 大小不超过8M 。
 p.s. 如果上传授权书 ，需遵循以下条件
-1. 超管的信息（超管姓名，超管身份证，超管手机号）必须为必填参数。
+1. 超管的信息（超管姓名，超管手机号）必须为必填参数。
 2. 超管的个人身份必须在电子签已经实名。
 2. 认证方式AuthorizationTypes必须只能是上传授权书方式 
      */

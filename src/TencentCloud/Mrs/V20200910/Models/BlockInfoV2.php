@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 块信息
  *
  * @method array getIndex() 获取原文位置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIndex(array $Index) 设置原文位置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSrc() 获取原文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSrc(string $Src) 设置原文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCode() 获取疾病编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCode(string $Code) 设置疾病编码
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BlockInfoV2 extends AbstractModel
 {
     /**
      * @var array 原文位置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Index;
 
     /**
      * @var string 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Src;
 
     /**
      * @var string 值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @var string 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 疾病编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Code;
 
     /**
      * @param array $Index 原文位置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Code 疾病编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

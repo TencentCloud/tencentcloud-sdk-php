@@ -69,13 +69,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getZone() 获取可用区
  * @method void setZone(string $Zone) 设置可用区
  * @method string getFenceId() 获取金融围笼ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFenceId(string $FenceId) 设置金融围笼ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterId() 获取所属集群ID(默认集群为空)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterId(string $ClusterId) 设置所属集群ID(默认集群为空)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -203,13 +199,11 @@ class DescribeInstanceDetailResponse extends AbstractModel
 
     /**
      * @var string 金融围笼ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FenceId;
 
     /**
      * @var string 所属集群ID(默认集群为空)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterId;
 
@@ -244,9 +238,7 @@ class DescribeInstanceDetailResponse extends AbstractModel
      * @param integer $DiskAssignable 总可分配磁盘(单位:GB)
      * @param string $Zone 可用区
      * @param string $FenceId 金融围笼ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterId 所属集群ID(默认集群为空)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

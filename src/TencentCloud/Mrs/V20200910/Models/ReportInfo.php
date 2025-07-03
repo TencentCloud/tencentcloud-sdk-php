@@ -21,321 +21,217 @@ use TencentCloud\Common\AbstractModel;
  * 报告基本信息
  *
  * @method string getHospital() 获取医院名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHospital(string $Hospital) 设置医院名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDepartmentName() 获取科室名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDepartmentName(string $DepartmentName) 设置科室名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBillingTime() 获取申请时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBillingTime(string $BillingTime) 设置申请时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReportTime() 获取报告时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReportTime(string $ReportTime) 设置报告时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInspectTime() 获取检查时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInspectTime(string $InspectTime) 设置检查时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCheckNum() 获取检查号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCheckNum(string $CheckNum) 设置检查号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getImageNum() 获取影像号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageNum(string $ImageNum) 设置影像号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRadiationNum() 获取放射号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRadiationNum(string $RadiationNum) 设置放射号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTestNum() 获取检验号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTestNum(string $TestNum) 设置检验号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOutpatientNum() 获取门诊号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutpatientNum(string $OutpatientNum) 设置门诊号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPathologyNum() 获取病理号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPathologyNum(string $PathologyNum) 设置病理号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInHospitalNum() 获取住院号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInHospitalNum(string $InHospitalNum) 设置住院号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSampleNum() 获取样本号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSampleNum(string $SampleNum) 设置样本号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSampleType() 获取标本种类
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSampleType(string $SampleType) 设置标本种类
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMedicalRecordNum() 获取病历号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMedicalRecordNum(string $MedicalRecordNum) 设置病历号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReportName() 获取报告名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReportName(string $ReportName) 设置报告名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUltraNum() 获取超声号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUltraNum(string $UltraNum) 设置超声号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDiagnose() 获取临床诊断
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiagnose(string $Diagnose) 设置临床诊断
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCheckItem() 获取检查项目
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCheckItem(string $CheckItem) 设置检查项目
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCheckMethod() 获取检查方法
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCheckMethod(string $CheckMethod) 设置检查方法
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDiagnoseTime() 获取诊断时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiagnoseTime(string $DiagnoseTime) 设置诊断时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHealthCheckupNum() 获取体检号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHealthCheckupNum(string $HealthCheckupNum) 设置体检号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOtherTime() 获取其它时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOtherTime(string $OtherTime) 设置其它时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPrintTime() 获取打印时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrintTime(string $PrintTime) 设置打印时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTimes() 获取未归类时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimes(array $Times) 设置未归类时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBedNo() 获取床号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBedNo(string $BedNo) 设置床号
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ReportInfo extends AbstractModel
 {
     /**
      * @var string 医院名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Hospital;
 
     /**
      * @var string 科室名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DepartmentName;
 
     /**
      * @var string 申请时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BillingTime;
 
     /**
      * @var string 报告时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReportTime;
 
     /**
      * @var string 检查时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InspectTime;
 
     /**
      * @var string 检查号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CheckNum;
 
     /**
      * @var string 影像号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageNum;
 
     /**
      * @var string 放射号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RadiationNum;
 
     /**
      * @var string 检验号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TestNum;
 
     /**
      * @var string 门诊号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutpatientNum;
 
     /**
      * @var string 病理号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PathologyNum;
 
     /**
      * @var string 住院号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InHospitalNum;
 
     /**
      * @var string 样本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SampleNum;
 
     /**
      * @var string 标本种类
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SampleType;
 
     /**
      * @var string 病历号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MedicalRecordNum;
 
     /**
      * @var string 报告名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReportName;
 
     /**
      * @var string 超声号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UltraNum;
 
     /**
      * @var string 临床诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Diagnose;
 
     /**
      * @var string 检查项目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CheckItem;
 
     /**
      * @var string 检查方法
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CheckMethod;
 
     /**
      * @var string 诊断时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiagnoseTime;
 
     /**
      * @var string 体检号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HealthCheckupNum;
 
     /**
      * @var string 其它时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OtherTime;
 
     /**
      * @var string 打印时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PrintTime;
 
     /**
      * @var array 未归类时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Times;
 
     /**
      * @var string 床号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BedNo;
 
     /**
      * @param string $Hospital 医院名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DepartmentName 科室名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BillingTime 申请时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReportTime 报告时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InspectTime 检查时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CheckNum 检查号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ImageNum 影像号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RadiationNum 放射号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TestNum 检验号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OutpatientNum 门诊号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PathologyNum 病理号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InHospitalNum 住院号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SampleNum 样本号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SampleType 标本种类
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MedicalRecordNum 病历号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReportName 报告名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UltraNum 超声号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Diagnose 临床诊断
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CheckItem 检查项目
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CheckMethod 检查方法
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DiagnoseTime 诊断时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HealthCheckupNum 体检号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OtherTime 其它时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PrintTime 打印时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Times 未归类时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BedNo 床号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

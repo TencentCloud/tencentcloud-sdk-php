@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取集群实例ID
  * @method void setInstanceId(string $InstanceId) 设置集群实例ID
- * @method string getNodeRole() 获取集群角色类型，默认为 "data"数据节点
- * @method void setNodeRole(string $NodeRole) 设置集群角色类型，默认为 "data"数据节点
+ * @method string getNodeRole() 获取集群角色类型，“DATA” 为数据节点、“COMMON” 为 ZooKeeper 节点，默认为 "DATA" 数据节点。
+ * @method void setNodeRole(string $NodeRole) 设置集群角色类型，“DATA” 为数据节点、“COMMON” 为 ZooKeeper 节点，默认为 "DATA" 数据节点。
  * @method integer getOffset() 获取分页参数，第一页为0，第二页为10
  * @method void setOffset(integer $Offset) 设置分页参数，第一页为0，第二页为10
  * @method integer getLimit() 获取分页参数，分页步长，默认为10
@@ -41,7 +41,7 @@ class DescribeInstanceNodesRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 集群角色类型，默认为 "data"数据节点
+     * @var string 集群角色类型，“DATA” 为数据节点、“COMMON” 为 ZooKeeper 节点，默认为 "DATA" 数据节点。
      */
     public $NodeRole;
 
@@ -67,7 +67,7 @@ class DescribeInstanceNodesRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 集群实例ID
-     * @param string $NodeRole 集群角色类型，默认为 "data"数据节点
+     * @param string $NodeRole 集群角色类型，“DATA” 为数据节点、“COMMON” 为 ZooKeeper 节点，默认为 "DATA" 数据节点。
      * @param integer $Offset 分页参数，第一页为0，第二页为10
      * @param integer $Limit 分页参数，分页步长，默认为10
      * @param string $DisplayPolicy 展现策略，All时显示所有

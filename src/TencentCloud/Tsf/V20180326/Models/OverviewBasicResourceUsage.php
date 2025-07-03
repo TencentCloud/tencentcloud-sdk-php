@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * TSF基本资源信息概览
  *
  * @method integer getApplicationCount() 获取应用总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationCount(integer $ApplicationCount) 设置应用总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNamespaceCount() 获取命名空间总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespaceCount(integer $NamespaceCount) 设置命名空间总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getGroupCount() 获取部署组个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupCount(integer $GroupCount) 设置部署组个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPackageSpaceUsed() 获取程序包存储空间用量，单位字节
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPackageSpaceUsed(integer $PackageSpaceUsed) 设置程序包存储空间用量，单位字节
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getConsulInstanceCount() 获取已注册实例数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConsulInstanceCount(integer $ConsulInstanceCount) 设置已注册实例数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OverviewBasicResourceUsage extends AbstractModel
 {
     /**
      * @var integer 应用总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationCount;
 
     /**
      * @var integer 命名空间总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NamespaceCount;
 
     /**
      * @var integer 部署组个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupCount;
 
     /**
      * @var integer 程序包存储空间用量，单位字节
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PackageSpaceUsed;
 
     /**
      * @var integer 已注册实例数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConsulInstanceCount;
 
     /**
      * @param integer $ApplicationCount 应用总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NamespaceCount 命名空间总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $GroupCount 部署组个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PackageSpaceUsed 程序包存储空间用量，单位字节
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ConsulInstanceCount 已注册实例数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

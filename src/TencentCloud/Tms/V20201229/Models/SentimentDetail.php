@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 情感分析明细
  *
  * @method integer getPositive() 获取正向分数，取值范围0到100
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPositive(integer $Positive) 设置正向分数，取值范围0到100
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNegative() 获取负向分数，取值范围0到100
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNegative(integer $Negative) 设置负向分数，取值范围0到100
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SentimentDetail extends AbstractModel
 {
     /**
      * @var integer 正向分数，取值范围0到100
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Positive;
 
     /**
      * @var integer 负向分数，取值范围0到100
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Negative;
 
     /**
      * @param integer $Positive 正向分数，取值范围0到100
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Negative 负向分数，取值范围0到100
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

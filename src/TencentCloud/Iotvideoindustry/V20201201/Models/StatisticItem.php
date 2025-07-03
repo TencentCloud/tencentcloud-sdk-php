@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 某天的统计数额
  *
  * @method string getDate() 获取日期。格式【YYYY-MM-DD】
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDate(string $Date) 设置日期。格式【YYYY-MM-DD】
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getSum() 获取统计数额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSum(float $Sum) 设置统计数额
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class StatisticItem extends AbstractModel
 {
     /**
      * @var string 日期。格式【YYYY-MM-DD】
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Date;
 
     /**
      * @var float 统计数额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Sum;
 
     /**
      * @param string $Date 日期。格式【YYYY-MM-DD】
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Sum 统计数额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 成本分析表头数据复杂类型
  *
  * @method array getHeadDetail() 获取表头日期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeadDetail(array $HeadDetail) 设置表头日期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTotal() 获取总计
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotal(string $Total) 设置总计
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AnalyseHeaderDetail extends AbstractModel
 {
     /**
      * @var array 表头日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HeadDetail;
 
     /**
      * @var string 时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 总计
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Total;
 
     /**
      * @param array $HeadDetail 表头日期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Total 总计
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

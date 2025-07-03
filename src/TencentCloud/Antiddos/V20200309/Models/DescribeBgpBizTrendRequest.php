@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置统计开始时间。 例：“2020-09-22 00:00:00”，注意该时间必须为5分钟的倍数
  * @method string getEndTime() 获取统计结束时间。 例：“2020-09-22 00:00:00”，注意该时间必须为5分钟的倍数
  * @method void setEndTime(string $EndTime) 设置统计结束时间。 例：“2020-09-22 00:00:00”，注意该时间必须为5分钟的倍数
- * @method string getMetricName() 获取统计纬度，可取值intraffic, outtraffic, inpkg, outpkg
- * @method void setMetricName(string $MetricName) 设置统计纬度，可取值intraffic, outtraffic, inpkg, outpkg
+ * @method string getMetricName() 获取统计维度，可取值intraffic, outtraffic, inpkg, outpkg； intraffic：入流量 outtraffic：出流量 inpkg：入包速率 outpkg：出包速率
+ * @method void setMetricName(string $MetricName) 设置统计维度，可取值intraffic, outtraffic, inpkg, outpkg； intraffic：入流量 outtraffic：出流量 inpkg：入包速率 outpkg：出包速率
  * @method string getInstanceId() 获取资源实例ID
  * @method void setInstanceId(string $InstanceId) 设置资源实例ID
  * @method integer getFlag() 获取0表示固定时间，1表示自定义时间
@@ -51,7 +51,7 @@ class DescribeBgpBizTrendRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string 统计纬度，可取值intraffic, outtraffic, inpkg, outpkg
+     * @var string 统计维度，可取值intraffic, outtraffic, inpkg, outpkg； intraffic：入流量 outtraffic：出流量 inpkg：入包速率 outpkg：出包速率
      */
     public $MetricName;
 
@@ -69,7 +69,7 @@ class DescribeBgpBizTrendRequest extends AbstractModel
      * @param string $Business DDoS防护子产品代号（bgp-multip表示高防包）
      * @param string $StartTime 统计开始时间。 例：“2020-09-22 00:00:00”，注意该时间必须为5分钟的倍数
      * @param string $EndTime 统计结束时间。 例：“2020-09-22 00:00:00”，注意该时间必须为5分钟的倍数
-     * @param string $MetricName 统计纬度，可取值intraffic, outtraffic, inpkg, outpkg
+     * @param string $MetricName 统计维度，可取值intraffic, outtraffic, inpkg, outpkg； intraffic：入流量 outtraffic：出流量 inpkg：入包速率 outpkg：出包速率
      * @param string $InstanceId 资源实例ID
      * @param integer $Flag 0表示固定时间，1表示自定义时间
      */

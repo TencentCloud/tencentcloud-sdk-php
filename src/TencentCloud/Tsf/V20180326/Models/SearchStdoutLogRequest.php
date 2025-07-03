@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SearchStdoutLog请求参数结构体
  *
- * @method string getInstanceId() 获取机器实例ID
- * @method void setInstanceId(string $InstanceId) 设置机器实例ID
+ * @method string getInstanceId() 获取机器实例ID， 和  实例 ID 二者必选其一，不能同时为空
+ * @method void setInstanceId(string $InstanceId) 设置机器实例ID， 和  实例 ID 二者必选其一，不能同时为空
  * @method integer getLimit() 获取单页请求配置数量，取值范围[1, 500]，默认值为100
  * @method void setLimit(integer $Limit) 设置单页请求配置数量，取值范围[1, 500]，默认值为100
  * @method array getSearchWords() 获取检索关键词
  * @method void setSearchWords(array $SearchWords) 设置检索关键词
  * @method string getStartTime() 获取查询起始时间
  * @method void setStartTime(string $StartTime) 设置查询起始时间
- * @method string getGroupId() 获取部署组ID
- * @method void setGroupId(string $GroupId) 设置部署组ID
+ * @method string getGroupId() 获取部署组ID，和 InstanceId 二者必选其一，不能同时为空
+ * @method void setGroupId(string $GroupId) 设置部署组ID，和 InstanceId 二者必选其一，不能同时为空
  * @method string getEndTime() 获取查询结束时间
  * @method void setEndTime(string $EndTime) 设置查询结束时间
  * @method integer getOffset() 获取请求偏移量，取值范围大于等于0，默认值为
@@ -52,11 +52,13 @@ use TencentCloud\Common\AbstractModel;
 值"page"
  * @method string getScrollId() 获取游标ID
  * @method void setScrollId(string $ScrollId) 设置游标ID
+ * @method array getSearchAfter() 获取查询es使用searchAfter时，游标
+ * @method void setSearchAfter(array $SearchAfter) 设置查询es使用searchAfter时，游标
  */
 class SearchStdoutLogRequest extends AbstractModel
 {
     /**
-     * @var string 机器实例ID
+     * @var string 机器实例ID， 和  实例 ID 二者必选其一，不能同时为空
      */
     public $InstanceId;
 
@@ -76,7 +78,7 @@ class SearchStdoutLogRequest extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string 部署组ID
+     * @var string 部署组ID，和 InstanceId 二者必选其一，不能同时为空
      */
     public $GroupId;
 
@@ -120,11 +122,16 @@ class SearchStdoutLogRequest extends AbstractModel
     public $ScrollId;
 
     /**
-     * @param string $InstanceId 机器实例ID
+     * @var array 查询es使用searchAfter时，游标
+     */
+    public $SearchAfter;
+
+    /**
+     * @param string $InstanceId 机器实例ID， 和  实例 ID 二者必选其一，不能同时为空
      * @param integer $Limit 单页请求配置数量，取值范围[1, 500]，默认值为100
      * @param array $SearchWords 检索关键词
      * @param string $StartTime 查询起始时间
-     * @param string $GroupId 部署组ID
+     * @param string $GroupId 部署组ID，和 InstanceId 二者必选其一，不能同时为空
      * @param string $EndTime 查询结束时间
      * @param integer $Offset 请求偏移量，取值范围大于等于0，默认值为
 0
@@ -136,6 +143,7 @@ class SearchStdoutLogRequest extends AbstractModel
      * @param string $BatchType 批量请求类型，取值"page"或"scroll"，默认
 值"page"
      * @param string $ScrollId 游标ID
+     * @param array $SearchAfter 查询es使用searchAfter时，游标
      */
     function __construct()
     {
@@ -196,6 +204,10 @@ class SearchStdoutLogRequest extends AbstractModel
 
         if (array_key_exists("ScrollId",$param) and $param["ScrollId"] !== null) {
             $this->ScrollId = $param["ScrollId"];
+        }
+
+        if (array_key_exists("SearchAfter",$param) and $param["SearchAfter"] !== null) {
+            $this->SearchAfter = $param["SearchAfter"];
         }
     }
 }

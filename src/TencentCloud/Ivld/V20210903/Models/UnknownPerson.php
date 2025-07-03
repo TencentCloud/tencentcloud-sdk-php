@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPutLibraryAllowed(boolean $PutLibraryAllowed) 设置未知人物是否可以入库(只有当未知人物人脸小图质量分符合要求时才可入库)
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAuditClass() 获取内容审核结果: 0-正常;1-涉政;其他待确定
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAuditClass(integer $AuditClass) 设置内容审核结果: 0-正常;1-涉政;其他待确定
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class UnknownPerson extends AbstractModel
 {
@@ -44,9 +48,17 @@ class UnknownPerson extends AbstractModel
     public $PutLibraryAllowed;
 
     /**
+     * @var integer 内容审核结果: 0-正常;1-涉政;其他待确定
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AuditClass;
+
+    /**
      * @param array $VideoAppearSet 视觉出现信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $PutLibraryAllowed 未知人物是否可以入库(只有当未知人物人脸小图质量分符合要求时才可入库)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AuditClass 内容审核结果: 0-正常;1-涉政;其他待确定
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -73,6 +85,10 @@ class UnknownPerson extends AbstractModel
 
         if (array_key_exists("PutLibraryAllowed",$param) and $param["PutLibraryAllowed"] !== null) {
             $this->PutLibraryAllowed = $param["PutLibraryAllowed"];
+        }
+
+        if (array_key_exists("AuditClass",$param) and $param["AuditClass"] !== null) {
+            $this->AuditClass = $param["AuditClass"];
         }
     }
 }

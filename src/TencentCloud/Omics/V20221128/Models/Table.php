@@ -21,93 +21,73 @@ use TencentCloud\Common\AbstractModel;
  * 表格。
  *
  * @method string getTableId() 获取表格ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTableId(string $TableId) 设置表格ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProjectId() 获取关联项目ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectId(string $ProjectId) 设置关联项目ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取表格名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置表格名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取表格描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置表格描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getColumns() 获取表格列
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setColumns(array $Columns) 设置表格列
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreator() 获取创建人
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreator(string $Creator) 设置创建人
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreatorId() 获取创建人ID
+ * @method void setCreatorId(string $CreatorId) 设置创建人ID
  */
 class Table extends AbstractModel
 {
     /**
      * @var string 表格ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TableId;
 
     /**
      * @var string 关联项目ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectId;
 
     /**
      * @var string 表格名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 表格描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var array 表格列
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Columns;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 创建人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Creator;
 
     /**
+     * @var string 创建人ID
+     */
+    public $CreatorId;
+
+    /**
      * @param string $TableId 表格ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectId 关联项目ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 表格名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 表格描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Columns 表格列
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Creator 创建人
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreatorId 创建人ID
      */
     function __construct()
     {
@@ -153,6 +133,10 @@ class Table extends AbstractModel
 
         if (array_key_exists("Creator",$param) and $param["Creator"] !== null) {
             $this->Creator = $param["Creator"];
+        }
+
+        if (array_key_exists("CreatorId",$param) and $param["CreatorId"] !== null) {
+            $this->CreatorId = $param["CreatorId"];
         }
     }
 }

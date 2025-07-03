@@ -21,129 +21,113 @@ use TencentCloud\Common\AbstractModel;
  * 预释放列表信息
  *
  * @method string getDomain() 获取域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomain(string $Domain) 设置域名
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getReservationTime() 获取预订倒计时
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReservationTime(string $ReservationTime) 设置预订倒计时
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRegTime() 获取域名注册时间
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRegTime(string $RegTime) 设置域名注册时间
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDelTime() 获取域名删除时间
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDelTime(string $DelTime) 设置域名删除时间
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getReservationTime() 获取预订倒计时(YYYY-MM-DD hh:mm:ss)
+ * @method void setReservationTime(string $ReservationTime) 设置预订倒计时(YYYY-MM-DD hh:mm:ss)
+ * @method string getRegTime() 获取域名注册时间(YYYY-MM-DD hh:mm:ss)
+ * @method void setRegTime(string $RegTime) 设置域名注册时间(YYYY-MM-DD hh:mm:ss)
+ * @method string getDelTime() 获取域名删除时间(YYYY-MM-DD hh:mm:ss)
+ * @method void setDelTime(string $DelTime) 设置域名删除时间(YYYY-MM-DD hh:mm:ss)
  * @method integer getCurrentPeople() 获取当前人数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCurrentPeople(integer $CurrentPeople) 设置当前人数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getPrice() 获取当前价格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrice(float $Price) 设置当前价格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsFollow() 获取是否收藏
-注意：此字段可能返回 null，表示取不到有效值。
+true：收藏
+false：未收藏
  * @method void setIsFollow(boolean $IsFollow) 设置是否收藏
-注意：此字段可能返回 null，表示取不到有效值。
+true：收藏
+false：未收藏
  * @method boolean getIsAppoint() 获取是否已经预约
-注意：此字段可能返回 null，表示取不到有效值。
+true：预约
+false：未预约
  * @method void setIsAppoint(boolean $IsAppoint) 设置是否已经预约
-注意：此字段可能返回 null，表示取不到有效值。
+true：预约
+false：未预约
  * @method string getBusinessId() 获取业务ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBusinessId(string $BusinessId) 设置业务ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsDomainUser() 获取是否为原持有者
-注意：此字段可能返回 null，表示取不到有效值。
+true：是原持有人
+false：非原持有人
  * @method void setIsDomainUser(boolean $IsDomainUser) 设置是否为原持有者
-注意：此字段可能返回 null，表示取不到有效值。
+true：是原持有人
+false：非原持有人
  */
 class PreReleaseInfo extends AbstractModel
 {
     /**
      * @var string 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Domain;
 
     /**
-     * @var string 预订倒计时
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 预订倒计时(YYYY-MM-DD hh:mm:ss)
      */
     public $ReservationTime;
 
     /**
-     * @var string 域名注册时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 域名注册时间(YYYY-MM-DD hh:mm:ss)
      */
     public $RegTime;
 
     /**
-     * @var string 域名删除时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 域名删除时间(YYYY-MM-DD hh:mm:ss)
      */
     public $DelTime;
 
     /**
      * @var integer 当前人数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CurrentPeople;
 
     /**
      * @var float 当前价格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Price;
 
     /**
      * @var boolean 是否收藏
-注意：此字段可能返回 null，表示取不到有效值。
+true：收藏
+false：未收藏
      */
     public $IsFollow;
 
     /**
      * @var boolean 是否已经预约
-注意：此字段可能返回 null，表示取不到有效值。
+true：预约
+false：未预约
      */
     public $IsAppoint;
 
     /**
      * @var string 业务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BusinessId;
 
     /**
      * @var boolean 是否为原持有者
-注意：此字段可能返回 null，表示取不到有效值。
+true：是原持有人
+false：非原持有人
      */
     public $IsDomainUser;
 
     /**
      * @param string $Domain 域名
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ReservationTime 预订倒计时
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RegTime 域名注册时间
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DelTime 域名删除时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ReservationTime 预订倒计时(YYYY-MM-DD hh:mm:ss)
+     * @param string $RegTime 域名注册时间(YYYY-MM-DD hh:mm:ss)
+     * @param string $DelTime 域名删除时间(YYYY-MM-DD hh:mm:ss)
      * @param integer $CurrentPeople 当前人数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Price 当前价格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsFollow 是否收藏
-注意：此字段可能返回 null，表示取不到有效值。
+true：收藏
+false：未收藏
      * @param boolean $IsAppoint 是否已经预约
-注意：此字段可能返回 null，表示取不到有效值。
+true：预约
+false：未预约
      * @param string $BusinessId 业务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsDomainUser 是否为原持有者
-注意：此字段可能返回 null，表示取不到有效值。
+true：是原持有人
+false：非原持有人
      */
     function __construct()
     {

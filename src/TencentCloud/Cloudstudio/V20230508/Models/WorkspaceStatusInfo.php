@@ -33,37 +33,21 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getMemory() 获取内存
  * @method void setMemory(integer $Memory) 设置内存
  * @method string getIcon() 获取工作空间图标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIcon(string $Icon) 设置工作空间图标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatusReason() 获取工作空间状态, 异常原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatusReason(string $StatusReason) 设置工作空间状态, 异常原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取工作空间描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置工作空间描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWorkspaceType() 获取工作空间类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWorkspaceType(string $WorkspaceType) 设置工作空间类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVersionControlUrl() 获取Git 仓库 HTTPS 地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersionControlUrl(string $VersionControlUrl) 设置Git 仓库 HTTPS 地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVersionControlRef() 获取Git 仓库引用。指定分支使用 /refs/heads/{分支名}, 指定 Tag 用 /refs/tags/{Tag名}
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersionControlRef(string $VersionControlRef) 设置Git 仓库引用。指定分支使用 /refs/heads/{分支名}, 指定 Tag 用 /refs/tags/{Tag名}
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLastOpsDate() 获取最后操作时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastOpsDate(string $LastOpsDate) 设置最后操作时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateDate() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateDate(string $CreateDate) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkspaceStatusInfo extends AbstractModel
 {
@@ -99,49 +83,41 @@ class WorkspaceStatusInfo extends AbstractModel
 
     /**
      * @var string 工作空间图标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Icon;
 
     /**
      * @var string 工作空间状态, 异常原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StatusReason;
 
     /**
      * @var string 工作空间描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var string 工作空间类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkspaceType;
 
     /**
      * @var string Git 仓库 HTTPS 地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VersionControlUrl;
 
     /**
      * @var string Git 仓库引用。指定分支使用 /refs/heads/{分支名}, 指定 Tag 用 /refs/tags/{Tag名}
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VersionControlRef;
 
     /**
      * @var string 最后操作时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastOpsDate;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateDate;
 
@@ -153,21 +129,13 @@ class WorkspaceStatusInfo extends AbstractModel
      * @param integer $Cpu CPU数量
      * @param integer $Memory 内存
      * @param string $Icon 工作空间图标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StatusReason 工作空间状态, 异常原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 工作空间描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WorkspaceType 工作空间类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VersionControlUrl Git 仓库 HTTPS 地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VersionControlRef Git 仓库引用。指定分支使用 /refs/heads/{分支名}, 指定 Tag 用 /refs/tags/{Tag名}
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastOpsDate 最后操作时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateDate 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

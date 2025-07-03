@@ -47,9 +47,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceName(string $InstanceName) 设置emr集群名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHiveVersion() 获取EMR集群中hive组件的版本号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHiveVersion(string $HiveVersion) 设置EMR集群中hive组件的版本号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method KerberosInfo getKerberosInfo() 获取Kerberos详细信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKerberosInfo(KerberosInfo $KerberosInfo) 设置Kerberos详细信息
@@ -116,7 +114,6 @@ class HiveInfo extends AbstractModel
 
     /**
      * @var string EMR集群中hive组件的版本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HiveVersion;
 
@@ -147,7 +144,6 @@ class HiveInfo extends AbstractModel
      * @param string $InstanceName emr集群名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HiveVersion EMR集群中hive组件的版本号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KerberosInfo $KerberosInfo Kerberos详细信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $KerberosEnable 是否开启Kerberos

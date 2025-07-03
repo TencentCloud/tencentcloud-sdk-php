@@ -39,17 +39,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSnapshotTime() 获取备份文件时间
  * @method void setSnapshotTime(string $SnapshotTime) 设置备份文件时间
  * @method integer getBackupId() 获取备份ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackupId(integer $BackupId) 设置备份ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSnapShotType() 获取快照类型，可选值：full，全量；increment，增量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSnapShotType(string $SnapShotType) 设置快照类型，可选值：full，全量；increment，增量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBackupName() 获取备份文件备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackupName(string $BackupName) 设置备份文件备注
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BackupFileInfo extends AbstractModel
 {
@@ -100,19 +94,16 @@ class BackupFileInfo extends AbstractModel
 
     /**
      * @var integer 备份ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BackupId;
 
     /**
      * @var string 快照类型，可选值：full，全量；increment，增量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SnapShotType;
 
     /**
      * @var string 备份文件备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BackupName;
 
@@ -127,11 +118,8 @@ class BackupFileInfo extends AbstractModel
      * @param string $BackupStatus 备份文件状态：success：备份成功；fail：备份失败；creating：备份文件创建中；deleting：备份文件删除中
      * @param string $SnapshotTime 备份文件时间
      * @param integer $BackupId 备份ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SnapShotType 快照类型，可选值：full，全量；increment，增量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BackupName 备份文件备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

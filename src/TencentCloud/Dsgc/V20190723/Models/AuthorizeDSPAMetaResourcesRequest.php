@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceRegion(string $ResourceRegion) 设置资源所处地域。
  * @method array getResourcesAccount() 获取用户授权的账户信息，如果是一键自动授权模式，则不需要填写账户名与密码。
  * @method void setResourcesAccount(array $ResourcesAccount) 设置用户授权的账户信息，如果是一键自动授权模式，则不需要填写账户名与密码。
+ * @method boolean getCreateDefaultTask() 获取创建默认主模板扫描任务
+ * @method void setCreateDefaultTask(boolean $CreateDefaultTask) 设置创建默认主模板扫描任务
+ * @method string getAuthRange() 获取授权范围（all:授权整个数据源 manual:手动指定数据库）
+ * @method void setAuthRange(string $AuthRange) 设置授权范围（all:授权整个数据源 manual:手动指定数据库）
  */
 class AuthorizeDSPAMetaResourcesRequest extends AbstractModel
 {
@@ -59,11 +63,23 @@ class AuthorizeDSPAMetaResourcesRequest extends AbstractModel
     public $ResourcesAccount;
 
     /**
+     * @var boolean 创建默认主模板扫描任务
+     */
+    public $CreateDefaultTask;
+
+    /**
+     * @var string 授权范围（all:授权整个数据源 manual:手动指定数据库）
+     */
+    public $AuthRange;
+
+    /**
      * @param string $DspaId DSPA实例ID。
      * @param string $AuthType 授权方式，可选：automatic(一键自动授权) 、 account(指定用户名授权)。
      * @param string $MetaType 资源类型。
      * @param string $ResourceRegion 资源所处地域。
      * @param array $ResourcesAccount 用户授权的账户信息，如果是一键自动授权模式，则不需要填写账户名与密码。
+     * @param boolean $CreateDefaultTask 创建默认主模板扫描任务
+     * @param string $AuthRange 授权范围（all:授权整个数据源 manual:手动指定数据库）
      */
     function __construct()
     {
@@ -101,6 +117,14 @@ class AuthorizeDSPAMetaResourcesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ResourcesAccount, $obj);
             }
+        }
+
+        if (array_key_exists("CreateDefaultTask",$param) and $param["CreateDefaultTask"] !== null) {
+            $this->CreateDefaultTask = $param["CreateDefaultTask"];
+        }
+
+        if (array_key_exists("AuthRange",$param) and $param["AuthRange"] !== null) {
+            $this->AuthRange = $param["AuthRange"];
         }
     }
 }

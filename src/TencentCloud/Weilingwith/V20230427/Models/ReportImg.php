@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 上报图片列表
  *
  * @method integer getType() 获取类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(integer $Type) 设置类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getData() 获取数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(string $Data) 设置数据
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ReportImg extends AbstractModel
 {
     /**
      * @var integer 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
 
     /**
      * @param integer $Type 类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Data 数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

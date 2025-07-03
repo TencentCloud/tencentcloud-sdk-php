@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageBase64(string $ImageBase64) 设置图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
+ * @method string getBackImageBase64() 获取卡证背面图片的 Base64 值。支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+ * @method void setBackImageBase64(string $BackImageBase64) 设置卡证背面图片的 Base64 值。支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
  * @method string getImageUrl() 获取图片的 Url 地址。( 中国地区之外不支持这个字段 )
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经 Base64 编码后不超过 7M。图片下载时间不超过 3 秒。
@@ -36,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
 支持的图片大小：所下载图片经 Base64 编码后不超过 7M。图片下载时间不超过 3 秒。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+ * @method string getBackImageUrl() 获取卡证背面图片的 Url 地址。支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。支持的图片大小：所下载图片经 Base64 编码后不超过 7M。图片下载时间不超过 3 秒。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+ * @method void setBackImageUrl(string $BackImageUrl) 设置卡证背面图片的 Url 地址。支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。支持的图片大小：所下载图片经 Base64 编码后不超过 7M。图片下载时间不超过 3 秒。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
  * @method boolean getRetImage() 获取是否返回图片，默认false
  * @method void setRetImage(boolean $RetImage) 设置是否返回图片，默认false
  */
@@ -49,6 +53,11 @@ class MLIDCardOCRRequest extends AbstractModel
     public $ImageBase64;
 
     /**
+     * @var string 卡证背面图片的 Base64 值。支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+     */
+    public $BackImageBase64;
+
+    /**
      * @var string 图片的 Url 地址。( 中国地区之外不支持这个字段 )
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经 Base64 编码后不超过 7M。图片下载时间不超过 3 秒。
@@ -56,6 +65,11 @@ class MLIDCardOCRRequest extends AbstractModel
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
      */
     public $ImageUrl;
+
+    /**
+     * @var string 卡证背面图片的 Url 地址。支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。支持的图片大小：所下载图片经 Base64 编码后不超过 7M。图片下载时间不超过 3 秒。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+     */
+    public $BackImageUrl;
 
     /**
      * @var boolean 是否返回图片，默认false
@@ -66,11 +80,13 @@ class MLIDCardOCRRequest extends AbstractModel
      * @param string $ImageBase64 图片的 Base64 值。
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
+     * @param string $BackImageBase64 卡证背面图片的 Base64 值。支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
      * @param string $ImageUrl 图片的 Url 地址。( 中国地区之外不支持这个字段 )
 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
 支持的图片大小：所下载图片经 Base64 编码后不超过 7M。图片下载时间不超过 3 秒。
 图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
 非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+     * @param string $BackImageUrl 卡证背面图片的 Url 地址。支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。支持的图片大小：所下载图片经 Base64 编码后不超过 7M。图片下载时间不超过 3 秒。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
      * @param boolean $RetImage 是否返回图片，默认false
      */
     function __construct()
@@ -90,8 +106,16 @@ class MLIDCardOCRRequest extends AbstractModel
             $this->ImageBase64 = $param["ImageBase64"];
         }
 
+        if (array_key_exists("BackImageBase64",$param) and $param["BackImageBase64"] !== null) {
+            $this->BackImageBase64 = $param["BackImageBase64"];
+        }
+
         if (array_key_exists("ImageUrl",$param) and $param["ImageUrl"] !== null) {
             $this->ImageUrl = $param["ImageUrl"];
+        }
+
+        if (array_key_exists("BackImageUrl",$param) and $param["BackImageUrl"] !== null) {
+            $this->BackImageUrl = $param["BackImageUrl"];
         }
 
         if (array_key_exists("RetImage",$param) and $param["RetImage"] !== null) {

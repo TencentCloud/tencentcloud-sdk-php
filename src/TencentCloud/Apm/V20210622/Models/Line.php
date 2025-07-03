@@ -27,13 +27,11 @@ use TencentCloud\Common\AbstractModel;
  * @method array getTimeSerial() 获取时间序列
  * @method void setTimeSerial(array $TimeSerial) 设置时间序列
  * @method array getDataSerial() 获取数据序列
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataSerial(array $DataSerial) 设置数据序列
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取维度列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置维度列表
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMetricUnit() 获取指标数据单位
+ * @method void setMetricUnit(string $MetricUnit) 设置指标数据单位
  */
 class Line extends AbstractModel
 {
@@ -54,24 +52,26 @@ class Line extends AbstractModel
 
     /**
      * @var array 数据序列
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataSerial;
 
     /**
      * @var array 维度列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
+
+    /**
+     * @var string 指标数据单位
+     */
+    public $MetricUnit;
 
     /**
      * @param string $MetricName 指标名
      * @param string $MetricNameCN 指标中文名
      * @param array $TimeSerial 时间序列
      * @param array $DataSerial 数据序列
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 维度列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MetricUnit 指标数据单位
      */
     function __construct()
     {
@@ -109,6 +109,10 @@ class Line extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("MetricUnit",$param) and $param["MetricUnit"] !== null) {
+            $this->MetricUnit = $param["MetricUnit"];
         }
     }
 }

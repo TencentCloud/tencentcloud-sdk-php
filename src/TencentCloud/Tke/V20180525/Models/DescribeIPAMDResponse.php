@@ -23,33 +23,21 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getEnableIPAMD() 获取是否安装了eniipamd组件
  * @method void setEnableIPAMD(boolean $EnableIPAMD) 设置是否安装了eniipamd组件
  * @method boolean getEnableCustomizedPodCidr() 获取是否开启自定义podcidr，默认为false，已安装eniipamd组件才意义
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableCustomizedPodCidr(boolean $EnableCustomizedPodCidr) 设置是否开启自定义podcidr，默认为false，已安装eniipamd组件才意义
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getDisableVpcCniMode() 获取是否不开启vpccni模式，默认为false，已安装eniipamd组件才意义
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDisableVpcCniMode(boolean $DisableVpcCniMode) 设置是否不开启vpccni模式，默认为false，已安装eniipamd组件才意义
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPhase() 获取组件状态，已安装eniipamd组件才会有值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPhase(string $Phase) 设置组件状态，已安装eniipamd组件才会有值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReason() 获取错误信息，已安装eniipamd组件且状态为非running才会有错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReason(string $Reason) 设置错误信息，已安装eniipamd组件且状态为非running才会有错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSubnetIds() 获取子网信息，已安装eniipamd组件才会有值
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetIds(array $SubnetIds) 设置子网信息，已安装eniipamd组件才会有值
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClaimExpiredDuration() 获取固定ip回收时间，已安装eniipamd组件才会有值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClaimExpiredDuration(string $ClaimExpiredDuration) 设置固定ip回收时间，已安装eniipamd组件才会有值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getEnableTrunkingENI() 获取是否开启了中继网卡模式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableTrunkingENI(boolean $EnableTrunkingENI) 设置是否开启了中继网卡模式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -62,25 +50,21 @@ class DescribeIPAMDResponse extends AbstractModel
 
     /**
      * @var boolean 是否开启自定义podcidr，默认为false，已安装eniipamd组件才意义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableCustomizedPodCidr;
 
     /**
      * @var boolean 是否不开启vpccni模式，默认为false，已安装eniipamd组件才意义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DisableVpcCniMode;
 
     /**
      * @var string 组件状态，已安装eniipamd组件才会有值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Phase;
 
     /**
      * @var string 错误信息，已安装eniipamd组件且状态为非running才会有错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Reason;
 
@@ -92,13 +76,11 @@ class DescribeIPAMDResponse extends AbstractModel
 
     /**
      * @var string 固定ip回收时间，已安装eniipamd组件才会有值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClaimExpiredDuration;
 
     /**
      * @var boolean 是否开启了中继网卡模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableTrunkingENI;
 
@@ -110,19 +92,13 @@ class DescribeIPAMDResponse extends AbstractModel
     /**
      * @param boolean $EnableIPAMD 是否安装了eniipamd组件
      * @param boolean $EnableCustomizedPodCidr 是否开启自定义podcidr，默认为false，已安装eniipamd组件才意义
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $DisableVpcCniMode 是否不开启vpccni模式，默认为false，已安装eniipamd组件才意义
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Phase 组件状态，已安装eniipamd组件才会有值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Reason 错误信息，已安装eniipamd组件且状态为非running才会有错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SubnetIds 子网信息，已安装eniipamd组件才会有值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClaimExpiredDuration 固定ip回收时间，已安装eniipamd组件才会有值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $EnableTrunkingENI 是否开启了中继网卡模式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

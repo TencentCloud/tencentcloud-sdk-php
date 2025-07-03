@@ -29,21 +29,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getRuleID() 获取本规则的ID。仅出参使用。
  * @method void setRuleID(integer $RuleID) 设置本规则的ID。仅出参使用。
  * @method array getAlgManagedIds() 获取JS挑战的规则ID。默认所有规则不配置JS挑战。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlgManagedIds(array $AlgManagedIds) 设置JS挑战的规则ID。默认所有规则不配置JS挑战。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCapManagedIds() 获取数字验证码的规则ID。默认所有规则不配置数字验证码。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCapManagedIds(array $CapManagedIds) 设置数字验证码的规则ID。默认所有规则不配置数字验证码。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getMonManagedIds() 获取观察的规则ID。默认所有规则不配置观察。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMonManagedIds(array $MonManagedIds) 设置观察的规则ID。默认所有规则不配置观察。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDropManagedIds() 获取拦截的规则ID。默认所有规则不配置拦截。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDropManagedIds(array $DropManagedIds) 设置拦截的规则ID。默认所有规则不配置拦截。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BotPortraitRule extends AbstractModel
 {
@@ -61,25 +53,21 @@ class BotPortraitRule extends AbstractModel
 
     /**
      * @var array JS挑战的规则ID。默认所有规则不配置JS挑战。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlgManagedIds;
 
     /**
      * @var array 数字验证码的规则ID。默认所有规则不配置数字验证码。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CapManagedIds;
 
     /**
      * @var array 观察的规则ID。默认所有规则不配置观察。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MonManagedIds;
 
     /**
      * @var array 拦截的规则ID。默认所有规则不配置拦截。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DropManagedIds;
 
@@ -89,13 +77,9 @@ class BotPortraitRule extends AbstractModel
 <li>off：关闭。</li>
      * @param integer $RuleID 本规则的ID。仅出参使用。
      * @param array $AlgManagedIds JS挑战的规则ID。默认所有规则不配置JS挑战。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CapManagedIds 数字验证码的规则ID。默认所有规则不配置数字验证码。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $MonManagedIds 观察的规则ID。默认所有规则不配置观察。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DropManagedIds 拦截的规则ID。默认所有规则不配置拦截。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

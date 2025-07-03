@@ -20,20 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateFlowByFiles请求参数结构体
  *
- * @method UserInfo getOperator() 获取执行本接口操作的员工信息。使用此接口时，必须填写userId。
-支持填入集团子公司经办人 userId 代发合同。
+ * @method UserInfo getOperator() 获取本合同的发起人  <a href="https://qcloudimg.tencent-cloud.cn/raw/f850cfbe163a1cb38439a9f551c2505c.png" target="_blank">点击查看合同发起人展示的位置</a>
 
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
- * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。使用此接口时，必须填写userId。
-支持填入集团子公司经办人 userId 代发合同。
+注： 支持填入集团子公司经办人 userId 代发合同。
 
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
- * @method string getFlowName() 获取合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+ * @method void setOperator(UserInfo $Operator) 设置本合同的发起人  <a href="https://qcloudimg.tencent-cloud.cn/raw/f850cfbe163a1cb38439a9f551c2505c.png" target="_blank">点击查看合同发起人展示的位置</a>
 
-该名称还将用于合同签署完成后的下载文件名。
- * @method void setFlowName(string $FlowName) 设置合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+注： 支持填入集团子公司经办人 userId 代发合同。
 
-该名称还将用于合同签署完成后的下载文件名。
+ * @method string getFlowName() 获取自定义的合同流程的名称，长度不能超过200个字符，只能由中文汉字、中文标点、英文字母、阿拉伯数字、空格、小括号、中括号、中划线、下划线以及（,）、（;）、（.）、(&)、（+）组成。
+
+该名称还将用于合同签署完成后文件下载的默认文件名称。
+ * @method void setFlowName(string $FlowName) 设置自定义的合同流程的名称，长度不能超过200个字符，只能由中文汉字、中文标点、英文字母、阿拉伯数字、空格、小括号、中括号、中划线、下划线以及（,）、（;）、（.）、(&)、（+）组成。
+
+该名称还将用于合同签署完成后文件下载的默认文件名称。
  * @method array getApprovers() 获取合同流程的参与方列表，最多可支持50个参与方，可在列表中指定企业B端签署方和个人C端签署方的联系和认证方式等信息，具体定义可以参考开发者中心的ApproverInfo结构体。
 
 如果合同流程是有序签署，Approvers列表中参与人的顺序就是默认的签署顺序，请确保列表中参与人的顺序符合实际签署顺序。
@@ -54,23 +54,37 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowType(string $FlowType) 设置合同流程的类别分类（可自定义名称，如销售合同/入职合同等），最大长度为200个字符，仅限中文、字母、数字和下划线组成。
 如果用户已经在控制台创建了自定义合同类型，可以将这里的类型名称传入。 如果没有创建，我们会自动给发起方公司创建此自定义合同类型。
 ![image](https://qcloudimg.tencent-cloud.cn/raw/36582cea03ae6a2559894844942b5d5c.png)
- * @method array getComponents() 获取模板或者合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
+ * @method array getComponents() 获取发起的时候合成到PDF上的填写控件（需要提供填写控件的内容）
 <ul><li> 单行文本控件      </li>
 <li> 多行文本控件      </li>
 <li> 勾选框控件        </li>
 <li> 数字控件          </li>
 <li> 图片控件          </li>
-<li> 动态表格等填写控件</li></ul>
- * @method void setComponents(array $Components) 设置模板或者合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
+<li> 水印控件等          </li>
+</ul>
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/e004195ee4cb98a7f9bc12eb4a0a0b77.png)
+ * @method void setComponents(array $Components) 设置发起的时候合成到PDF上的填写控件（需要提供填写控件的内容）
 <ul><li> 单行文本控件      </li>
 <li> 多行文本控件      </li>
 <li> 勾选框控件        </li>
 <li> 数字控件          </li>
 <li> 图片控件          </li>
-<li> 动态表格等填写控件</li></ul>
+<li> 水印控件等          </li>
+</ul>
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/e004195ee4cb98a7f9bc12eb4a0a0b77.png)
  * @method array getCcInfos() 获取合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
 
+<b>注</b>
+1. 抄送人名单中可以包括自然人以及本企业的员工。
+2. 请确保抄送人列表中的成员不与任何签署人重复。
+
  * @method void setCcInfos(array $CcInfos) 设置合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
+
+<b>注</b>
+1. 抄送人名单中可以包括自然人以及本企业的员工。
+2. 请确保抄送人列表中的成员不与任何签署人重复。
 
  * @method integer getCcNotifyType() 获取可以设置以下时间节点来给抄送人发送短信通知来查看合同内容：
 <ul><li> **0**：合同发起时通知（默认值）</li>
@@ -125,9 +139,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getSignBeanTag() 获取签署方签署控件（印章/签名等）的生成方式：
 <ul><li> **0**：在合同流程发起时，由发起人指定签署方的签署控件的位置和数量。</li>
 <li> **1**：签署方在签署时自行添加签署控件，可以拖动位置和控制数量。</li></ul>
+
+注：签署方在签署时自行添加签署控件仅支持电子签小程序或web控制台签署，不支持H5
  * @method void setSignBeanTag(integer $SignBeanTag) 设置签署方签署控件（印章/签名等）的生成方式：
 <ul><li> **0**：在合同流程发起时，由发起人指定签署方的签署控件的位置和数量。</li>
 <li> **1**：签署方在签署时自行添加签署控件，可以拖动位置和控制数量。</li></ul>
+
+注：签署方在签署时自行添加签署控件仅支持电子签小程序或web控制台签署，不支持H5
  * @method string getCustomShowMap() 获取您可以自定义腾讯电子签小程序合同列表页展示的合同内容模板，模板中支持以下变量：
 <ul><li>{合同名称}   </li>
 <li>{发起方企业} </li>
@@ -188,21 +206,29 @@ use TencentCloud\Common\AbstractModel;
 <ul><li> 如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
 <li> 如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
 注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
+ * @method integer getFlowDisplayType() 获取在短信通知、填写、签署流程中，若标题、按钮、合同详情等地方存在“合同”字样时，可根据此配置指定文案，可选文案如下：  <ul><li> <b>0</b> :合同（默认值）</li> <li> <b>1</b> :文件</li> <li> <b>2</b> :协议</li><li> <b>3</b> :文书</li></ul>效果如下:![FlowDisplayType](https://qcloudimg.tencent-cloud.cn/raw/e4a2c4d638717cc901d3dbd5137c9bbc.png)
+ * @method void setFlowDisplayType(integer $FlowDisplayType) 设置在短信通知、填写、签署流程中，若标题、按钮、合同详情等地方存在“合同”字样时，可根据此配置指定文案，可选文案如下：  <ul><li> <b>0</b> :合同（默认值）</li> <li> <b>1</b> :文件</li> <li> <b>2</b> :协议</li><li> <b>3</b> :文书</li></ul>效果如下:![FlowDisplayType](https://qcloudimg.tencent-cloud.cn/raw/e4a2c4d638717cc901d3dbd5137c9bbc.png)
+ * @method boolean getOpenDynamicSignFlow() 获取是否开启动态签署合同：
+<ul><li> **true**：开启动态签署合同，可在签署过程中追加签署人（必须满足：1，发起方企业开启了模块化计费能力；2，发起方企业在企业应用管理中开启了动态签署人2.0能力）    。</li>
+<li> **false**：不开启动态签署合同。</li></ul>
+ * @method void setOpenDynamicSignFlow(boolean $OpenDynamicSignFlow) 设置是否开启动态签署合同：
+<ul><li> **true**：开启动态签署合同，可在签署过程中追加签署人（必须满足：1，发起方企业开启了模块化计费能力；2，发起方企业在企业应用管理中开启了动态签署人2.0能力）    。</li>
+<li> **false**：不开启动态签署合同。</li></ul>
  */
 class CreateFlowByFilesRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 执行本接口操作的员工信息。使用此接口时，必须填写userId。
-支持填入集团子公司经办人 userId 代发合同。
+     * @var UserInfo 本合同的发起人  <a href="https://qcloudimg.tencent-cloud.cn/raw/f850cfbe163a1cb38439a9f551c2505c.png" target="_blank">点击查看合同发起人展示的位置</a>
 
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+注： 支持填入集团子公司经办人 userId 代发合同。
+
      */
     public $Operator;
 
     /**
-     * @var string 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+     * @var string 自定义的合同流程的名称，长度不能超过200个字符，只能由中文汉字、中文标点、英文字母、阿拉伯数字、空格、小括号、中括号、中划线、下划线以及（,）、（;）、（.）、(&)、（+）组成。
 
-该名称还将用于合同签署完成后的下载文件名。
+该名称还将用于合同签署完成后文件下载的默认文件名称。
      */
     public $FlowName;
 
@@ -233,18 +259,25 @@ class CreateFlowByFilesRequest extends AbstractModel
     public $FlowType;
 
     /**
-     * @var array 模板或者合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
+     * @var array 发起的时候合成到PDF上的填写控件（需要提供填写控件的内容）
 <ul><li> 单行文本控件      </li>
 <li> 多行文本控件      </li>
 <li> 勾选框控件        </li>
 <li> 数字控件          </li>
 <li> 图片控件          </li>
-<li> 动态表格等填写控件</li></ul>
+<li> 水印控件等          </li>
+</ul>
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/e004195ee4cb98a7f9bc12eb4a0a0b77.png)
      */
     public $Components;
 
     /**
      * @var array 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
+
+<b>注</b>
+1. 抄送人名单中可以包括自然人以及本企业的员工。
+2. 请确保抄送人列表中的成员不与任何签署人重复。
 
      */
     public $CcInfos;
@@ -310,6 +343,8 @@ class CreateFlowByFilesRequest extends AbstractModel
      * @var integer 签署方签署控件（印章/签名等）的生成方式：
 <ul><li> **0**：在合同流程发起时，由发起人指定签署方的签署控件的位置和数量。</li>
 <li> **1**：签署方在签署时自行添加签署控件，可以拖动位置和控制数量。</li></ul>
+
+注：签署方在签署时自行添加签署控件仅支持电子签小程序或web控制台签署，不支持H5
      */
     public $SignBeanTag;
 
@@ -360,13 +395,25 @@ class CreateFlowByFilesRequest extends AbstractModel
     public $NeedSignReview;
 
     /**
-     * @param UserInfo $Operator 执行本接口操作的员工信息。使用此接口时，必须填写userId。
-支持填入集团子公司经办人 userId 代发合同。
+     * @var integer 在短信通知、填写、签署流程中，若标题、按钮、合同详情等地方存在“合同”字样时，可根据此配置指定文案，可选文案如下：  <ul><li> <b>0</b> :合同（默认值）</li> <li> <b>1</b> :文件</li> <li> <b>2</b> :协议</li><li> <b>3</b> :文书</li></ul>效果如下:![FlowDisplayType](https://qcloudimg.tencent-cloud.cn/raw/e4a2c4d638717cc901d3dbd5137c9bbc.png)
+     */
+    public $FlowDisplayType;
 
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
-     * @param string $FlowName 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+    /**
+     * @var boolean 是否开启动态签署合同：
+<ul><li> **true**：开启动态签署合同，可在签署过程中追加签署人（必须满足：1，发起方企业开启了模块化计费能力；2，发起方企业在企业应用管理中开启了动态签署人2.0能力）    。</li>
+<li> **false**：不开启动态签署合同。</li></ul>
+     */
+    public $OpenDynamicSignFlow;
 
-该名称还将用于合同签署完成后的下载文件名。
+    /**
+     * @param UserInfo $Operator 本合同的发起人  <a href="https://qcloudimg.tencent-cloud.cn/raw/f850cfbe163a1cb38439a9f551c2505c.png" target="_blank">点击查看合同发起人展示的位置</a>
+
+注： 支持填入集团子公司经办人 userId 代发合同。
+
+     * @param string $FlowName 自定义的合同流程的名称，长度不能超过200个字符，只能由中文汉字、中文标点、英文字母、阿拉伯数字、空格、小括号、中括号、中划线、下划线以及（,）、（;）、（.）、(&)、（+）组成。
+
+该名称还将用于合同签署完成后文件下载的默认文件名称。
      * @param array $Approvers 合同流程的参与方列表，最多可支持50个参与方，可在列表中指定企业B端签署方和个人C端签署方的联系和认证方式等信息，具体定义可以参考开发者中心的ApproverInfo结构体。
 
 如果合同流程是有序签署，Approvers列表中参与人的顺序就是默认的签署顺序，请确保列表中参与人的顺序符合实际签署顺序。
@@ -377,14 +424,21 @@ class CreateFlowByFilesRequest extends AbstractModel
      * @param string $FlowType 合同流程的类别分类（可自定义名称，如销售合同/入职合同等），最大长度为200个字符，仅限中文、字母、数字和下划线组成。
 如果用户已经在控制台创建了自定义合同类型，可以将这里的类型名称传入。 如果没有创建，我们会自动给发起方公司创建此自定义合同类型。
 ![image](https://qcloudimg.tencent-cloud.cn/raw/36582cea03ae6a2559894844942b5d5c.png)
-     * @param array $Components 模板或者合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
+     * @param array $Components 发起的时候合成到PDF上的填写控件（需要提供填写控件的内容）
 <ul><li> 单行文本控件      </li>
 <li> 多行文本控件      </li>
 <li> 勾选框控件        </li>
 <li> 数字控件          </li>
 <li> 图片控件          </li>
-<li> 动态表格等填写控件</li></ul>
+<li> 水印控件等          </li>
+</ul>
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/e004195ee4cb98a7f9bc12eb4a0a0b77.png)
      * @param array $CcInfos 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
+
+<b>注</b>
+1. 抄送人名单中可以包括自然人以及本企业的员工。
+2. 请确保抄送人列表中的成员不与任何签署人重复。
 
      * @param integer $CcNotifyType 可以设置以下时间节点来给抄送人发送短信通知来查看合同内容：
 <ul><li> **0**：合同发起时通知（默认值）</li>
@@ -414,6 +468,8 @@ class CreateFlowByFilesRequest extends AbstractModel
      * @param integer $SignBeanTag 签署方签署控件（印章/签名等）的生成方式：
 <ul><li> **0**：在合同流程发起时，由发起人指定签署方的签署控件的位置和数量。</li>
 <li> **1**：签署方在签署时自行添加签署控件，可以拖动位置和控制数量。</li></ul>
+
+注：签署方在签署时自行添加签署控件仅支持电子签小程序或web控制台签署，不支持H5
      * @param string $CustomShowMap 您可以自定义腾讯电子签小程序合同列表页展示的合同内容模板，模板中支持以下变量：
 <ul><li>{合同名称}   </li>
 <li>{发起方企业} </li>
@@ -444,6 +500,10 @@ class CreateFlowByFilesRequest extends AbstractModel
 <ul><li> 如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
 <li> 如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
 注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
+     * @param integer $FlowDisplayType 在短信通知、填写、签署流程中，若标题、按钮、合同详情等地方存在“合同”字样时，可根据此配置指定文案，可选文案如下：  <ul><li> <b>0</b> :合同（默认值）</li> <li> <b>1</b> :文件</li> <li> <b>2</b> :协议</li><li> <b>3</b> :文书</li></ul>效果如下:![FlowDisplayType](https://qcloudimg.tencent-cloud.cn/raw/e4a2c4d638717cc901d3dbd5137c9bbc.png)
+     * @param boolean $OpenDynamicSignFlow 是否开启动态签署合同：
+<ul><li> **true**：开启动态签署合同，可在签署过程中追加签署人（必须满足：1，发起方企业开启了模块化计费能力；2，发起方企业在企业应用管理中开启了动态签署人2.0能力）    。</li>
+<li> **false**：不开启动态签署合同。</li></ul>
      */
     function __construct()
     {
@@ -557,6 +617,14 @@ class CreateFlowByFilesRequest extends AbstractModel
 
         if (array_key_exists("NeedSignReview",$param) and $param["NeedSignReview"] !== null) {
             $this->NeedSignReview = $param["NeedSignReview"];
+        }
+
+        if (array_key_exists("FlowDisplayType",$param) and $param["FlowDisplayType"] !== null) {
+            $this->FlowDisplayType = $param["FlowDisplayType"];
+        }
+
+        if (array_key_exists("OpenDynamicSignFlow",$param) and $param["OpenDynamicSignFlow"] !== null) {
+            $this->OpenDynamicSignFlow = $param["OpenDynamicSignFlow"];
         }
     }
 }

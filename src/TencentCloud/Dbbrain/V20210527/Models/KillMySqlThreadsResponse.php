@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method array getThreads() 获取kill完成的sql会话ID列表。
  * @method void setThreads(array $Threads) 设置kill完成的sql会话ID列表。
  * @method string getSqlExecId() 获取执行ID， Prepare阶段的任务输出，用于Commit阶段中指定执行kill操作的会话ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSqlExecId(string $SqlExecId) 设置执行ID， Prepare阶段的任务输出，用于Commit阶段中指定执行kill操作的会话ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -38,7 +36,6 @@ class KillMySqlThreadsResponse extends AbstractModel
 
     /**
      * @var string 执行ID， Prepare阶段的任务输出，用于Commit阶段中指定执行kill操作的会话ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SqlExecId;
 
@@ -50,7 +47,6 @@ class KillMySqlThreadsResponse extends AbstractModel
     /**
      * @param array $Threads kill完成的sql会话ID列表。
      * @param string $SqlExecId 执行ID， Prepare阶段的任务输出，用于Commit阶段中指定执行kill操作的会话ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

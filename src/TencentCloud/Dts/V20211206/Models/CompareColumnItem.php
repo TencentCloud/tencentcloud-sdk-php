@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 列选项
  *
  * @method string getColumnName() 获取列名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setColumnName(string $ColumnName) 设置列名
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CompareColumnItem extends AbstractModel
 {
     /**
      * @var string 列名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ColumnName;
 
     /**
      * @param string $ColumnName 列名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

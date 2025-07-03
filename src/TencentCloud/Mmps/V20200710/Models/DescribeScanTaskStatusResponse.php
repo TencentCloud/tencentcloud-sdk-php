@@ -25,13 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getStatus() 获取0:默认值(待检测/待咨询), 1.检测中,  4:任务完成/咨询完成, 5:任务失败, 6:咨询中;
  * @method void setStatus(integer $Status) 设置0:默认值(待检测/待咨询), 1.检测中,  4:任务完成/咨询完成, 5:任务失败, 6:咨询中;
  * @method string getErrMsg() 获取诊断失败的错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrMsg(string $ErrMsg) 设置诊断失败的错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getFlowSteps() 获取任务流详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowSteps(array $FlowSteps) 设置任务流详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -49,13 +45,11 @@ class DescribeScanTaskStatusResponse extends AbstractModel
 
     /**
      * @var string 诊断失败的错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrMsg;
 
     /**
      * @var array 任务流详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowSteps;
 
@@ -68,9 +62,7 @@ class DescribeScanTaskStatusResponse extends AbstractModel
      * @param integer $Result 返回值, 0:成功, 其他值请查看“返回值”定义
      * @param integer $Status 0:默认值(待检测/待咨询), 1.检测中,  4:任务完成/咨询完成, 5:任务失败, 6:咨询中;
      * @param string $ErrMsg 诊断失败的错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FlowSteps 任务流详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 入侵防御规则白名单详情
  *
  * @method integer getId() 获取白名单唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(integer $Id) 设置白名单唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSrcIp() 获取源IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSrcIp(string $SrcIp) 设置源IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDstIp() 获取目的IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDstIp(string $DstIp) 设置目的IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWhiteRuleType() 获取规则类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWhiteRuleType(string $WhiteRuleType) 设置规则类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFwType() 获取白名单生效防火墙范围： 1 边界防火墙 2 nat防火墙 4 vpc防火墙 7 = 1+2+4 所有防火墙
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFwType(integer $FwType) 设置白名单生效防火墙范围： 1 边界防火墙 2 nat防火墙 4 vpc防火墙 7 = 1+2+4 所有防火墙
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRuleId() 获取入侵防御规则ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleId(string $RuleId) 设置入侵防御规则ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class IdsWhiteInfo extends AbstractModel
 {
     /**
      * @var integer 白名单唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var string 源IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SrcIp;
 
     /**
      * @var string 目的IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DstIp;
 
     /**
      * @var string 规则类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WhiteRuleType;
 
     /**
      * @var integer 白名单生效防火墙范围： 1 边界防火墙 2 nat防火墙 4 vpc防火墙 7 = 1+2+4 所有防火墙
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FwType;
 
     /**
      * @var string 入侵防御规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleId;
 
     /**
      * @param integer $Id 白名单唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SrcIp 源IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DstIp 目的IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WhiteRuleType 规则类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FwType 白名单生效防火墙范围： 1 边界防火墙 2 nat防火墙 4 vpc防火墙 7 = 1+2+4 所有防火墙
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RuleId 入侵防御规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

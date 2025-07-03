@@ -66,6 +66,7 @@ class CreatePrivateZoneRequest extends AbstractModel
 
     /**
      * @var array 创建私有域的同时，将其关联至VPC
+     * @deprecated
      */
     public $Vpcs;
 

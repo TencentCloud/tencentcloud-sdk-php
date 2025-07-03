@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTmpSecretKey(string $TmpSecretKey) 设置临时证书密钥Key
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAppId() 获取临时证书appid
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAppId(integer $AppId) 设置临时证书appid
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Credentials extends AbstractModel
 {
@@ -54,11 +58,19 @@ class Credentials extends AbstractModel
     public $TmpSecretKey;
 
     /**
+     * @var integer 临时证书appid
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AppId;
+
+    /**
      * @param string $Token token
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TmpSecretId 临时证书密钥ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TmpSecretKey 临时证书密钥Key
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AppId 临时证书appid
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -84,6 +96,10 @@ class Credentials extends AbstractModel
 
         if (array_key_exists("TmpSecretKey",$param) and $param["TmpSecretKey"] !== null) {
             $this->TmpSecretKey = $param["TmpSecretKey"];
+        }
+
+        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
+            $this->AppId = $param["AppId"];
         }
     }
 }

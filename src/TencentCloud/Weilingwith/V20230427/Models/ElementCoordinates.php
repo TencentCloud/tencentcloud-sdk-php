@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 构件地理坐标
  *
  * @method float getLongitude() 获取经度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLongitude(float $Longitude) 设置经度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getLatitude() 获取纬度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLatitude(float $Latitude) 设置纬度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getAltitude() 获取高程
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAltitude(float $Altitude) 设置高程
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ElementCoordinates extends AbstractModel
 {
     /**
      * @var float 经度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Longitude;
 
     /**
      * @var float 纬度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Latitude;
 
     /**
      * @var float 高程
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Altitude;
 
     /**
      * @param float $Longitude 经度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Latitude 纬度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Altitude 高程
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

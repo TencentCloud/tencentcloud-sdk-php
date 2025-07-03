@@ -40,9 +40,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersion(string $Version) 设置快照版本
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getCommonIndexArr() 获取普通索引信息列表
+ * @method array getCommonIndexArr() 获取普通[{"DataStreamName":"ilm-history-5","Is索引信息列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCommonIndexArr(array $CommonIndexArr) 设置普通索引信息列表
+ * @method void setCommonIndexArr(array $CommonIndexArr) 设置普通[{"DataStreamName":"ilm-history-5","Is索引信息列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDataStreamArr() 获取自治索引信息列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -82,7 +82,7 @@ class CosSnapShotInfo extends AbstractModel
     public $Version;
 
     /**
-     * @var array 普通索引信息列表
+     * @var array 普通[{"DataStreamName":"ilm-history-5","Is索引信息列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CommonIndexArr;
@@ -104,7 +104,7 @@ class CosSnapShotInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Version 快照版本
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $CommonIndexArr 普通索引信息列表
+     * @param array $CommonIndexArr 普通[{"DataStreamName":"ilm-history-5","Is索引信息列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DataStreamArr 自治索引信息列表
 注意：此字段可能返回 null，表示取不到有效值。

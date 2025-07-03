@@ -22,36 +22,28 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getScriptPath() 获取节点执行脚本获取地址。
 目前仅支持cos地址。地址最大长度：255。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScriptPath(string $ScriptPath) 设置节点执行脚本获取地址。
 目前仅支持cos地址。地址最大长度：255。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTimeout() 获取脚本执行超时时间（包含拉取脚本的时间）。单位秒，默认值：30。取值范围：10～1200。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeout(integer $Timeout) 设置脚本执行超时时间（包含拉取脚本的时间）。单位秒，默认值：30。取值范围：10～1200。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NodeScript extends AbstractModel
 {
     /**
      * @var string 节点执行脚本获取地址。
 目前仅支持cos地址。地址最大长度：255。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScriptPath;
 
     /**
      * @var integer 脚本执行超时时间（包含拉取脚本的时间）。单位秒，默认值：30。取值范围：10～1200。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Timeout;
 
     /**
      * @param string $ScriptPath 节点执行脚本获取地址。
 目前仅支持cos地址。地址最大长度：255。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Timeout 脚本执行超时时间（包含拉取脚本的时间）。单位秒，默认值：30。取值范围：10～1200。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

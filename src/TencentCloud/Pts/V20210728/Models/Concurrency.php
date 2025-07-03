@@ -25,21 +25,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStages(array $Stages) 设置多阶段配置数组
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIterationCount() 获取运行次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIterationCount(integer $IterationCount) 设置运行次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxRequestsPerSecond() 获取最大RPS
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxRequestsPerSecond(integer $MaxRequestsPerSecond) 设置最大RPS
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getGracefulStopSeconds() 获取优雅终止任务的等待时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGracefulStopSeconds(integer $GracefulStopSeconds) 设置优雅终止任务的等待时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getResources() 获取资源数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResources(integer $Resources) 设置资源数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Concurrency extends AbstractModel
 {
@@ -51,25 +43,21 @@ class Concurrency extends AbstractModel
 
     /**
      * @var integer 运行次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IterationCount;
 
     /**
      * @var integer 最大RPS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxRequestsPerSecond;
 
     /**
      * @var integer 优雅终止任务的等待时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GracefulStopSeconds;
 
     /**
      * @var integer 资源数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Resources;
 
@@ -77,13 +65,9 @@ class Concurrency extends AbstractModel
      * @param array $Stages 多阶段配置数组
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IterationCount 运行次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxRequestsPerSecond 最大RPS
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $GracefulStopSeconds 优雅终止任务的等待时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Resources 资源数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -20,81 +20,81 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 获取证书列表（DescribeCertificate）返回参数键为 DvAuthDetail 的内容。
  *
- * @method string getDvAuthKey() 获取DV 认证密钥。
+ * @method string getDvAuthKey() 获取证书域名验证记录Key
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDvAuthKey(string $DvAuthKey) 设置DV 认证密钥。
+ * @method void setDvAuthKey(string $DvAuthKey) 设置证书域名验证记录Key
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDvAuthValue() 获取DV 认证值。
+ * @method string getDvAuthValue() 获取证书域名验证记录值
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDvAuthValue(string $DvAuthValue) 设置DV 认证值。
+ * @method void setDvAuthValue(string $DvAuthValue) 设置证书域名验证记录值
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDvAuthDomain() 获取DV 认证值域名。
+ * @method string getDvAuthDomain() 获取证书域名验证域名值
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDvAuthDomain(string $DvAuthDomain) 设置DV 认证值域名。
+ * @method void setDvAuthDomain(string $DvAuthDomain) 设置证书域名验证域名值
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDvAuthPath() 获取DV 认证值路径。
+ * @method string getDvAuthPath() 获取证书域名验证文件路径， 仅FILE、FILE_PROXY使用
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDvAuthPath(string $DvAuthPath) 设置DV 认证值路径。
+ * @method void setDvAuthPath(string $DvAuthPath) 设置证书域名验证文件路径， 仅FILE、FILE_PROXY使用
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDvAuthKeySubDomain() 获取DV 认证子域名。
+ * @method string getDvAuthKeySubDomain() 获取证书域名验证子域名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDvAuthKeySubDomain(string $DvAuthKeySubDomain) 设置DV 认证子域名。
+ * @method void setDvAuthKeySubDomain(string $DvAuthKeySubDomain) 设置证书域名验证子域名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getDvAuths() 获取DV 认证信息。
+ * @method array getDvAuths() 获取证书域名验证信息， 存在多个域名验证使用本字段
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDvAuths(array $DvAuths) 设置DV 认证信息。
+ * @method void setDvAuths(array $DvAuths) 设置证书域名验证信息， 存在多个域名验证使用本字段
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DvAuthDetail extends AbstractModel
 {
     /**
-     * @var string DV 认证密钥。
+     * @var string 证书域名验证记录Key
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DvAuthKey;
 
     /**
-     * @var string DV 认证值。
+     * @var string 证书域名验证记录值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DvAuthValue;
 
     /**
-     * @var string DV 认证值域名。
+     * @var string 证书域名验证域名值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DvAuthDomain;
 
     /**
-     * @var string DV 认证值路径。
+     * @var string 证书域名验证文件路径， 仅FILE、FILE_PROXY使用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DvAuthPath;
 
     /**
-     * @var string DV 认证子域名。
+     * @var string 证书域名验证子域名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DvAuthKeySubDomain;
 
     /**
-     * @var array DV 认证信息。
+     * @var array 证书域名验证信息， 存在多个域名验证使用本字段
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DvAuths;
 
     /**
-     * @param string $DvAuthKey DV 认证密钥。
+     * @param string $DvAuthKey 证书域名验证记录Key
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DvAuthValue DV 认证值。
+     * @param string $DvAuthValue 证书域名验证记录值
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DvAuthDomain DV 认证值域名。
+     * @param string $DvAuthDomain 证书域名验证域名值
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DvAuthPath DV 认证值路径。
+     * @param string $DvAuthPath 证书域名验证文件路径， 仅FILE、FILE_PROXY使用
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DvAuthKeySubDomain DV 认证子域名。
+     * @param string $DvAuthKeySubDomain 证书域名验证子域名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $DvAuths DV 认证信息。
+     * @param array $DvAuths 证书域名验证信息， 存在多个域名验证使用本字段
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

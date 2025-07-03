@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 告警级别枚举获取
  *
  * @method array getAlarmLevelSet() 获取告警级别枚举获取数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlarmLevelSet(array $AlarmLevelSet) 设置告警级别枚举获取数组
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeAlarmLevelListRes extends AbstractModel
 {
     /**
      * @var array 告警级别枚举获取数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlarmLevelSet;
 
     /**
      * @param array $AlarmLevelSet 告警级别枚举获取数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

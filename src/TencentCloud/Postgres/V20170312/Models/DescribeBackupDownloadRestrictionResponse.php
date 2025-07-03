@@ -23,21 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRestrictionType() 获取备份文件下载限制类型，NONE 无限制，内外网都可以下载；INTRANET 只允许内网下载；CUSTOMIZE 自定义限制下载的vpc或ip。
  * @method void setRestrictionType(string $RestrictionType) 设置备份文件下载限制类型，NONE 无限制，内外网都可以下载；INTRANET 只允许内网下载；CUSTOMIZE 自定义限制下载的vpc或ip。
  * @method string getVpcRestrictionEffect() 获取vpc限制效力，ALLOW 允许；DENY 拒绝。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcRestrictionEffect(string $VpcRestrictionEffect) 设置vpc限制效力，ALLOW 允许；DENY 拒绝。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getVpcIdSet() 获取允许或拒绝下载备份文件的vpcId列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcIdSet(array $VpcIdSet) 设置允许或拒绝下载备份文件的vpcId列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIpRestrictionEffect() 获取ip限制效力，ALLOW 允许；DENY 拒绝。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpRestrictionEffect(string $IpRestrictionEffect) 设置ip限制效力，ALLOW 允许；DENY 拒绝。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getIpSet() 获取允许或拒绝下载备份文件的ip列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpSet(array $IpSet) 设置允许或拒绝下载备份文件的ip列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -50,25 +42,21 @@ class DescribeBackupDownloadRestrictionResponse extends AbstractModel
 
     /**
      * @var string vpc限制效力，ALLOW 允许；DENY 拒绝。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcRestrictionEffect;
 
     /**
      * @var array 允许或拒绝下载备份文件的vpcId列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcIdSet;
 
     /**
      * @var string ip限制效力，ALLOW 允许；DENY 拒绝。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IpRestrictionEffect;
 
     /**
      * @var array 允许或拒绝下载备份文件的ip列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IpSet;
 
@@ -80,13 +68,9 @@ class DescribeBackupDownloadRestrictionResponse extends AbstractModel
     /**
      * @param string $RestrictionType 备份文件下载限制类型，NONE 无限制，内外网都可以下载；INTRANET 只允许内网下载；CUSTOMIZE 自定义限制下载的vpc或ip。
      * @param string $VpcRestrictionEffect vpc限制效力，ALLOW 允许；DENY 拒绝。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $VpcIdSet 允许或拒绝下载备份文件的vpcId列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IpRestrictionEffect ip限制效力，ALLOW 允许；DENY 拒绝。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $IpSet 允许或拒绝下载备份文件的ip列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

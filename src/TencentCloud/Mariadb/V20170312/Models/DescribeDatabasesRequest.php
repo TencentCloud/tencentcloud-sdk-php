@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDatabases请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID，形如：dcdbt-ow7t8lmc。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID，形如：dcdbt-ow7t8lmc。
+ * @method string getInstanceId() 获取实例 ID，形如：tdsql-e9tklsgz。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID，形如：tdsql-e9tklsgz。
  */
 class DescribeDatabasesRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID，形如：dcdbt-ow7t8lmc。
+     * @var string 实例 ID，形如：tdsql-e9tklsgz。
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId 实例 ID，形如：dcdbt-ow7t8lmc。
+     * @param string $InstanceId 实例 ID，形如：tdsql-e9tklsgz。
      */
     function __construct()
     {

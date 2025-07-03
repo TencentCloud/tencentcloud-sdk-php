@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 短信免费量
  *
  * @method integer getFreeQuota() 获取免费量总条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFreeQuota(integer $FreeQuota) 设置免费量总条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalUsedQuota() 获取共计已使用总条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalUsedQuota(integer $TotalUsedQuota) 设置共计已使用总条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCycleStart() 获取免费周期起点，0000-00-00 00:00:00 形式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCycleStart(string $CycleStart) 设置免费周期起点，0000-00-00 00:00:00 形式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCycleEnd() 获取免费周期终点，0000-00-00 00:00:00 形式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCycleEnd(string $CycleEnd) 设置免费周期终点，0000-00-00 00:00:00 形式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTodayUsedQuota() 获取今天已使用总条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTodayUsedQuota(integer $TodayUsedQuota) 设置今天已使用总条数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SmsFreeQuota extends AbstractModel
 {
     /**
      * @var integer 免费量总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FreeQuota;
 
     /**
      * @var integer 共计已使用总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalUsedQuota;
 
     /**
      * @var string 免费周期起点，0000-00-00 00:00:00 形式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CycleStart;
 
     /**
      * @var string 免费周期终点，0000-00-00 00:00:00 形式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CycleEnd;
 
     /**
      * @var integer 今天已使用总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TodayUsedQuota;
 
     /**
      * @param integer $FreeQuota 免费量总条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalUsedQuota 共计已使用总条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CycleStart 免费周期起点，0000-00-00 00:00:00 形式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CycleEnd 免费周期终点，0000-00-00 00:00:00 形式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TodayUsedQuota 今天已使用总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

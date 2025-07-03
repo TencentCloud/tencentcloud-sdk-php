@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getMessage() 获取报错信息
  * @method void setMessage(string $Message) 设置报错信息
+ * @method string getReason() 获取报错原因
+ * @method void setReason(string $Reason) 设置报错原因
+ * @method string getSolution() 获取建议的修复方案
+ * @method void setSolution(string $Solution) 设置建议的修复方案
  */
 class SubsErr extends AbstractModel
 {
@@ -31,7 +35,19 @@ class SubsErr extends AbstractModel
     public $Message;
 
     /**
+     * @var string 报错原因
+     */
+    public $Reason;
+
+    /**
+     * @var string 建议的修复方案
+     */
+    public $Solution;
+
+    /**
      * @param string $Message 报错信息
+     * @param string $Reason 报错原因
+     * @param string $Solution 建议的修复方案
      */
     function __construct()
     {
@@ -48,6 +64,14 @@ class SubsErr extends AbstractModel
         }
         if (array_key_exists("Message",$param) and $param["Message"] !== null) {
             $this->Message = $param["Message"];
+        }
+
+        if (array_key_exists("Reason",$param) and $param["Reason"] !== null) {
+            $this->Reason = $param["Reason"];
+        }
+
+        if (array_key_exists("Solution",$param) and $param["Solution"] !== null) {
+            $this->Solution = $param["Solution"];
         }
     }
 }

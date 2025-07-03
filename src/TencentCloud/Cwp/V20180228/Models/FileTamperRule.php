@@ -30,12 +30,12 @@ use TencentCloud\Common\AbstractModel;
 <li>read 读取文件</li>
 <li>write 修改文件</li>
 <li>read-write 读取修改文件</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileAction(string $FileAction) 设置监控行为
 <li>read 读取文件</li>
 <li>write 修改文件</li>
 <li>read-write 读取修改文件</li>
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getArgs() 获取命令行参数 没有填*
+ * @method void setArgs(string $Args) 设置命令行参数 没有填*
  */
 class FileTamperRule extends AbstractModel
 {
@@ -59,9 +59,13 @@ class FileTamperRule extends AbstractModel
 <li>read 读取文件</li>
 <li>write 修改文件</li>
 <li>read-write 读取修改文件</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileAction;
+
+    /**
+     * @var string 命令行参数 没有填*
+     */
+    public $Args;
 
     /**
      * @param string $ProcessPath 进程路径
@@ -71,7 +75,7 @@ class FileTamperRule extends AbstractModel
 <li>read 读取文件</li>
 <li>write 修改文件</li>
 <li>read-write 读取修改文件</li>
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Args 命令行参数 没有填*
      */
     function __construct()
     {
@@ -100,6 +104,10 @@ class FileTamperRule extends AbstractModel
 
         if (array_key_exists("FileAction",$param) and $param["FileAction"] !== null) {
             $this->FileAction = $param["FileAction"];
+        }
+
+        if (array_key_exists("Args",$param) and $param["Args"] !== null) {
+            $this->Args = $param["Args"];
         }
     }
 }

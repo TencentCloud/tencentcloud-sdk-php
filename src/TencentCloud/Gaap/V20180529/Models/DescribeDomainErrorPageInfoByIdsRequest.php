@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDomainErrorPageInfoByIds请求参数结构体
  *
- * @method array getErrorPageIds() 获取定制错误ID列表,最多支持10个
- * @method void setErrorPageIds(array $ErrorPageIds) 设置定制错误ID列表,最多支持10个
+ * @method array getErrorPageIds() 获取定制错误ID列表，最多支持10个
+ * @method void setErrorPageIds(array $ErrorPageIds) 设置定制错误ID列表，最多支持10个
  */
 class DescribeDomainErrorPageInfoByIdsRequest extends AbstractModel
 {
     /**
-     * @var array 定制错误ID列表,最多支持10个
+     * @var array 定制错误ID列表，最多支持10个
      */
     public $ErrorPageIds;
 
     /**
-     * @param array $ErrorPageIds 定制错误ID列表,最多支持10个
+     * @param array $ErrorPageIds 定制错误ID列表，最多支持10个
      */
     function __construct()
     {

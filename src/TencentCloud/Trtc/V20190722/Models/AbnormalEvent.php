@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getAbnormalEventId() 获取异常事件ID，具体值查看附录：异常体验ID映射表：https://cloud.tencent.com/document/product/647/44916
  * @method void setAbnormalEventId(integer $AbnormalEventId) 设置异常事件ID，具体值查看附录：异常体验ID映射表：https://cloud.tencent.com/document/product/647/44916
  * @method string getPeerId() 获取远端用户ID,""：表示异常事件不是由远端用户产生
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPeerId(string $PeerId) 设置远端用户ID,""：表示异常事件不是由远端用户产生
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AbnormalEvent extends AbstractModel
 {
@@ -36,14 +34,12 @@ class AbnormalEvent extends AbstractModel
 
     /**
      * @var string 远端用户ID,""：表示异常事件不是由远端用户产生
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PeerId;
 
     /**
      * @param integer $AbnormalEventId 异常事件ID，具体值查看附录：异常体验ID映射表：https://cloud.tencent.com/document/product/647/44916
      * @param string $PeerId 远端用户ID,""：表示异常事件不是由远端用户产生
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

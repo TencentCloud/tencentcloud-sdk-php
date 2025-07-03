@@ -23,19 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getLocationId() 获取转发规则的 ID
  * @method void setLocationId(string $LocationId) 设置转发规则的 ID
  * @method string getDomain() 获取转发规则的域名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomain(string $Domain) 设置转发规则的域名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUrl() 获取转发规则的路径。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUrl(string $Url) 设置转发规则的路径。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSessionExpireTime() 获取会话保持时间
  * @method void setSessionExpireTime(integer $SessionExpireTime) 设置会话保持时间
  * @method HealthCheck getHealthCheck() 获取健康检查信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHealthCheck(HealthCheck $HealthCheck) 设置健康检查信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method CertificateOutput getCertificate() 获取证书信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertificate(CertificateOutput $Certificate) 设置证书信息
@@ -47,9 +41,7 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
  * @method string getListenerId() 获取转发规则所属的监听器 ID
  * @method void setListenerId(string $ListenerId) 设置转发规则所属的监听器 ID
  * @method RewriteTarget getRewriteTarget() 获取转发规则的重定向目标信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRewriteTarget(RewriteTarget $RewriteTarget) 设置转发规则的重定向目标信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getHttpGzip() 获取是否开启gzip
  * @method void setHttpGzip(boolean $HttpGzip) 设置是否开启gzip
  * @method boolean getBeAutoCreated() 获取转发规则是否为自动创建
@@ -69,29 +61,21 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
  * @method void setTargetGroup(BasicTargetGroupInfo $TargetGroup) 设置绑定的目标组基本信息；当规则绑定目标组时，会返回该字段
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWafDomainId() 获取WAF实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWafDomainId(string $WafDomainId) 设置WAF实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTrpcCallee() 获取TRPC被调服务器路由，ForwardType为TRPC时有效。目前暂未对外开放。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrpcCallee(string $TrpcCallee) 设置TRPC被调服务器路由，ForwardType为TRPC时有效。目前暂未对外开放。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTrpcFunc() 获取TRPC调用服务接口，ForwardType为TRPC时有效。目前暂未对外开放。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrpcFunc(string $TrpcFunc) 设置TRPC调用服务接口，ForwardType为TRPC时有效。目前暂未对外开放。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getQuicStatus() 获取QUIC状态。QUIC_ACTIVE表示开启，QUIC_INACTIVE表示未开启。注意，只有HTTPS域名才能开启QUIC。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQuicStatus(string $QuicStatus) 设置QUIC状态。QUIC_ACTIVE表示开启，QUIC_INACTIVE表示未开启。注意，只有HTTPS域名才能开启QUIC。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDomains() 获取转发规则的域名列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomains(array $Domains) 设置转发规则的域名列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTargetGroupList() 获取绑定的目标组列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargetGroupList(array $TargetGroupList) 设置绑定的目标组列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method OAuth getOAuth() 获取OAuth配置状态信息。
+ * @method void setOAuth(OAuth $OAuth) 设置OAuth配置状态信息。
  */
 class RuleOutput extends AbstractModel
 {
@@ -102,13 +86,11 @@ class RuleOutput extends AbstractModel
 
     /**
      * @var string 转发规则的域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Domain;
 
     /**
      * @var string 转发规则的路径。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Url;
 
@@ -119,7 +101,6 @@ class RuleOutput extends AbstractModel
 
     /**
      * @var HealthCheck 健康检查信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HealthCheck;
 
@@ -142,7 +123,6 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
 
     /**
      * @var RewriteTarget 转发规则的重定向目标信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RewriteTarget;
 
@@ -189,31 +169,26 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
 
     /**
      * @var string WAF实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WafDomainId;
 
     /**
      * @var string TRPC被调服务器路由，ForwardType为TRPC时有效。目前暂未对外开放。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TrpcCallee;
 
     /**
      * @var string TRPC调用服务接口，ForwardType为TRPC时有效。目前暂未对外开放。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TrpcFunc;
 
     /**
      * @var string QUIC状态。QUIC_ACTIVE表示开启，QUIC_INACTIVE表示未开启。注意，只有HTTPS域名才能开启QUIC。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QuicStatus;
 
     /**
      * @var array 转发规则的域名列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Domains;
 
@@ -224,21 +199,22 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
     public $TargetGroupList;
 
     /**
+     * @var OAuth OAuth配置状态信息。
+     */
+    public $OAuth;
+
+    /**
      * @param string $LocationId 转发规则的 ID
      * @param string $Domain 转发规则的域名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Url 转发规则的路径。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SessionExpireTime 会话保持时间
      * @param HealthCheck $HealthCheck 健康检查信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CertificateOutput $Certificate 证书信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Scheduler 规则的请求转发方式。
 WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Hash。
      * @param string $ListenerId 转发规则所属的监听器 ID
      * @param RewriteTarget $RewriteTarget 转发规则的重定向目标信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $HttpGzip 是否开启gzip
      * @param boolean $BeAutoCreated 转发规则是否为自动创建
      * @param boolean $DefaultServer 是否作为默认域名
@@ -249,17 +225,13 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
      * @param BasicTargetGroupInfo $TargetGroup 绑定的目标组基本信息；当规则绑定目标组时，会返回该字段
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WafDomainId WAF实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TrpcCallee TRPC被调服务器路由，ForwardType为TRPC时有效。目前暂未对外开放。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TrpcFunc TRPC调用服务接口，ForwardType为TRPC时有效。目前暂未对外开放。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $QuicStatus QUIC状态。QUIC_ACTIVE表示开启，QUIC_INACTIVE表示未开启。注意，只有HTTPS域名才能开启QUIC。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Domains 转发规则的域名列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TargetGroupList 绑定的目标组列表
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param OAuth $OAuth OAuth配置状态信息。
      */
     function __construct()
     {
@@ -373,6 +345,11 @@ WRR、LEAST_CONN、IP_HASH分别表示按权重轮询、最小连接数、IP Has
                 $obj->deserialize($value);
                 array_push($this->TargetGroupList, $obj);
             }
+        }
+
+        if (array_key_exists("OAuth",$param) and $param["OAuth"] !== null) {
+            $this->OAuth = new OAuth();
+            $this->OAuth->deserialize($param["OAuth"]);
         }
     }
 }

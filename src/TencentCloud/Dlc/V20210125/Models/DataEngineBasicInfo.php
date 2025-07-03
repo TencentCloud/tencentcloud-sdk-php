@@ -29,23 +29,15 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getUpdateTime() 获取更新时间
  * @method void setUpdateTime(integer $UpdateTime) 设置更新时间
  * @method string getMessage() 获取返回信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置返回信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDataEngineId() 获取引擎id
  * @method void setDataEngineId(string $DataEngineId) 设置引擎id
  * @method string getDataEngineType() 获取引擎类型，有效值：PrestoSQL/SparkSQL/SparkBatch
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataEngineType(string $DataEngineType) 设置引擎类型，有效值：PrestoSQL/SparkSQL/SparkBatch
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAppId() 获取用户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppId(integer $AppId) 设置用户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserUin() 获取账号ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserUin(string $UserUin) 设置账号ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataEngineBasicInfo extends AbstractModel
 {
@@ -71,7 +63,6 @@ class DataEngineBasicInfo extends AbstractModel
 
     /**
      * @var string 返回信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
@@ -82,19 +73,16 @@ class DataEngineBasicInfo extends AbstractModel
 
     /**
      * @var string 引擎类型，有效值：PrestoSQL/SparkSQL/SparkBatch
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataEngineType;
 
     /**
      * @var integer 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppId;
 
     /**
      * @var string 账号ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserUin;
 
@@ -104,14 +92,10 @@ class DataEngineBasicInfo extends AbstractModel
      * @param integer $CreateTime 创建时间
      * @param integer $UpdateTime 更新时间
      * @param string $Message 返回信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataEngineId 引擎id
      * @param string $DataEngineType 引擎类型，有效值：PrestoSQL/SparkSQL/SparkBatch
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AppId 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserUin 账号ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

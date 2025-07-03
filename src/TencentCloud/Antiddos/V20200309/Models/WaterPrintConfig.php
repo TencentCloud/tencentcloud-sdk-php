@@ -43,9 +43,7 @@ checkall（普通模式）
 shortfpcheckall（精简模式）
 ]
  * @method integer getCloudSdkProxy() 获取是否开启代理，1开启则忽略IP+端口校验；0关闭则需要IP+端口校验
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCloudSdkProxy(integer $CloudSdkProxy) 设置是否开启代理，1开启则忽略IP+端口校验；0关闭则需要IP+端口校验
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class WaterPrintConfig extends AbstractModel
 {
@@ -82,7 +80,6 @@ shortfpcheckall（精简模式）
 
     /**
      * @var integer 是否开启代理，1开启则忽略IP+端口校验；0关闭则需要IP+端口校验
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CloudSdkProxy;
 
@@ -99,7 +96,6 @@ checkall（普通模式）
 shortfpcheckall（精简模式）
 ]
      * @param integer $CloudSdkProxy 是否开启代理，1开启则忽略IP+端口校验；0关闭则需要IP+端口校验
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceId(string $ServiceId) 设置服务 ID
  * @method integer getPriority() 获取优先级
  * @method void setPriority(integer $Priority) 设置优先级
+ * @method array getPriorityList() 获取优先级列表，如果配置了此参数，将以此参数为准，忽略Priority参数
+ * @method void setPriorityList(array $PriorityList) 设置优先级列表，如果配置了此参数，将以此参数为准，忽略Priority参数
  */
 class DeleteCloudNativeAPIGatewayCanaryRuleRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DeleteCloudNativeAPIGatewayCanaryRuleRequest extends AbstractModel
     public $Priority;
 
     /**
+     * @var array 优先级列表，如果配置了此参数，将以此参数为准，忽略Priority参数
+     */
+    public $PriorityList;
+
+    /**
      * @param string $GatewayId 网关 ID
      * @param string $ServiceId 服务 ID
      * @param integer $Priority 优先级
+     * @param array $PriorityList 优先级列表，如果配置了此参数，将以此参数为准，忽略Priority参数
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DeleteCloudNativeAPIGatewayCanaryRuleRequest extends AbstractModel
 
         if (array_key_exists("Priority",$param) and $param["Priority"] !== null) {
             $this->Priority = $param["Priority"];
+        }
+
+        if (array_key_exists("PriorityList",$param) and $param["PriorityList"] !== null) {
+            $this->PriorityList = $param["PriorityList"];
         }
     }
 }

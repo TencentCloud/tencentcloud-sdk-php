@@ -34,10 +34,8 @@ use TencentCloud\Common\AbstractModel;
 
  * @method string getCustomParam() 获取自定义参数
  * @method void setCustomParam(string $CustomParam) 设置自定义参数
- * @method integer getSource() 获取来源
-
- * @method void setSource(integer $Source) 设置来源
-
+ * @method integer getSource() 获取来源 1-文档生成问答对  2-批量导入问答对  3-单条手动录入问答对
+ * @method void setSource(integer $Source) 设置来源 1-文档生成问答对  2-批量导入问答对  3-单条手动录入问答对
  * @method string getSourceDesc() 获取来源描述
 
  * @method void setSourceDesc(string $SourceDesc) 设置来源描述
@@ -46,10 +44,8 @@ use TencentCloud\Common\AbstractModel;
 
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
 
- * @method integer getStatus() 获取状态
-
- * @method void setStatus(integer $Status) 设置状态
-
+ * @method integer getStatus() 获取状态 <br>1-未校验  2-未发布 3-发布中 4-已发布  5-发布失败 6-不采纳 7-审核中  8-审核失败  9-审核失败申诉后人工审核中  11-审核失败申诉后人工审核不通过  12-已过期  13-超量失效  14-超量失效恢复 19-学习中  20-学习失败
+ * @method void setStatus(integer $Status) 设置状态 <br>1-未校验  2-未发布 3-发布中 4-已发布  5-发布失败 6-不采纳 7-审核中  8-审核失败  9-审核失败申诉后人工审核中  11-审核失败申诉后人工审核不通过  12-已过期  13-超量失效  14-超量失效恢复 19-学习中  20-学习失败
  * @method string getStatusDesc() 获取状态描述
 
  * @method void setStatusDesc(string $StatusDesc) 设置状态描述
@@ -94,16 +90,26 @@ use TencentCloud\Common\AbstractModel;
 
  * @method void setOrgData(string $OrgData) 设置分片内容
 
- * @method integer getAttrRange() 获取属性标签适用范围
-
- * @method void setAttrRange(integer $AttrRange) 设置属性标签适用范围
-
- * @method array getAttrLabels() 获取属性标签
- * @method void setAttrLabels(array $AttrLabels) 设置属性标签
+ * @method integer getAttrRange() 获取标签适用范围
+ * @method void setAttrRange(integer $AttrRange) 设置标签适用范围
+ * @method array getAttrLabels() 获取标签
+ * @method void setAttrLabels(array $AttrLabels) 设置标签
  * @method string getExpireStart() 获取有效开始时间，unix时间戳
  * @method void setExpireStart(string $ExpireStart) 设置有效开始时间，unix时间戳
  * @method string getExpireEnd() 获取有效结束时间，unix时间戳，0代表永久有效
  * @method void setExpireEnd(string $ExpireEnd) 设置有效结束时间，unix时间戳，0代表永久有效
+ * @method array getSimilarQuestions() 获取相似问列表信息
+ * @method void setSimilarQuestions(array $SimilarQuestions) 设置相似问列表信息
+ * @method integer getQaAuditStatus() 获取问题和答案文本审核状态 1审核失败
+ * @method void setQaAuditStatus(integer $QaAuditStatus) 设置问题和答案文本审核状态 1审核失败
+ * @method integer getPicAuditStatus() 获取答案中的图片审核状态 1审核失败
+ * @method void setPicAuditStatus(integer $PicAuditStatus) 设置答案中的图片审核状态 1审核失败
+ * @method integer getVideoAuditStatus() 获取答案中的视频审核状态 1审核失败
+ * @method void setVideoAuditStatus(integer $VideoAuditStatus) 设置答案中的视频审核状态 1审核失败
+ * @method string getQuestionDesc() 获取问题描述
+ * @method void setQuestionDesc(string $QuestionDesc) 设置问题描述
+ * @method boolean getIsDisabled() 获取问答是否停用，false:未停用，true已停用
+ * @method void setIsDisabled(boolean $IsDisabled) 设置问答是否停用，false:未停用，true已停用
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -133,8 +139,7 @@ class DescribeQAResponse extends AbstractModel
     public $CustomParam;
 
     /**
-     * @var integer 来源
-
+     * @var integer 来源 1-文档生成问答对  2-批量导入问答对  3-单条手动录入问答对
      */
     public $Source;
 
@@ -151,8 +156,7 @@ class DescribeQAResponse extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @var integer 状态
-
+     * @var integer 状态 <br>1-未校验  2-未发布 3-发布中 4-已发布  5-发布失败 6-不采纳 7-审核中  8-审核失败  9-审核失败申诉后人工审核中  11-审核失败申诉后人工审核不通过  12-已过期  13-超量失效  14-超量失效恢复 19-学习中  20-学习失败
      */
     public $Status;
 
@@ -227,13 +231,12 @@ class DescribeQAResponse extends AbstractModel
     public $OrgData;
 
     /**
-     * @var integer 属性标签适用范围
-
+     * @var integer 标签适用范围
      */
     public $AttrRange;
 
     /**
-     * @var array 属性标签
+     * @var array 标签
      */
     public $AttrLabels;
 
@@ -248,6 +251,36 @@ class DescribeQAResponse extends AbstractModel
     public $ExpireEnd;
 
     /**
+     * @var array 相似问列表信息
+     */
+    public $SimilarQuestions;
+
+    /**
+     * @var integer 问题和答案文本审核状态 1审核失败
+     */
+    public $QaAuditStatus;
+
+    /**
+     * @var integer 答案中的图片审核状态 1审核失败
+     */
+    public $PicAuditStatus;
+
+    /**
+     * @var integer 答案中的视频审核状态 1审核失败
+     */
+    public $VideoAuditStatus;
+
+    /**
+     * @var string 问题描述
+     */
+    public $QuestionDesc;
+
+    /**
+     * @var boolean 问答是否停用，false:未停用，true已停用
+     */
+    public $IsDisabled;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -260,14 +293,12 @@ class DescribeQAResponse extends AbstractModel
      * @param string $Answer 答案
 
      * @param string $CustomParam 自定义参数
-     * @param integer $Source 来源
-
+     * @param integer $Source 来源 1-文档生成问答对  2-批量导入问答对  3-单条手动录入问答对
      * @param string $SourceDesc 来源描述
 
      * @param string $UpdateTime 更新时间
 
-     * @param integer $Status 状态
-
+     * @param integer $Status 状态 <br>1-未校验  2-未发布 3-发布中 4-已发布  5-发布失败 6-不采纳 7-审核中  8-审核失败  9-审核失败申诉后人工审核中  11-审核失败申诉后人工审核不通过  12-已过期  13-超量失效  14-超量失效恢复 19-学习中  20-学习失败
      * @param string $StatusDesc 状态描述
 
      * @param string $CateBizId 分类ID
@@ -290,11 +321,16 @@ class DescribeQAResponse extends AbstractModel
      * @param array $Highlights 分片高亮内容
      * @param string $OrgData 分片内容
 
-     * @param integer $AttrRange 属性标签适用范围
-
-     * @param array $AttrLabels 属性标签
+     * @param integer $AttrRange 标签适用范围
+     * @param array $AttrLabels 标签
      * @param string $ExpireStart 有效开始时间，unix时间戳
      * @param string $ExpireEnd 有效结束时间，unix时间戳，0代表永久有效
+     * @param array $SimilarQuestions 相似问列表信息
+     * @param integer $QaAuditStatus 问题和答案文本审核状态 1审核失败
+     * @param integer $PicAuditStatus 答案中的图片审核状态 1审核失败
+     * @param integer $VideoAuditStatus 答案中的视频审核状态 1审核失败
+     * @param string $QuestionDesc 问题描述
+     * @param boolean $IsDisabled 问答是否停用，false:未停用，true已停用
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -414,6 +450,35 @@ class DescribeQAResponse extends AbstractModel
 
         if (array_key_exists("ExpireEnd",$param) and $param["ExpireEnd"] !== null) {
             $this->ExpireEnd = $param["ExpireEnd"];
+        }
+
+        if (array_key_exists("SimilarQuestions",$param) and $param["SimilarQuestions"] !== null) {
+            $this->SimilarQuestions = [];
+            foreach ($param["SimilarQuestions"] as $key => $value){
+                $obj = new SimilarQuestion();
+                $obj->deserialize($value);
+                array_push($this->SimilarQuestions, $obj);
+            }
+        }
+
+        if (array_key_exists("QaAuditStatus",$param) and $param["QaAuditStatus"] !== null) {
+            $this->QaAuditStatus = $param["QaAuditStatus"];
+        }
+
+        if (array_key_exists("PicAuditStatus",$param) and $param["PicAuditStatus"] !== null) {
+            $this->PicAuditStatus = $param["PicAuditStatus"];
+        }
+
+        if (array_key_exists("VideoAuditStatus",$param) and $param["VideoAuditStatus"] !== null) {
+            $this->VideoAuditStatus = $param["VideoAuditStatus"];
+        }
+
+        if (array_key_exists("QuestionDesc",$param) and $param["QuestionDesc"] !== null) {
+            $this->QuestionDesc = $param["QuestionDesc"];
+        }
+
+        if (array_key_exists("IsDisabled",$param) and $param["IsDisabled"] !== null) {
+            $this->IsDisabled = $param["IsDisabled"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

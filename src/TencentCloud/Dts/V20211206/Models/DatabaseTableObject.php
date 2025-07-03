@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * 迁移对象选项，需要告知迁移服务迁移哪些库表对象
  *
  * @method string getObjectMode() 获取迁移对象类型 all(全实例)，partial(部分对象)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setObjectMode(string $ObjectMode) 设置迁移对象类型 all(全实例)，partial(部分对象)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDatabases() 获取迁移对象，当 ObjectMode 为 partial 时，不为空
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatabases(array $Databases) 设置迁移对象，当 ObjectMode 为 partial 时，不为空
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAdvancedObjects() 获取高级对象类型，如trigger、function、procedure、event。注意：如果要迁移同步高级对象，此配置中应该包含对应的高级对象类型
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdvancedObjects(array $AdvancedObjects) 设置高级对象类型，如trigger、function、procedure、event。注意：如果要迁移同步高级对象，此配置中应该包含对应的高级对象类型
@@ -37,13 +33,11 @@ class DatabaseTableObject extends AbstractModel
 {
     /**
      * @var string 迁移对象类型 all(全实例)，partial(部分对象)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ObjectMode;
 
     /**
      * @var array 迁移对象，当 ObjectMode 为 partial 时，不为空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Databases;
 
@@ -55,9 +49,7 @@ class DatabaseTableObject extends AbstractModel
 
     /**
      * @param string $ObjectMode 迁移对象类型 all(全实例)，partial(部分对象)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Databases 迁移对象，当 ObjectMode 为 partial 时，不为空
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AdvancedObjects 高级对象类型，如trigger、function、procedure、event。注意：如果要迁移同步高级对象，此配置中应该包含对应的高级对象类型
 注意：此字段可能返回 null，表示取不到有效值。
      */

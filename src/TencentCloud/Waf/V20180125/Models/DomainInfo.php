@@ -205,67 +205,47 @@ cdc-clb-waf：CDC环境下负载均衡型WAF实例
 0：关闭 
 1：开启
  * @method string getCdcClusters() 获取cdc实例域名接入的集群信息,非cdc实例忽略。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCdcClusters(string $CdcClusters) 设置cdc实例域名接入的集群信息,非cdc实例忽略。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getApiStatus() 获取api安全开关状态。
 0：关闭 
 1：开启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApiStatus(integer $ApiStatus) 设置api安全开关状态。
 0：关闭 
 1：开启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAlbType() 获取应用型负载均衡类型，默认clb。
 clb：七层负载均衡器类型
 apisix：apisix网关型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlbType(string $AlbType) 设置应用型负载均衡类型，默认clb。
 clb：七层负载均衡器类型
 apisix：apisix网关型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSgState() 获取安全组状态。
 0：不展示
 1：非腾讯云源站
 2：安全组绑定失败
 3：安全组发生变更
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSgState(integer $SgState) 设置安全组状态。
 0：不展示
 1：非腾讯云源站
 2：安全组绑定失败
 3：安全组发生变更
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSgDetail() 获取安全组状态的详细解释
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSgDetail(string $SgDetail) 设置安全组状态的详细解释
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCloudType() 获取域名云环境。hybrid：混合云域名
 public：公有云域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCloudType(string $CloudType) 设置域名云环境。hybrid：混合云域名
 public：公有云域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNote() 获取域名备注信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNote(string $Note) 设置域名备注信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSrcList() 获取SAASWAF源站IP列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSrcList(array $SrcList) 设置SAASWAF源站IP列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getUpstreamDomainList() 获取SAASWAF源站域名列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpstreamDomainList(array $UpstreamDomainList) 设置SAASWAF源站域名列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSgID() 获取安全组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSgID(string $SgID) 设置安全组ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getAccessStatus() 获取clbwaf接入状态
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAccessStatus(integer $AccessStatus) 设置clbwaf接入状态
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAccessStatus() 获取clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”
+ * @method void setAccessStatus(integer $AccessStatus) 设置clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”
+ * @method array getLabels() 获取域名标签
+ * @method void setLabels(array $Labels) 设置域名标签
  */
 class DomainInfo extends AbstractModel
 {
@@ -459,7 +439,6 @@ cdc-clb-waf：CDC环境下负载均衡型WAF实例
 
     /**
      * @var string cdc实例域名接入的集群信息,非cdc实例忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CdcClusters;
 
@@ -467,7 +446,6 @@ cdc-clb-waf：CDC环境下负载均衡型WAF实例
      * @var integer api安全开关状态。
 0：关闭 
 1：开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApiStatus;
 
@@ -475,7 +453,6 @@ cdc-clb-waf：CDC环境下负载均衡型WAF实例
      * @var string 应用型负载均衡类型，默认clb。
 clb：七层负载均衡器类型
 apisix：apisix网关型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlbType;
 
@@ -485,52 +462,49 @@ apisix：apisix网关型
 1：非腾讯云源站
 2：安全组绑定失败
 3：安全组发生变更
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SgState;
 
     /**
      * @var string 安全组状态的详细解释
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SgDetail;
 
     /**
      * @var string 域名云环境。hybrid：混合云域名
 public：公有云域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CloudType;
 
     /**
      * @var string 域名备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Note;
 
     /**
      * @var array SAASWAF源站IP列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SrcList;
 
     /**
      * @var array SAASWAF源站域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpstreamDomainList;
 
     /**
      * @var string 安全组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SgID;
 
     /**
-     * @var integer clbwaf接入状态
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”
      */
     public $AccessStatus;
+
+    /**
+     * @var array 域名标签
+     */
+    public $Labels;
 
     /**
      * @param string $Domain 域名
@@ -626,36 +600,26 @@ cdc-clb-waf：CDC环境下负载均衡型WAF实例
 0：关闭 
 1：开启
      * @param string $CdcClusters cdc实例域名接入的集群信息,非cdc实例忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ApiStatus api安全开关状态。
 0：关闭 
 1：开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AlbType 应用型负载均衡类型，默认clb。
 clb：七层负载均衡器类型
 apisix：apisix网关型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SgState 安全组状态。
 0：不展示
 1：非腾讯云源站
 2：安全组绑定失败
 3：安全组发生变更
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SgDetail 安全组状态的详细解释
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CloudType 域名云环境。hybrid：混合云域名
 public：公有云域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Note 域名备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SrcList SAASWAF源站IP列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $UpstreamDomainList SAASWAF源站域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SgID 安全组ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $AccessStatus clbwaf接入状态
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AccessStatus clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”
+     * @param array $Labels 域名标签
      */
     function __construct()
     {
@@ -818,6 +782,10 @@ public：公有云域名
 
         if (array_key_exists("AccessStatus",$param) and $param["AccessStatus"] !== null) {
             $this->AccessStatus = $param["AccessStatus"];
+        }
+
+        if (array_key_exists("Labels",$param) and $param["Labels"] !== null) {
+            $this->Labels = $param["Labels"];
         }
     }
 }

@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 部门用户
  *
  * @method string getDepartmentId() 获取部门ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDepartmentId(string $DepartmentId) 设置部门ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取部门名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置部门名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getParentDepartmentId() 获取父级部门ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParentDepartmentId(string $ParentDepartmentId) 设置父级部门ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SsoDepartment extends AbstractModel
 {
     /**
      * @var string 部门ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DepartmentId;
 
     /**
      * @var string 部门名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 父级部门ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParentDepartmentId;
 
     /**
      * @param string $DepartmentId 部门ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 部门名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ParentDepartmentId 父级部门ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

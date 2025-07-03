@@ -28,10 +28,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomainPort(integer $DomainPort) 设置域名端口
  * @method string getVip() 获取虚拟ip
  * @method void setVip(string $Vip) 设置虚拟ip
- * @method integer getVipType() 获取虚拟ip类型
- * @method void setVipType(integer $VipType) 设置虚拟ip类型
+ * @method integer getVipType() 获取虚拟ip类型1:外网TGW 2:基础网络 3:VPC网络 4:支撑网络(标准版) 5:SSL外网访问方式访问 6:黑石环境vpc 7:支撑网络(专业版)
+ * @method void setVipType(integer $VipType) 设置虚拟ip类型1:外网TGW 2:基础网络 3:VPC网络 4:支撑网络(标准版) 5:SSL外网访问方式访问 6:黑石环境vpc 7:支撑网络(专业版)
  * @method integer getAccessType() 获取接入类型
+0：PLAINTEXT (明文方式，没有带用户信息老版本及社区版本都支持)
+1：SASL_PLAINTEXT（明文方式，不过在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）
+2：SSL（SSL加密通信，没有带用户信息，老版本及社区版本都支持）
+3：SASL_SSL（SSL加密通信，在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）
  * @method void setAccessType(integer $AccessType) 设置接入类型
+0：PLAINTEXT (明文方式，没有带用户信息老版本及社区版本都支持)
+1：SASL_PLAINTEXT（明文方式，不过在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）
+2：SSL（SSL加密通信，没有带用户信息，老版本及社区版本都支持）
+3：SASL_SSL（SSL加密通信，在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）
  */
 class CKafkaRouteInfo extends AbstractModel
 {
@@ -56,12 +64,16 @@ class CKafkaRouteInfo extends AbstractModel
     public $Vip;
 
     /**
-     * @var integer 虚拟ip类型
+     * @var integer 虚拟ip类型1:外网TGW 2:基础网络 3:VPC网络 4:支撑网络(标准版) 5:SSL外网访问方式访问 6:黑石环境vpc 7:支撑网络(专业版)
      */
     public $VipType;
 
     /**
      * @var integer 接入类型
+0：PLAINTEXT (明文方式，没有带用户信息老版本及社区版本都支持)
+1：SASL_PLAINTEXT（明文方式，不过在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）
+2：SSL（SSL加密通信，没有带用户信息，老版本及社区版本都支持）
+3：SASL_SSL（SSL加密通信，在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）
      */
     public $AccessType;
 
@@ -70,8 +82,12 @@ class CKafkaRouteInfo extends AbstractModel
      * @param string $Domain 域名
      * @param integer $DomainPort 域名端口
      * @param string $Vip 虚拟ip
-     * @param integer $VipType 虚拟ip类型
+     * @param integer $VipType 虚拟ip类型1:外网TGW 2:基础网络 3:VPC网络 4:支撑网络(标准版) 5:SSL外网访问方式访问 6:黑石环境vpc 7:支撑网络(专业版)
      * @param integer $AccessType 接入类型
+0：PLAINTEXT (明文方式，没有带用户信息老版本及社区版本都支持)
+1：SASL_PLAINTEXT（明文方式，不过在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）
+2：SSL（SSL加密通信，没有带用户信息，老版本及社区版本都支持）
+3：SASL_SSL（SSL加密通信，在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）
      */
     function __construct()
     {

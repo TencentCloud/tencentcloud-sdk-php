@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCustomizedConfigAssociateList请求参数结构体
  *
- * @method string getUconfigId() 获取配置ID
- * @method void setUconfigId(string $UconfigId) 设置配置ID
+ * @method string getUconfigId() 获取配置ID，可以通过 [DescribeCustomizedConfigList](https://cloud.tencent.com/document/product/214/60009) 接口获取。
+ * @method void setUconfigId(string $UconfigId) 设置配置ID，可以通过 [DescribeCustomizedConfigList](https://cloud.tencent.com/document/product/214/60009) 接口获取。
  * @method integer getOffset() 获取拉取绑定关系列表开始位置，默认值 0
  * @method void setOffset(integer $Offset) 设置拉取绑定关系列表开始位置，默认值 0
  * @method integer getLimit() 获取拉取绑定关系列表数目，默认值 20
  * @method void setLimit(integer $Limit) 设置拉取绑定关系列表数目，默认值 20
- * @method string getDomain() 获取搜索域名
- * @method void setDomain(string $Domain) 设置搜索域名
+ * @method string getDomain() 获取搜索域名，可以通过 [DescribeLoadBalancersDetail](https://cloud.tencent.com/document/product/214/46916) 接口返回值的 `Domain` 字段查询。
+ * @method void setDomain(string $Domain) 设置搜索域名，可以通过 [DescribeLoadBalancersDetail](https://cloud.tencent.com/document/product/214/46916) 接口返回值的 `Domain` 字段查询。
  */
 class DescribeCustomizedConfigAssociateListRequest extends AbstractModel
 {
     /**
-     * @var string 配置ID
+     * @var string 配置ID，可以通过 [DescribeCustomizedConfigList](https://cloud.tencent.com/document/product/214/60009) 接口获取。
      */
     public $UconfigId;
 
@@ -47,15 +47,15 @@ class DescribeCustomizedConfigAssociateListRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 搜索域名
+     * @var string 搜索域名，可以通过 [DescribeLoadBalancersDetail](https://cloud.tencent.com/document/product/214/46916) 接口返回值的 `Domain` 字段查询。
      */
     public $Domain;
 
     /**
-     * @param string $UconfigId 配置ID
+     * @param string $UconfigId 配置ID，可以通过 [DescribeCustomizedConfigList](https://cloud.tencent.com/document/product/214/60009) 接口获取。
      * @param integer $Offset 拉取绑定关系列表开始位置，默认值 0
      * @param integer $Limit 拉取绑定关系列表数目，默认值 20
-     * @param string $Domain 搜索域名
+     * @param string $Domain 搜索域名，可以通过 [DescribeLoadBalancersDetail](https://cloud.tencent.com/document/product/214/46916) 接口返回值的 `Domain` 字段查询。
      */
     function __construct()
     {

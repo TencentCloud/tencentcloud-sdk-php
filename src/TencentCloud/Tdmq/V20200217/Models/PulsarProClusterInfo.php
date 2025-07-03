@@ -46,6 +46,23 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBillingLabelVersion(string $BillingLabelVersion) 设置代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getExpireTime() 获取实例到期时间戳，毫秒级精度。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExpireTime(integer $ExpireTime) 设置实例到期时间戳，毫秒级精度。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getAutoCreateTopicStatus() 获取是否开启自动创建主题
+true就是开启了，false是关闭
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAutoCreateTopicStatus(boolean $AutoCreateTopicStatus) 设置是否开启自动创建主题
+true就是开启了，false是关闭
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDefaultPartitionNumber() 获取自动创建主题的默认分区数，如果没开启就是0
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDefaultPartitionNumber(integer $DefaultPartitionNumber) 设置自动创建主题的默认分区数，如果没开启就是0
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTenant() 获取用户自定义的租户别名，如果没有，会复用专业集群 ID
+
+ * @method void setTenant(string $Tenant) 设置用户自定义的租户别名，如果没有，会复用专业集群 ID
  */
 class PulsarProClusterInfo extends AbstractModel
 {
@@ -103,6 +120,31 @@ class PulsarProClusterInfo extends AbstractModel
     public $BillingLabelVersion;
 
     /**
+     * @var integer 实例到期时间戳，毫秒级精度。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExpireTime;
+
+    /**
+     * @var boolean 是否开启自动创建主题
+true就是开启了，false是关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AutoCreateTopicStatus;
+
+    /**
+     * @var integer 自动创建主题的默认分区数，如果没开启就是0
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DefaultPartitionNumber;
+
+    /**
+     * @var string 用户自定义的租户别名，如果没有，会复用专业集群 ID
+
+     */
+    public $Tenant;
+
+    /**
      * @param string $ClusterId 集群Id。
      * @param string $ClusterName 集群名称。
      * @param string $Remark 说明信息。
@@ -116,6 +158,14 @@ class PulsarProClusterInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BillingLabelVersion 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ExpireTime 实例到期时间戳，毫秒级精度。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $AutoCreateTopicStatus 是否开启自动创建主题
+true就是开启了，false是关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DefaultPartitionNumber 自动创建主题的默认分区数，如果没开启就是0
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Tenant 用户自定义的租户别名，如果没有，会复用专业集群 ID
      */
     function __construct()
     {
@@ -173,6 +223,22 @@ class PulsarProClusterInfo extends AbstractModel
 
         if (array_key_exists("BillingLabelVersion",$param) and $param["BillingLabelVersion"] !== null) {
             $this->BillingLabelVersion = $param["BillingLabelVersion"];
+        }
+
+        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
+            $this->ExpireTime = $param["ExpireTime"];
+        }
+
+        if (array_key_exists("AutoCreateTopicStatus",$param) and $param["AutoCreateTopicStatus"] !== null) {
+            $this->AutoCreateTopicStatus = $param["AutoCreateTopicStatus"];
+        }
+
+        if (array_key_exists("DefaultPartitionNumber",$param) and $param["DefaultPartitionNumber"] !== null) {
+            $this->DefaultPartitionNumber = $param["DefaultPartitionNumber"];
+        }
+
+        if (array_key_exists("Tenant",$param) and $param["Tenant"] !== null) {
+            $this->Tenant = $param["Tenant"];
         }
     }
 }

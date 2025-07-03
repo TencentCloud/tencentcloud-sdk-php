@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 绑定的实例信息
  *
  * @method string getResourceId() 获取数据源id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceId(string $ResourceId) 设置数据源id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDbInfos() 获取数据源绑定的db信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDbInfos(array $DbInfos) 设置数据源绑定的db信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DBInstanceInfo extends AbstractModel
 {
     /**
      * @var string 数据源id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceId;
 
     /**
      * @var array 数据源绑定的db信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DbInfos;
 
     /**
      * @param string $ResourceId 数据源id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DbInfos 数据源绑定的db信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

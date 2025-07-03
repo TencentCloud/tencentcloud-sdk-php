@@ -78,6 +78,10 @@ Block 建议屏蔽；
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDuration(string $Duration) 设置识别音频时长，单位为毫秒；
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getHitFlag() 获取是否命中(0:否, 1: 是)
+ * @method void setHitFlag(integer $HitFlag) 设置是否命中(0:否, 1: 是)
+ * @method integer getScore() 获取得分
+ * @method void setScore(integer $Score) 设置得分
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -165,6 +169,16 @@ Block 建议屏蔽；
     public $Duration;
 
     /**
+     * @var integer 是否命中(0:否, 1: 是)
+     */
+    public $HitFlag;
+
+    /**
+     * @var integer 得分
+     */
+    public $Score;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -199,6 +213,8 @@ Block 建议屏蔽；
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Duration 识别音频时长，单位为毫秒；
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $HitFlag 是否命中(0:否, 1: 是)
+     * @param integer $Score 得分
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -289,6 +305,14 @@ Block 建议屏蔽；
 
         if (array_key_exists("Duration",$param) and $param["Duration"] !== null) {
             $this->Duration = $param["Duration"];
+        }
+
+        if (array_key_exists("HitFlag",$param) and $param["HitFlag"] !== null) {
+            $this->HitFlag = $param["HitFlag"];
+        }
+
+        if (array_key_exists("Score",$param) and $param["Score"] !== null) {
+            $this->Score = $param["Score"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -22,48 +22,36 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotalElements() 获取上报数量
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalElements(integer $TotalElements) 设置上报数量
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCommit() 获取提交数量（推送成功）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCommit(integer $Commit) 设置提交数量（推送成功）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSpanMap() 获取消息推送结果列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpanMap(array $SpanMap) 设置消息推送结果列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BatchReportAppMessageRes extends AbstractModel
 {
     /**
      * @var integer 上报数量
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalElements;
 
     /**
      * @var integer 提交数量（推送成功）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Commit;
 
     /**
      * @var array 消息推送结果列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SpanMap;
 
     /**
      * @param integer $TotalElements 上报数量
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Commit 提交数量（推送成功）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SpanMap 消息推送结果列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

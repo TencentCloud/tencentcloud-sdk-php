@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置显示条数限制，默认为20。
  * @method integer getOffset() 获取显示的偏移起始量。
  * @method void setOffset(integer $Offset) 设置显示的偏移起始量。
- * @method array getFilters() 获取过滤条件数组，与TargetGroupIds互斥，支持TargetGroupVpcId和TargetGroupName。
- * @method void setFilters(array $Filters) 设置过滤条件数组，与TargetGroupIds互斥，支持TargetGroupVpcId和TargetGroupName。
+ * @method array getFilters() 获取过滤条件数组，与TargetGroupIds互斥，支持 TargetGroupVpcId（私有网络 ID）和 TargetGroupName（目标组名称）以及 Tag（标签）。
+ * @method void setFilters(array $Filters) 设置过滤条件数组，与TargetGroupIds互斥，支持 TargetGroupVpcId（私有网络 ID）和 TargetGroupName（目标组名称）以及 Tag（标签）。
  */
 class DescribeTargetGroupsRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeTargetGroupsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var array 过滤条件数组，与TargetGroupIds互斥，支持TargetGroupVpcId和TargetGroupName。
+     * @var array 过滤条件数组，与TargetGroupIds互斥，支持 TargetGroupVpcId（私有网络 ID）和 TargetGroupName（目标组名称）以及 Tag（标签）。
      */
     public $Filters;
 
@@ -55,7 +55,7 @@ class DescribeTargetGroupsRequest extends AbstractModel
      * @param array $TargetGroupIds 目标组ID，与Filters互斥。
      * @param integer $Limit 显示条数限制，默认为20。
      * @param integer $Offset 显示的偏移起始量。
-     * @param array $Filters 过滤条件数组，与TargetGroupIds互斥，支持TargetGroupVpcId和TargetGroupName。
+     * @param array $Filters 过滤条件数组，与TargetGroupIds互斥，支持 TargetGroupVpcId（私有网络 ID）和 TargetGroupName（目标组名称）以及 Tag（标签）。
      */
     function __construct()
     {

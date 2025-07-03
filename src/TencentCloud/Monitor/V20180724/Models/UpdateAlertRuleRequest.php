@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateAlertRule请求参数结构体
  *
- * @method string getRuleId() 获取Prometheus 高警规则 ID
- * @method void setRuleId(string $RuleId) 设置Prometheus 高警规则 ID
+ * @method string getRuleId() 获取Prometheus 告警规则 ID
+ * @method void setRuleId(string $RuleId) 设置Prometheus 告警规则 ID
  * @method string getInstanceId() 获取Prometheus 实例 ID
  * @method void setInstanceId(string $InstanceId) 设置Prometheus 实例 ID
  * @method integer getRuleState() 获取规则状态码，取值如下：
@@ -42,21 +42,21 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDuration(string $Duration) 设置告警规则持续时间
  * @method array getReceivers() 获取告警规则接收组列表(当前规则绑定的接收组列表可通过 DescribeAlertRules 接口获取；用户已有的接收组列表可通过 DescribeAlarmNotices 接口获取)
  * @method void setReceivers(array $Receivers) 设置告警规则接收组列表(当前规则绑定的接收组列表可通过 DescribeAlertRules 接口获取；用户已有的接收组列表可通过 DescribeAlarmNotices 接口获取)
- * @method array getLabels() 获取报警规则标签列表
- * @method void setLabels(array $Labels) 设置报警规则标签列表
- * @method array getAnnotations() 获取报警规则注释列表。
+ * @method array getLabels() 获取告警规则标签列表
+ * @method void setLabels(array $Labels) 设置告警规则标签列表
+ * @method array getAnnotations() 获取告警规则注释列表。
 
 告警对象和告警消息是 Prometheus Rule Annotations 的特殊字段，需要通过 annotations 来传递，对应的 Key 分别为summary/description。
- * @method void setAnnotations(array $Annotations) 设置报警规则注释列表。
+ * @method void setAnnotations(array $Annotations) 设置告警规则注释列表。
 
 告警对象和告警消息是 Prometheus Rule Annotations 的特殊字段，需要通过 annotations 来传递，对应的 Key 分别为summary/description。
- * @method string getType() 获取报警策略模板分类(自定义，可不填)
- * @method void setType(string $Type) 设置报警策略模板分类(自定义，可不填)
+ * @method string getType() 获取告警策略模板分类(自定义，可不填)
+ * @method void setType(string $Type) 设置告警策略模板分类(自定义，可不填)
  */
 class UpdateAlertRuleRequest extends AbstractModel
 {
     /**
-     * @var string Prometheus 高警规则 ID
+     * @var string Prometheus 告警规则 ID
      */
     public $RuleId;
 
@@ -95,24 +95,24 @@ class UpdateAlertRuleRequest extends AbstractModel
     public $Receivers;
 
     /**
-     * @var array 报警规则标签列表
+     * @var array 告警规则标签列表
      */
     public $Labels;
 
     /**
-     * @var array 报警规则注释列表。
+     * @var array 告警规则注释列表。
 
 告警对象和告警消息是 Prometheus Rule Annotations 的特殊字段，需要通过 annotations 来传递，对应的 Key 分别为summary/description。
      */
     public $Annotations;
 
     /**
-     * @var string 报警策略模板分类(自定义，可不填)
+     * @var string 告警策略模板分类(自定义，可不填)
      */
     public $Type;
 
     /**
-     * @param string $RuleId Prometheus 高警规则 ID
+     * @param string $RuleId Prometheus 告警规则 ID
      * @param string $InstanceId Prometheus 实例 ID
      * @param integer $RuleState 规则状态码，取值如下：
 <li>1=RuleDeleted</li>
@@ -123,11 +123,11 @@ class UpdateAlertRuleRequest extends AbstractModel
      * @param string $Expr 告警规则表达式
      * @param string $Duration 告警规则持续时间
      * @param array $Receivers 告警规则接收组列表(当前规则绑定的接收组列表可通过 DescribeAlertRules 接口获取；用户已有的接收组列表可通过 DescribeAlarmNotices 接口获取)
-     * @param array $Labels 报警规则标签列表
-     * @param array $Annotations 报警规则注释列表。
+     * @param array $Labels 告警规则标签列表
+     * @param array $Annotations 告警规则注释列表。
 
 告警对象和告警消息是 Prometheus Rule Annotations 的特殊字段，需要通过 annotations 来传递，对应的 Key 分别为summary/description。
-     * @param string $Type 报警策略模板分类(自定义，可不填)
+     * @param string $Type 告警策略模板分类(自定义，可不填)
      */
     function __construct()
     {

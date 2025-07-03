@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEvents(array $Events) 设置通知事件
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getURL() 获取回调 URL
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setURL(string $URL) 设置回调 URL
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NotificationHook extends AbstractModel
 {
@@ -39,7 +37,6 @@ class NotificationHook extends AbstractModel
 
     /**
      * @var string 回调 URL
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $URL;
 
@@ -47,7 +44,6 @@ class NotificationHook extends AbstractModel
      * @param array $Events 通知事件
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $URL 回调 URL
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBlueprintName(string $BlueprintName) 设置镜像名称。最大长度60。
  * @method string getDescription() 获取镜像描述。最大长度60。
  * @method void setDescription(string $Description) 设置镜像描述。最大长度60。
- * @method string getInstanceId() 获取需要制作镜像的实例ID。
- * @method void setInstanceId(string $InstanceId) 设置需要制作镜像的实例ID。
+ * @method string getInstanceId() 获取需要制作镜像的实例ID。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/1207/47573) 接口返回值中的 InstanceId 获取。
+ * @method void setInstanceId(string $InstanceId) 设置需要制作镜像的实例ID。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/1207/47573) 接口返回值中的 InstanceId 获取。
  * @method boolean getForcePowerOff() 获取是否执行强制关机以制作镜像。
 取值范围：
 True：表示关机之后制作镜像
@@ -52,7 +52,7 @@ class CreateBlueprintRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var string 需要制作镜像的实例ID。
+     * @var string 需要制作镜像的实例ID。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/1207/47573) 接口返回值中的 InstanceId 获取。
      */
     public $InstanceId;
 
@@ -69,7 +69,7 @@ False：表示开机状态制作镜像
     /**
      * @param string $BlueprintName 镜像名称。最大长度60。
      * @param string $Description 镜像描述。最大长度60。
-     * @param string $InstanceId 需要制作镜像的实例ID。
+     * @param string $InstanceId 需要制作镜像的实例ID。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/1207/47573) 接口返回值中的 InstanceId 获取。
      * @param boolean $ForcePowerOff 是否执行强制关机以制作镜像。
 取值范围：
 True：表示关机之后制作镜像

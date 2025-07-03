@@ -21,45 +21,27 @@ use TencentCloud\Common\AbstractModel;
  * 询价返回参数
  *
  * @method float getUnitPrice() 获取单位原价
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnitPrice(float $UnitPrice) 设置单位原价
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getUnitPriceDiscount() 获取折扣单位价格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnitPriceDiscount(float $UnitPriceDiscount) 设置折扣单位价格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getOriginalPrice() 获取合计原价
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOriginalPrice(float $OriginalPrice) 设置合计原价
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getDiscountPrice() 获取折扣合计价格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiscountPrice(float $DiscountPrice) 设置折扣合计价格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getDiscount() 获取折扣(单位是%)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiscount(float $Discount) 设置折扣(单位是%)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getGoodsNum() 获取商品数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGoodsNum(integer $GoodsNum) 设置商品数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCurrency() 获取付费货币
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCurrency(string $Currency) 设置付费货币
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDiskType() 获取硬盘专用返回参数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskType(string $DiskType) 设置硬盘专用返回参数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTimeSpan() 获取购买时长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeSpan(integer $TimeSpan) 设置购买时长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTimeUnit() 获取购买时长单位("m"按月, "h"按小时)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeUnit(string $TimeUnit) 设置购买时长单位("m"按月, "h"按小时)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getValue() 获取购买数量
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(integer $Value) 设置购买数量
@@ -73,43 +55,36 @@ class InquiryPrice extends AbstractModel
 {
     /**
      * @var float 单位原价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UnitPrice;
 
     /**
      * @var float 折扣单位价格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UnitPriceDiscount;
 
     /**
      * @var float 合计原价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OriginalPrice;
 
     /**
      * @var float 折扣合计价格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiscountPrice;
 
     /**
      * @var float 折扣(单位是%)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Discount;
 
     /**
      * @var integer 商品数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GoodsNum;
 
     /**
      * @var string 付费货币
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Currency;
 
@@ -121,13 +96,11 @@ class InquiryPrice extends AbstractModel
 
     /**
      * @var integer 购买时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeSpan;
 
     /**
      * @var string 购买时长单位("m"按月, "h"按小时)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeUnit;
 
@@ -145,25 +118,16 @@ class InquiryPrice extends AbstractModel
 
     /**
      * @param float $UnitPrice 单位原价
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $UnitPriceDiscount 折扣单位价格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $OriginalPrice 合计原价
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $DiscountPrice 折扣合计价格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Discount 折扣(单位是%)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $GoodsNum 商品数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Currency 付费货币
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DiskType 硬盘专用返回参数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TimeSpan 购买时长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TimeUnit 购买时长单位("m"按月, "h"按小时)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Value 购买数量
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InquiryDetailPrice $DetailPrices 详细类别的价格

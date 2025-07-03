@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRegion() 获取地域
  * @method void setRegion(string $Region) 设置地域
  * @method string getVpcId() 获取VPC ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(string $VpcId) 设置VPC ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSubnetIds() 获取子网ID列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetIds(array $SubnetIds) 设置子网ID列表
@@ -47,7 +45,6 @@ class VpcLoadDistribution extends AbstractModel
 
     /**
      * @var string VPC ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
@@ -61,7 +58,6 @@ class VpcLoadDistribution extends AbstractModel
      * @param integer $RegionId 地域ID
      * @param string $Region 地域
      * @param string $VpcId VPC ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SubnetIds 子网ID列表
 注意：此字段可能返回 null，表示取不到有效值。
      */

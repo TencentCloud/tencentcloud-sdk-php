@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * cos临时账号信息
  *
  * @method string getSessionToken() 获取会话Token
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSessionToken(string $SessionToken) 设置会话Token
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTmpAppId() 获取临时应用ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTmpAppId(string $TmpAppId) 设置临时应用ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTmpSecretId() 获取临时调用者身份ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTmpSecretId(string $TmpSecretId) 设置临时调用者身份ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTmpSecretKey() 获取临时密钥
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTmpSecretKey(string $TmpSecretKey) 设置临时密钥
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getExpiredTime() 获取过期时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpiredTime(integer $ExpiredTime) 设置过期时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDomain() 获取所在域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomain(string $Domain) 设置所在域
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CosCredentials extends AbstractModel
 {
     /**
      * @var string 会话Token
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SessionToken;
 
     /**
      * @var string 临时应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TmpAppId;
 
     /**
      * @var string 临时调用者身份ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TmpSecretId;
 
     /**
      * @var string 临时密钥
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TmpSecretKey;
 
     /**
      * @var integer 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpiredTime;
 
     /**
      * @var string 所在域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Domain;
 
     /**
      * @param string $SessionToken 会话Token
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TmpAppId 临时应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TmpSecretId 临时调用者身份ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TmpSecretKey 临时密钥
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ExpiredTime 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Domain 所在域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

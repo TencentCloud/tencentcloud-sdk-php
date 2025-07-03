@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 获取云原生API网关实例协议端口列表响应结果
  *
  * @method string getGatewayId() 获取云原生API网关ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGatewayId(string $GatewayId) 设置云原生API网关ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getGatewayInstancePortList() 获取网关实例协议端口列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGatewayInstancePortList(array $GatewayInstancePortList) 设置网关实例协议端口列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeGatewayInstancePortResult extends AbstractModel
 {
     /**
      * @var string 云原生API网关ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GatewayId;
 
     /**
      * @var array 网关实例协议端口列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GatewayInstancePortList;
 
     /**
      * @param string $GatewayId 云原生API网关ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $GatewayInstancePortList 网关实例协议端口列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

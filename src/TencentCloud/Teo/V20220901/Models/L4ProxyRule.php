@@ -116,6 +116,12 @@ use TencentCloud\Common\AbstractModel;
 注意：L4ProxyRule 在 CreateL4ProxyRules、ModifyL4ProxyRules 作为入参使用时，该参数请勿填写。
  * @method string getBuId() 获取BuID。
  * @method void setBuId(string $BuId) 设置BuID。
+ * @method L4ProxyRemoteAuth getRemoteAuth() 获取远程鉴权信息。
+注意：RemoteAuth 在 CreateL4ProxyRules 或 ModifyL4ProxyRules 不可作为入参使用，如有传此参数，会忽略。在 DescribeL4ProxyRules 返回为空时，表示没有开启远程鉴权。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRemoteAuth(L4ProxyRemoteAuth $RemoteAuth) 设置远程鉴权信息。
+注意：RemoteAuth 在 CreateL4ProxyRules 或 ModifyL4ProxyRules 不可作为入参使用，如有传此参数，会忽略。在 DescribeL4ProxyRules 返回为空时，表示没有开启远程鉴权。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class L4ProxyRule extends AbstractModel
 {
@@ -216,6 +222,13 @@ class L4ProxyRule extends AbstractModel
     public $BuId;
 
     /**
+     * @var L4ProxyRemoteAuth 远程鉴权信息。
+注意：RemoteAuth 在 CreateL4ProxyRules 或 ModifyL4ProxyRules 不可作为入参使用，如有传此参数，会忽略。在 DescribeL4ProxyRules 返回为空时，表示没有开启远程鉴权。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RemoteAuth;
+
+    /**
      * @param string $RuleId 转发规则 ID。
 注意：L4ProxyRule 在 CreateL4ProxyRules 作为入参使用时，该参数请勿填写；在 ModifyL4ProxyRules 作为入参使用时，该参数必填。
      * @param string $Protocol 转发协议。取值有：
@@ -264,6 +277,9 @@ class L4ProxyRule extends AbstractModel
 <li>fail：部署失败/停用失败。</li>
 注意：L4ProxyRule 在 CreateL4ProxyRules、ModifyL4ProxyRules 作为入参使用时，该参数请勿填写。
      * @param string $BuId BuID。
+     * @param L4ProxyRemoteAuth $RemoteAuth 远程鉴权信息。
+注意：RemoteAuth 在 CreateL4ProxyRules 或 ModifyL4ProxyRules 不可作为入参使用，如有传此参数，会忽略。在 DescribeL4ProxyRules 返回为空时，表示没有开启远程鉴权。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -324,6 +340,11 @@ class L4ProxyRule extends AbstractModel
 
         if (array_key_exists("BuId",$param) and $param["BuId"] !== null) {
             $this->BuId = $param["BuId"];
+        }
+
+        if (array_key_exists("RemoteAuth",$param) and $param["RemoteAuth"] !== null) {
+            $this->RemoteAuth = new L4ProxyRemoteAuth();
+            $this->RemoteAuth->deserialize($param["RemoteAuth"]);
         }
     }
 }

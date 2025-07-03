@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 构件树响应体
  *
  * @method string getBuildingId() 获取建筑id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBuildingId(string $BuildingId) 设置建筑id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getParentElementId() 获取父级构件id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParentElementId(string $ParentElementId) 设置父级构件id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ElementProfileTreeNode getRoot() 获取构件树
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoot(ElementProfileTreeNode $Root) 设置构件树
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ElementProfileTreeRes extends AbstractModel
 {
     /**
      * @var string 建筑id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BuildingId;
 
     /**
      * @var string 父级构件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParentElementId;
 
     /**
      * @var ElementProfileTreeNode 构件树
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Root;
 
     /**
      * @param string $BuildingId 建筑id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ParentElementId 父级构件id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ElementProfileTreeNode $Root 构件树
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

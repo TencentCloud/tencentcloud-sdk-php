@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getIpProtocol() 获取网络协议，可选值：`TCP`、`UDP`。
  * @method void setIpProtocol(string $IpProtocol) 设置网络协议，可选值：`TCP`、`UDP`。
- * @method string getPublicIpAddress() 获取弹性IP。
- * @method void setPublicIpAddress(string $PublicIpAddress) 设置弹性IP。
+ * @method string getPublicIpAddress() 获取弹性公网IP。
+ * @method void setPublicIpAddress(string $PublicIpAddress) 设置弹性公网IP。
  * @method integer getPublicPort() 获取公网端口。
  * @method void setPublicPort(integer $PublicPort) 设置公网端口。
  * @method string getPrivateIpAddress() 获取内网地址。
@@ -33,17 +33,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDescription() 获取NAT网关转发规则描述。
  * @method void setDescription(string $Description) 设置NAT网关转发规则描述。
  * @method string getNatGatewayId() 获取NAT网关的ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNatGatewayId(string $NatGatewayId) 设置NAT网关的ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVpcId() 获取私有网络VPC的ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(string $VpcId) 设置私有网络VPC的ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedTime() 获取NAT网关转发规则创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedTime(string $CreatedTime) 设置NAT网关转发规则创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NatGatewayDestinationIpPortTranslationNatRule extends AbstractModel
 {
@@ -53,7 +47,7 @@ class NatGatewayDestinationIpPortTranslationNatRule extends AbstractModel
     public $IpProtocol;
 
     /**
-     * @var string 弹性IP。
+     * @var string 弹性公网IP。
      */
     public $PublicIpAddress;
 
@@ -79,35 +73,29 @@ class NatGatewayDestinationIpPortTranslationNatRule extends AbstractModel
 
     /**
      * @var string NAT网关的ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NatGatewayId;
 
     /**
      * @var string 私有网络VPC的ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
     /**
      * @var string NAT网关转发规则创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedTime;
 
     /**
      * @param string $IpProtocol 网络协议，可选值：`TCP`、`UDP`。
-     * @param string $PublicIpAddress 弹性IP。
+     * @param string $PublicIpAddress 弹性公网IP。
      * @param integer $PublicPort 公网端口。
      * @param string $PrivateIpAddress 内网地址。
      * @param integer $PrivatePort 内网端口。
      * @param string $Description NAT网关转发规则描述。
      * @param string $NatGatewayId NAT网关的ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcId 私有网络VPC的ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedTime NAT网关转发规则创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

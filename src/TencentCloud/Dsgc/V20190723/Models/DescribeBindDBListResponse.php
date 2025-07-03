@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * DescribeBindDBList返回参数结构体
  *
  * @method array getBindDBList() 获取绑定的DB列表（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBindDBList(array $BindDBList) 设置绑定的DB列表（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getBindList() 获取绑定信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBindList(array $BindList) 设置绑定信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,13 +31,11 @@ class DescribeBindDBListResponse extends AbstractModel
 {
     /**
      * @var array 绑定的DB列表（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BindDBList;
 
     /**
      * @var array 绑定信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BindList;
 
@@ -52,9 +46,7 @@ class DescribeBindDBListResponse extends AbstractModel
 
     /**
      * @param array $BindDBList 绑定的DB列表（已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $BindList 绑定信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

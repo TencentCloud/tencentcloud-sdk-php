@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetFaceIdToken返回参数结构体
  *
- * @method string getFaceIdToken() 获取有效期 10分钟。只能完成1次核身。
- * @method void setFaceIdToken(string $FaceIdToken) 设置有效期 10分钟。只能完成1次核身。
+ * @method string getFaceIdToken() 获取token值。- 有效期 10分钟。- 只能完成1次核身。
+ * @method void setFaceIdToken(string $FaceIdToken) 设置token值。- 有效期 10分钟。- 只能完成1次核身。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class GetFaceIdTokenResponse extends AbstractModel
 {
     /**
-     * @var string 有效期 10分钟。只能完成1次核身。
+     * @var string token值。- 有效期 10分钟。- 只能完成1次核身。
      */
     public $FaceIdToken;
 
@@ -38,7 +38,7 @@ class GetFaceIdTokenResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $FaceIdToken 有效期 10分钟。只能完成1次核身。
+     * @param string $FaceIdToken token值。- 有效期 10分钟。- 只能完成1次核身。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

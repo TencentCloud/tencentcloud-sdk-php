@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 文件配置项发布信息列表
  *
  * @method integer getTotalCount() 获取数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getContent() 获取列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContent(array $Content) 设置列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TsfPageFileConfigRelease extends AbstractModel
 {
     /**
      * @var integer 数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
      * @var array 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Content;
 
     /**
      * @param integer $TotalCount 数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Content 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

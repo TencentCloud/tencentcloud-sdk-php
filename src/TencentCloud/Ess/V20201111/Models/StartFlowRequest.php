@@ -20,10 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StartFlow请求参数结构体
  *
- * @method UserInfo getOperator() 获取执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
- * @method void setOperator(UserInfo $Operator) 设置执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+ * @method UserInfo getOperator() 获取本合同的发起人，<a href="https://qcloudimg.tencent-cloud.cn/raw/f850cfbe163a1cb38439a9f551c2505c.png" target="_blank">点击查看合同发起人展示的位置</a>
+ * @method void setOperator(UserInfo $Operator) 设置本合同的发起人，<a href="https://qcloudimg.tencent-cloud.cn/raw/f850cfbe163a1cb38439a9f551c2505c.png" target="_blank">点击查看合同发起人展示的位置</a>
  * @method string getFlowId() 获取合同流程ID，为32位字符串。
 此处需要传入[创建签署流程接口](https://qian.tencent.com/developers/companyApis/startFlows/CreateFlow)得到的FlowId。
  * @method void setFlowId(string $FlowId) 设置合同流程ID，为32位字符串。
@@ -44,8 +42,7 @@ use TencentCloud\Common\AbstractModel;
 class StartFlowRequest extends AbstractModel
 {
     /**
-     * @var UserInfo 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * @var UserInfo 本合同的发起人，<a href="https://qcloudimg.tencent-cloud.cn/raw/f850cfbe163a1cb38439a9f551c2505c.png" target="_blank">点击查看合同发起人展示的位置</a>
      */
     public $Operator;
 
@@ -75,8 +72,7 @@ class StartFlowRequest extends AbstractModel
     public $CcNotifyType;
 
     /**
-     * @param UserInfo $Operator 执行本接口操作的员工信息。
-注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
+     * @param UserInfo $Operator 本合同的发起人，<a href="https://qcloudimg.tencent-cloud.cn/raw/f850cfbe163a1cb38439a9f551c2505c.png" target="_blank">点击查看合同发起人展示的位置</a>
      * @param string $FlowId 合同流程ID，为32位字符串。
 此处需要传入[创建签署流程接口](https://qian.tencent.com/developers/companyApis/startFlows/CreateFlow)得到的FlowId。
      * @param string $ClientToken 客户端Token，保持接口幂等性,最大长度64个字符

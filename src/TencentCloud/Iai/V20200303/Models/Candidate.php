@@ -20,93 +20,93 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 识别出的最相似候选人
  *
- * @method string getPersonId() 获取人员ID
- * @method void setPersonId(string $PersonId) 设置人员ID
- * @method string getFaceId() 获取人脸ID，仅在SearchFaces/SearchFacesReturnsByGroup接口返回时有效。人员搜索类接口采用融合特征方式检索，该字段无意义
- * @method void setFaceId(string $FaceId) 设置人脸ID，仅在SearchFaces/SearchFacesReturnsByGroup接口返回时有效。人员搜索类接口采用融合特征方式检索，该字段无意义
+ * @method string getPersonId() 获取人员ID。
+ * @method void setPersonId(string $PersonId) 设置人员ID。
+ * @method string getFaceId() 获取人脸ID。
+- 仅在SearchFaces/SearchFacesReturnsByGroup接口返回时有效。
+- 人员搜索类接口采用融合特征方式检索，该字段无意义。
+ * @method void setFaceId(string $FaceId) 设置人脸ID。
+- 仅在SearchFaces/SearchFacesReturnsByGroup接口返回时有效。
+- 人员搜索类接口采用融合特征方式检索，该字段无意义。
  * @method float getScore() 获取候选者的匹配得分。 
-
-1万大小人脸底库下，误识率百分之一对应分数为70分，误识率千分之一对应分数为80分，误识率万分之一对应分数为90分；
-10万大小人脸底库下，误识率百分之一对应分数为80分，误识率千分之一对应分数为90分，误识率万分之一对应分数为100分；
-30万大小人脸底库下，误识率百分之一对应分数为85分，误识率千分之一对应分数为95分。
-
-一般80分左右可适用大部分场景，建议分数不要超过90分。您可以根据实际情况选择合适的分数。
+- 1万大小人脸底库下，误识率百分之一对应分数为70分，误识率千分之一对应分数为80分，误识率万分之一对应分数为90分。
+- 10万大小人脸底库下，误识率百分之一对应分数为80分，误识率千分之一对应分数为90分，误识率万分之一对应分数为100分。
+- 30万大小人脸底库下，误识率百分之一对应分数为85分，误识率千分之一对应分数为95分。
+- 一般80分左右可适用大部分场景，建议分数不要超过90分。您可以根据实际情况选择合适的分数。
  * @method void setScore(float $Score) 设置候选者的匹配得分。 
-
-1万大小人脸底库下，误识率百分之一对应分数为70分，误识率千分之一对应分数为80分，误识率万分之一对应分数为90分；
-10万大小人脸底库下，误识率百分之一对应分数为80分，误识率千分之一对应分数为90分，误识率万分之一对应分数为100分；
-30万大小人脸底库下，误识率百分之一对应分数为85分，误识率千分之一对应分数为95分。
-
-一般80分左右可适用大部分场景，建议分数不要超过90分。您可以根据实际情况选择合适的分数。
- * @method string getPersonName() 获取人员名称
+- 1万大小人脸底库下，误识率百分之一对应分数为70分，误识率千分之一对应分数为80分，误识率万分之一对应分数为90分。
+- 10万大小人脸底库下，误识率百分之一对应分数为80分，误识率千分之一对应分数为90分，误识率万分之一对应分数为100分。
+- 30万大小人脸底库下，误识率百分之一对应分数为85分，误识率千分之一对应分数为95分。
+- 一般80分左右可适用大部分场景，建议分数不要超过90分。您可以根据实际情况选择合适的分数。
+ * @method string getPersonName() 获取人员名称。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPersonName(string $PersonName) 设置人员名称
+ * @method void setPersonName(string $PersonName) 设置人员名称。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getGender() 获取人员性别
+ * @method integer getGender() 获取人员性别。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGender(integer $Gender) 设置人员性别
+ * @method void setGender(integer $Gender) 设置人员性别。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getPersonGroupInfos() 获取包含此人员的人员库及描述字段内容列表
+ * @method array getPersonGroupInfos() 获取包含此人员的人员库及描述字段内容列表。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPersonGroupInfos(array $PersonGroupInfos) 设置包含此人员的人员库及描述字段内容列表
+ * @method void setPersonGroupInfos(array $PersonGroupInfos) 设置包含此人员的人员库及描述字段内容列表。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Candidate extends AbstractModel
 {
     /**
-     * @var string 人员ID
+     * @var string 人员ID。
      */
     public $PersonId;
 
     /**
-     * @var string 人脸ID，仅在SearchFaces/SearchFacesReturnsByGroup接口返回时有效。人员搜索类接口采用融合特征方式检索，该字段无意义
+     * @var string 人脸ID。
+- 仅在SearchFaces/SearchFacesReturnsByGroup接口返回时有效。
+- 人员搜索类接口采用融合特征方式检索，该字段无意义。
      */
     public $FaceId;
 
     /**
      * @var float 候选者的匹配得分。 
-
-1万大小人脸底库下，误识率百分之一对应分数为70分，误识率千分之一对应分数为80分，误识率万分之一对应分数为90分；
-10万大小人脸底库下，误识率百分之一对应分数为80分，误识率千分之一对应分数为90分，误识率万分之一对应分数为100分；
-30万大小人脸底库下，误识率百分之一对应分数为85分，误识率千分之一对应分数为95分。
-
-一般80分左右可适用大部分场景，建议分数不要超过90分。您可以根据实际情况选择合适的分数。
+- 1万大小人脸底库下，误识率百分之一对应分数为70分，误识率千分之一对应分数为80分，误识率万分之一对应分数为90分。
+- 10万大小人脸底库下，误识率百分之一对应分数为80分，误识率千分之一对应分数为90分，误识率万分之一对应分数为100分。
+- 30万大小人脸底库下，误识率百分之一对应分数为85分，误识率千分之一对应分数为95分。
+- 一般80分左右可适用大部分场景，建议分数不要超过90分。您可以根据实际情况选择合适的分数。
      */
     public $Score;
 
     /**
-     * @var string 人员名称
+     * @var string 人员名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PersonName;
 
     /**
-     * @var integer 人员性别
+     * @var integer 人员性别。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Gender;
 
     /**
-     * @var array 包含此人员的人员库及描述字段内容列表
+     * @var array 包含此人员的人员库及描述字段内容列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PersonGroupInfos;
 
     /**
-     * @param string $PersonId 人员ID
-     * @param string $FaceId 人脸ID，仅在SearchFaces/SearchFacesReturnsByGroup接口返回时有效。人员搜索类接口采用融合特征方式检索，该字段无意义
+     * @param string $PersonId 人员ID。
+     * @param string $FaceId 人脸ID。
+- 仅在SearchFaces/SearchFacesReturnsByGroup接口返回时有效。
+- 人员搜索类接口采用融合特征方式检索，该字段无意义。
      * @param float $Score 候选者的匹配得分。 
-
-1万大小人脸底库下，误识率百分之一对应分数为70分，误识率千分之一对应分数为80分，误识率万分之一对应分数为90分；
-10万大小人脸底库下，误识率百分之一对应分数为80分，误识率千分之一对应分数为90分，误识率万分之一对应分数为100分；
-30万大小人脸底库下，误识率百分之一对应分数为85分，误识率千分之一对应分数为95分。
-
-一般80分左右可适用大部分场景，建议分数不要超过90分。您可以根据实际情况选择合适的分数。
-     * @param string $PersonName 人员名称
+- 1万大小人脸底库下，误识率百分之一对应分数为70分，误识率千分之一对应分数为80分，误识率万分之一对应分数为90分。
+- 10万大小人脸底库下，误识率百分之一对应分数为80分，误识率千分之一对应分数为90分，误识率万分之一对应分数为100分。
+- 30万大小人脸底库下，误识率百分之一对应分数为85分，误识率千分之一对应分数为95分。
+- 一般80分左右可适用大部分场景，建议分数不要超过90分。您可以根据实际情况选择合适的分数。
+     * @param string $PersonName 人员名称。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Gender 人员性别
+     * @param integer $Gender 人员性别。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $PersonGroupInfos 包含此人员的人员库及描述字段内容列表
+     * @param array $PersonGroupInfos 包含此人员的人员库及描述字段内容列表。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 组织身份
  *
  * @method integer getIdentityId() 获取身份ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIdentityId(integer $IdentityId) 设置身份ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIdentityAliasName() 获取身份名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIdentityAliasName(string $IdentityAliasName) 设置身份名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getIdentityPolicy() 获取身份策略。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIdentityPolicy(array $IdentityPolicy) 设置身份策略。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIdentityType() 获取身份类型。 1-预设、 2-自定义
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIdentityType(integer $IdentityType) 设置身份类型。 1-预设、 2-自定义
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OrgIdentity extends AbstractModel
 {
     /**
      * @var integer 身份ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IdentityId;
 
     /**
      * @var string 身份名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IdentityAliasName;
 
     /**
      * @var string 描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var array 身份策略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IdentityPolicy;
 
     /**
      * @var integer 身份类型。 1-预设、 2-自定义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IdentityType;
 
     /**
      * @var string 更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @param integer $IdentityId 身份ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IdentityAliasName 身份名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $IdentityPolicy 身份策略。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IdentityType 身份类型。 1-预设、 2-自定义
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteNotificationConfiguration请求参数结构体
  *
- * @method string getAutoScalingNotificationId() 获取待删除的通知ID。
- * @method void setAutoScalingNotificationId(string $AutoScalingNotificationId) 设置待删除的通知ID。
+ * @method string getAutoScalingNotificationId() 获取待删除的通知ID，目前为必填参数。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeNotificationConfigurations](https://cloud.tencent.com/document/api/377/33183) ，取返回信息中的 AutoScalingNotificationId 获取通知ID。
+ * @method void setAutoScalingNotificationId(string $AutoScalingNotificationId) 设置待删除的通知ID，目前为必填参数。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeNotificationConfigurations](https://cloud.tencent.com/document/api/377/33183) ，取返回信息中的 AutoScalingNotificationId 获取通知ID。
  */
 class DeleteNotificationConfigurationRequest extends AbstractModel
 {
     /**
-     * @var string 待删除的通知ID。
+     * @var string 待删除的通知ID，目前为必填参数。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeNotificationConfigurations](https://cloud.tencent.com/document/api/377/33183) ，取返回信息中的 AutoScalingNotificationId 获取通知ID。
      */
     public $AutoScalingNotificationId;
 
     /**
-     * @param string $AutoScalingNotificationId 待删除的通知ID。
+     * @param string $AutoScalingNotificationId 待删除的通知ID，目前为必填参数。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeNotificationConfigurations](https://cloud.tencent.com/document/api/377/33183) ，取返回信息中的 AutoScalingNotificationId 获取通知ID。
      */
     function __construct()
     {

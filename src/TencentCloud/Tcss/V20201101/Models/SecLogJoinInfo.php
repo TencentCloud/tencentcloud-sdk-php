@@ -36,6 +36,8 @@ k8sApi: "k8s_api"
 容器启动: "container_launch"
 k8sApi: "k8s_api"
 )
+ * @method integer getClusterCount() 获取已接入集群数量
+ * @method void setClusterCount(integer $ClusterCount) 设置已接入集群数量
  */
 class SecLogJoinInfo extends AbstractModel
 {
@@ -64,6 +66,11 @@ k8sApi: "k8s_api"
     public $LogType;
 
     /**
+     * @var integer 已接入集群数量
+     */
+    public $ClusterCount;
+
+    /**
      * @param integer $Count 已接入普通主机数量
      * @param integer $SuperNodeCount 已接入超级节点数量
      * @param boolean $IsJoined 是否已接入(true:已接入 false:未接入)
@@ -72,6 +79,7 @@ k8sApi: "k8s_api"
 容器启动: "container_launch"
 k8sApi: "k8s_api"
 )
+     * @param integer $ClusterCount 已接入集群数量
      */
     function __construct()
     {
@@ -100,6 +108,10 @@ k8sApi: "k8s_api"
 
         if (array_key_exists("LogType",$param) and $param["LogType"] !== null) {
             $this->LogType = $param["LogType"];
+        }
+
+        if (array_key_exists("ClusterCount",$param) and $param["ClusterCount"] !== null) {
+            $this->ClusterCount = $param["ClusterCount"];
         }
     }
 }

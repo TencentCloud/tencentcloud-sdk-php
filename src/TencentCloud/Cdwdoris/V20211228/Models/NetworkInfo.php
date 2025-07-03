@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 网络信息
  *
  * @method string getZone() 获取可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZone(string $Zone) 设置可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubnetId() 获取子网id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetId(string $SubnetId) 设置子网id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSubnetIpNum() 获取当前子网可用ip数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetIpNum(integer $SubnetIpNum) 设置当前子网可用ip数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NetworkInfo extends AbstractModel
 {
     /**
      * @var string 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Zone;
 
     /**
      * @var string 子网id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetId;
 
     /**
      * @var integer 当前子网可用ip数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetIpNum;
 
     /**
      * @param string $Zone 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 子网id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SubnetIpNum 当前子网可用ip数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

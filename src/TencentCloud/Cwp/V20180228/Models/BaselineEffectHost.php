@@ -21,129 +21,89 @@ use TencentCloud\Common\AbstractModel;
  * 基线影响主机信息
  *
  * @method integer getPassCount() 获取通过项
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPassCount(integer $PassCount) 设置通过项
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFailCount() 获取风险项
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailCount(integer $FailCount) 设置风险项
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFirstScanTime() 获取首次检测事件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFirstScanTime(string $FirstScanTime) 设置首次检测事件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLastScanTime() 获取最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastScanTime(string $LastScanTime) 设置最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取风险项处理状态状态：0-未通过，1-通过
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置风险项处理状态状态：0-未通过，1-通过
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getQuuid() 获取主机Quuid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQuuid(string $Quuid) 设置主机Quuid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHostIp() 获取主机IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostIp(string $HostIp) 设置主机IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAliasName() 获取主机别名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAliasName(string $AliasName) 设置主机别名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUuid() 获取主机Uuid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUuid(string $Uuid) 设置主机Uuid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxStatus() 获取检测中状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxStatus(integer $MaxStatus) 设置检测中状态
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BaselineEffectHost extends AbstractModel
 {
     /**
      * @var integer 通过项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PassCount;
 
     /**
      * @var integer 风险项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailCount;
 
     /**
      * @var string 首次检测事件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FirstScanTime;
 
     /**
      * @var string 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastScanTime;
 
     /**
      * @var integer 风险项处理状态状态：0-未通过，1-通过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 主机Quuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Quuid;
 
     /**
      * @var string 主机IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostIp;
 
     /**
      * @var string 主机别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AliasName;
 
     /**
      * @var string 主机Uuid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uuid;
 
     /**
      * @var integer 检测中状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxStatus;
 
     /**
      * @param integer $PassCount 通过项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FailCount 风险项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FirstScanTime 首次检测事件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastScanTime 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 风险项处理状态状态：0-未通过，1-通过
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Quuid 主机Quuid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HostIp 主机IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AliasName 主机别名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uuid 主机Uuid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxStatus 检测中状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

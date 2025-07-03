@@ -32,8 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceCount(integer $InstanceCount) 设置购买实例数量。包年包月实例取值范围：[1，30]。默认取值：1。指定购买实例的数量不能超过用户所能购买的剩余配额数量
  * @method array getZones() 获取可用区列表。
 不填此参数，表示为随机可用区。
+可通过 <a href="https://cloud.tencent.com/document/product/1207/57513" target="_blank">DescribeZones</a>接口获取指定地域下的可用区列表信息
  * @method void setZones(array $Zones) 设置可用区列表。
 不填此参数，表示为随机可用区。
+可通过 <a href="https://cloud.tencent.com/document/product/1207/57513" target="_blank">DescribeZones</a>接口获取指定地域下的可用区列表信息
  * @method boolean getDryRun() 获取是否只预检此次请求。
 true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制和库存。
 如果检查不通过，则返回对应错误码；
@@ -66,6 +68,14 @@ false（默认）：发送正常请求，通过检查后直接创建实例
 数组最多支持10个元素。
  * @method Command getInitCommand() 获取创建实例后自动执行的命令。
  * @method void setInitCommand(Command $InitCommand) 设置创建实例后自动执行的命令。
+ * @method string getDomainName() 获取主域名。
+注意：域名指定后，仅支持购买一台实例（参数InstanceCount=1）。
+ * @method void setDomainName(string $DomainName) 设置主域名。
+注意：域名指定后，仅支持购买一台实例（参数InstanceCount=1）。
+ * @method string getSubdomain() 获取子域名。
+注意：域名指定后，仅支持购买一台实例（参数InstanceCount=1）。
+ * @method void setSubdomain(string $Subdomain) 设置子域名。
+注意：域名指定后，仅支持购买一台实例（参数InstanceCount=1）。
  */
 class CreateInstancesRequest extends AbstractModel
 {
@@ -97,6 +107,7 @@ class CreateInstancesRequest extends AbstractModel
     /**
      * @var array 可用区列表。
 不填此参数，表示为随机可用区。
+可通过 <a href="https://cloud.tencent.com/document/product/1207/57513" target="_blank">DescribeZones</a>接口获取指定地域下的可用区列表信息
      */
     public $Zones;
 
@@ -149,6 +160,18 @@ false（默认）：发送正常请求，通过检查后直接创建实例
     public $InitCommand;
 
     /**
+     * @var string 主域名。
+注意：域名指定后，仅支持购买一台实例（参数InstanceCount=1）。
+     */
+    public $DomainName;
+
+    /**
+     * @var string 子域名。
+注意：域名指定后，仅支持购买一台实例（参数InstanceCount=1）。
+     */
+    public $Subdomain;
+
+    /**
      * @param string $BundleId 套餐ID。可以通过调用 [DescribeBundles](https://cloud.tencent.com/document/api/1207/47575) 接口获取。
      * @param string $BlueprintId 镜像ID。可以通过调用 [DescribeBlueprints](https://cloud.tencent.com/document/api/1207/47689) 接口获取。
      * @param InstanceChargePrepaid $InstanceChargePrepaid 当前实例仅支持预付费模式，即包年包月相关参数设置，单位（月）。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。该参数必传。
@@ -156,6 +179,7 @@ false（默认）：发送正常请求，通过检查后直接创建实例
      * @param integer $InstanceCount 购买实例数量。包年包月实例取值范围：[1，30]。默认取值：1。指定购买实例的数量不能超过用户所能购买的剩余配额数量
      * @param array $Zones 可用区列表。
 不填此参数，表示为随机可用区。
+可通过 <a href="https://cloud.tencent.com/document/product/1207/57513" target="_blank">DescribeZones</a>接口获取指定地域下的可用区列表信息
      * @param boolean $DryRun 是否只预检此次请求。
 true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制和库存。
 如果检查不通过，则返回对应错误码；
@@ -172,6 +196,10 @@ false（默认）：发送正常请求，通过检查后直接创建实例
 如果标签不存在会为您自动创建标签。
 数组最多支持10个元素。
      * @param Command $InitCommand 创建实例后自动执行的命令。
+     * @param string $DomainName 主域名。
+注意：域名指定后，仅支持购买一台实例（参数InstanceCount=1）。
+     * @param string $Subdomain 子域名。
+注意：域名指定后，仅支持购买一台实例（参数InstanceCount=1）。
      */
     function __construct()
     {
@@ -253,6 +281,14 @@ false（默认）：发送正常请求，通过检查后直接创建实例
         if (array_key_exists("InitCommand",$param) and $param["InitCommand"] !== null) {
             $this->InitCommand = new Command();
             $this->InitCommand->deserialize($param["InitCommand"]);
+        }
+
+        if (array_key_exists("DomainName",$param) and $param["DomainName"] !== null) {
+            $this->DomainName = $param["DomainName"];
+        }
+
+        if (array_key_exists("Subdomain",$param) and $param["Subdomain"] !== null) {
+            $this->Subdomain = $param["Subdomain"];
         }
     }
 }

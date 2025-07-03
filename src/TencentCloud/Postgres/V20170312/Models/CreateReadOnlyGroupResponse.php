@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getReadOnlyGroupId() 获取只读组ID
  * @method void setReadOnlyGroupId(string $ReadOnlyGroupId) 设置只读组ID
  * @method integer getFlowId() 获取流程ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowId(integer $FlowId) 设置流程ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -38,7 +36,6 @@ class CreateReadOnlyGroupResponse extends AbstractModel
 
     /**
      * @var integer 流程ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowId;
 
@@ -50,7 +47,6 @@ class CreateReadOnlyGroupResponse extends AbstractModel
     /**
      * @param string $ReadOnlyGroupId 只读组ID
      * @param integer $FlowId 流程ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

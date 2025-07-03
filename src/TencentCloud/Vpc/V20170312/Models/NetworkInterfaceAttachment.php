@@ -20,22 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 弹性网卡绑定关系
  *
- * @method string getInstanceId() 获取云主机实例ID。
- * @method void setInstanceId(string $InstanceId) 设置云主机实例ID。
  * @method integer getDeviceIndex() 获取网卡在云主机实例内的序号。
  * @method void setDeviceIndex(integer $DeviceIndex) 设置网卡在云主机实例内的序号。
  * @method string getInstanceAccountId() 获取云主机所有者账户信息。
  * @method void setInstanceAccountId(string $InstanceAccountId) 设置云主机所有者账户信息。
  * @method string getAttachTime() 获取绑定时间。
  * @method void setAttachTime(string $AttachTime) 设置绑定时间。
+ * @method string getInstanceId() 获取云主机实例ID。
+ * @method void setInstanceId(string $InstanceId) 设置云主机实例ID。
  */
 class NetworkInterfaceAttachment extends AbstractModel
 {
-    /**
-     * @var string 云主机实例ID。
-     */
-    public $InstanceId;
-
     /**
      * @var integer 网卡在云主机实例内的序号。
      */
@@ -52,10 +47,15 @@ class NetworkInterfaceAttachment extends AbstractModel
     public $AttachTime;
 
     /**
-     * @param string $InstanceId 云主机实例ID。
+     * @var string 云主机实例ID。
+     */
+    public $InstanceId;
+
+    /**
      * @param integer $DeviceIndex 网卡在云主机实例内的序号。
      * @param string $InstanceAccountId 云主机所有者账户信息。
      * @param string $AttachTime 绑定时间。
+     * @param string $InstanceId 云主机实例ID。
      */
     function __construct()
     {
@@ -70,10 +70,6 @@ class NetworkInterfaceAttachment extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
-        }
-
         if (array_key_exists("DeviceIndex",$param) and $param["DeviceIndex"] !== null) {
             $this->DeviceIndex = $param["DeviceIndex"];
         }
@@ -84,6 +80,10 @@ class NetworkInterfaceAttachment extends AbstractModel
 
         if (array_key_exists("AttachTime",$param) and $param["AttachTime"] !== null) {
             $this->AttachTime = $param["AttachTime"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

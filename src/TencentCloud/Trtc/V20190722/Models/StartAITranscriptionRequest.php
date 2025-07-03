@@ -26,18 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoomId(string $RoomId) 设置TRTC的[RoomId](https://cloud.tencent.com/document/product/647/46351#roomid)，表示开启转录任务的房间号。
  * @method TranscriptionParams getTranscriptionParams() 获取转录机器人的参数。
  * @method void setTranscriptionParams(TranscriptionParams $TranscriptionParams) 设置转录机器人的参数。
- * @method string getSessionId() 获取调用方传入的唯一Id，服务端用来去重。
+ * @method string getSessionId() 获取调用方传入的唯一Id，服务端用来任务去重，重复的任务会发起失败。服务端固定使用SdkAppId+RoomId+RoomIdType+RobotUserId来去重，如果传入了SessionId，也会使用SessionId去重。
 注意：
-如果传入该参数，服务端优先使用该参数来去重。
-如果不传该参数，服务端的去重策略如下：
-- 如果TranscriptionMode字段是0，则一个房间只能开启一个任务
-- 如果TranscriptionMode字段是1，则一个TargetUserId只能开启一个任务
- * @method void setSessionId(string $SessionId) 设置调用方传入的唯一Id，服务端用来去重。
+TranscriptionMode为0时，需要保证一个房间内只发起一个任务，如果发起多个任务，则机器人之间会相互订阅，除非主动停止任务，否则只有10小时后任务才会超时退出，这种情况下建议填写SessionId，保证后续重复发起的任务失败。
+ * @method void setSessionId(string $SessionId) 设置调用方传入的唯一Id，服务端用来任务去重，重复的任务会发起失败。服务端固定使用SdkAppId+RoomId+RoomIdType+RobotUserId来去重，如果传入了SessionId，也会使用SessionId去重。
 注意：
-如果传入该参数，服务端优先使用该参数来去重。
-如果不传该参数，服务端的去重策略如下：
-- 如果TranscriptionMode字段是0，则一个房间只能开启一个任务
-- 如果TranscriptionMode字段是1，则一个TargetUserId只能开启一个任务
+TranscriptionMode为0时，需要保证一个房间内只发起一个任务，如果发起多个任务，则机器人之间会相互订阅，除非主动停止任务，否则只有10小时后任务才会超时退出，这种情况下建议填写SessionId，保证后续重复发起的任务失败。
  * @method integer getRoomIdType() 获取TRTC房间号的类型，0代表数字房间号，1代表字符串房间号。不填默认是数字房间号。
  * @method void setRoomIdType(integer $RoomIdType) 设置TRTC房间号的类型，0代表数字房间号，1代表字符串房间号。不填默认是数字房间号。
  * @method RecognizeConfig getRecognizeConfig() 获取语音识别配置。
@@ -61,12 +55,9 @@ class StartAITranscriptionRequest extends AbstractModel
     public $TranscriptionParams;
 
     /**
-     * @var string 调用方传入的唯一Id，服务端用来去重。
+     * @var string 调用方传入的唯一Id，服务端用来任务去重，重复的任务会发起失败。服务端固定使用SdkAppId+RoomId+RoomIdType+RobotUserId来去重，如果传入了SessionId，也会使用SessionId去重。
 注意：
-如果传入该参数，服务端优先使用该参数来去重。
-如果不传该参数，服务端的去重策略如下：
-- 如果TranscriptionMode字段是0，则一个房间只能开启一个任务
-- 如果TranscriptionMode字段是1，则一个TargetUserId只能开启一个任务
+TranscriptionMode为0时，需要保证一个房间内只发起一个任务，如果发起多个任务，则机器人之间会相互订阅，除非主动停止任务，否则只有10小时后任务才会超时退出，这种情况下建议填写SessionId，保证后续重复发起的任务失败。
      */
     public $SessionId;
 
@@ -84,12 +75,9 @@ class StartAITranscriptionRequest extends AbstractModel
      * @param integer $SdkAppId TRTC的[SdkAppId](https://cloud.tencent.com/document/product/647/46351#sdkappid)，和开启转录任务的房间使用的SdkAppId相同。
      * @param string $RoomId TRTC的[RoomId](https://cloud.tencent.com/document/product/647/46351#roomid)，表示开启转录任务的房间号。
      * @param TranscriptionParams $TranscriptionParams 转录机器人的参数。
-     * @param string $SessionId 调用方传入的唯一Id，服务端用来去重。
+     * @param string $SessionId 调用方传入的唯一Id，服务端用来任务去重，重复的任务会发起失败。服务端固定使用SdkAppId+RoomId+RoomIdType+RobotUserId来去重，如果传入了SessionId，也会使用SessionId去重。
 注意：
-如果传入该参数，服务端优先使用该参数来去重。
-如果不传该参数，服务端的去重策略如下：
-- 如果TranscriptionMode字段是0，则一个房间只能开启一个任务
-- 如果TranscriptionMode字段是1，则一个TargetUserId只能开启一个任务
+TranscriptionMode为0时，需要保证一个房间内只发起一个任务，如果发起多个任务，则机器人之间会相互订阅，除非主动停止任务，否则只有10小时后任务才会超时退出，这种情况下建议填写SessionId，保证后续重复发起的任务失败。
      * @param integer $RoomIdType TRTC房间号的类型，0代表数字房间号，1代表字符串房间号。不填默认是数字房间号。
      * @param RecognizeConfig $RecognizeConfig 语音识别配置。
      */

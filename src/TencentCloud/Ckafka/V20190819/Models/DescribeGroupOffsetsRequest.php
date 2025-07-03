@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGroupOffsets请求参数结构体
  *
- * @method string getInstanceId() 获取（过滤条件）按照实例 ID 过滤
- * @method void setInstanceId(string $InstanceId) 设置（过滤条件）按照实例 ID 过滤
+ * @method string getInstanceId() 获取ckafka集群实例Id
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
  * @method string getGroup() 获取Kafka 消费分组
  * @method void setGroup(string $Group) 设置Kafka 消费分组
  * @method array getTopics() 获取group 订阅的主题名称数组，如果没有该数组，则表示指定的 group 下所有 topic 信息
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeGroupOffsetsRequest extends AbstractModel
 {
     /**
-     * @var string （过滤条件）按照实例 ID 过滤
+     * @var string ckafka集群实例Id
      */
     public $InstanceId;
 
@@ -66,7 +66,7 @@ class DescribeGroupOffsetsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param string $InstanceId （过滤条件）按照实例 ID 过滤
+     * @param string $InstanceId ckafka集群实例Id
      * @param string $Group Kafka 消费分组
      * @param array $Topics group 订阅的主题名称数组，如果没有该数组，则表示指定的 group 下所有 topic 信息
      * @param string $SearchWord 模糊匹配 topicName

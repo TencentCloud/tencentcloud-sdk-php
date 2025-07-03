@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 用于创建集群价格清单 不同可用区下价格详情
  *
  * @method string getZoneId() 获取可用区Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneId(string $ZoneId) 设置可用区Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getNodeDetailPrice() 获取不同节点的价格详情
  * @method void setNodeDetailPrice(array $NodeDetailPrice) 设置不同节点的价格详情
  */
@@ -31,7 +29,6 @@ class ZoneDetailPriceResult extends AbstractModel
 {
     /**
      * @var string 可用区Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneId;
 
@@ -42,7 +39,6 @@ class ZoneDetailPriceResult extends AbstractModel
 
     /**
      * @param string $ZoneId 可用区Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $NodeDetailPrice 不同节点的价格详情
      */
     function __construct()

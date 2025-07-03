@@ -21,17 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * 查询录像上云计划关联通道的返回数据
  *
  * @method integer getPageNumber() 获取第几页
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPageNumber(integer $PageNumber) 设置第几页
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPageSize() 获取当前页的设备数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPageSize(integer $PageSize) 设置当前页的设备数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取本次查询的设备通道总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置本次查询的设备通道总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getList() 获取设备通道信息列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setList(array $List) 设置设备通道信息列表
@@ -41,19 +35,16 @@ class ListRecordBackupPlanDevicesData extends AbstractModel
 {
     /**
      * @var integer 第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PageNumber;
 
     /**
      * @var integer 当前页的设备数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PageSize;
 
     /**
      * @var integer 本次查询的设备通道总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
@@ -65,11 +56,8 @@ class ListRecordBackupPlanDevicesData extends AbstractModel
 
     /**
      * @param integer $PageNumber 第几页
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PageSize 当前页的设备数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 本次查询的设备通道总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $List 设备通道信息列表
 注意：此字段可能返回 null，表示取不到有效值。
      */

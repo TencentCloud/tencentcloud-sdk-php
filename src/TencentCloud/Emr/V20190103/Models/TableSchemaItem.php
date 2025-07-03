@@ -31,13 +31,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCandidates(array $Candidates) 设置筛选的候选集
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getClickable() 获取是否可点击
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClickable(boolean $Clickable) 设置是否可点击
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTitle() 获取展示的名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTitle(string $Title) 设置展示的名字
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TableSchemaItem extends AbstractModel
 {
@@ -64,13 +60,11 @@ class TableSchemaItem extends AbstractModel
 
     /**
      * @var boolean 是否可点击
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Clickable;
 
     /**
      * @var string 展示的名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Title;
 
@@ -81,9 +75,7 @@ class TableSchemaItem extends AbstractModel
      * @param array $Candidates 筛选的候选集
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Clickable 是否可点击
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Title 展示的名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

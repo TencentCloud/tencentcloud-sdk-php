@@ -22,10 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getCertificateAttribution() 获取证书归属。self-表示使用该账号自身的证书，others-表示引用其他账号的证书，默认取值self。
- * @method void setCertificateAttribution(string $CertificateAttribution) 设置证书归属。self-表示使用该账号自身的证书，others-表示引用其他账号的证书，默认取值self。
+ * @method string getCertificateAttribution() 获取证书归属。self-表示使用该账号自身的证书，others-表示引用其他账号的证书，kms-表示使用kms的CMK证书，默认取值self。
+ * @method void setCertificateAttribution(string $CertificateAttribution) 设置证书归属。self-表示使用该账号自身的证书，others-表示引用其他账号的证书，kms-表示使用kms的CMK证书，默认取值self。
  * @method string getQuoteUin() 获取引用的其他主账号ID，当CertificateAttribution 为others时必填。
  * @method void setQuoteUin(string $QuoteUin) 设置引用的其他主账号ID，当CertificateAttribution 为others时必填。
+ * @method string getKeyId() 获取CertificateAttribution为kms时必填
+ * @method void setKeyId(string $KeyId) 设置CertificateAttribution为kms时必填
+ * @method string getKeyRegion() 获取CertificateAttribution为kms时必填
+ * @method void setKeyRegion(string $KeyRegion) 设置CertificateAttribution为kms时必填
  */
 class ModifyInstanceEncryptAttributesRequest extends AbstractModel
 {
@@ -35,7 +39,7 @@ class ModifyInstanceEncryptAttributesRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 证书归属。self-表示使用该账号自身的证书，others-表示引用其他账号的证书，默认取值self。
+     * @var string 证书归属。self-表示使用该账号自身的证书，others-表示引用其他账号的证书，kms-表示使用kms的CMK证书，默认取值self。
      */
     public $CertificateAttribution;
 
@@ -45,9 +49,21 @@ class ModifyInstanceEncryptAttributesRequest extends AbstractModel
     public $QuoteUin;
 
     /**
+     * @var string CertificateAttribution为kms时必填
+     */
+    public $KeyId;
+
+    /**
+     * @var string CertificateAttribution为kms时必填
+     */
+    public $KeyRegion;
+
+    /**
      * @param string $InstanceId 实例ID
-     * @param string $CertificateAttribution 证书归属。self-表示使用该账号自身的证书，others-表示引用其他账号的证书，默认取值self。
+     * @param string $CertificateAttribution 证书归属。self-表示使用该账号自身的证书，others-表示引用其他账号的证书，kms-表示使用kms的CMK证书，默认取值self。
      * @param string $QuoteUin 引用的其他主账号ID，当CertificateAttribution 为others时必填。
+     * @param string $KeyId CertificateAttribution为kms时必填
+     * @param string $KeyRegion CertificateAttribution为kms时必填
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class ModifyInstanceEncryptAttributesRequest extends AbstractModel
 
         if (array_key_exists("QuoteUin",$param) and $param["QuoteUin"] !== null) {
             $this->QuoteUin = $param["QuoteUin"];
+        }
+
+        if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
+            $this->KeyId = $param["KeyId"];
+        }
+
+        if (array_key_exists("KeyRegion",$param) and $param["KeyRegion"] !== null) {
+            $this->KeyRegion = $param["KeyRegion"];
         }
     }
 }

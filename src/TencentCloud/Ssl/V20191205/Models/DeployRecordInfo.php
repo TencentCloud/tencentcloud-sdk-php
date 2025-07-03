@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceType(string $ResourceType) 设置部署资源类型
  * @method string getRegion() 获取部署地域
  * @method void setRegion(string $Region) 设置部署地域
- * @method integer getStatus() 获取部署状态
- * @method void setStatus(integer $Status) 设置部署状态
+ * @method integer getStatus() 获取部署状态:0 未开始， 1 成功， 2 失败
+ * @method void setStatus(integer $Status) 设置部署状态:0 未开始， 1 成功， 2 失败
  * @method string getCreateTime() 获取部署时间
  * @method void setCreateTime(string $CreateTime) 设置部署时间
  * @method string getUpdateTime() 获取最近一次更新时间
@@ -58,7 +58,7 @@ class DeployRecordInfo extends AbstractModel
     public $Region;
 
     /**
-     * @var integer 部署状态
+     * @var integer 部署状态:0 未开始， 1 成功， 2 失败
      */
     public $Status;
 
@@ -77,7 +77,7 @@ class DeployRecordInfo extends AbstractModel
      * @param string $CertId 部署证书ID
      * @param string $ResourceType 部署资源类型
      * @param string $Region 部署地域
-     * @param integer $Status 部署状态
+     * @param integer $Status 部署状态:0 未开始， 1 成功， 2 失败
      * @param string $CreateTime 部署时间
      * @param string $UpdateTime 最近一次更新时间
      */

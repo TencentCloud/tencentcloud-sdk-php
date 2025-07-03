@@ -34,10 +34,6 @@ postgre_like_proto -- Postgre协议类关系型数据库。
  * @method void setResourceRegion(string $ResourceRegion) 设置资源所处地域。
  * @method string getResourceId() 获取自建云资源ID。
  * @method void setResourceId(string $ResourceId) 设置自建云资源ID。
- * @method string getResourceVip() 获取可用于访问自建云资源的IP。
- * @method void setResourceVip(string $ResourceVip) 设置可用于访问自建云资源的IP。
- * @method integer getResourceVPort() 获取可用于访问自建云资源的端口。
- * @method void setResourceVPort(integer $ResourceVPort) 设置可用于访问自建云资源的端口。
  * @method string getResourceUniqueVpcId() 获取自建云资源的VPC ID。
  * @method void setResourceUniqueVpcId(string $ResourceUniqueVpcId) 设置自建云资源的VPC ID。
  * @method string getResourceUniqueSubnetId() 获取自建云资源的Subnet ID。
@@ -48,10 +44,18 @@ clb - 通过LB的方式进行访问。
  * @method void setResourceAccessType(string $ResourceAccessType) 设置自建云资源所处的服务类型，可选：
 cvm - 通过云服务器直接访问。
 clb - 通过LB的方式进行访问。
- * @method string getUserName() 获取账户名。
- * @method void setUserName(string $UserName) 设置账户名。
- * @method string getPassword() 获取账户密码。
- * @method void setPassword(string $Password) 设置账户密码。
+ * @method string getResourceVip() 获取可用于访问自建云资源的IP。
+emr的连接不需要使用该字段
+ * @method void setResourceVip(string $ResourceVip) 设置可用于访问自建云资源的IP。
+emr的连接不需要使用该字段
+ * @method integer getResourceVPort() 获取可用于访问自建云资源的端口。
+emr的连接不需要使用该字段
+ * @method void setResourceVPort(integer $ResourceVPort) 设置可用于访问自建云资源的端口。
+emr的连接不需要使用该字段
+ * @method string getUserName() 获取账户名。如果emr_hive的连接方式为“LDAP”，则复用该字段
+ * @method void setUserName(string $UserName) 设置账户名。如果emr_hive的连接方式为“LDAP”，则复用该字段
+ * @method string getPassword() 获取账户密码。如果emr_hive的连接方式为“LDAP”，则复用该字段
+ * @method void setPassword(string $Password) 设置账户密码。如果emr_hive的连接方式为“LDAP”，则复用该字段
  * @method string getResourceName() 获取资源名称，1-60个字符。
  * @method void setResourceName(string $ResourceName) 设置资源名称，1-60个字符。
  * @method string getInstanceType() 获取实例类型
@@ -64,6 +68,8 @@ sid
 serviceName
  * @method string getInstanceValue() 获取实例值
  * @method void setInstanceValue(string $InstanceValue) 设置实例值
+ * @method string getAuthRange() 获取授权范围（all:授权整个数据源 manual:手动指定数据库）
+ * @method void setAuthRange(string $AuthRange) 设置授权范围（all:授权整个数据源 manual:手动指定数据库）
  */
 class CreateDSPASelfBuildMetaResourceRequest extends AbstractModel
 {
@@ -91,16 +97,6 @@ postgre_like_proto -- Postgre协议类关系型数据库。
     public $ResourceId;
 
     /**
-     * @var string 可用于访问自建云资源的IP。
-     */
-    public $ResourceVip;
-
-    /**
-     * @var integer 可用于访问自建云资源的端口。
-     */
-    public $ResourceVPort;
-
-    /**
      * @var string 自建云资源的VPC ID。
      */
     public $ResourceUniqueVpcId;
@@ -118,12 +114,24 @@ clb - 通过LB的方式进行访问。
     public $ResourceAccessType;
 
     /**
-     * @var string 账户名。
+     * @var string 可用于访问自建云资源的IP。
+emr的连接不需要使用该字段
+     */
+    public $ResourceVip;
+
+    /**
+     * @var integer 可用于访问自建云资源的端口。
+emr的连接不需要使用该字段
+     */
+    public $ResourceVPort;
+
+    /**
+     * @var string 账户名。如果emr_hive的连接方式为“LDAP”，则复用该字段
      */
     public $UserName;
 
     /**
-     * @var string 账户密码。
+     * @var string 账户密码。如果emr_hive的连接方式为“LDAP”，则复用该字段
      */
     public $Password;
 
@@ -146,6 +154,11 @@ serviceName
     public $InstanceValue;
 
     /**
+     * @var string 授权范围（all:授权整个数据源 manual:手动指定数据库）
+     */
+    public $AuthRange;
+
+    /**
      * @param string $DspaId Dspa实例ID。
      * @param string $MetaType 自建数据库类型。目前支持的自建数据库类型按照协议进行区分，支持两种开源数据库协议：
 mysql_like_proto -- Mysql协议类关系型数据库，
@@ -153,21 +166,24 @@ postgre_like_proto -- Postgre协议类关系型数据库。
 其他闭源协议的数据库如SqlServer、Oracle等暂不支持。
      * @param string $ResourceRegion 资源所处地域。
      * @param string $ResourceId 自建云资源ID。
-     * @param string $ResourceVip 可用于访问自建云资源的IP。
-     * @param integer $ResourceVPort 可用于访问自建云资源的端口。
      * @param string $ResourceUniqueVpcId 自建云资源的VPC ID。
      * @param string $ResourceUniqueSubnetId 自建云资源的Subnet ID。
      * @param string $ResourceAccessType 自建云资源所处的服务类型，可选：
 cvm - 通过云服务器直接访问。
 clb - 通过LB的方式进行访问。
-     * @param string $UserName 账户名。
-     * @param string $Password 账户密码。
+     * @param string $ResourceVip 可用于访问自建云资源的IP。
+emr的连接不需要使用该字段
+     * @param integer $ResourceVPort 可用于访问自建云资源的端口。
+emr的连接不需要使用该字段
+     * @param string $UserName 账户名。如果emr_hive的连接方式为“LDAP”，则复用该字段
+     * @param string $Password 账户密码。如果emr_hive的连接方式为“LDAP”，则复用该字段
      * @param string $ResourceName 资源名称，1-60个字符。
      * @param string $InstanceType 实例类型
 databse
 sid
 serviceName
      * @param string $InstanceValue 实例值
+     * @param string $AuthRange 授权范围（all:授权整个数据源 manual:手动指定数据库）
      */
     function __construct()
     {
@@ -198,14 +214,6 @@ serviceName
             $this->ResourceId = $param["ResourceId"];
         }
 
-        if (array_key_exists("ResourceVip",$param) and $param["ResourceVip"] !== null) {
-            $this->ResourceVip = $param["ResourceVip"];
-        }
-
-        if (array_key_exists("ResourceVPort",$param) and $param["ResourceVPort"] !== null) {
-            $this->ResourceVPort = $param["ResourceVPort"];
-        }
-
         if (array_key_exists("ResourceUniqueVpcId",$param) and $param["ResourceUniqueVpcId"] !== null) {
             $this->ResourceUniqueVpcId = $param["ResourceUniqueVpcId"];
         }
@@ -216,6 +224,14 @@ serviceName
 
         if (array_key_exists("ResourceAccessType",$param) and $param["ResourceAccessType"] !== null) {
             $this->ResourceAccessType = $param["ResourceAccessType"];
+        }
+
+        if (array_key_exists("ResourceVip",$param) and $param["ResourceVip"] !== null) {
+            $this->ResourceVip = $param["ResourceVip"];
+        }
+
+        if (array_key_exists("ResourceVPort",$param) and $param["ResourceVPort"] !== null) {
+            $this->ResourceVPort = $param["ResourceVPort"];
         }
 
         if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
@@ -236,6 +252,10 @@ serviceName
 
         if (array_key_exists("InstanceValue",$param) and $param["InstanceValue"] !== null) {
             $this->InstanceValue = $param["InstanceValue"];
+        }
+
+        if (array_key_exists("AuthRange",$param) and $param["AuthRange"] !== null) {
+            $this->AuthRange = $param["AuthRange"];
         }
     }
 }

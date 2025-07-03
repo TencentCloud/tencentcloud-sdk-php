@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 自定义驱动信息
  *
  * @method string getAddress() 获取自定义GPU驱动地址链接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddress(string $Address) 设置自定义GPU驱动地址链接
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CustomDriver extends AbstractModel
 {
     /**
      * @var string 自定义GPU驱动地址链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Address;
 
     /**
      * @param string $Address 自定义GPU驱动地址链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

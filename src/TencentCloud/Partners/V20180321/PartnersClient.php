@@ -36,9 +36,13 @@ use TencentCloud\Partners\V20180321\Models as Models;
  * @method Models\DescribeAgentClientGradeResponse DescribeAgentClientGrade(Models\DescribeAgentClientGradeRequest $req) 传入代客uin，查客户级别，客户审核状态，客户实名认证状态
  * @method Models\DescribeAgentClientsResponse DescribeAgentClients(Models\DescribeAgentClientsRequest $req) 代理商可查询自己名下待审核客户列表
  * @method Models\DescribeAgentDealsByCacheResponse DescribeAgentDealsByCache(Models\DescribeAgentDealsByCacheRequest $req) 供代理商拉取缓存的全量预付费客户订单
+ * @method Models\DescribeAgentDealsPriceDetailByDealNameResponse DescribeAgentDealsPriceDetailByDealName(Models\DescribeAgentDealsPriceDetailByDealNameRequest $req) 供代理商使用名下有效普通代客的预付费子订单号查询订单费用详情
  * @method Models\DescribeAgentPayDealsV2Response DescribeAgentPayDealsV2(Models\DescribeAgentPayDealsV2Request $req) 可以查询代理商代付的预付费订单
+ * @method Models\DescribeAgentRelateBigDealIdsResponse DescribeAgentRelateBigDealIds(Models\DescribeAgentRelateBigDealIdsRequest $req) 根据大订单号查询关联申请合并支付的其他订单号
  * @method Models\DescribeAgentSelfPayDealsV2Response DescribeAgentSelfPayDealsV2(Models\DescribeAgentSelfPayDealsV2Request $req) 查询代理商名下指定代客的自付订单（预付费）
  * @method Models\DescribeClientBalanceNewResponse DescribeClientBalanceNew(Models\DescribeClientBalanceNewRequest $req) 为合作伙伴提供查询客户余额能力。调用者必须是合作伙伴，只能查询自己名下客户余额
+ * @method Models\DescribeClientJoinIncreaseListResponse DescribeClientJoinIncreaseList(Models\DescribeClientJoinIncreaseListRequest $req) 查询合作伙伴名下客户的参与增量激励考核信息列表
+ * @method Models\DescribeClientSwitchTraTaskInfoResponse DescribeClientSwitchTraTaskInfo(Models\DescribeClientSwitchTraTaskInfoRequest $req) 查询客户的交易类型切换任务的信息，查询成功则获取当前用户的切换链接，查询失败则返回失败的原因
  * @method Models\DescribeRebateInfosResponse DescribeRebateInfos(Models\DescribeRebateInfosRequest $req) 【该接口已下线，请切换使用升级版本DescribeRebateInfosNew】代理商可查询自己名下全部返佣信息
  * @method Models\DescribeRebateInfosNewResponse DescribeRebateInfosNew(Models\DescribeRebateInfosNewRequest $req) 代理商可查询自己名下全部返佣信息
  * @method Models\DescribeSalesmansResponse DescribeSalesmans(Models\DescribeSalesmansRequest $req) 代理商查询名下业务员列表信息

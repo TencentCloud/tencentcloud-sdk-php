@@ -57,11 +57,14 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\CreateSparkAppResponse CreateSparkApp(Models\CreateSparkAppRequest $req) 创建spark作业
  * @method Models\CreateSparkAppTaskResponse CreateSparkAppTask(Models\CreateSparkAppTaskRequest $req) 启动Spark作业
  * @method Models\CreateSparkSessionBatchSQLResponse CreateSparkSessionBatchSQL(Models\CreateSparkSessionBatchSQLRequest $req) 本接口（CreateSparkSessionBatchSQL）用于向Spark作业引擎提交Spark SQL批任务。
+ * @method Models\CreateSparkSubmitTaskResponse CreateSparkSubmitTask(Models\CreateSparkSubmitTaskRequest $req) 本接口（CreateSparkSubmitTask）用于提交SparkSbumit批流任务。
  * @method Models\CreateStoreLocationResponse CreateStoreLocation(Models\CreateStoreLocationRequest $req) 该接口（CreateStoreLocation）新增或覆盖计算结果存储位置。
  * @method Models\CreateTableResponse CreateTable(Models\CreateTableRequest $req) 本接口（CreateTable）用于生成建表SQL。
  * @method Models\CreateTaskResponse CreateTask(Models\CreateTaskRequest $req) 本接口（CreateTask）用于创建并执行SQL任务。（推荐使用CreateTasks接口）
  * @method Models\CreateTasksResponse CreateTasks(Models\CreateTasksRequest $req) 本接口（CreateTasks），用于批量创建并执行SQL任务
- * @method Models\CreateTasksInOrderResponse CreateTasksInOrder(Models\CreateTasksInOrderRequest $req) 按顺序创建任务（已经废弃，后期不再维护，请使用接口CreateTasks）
+ * @method Models\CreateTasksInOrderResponse CreateTasksInOrder(Models\CreateTasksInOrderRequest $req) 废弃接口，申请下线
+
+按顺序创建任务（已经废弃，后期不再维护，请使用接口CreateTasks）
  * @method Models\CreateUserResponse CreateUser(Models\CreateUserRequest $req) 创建用户
  * @method Models\CreateWorkGroupResponse CreateWorkGroup(Models\CreateWorkGroupRequest $req) 创建工作组
  * @method Models\DeleteCHDFSBindingProductResponse DeleteCHDFSBindingProduct(Models\DeleteCHDFSBindingProductRequest $req) 此接口（DeleteCHDFSBindingProduct）用于删除元数据加速桶和产品绑定关系
@@ -69,11 +72,13 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DeleteNotebookSessionResponse DeleteNotebookSession(Models\DeleteNotebookSessionRequest $req) 本接口（DeleteNotebookSession）用于删除交互式session（notebook）
  * @method Models\DeleteScriptResponse DeleteScript(Models\DeleteScriptRequest $req) 该接口（DeleteScript）用于删除sql脚本。
  * @method Models\DeleteSparkAppResponse DeleteSparkApp(Models\DeleteSparkAppRequest $req) 删除spark作业
+ * @method Models\DeleteTableResponse DeleteTable(Models\DeleteTableRequest $req) 删除表
  * @method Models\DeleteThirdPartyAccessUserResponse DeleteThirdPartyAccessUser(Models\DeleteThirdPartyAccessUserRequest $req) 本接口（RegisterThirdPartyAccessUser）用于移除第三方平台访问
  * @method Models\DeleteUserResponse DeleteUser(Models\DeleteUserRequest $req) 删除用户
  * @method Models\DeleteUsersFromWorkGroupResponse DeleteUsersFromWorkGroup(Models\DeleteUsersFromWorkGroupRequest $req) 从工作组中删除用户
  * @method Models\DeleteWorkGroupResponse DeleteWorkGroup(Models\DeleteWorkGroupRequest $req) 删除工作组
  * @method Models\DescribeAdvancedStoreLocationResponse DescribeAdvancedStoreLocation(Models\DescribeAdvancedStoreLocationRequest $req) 查询sql查询界面高级设置
+ * @method Models\DescribeClusterMonitorInfosResponse DescribeClusterMonitorInfos(Models\DescribeClusterMonitorInfosRequest $req) 查询任务监控指标信息
  * @method Models\DescribeDLCCatalogAccessResponse DescribeDLCCatalogAccess(Models\DescribeDLCCatalogAccessRequest $req) 查询DLC Catalog授权列表
  * @method Models\DescribeDMSDatabaseResponse DescribeDMSDatabase(Models\DescribeDMSDatabaseRequest $req) DMS元数据获取库
  * @method Models\DescribeDMSPartitionsResponse DescribeDMSPartitions(Models\DescribeDMSPartitionsRequest $req) DMS元数据获取分区
@@ -83,7 +88,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DescribeDataEngineEventsResponse DescribeDataEngineEvents(Models\DescribeDataEngineEventsRequest $req) 查询数据引擎事件
  * @method Models\DescribeDataEngineImageVersionsResponse DescribeDataEngineImageVersions(Models\DescribeDataEngineImageVersionsRequest $req) 本接口（DescribeDataEngineImageVersions）用于获取独享集群大版本镜像列表。
  * @method Models\DescribeDataEnginePythonSparkImagesResponse DescribeDataEnginePythonSparkImages(Models\DescribeDataEnginePythonSparkImagesRequest $req) 本接口（DescribeDataEnginePythonSparkImages）用于获取PYSPARK镜像列表
- * @method Models\DescribeDataEnginesResponse DescribeDataEngines(Models\DescribeDataEnginesRequest $req) 本接口（DescribeDataEngines）用于查询DataEngines信息列表
+ * @method Models\DescribeDataEnginesResponse DescribeDataEngines(Models\DescribeDataEnginesRequest $req) 本接口（DescribeDataEngines）用于查询DataEngines信息列表.
  * @method Models\DescribeDataEnginesScaleDetailResponse DescribeDataEnginesScaleDetail(Models\DescribeDataEnginesScaleDetailRequest $req) 查询引擎规格详情
  * @method Models\DescribeDatabasesResponse DescribeDatabases(Models\DescribeDatabasesRequest $req) 本接口（DescribeDatabases）用于查询数据库列表。
  * @method Models\DescribeDatasourceConnectionResponse DescribeDatasourceConnection(Models\DescribeDatasourceConnectionRequest $req) 本接口（DescribeDatasourceConnection）用于查询数据源信息
@@ -110,11 +115,14 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DescribeStoreLocationResponse DescribeStoreLocation(Models\DescribeStoreLocationRequest $req) 查询计算结果存储位置。
  * @method Models\DescribeSubUserAccessPolicyResponse DescribeSubUserAccessPolicy(Models\DescribeSubUserAccessPolicyRequest $req) 本接口（DescribeSubUserAccessPolicy）用于开通了第三方平台访问的用户，查询其子用户的访问策略
  * @method Models\DescribeTableResponse DescribeTable(Models\DescribeTableRequest $req) 本接口（DescribeTable），用于查询单个表的详细信息。
+ * @method Models\DescribeTablePartitionsResponse DescribeTablePartitions(Models\DescribeTablePartitionsRequest $req) 本接口（DescribeTablePartitions）用于查询数据表分区信息
  * @method Models\DescribeTablesResponse DescribeTables(Models\DescribeTablesRequest $req) 本接口（DescribeTables）用于查询数据表列表。
  * @method Models\DescribeTablesNameResponse DescribeTablesName(Models\DescribeTablesNameRequest $req) 本接口（DescribeTables）用于查询数据表名称列表
  * @method Models\DescribeTaskLogResponse DescribeTaskLog(Models\DescribeTaskLogRequest $req) 本接口（DescribeTaskLog）用于获取spark 作业任务日志详情
- * @method Models\DescribeTaskResultResponse DescribeTaskResult(Models\DescribeTaskResultRequest $req) 查询任务结果
+ * @method Models\DescribeTaskMonitorInfosResponse DescribeTaskMonitorInfos(Models\DescribeTaskMonitorInfosRequest $req) 查询任务监控指标信息
+ * @method Models\DescribeTaskResultResponse DescribeTaskResult(Models\DescribeTaskResultRequest $req) 查询任务结果，仅支持30天以内的任务查询结果，且返回数据大小超过近50M会进行截断。
  * @method Models\DescribeTasksResponse DescribeTasks(Models\DescribeTasksRequest $req) 该接口（DescribleTasks）用于查询任务列表
+ * @method Models\DescribeTasksAnalysisResponse DescribeTasksAnalysis(Models\DescribeTasksAnalysisRequest $req) 该接口用于洞察分析列表
  * @method Models\DescribeTasksCostInfoResponse DescribeTasksCostInfo(Models\DescribeTasksCostInfoRequest $req) 该接口（DescribeTasksCostInfo）用于查询任务消耗
  * @method Models\DescribeTasksOverviewResponse DescribeTasksOverview(Models\DescribeTasksOverviewRequest $req) 查看任务概览页
  * @method Models\DescribeThirdPartyAccessUserResponse DescribeThirdPartyAccessUser(Models\DescribeThirdPartyAccessUserRequest $req) 本接口（RegisterThirdPartyAccessUser）查询开通第三方平台访问的用户信息
@@ -146,6 +154,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\ModifyUserResponse ModifyUser(Models\ModifyUserRequest $req) 修改用户信息
  * @method Models\ModifyUserTypeResponse ModifyUserType(Models\ModifyUserTypeRequest $req) 修改用户类型。只有管理员用户能够调用该接口进行操作
  * @method Models\ModifyWorkGroupResponse ModifyWorkGroup(Models\ModifyWorkGroupRequest $req) 修改工作组信息
+ * @method Models\QueryInternalTableWarehouseResponse QueryInternalTableWarehouse(Models\QueryInternalTableWarehouseRequest $req) 本接口（QueryInternalTableWarehouse）用于获取原生表warehouse路径
  * @method Models\QueryResultResponse QueryResult(Models\QueryResultRequest $req) 获取任务结果查询
  * @method Models\QueryTaskCostDetailResponse QueryTaskCostDetail(Models\QueryTaskCostDetailRequest $req) 该接口（QueryTaskCostDetail）用于查询任务消耗明细
  * @method Models\RegisterThirdPartyAccessUserResponse RegisterThirdPartyAccessUser(Models\RegisterThirdPartyAccessUserRequest $req) 本接口（RegisterThirdPartyAccessUser）用于开通第三方平台访问

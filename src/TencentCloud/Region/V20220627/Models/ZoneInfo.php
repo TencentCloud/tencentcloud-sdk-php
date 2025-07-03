@@ -51,7 +51,6 @@ use TencentCloud\Common\AbstractModel;
 <li> ap-shanghai-5 </li>
 <li> ap-mumbai-1 </li>
 <li> ap-mumbai-2 </li>
-<li> eu-moscow-1 </li>
 <li> ap-beijing-1 </li>
 <li> ap-beijing-2 </li>
 <li> ap-beijing-3 </li>
@@ -60,7 +59,6 @@ use TencentCloud\Common\AbstractModel;
 <li> na-siliconvalley-1 </li>
 <li> na-siliconvalley-2 </li>
 <li> eu-frankfurt-1 </li>
-<li> na-toronto-1 </li>
 <li> na-ashburn-1 </li>
 <li> na-ashburn-2 </li>
 <li> ap-nanjing-1 </li>
@@ -96,7 +94,6 @@ use TencentCloud\Common\AbstractModel;
 <li> ap-shanghai-5 </li>
 <li> ap-mumbai-1 </li>
 <li> ap-mumbai-2 </li>
-<li> eu-moscow-1 </li>
 <li> ap-beijing-1 </li>
 <li> ap-beijing-2 </li>
 <li> ap-beijing-3 </li>
@@ -105,7 +102,6 @@ use TencentCloud\Common\AbstractModel;
 <li> na-siliconvalley-1 </li>
 <li> na-siliconvalley-2 </li>
 <li> eu-frankfurt-1 </li>
-<li> na-toronto-1 </li>
 <li> na-ashburn-1 </li>
 <li> na-ashburn-2 </li>
 <li> ap-nanjing-1 </li>
@@ -175,7 +171,6 @@ class ZoneInfo extends AbstractModel
 <li> ap-shanghai-5 </li>
 <li> ap-mumbai-1 </li>
 <li> ap-mumbai-2 </li>
-<li> eu-moscow-1 </li>
 <li> ap-beijing-1 </li>
 <li> ap-beijing-2 </li>
 <li> ap-beijing-3 </li>
@@ -184,7 +179,6 @@ class ZoneInfo extends AbstractModel
 <li> na-siliconvalley-1 </li>
 <li> na-siliconvalley-2 </li>
 <li> eu-frankfurt-1 </li>
-<li> na-toronto-1 </li>
 <li> na-ashburn-1 </li>
 <li> na-ashburn-2 </li>
 <li> ap-nanjing-1 </li>
@@ -275,7 +269,6 @@ class ZoneInfo extends AbstractModel
 <li> ap-shanghai-5 </li>
 <li> ap-mumbai-1 </li>
 <li> ap-mumbai-2 </li>
-<li> eu-moscow-1 </li>
 <li> ap-beijing-1 </li>
 <li> ap-beijing-2 </li>
 <li> ap-beijing-3 </li>
@@ -284,7 +277,6 @@ class ZoneInfo extends AbstractModel
 <li> na-siliconvalley-1 </li>
 <li> na-siliconvalley-2 </li>
 <li> eu-frankfurt-1 </li>
-<li> na-toronto-1 </li>
 <li> na-ashburn-1 </li>
 <li> na-ashburn-2 </li>
 <li> ap-nanjing-1 </li>

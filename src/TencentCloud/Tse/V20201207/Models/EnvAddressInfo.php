@@ -27,21 +27,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getConfigInternetServiceIp() 获取config公网ip
  * @method void setConfigInternetServiceIp(string $ConfigInternetServiceIp) 设置config公网ip
  * @method string getConfigIntranetAddress() 获取config内网访问地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigIntranetAddress(string $ConfigIntranetAddress) 设置config内网访问地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getEnableConfigIntranet() 获取是否开启config内网clb
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableConfigIntranet(boolean $EnableConfigIntranet) 设置是否开启config内网clb
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getInternetBandWidth() 获取客户端公网带宽
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInternetBandWidth(integer $InternetBandWidth) 设置客户端公网带宽
-注意：此字段可能返回 null，表示取不到有效值。
  * @method CLBMultiRegion getCLBMultiRegion() 获取客户端公网CLB多可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCLBMultiRegion(CLBMultiRegion $CLBMultiRegion) 设置客户端公网CLB多可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class EnvAddressInfo extends AbstractModel
 {
@@ -62,25 +54,21 @@ class EnvAddressInfo extends AbstractModel
 
     /**
      * @var string config内网访问地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigIntranetAddress;
 
     /**
      * @var boolean 是否开启config内网clb
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableConfigIntranet;
 
     /**
      * @var integer 客户端公网带宽
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InternetBandWidth;
 
     /**
      * @var CLBMultiRegion 客户端公网CLB多可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CLBMultiRegion;
 
@@ -89,13 +77,9 @@ class EnvAddressInfo extends AbstractModel
      * @param boolean $EnableConfigInternet 是否开启config公网
      * @param string $ConfigInternetServiceIp config公网ip
      * @param string $ConfigIntranetAddress config内网访问地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $EnableConfigIntranet 是否开启config内网clb
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InternetBandWidth 客户端公网带宽
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CLBMultiRegion $CLBMultiRegion 客户端公网CLB多可用区信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

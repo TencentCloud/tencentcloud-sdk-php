@@ -66,9 +66,6 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\DescribeBizHttpStatusResponse DescribeBizHttpStatus(Models\DescribeBizHttpStatusRequest $req) 获取业务流量状态码统计列表
  * @method Models\DescribeBizMonitorTrendResponse DescribeBizMonitorTrend(Models\DescribeBizMonitorTrendRequest $req) 获取高防IP业务监控流量曲线
  * @method Models\DescribeBizTrendResponse DescribeBizTrend(Models\DescribeBizTrendRequest $req) 获取业务流量曲线
- * @method Models\DescribeBlackWhiteIpListResponse DescribeBlackWhiteIpList(Models\DescribeBlackWhiteIpListRequest $req) 接口变更
-
-获取DDoS防护的IP黑白名单
  * @method Models\DescribeCCLevelListResponse DescribeCCLevelList(Models\DescribeCCLevelListRequest $req) 获取边界防护CC防护等级列表
  * @method Models\DescribeCCLevelPolicyResponse DescribeCCLevelPolicy(Models\DescribeCCLevelPolicyRequest $req) 获取CC分级策略
  * @method Models\DescribeCCPrecisionPlyListResponse DescribeCCPrecisionPlyList(Models\DescribeCCPrecisionPlyListRequest $req) 获取CC精准防护列表
@@ -84,7 +81,6 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\DescribeIpBlockListResponse DescribeIpBlockList(Models\DescribeIpBlockListRequest $req) 获取IP封堵列表
  * @method Models\DescribeL7RulesBySSLCertIdResponse DescribeL7RulesBySSLCertId(Models\DescribeL7RulesBySSLCertIdRequest $req) 查询与证书ID对于域名匹配的七层规则
  * @method Models\DescribeListBGPIPInstancesResponse DescribeListBGPIPInstances(Models\DescribeListBGPIPInstancesRequest $req) 获取高防IP资产实例列表
-
  * @method Models\DescribeListBGPInstancesResponse DescribeListBGPInstances(Models\DescribeListBGPInstancesRequest $req) 获取高防包资产实例列表
  * @method Models\DescribeListBlackWhiteIpListResponse DescribeListBlackWhiteIpList(Models\DescribeListBlackWhiteIpListRequest $req) 获取DDoS防护的IP黑白名单列表
  * @method Models\DescribeListDDoSAIResponse DescribeListDDoSAI(Models\DescribeListDDoSAIRequest $req) 获取DDoS防护的AI防护开关列表
@@ -94,9 +90,6 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\DescribeListListenerResponse DescribeListListener(Models\DescribeListListenerRequest $req) 获取转发监听器列表
  * @method Models\DescribeListPacketFilterConfigResponse DescribeListPacketFilterConfig(Models\DescribeListPacketFilterConfigRequest $req) 获取DDoS防护的特征过滤规则列表
  * @method Models\DescribeListPortAclListResponse DescribeListPortAclList(Models\DescribeListPortAclListRequest $req) 获取DDoS防护的端口acl策略列表
- * @method Models\DescribeListProtectThresholdConfigResponse DescribeListProtectThresholdConfig(Models\DescribeListProtectThresholdConfigRequest $req) 接口变更
-
-获取防护阈值配置列表，包括DDoS的AI、等级、CC阈值开关等
  * @method Models\DescribeListProtocolBlockConfigResponse DescribeListProtocolBlockConfig(Models\DescribeListProtocolBlockConfigRequest $req) 获取DDoS防护的协议封禁配置列表
  * @method Models\DescribeListSchedulingDomainResponse DescribeListSchedulingDomain(Models\DescribeListSchedulingDomainRequest $req) 获取智能调度域名列表
  * @method Models\DescribeListWaterPrintConfigResponse DescribeListWaterPrintConfig(Models\DescribeListWaterPrintConfigRequest $req) 获取DDoS防护的水印防护配置列表
@@ -123,7 +116,7 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\ModifyNewDomainRulesResponse ModifyNewDomainRules(Models\ModifyNewDomainRulesRequest $req) 修改7层转发规则
  * @method Models\ModifyPacketFilterConfigResponse ModifyPacketFilterConfig(Models\ModifyPacketFilterConfigRequest $req) 修改DDoS防护的特征过滤规则
  * @method Models\ModifyPortAclConfigResponse ModifyPortAclConfig(Models\ModifyPortAclConfigRequest $req) 修改DDoS防护的端口acl策略
- * @method Models\SwitchWaterPrintConfigResponse SwitchWaterPrintConfig(Models\SwitchWaterPrintConfigRequest $req) 开启或关闭DDoS防护的水印防护配置
+ * @method Models\SwitchWaterPrintConfigResponse SwitchWaterPrintConfig(Models\SwitchWaterPrintConfigRequest $req) 开启或关闭DDoS防护的水印防护配置，此功能为付费增值服务，有需求请联系售后
  */
 
 class AntiddosClient extends AbstractClient

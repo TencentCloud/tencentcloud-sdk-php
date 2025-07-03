@@ -33,6 +33,7 @@ use TencentCloud\Common\AbstractModel;
 <li>action-snapshotByTimeOffset: 时间点截图</li>
 <li>action-adaptive-substream：自适应码流</li>
 <li>action-AIQualityControl：媒体质检</li>
+<li>action-SmartSubtitles：智能字幕</li>
 
 
 
@@ -50,6 +51,7 @@ use TencentCloud\Common\AbstractModel;
 <li>action-snapshotByTimeOffset: 时间点截图</li>
 <li>action-adaptive-substream：自适应码流</li>
 <li>action-AIQualityControl：媒体质检</li>
+<li>action-SmartSubtitles：智能字幕</li>
 
 
 
@@ -79,6 +81,7 @@ class Activity extends AbstractModel
 <li>action-snapshotByTimeOffset: 时间点截图</li>
 <li>action-adaptive-substream：自适应码流</li>
 <li>action-AIQualityControl：媒体质检</li>
+<li>action-SmartSubtitles：智能字幕</li>
 
 
 
@@ -112,6 +115,7 @@ class Activity extends AbstractModel
 <li>action-snapshotByTimeOffset: 时间点截图</li>
 <li>action-adaptive-substream：自适应码流</li>
 <li>action-AIQualityControl：媒体质检</li>
+<li>action-SmartSubtitles：智能字幕</li>
 
 
 

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CloseCdbProxyAddress请求参数结构体
  *
- * @method string getProxyGroupId() 获取代理组ID
- * @method void setProxyGroupId(string $ProxyGroupId) 设置代理组ID
- * @method string getProxyAddressId() 获取代理组地址ID
- * @method void setProxyAddressId(string $ProxyAddressId) 设置代理组地址ID
+ * @method string getProxyGroupId() 获取代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+ * @method void setProxyGroupId(string $ProxyGroupId) 设置代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+ * @method string getProxyAddressId() 获取代理组地址 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+ * @method void setProxyAddressId(string $ProxyAddressId) 设置代理组地址 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
  */
 class CloseCdbProxyAddressRequest extends AbstractModel
 {
     /**
-     * @var string 代理组ID
+     * @var string 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
      */
     public $ProxyGroupId;
 
     /**
-     * @var string 代理组地址ID
+     * @var string 代理组地址 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
      */
     public $ProxyAddressId;
 
     /**
-     * @param string $ProxyGroupId 代理组ID
-     * @param string $ProxyAddressId 代理组地址ID
+     * @param string $ProxyGroupId 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+     * @param string $ProxyAddressId 代理组地址 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
      */
     function __construct()
     {

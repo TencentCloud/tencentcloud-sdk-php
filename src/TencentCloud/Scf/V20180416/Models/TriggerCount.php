@@ -43,9 +43,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getVod() 获取Vod触发器数量
  * @method void setVod(integer $Vod) 设置Vod触发器数量
  * @method integer getEb() 获取Eb触发器数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEb(integer $Eb) 设置Eb触发器数量
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TriggerCount extends AbstractModel
 {
@@ -106,7 +104,6 @@ class TriggerCount extends AbstractModel
 
     /**
      * @var integer Eb触发器数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Eb;
 
@@ -123,7 +120,6 @@ class TriggerCount extends AbstractModel
      * @param integer $Cm Cm触发器数量
      * @param integer $Vod Vod触发器数量
      * @param integer $Eb Eb触发器数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

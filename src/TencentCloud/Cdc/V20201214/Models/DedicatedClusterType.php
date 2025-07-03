@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDedicatedClusterTypeId() 获取配置id
  * @method void setDedicatedClusterTypeId(string $DedicatedClusterTypeId) 设置配置id
  * @method string getDescription() 获取配置描述，对应描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置配置描述，对应描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取配置名称，对应计算资源类型
  * @method void setName(string $Name) 设置配置名称，对应计算资源类型
  * @method string getCreateTime() 获取创建配置的时间
@@ -52,7 +50,6 @@ class DedicatedClusterType extends AbstractModel
 
     /**
      * @var string 配置描述，对应描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
@@ -99,7 +96,6 @@ class DedicatedClusterType extends AbstractModel
     /**
      * @param string $DedicatedClusterTypeId 配置id
      * @param string $Description 配置描述，对应描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 配置名称，对应计算资源类型
      * @param string $CreateTime 创建配置的时间
      * @param array $SupportedStorageType 支持的存储类型列表

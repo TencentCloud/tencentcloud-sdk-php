@@ -21,17 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * ModifyBotStatus返回参数结构体
  *
  * @method string getData() 获取正常情况为null
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(string $Data) 设置正常情况为null
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getUnSupportedList() 获取未购买BOT的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnSupportedList(array $UnSupportedList) 设置未购买BOT的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getFailDomainList() 获取已购买但操作失败的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailDomainList(array $FailDomainList) 设置已购买但操作失败的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCount() 获取成功数目
  * @method void setCount(integer $Count) 设置成功数目
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -41,19 +35,16 @@ class ModifyBotStatusResponse extends AbstractModel
 {
     /**
      * @var string 正常情况为null
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
 
     /**
      * @var array 未购买BOT的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UnSupportedList;
 
     /**
      * @var array 已购买但操作失败的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailDomainList;
 
@@ -69,11 +60,8 @@ class ModifyBotStatusResponse extends AbstractModel
 
     /**
      * @param string $Data 正常情况为null
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $UnSupportedList 未购买BOT的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FailDomainList 已购买但操作失败的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Count 成功数目
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

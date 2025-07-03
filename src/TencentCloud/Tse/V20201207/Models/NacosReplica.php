@@ -27,21 +27,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStatus() 获取状态
  * @method void setStatus(string $Status) 设置状态
  * @method string getSubnetId() 获取子网ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetId(string $SubnetId) 设置子网ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getZone() 获取可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZone(string $Zone) 设置可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getZoneId() 获取可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneId(string $ZoneId) 设置可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVpcId() 获取VPC ID	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(string $VpcId) 设置VPC ID	
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NacosReplica extends AbstractModel
 {
@@ -62,25 +54,21 @@ class NacosReplica extends AbstractModel
 
     /**
      * @var string 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetId;
 
     /**
      * @var string 可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Zone;
 
     /**
      * @var string 可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneId;
 
     /**
      * @var string VPC ID	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
@@ -89,13 +77,9 @@ class NacosReplica extends AbstractModel
      * @param string $Role 角色
      * @param string $Status 状态
      * @param string $SubnetId 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Zone 可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ZoneId 可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcId VPC ID	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

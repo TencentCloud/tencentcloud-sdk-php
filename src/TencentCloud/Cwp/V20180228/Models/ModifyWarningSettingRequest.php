@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyWarningSetting请求参数结构体
  *
- * @method array getWarningObjects() 获取告警设置的修改内容
- * @method void setWarningObjects(array $WarningObjects) 设置告警设置的修改内容
+ * @method array getWarningObjects() 获取修改告警设置的内容
+ * @method void setWarningObjects(array $WarningObjects) 设置修改告警设置的内容
  */
 class ModifyWarningSettingRequest extends AbstractModel
 {
     /**
-     * @var array 告警设置的修改内容
+     * @var array 修改告警设置的内容
      */
     public $WarningObjects;
 
     /**
-     * @param array $WarningObjects 告警设置的修改内容
+     * @param array $WarningObjects 修改告警设置的内容
      */
     function __construct()
     {

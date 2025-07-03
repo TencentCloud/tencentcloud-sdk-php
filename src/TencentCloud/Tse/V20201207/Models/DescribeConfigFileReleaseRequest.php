@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置配置文件名称
  * @method string getReleaseName() 获取配置文件发布名称
  * @method void setReleaseName(string $ReleaseName) 设置配置文件发布名称
+ * @method string getId() 获取配置文件发布Id
+ * @method void setId(string $Id) 设置配置文件发布Id
  */
 class DescribeConfigFileReleaseRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DescribeConfigFileReleaseRequest extends AbstractModel
     public $ReleaseName;
 
     /**
+     * @var string 配置文件发布Id
+     */
+    public $Id;
+
+    /**
      * @param string $InstanceId TSE实例id
      * @param string $Namespace 命名空间名称
      * @param string $Group 配置分组名称
      * @param string $Name 配置文件名称
      * @param string $ReleaseName 配置文件发布名称
+     * @param string $Id 配置文件发布Id
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DescribeConfigFileReleaseRequest extends AbstractModel
 
         if (array_key_exists("ReleaseName",$param) and $param["ReleaseName"] !== null) {
             $this->ReleaseName = $param["ReleaseName"];
+        }
+
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
         }
     }
 }

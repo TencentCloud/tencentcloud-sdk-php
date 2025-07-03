@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileName(string $FileName) 设置文件名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNewName() 获取重命名的新文档名称，在重命名提交之后，文档发布之前都是这个名称
+ * @method void setNewName(string $NewName) 设置重命名的新文档名称，在重命名提交之后，文档发布之前都是这个名称
  * @method string getFileType() 获取文件类型
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileType(string $FileType) 设置文件类型
@@ -134,6 +136,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsAllowRetry(boolean $IsAllowRetry) 设置是否允许重试，0：否，1：是
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getProcessing() 获取0:文档比对处理 1:文档生成问答
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setProcessing(array $Processing) 设置0:文档比对处理 1:文档生成问答
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreateTime() 获取文档创建落库时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateTime(string $CreateTime) 设置文档创建落库时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCateBizId() 获取文档所属分类ID
+ * @method void setCateBizId(string $CateBizId) 设置文档所属分类ID
+ * @method string getCustomerKnowledgeId() 获取文档的用户自定义ID
+ * @method void setCustomerKnowledgeId(string $CustomerKnowledgeId) 设置文档的用户自定义ID
+ * @method array getAttributeFlags() 获取文档的属性标记，0: 不做用户外部权限校验
+ * @method void setAttributeFlags(array $AttributeFlags) 设置文档的属性标记，0: 不做用户外部权限校验
+ * @method boolean getIsDisabled() 获取false:未停用，ture:已停用
+ * @method void setIsDisabled(boolean $IsDisabled) 设置false:未停用，ture:已停用
  */
 class ListDocItem extends AbstractModel
 {
@@ -148,6 +166,11 @@ class ListDocItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileName;
+
+    /**
+     * @var string 重命名的新文档名称，在重命名提交之后，文档发布之前都是这个名称
+     */
+    public $NewName;
 
     /**
      * @var string 文件类型
@@ -307,10 +330,43 @@ class ListDocItem extends AbstractModel
     public $IsAllowRetry;
 
     /**
+     * @var array 0:文档比对处理 1:文档生成问答
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Processing;
+
+    /**
+     * @var string 文档创建落库时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateTime;
+
+    /**
+     * @var string 文档所属分类ID
+     */
+    public $CateBizId;
+
+    /**
+     * @var string 文档的用户自定义ID
+     */
+    public $CustomerKnowledgeId;
+
+    /**
+     * @var array 文档的属性标记，0: 不做用户外部权限校验
+     */
+    public $AttributeFlags;
+
+    /**
+     * @var boolean false:未停用，ture:已停用
+     */
+    public $IsDisabled;
+
+    /**
      * @param string $DocBizId 文档ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileName 文件名称
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NewName 重命名的新文档名称，在重命名提交之后，文档发布之前都是这个名称
      * @param string $FileType 文件类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CosUrl cos路径
@@ -364,6 +420,14 @@ class ListDocItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsAllowRetry 是否允许重试，0：否，1：是
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Processing 0:文档比对处理 1:文档生成问答
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreateTime 文档创建落库时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CateBizId 文档所属分类ID
+     * @param string $CustomerKnowledgeId 文档的用户自定义ID
+     * @param array $AttributeFlags 文档的属性标记，0: 不做用户外部权限校验
+     * @param boolean $IsDisabled false:未停用，ture:已停用
      */
     function __construct()
     {
@@ -384,6 +448,10 @@ class ListDocItem extends AbstractModel
 
         if (array_key_exists("FileName",$param) and $param["FileName"] !== null) {
             $this->FileName = $param["FileName"];
+        }
+
+        if (array_key_exists("NewName",$param) and $param["NewName"] !== null) {
+            $this->NewName = $param["NewName"];
         }
 
         if (array_key_exists("FileType",$param) and $param["FileType"] !== null) {
@@ -493,6 +561,30 @@ class ListDocItem extends AbstractModel
 
         if (array_key_exists("IsAllowRetry",$param) and $param["IsAllowRetry"] !== null) {
             $this->IsAllowRetry = $param["IsAllowRetry"];
+        }
+
+        if (array_key_exists("Processing",$param) and $param["Processing"] !== null) {
+            $this->Processing = $param["Processing"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("CateBizId",$param) and $param["CateBizId"] !== null) {
+            $this->CateBizId = $param["CateBizId"];
+        }
+
+        if (array_key_exists("CustomerKnowledgeId",$param) and $param["CustomerKnowledgeId"] !== null) {
+            $this->CustomerKnowledgeId = $param["CustomerKnowledgeId"];
+        }
+
+        if (array_key_exists("AttributeFlags",$param) and $param["AttributeFlags"] !== null) {
+            $this->AttributeFlags = $param["AttributeFlags"];
+        }
+
+        if (array_key_exists("IsDisabled",$param) and $param["IsDisabled"] !== null) {
+            $this->IsDisabled = $param["IsDisabled"];
         }
     }
 }

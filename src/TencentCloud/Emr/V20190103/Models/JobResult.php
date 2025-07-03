@@ -21,41 +21,32 @@ use TencentCloud\Common\AbstractModel;
  * 任务步骤结果描述
  *
  * @method string getName() 获取任务步骤名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置任务步骤名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getActionOnFailure() 获取任务步骤失败时的处理策略，可以为以下值：
 "CONTINUE"，跳过当前失败步骤，继续后续步骤。
 “TERMINATE_CLUSTER”，终止当前及后续步骤，并销毁集群。
 “CANCEL_AND_WAIT”，取消当前步骤并阻塞等待处理。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActionOnFailure(string $ActionOnFailure) 设置任务步骤失败时的处理策略，可以为以下值：
 "CONTINUE"，跳过当前失败步骤，继续后续步骤。
 “TERMINATE_CLUSTER”，终止当前及后续步骤，并销毁集群。
 “CANCEL_AND_WAIT”，取消当前步骤并阻塞等待处理。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getJobState() 获取当前步骤的状态，可以为以下值：
 “JobFlowStepStatusInit”，初始化状态，等待执行。
 “JobFlowStepStatusRunning”，任务步骤正在执行。
 “JobFlowStepStatusFailed”，任务步骤执行失败。
 “JobFlowStepStatusSucceed”，任务步骤执行成功。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJobState(string $JobState) 设置当前步骤的状态，可以为以下值：
 “JobFlowStepStatusInit”，初始化状态，等待执行。
 “JobFlowStepStatusRunning”，任务步骤正在执行。
 “JobFlowStepStatusFailed”，任务步骤执行失败。
 “JobFlowStepStatusSucceed”，任务步骤执行成功。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApplicationId() 获取YARN任务ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationId(string $ApplicationId) 设置YARN任务ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class JobResult extends AbstractModel
 {
     /**
      * @var string 任务步骤名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
@@ -64,7 +55,6 @@ class JobResult extends AbstractModel
 "CONTINUE"，跳过当前失败步骤，继续后续步骤。
 “TERMINATE_CLUSTER”，终止当前及后续步骤，并销毁集群。
 “CANCEL_AND_WAIT”，取消当前步骤并阻塞等待处理。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActionOnFailure;
 
@@ -74,32 +64,26 @@ class JobResult extends AbstractModel
 “JobFlowStepStatusRunning”，任务步骤正在执行。
 “JobFlowStepStatusFailed”，任务步骤执行失败。
 “JobFlowStepStatusSucceed”，任务步骤执行成功。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JobState;
 
     /**
      * @var string YARN任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationId;
 
     /**
      * @param string $Name 任务步骤名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ActionOnFailure 任务步骤失败时的处理策略，可以为以下值：
 "CONTINUE"，跳过当前失败步骤，继续后续步骤。
 “TERMINATE_CLUSTER”，终止当前及后续步骤，并销毁集群。
 “CANCEL_AND_WAIT”，取消当前步骤并阻塞等待处理。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $JobState 当前步骤的状态，可以为以下值：
 “JobFlowStepStatusInit”，初始化状态，等待执行。
 “JobFlowStepStatusRunning”，任务步骤正在执行。
 “JobFlowStepStatusFailed”，任务步骤执行失败。
 “JobFlowStepStatusSucceed”，任务步骤执行成功。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationId YARN任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

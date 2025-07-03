@@ -33,9 +33,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getId() 获取基线检测项结果ID
  * @method void setId(integer $Id) 设置基线检测项结果ID
  * @method MachineExtraInfo getMachineExtraInfo() 获取主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BaselineFix extends AbstractModel
 {
@@ -71,7 +69,6 @@ class BaselineFix extends AbstractModel
 
     /**
      * @var MachineExtraInfo 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineExtraInfo;
 
@@ -83,7 +80,6 @@ class BaselineFix extends AbstractModel
      * @param string $FixTime 修复时间
      * @param integer $Id 基线检测项结果ID
      * @param MachineExtraInfo $MachineExtraInfo 主机额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

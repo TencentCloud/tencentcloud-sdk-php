@@ -20,15 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ImportSourceClusterTopics请求参数结构体
  *
- * @method string getTaskId() 获取任务ID
- * @method void setTaskId(string $TaskId) 设置任务ID
+ * @method string getTaskId() 获取任务ID，可在[DescribeSmoothMigrationTaskList](https://cloud.tencent.com/document/api/1493/119997)接口返回的[SmoothMigrationTaskItem](https://cloud.tencent.com/document/api/1493/96031#SmoothMigrationTaskItem)或控制台中获得。
+
+ * @method void setTaskId(string $TaskId) 设置任务ID，可在[DescribeSmoothMigrationTaskList](https://cloud.tencent.com/document/api/1493/119997)接口返回的[SmoothMigrationTaskItem](https://cloud.tencent.com/document/api/1493/96031#SmoothMigrationTaskItem)或控制台中获得。
+
  * @method array getTopicList() 获取待导入的主题列表
  * @method void setTopicList(array $TopicList) 设置待导入的主题列表
  */
 class ImportSourceClusterTopicsRequest extends AbstractModel
 {
     /**
-     * @var string 任务ID
+     * @var string 任务ID，可在[DescribeSmoothMigrationTaskList](https://cloud.tencent.com/document/api/1493/119997)接口返回的[SmoothMigrationTaskItem](https://cloud.tencent.com/document/api/1493/96031#SmoothMigrationTaskItem)或控制台中获得。
+
      */
     public $TaskId;
 
@@ -38,7 +41,8 @@ class ImportSourceClusterTopicsRequest extends AbstractModel
     public $TopicList;
 
     /**
-     * @param string $TaskId 任务ID
+     * @param string $TaskId 任务ID，可在[DescribeSmoothMigrationTaskList](https://cloud.tencent.com/document/api/1493/119997)接口返回的[SmoothMigrationTaskItem](https://cloud.tencent.com/document/api/1493/96031#SmoothMigrationTaskItem)或控制台中获得。
+
      * @param array $TopicList 待导入的主题列表
      */
     function __construct()

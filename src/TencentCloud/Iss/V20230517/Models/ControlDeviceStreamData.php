@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 获取开流地址返回数据
  *
  * @method string getFlv() 获取flv 流地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlv(string $Flv) 设置flv 流地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHls() 获取hls 流地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHls(string $Hls) 设置hls 流地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRtmp() 获取rtmp 流地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRtmp(string $Rtmp) 设置rtmp 流地址
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ControlDeviceStreamData extends AbstractModel
 {
     /**
      * @var string flv 流地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Flv;
 
     /**
      * @var string hls 流地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Hls;
 
     /**
      * @var string rtmp 流地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Rtmp;
 
     /**
      * @param string $Flv flv 流地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Hls hls 流地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Rtmp rtmp 流地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

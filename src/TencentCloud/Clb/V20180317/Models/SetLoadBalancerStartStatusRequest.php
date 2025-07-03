@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getOperationType() 获取操作类型。Start：启动实例，Stop：停止实例。
  * @method void setOperationType(string $OperationType) 设置操作类型。Start：启动实例，Stop：停止实例。
- * @method string getLoadBalancerId() 获取负载均衡实例ID。
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例ID。
+ * @method string getLoadBalancerId() 获取负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
+ * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
  * @method array getListenerIds() 获取监听器ID。如果该字段为空，则表示操作负载均衡实例，如果不为空，则表示操作监听器。
  * @method void setListenerIds(array $ListenerIds) 设置监听器ID。如果该字段为空，则表示操作负载均衡实例，如果不为空，则表示操作监听器。
  */
@@ -35,7 +35,7 @@ class SetLoadBalancerStartStatusRequest extends AbstractModel
     public $OperationType;
 
     /**
-     * @var string 负载均衡实例ID。
+     * @var string 负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
      */
     public $LoadBalancerId;
 
@@ -46,7 +46,7 @@ class SetLoadBalancerStartStatusRequest extends AbstractModel
 
     /**
      * @param string $OperationType 操作类型。Start：启动实例，Stop：停止实例。
-     * @param string $LoadBalancerId 负载均衡实例ID。
+     * @param string $LoadBalancerId 负载均衡实例ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
      * @param array $ListenerIds 监听器ID。如果该字段为空，则表示操作负载均衡实例，如果不为空，则表示操作监听器。
      */
     function __construct()

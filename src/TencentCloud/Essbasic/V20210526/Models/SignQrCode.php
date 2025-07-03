@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
 一旦超过二维码的有效期限，该二维码将自动失效。	
  * @method void setExpiredTime(integer $ExpiredTime) 设置二维码的有截止时间，格式为Unix标准时间戳（秒），可以通过入参的QrEffectiveDay来设置有效期，默认为7天有效期。 
 一旦超过二维码的有效期限，该二维码将自动失效。	
+ * @method string getWeixinQrCodeUrl() 获取微信小程序二维码
+ * @method void setWeixinQrCodeUrl(string $WeixinQrCodeUrl) 设置微信小程序二维码
  */
 class SignQrCode extends AbstractModel
 {
@@ -54,12 +56,18 @@ class SignQrCode extends AbstractModel
     public $ExpiredTime;
 
     /**
+     * @var string 微信小程序二维码
+     */
+    public $WeixinQrCodeUrl;
+
+    /**
      * @param string $QrCodeId 二维码ID，为32位字符串。	
 
 注: 需要保留此二维码ID, 用于后序通过<a href="https://qian.tencent.com/developers/partnerApis/templates/ChannelCancelMultiFlowSignQRCode" target="_blank">取消一码多扫二维码</a>关闭这个二维码的签署功能。	
      * @param string $QrCodeUrl 二维码URL，可通过转换二维码的工具或代码组件将此URL转化为二维码，以便用户扫描进行流程签署。	
      * @param integer $ExpiredTime 二维码的有截止时间，格式为Unix标准时间戳（秒），可以通过入参的QrEffectiveDay来设置有效期，默认为7天有效期。 
 一旦超过二维码的有效期限，该二维码将自动失效。	
+     * @param string $WeixinQrCodeUrl 微信小程序二维码
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class SignQrCode extends AbstractModel
 
         if (array_key_exists("ExpiredTime",$param) and $param["ExpiredTime"] !== null) {
             $this->ExpiredTime = $param["ExpiredTime"];
+        }
+
+        if (array_key_exists("WeixinQrCodeUrl",$param) and $param["WeixinQrCodeUrl"] !== null) {
+            $this->WeixinQrCodeUrl = $param["WeixinQrCodeUrl"];
         }
     }
 }

@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * DescribeVulStoreList返回参数结构体
  *
  * @method array getList() 获取漏洞信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setList(array $List) 设置漏洞信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取总数
  * @method void setTotalCount(integer $TotalCount) 设置总数
  * @method integer getRemaining() 获取今日剩余搜索此时
@@ -37,7 +35,6 @@ class DescribeVulStoreListResponse extends AbstractModel
 {
     /**
      * @var array 漏洞信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $List;
 
@@ -63,7 +60,6 @@ class DescribeVulStoreListResponse extends AbstractModel
 
     /**
      * @param array $List 漏洞信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 总数
      * @param integer $Remaining 今日剩余搜索此时
      * @param integer $FreeSearchTimes 免费搜索次数

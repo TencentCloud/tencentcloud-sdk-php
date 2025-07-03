@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * KickUserFromRoom请求参数结构体
  *
- * @method integer getRoomId() 获取房间Id。
- * @method void setRoomId(integer $RoomId) 设置房间Id。
+ * @method integer getRoomId() 获取课堂Id。
+ * @method void setRoomId(integer $RoomId) 设置课堂Id。
  * @method integer getSdkAppId() 获取低代码平台的SdkAppId。
  * @method void setSdkAppId(integer $SdkAppId) 设置低代码平台的SdkAppId。
  * @method string getUserId() 获取需要踢出成员Id
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class KickUserFromRoomRequest extends AbstractModel
 {
     /**
-     * @var integer 房间Id。
+     * @var integer 课堂Id。
      */
     public $RoomId;
 
@@ -65,7 +65,7 @@ class KickUserFromRoomRequest extends AbstractModel
     public $Duration;
 
     /**
-     * @param integer $RoomId 房间Id。
+     * @param integer $RoomId 课堂Id。
      * @param integer $SdkAppId 低代码平台的SdkAppId。
      * @param string $UserId 需要踢出成员Id
      * @param integer $KickType 踢出类型：

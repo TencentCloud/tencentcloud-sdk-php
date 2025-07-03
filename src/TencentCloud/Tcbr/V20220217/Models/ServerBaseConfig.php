@@ -60,6 +60,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogTopicId(string $LogTopicId) 设置cls 主题id
  * @method string getLogParseType() 获取解析类型：json ｜ line
  * @method void setLogParseType(string $LogParseType) 设置解析类型：json ｜ line
+ * @method string getTag() 获取服务标签, function: 函数托管
+ * @method void setTag(string $Tag) 设置服务标签, function: 函数托管
+ * @method string getInternalAccess() 获取内网访问开关 close | open
+ * @method void setInternalAccess(string $InternalAccess) 设置内网访问开关 close | open
+ * @method string getInternalDomain() 获取内网域名
+ * @method void setInternalDomain(string $InternalDomain) 设置内网域名
+ * @method string getOperationMode() 获取运行模式
+ * @method void setOperationMode(string $OperationMode) 设置运行模式
+ * @method array getTimerScale() 获取定时扩缩容配置
+ * @method void setTimerScale(array $TimerScale) 设置定时扩缩容配置
+ * @method array getEntryPoint() 获取Dockerfile EntryPoint 参数
+ * @method void setEntryPoint(array $EntryPoint) 设置Dockerfile EntryPoint 参数
+ * @method array getCmd() 获取Dockerfile Cmd 参数
+ * @method void setCmd(array $Cmd) 设置Dockerfile Cmd 参数
+ * @method string getSessionAffinity() 获取会话亲和性开关
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSessionAffinity(string $SessionAffinity) 设置会话亲和性开关
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServerBaseConfig extends AbstractModel
 {
@@ -164,6 +182,47 @@ class ServerBaseConfig extends AbstractModel
     public $LogParseType;
 
     /**
+     * @var string 服务标签, function: 函数托管
+     */
+    public $Tag;
+
+    /**
+     * @var string 内网访问开关 close | open
+     */
+    public $InternalAccess;
+
+    /**
+     * @var string 内网域名
+     */
+    public $InternalDomain;
+
+    /**
+     * @var string 运行模式
+     */
+    public $OperationMode;
+
+    /**
+     * @var array 定时扩缩容配置
+     */
+    public $TimerScale;
+
+    /**
+     * @var array Dockerfile EntryPoint 参数
+     */
+    public $EntryPoint;
+
+    /**
+     * @var array Dockerfile Cmd 参数
+     */
+    public $Cmd;
+
+    /**
+     * @var string 会话亲和性开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SessionAffinity;
+
+    /**
      * @param string $EnvId 环境 Id
      * @param string $ServerName 服务名
      * @param array $OpenAccessTypes 是否开启公网访问
@@ -184,6 +243,15 @@ class ServerBaseConfig extends AbstractModel
      * @param string $LogSetId cls setId
      * @param string $LogTopicId cls 主题id
      * @param string $LogParseType 解析类型：json ｜ line
+     * @param string $Tag 服务标签, function: 函数托管
+     * @param string $InternalAccess 内网访问开关 close | open
+     * @param string $InternalDomain 内网域名
+     * @param string $OperationMode 运行模式
+     * @param array $TimerScale 定时扩缩容配置
+     * @param array $EntryPoint Dockerfile EntryPoint 参数
+     * @param array $Cmd Dockerfile Cmd 参数
+     * @param string $SessionAffinity 会话亲和性开关
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -281,6 +349,43 @@ class ServerBaseConfig extends AbstractModel
 
         if (array_key_exists("LogParseType",$param) and $param["LogParseType"] !== null) {
             $this->LogParseType = $param["LogParseType"];
+        }
+
+        if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
+            $this->Tag = $param["Tag"];
+        }
+
+        if (array_key_exists("InternalAccess",$param) and $param["InternalAccess"] !== null) {
+            $this->InternalAccess = $param["InternalAccess"];
+        }
+
+        if (array_key_exists("InternalDomain",$param) and $param["InternalDomain"] !== null) {
+            $this->InternalDomain = $param["InternalDomain"];
+        }
+
+        if (array_key_exists("OperationMode",$param) and $param["OperationMode"] !== null) {
+            $this->OperationMode = $param["OperationMode"];
+        }
+
+        if (array_key_exists("TimerScale",$param) and $param["TimerScale"] !== null) {
+            $this->TimerScale = [];
+            foreach ($param["TimerScale"] as $key => $value){
+                $obj = new TimerScale();
+                $obj->deserialize($value);
+                array_push($this->TimerScale, $obj);
+            }
+        }
+
+        if (array_key_exists("EntryPoint",$param) and $param["EntryPoint"] !== null) {
+            $this->EntryPoint = $param["EntryPoint"];
+        }
+
+        if (array_key_exists("Cmd",$param) and $param["Cmd"] !== null) {
+            $this->Cmd = $param["Cmd"];
+        }
+
+        if (array_key_exists("SessionAffinity",$param) and $param["SessionAffinity"] !== null) {
+            $this->SessionAffinity = $param["SessionAffinity"];
         }
     }
 }

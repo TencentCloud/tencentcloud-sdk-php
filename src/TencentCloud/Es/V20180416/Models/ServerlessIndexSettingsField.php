@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRefreshInterval(string $RefreshInterval) 设置索引刷新频率
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCustomSetting() 获取自定义参数
+ * @method void setCustomSetting(string $CustomSetting) 设置自定义参数
  */
 class ServerlessIndexSettingsField extends AbstractModel
 {
@@ -44,10 +46,16 @@ class ServerlessIndexSettingsField extends AbstractModel
     public $RefreshInterval;
 
     /**
+     * @var string 自定义参数
+     */
+    public $CustomSetting;
+
+    /**
      * @param string $NumberOfShards 索引主分片数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RefreshInterval 索引刷新频率
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CustomSetting 自定义参数
      */
     function __construct()
     {
@@ -68,6 +76,10 @@ class ServerlessIndexSettingsField extends AbstractModel
 
         if (array_key_exists("RefreshInterval",$param) and $param["RefreshInterval"] !== null) {
             $this->RefreshInterval = $param["RefreshInterval"];
+        }
+
+        if (array_key_exists("CustomSetting",$param) and $param["CustomSetting"] !== null) {
+            $this->CustomSetting = $param["CustomSetting"];
         }
     }
 }

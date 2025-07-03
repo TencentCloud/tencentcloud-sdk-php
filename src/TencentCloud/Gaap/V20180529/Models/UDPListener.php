@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getPort() 获取监听器端口
  * @method void setPort(integer $Port) 设置监听器端口
  * @method integer getRealServerPort() 获取监听器转发源站端口，仅V1版本通道或通道组监听器有效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealServerPort(integer $RealServerPort) 设置监听器转发源站端口，仅V1版本通道或通道组监听器有效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRealServerType() 获取监听器绑定源站类型
  * @method void setRealServerType(string $RealServerType) 设置监听器绑定源站类型
  * @method string getProtocol() 获取监听器协议， UDP
@@ -55,61 +53,33 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getCreateTime() 获取监听器创建时间，Unix时间戳
  * @method void setCreateTime(integer $CreateTime) 设置监听器创建时间，Unix时间戳
  * @method integer getSessionPersist() 获取是否开启会话保持选项：0关闭， 非0开启，非0值为会话保持时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSessionPersist(integer $SessionPersist) 设置是否开启会话保持选项：0关闭， 非0开启，非0值为会话保持时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDelayLoop() 获取源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDelayLoop(integer $DelayLoop) 设置源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getConnectTimeout() 获取源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConnectTimeout(integer $ConnectTimeout) 设置源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHealthyThreshold() 获取健康阈值，表示连续检查成功多少次后认定源站健康。范围为1到10
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHealthyThreshold(integer $HealthyThreshold) 设置健康阈值，表示连续检查成功多少次后认定源站健康。范围为1到10
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUnhealthyThreshold() 获取不健康阈值，表示连续检查失败多少次数后认为源站不健康。范围为1到10
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnhealthyThreshold(integer $UnhealthyThreshold) 设置不健康阈值，表示连续检查失败多少次数后认为源站不健康。范围为1到10
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFailoverSwitch() 获取源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailoverSwitch(integer $FailoverSwitch) 设置源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHealthCheck() 获取源站是否开启健康检查：1开启，0关闭。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHealthCheck(integer $HealthCheck) 设置源站是否开启健康检查：1开启，0关闭。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCheckType() 获取UDP源站健康类型。PORT表示检查端口，PING表示PING。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCheckType(string $CheckType) 设置UDP源站健康类型。PORT表示检查端口，PING表示PING。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCheckPort() 获取UDP源站健康检查探测端口。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCheckPort(integer $CheckPort) 设置UDP源站健康检查探测端口。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContextType() 获取UDP源站健康检查端口探测报文类型：TEXT表示文本。仅在健康检查类型为PORT时使用。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContextType(string $ContextType) 设置UDP源站健康检查端口探测报文类型：TEXT表示文本。仅在健康检查类型为PORT时使用。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSendContext() 获取UDP源站健康检查端口探测发送报文。仅在健康检查类型为PORT时使用。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSendContext(string $SendContext) 设置UDP源站健康检查端口探测发送报文。仅在健康检查类型为PORT时使用。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRecvContext() 获取UDP源站健康检查端口探测接收报文。仅在健康检查类型为PORT时使用。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecvContext(string $RecvContext) 设置UDP源站健康检查端口探测接收报文。仅在健康检查类型为PORT时使用。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProxyId() 获取监听器的通道ID，如果监听器属于通道组，则为null
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProxyId(string $ProxyId) 设置监听器的通道ID，如果监听器属于通道组，则为null
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupId() 获取监听器的通道组ID，如果监听器属于通道，则为null
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupId(string $GroupId) 设置监听器的通道组ID，如果监听器属于通道，则为null
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class UDPListener extends AbstractModel
 {
@@ -130,7 +100,6 @@ class UDPListener extends AbstractModel
 
     /**
      * @var integer 监听器转发源站端口，仅V1版本通道或通道组监听器有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RealServerPort;
 
@@ -176,85 +145,71 @@ class UDPListener extends AbstractModel
 
     /**
      * @var integer 是否开启会话保持选项：0关闭， 非0开启，非0值为会话保持时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SessionPersist;
 
     /**
      * @var integer 源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DelayLoop;
 
     /**
      * @var integer 源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConnectTimeout;
 
     /**
      * @var integer 健康阈值，表示连续检查成功多少次后认定源站健康。范围为1到10
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HealthyThreshold;
 
     /**
      * @var integer 不健康阈值，表示连续检查失败多少次数后认为源站不健康。范围为1到10
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UnhealthyThreshold;
 
     /**
      * @var integer 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailoverSwitch;
 
     /**
      * @var integer 源站是否开启健康检查：1开启，0关闭。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HealthCheck;
 
     /**
      * @var string UDP源站健康类型。PORT表示检查端口，PING表示PING。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CheckType;
 
     /**
      * @var integer UDP源站健康检查探测端口。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CheckPort;
 
     /**
      * @var string UDP源站健康检查端口探测报文类型：TEXT表示文本。仅在健康检查类型为PORT时使用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContextType;
 
     /**
      * @var string UDP源站健康检查端口探测发送报文。仅在健康检查类型为PORT时使用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SendContext;
 
     /**
      * @var string UDP源站健康检查端口探测接收报文。仅在健康检查类型为PORT时使用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecvContext;
 
     /**
      * @var string 监听器的通道ID，如果监听器属于通道组，则为null
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProxyId;
 
     /**
      * @var string 监听器的通道组ID，如果监听器属于通道，则为null
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupId;
 
@@ -263,7 +218,6 @@ class UDPListener extends AbstractModel
      * @param string $ListenerName 监听器名称
      * @param integer $Port 监听器端口
      * @param integer $RealServerPort 监听器转发源站端口，仅V1版本通道或通道组监听器有效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RealServerType 监听器绑定源站类型
      * @param string $Protocol 监听器协议， UDP
      * @param integer $ListenerStatus 监听器状态，其中：
@@ -277,33 +231,19 @@ class UDPListener extends AbstractModel
      * @param array $RealServerSet 监听器绑定的源站信息
      * @param integer $CreateTime 监听器创建时间，Unix时间戳
      * @param integer $SessionPersist 是否开启会话保持选项：0关闭， 非0开启，非0值为会话保持时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DelayLoop 源站健康检查时间间隔，单位：秒。时间间隔取值在[5，300]之间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ConnectTimeout 源站健康检查响应超时时间，单位：秒。超时时间取值在[2，60]之间。超时时间应小于健康检查时间间隔DelayLoop。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HealthyThreshold 健康阈值，表示连续检查成功多少次后认定源站健康。范围为1到10
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UnhealthyThreshold 不健康阈值，表示连续检查失败多少次数后认为源站不健康。范围为1到10
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FailoverSwitch 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HealthCheck 源站是否开启健康检查：1开启，0关闭。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CheckType UDP源站健康类型。PORT表示检查端口，PING表示PING。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CheckPort UDP源站健康检查探测端口。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContextType UDP源站健康检查端口探测报文类型：TEXT表示文本。仅在健康检查类型为PORT时使用。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SendContext UDP源站健康检查端口探测发送报文。仅在健康检查类型为PORT时使用。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RecvContext UDP源站健康检查端口探测接收报文。仅在健康检查类型为PORT时使用。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProxyId 监听器的通道ID，如果监听器属于通道组，则为null
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupId 监听器的通道组ID，如果监听器属于通道，则为null
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

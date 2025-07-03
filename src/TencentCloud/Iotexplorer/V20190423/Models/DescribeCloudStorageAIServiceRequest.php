@@ -20,23 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCloudStorageAIService请求参数结构体
  *
- * @method string getProductId() 获取产品ID
- * @method void setProductId(string $ProductId) 设置产品ID
+ * @method string getProductId() 获取产品 ID
+ * @method void setProductId(string $ProductId) 设置产品 ID
  * @method string getDeviceName() 获取设备名称
  * @method void setDeviceName(string $DeviceName) 设置设备名称
  * @method string getServiceType() 获取云存 AI 服务类型。可选值：
-
-- `PackageDetect`：包裹检测
+- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
  * @method void setServiceType(string $ServiceType) 设置云存 AI 服务类型。可选值：
-
-- `PackageDetect`：包裹检测
+- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
  */
 class DescribeCloudStorageAIServiceRequest extends AbstractModel
 {
     /**
-     * @var string 产品ID
+     * @var string 产品 ID
      */
     public $ProductId;
 
@@ -47,18 +45,16 @@ class DescribeCloudStorageAIServiceRequest extends AbstractModel
 
     /**
      * @var string 云存 AI 服务类型。可选值：
-
-- `PackageDetect`：包裹检测
+- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
      */
     public $ServiceType;
 
     /**
-     * @param string $ProductId 产品ID
+     * @param string $ProductId 产品 ID
      * @param string $DeviceName 设备名称
      * @param string $ServiceType 云存 AI 服务类型。可选值：
-
-- `PackageDetect`：包裹检测
+- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
      */
     function __construct()

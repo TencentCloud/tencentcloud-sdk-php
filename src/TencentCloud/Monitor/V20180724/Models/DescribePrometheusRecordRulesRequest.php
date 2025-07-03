@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePrometheusRecordRules请求参数结构体
  *
- * @method string getInstanceId() 获取实例id
- * @method void setInstanceId(string $InstanceId) 设置实例id
- * @method integer getOffset() 获取分页
- * @method void setOffset(integer $Offset) 设置分页
- * @method integer getLimit() 获取分页
- * @method void setLimit(integer $Limit) 设置分页
- * @method array getFilters() 获取过滤
- * @method void setFilters(array $Filters) 设置过滤
+ * @method string getInstanceId() 获取Prometheus 实例 ID
+ * @method void setInstanceId(string $InstanceId) 设置Prometheus 实例 ID
+ * @method integer getOffset() 获取偏移量，默认为0。
+ * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
+ * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
+ * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
+ * @method array getFilters() 获取仅支持按Name, Values字段过滤。
+ * @method void setFilters(array $Filters) 设置仅支持按Name, Values字段过滤。
  */
 class DescribePrometheusRecordRulesRequest extends AbstractModel
 {
     /**
-     * @var string 实例id
+     * @var string Prometheus 实例 ID
      */
     public $InstanceId;
 
     /**
-     * @var integer 分页
+     * @var integer 偏移量，默认为0。
      */
     public $Offset;
 
     /**
-     * @var integer 分页
+     * @var integer 返回数量，默认为20，最大值为100。
      */
     public $Limit;
 
     /**
-     * @var array 过滤
+     * @var array 仅支持按Name, Values字段过滤。
      */
     public $Filters;
 
     /**
-     * @param string $InstanceId 实例id
-     * @param integer $Offset 分页
-     * @param integer $Limit 分页
-     * @param array $Filters 过滤
+     * @param string $InstanceId Prometheus 实例 ID
+     * @param integer $Offset 偏移量，默认为0。
+     * @param integer $Limit 返回数量，默认为20，最大值为100。
+     * @param array $Filters 仅支持按Name, Values字段过滤。
      */
     function __construct()
     {

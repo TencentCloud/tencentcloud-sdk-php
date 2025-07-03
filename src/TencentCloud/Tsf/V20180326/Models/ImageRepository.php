@@ -21,213 +21,169 @@ use TencentCloud\Common\AbstractModel;
  * 镜像仓库
  *
  * @method string getReponame() 获取仓库名,含命名空间,如tsf/nginx
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReponame(string $Reponame) 设置仓库名,含命名空间,如tsf/nginx
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRepotype() 获取仓库类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRepotype(string $Repotype) 设置仓库类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTagCount() 获取镜像版本数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagCount(integer $TagCount) 设置镜像版本数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsPublic() 获取是否公共,1:公有,0:私有
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsPublic(integer $IsPublic) 设置是否公共,1:公有,0:私有
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsUserFavor() 获取是否被用户收藏。true：是，false：否
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsUserFavor(boolean $IsUserFavor) 设置是否被用户收藏。true：是，false：否
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsQcloudOfficial() 获取是否是腾讯云官方仓库。 是否是腾讯云官方仓库。true：是，false：否
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsQcloudOfficial(boolean $IsQcloudOfficial) 设置是否是腾讯云官方仓库。 是否是腾讯云官方仓库。true：是，false：否
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFavorCount() 获取被所有用户收藏次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFavorCount(integer $FavorCount) 设置被所有用户收藏次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPullCount() 获取拉取次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPullCount(integer $PullCount) 设置拉取次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取描述内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置描述内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreationTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreationTime(string $CreationTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method TcrRepoInfo getTcrRepoInfo() 获取TcrRepoInfo值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTcrRepoInfo(TcrRepoInfo $TcrRepoInfo) 设置TcrRepoInfo值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTcrBindingId() 获取TcrBindingId值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTcrBindingId(integer $TcrBindingId) 设置TcrBindingId值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApplicationId() 获取applicationid值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationId(string $ApplicationId) 设置applicationid值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ScalableRule getApplicationName() 获取ApplicationName值（废弃）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationName(ScalableRule $ApplicationName) 设置ApplicationName值（废弃）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApplicationNameReal() 获取ApplicationName值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationNameReal(string $ApplicationNameReal) 设置ApplicationName值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPublic() 获取是否公共,1:公有,0:私有
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublic(integer $Public) 设置是否公共,1:公有,0:私有
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreateMode() 获取创建方式：manual | automatic
+ * @method void setCreateMode(string $CreateMode) 设置创建方式：manual | automatic
+ * @method string getRepoName() 获取仓库名，等同reponame字段
+ * @method void setRepoName(string $RepoName) 设置仓库名，等同reponame字段
+ * @method string getRepoType() 获取仓库类型
+ * @method void setRepoType(string $RepoType) 设置仓库类型
  */
 class ImageRepository extends AbstractModel
 {
     /**
      * @var string 仓库名,含命名空间,如tsf/nginx
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Reponame;
 
     /**
      * @var string 仓库类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Repotype;
 
     /**
      * @var integer 镜像版本数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagCount;
 
     /**
      * @var integer 是否公共,1:公有,0:私有
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsPublic;
 
     /**
      * @var boolean 是否被用户收藏。true：是，false：否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsUserFavor;
 
     /**
      * @var boolean 是否是腾讯云官方仓库。 是否是腾讯云官方仓库。true：是，false：否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsQcloudOfficial;
 
     /**
      * @var integer 被所有用户收藏次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FavorCount;
 
     /**
      * @var integer 拉取次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PullCount;
 
     /**
      * @var string 描述内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreationTime;
 
     /**
      * @var string 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @var TcrRepoInfo TcrRepoInfo值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TcrRepoInfo;
 
     /**
      * @var integer TcrBindingId值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TcrBindingId;
 
     /**
      * @var string applicationid值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationId;
 
     /**
      * @var ScalableRule ApplicationName值（废弃）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationName;
 
     /**
      * @var string ApplicationName值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationNameReal;
 
     /**
      * @var integer 是否公共,1:公有,0:私有
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Public;
 
     /**
+     * @var string 创建方式：manual | automatic
+     */
+    public $CreateMode;
+
+    /**
+     * @var string 仓库名，等同reponame字段
+     */
+    public $RepoName;
+
+    /**
+     * @var string 仓库类型
+     */
+    public $RepoType;
+
+    /**
      * @param string $Reponame 仓库名,含命名空间,如tsf/nginx
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Repotype 仓库类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TagCount 镜像版本数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsPublic 是否公共,1:公有,0:私有
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsUserFavor 是否被用户收藏。true：是，false：否
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsQcloudOfficial 是否是腾讯云官方仓库。 是否是腾讯云官方仓库。true：是，false：否
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FavorCount 被所有用户收藏次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PullCount 拉取次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 描述内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreationTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TcrRepoInfo $TcrRepoInfo TcrRepoInfo值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TcrBindingId TcrBindingId值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationId applicationid值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ScalableRule $ApplicationName ApplicationName值（废弃）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationNameReal ApplicationName值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Public 是否公共,1:公有,0:私有
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreateMode 创建方式：manual | automatic
+     * @param string $RepoName 仓库名，等同reponame字段
+     * @param string $RepoType 仓库类型
      */
     function __construct()
     {
@@ -310,6 +266,18 @@ class ImageRepository extends AbstractModel
 
         if (array_key_exists("Public",$param) and $param["Public"] !== null) {
             $this->Public = $param["Public"];
+        }
+
+        if (array_key_exists("CreateMode",$param) and $param["CreateMode"] !== null) {
+            $this->CreateMode = $param["CreateMode"];
+        }
+
+        if (array_key_exists("RepoName",$param) and $param["RepoName"] !== null) {
+            $this->RepoName = $param["RepoName"];
+        }
+
+        if (array_key_exists("RepoType",$param) and $param["RepoType"] !== null) {
+            $this->RepoType = $param["RepoType"];
         }
     }
 }

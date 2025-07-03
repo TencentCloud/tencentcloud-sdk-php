@@ -21,21 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * CreateClusters返回参数结构体
  *
  * @method string getTranId() 获取冻结流水ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTranId(string $TranId) 设置冻结流水ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDealNames() 获取订单号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDealNames(array $DealNames) 设置订单号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getResourceIds() 获取资源ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取资源ID）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceIds(array $ResourceIds) 设置资源ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取资源ID）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getClusterIds() 获取集群ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取集群ID）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterIds(array $ClusterIds) 设置集群ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取集群ID）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getBigDealIds() 获取大订单号
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBigDealIds(array $BigDealIds) 设置大订单号
@@ -47,25 +39,21 @@ class CreateClustersResponse extends AbstractModel
 {
     /**
      * @var string 冻结流水ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TranId;
 
     /**
      * @var array 订单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DealNames;
 
     /**
      * @var array 资源ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取资源ID）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceIds;
 
     /**
      * @var array 集群ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取集群ID）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterIds;
 
@@ -82,13 +70,9 @@ class CreateClustersResponse extends AbstractModel
 
     /**
      * @param string $TranId 冻结流水ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DealNames 订单号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ResourceIds 资源ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取资源ID）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ClusterIds 集群ID列表（该字段已不再维护，请使用dealNames字段查询接口DescribeResourcesByDealName获取集群ID）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $BigDealIds 大订单号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。

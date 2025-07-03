@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvironmentId(string $EnvironmentId) 设置环境 id
  * @method string getClusterNamespace() 获取环境 namespace
  * @method void setClusterNamespace(string $ClusterNamespace) 设置环境 namespace
- * @method integer getSourceChannel() 获取来源渠道
- * @method void setSourceChannel(integer $SourceChannel) 设置来源渠道
  * @method string getApplicationId() 获取应用 ID
  * @method void setApplicationId(string $ApplicationId) 设置应用 ID
+ * @method integer getSourceChannel() 获取来源渠道
+ * @method void setSourceChannel(integer $SourceChannel) 设置来源渠道
  */
 class DescribeRelatedIngressesRequest extends AbstractModel
 {
@@ -42,20 +42,20 @@ class DescribeRelatedIngressesRequest extends AbstractModel
     public $ClusterNamespace;
 
     /**
-     * @var integer 来源渠道
-     */
-    public $SourceChannel;
-
-    /**
      * @var string 应用 ID
      */
     public $ApplicationId;
 
     /**
+     * @var integer 来源渠道
+     */
+    public $SourceChannel;
+
+    /**
      * @param string $EnvironmentId 环境 id
      * @param string $ClusterNamespace 环境 namespace
-     * @param integer $SourceChannel 来源渠道
      * @param string $ApplicationId 应用 ID
+     * @param integer $SourceChannel 来源渠道
      */
     function __construct()
     {
@@ -78,12 +78,12 @@ class DescribeRelatedIngressesRequest extends AbstractModel
             $this->ClusterNamespace = $param["ClusterNamespace"];
         }
 
-        if (array_key_exists("SourceChannel",$param) and $param["SourceChannel"] !== null) {
-            $this->SourceChannel = $param["SourceChannel"];
-        }
-
         if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
             $this->ApplicationId = $param["ApplicationId"];
+        }
+
+        if (array_key_exists("SourceChannel",$param) and $param["SourceChannel"] !== null) {
+            $this->SourceChannel = $param["SourceChannel"];
         }
     }
 }

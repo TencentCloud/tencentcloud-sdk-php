@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取集群ID。
  * @method void setClusterId(string $ClusterId) 设置集群ID。
- * @method string getClusterStatus() 获取集群状态。取值范围：<br><li>PENDING：创建中<br><li>INITING：初始化中<br><li>INIT_FAILED：初始化失败<br><li>RUNNING：运行中<br><li>TERMINATING：销毁中
- * @method void setClusterStatus(string $ClusterStatus) 设置集群状态。取值范围：<br><li>PENDING：创建中<br><li>INITING：初始化中<br><li>INIT_FAILED：初始化失败<br><li>RUNNING：运行中<br><li>TERMINATING：销毁中
+ * @method string getClusterStatus() 获取集群状态。取值范围：<br><li>PENDING：创建中</li><br><li>INITING：初始化中</li><br><li>INIT_FAILED：初始化失败</li><br><li>RUNNING：运行中</li><br><li>TERMINATING：销毁中</li>	
+ * @method void setClusterStatus(string $ClusterStatus) 设置集群状态。取值范围：<br><li>PENDING：创建中</li><br><li>INITING：初始化中</li><br><li>INIT_FAILED：初始化失败</li><br><li>RUNNING：运行中</li><br><li>TERMINATING：销毁中</li>	
  * @method string getClusterName() 获取集群名称。
  * @method void setClusterName(string $ClusterName) 设置集群名称。
  * @method Placement getPlacement() 获取集群位置信息。
@@ -55,7 +55,7 @@ class ClusterOverview extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string 集群状态。取值范围：<br><li>PENDING：创建中<br><li>INITING：初始化中<br><li>INIT_FAILED：初始化失败<br><li>RUNNING：运行中<br><li>TERMINATING：销毁中
+     * @var string 集群状态。取值范围：<br><li>PENDING：创建中</li><br><li>INITING：初始化中</li><br><li>INIT_FAILED：初始化失败</li><br><li>RUNNING：运行中</li><br><li>TERMINATING：销毁中</li>	
      */
     public $ClusterStatus;
 
@@ -116,7 +116,7 @@ class ClusterOverview extends AbstractModel
 
     /**
      * @param string $ClusterId 集群ID。
-     * @param string $ClusterStatus 集群状态。取值范围：<br><li>PENDING：创建中<br><li>INITING：初始化中<br><li>INIT_FAILED：初始化失败<br><li>RUNNING：运行中<br><li>TERMINATING：销毁中
+     * @param string $ClusterStatus 集群状态。取值范围：<br><li>PENDING：创建中</li><br><li>INITING：初始化中</li><br><li>INIT_FAILED：初始化失败</li><br><li>RUNNING：运行中</li><br><li>TERMINATING：销毁中</li>	
      * @param string $ClusterName 集群名称。
      * @param Placement $Placement 集群位置信息。
      * @param string $CreateTime 集群创建时间。

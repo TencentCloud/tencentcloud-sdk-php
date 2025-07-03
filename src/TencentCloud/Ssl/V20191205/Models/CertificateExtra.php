@@ -21,44 +21,37 @@ use TencentCloud\Common\AbstractModel;
  * 获取证书列表（DescribeCertificates）返回参数键为 Certificates 数组下，key为CertificateExtra 的内容。
  *
  * @method string getDomainNumber() 获取证书可配置域名数量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomainNumber(string $DomainNumber) 设置证书可配置域名数量。
+ * @method string getOriginCertificateId() 获取续费原证书 ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOriginCertificateId() 获取原始证书 ID。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOriginCertificateId(string $OriginCertificateId) 设置原始证书 ID。
+ * @method void setOriginCertificateId(string $OriginCertificateId) 设置续费原证书 ID。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReplacedBy() 获取重颁发证书原始 ID。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReplacedBy(string $ReplacedBy) 设置重颁发证书原始 ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getReplacedFor() 获取重颁发证书新 ID。
+ * @method string getReplacedFor() 获取重颁发证书ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReplacedFor(string $ReplacedFor) 设置重颁发证书新 ID。
+ * @method void setReplacedFor(string $ReplacedFor) 设置重颁发证书ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getRenewOrder() 获取新订单证书 ID。
+ * @method string getRenewOrder() 获取续费证书 ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRenewOrder(string $RenewOrder) 设置新订单证书 ID。
+ * @method void setRenewOrder(string $RenewOrder) 设置续费证书 ID。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSMCert() 获取是否是国密证书
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSMCert(integer $SMCert) 设置是否是国密证书
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCompanyType() 获取公司类型
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCompanyType(integer $CompanyType) 设置公司类型
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCompanyType() 获取公司类型，取值：1（个人）；2（公司）
+ * @method void setCompanyType(integer $CompanyType) 设置公司类型，取值：1（个人）；2（公司）
  */
 class CertificateExtra extends AbstractModel
 {
     /**
      * @var string 证书可配置域名数量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DomainNumber;
 
     /**
-     * @var string 原始证书 ID。
+     * @var string 续费原证书 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OriginCertificateId;
@@ -70,44 +63,39 @@ class CertificateExtra extends AbstractModel
     public $ReplacedBy;
 
     /**
-     * @var string 重颁发证书新 ID。
+     * @var string 重颁发证书ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReplacedFor;
 
     /**
-     * @var string 新订单证书 ID。
+     * @var string 续费证书 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RenewOrder;
 
     /**
      * @var integer 是否是国密证书
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SMCert;
 
     /**
-     * @var integer 公司类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 公司类型，取值：1（个人）；2（公司）
      */
     public $CompanyType;
 
     /**
      * @param string $DomainNumber 证书可配置域名数量。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OriginCertificateId 原始证书 ID。
+     * @param string $OriginCertificateId 续费原证书 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReplacedBy 重颁发证书原始 ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ReplacedFor 重颁发证书新 ID。
+     * @param string $ReplacedFor 重颁发证书ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $RenewOrder 新订单证书 ID。
+     * @param string $RenewOrder 续费证书 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SMCert 是否是国密证书
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $CompanyType 公司类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CompanyType 公司类型，取值：1（个人）；2（公司）
      */
     function __construct()
     {

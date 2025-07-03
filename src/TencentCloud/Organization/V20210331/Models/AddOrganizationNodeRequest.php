@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置节点名称。最大长度为40个字符，支持英文字母、数字、汉字、符号+@、&._[]-
  * @method string getRemark() 获取备注。
  * @method void setRemark(string $Remark) 设置备注。
+ * @method array getTags() 获取部门标签列表。最大10个
+ * @method void setTags(array $Tags) 设置部门标签列表。最大10个
  */
 class AddOrganizationNodeRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class AddOrganizationNodeRequest extends AbstractModel
     public $Remark;
 
     /**
+     * @var array 部门标签列表。最大10个
+     */
+    public $Tags;
+
+    /**
      * @param integer $ParentNodeId 父节点ID。可以通过[DescribeOrganizationNodes](https://cloud.tencent.com/document/product/850/82926)获取
      * @param string $Name 节点名称。最大长度为40个字符，支持英文字母、数字、汉字、符号+@、&._[]-
      * @param string $Remark 备注。
+     * @param array $Tags 部门标签列表。最大10个
      */
     function __construct()
     {
@@ -72,6 +80,15 @@ class AddOrganizationNodeRequest extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

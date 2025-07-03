@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsDisabled(integer $IsDisabled) 设置是否启用[1:禁用|0:启用]
  * @method array getQuuids() 获取主机列表
  * @method void setQuuids(array $Quuids) 设置主机列表
+ * @method array getExcludedQuuids() 获取需排除的机器列表	
+ * @method void setExcludedQuuids(array $ExcludedQuuids) 设置需排除的机器列表	
  */
 class ModifyWebHookPolicyRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class ModifyWebHookPolicyRequest extends AbstractModel
     public $Quuids;
 
     /**
+     * @var array 需排除的机器列表	
+     */
+    public $ExcludedQuuids;
+
+    /**
      * @param integer $Id id
      * @param string $Name 策略名称
      * @param array $Events 事件类型
@@ -96,6 +103,7 @@ class ModifyWebHookPolicyRequest extends AbstractModel
      * @param array $CustomFields 自定义透传字段
      * @param integer $IsDisabled 是否启用[1:禁用|0:启用]
      * @param array $Quuids 主机列表
+     * @param array $ExcludedQuuids 需排除的机器列表	
      */
     function __construct()
     {
@@ -164,6 +172,10 @@ class ModifyWebHookPolicyRequest extends AbstractModel
 
         if (array_key_exists("Quuids",$param) and $param["Quuids"] !== null) {
             $this->Quuids = $param["Quuids"];
+        }
+
+        if (array_key_exists("ExcludedQuuids",$param) and $param["ExcludedQuuids"] !== null) {
+            $this->ExcludedQuuids = $param["ExcludedQuuids"];
         }
     }
 }

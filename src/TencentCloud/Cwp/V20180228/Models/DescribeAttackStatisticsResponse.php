@@ -21,45 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * DescribeAttackStatistics返回参数结构体
  *
  * @method integer getPendingAttackCount() 获取总攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPendingAttackCount(integer $PendingAttackCount) 设置总攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPendingTryAttackCount() 获取总尝试攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPendingTryAttackCount(integer $PendingTryAttackCount) 设置总尝试攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPendingSuccAttackCount() 获取总攻击成功次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPendingSuccAttackCount(integer $PendingSuccAttackCount) 设置总攻击成功次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPendingNewAttackCount() 获取今日新增攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPendingNewAttackCount(integer $PendingNewAttackCount) 设置今日新增攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAttackedAssetCount() 获取总受攻击资产数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAttackedAssetCount(integer $AttackedAssetCount) 设置总受攻击资产数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNewAttackedAssetCount() 获取今日新增受攻击资产数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNewAttackedAssetCount(integer $NewAttackedAssetCount) 设置今日新增受攻击资产数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAttackedPortCount() 获取总受攻击端口数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAttackedPortCount(integer $AttackedPortCount) 设置总受攻击端口数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNewAttackedPortCount() 获取今日新增受攻击端口数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNewAttackedPortCount(integer $NewAttackedPortCount) 设置今日新增受攻击端口数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAttackSrcIpCount() 获取总攻击来源ip数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAttackSrcIpCount(integer $AttackSrcIpCount) 设置总攻击来源ip数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNewAttackSrcIpCount() 获取今日新增攻击来源ip数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNewAttackSrcIpCount(integer $NewAttackSrcIpCount) 设置今日新增攻击来源ip数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -67,61 +47,51 @@ class DescribeAttackStatisticsResponse extends AbstractModel
 {
     /**
      * @var integer 总攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PendingAttackCount;
 
     /**
      * @var integer 总尝试攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PendingTryAttackCount;
 
     /**
      * @var integer 总攻击成功次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PendingSuccAttackCount;
 
     /**
      * @var integer 今日新增攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PendingNewAttackCount;
 
     /**
      * @var integer 总受攻击资产数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AttackedAssetCount;
 
     /**
      * @var integer 今日新增受攻击资产数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NewAttackedAssetCount;
 
     /**
      * @var integer 总受攻击端口数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AttackedPortCount;
 
     /**
      * @var integer 今日新增受攻击端口数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NewAttackedPortCount;
 
     /**
      * @var integer 总攻击来源ip数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AttackSrcIpCount;
 
     /**
      * @var integer 今日新增攻击来源ip数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NewAttackSrcIpCount;
 
@@ -132,25 +102,15 @@ class DescribeAttackStatisticsResponse extends AbstractModel
 
     /**
      * @param integer $PendingAttackCount 总攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PendingTryAttackCount 总尝试攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PendingSuccAttackCount 总攻击成功次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PendingNewAttackCount 今日新增攻击次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AttackedAssetCount 总受攻击资产数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NewAttackedAssetCount 今日新增受攻击资产数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AttackedPortCount 总受攻击端口数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NewAttackedPortCount 今日新增受攻击端口数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AttackSrcIpCount 总攻击来源ip数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NewAttackSrcIpCount 今日新增攻击来源ip数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,166 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 后端提交任务事件返回Data复杂类型
  *
- * @method integer getCode() 获取状态码
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCode(integer $Code) 设置状态码
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCode() 获取状态码，0为成功，-1为失败
+ * @method void setCode(integer $Code) 设置状态码，0为成功，-1为失败
  * @method string getMessage() 获取提示信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置提示信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTaskId() 获取任务ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskId(integer $TaskId) 设置任务ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTaskOrderId() 获取当前完成或正在完成的任务订单ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskOrderId(string $TaskOrderId) 设置当前完成或正在完成的任务订单ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTaskCode() 获取当前任务订单状态码
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskCode(integer $TaskCode) 设置当前任务订单状态码
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTaskCoinNumber() 获取获得积分数/成长值
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTaskCoinNumber(integer $TaskCoinNumber) 设置获得积分数/成长值
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTaskOrderId() 获取当前完成或正在完成的安心用户运营平台的任务订单ID
+ * @method void setTaskOrderId(string $TaskOrderId) 设置当前完成或正在完成的安心用户运营平台的任务订单ID
+ * @method integer getTaskCode() 获取当前任务订单状态码。1代表未完成；2代表已完成但未提交任务；3表示已完成，且已提交获得积分任务；4表示过期任务，提交后不获得积分。
+ * @method void setTaskCode(integer $TaskCode) 设置当前任务订单状态码。1代表未完成；2代表已完成但未提交任务；3表示已完成，且已提交获得积分任务；4表示过期任务，提交后不获得积分。
+ * @method integer getTaskCoinNumber() 获取获得积分数
+ * @method void setTaskCoinNumber(integer $TaskCoinNumber) 设置获得积分数
  * @method integer getTaskType() 获取任务类型后台代码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskType(integer $TaskType) 设置任务类型后台代码
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotalCoin() 获取当前积分
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotalCoin(integer $TotalCoin) 设置当前积分
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAttach() 获取用户透传的代码块
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAttach(string $Attach) 设置用户透传的代码块
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTotalCoin() 获取用户的当前积分
+ * @method void setTotalCoin(integer $TotalCoin) 设置用户的当前积分
+ * @method string getAttach() 获取用户透传的附加数据
+ * @method void setAttach(string $Attach) 设置用户透传的附加数据
  * @method integer getDoneTimes() 获取计次任务当前完成次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDoneTimes(integer $DoneTimes) 设置计次任务当前完成次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalTimes() 获取计次任务当前所需完成次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalTimes(integer $TotalTimes) 设置计次任务当前所需完成次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTaskName() 获取任务名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskName(string $TaskName) 设置任务名称
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getGrowScore() 获取当前成长值
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGrowScore(integer $GrowScore) 设置当前成长值
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getGrowScore() 获取用户当前成长值
+ * @method void setGrowScore(integer $GrowScore) 设置用户当前成长值
  */
 class TaskEventData extends AbstractModel
 {
     /**
-     * @var integer 状态码
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 状态码，0为成功，-1为失败
      */
     public $Code;
 
     /**
      * @var string 提示信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
     /**
      * @var integer 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskId;
 
     /**
-     * @var string 当前完成或正在完成的任务订单ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 当前完成或正在完成的安心用户运营平台的任务订单ID
      */
     public $TaskOrderId;
 
     /**
-     * @var integer 当前任务订单状态码
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 当前任务订单状态码。1代表未完成；2代表已完成但未提交任务；3表示已完成，且已提交获得积分任务；4表示过期任务，提交后不获得积分。
      */
     public $TaskCode;
 
     /**
-     * @var integer 获得积分数/成长值
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 获得积分数
      */
     public $TaskCoinNumber;
 
     /**
      * @var integer 任务类型后台代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskType;
 
     /**
-     * @var integer 当前积分
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 用户的当前积分
      */
     public $TotalCoin;
 
     /**
-     * @var string 用户透传的代码块
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 用户透传的附加数据
      */
     public $Attach;
 
     /**
      * @var integer 计次任务当前完成次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DoneTimes;
 
     /**
      * @var integer 计次任务当前所需完成次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalTimes;
 
     /**
      * @var string 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskName;
 
     /**
-     * @var integer 当前成长值
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 用户当前成长值
      */
     public $GrowScore;
 
     /**
-     * @param integer $Code 状态码
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Code 状态码，0为成功，-1为失败
      * @param string $Message 提示信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TaskId 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TaskOrderId 当前完成或正在完成的任务订单ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TaskCode 当前任务订单状态码
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TaskCoinNumber 获得积分数/成长值
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TaskOrderId 当前完成或正在完成的安心用户运营平台的任务订单ID
+     * @param integer $TaskCode 当前任务订单状态码。1代表未完成；2代表已完成但未提交任务；3表示已完成，且已提交获得积分任务；4表示过期任务，提交后不获得积分。
+     * @param integer $TaskCoinNumber 获得积分数
      * @param integer $TaskType 任务类型后台代码
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TotalCoin 当前积分
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Attach 用户透传的代码块
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TotalCoin 用户的当前积分
+     * @param string $Attach 用户透传的附加数据
      * @param integer $DoneTimes 计次任务当前完成次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalTimes 计次任务当前所需完成次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskName 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $GrowScore 当前成长值
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $GrowScore 用户当前成长值
      */
     function __construct()
     {

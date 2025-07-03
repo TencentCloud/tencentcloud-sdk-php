@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 体检报告-眼科-色觉
  *
  * @method KeyValueItem getText() 获取色觉总体描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setText(KeyValueItem $Text) 设置色觉总体描述
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OphthalmologyColourVision extends AbstractModel
 {
     /**
      * @var KeyValueItem 色觉总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Text;
 
     /**
      * @param KeyValueItem $Text 色觉总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

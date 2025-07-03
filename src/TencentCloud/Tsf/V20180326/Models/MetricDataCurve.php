@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 指标监控数据曲线
  *
  * @method string getMetricName() 获取指标名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetricName(string $MetricName) 设置指标名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMetricFunction() 获取指标计算方式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetricFunction(string $MetricFunction) 设置指标计算方式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getMetricDataPoints() 获取指标数据点集合
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetricDataPoints(array $MetricDataPoints) 设置指标数据点集合
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MetricDataCurve extends AbstractModel
 {
     /**
      * @var string 指标名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MetricName;
 
     /**
      * @var string 指标计算方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MetricFunction;
 
     /**
      * @var array 指标数据点集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MetricDataPoints;
 
     /**
      * @param string $MetricName 指标名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MetricFunction 指标计算方式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $MetricDataPoints 指标数据点集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

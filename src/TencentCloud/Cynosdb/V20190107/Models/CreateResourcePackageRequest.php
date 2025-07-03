@@ -20,12 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateResourcePackage请求参数结构体
  *
- * @method string getInstanceType() 获取实例类型
- * @method void setInstanceType(string $InstanceType) 设置实例类型
- * @method string getPackageRegion() 获取资源包使用地域
-china-中国内地通用，overseas-港澳台及海外通用
- * @method void setPackageRegion(string $PackageRegion) 设置资源包使用地域
-china-中国内地通用，overseas-港澳台及海外通用
+ * @method string getInstanceType() 获取实例类型，目前固定传cynosdb-serverless
+ * @method void setInstanceType(string $InstanceType) 设置实例类型，目前固定传cynosdb-serverless
+ * @method string getPackageRegion() 获取资源包使用地域chineseMainland-中国内地通用，overseas-港澳台及海外通用
+ * @method void setPackageRegion(string $PackageRegion) 设置资源包使用地域chineseMainland-中国内地通用，overseas-港澳台及海外通用
  * @method string getPackageType() 获取资源包类型：CCU-计算资源包，DISK-存储资源包
  * @method void setPackageType(string $PackageType) 设置资源包类型：CCU-计算资源包，DISK-存储资源包
  * @method string getPackageVersion() 获取资源包版本
@@ -44,13 +42,12 @@ base-基础版本，common-通用版本，enterprise-企业版本
 class CreateResourcePackageRequest extends AbstractModel
 {
     /**
-     * @var string 实例类型
+     * @var string 实例类型，目前固定传cynosdb-serverless
      */
     public $InstanceType;
 
     /**
-     * @var string 资源包使用地域
-china-中国内地通用，overseas-港澳台及海外通用
+     * @var string 资源包使用地域chineseMainland-中国内地通用，overseas-港澳台及海外通用
      */
     public $PackageRegion;
 
@@ -86,9 +83,8 @@ base-基础版本，common-通用版本，enterprise-企业版本
     public $PackageName;
 
     /**
-     * @param string $InstanceType 实例类型
-     * @param string $PackageRegion 资源包使用地域
-china-中国内地通用，overseas-港澳台及海外通用
+     * @param string $InstanceType 实例类型，目前固定传cynosdb-serverless
+     * @param string $PackageRegion 资源包使用地域chineseMainland-中国内地通用，overseas-港澳台及海外通用
      * @param string $PackageType 资源包类型：CCU-计算资源包，DISK-存储资源包
      * @param string $PackageVersion 资源包版本
 base-基础版本，common-通用版本，enterprise-企业版本

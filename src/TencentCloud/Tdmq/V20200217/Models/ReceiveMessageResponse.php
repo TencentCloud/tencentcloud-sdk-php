@@ -27,21 +27,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getAckTopic() 获取提供给 Ack 接口，用来Ack哪一个topic中的消息
  * @method void setAckTopic(string $AckTopic) 设置提供给 Ack 接口，用来Ack哪一个topic中的消息
  * @method string getErrorMsg() 获取返回的错误信息，如果为空，说明没有错误
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorMsg(string $ErrorMsg) 设置返回的错误信息，如果为空，说明没有错误
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubName() 获取返回订阅者的名字，用来创建 ack consumer时使用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubName(string $SubName) 设置返回订阅者的名字，用来创建 ack consumer时使用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMessageIDList() 获取BatchReceivePolicy 一次性返回的多条消息的 MessageID，用 ‘###’ 来区分不同的 MessageID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessageIDList(string $MessageIDList) 设置BatchReceivePolicy 一次性返回的多条消息的 MessageID，用 ‘###’ 来区分不同的 MessageID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMessagesPayload() 获取BatchReceivePolicy 一次性返回的多条消息的消息内容，用 ‘###’ 来区分不同的消息内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessagesPayload(string $MessagesPayload) 设置BatchReceivePolicy 一次性返回的多条消息的消息内容，用 ‘###’ 来区分不同的消息内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -64,25 +56,21 @@ class ReceiveMessageResponse extends AbstractModel
 
     /**
      * @var string 返回的错误信息，如果为空，说明没有错误
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrorMsg;
 
     /**
      * @var string 返回订阅者的名字，用来创建 ack consumer时使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubName;
 
     /**
      * @var string BatchReceivePolicy 一次性返回的多条消息的 MessageID，用 ‘###’ 来区分不同的 MessageID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MessageIDList;
 
     /**
      * @var string BatchReceivePolicy 一次性返回的多条消息的消息内容，用 ‘###’ 来区分不同的消息内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MessagesPayload;
 
@@ -96,13 +84,9 @@ class ReceiveMessageResponse extends AbstractModel
      * @param string $MessagePayload 接收消息的内容
      * @param string $AckTopic 提供给 Ack 接口，用来Ack哪一个topic中的消息
      * @param string $ErrorMsg 返回的错误信息，如果为空，说明没有错误
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubName 返回订阅者的名字，用来创建 ack consumer时使用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MessageIDList BatchReceivePolicy 一次性返回的多条消息的 MessageID，用 ‘###’ 来区分不同的 MessageID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MessagesPayload BatchReceivePolicy 一次性返回的多条消息的消息内容，用 ‘###’ 来区分不同的消息内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

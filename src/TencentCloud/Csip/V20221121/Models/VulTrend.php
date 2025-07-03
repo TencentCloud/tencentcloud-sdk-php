@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 漏洞趋势-攻击趋势、影响用户、影响资产
  *
  * @method integer getAffectAssetCount() 获取影响的资产数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAffectAssetCount(integer $AffectAssetCount) 设置影响的资产数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAffectUserCount() 获取影响的用户数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAffectUserCount(integer $AffectUserCount) 设置影响的用户数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAttackCount() 获取攻击数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAttackCount(integer $AttackCount) 设置攻击数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDate() 获取时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDate(string $Date) 设置时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VulTrend extends AbstractModel
 {
     /**
      * @var integer 影响的资产数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AffectAssetCount;
 
     /**
      * @var integer 影响的用户数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AffectUserCount;
 
     /**
      * @var integer 攻击数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AttackCount;
 
     /**
      * @var string 时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Date;
 
     /**
      * @param integer $AffectAssetCount 影响的资产数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AffectUserCount 影响的用户数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AttackCount 攻击数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Date 时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

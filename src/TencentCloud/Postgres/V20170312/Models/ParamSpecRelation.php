@@ -21,29 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 各规格下的参数信息
  *
  * @method string getName() 获取参数名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置参数名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMemory() 获取参数信息所属规格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMemory(string $Memory) 设置参数信息所属规格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取参数在该规格下的默认值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置参数在该规格下的默认值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUnit() 获取参数值单位。参数没有单位时，该字段返回空
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnit(string $Unit) 设置参数值单位。参数没有单位时，该字段返回空
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getMax() 获取数值类型（integer、real）参数，取值上界
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMax(float $Max) 设置数值类型（integer、real）参数，取值上界
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getMin() 获取数值类型（integer、real）参数，取值下界
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMin(float $Min) 设置数值类型（integer、real）参数，取值下界
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getEnumValue() 获取枚举类型参数，取值范围
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnumValue(array $EnumValue) 设置枚举类型参数，取值范围
@@ -53,37 +41,31 @@ class ParamSpecRelation extends AbstractModel
 {
     /**
      * @var string 参数名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 参数信息所属规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Memory;
 
     /**
      * @var string 参数在该规格下的默认值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @var string 参数值单位。参数没有单位时，该字段返回空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Unit;
 
     /**
      * @var float 数值类型（integer、real）参数，取值上界
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Max;
 
     /**
      * @var float 数值类型（integer、real）参数，取值下界
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Min;
 
@@ -95,17 +77,11 @@ class ParamSpecRelation extends AbstractModel
 
     /**
      * @param string $Name 参数名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Memory 参数信息所属规格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 参数在该规格下的默认值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Unit 参数值单位。参数没有单位时，该字段返回空
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Max 数值类型（integer、real）参数，取值上界
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Min 数值类型（integer、real）参数，取值下界
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $EnumValue 枚举类型参数，取值范围
 注意：此字段可能返回 null，表示取不到有效值。
      */

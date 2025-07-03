@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLocation(string $Location) 设置Db存储路径
  * @method string getName() 获取数据库名称
  * @method void setName(string $Name) 设置数据库名称
+ * @method string getDatasourceConnectionName() 获取数据源连接名
+ * @method void setDatasourceConnectionName(string $DatasourceConnectionName) 设置数据源连接名
  */
 class CreateDMSDatabaseRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CreateDMSDatabaseRequest extends AbstractModel
     public $Name;
 
     /**
+     * @var string 数据源连接名
+     */
+    public $DatasourceConnectionName;
+
+    /**
      * @param Asset $Asset 基础元数据对象
      * @param string $SchemaName Schema目录
      * @param string $Location Db存储路径
      * @param string $Name 数据库名称
+     * @param string $DatasourceConnectionName 数据源连接名
      */
     function __construct()
     {
@@ -85,6 +93,10 @@ class CreateDMSDatabaseRequest extends AbstractModel
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("DatasourceConnectionName",$param) and $param["DatasourceConnectionName"] !== null) {
+            $this->DatasourceConnectionName = $param["DatasourceConnectionName"];
         }
     }
 }

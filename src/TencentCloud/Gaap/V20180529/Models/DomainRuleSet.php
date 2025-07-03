@@ -25,115 +25,71 @@ use TencentCloud\Common\AbstractModel;
  * @method array getRuleSet() 获取该域名对应的转发规则列表。
  * @method void setRuleSet(array $RuleSet) 设置该域名对应的转发规则列表。
  * @method string getCertificateId() 获取该域名对应的服务器证书ID，值为default时，表示使用默认证书（监听器配置的证书）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertificateId(string $CertificateId) 设置该域名对应的服务器证书ID，值为default时，表示使用默认证书（监听器配置的证书）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCertificateAlias() 获取该域名对应服务器证书名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertificateAlias(string $CertificateAlias) 设置该域名对应服务器证书名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClientCertificateId() 获取该域名对应的客户端证书ID，值为default时，表示使用默认证书（监听器配置的证书）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClientCertificateId(string $ClientCertificateId) 设置该域名对应的客户端证书ID，值为default时，表示使用默认证书（监听器配置的证书）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClientCertificateAlias() 获取该域名对应客户端证书名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClientCertificateAlias(string $ClientCertificateAlias) 设置该域名对应客户端证书名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBasicAuthConfId() 获取该域名对应基础认证配置ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBasicAuthConfId(string $BasicAuthConfId) 设置该域名对应基础认证配置ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBasicAuth() 获取基础认证开关，其中：
 0，表示未开启；
 1，表示已开启。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBasicAuth(integer $BasicAuth) 设置基础认证开关，其中：
 0，表示未开启；
 1，表示已开启。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBasicAuthConfAlias() 获取该域名对应基础认证配置名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBasicAuthConfAlias(string $BasicAuthConfAlias) 设置该域名对应基础认证配置名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRealServerCertificateId() 获取该域名对应源站认证证书ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealServerCertificateId(string $RealServerCertificateId) 设置该域名对应源站认证证书ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRealServerAuth() 获取源站认证开关，其中：
 0，表示未开启；
 1，表示已开启。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealServerAuth(integer $RealServerAuth) 设置源站认证开关，其中：
 0，表示未开启；
 1，表示已开启。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRealServerCertificateAlias() 获取该域名对应源站认证证书名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealServerCertificateAlias(string $RealServerCertificateAlias) 设置该域名对应源站认证证书名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGaapCertificateId() 获取该域名对应通道认证证书ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGaapCertificateId(string $GaapCertificateId) 设置该域名对应通道认证证书ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getGaapAuth() 获取通道认证开关，其中：
 0，表示未开启；
 1，表示已开启。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGaapAuth(integer $GaapAuth) 设置通道认证开关，其中：
 0，表示未开启；
 1，表示已开启。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGaapCertificateAlias() 获取该域名对应通道认证证书名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGaapCertificateAlias(string $GaapCertificateAlias) 设置该域名对应通道认证证书名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRealServerCertificateDomain() 获取源站认证域名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealServerCertificateDomain(string $RealServerCertificateDomain) 设置源站认证域名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPolyClientCertificateAliasInfo() 获取多客户端证书时，返回多个证书的id和别名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolyClientCertificateAliasInfo(array $PolyClientCertificateAliasInfo) 设置多客户端证书时，返回多个证书的id和别名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPolyRealServerCertificateAliasInfo() 获取多源站证书时，返回多个证书的id和别名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolyRealServerCertificateAliasInfo(array $PolyRealServerCertificateAliasInfo) 设置多源站证书时，返回多个证书的id和别名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDomainStatus() 获取域名的状态。
 0表示运行中，
 1表示变更中，
 2表示删除中。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomainStatus(integer $DomainStatus) 设置域名的状态。
 0表示运行中，
 1表示变更中，
 2表示删除中。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBanStatus() 获取封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBanStatus(string $BanStatus) 设置封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHttp3Supported() 获取Http3特性标识，其中：
 0表示关闭；
 1表示启用。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHttp3Supported(integer $Http3Supported) 设置Http3特性标识，其中：
 0表示关闭；
 1表示启用。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsDefaultServer() 获取是否为默认域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsDefaultServer(boolean $IsDefaultServer) 设置是否为默认域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTLSCiphers() 获取TLS套件包
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTLSCiphers(string $TLSCiphers) 设置TLS套件包
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTLSSupportVersion() 获取TLS版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTLSSupportVersion(array $TLSSupportVersion) 设置TLS版本
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DomainRuleSet extends AbstractModel
 {
@@ -149,31 +105,26 @@ class DomainRuleSet extends AbstractModel
 
     /**
      * @var string 该域名对应的服务器证书ID，值为default时，表示使用默认证书（监听器配置的证书）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CertificateId;
 
     /**
      * @var string 该域名对应服务器证书名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CertificateAlias;
 
     /**
      * @var string 该域名对应的客户端证书ID，值为default时，表示使用默认证书（监听器配置的证书）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClientCertificateId;
 
     /**
      * @var string 该域名对应客户端证书名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClientCertificateAlias;
 
     /**
      * @var string 该域名对应基础认证配置ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BasicAuthConfId;
 
@@ -181,19 +132,16 @@ class DomainRuleSet extends AbstractModel
      * @var integer 基础认证开关，其中：
 0，表示未开启；
 1，表示已开启。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BasicAuth;
 
     /**
      * @var string 该域名对应基础认证配置名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BasicAuthConfAlias;
 
     /**
      * @var string 该域名对应源站认证证书ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RealServerCertificateId;
 
@@ -201,19 +149,16 @@ class DomainRuleSet extends AbstractModel
      * @var integer 源站认证开关，其中：
 0，表示未开启；
 1，表示已开启。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RealServerAuth;
 
     /**
      * @var string 该域名对应源站认证证书名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RealServerCertificateAlias;
 
     /**
      * @var string 该域名对应通道认证证书ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GaapCertificateId;
 
@@ -221,31 +166,26 @@ class DomainRuleSet extends AbstractModel
      * @var integer 通道认证开关，其中：
 0，表示未开启；
 1，表示已开启。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GaapAuth;
 
     /**
      * @var string 该域名对应通道认证证书名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GaapCertificateAlias;
 
     /**
      * @var string 源站认证域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RealServerCertificateDomain;
 
     /**
      * @var array 多客户端证书时，返回多个证书的id和别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PolyClientCertificateAliasInfo;
 
     /**
      * @var array 多源站证书时，返回多个证书的id和别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PolyRealServerCertificateAliasInfo;
 
@@ -254,13 +194,11 @@ class DomainRuleSet extends AbstractModel
 0表示运行中，
 1表示变更中，
 2表示删除中。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DomainStatus;
 
     /**
      * @var string 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BanStatus;
 
@@ -268,25 +206,21 @@ class DomainRuleSet extends AbstractModel
      * @var integer Http3特性标识，其中：
 0表示关闭；
 1表示启用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Http3Supported;
 
     /**
      * @var boolean 是否为默认域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsDefaultServer;
 
     /**
      * @var string TLS套件包
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TLSCiphers;
 
     /**
      * @var array TLS版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TLSSupportVersion;
 
@@ -294,60 +228,38 @@ class DomainRuleSet extends AbstractModel
      * @param string $Domain 转发规则域名。
      * @param array $RuleSet 该域名对应的转发规则列表。
      * @param string $CertificateId 该域名对应的服务器证书ID，值为default时，表示使用默认证书（监听器配置的证书）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CertificateAlias 该域名对应服务器证书名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClientCertificateId 该域名对应的客户端证书ID，值为default时，表示使用默认证书（监听器配置的证书）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClientCertificateAlias 该域名对应客户端证书名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BasicAuthConfId 该域名对应基础认证配置ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BasicAuth 基础认证开关，其中：
 0，表示未开启；
 1，表示已开启。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BasicAuthConfAlias 该域名对应基础认证配置名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RealServerCertificateId 该域名对应源站认证证书ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RealServerAuth 源站认证开关，其中：
 0，表示未开启；
 1，表示已开启。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RealServerCertificateAlias 该域名对应源站认证证书名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GaapCertificateId 该域名对应通道认证证书ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $GaapAuth 通道认证开关，其中：
 0，表示未开启；
 1，表示已开启。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GaapCertificateAlias 该域名对应通道认证证书名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RealServerCertificateDomain 源站认证域名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PolyClientCertificateAliasInfo 多客户端证书时，返回多个证书的id和别名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PolyRealServerCertificateAliasInfo 多源站证书时，返回多个证书的id和别名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DomainStatus 域名的状态。
 0表示运行中，
 1表示变更中，
 2表示删除中。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BanStatus 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Http3Supported Http3特性标识，其中：
 0表示关闭；
 1表示启用。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsDefaultServer 是否为默认域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TLSCiphers TLS套件包
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TLSSupportVersion TLS版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

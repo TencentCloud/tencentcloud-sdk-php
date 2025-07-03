@@ -33,9 +33,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getAction() 获取动作，可取值：drop， transmit， forward
  * @method void setAction(string $Action) 设置动作，可取值：drop， transmit， forward
  * @method integer getPriority() 获取策略优先级，数字越小，级别越高，该规则越靠前匹配，取值1-1000
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPriority(integer $Priority) 设置策略优先级，数字越小，级别越高，该规则越靠前匹配，取值1-1000
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AclConfig extends AbstractModel
 {
@@ -71,7 +69,6 @@ class AclConfig extends AbstractModel
 
     /**
      * @var integer 策略优先级，数字越小，级别越高，该规则越靠前匹配，取值1-1000
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Priority;
 
@@ -83,7 +80,6 @@ class AclConfig extends AbstractModel
      * @param integer $SPortEnd 来源端口结束，可取值范围0~65535
      * @param string $Action 动作，可取值：drop， transmit， forward
      * @param integer $Priority 策略优先级，数字越小，级别越高，该规则越靠前匹配，取值1-1000
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

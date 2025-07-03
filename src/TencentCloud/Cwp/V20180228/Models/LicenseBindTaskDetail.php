@@ -29,9 +29,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getFixMessage() 获取修复建议
  * @method void setFixMessage(string $FixMessage) 设置修复建议
  * @method MachineExtraInfo getMachineExtraInfo() 获取机器额外信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置机器额外信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class LicenseBindTaskDetail extends AbstractModel
 {
@@ -57,7 +55,6 @@ class LicenseBindTaskDetail extends AbstractModel
 
     /**
      * @var MachineExtraInfo 机器额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineExtraInfo;
 
@@ -67,7 +64,6 @@ class LicenseBindTaskDetail extends AbstractModel
      * @param integer $Status 0 执行中, 1 成功,2失败
      * @param string $FixMessage 修复建议
      * @param MachineExtraInfo $MachineExtraInfo 机器额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

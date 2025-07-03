@@ -21,133 +21,81 @@ use TencentCloud\Common\AbstractModel;
  * 规则详情
  *
  * @method string getIdentifier() 获取规则标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIdentifier(string $Identifier) 设置规则标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRuleName() 获取规则名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleName(string $RuleName) 设置规则名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getInputParameter() 获取规则参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInputParameter(array $InputParameter) 设置规则参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSourceCondition() 获取规则触发条件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSourceCondition(array $SourceCondition) 设置规则触发条件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getResourceType() 获取规则支持的资源类型，规则仅对指定资源类型的资源生效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceType(array $ResourceType) 设置规则支持的资源类型，规则仅对指定资源类型的资源生效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLabels() 获取规则所属标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabels(array $Labels) 设置规则所属标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRiskLevel() 获取规则风险等级
 1:低风险
 2:中风险
 3:高风险
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskLevel(integer $RiskLevel) 设置规则风险等级
 1:低风险
 2:中风险
 3:高风险
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getServiceFunction() 获取规则对应的函数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceFunction(string $ServiceFunction) 设置规则对应的函数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
 格式：YYYY-MM-DD h:i:s
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
 格式：YYYY-MM-DD h:i:s
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取规则描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置规则描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取ACTIVE：启用
 NO_ACTIVE：停止
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置ACTIVE：启用
 NO_ACTIVE：停止
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getComplianceResult() 获取合规： 'COMPLIANT'
 不合规： 'NON_COMPLIANT'
 无法应用规则： 'NOT_APPLICABLE'
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComplianceResult(string $ComplianceResult) 设置合规： 'COMPLIANT'
 不合规： 'NON_COMPLIANT'
 无法应用规则： 'NOT_APPLICABLE'
-注意：此字段可能返回 null，表示取不到有效值。
  * @method Annotation getAnnotation() 获取["",""]
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAnnotation(Annotation $Annotation) 设置["",""]
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConfigRuleInvokedTime() 获取规则评估时间
 格式：YYYY-MM-DD h:i:s
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigRuleInvokedTime(string $ConfigRuleInvokedTime) 设置规则评估时间
 格式：YYYY-MM-DD h:i:s
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConfigRuleId() 获取规则ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigRuleId(string $ConfigRuleId) 设置规则ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIdentifierType() 获取CUSTOMIZE：自定义规则、
 SYSTEM：托管规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIdentifierType(string $IdentifierType) 设置CUSTOMIZE：自定义规则、
 SYSTEM：托管规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCompliancePackId() 获取合规包ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCompliancePackId(string $CompliancePackId) 设置合规包ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTriggerType() 获取触发类型
 ScheduledNotification：周期触发、
 ConfigurationItemChangeNotification：变更触发
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTriggerType(array $TriggerType) 设置触发类型
 ScheduledNotification：周期触发、
 ConfigurationItemChangeNotification：变更触发
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getManageInputParameter() 获取参数详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setManageInputParameter(array $ManageInputParameter) 设置参数详情
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCompliancePackName() 获取规则名称
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCompliancePackName(string $CompliancePackName) 设置规则名称
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCompliancePackName() 获取合规包名称
+ * @method void setCompliancePackName(string $CompliancePackName) 设置合规包名称
  * @method array getRegionsScope() 获取关联地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionsScope(array $RegionsScope) 设置关联地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTagsScope() 获取关联标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagsScope(array $TagsScope) 设置关联标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getExcludeResourceIdsScope() 获取 规则对指定资源ID无效，即不对该资源执行评估。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExcludeResourceIdsScope(array $ExcludeResourceIdsScope) 设置 规则对指定资源ID无效，即不对该资源执行评估。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAccountGroupId() 获取账号组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccountGroupId(string $AccountGroupId) 设置账号组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAccountGroupName() 获取账号组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccountGroupName(string $AccountGroupName) 设置账号组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRuleOwnerId() 获取规则所属用户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleOwnerId(integer $RuleOwnerId) 设置规则所属用户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getManageTriggerType() 获取预设规则支持的触发方式
 ScheduledNotification：周期触发
 ConfigurationItemChangeNotification：变更触发
@@ -159,37 +107,31 @@ class ConfigRule extends AbstractModel
 {
     /**
      * @var string 规则标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Identifier;
 
     /**
      * @var string 规则名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleName;
 
     /**
      * @var array 规则参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InputParameter;
 
     /**
      * @var array 规则触发条件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SourceCondition;
 
     /**
      * @var array 规则支持的资源类型，规则仅对指定资源类型的资源生效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceType;
 
     /**
      * @var array 规则所属标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Labels;
 
@@ -198,33 +140,28 @@ class ConfigRule extends AbstractModel
 1:低风险
 2:中风险
 3:高风险
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskLevel;
 
     /**
      * @var string 规则对应的函数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceFunction;
 
     /**
      * @var string 创建时间
 格式：YYYY-MM-DD h:i:s
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 规则描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var string ACTIVE：启用
 NO_ACTIVE：停止
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
@@ -232,13 +169,11 @@ NO_ACTIVE：停止
      * @var string 合规： 'COMPLIANT'
 不合规： 'NON_COMPLIANT'
 无法应用规则： 'NOT_APPLICABLE'
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComplianceResult;
 
     /**
      * @var Annotation ["",""]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Annotation;
 
@@ -246,26 +181,22 @@ NO_ACTIVE：停止
      * @var string 规则评估时间
 格式：YYYY-MM-DD h:i:s
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigRuleInvokedTime;
 
     /**
      * @var string 规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigRuleId;
 
     /**
      * @var string CUSTOMIZE：自定义规则、
 SYSTEM：托管规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IdentifierType;
 
     /**
      * @var string 合规包ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CompliancePackId;
 
@@ -273,55 +204,46 @@ SYSTEM：托管规则
      * @var array 触发类型
 ScheduledNotification：周期触发、
 ConfigurationItemChangeNotification：变更触发
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TriggerType;
 
     /**
      * @var array 参数详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ManageInputParameter;
 
     /**
-     * @var string 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 合规包名称
      */
     public $CompliancePackName;
 
     /**
      * @var array 关联地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionsScope;
 
     /**
      * @var array 关联标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagsScope;
 
     /**
      * @var array  规则对指定资源ID无效，即不对该资源执行评估。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExcludeResourceIdsScope;
 
     /**
      * @var string 账号组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccountGroupId;
 
     /**
      * @var string 账号组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccountGroupName;
 
     /**
      * @var integer 规则所属用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleOwnerId;
 
@@ -334,69 +256,43 @@ ConfigurationItemChangeNotification：变更触发
 
     /**
      * @param string $Identifier 规则标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RuleName 规则名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $InputParameter 规则参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SourceCondition 规则触发条件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ResourceType 规则支持的资源类型，规则仅对指定资源类型的资源生效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Labels 规则所属标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RiskLevel 规则风险等级
 1:低风险
 2:中风险
 3:高风险
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceFunction 规则对应的函数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
 格式：YYYY-MM-DD h:i:s
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 规则描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status ACTIVE：启用
 NO_ACTIVE：停止
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ComplianceResult 合规： 'COMPLIANT'
 不合规： 'NON_COMPLIANT'
 无法应用规则： 'NOT_APPLICABLE'
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Annotation $Annotation ["",""]
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConfigRuleInvokedTime 规则评估时间
 格式：YYYY-MM-DD h:i:s
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConfigRuleId 规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IdentifierType CUSTOMIZE：自定义规则、
 SYSTEM：托管规则
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CompliancePackId 合规包ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TriggerType 触发类型
 ScheduledNotification：周期触发、
 ConfigurationItemChangeNotification：变更触发
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ManageInputParameter 参数详情
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CompliancePackName 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CompliancePackName 合规包名称
      * @param array $RegionsScope 关联地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TagsScope 关联标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ExcludeResourceIdsScope  规则对指定资源ID无效，即不对该资源执行评估。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AccountGroupId 账号组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AccountGroupName 账号组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleOwnerId 规则所属用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ManageTriggerType 预设规则支持的触发方式
 ScheduledNotification：周期触发
 ConfigurationItemChangeNotification：变更触发

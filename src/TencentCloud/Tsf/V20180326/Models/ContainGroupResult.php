@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 部署组列表（应用下钻）
  *
  * @method array getContent() 获取部署组列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContent(array $Content) 设置部署组列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取总记录数
  * @method void setTotalCount(integer $TotalCount) 设置总记录数
  */
@@ -31,7 +29,6 @@ class ContainGroupResult extends AbstractModel
 {
     /**
      * @var array 部署组列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Content;
 
@@ -42,7 +39,6 @@ class ContainGroupResult extends AbstractModel
 
     /**
      * @param array $Content 部署组列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 总记录数
      */
     function __construct()

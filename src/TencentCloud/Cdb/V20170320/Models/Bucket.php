@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 聚合桶的信息
  *
  * @method string getKey() 获取无
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKey(string $Key) 设置无
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCount() 获取key值出现的次数。
  * @method void setCount(integer $Count) 设置key值出现的次数。
  */
@@ -31,7 +29,6 @@ class Bucket extends AbstractModel
 {
     /**
      * @var string 无
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Key;
 
@@ -42,7 +39,6 @@ class Bucket extends AbstractModel
 
     /**
      * @param string $Key 无
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Count key值出现的次数。
      */
     function __construct()

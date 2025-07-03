@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 实例错误日志返回类型
  *
  * @method integer getTimestamp() 获取日志时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimestamp(integer $Timestamp) 设置日志时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLevel() 获取日志等级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevel(string $Level) 设置日志等级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContent() 获取日志内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContent(string $Content) 设置日志内容
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CynosdbErrorLogItem extends AbstractModel
 {
     /**
      * @var integer 日志时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Timestamp;
 
     /**
      * @var string 日志等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Level;
 
     /**
      * @var string 日志内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Content;
 
     /**
      * @param integer $Timestamp 日志时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Level 日志等级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Content 日志内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

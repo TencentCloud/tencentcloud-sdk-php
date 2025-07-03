@@ -39,8 +39,10 @@ use TencentCloud\Mariadb\V20170312\Models as Models;
  * @method Models\DescribeAccountPrivilegesResponse DescribeAccountPrivileges(Models\DescribeAccountPrivilegesRequest $req) 本接口（DescribeAccountPrivileges）用于查询云数据库账号权限。
 注意：注意：相同用户名，不同Host是不同的账号。
  * @method Models\DescribeAccountsResponse DescribeAccounts(Models\DescribeAccountsRequest $req) 本接口（DescribeAccounts）用于查询指定云数据库实例的账号列表。
+ * @method Models\DescribeBackupConfigsResponse DescribeBackupConfigs(Models\DescribeBackupConfigsRequest $req) 本接口(DescribeBackupConfigs)用于查询数据库备份配置信息。
  * @method Models\DescribeBackupFilesResponse DescribeBackupFiles(Models\DescribeBackupFilesRequest $req) 本接口(DescribeBackupFiles)用于查看备份文件列表。
  * @method Models\DescribeBackupTimeResponse DescribeBackupTime(Models\DescribeBackupTimeRequest $req) 本接口（DescribeBackupTime）用于获取云数据库的备份时间。后台系统将根据此配置定期进行实例备份。
+ * @method Models\DescribeBinlogTimeResponse DescribeBinlogTime(Models\DescribeBinlogTimeRequest $req) 本接口（DescribeBinlogTime）用于查询可回档时间范围。
  * @method Models\DescribeDBEncryptAttributesResponse DescribeDBEncryptAttributes(Models\DescribeDBEncryptAttributesRequest $req) 本接口(DescribeDBEncryptAttributes)用于查询实例数据加密状态。
  * @method Models\DescribeDBInstanceDetailResponse DescribeDBInstanceDetail(Models\DescribeDBInstanceDetailRequest $req) 本接口(DescribeDBInstanceDetail)用于查询指定实例的详细信息。
  * @method Models\DescribeDBInstanceSpecsResponse DescribeDBInstanceSpecs(Models\DescribeDBInstanceSpecsRequest $req) 本接口(DescribeDBInstanceSpecs)用于查询可创建的云数据库可售卖的规格配置。
@@ -50,6 +52,7 @@ use TencentCloud\Mariadb\V20170312\Models as Models;
  * @method Models\DescribeDBParametersResponse DescribeDBParameters(Models\DescribeDBParametersRequest $req) 本接口(DescribeDBParameters)用于获取数据库的当前参数设置。
  * @method Models\DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(Models\DescribeDBSecurityGroupsRequest $req) 本接口（DescribeDBSecurityGroups）用于查询实例安全组信息
  * @method Models\DescribeDBSlowLogsResponse DescribeDBSlowLogs(Models\DescribeDBSlowLogsRequest $req) 本接口(DescribeDBSlowLogs)用于查询慢查询日志列表。
+ * @method Models\DescribeDBSyncModeResponse DescribeDBSyncMode(Models\DescribeDBSyncModeRequest $req) 本接口（DescribeDBSyncMode）用于查询云数据库实例的同步模式。
  * @method Models\DescribeDBTmpInstancesResponse DescribeDBTmpInstances(Models\DescribeDBTmpInstancesRequest $req) 本接口（DescribeDBTmpInstances）用于获取实例回档生成的临时实例
  * @method Models\DescribeDatabaseObjectsResponse DescribeDatabaseObjects(Models\DescribeDatabaseObjectsRequest $req) 本接口（DescribeDatabaseObjects）用于查询云数据库实例的数据库中的对象列表，包含表、存储过程、视图和函数。
  * @method Models\DescribeDatabaseTableResponse DescribeDatabaseTable(Models\DescribeDatabaseTableRequest $req) 本接口（DescribeDatabaseTable）用于查询云数据库实例的表信息。
@@ -84,6 +87,9 @@ use TencentCloud\Mariadb\V20170312\Models as Models;
 - 系统保留库："mysql"，只开放["SELECT"]权限
 - 只读账号授予读写权限会报错
 - 不传权限参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组
+ * @method Models\ModifyBackupConfigsResponse ModifyBackupConfigs(Models\ModifyBackupConfigsRequest $req) 本接口(ModifyBackupConfigs)用于修改数据库备份配置信息。
+
+1. 修改数据库超期备份配置，目前按年、按月、按日只支持一种，存在互斥关系，如当前策略按年备份，如果传入按月备份策略将会覆盖当前的按年备份策略，务必注意。
  * @method Models\ModifyBackupTimeResponse ModifyBackupTime(Models\ModifyBackupTimeRequest $req) 本接口（ModifyBackupTime）用于设置云数据库实例的备份时间。后台系统将根据此配置定期进行实例备份。
  * @method Models\ModifyDBEncryptAttributesResponse ModifyDBEncryptAttributes(Models\ModifyDBEncryptAttributesRequest $req) 本接口(ModifyDBEncryptAttributes)用于修改实例数据加密。
  * @method Models\ModifyDBInstanceNameResponse ModifyDBInstanceName(Models\ModifyDBInstanceNameRequest $req) 本接口（ModifyDBInstanceName）用于修改云数据库实例的名称。
@@ -111,6 +117,7 @@ use TencentCloud\Mariadb\V20170312\Models as Models;
  * @method Models\TerminateDedicatedDBInstanceResponse TerminateDedicatedDBInstance(Models\TerminateDedicatedDBInstanceRequest $req) 本接口（TerminateDedicatedDBInstance）用于销毁已隔离的独享云数据库实例。
  * @method Models\UpgradeDBInstanceResponse UpgradeDBInstance(Models\UpgradeDBInstanceRequest $req) 本接口(UpgradeDBInstance)用于扩容云数据库实例。本接口完成下单和支付两个动作，如果发生支付失败的错误，调用用户账户相关接口中的支付订单接口（PayDeals）重新支付即可。
  * @method Models\UpgradeDedicatedDBInstanceResponse UpgradeDedicatedDBInstance(Models\UpgradeDedicatedDBInstanceRequest $req) 本接口(UpgradeDedicatedDBInstance)用于扩容独享云数据库实例。
+ * @method Models\UpgradeHourDBInstanceResponse UpgradeHourDBInstance(Models\UpgradeHourDBInstanceRequest $req) 升级MariaDB按量计费实例
  */
 
 class MariadbClient extends AbstractClient

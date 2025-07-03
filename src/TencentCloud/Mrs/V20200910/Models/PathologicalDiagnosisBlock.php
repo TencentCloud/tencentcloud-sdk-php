@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 病理诊断
  *
  * @method string getName() 获取名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSrc() 获取原文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSrc(string $Src) 设置原文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDetail() 获取病理详细
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDetail(array $Detail) 设置病理详细
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PathologicalDiagnosisBlock extends AbstractModel
 {
     /**
      * @var string 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Src;
 
     /**
      * @var array 病理详细
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Detail;
 
     /**
      * @var string 值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @param string $Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Detail 病理详细
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 账户风险
  *
  * @method string getId() 获取id（可不参考）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(string $Id) 设置id（可不参考）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRiskAccount() 获取风险账户
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskAccount(string $RiskAccount) 设置风险账户
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AccountRisk extends AbstractModel
 {
     /**
      * @var string id（可不参考）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var string 风险账户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskAccount;
 
     /**
      * @param string $Id id（可不参考）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RiskAccount 风险账户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

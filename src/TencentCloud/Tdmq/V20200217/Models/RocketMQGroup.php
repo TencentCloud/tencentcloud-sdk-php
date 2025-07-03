@@ -60,6 +60,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRetryMaxTimes(integer $RetryMaxTimes) 设置重试次数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceId() 获取实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setInstanceId(string $InstanceId) 设置实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNamespace() 获取命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNamespace(string $Namespace) 设置命名空间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RocketMQGroup extends AbstractModel
 {
@@ -144,6 +152,18 @@ class RocketMQGroup extends AbstractModel
     public $RetryMaxTimes;
 
     /**
+     * @var string 实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $InstanceId;
+
+    /**
+     * @var string 命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Namespace;
+
+    /**
      * @param string $Name 消费组名称
      * @param integer $ConsumerNum 在线消费者数量
      * @param integer $TPS 消费TPS
@@ -163,6 +183,10 @@ class RocketMQGroup extends AbstractModel
      * @param string $GroupType Group类型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RetryMaxTimes 重试次数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceId 实例ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Namespace 命名空间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -236,6 +260,14 @@ class RocketMQGroup extends AbstractModel
 
         if (array_key_exists("RetryMaxTimes",$param) and $param["RetryMaxTimes"] !== null) {
             $this->RetryMaxTimes = $param["RetryMaxTimes"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
+            $this->Namespace = $param["Namespace"];
         }
     }
 }

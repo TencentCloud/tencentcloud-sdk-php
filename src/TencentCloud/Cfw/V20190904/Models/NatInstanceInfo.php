@@ -37,97 +37,55 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRegionZh() 获取地域中文信息
  * @method void setRegionZh(string $RegionZh) 设置地域中文信息
  * @method array getEipAddress() 获取公网ip数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEipAddress(array $EipAddress) 设置公网ip数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getVpcIp() 获取内外使用ip数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcIp(array $VpcIp) 设置内外使用ip数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSubnets() 获取实例关联子网数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnets(array $Subnets) 设置实例关联子网数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取0 :正常 1：正在初始化
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置0 :正常 1：正在初始化
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegionDetail() 获取地域区域信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionDetail(string $RegionDetail) 设置地域区域信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getZoneZh() 获取实例所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneZh(string $ZoneZh) 设置实例所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getZoneZhBak() 获取实例所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneZhBak(string $ZoneZhBak) 设置实例所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRuleUsed() 获取已使用规则数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleUsed(integer $RuleUsed) 设置已使用规则数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRuleMax() 获取实例的规则限制最大规格数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleMax(integer $RuleMax) 设置实例的规则限制最大规格数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEngineVersion() 获取实例引擎版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEngineVersion(string $EngineVersion) 设置实例引擎版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUpdateEnable() 获取引擎是否可升级：0，不可升级；1，可升级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateEnable(integer $UpdateEnable) 设置引擎是否可升级：0，不可升级；1，可升级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNeedProbeEngineUpdate() 获取是的需要升级引擎 支持 nat拨测 1需要 0不需要
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNeedProbeEngineUpdate(integer $NeedProbeEngineUpdate) 设置是的需要升级引擎 支持 nat拨测 1需要 0不需要
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTrafficMode() 获取引擎运行模式，Normal:正常, OnlyRoute:透明模式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrafficMode(string $TrafficMode) 设置引擎运行模式，Normal:正常, OnlyRoute:透明模式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getZone() 获取实例主所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZone(string $Zone) 设置实例主所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getZoneBak() 获取实例备所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneBak(string $ZoneBak) 设置实例备所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReserveTime() 获取引擎预约升级时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReserveTime(string $ReserveTime) 设置引擎预约升级时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReserveVersion() 获取引擎预约升级版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReserveVersion(string $ReserveVersion) 设置引擎预约升级版本
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getReserveVersionState() 获取引擎预约升级版本状态
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReserveVersionState(string $ReserveVersionState) 设置引擎预约升级版本状态
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getReserveVersionState() 获取引擎预约升级版本状态 stable:稳定版；previewed:预览版
+ * @method void setReserveVersionState(string $ReserveVersionState) 设置引擎预约升级版本状态 stable:稳定版；previewed:预览版
  * @method integer getElasticSwitch() 获取弹性开关
 1 打开
 0 关闭
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setElasticSwitch(integer $ElasticSwitch) 设置弹性开关
 1 打开
 0 关闭
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getElasticBandwidth() 获取弹性带宽，单位Mbps
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setElasticBandwidth(integer $ElasticBandwidth) 设置弹性带宽，单位Mbps
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsFirstAfterPay() 获取是否首次开通按量付费
 1 是
 0 不是
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsFirstAfterPay(integer $IsFirstAfterPay) 设置是否首次开通按量付费
 1 是
 0 不是
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NatInstanceInfo extends AbstractModel
 {
@@ -173,109 +131,91 @@ class NatInstanceInfo extends AbstractModel
 
     /**
      * @var array 公网ip数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EipAddress;
 
     /**
      * @var array 内外使用ip数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcIp;
 
     /**
      * @var array 实例关联子网数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Subnets;
 
     /**
      * @var integer 0 :正常 1：正在初始化
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 地域区域信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionDetail;
 
     /**
      * @var string 实例所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneZh;
 
     /**
      * @var string 实例所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneZhBak;
 
     /**
      * @var integer 已使用规则数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleUsed;
 
     /**
      * @var integer 实例的规则限制最大规格数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleMax;
 
     /**
      * @var string 实例引擎版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EngineVersion;
 
     /**
      * @var integer 引擎是否可升级：0，不可升级；1，可升级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateEnable;
 
     /**
      * @var integer 是的需要升级引擎 支持 nat拨测 1需要 0不需要
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NeedProbeEngineUpdate;
 
     /**
      * @var string 引擎运行模式，Normal:正常, OnlyRoute:透明模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TrafficMode;
 
     /**
      * @var string 实例主所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Zone;
 
     /**
      * @var string 实例备所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneBak;
 
     /**
      * @var string 引擎预约升级时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReserveTime;
 
     /**
      * @var string 引擎预约升级版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReserveVersion;
 
     /**
-     * @var string 引擎预约升级版本状态
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 引擎预约升级版本状态 stable:稳定版；previewed:预览版
      */
     public $ReserveVersionState;
 
@@ -283,13 +223,11 @@ class NatInstanceInfo extends AbstractModel
      * @var integer 弹性开关
 1 打开
 0 关闭
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ElasticSwitch;
 
     /**
      * @var integer 弹性带宽，单位Mbps
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ElasticBandwidth;
 
@@ -297,7 +235,6 @@ class NatInstanceInfo extends AbstractModel
      * @var integer 是否首次开通按量付费
 1 是
 0 不是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsFirstAfterPay;
 
@@ -311,51 +248,30 @@ class NatInstanceInfo extends AbstractModel
      * @param integer $OutFlowMax 出向带宽峰值 bps
      * @param string $RegionZh 地域中文信息
      * @param array $EipAddress 公网ip数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $VpcIp 内外使用ip数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Subnets 实例关联子网数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 0 :正常 1：正在初始化
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegionDetail 地域区域信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ZoneZh 实例所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ZoneZhBak 实例所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleUsed 已使用规则数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleMax 实例的规则限制最大规格数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EngineVersion 实例引擎版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UpdateEnable 引擎是否可升级：0，不可升级；1，可升级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NeedProbeEngineUpdate 是的需要升级引擎 支持 nat拨测 1需要 0不需要
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TrafficMode 引擎运行模式，Normal:正常, OnlyRoute:透明模式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Zone 实例主所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ZoneBak 实例备所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReserveTime 引擎预约升级时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReserveVersion 引擎预约升级版本
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ReserveVersionState 引擎预约升级版本状态
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ReserveVersionState 引擎预约升级版本状态 stable:稳定版；previewed:预览版
      * @param integer $ElasticSwitch 弹性开关
 1 打开
 0 关闭
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ElasticBandwidth 弹性带宽，单位Mbps
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsFirstAfterPay 是否首次开通按量付费
 1 是
 0 不是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

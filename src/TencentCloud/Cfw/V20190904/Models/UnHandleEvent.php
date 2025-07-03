@@ -29,9 +29,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getBaseLineOutSwitch() 获取1 打开 0 关闭
  * @method void setBaseLineOutSwitch(integer $BaseLineOutSwitch) 设置1 打开 0 关闭
  * @method integer getVpcFwCount() 获取vpc间防火墙实例数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcFwCount(integer $VpcFwCount) 设置vpc间防火墙实例数量
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class UnHandleEvent extends AbstractModel
 {
@@ -57,7 +55,6 @@ class UnHandleEvent extends AbstractModel
 
     /**
      * @var integer vpc间防火墙实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcFwCount;
 
@@ -67,7 +64,6 @@ class UnHandleEvent extends AbstractModel
      * @param integer $BaseLineInSwitch 1 打开 0 关闭
      * @param integer $BaseLineOutSwitch 1 打开 0 关闭
      * @param integer $VpcFwCount vpc间防火墙实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

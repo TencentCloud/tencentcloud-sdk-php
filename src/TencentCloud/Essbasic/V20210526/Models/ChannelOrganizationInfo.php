@@ -72,6 +72,18 @@ use TencentCloud\Common\AbstractModel;
   <li>**"AuthorizationLegalPerson"**： 法人授权超管</li>
   <li>**"AuthorizationLegalIdentity"**： 法人直接认证</li>
 </ul>
+ * @method integer getActiveStatus() 获取子企业激活状态。值如下：
+<ul>
+  <li>**0**： 未激活</li>
+  <li>**1**： 已激活</li>
+</ul>
+ * @method void setActiveStatus(integer $ActiveStatus) 设置子企业激活状态。值如下：
+<ul>
+  <li>**0**： 未激活</li>
+  <li>**1**： 已激活</li>
+</ul>
+ * @method integer getLicenseExpireTime() 获取账号到期时间，时间戳
+ * @method void setLicenseExpireTime(integer $LicenseExpireTime) 设置账号到期时间，时间戳
  */
 class ChannelOrganizationInfo extends AbstractModel
 {
@@ -146,6 +158,20 @@ class ChannelOrganizationInfo extends AbstractModel
     public $AuthorizationType;
 
     /**
+     * @var integer 子企业激活状态。值如下：
+<ul>
+  <li>**0**： 未激活</li>
+  <li>**1**： 已激活</li>
+</ul>
+     */
+    public $ActiveStatus;
+
+    /**
+     * @var integer 账号到期时间，时间戳
+     */
+    public $LicenseExpireTime;
+
+    /**
      * @param string $OrganizationId 电子签平台给企业分配的ID（在不同应用下同一个企业会分配通用的ID）
      * @param string $OrganizationOpenId 第三方平台子客企业的唯一标识
      * @param string $OrganizationName 第三方平台子客企业名称
@@ -172,6 +198,12 @@ class ChannelOrganizationInfo extends AbstractModel
   <li>**"AuthorizationLegalPerson"**： 法人授权超管</li>
   <li>**"AuthorizationLegalIdentity"**： 法人直接认证</li>
 </ul>
+     * @param integer $ActiveStatus 子企业激活状态。值如下：
+<ul>
+  <li>**0**： 未激活</li>
+  <li>**1**： 已激活</li>
+</ul>
+     * @param integer $LicenseExpireTime 账号到期时间，时间戳
      */
     function __construct()
     {
@@ -228,6 +260,14 @@ class ChannelOrganizationInfo extends AbstractModel
 
         if (array_key_exists("AuthorizationType",$param) and $param["AuthorizationType"] !== null) {
             $this->AuthorizationType = $param["AuthorizationType"];
+        }
+
+        if (array_key_exists("ActiveStatus",$param) and $param["ActiveStatus"] !== null) {
+            $this->ActiveStatus = $param["ActiveStatus"];
+        }
+
+        if (array_key_exists("LicenseExpireTime",$param) and $param["LicenseExpireTime"] !== null) {
+            $this->LicenseExpireTime = $param["LicenseExpireTime"];
         }
     }
 }

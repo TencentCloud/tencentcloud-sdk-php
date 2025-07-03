@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 基线自定规则ID和名字
  *
  * @method integer getRuleId() 获取自定义规则ID　
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleId(integer $RuleId) 设置自定义规则ID　
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRuleName() 获取自定义规则名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleName(string $RuleName) 设置自定义规则名字
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BaselineCustomRuleIdName extends AbstractModel
 {
     /**
      * @var integer 自定义规则ID　
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleId;
 
     /**
      * @var string 自定义规则名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleName;
 
     /**
      * @param integer $RuleId 自定义规则ID　
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RuleName 自定义规则名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

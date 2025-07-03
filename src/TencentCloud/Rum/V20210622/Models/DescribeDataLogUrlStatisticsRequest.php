@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBrowser(string $Browser) 设置浏览器
  * @method string getEnv() 获取环境区分
  * @method void setEnv(string $Env) 设置环境区分
+ * @method string getErrorMsg() 获取js异常信息
+ * @method void setErrorMsg(string $ErrorMsg) 设置js异常信息
  */
 class DescribeDataLogUrlStatisticsRequest extends AbstractModel
 {
@@ -171,6 +173,11 @@ class DescribeDataLogUrlStatisticsRequest extends AbstractModel
     public $Env;
 
     /**
+     * @var string js异常信息
+     */
+    public $ErrorMsg;
+
+    /**
      * @param integer $StartTime 开始时间
      * @param string $Type analysis：异常分析，compare：异常列表对比，allcount：性能视图，condition：条件列表，nettype/version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：网络平台视图/Version视图/设备视图/ISP视图/地区视图/浏览器视图/ext1视图等等
      * @param integer $EndTime 结束时间
@@ -192,6 +199,7 @@ class DescribeDataLogUrlStatisticsRequest extends AbstractModel
      * @param string $Os 操作系统
      * @param string $Browser 浏览器
      * @param string $Env 环境区分
+     * @param string $ErrorMsg js异常信息
      */
     function __construct()
     {
@@ -288,6 +296,10 @@ class DescribeDataLogUrlStatisticsRequest extends AbstractModel
 
         if (array_key_exists("Env",$param) and $param["Env"] !== null) {
             $this->Env = $param["Env"];
+        }
+
+        if (array_key_exists("ErrorMsg",$param) and $param["ErrorMsg"] !== null) {
+            $this->ErrorMsg = $param["ErrorMsg"];
         }
     }
 }

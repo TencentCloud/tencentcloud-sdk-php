@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTaskGroupTitle() 获取分组标题
  * @method void setTaskGroupTitle(string $TaskGroupTitle) 设置分组标题
  * @method string getTaskGroupDescription() 获取分组描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskGroupDescription(string $TaskGroupDescription) 设置分组描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTaskGroupOrder() 获取任务分组顺序
  * @method void setTaskGroupOrder(integer $TaskGroupOrder) 设置任务分组顺序
  * @method integer getObjectTypeId() 获取对象类型ID
@@ -45,13 +43,9 @@ use TencentCloud\Common\AbstractModel;
  * @method array getTaskGroupDiscardInstanceList() 获取不参演的实例列表
  * @method void setTaskGroupDiscardInstanceList(array $TaskGroupDiscardInstanceList) 设置不参演的实例列表
  * @method array getTaskGroupSelectedInstanceList() 获取参演实例列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskGroupSelectedInstanceList(array $TaskGroupSelectedInstanceList) 设置参演实例列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTaskGroupInstancesExecuteRule() 获取机器选取规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskGroupInstancesExecuteRule(array $TaskGroupInstancesExecuteRule) 设置机器选取规则
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskGroup extends AbstractModel
 {
@@ -67,7 +61,6 @@ class TaskGroup extends AbstractModel
 
     /**
      * @var string 分组描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskGroupDescription;
 
@@ -113,13 +106,11 @@ class TaskGroup extends AbstractModel
 
     /**
      * @var array 参演实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskGroupSelectedInstanceList;
 
     /**
      * @var array 机器选取规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskGroupInstancesExecuteRule;
 
@@ -127,7 +118,6 @@ class TaskGroup extends AbstractModel
      * @param integer $TaskGroupId 任务动作ID
      * @param string $TaskGroupTitle 分组标题
      * @param string $TaskGroupDescription 分组描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TaskGroupOrder 任务分组顺序
      * @param integer $ObjectTypeId 对象类型ID
      * @param string $TaskGroupCreateTime 任务分组创建时间
@@ -137,9 +127,7 @@ class TaskGroup extends AbstractModel
      * @param integer $TaskGroupMode 执行模式。1 --- 顺序执行，2 --- 阶段执行
      * @param array $TaskGroupDiscardInstanceList 不参演的实例列表
      * @param array $TaskGroupSelectedInstanceList 参演实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TaskGroupInstancesExecuteRule 机器选取规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

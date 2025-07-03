@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 用于一致性校验的表配置
  *
  * @method string getTableName() 获取表名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTableName(string $TableName) 设置表名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getColumnMode() 获取column 模式，all 为全部，partial 表示部分(该参数仅对数据同步任务有效)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setColumnMode(string $ColumnMode) 设置column 模式，all 为全部，partial 表示部分(该参数仅对数据同步任务有效)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getColumns() 获取当 ColumnMode 为 partial 时必填(该参数仅对数据同步任务有效)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setColumns(array $Columns) 设置当 ColumnMode 为 partial 时必填(该参数仅对数据同步任务有效)
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CompareTableItem extends AbstractModel
 {
     /**
      * @var string 表名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TableName;
 
     /**
      * @var string column 模式，all 为全部，partial 表示部分(该参数仅对数据同步任务有效)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ColumnMode;
 
     /**
      * @var array 当 ColumnMode 为 partial 时必填(该参数仅对数据同步任务有效)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Columns;
 
     /**
      * @param string $TableName 表名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ColumnMode column 模式，all 为全部，partial 表示部分(该参数仅对数据同步任务有效)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Columns 当 ColumnMode 为 partial 时必填(该参数仅对数据同步任务有效)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

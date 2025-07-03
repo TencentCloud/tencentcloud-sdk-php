@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileSystem(string $FileSystem) 设置文件系统
  * @method string getMountTarget() 获取挂载目录
  * @method void setMountTarget(string $MountTarget) 设置挂载目录
+ * @method string getDiskId() 获取云盘ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDiskId(string $DiskId) 设置云盘ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Disk extends AbstractModel
 {
@@ -59,11 +63,19 @@ class Disk extends AbstractModel
     public $MountTarget;
 
     /**
+     * @var string 云盘ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DiskId;
+
+    /**
      * @param string $DiskType 云盘类型
      * @param integer $DiskSize 云盘大小(G）
      * @param boolean $AutoFormatAndMount 是否自动化格式盘并挂载
      * @param string $FileSystem 文件系统
      * @param string $MountTarget 挂载目录
+     * @param string $DiskId 云盘ID
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -96,6 +108,10 @@ class Disk extends AbstractModel
 
         if (array_key_exists("MountTarget",$param) and $param["MountTarget"] !== null) {
             $this->MountTarget = $param["MountTarget"];
+        }
+
+        if (array_key_exists("DiskId",$param) and $param["DiskId"] !== null) {
+            $this->DiskId = $param["DiskId"];
         }
     }
 }

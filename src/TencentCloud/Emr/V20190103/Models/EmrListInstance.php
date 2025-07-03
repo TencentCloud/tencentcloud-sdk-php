@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method string getStatusDesc() 获取常见状态描述：集群生产中,集群运行中,集群创建中,集群已关闭,集群已删除
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatusDesc(string $StatusDesc) 设置常见状态描述：集群生产中,集群运行中,集群创建中,集群已关闭,集群已删除
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterName() 获取集群名字
  * @method void setClusterName(string $ClusterName) 设置集群名字
  * @method integer getZoneId() 获取集群地域
@@ -45,85 +43,51 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getId() 获取emr ID
  * @method void setId(integer $Id) 设置emr ID
  * @method integer getProductId() 获取产品ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductId(integer $ProductId) 设置产品ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProjectId() 获取项目ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectId(integer $ProjectId) 设置项目ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRegionId() 获取区域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionId(integer $RegionId) 设置区域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSubnetId() 获取子网ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetId(integer $SubnetId) 设置子网ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVpcId() 获取网络ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(integer $VpcId) 设置网络ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getZone() 获取地区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZone(string $Zone) 设置地区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取状态码, 取值为-2(集群已删除), -1(集群已关闭), 0(集群生产中), 2(集群运行中), 3(集群创建中)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置状态码, 取值为-2(集群已删除), -1(集群已关闭), 0(集群生产中), 2(集群运行中), 3(集群创建中)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取实例标签
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置实例标签
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAlarmInfo() 获取告警信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlarmInfo(string $AlarmInfo) 设置告警信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsWoodpeckerCluster() 获取是否是woodpecker集群
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsWoodpeckerCluster(integer $IsWoodpeckerCluster) 设置是否是woodpecker集群
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVpcName() 获取Vpc中文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcName(string $VpcName) 设置Vpc中文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubnetName() 获取子网中文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetName(string $SubnetName) 设置子网中文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUniqVpcId() 获取字符串VpcId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUniqVpcId(string $UniqVpcId) 设置字符串VpcId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUniqSubnetId() 获取字符串子网
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUniqSubnetId(string $UniqSubnetId) 设置字符串子网
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterClass() 获取集群类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterClass(string $ClusterClass) 设置集群类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsMultiZoneCluster() 获取是否为跨AZ集群
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsMultiZoneCluster(boolean $IsMultiZoneCluster) 设置是否为跨AZ集群
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsHandsCluster() 获取是否手戳集群
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsHandsCluster(boolean $IsHandsCluster) 设置是否手戳集群
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getOutSideSoftInfo() 获取体外客户端组件信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutSideSoftInfo(array $OutSideSoftInfo) 设置体外客户端组件信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsSupportOutsideCluster() 获取当前集群的应用场景是否支持体外客户端
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsSupportOutsideCluster(boolean $IsSupportOutsideCluster) 设置当前集群的应用场景是否支持体外客户端
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsDedicatedCluster() 获取是否专有集群场景集群
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsDedicatedCluster(boolean $IsDedicatedCluster) 设置是否专有集群场景集群
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsSupportClone() 获取集群支持克隆
+ * @method void setIsSupportClone(boolean $IsSupportClone) 设置集群支持克隆
  */
 class EmrListInstance extends AbstractModel
 {
@@ -134,7 +98,6 @@ class EmrListInstance extends AbstractModel
 
     /**
      * @var string 常见状态描述：集群生产中,集群运行中,集群创建中,集群已关闭,集群已删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StatusDesc;
 
@@ -185,43 +148,36 @@ class EmrListInstance extends AbstractModel
 
     /**
      * @var integer 产品ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductId;
 
     /**
      * @var integer 项目ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectId;
 
     /**
      * @var integer 区域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionId;
 
     /**
      * @var integer 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetId;
 
     /**
      * @var integer 网络ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
     /**
      * @var string 地区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Zone;
 
     /**
      * @var integer 状态码, 取值为-2(集群已删除), -1(集群已关闭), 0(集群生产中), 2(集群运行中), 3(集群创建中)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
@@ -233,55 +189,46 @@ class EmrListInstance extends AbstractModel
 
     /**
      * @var string 告警信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlarmInfo;
 
     /**
      * @var integer 是否是woodpecker集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsWoodpeckerCluster;
 
     /**
      * @var string Vpc中文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcName;
 
     /**
      * @var string 子网中文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetName;
 
     /**
      * @var string 字符串VpcId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UniqVpcId;
 
     /**
      * @var string 字符串子网
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UniqSubnetId;
 
     /**
      * @var string 集群类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterClass;
 
     /**
      * @var boolean 是否为跨AZ集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsMultiZoneCluster;
 
     /**
      * @var boolean 是否手戳集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsHandsCluster;
 
@@ -293,20 +240,22 @@ class EmrListInstance extends AbstractModel
 
     /**
      * @var boolean 当前集群的应用场景是否支持体外客户端
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsSupportOutsideCluster;
 
     /**
      * @var boolean 是否专有集群场景集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsDedicatedCluster;
 
     /**
+     * @var boolean 集群支持克隆
+     */
+    public $IsSupportClone;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $StatusDesc 常见状态描述：集群生产中,集群运行中,集群创建中,集群已关闭,集群已删除
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterName 集群名字
      * @param integer $ZoneId 集群地域
      * @param integer $AppId 用户APPID
@@ -317,45 +266,28 @@ class EmrListInstance extends AbstractModel
      * @param integer $ChargeType 集群计费类型
      * @param integer $Id emr ID
      * @param integer $ProductId 产品ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProjectId 项目ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RegionId 区域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SubnetId 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VpcId 网络ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Zone 地区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 状态码, 取值为-2(集群已删除), -1(集群已关闭), 0(集群生产中), 2(集群运行中), 3(集群创建中)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 实例标签
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AlarmInfo 告警信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsWoodpeckerCluster 是否是woodpecker集群
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcName Vpc中文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetName 子网中文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UniqVpcId 字符串VpcId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UniqSubnetId 字符串子网
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterClass 集群类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsMultiZoneCluster 是否为跨AZ集群
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsHandsCluster 是否手戳集群
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $OutSideSoftInfo 体外客户端组件信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsSupportOutsideCluster 当前集群的应用场景是否支持体外客户端
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsDedicatedCluster 是否专有集群场景集群
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsSupportClone 集群支持克隆
      */
     function __construct()
     {
@@ -502,6 +434,10 @@ class EmrListInstance extends AbstractModel
 
         if (array_key_exists("IsDedicatedCluster",$param) and $param["IsDedicatedCluster"] !== null) {
             $this->IsDedicatedCluster = $param["IsDedicatedCluster"];
+        }
+
+        if (array_key_exists("IsSupportClone",$param) and $param["IsSupportClone"] !== null) {
+            $this->IsSupportClone = $param["IsSupportClone"];
         }
     }
 }

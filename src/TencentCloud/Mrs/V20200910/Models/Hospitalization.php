@@ -21,63 +21,42 @@ use TencentCloud\Common\AbstractModel;
  * 出入院信息
  *
  * @method string getAdmissionTime() 获取入院时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdmissionTime(string $AdmissionTime) 设置入院时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDischargeTime() 获取出院时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDischargeTime(string $DischargeTime) 设置出院时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAdmissionDays() 获取住院天数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdmissionDays(string $AdmissionDays) 设置住院天数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAdmissionDignosis() 获取入院诊断
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdmissionDignosis(string $AdmissionDignosis) 设置入院诊断
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAdmissionCondition() 获取入院情况
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdmissionCondition(string $AdmissionCondition) 设置入院情况
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDiagnosisTreatment() 获取诊疗经过
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiagnosisTreatment(string $DiagnosisTreatment) 设置诊疗经过
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDischargeDiagnosis() 获取出院诊断
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDischargeDiagnosis(string $DischargeDiagnosis) 设置出院诊断
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDischargeInstruction() 获取出院医嘱
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDischargeInstruction(string $DischargeInstruction) 设置出院医嘱
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAdmissionDiagnosis() 获取入院诊断
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdmissionDiagnosis(string $AdmissionDiagnosis) 设置入院诊断
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPage() 获取数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPage(integer $Page) 设置数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Hospitalization extends AbstractModel
 {
     /**
      * @var string 入院时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AdmissionTime;
 
     /**
      * @var string 出院时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DischargeTime;
 
     /**
      * @var string 住院天数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AdmissionDays;
 
@@ -90,61 +69,46 @@ class Hospitalization extends AbstractModel
 
     /**
      * @var string 入院情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AdmissionCondition;
 
     /**
      * @var string 诊疗经过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiagnosisTreatment;
 
     /**
      * @var string 出院诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DischargeDiagnosis;
 
     /**
      * @var string 出院医嘱
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DischargeInstruction;
 
     /**
      * @var string 入院诊断
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AdmissionDiagnosis;
 
     /**
      * @var integer 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Page;
 
     /**
      * @param string $AdmissionTime 入院时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DischargeTime 出院时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AdmissionDays 住院天数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AdmissionDignosis 入院诊断
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AdmissionCondition 入院情况
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DiagnosisTreatment 诊疗经过
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DischargeDiagnosis 出院诊断
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DischargeInstruction 出院医嘱
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AdmissionDiagnosis 入院诊断
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

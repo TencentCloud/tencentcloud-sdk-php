@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDspaId(string $DspaId) 设置DSPA实例ID
  * @method integer getFieldResultId() 获取字段扫描结果ID
  * @method void setFieldResultId(integer $FieldResultId) 设置字段扫描结果ID
+ * @method string getOrder() 获取排序方式
+ * @method void setOrder(string $Order) 设置排序方式
+ * @method string getOrderField() 获取排序字段
+ * @method void setOrderField(string $OrderField) 设置排序字段
  */
 class DescribeDSPAESDataSampleRequest extends AbstractModel
 {
@@ -38,8 +42,20 @@ class DescribeDSPAESDataSampleRequest extends AbstractModel
     public $FieldResultId;
 
     /**
+     * @var string 排序方式
+     */
+    public $Order;
+
+    /**
+     * @var string 排序字段
+     */
+    public $OrderField;
+
+    /**
      * @param string $DspaId DSPA实例ID
      * @param integer $FieldResultId 字段扫描结果ID
+     * @param string $Order 排序方式
+     * @param string $OrderField 排序字段
      */
     function __construct()
     {
@@ -60,6 +76,14 @@ class DescribeDSPAESDataSampleRequest extends AbstractModel
 
         if (array_key_exists("FieldResultId",$param) and $param["FieldResultId"] !== null) {
             $this->FieldResultId = $param["FieldResultId"];
+        }
+
+        if (array_key_exists("Order",$param) and $param["Order"] !== null) {
+            $this->Order = $param["Order"];
+        }
+
+        if (array_key_exists("OrderField",$param) and $param["OrderField"] !== null) {
+            $this->OrderField = $param["OrderField"];
         }
     }
 }

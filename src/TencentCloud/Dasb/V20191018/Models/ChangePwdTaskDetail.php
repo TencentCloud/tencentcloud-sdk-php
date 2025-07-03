@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 查询改密计划详情
  *
  * @method Device getDevice() 获取资产信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDevice(Device $Device) 设置资产信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAccount() 获取资产账号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccount(string $Account) 设置资产账号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLastChangeStatus() 获取上次改密结果。0-未改密  1-改密成功 2-改密失败
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastChangeStatus(integer $LastChangeStatus) 设置上次改密结果。0-未改密  1-改密成功 2-改密失败
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ChangePwdTaskDetail extends AbstractModel
 {
     /**
      * @var Device 资产信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Device;
 
     /**
      * @var string 资产账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Account;
 
     /**
      * @var integer 上次改密结果。0-未改密  1-改密成功 2-改密失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastChangeStatus;
 
     /**
      * @param Device $Device 资产信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Account 资产账号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LastChangeStatus 上次改密结果。0-未改密  1-改密成功 2-改密失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

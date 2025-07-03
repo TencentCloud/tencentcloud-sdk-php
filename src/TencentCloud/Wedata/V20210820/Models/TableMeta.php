@@ -238,6 +238,66 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTableProperties(array $TableProperties) 设置表附属信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEnvironment() 获取环境，取值 prod或者 dev
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnvironment(string $Environment) 设置环境，取值 prod或者 dev
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSchema() 获取数据库模式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSchema(string $Schema) 设置数据库模式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getCollectDatasourceList() 获取关联数据眼信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCollectDatasourceList(array $CollectDatasourceList) 设置关联数据眼信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCollectJobId() 获取采集任务id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCollectJobId(string $CollectJobId) 设置采集任务id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCollectJobName() 获取采集任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCollectJobName(string $CollectJobName) 设置采集任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUrn() 获取数据源urn
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUrn(string $Urn) 设置数据源urn
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getHasBizPermission() 获取是否有修改业务权限
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHasBizPermission(boolean $HasBizPermission) 设置是否有修改业务权限
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOwnerByEngine() 获取引擎侧创建人
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOwnerByEngine(string $OwnerByEngine) 设置引擎侧创建人
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getErrorTips() 获取用户无映射账户，请先完成账户映射后再来申请。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setErrorTips(string $ErrorTips) 设置用户无映射账户，请先完成账户映射后再来申请。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method CreateAndDDLSupport getIfSupportCreateAndDDL() 获取是否支持select or ddl
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIfSupportCreateAndDDL(CreateAndDDLSupport $IfSupportCreateAndDDL) 设置是否支持select or ddl
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDataFromType() 获取资产来源 历史默认值都是CRAWLER
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDataFromType(string $DataFromType) 设置资产来源 历史默认值都是CRAWLER
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEngineOwner() 获取引擎侧责任人
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEngineOwner(string $EngineOwner) 设置引擎侧责任人
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDataLayerUuid() 获取数据分层UUID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDataLayerUuid(string $DataLayerUuid) 设置数据分层UUID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDataLayerName() 获取数据分层名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDataLayerName(string $DataLayerName) 设置数据分层名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getColumnCount() 获取字段数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setColumnCount(integer $ColumnCount) 设置字段数量
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TableMeta extends AbstractModel
 {
@@ -567,6 +627,96 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
     public $TableProperties;
 
     /**
+     * @var string 环境，取值 prod或者 dev
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Environment;
+
+    /**
+     * @var string 数据库模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Schema;
+
+    /**
+     * @var array 关联数据眼信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CollectDatasourceList;
+
+    /**
+     * @var string 采集任务id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CollectJobId;
+
+    /**
+     * @var string 采集任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CollectJobName;
+
+    /**
+     * @var string 数据源urn
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Urn;
+
+    /**
+     * @var boolean 是否有修改业务权限
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HasBizPermission;
+
+    /**
+     * @var string 引擎侧创建人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OwnerByEngine;
+
+    /**
+     * @var string 用户无映射账户，请先完成账户映射后再来申请。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ErrorTips;
+
+    /**
+     * @var CreateAndDDLSupport 是否支持select or ddl
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IfSupportCreateAndDDL;
+
+    /**
+     * @var string 资产来源 历史默认值都是CRAWLER
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DataFromType;
+
+    /**
+     * @var string 引擎侧责任人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EngineOwner;
+
+    /**
+     * @var string 数据分层UUID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DataLayerUuid;
+
+    /**
+     * @var string 数据分层名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DataLayerName;
+
+    /**
+     * @var integer 字段数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ColumnCount;
+
+    /**
      * @param string $TableId 表的全局唯一ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TableName 表名称
@@ -675,6 +825,36 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
      * @param integer $PartitionExpireDays 生命周期-分区保留天数【分区保留策略时有效】
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TableProperties 表附属信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Environment 环境，取值 prod或者 dev
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Schema 数据库模式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $CollectDatasourceList 关联数据眼信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CollectJobId 采集任务id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CollectJobName 采集任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Urn 数据源urn
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $HasBizPermission 是否有修改业务权限
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OwnerByEngine 引擎侧创建人
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ErrorTips 用户无映射账户，请先完成账户映射后再来申请。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CreateAndDDLSupport $IfSupportCreateAndDDL 是否支持select or ddl
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DataFromType 资产来源 历史默认值都是CRAWLER
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EngineOwner 引擎侧责任人
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DataLayerUuid 数据分层UUID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DataLayerName 数据分层名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ColumnCount 字段数量
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -916,6 +1096,72 @@ TABLE, VIEW, MANAGED_TABLE(Hive管理表), EXTERNAL_TABLE(Hive外部表), VIRTUA
                 $obj->deserialize($value);
                 array_push($this->TableProperties, $obj);
             }
+        }
+
+        if (array_key_exists("Environment",$param) and $param["Environment"] !== null) {
+            $this->Environment = $param["Environment"];
+        }
+
+        if (array_key_exists("Schema",$param) and $param["Schema"] !== null) {
+            $this->Schema = $param["Schema"];
+        }
+
+        if (array_key_exists("CollectDatasourceList",$param) and $param["CollectDatasourceList"] !== null) {
+            $this->CollectDatasourceList = [];
+            foreach ($param["CollectDatasourceList"] as $key => $value){
+                $obj = new GovDatasourceInfo();
+                $obj->deserialize($value);
+                array_push($this->CollectDatasourceList, $obj);
+            }
+        }
+
+        if (array_key_exists("CollectJobId",$param) and $param["CollectJobId"] !== null) {
+            $this->CollectJobId = $param["CollectJobId"];
+        }
+
+        if (array_key_exists("CollectJobName",$param) and $param["CollectJobName"] !== null) {
+            $this->CollectJobName = $param["CollectJobName"];
+        }
+
+        if (array_key_exists("Urn",$param) and $param["Urn"] !== null) {
+            $this->Urn = $param["Urn"];
+        }
+
+        if (array_key_exists("HasBizPermission",$param) and $param["HasBizPermission"] !== null) {
+            $this->HasBizPermission = $param["HasBizPermission"];
+        }
+
+        if (array_key_exists("OwnerByEngine",$param) and $param["OwnerByEngine"] !== null) {
+            $this->OwnerByEngine = $param["OwnerByEngine"];
+        }
+
+        if (array_key_exists("ErrorTips",$param) and $param["ErrorTips"] !== null) {
+            $this->ErrorTips = $param["ErrorTips"];
+        }
+
+        if (array_key_exists("IfSupportCreateAndDDL",$param) and $param["IfSupportCreateAndDDL"] !== null) {
+            $this->IfSupportCreateAndDDL = new CreateAndDDLSupport();
+            $this->IfSupportCreateAndDDL->deserialize($param["IfSupportCreateAndDDL"]);
+        }
+
+        if (array_key_exists("DataFromType",$param) and $param["DataFromType"] !== null) {
+            $this->DataFromType = $param["DataFromType"];
+        }
+
+        if (array_key_exists("EngineOwner",$param) and $param["EngineOwner"] !== null) {
+            $this->EngineOwner = $param["EngineOwner"];
+        }
+
+        if (array_key_exists("DataLayerUuid",$param) and $param["DataLayerUuid"] !== null) {
+            $this->DataLayerUuid = $param["DataLayerUuid"];
+        }
+
+        if (array_key_exists("DataLayerName",$param) and $param["DataLayerName"] !== null) {
+            $this->DataLayerName = $param["DataLayerName"];
+        }
+
+        if (array_key_exists("ColumnCount",$param) and $param["ColumnCount"] !== null) {
+            $this->ColumnCount = $param["ColumnCount"];
         }
     }
 }

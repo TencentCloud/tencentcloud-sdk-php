@@ -26,6 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) 设置操作类型。enable-开启SSL，disable-关闭SSL，renew-更新证书有效期
  * @method integer getWaitSwitch() 获取操作设置。0-立即执行，1- 维护时间内执行，默认取值0。
  * @method void setWaitSwitch(integer $WaitSwitch) 设置操作设置。0-立即执行，1- 维护时间内执行，默认取值0。
+ * @method integer getIsKMS() 获取是否被KMS加密保护，0-表示否，1表示被KMS保护，默认取值0
+ * @method void setIsKMS(integer $IsKMS) 设置是否被KMS加密保护，0-表示否，1表示被KMS保护，默认取值0
+ * @method string getKeyId() 获取IsKMS为1时必填
+ * @method void setKeyId(string $KeyId) 设置IsKMS为1时必填
+ * @method string getKeyRegion() 获取IsKMS为1时必填
+ * @method void setKeyRegion(string $KeyRegion) 设置IsKMS为1时必填
  */
 class ModifyDBInstanceSSLRequest extends AbstractModel
 {
@@ -45,9 +51,27 @@ class ModifyDBInstanceSSLRequest extends AbstractModel
     public $WaitSwitch;
 
     /**
+     * @var integer 是否被KMS加密保护，0-表示否，1表示被KMS保护，默认取值0
+     */
+    public $IsKMS;
+
+    /**
+     * @var string IsKMS为1时必填
+     */
+    public $KeyId;
+
+    /**
+     * @var string IsKMS为1时必填
+     */
+    public $KeyRegion;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $Type 操作类型。enable-开启SSL，disable-关闭SSL，renew-更新证书有效期
      * @param integer $WaitSwitch 操作设置。0-立即执行，1- 维护时间内执行，默认取值0。
+     * @param integer $IsKMS 是否被KMS加密保护，0-表示否，1表示被KMS保护，默认取值0
+     * @param string $KeyId IsKMS为1时必填
+     * @param string $KeyRegion IsKMS为1时必填
      */
     function __construct()
     {
@@ -72,6 +96,18 @@ class ModifyDBInstanceSSLRequest extends AbstractModel
 
         if (array_key_exists("WaitSwitch",$param) and $param["WaitSwitch"] !== null) {
             $this->WaitSwitch = $param["WaitSwitch"];
+        }
+
+        if (array_key_exists("IsKMS",$param) and $param["IsKMS"] !== null) {
+            $this->IsKMS = $param["IsKMS"];
+        }
+
+        if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
+            $this->KeyId = $param["KeyId"];
+        }
+
+        if (array_key_exists("KeyRegion",$param) and $param["KeyRegion"] !== null) {
+            $this->KeyRegion = $param["KeyRegion"];
         }
     }
 }

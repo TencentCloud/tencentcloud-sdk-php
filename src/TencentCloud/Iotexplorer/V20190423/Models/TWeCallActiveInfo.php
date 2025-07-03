@@ -25,41 +25,42 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModelId(string $ModelId) 设置小程序ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSn() 获取Sn信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSn(string $Sn) 设置Sn信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getExpireTime() 获取过期时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpireTime(integer $ExpireTime) 设置过期时间
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getPkgType() 获取类型
+ * @method void setPkgType(integer $PkgType) 设置类型
  */
 class TWeCallActiveInfo extends AbstractModel
 {
     /**
      * @var string 小程序ID
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $ModelId;
 
     /**
      * @var string Sn信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Sn;
 
     /**
      * @var integer 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpireTime;
+
+    /**
+     * @var integer 类型
+     */
+    public $PkgType;
 
     /**
      * @param string $ModelId 小程序ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Sn Sn信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ExpireTime 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $PkgType 类型
      */
     function __construct()
     {
@@ -84,6 +85,10 @@ class TWeCallActiveInfo extends AbstractModel
 
         if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
             $this->ExpireTime = $param["ExpireTime"];
+        }
+
+        if (array_key_exists("PkgType",$param) and $param["PkgType"] !== null) {
+            $this->PkgType = $param["PkgType"];
         }
     }
 }

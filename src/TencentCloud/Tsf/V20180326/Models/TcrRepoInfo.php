@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * tcr仓库信息
  *
  * @method string getRegion() 获取地域（填数字）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置地域（填数字）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegistryId() 获取实例id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegistryId(string $RegistryId) 设置实例id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegistryName() 获取实例名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegistryName(string $RegistryName) 设置实例名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNamespace() 获取命名空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespace(string $Namespace) 设置命名空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRepoName() 获取仓库名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRepoName(string $RepoName) 设置仓库名
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TcrRepoInfo extends AbstractModel
 {
     /**
      * @var string 地域（填数字）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
      * @var string 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegistryId;
 
     /**
      * @var string 实例名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegistryName;
 
     /**
      * @var string 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Namespace;
 
     /**
      * @var string 仓库名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RepoName;
 
     /**
      * @param string $Region 地域（填数字）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegistryId 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegistryName 实例名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Namespace 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RepoName 仓库名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

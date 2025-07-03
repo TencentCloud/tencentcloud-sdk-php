@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIdSet(array $IdSet) 设置命令模板ID集合，非必需
  * @method string getName() 获取命令模板名，模糊查询，最大长度64字符
  * @method void setName(string $Name) 设置命令模板名，模糊查询，最大长度64字符
+ * @method integer getType() 获取命令模板类型 1-内置模板  2-自定义模板
+ * @method void setType(integer $Type) 设置命令模板类型 1-内置模板  2-自定义模板
  * @method integer getOffset() 获取分页偏移位置，默认值为0
  * @method void setOffset(integer $Offset) 设置分页偏移位置，默认值为0
  * @method integer getLimit() 获取每页条目数量，默认20
@@ -42,6 +44,11 @@ class DescribeCmdTemplatesRequest extends AbstractModel
     public $Name;
 
     /**
+     * @var integer 命令模板类型 1-内置模板  2-自定义模板
+     */
+    public $Type;
+
+    /**
      * @var integer 分页偏移位置，默认值为0
      */
     public $Offset;
@@ -54,6 +61,7 @@ class DescribeCmdTemplatesRequest extends AbstractModel
     /**
      * @param array $IdSet 命令模板ID集合，非必需
      * @param string $Name 命令模板名，模糊查询，最大长度64字符
+     * @param integer $Type 命令模板类型 1-内置模板  2-自定义模板
      * @param integer $Offset 分页偏移位置，默认值为0
      * @param integer $Limit 每页条目数量，默认20
      */
@@ -76,6 +84,10 @@ class DescribeCmdTemplatesRequest extends AbstractModel
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {

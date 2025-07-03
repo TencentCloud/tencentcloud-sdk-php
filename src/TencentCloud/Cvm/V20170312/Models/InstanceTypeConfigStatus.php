@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStatus() 获取状态描述
  * @method void setStatus(string $Status) 设置状态描述
  * @method string getMessage() 获取状态描述信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置状态描述信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method InstanceTypeConfig getInstanceTypeConfig() 获取配置信息
  * @method void setInstanceTypeConfig(InstanceTypeConfig $InstanceTypeConfig) 设置配置信息
  */
@@ -38,7 +36,6 @@ class InstanceTypeConfigStatus extends AbstractModel
 
     /**
      * @var string 状态描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
@@ -50,7 +47,6 @@ class InstanceTypeConfigStatus extends AbstractModel
     /**
      * @param string $Status 状态描述
      * @param string $Message 状态描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceTypeConfig $InstanceTypeConfig 配置信息
      */
     function __construct()

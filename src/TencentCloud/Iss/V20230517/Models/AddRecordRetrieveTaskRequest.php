@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddRecordRetrieveTask请求参数结构体
  *
- * @method string getTaskName() 获取任务名称，仅支持中文、英文、数字、_、-，长度不超过32个字符，模板名称全局唯一，不能为空，不能重复
- * @method void setTaskName(string $TaskName) 设置任务名称，仅支持中文、英文、数字、_、-，长度不超过32个字符，模板名称全局唯一，不能为空，不能重复
+ * @method string getTaskName() 获取任务名称，仅支持中文、英文、数字、_、-，长度不超过32个字符，名称全局唯一，不能为空，不能重复
+ * @method void setTaskName(string $TaskName) 设置任务名称，仅支持中文、英文、数字、_、-，长度不超过32个字符，名称全局唯一，不能为空，不能重复
  * @method integer getStartTime() 获取取回录像的开始时间，UTC秒数，例如：1662114146，开始和结束时间段最长为一天，且不能跨天
  * @method void setStartTime(integer $StartTime) 设置取回录像的开始时间，UTC秒数，例如：1662114146，开始和结束时间段最长为一天，且不能跨天
  * @method integer getEndTime() 获取取回录像的结束时间，UTC秒数，例如：1662114146，开始和结束时间段最长为一天，且不能跨天
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class AddRecordRetrieveTaskRequest extends AbstractModel
 {
     /**
-     * @var string 任务名称，仅支持中文、英文、数字、_、-，长度不超过32个字符，模板名称全局唯一，不能为空，不能重复
+     * @var string 任务名称，仅支持中文、英文、数字、_、-，长度不超过32个字符，名称全局唯一，不能为空，不能重复
      */
     public $TaskName;
 
@@ -73,7 +73,7 @@ class AddRecordRetrieveTaskRequest extends AbstractModel
     public $Describe;
 
     /**
-     * @param string $TaskName 任务名称，仅支持中文、英文、数字、_、-，长度不超过32个字符，模板名称全局唯一，不能为空，不能重复
+     * @param string $TaskName 任务名称，仅支持中文、英文、数字、_、-，长度不超过32个字符，名称全局唯一，不能为空，不能重复
      * @param integer $StartTime 取回录像的开始时间，UTC秒数，例如：1662114146，开始和结束时间段最长为一天，且不能跨天
      * @param integer $EndTime 取回录像的结束时间，UTC秒数，例如：1662114146，开始和结束时间段最长为一天，且不能跨天
      * @param integer $Mode 取回模式， 1:极速模式，其他暂不支持

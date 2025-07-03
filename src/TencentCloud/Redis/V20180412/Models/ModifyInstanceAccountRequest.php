@@ -20,35 +20,49 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyInstanceAccount请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getAccountName() 获取子账号名称，如果要修改主账号，填root
- * @method void setAccountName(string $AccountName) 设置子账号名称，如果要修改主账号，填root
- * @method string getAccountPassword() 获取子账号密码
- * @method void setAccountPassword(string $AccountPassword) 设置子账号密码
+ * @method string getInstanceId() 获取实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+ * @method string getAccountName() 获取子账号名称，如果要修改主账号，填 root。
+ * @method void setAccountName(string $AccountName) 设置子账号名称，如果要修改主账号，填 root。
+ * @method string getAccountPassword() 获取子账号密码。
+ * @method void setAccountPassword(string $AccountPassword) 设置子账号密码。
  * @method string getRemark() 获取子账号描述信息
  * @method void setRemark(string $Remark) 设置子账号描述信息
- * @method array getReadonlyPolicy() 获取路由策略：填写master或者replication，表示主节点或者从节点
- * @method void setReadonlyPolicy(array $ReadonlyPolicy) 设置路由策略：填写master或者replication，表示主节点或者从节点
- * @method string getPrivilege() 获取子账号读写策略：填写r、w、rw，表示只读，只写，读写策略
- * @method void setPrivilege(string $Privilege) 设置子账号读写策略：填写r、w、rw，表示只读，只写，读写策略
- * @method boolean getNoAuth() 获取true表示将主账号切换为免密账号，这里只适用于主账号，子账号不可免密。
- * @method void setNoAuth(boolean $NoAuth) 设置true表示将主账号切换为免密账号，这里只适用于主账号，子账号不可免密。
+ * @method array getReadonlyPolicy() 获取账号读写路由策略。
+- master：表示主节点。
+- replication：表示从节点。
+ * @method void setReadonlyPolicy(array $ReadonlyPolicy) 设置账号读写路由策略。
+- master：表示主节点。
+- replication：表示从节点。
+ * @method string getPrivilege() 获取子账号读写策略。
+- r：只读。
+- w：只写。
+- rw：读写。
+ * @method void setPrivilege(string $Privilege) 设置子账号读写策略。
+- r：只读。
+- w：只写。
+- rw：读写。
+ * @method boolean getNoAuth() 获取指定是否将主账号切换为免密账号。这里只适用于主账号，子账号不可免密。
+- true：将主账号切换为免密账号。
+- false：不切换。
+ * @method void setNoAuth(boolean $NoAuth) 设置指定是否将主账号切换为免密账号。这里只适用于主账号，子账号不可免密。
+- true：将主账号切换为免密账号。
+- false：不切换。
  */
 class ModifyInstanceAccountRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public $InstanceId;
 
     /**
-     * @var string 子账号名称，如果要修改主账号，填root
+     * @var string 子账号名称，如果要修改主账号，填 root。
      */
     public $AccountName;
 
     /**
-     * @var string 子账号密码
+     * @var string 子账号密码。
      */
     public $AccountPassword;
 
@@ -58,28 +72,42 @@ class ModifyInstanceAccountRequest extends AbstractModel
     public $Remark;
 
     /**
-     * @var array 路由策略：填写master或者replication，表示主节点或者从节点
+     * @var array 账号读写路由策略。
+- master：表示主节点。
+- replication：表示从节点。
      */
     public $ReadonlyPolicy;
 
     /**
-     * @var string 子账号读写策略：填写r、w、rw，表示只读，只写，读写策略
+     * @var string 子账号读写策略。
+- r：只读。
+- w：只写。
+- rw：读写。
      */
     public $Privilege;
 
     /**
-     * @var boolean true表示将主账号切换为免密账号，这里只适用于主账号，子账号不可免密。
+     * @var boolean 指定是否将主账号切换为免密账号。这里只适用于主账号，子账号不可免密。
+- true：将主账号切换为免密账号。
+- false：不切换。
      */
     public $NoAuth;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $AccountName 子账号名称，如果要修改主账号，填root
-     * @param string $AccountPassword 子账号密码
+     * @param string $InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+     * @param string $AccountName 子账号名称，如果要修改主账号，填 root。
+     * @param string $AccountPassword 子账号密码。
      * @param string $Remark 子账号描述信息
-     * @param array $ReadonlyPolicy 路由策略：填写master或者replication，表示主节点或者从节点
-     * @param string $Privilege 子账号读写策略：填写r、w、rw，表示只读，只写，读写策略
-     * @param boolean $NoAuth true表示将主账号切换为免密账号，这里只适用于主账号，子账号不可免密。
+     * @param array $ReadonlyPolicy 账号读写路由策略。
+- master：表示主节点。
+- replication：表示从节点。
+     * @param string $Privilege 子账号读写策略。
+- r：只读。
+- w：只写。
+- rw：读写。
+     * @param boolean $NoAuth 指定是否将主账号切换为免密账号。这里只适用于主账号，子账号不可免密。
+- true：将主账号切换为免密账号。
+- false：不切换。
      */
     function __construct()
     {

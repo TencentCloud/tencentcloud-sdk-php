@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(string $SubnetId) 设置节点所属子网id
  * @method string getLinuxClientNodeIp() 获取linux客户端节点地址
  * @method void setLinuxClientNodeIp(string $LinuxClientNodeIp) 设置linux客户端节点地址
+ * @method string getMountPoint() 获取自定义挂载点
+ * @method void setMountPoint(string $MountPoint) 设置自定义挂载点
  */
 class LinuxNodeAttribute extends AbstractModel
 {
@@ -52,10 +54,16 @@ class LinuxNodeAttribute extends AbstractModel
     public $LinuxClientNodeIp;
 
     /**
+     * @var string 自定义挂载点
+     */
+    public $MountPoint;
+
+    /**
      * @param string $InstanceId cvmId
      * @param string $VpcId 节点所属vpcid
      * @param string $SubnetId 节点所属子网id
      * @param string $LinuxClientNodeIp linux客户端节点地址
+     * @param string $MountPoint 自定义挂载点
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class LinuxNodeAttribute extends AbstractModel
 
         if (array_key_exists("LinuxClientNodeIp",$param) and $param["LinuxClientNodeIp"] !== null) {
             $this->LinuxClientNodeIp = $param["LinuxClientNodeIp"];
+        }
+
+        if (array_key_exists("MountPoint",$param) and $param["MountPoint"] !== null) {
+            $this->MountPoint = $param["MountPoint"];
         }
     }
 }

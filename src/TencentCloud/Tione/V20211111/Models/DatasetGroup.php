@@ -124,6 +124,38 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContentType(string $ContentType) 设置文本数据集导入方式
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDatasetScene() 获取数据集建模类别。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDatasetScene(string $DatasetScene) 设置数据集建模类别。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method CFSConfig getCFSConfig() 获取CFS配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCFSConfig(CFSConfig $CFSConfig) 设置CFS配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSceneTags() 获取数据集标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSceneTags(array $SceneTags) 设置数据集标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getNumAnnotated() 获取已标注数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNumAnnotated(integer $NumAnnotated) 设置已标注数量
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAnnotationSpecification() 获取标注规范
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAnnotationSpecification(string $AnnotationSpecification) 设置标注规范
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getAnnotationSchemaConfigured() 获取标注Schema是否配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAnnotationSchemaConfigured(boolean $AnnotationSchemaConfigured) 设置标注Schema是否配置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreatorNickname() 获取创建者名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreatorNickname(string $CreatorNickname) 设置创建者名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsCfsUpdated() 获取cfs路径是否有修改
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsCfsUpdated(boolean $IsCfsUpdated) 设置cfs路径是否有修改
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DatasetGroup extends AbstractModel
 {
@@ -284,6 +316,54 @@ class DatasetGroup extends AbstractModel
     public $ContentType;
 
     /**
+     * @var string 数据集建模类别。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DatasetScene;
+
+    /**
+     * @var CFSConfig CFS配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CFSConfig;
+
+    /**
+     * @var array 数据集标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SceneTags;
+
+    /**
+     * @var integer 已标注数量
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NumAnnotated;
+
+    /**
+     * @var string 标注规范
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AnnotationSpecification;
+
+    /**
+     * @var boolean 标注Schema是否配置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AnnotationSchemaConfigured;
+
+    /**
+     * @var string 创建者名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreatorNickname;
+
+    /**
+     * @var boolean cfs路径是否有修改
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsCfsUpdated;
+
+    /**
      * @param string $DatasetId 数据集ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatasetName 数据集名称
@@ -335,6 +415,22 @@ class DatasetGroup extends AbstractModel
      * @param string $AnnotationKeyStatus 数据集字典修改状态
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContentType 文本数据集导入方式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DatasetScene 数据集建模类别。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param CFSConfig $CFSConfig CFS配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SceneTags 数据集标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $NumAnnotated 已标注数量
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AnnotationSpecification 标注规范
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $AnnotationSchemaConfigured 标注Schema是否配置
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreatorNickname 创建者名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsCfsUpdated cfs路径是否有修改
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -464,6 +560,39 @@ class DatasetGroup extends AbstractModel
 
         if (array_key_exists("ContentType",$param) and $param["ContentType"] !== null) {
             $this->ContentType = $param["ContentType"];
+        }
+
+        if (array_key_exists("DatasetScene",$param) and $param["DatasetScene"] !== null) {
+            $this->DatasetScene = $param["DatasetScene"];
+        }
+
+        if (array_key_exists("CFSConfig",$param) and $param["CFSConfig"] !== null) {
+            $this->CFSConfig = new CFSConfig();
+            $this->CFSConfig->deserialize($param["CFSConfig"]);
+        }
+
+        if (array_key_exists("SceneTags",$param) and $param["SceneTags"] !== null) {
+            $this->SceneTags = $param["SceneTags"];
+        }
+
+        if (array_key_exists("NumAnnotated",$param) and $param["NumAnnotated"] !== null) {
+            $this->NumAnnotated = $param["NumAnnotated"];
+        }
+
+        if (array_key_exists("AnnotationSpecification",$param) and $param["AnnotationSpecification"] !== null) {
+            $this->AnnotationSpecification = $param["AnnotationSpecification"];
+        }
+
+        if (array_key_exists("AnnotationSchemaConfigured",$param) and $param["AnnotationSchemaConfigured"] !== null) {
+            $this->AnnotationSchemaConfigured = $param["AnnotationSchemaConfigured"];
+        }
+
+        if (array_key_exists("CreatorNickname",$param) and $param["CreatorNickname"] !== null) {
+            $this->CreatorNickname = $param["CreatorNickname"];
+        }
+
+        if (array_key_exists("IsCfsUpdated",$param) and $param["IsCfsUpdated"] !== null) {
+            $this->IsCfsUpdated = $param["IsCfsUpdated"];
         }
     }
 }

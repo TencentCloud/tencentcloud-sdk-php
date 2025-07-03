@@ -27,17 +27,11 @@ use TencentCloud\Common\AbstractModel;
  * @method RoutingConfig getRoutingConfig() 获取别名的路由信息
  * @method void setRoutingConfig(RoutingConfig $RoutingConfig) 设置别名的路由信息
  * @method string getDescription() 获取别名的描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置别名的描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAddTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddTime(string $AddTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModTime() 获取更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModTime(string $ModTime) 设置更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -60,19 +54,16 @@ class GetAliasResponse extends AbstractModel
 
     /**
      * @var string 别名的描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AddTime;
 
     /**
      * @var string 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModTime;
 
@@ -86,11 +77,8 @@ class GetAliasResponse extends AbstractModel
      * @param string $Name 别名的名称
      * @param RoutingConfig $RoutingConfig 别名的路由信息
      * @param string $Description 别名的描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AddTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

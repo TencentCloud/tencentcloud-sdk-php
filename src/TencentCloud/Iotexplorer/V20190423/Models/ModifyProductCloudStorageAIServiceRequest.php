@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyProductCloudStorageAIService请求参数结构体
  *
- * @method string getProductId() 获取产品ID
- * @method void setProductId(string $ProductId) 设置产品ID
+ * @method string getProductId() 获取产品 ID
+ * @method void setProductId(string $ProductId) 设置产品 ID
  * @method boolean getEnabled() 获取开通状态
  * @method void setEnabled(boolean $Enabled) 设置开通状态
  */
 class ModifyProductCloudStorageAIServiceRequest extends AbstractModel
 {
     /**
-     * @var string 产品ID
+     * @var string 产品 ID
      */
     public $ProductId;
 
@@ -38,7 +38,7 @@ class ModifyProductCloudStorageAIServiceRequest extends AbstractModel
     public $Enabled;
 
     /**
-     * @param string $ProductId 产品ID
+     * @param string $ProductId 产品 ID
      * @param boolean $Enabled 开通状态
      */
     function __construct()

@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量。默认值为0。
  * @method integer getLimit() 获取返回数目，默认值为20。
  * @method void setLimit(integer $Limit) 设置返回数目，默认值为20。
+ * @method string getDescription() 获取ACL规则描述
+ * @method void setDescription(string $Description) 设置ACL规则描述
  */
 class DescribePrivateNatGatewayTranslationAclRulesRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class DescribePrivateNatGatewayTranslationAclRulesRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string ACL规则描述
+     */
+    public $Description;
+
+    /**
      * @param string $NatGatewayId 私网网关唯一`ID`，形如：`intranat-xxxxxxxx`。
      * @param string $TranslationDirection 转换规则目标，可选值"LOCAL"。
      * @param string $TranslationType 转换规则类型，可选值"NETWORK_LAYER","TRANSPORT_LAYER"。
@@ -80,6 +87,7 @@ class DescribePrivateNatGatewayTranslationAclRulesRequest extends AbstractModel
      * @param string $OriginalIp 源`IP`,当转换规则类型为三层时有效。
      * @param integer $Offset 偏移量。默认值为0。
      * @param integer $Limit 返回数目，默认值为20。
+     * @param string $Description ACL规则描述
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class DescribePrivateNatGatewayTranslationAclRulesRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

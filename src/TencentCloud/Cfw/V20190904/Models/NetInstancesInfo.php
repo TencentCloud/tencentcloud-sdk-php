@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 网络实例信息
  *
  * @method string getInstanceId() 获取网络实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置网络实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceName() 获取网络实例名称
  * @method void setInstanceName(string $InstanceName) 设置网络实例名称
  * @method string getInstanceCidr() 获取网络cidr (多段以逗号分隔)
@@ -35,7 +33,6 @@ class NetInstancesInfo extends AbstractModel
 {
     /**
      * @var string 网络实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
@@ -56,7 +53,6 @@ class NetInstancesInfo extends AbstractModel
 
     /**
      * @param string $InstanceId 网络实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 网络实例名称
      * @param string $InstanceCidr 网络cidr (多段以逗号分隔)
      * @param string $Region 网络实例所在地域

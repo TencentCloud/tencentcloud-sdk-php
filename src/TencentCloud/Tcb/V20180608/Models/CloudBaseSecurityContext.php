@@ -19,25 +19,19 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * cloudrun安全特性
-
-
  *
  * @method CloudBaseCapabilities getCapabilities() 获取安全特性
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCapabilities(CloudBaseCapabilities $Capabilities) 设置安全特性
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudBaseSecurityContext extends AbstractModel
 {
     /**
      * @var CloudBaseCapabilities 安全特性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Capabilities;
 
     /**
      * @param CloudBaseCapabilities $Capabilities 安全特性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

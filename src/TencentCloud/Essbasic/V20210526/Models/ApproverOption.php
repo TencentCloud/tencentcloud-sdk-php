@@ -24,17 +24,23 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNoRefuse(boolean $NoRefuse) 设置是否可以拒签 默认false-可以拒签 true-不可以拒签
  * @method boolean getNoTransfer() 获取是否可以转发 默认false-可以转发 true-不可以转发
  * @method void setNoTransfer(boolean $NoTransfer) 设置是否可以转发 默认false-可以转发 true-不可以转发
- * @method boolean getHideOneKeySign() 获取是否隐藏一键签署 默认false-不隐藏true-隐藏
- * @method void setHideOneKeySign(boolean $HideOneKeySign) 设置是否隐藏一键签署 默认false-不隐藏true-隐藏
+ * @method boolean getHideOneKeySign() 获取当签署方有多个签署区时候，是否隐藏一键所有的签署区
+
+false：（默认）不隐藏
+true：隐藏，每个签署区要单独选择印章或者签名
+ * @method void setHideOneKeySign(boolean $HideOneKeySign) 设置当签署方有多个签署区时候，是否隐藏一键所有的签署区
+
+false：（默认）不隐藏
+true：隐藏，每个签署区要单独选择印章或者签名
  * @method integer getFillType() 获取签署人信息补充类型，默认无需补充。
 
-<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li></ul>
+<ul><li> **1** :  动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li></ul>
 
 注：
 `使用动态签署人能力前，需登陆腾讯电子签控制台打开服务开关`
  * @method void setFillType(integer $FillType) 设置签署人信息补充类型，默认无需补充。
 
-<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li></ul>
+<ul><li> **1** :  动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li></ul>
 
 注：
 `使用动态签署人能力前，需登陆腾讯电子签控制台打开服务开关`
@@ -54,6 +60,18 @@ use TencentCloud\Common\AbstractModel;
 <li> LimitBottom，阅读合同仅限制必须阅读到底</li>
 <li> NoReadTimeAndBottom，阅读合同不限制阅读时长且不限制阅读到底（白名单功能，请联系客户经理开白使用）</li>
 </ul>
+ * @method boolean getForbidAddSignDate() 获取禁止在签署过程中添加签署日期控件
+ <br/>前置条件：文件发起合同时，指定SignBeanTag=1（可以在签署过程中添加签署控件）：
+<ul>
+<li> 默认值：false，在开启：签署过程中添加签署控件时，添加签署控件会默认自带签署日期控件</li>
+<li> 可选值：true，在开启：签署过程中添加签署控件时，添加签署控件不会自带签署日期控件</li>
+</ul>
+ * @method void setForbidAddSignDate(boolean $ForbidAddSignDate) 设置禁止在签署过程中添加签署日期控件
+ <br/>前置条件：文件发起合同时，指定SignBeanTag=1（可以在签署过程中添加签署控件）：
+<ul>
+<li> 默认值：false，在开启：签署过程中添加签署控件时，添加签署控件会默认自带签署日期控件</li>
+<li> 可选值：true，在开启：签署过程中添加签署控件时，添加签署控件不会自带签署日期控件</li>
+</ul>
  */
 class ApproverOption extends AbstractModel
 {
@@ -68,14 +86,17 @@ class ApproverOption extends AbstractModel
     public $NoTransfer;
 
     /**
-     * @var boolean 是否隐藏一键签署 默认false-不隐藏true-隐藏
+     * @var boolean 当签署方有多个签署区时候，是否隐藏一键所有的签署区
+
+false：（默认）不隐藏
+true：隐藏，每个签署区要单独选择印章或者签名
      */
     public $HideOneKeySign;
 
     /**
      * @var integer 签署人信息补充类型，默认无需补充。
 
-<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li></ul>
+<ul><li> **1** :  动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li></ul>
 
 注：
 `使用动态签署人能力前，需登陆腾讯电子签控制台打开服务开关`
@@ -95,12 +116,25 @@ class ApproverOption extends AbstractModel
     public $FlowReadLimit;
 
     /**
+     * @var boolean 禁止在签署过程中添加签署日期控件
+ <br/>前置条件：文件发起合同时，指定SignBeanTag=1（可以在签署过程中添加签署控件）：
+<ul>
+<li> 默认值：false，在开启：签署过程中添加签署控件时，添加签署控件会默认自带签署日期控件</li>
+<li> 可选值：true，在开启：签署过程中添加签署控件时，添加签署控件不会自带签署日期控件</li>
+</ul>
+     */
+    public $ForbidAddSignDate;
+
+    /**
      * @param boolean $NoRefuse 是否可以拒签 默认false-可以拒签 true-不可以拒签
      * @param boolean $NoTransfer 是否可以转发 默认false-可以转发 true-不可以转发
-     * @param boolean $HideOneKeySign 是否隐藏一键签署 默认false-不隐藏true-隐藏
+     * @param boolean $HideOneKeySign 当签署方有多个签署区时候，是否隐藏一键所有的签署区
+
+false：（默认）不隐藏
+true：隐藏，每个签署区要单独选择印章或者签名
      * @param integer $FillType 签署人信息补充类型，默认无需补充。
 
-<ul><li> **1** : ( 动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li></ul>
+<ul><li> **1** :  动态签署人（可发起合同后再补充签署人信息）注：`企业自动签不支持动态补充`</li></ul>
 
 注：
 `使用动态签署人能力前，需登陆腾讯电子签控制台打开服务开关`
@@ -111,6 +145,12 @@ class ApproverOption extends AbstractModel
 <li> LimitReadTime，阅读合同仅限制阅读时长</li>
 <li> LimitBottom，阅读合同仅限制必须阅读到底</li>
 <li> NoReadTimeAndBottom，阅读合同不限制阅读时长且不限制阅读到底（白名单功能，请联系客户经理开白使用）</li>
+</ul>
+     * @param boolean $ForbidAddSignDate 禁止在签署过程中添加签署日期控件
+ <br/>前置条件：文件发起合同时，指定SignBeanTag=1（可以在签署过程中添加签署控件）：
+<ul>
+<li> 默认值：false，在开启：签署过程中添加签署控件时，添加签署控件会默认自带签署日期控件</li>
+<li> 可选值：true，在开启：签署过程中添加签署控件时，添加签署控件不会自带签署日期控件</li>
 </ul>
      */
     function __construct()
@@ -144,6 +184,10 @@ class ApproverOption extends AbstractModel
 
         if (array_key_exists("FlowReadLimit",$param) and $param["FlowReadLimit"] !== null) {
             $this->FlowReadLimit = $param["FlowReadLimit"];
+        }
+
+        if (array_key_exists("ForbidAddSignDate",$param) and $param["ForbidAddSignDate"] !== null) {
+            $this->ForbidAddSignDate = $param["ForbidAddSignDate"];
         }
     }
 }

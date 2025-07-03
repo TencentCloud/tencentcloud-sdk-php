@@ -25,29 +25,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStorageRegion() 获取存储仓库所属地域，比如COS广州(ap-guangzhou)	
  * @method void setStorageRegion(string $StorageRegion) 设置存储仓库所属地域，比如COS广州(ap-guangzhou)	
  * @method string getProvider() 获取存储服务提供方，默认腾讯云	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProvider(string $Provider) 设置存储服务提供方，默认腾讯云	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBucket() 获取对象存储桶名称，如果是COS必须是tke-backup-前缀开头	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBucket(string $Bucket) 设置对象存储桶名称，如果是COS必须是tke-backup-前缀开头	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPath() 获取对象存储桶路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPath(string $Path) 设置对象存储桶路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getState() 获取存储仓库状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setState(string $State) 设置存储仓库状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMessage() 获取详细状态信息	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置详细状态信息	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLastValidationTime() 获取最后一次检查时间	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastValidationTime(string $LastValidationTime) 设置最后一次检查时间	
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BackupStorageLocation extends AbstractModel
 {
@@ -63,37 +51,31 @@ class BackupStorageLocation extends AbstractModel
 
     /**
      * @var string 存储服务提供方，默认腾讯云	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Provider;
 
     /**
      * @var string 对象存储桶名称，如果是COS必须是tke-backup-前缀开头	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Bucket;
 
     /**
      * @var string 对象存储桶路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Path;
 
     /**
      * @var string 存储仓库状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $State;
 
     /**
      * @var string 详细状态信息	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
     /**
      * @var string 最后一次检查时间	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastValidationTime;
 
@@ -101,17 +83,11 @@ class BackupStorageLocation extends AbstractModel
      * @param string $Name 备份仓库名称	
      * @param string $StorageRegion 存储仓库所属地域，比如COS广州(ap-guangzhou)	
      * @param string $Provider 存储服务提供方，默认腾讯云	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Bucket 对象存储桶名称，如果是COS必须是tke-backup-前缀开头	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Path 对象存储桶路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $State 存储仓库状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message 详细状态信息	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastValidationTime 最后一次检查时间	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

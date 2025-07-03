@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 触发器触发参数
  *
  * @method string getAppId() 获取AppId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppId(string $AppId) 设置AppId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterId() 获取TKE集群ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterId(string $ClusterId) 设置TKE集群ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNamespace() 获取TKE集群命名空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespace(string $Namespace) 设置TKE集群命名空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getServiceName() 获取TKE集群工作负载名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceName(string $ServiceName) 设置TKE集群工作负载名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContainerName() 获取TKE集群工作负载中容器名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainerName(string $ContainerName) 设置TKE集群工作负载中容器名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getClusterRegion() 获取TKE集群地域数字ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterRegion(integer $ClusterRegion) 设置TKE集群地域数字ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TriggerInvokePara extends AbstractModel
 {
     /**
      * @var string AppId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppId;
 
     /**
      * @var string TKE集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterId;
 
     /**
      * @var string TKE集群命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Namespace;
 
     /**
      * @var string TKE集群工作负载名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceName;
 
     /**
      * @var string TKE集群工作负载中容器名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContainerName;
 
     /**
      * @var integer TKE集群地域数字ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterRegion;
 
     /**
      * @param string $AppId AppId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterId TKE集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Namespace TKE集群命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceName TKE集群工作负载名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContainerName TKE集群工作负载中容器名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ClusterRegion TKE集群地域数字ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

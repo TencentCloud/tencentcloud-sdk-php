@@ -37,13 +37,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getMaxIoBandWidth() 获取最大IO带宽
  * @method void setMaxIoBandWidth(integer $MaxIoBandWidth) 设置最大IO带宽
  * @method array getZoneStockInfos() 获取地域库存信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneStockInfos(array $ZoneStockInfos) 设置地域库存信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStockCount() 获取库存数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStockCount(integer $StockCount) 设置库存数量
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceSpec extends AbstractModel
 {
@@ -89,13 +85,11 @@ class InstanceSpec extends AbstractModel
 
     /**
      * @var array 地域库存信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneStockInfos;
 
     /**
      * @var integer 库存数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StockCount;
 
@@ -109,9 +103,7 @@ class InstanceSpec extends AbstractModel
      * @param integer $MaxIops 最大IOPS
      * @param integer $MaxIoBandWidth 最大IO带宽
      * @param array $ZoneStockInfos 地域库存信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StockCount 库存数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

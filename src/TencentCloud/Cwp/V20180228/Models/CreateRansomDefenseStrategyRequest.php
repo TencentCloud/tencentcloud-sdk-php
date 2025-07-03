@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIncludeDir(string $IncludeDir) 设置包含目录，;分隔
  * @method string getExcludeDir() 获取排除目录，;分隔
  * @method void setExcludeDir(string $ExcludeDir) 设置排除目录，;分隔
- * @method integer getBackupType() 获取备份模式： 0按周，1按天
- * @method void setBackupType(integer $BackupType) 设置备份模式： 0按周，1按天
+ * @method integer getBackupType() 获取备份模式： 0按周，1按天，2不备份
+ * @method void setBackupType(integer $BackupType) 设置备份模式： 0按周，1按天，2不备份
  * @method string getWeekday() 获取定时任务执行星期天数（1-7）：1;2;7
  * @method void setWeekday(string $Weekday) 设置定时任务执行星期天数（1-7）：1;2;7
  * @method integer getSaveDay() 获取保留天数：0永久
@@ -88,7 +88,7 @@ class CreateRansomDefenseStrategyRequest extends AbstractModel
     public $ExcludeDir;
 
     /**
-     * @var integer 备份模式： 0按周，1按天
+     * @var integer 备份模式： 0按周，1按天，2不备份
      */
     public $BackupType;
 
@@ -116,7 +116,7 @@ class CreateRansomDefenseStrategyRequest extends AbstractModel
      * @param integer $IsAll 是否全部机器生效：0否，1是
      * @param string $IncludeDir 包含目录，;分隔
      * @param string $ExcludeDir 排除目录，;分隔
-     * @param integer $BackupType 备份模式： 0按周，1按天
+     * @param integer $BackupType 备份模式： 0按周，1按天，2不备份
      * @param string $Weekday 定时任务执行星期天数（1-7）：1;2;7
      * @param integer $SaveDay 保留天数：0永久
      * @param array $Machines 绑定主机列表

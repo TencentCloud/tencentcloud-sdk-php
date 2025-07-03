@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 可被预留券抵扣的 Pod 某种规格的抵扣率
  *
  * @method float getCpu() 获取Pod的 CPU
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCpu(float $Cpu) 设置Pod的 CPU
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getMemory() 获取Pod 的内存
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMemory(float $Memory) 设置Pod 的内存
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取 Pod 的类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置 Pod 的类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGpuNum() 获取 Pod 的 GPU 卡数，Pod 类型为 GPU 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGpuNum(string $GpuNum) 设置 Pod 的 GPU 卡数，Pod 类型为 GPU 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalNum() 获取这种规格的 Pod总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalNum(integer $TotalNum) 设置这种规格的 Pod总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDeductionNum() 获取这种规格的 Pod被预留券抵扣的数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeductionNum(integer $DeductionNum) 设置这种规格的 Pod被预留券抵扣的数量
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PodDeductionRate extends AbstractModel
 {
     /**
      * @var float Pod的 CPU
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Cpu;
 
     /**
      * @var float Pod 的内存
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Memory;
 
     /**
      * @var string  Pod 的类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string  Pod 的 GPU 卡数，Pod 类型为 GPU 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GpuNum;
 
     /**
      * @var integer 这种规格的 Pod总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalNum;
 
     /**
      * @var integer 这种规格的 Pod被预留券抵扣的数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeductionNum;
 
     /**
      * @param float $Cpu Pod的 CPU
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Memory Pod 的内存
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type  Pod 的类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GpuNum  Pod 的 GPU 卡数，Pod 类型为 GPU 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalNum 这种规格的 Pod总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DeductionNum 这种规格的 Pod被预留券抵扣的数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

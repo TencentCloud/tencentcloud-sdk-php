@@ -21,93 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * 生产企业名称和地址
  *
  * @method string getText() 获取文本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setText(string $Text) 设置文本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取企业名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置企业名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAddress() 获取生产地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddress(string $Address) 设置生产地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPostalCode() 获取邮政编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPostalCode(string $PostalCode) 设置邮政编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPhone() 获取电话，包含区号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPhone(string $Phone) 设置电话，包含区号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFax() 获取传真，包含区号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFax(string $Fax) 设置传真，包含区号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWebsite() 获取网址，如无则不填写
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWebsite(string $Website) 设置网址，如无则不填写
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ChemicalProductInfoManufacturer extends AbstractModel
 {
     /**
      * @var string 文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Text;
 
     /**
      * @var string 企业名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 生产地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Address;
 
     /**
      * @var string 邮政编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PostalCode;
 
     /**
      * @var string 电话，包含区号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Phone;
 
     /**
      * @var string 传真，包含区号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Fax;
 
     /**
      * @var string 网址，如无则不填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Website;
 
     /**
      * @param string $Text 文本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 企业名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Address 生产地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PostalCode 邮政编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Phone 电话，包含区号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Fax 传真，包含区号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Website 网址，如无则不填写
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

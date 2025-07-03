@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyCdbProxyAddressVipAndVPort请求参数结构体
  *
- * @method string getProxyGroupId() 获取代理组ID
- * @method void setProxyGroupId(string $ProxyGroupId) 设置代理组ID
- * @method string getProxyAddressId() 获取代理组地址ID
- * @method void setProxyAddressId(string $ProxyAddressId) 设置代理组地址ID
- * @method string getUniqVpcId() 获取私有网络ID
- * @method void setUniqVpcId(string $UniqVpcId) 设置私有网络ID
- * @method string getUniqSubnetId() 获取私有子网ID
- * @method void setUniqSubnetId(string $UniqSubnetId) 设置私有子网ID
- * @method string getVip() 获取IP地址
- * @method void setVip(string $Vip) 设置IP地址
- * @method integer getVPort() 获取端口
- * @method void setVPort(integer $VPort) 设置端口
- * @method integer getReleaseDuration() 获取旧IP地址回收时间
- * @method void setReleaseDuration(integer $ReleaseDuration) 设置旧IP地址回收时间
+ * @method string getProxyGroupId() 获取代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+ * @method void setProxyGroupId(string $ProxyGroupId) 设置代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+ * @method string getProxyAddressId() 获取代理组地址 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+ * @method void setProxyAddressId(string $ProxyAddressId) 设置代理组地址 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+ * @method string getUniqVpcId() 获取私有网络 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+ * @method void setUniqVpcId(string $UniqVpcId) 设置私有网络 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+ * @method string getUniqSubnetId() 获取私有子网 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+ * @method void setUniqSubnetId(string $UniqSubnetId) 设置私有子网 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+ * @method string getVip() 获取IP 地址。若不填写则自动分配子网下的可用 IP。
+ * @method void setVip(string $Vip) 设置IP 地址。若不填写则自动分配子网下的可用 IP。
+ * @method integer getVPort() 获取端口。默认值3306，取值范围：1024 - 65535。
+ * @method void setVPort(integer $VPort) 设置端口。默认值3306，取值范围：1024 - 65535。
+ * @method integer getReleaseDuration() 获取旧 IP 地址回收时间。单位：小时，默认值：24，取值范围：0 - 168。
+ * @method void setReleaseDuration(integer $ReleaseDuration) 设置旧 IP 地址回收时间。单位：小时，默认值：24，取值范围：0 - 168。
  */
 class ModifyCdbProxyAddressVipAndVPortRequest extends AbstractModel
 {
     /**
-     * @var string 代理组ID
+     * @var string 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
      */
     public $ProxyGroupId;
 
     /**
-     * @var string 代理组地址ID
+     * @var string 代理组地址 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
      */
     public $ProxyAddressId;
 
     /**
-     * @var string 私有网络ID
+     * @var string 私有网络 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public $UniqVpcId;
 
     /**
-     * @var string 私有子网ID
+     * @var string 私有子网 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public $UniqSubnetId;
 
     /**
-     * @var string IP地址
+     * @var string IP 地址。若不填写则自动分配子网下的可用 IP。
      */
     public $Vip;
 
     /**
-     * @var integer 端口
+     * @var integer 端口。默认值3306，取值范围：1024 - 65535。
      */
     public $VPort;
 
     /**
-     * @var integer 旧IP地址回收时间
+     * @var integer 旧 IP 地址回收时间。单位：小时，默认值：24，取值范围：0 - 168。
      */
     public $ReleaseDuration;
 
     /**
-     * @param string $ProxyGroupId 代理组ID
-     * @param string $ProxyAddressId 代理组地址ID
-     * @param string $UniqVpcId 私有网络ID
-     * @param string $UniqSubnetId 私有子网ID
-     * @param string $Vip IP地址
-     * @param integer $VPort 端口
-     * @param integer $ReleaseDuration 旧IP地址回收时间
+     * @param string $ProxyGroupId 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+     * @param string $ProxyAddressId 代理组地址 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
+     * @param string $UniqVpcId 私有网络 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @param string $UniqSubnetId 私有子网 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @param string $Vip IP 地址。若不填写则自动分配子网下的可用 IP。
+     * @param integer $VPort 端口。默认值3306，取值范围：1024 - 65535。
+     * @param integer $ReleaseDuration 旧 IP 地址回收时间。单位：小时，默认值：24，取值范围：0 - 168。
      */
     function __construct()
     {

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyParamTemplate请求参数结构体
  *
- * @method string getTemplateId() 获取源参数模板 ID。
- * @method void setTemplateId(string $TemplateId) 设置源参数模板 ID。
+ * @method string getTemplateId() 获取源参数模板 ID。 请通过接口[DescribeParamTemplateInfo](https://cloud.tencent.com/document/product/239/58748)的返回参数 **TemplateId** 获取参数模板 ID。 
+ * @method void setTemplateId(string $TemplateId) 设置源参数模板 ID。 请通过接口[DescribeParamTemplateInfo](https://cloud.tencent.com/document/product/239/58748)的返回参数 **TemplateId** 获取参数模板 ID。 
  * @method string getName() 获取参数模板修改后的新名称。
  * @method void setName(string $Name) 设置参数模板修改后的新名称。
  * @method string getDescription() 获取参数模板修改后的新描述。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyParamTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 源参数模板 ID。
+     * @var string 源参数模板 ID。 请通过接口[DescribeParamTemplateInfo](https://cloud.tencent.com/document/product/239/58748)的返回参数 **TemplateId** 获取参数模板 ID。 
      */
     public $TemplateId;
 
@@ -52,7 +52,7 @@ class ModifyParamTemplateRequest extends AbstractModel
     public $ParamList;
 
     /**
-     * @param string $TemplateId 源参数模板 ID。
+     * @param string $TemplateId 源参数模板 ID。 请通过接口[DescribeParamTemplateInfo](https://cloud.tencent.com/document/product/239/58748)的返回参数 **TemplateId** 获取参数模板 ID。 
      * @param string $Name 参数模板修改后的新名称。
      * @param string $Description 参数模板修改后的新描述。
      * @param array $ParamList 修改后的新参数列表。

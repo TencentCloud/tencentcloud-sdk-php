@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getCompareMethod() 获取条件比较方法，1表示大于，2表示小于，3表示大于等于，4表示小于等于。
  * @method void setCompareMethod(integer $CompareMethod) 设置条件比较方法，1表示大于，2表示小于，3表示大于等于，4表示小于等于。
  * @method float getThreshold() 获取条件阈值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setThreshold(float $Threshold) 设置条件阈值。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TriggerCondition extends AbstractModel
 {
@@ -36,14 +34,12 @@ class TriggerCondition extends AbstractModel
 
     /**
      * @var float 条件阈值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Threshold;
 
     /**
      * @param integer $CompareMethod 条件比较方法，1表示大于，2表示小于，3表示大于等于，4表示小于等于。
      * @param float $Threshold 条件阈值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

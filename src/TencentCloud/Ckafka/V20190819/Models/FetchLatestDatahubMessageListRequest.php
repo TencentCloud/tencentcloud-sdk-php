@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * FetchLatestDatahubMessageList请求参数结构体
  *
- * @method string getName() 获取主题名
- * @method void setName(string $Name) 设置主题名
+ * @method string getName() 获取弹性topic名称
+ * @method void setName(string $Name) 设置弹性topic名称
  * @method integer getPartition() 获取分区id
  * @method void setPartition(integer $Partition) 设置分区id
  * @method integer getOffset() 获取位点信息
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class FetchLatestDatahubMessageListRequest extends AbstractModel
 {
     /**
-     * @var string 主题名
+     * @var string 弹性topic名称
      */
     public $Name;
 
@@ -52,7 +52,7 @@ class FetchLatestDatahubMessageListRequest extends AbstractModel
     public $MessageCount;
 
     /**
-     * @param string $Name 主题名
+     * @param string $Name 弹性topic名称
      * @param integer $Partition 分区id
      * @param integer $Offset 位点信息
      * @param integer $MessageCount 最大查询条数，最小1，最大100

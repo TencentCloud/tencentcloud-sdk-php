@@ -29,9 +29,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCreationTime() 获取创建时间
  * @method void setCreationTime(string $CreationTime) 设置创建时间
  * @method string getDescription() 获取镜像仓库描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置镜像仓库描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPublic() 获取是否为公有镜像
  * @method void setPublic(integer $Public) 设置是否为公有镜像
  * @method integer getPullCount() 获取下载次数
@@ -67,7 +65,6 @@ class RepositoryInfoResp extends AbstractModel
 
     /**
      * @var string 镜像仓库描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
@@ -102,7 +99,6 @@ class RepositoryInfoResp extends AbstractModel
      * @param string $Server 镜像仓库服务地址
      * @param string $CreationTime 创建时间
      * @param string $Description 镜像仓库描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Public 是否为公有镜像
      * @param integer $PullCount 下载次数
      * @param integer $FavorCount 收藏次数

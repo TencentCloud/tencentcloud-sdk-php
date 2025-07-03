@@ -21,17 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * DescribeOrganizationFinancialByMember返回参数结构体
  *
  * @method float getTotalCost() 获取当月总消耗。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCost(float $TotalCost) 设置当月总消耗。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getItems() 获取成员消耗详情。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setItems(array $Items) 设置成员消耗详情。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotal() 获取总数目。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotal(integer $Total) 设置总数目。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -39,19 +33,16 @@ class DescribeOrganizationFinancialByMemberResponse extends AbstractModel
 {
     /**
      * @var float 当月总消耗。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCost;
 
     /**
      * @var array 成员消耗详情。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Items;
 
     /**
      * @var integer 总数目。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Total;
 
@@ -62,11 +53,8 @@ class DescribeOrganizationFinancialByMemberResponse extends AbstractModel
 
     /**
      * @param float $TotalCost 当月总消耗。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Items 成员消耗详情。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Total 总数目。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

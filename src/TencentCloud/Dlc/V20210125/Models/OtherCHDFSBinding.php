@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 非DLC产品CHDFS绑定
  *
  * @method string getProductName() 获取产品名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductName(string $ProductName) 设置产品名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSuperUser() 获取用户名称（该字段已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSuperUser(array $SuperUser) 设置用户名称（该字段已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getVpcInfo() 获取vpc配置信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcInfo(array $VpcInfo) 设置vpc配置信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsBind() 获取是否与该桶绑定（该字段已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsBind(boolean $IsBind) 设置是否与该桶绑定（该字段已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OtherCHDFSBinding extends AbstractModel
 {
     /**
      * @var string 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductName;
 
     /**
      * @var array 用户名称（该字段已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SuperUser;
 
     /**
      * @var array vpc配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcInfo;
 
     /**
      * @var boolean 是否与该桶绑定（该字段已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsBind;
 
     /**
      * @param string $ProductName 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SuperUser 用户名称（该字段已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $VpcInfo vpc配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsBind 是否与该桶绑定（该字段已废弃）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

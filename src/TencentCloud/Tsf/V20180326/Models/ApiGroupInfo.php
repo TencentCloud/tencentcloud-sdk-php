@@ -92,6 +92,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceNameKeyPosition(string $ServiceNameKeyPosition) 设置微服务名参数位置，path，header或query，默认是path
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getGatewayInstanceIdList() 获取网关实例ID列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGatewayInstanceIdList(array $GatewayInstanceIdList) 设置网关实例ID列表
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApiGroupInfo extends AbstractModel
 {
@@ -204,6 +208,12 @@ class ApiGroupInfo extends AbstractModel
     public $ServiceNameKeyPosition;
 
     /**
+     * @var array 网关实例ID列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GatewayInstanceIdList;
+
+    /**
      * @param string $GroupId Api Group Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName Api Group 名称
@@ -239,6 +249,8 @@ class ApiGroupInfo extends AbstractModel
      * @param string $NamespaceNameKeyPosition 命名空间参数位置，path，header或query，默认是path
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceNameKeyPosition 微服务名参数位置，path，header或query，默认是path
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $GatewayInstanceIdList 网关实例ID列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -329,6 +341,10 @@ class ApiGroupInfo extends AbstractModel
 
         if (array_key_exists("ServiceNameKeyPosition",$param) and $param["ServiceNameKeyPosition"] !== null) {
             $this->ServiceNameKeyPosition = $param["ServiceNameKeyPosition"];
+        }
+
+        if (array_key_exists("GatewayInstanceIdList",$param) and $param["GatewayInstanceIdList"] !== null) {
+            $this->GatewayInstanceIdList = $param["GatewayInstanceIdList"];
         }
     }
 }

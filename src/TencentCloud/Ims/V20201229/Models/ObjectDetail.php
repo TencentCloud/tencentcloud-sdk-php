@@ -33,9 +33,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSubLabel() 获取该参数用于返回命中的实体二级标签。
  * @method void setSubLabel(string $SubLabel) 设置该参数用于返回命中的实体二级标签。
  * @method string getObjectId() 获取该参数用于返回命中的人脸id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setObjectId(string $ObjectId) 设置该参数用于返回命中的人脸id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ObjectDetail extends AbstractModel
 {
@@ -71,7 +69,6 @@ class ObjectDetail extends AbstractModel
 
     /**
      * @var string 该参数用于返回命中的人脸id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ObjectId;
 
@@ -83,7 +80,6 @@ class ObjectDetail extends AbstractModel
      * @param Location $Location 该字段用于返回实体检测框的坐标位置（左上角xy坐标、长宽、旋转角度）以方便快速定位实体的相关信息。
      * @param string $SubLabel 该参数用于返回命中的实体二级标签。
      * @param string $ObjectId 该参数用于返回命中的人脸id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

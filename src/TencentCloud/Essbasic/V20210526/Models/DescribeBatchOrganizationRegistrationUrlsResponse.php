@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBatchOrganizationRegistrationUrls返回参数结构体
  *
- * @method array getOrganizationAuthUrls() 获取企业批量注册链接信息
- * @method void setOrganizationAuthUrls(array $OrganizationAuthUrls) 设置企业批量注册链接信息
+ * @method array getOrganizationAuthUrls() 获取子企业注册认证的链接列表
+ * @method void setOrganizationAuthUrls(array $OrganizationAuthUrls) 设置子企业注册认证的链接列表
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeBatchOrganizationRegistrationUrlsResponse extends AbstractModel
 {
     /**
-     * @var array 企业批量注册链接信息
+     * @var array 子企业注册认证的链接列表
      */
     public $OrganizationAuthUrls;
 
@@ -38,7 +38,7 @@ class DescribeBatchOrganizationRegistrationUrlsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $OrganizationAuthUrls 企业批量注册链接信息
+     * @param array $OrganizationAuthUrls 子企业注册认证的链接列表
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,19 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SetSecurityGroupForLoadbalancers请求参数结构体
  *
- * @method string getSecurityGroup() 获取安全组ID，如 sg-12345678
- * @method void setSecurityGroup(string $SecurityGroup) 设置安全组ID，如 sg-12345678
+ * @method string getSecurityGroup() 获取安全组ID，如 sg-12345678。可以通过 [DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808) 接口获取。
+ * @method void setSecurityGroup(string $SecurityGroup) 设置安全组ID，如 sg-12345678。可以通过 [DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808) 接口获取。
  * @method string getOperationType() 获取ADD 绑定安全组；
 DEL 解绑安全组
  * @method void setOperationType(string $OperationType) 设置ADD 绑定安全组；
 DEL 解绑安全组
- * @method array getLoadBalancerIds() 获取负载均衡实例ID数组
- * @method void setLoadBalancerIds(array $LoadBalancerIds) 设置负载均衡实例ID数组
+ * @method array getLoadBalancerIds() 获取负载均衡实例ID数组，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
+列表支持的最大长度为20。
+ * @method void setLoadBalancerIds(array $LoadBalancerIds) 设置负载均衡实例ID数组，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
+列表支持的最大长度为20。
  */
 class SetSecurityGroupForLoadbalancersRequest extends AbstractModel
 {
     /**
-     * @var string 安全组ID，如 sg-12345678
+     * @var string 安全组ID，如 sg-12345678。可以通过 [DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808) 接口获取。
      */
     public $SecurityGroup;
 
@@ -43,15 +45,17 @@ DEL 解绑安全组
     public $OperationType;
 
     /**
-     * @var array 负载均衡实例ID数组
+     * @var array 负载均衡实例ID数组，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
+列表支持的最大长度为20。
      */
     public $LoadBalancerIds;
 
     /**
-     * @param string $SecurityGroup 安全组ID，如 sg-12345678
+     * @param string $SecurityGroup 安全组ID，如 sg-12345678。可以通过 [DescribeSecurityGroups](https://cloud.tencent.com/document/product/215/15808) 接口获取。
      * @param string $OperationType ADD 绑定安全组；
 DEL 解绑安全组
-     * @param array $LoadBalancerIds 负载均衡实例ID数组
+     * @param array $LoadBalancerIds 负载均衡实例ID数组，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/1108/48459) 接口查询。
+列表支持的最大长度为20。
      */
     function __construct()
     {

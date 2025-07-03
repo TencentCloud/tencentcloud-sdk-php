@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * DescribeComplianceTaskPolicyItemSummaryList返回参数结构体
  *
  * @method integer getTaskId() 获取返回最近一次合规检查任务的ID。这个任务为本次所展示数据的来源。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskId(integer $TaskId) 设置返回最近一次合规检查任务的ID。这个任务为本次所展示数据的来源。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取返回检测项的总数。
  * @method void setTotalCount(integer $TotalCount) 设置返回检测项的总数。
  * @method array getPolicyItemSummaryList() 获取返回各检测项对应的汇总信息的列表。
@@ -35,7 +33,6 @@ class DescribeComplianceTaskPolicyItemSummaryListResponse extends AbstractModel
 {
     /**
      * @var integer 返回最近一次合规检查任务的ID。这个任务为本次所展示数据的来源。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskId;
 
@@ -56,7 +53,6 @@ class DescribeComplianceTaskPolicyItemSummaryListResponse extends AbstractModel
 
     /**
      * @param integer $TaskId 返回最近一次合规检查任务的ID。这个任务为本次所展示数据的来源。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 返回检测项的总数。
      * @param array $PolicyItemSummaryList 返回各检测项对应的汇总信息的列表。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。

@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 统计数据的结构体
  *
  * @method string getSendDate() 获取日期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSendDate(string $SendDate) 设置日期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRequestCount() 获取邮件请求数量
  * @method void setRequestCount(integer $RequestCount) 设置邮件请求数量
  * @method integer getAcceptedCount() 获取腾讯云通过数量
@@ -37,15 +35,12 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getBounceCount() 获取退信数量
  * @method void setBounceCount(integer $BounceCount) 设置退信数量
  * @method integer getUnsubscribeCount() 获取取消订阅的用户数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnsubscribeCount(integer $UnsubscribeCount) 设置取消订阅的用户数量
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Volume extends AbstractModel
 {
     /**
      * @var string 日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SendDate;
 
@@ -81,13 +76,11 @@ class Volume extends AbstractModel
 
     /**
      * @var integer 取消订阅的用户数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UnsubscribeCount;
 
     /**
      * @param string $SendDate 日期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RequestCount 邮件请求数量
      * @param integer $AcceptedCount 腾讯云通过数量
      * @param integer $DeliveredCount 送达数量
@@ -95,7 +88,6 @@ class Volume extends AbstractModel
      * @param integer $ClickedCount 点击了邮件中的链接数量用户数量
      * @param integer $BounceCount 退信数量
      * @param integer $UnsubscribeCount 取消订阅的用户数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

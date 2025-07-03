@@ -23,13 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getIsDraft() 获取true为草稿，表示还没有刷新资源池
  * @method void setIsDraft(boolean $IsDraft) 设置true为草稿，表示还没有刷新资源池
  * @method string getErrorMsg() 获取校验错误信息，如果不为空，则说明校验失败，配置没有成功
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorMsg(string $ErrorMsg) 设置校验错误信息，如果不为空，则说明校验失败，配置没有成功
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getData() 获取返回数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(string $Data) 设置返回数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -42,13 +38,11 @@ class ModifyResourceScheduleConfigResponse extends AbstractModel
 
     /**
      * @var string 校验错误信息，如果不为空，则说明校验失败，配置没有成功
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrorMsg;
 
     /**
      * @var string 返回数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
 
@@ -60,9 +54,7 @@ class ModifyResourceScheduleConfigResponse extends AbstractModel
     /**
      * @param boolean $IsDraft true为草稿，表示还没有刷新资源池
      * @param string $ErrorMsg 校验错误信息，如果不为空，则说明校验失败，配置没有成功
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Data 返回数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

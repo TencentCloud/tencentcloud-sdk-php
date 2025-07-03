@@ -31,9 +31,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEndTime() 获取任务结束时间。
  * @method void setEndTime(string $EndTime) 设置任务结束时间。
  * @method array getDetail() 获取回档任务详情。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDetail(array $Detail) 设置回档任务详情。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RollbackTask extends AbstractModel
 {
@@ -64,7 +62,6 @@ class RollbackTask extends AbstractModel
 
     /**
      * @var array 回档任务详情。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Detail;
 
@@ -75,7 +72,6 @@ class RollbackTask extends AbstractModel
      * @param string $StartTime 任务开始时间。
      * @param string $EndTime 任务结束时间。
      * @param array $Detail 回档任务详情。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

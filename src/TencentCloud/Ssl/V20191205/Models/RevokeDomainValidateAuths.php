@@ -18,60 +18,44 @@ namespace TencentCloud\Ssl\V20191205\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 返回参数键为 RevokeDomainValidateAuths 的内容。
+ * 吊销证书域名验证信息。
  *
  * @method string getDomainValidateAuthPath() 获取DV 认证值路径。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomainValidateAuthPath(string $DomainValidateAuthPath) 设置DV 认证值路径。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDomainValidateAuthKey() 获取DV 认证 KEY。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomainValidateAuthKey(string $DomainValidateAuthKey) 设置DV 认证 KEY。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDomainValidateAuthValue() 获取DV 认证值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomainValidateAuthValue(string $DomainValidateAuthValue) 设置DV 认证值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDomainValidateAuthDomain() 获取DV 认证域名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomainValidateAuthDomain(string $DomainValidateAuthDomain) 设置DV 认证域名。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RevokeDomainValidateAuths extends AbstractModel
 {
     /**
      * @var string DV 认证值路径。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DomainValidateAuthPath;
 
     /**
      * @var string DV 认证 KEY。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DomainValidateAuthKey;
 
     /**
      * @var string DV 认证值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DomainValidateAuthValue;
 
     /**
      * @var string DV 认证域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DomainValidateAuthDomain;
 
     /**
      * @param string $DomainValidateAuthPath DV 认证值路径。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DomainValidateAuthKey DV 认证 KEY。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DomainValidateAuthValue DV 认证值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DomainValidateAuthDomain DV 认证域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

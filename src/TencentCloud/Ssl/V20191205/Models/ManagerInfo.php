@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatusInfo(array $StatusInfo) 设置具体审核状态信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTags() 获取标签
+ * @method void setTags(array $Tags) 设置标签
  */
 class ManagerInfo extends AbstractModel
 {
@@ -144,6 +146,11 @@ class ManagerInfo extends AbstractModel
     public $StatusInfo;
 
     /**
+     * @var array 标签
+     */
+    public $Tags;
+
+    /**
      * @param string $Status 状态: audit: 审核中 ok: 审核通过 invalid: 失效 expiring: 即将过期 expired: 已过期
      * @param string $ManagerFirstName 管理人姓名
      * @param string $ManagerLastName 管理人姓名
@@ -164,6 +171,7 @@ class ManagerInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $StatusInfo 具体审核状态信息
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tags 标签
      */
     function __construct()
     {
@@ -240,6 +248,15 @@ class ManagerInfo extends AbstractModel
                 $obj = new ManagerStatusInfo();
                 $obj->deserialize($value);
                 array_push($this->StatusInfo, $obj);
+            }
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tags();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
             }
         }
     }

@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 动作信息
  *
  * @method integer getId() 获取动作id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(integer $Id) 设置动作id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取动作名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置动作名
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Action extends AbstractModel
 {
     /**
      * @var integer 动作id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var string 动作名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @param integer $Id 动作id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 动作名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

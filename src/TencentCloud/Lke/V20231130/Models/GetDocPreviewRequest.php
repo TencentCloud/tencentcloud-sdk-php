@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetDocPreview请求参数结构体
  *
- * @method string getDocBizId() 获取文档业务ID
- * @method void setDocBizId(string $DocBizId) 设置文档业务ID
+ * @method string getDocBizId() 获取文档BizID
+ * @method void setDocBizId(string $DocBizId) 设置文档BizID
  * @method string getBotBizId() 获取应用ID
  * @method void setBotBizId(string $BotBizId) 设置应用ID
  * @method string getTypeKey() 获取存储类型: offline:离线文件，realtime:实时文件；为空默认为offline
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class GetDocPreviewRequest extends AbstractModel
 {
     /**
-     * @var string 文档业务ID
+     * @var string 文档BizID
      */
     public $DocBizId;
 
@@ -45,7 +45,7 @@ class GetDocPreviewRequest extends AbstractModel
     public $TypeKey;
 
     /**
-     * @param string $DocBizId 文档业务ID
+     * @param string $DocBizId 文档BizID
      * @param string $BotBizId 应用ID
      * @param string $TypeKey 存储类型: offline:离线文件，realtime:实时文件；为空默认为offline
      */

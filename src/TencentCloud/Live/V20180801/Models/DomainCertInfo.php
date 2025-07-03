@@ -48,14 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置证书状态。
  * @method array getCertDomains() 获取证书本身标识的域名列表。
 比如: ["*.x.com"]
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertDomains(array $CertDomains) 设置证书本身标识的域名列表。
 比如: ["*.x.com"]
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCloudCertId() 获取腾讯云ssl的证书Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCloudCertId(string $CloudCertId) 设置腾讯云ssl的证书Id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DomainCertInfo extends AbstractModel
 {
@@ -111,13 +107,11 @@ class DomainCertInfo extends AbstractModel
     /**
      * @var array 证书本身标识的域名列表。
 比如: ["*.x.com"]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CertDomains;
 
     /**
      * @var string 腾讯云ssl的证书Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CloudCertId;
 
@@ -137,9 +131,7 @@ class DomainCertInfo extends AbstractModel
      * @param integer $Status 证书状态。
      * @param array $CertDomains 证书本身标识的域名列表。
 比如: ["*.x.com"]
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CloudCertId 腾讯云ssl的证书Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

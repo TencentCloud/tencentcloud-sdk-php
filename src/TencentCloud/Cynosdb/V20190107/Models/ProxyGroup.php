@@ -33,17 +33,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCurrentProxyVersion() 获取当前代理版本
  * @method void setCurrentProxyVersion(string $CurrentProxyVersion) 设置当前代理版本
  * @method string getClusterId() 获取集群ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterId(string $ClusterId) 设置集群ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAppId() 获取用户AppId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppId(integer $AppId) 设置用户AppId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOpenRw() 获取读写节点开通数据库代理
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOpenRw(string $OpenRw) 设置读写节点开通数据库代理
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProxyGroup extends AbstractModel
 {
@@ -79,19 +73,16 @@ class ProxyGroup extends AbstractModel
 
     /**
      * @var string 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterId;
 
     /**
      * @var integer 用户AppId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppId;
 
     /**
      * @var string 读写节点开通数据库代理
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OpenRw;
 
@@ -103,11 +94,8 @@ class ProxyGroup extends AbstractModel
      * @param string $Zone 可用区
      * @param string $CurrentProxyVersion 当前代理版本
      * @param string $ClusterId 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AppId 用户AppId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OpenRw 读写节点开通数据库代理
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

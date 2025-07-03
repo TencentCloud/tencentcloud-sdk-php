@@ -34,10 +34,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterNodeNum(integer $ClusterNodeNum) 设置集群节点数
  * @method string getRegion() 获取集群区域
  * @method void setRegion(string $Region) 设置集群区域
- * @method string getDefenderStatus() 获取防护状态: 已防护: Defended 未防护: UnDefended
- * @method void setDefenderStatus(string $DefenderStatus) 设置防护状态: 已防护: Defended 未防护: UnDefended
+ * @method string getDefenderStatus() 获取防护状态: 
+已防护: Defended 
+未防护: UnDefended
+部分防护: PartDefened
+ * @method void setDefenderStatus(string $DefenderStatus) 设置防护状态: 
+已防护: Defended 
+未防护: UnDefended
+部分防护: PartDefened
  * @method string getClusterStatus() 获取集群状态
  * @method void setClusterStatus(string $ClusterStatus) 设置集群状态
+ * @method string getClusterSubStatus() 获取集群运行子状态
+ * @method void setClusterSubStatus(string $ClusterSubStatus) 设置集群运行子状态
  * @method string getClusterCheckMode() 获取集群的检测模式，为Cluster_Normal或者Cluster_Actived.
  * @method void setClusterCheckMode(string $ClusterCheckMode) 设置集群的检测模式，为Cluster_Normal或者Cluster_Actived.
  * @method boolean getClusterAutoCheck() 获取是否自动定期检测
@@ -69,7 +77,6 @@ use TencentCloud\Common\AbstractModel;
 卸载异常: AccessedUninstallException
 接入中: AccessedInstalling
 卸载中: AccessedUninstalling
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccessedStatus(string $AccessedStatus) 设置接入状态:
 未接入: AccessedNone
 已防护: AccessedDefended
@@ -79,31 +86,28 @@ use TencentCloud\Common\AbstractModel;
 卸载异常: AccessedUninstallException
 接入中: AccessedInstalling
 卸载中: AccessedUninstalling
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAccessedSubStatus() 获取接入失败原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccessedSubStatus(string $AccessedSubStatus) 设置接入失败原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNodeCount() 获取节点总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodeCount(integer $NodeCount) 设置节点总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getOffLineNodeCount() 获取离线节点数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOffLineNodeCount(integer $OffLineNodeCount) 设置离线节点数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUnInstallAgentNodeCount() 获取未安装agent节点数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnInstallAgentNodeCount(integer $UnInstallAgentNodeCount) 设置未安装agent节点数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getChargeCoresCnt() 获取计费核数(弹性计费核数+普通计费核数)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChargeCoresCnt(integer $ChargeCoresCnt) 设置计费核数(弹性计费核数+普通计费核数)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getMasterAddresses() 获取master 地址列表
  * @method void setMasterAddresses(array $MasterAddresses) 设置master 地址列表
  * @method integer getCoresCnt() 获取核数
  * @method void setCoresCnt(integer $CoresCnt) 设置核数
+ * @method string getClusterAuditStatus() 获取集群审计开关状态：
+已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed
+ * @method void setClusterAuditStatus(string $ClusterAuditStatus) 设置集群审计开关状态：
+已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed
+ * @method string getClusterAuditFailedInfo() 获取集群审计开关失败信息
+ * @method void setClusterAuditFailedInfo(string $ClusterAuditFailedInfo) 设置集群审计开关失败信息
+ * @method string getOwnerName() 获取所有者名称
+ * @method void setOwnerName(string $OwnerName) 设置所有者名称
  */
 class ClusterInfoItem extends AbstractModel
 {
@@ -143,7 +147,10 @@ class ClusterInfoItem extends AbstractModel
     public $Region;
 
     /**
-     * @var string 防护状态: 已防护: Defended 未防护: UnDefended
+     * @var string 防护状态: 
+已防护: Defended 
+未防护: UnDefended
+部分防护: PartDefened
      */
     public $DefenderStatus;
 
@@ -151,6 +158,11 @@ class ClusterInfoItem extends AbstractModel
      * @var string 集群状态
      */
     public $ClusterStatus;
+
+    /**
+     * @var string 集群运行子状态
+     */
+    public $ClusterSubStatus;
 
     /**
      * @var string 集群的检测模式，为Cluster_Normal或者Cluster_Actived.
@@ -217,37 +229,31 @@ class ClusterInfoItem extends AbstractModel
 卸载异常: AccessedUninstallException
 接入中: AccessedInstalling
 卸载中: AccessedUninstalling
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccessedStatus;
 
     /**
      * @var string 接入失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccessedSubStatus;
 
     /**
      * @var integer 节点总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeCount;
 
     /**
      * @var integer 离线节点数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OffLineNodeCount;
 
     /**
      * @var integer 未安装agent节点数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UnInstallAgentNodeCount;
 
     /**
      * @var integer 计费核数(弹性计费核数+普通计费核数)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChargeCoresCnt;
 
@@ -262,6 +268,22 @@ class ClusterInfoItem extends AbstractModel
     public $CoresCnt;
 
     /**
+     * @var string 集群审计开关状态：
+已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed
+     */
+    public $ClusterAuditStatus;
+
+    /**
+     * @var string 集群审计开关失败信息
+     */
+    public $ClusterAuditFailedInfo;
+
+    /**
+     * @var string 所有者名称
+     */
+    public $OwnerName;
+
+    /**
      * @param string $ClusterId 集群id
      * @param string $ClusterName 集群名字
      * @param string $ClusterVersion 集群版本
@@ -269,8 +291,12 @@ class ClusterInfoItem extends AbstractModel
      * @param string $ClusterType 集群类型
      * @param integer $ClusterNodeNum 集群节点数
      * @param string $Region 集群区域
-     * @param string $DefenderStatus 防护状态: 已防护: Defended 未防护: UnDefended
+     * @param string $DefenderStatus 防护状态: 
+已防护: Defended 
+未防护: UnDefended
+部分防护: PartDefened
      * @param string $ClusterStatus 集群状态
+     * @param string $ClusterSubStatus 集群运行子状态
      * @param string $ClusterCheckMode 集群的检测模式，为Cluster_Normal或者Cluster_Actived.
      * @param boolean $ClusterAutoCheck 是否自动定期检测
      * @param string $DefenderErrorReason 防护容器部署失败原因，为UserDaemonSetNotReady时,和UnreadyNodeNum转成"N个节点防御容器为就绪"，其他错误直接展示
@@ -291,19 +317,17 @@ class ClusterInfoItem extends AbstractModel
 卸载异常: AccessedUninstallException
 接入中: AccessedInstalling
 卸载中: AccessedUninstalling
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AccessedSubStatus 接入失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NodeCount 节点总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $OffLineNodeCount 离线节点数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UnInstallAgentNodeCount 未安装agent节点数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ChargeCoresCnt 计费核数(弹性计费核数+普通计费核数)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $MasterAddresses master 地址列表
      * @param integer $CoresCnt 核数
+     * @param string $ClusterAuditStatus 集群审计开关状态：
+已关闭Closed/关闭中Closing/关闭失败CloseFailed/已开启Opened/开启中Opening/开启失败OpenFailed
+     * @param string $ClusterAuditFailedInfo 集群审计开关失败信息
+     * @param string $OwnerName 所有者名称
      */
     function __construct()
     {
@@ -352,6 +376,10 @@ class ClusterInfoItem extends AbstractModel
 
         if (array_key_exists("ClusterStatus",$param) and $param["ClusterStatus"] !== null) {
             $this->ClusterStatus = $param["ClusterStatus"];
+        }
+
+        if (array_key_exists("ClusterSubStatus",$param) and $param["ClusterSubStatus"] !== null) {
+            $this->ClusterSubStatus = $param["ClusterSubStatus"];
         }
 
         if (array_key_exists("ClusterCheckMode",$param) and $param["ClusterCheckMode"] !== null) {
@@ -428,6 +456,18 @@ class ClusterInfoItem extends AbstractModel
 
         if (array_key_exists("CoresCnt",$param) and $param["CoresCnt"] !== null) {
             $this->CoresCnt = $param["CoresCnt"];
+        }
+
+        if (array_key_exists("ClusterAuditStatus",$param) and $param["ClusterAuditStatus"] !== null) {
+            $this->ClusterAuditStatus = $param["ClusterAuditStatus"];
+        }
+
+        if (array_key_exists("ClusterAuditFailedInfo",$param) and $param["ClusterAuditFailedInfo"] !== null) {
+            $this->ClusterAuditFailedInfo = $param["ClusterAuditFailedInfo"];
+        }
+
+        if (array_key_exists("OwnerName",$param) and $param["OwnerName"] !== null) {
+            $this->OwnerName = $param["OwnerName"];
         }
     }
 }

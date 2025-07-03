@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsInherit(integer $IsInherit) 设置是否继承集群的资源类配置：0：不继承（默认），1：继承集群；
  * @method string getCustomKey() 获取用户自定义主键，需唯一
  * @method void setCustomKey(string $CustomKey) 设置用户自定义主键，需唯一
+ * @method array getSourceInfo() 获取任务来源信息
+ * @method void setSourceInfo(array $SourceInfo) 设置任务来源信息
  */
 class CreateSparkSessionBatchSQLRequest extends AbstractModel
 {
@@ -114,6 +116,11 @@ class CreateSparkSessionBatchSQLRequest extends AbstractModel
     public $CustomKey;
 
     /**
+     * @var array 任务来源信息
+     */
+    public $SourceInfo;
+
+    /**
      * @param string $DataEngineName DLC Spark作业引擎名称
      * @param string $ExecuteSQL 运行sql，需要base64编码。
      * @param string $DriverSize 指定的Driver规格，当前支持：small（默认，1cu）、medium（2cu）、large（4cu）、xlarge（8cu）
@@ -128,6 +135,7 @@ class CreateSparkSessionBatchSQLRequest extends AbstractModel
 3.dlc.sql.set.config：用户配置的集群配置信息，可以用过该字段设置；
      * @param integer $IsInherit 是否继承集群的资源类配置：0：不继承（默认），1：继承集群；
      * @param string $CustomKey 用户自定义主键，需唯一
+     * @param array $SourceInfo 任务来源信息
      */
     function __construct()
     {
@@ -193,6 +201,15 @@ class CreateSparkSessionBatchSQLRequest extends AbstractModel
 
         if (array_key_exists("CustomKey",$param) and $param["CustomKey"] !== null) {
             $this->CustomKey = $param["CustomKey"];
+        }
+
+        if (array_key_exists("SourceInfo",$param) and $param["SourceInfo"] !== null) {
+            $this->SourceInfo = [];
+            foreach ($param["SourceInfo"] as $key => $value){
+                $obj = new KVPair();
+                $obj->deserialize($value);
+                array_push($this->SourceInfo, $obj);
+            }
         }
     }
 }

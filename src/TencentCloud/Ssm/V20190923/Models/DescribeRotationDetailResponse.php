@@ -23,17 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getEnableRotation() 获取否允许轮转，true表示开启轮转，false表示禁止轮转。
  * @method void setEnableRotation(boolean $EnableRotation) 设置否允许轮转，true表示开启轮转，false表示禁止轮转。
  * @method integer getFrequency() 获取轮转的频率，以天为单位，默认为1天。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFrequency(integer $Frequency) 设置轮转的频率，以天为单位，默认为1天。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLatestRotateTime() 获取最近一次轮转的时间，显式可见的时间字符串，格式 2006-01-02 15:04:05。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLatestRotateTime(string $LatestRotateTime) 设置最近一次轮转的时间，显式可见的时间字符串，格式 2006-01-02 15:04:05。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNextRotateBeginTime() 获取下一次开始轮转的时间，显式可见的时间字符串，格式 2006-01-02 15:04:05。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNextRotateBeginTime(string $NextRotateBeginTime) 设置下一次开始轮转的时间，显式可见的时间字符串，格式 2006-01-02 15:04:05。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -46,19 +40,16 @@ class DescribeRotationDetailResponse extends AbstractModel
 
     /**
      * @var integer 轮转的频率，以天为单位，默认为1天。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Frequency;
 
     /**
      * @var string 最近一次轮转的时间，显式可见的时间字符串，格式 2006-01-02 15:04:05。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LatestRotateTime;
 
     /**
      * @var string 下一次开始轮转的时间，显式可见的时间字符串，格式 2006-01-02 15:04:05。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NextRotateBeginTime;
 
@@ -70,11 +61,8 @@ class DescribeRotationDetailResponse extends AbstractModel
     /**
      * @param boolean $EnableRotation 否允许轮转，true表示开启轮转，false表示禁止轮转。
      * @param integer $Frequency 轮转的频率，以天为单位，默认为1天。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LatestRotateTime 最近一次轮转的时间，显式可见的时间字符串，格式 2006-01-02 15:04:05。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NextRotateBeginTime 下一次开始轮转的时间，显式可见的时间字符串，格式 2006-01-02 15:04:05。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

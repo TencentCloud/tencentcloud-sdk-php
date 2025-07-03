@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 成员管理身份
  *
  * @method integer getIdentityId() 获取身份ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIdentityId(integer $IdentityId) 设置身份ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIdentityAliasName() 获取身份名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIdentityAliasName(string $IdentityAliasName) 设置身份名称。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MemberIdentity extends AbstractModel
 {
     /**
      * @var integer 身份ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IdentityId;
 
     /**
      * @var string 身份名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IdentityAliasName;
 
     /**
      * @param integer $IdentityId 身份ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IdentityAliasName 身份名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

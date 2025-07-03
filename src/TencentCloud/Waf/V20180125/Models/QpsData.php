@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 获取弹性qps的默认相关值
  *
  * @method integer getElasticBillingDefault() 获取弹性qps默认值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setElasticBillingDefault(integer $ElasticBillingDefault) 设置弹性qps默认值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getElasticBillingMin() 获取弹性qps最小值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setElasticBillingMin(integer $ElasticBillingMin) 设置弹性qps最小值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getElasticBillingMax() 获取弹性qps最大值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setElasticBillingMax(integer $ElasticBillingMax) 设置弹性qps最大值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getQPSExtendMax() 获取业务扩展包最大qps
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQPSExtendMax(integer $QPSExtendMax) 设置业务扩展包最大qps
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getQPSExtendIntlMax() 获取海外业务扩展包最大qps
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setQPSExtendIntlMax(integer $QPSExtendIntlMax) 设置海外业务扩展包最大qps
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getQPSExtendIntlMax() 获取境外业务扩展包最大qps
+ * @method void setQPSExtendIntlMax(integer $QPSExtendIntlMax) 设置境外业务扩展包最大qps
  */
 class QpsData extends AbstractModel
 {
     /**
      * @var integer 弹性qps默认值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ElasticBillingDefault;
 
     /**
      * @var integer 弹性qps最小值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ElasticBillingMin;
 
     /**
      * @var integer 弹性qps最大值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ElasticBillingMax;
 
     /**
      * @var integer 业务扩展包最大qps
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QPSExtendMax;
 
     /**
-     * @var integer 海外业务扩展包最大qps
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 境外业务扩展包最大qps
      */
     public $QPSExtendIntlMax;
 
     /**
      * @param integer $ElasticBillingDefault 弹性qps默认值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ElasticBillingMin 弹性qps最小值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ElasticBillingMax 弹性qps最大值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $QPSExtendMax 业务扩展包最大qps
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $QPSExtendIntlMax 海外业务扩展包最大qps
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $QPSExtendIntlMax 境外业务扩展包最大qps
      */
     function __construct()
     {

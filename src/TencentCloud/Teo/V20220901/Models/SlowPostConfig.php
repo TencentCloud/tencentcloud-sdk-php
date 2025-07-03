@@ -27,25 +27,17 @@ use TencentCloud\Common\AbstractModel;
 <li>on：开启；</li>
 <li>off：关闭。</li>
  * @method FirstPartConfig getFirstPartConfig() 获取首包配置。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFirstPartConfig(FirstPartConfig $FirstPartConfig) 设置首包配置。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method SlowRateConfig getSlowRateConfig() 获取基础配置。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSlowRateConfig(SlowRateConfig $SlowRateConfig) 设置基础配置。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAction() 获取慢速攻击的处置动作，取值有：
 <li>monitor：观察；</li>
 <li>drop：拦截。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAction(string $Action) 设置慢速攻击的处置动作，取值有：
 <li>monitor：观察；</li>
 <li>drop：拦截。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRuleId() 获取本规则的Id。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleId(integer $RuleId) 设置本规则的Id。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SlowPostConfig extends AbstractModel
 {
@@ -58,13 +50,11 @@ class SlowPostConfig extends AbstractModel
 
     /**
      * @var FirstPartConfig 首包配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FirstPartConfig;
 
     /**
      * @var SlowRateConfig 基础配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SlowRateConfig;
 
@@ -72,13 +62,11 @@ class SlowPostConfig extends AbstractModel
      * @var string 慢速攻击的处置动作，取值有：
 <li>monitor：观察；</li>
 <li>drop：拦截。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Action;
 
     /**
      * @var integer 本规则的Id。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleId;
 
@@ -87,15 +75,11 @@ class SlowPostConfig extends AbstractModel
 <li>on：开启；</li>
 <li>off：关闭。</li>
      * @param FirstPartConfig $FirstPartConfig 首包配置。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SlowRateConfig $SlowRateConfig 基础配置。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Action 慢速攻击的处置动作，取值有：
 <li>monitor：观察；</li>
 <li>drop：拦截。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleId 本规则的Id。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTopic() 获取主题名称
  * @method void setTopic(string $Topic) 设置主题名称
- * @method string getType() 获取主题类型，Default表示普通，GlobalOrder表示全局顺序，PartitionedOrder表示局部顺序，Transaction表示事务，Retry表示重试，DeadLetter表示死信
- * @method void setType(string $Type) 设置主题类型，Default表示普通，GlobalOrder表示全局顺序，PartitionedOrder表示局部顺序，Transaction表示事务，Retry表示重试，DeadLetter表示死信
+ * @method string getType() 获取主题类型，Normal表示普通，GlobalOrder表示全局顺序，PartitionedOrder表示局部顺序，Transaction表示事务，Retry表示重试，DeadLetter表示死信
+ * @method void setType(string $Type) 设置主题类型，Normal表示普通，GlobalOrder表示全局顺序，PartitionedOrder表示局部顺序，Transaction表示事务，Retry表示重试，DeadLetter表示死信
  * @method integer getPartitionNum() 获取分区数
  * @method void setPartitionNum(integer $PartitionNum) 设置分区数
  * @method integer getAccumulative() 获取消息堆积数
@@ -43,7 +43,7 @@ class RocketMQConsumerTopic extends AbstractModel
     public $Topic;
 
     /**
-     * @var string 主题类型，Default表示普通，GlobalOrder表示全局顺序，PartitionedOrder表示局部顺序，Transaction表示事务，Retry表示重试，DeadLetter表示死信
+     * @var string 主题类型，Normal表示普通，GlobalOrder表示全局顺序，PartitionedOrder表示局部顺序，Transaction表示事务，Retry表示重试，DeadLetter表示死信
      */
     public $Type;
 
@@ -70,7 +70,7 @@ class RocketMQConsumerTopic extends AbstractModel
 
     /**
      * @param string $Topic 主题名称
-     * @param string $Type 主题类型，Default表示普通，GlobalOrder表示全局顺序，PartitionedOrder表示局部顺序，Transaction表示事务，Retry表示重试，DeadLetter表示死信
+     * @param string $Type 主题类型，Normal表示普通，GlobalOrder表示全局顺序，PartitionedOrder表示局部顺序，Transaction表示事务，Retry表示重试，DeadLetter表示死信
      * @param integer $PartitionNum 分区数
      * @param integer $Accumulative 消息堆积数
      * @param integer $LastConsumptionTime 最后消费时间，以毫秒为单位

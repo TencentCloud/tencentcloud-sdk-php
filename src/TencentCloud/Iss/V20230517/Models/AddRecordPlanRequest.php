@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChannels(array $Channels) 设置添加录像的设备的通道信息，一次添加通道总数不超过5000个，包括组织目录下的通道数量
  * @method array getOrganizationId() 获取添加组织目录下所有设备通道，Json数组，可以为空，通道总数量不超过5000个（包括Channel字段的数量）
  * @method void setOrganizationId(array $OrganizationId) 设置添加组织目录下所有设备通道，Json数组，可以为空，通道总数量不超过5000个（包括Channel字段的数量）
+ * @method integer getRepairMode() 获取录像补录模式（0:不启用，1:启用），无该字段，默认不启用
+ * @method void setRepairMode(integer $RepairMode) 设置录像补录模式（0:不启用，1:启用），无该字段，默认不启用
  */
 class AddRecordPlanRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class AddRecordPlanRequest extends AbstractModel
     public $OrganizationId;
 
     /**
+     * @var integer 录像补录模式（0:不启用，1:启用），无该字段，默认不启用
+     */
+    public $RepairMode;
+
+    /**
      * @param string $PlanName 实时上云计划名称，仅支持中文、英文、数字、_、-，长度不超过32个字符，计划名称全局唯一，不能为空，不能重复
      * @param string $TemplateId 实时上云模板ID
      * @param LifeCycleData $LifeCycle 生命周期
@@ -80,6 +87,7 @@ class AddRecordPlanRequest extends AbstractModel
      * @param string $StreamType 码流类型，default:不指定码流类型，以设备默认推送类型为主， main:主码流，sub:子码流，其他根据设备能力集自定义，不填按默认类型处理，长度不能超过32个字节
      * @param array $Channels 添加录像的设备的通道信息，一次添加通道总数不超过5000个，包括组织目录下的通道数量
      * @param array $OrganizationId 添加组织目录下所有设备通道，Json数组，可以为空，通道总数量不超过5000个（包括Channel字段的数量）
+     * @param integer $RepairMode 录像补录模式（0:不启用，1:启用），无该字段，默认不启用
      */
     function __construct()
     {
@@ -126,6 +134,10 @@ class AddRecordPlanRequest extends AbstractModel
 
         if (array_key_exists("OrganizationId",$param) and $param["OrganizationId"] !== null) {
             $this->OrganizationId = $param["OrganizationId"];
+        }
+
+        if (array_key_exists("RepairMode",$param) and $param["RepairMode"] !== null) {
+            $this->RepairMode = $param["RepairMode"];
         }
     }
 }

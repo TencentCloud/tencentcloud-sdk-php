@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHost(string $Host) 设置服务中实例的ip，用来过滤服务。
  * @method boolean getOnlyExistHealthyInstance() 获取是否只查询存在健康实例的服务
  * @method void setOnlyExistHealthyInstance(boolean $OnlyExistHealthyInstance) 设置是否只查询存在健康实例的服务
+ * @method string getSyncToGlobalRegistry() 获取是否开启同步到全局注册中心	
+ * @method void setSyncToGlobalRegistry(string $SyncToGlobalRegistry) 设置是否开启同步到全局注册中心	
  */
 class DescribeGovernanceServicesRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class DescribeGovernanceServicesRequest extends AbstractModel
     public $OnlyExistHealthyInstance;
 
     /**
+     * @var string 是否开启同步到全局注册中心	
+     */
+    public $SyncToGlobalRegistry;
+
+    /**
      * @param string $Name 按照服务名过滤，精确匹配。
      * @param string $Namespace 按照命名空间过滤，精确匹配。
      * @param array $Metadatas 使用元数据过滤，目前只支持一组元组数，若传了多条，只会使用第一条元数据过滤。
@@ -104,6 +111,7 @@ class DescribeGovernanceServicesRequest extends AbstractModel
      * @param string $Business 服务所属业务。
      * @param string $Host 服务中实例的ip，用来过滤服务。
      * @param boolean $OnlyExistHealthyInstance 是否只查询存在健康实例的服务
+     * @param string $SyncToGlobalRegistry 是否开启同步到全局注册中心	
      */
     function __construct()
     {
@@ -161,6 +169,10 @@ class DescribeGovernanceServicesRequest extends AbstractModel
 
         if (array_key_exists("OnlyExistHealthyInstance",$param) and $param["OnlyExistHealthyInstance"] !== null) {
             $this->OnlyExistHealthyInstance = $param["OnlyExistHealthyInstance"];
+        }
+
+        if (array_key_exists("SyncToGlobalRegistry",$param) and $param["SyncToGlobalRegistry"] !== null) {
+            $this->SyncToGlobalRegistry = $param["SyncToGlobalRegistry"];
         }
     }
 }

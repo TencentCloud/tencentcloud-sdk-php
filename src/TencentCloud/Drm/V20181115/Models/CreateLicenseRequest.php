@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 该值为空时，默认授权所有track播放。
  * @method PlaybackPolicy getPlaybackPolicy() 获取播放策略参数。
  * @method void setPlaybackPolicy(PlaybackPolicy $PlaybackPolicy) 设置播放策略参数。
+ * @method string getWidevineSecurityLevel() 获取Widevine安全级别，接口取值[L1, L2, L3]。
+安全级别定义参考Widevine安全级别定义。
+ * @method void setWidevineSecurityLevel(string $WidevineSecurityLevel) 设置Widevine安全级别，接口取值[L1, L2, L3]。
+安全级别定义参考Widevine安全级别定义。
  */
 class CreateLicenseRequest extends AbstractModel
 {
@@ -62,12 +66,20 @@ class CreateLicenseRequest extends AbstractModel
     public $PlaybackPolicy;
 
     /**
+     * @var string Widevine安全级别，接口取值[L1, L2, L3]。
+安全级别定义参考Widevine安全级别定义。
+     */
+    public $WidevineSecurityLevel;
+
+    /**
      * @param string $DrmType DRM方案类型，接口取值：WIDEVINE，FAIRPLAY。
      * @param string $LicenseRequest Base64编码的终端设备License Request数据。
      * @param string $ContentType 内容类型，接口取值：VodVideo,LiveVideo。
      * @param array $Tracks 授权播放的Track列表。
 该值为空时，默认授权所有track播放。
      * @param PlaybackPolicy $PlaybackPolicy 播放策略参数。
+     * @param string $WidevineSecurityLevel Widevine安全级别，接口取值[L1, L2, L3]。
+安全级别定义参考Widevine安全级别定义。
      */
     function __construct()
     {
@@ -101,6 +113,10 @@ class CreateLicenseRequest extends AbstractModel
         if (array_key_exists("PlaybackPolicy",$param) and $param["PlaybackPolicy"] !== null) {
             $this->PlaybackPolicy = new PlaybackPolicy();
             $this->PlaybackPolicy->deserialize($param["PlaybackPolicy"]);
+        }
+
+        if (array_key_exists("WidevineSecurityLevel",$param) and $param["WidevineSecurityLevel"] !== null) {
+            $this->WidevineSecurityLevel = $param["WidevineSecurityLevel"];
         }
     }
 }

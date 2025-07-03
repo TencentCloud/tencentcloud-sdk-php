@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
 
  * @method string getErrorMessage() 获取企业批量注册的错误信息，例如：企业三要素不通过	
  * @method void setErrorMessage(string $ErrorMessage) 设置企业批量注册的错误信息，例如：企业三要素不通过	
+ * @method string getSubTaskId() 获取企业批量注册的唯一 Id， 此 Id 可以用在[创建企业批量认证链接-单链接](https://qian.tencent.com/developers/companyApis/organizations/CreateBatchOrganizationAuthorizationUrl)。
+ * @method void setSubTaskId(string $SubTaskId) 设置企业批量注册的唯一 Id， 此 Id 可以用在[创建企业批量认证链接-单链接](https://qian.tencent.com/developers/companyApis/organizations/CreateBatchOrganizationAuthorizationUrl)。
  */
 class OrganizationAuthUrl extends AbstractModel
 {
@@ -62,6 +64,11 @@ class OrganizationAuthUrl extends AbstractModel
     public $ErrorMessage;
 
     /**
+     * @var string 企业批量注册的唯一 Id， 此 Id 可以用在[创建企业批量认证链接-单链接](https://qian.tencent.com/developers/companyApis/organizations/CreateBatchOrganizationAuthorizationUrl)。
+     */
+    public $SubTaskId;
+
+    /**
      * @param string $AuthUrl 企业批量注册链接，根据Endpoint的不同设置，返回不同的链接地址。失效时间：7天
 跳转链接, 链接的有效期根据企业,员工状态和终端等有区别, 可以参考下表
 <table> <thead> <tr> <th>Endpoint</th> <th>示例</th> <th>链接有效期限</th> </tr> </thead>  <tbody>
@@ -72,6 +79,7 @@ class OrganizationAuthUrl extends AbstractModel
 `1.创建的链接应避免被转义，如：&被转义为\u0026；如使用Postman请求后，请选择响应类型为 JSON，否则链接将被转义`
 
      * @param string $ErrorMessage 企业批量注册的错误信息，例如：企业三要素不通过	
+     * @param string $SubTaskId 企业批量注册的唯一 Id， 此 Id 可以用在[创建企业批量认证链接-单链接](https://qian.tencent.com/developers/companyApis/organizations/CreateBatchOrganizationAuthorizationUrl)。
      */
     function __construct()
     {
@@ -92,6 +100,10 @@ class OrganizationAuthUrl extends AbstractModel
 
         if (array_key_exists("ErrorMessage",$param) and $param["ErrorMessage"] !== null) {
             $this->ErrorMessage = $param["ErrorMessage"];
+        }
+
+        if (array_key_exists("SubTaskId",$param) and $param["SubTaskId"] !== null) {
+            $this->SubTaskId = $param["SubTaskId"];
         }
     }
 }

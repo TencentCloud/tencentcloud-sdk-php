@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuleTemplateIds(array $RuleTemplateIds) 设置规则模板ID。
  * @method array getRuleTemplateNames() 获取规则模板名称。
  * @method void setRuleTemplateNames(array $RuleTemplateNames) 设置规则模板名称。
- * @method integer getLimit() 获取单次请求返回的数量。默认值20。
- * @method void setLimit(integer $Limit) 设置单次请求返回的数量。默认值20。
+ * @method integer getLimit() 获取单次请求返回的数量。默认值20，最大值为1000。
+ * @method void setLimit(integer $Limit) 设置单次请求返回的数量。默认值20，最大值为1000。
  * @method integer getOffset() 获取偏移量，默认值为 0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认值为 0。
  * @method integer getAlarmLevel() 获取告警等级。1-低风险，2-中风险，3-高风险。
@@ -46,7 +46,7 @@ class DescribeAuditRuleTemplatesRequest extends AbstractModel
     public $RuleTemplateNames;
 
     /**
-     * @var integer 单次请求返回的数量。默认值20。
+     * @var integer 单次请求返回的数量。默认值20，最大值为1000。
      */
     public $Limit;
 
@@ -68,7 +68,7 @@ class DescribeAuditRuleTemplatesRequest extends AbstractModel
     /**
      * @param array $RuleTemplateIds 规则模板ID。
      * @param array $RuleTemplateNames 规则模板名称。
-     * @param integer $Limit 单次请求返回的数量。默认值20。
+     * @param integer $Limit 单次请求返回的数量。默认值20，最大值为1000。
      * @param integer $Offset 偏移量，默认值为 0。
      * @param integer $AlarmLevel 告警等级。1-低风险，2-中风险，3-高风险。
      * @param integer $AlarmPolicy 告警策略。0-不告警，1-告警。

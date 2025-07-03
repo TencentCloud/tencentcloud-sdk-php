@@ -31,7 +31,6 @@ use TencentCloud\Batch\V20170312\Models as Models;
 
 此接口会将加入到计算环境中的实例重设UserData和重装操作系统。
  * @method Models\CreateComputeEnvResponse CreateComputeEnv(Models\CreateComputeEnvRequest $req) 用于创建计算环境
- * @method Models\CreateCpmComputeEnvResponse CreateCpmComputeEnv(Models\CreateCpmComputeEnvRequest $req) 创建黑石计算环境
  * @method Models\CreateTaskTemplateResponse CreateTaskTemplate(Models\CreateTaskTemplateRequest $req) 用于创建任务模板
  * @method Models\DeleteComputeEnvResponse DeleteComputeEnv(Models\DeleteComputeEnvRequest $req) 用于删除计算环境
  * @method Models\DeleteJobResponse DeleteJob(Models\DeleteJobRequest $req) 用于删除作业记录。
@@ -44,7 +43,6 @@ use TencentCloud\Batch\V20170312\Models as Models;
  * @method Models\DescribeComputeEnvCreateInfoResponse DescribeComputeEnvCreateInfo(Models\DescribeComputeEnvCreateInfoRequest $req) 查看计算环境的创建信息。
  * @method Models\DescribeComputeEnvCreateInfosResponse DescribeComputeEnvCreateInfos(Models\DescribeComputeEnvCreateInfosRequest $req) 用于查看计算环境创建信息列表，包括名称、描述、类型、环境参数、通知及期望节点数等。
  * @method Models\DescribeComputeEnvsResponse DescribeComputeEnvs(Models\DescribeComputeEnvsRequest $req) 用于查看计算环境列表
- * @method Models\DescribeCpmOsInfoResponse DescribeCpmOsInfo(Models\DescribeCpmOsInfoRequest $req) 创建黑石计算环境时，查询批量计算环境支持的黑石操作系统信息
  * @method Models\DescribeCvmZoneInstanceConfigInfosResponse DescribeCvmZoneInstanceConfigInfos(Models\DescribeCvmZoneInstanceConfigInfosRequest $req) 获取批量计算可用区机型配置信息
  * @method Models\DescribeInstanceCategoriesResponse DescribeInstanceCategories(Models\DescribeInstanceCategoriesRequest $req) 目前对CVM现有实例族分类，每一类包含若干实例族。该接口用于查询实例分类信息。
  * @method Models\DescribeJobResponse DescribeJob(Models\DescribeJobRequest $req) 用于查看一个作业的详细信息，包括内部任务（Task）和依赖（Dependence）信息。
@@ -57,18 +55,18 @@ use TencentCloud\Batch\V20170312\Models as Models;
  * @method Models\ModifyComputeEnvResponse ModifyComputeEnv(Models\ModifyComputeEnvRequest $req) 用于修改计算环境属性
  * @method Models\ModifyTaskTemplateResponse ModifyTaskTemplate(Models\ModifyTaskTemplateRequest $req) 用于修改任务模板
  * @method Models\RetryJobsResponse RetryJobs(Models\RetryJobsRequest $req) 用于重试作业中失败的任务实例。
-当且仅当作业处于“FAILED”状态，支持重试操作。重试操作成功后，作业会按照“DAG”中指定的任务依赖关系，依次重试各个任务中失败的任务实例。任务实例的历史信息将被重置，如同首次运行一样，参与后续的调度和执行。
+仅当作业处于“FAILED”状态，支持重试操作。重试操作成功后，作业会按照有向无环图中指定的任务依赖关系，依次重试各个任务中失败的任务实例。任务实例的历史信息将被重置，如同首次运行一样，参与后续的调度和执行。
  * @method Models\SubmitJobResponse SubmitJob(Models\SubmitJobRequest $req) 用于提交一个作业
  * @method Models\TerminateComputeNodeResponse TerminateComputeNode(Models\TerminateComputeNodeRequest $req) 用于销毁计算节点。
 对于状态为CREATED、CREATION_FAILED、RUNNING和ABNORMAL的节点，允许销毁处理。
  * @method Models\TerminateComputeNodesResponse TerminateComputeNodes(Models\TerminateComputeNodesRequest $req) 用于批量销毁计算节点，不允许重复销毁同一个节点。
  * @method Models\TerminateJobResponse TerminateJob(Models\TerminateJobRequest $req) 用于终止作业。
 当作业处于“SUBMITTED”状态时，禁止终止操作；当作业处于“SUCCEED”状态时，终止操作不会生效。
-终止作业是一个异步过程。整个终止过程的耗时和任务总数成正比。终止的效果相当于所含的所有任务实例进行TerminateTaskInstance操作。具体效果和用法可参考TerminateTaskInstance。
+终止作业是一个异步过程。整个终止过程的耗时和任务总数成正比。终止的效果相当于所含的所有任务实例进行[TerminateTaskInstance](https://cloud.tencent.com/document/product/599/15908)操作。具体效果和用法可参考[TerminateTaskInstance](https://cloud.tencent.com/document/product/599/15908)。
  * @method Models\TerminateTaskInstanceResponse TerminateTaskInstance(Models\TerminateTaskInstanceRequest $req) 用于终止任务实例。
 对于状态已经为“SUCCEED”和“FAILED”的任务实例，不做处理。
 对于状态为“SUBMITTED”、“PENDING”、“RUNNABLE”的任务实例，状态将置为“FAILED”状态。
-对于状态为“STARTING”、“RUNNING”、“FAILED_INTERRUPTED”的任务实例，分区两种情况：如果未显示指定计算环境，会先销毁CVM服务器，然后将状态置为“FAILED”，具有一定耗时；如果指定了计算环境EnvId，任务实例状态置为“FAILED”，并重启执行该任务的CVM服务器，具有一定的耗时。
+对于状态为“STARTING”、“RUNNING”、“FAILED_INTERRUPTED”的任务实例，区分两种情况：如果未显示指定计算环境，会先销毁CVM服务器，然后将状态置为“FAILED”，具有一定耗时；如果指定了计算环境EnvId，任务实例状态置为“FAILED”，并重启执行该任务的CVM服务器，具有一定的耗时。
 对于状态为“FAILED_INTERRUPTED”的任务实例，终止操作实际成功之后，相关资源和配额才会释放。
  */
 

@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 云原生网关证书信息
  *
  * @method string getId() 获取网关证书ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(string $Id) 设置网关证书ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取网关证书名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置网关证书名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getBindDomains() 获取绑定域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBindDomains(array $BindDomains) 设置绑定域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCertSource() 获取证书来源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertSource(string $CertSource) 设置证书来源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCertId() 获取当前绑定的SSL证书ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertId(string $CertId) 设置当前绑定的SSL证书ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class GatewayCertificate extends AbstractModel
 {
     /**
      * @var string 网关证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var string 网关证书名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var array 绑定域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BindDomains;
 
     /**
      * @var string 证书来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CertSource;
 
     /**
      * @var string 当前绑定的SSL证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CertId;
 
     /**
      * @param string $Id 网关证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 网关证书名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $BindDomains 绑定域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CertSource 证书来源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CertId 当前绑定的SSL证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

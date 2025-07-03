@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 权重分配规则
  *
  * @method integer getLessThan() 获取划分上限
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLessThan(integer $LessThan) 设置划分上限
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWeight() 获取权重
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWeight(integer $Weight) 设置权重
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Rule extends AbstractModel
 {
     /**
      * @var integer 划分上限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LessThan;
 
     /**
      * @var integer 权重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Weight;
 
     /**
      * @param integer $LessThan 划分上限
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Weight 权重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

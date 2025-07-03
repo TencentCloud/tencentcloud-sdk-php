@@ -43,7 +43,6 @@ use TencentCloud\Tag\V20180813\Models as Models;
  * @method Models\DescribeTagValuesSeqResponse DescribeTagValuesSeq(Models\DescribeTagValuesSeqRequest $req) 用于查询已建立的标签列表中的标签值。
  * @method Models\DescribeTagsResponse DescribeTags(Models\DescribeTagsRequest $req) 用于查询已建立的标签列表。
  * @method Models\DescribeTagsSeqResponse DescribeTagsSeq(Models\DescribeTagsSeqRequest $req) 用于查询已建立的标签列表。
-
  * @method Models\DetachResourcesTagResponse DetachResourcesTag(Models\DetachResourcesTagRequest $req) 解绑多个资源关联的某个标签
  * @method Models\GetResourcesResponse GetResources(Models\GetResourcesRequest $req) 查询绑定了标签的资源列表。
  * @method Models\GetTagKeysResponse GetTagKeys(Models\GetTagKeysRequest $req) 查询标签键列表。

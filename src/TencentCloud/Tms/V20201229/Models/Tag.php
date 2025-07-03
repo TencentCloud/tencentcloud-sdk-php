@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 该字段用于返回审核结果明细字段的标签及分数
  *
  * @method string getKeyword() 获取该字段用于返回命中的关键词
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeyword(string $Keyword) 设置该字段用于返回命中的关键词
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubLabel() 获取该字段用于返回子标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubLabel(string $SubLabel) 设置该字段用于返回子标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScore() 获取该字段用于返回子标签对应的分数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScore(integer $Score) 设置该字段用于返回子标签对应的分数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Tag extends AbstractModel
 {
     /**
      * @var string 该字段用于返回命中的关键词
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Keyword;
 
     /**
      * @var string 该字段用于返回子标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubLabel;
 
     /**
      * @var integer 该字段用于返回子标签对应的分数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Score;
 
     /**
      * @param string $Keyword 该字段用于返回命中的关键词
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubLabel 该字段用于返回子标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Score 该字段用于返回子标签对应的分数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

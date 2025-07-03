@@ -20,27 +20,27 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBSecurityGroups请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getInstanceGroupId() 获取实例组ID
- * @method void setInstanceGroupId(string $InstanceGroupId) 设置实例组ID
+ * @method string getInstanceId() 获取实例ID（InstanceId与InstanceGroupId必须任选一个传入）
+ * @method void setInstanceId(string $InstanceId) 设置实例ID（InstanceId与InstanceGroupId必须任选一个传入）
+ * @method string getInstanceGroupId() 获取实例组ID（InstanceId与InstanceGroupId必须任选一个传入）
+ * @method void setInstanceGroupId(string $InstanceGroupId) 设置实例组ID（InstanceId与InstanceGroupId必须任选一个传入）
  */
 class DescribeDBSecurityGroupsRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 实例ID（InstanceId与InstanceGroupId必须任选一个传入）
      * @deprecated
      */
     public $InstanceId;
 
     /**
-     * @var string 实例组ID
+     * @var string 实例组ID（InstanceId与InstanceGroupId必须任选一个传入）
      */
     public $InstanceGroupId;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $InstanceGroupId 实例组ID
+     * @param string $InstanceId 实例ID（InstanceId与InstanceGroupId必须任选一个传入）
+     * @param string $InstanceGroupId 实例组ID（InstanceId与InstanceGroupId必须任选一个传入）
      */
     function __construct()
     {

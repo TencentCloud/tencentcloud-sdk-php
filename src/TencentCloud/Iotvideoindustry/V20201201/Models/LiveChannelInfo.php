@@ -21,93 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * 频道信息
  *
  * @method string getLiveChannelId() 获取频道ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLiveChannelId(string $LiveChannelId) 设置频道ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLiveChannelName() 获取频道名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLiveChannelName(string $LiveChannelName) 设置频道名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLiveChannelType() 获取频道类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLiveChannelType(integer $LiveChannelType) 设置频道类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLiveStatus() 获取通道直播状态：1: 未推流，2: 推流中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLiveStatus(integer $LiveStatus) 设置通道直播状态：1: 未推流，2: 推流中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPushStreamAddress() 获取推流地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPushStreamAddress(string $PushStreamAddress) 设置推流地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class LiveChannelInfo extends AbstractModel
 {
     /**
      * @var string 频道ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LiveChannelId;
 
     /**
      * @var string 频道名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LiveChannelName;
 
     /**
      * @var integer 频道类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LiveChannelType;
 
     /**
      * @var integer 通道直播状态：1: 未推流，2: 推流中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LiveStatus;
 
     /**
      * @var string 推流地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PushStreamAddress;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @param string $LiveChannelId 频道ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LiveChannelName 频道名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LiveChannelType 频道类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LiveStatus 通道直播状态：1: 未推流，2: 推流中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PushStreamAddress 推流地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

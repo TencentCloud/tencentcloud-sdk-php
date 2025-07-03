@@ -21,153 +21,105 @@ use TencentCloud\Common\AbstractModel;
  * 创建MQTT 为Source的Data Hub Task参数
  *
  * @method string getTopics() 获取需要同步的MQTT Topic列表, CSV格式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopics(string $Topics) 设置需要同步的MQTT Topic列表, CSV格式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getCleanSession() 获取MQTT clean-session
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCleanSession(boolean $CleanSession) 设置MQTT clean-session
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResource() 获取MQTT instance-id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResource(string $Resource) 设置MQTT instance-id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIp() 获取MQTT实例VIP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIp(string $Ip) 设置MQTT实例VIP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPort() 获取MQTT VIP 端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPort(integer $Port) 设置MQTT VIP 端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserName() 获取MQTT实例用户名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserName(string $UserName) 设置MQTT实例用户名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPassword() 获取MQTT实例内账户密码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPassword(string $Password) 设置MQTT实例内账户密码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getQos() 获取QoS
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQos(integer $Qos) 设置QoS
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxTasks() 获取tasks.max 订阅Topic的并发Task个数, 默认为1; 当设置大于1时, 使用Shared Subscription
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxTasks(integer $MaxTasks) 设置tasks.max 订阅Topic的并发Task个数, 默认为1; 当设置大于1时, 使用Shared Subscription
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getServiceVip() 获取MQTT 实例的Service VIP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceVip(string $ServiceVip) 设置MQTT 实例的Service VIP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUniqVpcId() 获取MQTT实例的VPC ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUniqVpcId(string $UniqVpcId) 设置MQTT实例的VPC ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getSelfBuilt() 获取是否为自建集群, MQTT只支持非自建集群
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSelfBuilt(boolean $SelfBuilt) 设置是否为自建集群, MQTT只支持非自建集群
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MqttParam extends AbstractModel
 {
     /**
      * @var string 需要同步的MQTT Topic列表, CSV格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Topics;
 
     /**
      * @var boolean MQTT clean-session
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CleanSession;
 
     /**
      * @var string MQTT instance-id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Resource;
 
     /**
      * @var string MQTT实例VIP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ip;
 
     /**
      * @var integer MQTT VIP 端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Port;
 
     /**
      * @var string MQTT实例用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserName;
 
     /**
      * @var string MQTT实例内账户密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Password;
 
     /**
      * @var integer QoS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Qos;
 
     /**
      * @var integer tasks.max 订阅Topic的并发Task个数, 默认为1; 当设置大于1时, 使用Shared Subscription
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxTasks;
 
     /**
      * @var string MQTT 实例的Service VIP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceVip;
 
     /**
      * @var string MQTT实例的VPC ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UniqVpcId;
 
     /**
      * @var boolean 是否为自建集群, MQTT只支持非自建集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SelfBuilt;
 
     /**
      * @param string $Topics 需要同步的MQTT Topic列表, CSV格式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $CleanSession MQTT clean-session
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Resource MQTT instance-id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Ip MQTT实例VIP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Port MQTT VIP 端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserName MQTT实例用户名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Password MQTT实例内账户密码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Qos QoS
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxTasks tasks.max 订阅Topic的并发Task个数, 默认为1; 当设置大于1时, 使用Shared Subscription
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceVip MQTT 实例的Service VIP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UniqVpcId MQTT实例的VPC ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $SelfBuilt 是否为自建集群, MQTT只支持非自建集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

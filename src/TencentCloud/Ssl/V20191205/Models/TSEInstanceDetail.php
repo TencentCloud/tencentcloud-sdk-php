@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * tse实例详情
  *
  * @method string getGatewayId() 获取网关ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGatewayId(string $GatewayId) 设置网关ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGatewayName() 获取网关名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGatewayName(string $GatewayName) 设置网关名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCertificateList() 获取网关证书列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertificateList(array $CertificateList) 设置网关证书列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TSEInstanceDetail extends AbstractModel
 {
     /**
      * @var string 网关ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GatewayId;
 
     /**
      * @var string 网关名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GatewayName;
 
     /**
      * @var array 网关证书列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CertificateList;
 
     /**
      * @param string $GatewayId 网关ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GatewayName 网关名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CertificateList 网关证书列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

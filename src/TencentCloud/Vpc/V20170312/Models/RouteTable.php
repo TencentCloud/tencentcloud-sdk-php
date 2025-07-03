@@ -37,9 +37,7 @@ use TencentCloud\Common\AbstractModel;
  * @method array getTagSet() 获取标签键值对。
  * @method void setTagSet(array $TagSet) 设置标签键值对。
  * @method array getLocalCidrForCcn() 获取local路由是否发布云联网。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocalCidrForCcn(array $LocalCidrForCcn) 设置local路由是否发布云联网。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RouteTable extends AbstractModel
 {
@@ -85,7 +83,6 @@ class RouteTable extends AbstractModel
 
     /**
      * @var array local路由是否发布云联网。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LocalCidrForCcn;
 
@@ -99,7 +96,6 @@ class RouteTable extends AbstractModel
      * @param string $CreatedTime 创建时间。
      * @param array $TagSet 标签键值对。
      * @param array $LocalCidrForCcn local路由是否发布云联网。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

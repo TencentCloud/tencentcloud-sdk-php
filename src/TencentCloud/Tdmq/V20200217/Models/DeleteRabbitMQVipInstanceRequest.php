@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteRabbitMQVipInstance请求参数结构体
  *
- * @method string getInstanceId() 获取实例Id
- * @method void setInstanceId(string $InstanceId) 设置实例Id
+ * @method string getInstanceId() 获取实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
  * @method boolean getIsIntl() 获取是否国际站请求，默认 false
  * @method void setIsIntl(boolean $IsIntl) 设置是否国际站请求，默认 false
  */
 class DeleteRabbitMQVipInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 实例Id
+     * @var string 实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
      */
     public $InstanceId;
 
@@ -38,7 +38,7 @@ class DeleteRabbitMQVipInstanceRequest extends AbstractModel
     public $IsIntl;
 
     /**
-     * @param string $InstanceId 实例Id
+     * @param string $InstanceId 实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
      * @param boolean $IsIntl 是否国际站请求，默认 false
      */
     function __construct()

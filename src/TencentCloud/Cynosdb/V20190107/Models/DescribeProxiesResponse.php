@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTotalCount() 获取数据库代理组数
  * @method void setTotalCount(integer $TotalCount) 设置数据库代理组数
  * @method array getProxyGroupInfos() 获取数据库代理组列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProxyGroupInfos(array $ProxyGroupInfos) 设置数据库代理组列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getProxyNodeInfos() 获取数据库代理节点
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProxyNodeInfos(array $ProxyNodeInfos) 设置数据库代理节点
@@ -42,7 +40,6 @@ class DescribeProxiesResponse extends AbstractModel
 
     /**
      * @var array 数据库代理组列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProxyGroupInfos;
 
@@ -60,7 +57,6 @@ class DescribeProxiesResponse extends AbstractModel
     /**
      * @param integer $TotalCount 数据库代理组数
      * @param array $ProxyGroupInfos 数据库代理组列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ProxyNodeInfos 数据库代理节点
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。

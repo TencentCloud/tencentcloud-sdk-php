@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 边缘容器参数描述
  *
  * @method string getName() 获取参数名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置参数名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取参数类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置参数类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUsage() 获取参数描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsage(string $Usage) 设置参数描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDefault() 获取参数默认值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefault(string $Default) 设置参数默认值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConstraint() 获取参数可选范围（目前包含range和in两种，"[]"代表range，如"[1, 5]"表示参数必须>=1且 <=5, "()"代表in， 如"('aa', 'bb')"表示参数只能为字符串'aa'或者'bb'，该参数为空表示不校验）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConstraint(string $Constraint) 设置参数可选范围（目前包含range和in两种，"[]"代表range，如"[1, 5]"表示参数必须>=1且 <=5, "()"代表in， 如"('aa', 'bb')"表示参数只能为字符串'aa'或者'bb'，该参数为空表示不校验）
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class EdgeArgsFlag extends AbstractModel
 {
     /**
      * @var string 参数名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 参数类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 参数描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Usage;
 
     /**
      * @var string 参数默认值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Default;
 
     /**
      * @var string 参数可选范围（目前包含range和in两种，"[]"代表range，如"[1, 5]"表示参数必须>=1且 <=5, "()"代表in， 如"('aa', 'bb')"表示参数只能为字符串'aa'或者'bb'，该参数为空表示不校验）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Constraint;
 
     /**
      * @param string $Name 参数名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 参数类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Usage 参数描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Default 参数默认值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Constraint 参数可选范围（目前包含range和in两种，"[]"代表range，如"[1, 5]"表示参数必须>=1且 <=5, "()"代表in， 如"('aa', 'bb')"表示参数只能为字符串'aa'或者'bb'，该参数为空表示不校验）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

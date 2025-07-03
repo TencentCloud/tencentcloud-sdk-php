@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 资源信息
  *
  * @method string getSpecName() 获取资源名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpecName(string $SpecName) 设置资源名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCount() 获取资源数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCount(integer $Count) 设置资源数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method CBSSpecInfo getDiskSpec() 获取磁盘信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskSpec(CBSSpecInfo $DiskSpec) 设置磁盘信息
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getType() 获取资源类型，DATA
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(string $Type) 设置资源类型，DATA
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getType() 获取节点类型，cn 或dn
+ * @method void setType(string $Type) 设置节点类型，cn 或dn
  */
 class ResourceInfo extends AbstractModel
 {
     /**
      * @var string 资源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SpecName;
 
     /**
      * @var integer 资源数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Count;
 
     /**
      * @var CBSSpecInfo 磁盘信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskSpec;
 
     /**
-     * @var string 资源类型，DATA
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 节点类型，cn 或dn
      */
     public $Type;
 
     /**
      * @param string $SpecName 资源名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Count 资源数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CBSSpecInfo $DiskSpec 磁盘信息
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Type 资源类型，DATA
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Type 节点类型，cn 或dn
      */
     function __construct()
     {

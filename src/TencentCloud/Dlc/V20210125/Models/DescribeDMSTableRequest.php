@@ -26,14 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSchemaName(string $SchemaName) 设置数据库schema名称
  * @method string getName() 获取表名称
  * @method void setName(string $Name) 设置表名称
- * @method string getCatalog() 获取数据目录
- * @method void setCatalog(string $Catalog) 设置数据目录
+ * @method string getCatalog() 获取catalog类型
+ * @method void setCatalog(string $Catalog) 设置catalog类型
  * @method string getKeyword() 获取查询关键词
  * @method void setKeyword(string $Keyword) 设置查询关键词
- * @method string getPattern() 获取查询模式
- * @method void setPattern(string $Pattern) 设置查询模式
+ * @method string getPattern() 获取查询模式，只支持填*
+ * @method void setPattern(string $Pattern) 设置查询模式，只支持填*
  * @method string getType() 获取表类型
  * @method void setType(string $Type) 设置表类型
+ * @method string getDatasourceConnectionName() 获取数据源连接名
+ * @method void setDatasourceConnectionName(string $DatasourceConnectionName) 设置数据源连接名
  */
 class DescribeDMSTableRequest extends AbstractModel
 {
@@ -53,7 +55,7 @@ class DescribeDMSTableRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string 数据目录
+     * @var string catalog类型
      */
     public $Catalog;
 
@@ -63,7 +65,7 @@ class DescribeDMSTableRequest extends AbstractModel
     public $Keyword;
 
     /**
-     * @var string 查询模式
+     * @var string 查询模式，只支持填*
      */
     public $Pattern;
 
@@ -73,13 +75,19 @@ class DescribeDMSTableRequest extends AbstractModel
     public $Type;
 
     /**
+     * @var string 数据源连接名
+     */
+    public $DatasourceConnectionName;
+
+    /**
      * @param string $DbName 数据库名称
      * @param string $SchemaName 数据库schema名称
      * @param string $Name 表名称
-     * @param string $Catalog 数据目录
+     * @param string $Catalog catalog类型
      * @param string $Keyword 查询关键词
-     * @param string $Pattern 查询模式
+     * @param string $Pattern 查询模式，只支持填*
      * @param string $Type 表类型
+     * @param string $DatasourceConnectionName 数据源连接名
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class DescribeDMSTableRequest extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("DatasourceConnectionName",$param) and $param["DatasourceConnectionName"] !== null) {
+            $this->DatasourceConnectionName = $param["DatasourceConnectionName"];
         }
     }
 }

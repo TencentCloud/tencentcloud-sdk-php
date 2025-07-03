@@ -18,36 +18,84 @@ namespace TencentCloud\Ssl\V20191205\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 更新记录详情列表
+ * 更新记录详情
  *
- * @method string getResourceType() 获取部署资源类型
- * @method void setResourceType(string $ResourceType) 设置部署资源类型
- * @method array getList() 获取部署资源详情列表
- * @method void setList(array $List) 设置部署资源详情列表
- * @method integer getTotalCount() 获取该部署资源总数
- * @method void setTotalCount(integer $TotalCount) 设置该部署资源总数
+ * @method string getResourceType() 获取新旧证书更新云资源的云资源类型：
+- clb
+- cdn
+- ddos
+- live
+- vod
+- waf
+- apigateway
+- teo
+- tke
+- cos
+- tse
+- tcb
+ * @method void setResourceType(string $ResourceType) 设置新旧证书更新云资源的云资源类型：
+- clb
+- cdn
+- ddos
+- live
+- vod
+- waf
+- apigateway
+- teo
+- tke
+- cos
+- tse
+- tcb
+ * @method array getList() 获取该云资源更新详情
+ * @method void setList(array $List) 设置该云资源更新详情
+ * @method integer getTotalCount() 获取该云资源更新资源总数
+ * @method void setTotalCount(integer $TotalCount) 设置该云资源更新资源总数
  */
 class UpdateRecordDetails extends AbstractModel
 {
     /**
-     * @var string 部署资源类型
+     * @var string 新旧证书更新云资源的云资源类型：
+- clb
+- cdn
+- ddos
+- live
+- vod
+- waf
+- apigateway
+- teo
+- tke
+- cos
+- tse
+- tcb
      */
     public $ResourceType;
 
     /**
-     * @var array 部署资源详情列表
+     * @var array 该云资源更新详情
      */
     public $List;
 
     /**
-     * @var integer 该部署资源总数
+     * @var integer 该云资源更新资源总数
      */
     public $TotalCount;
 
     /**
-     * @param string $ResourceType 部署资源类型
-     * @param array $List 部署资源详情列表
-     * @param integer $TotalCount 该部署资源总数
+     * @param string $ResourceType 新旧证书更新云资源的云资源类型：
+- clb
+- cdn
+- ddos
+- live
+- vod
+- waf
+- apigateway
+- teo
+- tke
+- cos
+- tse
+- tcb
+     * @param array $List 该云资源更新详情
+     * @param integer $TotalCount 该云资源更新资源总数
      */
     function __construct()
     {

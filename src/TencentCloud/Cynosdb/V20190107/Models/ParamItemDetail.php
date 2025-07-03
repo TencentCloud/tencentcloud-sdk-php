@@ -41,17 +41,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDescription() 获取参数描述
  * @method void setDescription(string $Description) 设置参数描述
  * @method boolean getIsFunc() 获取类型是否为公式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsFunc(boolean $IsFunc) 设置类型是否为公式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFunc() 获取参数配置公式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFunc(string $Func) 设置参数配置公式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFuncPattern() 获取支持公式的参数的默认公式样式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFuncPattern(string $FuncPattern) 设置支持公式的参数的默认公式样式
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ParamItemDetail extends AbstractModel
 {
@@ -107,19 +101,16 @@ class ParamItemDetail extends AbstractModel
 
     /**
      * @var boolean 类型是否为公式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsFunc;
 
     /**
      * @var string 参数配置公式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Func;
 
     /**
      * @var string 支持公式的参数的默认公式样式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FuncPattern;
 
@@ -135,11 +126,8 @@ class ParamItemDetail extends AbstractModel
      * @param string $ParamType 参数类型：integer，enum，float，string，func
      * @param string $Description 参数描述
      * @param boolean $IsFunc 类型是否为公式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Func 参数配置公式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FuncPattern 支持公式的参数的默认公式样式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

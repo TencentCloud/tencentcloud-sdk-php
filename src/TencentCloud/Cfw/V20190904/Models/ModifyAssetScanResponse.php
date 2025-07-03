@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * ModifyAssetScan返回参数结构体
  *
  * @method string getReturnMsg() 获取接口返回信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReturnMsg(string $ReturnMsg) 设置接口返回信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getReturnCode() 获取接口返回错误码，0请求成功  非0失败
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReturnCode(integer $ReturnCode) 设置接口返回错误码，0请求成功  非0失败
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取状态值 0：成功，1 执行扫描中,其他：失败
  * @method void setStatus(integer $Status) 设置状态值 0：成功，1 执行扫描中,其他：失败
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -37,13 +33,11 @@ class ModifyAssetScanResponse extends AbstractModel
 {
     /**
      * @var string 接口返回信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReturnMsg;
 
     /**
      * @var integer 接口返回错误码，0请求成功  非0失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReturnCode;
 
@@ -59,9 +53,7 @@ class ModifyAssetScanResponse extends AbstractModel
 
     /**
      * @param string $ReturnMsg 接口返回信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ReturnCode 接口返回错误码，0请求成功  非0失败
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 状态值 0：成功，1 执行扫描中,其他：失败
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

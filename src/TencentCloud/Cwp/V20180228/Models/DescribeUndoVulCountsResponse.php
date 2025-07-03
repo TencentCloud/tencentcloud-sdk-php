@@ -21,17 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * DescribeUndoVulCounts返回参数结构体
  *
  * @method integer getUndoVulCount() 获取未处理的漏洞数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUndoVulCount(integer $UndoVulCount) 设置未处理的漏洞数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUndoHostCount() 获取未处理的主机数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUndoHostCount(integer $UndoHostCount) 设置未处理的主机数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNotProfessionCount() 获取普通版主机数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNotProfessionCount(integer $NotProfessionCount) 设置普通版主机数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -39,19 +33,16 @@ class DescribeUndoVulCountsResponse extends AbstractModel
 {
     /**
      * @var integer 未处理的漏洞数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UndoVulCount;
 
     /**
      * @var integer 未处理的主机数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UndoHostCount;
 
     /**
      * @var integer 普通版主机数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NotProfessionCount;
 
@@ -62,11 +53,8 @@ class DescribeUndoVulCountsResponse extends AbstractModel
 
     /**
      * @param integer $UndoVulCount 未处理的漏洞数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UndoHostCount 未处理的主机数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NotProfessionCount 普通版主机数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

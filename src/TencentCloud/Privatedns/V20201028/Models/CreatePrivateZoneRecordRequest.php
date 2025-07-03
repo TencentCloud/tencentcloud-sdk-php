@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMX(integer $MX) 设置MX优先级：记录类型为MX时必填。取值范围：5,10,15,20,30,40,50
  * @method integer getTTL() 获取记录缓存时间，数值越小生效越快，取值1-86400s, 默认 600
  * @method void setTTL(integer $TTL) 设置记录缓存时间，数值越小生效越快，取值1-86400s, 默认 600
+ * @method string getRemark() 获取备注
+ * @method void setRemark(string $Remark) 设置备注
  */
 class CreatePrivateZoneRecordRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreatePrivateZoneRecordRequest extends AbstractModel
     public $TTL;
 
     /**
+     * @var string 备注
+     */
+    public $Remark;
+
+    /**
      * @param string $ZoneId 私有域ID
      * @param string $RecordType 记录类型，可选的记录类型为："A", "AAAA", "CNAME", "MX", "TXT", "PTR"
      * @param string $SubDomain 子域名，例如 "www", "m", "@"
@@ -80,6 +87,7 @@ class CreatePrivateZoneRecordRequest extends AbstractModel
      * @param integer $Weight 记录权重，值为1-100
      * @param integer $MX MX优先级：记录类型为MX时必填。取值范围：5,10,15,20,30,40,50
      * @param integer $TTL 记录缓存时间，数值越小生效越快，取值1-86400s, 默认 600
+     * @param string $Remark 备注
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class CreatePrivateZoneRecordRequest extends AbstractModel
 
         if (array_key_exists("TTL",$param) and $param["TTL"] !== null) {
             $this->TTL = $param["TTL"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
         }
     }
 }

@@ -31,17 +31,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCreateTime() 获取创建白名单时间。
  * @method void setCreateTime(string $CreateTime) 设置创建白名单时间。
  * @method string getUuid() 获取白名单所属机器。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUuid(string $Uuid) 设置白名单所属机器。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsGlobal() 获取白名单是否全局
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsGlobal(boolean $IsGlobal) 设置白名单是否全局
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getQuuids() 获取白名单所属机器列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQuuids(array $Quuids) 设置白名单所属机器列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BanWhiteList extends AbstractModel
 {
@@ -72,19 +66,16 @@ class BanWhiteList extends AbstractModel
 
     /**
      * @var string 白名单所属机器。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uuid;
 
     /**
      * @var boolean 白名单是否全局
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsGlobal;
 
     /**
      * @var array 白名单所属机器列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Quuids;
 
@@ -95,11 +86,8 @@ class BanWhiteList extends AbstractModel
      * @param string $ModifyTime 修改白名单时间。
      * @param string $CreateTime 创建白名单时间。
      * @param string $Uuid 白名单所属机器。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsGlobal 白名单是否全局
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Quuids 白名单所属机器列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

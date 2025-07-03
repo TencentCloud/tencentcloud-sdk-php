@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 当前步骤错误信息或者警告信息
  *
  * @method string getCode() 获取错误码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCode(string $Code) 设置错误码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMessage() 获取错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSolution() 获取解决方式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSolution(string $Solution) 设置解决方式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHelpDoc() 获取帮助文档
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHelpDoc(string $HelpDoc) 设置帮助文档
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSkipInfo() 获取当前步骤跳过信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSkipInfo(string $SkipInfo) 设置当前步骤跳过信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class StepTip extends AbstractModel
 {
     /**
      * @var string 错误码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Code;
 
     /**
      * @var string 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
     /**
      * @var string 解决方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Solution;
 
     /**
      * @var string 帮助文档
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HelpDoc;
 
     /**
      * @var string 当前步骤跳过信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SkipInfo;
 
     /**
      * @param string $Code 错误码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Solution 解决方式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HelpDoc 帮助文档
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SkipInfo 当前步骤跳过信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

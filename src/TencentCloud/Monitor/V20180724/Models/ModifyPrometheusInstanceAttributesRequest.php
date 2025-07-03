@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例 ID
  * @method string getInstanceName() 获取实例名称
  * @method void setInstanceName(string $InstanceName) 设置实例名称
- * @method integer getDataRetentionTime() 获取存储时长（取值为 15、30、45。此参数不适用于包年包月实例）
- * @method void setDataRetentionTime(integer $DataRetentionTime) 设置存储时长（取值为 15、30、45。此参数不适用于包年包月实例）
+ * @method integer getDataRetentionTime() 获取数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一
+ * @method void setDataRetentionTime(integer $DataRetentionTime) 设置数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一
  */
 class ModifyPrometheusInstanceAttributesRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class ModifyPrometheusInstanceAttributesRequest extends AbstractModel
     public $InstanceName;
 
     /**
-     * @var integer 存储时长（取值为 15、30、45。此参数不适用于包年包月实例）
+     * @var integer 数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一
      */
     public $DataRetentionTime;
 
     /**
      * @param string $InstanceId 实例 ID
      * @param string $InstanceName 实例名称
-     * @param integer $DataRetentionTime 存储时长（取值为 15、30、45。此参数不适用于包年包月实例）
+     * @param integer $DataRetentionTime 数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一
      */
     function __construct()
     {

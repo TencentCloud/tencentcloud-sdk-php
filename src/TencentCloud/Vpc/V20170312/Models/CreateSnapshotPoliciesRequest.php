@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getSnapshotPolicies() 获取快照策略详情。
  * @method void setSnapshotPolicies(array $SnapshotPolicies) 设置快照策略详情。
+ * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+ * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
  */
 class CreateSnapshotPoliciesRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class CreateSnapshotPoliciesRequest extends AbstractModel
     public $SnapshotPolicies;
 
     /**
+     * @var array 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     */
+    public $Tags;
+
+    /**
      * @param array $SnapshotPolicies 快照策略详情。
+     * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
      */
     function __construct()
     {
@@ -52,6 +60,15 @@ class CreateSnapshotPoliciesRequest extends AbstractModel
                 $obj = new SnapshotPolicy();
                 $obj->deserialize($value);
                 array_push($this->SnapshotPolicies, $obj);
+            }
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
             }
         }
     }

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getBizType() 获取该字段用于返回请求参数中的BizType参数
  * @method void setBizType(string $BizType) 设置该字段用于返回请求参数中的BizType参数
- * @method string getLabel() 获取该字段用于返回检测结果（DetailResults）中所对应的**优先级最高的恶意标签**，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型
- * @method void setLabel(string $Label) 设置该字段用于返回检测结果（DetailResults）中所对应的**优先级最高的恶意标签**，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型
+ * @method string getLabel() 获取该字段用于返回检测结果（DetailResults）中所对应的**优先级最高的恶意标签**，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告；以及其他令人反感、不安全或不适宜的内容类型
+ * @method void setLabel(string $Label) 设置该字段用于返回检测结果（DetailResults）中所对应的**优先级最高的恶意标签**，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告；以及其他令人反感、不安全或不适宜的内容类型
  * @method string getSuggestion() 获取该字段用于返回后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
  * @method void setSuggestion(string $Suggestion) 设置该字段用于返回后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
  * @method array getKeywords() 获取该字段用于返回当前标签（Label）下被检测文本命中的关键词信息，用于标注文本违规的具体原因（如：*加我微信*）。该参数可能会有多个返回值，代表命中的多个关键词；如返回值为空且Score不为空，则代表识别结果所对应的恶意标签（Label）是来自于语义模型判断的返回值
@@ -41,25 +41,19 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRiskDetails(array $RiskDetails) 设置该字段用于返回文本检测中存在违规风险的账号检测结果，主要包括违规风险类别和风险等级信息，具体内容可参阅对应数据结构（RiskDetails）的详细描述
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExtra() 获取该字段用于返回根据您的需求配置的额外附加信息（Extra），如未配置则默认返回值为空。<br>备注：不同客户或Biztype下返回信息不同，如需配置该字段请提交工单咨询或联系售后专员处理
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtra(string $Extra) 设置该字段用于返回根据您的需求配置的额外附加信息（Extra），如未配置则默认返回值为空。<br>备注：不同客户或Biztype下返回信息不同，如需配置该字段请提交工单咨询或联系售后专员处理
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDataId() 获取该字段用于返回检测对象对应请求参数中的DataId，与输入的DataId字段中的内容对应
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataId(string $DataId) 设置该字段用于返回检测对象对应请求参数中的DataId，与输入的DataId字段中的内容对应
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubLabel() 获取该字段用于返回当前标签（Label）下的二级标签。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubLabel(string $SubLabel) 设置该字段用于返回当前标签（Label）下的二级标签。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContextText() 获取该字段用于返回上下文关联文本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContextText(string $ContextText) 设置该字段用于返回上下文关联文本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method SentimentAnalysis getSentimentAnalysis() 获取情感分析结果
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSentimentAnalysis(SentimentAnalysis $SentimentAnalysis) 设置情感分析结果
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getHitType() 获取该字段用于标识本次审核决策归因，比如text_nlp_tianji标识是由nlp tianji模型给出的审核决策，text_keyword_public标识命中了业务的关键词库
+ * @method void setHitType(string $HitType) 设置该字段用于标识本次审核决策归因，比如text_nlp_tianji标识是由nlp tianji模型给出的审核决策，text_keyword_public标识命中了业务的关键词库
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -71,7 +65,7 @@ class TextModerationResponse extends AbstractModel
     public $BizType;
 
     /**
-     * @var string 该字段用于返回检测结果（DetailResults）中所对应的**优先级最高的恶意标签**，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型
+     * @var string 该字段用于返回检测结果（DetailResults）中所对应的**优先级最高的恶意标签**，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告；以及其他令人反感、不安全或不适宜的内容类型
      */
     public $Label;
 
@@ -105,25 +99,21 @@ class TextModerationResponse extends AbstractModel
 
     /**
      * @var string 该字段用于返回根据您的需求配置的额外附加信息（Extra），如未配置则默认返回值为空。<br>备注：不同客户或Biztype下返回信息不同，如需配置该字段请提交工单咨询或联系售后专员处理
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Extra;
 
     /**
      * @var string 该字段用于返回检测对象对应请求参数中的DataId，与输入的DataId字段中的内容对应
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataId;
 
     /**
      * @var string 该字段用于返回当前标签（Label）下的二级标签。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubLabel;
 
     /**
      * @var string 该字段用于返回上下文关联文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContextText;
 
@@ -134,13 +124,18 @@ class TextModerationResponse extends AbstractModel
     public $SentimentAnalysis;
 
     /**
+     * @var string 该字段用于标识本次审核决策归因，比如text_nlp_tianji标识是由nlp tianji模型给出的审核决策，text_keyword_public标识命中了业务的关键词库
+     */
+    public $HitType;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param string $BizType 该字段用于返回请求参数中的BizType参数
-     * @param string $Label 该字段用于返回检测结果（DetailResults）中所对应的**优先级最高的恶意标签**，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型
+     * @param string $Label 该字段用于返回检测结果（DetailResults）中所对应的**优先级最高的恶意标签**，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告；以及其他令人反感、不安全或不适宜的内容类型
      * @param string $Suggestion 该字段用于返回后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
      * @param array $Keywords 该字段用于返回当前标签（Label）下被检测文本命中的关键词信息，用于标注文本违规的具体原因（如：*加我微信*）。该参数可能会有多个返回值，代表命中的多个关键词；如返回值为空且Score不为空，则代表识别结果所对应的恶意标签（Label）是来自于语义模型判断的返回值
 注意：此字段可能返回 null，表示取不到有效值。
@@ -150,15 +145,12 @@ class TextModerationResponse extends AbstractModel
      * @param array $RiskDetails 该字段用于返回文本检测中存在违规风险的账号检测结果，主要包括违规风险类别和风险等级信息，具体内容可参阅对应数据结构（RiskDetails）的详细描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Extra 该字段用于返回根据您的需求配置的额外附加信息（Extra），如未配置则默认返回值为空。<br>备注：不同客户或Biztype下返回信息不同，如需配置该字段请提交工单咨询或联系售后专员处理
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataId 该字段用于返回检测对象对应请求参数中的DataId，与输入的DataId字段中的内容对应
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubLabel 该字段用于返回当前标签（Label）下的二级标签。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContextText 该字段用于返回上下文关联文本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SentimentAnalysis $SentimentAnalysis 情感分析结果
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $HitType 该字段用于标识本次审核决策归因，比如text_nlp_tianji标识是由nlp tianji模型给出的审核决策，text_keyword_public标识命中了业务的关键词库
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -231,6 +223,10 @@ class TextModerationResponse extends AbstractModel
         if (array_key_exists("SentimentAnalysis",$param) and $param["SentimentAnalysis"] !== null) {
             $this->SentimentAnalysis = new SentimentAnalysis();
             $this->SentimentAnalysis->deserialize($param["SentimentAnalysis"]);
+        }
+
+        if (array_key_exists("HitType",$param) and $param["HitType"] !== null) {
+            $this->HitType = $param["HitType"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

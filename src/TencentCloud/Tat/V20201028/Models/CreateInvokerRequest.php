@@ -20,66 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateInvoker请求参数结构体
  *
- * @method string getName() 获取执行器名称。
- * @method void setName(string $Name) 设置执行器名称。
- * @method string getType() 获取执行器类型，当前仅支持周期类型执行器，取值：`SCHEDULE` 。
- * @method void setType(string $Type) 设置执行器类型，当前仅支持周期类型执行器，取值：`SCHEDULE` 。
+ * @method string getName() 获取执行器名称。长度不超过 120 字符。
+ * @method void setName(string $Name) 设置执行器名称。长度不超过 120 字符。
+ * @method string getType() 获取执行器类型。
+
+可选取值（当前仅支持一种）：
+
+- `SCHEDULE`：周期类型执行器。
+ * @method void setType(string $Type) 设置执行器类型。
+
+可选取值（当前仅支持一种）：
+
+- `SCHEDULE`：周期类型执行器。
  * @method string getCommandId() 获取远程命令ID。
+
+可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
  * @method void setCommandId(string $CommandId) 设置远程命令ID。
+
+可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
  * @method array getInstanceIds() 获取触发器关联的实例ID。列表上限 100。
+
+可通过对应云产品的查询实例接口获取实例 ID。目前支持实例类型：CVM、Lighthouse、TAT 托管实例。
+
+实例需要安装 TAT 客户端, 且客户端为 Online 状态。可通过 [DescribeAutomationAgentStatus(查询客户端状态)](https://cloud.tencent.com/document/api/1340/52682) 接口查询客户端状态。
  * @method void setInstanceIds(array $InstanceIds) 设置触发器关联的实例ID。列表上限 100。
- * @method string getUsername() 获取命令执行用户。
- * @method void setUsername(string $Username) 设置命令执行用户。
- * @method string getParameters() 获取命令自定义参数。
- * @method void setParameters(string $Parameters) 设置命令自定义参数。
- * @method ScheduleSettings getScheduleSettings() 获取周期执行器设置，当创建周期执行器时，必须指定此参数。
- * @method void setScheduleSettings(ScheduleSettings $ScheduleSettings) 设置周期执行器设置，当创建周期执行器时，必须指定此参数。
+
+可通过对应云产品的查询实例接口获取实例 ID。目前支持实例类型：CVM、Lighthouse、TAT 托管实例。
+
+实例需要安装 TAT 客户端, 且客户端为 Online 状态。可通过 [DescribeAutomationAgentStatus(查询客户端状态)](https://cloud.tencent.com/document/api/1340/52682) 接口查询客户端状态。
+ * @method string getUsername() 获取命令执行用户。长度不超过 256 字符。
+ * @method void setUsername(string $Username) 设置命令执行用户。长度不超过 256 字符。
+ * @method string getParameters() 获取命令自定义参数。字段类型为 JSON encode string。
+
+仅在 CommandId 所指命令的 EnableParameter 为 true 时，才允许设置此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
+ * @method void setParameters(string $Parameters) 设置命令自定义参数。字段类型为 JSON encode string。
+
+仅在 CommandId 所指命令的 EnableParameter 为 true 时，才允许设置此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
+ * @method ScheduleSettings getScheduleSettings() 获取周期执行器设置。
+
+当执行器类型为 `SCHEDULE` 时，必须指定此参数。
+ * @method void setScheduleSettings(ScheduleSettings $ScheduleSettings) 设置周期执行器设置。
+
+当执行器类型为 `SCHEDULE` 时，必须指定此参数。
  */
 class CreateInvokerRequest extends AbstractModel
 {
     /**
-     * @var string 执行器名称。
+     * @var string 执行器名称。长度不超过 120 字符。
      */
     public $Name;
 
     /**
-     * @var string 执行器类型，当前仅支持周期类型执行器，取值：`SCHEDULE` 。
+     * @var string 执行器类型。
+
+可选取值（当前仅支持一种）：
+
+- `SCHEDULE`：周期类型执行器。
      */
     public $Type;
 
     /**
      * @var string 远程命令ID。
+
+可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
      */
     public $CommandId;
 
     /**
      * @var array 触发器关联的实例ID。列表上限 100。
+
+可通过对应云产品的查询实例接口获取实例 ID。目前支持实例类型：CVM、Lighthouse、TAT 托管实例。
+
+实例需要安装 TAT 客户端, 且客户端为 Online 状态。可通过 [DescribeAutomationAgentStatus(查询客户端状态)](https://cloud.tencent.com/document/api/1340/52682) 接口查询客户端状态。
      */
     public $InstanceIds;
 
     /**
-     * @var string 命令执行用户。
+     * @var string 命令执行用户。长度不超过 256 字符。
      */
     public $Username;
 
     /**
-     * @var string 命令自定义参数。
+     * @var string 命令自定义参数。字段类型为 JSON encode string。
+
+仅在 CommandId 所指命令的 EnableParameter 为 true 时，才允许设置此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
      */
     public $Parameters;
 
     /**
-     * @var ScheduleSettings 周期执行器设置，当创建周期执行器时，必须指定此参数。
+     * @var ScheduleSettings 周期执行器设置。
+
+当执行器类型为 `SCHEDULE` 时，必须指定此参数。
      */
     public $ScheduleSettings;
 
     /**
-     * @param string $Name 执行器名称。
-     * @param string $Type 执行器类型，当前仅支持周期类型执行器，取值：`SCHEDULE` 。
+     * @param string $Name 执行器名称。长度不超过 120 字符。
+     * @param string $Type 执行器类型。
+
+可选取值（当前仅支持一种）：
+
+- `SCHEDULE`：周期类型执行器。
      * @param string $CommandId 远程命令ID。
+
+可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取。
      * @param array $InstanceIds 触发器关联的实例ID。列表上限 100。
-     * @param string $Username 命令执行用户。
-     * @param string $Parameters 命令自定义参数。
-     * @param ScheduleSettings $ScheduleSettings 周期执行器设置，当创建周期执行器时，必须指定此参数。
+
+可通过对应云产品的查询实例接口获取实例 ID。目前支持实例类型：CVM、Lighthouse、TAT 托管实例。
+
+实例需要安装 TAT 客户端, 且客户端为 Online 状态。可通过 [DescribeAutomationAgentStatus(查询客户端状态)](https://cloud.tencent.com/document/api/1340/52682) 接口查询客户端状态。
+     * @param string $Username 命令执行用户。长度不超过 256 字符。
+     * @param string $Parameters 命令自定义参数。字段类型为 JSON encode string。
+
+仅在 CommandId 所指命令的 EnableParameter 为 true 时，才允许设置此参数。可通过 [DescribeCommands(查询命令详情)](https://cloud.tencent.com/document/api/1340/52681) 接口获取命令的 EnableParameter 设置。
+     * @param ScheduleSettings $ScheduleSettings 周期执行器设置。
+
+当执行器类型为 `SCHEDULE` 时，必须指定此参数。
      */
     function __construct()
     {

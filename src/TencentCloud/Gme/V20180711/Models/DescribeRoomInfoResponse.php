@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * DescribeRoomInfo返回参数结构体
  *
  * @method integer getResult() 获取操作结果, 0成功, 非0失败
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResult(integer $Result) 设置操作结果, 0成功, 非0失败
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRoomUsers() 获取房间用户信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoomUsers(array $RoomUsers) 设置房间用户信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,13 +31,11 @@ class DescribeRoomInfoResponse extends AbstractModel
 {
     /**
      * @var integer 操作结果, 0成功, 非0失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Result;
 
     /**
      * @var array 房间用户信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoomUsers;
 
@@ -52,9 +46,7 @@ class DescribeRoomInfoResponse extends AbstractModel
 
     /**
      * @param integer $Result 操作结果, 0成功, 非0失败
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RoomUsers 房间用户信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

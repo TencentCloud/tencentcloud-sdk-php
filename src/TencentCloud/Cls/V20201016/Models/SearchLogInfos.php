@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getPeriod() 获取日志存储生命周期
  * @method void setPeriod(integer $Period) 设置日志存储生命周期
  * @method string getContext() 获取透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContext(string $Context) 设置透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SearchLogInfos extends AbstractModel
 {
@@ -43,7 +41,6 @@ class SearchLogInfos extends AbstractModel
 
     /**
      * @var string 透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Context;
 
@@ -51,7 +48,6 @@ class SearchLogInfos extends AbstractModel
      * @param string $TopicId 日志主题ID
      * @param integer $Period 日志存储生命周期
      * @param string $Context 透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

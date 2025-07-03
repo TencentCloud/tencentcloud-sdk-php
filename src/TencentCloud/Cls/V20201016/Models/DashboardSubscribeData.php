@@ -31,21 +31,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTemplateVariables(array $TemplateVariables) 设置仪表盘订阅模板变量。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTimezone() 获取时区。参考：https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#SHANGHAI
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimezone(string $Timezone) 设置时区。参考：https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#SHANGHAI
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubscribeLanguage() 获取语言。 zh 中文、en`英文。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubscribeLanguage(string $SubscribeLanguage) 设置语言。 zh 中文、en`英文。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getJumpDomain() 获取调用链接域名。http:// 或者 https:// 开头，不能/结尾
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJumpDomain(string $JumpDomain) 设置调用链接域名。http:// 或者 https:// 开头，不能/结尾
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getJumpUrl() 获取自定义跳转链接。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJumpUrl(string $JumpUrl) 设置自定义跳转链接。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DashboardSubscribeData extends AbstractModel
 {
@@ -68,25 +60,21 @@ class DashboardSubscribeData extends AbstractModel
 
     /**
      * @var string 时区。参考：https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#SHANGHAI
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Timezone;
 
     /**
      * @var string 语言。 zh 中文、en`英文。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubscribeLanguage;
 
     /**
      * @var string 调用链接域名。http:// 或者 https:// 开头，不能/结尾
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JumpDomain;
 
     /**
      * @var string 自定义跳转链接。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JumpUrl;
 
@@ -97,13 +85,9 @@ class DashboardSubscribeData extends AbstractModel
      * @param array $TemplateVariables 仪表盘订阅模板变量。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Timezone 时区。参考：https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#SHANGHAI
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubscribeLanguage 语言。 zh 中文、en`英文。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $JumpDomain 调用链接域名。http:// 或者 https:// 开头，不能/结尾
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $JumpUrl 自定义跳转链接。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

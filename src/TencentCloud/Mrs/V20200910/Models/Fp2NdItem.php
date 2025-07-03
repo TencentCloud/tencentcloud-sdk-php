@@ -21,105 +21,73 @@ use TencentCloud\Common\AbstractModel;
  * 病案首页第二页
  *
  * @method BaseItem getCode() 获取手术编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCode(BaseItem $Code) 设置手术编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BaseItem getName() 获取手术名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(BaseItem $Name) 设置手术名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BaseItem getStartTime() 获取手术开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(BaseItem $StartTime) 设置手术开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BaseItem getEndTime() 获取手术结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(BaseItem $EndTime) 设置手术结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BaseItem getLevel() 获取手术等级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevel(BaseItem $Level) 设置手术等级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BaseItem getType() 获取手术类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(BaseItem $Type) 设置手术类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BaseItem getIncisionHealingGrade() 获取醉愈合方式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIncisionHealingGrade(BaseItem $IncisionHealingGrade) 设置醉愈合方式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BaseItem getAnesthesiaMethod() 获取麻醉方法
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAnesthesiaMethod(BaseItem $AnesthesiaMethod) 设置麻醉方法
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Fp2NdItem extends AbstractModel
 {
     /**
      * @var BaseItem 手术编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Code;
 
     /**
      * @var BaseItem 手术名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var BaseItem 手术开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
      * @var BaseItem 手术结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
      * @var BaseItem 手术等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Level;
 
     /**
      * @var BaseItem 手术类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var BaseItem 醉愈合方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IncisionHealingGrade;
 
     /**
      * @var BaseItem 麻醉方法
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AnesthesiaMethod;
 
     /**
      * @param BaseItem $Code 手术编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BaseItem $Name 手术名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BaseItem $StartTime 手术开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BaseItem $EndTime 手术结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BaseItem $Level 手术等级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BaseItem $Type 手术类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BaseItem $IncisionHealingGrade 醉愈合方式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BaseItem $AnesthesiaMethod 麻醉方法
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

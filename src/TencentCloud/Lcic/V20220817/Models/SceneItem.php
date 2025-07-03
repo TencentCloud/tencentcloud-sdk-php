@@ -23,21 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getScene() 获取场景名称
  * @method void setScene(string $Scene) 设置场景名称
  * @method string getLogoUrl() 获取logo地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogoUrl(string $LogoUrl) 设置logo地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHomeUrl() 获取主页地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHomeUrl(string $HomeUrl) 设置主页地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getJSUrl() 获取自定义的js
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJSUrl(string $JSUrl) 设置自定义的js
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCSSUrl() 获取自定义的css
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCSSUrl(string $CSSUrl) 设置自定义的css
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SceneItem extends AbstractModel
 {
@@ -48,38 +40,30 @@ class SceneItem extends AbstractModel
 
     /**
      * @var string logo地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogoUrl;
 
     /**
      * @var string 主页地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HomeUrl;
 
     /**
      * @var string 自定义的js
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JSUrl;
 
     /**
      * @var string 自定义的css
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CSSUrl;
 
     /**
      * @param string $Scene 场景名称
      * @param string $LogoUrl logo地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HomeUrl 主页地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $JSUrl 自定义的js
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CSSUrl 自定义的css
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

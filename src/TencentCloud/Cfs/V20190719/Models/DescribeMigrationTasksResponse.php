@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMigrationTasks返回参数结构体
  *
- * @method integer getTotalCount() 获取迁移任务的数量
- * @method void setTotalCount(integer $TotalCount) 设置迁移任务的数量
+ * @method integer getTotalCount() 获取迁移任务的总数量
+ * @method void setTotalCount(integer $TotalCount) 设置迁移任务的总数量
  * @method array getMigrationTasks() 获取迁移任务详情
  * @method void setMigrationTasks(array $MigrationTasks) 设置迁移任务详情
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeMigrationTasksResponse extends AbstractModel
 {
     /**
-     * @var integer 迁移任务的数量
+     * @var integer 迁移任务的总数量
      */
     public $TotalCount;
 
@@ -45,7 +45,7 @@ class DescribeMigrationTasksResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 迁移任务的数量
+     * @param integer $TotalCount 迁移任务的总数量
      * @param array $MigrationTasks 迁移任务详情
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

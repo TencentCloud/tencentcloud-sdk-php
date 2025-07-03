@@ -20,26 +20,27 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 终端节点服务的服务白名单对象详情。
  *
- * @method integer getOwner() 获取AppId。
- * @method void setOwner(integer $Owner) 设置AppId。
- * @method string getUserUin() 获取Uin。
- * @method void setUserUin(string $UserUin) 设置Uin。
+ * @method integer getOwner() 获取AppId。可通过登录 腾讯云账号中心控制台 获取。
+ * @method void setOwner(integer $Owner) 设置AppId。可通过登录 腾讯云账号中心控制台 获取。
+ * @method string getUserUin() 获取用户Uin。可通过登录 腾讯云账号中心控制台 获取。
+ * @method void setUserUin(string $UserUin) 设置用户Uin。可通过登录 腾讯云账号中心控制台 获取。
  * @method string getDescription() 获取描述信息。
  * @method void setDescription(string $Description) 设置描述信息。
- * @method string getCreateTime() 获取创建时间。
- * @method void setCreateTime(string $CreateTime) 设置创建时间。
- * @method string getEndPointServiceId() 获取终端节点服务ID。
- * @method void setEndPointServiceId(string $EndPointServiceId) 设置终端节点服务ID。
+ * @method string getCreateTime() 获取创建时间。格式为字符串YYYY-MM-DD HH:MM:SS。
+ * @method void setCreateTime(string $CreateTime) 设置创建时间。格式为字符串YYYY-MM-DD HH:MM:SS。
+ * @method string getEndPointServiceId() 获取终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+
+ * @method void setEndPointServiceId(string $EndPointServiceId) 设置终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
  */
 class VpcEndPointServiceUser extends AbstractModel
 {
     /**
-     * @var integer AppId。
+     * @var integer AppId。可通过登录 腾讯云账号中心控制台 获取。
      */
     public $Owner;
 
     /**
-     * @var string Uin。
+     * @var string 用户Uin。可通过登录 腾讯云账号中心控制台 获取。
      */
     public $UserUin;
 
@@ -49,21 +50,22 @@ class VpcEndPointServiceUser extends AbstractModel
     public $Description;
 
     /**
-     * @var string 创建时间。
+     * @var string 创建时间。格式为字符串YYYY-MM-DD HH:MM:SS。
      */
     public $CreateTime;
 
     /**
-     * @var string 终端节点服务ID。
+     * @var string 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
+
      */
     public $EndPointServiceId;
 
     /**
-     * @param integer $Owner AppId。
-     * @param string $UserUin Uin。
+     * @param integer $Owner AppId。可通过登录 腾讯云账号中心控制台 获取。
+     * @param string $UserUin 用户Uin。可通过登录 腾讯云账号中心控制台 获取。
      * @param string $Description 描述信息。
-     * @param string $CreateTime 创建时间。
-     * @param string $EndPointServiceId 终端节点服务ID。
+     * @param string $CreateTime 创建时间。格式为字符串YYYY-MM-DD HH:MM:SS。
+     * @param string $EndPointServiceId 终端节点服务ID。可通过[DescribeVpcEndPointService](https://cloud.tencent.com/document/product/215/54678)接口获取。
      */
     function __construct()
     {

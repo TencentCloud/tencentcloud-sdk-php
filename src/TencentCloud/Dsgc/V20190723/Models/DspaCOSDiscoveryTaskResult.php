@@ -39,23 +39,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEndTime() 获取Bucket扫描的结束时间，格式如：2006-01-02 15:04:05
  * @method void setEndTime(string $EndTime) 设置Bucket扫描的结束时间，格式如：2006-01-02 15:04:05
  * @method string getDataSourceName() 获取数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataSourceName(string $DataSourceName) 设置数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取Bucket扫描状态，0待扫描 1扫描中 2扫描终止 3扫描成功 4扫描失败
  * @method void setStatus(integer $Status) 设置Bucket扫描状态，0待扫描 1扫描中 2扫描终止 3扫描成功 4扫描失败
  * @method string getErrorInfo() 获取Bucket扫描结果错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorInfo(string $ErrorInfo) 设置Bucket扫描结果错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceRegion() 获取资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceRegion(string $ResourceRegion) 设置资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOverSize() 获取是否超额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOverSize(string $OverSize) 设置是否超额
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTaskInstanceId() 获取任务实例id
+ * @method void setTaskInstanceId(string $TaskInstanceId) 设置任务实例id
+ * @method string getStartTime() 获取开始时间
+ * @method void setStartTime(string $StartTime) 设置开始时间
  */
 class DspaCOSDiscoveryTaskResult extends AbstractModel
 {
@@ -106,7 +102,6 @@ class DspaCOSDiscoveryTaskResult extends AbstractModel
 
     /**
      * @var string 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataSourceName;
 
@@ -117,21 +112,28 @@ class DspaCOSDiscoveryTaskResult extends AbstractModel
 
     /**
      * @var string Bucket扫描结果错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrorInfo;
 
     /**
      * @var string 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceRegion;
 
     /**
      * @var string 是否超额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OverSize;
+
+    /**
+     * @var string 任务实例id
+     */
+    public $TaskInstanceId;
+
+    /**
+     * @var string 开始时间
+     */
+    public $StartTime;
 
     /**
      * @param integer $BucketResultId 扫描bucket结果ID
@@ -144,14 +146,12 @@ class DspaCOSDiscoveryTaskResult extends AbstractModel
      * @param integer $SensitiveDataNums 被识别出的敏感数据数
      * @param string $EndTime Bucket扫描的结束时间，格式如：2006-01-02 15:04:05
      * @param string $DataSourceName 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status Bucket扫描状态，0待扫描 1扫描中 2扫描终止 3扫描成功 4扫描失败
      * @param string $ErrorInfo Bucket扫描结果错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceRegion 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OverSize 是否超额
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TaskInstanceId 任务实例id
+     * @param string $StartTime 开始时间
      */
     function __construct()
     {
@@ -220,6 +220,14 @@ class DspaCOSDiscoveryTaskResult extends AbstractModel
 
         if (array_key_exists("OverSize",$param) and $param["OverSize"] !== null) {
             $this->OverSize = $param["OverSize"];
+        }
+
+        if (array_key_exists("TaskInstanceId",$param) and $param["TaskInstanceId"] !== null) {
+            $this->TaskInstanceId = $param["TaskInstanceId"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
         }
     }
 }

@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRuleId() 获取策略Id
  * @method void setRuleId(string $RuleId) 设置策略Id
  * @method string getUpdateTime() 获取策略更新时间, 存在为空的情况
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置策略更新时间, 存在为空的情况
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRuleName() 获取策略名字
  * @method void setRuleName(string $RuleName) 设置策略名字
  * @method string getEditUserName() 获取编辑用户名称
@@ -56,7 +54,6 @@ class RuleBaseInfo extends AbstractModel
 
     /**
      * @var string 策略更新时间, 存在为空的情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
@@ -80,7 +77,6 @@ class RuleBaseInfo extends AbstractModel
      * @param integer $EffectImageCount 策略生效镜像数量
      * @param string $RuleId 策略Id
      * @param string $UpdateTime 策略更新时间, 存在为空的情况
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RuleName 策略名字
      * @param string $EditUserName 编辑用户名称
      * @param boolean $IsEnable true: 策略启用，false：策略禁用

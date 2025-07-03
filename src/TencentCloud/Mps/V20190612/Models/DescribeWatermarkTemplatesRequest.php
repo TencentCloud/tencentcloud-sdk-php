@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置返回记录条数
 <li>默认值：10；</li>
 <li>最大值：100。</li>
+ * @method string getName() 获取水印模板标识过滤条件，长度限制：64 个字符。
+ * @method void setName(string $Name) 设置水印模板标识过滤条件，长度限制：64 个字符。
  */
 class DescribeWatermarkTemplatesRequest extends AbstractModel
 {
@@ -64,6 +66,11 @@ class DescribeWatermarkTemplatesRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string 水印模板标识过滤条件，长度限制：64 个字符。
+     */
+    public $Name;
+
+    /**
      * @param array $Definitions 水印模板唯一标识过滤条件，数组长度限制：100。
      * @param string $Type 水印类型过滤条件，可选值：
 <li>image：图片水印；</li>
@@ -72,6 +79,7 @@ class DescribeWatermarkTemplatesRequest extends AbstractModel
      * @param integer $Limit 返回记录条数
 <li>默认值：10；</li>
 <li>最大值：100。</li>
+     * @param string $Name 水印模板标识过滤条件，长度限制：64 个字符。
      */
     function __construct()
     {
@@ -100,6 +108,10 @@ class DescribeWatermarkTemplatesRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
     }
 }

@@ -121,48 +121,40 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrganizationId(string $OrganizationId) 设置创建模板的企业ID，电子签的机构ID
  * @method string getCreatorId() 获取模板创建人用户ID
  * @method void setCreatorId(string $CreatorId) 设置模板创建人用户ID
- * @method string getPreviewUrl() 获取模板的H5预览链接,有效期5分钟。
-可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPreviewUrl(string $PreviewUrl) 设置模板的H5预览链接,有效期5分钟。
-可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPreviewUrl() 获取模板的 H5 预览链接，有效期为 5 分钟。
+您可以通过浏览器直接打开此链接预览模板，或将其嵌入到 iframe 中进行预览。
+
+注意：只有在请求接口时将 <b>WithPreviewUrl </b>参数设置为 true，才会生成预览链接。
+ * @method void setPreviewUrl(string $PreviewUrl) 设置模板的 H5 预览链接，有效期为 5 分钟。
+您可以通过浏览器直接打开此链接预览模板，或将其嵌入到 iframe 中进行预览。
+
+注意：只有在请求接口时将 <b>WithPreviewUrl </b>参数设置为 true，才会生成预览链接。
  * @method UserFlowType getUserFlowType() 获取用户自定义合同类型。
 
 返回配置模板的时候选择的合同类型。[点击查看配置的位置](https://qcloudimg.tencent-cloud.cn/raw/4a766f0540253bf2a05d50c58bd14990.png)
 
 自定义合同类型配置的地方如链接图所示。[点击查看自定义合同类型管理的位置](https://qcloudimg.tencent-cloud.cn/raw/36582cea03ae6a2559894844942b5d5c.png)
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserFlowType(UserFlowType $UserFlowType) 设置用户自定义合同类型。
 
 返回配置模板的时候选择的合同类型。[点击查看配置的位置](https://qcloudimg.tencent-cloud.cn/raw/4a766f0540253bf2a05d50c58bd14990.png)
 
 自定义合同类型配置的地方如链接图所示。[点击查看自定义合同类型管理的位置](https://qcloudimg.tencent-cloud.cn/raw/36582cea03ae6a2559894844942b5d5c.png)
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTemplateVersion() 获取模板版本的编号，旨在标识其独特的版本信息，通常呈现为一串字符串，由日期和递增的数字组成
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTemplateVersion(string $TemplateVersion) 设置模板版本的编号，旨在标识其独特的版本信息，通常呈现为一串字符串，由日期和递增的数字组成
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getPublished() 获取模板是否已发布可以分为以下两种状态：
 
 <b>true</b>：已发布状态，表示该模板已经发布并可以正常使用。
 <b>false</b>：未发布状态，表示该模板还未发布，无法使用。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublished(boolean $Published) 设置模板是否已发布可以分为以下两种状态：
 
 <b>true</b>：已发布状态，表示该模板已经发布并可以正常使用。
 <b>false</b>：未发布状态，表示该模板还未发布，无法使用。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getShareTemplateId() 获取<b>集体账号场景下</b>： 集团账号分享给子企业的模板的来源模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setShareTemplateId(string $ShareTemplateId) 设置<b>集体账号场景下</b>： 集团账号分享给子企业的模板的来源模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTemplateSeals() 获取此模板配置的预填印章列表（包括自动签署指定的印章）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTemplateSeals(array $TemplateSeals) 设置此模板配置的预填印章列表（包括自动签署指定的印章）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSeals() 获取模板内部指定的印章列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSeals(array $Seals) 设置模板内部指定的印章列表
@@ -289,9 +281,10 @@ class TemplateInfo extends AbstractModel
     public $CreatorId;
 
     /**
-     * @var string 模板的H5预览链接,有效期5分钟。
-可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 模板的 H5 预览链接，有效期为 5 分钟。
+您可以通过浏览器直接打开此链接预览模板，或将其嵌入到 iframe 中进行预览。
+
+注意：只有在请求接口时将 <b>WithPreviewUrl </b>参数设置为 true，才会生成预览链接。
      */
     public $PreviewUrl;
 
@@ -302,13 +295,11 @@ class TemplateInfo extends AbstractModel
 
 自定义合同类型配置的地方如链接图所示。[点击查看自定义合同类型管理的位置](https://qcloudimg.tencent-cloud.cn/raw/36582cea03ae6a2559894844942b5d5c.png)
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserFlowType;
 
     /**
      * @var string 模板版本的编号，旨在标识其独特的版本信息，通常呈现为一串字符串，由日期和递增的数字组成
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TemplateVersion;
 
@@ -317,19 +308,16 @@ class TemplateInfo extends AbstractModel
 
 <b>true</b>：已发布状态，表示该模板已经发布并可以正常使用。
 <b>false</b>：未发布状态，表示该模板还未发布，无法使用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Published;
 
     /**
      * @var string <b>集体账号场景下</b>： 集团账号分享给子企业的模板的来源模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ShareTemplateId;
 
     /**
      * @var array 此模板配置的预填印章列表（包括自动签署指定的印章）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TemplateSeals;
 
@@ -387,27 +375,23 @@ class TemplateInfo extends AbstractModel
 可到控制台启停模板
      * @param string $OrganizationId 创建模板的企业ID，电子签的机构ID
      * @param string $CreatorId 模板创建人用户ID
-     * @param string $PreviewUrl 模板的H5预览链接,有效期5分钟。
-可以通过浏览器打开此链接预览模板，或者嵌入到iframe中预览模板。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PreviewUrl 模板的 H5 预览链接，有效期为 5 分钟。
+您可以通过浏览器直接打开此链接预览模板，或将其嵌入到 iframe 中进行预览。
+
+注意：只有在请求接口时将 <b>WithPreviewUrl </b>参数设置为 true，才会生成预览链接。
      * @param UserFlowType $UserFlowType 用户自定义合同类型。
 
 返回配置模板的时候选择的合同类型。[点击查看配置的位置](https://qcloudimg.tencent-cloud.cn/raw/4a766f0540253bf2a05d50c58bd14990.png)
 
 自定义合同类型配置的地方如链接图所示。[点击查看自定义合同类型管理的位置](https://qcloudimg.tencent-cloud.cn/raw/36582cea03ae6a2559894844942b5d5c.png)
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TemplateVersion 模板版本的编号，旨在标识其独特的版本信息，通常呈现为一串字符串，由日期和递增的数字组成
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Published 模板是否已发布可以分为以下两种状态：
 
 <b>true</b>：已发布状态，表示该模板已经发布并可以正常使用。
 <b>false</b>：未发布状态，表示该模板还未发布，无法使用。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ShareTemplateId <b>集体账号场景下</b>： 集团账号分享给子企业的模板的来源模板ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TemplateSeals 此模板配置的预填印章列表（包括自动签署指定的印章）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Seals 模板内部指定的印章列表
 注意：此字段可能返回 null，表示取不到有效值。
      */

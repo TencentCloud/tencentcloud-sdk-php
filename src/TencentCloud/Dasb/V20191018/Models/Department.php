@@ -25,13 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getName() 获取部门名称，1 - 256个字符
  * @method void setName(string $Name) 设置部门名称，1 - 256个字符
  * @method array getManagers() 获取部门管理员账号ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setManagers(array $Managers) 设置部门管理员账号ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getManagerUsers() 获取管理员用户
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setManagerUsers(array $ManagerUsers) 设置管理员用户
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Department extends AbstractModel
 {
@@ -47,13 +43,11 @@ class Department extends AbstractModel
 
     /**
      * @var array 部门管理员账号ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Managers;
 
     /**
      * @var array 管理员用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ManagerUsers;
 
@@ -61,9 +55,7 @@ class Department extends AbstractModel
      * @param string $Id 部门ID
      * @param string $Name 部门名称，1 - 256个字符
      * @param array $Managers 部门管理员账号ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ManagerUsers 管理员用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

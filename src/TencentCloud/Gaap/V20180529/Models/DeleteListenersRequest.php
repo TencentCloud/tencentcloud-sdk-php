@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setListenerIds(array $ListenerIds) 设置待删除的监听器ID列表
  * @method integer getForce() 获取已绑定源站的监听器是否允许强制删除，1：允许， 0：不允许
  * @method void setForce(integer $Force) 设置已绑定源站的监听器是否允许强制删除，1：允许， 0：不允许
- * @method string getGroupId() 获取通道组ID，该参数和GroupId必须设置一个，但不能同时设置。
- * @method void setGroupId(string $GroupId) 设置通道组ID，该参数和GroupId必须设置一个，但不能同时设置。
+ * @method string getGroupId() 获取通道组ID，该参数和ProxyId必须设置一个，但不能同时设置。
+ * @method void setGroupId(string $GroupId) 设置通道组ID，该参数和ProxyId必须设置一个，但不能同时设置。
  * @method string getProxyId() 获取通道ID，该参数和GroupId必须设置一个，但不能同时设置。
  * @method void setProxyId(string $ProxyId) 设置通道ID，该参数和GroupId必须设置一个，但不能同时设置。
  */
@@ -42,7 +42,7 @@ class DeleteListenersRequest extends AbstractModel
     public $Force;
 
     /**
-     * @var string 通道组ID，该参数和GroupId必须设置一个，但不能同时设置。
+     * @var string 通道组ID，该参数和ProxyId必须设置一个，但不能同时设置。
      */
     public $GroupId;
 
@@ -54,7 +54,7 @@ class DeleteListenersRequest extends AbstractModel
     /**
      * @param array $ListenerIds 待删除的监听器ID列表
      * @param integer $Force 已绑定源站的监听器是否允许强制删除，1：允许， 0：不允许
-     * @param string $GroupId 通道组ID，该参数和GroupId必须设置一个，但不能同时设置。
+     * @param string $GroupId 通道组ID，该参数和ProxyId必须设置一个，但不能同时设置。
      * @param string $ProxyId 通道ID，该参数和GroupId必须设置一个，但不能同时设置。
      */
     function __construct()

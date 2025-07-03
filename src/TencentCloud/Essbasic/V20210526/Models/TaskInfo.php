@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 复杂文档合成任务的任务信息
  *
  * @method string getTaskId() 获取合成任务Id，可以通过 ChannelGetTaskResultApi 接口获取任务信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskId(string $TaskId) 设置合成任务Id，可以通过 ChannelGetTaskResultApi 接口获取任务信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTaskStatus() 获取任务状态：READY - 任务已完成；NOTREADY - 任务未完成；
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskStatus(string $TaskStatus) 设置任务状态：READY - 任务已完成；NOTREADY - 任务未完成；
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskInfo extends AbstractModel
 {
     /**
      * @var string 合成任务Id，可以通过 ChannelGetTaskResultApi 接口获取任务信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskId;
 
     /**
      * @var string 任务状态：READY - 任务已完成；NOTREADY - 任务未完成；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskStatus;
 
     /**
      * @param string $TaskId 合成任务Id，可以通过 ChannelGetTaskResultApi 接口获取任务信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskStatus 任务状态：READY - 任务已完成；NOTREADY - 任务未完成；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

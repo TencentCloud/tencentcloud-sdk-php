@@ -31,13 +31,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method string getRepo() 获取项目仓库地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRepo(string $Repo) 设置项目仓库地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getURL() 获取项目网址地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setURL(string $URL) 设置项目网址地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRate() 获取项目采样频率
  * @method void setRate(string $Rate) 设置项目采样频率
  * @method string getKey() 获取项目唯一key（长度 12 位）
@@ -51,21 +47,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInstanceKey() 获取实例 key
  * @method void setInstanceKey(string $InstanceKey) 设置实例 key
  * @method string getDesc() 获取项目描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDesc(string $Desc) 设置项目描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsStar() 获取是否星标  1:是 0:否
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsStar(integer $IsStar) 设置是否星标  1:是 0:否
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProjectStatus() 获取项目状态(1 创建中，2 运行中，3 异常，4 重启中，5 停止中，6 已停止， 7 销毁中，8 已销毁)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectStatus(integer $ProjectStatus) 设置项目状态(1 创建中，2 运行中，3 异常，4 重启中，5 停止中，6 已停止， 7 销毁中，8 已销毁)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAccessPoint() 获取日志接入点，用户忽略。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccessPoint(string $AccessPoint) 设置日志接入点，用户忽略。
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method Kafka getKafka() 获取kafka旁路配置信息
+ * @method void setKafka(Kafka $Kafka) 设置kafka旁路配置信息
  */
 class RumProject extends AbstractModel
 {
@@ -96,13 +86,11 @@ class RumProject extends AbstractModel
 
     /**
      * @var string 项目仓库地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Repo;
 
     /**
      * @var string 项目网址地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $URL;
 
@@ -138,27 +126,28 @@ class RumProject extends AbstractModel
 
     /**
      * @var string 项目描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Desc;
 
     /**
      * @var integer 是否星标  1:是 0:否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsStar;
 
     /**
      * @var integer 项目状态(1 创建中，2 运行中，3 异常，4 重启中，5 停止中，6 已停止， 7 销毁中，8 已销毁)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectStatus;
 
     /**
      * @var string 日志接入点，用户忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccessPoint;
+
+    /**
+     * @var Kafka kafka旁路配置信息
+     */
+    public $Kafka;
 
     /**
      * @param string $Name 项目名
@@ -167,9 +156,7 @@ class RumProject extends AbstractModel
      * @param string $Type 项目类型
      * @param string $CreateTime 创建时间
      * @param string $Repo 项目仓库地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $URL 项目网址地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Rate 项目采样频率
      * @param string $Key 项目唯一key（长度 12 位）
      * @param integer $EnableURLGroup 是否开启url聚类
@@ -177,13 +164,10 @@ class RumProject extends AbstractModel
      * @param integer $ID 项目 ID
      * @param string $InstanceKey 实例 key
      * @param string $Desc 项目描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsStar 是否星标  1:是 0:否
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProjectStatus 项目状态(1 创建中，2 运行中，3 异常，4 重启中，5 停止中，6 已停止， 7 销毁中，8 已销毁)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AccessPoint 日志接入点，用户忽略。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param Kafka $Kafka kafka旁路配置信息
      */
     function __construct()
     {
@@ -264,6 +248,11 @@ class RumProject extends AbstractModel
 
         if (array_key_exists("AccessPoint",$param) and $param["AccessPoint"] !== null) {
             $this->AccessPoint = $param["AccessPoint"];
+        }
+
+        if (array_key_exists("Kafka",$param) and $param["Kafka"] !== null) {
+            $this->Kafka = new Kafka();
+            $this->Kafka->deserialize($param["Kafka"]);
         }
     }
 }

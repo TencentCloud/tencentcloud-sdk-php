@@ -26,6 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置客户端节点服务状态, Active(运行中), Adding(添加中), Destroying(销毁中), Down(已停止)
  * @method string getClientType() 获取客户端节点类型，extend(扩展节点)，manager(管理节点)
  * @method void setClientType(string $ClientType) 设置客户端节点类型，extend(扩展节点)，manager(管理节点)
+ * @method string getVpcId() 获取节点所属vpcid	
+ * @method void setVpcId(string $VpcId) 设置节点所属vpcid	
+ * @method string getSubnetId() 获取节点所属子网id
+ * @method void setSubnetId(string $SubnetId) 设置节点所属子网id
+ * @method string getInstanceId() 获取cvmId
+ * @method void setInstanceId(string $InstanceId) 设置cvmId
+ * @method string getMountPoint() 获取自定义挂载点
+ * @method void setMountPoint(string $MountPoint) 设置自定义挂载点
  */
 class ClientNodeAttribute extends AbstractModel
 {
@@ -45,9 +53,33 @@ class ClientNodeAttribute extends AbstractModel
     public $ClientType;
 
     /**
+     * @var string 节点所属vpcid	
+     */
+    public $VpcId;
+
+    /**
+     * @var string 节点所属子网id
+     */
+    public $SubnetId;
+
+    /**
+     * @var string cvmId
+     */
+    public $InstanceId;
+
+    /**
+     * @var string 自定义挂载点
+     */
+    public $MountPoint;
+
+    /**
      * @param string $ClientNodeIp 客户端节点IP
      * @param string $Status 客户端节点服务状态, Active(运行中), Adding(添加中), Destroying(销毁中), Down(已停止)
      * @param string $ClientType 客户端节点类型，extend(扩展节点)，manager(管理节点)
+     * @param string $VpcId 节点所属vpcid	
+     * @param string $SubnetId 节点所属子网id
+     * @param string $InstanceId cvmId
+     * @param string $MountPoint 自定义挂载点
      */
     function __construct()
     {
@@ -72,6 +104,22 @@ class ClientNodeAttribute extends AbstractModel
 
         if (array_key_exists("ClientType",$param) and $param["ClientType"] !== null) {
             $this->ClientType = $param["ClientType"];
+        }
+
+        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
+            $this->VpcId = $param["VpcId"];
+        }
+
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("MountPoint",$param) and $param["MountPoint"] !== null) {
+            $this->MountPoint = $param["MountPoint"];
         }
     }
 }

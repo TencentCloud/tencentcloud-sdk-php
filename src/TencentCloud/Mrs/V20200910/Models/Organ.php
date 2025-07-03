@@ -21,265 +21,173 @@ use TencentCloud\Common\AbstractModel;
  * 器官
  *
  * @method Part getPart() 获取部位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPart(Part $Part) 设置部位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSize() 获取大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSize(array $Size) 设置大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BlockInfo getEnvelope() 获取包膜
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnvelope(BlockInfo $Envelope) 设置包膜
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BlockInfo getEdge() 获取边缘
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEdge(BlockInfo $Edge) 设置边缘
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BlockInfo getInnerEcho() 获取内部回声
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInnerEcho(BlockInfo $InnerEcho) 设置内部回声
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BlockInfo getGland() 获取腺体
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGland(BlockInfo $Gland) 设置腺体
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BlockInfo getShape() 获取形状
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setShape(BlockInfo $Shape) 设置形状
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BlockInfo getThickness() 获取厚度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setThickness(BlockInfo $Thickness) 设置厚度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BlockInfo getShapeAttr() 获取形态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setShapeAttr(BlockInfo $ShapeAttr) 设置形态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BlockInfo getCDFI() 获取血液cdfi
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCDFI(BlockInfo $CDFI) 设置血液cdfi
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BlockInfo getSymDesc() 获取描述信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSymDesc(BlockInfo $SymDesc) 设置描述信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BlockInfo getSizeStatus() 获取大小状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSizeStatus(BlockInfo $SizeStatus) 设置大小状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BlockInfo getOutline() 获取轮廓
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutline(BlockInfo $Outline) 设置轮廓
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BlockInfo getStructure() 获取结构
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStructure(BlockInfo $Structure) 设置结构
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BlockInfo getDensity() 获取密度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDensity(BlockInfo $Density) 设置密度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BlockInfo getVas() 获取血管
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVas(BlockInfo $Vas) 设置血管
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BlockInfo getCysticwall() 获取囊壁
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCysticwall(BlockInfo $Cysticwall) 设置囊壁
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BlockInfo getCapsule() 获取被膜
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCapsule(BlockInfo $Capsule) 设置被膜
-注意：此字段可能返回 null，表示取不到有效值。
  * @method Size getIsthmusThicknese() 获取峡部厚度
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsthmusThicknese(Size $IsthmusThicknese) 设置峡部厚度
 注意：此字段可能返回 null，表示取不到有效值。
  * @method BlockInfo getInnerEchoDistribution() 获取内部回声分布
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInnerEchoDistribution(BlockInfo $InnerEchoDistribution) 设置内部回声分布
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSrc() 获取原文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSrc(string $Src) 设置原文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getIndex() 获取原文位置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIndex(array $Index) 设置原文位置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BlockInfo getTransparent() 获取透声度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTransparent(BlockInfo $Transparent) 设置透声度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BlockInfo getMriAdc() 获取MRI ADC
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMriAdc(BlockInfo $MriAdc) 设置MRI ADC
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BlockInfo getMriDwi() 获取MRI DWI
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMriDwi(BlockInfo $MriDwi) 设置MRI DWI
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BlockInfo getMriT1() 获取MRI T1信号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMriT1(BlockInfo $MriT1) 设置MRI T1信号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BlockInfo getMriT2() 获取MRI T2信号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMriT2(BlockInfo $MriT2) 设置MRI T2信号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BlockInfo getCtHu() 获取CT HU值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCtHu(BlockInfo $CtHu) 设置CT HU值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BlockInfo getSuvmax() 获取SUmax值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSuvmax(BlockInfo $Suvmax) 设置SUmax值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BlockInfo getMetabolism() 获取代谢情况
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetabolism(BlockInfo $Metabolism) 设置代谢情况
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BlockInfo getRadioactiveUptake() 获取放射性摄取
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRadioactiveUptake(BlockInfo $RadioactiveUptake) 设置放射性摄取
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BlockInfo getLymphEnlargement() 获取淋巴结情况
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLymphEnlargement(BlockInfo $LymphEnlargement) 设置淋巴结情况
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BlockInfo getImageFeature() 获取影像特征
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageFeature(BlockInfo $ImageFeature) 设置影像特征
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BlockInfo getDuct() 获取导管
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDuct(BlockInfo $Duct) 设置导管
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BlockInfo getTrend() 获取趋势
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrend(BlockInfo $Trend) 设置趋势
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BlockInfo getOperation() 获取手术情况
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperation(BlockInfo $Operation) 设置手术情况
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCoords() 获取器官在报告图片中的坐标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCoords(array $Coords) 设置器官在报告图片中的坐标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method Size getIsthmusThickness() 获取峡部厚度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsthmusThickness(Size $IsthmusThickness) 设置峡部厚度
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Organ extends AbstractModel
 {
     /**
      * @var Part 部位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Part;
 
     /**
      * @var array 大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Size;
 
     /**
      * @var BlockInfo 包膜
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Envelope;
 
     /**
      * @var BlockInfo 边缘
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Edge;
 
     /**
      * @var BlockInfo 内部回声
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InnerEcho;
 
     /**
      * @var BlockInfo 腺体
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Gland;
 
     /**
      * @var BlockInfo 形状
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Shape;
 
     /**
      * @var BlockInfo 厚度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Thickness;
 
     /**
      * @var BlockInfo 形态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ShapeAttr;
 
     /**
      * @var BlockInfo 血液cdfi
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CDFI;
 
     /**
      * @var BlockInfo 描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SymDesc;
 
     /**
      * @var BlockInfo 大小状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SizeStatus;
 
     /**
      * @var BlockInfo 轮廓
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Outline;
 
     /**
      * @var BlockInfo 结构
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Structure;
 
     /**
      * @var BlockInfo 密度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Density;
 
     /**
      * @var BlockInfo 血管
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Vas;
 
     /**
      * @var BlockInfo 囊壁
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Cysticwall;
 
     /**
      * @var BlockInfo 被膜
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Capsule;
 
@@ -292,195 +200,139 @@ class Organ extends AbstractModel
 
     /**
      * @var BlockInfo 内部回声分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InnerEchoDistribution;
 
     /**
      * @var string 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Src;
 
     /**
      * @var array 原文位置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Index;
 
     /**
      * @var BlockInfo 透声度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Transparent;
 
     /**
      * @var BlockInfo MRI ADC
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MriAdc;
 
     /**
      * @var BlockInfo MRI DWI
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MriDwi;
 
     /**
      * @var BlockInfo MRI T1信号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MriT1;
 
     /**
      * @var BlockInfo MRI T2信号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MriT2;
 
     /**
      * @var BlockInfo CT HU值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CtHu;
 
     /**
      * @var BlockInfo SUmax值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Suvmax;
 
     /**
      * @var BlockInfo 代谢情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Metabolism;
 
     /**
      * @var BlockInfo 放射性摄取
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RadioactiveUptake;
 
     /**
      * @var BlockInfo 淋巴结情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LymphEnlargement;
 
     /**
      * @var BlockInfo 影像特征
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageFeature;
 
     /**
      * @var BlockInfo 导管
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Duct;
 
     /**
      * @var BlockInfo 趋势
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Trend;
 
     /**
      * @var BlockInfo 手术情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Operation;
 
     /**
      * @var array 器官在报告图片中的坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Coords;
 
     /**
      * @var Size 峡部厚度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsthmusThickness;
 
     /**
      * @param Part $Part 部位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Size 大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockInfo $Envelope 包膜
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockInfo $Edge 边缘
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockInfo $InnerEcho 内部回声
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockInfo $Gland 腺体
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockInfo $Shape 形状
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockInfo $Thickness 厚度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockInfo $ShapeAttr 形态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockInfo $CDFI 血液cdfi
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockInfo $SymDesc 描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockInfo $SizeStatus 大小状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockInfo $Outline 轮廓
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockInfo $Structure 结构
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockInfo $Density 密度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockInfo $Vas 血管
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockInfo $Cysticwall 囊壁
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockInfo $Capsule 被膜
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Size $IsthmusThicknese 峡部厚度
 注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockInfo $InnerEchoDistribution 内部回声分布
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Index 原文位置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockInfo $Transparent 透声度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockInfo $MriAdc MRI ADC
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockInfo $MriDwi MRI DWI
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockInfo $MriT1 MRI T1信号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockInfo $MriT2 MRI T2信号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockInfo $CtHu CT HU值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockInfo $Suvmax SUmax值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockInfo $Metabolism 代谢情况
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockInfo $RadioactiveUptake 放射性摄取
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockInfo $LymphEnlargement 淋巴结情况
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockInfo $ImageFeature 影像特征
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockInfo $Duct 导管
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockInfo $Trend 趋势
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BlockInfo $Operation 手术情况
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Coords 器官在报告图片中的坐标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Size $IsthmusThickness 峡部厚度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

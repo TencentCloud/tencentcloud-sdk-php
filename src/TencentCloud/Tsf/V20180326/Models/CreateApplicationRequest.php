@@ -40,8 +40,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceConfigList(array $ServiceConfigList) 设置服务配置信息列表
  * @method boolean getIgnoreCreateImageRepository() 获取忽略创建镜像仓库
  * @method void setIgnoreCreateImageRepository(boolean $IgnoreCreateImageRepository) 设置忽略创建镜像仓库
- * @method array getProgramIdList() 获取无
- * @method void setProgramIdList(array $ProgramIdList) 设置无
+ * @method array getProgramIdList() 获取数据集id列表
+ * @method void setProgramIdList(array $ProgramIdList) 设置数据集id列表
+ * @method string getApmInstanceId() 获取apm业务系统id
+ * @method void setApmInstanceId(string $ApmInstanceId) 设置apm业务系统id
+ * @method string getProgramLanguage() 获取编程语言:  Java；C/C++；Python；Go；Other
+ * @method void setProgramLanguage(string $ProgramLanguage) 设置编程语言:  Java；C/C++；Python；Go；Other
+ * @method string getFrameworkType() 获取开发框架-SpringCloud/Dubbo/Go-GRPC/Other
+ * @method void setFrameworkType(string $FrameworkType) 设置开发框架-SpringCloud/Dubbo/Go-GRPC/Other
+ * @method ServiceGovernanceConfig getServiceGovernanceConfig() 获取注册配置治理
+ * @method void setServiceGovernanceConfig(ServiceGovernanceConfig $ServiceGovernanceConfig) 设置注册配置治理
+ * @method boolean getCreateSameNameImageRepository() 获取是否创建并关联同名镜像仓库
+ * @method void setCreateSameNameImageRepository(boolean $CreateSameNameImageRepository) 设置是否创建并关联同名镜像仓库
  */
 class CreateApplicationRequest extends AbstractModel
 {
@@ -67,11 +77,13 @@ class CreateApplicationRequest extends AbstractModel
 
     /**
      * @var string 应用日志配置项，废弃参数
+     * @deprecated
      */
     public $ApplicationLogConfig;
 
     /**
      * @var string 应用资源类型，废弃参数
+     * @deprecated
      */
     public $ApplicationResourceType;
 
@@ -96,9 +108,34 @@ class CreateApplicationRequest extends AbstractModel
     public $IgnoreCreateImageRepository;
 
     /**
-     * @var array 无
+     * @var array 数据集id列表
      */
     public $ProgramIdList;
+
+    /**
+     * @var string apm业务系统id
+     */
+    public $ApmInstanceId;
+
+    /**
+     * @var string 编程语言:  Java；C/C++；Python；Go；Other
+     */
+    public $ProgramLanguage;
+
+    /**
+     * @var string 开发框架-SpringCloud/Dubbo/Go-GRPC/Other
+     */
+    public $FrameworkType;
+
+    /**
+     * @var ServiceGovernanceConfig 注册配置治理
+     */
+    public $ServiceGovernanceConfig;
+
+    /**
+     * @var boolean 是否创建并关联同名镜像仓库
+     */
+    public $CreateSameNameImageRepository;
 
     /**
      * @param string $ApplicationName 应用名称
@@ -111,7 +148,12 @@ class CreateApplicationRequest extends AbstractModel
      * @param string $ProgramId 需要绑定的数据集ID
      * @param array $ServiceConfigList 服务配置信息列表
      * @param boolean $IgnoreCreateImageRepository 忽略创建镜像仓库
-     * @param array $ProgramIdList 无
+     * @param array $ProgramIdList 数据集id列表
+     * @param string $ApmInstanceId apm业务系统id
+     * @param string $ProgramLanguage 编程语言:  Java；C/C++；Python；Go；Other
+     * @param string $FrameworkType 开发框架-SpringCloud/Dubbo/Go-GRPC/Other
+     * @param ServiceGovernanceConfig $ServiceGovernanceConfig 注册配置治理
+     * @param boolean $CreateSameNameImageRepository 是否创建并关联同名镜像仓库
      */
     function __construct()
     {
@@ -173,6 +215,27 @@ class CreateApplicationRequest extends AbstractModel
 
         if (array_key_exists("ProgramIdList",$param) and $param["ProgramIdList"] !== null) {
             $this->ProgramIdList = $param["ProgramIdList"];
+        }
+
+        if (array_key_exists("ApmInstanceId",$param) and $param["ApmInstanceId"] !== null) {
+            $this->ApmInstanceId = $param["ApmInstanceId"];
+        }
+
+        if (array_key_exists("ProgramLanguage",$param) and $param["ProgramLanguage"] !== null) {
+            $this->ProgramLanguage = $param["ProgramLanguage"];
+        }
+
+        if (array_key_exists("FrameworkType",$param) and $param["FrameworkType"] !== null) {
+            $this->FrameworkType = $param["FrameworkType"];
+        }
+
+        if (array_key_exists("ServiceGovernanceConfig",$param) and $param["ServiceGovernanceConfig"] !== null) {
+            $this->ServiceGovernanceConfig = new ServiceGovernanceConfig();
+            $this->ServiceGovernanceConfig->deserialize($param["ServiceGovernanceConfig"]);
+        }
+
+        if (array_key_exists("CreateSameNameImageRepository",$param) and $param["CreateSameNameImageRepository"] !== null) {
+            $this->CreateSameNameImageRepository = $param["CreateSameNameImageRepository"];
         }
     }
 }

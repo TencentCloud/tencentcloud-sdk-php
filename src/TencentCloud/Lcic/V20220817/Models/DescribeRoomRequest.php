@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRoom请求参数结构体
  *
- * @method integer getRoomId() 获取房间Id。
- * @method void setRoomId(integer $RoomId) 设置房间Id。
+ * @method integer getRoomId() 获取课堂Id。
+ * @method void setRoomId(integer $RoomId) 设置课堂Id。
  * @method integer getRTMPStreamingURL() 获取请求RTMP推流链接，0：否，1：是，默认为0。
  * @method void setRTMPStreamingURL(integer $RTMPStreamingURL) 设置请求RTMP推流链接，0：否，1：是，默认为0。
  */
 class DescribeRoomRequest extends AbstractModel
 {
     /**
-     * @var integer 房间Id。
+     * @var integer 课堂Id。
      */
     public $RoomId;
 
@@ -38,7 +38,7 @@ class DescribeRoomRequest extends AbstractModel
     public $RTMPStreamingURL;
 
     /**
-     * @param integer $RoomId 房间Id。
+     * @param integer $RoomId 课堂Id。
      * @param integer $RTMPStreamingURL 请求RTMP推流链接，0：否，1：是，默认为0。
      */
     function __construct()

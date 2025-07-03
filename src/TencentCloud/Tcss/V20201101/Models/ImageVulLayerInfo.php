@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 漏洞列表中的层信息
  *
  * @method string getLayerId() 获取层id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLayerId(string $LayerId) 设置层id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLayerCmd() 获取层cmd
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLayerCmd(string $LayerCmd) 设置层cmd
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImageVulLayerInfo extends AbstractModel
 {
     /**
      * @var string 层id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LayerId;
 
     /**
      * @var string 层cmd
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LayerCmd;
 
     /**
      * @param string $LayerId 层id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LayerCmd 层cmd
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

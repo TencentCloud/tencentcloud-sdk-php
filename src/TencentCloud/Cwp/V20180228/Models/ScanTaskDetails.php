@@ -36,20 +36,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUuid(string $Uuid) 设置唯一Uuid
  * @method string getQuuid() 获取唯一Quuid
  * @method void setQuuid(string $Quuid) 设置唯一Quuid
- * @method string getStatus() 获取状态码
- * @method void setStatus(string $Status) 设置状态码
+ * @method string getStatus() 获取状态码Scanning、Ok、Fail
+ * @method void setStatus(string $Status) 设置状态码Scanning、Ok、Fail
  * @method string getDescription() 获取描述
  * @method void setDescription(string $Description) 设置描述
  * @method integer getId() 获取id唯一
  * @method void setId(integer $Id) 设置id唯一
- * @method integer getFailType() 获取失败详情
- * @method void setFailType(integer $FailType) 设置失败详情
+ * @method integer getFailType() 获取失败类型  3离线、4超时、5失败、8agent版本过低
+ * @method void setFailType(integer $FailType) 设置失败类型  3离线、4超时、5失败、8agent版本过低
  * @method string getMachineWanIp() 获取外网ip
  * @method void setMachineWanIp(string $MachineWanIp) 设置外网ip
  * @method MachineExtraInfo getMachineExtraInfo() 获取附加信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置附加信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ScanTaskDetails extends AbstractModel
 {
@@ -94,7 +92,7 @@ class ScanTaskDetails extends AbstractModel
     public $Quuid;
 
     /**
-     * @var string 状态码
+     * @var string 状态码Scanning、Ok、Fail
      */
     public $Status;
 
@@ -109,7 +107,7 @@ class ScanTaskDetails extends AbstractModel
     public $Id;
 
     /**
-     * @var integer 失败详情
+     * @var integer 失败类型  3离线、4超时、5失败、8agent版本过低
      */
     public $FailType;
 
@@ -120,7 +118,6 @@ class ScanTaskDetails extends AbstractModel
 
     /**
      * @var MachineExtraInfo 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineExtraInfo;
 
@@ -133,13 +130,12 @@ class ScanTaskDetails extends AbstractModel
      * @param string $ScanEndTime 扫描结束时间
      * @param string $Uuid 唯一Uuid
      * @param string $Quuid 唯一Quuid
-     * @param string $Status 状态码
+     * @param string $Status 状态码Scanning、Ok、Fail
      * @param string $Description 描述
      * @param integer $Id id唯一
-     * @param integer $FailType 失败详情
+     * @param integer $FailType 失败类型  3离线、4超时、5失败、8agent版本过低
      * @param string $MachineWanIp 外网ip
      * @param MachineExtraInfo $MachineExtraInfo 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

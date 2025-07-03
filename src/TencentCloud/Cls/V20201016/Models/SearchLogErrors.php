@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 多日志主题检索错误信息
  *
  * @method string getTopicId() 获取日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicId(string $TopicId) 设置日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getErrorMsg() 获取错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorMsg(string $ErrorMsg) 设置错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getErrorCodeStr() 获取错误码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorCodeStr(string $ErrorCodeStr) 设置错误码
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SearchLogErrors extends AbstractModel
 {
     /**
      * @var string 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicId;
 
     /**
      * @var string 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrorMsg;
 
     /**
      * @var string 错误码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrorCodeStr;
 
     /**
      * @param string $TopicId 日志主题ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrorMsg 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrorCodeStr 错误码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

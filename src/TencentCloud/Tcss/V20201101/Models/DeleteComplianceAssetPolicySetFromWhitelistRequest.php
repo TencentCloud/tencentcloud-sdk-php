@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAssetItemId(integer $AssetItemId) 设置资产ID
  * @method array getCustomerPolicyItemIdSet() 获取需要忽略指定资产内的检查项ID列表
  * @method void setCustomerPolicyItemIdSet(array $CustomerPolicyItemIdSet) 设置需要忽略指定资产内的检查项ID列表
+ * @method string getAssetType() 获取扫描资产类型 <li>ASSET_CONTAINER Docker容器</li> <li>ASSET_IMAGE Docker镜像</li> <li>ASSET_HOST Docker主机</li> <li>ASSET_K8S Kubernetes</li> <li>ASSET_CONTAINERD Containerd主机</li> <li>ASSET_CONTAINERD_CONTAINER Containerd容器</li>
+ * @method void setAssetType(string $AssetType) 设置扫描资产类型 <li>ASSET_CONTAINER Docker容器</li> <li>ASSET_IMAGE Docker镜像</li> <li>ASSET_HOST Docker主机</li> <li>ASSET_K8S Kubernetes</li> <li>ASSET_CONTAINERD Containerd主机</li> <li>ASSET_CONTAINERD_CONTAINER Containerd容器</li>
  */
 class DeleteComplianceAssetPolicySetFromWhitelistRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DeleteComplianceAssetPolicySetFromWhitelistRequest extends AbstractModel
     public $CustomerPolicyItemIdSet;
 
     /**
+     * @var string 扫描资产类型 <li>ASSET_CONTAINER Docker容器</li> <li>ASSET_IMAGE Docker镜像</li> <li>ASSET_HOST Docker主机</li> <li>ASSET_K8S Kubernetes</li> <li>ASSET_CONTAINERD Containerd主机</li> <li>ASSET_CONTAINERD_CONTAINER Containerd容器</li>
+     */
+    public $AssetType;
+
+    /**
      * @param integer $AssetItemId 资产ID
      * @param array $CustomerPolicyItemIdSet 需要忽略指定资产内的检查项ID列表
+     * @param string $AssetType 扫描资产类型 <li>ASSET_CONTAINER Docker容器</li> <li>ASSET_IMAGE Docker镜像</li> <li>ASSET_HOST Docker主机</li> <li>ASSET_K8S Kubernetes</li> <li>ASSET_CONTAINERD Containerd主机</li> <li>ASSET_CONTAINERD_CONTAINER Containerd容器</li>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DeleteComplianceAssetPolicySetFromWhitelistRequest extends AbstractModel
 
         if (array_key_exists("CustomerPolicyItemIdSet",$param) and $param["CustomerPolicyItemIdSet"] !== null) {
             $this->CustomerPolicyItemIdSet = $param["CustomerPolicyItemIdSet"];
+        }
+
+        if (array_key_exists("AssetType",$param) and $param["AssetType"] !== null) {
+            $this->AssetType = $param["AssetType"];
         }
     }
 }

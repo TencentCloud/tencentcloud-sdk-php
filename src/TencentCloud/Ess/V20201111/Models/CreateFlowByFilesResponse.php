@@ -35,15 +35,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPreviewUrl() 获取合同预览链接URL。
 
 注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPreviewUrl(string $PreviewUrl) 设置合同预览链接URL。
 
 注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getApprovers() 获取签署方信息，如角色ID、角色名称等
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApprovers(array $Approvers) 设置签署方信息，如角色ID、角色名称等
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -63,13 +59,11 @@ class CreateFlowByFilesResponse extends AbstractModel
      * @var string 合同预览链接URL。
 
 注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PreviewUrl;
 
     /**
      * @var array 签署方信息，如角色ID、角色名称等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Approvers;
 
@@ -88,9 +82,7 @@ class CreateFlowByFilesResponse extends AbstractModel
      * @param string $PreviewUrl 合同预览链接URL。
 
 注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Approvers 签署方信息，如角色ID、角色名称等
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

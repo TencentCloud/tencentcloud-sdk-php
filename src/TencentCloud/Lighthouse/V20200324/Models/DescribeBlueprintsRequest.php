@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBlueprints请求参数结构体
  *
- * @method array getBlueprintIds() 获取镜像 ID 列表。
- * @method void setBlueprintIds(array $BlueprintIds) 设置镜像 ID 列表。
+ * @method array getBlueprintIds() 获取镜像 ID 列表。可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值字段BlueprintSet获取。列表长度最大值为100。
+ * @method void setBlueprintIds(array $BlueprintIds) 设置镜像 ID 列表。可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值字段BlueprintSet获取。列表长度最大值为100。
  * @method integer getOffset() 获取偏移量，默认为 0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/product/1207/47578)中的相关小节。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为 0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/product/1207/47578)中的相关小节。
  * @method integer getLimit() 获取返回数量，默认为 20，最大值为 100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/product/1207/47578)中的相关小节。
@@ -30,6 +30,7 @@ use TencentCloud\Common\AbstractModel;
 <li>blueprint-id</li>按照【镜像 ID】进行过滤。
 类型：String
 必选：否
+镜像 ID ，可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值字段BlueprintSet获取。
 <li>blueprint-type</li>按照【镜像类型】进行过滤。
 取值：APP_OS（应用镜像 ）；PURE_OS（系统镜像）；DOCKER（Docker容器镜像）；PRIVATE（自定义镜像）；SHARED（共享镜像）。
 类型：String
@@ -44,15 +45,18 @@ use TencentCloud\Common\AbstractModel;
 <li>blueprint-state</li>按照【镜像状态】进行过滤。
 类型：String
 必选：否
+镜像状态，可通过[数据结构Blueprint](https://cloud.tencent.com/document/api/1207/47576#Blueprint)中的BlueprintState来获取。
 <li>scene-id</li>按照【使用场景Id】进行过滤。
 类型：String
 必选：否
+场景Id，可通过[查看使用场景列表](https://cloud.tencent.com/document/product/1207/83512)接口获取。
 
-每次请求的 Filters 的上限为 10，Filter.Values 的上限为 100。参数不支持同时指定 BlueprintIds 和 Filters 。
+每次请求的 Filters 的上限为 10，Filter.Values 的上限为 100。参数不支持同时指定 BlueprintIds (可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值字段BlueprintSet获取BlueprintId)和 Filters 。
  * @method void setFilters(array $Filters) 设置过滤器列表。
 <li>blueprint-id</li>按照【镜像 ID】进行过滤。
 类型：String
 必选：否
+镜像 ID ，可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值字段BlueprintSet获取。
 <li>blueprint-type</li>按照【镜像类型】进行过滤。
 取值：APP_OS（应用镜像 ）；PURE_OS（系统镜像）；DOCKER（Docker容器镜像）；PRIVATE（自定义镜像）；SHARED（共享镜像）。
 类型：String
@@ -67,16 +71,18 @@ use TencentCloud\Common\AbstractModel;
 <li>blueprint-state</li>按照【镜像状态】进行过滤。
 类型：String
 必选：否
+镜像状态，可通过[数据结构Blueprint](https://cloud.tencent.com/document/api/1207/47576#Blueprint)中的BlueprintState来获取。
 <li>scene-id</li>按照【使用场景Id】进行过滤。
 类型：String
 必选：否
+场景Id，可通过[查看使用场景列表](https://cloud.tencent.com/document/product/1207/83512)接口获取。
 
-每次请求的 Filters 的上限为 10，Filter.Values 的上限为 100。参数不支持同时指定 BlueprintIds 和 Filters 。
+每次请求的 Filters 的上限为 10，Filter.Values 的上限为 100。参数不支持同时指定 BlueprintIds (可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值字段BlueprintSet获取BlueprintId)和 Filters 。
  */
 class DescribeBlueprintsRequest extends AbstractModel
 {
     /**
-     * @var array 镜像 ID 列表。
+     * @var array 镜像 ID 列表。可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值字段BlueprintSet获取。列表长度最大值为100。
      */
     public $BlueprintIds;
 
@@ -95,6 +101,7 @@ class DescribeBlueprintsRequest extends AbstractModel
 <li>blueprint-id</li>按照【镜像 ID】进行过滤。
 类型：String
 必选：否
+镜像 ID ，可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值字段BlueprintSet获取。
 <li>blueprint-type</li>按照【镜像类型】进行过滤。
 取值：APP_OS（应用镜像 ）；PURE_OS（系统镜像）；DOCKER（Docker容器镜像）；PRIVATE（自定义镜像）；SHARED（共享镜像）。
 类型：String
@@ -109,22 +116,25 @@ class DescribeBlueprintsRequest extends AbstractModel
 <li>blueprint-state</li>按照【镜像状态】进行过滤。
 类型：String
 必选：否
+镜像状态，可通过[数据结构Blueprint](https://cloud.tencent.com/document/api/1207/47576#Blueprint)中的BlueprintState来获取。
 <li>scene-id</li>按照【使用场景Id】进行过滤。
 类型：String
 必选：否
+场景Id，可通过[查看使用场景列表](https://cloud.tencent.com/document/product/1207/83512)接口获取。
 
-每次请求的 Filters 的上限为 10，Filter.Values 的上限为 100。参数不支持同时指定 BlueprintIds 和 Filters 。
+每次请求的 Filters 的上限为 10，Filter.Values 的上限为 100。参数不支持同时指定 BlueprintIds (可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值字段BlueprintSet获取BlueprintId)和 Filters 。
      */
     public $Filters;
 
     /**
-     * @param array $BlueprintIds 镜像 ID 列表。
+     * @param array $BlueprintIds 镜像 ID 列表。可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值字段BlueprintSet获取。列表长度最大值为100。
      * @param integer $Offset 偏移量，默认为 0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/product/1207/47578)中的相关小节。
      * @param integer $Limit 返回数量，默认为 20，最大值为 100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/product/1207/47578)中的相关小节。
      * @param array $Filters 过滤器列表。
 <li>blueprint-id</li>按照【镜像 ID】进行过滤。
 类型：String
 必选：否
+镜像 ID ，可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值字段BlueprintSet获取。
 <li>blueprint-type</li>按照【镜像类型】进行过滤。
 取值：APP_OS（应用镜像 ）；PURE_OS（系统镜像）；DOCKER（Docker容器镜像）；PRIVATE（自定义镜像）；SHARED（共享镜像）。
 类型：String
@@ -139,11 +149,13 @@ class DescribeBlueprintsRequest extends AbstractModel
 <li>blueprint-state</li>按照【镜像状态】进行过滤。
 类型：String
 必选：否
+镜像状态，可通过[数据结构Blueprint](https://cloud.tencent.com/document/api/1207/47576#Blueprint)中的BlueprintState来获取。
 <li>scene-id</li>按照【使用场景Id】进行过滤。
 类型：String
 必选：否
+场景Id，可通过[查看使用场景列表](https://cloud.tencent.com/document/product/1207/83512)接口获取。
 
-每次请求的 Filters 的上限为 10，Filter.Values 的上限为 100。参数不支持同时指定 BlueprintIds 和 Filters 。
+每次请求的 Filters 的上限为 10，Filter.Values 的上限为 100。参数不支持同时指定 BlueprintIds (可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值字段BlueprintSet获取BlueprintId)和 Filters 。
      */
     function __construct()
     {

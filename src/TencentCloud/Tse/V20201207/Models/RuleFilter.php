@@ -21,33 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 限流规则的Filter
  *
  * @method string getKey() 获取限流条件的Key
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKey(string $Key) 设置限流条件的Key
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getValues() 获取限流条件的Values
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValues(array $Values) 设置限流条件的Values
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOperator() 获取操作符
+ * @method void setOperator(string $Operator) 设置操作符
+ * @method string getName() 获取header或query对应的name
+ * @method void setName(string $Name) 设置header或query对应的name
  */
 class RuleFilter extends AbstractModel
 {
     /**
      * @var string 限流条件的Key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Key;
 
     /**
      * @var array 限流条件的Values
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Values;
 
     /**
+     * @var string 操作符
+     */
+    public $Operator;
+
+    /**
+     * @var string header或query对应的name
+     */
+    public $Name;
+
+    /**
      * @param string $Key 限流条件的Key
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Values 限流条件的Values
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Operator 操作符
+     * @param string $Name header或query对应的name
      */
     function __construct()
     {
@@ -68,6 +76,14 @@ class RuleFilter extends AbstractModel
 
         if (array_key_exists("Values",$param) and $param["Values"] !== null) {
             $this->Values = $param["Values"];
+        }
+
+        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
+            $this->Operator = $param["Operator"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
     }
 }

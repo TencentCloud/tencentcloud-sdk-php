@@ -22,12 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getType() 获取站点接入类型。该参数取值如下，不填写时默认为 partial：
 <li>partial：CNAME 接入；</li>
-<li> full：NS 接入；</li>
-<li>noDomainAccess：无域名接入。</li>
+<li>full：NS 接入；</li>
+<li>noDomainAccess：无域名接入；</li>
+<li>dnsPodAccess：DNSPod 托管接入，该接入模式要求您的域名已托管在 DNSPod 内。</li>
  * @method void setType(string $Type) 设置站点接入类型。该参数取值如下，不填写时默认为 partial：
 <li>partial：CNAME 接入；</li>
-<li> full：NS 接入；</li>
-<li>noDomainAccess：无域名接入。</li>
+<li>full：NS 接入；</li>
+<li>noDomainAccess：无域名接入；</li>
+<li>dnsPodAccess：DNSPod 托管接入，该接入模式要求您的域名已托管在 DNSPod 内。</li>
  * @method string getZoneName() 获取站点名称。CNAME/NS 接入的时，请传入二级域名（example.com）作为站点名称；无域名接入时，该值请保留为空。
  * @method void setZoneName(string $ZoneName) 设置站点名称。CNAME/NS 接入的时，请传入二级域名（example.com）作为站点名称；无域名接入时，该值请保留为空。
  * @method string getArea() 获取Type 取值为 partial/full 时，七层域名的加速区域。以下为该参数取值，不填写时该值默认为 overseas。Type 取值为 noDomainAccess 时该值请保留为空：
@@ -40,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
 <li> overseas: 全球可用区（不含中国大陆）。</li>
  * @method string getPlanId() 获取待绑定的目标套餐 ID。当您账号下已存在套餐时，可以填写此参数，直接将站点绑定至该套餐。若您当前没有可绑定的套餐时，请前往控制台购买套餐完成站点创建。
  * @method void setPlanId(string $PlanId) 设置待绑定的目标套餐 ID。当您账号下已存在套餐时，可以填写此参数，直接将站点绑定至该套餐。若您当前没有可绑定的套餐时，请前往控制台购买套餐完成站点创建。
- * @method string getAliasZoneName() 获取同名站点标识。限制输入数字、英文、- 和 _ 组合，长度 20 个字符以内。详情参考 [同名站点标识](https://cloud.tencent.com/document/product/1552/70202)，无此使用场景时，该字段保留为空即可。
- * @method void setAliasZoneName(string $AliasZoneName) 设置同名站点标识。限制输入数字、英文、- 和 _ 组合，长度 20 个字符以内。详情参考 [同名站点标识](https://cloud.tencent.com/document/product/1552/70202)，无此使用场景时，该字段保留为空即可。
+ * @method string getAliasZoneName() 获取同名站点标识。限制输入数字、英文、"." 、"-" 和 "_"，长度 200 个字符以内。详情参考 [同名站点标识](https://cloud.tencent.com/document/product/1552/70202)，无此使用场景时，该字段保留为空即可。
+ * @method void setAliasZoneName(string $AliasZoneName) 设置同名站点标识。限制输入数字、英文、"." 、"-" 和 "_"，长度 200 个字符以内。详情参考 [同名站点标识](https://cloud.tencent.com/document/product/1552/70202)，无此使用场景时，该字段保留为空即可。
  * @method array getTags() 获取标签。该参数用于对站点进行分权限管控、分账。需要先前往 [标签控制台](https://console.cloud.tencent.com/tag/taglist) 创建对应的标签才可以在此处传入对应的标签键和标签值。
  * @method void setTags(array $Tags) 设置标签。该参数用于对站点进行分权限管控、分账。需要先前往 [标签控制台](https://console.cloud.tencent.com/tag/taglist) 创建对应的标签才可以在此处传入对应的标签键和标签值。
  * @method boolean getAllowDuplicates() 获取是否允许重复接入。
@@ -58,8 +60,9 @@ class CreateZoneRequest extends AbstractModel
     /**
      * @var string 站点接入类型。该参数取值如下，不填写时默认为 partial：
 <li>partial：CNAME 接入；</li>
-<li> full：NS 接入；</li>
-<li>noDomainAccess：无域名接入。</li>
+<li>full：NS 接入；</li>
+<li>noDomainAccess：无域名接入；</li>
+<li>dnsPodAccess：DNSPod 托管接入，该接入模式要求您的域名已托管在 DNSPod 内。</li>
      */
     public $Type;
 
@@ -82,7 +85,7 @@ class CreateZoneRequest extends AbstractModel
     public $PlanId;
 
     /**
-     * @var string 同名站点标识。限制输入数字、英文、- 和 _ 组合，长度 20 个字符以内。详情参考 [同名站点标识](https://cloud.tencent.com/document/product/1552/70202)，无此使用场景时，该字段保留为空即可。
+     * @var string 同名站点标识。限制输入数字、英文、"." 、"-" 和 "_"，长度 200 个字符以内。详情参考 [同名站点标识](https://cloud.tencent.com/document/product/1552/70202)，无此使用场景时，该字段保留为空即可。
      */
     public $AliasZoneName;
 
@@ -108,15 +111,16 @@ class CreateZoneRequest extends AbstractModel
     /**
      * @param string $Type 站点接入类型。该参数取值如下，不填写时默认为 partial：
 <li>partial：CNAME 接入；</li>
-<li> full：NS 接入；</li>
-<li>noDomainAccess：无域名接入。</li>
+<li>full：NS 接入；</li>
+<li>noDomainAccess：无域名接入；</li>
+<li>dnsPodAccess：DNSPod 托管接入，该接入模式要求您的域名已托管在 DNSPod 内。</li>
      * @param string $ZoneName 站点名称。CNAME/NS 接入的时，请传入二级域名（example.com）作为站点名称；无域名接入时，该值请保留为空。
      * @param string $Area Type 取值为 partial/full 时，七层域名的加速区域。以下为该参数取值，不填写时该值默认为 overseas。Type 取值为 noDomainAccess 时该值请保留为空：
 <li> global: 全球可用区；</li>
 <li> mainland: 中国大陆可用区；</li>
 <li> overseas: 全球可用区（不含中国大陆）。</li>
      * @param string $PlanId 待绑定的目标套餐 ID。当您账号下已存在套餐时，可以填写此参数，直接将站点绑定至该套餐。若您当前没有可绑定的套餐时，请前往控制台购买套餐完成站点创建。
-     * @param string $AliasZoneName 同名站点标识。限制输入数字、英文、- 和 _ 组合，长度 20 个字符以内。详情参考 [同名站点标识](https://cloud.tencent.com/document/product/1552/70202)，无此使用场景时，该字段保留为空即可。
+     * @param string $AliasZoneName 同名站点标识。限制输入数字、英文、"." 、"-" 和 "_"，长度 200 个字符以内。详情参考 [同名站点标识](https://cloud.tencent.com/document/product/1552/70202)，无此使用场景时，该字段保留为空即可。
      * @param array $Tags 标签。该参数用于对站点进行分权限管控、分账。需要先前往 [标签控制台](https://console.cloud.tencent.com/tag/taglist) 创建对应的标签才可以在此处传入对应的标签键和标签值。
      * @param boolean $AllowDuplicates 是否允许重复接入。
 <li> true：允许重复接入；</li>

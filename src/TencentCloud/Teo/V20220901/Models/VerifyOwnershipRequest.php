@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * VerifyOwnership请求参数结构体
  *
- * @method string getDomain() 获取站点或者加速域名。
- * @method void setDomain(string $Domain) 设置站点或者加速域名。
+ * @method string getDomain() 获取站点域名或者站点下的加速域名。
+ * @method void setDomain(string $Domain) 设置站点域名或者站点下的加速域名。
  */
 class VerifyOwnershipRequest extends AbstractModel
 {
     /**
-     * @var string 站点或者加速域名。
+     * @var string 站点域名或者站点下的加速域名。
      */
     public $Domain;
 
     /**
-     * @param string $Domain 站点或者加速域名。
+     * @param string $Domain 站点域名或者站点下的加速域名。
      */
     function __construct()
     {

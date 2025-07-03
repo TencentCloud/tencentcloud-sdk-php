@@ -28,8 +28,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataSourceId(string $DataSourceId) 设置数据源ID
  * @method integer getEnable() 获取任务开关，0 关闭，1 启用
  * @method void setEnable(integer $Enable) 设置任务开关，0 关闭，1 启用
- * @method integer getGeneralRuleSetEnable() 获取通用规则集开关，0 关闭，1 启用
- * @method void setGeneralRuleSetEnable(integer $GeneralRuleSetEnable) 设置通用规则集开关，0 关闭，1 启用
  * @method integer getPlan() 获取执行计划， 0立即 1定时，选择“立即”时，扫描周期只能选择单次
  * @method void setPlan(integer $Plan) 设置执行计划， 0立即 1定时，选择“立即”时，扫描周期只能选择单次
  * @method integer getPeriod() 获取扫描周期，0单次 1每天 2每周 3每月
@@ -52,6 +50,8 @@ postgres 表示云数据库 PostgreSQL,
 cynosdbpg 表示TDSQL-C PostgreSQL版,
 cynosdbmysql 表示TDSQL-C MySQL版,
 selfbuilt-db 表示自建数据库
+ * @method integer getGeneralRuleSetEnable() 获取通用规则集开关，0 关闭，1 启用
+ * @method void setGeneralRuleSetEnable(integer $GeneralRuleSetEnable) 设置通用规则集开关，0 关闭，1 启用
  * @method string getDescription() 获取任务描述，最大长度为1024个字符
  * @method void setDescription(string $Description) 设置任务描述，最大长度为1024个字符
  * @method string getCondition() 获取用于传入的数据源的条件，目前只支持数据库，所以目前表示数据库的名称，选择多个数据库，之间通过逗号分隔，若不选，则默认选择全部数据库
@@ -62,6 +62,14 @@ selfbuilt-db 表示自建数据库
 当执行计划（Plan字段）为”立即“时，定时启动时间不会生效，此场景下给该字段传值不会被保存。
  * @method void setTimingStartTime(string $TimingStartTime) 设置任务定时启动时间，格式如：2006-01-02 15:04:05
 当执行计划（Plan字段）为”立即“时，定时启动时间不会生效，此场景下给该字段传值不会被保存。
+ * @method string getOrder() 获取random-随机，asc生序，desc降序
+ * @method void setOrder(string $Order) 设置random-随机，asc生序，desc降序
+ * @method integer getRows() 获取抽样的条数，范围30-1000
+ * @method void setRows(integer $Rows) 设置抽样的条数，范围30-1000
+ * @method string getGlobalOrderField() 获取抽样的排序字段
+ * @method void setGlobalOrderField(string $GlobalOrderField) 设置抽样的排序字段
+ * @method string getScanRange() 获取full:全量扫描 incre:变更扫描
+ * @method void setScanRange(string $ScanRange) 设置full:全量扫描 incre:变更扫描
  */
 class CreateDSPADiscoveryTaskRequest extends AbstractModel
 {
@@ -84,11 +92,6 @@ class CreateDSPADiscoveryTaskRequest extends AbstractModel
      * @var integer 任务开关，0 关闭，1 启用
      */
     public $Enable;
-
-    /**
-     * @var integer 通用规则集开关，0 关闭，1 启用
-     */
-    public $GeneralRuleSetEnable;
 
     /**
      * @var integer 执行计划， 0立即 1定时，选择“立即”时，扫描周期只能选择单次
@@ -118,6 +121,12 @@ selfbuilt-db 表示自建数据库
     public $DataSourceType;
 
     /**
+     * @var integer 通用规则集开关，0 关闭，1 启用
+     * @deprecated
+     */
+    public $GeneralRuleSetEnable;
+
+    /**
      * @var string 任务描述，最大长度为1024个字符
      */
     public $Description;
@@ -139,11 +148,30 @@ selfbuilt-db 表示自建数据库
     public $TimingStartTime;
 
     /**
+     * @var string random-随机，asc生序，desc降序
+     */
+    public $Order;
+
+    /**
+     * @var integer 抽样的条数，范围30-1000
+     */
+    public $Rows;
+
+    /**
+     * @var string 抽样的排序字段
+     */
+    public $GlobalOrderField;
+
+    /**
+     * @var string full:全量扫描 incre:变更扫描
+     */
+    public $ScanRange;
+
+    /**
      * @param string $DspaId DSPA实例ID
      * @param string $Name 任务名称，1-60个字符，仅允许输入中文、英文字母、数字、'_'、'-'，并且开头和结尾需为中文、英文字母或者数字，Name不可重复
      * @param string $DataSourceId 数据源ID
      * @param integer $Enable 任务开关，0 关闭，1 启用
-     * @param integer $GeneralRuleSetEnable 通用规则集开关，0 关闭，1 启用
      * @param integer $Plan 执行计划， 0立即 1定时，选择“立即”时，扫描周期只能选择单次
      * @param integer $Period 扫描周期，0单次 1每天 2每周 3每月
      * @param string $ResourceRegion 资源所在地域
@@ -155,11 +183,16 @@ postgres 表示云数据库 PostgreSQL,
 cynosdbpg 表示TDSQL-C PostgreSQL版,
 cynosdbmysql 表示TDSQL-C MySQL版,
 selfbuilt-db 表示自建数据库
+     * @param integer $GeneralRuleSetEnable 通用规则集开关，0 关闭，1 启用
      * @param string $Description 任务描述，最大长度为1024个字符
      * @param string $Condition 用于传入的数据源的条件，目前只支持数据库，所以目前表示数据库的名称，选择多个数据库，之间通过逗号分隔，若不选，则默认选择全部数据库
      * @param array $ComplianceGroupIds 合规组ID列表，最多支持添加5个
      * @param string $TimingStartTime 任务定时启动时间，格式如：2006-01-02 15:04:05
 当执行计划（Plan字段）为”立即“时，定时启动时间不会生效，此场景下给该字段传值不会被保存。
+     * @param string $Order random-随机，asc生序，desc降序
+     * @param integer $Rows 抽样的条数，范围30-1000
+     * @param string $GlobalOrderField 抽样的排序字段
+     * @param string $ScanRange full:全量扫描 incre:变更扫描
      */
     function __construct()
     {
@@ -190,10 +223,6 @@ selfbuilt-db 表示自建数据库
             $this->Enable = $param["Enable"];
         }
 
-        if (array_key_exists("GeneralRuleSetEnable",$param) and $param["GeneralRuleSetEnable"] !== null) {
-            $this->GeneralRuleSetEnable = $param["GeneralRuleSetEnable"];
-        }
-
         if (array_key_exists("Plan",$param) and $param["Plan"] !== null) {
             $this->Plan = $param["Plan"];
         }
@@ -210,6 +239,10 @@ selfbuilt-db 表示自建数据库
             $this->DataSourceType = $param["DataSourceType"];
         }
 
+        if (array_key_exists("GeneralRuleSetEnable",$param) and $param["GeneralRuleSetEnable"] !== null) {
+            $this->GeneralRuleSetEnable = $param["GeneralRuleSetEnable"];
+        }
+
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
         }
@@ -224,6 +257,22 @@ selfbuilt-db 表示自建数据库
 
         if (array_key_exists("TimingStartTime",$param) and $param["TimingStartTime"] !== null) {
             $this->TimingStartTime = $param["TimingStartTime"];
+        }
+
+        if (array_key_exists("Order",$param) and $param["Order"] !== null) {
+            $this->Order = $param["Order"];
+        }
+
+        if (array_key_exists("Rows",$param) and $param["Rows"] !== null) {
+            $this->Rows = $param["Rows"];
+        }
+
+        if (array_key_exists("GlobalOrderField",$param) and $param["GlobalOrderField"] !== null) {
+            $this->GlobalOrderField = $param["GlobalOrderField"];
+        }
+
+        if (array_key_exists("ScanRange",$param) and $param["ScanRange"] !== null) {
+            $this->ScanRange = $param["ScanRange"];
         }
     }
 }

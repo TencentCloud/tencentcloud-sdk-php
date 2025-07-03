@@ -22,10 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例 ID。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID。
- * @method integer getStartTime() 获取开始时间戳。例如 1585142640 。
- * @method void setStartTime(integer $StartTime) 设置开始时间戳。例如 1585142640 。
- * @method integer getEndTime() 获取结束时间戳。例如 1585142640 。
- * @method void setEndTime(integer $EndTime) 设置结束时间戳。例如 1585142640 。
+ * @method integer getStartTime() 获取开始时间戳。例如 1585142640。
+说明：此参数单位为秒的时间戳。
+ * @method void setStartTime(integer $StartTime) 设置开始时间戳。例如 1585142640。
+说明：此参数单位为秒的时间戳。
+ * @method integer getEndTime() 获取结束时间戳。例如 1585142640。
+说明：此参数单位为秒的时间戳。
+ * @method void setEndTime(integer $EndTime) 设置结束时间戳。例如 1585142640。
+说明：此参数单位为秒的时间戳。
  * @method array getUserHosts() 获取客户端 Host 列表。
  * @method void setUserHosts(array $UserHosts) 设置客户端 Host 列表。
  * @method array getUserNames() 获取客户端 用户名 列表。
@@ -42,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置一次性返回的记录数量，默认为100，最大为400。
  * @method string getInstType() 获取仅在实例为主实例或者灾备实例时生效，可选值：slave，代表拉取从机的日志。
  * @method void setInstType(string $InstType) 设置仅在实例为主实例或者灾备实例时生效，可选值：slave，代表拉取从机的日志。
+ * @method string getOpResourceId() 获取节点ID
+ * @method void setOpResourceId(string $OpResourceId) 设置节点ID
  */
 class DescribeSlowLogDataRequest extends AbstractModel
 {
@@ -51,12 +57,14 @@ class DescribeSlowLogDataRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 开始时间戳。例如 1585142640 。
+     * @var integer 开始时间戳。例如 1585142640。
+说明：此参数单位为秒的时间戳。
      */
     public $StartTime;
 
     /**
-     * @var integer 结束时间戳。例如 1585142640 。
+     * @var integer 结束时间戳。例如 1585142640。
+说明：此参数单位为秒的时间戳。
      */
     public $EndTime;
 
@@ -101,9 +109,16 @@ class DescribeSlowLogDataRequest extends AbstractModel
     public $InstType;
 
     /**
+     * @var string 节点ID
+     */
+    public $OpResourceId;
+
+    /**
      * @param string $InstanceId 实例 ID。
-     * @param integer $StartTime 开始时间戳。例如 1585142640 。
-     * @param integer $EndTime 结束时间戳。例如 1585142640 。
+     * @param integer $StartTime 开始时间戳。例如 1585142640。
+说明：此参数单位为秒的时间戳。
+     * @param integer $EndTime 结束时间戳。例如 1585142640。
+说明：此参数单位为秒的时间戳。
      * @param array $UserHosts 客户端 Host 列表。
      * @param array $UserNames 客户端 用户名 列表。
      * @param array $DataBases 访问的 数据库 列表。
@@ -112,6 +127,7 @@ class DescribeSlowLogDataRequest extends AbstractModel
      * @param integer $Offset 偏移量，默认为0，最大为9999。
      * @param integer $Limit 一次性返回的记录数量，默认为100，最大为400。
      * @param string $InstType 仅在实例为主实例或者灾备实例时生效，可选值：slave，代表拉取从机的日志。
+     * @param string $OpResourceId 节点ID
      */
     function __construct()
     {
@@ -168,6 +184,10 @@ class DescribeSlowLogDataRequest extends AbstractModel
 
         if (array_key_exists("InstType",$param) and $param["InstType"] !== null) {
             $this->InstType = $param["InstType"];
+        }
+
+        if (array_key_exists("OpResourceId",$param) and $param["OpResourceId"] !== null) {
+            $this->OpResourceId = $param["OpResourceId"];
         }
     }
 }

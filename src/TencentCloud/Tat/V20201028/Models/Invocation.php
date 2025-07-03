@@ -26,24 +26,38 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCommandId(string $CommandId) 设置命令ID。
  * @method string getInvocationStatus() 获取执行任务状态。取值范围：
 
-<ul> <li>PENDING：等待下发</li> <li>RUNNING：命令运行中</li> <li>SUCCESS：命令成功</li> <li>FAILED：命令失败</li> <li>TIMEOUT：命令超时</li> <li>PARTIAL_FAILED：命令部分失败</li> <li>PARTIAL_CANCELLED：任务部分取消</li> <li>CANCELLED：任务全部取消</li> <li>CANCELLING：任务取消中</li> </ul>
-
+- PENDING：等待下发
+- RUNNING：命令运行中
+- CANCELLING：取消中
+- SUCCESS：命令成功
+- TIMEOUT：命令超时
+- FAILED：命令失败
+- CANCELLED：命令全部取消
+- PARTIAL_FAILED：命令部分失败
+- PARTIAL_CANCELLED：命令部分取消
  * @method void setInvocationStatus(string $InvocationStatus) 设置执行任务状态。取值范围：
 
-<ul> <li>PENDING：等待下发</li> <li>RUNNING：命令运行中</li> <li>SUCCESS：命令成功</li> <li>FAILED：命令失败</li> <li>TIMEOUT：命令超时</li> <li>PARTIAL_FAILED：命令部分失败</li> <li>PARTIAL_CANCELLED：任务部分取消</li> <li>CANCELLED：任务全部取消</li> <li>CANCELLING：任务取消中</li> </ul>
-
+- PENDING：等待下发
+- RUNNING：命令运行中
+- CANCELLING：取消中
+- SUCCESS：命令成功
+- TIMEOUT：命令超时
+- FAILED：命令失败
+- CANCELLED：命令全部取消
+- PARTIAL_FAILED：命令部分失败
+- PARTIAL_CANCELLED：命令部分取消
  * @method array getInvocationTaskBasicInfoSet() 获取执行任务信息列表。
  * @method void setInvocationTaskBasicInfoSet(array $InvocationTaskBasicInfoSet) 设置执行任务信息列表。
  * @method string getDescription() 获取执行活动描述。
  * @method void setDescription(string $Description) 设置执行活动描述。
- * @method string getStartTime() 获取执行活动开始时间。
- * @method void setStartTime(string $StartTime) 设置执行活动开始时间。
- * @method string getEndTime() 获取执行活动结束时间。
- * @method void setEndTime(string $EndTime) 设置执行活动结束时间。
- * @method string getCreatedTime() 获取执行活动创建时间。
- * @method void setCreatedTime(string $CreatedTime) 设置执行活动创建时间。
- * @method string getUpdatedTime() 获取执行活动更新时间。
- * @method void setUpdatedTime(string $UpdatedTime) 设置执行活动更新时间。
+ * @method string getStartTime() 获取执行活动开始时间。格式为：YYYY-MM-DDThh:mm:ssZ
+ * @method void setStartTime(string $StartTime) 设置执行活动开始时间。格式为：YYYY-MM-DDThh:mm:ssZ
+ * @method string getEndTime() 获取执行活动结束时间。格式为：YYYY-MM-DDThh:mm:ssZ
+ * @method void setEndTime(string $EndTime) 设置执行活动结束时间。格式为：YYYY-MM-DDThh:mm:ssZ
+ * @method string getCreatedTime() 获取执行活动创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
+ * @method void setCreatedTime(string $CreatedTime) 设置执行活动创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
+ * @method string getUpdatedTime() 获取执行活动更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
+ * @method void setUpdatedTime(string $UpdatedTime) 设置执行活动更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
  * @method string getParameters() 获取自定义参数取值。
  * @method void setParameters(string $Parameters) 设置自定义参数取值。
  * @method string getDefaultParameters() 获取自定义参数的默认取值。
@@ -53,7 +67,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUsername() 获取在实例上执行命令时使用的用户名。
  * @method void setUsername(string $Username) 设置在实例上执行命令时使用的用户名。
  * @method string getInvocationSource() 获取调用来源。
+
+- USER：来源于用户调用。
+- INVOKER：来源于定时执行。
  * @method void setInvocationSource(string $InvocationSource) 设置调用来源。
+
+- USER：来源于用户调用。
+- INVOKER：来源于定时执行。
  * @method string getCommandContent() 获取base64编码的命令内容
  * @method void setCommandContent(string $CommandContent) 设置base64编码的命令内容
  * @method string getCommandType() 获取命令类型
@@ -82,8 +102,15 @@ class Invocation extends AbstractModel
     /**
      * @var string 执行任务状态。取值范围：
 
-<ul> <li>PENDING：等待下发</li> <li>RUNNING：命令运行中</li> <li>SUCCESS：命令成功</li> <li>FAILED：命令失败</li> <li>TIMEOUT：命令超时</li> <li>PARTIAL_FAILED：命令部分失败</li> <li>PARTIAL_CANCELLED：任务部分取消</li> <li>CANCELLED：任务全部取消</li> <li>CANCELLING：任务取消中</li> </ul>
-
+- PENDING：等待下发
+- RUNNING：命令运行中
+- CANCELLING：取消中
+- SUCCESS：命令成功
+- TIMEOUT：命令超时
+- FAILED：命令失败
+- CANCELLED：命令全部取消
+- PARTIAL_FAILED：命令部分失败
+- PARTIAL_CANCELLED：命令部分取消
      */
     public $InvocationStatus;
 
@@ -98,22 +125,22 @@ class Invocation extends AbstractModel
     public $Description;
 
     /**
-     * @var string 执行活动开始时间。
+     * @var string 执行活动开始时间。格式为：YYYY-MM-DDThh:mm:ssZ
      */
     public $StartTime;
 
     /**
-     * @var string 执行活动结束时间。
+     * @var string 执行活动结束时间。格式为：YYYY-MM-DDThh:mm:ssZ
      */
     public $EndTime;
 
     /**
-     * @var string 执行活动创建时间。
+     * @var string 执行活动创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
      */
     public $CreatedTime;
 
     /**
-     * @var string 执行活动更新时间。
+     * @var string 执行活动更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
      */
     public $UpdatedTime;
 
@@ -139,6 +166,9 @@ class Invocation extends AbstractModel
 
     /**
      * @var string 调用来源。
+
+- USER：来源于用户调用。
+- INVOKER：来源于定时执行。
      */
     public $InvocationSource;
 
@@ -177,19 +207,29 @@ class Invocation extends AbstractModel
      * @param string $CommandId 命令ID。
      * @param string $InvocationStatus 执行任务状态。取值范围：
 
-<ul> <li>PENDING：等待下发</li> <li>RUNNING：命令运行中</li> <li>SUCCESS：命令成功</li> <li>FAILED：命令失败</li> <li>TIMEOUT：命令超时</li> <li>PARTIAL_FAILED：命令部分失败</li> <li>PARTIAL_CANCELLED：任务部分取消</li> <li>CANCELLED：任务全部取消</li> <li>CANCELLING：任务取消中</li> </ul>
-
+- PENDING：等待下发
+- RUNNING：命令运行中
+- CANCELLING：取消中
+- SUCCESS：命令成功
+- TIMEOUT：命令超时
+- FAILED：命令失败
+- CANCELLED：命令全部取消
+- PARTIAL_FAILED：命令部分失败
+- PARTIAL_CANCELLED：命令部分取消
      * @param array $InvocationTaskBasicInfoSet 执行任务信息列表。
      * @param string $Description 执行活动描述。
-     * @param string $StartTime 执行活动开始时间。
-     * @param string $EndTime 执行活动结束时间。
-     * @param string $CreatedTime 执行活动创建时间。
-     * @param string $UpdatedTime 执行活动更新时间。
+     * @param string $StartTime 执行活动开始时间。格式为：YYYY-MM-DDThh:mm:ssZ
+     * @param string $EndTime 执行活动结束时间。格式为：YYYY-MM-DDThh:mm:ssZ
+     * @param string $CreatedTime 执行活动创建时间。格式为：YYYY-MM-DDThh:mm:ssZ
+     * @param string $UpdatedTime 执行活动更新时间。格式为：YYYY-MM-DDThh:mm:ssZ
      * @param string $Parameters 自定义参数取值。
      * @param string $DefaultParameters 自定义参数的默认取值。
      * @param string $InstanceKind 执行命令的实例类型，取值范围：CVM、LIGHTHOUSE。
      * @param string $Username 在实例上执行命令时使用的用户名。
      * @param string $InvocationSource 调用来源。
+
+- USER：来源于用户调用。
+- INVOKER：来源于定时执行。
      * @param string $CommandContent base64编码的命令内容
      * @param string $CommandType 命令类型
      * @param integer $Timeout 执行命令过期时间， 单位秒

@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getImageScanCnt() 获取扫描镜像个数
  * @method void setImageScanCnt(integer $ImageScanCnt) 设置扫描镜像个数
  * @method array getImageStatus() 获取扫描进度列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageStatus(array $ImageStatus) 设置扫描进度列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSuccessCount() 获取安全个数
  * @method void setSuccessCount(integer $SuccessCount) 设置安全个数
  * @method integer getRiskCount() 获取风险个数
@@ -37,9 +35,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStatus() 获取总的扫描状态
  * @method void setStatus(string $Status) 设置总的扫描状态
  * @method integer getScanRemainTime() 获取扫描剩余时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScanRemainTime(integer $ScanRemainTime) 设置扫描剩余时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -57,7 +53,6 @@ class DescribeAssetImageRegistryScanStatusOneKeyResponse extends AbstractModel
 
     /**
      * @var array 扫描进度列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageStatus;
 
@@ -83,7 +78,6 @@ class DescribeAssetImageRegistryScanStatusOneKeyResponse extends AbstractModel
 
     /**
      * @var integer 扫描剩余时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScanRemainTime;
 
@@ -96,13 +90,11 @@ class DescribeAssetImageRegistryScanStatusOneKeyResponse extends AbstractModel
      * @param integer $ImageTotal 镜像个数
      * @param integer $ImageScanCnt 扫描镜像个数
      * @param array $ImageStatus 扫描进度列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SuccessCount 安全个数
      * @param integer $RiskCount 风险个数
      * @param integer $Schedule 总的扫描进度
      * @param string $Status 总的扫描状态
      * @param integer $ScanRemainTime 扫描剩余时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

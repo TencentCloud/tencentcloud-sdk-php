@@ -77,14 +77,14 @@ use TencentCloud\Common\AbstractModel;
 `2. 如果当前的企业类型是政府/事业单位, 则只支持上传授权书+对公打款`
 `3. 如果当前操作人是法人,则是法人认证`
  * @method string getAdminIdCardType() 获取经办人的证件类型，支持以下类型
-<ul><li>ID_CARD : 居民身份证  (默认值)</li>
-<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
+<ul><li>ID_CARD : 中国大陆居民身份证  (默认值)</li>
+<li>HONGKONG_AND_MACAO : 中国港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 中国港澳台居民居住证(格式同中国大陆居民身份证)</li></ul>
 
  * @method void setAdminIdCardType(string $AdminIdCardType) 设置经办人的证件类型，支持以下类型
-<ul><li>ID_CARD : 居民身份证  (默认值)</li>
-<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
+<ul><li>ID_CARD : 中国大陆居民身份证  (默认值)</li>
+<li>HONGKONG_AND_MACAO : 中国港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 中国港澳台居民居住证(格式同中国大陆居民身份证)</li></ul>
 
  * @method string getAdminIdCardNumber() 获取经办人的证件号
  * @method void setAdminIdCardNumber(string $AdminIdCardNumber) 设置经办人的证件号
@@ -101,6 +101,9 @@ p.s. 如果上传授权书 ，需遵循以下条件
 1. 超管的信息（超管姓名，超管身份证，超管手机号）必须为必填参数。
 2. 超管的个人身份必须在电子签已经实名。
 2. 认证方式AuthorizationTypes必须只能是上传授权书方式 
+
+ * @method string getAutoJumpUrl() 获取认证完之后的H5页面的跳转链接，最大长度1000个字符。链接类型请参考 [跳转电子签H5](https://qian.tencent.com/developers/company/openqianh5/)
+ * @method void setAutoJumpUrl(string $AutoJumpUrl) 设置认证完之后的H5页面的跳转链接，最大长度1000个字符。链接类型请参考 [跳转电子签H5](https://qian.tencent.com/developers/company/openqianh5/)
  */
 class RegistrationOrganizationInfo extends AbstractModel
 {
@@ -170,9 +173,9 @@ class RegistrationOrganizationInfo extends AbstractModel
 
     /**
      * @var string 经办人的证件类型，支持以下类型
-<ul><li>ID_CARD : 居民身份证  (默认值)</li>
-<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
+<ul><li>ID_CARD : 中国大陆居民身份证  (默认值)</li>
+<li>HONGKONG_AND_MACAO : 中国港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 中国港澳台居民居住证(格式同中国大陆居民身份证)</li></ul>
 
      */
     public $AdminIdCardType;
@@ -196,6 +199,11 @@ p.s. 如果上传授权书 ，需遵循以下条件
 
      */
     public $PowerOfAttorneys;
+
+    /**
+     * @var string 认证完之后的H5页面的跳转链接，最大长度1000个字符。链接类型请参考 [跳转电子签H5](https://qian.tencent.com/developers/company/openqianh5/)
+     */
+    public $AutoJumpUrl;
 
     /**
      * @param string $OrganizationName 组织机构名称。
@@ -227,9 +235,9 @@ p.s. 如果上传授权书 ，需遵循以下条件
 `2. 如果当前的企业类型是政府/事业单位, 则只支持上传授权书+对公打款`
 `3. 如果当前操作人是法人,则是法人认证`
      * @param string $AdminIdCardType 经办人的证件类型，支持以下类型
-<ul><li>ID_CARD : 居民身份证  (默认值)</li>
-<li>HONGKONG_AND_MACAO : 港澳居民来往内地通行证</li>
-<li>HONGKONG_MACAO_AND_TAIWAN : 港澳台居民居住证(格式同居民身份证)</li></ul>
+<ul><li>ID_CARD : 中国大陆居民身份证  (默认值)</li>
+<li>HONGKONG_AND_MACAO : 中国港澳居民来往内地通行证</li>
+<li>HONGKONG_MACAO_AND_TAIWAN : 中国港澳台居民居住证(格式同中国大陆居民身份证)</li></ul>
 
      * @param string $AdminIdCardNumber 经办人的证件号
      * @param string $BusinessLicense 营业执照正面照(PNG或JPG) base64格式, 大小不超过5M
@@ -238,6 +246,8 @@ p.s. 如果上传授权书 ，需遵循以下条件
 1. 超管的信息（超管姓名，超管身份证，超管手机号）必须为必填参数。
 2. 超管的个人身份必须在电子签已经实名。
 2. 认证方式AuthorizationTypes必须只能是上传授权书方式 
+
+     * @param string $AutoJumpUrl 认证完之后的H5页面的跳转链接，最大长度1000个字符。链接类型请参考 [跳转电子签H5](https://qian.tencent.com/developers/company/openqianh5/)
      */
     function __construct()
     {
@@ -302,6 +312,10 @@ p.s. 如果上传授权书 ，需遵循以下条件
 
         if (array_key_exists("PowerOfAttorneys",$param) and $param["PowerOfAttorneys"] !== null) {
             $this->PowerOfAttorneys = $param["PowerOfAttorneys"];
+        }
+
+        if (array_key_exists("AutoJumpUrl",$param) and $param["AutoJumpUrl"] !== null) {
+            $this->AutoJumpUrl = $param["AutoJumpUrl"];
         }
     }
 }

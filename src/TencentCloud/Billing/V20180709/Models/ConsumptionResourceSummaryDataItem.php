@@ -47,113 +47,59 @@ use TencentCloud\Common\AbstractModel;
  * @method string getConsumptionTypeName() 获取消耗类型
  * @method void setConsumptionTypeName(string $ConsumptionTypeName) 设置消耗类型
  * @method string getRealCost() 获取折前价
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealCost(string $RealCost) 设置折前价
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFeeBeginTime() 获取费用起始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFeeBeginTime(string $FeeBeginTime) 设置费用起始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFeeEndTime() 获取费用结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFeeEndTime(string $FeeEndTime) 设置费用结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDayDiff() 获取天数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDayDiff(string $DayDiff) 设置天数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDailyTotalCost() 获取每日消耗
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDailyTotalCost(string $DailyTotalCost) 设置每日消耗
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOrderId() 获取订单号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrderId(string $OrderId) 设置订单号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVoucherPayAmount() 获取代金券
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVoucherPayAmount(string $VoucherPayAmount) 设置代金券
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIncentivePayAmount() 获取赠送金
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIncentivePayAmount(string $IncentivePayAmount) 设置赠送金
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTransferPayAmount() 获取分成金
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTransferPayAmount(string $TransferPayAmount) 设置分成金
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPayerUin() 获取支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayerUin(string $PayerUin) 设置支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOwnerUin() 获取使用者UIN：实际使用资源的账号 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOwnerUin(string $OwnerUin) 设置使用者UIN：实际使用资源的账号 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOperateUin() 获取操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperateUin(string $OperateUin) 设置操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProductCode() 获取子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductCode(string $ProductCode) 设置子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProductCodeName() 获取子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductCodeName(string $ProductCodeName) 设置子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegionType() 获取地域类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionType(string $RegionType) 设置地域类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegionTypeName() 获取地域类型名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionTypeName(string $RegionTypeName) 设置地域类型名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExtend1() 获取扩展字段1
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtend1(string $Extend1) 设置扩展字段1
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExtend2() 获取扩展字段2
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtend2(string $Extend2) 设置扩展字段2
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExtend3() 获取扩展字段3
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtend3(string $Extend3) 设置扩展字段3
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExtend4() 获取扩展字段4
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtend4(string $Extend4) 设置扩展字段4
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExtend5() 获取扩展字段5
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtend5(string $Extend5) 设置扩展字段5
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceType() 获取实例类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceType(string $InstanceType) 设置实例类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceTypeName() 获取实例类型名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceTypeName(string $InstanceTypeName) 设置实例类型名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPayTime() 获取扣费时间：结算扣费时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayTime(string $PayTime) 设置扣费时间：结算扣费时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getZoneName() 获取可用区：资源所属可用区，如广州三区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneName(string $ZoneName) 设置可用区：资源所属可用区，如广州三区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getComponentConfig() 获取配置描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComponentConfig(string $ComponentConfig) 设置配置描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTags() 获取标签信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(string $Tags) 设置标签信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ConsumptionResourceSummaryDataItem extends AbstractModel
 {
@@ -224,163 +170,136 @@ class ConsumptionResourceSummaryDataItem extends AbstractModel
 
     /**
      * @var string 折前价
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RealCost;
 
     /**
      * @var string 费用起始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FeeBeginTime;
 
     /**
      * @var string 费用结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FeeEndTime;
 
     /**
      * @var string 天数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DayDiff;
 
     /**
      * @var string 每日消耗
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DailyTotalCost;
 
     /**
      * @var string 订单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OrderId;
 
     /**
      * @var string 代金券
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VoucherPayAmount;
 
     /**
      * @var string 赠送金
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IncentivePayAmount;
 
     /**
      * @var string 分成金
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TransferPayAmount;
 
     /**
      * @var string 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PayerUin;
 
     /**
      * @var string 使用者UIN：实际使用资源的账号 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OwnerUin;
 
     /**
      * @var string 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OperateUin;
 
     /**
      * @var string 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductCode;
 
     /**
      * @var string 子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductCodeName;
 
     /**
      * @var string 地域类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionType;
 
     /**
      * @var string 地域类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionTypeName;
 
     /**
      * @var string 扩展字段1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Extend1;
 
     /**
      * @var string 扩展字段2
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Extend2;
 
     /**
      * @var string 扩展字段3
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Extend3;
 
     /**
      * @var string 扩展字段4
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Extend4;
 
     /**
      * @var string 扩展字段5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Extend5;
 
     /**
      * @var string 实例类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceType;
 
     /**
      * @var string 实例类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceTypeName;
 
     /**
      * @var string 扣费时间：结算扣费时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PayTime;
 
     /**
      * @var string 可用区：资源所属可用区，如广州三区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneName;
 
     /**
      * @var string 配置描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComponentConfig;
 
     /**
      * @var string 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
@@ -399,59 +318,32 @@ class ConsumptionResourceSummaryDataItem extends AbstractModel
      * @param string $BusinessCodeName 产品名称
      * @param string $ConsumptionTypeName 消耗类型
      * @param string $RealCost 折前价
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FeeBeginTime 费用起始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FeeEndTime 费用结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DayDiff 天数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DailyTotalCost 每日消耗
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OrderId 订单号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VoucherPayAmount 代金券
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IncentivePayAmount 赠送金
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TransferPayAmount 分成金
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PayerUin 支付者UIN：支付者的账号 ID，账号 ID 是用户在腾讯云的唯一账号标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OwnerUin 使用者UIN：实际使用资源的账号 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OperateUin 操作者UIN：操作者账号 ID（预付费资源下单或后付费操作开通资源账号的 ID 或者角色 ID ）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProductCode 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProductCodeName 子产品名称：用户采购的具体产品细分类型，例如：云服务器 CVM-标准型 S1
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegionType 地域类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegionTypeName 地域类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Extend1 扩展字段1
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Extend2 扩展字段2
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Extend3 扩展字段3
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Extend4 扩展字段4
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Extend5 扩展字段5
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceType 实例类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceTypeName 实例类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PayTime 扣费时间：结算扣费时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ZoneName 可用区：资源所属可用区，如广州三区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ComponentConfig 配置描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Tags 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

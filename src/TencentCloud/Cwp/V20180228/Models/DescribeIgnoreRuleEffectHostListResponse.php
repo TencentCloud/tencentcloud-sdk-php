@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * DescribeIgnoreRuleEffectHostList返回参数结构体
  *
  * @method array getIgnoreRuleEffectHostList() 获取忽略检测项影响主机列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIgnoreRuleEffectHostList(array $IgnoreRuleEffectHostList) 设置忽略检测项影响主机列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取分页查询记录总数
  * @method void setTotalCount(integer $TotalCount) 设置分页查询记录总数
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -33,7 +31,6 @@ class DescribeIgnoreRuleEffectHostListResponse extends AbstractModel
 {
     /**
      * @var array 忽略检测项影响主机列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IgnoreRuleEffectHostList;
 
@@ -49,7 +46,6 @@ class DescribeIgnoreRuleEffectHostListResponse extends AbstractModel
 
     /**
      * @param array $IgnoreRuleEffectHostList 忽略检测项影响主机列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 分页查询记录总数
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

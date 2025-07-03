@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 体检报告-口腔科
  *
  * @method StomatologyToothDecay getToothDecay() 获取龋齿
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setToothDecay(StomatologyToothDecay $ToothDecay) 设置龋齿
-注意：此字段可能返回 null，表示取不到有效值。
  * @method StomatologyGingiva getGingiva() 获取牙龈
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGingiva(StomatologyGingiva $Gingiva) 设置牙龈
-注意：此字段可能返回 null，表示取不到有效值。
  * @method StomatologyPeriodontics getPeriodontics() 获取牙周
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPeriodontics(StomatologyPeriodontics $Periodontics) 设置牙周
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getOthers() 获取口腔其他
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOthers(array $Others) 设置口腔其他
-注意：此字段可能返回 null，表示取不到有效值。
  * @method StomatologyBriefSummary getBriefSummary() 获取小结
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBriefSummary(StomatologyBriefSummary $BriefSummary) 设置小结
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class StomatologyBaseItem extends AbstractModel
 {
     /**
      * @var StomatologyToothDecay 龋齿
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ToothDecay;
 
     /**
      * @var StomatologyGingiva 牙龈
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Gingiva;
 
     /**
      * @var StomatologyPeriodontics 牙周
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Periodontics;
 
     /**
      * @var array 口腔其他
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Others;
 
     /**
      * @var StomatologyBriefSummary 小结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BriefSummary;
 
     /**
      * @param StomatologyToothDecay $ToothDecay 龋齿
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StomatologyGingiva $Gingiva 牙龈
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StomatologyPeriodontics $Periodontics 牙周
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Others 口腔其他
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StomatologyBriefSummary $BriefSummary 小结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

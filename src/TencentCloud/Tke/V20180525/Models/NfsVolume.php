@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() 获取nfs volume 数据卷名称
  * @method void setName(string $Name) 设置nfs volume 数据卷名称
- * @method string getServer() 获取NFS 服务器地址
- * @method void setServer(string $Server) 设置NFS 服务器地址
  * @method string getPath() 获取NFS 数据卷路径
  * @method void setPath(string $Path) 设置NFS 数据卷路径
+ * @method string getServer() 获取NFS 服务器地址
+ * @method void setServer(string $Server) 设置NFS 服务器地址
  * @method boolean getReadOnly() 获取默认为 False
  * @method void setReadOnly(boolean $ReadOnly) 设置默认为 False
  */
@@ -37,14 +37,14 @@ class NfsVolume extends AbstractModel
     public $Name;
 
     /**
-     * @var string NFS 服务器地址
-     */
-    public $Server;
-
-    /**
      * @var string NFS 数据卷路径
      */
     public $Path;
+
+    /**
+     * @var string NFS 服务器地址
+     */
+    public $Server;
 
     /**
      * @var boolean 默认为 False
@@ -53,8 +53,8 @@ class NfsVolume extends AbstractModel
 
     /**
      * @param string $Name nfs volume 数据卷名称
-     * @param string $Server NFS 服务器地址
      * @param string $Path NFS 数据卷路径
+     * @param string $Server NFS 服务器地址
      * @param boolean $ReadOnly 默认为 False
      */
     function __construct()
@@ -74,12 +74,12 @@ class NfsVolume extends AbstractModel
             $this->Name = $param["Name"];
         }
 
-        if (array_key_exists("Server",$param) and $param["Server"] !== null) {
-            $this->Server = $param["Server"];
-        }
-
         if (array_key_exists("Path",$param) and $param["Path"] !== null) {
             $this->Path = $param["Path"];
+        }
+
+        if (array_key_exists("Server",$param) and $param["Server"] !== null) {
+            $this->Server = $param["Server"];
         }
 
         if (array_key_exists("ReadOnly",$param) and $param["ReadOnly"] !== null) {

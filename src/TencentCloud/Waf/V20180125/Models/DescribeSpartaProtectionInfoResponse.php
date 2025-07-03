@@ -71,9 +71,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getIsKeepAlive() 获取与源站是否保持长连接
  * @method void setIsKeepAlive(string $IsKeepAlive) 设置与源站是否保持长连接
  * @method string getAnycast() 获取0：BGP 1：Anycast
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAnycast(string $Anycast) 设置0：BGP 1：Anycast
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -206,7 +204,6 @@ class DescribeSpartaProtectionInfoResponse extends AbstractModel
 
     /**
      * @var string 0：BGP 1：Anycast
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Anycast;
 
@@ -242,7 +239,6 @@ class DescribeSpartaProtectionInfoResponse extends AbstractModel
      * @param string $Level 防御等级,100,200,300
      * @param string $IsKeepAlive 与源站是否保持长连接
      * @param string $Anycast 0：BGP 1：Anycast
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

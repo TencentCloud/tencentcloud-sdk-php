@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StartCpuExpand返回参数结构体
  *
- * @method string getAsyncRequestId() 获取异步任务 ID 。可以调用DescribeAsyncRequest 传入该 ID ，进行任务执行进度的查询
- * @method void setAsyncRequestId(string $AsyncRequestId) 设置异步任务 ID 。可以调用DescribeAsyncRequest 传入该 ID ，进行任务执行进度的查询
+ * @method string getAsyncRequestId() 获取异步任务 ID 。可以调用 DescribeAsyncRequest 传入该 ID，进行任务执行进度的查询。
+ * @method void setAsyncRequestId(string $AsyncRequestId) 设置异步任务 ID 。可以调用 DescribeAsyncRequest 传入该 ID，进行任务执行进度的查询。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class StartCpuExpandResponse extends AbstractModel
 {
     /**
-     * @var string 异步任务 ID 。可以调用DescribeAsyncRequest 传入该 ID ，进行任务执行进度的查询
+     * @var string 异步任务 ID 。可以调用 DescribeAsyncRequest 传入该 ID，进行任务执行进度的查询。
      */
     public $AsyncRequestId;
 
@@ -38,7 +38,7 @@ class StartCpuExpandResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $AsyncRequestId 异步任务 ID 。可以调用DescribeAsyncRequest 传入该 ID ，进行任务执行进度的查询
+     * @param string $AsyncRequestId 异步任务 ID 。可以调用 DescribeAsyncRequest 传入该 ID，进行任务执行进度的查询。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

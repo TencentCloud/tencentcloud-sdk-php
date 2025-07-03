@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 探针使用TcpSocket检测容器
  *
  * @method integer getPort() 获取TcpSocket检测的端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPort(integer $Port) 设置TcpSocket检测的端口
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TcpSocket extends AbstractModel
 {
     /**
      * @var integer TcpSocket检测的端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Port;
 
     /**
      * @param integer $Port TcpSocket检测的端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

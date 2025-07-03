@@ -21,29 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * DescribeSecLogDeliveryKafkaSetting返回参数结构体
  *
  * @method string getInstanceID() 获取消息队列实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceID(string $InstanceID) 设置消息队列实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceName() 获取消息队列实例名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceName(string $InstanceName) 设置消息队列实例名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDomain() 获取域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomain(string $Domain) 设置域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLogTypeList() 获取日志类型队列
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogTypeList(array $LogTypeList) 设置日志类型队列
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUser() 获取用户名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUser(string $User) 设置用户名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegionID() 获取地域ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegionID(string $RegionID) 设置地域ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -51,37 +39,31 @@ class DescribeSecLogDeliveryKafkaSettingResponse extends AbstractModel
 {
     /**
      * @var string 消息队列实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceID;
 
     /**
      * @var string 消息队列实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceName;
 
     /**
      * @var string 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Domain;
 
     /**
      * @var array 日志类型队列
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogTypeList;
 
     /**
      * @var string 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $User;
 
     /**
      * @var string 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegionID;
 
@@ -92,17 +74,11 @@ class DescribeSecLogDeliveryKafkaSettingResponse extends AbstractModel
 
     /**
      * @param string $InstanceID 消息队列实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 消息队列实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Domain 域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $LogTypeList 日志类型队列
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $User 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RegionID 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

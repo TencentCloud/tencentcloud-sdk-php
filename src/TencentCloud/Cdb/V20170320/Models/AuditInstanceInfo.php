@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 审计实例详情
  *
  * @method integer getProjectId() 获取项目ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectId(integer $ProjectId) 设置项目ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTagList() 获取标签信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagList(array $TagList) 设置标签信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDbType() 获取数据库内核类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDbType(string $DbType) 设置数据库内核类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDbVersion() 获取数据库内核版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDbVersion(string $DbVersion) 设置数据库内核版本
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AuditInstanceInfo extends AbstractModel
 {
     /**
      * @var integer 项目ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectId;
 
     /**
      * @var array 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagList;
 
     /**
      * @var string 数据库内核类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DbType;
 
     /**
      * @var string 数据库内核版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DbVersion;
 
     /**
      * @param integer $ProjectId 项目ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TagList 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DbType 数据库内核类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DbVersion 数据库内核版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

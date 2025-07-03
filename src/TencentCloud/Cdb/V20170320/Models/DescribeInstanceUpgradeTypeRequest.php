@@ -20,92 +20,92 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceUpgradeType请求参数结构体
  *
- * @method string getInstanceId() 获取实例id
- * @method void setInstanceId(string $InstanceId) 设置实例id
- * @method float getDstCpu() 获取目标实例cpu
- * @method void setDstCpu(float $DstCpu) 设置目标实例cpu
- * @method integer getDstMemory() 获取目标实例内存
- * @method void setDstMemory(integer $DstMemory) 设置目标实例内存
- * @method integer getDstDisk() 获取目标实例磁盘
- * @method void setDstDisk(integer $DstDisk) 设置目标实例磁盘
- * @method string getDstVersion() 获取目标实例版本
- * @method void setDstVersion(string $DstVersion) 设置目标实例版本
- * @method integer getDstDeployMode() 获取目标实例部署模型
- * @method void setDstDeployMode(integer $DstDeployMode) 设置目标实例部署模型
- * @method integer getDstProtectMode() 获取目标实例复制类型
- * @method void setDstProtectMode(integer $DstProtectMode) 设置目标实例复制类型
- * @method integer getDstSlaveZone() 获取目标实例备机1可用区
- * @method void setDstSlaveZone(integer $DstSlaveZone) 设置目标实例备机1可用区
- * @method integer getDstBackupZone() 获取目标实例备机2可用区
- * @method void setDstBackupZone(integer $DstBackupZone) 设置目标实例备机2可用区
- * @method string getDstCdbType() 获取目标实例类型
- * @method void setDstCdbType(string $DstCdbType) 设置目标实例类型
- * @method integer getDstZoneId() 获取目标实例主可用区
- * @method void setDstZoneId(integer $DstZoneId) 设置目标实例主可用区
- * @method NodeDistribution getNodeDistribution() 获取独享集群CDB实例的节点分布情况
- * @method void setNodeDistribution(NodeDistribution $NodeDistribution) 设置独享集群CDB实例的节点分布情况
+ * @method string getInstanceId() 获取实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。
+ * @method float getDstCpu() 获取目标实例 CPU 的核数。
+ * @method void setDstCpu(float $DstCpu) 设置目标实例 CPU 的核数。
+ * @method integer getDstMemory() 获取目标实例内存大小，单位：MB。
+ * @method void setDstMemory(integer $DstMemory) 设置目标实例内存大小，单位：MB。
+ * @method integer getDstDisk() 获取目标实例磁盘大小，单位：GB。
+ * @method void setDstDisk(integer $DstDisk) 设置目标实例磁盘大小，单位：GB。
+ * @method string getDstVersion() 获取目标实例数据库版本。
+ * @method void setDstVersion(string $DstVersion) 设置目标实例数据库版本。
+ * @method integer getDstDeployMode() 获取目标实例部署模型。
+ * @method void setDstDeployMode(integer $DstDeployMode) 设置目标实例部署模型。
+ * @method integer getDstProtectMode() 获取目标实例复制类型。
+ * @method void setDstProtectMode(integer $DstProtectMode) 设置目标实例复制类型。
+ * @method integer getDstSlaveZone() 获取目标实例备机1可用区。
+ * @method void setDstSlaveZone(integer $DstSlaveZone) 设置目标实例备机1可用区。
+ * @method integer getDstBackupZone() 获取目标实例备机2可用区。
+ * @method void setDstBackupZone(integer $DstBackupZone) 设置目标实例备机2可用区。
+ * @method string getDstCdbType() 获取目标实例类型。
+ * @method void setDstCdbType(string $DstCdbType) 设置目标实例类型。
+ * @method integer getDstZoneId() 获取目标实例主可用区。
+ * @method void setDstZoneId(integer $DstZoneId) 设置目标实例主可用区。
+ * @method NodeDistribution getNodeDistribution() 获取独享集群 CDB 实例的节点分布情况。
+ * @method void setNodeDistribution(NodeDistribution $NodeDistribution) 设置独享集群 CDB 实例的节点分布情况。
  * @method ClusterTopology getClusterTopology() 获取集群版的节点拓扑配置
  * @method void setClusterTopology(ClusterTopology $ClusterTopology) 设置集群版的节点拓扑配置
  */
 class DescribeInstanceUpgradeTypeRequest extends AbstractModel
 {
     /**
-     * @var string 实例id
+     * @var string 实例 ID。
      */
     public $InstanceId;
 
     /**
-     * @var float 目标实例cpu
+     * @var float 目标实例 CPU 的核数。
      */
     public $DstCpu;
 
     /**
-     * @var integer 目标实例内存
+     * @var integer 目标实例内存大小，单位：MB。
      */
     public $DstMemory;
 
     /**
-     * @var integer 目标实例磁盘
+     * @var integer 目标实例磁盘大小，单位：GB。
      */
     public $DstDisk;
 
     /**
-     * @var string 目标实例版本
+     * @var string 目标实例数据库版本。
      */
     public $DstVersion;
 
     /**
-     * @var integer 目标实例部署模型
+     * @var integer 目标实例部署模型。
      */
     public $DstDeployMode;
 
     /**
-     * @var integer 目标实例复制类型
+     * @var integer 目标实例复制类型。
      */
     public $DstProtectMode;
 
     /**
-     * @var integer 目标实例备机1可用区
+     * @var integer 目标实例备机1可用区。
      */
     public $DstSlaveZone;
 
     /**
-     * @var integer 目标实例备机2可用区
+     * @var integer 目标实例备机2可用区。
      */
     public $DstBackupZone;
 
     /**
-     * @var string 目标实例类型
+     * @var string 目标实例类型。
      */
     public $DstCdbType;
 
     /**
-     * @var integer 目标实例主可用区
+     * @var integer 目标实例主可用区。
      */
     public $DstZoneId;
 
     /**
-     * @var NodeDistribution 独享集群CDB实例的节点分布情况
+     * @var NodeDistribution 独享集群 CDB 实例的节点分布情况。
      */
     public $NodeDistribution;
 
@@ -115,18 +115,18 @@ class DescribeInstanceUpgradeTypeRequest extends AbstractModel
     public $ClusterTopology;
 
     /**
-     * @param string $InstanceId 实例id
-     * @param float $DstCpu 目标实例cpu
-     * @param integer $DstMemory 目标实例内存
-     * @param integer $DstDisk 目标实例磁盘
-     * @param string $DstVersion 目标实例版本
-     * @param integer $DstDeployMode 目标实例部署模型
-     * @param integer $DstProtectMode 目标实例复制类型
-     * @param integer $DstSlaveZone 目标实例备机1可用区
-     * @param integer $DstBackupZone 目标实例备机2可用区
-     * @param string $DstCdbType 目标实例类型
-     * @param integer $DstZoneId 目标实例主可用区
-     * @param NodeDistribution $NodeDistribution 独享集群CDB实例的节点分布情况
+     * @param string $InstanceId 实例 ID。
+     * @param float $DstCpu 目标实例 CPU 的核数。
+     * @param integer $DstMemory 目标实例内存大小，单位：MB。
+     * @param integer $DstDisk 目标实例磁盘大小，单位：GB。
+     * @param string $DstVersion 目标实例数据库版本。
+     * @param integer $DstDeployMode 目标实例部署模型。
+     * @param integer $DstProtectMode 目标实例复制类型。
+     * @param integer $DstSlaveZone 目标实例备机1可用区。
+     * @param integer $DstBackupZone 目标实例备机2可用区。
+     * @param string $DstCdbType 目标实例类型。
+     * @param integer $DstZoneId 目标实例主可用区。
+     * @param NodeDistribution $NodeDistribution 独享集群 CDB 实例的节点分布情况。
      * @param ClusterTopology $ClusterTopology 集群版的节点拓扑配置
      */
     function __construct()

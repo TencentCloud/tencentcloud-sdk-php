@@ -21,87 +21,62 @@ use TencentCloud\Common\AbstractModel;
  * 同步任务的步骤信息
  *
  * @method integer getStepAll() 获取总步骤数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStepAll(integer $StepAll) 设置总步骤数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStepNow() 获取当前步骤
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStepNow(integer $StepNow) 设置当前步骤
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProgress() 获取总体进度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProgress(integer $Progress) 设置总体进度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCurrentStepProgress() 获取当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCurrentStepProgress(integer $CurrentStepProgress) 设置当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMasterSlaveDistance() 获取同步两端数据量差距
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMasterSlaveDistance(integer $MasterSlaveDistance) 设置同步两端数据量差距
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSecondsBehindMaster() 获取同步两端时间差距
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecondsBehindMaster(integer $SecondsBehindMaster) 设置同步两端时间差距
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMessage() 获取总体描述信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置总体描述信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getStepInfos() 获取详细步骤信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStepInfos(array $StepInfos) 设置详细步骤信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCauseOfCompareDisable() 获取不能发起一致性校验的原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCauseOfCompareDisable(string $CauseOfCompareDisable) 设置不能发起一致性校验的原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ErrInfo getErrInfo() 获取任务的错误和解决方案信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrInfo(ErrInfo $ErrInfo) 设置任务的错误和解决方案信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SyncDetailInfo extends AbstractModel
 {
     /**
      * @var integer 总步骤数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StepAll;
 
     /**
      * @var integer 当前步骤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StepNow;
 
     /**
      * @var integer 总体进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Progress;
 
     /**
      * @var integer 当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CurrentStepProgress;
 
     /**
      * @var integer 同步两端数据量差距
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MasterSlaveDistance;
 
     /**
      * @var integer 同步两端时间差距
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecondsBehindMaster;
 
     /**
      * @var string 总体描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
@@ -113,37 +88,26 @@ class SyncDetailInfo extends AbstractModel
 
     /**
      * @var string 不能发起一致性校验的原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CauseOfCompareDisable;
 
     /**
      * @var ErrInfo 任务的错误和解决方案信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrInfo;
 
     /**
      * @param integer $StepAll 总步骤数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StepNow 当前步骤
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Progress 总体进度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CurrentStepProgress 当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MasterSlaveDistance 同步两端数据量差距
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SecondsBehindMaster 同步两端时间差距
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message 总体描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $StepInfos 详细步骤信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CauseOfCompareDisable 不能发起一致性校验的原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrInfo $ErrInfo 任务的错误和解决方案信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

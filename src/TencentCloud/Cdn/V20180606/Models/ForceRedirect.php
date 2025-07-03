@@ -37,10 +37,10 @@ http：强制 http 跳转
 https：强制 https 跳转
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRedirectStatusCode() 获取强制跳转时返回状态码 
-支持 301、302
+支持 301、302、307、308
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRedirectStatusCode(integer $RedirectStatusCode) 设置强制跳转时返回状态码 
-支持 301、302
+支持 301、302、307、308
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCarryHeaders() 获取强制跳转时是否返回增加的头部。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -67,7 +67,7 @@ https：强制 https 跳转
 
     /**
      * @var integer 强制跳转时返回状态码 
-支持 301、302
+支持 301、302、307、308
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RedirectStatusCode;
@@ -88,7 +88,7 @@ http：强制 http 跳转
 https：强制 https 跳转
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RedirectStatusCode 强制跳转时返回状态码 
-支持 301、302
+支持 301、302、307、308
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CarryHeaders 强制跳转时是否返回增加的头部。
 注意：此字段可能返回 null，表示取不到有效值。

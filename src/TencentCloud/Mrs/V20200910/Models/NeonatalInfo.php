@@ -21,105 +21,73 @@ use TencentCloud\Common\AbstractModel;
  * 新生儿信息
  *
  * @method string getNeonatalName() 获取新生儿名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNeonatalName(string $NeonatalName) 设置新生儿名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNeonatalGender() 获取新生儿性别
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNeonatalGender(string $NeonatalGender) 设置新生儿性别
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBirthLength() 获取出生身长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBirthLength(string $BirthLength) 设置出生身长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBirthWeight() 获取出生体重
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBirthWeight(string $BirthWeight) 设置出生体重
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGestationalAge() 获取出生孕周
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGestationalAge(string $GestationalAge) 设置出生孕周
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBirthTime() 获取出生时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBirthTime(string $BirthTime) 设置出生时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBirthPlace() 获取出生地点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBirthPlace(string $BirthPlace) 设置出生地点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMedicalInstitutions() 获取医疗机构
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMedicalInstitutions(string $MedicalInstitutions) 设置医疗机构
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NeonatalInfo extends AbstractModel
 {
     /**
      * @var string 新生儿名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NeonatalName;
 
     /**
      * @var string 新生儿性别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NeonatalGender;
 
     /**
      * @var string 出生身长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BirthLength;
 
     /**
      * @var string 出生体重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BirthWeight;
 
     /**
      * @var string 出生孕周
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GestationalAge;
 
     /**
      * @var string 出生时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BirthTime;
 
     /**
      * @var string 出生地点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BirthPlace;
 
     /**
      * @var string 医疗机构
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MedicalInstitutions;
 
     /**
      * @param string $NeonatalName 新生儿名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NeonatalGender 新生儿性别
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BirthLength 出生身长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BirthWeight 出生体重
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GestationalAge 出生孕周
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BirthTime 出生时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BirthPlace 出生地点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MedicalInstitutions 医疗机构
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

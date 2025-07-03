@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * FilterGroups 条件过滤组
  *
  * @method array getFilters() 获取Filters 条件过滤
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFilters(array $Filters) 设置Filters 条件过滤
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class FilterGroup extends AbstractModel
 {
     /**
      * @var array Filters 条件过滤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Filters;
 
     /**
      * @param array $Filters Filters 条件过滤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

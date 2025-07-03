@@ -64,6 +64,8 @@ postgres 表示云数据库 PostgreSQL,
 cynosdbpg 表示TDSQL-C PostgreSQL版,
 cynosdbmysql 表示TDSQL-C MySQL版,
 selfbuilt-db 表示自建数据库
+ * @method string getScanRange() 获取	full:全量扫描 incre:变更扫描
+ * @method void setScanRange(string $ScanRange) 设置	full:全量扫描 incre:变更扫描
  */
 class ModifyDSPADiscoveryTaskRequest extends AbstractModel
 {
@@ -146,6 +148,11 @@ selfbuilt-db 表示自建数据库
     public $DataSourceType;
 
     /**
+     * @var string 	full:全量扫描 incre:变更扫描
+     */
+    public $ScanRange;
+
+    /**
      * @param string $DspaId DSPA实例ID
      * @param integer $TaskId 任务ID
      * @param string $Name 任务名称，1-60个字符，仅允许输入中文、英文字母、数字、'_'、'-'，并且开头和结尾需为中文、英文字母或者数字，Name不可重复
@@ -168,6 +175,7 @@ postgres 表示云数据库 PostgreSQL,
 cynosdbpg 表示TDSQL-C PostgreSQL版,
 cynosdbmysql 表示TDSQL-C MySQL版,
 selfbuilt-db 表示自建数据库
+     * @param string $ScanRange 	full:全量扫描 incre:变更扫描
      */
     function __construct()
     {
@@ -236,6 +244,10 @@ selfbuilt-db 表示自建数据库
 
         if (array_key_exists("DataSourceType",$param) and $param["DataSourceType"] !== null) {
             $this->DataSourceType = $param["DataSourceType"];
+        }
+
+        if (array_key_exists("ScanRange",$param) and $param["ScanRange"] !== null) {
+            $this->ScanRange = $param["ScanRange"];
         }
     }
 }

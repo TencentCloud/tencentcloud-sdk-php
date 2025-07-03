@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdatePrometheusAgentStatus请求参数结构体
  *
- * @method string getInstanceId() 获取Prometheus 实例 ID，例如：prom-abcd1234
- * @method void setInstanceId(string $InstanceId) 设置Prometheus 实例 ID，例如：prom-abcd1234
+ * @method string getInstanceId() 获取Prometheus 实例 ID
+ * @method void setInstanceId(string $InstanceId) 设置Prometheus 实例 ID
  * @method array getAgentIds() 获取Agent ID 列表，例如：agent-abcd1234，可在控制台 Agent 管理中获取
  * @method void setAgentIds(array $AgentIds) 设置Agent ID 列表，例如：agent-abcd1234，可在控制台 Agent 管理中获取
  * @method integer getStatus() 获取要更新的状态
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class UpdatePrometheusAgentStatusRequest extends AbstractModel
 {
     /**
-     * @var string Prometheus 实例 ID，例如：prom-abcd1234
+     * @var string Prometheus 实例 ID
      */
     public $InstanceId;
 
@@ -51,7 +51,7 @@ class UpdatePrometheusAgentStatusRequest extends AbstractModel
     public $Status;
 
     /**
-     * @param string $InstanceId Prometheus 实例 ID，例如：prom-abcd1234
+     * @param string $InstanceId Prometheus 实例 ID
      * @param array $AgentIds Agent ID 列表，例如：agent-abcd1234，可在控制台 Agent 管理中获取
      * @param integer $Status 要更新的状态
 <li> 1= 开启 </li>

@@ -49,11 +49,13 @@ class DstInfo extends AbstractModel
 
     /**
      * @var string 目标实例vip。已废弃，无需填写
+     * @deprecated
      */
     public $Ip;
 
     /**
      * @var integer 目标实例vport。已废弃，无需填写
+     * @deprecated
      */
     public $Port;
 

@@ -25,6 +25,7 @@ use TencentCloud\Common\AbstractModel;
 <li>AsrWordsRecognition：语音关键词识别，</li>
 <li>OcrWordsRecognition：文本关键词识别，</li>
 <li>AsrFullTextRecognition：语音全文识别，</li>
+<li>AsrTranslateRecognition：语音翻译识别，</li>
 <li>OcrFullTextRecognition：文本全文识别，</li>
 <li>HeadTailRecognition：视频片头片尾识别，</li>
 <li>ObjectRecognition：物体识别。</li>
@@ -33,57 +34,44 @@ use TencentCloud\Common\AbstractModel;
 <li>AsrWordsRecognition：语音关键词识别，</li>
 <li>OcrWordsRecognition：文本关键词识别，</li>
 <li>AsrFullTextRecognition：语音全文识别，</li>
+<li>AsrTranslateRecognition：语音翻译识别，</li>
 <li>OcrFullTextRecognition：文本全文识别，</li>
 <li>HeadTailRecognition：视频片头片尾识别，</li>
 <li>ObjectRecognition：物体识别。</li>
  * @method AiRecognitionTaskHeadTailResult getHeadTailTask() 获取视频片头片尾识别结果，当 Type 为
  HeadTailRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeadTailTask(AiRecognitionTaskHeadTailResult $HeadTailTask) 设置视频片头片尾识别结果，当 Type 为
  HeadTailRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method AiRecognitionTaskSegmentResult getSegmentTask() 获取视频拆条识别结果，当 Type 为
  SegmentRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSegmentTask(AiRecognitionTaskSegmentResult $SegmentTask) 设置视频拆条识别结果，当 Type 为
  SegmentRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method AiRecognitionTaskFaceResult getFaceTask() 获取人脸识别结果，当 Type 为 
  FaceRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFaceTask(AiRecognitionTaskFaceResult $FaceTask) 设置人脸识别结果，当 Type 为 
  FaceRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method AiRecognitionTaskAsrWordsResult getAsrWordsTask() 获取语音关键词识别结果，当 Type 为
  AsrWordsRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAsrWordsTask(AiRecognitionTaskAsrWordsResult $AsrWordsTask) 设置语音关键词识别结果，当 Type 为
  AsrWordsRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method AiRecognitionTaskAsrFullTextResult getAsrFullTextTask() 获取语音全文识别结果，当 Type 为
  AsrFullTextRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAsrFullTextTask(AiRecognitionTaskAsrFullTextResult $AsrFullTextTask) 设置语音全文识别结果，当 Type 为
  AsrFullTextRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method AiRecognitionTaskAsrTranslateResult getAsrTranslateTask() 获取语音翻译结果，当 Type 为 AsrTranslateRecognition 时有效。
+ * @method void setAsrTranslateTask(AiRecognitionTaskAsrTranslateResult $AsrTranslateTask) 设置语音翻译结果，当 Type 为 AsrTranslateRecognition 时有效。
  * @method AiRecognitionTaskOcrWordsResult getOcrWordsTask() 获取文本关键词识别结果，当 Type 为
  OcrWordsRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOcrWordsTask(AiRecognitionTaskOcrWordsResult $OcrWordsTask) 设置文本关键词识别结果，当 Type 为
  OcrWordsRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method AiRecognitionTaskOcrFullTextResult getOcrFullTextTask() 获取文本全文识别结果，当 Type 为
  OcrFullTextRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOcrFullTextTask(AiRecognitionTaskOcrFullTextResult $OcrFullTextTask) 设置文本全文识别结果，当 Type 为
  OcrFullTextRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method AiRecognitionTaskObjectResult getObjectTask() 获取物体识别结果，当 Type 为
  ObjectRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setObjectTask(AiRecognitionTaskObjectResult $ObjectTask) 设置物体识别结果，当 Type 为
  ObjectRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AiRecognitionResult extends AbstractModel
 {
@@ -93,6 +81,7 @@ class AiRecognitionResult extends AbstractModel
 <li>AsrWordsRecognition：语音关键词识别，</li>
 <li>OcrWordsRecognition：文本关键词识别，</li>
 <li>AsrFullTextRecognition：语音全文识别，</li>
+<li>AsrTranslateRecognition：语音翻译识别，</li>
 <li>OcrFullTextRecognition：文本全文识别，</li>
 <li>HeadTailRecognition：视频片头片尾识别，</li>
 <li>ObjectRecognition：物体识别。</li>
@@ -102,56 +91,53 @@ class AiRecognitionResult extends AbstractModel
     /**
      * @var AiRecognitionTaskHeadTailResult 视频片头片尾识别结果，当 Type 为
  HeadTailRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HeadTailTask;
 
     /**
      * @var AiRecognitionTaskSegmentResult 视频拆条识别结果，当 Type 为
  SegmentRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SegmentTask;
 
     /**
      * @var AiRecognitionTaskFaceResult 人脸识别结果，当 Type 为 
  FaceRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FaceTask;
 
     /**
      * @var AiRecognitionTaskAsrWordsResult 语音关键词识别结果，当 Type 为
  AsrWordsRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AsrWordsTask;
 
     /**
      * @var AiRecognitionTaskAsrFullTextResult 语音全文识别结果，当 Type 为
  AsrFullTextRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AsrFullTextTask;
 
     /**
+     * @var AiRecognitionTaskAsrTranslateResult 语音翻译结果，当 Type 为 AsrTranslateRecognition 时有效。
+     */
+    public $AsrTranslateTask;
+
+    /**
      * @var AiRecognitionTaskOcrWordsResult 文本关键词识别结果，当 Type 为
  OcrWordsRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OcrWordsTask;
 
     /**
      * @var AiRecognitionTaskOcrFullTextResult 文本全文识别结果，当 Type 为
  OcrFullTextRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OcrFullTextTask;
 
     /**
      * @var AiRecognitionTaskObjectResult 物体识别结果，当 Type 为
  ObjectRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ObjectTask;
 
@@ -161,33 +147,27 @@ class AiRecognitionResult extends AbstractModel
 <li>AsrWordsRecognition：语音关键词识别，</li>
 <li>OcrWordsRecognition：文本关键词识别，</li>
 <li>AsrFullTextRecognition：语音全文识别，</li>
+<li>AsrTranslateRecognition：语音翻译识别，</li>
 <li>OcrFullTextRecognition：文本全文识别，</li>
 <li>HeadTailRecognition：视频片头片尾识别，</li>
 <li>ObjectRecognition：物体识别。</li>
      * @param AiRecognitionTaskHeadTailResult $HeadTailTask 视频片头片尾识别结果，当 Type 为
  HeadTailRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AiRecognitionTaskSegmentResult $SegmentTask 视频拆条识别结果，当 Type 为
  SegmentRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AiRecognitionTaskFaceResult $FaceTask 人脸识别结果，当 Type 为 
  FaceRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AiRecognitionTaskAsrWordsResult $AsrWordsTask 语音关键词识别结果，当 Type 为
  AsrWordsRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AiRecognitionTaskAsrFullTextResult $AsrFullTextTask 语音全文识别结果，当 Type 为
  AsrFullTextRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param AiRecognitionTaskAsrTranslateResult $AsrTranslateTask 语音翻译结果，当 Type 为 AsrTranslateRecognition 时有效。
      * @param AiRecognitionTaskOcrWordsResult $OcrWordsTask 文本关键词识别结果，当 Type 为
  OcrWordsRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AiRecognitionTaskOcrFullTextResult $OcrFullTextTask 文本全文识别结果，当 Type 为
  OcrFullTextRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AiRecognitionTaskObjectResult $ObjectTask 物体识别结果，当 Type 为
  ObjectRecognition 时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -229,6 +209,11 @@ class AiRecognitionResult extends AbstractModel
         if (array_key_exists("AsrFullTextTask",$param) and $param["AsrFullTextTask"] !== null) {
             $this->AsrFullTextTask = new AiRecognitionTaskAsrFullTextResult();
             $this->AsrFullTextTask->deserialize($param["AsrFullTextTask"]);
+        }
+
+        if (array_key_exists("AsrTranslateTask",$param) and $param["AsrTranslateTask"] !== null) {
+            $this->AsrTranslateTask = new AiRecognitionTaskAsrTranslateResult();
+            $this->AsrTranslateTask->deserialize($param["AsrTranslateTask"]);
         }
 
         if (array_key_exists("OcrWordsTask",$param) and $param["OcrWordsTask"] !== null) {

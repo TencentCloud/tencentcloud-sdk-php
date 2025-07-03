@@ -18,77 +18,52 @@ namespace TencentCloud\Ioa\V20220601\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * - [ ] 过滤条件<br>
-
-<li>Name - String - 是否必填：否 - 操作符: ilike  - 排序支持：否- 根据分组名称进行查询。</li>
-分页参数<br>
-<li>PageNum 从1开始，小于等于0时使用默认参数。</li>
-<li>PageSize 最大值5000，最好不超过100。</li>
+ * 这是一个多接口的公共数据结构，用于接口根据条件进行过滤和分页。具体支持哪些过滤条件，参考具体使用该结构的接口字段描述
  *
  * @method array getFilters() 获取Filters 条件过滤
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFilters(array $Filters) 设置Filters 条件过滤
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getFilterGroups() 获取FilterGroups 条件过滤组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFilterGroups(array $FilterGroups) 设置FilterGroups 条件过滤组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method Sort getSort() 获取Sort 排序字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSort(Sort $Sort) 设置Sort 排序字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPageSize() 获取PageSize 每页获取数(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPageSize(integer $PageSize) 设置PageSize 每页获取数(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPageNum() 获取PageNum 获取第几页(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPageNum(integer $PageNum) 设置PageNum 获取第几页(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Condition extends AbstractModel
 {
     /**
      * @var array Filters 条件过滤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Filters;
 
     /**
      * @var array FilterGroups 条件过滤组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FilterGroups;
 
     /**
      * @var Sort Sort 排序字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Sort;
 
     /**
      * @var integer PageSize 每页获取数(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PageSize;
 
     /**
      * @var integer PageNum 获取第几页(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PageNum;
 
     /**
      * @param array $Filters Filters 条件过滤
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FilterGroups FilterGroups 条件过滤组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Sort $Sort Sort 排序字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PageSize PageSize 每页获取数(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PageNum PageNum 获取第几页(只支持32位)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

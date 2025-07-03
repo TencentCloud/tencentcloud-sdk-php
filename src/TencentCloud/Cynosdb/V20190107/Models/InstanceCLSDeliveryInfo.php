@@ -21,129 +21,105 @@ use TencentCloud\Common\AbstractModel;
  * 实例日志投递信息
  *
  * @method string getInstanceId() 获取实例id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置实例id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceName() 获取实例name
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceName(string $InstanceName) 设置实例name
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTopicId() 获取日志主题id
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicId(string $TopicId) 设置日志主题id
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTopicName() 获取日志主题name
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicName(string $TopicName) 设置日志主题name
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupId() 获取日志集id
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupId(string $GroupId) 设置日志集id
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupName() 获取日志集name
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupName(string $GroupName) 设置日志集name
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegion() 获取日志投递地域
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置日志投递地域
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取投递状态creating,running,offlining,offlined
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置投递状态creating,running,offlining,offlined
 
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLogType() 获取日志类型
+ * @method void setLogType(string $LogType) 设置日志类型
  */
 class InstanceCLSDeliveryInfo extends AbstractModel
 {
     /**
      * @var string 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var string 实例name
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceName;
 
     /**
      * @var string 日志主题id
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicId;
 
     /**
      * @var string 日志主题name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicName;
 
     /**
      * @var string 日志集id
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupId;
 
     /**
      * @var string 日志集name
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupName;
 
     /**
      * @var string 日志投递地域
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
      * @var string 投递状态creating,running,offlining,offlined
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
+     * @var string 日志类型
+     */
+    public $LogType;
+
+    /**
      * @param string $InstanceId 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 实例name
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TopicId 日志主题id
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TopicName 日志主题name
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupId 日志集id
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 日志集name
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 日志投递地域
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 投递状态creating,running,offlining,offlined
 
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LogType 日志类型
      */
     function __construct()
     {
@@ -188,6 +164,10 @@ class InstanceCLSDeliveryInfo extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("LogType",$param) and $param["LogType"] !== null) {
+            $this->LogType = $param["LogType"];
         }
     }
 }

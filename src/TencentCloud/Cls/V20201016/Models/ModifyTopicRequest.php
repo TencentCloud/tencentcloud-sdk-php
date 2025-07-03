@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExtends(TopicExtendInfo $Extends) 设置日志主题扩展信息
  * @method integer getPartitionCount() 获取日志主题分区数量
  * @method void setPartitionCount(integer $PartitionCount) 设置日志主题分区数量
+ * @method string getCancelTopicAsyncTaskID() 获取取消切换存储任务的id
+ * @method void setCancelTopicAsyncTaskID(string $CancelTopicAsyncTaskID) 设置取消切换存储任务的id
  */
 class ModifyTopicRequest extends AbstractModel
 {
@@ -117,6 +119,11 @@ class ModifyTopicRequest extends AbstractModel
     public $PartitionCount;
 
     /**
+     * @var string 取消切换存储任务的id
+     */
+    public $CancelTopicAsyncTaskID;
+
+    /**
      * @param string $TopicId 日志主题ID
      * @param string $TopicName 日志主题名称
      * @param array $Tags 标签描述列表，通过指定该参数可以同时绑定标签到相应的日志主题。最大支持10个标签键值对，并且不能有重复的键值对。
@@ -132,6 +139,7 @@ class ModifyTopicRequest extends AbstractModel
 开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
      * @param TopicExtendInfo $Extends 日志主题扩展信息
      * @param integer $PartitionCount 日志主题分区数量
+     * @param string $CancelTopicAsyncTaskID 取消切换存储任务的id
      */
     function __construct()
     {
@@ -198,6 +206,10 @@ class ModifyTopicRequest extends AbstractModel
 
         if (array_key_exists("PartitionCount",$param) and $param["PartitionCount"] !== null) {
             $this->PartitionCount = $param["PartitionCount"];
+        }
+
+        if (array_key_exists("CancelTopicAsyncTaskID",$param) and $param["CancelTopicAsyncTaskID"] !== null) {
+            $this->CancelTopicAsyncTaskID = $param["CancelTopicAsyncTaskID"];
         }
     }
 }

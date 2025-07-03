@@ -32,6 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLocalTaskID(integer $LocalTaskID) 设置本地镜像重新漏洞扫描时的任务ID
  * @method integer getRegistryTaskID() 获取仓库镜像重新漏洞扫描时的任务ID
  * @method void setRegistryTaskID(integer $RegistryTaskID) 设置仓库镜像重新漏洞扫描时的任务ID
+ * @method boolean getLocalImageContainerRunning() 获取本地镜像容器运行中
+ * @method void setLocalImageContainerRunning(boolean $LocalImageContainerRunning) 设置本地镜像容器运行中
+ * @method boolean getRegistryImageContainerRunning() 获取仓库镜像容器运行中
+ * @method void setRegistryImageContainerRunning(boolean $RegistryImageContainerRunning) 设置仓库镜像容器运行中
+ * @method boolean getIsLatest() 获取仓库镜像是否是最新
+ * @method void setIsLatest(boolean $IsLatest) 设置仓库镜像是否是最新
  */
 class CreateVulScanTaskRequest extends AbstractModel
 {
@@ -66,12 +72,30 @@ class CreateVulScanTaskRequest extends AbstractModel
     public $RegistryTaskID;
 
     /**
+     * @var boolean 本地镜像容器运行中
+     */
+    public $LocalImageContainerRunning;
+
+    /**
+     * @var boolean 仓库镜像容器运行中
+     */
+    public $RegistryImageContainerRunning;
+
+    /**
+     * @var boolean 仓库镜像是否是最新
+     */
+    public $IsLatest;
+
+    /**
      * @param string $LocalImageScanType 本地镜像扫描范围类型。ALL:全部本地镜像，NOT_SCAN：全部已授权未扫描本地镜像，IMAGEIDS:自选本地镜像ID
      * @param array $LocalImageIDs 根据已授权的本地镜像IDs扫描，优先权高于根据满足条件的已授权的本地镜像。
      * @param string $RegistryImageScanType 仓库镜像扫描范围类型。ALL:全部仓库镜像，NOT_SCAN：全部已授权未扫描仓库镜像，IMAGEIDS:自选仓库镜像ID
      * @param array $RegistryImageIDs 根据已授权的仓库镜像IDs扫描，优先权高于根据满足条件的已授权的仓库镜像。
      * @param integer $LocalTaskID 本地镜像重新漏洞扫描时的任务ID
      * @param integer $RegistryTaskID 仓库镜像重新漏洞扫描时的任务ID
+     * @param boolean $LocalImageContainerRunning 本地镜像容器运行中
+     * @param boolean $RegistryImageContainerRunning 仓库镜像容器运行中
+     * @param boolean $IsLatest 仓库镜像是否是最新
      */
     function __construct()
     {
@@ -108,6 +132,18 @@ class CreateVulScanTaskRequest extends AbstractModel
 
         if (array_key_exists("RegistryTaskID",$param) and $param["RegistryTaskID"] !== null) {
             $this->RegistryTaskID = $param["RegistryTaskID"];
+        }
+
+        if (array_key_exists("LocalImageContainerRunning",$param) and $param["LocalImageContainerRunning"] !== null) {
+            $this->LocalImageContainerRunning = $param["LocalImageContainerRunning"];
+        }
+
+        if (array_key_exists("RegistryImageContainerRunning",$param) and $param["RegistryImageContainerRunning"] !== null) {
+            $this->RegistryImageContainerRunning = $param["RegistryImageContainerRunning"];
+        }
+
+        if (array_key_exists("IsLatest",$param) and $param["IsLatest"] !== null) {
+            $this->IsLatest = $param["IsLatest"];
         }
     }
 }

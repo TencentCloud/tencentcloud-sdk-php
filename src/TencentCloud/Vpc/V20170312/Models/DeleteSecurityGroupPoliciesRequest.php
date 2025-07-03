@@ -23,7 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSecurityGroupId() 获取安全组实例ID，例如sg-33ocnj9n，可通过<a href="https://cloud.tencent.com/document/product/215/15808">DescribeSecurityGroups</a>获取。
  * @method void setSecurityGroupId(string $SecurityGroupId) 设置安全组实例ID，例如sg-33ocnj9n，可通过<a href="https://cloud.tencent.com/document/product/215/15808">DescribeSecurityGroups</a>获取。
  * @method SecurityGroupPolicySet getSecurityGroupPolicySet() 获取安全组规则集合。一个请求中只能删除单个方向的一条或多条规则。支持指定索引（PolicyIndex） 匹配删除和安全组规则匹配删除两种方式，一个请求中只能使用一种匹配方式。
+使用安全组规则匹配删除时，需要填写`Action`， `Protocol`， `CidrBlock`， `Port`参数。
  * @method void setSecurityGroupPolicySet(SecurityGroupPolicySet $SecurityGroupPolicySet) 设置安全组规则集合。一个请求中只能删除单个方向的一条或多条规则。支持指定索引（PolicyIndex） 匹配删除和安全组规则匹配删除两种方式，一个请求中只能使用一种匹配方式。
+使用安全组规则匹配删除时，需要填写`Action`， `Protocol`， `CidrBlock`， `Port`参数。
  */
 class DeleteSecurityGroupPoliciesRequest extends AbstractModel
 {
@@ -34,12 +36,14 @@ class DeleteSecurityGroupPoliciesRequest extends AbstractModel
 
     /**
      * @var SecurityGroupPolicySet 安全组规则集合。一个请求中只能删除单个方向的一条或多条规则。支持指定索引（PolicyIndex） 匹配删除和安全组规则匹配删除两种方式，一个请求中只能使用一种匹配方式。
+使用安全组规则匹配删除时，需要填写`Action`， `Protocol`， `CidrBlock`， `Port`参数。
      */
     public $SecurityGroupPolicySet;
 
     /**
      * @param string $SecurityGroupId 安全组实例ID，例如sg-33ocnj9n，可通过<a href="https://cloud.tencent.com/document/product/215/15808">DescribeSecurityGroups</a>获取。
      * @param SecurityGroupPolicySet $SecurityGroupPolicySet 安全组规则集合。一个请求中只能删除单个方向的一条或多条规则。支持指定索引（PolicyIndex） 匹配删除和安全组规则匹配删除两种方式，一个请求中只能使用一种匹配方式。
+使用安全组规则匹配删除时，需要填写`Action`， `Protocol`， `CidrBlock`， `Port`参数。
      */
     function __construct()
     {

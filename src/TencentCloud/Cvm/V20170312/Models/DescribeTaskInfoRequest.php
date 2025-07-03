@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTaskInfo请求参数结构体
  *
- * @method integer getLimit() 获取返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
- * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
- * @method integer getOffset() 获取偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
- * @method void setOffset(integer $Offset) 设置偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+ * @method integer getLimit() 获取返回数量，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+ * @method void setLimit(integer $Limit) 设置返回数量，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+ * @method integer getOffset() 获取偏移量。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+ * @method void setOffset(integer $Offset) 设置偏移量。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
  * @method string getProduct() 获取按照指定的产品类型查询，支持取值：
 
 - `CVM`：云服务器
@@ -88,14 +88,14 @@ use TencentCloud\Common\AbstractModel;
 各任务类型的具体含义，可参考 [维修任务分类](https://cloud.tencent.com/document/product/213/67789#.E7.BB.B4.E4.BF.AE.E4.BB.BB.E5.8A.A1.E5.88.86.E7.B1.BB)。
  * @method array getTaskIds() 获取按照一个或者多个任务ID查询。任务ID形如：`rep-xxxxxxxx`。
  * @method void setTaskIds(array $TaskIds) 设置按照一个或者多个任务ID查询。任务ID形如：`rep-xxxxxxxx`。
- * @method array getInstanceIds() 获取按照一个或者多个实例ID查询。实例ID形如：`ins-xxxxxxxx`。
- * @method void setInstanceIds(array $InstanceIds) 设置按照一个或者多个实例ID查询。实例ID形如：`ins-xxxxxxxx`。
+ * @method array getInstanceIds() 获取按照一个或者多个实例ID查询。实例ID形如：`ins-xxxxxxxx`，可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
+ * @method void setInstanceIds(array $InstanceIds) 设置按照一个或者多个实例ID查询。实例ID形如：`ins-xxxxxxxx`，可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
  * @method array getAliases() 获取按照一个或者多个实例名称查询。
  * @method void setAliases(array $Aliases) 设置按照一个或者多个实例名称查询。
- * @method string getStartDate() 获取时间查询区间的起始位置，会根据任务创建时间`CreateTime`进行过滤。未传入时默认为当天`00:00:00`。
- * @method void setStartDate(string $StartDate) 设置时间查询区间的起始位置，会根据任务创建时间`CreateTime`进行过滤。未传入时默认为当天`00:00:00`。
- * @method string getEndDate() 获取时间查询区间的终止位置，会根据任务创建时间`CreateTime`进行过滤。未传入时默认为当前时刻。
- * @method void setEndDate(string $EndDate) 设置时间查询区间的终止位置，会根据任务创建时间`CreateTime`进行过滤。未传入时默认为当前时刻。
+ * @method string getStartDate() 获取时间查询区间的起始位置，会根据任务创建时间`CreateTime`进行过滤，格式为`YYYY-MM-DD hh:mm:ss`。未传入时默认为当天`00:00:00`。
+ * @method void setStartDate(string $StartDate) 设置时间查询区间的起始位置，会根据任务创建时间`CreateTime`进行过滤，格式为`YYYY-MM-DD hh:mm:ss`。未传入时默认为当天`00:00:00`。
+ * @method string getEndDate() 获取时间查询区间的终止位置，会根据任务创建时间`CreateTime`进行过滤，格式为`YYYY-MM-DD hh:mm:ss`。未传入时默认为当前时刻。
+ * @method void setEndDate(string $EndDate) 设置时间查询区间的终止位置，会根据任务创建时间`CreateTime`进行过滤，格式为`YYYY-MM-DD hh:mm:ss`。未传入时默认为当前时刻。
  * @method string getOrderField() 获取指定返回维修任务列表的排序字段，目前支持：
 
 - `CreateTime`：任务创建时间
@@ -127,12 +127,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTaskInfoRequest extends AbstractModel
 {
     /**
-     * @var integer 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+     * @var integer 返回数量，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      */
     public $Limit;
 
     /**
-     * @var integer 偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+     * @var integer 偏移量。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      */
     public $Offset;
 
@@ -185,7 +185,7 @@ class DescribeTaskInfoRequest extends AbstractModel
     public $TaskIds;
 
     /**
-     * @var array 按照一个或者多个实例ID查询。实例ID形如：`ins-xxxxxxxx`。
+     * @var array 按照一个或者多个实例ID查询。实例ID形如：`ins-xxxxxxxx`，可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
      */
     public $InstanceIds;
 
@@ -195,12 +195,12 @@ class DescribeTaskInfoRequest extends AbstractModel
     public $Aliases;
 
     /**
-     * @var string 时间查询区间的起始位置，会根据任务创建时间`CreateTime`进行过滤。未传入时默认为当天`00:00:00`。
+     * @var string 时间查询区间的起始位置，会根据任务创建时间`CreateTime`进行过滤，格式为`YYYY-MM-DD hh:mm:ss`。未传入时默认为当天`00:00:00`。
      */
     public $StartDate;
 
     /**
-     * @var string 时间查询区间的终止位置，会根据任务创建时间`CreateTime`进行过滤。未传入时默认为当前时刻。
+     * @var string 时间查询区间的终止位置，会根据任务创建时间`CreateTime`进行过滤，格式为`YYYY-MM-DD hh:mm:ss`。未传入时默认为当前时刻。
      */
     public $EndDate;
 
@@ -227,8 +227,8 @@ class DescribeTaskInfoRequest extends AbstractModel
     public $Order;
 
     /**
-     * @param integer $Limit 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
-     * @param integer $Offset 偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+     * @param integer $Limit 返回数量，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
+     * @param integer $Offset 偏移量。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      * @param string $Product 按照指定的产品类型查询，支持取值：
 
 - `CVM`：云服务器
@@ -261,10 +261,10 @@ class DescribeTaskInfoRequest extends AbstractModel
 
 各任务类型的具体含义，可参考 [维修任务分类](https://cloud.tencent.com/document/product/213/67789#.E7.BB.B4.E4.BF.AE.E4.BB.BB.E5.8A.A1.E5.88.86.E7.B1.BB)。
      * @param array $TaskIds 按照一个或者多个任务ID查询。任务ID形如：`rep-xxxxxxxx`。
-     * @param array $InstanceIds 按照一个或者多个实例ID查询。实例ID形如：`ins-xxxxxxxx`。
+     * @param array $InstanceIds 按照一个或者多个实例ID查询。实例ID形如：`ins-xxxxxxxx`，可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
      * @param array $Aliases 按照一个或者多个实例名称查询。
-     * @param string $StartDate 时间查询区间的起始位置，会根据任务创建时间`CreateTime`进行过滤。未传入时默认为当天`00:00:00`。
-     * @param string $EndDate 时间查询区间的终止位置，会根据任务创建时间`CreateTime`进行过滤。未传入时默认为当前时刻。
+     * @param string $StartDate 时间查询区间的起始位置，会根据任务创建时间`CreateTime`进行过滤，格式为`YYYY-MM-DD hh:mm:ss`。未传入时默认为当天`00:00:00`。
+     * @param string $EndDate 时间查询区间的终止位置，会根据任务创建时间`CreateTime`进行过滤，格式为`YYYY-MM-DD hh:mm:ss`。未传入时默认为当前时刻。
      * @param string $OrderField 指定返回维修任务列表的排序字段，目前支持：
 
 - `CreateTime`：任务创建时间

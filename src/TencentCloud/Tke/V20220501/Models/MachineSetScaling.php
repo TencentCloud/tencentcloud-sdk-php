@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * 节点池弹性伸缩配置
  *
  * @method integer getMinReplicas() 获取节点池最小副本数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMinReplicas(integer $MinReplicas) 设置节点池最小副本数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxReplicas() 获取节点池最大副本数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxReplicas(integer $MaxReplicas) 设置节点池最大副本数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatePolicy() 获取节点池扩容策略。ZoneEquality：多可用区打散；ZonePriority：首选可用区优先；
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatePolicy(string $CreatePolicy) 设置节点池扩容策略。ZoneEquality：多可用区打散；ZonePriority：首选可用区优先；
@@ -37,13 +33,11 @@ class MachineSetScaling extends AbstractModel
 {
     /**
      * @var integer 节点池最小副本数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MinReplicas;
 
     /**
      * @var integer 节点池最大副本数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxReplicas;
 
@@ -55,9 +49,7 @@ class MachineSetScaling extends AbstractModel
 
     /**
      * @param integer $MinReplicas 节点池最小副本数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxReplicas 节点池最大副本数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatePolicy 节点池扩容策略。ZoneEquality：多可用区打散；ZonePriority：首选可用区优先；
 注意：此字段可能返回 null，表示取不到有效值。
      */

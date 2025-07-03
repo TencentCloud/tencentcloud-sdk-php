@@ -31,15 +31,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getScore() 获取该字段用于返回命中当前恶意标签下子标签的分值，取值为**0-100**，如：*Porn-SexBehavior 99* 则代表相应识别内容命中色情-性行为标签的分值为99。
  * @method void setScore(integer $Score) 设置该字段用于返回命中当前恶意标签下子标签的分值，取值为**0-100**，如：*Porn-SexBehavior 99* 则代表相应识别内容命中色情-性行为标签的分值为99。
  * @method array getNames() 获取该标签用于返回所识别出的实体名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNames(array $Names) 设置该标签用于返回所识别出的实体名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDetails() 获取该标签用于返回所识别出实体的详细信息，如：序号、命中标签名称、位置坐标等信息，详细返回内容敬请参考相应数据结构（[ObjectDetail
 ](https://cloud.tencent.com/document/api/1125/53274#ObjectDetail)）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDetails(array $Details) 设置该标签用于返回所识别出实体的详细信息，如：序号、命中标签名称、位置坐标等信息，详细返回内容敬请参考相应数据结构（[ObjectDetail
 ](https://cloud.tencent.com/document/api/1125/53274#ObjectDetail)）。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ObjectResult extends AbstractModel
 {
@@ -70,14 +66,12 @@ class ObjectResult extends AbstractModel
 
     /**
      * @var array 该标签用于返回所识别出的实体名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Names;
 
     /**
      * @var array 该标签用于返回所识别出实体的详细信息，如：序号、命中标签名称、位置坐标等信息，详细返回内容敬请参考相应数据结构（[ObjectDetail
 ](https://cloud.tencent.com/document/api/1125/53274#ObjectDetail)）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Details;
 
@@ -88,10 +82,8 @@ class ObjectResult extends AbstractModel
      * @param string $SubLabel 该字段用于返回当前恶意标签下对应的子标签的检测结果，如：*Porn-SexBehavior* 等子标签。
      * @param integer $Score 该字段用于返回命中当前恶意标签下子标签的分值，取值为**0-100**，如：*Porn-SexBehavior 99* 则代表相应识别内容命中色情-性行为标签的分值为99。
      * @param array $Names 该标签用于返回所识别出的实体名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Details 该标签用于返回所识别出实体的详细信息，如：序号、命中标签名称、位置坐标等信息，详细返回内容敬请参考相应数据结构（[ObjectDetail
 ](https://cloud.tencent.com/document/api/1125/53274#ObjectDetail)）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

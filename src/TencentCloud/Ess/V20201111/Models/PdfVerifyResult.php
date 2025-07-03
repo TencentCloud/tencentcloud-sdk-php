@@ -46,12 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSignTime(integer $SignTime) 设置签署时间的Unix时间戳，单位毫秒
  * @method string getSignAlgorithm() 获取证书签名算法,  如SHA1withRSA等算法
  * @method void setSignAlgorithm(string $SignAlgorithm) 设置证书签名算法,  如SHA1withRSA等算法
- * @method string getCertSn() 获取CA供应商下发给用户的证书编号
-
-注意：`腾讯电子签接入多家CA供应商以提供容灾能力，不同CA下发的证书编号区别较大，但基本都是由数字和字母组成，长度在200以下`。
- * @method void setCertSn(string $CertSn) 设置CA供应商下发给用户的证书编号
-
-注意：`腾讯电子签接入多家CA供应商以提供容灾能力，不同CA下发的证书编号区别较大，但基本都是由数字和字母组成，长度在200以下`。
+ * @method string getCertSn() 获取在数字证书申请过程中，系统会自动生成一个独一无二的序列号。
+ * @method void setCertSn(string $CertSn) 设置在数字证书申请过程中，系统会自动生成一个独一无二的序列号。
  * @method integer getCertNotBefore() 获取证书起始时间的Unix时间戳，单位毫秒
  * @method void setCertNotBefore(integer $CertNotBefore) 设置证书起始时间的Unix时间戳，单位毫秒
  * @method integer getCertNotAfter() 获取证书过期时间的时间戳，单位毫秒
@@ -103,9 +99,7 @@ class PdfVerifyResult extends AbstractModel
     public $SignAlgorithm;
 
     /**
-     * @var string CA供应商下发给用户的证书编号
-
-注意：`腾讯电子签接入多家CA供应商以提供容灾能力，不同CA下发的证书编号区别较大，但基本都是由数字和字母组成，长度在200以下`。
+     * @var string 在数字证书申请过程中，系统会自动生成一个独一无二的序列号。
      */
     public $CertSn;
 
@@ -158,9 +152,7 @@ class PdfVerifyResult extends AbstractModel
 如果在其他平台签署的, 主体的名字参考其他平台的说明
      * @param integer $SignTime 签署时间的Unix时间戳，单位毫秒
      * @param string $SignAlgorithm 证书签名算法,  如SHA1withRSA等算法
-     * @param string $CertSn CA供应商下发给用户的证书编号
-
-注意：`腾讯电子签接入多家CA供应商以提供容灾能力，不同CA下发的证书编号区别较大，但基本都是由数字和字母组成，长度在200以下`。
+     * @param string $CertSn 在数字证书申请过程中，系统会自动生成一个独一无二的序列号。
      * @param integer $CertNotBefore 证书起始时间的Unix时间戳，单位毫秒
      * @param integer $CertNotAfter 证书过期时间的时间戳，单位毫秒
      * @param float $ComponentPosX 签名域横坐标，单位px

@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 操作的进程范围
  *
  * @method string getComponentName() 获取进程名，必填，如NameNode
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComponentName(string $ComponentName) 设置进程名，必填，如NameNode
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getIpList() 获取操作的IP列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpList(array $IpList) 设置操作的IP列表
@@ -33,7 +31,6 @@ class ComponentBasicRestartInfo extends AbstractModel
 {
     /**
      * @var string 进程名，必填，如NameNode
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComponentName;
 
@@ -45,7 +42,6 @@ class ComponentBasicRestartInfo extends AbstractModel
 
     /**
      * @param string $ComponentName 进程名，必填，如NameNode
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $IpList 操作的IP列表
 注意：此字段可能返回 null，表示取不到有效值。
      */

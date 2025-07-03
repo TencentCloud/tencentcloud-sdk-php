@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 血压
  *
  * @method BloodPressureItem getText() 获取血压
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setText(BloodPressureItem $Text) 设置血压
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSystolicDiastolicPressure() 获取收缩压/舒张压
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSystolicDiastolicPressure(array $SystolicDiastolicPressure) 设置收缩压/舒张压
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSystolicPressure() 获取收缩压
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSystolicPressure(array $SystolicPressure) 设置收缩压
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDiastolicPressure() 获取舒张压
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiastolicPressure(array $DiastolicPressure) 设置舒张压
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class GeneralExaminationVitalSignBloodPressure extends AbstractModel
 {
     /**
      * @var BloodPressureItem 血压
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Text;
 
     /**
      * @var array 收缩压/舒张压
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SystolicDiastolicPressure;
 
     /**
      * @var array 收缩压
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SystolicPressure;
 
     /**
      * @var array 舒张压
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiastolicPressure;
 
     /**
      * @param BloodPressureItem $Text 血压
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SystolicDiastolicPressure 收缩压/舒张压
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SystolicPressure 收缩压
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DiastolicPressure 舒张压
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

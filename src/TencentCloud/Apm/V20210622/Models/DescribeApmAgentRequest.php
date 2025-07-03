@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeApmAgent请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getAgentType() 获取接入方式
- * @method void setAgentType(string $AgentType) 设置接入方式
- * @method string getNetworkMode() 获取环境
- * @method void setNetworkMode(string $NetworkMode) 设置环境
- * @method string getLanguageEnvironment() 获取语言
- * @method void setLanguageEnvironment(string $LanguageEnvironment) 设置语言
- * @method string getReportMethod() 获取上报方式
- * @method void setReportMethod(string $ReportMethod) 设置上报方式
+ * @method string getInstanceId() 获取业务系统 ID
+ * @method void setInstanceId(string $InstanceId) 设置业务系统 ID
+ * @method string getAgentType() 获取接入方式，现支持 skywalking, ot, ebpf 方式接入上报，不填默认为 ot
+ * @method void setAgentType(string $AgentType) 设置接入方式，现支持 skywalking, ot, ebpf 方式接入上报，不填默认为 ot
+ * @method string getNetworkMode() 获取上报环境，现支持 pl (内网上报), public (外网), inner (自研 VPC )环境上报，不传默认为 public
+ * @method void setNetworkMode(string $NetworkMode) 设置上报环境，现支持 pl (内网上报), public (外网), inner (自研 VPC )环境上报，不传默认为 public
+ * @method string getLanguageEnvironment() 获取语言，现支持 java, golang, php, python, dotNet, nodejs 语言上报，不传默认为 golang
+ * @method void setLanguageEnvironment(string $LanguageEnvironment) 设置语言，现支持 java, golang, php, python, dotNet, nodejs 语言上报，不传默认为 golang
+ * @method string getReportMethod() 获取上报方式，已弃用
+ * @method void setReportMethod(string $ReportMethod) 设置上报方式，已弃用
  */
 class DescribeApmAgentRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 业务系统 ID
      */
     public $InstanceId;
 
     /**
-     * @var string 接入方式
+     * @var string 接入方式，现支持 skywalking, ot, ebpf 方式接入上报，不填默认为 ot
      */
     public $AgentType;
 
     /**
-     * @var string 环境
+     * @var string 上报环境，现支持 pl (内网上报), public (外网), inner (自研 VPC )环境上报，不传默认为 public
      */
     public $NetworkMode;
 
     /**
-     * @var string 语言
+     * @var string 语言，现支持 java, golang, php, python, dotNet, nodejs 语言上报，不传默认为 golang
      */
     public $LanguageEnvironment;
 
     /**
-     * @var string 上报方式
+     * @var string 上报方式，已弃用
      */
     public $ReportMethod;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $AgentType 接入方式
-     * @param string $NetworkMode 环境
-     * @param string $LanguageEnvironment 语言
-     * @param string $ReportMethod 上报方式
+     * @param string $InstanceId 业务系统 ID
+     * @param string $AgentType 接入方式，现支持 skywalking, ot, ebpf 方式接入上报，不填默认为 ot
+     * @param string $NetworkMode 上报环境，现支持 pl (内网上报), public (外网), inner (自研 VPC )环境上报，不传默认为 public
+     * @param string $LanguageEnvironment 语言，现支持 java, golang, php, python, dotNet, nodejs 语言上报，不传默认为 golang
+     * @param string $ReportMethod 上报方式，已弃用
      */
     function __construct()
     {

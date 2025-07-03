@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setComputeNodeId(string $ComputeNodeId) 设置计算节点ID
  * @method string getComputeNodeInstanceId() 获取计算节点实例ID，对于CVM场景，即为CVM的InstanceId
  * @method void setComputeNodeInstanceId(string $ComputeNodeInstanceId) 设置计算节点实例ID，对于CVM场景，即为CVM的InstanceId
- * @method string getComputeNodeState() 获取计算节点状态
- * @method void setComputeNodeState(string $ComputeNodeState) 设置计算节点状态
+ * @method string getComputeNodeState() 获取计算节点状态。取值范围：<br><li>PENDING：表示创建中</li><li>SUBMITTED：表示已提交创建</li><li>CREATING：表示创建中</li><li>CREATED：表示创建完成</li><li>CREATION_FAILED：表示创建失败。</li><li>RUNNING：表示运行中。</li><li>ABNORMAL：表示节点异常。</li><li>DELETING：表示删除中。</li>
+ * @method void setComputeNodeState(string $ComputeNodeState) 设置计算节点状态。取值范围：<br><li>PENDING：表示创建中</li><li>SUBMITTED：表示已提交创建</li><li>CREATING：表示创建中</li><li>CREATED：表示创建完成</li><li>CREATION_FAILED：表示创建失败。</li><li>RUNNING：表示运行中。</li><li>ABNORMAL：表示节点异常。</li><li>DELETING：表示删除中。</li>
  * @method integer getCpu() 获取CPU核数
  * @method void setCpu(integer $Cpu) 设置CPU核数
  * @method integer getMem() 获取内存容量，单位GiB
@@ -60,7 +60,7 @@ class ComputeNode extends AbstractModel
     public $ComputeNodeInstanceId;
 
     /**
-     * @var string 计算节点状态
+     * @var string 计算节点状态。取值范围：<br><li>PENDING：表示创建中</li><li>SUBMITTED：表示已提交创建</li><li>CREATING：表示创建中</li><li>CREATED：表示创建完成</li><li>CREATION_FAILED：表示创建失败。</li><li>RUNNING：表示运行中。</li><li>ABNORMAL：表示节点异常。</li><li>DELETING：表示删除中。</li>
      */
     public $ComputeNodeState;
 
@@ -113,7 +113,7 @@ USER_ATTACHED：用户添加到计算环境中的实例资源。
     /**
      * @param string $ComputeNodeId 计算节点ID
      * @param string $ComputeNodeInstanceId 计算节点实例ID，对于CVM场景，即为CVM的InstanceId
-     * @param string $ComputeNodeState 计算节点状态
+     * @param string $ComputeNodeState 计算节点状态。取值范围：<br><li>PENDING：表示创建中</li><li>SUBMITTED：表示已提交创建</li><li>CREATING：表示创建中</li><li>CREATED：表示创建完成</li><li>CREATION_FAILED：表示创建失败。</li><li>RUNNING：表示运行中。</li><li>ABNORMAL：表示节点异常。</li><li>DELETING：表示删除中。</li>
      * @param integer $Cpu CPU核数
      * @param integer $Mem 内存容量，单位GiB
      * @param string $ResourceCreatedTime 资源创建完成时间

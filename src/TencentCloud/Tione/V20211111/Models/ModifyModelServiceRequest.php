@@ -116,6 +116,20 @@ HYBRID_PAID:
  * @method void setCommandBase64(string $CommandBase64) 设置服务的启动命令，以base64格式进行输入，与Command同时配置时，仅当前参数生效
  * @method integer getServicePort() 获取服务端口，仅在非内置镜像时生效，默认8501。不支持输入8501-8510,6006,9092
  * @method void setServicePort(integer $ServicePort) 设置服务端口，仅在非内置镜像时生效，默认8501。不支持输入8501-8510,6006,9092
+ * @method integer getInstancePerReplicas() 获取单副本下的实例数，仅在部署类型为DIST时生效，默认1
+ * @method void setInstancePerReplicas(integer $InstancePerReplicas) 设置单副本下的实例数，仅在部署类型为DIST时生效，默认1
+ * @method integer getTerminationGracePeriodSeconds() 获取30
+ * @method void setTerminationGracePeriodSeconds(integer $TerminationGracePeriodSeconds) 设置30
+ * @method array getPreStopCommand() 获取["sleep","60"]
+ * @method void setPreStopCommand(array $PreStopCommand) 设置["sleep","60"]
+ * @method boolean getGrpcEnable() 获取是否启动grpc端口
+ * @method void setGrpcEnable(boolean $GrpcEnable) 设置是否启动grpc端口
+ * @method HealthProbe getHealthProbe() 获取健康探针
+ * @method void setHealthProbe(HealthProbe $HealthProbe) 设置健康探针
+ * @method RollingUpdate getRollingUpdate() 获取滚动更新策略
+ * @method void setRollingUpdate(RollingUpdate $RollingUpdate) 设置滚动更新策略
+ * @method SidecarSpec getSidecar() 获取sidecar配置
+ * @method void setSidecar(SidecarSpec $Sidecar) 设置sidecar配置
  */
 class ModifyModelServiceRequest extends AbstractModel
 {
@@ -268,6 +282,41 @@ HYBRID_PAID:
     public $ServicePort;
 
     /**
+     * @var integer 单副本下的实例数，仅在部署类型为DIST时生效，默认1
+     */
+    public $InstancePerReplicas;
+
+    /**
+     * @var integer 30
+     */
+    public $TerminationGracePeriodSeconds;
+
+    /**
+     * @var array ["sleep","60"]
+     */
+    public $PreStopCommand;
+
+    /**
+     * @var boolean 是否启动grpc端口
+     */
+    public $GrpcEnable;
+
+    /**
+     * @var HealthProbe 健康探针
+     */
+    public $HealthProbe;
+
+    /**
+     * @var RollingUpdate 滚动更新策略
+     */
+    public $RollingUpdate;
+
+    /**
+     * @var SidecarSpec sidecar配置
+     */
+    public $Sidecar;
+
+    /**
      * @param string $ServiceId 服务id
      * @param ModelInfo $ModelInfo 模型信息，需要挂载模型时填写
      * @param ImageInfo $ImageInfo 镜像信息，配置服务运行所需的镜像地址等信息
@@ -316,6 +365,13 @@ HYBRID_PAID:
      * @param ServiceEIP $ServiceEIP 是否开启TIONE内网访问外部，此功能仅支持后付费机型与从TIONE平台购买的预付费机型；使用从CVM选择资源组时此配置不生效。
      * @param string $CommandBase64 服务的启动命令，以base64格式进行输入，与Command同时配置时，仅当前参数生效
      * @param integer $ServicePort 服务端口，仅在非内置镜像时生效，默认8501。不支持输入8501-8510,6006,9092
+     * @param integer $InstancePerReplicas 单副本下的实例数，仅在部署类型为DIST时生效，默认1
+     * @param integer $TerminationGracePeriodSeconds 30
+     * @param array $PreStopCommand ["sleep","60"]
+     * @param boolean $GrpcEnable 是否启动grpc端口
+     * @param HealthProbe $HealthProbe 健康探针
+     * @param RollingUpdate $RollingUpdate 滚动更新策略
+     * @param SidecarSpec $Sidecar sidecar配置
      */
     function __construct()
     {
@@ -447,6 +503,37 @@ HYBRID_PAID:
 
         if (array_key_exists("ServicePort",$param) and $param["ServicePort"] !== null) {
             $this->ServicePort = $param["ServicePort"];
+        }
+
+        if (array_key_exists("InstancePerReplicas",$param) and $param["InstancePerReplicas"] !== null) {
+            $this->InstancePerReplicas = $param["InstancePerReplicas"];
+        }
+
+        if (array_key_exists("TerminationGracePeriodSeconds",$param) and $param["TerminationGracePeriodSeconds"] !== null) {
+            $this->TerminationGracePeriodSeconds = $param["TerminationGracePeriodSeconds"];
+        }
+
+        if (array_key_exists("PreStopCommand",$param) and $param["PreStopCommand"] !== null) {
+            $this->PreStopCommand = $param["PreStopCommand"];
+        }
+
+        if (array_key_exists("GrpcEnable",$param) and $param["GrpcEnable"] !== null) {
+            $this->GrpcEnable = $param["GrpcEnable"];
+        }
+
+        if (array_key_exists("HealthProbe",$param) and $param["HealthProbe"] !== null) {
+            $this->HealthProbe = new HealthProbe();
+            $this->HealthProbe->deserialize($param["HealthProbe"]);
+        }
+
+        if (array_key_exists("RollingUpdate",$param) and $param["RollingUpdate"] !== null) {
+            $this->RollingUpdate = new RollingUpdate();
+            $this->RollingUpdate->deserialize($param["RollingUpdate"]);
+        }
+
+        if (array_key_exists("Sidecar",$param) and $param["Sidecar"] !== null) {
+            $this->Sidecar = new SidecarSpec();
+            $this->Sidecar->deserialize($param["Sidecar"]);
         }
     }
 }

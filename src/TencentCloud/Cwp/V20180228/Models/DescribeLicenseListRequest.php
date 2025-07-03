@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量,默认0.
  * @method array getTags() 获取标签筛选,平台标签能力,这里传入 标签键,标签值作为一个对象
  * @method void setTags(array $Tags) 设置标签筛选,平台标签能力,这里传入 标签键,标签值作为一个对象
+ * @method string getOrder() 获取ASC 正序,  DESC 倒序
+ * @method void setOrder(string $Order) 设置ASC 正序,  DESC 倒序
+ * @method string getBy() 获取LicenseCnt 授权数量
+ * @method void setBy(string $By) 设置LicenseCnt 授权数量
  */
 class DescribeLicenseListRequest extends AbstractModel
 {
@@ -79,6 +83,16 @@ class DescribeLicenseListRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var string ASC 正序,  DESC 倒序
+     */
+    public $Order;
+
+    /**
+     * @var string LicenseCnt 授权数量
+     */
+    public $By;
+
+    /**
      * @param array $Filters 多个条件筛选时取交集
 <li> LicenseStatus 授权状态信息,0 未使用,1 部分使用, 2 已用完, 3 不可用  4 可使用</li>
 <li> BuyTime 购买时间</li>
@@ -92,6 +106,8 @@ class DescribeLicenseListRequest extends AbstractModel
      * @param integer $Limit 限制条数,默认10.
      * @param integer $Offset 偏移量,默认0.
      * @param array $Tags 标签筛选,平台标签能力,这里传入 标签键,标签值作为一个对象
+     * @param string $Order ASC 正序,  DESC 倒序
+     * @param string $By LicenseCnt 授权数量
      */
     function __construct()
     {
@@ -130,6 +146,14 @@ class DescribeLicenseListRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("Order",$param) and $param["Order"] !== null) {
+            $this->Order = $param["Order"];
+        }
+
+        if (array_key_exists("By",$param) and $param["By"] !== null) {
+            $this->By = $param["By"];
         }
     }
 }

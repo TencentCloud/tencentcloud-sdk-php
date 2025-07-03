@@ -23,11 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getWorkspace() 获取容器场景下,输出选项从实例映射到容器内的实例侧的工作空间。
 BATCH_WORKSPACE: 工作空间为BATCH在实例内定义的工作空间，BATCH侧保证作业之间的隔离。（默认）
 GLOBAL_WORKSPACE: 工作空间为实例操作系统空间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWorkspace(string $Workspace) 设置容器场景下,输出选项从实例映射到容器内的实例侧的工作空间。
 BATCH_WORKSPACE: 工作空间为BATCH在实例内定义的工作空间，BATCH侧保证作业之间的隔离。（默认）
 GLOBAL_WORKSPACE: 工作空间为实例操作系统空间。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OutputMappingOption extends AbstractModel
 {
@@ -35,7 +33,6 @@ class OutputMappingOption extends AbstractModel
      * @var string 容器场景下,输出选项从实例映射到容器内的实例侧的工作空间。
 BATCH_WORKSPACE: 工作空间为BATCH在实例内定义的工作空间，BATCH侧保证作业之间的隔离。（默认）
 GLOBAL_WORKSPACE: 工作空间为实例操作系统空间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Workspace;
 
@@ -43,7 +40,6 @@ GLOBAL_WORKSPACE: 工作空间为实例操作系统空间。
      * @param string $Workspace 容器场景下,输出选项从实例映射到容器内的实例侧的工作空间。
 BATCH_WORKSPACE: 工作空间为BATCH在实例内定义的工作空间，BATCH侧保证作业之间的隔离。（默认）
 GLOBAL_WORKSPACE: 工作空间为实例操作系统空间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

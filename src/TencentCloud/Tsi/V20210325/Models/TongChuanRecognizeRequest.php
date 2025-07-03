@@ -22,10 +22,30 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSessionUuid() 获取一段完整的语音对应一个SessionUuid
  * @method void setSessionUuid(string $SessionUuid) 设置一段完整的语音对应一个SessionUuid
- * @method string getSource() 获取音频中的语言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
- * @method void setSource(string $Source) 设置音频中的语言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
- * @method string getTarget() 获取翻译目标语言类型，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
- * @method void setTarget(string $Target) 设置翻译目标语言类型，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+ * @method string getSource() 获取源语言，支持：
+zh：中文
+en：英语
+ja：日语
+ko：韩语
+yue：粤语
+ * @method void setSource(string $Source) 设置源语言，支持：
+zh：中文
+en：英语
+ja：日语
+ko：韩语
+yue：粤语
+ * @method string getTarget() 获取目标语言，各源语言的目标语言支持列表如下
+<li>zh（中文）：en（英语）、ja（日语）、ko（韩语）、yue（粤语）</li>
+<li>en（英语）：zh（中文）</li>
+<li>ja（日语）：zh（中文）</li>
+<li>ko（韩语）：zh（中文）</li>
+<li>yue（粤语）：zh（中文）</li>
+ * @method void setTarget(string $Target) 设置目标语言，各源语言的目标语言支持列表如下
+<li>zh（中文）：en（英语）、ja（日语）、ko（韩语）、yue（粤语）</li>
+<li>en（英语）：zh（中文）</li>
+<li>ja（日语）：zh（中文）</li>
+<li>ko（韩语）：zh（中文）</li>
+<li>yue（粤语）：zh（中文）</li>
  * @method integer getAudioFormat() 获取语音编码类型，1-pcm
  * @method void setAudioFormat(integer $AudioFormat) 设置语音编码类型，1-pcm
  * @method integer getSeq() 获取语音分片的序号，从0开始
@@ -38,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTranslateTime(integer $TranslateTime) 设置翻译时机，0-不翻译 2-句子实时翻译
  * @method string getData() 获取语音分片内容进行 Base64 编码后的字符串。音频内容需包含有效并可识别的文本信息。
  * @method void setData(string $Data) 设置语音分片内容进行 Base64 编码后的字符串。音频内容需包含有效并可识别的文本信息。
+ * @method TTS getTTS() 获取TTS播报控制参数	
+ * @method void setTTS(TTS $TTS) 设置TTS播报控制参数	
  */
 class TongChuanRecognizeRequest extends AbstractModel
 {
@@ -47,12 +69,22 @@ class TongChuanRecognizeRequest extends AbstractModel
     public $SessionUuid;
 
     /**
-     * @var string 音频中的语言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+     * @var string 源语言，支持：
+zh：中文
+en：英语
+ja：日语
+ko：韩语
+yue：粤语
      */
     public $Source;
 
     /**
-     * @var string 翻译目标语言类型，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+     * @var string 目标语言，各源语言的目标语言支持列表如下
+<li>zh（中文）：en（英语）、ja（日语）、ko（韩语）、yue（粤语）</li>
+<li>en（英语）：zh（中文）</li>
+<li>ja（日语）：zh（中文）</li>
+<li>ko（韩语）：zh（中文）</li>
+<li>yue（粤语）：zh（中文）</li>
      */
     public $Target;
 
@@ -87,15 +119,31 @@ class TongChuanRecognizeRequest extends AbstractModel
     public $Data;
 
     /**
+     * @var TTS TTS播报控制参数	
+     */
+    public $TTS;
+
+    /**
      * @param string $SessionUuid 一段完整的语音对应一个SessionUuid
-     * @param string $Source 音频中的语言类型，支持语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
-     * @param string $Target 翻译目标语言类型，支持的语言列表<li> zh : 中文 </li> <li> en : 英文 </li>
+     * @param string $Source 源语言，支持：
+zh：中文
+en：英语
+ja：日语
+ko：韩语
+yue：粤语
+     * @param string $Target 目标语言，各源语言的目标语言支持列表如下
+<li>zh（中文）：en（英语）、ja（日语）、ko（韩语）、yue（粤语）</li>
+<li>en（英语）：zh（中文）</li>
+<li>ja（日语）：zh（中文）</li>
+<li>ko（韩语）：zh（中文）</li>
+<li>yue（粤语）：zh（中文）</li>
      * @param integer $AudioFormat 语音编码类型，1-pcm
      * @param integer $Seq 语音分片的序号，从0开始
      * @param integer $Utc 语音开始的时间戳
      * @param integer $IsEnd 是否最后一片语音分片，0-否，1-是
      * @param integer $TranslateTime 翻译时机，0-不翻译 2-句子实时翻译
      * @param string $Data 语音分片内容进行 Base64 编码后的字符串。音频内容需包含有效并可识别的文本信息。
+     * @param TTS $TTS TTS播报控制参数	
      */
     function __construct()
     {
@@ -144,6 +192,11 @@ class TongChuanRecognizeRequest extends AbstractModel
 
         if (array_key_exists("Data",$param) and $param["Data"] !== null) {
             $this->Data = $param["Data"];
+        }
+
+        if (array_key_exists("TTS",$param) and $param["TTS"] !== null) {
+            $this->TTS = new TTS();
+            $this->TTS->deserialize($param["TTS"]);
         }
     }
 }

@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 组织产品财务信息
  *
  * @method string getProductName() 获取产品Code。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductName(string $ProductName) 设置产品Code。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProductCode() 获取产品名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductCode(string $ProductCode) 设置产品名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getTotalCost() 获取产品消耗，单位：元。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCost(float $TotalCost) 设置产品消耗，单位：元。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRatio() 获取占比%。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRatio(string $Ratio) 设置占比%。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OrgProductFinancial extends AbstractModel
 {
     /**
      * @var string 产品Code。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductName;
 
     /**
      * @var string 产品名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductCode;
 
     /**
      * @var float 产品消耗，单位：元。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCost;
 
     /**
      * @var string 占比%。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ratio;
 
     /**
      * @param string $ProductName 产品Code。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProductCode 产品名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $TotalCost 产品消耗，单位：元。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Ratio 占比%。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

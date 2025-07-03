@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量。默认为0
  * @method integer getLimit() 获取结果集个数限制。默认为20，最大值为100
  * @method void setLimit(integer $Limit) 设置结果集个数限制。默认为20，最大值为100
- * @method array getFilters() 获取过滤项。支持模糊搜索：（TemplateId，TemplateName）支持过滤：Source：模板来源，system / userUseType：模板类型，auto，semi-auto，law等Status：模板启用状态，draft / launched
- * @method void setFilters(array $Filters) 设置过滤项。支持模糊搜索：（TemplateId，TemplateName）支持过滤：Source：模板来源，system / userUseType：模板类型，auto，semi-auto，law等Status：模板启用状态，draft / launched
+ * @method array getFilters() 获取过滤项。支持模糊搜索：（TemplateId，TemplateName）支持过滤：Source：模板来源，system / userUseType：模板类型，auto，semi-auto，law等Status：模板启用状态，draft / launched，ComplianceId：关联的分类分级模板id
+ * @method void setFilters(array $Filters) 设置过滤项。支持模糊搜索：（TemplateId，TemplateName）支持过滤：Source：模板来源，system / userUseType：模板类型，auto，semi-auto，law等Status：模板启用状态，draft / launched，ComplianceId：关联的分类分级模板id
  */
 class DescribeDSPAAssessmentTemplatesRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeDSPAAssessmentTemplatesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var array 过滤项。支持模糊搜索：（TemplateId，TemplateName）支持过滤：Source：模板来源，system / userUseType：模板类型，auto，semi-auto，law等Status：模板启用状态，draft / launched
+     * @var array 过滤项。支持模糊搜索：（TemplateId，TemplateName）支持过滤：Source：模板来源，system / userUseType：模板类型，auto，semi-auto，law等Status：模板启用状态，draft / launched，ComplianceId：关联的分类分级模板id
      */
     public $Filters;
 
@@ -55,7 +55,7 @@ class DescribeDSPAAssessmentTemplatesRequest extends AbstractModel
      * @param string $DspaId DSPA实例Id，格式“dspa-xxxxxxxx”
      * @param integer $Offset 偏移量。默认为0
      * @param integer $Limit 结果集个数限制。默认为20，最大值为100
-     * @param array $Filters 过滤项。支持模糊搜索：（TemplateId，TemplateName）支持过滤：Source：模板来源，system / userUseType：模板类型，auto，semi-auto，law等Status：模板启用状态，draft / launched
+     * @param array $Filters 过滤项。支持模糊搜索：（TemplateId，TemplateName）支持过滤：Source：模板来源，system / userUseType：模板类型，auto，semi-auto，law等Status：模板启用状态，draft / launched，ComplianceId：关联的分类分级模板id
      */
     function __construct()
     {

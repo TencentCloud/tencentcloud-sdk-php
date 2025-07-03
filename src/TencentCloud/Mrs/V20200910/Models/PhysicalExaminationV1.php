@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 体检报告V1版本
  *
  * @method PhysicalExamination getPhysicalExaminationMulti() 获取体检报告信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPhysicalExaminationMulti(PhysicalExamination $PhysicalExaminationMulti) 设置体检报告信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVersion() 获取版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersion(string $Version) 设置版本
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PhysicalExaminationV1 extends AbstractModel
 {
     /**
      * @var PhysicalExamination 体检报告信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PhysicalExaminationMulti;
 
     /**
      * @var string 版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Version;
 
     /**
      * @param PhysicalExamination $PhysicalExaminationMulti 体检报告信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Version 版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

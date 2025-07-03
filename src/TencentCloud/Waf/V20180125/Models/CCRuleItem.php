@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * cc规则
  *
- * @method integer getActionType() 获取动作
- * @method void setActionType(integer $ActionType) 设置动作
+ * @method integer getActionType() 获取动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截，24表示JS校验
+ * @method void setActionType(integer $ActionType) 设置动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截，24表示JS校验
  * @method integer getAdvance() 获取高级模式
  * @method void setAdvance(integer $Advance) 设置高级模式
  * @method integer getInterval() 获取时间周期
@@ -43,14 +43,22 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getValidTime() 获取策略动作有效时间
  * @method void setValidTime(integer $ValidTime) 设置策略动作有效时间
  * @method string getOptionsArr() 获取高级参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOptionsArr(string $OptionsArr) 设置高级参数
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getLength() 获取url长度
+ * @method void setLength(integer $Length) 设置url长度
+ * @method integer getRuleId() 获取规则ID
+ * @method void setRuleId(integer $RuleId) 设置规则ID
+ * @method string getEventId() 获取事件id
+ * @method void setEventId(string $EventId) 设置事件id
+ * @method array getSessionApplied() 获取关联的Session规则
+ * @method void setSessionApplied(array $SessionApplied) 设置关联的Session规则
+ * @method integer getCreateTime() 获取创建时间
+ * @method void setCreateTime(integer $CreateTime) 设置创建时间
  */
 class CCRuleItem extends AbstractModel
 {
     /**
-     * @var integer 动作
+     * @var integer 动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截，24表示JS校验
      */
     public $ActionType;
 
@@ -106,12 +114,36 @@ class CCRuleItem extends AbstractModel
 
     /**
      * @var string 高级参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OptionsArr;
 
     /**
-     * @param integer $ActionType 动作
+     * @var integer url长度
+     */
+    public $Length;
+
+    /**
+     * @var integer 规则ID
+     */
+    public $RuleId;
+
+    /**
+     * @var string 事件id
+     */
+    public $EventId;
+
+    /**
+     * @var array 关联的Session规则
+     */
+    public $SessionApplied;
+
+    /**
+     * @var integer 创建时间
+     */
+    public $CreateTime;
+
+    /**
+     * @param integer $ActionType 动作，20表示观察，21表示人机识别，22表示拦截，23表示精准拦截，24表示JS校验
      * @param integer $Advance 高级模式
      * @param integer $Interval 时间周期
      * @param integer $Limit 限制次数
@@ -123,7 +155,11 @@ class CCRuleItem extends AbstractModel
      * @param string $Url 匹配url
      * @param integer $ValidTime 策略动作有效时间
      * @param string $OptionsArr 高级参数
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Length url长度
+     * @param integer $RuleId 规则ID
+     * @param string $EventId 事件id
+     * @param array $SessionApplied 关联的Session规则
+     * @param integer $CreateTime 创建时间
      */
     function __construct()
     {
@@ -184,6 +220,26 @@ class CCRuleItem extends AbstractModel
 
         if (array_key_exists("OptionsArr",$param) and $param["OptionsArr"] !== null) {
             $this->OptionsArr = $param["OptionsArr"];
+        }
+
+        if (array_key_exists("Length",$param) and $param["Length"] !== null) {
+            $this->Length = $param["Length"];
+        }
+
+        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
+            $this->RuleId = $param["RuleId"];
+        }
+
+        if (array_key_exists("EventId",$param) and $param["EventId"] !== null) {
+            $this->EventId = $param["EventId"];
+        }
+
+        if (array_key_exists("SessionApplied",$param) and $param["SessionApplied"] !== null) {
+            $this->SessionApplied = $param["SessionApplied"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
     }
 }

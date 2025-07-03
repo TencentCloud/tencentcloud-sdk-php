@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 当前WAF威胁情报封禁模块详情
  *
  * @method array getTags() 获取封禁属性标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置封禁属性标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDefenseStatus() 获取封禁模组启用状态
  * @method void setDefenseStatus(integer $DefenseStatus) 设置封禁模组启用状态
  * @method string getLastUpdateTime() 获取最后更新时间
@@ -33,7 +31,6 @@ class WafThreatenIntelligenceDetails extends AbstractModel
 {
     /**
      * @var array 封禁属性标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
@@ -49,7 +46,6 @@ class WafThreatenIntelligenceDetails extends AbstractModel
 
     /**
      * @param array $Tags 封禁属性标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DefenseStatus 封禁模组启用状态
      * @param string $LastUpdateTime 最后更新时间
      */

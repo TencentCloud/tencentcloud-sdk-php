@@ -80,6 +80,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsInherit(integer $IsInherit) 设置任务资源配置是否继承集群配置模板：0（默认）不继承、1：继承
  * @method boolean getIsSessionStarted() 获取是否使用session脚本的sql运行任务：false：否，true：是
  * @method void setIsSessionStarted(boolean $IsSessionStarted) 设置是否使用session脚本的sql运行任务：false：否，true：是
+ * @method array getDependencyPackages() 获取标准引擎依赖包
+ * @method void setDependencyPackages(array $DependencyPackages) 设置标准引擎依赖包
  */
 class ModifySparkAppRequest extends AbstractModel
 {
@@ -234,6 +236,11 @@ class ModifySparkAppRequest extends AbstractModel
     public $IsSessionStarted;
 
     /**
+     * @var array 标准引擎依赖包
+     */
+    public $DependencyPackages;
+
+    /**
      * @param string $AppName spark作业名
      * @param integer $AppType spark作业类型，1代表spark jar作业，2代表spark streaming作业
      * @param string $DataEngine 执行spark作业的数据引擎名称
@@ -264,6 +271,7 @@ class ModifySparkAppRequest extends AbstractModel
      * @param string $SessionId 关联dlc查询脚本
      * @param integer $IsInherit 任务资源配置是否继承集群配置模板：0（默认）不继承、1：继承
      * @param boolean $IsSessionStarted 是否使用session脚本的sql运行任务：false：否，true：是
+     * @param array $DependencyPackages 标准引擎依赖包
      */
     function __construct()
     {
@@ -396,6 +404,15 @@ class ModifySparkAppRequest extends AbstractModel
 
         if (array_key_exists("IsSessionStarted",$param) and $param["IsSessionStarted"] !== null) {
             $this->IsSessionStarted = $param["IsSessionStarted"];
+        }
+
+        if (array_key_exists("DependencyPackages",$param) and $param["DependencyPackages"] !== null) {
+            $this->DependencyPackages = [];
+            foreach ($param["DependencyPackages"] as $key => $value){
+                $obj = new DependencyPackage();
+                $obj->deserialize($value);
+                array_push($this->DependencyPackages, $obj);
+            }
         }
     }
 }

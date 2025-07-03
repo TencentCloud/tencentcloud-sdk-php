@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setId(integer $Id) 设置用户ID
  * @method string getRealName() 获取用户姓名，最大长度20个字符，不能包含空格
  * @method void setRealName(string $RealName) 设置用户姓名，最大长度20个字符，不能包含空格
- * @method string getPhone() 获取大陆手机号直接填写，如果是其他国家、地区号码,按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
- * @method void setPhone(string $Phone) 设置大陆手机号直接填写，如果是其他国家、地区号码,按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
+ * @method string getPhone() 获取按照"国家地区代码|手机号"的格式输入。如: "+86|xxxxxxxx"
+ * @method void setPhone(string $Phone) 设置按照"国家地区代码|手机号"的格式输入。如: "+86|xxxxxxxx"
  * @method string getEmail() 获取电子邮件
  * @method void setEmail(string $Email) 设置电子邮件
  * @method string getValidateFrom() 获取用户生效时间，如:"2021-09-22T00:00:00+00:00"
@@ -58,7 +58,7 @@ class ModifyUserRequest extends AbstractModel
     public $RealName;
 
     /**
-     * @var string 大陆手机号直接填写，如果是其他国家、地区号码,按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
+     * @var string 按照"国家地区代码|手机号"的格式输入。如: "+86|xxxxxxxx"
      */
     public $Phone;
 
@@ -102,7 +102,7 @@ class ModifyUserRequest extends AbstractModel
     /**
      * @param integer $Id 用户ID
      * @param string $RealName 用户姓名，最大长度20个字符，不能包含空格
-     * @param string $Phone 大陆手机号直接填写，如果是其他国家、地区号码,按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
+     * @param string $Phone 按照"国家地区代码|手机号"的格式输入。如: "+86|xxxxxxxx"
      * @param string $Email 电子邮件
      * @param string $ValidateFrom 用户生效时间，如:"2021-09-22T00:00:00+00:00"
 生效、失效时间不填则用户长期有效

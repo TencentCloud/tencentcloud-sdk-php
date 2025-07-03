@@ -18,7 +18,7 @@ namespace TencentCloud\Tcr\V20190924\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- *  作业调度信息
+ * 作业调度信息
  *
  * @method string getType() 获取类型：Hourly, Daily, Weekly, Custom, Manual, Dryrun, None
  * @method void setType(string $Type) 设置类型：Hourly, Daily, Weekly, Custom, Manual, Dryrun, None

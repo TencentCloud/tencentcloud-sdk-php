@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getRelatedType() 获取关联类型 1-节点关联 2-用户关联
  * @method void setRelatedType(integer $RelatedType) 设置关联类型 1-节点关联 2-用户关联
  * @method string getName() 获取账号或者节点名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置账号或者节点名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAddTime() 获取绑定时间
  * @method void setAddTime(string $AddTime) 设置绑定时间
  */
@@ -45,7 +43,6 @@ class ListTargetsForPolicyNode extends AbstractModel
 
     /**
      * @var string 账号或者节点名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
@@ -58,7 +55,6 @@ class ListTargetsForPolicyNode extends AbstractModel
      * @param integer $Uin scp账号uin或节点Id
      * @param integer $RelatedType 关联类型 1-节点关联 2-用户关联
      * @param string $Name 账号或者节点名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AddTime 绑定时间
      */
     function __construct()

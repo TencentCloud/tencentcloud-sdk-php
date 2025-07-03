@@ -21,93 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * 视频流Raw协议信息
  *
  * @method string getSM4Vector() 获取加密向量（如果视频网关选择流为非加密传输这个参数可忽略）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSM4Vector(string $SM4Vector) 设置加密向量（如果视频网关选择流为非加密传输这个参数可忽略）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNATIP() 获取专线ip (非专线接入可忽略)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNATIP(string $NATIP) 设置专线ip (非专线接入可忽略)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStreamToken() 获取客户端握手鉴权参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStreamToken(string $StreamToken) 设置客户端握手鉴权参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPort() 获取拉流端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPort(integer $Port) 设置拉流端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStreamEnKey() 获取视频流加密key,目前为AES128加密KEY（如果视频网关选择流为非加密传输这个参数可忽略）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStreamEnKey(string $StreamEnKey) 设置视频流加密key,目前为AES128加密KEY（如果视频网关选择流为非加密传输这个参数可忽略）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIP() 获取拉流公网地址（非公网接入时，这个地址是内网地址）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIP(string $IP) 设置拉流公网地址（非公网接入时，这个地址是内网地址）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInnerIP() 获取拉流内网地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInnerIP(string $InnerIP) 设置拉流内网地址
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RawInfo extends AbstractModel
 {
     /**
      * @var string 加密向量（如果视频网关选择流为非加密传输这个参数可忽略）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SM4Vector;
 
     /**
      * @var string 专线ip (非专线接入可忽略)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NATIP;
 
     /**
      * @var string 客户端握手鉴权参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StreamToken;
 
     /**
      * @var integer 拉流端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Port;
 
     /**
      * @var string 视频流加密key,目前为AES128加密KEY（如果视频网关选择流为非加密传输这个参数可忽略）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StreamEnKey;
 
     /**
      * @var string 拉流公网地址（非公网接入时，这个地址是内网地址）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IP;
 
     /**
      * @var string 拉流内网地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InnerIP;
 
     /**
      * @param string $SM4Vector 加密向量（如果视频网关选择流为非加密传输这个参数可忽略）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NATIP 专线ip (非专线接入可忽略)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StreamToken 客户端握手鉴权参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Port 拉流端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StreamEnKey 视频流加密key,目前为AES128加密KEY（如果视频网关选择流为非加密传输这个参数可忽略）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IP 拉流公网地址（非公网接入时，这个地址是内网地址）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InnerIP 拉流内网地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

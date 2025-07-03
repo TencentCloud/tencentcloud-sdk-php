@@ -27,21 +27,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSchemeType() 获取数据类型，ORIGINAL原始，STRING，INT64，FLOAT64，BOOLEAN，MAP，ARRAY
  * @method void setSchemeType(string $SchemeType) 设置数据类型，ORIGINAL原始，STRING，INT64，FLOAT64，BOOLEAN，MAP，ARRAY
  * @method string getValue() 获取数据处理VALUE
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置数据处理VALUE
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ValueParam getValueOperate() 获取VALUE处理
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValueOperate(ValueParam $ValueOperate) 设置VALUE处理
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOriginalValue() 获取原始VALUE
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOriginalValue(string $OriginalValue) 设置原始VALUE
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getValueOperates() 获取VALUE处理链
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValueOperates(array $ValueOperates) 设置VALUE处理链
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SMTParam extends AbstractModel
 {
@@ -62,25 +54,21 @@ class SMTParam extends AbstractModel
 
     /**
      * @var string 数据处理VALUE
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @var ValueParam VALUE处理
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ValueOperate;
 
     /**
      * @var string 原始VALUE
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OriginalValue;
 
     /**
      * @var array VALUE处理链
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ValueOperates;
 
@@ -89,13 +77,9 @@ class SMTParam extends AbstractModel
      * @param string $Operate 操作，DATE系统预设-时间戳，CUSTOMIZE自定义，MAPPING映射，JSONPATH
      * @param string $SchemeType 数据类型，ORIGINAL原始，STRING，INT64，FLOAT64，BOOLEAN，MAP，ARRAY
      * @param string $Value 数据处理VALUE
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ValueParam $ValueOperate VALUE处理
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OriginalValue 原始VALUE
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ValueOperates VALUE处理链
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

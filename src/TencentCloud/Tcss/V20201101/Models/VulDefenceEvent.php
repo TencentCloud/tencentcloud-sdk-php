@@ -47,9 +47,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getEventID() 获取事件ID
  * @method void setEventID(integer $EventID) 设置事件ID
  * @method string getCreateTime() 获取首次发现时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置首次发现时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContainerNetStatus() 获取隔离状态
 未隔离  	NORMAL
 已隔离		ISOLATED
@@ -65,9 +63,7 @@ use TencentCloud\Common\AbstractModel;
 解除隔离中  RESTORING
 解除隔离失败 RESTORE_FAILED
  * @method string getMergeTime() 获取最近发现时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMergeTime(string $MergeTime) 设置最近发现时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContainerStatus() 获取容器状态
 正在运行: RUNNING
 暂停: PAUSED
@@ -76,7 +72,6 @@ use TencentCloud\Common\AbstractModel;
 已经销毁: DESTROYED
 正在重启中: RESTARTING
 迁移中: REMOVING
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainerStatus(string $ContainerStatus) 设置容器状态
 正在运行: RUNNING
 暂停: PAUSED
@@ -85,7 +80,6 @@ use TencentCloud\Common\AbstractModel;
 已经销毁: DESTROYED
 正在重启中: RESTARTING
 迁移中: REMOVING
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContainerNetSubStatus() 获取容器子状态
 "AGENT_OFFLINE"       //Agent离线
 	"NODE_DESTROYED"      //节点已销毁
@@ -94,7 +88,6 @@ use TencentCloud\Common\AbstractModel;
 	"SHARED_HOST"         // 容器与主机共享网络
 	"RESOURCE_LIMIT"      //隔离操作资源超限
 	"UNKNOW"              // 原因未知
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainerNetSubStatus(string $ContainerNetSubStatus) 设置容器子状态
 "AGENT_OFFLINE"       //Agent离线
 	"NODE_DESTROYED"      //节点已销毁
@@ -103,23 +96,14 @@ use TencentCloud\Common\AbstractModel;
 	"SHARED_HOST"         // 容器与主机共享网络
 	"RESOURCE_LIMIT"      //隔离操作资源超限
 	"UNKNOW"              // 原因未知
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContainerIsolateOperationSrc() 获取容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainerIsolateOperationSrc(string $ContainerIsolateOperationSrc) 设置容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getQUUID() 获取主机QUUID/超级节点ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQUUID(string $QUUID) 设置主机QUUID/超级节点ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHostIP() 获取主机内网IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostIP(string $HostIP) 设置主机内网IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHostName() 获取主机名称/超级节点名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostName(string $HostName) 设置主机名称/超级节点名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNodeType() 获取节点类型[NORMAL:普通节点|SUPER:超级节点]
  * @method void setNodeType(string $NodeType) 设置节点类型[NORMAL:普通节点|SUPER:超级节点]
  * @method string getPublicIP() 获取外网IP
@@ -132,6 +116,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterID(string $ClusterID) 设置集群ID
  * @method string getClusterName() 获取集群名称
  * @method void setClusterName(string $ClusterName) 设置集群名称
+ * @method string getPodName() 获取pod名称
+ * @method void setPodName(string $PodName) 设置pod名称
+ * @method string getPodIP() 获取pod ip
+ * @method void setPodIP(string $PodIP) 设置pod ip
  */
 class VulDefenceEvent extends AbstractModel
 {
@@ -202,7 +190,6 @@ class VulDefenceEvent extends AbstractModel
 
     /**
      * @var string 首次发现时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
@@ -219,7 +206,6 @@ class VulDefenceEvent extends AbstractModel
 
     /**
      * @var string 最近发现时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MergeTime;
 
@@ -232,7 +218,6 @@ class VulDefenceEvent extends AbstractModel
 已经销毁: DESTROYED
 正在重启中: RESTARTING
 迁移中: REMOVING
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContainerStatus;
 
@@ -245,31 +230,26 @@ class VulDefenceEvent extends AbstractModel
 	"SHARED_HOST"         // 容器与主机共享网络
 	"RESOURCE_LIMIT"      //隔离操作资源超限
 	"UNKNOW"              // 原因未知
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContainerNetSubStatus;
 
     /**
      * @var string 容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContainerIsolateOperationSrc;
 
     /**
      * @var string 主机QUUID/超级节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QUUID;
 
     /**
      * @var string 主机内网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostIP;
 
     /**
      * @var string 主机名称/超级节点名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostName;
 
@@ -304,6 +284,16 @@ class VulDefenceEvent extends AbstractModel
     public $ClusterName;
 
     /**
+     * @var string pod名称
+     */
+    public $PodName;
+
+    /**
+     * @var string pod ip
+     */
+    public $PodIP;
+
+    /**
      * @param string $CVEID 漏洞CVEID
      * @param string $VulName 漏洞名称
      * @param string $PocID 漏洞PocID
@@ -318,7 +308,6 @@ class VulDefenceEvent extends AbstractModel
      * @param string $Status 处理状态
      * @param integer $EventID 事件ID
      * @param string $CreateTime 首次发现时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContainerNetStatus 隔离状态
 未隔离  	NORMAL
 已隔离		ISOLATED
@@ -327,7 +316,6 @@ class VulDefenceEvent extends AbstractModel
 解除隔离中  RESTORING
 解除隔离失败 RESTORE_FAILED
      * @param string $MergeTime 最近发现时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContainerStatus 容器状态
 正在运行: RUNNING
 暂停: PAUSED
@@ -336,7 +324,6 @@ class VulDefenceEvent extends AbstractModel
 已经销毁: DESTROYED
 正在重启中: RESTARTING
 迁移中: REMOVING
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContainerNetSubStatus 容器子状态
 "AGENT_OFFLINE"       //Agent离线
 	"NODE_DESTROYED"      //节点已销毁
@@ -345,21 +332,18 @@ class VulDefenceEvent extends AbstractModel
 	"SHARED_HOST"         // 容器与主机共享网络
 	"RESOURCE_LIMIT"      //隔离操作资源超限
 	"UNKNOW"              // 原因未知
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContainerIsolateOperationSrc 容器隔离操作来源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $QUUID 主机QUUID/超级节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HostIP 主机内网IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HostName 主机名称/超级节点名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NodeType 节点类型[NORMAL:普通节点|SUPER:超级节点]
      * @param string $PublicIP 外网IP
      * @param string $NodeUniqueID 超级节点唯一ID
      * @param string $NodeID 超级节点ID
      * @param string $ClusterID 集群ID
      * @param string $ClusterName 集群名称
+     * @param string $PodName pod名称
+     * @param string $PodIP pod ip
      */
     function __construct()
     {
@@ -484,6 +468,14 @@ class VulDefenceEvent extends AbstractModel
 
         if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
             $this->ClusterName = $param["ClusterName"];
+        }
+
+        if (array_key_exists("PodName",$param) and $param["PodName"] !== null) {
+            $this->PodName = $param["PodName"];
+        }
+
+        if (array_key_exists("PodIP",$param) and $param["PodIP"] !== null) {
+            $this->PodIP = $param["PodIP"];
         }
     }
 }

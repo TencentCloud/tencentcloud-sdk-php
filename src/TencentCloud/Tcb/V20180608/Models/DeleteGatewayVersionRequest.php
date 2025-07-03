@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsDeleteImage(boolean $IsDeleteImage) 设置是否删除镜像
  * @method boolean getIsForce() 获取是否强制删除
  * @method void setIsForce(boolean $IsForce) 设置是否强制删除
- * @method string getOperatorRemark() 获取操作记录
- * @method void setOperatorRemark(string $OperatorRemark) 设置操作记录
+ * @method string getOperatorRemark() 获取操作者记录
+ * @method void setOperatorRemark(string $OperatorRemark) 设置操作者记录
  */
 class DeleteGatewayVersionRequest extends AbstractModel
 {
@@ -68,7 +68,7 @@ class DeleteGatewayVersionRequest extends AbstractModel
     public $IsForce;
 
     /**
-     * @var string 操作记录
+     * @var string 操作者记录
      */
     public $OperatorRemark;
 
@@ -79,7 +79,7 @@ class DeleteGatewayVersionRequest extends AbstractModel
      * @param boolean $IsDeleteServer 是否删除服务
      * @param boolean $IsDeleteImage 是否删除镜像
      * @param boolean $IsForce 是否强制删除
-     * @param string $OperatorRemark 操作记录
+     * @param string $OperatorRemark 操作者记录
      */
     function __construct()
     {

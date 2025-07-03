@@ -23,9 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method array getFilters() 获取查询条件过滤器，支持的查询条件如下：
 instanceIds - 实例ID
 instanceName - 实例名称
+status - 实例状态
  * @method void setFilters(array $Filters) 设置查询条件过滤器，支持的查询条件如下：
 instanceIds - 实例ID
 instanceName - 实例名称
+status - 实例状态
  * @method integer getLimit() 获取查询数目上限，默认20
  * @method void setLimit(integer $Limit) 设置查询数目上限，默认20
  * @method integer getOffset() 获取查询起始位置
@@ -37,6 +39,7 @@ class DescribeRocketMQVipInstancesRequest extends AbstractModel
      * @var array 查询条件过滤器，支持的查询条件如下：
 instanceIds - 实例ID
 instanceName - 实例名称
+status - 实例状态
      */
     public $Filters;
 
@@ -54,6 +57,7 @@ instanceName - 实例名称
      * @param array $Filters 查询条件过滤器，支持的查询条件如下：
 instanceIds - 实例ID
 instanceName - 实例名称
+status - 实例状态
      * @param integer $Limit 查询数目上限，默认20
      * @param integer $Offset 查询起始位置
      */

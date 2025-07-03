@@ -25,17 +25,11 @@ use TencentCloud\Common\AbstractModel;
  * @method array getConsumeSpeed() 获取消费者组消费速度排行速度
  * @method void setConsumeSpeed(array $ConsumeSpeed) 设置消费者组消费速度排行速度
  * @method array getTopicMessageHeap() 获取Topic 消息堆积/占用磁盘排行
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopicMessageHeap(array $TopicMessageHeap) 设置Topic 消息堆积/占用磁盘排行
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getBrokerIp() 获取Broker Ip 列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBrokerIp(array $BrokerIp) 设置Broker Ip 列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getBrokerTopicData() 获取单个broker 节点 Topic占用的数据大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBrokerTopicData(array $BrokerTopicData) 设置单个broker 节点 Topic占用的数据大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getBrokerTopicFlowData() 获取单个Broker 节点Topic 流量的大小(单位MB)
  * @method void setBrokerTopicFlowData(array $BrokerTopicFlowData) 设置单个Broker 节点Topic 流量的大小(单位MB)
  */
@@ -53,19 +47,16 @@ class TopicFlowRankingResult extends AbstractModel
 
     /**
      * @var array Topic 消息堆积/占用磁盘排行
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TopicMessageHeap;
 
     /**
      * @var array Broker Ip 列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BrokerIp;
 
     /**
      * @var array 单个broker 节点 Topic占用的数据大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BrokerTopicData;
 
@@ -78,11 +69,8 @@ class TopicFlowRankingResult extends AbstractModel
      * @param array $TopicFlow Topic 流量数组
      * @param array $ConsumeSpeed 消费者组消费速度排行速度
      * @param array $TopicMessageHeap Topic 消息堆积/占用磁盘排行
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $BrokerIp Broker Ip 列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $BrokerTopicData 单个broker 节点 Topic占用的数据大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $BrokerTopicFlowData 单个Broker 节点Topic 流量的大小(单位MB)
      */
     function __construct()

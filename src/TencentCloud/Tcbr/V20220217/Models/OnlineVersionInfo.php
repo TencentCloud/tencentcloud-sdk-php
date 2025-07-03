@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 在线版本信息
  *
  * @method string getVersionName() 获取版本名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersionName(string $VersionName) 设置版本名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getImageUrl() 获取镜像url
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageUrl(string $ImageUrl) 设置镜像url
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFlowRatio() 获取流量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowRatio(string $FlowRatio) 设置流量
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OnlineVersionInfo extends AbstractModel
 {
     /**
      * @var string 版本名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VersionName;
 
     /**
      * @var string 镜像url
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageUrl;
 
     /**
      * @var string 流量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowRatio;
 
     /**
      * @param string $VersionName 版本名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ImageUrl 镜像url
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FlowRatio 流量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

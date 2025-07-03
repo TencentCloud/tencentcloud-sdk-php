@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 安全组基础信息
  *
  * @method string getSgId() 获取安全组Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSgId(string $SgId) 设置安全组Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSgName() 获取安全组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSgName(string $SgName) 设置安全组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSgRemark() 获取备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSgRemark(string $SgRemark) 设置备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SgUnit extends AbstractModel
 {
     /**
      * @var string 安全组Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SgId;
 
     /**
      * @var string 安全组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SgName;
 
     /**
      * @var string 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SgRemark;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @param string $SgId 安全组Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SgName 安全组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SgRemark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

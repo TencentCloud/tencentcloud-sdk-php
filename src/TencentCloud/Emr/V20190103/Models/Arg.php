@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 通用的参数
  *
  * @method string getKey() 获取key
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKey(string $Key) 设置key
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getValues() 获取值列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValues(array $Values) 设置值列表
@@ -33,7 +31,6 @@ class Arg extends AbstractModel
 {
     /**
      * @var string key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Key;
 
@@ -45,7 +42,6 @@ class Arg extends AbstractModel
 
     /**
      * @param string $Key key
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Values 值列表
 注意：此字段可能返回 null，表示取不到有效值。
      */

@@ -46,10 +46,10 @@ use TencentCloud\Common\AbstractModel;
 KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。
  * @method void setMachineMemory(integer $MachineMemory) 设置实例内存容量，单位：GB。
 KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。
- * @method integer getZoneId() 获取实例所属的可用区ID。<ul><li>具体取值，请参见[地域和可用区](https://cloud.tencent.com/document/product/239/4106)获取。</li><li>参数<b>ZoneId</b>和<b>ZoneName</b>至少配置其中一个。</li></u>
- * @method void setZoneId(integer $ZoneId) 设置实例所属的可用区ID。<ul><li>具体取值，请参见[地域和可用区](https://cloud.tencent.com/document/product/239/4106)获取。</li><li>参数<b>ZoneId</b>和<b>ZoneName</b>至少配置其中一个。</li></u>
- * @method string getZoneName() 获取实例所属的可用区名称。<ul><li>具体取值，请参见[地域和可用区](https://cloud.tencent.com/document/product/239/4106)获取。</li><li>参数<b>ZoneId</b>和<b>ZoneName</b>至少配置其中一个。</li></u>
- * @method void setZoneName(string $ZoneName) 设置实例所属的可用区名称。<ul><li>具体取值，请参见[地域和可用区](https://cloud.tencent.com/document/product/239/4106)获取。</li><li>参数<b>ZoneId</b>和<b>ZoneName</b>至少配置其中一个。</li></u>
+ * @method integer getZoneId() 获取实例所属的可用区ID。<ul><li>具体取值，请参见[地域和可用区](https://cloud.tencent.com/document/product/239/4106)获取。</li><li>参数<b>ZoneId</b>和<b>ZoneName</b>至少配置其中一个。</li></ul>
+ * @method void setZoneId(integer $ZoneId) 设置实例所属的可用区ID。<ul><li>具体取值，请参见[地域和可用区](https://cloud.tencent.com/document/product/239/4106)获取。</li><li>参数<b>ZoneId</b>和<b>ZoneName</b>至少配置其中一个。</li></ul>
+ * @method string getZoneName() 获取实例所属的可用区名称。<ul><li>具体取值，请参见[地域和可用区](https://cloud.tencent.com/document/product/239/4106)获取。</li><li>参数<b>ZoneId</b>和<b>ZoneName</b>至少配置其中一个。</li></ul>
+ * @method void setZoneName(string $ZoneName) 设置实例所属的可用区名称。<ul><li>具体取值，请参见[地域和可用区](https://cloud.tencent.com/document/product/239/4106)获取。</li><li>参数<b>ZoneId</b>和<b>ZoneName</b>至少配置其中一个。</li></ul>
  * @method string getInstanceName() 获取创建实例的名称。
 仅支持长度小于60的中文、英文或者数字，短划线"-"、下划线"_"。
  * @method void setInstanceName(string $InstanceName) 设置创建实例的名称。
@@ -62,8 +62,8 @@ KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为�
 <li>密码复杂度要求：<ul><li>8-30个字符。</li><li>至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的2种。</li><li>不能以"/"开头。</li></ul></li></ul>
  * @method integer getVPort() 获取自定义端口。默认为6379，范围[1024,65535]。
  * @method void setVPort(integer $VPort) 设置自定义端口。默认为6379，范围[1024,65535]。
- * @method integer getAutoRenew() 获取包年包月计费的续费模式。<ul><li>0：默认状态，指手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</ul>
- * @method void setAutoRenew(integer $AutoRenew) 设置包年包月计费的续费模式。<ul><li>0：默认状态，指手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</ul>
+ * @method integer getAutoRenew() 获取包年包月计费的续费模式。<ul><li>0：默认状态，指手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</li></ul>
+ * @method void setAutoRenew(integer $AutoRenew) 设置包年包月计费的续费模式。<ul><li>0：默认状态，指手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</li></ul>
  * @method array getSecurityGroupIdList() 获取给实例设置安全组 ID 数组。
  * @method void setSecurityGroupIdList(array $SecurityGroupIdList) 设置给实例设置安全组 ID 数组。
  * @method array getResourceTags() 获取给实例绑定标签。
@@ -80,8 +80,8 @@ KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为�
  * @method void setMachineCpu(integer $MachineCpu) 设置计算 CPU 核数，可忽略不传。CPU 核数与内存为固定搭配，具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。
  * @method integer getProjectId() 获取项目id，取值以用户账户>用户账户相关接口查询>项目列表返回的projectId为准。
  * @method void setProjectId(integer $ProjectId) 设置项目id，取值以用户账户>用户账户相关接口查询>项目列表返回的projectId为准。
- * @method string getCompression() 获取数据压缩开关。<ul><li>ON：开启，默认开启压缩。</li><li>OFF：关闭。</li>
- * @method void setCompression(string $Compression) 设置数据压缩开关。<ul><li>ON：开启，默认开启压缩。</li><li>OFF：关闭。</li>
+ * @method string getCompression() 获取数据压缩开关。<ul><li>ON：开启，默认开启压缩。</li><li>OFF：关闭。</li></ul>
+ * @method void setCompression(string $Compression) 设置数据压缩开关。<ul><li>ON：开启，默认开启压缩。</li><li>OFF：关闭。</li></ul>
  */
 class CreateInstancesRequest extends AbstractModel
 {
@@ -135,12 +135,12 @@ KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为�
     public $MachineMemory;
 
     /**
-     * @var integer 实例所属的可用区ID。<ul><li>具体取值，请参见[地域和可用区](https://cloud.tencent.com/document/product/239/4106)获取。</li><li>参数<b>ZoneId</b>和<b>ZoneName</b>至少配置其中一个。</li></u>
+     * @var integer 实例所属的可用区ID。<ul><li>具体取值，请参见[地域和可用区](https://cloud.tencent.com/document/product/239/4106)获取。</li><li>参数<b>ZoneId</b>和<b>ZoneName</b>至少配置其中一个。</li></ul>
      */
     public $ZoneId;
 
     /**
-     * @var string 实例所属的可用区名称。<ul><li>具体取值，请参见[地域和可用区](https://cloud.tencent.com/document/product/239/4106)获取。</li><li>参数<b>ZoneId</b>和<b>ZoneName</b>至少配置其中一个。</li></u>
+     * @var string 实例所属的可用区名称。<ul><li>具体取值，请参见[地域和可用区](https://cloud.tencent.com/document/product/239/4106)获取。</li><li>参数<b>ZoneId</b>和<b>ZoneName</b>至少配置其中一个。</li></ul>
      */
     public $ZoneName;
 
@@ -167,7 +167,7 @@ KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为�
     public $VPort;
 
     /**
-     * @var integer 包年包月计费的续费模式。<ul><li>0：默认状态，指手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</ul>
+     * @var integer 包年包月计费的续费模式。<ul><li>0：默认状态，指手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</li></ul>
      */
     public $AutoRenew;
 
@@ -204,7 +204,7 @@ KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为�
     public $ProjectId;
 
     /**
-     * @var string 数据压缩开关。<ul><li>ON：开启，默认开启压缩。</li><li>OFF：关闭。</li>
+     * @var string 数据压缩开关。<ul><li>ON：开启，默认开启压缩。</li><li>OFF：关闭。</li></ul>
      */
     public $Compression;
 
@@ -222,15 +222,15 @@ KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为�
      * @param integer $ReplicasNum 副本数。当前仅支持设置1个副本节点，即每一个分片仅包含1个主节点与1个副本节点，数据主从实时热备。
      * @param integer $MachineMemory 实例内存容量，单位：GB。
 KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为固定搭配，即2GB内存，固定分配8GB的持久内存，不可选择。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。
-     * @param integer $ZoneId 实例所属的可用区ID。<ul><li>具体取值，请参见[地域和可用区](https://cloud.tencent.com/document/product/239/4106)获取。</li><li>参数<b>ZoneId</b>和<b>ZoneName</b>至少配置其中一个。</li></u>
-     * @param string $ZoneName 实例所属的可用区名称。<ul><li>具体取值，请参见[地域和可用区](https://cloud.tencent.com/document/product/239/4106)获取。</li><li>参数<b>ZoneId</b>和<b>ZoneName</b>至少配置其中一个。</li></u>
+     * @param integer $ZoneId 实例所属的可用区ID。<ul><li>具体取值，请参见[地域和可用区](https://cloud.tencent.com/document/product/239/4106)获取。</li><li>参数<b>ZoneId</b>和<b>ZoneName</b>至少配置其中一个。</li></ul>
+     * @param string $ZoneName 实例所属的可用区名称。<ul><li>具体取值，请参见[地域和可用区](https://cloud.tencent.com/document/product/239/4106)获取。</li><li>参数<b>ZoneId</b>和<b>ZoneName</b>至少配置其中一个。</li></ul>
      * @param string $InstanceName 创建实例的名称。
 仅支持长度小于60的中文、英文或者数字，短划线"-"、下划线"_"。
      * @param boolean $NoAuth 指明创建的实例是否需要支持免密访问。<ul><li>true：免密实例。</li><li>false：非免密实例，默认为非免密实例。此时，需要设置访问密码。</li></ul>
      * @param string $Password 实例访问密码。<ul><li>当参数<b>NoAuth</b>为<b>true</b>时，Password为无需设置，否则Password为必填参数。</li>
 <li>密码复杂度要求：<ul><li>8-30个字符。</li><li>至少包含小写字母、大写字母、数字和字符 ()`~!@#$%^&*-+=_|{}[]:;<>,.?/ 中的2种。</li><li>不能以"/"开头。</li></ul></li></ul>
      * @param integer $VPort 自定义端口。默认为6379，范围[1024,65535]。
-     * @param integer $AutoRenew 包年包月计费的续费模式。<ul><li>0：默认状态，指手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</ul>
+     * @param integer $AutoRenew 包年包月计费的续费模式。<ul><li>0：默认状态，指手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</li></ul>
      * @param array $SecurityGroupIdList 给实例设置安全组 ID 数组。
      * @param array $ResourceTags 给实例绑定标签。
      * @param integer $MemSize 混合存储版，单分片持久化内存容量，单位：GB。
@@ -239,7 +239,7 @@ KeeWiDB 内存容量<b>MachineMemory</b>与持久内存容量<b>MemSize</b>为�
 每一缓存分片容量，对应的磁盘容量范围不同。具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。
      * @param integer $MachineCpu 计算 CPU 核数，可忽略不传。CPU 核数与内存为固定搭配，具体信息，请参见[产品规格](https://cloud.tencent.com/document/product/1520/80808)。
      * @param integer $ProjectId 项目id，取值以用户账户>用户账户相关接口查询>项目列表返回的projectId为准。
-     * @param string $Compression 数据压缩开关。<ul><li>ON：开启，默认开启压缩。</li><li>OFF：关闭。</li>
+     * @param string $Compression 数据压缩开关。<ul><li>ON：开启，默认开启压缩。</li><li>OFF：关闭。</li></ul>
      */
     function __construct()
     {

@@ -21,67 +21,46 @@ use TencentCloud\Common\AbstractModel;
  * 云原生网关服务详细信息
  *
  * @method string getID() 获取服务ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setID(string $ID) 设置服务ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取服务名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置服务名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProtocol() 获取后端协议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProtocol(string $Protocol) 设置后端协议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPath() 获取后端路径
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPath(string $Path) 设置后端路径
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTimeout() 获取后端延时，单位ms
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeout(integer $Timeout) 设置后端延时，单位ms
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRetries() 获取重试次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRetries(integer $Retries) 设置重试次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取标签
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签
 注意：此字段可能返回 null，表示取不到有效值。
  * @method KongUpstreamInfo getUpstreamInfo() 获取后端配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpstreamInfo(KongUpstreamInfo $UpstreamInfo) 设置后端配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpstreamType() 获取后端类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpstreamType(string $UpstreamType) 设置后端类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getEditable() 获取是否可编辑
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEditable(boolean $Editable) 设置是否可编辑
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class KongServiceDetail extends AbstractModel
 {
     /**
      * @var string 服务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ID;
 
     /**
      * @var string 服务名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 后端协议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Protocol;
 
@@ -93,13 +72,11 @@ class KongServiceDetail extends AbstractModel
 
     /**
      * @var integer 后端延时，单位ms
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Timeout;
 
     /**
      * @var integer 重试次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Retries;
 
@@ -111,51 +88,38 @@ class KongServiceDetail extends AbstractModel
 
     /**
      * @var KongUpstreamInfo 后端配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpstreamInfo;
 
     /**
      * @var string 后端类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpstreamType;
 
     /**
      * @var boolean 是否可编辑
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Editable;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedTime;
 
     /**
      * @param string $ID 服务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 服务名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Protocol 后端协议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Path 后端路径
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Timeout 后端延时，单位ms
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Retries 重试次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 标签
 注意：此字段可能返回 null，表示取不到有效值。
      * @param KongUpstreamInfo $UpstreamInfo 后端配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpstreamType 后端类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Editable 是否可编辑
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

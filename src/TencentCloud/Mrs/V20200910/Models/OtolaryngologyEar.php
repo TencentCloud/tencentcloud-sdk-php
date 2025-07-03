@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 体检报告-耳鼻喉科-耳朵
  *
  * @method KeyValueItem getText() 获取耳总体描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setText(KeyValueItem $Text) 设置耳总体描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method HearingItem getHearing() 获取听力
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHearing(HearingItem $Hearing) 设置听力
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OtolaryngologyEar extends AbstractModel
 {
     /**
      * @var KeyValueItem 耳总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Text;
 
     /**
      * @var HearingItem 听力
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Hearing;
 
     /**
      * @param KeyValueItem $Text 耳总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HearingItem $Hearing 听力
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,27 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * DescribeResultDownload返回参数结构体
  *
  * @method string getPath() 获取下载文件路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPath(string $Path) 设置下载文件路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取任务状态 init | queue | format | compress | success|  timeout | error
  * @method void setStatus(string $Status) 设置任务状态 init | queue | format | compress | success|  timeout | error
  * @method string getReason() 获取任务异常原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReason(string $Reason) 设置任务异常原因
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSecretId() 获取临时AK
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSecretId(string $SecretId) 设置临时AK
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSecretKey() 获取临时SK
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSecretKey(string $SecretKey) 设置临时SK
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSecretId() 获取临时SecretId
+ * @method void setSecretId(string $SecretId) 设置临时SecretId
+ * @method string getSecretKey() 获取临时SecretKey
+ * @method void setSecretKey(string $SecretKey) 设置临时SecretKey
  * @method string getToken() 获取临时Token
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setToken(string $Token) 设置临时Token
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -49,7 +39,6 @@ class DescribeResultDownloadResponse extends AbstractModel
 {
     /**
      * @var string 下载文件路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Path;
 
@@ -60,25 +49,21 @@ class DescribeResultDownloadResponse extends AbstractModel
 
     /**
      * @var string 任务异常原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Reason;
 
     /**
-     * @var string 临时AK
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 临时SecretId
      */
     public $SecretId;
 
     /**
-     * @var string 临时SK
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 临时SecretKey
      */
     public $SecretKey;
 
     /**
      * @var string 临时Token
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Token;
 
@@ -89,16 +74,11 @@ class DescribeResultDownloadResponse extends AbstractModel
 
     /**
      * @param string $Path 下载文件路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 任务状态 init | queue | format | compress | success|  timeout | error
      * @param string $Reason 任务异常原因
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SecretId 临时AK
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SecretKey 临时SK
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SecretId 临时SecretId
+     * @param string $SecretKey 临时SecretKey
      * @param string $Token 临时Token
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -24,14 +24,20 @@ use TencentCloud\Common\AbstractModel;
 
  * @method void setCorpBizId(string $CorpBizId) 设置企业ID
 
- * @method integer getRobotQuota() 获取机器人配额
-
- * @method void setRobotQuota(integer $RobotQuota) 设置机器人配额
-
+ * @method integer getRobotQuota() 获取应用配额
+ * @method void setRobotQuota(integer $RobotQuota) 设置应用配额
  * @method string getFullName() 获取企业全称
 
  * @method void setFullName(string $FullName) 设置企业全称
 
+ * @method boolean getIsTrial() 获取是否试用
+ * @method void setIsTrial(boolean $IsTrial) 设置是否试用
+ * @method boolean getIsTrialExpired() 获取是否试用过期
+ * @method void setIsTrialExpired(boolean $IsTrialExpired) 设置是否试用过期
+ * @method integer getAvailableAppQuota() 获取可用应用数量
+ * @method void setAvailableAppQuota(integer $AvailableAppQuota) 设置可用应用数量
+ * @method boolean getIsSupportCustomModel() 获取是否支持自定义模型配置
+ * @method void setIsSupportCustomModel(boolean $IsSupportCustomModel) 设置是否支持自定义模型配置
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -44,8 +50,7 @@ class DescribeCorpResponse extends AbstractModel
     public $CorpBizId;
 
     /**
-     * @var integer 机器人配额
-
+     * @var integer 应用配额
      */
     public $RobotQuota;
 
@@ -56,6 +61,26 @@ class DescribeCorpResponse extends AbstractModel
     public $FullName;
 
     /**
+     * @var boolean 是否试用
+     */
+    public $IsTrial;
+
+    /**
+     * @var boolean 是否试用过期
+     */
+    public $IsTrialExpired;
+
+    /**
+     * @var integer 可用应用数量
+     */
+    public $AvailableAppQuota;
+
+    /**
+     * @var boolean 是否支持自定义模型配置
+     */
+    public $IsSupportCustomModel;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -63,10 +88,13 @@ class DescribeCorpResponse extends AbstractModel
     /**
      * @param string $CorpBizId 企业ID
 
-     * @param integer $RobotQuota 机器人配额
-
+     * @param integer $RobotQuota 应用配额
      * @param string $FullName 企业全称
 
+     * @param boolean $IsTrial 是否试用
+     * @param boolean $IsTrialExpired 是否试用过期
+     * @param integer $AvailableAppQuota 可用应用数量
+     * @param boolean $IsSupportCustomModel 是否支持自定义模型配置
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -92,6 +120,22 @@ class DescribeCorpResponse extends AbstractModel
 
         if (array_key_exists("FullName",$param) and $param["FullName"] !== null) {
             $this->FullName = $param["FullName"];
+        }
+
+        if (array_key_exists("IsTrial",$param) and $param["IsTrial"] !== null) {
+            $this->IsTrial = $param["IsTrial"];
+        }
+
+        if (array_key_exists("IsTrialExpired",$param) and $param["IsTrialExpired"] !== null) {
+            $this->IsTrialExpired = $param["IsTrialExpired"];
+        }
+
+        if (array_key_exists("AvailableAppQuota",$param) and $param["AvailableAppQuota"] !== null) {
+            $this->AvailableAppQuota = $param["AvailableAppQuota"];
+        }
+
+        if (array_key_exists("IsSupportCustomModel",$param) and $param["IsSupportCustomModel"] !== null) {
+            $this->IsSupportCustomModel = $param["IsSupportCustomModel"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -21,135 +21,91 @@ use TencentCloud\Common\AbstractModel;
  * 实例信息
  *
  * @method string getInstanceId() 获取实例id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置实例id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceName() 获取实例名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceName(string $InstanceName) 设置实例名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceState() 获取实例状态：
 PENDING：表示创建中
 LAUNCH_FAILED：表示创建失败
 RUNNING：表示运行中
-ARREAR：表示欠费隔离
-TERMINATING：表示销毁中。
+ARREARS：表示待回收
+STOPPED_NO_CHARGE：表示关机不收费
+TERMINATING：表示销毁中
 TERMINATED：表示已销毁
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceState(string $InstanceState) 设置实例状态：
 PENDING：表示创建中
 LAUNCH_FAILED：表示创建失败
 RUNNING：表示运行中
-ARREAR：表示欠费隔离
-TERMINATING：表示销毁中。
+ARREARS：表示待回收
+STOPPED_NO_CHARGE：表示关机不收费
+TERMINATING：表示销毁中
 TERMINATED：表示已销毁
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApplicationName() 获取应用名称
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationName(string $ApplicationName) 设置应用名称
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBundleName() 获取算力套餐名称
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBundleName(string $BundleName) 设置算力套餐名称
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getGPUCount() 获取实例所包含的GPU卡数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGPUCount(integer $GPUCount) 设置实例所包含的GPU卡数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGPUPerformance() 获取算力
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGPUPerformance(string $GPUPerformance) 设置算力
 
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getGPUMemory() 获取显存
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setGPUMemory(string $GPUMemory) 设置显存
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCPU() 获取CPU核数
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCPU(string $CPU) 设置CPU核数
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMemory() 获取内存
+ * @method string getGPUMemory() 获取显存，单位：GB
+ * @method void setGPUMemory(string $GPUMemory) 设置显存，单位：GB
+ * @method string getCPU() 获取CPU核数，单位：核
+ * @method void setCPU(string $CPU) 设置CPU核数，单位：核
+ * @method string getMemory() 获取内存，单位：GB
 
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMemory(string $Memory) 设置内存
+ * @method void setMemory(string $Memory) 设置内存，单位：GB
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method SystemDisk getSystemDisk() 获取系统盘数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSystemDisk(SystemDisk $SystemDisk) 设置系统盘数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPrivateIpAddresses() 获取内网ip地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrivateIpAddresses(array $PrivateIpAddresses) 设置内网ip地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPublicIpAddresses() 获取公网ip地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicIpAddresses(array $PublicIpAddresses) 设置公网ip地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSecurityGroupIds() 获取安全组ID
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组ID
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLatestOperation() 获取实例最新操作
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLatestOperation(string $LatestOperation) 设置实例最新操作
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLatestOperationState() 获取实例最新操作状态：
 SUCCESS：表示操作成功
 OPERATING：表示操作执行中
 FAILED：表示操作失败
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLatestOperationState(string $LatestOperationState) 设置实例最新操作状态：
 SUCCESS：表示操作成功
 OPERATING：表示操作执行中
 FAILED：表示操作失败
 
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateTime() 获取实例创建时间
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateTime(string $CreateTime) 设置实例创建时间
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMaxOutBandwidth() 获取公网出带宽上限，默认10Mbps
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMaxOutBandwidth(string $MaxOutBandwidth) 设置公网出带宽上限，默认10Mbps
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMaxFreeTraffic() 获取每月免费流量，默认500G
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMaxFreeTraffic(string $MaxFreeTraffic) 设置每月免费流量，默认500G
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreateTime() 获取实例创建时间，时间格式："YYYY-MM-DD HH:MM:SS"
+ * @method void setCreateTime(string $CreateTime) 设置实例创建时间，时间格式："YYYY-MM-DD HH:MM:SS"
+ * @method string getMaxOutBandwidth() 获取公网出带宽上限，默认10Mbps，单位：Mbps
+ * @method void setMaxOutBandwidth(string $MaxOutBandwidth) 设置公网出带宽上限，默认10Mbps，单位：Mbps
+ * @method string getMaxFreeTraffic() 获取每月免费流量，默认500G，单位：GB
+ * @method void setMaxFreeTraffic(string $MaxFreeTraffic) 设置每月免费流量，默认500G，单位：GB
  * @method string getConfigurationEnvironment() 获取应用配置环境
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfigurationEnvironment(string $ConfigurationEnvironment) 设置应用配置环境
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLoginServices() 获取实例包含的登录服务详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLoginServices(array $LoginServices) 设置实例包含的登录服务详情
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOSType() 获取应用服务的操作系统类型
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOSType(string $OSType) 设置应用服务的操作系统类型
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOSType() 获取应用服务的操作系统类型；参数：linux、windows
+ * @method void setOSType(string $OSType) 设置应用服务的操作系统类型；参数：linux、windows
  */
 class Instance extends AbstractModel
 {
     /**
      * @var string 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var string 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceName;
 
@@ -158,87 +114,75 @@ class Instance extends AbstractModel
 PENDING：表示创建中
 LAUNCH_FAILED：表示创建失败
 RUNNING：表示运行中
-ARREAR：表示欠费隔离
-TERMINATING：表示销毁中。
+ARREARS：表示待回收
+STOPPED_NO_CHARGE：表示关机不收费
+TERMINATING：表示销毁中
 TERMINATED：表示已销毁
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceState;
 
     /**
      * @var string 应用名称
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationName;
 
     /**
      * @var string 算力套餐名称
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BundleName;
 
     /**
      * @var integer 实例所包含的GPU卡数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GPUCount;
 
     /**
      * @var string 算力
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GPUPerformance;
 
     /**
-     * @var string 显存
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 显存，单位：GB
      */
     public $GPUMemory;
 
     /**
-     * @var string CPU核数
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string CPU核数，单位：核
      */
     public $CPU;
 
     /**
-     * @var string 内存
+     * @var string 内存，单位：GB
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Memory;
 
     /**
      * @var SystemDisk 系统盘数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SystemDisk;
 
     /**
      * @var array 内网ip地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PrivateIpAddresses;
 
     /**
      * @var array 公网ip地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicIpAddresses;
 
     /**
      * @var array 安全组ID
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecurityGroupIds;
 
     /**
      * @var string 实例最新操作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LatestOperation;
 
@@ -248,106 +192,78 @@ SUCCESS：表示操作成功
 OPERATING：表示操作执行中
 FAILED：表示操作失败
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LatestOperationState;
 
     /**
-     * @var string 实例创建时间
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 实例创建时间，时间格式："YYYY-MM-DD HH:MM:SS"
      */
     public $CreateTime;
 
     /**
-     * @var string 公网出带宽上限，默认10Mbps
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 公网出带宽上限，默认10Mbps，单位：Mbps
      */
     public $MaxOutBandwidth;
 
     /**
-     * @var string 每月免费流量，默认500G
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 每月免费流量，默认500G，单位：GB
      */
     public $MaxFreeTraffic;
 
     /**
      * @var string 应用配置环境
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigurationEnvironment;
 
     /**
      * @var array 实例包含的登录服务详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LoginServices;
 
     /**
-     * @var string 应用服务的操作系统类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 应用服务的操作系统类型；参数：linux、windows
      */
     public $OSType;
 
     /**
      * @param string $InstanceId 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceState 实例状态：
 PENDING：表示创建中
 LAUNCH_FAILED：表示创建失败
 RUNNING：表示运行中
-ARREAR：表示欠费隔离
-TERMINATING：表示销毁中。
+ARREARS：表示待回收
+STOPPED_NO_CHARGE：表示关机不收费
+TERMINATING：表示销毁中
 TERMINATED：表示已销毁
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationName 应用名称
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BundleName 算力套餐名称
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $GPUCount 实例所包含的GPU卡数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GPUPerformance 算力
 
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $GPUMemory 显存
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CPU CPU核数
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Memory 内存
+     * @param string $GPUMemory 显存，单位：GB
+     * @param string $CPU CPU核数，单位：核
+     * @param string $Memory 内存，单位：GB
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SystemDisk $SystemDisk 系统盘数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PrivateIpAddresses 内网ip地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PublicIpAddresses 公网ip地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SecurityGroupIds 安全组ID
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LatestOperation 实例最新操作
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LatestOperationState 实例最新操作状态：
 SUCCESS：表示操作成功
 OPERATING：表示操作执行中
 FAILED：表示操作失败
 
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateTime 实例创建时间
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MaxOutBandwidth 公网出带宽上限，默认10Mbps
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $MaxFreeTraffic 每月免费流量，默认500G
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreateTime 实例创建时间，时间格式："YYYY-MM-DD HH:MM:SS"
+     * @param string $MaxOutBandwidth 公网出带宽上限，默认10Mbps，单位：Mbps
+     * @param string $MaxFreeTraffic 每月免费流量，默认500G，单位：GB
      * @param string $ConfigurationEnvironment 应用配置环境
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $LoginServices 实例包含的登录服务详情
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $OSType 应用服务的操作系统类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OSType 应用服务的操作系统类型；参数：linux、windows
      */
     function __construct()
     {

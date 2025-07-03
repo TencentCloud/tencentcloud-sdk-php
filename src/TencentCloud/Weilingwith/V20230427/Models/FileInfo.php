@@ -22,36 +22,28 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFileId() 获取文件id
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileId(string $FileId) 设置文件id
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReportName() 获取名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReportName(string $ReportName) 设置名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class FileInfo extends AbstractModel
 {
     /**
      * @var string 文件id
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileId;
 
     /**
      * @var string 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReportName;
 
     /**
      * @param string $FileId 文件id
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReportName 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

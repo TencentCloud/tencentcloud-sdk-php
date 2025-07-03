@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 查询关联账号VPC列表出参
  *
- * @method string getVpcId() 获取VpcId： vpc-xadsafsdasd
- * @method void setVpcId(string $VpcId) 设置VpcId： vpc-xadsafsdasd
+ * @method string getVpcId() 获取VpcId
+ * @method void setVpcId(string $VpcId) 设置VpcId
  * @method string getRegion() 获取Vpc所属地区: ap-guangzhou, ap-shanghai
  * @method void setRegion(string $Region) 设置Vpc所属地区: ap-guangzhou, ap-shanghai
  * @method string getUin() 获取Vpc所属账号: 123456789
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class AccountVpcInfoOut extends AbstractModel
 {
     /**
-     * @var string VpcId： vpc-xadsafsdasd
+     * @var string VpcId
      */
     public $VpcId;
 
@@ -52,7 +52,7 @@ class AccountVpcInfoOut extends AbstractModel
     public $VpcName;
 
     /**
-     * @param string $VpcId VpcId： vpc-xadsafsdasd
+     * @param string $VpcId VpcId
      * @param string $Region Vpc所属地区: ap-guangzhou, ap-shanghai
      * @param string $Uin Vpc所属账号: 123456789
      * @param string $VpcName vpc资源名称：testname

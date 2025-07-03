@@ -26,10 +26,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTps(integer $Tps) 设置TPS
  * @method integer getConsumerLag() 获取消息堆积数量
  * @method void setConsumerLag(integer $ConsumerLag) 设置消息堆积数量
- * @method string getConsumeType() 获取消费者类型
- * @method void setConsumeType(string $ConsumeType) 设置消费者类型
- * @method integer getCreatedTime() 获取创建时间，秒为单位
- * @method void setCreatedTime(integer $CreatedTime) 设置创建时间，秒为单位
+ * @method string getConsumeType() 获取消费类型，枚举值如下：
+
+- PULL：PULL 消费类型
+- PUSH：PUSH 消费类型
+- POP：POP 消费类型
+ * @method void setConsumeType(string $ConsumeType) 设置消费类型，枚举值如下：
+
+- PULL：PULL 消费类型
+- PUSH：PUSH 消费类型
+- POP：POP 消费类型
+ * @method integer getCreatedTime() 获取创建时间，**Unix时间戳（毫秒）**
+ * @method void setCreatedTime(integer $CreatedTime) 设置创建时间，**Unix时间戳（毫秒）**
  * @method boolean getConsumeMessageOrderly() 获取顺序投递：true
 并发投递：false
  * @method void setConsumeMessageOrderly(boolean $ConsumeMessageOrderly) 设置顺序投递：true
@@ -40,6 +48,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxRetryTimes(integer $MaxRetryTimes) 设置最大重试次数
  * @method string getRemark() 获取备注
  * @method void setRemark(string $Remark) 设置备注
+ * @method string getMessageModel() 获取消费模式：
+BROADCASTING 广播模式
+CLUSTERING 集群模式
+ * @method void setMessageModel(string $MessageModel) 设置消费模式：
+BROADCASTING 广播模式
+CLUSTERING 集群模式
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -61,12 +75,16 @@ class DescribeConsumerGroupResponse extends AbstractModel
     public $ConsumerLag;
 
     /**
-     * @var string 消费者类型
+     * @var string 消费类型，枚举值如下：
+
+- PULL：PULL 消费类型
+- PUSH：PUSH 消费类型
+- POP：POP 消费类型
      */
     public $ConsumeType;
 
     /**
-     * @var integer 创建时间，秒为单位
+     * @var integer 创建时间，**Unix时间戳（毫秒）**
      */
     public $CreatedTime;
 
@@ -92,6 +110,13 @@ class DescribeConsumerGroupResponse extends AbstractModel
     public $Remark;
 
     /**
+     * @var string 消费模式：
+BROADCASTING 广播模式
+CLUSTERING 集群模式
+     */
+    public $MessageModel;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -100,13 +125,20 @@ class DescribeConsumerGroupResponse extends AbstractModel
      * @param integer $ConsumerNum 在线消费者数量
      * @param integer $Tps TPS
      * @param integer $ConsumerLag 消息堆积数量
-     * @param string $ConsumeType 消费者类型
-     * @param integer $CreatedTime 创建时间，秒为单位
+     * @param string $ConsumeType 消费类型，枚举值如下：
+
+- PULL：PULL 消费类型
+- PUSH：PUSH 消费类型
+- POP：POP 消费类型
+     * @param integer $CreatedTime 创建时间，**Unix时间戳（毫秒）**
      * @param boolean $ConsumeMessageOrderly 顺序投递：true
 并发投递：false
      * @param boolean $ConsumeEnable 是否开启消费
      * @param integer $MaxRetryTimes 最大重试次数
      * @param string $Remark 备注
+     * @param string $MessageModel 消费模式：
+BROADCASTING 广播模式
+CLUSTERING 集群模式
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -156,6 +188,10 @@ class DescribeConsumerGroupResponse extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("MessageModel",$param) and $param["MessageModel"] !== null) {
+            $this->MessageModel = $param["MessageModel"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

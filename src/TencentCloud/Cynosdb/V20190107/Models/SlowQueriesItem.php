@@ -44,46 +44,32 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSqlMd5(string $SqlMd5) 设置sql语句md5
  * @method integer getSyncReadCountRemote() 获取远程读取次数
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSyncReadCountRemote(integer $SyncReadCountRemote) 设置远程读取次数
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSyncReadBytesRemote() 获取远程读取的字节数
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSyncReadBytesRemote(integer $SyncReadBytesRemote) 设置远程读取的字节数
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSyncReadTimeRemote() 获取远程读取所花费的时间（微秒）
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSyncReadTimeRemote(integer $SyncReadTimeRemote) 设置远程读取所花费的时间（微秒）
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSyncWriteCountRemote() 获取远程写入次数
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSyncWriteCountRemote(integer $SyncWriteCountRemote) 设置远程写入次数
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSyncWriteBytesRemote() 获取远程写入的字节数。
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSyncWriteBytesRemote(integer $SyncWriteBytesRemote) 设置远程写入的字节数。
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSyncWriteTimeRemote() 获取远程写入所花费的时间（微秒）。
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSyncWriteTimeRemote(integer $SyncWriteTimeRemote) 设置远程写入所花费的时间（微秒）。
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTrxCommitDelay() 获取事务提交延迟（微秒）
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrxCommitDelay(integer $TrxCommitDelay) 设置事务提交延迟（微秒）
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SlowQueriesItem extends AbstractModel
 {
@@ -145,49 +131,42 @@ class SlowQueriesItem extends AbstractModel
     /**
      * @var integer 远程读取次数
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SyncReadCountRemote;
 
     /**
      * @var integer 远程读取的字节数
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SyncReadBytesRemote;
 
     /**
      * @var integer 远程读取所花费的时间（微秒）
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SyncReadTimeRemote;
 
     /**
      * @var integer 远程写入次数
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SyncWriteCountRemote;
 
     /**
      * @var integer 远程写入的字节数。
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SyncWriteBytesRemote;
 
     /**
      * @var integer 远程写入所花费的时间（微秒）。
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SyncWriteTimeRemote;
 
     /**
      * @var integer 事务提交延迟（微秒）
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TrxCommitDelay;
 
@@ -205,25 +184,18 @@ class SlowQueriesItem extends AbstractModel
      * @param string $SqlMd5 sql语句md5
      * @param integer $SyncReadCountRemote 远程读取次数
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SyncReadBytesRemote 远程读取的字节数
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SyncReadTimeRemote 远程读取所花费的时间（微秒）
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SyncWriteCountRemote 远程写入次数
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SyncWriteBytesRemote 远程写入的字节数。
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SyncWriteTimeRemote 远程写入所花费的时间（微秒）。
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TrxCommitDelay 事务提交延迟（微秒）
 数据库内核版本大于3.1.12
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

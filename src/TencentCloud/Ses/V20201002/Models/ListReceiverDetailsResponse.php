@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalCount(integer $TotalCount) 设置总数
  * @method array getData() 获取数据记录
  * @method void setData(array $Data) 设置数据记录
+ * @method integer getValidCount() 获取有效邮件地址数
+ * @method void setValidCount(integer $ValidCount) 设置有效邮件地址数
+ * @method integer getInvalidCount() 获取无效邮件地址数
+ * @method void setInvalidCount(integer $InvalidCount) 设置无效邮件地址数
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +44,16 @@ class ListReceiverDetailsResponse extends AbstractModel
     public $Data;
 
     /**
+     * @var integer 有效邮件地址数
+     */
+    public $ValidCount;
+
+    /**
+     * @var integer 无效邮件地址数
+     */
+    public $InvalidCount;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +61,8 @@ class ListReceiverDetailsResponse extends AbstractModel
     /**
      * @param integer $TotalCount 总数
      * @param array $Data 数据记录
+     * @param integer $ValidCount 有效邮件地址数
+     * @param integer $InvalidCount 无效邮件地址数
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -73,6 +89,14 @@ class ListReceiverDetailsResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Data, $obj);
             }
+        }
+
+        if (array_key_exists("ValidCount",$param) and $param["ValidCount"] !== null) {
+            $this->ValidCount = $param["ValidCount"];
+        }
+
+        if (array_key_exists("InvalidCount",$param) and $param["InvalidCount"] !== null) {
+            $this->InvalidCount = $param["InvalidCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -36,6 +36,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLicenseExpression() 获取第三方组件的许可证表达式
  * @method void setLicenseExpression(string $LicenseExpression) 设置第三方组件的许可证表达式
+ * @method ComponentVersionInfo getVersionInfo() 获取第三方组件的版本信息(如果匹配到版本)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVersionInfo(ComponentVersionInfo $VersionInfo) 设置第三方组件的版本信息(如果匹配到版本)
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLastUpdateTime() 获取第三方组件的最后更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLastUpdateTime(string $LastUpdateTime) 设置第三方组件的最后更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTagList() 获取第三方组件的类型标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTagList(array $TagList) 设置第三方组件的类型标签
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Component extends AbstractModel
 {
@@ -72,6 +84,24 @@ class Component extends AbstractModel
     public $LicenseExpression;
 
     /**
+     * @var ComponentVersionInfo 第三方组件的版本信息(如果匹配到版本)
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VersionInfo;
+
+    /**
+     * @var string 第三方组件的最后更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LastUpdateTime;
+
+    /**
+     * @var array 第三方组件的类型标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TagList;
+
+    /**
      * @param PURL $PURL 第三方组件的PURL
      * @param string $Homepage 第三方组件的主页
      * @param string $Summary 第三方组件的简介
@@ -80,6 +110,12 @@ class Component extends AbstractModel
      * @param array $CodeLocationList 第三方组件的代码位置列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LicenseExpression 第三方组件的许可证表达式
+     * @param ComponentVersionInfo $VersionInfo 第三方组件的版本信息(如果匹配到版本)
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LastUpdateTime 第三方组件的最后更新时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TagList 第三方组件的类型标签
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -117,6 +153,19 @@ class Component extends AbstractModel
 
         if (array_key_exists("LicenseExpression",$param) and $param["LicenseExpression"] !== null) {
             $this->LicenseExpression = $param["LicenseExpression"];
+        }
+
+        if (array_key_exists("VersionInfo",$param) and $param["VersionInfo"] !== null) {
+            $this->VersionInfo = new ComponentVersionInfo();
+            $this->VersionInfo->deserialize($param["VersionInfo"]);
+        }
+
+        if (array_key_exists("LastUpdateTime",$param) and $param["LastUpdateTime"] !== null) {
+            $this->LastUpdateTime = $param["LastUpdateTime"];
+        }
+
+        if (array_key_exists("TagList",$param) and $param["TagList"] !== null) {
+            $this->TagList = $param["TagList"];
         }
     }
 }

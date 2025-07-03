@@ -74,6 +74,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组ids，安全组可以传数组形式，兼容之前SecurityGroupId参数
  * @method integer getDcnSyncMode() 获取DCN同步模式，0：异步， 1：强同步 
  * @method void setDcnSyncMode(integer $DcnSyncMode) 设置DCN同步模式，0：异步， 1：强同步 
+ * @method string getCpuType() 获取Cpu类型，如：英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD
+ * @method void setCpuType(string $CpuType) 设置Cpu类型，如：英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD
  */
 class CreateDCDBInstanceRequest extends AbstractModel
 {
@@ -197,6 +199,11 @@ class CreateDCDBInstanceRequest extends AbstractModel
     public $DcnSyncMode;
 
     /**
+     * @var string Cpu类型，如：英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD
+     */
+    public $CpuType;
+
+    /**
      * @param array $Zones 分片节点可用区分布，可填写多个可用区。
 注意当前可售卖的可用区需要通过DescribeDCDBSaleInfo接口拉取。
      * @param integer $Period 欲购买的时长，单位：月。
@@ -224,6 +231,7 @@ class CreateDCDBInstanceRequest extends AbstractModel
      * @param integer $AutoRenewFlag 自动续费标记，0:默认状态(用户未设置，即初始状态即手动续费，用户开通了预付费不停服特权也会进行自动续费)， 1:自动续费，2:明确不自动续费(用户设置)。若业务无续费概念或无需自动续费，需要设置为0
      * @param array $SecurityGroupIds 安全组ids，安全组可以传数组形式，兼容之前SecurityGroupId参数
      * @param integer $DcnSyncMode DCN同步模式，0：异步， 1：强同步 
+     * @param string $CpuType Cpu类型，如：英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD
      */
     function __construct()
     {
@@ -338,6 +346,10 @@ class CreateDCDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("DcnSyncMode",$param) and $param["DcnSyncMode"] !== null) {
             $this->DcnSyncMode = $param["DcnSyncMode"];
+        }
+
+        if (array_key_exists("CpuType",$param) and $param["CpuType"] !== null) {
+            $this->CpuType = $param["CpuType"];
         }
     }
 }

@@ -33,21 +33,19 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getAccessScope() 获取接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）
  * @method void setAccessScope(integer $AccessScope) 设置接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）
  * @method integer getLicensePayMode() 获取license授权有效期 0：月度授权 1：永久授权
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLicensePayMode(integer $LicensePayMode) 设置license授权有效期 0：月度授权 1：永久授权
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPayer() 获取付费方 0：厂商付费 1：客户付费
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayer(integer $Payer) 设置付费方 0：厂商付费 1：客户付费
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupId() 获取设备分组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupId(string $GroupId) 设置设备分组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupName() 获取设备分组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupName(string $GroupName) 设置设备分组名称
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getFlowTrunc() 获取设备无流量包处理方式，0: 按量付费，1: 截断加速
+ * @method void setFlowTrunc(integer $FlowTrunc) 设置设备无流量包处理方式，0: 按量付费，1: 截断加速
+ * @method string getSn() 获取设备sn
+ * @method void setSn(string $Sn) 设置设备sn
+ * @method string getVendor() 获取厂商
+ * @method void setVendor(string $Vendor) 设置厂商
  */
 class DeviceBaseInfo extends AbstractModel
 {
@@ -83,27 +81,38 @@ class DeviceBaseInfo extends AbstractModel
 
     /**
      * @var integer license授权有效期 0：月度授权 1：永久授权
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LicensePayMode;
 
     /**
      * @var integer 付费方 0：厂商付费 1：客户付费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Payer;
 
     /**
      * @var string 设备分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupId;
 
     /**
      * @var string 设备分组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupName;
+
+    /**
+     * @var integer 设备无流量包处理方式，0: 按量付费，1: 截断加速
+     */
+    public $FlowTrunc;
+
+    /**
+     * @var string 设备sn
+     */
+    public $Sn;
+
+    /**
+     * @var string 厂商
+     */
+    public $Vendor;
 
     /**
      * @param string $DeviceId 设备唯一ID
@@ -113,13 +122,12 @@ class DeviceBaseInfo extends AbstractModel
      * @param string $Remark 设备的备注
      * @param integer $AccessScope 接入环境。0：公有云网关；1：自有网关；2：公有云网关和自有网关。默认公有云网关。 具体含义： 公有云网关：即该设备只能接入公有云网关（就近接入） 自有网关：即该设备只能接入已经注册上线的自有网关（就近接入或固定ip接入） 公有云网关和自有网关：即该设备同时可以接入公有云网关和已经注册上线的自有网关（就近接入或固定ip接入）
      * @param integer $LicensePayMode license授权有效期 0：月度授权 1：永久授权
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Payer 付费方 0：厂商付费 1：客户付费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupId 设备分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 设备分组名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $FlowTrunc 设备无流量包处理方式，0: 按量付费，1: 截断加速
+     * @param string $Sn 设备sn
+     * @param string $Vendor 厂商
      */
     function __construct()
     {
@@ -172,6 +180,18 @@ class DeviceBaseInfo extends AbstractModel
 
         if (array_key_exists("GroupName",$param) and $param["GroupName"] !== null) {
             $this->GroupName = $param["GroupName"];
+        }
+
+        if (array_key_exists("FlowTrunc",$param) and $param["FlowTrunc"] !== null) {
+            $this->FlowTrunc = $param["FlowTrunc"];
+        }
+
+        if (array_key_exists("Sn",$param) and $param["Sn"] !== null) {
+            $this->Sn = $param["Sn"];
+        }
+
+        if (array_key_exists("Vendor",$param) and $param["Vendor"] !== null) {
+            $this->Vendor = $param["Vendor"];
         }
     }
 }

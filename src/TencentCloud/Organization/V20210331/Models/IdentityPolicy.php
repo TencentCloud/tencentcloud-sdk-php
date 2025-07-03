@@ -25,13 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPolicyName() 获取CAM预设策略名称。PolicyType 为预设策略时有效且必选
  * @method void setPolicyName(string $PolicyName) 设置CAM预设策略名称。PolicyType 为预设策略时有效且必选
  * @method integer getPolicyType() 获取策略类型。取值 1-自定义策略  2-预设策略；默认值2
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolicyType(integer $PolicyType) 设置策略类型。取值 1-自定义策略  2-预设策略；默认值2
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPolicyDocument() 获取自定义策略内容，遵循CAM策略语法。PolicyType 为自定义策略时有效且必选
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolicyDocument(string $PolicyDocument) 设置自定义策略内容，遵循CAM策略语法。PolicyType 为自定义策略时有效且必选
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class IdentityPolicy extends AbstractModel
 {
@@ -47,13 +43,11 @@ class IdentityPolicy extends AbstractModel
 
     /**
      * @var integer 策略类型。取值 1-自定义策略  2-预设策略；默认值2
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PolicyType;
 
     /**
      * @var string 自定义策略内容，遵循CAM策略语法。PolicyType 为自定义策略时有效且必选
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PolicyDocument;
 
@@ -61,9 +55,7 @@ class IdentityPolicy extends AbstractModel
      * @param integer $PolicyId CAM预设策略ID。PolicyType 为预设策略时有效且必选
      * @param string $PolicyName CAM预设策略名称。PolicyType 为预设策略时有效且必选
      * @param integer $PolicyType 策略类型。取值 1-自定义策略  2-预设策略；默认值2
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PolicyDocument 自定义策略内容，遵循CAM策略语法。PolicyType 为自定义策略时有效且必选
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

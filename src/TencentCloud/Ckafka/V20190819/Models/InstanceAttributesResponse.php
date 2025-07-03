@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实例属性返回结果对象
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getInstanceName() 获取实例名称
- * @method void setInstanceName(string $InstanceName) 设置实例名称
+ * @method string getInstanceId() 获取ckafka集群实例Id
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
+ * @method string getInstanceName() 获取ckafka集群实例Name
+ * @method void setInstanceName(string $InstanceName) 设置ckafka集群实例Name
  * @method array getVipList() 获取接入点 VIP 列表信息
  * @method void setVipList(array $VipList) 设置接入点 VIP 列表信息
  * @method string getVip() 获取虚拟IP
  * @method void setVip(string $Vip) 设置虚拟IP
  * @method string getVport() 获取虚拟端口
  * @method void setVport(string $Vport) 设置虚拟端口
- * @method integer getStatus() 获取实例的状态。0：创建中，1：运行中，2：删除中
- * @method void setStatus(integer $Status) 设置实例的状态。0：创建中，1：运行中，2：删除中
+ * @method integer getStatus() 获取实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
+ * @method void setStatus(integer $Status) 设置实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
  * @method integer getBandwidth() 获取实例带宽，单位：Mbps
  * @method void setBandwidth(integer $Bandwidth) 设置实例带宽，单位：Mbps
  * @method integer getDiskSize() 获取实例的存储大小，单位：GB
@@ -61,79 +61,59 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getCreatedTopics() 获取当前创建主题数
  * @method void setCreatedTopics(integer $CreatedTopics) 设置当前创建主题数
  * @method array getTags() 获取标签数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getExpireTime() 获取过期时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpireTime(integer $ExpireTime) 设置过期时间
-注意：此字段可能返回 null，表示取不到有效值。
- * @method array getZoneIds() 获取跨可用区
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setZoneIds(array $ZoneIds) 设置跨可用区
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVersion() 获取kafka版本信息
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVersion(string $Version) 设置kafka版本信息
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getZoneIds() 获取可用区列表
+ * @method void setZoneIds(array $ZoneIds) 设置可用区列表
+ * @method string getVersion() 获取ckafka集群实例版本
+ * @method void setVersion(string $Version) 设置ckafka集群实例版本
  * @method integer getMaxGroupNum() 获取最大分组数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxGroupNum(integer $MaxGroupNum) 设置最大分组数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCvm() 获取售卖类型,0:标准版,1:专业版
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCvm(integer $Cvm) 设置售卖类型,0:标准版,1:专业版
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceType() 获取类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceType(string $InstanceType) 设置类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getFeatures() 获取表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFeatures(array $Features) 设置表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DynamicRetentionTime getRetentionTimeConfig() 获取动态消息保留策略
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRetentionTimeConfig(DynamicRetentionTime $RetentionTimeConfig) 设置动态消息保留策略
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxConnection() 获取最大连接数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxConnection(integer $MaxConnection) 设置最大连接数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPublicNetwork() 获取公网带宽
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicNetwork(integer $PublicNetwork) 设置公网带宽
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeleteRouteTimestamp() 获取时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeleteRouteTimestamp(string $DeleteRouteTimestamp) 设置时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRemainingPartitions() 获取剩余创建分区数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemainingPartitions(integer $RemainingPartitions) 设置剩余创建分区数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRemainingTopics() 获取剩余创建主题数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemainingTopics(integer $RemainingTopics) 设置剩余创建主题数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DynamicDiskConfig getDynamicDiskConfig() 获取动态硬盘扩容策略
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDynamicDiskConfig(DynamicDiskConfig $DynamicDiskConfig) 设置动态硬盘扩容策略
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceChargeType() 获取实例计费类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例计费类型
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClusterType() 获取集群类型
+ * @method void setClusterType(string $ClusterType) 设置集群类型
+ * @method integer getFreePartitionNumber() 获取免费分区数量
+ * @method void setFreePartitionNumber(integer $FreePartitionNumber) 设置免费分区数量
+ * @method integer getElasticFloatBandwidth() 获取弹性带宽上浮值
+ * @method void setElasticFloatBandwidth(integer $ElasticFloatBandwidth) 设置弹性带宽上浮值
+ * @method string getCustomCertId() 获取ssl自定义证书id
+ * @method void setCustomCertId(string $CustomCertId) 设置ssl自定义证书id
+ * @method integer getUncleanLeaderElectionEnable() 获取集群topic默认 unclean.leader.election.enable配置: 1 开启 0 关闭
+ * @method void setUncleanLeaderElectionEnable(integer $UncleanLeaderElectionEnable) 设置集群topic默认 unclean.leader.election.enable配置: 1 开启 0 关闭
+ * @method integer getDeleteProtectionEnable() 获取实例删除保护开关: 1 开启 0 关闭
+ * @method void setDeleteProtectionEnable(integer $DeleteProtectionEnable) 设置实例删除保护开关: 1 开启 0 关闭
  */
 class InstanceAttributesResponse extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string ckafka集群实例Id
      */
     public $InstanceId;
 
     /**
-     * @var string 实例名称
+     * @var string ckafka集群实例Name
      */
     public $InstanceName;
 
@@ -153,7 +133,7 @@ class InstanceAttributesResponse extends AbstractModel
     public $Vport;
 
     /**
-     * @var integer 实例的状态。0：创建中，1：运行中，2：删除中
+     * @var integer 实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
      */
     public $Status;
 
@@ -229,107 +209,121 @@ class InstanceAttributesResponse extends AbstractModel
 
     /**
      * @var array 标签数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
      * @var integer 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpireTime;
 
     /**
-     * @var array 跨可用区
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 可用区列表
      */
     public $ZoneIds;
 
     /**
-     * @var string kafka版本信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string ckafka集群实例版本
      */
     public $Version;
 
     /**
      * @var integer 最大分组数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxGroupNum;
 
     /**
      * @var integer 售卖类型,0:标准版,1:专业版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Cvm;
 
     /**
      * @var string 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceType;
 
     /**
      * @var array 表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Features;
 
     /**
      * @var DynamicRetentionTime 动态消息保留策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RetentionTimeConfig;
 
     /**
      * @var integer 最大连接数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxConnection;
 
     /**
      * @var integer 公网带宽
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicNetwork;
 
     /**
      * @var string 时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeleteRouteTimestamp;
 
     /**
      * @var integer 剩余创建分区数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RemainingPartitions;
 
     /**
      * @var integer 剩余创建主题数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RemainingTopics;
 
     /**
      * @var DynamicDiskConfig 动态硬盘扩容策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DynamicDiskConfig;
 
     /**
      * @var string 实例计费类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceChargeType;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $InstanceName 实例名称
+     * @var string 集群类型
+     */
+    public $ClusterType;
+
+    /**
+     * @var integer 免费分区数量
+     */
+    public $FreePartitionNumber;
+
+    /**
+     * @var integer 弹性带宽上浮值
+     */
+    public $ElasticFloatBandwidth;
+
+    /**
+     * @var string ssl自定义证书id
+     */
+    public $CustomCertId;
+
+    /**
+     * @var integer 集群topic默认 unclean.leader.election.enable配置: 1 开启 0 关闭
+     */
+    public $UncleanLeaderElectionEnable;
+
+    /**
+     * @var integer 实例删除保护开关: 1 开启 0 关闭
+     */
+    public $DeleteProtectionEnable;
+
+    /**
+     * @param string $InstanceId ckafka集群实例Id
+     * @param string $InstanceName ckafka集群实例Name
      * @param array $VipList 接入点 VIP 列表信息
      * @param string $Vip 虚拟IP
      * @param string $Vport 虚拟端口
-     * @param integer $Status 实例的状态。0：创建中，1：运行中，2：删除中
+     * @param integer $Status 实例的状态。0: 创建中，1: 运行中，2: 删除中,  3: 已删除,  5: 隔离中,  7: 升级中,  -1: 创建失败 
      * @param integer $Bandwidth 实例带宽，单位：Mbps
      * @param integer $DiskSize 实例的存储大小，单位：GB
      * @param integer $ZoneId 可用区
@@ -345,37 +339,27 @@ class InstanceAttributesResponse extends AbstractModel
      * @param integer $CreatedPartitions 当前创建分区数
      * @param integer $CreatedTopics 当前创建主题数
      * @param array $Tags 标签数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ExpireTime 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ZoneIds 跨可用区
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Version kafka版本信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ZoneIds 可用区列表
+     * @param string $Version ckafka集群实例版本
      * @param integer $MaxGroupNum 最大分组数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Cvm 售卖类型,0:标准版,1:专业版
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceType 类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Features 表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DynamicRetentionTime $RetentionTimeConfig 动态消息保留策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxConnection 最大连接数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PublicNetwork 公网带宽
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeleteRouteTimestamp 时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RemainingPartitions 剩余创建分区数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RemainingTopics 剩余创建主题数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DynamicDiskConfig $DynamicDiskConfig 动态硬盘扩容策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceChargeType 实例计费类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClusterType 集群类型
+     * @param integer $FreePartitionNumber 免费分区数量
+     * @param integer $ElasticFloatBandwidth 弹性带宽上浮值
+     * @param string $CustomCertId ssl自定义证书id
+     * @param integer $UncleanLeaderElectionEnable 集群topic默认 unclean.leader.election.enable配置: 1 开启 0 关闭
+     * @param integer $DeleteProtectionEnable 实例删除保护开关: 1 开启 0 关闭
      */
     function __construct()
     {
@@ -545,6 +529,30 @@ class InstanceAttributesResponse extends AbstractModel
 
         if (array_key_exists("InstanceChargeType",$param) and $param["InstanceChargeType"] !== null) {
             $this->InstanceChargeType = $param["InstanceChargeType"];
+        }
+
+        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
+            $this->ClusterType = $param["ClusterType"];
+        }
+
+        if (array_key_exists("FreePartitionNumber",$param) and $param["FreePartitionNumber"] !== null) {
+            $this->FreePartitionNumber = $param["FreePartitionNumber"];
+        }
+
+        if (array_key_exists("ElasticFloatBandwidth",$param) and $param["ElasticFloatBandwidth"] !== null) {
+            $this->ElasticFloatBandwidth = $param["ElasticFloatBandwidth"];
+        }
+
+        if (array_key_exists("CustomCertId",$param) and $param["CustomCertId"] !== null) {
+            $this->CustomCertId = $param["CustomCertId"];
+        }
+
+        if (array_key_exists("UncleanLeaderElectionEnable",$param) and $param["UncleanLeaderElectionEnable"] !== null) {
+            $this->UncleanLeaderElectionEnable = $param["UncleanLeaderElectionEnable"];
+        }
+
+        if (array_key_exists("DeleteProtectionEnable",$param) and $param["DeleteProtectionEnable"] !== null) {
+            $this->DeleteProtectionEnable = $param["DeleteProtectionEnable"];
         }
     }
 }

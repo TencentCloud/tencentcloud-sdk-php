@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 查询主机相关核心文件监控规则详情
  *
  * @method string getName() 获取规则名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置规则名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRuleCategory() 获取规则类型 0 ：系统规则  1：用户规则
  * @method void setRuleCategory(integer $RuleCategory) 设置规则类型 0 ：系统规则  1：用户规则
  * @method array getRule() 获取规则
@@ -35,7 +33,6 @@ class MachineFileTamperRule extends AbstractModel
 {
     /**
      * @var string 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
@@ -56,7 +53,6 @@ class MachineFileTamperRule extends AbstractModel
 
     /**
      * @param string $Name 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleCategory 规则类型 0 ：系统规则  1：用户规则
      * @param array $Rule 规则
      * @param integer $Id 唯一id

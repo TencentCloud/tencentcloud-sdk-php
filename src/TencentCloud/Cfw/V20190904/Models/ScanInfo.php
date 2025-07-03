@@ -18,19 +18,24 @@ namespace TencentCloud\Cfw\V20190904\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 新手引导扫描信息  
+ * 新手引导扫描信息
  *
+ * @method float getScanPercent() 获取进度
+ * @method void setScanPercent(float $ScanPercent) 设置进度
  * @method ScanResultInfo getScanResultInfo() 获取扫描结果信息
  * @method void setScanResultInfo(ScanResultInfo $ScanResultInfo) 设置扫描结果信息
  * @method integer getScanStatus() 获取扫描状态 0扫描中 1完成  2未勾选自动扫描
  * @method void setScanStatus(integer $ScanStatus) 设置扫描状态 0扫描中 1完成  2未勾选自动扫描
- * @method float getScanPercent() 获取进度
- * @method void setScanPercent(float $ScanPercent) 设置进度
  * @method string getScanTime() 获取预计完成时间
  * @method void setScanTime(string $ScanTime) 设置预计完成时间
  */
 class ScanInfo extends AbstractModel
 {
+    /**
+     * @var float 进度
+     */
+    public $ScanPercent;
+
     /**
      * @var ScanResultInfo 扫描结果信息
      */
@@ -42,19 +47,14 @@ class ScanInfo extends AbstractModel
     public $ScanStatus;
 
     /**
-     * @var float 进度
-     */
-    public $ScanPercent;
-
-    /**
      * @var string 预计完成时间
      */
     public $ScanTime;
 
     /**
+     * @param float $ScanPercent 进度
      * @param ScanResultInfo $ScanResultInfo 扫描结果信息
      * @param integer $ScanStatus 扫描状态 0扫描中 1完成  2未勾选自动扫描
-     * @param float $ScanPercent 进度
      * @param string $ScanTime 预计完成时间
      */
     function __construct()
@@ -70,6 +70,10 @@ class ScanInfo extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ScanPercent",$param) and $param["ScanPercent"] !== null) {
+            $this->ScanPercent = $param["ScanPercent"];
+        }
+
         if (array_key_exists("ScanResultInfo",$param) and $param["ScanResultInfo"] !== null) {
             $this->ScanResultInfo = new ScanResultInfo();
             $this->ScanResultInfo->deserialize($param["ScanResultInfo"]);
@@ -77,10 +81,6 @@ class ScanInfo extends AbstractModel
 
         if (array_key_exists("ScanStatus",$param) and $param["ScanStatus"] !== null) {
             $this->ScanStatus = $param["ScanStatus"];
-        }
-
-        if (array_key_exists("ScanPercent",$param) and $param["ScanPercent"] !== null) {
-            $this->ScanPercent = $param["ScanPercent"];
         }
 
         if (array_key_exists("ScanTime",$param) and $param["ScanTime"] !== null) {

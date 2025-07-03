@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTopicDetail请求参数结构体
  *
- * @method string getInstanceId() 获取实例id
- * @method void setInstanceId(string $InstanceId) 设置实例id
+ * @method string getInstanceId() 获取ckafka集群实例Id
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
  * @method string getSearchWord() 获取（过滤条件）按照topicName过滤，支持模糊查询
  * @method void setSearchWord(string $SearchWord) 设置（过滤条件）按照topicName过滤，支持模糊查询
  * @method integer getOffset() 获取偏移量，不填默认为0
@@ -30,11 +30,17 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置返回数量，不填则默认 10，最大值20，取值要大于0
  * @method string getAclRuleName() 获取Acl预设策略名称
  * @method void setAclRuleName(string $AclRuleName) 设置Acl预设策略名称
+ * @method string getOrderBy() 获取根据特定的属性排序(目前支持PartitionNum/CreateTime)
+ * @method void setOrderBy(string $OrderBy) 设置根据特定的属性排序(目前支持PartitionNum/CreateTime)
+ * @method integer getOrderType() 获取0-顺序、1-倒序
+ * @method void setOrderType(integer $OrderType) 设置0-顺序、1-倒序
+ * @method array getFilters() 获取目前支持 ReplicaNum （副本数）筛选
+ * @method void setFilters(array $Filters) 设置目前支持 ReplicaNum （副本数）筛选
  */
 class DescribeTopicDetailRequest extends AbstractModel
 {
     /**
-     * @var string 实例id
+     * @var string ckafka集群实例Id
      */
     public $InstanceId;
 
@@ -59,11 +65,29 @@ class DescribeTopicDetailRequest extends AbstractModel
     public $AclRuleName;
 
     /**
-     * @param string $InstanceId 实例id
+     * @var string 根据特定的属性排序(目前支持PartitionNum/CreateTime)
+     */
+    public $OrderBy;
+
+    /**
+     * @var integer 0-顺序、1-倒序
+     */
+    public $OrderType;
+
+    /**
+     * @var array 目前支持 ReplicaNum （副本数）筛选
+     */
+    public $Filters;
+
+    /**
+     * @param string $InstanceId ckafka集群实例Id
      * @param string $SearchWord （过滤条件）按照topicName过滤，支持模糊查询
      * @param integer $Offset 偏移量，不填默认为0
      * @param integer $Limit 返回数量，不填则默认 10，最大值20，取值要大于0
      * @param string $AclRuleName Acl预设策略名称
+     * @param string $OrderBy 根据特定的属性排序(目前支持PartitionNum/CreateTime)
+     * @param integer $OrderType 0-顺序、1-倒序
+     * @param array $Filters 目前支持 ReplicaNum （副本数）筛选
      */
     function __construct()
     {
@@ -96,6 +120,23 @@ class DescribeTopicDetailRequest extends AbstractModel
 
         if (array_key_exists("AclRuleName",$param) and $param["AclRuleName"] !== null) {
             $this->AclRuleName = $param["AclRuleName"];
+        }
+
+        if (array_key_exists("OrderBy",$param) and $param["OrderBy"] !== null) {
+            $this->OrderBy = $param["OrderBy"];
+        }
+
+        if (array_key_exists("OrderType",$param) and $param["OrderType"] !== null) {
+            $this->OrderType = $param["OrderType"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

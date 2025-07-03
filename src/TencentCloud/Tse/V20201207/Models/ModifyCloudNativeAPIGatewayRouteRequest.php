@@ -84,6 +84,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDestinationPorts(array $DestinationPorts) 设置四层匹配的目的端口	
  * @method array getHeaders() 获取路由的Headers
  * @method void setHeaders(array $Headers) 设置路由的Headers
+ * @method boolean getRequestBuffering() 获取是否缓存请求body，默认true
+ * @method void setRequestBuffering(boolean $RequestBuffering) 设置是否缓存请求body，默认true
+ * @method boolean getResponseBuffering() 获取是否缓存响应body，默认true
+ * @method void setResponseBuffering(boolean $ResponseBuffering) 设置是否缓存响应body，默认true
+ * @method integer getRegexPriority() 获取增加优先级
+ * @method void setRegexPriority(integer $RegexPriority) 设置增加优先级
  */
 class ModifyCloudNativeAPIGatewayRouteRequest extends AbstractModel
 {
@@ -177,6 +183,21 @@ class ModifyCloudNativeAPIGatewayRouteRequest extends AbstractModel
     public $Headers;
 
     /**
+     * @var boolean 是否缓存请求body，默认true
+     */
+    public $RequestBuffering;
+
+    /**
+     * @var boolean 是否缓存响应body，默认true
+     */
+    public $ResponseBuffering;
+
+    /**
+     * @var integer 增加优先级
+     */
+    public $RegexPriority;
+
+    /**
      * @param string $GatewayId 网关ID
      * @param string $ServiceID 所属服务的ID
      * @param string $RouteID 路由的ID，实例级别唯一
@@ -209,6 +230,9 @@ class ModifyCloudNativeAPIGatewayRouteRequest extends AbstractModel
      * @param boolean $ForceHttps 是否开启强制HTTPS
      * @param array $DestinationPorts 四层匹配的目的端口	
      * @param array $Headers 路由的Headers
+     * @param boolean $RequestBuffering 是否缓存请求body，默认true
+     * @param boolean $ResponseBuffering 是否缓存响应body，默认true
+     * @param integer $RegexPriority 增加优先级
      */
     function __construct()
     {
@@ -282,6 +306,18 @@ class ModifyCloudNativeAPIGatewayRouteRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Headers, $obj);
             }
+        }
+
+        if (array_key_exists("RequestBuffering",$param) and $param["RequestBuffering"] !== null) {
+            $this->RequestBuffering = $param["RequestBuffering"];
+        }
+
+        if (array_key_exists("ResponseBuffering",$param) and $param["ResponseBuffering"] !== null) {
+            $this->ResponseBuffering = $param["ResponseBuffering"];
+        }
+
+        if (array_key_exists("RegexPriority",$param) and $param["RegexPriority"] !== null) {
+            $this->RegexPriority = $param["RegexPriority"];
         }
     }
 }

@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAclRuleId(integer $AclRuleId) 设置ACL规则`ID`。
  * @method integer getAction() 获取是否匹配。
  * @method void setAction(integer $Action) 设置是否匹配。
+ * @method string getDescription() 获取ACL规则描述
+ * @method void setDescription(string $Description) 设置ACL规则描述
  */
 class TranslationAclRule extends AbstractModel
 {
@@ -73,6 +75,11 @@ class TranslationAclRule extends AbstractModel
     public $Action;
 
     /**
+     * @var string ACL规则描述
+     */
+    public $Description;
+
+    /**
      * @param string $Protocol ACL协议类型，可选值:"ALL","TCP","UDP"
      * @param string $SourcePort 源端口。
      * @param string $SourceCidr 源地址。支持`ip`或`cidr`格式"xxx.xxx.xxx.000/xx"
@@ -80,6 +87,7 @@ class TranslationAclRule extends AbstractModel
      * @param string $DestinationCidr 目的地址。
      * @param integer $AclRuleId ACL规则`ID`。
      * @param integer $Action 是否匹配。
+     * @param string $Description ACL规则描述
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class TranslationAclRule extends AbstractModel
 
         if (array_key_exists("Action",$param) and $param["Action"] !== null) {
             $this->Action = $param["Action"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

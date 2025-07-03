@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyExtension请求参数结构体
  *
- * @method integer getSdkAppId() 获取TCCC 实例应用 ID
- * @method void setSdkAppId(integer $SdkAppId) 设置TCCC 实例应用 ID
+ * @method integer getSdkAppId() 获取应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+ * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
  * @method string getExtensionId() 获取分机号
  * @method void setExtensionId(string $ExtensionId) 设置分机号
  * @method string getExtensionName() 获取分机名称
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyExtensionRequest extends AbstractModel
 {
     /**
-     * @var integer TCCC 实例应用 ID
+     * @var integer 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
     public $SdkAppId;
 
@@ -59,7 +59,7 @@ class ModifyExtensionRequest extends AbstractModel
     public $Relation;
 
     /**
-     * @param integer $SdkAppId TCCC 实例应用 ID
+     * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param string $ExtensionId 分机号
      * @param string $ExtensionName 分机名称
      * @param array $SkillGroupIds 所属技能组列表

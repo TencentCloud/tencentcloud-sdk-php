@@ -20,30 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquirePriceRunInstances请求参数结构体
  *
- * @method string getApplicationId() 获取应用ID
- * @method void setApplicationId(string $ApplicationId) 设置应用ID
- * @method string getBundleType() 获取算力套餐类型
- * @method void setBundleType(string $BundleType) 设置算力套餐类型
+ * @method string getApplicationId() 获取应用ID通过调用接口[DescribeApplications](https://cloud.tencent.com/document/api/1721/101609)获取。
+ * @method void setApplicationId(string $ApplicationId) 设置应用ID通过调用接口[DescribeApplications](https://cloud.tencent.com/document/api/1721/101609)获取。
+ * @method string getBundleType() 获取算力套餐类型, 枚举：XL,XL_2X, 3XL, 3XL_2X, 4XL, 24GB_A.
+ * @method void setBundleType(string $BundleType) 设置算力套餐类型, 枚举：XL,XL_2X, 3XL, 3XL_2X, 4XL, 24GB_A.
  * @method SystemDisk getSystemDisk() 获取实例系统盘配置信息。若不指定该参数，则按照系统默认值进行分配。
  * @method void setSystemDisk(SystemDisk $SystemDisk) 设置实例系统盘配置信息。若不指定该参数，则按照系统默认值进行分配。
- * @method integer getInstanceCount() 获取购买实例数量。
- * @method void setInstanceCount(integer $InstanceCount) 设置购买实例数量。
- * @method string getInstanceName() 获取实例显示名称
- * @method void setInstanceName(string $InstanceName) 设置实例显示名称
+ * @method integer getInstanceCount() 获取购买实例数量，单次请求实例数量上限为10。
+ * @method void setInstanceCount(integer $InstanceCount) 设置购买实例数量，单次请求实例数量上限为10。
+ * @method string getInstanceName() 获取实例显示名称，名称长度限制为128个字符。
+ * @method void setInstanceName(string $InstanceName) 设置实例显示名称，名称长度限制为128个字符。
  * @method string getClientToken() 获取幂等请求token
  * @method void setClientToken(string $ClientToken) 设置幂等请求token
  * @method boolean getDryRun() 获取DryRun为True就是只验接口连通性，默认为False
  * @method void setDryRun(boolean $DryRun) 设置DryRun为True就是只验接口连通性，默认为False
+ * @method string getInstanceChargeType() 获取付费方式，POSTPAID_BY_HOUR按量后付费，PREPAID_BY_MONTH预付费按月，PREPAID_BY_DAY预付费按天
+ * @method void setInstanceChargeType(string $InstanceChargeType) 设置付费方式，POSTPAID_BY_HOUR按量后付费，PREPAID_BY_MONTH预付费按月，PREPAID_BY_DAY预付费按天
+ * @method InstanceChargePrepaid getInstanceChargePrepaid() 获取预付费参数
+ * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) 设置预付费参数
  */
 class InquirePriceRunInstancesRequest extends AbstractModel
 {
     /**
-     * @var string 应用ID
+     * @var string 应用ID通过调用接口[DescribeApplications](https://cloud.tencent.com/document/api/1721/101609)获取。
      */
     public $ApplicationId;
 
     /**
-     * @var string 算力套餐类型
+     * @var string 算力套餐类型, 枚举：XL,XL_2X, 3XL, 3XL_2X, 4XL, 24GB_A.
      */
     public $BundleType;
 
@@ -53,12 +57,12 @@ class InquirePriceRunInstancesRequest extends AbstractModel
     public $SystemDisk;
 
     /**
-     * @var integer 购买实例数量。
+     * @var integer 购买实例数量，单次请求实例数量上限为10。
      */
     public $InstanceCount;
 
     /**
-     * @var string 实例显示名称
+     * @var string 实例显示名称，名称长度限制为128个字符。
      */
     public $InstanceName;
 
@@ -73,13 +77,25 @@ class InquirePriceRunInstancesRequest extends AbstractModel
     public $DryRun;
 
     /**
-     * @param string $ApplicationId 应用ID
-     * @param string $BundleType 算力套餐类型
+     * @var string 付费方式，POSTPAID_BY_HOUR按量后付费，PREPAID_BY_MONTH预付费按月，PREPAID_BY_DAY预付费按天
+     */
+    public $InstanceChargeType;
+
+    /**
+     * @var InstanceChargePrepaid 预付费参数
+     */
+    public $InstanceChargePrepaid;
+
+    /**
+     * @param string $ApplicationId 应用ID通过调用接口[DescribeApplications](https://cloud.tencent.com/document/api/1721/101609)获取。
+     * @param string $BundleType 算力套餐类型, 枚举：XL,XL_2X, 3XL, 3XL_2X, 4XL, 24GB_A.
      * @param SystemDisk $SystemDisk 实例系统盘配置信息。若不指定该参数，则按照系统默认值进行分配。
-     * @param integer $InstanceCount 购买实例数量。
-     * @param string $InstanceName 实例显示名称
+     * @param integer $InstanceCount 购买实例数量，单次请求实例数量上限为10。
+     * @param string $InstanceName 实例显示名称，名称长度限制为128个字符。
      * @param string $ClientToken 幂等请求token
      * @param boolean $DryRun DryRun为True就是只验接口连通性，默认为False
+     * @param string $InstanceChargeType 付费方式，POSTPAID_BY_HOUR按量后付费，PREPAID_BY_MONTH预付费按月，PREPAID_BY_DAY预付费按天
+     * @param InstanceChargePrepaid $InstanceChargePrepaid 预付费参数
      */
     function __construct()
     {
@@ -121,6 +137,15 @@ class InquirePriceRunInstancesRequest extends AbstractModel
 
         if (array_key_exists("DryRun",$param) and $param["DryRun"] !== null) {
             $this->DryRun = $param["DryRun"];
+        }
+
+        if (array_key_exists("InstanceChargeType",$param) and $param["InstanceChargeType"] !== null) {
+            $this->InstanceChargeType = $param["InstanceChargeType"];
+        }
+
+        if (array_key_exists("InstanceChargePrepaid",$param) and $param["InstanceChargePrepaid"] !== null) {
+            $this->InstanceChargePrepaid = new InstanceChargePrepaid();
+            $this->InstanceChargePrepaid->deserialize($param["InstanceChargePrepaid"]);
         }
     }
 }

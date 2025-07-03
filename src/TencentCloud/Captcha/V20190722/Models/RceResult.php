@@ -21,105 +21,73 @@ use TencentCloud\Common\AbstractModel;
  * 验证码拼装Rce结果，Rce结果部分
  *
  * @method string getUserId() 获取用户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserId(string $UserId) 设置用户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPostTime() 获取操作时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPostTime(integer $PostTime) 设置操作时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAssociateAccount() 获取业务参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssociateAccount(string $AssociateAccount) 设置业务参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserIp() 获取用户Ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserIp(string $UserIp) 设置用户Ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRiskLevel() 获取风险等级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskLevel(string $RiskLevel) 设置风险等级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRiskType() 获取风险类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskType(array $RiskType) 设置风险类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConstId() 获取设备唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConstId(string $ConstId) 设置设备唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRiskInformation() 获取风险扩展参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskInformation(string $RiskInformation) 设置风险扩展参数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RceResult extends AbstractModel
 {
     /**
      * @var string 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserId;
 
     /**
      * @var integer 操作时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PostTime;
 
     /**
      * @var string 业务参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AssociateAccount;
 
     /**
      * @var string 用户Ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserIp;
 
     /**
      * @var string 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskLevel;
 
     /**
      * @var array 风险类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskType;
 
     /**
      * @var string 设备唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConstId;
 
     /**
      * @var string 风险扩展参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskInformation;
 
     /**
      * @param string $UserId 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PostTime 操作时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AssociateAccount 业务参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserIp 用户Ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RiskLevel 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RiskType 风险类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConstId 设备唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RiskInformation 风险扩展参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

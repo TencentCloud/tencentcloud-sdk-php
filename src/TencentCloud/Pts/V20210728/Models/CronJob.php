@@ -25,41 +25,25 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCronJobId(string $CronJobId) 设置定时任务ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取定时任务名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置定时任务名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProjectId() 获取项目ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectId(string $ProjectId) 设置项目ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getScenarioId() 获取场景ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScenarioId(string $ScenarioId) 设置场景ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getScenarioName() 获取场景名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScenarioName(string $ScenarioName) 设置场景名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCronExpression() 获取cron 表达式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCronExpression(string $CronExpression) 设置cron 表达式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndTime() 获取结束时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置结束时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAbortReason() 获取中止原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAbortReason(integer $AbortReason) 设置中止原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取定时任务状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置定时任务状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNoticeId() 获取Notice ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNoticeId(string $NoticeId) 设置Notice ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedAt() 获取创建时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedAt(string $CreatedAt) 设置创建时间
@@ -69,29 +53,17 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdatedAt(string $UpdatedAt) 设置更新时间
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFrequencyType() 获取执行频率类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFrequencyType(integer $FrequencyType) 设置执行频率类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNote() 获取备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNote(string $Note) 设置备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getJobOwner() 获取tom
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJobOwner(string $JobOwner) 设置tom
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAppId() 获取App ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppId(integer $AppId) 设置App ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUin() 获取主账号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUin(string $Uin) 设置主账号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubAccountUin() 获取子账号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubAccountUin(string $SubAccountUin) 设置子账号
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CronJob extends AbstractModel
 {
@@ -103,31 +75,26 @@ class CronJob extends AbstractModel
 
     /**
      * @var string 定时任务名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 项目ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectId;
 
     /**
      * @var string 场景ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScenarioId;
 
     /**
      * @var string 场景名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScenarioName;
 
     /**
      * @var string cron 表达式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CronExpression;
 
@@ -139,19 +106,16 @@ class CronJob extends AbstractModel
 
     /**
      * @var integer 中止原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AbortReason;
 
     /**
      * @var integer 定时任务状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string Notice ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NoticeId;
 
@@ -169,37 +133,31 @@ class CronJob extends AbstractModel
 
     /**
      * @var integer 执行频率类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FrequencyType;
 
     /**
      * @var string 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Note;
 
     /**
      * @var string tom
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JobOwner;
 
     /**
      * @var integer App ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppId;
 
     /**
      * @var string 主账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uin;
 
     /**
      * @var string 子账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubAccountUin;
 
@@ -207,39 +165,25 @@ class CronJob extends AbstractModel
      * @param string $CronJobId 定时任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 定时任务名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectId 项目ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScenarioId 场景ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScenarioName 场景名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CronExpression cron 表达式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndTime 结束时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AbortReason 中止原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 定时任务状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NoticeId Notice ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedAt 创建时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdatedAt 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FrequencyType 执行频率类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Note 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $JobOwner tom
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AppId App ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uin 主账号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubAccountUin 子账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

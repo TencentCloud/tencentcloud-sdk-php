@@ -29,9 +29,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getSortCount() 获取内存排序次数。
  * @method void setSortCount(integer $SortCount) 设置内存排序次数。
  * @method array getSlowLogs() 获取慢查模板概览。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSlowLogs(array $SlowLogs) 设置慢查模板概览。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Aggregation extends AbstractModel
 {
@@ -57,7 +55,6 @@ class Aggregation extends AbstractModel
 
     /**
      * @var array 慢查模板概览。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SlowLogs;
 
@@ -67,7 +64,6 @@ class Aggregation extends AbstractModel
      * @param integer $SlowLogCount 产生慢查次数（/天）。
      * @param integer $SortCount 内存排序次数。
      * @param array $SlowLogs 慢查模板概览。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

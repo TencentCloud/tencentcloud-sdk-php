@@ -21,37 +21,21 @@ use TencentCloud\Common\AbstractModel;
  * 告警列表出参
  *
  * @method integer getId() 获取唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(integer $Id) 设置唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeviceId() 获取设备ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceId(string $DeviceId) 设置设备ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeviceName() 获取设备名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceName(string $DeviceName) 设置设备名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWarnChannel() 获取告警通道
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWarnChannel(string $WarnChannel) 设置告警通道
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWarnLevel() 获取告警级别 1: "一级警情", 2: "二级警情", 3: "三级警情", 4: "四级警情",
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWarnLevel(integer $WarnLevel) 设置告警级别 1: "一级警情", 2: "二级警情", 3: "三级警情", 4: "四级警情",
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWarnLevelName() 获取告警级别名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWarnLevelName(string $WarnLevelName) 设置告警级别名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWarnMode() 获取告警方式 2 设备报警 5 视频报警 6 设备故障报警
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWarnMode(integer $WarnMode) 设置告警方式 2 设备报警 5 视频报警 6 设备故障报警
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWarnModeName() 获取告警方式名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWarnModeName(string $WarnModeName) 设置告警方式名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWarnType() 获取告警类型  2: {
 			Name: "设备报警",
 			WarnType: map[int]string{
@@ -86,7 +70,6 @@ use TencentCloud\Common\AbstractModel;
 				2: "存储设备风扇故障报警",
 			},
 		}
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWarnType(integer $WarnType) 设置告警类型  2: {
 			Name: "设备报警",
 			WarnType: map[int]string{
@@ -121,67 +104,52 @@ use TencentCloud\Common\AbstractModel;
 				2: "存储设备风扇故障报警",
 			},
 		}
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDel() 获取是否删除
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDel(integer $Del) 设置是否删除
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class WarningsData extends AbstractModel
 {
     /**
      * @var integer 唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var string 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceId;
 
     /**
      * @var string 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceName;
 
     /**
      * @var string 告警通道
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WarnChannel;
 
     /**
      * @var integer 告警级别 1: "一级警情", 2: "二级警情", 3: "三级警情", 4: "四级警情",
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WarnLevel;
 
     /**
      * @var string 告警级别名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WarnLevelName;
 
     /**
      * @var integer 告警方式 2 设备报警 5 视频报警 6 设备故障报警
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WarnMode;
 
     /**
      * @var string 告警方式名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WarnModeName;
 
@@ -220,45 +188,33 @@ class WarningsData extends AbstractModel
 				2: "存储设备风扇故障报警",
 			},
 		}
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WarnType;
 
     /**
      * @var integer 是否删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Del;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @param integer $Id 唯一ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceId 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceName 设备名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WarnChannel 告警通道
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $WarnLevel 告警级别 1: "一级警情", 2: "二级警情", 3: "三级警情", 4: "四级警情",
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WarnLevelName 告警级别名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $WarnMode 告警方式 2 设备报警 5 视频报警 6 设备故障报警
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WarnModeName 告警方式名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $WarnType 告警类型  2: {
 			Name: "设备报警",
 			WarnType: map[int]string{
@@ -293,13 +249,9 @@ class WarningsData extends AbstractModel
 				2: "存储设备风扇故障报警",
 			},
 		}
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Del 是否删除
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

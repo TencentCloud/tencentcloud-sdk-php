@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 集成版企业角色信息。
  *
  * @method string getRoleId() 获取角色ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoleId(string $RoleId) 设置角色ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRoleName() 获取角色名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoleName(string $RoleName) 设置角色名称。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class StaffRole extends AbstractModel
 {
     /**
      * @var string 角色ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoleId;
 
     /**
      * @var string 角色名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoleName;
 
     /**
      * @param string $RoleId 角色ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RoleName 角色名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

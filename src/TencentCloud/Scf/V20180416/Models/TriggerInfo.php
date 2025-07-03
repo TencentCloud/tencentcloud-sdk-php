@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置客户自定义触发器描述
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBoundResources() 获取与此触发器关联的资源。目前仅函数URL关联的自定义域名会返回
+ * @method void setBoundResources(string $BoundResources) 设置与此触发器关联的资源。目前仅函数URL关联的自定义域名会返回
  */
 class TriggerInfo extends AbstractModel
 {
@@ -124,6 +126,11 @@ class TriggerInfo extends AbstractModel
     public $Description;
 
     /**
+     * @var string 与此触发器关联的资源。目前仅函数URL关联的自定义域名会返回
+     */
+    public $BoundResources;
+
+    /**
      * @param integer $Enable 使能开关
      * @param string $Qualifier 函数版本或别名
      * @param string $TriggerName 触发器名称
@@ -139,6 +146,7 @@ class TriggerInfo extends AbstractModel
      * @param string $TriggerAttribute 触发器类型，双向表示两侧控制台均可操作，单向表示SCF控制台单向创建
      * @param string $Description 客户自定义触发器描述
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BoundResources 与此触发器关联的资源。目前仅函数URL关联的自定义域名会返回
      */
     function __construct()
     {
@@ -203,6 +211,10 @@ class TriggerInfo extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("BoundResources",$param) and $param["BoundResources"] !== null) {
+            $this->BoundResources = $param["BoundResources"];
         }
     }
 }

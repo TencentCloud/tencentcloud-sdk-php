@@ -18,7 +18,7 @@ namespace TencentCloud\Vm\V20210922\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Cos TaskFilter 
+ * Cos TaskFilter
  *
  * @method string getBizType() 获取任务业务类型
  * @method void setBizType(string $BizType) 设置任务业务类型

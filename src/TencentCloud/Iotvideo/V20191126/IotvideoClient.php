@@ -43,6 +43,7 @@ use TencentCloud\Iotvideo\V20191126\Models as Models;
  * @method Models\CreateStorageServiceResponse CreateStorageService(Models\CreateStorageServiceRequest $req) 购买云存服务
  * @method Models\CreateTraceIdsResponse CreateTraceIds(Models\CreateTraceIdsRequest $req) 本接口（CreateTraceIds）用于将设备加到日志跟踪白名单。
  * @method Models\CreateUploadPathResponse CreateUploadPath(Models\CreateUploadPathRequest $req) 本接口（CreateUploadPath）用于获取固件上传路径。
+ * @method Models\CreateUploadTestResponse CreateUploadTest(Models\CreateUploadTestRequest $req) 设备申请cos上传证书
  * @method Models\CreateUsrTokenResponse CreateUsrToken(Models\CreateUsrTokenRequest $req) 本接口（CreateUsrToken）用于终端用户获取IoT Video平台的accessToken，初始化SDK,连接到IoT Video接入服务器。
  * @method Models\DeleteAppUsrResponse DeleteAppUsr(Models\DeleteAppUsrRequest $req) 本接口（DeleteAppUsr）用于删除终端用户。
  * @method Models\DeleteBindingResponse DeleteBinding(Models\DeleteBindingRequest $req) 本接口（DeleteBinding）用于终端用户和设备进行解绑定。
@@ -103,6 +104,7 @@ ProWritable.Pos.setVal.x;
 1. 未开始的订单自动回到已付费订单池
 2. 已开始的订单自动失效
 3. 购买云存接口,优先从已付费订单池中分配订单
+ * @method Models\RenewUploadTestResponse RenewUploadTest(Models\RenewUploadTestRequest $req) 设备刷新cos上传证书
  * @method Models\RunDeviceResponse RunDevice(Models\RunDeviceRequest $req) 本接口（RunDevice）用于启用设备，可进行批量操作，每次操作最多100台设备。
  * @method Models\RunDeviceStreamResponse RunDeviceStream(Models\RunDeviceStreamRequest $req) 本接口（RunDeviceStream）用于开启设备推流，可进行批量操作，每次操作最多100台设备。
  * @method Models\RunIotModelResponse RunIotModel(Models\RunIotModelRequest $req) 本接口（RunIotModel）用于对定义的物模型进行发布。

@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 绑定融合桶信息
  *
  * @method string getBucketId() 获取桶Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBucketId(string $BucketId) 设置桶Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVpcId() 获取vpcId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(string $VpcId) 设置vpcId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVpcCidrBlock() 获取子网地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcCidrBlock(string $VpcCidrBlock) 设置子网地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAccessGroupId() 获取权限组Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccessGroupId(string $AccessGroupId) 设置权限组Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAccessRuleId() 获取权限规则Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccessRuleId(integer $AccessRuleId) 设置权限规则Id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MountPointAssociates extends AbstractModel
 {
     /**
      * @var string 桶Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BucketId;
 
     /**
      * @var string vpcId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
     /**
      * @var string 子网地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcCidrBlock;
 
     /**
      * @var string 权限组Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccessGroupId;
 
     /**
      * @var integer 权限规则Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccessRuleId;
 
     /**
      * @param string $BucketId 桶Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcId vpcId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcCidrBlock 子网地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AccessGroupId 权限组Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AccessRuleId 权限规则Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

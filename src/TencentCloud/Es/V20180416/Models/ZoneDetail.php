@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) 设置可用区
  * @method string getSubnetId() 获取子网ID
  * @method void setSubnetId(string $SubnetId) 设置子网ID
+ * @method boolean getHidden() 获取是否为隐藏可用区
+ * @method void setHidden(boolean $Hidden) 设置是否为隐藏可用区
  */
 class ZoneDetail extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ZoneDetail extends AbstractModel
     public $SubnetId;
 
     /**
+     * @var boolean 是否为隐藏可用区
+     */
+    public $Hidden;
+
+    /**
      * @param string $Zone 可用区
      * @param string $SubnetId 子网ID
+     * @param boolean $Hidden 是否为隐藏可用区
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ZoneDetail extends AbstractModel
 
         if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
             $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("Hidden",$param) and $param["Hidden"] !== null) {
+            $this->Hidden = $param["Hidden"];
         }
     }
 }

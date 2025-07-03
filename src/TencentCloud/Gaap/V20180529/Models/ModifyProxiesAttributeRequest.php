@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getInstanceIds() 获取（旧参数，请切换到ProxyIds）一个或多个待操作的通道ID。
  * @method void setInstanceIds(array $InstanceIds) 设置（旧参数，请切换到ProxyIds）一个或多个待操作的通道ID。
- * @method string getProxyName() 获取通道名称。可任意命名，但不得超过30个字符。
- * @method void setProxyName(string $ProxyName) 设置通道名称。可任意命名，但不得超过30个字符。
+ * @method string getProxyName() 获取通道名称。可任意命名，但不得超过32个字符。
+ * @method void setProxyName(string $ProxyName) 设置通道名称。可任意命名，但不得超过32个字符。
  * @method string getClientToken() 获取用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
 更多详细信息请参阅：如何保证幂等性。
  * @method void setClientToken(string $ClientToken) 设置用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
@@ -39,7 +39,7 @@ class ModifyProxiesAttributeRequest extends AbstractModel
     public $InstanceIds;
 
     /**
-     * @var string 通道名称。可任意命名，但不得超过30个字符。
+     * @var string 通道名称。可任意命名，但不得超过32个字符。
      */
     public $ProxyName;
 
@@ -56,7 +56,7 @@ class ModifyProxiesAttributeRequest extends AbstractModel
 
     /**
      * @param array $InstanceIds （旧参数，请切换到ProxyIds）一个或多个待操作的通道ID。
-     * @param string $ProxyName 通道名称。可任意命名，但不得超过30个字符。
+     * @param string $ProxyName 通道名称。可任意命名，但不得超过32个字符。
      * @param string $ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
 更多详细信息请参阅：如何保证幂等性。
      * @param array $ProxyIds （新参数）一个或多个待操作的通道ID。

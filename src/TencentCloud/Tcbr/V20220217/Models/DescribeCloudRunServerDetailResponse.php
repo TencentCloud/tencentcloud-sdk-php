@@ -21,17 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * DescribeCloudRunServerDetail返回参数结构体
  *
  * @method ServerBaseInfo getBaseInfo() 获取服务基本信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBaseInfo(ServerBaseInfo $BaseInfo) 设置服务基本信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ServerBaseConfig getServerConfig() 获取服务配置信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServerConfig(ServerBaseConfig $ServerConfig) 设置服务配置信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getOnlineVersionInfos() 获取在线版本信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOnlineVersionInfos(array $OnlineVersionInfos) 设置在线版本信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -39,19 +33,16 @@ class DescribeCloudRunServerDetailResponse extends AbstractModel
 {
     /**
      * @var ServerBaseInfo 服务基本信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BaseInfo;
 
     /**
      * @var ServerBaseConfig 服务配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServerConfig;
 
     /**
      * @var array 在线版本信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OnlineVersionInfos;
 
@@ -62,11 +53,8 @@ class DescribeCloudRunServerDetailResponse extends AbstractModel
 
     /**
      * @param ServerBaseInfo $BaseInfo 服务基本信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ServerBaseConfig $ServerConfig 服务配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $OnlineVersionInfos 在线版本信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

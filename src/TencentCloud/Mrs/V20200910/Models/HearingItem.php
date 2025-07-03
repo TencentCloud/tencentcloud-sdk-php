@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 听力信息
  *
  * @method string getName() 获取类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method PhysicalBaseItem getItem() 获取项目原文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setItem(PhysicalBaseItem $Item) 设置项目原文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method PhysicalBaseItem getLocation() 获取方位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocation(PhysicalBaseItem $Location) 设置方位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method PhysicalBaseItem getResult() 获取描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResult(PhysicalBaseItem $Result) 设置描述
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class HearingItem extends AbstractModel
 {
     /**
      * @var string 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var PhysicalBaseItem 项目原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Item;
 
     /**
      * @var PhysicalBaseItem 方位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Location;
 
     /**
      * @var PhysicalBaseItem 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Result;
 
     /**
      * @param string $Name 类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PhysicalBaseItem $Item 项目原文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PhysicalBaseItem $Location 方位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PhysicalBaseItem $Result 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

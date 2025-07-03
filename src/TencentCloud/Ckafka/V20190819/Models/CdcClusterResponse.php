@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 创建CDC 标准版共享集群出参
  *
  * @method integer getTaskId() 获取任务ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskId(integer $TaskId) 设置任务ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CdcClusterResponse extends AbstractModel
 {
     /**
      * @var integer 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskId;
 
     /**
      * @param integer $TaskId 任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

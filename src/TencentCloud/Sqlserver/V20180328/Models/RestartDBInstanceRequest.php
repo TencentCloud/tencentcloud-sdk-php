@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取数据库实例ID，形如mssql-njj2mtpl
  * @method void setInstanceId(string $InstanceId) 设置数据库实例ID，形如mssql-njj2mtpl
+ * @method integer getWaitSwitch() 获取重启设置，0-立刻重启，1-维护时间窗口内重启，默认0
+ * @method void setWaitSwitch(integer $WaitSwitch) 设置重启设置，0-立刻重启，1-维护时间窗口内重启，默认0
  */
 class RestartDBInstanceRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class RestartDBInstanceRequest extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var integer 重启设置，0-立刻重启，1-维护时间窗口内重启，默认0
+     */
+    public $WaitSwitch;
+
+    /**
      * @param string $InstanceId 数据库实例ID，形如mssql-njj2mtpl
+     * @param integer $WaitSwitch 重启设置，0-立刻重启，1-维护时间窗口内重启，默认0
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class RestartDBInstanceRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("WaitSwitch",$param) and $param["WaitSwitch"] !== null) {
+            $this->WaitSwitch = $param["WaitSwitch"];
         }
     }
 }

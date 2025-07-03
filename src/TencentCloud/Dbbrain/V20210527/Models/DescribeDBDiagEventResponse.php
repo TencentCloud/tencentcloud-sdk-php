@@ -39,9 +39,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSuggestions() 获取诊断建议，若无建议则输出为空。
  * @method void setSuggestions(string $Suggestions) 设置诊断建议，若无建议则输出为空。
  * @method string getMetric() 获取保留字段。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetric(string $Metric) 设置保留字段。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndTime() 获取结束时间。
  * @method void setEndTime(string $EndTime) 设置结束时间。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -96,7 +94,6 @@ class DescribeDBDiagEventResponse extends AbstractModel
 
     /**
      * @var string 保留字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Metric;
 
@@ -121,7 +118,6 @@ class DescribeDBDiagEventResponse extends AbstractModel
      * @param string $StartTime 开始时间
      * @param string $Suggestions 诊断建议，若无建议则输出为空。
      * @param string $Metric 保留字段。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndTime 结束时间。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 坐标
  *
  * @method array getPoints() 获取坐标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPoints(array $Points) 设置坐标
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Coord extends AbstractModel
 {
     /**
      * @var array 坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Points;
 
     /**
      * @param array $Points 坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

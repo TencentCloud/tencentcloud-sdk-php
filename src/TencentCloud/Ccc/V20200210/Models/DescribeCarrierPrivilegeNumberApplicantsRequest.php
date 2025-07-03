@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCarrierPrivilegeNumberApplicants请求参数结构体
  *
- * @method integer getSdkAppId() 获取实例Id
- * @method void setSdkAppId(integer $SdkAppId) 设置实例Id
+ * @method integer getSdkAppId() 获取应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+ * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
  * @method integer getPageNumber() 获取默认0，从0开始
  * @method void setPageNumber(integer $PageNumber) 设置默认0，从0开始
  * @method integer getPageSize() 获取默认10，最大100
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeCarrierPrivilegeNumberApplicantsRequest extends AbstractModel
 {
     /**
-     * @var integer 实例Id
+     * @var integer 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
     public $SdkAppId;
 
@@ -52,7 +52,7 @@ class DescribeCarrierPrivilegeNumberApplicantsRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @param integer $SdkAppId 实例Id
+     * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param integer $PageNumber 默认0，从0开始
      * @param integer $PageSize 默认10，最大100
      * @param array $Filters 筛选条件,Name支持ApplicantId,PhoneNumber(按号码模糊查找)

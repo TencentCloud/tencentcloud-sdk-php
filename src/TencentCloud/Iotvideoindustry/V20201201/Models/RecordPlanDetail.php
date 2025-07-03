@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 录制计划详情
  *
  * @method string getPlanId() 获取计划ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPlanId(string $PlanId) 设置计划ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取计划名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置计划名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTimeTemplateId() 获取时间模板ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeTemplateId(string $TimeTemplateId) 设置时间模板ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTimeTemplateName() 获取时间模板名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeTemplateName(string $TimeTemplateName) 设置时间模板名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getChannels() 获取绑定的通道列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChannels(array $Channels) 设置绑定的通道列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRecordStorageTime() 获取存储周期（天）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordStorageTime(integer $RecordStorageTime) 设置存储周期（天）
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RecordPlanDetail extends AbstractModel
 {
     /**
      * @var string 计划ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PlanId;
 
     /**
      * @var string 计划名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 时间模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeTemplateId;
 
     /**
      * @var string 时间模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeTemplateName;
 
     /**
      * @var array 绑定的通道列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Channels;
 
     /**
      * @var integer 存储周期（天）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecordStorageTime;
 
     /**
      * @param string $PlanId 计划ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 计划名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TimeTemplateId 时间模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TimeTemplateName 时间模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Channels 绑定的通道列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RecordStorageTime 存储周期（天）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

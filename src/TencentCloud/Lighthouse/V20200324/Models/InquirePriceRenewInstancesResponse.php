@@ -23,13 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method Price getPrice() 获取询价信息。默认为列表中第一个实例的价格信息。
  * @method void setPrice(Price $Price) 设置询价信息。默认为列表中第一个实例的价格信息。
  * @method array getDataDiskPriceSet() 获取数据盘价格信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataDiskPriceSet(array $DataDiskPriceSet) 设置数据盘价格信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getInstancePriceDetailSet() 获取待续费实例价格列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstancePriceDetailSet(array $InstancePriceDetailSet) 设置待续费实例价格列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method TotalPrice getTotalPrice() 获取总计价格。
  * @method void setTotalPrice(TotalPrice $TotalPrice) 设置总计价格。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -44,13 +40,11 @@ class InquirePriceRenewInstancesResponse extends AbstractModel
 
     /**
      * @var array 数据盘价格信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataDiskPriceSet;
 
     /**
      * @var array 待续费实例价格列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstancePriceDetailSet;
 
@@ -67,9 +61,7 @@ class InquirePriceRenewInstancesResponse extends AbstractModel
     /**
      * @param Price $Price 询价信息。默认为列表中第一个实例的价格信息。
      * @param array $DataDiskPriceSet 数据盘价格信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $InstancePriceDetailSet 待续费实例价格列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TotalPrice $TotalPrice 总计价格。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

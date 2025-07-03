@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStaffList(array $StaffList) 设置筛选坐席列表，默认不传返回全部坐席信息
  * @method array getGroupIdList() 获取筛选技能组ID列表
  * @method void setGroupIdList(array $GroupIdList) 设置筛选技能组ID列表
- * @method array getStatusList() 获取筛选坐席状态列表
- * @method void setStatusList(array $StatusList) 设置筛选坐席状态列表
+ * @method array getStatusList() 获取筛选坐席状态列表 座席状态 free 示闲 | busy 忙碌 | rest 小休 | notReady 示忙 | afterCallWork 话后调整 | offline 离线 
+ * @method void setStatusList(array $StatusList) 设置筛选坐席状态列表 座席状态 free 示闲 | busy 忙碌 | rest 小休 | notReady 示忙 | afterCallWork 话后调整 | offline 离线 
  */
 class DescribeStaffStatusMetricsRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeStaffStatusMetricsRequest extends AbstractModel
     public $GroupIdList;
 
     /**
-     * @var array 筛选坐席状态列表
+     * @var array 筛选坐席状态列表 座席状态 free 示闲 | busy 忙碌 | rest 小休 | notReady 示忙 | afterCallWork 话后调整 | offline 离线 
      */
     public $StatusList;
 
@@ -55,7 +55,7 @@ class DescribeStaffStatusMetricsRequest extends AbstractModel
      * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param array $StaffList 筛选坐席列表，默认不传返回全部坐席信息
      * @param array $GroupIdList 筛选技能组ID列表
-     * @param array $StatusList 筛选坐席状态列表
+     * @param array $StatusList 筛选坐席状态列表 座席状态 free 示闲 | busy 忙碌 | rest 小休 | notReady 示忙 | afterCallWork 话后调整 | offline 离线 
      */
     function __construct()
     {

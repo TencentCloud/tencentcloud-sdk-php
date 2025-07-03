@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 查体
  *
  * @method BodyTemperatureBlock getBodyTemperature() 获取体温
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBodyTemperature(BodyTemperatureBlock $BodyTemperature) 设置体温
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BodyTemperatureBlock getPulse() 获取脉搏
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPulse(BodyTemperatureBlock $Pulse) 设置脉搏
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BodyTemperatureBlock getBreathe() 获取呼吸
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBreathe(BodyTemperatureBlock $Breathe) 设置呼吸
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BloodPressureBlock getBloodPressure() 获取血压
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBloodPressure(BloodPressureBlock $BloodPressure) 设置血压
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BodyExaminationBlock extends AbstractModel
 {
     /**
      * @var BodyTemperatureBlock 体温
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BodyTemperature;
 
     /**
      * @var BodyTemperatureBlock 脉搏
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Pulse;
 
     /**
      * @var BodyTemperatureBlock 呼吸
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Breathe;
 
     /**
      * @var BloodPressureBlock 血压
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BloodPressure;
 
     /**
      * @param BodyTemperatureBlock $BodyTemperature 体温
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BodyTemperatureBlock $Pulse 脉搏
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BodyTemperatureBlock $Breathe 呼吸
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BloodPressureBlock $BloodPressure 血压
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

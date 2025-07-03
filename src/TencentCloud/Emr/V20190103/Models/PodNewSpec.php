@@ -45,17 +45,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDynamicPodSpec(DynamicPodSpec $DynamicPodSpec) 设置浮动规格
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVpcId() 获取代表vpc网络唯一id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(string $VpcId) 设置代表vpc网络唯一id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubnetId() 获取代表vpc子网唯一id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetId(string $SubnetId) 设置代表vpc子网唯一id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPodName() 获取pod name
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPodName(string $PodName) 设置pod name
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PodNewSpec extends AbstractModel
 {
@@ -109,19 +103,16 @@ class PodNewSpec extends AbstractModel
 
     /**
      * @var string 代表vpc网络唯一id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
     /**
      * @var string 代表vpc子网唯一id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetId;
 
     /**
      * @var string pod name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PodName;
 
@@ -139,11 +130,8 @@ class PodNewSpec extends AbstractModel
      * @param DynamicPodSpec $DynamicPodSpec 浮动规格
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcId 代表vpc网络唯一id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 代表vpc子网唯一id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PodName pod name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

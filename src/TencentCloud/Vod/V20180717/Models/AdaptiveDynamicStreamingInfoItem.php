@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubStreamSet(array $SubStreamSet) 设置子流信息列表。
  * @method string getCopyRightWatermarkText() 获取版权信息。
  * @method void setCopyRightWatermarkText(string $CopyRightWatermarkText) 设置版权信息。
+ * @method array getSubtitleSet() 获取字幕信息列表。
+ * @method void setSubtitleSet(array $SubtitleSet) 设置字幕信息列表。
+ * @method string getDefaultSubtitleId() 获取默认字幕的唯一标识。
+ * @method void setDefaultSubtitleId(string $DefaultSubtitleId) 设置默认字幕的唯一标识。
  */
 class AdaptiveDynamicStreamingInfoItem extends AbstractModel
 {
@@ -104,6 +108,16 @@ class AdaptiveDynamicStreamingInfoItem extends AbstractModel
     public $CopyRightWatermarkText;
 
     /**
+     * @var array 字幕信息列表。
+     */
+    public $SubtitleSet;
+
+    /**
+     * @var string 默认字幕的唯一标识。
+     */
+    public $DefaultSubtitleId;
+
+    /**
      * @param integer $Definition 转自适应码流规格。
      * @param string $Package 打包格式，取值范围：
 <li>HLS；</li>
@@ -120,6 +134,8 @@ class AdaptiveDynamicStreamingInfoItem extends AbstractModel
 <li>None 表示没有经过数字水印处理。</li>
      * @param array $SubStreamSet 子流信息列表。
      * @param string $CopyRightWatermarkText 版权信息。
+     * @param array $SubtitleSet 字幕信息列表。
+     * @param string $DefaultSubtitleId 默认字幕的唯一标识。
      */
     function __construct()
     {
@@ -169,6 +185,19 @@ class AdaptiveDynamicStreamingInfoItem extends AbstractModel
 
         if (array_key_exists("CopyRightWatermarkText",$param) and $param["CopyRightWatermarkText"] !== null) {
             $this->CopyRightWatermarkText = $param["CopyRightWatermarkText"];
+        }
+
+        if (array_key_exists("SubtitleSet",$param) and $param["SubtitleSet"] !== null) {
+            $this->SubtitleSet = [];
+            foreach ($param["SubtitleSet"] as $key => $value){
+                $obj = new MediaSubtitleItem();
+                $obj->deserialize($value);
+                array_push($this->SubtitleSet, $obj);
+            }
+        }
+
+        if (array_key_exists("DefaultSubtitleId",$param) and $param["DefaultSubtitleId"] !== null) {
+            $this->DefaultSubtitleId = $param["DefaultSubtitleId"];
         }
     }
 }

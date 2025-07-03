@@ -39,9 +39,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getResourceName() 获取资源名称
  * @method void setResourceName(string $ResourceName) 设置资源名称
  * @method string getActionTypeName() 获取类型名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActionTypeName(string $ActionTypeName) 设置类型名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOrderId() 获取订单id
  * @method void setOrderId(string $OrderId) 设置订单id
  * @method string getBillId() 获取交易id
@@ -104,7 +102,6 @@ class CostDetail extends AbstractModel
 
     /**
      * @var string 类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActionTypeName;
 
@@ -149,7 +146,6 @@ class CostDetail extends AbstractModel
      * @param string $ResourceId 资源id
      * @param string $ResourceName 资源名称
      * @param string $ActionTypeName 类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OrderId 订单id
      * @param string $BillId 交易id
      * @param string $FeeBeginTime 费用开始时间

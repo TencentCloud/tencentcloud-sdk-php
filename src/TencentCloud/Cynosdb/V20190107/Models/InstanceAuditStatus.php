@@ -25,49 +25,31 @@ use TencentCloud\Common\AbstractModel;
  * @method string getAuditStatus() 获取审计状态。ON-表示审计已开启，OFF-表示审计关闭。
  * @method void setAuditStatus(string $AuditStatus) 设置审计状态。ON-表示审计已开启，OFF-表示审计关闭。
  * @method integer getLogExpireDay() 获取日志保留时长。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogExpireDay(integer $LogExpireDay) 设置日志保留时长。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHighLogExpireDay() 获取高频存储时长。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHighLogExpireDay(integer $HighLogExpireDay) 设置高频存储时长。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLowLogExpireDay() 获取低频存储时长。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLowLogExpireDay(integer $LowLogExpireDay) 设置低频存储时长。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getBillingAmount() 获取日志存储量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBillingAmount(float $BillingAmount) 设置日志存储量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getHighRealStorage() 获取高频存储量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHighRealStorage(float $HighRealStorage) 设置高频存储量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getLowRealStorage() 获取低频存储量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLowRealStorage(float $LowRealStorage) 设置低频存储量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getAuditAll() 获取是否为全审计。true-表示全审计。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuditAll(boolean $AuditAll) 设置是否为全审计。true-表示全审计。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateAt() 获取审计开通时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateAt(string $CreateAt) 设置审计开通时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method AuditInstanceInfo getInstanceInfo() 获取实例相关信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceInfo(AuditInstanceInfo $InstanceInfo) 设置实例相关信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getRealStorage() 获取总存储量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealStorage(float $RealStorage) 设置总存储量。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRuleTemplateIds() 获取实例所应用的规则模板。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleTemplateIds(array $RuleTemplateIds) 设置实例所应用的规则模板。
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDeliver() 获取是否开启日志投递：ON，OFF
+ * @method void setDeliver(string $Deliver) 设置是否开启日志投递：ON，OFF
+ * @method array getDeliverSummary() 获取日志投递类型
+ * @method void setDeliverSummary(array $DeliverSummary) 设置日志投递类型
  */
 class InstanceAuditStatus extends AbstractModel
 {
@@ -83,95 +65,85 @@ class InstanceAuditStatus extends AbstractModel
 
     /**
      * @var integer 日志保留时长。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogExpireDay;
 
     /**
      * @var integer 高频存储时长。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HighLogExpireDay;
 
     /**
      * @var integer 低频存储时长。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LowLogExpireDay;
 
     /**
      * @var float 日志存储量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BillingAmount;
 
     /**
      * @var float 高频存储量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HighRealStorage;
 
     /**
      * @var float 低频存储量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LowRealStorage;
 
     /**
      * @var boolean 是否为全审计。true-表示全审计。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AuditAll;
 
     /**
      * @var string 审计开通时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateAt;
 
     /**
      * @var AuditInstanceInfo 实例相关信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceInfo;
 
     /**
      * @var float 总存储量。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RealStorage;
 
     /**
      * @var array 实例所应用的规则模板。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleTemplateIds;
+
+    /**
+     * @var string 是否开启日志投递：ON，OFF
+     */
+    public $Deliver;
+
+    /**
+     * @var array 日志投递类型
+     */
+    public $DeliverSummary;
 
     /**
      * @param string $InstanceId 实例ID。
      * @param string $AuditStatus 审计状态。ON-表示审计已开启，OFF-表示审计关闭。
      * @param integer $LogExpireDay 日志保留时长。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HighLogExpireDay 高频存储时长。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LowLogExpireDay 低频存储时长。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $BillingAmount 日志存储量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $HighRealStorage 高频存储量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $LowRealStorage 低频存储量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $AuditAll 是否为全审计。true-表示全审计。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateAt 审计开通时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AuditInstanceInfo $InstanceInfo 实例相关信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $RealStorage 总存储量。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RuleTemplateIds 实例所应用的规则模板。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Deliver 是否开启日志投递：ON，OFF
+     * @param array $DeliverSummary 日志投递类型
      */
     function __construct()
     {
@@ -237,6 +209,19 @@ class InstanceAuditStatus extends AbstractModel
 
         if (array_key_exists("RuleTemplateIds",$param) and $param["RuleTemplateIds"] !== null) {
             $this->RuleTemplateIds = $param["RuleTemplateIds"];
+        }
+
+        if (array_key_exists("Deliver",$param) and $param["Deliver"] !== null) {
+            $this->Deliver = $param["Deliver"];
+        }
+
+        if (array_key_exists("DeliverSummary",$param) and $param["DeliverSummary"] !== null) {
+            $this->DeliverSummary = [];
+            foreach ($param["DeliverSummary"] as $key => $value){
+                $obj = new DeliverSummary();
+                $obj->deserialize($value);
+                array_push($this->DeliverSummary, $obj);
+            }
         }
     }
 }

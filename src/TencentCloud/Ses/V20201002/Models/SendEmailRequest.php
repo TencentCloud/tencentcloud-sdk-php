@@ -20,10 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SendEmail请求参数结构体
  *
- * @method string getFromEmailAddress() 获取发件人邮箱地址。不使用别名时请直接填写发件人邮箱地址，例如：noreply@mail.qcloud.com
-如需填写发件人别名时，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）：别名+一个空格+<邮箱地址>
- * @method void setFromEmailAddress(string $FromEmailAddress) 设置发件人邮箱地址。不使用别名时请直接填写发件人邮箱地址，例如：noreply@mail.qcloud.com
-如需填写发件人别名时，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）：别名+一个空格+<邮箱地址>
+ * @method string getFromEmailAddress() 获取发件人邮箱地址。不使用别名时请直接填写发件人邮箱地址，例如：noreply@mail.qcloud.com如需填写发件人别名时，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）：别名+一个空格+<邮箱地址>，别名中不能带有冒号(:)。
+ * @method void setFromEmailAddress(string $FromEmailAddress) 设置发件人邮箱地址。不使用别名时请直接填写发件人邮箱地址，例如：noreply@mail.qcloud.com如需填写发件人别名时，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）：别名+一个空格+<邮箱地址>，别名中不能带有冒号(:)。
  * @method array getDestination() 获取收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
  * @method void setDestination(array $Destination) 设置收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
  * @method string getSubject() 获取邮件主题
@@ -32,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReplyToAddresses(string $ReplyToAddresses) 设置邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。
  * @method array getCc() 获取抄送人邮箱地址，最多支持抄送20人。
  * @method void setCc(array $Cc) 设置抄送人邮箱地址，最多支持抄送20人。
- * @method array getBcc() 获取密送人邮箱地址，最多支持抄送20人。
- * @method void setBcc(array $Bcc) 设置密送人邮箱地址，最多支持抄送20人。
+ * @method array getBcc() 获取密送人邮箱地址，最多支持抄送20人,Bcc和Destination不能重复。
+ * @method void setBcc(array $Bcc) 设置密送人邮箱地址，最多支持抄送20人,Bcc和Destination不能重复。
  * @method Template getTemplate() 获取使用模板发送时，填写模板相关参数。
 <dx-alert infotype="notice" title="注意"> 如您未申请过特殊配置，则该字段为必填 </dx-alert>
  * @method void setTemplate(Template $Template) 设置使用模板发送时，填写模板相关参数。
@@ -52,12 +50,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSmtpMessageId(string $SmtpMessageId) 设置smtp头中的Message-Id字段
  * @method string getSmtpHeaders() 获取smtp头中可以设置的其它字段
  * @method void setSmtpHeaders(string $SmtpHeaders) 设置smtp头中可以设置的其它字段
+ * @method string getHeaderFrom() 获取smtp头中的from字段，建议域名与FromEmailAddress保持一致
+ * @method void setHeaderFrom(string $HeaderFrom) 设置smtp头中的from字段，建议域名与FromEmailAddress保持一致
  */
 class SendEmailRequest extends AbstractModel
 {
     /**
-     * @var string 发件人邮箱地址。不使用别名时请直接填写发件人邮箱地址，例如：noreply@mail.qcloud.com
-如需填写发件人别名时，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）：别名+一个空格+<邮箱地址>
+     * @var string 发件人邮箱地址。不使用别名时请直接填写发件人邮箱地址，例如：noreply@mail.qcloud.com如需填写发件人别名时，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）：别名+一个空格+<邮箱地址>，别名中不能带有冒号(:)。
      */
     public $FromEmailAddress;
 
@@ -82,7 +81,7 @@ class SendEmailRequest extends AbstractModel
     public $Cc;
 
     /**
-     * @var array 密送人邮箱地址，最多支持抄送20人。
+     * @var array 密送人邮箱地址，最多支持抄送20人,Bcc和Destination不能重复。
      */
     public $Bcc;
 
@@ -124,13 +123,17 @@ class SendEmailRequest extends AbstractModel
     public $SmtpHeaders;
 
     /**
-     * @param string $FromEmailAddress 发件人邮箱地址。不使用别名时请直接填写发件人邮箱地址，例如：noreply@mail.qcloud.com
-如需填写发件人别名时，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）：别名+一个空格+<邮箱地址>
+     * @var string smtp头中的from字段，建议域名与FromEmailAddress保持一致
+     */
+    public $HeaderFrom;
+
+    /**
+     * @param string $FromEmailAddress 发件人邮箱地址。不使用别名时请直接填写发件人邮箱地址，例如：noreply@mail.qcloud.com如需填写发件人别名时，请按照如下方式（注意别名与邮箱地址之间必须使用一个空格隔开）：别名+一个空格+<邮箱地址>，别名中不能带有冒号(:)。
      * @param array $Destination 收信人邮箱地址，最多支持群发50人。注意：邮件内容会显示所有收件人地址，非群发邮件请多次调用API发送。
      * @param string $Subject 邮件主题
      * @param string $ReplyToAddresses 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人的回复邮件将会发送失败。
      * @param array $Cc 抄送人邮箱地址，最多支持抄送20人。
-     * @param array $Bcc 密送人邮箱地址，最多支持抄送20人。
+     * @param array $Bcc 密送人邮箱地址，最多支持抄送20人,Bcc和Destination不能重复。
      * @param Template $Template 使用模板发送时，填写模板相关参数。
 <dx-alert infotype="notice" title="注意"> 如您未申请过特殊配置，则该字段为必填 </dx-alert>
      * @param Simple $Simple 已废弃
@@ -140,6 +143,7 @@ class SendEmailRequest extends AbstractModel
      * @param integer $TriggerType 邮件触发类型 0:非触发类，默认类型，营销类邮件、非即时类邮件等选择此类型  1:触发类，验证码等即时发送类邮件，若邮件超过一定大小，系统会自动选择非触发类型通道
      * @param string $SmtpMessageId smtp头中的Message-Id字段
      * @param string $SmtpHeaders smtp头中可以设置的其它字段
+     * @param string $HeaderFrom smtp头中的from字段，建议域名与FromEmailAddress保持一致
      */
     function __construct()
     {
@@ -211,6 +215,10 @@ class SendEmailRequest extends AbstractModel
 
         if (array_key_exists("SmtpHeaders",$param) and $param["SmtpHeaders"] !== null) {
             $this->SmtpHeaders = $param["SmtpHeaders"];
+        }
+
+        if (array_key_exists("HeaderFrom",$param) and $param["HeaderFrom"] !== null) {
+            $this->HeaderFrom = $param["HeaderFrom"];
         }
     }
 }

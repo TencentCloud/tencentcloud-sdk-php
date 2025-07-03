@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOriginalUsagePrice(float $OriginalUsagePrice) 设置后续合计费用的原价，单位：元/小时
  * @method float getDiscountUsagePrice() 获取后续合计费用的折扣价，单位：元/小时
  * @method void setDiscountUsagePrice(float $DiscountUsagePrice) 设置后续合计费用的折扣价，单位：元/小时
+ * @method float getFixedPriceDiscount() 获取预支费用的折扣，如20.0代表2折。 注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFixedPriceDiscount(float $FixedPriceDiscount) 设置预支费用的折扣，如20.0代表2折。 注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getUsagePriceDiscount() 获取后续费用的折扣，如20.0代表2折。 注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUsagePriceDiscount(float $UsagePriceDiscount) 设置后续费用的折扣，如20.0代表2折。 注意：此字段可能返回 null，表示取不到有效值。
  */
 class ReservedInstancePrice extends AbstractModel
 {
@@ -52,10 +56,22 @@ class ReservedInstancePrice extends AbstractModel
     public $DiscountUsagePrice;
 
     /**
+     * @var float 预支费用的折扣，如20.0代表2折。 注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FixedPriceDiscount;
+
+    /**
+     * @var float 后续费用的折扣，如20.0代表2折。 注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UsagePriceDiscount;
+
+    /**
      * @param float $OriginalFixedPrice 预支合计费用的原价，单位：元。
      * @param float $DiscountFixedPrice 预支合计费用的折扣价，单位：元。
      * @param float $OriginalUsagePrice 后续合计费用的原价，单位：元/小时
      * @param float $DiscountUsagePrice 后续合计费用的折扣价，单位：元/小时
+     * @param float $FixedPriceDiscount 预支费用的折扣，如20.0代表2折。 注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $UsagePriceDiscount 后续费用的折扣，如20.0代表2折。 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -84,6 +100,14 @@ class ReservedInstancePrice extends AbstractModel
 
         if (array_key_exists("DiscountUsagePrice",$param) and $param["DiscountUsagePrice"] !== null) {
             $this->DiscountUsagePrice = $param["DiscountUsagePrice"];
+        }
+
+        if (array_key_exists("FixedPriceDiscount",$param) and $param["FixedPriceDiscount"] !== null) {
+            $this->FixedPriceDiscount = $param["FixedPriceDiscount"];
+        }
+
+        if (array_key_exists("UsagePriceDiscount",$param) and $param["UsagePriceDiscount"] !== null) {
+            $this->UsagePriceDiscount = $param["UsagePriceDiscount"];
         }
     }
 }

@@ -90,6 +90,10 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
  * @method void setRollbackTables(array $RollbackTables) 设置回档表信息
  * @method array getOriginalROInstanceList() 获取原ro实例信息
  * @method void setOriginalROInstanceList(array $OriginalROInstanceList) 设置原ro实例信息
+ * @method integer getProjectId() 获取项目id
+ * @method void setProjectId(integer $ProjectId) 设置项目id
+ * @method string getAutoArchive() 获取是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
+ * @method void setAutoArchive(string $AutoArchive) 设置是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
  */
 class RollbackToNewClusterRequest extends AbstractModel
 {
@@ -233,6 +237,16 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     public $OriginalROInstanceList;
 
     /**
+     * @var integer 项目id
+     */
+    public $ProjectId;
+
+    /**
+     * @var string 是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
+     */
+    public $AutoArchive;
+
+    /**
      * @param string $Zone 可用区
      * @param string $OriginalClusterId 回档时，传入源集群ID，用于查找源poolId
      * @param string $UniqVpcId 所属VPC网络ID
@@ -268,6 +282,8 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
      * @param array $RollbackDatabases 回档库信息
      * @param array $RollbackTables 回档表信息
      * @param array $OriginalROInstanceList 原ro实例信息
+     * @param integer $ProjectId 项目id
+     * @param string $AutoArchive 是否开启归档，可选范围<li>yes</li><li>no</li>默认值:yes
      */
     function __construct()
     {
@@ -409,6 +425,14 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
 
         if (array_key_exists("OriginalROInstanceList",$param) and $param["OriginalROInstanceList"] !== null) {
             $this->OriginalROInstanceList = $param["OriginalROInstanceList"];
+        }
+
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("AutoArchive",$param) and $param["AutoArchive"] !== null) {
+            $this->AutoArchive = $param["AutoArchive"];
         }
     }
 }

@@ -25,49 +25,31 @@ use TencentCloud\Common\AbstractModel;
  * @method string getVirtualHost() 获取vhost名
  * @method void setVirtualHost(string $VirtualHost) 设置vhost名
  * @method string getDescription() 获取vhost描述信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置vhost描述信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取vhost标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置vhost标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifyTime() 获取修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyTime(string $ModifyTime) 设置修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method RabbitMQVirtualHostStatistics getVirtualHostStatistics() 获取vhost概览统计信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVirtualHostStatistics(RabbitMQVirtualHostStatistics $VirtualHostStatistics) 设置vhost概览统计信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getTraceFlag() 获取消息轨迹开关,true打开,false关闭
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTraceFlag(boolean $TraceFlag) 设置消息轨迹开关,true打开,false关闭
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取vhost状态，与原生控制台对应，有running、partial、stopped、unknown
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置vhost状态，与原生控制台对应，有running、partial、stopped、unknown
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMessageHeapCount() 获取消息堆积数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessageHeapCount(integer $MessageHeapCount) 设置消息堆积数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getMessageRateIn() 获取输入消息速率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessageRateIn(float $MessageRateIn) 设置输入消息速率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getMessageRateOut() 获取输出消息速率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessageRateOut(float $MessageRateOut) 设置输出消息速率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getMirrorQueuePolicyFlag() 获取是否存在镜像队列策略，true 为存在，false 为不存
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMirrorQueuePolicyFlag(boolean $MirrorQueuePolicyFlag) 设置是否存在镜像队列策略，true 为存在，false 为不存
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCreateTs() 获取创建时间时间戳
+ * @method void setCreateTs(integer $CreateTs) 设置创建时间时间戳
+ * @method integer getModifyTs() 获取修改时间时间戳
+ * @method void setModifyTs(integer $ModifyTs) 设置修改时间时间戳
  */
 class RabbitMQVirtualHostInfo extends AbstractModel
 {
@@ -83,95 +65,85 @@ class RabbitMQVirtualHostInfo extends AbstractModel
 
     /**
      * @var string vhost描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var array vhost标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyTime;
 
     /**
      * @var RabbitMQVirtualHostStatistics vhost概览统计信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VirtualHostStatistics;
 
     /**
      * @var boolean 消息轨迹开关,true打开,false关闭
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TraceFlag;
 
     /**
      * @var string vhost状态，与原生控制台对应，有running、partial、stopped、unknown
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var integer 消息堆积数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MessageHeapCount;
 
     /**
      * @var float 输入消息速率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MessageRateIn;
 
     /**
      * @var float 输出消息速率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MessageRateOut;
 
     /**
      * @var boolean 是否存在镜像队列策略，true 为存在，false 为不存
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MirrorQueuePolicyFlag;
+
+    /**
+     * @var integer 创建时间时间戳
+     */
+    public $CreateTs;
+
+    /**
+     * @var integer 修改时间时间戳
+     */
+    public $ModifyTs;
 
     /**
      * @param string $InstanceId 集群实例Id
      * @param string $VirtualHost vhost名
      * @param string $Description vhost描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags vhost标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyTime 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RabbitMQVirtualHostStatistics $VirtualHostStatistics vhost概览统计信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $TraceFlag 消息轨迹开关,true打开,false关闭
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status vhost状态，与原生控制台对应，有running、partial、stopped、unknown
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MessageHeapCount 消息堆积数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $MessageRateIn 输入消息速率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $MessageRateOut 输出消息速率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $MirrorQueuePolicyFlag 是否存在镜像队列策略，true 为存在，false 为不存
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CreateTs 创建时间时间戳
+     * @param integer $ModifyTs 修改时间时间戳
      */
     function __construct()
     {
@@ -237,6 +209,14 @@ class RabbitMQVirtualHostInfo extends AbstractModel
 
         if (array_key_exists("MirrorQueuePolicyFlag",$param) and $param["MirrorQueuePolicyFlag"] !== null) {
             $this->MirrorQueuePolicyFlag = $param["MirrorQueuePolicyFlag"];
+        }
+
+        if (array_key_exists("CreateTs",$param) and $param["CreateTs"] !== null) {
+            $this->CreateTs = $param["CreateTs"];
+        }
+
+        if (array_key_exists("ModifyTs",$param) and $param["ModifyTs"] !== null) {
+            $this->ModifyTs = $param["ModifyTs"];
         }
     }
 }

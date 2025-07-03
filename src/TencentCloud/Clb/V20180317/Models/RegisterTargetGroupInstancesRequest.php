@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTargetGroupId() 获取目标组ID
  * @method void setTargetGroupId(string $TargetGroupId) 设置目标组ID
- * @method array getTargetGroupInstances() 获取服务器实例数组
- * @method void setTargetGroupInstances(array $TargetGroupInstances) 设置服务器实例数组
+ * @method array getTargetGroupInstances() 获取服务器实例数组，服务器和目标组的 VPC 需相同。
+ * @method void setTargetGroupInstances(array $TargetGroupInstances) 设置服务器实例数组，服务器和目标组的 VPC 需相同。
  */
 class RegisterTargetGroupInstancesRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class RegisterTargetGroupInstancesRequest extends AbstractModel
     public $TargetGroupId;
 
     /**
-     * @var array 服务器实例数组
+     * @var array 服务器实例数组，服务器和目标组的 VPC 需相同。
      */
     public $TargetGroupInstances;
 
     /**
      * @param string $TargetGroupId 目标组ID
-     * @param array $TargetGroupInstances 服务器实例数组
+     * @param array $TargetGroupInstances 服务器实例数组，服务器和目标组的 VPC 需相同。
      */
     function __construct()
     {

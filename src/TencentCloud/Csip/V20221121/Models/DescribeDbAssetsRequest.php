@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getMemberId() 获取集团账号的成员id
  * @method void setMemberId(array $MemberId) 设置集团账号的成员id
- * @method Filter getFilter() 获取-
- * @method void setFilter(Filter $Filter) 设置-
+ * @method Filter getFilter() 获取过滤器参数
+ * @method void setFilter(Filter $Filter) 设置过滤器参数
  * @method array getAssetTypes() 获取资产类型:MYSQL/MARIADB/REDIS/MONGODB/POSTGRES/CTS/ES/KAFKA/COS/CBS/CFS
  * @method void setAssetTypes(array $AssetTypes) 设置资产类型:MYSQL/MARIADB/REDIS/MONGODB/POSTGRES/CTS/ES/KAFKA/COS/CBS/CFS
  */
@@ -35,7 +35,7 @@ class DescribeDbAssetsRequest extends AbstractModel
     public $MemberId;
 
     /**
-     * @var Filter -
+     * @var Filter 过滤器参数
      */
     public $Filter;
 
@@ -46,7 +46,7 @@ class DescribeDbAssetsRequest extends AbstractModel
 
     /**
      * @param array $MemberId 集团账号的成员id
-     * @param Filter $Filter -
+     * @param Filter $Filter 过滤器参数
      * @param array $AssetTypes 资产类型:MYSQL/MARIADB/REDIS/MONGODB/POSTGRES/CTS/ES/KAFKA/COS/CBS/CFS
      */
     function __construct()

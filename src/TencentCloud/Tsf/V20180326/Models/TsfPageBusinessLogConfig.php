@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 业务日志配置项列表
  *
  * @method integer getTotalCount() 获取总条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置总条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getContent() 获取业务日志配置项列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContent(array $Content) 设置业务日志配置项列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TsfPageBusinessLogConfig extends AbstractModel
 {
     /**
      * @var integer 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
      * @var array 业务日志配置项列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Content;
 
     /**
      * @param integer $TotalCount 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Content 业务日志配置项列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

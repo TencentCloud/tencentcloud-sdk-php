@@ -29,17 +29,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getExceptionHostCount() 获取开启漏洞防御异常主机数量
  * @method void setExceptionHostCount(integer $ExceptionHostCount) 设置开启漏洞防御异常主机数量
  * @method array getHostIDs() 获取自选漏洞防御主机
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostIDs(array $HostIDs) 设置自选漏洞防御主机
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHostTotalCount() 获取开通容器安全的主机总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostTotalCount(integer $HostTotalCount) 设置开通容器安全的主机总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSupportDefenseVulCount() 获取支持防御的漏洞数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSupportDefenseVulCount(integer $SupportDefenseVulCount) 设置支持防御的漏洞数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHostNodeCount() 获取普通节点个数
  * @method void setHostNodeCount(integer $HostNodeCount) 设置普通节点个数
  * @method integer getSuperScope() 获取超级节点范围
@@ -77,19 +71,16 @@ class DescribeVulDefenceSettingResponse extends AbstractModel
 
     /**
      * @var array 自选漏洞防御主机
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostIDs;
 
     /**
      * @var integer 开通容器安全的主机总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostTotalCount;
 
     /**
      * @var integer 支持防御的漏洞数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SupportDefenseVulCount;
 
@@ -129,11 +120,8 @@ class DescribeVulDefenceSettingResponse extends AbstractModel
      * @param integer $HostCount 漏洞防御主机数量
      * @param integer $ExceptionHostCount 开启漏洞防御异常主机数量
      * @param array $HostIDs 自选漏洞防御主机
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HostTotalCount 开通容器安全的主机总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SupportDefenseVulCount 支持防御的漏洞数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HostNodeCount 普通节点个数
      * @param integer $SuperScope 超级节点范围
      * @param integer $SuperNodeCount 超级节点个数

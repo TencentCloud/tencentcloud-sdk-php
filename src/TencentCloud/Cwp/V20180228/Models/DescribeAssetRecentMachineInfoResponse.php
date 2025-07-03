@@ -21,21 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * DescribeAssetRecentMachineInfo返回参数结构体
  *
  * @method array getTotalList() 获取总数量列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalList(array $TotalList) 设置总数量列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLiveList() 获取在线数量列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLiveList(array $LiveList) 设置在线数量列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getOfflineList() 获取离线数量列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOfflineList(array $OfflineList) 设置离线数量列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRiskList() 获取风险数量列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskList(array $RiskList) 设置风险数量列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -43,25 +35,21 @@ class DescribeAssetRecentMachineInfoResponse extends AbstractModel
 {
     /**
      * @var array 总数量列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalList;
 
     /**
      * @var array 在线数量列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LiveList;
 
     /**
      * @var array 离线数量列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OfflineList;
 
     /**
      * @var array 风险数量列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskList;
 
@@ -72,13 +60,9 @@ class DescribeAssetRecentMachineInfoResponse extends AbstractModel
 
     /**
      * @param array $TotalList 总数量列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $LiveList 在线数量列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $OfflineList 离线数量列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RiskList 风险数量列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

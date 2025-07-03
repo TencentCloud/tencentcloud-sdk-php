@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * Zookeeper的地域信息的 myid 信息记录
  *
  * @method string getRegion() 获取地域信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置地域信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMyIdStart() 获取myid 的起始号段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMyIdStart(integer $MyIdStart) 设置myid 的起始号段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMyIdEnd() 获取myid 的结束号段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMyIdEnd(integer $MyIdEnd) 设置myid 的结束号段
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ZookeeperRegionMyIdInfo extends AbstractModel
 {
     /**
      * @var string 地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
      * @var integer myid 的起始号段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MyIdStart;
 
     /**
      * @var integer myid 的结束号段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MyIdEnd;
 
     /**
      * @param string $Region 地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MyIdStart myid 的起始号段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MyIdEnd myid 的结束号段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

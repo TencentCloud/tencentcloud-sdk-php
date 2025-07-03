@@ -21,141 +21,97 @@ use TencentCloud\Common\AbstractModel;
  * 计费状态信息
  *
  * @method string getDealName() 获取交易订单号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDealName(string $DealName) 设置交易订单号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLastDealName() 获取上一次交易订单号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastDealName(string $LastDealName) 设置上一次交易订单号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceClass() 获取实例规格，包括：micro、small、medium、large、xlarge、2xlarge等
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceClass(string $InstanceClass) 设置实例规格，包括：micro、small、medium、large、xlarge、2xlarge等
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTradeStatus() 获取计费任务状态， normal(计费或待计费)、resizing(变配中)、reversing(冲正中，比较短暂的状态)、isolating(隔离中，比较短暂的状态)、isolated(已隔离)、offlining(下线中)、offlined(已下线)、notBilled(未计费)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTradeStatus(string $TradeStatus) 设置计费任务状态， normal(计费或待计费)、resizing(变配中)、reversing(冲正中，比较短暂的状态)、isolating(隔离中，比较短暂的状态)、isolated(已隔离)、offlining(下线中)、offlined(已下线)、notBilled(未计费)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExpireTime() 获取到期时间，格式为"yyyy-mm-dd hh:mm:ss"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpireTime(string $ExpireTime) 设置到期时间，格式为"yyyy-mm-dd hh:mm:ss"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOfflineTime() 获取下线时间，格式为"yyyy-mm-dd hh:mm:ss"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOfflineTime(string $OfflineTime) 设置下线时间，格式为"yyyy-mm-dd hh:mm:ss"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIsolateTime() 获取隔离时间，格式为"yyyy-mm-dd hh:mm:ss"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsolateTime(string $IsolateTime) 设置隔离时间，格式为"yyyy-mm-dd hh:mm:ss"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOfflineReason() 获取下线原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOfflineReason(string $OfflineReason) 设置下线原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIsolateReason() 获取隔离原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsolateReason(string $IsolateReason) 设置隔离原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPayType() 获取付费类型，包括：postpay(后付费)、prepay(预付费)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayType(string $PayType) 设置付费类型，包括：postpay(后付费)、prepay(预付费)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBillingType() 获取任务计费类型，包括：billing(计费)、notBilling(不计费)、 promotions(促销活动中)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBillingType(string $BillingType) 设置任务计费类型，包括：billing(计费)、notBilling(不计费)、 promotions(促销活动中)
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TradeInfo extends AbstractModel
 {
     /**
      * @var string 交易订单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DealName;
 
     /**
      * @var string 上一次交易订单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastDealName;
 
     /**
      * @var string 实例规格，包括：micro、small、medium、large、xlarge、2xlarge等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceClass;
 
     /**
      * @var string 计费任务状态， normal(计费或待计费)、resizing(变配中)、reversing(冲正中，比较短暂的状态)、isolating(隔离中，比较短暂的状态)、isolated(已隔离)、offlining(下线中)、offlined(已下线)、notBilled(未计费)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TradeStatus;
 
     /**
      * @var string 到期时间，格式为"yyyy-mm-dd hh:mm:ss"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpireTime;
 
     /**
      * @var string 下线时间，格式为"yyyy-mm-dd hh:mm:ss"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OfflineTime;
 
     /**
      * @var string 隔离时间，格式为"yyyy-mm-dd hh:mm:ss"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsolateTime;
 
     /**
      * @var string 下线原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OfflineReason;
 
     /**
      * @var string 隔离原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsolateReason;
 
     /**
      * @var string 付费类型，包括：postpay(后付费)、prepay(预付费)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PayType;
 
     /**
      * @var string 任务计费类型，包括：billing(计费)、notBilling(不计费)、 promotions(促销活动中)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BillingType;
 
     /**
      * @param string $DealName 交易订单号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastDealName 上一次交易订单号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceClass 实例规格，包括：micro、small、medium、large、xlarge、2xlarge等
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TradeStatus 计费任务状态， normal(计费或待计费)、resizing(变配中)、reversing(冲正中，比较短暂的状态)、isolating(隔离中，比较短暂的状态)、isolated(已隔离)、offlining(下线中)、offlined(已下线)、notBilled(未计费)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExpireTime 到期时间，格式为"yyyy-mm-dd hh:mm:ss"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OfflineTime 下线时间，格式为"yyyy-mm-dd hh:mm:ss"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IsolateTime 隔离时间，格式为"yyyy-mm-dd hh:mm:ss"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OfflineReason 下线原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IsolateReason 隔离原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PayType 付费类型，包括：postpay(后付费)、prepay(预付费)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BillingType 任务计费类型，包括：billing(计费)、notBilling(不计费)、 promotions(促销活动中)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

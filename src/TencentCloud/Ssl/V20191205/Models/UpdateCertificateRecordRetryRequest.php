@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateCertificateRecordRetry请求参数结构体
  *
- * @method integer getDeployRecordId() 获取待重试部署记录ID
- * @method void setDeployRecordId(integer $DeployRecordId) 设置待重试部署记录ID
- * @method integer getDeployRecordDetailId() 获取待重试部署记录详情ID
- * @method void setDeployRecordDetailId(integer $DeployRecordDetailId) 设置待重试部署记录详情ID
+ * @method integer getDeployRecordId() 获取待重试部署记录ID,通过UpdateCertificateInstance得到部署记录ID。 本参数不传的话，则DeployRecordDetailId必传
+ * @method void setDeployRecordId(integer $DeployRecordId) 设置待重试部署记录ID,通过UpdateCertificateInstance得到部署记录ID。 本参数不传的话，则DeployRecordDetailId必传
+ * @method integer getDeployRecordDetailId() 获取待重试部署记录详情ID,通过DescribeHostUpdateRecordDetail接口获得， 本参数不传的话， 则DeployRecordId必传
+ * @method void setDeployRecordDetailId(integer $DeployRecordDetailId) 设置待重试部署记录详情ID,通过DescribeHostUpdateRecordDetail接口获得， 本参数不传的话， 则DeployRecordId必传
  */
 class UpdateCertificateRecordRetryRequest extends AbstractModel
 {
     /**
-     * @var integer 待重试部署记录ID
+     * @var integer 待重试部署记录ID,通过UpdateCertificateInstance得到部署记录ID。 本参数不传的话，则DeployRecordDetailId必传
      */
     public $DeployRecordId;
 
     /**
-     * @var integer 待重试部署记录详情ID
+     * @var integer 待重试部署记录详情ID,通过DescribeHostUpdateRecordDetail接口获得， 本参数不传的话， 则DeployRecordId必传
      */
     public $DeployRecordDetailId;
 
     /**
-     * @param integer $DeployRecordId 待重试部署记录ID
-     * @param integer $DeployRecordDetailId 待重试部署记录详情ID
+     * @param integer $DeployRecordId 待重试部署记录ID,通过UpdateCertificateInstance得到部署记录ID。 本参数不传的话，则DeployRecordDetailId必传
+     * @param integer $DeployRecordDetailId 待重试部署记录详情ID,通过DescribeHostUpdateRecordDetail接口获得， 本参数不传的话， 则DeployRecordId必传
      */
     function __construct()
     {

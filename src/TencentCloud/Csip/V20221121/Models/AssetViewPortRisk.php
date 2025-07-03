@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFirstTime(string $FirstTime) 设置首次识别时间
  * @method integer getSuggestion() 获取处置建议,0保持现状、1限制访问、2封禁端口
  * @method void setSuggestion(integer $Suggestion) 设置处置建议,0保持现状、1限制访问、2封禁端口
- * @method integer getStatus() 获取状态，0未处理、1已处置、2已忽略
- * @method void setStatus(integer $Status) 设置状态，0未处理、1已处置、2已忽略
+ * @method integer getStatus() 获取状态，0未处理、1已处置、2已忽略、3云防已防护
+ * @method void setStatus(integer $Status) 设置状态，0未处理、1已处置、2已忽略、3云防已防护
  * @method string getId() 获取风险ID
  * @method void setId(string $Id) 设置风险ID
  * @method string getIndex() 获取前端索引
@@ -53,15 +53,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getAppId() 获取用户appid
  * @method void setAppId(string $AppId) 设置用户appid
  * @method string getNick() 获取用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNick(string $Nick) 设置用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUin() 获取用户uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUin(string $Uin) 设置用户uin
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFrom() 获取识别来源，详细看枚举返回。
  * @method void setFrom(string $From) 设置识别来源，详细看枚举返回。
+ * @method string getServiceJudge() 获取服务判定,high_risk_service 高危服务 web_service web服务 other_service 其他服务
+ * @method void setServiceJudge(string $ServiceJudge) 设置服务判定,high_risk_service 高危服务 web_service web服务 other_service 其他服务
+ * @method integer getXspmStatus() 获取状态，0未处理、1已处置、2已忽略、3云防已防护、4无需处理
+ * @method void setXspmStatus(integer $XspmStatus) 设置状态，0未处理、1已处置、2已忽略、3云防已防护、4无需处理
  */
 class AssetViewPortRisk extends AbstractModel
 {
@@ -116,7 +116,7 @@ class AssetViewPortRisk extends AbstractModel
     public $Suggestion;
 
     /**
-     * @var integer 状态，0未处理、1已处置、2已忽略
+     * @var integer 状态，0未处理、1已处置、2已忽略、3云防已防护
      */
     public $Status;
 
@@ -147,13 +147,11 @@ class AssetViewPortRisk extends AbstractModel
 
     /**
      * @var string 用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Nick;
 
     /**
      * @var string 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uin;
 
@@ -161,6 +159,16 @@ class AssetViewPortRisk extends AbstractModel
      * @var string 识别来源，详细看枚举返回。
      */
     public $From;
+
+    /**
+     * @var string 服务判定,high_risk_service 高危服务 web_service web服务 other_service 其他服务
+     */
+    public $ServiceJudge;
+
+    /**
+     * @var integer 状态，0未处理、1已处置、2已忽略、3云防已防护、4无需处理
+     */
+    public $XspmStatus;
 
     /**
      * @param integer $Port 端口
@@ -173,17 +181,17 @@ class AssetViewPortRisk extends AbstractModel
      * @param string $RecentTime 最近识别时间
      * @param string $FirstTime 首次识别时间
      * @param integer $Suggestion 处置建议,0保持现状、1限制访问、2封禁端口
-     * @param integer $Status 状态，0未处理、1已处置、2已忽略
+     * @param integer $Status 状态，0未处理、1已处置、2已忽略、3云防已防护
      * @param string $Id 风险ID
      * @param string $Index 前端索引
      * @param string $InstanceId 实例id
      * @param string $InstanceName 实例名
      * @param string $AppId 用户appid
      * @param string $Nick 用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uin 用户uin
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $From 识别来源，详细看枚举返回。
+     * @param string $ServiceJudge 服务判定,high_risk_service 高危服务 web_service web服务 other_service 其他服务
+     * @param integer $XspmStatus 状态，0未处理、1已处置、2已忽略、3云防已防护、4无需处理
      */
     function __construct()
     {
@@ -272,6 +280,14 @@ class AssetViewPortRisk extends AbstractModel
 
         if (array_key_exists("From",$param) and $param["From"] !== null) {
             $this->From = $param["From"];
+        }
+
+        if (array_key_exists("ServiceJudge",$param) and $param["ServiceJudge"] !== null) {
+            $this->ServiceJudge = $param["ServiceJudge"];
+        }
+
+        if (array_key_exists("XspmStatus",$param) and $param["XspmStatus"] !== null) {
+            $this->XspmStatus = $param["XspmStatus"];
         }
     }
 }

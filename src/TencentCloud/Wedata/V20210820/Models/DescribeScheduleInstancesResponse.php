@@ -20,6 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeScheduleInstances返回参数结构体
  *
+ * @method string getRequestFromSource() 获取请求来源，WEB 前端；CLIENT 客户端
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRequestFromSource(string $RequestFromSource) 设置请求来源，WEB 前端；CLIENT 客户端
+注意：此字段可能返回 null，表示取不到有效值。
  * @method CollectionInstanceOpsDto getData() 获取实例结果集
  * @method void setData(CollectionInstanceOpsDto $Data) 设置实例结果集
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -27,6 +31,12 @@ use TencentCloud\Common\AbstractModel;
  */
 class DescribeScheduleInstancesResponse extends AbstractModel
 {
+    /**
+     * @var string 请求来源，WEB 前端；CLIENT 客户端
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RequestFromSource;
+
     /**
      * @var CollectionInstanceOpsDto 实例结果集
      */
@@ -38,6 +48,8 @@ class DescribeScheduleInstancesResponse extends AbstractModel
     public $RequestId;
 
     /**
+     * @param string $RequestFromSource 请求来源，WEB 前端；CLIENT 客户端
+注意：此字段可能返回 null，表示取不到有效值。
      * @param CollectionInstanceOpsDto $Data 实例结果集
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -54,6 +66,10 @@ class DescribeScheduleInstancesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("RequestFromSource",$param) and $param["RequestFromSource"] !== null) {
+            $this->RequestFromSource = $param["RequestFromSource"];
+        }
+
         if (array_key_exists("Data",$param) and $param["Data"] !== null) {
             $this->Data = new CollectionInstanceOpsDto();
             $this->Data->deserialize($param["Data"]);

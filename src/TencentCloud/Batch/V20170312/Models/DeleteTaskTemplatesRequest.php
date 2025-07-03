@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteTaskTemplates请求参数结构体
  *
- * @method array getTaskTemplateIds() 获取用于删除任务模板信息
- * @method void setTaskTemplateIds(array $TaskTemplateIds) 设置用于删除任务模板信息
+ * @method array getTaskTemplateIds() 获取用于删除任务模板信息，最大数量上限100，环境模版ID通过调用接口 [DescribeTaskTemplates](https://cloud.tencent.com/document/api/599/15902)获取。
+ * @method void setTaskTemplateIds(array $TaskTemplateIds) 设置用于删除任务模板信息，最大数量上限100，环境模版ID通过调用接口 [DescribeTaskTemplates](https://cloud.tencent.com/document/api/599/15902)获取。
  */
 class DeleteTaskTemplatesRequest extends AbstractModel
 {
     /**
-     * @var array 用于删除任务模板信息
+     * @var array 用于删除任务模板信息，最大数量上限100，环境模版ID通过调用接口 [DescribeTaskTemplates](https://cloud.tencent.com/document/api/599/15902)获取。
      */
     public $TaskTemplateIds;
 
     /**
-     * @param array $TaskTemplateIds 用于删除任务模板信息
+     * @param array $TaskTemplateIds 用于删除任务模板信息，最大数量上限100，环境模版ID通过调用接口 [DescribeTaskTemplates](https://cloud.tencent.com/document/api/599/15902)获取。
      */
     function __construct()
     {

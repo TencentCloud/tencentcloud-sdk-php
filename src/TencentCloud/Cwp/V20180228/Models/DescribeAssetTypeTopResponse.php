@@ -21,41 +21,23 @@ use TencentCloud\Common\AbstractModel;
  * DescribeAssetTypeTop返回参数结构体
  *
  * @method array getUser() 获取账号Top5
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUser(array $User) 设置账号Top5
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPort() 获取端口Top5
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPort(array $Port) 设置端口Top5
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getProcess() 获取进程Top5
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProcess(array $Process) 设置进程Top5
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSoftware() 获取软件Top5
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSoftware(array $Software) 设置软件Top5
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDatabase() 获取数据库Top5
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatabase(array $Database) 设置数据库Top5
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getWebApp() 获取Web应用Top5
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWebApp(array $WebApp) 设置Web应用Top5
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getWebLocation() 获取Web站点Top5
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWebLocation(array $WebLocation) 设置Web站点Top5
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getWebFrame() 获取Web框架Top5
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWebFrame(array $WebFrame) 设置Web框架Top5
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getWebService() 获取Web服务Top5
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWebService(array $WebService) 设置Web服务Top5
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -63,55 +45,46 @@ class DescribeAssetTypeTopResponse extends AbstractModel
 {
     /**
      * @var array 账号Top5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $User;
 
     /**
      * @var array 端口Top5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Port;
 
     /**
      * @var array 进程Top5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Process;
 
     /**
      * @var array 软件Top5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Software;
 
     /**
      * @var array 数据库Top5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Database;
 
     /**
      * @var array Web应用Top5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WebApp;
 
     /**
      * @var array Web站点Top5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WebLocation;
 
     /**
      * @var array Web框架Top5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WebFrame;
 
     /**
      * @var array Web服务Top5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WebService;
 
@@ -122,23 +95,14 @@ class DescribeAssetTypeTopResponse extends AbstractModel
 
     /**
      * @param array $User 账号Top5
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Port 端口Top5
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Process 进程Top5
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Software 软件Top5
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Database 数据库Top5
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $WebApp Web应用Top5
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $WebLocation Web站点Top5
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $WebFrame Web框架Top5
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $WebService Web服务Top5
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

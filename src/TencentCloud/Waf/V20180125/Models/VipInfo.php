@@ -20,34 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Vip信息
  *
- * @method string getVip() 获取Virtual IP
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVip(string $Vip) 设置Virtual IP
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVip() 获取VIP地址
+ * @method void setVip(string $Vip) 设置VIP地址
  * @method string getInstanceId() 获取waf实例id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置waf实例id
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceCreateTime() 获取创建时间
+ * @method void setInstanceCreateTime(string $InstanceCreateTime) 设置创建时间
+ * @method string getRegion() 获取地域
+ * @method void setRegion(string $Region) 设置地域
+ * @method integer getRegionId() 获取地域ID
+ * @method void setRegionId(integer $RegionId) 设置地域ID
+ * @method string getISP() 获取ip运营商类型
+ * @method void setISP(string $ISP) 设置ip运营商类型
+ * @method string getVipType() 获取ip类型
+ * @method void setVipType(string $VipType) 设置ip类型
+ * @method string getAddressName() 获取域名信息
+ * @method void setAddressName(string $AddressName) 设置域名信息
  */
 class VipInfo extends AbstractModel
 {
     /**
-     * @var string Virtual IP
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string VIP地址
      */
     public $Vip;
 
     /**
      * @var string waf实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
-     * @param string $Vip Virtual IP
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 创建时间
+     */
+    public $InstanceCreateTime;
+
+    /**
+     * @var string 地域
+     */
+    public $Region;
+
+    /**
+     * @var integer 地域ID
+     */
+    public $RegionId;
+
+    /**
+     * @var string ip运营商类型
+     */
+    public $ISP;
+
+    /**
+     * @var string ip类型
+     */
+    public $VipType;
+
+    /**
+     * @var string 域名信息
+     */
+    public $AddressName;
+
+    /**
+     * @param string $Vip VIP地址
      * @param string $InstanceId waf实例id
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceCreateTime 创建时间
+     * @param string $Region 地域
+     * @param integer $RegionId 地域ID
+     * @param string $ISP ip运营商类型
+     * @param string $VipType ip类型
+     * @param string $AddressName 域名信息
      */
     function __construct()
     {
@@ -68,6 +108,30 @@ class VipInfo extends AbstractModel
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("InstanceCreateTime",$param) and $param["InstanceCreateTime"] !== null) {
+            $this->InstanceCreateTime = $param["InstanceCreateTime"];
+        }
+
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
+            $this->RegionId = $param["RegionId"];
+        }
+
+        if (array_key_exists("ISP",$param) and $param["ISP"] !== null) {
+            $this->ISP = $param["ISP"];
+        }
+
+        if (array_key_exists("VipType",$param) and $param["VipType"] !== null) {
+            $this->VipType = $param["VipType"];
+        }
+
+        if (array_key_exists("AddressName",$param) and $param["AddressName"] !== null) {
+            $this->AddressName = $param["AddressName"];
         }
     }
 }

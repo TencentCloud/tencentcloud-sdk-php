@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 节点Tag
  *
  * @method string getTagKey() 获取节点Tag key
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagKey(string $TagKey) 设置节点Tag key
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTagValue() 获取节点Tag Value
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagValue(string $TagValue) 设置节点Tag Value
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NodeTag extends AbstractModel
 {
     /**
      * @var string 节点Tag key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagKey;
 
     /**
      * @var string 节点Tag Value
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagValue;
 
     /**
      * @param string $TagKey 节点Tag key
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TagValue 节点Tag Value
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,37 +21,21 @@ use TencentCloud\Common\AbstractModel;
  * DescribeInstanceDTSInfo返回参数结构体
  *
  * @method string getJobId() 获取DTS任务ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJobId(string $JobId) 设置DTS任务ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getJobName() 获取DTS任务名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJobName(string $JobName) 设置DTS任务名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取任务状态,取值为：1-创建中(Creating),3-校验中(Checking)4-校验通过(CheckPass),5-校验不通过（CheckNotPass）,7-任务运行(Running),8-准备完成（ReadyComplete）,9-任务成功（Success）,10-任务失败（Failed）,11-撤销中（Stopping）,12-完成中（Completing）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置任务状态,取值为：1-创建中(Creating),3-校验中(Checking)4-校验通过(CheckPass),5-校验不通过（CheckNotPass）,7-任务运行(Running),8-准备完成（ReadyComplete）,9-任务成功（Success）,10-任务失败（Failed）,11-撤销中（Stopping）,12-完成中（Completing）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatusDesc() 获取状态描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatusDesc(string $StatusDesc) 设置状态描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getOffset() 获取同步时延，单位：字节
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOffset(integer $Offset) 设置同步时延，单位：字节
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCutDownTime() 获取断开时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCutDownTime(string $CutDownTime) 设置断开时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DescribeInstanceDTSInstanceInfo getSrcInfo() 获取源实例信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSrcInfo(DescribeInstanceDTSInstanceInfo $SrcInfo) 设置源实例信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DescribeInstanceDTSInstanceInfo getDstInfo() 获取目标实例信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDstInfo(DescribeInstanceDTSInstanceInfo $DstInfo) 设置目标实例信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -59,49 +43,41 @@ class DescribeInstanceDTSInfoResponse extends AbstractModel
 {
     /**
      * @var string DTS任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JobId;
 
     /**
      * @var string DTS任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JobName;
 
     /**
      * @var integer 任务状态,取值为：1-创建中(Creating),3-校验中(Checking)4-校验通过(CheckPass),5-校验不通过（CheckNotPass）,7-任务运行(Running),8-准备完成（ReadyComplete）,9-任务成功（Success）,10-任务失败（Failed）,11-撤销中（Stopping）,12-完成中（Completing）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 状态描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StatusDesc;
 
     /**
      * @var integer 同步时延，单位：字节
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Offset;
 
     /**
      * @var string 断开时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CutDownTime;
 
     /**
      * @var DescribeInstanceDTSInstanceInfo 源实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SrcInfo;
 
     /**
      * @var DescribeInstanceDTSInstanceInfo 目标实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DstInfo;
 
@@ -112,21 +88,13 @@ class DescribeInstanceDTSInfoResponse extends AbstractModel
 
     /**
      * @param string $JobId DTS任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $JobName DTS任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 任务状态,取值为：1-创建中(Creating),3-校验中(Checking)4-校验通过(CheckPass),5-校验不通过（CheckNotPass）,7-任务运行(Running),8-准备完成（ReadyComplete）,9-任务成功（Success）,10-任务失败（Failed）,11-撤销中（Stopping）,12-完成中（Completing）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StatusDesc 状态描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Offset 同步时延，单位：字节
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CutDownTime 断开时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DescribeInstanceDTSInstanceInfo $SrcInfo 源实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DescribeInstanceDTSInstanceInfo $DstInfo 目标实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

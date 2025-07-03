@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * es敏感资产详情列表
  *
  * @method string getDataSourceId() 获取数据源id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataSourceId(string $DataSourceId) 设置数据源id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIndexName() 获取索引名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIndexName(string $IndexName) 设置索引名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDataType() 获取数据库类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataType(string $DataType) 设置数据库类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFieldNums() 获取字段的数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFieldNums(integer $FieldNums) 设置字段的数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSensitiveFieldNums() 获取敏感字段的数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSensitiveFieldNums(integer $SensitiveFieldNums) 设置敏感字段的数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDistributionData() 获取敏感数据分布
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDistributionData(array $DistributionData) 设置敏感数据分布
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ESAssetDBDetail extends AbstractModel
 {
     /**
      * @var string 数据源id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataSourceId;
 
     /**
      * @var string 索引名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IndexName;
 
     /**
      * @var string 数据库类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataType;
 
     /**
      * @var integer 字段的数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FieldNums;
 
     /**
      * @var integer 敏感字段的数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SensitiveFieldNums;
 
     /**
      * @var array 敏感数据分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DistributionData;
 
     /**
      * @param string $DataSourceId 数据源id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IndexName 索引名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataType 数据库类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FieldNums 字段的数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SensitiveFieldNums 敏感字段的数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DistributionData 敏感数据分布
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

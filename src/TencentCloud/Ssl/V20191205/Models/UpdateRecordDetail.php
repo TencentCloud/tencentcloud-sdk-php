@@ -20,24 +20,62 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 更新记录详情
  *
- * @method integer getId() 获取详情记录id
- * @method void setId(integer $Id) 设置详情记录id
- * @method string getCertId() 获取新证书ID
- * @method void setCertId(string $CertId) 设置新证书ID
- * @method string getOldCertId() 获取旧证书ID
- * @method void setOldCertId(string $OldCertId) 设置旧证书ID
+ * @method integer getId() 获取更新详情记录id
+ * @method void setId(integer $Id) 设置更新详情记录id
+ * @method string getCertId() 获取新旧证书更新 - 新证书ID
+ * @method void setCertId(string $CertId) 设置新旧证书更新 - 新证书ID
+ * @method string getOldCertId() 获取新旧证书更新 - 旧证书ID
+ * @method void setOldCertId(string $OldCertId) 设置新旧证书更新 - 旧证书ID
  * @method array getDomains() 获取部署域名列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomains(array $Domains) 设置部署域名列表
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getResourceType() 获取部署资源类型
- * @method void setResourceType(string $ResourceType) 设置部署资源类型
+ * @method string getResourceType() 获取新旧证书更新云资源的云资源类型：
+- clb
+- cdn
+- ddos
+- live
+- vod
+- waf
+- apigateway
+- teo
+- tke
+- cos
+- tse
+- tcb
+ * @method void setResourceType(string $ResourceType) 设置新旧证书更新云资源的云资源类型：
+- clb
+- cdn
+- ddos
+- live
+- vod
+- waf
+- apigateway
+- teo
+- tke
+- cos
+- tse
+- tcb
  * @method string getRegion() 获取部署地域
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置部署地域
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取部署状态
- * @method void setStatus(integer $Status) 设置部署状态
+ * @method integer getStatus() 获取部署状态， 取值范围：
+0：待部署
+1：部署成功
+2：部署失败
+3：部署中
+4：回滚成功
+5：回滚失败
+6：无资源，无需部署
+ * @method void setStatus(integer $Status) 设置部署状态， 取值范围：
+0：待部署
+1：部署成功
+2：部署失败
+3：部署中
+4：回滚成功
+5：回滚失败
+6：无资源，无需部署
  * @method string getErrorMsg() 获取部署错误信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorMsg(string $ErrorMsg) 设置部署错误信息
@@ -87,32 +125,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecretName(string $SecretName) 设置secret名称（TKE专用）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEnvId() 获取环境ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnvId(string $EnvId) 设置环境ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTCBType() 获取TCB部署类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTCBType(string $TCBType) 设置TCB部署类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUrl() 获取监听器Url(clb专属)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUrl(string $Url) 设置监听器Url(clb专属)
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class UpdateRecordDetail extends AbstractModel
 {
     /**
-     * @var integer 详情记录id
+     * @var integer 更新详情记录id
      */
     public $Id;
 
     /**
-     * @var string 新证书ID
+     * @var string 新旧证书更新 - 新证书ID
      */
     public $CertId;
 
     /**
-     * @var string 旧证书ID
+     * @var string 新旧证书更新 - 旧证书ID
      */
     public $OldCertId;
 
@@ -123,7 +155,19 @@ class UpdateRecordDetail extends AbstractModel
     public $Domains;
 
     /**
-     * @var string 部署资源类型
+     * @var string 新旧证书更新云资源的云资源类型：
+- clb
+- cdn
+- ddos
+- live
+- vod
+- waf
+- apigateway
+- teo
+- tke
+- cos
+- tse
+- tcb
      */
     public $ResourceType;
 
@@ -134,7 +178,14 @@ class UpdateRecordDetail extends AbstractModel
     public $Region;
 
     /**
-     * @var integer 部署状态
+     * @var integer 部署状态， 取值范围：
+0：待部署
+1：部署成功
+2：部署失败
+3：部署中
+4：回滚成功
+5：回滚失败
+6：无资源，无需部署
      */
     public $Status;
 
@@ -216,32 +267,48 @@ class UpdateRecordDetail extends AbstractModel
 
     /**
      * @var string 环境ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnvId;
 
     /**
      * @var string TCB部署类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TCBType;
 
     /**
      * @var string 监听器Url(clb专属)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Url;
 
     /**
-     * @param integer $Id 详情记录id
-     * @param string $CertId 新证书ID
-     * @param string $OldCertId 旧证书ID
+     * @param integer $Id 更新详情记录id
+     * @param string $CertId 新旧证书更新 - 新证书ID
+     * @param string $OldCertId 新旧证书更新 - 旧证书ID
      * @param array $Domains 部署域名列表
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ResourceType 部署资源类型
+     * @param string $ResourceType 新旧证书更新云资源的云资源类型：
+- clb
+- cdn
+- ddos
+- live
+- vod
+- waf
+- apigateway
+- teo
+- tke
+- cos
+- tse
+- tcb
      * @param string $Region 部署地域
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 部署状态
+     * @param integer $Status 部署状态， 取值范围：
+0：待部署
+1：部署成功
+2：部署失败
+3：部署中
+4：回滚成功
+5：回滚失败
+6：无资源，无需部署
      * @param string $ErrorMsg 部署错误信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 部署时间
@@ -267,11 +334,8 @@ class UpdateRecordDetail extends AbstractModel
      * @param string $SecretName secret名称（TKE专用）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EnvId 环境ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TCBType TCB部署类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Url 监听器Url(clb专属)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

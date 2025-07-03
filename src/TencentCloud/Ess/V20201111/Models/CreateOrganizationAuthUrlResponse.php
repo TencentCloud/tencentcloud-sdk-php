@@ -20,34 +20,28 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateOrganizationAuthUrl返回参数结构体
  *
- * @method string getAuthUrl() 获取“H5”-H5长连接
-"SHORT_H5"- H5短链
-"APP"-小程序
-"PC"-PC浏览器
-链接有效期统一30天
- * @method void setAuthUrl(string $AuthUrl) 设置“H5”-H5长连接
-"SHORT_H5"- H5短链
-"APP"-小程序
-"PC"-PC浏览器
-链接有效期统一30天
- * @method integer getExpiredTime() 获取链接过期时间戳
- * @method void setExpiredTime(integer $ExpiredTime) 设置链接过期时间戳
+ * @method string getAuthUrl() 获取生成的认证链接。
+
+注： `链接有效期统一30天`
+ * @method void setAuthUrl(string $AuthUrl) 设置生成的认证链接。
+
+注： `链接有效期统一30天`
+ * @method integer getExpiredTime() 获取链接过期时间，格式为Unix标准时间戳（秒）
+ * @method void setExpiredTime(integer $ExpiredTime) 设置链接过期时间，格式为Unix标准时间戳（秒）
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateOrganizationAuthUrlResponse extends AbstractModel
 {
     /**
-     * @var string “H5”-H5长连接
-"SHORT_H5"- H5短链
-"APP"-小程序
-"PC"-PC浏览器
-链接有效期统一30天
+     * @var string 生成的认证链接。
+
+注： `链接有效期统一30天`
      */
     public $AuthUrl;
 
     /**
-     * @var integer 链接过期时间戳
+     * @var integer 链接过期时间，格式为Unix标准时间戳（秒）
      */
     public $ExpiredTime;
 
@@ -57,12 +51,10 @@ class CreateOrganizationAuthUrlResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $AuthUrl “H5”-H5长连接
-"SHORT_H5"- H5短链
-"APP"-小程序
-"PC"-PC浏览器
-链接有效期统一30天
-     * @param integer $ExpiredTime 链接过期时间戳
+     * @param string $AuthUrl 生成的认证链接。
+
+注： `链接有效期统一30天`
+     * @param integer $ExpiredTime 链接过期时间，格式为Unix标准时间戳（秒）
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -30,9 +30,9 @@ off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccessKey(string $AccessKey) 设置访问ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSecretKey() 获取密钥。
+ * @method string getSecretKey() 获取密钥，字段为脱敏返回。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSecretKey(string $SecretKey) 设置密钥。
+ * @method void setSecretKey(string $SecretKey) 设置密钥，字段为脱敏返回。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegion() 获取地域
 注意：此字段可能返回 null，表示取不到有效值。
@@ -59,7 +59,7 @@ off：关闭
     public $AccessKey;
 
     /**
-     * @var string 密钥。
+     * @var string 密钥，字段为脱敏返回。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecretKey;
@@ -82,7 +82,7 @@ on：开启
 off：关闭
      * @param string $AccessKey 访问ID。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SecretKey 密钥。
+     * @param string $SecretKey 密钥，字段为脱敏返回。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 地域
 注意：此字段可能返回 null，表示取不到有效值。

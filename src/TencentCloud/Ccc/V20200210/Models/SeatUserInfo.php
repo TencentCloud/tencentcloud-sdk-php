@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMail() 获取座席邮箱
  * @method void setMail(string $Mail) 设置座席邮箱
  * @method string getStaffNumber() 获取工号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStaffNumber(string $StaffNumber) 设置工号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPhone() 获取座席电话号码（带0086前缀）
  * @method void setPhone(string $Phone) 设置座席电话号码（带0086前缀）
  * @method string getNick() 获取座席昵称
@@ -35,19 +33,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUserId() 获取用户ID
  * @method void setUserId(string $UserId) 设置用户ID
  * @method array getSkillGroupNameList() 获取座席关联的技能组列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSkillGroupNameList(array $SkillGroupNameList) 设置座席关联的技能组列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRole() 获取1:管理员
 2:质检员
 3:普通座席
 else:自定义角色ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRole(integer $Role) 设置1:管理员
 2:质检员
 3:普通座席
 else:自定义角色ID
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getExtensionNumber() 获取座席分机号（1 到 8 打头，4 - 6 位）
+ * @method void setExtensionNumber(string $ExtensionNumber) 设置座席分机号（1 到 8 打头，4 - 6 位）
  */
 class SeatUserInfo extends AbstractModel
 {
@@ -63,7 +59,6 @@ class SeatUserInfo extends AbstractModel
 
     /**
      * @var string 工号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StaffNumber;
 
@@ -84,7 +79,6 @@ class SeatUserInfo extends AbstractModel
 
     /**
      * @var array 座席关联的技能组列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SkillGroupNameList;
 
@@ -93,25 +87,27 @@ class SeatUserInfo extends AbstractModel
 2:质检员
 3:普通座席
 else:自定义角色ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Role;
+
+    /**
+     * @var string 座席分机号（1 到 8 打头，4 - 6 位）
+     */
+    public $ExtensionNumber;
 
     /**
      * @param string $Name 座席名称
      * @param string $Mail 座席邮箱
      * @param string $StaffNumber 工号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Phone 座席电话号码（带0086前缀）
      * @param string $Nick 座席昵称
      * @param string $UserId 用户ID
      * @param array $SkillGroupNameList 座席关联的技能组列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Role 1:管理员
 2:质检员
 3:普通座席
 else:自定义角色ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ExtensionNumber 座席分机号（1 到 8 打头，4 - 6 位）
      */
     function __construct()
     {
@@ -156,6 +152,10 @@ else:自定义角色ID
 
         if (array_key_exists("Role",$param) and $param["Role"] !== null) {
             $this->Role = $param["Role"];
+        }
+
+        if (array_key_exists("ExtensionNumber",$param) and $param["ExtensionNumber"] !== null) {
+            $this->ExtensionNumber = $param["ExtensionNumber"];
         }
     }
 }

@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 成本分析header表头数据
  *
  * @method string getName() 获取日期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置日期
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AnalyseHeaderTimeDetail extends AbstractModel
 {
     /**
      * @var string 日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @param string $Name 日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

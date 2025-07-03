@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 集群设备组信息。
  *
  * @method string getInstanceId() 获取集群ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置集群ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getReadWriteDevice() 获取读写设备组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReadWriteDevice(array $ReadWriteDevice) 设置读写设备组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getReadOnlyDevice() 获取只读设备组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReadOnlyDevice(array $ReadOnlyDevice) 设置只读设备组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getFreeDevice() 获取空闲设备组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFreeDevice(array $FreeDevice) 设置空闲设备组
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceDeviceInfo extends AbstractModel
 {
     /**
      * @var string 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var array 读写设备组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReadWriteDevice;
 
     /**
      * @var array 只读设备组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReadOnlyDevice;
 
     /**
      * @var array 空闲设备组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FreeDevice;
 
     /**
      * @param string $InstanceId 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ReadWriteDevice 读写设备组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ReadOnlyDevice 只读设备组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FreeDevice 空闲设备组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

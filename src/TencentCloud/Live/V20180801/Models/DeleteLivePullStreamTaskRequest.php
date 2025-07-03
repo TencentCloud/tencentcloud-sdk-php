@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(string $TaskId) 设置任务 Id。
  * @method string getOperator() 获取操作人姓名。
  * @method void setOperator(string $Operator) 设置操作人姓名。
+ * @method string getSpecifyTaskId() 获取指定任务 ID。注意：用于删除使用自定义任务 ID 创建的任务。
+ * @method void setSpecifyTaskId(string $SpecifyTaskId) 设置指定任务 ID。注意：用于删除使用自定义任务 ID 创建的任务。
  */
 class DeleteLivePullStreamTaskRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DeleteLivePullStreamTaskRequest extends AbstractModel
     public $Operator;
 
     /**
+     * @var string 指定任务 ID。注意：用于删除使用自定义任务 ID 创建的任务。
+     */
+    public $SpecifyTaskId;
+
+    /**
      * @param string $TaskId 任务 Id。
      * @param string $Operator 操作人姓名。
+     * @param string $SpecifyTaskId 指定任务 ID。注意：用于删除使用自定义任务 ID 创建的任务。
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DeleteLivePullStreamTaskRequest extends AbstractModel
 
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
             $this->Operator = $param["Operator"];
+        }
+
+        if (array_key_exists("SpecifyTaskId",$param) and $param["SpecifyTaskId"] !== null) {
+            $this->SpecifyTaskId = $param["SpecifyTaskId"];
         }
     }
 }

@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 定时启停策略信息
  *
  * @method string getResumeTime() 获取定时拉起时间：如：周一&周三8点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResumeTime(string $ResumeTime) 设置定时拉起时间：如：周一&周三8点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSuspendTime() 获取定时挂起时间：如：周一&周三20点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSuspendTime(string $SuspendTime) 设置定时挂起时间：如：周一&周三20点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSuspendStrategy() 获取挂起配置：0（默认）：等待任务结束后挂起、1：强制挂起
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSuspendStrategy(integer $SuspendStrategy) 设置挂起配置：0（默认）：等待任务结束后挂起、1：强制挂起
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CrontabResumeSuspendStrategy extends AbstractModel
 {
     /**
      * @var string 定时拉起时间：如：周一&周三8点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResumeTime;
 
     /**
      * @var string 定时挂起时间：如：周一&周三20点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SuspendTime;
 
     /**
      * @var integer 挂起配置：0（默认）：等待任务结束后挂起、1：强制挂起
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SuspendStrategy;
 
     /**
      * @param string $ResumeTime 定时拉起时间：如：周一&周三8点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SuspendTime 定时挂起时间：如：周一&周三20点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SuspendStrategy 挂起配置：0（默认）：等待任务结束后挂起、1：强制挂起
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

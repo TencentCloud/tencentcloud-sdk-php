@@ -20,25 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeHostApiGatewayInstanceList返回参数结构体
  *
- * @method array getInstanceList() 获取apiGateway实例列表
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceList(array $InstanceList) 设置apiGateway实例列表
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getTotalCount() 获取总数
- * @method void setTotalCount(integer $TotalCount) 设置总数
+ * @method array getInstanceList() 获取apiGateway实例列表,如取不到值返回空数组
+ * @method void setInstanceList(array $InstanceList) 设置apiGateway实例列表,如取不到值返回空数组
+ * @method integer getTotalCount() 获取总数，如取不到值返回0
+ * @method void setTotalCount(integer $TotalCount) 设置总数，如取不到值返回0
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeHostApiGatewayInstanceListResponse extends AbstractModel
 {
     /**
-     * @var array apiGateway实例列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array apiGateway实例列表,如取不到值返回空数组
      */
     public $InstanceList;
 
     /**
-     * @var integer 总数
+     * @var integer 总数，如取不到值返回0
      */
     public $TotalCount;
 
@@ -48,9 +45,8 @@ class DescribeHostApiGatewayInstanceListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $InstanceList apiGateway实例列表
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $TotalCount 总数
+     * @param array $InstanceList apiGateway实例列表,如取不到值返回空数组
+     * @param integer $TotalCount 总数，如取不到值返回0
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

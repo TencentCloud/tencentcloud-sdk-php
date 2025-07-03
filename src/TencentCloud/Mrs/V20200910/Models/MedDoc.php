@@ -21,17 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * 医学资料
  *
  * @method Advice getAdvice() 获取建议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdvice(Advice $Advice) 设置建议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDiagnosis() 获取诊断结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiagnosis(array $Diagnosis) 设置诊断结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DiseaseMedicalHistory getDiseaseMedicalHistory() 获取疾病史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiseaseMedicalHistory(DiseaseMedicalHistory $DiseaseMedicalHistory) 设置疾病史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method PersonalMedicalHistory getPersonalMedicalHistory() 获取个人史
  * @method void setPersonalMedicalHistory(PersonalMedicalHistory $PersonalMedicalHistory) 设置个人史
  * @method ObstericalMedicalHistory getObstericalMedicalHistory() 获取婚孕史
@@ -43,27 +37,22 @@ use TencentCloud\Common\AbstractModel;
  * @method TreatmentRecord getTreatmentRecord() 获取诊疗记录
  * @method void setTreatmentRecord(TreatmentRecord $TreatmentRecord) 设置诊疗记录
  * @method integer getPage() 获取数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPage(integer $Page) 设置数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MedDoc extends AbstractModel
 {
     /**
      * @var Advice 建议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Advice;
 
     /**
      * @var array 诊断结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Diagnosis;
 
     /**
      * @var DiseaseMedicalHistory 疾病史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiseaseMedicalHistory;
 
@@ -94,24 +83,19 @@ class MedDoc extends AbstractModel
 
     /**
      * @var integer 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Page;
 
     /**
      * @param Advice $Advice 建议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Diagnosis 诊断结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DiseaseMedicalHistory $DiseaseMedicalHistory 疾病史
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PersonalMedicalHistory $PersonalMedicalHistory 个人史
      * @param ObstericalMedicalHistory $ObstericalMedicalHistory 婚孕史
      * @param FamilyMedicalHistory $FamilyMedicalHistory 家族史
      * @param MenstrualMedicalHistory $MenstrualMedicalHistory 月经史
      * @param TreatmentRecord $TreatmentRecord 诊疗记录
      * @param integer $Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

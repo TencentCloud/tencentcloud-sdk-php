@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getProcessList() 获取实时线程列表。
  * @method void setProcessList(array $ProcessList) 设置实时线程列表。
+ * @method array getStatistics() 获取sql会话统计信息。
+ * @method void setStatistics(array $Statistics) 设置sql会话统计信息。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +35,18 @@ class DescribeMySqlProcessListResponse extends AbstractModel
     public $ProcessList;
 
     /**
+     * @var array sql会话统计信息。
+     */
+    public $Statistics;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param array $ProcessList 实时线程列表。
+     * @param array $Statistics sql会话统计信息。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -60,6 +68,15 @@ class DescribeMySqlProcessListResponse extends AbstractModel
                 $obj = new MySqlProcess();
                 $obj->deserialize($value);
                 array_push($this->ProcessList, $obj);
+            }
+        }
+
+        if (array_key_exists("Statistics",$param) and $param["Statistics"] !== null) {
+            $this->Statistics = [];
+            foreach ($param["Statistics"] as $key => $value){
+                $obj = new StatisticInfo();
+                $obj->deserialize($value);
+                array_push($this->Statistics, $obj);
             }
         }
 

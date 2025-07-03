@@ -38,6 +38,7 @@ API 网关中每个服务都会提供一个默认的域名供用户调用，但�
  * @method Models\CreateApiResponse CreateApi(Models\CreateApiRequest $req) 本接口（CreateApi）用于创建 API 接口，创建 API 前，用户需要先创建服务，每个 API 都有自己归属的服务。
  * @method Models\CreateApiAppResponse CreateApiApp(Models\CreateApiAppRequest $req) 本接口（CreateApiApp）用于创建应用。
  * @method Models\CreateApiKeyResponse CreateApiKey(Models\CreateApiKeyRequest $req) 本接口（CreateApiKey）用于创建一对新的 API 密钥。
+ * @method Models\CreateExclusiveInstancesResponse CreateExclusiveInstances(Models\CreateExclusiveInstancesRequest $req) 创建专享实例
  * @method Models\CreateIPStrategyResponse CreateIPStrategy(Models\CreateIPStrategyRequest $req) 本接口（CreateIPStrategy）用于创建服务IP策略。
  * @method Models\CreatePluginResponse CreatePlugin(Models\CreatePluginRequest $req) 创建API网关插件。
  * @method Models\CreateServiceResponse CreateService(Models\CreateServiceRequest $req) 本接口（CreateService）用于创建服务。
@@ -77,11 +78,13 @@ API 网关使用的最大单元为服务，每个服务中可创建多个 API �
 服务若需要鉴权限流生效，则需要绑定使用计划到此服务中，本接口用于查询绑定到一个服务及其中 API 的所有使用计划。
  * @method Models\DescribeApisStatusResponse DescribeApisStatus(Models\DescribeApisStatusRequest $req) 本接口（DescribeApisStatus）用于查看一个服务下的某个 API 或所有 API 列表及其相关信息。
  * @method Models\DescribeExclusiveInstanceDetailResponse DescribeExclusiveInstanceDetail(Models\DescribeExclusiveInstanceDetailRequest $req) 本接口（DescribeExclusiveInstanceDetail）用于查询独享实例详情信息。
+ * @method Models\DescribeExclusiveInstanceRegionsResponse DescribeExclusiveInstanceRegions(Models\DescribeExclusiveInstanceRegionsRequest $req) Get the list of supported regions for dedicated instances
  * @method Models\DescribeExclusiveInstancesResponse DescribeExclusiveInstances(Models\DescribeExclusiveInstancesRequest $req) 本接口（DescribeExclusiveInstances）用于查询独享实例列表信息。
  * @method Models\DescribeExclusiveInstancesStatusResponse DescribeExclusiveInstancesStatus(Models\DescribeExclusiveInstancesStatusRequest $req) 查询专享实例列表（新）
  * @method Models\DescribeIPStrategyResponse DescribeIPStrategy(Models\DescribeIPStrategyRequest $req) 本接口（DescribeIPStrategy）用于查询IP策略详情。
  * @method Models\DescribeIPStrategyApisStatusResponse DescribeIPStrategyApisStatus(Models\DescribeIPStrategyApisStatusRequest $req) 本接口（DescribeIPStrategyApisStatus）用于查询IP策略可以绑定的API列表。即服务下所有API和该策略已绑定API的差集。
  * @method Models\DescribeIPStrategysStatusResponse DescribeIPStrategysStatus(Models\DescribeIPStrategysStatusRequest $req) 本接口（DescribeIPStrategysStatus）用于查询服务IP策略列表，因为接口名拼写错误，已不推荐使用，请优先使用DescribeIPStrategiesStatus接口。
+ * @method Models\DescribeInstancesNetworkConfigResponse DescribeInstancesNetworkConfig(Models\DescribeInstancesNetworkConfigRequest $req) 获取专享实例网络配置列表
  * @method Models\DescribeLogSearchResponse DescribeLogSearch(Models\DescribeLogSearchRequest $req) 本接口DescribeLogSearch用于搜索日志
  * @method Models\DescribePluginResponse DescribePlugin(Models\DescribePluginRequest $req) 展示插件详情，支持按照插件ID进行。
  * @method Models\DescribePluginApisResponse DescribePluginApis(Models\DescribePluginApisRequest $req) 查询指定插件下绑定的API信息

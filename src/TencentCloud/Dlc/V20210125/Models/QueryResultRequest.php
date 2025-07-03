@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTaskId() 获取任务ID
  * @method void setTaskId(string $TaskId) 设置任务ID
- * @method string getNextToken() 获取lastReadFile为上一次读取的文件，lastReadOffset为上一次读取到的位置
- * @method void setNextToken(string $NextToken) 设置lastReadFile为上一次读取的文件，lastReadOffset为上一次读取到的位置
+ * @method string getNextToken() 获取objectListMarker={marker}&lastReadFile={filename}&lastReadOffsetlastReadFile为上一次读取的文件，lastReadOffset为上一次读取到的位置
+ * @method void setNextToken(string $NextToken) 设置objectListMarker={marker}&lastReadFile={filename}&lastReadOffsetlastReadFile为上一次读取的文件，lastReadOffset为上一次读取到的位置
  */
 class QueryResultRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class QueryResultRequest extends AbstractModel
     public $TaskId;
 
     /**
-     * @var string lastReadFile为上一次读取的文件，lastReadOffset为上一次读取到的位置
+     * @var string objectListMarker={marker}&lastReadFile={filename}&lastReadOffsetlastReadFile为上一次读取的文件，lastReadOffset为上一次读取到的位置
      */
     public $NextToken;
 
     /**
      * @param string $TaskId 任务ID
-     * @param string $NextToken lastReadFile为上一次读取的文件，lastReadOffset为上一次读取到的位置
+     * @param string $NextToken objectListMarker={marker}&lastReadFile={filename}&lastReadOffsetlastReadFile为上一次读取的文件，lastReadOffset为上一次读取到的位置
      */
     function __construct()
     {

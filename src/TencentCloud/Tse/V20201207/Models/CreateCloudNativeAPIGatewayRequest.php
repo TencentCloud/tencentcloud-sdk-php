@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
 1：预付费（接口暂不支持创建预付费实例）
  * @method InternetConfig getInternetConfig() 获取公网相关配置
  * @method void setInternetConfig(InternetConfig $InternetConfig) 设置公网相关配置
+ * @method string getPromId() 获取关联的prometheus ID
+ * @method void setPromId(string $PromId) 设置关联的prometheus ID
  */
 class CreateCloudNativeAPIGatewayRequest extends AbstractModel
 {
@@ -143,6 +145,11 @@ class CreateCloudNativeAPIGatewayRequest extends AbstractModel
     public $InternetConfig;
 
     /**
+     * @var string 关联的prometheus ID
+     */
+    public $PromId;
+
+    /**
      * @param string $Name 云原生API网关名字, 最多支持60个字符。
      * @param string $Type 云原生API网关类型, 目前只支持kong。
      * @param string $GatewayVersion 云原生API网关版本。参考值：
@@ -164,6 +171,7 @@ class CreateCloudNativeAPIGatewayRequest extends AbstractModel
 0：后付费（默认值）
 1：预付费（接口暂不支持创建预付费实例）
      * @param InternetConfig $InternetConfig 公网相关配置
+     * @param string $PromId 关联的prometheus ID
      */
     function __construct()
     {
@@ -240,6 +248,10 @@ class CreateCloudNativeAPIGatewayRequest extends AbstractModel
         if (array_key_exists("InternetConfig",$param) and $param["InternetConfig"] !== null) {
             $this->InternetConfig = new InternetConfig();
             $this->InternetConfig->deserialize($param["InternetConfig"]);
+        }
+
+        if (array_key_exists("PromId",$param) and $param["PromId"] !== null) {
+            $this->PromId = $param["PromId"];
         }
     }
 }

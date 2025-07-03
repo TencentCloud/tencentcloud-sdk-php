@@ -18,15 +18,15 @@ namespace TencentCloud\Tdmq\V20200217\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * RabbitMQ节点信息
+ * RabbitMQ 节点信息
  *
  * @method string getNodeName() 获取节点名字
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodeName(string $NodeName) 设置节点名字
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNodeStatus() 获取节点状态
+ * @method string getNodeStatus() 获取节点状态，running 运行中，down 异常
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNodeStatus(string $NodeStatus) 设置节点状态
+ * @method void setNodeStatus(string $NodeStatus) 设置节点状态，running 运行中，down 异常
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCPUUsage() 获取CPU使用率
 注意：此字段可能返回 null，表示取不到有效值。
@@ -54,7 +54,7 @@ class RabbitMQPrivateNode extends AbstractModel
     public $NodeName;
 
     /**
-     * @var string 节点状态
+     * @var string 节点状态，running 运行中，down 异常
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeStatus;
@@ -86,7 +86,7 @@ class RabbitMQPrivateNode extends AbstractModel
     /**
      * @param string $NodeName 节点名字
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $NodeStatus 节点状态
+     * @param string $NodeStatus 节点状态，running 运行中，down 异常
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CPUUsage CPU使用率
 注意：此字段可能返回 null，表示取不到有效值。

@@ -25,15 +25,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSolution() 获取解决方案
  * @method void setSolution(string $Solution) 设置解决方案
  * @method string getRemark() 获取事件备注信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置事件备注信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSyscallName() 获取系统调用名称
  * @method void setSyscallName(string $SyscallName) 设置系统调用名称
  * @method string getOperationTime() 获取事件最后一次处理的时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperationTime(string $OperationTime) 设置事件最后一次处理的时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RiskSyscallEventDescription extends AbstractModel
 {
@@ -49,7 +45,6 @@ class RiskSyscallEventDescription extends AbstractModel
 
     /**
      * @var string 事件备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
@@ -60,7 +55,6 @@ class RiskSyscallEventDescription extends AbstractModel
 
     /**
      * @var string 事件最后一次处理的时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OperationTime;
 
@@ -68,10 +62,8 @@ class RiskSyscallEventDescription extends AbstractModel
      * @param string $Description 描述信息
      * @param string $Solution 解决方案
      * @param string $Remark 事件备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SyscallName 系统调用名称
      * @param string $OperationTime 事件最后一次处理的时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

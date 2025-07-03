@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 服务器基础信息
  *
  * @method string getWanIP() 获取公网IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWanIP(string $WanIP) 设置公网IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPrivateIP() 获取内网IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrivateIP(string $PrivateIP) 设置内网IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNetworkType() 获取网络类型，1:vpc网络 2:基础网络 3:非腾讯云网络
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetworkType(integer $NetworkType) 设置网络类型，1:vpc网络 2:基础网络 3:非腾讯云网络
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNetworkName() 获取网络名，vpc网络情况下会返回vpc_id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetworkName(string $NetworkName) 设置网络名，vpc网络情况下会返回vpc_id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceID() 获取实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceID(string $InstanceID) 设置实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHostName() 获取主机名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostName(string $HostName) 设置主机名
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MachineExtraInfo extends AbstractModel
 {
     /**
      * @var string 公网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WanIP;
 
     /**
      * @var string 内网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PrivateIP;
 
     /**
      * @var integer 网络类型，1:vpc网络 2:基础网络 3:非腾讯云网络
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NetworkType;
 
     /**
      * @var string 网络名，vpc网络情况下会返回vpc_id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NetworkName;
 
     /**
      * @var string 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceID;
 
     /**
      * @var string 主机名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostName;
 
     /**
      * @param string $WanIP 公网IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PrivateIP 内网IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NetworkType 网络类型，1:vpc网络 2:基础网络 3:非腾讯云网络
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NetworkName 网络名，vpc网络情况下会返回vpc_id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceID 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HostName 主机名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

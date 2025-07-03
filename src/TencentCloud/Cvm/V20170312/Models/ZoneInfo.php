@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 <li> ap-hongkong-3 </li>
 <li> ap-shenzhen-fsi-1 </li>
 <li> ap-shenzhen-fsi-2 </li>
-<li> ap-shenzhen-fsi-3 </li>
+<li> ap-shenzhen-fsi-3（售罄） </li>
 <li> ap-guangzhou-1（售罄）</li>
 <li> ap-guangzhou-2（售罄）</li>
 <li> ap-guangzhou-3 </li>
@@ -58,7 +58,6 @@ use TencentCloud\Common\AbstractModel;
 <li> ap-shanghai-8 </li>
 <li> ap-mumbai-1 </li>
 <li> ap-mumbai-2 </li>
-<li> eu-moscow-1 </li>
 <li> ap-beijing-1（售罄）</li>
 <li> ap-beijing-2 </li>
 <li> ap-beijing-3 </li>
@@ -70,7 +69,6 @@ use TencentCloud\Common\AbstractModel;
 <li> na-siliconvalley-2 </li>
 <li> eu-frankfurt-1 </li>
 <li> eu-frankfurt-2 </li>
-<li> na-toronto-1 </li>
 <li> na-ashburn-1 </li>
 <li> na-ashburn-2 </li>
 <li> ap-nanjing-1 </li>
@@ -91,7 +89,7 @@ use TencentCloud\Common\AbstractModel;
 <li> ap-hongkong-3 </li>
 <li> ap-shenzhen-fsi-1 </li>
 <li> ap-shenzhen-fsi-2 </li>
-<li> ap-shenzhen-fsi-3 </li>
+<li> ap-shenzhen-fsi-3（售罄） </li>
 <li> ap-guangzhou-1（售罄）</li>
 <li> ap-guangzhou-2（售罄）</li>
 <li> ap-guangzhou-3 </li>
@@ -117,7 +115,6 @@ use TencentCloud\Common\AbstractModel;
 <li> ap-shanghai-8 </li>
 <li> ap-mumbai-1 </li>
 <li> ap-mumbai-2 </li>
-<li> eu-moscow-1 </li>
 <li> ap-beijing-1（售罄）</li>
 <li> ap-beijing-2 </li>
 <li> ap-beijing-3 </li>
@@ -129,7 +126,6 @@ use TencentCloud\Common\AbstractModel;
 <li> na-siliconvalley-2 </li>
 <li> eu-frankfurt-1 </li>
 <li> eu-frankfurt-2 </li>
-<li> na-toronto-1 </li>
 <li> na-ashburn-1 </li>
 <li> na-ashburn-2 </li>
 <li> ap-nanjing-1 </li>
@@ -160,7 +156,7 @@ class ZoneInfo extends AbstractModel
 <li> ap-hongkong-3 </li>
 <li> ap-shenzhen-fsi-1 </li>
 <li> ap-shenzhen-fsi-2 </li>
-<li> ap-shenzhen-fsi-3 </li>
+<li> ap-shenzhen-fsi-3（售罄） </li>
 <li> ap-guangzhou-1（售罄）</li>
 <li> ap-guangzhou-2（售罄）</li>
 <li> ap-guangzhou-3 </li>
@@ -186,7 +182,6 @@ class ZoneInfo extends AbstractModel
 <li> ap-shanghai-8 </li>
 <li> ap-mumbai-1 </li>
 <li> ap-mumbai-2 </li>
-<li> eu-moscow-1 </li>
 <li> ap-beijing-1（售罄）</li>
 <li> ap-beijing-2 </li>
 <li> ap-beijing-3 </li>
@@ -198,7 +193,6 @@ class ZoneInfo extends AbstractModel
 <li> na-siliconvalley-2 </li>
 <li> eu-frankfurt-1 </li>
 <li> eu-frankfurt-2 </li>
-<li> na-toronto-1 </li>
 <li> na-ashburn-1 </li>
 <li> na-ashburn-2 </li>
 <li> ap-nanjing-1 </li>
@@ -238,7 +232,7 @@ class ZoneInfo extends AbstractModel
 <li> ap-hongkong-3 </li>
 <li> ap-shenzhen-fsi-1 </li>
 <li> ap-shenzhen-fsi-2 </li>
-<li> ap-shenzhen-fsi-3 </li>
+<li> ap-shenzhen-fsi-3（售罄） </li>
 <li> ap-guangzhou-1（售罄）</li>
 <li> ap-guangzhou-2（售罄）</li>
 <li> ap-guangzhou-3 </li>
@@ -264,7 +258,6 @@ class ZoneInfo extends AbstractModel
 <li> ap-shanghai-8 </li>
 <li> ap-mumbai-1 </li>
 <li> ap-mumbai-2 </li>
-<li> eu-moscow-1 </li>
 <li> ap-beijing-1（售罄）</li>
 <li> ap-beijing-2 </li>
 <li> ap-beijing-3 </li>
@@ -276,7 +269,6 @@ class ZoneInfo extends AbstractModel
 <li> na-siliconvalley-2 </li>
 <li> eu-frankfurt-1 </li>
 <li> eu-frankfurt-2 </li>
-<li> na-toronto-1 </li>
 <li> na-ashburn-1 </li>
 <li> na-ashburn-2 </li>
 <li> ap-nanjing-1 </li>

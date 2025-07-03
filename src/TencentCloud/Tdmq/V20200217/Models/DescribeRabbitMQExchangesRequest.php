@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRabbitMQExchanges请求参数结构体
  *
- * @method string getInstanceId() 获取实例 id
- * @method void setInstanceId(string $InstanceId) 设置实例 id
- * @method string getVirtualHost() 获取vhost 参数
- * @method void setVirtualHost(string $VirtualHost) 设置vhost 参数
- * @method integer getOffset() 获取分页 offset
- * @method void setOffset(integer $Offset) 设置分页 offset
- * @method integer getLimit() 获取分页 limit
- * @method void setLimit(integer $Limit) 设置分页 limit
+ * @method string getInstanceId() 获取实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
+ * @method string getVirtualHost() 获取VirtualHost 名称，形如 testvhost。有效的 VirtualHost 名称可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询，在左侧导航栏点击 Vhost，并在 Vhost 列表中找到Vhost名称。
+ * @method void setVirtualHost(string $VirtualHost) 设置VirtualHost 名称，形如 testvhost。有效的 VirtualHost 名称可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询，在左侧导航栏点击 Vhost，并在 Vhost 列表中找到Vhost名称。
+ * @method integer getOffset() 获取分页 offset，默认 0
+ * @method void setOffset(integer $Offset) 设置分页 offset，默认 0
+ * @method integer getLimit() 获取分页 limit，默认 20
+ * @method void setLimit(integer $Limit) 设置分页 limit，默认 20
  * @method string getSearchWord() 获取搜索关键词, 支持模糊匹配 
  * @method void setSearchWord(string $SearchWord) 设置搜索关键词, 支持模糊匹配 
- * @method array getExchangeTypeFilters() 获取筛选 exchange 类型, 数组中每个元素为选中的过滤类型
- * @method void setExchangeTypeFilters(array $ExchangeTypeFilters) 设置筛选 exchange 类型, 数组中每个元素为选中的过滤类型
+ * @method array getExchangeTypeFilters() 获取筛选 exchange 类型, 数组中每个元素为选中的过滤类型，仅支持 direct、fanout、topic、header
+ * @method void setExchangeTypeFilters(array $ExchangeTypeFilters) 设置筛选 exchange 类型, 数组中每个元素为选中的过滤类型，仅支持 direct、fanout、topic、header
  * @method array getExchangeCreatorFilters() 获取筛选 exchange 创建来源,  "system":"系统创建", "user":"用户创建"
  * @method void setExchangeCreatorFilters(array $ExchangeCreatorFilters) 设置筛选 exchange 创建来源,  "system":"系统创建", "user":"用户创建"
  * @method string getExchangeName() 获取exchange 名称，用于精确匹配
@@ -45,27 +45,31 @@ MessageRateInOut - 生产消费速率之和；
 MessageRateIn - 生产速率；
 MessageRateOut - 消费速率；
  * @method string getSortOrder() 获取排序顺序，ascend 或 descend
+ascend：升序
+descend：降序
  * @method void setSortOrder(string $SortOrder) 设置排序顺序，ascend 或 descend
+ascend：升序
+descend：降序
  */
 class DescribeRabbitMQExchangesRequest extends AbstractModel
 {
     /**
-     * @var string 实例 id
+     * @var string 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
      */
     public $InstanceId;
 
     /**
-     * @var string vhost 参数
+     * @var string VirtualHost 名称，形如 testvhost。有效的 VirtualHost 名称可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询，在左侧导航栏点击 Vhost，并在 Vhost 列表中找到Vhost名称。
      */
     public $VirtualHost;
 
     /**
-     * @var integer 分页 offset
+     * @var integer 分页 offset，默认 0
      */
     public $Offset;
 
     /**
-     * @var integer 分页 limit
+     * @var integer 分页 limit，默认 20
      */
     public $Limit;
 
@@ -75,7 +79,7 @@ class DescribeRabbitMQExchangesRequest extends AbstractModel
     public $SearchWord;
 
     /**
-     * @var array 筛选 exchange 类型, 数组中每个元素为选中的过滤类型
+     * @var array 筛选 exchange 类型, 数组中每个元素为选中的过滤类型，仅支持 direct、fanout、topic、header
      */
     public $ExchangeTypeFilters;
 
@@ -99,16 +103,18 @@ MessageRateOut - 消费速率；
 
     /**
      * @var string 排序顺序，ascend 或 descend
+ascend：升序
+descend：降序
      */
     public $SortOrder;
 
     /**
-     * @param string $InstanceId 实例 id
-     * @param string $VirtualHost vhost 参数
-     * @param integer $Offset 分页 offset
-     * @param integer $Limit 分页 limit
+     * @param string $InstanceId 实例 ID，形如 amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
+     * @param string $VirtualHost VirtualHost 名称，形如 testvhost。有效的 VirtualHost 名称可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询，在左侧导航栏点击 Vhost，并在 Vhost 列表中找到Vhost名称。
+     * @param integer $Offset 分页 offset，默认 0
+     * @param integer $Limit 分页 limit，默认 20
      * @param string $SearchWord 搜索关键词, 支持模糊匹配 
-     * @param array $ExchangeTypeFilters 筛选 exchange 类型, 数组中每个元素为选中的过滤类型
+     * @param array $ExchangeTypeFilters 筛选 exchange 类型, 数组中每个元素为选中的过滤类型，仅支持 direct、fanout、topic、header
      * @param array $ExchangeCreatorFilters 筛选 exchange 创建来源,  "system":"系统创建", "user":"用户创建"
      * @param string $ExchangeName exchange 名称，用于精确匹配
      * @param string $SortElement 排序依据的字段：
@@ -116,6 +122,8 @@ MessageRateInOut - 生产消费速率之和；
 MessageRateIn - 生产速率；
 MessageRateOut - 消费速率；
      * @param string $SortOrder 排序顺序，ascend 或 descend
+ascend：升序
+descend：降序
      */
     function __construct()
     {

@@ -26,8 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeleteType(integer $DeleteType) 设置剔除类型 1-删除房间 2-剔除用户
  * @method integer getBizId() 获取应用id
  * @method void setBizId(integer $BizId) 设置应用id
- * @method array getUids() 获取要剔除的用户列表
- * @method void setUids(array $Uids) 设置要剔除的用户列表
+ * @method array getUids() 获取要剔除的用户列表（整型）
+ * @method void setUids(array $Uids) 设置要剔除的用户列表（整型）
+ * @method array getStrUids() 获取要剔除的用户列表（字符串类型）
+ * @method void setStrUids(array $StrUids) 设置要剔除的用户列表（字符串类型）
  */
 class DeleteRoomMemberRequest extends AbstractModel
 {
@@ -47,15 +49,21 @@ class DeleteRoomMemberRequest extends AbstractModel
     public $BizId;
 
     /**
-     * @var array 要剔除的用户列表
+     * @var array 要剔除的用户列表（整型）
      */
     public $Uids;
+
+    /**
+     * @var array 要剔除的用户列表（字符串类型）
+     */
+    public $StrUids;
 
     /**
      * @param string $RoomId 要操作的房间id
      * @param integer $DeleteType 剔除类型 1-删除房间 2-剔除用户
      * @param integer $BizId 应用id
-     * @param array $Uids 要剔除的用户列表
+     * @param array $Uids 要剔除的用户列表（整型）
+     * @param array $StrUids 要剔除的用户列表（字符串类型）
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DeleteRoomMemberRequest extends AbstractModel
 
         if (array_key_exists("Uids",$param) and $param["Uids"] !== null) {
             $this->Uids = $param["Uids"];
+        }
+
+        if (array_key_exists("StrUids",$param) and $param["StrUids"] !== null) {
+            $this->StrUids = $param["StrUids"];
         }
     }
 }

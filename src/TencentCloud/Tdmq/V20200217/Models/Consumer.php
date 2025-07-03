@@ -18,7 +18,7 @@ namespace TencentCloud\Tdmq\V20200217\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- *  消费者
+ * 消费者
  *
  * @method string getConnectedSince() 获取消费者开始连接的时间。
 注意：此字段可能返回 null，表示取不到有效值。

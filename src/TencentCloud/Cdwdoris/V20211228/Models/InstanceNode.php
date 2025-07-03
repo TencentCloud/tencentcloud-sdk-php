@@ -35,21 +35,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRole() 获取所属clickhouse cluster名称
  * @method void setRole(string $Role) 设置所属clickhouse cluster名称
  * @method string getStatus() 获取状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRip() 获取rip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRip(string $Rip) 设置rip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFeRole() 获取FE节点角色
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFeRole(string $FeRole) 设置FE节点角色
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUUID() 获取UUID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUUID(string $UUID) 设置UUID
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getZone() 获取可用区
+ * @method void setZone(string $Zone) 设置可用区
+ * @method string getCreateTime() 获取创建时间
+ * @method void setCreateTime(string $CreateTime) 设置创建时间
+ * @method string getComputeGroupId() 获取计算组ID
+ * @method void setComputeGroupId(string $ComputeGroupId) 设置计算组ID
  */
 class InstanceNode extends AbstractModel
 {
@@ -90,27 +88,38 @@ class InstanceNode extends AbstractModel
 
     /**
      * @var string 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string rip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Rip;
 
     /**
      * @var string FE节点角色
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FeRole;
 
     /**
      * @var string UUID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UUID;
+
+    /**
+     * @var string 可用区
+     */
+    public $Zone;
+
+    /**
+     * @var string 创建时间
+     */
+    public $CreateTime;
+
+    /**
+     * @var string 计算组ID
+     */
+    public $ComputeGroupId;
 
     /**
      * @param string $Ip IP地址
@@ -121,13 +130,12 @@ class InstanceNode extends AbstractModel
      * @param integer $DiskSize 磁盘大小
      * @param string $Role 所属clickhouse cluster名称
      * @param string $Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Rip rip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FeRole FE节点角色
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UUID UUID
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Zone 可用区
+     * @param string $CreateTime 创建时间
+     * @param string $ComputeGroupId 计算组ID
      */
     function __construct()
     {
@@ -184,6 +192,18 @@ class InstanceNode extends AbstractModel
 
         if (array_key_exists("UUID",$param) and $param["UUID"] !== null) {
             $this->UUID = $param["UUID"];
+        }
+
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("ComputeGroupId",$param) and $param["ComputeGroupId"] !== null) {
+            $this->ComputeGroupId = $param["ComputeGroupId"];
         }
     }
 }

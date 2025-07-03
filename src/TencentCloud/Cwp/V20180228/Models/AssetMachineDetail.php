@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCpuSize(integer $CpuSize) 设置Cpu数量
  * @method string getCpuLoad() 获取Cpu负载
  * @method void setCpuLoad(string $CpuLoad) 设置Cpu负载
- * @method integer getProtectLevel() 获取防护级别：0基础版，1专业版，2旗舰版，3普惠版
- * @method void setProtectLevel(integer $ProtectLevel) 设置防护级别：0基础版，1专业版，2旗舰版，3普惠版
+ * @method integer getProtectLevel() 获取防护级别：0基础版，1专业版，2旗舰版，3轻量版
+ * @method void setProtectLevel(integer $ProtectLevel) 设置防护级别：0基础版，1专业版，2旗舰版，3轻量版
  * @method string getRiskStatus() 获取风险状态：UNKNOW-未知，RISK-风险，SAFT-安全
  * @method void setRiskStatus(string $RiskStatus) 设置风险状态：UNKNOW-未知，RISK-风险，SAFT-安全
  * @method integer getProtectDays() 获取已防护天数
@@ -60,8 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置专业版到期时间
  * @method string getCoreVersion() 获取内核版本
  * @method void setCoreVersion(string $CoreVersion) 设置内核版本
- * @method string getOsType() 获取linux/windows
- * @method void setOsType(string $OsType) 设置linux/windows
+ * @method string getOsType() 获取Linux/Windows
+ * @method void setOsType(string $OsType) 设置Linux/Windows
  * @method string getAgentVersion() 获取agent版本
  * @method void setAgentVersion(string $AgentVersion) 设置agent版本
  * @method string getInstallTime() 获取安装时间
@@ -85,29 +85,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDeviceVersion() 获取设备型号
  * @method void setDeviceVersion(string $DeviceVersion) 设置设备型号
  * @method string getOfflineTime() 获取离线时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOfflineTime(string $OfflineTime) 设置离线时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取主机ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置主机ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method MachineExtraInfo getMachineExtraInfo() 获取主机二外信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置主机二外信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCpuLoadVul() 获取CpuLoadVul
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCpuLoadVul(string $CpuLoadVul) 设置CpuLoadVul
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFirstTime() 获取时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFirstTime(string $FirstTime) 设置时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssetMachineDetail extends AbstractModel
 {
@@ -182,7 +170,7 @@ class AssetMachineDetail extends AbstractModel
     public $CpuLoad;
 
     /**
-     * @var integer 防护级别：0基础版，1专业版，2旗舰版，3普惠版
+     * @var integer 防护级别：0基础版，1专业版，2旗舰版，3轻量版
      */
     public $ProtectLevel;
 
@@ -212,7 +200,7 @@ class AssetMachineDetail extends AbstractModel
     public $CoreVersion;
 
     /**
-     * @var string linux/windows
+     * @var string Linux/Windows
      */
     public $OsType;
 
@@ -273,37 +261,31 @@ class AssetMachineDetail extends AbstractModel
 
     /**
      * @var string 离线时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OfflineTime;
 
     /**
      * @var string 主机ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var string 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @var MachineExtraInfo 主机二外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineExtraInfo;
 
     /**
      * @var string CpuLoadVul
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CpuLoadVul;
 
     /**
      * @var string 时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FirstTime;
 
@@ -322,13 +304,13 @@ class AssetMachineDetail extends AbstractModel
      * @param string $MachineWanIp 主机外网IP
      * @param integer $CpuSize Cpu数量
      * @param string $CpuLoad Cpu负载
-     * @param integer $ProtectLevel 防护级别：0基础版，1专业版，2旗舰版，3普惠版
+     * @param integer $ProtectLevel 防护级别：0基础版，1专业版，2旗舰版，3轻量版
      * @param string $RiskStatus 风险状态：UNKNOW-未知，RISK-风险，SAFT-安全
      * @param integer $ProtectDays 已防护天数
      * @param string $BuyTime 专业版开通时间
      * @param string $EndTime 专业版到期时间
      * @param string $CoreVersion 内核版本
-     * @param string $OsType linux/windows
+     * @param string $OsType Linux/Windows
      * @param string $AgentVersion agent版本
      * @param string $InstallTime 安装时间
      * @param string $BootTime 系统启动时间
@@ -341,17 +323,11 @@ class AssetMachineDetail extends AbstractModel
      * @param integer $ProjectId 业务组ID
      * @param string $DeviceVersion 设备型号
      * @param string $OfflineTime 离线时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 主机ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MachineExtraInfo $MachineExtraInfo 主机二外信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CpuLoadVul CpuLoadVul
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FirstTime 时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

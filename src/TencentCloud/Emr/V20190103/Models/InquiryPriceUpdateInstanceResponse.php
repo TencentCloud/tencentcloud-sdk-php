@@ -21,28 +21,24 @@ use TencentCloud\Common\AbstractModel;
  * InquiryPriceUpdateInstance返回参数结构体
  *
  * @method float getOriginalCost() 获取原价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOriginalCost(float $OriginalCost) 设置原价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getDiscountCost() 获取折扣价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiscountCost(float $DiscountCost) 设置折扣价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTimeUnit() 获取变配的时间单位。取值范围：
 <li>s：表示秒。</li>
 <li>m：表示月份。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeUnit(string $TimeUnit) 设置变配的时间单位。取值范围：
 <li>s：表示秒。</li>
 <li>m：表示月份。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTimeSpan() 获取变配的时长。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeSpan(integer $TimeSpan) 设置变配的时长。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPriceDetail() 获取价格详情
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPriceDetail(array $PriceDetail) 设置价格详情
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method PriceResult getNewConfigPrice() 获取新配置价格
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNewConfigPrice(PriceResult $NewConfigPrice) 设置新配置价格
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -51,13 +47,11 @@ class InquiryPriceUpdateInstanceResponse extends AbstractModel
 {
     /**
      * @var float 原价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OriginalCost;
 
     /**
      * @var float 折扣价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiscountCost;
 
@@ -65,13 +59,11 @@ class InquiryPriceUpdateInstanceResponse extends AbstractModel
      * @var string 变配的时间单位。取值范围：
 <li>s：表示秒。</li>
 <li>m：表示月份。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeUnit;
 
     /**
      * @var integer 变配的时长。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeSpan;
 
@@ -82,22 +74,26 @@ class InquiryPriceUpdateInstanceResponse extends AbstractModel
     public $PriceDetail;
 
     /**
+     * @var PriceResult 新配置价格
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NewConfigPrice;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param float $OriginalCost 原价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $DiscountCost 折扣价，单位为元。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TimeUnit 变配的时间单位。取值范围：
 <li>s：表示秒。</li>
 <li>m：表示月份。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TimeSpan 变配的时长。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PriceDetail 价格详情
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PriceResult $NewConfigPrice 新配置价格
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -137,6 +133,11 @@ class InquiryPriceUpdateInstanceResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->PriceDetail, $obj);
             }
+        }
+
+        if (array_key_exists("NewConfigPrice",$param) and $param["NewConfigPrice"] !== null) {
+            $this->NewConfigPrice = new PriceResult();
+            $this->NewConfigPrice->deserialize($param["NewConfigPrice"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

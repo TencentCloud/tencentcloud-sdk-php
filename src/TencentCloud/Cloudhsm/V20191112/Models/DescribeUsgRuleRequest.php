@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUsgRule请求参数结构体
  *
- * @method array getSgIds() 获取根据安全组Id获取安全组详情
- * @method void setSgIds(array $SgIds) 设置根据安全组Id获取安全组详情
+ * @method array getSgIds() 获取安全组Id列表
+ * @method void setSgIds(array $SgIds) 设置安全组Id列表
  */
 class DescribeUsgRuleRequest extends AbstractModel
 {
     /**
-     * @var array 根据安全组Id获取安全组详情
+     * @var array 安全组Id列表
      */
     public $SgIds;
 
     /**
-     * @param array $SgIds 根据安全组Id获取安全组详情
+     * @param array $SgIds 安全组Id列表
      */
     function __construct()
     {

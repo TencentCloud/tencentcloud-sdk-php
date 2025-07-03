@@ -20,15 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 镜像分享信息结构
  *
- * @method string getCreatedTime() 获取镜像分享时间
- * @method void setCreatedTime(string $CreatedTime) 设置镜像分享时间
+ * @method string getCreatedTime() 获取镜像分享时间。
+按照 ISO8601 标准表示，并且使用 UTC 时间，格式为：YYYY-MM-DDThh:mm:ssZ。
+ * @method void setCreatedTime(string $CreatedTime) 设置镜像分享时间。
+按照 ISO8601 标准表示，并且使用 UTC 时间，格式为：YYYY-MM-DDThh:mm:ssZ。
  * @method string getAccountId() 获取镜像分享的账户ID
  * @method void setAccountId(string $AccountId) 设置镜像分享的账户ID
  */
 class SharePermission extends AbstractModel
 {
     /**
-     * @var string 镜像分享时间
+     * @var string 镜像分享时间。
+按照 ISO8601 标准表示，并且使用 UTC 时间，格式为：YYYY-MM-DDThh:mm:ssZ。
      */
     public $CreatedTime;
 
@@ -38,7 +41,8 @@ class SharePermission extends AbstractModel
     public $AccountId;
 
     /**
-     * @param string $CreatedTime 镜像分享时间
+     * @param string $CreatedTime 镜像分享时间。
+按照 ISO8601 标准表示，并且使用 UTC 时间，格式为：YYYY-MM-DDThh:mm:ssZ。
      * @param string $AccountId 镜像分享的账户ID
      */
     function __construct()

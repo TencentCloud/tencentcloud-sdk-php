@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 点坐标
  *
  * @method integer getX() 获取x坐标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setX(integer $X) 设置x坐标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getY() 获取y坐标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setY(integer $Y) 设置y坐标
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Point extends AbstractModel
 {
     /**
      * @var integer x坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $X;
 
     /**
      * @var integer y坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Y;
 
     /**
      * @param integer $X x坐标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Y y坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 核酸报告结论结构
  *
  * @method BaseItem getSampleTime() 获取采样时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSampleTime(BaseItem $SampleTime) 设置采样时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BaseItem getTestTime() 获取检测时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTestTime(BaseItem $TestTime) 设置检测时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BaseItem getTestOrganization() 获取检测机构
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTestOrganization(BaseItem $TestOrganization) 设置检测机构
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BaseItem getTestResult() 获取检测结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTestResult(BaseItem $TestResult) 设置检测结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BaseItem getCodeColor() 获取健康码颜色
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCodeColor(BaseItem $CodeColor) 设置健康码颜色
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CovidItem extends AbstractModel
 {
     /**
      * @var BaseItem 采样时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SampleTime;
 
     /**
      * @var BaseItem 检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TestTime;
 
     /**
      * @var BaseItem 检测机构
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TestOrganization;
 
     /**
      * @var BaseItem 检测结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TestResult;
 
     /**
      * @var BaseItem 健康码颜色
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CodeColor;
 
     /**
      * @param BaseItem $SampleTime 采样时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BaseItem $TestTime 检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BaseItem $TestOrganization 检测机构
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BaseItem $TestResult 检测结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BaseItem $CodeColor 健康码颜色
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

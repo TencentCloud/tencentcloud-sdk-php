@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ProgramFpgaImage请求参数结构体
  *
- * @method string getInstanceId() 获取实例的ID信息。
- * @method void setInstanceId(string $InstanceId) 设置实例的ID信息。
+ * @method string getInstanceId() 获取实例的ID信息。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例的ID信息。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
  * @method string getFPGAUrl() 获取FPGA镜像文件的COS URL地址。
  * @method void setFPGAUrl(string $FPGAUrl) 设置FPGA镜像文件的COS URL地址。
  * @method array getDBDFs() 获取实例上FPGA卡的DBDF号，不填默认烧录FPGA镜像到实例所拥有的所有FPGA卡。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class ProgramFpgaImageRequest extends AbstractModel
 {
     /**
-     * @var string 实例的ID信息。
+     * @var string 实例的ID信息。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
      */
     public $InstanceId;
 
@@ -52,7 +52,7 @@ class ProgramFpgaImageRequest extends AbstractModel
     public $DryRun;
 
     /**
-     * @param string $InstanceId 实例的ID信息。
+     * @param string $InstanceId 实例的ID信息。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。
      * @param string $FPGAUrl FPGA镜像文件的COS URL地址。
      * @param array $DBDFs 实例上FPGA卡的DBDF号，不填默认烧录FPGA镜像到实例所拥有的所有FPGA卡。
      * @param boolean $DryRun 试运行，不会执行实际的烧录动作，默认为False。

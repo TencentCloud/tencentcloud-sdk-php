@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 数据同步中的列信息
  *
  * @method string getColumnName() 获取列名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setColumnName(string $ColumnName) 设置列名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNewColumnName() 获取新列名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNewColumnName(string $NewColumnName) 设置新列名
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Column extends AbstractModel
 {
     /**
      * @var string 列名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ColumnName;
 
     /**
      * @var string 新列名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NewColumnName;
 
     /**
      * @param string $ColumnName 列名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NewColumnName 新列名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * CreatePartnerAutoSignAuthUrl返回参数结构体
  *
  * @method string getUrl() 获取授权链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUrl(string $Url) 设置授权链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMiniAppPath() 获取从客户小程序或者客户APP跳转至腾讯电子签小程序进行批量签署的跳转路径
 
  * @method void setMiniAppPath(string $MiniAppPath) 设置从客户小程序或者客户APP跳转至腾讯电子签小程序进行批量签署的跳转路径
@@ -37,7 +35,6 @@ class CreatePartnerAutoSignAuthUrlResponse extends AbstractModel
 {
     /**
      * @var string 授权链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Url;
 
@@ -59,7 +56,6 @@ class CreatePartnerAutoSignAuthUrlResponse extends AbstractModel
 
     /**
      * @param string $Url 授权链接，以短链形式返回，短链的有效期参考回参中的 ExpiredTime。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MiniAppPath 从客户小程序或者客户APP跳转至腾讯电子签小程序进行批量签署的跳转路径
 
      * @param integer $ExpireTime 链接过期时间以 Unix 时间戳格式表示，从生成链接时间起，往后7天有效期。过期后短链将失效，无法打开。

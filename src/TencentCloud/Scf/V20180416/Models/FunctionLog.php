@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRequestId(string $RequestId) 设置执行该函数对应的requestId
  * @method string getStartTime() 获取函数开始执行时的时间点
  * @method void setStartTime(string $StartTime) 设置函数开始执行时的时间点
- * @method integer getRetCode() 获取函数执行结果，如果是 0 表示执行成功，其他值表示失败
- * @method void setRetCode(integer $RetCode) 设置函数执行结果，如果是 0 表示执行成功，其他值表示失败
+ * @method integer getRetCode() 获取函数执行结果，如果是 0 表示执行成功，2表示函数运行中，3表示函数执行中断，其他值表示失败
+ * @method void setRetCode(integer $RetCode) 设置函数执行结果，如果是 0 表示执行成功，2表示函数运行中，3表示函数执行中断，其他值表示失败
  * @method integer getInvokeFinished() 获取函数调用是否结束，如果是 1 表示执行结束，其他值表示调用异常
  * @method void setInvokeFinished(integer $InvokeFinished) 设置函数调用是否结束，如果是 1 表示执行结束，其他值表示调用异常
  * @method float getDuration() 获取函数执行耗时，单位为 ms
@@ -70,7 +70,7 @@ class FunctionLog extends AbstractModel
     public $StartTime;
 
     /**
-     * @var integer 函数执行结果，如果是 0 表示执行成功，其他值表示失败
+     * @var integer 函数执行结果，如果是 0 表示执行成功，2表示函数运行中，3表示函数执行中断，其他值表示失败
      */
     public $RetCode;
 
@@ -101,11 +101,13 @@ class FunctionLog extends AbstractModel
 
     /**
      * @var string 日志等级
+     * @deprecated
      */
     public $Level;
 
     /**
      * @var string 日志来源
+     * @deprecated
      */
     public $Source;
 
@@ -119,7 +121,7 @@ class FunctionLog extends AbstractModel
      * @param string $RetMsg 函数执行完成后的返回值
      * @param string $RequestId 执行该函数对应的requestId
      * @param string $StartTime 函数开始执行时的时间点
-     * @param integer $RetCode 函数执行结果，如果是 0 表示执行成功，其他值表示失败
+     * @param integer $RetCode 函数执行结果，如果是 0 表示执行成功，2表示函数运行中，3表示函数执行中断，其他值表示失败
      * @param integer $InvokeFinished 函数调用是否结束，如果是 1 表示执行结束，其他值表示调用异常
      * @param float $Duration 函数执行耗时，单位为 ms
      * @param integer $BillDuration 函数计费时间，根据 duration 向上取最近的 100ms，单位为ms

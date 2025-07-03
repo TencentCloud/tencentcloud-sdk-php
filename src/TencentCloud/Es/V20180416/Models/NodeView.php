@@ -58,6 +58,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsCoordinationNode(boolean $IsCoordinationNode) 设置是否充当协调节点的角色
  * @method string getCVMStatus() 获取CVM运行状态
  * @method void setCVMStatus(string $CVMStatus) 设置CVM运行状态
+ * @method string getCVMDisasterRecoverGroupId() 获取cvm绑定的置放群组的id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCVMDisasterRecoverGroupId(string $CVMDisasterRecoverGroupId) 设置cvm绑定的置放群组的id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCVMDisasterRecoverGroupStatus() 获取cvm绑定置放群组的状态。2: 已绑定；1: 绑定中；0: 未开启
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCVMDisasterRecoverGroupStatus(integer $CVMDisasterRecoverGroupStatus) 设置cvm绑定置放群组的状态。2: 已绑定；1: 绑定中；0: 未开启
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class NodeView extends AbstractModel
 {
@@ -157,6 +165,18 @@ class NodeView extends AbstractModel
     public $CVMStatus;
 
     /**
+     * @var string cvm绑定的置放群组的id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CVMDisasterRecoverGroupId;
+
+    /**
+     * @var integer cvm绑定置放群组的状态。2: 已绑定；1: 绑定中；0: 未开启
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CVMDisasterRecoverGroupStatus;
+
+    /**
      * @param string $NodeId 节点ID
      * @param string $NodeIp 节点IP
      * @param float $Visible 节点是否可见
@@ -176,6 +196,10 @@ class NodeView extends AbstractModel
      * @param boolean $Hidden 是否为隐藏可用区
      * @param boolean $IsCoordinationNode 是否充当协调节点的角色
      * @param string $CVMStatus CVM运行状态
+     * @param string $CVMDisasterRecoverGroupId cvm绑定的置放群组的id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CVMDisasterRecoverGroupStatus cvm绑定置放群组的状态。2: 已绑定；1: 绑定中；0: 未开启
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -264,6 +288,14 @@ class NodeView extends AbstractModel
 
         if (array_key_exists("CVMStatus",$param) and $param["CVMStatus"] !== null) {
             $this->CVMStatus = $param["CVMStatus"];
+        }
+
+        if (array_key_exists("CVMDisasterRecoverGroupId",$param) and $param["CVMDisasterRecoverGroupId"] !== null) {
+            $this->CVMDisasterRecoverGroupId = $param["CVMDisasterRecoverGroupId"];
+        }
+
+        if (array_key_exists("CVMDisasterRecoverGroupStatus",$param) and $param["CVMDisasterRecoverGroupStatus"] !== null) {
+            $this->CVMDisasterRecoverGroupStatus = $param["CVMDisasterRecoverGroupStatus"];
         }
     }
 }

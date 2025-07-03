@@ -38,6 +38,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSkipCheckForceRestart(boolean $SkipCheckForceRestart) 设置滚动模式时，是否跳过检查，进行强制重启。默认值为false
  * @method integer getCvmDelayOnlineTime() 获取cvm延迟上架参数
  * @method void setCvmDelayOnlineTime(integer $CvmDelayOnlineTime) 设置cvm延迟上架参数
+ * @method integer getShardAllocationConcurrents() 获取分片迁移并发数
+ * @method void setShardAllocationConcurrents(integer $ShardAllocationConcurrents) 设置分片迁移并发数
+ * @method integer getShardAllocationBytes() 获取分片迁移并发速度
+ * @method void setShardAllocationBytes(integer $ShardAllocationBytes) 设置分片迁移并发速度
+ * @method boolean getEnableScheduleRecoverGroup() 获取是否开启置放群组异步任务
+ * @method void setEnableScheduleRecoverGroup(boolean $EnableScheduleRecoverGroup) 设置是否开启置放群组异步任务
+ * @method EnableScheduleOperationDuration getEnableScheduleOperationDuration() 获取置放群组异步任务时间段
+ * @method void setEnableScheduleOperationDuration(EnableScheduleOperationDuration $EnableScheduleOperationDuration) 设置置放群组异步任务时间段
  */
 class UpgradeInstanceRequest extends AbstractModel
 {
@@ -87,6 +95,26 @@ class UpgradeInstanceRequest extends AbstractModel
     public $CvmDelayOnlineTime;
 
     /**
+     * @var integer 分片迁移并发数
+     */
+    public $ShardAllocationConcurrents;
+
+    /**
+     * @var integer 分片迁移并发速度
+     */
+    public $ShardAllocationBytes;
+
+    /**
+     * @var boolean 是否开启置放群组异步任务
+     */
+    public $EnableScheduleRecoverGroup;
+
+    /**
+     * @var EnableScheduleOperationDuration 置放群组异步任务时间段
+     */
+    public $EnableScheduleOperationDuration;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $EsVersion 目标ES版本，支持：”6.4.3“, "6.8.2"，"7.5.1", "7.10.1", "7.14.2"
      * @param boolean $CheckOnly 是否只做升级检查，默认值为false
@@ -96,6 +124,10 @@ class UpgradeInstanceRequest extends AbstractModel
      * @param boolean $CosBackup 升级版本前是否对集群进行备份，默认不备份
      * @param boolean $SkipCheckForceRestart 滚动模式时，是否跳过检查，进行强制重启。默认值为false
      * @param integer $CvmDelayOnlineTime cvm延迟上架参数
+     * @param integer $ShardAllocationConcurrents 分片迁移并发数
+     * @param integer $ShardAllocationBytes 分片迁移并发速度
+     * @param boolean $EnableScheduleRecoverGroup 是否开启置放群组异步任务
+     * @param EnableScheduleOperationDuration $EnableScheduleOperationDuration 置放群组异步任务时间段
      */
     function __construct()
     {
@@ -144,6 +176,23 @@ class UpgradeInstanceRequest extends AbstractModel
 
         if (array_key_exists("CvmDelayOnlineTime",$param) and $param["CvmDelayOnlineTime"] !== null) {
             $this->CvmDelayOnlineTime = $param["CvmDelayOnlineTime"];
+        }
+
+        if (array_key_exists("ShardAllocationConcurrents",$param) and $param["ShardAllocationConcurrents"] !== null) {
+            $this->ShardAllocationConcurrents = $param["ShardAllocationConcurrents"];
+        }
+
+        if (array_key_exists("ShardAllocationBytes",$param) and $param["ShardAllocationBytes"] !== null) {
+            $this->ShardAllocationBytes = $param["ShardAllocationBytes"];
+        }
+
+        if (array_key_exists("EnableScheduleRecoverGroup",$param) and $param["EnableScheduleRecoverGroup"] !== null) {
+            $this->EnableScheduleRecoverGroup = $param["EnableScheduleRecoverGroup"];
+        }
+
+        if (array_key_exists("EnableScheduleOperationDuration",$param) and $param["EnableScheduleOperationDuration"] !== null) {
+            $this->EnableScheduleOperationDuration = new EnableScheduleOperationDuration();
+            $this->EnableScheduleOperationDuration->deserialize($param["EnableScheduleOperationDuration"]);
         }
     }
 }

@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getApplicationId() 获取服务id
  * @method void setApplicationId(string $ApplicationId) 设置服务id
- * @method integer getSourceChannel() 获取来源渠道
- * @method void setSourceChannel(integer $SourceChannel) 设置来源渠道
  * @method string getEnvironmentId() 获取环境ID
  * @method void setEnvironmentId(string $EnvironmentId) 设置环境ID
  * @method string getServiceName() 获取访问方式服务名
  * @method void setServiceName(string $ServiceName) 设置访问方式服务名
+ * @method integer getSourceChannel() 获取来源渠道
+ * @method void setSourceChannel(integer $SourceChannel) 设置来源渠道
  */
 class DeleteApplicationServiceRequest extends AbstractModel
 {
@@ -35,11 +35,6 @@ class DeleteApplicationServiceRequest extends AbstractModel
      * @var string 服务id
      */
     public $ApplicationId;
-
-    /**
-     * @var integer 来源渠道
-     */
-    public $SourceChannel;
 
     /**
      * @var string 环境ID
@@ -52,10 +47,15 @@ class DeleteApplicationServiceRequest extends AbstractModel
     public $ServiceName;
 
     /**
+     * @var integer 来源渠道
+     */
+    public $SourceChannel;
+
+    /**
      * @param string $ApplicationId 服务id
-     * @param integer $SourceChannel 来源渠道
      * @param string $EnvironmentId 环境ID
      * @param string $ServiceName 访问方式服务名
+     * @param integer $SourceChannel 来源渠道
      */
     function __construct()
     {
@@ -74,16 +74,16 @@ class DeleteApplicationServiceRequest extends AbstractModel
             $this->ApplicationId = $param["ApplicationId"];
         }
 
-        if (array_key_exists("SourceChannel",$param) and $param["SourceChannel"] !== null) {
-            $this->SourceChannel = $param["SourceChannel"];
-        }
-
         if (array_key_exists("EnvironmentId",$param) and $param["EnvironmentId"] !== null) {
             $this->EnvironmentId = $param["EnvironmentId"];
         }
 
         if (array_key_exists("ServiceName",$param) and $param["ServiceName"] !== null) {
             $this->ServiceName = $param["ServiceName"];
+        }
+
+        if (array_key_exists("SourceChannel",$param) and $param["SourceChannel"] !== null) {
+            $this->SourceChannel = $param["SourceChannel"];
         }
     }
 }

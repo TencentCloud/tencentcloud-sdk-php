@@ -20,20 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteDeviceResource请求参数结构体
  *
- * @method string getProductID() 获取产品ID
- * @method void setProductID(string $ProductID) 设置产品ID
  * @method string getName() 获取资源名称
  * @method void setName(string $Name) 设置资源名称
  * @method string getDeviceName() 获取设备名称
  * @method void setDeviceName(string $DeviceName) 设置设备名称
+ * @method string getProductID() 获取产品ID
+ * @method void setProductID(string $ProductID) 设置产品ID
  */
 class DeleteDeviceResourceRequest extends AbstractModel
 {
-    /**
-     * @var string 产品ID
-     */
-    public $ProductID;
-
     /**
      * @var string 资源名称
      */
@@ -45,9 +40,14 @@ class DeleteDeviceResourceRequest extends AbstractModel
     public $DeviceName;
 
     /**
-     * @param string $ProductID 产品ID
+     * @var string 产品ID
+     */
+    public $ProductID;
+
+    /**
      * @param string $Name 资源名称
      * @param string $DeviceName 设备名称
+     * @param string $ProductID 产品ID
      */
     function __construct()
     {
@@ -62,16 +62,16 @@ class DeleteDeviceResourceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProductID",$param) and $param["ProductID"] !== null) {
-            $this->ProductID = $param["ProductID"];
-        }
-
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
         }
 
         if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
             $this->DeviceName = $param["DeviceName"];
+        }
+
+        if (array_key_exists("ProductID",$param) and $param["ProductID"] !== null) {
+            $this->ProductID = $param["ProductID"];
         }
     }
 }

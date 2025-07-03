@@ -36,11 +36,13 @@ class DescribeBindDBListRequest extends AbstractModel
 
     /**
      * @var string 数据源类型
+     * @deprecated
      */
     public $DataSourceType;
 
     /**
      * @var string 数据源ID
+     * @deprecated
      */
     public $DataSourceId;
 

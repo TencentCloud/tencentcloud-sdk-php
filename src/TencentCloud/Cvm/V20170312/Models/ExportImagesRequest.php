@@ -20,30 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ExportImages请求参数结构体
  *
- * @method string getBucketName() 获取COS存储桶名称
- * @method void setBucketName(string $BucketName) 设置COS存储桶名称
- * @method array getImageIds() 获取镜像ID列表
- * @method void setImageIds(array $ImageIds) 设置镜像ID列表
+ * @method string getBucketName() 获取COS存储桶名称。
+可通过 [List Buckets](https://cloud.tencent.com/document/product/436/8291) 接口查询请求者名下的所有存储桶列表或特定地域下的存储桶列表。
+ * @method void setBucketName(string $BucketName) 设置COS存储桶名称。
+可通过 [List Buckets](https://cloud.tencent.com/document/product/436/8291) 接口查询请求者名下的所有存储桶列表或特定地域下的存储桶列表。
+ * @method array getImageIds() 获取镜像ID列表。调用 ExportImages 接口时，参数 ImageIds 和 SnapshotIds 为二选一必填参数，目前参数 SnapshotIds 暂未对外开放。
+可通过 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) 接口返回值中的`ImageId`获取。
+ * @method void setImageIds(array $ImageIds) 设置镜像ID列表。调用 ExportImages 接口时，参数 ImageIds 和 SnapshotIds 为二选一必填参数，目前参数 SnapshotIds 暂未对外开放。
+可通过 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) 接口返回值中的`ImageId`获取。
  * @method string getExportFormat() 获取镜像文件导出格式。取值范围：RAW，QCOW2，VHD，VMDK。默认为RAW
  * @method void setExportFormat(string $ExportFormat) 设置镜像文件导出格式。取值范围：RAW，QCOW2，VHD，VMDK。默认为RAW
- * @method array getFileNamePrefixList() 获取导出文件的名称前缀列表
- * @method void setFileNamePrefixList(array $FileNamePrefixList) 设置导出文件的名称前缀列表
- * @method boolean getOnlyExportRootDisk() 获取是否只导出系统盘
- * @method void setOnlyExportRootDisk(boolean $OnlyExportRootDisk) 设置是否只导出系统盘
- * @method boolean getDryRun() 获取检测镜像是否支持导出
- * @method void setDryRun(boolean $DryRun) 设置检测镜像是否支持导出
+ * @method array getFileNamePrefixList() 获取导出文件的名称前缀列表。
+默认导出文件无名称前缀。
+ * @method void setFileNamePrefixList(array $FileNamePrefixList) 设置导出文件的名称前缀列表。
+默认导出文件无名称前缀。
+ * @method boolean getOnlyExportRootDisk() 获取是否只导出系统盘。
+默认值：false
+ * @method void setOnlyExportRootDisk(boolean $OnlyExportRootDisk) 设置是否只导出系统盘。
+默认值：false
+ * @method boolean getDryRun() 获取检测镜像是否支持导出。
+默认值：false
+ * @method void setDryRun(boolean $DryRun) 设置检测镜像是否支持导出。
+默认值：false
  * @method string getRoleName() 获取角色名称。默认为CVM_QcsRole，发起请求前请确认是否存在该角色，以及是否已正确配置COS写入权限。
  * @method void setRoleName(string $RoleName) 设置角色名称。默认为CVM_QcsRole，发起请求前请确认是否存在该角色，以及是否已正确配置COS写入权限。
  */
 class ExportImagesRequest extends AbstractModel
 {
     /**
-     * @var string COS存储桶名称
+     * @var string COS存储桶名称。
+可通过 [List Buckets](https://cloud.tencent.com/document/product/436/8291) 接口查询请求者名下的所有存储桶列表或特定地域下的存储桶列表。
      */
     public $BucketName;
 
     /**
-     * @var array 镜像ID列表
+     * @var array 镜像ID列表。调用 ExportImages 接口时，参数 ImageIds 和 SnapshotIds 为二选一必填参数，目前参数 SnapshotIds 暂未对外开放。
+可通过 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) 接口返回值中的`ImageId`获取。
      */
     public $ImageIds;
 
@@ -53,17 +65,20 @@ class ExportImagesRequest extends AbstractModel
     public $ExportFormat;
 
     /**
-     * @var array 导出文件的名称前缀列表
+     * @var array 导出文件的名称前缀列表。
+默认导出文件无名称前缀。
      */
     public $FileNamePrefixList;
 
     /**
-     * @var boolean 是否只导出系统盘
+     * @var boolean 是否只导出系统盘。
+默认值：false
      */
     public $OnlyExportRootDisk;
 
     /**
-     * @var boolean 检测镜像是否支持导出
+     * @var boolean 检测镜像是否支持导出。
+默认值：false
      */
     public $DryRun;
 
@@ -73,12 +88,17 @@ class ExportImagesRequest extends AbstractModel
     public $RoleName;
 
     /**
-     * @param string $BucketName COS存储桶名称
-     * @param array $ImageIds 镜像ID列表
+     * @param string $BucketName COS存储桶名称。
+可通过 [List Buckets](https://cloud.tencent.com/document/product/436/8291) 接口查询请求者名下的所有存储桶列表或特定地域下的存储桶列表。
+     * @param array $ImageIds 镜像ID列表。调用 ExportImages 接口时，参数 ImageIds 和 SnapshotIds 为二选一必填参数，目前参数 SnapshotIds 暂未对外开放。
+可通过 [DescribeImages](https://cloud.tencent.com/document/api/213/15715) 接口返回值中的`ImageId`获取。
      * @param string $ExportFormat 镜像文件导出格式。取值范围：RAW，QCOW2，VHD，VMDK。默认为RAW
-     * @param array $FileNamePrefixList 导出文件的名称前缀列表
-     * @param boolean $OnlyExportRootDisk 是否只导出系统盘
-     * @param boolean $DryRun 检测镜像是否支持导出
+     * @param array $FileNamePrefixList 导出文件的名称前缀列表。
+默认导出文件无名称前缀。
+     * @param boolean $OnlyExportRootDisk 是否只导出系统盘。
+默认值：false
+     * @param boolean $DryRun 检测镜像是否支持导出。
+默认值：false
      * @param string $RoleName 角色名称。默认为CVM_QcsRole，发起请求前请确认是否存在该角色，以及是否已正确配置COS写入权限。
      */
     function __construct()

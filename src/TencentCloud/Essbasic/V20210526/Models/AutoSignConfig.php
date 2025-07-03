@@ -25,9 +25,15 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getCertInfoCallback() 获取是否回调证书信息:
 <ul><li>**false**: 不需要(默认)</li>
 <li>**true**:需要</li></ul>
+
+
+注：`该字段已经失效，请勿设置此参数。`
  * @method void setCertInfoCallback(boolean $CertInfoCallback) 设置是否回调证书信息:
 <ul><li>**false**: 不需要(默认)</li>
 <li>**true**:需要</li></ul>
+
+
+注：`该字段已经失效，请勿设置此参数。`
  * @method boolean getUserDefineSeal() 获取是否支持用户自定义签名印章:
 <ul><li>**false**: 不能自己定义(默认)</li>
 <li>**true**: 可以自己定义</li></ul>
@@ -40,30 +46,32 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSealImgCallback(boolean $SealImgCallback) 设置回调中是否需要自动签将要使用的印章（签名）图片的 base64:
 <ul><li>**false**: 不需要(默认)</li>
 <li>**true**: 需要</li></ul>
- * @method string getCallbackUrl() 获取回调链接，如果渠道已经配置了，可以不传
- * @method void setCallbackUrl(string $CallbackUrl) 设置回调链接，如果渠道已经配置了，可以不传
+ * @method string getCallbackUrl() 获取该字段已废弃，请使用【应用号配置】中的回调地址统一接口消息
+ * @method void setCallbackUrl(string $CallbackUrl) 设置该字段已废弃，请使用【应用号配置】中的回调地址统一接口消息
  * @method array getVerifyChannels() 获取开通时候的身份验证方式, 取值为：
 <ul><li>**WEIXINAPP** : 微信人脸识别</li>
-<li>**INSIGHT** : 慧眼人脸认别</li>
+<li>**INSIGHT** : 慧眼人脸识别</li>
 <li>**TELECOM** : 运营商三要素验证</li></ul>
 注：
 <ul><li>如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。为空默认 WEIXINAPP</li>
 <li>如果是 H5 开通链接，支持传 INSIGHT / TELECOM。为空默认 INSIGHT </li></ul>
  * @method void setVerifyChannels(array $VerifyChannels) 设置开通时候的身份验证方式, 取值为：
 <ul><li>**WEIXINAPP** : 微信人脸识别</li>
-<li>**INSIGHT** : 慧眼人脸认别</li>
+<li>**INSIGHT** : 慧眼人脸识别</li>
 <li>**TELECOM** : 运营商三要素验证</li></ul>
 注：
 <ul><li>如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。为空默认 WEIXINAPP</li>
 <li>如果是 H5 开通链接，支持传 INSIGHT / TELECOM。为空默认 INSIGHT </li></ul>
  * @method integer getLicenseType() 获取设置用户开通自动签时是否绑定个人自动签账号许可。
 
-<ul><li>**0**: (默认) 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li>
-<li>**1**: 不绑定自动签账号许可开通，后续使用合同份额进行合同发起</li></ul>
+<ul><li><b>1</b>: (默认)不绑定自动签账号许可开通，开通后一直有效,   后续使用合同份额进行合同发起</li></ul>
+
+注：`该字段已经失效，请勿设置此参数。`
  * @method void setLicenseType(integer $LicenseType) 设置设置用户开通自动签时是否绑定个人自动签账号许可。
 
-<ul><li>**0**: (默认) 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li>
-<li>**1**: 不绑定自动签账号许可开通，后续使用合同份额进行合同发起</li></ul>
+<ul><li><b>1</b>: (默认)不绑定自动签账号许可开通，开通后一直有效,   后续使用合同份额进行合同发起</li></ul>
+
+注：`该字段已经失效，请勿设置此参数。`
  * @method string getJumpUrl() 获取开通成功后前端页面跳转的url，此字段的用法场景请联系客户经理确认。
 
 注：`仅支持H5开通场景`, `跳转链接仅支持 https:// , qianapp:// 开头`
@@ -96,6 +104,9 @@ class AutoSignConfig extends AbstractModel
      * @var boolean 是否回调证书信息:
 <ul><li>**false**: 不需要(默认)</li>
 <li>**true**:需要</li></ul>
+
+
+注：`该字段已经失效，请勿设置此参数。`
      */
     public $CertInfoCallback;
 
@@ -114,14 +125,15 @@ class AutoSignConfig extends AbstractModel
     public $SealImgCallback;
 
     /**
-     * @var string 回调链接，如果渠道已经配置了，可以不传
+     * @var string 该字段已废弃，请使用【应用号配置】中的回调地址统一接口消息
+     * @deprecated
      */
     public $CallbackUrl;
 
     /**
      * @var array 开通时候的身份验证方式, 取值为：
 <ul><li>**WEIXINAPP** : 微信人脸识别</li>
-<li>**INSIGHT** : 慧眼人脸认别</li>
+<li>**INSIGHT** : 慧眼人脸识别</li>
 <li>**TELECOM** : 运营商三要素验证</li></ul>
 注：
 <ul><li>如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。为空默认 WEIXINAPP</li>
@@ -132,8 +144,9 @@ class AutoSignConfig extends AbstractModel
     /**
      * @var integer 设置用户开通自动签时是否绑定个人自动签账号许可。
 
-<ul><li>**0**: (默认) 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li>
-<li>**1**: 不绑定自动签账号许可开通，后续使用合同份额进行合同发起</li></ul>
+<ul><li><b>1</b>: (默认)不绑定自动签账号许可开通，开通后一直有效,   后续使用合同份额进行合同发起</li></ul>
+
+注：`该字段已经失效，请勿设置此参数。`
      */
     public $LicenseType;
 
@@ -156,24 +169,28 @@ class AutoSignConfig extends AbstractModel
      * @param boolean $CertInfoCallback 是否回调证书信息:
 <ul><li>**false**: 不需要(默认)</li>
 <li>**true**:需要</li></ul>
+
+
+注：`该字段已经失效，请勿设置此参数。`
      * @param boolean $UserDefineSeal 是否支持用户自定义签名印章:
 <ul><li>**false**: 不能自己定义(默认)</li>
 <li>**true**: 可以自己定义</li></ul>
      * @param boolean $SealImgCallback 回调中是否需要自动签将要使用的印章（签名）图片的 base64:
 <ul><li>**false**: 不需要(默认)</li>
 <li>**true**: 需要</li></ul>
-     * @param string $CallbackUrl 回调链接，如果渠道已经配置了，可以不传
+     * @param string $CallbackUrl 该字段已废弃，请使用【应用号配置】中的回调地址统一接口消息
      * @param array $VerifyChannels 开通时候的身份验证方式, 取值为：
 <ul><li>**WEIXINAPP** : 微信人脸识别</li>
-<li>**INSIGHT** : 慧眼人脸认别</li>
+<li>**INSIGHT** : 慧眼人脸识别</li>
 <li>**TELECOM** : 运营商三要素验证</li></ul>
 注：
 <ul><li>如果是小程序开通链接，支持传 WEIXINAPP / TELECOM。为空默认 WEIXINAPP</li>
 <li>如果是 H5 开通链接，支持传 INSIGHT / TELECOM。为空默认 INSIGHT </li></ul>
      * @param integer $LicenseType 设置用户开通自动签时是否绑定个人自动签账号许可。
 
-<ul><li>**0**: (默认) 使用个人自动签账号许可进行开通，个人自动签账号许可有效期1年，注: `不可解绑释放更换他人`</li>
-<li>**1**: 不绑定自动签账号许可开通，后续使用合同份额进行合同发起</li></ul>
+<ul><li><b>1</b>: (默认)不绑定自动签账号许可开通，开通后一直有效,   后续使用合同份额进行合同发起</li></ul>
+
+注：`该字段已经失效，请勿设置此参数。`
      * @param string $JumpUrl 开通成功后前端页面跳转的url，此字段的用法场景请联系客户经理确认。
 
 注：`仅支持H5开通场景`, `跳转链接仅支持 https:// , qianapp:// 开头`

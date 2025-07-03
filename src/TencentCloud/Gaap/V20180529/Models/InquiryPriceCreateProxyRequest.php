@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBandwidth(integer $Bandwidth) 设置通道带宽上限，单位：Mbps。
  * @method string getDestRegion() 获取（旧参数，请切换到RealServerRegion）源站区域名称。
  * @method void setDestRegion(string $DestRegion) 设置（旧参数，请切换到RealServerRegion）源站区域名称。
- * @method integer getConcurrency() 获取（旧参数，请切换到Concurrent）通道并发量上限，表示同时在线的连接数，单位：万。
- * @method void setConcurrency(integer $Concurrency) 设置（旧参数，请切换到Concurrent）通道并发量上限，表示同时在线的连接数，单位：万。
+ * @method integer getConcurrency() 获取（此参数为旧参数，请填写新参数Concurrent，二者必须填写一个）通道并发量上限，表示同时在线的连接数，单位：万。
+ * @method void setConcurrency(integer $Concurrency) 设置（此参数为旧参数，请填写新参数Concurrent，二者必须填写一个）通道并发量上限，表示同时在线的连接数，单位：万。
  * @method string getRealServerRegion() 获取（新参数）源站区域名称。
  * @method void setRealServerRegion(string $RealServerRegion) 设置（新参数）源站区域名称。
  * @method integer getConcurrent() 获取（新参数）通道并发量上限，表示同时在线的连接数，单位：万。
@@ -61,7 +61,7 @@ class InquiryPriceCreateProxyRequest extends AbstractModel
     public $DestRegion;
 
     /**
-     * @var integer （旧参数，请切换到Concurrent）通道并发量上限，表示同时在线的连接数，单位：万。
+     * @var integer （此参数为旧参数，请填写新参数Concurrent，二者必须填写一个）通道并发量上限，表示同时在线的连接数，单位：万。
      */
     public $Concurrency;
 
@@ -104,7 +104,7 @@ class InquiryPriceCreateProxyRequest extends AbstractModel
      * @param string $AccessRegion 加速区域名称。
      * @param integer $Bandwidth 通道带宽上限，单位：Mbps。
      * @param string $DestRegion （旧参数，请切换到RealServerRegion）源站区域名称。
-     * @param integer $Concurrency （旧参数，请切换到Concurrent）通道并发量上限，表示同时在线的连接数，单位：万。
+     * @param integer $Concurrency （此参数为旧参数，请填写新参数Concurrent，二者必须填写一个）通道并发量上限，表示同时在线的连接数，单位：万。
      * @param string $RealServerRegion （新参数）源站区域名称。
      * @param integer $Concurrent （新参数）通道并发量上限，表示同时在线的连接数，单位：万。
      * @param integer $BillingType 计费方式，0表示按带宽计费，1表示按流量计费。默认按带宽计费

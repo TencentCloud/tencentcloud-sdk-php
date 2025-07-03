@@ -18,71 +18,71 @@ namespace TencentCloud\Lke\V20231130\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 属性标签详情信息
+ * 标签详情信息
  *
- * @method integer getSource() 获取属性标签来源
+ * @method integer getSource() 获取标签来源
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSource(integer $Source) 设置属性标签来源
+ * @method void setSource(integer $Source) 设置标签来源
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAttrBizId() 获取属性ID
+ * @method string getAttrBizId() 获取标签ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAttrBizId(string $AttrBizId) 设置属性ID
+ * @method void setAttrBizId(string $AttrBizId) 设置标签ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAttrKey() 获取属性标识
+ * @method string getAttrKey() 获取标签标识
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAttrKey(string $AttrKey) 设置属性标识
+ * @method void setAttrKey(string $AttrKey) 设置标签标识
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAttrName() 获取属性名称
+ * @method string getAttrName() 获取标签名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAttrName(string $AttrName) 设置属性名称
+ * @method void setAttrName(string $AttrName) 设置标签名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getLabels() 获取标签ID
+ * @method array getLabels() 获取标签值
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLabels(array $Labels) 设置标签ID
+ * @method void setLabels(array $Labels) 设置标签值
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AttrLabel extends AbstractModel
 {
     /**
-     * @var integer 属性标签来源
+     * @var integer 标签来源
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Source;
 
     /**
-     * @var string 属性ID
+     * @var string 标签ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AttrBizId;
 
     /**
-     * @var string 属性标识
+     * @var string 标签标识
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AttrKey;
 
     /**
-     * @var string 属性名称
+     * @var string 标签名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AttrName;
 
     /**
-     * @var array 标签ID
+     * @var array 标签值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Labels;
 
     /**
-     * @param integer $Source 属性标签来源
+     * @param integer $Source 标签来源
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AttrBizId 属性ID
+     * @param string $AttrBizId 标签ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AttrKey 属性标识
+     * @param string $AttrKey 标签标识
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $AttrName 属性名称
+     * @param string $AttrName 标签名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Labels 标签ID
+     * @param array $Labels 标签值
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

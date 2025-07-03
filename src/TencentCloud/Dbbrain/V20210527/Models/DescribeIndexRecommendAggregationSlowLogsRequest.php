@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例ID。
  * @method string getDb() 获取数据库名称。
  * @method void setDb(string $Db) 设置数据库名称。
- * @method string getCollection() 获取表明。
- * @method void setCollection(string $Collection) 设置表明。
- * @method array getSigns() 获取签名。
- * @method void setSigns(array $Signs) 设置签名。
+ * @method string getCollection() 获取表名。
+ * @method void setCollection(string $Collection) 设置表名。
+ * @method array getSigns() 获取签名。这个值是DescribelndexRecommendInfo接口返回
+ * @method void setSigns(array $Signs) 设置签名。这个值是DescribelndexRecommendInfo接口返回
  */
 class DescribeIndexRecommendAggregationSlowLogsRequest extends AbstractModel
 {
@@ -49,12 +49,12 @@ class DescribeIndexRecommendAggregationSlowLogsRequest extends AbstractModel
     public $Db;
 
     /**
-     * @var string 表明。
+     * @var string 表名。
      */
     public $Collection;
 
     /**
-     * @var array 签名。
+     * @var array 签名。这个值是DescribelndexRecommendInfo接口返回
      */
     public $Signs;
 
@@ -62,8 +62,8 @@ class DescribeIndexRecommendAggregationSlowLogsRequest extends AbstractModel
      * @param string $Product 服务产品类型，支持值包括："mongodb" - 云数据库 。
      * @param string $InstanceId 实例ID。
      * @param string $Db 数据库名称。
-     * @param string $Collection 表明。
-     * @param array $Signs 签名。
+     * @param string $Collection 表名。
+     * @param array $Signs 签名。这个值是DescribelndexRecommendInfo接口返回
      */
     function __construct()
     {

@@ -46,6 +46,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDstResources(array $DstResources) 设置加工任务目的topic_id以及别名
  * @method string getEtlContent() 获取加工逻辑函数。
  * @method void setEtlContent(string $EtlContent) 设置加工逻辑函数。
+ * @method integer getDataTransformType() 获取数据加工类型。0：标准加工任务；1：前置加工任务。
+ * @method void setDataTransformType(integer $DataTransformType) 设置数据加工类型。0：标准加工任务；1：前置加工任务。
+ * @method integer getKeepFailureLog() 获取保留失败日志状态。 1:不保留，2:保留
+ * @method void setKeepFailureLog(integer $KeepFailureLog) 设置保留失败日志状态。 1:不保留，2:保留
+ * @method string getFailureLogKey() 获取失败日志的字段名称
+ * @method void setFailureLogKey(string $FailureLogKey) 设置失败日志的字段名称
  */
 class DataTransformTaskInfo extends AbstractModel
 {
@@ -115,6 +121,21 @@ class DataTransformTaskInfo extends AbstractModel
     public $EtlContent;
 
     /**
+     * @var integer 数据加工类型。0：标准加工任务；1：前置加工任务。
+     */
+    public $DataTransformType;
+
+    /**
+     * @var integer 保留失败日志状态。 1:不保留，2:保留
+     */
+    public $KeepFailureLog;
+
+    /**
+     * @var string 失败日志的字段名称
+     */
+    public $FailureLogKey;
+
+    /**
      * @param string $Name 数据加工任务名称
      * @param string $TaskId 数据加工任务id
      * @param integer $EnableFlag 任务启用状态，默认为1，正常开启,  2关闭
@@ -128,6 +149,9 @@ class DataTransformTaskInfo extends AbstractModel
      * @param string $LogsetId 日志集id
      * @param array $DstResources 加工任务目的topic_id以及别名
      * @param string $EtlContent 加工逻辑函数。
+     * @param integer $DataTransformType 数据加工类型。0：标准加工任务；1：前置加工任务。
+     * @param integer $KeepFailureLog 保留失败日志状态。 1:不保留，2:保留
+     * @param string $FailureLogKey 失败日志的字段名称
      */
     function __construct()
     {
@@ -197,6 +221,18 @@ class DataTransformTaskInfo extends AbstractModel
 
         if (array_key_exists("EtlContent",$param) and $param["EtlContent"] !== null) {
             $this->EtlContent = $param["EtlContent"];
+        }
+
+        if (array_key_exists("DataTransformType",$param) and $param["DataTransformType"] !== null) {
+            $this->DataTransformType = $param["DataTransformType"];
+        }
+
+        if (array_key_exists("KeepFailureLog",$param) and $param["KeepFailureLog"] !== null) {
+            $this->KeepFailureLog = $param["KeepFailureLog"];
+        }
+
+        if (array_key_exists("FailureLogKey",$param) and $param["FailureLogKey"] !== null) {
+            $this->FailureLogKey = $param["FailureLogKey"];
         }
     }
 }

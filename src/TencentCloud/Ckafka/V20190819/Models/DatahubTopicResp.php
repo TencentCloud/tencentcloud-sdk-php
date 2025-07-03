@@ -20,30 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Datahub Topic 响应
  *
- * @method string getTopicName() 获取Topic名称
- * @method void setTopicName(string $TopicName) 设置Topic名称
- * @method string getTopicId() 获取TopicId
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTopicId(string $TopicId) 设置TopicId
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTopicName() 获取主题名称
+ * @method void setTopicName(string $TopicName) 设置主题名称
+ * @method string getTopicId() 获取主题Id
+ * @method void setTopicId(string $TopicId) 设置主题Id
  */
 class DatahubTopicResp extends AbstractModel
 {
     /**
-     * @var string Topic名称
+     * @var string 主题名称
      */
     public $TopicName;
 
     /**
-     * @var string TopicId
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 主题Id
      */
     public $TopicId;
 
     /**
-     * @param string $TopicName Topic名称
-     * @param string $TopicId TopicId
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TopicName 主题名称
+     * @param string $TopicId 主题Id
      */
     function __construct()
     {

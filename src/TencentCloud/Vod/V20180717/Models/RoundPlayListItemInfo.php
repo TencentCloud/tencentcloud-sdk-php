@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 轮播媒体文件信息
+ * 轮播播放节目信息
  *
  * @method string getFileId() 获取媒体文件标识。
  * @method void setFileId(string $FileId) 设置媒体文件标识。
@@ -30,8 +30,10 @@ Type 对应的格式必须为 HLS 格式。
 <li>Transcode：转码输出；转码输出会有多个模版，必须指定 Definition 字段</li>
 <li>Original：原始音视频。</li>
 Type 对应的格式必须为 HLS 格式。
- * @method integer getDefinition() 获取指定播放的转码模版，当 AudioVideoType 为 Transcode 时必须指定。
- * @method void setDefinition(integer $Definition) 设置指定播放的转码模版，当 AudioVideoType 为 Transcode 时必须指定。
+ * @method string getItemId() 获取播放节目的 ID，由系统分配。
+ * @method void setItemId(string $ItemId) 设置播放节目的 ID，由系统分配。
+ * @method integer getDefinition() 获取指定播放的转码模板，当 AudioVideoType 为 Transcode 时必须指定。
+ * @method void setDefinition(integer $Definition) 设置指定播放的转码模板，当 AudioVideoType 为 Transcode 时必须指定。
  */
 class RoundPlayListItemInfo extends AbstractModel
 {
@@ -49,7 +51,12 @@ Type 对应的格式必须为 HLS 格式。
     public $AudioVideoType;
 
     /**
-     * @var integer 指定播放的转码模版，当 AudioVideoType 为 Transcode 时必须指定。
+     * @var string 播放节目的 ID，由系统分配。
+     */
+    public $ItemId;
+
+    /**
+     * @var integer 指定播放的转码模板，当 AudioVideoType 为 Transcode 时必须指定。
      */
     public $Definition;
 
@@ -59,7 +66,8 @@ Type 对应的格式必须为 HLS 格式。
 <li>Transcode：转码输出；转码输出会有多个模版，必须指定 Definition 字段</li>
 <li>Original：原始音视频。</li>
 Type 对应的格式必须为 HLS 格式。
-     * @param integer $Definition 指定播放的转码模版，当 AudioVideoType 为 Transcode 时必须指定。
+     * @param string $ItemId 播放节目的 ID，由系统分配。
+     * @param integer $Definition 指定播放的转码模板，当 AudioVideoType 为 Transcode 时必须指定。
      */
     function __construct()
     {
@@ -80,6 +88,10 @@ Type 对应的格式必须为 HLS 格式。
 
         if (array_key_exists("AudioVideoType",$param) and $param["AudioVideoType"] !== null) {
             $this->AudioVideoType = $param["AudioVideoType"];
+        }
+
+        if (array_key_exists("ItemId",$param) and $param["ItemId"] !== null) {
+            $this->ItemId = $param["ItemId"];
         }
 
         if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {

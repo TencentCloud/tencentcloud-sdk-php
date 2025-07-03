@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 工作流最近批次的状态
  *
  * @method string getFlowBatchId() 获取批次ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowBatchId(string $FlowBatchId) 设置批次ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFlowBatchLogId() 获取批次历史ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowBatchLogId(string $FlowBatchLogId) 设置批次历史ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getState() 获取状态,WAITING/SUCCESS/FAILED/RUNNING/TERMINATING
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setState(string $State) 设置状态,WAITING/SUCCESS/FAILED/RUNNING/TERMINATING
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskFlowLastBatchState extends AbstractModel
 {
     /**
      * @var string 批次ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowBatchId;
 
     /**
      * @var string 批次历史ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowBatchLogId;
 
     /**
      * @var string 状态,WAITING/SUCCESS/FAILED/RUNNING/TERMINATING
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $State;
 
     /**
      * @param string $FlowBatchId 批次ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FlowBatchLogId 批次历史ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $State 状态,WAITING/SUCCESS/FAILED/RUNNING/TERMINATING
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

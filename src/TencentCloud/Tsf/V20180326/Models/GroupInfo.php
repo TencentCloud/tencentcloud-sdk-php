@@ -27,21 +27,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getClusterType() 获取集群类型
  * @method void setClusterType(string $ClusterType) 设置集群类型
  * @method string getClusterId() 获取集群id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterId(string $ClusterId) 设置集群id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterName() 获取集群名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterName(string $ClusterName) 设置集群名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNamespaceName() 获取命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespaceName(string $NamespaceName) 设置命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAssociateTime() 获取绑定时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssociateTime(string $AssociateTime) 设置绑定时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class GroupInfo extends AbstractModel
 {
@@ -62,25 +54,21 @@ class GroupInfo extends AbstractModel
 
     /**
      * @var string 集群id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterId;
 
     /**
      * @var string 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterName;
 
     /**
      * @var string 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NamespaceName;
 
     /**
      * @var string 绑定时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AssociateTime;
 
@@ -89,13 +77,9 @@ class GroupInfo extends AbstractModel
      * @param string $GroupName 部署组名称
      * @param string $ClusterType 集群类型
      * @param string $ClusterId 集群id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterName 集群名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NamespaceName 命名空间名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AssociateTime 绑定时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

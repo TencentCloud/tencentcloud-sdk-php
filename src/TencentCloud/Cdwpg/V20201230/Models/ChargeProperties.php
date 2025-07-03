@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 计费时间参数
  *
  * @method integer getRenewFlag() 获取1-需要自动续期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRenewFlag(integer $RenewFlag) 设置1-需要自动续期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTimeSpan() 获取订单时间范围
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeSpan(integer $TimeSpan) 设置订单时间范围
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTimeUnit() 获取时间单位，一般为h和m
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeUnit(string $TimeUnit) 设置时间单位，一般为h和m
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPayMode() 获取计费类型0-按量计费，1-包年包月
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayMode(integer $PayMode) 设置计费类型0-按量计费，1-包年包月
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getChargeType() 获取PREPAID、POSTPAID_BY_HOUR
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChargeType(string $ChargeType) 设置PREPAID、POSTPAID_BY_HOUR
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ChargeProperties extends AbstractModel
 {
     /**
      * @var integer 1-需要自动续期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RenewFlag;
 
     /**
      * @var integer 订单时间范围
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeSpan;
 
     /**
      * @var string 时间单位，一般为h和m
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeUnit;
 
     /**
      * @var integer 计费类型0-按量计费，1-包年包月
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PayMode;
 
     /**
      * @var string PREPAID、POSTPAID_BY_HOUR
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChargeType;
 
     /**
      * @param integer $RenewFlag 1-需要自动续期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TimeSpan 订单时间范围
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TimeUnit 时间单位，一般为h和m
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PayMode 计费类型0-按量计费，1-包年包月
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChargeType PREPAID、POSTPAID_BY_HOUR
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

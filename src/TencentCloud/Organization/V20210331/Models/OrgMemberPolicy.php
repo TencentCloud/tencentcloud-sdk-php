@@ -21,105 +21,73 @@ use TencentCloud\Common\AbstractModel;
  * 组织成员被授权的策略
  *
  * @method integer getPolicyId() 获取策略ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolicyId(integer $PolicyId) 设置策略ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPolicyName() 获取策略名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolicyName(string $PolicyName) 设置策略名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIdentityId() 获取身份ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIdentityId(integer $IdentityId) 设置身份ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIdentityRoleName() 获取身份角色名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIdentityRoleName(string $IdentityRoleName) 设置身份角色名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIdentityRoleAliasName() 获取身份角色别名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIdentityRoleAliasName(string $IdentityRoleAliasName) 设置身份角色别名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OrgMemberPolicy extends AbstractModel
 {
     /**
      * @var integer 策略ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PolicyId;
 
     /**
      * @var string 策略名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PolicyName;
 
     /**
      * @var integer 身份ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IdentityId;
 
     /**
      * @var string 身份角色名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IdentityRoleName;
 
     /**
      * @var string 身份角色别名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IdentityRoleAliasName;
 
     /**
      * @var string 描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var string 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @param integer $PolicyId 策略ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PolicyName 策略名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IdentityId 身份ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IdentityRoleName 身份角色名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IdentityRoleAliasName 身份角色别名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 更新时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 体检报告-内科-腹部-胰腺
  *
  * @method KeyValueItem getSrc() 获取胰腺总体描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSrc(KeyValueItem $Src) 设置胰腺总体描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method KeyValueItem getSize() 获取胰腺大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSize(KeyValueItem $Size) 设置胰腺大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method KeyValueItem getPalpation() 获取胰腺触诊
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPalpation(KeyValueItem $Palpation) 设置胰腺触诊
-注意：此字段可能返回 null，表示取不到有效值。
  * @method KeyValueItem getPercussion() 获取胰腺叩诊
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPercussion(KeyValueItem $Percussion) 设置胰腺叩诊
-注意：此字段可能返回 null，表示取不到有效值。
  * @method KeyValueItem getTenderness() 获取肝脏压痛
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTenderness(KeyValueItem $Tenderness) 设置肝脏压痛
-注意：此字段可能返回 null，表示取不到有效值。
  * @method KeyValueItem getConsistency() 获取胰腺质地
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConsistency(KeyValueItem $Consistency) 设置胰腺质地
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InternalMedicineAbdomenPancreas extends AbstractModel
 {
     /**
      * @var KeyValueItem 胰腺总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Src;
 
     /**
      * @var KeyValueItem 胰腺大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Size;
 
     /**
      * @var KeyValueItem 胰腺触诊
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Palpation;
 
     /**
      * @var KeyValueItem 胰腺叩诊
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Percussion;
 
     /**
      * @var KeyValueItem 肝脏压痛
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tenderness;
 
     /**
      * @var KeyValueItem 胰腺质地
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Consistency;
 
     /**
      * @param KeyValueItem $Src 胰腺总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyValueItem $Size 胰腺大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyValueItem $Palpation 胰腺触诊
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyValueItem $Percussion 胰腺叩诊
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyValueItem $Tenderness 肝脏压痛
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyValueItem $Consistency 胰腺质地
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

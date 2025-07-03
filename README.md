@@ -10,16 +10,34 @@
 安装 PHP SDK 前，先获取安全凭证。在第一次使用云API之前，用户首先需要在腾讯云控制台上申请安全凭证，安全凭证包括 SecretID 和 SecretKey， SecretID 是用于标识 API 调用者的身份，SecretKey是用于加密签名字符串和服务器端验证签名字符串的密钥。SecretKey 必须严格保管，避免泄露。
 ## 通过 Composer 安装
 通过 Composer 获取安装是使用 PHP SDK 的推荐方法，Composer 是 PHP 的依赖管理工具，支持您项目所需的依赖项，并将其安装到项目中。关于 Composer 详细可参考 Composer 官网 。
-1. 安装Composer：
+
+安装Composer：
     windows环境请访问[Composer官网](https://getcomposer.org/download/)下载安装包安装。
     
     unix环境在命令行中执行以下命令安装。
     > curl -sS https://getcomposer.org/installer | php
 
     > sudo mv composer.phar /usr/local/bin/composer
-2. 建议中国大陆地区的用户设置腾讯云镜像源：`composer config -g repos.packagist composer https://mirrors.tencent.com/composer/`
-3. 执行命令 `composer require tencentcloud/tencentcloud-sdk-php` 添加依赖。如果只想安装某个产品的，可以使用`composer require tencentcloud/产品名`，例如`composer require tencentcloud/cvm`。推荐使用固定的 SDK 版本开发测试和发布应用，例如 `composer require tencentcloud/tencentcloud-sdk-php=xx.yy.zz`。如果不需要 phpunit 等开发依赖，可以指定 `--update-no-dev` 选项。
-4. 在代码中添加以下引用代码。注意：如下仅为示例，composer 会在项目根目录下生成 vendor 目录，`/path/to/`为项目根目录的实际绝对路径，如果是在当前目录执行，可以省略绝对路径。
+
+### 安装指定产品 SDK（推荐）
+例如：安装指定产品包
+```bash
+composer require tencentcloud/指定产品包名缩写  # 如 CVM 产品包：tencentcloud/cvm
+```
+具体产品的包名缩写请参考 [products.md](./products.md) 中的包名字段。
+
+### 安装全产品 SDK
+```bash
+composer require tencentcloud/tencentcloud-sdk-php
+```
+全产品 SDK 包含了所有云产品的调用代码，体积偏大，对体积敏感的场景，推荐安装指定产品 SDK。
+
+### 注意事项
+- 安装全产品 SDK 和安装指定产品的 SDK 两种方式只能选择其中一种。
+- 如果同时安装多个产品的包，建议多个产品的包和 common 包保持在同一个版本。
+- 无法使用官方源的的用户可以设置镜像源，例如：`composer config -g repos.packagist composer https://mirrors.tencent.com/composer/`
+- 推荐使用固定的 SDK 版本开发测试和发布应用，例如 `composer require tencentcloud/cvm=xx.yy.zz`。如果不需要 phpunit 等开发依赖，可以指定 `--update-no-dev` 选项。
+- 在代码中添加以下引用代码。注意：如下仅为示例，composer 会在项目根目录下生成 vendor 目录，`/path/to/`为项目根目录的实际绝对路径，如果是在当前目录执行，可以省略绝对路径。
     
     > require '/path/to/vendor/autoload.php';
 
@@ -199,5 +217,14 @@ cURL error 0: The cURL request was retried 3 times and did not succeed. The most
 
 目前已知在 PHP 7.x 版本中，由于关键字冲突，弹性伸缩产品对应的 As 模块可能无法使用。可以考虑升级到 SDK 3.0.362 版本，使用 Autoscaling 模块。或者升级到 PHP 8 版本。
 
+## 内存泄漏问题
+如果使用 SDK 对接口进行循环调用，如：
+```
+while (true) {
+    $resp = $client->DescribeInstances($req);
+}
+```
+可以看到进程占用的内存持续少量上涨，这是 SDK 依赖的 GuzzleHttp 存在[内存泄漏的问题](https://github.com/guzzle/guzzle/issues/2830)，目前官方还未修复。
+
 # 旧版SDK
-新版SDK兼容旧版SDK。旧版本的SDK存放于QcloudApi目录，但不再维护更新，推荐使用新版SDK。
+新版 SDK 兼容旧版 SDK。旧版本的SDK存放于QcloudApi目录，但不再维护更新，推荐使用新版SDK。

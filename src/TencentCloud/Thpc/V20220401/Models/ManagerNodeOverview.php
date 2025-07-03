@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 管控节点概览。
  *
  * @method string getNodeId() 获取管控节点ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodeId(string $NodeId) 设置管控节点ID。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ManagerNodeOverview extends AbstractModel
 {
     /**
      * @var string 管控节点ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeId;
 
     /**
      * @param string $NodeId 管控节点ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

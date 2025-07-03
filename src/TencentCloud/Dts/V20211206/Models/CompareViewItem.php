@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 用于一致性校验的视图配置
  *
  * @method string getViewName() 获取视图名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setViewName(string $ViewName) 设置视图名
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CompareViewItem extends AbstractModel
 {
     /**
      * @var string 视图名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ViewName;
 
     /**
      * @param string $ViewName 视图名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

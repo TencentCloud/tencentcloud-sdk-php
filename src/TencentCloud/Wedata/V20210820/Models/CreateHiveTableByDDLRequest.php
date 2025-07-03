@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDatasourceId(string $DatasourceId) 设置数据源ID
  * @method string getDatabase() 获取数据库
  * @method void setDatabase(string $Database) 设置数据库
- * @method string getDDLSql() 获取建hive表ddl
- * @method void setDDLSql(string $DDLSql) 设置建hive表ddl
+ * @method string getDDLSql() 获取建hive表ddl的base64编码
+ * @method void setDDLSql(string $DDLSql) 设置建hive表ddl的base64编码
  * @method integer getPrivilege() 获取表权限 ，默认为0:项目共享;1:仅个人与管理员
  * @method void setPrivilege(integer $Privilege) 设置表权限 ，默认为0:项目共享;1:仅个人与管理员
  * @method string getProjectId() 获取项目ID
@@ -36,6 +36,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIncharge(string $Incharge) 设置责任人
  * @method string getSchemaName() 获取schema名称
  * @method void setSchemaName(string $SchemaName) 设置schema名称
+ * @method boolean getAsync() 获取是否异步建表
+ * @method void setAsync(boolean $Async) 设置是否异步建表
+ * @method string getDataOptimizationResource() 获取数据优化使用的资源
+ * @method void setDataOptimizationResource(string $DataOptimizationResource) 设置数据优化使用的资源
+ * @method string getSmartOptimizerWritten() 获取是否开启数据优化
+ * @method void setSmartOptimizerWritten(string $SmartOptimizerWritten) 设置是否开启数据优化
+ * @method string getTableName() 获取数据优化表名
+ * @method void setTableName(string $TableName) 设置数据优化表名
+ * @method string getResourceGroupName() 获取数据优化资源组
+ * @method void setResourceGroupName(string $ResourceGroupName) 设置数据优化资源组
  */
 class CreateHiveTableByDDLRequest extends AbstractModel
 {
@@ -50,7 +60,7 @@ class CreateHiveTableByDDLRequest extends AbstractModel
     public $Database;
 
     /**
-     * @var string 建hive表ddl
+     * @var string 建hive表ddl的base64编码
      */
     public $DDLSql;
 
@@ -80,14 +90,44 @@ class CreateHiveTableByDDLRequest extends AbstractModel
     public $SchemaName;
 
     /**
+     * @var boolean 是否异步建表
+     */
+    public $Async;
+
+    /**
+     * @var string 数据优化使用的资源
+     */
+    public $DataOptimizationResource;
+
+    /**
+     * @var string 是否开启数据优化
+     */
+    public $SmartOptimizerWritten;
+
+    /**
+     * @var string 数据优化表名
+     */
+    public $TableName;
+
+    /**
+     * @var string 数据优化资源组
+     */
+    public $ResourceGroupName;
+
+    /**
      * @param string $DatasourceId 数据源ID
      * @param string $Database 数据库
-     * @param string $DDLSql 建hive表ddl
+     * @param string $DDLSql 建hive表ddl的base64编码
      * @param integer $Privilege 表权限 ，默认为0:项目共享;1:仅个人与管理员
      * @param string $ProjectId 项目ID
      * @param string $Type 目标表类型(HIVE或GBASE)
      * @param string $Incharge 责任人
      * @param string $SchemaName schema名称
+     * @param boolean $Async 是否异步建表
+     * @param string $DataOptimizationResource 数据优化使用的资源
+     * @param string $SmartOptimizerWritten 是否开启数据优化
+     * @param string $TableName 数据优化表名
+     * @param string $ResourceGroupName 数据优化资源组
      */
     function __construct()
     {
@@ -132,6 +172,26 @@ class CreateHiveTableByDDLRequest extends AbstractModel
 
         if (array_key_exists("SchemaName",$param) and $param["SchemaName"] !== null) {
             $this->SchemaName = $param["SchemaName"];
+        }
+
+        if (array_key_exists("Async",$param) and $param["Async"] !== null) {
+            $this->Async = $param["Async"];
+        }
+
+        if (array_key_exists("DataOptimizationResource",$param) and $param["DataOptimizationResource"] !== null) {
+            $this->DataOptimizationResource = $param["DataOptimizationResource"];
+        }
+
+        if (array_key_exists("SmartOptimizerWritten",$param) and $param["SmartOptimizerWritten"] !== null) {
+            $this->SmartOptimizerWritten = $param["SmartOptimizerWritten"];
+        }
+
+        if (array_key_exists("TableName",$param) and $param["TableName"] !== null) {
+            $this->TableName = $param["TableName"];
+        }
+
+        if (array_key_exists("ResourceGroupName",$param) and $param["ResourceGroupName"] !== null) {
+            $this->ResourceGroupName = $param["ResourceGroupName"];
         }
     }
 }

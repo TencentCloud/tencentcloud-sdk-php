@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 订阅校验任务的提示信息
  *
  * @method string getMessage() 获取错误或告警的详细信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置错误或告警的详细信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHelpDoc() 获取帮助文档
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHelpDoc(string $HelpDoc) 设置帮助文档
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SubscribeCheckStepTip extends AbstractModel
 {
     /**
      * @var string 错误或告警的详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
     /**
      * @var string 帮助文档
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HelpDoc;
 
     /**
      * @param string $Message 错误或告警的详细信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HelpDoc 帮助文档
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

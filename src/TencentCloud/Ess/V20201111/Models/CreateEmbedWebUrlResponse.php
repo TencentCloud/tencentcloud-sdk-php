@@ -21,8 +21,12 @@ use TencentCloud\Common\AbstractModel;
  * CreateEmbedWebUrl返回参数结构体
  *
  * @method string getWebUrl() 获取嵌入的web链接，有效期：5分钟
+链接仅能使用一次
+建议：每次都用接口生成链接，保证链接的有效性
 <br/>EmbedType=PREVIEW_CC_FLOW，该url为h5链接
  * @method void setWebUrl(string $WebUrl) 设置嵌入的web链接，有效期：5分钟
+链接仅能使用一次
+建议：每次都用接口生成链接，保证链接的有效性
 <br/>EmbedType=PREVIEW_CC_FLOW，该url为h5链接
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -31,6 +35,8 @@ class CreateEmbedWebUrlResponse extends AbstractModel
 {
     /**
      * @var string 嵌入的web链接，有效期：5分钟
+链接仅能使用一次
+建议：每次都用接口生成链接，保证链接的有效性
 <br/>EmbedType=PREVIEW_CC_FLOW，该url为h5链接
      */
     public $WebUrl;
@@ -42,6 +48,8 @@ class CreateEmbedWebUrlResponse extends AbstractModel
 
     /**
      * @param string $WebUrl 嵌入的web链接，有效期：5分钟
+链接仅能使用一次
+建议：每次都用接口生成链接，保证链接的有效性
 <br/>EmbedType=PREVIEW_CC_FLOW，该url为h5链接
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

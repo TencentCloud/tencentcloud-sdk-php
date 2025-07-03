@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TerminateDisks请求参数结构体
  *
- * @method array getDiskIds() 获取需退还的云盘ID列表。
- * @method void setDiskIds(array $DiskIds) 设置需退还的云盘ID列表。
+ * @method array getDiskIds() 获取需退还的云盘ID列表，通过[DescribeDisks](/document/product/362/16315)接口查询。
+ * @method void setDiskIds(array $DiskIds) 设置需退还的云盘ID列表，通过[DescribeDisks](/document/product/362/16315)接口查询。
  * @method integer getDeleteSnapshot() 获取销毁云盘时删除关联的非永久保留快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁，默认取0。快照是否永久保留可以通过DescribeSnapshots接口返回的快照详情的IsPermanent字段来判断，true表示永久快照，false表示非永久快照。
  * @method void setDeleteSnapshot(integer $DeleteSnapshot) 设置销毁云盘时删除关联的非永久保留快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁，默认取0。快照是否永久保留可以通过DescribeSnapshots接口返回的快照详情的IsPermanent字段来判断，true表示永久快照，false表示非永久快照。
  */
 class TerminateDisksRequest extends AbstractModel
 {
     /**
-     * @var array 需退还的云盘ID列表。
+     * @var array 需退还的云盘ID列表，通过[DescribeDisks](/document/product/362/16315)接口查询。
      */
     public $DiskIds;
 
@@ -38,7 +38,7 @@ class TerminateDisksRequest extends AbstractModel
     public $DeleteSnapshot;
 
     /**
-     * @param array $DiskIds 需退还的云盘ID列表。
+     * @param array $DiskIds 需退还的云盘ID列表，通过[DescribeDisks](/document/product/362/16315)接口查询。
      * @param integer $DeleteSnapshot 销毁云盘时删除关联的非永久保留快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁，默认取0。快照是否永久保留可以通过DescribeSnapshots接口返回的快照详情的IsPermanent字段来判断，true表示永久快照，false表示非永久快照。
      */
     function __construct()

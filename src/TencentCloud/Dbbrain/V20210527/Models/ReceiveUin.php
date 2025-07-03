@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 接收用户
  *
  * @method string getUinName() 获取用户名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUinName(string $UinName) 设置用户名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUin() 获取用户id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUin(string $Uin) 设置用户id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ReceiveUin extends AbstractModel
 {
     /**
      * @var string 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UinName;
 
     /**
      * @var string 用户id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uin;
 
     /**
      * @param string $UinName 用户名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uin 用户id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

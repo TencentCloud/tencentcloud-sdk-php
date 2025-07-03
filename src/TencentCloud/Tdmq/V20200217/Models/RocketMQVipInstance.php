@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInstanceName() 获取实例名称
  * @method void setInstanceName(string $InstanceName) 设置实例名称
  * @method string getInstanceVersion() 获取实例版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceVersion(string $InstanceVersion) 设置实例版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败
  * @method void setStatus(integer $Status) 设置实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败
  * @method integer getNodeCount() 获取节点数量
@@ -47,31 +45,19 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getPayMode() 获取0-后付费，1-预付费
  * @method void setPayMode(integer $PayMode) 设置0-后付费，1-预付费
  * @method string getRemark() 获取备注信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置备注信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSpecName() 获取实例配置ID
  * @method void setSpecName(string $SpecName) 设置实例配置ID
  * @method integer getMaxRetention() 获取最大可设置消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxRetention(integer $MaxRetention) 设置最大可设置消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMinRetention() 获取最小可设置消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMinRetention(integer $MinRetention) 设置最小可设置消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRetention() 获取实例消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRetention(integer $Retention) 设置实例消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getAclEnabled() 获取是否开启ACL鉴权
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAclEnabled(boolean $AclEnabled) 设置是否开启ACL鉴权
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDestroyTime() 获取销毁时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDestroyTime(integer $DestroyTime) 设置销毁时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RocketMQVipInstance extends AbstractModel
 {
@@ -87,7 +73,6 @@ class RocketMQVipInstance extends AbstractModel
 
     /**
      * @var string 实例版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceVersion;
 
@@ -138,7 +123,6 @@ class RocketMQVipInstance extends AbstractModel
 
     /**
      * @var string 备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
@@ -149,31 +133,26 @@ class RocketMQVipInstance extends AbstractModel
 
     /**
      * @var integer 最大可设置消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxRetention;
 
     /**
      * @var integer 最小可设置消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MinRetention;
 
     /**
      * @var integer 实例消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Retention;
 
     /**
      * @var boolean 是否开启ACL鉴权
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AclEnabled;
 
     /**
      * @var integer 销毁时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DestroyTime;
 
@@ -181,7 +160,6 @@ class RocketMQVipInstance extends AbstractModel
      * @param string $InstanceId 实例id
      * @param string $InstanceName 实例名称
      * @param string $InstanceVersion 实例版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 实例状态，0表示创建中，1表示正常，2表示隔离中，3表示已销毁，4 - 异常, 5 - 发货失败，6 - 变配中，7 - 变配失败
      * @param integer $NodeCount 节点数量
      * @param string $ConfigDisplay 实例配置规格名称
@@ -192,18 +170,12 @@ class RocketMQVipInstance extends AbstractModel
      * @param integer $AutoRenewFlag 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)
      * @param integer $PayMode 0-后付费，1-预付费
      * @param string $Remark 备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SpecName 实例配置ID
      * @param integer $MaxRetention 最大可设置消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MinRetention 最小可设置消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Retention 实例消息保留时间，小时为单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $AclEnabled 是否开启ACL鉴权
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DestroyTime 销毁时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

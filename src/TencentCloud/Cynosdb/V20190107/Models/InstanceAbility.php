@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 实例允许的操作列表
  *
  * @method string getIsSupportForceRestart() 获取实例是否支持强制重启，可选值：yes：支持，no：不支持
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsSupportForceRestart(string $IsSupportForceRestart) 设置实例是否支持强制重启，可选值：yes：支持，no：不支持
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNonsupportForceRestartReason() 获取不支持强制重启的原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNonsupportForceRestartReason(string $NonsupportForceRestartReason) 设置不支持强制重启的原因
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceAbility extends AbstractModel
 {
     /**
      * @var string 实例是否支持强制重启，可选值：yes：支持，no：不支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsSupportForceRestart;
 
     /**
      * @var string 不支持强制重启的原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NonsupportForceRestartReason;
 
     /**
      * @param string $IsSupportForceRestart 实例是否支持强制重启，可选值：yes：支持，no：不支持
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NonsupportForceRestartReason 不支持强制重启的原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

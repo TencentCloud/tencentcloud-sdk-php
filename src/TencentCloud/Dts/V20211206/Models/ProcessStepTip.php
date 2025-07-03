@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 错误信息及告警信息对象
  *
  * @method string getMessage() 获取提示信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置提示信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSolution() 获取解决方案
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSolution(string $Solution) 设置解决方案
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHelpDoc() 获取文档提示
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHelpDoc(string $HelpDoc) 设置文档提示
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProcessStepTip extends AbstractModel
 {
     /**
      * @var string 提示信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
     /**
      * @var string 解决方案
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Solution;
 
     /**
      * @var string 文档提示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HelpDoc;
 
     /**
      * @param string $Message 提示信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Solution 解决方案
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HelpDoc 文档提示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,189 +21,161 @@ use TencentCloud\Common\AbstractModel;
  * 配置文件
  *
  * @method integer getId() 获取配置文件id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(integer $Id) 设置配置文件id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取配置文件名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置配置文件名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNamespace() 获取配置文件命名空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespace(string $Namespace) 设置配置文件命名空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroup() 获取配置文件组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroup(string $Group) 设置配置文件组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContent() 获取配置文件内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContent(string $Content) 设置配置文件内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFormat() 获取配置文件格式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFormat(string $Format) 设置配置文件格式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getComment() 获取配置文件注释
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComment(string $Comment) 设置配置文件注释
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取配置文件状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置配置文件状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取配置文件标签数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置配置文件标签数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取配置文件创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置配置文件创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateBy() 获取配置文件创建者
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateBy(string $CreateBy) 设置配置文件创建者
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifyTime() 获取配置文件修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyTime(string $ModifyTime) 设置配置文件修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifyBy() 获取配置文件修改者
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyBy(string $ModifyBy) 设置配置文件修改者
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReleaseTime() 获取配置文件发布时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReleaseTime(string $ReleaseTime) 设置配置文件发布时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReleaseBy() 获取配置文件发布者
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReleaseBy(string $ReleaseBy) 设置配置文件发布者
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getConfigFileSupportedClient() 获取配置文件类型
+ * @method void setConfigFileSupportedClient(integer $ConfigFileSupportedClient) 设置配置文件类型
+ * @method ConfigFilePersistent getConfigFilePersistent() 获取配置文件持久化
+ * @method void setConfigFilePersistent(ConfigFilePersistent $ConfigFilePersistent) 设置配置文件持久化
+ * @method boolean getEncrypted() 获取是否开启加密算法
+ * @method void setEncrypted(boolean $Encrypted) 设置是否开启加密算法
+ * @method string getEncryptAlgo() 获取加密算法
+ * @method void setEncryptAlgo(string $EncryptAlgo) 设置加密算法
  */
 class ConfigFile extends AbstractModel
 {
     /**
      * @var integer 配置文件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var string 配置文件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 配置文件命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Namespace;
 
     /**
      * @var string 配置文件组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Group;
 
     /**
      * @var string 配置文件内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Content;
 
     /**
      * @var string 配置文件格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Format;
 
     /**
      * @var string 配置文件注释
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Comment;
 
     /**
      * @var string 配置文件状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var array 配置文件标签数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
      * @var string 配置文件创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 配置文件创建者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateBy;
 
     /**
      * @var string 配置文件修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyTime;
 
     /**
      * @var string 配置文件修改者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyBy;
 
     /**
      * @var string 配置文件发布时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReleaseTime;
 
     /**
      * @var string 配置文件发布者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReleaseBy;
 
     /**
+     * @var integer 配置文件类型
+     */
+    public $ConfigFileSupportedClient;
+
+    /**
+     * @var ConfigFilePersistent 配置文件持久化
+     */
+    public $ConfigFilePersistent;
+
+    /**
+     * @var boolean 是否开启加密算法
+     */
+    public $Encrypted;
+
+    /**
+     * @var string 加密算法
+     */
+    public $EncryptAlgo;
+
+    /**
      * @param integer $Id 配置文件id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 配置文件名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Namespace 配置文件命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Group 配置文件组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Content 配置文件内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Format 配置文件格式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Comment 配置文件注释
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 配置文件状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 配置文件标签数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 配置文件创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateBy 配置文件创建者
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyTime 配置文件修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyBy 配置文件修改者
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReleaseTime 配置文件发布时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReleaseBy 配置文件发布者
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ConfigFileSupportedClient 配置文件类型
+     * @param ConfigFilePersistent $ConfigFilePersistent 配置文件持久化
+     * @param boolean $Encrypted 是否开启加密算法
+     * @param string $EncryptAlgo 加密算法
      */
     function __construct()
     {
@@ -281,6 +253,23 @@ class ConfigFile extends AbstractModel
 
         if (array_key_exists("ReleaseBy",$param) and $param["ReleaseBy"] !== null) {
             $this->ReleaseBy = $param["ReleaseBy"];
+        }
+
+        if (array_key_exists("ConfigFileSupportedClient",$param) and $param["ConfigFileSupportedClient"] !== null) {
+            $this->ConfigFileSupportedClient = $param["ConfigFileSupportedClient"];
+        }
+
+        if (array_key_exists("ConfigFilePersistent",$param) and $param["ConfigFilePersistent"] !== null) {
+            $this->ConfigFilePersistent = new ConfigFilePersistent();
+            $this->ConfigFilePersistent->deserialize($param["ConfigFilePersistent"]);
+        }
+
+        if (array_key_exists("Encrypted",$param) and $param["Encrypted"] !== null) {
+            $this->Encrypted = $param["Encrypted"];
+        }
+
+        if (array_key_exists("EncryptAlgo",$param) and $param["EncryptAlgo"] !== null) {
+            $this->EncryptAlgo = $param["EncryptAlgo"];
         }
     }
 }

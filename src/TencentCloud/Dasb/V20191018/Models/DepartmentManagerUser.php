@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 部门管理员信息
  *
  * @method string getManagerId() 获取管理员Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setManagerId(string $ManagerId) 设置管理员Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getManagerName() 获取管理员姓名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setManagerName(string $ManagerName) 设置管理员姓名
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DepartmentManagerUser extends AbstractModel
 {
     /**
      * @var string 管理员Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ManagerId;
 
     /**
      * @var string 管理员姓名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ManagerName;
 
     /**
      * @param string $ManagerId 管理员Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ManagerName 管理员姓名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

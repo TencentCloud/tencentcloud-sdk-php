@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 计算节点概览。
  *
  * @method string getNodeId() 获取计算节点ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodeId(string $NodeId) 设置计算节点ID。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ComputeNodeOverview extends AbstractModel
 {
     /**
      * @var string 计算节点ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeId;
 
     /**
      * @param string $NodeId 计算节点ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

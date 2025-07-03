@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTotalCount() 获取可查询到的所有Vpc实例总数。
  * @method void setTotalCount(integer $TotalCount) 设置可查询到的所有Vpc实例总数。
  * @method array getVpcList() 获取Vpc对象列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcList(array $VpcList) 设置Vpc对象列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -38,7 +36,6 @@ class DescribeVpcResponse extends AbstractModel
 
     /**
      * @var array Vpc对象列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcList;
 
@@ -50,7 +47,6 @@ class DescribeVpcResponse extends AbstractModel
     /**
      * @param integer $TotalCount 可查询到的所有Vpc实例总数。
      * @param array $VpcList Vpc对象列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

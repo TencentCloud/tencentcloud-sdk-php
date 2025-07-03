@@ -20,14 +20,6 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 通知规则
  *
- * @method array getNoticeReceivers() 获取告警通知模板接收者信息。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNoticeReceivers(array $NoticeReceivers) 设置告警通知模板接收者信息。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method array getWebCallbacks() 获取告警通知模板回调信息。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWebCallbacks(array $WebCallbacks) 设置告警通知模板回调信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRule() 获取匹配规则 JSON串。
 **rule规则树格式为嵌套结构体JSON字符串**
 `{"Value":"AND","Type":"Operation","Children":[{"Value":"OR","Type":"Operation","Children":[{"Type":"Condition","Value":"Level","Children":[{"Value":"In","Type":"Compare"},{"Value":"[1,0]","Type":"Value"}]},{"Type":"Condition","Value":"Level","Children":[{"Value":"NotIn","Type":"Compare"},{"Value":"[2]","Type":"Value"}]}]}]}`
@@ -86,7 +78,6 @@ use TencentCloud\Common\AbstractModel;
     - 下一个子节点value支持的值：整型值单位分钟
 以下示例表示：告警持续时间大于1分钟或告警持续时间大于等于2分钟或告警持续时间小于3分钟或告警持续时间小于等于4分钟
 `{\"Value\":\"AND\",\"Type\":\"Operation\",\"Children\":[{\"Value\":\"OR\",\"Type\":\"Operation\",\"Children\":[{\"Type\":\"Condition\",\"Value\":\"Duration\",\"Children\":[{\"Value\":\">\",\"Type\":\"Compare\"},{\"Value\":1,\"Type\":\"Value\"}]},{\"Type\":\"Condition\",\"Value\":\"Duration\",\"Children\":[{\"Value\":\">=\",\"Type\":\"Compare\"},{\"Value\":2,\"Type\":\"Value\"}]},{\"Type\":\"Condition\",\"Value\":\"Duration\",\"Children\":[{\"Value\":\"<\",\"Type\":\"Compare\"},{\"Value\":3,\"Type\":\"Value\"}]},{\"Type\":\"Condition\",\"Value\":\"Duration\",\"Children\":[{\"Value\":\"<=\",\"Type\":\"Compare\"},{\"Value\":4,\"Type\":\"Value\"}]}]}]}`
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRule(string $Rule) 设置匹配规则 JSON串。
 **rule规则树格式为嵌套结构体JSON字符串**
 `{"Value":"AND","Type":"Operation","Children":[{"Value":"OR","Type":"Operation","Children":[{"Type":"Condition","Value":"Level","Children":[{"Value":"In","Type":"Compare"},{"Value":"[1,0]","Type":"Value"}]},{"Type":"Condition","Value":"Level","Children":[{"Value":"NotIn","Type":"Compare"},{"Value":"[2]","Type":"Value"}]}]}]}`
@@ -145,22 +136,27 @@ use TencentCloud\Common\AbstractModel;
     - 下一个子节点value支持的值：整型值单位分钟
 以下示例表示：告警持续时间大于1分钟或告警持续时间大于等于2分钟或告警持续时间小于3分钟或告警持续时间小于等于4分钟
 `{\"Value\":\"AND\",\"Type\":\"Operation\",\"Children\":[{\"Value\":\"OR\",\"Type\":\"Operation\",\"Children\":[{\"Type\":\"Condition\",\"Value\":\"Duration\",\"Children\":[{\"Value\":\">\",\"Type\":\"Compare\"},{\"Value\":1,\"Type\":\"Value\"}]},{\"Type\":\"Condition\",\"Value\":\"Duration\",\"Children\":[{\"Value\":\">=\",\"Type\":\"Compare\"},{\"Value\":2,\"Type\":\"Value\"}]},{\"Type\":\"Condition\",\"Value\":\"Duration\",\"Children\":[{\"Value\":\"<\",\"Type\":\"Compare\"},{\"Value\":3,\"Type\":\"Value\"}]},{\"Type\":\"Condition\",\"Value\":\"Duration\",\"Children\":[{\"Value\":\"<=\",\"Type\":\"Compare\"},{\"Value\":4,\"Type\":\"Value\"}]}]}]}`
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getNoticeReceivers() 获取告警通知接收者信息。
+ * @method void setNoticeReceivers(array $NoticeReceivers) 设置告警通知接收者信息。
+ * @method array getWebCallbacks() 获取告警通知模板回调信息，包括企业微信、钉钉、飞书。
+ * @method void setWebCallbacks(array $WebCallbacks) 设置告警通知模板回调信息，包括企业微信、钉钉、飞书。
+ * @method boolean getEscalate() 获取告警升级开关。`true`：开启告警升级、`false`：关闭告警升级，默认：false
+ * @method void setEscalate(boolean $Escalate) 设置告警升级开关。`true`：开启告警升级、`false`：关闭告警升级，默认：false
+ * @method integer getType() 获取告警升级条件。`1`：无人认领且未恢复、`2`：未恢复，默认为1
+- 无人认领且未恢复：告警没有恢复并且没有人认领则升级
+- 未恢复：当前告警持续未恢复则升级
+
+ * @method void setType(integer $Type) 设置告警升级条件。`1`：无人认领且未恢复、`2`：未恢复，默认为1
+- 无人认领且未恢复：告警没有恢复并且没有人认领则升级
+- 未恢复：当前告警持续未恢复则升级
+
+ * @method integer getInterval() 获取告警升级间隔。单位：分钟，范围`[1，14400]`
+ * @method void setInterval(integer $Interval) 设置告警升级间隔。单位：分钟，范围`[1，14400]`
+ * @method EscalateNoticeInfo getEscalateNotice() 获取告警升级后下一个环节的通知渠道配置
+ * @method void setEscalateNotice(EscalateNoticeInfo $EscalateNotice) 设置告警升级后下一个环节的通知渠道配置
  */
 class NoticeRule extends AbstractModel
 {
-    /**
-     * @var array 告警通知模板接收者信息。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $NoticeReceivers;
-
-    /**
-     * @var array 告警通知模板回调信息。
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $WebCallbacks;
-
     /**
      * @var string 匹配规则 JSON串。
 **rule规则树格式为嵌套结构体JSON字符串**
@@ -220,15 +216,43 @@ class NoticeRule extends AbstractModel
     - 下一个子节点value支持的值：整型值单位分钟
 以下示例表示：告警持续时间大于1分钟或告警持续时间大于等于2分钟或告警持续时间小于3分钟或告警持续时间小于等于4分钟
 `{\"Value\":\"AND\",\"Type\":\"Operation\",\"Children\":[{\"Value\":\"OR\",\"Type\":\"Operation\",\"Children\":[{\"Type\":\"Condition\",\"Value\":\"Duration\",\"Children\":[{\"Value\":\">\",\"Type\":\"Compare\"},{\"Value\":1,\"Type\":\"Value\"}]},{\"Type\":\"Condition\",\"Value\":\"Duration\",\"Children\":[{\"Value\":\">=\",\"Type\":\"Compare\"},{\"Value\":2,\"Type\":\"Value\"}]},{\"Type\":\"Condition\",\"Value\":\"Duration\",\"Children\":[{\"Value\":\"<\",\"Type\":\"Compare\"},{\"Value\":3,\"Type\":\"Value\"}]},{\"Type\":\"Condition\",\"Value\":\"Duration\",\"Children\":[{\"Value\":\"<=\",\"Type\":\"Compare\"},{\"Value\":4,\"Type\":\"Value\"}]}]}]}`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Rule;
 
     /**
-     * @param array $NoticeReceivers 告警通知模板接收者信息。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $WebCallbacks 告警通知模板回调信息。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 告警通知接收者信息。
+     */
+    public $NoticeReceivers;
+
+    /**
+     * @var array 告警通知模板回调信息，包括企业微信、钉钉、飞书。
+     */
+    public $WebCallbacks;
+
+    /**
+     * @var boolean 告警升级开关。`true`：开启告警升级、`false`：关闭告警升级，默认：false
+     */
+    public $Escalate;
+
+    /**
+     * @var integer 告警升级条件。`1`：无人认领且未恢复、`2`：未恢复，默认为1
+- 无人认领且未恢复：告警没有恢复并且没有人认领则升级
+- 未恢复：当前告警持续未恢复则升级
+
+     */
+    public $Type;
+
+    /**
+     * @var integer 告警升级间隔。单位：分钟，范围`[1，14400]`
+     */
+    public $Interval;
+
+    /**
+     * @var EscalateNoticeInfo 告警升级后下一个环节的通知渠道配置
+     */
+    public $EscalateNotice;
+
+    /**
      * @param string $Rule 匹配规则 JSON串。
 **rule规则树格式为嵌套结构体JSON字符串**
 `{"Value":"AND","Type":"Operation","Children":[{"Value":"OR","Type":"Operation","Children":[{"Type":"Condition","Value":"Level","Children":[{"Value":"In","Type":"Compare"},{"Value":"[1,0]","Type":"Value"}]},{"Type":"Condition","Value":"Level","Children":[{"Value":"NotIn","Type":"Compare"},{"Value":"[2]","Type":"Value"}]}]}]}`
@@ -287,7 +311,15 @@ class NoticeRule extends AbstractModel
     - 下一个子节点value支持的值：整型值单位分钟
 以下示例表示：告警持续时间大于1分钟或告警持续时间大于等于2分钟或告警持续时间小于3分钟或告警持续时间小于等于4分钟
 `{\"Value\":\"AND\",\"Type\":\"Operation\",\"Children\":[{\"Value\":\"OR\",\"Type\":\"Operation\",\"Children\":[{\"Type\":\"Condition\",\"Value\":\"Duration\",\"Children\":[{\"Value\":\">\",\"Type\":\"Compare\"},{\"Value\":1,\"Type\":\"Value\"}]},{\"Type\":\"Condition\",\"Value\":\"Duration\",\"Children\":[{\"Value\":\">=\",\"Type\":\"Compare\"},{\"Value\":2,\"Type\":\"Value\"}]},{\"Type\":\"Condition\",\"Value\":\"Duration\",\"Children\":[{\"Value\":\"<\",\"Type\":\"Compare\"},{\"Value\":3,\"Type\":\"Value\"}]},{\"Type\":\"Condition\",\"Value\":\"Duration\",\"Children\":[{\"Value\":\"<=\",\"Type\":\"Compare\"},{\"Value\":4,\"Type\":\"Value\"}]}]}]}`
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $NoticeReceivers 告警通知接收者信息。
+     * @param array $WebCallbacks 告警通知模板回调信息，包括企业微信、钉钉、飞书。
+     * @param boolean $Escalate 告警升级开关。`true`：开启告警升级、`false`：关闭告警升级，默认：false
+     * @param integer $Type 告警升级条件。`1`：无人认领且未恢复、`2`：未恢复，默认为1
+- 无人认领且未恢复：告警没有恢复并且没有人认领则升级
+- 未恢复：当前告警持续未恢复则升级
+
+     * @param integer $Interval 告警升级间隔。单位：分钟，范围`[1，14400]`
+     * @param EscalateNoticeInfo $EscalateNotice 告警升级后下一个环节的通知渠道配置
      */
     function __construct()
     {
@@ -302,6 +334,10 @@ class NoticeRule extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Rule",$param) and $param["Rule"] !== null) {
+            $this->Rule = $param["Rule"];
+        }
+
         if (array_key_exists("NoticeReceivers",$param) and $param["NoticeReceivers"] !== null) {
             $this->NoticeReceivers = [];
             foreach ($param["NoticeReceivers"] as $key => $value){
@@ -320,8 +356,21 @@ class NoticeRule extends AbstractModel
             }
         }
 
-        if (array_key_exists("Rule",$param) and $param["Rule"] !== null) {
-            $this->Rule = $param["Rule"];
+        if (array_key_exists("Escalate",$param) and $param["Escalate"] !== null) {
+            $this->Escalate = $param["Escalate"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("Interval",$param) and $param["Interval"] !== null) {
+            $this->Interval = $param["Interval"];
+        }
+
+        if (array_key_exists("EscalateNotice",$param) and $param["EscalateNotice"] !== null) {
+            $this->EscalateNotice = new EscalateNoticeInfo();
+            $this->EscalateNotice->deserialize($param["EscalateNotice"]);
         }
     }
 }

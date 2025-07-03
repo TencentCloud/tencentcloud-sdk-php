@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 疾病史
  *
  * @method MainDiseaseHistoryBlock getMainDiseaseHistory() 获取主要病史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMainDiseaseHistory(MainDiseaseHistoryBlock $MainDiseaseHistory) 设置主要病史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method MainDiseaseHistoryBlock getAllergyHistory() 获取过敏史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAllergyHistory(MainDiseaseHistoryBlock $AllergyHistory) 设置过敏史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method MainDiseaseHistoryBlock getInfectHistory() 获取注射史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInfectHistory(MainDiseaseHistoryBlock $InfectHistory) 设置注射史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method SurgeryHistoryBlock getSurgeryHistory() 获取手术史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSurgeryHistory(SurgeryHistoryBlock $SurgeryHistory) 设置手术史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method TransfusionHistoryBlock getTransfusionHistory() 获取输血史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTransfusionHistory(TransfusionHistoryBlock $TransfusionHistory) 设置输血史
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DiseaseHistoryBlock extends AbstractModel
 {
     /**
      * @var MainDiseaseHistoryBlock 主要病史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MainDiseaseHistory;
 
     /**
      * @var MainDiseaseHistoryBlock 过敏史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AllergyHistory;
 
     /**
      * @var MainDiseaseHistoryBlock 注射史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InfectHistory;
 
     /**
      * @var SurgeryHistoryBlock 手术史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SurgeryHistory;
 
     /**
      * @var TransfusionHistoryBlock 输血史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TransfusionHistory;
 
     /**
      * @param MainDiseaseHistoryBlock $MainDiseaseHistory 主要病史
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MainDiseaseHistoryBlock $AllergyHistory 过敏史
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MainDiseaseHistoryBlock $InfectHistory 注射史
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SurgeryHistoryBlock $SurgeryHistory 手术史
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TransfusionHistoryBlock $TransfusionHistory 输血史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

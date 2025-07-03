@@ -23,9 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getAddress() 获取ip地址。
  * @method void setAddress(string $Address) 设置ip地址。
  * @method string getDescription() 获取备注。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置备注。
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUpdatedTime() 获取更新时间。
+ * @method void setUpdatedTime(string $UpdatedTime) 设置更新时间。
  */
 class AddressInfo extends AbstractModel
 {
@@ -36,14 +36,18 @@ class AddressInfo extends AbstractModel
 
     /**
      * @var string 备注。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
+     * @var string 更新时间。
+     */
+    public $UpdatedTime;
+
+    /**
      * @param string $Address ip地址。
      * @param string $Description 备注。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UpdatedTime 更新时间。
      */
     function __construct()
     {
@@ -64,6 +68,10 @@ class AddressInfo extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("UpdatedTime",$param) and $param["UpdatedTime"] !== null) {
+            $this->UpdatedTime = $param["UpdatedTime"];
         }
     }
 }

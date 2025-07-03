@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 退款单关联的原始订单信息
  *
  * @method string getDealName() 获取退款单关联的原始子订单号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDealName(string $DealName) 设置退款单关联的原始子订单号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRefundAmount() 获取退款金额，单位分
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRefundAmount(integer $RefundAmount) 设置退款金额，单位分
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RefundMap extends AbstractModel
 {
     /**
      * @var string 退款单关联的原始子订单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DealName;
 
     /**
      * @var integer 退款金额，单位分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RefundAmount;
 
     /**
      * @param string $DealName 退款单关联的原始子订单号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RefundAmount 退款金额，单位分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

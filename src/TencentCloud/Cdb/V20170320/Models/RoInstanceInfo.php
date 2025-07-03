@@ -66,6 +66,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeadlineTime(string $DeadlineTime) 设置RO实例到期时间，时间格式：yyyy-mm-dd hh:mm:ss，如实例为按量计费模式，则此字段值为0000-00-00 00:00:00
  * @method integer getPayType() 获取RO实例计费类型，可能返回值：0-包年包月，1-按量计费，2-后付费月结
  * @method void setPayType(integer $PayType) 设置RO实例计费类型，可能返回值：0-包年包月，1-按量计费，2-后付费月结
+ * @method string getReplicationStatus() 获取RO延迟复制状态。
+ * @method void setReplicationStatus(string $ReplicationStatus) 设置RO延迟复制状态。
  */
 class RoInstanceInfo extends AbstractModel
 {
@@ -185,6 +187,11 @@ class RoInstanceInfo extends AbstractModel
     public $PayType;
 
     /**
+     * @var string RO延迟复制状态。
+     */
+    public $ReplicationStatus;
+
+    /**
      * @param string $MasterInstanceId RO组对应的主实例的ID
      * @param string $RoStatus RO实例在RO组内的状态，可能的值：online-在线，offline-下线
      * @param string $OfflineTime RO实例在RO组内上一次下线的时间
@@ -208,6 +215,7 @@ class RoInstanceInfo extends AbstractModel
      * @param string $EngineVersion RO实例数据库引擎版本，可能返回值：5.1、5.5、5.6、5.7、8.0
      * @param string $DeadlineTime RO实例到期时间，时间格式：yyyy-mm-dd hh:mm:ss，如实例为按量计费模式，则此字段值为0000-00-00 00:00:00
      * @param integer $PayType RO实例计费类型，可能返回值：0-包年包月，1-按量计费，2-后付费月结
+     * @param string $ReplicationStatus RO延迟复制状态。
      */
     function __construct()
     {
@@ -312,6 +320,10 @@ class RoInstanceInfo extends AbstractModel
 
         if (array_key_exists("PayType",$param) and $param["PayType"] !== null) {
             $this->PayType = $param["PayType"];
+        }
+
+        if (array_key_exists("ReplicationStatus",$param) and $param["ReplicationStatus"] !== null) {
+            $this->ReplicationStatus = $param["ReplicationStatus"];
         }
     }
 }

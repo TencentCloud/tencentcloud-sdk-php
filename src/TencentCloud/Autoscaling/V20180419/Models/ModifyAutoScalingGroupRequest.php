@@ -20,32 +20,40 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAutoScalingGroup请求参数结构体
  *
- * @method string getAutoScalingGroupId() 获取伸缩组ID
- * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置伸缩组ID
+ * @method string getAutoScalingGroupId() 获取伸缩组ID。可以通过如下方式获取可用的伸缩组ID:
+<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li>
+<li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
+ * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置伸缩组ID。可以通过如下方式获取可用的伸缩组ID:
+<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li>
+<li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
  * @method string getAutoScalingGroupName() 获取伸缩组名称，在您账号中必须唯一。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超55个字节。
  * @method void setAutoScalingGroupName(string $AutoScalingGroupName) 设置伸缩组名称，在您账号中必须唯一。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超55个字节。
- * @method integer getDefaultCooldown() 获取默认冷却时间，单位秒，默认值为300
- * @method void setDefaultCooldown(integer $DefaultCooldown) 设置默认冷却时间，单位秒，默认值为300
- * @method integer getDesiredCapacity() 获取期望实例数，大小介于最小实例数和最大实例数之间
- * @method void setDesiredCapacity(integer $DesiredCapacity) 设置期望实例数，大小介于最小实例数和最大实例数之间
- * @method string getLaunchConfigurationId() 获取启动配置ID
- * @method void setLaunchConfigurationId(string $LaunchConfigurationId) 设置启动配置ID
- * @method integer getMaxSize() 获取最大实例数，取值范围为0-2000。
- * @method void setMaxSize(integer $MaxSize) 设置最大实例数，取值范围为0-2000。
- * @method integer getMinSize() 获取最小实例数，取值范围为0-2000。
- * @method void setMinSize(integer $MinSize) 设置最小实例数，取值范围为0-2000。
- * @method integer getProjectId() 获取项目ID
- * @method void setProjectId(integer $ProjectId) 设置项目ID
- * @method array getSubnetIds() 获取子网ID列表
- * @method void setSubnetIds(array $SubnetIds) 设置子网ID列表
+ * @method integer getDefaultCooldown() 获取默认冷却时间，单位秒，取值范围 [0,3600]，默认值为300。
+ * @method void setDefaultCooldown(integer $DefaultCooldown) 设置默认冷却时间，单位秒，取值范围 [0,3600]，默认值为300。
+ * @method integer getDesiredCapacity() 获取期望实例数，取值范围 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。
+ * @method void setDesiredCapacity(integer $DesiredCapacity) 设置期望实例数，取值范围 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。
+ * @method string getLaunchConfigurationId() 获取启动配置ID。可以通过如下方式获取可用的启动配置ID:
+<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 查询启动配置ID。</li>
+<li>通过调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。</li>
+ * @method void setLaunchConfigurationId(string $LaunchConfigurationId) 设置启动配置ID。可以通过如下方式获取可用的启动配置ID:
+<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 查询启动配置ID。</li>
+<li>通过调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。</li>
+ * @method integer getMaxSize() 获取最大实例数，取值范围为 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。
+ * @method void setMaxSize(integer $MaxSize) 设置最大实例数，取值范围为 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。
+ * @method integer getMinSize() 获取最小实例数，取值范围为 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。
+ * @method void setMinSize(integer $MinSize) 设置最小实例数，取值范围为 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。
+ * @method integer getProjectId() 获取项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 ProjectId 字段来获取。默认值为 0，表示使用默认项目。
+ * @method void setProjectId(integer $ProjectId) 设置项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 ProjectId 字段来获取。默认值为 0，表示使用默认项目。
+ * @method array getSubnetIds() 获取子网ID列表。有效的私有网络子网ID可通过登录[控制台](https://console.cloud.tencent.com/vpc/subnet)查询；也可以调用接口 [DescribeSubnets](https://cloud.tencent.com/document/product/215/15784) ，从接口返回中的SubnetId字段获取。
+ * @method void setSubnetIds(array $SubnetIds) 设置子网ID列表。有效的私有网络子网ID可通过登录[控制台](https://console.cloud.tencent.com/vpc/subnet)查询；也可以调用接口 [DescribeSubnets](https://cloud.tencent.com/document/product/215/15784) ，从接口返回中的SubnetId字段获取。
  * @method array getTerminationPolicies() 获取销毁策略，目前长度上限为1。取值包括 OLDEST_INSTANCE 和 NEWEST_INSTANCE。
 <li> OLDEST_INSTANCE 优先销毁伸缩组中最旧的实例。</li>
 <li> NEWEST_INSTANCE，优先销毁伸缩组中最新的实例。</li>
  * @method void setTerminationPolicies(array $TerminationPolicies) 设置销毁策略，目前长度上限为1。取值包括 OLDEST_INSTANCE 和 NEWEST_INSTANCE。
 <li> OLDEST_INSTANCE 优先销毁伸缩组中最旧的实例。</li>
 <li> NEWEST_INSTANCE，优先销毁伸缩组中最新的实例。</li>
- * @method string getVpcId() 获取VPC ID，基础网络则填空字符串。修改为具体VPC ID时，需指定相应的SubnetIds；修改为基础网络时，需指定相应的Zones。
- * @method void setVpcId(string $VpcId) 设置VPC ID，基础网络则填空字符串。修改为具体VPC ID时，需指定相应的SubnetIds；修改为基础网络时，需指定相应的Zones。
+ * @method string getVpcId() 获取私有网络ID。修改私有网络时，需将 SubnetIds 参数同步修改为该私有网络的子网。有效的 VpcId 可通过登录[控制台](https://console.cloud.tencent.com/vpc/vpc)查询；也可以调用接口 [DescribeVpc](https://cloud.tencent.com/document/api/215/15778) ，从接口返回中的 VpcId 字段获取。
+ * @method void setVpcId(string $VpcId) 设置私有网络ID。修改私有网络时，需将 SubnetIds 参数同步修改为该私有网络的子网。有效的 VpcId 可通过登录[控制台](https://console.cloud.tencent.com/vpc/vpc)查询；也可以调用接口 [DescribeVpc](https://cloud.tencent.com/document/api/215/15778) ，从接口返回中的 VpcId 字段获取。
  * @method array getZones() 获取可用区列表
  * @method void setZones(array $Zones) 设置可用区列表
  * @method string getRetryPolicy() 获取重试策略，取值包括 IMMEDIATE_RETRY、 INCREMENTAL_INTERVALS、NO_RETRY，默认取值为 IMMEDIATE_RETRY。部分成功的伸缩活动判定为一次失败活动。
@@ -70,8 +78,8 @@ use TencentCloud\Common\AbstractModel;
 如果 Zones/SubnetIds 中可用区或者子网不存在，则无论 ZonesCheckPolicy 采用何种取值，都会校验报错。
  * @method ServiceSettings getServiceSettings() 获取服务设置，包括云监控不健康替换等服务设置。
  * @method void setServiceSettings(ServiceSettings $ServiceSettings) 设置服务设置，包括云监控不健康替换等服务设置。
- * @method integer getIpv6AddressCount() 获取实例具有IPv6地址数量的配置，取值包括0、1。
- * @method void setIpv6AddressCount(integer $Ipv6AddressCount) 设置实例具有IPv6地址数量的配置，取值包括0、1。
+ * @method integer getIpv6AddressCount() 获取实例具有IPv6地址数量的配置，取值包括0、1。默认值为 0，表示实例不分配 IPv6 地址。需使用支持 IPv6 的私有网络，需在子网中开启 IPv6 CIDR，其他使用限制可参考 [IPv6使用限制](https://cloud.tencent.com/document/product/1142/38369)。
+ * @method void setIpv6AddressCount(integer $Ipv6AddressCount) 设置实例具有IPv6地址数量的配置，取值包括0、1。默认值为 0，表示实例不分配 IPv6 地址。需使用支持 IPv6 的私有网络，需在子网中开启 IPv6 CIDR，其他使用限制可参考 [IPv6使用限制](https://cloud.tencent.com/document/product/1142/38369)。
  * @method string getMultiZoneSubnetPolicy() 获取多可用区/子网策略，取值包括 PRIORITY 和 EQUALITY，默认为 PRIORITY。
 <li> PRIORITY，按照可用区/子网列表的顺序，作为优先级来尝试创建实例，如果优先级最高的可用区/子网可以创建成功，则总在该可用区/子网创建。</li> 
 <li> EQUALITY：扩容出的实例会打散到多个可用区/子网，保证扩容后的各个可用区/子网实例数相对均衡。</li> 
@@ -118,7 +126,9 @@ use TencentCloud\Common\AbstractModel;
 class ModifyAutoScalingGroupRequest extends AbstractModel
 {
     /**
-     * @var string 伸缩组ID
+     * @var string 伸缩组ID。可以通过如下方式获取可用的伸缩组ID:
+<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li>
+<li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
      */
     public $AutoScalingGroupId;
 
@@ -128,37 +138,39 @@ class ModifyAutoScalingGroupRequest extends AbstractModel
     public $AutoScalingGroupName;
 
     /**
-     * @var integer 默认冷却时间，单位秒，默认值为300
+     * @var integer 默认冷却时间，单位秒，取值范围 [0,3600]，默认值为300。
      */
     public $DefaultCooldown;
 
     /**
-     * @var integer 期望实例数，大小介于最小实例数和最大实例数之间
+     * @var integer 期望实例数，取值范围 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。
      */
     public $DesiredCapacity;
 
     /**
-     * @var string 启动配置ID
+     * @var string 启动配置ID。可以通过如下方式获取可用的启动配置ID:
+<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 查询启动配置ID。</li>
+<li>通过调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。</li>
      */
     public $LaunchConfigurationId;
 
     /**
-     * @var integer 最大实例数，取值范围为0-2000。
+     * @var integer 最大实例数，取值范围为 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。
      */
     public $MaxSize;
 
     /**
-     * @var integer 最小实例数，取值范围为0-2000。
+     * @var integer 最小实例数，取值范围为 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。
      */
     public $MinSize;
 
     /**
-     * @var integer 项目ID
+     * @var integer 项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 ProjectId 字段来获取。默认值为 0，表示使用默认项目。
      */
     public $ProjectId;
 
     /**
-     * @var array 子网ID列表
+     * @var array 子网ID列表。有效的私有网络子网ID可通过登录[控制台](https://console.cloud.tencent.com/vpc/subnet)查询；也可以调用接口 [DescribeSubnets](https://cloud.tencent.com/document/product/215/15784) ，从接口返回中的SubnetId字段获取。
      */
     public $SubnetIds;
 
@@ -170,7 +182,7 @@ class ModifyAutoScalingGroupRequest extends AbstractModel
     public $TerminationPolicies;
 
     /**
-     * @var string VPC ID，基础网络则填空字符串。修改为具体VPC ID时，需指定相应的SubnetIds；修改为基础网络时，需指定相应的Zones。
+     * @var string 私有网络ID。修改私有网络时，需将 SubnetIds 参数同步修改为该私有网络的子网。有效的 VpcId 可通过登录[控制台](https://console.cloud.tencent.com/vpc/vpc)查询；也可以调用接口 [DescribeVpc](https://cloud.tencent.com/document/api/215/15778) ，从接口返回中的 VpcId 字段获取。
      */
     public $VpcId;
 
@@ -203,7 +215,7 @@ class ModifyAutoScalingGroupRequest extends AbstractModel
     public $ServiceSettings;
 
     /**
-     * @var integer 实例具有IPv6地址数量的配置，取值包括0、1。
+     * @var integer 实例具有IPv6地址数量的配置，取值包括0、1。默认值为 0，表示实例不分配 IPv6 地址。需使用支持 IPv6 的私有网络，需在子网中开启 IPv6 CIDR，其他使用限制可参考 [IPv6使用限制](https://cloud.tencent.com/document/product/1142/38369)。
      */
     public $Ipv6AddressCount;
 
@@ -257,19 +269,23 @@ class ModifyAutoScalingGroupRequest extends AbstractModel
     public $InstanceNameIndexSettings;
 
     /**
-     * @param string $AutoScalingGroupId 伸缩组ID
+     * @param string $AutoScalingGroupId 伸缩组ID。可以通过如下方式获取可用的伸缩组ID:
+<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 查询伸缩组ID。</li>
+<li>通过调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。</li>
      * @param string $AutoScalingGroupName 伸缩组名称，在您账号中必须唯一。名称仅支持中文、英文、数字、下划线、分隔符"-"、小数点，最大长度不能超55个字节。
-     * @param integer $DefaultCooldown 默认冷却时间，单位秒，默认值为300
-     * @param integer $DesiredCapacity 期望实例数，大小介于最小实例数和最大实例数之间
-     * @param string $LaunchConfigurationId 启动配置ID
-     * @param integer $MaxSize 最大实例数，取值范围为0-2000。
-     * @param integer $MinSize 最小实例数，取值范围为0-2000。
-     * @param integer $ProjectId 项目ID
-     * @param array $SubnetIds 子网ID列表
+     * @param integer $DefaultCooldown 默认冷却时间，单位秒，取值范围 [0,3600]，默认值为300。
+     * @param integer $DesiredCapacity 期望实例数，取值范围 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。
+     * @param string $LaunchConfigurationId 启动配置ID。可以通过如下方式获取可用的启动配置ID:
+<li>通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/config) 查询启动配置ID。</li>
+<li>通过调用接口 [DescribeLaunchConfigurations](https://cloud.tencent.com/document/api/377/20445) ，取返回信息中的 LaunchConfigurationId 获取启动配置ID。</li>
+     * @param integer $MaxSize 最大实例数，取值范围为 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。
+     * @param integer $MinSize 最小实例数，取值范围为 [0,2000]。需满足最大值大于等于期望值，期望值大于等于最小值。
+     * @param integer $ProjectId 项目ID。该参数可以通过调用 [DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 ProjectId 字段来获取。默认值为 0，表示使用默认项目。
+     * @param array $SubnetIds 子网ID列表。有效的私有网络子网ID可通过登录[控制台](https://console.cloud.tencent.com/vpc/subnet)查询；也可以调用接口 [DescribeSubnets](https://cloud.tencent.com/document/product/215/15784) ，从接口返回中的SubnetId字段获取。
      * @param array $TerminationPolicies 销毁策略，目前长度上限为1。取值包括 OLDEST_INSTANCE 和 NEWEST_INSTANCE。
 <li> OLDEST_INSTANCE 优先销毁伸缩组中最旧的实例。</li>
 <li> NEWEST_INSTANCE，优先销毁伸缩组中最新的实例。</li>
-     * @param string $VpcId VPC ID，基础网络则填空字符串。修改为具体VPC ID时，需指定相应的SubnetIds；修改为基础网络时，需指定相应的Zones。
+     * @param string $VpcId 私有网络ID。修改私有网络时，需将 SubnetIds 参数同步修改为该私有网络的子网。有效的 VpcId 可通过登录[控制台](https://console.cloud.tencent.com/vpc/vpc)查询；也可以调用接口 [DescribeVpc](https://cloud.tencent.com/document/api/215/15778) ，从接口返回中的 VpcId 字段获取。
      * @param array $Zones 可用区列表
      * @param string $RetryPolicy 重试策略，取值包括 IMMEDIATE_RETRY、 INCREMENTAL_INTERVALS、NO_RETRY，默认取值为 IMMEDIATE_RETRY。部分成功的伸缩活动判定为一次失败活动。
 <li>IMMEDIATE_RETRY，立即重试，在较短时间内快速重试，连续失败超过一定次数（5次）后不再重试。</li>
@@ -282,7 +298,7 @@ class ModifyAutoScalingGroupRequest extends AbstractModel
 可用区或子网不可用的常见原因包括该可用区CVM实例类型售罄、该可用区CBS云盘售罄、该可用区配额不足、该子网IP不足等。
 如果 Zones/SubnetIds 中可用区或者子网不存在，则无论 ZonesCheckPolicy 采用何种取值，都会校验报错。
      * @param ServiceSettings $ServiceSettings 服务设置，包括云监控不健康替换等服务设置。
-     * @param integer $Ipv6AddressCount 实例具有IPv6地址数量的配置，取值包括0、1。
+     * @param integer $Ipv6AddressCount 实例具有IPv6地址数量的配置，取值包括0、1。默认值为 0，表示实例不分配 IPv6 地址。需使用支持 IPv6 的私有网络，需在子网中开启 IPv6 CIDR，其他使用限制可参考 [IPv6使用限制](https://cloud.tencent.com/document/product/1142/38369)。
      * @param string $MultiZoneSubnetPolicy 多可用区/子网策略，取值包括 PRIORITY 和 EQUALITY，默认为 PRIORITY。
 <li> PRIORITY，按照可用区/子网列表的顺序，作为优先级来尝试创建实例，如果优先级最高的可用区/子网可以创建成功，则总在该可用区/子网创建。</li> 
 <li> EQUALITY：扩容出的实例会打散到多个可用区/子网，保证扩容后的各个可用区/子网实例数相对均衡。</li> 

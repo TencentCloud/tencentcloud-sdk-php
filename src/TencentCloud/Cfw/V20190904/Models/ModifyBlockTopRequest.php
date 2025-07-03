@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyBlockTop请求参数结构体
  *
- * @method string getUniqueId() 获取记录id
- * @method void setUniqueId(string $UniqueId) 设置记录id
  * @method string getOpeType() 获取操作类型 1 置顶 0取消
  * @method void setOpeType(string $OpeType) 设置操作类型 1 置顶 0取消
+ * @method string getUniqueId() 获取记录id
+ * @method void setUniqueId(string $UniqueId) 设置记录id
  */
 class ModifyBlockTopRequest extends AbstractModel
 {
-    /**
-     * @var string 记录id
-     */
-    public $UniqueId;
-
     /**
      * @var string 操作类型 1 置顶 0取消
      */
     public $OpeType;
 
     /**
-     * @param string $UniqueId 记录id
+     * @var string 记录id
+     */
+    public $UniqueId;
+
+    /**
      * @param string $OpeType 操作类型 1 置顶 0取消
+     * @param string $UniqueId 记录id
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class ModifyBlockTopRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UniqueId",$param) and $param["UniqueId"] !== null) {
-            $this->UniqueId = $param["UniqueId"];
-        }
-
         if (array_key_exists("OpeType",$param) and $param["OpeType"] !== null) {
             $this->OpeType = $param["OpeType"];
+        }
+
+        if (array_key_exists("UniqueId",$param) and $param["UniqueId"] !== null) {
+            $this->UniqueId = $param["UniqueId"];
         }
     }
 }

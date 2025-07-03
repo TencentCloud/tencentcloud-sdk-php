@@ -21,75 +21,51 @@ use TencentCloud\Common\AbstractModel;
  * 防火墙开关列表对象
  *
  * @method string getPublicIp() 获取公网IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicIp(string $PublicIp) 设置公网IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIntranetIp() 获取内网IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIntranetIp(string $IntranetIp) 设置内网IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceName() 获取实例名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceName(string $InstanceName) 设置实例名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAssetType() 获取资产类型
  * @method void setAssetType(string $AssetType) 设置资产类型
  * @method string getArea() 获取地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setArea(string $Area) 设置地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSwitch() 获取防火墙开关
  * @method void setSwitch(integer $Switch) 设置防火墙开关
  * @method integer getId() 获取id值
  * @method void setId(integer $Id) 设置id值
  * @method integer getPublicIpType() 获取公网 IP 类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublicIpType(integer $PublicIpType) 设置公网 IP 类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPortTimes() 获取风险端口数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPortTimes(integer $PortTimes) 设置风险端口数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLastTime() 获取最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastTime(string $LastTime) 设置最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getScanMode() 获取扫描深度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScanMode(string $ScanMode) 设置扫描深度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScanStatus() 获取扫描状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScanStatus(integer $ScanStatus) 设置扫描状态
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SwitchListsData extends AbstractModel
 {
     /**
      * @var string 公网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicIp;
 
     /**
      * @var string 内网IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IntranetIp;
 
     /**
      * @var string 实例名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceName;
 
     /**
      * @var string 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
@@ -100,7 +76,6 @@ class SwitchListsData extends AbstractModel
 
     /**
      * @var string 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Area;
 
@@ -116,58 +91,43 @@ class SwitchListsData extends AbstractModel
 
     /**
      * @var integer 公网 IP 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublicIpType;
 
     /**
      * @var integer 风险端口数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PortTimes;
 
     /**
      * @var string 最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastTime;
 
     /**
      * @var string 扫描深度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScanMode;
 
     /**
      * @var integer 扫描状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScanStatus;
 
     /**
      * @param string $PublicIp 公网IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IntranetIp 内网IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 实例名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AssetType 资产类型
      * @param string $Area 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Switch 防火墙开关
      * @param integer $Id id值
      * @param integer $PublicIpType 公网 IP 类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PortTimes 风险端口数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastTime 最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScanMode 扫描深度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ScanStatus 扫描状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

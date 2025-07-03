@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ParseNfcData请求参数结构体
  *
- * @method string getReqId() 获取前端SDK返回
- * @method void setReqId(string $ReqId) 设置前端SDK返回
+ * @method string getReqId() 获取前端SDK返回。
+ * @method void setReqId(string $ReqId) 设置前端SDK返回。
  */
 class ParseNfcDataRequest extends AbstractModel
 {
     /**
-     * @var string 前端SDK返回
+     * @var string 前端SDK返回。
      */
     public $ReqId;
 
     /**
-     * @param string $ReqId 前端SDK返回
+     * @param string $ReqId 前端SDK返回。
      */
     function __construct()
     {

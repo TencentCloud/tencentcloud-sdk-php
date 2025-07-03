@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 意愿核身点头确认模式结果详细数据
  *
  * @method string getVideo() 获取视频base64编码（其中包含全程提示文本和点头音频，mp4格式）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVideo(string $Video) 设置视频base64编码（其中包含全程提示文本和点头音频，mp4格式）
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class IntentionActionResultDetail extends AbstractModel
 {
     /**
      * @var string 视频base64编码（其中包含全程提示文本和点头音频，mp4格式）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Video;
 
     /**
      * @param string $Video 视频base64编码（其中包含全程提示文本和点头音频，mp4格式）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

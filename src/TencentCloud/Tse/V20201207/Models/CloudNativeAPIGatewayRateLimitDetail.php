@@ -25,43 +25,31 @@ use TencentCloud\Common\AbstractModel;
  * @method array getQpsThresholds() 获取qps阈值
  * @method void setQpsThresholds(array $QpsThresholds) 设置qps阈值
  * @method string getPath() 获取需要进行流量控制的请求路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPath(string $Path) 设置需要进行流量控制的请求路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHeader() 获取需要进行流量控制的请求头Key
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeader(string $Header) 设置需要进行流量控制的请求头Key
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLimitBy() 获取限流依据
 ip service consumer credential path header
  * @method void setLimitBy(string $LimitBy) 设置限流依据
 ip service consumer credential path header
  * @method ExternalRedis getExternalRedis() 获取外部redis配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExternalRedis(ExternalRedis $ExternalRedis) 设置外部redis配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPolicy() 获取计数器策略 
 local 单机
 redis  默认redis
 external_redis 外部redis
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolicy(string $Policy) 设置计数器策略 
 local 单机
 redis  默认redis
 external_redis 外部redis
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method RateLimitResponse getRateLimitResponse() 获取响应配置，响应策略为text
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRateLimitResponse(RateLimitResponse $RateLimitResponse) 设置响应配置，响应策略为text
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRateLimitResponseUrl() 获取请求转发地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRateLimitResponseUrl(string $RateLimitResponseUrl) 设置请求转发地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResponseType() 获取响应策略
 url请求转发
 text 响应配置
@@ -101,13 +89,11 @@ class CloudNativeAPIGatewayRateLimitDetail extends AbstractModel
 
     /**
      * @var string 需要进行流量控制的请求路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Path;
 
     /**
      * @var string 需要进行流量控制的请求头Key
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Header;
 
@@ -119,7 +105,6 @@ ip service consumer credential path header
 
     /**
      * @var ExternalRedis 外部redis配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExternalRedis;
 
@@ -129,20 +114,17 @@ local 单机
 redis  默认redis
 external_redis 外部redis
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Policy;
 
     /**
      * @var RateLimitResponse 响应配置，响应策略为text
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RateLimitResponse;
 
     /**
      * @var string 请求转发地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RateLimitResponseUrl;
 
@@ -186,24 +168,18 @@ default 直接返回
      * @param boolean $Enabled 插件启用状态
      * @param array $QpsThresholds qps阈值
      * @param string $Path 需要进行流量控制的请求路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Header 需要进行流量控制的请求头Key
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LimitBy 限流依据
 ip service consumer credential path header
      * @param ExternalRedis $ExternalRedis 外部redis配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Policy 计数器策略 
 local 单机
 redis  默认redis
 external_redis 外部redis
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param RateLimitResponse $RateLimitResponse 响应配置，响应策略为text
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RateLimitResponseUrl 请求转发地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResponseType 响应策略
 url请求转发
 text 响应配置

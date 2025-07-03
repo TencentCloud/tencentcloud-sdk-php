@@ -31,9 +31,7 @@ use TencentCloud\Common\AbstractModel;
  * @method AiAnalysisTaskCoverInput getInput() 获取智能封面任务输入。
  * @method void setInput(AiAnalysisTaskCoverInput $Input) 设置智能封面任务输入。
  * @method AiAnalysisTaskCoverOutput getOutput() 获取智能封面任务输出。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutput(AiAnalysisTaskCoverOutput $Output) 设置智能封面任务输出。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProgress() 获取智能封面任务进度，取值范围 [0-100] 。
  * @method void setProgress(integer $Progress) 设置智能封面任务进度，取值范围 [0-100] 。
  * @method string getBeginProcessTime() 获取智能封面任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
@@ -70,7 +68,6 @@ class AiAnalysisTaskCoverResult extends AbstractModel
 
     /**
      * @var AiAnalysisTaskCoverOutput 智能封面任务输出。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Output;
 
@@ -96,7 +93,6 @@ class AiAnalysisTaskCoverResult extends AbstractModel
      * @param string $Message 错误信息。
      * @param AiAnalysisTaskCoverInput $Input 智能封面任务输入。
      * @param AiAnalysisTaskCoverOutput $Output 智能封面任务输出。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Progress 智能封面任务进度，取值范围 [0-100] 。
      * @param string $BeginProcessTime 智能封面任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      * @param string $FinishTime 智能封面任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。

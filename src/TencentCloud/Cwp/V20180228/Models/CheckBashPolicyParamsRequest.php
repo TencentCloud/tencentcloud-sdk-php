@@ -20,21 +20,40 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CheckBashPolicyParams请求参数结构体
  *
- * @method string getCheckField() 获取校验内容 Name或Rule ，两个都要校验时逗号分割
- * @method void setCheckField(string $CheckField) 设置校验内容 Name或Rule ，两个都要校验时逗号分割
+ * @method string getCheckField() 获取校验内容字段,如果需要检测多个字段时,用逗号分割
+<li>Name 策略名称</li>
+<li>Process 进程</li>
+<li>Name PProcess 父进程</li>
+<li>Name AProcess 祖先进程</li>
+
+ * @method void setCheckField(string $CheckField) 设置校验内容字段,如果需要检测多个字段时,用逗号分割
+<li>Name 策略名称</li>
+<li>Process 进程</li>
+<li>Name PProcess 父进程</li>
+<li>Name AProcess 祖先进程</li>
+
  * @method integer getEventId() 获取在事件列表中新增白名时需要提交事件ID
  * @method void setEventId(integer $EventId) 设置在事件列表中新增白名时需要提交事件ID
  * @method string getName() 获取填入的规则名称
  * @method void setName(string $Name) 设置填入的规则名称
- * @method string getRule() 获取用户填入的正则表达式："正则表达式" 需与 "提交EventId对应的命令内容" 相匹配
- * @method void setRule(string $Rule) 设置用户填入的正则表达式："正则表达式" 需与 "提交EventId对应的命令内容" 相匹配
+ * @method string getRule() 获取该字段不在维护,如果填入该参数,自动替换到Rules.Process
+
+ * @method void setRule(string $Rule) 设置该字段不在维护,如果填入该参数,自动替换到Rules.Process
+
  * @method integer getId() 获取编辑时传的规则id
  * @method void setId(integer $Id) 设置编辑时传的规则id
+ * @method PolicyRules getRules() 获取规则表达式
+ * @method void setRules(PolicyRules $Rules) 设置规则表达式
  */
 class CheckBashPolicyParamsRequest extends AbstractModel
 {
     /**
-     * @var string 校验内容 Name或Rule ，两个都要校验时逗号分割
+     * @var string 校验内容字段,如果需要检测多个字段时,用逗号分割
+<li>Name 策略名称</li>
+<li>Process 进程</li>
+<li>Name PProcess 父进程</li>
+<li>Name AProcess 祖先进程</li>
+
      */
     public $CheckField;
 
@@ -49,7 +68,8 @@ class CheckBashPolicyParamsRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string 用户填入的正则表达式："正则表达式" 需与 "提交EventId对应的命令内容" 相匹配
+     * @var string 该字段不在维护,如果填入该参数,自动替换到Rules.Process
+
      */
     public $Rule;
 
@@ -59,11 +79,23 @@ class CheckBashPolicyParamsRequest extends AbstractModel
     public $Id;
 
     /**
-     * @param string $CheckField 校验内容 Name或Rule ，两个都要校验时逗号分割
+     * @var PolicyRules 规则表达式
+     */
+    public $Rules;
+
+    /**
+     * @param string $CheckField 校验内容字段,如果需要检测多个字段时,用逗号分割
+<li>Name 策略名称</li>
+<li>Process 进程</li>
+<li>Name PProcess 父进程</li>
+<li>Name AProcess 祖先进程</li>
+
      * @param integer $EventId 在事件列表中新增白名时需要提交事件ID
      * @param string $Name 填入的规则名称
-     * @param string $Rule 用户填入的正则表达式："正则表达式" 需与 "提交EventId对应的命令内容" 相匹配
+     * @param string $Rule 该字段不在维护,如果填入该参数,自动替换到Rules.Process
+
      * @param integer $Id 编辑时传的规则id
+     * @param PolicyRules $Rules 规则表达式
      */
     function __construct()
     {
@@ -96,6 +128,11 @@ class CheckBashPolicyParamsRequest extends AbstractModel
 
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("Rules",$param) and $param["Rules"] !== null) {
+            $this->Rules = new PolicyRules();
+            $this->Rules->deserialize($param["Rules"]);
         }
     }
 }

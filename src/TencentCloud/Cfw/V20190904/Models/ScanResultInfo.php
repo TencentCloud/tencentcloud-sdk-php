@@ -18,42 +18,32 @@ namespace TencentCloud\Cfw\V20190904\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 新手引导扫描结果信息PortNum   int
-	LeakNum   int
-	IPNum     int
-	IPStatus  bool
-	IdpStatus bool
-	BanStatus bool
+ * 新手引导扫描结果信息
  *
- * @method integer getLeakNum() 获取暴露漏洞数量
- * @method void setLeakNum(integer $LeakNum) 设置暴露漏洞数量
+ * @method boolean getBanStatus() 获取是否禁封端口
+ * @method void setBanStatus(boolean $BanStatus) 设置是否禁封端口
  * @method integer getIPNum() 获取防护ip数量
  * @method void setIPNum(integer $IPNum) 设置防护ip数量
- * @method integer getPortNum() 获取暴露端口数量
- * @method void setPortNum(integer $PortNum) 设置暴露端口数量
  * @method boolean getIPStatus() 获取是否开启防护
  * @method void setIPStatus(boolean $IPStatus) 设置是否开启防护
  * @method boolean getIdpStatus() 获取是否拦截攻击
  * @method void setIdpStatus(boolean $IdpStatus) 设置是否拦截攻击
- * @method boolean getBanStatus() 获取是否禁封端口
- * @method void setBanStatus(boolean $BanStatus) 设置是否禁封端口
+ * @method integer getLeakNum() 获取暴露漏洞数量
+ * @method void setLeakNum(integer $LeakNum) 设置暴露漏洞数量
+ * @method integer getPortNum() 获取暴露端口数量
+ * @method void setPortNum(integer $PortNum) 设置暴露端口数量
  */
 class ScanResultInfo extends AbstractModel
 {
     /**
-     * @var integer 暴露漏洞数量
+     * @var boolean 是否禁封端口
      */
-    public $LeakNum;
+    public $BanStatus;
 
     /**
      * @var integer 防护ip数量
      */
     public $IPNum;
-
-    /**
-     * @var integer 暴露端口数量
-     */
-    public $PortNum;
 
     /**
      * @var boolean 是否开启防护
@@ -66,17 +56,22 @@ class ScanResultInfo extends AbstractModel
     public $IdpStatus;
 
     /**
-     * @var boolean 是否禁封端口
+     * @var integer 暴露漏洞数量
      */
-    public $BanStatus;
+    public $LeakNum;
 
     /**
-     * @param integer $LeakNum 暴露漏洞数量
+     * @var integer 暴露端口数量
+     */
+    public $PortNum;
+
+    /**
+     * @param boolean $BanStatus 是否禁封端口
      * @param integer $IPNum 防护ip数量
-     * @param integer $PortNum 暴露端口数量
      * @param boolean $IPStatus 是否开启防护
      * @param boolean $IdpStatus 是否拦截攻击
-     * @param boolean $BanStatus 是否禁封端口
+     * @param integer $LeakNum 暴露漏洞数量
+     * @param integer $PortNum 暴露端口数量
      */
     function __construct()
     {
@@ -91,16 +86,12 @@ class ScanResultInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LeakNum",$param) and $param["LeakNum"] !== null) {
-            $this->LeakNum = $param["LeakNum"];
+        if (array_key_exists("BanStatus",$param) and $param["BanStatus"] !== null) {
+            $this->BanStatus = $param["BanStatus"];
         }
 
         if (array_key_exists("IPNum",$param) and $param["IPNum"] !== null) {
             $this->IPNum = $param["IPNum"];
-        }
-
-        if (array_key_exists("PortNum",$param) and $param["PortNum"] !== null) {
-            $this->PortNum = $param["PortNum"];
         }
 
         if (array_key_exists("IPStatus",$param) and $param["IPStatus"] !== null) {
@@ -111,8 +102,12 @@ class ScanResultInfo extends AbstractModel
             $this->IdpStatus = $param["IdpStatus"];
         }
 
-        if (array_key_exists("BanStatus",$param) and $param["BanStatus"] !== null) {
-            $this->BanStatus = $param["BanStatus"];
+        if (array_key_exists("LeakNum",$param) and $param["LeakNum"] !== null) {
+            $this->LeakNum = $param["LeakNum"];
+        }
+
+        if (array_key_exists("PortNum",$param) and $param["PortNum"] !== null) {
+            $this->PortNum = $param["PortNum"];
         }
     }
 }

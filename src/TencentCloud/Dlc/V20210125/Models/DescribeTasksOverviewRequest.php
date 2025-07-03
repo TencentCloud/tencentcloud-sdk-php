@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilters(array $Filters) 设置筛选条件
  * @method string getDataEngineName() 获取引擎名
  * @method void setDataEngineName(string $DataEngineName) 设置引擎名
+ * @method array getHouseIds() 获取DataEngine-dm8bjs29
+ * @method void setHouseIds(array $HouseIds) 设置DataEngine-dm8bjs29
  */
 class DescribeTasksOverviewRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeTasksOverviewRequest extends AbstractModel
     public $DataEngineName;
 
     /**
+     * @var array DataEngine-dm8bjs29
+     */
+    public $HouseIds;
+
+    /**
      * @param string $StartTime 开始时间
      * @param string $EndTime 结束时间
      * @param array $Filters 筛选条件
      * @param string $DataEngineName 引擎名
+     * @param array $HouseIds DataEngine-dm8bjs29
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class DescribeTasksOverviewRequest extends AbstractModel
 
         if (array_key_exists("DataEngineName",$param) and $param["DataEngineName"] !== null) {
             $this->DataEngineName = $param["DataEngineName"];
+        }
+
+        if (array_key_exists("HouseIds",$param) and $param["HouseIds"] !== null) {
+            $this->HouseIds = $param["HouseIds"];
         }
     }
 }

@@ -21,129 +21,89 @@ use TencentCloud\Common\AbstractModel;
  * 免疫接种记录
  *
  * @method string getId() 获取序号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(string $Id) 设置序号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVaccine() 获取疫苗名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVaccine(string $Vaccine) 设置疫苗名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDose() 获取剂次
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDose(string $Dose) 设置剂次
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDate() 获取接种日期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDate(string $Date) 设置接种日期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLotNumber() 获取疫苗批号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLotNumber(string $LotNumber) 设置疫苗批号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getManufacturer() 获取生产企业
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setManufacturer(string $Manufacturer) 设置生产企业
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClinic() 获取接种单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClinic(string $Clinic) 设置接种单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSite() 获取接种部位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSite(string $Site) 设置接种部位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProvider() 获取接种者
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProvider(string $Provider) 设置接种者
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLot() 获取疫苗批号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLot(string $Lot) 设置疫苗批号
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Vaccination extends AbstractModel
 {
     /**
      * @var string 序号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var string 疫苗名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Vaccine;
 
     /**
      * @var string 剂次
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Dose;
 
     /**
      * @var string 接种日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Date;
 
     /**
      * @var string 疫苗批号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LotNumber;
 
     /**
      * @var string 生产企业
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Manufacturer;
 
     /**
      * @var string 接种单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Clinic;
 
     /**
      * @var string 接种部位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Site;
 
     /**
      * @var string 接种者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Provider;
 
     /**
      * @var string 疫苗批号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Lot;
 
     /**
      * @param string $Id 序号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Vaccine 疫苗名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Dose 剂次
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Date 接种日期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LotNumber 疫苗批号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Manufacturer 生产企业
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Clinic 接种单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Site 接种部位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Provider 接种者
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Lot 疫苗批号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

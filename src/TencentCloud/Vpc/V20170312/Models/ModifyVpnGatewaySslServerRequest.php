@@ -32,10 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSslVpnProtocol(string $SslVpnProtocol) 设置SSL VPN服务端监听协议。当前仅支持 UDP。默认UDP
  * @method integer getSslVpnPort() 获取SSL VPN服务端监听协议端口。
  * @method void setSslVpnPort(integer $SslVpnPort) 设置SSL VPN服务端监听协议端口。
- * @method string getEncryptAlgorithm() 获取加密算法。可选 'AES-128-CBC', 'AES-192-CBC', 'AES-256-CBC', 'NONE'。默认NONE
- * @method void setEncryptAlgorithm(string $EncryptAlgorithm) 设置加密算法。可选 'AES-128-CBC', 'AES-192-CBC', 'AES-256-CBC', 'NONE'。默认NONE
- * @method string getIntegrityAlgorithm() 获取认证算法。可选 'SHA1', 'MD5', 'NONE'。默认NONE
- * @method void setIntegrityAlgorithm(string $IntegrityAlgorithm) 设置认证算法。可选 'SHA1', 'MD5', 'NONE'。默认NONE
+ * @method string getEncryptAlgorithm() 获取加密算法。可选 'AES-128-CBC','AES-192-CBC', 'AES-256-CBC', 默认AES-128-CBC。
+ * @method void setEncryptAlgorithm(string $EncryptAlgorithm) 设置加密算法。可选 'AES-128-CBC','AES-192-CBC', 'AES-256-CBC', 默认AES-128-CBC。
+ * @method string getIntegrityAlgorithm() 获取认证算法。可选 'SHA1'，默认SHA1。
+ * @method void setIntegrityAlgorithm(string $IntegrityAlgorithm) 设置认证算法。可选 'SHA1'，默认SHA1。
  * @method boolean getCompress() 获取是否支持压缩。当前不支持压缩。默认False。
  * @method void setCompress(boolean $Compress) 设置是否支持压缩。当前不支持压缩。默认False。
  * @method boolean getSsoEnabled() 获取是否开启SSO认证。默认为False。该功能当前需要申请开白使用。
@@ -76,12 +76,12 @@ class ModifyVpnGatewaySslServerRequest extends AbstractModel
     public $SslVpnPort;
 
     /**
-     * @var string 加密算法。可选 'AES-128-CBC', 'AES-192-CBC', 'AES-256-CBC', 'NONE'。默认NONE
+     * @var string 加密算法。可选 'AES-128-CBC','AES-192-CBC', 'AES-256-CBC', 默认AES-128-CBC。
      */
     public $EncryptAlgorithm;
 
     /**
-     * @var string 认证算法。可选 'SHA1', 'MD5', 'NONE'。默认NONE
+     * @var string 认证算法。可选 'SHA1'，默认SHA1。
      */
     public $IntegrityAlgorithm;
 
@@ -107,8 +107,8 @@ class ModifyVpnGatewaySslServerRequest extends AbstractModel
      * @param string $RemoteAddress 客户端地址
      * @param string $SslVpnProtocol SSL VPN服务端监听协议。当前仅支持 UDP。默认UDP
      * @param integer $SslVpnPort SSL VPN服务端监听协议端口。
-     * @param string $EncryptAlgorithm 加密算法。可选 'AES-128-CBC', 'AES-192-CBC', 'AES-256-CBC', 'NONE'。默认NONE
-     * @param string $IntegrityAlgorithm 认证算法。可选 'SHA1', 'MD5', 'NONE'。默认NONE
+     * @param string $EncryptAlgorithm 加密算法。可选 'AES-128-CBC','AES-192-CBC', 'AES-256-CBC', 默认AES-128-CBC。
+     * @param string $IntegrityAlgorithm 认证算法。可选 'SHA1'，默认SHA1。
      * @param boolean $Compress 是否支持压缩。当前不支持压缩。默认False。
      * @param boolean $SsoEnabled 是否开启SSO认证。默认为False。该功能当前需要申请开白使用。
      * @param string $SamlData SAML-DATA

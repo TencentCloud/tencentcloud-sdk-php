@@ -48,6 +48,12 @@ use TencentCloud\Common\AbstractModel;
 默认值：Loop。
  * @method string getUrl() 获取轮播播放地址。
  * @method void setUrl(string $Url) 设置轮播播放地址。
+ * @method string getCreateTime() 获取创建时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
+ * @method void setCreateTime(string $CreateTime) 设置创建时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
+ * @method string getUpdateTime() 获取更新时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
+ * @method void setUpdateTime(string $UpdateTime) 设置更新时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
+ * @method string getExpiredTime() 获取过期时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)，过期后将停止播单的播放。“9999-12-31T23:59:59+08:00”表示永不过期。
+ * @method void setExpiredTime(string $ExpiredTime) 设置过期时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)，过期后将停止播单的播放。“9999-12-31T23:59:59+08:00”表示永不过期。
  */
 class RoundPlayInfo extends AbstractModel
 {
@@ -98,6 +104,21 @@ class RoundPlayInfo extends AbstractModel
     public $Url;
 
     /**
+     * @var string 创建时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
+     */
+    public $CreateTime;
+
+    /**
+     * @var string 更新时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
+     */
+    public $UpdateTime;
+
+    /**
+     * @var string 过期时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)，过期后将停止播单的播放。“9999-12-31T23:59:59+08:00”表示永不过期。
+     */
+    public $ExpiredTime;
+
+    /**
      * @param string $RoundPlayId 轮播播单标识。
      * @param string $StartTime 启播时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
      * @param array $RoundPlaylist 轮播列表。
@@ -112,6 +133,9 @@ class RoundPlayInfo extends AbstractModel
 <li>Linear：单次播放，播单播放完停止播放。</li>
 默认值：Loop。
      * @param string $Url 轮播播放地址。
+     * @param string $CreateTime 创建时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
+     * @param string $UpdateTime 更新时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)。
+     * @param string $ExpiredTime 过期时间，格式按照 ISO 8601标准表示，详见 [ISO 日期格式说明](https://cloud.tencent.com/document/product/266/11732#52)，过期后将停止播单的播放。“9999-12-31T23:59:59+08:00”表示永不过期。
      */
     function __construct()
     {
@@ -161,6 +185,18 @@ class RoundPlayInfo extends AbstractModel
 
         if (array_key_exists("Url",$param) and $param["Url"] !== null) {
             $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("ExpiredTime",$param) and $param["ExpiredTime"] !== null) {
+            $this->ExpiredTime = $param["ExpiredTime"];
         }
     }
 }

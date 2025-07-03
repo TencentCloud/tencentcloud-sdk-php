@@ -29,10 +29,19 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\CheckRechargeKafkaServerResponse CheckRechargeKafkaServer(Models\CheckRechargeKafkaServerRequest $req) 本接口用于校验Kafka服务集群是否可以正常访问
  * @method Models\CloseKafkaConsumerResponse CloseKafkaConsumer(Models\CloseKafkaConsumerRequest $req) 关闭Kafka协议消费
  * @method Models\CreateAlarmResponse CreateAlarm(Models\CreateAlarmRequest $req) 本接口用于创建告警策略。
- * @method Models\CreateAlarmNoticeResponse CreateAlarmNotice(Models\CreateAlarmNoticeRequest $req) 该接口用于创建通知渠道组。
+ * @method Models\CreateAlarmNoticeResponse CreateAlarmNotice(Models\CreateAlarmNoticeRequest $req) 该接口用于创建通知渠道组，提供两种配置模式，二选一：
+1，简易模式，提供最基本的通知渠道功能。需填写如下参数：
+- Type
+- NoticeReceivers
+- WebCallbacks
+
+2，高级模式，在简易模式基础上，支持设定规则，为不同类型的告警分别设定通知渠道，并支持告警升级功能。需填写如下参数：
+- NoticeRules
  * @method Models\CreateAlarmShieldResponse CreateAlarmShield(Models\CreateAlarmShieldRequest $req) 该接口用于创建告警屏蔽规则。
+ * @method Models\CreateCloudProductLogCollectionResponse CreateCloudProductLogCollection(Models\CreateCloudProductLogCollectionRequest $req) 内部云产品接入使用相关接口
  * @method Models\CreateConfigResponse CreateConfig(Models\CreateConfigRequest $req) 创建采集规则配置
  * @method Models\CreateConfigExtraResponse CreateConfigExtra(Models\CreateConfigExtraRequest $req) 本接口用于创建特殊采集配置任务，特殊采集配置应用于自建K8S环境的采集Agent
+ * @method Models\CreateConsoleSharingResponse CreateConsoleSharing(Models\CreateConsoleSharingRequest $req) 创建控制台分享
  * @method Models\CreateConsumerResponse CreateConsumer(Models\CreateConsumerRequest $req) 本接口用于创建投递CKafka任务
  * @method Models\CreateCosRechargeResponse CreateCosRecharge(Models\CreateCosRechargeRequest $req) 本接口用于创建cos导入任务
  * @method Models\CreateDashboardSubscribeResponse CreateDashboardSubscribe(Models\CreateDashboardSubscribeRequest $req) 此接口用于创建仪表盘订阅
@@ -43,16 +52,21 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\CreateKafkaRechargeResponse CreateKafkaRecharge(Models\CreateKafkaRechargeRequest $req) 本接口用于创建Kafka数据订阅任务
  * @method Models\CreateLogsetResponse CreateLogset(Models\CreateLogsetRequest $req) 本接口用于创建日志集，返回新创建的日志集的 ID。
  * @method Models\CreateMachineGroupResponse CreateMachineGroup(Models\CreateMachineGroupRequest $req) 创建机器组
+ * @method Models\CreateNoticeContentResponse CreateNoticeContent(Models\CreateNoticeContentRequest $req) 该接口用于创建通知内容。
  * @method Models\CreateScheduledSqlResponse CreateScheduledSql(Models\CreateScheduledSqlRequest $req) 本接口用于创建定时SQL分析任务
  * @method Models\CreateShipperResponse CreateShipper(Models\CreateShipperRequest $req) 新建投递到COS的任务，【！！！注意】使用此接口，需要检查是否配置了投递COS的角色和权限。如果没有配置，请参考文档投递权限查看和配置https://cloud.tencent.com/document/product/614/71623。
  * @method Models\CreateTopicResponse CreateTopic(Models\CreateTopicRequest $req) 本接口用于创建日志主题。
+ * @method Models\CreateWebCallbackResponse CreateWebCallback(Models\CreateWebCallbackRequest $req) 该接口用于创建告警渠道回调配置。
  * @method Models\DeleteAlarmResponse DeleteAlarm(Models\DeleteAlarmRequest $req) 本接口用于删除告警策略。
  * @method Models\DeleteAlarmNoticeResponse DeleteAlarmNotice(Models\DeleteAlarmNoticeRequest $req) 该接口用于删除通知渠道组
  * @method Models\DeleteAlarmShieldResponse DeleteAlarmShield(Models\DeleteAlarmShieldRequest $req) 该接口用于删除告警屏蔽规则。
+ * @method Models\DeleteCloudProductLogCollectionResponse DeleteCloudProductLogCollection(Models\DeleteCloudProductLogCollectionRequest $req) 内部云产品接入使用相关接口
  * @method Models\DeleteConfigResponse DeleteConfig(Models\DeleteConfigRequest $req) 删除采集规则配置
  * @method Models\DeleteConfigExtraResponse DeleteConfigExtra(Models\DeleteConfigExtraRequest $req) 本接口用于删除特殊采集规则配置，特殊采集配置应用于自建K8S环境的采集Agent
  * @method Models\DeleteConfigFromMachineGroupResponse DeleteConfigFromMachineGroup(Models\DeleteConfigFromMachineGroupRequest $req) 删除应用到机器组的采集配置
+ * @method Models\DeleteConsoleSharingResponse DeleteConsoleSharing(Models\DeleteConsoleSharingRequest $req) 删除控制台分享
  * @method Models\DeleteConsumerResponse DeleteConsumer(Models\DeleteConsumerRequest $req) 本接口用于删除投递配置
+ * @method Models\DeleteCosRechargeResponse DeleteCosRecharge(Models\DeleteCosRechargeRequest $req) 本接口用于删除cos导入任务
  * @method Models\DeleteDashboardSubscribeResponse DeleteDashboardSubscribe(Models\DeleteDashboardSubscribeRequest $req) 此接口用于删除仪表盘订阅
  * @method Models\DeleteDataTransformResponse DeleteDataTransform(Models\DeleteDataTransformRequest $req) 本接口用于删除数据加工任务
  * @method Models\DeleteExportResponse DeleteExport(Models\DeleteExportRequest $req) 本接口用于删除日志下载任务
@@ -61,19 +75,23 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\DeleteLogsetResponse DeleteLogset(Models\DeleteLogsetRequest $req) 本接口用于删除日志集。
  * @method Models\DeleteMachineGroupResponse DeleteMachineGroup(Models\DeleteMachineGroupRequest $req) 删除机器组
  * @method Models\DeleteMachineGroupInfoResponse DeleteMachineGroupInfo(Models\DeleteMachineGroupInfoRequest $req) 用于删除机器组信息
+ * @method Models\DeleteNoticeContentResponse DeleteNoticeContent(Models\DeleteNoticeContentRequest $req) 该接口用于删除通知内容配置
  * @method Models\DeleteScheduledSqlResponse DeleteScheduledSql(Models\DeleteScheduledSqlRequest $req) 本接口用于删除定时SQL分析任务
  * @method Models\DeleteShipperResponse DeleteShipper(Models\DeleteShipperRequest $req) 删除投递COS任务
  * @method Models\DeleteTopicResponse DeleteTopic(Models\DeleteTopicRequest $req) 本接口用于删除日志主题。
+ * @method Models\DeleteWebCallbackResponse DeleteWebCallback(Models\DeleteWebCallbackRequest $req) 该接口用于删除告警渠道回调配置。
  * @method Models\DescribeAlarmNoticesResponse DescribeAlarmNotices(Models\DescribeAlarmNoticesRequest $req) 该接口用于获取通知渠道组列表
  * @method Models\DescribeAlarmShieldsResponse DescribeAlarmShields(Models\DescribeAlarmShieldsRequest $req) 获取告警屏蔽配置规则
  * @method Models\DescribeAlarmsResponse DescribeAlarms(Models\DescribeAlarmsRequest $req) 本接口用于获取告警策略列表。
  * @method Models\DescribeAlertRecordHistoryResponse DescribeAlertRecordHistory(Models\DescribeAlertRecordHistoryRequest $req) 获取告警历史，例如今天未恢复的告警
+ * @method Models\DescribeCloudProductLogTasksResponse DescribeCloudProductLogTasks(Models\DescribeCloudProductLogTasksRequest $req) 云产品接入使用相关接口
  * @method Models\DescribeConfigExtrasResponse DescribeConfigExtras(Models\DescribeConfigExtrasRequest $req) 本接口用于获取特殊采集配置，特殊采集配置应用于自建K8S环境的采集Agent
  * @method Models\DescribeConfigMachineGroupsResponse DescribeConfigMachineGroups(Models\DescribeConfigMachineGroupsRequest $req) 获取采集规则配置所绑定的机器组
  * @method Models\DescribeConfigsResponse DescribeConfigs(Models\DescribeConfigsRequest $req) 获取采集规则配置
+ * @method Models\DescribeConsoleSharingListResponse DescribeConsoleSharingList(Models\DescribeConsoleSharingListRequest $req) 批量查询控制台分享列表
  * @method Models\DescribeConsumerResponse DescribeConsumer(Models\DescribeConsumerRequest $req) 本接口用于获取投递配置
  * @method Models\DescribeCosRechargesResponse DescribeCosRecharges(Models\DescribeCosRechargesRequest $req) 本接口用于获取cos导入配置
- * @method Models\DescribeDashboardSubscribesResponse DescribeDashboardSubscribes(Models\DescribeDashboardSubscribesRequest $req)  本接口用于获取仪表盘订阅列表，支持分页
+ * @method Models\DescribeDashboardSubscribesResponse DescribeDashboardSubscribes(Models\DescribeDashboardSubscribesRequest $req) 本接口用于获取仪表盘订阅列表，支持分页
  * @method Models\DescribeDashboardsResponse DescribeDashboards(Models\DescribeDashboardsRequest $req) 本接口用于获取仪表盘
  * @method Models\DescribeDataTransformInfoResponse DescribeDataTransformInfo(Models\DescribeDataTransformInfoRequest $req) 本接口用于获取数据加工任务列表基本信息
  * @method Models\DescribeExportsResponse DescribeExports(Models\DescribeExportsRequest $req) 本接口用于获取日志下载任务列表
@@ -87,18 +105,22 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
  * @method Models\DescribeMachineGroupConfigsResponse DescribeMachineGroupConfigs(Models\DescribeMachineGroupConfigsRequest $req) 获取机器组绑定的采集规则配置
  * @method Models\DescribeMachineGroupsResponse DescribeMachineGroups(Models\DescribeMachineGroupsRequest $req) 获取机器组信息列表
  * @method Models\DescribeMachinesResponse DescribeMachines(Models\DescribeMachinesRequest $req) 获取指定机器组下的机器状态
+ * @method Models\DescribeNoticeContentsResponse DescribeNoticeContents(Models\DescribeNoticeContentsRequest $req) 获取通知内容列表
  * @method Models\DescribePartitionsResponse DescribePartitions(Models\DescribePartitionsRequest $req) 该接口已废弃，如需获取分区数量，请使用DescribeTopics接口。
  * @method Models\DescribeScheduledSqlInfoResponse DescribeScheduledSqlInfo(Models\DescribeScheduledSqlInfoRequest $req) 本接口用于获取定时SQL分析任务列表
  * @method Models\DescribeShipperTasksResponse DescribeShipperTasks(Models\DescribeShipperTasksRequest $req) 获取投递任务列表
  * @method Models\DescribeShippersResponse DescribeShippers(Models\DescribeShippersRequest $req) 获取投递到COS的任务配置信息
  * @method Models\DescribeTopicsResponse DescribeTopics(Models\DescribeTopicsRequest $req) 本接口用于获取日志主题列表，支持分页
+ * @method Models\DescribeWebCallbacksResponse DescribeWebCallbacks(Models\DescribeWebCallbacksRequest $req) 获取告警渠道回调配置列表。
  * @method Models\GetAlarmLogResponse GetAlarmLog(Models\GetAlarmLogRequest $req) 本接口用于获取告警策略执行详情
  * @method Models\MergePartitionResponse MergePartition(Models\MergePartitionRequest $req) 该接口已废弃，如需修改分区数量，请使用ModifyTopic接口。
  * @method Models\ModifyAlarmResponse ModifyAlarm(Models\ModifyAlarmRequest $req) 本接口用于修改告警策略。需要至少修改一项有效内容。
  * @method Models\ModifyAlarmNoticeResponse ModifyAlarmNotice(Models\ModifyAlarmNoticeRequest $req) 该接口用于修改通知渠道组
  * @method Models\ModifyAlarmShieldResponse ModifyAlarmShield(Models\ModifyAlarmShieldRequest $req) 该接口用于修改告警屏蔽规则。
+ * @method Models\ModifyCloudProductLogCollectionResponse ModifyCloudProductLogCollection(Models\ModifyCloudProductLogCollectionRequest $req) 内部云产品接入使用相关接口
  * @method Models\ModifyConfigResponse ModifyConfig(Models\ModifyConfigRequest $req) 修改采集规则配置
  * @method Models\ModifyConfigExtraResponse ModifyConfigExtra(Models\ModifyConfigExtraRequest $req) 本接口用于修改特殊采集配置任务，特殊采集配置应用于自建K8S环境的采集Agent
+ * @method Models\ModifyConsoleSharingResponse ModifyConsoleSharing(Models\ModifyConsoleSharingRequest $req) 修改控制台分享，目前仅允许修改有效期
  * @method Models\ModifyConsumerResponse ModifyConsumer(Models\ModifyConsumerRequest $req) 本接口用于修改投递Ckafka任务
  * @method Models\ModifyCosRechargeResponse ModifyCosRecharge(Models\ModifyCosRechargeRequest $req) 本接口用于修改cos导入任务
  * @method Models\ModifyDashboardSubscribeResponse ModifyDashboardSubscribe(Models\ModifyDashboardSubscribeRequest $req) 此接口用于修改仪表盘订阅
@@ -107,20 +129,24 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
  * @method Models\ModifyKafkaConsumerResponse ModifyKafkaConsumer(Models\ModifyKafkaConsumerRequest $req) 修改Kafka协议消费信息
  * @method Models\ModifyKafkaRechargeResponse ModifyKafkaRecharge(Models\ModifyKafkaRechargeRequest $req) 本接口用于修改Kafka数据订阅任务
  * @method Models\ModifyLogsetResponse ModifyLogset(Models\ModifyLogsetRequest $req) 本接口用于修改日志集信息
- * @method Models\ModifyMachineGroupResponse ModifyMachineGroup(Models\ModifyMachineGroupRequest $req) 修改机器组
+ * @method Models\ModifyMachineGroupResponse ModifyMachineGroup(Models\ModifyMachineGroupRequest $req) 修改机器组。
+注意：修改接口直接覆盖历史数据，改为本次合法入参数据，请谨慎调用此接口。
+ * @method Models\ModifyNoticeContentResponse ModifyNoticeContent(Models\ModifyNoticeContentRequest $req) 该接口用于修改通知内容配置
  * @method Models\ModifyScheduledSqlResponse ModifyScheduledSql(Models\ModifyScheduledSqlRequest $req) 本接口用于修改定时SQL分析任务
  * @method Models\ModifyShipperResponse ModifyShipper(Models\ModifyShipperRequest $req) 修改现有的投递规则，客户如果使用此接口，需要自行处理CLS对指定bucket的写权限。
  * @method Models\ModifyTopicResponse ModifyTopic(Models\ModifyTopicRequest $req) 本接口用于修改日志主题。
+ * @method Models\ModifyWebCallbackResponse ModifyWebCallback(Models\ModifyWebCallbackRequest $req) 该接口用于修改告警渠道回调配置。
  * @method Models\OpenKafkaConsumerResponse OpenKafkaConsumer(Models\OpenKafkaConsumerRequest $req) 打开Kafka协议消费功能
  * @method Models\PreviewKafkaRechargeResponse PreviewKafkaRecharge(Models\PreviewKafkaRechargeRequest $req) 本接口用于预览Kafka数据订阅任务客户日志信息
- * @method Models\QueryMetricResponse QueryMetric(Models\QueryMetricRequest $req) 查询指定时刻指标的最新值
+ * @method Models\QueryMetricResponse QueryMetric(Models\QueryMetricRequest $req) 查询指定时刻指标的最新值。
+如果该时刻向前推5分钟内均无指标数据，则无相应的查询结果。
  * @method Models\QueryRangeMetricResponse QueryRangeMetric(Models\QueryRangeMetricRequest $req) 查询指定时间范围内指标的变化趋势
  * @method Models\RetryShipperTaskResponse RetryShipperTask(Models\RetryShipperTaskRequest $req) 重试失败的投递任务
  * @method Models\SearchCosRechargeInfoResponse SearchCosRechargeInfo(Models\SearchCosRechargeInfoRequest $req) 本接口用于预览cos导入信息
  * @method Models\SearchDashboardSubscribeResponse SearchDashboardSubscribe(Models\SearchDashboardSubscribeRequest $req) 此接口用于预览仪表盘订阅
  * @method Models\SearchLogResponse SearchLog(Models\SearchLogRequest $req) 本接口用于检索分析日志，使用该接口时请注意如下事项：
 1. 该接口除受默认接口请求频率限制外，针对单个日志主题，查询并发数不能超过15。
-2. 检索语法建议使用CQL语法规则，请使用SyntaxRule参数，将值设置为1。
+2. 检索语法建议使用日志服务专用检索语法CQL，请使用SyntaxRule参数，将值设置为1，控制台默认也使用该语法规则。
 3. API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Accept-Encoding:gzip）。
  * @method Models\SplitPartitionResponse SplitPartition(Models\SplitPartitionRequest $req) 该接口已废弃，如需修改分区数量，请使用ModifyTopic接口。
  * @method Models\UploadLogResponse UploadLog(Models\UploadLogRequest $req) ## 提示
@@ -133,18 +159,6 @@ API返回数据包最大49MB，建议启用 gzip 压缩（HTTP Request Header Ac
 ## 功能描述
 
 本接口用于将日志写入到指定的日志主题。
-
-日志服务提供以下两种模式：
-
-#### 负载均衡模式
-
-系统根据当前日志主题下所有可读写的分区，遵循负载均衡原则自动分配写入的目标分区。该模式适合消费不保序的场景。
-
-#### 哈希路由模式
-
-系统根据携带的哈希值（X-CLS-HashKey）将数据写入到符合范围要求的目标分区。例如，可以将某个日志源端通过 hashkey 与某个主题分区强绑定，这样可以保证数据在该分区上写入和消费是严格保序的。
-
-                 
 
 #### 输入参数(pb二进制流，位于body中)
 

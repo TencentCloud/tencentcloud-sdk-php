@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 用户信息结构体
  *
  * @method integer getSdkAppId() 获取应用Id。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSdkAppId(integer $SdkAppId) 设置应用Id。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserId() 获取用户Id。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserId(string $UserId) 设置用户Id。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取用户昵称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置用户昵称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAvatar() 获取用户头像Url。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAvatar(string $Avatar) 设置用户头像Url。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOriginId() 获取用户在客户系统的Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOriginId(string $OriginId) 设置用户在客户系统的Id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class UserInfo extends AbstractModel
 {
     /**
      * @var integer 应用Id。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SdkAppId;
 
     /**
      * @var string 用户Id。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserId;
 
     /**
      * @var string 用户昵称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 用户头像Url。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Avatar;
 
     /**
      * @var string 用户在客户系统的Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OriginId;
 
     /**
      * @param integer $SdkAppId 应用Id。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserId 用户Id。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 用户昵称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Avatar 用户头像Url。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OriginId 用户在客户系统的Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

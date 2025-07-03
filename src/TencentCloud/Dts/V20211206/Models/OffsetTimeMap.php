@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 数据订阅kafka分区中checkpoint信息
  *
  * @method integer getPartitionNo() 获取kafka分区编号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPartitionNo(integer $PartitionNo) 设置kafka分区编号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getOffset() 获取kafka offset
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOffset(integer $Offset) 设置kafka offset
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OffsetTimeMap extends AbstractModel
 {
     /**
      * @var integer kafka分区编号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PartitionNo;
 
     /**
      * @var integer kafka offset
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Offset;
 
     /**
      * @param integer $PartitionNo kafka分区编号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Offset kafka offset
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

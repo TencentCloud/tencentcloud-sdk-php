@@ -41,11 +41,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPhysicalZone() 获取物理区
  * @method void setPhysicalZone(string $PhysicalZone) 设置物理区
  * @method boolean getHasPermission() 获取用户是否有可用区权限
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHasPermission(boolean $HasPermission) 设置用户是否有可用区权限
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIsWholeRdmaZone() 获取是否为全链路RDMA可用区
  * @method void setIsWholeRdmaZone(string $IsWholeRdmaZone) 设置是否为全链路RDMA可用区
+ * @method integer getIsSupportCreateCluster() 获取当前可用区是否允许新购集群，1:允许，0:不允许
+ * @method void setIsSupportCreateCluster(integer $IsSupportCreateCluster) 设置当前可用区是否允许新购集群，1:允许，0:不允许
  */
 class SaleZone extends AbstractModel
 {
@@ -85,7 +85,6 @@ class SaleZone extends AbstractModel
 
     /**
      * @var boolean 用户是否有可用区权限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HasPermission;
 
@@ -93,6 +92,11 @@ class SaleZone extends AbstractModel
      * @var string 是否为全链路RDMA可用区
      */
     public $IsWholeRdmaZone;
+
+    /**
+     * @var integer 当前可用区是否允许新购集群，1:允许，0:不允许
+     */
+    public $IsSupportCreateCluster;
 
     /**
      * @param string $Zone 可用区英文名
@@ -106,8 +110,8 @@ class SaleZone extends AbstractModel
 1:支持
      * @param string $PhysicalZone 物理区
      * @param boolean $HasPermission 用户是否有可用区权限
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IsWholeRdmaZone 是否为全链路RDMA可用区
+     * @param integer $IsSupportCreateCluster 当前可用区是否允许新购集群，1:允许，0:不允许
      */
     function __construct()
     {
@@ -152,6 +156,10 @@ class SaleZone extends AbstractModel
 
         if (array_key_exists("IsWholeRdmaZone",$param) and $param["IsWholeRdmaZone"] !== null) {
             $this->IsWholeRdmaZone = $param["IsWholeRdmaZone"];
+        }
+
+        if (array_key_exists("IsSupportCreateCluster",$param) and $param["IsSupportCreateCluster"] !== null) {
+            $this->IsSupportCreateCluster = $param["IsSupportCreateCluster"];
         }
     }
 }

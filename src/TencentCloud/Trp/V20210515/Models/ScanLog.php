@@ -23,79 +23,43 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLogId() 获取行ID
  * @method void setLogId(integer $LogId) 设置行ID
  * @method string getOpenid() 获取微信openid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOpenid(string $Openid) 设置微信openid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNickname() 获取微信昵称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNickname(string $Nickname) 设置微信昵称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCode() 获取码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCode(string $Code) 设置码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCorpId() 获取企业ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCorpId(integer $CorpId) 设置企业ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMerchantId() 获取商户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMerchantId(string $MerchantId) 设置商户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProductId() 获取商品ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductId(string $ProductId) 设置商品ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIp() 获取ip地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIp(string $Ip) 设置ip地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCountry() 获取国家
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCountry(string $Country) 设置国家
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProvince() 获取省份
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProvince(string $Province) 设置省份
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCity() 获取城市
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCity(string $City) 设置城市
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDistrict() 获取县/区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDistrict(string $District) 设置县/区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUnionid() 获取微信 unionid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnionid(string $Unionid) 设置微信 unionid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFirst() 获取首次扫码 0:否, 1:是
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFirst(integer $First) 设置首次扫码 0:否, 1:是
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBatchId() 获取批次ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBatchId(string $BatchId) 设置批次ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getType() 获取扫码类型 0:无效扫码 1: 小程序扫码 2: 商家扫码
  * @method void setType(integer $Type) 设置扫码类型 0:无效扫码 1: 小程序扫码 2: 商家扫码
  * @method string getMerchantName() 获取商户名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMerchantName(string $MerchantName) 设置商户名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProductName() 获取产品名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductName(string $ProductName) 设置产品名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProductLogo() 获取产品Logo
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductLogo(string $ProductLogo) 设置产品Logo
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取风险状态
 0: 未知, 1:通过, 2:失败/风险, 3:存疑
  * @method void setStatus(integer $Status) 设置风险状态
@@ -114,91 +78,76 @@ class ScanLog extends AbstractModel
 
     /**
      * @var string 微信openid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Openid;
 
     /**
      * @var string 微信昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Nickname;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Code;
 
     /**
      * @var integer 企业ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CorpId;
 
     /**
      * @var string 商户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MerchantId;
 
     /**
      * @var string 商品ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductId;
 
     /**
      * @var string ip地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ip;
 
     /**
      * @var string 国家
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Country;
 
     /**
      * @var string 省份
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Province;
 
     /**
      * @var string 城市
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $City;
 
     /**
      * @var string 县/区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $District;
 
     /**
      * @var string 微信 unionid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Unionid;
 
     /**
      * @var integer 首次扫码 0:否, 1:是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $First;
 
     /**
      * @var string 批次ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BatchId;
 
@@ -209,19 +158,16 @@ class ScanLog extends AbstractModel
 
     /**
      * @var string 商户名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MerchantName;
 
     /**
      * @var string 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductName;
 
     /**
      * @var string 产品Logo
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductLogo;
 
@@ -240,42 +186,24 @@ class ScanLog extends AbstractModel
     /**
      * @param integer $LogId 行ID
      * @param string $Openid 微信openid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Nickname 微信昵称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Code 码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CorpId 企业ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MerchantId 商户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProductId 商品ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Ip ip地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Country 国家
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Province 省份
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $City 城市
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $District 县/区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Unionid 微信 unionid
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $First 首次扫码 0:否, 1:是
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BatchId 批次ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Type 扫码类型 0:无效扫码 1: 小程序扫码 2: 商家扫码
      * @param string $MerchantName 商户名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProductName 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProductLogo 产品Logo
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 风险状态
 0: 未知, 1:通过, 2:失败/风险, 3:存疑
      * @param integer $Verify 是否开启验证

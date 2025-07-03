@@ -23,17 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCustomId() 获取码规则ID
  * @method void setCustomId(string $CustomId) 设置码规则ID
  * @method string getName() 获取码规则名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置码规则名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCorpId() 获取企业ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCorpId(integer $CorpId) 设置企业ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMerchantId() 获取商户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMerchantId(string $MerchantId) 设置商户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCodeLength() 获取码ID长度
  * @method void setCodeLength(integer $CodeLength) 设置码ID长度
  * @method integer getStatus() 获取规则状态
@@ -54,19 +48,16 @@ class CustomRule extends AbstractModel
 
     /**
      * @var string 码规则名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var integer 企业ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CorpId;
 
     /**
      * @var string 商户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MerchantId;
 
@@ -98,11 +89,8 @@ class CustomRule extends AbstractModel
     /**
      * @param string $CustomId 码规则ID
      * @param string $Name 码规则名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CorpId 企业ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MerchantId 商户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CodeLength 码ID长度
      * @param integer $Status 规则状态
      * @param array $CodeParts 码段配置

@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 分页的data数据
  *
  * @method Paging getPaging() 获取数据分页信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPaging(Paging $Paging) 设置数据分页信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getItems() 获取业务响应数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setItems(array $Items) 设置业务响应数据
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeDevicesPageRsp extends AbstractModel
 {
     /**
      * @var Paging 数据分页信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Paging;
 
     /**
      * @var array 业务响应数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Items;
 
     /**
      * @param Paging $Paging 数据分页信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Items 业务响应数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

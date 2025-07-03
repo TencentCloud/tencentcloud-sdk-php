@@ -21,117 +21,81 @@ use TencentCloud\Common\AbstractModel;
  * 高风险资产详情信息
  *
  * @method string getInstanceId() 获取实例id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置实例id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDataSourceType() 获取数据源类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataSourceType(string $DataSourceType) 设置数据源类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDataSourceName() 获取数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataSourceName(string $DataSourceName) 设置数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAssetsName() 获取资产对象名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssetsName(string $AssetsName) 设置资产对象名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHighRiskCount() 获取高风险个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHighRiskCount(integer $HighRiskCount) 设置高风险个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRiskType() 获取风险类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskType(string $RiskType) 设置风险类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalRiskCount() 获取总的风险个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalRiskCount(integer $TotalRiskCount) 设置总的风险个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRiskSide() 获取风险面
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskSide(string $RiskSide) 设置风险面
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceRegion() 获取地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceRegion(string $ResourceRegion) 设置地域
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class HighRiskAssetsDetail extends AbstractModel
 {
     /**
      * @var string 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var string 数据源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataSourceType;
 
     /**
      * @var string 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataSourceName;
 
     /**
      * @var string 资产对象名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AssetsName;
 
     /**
      * @var integer 高风险个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HighRiskCount;
 
     /**
      * @var string 风险类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskType;
 
     /**
      * @var integer 总的风险个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalRiskCount;
 
     /**
      * @var string 风险面
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskSide;
 
     /**
      * @var string 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceRegion;
 
     /**
      * @param string $InstanceId 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataSourceType 数据源类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataSourceName 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AssetsName 资产对象名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HighRiskCount 高风险个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RiskType 风险类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalRiskCount 总的风险个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RiskSide 风险面
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceRegion 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

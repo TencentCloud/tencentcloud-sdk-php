@@ -20,44 +20,44 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DetectAIFakeFaces返回参数结构体
  *
- * @method string getAttackRiskLevel() 获取检测到的图片是否存在攻击：
-Low：无攻击风险
-Mid：中度疑似攻击
-High：高度疑似攻击
- * @method void setAttackRiskLevel(string $AttackRiskLevel) 设置检测到的图片是否存在攻击：
-Low：无攻击风险
-Mid：中度疑似攻击
-High：高度疑似攻击
- * @method array getAttackRiskDetailList() 获取检测到疑似的攻击痕迹列表
-说明：未检测到攻击痕迹时，返回空数组
-此出参仅作为结果判断的参考，实际应用仍建议使用AttackRiskLevel的结果。
- * @method void setAttackRiskDetailList(array $AttackRiskDetailList) 设置检测到疑似的攻击痕迹列表
-说明：未检测到攻击痕迹时，返回空数组
-此出参仅作为结果判断的参考，实际应用仍建议使用AttackRiskLevel的结果。
- * @method ExtraInfo getExtraInfo() 获取额外信息
- * @method void setExtraInfo(ExtraInfo $ExtraInfo) 设置额外信息
+ * @method string getAttackRiskLevel() 获取检测到的图片是否存在攻击。
+- Low：无攻击风险。
+- Mid：中度疑似攻击。
+- High：高度疑似攻击。
+ * @method void setAttackRiskLevel(string $AttackRiskLevel) 设置检测到的图片是否存在攻击。
+- Low：无攻击风险。
+- Mid：中度疑似攻击。
+- High：高度疑似攻击。
+ * @method array getAttackRiskDetailList() 获取检测到疑似的攻击痕迹列表。
+- 说明：未检测到攻击痕迹时，返回空数组。
+- 此出参仅作为结果判断的参考，实际应用仍建议使用AttackRiskLevel的结果。
+ * @method void setAttackRiskDetailList(array $AttackRiskDetailList) 设置检测到疑似的攻击痕迹列表。
+- 说明：未检测到攻击痕迹时，返回空数组。
+- 此出参仅作为结果判断的参考，实际应用仍建议使用AttackRiskLevel的结果。
+ * @method ExtraInfo getExtraInfo() 获取额外信息。
+ * @method void setExtraInfo(ExtraInfo $ExtraInfo) 设置额外信息。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DetectAIFakeFacesResponse extends AbstractModel
 {
     /**
-     * @var string 检测到的图片是否存在攻击：
-Low：无攻击风险
-Mid：中度疑似攻击
-High：高度疑似攻击
+     * @var string 检测到的图片是否存在攻击。
+- Low：无攻击风险。
+- Mid：中度疑似攻击。
+- High：高度疑似攻击。
      */
     public $AttackRiskLevel;
 
     /**
-     * @var array 检测到疑似的攻击痕迹列表
-说明：未检测到攻击痕迹时，返回空数组
-此出参仅作为结果判断的参考，实际应用仍建议使用AttackRiskLevel的结果。
+     * @var array 检测到疑似的攻击痕迹列表。
+- 说明：未检测到攻击痕迹时，返回空数组。
+- 此出参仅作为结果判断的参考，实际应用仍建议使用AttackRiskLevel的结果。
      */
     public $AttackRiskDetailList;
 
     /**
-     * @var ExtraInfo 额外信息
+     * @var ExtraInfo 额外信息。
      */
     public $ExtraInfo;
 
@@ -67,14 +67,14 @@ High：高度疑似攻击
     public $RequestId;
 
     /**
-     * @param string $AttackRiskLevel 检测到的图片是否存在攻击：
-Low：无攻击风险
-Mid：中度疑似攻击
-High：高度疑似攻击
-     * @param array $AttackRiskDetailList 检测到疑似的攻击痕迹列表
-说明：未检测到攻击痕迹时，返回空数组
-此出参仅作为结果判断的参考，实际应用仍建议使用AttackRiskLevel的结果。
-     * @param ExtraInfo $ExtraInfo 额外信息
+     * @param string $AttackRiskLevel 检测到的图片是否存在攻击。
+- Low：无攻击风险。
+- Mid：中度疑似攻击。
+- High：高度疑似攻击。
+     * @param array $AttackRiskDetailList 检测到疑似的攻击痕迹列表。
+- 说明：未检测到攻击痕迹时，返回空数组。
+- 此出参仅作为结果判断的参考，实际应用仍建议使用AttackRiskLevel的结果。
+     * @param ExtraInfo $ExtraInfo 额外信息。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

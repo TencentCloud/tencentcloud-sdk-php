@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 预审核信息列表
  *
  * @method integer getTotalPeriod() 获取证书总年限
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalPeriod(integer $TotalPeriod) 设置证书总年限
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNowPeriod() 获取证书当前年限
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNowPeriod(integer $NowPeriod) 设置证书当前年限
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getManagerId() 获取证书预审核管理人ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setManagerId(string $ManagerId) 设置证书预审核管理人ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PreAuditInfo extends AbstractModel
 {
     /**
      * @var integer 证书总年限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalPeriod;
 
     /**
      * @var integer 证书当前年限
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NowPeriod;
 
     /**
      * @var string 证书预审核管理人ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ManagerId;
 
     /**
      * @param integer $TotalPeriod 证书总年限
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NowPeriod 证书当前年限
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ManagerId 证书预审核管理人ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

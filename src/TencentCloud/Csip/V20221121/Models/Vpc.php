@@ -31,13 +31,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getCVM() 获取云服务器(只支持32位)
  * @method void setCVM(integer $CVM) 设置云服务器(只支持32位)
  * @method array getTag() 获取标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTag(array $Tag) 设置标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDNS() 获取dns域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDNS(array $DNS) 设置dns域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAssetName() 获取资产名称
  * @method void setAssetName(string $AssetName) 设置资产名称
  * @method string getCIDR() 获取cidr网段
@@ -51,13 +47,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getNick() 获取昵称
  * @method void setNick(string $Nick) 设置昵称
  * @method integer getIsNewAsset() 获取是否新资产 1新
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsNewAsset(integer $IsNewAsset) 设置是否新资产 1新
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsCore() 获取是否核心资产1是 2不是
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsCore(integer $IsCore) 设置是否核心资产1是 2不是
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Vpc extends AbstractModel
 {
@@ -88,13 +80,11 @@ class Vpc extends AbstractModel
 
     /**
      * @var array 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tag;
 
     /**
      * @var array dns域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DNS;
 
@@ -130,13 +120,11 @@ class Vpc extends AbstractModel
 
     /**
      * @var integer 是否新资产 1新
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsNewAsset;
 
     /**
      * @var integer 是否核心资产1是 2不是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsCore;
 
@@ -147,9 +135,7 @@ class Vpc extends AbstractModel
      * @param string $Region region区域
      * @param integer $CVM 云服务器(只支持32位)
      * @param array $Tag 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DNS dns域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AssetName 资产名称
      * @param string $CIDR cidr网段
      * @param string $CreateTime 资产创建时间
@@ -157,9 +143,7 @@ class Vpc extends AbstractModel
      * @param string $Uin uin
      * @param string $Nick 昵称
      * @param integer $IsNewAsset 是否新资产 1新
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsCore 是否核心资产1是 2不是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

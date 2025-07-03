@@ -27,19 +27,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getAliasName() 获取规则别名
  * @method void setAliasName(string $AliasName) 设置规则别名
  * @method string getDestPortRange() 获取目标端口范围
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDestPortRange(string $DestPortRange) 设置目标端口范围
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRuleId() 获取规则ID
  * @method void setRuleId(string $RuleId) 设置规则ID
  * @method string getProtocol() 获取要匹配的协议类型（TCP/UDP）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProtocol(string $Protocol) 设置要匹配的协议类型（TCP/UDP）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPolicyId() 获取安全策略ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolicyId(string $PolicyId) 设置安全策略ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SecurityPolicyRuleOut extends AbstractModel
 {
@@ -60,7 +54,6 @@ class SecurityPolicyRuleOut extends AbstractModel
 
     /**
      * @var string 目标端口范围
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DestPortRange;
 
@@ -71,13 +64,11 @@ class SecurityPolicyRuleOut extends AbstractModel
 
     /**
      * @var string 要匹配的协议类型（TCP/UDP）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Protocol;
 
     /**
      * @var string 安全策略ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PolicyId;
 
@@ -86,12 +77,9 @@ class SecurityPolicyRuleOut extends AbstractModel
      * @param string $SourceCidr 请求来源Ip或Ip段
      * @param string $AliasName 规则别名
      * @param string $DestPortRange 目标端口范围
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RuleId 规则ID
      * @param string $Protocol 要匹配的协议类型（TCP/UDP）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PolicyId 安全策略ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

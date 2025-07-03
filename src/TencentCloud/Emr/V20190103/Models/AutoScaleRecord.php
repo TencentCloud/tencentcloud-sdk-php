@@ -39,29 +39,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSpecInfo() 获取扩容时所使用规格信息。
  * @method void setSpecInfo(string $SpecInfo) 设置扩容时所使用规格信息。
  * @method integer getCompensateFlag() 获取补偿扩容，0表示不开启，1表示开启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCompensateFlag(integer $CompensateFlag) 设置补偿扩容，0表示不开启，1表示开启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCompensateCount() 获取补偿次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCompensateCount(integer $CompensateCount) 设置补偿次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRetryCount() 获取重试次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRetryCount(integer $RetryCount) 设置重试次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRetryInfo() 获取重试信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRetryInfo(string $RetryInfo) 设置重试信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRetryEnReason() 获取重试英文描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRetryEnReason(string $RetryEnReason) 设置重试英文描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRetryReason() 获取重试描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRetryReason(string $RetryReason) 设置重试描述
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AutoScaleRecord extends AbstractModel
 {
@@ -112,37 +100,31 @@ class AutoScaleRecord extends AbstractModel
 
     /**
      * @var integer 补偿扩容，0表示不开启，1表示开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CompensateFlag;
 
     /**
      * @var integer 补偿次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CompensateCount;
 
     /**
      * @var integer 重试次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RetryCount;
 
     /**
      * @var string 重试信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RetryInfo;
 
     /**
      * @var string 重试英文描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RetryEnReason;
 
     /**
      * @var string 重试描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RetryReason;
 
@@ -157,17 +139,11 @@ class AutoScaleRecord extends AbstractModel
      * @param integer $StrategyType 策略类型，按负载或者按时间，1表示负载伸缩，2表示时间伸缩
      * @param string $SpecInfo 扩容时所使用规格信息。
      * @param integer $CompensateFlag 补偿扩容，0表示不开启，1表示开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CompensateCount 补偿次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RetryCount 重试次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RetryInfo 重试信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RetryEnReason 重试英文描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RetryReason 重试描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

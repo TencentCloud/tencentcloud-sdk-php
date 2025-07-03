@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDAPId() 获取DID应用id
  * @method void setDAPId(integer $DAPId) 设置DID应用id
+ * @method integer getUAPId() 获取用户应用id
+ * @method void setUAPId(integer $UAPId) 设置用户应用id
  * @method array getCredentials() 获取凭证列表
  * @method void setCredentials(array $Credentials) 设置凭证列表
  * @method string getDid() 获取VP持有人的DID标识
@@ -41,6 +43,11 @@ class CreatePresentationRequest extends AbstractModel
      * @var integer DID应用id
      */
     public $DAPId;
+
+    /**
+     * @var integer 用户应用id
+     */
+    public $UAPId;
 
     /**
      * @var array 凭证列表
@@ -74,6 +81,7 @@ class CreatePresentationRequest extends AbstractModel
 
     /**
      * @param integer $DAPId DID应用id
+     * @param integer $UAPId 用户应用id
      * @param array $Credentials 凭证列表
      * @param string $Did VP持有人的DID标识
      * @param string $VerifyCode VP随机验证码
@@ -96,6 +104,10 @@ class CreatePresentationRequest extends AbstractModel
         }
         if (array_key_exists("DAPId",$param) and $param["DAPId"] !== null) {
             $this->DAPId = $param["DAPId"];
+        }
+
+        if (array_key_exists("UAPId",$param) and $param["UAPId"] !== null) {
+            $this->UAPId = $param["UAPId"];
         }
 
         if (array_key_exists("Credentials",$param) and $param["Credentials"] !== null) {

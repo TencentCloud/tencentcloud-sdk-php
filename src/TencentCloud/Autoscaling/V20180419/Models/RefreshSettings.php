@@ -21,29 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 实例刷新设置。
  *
  * @method RollingUpdateSettings getRollingUpdateSettings() 获取滚动更新设置参数。RefreshMode 为滚动更新该参数必须填写。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRollingUpdateSettings(RollingUpdateSettings $RollingUpdateSettings) 设置滚动更新设置参数。RefreshMode 为滚动更新该参数必须填写。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getCheckInstanceTargetHealth() 获取实例后端服务健康状态检查，默认为 FALSE。仅针对绑定应用型负载均衡器的伸缩组生效，开启该检查后，如刷新后实例未通过检查，负载均衡器端口权重始终为 0，且标记为刷新失败。取值范围如下：<br><li>TRUE：开启检查</li><li>FALSE：不开启检查
- * @method void setCheckInstanceTargetHealth(boolean $CheckInstanceTargetHealth) 设置实例后端服务健康状态检查，默认为 FALSE。仅针对绑定应用型负载均衡器的伸缩组生效，开启该检查后，如刷新后实例未通过检查，负载均衡器端口权重始终为 0，且标记为刷新失败。取值范围如下：<br><li>TRUE：开启检查</li><li>FALSE：不开启检查
+ * @method boolean getCheckInstanceTargetHealth() 获取实例后端服务健康状态检查，默认为 FALSE。仅针对绑定应用型负载均衡器的伸缩组生效，开启该检查后，如刷新后实例未通过检查，负载均衡器端口权重始终为 0，且标记为刷新失败。取值范围如下：<li>TRUE：开启检查</li><li>FALSE：不开启检查</li>
+ * @method void setCheckInstanceTargetHealth(boolean $CheckInstanceTargetHealth) 设置实例后端服务健康状态检查，默认为 FALSE。仅针对绑定应用型负载均衡器的伸缩组生效，开启该检查后，如刷新后实例未通过检查，负载均衡器端口权重始终为 0，且标记为刷新失败。取值范围如下：<li>TRUE：开启检查</li><li>FALSE：不开启检查</li>
  */
 class RefreshSettings extends AbstractModel
 {
     /**
      * @var RollingUpdateSettings 滚动更新设置参数。RefreshMode 为滚动更新该参数必须填写。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RollingUpdateSettings;
 
     /**
-     * @var boolean 实例后端服务健康状态检查，默认为 FALSE。仅针对绑定应用型负载均衡器的伸缩组生效，开启该检查后，如刷新后实例未通过检查，负载均衡器端口权重始终为 0，且标记为刷新失败。取值范围如下：<br><li>TRUE：开启检查</li><li>FALSE：不开启检查
+     * @var boolean 实例后端服务健康状态检查，默认为 FALSE。仅针对绑定应用型负载均衡器的伸缩组生效，开启该检查后，如刷新后实例未通过检查，负载均衡器端口权重始终为 0，且标记为刷新失败。取值范围如下：<li>TRUE：开启检查</li><li>FALSE：不开启检查</li>
      */
     public $CheckInstanceTargetHealth;
 
     /**
      * @param RollingUpdateSettings $RollingUpdateSettings 滚动更新设置参数。RefreshMode 为滚动更新该参数必须填写。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $CheckInstanceTargetHealth 实例后端服务健康状态检查，默认为 FALSE。仅针对绑定应用型负载均衡器的伸缩组生效，开启该检查后，如刷新后实例未通过检查，负载均衡器端口权重始终为 0，且标记为刷新失败。取值范围如下：<br><li>TRUE：开启检查</li><li>FALSE：不开启检查
+     * @param boolean $CheckInstanceTargetHealth 实例后端服务健康状态检查，默认为 FALSE。仅针对绑定应用型负载均衡器的伸缩组生效，开启该检查后，如刷新后实例未通过检查，负载均衡器端口权重始终为 0，且标记为刷新失败。取值范围如下：<li>TRUE：开启检查</li><li>FALSE：不开启检查</li>
      */
     function __construct()
     {

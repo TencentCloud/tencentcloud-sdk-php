@@ -26,7 +26,6 @@ use TencentCloud\Common\AbstractModel;
 - 1：广州 
 - 4：上海 
 - 5：中国香港 
-- 6：多伦多 
 - 7：上海金融 
 - 8：北京 
 - 9：新加坡
@@ -36,7 +35,6 @@ use TencentCloud\Common\AbstractModel;
 - 17：德国 
 - 18：韩国 
 - 19：重庆 
-- 21：印度 
 - 22：美东（弗吉尼亚）
 - 23：泰国 
 - 25：日本
@@ -44,7 +42,6 @@ use TencentCloud\Common\AbstractModel;
 - 1：广州 
 - 4：上海 
 - 5：中国香港 
-- 6：多伦多 
 - 7：上海金融 
 - 8：北京 
 - 9：新加坡
@@ -54,16 +51,13 @@ use TencentCloud\Common\AbstractModel;
 - 17：德国 
 - 18：韩国 
 - 19：重庆 
-- 21：印度 
 - 22：美东（弗吉尼亚）
 - 23：泰国 
 - 25：日本
  * @method string getGroupId() 获取复制组 ID。格式如：crs-rpl-deind****。
  * @method void setGroupId(string $GroupId) 设置复制组 ID。格式如：crs-rpl-deind****。
  * @method string getGroupName() 获取复制组名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupName(string $GroupName) 设置复制组名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取复制组状态。
 - 37：绑定复制组中。
 - 38：复制组重连中。
@@ -79,13 +73,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getInstanceCount() 获取复制组数量。
  * @method void setInstanceCount(integer $InstanceCount) 设置复制组数量。
  * @method array getInstances() 获取复制组中的实例信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstances(array $Instances) 设置复制组中的实例信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRemark() 获取备注信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置备注信息。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Groups extends AbstractModel
 {
@@ -99,7 +89,6 @@ class Groups extends AbstractModel
 - 1：广州 
 - 4：上海 
 - 5：中国香港 
-- 6：多伦多 
 - 7：上海金融 
 - 8：北京 
 - 9：新加坡
@@ -109,7 +98,6 @@ class Groups extends AbstractModel
 - 17：德国 
 - 18：韩国 
 - 19：重庆 
-- 21：印度 
 - 22：美东（弗吉尼亚）
 - 23：泰国 
 - 25：日本
@@ -123,7 +111,6 @@ class Groups extends AbstractModel
 
     /**
      * @var string 复制组名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupName;
 
@@ -144,13 +131,11 @@ class Groups extends AbstractModel
 
     /**
      * @var array 复制组中的实例信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Instances;
 
     /**
      * @var string 备注信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
@@ -160,7 +145,6 @@ class Groups extends AbstractModel
 - 1：广州 
 - 4：上海 
 - 5：中国香港 
-- 6：多伦多 
 - 7：上海金融 
 - 8：北京 
 - 9：新加坡
@@ -170,13 +154,11 @@ class Groups extends AbstractModel
 - 17：德国 
 - 18：韩国 
 - 19：重庆 
-- 21：印度 
 - 22：美东（弗吉尼亚）
 - 23：泰国 
 - 25：日本
      * @param string $GroupId 复制组 ID。格式如：crs-rpl-deind****。
      * @param string $GroupName 复制组名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 复制组状态。
 - 37：绑定复制组中。
 - 38：复制组重连中。
@@ -185,9 +167,7 @@ class Groups extends AbstractModel
 - 53：角色变更中。
      * @param integer $InstanceCount 复制组数量。
      * @param array $Instances 复制组中的实例信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Remark 备注信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

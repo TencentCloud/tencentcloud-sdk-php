@@ -21,21 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * ListEventHistory返回参数结构体
  *
  * @method string getContext() 获取搜索上下文, 用作查询游标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContext(string $Context) 设置搜索上下文, 用作查询游标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotal() 获取搜索结果数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotal(integer $Total) 设置搜索结果数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getListover() 获取搜索结果是否已经结束
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setListover(boolean $Listover) 设置搜索结果是否已经结束
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getEventHistory() 获取搜集结果集
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEventHistory(array $EventHistory) 设置搜集结果集
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -43,25 +35,21 @@ class ListEventHistoryResponse extends AbstractModel
 {
     /**
      * @var string 搜索上下文, 用作查询游标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Context;
 
     /**
      * @var integer 搜索结果数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Total;
 
     /**
      * @var boolean 搜索结果是否已经结束
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Listover;
 
     /**
      * @var array 搜集结果集
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventHistory;
 
@@ -72,13 +60,9 @@ class ListEventHistoryResponse extends AbstractModel
 
     /**
      * @param string $Context 搜索上下文, 用作查询游标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Total 搜索结果数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Listover 搜索结果是否已经结束
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $EventHistory 搜集结果集
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -20,58 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * cuDNN的版本信息
  *
- * @method string getVersion() 获取cuDNN的版本
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVersion(string $Version) 设置cuDNN的版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取cuDNN的名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置cuDNN的名字
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDocName() 获取cuDNN的Doc名字
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDocName(string $DocName) 设置cuDNN的Doc名字
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getVersion() 获取cuDNN的版本
+ * @method void setVersion(string $Version) 设置cuDNN的版本
  * @method string getDevName() 获取cuDNN的Dev名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDevName(string $DevName) 设置cuDNN的Dev名字
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDocName() 获取cuDNN的Doc名字
+ * @method void setDocName(string $DocName) 设置cuDNN的Doc名字
  */
 class CUDNN extends AbstractModel
 {
     /**
-     * @var string cuDNN的版本
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $Version;
-
-    /**
      * @var string cuDNN的名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
-     * @var string cuDNN的Doc名字
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string cuDNN的版本
      */
-    public $DocName;
+    public $Version;
 
     /**
      * @var string cuDNN的Dev名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DevName;
 
     /**
-     * @param string $Version cuDNN的版本
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string cuDNN的Doc名字
+     */
+    public $DocName;
+
+    /**
      * @param string $Name cuDNN的名字
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DocName cuDNN的Doc名字
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Version cuDNN的版本
      * @param string $DevName cuDNN的Dev名字
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DocName cuDNN的Doc名字
      */
     function __construct()
     {
@@ -86,20 +70,20 @@ class CUDNN extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
-            $this->Version = $param["Version"];
-        }
-
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
         }
 
-        if (array_key_exists("DocName",$param) and $param["DocName"] !== null) {
-            $this->DocName = $param["DocName"];
+        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
+            $this->Version = $param["Version"];
         }
 
         if (array_key_exists("DevName",$param) and $param["DevName"] !== null) {
             $this->DevName = $param["DevName"];
+        }
+
+        if (array_key_exists("DocName",$param) and $param["DocName"] !== null) {
+            $this->DocName = $param["DocName"];
         }
     }
 }

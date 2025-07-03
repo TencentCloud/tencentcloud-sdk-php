@@ -35,17 +35,11 @@ use TencentCloud\Common\AbstractModel;
  * @method array getItems() 获取适配项ID列表
  * @method void setItems(array $Items) 设置适配项ID列表
  * @method integer getAssetType() 获取[0:所有专业版旗舰版|1:hostID|2:ip]
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssetType(integer $AssetType) 设置[0:所有专业版旗舰版|1:hostID|2:ip]
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getHostIds() 获取主机Id集合
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostIds(array $HostIds) 设置主机Id集合
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getHostIps() 获取主机IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostIps(array $HostIps) 设置主机IP
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BaselineRule extends AbstractModel
 {
@@ -86,19 +80,16 @@ class BaselineRule extends AbstractModel
 
     /**
      * @var integer [0:所有专业版旗舰版|1:hostID|2:ip]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AssetType;
 
     /**
      * @var array 主机Id集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostIds;
 
     /**
      * @var array 主机IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostIps;
 
@@ -111,11 +102,8 @@ class BaselineRule extends AbstractModel
      * @param integer $HostCount 主机数
      * @param array $Items 适配项ID列表
      * @param integer $AssetType [0:所有专业版旗舰版|1:hostID|2:ip]
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $HostIds 主机Id集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $HostIps 主机IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

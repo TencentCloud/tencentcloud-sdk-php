@@ -20,46 +20,47 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 设备激活结果数据
  *
- * @method string getModelId() 获取模版ID
+ * @method string getModelId() 获取模板ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setModelId(string $ModelId) 设置模版ID
+ * @method void setModelId(string $ModelId) 设置模板ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSn() 获取SN信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSn(string $Sn) 设置SN信息
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getErrCode() 获取设备激活状态，0：激活成功；9800020：设备数超出限制；9800040：资源包类型和设备类型不匹配；9800039：资源包余额不足；9800037：激活码序号已使用；9800038：设备有效期超出限制；
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setErrCode(integer $ErrCode) 设置设备激活状态，0：激活成功；9800020：设备数超出限制；9800040：资源包类型和设备类型不匹配；9800039：资源包余额不足；9800037：激活码序号已使用；9800038：设备有效期超出限制；
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getErrCode() 获取设备激活状态，0：激活成功；50011：系统错误；50012：产品不存在；50013：设备不存在；50014：产品无权限；50015：不是音视频产品；50016：SN格式错误；50017：激活码类型错误；50018：激活次数限频；50019：激活码不足；50020：SN已暂停；
+ * @method void setErrCode(integer $ErrCode) 设置设备激活状态，0：激活成功；50011：系统错误；50012：产品不存在；50013：设备不存在；50014：产品无权限；50015：不是音视频产品；50016：SN格式错误；50017：激活码类型错误；50018：激活次数限频；50019：激活码不足；50020：SN已暂停；
+ * @method integer getExpireTime() 获取过期时间
+ * @method void setExpireTime(integer $ExpireTime) 设置过期时间
  */
 class DeviceActiveResult extends AbstractModel
 {
     /**
-     * @var string 模版ID
+     * @var string 模板ID
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $ModelId;
 
     /**
      * @var string SN信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Sn;
 
     /**
-     * @var integer 设备激活状态，0：激活成功；9800020：设备数超出限制；9800040：资源包类型和设备类型不匹配；9800039：资源包余额不足；9800037：激活码序号已使用；9800038：设备有效期超出限制；
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 设备激活状态，0：激活成功；50011：系统错误；50012：产品不存在；50013：设备不存在；50014：产品无权限；50015：不是音视频产品；50016：SN格式错误；50017：激活码类型错误；50018：激活次数限频；50019：激活码不足；50020：SN已暂停；
      */
     public $ErrCode;
 
     /**
-     * @param string $ModelId 模版ID
+     * @var integer 过期时间
+     */
+    public $ExpireTime;
+
+    /**
+     * @param string $ModelId 模板ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Sn SN信息
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ErrCode 设备激活状态，0：激活成功；9800020：设备数超出限制；9800040：资源包类型和设备类型不匹配；9800039：资源包余额不足；9800037：激活码序号已使用；9800038：设备有效期超出限制；
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ErrCode 设备激活状态，0：激活成功；50011：系统错误；50012：产品不存在；50013：设备不存在；50014：产品无权限；50015：不是音视频产品；50016：SN格式错误；50017：激活码类型错误；50018：激活次数限频；50019：激活码不足；50020：SN已暂停；
+     * @param integer $ExpireTime 过期时间
      */
     function __construct()
     {
@@ -84,6 +85,10 @@ class DeviceActiveResult extends AbstractModel
 
         if (array_key_exists("ErrCode",$param) and $param["ErrCode"] !== null) {
             $this->ErrCode = $param["ErrCode"];
+        }
+
+        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
+            $this->ExpireTime = $param["ExpireTime"];
         }
     }
 }

@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSerialNumber(string $SerialNumber) 设置序列号
  * @method string getAddress() 获取地址
  * @method void setAddress(string $Address) 设置地址
+ * @method string getLaserID() 获取背面号码
+ * @method void setLaserID(string $LaserID) 设置背面号码
  * @method string getPortraitImage() 获取证件人像照片抠取
  * @method void setPortraitImage(string $PortraitImage) 设置证件人像照片抠取
  * @method array getWarnCardInfos() 获取告警码
@@ -62,6 +64,24 @@ use TencentCloud\Common\AbstractModel;
 -9107 证件反光告警
 -9108 证件模糊告警
 -9109 告警能力未开通
+ * @method string getAdvancedInfo() 获取字段置信度：
+{
+    "ID": {
+        "Confidence": 0.9999
+    },
+    "ThaiName": {
+        "Confidence": 0.9996
+    }
+}
+ * @method void setAdvancedInfo(string $AdvancedInfo) 设置字段置信度：
+{
+    "ID": {
+        "Confidence": 0.9999
+    },
+    "ThaiName": {
+        "Confidence": 0.9996
+    }
+}
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -133,6 +153,11 @@ class RecognizeThaiIDCardOCRResponse extends AbstractModel
     public $Address;
 
     /**
+     * @var string 背面号码
+     */
+    public $LaserID;
+
+    /**
      * @var string 证件人像照片抠取
      */
     public $PortraitImage;
@@ -147,6 +172,19 @@ class RecognizeThaiIDCardOCRResponse extends AbstractModel
 -9109 告警能力未开通
      */
     public $WarnCardInfos;
+
+    /**
+     * @var string 字段置信度：
+{
+    "ID": {
+        "Confidence": 0.9999
+    },
+    "ThaiName": {
+        "Confidence": 0.9996
+    }
+}
+     */
+    public $AdvancedInfo;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -167,6 +205,7 @@ class RecognizeThaiIDCardOCRResponse extends AbstractModel
      * @param string $Religion 宗教信仰
      * @param string $SerialNumber 序列号
      * @param string $Address 地址
+     * @param string $LaserID 背面号码
      * @param string $PortraitImage 证件人像照片抠取
      * @param array $WarnCardInfos 告警码
 -9101 证件边框不完整告警
@@ -175,6 +214,15 @@ class RecognizeThaiIDCardOCRResponse extends AbstractModel
 -9107 证件反光告警
 -9108 证件模糊告警
 -9109 告警能力未开通
+     * @param string $AdvancedInfo 字段置信度：
+{
+    "ID": {
+        "Confidence": 0.9999
+    },
+    "ThaiName": {
+        "Confidence": 0.9996
+    }
+}
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -242,12 +290,20 @@ class RecognizeThaiIDCardOCRResponse extends AbstractModel
             $this->Address = $param["Address"];
         }
 
+        if (array_key_exists("LaserID",$param) and $param["LaserID"] !== null) {
+            $this->LaserID = $param["LaserID"];
+        }
+
         if (array_key_exists("PortraitImage",$param) and $param["PortraitImage"] !== null) {
             $this->PortraitImage = $param["PortraitImage"];
         }
 
         if (array_key_exists("WarnCardInfos",$param) and $param["WarnCardInfos"] !== null) {
             $this->WarnCardInfos = $param["WarnCardInfos"];
+        }
+
+        if (array_key_exists("AdvancedInfo",$param) and $param["AdvancedInfo"] !== null) {
+            $this->AdvancedInfo = $param["AdvancedInfo"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

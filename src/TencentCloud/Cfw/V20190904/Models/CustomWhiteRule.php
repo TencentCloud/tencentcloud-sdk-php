@@ -20,58 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 自定义白名单规则
  *
- * @method string getSrcIP() 获取访问源
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSrcIP(string $SrcIP) 设置访问源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDstIP() 获取访问目的
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDstIP(string $DstIP) 设置访问目的
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getIdsRuleName() 获取规则名称
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setIdsRuleName(string $IdsRuleName) 设置规则名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIdsRuleId() 获取规则ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIdsRuleId(string $IdsRuleId) 设置规则ID
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIdsRuleName() 获取规则名称
+ * @method void setIdsRuleName(string $IdsRuleName) 设置规则名称
+ * @method string getSrcIP() 获取访问源
+ * @method void setSrcIP(string $SrcIP) 设置访问源
  */
 class CustomWhiteRule extends AbstractModel
 {
     /**
-     * @var string 访问源
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $SrcIP;
-
-    /**
      * @var string 访问目的
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DstIP;
 
     /**
-     * @var string 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $IdsRuleName;
-
-    /**
      * @var string 规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IdsRuleId;
 
     /**
-     * @param string $SrcIP 访问源
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 规则名称
+     */
+    public $IdsRuleName;
+
+    /**
+     * @var string 访问源
+     */
+    public $SrcIP;
+
+    /**
      * @param string $DstIP 访问目的
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $IdsRuleName 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IdsRuleId 规则ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IdsRuleName 规则名称
+     * @param string $SrcIP 访问源
      */
     function __construct()
     {
@@ -86,20 +70,20 @@ class CustomWhiteRule extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SrcIP",$param) and $param["SrcIP"] !== null) {
-            $this->SrcIP = $param["SrcIP"];
-        }
-
         if (array_key_exists("DstIP",$param) and $param["DstIP"] !== null) {
             $this->DstIP = $param["DstIP"];
+        }
+
+        if (array_key_exists("IdsRuleId",$param) and $param["IdsRuleId"] !== null) {
+            $this->IdsRuleId = $param["IdsRuleId"];
         }
 
         if (array_key_exists("IdsRuleName",$param) and $param["IdsRuleName"] !== null) {
             $this->IdsRuleName = $param["IdsRuleName"];
         }
 
-        if (array_key_exists("IdsRuleId",$param) and $param["IdsRuleId"] !== null) {
-            $this->IdsRuleId = $param["IdsRuleId"];
+        if (array_key_exists("SrcIP",$param) and $param["SrcIP"] !== null) {
+            $this->SrcIP = $param["SrcIP"];
         }
     }
 }

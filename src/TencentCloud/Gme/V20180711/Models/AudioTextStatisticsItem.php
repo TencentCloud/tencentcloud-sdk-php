@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 录音转文本用量统计数据
  *
  * @method float getData() 获取统计值，单位：秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(float $Data) 设置统计值，单位：秒
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AudioTextStatisticsItem extends AbstractModel
 {
     /**
      * @var float 统计值，单位：秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
 
     /**
      * @param float $Data 统计值，单位：秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

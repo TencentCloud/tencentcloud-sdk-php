@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTrafficPackageId() 获取流量包唯一ID
  * @method void setTrafficPackageId(string $TrafficPackageId) 设置流量包唯一ID
  * @method string getTrafficPackageName() 获取流量包名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrafficPackageName(string $TrafficPackageName) 设置流量包名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getTotalAmount() 获取流量包总量，单位GB
  * @method void setTotalAmount(float $TotalAmount) 设置流量包总量，单位GB
  * @method float getRemainingAmount() 获取流量包剩余量，单位GB
@@ -39,9 +37,7 @@ use TencentCloud\Common\AbstractModel;
  * @method float getUsedAmount() 获取已使用的流量，单位GB
  * @method void setUsedAmount(float $UsedAmount) 设置已使用的流量，单位GB
  * @method array getTagSet() 获取流量包标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagSet(array $TagSet) 设置流量包标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeductType() 获取区分闲时流量包与全时流量包
  * @method void setDeductType(string $DeductType) 设置区分闲时流量包与全时流量包
  */
@@ -54,7 +50,6 @@ class TrafficPackage extends AbstractModel
 
     /**
      * @var string 流量包名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TrafficPackageName;
 
@@ -90,7 +85,6 @@ class TrafficPackage extends AbstractModel
 
     /**
      * @var array 流量包标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagSet;
 
@@ -102,7 +96,6 @@ class TrafficPackage extends AbstractModel
     /**
      * @param string $TrafficPackageId 流量包唯一ID
      * @param string $TrafficPackageName 流量包名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $TotalAmount 流量包总量，单位GB
      * @param float $RemainingAmount 流量包剩余量，单位GB
      * @param string $Status 流量包状态，可能的值有: AVAILABLE-可用状态， EXPIRED-已过期， EXHAUSTED-已用完， REFUNDED-已退还， DELETED-已删除
@@ -110,7 +103,6 @@ class TrafficPackage extends AbstractModel
      * @param string $Deadline 流量包截止时间
      * @param float $UsedAmount 已使用的流量，单位GB
      * @param array $TagSet 流量包标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeductType 区分闲时流量包与全时流量包
      */
     function __construct()

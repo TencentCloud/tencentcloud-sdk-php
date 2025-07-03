@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ReleaseAddresses请求参数结构体
  *
- * @method array getAddressIds() 获取标识 EIP 的唯一 ID 列表。EIP 唯一 ID 形如：`eip-11112222`。
- * @method void setAddressIds(array $AddressIds) 设置标识 EIP 的唯一 ID 列表。EIP 唯一 ID 形如：`eip-11112222`。
+ * @method array getAddressIds() 获取标识 EIP 的唯一 ID 列表。可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。EIP 唯一 ID 形如：`eip-11112222`。
+ * @method void setAddressIds(array $AddressIds) 设置标识 EIP 的唯一 ID 列表。可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。EIP 唯一 ID 形如：`eip-11112222`。
  */
 class ReleaseAddressesRequest extends AbstractModel
 {
     /**
-     * @var array 标识 EIP 的唯一 ID 列表。EIP 唯一 ID 形如：`eip-11112222`。
+     * @var array 标识 EIP 的唯一 ID 列表。可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。EIP 唯一 ID 形如：`eip-11112222`。
      */
     public $AddressIds;
 
     /**
-     * @param array $AddressIds 标识 EIP 的唯一 ID 列表。EIP 唯一 ID 形如：`eip-11112222`。
+     * @param array $AddressIds 标识 EIP 的唯一 ID 列表。可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressId。EIP 唯一 ID 形如：`eip-11112222`。
      */
     function __construct()
     {

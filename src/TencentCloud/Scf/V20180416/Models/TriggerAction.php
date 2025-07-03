@@ -21,17 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * 预置定时任务动作
  *
  * @method string getTriggerName() 获取定时预置名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTriggerName(string $TriggerName) 设置定时预置名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTriggerProvisionedConcurrencyNum() 获取定时预置并发数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTriggerProvisionedConcurrencyNum(integer $TriggerProvisionedConcurrencyNum) 设置定时预置并发数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTriggerCronConfig() 获取设置定时触发器的时间配置，cron表达式。Cron 表达式有七个必需字段，按空格分隔。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTriggerCronConfig(string $TriggerCronConfig) 设置设置定时触发器的时间配置，cron表达式。Cron 表达式有七个必需字段，按空格分隔。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProvisionedType() 获取预置类型 Default
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProvisionedType(string $ProvisionedType) 设置预置类型 Default
@@ -41,19 +35,16 @@ class TriggerAction extends AbstractModel
 {
     /**
      * @var string 定时预置名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TriggerName;
 
     /**
      * @var integer 定时预置并发数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TriggerProvisionedConcurrencyNum;
 
     /**
      * @var string 设置定时触发器的时间配置，cron表达式。Cron 表达式有七个必需字段，按空格分隔。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TriggerCronConfig;
 
@@ -65,11 +56,8 @@ class TriggerAction extends AbstractModel
 
     /**
      * @param string $TriggerName 定时预置名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TriggerProvisionedConcurrencyNum 定时预置并发数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TriggerCronConfig 设置定时触发器的时间配置，cron表达式。Cron 表达式有七个必需字段，按空格分隔。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProvisionedType 预置类型 Default
 注意：此字段可能返回 null，表示取不到有效值。
      */

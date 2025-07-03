@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 域名-规则id结构体
  *
  * @method string getDomain() 获取域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomain(string $Domain) 设置域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRuleId() 获取规则id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleId(string $RuleId) 设置规则id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DomainRuleId extends AbstractModel
 {
     /**
      * @var string 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Domain;
 
     /**
      * @var string 规则id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleId;
 
     /**
      * @param string $Domain 域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RuleId 规则id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

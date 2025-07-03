@@ -28,12 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCdcSubnetId(string $CdcSubnetId) 设置每个CDC集群有唯一一个子网ID
  * @method integer getZoneId() 获取所在可用区ID
  * @method void setZoneId(integer $ZoneId) 设置所在可用区ID
- * @method integer getBandwidth() 获取cdc集群的总带宽
- * @method void setBandwidth(integer $Bandwidth) 设置cdc集群的总带宽
+ * @method integer getBandwidth() 获取实例带宽,单位MB/s; 最小值:20MB/s, 高级版最大值:360MB/s,专业版最大值:100000MB/s  标准版固定带宽规格: 40MB/s, 100MB/s, 150MB/s
+ * @method void setBandwidth(integer $Bandwidth) 设置实例带宽,单位MB/s; 最小值:20MB/s, 高级版最大值:360MB/s,专业版最大值:100000MB/s  标准版固定带宽规格: 40MB/s, 100MB/s, 150MB/s
  * @method integer getDiskSize() 获取cdc集群的总磁盘
  * @method void setDiskSize(integer $DiskSize) 设置cdc集群的总磁盘
- * @method string getDiskType() 获取数据盘类型
- * @method void setDiskType(string $DiskType) 设置数据盘类型
+ * @method string getDiskType() 获取ckafka集群实例磁盘类型
+ * @method void setDiskType(string $DiskType) 设置ckafka集群实例磁盘类型
  * @method string getSystemDiskType() 获取系统盘类型
  * @method void setSystemDiskType(string $SystemDiskType) 设置系统盘类型
  */
@@ -60,7 +60,7 @@ class CreateCdcClusterRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var integer cdc集群的总带宽
+     * @var integer 实例带宽,单位MB/s; 最小值:20MB/s, 高级版最大值:360MB/s,专业版最大值:100000MB/s  标准版固定带宽规格: 40MB/s, 100MB/s, 150MB/s
      */
     public $Bandwidth;
 
@@ -70,7 +70,7 @@ class CreateCdcClusterRequest extends AbstractModel
     public $DiskSize;
 
     /**
-     * @var string 数据盘类型
+     * @var string ckafka集群实例磁盘类型
      */
     public $DiskType;
 
@@ -84,9 +84,9 @@ class CreateCdcClusterRequest extends AbstractModel
      * @param string $CdcVpcId vpcId,一个地域只有唯一一个vpcid用于CDC
      * @param string $CdcSubnetId 每个CDC集群有唯一一个子网ID
      * @param integer $ZoneId 所在可用区ID
-     * @param integer $Bandwidth cdc集群的总带宽
+     * @param integer $Bandwidth 实例带宽,单位MB/s; 最小值:20MB/s, 高级版最大值:360MB/s,专业版最大值:100000MB/s  标准版固定带宽规格: 40MB/s, 100MB/s, 150MB/s
      * @param integer $DiskSize cdc集群的总磁盘
-     * @param string $DiskType 数据盘类型
+     * @param string $DiskType ckafka集群实例磁盘类型
      * @param string $SystemDiskType 系统盘类型
      */
     function __construct()

@@ -29,9 +29,7 @@ use TencentCloud\Common\AbstractModel;
  * @method array getResourceTypes() 获取部署资源类型列表
  * @method void setResourceTypes(array $ResourceTypes) 设置部署资源类型列表
  * @method array getRegions() 获取部署地域列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegions(array $Regions) 设置部署地域列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取部署状态
  * @method void setStatus(integer $Status) 设置部署状态
  * @method string getCreateTime() 获取部署时间
@@ -63,7 +61,6 @@ class UpdateRecordInfo extends AbstractModel
 
     /**
      * @var array 部署地域列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Regions;
 
@@ -88,7 +85,6 @@ class UpdateRecordInfo extends AbstractModel
      * @param string $OldCertId 原证书ID
      * @param array $ResourceTypes 部署资源类型列表
      * @param array $Regions 部署地域列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 部署状态
      * @param string $CreateTime 部署时间
      * @param string $UpdateTime 最后一次更新时间

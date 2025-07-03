@@ -38,6 +38,10 @@ done 执行完成。
  * @method void setDoing(integer $Doing) 设置批量操作处理中个数
  * @method integer getFailed() 获取批量操作失败个数
  * @method void setFailed(integer $Failed) 设置批量操作失败个数
+ * @method boolean getPayStatus() 获取是否付费
+ * @method void setPayStatus(boolean $PayStatus) 设置是否付费
+ * @method string getBigDealId() 获取大订单ID
+ * @method void setBigDealId(string $BigDealId) 设置大订单ID
  */
 class DomainBatchLogSet extends AbstractModel
 {
@@ -79,6 +83,16 @@ done 执行完成。
     public $Failed;
 
     /**
+     * @var boolean 是否付费
+     */
+    public $PayStatus;
+
+    /**
+     * @var string 大订单ID
+     */
+    public $BigDealId;
+
+    /**
      * @param integer $LogId 日志ID
      * @param integer $Number 数量
      * @param string $Status 执行状态：
@@ -88,6 +102,8 @@ done 执行完成。
      * @param integer $Success 批量操作成功个数
      * @param integer $Doing 批量操作处理中个数
      * @param integer $Failed 批量操作失败个数
+     * @param boolean $PayStatus 是否付费
+     * @param string $BigDealId 大订单ID
      */
     function __construct()
     {
@@ -128,6 +144,14 @@ done 执行完成。
 
         if (array_key_exists("Failed",$param) and $param["Failed"] !== null) {
             $this->Failed = $param["Failed"];
+        }
+
+        if (array_key_exists("PayStatus",$param) and $param["PayStatus"] !== null) {
+            $this->PayStatus = $param["PayStatus"];
+        }
+
+        if (array_key_exists("BigDealId",$param) and $param["BigDealId"] !== null) {
+            $this->BigDealId = $param["BigDealId"];
         }
     }
 }

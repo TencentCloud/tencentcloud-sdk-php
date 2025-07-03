@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 单元化规则翻页对象
  *
  * @method integer getTotalCount() 获取记录总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置记录总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getContent() 获取记录实体列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContent(array $Content) 设置记录实体列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TsfPageUnitRuleV2 extends AbstractModel
 {
     /**
      * @var integer 记录总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
      * @var array 记录实体列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Content;
 
     /**
      * @param integer $TotalCount 记录总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Content 记录实体列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

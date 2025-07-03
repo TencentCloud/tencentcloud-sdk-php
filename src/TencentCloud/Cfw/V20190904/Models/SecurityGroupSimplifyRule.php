@@ -27,7 +27,6 @@ instance：资产实例(ins-123456)
 resourcegroup：资产分组(/全部分组/分组1/子分组1)
 tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
 region：地域(ap-gaungzhou)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSourceContent(string $SourceContent) 设置访问源示例：
 net：IP/CIDR(192.168.0.2)
 template：参数模板(ipm-dyodhpby)
@@ -35,7 +34,6 @@ instance：资产实例(ins-123456)
 resourcegroup：资产分组(/全部分组/分组1/子分组1)
 tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
 region：地域(ap-gaungzhou)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDestContent() 获取访问目的示例：
 net：IP/CIDR(192.168.0.2)
 template：参数模板(ipm-dyodhpby)
@@ -43,7 +41,6 @@ instance：资产实例(ins-123456)
 resourcegroup：资产分组(/全部分组/分组1/子分组1)
 tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
 region：地域(ap-gaungzhou)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDestContent(string $DestContent) 设置访问目的示例：
 net：IP/CIDR(192.168.0.2)
 template：参数模板(ipm-dyodhpby)
@@ -51,23 +48,14 @@ instance：资产实例(ins-123456)
 resourcegroup：资产分组(/全部分组/分组1/子分组1)
 tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
 region：地域(ap-gaungzhou)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProtocol() 获取协议；TCP/UDP/ICMP/ANY
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProtocol(string $Protocol) 设置协议；TCP/UDP/ICMP/ANY
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRuleUuid() 获取规则对应的唯一id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleUuid(integer $RuleUuid) 设置规则对应的唯一id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSequence() 获取规则序号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSequence(integer $Sequence) 设置规则序号
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SecurityGroupSimplifyRule extends AbstractModel
 {
@@ -79,7 +67,6 @@ instance：资产实例(ins-123456)
 resourcegroup：资产分组(/全部分组/分组1/子分组1)
 tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
 region：地域(ap-gaungzhou)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SourceContent;
 
@@ -91,31 +78,26 @@ instance：资产实例(ins-123456)
 resourcegroup：资产分组(/全部分组/分组1/子分组1)
 tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
 region：地域(ap-gaungzhou)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DestContent;
 
     /**
      * @var string 协议；TCP/UDP/ICMP/ANY
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Protocol;
 
     /**
      * @var string 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var integer 规则对应的唯一id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleUuid;
 
     /**
      * @var integer 规则序号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Sequence;
 
@@ -127,7 +109,6 @@ instance：资产实例(ins-123456)
 resourcegroup：资产分组(/全部分组/分组1/子分组1)
 tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
 region：地域(ap-gaungzhou)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DestContent 访问目的示例：
 net：IP/CIDR(192.168.0.2)
 template：参数模板(ipm-dyodhpby)
@@ -135,15 +116,10 @@ instance：资产实例(ins-123456)
 resourcegroup：资产分组(/全部分组/分组1/子分组1)
 tag：资源标签({"Key":"标签key值","Value":"标签Value值"})
 region：地域(ap-gaungzhou)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Protocol 协议；TCP/UDP/ICMP/ANY
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleUuid 规则对应的唯一id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Sequence 规则序号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

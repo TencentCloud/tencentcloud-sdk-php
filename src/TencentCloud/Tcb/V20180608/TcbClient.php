@@ -41,7 +41,6 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\DeleteEndUserResponse DeleteEndUser(Models\DeleteEndUserRequest $req) 删除终端用户
  * @method Models\DeleteGatewayVersionResponse DeleteGatewayVersion(Models\DeleteGatewayVersionRequest $req) 删除网关某版本
  * @method Models\DeleteWxGatewayRouteResponse DeleteWxGatewayRoute(Models\DeleteWxGatewayRouteRequest $req) 删除安全网关路由
- * @method Models\DescribeActivityInfoResponse DescribeActivityInfo(Models\DescribeActivityInfoRequest $req) 查询活动信息
  * @method Models\DescribeActivityRecordResponse DescribeActivityRecord(Models\DescribeActivityRecordRequest $req) 查询活动记录信息
  * @method Models\DescribeAuthDomainsResponse DescribeAuthDomains(Models\DescribeAuthDomainsRequest $req) 获取安全域名列表
  * @method Models\DescribeBaasPackageListResponse DescribeBaasPackageList(Models\DescribeBaasPackageListRequest $req) 获取新套餐列表，含详情，如果传了PackageId，则只获取指定套餐详情
@@ -54,7 +53,7 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\DescribeCloudBaseRunConfForGateWayResponse DescribeCloudBaseRunConfForGateWay(Models\DescribeCloudBaseRunConfForGateWayRequest $req) 独立网关中拉取云托管服务对应的配置信息
  * @method Models\DescribeCloudBaseRunOneClickTaskExternalResponse DescribeCloudBaseRunOneClickTaskExternal(Models\DescribeCloudBaseRunOneClickTaskExternalRequest $req) 查询一键部署任务 （特定接口：外部查询使用）
  * @method Models\DescribeCloudBaseRunOperationTypesResponse DescribeCloudBaseRunOperationTypes(Models\DescribeCloudBaseRunOperationTypesRequest $req) 查询服务、版本和操作类型
- * @method Models\DescribeCloudBaseRunPodListResponse DescribeCloudBaseRunPodList(Models\DescribeCloudBaseRunPodListRequest $req) 查询云应用服务版本容器列表
+ * @method Models\DescribeCloudBaseRunPodListResponse DescribeCloudBaseRunPodList(Models\DescribeCloudBaseRunPodListRequest $req) 查询云托管服务版本容器列表
  * @method Models\DescribeCloudBaseRunResourceResponse DescribeCloudBaseRunResource(Models\DescribeCloudBaseRunResourceRequest $req) 查看容器托管的集群状态
  * @method Models\DescribeCloudBaseRunResourceForExtendResponse DescribeCloudBaseRunResourceForExtend(Models\DescribeCloudBaseRunResourceForExtendRequest $req) 查看容器托管的集群状态扩展使用
  * @method Models\DescribeCloudBaseRunServerResponse DescribeCloudBaseRunServer(Models\DescribeCloudBaseRunServerRequest $req) 查询单个服务的详情，版本以及详情
@@ -95,11 +94,11 @@ use TencentCloud\Tcb\V20180608\Models as Models;
  * @method Models\DescribeWxCloudBaseRunEnvsResponse DescribeWxCloudBaseRunEnvs(Models\DescribeWxCloudBaseRunEnvsRequest $req) 查询微信云托管环境信息
  * @method Models\DescribeWxCloudBaseRunSubNetsResponse DescribeWxCloudBaseRunSubNets(Models\DescribeWxCloudBaseRunSubNetsRequest $req) 查询微信云托管子网
  * @method Models\DescribeWxGatewayRoutesResponse DescribeWxGatewayRoutes(Models\DescribeWxGatewayRoutesRequest $req) 查看安全网关路由
-
  * @method Models\DescribeWxGatewaysResponse DescribeWxGateways(Models\DescribeWxGatewaysRequest $req) 查看安全网关
  * @method Models\DestroyEnvResponse DestroyEnv(Models\DestroyEnvRequest $req) 销毁环境
  * @method Models\DestroyStandaloneGatewayResponse DestroyStandaloneGateway(Models\DestroyStandaloneGatewayRequest $req) 本接口（DestroyStandaloneGateway）用于销毁小租户网关。
  * @method Models\DestroyStaticStoreResponse DestroyStaticStore(Models\DestroyStaticStoreRequest $req) 销毁静态托管资源，该接口创建异步销毁任务，资源最终状态可从DestroyStaticStore接口查看
+ * @method Models\EditAuthConfigResponse EditAuthConfig(Models\EditAuthConfigRequest $req) 修改登录配置
  * @method Models\EstablishCloudBaseRunServerResponse EstablishCloudBaseRunServer(Models\EstablishCloudBaseRunServerRequest $req) 创建云应用服务
  * @method Models\EstablishWxGatewayRouteResponse EstablishWxGatewayRoute(Models\EstablishWxGatewayRouteRequest $req) 创建或修改安全网关路由
  * @method Models\FreezeCloudBaseRunServersResponse FreezeCloudBaseRunServers(Models\FreezeCloudBaseRunServersRequest $req) 批量冻结

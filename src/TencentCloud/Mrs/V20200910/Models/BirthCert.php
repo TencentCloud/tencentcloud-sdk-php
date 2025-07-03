@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 出生证明结构化信息
  *
  * @method NeonatalInfo getNeonatalInfo() 获取新生儿信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNeonatalInfo(NeonatalInfo $NeonatalInfo) 设置新生儿信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ParentInfo getMotherInfo() 获取母亲信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMotherInfo(ParentInfo $MotherInfo) 设置母亲信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ParentInfo getFatherInfo() 获取父亲信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFatherInfo(ParentInfo $FatherInfo) 设置父亲信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method IssueInfo getIssueInfo() 获取签发信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIssueInfo(IssueInfo $IssueInfo) 设置签发信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPage() 获取数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPage(integer $Page) 设置数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BirthCert extends AbstractModel
 {
     /**
      * @var NeonatalInfo 新生儿信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NeonatalInfo;
 
     /**
      * @var ParentInfo 母亲信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MotherInfo;
 
     /**
      * @var ParentInfo 父亲信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FatherInfo;
 
     /**
      * @var IssueInfo 签发信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IssueInfo;
 
     /**
      * @var integer 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Page;
 
     /**
      * @param NeonatalInfo $NeonatalInfo 新生儿信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParentInfo $MotherInfo 母亲信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ParentInfo $FatherInfo 父亲信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IssueInfo $IssueInfo 签发信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

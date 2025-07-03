@@ -24,52 +24,34 @@ use TencentCloud\Common\AbstractModel;
 以及其他令人反感、不安全或不适宜的内容类型。
 
 如音频中无复杂类型「TextResults」的返回则代表该音频中无相关违规内容；
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabel(string $Label) 设置恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告。
 以及其他令人反感、不安全或不适宜的内容类型。
 
 如音频中无复杂类型「TextResults」的返回则代表该音频中无相关违规内容；
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getKeywords() 获取命中的关键词，为空则代表该违规内容出自于模型的判断；
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeywords(array $Keywords) 设置命中的关键词，为空则代表该违规内容出自于模型的判断；
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLibId() 获取命中关键词库的库标识；
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLibId(string $LibId) 设置命中关键词库的库标识；
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLibName() 获取命中关键词库的名字；
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLibName(string $LibName) 设置命中关键词库的名字；
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScore() 获取机器判断当前分类的置信度，取值范围：0~100。分数越高，表示越有可能属于当前分类。
 （如：Porn 99，则该样本属于色情的置信度非常高。）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScore(integer $Score) 设置机器判断当前分类的置信度，取值范围：0~100。分数越高，表示越有可能属于当前分类。
 （如：Porn 99，则该样本属于色情的置信度非常高。）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSuggestion() 获取建议您拿到判断结果后的执行操作。
 建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSuggestion(string $Suggestion) 设置建议您拿到判断结果后的执行操作。
 建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLibType() 获取自定义词库的类型，自定义词库相关的信息可登录控制台中查看；
-
 1：自定义黑白库；
-
-2：自定义库；
+2：公库；
  * @method void setLibType(integer $LibType) 设置自定义词库的类型，自定义词库相关的信息可登录控制台中查看；
-
 1：自定义黑白库；
-
-2：自定义库；
+2：公库；
  * @method string getSubLabel() 获取该字段用于返回当前标签（Lable）下的二级标签。
-注意：此字段可能返回null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubLabel(string $SubLabel) 设置该字段用于返回当前标签（Lable）下的二级标签。
-注意：此字段可能返回null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getHitInfos() 获取该字段用于返回违规文本命中信息
+ * @method void setHitInfos(array $HitInfos) 设置该字段用于返回违规文本命中信息
  */
 class TextResult extends AbstractModel
 {
@@ -78,84 +60,70 @@ class TextResult extends AbstractModel
 以及其他令人反感、不安全或不适宜的内容类型。
 
 如音频中无复杂类型「TextResults」的返回则代表该音频中无相关违规内容；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Label;
 
     /**
      * @var array 命中的关键词，为空则代表该违规内容出自于模型的判断；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Keywords;
 
     /**
      * @var string 命中关键词库的库标识；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LibId;
 
     /**
      * @var string 命中关键词库的名字；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LibName;
 
     /**
      * @var integer 机器判断当前分类的置信度，取值范围：0~100。分数越高，表示越有可能属于当前分类。
 （如：Porn 99，则该样本属于色情的置信度非常高。）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Score;
 
     /**
      * @var string 建议您拿到判断结果后的执行操作。
 建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Suggestion;
 
     /**
      * @var integer 自定义词库的类型，自定义词库相关的信息可登录控制台中查看；
-
 1：自定义黑白库；
-
-2：自定义库；
+2：公库；
      */
     public $LibType;
 
     /**
      * @var string 该字段用于返回当前标签（Lable）下的二级标签。
-注意：此字段可能返回null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubLabel;
+
+    /**
+     * @var array 该字段用于返回违规文本命中信息
+     */
+    public $HitInfos;
 
     /**
      * @param string $Label 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告。
 以及其他令人反感、不安全或不适宜的内容类型。
 
 如音频中无复杂类型「TextResults」的返回则代表该音频中无相关违规内容；
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Keywords 命中的关键词，为空则代表该违规内容出自于模型的判断；
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LibId 命中关键词库的库标识；
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LibName 命中关键词库的名字；
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Score 机器判断当前分类的置信度，取值范围：0~100。分数越高，表示越有可能属于当前分类。
 （如：Porn 99，则该样本属于色情的置信度非常高。）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Suggestion 建议您拿到判断结果后的执行操作。
 建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LibType 自定义词库的类型，自定义词库相关的信息可登录控制台中查看；
-
 1：自定义黑白库；
-
-2：自定义库；
+2：公库；
      * @param string $SubLabel 该字段用于返回当前标签（Lable）下的二级标签。
-注意：此字段可能返回null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $HitInfos 该字段用于返回违规文本命中信息
      */
     function __construct()
     {
@@ -200,6 +168,15 @@ class TextResult extends AbstractModel
 
         if (array_key_exists("SubLabel",$param) and $param["SubLabel"] !== null) {
             $this->SubLabel = $param["SubLabel"];
+        }
+
+        if (array_key_exists("HitInfos",$param) and $param["HitInfos"] !== null) {
+            $this->HitInfos = [];
+            foreach ($param["HitInfos"] as $key => $value){
+                $obj = new HitInfo();
+                $obj->deserialize($value);
+                array_push($this->HitInfos, $obj);
+            }
         }
     }
 }

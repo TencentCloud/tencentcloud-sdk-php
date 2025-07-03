@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 处方单
  *
  * @method array getMedicineList() 获取药品列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMedicineList(array $MedicineList) 设置药品列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPage() 获取数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPage(integer $Page) 设置数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Prescription extends AbstractModel
 {
     /**
      * @var array 药品列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MedicineList;
 
     /**
      * @var integer 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Page;
 
     /**
      * @param array $MedicineList 药品列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

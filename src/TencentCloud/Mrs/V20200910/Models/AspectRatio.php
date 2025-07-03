@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 纵横比
  *
  * @method array getIndex() 获取原文位置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIndex(array $Index) 设置原文位置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNumber() 获取数值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNumber(string $Number) 设置数值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRelation() 获取关系
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRelation(string $Relation) 设置关系
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSrc() 获取原文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSrc(string $Src) 设置原文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AspectRatio extends AbstractModel
 {
     /**
      * @var array 原文位置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Index;
 
     /**
      * @var string 数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Number;
 
     /**
      * @var string 关系
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Relation;
 
     /**
      * @var string 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Src;
 
     /**
      * @var string 值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @param array $Index 原文位置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Number 数值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Relation 关系
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

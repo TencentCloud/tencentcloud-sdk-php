@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 查询建筑信息响应体
  *
  * @method BuildingProfile getBuildingProfile() 获取建筑概要信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBuildingProfile(BuildingProfile $BuildingProfile) 设置建筑概要信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BuildingProfileRes extends AbstractModel
 {
     /**
      * @var BuildingProfile 建筑概要信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BuildingProfile;
 
     /**
      * @param BuildingProfile $BuildingProfile 建筑概要信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

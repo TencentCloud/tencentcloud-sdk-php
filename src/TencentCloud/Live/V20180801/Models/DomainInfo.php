@@ -70,10 +70,8 @@ use TencentCloud\Common\AbstractModel;
 注：此字段为北京时间（UTC+8时区）。
  * @method integer getIsMiniProgramLive() 获取0: 标准直播。
 1: 小程序直播。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsMiniProgramLive(integer $IsMiniProgramLive) 设置0: 标准直播。
 1: 小程序直播。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DomainInfo extends AbstractModel
 {
@@ -148,7 +146,6 @@ class DomainInfo extends AbstractModel
     /**
      * @var integer 0: 标准直播。
 1: 小程序直播。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsMiniProgramLive;
 
@@ -179,7 +176,6 @@ class DomainInfo extends AbstractModel
 注：此字段为北京时间（UTC+8时区）。
      * @param integer $IsMiniProgramLive 0: 标准直播。
 1: 小程序直播。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

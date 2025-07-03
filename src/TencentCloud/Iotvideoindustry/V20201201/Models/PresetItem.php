@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * 预置位结构出参
  *
  * @method integer getPresetId() 获取预置位ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPresetId(integer $PresetId) 设置预置位ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPresetName() 获取预置位名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPresetName(string $PresetName) 设置预置位名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取预置位状态 0:未设置预置位 1:已设置预置位 2:已设置预置位&看守位
  * @method void setStatus(integer $Status) 设置预置位状态 0:未设置预置位 1:已设置预置位 2:已设置预置位&看守位
  * @method integer getResetTime() 获取预置位启用时的自动归位时间
@@ -37,13 +33,11 @@ class PresetItem extends AbstractModel
 {
     /**
      * @var integer 预置位ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PresetId;
 
     /**
      * @var string 预置位名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PresetName;
 
@@ -59,9 +53,7 @@ class PresetItem extends AbstractModel
 
     /**
      * @param integer $PresetId 预置位ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PresetName 预置位名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 预置位状态 0:未设置预置位 1:已设置预置位 2:已设置预置位&看守位
      * @param integer $ResetTime 预置位启用时的自动归位时间
      */

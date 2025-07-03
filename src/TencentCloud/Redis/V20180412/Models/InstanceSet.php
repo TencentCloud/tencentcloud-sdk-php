@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
 
  * @method integer getProjectId() 获取项目 ID。
  * @method void setProjectId(integer $ProjectId) 设置项目 ID。
- * @method integer getRegionId() 获取地域 ID。<ul><li>1：广州。</li><li>4：上海。</li><li>5：中国香港。</li><li>6：多伦多。</li> <li>7：上海金融。</li> <li>8：北京。</li> <li>9：新加坡。</li> <li>11：深圳金融。</li> <li>15：美西（硅谷）。</li><li>16：成都。</li><li>17：法兰克福。</li><li>18：首尔。</li><li>19：重庆。</li><li>21：孟买。</li><li>22：美东（弗吉尼亚）。</li><li>23：曼谷。</li><li>25：东京。</li></ul>
- * @method void setRegionId(integer $RegionId) 设置地域 ID。<ul><li>1：广州。</li><li>4：上海。</li><li>5：中国香港。</li><li>6：多伦多。</li> <li>7：上海金融。</li> <li>8：北京。</li> <li>9：新加坡。</li> <li>11：深圳金融。</li> <li>15：美西（硅谷）。</li><li>16：成都。</li><li>17：法兰克福。</li><li>18：首尔。</li><li>19：重庆。</li><li>21：孟买。</li><li>22：美东（弗吉尼亚）。</li><li>23：曼谷。</li><li>25：东京。</li></ul>
+ * @method integer getRegionId() 获取地域 ID。<ul><li>1：广州。</li><li>4：上海。</li><li>5：中国香港。</li><li>7：上海金融。</li> <li>8：北京。</li> <li>9：新加坡。</li> <li>11：深圳金融。</li> <li>15：美西（硅谷）。</li><li>16：成都。</li><li>17：法兰克福。</li><li>18：首尔。</li><li>19：重庆。</li><li>22：美东（弗吉尼亚）。</li><li>23：曼谷。</li><li>25：东京。</li></ul>
+ * @method void setRegionId(integer $RegionId) 设置地域 ID。<ul><li>1：广州。</li><li>4：上海。</li><li>5：中国香港。</li><li>7：上海金融。</li> <li>8：北京。</li> <li>9：新加坡。</li> <li>11：深圳金融。</li> <li>15：美西（硅谷）。</li><li>16：成都。</li><li>17：法兰克福。</li><li>18：首尔。</li><li>19：重庆。</li><li>22：美东（弗吉尼亚）。</li><li>23：曼谷。</li><li>25：东京。</li></ul>
  * @method integer getZoneId() 获取区域 ID。
  * @method void setZoneId(integer $ZoneId) 设置区域 ID。
  * @method integer getVpcId() 获取vpc网络 ID，例如75101。
@@ -94,8 +94,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceTitle(string $InstanceTitle) 设置实例运行状态描述：如”实例运行中“。
  * @method string getOfflineTime() 获取已隔离实例默认下线时间。按量计费实例隔离后默认两小时后下线，包年包月默认7天后下线。格式如：2020-02-15 10:20:00。
  * @method void setOfflineTime(string $OfflineTime) 设置已隔离实例默认下线时间。按量计费实例隔离后默认两小时后下线，包年包月默认7天后下线。格式如：2020-02-15 10:20:00。
- * @method integer getSubStatus() 获取流程中的实例，返回子状态。
- * @method void setSubStatus(integer $SubStatus) 设置流程中的实例，返回子状态。
+ * @method integer getSubStatus() 获取流程中的实例返回的子状态。
+- 0：磁盘读写状态。
+- 1：磁盘超限只读状态。
+ * @method void setSubStatus(integer $SubStatus) 设置流程中的实例返回的子状态。
+- 0：磁盘读写状态。
+- 1：磁盘超限只读状态。
  * @method array getTags() 获取反亲和性标签。
  * @method void setTags(array $Tags) 设置反亲和性标签。
  * @method array getInstanceNode() 获取实例节点信息。
@@ -113,101 +117,59 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getSlaveReadWeight() 获取从节点读取权重。
  * @method void setSlaveReadWeight(integer $SlaveReadWeight) 设置从节点读取权重。
  * @method array getInstanceTags() 获取实例关联的标签信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceTags(array $InstanceTags) 设置实例关联的标签信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProjectName() 获取项目名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectName(string $ProjectName) 设置项目名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getNoAuth() 获取是否为免密实例。<ul><li>true：免密实例。</li><li>false：非免密实例。</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNoAuth(boolean $NoAuth) 设置是否为免密实例。<ul><li>true：免密实例。</li><li>false：非免密实例。</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getClientLimit() 获取客户端连接数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClientLimit(integer $ClientLimit) 设置客户端连接数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDtsStatus() 获取DTS状态（内部参数，用户可忽略）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDtsStatus(integer $DtsStatus) 设置DTS状态（内部参数，用户可忽略）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNetLimit() 获取分片带宽上限，单位MB。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetLimit(integer $NetLimit) 设置分片带宽上限，单位MB。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPasswordFree() 获取免密实例标识（内部参数，用户可忽略）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPasswordFree(integer $PasswordFree) 设置免密实例标识（内部参数，用户可忽略）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVip6() 获取该参数存在命名不规范问题，建议用参数IPv6取代。内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVip6(string $Vip6) 设置该参数存在命名不规范问题，建议用参数IPv6取代。内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIPv6() 获取内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIPv6(string $IPv6) 设置内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getReadOnly() 获取实例只读标识（内部参数，用户可忽略）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReadOnly(integer $ReadOnly) 设置实例只读标识（内部参数，用户可忽略）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRemainBandwidthDuration() 获取内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemainBandwidthDuration(string $RemainBandwidthDuration) 设置内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDiskSize() 获取Redis实例请忽略该参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskSize(integer $DiskSize) 设置Redis实例请忽略该参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMonitorVersion() 获取监控版本。<ul><li>1m：1分钟粒度监控。目前该监控粒度已下线，具体信息，请参见[云数据库 Redis 1分钟粒度下线公告](https://cloud.tencent.com/document/product/239/80653)。</li><li>5s：5秒粒度监控。</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMonitorVersion(string $MonitorVersion) 设置监控版本。<ul><li>1m：1分钟粒度监控。目前该监控粒度已下线，具体信息，请参见[云数据库 Redis 1分钟粒度下线公告](https://cloud.tencent.com/document/product/239/80653)。</li><li>5s：5秒粒度监控。</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getClientLimitMin() 获取客户端最大连接数可设置的最小值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClientLimitMin(integer $ClientLimitMin) 设置客户端最大连接数可设置的最小值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getClientLimitMax() 获取客户端最大连接数可设置的最大值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClientLimitMax(integer $ClientLimitMax) 设置客户端最大连接数可设置的最大值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getNodeSet() 获取实例的节点详细信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodeSet(array $NodeSet) 设置实例的节点详细信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegion() 获取实例所在的地域信息，比如ap-guangzhou。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置实例所在的地域信息，比如ap-guangzhou。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWanAddress() 获取外网地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWanAddress(string $WanAddress) 设置外网地址。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPolarisServer() 获取北极星服务地址，内部使用。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolarisServer(string $PolarisServer) 设置北极星服务地址，内部使用。
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRedisClusterId() 获取CDC Redis集群ID。
+ * @method void setRedisClusterId(string $RedisClusterId) 设置CDC Redis集群ID。
+ * @method string getDedicatedClusterId() 获取CDC 集群ID。
+ * @method void setDedicatedClusterId(string $DedicatedClusterId) 设置CDC 集群ID。
+ * @method string getProductVersion() 获取产品版本。<ul><li>local：本地盘。</li><li>cloud：云盘版。</li><li>cdc：CDC 集群版本。</li></ul>
+ * @method void setProductVersion(string $ProductVersion) 设置产品版本。<ul><li>local：本地盘。</li><li>cloud：云盘版。</li><li>cdc：CDC 集群版本。</li></ul>
  * @method string getCurrentProxyVersion() 获取实例当前Proxy版本。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCurrentProxyVersion(string $CurrentProxyVersion) 设置实例当前Proxy版本。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCurrentRedisVersion() 获取实例当前Cache小版本。如果实例加入全球复制组，显示全球复制的内核版本。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCurrentRedisVersion(string $CurrentRedisVersion) 设置实例当前Cache小版本。如果实例加入全球复制组，显示全球复制的内核版本。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpgradeProxyVersion() 获取实例可升级Proxy版本。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpgradeProxyVersion(string $UpgradeProxyVersion) 设置实例可升级Proxy版本。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpgradeRedisVersion() 获取实例可升级Cache小版本。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpgradeRedisVersion(string $UpgradeRedisVersion) 设置实例可升级Cache小版本。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBackupMode() 获取备份模式：- SecondLevelBackup   秒级备份- NormalLevelBackup    普通备份
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackupMode(string $BackupMode) 设置备份模式：- SecondLevelBackup   秒级备份- NormalLevelBackup    普通备份
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceSet extends AbstractModel
 {
@@ -233,7 +195,7 @@ class InstanceSet extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var integer 地域 ID。<ul><li>1：广州。</li><li>4：上海。</li><li>5：中国香港。</li><li>6：多伦多。</li> <li>7：上海金融。</li> <li>8：北京。</li> <li>9：新加坡。</li> <li>11：深圳金融。</li> <li>15：美西（硅谷）。</li><li>16：成都。</li><li>17：法兰克福。</li><li>18：首尔。</li><li>19：重庆。</li><li>21：孟买。</li><li>22：美东（弗吉尼亚）。</li><li>23：曼谷。</li><li>25：东京。</li></ul>
+     * @var integer 地域 ID。<ul><li>1：广州。</li><li>4：上海。</li><li>5：中国香港。</li><li>7：上海金融。</li> <li>8：北京。</li> <li>9：新加坡。</li> <li>11：深圳金融。</li> <li>15：美西（硅谷）。</li><li>16：成都。</li><li>17：法兰克福。</li><li>18：首尔。</li><li>19：重庆。</li><li>22：美东（弗吉尼亚）。</li><li>23：曼谷。</li><li>25：东京。</li></ul>
      */
     public $RegionId;
 
@@ -279,6 +241,7 @@ class InstanceSet extends AbstractModel
 
     /**
      * @var float 该字段已废弃。请使用腾讯云可观测平台API 接口 [GetMonitorData](https://cloud.tencent.com/document/product/248/31014) 获取实例已使用的内存容量。
+     * @deprecated
      */
     public $SizeUsed;
 
@@ -345,7 +308,9 @@ class InstanceSet extends AbstractModel
     public $OfflineTime;
 
     /**
-     * @var integer 流程中的实例，返回子状态。
+     * @var integer 流程中的实例返回的子状态。
+- 0：磁盘读写状态。
+- 1：磁盘超限只读状态。
      */
     public $SubStatus;
 
@@ -391,145 +356,136 @@ class InstanceSet extends AbstractModel
 
     /**
      * @var array 实例关联的标签信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceTags;
 
     /**
      * @var string 项目名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectName;
 
     /**
      * @var boolean 是否为免密实例。<ul><li>true：免密实例。</li><li>false：非免密实例。</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NoAuth;
 
     /**
      * @var integer 客户端连接数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClientLimit;
 
     /**
      * @var integer DTS状态（内部参数，用户可忽略）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DtsStatus;
 
     /**
      * @var integer 分片带宽上限，单位MB。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NetLimit;
 
     /**
      * @var integer 免密实例标识（内部参数，用户可忽略）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PasswordFree;
 
     /**
      * @var string 该参数存在命名不规范问题，建议用参数IPv6取代。内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Vip6;
 
     /**
      * @var string 内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IPv6;
 
     /**
      * @var integer 实例只读标识（内部参数，用户可忽略）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReadOnly;
 
     /**
      * @var string 内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RemainBandwidthDuration;
 
     /**
      * @var integer Redis实例请忽略该参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskSize;
 
     /**
      * @var string 监控版本。<ul><li>1m：1分钟粒度监控。目前该监控粒度已下线，具体信息，请参见[云数据库 Redis 1分钟粒度下线公告](https://cloud.tencent.com/document/product/239/80653)。</li><li>5s：5秒粒度监控。</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MonitorVersion;
 
     /**
      * @var integer 客户端最大连接数可设置的最小值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClientLimitMin;
 
     /**
      * @var integer 客户端最大连接数可设置的最大值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClientLimitMax;
 
     /**
      * @var array 实例的节点详细信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeSet;
 
     /**
      * @var string 实例所在的地域信息，比如ap-guangzhou。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
      * @var string 外网地址。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WanAddress;
 
     /**
      * @var string 北极星服务地址，内部使用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PolarisServer;
 
     /**
+     * @var string CDC Redis集群ID。
+     */
+    public $RedisClusterId;
+
+    /**
+     * @var string CDC 集群ID。
+     */
+    public $DedicatedClusterId;
+
+    /**
+     * @var string 产品版本。<ul><li>local：本地盘。</li><li>cloud：云盘版。</li><li>cdc：CDC 集群版本。</li></ul>
+     */
+    public $ProductVersion;
+
+    /**
      * @var string 实例当前Proxy版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CurrentProxyVersion;
 
     /**
      * @var string 实例当前Cache小版本。如果实例加入全球复制组，显示全球复制的内核版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CurrentRedisVersion;
 
     /**
      * @var string 实例可升级Proxy版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpgradeProxyVersion;
 
     /**
      * @var string 实例可升级Cache小版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpgradeRedisVersion;
 
     /**
      * @var string 备份模式：- SecondLevelBackup   秒级备份- NormalLevelBackup    普通备份
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BackupMode;
 
@@ -539,7 +495,7 @@ class InstanceSet extends AbstractModel
      * @param integer $Appid 用户APPID。APPID是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 APPID。
 
      * @param integer $ProjectId 项目 ID。
-     * @param integer $RegionId 地域 ID。<ul><li>1：广州。</li><li>4：上海。</li><li>5：中国香港。</li><li>6：多伦多。</li> <li>7：上海金融。</li> <li>8：北京。</li> <li>9：新加坡。</li> <li>11：深圳金融。</li> <li>15：美西（硅谷）。</li><li>16：成都。</li><li>17：法兰克福。</li><li>18：首尔。</li><li>19：重庆。</li><li>21：孟买。</li><li>22：美东（弗吉尼亚）。</li><li>23：曼谷。</li><li>25：东京。</li></ul>
+     * @param integer $RegionId 地域 ID。<ul><li>1：广州。</li><li>4：上海。</li><li>5：中国香港。</li><li>7：上海金融。</li> <li>8：北京。</li> <li>9：新加坡。</li> <li>11：深圳金融。</li> <li>15：美西（硅谷）。</li><li>16：成都。</li><li>17：法兰克福。</li><li>18：首尔。</li><li>19：重庆。</li><li>22：美东（弗吉尼亚）。</li><li>23：曼谷。</li><li>25：东京。</li></ul>
      * @param integer $ZoneId 区域 ID。
      * @param integer $VpcId vpc网络 ID，例如75101。
      * @param integer $SubnetId vpc网络下子网ID，如：46315。
@@ -571,7 +527,9 @@ class InstanceSet extends AbstractModel
      * @param integer $BillingMode 计费模式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul>
      * @param string $InstanceTitle 实例运行状态描述：如”实例运行中“。
      * @param string $OfflineTime 已隔离实例默认下线时间。按量计费实例隔离后默认两小时后下线，包年包月默认7天后下线。格式如：2020-02-15 10:20:00。
-     * @param integer $SubStatus 流程中的实例，返回子状态。
+     * @param integer $SubStatus 流程中的实例返回的子状态。
+- 0：磁盘读写状态。
+- 1：磁盘超限只读状态。
      * @param array $Tags 反亲和性标签。
      * @param array $InstanceNode 实例节点信息。
      * @param integer $RedisShardSize 分片大小。
@@ -581,53 +539,32 @@ class InstanceSet extends AbstractModel
      * @param string $CloseTime 实例隔离开始的时间。
      * @param integer $SlaveReadWeight 从节点读取权重。
      * @param array $InstanceTags 实例关联的标签信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectName 项目名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $NoAuth 是否为免密实例。<ul><li>true：免密实例。</li><li>false：非免密实例。</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ClientLimit 客户端连接数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DtsStatus DTS状态（内部参数，用户可忽略）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NetLimit 分片带宽上限，单位MB。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PasswordFree 免密实例标识（内部参数，用户可忽略）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Vip6 该参数存在命名不规范问题，建议用参数IPv6取代。内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IPv6 内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ReadOnly 实例只读标识（内部参数，用户可忽略）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RemainBandwidthDuration 内部参数，用户可忽略。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DiskSize Redis实例请忽略该参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MonitorVersion 监控版本。<ul><li>1m：1分钟粒度监控。目前该监控粒度已下线，具体信息，请参见[云数据库 Redis 1分钟粒度下线公告](https://cloud.tencent.com/document/product/239/80653)。</li><li>5s：5秒粒度监控。</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ClientLimitMin 客户端最大连接数可设置的最小值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ClientLimitMax 客户端最大连接数可设置的最大值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $NodeSet 实例的节点详细信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 实例所在的地域信息，比如ap-guangzhou。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WanAddress 外网地址。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PolarisServer 北极星服务地址，内部使用。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RedisClusterId CDC Redis集群ID。
+     * @param string $DedicatedClusterId CDC 集群ID。
+     * @param string $ProductVersion 产品版本。<ul><li>local：本地盘。</li><li>cloud：云盘版。</li><li>cdc：CDC 集群版本。</li></ul>
      * @param string $CurrentProxyVersion 实例当前Proxy版本。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CurrentRedisVersion 实例当前Cache小版本。如果实例加入全球复制组，显示全球复制的内核版本。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpgradeProxyVersion 实例可升级Proxy版本。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpgradeRedisVersion 实例可升级Cache小版本。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BackupMode 备份模式：- SecondLevelBackup   秒级备份- NormalLevelBackup    普通备份
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -863,6 +800,18 @@ class InstanceSet extends AbstractModel
 
         if (array_key_exists("PolarisServer",$param) and $param["PolarisServer"] !== null) {
             $this->PolarisServer = $param["PolarisServer"];
+        }
+
+        if (array_key_exists("RedisClusterId",$param) and $param["RedisClusterId"] !== null) {
+            $this->RedisClusterId = $param["RedisClusterId"];
+        }
+
+        if (array_key_exists("DedicatedClusterId",$param) and $param["DedicatedClusterId"] !== null) {
+            $this->DedicatedClusterId = $param["DedicatedClusterId"];
+        }
+
+        if (array_key_exists("ProductVersion",$param) and $param["ProductVersion"] !== null) {
+            $this->ProductVersion = $param["ProductVersion"];
         }
 
         if (array_key_exists("CurrentProxyVersion",$param) and $param["CurrentProxyVersion"] !== null) {

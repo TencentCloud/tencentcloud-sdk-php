@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CopyPerson请求参数结构体
  *
- * @method string getPersonId() 获取人员ID，取值为创建人员接口中的PersonId
- * @method void setPersonId(string $PersonId) 设置人员ID，取值为创建人员接口中的PersonId
- * @method array getGroupIds() 获取待加入的人员库列表，数组元素取值为创建人员库接口中的GroupId
- * @method void setGroupIds(array $GroupIds) 设置待加入的人员库列表，数组元素取值为创建人员库接口中的GroupId
+ * @method string getPersonId() 获取人员ID，取值为创建人员接口中的PersonId。
+ * @method void setPersonId(string $PersonId) 设置人员ID，取值为创建人员接口中的PersonId。
+ * @method array getGroupIds() 获取待加入的人员库列表，数组元素取值为创建人员库接口中的GroupId。
+ * @method void setGroupIds(array $GroupIds) 设置待加入的人员库列表，数组元素取值为创建人员库接口中的GroupId。
  */
 class CopyPersonRequest extends AbstractModel
 {
     /**
-     * @var string 人员ID，取值为创建人员接口中的PersonId
+     * @var string 人员ID，取值为创建人员接口中的PersonId。
      */
     public $PersonId;
 
     /**
-     * @var array 待加入的人员库列表，数组元素取值为创建人员库接口中的GroupId
+     * @var array 待加入的人员库列表，数组元素取值为创建人员库接口中的GroupId。
      */
     public $GroupIds;
 
     /**
-     * @param string $PersonId 人员ID，取值为创建人员接口中的PersonId
-     * @param array $GroupIds 待加入的人员库列表，数组元素取值为创建人员库接口中的GroupId
+     * @param string $PersonId 人员ID，取值为创建人员接口中的PersonId。
+     * @param array $GroupIds 待加入的人员库列表，数组元素取值为创建人员库接口中的GroupId。
      */
     function __construct()
     {

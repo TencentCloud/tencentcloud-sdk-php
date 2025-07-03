@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAiFormatDiagnose(integer $AiFormatDiagnose) 设置是否开启格式诊断。
  * @method integer getAiQualityControl() 获取是否开启内容质检。
  * @method void setAiQualityControl(integer $AiQualityControl) 设置是否开启内容质检。
+ * @method string getCasterId() 获取导播台监播对应的导播台场次id。
+ * @method void setCasterId(string $CasterId) 设置导播台监播对应的导播台场次id。
+ * @method string getPullPushTaskId() 获取拉流转推监播任务对应的拉流转推场次id
+ * @method void setPullPushTaskId(string $PullPushTaskId) 设置拉流转推监播任务对应的拉流转推场次id
  */
 class CreateLiveStreamMonitorRequest extends AbstractModel
 {
@@ -130,6 +134,16 @@ class CreateLiveStreamMonitorRequest extends AbstractModel
     public $AiQualityControl;
 
     /**
+     * @var string 导播台监播对应的导播台场次id。
+     */
+    public $CasterId;
+
+    /**
+     * @var string 拉流转推监播任务对应的拉流转推场次id
+     */
+    public $PullPushTaskId;
+
+    /**
      * @param LiveStreamMonitorOutputInfo $OutputInfo 监播任务的输出信息。
      * @param array $InputList 待监播的输入流信息列表。
      * @param string $MonitorName 监播任务名称。字段长度小于128字节（一个汉字两个字节）。
@@ -148,6 +162,8 @@ class CreateLiveStreamMonitorRequest extends AbstractModel
      * @param integer $AllowMonitorReport 是否存储监播事件到监播报告，以及是否允许查询监播报告。
      * @param integer $AiFormatDiagnose 是否开启格式诊断。
      * @param integer $AiQualityControl 是否开启内容质检。
+     * @param string $CasterId 导播台监播对应的导播台场次id。
+     * @param string $PullPushTaskId 拉流转推监播任务对应的拉流转推场次id
      */
     function __construct()
     {
@@ -219,6 +235,14 @@ class CreateLiveStreamMonitorRequest extends AbstractModel
 
         if (array_key_exists("AiQualityControl",$param) and $param["AiQualityControl"] !== null) {
             $this->AiQualityControl = $param["AiQualityControl"];
+        }
+
+        if (array_key_exists("CasterId",$param) and $param["CasterId"] !== null) {
+            $this->CasterId = $param["CasterId"];
+        }
+
+        if (array_key_exists("PullPushTaskId",$param) and $param["PullPushTaskId"] !== null) {
+            $this->PullPushTaskId = $param["PullPushTaskId"];
         }
     }
 }

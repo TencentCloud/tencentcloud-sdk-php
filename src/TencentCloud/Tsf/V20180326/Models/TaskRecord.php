@@ -33,13 +33,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTimeOut() 获取超时时间
  * @method void setTimeOut(integer $TimeOut) 设置超时时间
  * @method integer getRetryCount() 获取重试次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRetryCount(integer $RetryCount) 设置重试次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRetryInterval() 获取重试间隔
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRetryInterval(integer $RetryInterval) 设置重试间隔
-注意：此字段可能返回 null，表示取不到有效值。
  * @method TaskRule getTaskRule() 获取触发规则
  * @method void setTaskRule(TaskRule $TaskRule) 设置触发规则
  * @method string getTaskState() 获取是否启用任务,ENABLED/DISABLED
@@ -47,41 +43,23 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTaskId() 获取任务ID
  * @method void setTaskId(string $TaskId) 设置任务ID
  * @method string getSuccessOperator() 获取判断任务成功的操作符
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSuccessOperator(string $SuccessOperator) 设置判断任务成功的操作符
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSuccessRatio() 获取判断任务成功的阈值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSuccessRatio(integer $SuccessRatio) 设置判断任务成功的阈值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getShardCount() 获取分片数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setShardCount(integer $ShardCount) 设置分片数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method AdvanceSettings getAdvanceSettings() 获取高级设置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdvanceSettings(AdvanceSettings $AdvanceSettings) 设置高级设置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getShardArguments() 获取分片参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setShardArguments(array $ShardArguments) 设置分片参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getBelongFlowIds() 获取所属工作流ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBelongFlowIds(array $BelongFlowIds) 设置所属工作流ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTaskLogId() 获取任务历史ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskLogId(string $TaskLogId) 设置任务历史ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTriggerType() 获取触发类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTriggerType(string $TriggerType) 设置触发类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTaskArgument() 获取任务参数，长度限制10000个字符
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskArgument(string $TaskArgument) 设置任务参数，长度限制10000个字符
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskRecord extends AbstractModel
 {
@@ -117,13 +95,11 @@ class TaskRecord extends AbstractModel
 
     /**
      * @var integer 重试次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RetryCount;
 
     /**
      * @var integer 重试间隔
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RetryInterval;
 
@@ -144,55 +120,46 @@ class TaskRecord extends AbstractModel
 
     /**
      * @var string 判断任务成功的操作符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SuccessOperator;
 
     /**
      * @var integer 判断任务成功的阈值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SuccessRatio;
 
     /**
      * @var integer 分片数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ShardCount;
 
     /**
      * @var AdvanceSettings 高级设置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AdvanceSettings;
 
     /**
      * @var array 分片参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ShardArguments;
 
     /**
      * @var array 所属工作流ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BelongFlowIds;
 
     /**
      * @var string 任务历史ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskLogId;
 
     /**
      * @var string 触发类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TriggerType;
 
     /**
      * @var string 任务参数，长度限制10000个字符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskArgument;
 
@@ -204,30 +171,19 @@ class TaskRecord extends AbstractModel
      * @param string $GroupId 分组ID
      * @param integer $TimeOut 超时时间
      * @param integer $RetryCount 重试次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RetryInterval 重试间隔
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskRule $TaskRule 触发规则
      * @param string $TaskState 是否启用任务,ENABLED/DISABLED
      * @param string $TaskId 任务ID
      * @param string $SuccessOperator 判断任务成功的操作符
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SuccessRatio 判断任务成功的阈值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ShardCount 分片数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AdvanceSettings $AdvanceSettings 高级设置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ShardArguments 分片参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $BelongFlowIds 所属工作流ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskLogId 任务历史ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TriggerType 触发类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskArgument 任务参数，长度限制10000个字符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

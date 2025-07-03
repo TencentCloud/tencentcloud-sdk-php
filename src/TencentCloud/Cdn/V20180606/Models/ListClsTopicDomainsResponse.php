@@ -33,9 +33,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTopicName() 获取日志主题名称
  * @method void setTopicName(string $TopicName) 设置日志主题名称
  * @method string getUpdateTime() 获取日志主题最近更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置日志主题最近更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -73,7 +71,6 @@ class ListClsTopicDomainsResponse extends AbstractModel
 
     /**
      * @var string 日志主题最近更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
@@ -90,7 +87,6 @@ class ListClsTopicDomainsResponse extends AbstractModel
      * @param array $DomainAreaConfigs 域名区域配置，其中可能含有已删除的域名，如果要再传回ManageClsTopicDomains接口，需要结合ListCdnDomains接口排除掉已删除的域名
      * @param string $TopicName 日志主题名称
      * @param string $UpdateTime 日志主题最近更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -21,17 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * DSPA评估模板
  *
  * @method integer getId() 获取id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(integer $Id) 设置id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTemplateId() 获取评估模板Id
  * @method void setTemplateId(string $TemplateId) 设置评估模板Id
  * @method string getTemplateName() 获取评估模板名称
  * @method void setTemplateName(string $TemplateName) 设置评估模板名称
  * @method string getDescription() 获取描述信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置描述信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSource() 获取模板来源，内置/用户自定，取值（system，user）
  * @method void setSource(string $Source) 设置模板来源，内置/用户自定，取值（system，user）
  * @method string getUseType() 获取模板类型，自动化/半自动化/问卷，取值（auto，semi-auto，law）等
@@ -45,23 +41,16 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStatus() 获取模板启用状态，草稿/已启用，取值draft / launched
  * @method void setStatus(string $Status) 设置模板启用状态，草稿/已启用，取值draft / launched
  * @method array getSupportDataSource() 获取支持的数据源类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSupportDataSource(array $SupportDataSource) 设置支持的数据源类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsASMTemplate() 获取是否包含攻击面风险
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsASMTemplate(boolean $IsASMTemplate) 设置是否包含攻击面风险
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIdentifyComplianceId() 获取合规组id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIdentifyComplianceId(integer $IdentifyComplianceId) 设置合规组id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssessmentTemplate extends AbstractModel
 {
     /**
      * @var integer id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
@@ -77,7 +66,6 @@ class AssessmentTemplate extends AbstractModel
 
     /**
      * @var string 描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
@@ -113,29 +101,24 @@ class AssessmentTemplate extends AbstractModel
 
     /**
      * @var array 支持的数据源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SupportDataSource;
 
     /**
      * @var boolean 是否包含攻击面风险
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsASMTemplate;
 
     /**
      * @var integer 合规组id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IdentifyComplianceId;
 
     /**
      * @param integer $Id id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TemplateId 评估模板Id
      * @param string $TemplateName 评估模板名称
      * @param string $Description 描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Source 模板来源，内置/用户自定，取值（system，user）
      * @param string $UseType 模板类型，自动化/半自动化/问卷，取值（auto，semi-auto，law）等
      * @param string $CreatedTime 评估模板创建时间
@@ -143,11 +126,8 @@ class AssessmentTemplate extends AbstractModel
      * @param integer $AppliedItemCount 模板已启用的评估项数量
      * @param string $Status 模板启用状态，草稿/已启用，取值draft / launched
      * @param array $SupportDataSource 支持的数据源类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsASMTemplate 是否包含攻击面风险
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IdentifyComplianceId 合规组id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

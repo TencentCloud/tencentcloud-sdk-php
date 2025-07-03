@@ -39,13 +39,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getProgress() 获取制作媒体文件任务进度，取值范围 [0-100] 。
  * @method void setProgress(integer $Progress) 设置制作媒体文件任务进度，取值范围 [0-100] 。
  * @method ComposeMediaTaskInput getInput() 获取制作媒体文件任务的输入。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInput(ComposeMediaTaskInput $Input) 设置制作媒体文件任务的输入。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ComposeMediaTaskOutput getOutput() 获取制作媒体文件任务的输出。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutput(ComposeMediaTaskOutput $Output) 设置制作媒体文件任务的输出。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method MediaMetaData getMetaData() 获取输出视频的元信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetaData(MediaMetaData $MetaData) 设置输出视频的元信息。
@@ -88,13 +84,11 @@ class ComposeMediaTask extends AbstractModel
 
     /**
      * @var ComposeMediaTaskInput 制作媒体文件任务的输入。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Input;
 
     /**
      * @var ComposeMediaTaskOutput 制作媒体文件任务的输出。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Output;
 
@@ -125,9 +119,7 @@ class ComposeMediaTask extends AbstractModel
      * @param string $Message 错误信息。
      * @param integer $Progress 制作媒体文件任务进度，取值范围 [0-100] 。
      * @param ComposeMediaTaskInput $Input 制作媒体文件任务的输入。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ComposeMediaTaskOutput $Output 制作媒体文件任务的输出。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaMetaData $MetaData 输出视频的元信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。

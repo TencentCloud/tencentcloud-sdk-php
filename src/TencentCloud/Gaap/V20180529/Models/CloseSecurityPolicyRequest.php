@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CloseSecurityPolicy请求参数结构体
  *
- * @method string getProxyId() 获取通道ID
- * @method void setProxyId(string $ProxyId) 设置通道ID
- * @method string getPolicyId() 获取安全组策略ID
- * @method void setPolicyId(string $PolicyId) 设置安全组策略ID
+ * @method string getProxyId() 获取通道ID。操作通道组时无需填此参数。
+ * @method void setProxyId(string $ProxyId) 设置通道ID。操作通道组时无需填此参数。
+ * @method string getPolicyId() 获取安全组策略ID。操作通道组时须填此参数。
+ * @method void setPolicyId(string $PolicyId) 设置安全组策略ID。操作通道组时须填此参数。
  */
 class CloseSecurityPolicyRequest extends AbstractModel
 {
     /**
-     * @var string 通道ID
+     * @var string 通道ID。操作通道组时无需填此参数。
      */
     public $ProxyId;
 
     /**
-     * @var string 安全组策略ID
+     * @var string 安全组策略ID。操作通道组时须填此参数。
      */
     public $PolicyId;
 
     /**
-     * @param string $ProxyId 通道ID
-     * @param string $PolicyId 安全组策略ID
+     * @param string $ProxyId 通道ID。操作通道组时无需填此参数。
+     * @param string $PolicyId 安全组策略ID。操作通道组时须填此参数。
      */
     function __construct()
     {

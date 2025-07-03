@@ -24,11 +24,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCells(array $Cells) 设置单元格内容
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getType() 获取图像中的文本块类型，0 为非表格文本，
-1 为有线表格，2 为无线表格
+ * @method integer getType() 获取图像中的文本块类型：0为非表格文本、1为有线表格、2为无线表格，
+有线表格：在表格内部，有横线/竖线纵跨整个表格的宽/高；
+无线表格：在表格内部，无横线/竖线纵跨整个表格的宽/高。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(integer $Type) 设置图像中的文本块类型，0 为非表格文本，
-1 为有线表格，2 为无线表格
+ * @method void setType(integer $Type) 设置图像中的文本块类型：0为非表格文本、1为有线表格、2为无线表格，
+有线表格：在表格内部，有横线/竖线纵跨整个表格的宽/高；
+无线表格：在表格内部，无横线/竖线纵跨整个表格的宽/高。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTableCoordPoint() 获取表格主体四个顶点坐标（依次为左上角，
 右上角，右下角，左下角）
@@ -46,8 +48,9 @@ class TableInfo extends AbstractModel
     public $Cells;
 
     /**
-     * @var integer 图像中的文本块类型，0 为非表格文本，
-1 为有线表格，2 为无线表格
+     * @var integer 图像中的文本块类型：0为非表格文本、1为有线表格、2为无线表格，
+有线表格：在表格内部，有横线/竖线纵跨整个表格的宽/高；
+无线表格：在表格内部，无横线/竖线纵跨整个表格的宽/高。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
@@ -62,8 +65,9 @@ class TableInfo extends AbstractModel
     /**
      * @param array $Cells 单元格内容
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Type 图像中的文本块类型，0 为非表格文本，
-1 为有线表格，2 为无线表格
+     * @param integer $Type 图像中的文本块类型：0为非表格文本、1为有线表格、2为无线表格，
+有线表格：在表格内部，有横线/竖线纵跨整个表格的宽/高；
+无线表格：在表格内部，无横线/竖线纵跨整个表格的宽/高。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TableCoordPoint 表格主体四个顶点坐标（依次为左上角，
 右上角，右下角，左下角）

@@ -21,81 +21,69 @@ use TencentCloud\Common\AbstractModel;
  * 预释放竞价列表
  *
  * @method string getDomain() 获取域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomain(string $Domain) 设置域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBiddingTime() 获取竞价倒计时
-注意：此字段可能返回 null，表示取不到有效值。
+格式:YYYY-MM-DD HH:mm:ss
  * @method void setBiddingTime(string $BiddingTime) 设置竞价倒计时
-注意：此字段可能返回 null，表示取不到有效值。
+格式:YYYY-MM-DD HH:mm:ss
  * @method integer getBidCount() 获取出价次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBidCount(integer $BidCount) 设置出价次数
-注意：此字段可能返回 null，表示取不到有效值。
- * @method float getPrice() 获取当前价格
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPrice(float $Price) 设置当前价格
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getOp() 获取用户操作 bid：出价 "noAction"：无法操作
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOp(string $Op) 设置用户操作 bid：出价 "noAction"：无法操作
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getPrice() 获取当前价格 单位元
+ * @method void setPrice(float $Price) 设置当前价格 单位元
+ * @method string getOp() 获取用户操作 
+bid：出价 
+noAction：无法操作
+ * @method void setOp(string $Op) 设置用户操作 
+bid：出价 
+noAction：无法操作
  * @method string getBusinessId() 获取业务ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBusinessId(string $BusinessId) 设置业务ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PreAuctionInfo extends AbstractModel
 {
     /**
      * @var string 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Domain;
 
     /**
      * @var string 竞价倒计时
-注意：此字段可能返回 null，表示取不到有效值。
+格式:YYYY-MM-DD HH:mm:ss
      */
     public $BiddingTime;
 
     /**
      * @var integer 出价次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BidCount;
 
     /**
-     * @var float 当前价格
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var float 当前价格 单位元
      */
     public $Price;
 
     /**
-     * @var string 用户操作 bid：出价 "noAction"：无法操作
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 用户操作 
+bid：出价 
+noAction：无法操作
      */
     public $Op;
 
     /**
      * @var string 业务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BusinessId;
 
     /**
      * @param string $Domain 域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BiddingTime 竞价倒计时
-注意：此字段可能返回 null，表示取不到有效值。
+格式:YYYY-MM-DD HH:mm:ss
      * @param integer $BidCount 出价次数
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $Price 当前价格
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Op 用户操作 bid：出价 "noAction"：无法操作
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $Price 当前价格 单位元
+     * @param string $Op 用户操作 
+bid：出价 
+noAction：无法操作
      * @param string $BusinessId 业务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

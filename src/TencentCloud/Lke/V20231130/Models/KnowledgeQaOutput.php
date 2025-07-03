@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQuestionClarifyKeywords(array $QuestionClarifyKeywords) 设置问题澄清关键词列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getUseRecommended() 获取是否打开推荐问题开关
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUseRecommended(boolean $UseRecommended) 设置是否打开推荐问题开关
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class KnowledgeQaOutput extends AbstractModel
 {
@@ -84,6 +88,12 @@ class KnowledgeQaOutput extends AbstractModel
     public $QuestionClarifyKeywords;
 
     /**
+     * @var boolean 是否打开推荐问题开关
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UseRecommended;
+
+    /**
      * @param integer $Method 输出方式 1：流式 2：非流式
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $UseGeneralKnowledge 通用模型回复
@@ -95,6 +105,8 @@ class KnowledgeQaOutput extends AbstractModel
      * @param boolean $UseQuestionClarify 是否打开问题澄清
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $QuestionClarifyKeywords 问题澄清关键词列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $UseRecommended 是否打开推荐问题开关
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -132,6 +144,10 @@ class KnowledgeQaOutput extends AbstractModel
 
         if (array_key_exists("QuestionClarifyKeywords",$param) and $param["QuestionClarifyKeywords"] !== null) {
             $this->QuestionClarifyKeywords = $param["QuestionClarifyKeywords"];
+        }
+
+        if (array_key_exists("UseRecommended",$param) and $param["UseRecommended"] !== null) {
+            $this->UseRecommended = $param["UseRecommended"];
         }
     }
 }

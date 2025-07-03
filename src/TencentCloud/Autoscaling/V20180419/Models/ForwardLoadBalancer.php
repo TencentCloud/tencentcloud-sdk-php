@@ -20,36 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 应用型负载均衡器
  *
- * @method string getLoadBalancerId() 获取负载均衡器ID
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡器ID
- * @method string getListenerId() 获取应用型负载均衡监听器 ID
- * @method void setListenerId(string $ListenerId) 设置应用型负载均衡监听器 ID
- * @method array getTargetAttributes() 获取目标规则属性列表
- * @method void setTargetAttributes(array $TargetAttributes) 设置目标规则属性列表
- * @method string getLocationId() 获取转发规则ID，注意：针对七层监听器此参数必填
- * @method void setLocationId(string $LocationId) 设置转发规则ID，注意：针对七层监听器此参数必填
+ * @method string getLoadBalancerId() 获取负载均衡器ID。作为入参时，该参数必填。可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
+ * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡器ID。作为入参时，该参数必填。可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
+ * @method string getListenerId() 获取负载均衡监听器 ID。作为入参时，该参数必填。可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
+ * @method void setListenerId(string $ListenerId) 设置负载均衡监听器 ID。作为入参时，该参数必填。可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
+ * @method array getTargetAttributes() 获取目标规则属性列表。作为入参时，该参数必填。
+ * @method void setTargetAttributes(array $TargetAttributes) 设置目标规则属性列表。作为入参时，该参数必填。
+ * @method string getLocationId() 获取转发规则ID，注意：针对七层监听器此参数必填。可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
+ * @method void setLocationId(string $LocationId) 设置转发规则ID，注意：针对七层监听器此参数必填。可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
  * @method string getRegion() 获取负载均衡实例所属地域，默认取AS服务所在地域。格式与公共参数Region相同，如："ap-guangzhou"。
  * @method void setRegion(string $Region) 设置负载均衡实例所属地域，默认取AS服务所在地域。格式与公共参数Region相同，如："ap-guangzhou"。
  */
 class ForwardLoadBalancer extends AbstractModel
 {
     /**
-     * @var string 负载均衡器ID
+     * @var string 负载均衡器ID。作为入参时，该参数必填。可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
      */
     public $LoadBalancerId;
 
     /**
-     * @var string 应用型负载均衡监听器 ID
+     * @var string 负载均衡监听器 ID。作为入参时，该参数必填。可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
      */
     public $ListenerId;
 
     /**
-     * @var array 目标规则属性列表
+     * @var array 目标规则属性列表。作为入参时，该参数必填。
      */
     public $TargetAttributes;
 
     /**
-     * @var string 转发规则ID，注意：针对七层监听器此参数必填
+     * @var string 转发规则ID，注意：针对七层监听器此参数必填。可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
      */
     public $LocationId;
 
@@ -59,10 +59,10 @@ class ForwardLoadBalancer extends AbstractModel
     public $Region;
 
     /**
-     * @param string $LoadBalancerId 负载均衡器ID
-     * @param string $ListenerId 应用型负载均衡监听器 ID
-     * @param array $TargetAttributes 目标规则属性列表
-     * @param string $LocationId 转发规则ID，注意：针对七层监听器此参数必填
+     * @param string $LoadBalancerId 负载均衡器ID。作为入参时，该参数必填。可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
+     * @param string $ListenerId 负载均衡监听器 ID。作为入参时，该参数必填。可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
+     * @param array $TargetAttributes 目标规则属性列表。作为入参时，该参数必填。
+     * @param string $LocationId 转发规则ID，注意：针对七层监听器此参数必填。可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/product/214/30685) 接口获取。
      * @param string $Region 负载均衡实例所属地域，默认取AS服务所在地域。格式与公共参数Region相同，如："ap-guangzhou"。
      */
     function __construct()

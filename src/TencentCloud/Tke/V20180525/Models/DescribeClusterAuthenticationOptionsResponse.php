@@ -21,17 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * DescribeClusterAuthenticationOptions返回参数结构体
  *
  * @method ServiceAccountAuthenticationOptions getServiceAccounts() 获取ServiceAccount认证配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceAccounts(ServiceAccountAuthenticationOptions $ServiceAccounts) 设置ServiceAccount认证配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLatestOperationState() 获取最近一次修改操作结果，返回值可能为：Updating，Success，Failed，TimeOut
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLatestOperationState(string $LatestOperationState) 设置最近一次修改操作结果，返回值可能为：Updating，Success，Failed，TimeOut
-注意：此字段可能返回 null，表示取不到有效值。
  * @method OIDCConfigAuthenticationOptions getOIDCConfig() 获取OIDC认证配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOIDCConfig(OIDCConfigAuthenticationOptions $OIDCConfig) 设置OIDC认证配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -39,19 +33,16 @@ class DescribeClusterAuthenticationOptionsResponse extends AbstractModel
 {
     /**
      * @var ServiceAccountAuthenticationOptions ServiceAccount认证配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceAccounts;
 
     /**
      * @var string 最近一次修改操作结果，返回值可能为：Updating，Success，Failed，TimeOut
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LatestOperationState;
 
     /**
      * @var OIDCConfigAuthenticationOptions OIDC认证配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OIDCConfig;
 
@@ -62,11 +53,8 @@ class DescribeClusterAuthenticationOptionsResponse extends AbstractModel
 
     /**
      * @param ServiceAccountAuthenticationOptions $ServiceAccounts ServiceAccount认证配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LatestOperationState 最近一次修改操作结果，返回值可能为：Updating，Success，Failed，TimeOut
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OIDCConfigAuthenticationOptions $OIDCConfig OIDC认证配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

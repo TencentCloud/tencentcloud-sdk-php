@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method GooseFSxAttribute getGooseFSxAttribute() 获取GooseFSx文件系统属性
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGooseFSxAttribute(GooseFSxAttribute $GooseFSxAttribute) 设置GooseFSx文件系统属性
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取文件系统状态 ACTIVE(运行中), CREATING(创建中), DESTROYING(销毁中), FAIL(创建失败),EXPANDING(扩容中),PROBING(容灾中)
  * @method void setStatus(string $Status) 设置文件系统状态 ACTIVE(运行中), CREATING(创建中), DESTROYING(销毁中), FAIL(创建失败),EXPANDING(扩容中),PROBING(容灾中)
  * @method string getName() 获取文件系统名
@@ -43,11 +41,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getZone() 获取子网所在的可用区
  * @method void setZone(string $Zone) 设置子网所在的可用区
  * @method array getTag() 获取Tag数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTag(array $Tag) 设置Tag数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifyTime() 获取更新属性时间
  * @method void setModifyTime(string $ModifyTime) 设置更新属性时间
+ * @method ChargeAttribute getChargeAttribute() 获取文件系统付费信息
+ * @method void setChargeAttribute(ChargeAttribute $ChargeAttribute) 设置文件系统付费信息
  */
 class FSAttribute extends AbstractModel
 {
@@ -68,7 +66,6 @@ class FSAttribute extends AbstractModel
 
     /**
      * @var GooseFSxAttribute GooseFSx文件系统属性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GooseFSxAttribute;
 
@@ -104,7 +101,6 @@ class FSAttribute extends AbstractModel
 
     /**
      * @var array Tag数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tag;
 
@@ -114,11 +110,15 @@ class FSAttribute extends AbstractModel
     public $ModifyTime;
 
     /**
+     * @var ChargeAttribute 文件系统付费信息
+     */
+    public $ChargeAttribute;
+
+    /**
      * @param string $Type 文件系统类型, 可填goosefs和goosefsx
      * @param string $FileSystemId 文件系统ID
      * @param string $CreateTime 创建时间
      * @param GooseFSxAttribute $GooseFSxAttribute GooseFSx文件系统属性
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 文件系统状态 ACTIVE(运行中), CREATING(创建中), DESTROYING(销毁中), FAIL(创建失败),EXPANDING(扩容中),PROBING(容灾中)
      * @param string $Name 文件系统名
      * @param string $Description 文件系统备注描述
@@ -126,8 +126,8 @@ class FSAttribute extends AbstractModel
      * @param string $SubnetId 子网ID
      * @param string $Zone 子网所在的可用区
      * @param array $Tag Tag数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyTime 更新属性时间
+     * @param ChargeAttribute $ChargeAttribute 文件系统付费信息
      */
     function __construct()
     {
@@ -194,6 +194,11 @@ class FSAttribute extends AbstractModel
 
         if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
             $this->ModifyTime = $param["ModifyTime"];
+        }
+
+        if (array_key_exists("ChargeAttribute",$param) and $param["ChargeAttribute"] !== null) {
+            $this->ChargeAttribute = new ChargeAttribute();
+            $this->ChargeAttribute->deserialize($param["ChargeAttribute"]);
         }
     }
 }

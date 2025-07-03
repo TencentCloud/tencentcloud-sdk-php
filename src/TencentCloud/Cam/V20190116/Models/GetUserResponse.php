@@ -39,13 +39,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEmail() 获取邮箱
  * @method void setEmail(string $Email) 设置邮箱
  * @method string getRecentlyLoginIP() 获取最近一次登录ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecentlyLoginIP(string $RecentlyLoginIP) 设置最近一次登录ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRecentlyLoginTime() 获取最近一次登录时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecentlyLoginTime(string $RecentlyLoginTime) 设置最近一次登录时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -94,13 +90,11 @@ class GetUserResponse extends AbstractModel
 
     /**
      * @var string 最近一次登录ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecentlyLoginIP;
 
     /**
      * @var string 最近一次登录时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecentlyLoginTime;
 
@@ -120,9 +114,7 @@ class GetUserResponse extends AbstractModel
      * @param string $CountryCode 区号
      * @param string $Email 邮箱
      * @param string $RecentlyLoginIP 最近一次登录ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RecentlyLoginTime 最近一次登录时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

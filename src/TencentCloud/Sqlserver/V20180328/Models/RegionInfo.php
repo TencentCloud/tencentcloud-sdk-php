@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 地域信息
  *
- * @method string getRegion() 获取地域英文ID，类似ap-guanghou
- * @method void setRegion(string $Region) 设置地域英文ID，类似ap-guanghou
+ * @method string getRegion() 获取地域英文ID，类似ap-guangzhou
+ * @method void setRegion(string $Region) 设置地域英文ID，类似ap-guangzhou
  * @method string getRegionName() 获取地域中文名称
  * @method void setRegionName(string $RegionName) 设置地域中文名称
  * @method integer getRegionId() 获取地域数字ID
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class RegionInfo extends AbstractModel
 {
     /**
-     * @var string 地域英文ID，类似ap-guanghou
+     * @var string 地域英文ID，类似ap-guangzhou
      */
     public $Region;
 
@@ -52,7 +52,7 @@ class RegionInfo extends AbstractModel
     public $RegionState;
 
     /**
-     * @param string $Region 地域英文ID，类似ap-guanghou
+     * @param string $Region 地域英文ID，类似ap-guangzhou
      * @param string $RegionName 地域中文名称
      * @param integer $RegionId 地域数字ID
      * @param string $RegionState 该地域目前是否可以售卖，UNAVAILABLE-不可售卖；AVAILABLE-可售卖

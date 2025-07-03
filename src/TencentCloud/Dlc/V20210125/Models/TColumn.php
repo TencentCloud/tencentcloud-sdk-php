@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 Scale小于Precision
  * @method void setScale(integer $Scale) 设置表示小数部分的长度
 Scale小于Precision
+ * @method integer getPosition() 获取字段位置，小的在前
+ * @method void setPosition(integer $Position) 设置字段位置，小的在前
+ * @method boolean getIsPartition() 获取是否为分区字段
+ * @method void setIsPartition(boolean $IsPartition) 设置是否为分区字段
  */
 class TColumn extends AbstractModel
 {
@@ -76,6 +80,16 @@ Scale小于Precision
     public $Scale;
 
     /**
+     * @var integer 字段位置，小的在前
+     */
+    public $Position;
+
+    /**
+     * @var boolean 是否为分区字段
+     */
+    public $IsPartition;
+
+    /**
      * @param string $Name 字段名称
      * @param string $Type 字段类型
      * @param string $Comment 字段描述
@@ -84,6 +98,8 @@ Scale小于Precision
      * @param integer $Precision 表示整个 numeric 的长度,取值1-38
      * @param integer $Scale 表示小数部分的长度
 Scale小于Precision
+     * @param integer $Position 字段位置，小的在前
+     * @param boolean $IsPartition 是否为分区字段
      */
     function __construct()
     {
@@ -124,6 +140,14 @@ Scale小于Precision
 
         if (array_key_exists("Scale",$param) and $param["Scale"] !== null) {
             $this->Scale = $param["Scale"];
+        }
+
+        if (array_key_exists("Position",$param) and $param["Position"] !== null) {
+            $this->Position = $param["Position"];
+        }
+
+        if (array_key_exists("IsPartition",$param) and $param["IsPartition"] !== null) {
+            $this->IsPartition = $param["IsPartition"];
         }
     }
 }

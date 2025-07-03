@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 虚拟机部署组其他字段
  *
  * @method string getGroupId() 获取部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupId(string $GroupId) 设置部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPackageId() 获取程序包ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPackageId(string $PackageId) 设置程序包ID
@@ -37,25 +35,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPackageVersion(string $PackageVersion) 设置程序包版本
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getInstanceCount() 获取部署组实例数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceCount(integer $InstanceCount) 设置部署组实例数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRunInstanceCount() 获取部署组运行中实例数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRunInstanceCount(integer $RunInstanceCount) 设置部署组运行中实例数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getOffInstanceCount() 获取部署组中停止实例数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOffInstanceCount(integer $OffInstanceCount) 设置部署组中停止实例数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupStatus() 获取部署组状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupStatus(string $GroupStatus) 设置部署组状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsNotEqualServiceConfig() 获取服务配置信息是否匹配
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsNotEqualServiceConfig(boolean $IsNotEqualServiceConfig) 设置服务配置信息是否匹配
-注意：此字段可能返回 null，表示取不到有效值。
  * @method HealthCheckSettings getHealthCheckSettings() 获取HealthCheckSettings
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHealthCheckSettings(HealthCheckSettings $HealthCheckSettings) 设置HealthCheckSettings
@@ -65,7 +53,6 @@ class VmGroupOther extends AbstractModel
 {
     /**
      * @var string 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupId;
 
@@ -89,31 +76,26 @@ class VmGroupOther extends AbstractModel
 
     /**
      * @var integer 部署组实例数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceCount;
 
     /**
      * @var integer 部署组运行中实例数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RunInstanceCount;
 
     /**
      * @var integer 部署组中停止实例数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OffInstanceCount;
 
     /**
      * @var string 部署组状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupStatus;
 
     /**
      * @var boolean 服务配置信息是否匹配
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsNotEqualServiceConfig;
 
@@ -125,7 +107,6 @@ class VmGroupOther extends AbstractModel
 
     /**
      * @param string $GroupId 部署组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PackageId 程序包ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PackageName 程序包名称
@@ -133,15 +114,10 @@ class VmGroupOther extends AbstractModel
      * @param string $PackageVersion 程序包版本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InstanceCount 部署组实例数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RunInstanceCount 部署组运行中实例数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $OffInstanceCount 部署组中停止实例数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupStatus 部署组状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsNotEqualServiceConfig 服务配置信息是否匹配
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HealthCheckSettings $HealthCheckSettings HealthCheckSettings
 注意：此字段可能返回 null，表示取不到有效值。
      */

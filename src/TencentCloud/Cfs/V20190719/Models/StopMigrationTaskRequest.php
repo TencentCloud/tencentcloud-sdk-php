@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StopMigrationTask请求参数结构体
  *
- * @method string getTaskId() 获取迁移任务名称
- * @method void setTaskId(string $TaskId) 设置迁移任务名称
+ * @method string getTaskId() 获取迁移任务Id
+ * @method void setTaskId(string $TaskId) 设置迁移任务Id
  */
 class StopMigrationTaskRequest extends AbstractModel
 {
     /**
-     * @var string 迁移任务名称
+     * @var string 迁移任务Id
      */
     public $TaskId;
 
     /**
-     * @param string $TaskId 迁移任务名称
+     * @param string $TaskId 迁移任务Id
      */
     function __construct()
     {

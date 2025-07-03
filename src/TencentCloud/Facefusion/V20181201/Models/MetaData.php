@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * MetaData数据结构，Key/Value格式
  *
- * @method string getMetaKey() 获取MetaData的Key
- * @method void setMetaKey(string $MetaKey) 设置MetaData的Key
- * @method string getMetaValue() 获取MetaData的Value
- * @method void setMetaValue(string $MetaValue) 设置MetaData的Value
+ * @method string getMetaKey() 获取MetaData的Key，长度不能超过32。
+ * @method void setMetaKey(string $MetaKey) 设置MetaData的Key，长度不能超过32。
+ * @method string getMetaValue() 获取MetaData的Value，长度不能超过256。
+ * @method void setMetaValue(string $MetaValue) 设置MetaData的Value，长度不能超过256。
  */
 class MetaData extends AbstractModel
 {
     /**
-     * @var string MetaData的Key
+     * @var string MetaData的Key，长度不能超过32。
      */
     public $MetaKey;
 
     /**
-     * @var string MetaData的Value
+     * @var string MetaData的Value，长度不能超过256。
      */
     public $MetaValue;
 
     /**
-     * @param string $MetaKey MetaData的Key
-     * @param string $MetaValue MetaData的Value
+     * @param string $MetaKey MetaData的Key，长度不能超过32。
+     * @param string $MetaValue MetaData的Value，长度不能超过256。
      */
     function __construct()
     {

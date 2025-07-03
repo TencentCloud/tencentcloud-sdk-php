@@ -37,57 +37,33 @@ use TencentCloud\Common\AbstractModel;
  * @method string getLevelRiskName() 获取敏感等级
  * @method void setLevelRiskName(string $LevelRiskName) 设置敏感等级
  * @method integer getLevelRiskScore() 获取分级风险分数，1-10，最小值为1，最大值为10
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevelRiskScore(integer $LevelRiskScore) 设置分级风险分数，1-10，最小值为1，最大值为10
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTrustedScore() 获取可信分
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrustedScore(string $TrustedScore) 设置可信分
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceRegion() 获取资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceRegion(string $ResourceRegion) 设置资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFieldResultId() 获取字段扫描结果ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFieldResultId(string $FieldResultId) 设置字段扫描结果ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRuleId() 获取规则ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleId(integer $RuleId) 设置规则ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLevelId() 获取分级ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevelId(integer $LevelId) 设置分级ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCategoryId() 获取分类ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCategoryId(integer $CategoryId) 设置分类ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDataSourceName() 获取数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataSourceName(string $DataSourceName) 设置数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DspaSafeGuard getSafeGuard() 获取保护措施
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSafeGuard(DspaSafeGuard $SafeGuard) 设置保护措施
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCategoryFullPath() 获取分类路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCategoryFullPath(string $CategoryFullPath) 设置分类路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIdentifyType() 获取0.系统识别，1人工打标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIdentifyType(integer $IdentifyType) 设置0.系统识别，1人工打标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCheckStatus() 获取0未核查 1已核查
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCheckStatus(integer $CheckStatus) 设置0未核查 1已核查
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsSensitiveData() 获取0非敏感，1敏感
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsSensitiveData(integer $IsSensitiveData) 设置0非敏感，1敏感
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSchemaName() 获取模式名
+ * @method void setSchemaName(string $SchemaName) 设置模式名
  */
 class DspaRDBDataAssetDetail extends AbstractModel
 {
@@ -133,81 +109,73 @@ class DspaRDBDataAssetDetail extends AbstractModel
 
     /**
      * @var integer 分级风险分数，1-10，最小值为1，最大值为10
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LevelRiskScore;
 
     /**
      * @var string 可信分
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TrustedScore;
 
     /**
      * @var string 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceRegion;
 
     /**
      * @var string 字段扫描结果ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FieldResultId;
 
     /**
      * @var integer 规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleId;
 
     /**
      * @var integer 分级ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LevelId;
 
     /**
      * @var integer 分类ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CategoryId;
 
     /**
      * @var string 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataSourceName;
 
     /**
      * @var DspaSafeGuard 保护措施
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SafeGuard;
 
     /**
      * @var string 分类路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CategoryFullPath;
 
     /**
      * @var integer 0.系统识别，1人工打标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IdentifyType;
 
     /**
      * @var integer 0未核查 1已核查
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CheckStatus;
 
     /**
      * @var integer 0非敏感，1敏感
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsSensitiveData;
+
+    /**
+     * @var string 模式名
+     */
+    public $SchemaName;
 
     /**
      * @param string $DataSourceId 数据源ID
@@ -219,31 +187,19 @@ class DspaRDBDataAssetDetail extends AbstractModel
      * @param string $CategoryName 数据分类
      * @param string $LevelRiskName 敏感等级
      * @param integer $LevelRiskScore 分级风险分数，1-10，最小值为1，最大值为10
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TrustedScore 可信分
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceRegion 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FieldResultId 字段扫描结果ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleId 规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LevelId 分级ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CategoryId 分类ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataSourceName 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DspaSafeGuard $SafeGuard 保护措施
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CategoryFullPath 分类路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IdentifyType 0.系统识别，1人工打标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CheckStatus 0未核查 1已核查
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsSensitiveData 0非敏感，1敏感
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SchemaName 模式名
      */
     function __construct()
     {
@@ -341,6 +297,10 @@ class DspaRDBDataAssetDetail extends AbstractModel
 
         if (array_key_exists("IsSensitiveData",$param) and $param["IsSensitiveData"] !== null) {
             $this->IsSensitiveData = $param["IsSensitiveData"];
+        }
+
+        if (array_key_exists("SchemaName",$param) and $param["SchemaName"] !== null) {
+            $this->SchemaName = $param["SchemaName"];
         }
     }
 }

@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 日志KeyValue对数组，用于搜索访问日志
  *
  * @method array getData() 获取分析结果返回的KV数据对
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(array $Data) 设置分析结果返回的KV数据对
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AccessLogItems extends AbstractModel
 {
     /**
      * @var array 分析结果返回的KV数据对
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
 
     /**
      * @param array $Data 分析结果返回的KV数据对
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

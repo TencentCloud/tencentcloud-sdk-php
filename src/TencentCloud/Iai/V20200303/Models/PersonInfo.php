@@ -20,62 +20,70 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 返回的人员信息
  *
- * @method string getPersonName() 获取人员名称
- * @method void setPersonName(string $PersonName) 设置人员名称
- * @method string getPersonId() 获取人员Id
- * @method void setPersonId(string $PersonId) 设置人员Id
- * @method integer getGender() 获取人员性别
- * @method void setGender(integer $Gender) 设置人员性别
- * @method array getPersonExDescriptions() 获取人员描述字段内容
- * @method void setPersonExDescriptions(array $PersonExDescriptions) 设置人员描述字段内容
- * @method array getFaceIds() 获取包含的人脸照片列表
- * @method void setFaceIds(array $FaceIds) 设置包含的人脸照片列表
- * @method integer getCreationTimestamp() 获取人员的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Person创建时间的毫秒数。 
-Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
- * @method void setCreationTimestamp(integer $CreationTimestamp) 设置人员的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Person创建时间的毫秒数。 
-Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
+ * @method string getPersonName() 获取人员名称。
+ * @method void setPersonName(string $PersonName) 设置人员名称。
+ * @method string getPersonId() 获取人员Id。
+ * @method void setPersonId(string $PersonId) 设置人员Id。
+ * @method integer getGender() 获取人员性别。
+ * @method void setGender(integer $Gender) 设置人员性别。
+ * @method array getPersonExDescriptions() 获取人员描述字段内容。
+ * @method void setPersonExDescriptions(array $PersonExDescriptions) 设置人员描述字段内容。
+ * @method array getFaceIds() 获取包含的人脸照片列表。
+ * @method void setFaceIds(array $FaceIds) 设置包含的人脸照片列表。
+ * @method integer getCreationTimestamp() 获取人员的创建时间和日期 CreationTimestamp。
+- CreationTimestamp 的值是自 Unix 纪元时间到Person创建时间的毫秒数。 
+- Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。
+- 有关更多信息，请参阅 Unix 时间。
+ * @method void setCreationTimestamp(integer $CreationTimestamp) 设置人员的创建时间和日期 CreationTimestamp。
+- CreationTimestamp 的值是自 Unix 纪元时间到Person创建时间的毫秒数。 
+- Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。
+- 有关更多信息，请参阅 Unix 时间。
  */
 class PersonInfo extends AbstractModel
 {
     /**
-     * @var string 人员名称
+     * @var string 人员名称。
      */
     public $PersonName;
 
     /**
-     * @var string 人员Id
+     * @var string 人员Id。
      */
     public $PersonId;
 
     /**
-     * @var integer 人员性别
+     * @var integer 人员性别。
      */
     public $Gender;
 
     /**
-     * @var array 人员描述字段内容
+     * @var array 人员描述字段内容。
      */
     public $PersonExDescriptions;
 
     /**
-     * @var array 包含的人脸照片列表
+     * @var array 包含的人脸照片列表。
      */
     public $FaceIds;
 
     /**
-     * @var integer 人员的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Person创建时间的毫秒数。 
-Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
+     * @var integer 人员的创建时间和日期 CreationTimestamp。
+- CreationTimestamp 的值是自 Unix 纪元时间到Person创建时间的毫秒数。 
+- Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。
+- 有关更多信息，请参阅 Unix 时间。
      */
     public $CreationTimestamp;
 
     /**
-     * @param string $PersonName 人员名称
-     * @param string $PersonId 人员Id
-     * @param integer $Gender 人员性别
-     * @param array $PersonExDescriptions 人员描述字段内容
-     * @param array $FaceIds 包含的人脸照片列表
-     * @param integer $CreationTimestamp 人员的创建时间和日期 CreationTimestamp。CreationTimestamp 的值是自 Unix 纪元时间到Person创建时间的毫秒数。 
-Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。有关更多信息，请参阅 Unix 时间。
+     * @param string $PersonName 人员名称。
+     * @param string $PersonId 人员Id。
+     * @param integer $Gender 人员性别。
+     * @param array $PersonExDescriptions 人员描述字段内容。
+     * @param array $FaceIds 包含的人脸照片列表。
+     * @param integer $CreationTimestamp 人员的创建时间和日期 CreationTimestamp。
+- CreationTimestamp 的值是自 Unix 纪元时间到Person创建时间的毫秒数。 
+- Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。
+- 有关更多信息，请参阅 Unix 时间。
      */
     function __construct()
     {

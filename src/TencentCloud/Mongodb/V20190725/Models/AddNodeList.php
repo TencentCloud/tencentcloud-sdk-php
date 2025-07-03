@@ -20,11 +20,11 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 修改实例节点详情
  *
- * @method string getRole() 获取需要删除的节点角色。
+ * @method string getRole() 获取需要新增的节点角色。
 - SECONDARY：Mongod 节点。
 - READONLY：只读节点。
 - MONGOS：Mongos 节点。
- * @method void setRole(string $Role) 设置需要删除的节点角色。
+ * @method void setRole(string $Role) 设置需要新增的节点角色。
 - SECONDARY：Mongod 节点。
 - READONLY：只读节点。
 - MONGOS：Mongos 节点。
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class AddNodeList extends AbstractModel
 {
     /**
-     * @var string 需要删除的节点角色。
+     * @var string 需要新增的节点角色。
 - SECONDARY：Mongod 节点。
 - READONLY：只读节点。
 - MONGOS：Mongos 节点。
@@ -53,7 +53,7 @@ class AddNodeList extends AbstractModel
     public $Zone;
 
     /**
-     * @param string $Role 需要删除的节点角色。
+     * @param string $Role 需要新增的节点角色。
 - SECONDARY：Mongod 节点。
 - READONLY：只读节点。
 - MONGOS：Mongos 节点。

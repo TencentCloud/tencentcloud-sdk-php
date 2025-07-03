@@ -21,85 +21,48 @@ use TencentCloud\Common\AbstractModel;
  * 表示一条集群安全检测项的详细信息
  *
  * @method integer getCheckItemId() 获取唯一的检测项的ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCheckItemId(integer $CheckItemId) 设置唯一的检测项的ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取风险项的名称
  * @method void setName(string $Name) 设置风险项的名称
  * @method string getItemDetail() 获取检测项详细描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setItemDetail(string $ItemDetail) 设置检测项详细描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRiskLevel() 获取威胁等级。严重Serious,高危High,中危Middle,提示Hint
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskLevel(string $RiskLevel) 设置威胁等级。严重Serious,高危High,中危Middle,提示Hint
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRiskTarget() 获取检查对象、风险对象.Runc,Kubelet,Containerd,Pods
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskTarget(string $RiskTarget) 设置检查对象、风险对象.Runc,Kubelet,Containerd,Pods
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRiskType() 获取风险类别,漏洞风险CVERisk,配置风险ConfigRisk
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskType(string $RiskType) 设置风险类别,漏洞风险CVERisk,配置风险ConfigRisk
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRiskAttribute() 获取检测项所属的风险类型,权限提升:PrivilegePromotion,拒绝服务:RefuseService,目录穿越:DirectoryEscape,未授权访问:UnauthorizedAccess,权限许可和访问控制问题:PrivilegeAndAccessControl,敏感信息泄露:SensitiveInfoLeak
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskAttribute(string $RiskAttribute) 设置检测项所属的风险类型,权限提升:PrivilegePromotion,拒绝服务:RefuseService,目录穿越:DirectoryEscape,未授权访问:UnauthorizedAccess,权限许可和访问控制问题:PrivilegeAndAccessControl,敏感信息泄露:SensitiveInfoLeak
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRiskProperty() 获取风险特征,Tag.存在EXP:ExistEXP,存在POD:ExistPOC,无需重启:NoNeedReboot, 服务重启:ServerRestart,远程信息泄露:RemoteInfoLeak,远程拒绝服务:RemoteRefuseService,远程利用:RemoteExploit,远程执行:RemoteExecute
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskProperty(string $RiskProperty) 设置风险特征,Tag.存在EXP:ExistEXP,存在POD:ExistPOC,无需重启:NoNeedReboot, 服务重启:ServerRestart,远程信息泄露:RemoteInfoLeak,远程拒绝服务:RemoteRefuseService,远程利用:RemoteExploit,远程执行:RemoteExecute
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCVENumber() 获取CVE编号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCVENumber(string $CVENumber) 设置CVE编号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDiscoverTime() 获取披露时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiscoverTime(string $DiscoverTime) 设置披露时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSolution() 获取解决方案
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSolution(string $Solution) 设置解决方案
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCVSS() 获取CVSS信息,用于画图
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCVSS(string $CVSS) 设置CVSS信息,用于画图
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCVSSScore() 获取CVSS分数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCVSSScore(string $CVSSScore) 设置CVSS分数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRelateLink() 获取参考连接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRelateLink(string $RelateLink) 设置参考连接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAffectedType() 获取影响类型，为Node或者Workload
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAffectedType(string $AffectedType) 设置影响类型，为Node或者Workload
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAffectedVersion() 获取受影响的版本信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAffectedVersion(string $AffectedVersion) 设置受影响的版本信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIgnoredAssetNum() 获取忽略的资产数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIgnoredAssetNum(integer $IgnoredAssetNum) 设置忽略的资产数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsIgnored() 获取是否忽略该检测项
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsIgnored(boolean $IsIgnored) 设置是否忽略该检测项
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRiskAssessment() 获取受影响评估
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskAssessment(string $RiskAssessment) 设置受影响评估
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterCheckItem extends AbstractModel
 {
     /**
      * @var integer 唯一的检测项的ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CheckItemId;
 
@@ -110,144 +73,109 @@ class ClusterCheckItem extends AbstractModel
 
     /**
      * @var string 检测项详细描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ItemDetail;
 
     /**
      * @var string 威胁等级。严重Serious,高危High,中危Middle,提示Hint
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskLevel;
 
     /**
      * @var string 检查对象、风险对象.Runc,Kubelet,Containerd,Pods
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskTarget;
 
     /**
      * @var string 风险类别,漏洞风险CVERisk,配置风险ConfigRisk
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskType;
 
     /**
      * @var string 检测项所属的风险类型,权限提升:PrivilegePromotion,拒绝服务:RefuseService,目录穿越:DirectoryEscape,未授权访问:UnauthorizedAccess,权限许可和访问控制问题:PrivilegeAndAccessControl,敏感信息泄露:SensitiveInfoLeak
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskAttribute;
 
     /**
      * @var string 风险特征,Tag.存在EXP:ExistEXP,存在POD:ExistPOC,无需重启:NoNeedReboot, 服务重启:ServerRestart,远程信息泄露:RemoteInfoLeak,远程拒绝服务:RemoteRefuseService,远程利用:RemoteExploit,远程执行:RemoteExecute
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskProperty;
 
     /**
      * @var string CVE编号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CVENumber;
 
     /**
      * @var string 披露时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiscoverTime;
 
     /**
      * @var string 解决方案
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Solution;
 
     /**
      * @var string CVSS信息,用于画图
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CVSS;
 
     /**
      * @var string CVSS分数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CVSSScore;
 
     /**
      * @var string 参考连接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RelateLink;
 
     /**
      * @var string 影响类型，为Node或者Workload
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AffectedType;
 
     /**
      * @var string 受影响的版本信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AffectedVersion;
 
     /**
      * @var integer 忽略的资产数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IgnoredAssetNum;
 
     /**
      * @var boolean 是否忽略该检测项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsIgnored;
 
     /**
      * @var string 受影响评估
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskAssessment;
 
     /**
      * @param integer $CheckItemId 唯一的检测项的ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 风险项的名称
      * @param string $ItemDetail 检测项详细描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RiskLevel 威胁等级。严重Serious,高危High,中危Middle,提示Hint
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RiskTarget 检查对象、风险对象.Runc,Kubelet,Containerd,Pods
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RiskType 风险类别,漏洞风险CVERisk,配置风险ConfigRisk
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RiskAttribute 检测项所属的风险类型,权限提升:PrivilegePromotion,拒绝服务:RefuseService,目录穿越:DirectoryEscape,未授权访问:UnauthorizedAccess,权限许可和访问控制问题:PrivilegeAndAccessControl,敏感信息泄露:SensitiveInfoLeak
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RiskProperty 风险特征,Tag.存在EXP:ExistEXP,存在POD:ExistPOC,无需重启:NoNeedReboot, 服务重启:ServerRestart,远程信息泄露:RemoteInfoLeak,远程拒绝服务:RemoteRefuseService,远程利用:RemoteExploit,远程执行:RemoteExecute
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CVENumber CVE编号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DiscoverTime 披露时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Solution 解决方案
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CVSS CVSS信息,用于画图
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CVSSScore CVSS分数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RelateLink 参考连接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AffectedType 影响类型，为Node或者Workload
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AffectedVersion 受影响的版本信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IgnoredAssetNum 忽略的资产数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsIgnored 是否忽略该检测项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RiskAssessment 受影响评估
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDatabaseName() 获取数据库名称。
  * @method void setDatabaseName(string $DatabaseName) 设置数据库名称。
  * @method string getComment() 获取数据库描述信息，长度 0~256。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComment(string $Comment) 设置数据库描述信息，长度 0~256。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getProperties() 获取允许针对数据库的属性元数据信息进行指定。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProperties(array $Properties) 设置允许针对数据库的属性元数据信息进行指定。
@@ -39,25 +37,17 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModifiedTime(string $ModifiedTime) 设置数据库更新时间戳，单位：s。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLocation() 获取cos存储路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocation(string $Location) 设置cos存储路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserAlias() 获取建库用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserAlias(string $UserAlias) 设置建库用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserSubUin() 获取建库用户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserSubUin(string $UserSubUin) 设置建库用户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DataGovernPolicy getGovernPolicy() 获取数据治理配置项
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGovernPolicy(DataGovernPolicy $GovernPolicy) 设置数据治理配置项
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDatabaseId() 获取数据库ID（无效字段）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatabaseId(string $DatabaseId) 设置数据库ID（无效字段）
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DatabaseResponseInfo extends AbstractModel
 {
@@ -68,7 +58,6 @@ class DatabaseResponseInfo extends AbstractModel
 
     /**
      * @var string 数据库描述信息，长度 0~256。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Comment;
 
@@ -92,19 +81,16 @@ class DatabaseResponseInfo extends AbstractModel
 
     /**
      * @var string cos存储路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Location;
 
     /**
      * @var string 建库用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserAlias;
 
     /**
      * @var string 建库用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserSubUin;
 
@@ -116,14 +102,12 @@ class DatabaseResponseInfo extends AbstractModel
 
     /**
      * @var string 数据库ID（无效字段）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DatabaseId;
 
     /**
      * @param string $DatabaseName 数据库名称。
      * @param string $Comment 数据库描述信息，长度 0~256。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Properties 允许针对数据库的属性元数据信息进行指定。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 数据库创建时间戳，单位：s。
@@ -131,15 +115,11 @@ class DatabaseResponseInfo extends AbstractModel
      * @param string $ModifiedTime 数据库更新时间戳，单位：s。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Location cos存储路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserAlias 建库用户昵称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserSubUin 建库用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DataGovernPolicy $GovernPolicy 数据治理配置项
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatabaseId 数据库ID（无效字段）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

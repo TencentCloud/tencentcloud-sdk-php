@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 单条消息体内容
  *
  * @method integer getMessageType() 获取消息类型。0表示文本消息，1表示图片消息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessageType(integer $MessageType) 设置消息类型。0表示文本消息，1表示图片消息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTextMessage() 获取文本消息内容。message type为0时有效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTextMessage(string $TextMessage) 设置文本消息内容。message type为0时有效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getImageMessage() 获取图片消息URL。 message type为1时有效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageMessage(string $ImageMessage) 设置图片消息URL。 message type为1时有效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method CustomMsgContent getCustomMessage() 获取自定义消息内容。message type为2时有效。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCustomMessage(CustomMsgContent $CustomMessage) 设置自定义消息内容。message type为2时有效。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MessageItem extends AbstractModel
 {
     /**
      * @var integer 消息类型。0表示文本消息，1表示图片消息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MessageType;
 
     /**
      * @var string 文本消息内容。message type为0时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TextMessage;
 
     /**
      * @var string 图片消息URL。 message type为1时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ImageMessage;
 
     /**
      * @var CustomMsgContent 自定义消息内容。message type为2时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CustomMessage;
 
     /**
      * @param integer $MessageType 消息类型。0表示文本消息，1表示图片消息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TextMessage 文本消息内容。message type为0时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ImageMessage 图片消息URL。 message type为1时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CustomMsgContent $CustomMessage 自定义消息内容。message type为2时有效。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

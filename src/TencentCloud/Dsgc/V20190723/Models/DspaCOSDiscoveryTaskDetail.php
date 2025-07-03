@@ -35,17 +35,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getGeneralRuleSetEnable() 获取通用规则集开关，0 关闭，1 启用
  * @method void setGeneralRuleSetEnable(integer $GeneralRuleSetEnable) 设置通用规则集开关，0 关闭，1 启用
  * @method array getDefaultComplianceInfo() 获取当创建任务时，用户打开了通用规则集开关，则该字段就会保存默认合规组信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefaultComplianceInfo(array $DefaultComplianceInfo) 设置当创建任务时，用户打开了通用规则集开关，则该字段就会保存默认合规组信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCustomComplianceInfo() 获取该任务中用户选择的合规组信息列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCustomComplianceInfo(array $CustomComplianceInfo) 设置该任务中用户选择的合规组信息列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTimingStartTime() 获取定时开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimingStartTime(string $TimingStartTime) 设置定时开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DspaCOSDiscoveryTaskDetail extends AbstractModel
 {
@@ -86,19 +80,16 @@ class DspaCOSDiscoveryTaskDetail extends AbstractModel
 
     /**
      * @var array 当创建任务时，用户打开了通用规则集开关，则该字段就会保存默认合规组信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DefaultComplianceInfo;
 
     /**
      * @var array 该任务中用户选择的合规组信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CustomComplianceInfo;
 
     /**
      * @var string 定时开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimingStartTime;
 
@@ -111,11 +102,8 @@ class DspaCOSDiscoveryTaskDetail extends AbstractModel
      * @param DspaCOSDiscoveryTaskDataSourceInfo $DataSourceInfo 数据源对象信息
      * @param integer $GeneralRuleSetEnable 通用规则集开关，0 关闭，1 启用
      * @param array $DefaultComplianceInfo 当创建任务时，用户打开了通用规则集开关，则该字段就会保存默认合规组信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CustomComplianceInfo 该任务中用户选择的合规组信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TimingStartTime 定时开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

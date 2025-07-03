@@ -29,29 +29,17 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNewPodList(DeployServicePodDetail $NewPodList) 设置新实例列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBatchStatus() 获取当前批次状态："WaitForTimeExceed", "WaitForResume", "Deploying", "Finish", "NotStart"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBatchStatus(string $BatchStatus) 设置当前批次状态："WaitForTimeExceed", "WaitForResume", "Deploying", "Finish", "NotStart"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPodNum() 获取该批次预计旧实例数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPodNum(integer $PodNum) 设置该批次预计旧实例数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBatchIndex() 获取批次id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBatchIndex(integer $BatchIndex) 设置批次id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getOldPods() 获取旧实例列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOldPods(array $OldPods) 设置旧实例列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getNewPods() 获取新实例列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNewPods(array $NewPods) 设置新实例列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNextBatchStartTime() 获取=0：手动确认批次；>0：下一批次开始时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNextBatchStartTime(integer $NextBatchStartTime) 设置=0：手动确认批次；>0：下一批次开始时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DeployServiceBatchDetail extends AbstractModel
 {
@@ -69,37 +57,31 @@ class DeployServiceBatchDetail extends AbstractModel
 
     /**
      * @var string 当前批次状态："WaitForTimeExceed", "WaitForResume", "Deploying", "Finish", "NotStart"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BatchStatus;
 
     /**
      * @var integer 该批次预计旧实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PodNum;
 
     /**
      * @var integer 批次id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BatchIndex;
 
     /**
      * @var array 旧实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OldPods;
 
     /**
      * @var array 新实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NewPods;
 
     /**
      * @var integer =0：手动确认批次；>0：下一批次开始时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NextBatchStartTime;
 
@@ -109,17 +91,11 @@ class DeployServiceBatchDetail extends AbstractModel
      * @param DeployServicePodDetail $NewPodList 新实例列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BatchStatus 当前批次状态："WaitForTimeExceed", "WaitForResume", "Deploying", "Finish", "NotStart"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PodNum 该批次预计旧实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BatchIndex 批次id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $OldPods 旧实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $NewPods 新实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NextBatchStartTime =0：手动确认批次；>0：下一批次开始时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

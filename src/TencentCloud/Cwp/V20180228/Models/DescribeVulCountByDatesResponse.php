@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * DescribeVulCountByDates返回参数结构体
  *
  * @method array getVulCount() 获取批量获得对应天数的漏洞数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVulCount(array $VulCount) 设置批量获得对应天数的漏洞数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getHostCount() 获取批量获得对应天数的主机数量
  * @method void setHostCount(array $HostCount) 设置批量获得对应天数的主机数量
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -33,7 +31,6 @@ class DescribeVulCountByDatesResponse extends AbstractModel
 {
     /**
      * @var array 批量获得对应天数的漏洞数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VulCount;
 
@@ -49,7 +46,6 @@ class DescribeVulCountByDatesResponse extends AbstractModel
 
     /**
      * @param array $VulCount 批量获得对应天数的漏洞数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $HostCount 批量获得对应天数的主机数量
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

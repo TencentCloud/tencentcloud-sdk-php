@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTaskId() 获取转储任务id
  * @method void setTaskId(string $TaskId) 设置转储任务id
  * @method string getDatahubId() 获取数据转储Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatahubId(string $DatahubId) 设置数据转储Id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CreateDatahubTaskRes extends AbstractModel
 {
@@ -36,14 +34,12 @@ class CreateDatahubTaskRes extends AbstractModel
 
     /**
      * @var string 数据转储Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DatahubId;
 
     /**
      * @param string $TaskId 转储任务id
      * @param string $DatahubId 数据转储Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

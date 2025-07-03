@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 组件类型筛选列表
  *
  * @method string getComponentCode() 获取组件类型编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComponentCode(string $ComponentCode) 设置组件类型编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getComponentCodeName() 获取组件类型：用户购买的产品或服务对应的组件大类
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComponentCodeName(string $ComponentCodeName) 设置组件类型：用户购买的产品或服务对应的组件大类
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BillComponent extends AbstractModel
 {
     /**
      * @var string 组件类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComponentCode;
 
     /**
      * @var string 组件类型：用户购买的产品或服务对应的组件大类
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ComponentCodeName;
 
     /**
      * @param string $ComponentCode 组件类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ComponentCodeName 组件类型：用户购买的产品或服务对应的组件大类
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

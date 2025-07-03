@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 描述配置项绑定的部署组
  *
  * @method integer getTotalCount() 获取公共条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置公共条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getContent() 获取内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContent(array $Content) 设置内容
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DeliveryConfigBindGroups extends AbstractModel
 {
     /**
      * @var integer 公共条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
      * @var array 内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Content;
 
     /**
      * @param integer $TotalCount 公共条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Content 内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

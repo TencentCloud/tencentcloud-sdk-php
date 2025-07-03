@@ -33,13 +33,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getId() 获取分类规则绑定关系id
  * @method void setId(integer $Id) 设置分类规则绑定关系id
  * @method integer getAliasRuleId() 获取别名ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAliasRuleId(integer $AliasRuleId) 设置别名ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAliasRuleName() 获取别名规则名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAliasRuleName(string $AliasRuleName) 设置别名规则名称
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getRuleEffectItems() 获取各类分类分级规则数量
+ * @method void setRuleEffectItems(array $RuleEffectItems) 设置各类分类分级规则数量
+ * @method integer getRuleStatus() 获取规则状态
+ * @method void setRuleStatus(integer $RuleStatus) 设置规则状态
  */
 class CategoryRule extends AbstractModel
 {
@@ -75,15 +75,23 @@ class CategoryRule extends AbstractModel
 
     /**
      * @var integer 别名ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AliasRuleId;
 
     /**
      * @var string 别名规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AliasRuleName;
+
+    /**
+     * @var array 各类分类分级规则数量
+     */
+    public $RuleEffectItems;
+
+    /**
+     * @var integer 规则状态
+     */
+    public $RuleStatus;
 
     /**
      * @param integer $CategoryId 分类id
@@ -93,9 +101,9 @@ class CategoryRule extends AbstractModel
      * @param string $LevelName 级别名称
      * @param integer $Id 分类规则绑定关系id
      * @param integer $AliasRuleId 别名ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AliasRuleName 别名规则名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $RuleEffectItems 各类分类分级规则数量
+     * @param integer $RuleStatus 规则状态
      */
     function __construct()
     {
@@ -140,6 +148,19 @@ class CategoryRule extends AbstractModel
 
         if (array_key_exists("AliasRuleName",$param) and $param["AliasRuleName"] !== null) {
             $this->AliasRuleName = $param["AliasRuleName"];
+        }
+
+        if (array_key_exists("RuleEffectItems",$param) and $param["RuleEffectItems"] !== null) {
+            $this->RuleEffectItems = [];
+            foreach ($param["RuleEffectItems"] as $key => $value){
+                $obj = new RuleEffectItem();
+                $obj->deserialize($value);
+                array_push($this->RuleEffectItems, $obj);
+            }
+        }
+
+        if (array_key_exists("RuleStatus",$param) and $param["RuleStatus"] !== null) {
+            $this->RuleStatus = $param["RuleStatus"];
         }
     }
 }

@@ -27,29 +27,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getClusterIntranetEndpoint() 获取集群APIServer的内网访问地址
  * @method void setClusterIntranetEndpoint(string $ClusterIntranetEndpoint) 设置集群APIServer的内网访问地址
  * @method string getClusterDomain() 获取集群APIServer的域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterDomain(string $ClusterDomain) 设置集群APIServer的域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getClusterExternalACL() 获取集群APIServer的外网访问ACL列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterExternalACL(array $ClusterExternalACL) 设置集群APIServer的外网访问ACL列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterExternalDomain() 获取外网域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterExternalDomain(string $ClusterExternalDomain) 设置外网域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterIntranetDomain() 获取内网域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterIntranetDomain(string $ClusterIntranetDomain) 设置内网域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSecurityGroup() 获取外网安全组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecurityGroup(string $SecurityGroup) 设置外网安全组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterIntranetSubnetId() 获取内网访问所属子网
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterIntranetSubnetId(string $ClusterIntranetSubnetId) 设置内网访问所属子网
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -72,7 +62,6 @@ class DescribeClusterEndpointsResponse extends AbstractModel
 
     /**
      * @var string 集群APIServer的域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterDomain;
 
@@ -84,25 +73,21 @@ class DescribeClusterEndpointsResponse extends AbstractModel
 
     /**
      * @var string 外网域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterExternalDomain;
 
     /**
      * @var string 内网域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterIntranetDomain;
 
     /**
      * @var string 外网安全组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecurityGroup;
 
     /**
      * @var string 内网访问所属子网
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterIntranetSubnetId;
 
@@ -116,17 +101,12 @@ class DescribeClusterEndpointsResponse extends AbstractModel
      * @param string $ClusterExternalEndpoint 集群APIServer的外网访问地址
      * @param string $ClusterIntranetEndpoint 集群APIServer的内网访问地址
      * @param string $ClusterDomain 集群APIServer的域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ClusterExternalACL 集群APIServer的外网访问ACL列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterExternalDomain 外网域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterIntranetDomain 内网域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SecurityGroup 外网安全组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterIntranetSubnetId 内网访问所属子网
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

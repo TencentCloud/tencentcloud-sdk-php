@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRoute请求参数结构体
  *
- * @method string getInstanceId() 获取实例唯一id
- * @method void setInstanceId(string $InstanceId) 设置实例唯一id
- * @method integer getRouteId() 获取路由id
- * @method void setRouteId(integer $RouteId) 设置路由id
+ * @method string getInstanceId() 获取ckafka集群实例Id
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
+ * @method integer getRouteId() 获取路由Id
+ * @method void setRouteId(integer $RouteId) 设置路由Id
  */
 class DescribeRouteRequest extends AbstractModel
 {
     /**
-     * @var string 实例唯一id
+     * @var string ckafka集群实例Id
      */
     public $InstanceId;
 
     /**
-     * @var integer 路由id
+     * @var integer 路由Id
      */
     public $RouteId;
 
     /**
-     * @param string $InstanceId 实例唯一id
-     * @param integer $RouteId 路由id
+     * @param string $InstanceId ckafka集群实例Id
+     * @param integer $RouteId 路由Id
      */
     function __construct()
     {

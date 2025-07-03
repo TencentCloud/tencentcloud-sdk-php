@@ -21,25 +21,15 @@ use TencentCloud\Common\AbstractModel;
  * 单个步骤的详细信息
  *
  * @method integer getStepNo() 获取步骤编号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStepNo(integer $StepNo) 设置步骤编号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStepName() 获取步骤名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStepName(string $StepName) 设置步骤名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStepId() 获取步骤标号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStepId(string $StepId) 设置步骤标号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取当前步骤状态,可能返回有 notStarted(未开始)、running(校验中)、failed(校验任务失败)、finished(完成)、skipped(跳过)、paused(暂停)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置当前步骤状态,可能返回有 notStarted(未开始)、running(校验中)、failed(校验任务失败)、finished(完成)、skipped(跳过)、paused(暂停)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStartTime() 获取步骤开始时间，可能为空
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(string $StartTime) 设置步骤开始时间，可能为空
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getErrors() 获取错误信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrors(array $Errors) 设置错误信息
@@ -49,39 +39,32 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWarnings(array $Warnings) 设置警告信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProgress() 获取当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProgress(integer $Progress) 设置当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class StepInfo extends AbstractModel
 {
     /**
      * @var integer 步骤编号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StepNo;
 
     /**
      * @var string 步骤名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StepName;
 
     /**
      * @var string 步骤标号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StepId;
 
     /**
      * @var string 当前步骤状态,可能返回有 notStarted(未开始)、running(校验中)、failed(校验任务失败)、finished(完成)、skipped(跳过)、paused(暂停)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 步骤开始时间，可能为空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
@@ -99,27 +82,20 @@ class StepInfo extends AbstractModel
 
     /**
      * @var integer 当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Progress;
 
     /**
      * @param integer $StepNo 步骤编号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StepName 步骤名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StepId 步骤标号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 当前步骤状态,可能返回有 notStarted(未开始)、running(校验中)、failed(校验任务失败)、finished(完成)、skipped(跳过)、paused(暂停)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StartTime 步骤开始时间，可能为空
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Errors 错误信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Warnings 警告信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Progress 当前步骤进度，范围为[0-100]，若为-1表示当前步骤不支持查看进度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

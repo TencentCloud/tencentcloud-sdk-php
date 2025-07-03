@@ -23,47 +23,27 @@ use TencentCloud\Common\AbstractModel;
  * @method string getAppPackage() 获取小程序apiiid
  * @method void setAppPackage(string $AppPackage) 设置小程序apiiid
  * @method string getAppName() 获取小程序应用名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppName(string $AppName) 设置小程序应用名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAppVersion() 获取小程序应用版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppVersion(string $AppVersion) 设置小程序应用版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPlatform() 获取应用平台, 0:android, 1:ios, 2:小程序
  * @method void setPlatform(integer $Platform) 设置应用平台, 0:android, 1:ios, 2:小程序
  * @method string getReportUrl() 获取小程序隐私诊断报告下载链接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReportUrl(string $ReportUrl) 设置小程序隐私诊断报告下载链接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReportTitle() 获取小程序隐私诊断报告名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReportTitle(string $ReportTitle) 设置小程序隐私诊断报告名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBehaviorUrl() 获取小程序隐私诊断堆栈报告下载链接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBehaviorUrl(string $BehaviorUrl) 设置小程序隐私诊断堆栈报告下载链接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBehaviorTitle() 获取小程序隐私诊断堆栈报告名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBehaviorTitle(string $BehaviorTitle) 设置小程序隐私诊断堆栈报告名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHighRiskCount() 获取诊断风险项数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHighRiskCount(integer $HighRiskCount) 设置诊断风险项数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPrivacyTextName() 获取隐私申明文件名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrivacyTextName(string $PrivacyTextName) 设置隐私申明文件名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSoftwareMD5() 获取软件MD5
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSoftwareMD5(string $SoftwareMD5) 设置软件MD5
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPrivacyTextMD5() 获取隐私文本MD5
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrivacyTextMD5(string $PrivacyTextMD5) 设置隐私文本MD5
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AppInfoItem extends AbstractModel
 {
@@ -74,13 +54,11 @@ class AppInfoItem extends AbstractModel
 
     /**
      * @var string 小程序应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppName;
 
     /**
      * @var string 小程序应用版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppVersion;
 
@@ -91,75 +69,57 @@ class AppInfoItem extends AbstractModel
 
     /**
      * @var string 小程序隐私诊断报告下载链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReportUrl;
 
     /**
      * @var string 小程序隐私诊断报告名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReportTitle;
 
     /**
      * @var string 小程序隐私诊断堆栈报告下载链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BehaviorUrl;
 
     /**
      * @var string 小程序隐私诊断堆栈报告名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BehaviorTitle;
 
     /**
      * @var integer 诊断风险项数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HighRiskCount;
 
     /**
      * @var string 隐私申明文件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PrivacyTextName;
 
     /**
      * @var string 软件MD5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SoftwareMD5;
 
     /**
      * @var string 隐私文本MD5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PrivacyTextMD5;
 
     /**
      * @param string $AppPackage 小程序apiiid
      * @param string $AppName 小程序应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AppVersion 小程序应用版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Platform 应用平台, 0:android, 1:ios, 2:小程序
      * @param string $ReportUrl 小程序隐私诊断报告下载链接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReportTitle 小程序隐私诊断报告名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BehaviorUrl 小程序隐私诊断堆栈报告下载链接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BehaviorTitle 小程序隐私诊断堆栈报告名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HighRiskCount 诊断风险项数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PrivacyTextName 隐私申明文件名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SoftwareMD5 软件MD5
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PrivacyTextMD5 隐私文本MD5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

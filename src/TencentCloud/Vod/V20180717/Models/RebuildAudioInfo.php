@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 音画质重生音频控制控制信息。
  *
  * @method AudioDenoiseInfo getAudioDenoiseInfo() 获取音频降噪控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAudioDenoiseInfo(AudioDenoiseInfo $AudioDenoiseInfo) 设置音频降噪控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RebuildAudioInfo extends AbstractModel
 {
     /**
      * @var AudioDenoiseInfo 音频降噪控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AudioDenoiseInfo;
 
     /**
      * @param AudioDenoiseInfo $AudioDenoiseInfo 音频降噪控制参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -49,9 +49,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHealthCheckSettings(HealthCheckSettings $HealthCheckSettings) 设置健康检查相关字段
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsNotEqualServiceConfig() 获取服务配置信息是否匹配
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsNotEqualServiceConfig(boolean $IsNotEqualServiceConfig) 设置服务配置信息是否匹配
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ContainerGroupOther extends AbstractModel
 {
@@ -115,7 +113,6 @@ class ContainerGroupOther extends AbstractModel
 
     /**
      * @var boolean 服务配置信息是否匹配
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsNotEqualServiceConfig;
 
@@ -135,7 +132,6 @@ class ContainerGroupOther extends AbstractModel
      * @param HealthCheckSettings $HealthCheckSettings 健康检查相关字段
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsNotEqualServiceConfig 服务配置信息是否匹配
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

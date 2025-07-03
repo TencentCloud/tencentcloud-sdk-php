@@ -26,7 +26,17 @@ use TencentCloud\Common\AbstractModel;
 <li> job-id - String - 是否必填：否 -（过滤条件）按照作业ID过滤。</li>
 <li> job-name - String - 是否必填：否 -（过滤条件）按照作业名称过滤。</li>
 <li> job-state - String - 是否必填：否 -（过滤条件）按照作业状态过滤。</li>
-<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
+
+    - SUBMITTED：已提交；
+    - PENDING：等待中；
+    - RUNNABLE：可运行；
+    - STARTING：启动中；
+    - RUNNING：运行中；
+    - SUCCEED：成功；
+    - FAILED：失败；
+    - FAILED_INTERRUPTED：失败后保留实例。
+
+<li> zone - String - 是否必填：否 -（过滤条件）按照[可用区](https://cloud.tencent.com/document/product/213/15707)过滤。</li>
 <li> tag-key - String - 是否必填：否 -（过滤条件）按照标签键进行过滤。</li>
 <li> tag-value - String - 是否必填：否 -（过滤条件）按照标签值进行过滤。</li>
 <li> tag:tag-key - String - 是否必填：否 -（过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。</li>
@@ -35,15 +45,25 @@ use TencentCloud\Common\AbstractModel;
 <li> job-id - String - 是否必填：否 -（过滤条件）按照作业ID过滤。</li>
 <li> job-name - String - 是否必填：否 -（过滤条件）按照作业名称过滤。</li>
 <li> job-state - String - 是否必填：否 -（过滤条件）按照作业状态过滤。</li>
-<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
+
+    - SUBMITTED：已提交；
+    - PENDING：等待中；
+    - RUNNABLE：可运行；
+    - STARTING：启动中；
+    - RUNNING：运行中；
+    - SUCCEED：成功；
+    - FAILED：失败；
+    - FAILED_INTERRUPTED：失败后保留实例。
+
+<li> zone - String - 是否必填：否 -（过滤条件）按照[可用区](https://cloud.tencent.com/document/product/213/15707)过滤。</li>
 <li> tag-key - String - 是否必填：否 -（过滤条件）按照标签键进行过滤。</li>
 <li> tag-value - String - 是否必填：否 -（过滤条件）按照标签值进行过滤。</li>
 <li> tag:tag-key - String - 是否必填：否 -（过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。</li>
 与JobIds参数不能同时指定。
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
- * @method integer getLimit() 获取返回数量
- * @method void setLimit(integer $Limit) 设置返回数量
+ * @method integer getLimit() 获取返回job数量限制，最大值: 100，默认值: 20.
+ * @method void setLimit(integer $Limit) 设置返回job数量限制，最大值: 100，默认值: 20.
  */
 class DescribeJobsRequest extends AbstractModel
 {
@@ -57,7 +77,17 @@ class DescribeJobsRequest extends AbstractModel
 <li> job-id - String - 是否必填：否 -（过滤条件）按照作业ID过滤。</li>
 <li> job-name - String - 是否必填：否 -（过滤条件）按照作业名称过滤。</li>
 <li> job-state - String - 是否必填：否 -（过滤条件）按照作业状态过滤。</li>
-<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
+
+    - SUBMITTED：已提交；
+    - PENDING：等待中；
+    - RUNNABLE：可运行；
+    - STARTING：启动中；
+    - RUNNING：运行中；
+    - SUCCEED：成功；
+    - FAILED：失败；
+    - FAILED_INTERRUPTED：失败后保留实例。
+
+<li> zone - String - 是否必填：否 -（过滤条件）按照[可用区](https://cloud.tencent.com/document/product/213/15707)过滤。</li>
 <li> tag-key - String - 是否必填：否 -（过滤条件）按照标签键进行过滤。</li>
 <li> tag-value - String - 是否必填：否 -（过滤条件）按照标签值进行过滤。</li>
 <li> tag:tag-key - String - 是否必填：否 -（过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。</li>
@@ -71,7 +101,7 @@ class DescribeJobsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 返回数量
+     * @var integer 返回job数量限制，最大值: 100，默认值: 20.
      */
     public $Limit;
 
@@ -81,13 +111,23 @@ class DescribeJobsRequest extends AbstractModel
 <li> job-id - String - 是否必填：否 -（过滤条件）按照作业ID过滤。</li>
 <li> job-name - String - 是否必填：否 -（过滤条件）按照作业名称过滤。</li>
 <li> job-state - String - 是否必填：否 -（过滤条件）按照作业状态过滤。</li>
-<li> zone - String - 是否必填：否 -（过滤条件）按照可用区过滤。</li>
+
+    - SUBMITTED：已提交；
+    - PENDING：等待中；
+    - RUNNABLE：可运行；
+    - STARTING：启动中；
+    - RUNNING：运行中；
+    - SUCCEED：成功；
+    - FAILED：失败；
+    - FAILED_INTERRUPTED：失败后保留实例。
+
+<li> zone - String - 是否必填：否 -（过滤条件）按照[可用区](https://cloud.tencent.com/document/product/213/15707)过滤。</li>
 <li> tag-key - String - 是否必填：否 -（过滤条件）按照标签键进行过滤。</li>
 <li> tag-value - String - 是否必填：否 -（过滤条件）按照标签值进行过滤。</li>
 <li> tag:tag-key - String - 是否必填：否 -（过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。</li>
 与JobIds参数不能同时指定。
      * @param integer $Offset 偏移量
-     * @param integer $Limit 返回数量
+     * @param integer $Limit 返回job数量限制，最大值: 100，默认值: 20.
      */
     function __construct()
     {

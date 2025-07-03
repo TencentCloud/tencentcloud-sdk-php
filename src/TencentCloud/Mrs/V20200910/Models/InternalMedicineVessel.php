@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 体检报告-内科-血管
  *
  * @method KeyValueItem getText() 获取血管总体描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setText(KeyValueItem $Text) 设置血管总体描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method KeyValueItem getVascularMurmur() 获取血管杂音
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVascularMurmur(KeyValueItem $VascularMurmur) 设置血管杂音
-注意：此字段可能返回 null，表示取不到有效值。
  * @method KeyValueItem getPeripheralVessel() 获取外周血管
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPeripheralVessel(KeyValueItem $PeripheralVessel) 设置外周血管
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InternalMedicineVessel extends AbstractModel
 {
     /**
      * @var KeyValueItem 血管总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Text;
 
     /**
      * @var KeyValueItem 血管杂音
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VascularMurmur;
 
     /**
      * @var KeyValueItem 外周血管
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PeripheralVessel;
 
     /**
      * @param KeyValueItem $Text 血管总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyValueItem $VascularMurmur 血管杂音
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyValueItem $PeripheralVessel 外周血管
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

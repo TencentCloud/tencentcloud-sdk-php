@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getProgress() 获取总进度,如："30"表示30%
  * @method void setProgress(integer $Progress) 设置总进度,如："30"表示30%
  * @method array getStepInfo() 获取步骤信息，null表示还未开始迁移
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStepInfo(array $StepInfo) 设置步骤信息，null表示还未开始迁移
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MigrationDetail extends AbstractModel
 {
@@ -50,7 +48,6 @@ class MigrationDetail extends AbstractModel
 
     /**
      * @var array 步骤信息，null表示还未开始迁移
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StepInfo;
 
@@ -59,7 +56,6 @@ class MigrationDetail extends AbstractModel
      * @param integer $StepNow 当前步骤
      * @param integer $Progress 总进度,如："30"表示30%
      * @param array $StepInfo 步骤信息，null表示还未开始迁移
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

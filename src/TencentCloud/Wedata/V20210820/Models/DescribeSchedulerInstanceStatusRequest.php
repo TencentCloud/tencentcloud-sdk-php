@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInCharge(string $InCharge) 设置责任人
  * @method string getWorkflowId() 获取工作流ID
  * @method void setWorkflowId(string $WorkflowId) 设置工作流ID
+ * @method array getProjectIds() 获取任务ID列表
+ * @method void setProjectIds(array $ProjectIds) 设置任务ID列表
  */
 class DescribeSchedulerInstanceStatusRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class DescribeSchedulerInstanceStatusRequest extends AbstractModel
     public $WorkflowId;
 
     /**
+     * @var array 任务ID列表
+     */
+    public $ProjectIds;
+
+    /**
      * @param string $ProjectId 项目ID
      * @param string $TaskTypeId 任务类型ID
      * @param string $ExecutionGroupId 执行资源组ID
@@ -88,6 +95,7 @@ class DescribeSchedulerInstanceStatusRequest extends AbstractModel
      * @param string $EndTime 结束时间
      * @param string $InCharge 责任人
      * @param string $WorkflowId 工作流ID
+     * @param array $ProjectIds 任务ID列表
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class DescribeSchedulerInstanceStatusRequest extends AbstractModel
 
         if (array_key_exists("WorkflowId",$param) and $param["WorkflowId"] !== null) {
             $this->WorkflowId = $param["WorkflowId"];
+        }
+
+        if (array_key_exists("ProjectIds",$param) and $param["ProjectIds"] !== null) {
+            $this->ProjectIds = $param["ProjectIds"];
         }
     }
 }

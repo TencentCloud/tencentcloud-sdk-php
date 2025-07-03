@@ -58,6 +58,7 @@ use TencentCloud\Dasb\V20191018\Models as Models;
  * @method Models\DescribeDeviceGroupMembersResponse DescribeDeviceGroupMembers(Models\DescribeDeviceGroupMembersRequest $req) 查询资产组成员列表
  * @method Models\DescribeDeviceGroupsResponse DescribeDeviceGroups(Models\DescribeDeviceGroupsRequest $req) 查询资产组列表
  * @method Models\DescribeDevicesResponse DescribeDevices(Models\DescribeDevicesRequest $req) 查询资产列表
+ * @method Models\DescribeDomainsResponse DescribeDomains(Models\DescribeDomainsRequest $req) 查询网络域
  * @method Models\DescribeLoginEventResponse DescribeLoginEvent(Models\DescribeLoginEventRequest $req) 查询登录日志
  * @method Models\DescribeOperationEventResponse DescribeOperationEvent(Models\DescribeOperationEventRequest $req) 查询操作日志
  * @method Models\DescribeResourcesResponse DescribeResources(Models\DescribeResourcesRequest $req) 查询用户购买的堡垒机服务信息，包括资源ID、授权点数、VPC、过期时间等。

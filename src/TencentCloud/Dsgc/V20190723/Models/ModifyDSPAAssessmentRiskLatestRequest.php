@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDspaId() 获取dspa实例id
  * @method void setDspaId(string $DspaId) 设置dspa实例id
- * @method integer getRiskLatestTableId() 获取最新风险项Id
- * @method void setRiskLatestTableId(integer $RiskLatestTableId) 设置最新风险项Id
  * @method string getStatus() 获取风险状态（waiting:待处理，processing:处理中，finished:已处理，ignored:已忽略）
  * @method void setStatus(string $Status) 设置风险状态（waiting:待处理，processing:处理中，finished:已处理，ignored:已忽略）
+ * @method integer getRiskLatestTableId() 获取最新风险项Id
+ * @method void setRiskLatestTableId(integer $RiskLatestTableId) 设置最新风险项Id
  * @method string getNote() 获取备注
  * @method void setNote(string $Note) 设置备注
  * @method string getProcessPeople() 获取处置人
@@ -41,15 +41,15 @@ class ModifyDSPAAssessmentRiskLatestRequest extends AbstractModel
     public $DspaId;
 
     /**
+     * @var string 风险状态（waiting:待处理，processing:处理中，finished:已处理，ignored:已忽略）
+     */
+    public $Status;
+
+    /**
      * @var integer 最新风险项Id
      * @deprecated
      */
     public $RiskLatestTableId;
-
-    /**
-     * @var string 风险状态（waiting:待处理，processing:处理中，finished:已处理，ignored:已忽略）
-     */
-    public $Status;
 
     /**
      * @var string 备注
@@ -68,8 +68,8 @@ class ModifyDSPAAssessmentRiskLatestRequest extends AbstractModel
 
     /**
      * @param string $DspaId dspa实例id
-     * @param integer $RiskLatestTableId 最新风险项Id
      * @param string $Status 风险状态（waiting:待处理，processing:处理中，finished:已处理，ignored:已忽略）
+     * @param integer $RiskLatestTableId 最新风险项Id
      * @param string $Note 备注
      * @param string $ProcessPeople 处置人
      * @param array $BathRiskIdList 批量处理的列表
@@ -91,12 +91,12 @@ class ModifyDSPAAssessmentRiskLatestRequest extends AbstractModel
             $this->DspaId = $param["DspaId"];
         }
 
-        if (array_key_exists("RiskLatestTableId",$param) and $param["RiskLatestTableId"] !== null) {
-            $this->RiskLatestTableId = $param["RiskLatestTableId"];
-        }
-
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("RiskLatestTableId",$param) and $param["RiskLatestTableId"] !== null) {
+            $this->RiskLatestTableId = $param["RiskLatestTableId"];
         }
 
         if (array_key_exists("Note",$param) and $param["Note"] !== null) {

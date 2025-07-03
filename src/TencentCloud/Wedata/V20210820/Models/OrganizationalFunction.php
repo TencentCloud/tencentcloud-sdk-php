@@ -124,6 +124,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOwnerUserIdsStr(array $OwnerUserIdsStr) 设置公有云 Owner ID 列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEnvType() 获取数据库环境
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEnvType(string $EnvType) 设置数据库环境
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFunctionResourceFileType() 获取函数资源文件类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFunctionResourceFileType(string $FunctionResourceFileType) 设置函数资源文件类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class OrganizationalFunction extends AbstractModel
 {
@@ -292,6 +300,18 @@ class OrganizationalFunction extends AbstractModel
     public $OwnerUserIdsStr;
 
     /**
+     * @var string 数据库环境
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EnvType;
+
+    /**
+     * @var string 函数资源文件类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FunctionResourceFileType;
+
+    /**
      * @param string $Name 名称
      * @param string $DisplayName 展示名称
      * @param string $LayerPath 层级路径
@@ -343,6 +363,10 @@ class OrganizationalFunction extends AbstractModel
      * @param array $OperatorUserIdsStr 操作人 ID 列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $OwnerUserIdsStr 公有云 Owner ID 列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EnvType 数据库环境
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FunctionResourceFileType 函数资源文件类型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -473,6 +497,14 @@ class OrganizationalFunction extends AbstractModel
 
         if (array_key_exists("OwnerUserIdsStr",$param) and $param["OwnerUserIdsStr"] !== null) {
             $this->OwnerUserIdsStr = $param["OwnerUserIdsStr"];
+        }
+
+        if (array_key_exists("EnvType",$param) and $param["EnvType"] !== null) {
+            $this->EnvType = $param["EnvType"];
+        }
+
+        if (array_key_exists("FunctionResourceFileType",$param) and $param["FunctionResourceFileType"] !== null) {
+            $this->FunctionResourceFileType = $param["FunctionResourceFileType"];
         }
     }
 }

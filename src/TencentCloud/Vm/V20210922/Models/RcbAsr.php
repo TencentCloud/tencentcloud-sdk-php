@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 审核切片asr文本信息
  *
  * @method string getText() 获取该字段用于返回音频文件识别出的对应文本内容，最大支持**前1000个字符**。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setText(string $Text) 设置该字段用于返回音频文件识别出的对应文本内容，最大支持**前1000个字符**。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedAt() 获取该字段用于返回被查询任务创建的时间，格式采用 ISO 8601标准。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedAt(string $CreatedAt) 设置该字段用于返回被查询任务创建的时间，格式采用 ISO 8601标准。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RcbAsr extends AbstractModel
 {
     /**
      * @var string 该字段用于返回音频文件识别出的对应文本内容，最大支持**前1000个字符**。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Text;
 
     /**
      * @var string 该字段用于返回被查询任务创建的时间，格式采用 ISO 8601标准。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedAt;
 
     /**
      * @param string $Text 该字段用于返回音频文件识别出的对应文本内容，最大支持**前1000个字符**。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedAt 该字段用于返回被查询任务创建的时间，格式采用 ISO 8601标准。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

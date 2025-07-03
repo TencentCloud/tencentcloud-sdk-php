@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 修改参数条目，以参数为维度
  *
  * @method string getParamName() 获取参数名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParamName(string $ParamName) 设置参数名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEventCount() 获取修改事件数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEventCount(integer $EventCount) 设置修改事件数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getEventDetail() 获取修改时间详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEventDetail(array $EventDetail) 设置修改时间详情
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class EventItem extends AbstractModel
 {
     /**
      * @var string 参数名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ParamName;
 
     /**
      * @var integer 修改事件数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventCount;
 
     /**
      * @var array 修改时间详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventDetail;
 
     /**
      * @param string $ParamName 参数名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EventCount 修改事件数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $EventDetail 修改时间详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

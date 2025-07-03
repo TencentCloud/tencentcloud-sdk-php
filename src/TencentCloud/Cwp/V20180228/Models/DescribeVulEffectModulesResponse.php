@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTotalCount() 获取列表总数量
  * @method void setTotalCount(integer $TotalCount) 设置列表总数量
  * @method array getVulEffectModuleInfo() 获取影响主机列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVulEffectModuleInfo(array $VulEffectModuleInfo) 设置影响主机列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -38,7 +36,6 @@ class DescribeVulEffectModulesResponse extends AbstractModel
 
     /**
      * @var array 影响主机列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VulEffectModuleInfo;
 
@@ -50,7 +47,6 @@ class DescribeVulEffectModulesResponse extends AbstractModel
     /**
      * @param integer $TotalCount 列表总数量
      * @param array $VulEffectModuleInfo 影响主机列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

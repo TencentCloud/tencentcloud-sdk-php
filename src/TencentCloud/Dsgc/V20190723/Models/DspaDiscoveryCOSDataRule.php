@@ -22,36 +22,28 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getOperator() 获取只能取and 、or两个值其中之一，and：字段和内容同时满足，or：字段和内容满足其一.
 默认值为or
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperator(string $Operator) 设置只能取and 、or两个值其中之一，and：字段和内容同时满足，or：字段和内容满足其一.
 默认值为or
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getContents() 获取规则内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContents(array $Contents) 设置规则内容
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DspaDiscoveryCOSDataRule extends AbstractModel
 {
     /**
      * @var string 只能取and 、or两个值其中之一，and：字段和内容同时满足，or：字段和内容满足其一.
 默认值为or
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Operator;
 
     /**
      * @var array 规则内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Contents;
 
     /**
      * @param string $Operator 只能取and 、or两个值其中之一，and：字段和内容同时满足，or：字段和内容满足其一.
 默认值为or
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Contents 规则内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

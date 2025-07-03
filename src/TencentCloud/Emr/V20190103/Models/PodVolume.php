@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * Pod的存储设备描述信息。
  *
  * @method string getVolumeType() 获取存储类型，可为"pvc"，"hostpath"。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVolumeType(string $VolumeType) 设置存储类型，可为"pvc"，"hostpath"。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method PersistentVolumeContext getPVCVolume() 获取当VolumeType为"pvc"时，该字段生效。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPVCVolume(PersistentVolumeContext $PVCVolume) 设置当VolumeType为"pvc"时，该字段生效。
@@ -37,7 +35,6 @@ class PodVolume extends AbstractModel
 {
     /**
      * @var string 存储类型，可为"pvc"，"hostpath"。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VolumeType;
 
@@ -55,7 +52,6 @@ class PodVolume extends AbstractModel
 
     /**
      * @param string $VolumeType 存储类型，可为"pvc"，"hostpath"。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PersistentVolumeContext $PVCVolume 当VolumeType为"pvc"时，该字段生效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param HostVolumeContext $HostVolume 当VolumeType为"hostpath"时，该字段生效。

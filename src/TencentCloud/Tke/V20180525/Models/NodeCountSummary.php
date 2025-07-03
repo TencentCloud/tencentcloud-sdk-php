@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 节点统计列表
  *
  * @method ManuallyAdded getManuallyAdded() 获取手动管理的节点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setManuallyAdded(ManuallyAdded $ManuallyAdded) 设置手动管理的节点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method AutoscalingAdded getAutoscalingAdded() 获取自动管理的节点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoscalingAdded(AutoscalingAdded $AutoscalingAdded) 设置自动管理的节点
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NodeCountSummary extends AbstractModel
 {
     /**
      * @var ManuallyAdded 手动管理的节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ManuallyAdded;
 
     /**
      * @var AutoscalingAdded 自动管理的节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoscalingAdded;
 
     /**
      * @param ManuallyAdded $ManuallyAdded 手动管理的节点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AutoscalingAdded $AutoscalingAdded 自动管理的节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置响应状态码
  * @method string getResult() 获取响应详情
  * @method void setResult(string $Result) 设置响应详情
+ * @method float getRPS() 获取平均rps, 单位req/s
+ * @method void setRPS(float $RPS) 设置平均rps, 单位req/s
  */
 class RequestSummary extends AbstractModel
 {
@@ -108,6 +110,11 @@ class RequestSummary extends AbstractModel
     public $Result;
 
     /**
+     * @var float 平均rps, 单位req/s
+     */
+    public $RPS;
+
+    /**
      * @param string $Service 请求URL
      * @param string $Method 请求方法
      * @param integer $Count 请求次数
@@ -120,6 +127,7 @@ class RequestSummary extends AbstractModel
      * @param float $P99 请求p99耗时，单位秒
      * @param string $Status 响应状态码
      * @param string $Result 响应详情
+     * @param float $RPS 平均rps, 单位req/s
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class RequestSummary extends AbstractModel
 
         if (array_key_exists("Result",$param) and $param["Result"] !== null) {
             $this->Result = $param["Result"];
+        }
+
+        if (array_key_exists("RPS",$param) and $param["RPS"] !== null) {
+            $this->RPS = $param["RPS"];
         }
     }
 }

@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTaskDescription() 获取任务描述
  * @method void setTaskDescription(string $TaskDescription) 设置任务描述
  * @method string getTaskTag() 获取任务标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskTag(string $TaskTag) 设置任务标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTaskStatus() 获取任务状态(1001 -- 未开始   1002 -- 进行中  1003 -- 暂停中   1004 -- 任务结束)
  * @method void setTaskStatus(integer $TaskStatus) 设置任务状态(1001 -- 未开始   1002 -- 进行中  1003 -- 暂停中   1004 -- 任务结束)
  * @method string getTaskCreateTime() 获取任务创建时间
@@ -37,33 +35,23 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTaskUpdateTime() 获取任务更新时间
  * @method void setTaskUpdateTime(string $TaskUpdateTime) 设置任务更新时间
  * @method integer getTaskPreCheckStatus() 获取0--未开始，1--进行中，2--已完成
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskPreCheckStatus(integer $TaskPreCheckStatus) 设置0--未开始，1--进行中，2--已完成
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getTaskPreCheckSuccess() 获取环境检查是否通过
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskPreCheckSuccess(boolean $TaskPreCheckSuccess) 设置环境检查是否通过
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTaskExpect() 获取演练是否符合预期 1-符合预期 2-不符合预期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskExpect(integer $TaskExpect) 设置演练是否符合预期 1-符合预期 2-不符合预期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApplicationId() 获取关联应用ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationId(string $ApplicationId) 设置关联应用ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApplicationName() 获取关联应用名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationName(string $ApplicationName) 设置关联应用名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVerifyId() 获取验证项ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVerifyId(integer $VerifyId) 设置验证项ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTaskStatusType() 获取状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskStatusType(integer $TaskStatusType) 设置状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getArchId() 获取架构ID
+ * @method void setArchId(string $ArchId) 设置架构ID
+ * @method string getArchName() 获取架构名称
+ * @method void setArchName(string $ArchName) 设置架构名称
  */
 class TaskListItem extends AbstractModel
 {
@@ -84,7 +72,6 @@ class TaskListItem extends AbstractModel
 
     /**
      * @var string 任务标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskTag;
 
@@ -105,69 +92,66 @@ class TaskListItem extends AbstractModel
 
     /**
      * @var integer 0--未开始，1--进行中，2--已完成
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskPreCheckStatus;
 
     /**
      * @var boolean 环境检查是否通过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskPreCheckSuccess;
 
     /**
      * @var integer 演练是否符合预期 1-符合预期 2-不符合预期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskExpect;
 
     /**
      * @var string 关联应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationId;
 
     /**
      * @var string 关联应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationName;
 
     /**
      * @var integer 验证项ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VerifyId;
 
     /**
      * @var integer 状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskStatusType;
+
+    /**
+     * @var string 架构ID
+     */
+    public $ArchId;
+
+    /**
+     * @var string 架构名称
+     */
+    public $ArchName;
 
     /**
      * @param integer $TaskId 任务ID
      * @param string $TaskTitle 任务标题
      * @param string $TaskDescription 任务描述
      * @param string $TaskTag 任务标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TaskStatus 任务状态(1001 -- 未开始   1002 -- 进行中  1003 -- 暂停中   1004 -- 任务结束)
      * @param string $TaskCreateTime 任务创建时间
      * @param string $TaskUpdateTime 任务更新时间
      * @param integer $TaskPreCheckStatus 0--未开始，1--进行中，2--已完成
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $TaskPreCheckSuccess 环境检查是否通过
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TaskExpect 演练是否符合预期 1-符合预期 2-不符合预期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationId 关联应用ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationName 关联应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VerifyId 验证项ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TaskStatusType 状态类型: 0 -- 无状态，1 -- 成功，2-- 失败，3--终止
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ArchId 架构ID
+     * @param string $ArchName 架构名称
      */
     function __construct()
     {
@@ -236,6 +220,14 @@ class TaskListItem extends AbstractModel
 
         if (array_key_exists("TaskStatusType",$param) and $param["TaskStatusType"] !== null) {
             $this->TaskStatusType = $param["TaskStatusType"];
+        }
+
+        if (array_key_exists("ArchId",$param) and $param["ArchId"] !== null) {
+            $this->ArchId = $param["ArchId"];
+        }
+
+        if (array_key_exists("ArchName",$param) and $param["ArchName"] !== null) {
+            $this->ArchName = $param["ArchName"];
         }
     }
 }

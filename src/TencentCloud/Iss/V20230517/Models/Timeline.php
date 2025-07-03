@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 时间片段结构体
  *
  * @method integer getBegin() 获取分片起始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBegin(integer $Begin) 设置分片起始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEnd() 获取分片结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnd(integer $End) 设置分片结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Timeline extends AbstractModel
 {
     /**
      * @var integer 分片起始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Begin;
 
     /**
      * @var integer 分片结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $End;
 
     /**
      * @param integer $Begin 分片起始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $End 分片结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

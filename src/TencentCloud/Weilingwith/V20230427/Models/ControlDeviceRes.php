@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 设备控制结果
  *
  * @method string getWID() 获取设备Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWID(string $WID) 设置设备Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCode() 获取指令接受, 0表示成功
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCode(integer $Code) 设置指令接受, 0表示成功
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResult() 获取控制结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResult(string $Result) 设置控制结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSeq() 获取批量大于1时，可用此seq进行链路追踪
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSeq(string $Seq) 设置批量大于1时，可用此seq进行链路追踪
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ControlDeviceRes extends AbstractModel
 {
     /**
      * @var string 设备Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WID;
 
     /**
      * @var integer 指令接受, 0表示成功
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Code;
 
     /**
      * @var string 控制结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Result;
 
     /**
      * @var string 批量大于1时，可用此seq进行链路追踪
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Seq;
 
     /**
      * @param string $WID 设备Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Code 指令接受, 0表示成功
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Result 控制结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Seq 批量大于1时，可用此seq进行链路追踪
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

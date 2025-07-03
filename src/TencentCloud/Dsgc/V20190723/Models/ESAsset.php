@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * es的资产统计结果
  *
  * @method integer getIndexNums() 获取索引总数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIndexNums(integer $IndexNums) 设置索引总数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSensitiveIndexNums() 获取敏感索引的数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSensitiveIndexNums(integer $SensitiveIndexNums) 设置敏感索引的数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFieldNums() 获取字段数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFieldNums(integer $FieldNums) 设置字段数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSensitiveFieldNums() 获取敏感的字段数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSensitiveFieldNums(integer $SensitiveFieldNums) 设置敏感的字段数量
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ESAsset extends AbstractModel
 {
     /**
      * @var integer 索引总数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IndexNums;
 
     /**
      * @var integer 敏感索引的数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SensitiveIndexNums;
 
     /**
      * @var integer 字段数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FieldNums;
 
     /**
      * @var integer 敏感的字段数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SensitiveFieldNums;
 
     /**
      * @param integer $IndexNums 索引总数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SensitiveIndexNums 敏感索引的数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FieldNums 字段数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SensitiveFieldNums 敏感的字段数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

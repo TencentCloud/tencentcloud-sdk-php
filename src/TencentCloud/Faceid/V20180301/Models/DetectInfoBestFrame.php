@@ -18,7 +18,7 @@ namespace TencentCloud\Faceid\V20180301\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 核身最佳帧信息
+ * 核身最佳帧信息。
  *
  * @method string getBestFrame() 获取活体比对最佳帧Base64编码。
 注意：此字段可能返回 null，表示取不到有效值。

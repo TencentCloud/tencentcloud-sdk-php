@@ -97,17 +97,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClustersVersion(string $ClustersVersion) 设置集群版本
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDisasterRecoveryType() 获取集群容灾类型，如SINGLE-ZONE，DISASTER-RECOVERY，MUTUAL-DISASTER-RECOVERY
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDisasterRecoveryType(string $DisasterRecoveryType) 设置集群容灾类型，如SINGLE-ZONE，DISASTER-RECOVERY，MUTUAL-DISASTER-RECOVERY
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEgress() 获取网络出口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEgress(string $Egress) 设置网络出口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIPVersion() 获取IP版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIPVersion(string $IPVersion) 设置IP版本
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTag() 获取标签信息
+ * @method void setTag(array $Tag) 设置标签信息
  */
 class Cluster extends AbstractModel
 {
@@ -239,21 +235,23 @@ class Cluster extends AbstractModel
 
     /**
      * @var string 集群容灾类型，如SINGLE-ZONE，DISASTER-RECOVERY，MUTUAL-DISASTER-RECOVERY
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DisasterRecoveryType;
 
     /**
      * @var string 网络出口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Egress;
 
     /**
      * @var string IP版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IPVersion;
+
+    /**
+     * @var array 标签信息
+     */
+    public $Tag;
 
     /**
      * @param string $ClusterId 集群唯一ID
@@ -295,11 +293,9 @@ class Cluster extends AbstractModel
      * @param string $ClustersVersion 集群版本
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DisasterRecoveryType 集群容灾类型，如SINGLE-ZONE，DISASTER-RECOVERY，MUTUAL-DISASTER-RECOVERY
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Egress 网络出口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IPVersion IP版本
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Tag 标签信息
      */
     function __construct()
     {
@@ -413,6 +409,15 @@ class Cluster extends AbstractModel
 
         if (array_key_exists("IPVersion",$param) and $param["IPVersion"] !== null) {
             $this->IPVersion = $param["IPVersion"];
+        }
+
+        if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
+            $this->Tag = [];
+            foreach ($param["Tag"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->Tag, $obj);
+            }
         }
     }
 }

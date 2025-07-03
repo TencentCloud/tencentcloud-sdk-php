@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * DescribeUsedIpAddress返回参数结构体
  *
  * @method array getIpAddressStates() 获取占用ip地址的资源信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpAddressStates(array $IpAddressStates) 设置占用ip地址的资源信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取返回占用资源的个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置返回占用资源的个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,13 +31,11 @@ class DescribeUsedIpAddressResponse extends AbstractModel
 {
     /**
      * @var array 占用ip地址的资源信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IpAddressStates;
 
     /**
      * @var integer 返回占用资源的个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
@@ -52,9 +46,7 @@ class DescribeUsedIpAddressResponse extends AbstractModel
 
     /**
      * @param array $IpAddressStates 占用ip地址的资源信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 返回占用资源的个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

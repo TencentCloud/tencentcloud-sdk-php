@@ -28,8 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAddressTemplateIdSet(array $AddressTemplateIdSet) 设置IP地址模板ID。
  * @method string getCreatedTime() 获取创建时间。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
+ * @method string getUpdatedTime() 获取最后更新时间。
+ * @method void setUpdatedTime(string $UpdatedTime) 设置最后更新时间。
  * @method array getAddressTemplateSet() 获取IP地址模板实例。
  * @method void setAddressTemplateSet(array $AddressTemplateSet) 设置IP地址模板实例。
+ * @method array getTagSet() 获取标签键值对。	
+ * @method void setTagSet(array $TagSet) 设置标签键值对。	
  */
 class AddressTemplateGroup extends AbstractModel
 {
@@ -54,16 +58,28 @@ class AddressTemplateGroup extends AbstractModel
     public $CreatedTime;
 
     /**
+     * @var string 最后更新时间。
+     */
+    public $UpdatedTime;
+
+    /**
      * @var array IP地址模板实例。
      */
     public $AddressTemplateSet;
+
+    /**
+     * @var array 标签键值对。	
+     */
+    public $TagSet;
 
     /**
      * @param string $AddressTemplateGroupName IP地址模板集合名称。
      * @param string $AddressTemplateGroupId IP地址模板集合实例ID，例如：ipmg-dih8xdbq。
      * @param array $AddressTemplateIdSet IP地址模板ID。
      * @param string $CreatedTime 创建时间。
+     * @param string $UpdatedTime 最后更新时间。
      * @param array $AddressTemplateSet IP地址模板实例。
+     * @param array $TagSet 标签键值对。	
      */
     function __construct()
     {
@@ -94,12 +110,25 @@ class AddressTemplateGroup extends AbstractModel
             $this->CreatedTime = $param["CreatedTime"];
         }
 
+        if (array_key_exists("UpdatedTime",$param) and $param["UpdatedTime"] !== null) {
+            $this->UpdatedTime = $param["UpdatedTime"];
+        }
+
         if (array_key_exists("AddressTemplateSet",$param) and $param["AddressTemplateSet"] !== null) {
             $this->AddressTemplateSet = [];
             foreach ($param["AddressTemplateSet"] as $key => $value){
                 $obj = new AddressTemplateItem();
                 $obj->deserialize($value);
                 array_push($this->AddressTemplateSet, $obj);
+            }
+        }
+
+        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+            $this->TagSet = [];
+            foreach ($param["TagSet"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagSet, $obj);
             }
         }
     }

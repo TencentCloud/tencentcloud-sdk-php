@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置查询结束时间
  * @method integer getPeriod() 获取查询时间粒度，单位秒可选值：60、3600、86400
  * @method void setPeriod(integer $Period) 设置查询时间粒度，单位秒可选值：60、3600、86400
- * @method array getMetricDimensions() 获取查询指标维度
- * @method void setMetricDimensions(array $MetricDimensions) 设置查询指标维度
- * @method array getMetrics() 获取查询指标名
- * @method void setMetrics(array $Metrics) 设置查询指标名
+ * @method array getMetricDimensions() 获取查询指标维度，不能为空，支持 ServiceName, OperationName, PeerServiceName, PeerOperationName
+ * @method void setMetricDimensions(array $MetricDimensions) 设置查询指标维度，不能为空，支持 ServiceName, OperationName, PeerServiceName, PeerOperationName
+ * @method array getMetrics() 获取查询指标名，不能为空.
+ * @method void setMetrics(array $Metrics) 设置查询指标名，不能为空.
  * @method string getKind() 获取视图视角。可选值：SERVER, CLIENT。默认为SERVER
  * @method void setKind(string $Kind) 设置视图视角。可选值：SERVER, CLIENT。默认为SERVER
  * @method string getType() 获取类型。组件监控使用，可选值：SQL 或者 NoSQL
@@ -53,12 +53,12 @@ class DescribeInvocationMetricDataCurveRequest extends AbstractModel
     public $Period;
 
     /**
-     * @var array 查询指标维度
+     * @var array 查询指标维度，不能为空，支持 ServiceName, OperationName, PeerServiceName, PeerOperationName
      */
     public $MetricDimensions;
 
     /**
-     * @var array 查询指标名
+     * @var array 查询指标名，不能为空.
      */
     public $Metrics;
 
@@ -76,8 +76,8 @@ class DescribeInvocationMetricDataCurveRequest extends AbstractModel
      * @param string $StartTime 查询开始时间
      * @param string $EndTime 查询结束时间
      * @param integer $Period 查询时间粒度，单位秒可选值：60、3600、86400
-     * @param array $MetricDimensions 查询指标维度
-     * @param array $Metrics 查询指标名
+     * @param array $MetricDimensions 查询指标维度，不能为空，支持 ServiceName, OperationName, PeerServiceName, PeerOperationName
+     * @param array $Metrics 查询指标名，不能为空.
      * @param string $Kind 视图视角。可选值：SERVER, CLIENT。默认为SERVER
      * @param string $Type 类型。组件监控使用，可选值：SQL 或者 NoSQL
      */

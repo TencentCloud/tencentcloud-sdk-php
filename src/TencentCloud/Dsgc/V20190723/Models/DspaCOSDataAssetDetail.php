@@ -45,41 +45,25 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getRuleId() 获取规则id
  * @method void setRuleId(integer $RuleId) 设置规则id
  * @method string getResourceRegion() 获取资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceRegion(string $ResourceRegion) 设置资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCategoryId() 获取分类ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCategoryId(integer $CategoryId) 设置分类ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLevelId() 获取分级ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevelId(integer $LevelId) 设置分级ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFileResultId() 获取文件扫描结果ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileResultId(integer $FileResultId) 设置文件扫描结果ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDataSourceName() 获取数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataSourceName(string $DataSourceName) 设置数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCategoryFullPath() 获取分类路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCategoryFullPath(string $CategoryFullPath) 设置分类路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIdentifyType() 获取0-系统识别
 1-人工识别
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIdentifyType(integer $IdentifyType) 设置0-系统识别
 1-人工识别
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCheckStatus() 获取0-系统识别
 1-人工识别
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCheckStatus(integer $CheckStatus) 设置0-系统识别
 1-人工识别
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DspaCOSDataAssetDetail extends AbstractModel
 {
@@ -145,51 +129,43 @@ class DspaCOSDataAssetDetail extends AbstractModel
 
     /**
      * @var string 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceRegion;
 
     /**
      * @var integer 分类ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CategoryId;
 
     /**
      * @var integer 分级ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LevelId;
 
     /**
      * @var integer 文件扫描结果ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileResultId;
 
     /**
      * @var string 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataSourceName;
 
     /**
      * @var string 分类路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CategoryFullPath;
 
     /**
      * @var integer 0-系统识别
 1-人工识别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IdentifyType;
 
     /**
      * @var integer 0-系统识别
 1-人工识别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CheckStatus;
 
@@ -207,23 +183,15 @@ class DspaCOSDataAssetDetail extends AbstractModel
      * @param string $DataSourceId 数据源ID
      * @param integer $RuleId 规则id
      * @param string $ResourceRegion 资源所在地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CategoryId 分类ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LevelId 分级ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FileResultId 文件扫描结果ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataSourceName 数据源名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CategoryFullPath 分类路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IdentifyType 0-系统识别
 1-人工识别
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CheckStatus 0-系统识别
 1-人工识别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

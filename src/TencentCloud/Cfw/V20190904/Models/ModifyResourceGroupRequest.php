@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyResourceGroup请求参数结构体
  *
- * @method string getGroupId() 获取组id
- * @method void setGroupId(string $GroupId) 设置组id
+ * @method string getGroupId() 获取资产组id
+ * @method void setGroupId(string $GroupId) 设置资产组id
  * @method string getGroupName() 获取组名称
  * @method void setGroupName(string $GroupName) 设置组名称
- * @method string getParentId() 获取上级组id
- * @method void setParentId(string $ParentId) 设置上级组id
+ * @method string getParentId() 获取上级组资产组id
+ * @method void setParentId(string $ParentId) 设置上级组资产组id
  */
 class ModifyResourceGroupRequest extends AbstractModel
 {
     /**
-     * @var string 组id
+     * @var string 资产组id
      */
     public $GroupId;
 
@@ -40,14 +40,14 @@ class ModifyResourceGroupRequest extends AbstractModel
     public $GroupName;
 
     /**
-     * @var string 上级组id
+     * @var string 上级组资产组id
      */
     public $ParentId;
 
     /**
-     * @param string $GroupId 组id
+     * @param string $GroupId 资产组id
      * @param string $GroupName 组名称
-     * @param string $ParentId 上级组id
+     * @param string $ParentId 上级组资产组id
      */
     function __construct()
     {

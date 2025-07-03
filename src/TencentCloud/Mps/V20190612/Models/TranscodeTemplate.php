@@ -68,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnhanceConfig(EnhanceConfig $EnhanceConfig) 设置音视频增强配置。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAliasName() 获取转码模板别名称。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAliasName(string $AliasName) 设置转码模板别名称。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TranscodeTemplate extends AbstractModel
 {
@@ -152,6 +156,12 @@ class TranscodeTemplate extends AbstractModel
     public $EnhanceConfig;
 
     /**
+     * @var string 转码模板别名称。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AliasName;
+
+    /**
      * @param string $Definition 转码模板唯一标识。
      * @param string $Container 封装格式，取值：mp4、flv、hls、mp3、flac、ogg。
      * @param string $Name 转码模板名称。
@@ -175,6 +185,8 @@ class TranscodeTemplate extends AbstractModel
      * @param string $CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
      * @param string $UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
      * @param EnhanceConfig $EnhanceConfig 音视频增强配置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AliasName 转码模板别名称。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -248,6 +260,10 @@ class TranscodeTemplate extends AbstractModel
         if (array_key_exists("EnhanceConfig",$param) and $param["EnhanceConfig"] !== null) {
             $this->EnhanceConfig = new EnhanceConfig();
             $this->EnhanceConfig->deserialize($param["EnhanceConfig"]);
+        }
+
+        if (array_key_exists("AliasName",$param) and $param["AliasName"] !== null) {
+            $this->AliasName = $param["AliasName"];
         }
     }
 }

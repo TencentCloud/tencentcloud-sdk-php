@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 创建应用，创建仓库参数
  *
  * @method string getEnterpriseInstanceName() 获取企业版实例名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnterpriseInstanceName(string $EnterpriseInstanceName) 设置企业版实例名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEnterpriseInstanceChargeType() 获取企业版收费类型  0 按量收费   1 包年包月
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnterpriseInstanceChargeType(integer $EnterpriseInstanceChargeType) 设置企业版收费类型  0 按量收费   1 包年包月
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEnterpriseInstanceType() 获取企业版规格：basic-基础班 ，standard-标准版，premium-高级版
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnterpriseInstanceType(string $EnterpriseInstanceType) 设置企业版规格：basic-基础班 ，standard-标准版，premium-高级版
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class UseDefaultRepoParameters extends AbstractModel
 {
     /**
      * @var string 企业版实例名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnterpriseInstanceName;
 
     /**
      * @var integer 企业版收费类型  0 按量收费   1 包年包月
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnterpriseInstanceChargeType;
 
     /**
      * @var string 企业版规格：basic-基础班 ，standard-标准版，premium-高级版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnterpriseInstanceType;
 
     /**
      * @param string $EnterpriseInstanceName 企业版实例名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EnterpriseInstanceChargeType 企业版收费类型  0 按量收费   1 包年包月
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EnterpriseInstanceType 企业版规格：basic-基础班 ，standard-标准版，premium-高级版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

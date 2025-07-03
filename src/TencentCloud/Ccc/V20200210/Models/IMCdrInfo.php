@@ -53,21 +53,17 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTimestamp() 获取服务时间戳
  * @method void setTimestamp(integer $Timestamp) 设置服务时间戳
  * @method string getSessionId() 获取会话ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSessionId(string $SessionId) 设置会话ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSkillGroupId() 获取技能组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSkillGroupId(string $SkillGroupId) 设置技能组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSkillGroupName() 获取技能组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSkillGroupName(string $SkillGroupName) 设置技能组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method IMSatisfaction getSatisfaction() 获取满意度
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSatisfaction(IMSatisfaction $Satisfaction) 设置满意度
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getClientUserId() 获取用户ID
+ * @method void setClientUserId(string $ClientUserId) 设置用户ID
  */
 class IMCdrInfo extends AbstractModel
 {
@@ -117,19 +113,16 @@ class IMCdrInfo extends AbstractModel
 
     /**
      * @var string 会话ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SessionId;
 
     /**
      * @var string 技能组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SkillGroupId;
 
     /**
      * @var string 技能组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SkillGroupName;
 
@@ -138,6 +131,11 @@ class IMCdrInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Satisfaction;
+
+    /**
+     * @var string 用户ID
+     */
+    public $ClientUserId;
 
     /**
      * @param string $Id 服务记录ID
@@ -157,13 +155,11 @@ class IMCdrInfo extends AbstractModel
      * @param string $StaffId 客服ID
      * @param integer $Timestamp 服务时间戳
      * @param string $SessionId 会话ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SkillGroupId 技能组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SkillGroupName 技能组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IMSatisfaction $Satisfaction 满意度
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ClientUserId 用户ID
      */
     function __construct()
     {
@@ -221,6 +217,10 @@ class IMCdrInfo extends AbstractModel
         if (array_key_exists("Satisfaction",$param) and $param["Satisfaction"] !== null) {
             $this->Satisfaction = new IMSatisfaction();
             $this->Satisfaction->deserialize($param["Satisfaction"]);
+        }
+
+        if (array_key_exists("ClientUserId",$param) and $param["ClientUserId"] !== null) {
+            $this->ClientUserId = $param["ClientUserId"];
         }
     }
 }

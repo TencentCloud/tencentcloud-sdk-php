@@ -51,25 +51,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCpuLoad() 获取Cpu使用率百分比
  * @method void setCpuLoad(string $CpuLoad) 设置Cpu使用率百分比
  * @method array getTag() 获取标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTag(array $Tag) 设置标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsNew() 获取是否新增[0:否|1:是]
  * @method void setIsNew(integer $IsNew) 设置是否新增[0:否|1:是]
  * @method string getFirstTime() 获取首次采集时间
  * @method void setFirstTime(string $FirstTime) 设置首次采集时间
  * @method MachineExtraInfo getMachineExtraInfo() 获取附加信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置附加信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCpuLoadNum() 获取cpu负载读数（仅linux系统有效）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCpuLoadNum(string $CpuLoadNum) 设置cpu负载读数（仅linux系统有效）
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssetMachineBaseInfo extends AbstractModel
 {
@@ -150,13 +142,11 @@ class AssetMachineBaseInfo extends AbstractModel
 
     /**
      * @var array 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tag;
 
     /**
      * @var string 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
@@ -172,13 +162,11 @@ class AssetMachineBaseInfo extends AbstractModel
 
     /**
      * @var MachineExtraInfo 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineExtraInfo;
 
     /**
      * @var string cpu负载读数（仅linux系统有效）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CpuLoadNum;
 
@@ -199,15 +187,11 @@ class AssetMachineBaseInfo extends AbstractModel
      * @param integer $CpuSize Cpu数量
      * @param string $CpuLoad Cpu使用率百分比
      * @param array $Tag 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsNew 是否新增[0:否|1:是]
      * @param string $FirstTime 首次采集时间
      * @param MachineExtraInfo $MachineExtraInfo 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CpuLoadNum cpu负载读数（仅linux系统有效）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

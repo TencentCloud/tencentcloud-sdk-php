@@ -43,9 +43,7 @@ Attachments: 关联的用户数
 ServiceType: 策略关联的产品
 IsAttached: 当需要查询标记实体是否已经关联策略时不为null。0表示未关联策略，1表示已关联策略
  * @method array getServiceTypeList() 获取保留字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceTypeList(array $ServiceTypeList) 设置保留字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -72,7 +70,6 @@ IsAttached: 当需要查询标记实体是否已经关联策略时不为null。0
 
     /**
      * @var array 保留字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceTypeList;
 
@@ -94,7 +91,6 @@ Attachments: 关联的用户数
 ServiceType: 策略关联的产品
 IsAttached: 当需要查询标记实体是否已经关联策略时不为null。0表示未关联策略，1表示已关联策略
      * @param array $ServiceTypeList 保留字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

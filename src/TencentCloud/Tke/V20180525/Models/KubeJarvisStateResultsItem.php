@@ -21,49 +21,35 @@ use TencentCloud\Common\AbstractModel;
  * 集群巡检诊断结果详情信息
  *
  * @method string getLevel() 获取诊断结果级别
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevel(string $Level) 设置诊断结果级别
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getObjName() 获取诊断对象名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setObjName(string $ObjName) 设置诊断对象名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getObjInfo() 获取诊断对象信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setObjInfo(array $ObjInfo) 设置诊断对象信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTitle() 获取诊断项标题
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTitle(string $Title) 设置诊断项标题
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDesc() 获取诊断项描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDesc(string $Desc) 设置诊断项描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProposal() 获取诊断建议
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProposal(string $Proposal) 设置诊断建议
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProposalDocUrl() 获取诊断建议文档链接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProposalDocUrl(string $ProposalDocUrl) 设置诊断建议文档链接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProposalDocName() 获取诊断建议文档名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProposalDocName(string $ProposalDocName) 设置诊断建议文档名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class KubeJarvisStateResultsItem extends AbstractModel
 {
     /**
      * @var string 诊断结果级别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Level;
 
     /**
      * @var string 诊断对象名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ObjName;
 
@@ -75,13 +61,11 @@ class KubeJarvisStateResultsItem extends AbstractModel
 
     /**
      * @var string 诊断项标题
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Title;
 
     /**
      * @var string 诊断项描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Desc;
 
@@ -93,33 +77,25 @@ class KubeJarvisStateResultsItem extends AbstractModel
 
     /**
      * @var string 诊断建议文档链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProposalDocUrl;
 
     /**
      * @var string 诊断建议文档名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProposalDocName;
 
     /**
      * @param string $Level 诊断结果级别
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ObjName 诊断对象名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ObjInfo 诊断对象信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Title 诊断项标题
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Desc 诊断项描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Proposal 诊断建议
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProposalDocUrl 诊断建议文档链接
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProposalDocName 诊断建议文档名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

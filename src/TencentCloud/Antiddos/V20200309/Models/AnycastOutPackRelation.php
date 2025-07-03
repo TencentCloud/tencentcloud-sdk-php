@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * Anycast转外套餐详情
  *
  * @method integer getNormalBandwidth() 获取业务带宽(单位M)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNormalBandwidth(integer $NormalBandwidth) 设置业务带宽(单位M)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getForwardRulesLimit() 获取转发规则数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setForwardRulesLimit(integer $ForwardRulesLimit) 设置转发规则数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAutoRenewFlag() 获取自动续费标记
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标记
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCurDeadline() 获取到期时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCurDeadline(string $CurDeadline) 设置到期时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AnycastOutPackRelation extends AbstractModel
 {
     /**
      * @var integer 业务带宽(单位M)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NormalBandwidth;
 
     /**
      * @var integer 转发规则数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ForwardRulesLimit;
 
     /**
      * @var integer 自动续费标记
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoRenewFlag;
 
     /**
      * @var string 到期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CurDeadline;
 
     /**
      * @param integer $NormalBandwidth 业务带宽(单位M)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ForwardRulesLimit 转发规则数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AutoRenewFlag 自动续费标记
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CurDeadline 到期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

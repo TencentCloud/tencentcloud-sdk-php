@@ -18,7 +18,7 @@ namespace TencentCloud\Tke\V20220501\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 自动扩所容的节点
+ * 自动扩缩容的节点
  *
  * @method integer getJoining() 获取正在加入中的节点数量
  * @method void setJoining(integer $Joining) 设置正在加入中的节点数量

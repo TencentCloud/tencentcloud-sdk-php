@@ -19,37 +19,27 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * cloudrun安全特性能力
-
-
  *
  * @method array getAdd() 获取启用安全能力项列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdd(array $Add) 设置启用安全能力项列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDrop() 获取禁用安全能力向列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDrop(array $Drop) 设置禁用安全能力向列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudBaseCapabilities extends AbstractModel
 {
     /**
      * @var array 启用安全能力项列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Add;
 
     /**
      * @var array 禁用安全能力向列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Drop;
 
     /**
      * @param array $Add 启用安全能力项列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Drop 禁用安全能力向列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

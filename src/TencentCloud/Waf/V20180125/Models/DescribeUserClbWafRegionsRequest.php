@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUserClbWafRegions请求参数结构体
  *
-
+ * @method string getAlbType() 获取流量来源，不填默认clb。clb：负载均衡器，tsegw：云原生API网关，scf：云函数，apisix：腾讯云上其他网关
+ * @method void setAlbType(string $AlbType) 设置流量来源，不填默认clb。clb：负载均衡器，tsegw：云原生API网关，scf：云函数，apisix：腾讯云上其他网关
  */
 class DescribeUserClbWafRegionsRequest extends AbstractModel
 {
-
+    /**
+     * @var string 流量来源，不填默认clb。clb：负载均衡器，tsegw：云原生API网关，scf：云函数，apisix：腾讯云上其他网关
+     */
+    public $AlbType;
 
     /**
-
+     * @param string $AlbType 流量来源，不填默认clb。clb：负载均衡器，tsegw：云原生API网关，scf：云函数，apisix：腾讯云上其他网关
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class DescribeUserClbWafRegionsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("AlbType",$param) and $param["AlbType"] !== null) {
+            $this->AlbType = $param["AlbType"];
+        }
     }
 }

@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPhase() 获取虚拟节点状态
  * @method void setPhase(string $Phase) 设置虚拟节点状态
  * @method string getCreatedTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VirtualNode extends AbstractModel
 {
@@ -50,7 +48,6 @@ class VirtualNode extends AbstractModel
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedTime;
 
@@ -59,7 +56,6 @@ class VirtualNode extends AbstractModel
      * @param string $SubnetId 虚拟节点所属子网
      * @param string $Phase 虚拟节点状态
      * @param string $CreatedTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

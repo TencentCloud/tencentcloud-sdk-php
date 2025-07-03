@@ -54,10 +54,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置标签
  * @method string getFilterInstanceType() 获取实例类型过滤，1-独享实例，2-主实例，3-灾备实例，多个按逗号分隔
  * @method void setFilterInstanceType(string $FilterInstanceType) 设置实例类型过滤，1-独享实例，2-主实例，3-灾备实例，多个按逗号分隔
- * @method array getStatus() 获取按实例状态筛选
- * @method void setStatus(array $Status) 设置按实例状态筛选
- * @method array getExcludeStatus() 获取排除实例状态
- * @method void setExcludeStatus(array $ExcludeStatus) 设置排除实例状态
+ * @method array getStatus() 获取按实例状态筛选。状态值 -2：已删除； -1：已隔离；0：创建中；1：流程处理中；2：运行中
+ * @method void setStatus(array $Status) 设置按实例状态筛选。状态值 -2：已删除； -1：已隔离；0：创建中；1：流程处理中；2：运行中
+ * @method array getExcludeStatus() 获取排除实例状态。状态值 -2：已删除； -1：已隔离；0：创建中；1：流程处理中；2：运行中
+ * @method void setExcludeStatus(array $ExcludeStatus) 设置排除实例状态。状态值 -2：已删除； -1：已隔离；0：创建中；1：流程处理中；2：运行中
  */
 class DescribeDCDBInstancesRequest extends AbstractModel
 {
@@ -147,12 +147,12 @@ class DescribeDCDBInstancesRequest extends AbstractModel
     public $FilterInstanceType;
 
     /**
-     * @var array 按实例状态筛选
+     * @var array 按实例状态筛选。状态值 -2：已删除； -1：已隔离；0：创建中；1：流程处理中；2：运行中
      */
     public $Status;
 
     /**
-     * @var array 排除实例状态
+     * @var array 排除实例状态。状态值 -2：已删除； -1：已隔离；0：创建中；1：流程处理中；2：运行中
      */
     public $ExcludeStatus;
 
@@ -174,8 +174,8 @@ class DescribeDCDBInstancesRequest extends AbstractModel
      * @param array $TagKeys 按标签key查询
      * @param array $Tags 标签
      * @param string $FilterInstanceType 实例类型过滤，1-独享实例，2-主实例，3-灾备实例，多个按逗号分隔
-     * @param array $Status 按实例状态筛选
-     * @param array $ExcludeStatus 排除实例状态
+     * @param array $Status 按实例状态筛选。状态值 -2：已删除； -1：已隔离；0：创建中；1：流程处理中；2：运行中
+     * @param array $ExcludeStatus 排除实例状态。状态值 -2：已删除； -1：已隔离；0：创建中；1：流程处理中；2：运行中
      */
     function __construct()
     {

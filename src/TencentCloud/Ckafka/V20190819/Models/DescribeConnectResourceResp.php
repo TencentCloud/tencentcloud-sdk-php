@@ -21,37 +21,21 @@ use TencentCloud\Common\AbstractModel;
  * 查询连接源具体数据的返参
  *
  * @method string getResourceId() 获取连接源的Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceId(string $ResourceId) 设置连接源的Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceName() 获取连接源名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceName(string $ResourceName) 设置连接源名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取连接源描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置连接源描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取连接源类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置连接源类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取连接源的状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置连接源的状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取连接源的创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置连接源的创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getErrorMessage() 获取连接源的异常信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorMessage(string $ErrorMessage) 设置连接源的异常信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCurrentStep() 获取连接源的当前所处步骤
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCurrentStep(string $CurrentStep) 设置连接源的当前所处步骤
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getStepList() 获取步骤列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStepList(array $StepList) 设置步骤列表
@@ -109,49 +93,41 @@ class DescribeConnectResourceResp extends AbstractModel
 {
     /**
      * @var string 连接源的Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceId;
 
     /**
      * @var string 连接源名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceName;
 
     /**
      * @var string 连接源描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var string 连接源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var integer 连接源的状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 连接源的创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 连接源的异常信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrorMessage;
 
     /**
      * @var string 连接源的当前所处步骤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CurrentStep;
 
@@ -235,21 +211,13 @@ class DescribeConnectResourceResp extends AbstractModel
 
     /**
      * @param string $ResourceId 连接源的Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceName 连接源名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 连接源描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 连接源类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 连接源的状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 连接源的创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrorMessage 连接源的异常信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CurrentStep 连接源的当前所处步骤
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $StepList 步骤列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MySQLConnectParam $MySQLConnectParam MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时返回

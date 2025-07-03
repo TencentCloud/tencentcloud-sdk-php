@@ -21,11 +21,15 @@ use TencentCloud\Common\AbstractModel;
  * TransferInDomainBatch请求参数结构体
  *
  * @method array getDomains() 获取转入的域名名称数组。
+一次提交不大于4000个
  * @method void setDomains(array $Domains) 设置转入的域名名称数组。
+一次提交不大于4000个
  * @method array getPassWords() 获取域名转移码数组。
  * @method void setPassWords(array $PassWords) 设置域名转移码数组。
- * @method string getTemplateId() 获取模板ID。
- * @method void setTemplateId(string $TemplateId) 设置模板ID。
+ * @method string getTemplateId() 获取模板ID。 
+可通过[DescribeTemplateList](https://cloud.tencent.com/document/api/242/48940)接口获取
+ * @method void setTemplateId(string $TemplateId) 设置模板ID。 
+可通过[DescribeTemplateList](https://cloud.tencent.com/document/api/242/48940)接口获取
  * @method integer getPayMode() 获取付费模式 0手动在线付费，1使用余额付费。
  * @method void setPayMode(integer $PayMode) 设置付费模式 0手动在线付费，1使用余额付费。
  * @method integer getAutoRenewFlag() 获取自动续费开关。有两个可选值：
@@ -55,6 +59,7 @@ class TransferInDomainBatchRequest extends AbstractModel
 {
     /**
      * @var array 转入的域名名称数组。
+一次提交不大于4000个
      */
     public $Domains;
 
@@ -64,7 +69,8 @@ class TransferInDomainBatchRequest extends AbstractModel
     public $PassWords;
 
     /**
-     * @var string 模板ID。
+     * @var string 模板ID。 
+可通过[DescribeTemplateList](https://cloud.tencent.com/document/api/242/48940)接口获取
      */
     public $TemplateId;
 
@@ -114,8 +120,10 @@ false：关闭60天内禁止转移注册商锁定
 
     /**
      * @param array $Domains 转入的域名名称数组。
+一次提交不大于4000个
      * @param array $PassWords 域名转移码数组。
-     * @param string $TemplateId 模板ID。
+     * @param string $TemplateId 模板ID。 
+可通过[DescribeTemplateList](https://cloud.tencent.com/document/api/242/48940)接口获取
      * @param integer $PayMode 付费模式 0手动在线付费，1使用余额付费。
      * @param integer $AutoRenewFlag 自动续费开关。有两个可选值：
 0 表示关闭，不自动续费（默认值）

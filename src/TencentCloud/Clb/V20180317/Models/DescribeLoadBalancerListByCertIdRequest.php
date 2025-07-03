@@ -20,18 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLoadBalancerListByCertId请求参数结构体
  *
- * @method array getCertIds() 获取服务端证书的ID，或客户端证书的ID
- * @method void setCertIds(array $CertIds) 设置服务端证书的ID，或客户端证书的ID
+ * @method array getCertIds() 获取服务端证书的ID，或客户端证书的ID。可以通过 [DescribeCertificate](https://cloud.tencent.com/document/api/400/41674) 接口查询。
+数组最大长度为20。
+ * @method void setCertIds(array $CertIds) 设置服务端证书的ID，或客户端证书的ID。可以通过 [DescribeCertificate](https://cloud.tencent.com/document/api/400/41674) 接口查询。
+数组最大长度为20。
  */
 class DescribeLoadBalancerListByCertIdRequest extends AbstractModel
 {
     /**
-     * @var array 服务端证书的ID，或客户端证书的ID
+     * @var array 服务端证书的ID，或客户端证书的ID。可以通过 [DescribeCertificate](https://cloud.tencent.com/document/api/400/41674) 接口查询。
+数组最大长度为20。
      */
     public $CertIds;
 
     /**
-     * @param array $CertIds 服务端证书的ID，或客户端证书的ID
+     * @param array $CertIds 服务端证书的ID，或客户端证书的ID。可以通过 [DescribeCertificate](https://cloud.tencent.com/document/api/400/41674) 接口查询。
+数组最大长度为20。
      */
     function __construct()
     {

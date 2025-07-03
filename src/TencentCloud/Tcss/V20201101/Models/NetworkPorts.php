@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 网络集群策略自定义规则端口
  *
  * @method string getProtocol() 获取网络策略协议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProtocol(string $Protocol) 设置网络策略协议
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPort() 获取网络策略策略端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPort(string $Port) 设置网络策略策略端口
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NetworkPorts extends AbstractModel
 {
     /**
      * @var string 网络策略协议
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Protocol;
 
     /**
      * @var string 网络策略策略端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Port;
 
     /**
      * @param string $Protocol 网络策略协议
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Port 网络策略策略端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

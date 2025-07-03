@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 体检报告-一般检测信息
  *
  * @method GeneralExaminationVitalSign getVitalSign() 获取生命体征
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVitalSign(GeneralExaminationVitalSign $VitalSign) 设置生命体征
-注意：此字段可能返回 null，表示取不到有效值。
  * @method GeneralExaminationOthers getOthers() 获取其他
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOthers(GeneralExaminationOthers $Others) 设置其他
-注意：此字段可能返回 null，表示取不到有效值。
  * @method GeneralExaminationBriefSummary getBriefSummary() 获取小结
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBriefSummary(GeneralExaminationBriefSummary $BriefSummary) 设置小结
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class GeneralExaminationBaseItem extends AbstractModel
 {
     /**
      * @var GeneralExaminationVitalSign 生命体征
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VitalSign;
 
     /**
      * @var GeneralExaminationOthers 其他
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Others;
 
     /**
      * @var GeneralExaminationBriefSummary 小结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BriefSummary;
 
     /**
      * @param GeneralExaminationVitalSign $VitalSign 生命体征
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GeneralExaminationOthers $Others 其他
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GeneralExaminationBriefSummary $BriefSummary 小结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

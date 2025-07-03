@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConnectResult(string $ConnectResult) 设置连接测试结果
  * @method string getDevelopmentParams() 获取开发环境数据源配置
  * @method void setDevelopmentParams(string $DevelopmentParams) 设置开发环境数据源配置
+ * @method string getProjectId() 获取新建数据源的项目ID
+ * @method void setProjectId(string $ProjectId) 设置新建数据源的项目ID
  */
 class CreateDataSourceRequest extends AbstractModel
 {
@@ -157,6 +159,11 @@ class CreateDataSourceRequest extends AbstractModel
     public $DevelopmentParams;
 
     /**
+     * @var string 新建数据源的项目ID
+     */
+    public $ProjectId;
+
+    /**
      * @param string $Name 数据源名称，在相同SpaceName下，数据源名称不能为空
      * @param string $Category 数据源类别：绑定引擎、绑定数据库
      * @param string $Type 数据源类型:枚举值
@@ -176,6 +183,7 @@ class CreateDataSourceRequest extends AbstractModel
      * @param string $COSRegion cos region
      * @param string $ConnectResult 连接测试结果
      * @param string $DevelopmentParams 开发环境数据源配置
+     * @param string $ProjectId 新建数据源的项目ID
      */
     function __construct()
     {
@@ -264,6 +272,10 @@ class CreateDataSourceRequest extends AbstractModel
 
         if (array_key_exists("DevelopmentParams",$param) and $param["DevelopmentParams"] !== null) {
             $this->DevelopmentParams = $param["DevelopmentParams"];
+        }
+
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
         }
     }
 }

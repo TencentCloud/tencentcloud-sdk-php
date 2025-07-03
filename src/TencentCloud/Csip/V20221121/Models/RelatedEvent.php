@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 相关攻击事件结构
  *
  * @method string getEventID() 获取事件ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEventID(string $EventID) 设置事件ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取事件描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置事件描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRelatedCount() 获取与事件关联的告警数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRelatedCount(integer $RelatedCount) 设置与事件关联的告警数量
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RelatedEvent extends AbstractModel
 {
     /**
      * @var string 事件ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventID;
 
     /**
      * @var string 事件描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var integer 与事件关联的告警数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RelatedCount;
 
     /**
      * @param string $EventID 事件ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 事件描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RelatedCount 与事件关联的告警数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

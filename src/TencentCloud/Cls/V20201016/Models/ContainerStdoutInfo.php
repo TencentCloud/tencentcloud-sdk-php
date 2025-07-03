@@ -23,13 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getAllContainers() 获取是否所有容器
  * @method void setAllContainers(boolean $AllContainers) 设置是否所有容器
  * @method string getContainer() 获取container为空表所有的，不为空采集指定的容器
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainer(string $Container) 设置container为空表所有的，不为空采集指定的容器
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNamespace() 获取namespace可以多个，用分隔号分割,例如A,B；为空或者没有这个字段，表示所有namespace
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespace(string $Namespace) 设置namespace可以多个，用分隔号分割,例如A,B；为空或者没有这个字段，表示所有namespace
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getIncludeLabels() 获取pod标签信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIncludeLabels(array $IncludeLabels) 设置pod标签信息
@@ -39,9 +35,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWorkLoads(array $WorkLoads) 设置工作负载信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExcludeNamespace() 获取需要排除的namespace可以多个，用分隔号分割,例如A,B
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExcludeNamespace(string $ExcludeNamespace) 设置需要排除的namespace可以多个，用分隔号分割,例如A,B
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getExcludeLabels() 获取需要排除的pod标签信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExcludeLabels(array $ExcludeLabels) 设置需要排除的pod标签信息
@@ -60,13 +54,11 @@ class ContainerStdoutInfo extends AbstractModel
 
     /**
      * @var string container为空表所有的，不为空采集指定的容器
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Container;
 
     /**
      * @var string namespace可以多个，用分隔号分割,例如A,B；为空或者没有这个字段，表示所有namespace
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Namespace;
 
@@ -84,7 +76,6 @@ class ContainerStdoutInfo extends AbstractModel
 
     /**
      * @var string 需要排除的namespace可以多个，用分隔号分割,例如A,B
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExcludeNamespace;
 
@@ -103,15 +94,12 @@ class ContainerStdoutInfo extends AbstractModel
     /**
      * @param boolean $AllContainers 是否所有容器
      * @param string $Container container为空表所有的，不为空采集指定的容器
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Namespace namespace可以多个，用分隔号分割,例如A,B；为空或者没有这个字段，表示所有namespace
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $IncludeLabels pod标签信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $WorkLoads 工作负载信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExcludeNamespace 需要排除的namespace可以多个，用分隔号分割,例如A,B
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ExcludeLabels 需要排除的pod标签信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CustomLabels metadata信息

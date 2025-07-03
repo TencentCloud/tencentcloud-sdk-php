@@ -41,7 +41,6 @@ use TencentCloud\Common\AbstractModel;
 第5个bit，支持精品BGP接入；
 第6个bit，支持三网接入；
 第7个bit，支持接入段Qos加速。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFeatureBitmap(integer $FeatureBitmap) 设置特性位图，每个bit位代表一种特性，其中：
 0，表示不支持该特性；
 1，表示支持该特性。
@@ -53,7 +52,6 @@ use TencentCloud\Common\AbstractModel;
 第5个bit，支持精品BGP接入；
 第6个bit，支持三网接入；
 第7个bit，支持接入段Qos加速。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method SupportFeature getSupportFeature() 获取接入区域支持的能力
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSupportFeature(SupportFeature $SupportFeature) 设置接入区域支持的能力
@@ -98,7 +96,6 @@ class RegionDetail extends AbstractModel
 第5个bit，支持精品BGP接入；
 第6个bit，支持三网接入；
 第7个bit，支持接入段Qos加速。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FeatureBitmap;
 
@@ -125,7 +122,6 @@ class RegionDetail extends AbstractModel
 第5个bit，支持精品BGP接入；
 第6个bit，支持三网接入；
 第7个bit，支持接入段Qos加速。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SupportFeature $SupportFeature 接入区域支持的能力
 注意：此字段可能返回 null，表示取不到有效值。
      */

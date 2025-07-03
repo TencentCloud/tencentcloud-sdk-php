@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getUserId() 获取待修改用户ID
  * @method void setUserId(string $UserId) 设置待修改用户ID
- * @method string getNickname() 获取待修改的用户名
- * @method void setNickname(string $Nickname) 设置待修改的用户名
+ * @method string getNickname() 获取待修改的用户名。对应注册用户下“Name“字段，本次修改是对此内容进行修改。
+ * @method void setNickname(string $Nickname) 设置待修改的用户名。对应注册用户下“Name“字段，本次修改是对此内容进行修改。
  * @method string getAvatar() 获取待修改头像url
  * @method void setAvatar(string $Avatar) 设置待修改头像url
  */
@@ -35,7 +35,7 @@ class ModifyUserProfileRequest extends AbstractModel
     public $UserId;
 
     /**
-     * @var string 待修改的用户名
+     * @var string 待修改的用户名。对应注册用户下“Name“字段，本次修改是对此内容进行修改。
      */
     public $Nickname;
 
@@ -46,7 +46,7 @@ class ModifyUserProfileRequest extends AbstractModel
 
     /**
      * @param string $UserId 待修改用户ID
-     * @param string $Nickname 待修改的用户名
+     * @param string $Nickname 待修改的用户名。对应注册用户下“Name“字段，本次修改是对此内容进行修改。
      * @param string $Avatar 待修改头像url
      */
     function __construct()

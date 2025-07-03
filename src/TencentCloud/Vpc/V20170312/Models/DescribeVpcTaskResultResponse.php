@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getOutput() 获取异步任务执行输出。
  * @method void setOutput(string $Output) 设置异步任务执行输出。
  * @method array getResult() 获取异步任务详细结果。只用于特殊场景，如批量删除弹性网卡时查询成功的网卡列表和失败的列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResult(array $Result) 设置异步任务详细结果。只用于特殊场景，如批量删除弹性网卡时查询成功的网卡列表和失败的列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -45,7 +43,6 @@ class DescribeVpcTaskResultResponse extends AbstractModel
 
     /**
      * @var array 异步任务详细结果。只用于特殊场景，如批量删除弹性网卡时查询成功的网卡列表和失败的列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Result;
 
@@ -58,7 +55,6 @@ class DescribeVpcTaskResultResponse extends AbstractModel
      * @param string $Status 异步任务执行结果。结果：SUCCESS、FAILED、RUNNING。3者其中之一。其中SUCCESS表示任务执行成功，FAILED表示任务执行失败，RUNNING表示任务执行中。
      * @param string $Output 异步任务执行输出。
      * @param array $Result 异步任务详细结果。只用于特殊场景，如批量删除弹性网卡时查询成功的网卡列表和失败的列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

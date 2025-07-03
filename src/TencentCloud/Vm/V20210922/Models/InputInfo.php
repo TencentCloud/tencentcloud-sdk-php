@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * 输入信息详情
  *
  * @method string getType() 获取传入的类型可选：URL，COS
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置传入的类型可选：URL，COS
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUrl() 获取Url地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUrl(string $Url) 设置Url地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBucketInfo() 获取桶信息。当输入当时COS时，该字段不为空
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBucketInfo(string $BucketInfo) 设置桶信息。当输入当时COS时，该字段不为空
@@ -37,13 +33,11 @@ class InputInfo extends AbstractModel
 {
     /**
      * @var string 传入的类型可选：URL，COS
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string Url地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Url;
 
@@ -55,9 +49,7 @@ class InputInfo extends AbstractModel
 
     /**
      * @param string $Type 传入的类型可选：URL，COS
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Url Url地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BucketInfo 桶信息。当输入当时COS时，该字段不为空
 注意：此字段可能返回 null，表示取不到有效值。
      */

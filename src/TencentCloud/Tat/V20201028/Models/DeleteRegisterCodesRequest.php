@@ -21,17 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * DeleteRegisterCodes请求参数结构体
  *
  * @method array getRegisterCodeIds() 获取注册码ID列表。限制输入的注册码ID数量大于0小于100。
+
+可通过 [DescribeRegisterCodes(查询注册码)](https://cloud.tencent.com/document/api/1340/96925) 接口获取。
  * @method void setRegisterCodeIds(array $RegisterCodeIds) 设置注册码ID列表。限制输入的注册码ID数量大于0小于100。
+
+可通过 [DescribeRegisterCodes(查询注册码)](https://cloud.tencent.com/document/api/1340/96925) 接口获取。
  */
 class DeleteRegisterCodesRequest extends AbstractModel
 {
     /**
      * @var array 注册码ID列表。限制输入的注册码ID数量大于0小于100。
+
+可通过 [DescribeRegisterCodes(查询注册码)](https://cloud.tencent.com/document/api/1340/96925) 接口获取。
      */
     public $RegisterCodeIds;
 
     /**
      * @param array $RegisterCodeIds 注册码ID列表。限制输入的注册码ID数量大于0小于100。
+
+可通过 [DescribeRegisterCodes(查询注册码)](https://cloud.tencent.com/document/api/1340/96925) 接口获取。
      */
     function __construct()
     {

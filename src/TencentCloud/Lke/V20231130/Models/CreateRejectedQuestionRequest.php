@@ -28,12 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuestion(string $Question) 设置拒答问题
 
 
- * @method integer getBusinessSource() 获取拒答问题来源的数据源唯一id，取值1，2
-
-
- * @method void setBusinessSource(integer $BusinessSource) 设置拒答问题来源的数据源唯一id，取值1，2
-
-
+ * @method integer getBusinessSource() 获取拒答问题来源的数据源唯一id， - 拒答来源于不满意回复  2 - 拒答来源于手动添加
+ * @method void setBusinessSource(integer $BusinessSource) 设置拒答问题来源的数据源唯一id， - 拒答来源于不满意回复  2 - 拒答来源于手动添加
  * @method string getBusinessId() 获取拒答问题来源的数据源唯一id
 
 
@@ -54,9 +50,7 @@ class CreateRejectedQuestionRequest extends AbstractModel
     public $Question;
 
     /**
-     * @var integer 拒答问题来源的数据源唯一id，取值1，2
-
-
+     * @var integer 拒答问题来源的数据源唯一id， - 拒答来源于不满意回复  2 - 拒答来源于手动添加
      */
     public $BusinessSource;
 
@@ -72,9 +66,7 @@ class CreateRejectedQuestionRequest extends AbstractModel
      * @param string $Question 拒答问题
 
 
-     * @param integer $BusinessSource 拒答问题来源的数据源唯一id，取值1，2
-
-
+     * @param integer $BusinessSource 拒答问题来源的数据源唯一id， - 拒答来源于不满意回复  2 - 拒答来源于手动添加
      * @param string $BusinessId 拒答问题来源的数据源唯一id
      */
     function __construct()

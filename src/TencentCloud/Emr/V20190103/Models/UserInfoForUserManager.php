@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPassWord(string $PassWord) 设置密码
  * @method string getReMark() 获取备注
  * @method void setReMark(string $ReMark) 设置备注
+ * @method array getGroups() 获取用户副组
+ * @method void setGroups(array $Groups) 设置用户副组
  */
 class UserInfoForUserManager extends AbstractModel
 {
@@ -52,10 +54,16 @@ class UserInfoForUserManager extends AbstractModel
     public $ReMark;
 
     /**
+     * @var array 用户副组
+     */
+    public $Groups;
+
+    /**
      * @param string $UserName 用户名
      * @param string $UserGroup 用户所属的组
      * @param string $PassWord 密码
      * @param string $ReMark 备注
+     * @param array $Groups 用户副组
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class UserInfoForUserManager extends AbstractModel
 
         if (array_key_exists("ReMark",$param) and $param["ReMark"] !== null) {
             $this->ReMark = $param["ReMark"];
+        }
+
+        if (array_key_exists("Groups",$param) and $param["Groups"] !== null) {
+            $this->Groups = $param["Groups"];
         }
     }
 }

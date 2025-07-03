@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 证书信息
  *
  * @method string getId() 获取唯一id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(string $Id) 设置唯一id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CertificateInfo extends AbstractModel
 {
     /**
      * @var string 唯一id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @param string $Id 唯一id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

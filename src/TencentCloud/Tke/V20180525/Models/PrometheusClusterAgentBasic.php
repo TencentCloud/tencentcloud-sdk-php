@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 与云监控融合托管prometheus实例，关联集群基础信息
  *
- * @method string getRegion() 获取集群ID
- * @method void setRegion(string $Region) 设置集群ID
+ * @method string getRegion() 获取地域
+ * @method void setRegion(string $Region) 设置地域
  * @method string getClusterType() 获取集群类型
  * @method void setClusterType(string $ClusterType) 设置集群类型
  * @method string getClusterId() 获取集群ID
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class PrometheusClusterAgentBasic extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string 地域
      */
     public $Region;
 
@@ -80,7 +80,7 @@ class PrometheusClusterAgentBasic extends AbstractModel
     public $NotScrape;
 
     /**
-     * @param string $Region 集群ID
+     * @param string $Region 地域
      * @param string $ClusterType 集群类型
      * @param string $ClusterId 集群ID
      * @param boolean $EnableExternal 是否开启公网CLB

@@ -72,6 +72,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGlobalUserName(string $GlobalUserName) 设置全局角色
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getGlobalUserCode() 获取全局角色编码
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setGlobalUserCode(string $GlobalUserCode) 设置全局角色编码
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMobile() 获取手机号
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMobile(string $Mobile) 设置手机号
@@ -95,6 +99,14 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getInValidateAppRange() 获取1
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInValidateAppRange(boolean $InValidateAppRange) 设置1
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getEmailActivationStatus() 获取-1 免激活  0 未激活  1 已激活 空代表待绑定
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEmailActivationStatus(integer $EmailActivationStatus) 设置-1 免激活  0 未激活  1 已激活 空代表待绑定
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getId() 获取1
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setId(integer $Id) 设置1
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class UserIdAndUserName extends AbstractModel
@@ -182,6 +194,12 @@ class UserIdAndUserName extends AbstractModel
     public $GlobalUserName;
 
     /**
+     * @var string 全局角色编码
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $GlobalUserCode;
+
+    /**
      * @var string 手机号
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -218,6 +236,18 @@ class UserIdAndUserName extends AbstractModel
     public $InValidateAppRange;
 
     /**
+     * @var integer -1 免激活  0 未激活  1 已激活 空代表待绑定
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EmailActivationStatus;
+
+    /**
+     * @var integer 1
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Id;
+
+    /**
      * @param string $UserId 用户ID
      * @param string $UserName 用户名
      * @param string $CorpId 企业ID
@@ -244,6 +274,8 @@ class UserIdAndUserName extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GlobalUserName 全局角色
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $GlobalUserCode 全局角色编码
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Mobile 手机号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AppId 1
@@ -255,6 +287,10 @@ class UserIdAndUserName extends AbstractModel
      * @param string $AppUserName 1
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $InValidateAppRange 1
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $EmailActivationStatus -1 免激活  0 未激活  1 已激活 空代表待绑定
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Id 1
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -326,6 +362,10 @@ class UserIdAndUserName extends AbstractModel
             $this->GlobalUserName = $param["GlobalUserName"];
         }
 
+        if (array_key_exists("GlobalUserCode",$param) and $param["GlobalUserCode"] !== null) {
+            $this->GlobalUserCode = $param["GlobalUserCode"];
+        }
+
         if (array_key_exists("Mobile",$param) and $param["Mobile"] !== null) {
             $this->Mobile = $param["Mobile"];
         }
@@ -348,6 +388,14 @@ class UserIdAndUserName extends AbstractModel
 
         if (array_key_exists("InValidateAppRange",$param) and $param["InValidateAppRange"] !== null) {
             $this->InValidateAppRange = $param["InValidateAppRange"];
+        }
+
+        if (array_key_exists("EmailActivationStatus",$param) and $param["EmailActivationStatus"] !== null) {
+            $this->EmailActivationStatus = $param["EmailActivationStatus"];
+        }
+
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
         }
     }
 }

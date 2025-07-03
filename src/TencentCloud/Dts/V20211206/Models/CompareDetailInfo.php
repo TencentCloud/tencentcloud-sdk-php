@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 一致性校验详细信息
  *
  * @method DifferenceDetail getDifference() 获取数据不一致的表详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDifference(DifferenceDetail $Difference) 设置数据不一致的表详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method SkippedDetail getSkipped() 获取跳过校验的表详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSkipped(SkippedDetail $Skipped) 设置跳过校验的表详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DifferenceAdvancedObjectsDetail getDifferenceAdvancedObjects() 获取数据库不一致的详情，mongodb业务用到
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDifferenceAdvancedObjects(DifferenceAdvancedObjectsDetail $DifferenceAdvancedObjects) 设置数据库不一致的详情，mongodb业务用到
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DifferenceDataDetail getDifferenceData() 获取数据不一致的详情，mongodb业务用到
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDifferenceData(DifferenceDataDetail $DifferenceData) 设置数据不一致的详情，mongodb业务用到
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DifferenceRowDetail getDifferenceRow() 获取数据行不一致的详情，mongodb业务用到
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDifferenceRow(DifferenceRowDetail $DifferenceRow) 设置数据行不一致的详情，mongodb业务用到
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CompareDetailInfo extends AbstractModel
 {
     /**
      * @var DifferenceDetail 数据不一致的表详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Difference;
 
     /**
      * @var SkippedDetail 跳过校验的表详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Skipped;
 
     /**
      * @var DifferenceAdvancedObjectsDetail 数据库不一致的详情，mongodb业务用到
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DifferenceAdvancedObjects;
 
     /**
      * @var DifferenceDataDetail 数据不一致的详情，mongodb业务用到
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DifferenceData;
 
     /**
      * @var DifferenceRowDetail 数据行不一致的详情，mongodb业务用到
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DifferenceRow;
 
     /**
      * @param DifferenceDetail $Difference 数据不一致的表详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SkippedDetail $Skipped 跳过校验的表详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DifferenceAdvancedObjectsDetail $DifferenceAdvancedObjects 数据库不一致的详情，mongodb业务用到
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DifferenceDataDetail $DifferenceData 数据不一致的详情，mongodb业务用到
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DifferenceRowDetail $DifferenceRow 数据行不一致的详情，mongodb业务用到
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -45,21 +45,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getHostip() 获取主机IP
  * @method void setHostip(string $Hostip) 设置主机IP
  * @method array getUuids() 获取生效服务器的uuid数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUuids(array $Uuids) 设置生效服务器的uuid数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWhite() 获取0=黑名单 1=白名单
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWhite(integer $White) 设置0=黑名单 1=白名单
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDealOldEvents() 获取是否处理之前的事件 0: 不处理 1:处理
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDealOldEvents(integer $DealOldEvents) 设置是否处理之前的事件 0: 不处理 1:处理
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取规则描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置规则描述
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BashRule extends AbstractModel
 {
@@ -126,25 +118,21 @@ class BashRule extends AbstractModel
 
     /**
      * @var array 生效服务器的uuid数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uuids;
 
     /**
      * @var integer 0=黑名单 1=白名单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $White;
 
     /**
      * @var integer 是否处理之前的事件 0: 不处理 1:处理
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DealOldEvents;
 
     /**
      * @var string 规则描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
@@ -162,13 +150,9 @@ class BashRule extends AbstractModel
      * @param string $ModifyTime 修改时间
      * @param string $Hostip 主机IP
      * @param array $Uuids 生效服务器的uuid数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $White 0=黑名单 1=白名单
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DealOldEvents 是否处理之前的事件 0: 不处理 1:处理
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 规则描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

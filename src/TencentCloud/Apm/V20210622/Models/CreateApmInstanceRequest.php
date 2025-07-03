@@ -20,58 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateApmInstance请求参数结构体
  *
- * @method string getName() 获取实例名
- * @method void setName(string $Name) 设置实例名
- * @method string getDescription() 获取实例描述信息
- * @method void setDescription(string $Description) 设置实例描述信息
- * @method integer getTraceDuration() 获取Trace数据保存时长，单位为天默认存储为3天
- * @method void setTraceDuration(integer $TraceDuration) 设置Trace数据保存时长，单位为天默认存储为3天
- * @method array getTags() 获取标签列表
- * @method void setTags(array $Tags) 设置标签列表
- * @method integer getSpanDailyCounters() 获取实例上报额度值，默认赋值为0表示不限制上报额度
- * @method void setSpanDailyCounters(integer $SpanDailyCounters) 设置实例上报额度值，默认赋值为0表示不限制上报额度
- * @method integer getPayMode() 获取实例的计费模式
- * @method void setPayMode(integer $PayMode) 设置实例的计费模式
+ * @method string getName() 获取业务系统名
+ * @method void setName(string $Name) 设置业务系统名
+ * @method string getDescription() 获取业务系统描述信息
+ * @method void setDescription(string $Description) 设置业务系统描述信息
+ * @method integer getTraceDuration() 获取Trace 数据保存时长（单位：天，默认存储时长为3天）
+ * @method void setTraceDuration(integer $TraceDuration) 设置Trace 数据保存时长（单位：天，默认存储时长为3天）
+ * @method array getTags() 获取业务系统 Tag 列表
+ * @method void setTags(array $Tags) 设置业务系统 Tag 列表
+ * @method integer getSpanDailyCounters() 获取业务系统上报额度值，默认赋值为0表示不限制上报额度，已废弃
+ * @method void setSpanDailyCounters(integer $SpanDailyCounters) 设置业务系统上报额度值，默认赋值为0表示不限制上报额度，已废弃
+ * @method integer getPayMode() 获取业务系统的计费模式（0=按量付费，1=预付费）
+ * @method void setPayMode(integer $PayMode) 设置业务系统的计费模式（0=按量付费，1=预付费）
+ * @method integer getFree() 获取是否为免费版业务系统（0=付费版；1=TSF 受限免费版；2=免费版）
+ * @method void setFree(integer $Free) 设置是否为免费版业务系统（0=付费版；1=TSF 受限免费版；2=免费版）
  */
 class CreateApmInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 实例名
+     * @var string 业务系统名
      */
     public $Name;
 
     /**
-     * @var string 实例描述信息
+     * @var string 业务系统描述信息
      */
     public $Description;
 
     /**
-     * @var integer Trace数据保存时长，单位为天默认存储为3天
+     * @var integer Trace 数据保存时长（单位：天，默认存储时长为3天）
      */
     public $TraceDuration;
 
     /**
-     * @var array 标签列表
+     * @var array 业务系统 Tag 列表
      */
     public $Tags;
 
     /**
-     * @var integer 实例上报额度值，默认赋值为0表示不限制上报额度
+     * @var integer 业务系统上报额度值，默认赋值为0表示不限制上报额度，已废弃
      */
     public $SpanDailyCounters;
 
     /**
-     * @var integer 实例的计费模式
+     * @var integer 业务系统的计费模式（0=按量付费，1=预付费）
      */
     public $PayMode;
 
     /**
-     * @param string $Name 实例名
-     * @param string $Description 实例描述信息
-     * @param integer $TraceDuration Trace数据保存时长，单位为天默认存储为3天
-     * @param array $Tags 标签列表
-     * @param integer $SpanDailyCounters 实例上报额度值，默认赋值为0表示不限制上报额度
-     * @param integer $PayMode 实例的计费模式
+     * @var integer 是否为免费版业务系统（0=付费版；1=TSF 受限免费版；2=免费版）
+     */
+    public $Free;
+
+    /**
+     * @param string $Name 业务系统名
+     * @param string $Description 业务系统描述信息
+     * @param integer $TraceDuration Trace 数据保存时长（单位：天，默认存储时长为3天）
+     * @param array $Tags 业务系统 Tag 列表
+     * @param integer $SpanDailyCounters 业务系统上报额度值，默认赋值为0表示不限制上报额度，已废弃
+     * @param integer $PayMode 业务系统的计费模式（0=按量付费，1=预付费）
+     * @param integer $Free 是否为免费版业务系统（0=付费版；1=TSF 受限免费版；2=免费版）
      */
     function __construct()
     {
@@ -113,6 +121,10 @@ class CreateApmInstanceRequest extends AbstractModel
 
         if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
             $this->PayMode = $param["PayMode"];
+        }
+
+        if (array_key_exists("Free",$param) and $param["Free"] !== null) {
+            $this->Free = $param["Free"];
         }
     }
 }

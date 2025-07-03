@@ -37,9 +37,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getDetectStatus() 获取0:未通过 1:忽略 3:通过 5:检测中
  * @method void setDetectStatus(integer $DetectStatus) 设置0:未通过 1:忽略 3:通过 5:检测中
  * @method array getItemIds() 获取ItemID集合
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setItemIds(array $ItemIds) 设置ItemID集合
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BaselineRuleDetect extends AbstractModel
 {
@@ -85,7 +83,6 @@ class BaselineRuleDetect extends AbstractModel
 
     /**
      * @var array ItemID集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ItemIds;
 
@@ -99,7 +96,6 @@ class BaselineRuleDetect extends AbstractModel
      * @param string $LastTime string
      * @param integer $DetectStatus 0:未通过 1:忽略 3:通过 5:检测中
      * @param array $ItemIds ItemID集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

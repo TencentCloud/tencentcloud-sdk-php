@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileType(string $FileType) 设置文件类型，可选值：csv, original
  * @method string getOrderBy() 获取可选值Timestamp
  * @method void setOrderBy(string $OrderBy) 设置可选值Timestamp
- * @method string getOrderByType() 获取ASC或DESC
- * @method void setOrderByType(string $OrderByType) 设置ASC或DESC
+ * @method string getOrderByType() 获取排序类型，ASC 或 DESC。
+ * @method void setOrderByType(string $OrderByType) 设置排序类型，ASC 或 DESC。
  */
 class ExportInstanceErrorLogsRequest extends AbstractModel
 {
@@ -89,7 +89,7 @@ class ExportInstanceErrorLogsRequest extends AbstractModel
     public $OrderBy;
 
     /**
-     * @var string ASC或DESC
+     * @var string 排序类型，ASC 或 DESC。
      */
     public $OrderByType;
 
@@ -103,7 +103,7 @@ class ExportInstanceErrorLogsRequest extends AbstractModel
      * @param array $KeyWords 关键字
      * @param string $FileType 文件类型，可选值：csv, original
      * @param string $OrderBy 可选值Timestamp
-     * @param string $OrderByType ASC或DESC
+     * @param string $OrderByType 排序类型，ASC 或 DESC。
      */
     function __construct()
     {

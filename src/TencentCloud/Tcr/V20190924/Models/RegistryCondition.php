@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStatus() 获取实例创建过程状态
  * @method void setStatus(string $Status) 设置实例创建过程状态
  * @method string getReason() 获取转换到该过程的简明原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReason(string $Reason) 设置转换到该过程的简明原因
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RegistryCondition extends AbstractModel
 {
@@ -43,7 +41,6 @@ class RegistryCondition extends AbstractModel
 
     /**
      * @var string 转换到该过程的简明原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Reason;
 
@@ -51,7 +48,6 @@ class RegistryCondition extends AbstractModel
      * @param string $Type 实例创建过程类型
      * @param string $Status 实例创建过程状态
      * @param string $Reason 转换到该过程的简明原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProtocol() 获取协议, 取值: TCP,UDP, ICMP, ALL。
  * @method void setProtocol(string $Protocol) 设置协议, 取值: TCP,UDP, ICMP, ALL。
- * @method string getPort() 获取端口(all, 单个port,  range)。当Protocol为ALL或ICMP时，不能指定Port。
- * @method void setPort(string $Port) 设置端口(all, 单个port,  range)。当Protocol为ALL或ICMP时，不能指定Port。
+ * @method string getPort() 获取端口(all, 单个port,  range)。当Protocol为ALL或ICMP时，不能指定Port。使用-指定端口范围，如：10-20。
+ * @method void setPort(string $Port) 设置端口(all, 单个port,  range)。当Protocol为ALL或ICMP时，不能指定Port。使用-指定端口范围，如：10-20。
  * @method string getCidrBlock() 获取网段或IP(互斥)。增量创建ACL规则时，CidrBlock和Ipv6CidrBlock至少提供一个。
  * @method void setCidrBlock(string $CidrBlock) 设置网段或IP(互斥)。增量创建ACL规则时，CidrBlock和Ipv6CidrBlock至少提供一个。
  * @method string getIpv6CidrBlock() 获取网段或IPv6(互斥)。
@@ -37,13 +37,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getPriority() 获取优先级，从1开始。	
  * @method void setPriority(integer $Priority) 设置优先级，从1开始。	
  * @method string getNetworkAclIpv4EntryId() 获取IPv4网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryID至少提供一个。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetworkAclIpv4EntryId(string $NetworkAclIpv4EntryId) 设置IPv4网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryID至少提供一个。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNetworkAclIpv6EntryId() 获取IPv6网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryId至少提供一个。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetworkAclIpv6EntryId(string $NetworkAclIpv6EntryId) 设置IPv6网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryId至少提供一个。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NetworkAclEntry extends AbstractModel
 {
@@ -53,7 +49,7 @@ class NetworkAclEntry extends AbstractModel
     public $Protocol;
 
     /**
-     * @var string 端口(all, 单个port,  range)。当Protocol为ALL或ICMP时，不能指定Port。
+     * @var string 端口(all, 单个port,  range)。当Protocol为ALL或ICMP时，不能指定Port。使用-指定端口范围，如：10-20。
      */
     public $Port;
 
@@ -89,19 +85,17 @@ class NetworkAclEntry extends AbstractModel
 
     /**
      * @var string IPv4网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryID至少提供一个。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NetworkAclIpv4EntryId;
 
     /**
      * @var string IPv6网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryId至少提供一个。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NetworkAclIpv6EntryId;
 
     /**
      * @param string $Protocol 协议, 取值: TCP,UDP, ICMP, ALL。
-     * @param string $Port 端口(all, 单个port,  range)。当Protocol为ALL或ICMP时，不能指定Port。
+     * @param string $Port 端口(all, 单个port,  range)。当Protocol为ALL或ICMP时，不能指定Port。使用-指定端口范围，如：10-20。
      * @param string $CidrBlock 网段或IP(互斥)。增量创建ACL规则时，CidrBlock和Ipv6CidrBlock至少提供一个。
      * @param string $Ipv6CidrBlock 网段或IPv6(互斥)。
      * @param string $Action ACCEPT 或 DROP。
@@ -109,9 +103,7 @@ class NetworkAclEntry extends AbstractModel
      * @param string $ModifyTime 修改时间。
      * @param integer $Priority 优先级，从1开始。	
      * @param string $NetworkAclIpv4EntryId IPv4网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryID至少提供一个。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NetworkAclIpv6EntryId IPv6网络ACL条目唯一ID。当修改ACL条目时，NetworkAclIpv4EntryId和NetworkAclIpv6EntryId至少提供一个。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

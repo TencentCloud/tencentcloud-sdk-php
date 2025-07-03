@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquiryPriceResizeDisk请求参数结构体
  *
- * @method integer getDiskSize() 获取云硬盘扩容后的大小，单位为GB，不得小于当前云硬盘大小。云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。
- * @method void setDiskSize(integer $DiskSize) 设置云硬盘扩容后的大小，单位为GB，不得小于当前云硬盘大小。云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。
+ * @method integer getDiskSize() 获取云硬盘扩容后的大小，单位为GiB，不得小于当前云硬盘大小。云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。
+ * @method void setDiskSize(integer $DiskSize) 设置云硬盘扩容后的大小，单位为GiB，不得小于当前云硬盘大小。云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。
  * @method string getDiskId() 获取云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
  * @method void setDiskId(string $DiskId) 设置云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
- * @method integer getProjectId() 获取云盘所属项目ID。 如传入则仅用于鉴权。
- * @method void setProjectId(integer $ProjectId) 设置云盘所属项目ID。 如传入则仅用于鉴权。
+ * @method integer getProjectId() 获取云硬盘所属项目ID。该参数可以通过调用[DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 projectId 字段来获取。 如传入则仅用于鉴权。
+ * @method void setProjectId(integer $ProjectId) 设置云硬盘所属项目ID。该参数可以通过调用[DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 projectId 字段来获取。 如传入则仅用于鉴权。
  */
 class InquiryPriceResizeDiskRequest extends AbstractModel
 {
     /**
-     * @var integer 云硬盘扩容后的大小，单位为GB，不得小于当前云硬盘大小。云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。
+     * @var integer 云硬盘扩容后的大小，单位为GiB，不得小于当前云硬盘大小。云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。
      */
     public $DiskSize;
 
@@ -40,14 +40,14 @@ class InquiryPriceResizeDiskRequest extends AbstractModel
     public $DiskId;
 
     /**
-     * @var integer 云盘所属项目ID。 如传入则仅用于鉴权。
+     * @var integer 云硬盘所属项目ID。该参数可以通过调用[DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 projectId 字段来获取。 如传入则仅用于鉴权。
      */
     public $ProjectId;
 
     /**
-     * @param integer $DiskSize 云硬盘扩容后的大小，单位为GB，不得小于当前云硬盘大小。云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。
+     * @param integer $DiskSize 云硬盘扩容后的大小，单位为GiB，不得小于当前云硬盘大小。云盘大小取值范围参见云硬盘[产品分类](/document/product/362/2353)的说明。
      * @param string $DiskId 云硬盘ID， 通过[DescribeDisks](/document/product/362/16315)接口查询。
-     * @param integer $ProjectId 云盘所属项目ID。 如传入则仅用于鉴权。
+     * @param integer $ProjectId 云硬盘所属项目ID。该参数可以通过调用[DescribeProject](https://cloud.tencent.com/document/api/651/78725) 的返回值中的 projectId 字段来获取。 如传入则仅用于鉴权。
      */
     function __construct()
     {

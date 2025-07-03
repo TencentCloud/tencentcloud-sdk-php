@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCdcId(string $CdcId) 设置CDC实例ID。
  * @method integer getMaxConnection() 获取SSL VPN连接数设置，可选规格：5, 10, 20, 50, 100, 200, 500, 1000；单位：个。仅 SSL / SSL_CCN 类型需要选这个参数。
  * @method void setMaxConnection(integer $MaxConnection) 设置SSL VPN连接数设置，可选规格：5, 10, 20, 50, 100, 200, 500, 1000；单位：个。仅 SSL / SSL_CCN 类型需要选这个参数。
+ * @method integer getBgpAsn() 获取BGP ASN。
+ * @method void setBgpAsn(integer $BgpAsn) 设置BGP ASN。
  */
 class CreateVpnGatewayRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class CreateVpnGatewayRequest extends AbstractModel
     public $MaxConnection;
 
     /**
+     * @var integer BGP ASN。
+     */
+    public $BgpAsn;
+
+    /**
      * @param string $VpcId VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口返回值中的VpcId获取。
      * @param string $VpnGatewayName VPN网关名称，最大长度不能超过60个字节。
      * @param integer $InternetMaxBandwidthOut 公网带宽设置。可选带宽规格：5, 10, 20, 50, 100, 200, 500, 1000, 3000；单位：Mbps。
@@ -104,6 +111,7 @@ class CreateVpnGatewayRequest extends AbstractModel
      * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
      * @param string $CdcId CDC实例ID。
      * @param integer $MaxConnection SSL VPN连接数设置，可选规格：5, 10, 20, 50, 100, 200, 500, 1000；单位：个。仅 SSL / SSL_CCN 类型需要选这个参数。
+     * @param integer $BgpAsn BGP ASN。
      */
     function __construct()
     {
@@ -162,6 +170,10 @@ class CreateVpnGatewayRequest extends AbstractModel
 
         if (array_key_exists("MaxConnection",$param) and $param["MaxConnection"] !== null) {
             $this->MaxConnection = $param["MaxConnection"];
+        }
+
+        if (array_key_exists("BgpAsn",$param) and $param["BgpAsn"] !== null) {
+            $this->BgpAsn = $param["BgpAsn"];
         }
     }
 }

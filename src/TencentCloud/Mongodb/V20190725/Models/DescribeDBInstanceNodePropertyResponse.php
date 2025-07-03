@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * DescribeDBInstanceNodeProperty返回参数结构体
  *
  * @method array getMongos() 获取Mongos节点属性。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMongos(array $Mongos) 设置Mongos节点属性。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getReplicateSets() 获取副本集节点信息。
  * @method void setReplicateSets(array $ReplicateSets) 设置副本集节点信息。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -33,7 +31,6 @@ class DescribeDBInstanceNodePropertyResponse extends AbstractModel
 {
     /**
      * @var array Mongos节点属性。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Mongos;
 
@@ -49,7 +46,6 @@ class DescribeDBInstanceNodePropertyResponse extends AbstractModel
 
     /**
      * @param array $Mongos Mongos节点属性。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ReplicateSets 副本集节点信息。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

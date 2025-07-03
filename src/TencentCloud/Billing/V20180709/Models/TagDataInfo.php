@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getStatus() 获取标签类型，0普通标签，1分账标签
  * @method void setStatus(integer $Status) 设置标签类型，0普通标签，1分账标签
  * @method string getUpdateTime() 获取设置分账标签时间，普通标签不返回
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置设置分账标签时间，普通标签不返回
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TagDataInfo extends AbstractModel
 {
@@ -43,7 +41,6 @@ class TagDataInfo extends AbstractModel
 
     /**
      * @var string 设置分账标签时间，普通标签不返回
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
@@ -51,7 +48,6 @@ class TagDataInfo extends AbstractModel
      * @param string $TagKey 分账标签键
      * @param integer $Status 标签类型，0普通标签，1分账标签
      * @param string $UpdateTime 设置分账标签时间，普通标签不返回
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

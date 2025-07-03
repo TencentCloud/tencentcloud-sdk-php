@@ -21,105 +21,73 @@ use TencentCloud\Common\AbstractModel;
  * 构件属性信息响应体
  *
  * @method string getBuildingId() 获取建筑id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBuildingId(string $BuildingId) 设置建筑id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getElementId() 获取构件id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setElementId(string $ElementId) 设置构件id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPropertySet() 获取构件属性集合
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPropertySet(array $PropertySet) 设置构件属性集合
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ElementCoordinates getCoordinates() 获取构件地理坐标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCoordinates(ElementCoordinates $Coordinates) 设置构件地理坐标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ElementTranslate getTranslate() 获取构件偏移量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTranslate(ElementTranslate $Translate) 设置构件偏移量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getElementName() 获取构件名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setElementName(string $ElementName) 设置构件名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEntityTypeCode() 获取构件类型代码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEntityTypeCode(string $EntityTypeCode) 设置构件类型代码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEntityTypeName() 获取构件类型名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEntityTypeName(string $EntityTypeName) 设置构件类型名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ElementPropertyRes extends AbstractModel
 {
     /**
      * @var string 建筑id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BuildingId;
 
     /**
      * @var string 构件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ElementId;
 
     /**
      * @var array 构件属性集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PropertySet;
 
     /**
      * @var ElementCoordinates 构件地理坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Coordinates;
 
     /**
      * @var ElementTranslate 构件偏移量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Translate;
 
     /**
      * @var string 构件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ElementName;
 
     /**
      * @var string 构件类型代码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EntityTypeCode;
 
     /**
      * @var string 构件类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EntityTypeName;
 
     /**
      * @param string $BuildingId 建筑id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ElementId 构件id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PropertySet 构件属性集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ElementCoordinates $Coordinates 构件地理坐标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ElementTranslate $Translate 构件偏移量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ElementName 构件名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EntityTypeCode 构件类型代码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EntityTypeName 构件类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

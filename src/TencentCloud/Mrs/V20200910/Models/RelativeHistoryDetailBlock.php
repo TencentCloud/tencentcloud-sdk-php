@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 家庭成员详情
  *
  * @method string getName() 获取名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRelation() 获取关系
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRelation(string $Relation) 设置关系
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTimeOfDeath() 获取死亡时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeOfDeath(string $TimeOfDeath) 设置死亡时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTimeType() 获取时间类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeType(string $TimeType) 设置时间类型
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RelativeHistoryDetailBlock extends AbstractModel
 {
     /**
      * @var string 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 关系
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Relation;
 
     /**
      * @var string 死亡时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeOfDeath;
 
     /**
      * @var string 时间类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeType;
 
     /**
      * @param string $Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Relation 关系
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TimeOfDeath 死亡时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TimeType 时间类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

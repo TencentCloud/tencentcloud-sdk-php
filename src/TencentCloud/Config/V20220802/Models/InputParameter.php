@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getType() 获取参数类型。必填类型：Require，可选类型：Optional。
  * @method void setType(string $Type) 设置参数类型。必填类型：Require，可选类型：Optional。
  * @method string getValue() 获取参数值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置参数值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InputParameter extends AbstractModel
 {
@@ -43,7 +41,6 @@ class InputParameter extends AbstractModel
 
     /**
      * @var string 参数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
@@ -51,7 +48,6 @@ class InputParameter extends AbstractModel
      * @param string $ParameterKey 参数名
      * @param string $Type 参数类型。必填类型：Require，可选类型：Optional。
      * @param string $Value 参数值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

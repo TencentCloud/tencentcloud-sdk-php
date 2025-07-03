@@ -25,21 +25,15 @@ use TencentCloud\Common\AbstractModel;
 - SingleRegion: 普通单地域
 - MultiRegion: 普通多地域场景
 - MasterSlave: 两地域，主备地域场景
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeployMode(string $DeployMode) 设置部署架构信息
 
 - SingleRegion: 普通单地域
 - MultiRegion: 普通多地域场景
 - MasterSlave: 两地域，主备地域场景
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ZookeeperRegionMyIdInfo getMainRegion() 获取主地域的额外信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMainRegion(ZookeeperRegionMyIdInfo $MainRegion) 设置主地域的额外信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getOtherRegions() 获取其他地域的额外信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOtherRegions(array $OtherRegions) 设置其他地域的额外信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ZookeeperRegionInfo extends AbstractModel
 {
@@ -49,19 +43,16 @@ class ZookeeperRegionInfo extends AbstractModel
 - SingleRegion: 普通单地域
 - MultiRegion: 普通多地域场景
 - MasterSlave: 两地域，主备地域场景
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeployMode;
 
     /**
      * @var ZookeeperRegionMyIdInfo 主地域的额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MainRegion;
 
     /**
      * @var array 其他地域的额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OtherRegions;
 
@@ -71,11 +62,8 @@ class ZookeeperRegionInfo extends AbstractModel
 - SingleRegion: 普通单地域
 - MultiRegion: 普通多地域场景
 - MasterSlave: 两地域，主备地域场景
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ZookeeperRegionMyIdInfo $MainRegion 主地域的额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $OtherRegions 其他地域的额外信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

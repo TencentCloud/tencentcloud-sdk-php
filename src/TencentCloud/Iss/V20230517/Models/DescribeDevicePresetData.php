@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 查询设备预置位返回数据
  *
  * @method integer getIndex() 获取预置位索引    只支持1-10的索引
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIndex(integer $Index) 设置预置位索引    只支持1-10的索引
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取预置位名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置预置位名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeDevicePresetData extends AbstractModel
 {
     /**
      * @var integer 预置位索引    只支持1-10的索引
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Index;
 
     /**
      * @var string 预置位名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @param integer $Index 预置位索引    只支持1-10的索引
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 预置位名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

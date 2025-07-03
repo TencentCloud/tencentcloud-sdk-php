@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
- * @method string getUser() 获取数据库的账号名称。
- * @method void setUser(string $User) 设置数据库的账号名称。
- * @method string getHost() 获取数据库的账号域名。
- * @method void setHost(string $Host) 设置数据库的账号域名。
+ * @method string getUser() 获取数据库的账号名称。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
+ * @method void setUser(string $User) 设置数据库的账号名称。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
+ * @method string getHost() 获取数据库的账号域名。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
+ * @method void setHost(string $Host) 设置数据库的账号域名。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
  */
 class DescribeAccountPrivilegesRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class DescribeAccountPrivilegesRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 数据库的账号名称。
+     * @var string 数据库的账号名称。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
      */
     public $User;
 
     /**
-     * @var string 数据库的账号域名。
+     * @var string 数据库的账号域名。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
      */
     public $Host;
 
     /**
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
-     * @param string $User 数据库的账号名称。
-     * @param string $Host 数据库的账号域名。
+     * @param string $User 数据库的账号名称。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
+     * @param string $Host 数据库的账号域名。可通过 [DescribeAccounts](https://cloud.tencent.com/document/api/236/17499) 接口获取。
      */
     function __construct()
     {

@@ -20,34 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAuctionList请求参数结构体
  *
- * @method string getBusinessId() 获取业务ID
- * @method void setBusinessId(string $BusinessId) 设置业务ID
- * @method integer getLimit() 获取条数，默认10条
- * @method void setLimit(integer $Limit) 设置条数，默认10条
- * @method integer getOffSet() 获取偏移量
- * @method void setOffSet(integer $OffSet) 设置偏移量
+ * @method string getBusinessId() 获取业务ID 
+通过接口[DescribeBiddingList](https://cloud.tencent.com/document/api/242/106598)返回结果中获取
+ * @method void setBusinessId(string $BusinessId) 设置业务ID 
+通过接口[DescribeBiddingList](https://cloud.tencent.com/document/api/242/106598)返回结果中获取
+ * @method integer getLimit() 获取条数，默认10，最大100
+ * @method void setLimit(integer $Limit) 设置条数，默认10，最大100
+ * @method integer getOffSet() 获取偏移量 默认0
+ * @method void setOffSet(integer $OffSet) 设置偏移量 默认0
  */
 class DescribeAuctionListRequest extends AbstractModel
 {
     /**
-     * @var string 业务ID
+     * @var string 业务ID 
+通过接口[DescribeBiddingList](https://cloud.tencent.com/document/api/242/106598)返回结果中获取
      */
     public $BusinessId;
 
     /**
-     * @var integer 条数，默认10条
+     * @var integer 条数，默认10，最大100
      */
     public $Limit;
 
     /**
-     * @var integer 偏移量
+     * @var integer 偏移量 默认0
      */
     public $OffSet;
 
     /**
-     * @param string $BusinessId 业务ID
-     * @param integer $Limit 条数，默认10条
-     * @param integer $OffSet 偏移量
+     * @param string $BusinessId 业务ID 
+通过接口[DescribeBiddingList](https://cloud.tencent.com/document/api/242/106598)返回结果中获取
+     * @param integer $Limit 条数，默认10，最大100
+     * @param integer $OffSet 偏移量 默认0
      */
     function __construct()
     {

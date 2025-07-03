@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * ModifySequenceRules返回参数结构体
  *
  * @method integer getStatus() 获取0: 修改成功, 非0: 修改失败
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置0: 修改成功, 非0: 修改失败
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -31,7 +29,6 @@ class ModifySequenceRulesResponse extends AbstractModel
 {
     /**
      * @var integer 0: 修改成功, 非0: 修改失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
@@ -42,7 +39,6 @@ class ModifySequenceRulesResponse extends AbstractModel
 
     /**
      * @param integer $Status 0: 修改成功, 非0: 修改失败
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

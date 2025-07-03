@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 告警通知渠道
  *
  * @method string getNoticeId() 获取通知模板ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNoticeId(string $NoticeId) 设置通知模板ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAMPConsumerId() 获取AMP consumer ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAMPConsumerId(string $AMPConsumerId) 设置AMP consumer ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlertChannel extends AbstractModel
 {
     /**
      * @var string 通知模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NoticeId;
 
     /**
      * @var string AMP consumer ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AMPConsumerId;
 
     /**
      * @param string $NoticeId 通知模板ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AMPConsumerId AMP consumer ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

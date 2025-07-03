@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 错误异常
  *
  * @method string getCode() 获取异常错误码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCode(string $Code) 设置异常错误码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMessage() 获取异常错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置异常错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Error extends AbstractModel
 {
     /**
      * @var string 异常错误码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Code;
 
     /**
      * @var string 异常错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
     /**
      * @param string $Code 异常错误码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message 异常错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 扩缩容策略
  *
  * @method string getPolicyType() 获取策略类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolicyType(string $PolicyType) 设置策略类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPolicyThreshold() 获取策略阈值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolicyThreshold(integer $PolicyThreshold) 设置策略阈值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class HpaPolicy extends AbstractModel
 {
     /**
      * @var string 策略类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PolicyType;
 
     /**
      * @var integer 策略阈值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PolicyThreshold;
 
     /**
      * @param string $PolicyType 策略类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PolicyThreshold 策略阈值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

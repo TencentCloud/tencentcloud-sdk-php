@@ -106,12 +106,12 @@ IPv6 功能目前尚未全量，需要先申请试用
  * @method string getOriginPullProtocol() 获取回源协议配置
 http：强制 http 回源
 follow：协议跟随回源
-https：强制 https 回源，https 回源时仅支持源站 443 端口
+https：强制 https 回源
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOriginPullProtocol(string $OriginPullProtocol) 设置回源协议配置
 http：强制 http 回源
 follow：协议跟随回源
-https：强制 https 回源，https 回源时仅支持源站 443 端口
+https：强制 https 回源
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getBackupOrigins() 获取备源站列表
 <font color=red>修改备源站时，需要同时填充对应的 BackupOriginType</font>
@@ -244,7 +244,7 @@ IPv6 功能目前尚未全量，需要先申请试用
      * @var string 回源协议配置
 http：强制 http 回源
 follow：协议跟随回源
-https：强制 https 回源，https 回源时仅支持源站 443 端口
+https：强制 https 回源
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OriginPullProtocol;
@@ -362,7 +362,7 @@ IPv6 功能目前尚未全量，需要先申请试用
      * @param string $OriginPullProtocol 回源协议配置
 http：强制 http 回源
 follow：协议跟随回源
-https：强制 https 回源，https 回源时仅支持源站 443 端口
+https：强制 https 回源
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $BackupOrigins 备源站列表
 <font color=red>修改备源站时，需要同时填充对应的 BackupOriginType</font>

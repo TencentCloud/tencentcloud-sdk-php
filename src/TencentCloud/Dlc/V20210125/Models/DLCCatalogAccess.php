@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * DLC 数据目录访问权限
  *
  * @method string getVpcId() 获取VPCID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(string $VpcId) 设置VPCID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProduct() 获取产品类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProduct(string $Product) 设置产品类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取描述信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置描述信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DLCCatalogAccess extends AbstractModel
 {
     /**
      * @var string VPCID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
     /**
      * @var string 产品类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Product;
 
     /**
      * @var string 描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @param string $VpcId VPCID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Product 产品类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

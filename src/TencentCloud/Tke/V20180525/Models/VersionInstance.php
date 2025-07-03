@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 版本信息
  *
  * @method string getName() 获取版本名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置版本名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVersion() 获取版本信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersion(string $Version) 设置版本信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRemark() 获取Remark
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置Remark
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VersionInstance extends AbstractModel
 {
     /**
      * @var string 版本名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 版本信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Version;
 
     /**
      * @var string Remark
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
     /**
      * @param string $Name 版本名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Version 版本信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Remark Remark
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

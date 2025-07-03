@@ -22,12 +22,26 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTemplateId() 获取模板ID
  * @method void setTemplateId(string $TemplateId) 设置模板ID
- * @method string getAuditStatus() 获取认证状态：未实名认证:NotUpload, 实名审核中:InAudit，已实名认证:Approved，实名审核失败:Reject
- * @method void setAuditStatus(string $AuditStatus) 设置认证状态：未实名认证:NotUpload, 实名审核中:InAudit，已实名认证:Approved，实名审核失败:Reject
- * @method string getCreatedOn() 获取创建时间
- * @method void setCreatedOn(string $CreatedOn) 设置创建时间
- * @method string getUpdatedOn() 获取更新时间
- * @method void setUpdatedOn(string $UpdatedOn) 设置更新时间
+ * @method string getAuditStatus() 获取认证状态:
+NotUpload: 未实名认证
+InAudit: 实名审核中
+Approved: 已实名认证
+Reject: 实名审核失败
+NotVerified: 实名信息待修改
+ * @method void setAuditStatus(string $AuditStatus) 设置认证状态:
+NotUpload: 未实名认证
+InAudit: 实名审核中
+Approved: 已实名认证
+Reject: 实名审核失败
+NotVerified: 实名信息待修改
+ * @method string getCreatedOn() 获取创建时间 
+格式:YYYY-MM-DD HH:mm:ss
+ * @method void setCreatedOn(string $CreatedOn) 设置创建时间 
+格式:YYYY-MM-DD HH:mm:ss
+ * @method string getUpdatedOn() 获取更新时间 
+格式:YYYY-MM-DD HH:mm:ss
+ * @method void setUpdatedOn(string $UpdatedOn) 设置更新时间 
+格式:YYYY-MM-DD HH:mm:ss
  * @method string getUserUin() 获取用户UIN
  * @method void setUserUin(string $UserUin) 设置用户UIN
  * @method string getIsDefault() 获取是否是默认模板: 是:yes，否:no
@@ -53,17 +67,24 @@ class TemplateInfo extends AbstractModel
     public $TemplateId;
 
     /**
-     * @var string 认证状态：未实名认证:NotUpload, 实名审核中:InAudit，已实名认证:Approved，实名审核失败:Reject
+     * @var string 认证状态:
+NotUpload: 未实名认证
+InAudit: 实名审核中
+Approved: 已实名认证
+Reject: 实名审核失败
+NotVerified: 实名信息待修改
      */
     public $AuditStatus;
 
     /**
-     * @var string 创建时间
+     * @var string 创建时间 
+格式:YYYY-MM-DD HH:mm:ss
      */
     public $CreatedOn;
 
     /**
-     * @var string 更新时间
+     * @var string 更新时间 
+格式:YYYY-MM-DD HH:mm:ss
      */
     public $UpdatedOn;
 
@@ -109,9 +130,16 @@ class TemplateInfo extends AbstractModel
 
     /**
      * @param string $TemplateId 模板ID
-     * @param string $AuditStatus 认证状态：未实名认证:NotUpload, 实名审核中:InAudit，已实名认证:Approved，实名审核失败:Reject
-     * @param string $CreatedOn 创建时间
-     * @param string $UpdatedOn 更新时间
+     * @param string $AuditStatus 认证状态:
+NotUpload: 未实名认证
+InAudit: 实名审核中
+Approved: 已实名认证
+Reject: 实名审核失败
+NotVerified: 实名信息待修改
+     * @param string $CreatedOn 创建时间 
+格式:YYYY-MM-DD HH:mm:ss
+     * @param string $UpdatedOn 更新时间 
+格式:YYYY-MM-DD HH:mm:ss
      * @param string $UserUin 用户UIN
      * @param string $IsDefault 是否是默认模板: 是:yes，否:no
      * @param string $AuditReason 认证失败原因

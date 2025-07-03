@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
- * @method string getSnapshotId() 获取快照 ID
- * @method void setSnapshotId(string $SnapshotId) 设置快照 ID
+ * @method string getSnapshotId() 获取快照记录 ID
+ * @method void setSnapshotId(string $SnapshotId) 设置快照记录 ID
  * @method SnapshotRecord getRecord() 获取解析记录信息
  * @method void setRecord(SnapshotRecord $Record) 设置解析记录信息
  * @method integer getDomainId() 获取域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
@@ -37,7 +37,7 @@ class CheckRecordSnapshotRollbackRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var string 快照 ID
+     * @var string 快照记录 ID
      */
     public $SnapshotId;
 
@@ -53,7 +53,7 @@ class CheckRecordSnapshotRollbackRequest extends AbstractModel
 
     /**
      * @param string $Domain 域名
-     * @param string $SnapshotId 快照 ID
+     * @param string $SnapshotId 快照记录 ID
      * @param SnapshotRecord $Record 解析记录信息
      * @param integer $DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。
      */

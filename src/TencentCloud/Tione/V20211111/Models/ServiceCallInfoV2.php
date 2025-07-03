@@ -36,6 +36,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuthToken(string $AuthToken) 设置鉴权token，仅当AuthorizationEnable为true时有效
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAuthTokens() 获取LLM token 列表
+ * @method void setAuthTokens(array $AuthTokens) 设置LLM token 列表
+ * @method boolean getEnableLimit() 获取是否开启限流
+ * @method void setEnableLimit(boolean $EnableLimit) 设置是否开启限流
+ * @method string getGrpcHost() 获取访问grpc时需携带的虚拟Host
+ * @method void setGrpcHost(string $GrpcHost) 设置访问grpc时需携带的虚拟Host
  */
 class ServiceCallInfoV2 extends AbstractModel
 {
@@ -64,6 +70,21 @@ class ServiceCallInfoV2 extends AbstractModel
     public $AuthToken;
 
     /**
+     * @var array LLM token 列表
+     */
+    public $AuthTokens;
+
+    /**
+     * @var boolean 是否开启限流
+     */
+    public $EnableLimit;
+
+    /**
+     * @var string 访问grpc时需携带的虚拟Host
+     */
+    public $GrpcHost;
+
+    /**
      * @param string $ServiceGroupId 服务组id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InternetEndpoint 服务的公网调用地址
@@ -72,6 +93,9 @@ class ServiceCallInfoV2 extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AuthToken 鉴权token，仅当AuthorizationEnable为true时有效
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AuthTokens LLM token 列表
+     * @param boolean $EnableLimit 是否开启限流
+     * @param string $GrpcHost 访问grpc时需携带的虚拟Host
      */
     function __construct()
     {
@@ -100,6 +124,23 @@ class ServiceCallInfoV2 extends AbstractModel
 
         if (array_key_exists("AuthToken",$param) and $param["AuthToken"] !== null) {
             $this->AuthToken = $param["AuthToken"];
+        }
+
+        if (array_key_exists("AuthTokens",$param) and $param["AuthTokens"] !== null) {
+            $this->AuthTokens = [];
+            foreach ($param["AuthTokens"] as $key => $value){
+                $obj = new AuthToken();
+                $obj->deserialize($value);
+                array_push($this->AuthTokens, $obj);
+            }
+        }
+
+        if (array_key_exists("EnableLimit",$param) and $param["EnableLimit"] !== null) {
+            $this->EnableLimit = $param["EnableLimit"];
+        }
+
+        if (array_key_exists("GrpcHost",$param) and $param["GrpcHost"] !== null) {
+            $this->GrpcHost = $param["GrpcHost"];
         }
     }
 }

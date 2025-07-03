@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 提供给前端，控制按钮是否显示
  *
  * @method OperationInfoDetail getInit() 获取初始化按钮的控制信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInit(OperationInfoDetail $Init) 设置初始化按钮的控制信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method OperationInfoDetail getAddInstance() 获取添加实例按钮的控制信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddInstance(OperationInfoDetail $AddInstance) 设置添加实例按钮的控制信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method OperationInfoDetail getDestroy() 获取销毁机器的控制信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDestroy(OperationInfoDetail $Destroy) 设置销毁机器的控制信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OperationInfo extends AbstractModel
 {
     /**
      * @var OperationInfoDetail 初始化按钮的控制信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Init;
 
     /**
      * @var OperationInfoDetail 添加实例按钮的控制信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AddInstance;
 
     /**
      * @var OperationInfoDetail 销毁机器的控制信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Destroy;
 
     /**
      * @param OperationInfoDetail $Init 初始化按钮的控制信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OperationInfoDetail $AddInstance 添加实例按钮的控制信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OperationInfoDetail $Destroy 销毁机器的控制信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

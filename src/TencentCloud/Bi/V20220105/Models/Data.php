@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getId() 获取项目Id
  * @method void setId(integer $Id) 设置项目Id
+ * @method string getEditUrl() 获取url
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEditUrl(string $EditUrl) 设置url
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Data extends AbstractModel
 {
@@ -31,7 +35,15 @@ class Data extends AbstractModel
     public $Id;
 
     /**
+     * @var string url
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EditUrl;
+
+    /**
      * @param integer $Id 项目Id
+     * @param string $EditUrl url
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -48,6 +60,10 @@ class Data extends AbstractModel
         }
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("EditUrl",$param) and $param["EditUrl"] !== null) {
+            $this->EditUrl = $param["EditUrl"];
         }
     }
 }

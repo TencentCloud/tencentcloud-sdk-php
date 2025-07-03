@@ -24,23 +24,36 @@ use TencentCloud\Tione\V20211111\Models as Models;
 
 /**
  * @method Models\ChatCompletionResponse ChatCompletion(Models\ChatCompletionRequest $req) 该接口支持与自行部署的大模型的聊天。
+
+使用该接口调用时需要携带腾讯云的密钥信息用于身份信息鉴权，建议通过腾讯云的云 API SDK调用，具体可以参考
+https://cloud.tencent.com/document/product/1278/85305
  * @method Models\CreateDatasetResponse CreateDataset(Models\CreateDatasetRequest $req) 创建数据集
  * @method Models\CreateModelServiceResponse CreateModelService(Models\CreateModelServiceRequest $req) 用于创建、发布一个新的模型服务
+ * @method Models\CreateModelServiceAuthTokenResponse CreateModelServiceAuthToken(Models\CreateModelServiceAuthTokenRequest $req) 创建一个 AuthToken
  * @method Models\CreateNotebookResponse CreateNotebook(Models\CreateNotebookRequest $req) 创建Notebook
  * @method Models\CreatePresignedNotebookUrlResponse CreatePresignedNotebookUrl(Models\CreatePresignedNotebookUrlRequest $req) 生成Notebook访问链接
  * @method Models\CreateTrainingModelResponse CreateTrainingModel(Models\CreateTrainingModelRequest $req) 导入模型
+ * @method Models\CreateTrainingTaskResponse CreateTrainingTask(Models\CreateTrainingTaskRequest $req) 创建模型训练任务
  * @method Models\DeleteDatasetResponse DeleteDataset(Models\DeleteDatasetRequest $req) 删除数据集
  * @method Models\DeleteModelServiceResponse DeleteModelService(Models\DeleteModelServiceRequest $req) 根据服务id删除模型服务
+ * @method Models\DeleteModelServiceAuthTokenResponse DeleteModelServiceAuthToken(Models\DeleteModelServiceAuthTokenRequest $req) 删除一个 AuthToken
  * @method Models\DeleteModelServiceGroupResponse DeleteModelServiceGroup(Models\DeleteModelServiceGroupRequest $req) 根据服务组id删除服务组下所有模型服务
  * @method Models\DeleteNotebookResponse DeleteNotebook(Models\DeleteNotebookRequest $req) 删除Notebook
  * @method Models\DeleteTrainingModelResponse DeleteTrainingModel(Models\DeleteTrainingModelRequest $req) 删除模型
  * @method Models\DeleteTrainingModelVersionResponse DeleteTrainingModelVersion(Models\DeleteTrainingModelVersionRequest $req) 删除模型版本
+ * @method Models\DeleteTrainingTaskResponse DeleteTrainingTask(Models\DeleteTrainingTaskRequest $req) 删除训练任务
  * @method Models\DescribeBillingResourceGroupResponse DescribeBillingResourceGroup(Models\DescribeBillingResourceGroupRequest $req) 查询资源组节点列表
  * @method Models\DescribeBillingResourceGroupsResponse DescribeBillingResourceGroups(Models\DescribeBillingResourceGroupsRequest $req) 查询资源组详情
  * @method Models\DescribeBillingResourceInstanceRunningJobsResponse DescribeBillingResourceInstanceRunningJobs(Models\DescribeBillingResourceInstanceRunningJobsRequest $req) 查询资源组节点运行中的任务
+ * @method Models\DescribeBillingSpecsResponse DescribeBillingSpecs(Models\DescribeBillingSpecsRequest $req) 本接口(DescribeBillingSpecs) 提供查询计费项列表
+ * @method Models\DescribeBillingSpecsPriceResponse DescribeBillingSpecsPrice(Models\DescribeBillingSpecsPriceRequest $req) 本接口(DescribeBillingSpecsPrice)用于查询按量计费计费项价格。
  * @method Models\DescribeBuildInImagesResponse DescribeBuildInImages(Models\DescribeBuildInImagesRequest $req) 获取内置镜像列表
  * @method Models\DescribeDatasetsResponse DescribeDatasets(Models\DescribeDatasetsRequest $req) 查询数据集列表
- * @method Models\DescribeInferTemplatesResponse DescribeInferTemplates(Models\DescribeInferTemplatesRequest $req) 查询推理镜像模板
+ * @method Models\DescribeEventsResponse DescribeEvents(Models\DescribeEventsRequest $req) 获取任务式建模训练任务，Notebook，在线服务和批量预测任务的事件API
+ * @method Models\DescribeInferTemplatesResponse DescribeInferTemplates(Models\DescribeInferTemplatesRequest $req) 已废弃，收敛到统一接口
+
+查询推理镜像模板
+ * @method Models\DescribeLogsResponse DescribeLogs(Models\DescribeLogsRequest $req) 获取任务式建模训练任务，Notebook，在线服务和批量预测任务的日志API
  * @method Models\DescribeModelAccelerateTaskResponse DescribeModelAccelerateTask(Models\DescribeModelAccelerateTaskRequest $req) 查询模型优化任务详情
  * @method Models\DescribeModelAccelerateVersionsResponse DescribeModelAccelerateVersions(Models\DescribeModelAccelerateVersionsRequest $req) 模型加速之后的模型版本列表
  * @method Models\DescribeModelServiceResponse DescribeModelService(Models\DescribeModelServiceRequest $req) 查询单个服务
@@ -56,11 +69,15 @@ use TencentCloud\Tione\V20211111\Models as Models;
  * @method Models\DescribeTrainingTaskPodsResponse DescribeTrainingTaskPods(Models\DescribeTrainingTaskPodsRequest $req) 训练任务pod列表
  * @method Models\DescribeTrainingTasksResponse DescribeTrainingTasks(Models\DescribeTrainingTasksRequest $req) 训练任务列表
  * @method Models\ModifyModelServiceResponse ModifyModelService(Models\ModifyModelServiceRequest $req) 用于更新模型服务
+ * @method Models\ModifyModelServiceAuthTokenResponse ModifyModelServiceAuthToken(Models\ModifyModelServiceAuthTokenRequest $req) 修改一个 AuthToken
+ * @method Models\ModifyModelServiceAuthorizationResponse ModifyModelServiceAuthorization(Models\ModifyModelServiceAuthorizationRequest $req) 修改服务鉴权配置
+ * @method Models\ModifyNotebookTagsResponse ModifyNotebookTags(Models\ModifyNotebookTagsRequest $req) 修改Notebook标签
  * @method Models\PushTrainingMetricsResponse PushTrainingMetrics(Models\PushTrainingMetricsRequest $req) 上报训练自定义指标
- * @method Models\SendChatMessageResponse SendChatMessage(Models\SendChatMessageRequest $req) 这是一个供您体验大模型聊天的接口。
  * @method Models\StartNotebookResponse StartNotebook(Models\StartNotebookRequest $req) 启动Notebook
+ * @method Models\StartTrainingTaskResponse StartTrainingTask(Models\StartTrainingTaskRequest $req) 启动模型训练任务
  * @method Models\StopModelAccelerateTaskResponse StopModelAccelerateTask(Models\StopModelAccelerateTaskRequest $req) 停止模型加速任务
  * @method Models\StopNotebookResponse StopNotebook(Models\StopNotebookRequest $req) 停止Notebook
+ * @method Models\StopTrainingTaskResponse StopTrainingTask(Models\StopTrainingTaskRequest $req) 停止模型训练任务
  */
 
 class TioneClient extends AbstractClient

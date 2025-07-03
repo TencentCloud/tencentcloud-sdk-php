@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupId(string $GroupId) 设置API分组ID
  * @method string getMicroserviceId() 获取微服务ID
  * @method void setMicroserviceId(string $MicroserviceId) 设置微服务ID
+ * @method string getNamespaceId() 获取命名空间ID
+ * @method void setNamespaceId(string $NamespaceId) 设置命名空间ID
  */
 class CreateAllGatewayApiAsyncRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreateAllGatewayApiAsyncRequest extends AbstractModel
     public $MicroserviceId;
 
     /**
+     * @var string 命名空间ID
+     */
+    public $NamespaceId;
+
+    /**
      * @param string $GroupId API分组ID
      * @param string $MicroserviceId 微服务ID
+     * @param string $NamespaceId 命名空间ID
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class CreateAllGatewayApiAsyncRequest extends AbstractModel
 
         if (array_key_exists("MicroserviceId",$param) and $param["MicroserviceId"] !== null) {
             $this->MicroserviceId = $param["MicroserviceId"];
+        }
+
+        if (array_key_exists("NamespaceId",$param) and $param["NamespaceId"] !== null) {
+            $this->NamespaceId = $param["NamespaceId"];
         }
     }
 }

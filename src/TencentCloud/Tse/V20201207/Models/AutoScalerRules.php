@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 指标伸缩的规则
  *
  * @method integer getStabilizationWindowSeconds() 获取稳定窗口时间，扩容时默认0，缩容时默认300
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStabilizationWindowSeconds(integer $StabilizationWindowSeconds) 设置稳定窗口时间，扩容时默认0，缩容时默认300
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSelectPolicy() 获取选择策略依据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSelectPolicy(string $SelectPolicy) 设置选择策略依据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPolicies() 获取扩缩容策略
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPolicies(array $Policies) 设置扩缩容策略
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AutoScalerRules extends AbstractModel
 {
     /**
      * @var integer 稳定窗口时间，扩容时默认0，缩容时默认300
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StabilizationWindowSeconds;
 
     /**
      * @var string 选择策略依据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SelectPolicy;
 
     /**
      * @var array 扩缩容策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Policies;
 
     /**
      * @param integer $StabilizationWindowSeconds 稳定窗口时间，扩容时默认0，缩容时默认300
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SelectPolicy 选择策略依据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Policies 扩缩容策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

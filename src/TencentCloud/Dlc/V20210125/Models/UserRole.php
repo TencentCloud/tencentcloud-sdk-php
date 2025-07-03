@@ -33,21 +33,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDesc() 获取角色描述信息
  * @method void setDesc(string $Desc) 设置角色描述信息
  * @method string getRoleName() 获取角色名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoleName(string $RoleName) 设置角色名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreator() 获取创建者UIN
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreator(string $Creator) 设置创建者UIN
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCosPermissionList() 获取cos授权路径列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCosPermissionList(array $CosPermissionList) 设置cos授权路径列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPermissionJson() 获取cam策略json
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPermissionJson(string $PermissionJson) 设置cam策略json
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsDefault() 获取是否设置为常驻：1非常驻（默认）、2常驻（仅能设置一个常驻）
+ * @method void setIsDefault(integer $IsDefault) 设置是否设置为常驻：1非常驻（默认）、2常驻（仅能设置一个常驻）
  */
 class UserRole extends AbstractModel
 {
@@ -83,27 +77,28 @@ class UserRole extends AbstractModel
 
     /**
      * @var string 角色名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoleName;
 
     /**
      * @var string 创建者UIN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Creator;
 
     /**
      * @var array cos授权路径列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CosPermissionList;
 
     /**
      * @var string cam策略json
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PermissionJson;
+
+    /**
+     * @var integer 是否设置为常驻：1非常驻（默认）、2常驻（仅能设置一个常驻）
+     */
+    public $IsDefault;
 
     /**
      * @param integer $RoleId 角色ID
@@ -113,13 +108,10 @@ class UserRole extends AbstractModel
      * @param integer $ModifyTime 最近修改时间戳
      * @param string $Desc 角色描述信息
      * @param string $RoleName 角色名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Creator 创建者UIN
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CosPermissionList cos授权路径列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PermissionJson cam策略json
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsDefault 是否设置为常驻：1非常驻（默认）、2常驻（仅能设置一个常驻）
      */
     function __construct()
     {
@@ -177,6 +169,10 @@ class UserRole extends AbstractModel
 
         if (array_key_exists("PermissionJson",$param) and $param["PermissionJson"] !== null) {
             $this->PermissionJson = $param["PermissionJson"];
+        }
+
+        if (array_key_exists("IsDefault",$param) and $param["IsDefault"] !== null) {
+            $this->IsDefault = $param["IsDefault"];
         }
     }
 }

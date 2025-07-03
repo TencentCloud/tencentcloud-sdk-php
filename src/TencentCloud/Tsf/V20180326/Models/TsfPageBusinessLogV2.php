@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * 业务日志列表
  *
  * @method integer getTotalCount() 获取总条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置总条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getContent() 获取业务日志列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContent(array $Content) 设置业务日志列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getScrollId() 获取游标ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScrollId(string $ScrollId) 设置游标ID
@@ -36,18 +32,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置查询状态
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSearchAfter() 获取查询es时，使用searchAfter返回的游标
+ * @method void setSearchAfter(array $SearchAfter) 设置查询es时，使用searchAfter返回的游标
  */
 class TsfPageBusinessLogV2 extends AbstractModel
 {
     /**
      * @var integer 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
      * @var array 业务日志列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Content;
 
@@ -64,14 +60,18 @@ class TsfPageBusinessLogV2 extends AbstractModel
     public $Status;
 
     /**
+     * @var array 查询es时，使用searchAfter返回的游标
+     */
+    public $SearchAfter;
+
+    /**
      * @param integer $TotalCount 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Content 业务日志列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScrollId 游标ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 查询状态
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SearchAfter 查询es时，使用searchAfter返回的游标
      */
     function __construct()
     {
@@ -105,6 +105,10 @@ class TsfPageBusinessLogV2 extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("SearchAfter",$param) and $param["SearchAfter"] !== null) {
+            $this->SearchAfter = $param["SearchAfter"];
         }
     }
 }

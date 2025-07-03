@@ -47,9 +47,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUuid() 获取主机uuid
  * @method void setUuid(string $Uuid) 设置主机uuid
  * @method string getUpdateTime() 获取数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFirstTime() 获取首次采集时间
  * @method void setFirstTime(string $FirstTime) 设置首次采集时间
  * @method integer getIsNew() 获取是否新增[0:否|1:是]
@@ -57,9 +55,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMachineWanIp() 获取服务器外网IP
  * @method void setMachineWanIp(string $MachineWanIp) 设置服务器外网IP
  * @method MachineExtraInfo getMachineExtraInfo() 获取 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssetCoreModuleBaseInfo extends AbstractModel
 {
@@ -130,7 +126,6 @@ class AssetCoreModuleBaseInfo extends AbstractModel
 
     /**
      * @var string 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
@@ -151,7 +146,6 @@ class AssetCoreModuleBaseInfo extends AbstractModel
 
     /**
      * @var MachineExtraInfo  附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineExtraInfo;
 
@@ -170,12 +164,10 @@ class AssetCoreModuleBaseInfo extends AbstractModel
      * @param string $Quuid 主机Quuid
      * @param string $Uuid 主机uuid
      * @param string $UpdateTime 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FirstTime 首次采集时间
      * @param integer $IsNew 是否新增[0:否|1:是]
      * @param string $MachineWanIp 服务器外网IP
      * @param MachineExtraInfo $MachineExtraInfo  附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

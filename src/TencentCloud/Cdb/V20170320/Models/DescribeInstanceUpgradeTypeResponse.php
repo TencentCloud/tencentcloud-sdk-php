@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceUpgradeType返回参数结构体
  *
- * @method string getInstanceId() 获取实例id
- * @method void setInstanceId(string $InstanceId) 设置实例id
- * @method string getUpgradeType() 获取实例升级类型
- * @method void setUpgradeType(string $UpgradeType) 设置实例升级类型
+ * @method string getInstanceId() 获取实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。
+ * @method string getUpgradeType() 获取实例升级类型。
+ * @method void setUpgradeType(string $UpgradeType) 设置实例升级类型。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeInstanceUpgradeTypeResponse extends AbstractModel
 {
     /**
-     * @var string 实例id
+     * @var string 实例 ID。
      */
     public $InstanceId;
 
     /**
-     * @var string 实例升级类型
+     * @var string 实例升级类型。
      */
     public $UpgradeType;
 
@@ -45,8 +45,8 @@ class DescribeInstanceUpgradeTypeResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $InstanceId 实例id
-     * @param string $UpgradeType 实例升级类型
+     * @param string $InstanceId 实例 ID。
+     * @param string $UpgradeType 实例升级类型。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

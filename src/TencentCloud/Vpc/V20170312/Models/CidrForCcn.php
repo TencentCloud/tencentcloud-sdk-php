@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 用于发布云联网的cidr信息
  *
  * @method string getCidr() 获取local cidr值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCidr(string $Cidr) 设置local cidr值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getPublishedToVbc() 获取是否发布到了云联网。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublishedToVbc(boolean $PublishedToVbc) 设置是否发布到了云联网。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CidrForCcn extends AbstractModel
 {
     /**
      * @var string local cidr值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Cidr;
 
     /**
      * @var boolean 是否发布到了云联网。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublishedToVbc;
 
     /**
      * @param string $Cidr local cidr值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $PublishedToVbc 是否发布到了云联网。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

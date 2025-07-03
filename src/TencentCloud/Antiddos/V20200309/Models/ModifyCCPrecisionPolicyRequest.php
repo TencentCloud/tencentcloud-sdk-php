@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例Id
  * @method string getPolicyId() 获取策略Id
  * @method void setPolicyId(string $PolicyId) 设置策略Id
- * @method string getPolicyAction() 获取策略方式。可取值：alg、drop。alg指返回验证码方式验证，drop表示该访问丢弃。
- * @method void setPolicyAction(string $PolicyAction) 设置策略方式。可取值：alg、drop。alg指返回验证码方式验证，drop表示该访问丢弃。
+ * @method string getPolicyAction() 获取策略方式。可取值：alg、drop、trans。alg指返回验证码方式验证，drop表示该访问丢弃，trans表示该访问放行。
+ * @method void setPolicyAction(string $PolicyAction) 设置策略方式。可取值：alg、drop、trans。alg指返回验证码方式验证，drop表示该访问丢弃，trans表示该访问放行。
  * @method array getPolicyList() 获取策略记录
  * @method void setPolicyList(array $PolicyList) 设置策略记录
  */
@@ -42,7 +42,7 @@ class ModifyCCPrecisionPolicyRequest extends AbstractModel
     public $PolicyId;
 
     /**
-     * @var string 策略方式。可取值：alg、drop。alg指返回验证码方式验证，drop表示该访问丢弃。
+     * @var string 策略方式。可取值：alg、drop、trans。alg指返回验证码方式验证，drop表示该访问丢弃，trans表示该访问放行。
      */
     public $PolicyAction;
 
@@ -54,7 +54,7 @@ class ModifyCCPrecisionPolicyRequest extends AbstractModel
     /**
      * @param string $InstanceId 实例Id
      * @param string $PolicyId 策略Id
-     * @param string $PolicyAction 策略方式。可取值：alg、drop。alg指返回验证码方式验证，drop表示该访问丢弃。
+     * @param string $PolicyAction 策略方式。可取值：alg、drop、trans。alg指返回验证码方式验证，drop表示该访问丢弃，trans表示该访问放行。
      * @param array $PolicyList 策略记录
      */
     function __construct()

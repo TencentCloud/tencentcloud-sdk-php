@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 服务契约版本信息
  *
  * @method string getVersion() 获取契约版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersion(string $Version) 设置契约版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取契约名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置契约名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getKey() 获取唯一名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKey(string $Key) 设置唯一名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class GovernanceServiceContractVersion extends AbstractModel
 {
     /**
      * @var string 契约版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Version;
 
     /**
      * @var string 契约名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 唯一名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Key;
 
     /**
      * @param string $Version 契约版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 契约名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Key 唯一名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

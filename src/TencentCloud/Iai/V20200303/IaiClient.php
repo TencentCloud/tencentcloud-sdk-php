@@ -58,7 +58,6 @@ use TencentCloud\Iai\V20200303\Models as Models;
 - 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
  * @method Models\DeleteFaceResponse DeleteFace(Models\DeleteFaceRequest $req) 删除一个人员下的人脸图片。如果该人员只有一张人脸图片，则返回错误。
  * @method Models\DeleteGroupResponse DeleteGroup(Models\DeleteGroupRequest $req) 删除该人员库及包含的所有的人员。同时，人员对应的所有人脸信息将被删除。若某人员同时存在多个人员库中，该人员不会被删除，但属于该人员库中的自定义描述字段信息会被删除，属于其他人员库的自定义描述字段信息不受影响。
-
  * @method Models\DeletePersonResponse DeletePerson(Models\DeletePersonRequest $req) 删除该人员信息，此操作会导致所有人员库均删除此人员。同时，该人员的所有人脸信息将被删除。
  * @method Models\DeletePersonFromGroupResponse DeletePersonFromGroup(Models\DeletePersonFromGroupRequest $req) 从某人员库中删除人员，此操作仅影响该人员库。若该人员仅存在于指定的人员库中，该人员将被删除，其所有的人脸信息也将被删除。
  * @method Models\DetectFaceResponse DetectFace(Models\DetectFaceRequest $req) 检测给定图片中的人脸（Face）的位置、相应的面部属性和人脸质量信息，位置包括 (x，y，w，h)，面部属性包括性别（gender）、年龄（age）、表情（expression）、魅力（beauty）、眼镜（glass）、发型（hair）、口罩（mask）和姿态 (pitch，roll，yaw)，人脸质量信息包括整体质量分（score）、模糊分（sharpness）、光照分（brightness）和五官遮挡分（completeness）。
@@ -94,6 +93,12 @@ use TencentCloud\Iai\V20200303\Models as Models;
 1.本接口可以指定需要计算返回的人脸属性，避免无效计算，降低耗时；
 2.本接口支持更多属性细项数，也会持续增加更多功能。
 请您使用本接口完成相应的人脸检测与属性分析需求。
+
+>     
+- 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
+ * @method Models\DetectFaceSimilarityResponse DetectFaceSimilarity(Models\DetectFaceSimilarityRequest $req) 对两张图片中的人脸进行相似度比对，返回人脸相似度分数。
+
+若您需要判断 “此人是否是某人”，即验证某张图片中的人是否是已知身份的某人，如常见的人脸登录场景，建议使用[人脸验证](https://www.tencentcloud.com/document/product/1059/36972)或[人员验证](https://www.tencentcloud.com/document/product/1059/36971)接口。
 
 >     
 - 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。

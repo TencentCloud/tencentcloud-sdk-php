@@ -57,17 +57,11 @@ use TencentCloud\Common\AbstractModel;
 <li>DISABLE : 未开通</li>
 </ul>
  * @method string getOperatorUserId() 获取操作扩展服务的操作人UserId，员工在腾讯电子签平台的唯一身份标识，为32位字符串。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperatorUserId(string $OperatorUserId) 设置操作扩展服务的操作人UserId，员工在腾讯电子签平台的唯一身份标识，为32位字符串。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getOperateOn() 获取扩展服务的操作时间，格式为Unix标准时间戳（秒）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperateOn(integer $OperateOn) 设置扩展服务的操作时间，格式为Unix标准时间戳（秒）。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getHasAuthUserList() 获取该扩展服务若可以授权，此参数对应授权人员的列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHasAuthUserList(array $HasAuthUserList) 设置该扩展服务若可以授权，此参数对应授权人员的列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ExtendAuthInfo extends AbstractModel
 {
@@ -103,19 +97,16 @@ class ExtendAuthInfo extends AbstractModel
 
     /**
      * @var string 操作扩展服务的操作人UserId，员工在腾讯电子签平台的唯一身份标识，为32位字符串。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OperatorUserId;
 
     /**
      * @var integer 扩展服务的操作时间，格式为Unix标准时间戳（秒）。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OperateOn;
 
     /**
      * @var array 该扩展服务若可以授权，此参数对应授权人员的列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HasAuthUserList;
 
@@ -139,11 +130,8 @@ class ExtendAuthInfo extends AbstractModel
 <li>DISABLE : 未开通</li>
 </ul>
      * @param string $OperatorUserId 操作扩展服务的操作人UserId，员工在腾讯电子签平台的唯一身份标识，为32位字符串。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $OperateOn 扩展服务的操作时间，格式为Unix标准时间戳（秒）。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $HasAuthUserList 该扩展服务若可以授权，此参数对应授权人员的列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

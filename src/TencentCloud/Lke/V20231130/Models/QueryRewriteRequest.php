@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getQuestion() 获取需要改写的问题
  * @method void setQuestion(string $Question) 设置需要改写的问题
- * @method array getMessages() 获取需要改写的多轮历史会话
- * @method void setMessages(array $Messages) 设置需要改写的多轮历史会话
+ * @method array getMessages() 获取需要改写的多轮历史会话，每轮历史对话需要包含user（问）和assistant（答）成对输入，由于模型字符限制，最多提供4轮对话。
+ * @method void setMessages(array $Messages) 设置需要改写的多轮历史会话，每轮历史对话需要包含user（问）和assistant（答）成对输入，由于模型字符限制，最多提供4轮对话。
  * @method string getModel() 获取模型名称
  * @method void setModel(string $Model) 设置模型名称
  */
@@ -35,7 +35,7 @@ class QueryRewriteRequest extends AbstractModel
     public $Question;
 
     /**
-     * @var array 需要改写的多轮历史会话
+     * @var array 需要改写的多轮历史会话，每轮历史对话需要包含user（问）和assistant（答）成对输入，由于模型字符限制，最多提供4轮对话。
      */
     public $Messages;
 
@@ -46,7 +46,7 @@ class QueryRewriteRequest extends AbstractModel
 
     /**
      * @param string $Question 需要改写的问题
-     * @param array $Messages 需要改写的多轮历史会话
+     * @param array $Messages 需要改写的多轮历史会话，每轮历史对话需要包含user（问）和assistant（答）成对输入，由于模型字符限制，最多提供4轮对话。
      * @param string $Model 模型名称
      */
     function __construct()

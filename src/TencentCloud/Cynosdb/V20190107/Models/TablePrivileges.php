@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * mysql表权限
  *
  * @method string getDb() 获取数据库名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDb(string $Db) 设置数据库名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTableName() 获取表名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTableName(string $TableName) 设置表名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPrivileges() 获取权限列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrivileges(array $Privileges) 设置权限列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TablePrivileges extends AbstractModel
 {
     /**
      * @var string 数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Db;
 
     /**
      * @var string 表名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TableName;
 
     /**
      * @var array 权限列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Privileges;
 
     /**
      * @param string $Db 数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TableName 表名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Privileges 权限列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

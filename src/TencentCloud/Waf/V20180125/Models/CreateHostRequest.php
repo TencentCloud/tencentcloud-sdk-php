@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateHost请求参数结构体
  *
- * @method HostRecord getHost() 获取防护域名配置信息
- * @method void setHost(HostRecord $Host) 设置防护域名配置信息
+ * @method HostRecord getHost() 获取防护域名配置信息。内网负载均衡器必须携带对应的NumericalVpcId。
+ * @method void setHost(HostRecord $Host) 设置防护域名配置信息。内网负载均衡器必须携带对应的NumericalVpcId。
  * @method string getInstanceID() 获取实例id
  * @method void setInstanceID(string $InstanceID) 设置实例id
  */
 class CreateHostRequest extends AbstractModel
 {
     /**
-     * @var HostRecord 防护域名配置信息
+     * @var HostRecord 防护域名配置信息。内网负载均衡器必须携带对应的NumericalVpcId。
      */
     public $Host;
 
@@ -38,7 +38,7 @@ class CreateHostRequest extends AbstractModel
     public $InstanceID;
 
     /**
-     * @param HostRecord $Host 防护域名配置信息
+     * @param HostRecord $Host 防护域名配置信息。内网负载均衡器必须携带对应的NumericalVpcId。
      * @param string $InstanceID 实例id
      */
     function __construct()

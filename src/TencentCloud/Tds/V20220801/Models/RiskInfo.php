@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 风险信息
  *
- * @method integer getType() 获取风险类型
- * @method void setType(integer $Type) 设置风险类型
- * @method integer getLevel() 获取风险等级
- * @method void setLevel(integer $Level) 设置风险等级
+ * @method integer getType() 获取风险类型。更多详情请参见：[Android](https://cloud.tencent.com/document/product/1628/85898)、[iOS](https://cloud.tencent.com/document/product/1628/85896)、[H5](https://cloud.tencent.com/document/product/1628/85897)、[小程序](https://cloud.tencent.com/document/product/1628/85895)、[场景风险](https://cloud.tencent.com/document/product/1628/88912)
+ * @method void setType(integer $Type) 设置风险类型。更多详情请参见：[Android](https://cloud.tencent.com/document/product/1628/85898)、[iOS](https://cloud.tencent.com/document/product/1628/85896)、[H5](https://cloud.tencent.com/document/product/1628/85897)、[小程序](https://cloud.tencent.com/document/product/1628/85895)、[场景风险](https://cloud.tencent.com/document/product/1628/88912)
+ * @method integer getLevel() 获取[风险等级](https://cloud.tencent.com/document/product/1628/85308)
+ * @method void setLevel(integer $Level) 设置[风险等级](https://cloud.tencent.com/document/product/1628/85308)
  */
 class RiskInfo extends AbstractModel
 {
     /**
-     * @var integer 风险类型
+     * @var integer 风险类型。更多详情请参见：[Android](https://cloud.tencent.com/document/product/1628/85898)、[iOS](https://cloud.tencent.com/document/product/1628/85896)、[H5](https://cloud.tencent.com/document/product/1628/85897)、[小程序](https://cloud.tencent.com/document/product/1628/85895)、[场景风险](https://cloud.tencent.com/document/product/1628/88912)
      */
     public $Type;
 
     /**
-     * @var integer 风险等级
+     * @var integer [风险等级](https://cloud.tencent.com/document/product/1628/85308)
      */
     public $Level;
 
     /**
-     * @param integer $Type 风险类型
-     * @param integer $Level 风险等级
+     * @param integer $Type 风险类型。更多详情请参见：[Android](https://cloud.tencent.com/document/product/1628/85898)、[iOS](https://cloud.tencent.com/document/product/1628/85896)、[H5](https://cloud.tencent.com/document/product/1628/85897)、[小程序](https://cloud.tencent.com/document/product/1628/85895)、[场景风险](https://cloud.tencent.com/document/product/1628/88912)
+     * @param integer $Level [风险等级](https://cloud.tencent.com/document/product/1628/85308)
      */
     function __construct()
     {

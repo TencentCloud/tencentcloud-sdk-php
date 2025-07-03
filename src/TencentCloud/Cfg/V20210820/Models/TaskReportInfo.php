@@ -29,13 +29,17 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getExpired() 获取是否有效
  * @method void setExpired(boolean $Expired) 设置是否有效
  * @method string getCosUrl() 获取演练报告cos文件地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCosUrl(string $CosUrl) 设置演练报告cos文件地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLog() 获取演练报告导出日志
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLog(string $Log) 设置演练报告导出日志
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getArchiveStage() 获取0--未开始，1--正在归档，2--归档成功，3--归档失败
+ * @method void setArchiveStage(integer $ArchiveStage) 设置0--未开始，1--正在归档，2--归档成功，3--归档失败
+ * @method string getArchiveTime() 获取归档时间
+ * @method void setArchiveTime(string $ArchiveTime) 设置归档时间
+ * @method string getArchiveUuid() 获取归档ID
+ * @method void setArchiveUuid(string $ArchiveUuid) 设置归档ID
  */
 class TaskReportInfo extends AbstractModel
 {
@@ -61,7 +65,6 @@ class TaskReportInfo extends AbstractModel
 
     /**
      * @var string 演练报告cos文件地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CosUrl;
 
@@ -72,14 +75,31 @@ class TaskReportInfo extends AbstractModel
     public $Log;
 
     /**
+     * @var integer 0--未开始，1--正在归档，2--归档成功，3--归档失败
+     */
+    public $ArchiveStage;
+
+    /**
+     * @var string 归档时间
+     */
+    public $ArchiveTime;
+
+    /**
+     * @var string 归档ID
+     */
+    public $ArchiveUuid;
+
+    /**
      * @param integer $Stage 0--未开始，1--正在导出，2--导出成功，3--导出失败
      * @param string $CreateTime 创建时间
      * @param string $ExpirationTime 有效期截止时间
      * @param boolean $Expired 是否有效
      * @param string $CosUrl 演练报告cos文件地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Log 演练报告导出日志
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ArchiveStage 0--未开始，1--正在归档，2--归档成功，3--归档失败
+     * @param string $ArchiveTime 归档时间
+     * @param string $ArchiveUuid 归档ID
      */
     function __construct()
     {
@@ -116,6 +136,18 @@ class TaskReportInfo extends AbstractModel
 
         if (array_key_exists("Log",$param) and $param["Log"] !== null) {
             $this->Log = $param["Log"];
+        }
+
+        if (array_key_exists("ArchiveStage",$param) and $param["ArchiveStage"] !== null) {
+            $this->ArchiveStage = $param["ArchiveStage"];
+        }
+
+        if (array_key_exists("ArchiveTime",$param) and $param["ArchiveTime"] !== null) {
+            $this->ArchiveTime = $param["ArchiveTime"];
+        }
+
+        if (array_key_exists("ArchiveUuid",$param) and $param["ArchiveUuid"] !== null) {
+            $this->ArchiveUuid = $param["ArchiveUuid"];
         }
     }
 }

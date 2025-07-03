@@ -21,47 +21,30 @@ use TencentCloud\Common\AbstractModel;
  * 语音检测结果，Code 为 0 时返回
  *
  * @method string getDumpUrl() 获取流检测时返回，音频转存地址，保留30min
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDumpUrl(string $DumpUrl) 设置流检测时返回，音频转存地址，保留30min
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getHitFlag() 获取是否违规
  * @method void setHitFlag(boolean $HitFlag) 设置是否违规
  * @method string getMainType() 获取违规主要类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMainType(string $MainType) 设置违规主要类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getScanDetail() 获取语音检测详情
  * @method void setScanDetail(array $ScanDetail) 设置语音检测详情
  * @method string getRoomId() 获取gme实时语音房间ID，透传任务传入时的RoomId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoomId(string $RoomId) 设置gme实时语音房间ID，透传任务传入时的RoomId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOpenId() 获取gme实时语音用户ID，透传任务传入时的OpenId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOpenId(string $OpenId) 设置gme实时语音用户ID，透传任务传入时的OpenId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInfo() 获取备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInfo(string $Info) 设置备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getOffset() 获取流检测时分片在流中的偏移时间，单位毫秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOffset(integer $Offset) 设置流检测时分片在流中的偏移时间，单位毫秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDuration() 获取流检测时分片时长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDuration(integer $Duration) 设置流检测时分片时长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPieceStartTime() 获取分片开始检测时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPieceStartTime(integer $PieceStartTime) 设置分片开始检测时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ScanPiece extends AbstractModel
 {
     /**
      * @var string 流检测时返回，音频转存地址，保留30min
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DumpUrl;
 
@@ -72,7 +55,6 @@ class ScanPiece extends AbstractModel
 
     /**
      * @var string 违规主要类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MainType;
 
@@ -83,59 +65,45 @@ class ScanPiece extends AbstractModel
 
     /**
      * @var string gme实时语音房间ID，透传任务传入时的RoomId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoomId;
 
     /**
      * @var string gme实时语音用户ID，透传任务传入时的OpenId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OpenId;
 
     /**
      * @var string 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Info;
 
     /**
      * @var integer 流检测时分片在流中的偏移时间，单位毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Offset;
 
     /**
      * @var integer 流检测时分片时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Duration;
 
     /**
      * @var integer 分片开始检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PieceStartTime;
 
     /**
      * @param string $DumpUrl 流检测时返回，音频转存地址，保留30min
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $HitFlag 是否违规
      * @param string $MainType 违规主要类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ScanDetail 语音检测详情
      * @param string $RoomId gme实时语音房间ID，透传任务传入时的RoomId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OpenId gme实时语音用户ID，透传任务传入时的OpenId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Info 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Offset 流检测时分片在流中的偏移时间，单位毫秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Duration 流检测时分片时长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PieceStartTime 分片开始检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

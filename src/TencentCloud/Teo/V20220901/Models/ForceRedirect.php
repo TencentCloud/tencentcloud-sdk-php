@@ -18,7 +18,7 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 访问协议强制https跳转配置
+ * 访问协议强制 HTTPS 跳转配置。
  *
  * @method string getSwitch() 获取访问强制跳转配置开关，取值有：
 <li>on：开启；</li>
@@ -29,11 +29,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getRedirectStatusCode() 获取重定向状态码，取值有：
 <li>301：301跳转；</li>
 <li>302：302跳转。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRedirectStatusCode(integer $RedirectStatusCode) 设置重定向状态码，取值有：
 <li>301：301跳转；</li>
 <li>302：302跳转。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ForceRedirect extends AbstractModel
 {
@@ -48,7 +46,6 @@ class ForceRedirect extends AbstractModel
      * @var integer 重定向状态码，取值有：
 <li>301：301跳转；</li>
 <li>302：302跳转。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RedirectStatusCode;
 
@@ -59,7 +56,6 @@ class ForceRedirect extends AbstractModel
      * @param integer $RedirectStatusCode 重定向状态码，取值有：
 <li>301：301跳转；</li>
 <li>302：302跳转。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

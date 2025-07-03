@@ -37,29 +37,21 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getFlowMode() 获取负载均衡型WAF的流量模式，1：清洗模式，0：镜像模式
  * @method void setFlowMode(integer $FlowMode) 设置负载均衡型WAF的流量模式，1：清洗模式，0：镜像模式
  * @method integer getState() 获取域名绑定负载均衡器状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setState(integer $State) 设置域名绑定负载均衡器状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAlbType() 获取负载均衡类型，clb或者apisix
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlbType(string $AlbType) 设置负载均衡类型，clb或者apisix
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getIpHeaders() 获取IsCdn=3时，表示自定义header
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpHeaders(array $IpHeaders) 设置IsCdn=3时，表示自定义header
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCdcClusters() 获取cdc-clb-waf类型WAF的CDC集群信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCdcClusters(string $CdcClusters) 设置cdc-clb-waf类型WAF的CDC集群信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCloudType() 获取云类型:public:公有云；private:私有云;hybrid:混合云
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCloudType(string $CloudType) 设置云类型:public:公有云；private:私有云;hybrid:混合云
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNote() 获取域名备注信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNote(string $Note) 设置域名备注信息
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getLabels() 获取域名标签
+ * @method void setLabels(array $Labels) 设置域名标签
+ * @method integer getAccessStatus() 获取clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”
+ * @method void setAccessStatus(integer $AccessStatus) 设置clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”
  */
 class ClbDomainsInfo extends AbstractModel
 {
@@ -105,39 +97,43 @@ class ClbDomainsInfo extends AbstractModel
 
     /**
      * @var integer 域名绑定负载均衡器状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $State;
 
     /**
      * @var string 负载均衡类型，clb或者apisix
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AlbType;
 
     /**
      * @var array IsCdn=3时，表示自定义header
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IpHeaders;
 
     /**
      * @var string cdc-clb-waf类型WAF的CDC集群信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CdcClusters;
 
     /**
      * @var string 云类型:public:公有云；private:私有云;hybrid:混合云
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CloudType;
 
     /**
      * @var string 域名备注信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Note;
+
+    /**
+     * @var array 域名标签
+     */
+    public $Labels;
+
+    /**
+     * @var integer clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”
+     */
+    public $AccessStatus;
 
     /**
      * @param string $Domain 域名
@@ -149,17 +145,13 @@ class ClbDomainsInfo extends AbstractModel
      * @param array $LoadBalancerSet 负载均衡类型为clb时，对应的负载均衡器信息
      * @param integer $FlowMode 负载均衡型WAF的流量模式，1：清洗模式，0：镜像模式
      * @param integer $State 域名绑定负载均衡器状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AlbType 负载均衡类型，clb或者apisix
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $IpHeaders IsCdn=3时，表示自定义header
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CdcClusters cdc-clb-waf类型WAF的CDC集群信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CloudType 云类型:public:公有云；private:私有云;hybrid:混合云
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Note 域名备注信息
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Labels 域名标签
+     * @param integer $AccessStatus clbwaf接入状态，0代表“尚无流量接入”，1代表“流量接入”，2代表“CLB监听器已注销”，3代表“配置生效中”，4代表“配置下发失败中”
      */
     function __construct()
     {
@@ -233,6 +225,14 @@ class ClbDomainsInfo extends AbstractModel
 
         if (array_key_exists("Note",$param) and $param["Note"] !== null) {
             $this->Note = $param["Note"];
+        }
+
+        if (array_key_exists("Labels",$param) and $param["Labels"] !== null) {
+            $this->Labels = $param["Labels"];
+        }
+
+        if (array_key_exists("AccessStatus",$param) and $param["AccessStatus"] !== null) {
+            $this->AccessStatus = $param["AccessStatus"];
         }
     }
 }

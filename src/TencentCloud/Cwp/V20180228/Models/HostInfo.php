@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 添加登录审计白名单的主机信息实体
  *
- * @method string getQuuid() 获取Quuid
- * @method void setQuuid(string $Quuid) 设置Quuid
- * @method string getUuid() 获取Uuid
- * @method void setUuid(string $Uuid) 设置Uuid
+ * @method string getQuuid() 获取主机Quuid
+ * @method void setQuuid(string $Quuid) 设置主机Quuid
+ * @method string getUuid() 获取Uuid主机
+ * @method void setUuid(string $Uuid) 设置Uuid主机
  */
 class HostInfo extends AbstractModel
 {
     /**
-     * @var string Quuid
+     * @var string 主机Quuid
      */
     public $Quuid;
 
     /**
-     * @var string Uuid
+     * @var string Uuid主机
      */
     public $Uuid;
 
     /**
-     * @param string $Quuid Quuid
-     * @param string $Uuid Uuid
+     * @param string $Quuid 主机Quuid
+     * @param string $Uuid Uuid主机
      */
     function __construct()
     {

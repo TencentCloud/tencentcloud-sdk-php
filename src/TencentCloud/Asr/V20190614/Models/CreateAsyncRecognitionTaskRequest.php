@@ -33,7 +33,7 @@ use TencentCloud\Common\AbstractModel;
 • 16k_es：西班牙语；
 • 16k_hi：印地语；
 • 16k_fr：法语；
-• 16k_de：法语；
+• 16k_de：德语；
  * @method void setEngineType(string $EngineType) 设置引擎模型类型。
 • 16k_zh：中文普通话通用；
 • 16k_en：英语；
@@ -47,7 +47,7 @@ use TencentCloud\Common\AbstractModel;
 • 16k_es：西班牙语；
 • 16k_hi：印地语；
 • 16k_fr：法语；
-• 16k_de：法语；
+• 16k_de：德语；
  * @method string getUrl() 获取语音流地址，支持rtmp、rtsp等流媒体协议，以及各类基于http协议的直播流(不支持hls, m3u8)
  * @method void setUrl(string $Url) 设置语音流地址，支持rtmp、rtsp等流媒体协议，以及各类基于http协议的直播流(不支持hls, m3u8)
  * @method string getCallbackUrl() 获取支持HTTP和HTTPS协议，用于接收识别结果，您需要自行搭建公网可调用的服务。回调格式&内容详见：[语音流异步识别回调说明](https://cloud.tencent.com/document/product/1093/52633)
@@ -56,8 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSignToken(string $SignToken) 设置用于生成回调通知中的签名
  * @method integer getFilterDirty() 获取是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。默认值为 0
  * @method void setFilterDirty(integer $FilterDirty) 设置是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。默认值为 0
- * @method integer getFilterModal() 获取是否过语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。默认值为 0
- * @method void setFilterModal(integer $FilterModal) 设置是否过语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。默认值为 0
+ * @method integer getFilterModal() 获取是否过滤语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。默认值为 0
+ * @method void setFilterModal(integer $FilterModal) 设置是否过滤语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。默认值为 0
  * @method integer getFilterPunc() 获取是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认为0
  * @method void setFilterPunc(integer $FilterPunc) 设置是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认为0
  * @method integer getConvertNumMode() 获取是否进行阿拉伯数字智能转换。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字。默认值为1
@@ -85,7 +85,7 @@ class CreateAsyncRecognitionTaskRequest extends AbstractModel
 • 16k_es：西班牙语；
 • 16k_hi：印地语；
 • 16k_fr：法语；
-• 16k_de：法语；
+• 16k_de：德语；
      */
     public $EngineType;
 
@@ -110,7 +110,7 @@ class CreateAsyncRecognitionTaskRequest extends AbstractModel
     public $FilterDirty;
 
     /**
-     * @var integer 是否过语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。默认值为 0
+     * @var integer 是否过滤语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。默认值为 0
      */
     public $FilterModal;
 
@@ -153,12 +153,12 @@ class CreateAsyncRecognitionTaskRequest extends AbstractModel
 • 16k_es：西班牙语；
 • 16k_hi：印地语；
 • 16k_fr：法语；
-• 16k_de：法语；
+• 16k_de：德语；
      * @param string $Url 语音流地址，支持rtmp、rtsp等流媒体协议，以及各类基于http协议的直播流(不支持hls, m3u8)
      * @param string $CallbackUrl 支持HTTP和HTTPS协议，用于接收识别结果，您需要自行搭建公网可调用的服务。回调格式&内容详见：[语音流异步识别回调说明](https://cloud.tencent.com/document/product/1093/52633)
      * @param string $SignToken 用于生成回调通知中的签名
      * @param integer $FilterDirty 是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。默认值为 0
-     * @param integer $FilterModal 是否过语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。默认值为 0
+     * @param integer $FilterModal 是否过滤语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。默认值为 0
      * @param integer $FilterPunc 是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认为0
      * @param integer $ConvertNumMode 是否进行阿拉伯数字智能转换。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字。默认值为1
      * @param integer $WordInfo 是否显示词级别时间戳。0：不显示；1：显示，不包含标点时间戳，2：显示，包含标点时间戳。默认为0

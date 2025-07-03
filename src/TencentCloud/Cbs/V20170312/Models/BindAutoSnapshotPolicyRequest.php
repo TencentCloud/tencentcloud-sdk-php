@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BindAutoSnapshotPolicy请求参数结构体
  *
- * @method string getAutoSnapshotPolicyId() 获取要绑定的定期快照策略ID。
- * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) 设置要绑定的定期快照策略ID。
+ * @method string getAutoSnapshotPolicyId() 获取要绑定的定期快照策略ID，通过[ DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/api/362/33556)接口查询。
+ * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) 设置要绑定的定期快照策略ID，通过[ DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/api/362/33556)接口查询。
  * @method array getDiskIds() 获取要绑定的云硬盘ID列表，一次请求最多绑定80块云盘。
  * @method void setDiskIds(array $DiskIds) 设置要绑定的云硬盘ID列表，一次请求最多绑定80块云盘。
  */
 class BindAutoSnapshotPolicyRequest extends AbstractModel
 {
     /**
-     * @var string 要绑定的定期快照策略ID。
+     * @var string 要绑定的定期快照策略ID，通过[ DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/api/362/33556)接口查询。
      */
     public $AutoSnapshotPolicyId;
 
@@ -38,7 +38,7 @@ class BindAutoSnapshotPolicyRequest extends AbstractModel
     public $DiskIds;
 
     /**
-     * @param string $AutoSnapshotPolicyId 要绑定的定期快照策略ID。
+     * @param string $AutoSnapshotPolicyId 要绑定的定期快照策略ID，通过[ DescribeAutoSnapshotPolicies](https://cloud.tencent.com/document/api/362/33556)接口查询。
      * @param array $DiskIds 要绑定的云硬盘ID列表，一次请求最多绑定80块云盘。
      */
     function __construct()

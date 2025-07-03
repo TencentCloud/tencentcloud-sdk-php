@@ -30,10 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCosUrl(string $CosUrl) 设置cos路径
  * @method string getUpdateTime() 获取更新时间
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
- * @method integer getStatus() 获取文档状态(5审核通过 7审核中 8审核不通过 9审核通过 10待发布 11发布中 12发布成功 13学习中 14学习失败)
-
- * @method void setStatus(integer $Status) 设置文档状态(5审核通过 7审核中 8审核不通过 9审核通过 10待发布 11发布中 12发布成功 13学习中 14学习失败)
-
+ * @method integer getStatus() 获取文档状态： 1-未生成 2-生成中 3-生成成功 4-生成失败 5-删除中 6-删除成功 7-审核中 8-审核失败 9-审核成功 10-待发布 11-发布中 12-已发布 13-学习中 14-学习失败 15-更新中 16-更新失败 17-解析中 18-解析失败 19-导入失败 20-已过期 21-超量失效 22-超量失效恢复
+ * @method void setStatus(integer $Status) 设置文档状态： 1-未生成 2-生成中 3-生成成功 4-生成失败 5-删除中 6-删除成功 7-审核中 8-审核失败 9-审核成功 10-待发布 11-发布中 12-已发布 13-学习中 14-学习失败 15-更新中 16-更新失败 17-解析中 18-解析失败 19-导入失败 20-已过期 21-超量失效 22-超量失效恢复
  * @method string getStatusDesc() 获取文档状态描述
  * @method void setStatusDesc(string $StatusDesc) 设置文档状态描述
  * @method string getReason() 获取生成失败原因
@@ -64,10 +62,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDocCharSize(string $DocCharSize) 设置文档字符量
  * @method boolean getIsAllowEdit() 获取是否允许编辑
  * @method void setIsAllowEdit(boolean $IsAllowEdit) 设置是否允许编辑
- * @method integer getAttrRange() 获取属性标签适用范围 1：全部，2：按条件范围
- * @method void setAttrRange(integer $AttrRange) 设置属性标签适用范围 1：全部，2：按条件范围
- * @method array getAttrLabels() 获取属性标签
- * @method void setAttrLabels(array $AttrLabels) 设置属性标签
+ * @method integer getAttrRange() 获取标签适用范围 1：全部，2：按条件范围
+ * @method void setAttrRange(integer $AttrRange) 设置标签适用范围 1：全部，2：按条件范围
+ * @method array getAttrLabels() 获取标签
+ * @method void setAttrLabels(array $AttrLabels) 设置标签
+ * @method string getCateBizId() 获取分类ID
+ * @method void setCateBizId(string $CateBizId) 设置分类ID
+ * @method boolean getIsDisabled() 获取文档是否停用，false:未停用，true:已停用
+ * @method void setIsDisabled(boolean $IsDisabled) 设置文档是否停用，false:未停用，true:已停用
+ * @method boolean getIsDownload() 获取是否支持下载
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsDownload(boolean $IsDownload) 设置是否支持下载
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -99,8 +105,7 @@ class DescribeDocResponse extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @var integer 文档状态(5审核通过 7审核中 8审核不通过 9审核通过 10待发布 11发布中 12发布成功 13学习中 14学习失败)
-
+     * @var integer 文档状态： 1-未生成 2-生成中 3-生成成功 4-生成失败 5-删除中 6-删除成功 7-审核中 8-审核失败 9-审核成功 10-待发布 11-发布中 12-已发布 13-学习中 14-学习失败 15-更新中 16-更新失败 17-解析中 18-解析失败 19-导入失败 20-已过期 21-超量失效 22-超量失效恢复
      */
     public $Status;
 
@@ -180,14 +185,30 @@ class DescribeDocResponse extends AbstractModel
     public $IsAllowEdit;
 
     /**
-     * @var integer 属性标签适用范围 1：全部，2：按条件范围
+     * @var integer 标签适用范围 1：全部，2：按条件范围
      */
     public $AttrRange;
 
     /**
-     * @var array 属性标签
+     * @var array 标签
      */
     public $AttrLabels;
+
+    /**
+     * @var string 分类ID
+     */
+    public $CateBizId;
+
+    /**
+     * @var boolean 文档是否停用，false:未停用，true:已停用
+     */
+    public $IsDisabled;
+
+    /**
+     * @var boolean 是否支持下载
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsDownload;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -200,8 +221,7 @@ class DescribeDocResponse extends AbstractModel
      * @param string $FileType 文件类型
      * @param string $CosUrl cos路径
      * @param string $UpdateTime 更新时间
-     * @param integer $Status 文档状态(5审核通过 7审核中 8审核不通过 9审核通过 10待发布 11发布中 12发布成功 13学习中 14学习失败)
-
+     * @param integer $Status 文档状态： 1-未生成 2-生成中 3-生成成功 4-生成失败 5-删除中 6-删除成功 7-审核中 8-审核失败 9-审核成功 10-待发布 11-发布中 12-已发布 13-学习中 14-学习失败 15-更新中 16-更新失败 17-解析中 18-解析失败 19-导入失败 20-已过期 21-超量失效 22-超量失效恢复
      * @param string $StatusDesc 文档状态描述
      * @param string $Reason 生成失败原因
      * @param boolean $IsRefer 答案中是否引用
@@ -217,8 +237,12 @@ class DescribeDocResponse extends AbstractModel
      * @param boolean $IsCreatedQa 是否生成过问答
      * @param string $DocCharSize 文档字符量
      * @param boolean $IsAllowEdit 是否允许编辑
-     * @param integer $AttrRange 属性标签适用范围 1：全部，2：按条件范围
-     * @param array $AttrLabels 属性标签
+     * @param integer $AttrRange 标签适用范围 1：全部，2：按条件范围
+     * @param array $AttrLabels 标签
+     * @param string $CateBizId 分类ID
+     * @param boolean $IsDisabled 文档是否停用，false:未停用，true:已停用
+     * @param boolean $IsDownload 是否支持下载
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -329,6 +353,18 @@ class DescribeDocResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->AttrLabels, $obj);
             }
+        }
+
+        if (array_key_exists("CateBizId",$param) and $param["CateBizId"] !== null) {
+            $this->CateBizId = $param["CateBizId"];
+        }
+
+        if (array_key_exists("IsDisabled",$param) and $param["IsDisabled"] !== null) {
+            $this->IsDisabled = $param["IsDisabled"];
+        }
+
+        if (array_key_exists("IsDownload",$param) and $param["IsDownload"] !== null) {
+            $this->IsDownload = $param["IsDownload"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

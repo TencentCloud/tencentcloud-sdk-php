@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) 设置地域
  * @method integer getSnapshotNumber() 获取快照总个数
  * @method void setSnapshotNumber(integer $SnapshotNumber) 设置快照总个数
- * @method integer getSnapshotSize() 获取快照总容量
- * @method void setSnapshotSize(integer $SnapshotSize) 设置快照总容量
+ * @method integer getSnapshotSize() 获取快照总容量，单位是MiB
+ * @method void setSnapshotSize(integer $SnapshotSize) 设置快照总容量，单位是MiB
  */
 class SnapshotStatistics extends AbstractModel
 {
@@ -40,14 +40,14 @@ class SnapshotStatistics extends AbstractModel
     public $SnapshotNumber;
 
     /**
-     * @var integer 快照总容量
+     * @var integer 快照总容量，单位是MiB
      */
     public $SnapshotSize;
 
     /**
      * @param string $Region 地域
      * @param integer $SnapshotNumber 快照总个数
-     * @param integer $SnapshotSize 快照总容量
+     * @param integer $SnapshotSize 快照总容量，单位是MiB
      */
     function __construct()
     {

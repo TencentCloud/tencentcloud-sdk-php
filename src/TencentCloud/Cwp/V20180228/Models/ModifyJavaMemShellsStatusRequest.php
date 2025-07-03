@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyJavaMemShellsStatus请求参数结构体
  *
- * @method array getIds() 获取事件Id数组
- * @method void setIds(array $Ids) 设置事件Id数组
  * @method integer getStatus() 获取目标处理状态： 0 - 待处理 1 - 已加白 2 - 已删除 3 - 已忽略 4 - 已手动处理
  * @method void setStatus(integer $Status) 设置目标处理状态： 0 - 待处理 1 - 已加白 2 - 已删除 3 - 已忽略 4 - 已手动处理
+ * @method array getIds() 获取事件Id数组
+ * @method void setIds(array $Ids) 设置事件Id数组
+ * @method boolean getUpdateAll() 获取是否更新全部，只支持忽略、已处理、删除
+ * @method void setUpdateAll(boolean $UpdateAll) 设置是否更新全部，只支持忽略、已处理、删除
  */
 class ModifyJavaMemShellsStatusRequest extends AbstractModel
 {
-    /**
-     * @var array 事件Id数组
-     */
-    public $Ids;
-
     /**
      * @var integer 目标处理状态： 0 - 待处理 1 - 已加白 2 - 已删除 3 - 已忽略 4 - 已手动处理
      */
     public $Status;
 
     /**
-     * @param array $Ids 事件Id数组
+     * @var array 事件Id数组
+     */
+    public $Ids;
+
+    /**
+     * @var boolean 是否更新全部，只支持忽略、已处理、删除
+     */
+    public $UpdateAll;
+
+    /**
      * @param integer $Status 目标处理状态： 0 - 待处理 1 - 已加白 2 - 已删除 3 - 已忽略 4 - 已手动处理
+     * @param array $Ids 事件Id数组
+     * @param boolean $UpdateAll 是否更新全部，只支持忽略、已处理、删除
      */
     function __construct()
     {
@@ -54,12 +62,16 @@ class ModifyJavaMemShellsStatusRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
         if (array_key_exists("Ids",$param) and $param["Ids"] !== null) {
             $this->Ids = $param["Ids"];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists("UpdateAll",$param) and $param["UpdateAll"] !== null) {
+            $this->UpdateAll = $param["UpdateAll"];
         }
     }
 }

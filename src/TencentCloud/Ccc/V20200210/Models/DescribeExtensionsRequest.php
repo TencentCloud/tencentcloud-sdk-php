@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeExtensions请求参数结构体
  *
- * @method integer getSdkAppId() 获取TCCC 实例应用 ID
- * @method void setSdkAppId(integer $SdkAppId) 设置TCCC 实例应用 ID
+ * @method integer getSdkAppId() 获取应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+ * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
  * @method integer getPageNumber() 获取分页页号（从0开始）
  * @method void setPageNumber(integer $PageNumber) 设置分页页号（从0开始）
  * @method array getExtensionIds() 获取筛选分机号列表
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeExtensionsRequest extends AbstractModel
 {
     /**
-     * @var integer TCCC 实例应用 ID
+     * @var integer 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
     public $SdkAppId;
 
@@ -66,7 +66,7 @@ class DescribeExtensionsRequest extends AbstractModel
     public $IsNeedStatus;
 
     /**
-     * @param integer $SdkAppId TCCC 实例应用 ID
+     * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param integer $PageNumber 分页页号（从0开始）
      * @param array $ExtensionIds 筛选分机号列表
      * @param integer $PageSize 分页大小

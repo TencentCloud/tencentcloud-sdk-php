@@ -20,10 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RenewDomainBatch请求参数结构体
  *
- * @method integer getPeriod() 获取域名续费的年限。
- * @method void setPeriod(integer $Period) 设置域名续费的年限。
+ * @method integer getPeriod() 获取域名续费的年限。取值范围[1,9]
+ * @method void setPeriod(integer $Period) 设置域名续费的年限。取值范围[1,9]
  * @method array getDomains() 获取批量续费的域名。
+一次提交不大于4000个
  * @method void setDomains(array $Domains) 设置批量续费的域名。
+一次提交不大于4000个
  * @method integer getPayMode() 获取付费模式 0手动在线付费，1使用余额付费，2使用特惠包。
  * @method void setPayMode(integer $PayMode) 设置付费模式 0手动在线付费，1使用余额付费，2使用特惠包。
  * @method integer getAutoRenewFlag() 获取自动续费开关。有三个可选值：
@@ -46,12 +48,13 @@ use TencentCloud\Common\AbstractModel;
 class RenewDomainBatchRequest extends AbstractModel
 {
     /**
-     * @var integer 域名续费的年限。
+     * @var integer 域名续费的年限。取值范围[1,9]
      */
     public $Period;
 
     /**
      * @var array 批量续费的域名。
+一次提交不大于4000个
      */
     public $Domains;
 
@@ -89,8 +92,9 @@ class RenewDomainBatchRequest extends AbstractModel
     public $ActivityId;
 
     /**
-     * @param integer $Period 域名续费的年限。
+     * @param integer $Period 域名续费的年限。取值范围[1,9]
      * @param array $Domains 批量续费的域名。
+一次提交不大于4000个
      * @param integer $PayMode 付费模式 0手动在线付费，1使用余额付费，2使用特惠包。
      * @param integer $AutoRenewFlag 自动续费开关。有三个可选值：
 0 表示关闭，不自动续费

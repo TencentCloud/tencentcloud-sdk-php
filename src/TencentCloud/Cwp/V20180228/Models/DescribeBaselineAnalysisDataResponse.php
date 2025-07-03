@@ -21,25 +21,15 @@ use TencentCloud\Common\AbstractModel;
  * DescribeBaselineAnalysisData返回参数结构体
  *
  * @method string getLatestScanTime() 获取最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLatestScanTime(string $LatestScanTime) 设置最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsGlobal() 获取是否全部服务器：1-是 0-否
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsGlobal(integer $IsGlobal) 设置是否全部服务器：1-是 0-否
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScanHostCount() 获取服务器总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScanHostCount(integer $ScanHostCount) 设置服务器总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScanRuleCount() 获取检测项总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScanRuleCount(integer $ScanRuleCount) 设置检测项总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIfFirstScan() 获取是否是第一次检测  1是 0不是
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIfFirstScan(integer $IfFirstScan) 设置是否是第一次检测  1是 0不是
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -47,31 +37,26 @@ class DescribeBaselineAnalysisDataResponse extends AbstractModel
 {
     /**
      * @var string 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LatestScanTime;
 
     /**
      * @var integer 是否全部服务器：1-是 0-否
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsGlobal;
 
     /**
      * @var integer 服务器总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScanHostCount;
 
     /**
      * @var integer 检测项总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScanRuleCount;
 
     /**
      * @var integer 是否是第一次检测  1是 0不是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IfFirstScan;
 
@@ -82,15 +67,10 @@ class DescribeBaselineAnalysisDataResponse extends AbstractModel
 
     /**
      * @param string $LatestScanTime 最后检测时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsGlobal 是否全部服务器：1-是 0-否
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ScanHostCount 服务器总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ScanRuleCount 检测项总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IfFirstScan 是否是第一次检测  1是 0不是
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

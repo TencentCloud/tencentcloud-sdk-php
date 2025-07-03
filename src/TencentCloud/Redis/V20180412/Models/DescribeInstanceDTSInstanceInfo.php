@@ -20,106 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 详细DTS实例信息
  *
- * @method integer getRegionId() 获取地域ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRegionId(integer $RegionId) 设置地域ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceId() 获取实例ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceId(string $InstanceId) 设置实例ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getSetId() 获取仓库ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSetId(integer $SetId) 设置仓库ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getZoneId() 获取可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setZoneId(integer $ZoneId) 设置可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getType() 获取实例类型
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setType(integer $Type) 设置实例类型
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInstanceName() 获取实例名称
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setInstanceName(string $InstanceName) 设置实例名称
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVip() 获取实例访问地址
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVip(string $Vip) 设置实例访问地址
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取状态
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置状态
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRegionId() 获取地域 ID。
+ * @method void setRegionId(integer $RegionId) 设置地域 ID。
+ * @method string getInstanceId() 获取实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。
+ * @method integer getSetId() 获取仓库ID。
+ * @method void setSetId(integer $SetId) 设置仓库ID。
+ * @method integer getZoneId() 获取可用区ID。
+ * @method void setZoneId(integer $ZoneId) 设置可用区ID。
+ * @method integer getType() 获取实例类型。
+ * @method void setType(integer $Type) 设置实例类型。
+ * @method string getInstanceName() 获取实例名称。
+ * @method void setInstanceName(string $InstanceName) 设置实例名称。
+ * @method string getVip() 获取实例访问地址。
+ * @method void setVip(string $Vip) 设置实例访问地址。
+ * @method integer getStatus() 获取状态。
+ * @method void setStatus(integer $Status) 设置状态。
  */
 class DescribeInstanceDTSInstanceInfo extends AbstractModel
 {
     /**
-     * @var integer 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 地域 ID。
      */
     public $RegionId;
 
     /**
-     * @var string 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 实例 ID。
      */
     public $InstanceId;
 
     /**
-     * @var integer 仓库ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 仓库ID。
      */
     public $SetId;
 
     /**
-     * @var integer 可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 可用区ID。
      */
     public $ZoneId;
 
     /**
-     * @var integer 实例类型
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 实例类型。
      */
     public $Type;
 
     /**
-     * @var string 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 实例名称。
      */
     public $InstanceName;
 
     /**
-     * @var string 实例访问地址
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 实例访问地址。
      */
     public $Vip;
 
     /**
-     * @var integer 状态
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 状态。
      */
     public $Status;
 
     /**
-     * @param integer $RegionId 地域ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceId 实例ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $SetId 仓库ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $ZoneId 可用区ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Type 实例类型
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InstanceName 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Vip 实例访问地址
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RegionId 地域 ID。
+     * @param string $InstanceId 实例 ID。
+     * @param integer $SetId 仓库ID。
+     * @param integer $ZoneId 可用区ID。
+     * @param integer $Type 实例类型。
+     * @param string $InstanceName 实例名称。
+     * @param string $Vip 实例访问地址。
+     * @param integer $Status 状态。
      */
     function __construct()
     {

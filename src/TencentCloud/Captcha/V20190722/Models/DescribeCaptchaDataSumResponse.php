@@ -29,9 +29,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getAttackSum() 获取拦截攻击量
  * @method void setAttackSum(integer $AttackSum) 设置拦截攻击量
  * @method string getCaptchaMsg() 获取返回信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCaptchaMsg(string $CaptchaMsg) 设置返回信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCaptchaCode() 获取成功返回0  其它失败
  * @method void setCaptchaCode(integer $CaptchaCode) 设置成功返回0  其它失败
  * @method integer getCheckTicketSum() 获取票据校验总量
@@ -67,7 +65,6 @@ class DescribeCaptchaDataSumResponse extends AbstractModel
 
     /**
      * @var string 返回信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CaptchaMsg;
 
@@ -102,7 +99,6 @@ class DescribeCaptchaDataSumResponse extends AbstractModel
      * @param integer $VfySum 请求验证量
      * @param integer $AttackSum 拦截攻击量
      * @param string $CaptchaMsg 返回信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CaptchaCode 成功返回0  其它失败
      * @param integer $CheckTicketSum 票据校验总量
      * @param integer $TicketThroughputSum 票据验证通过量

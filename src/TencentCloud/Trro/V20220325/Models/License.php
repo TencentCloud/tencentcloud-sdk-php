@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 按授权查看的license列表
  *
  * @method integer getCount() 获取该类型的license个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCount(integer $Count) 设置该类型的license个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取license状态：0:未绑定；1:已绑定；2:已停服；3:已退费
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置license状态：0:未绑定；1:已绑定；2:已停服；3:已退费
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExpireTime() 获取到期时间戳：s
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpireTime(string $ExpireTime) 设置到期时间戳：s
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDuration() 获取服务时长：s
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDuration(string $Duration) 设置服务时长：s
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRemainDay() 获取剩余天数：天
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemainDay(integer $RemainDay) 设置剩余天数：天
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLicenseIds() 获取该类型的licenseId列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLicenseIds(array $LicenseIds) 设置该类型的licenseId列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class License extends AbstractModel
 {
     /**
      * @var integer 该类型的license个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Count;
 
     /**
      * @var integer license状态：0:未绑定；1:已绑定；2:已停服；3:已退费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 到期时间戳：s
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpireTime;
 
     /**
      * @var string 服务时长：s
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Duration;
 
     /**
      * @var integer 剩余天数：天
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RemainDay;
 
     /**
      * @var array 该类型的licenseId列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LicenseIds;
 
     /**
      * @param integer $Count 该类型的license个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status license状态：0:未绑定；1:已绑定；2:已停服；3:已退费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExpireTime 到期时间戳：s
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Duration 服务时长：s
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RemainDay 剩余天数：天
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $LicenseIds 该类型的licenseId列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

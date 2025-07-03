@@ -33,51 +33,9 @@ PLATINUM 铂金版
  * @method string getName() 获取实例名称
  * @method void setName(string $Name) 设置实例名称
  * @method string getSkuCode() 获取商品规格，可用规格如下：
-experiment_500,
 basic_1k,
-basic_2k,
-basic_4k,
-basic_6k,
-pro_4k,
-pro_6k,
-pro_1w,
-pro_2w,
-pro_3w,
-pro_4w,
-pro_5w,
-platinum_6k,
-platinum_1w,
-platinum_2w,
-platinum_4w,
-platinum_10w,
-platinum_15w,
-platinum_20w,
-platinum_40w,
-platinum_60w,
-platinum_100w
  * @method void setSkuCode(string $SkuCode) 设置商品规格，可用规格如下：
-experiment_500,
 basic_1k,
-basic_2k,
-basic_4k,
-basic_6k,
-pro_4k,
-pro_6k,
-pro_1w,
-pro_2w,
-pro_3w,
-pro_4w,
-pro_5w,
-platinum_6k,
-platinum_1w,
-platinum_2w,
-platinum_4w,
-platinum_10w,
-platinum_15w,
-platinum_20w,
-platinum_40w,
-platinum_60w,
-platinum_100w
  * @method string getRemark() 获取备注信息
  * @method void setRemark(string $Remark) 设置备注信息
  * @method array getTagList() 获取标签列表
@@ -113,28 +71,7 @@ PLATINUM 铂金版
 
     /**
      * @var string 商品规格，可用规格如下：
-experiment_500,
 basic_1k,
-basic_2k,
-basic_4k,
-basic_6k,
-pro_4k,
-pro_6k,
-pro_1w,
-pro_2w,
-pro_3w,
-pro_4w,
-pro_5w,
-platinum_6k,
-platinum_1w,
-platinum_2w,
-platinum_4w,
-platinum_10w,
-platinum_15w,
-platinum_20w,
-platinum_40w,
-platinum_60w,
-platinum_100w
      */
     public $SkuCode;
 
@@ -186,28 +123,7 @@ PRO  专业版
 PLATINUM 铂金版
      * @param string $Name 实例名称
      * @param string $SkuCode 商品规格，可用规格如下：
-experiment_500,
 basic_1k,
-basic_2k,
-basic_4k,
-basic_6k,
-pro_4k,
-pro_6k,
-pro_1w,
-pro_2w,
-pro_3w,
-pro_4w,
-pro_5w,
-platinum_6k,
-platinum_1w,
-platinum_2w,
-platinum_4w,
-platinum_10w,
-platinum_15w,
-platinum_20w,
-platinum_40w,
-platinum_60w,
-platinum_100w
      * @param string $Remark 备注信息
      * @param array $TagList 标签列表
      * @param array $VpcList 实例绑定的VPC信息

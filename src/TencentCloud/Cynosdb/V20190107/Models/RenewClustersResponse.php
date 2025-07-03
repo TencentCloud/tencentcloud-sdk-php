@@ -21,25 +21,15 @@ use TencentCloud\Common\AbstractModel;
  * RenewClusters返回参数结构体
  *
  * @method array getBigDealIds() 获取预付费总订单号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBigDealIds(array $BigDealIds) 设置预付费总订单号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDealNames() 获取退款订单号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDealNames(array $DealNames) 设置退款订单号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTranId() 获取冻结流水，一次开通一个冻结流水
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTranId(string $TranId) 设置冻结流水，一次开通一个冻结流水
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getResourceIds() 获取每个订单号对应的发货资源id列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceIds(array $ResourceIds) 设置每个订单号对应的发货资源id列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getClusterIds() 获取集群id列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterIds(array $ClusterIds) 设置集群id列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -47,31 +37,26 @@ class RenewClustersResponse extends AbstractModel
 {
     /**
      * @var array 预付费总订单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BigDealIds;
 
     /**
      * @var array 退款订单号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DealNames;
 
     /**
      * @var string 冻结流水，一次开通一个冻结流水
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TranId;
 
     /**
      * @var array 每个订单号对应的发货资源id列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceIds;
 
     /**
      * @var array 集群id列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterIds;
 
@@ -82,15 +67,10 @@ class RenewClustersResponse extends AbstractModel
 
     /**
      * @param array $BigDealIds 预付费总订单号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DealNames 退款订单号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TranId 冻结流水，一次开通一个冻结流水
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ResourceIds 每个订单号对应的发货资源id列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ClusterIds 集群id列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

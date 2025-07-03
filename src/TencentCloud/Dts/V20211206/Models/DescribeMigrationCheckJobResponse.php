@@ -21,17 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * DescribeMigrationCheckJob返回参数结构体
  *
  * @method string getStatus() 获取校验任务执行状态，如：notStarted(未开始)、running(校验中)、failed(校验任务失败)、success(任务成功)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置校验任务执行状态，如：notStarted(未开始)、running(校验中)、failed(校验任务失败)、success(任务成功)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBriefMsg() 获取校验任务结果输出简要信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBriefMsg(string $BriefMsg) 设置校验任务结果输出简要信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getStepInfo() 获取检查步骤
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStepInfo(array $StepInfo) 设置检查步骤
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCheckFlag() 获取校验结果，如：checkPass(校验通过)、checkNotPass(校验未通过)
  * @method void setCheckFlag(string $CheckFlag) 设置校验结果，如：checkPass(校验通过)、checkNotPass(校验未通过)
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -41,19 +35,16 @@ class DescribeMigrationCheckJobResponse extends AbstractModel
 {
     /**
      * @var string 校验任务执行状态，如：notStarted(未开始)、running(校验中)、failed(校验任务失败)、success(任务成功)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 校验任务结果输出简要信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BriefMsg;
 
     /**
      * @var array 检查步骤
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StepInfo;
 
@@ -69,11 +60,8 @@ class DescribeMigrationCheckJobResponse extends AbstractModel
 
     /**
      * @param string $Status 校验任务执行状态，如：notStarted(未开始)、running(校验中)、failed(校验任务失败)、success(任务成功)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BriefMsg 校验任务结果输出简要信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $StepInfo 检查步骤
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CheckFlag 校验结果，如：checkPass(校验通过)、checkNotPass(校验未通过)
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

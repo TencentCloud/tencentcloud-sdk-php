@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 事件对象
  *
  * @method integer getId() 获取事件id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(integer $Id) 设置事件id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取事件名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置事件名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取事件触发类型名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置事件触发类型名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCondition() 获取时间触发条件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCondition(string $Condition) 设置时间触发条件
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class EventObj extends AbstractModel
 {
     /**
      * @var integer 事件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var string 事件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 事件触发类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 时间触发条件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Condition;
 
     /**
      * @param integer $Id 事件id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 事件名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 事件触发类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Condition 时间触发条件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

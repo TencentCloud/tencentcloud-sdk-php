@@ -21,105 +21,73 @@ use TencentCloud\Common\AbstractModel;
  * 体检报告综合信息
  *
  * @method GeneralExaminationBaseItem getGeneralExamination() 获取一般检查
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGeneralExamination(GeneralExaminationBaseItem $GeneralExamination) 设置一般检查
-注意：此字段可能返回 null，表示取不到有效值。
  * @method InternalMedicineBaseItem getInternalMedicine() 获取内科
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInternalMedicine(InternalMedicineBaseItem $InternalMedicine) 设置内科
-注意：此字段可能返回 null，表示取不到有效值。
  * @method SurgeryBaseItem getSurgery() 获取外科
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSurgery(SurgeryBaseItem $Surgery) 设置外科
-注意：此字段可能返回 null，表示取不到有效值。
  * @method StomatologyBaseItem getStomatology() 获取口腔科
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStomatology(StomatologyBaseItem $Stomatology) 设置口腔科
-注意：此字段可能返回 null，表示取不到有效值。
  * @method OphthalmologyBaseItem getOphthalmology() 获取眼科
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOphthalmology(OphthalmologyBaseItem $Ophthalmology) 设置眼科
-注意：此字段可能返回 null，表示取不到有效值。
  * @method OtolaryngologyBaseItem getOtolaryngology() 获取耳鼻喉科
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOtolaryngology(OtolaryngologyBaseItem $Otolaryngology) 设置耳鼻喉科
-注意：此字段可能返回 null，表示取不到有效值。
  * @method GynaecologyBaseItem getGynaecology() 获取妇科
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGynaecology(GynaecologyBaseItem $Gynaecology) 设置妇科
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getUnclassified() 获取未标准化
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnclassified(array $Unclassified) 设置未标准化
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PhysicalExamination extends AbstractModel
 {
     /**
      * @var GeneralExaminationBaseItem 一般检查
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GeneralExamination;
 
     /**
      * @var InternalMedicineBaseItem 内科
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InternalMedicine;
 
     /**
      * @var SurgeryBaseItem 外科
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Surgery;
 
     /**
      * @var StomatologyBaseItem 口腔科
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Stomatology;
 
     /**
      * @var OphthalmologyBaseItem 眼科
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ophthalmology;
 
     /**
      * @var OtolaryngologyBaseItem 耳鼻喉科
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Otolaryngology;
 
     /**
      * @var GynaecologyBaseItem 妇科
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Gynaecology;
 
     /**
      * @var array 未标准化
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Unclassified;
 
     /**
      * @param GeneralExaminationBaseItem $GeneralExamination 一般检查
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InternalMedicineBaseItem $InternalMedicine 内科
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SurgeryBaseItem $Surgery 外科
-注意：此字段可能返回 null，表示取不到有效值。
      * @param StomatologyBaseItem $Stomatology 口腔科
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OphthalmologyBaseItem $Ophthalmology 眼科
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OtolaryngologyBaseItem $Otolaryngology 耳鼻喉科
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GynaecologyBaseItem $Gynaecology 妇科
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Unclassified 未标准化
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

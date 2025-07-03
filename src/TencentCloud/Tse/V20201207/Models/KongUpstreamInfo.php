@@ -21,127 +21,78 @@ use TencentCloud\Common\AbstractModel;
  * 服务的后端配置
  *
  * @method string getHost() 获取IP或域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHost(string $Host) 设置IP或域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPort() 获取端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPort(integer $Port) 设置端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSourceID() 获取服务来源ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSourceID(string $SourceID) 设置服务来源ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNamespace() 获取命名空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespace(string $Namespace) 设置命名空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getServiceName() 获取服务（注册中心或Kubernetes中的服务）名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceName(string $ServiceName) 设置服务（注册中心或Kubernetes中的服务）名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTargets() 获取服务后端类型是IPList时提供
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTargets(array $Targets) 设置服务后端类型是IPList时提供
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSourceType() 获取服务来源类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSourceType(string $SourceType) 设置服务来源类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getScfType() 获取SCF函数类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScfType(string $ScfType) 设置SCF函数类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getScfNamespace() 获取SCF函数命名空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScfNamespace(string $ScfNamespace) 设置SCF函数命名空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getScfLambdaName() 获取SCF函数名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScfLambdaName(string $ScfLambdaName) 设置SCF函数名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getScfLambdaQualifier() 获取SCF函数版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScfLambdaQualifier(string $ScfLambdaQualifier) 设置SCF函数版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSlowStart() 获取冷启动时间，单位秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSlowStart(integer $SlowStart) 设置冷启动时间，单位秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAlgorithm() 获取负载均衡算法，默认为 round-robin，还支持 least-connections，consisten_hashing
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlgorithm(string $Algorithm) 设置负载均衡算法，默认为 round-robin，还支持 least-connections，consisten_hashing
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAutoScalingGroupID() 获取CVM弹性伸缩组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoScalingGroupID(string $AutoScalingGroupID) 设置CVM弹性伸缩组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAutoScalingCvmPort() 获取CVM弹性伸缩组端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoScalingCvmPort(integer $AutoScalingCvmPort) 设置CVM弹性伸缩组端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAutoScalingTatCmdStatus() 获取CVM弹性伸缩组使用的CVM TAT命令状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoScalingTatCmdStatus(string $AutoScalingTatCmdStatus) 设置CVM弹性伸缩组使用的CVM TAT命令状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAutoScalingHookStatus() 获取CVM弹性伸缩组生命周期挂钩状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoScalingHookStatus(string $AutoScalingHookStatus) 设置CVM弹性伸缩组生命周期挂钩状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSourceName() 获取服务来源的名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSourceName(string $SourceName) 设置服务来源的名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRealSourceType() 获取精确的服务来源类型，新建服务来源时候传入的类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealSourceType(string $RealSourceType) 设置精确的服务来源类型，新建服务来源时候传入的类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHealthStatus() 获取upstream健康状态HEALTHY（健康）, UNHEALTHY（异常）, HEALTHCHECKS_OFF（未开启）和NONE（不支持健康检查）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHealthStatus(string $HealthStatus) 设置upstream健康状态HEALTHY（健康）, UNHEALTHY（异常）, HEALTHCHECKS_OFF（未开启）和NONE（不支持健康检查）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getScfCamAuthEnable() 获取云函数是否开启CAM鉴权，不填时默认为开启(true)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScfCamAuthEnable(boolean $ScfCamAuthEnable) 设置云函数是否开启CAM鉴权，不填时默认为开启(true)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getScfIsBase64Encoded() 获取云函数是否开启Base64编码，默认为false
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScfIsBase64Encoded(boolean $ScfIsBase64Encoded) 设置云函数是否开启Base64编码，默认为false
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getScfIsIntegratedResponse() 获取云函数是否开启响应集成，默认为false
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScfIsIntegratedResponse(boolean $ScfIsIntegratedResponse) 设置云函数是否开启响应集成，默认为false
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class KongUpstreamInfo extends AbstractModel
 {
     /**
      * @var string IP或域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Host;
 
     /**
      * @var integer 端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Port;
 
     /**
      * @var string 服务来源ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SourceID;
 
     /**
      * @var string 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Namespace;
 
     /**
      * @var string 服务（注册中心或Kubernetes中的服务）名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceName;
 
@@ -153,153 +104,114 @@ class KongUpstreamInfo extends AbstractModel
 
     /**
      * @var string 服务来源类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SourceType;
 
     /**
      * @var string SCF函数类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScfType;
 
     /**
      * @var string SCF函数命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScfNamespace;
 
     /**
      * @var string SCF函数名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScfLambdaName;
 
     /**
      * @var string SCF函数版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScfLambdaQualifier;
 
     /**
      * @var integer 冷启动时间，单位秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SlowStart;
 
     /**
      * @var string 负载均衡算法，默认为 round-robin，还支持 least-connections，consisten_hashing
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Algorithm;
 
     /**
      * @var string CVM弹性伸缩组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoScalingGroupID;
 
     /**
      * @var integer CVM弹性伸缩组端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoScalingCvmPort;
 
     /**
      * @var string CVM弹性伸缩组使用的CVM TAT命令状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoScalingTatCmdStatus;
 
     /**
      * @var string CVM弹性伸缩组生命周期挂钩状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoScalingHookStatus;
 
     /**
      * @var string 服务来源的名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SourceName;
 
     /**
      * @var string 精确的服务来源类型，新建服务来源时候传入的类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RealSourceType;
 
     /**
      * @var string upstream健康状态HEALTHY（健康）, UNHEALTHY（异常）, HEALTHCHECKS_OFF（未开启）和NONE（不支持健康检查）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HealthStatus;
 
     /**
      * @var boolean 云函数是否开启CAM鉴权，不填时默认为开启(true)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScfCamAuthEnable;
 
     /**
      * @var boolean 云函数是否开启Base64编码，默认为false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScfIsBase64Encoded;
 
     /**
      * @var boolean 云函数是否开启响应集成，默认为false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScfIsIntegratedResponse;
 
     /**
      * @param string $Host IP或域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Port 端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SourceID 服务来源ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Namespace 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceName 服务（注册中心或Kubernetes中的服务）名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Targets 服务后端类型是IPList时提供
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SourceType 服务来源类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScfType SCF函数类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScfNamespace SCF函数命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScfLambdaName SCF函数名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScfLambdaQualifier SCF函数版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SlowStart 冷启动时间，单位秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Algorithm 负载均衡算法，默认为 round-robin，还支持 least-connections，consisten_hashing
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AutoScalingGroupID CVM弹性伸缩组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AutoScalingCvmPort CVM弹性伸缩组端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AutoScalingTatCmdStatus CVM弹性伸缩组使用的CVM TAT命令状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AutoScalingHookStatus CVM弹性伸缩组生命周期挂钩状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SourceName 服务来源的名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RealSourceType 精确的服务来源类型，新建服务来源时候传入的类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HealthStatus upstream健康状态HEALTHY（健康）, UNHEALTHY（异常）, HEALTHCHECKS_OFF（未开启）和NONE（不支持健康检查）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $ScfCamAuthEnable 云函数是否开启CAM鉴权，不填时默认为开启(true)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $ScfIsBase64Encoded 云函数是否开启Base64编码，默认为false
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $ScfIsIntegratedResponse 云函数是否开启响应集成，默认为false
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

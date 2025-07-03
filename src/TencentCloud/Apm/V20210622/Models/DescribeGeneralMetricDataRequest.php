@@ -20,125 +20,98 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGeneralMetricData请求参数结构体
  *
- * @method array getFilters() 获取要过滤的维度信息：
-service_metric视图支持：service.name（服务名）、span.kind（客户端/服务端视角）为维度进行过滤，service.name（服务名）必填。
-span.kind:
-	server:服务端视角
-	client:客户端视角
-默认为服务端视角进行查询。
-runtime_metric视图支持：service.name（服务名）维度进行过滤，service.name（服务名）必填。
-sql_metric视图支持：service.name（服务名）、db.instance（数据库名称）、db.ip（数据库实例ip）维度进行过滤，查询service_slow_sql_count（慢sql）指标时service.name必填，查询sql_duration_avg（耗时）指标时db.instance（数据库名称）必填。
- * @method void setFilters(array $Filters) 设置要过滤的维度信息：
-service_metric视图支持：service.name（服务名）、span.kind（客户端/服务端视角）为维度进行过滤，service.name（服务名）必填。
-span.kind:
-	server:服务端视角
-	client:客户端视角
-默认为服务端视角进行查询。
-runtime_metric视图支持：service.name（服务名）维度进行过滤，service.name（服务名）必填。
-sql_metric视图支持：service.name（服务名）、db.instance（数据库名称）、db.ip（数据库实例ip）维度进行过滤，查询service_slow_sql_count（慢sql）指标时service.name必填，查询sql_duration_avg（耗时）指标时db.instance（数据库名称）必填。
- * @method array getMetrics() 获取需要查询的指标，不可自定义输入。
-service_metric视图支持：service_request_count（总请求）、service_duration（平均响应时间）、service_error_req_rate（平均错误率）、service_slow_call_count（慢调用）、service_error_request_count（异常数量）。
-runtime_metric视图支持：service_gc_full_count（Full GC）。
-sql_metric视图支持：service_slow_sql_count（慢sql）、sql_duration_avg（耗时）。
- * @method void setMetrics(array $Metrics) 设置需要查询的指标，不可自定义输入。
-service_metric视图支持：service_request_count（总请求）、service_duration（平均响应时间）、service_error_req_rate（平均错误率）、service_slow_call_count（慢调用）、service_error_request_count（异常数量）。
-runtime_metric视图支持：service_gc_full_count（Full GC）。
-sql_metric视图支持：service_slow_sql_count（慢sql）、sql_duration_avg（耗时）。
- * @method string getInstanceId() 获取业务系统ID
- * @method void setInstanceId(string $InstanceId) 设置业务系统ID
- * @method string getViewName() 获取视图名称，不可自定义输入。支持：service_metric、runtime_metric、sql_metric。
- * @method void setViewName(string $ViewName) 设置视图名称，不可自定义输入。支持：service_metric、runtime_metric、sql_metric。
- * @method array getGroupBy() 获取聚合维度：
-service_metric视图支持：service.name（服务名）、span.kind （客户端/服务端视角）维度进行聚合，service.name（服务名）必填。
-runtime_metric视图支持：service.name（服务名）维度进行聚合，service.name（服务名）必填。
-sql_metric视图支持：service.name（服务名）、db.statement（sql语句）维度进行聚合，查询service_slow_sql_count（慢sql）时service.name（服务名）必填，查询sql_duration_avg（耗时）指标时service.name（服务名）、db.statement（sql语句）必填。
- * @method void setGroupBy(array $GroupBy) 设置聚合维度：
-service_metric视图支持：service.name（服务名）、span.kind （客户端/服务端视角）维度进行聚合，service.name（服务名）必填。
-runtime_metric视图支持：service.name（服务名）维度进行聚合，service.name（服务名）必填。
-sql_metric视图支持：service.name（服务名）、db.statement（sql语句）维度进行聚合，查询service_slow_sql_count（慢sql）时service.name（服务名）必填，查询sql_duration_avg（耗时）指标时service.name（服务名）、db.statement（sql语句）必填。
- * @method integer getStartTime() 获取起始时间的时间戳，单位为秒，只支持查询2天内最多1小时的指标数据。
- * @method void setStartTime(integer $StartTime) 设置起始时间的时间戳，单位为秒，只支持查询2天内最多1小时的指标数据。
- * @method integer getEndTime() 获取结束时间的时间戳，单位为秒，只支持查询2天内最多1小时的指标数据。
- * @method void setEndTime(integer $EndTime) 设置结束时间的时间戳，单位为秒，只支持查询2天内最多1小时的指标数据。
- * @method integer getPeriod() 获取聚合粒度，单位为秒，最小为60s，即一分钟的聚合粒度；如果为空或0则计算开始时间到截止时间的指标数据，上报其他值会报错。
- * @method void setPeriod(integer $Period) 设置聚合粒度，单位为秒，最小为60s，即一分钟的聚合粒度；如果为空或0则计算开始时间到截止时间的指标数据，上报其他值会报错。
+ * @method array getMetrics() 获取需要查询的指标名称，不可自定义输入，[详情请见。](https://cloud.tencent.com/document/product/248/101681)
+ * @method void setMetrics(array $Metrics) 设置需要查询的指标名称，不可自定义输入，[详情请见。](https://cloud.tencent.com/document/product/248/101681)
+ * @method string getInstanceId() 获取业务系统 ID
+ * @method void setInstanceId(string $InstanceId) 设置业务系统 ID
+ * @method string getViewName() 获取视图名称，不可自定义输入。[详情请见。](https://cloud.tencent.com/document/product/248/101681)
+ * @method void setViewName(string $ViewName) 设置视图名称，不可自定义输入。[详情请见。](https://cloud.tencent.com/document/product/248/101681)
+ * @method array getFilters() 获取要过滤的维度信息，不同视图有对应的指标维度，[详情请见。](https://cloud.tencent.com/document/product/248/101681)
+ * @method void setFilters(array $Filters) 设置要过滤的维度信息，不同视图有对应的指标维度，[详情请见。](https://cloud.tencent.com/document/product/248/101681)
+ * @method array getGroupBy() 获取聚合维度，不同视图有对应的指标维度，[详情请见。](https://cloud.tencent.com/document/product/248/101681)
+ * @method void setGroupBy(array $GroupBy) 设置聚合维度，不同视图有对应的指标维度，[详情请见。](https://cloud.tencent.com/document/product/248/101681)
+ * @method integer getStartTime() 获取起始时间的时间戳，支持查询30天内的指标数据。（单位：秒）
+ * @method void setStartTime(integer $StartTime) 设置起始时间的时间戳，支持查询30天内的指标数据。（单位：秒）
+ * @method integer getEndTime() 获取结束时间的时间戳，支持查询30天内的指标数据。（单位：秒）
+ * @method void setEndTime(integer $EndTime) 设置结束时间的时间戳，支持查询30天内的指标数据。（单位：秒）
+ * @method integer getPeriod() 获取是否按固定时间跨度聚合，填入1及大于1的值按1处理，不填按0处理。
+- 填入0，则计算开始时间到截止时间的指标数据。
+- 填入1，则会按照开始时间到截止时间的时间跨度选择聚合粒度：
+ - 时间跨度 (0,12) 小时，则按一分钟粒度聚合。
+ - 时间跨度 [12,48] 小时，则按五分钟粒度聚合。
+ - 时间跨度 (48, +∞) 小时，则按一小时粒度聚合。
+ * @method void setPeriod(integer $Period) 设置是否按固定时间跨度聚合，填入1及大于1的值按1处理，不填按0处理。
+- 填入0，则计算开始时间到截止时间的指标数据。
+- 填入1，则会按照开始时间到截止时间的时间跨度选择聚合粒度：
+ - 时间跨度 (0,12) 小时，则按一分钟粒度聚合。
+ - 时间跨度 [12,48] 小时，则按五分钟粒度聚合。
+ - 时间跨度 (48, +∞) 小时，则按一小时粒度聚合。
  * @method OrderBy getOrderBy() 获取对查询指标进行排序：
-service_metric视图支持：service_request_count（总请求）、service_duration（平均响应时间）、service_error_req_rate（平均错误率）、service_slow_call_count（慢调用）、service_error_request_count（异常数量）。
-runtime_metric视图支持：service_gc_full_count（Full GC）。
-sql_metric视图支持：service_slow_sql_count（慢sql）、sql_duration_avg（耗时）。
-asc:对查询指标进行升序排序
-desc：对查询指标进行降序排序
+Key 填写云 API 指标名称，[详情请见。](https://cloud.tencent.com/document/product/248/101681)
+Value 填写排序方式：     
+- asc：对查询指标进行升序排序
+- desc：对查询指标进行降序排序
  * @method void setOrderBy(OrderBy $OrderBy) 设置对查询指标进行排序：
-service_metric视图支持：service_request_count（总请求）、service_duration（平均响应时间）、service_error_req_rate（平均错误率）、service_slow_call_count（慢调用）、service_error_request_count（异常数量）。
-runtime_metric视图支持：service_gc_full_count（Full GC）。
-sql_metric视图支持：service_slow_sql_count（慢sql）、sql_duration_avg（耗时）。
-asc:对查询指标进行升序排序
-desc：对查询指标进行降序排序
+Key 填写云 API 指标名称，[详情请见。](https://cloud.tencent.com/document/product/248/101681)
+Value 填写排序方式：     
+- asc：对查询指标进行升序排序
+- desc：对查询指标进行降序排序
  * @method integer getPageSize() 获取查询指标的限制条数，目前最多展示50条数据，PageSize取值为1-50，上送PageSize则根据PageSize的值展示限制条数。
  * @method void setPageSize(integer $PageSize) 设置查询指标的限制条数，目前最多展示50条数据，PageSize取值为1-50，上送PageSize则根据PageSize的值展示限制条数。
  */
 class DescribeGeneralMetricDataRequest extends AbstractModel
 {
     /**
-     * @var array 要过滤的维度信息：
-service_metric视图支持：service.name（服务名）、span.kind（客户端/服务端视角）为维度进行过滤，service.name（服务名）必填。
-span.kind:
-	server:服务端视角
-	client:客户端视角
-默认为服务端视角进行查询。
-runtime_metric视图支持：service.name（服务名）维度进行过滤，service.name（服务名）必填。
-sql_metric视图支持：service.name（服务名）、db.instance（数据库名称）、db.ip（数据库实例ip）维度进行过滤，查询service_slow_sql_count（慢sql）指标时service.name必填，查询sql_duration_avg（耗时）指标时db.instance（数据库名称）必填。
-     */
-    public $Filters;
-
-    /**
-     * @var array 需要查询的指标，不可自定义输入。
-service_metric视图支持：service_request_count（总请求）、service_duration（平均响应时间）、service_error_req_rate（平均错误率）、service_slow_call_count（慢调用）、service_error_request_count（异常数量）。
-runtime_metric视图支持：service_gc_full_count（Full GC）。
-sql_metric视图支持：service_slow_sql_count（慢sql）、sql_duration_avg（耗时）。
+     * @var array 需要查询的指标名称，不可自定义输入，[详情请见。](https://cloud.tencent.com/document/product/248/101681)
      */
     public $Metrics;
 
     /**
-     * @var string 业务系统ID
+     * @var string 业务系统 ID
      */
     public $InstanceId;
 
     /**
-     * @var string 视图名称，不可自定义输入。支持：service_metric、runtime_metric、sql_metric。
+     * @var string 视图名称，不可自定义输入。[详情请见。](https://cloud.tencent.com/document/product/248/101681)
      */
     public $ViewName;
 
     /**
-     * @var array 聚合维度：
-service_metric视图支持：service.name（服务名）、span.kind （客户端/服务端视角）维度进行聚合，service.name（服务名）必填。
-runtime_metric视图支持：service.name（服务名）维度进行聚合，service.name（服务名）必填。
-sql_metric视图支持：service.name（服务名）、db.statement（sql语句）维度进行聚合，查询service_slow_sql_count（慢sql）时service.name（服务名）必填，查询sql_duration_avg（耗时）指标时service.name（服务名）、db.statement（sql语句）必填。
+     * @var array 要过滤的维度信息，不同视图有对应的指标维度，[详情请见。](https://cloud.tencent.com/document/product/248/101681)
+     */
+    public $Filters;
+
+    /**
+     * @var array 聚合维度，不同视图有对应的指标维度，[详情请见。](https://cloud.tencent.com/document/product/248/101681)
      */
     public $GroupBy;
 
     /**
-     * @var integer 起始时间的时间戳，单位为秒，只支持查询2天内最多1小时的指标数据。
+     * @var integer 起始时间的时间戳，支持查询30天内的指标数据。（单位：秒）
      */
     public $StartTime;
 
     /**
-     * @var integer 结束时间的时间戳，单位为秒，只支持查询2天内最多1小时的指标数据。
+     * @var integer 结束时间的时间戳，支持查询30天内的指标数据。（单位：秒）
      */
     public $EndTime;
 
     /**
-     * @var integer 聚合粒度，单位为秒，最小为60s，即一分钟的聚合粒度；如果为空或0则计算开始时间到截止时间的指标数据，上报其他值会报错。
+     * @var integer 是否按固定时间跨度聚合，填入1及大于1的值按1处理，不填按0处理。
+- 填入0，则计算开始时间到截止时间的指标数据。
+- 填入1，则会按照开始时间到截止时间的时间跨度选择聚合粒度：
+ - 时间跨度 (0,12) 小时，则按一分钟粒度聚合。
+ - 时间跨度 [12,48] 小时，则按五分钟粒度聚合。
+ - 时间跨度 (48, +∞) 小时，则按一小时粒度聚合。
      */
     public $Period;
 
     /**
      * @var OrderBy 对查询指标进行排序：
-service_metric视图支持：service_request_count（总请求）、service_duration（平均响应时间）、service_error_req_rate（平均错误率）、service_slow_call_count（慢调用）、service_error_request_count（异常数量）。
-runtime_metric视图支持：service_gc_full_count（Full GC）。
-sql_metric视图支持：service_slow_sql_count（慢sql）、sql_duration_avg（耗时）。
-asc:对查询指标进行升序排序
-desc：对查询指标进行降序排序
+Key 填写云 API 指标名称，[详情请见。](https://cloud.tencent.com/document/product/248/101681)
+Value 填写排序方式：     
+- asc：对查询指标进行升序排序
+- desc：对查询指标进行降序排序
      */
     public $OrderBy;
 
@@ -148,33 +121,24 @@ desc：对查询指标进行降序排序
     public $PageSize;
 
     /**
-     * @param array $Filters 要过滤的维度信息：
-service_metric视图支持：service.name（服务名）、span.kind（客户端/服务端视角）为维度进行过滤，service.name（服务名）必填。
-span.kind:
-	server:服务端视角
-	client:客户端视角
-默认为服务端视角进行查询。
-runtime_metric视图支持：service.name（服务名）维度进行过滤，service.name（服务名）必填。
-sql_metric视图支持：service.name（服务名）、db.instance（数据库名称）、db.ip（数据库实例ip）维度进行过滤，查询service_slow_sql_count（慢sql）指标时service.name必填，查询sql_duration_avg（耗时）指标时db.instance（数据库名称）必填。
-     * @param array $Metrics 需要查询的指标，不可自定义输入。
-service_metric视图支持：service_request_count（总请求）、service_duration（平均响应时间）、service_error_req_rate（平均错误率）、service_slow_call_count（慢调用）、service_error_request_count（异常数量）。
-runtime_metric视图支持：service_gc_full_count（Full GC）。
-sql_metric视图支持：service_slow_sql_count（慢sql）、sql_duration_avg（耗时）。
-     * @param string $InstanceId 业务系统ID
-     * @param string $ViewName 视图名称，不可自定义输入。支持：service_metric、runtime_metric、sql_metric。
-     * @param array $GroupBy 聚合维度：
-service_metric视图支持：service.name（服务名）、span.kind （客户端/服务端视角）维度进行聚合，service.name（服务名）必填。
-runtime_metric视图支持：service.name（服务名）维度进行聚合，service.name（服务名）必填。
-sql_metric视图支持：service.name（服务名）、db.statement（sql语句）维度进行聚合，查询service_slow_sql_count（慢sql）时service.name（服务名）必填，查询sql_duration_avg（耗时）指标时service.name（服务名）、db.statement（sql语句）必填。
-     * @param integer $StartTime 起始时间的时间戳，单位为秒，只支持查询2天内最多1小时的指标数据。
-     * @param integer $EndTime 结束时间的时间戳，单位为秒，只支持查询2天内最多1小时的指标数据。
-     * @param integer $Period 聚合粒度，单位为秒，最小为60s，即一分钟的聚合粒度；如果为空或0则计算开始时间到截止时间的指标数据，上报其他值会报错。
+     * @param array $Metrics 需要查询的指标名称，不可自定义输入，[详情请见。](https://cloud.tencent.com/document/product/248/101681)
+     * @param string $InstanceId 业务系统 ID
+     * @param string $ViewName 视图名称，不可自定义输入。[详情请见。](https://cloud.tencent.com/document/product/248/101681)
+     * @param array $Filters 要过滤的维度信息，不同视图有对应的指标维度，[详情请见。](https://cloud.tencent.com/document/product/248/101681)
+     * @param array $GroupBy 聚合维度，不同视图有对应的指标维度，[详情请见。](https://cloud.tencent.com/document/product/248/101681)
+     * @param integer $StartTime 起始时间的时间戳，支持查询30天内的指标数据。（单位：秒）
+     * @param integer $EndTime 结束时间的时间戳，支持查询30天内的指标数据。（单位：秒）
+     * @param integer $Period 是否按固定时间跨度聚合，填入1及大于1的值按1处理，不填按0处理。
+- 填入0，则计算开始时间到截止时间的指标数据。
+- 填入1，则会按照开始时间到截止时间的时间跨度选择聚合粒度：
+ - 时间跨度 (0,12) 小时，则按一分钟粒度聚合。
+ - 时间跨度 [12,48] 小时，则按五分钟粒度聚合。
+ - 时间跨度 (48, +∞) 小时，则按一小时粒度聚合。
      * @param OrderBy $OrderBy 对查询指标进行排序：
-service_metric视图支持：service_request_count（总请求）、service_duration（平均响应时间）、service_error_req_rate（平均错误率）、service_slow_call_count（慢调用）、service_error_request_count（异常数量）。
-runtime_metric视图支持：service_gc_full_count（Full GC）。
-sql_metric视图支持：service_slow_sql_count（慢sql）、sql_duration_avg（耗时）。
-asc:对查询指标进行升序排序
-desc：对查询指标进行降序排序
+Key 填写云 API 指标名称，[详情请见。](https://cloud.tencent.com/document/product/248/101681)
+Value 填写排序方式：     
+- asc：对查询指标进行升序排序
+- desc：对查询指标进行降序排序
      * @param integer $PageSize 查询指标的限制条数，目前最多展示50条数据，PageSize取值为1-50，上送PageSize则根据PageSize的值展示限制条数。
      */
     function __construct()
@@ -190,15 +154,6 @@ desc：对查询指标进行降序排序
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
-            $this->Filters = [];
-            foreach ($param["Filters"] as $key => $value){
-                $obj = new GeneralFilter();
-                $obj->deserialize($value);
-                array_push($this->Filters, $obj);
-            }
-        }
-
         if (array_key_exists("Metrics",$param) and $param["Metrics"] !== null) {
             $this->Metrics = $param["Metrics"];
         }
@@ -209,6 +164,15 @@ desc：对查询指标进行降序排序
 
         if (array_key_exists("ViewName",$param) and $param["ViewName"] !== null) {
             $this->ViewName = $param["ViewName"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new GeneralFilter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
 
         if (array_key_exists("GroupBy",$param) and $param["GroupBy"] !== null) {

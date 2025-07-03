@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 集群详情
  *
  * @method string getClusterId() 获取集群ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterId(string $ClusterId) 设置集群ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterName() 获取集群名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterName(string $ClusterName) 设置集群名称
@@ -165,15 +163,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKuberneteNativeSecret(string $KuberneteNativeSecret) 设置native secret
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getEnableLogCollection() 获取是否开启cls日志功能
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableLogCollection(boolean $EnableLogCollection) 设置是否开启cls日志功能
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getReason() 获取集群状态的原因
+ * @method void setReason(string $Reason) 设置集群状态的原因
  */
 class ClusterV2 extends AbstractModel
 {
     /**
      * @var string 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterId;
 
@@ -389,13 +386,16 @@ class ClusterV2 extends AbstractModel
 
     /**
      * @var boolean 是否开启cls日志功能
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableLogCollection;
 
     /**
+     * @var string 集群状态的原因
+     */
+    public $Reason;
+
+    /**
      * @param string $ClusterId 集群ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterName 集群名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterDesc 集群描述
@@ -467,7 +467,7 @@ class ClusterV2 extends AbstractModel
      * @param string $KuberneteNativeSecret native secret
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $EnableLogCollection 是否开启cls日志功能
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Reason 集群状态的原因
      */
     function __construct()
     {
@@ -629,6 +629,10 @@ class ClusterV2 extends AbstractModel
 
         if (array_key_exists("EnableLogCollection",$param) and $param["EnableLogCollection"] !== null) {
             $this->EnableLogCollection = $param["EnableLogCollection"];
+        }
+
+        if (array_key_exists("Reason",$param) and $param["Reason"] !== null) {
+            $this->Reason = $param["Reason"];
         }
     }
 }

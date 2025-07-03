@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 其他信息
  *
  * @method SurgeryAttr getAnesthesia() 获取麻醉方法
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAnesthesia(SurgeryAttr $Anesthesia) 设置麻醉方法
-注意：此字段可能返回 null，表示取不到有效值。
  * @method SurgeryAttr getBloodLoss() 获取术中出血
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBloodLoss(SurgeryAttr $BloodLoss) 设置术中出血
-注意：此字段可能返回 null，表示取不到有效值。
  * @method SurgeryAttr getBloodTransfusion() 获取输血
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBloodTransfusion(SurgeryAttr $BloodTransfusion) 设置输血
-注意：此字段可能返回 null，表示取不到有效值。
  * @method SurgeryAttr getDuration() 获取手术用时
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDuration(SurgeryAttr $Duration) 设置手术用时
-注意：此字段可能返回 null，表示取不到有效值。
  * @method SurgeryAttr getEndTime() 获取手术开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(SurgeryAttr $EndTime) 设置手术开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method SurgeryAttr getStartTime() 获取手术结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(SurgeryAttr $StartTime) 设置手术结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OtherInfo extends AbstractModel
 {
     /**
      * @var SurgeryAttr 麻醉方法
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Anesthesia;
 
     /**
      * @var SurgeryAttr 术中出血
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BloodLoss;
 
     /**
      * @var SurgeryAttr 输血
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BloodTransfusion;
 
     /**
      * @var SurgeryAttr 手术用时
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Duration;
 
     /**
      * @var SurgeryAttr 手术开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
      * @var SurgeryAttr 手术结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
      * @param SurgeryAttr $Anesthesia 麻醉方法
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SurgeryAttr $BloodLoss 术中出血
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SurgeryAttr $BloodTransfusion 输血
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SurgeryAttr $Duration 手术用时
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SurgeryAttr $EndTime 手术开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SurgeryAttr $StartTime 手术结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

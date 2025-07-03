@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * 合规详情
  *
  * @method string getConfiguration() 获取资源当前实际配置。长度为0~256位字符，即资源不合规配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfiguration(string $Configuration) 设置资源当前实际配置。长度为0~256位字符，即资源不合规配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDesiredValue() 获取资源期望配置。长度为0~256位字符，即资源合规配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDesiredValue(string $DesiredValue) 设置资源期望配置。长度为0~256位字符，即资源合规配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOperator() 获取资源当前配置和期望配置之间的比较运算符。长度为0~16位字符，自定义规则上报评估结果此字段可能为空
  * @method void setOperator(string $Operator) 设置资源当前配置和期望配置之间的比较运算符。长度为0~16位字符，自定义规则上报评估结果此字段可能为空
  * @method string getProperty() 获取当前配置在资源属性结构体中的JSON路径。长度为0~256位字符，自定义规则上报评估结果此字段可能为空
@@ -37,13 +33,11 @@ class Annotation extends AbstractModel
 {
     /**
      * @var string 资源当前实际配置。长度为0~256位字符，即资源不合规配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Configuration;
 
     /**
      * @var string 资源期望配置。长度为0~256位字符，即资源合规配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DesiredValue;
 
@@ -59,9 +53,7 @@ class Annotation extends AbstractModel
 
     /**
      * @param string $Configuration 资源当前实际配置。长度为0~256位字符，即资源不合规配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DesiredValue 资源期望配置。长度为0~256位字符，即资源合规配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Operator 资源当前配置和期望配置之间的比较运算符。长度为0~16位字符，自定义规则上报评估结果此字段可能为空
      * @param string $Property 当前配置在资源属性结构体中的JSON路径。长度为0~256位字符，自定义规则上报评估结果此字段可能为空
      */

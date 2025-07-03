@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 查询订阅配置的错误信息
  *
  * @method string getMessage() 获取错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SubsErr extends AbstractModel
 {
     /**
      * @var string 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
     /**
      * @param string $Message 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

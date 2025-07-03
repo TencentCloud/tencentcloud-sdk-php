@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SwitchDrInstanceToMaster请求参数结构体
  *
- * @method string getInstanceId() 获取灾备实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
- * @method void setInstanceId(string $InstanceId) 设置灾备实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+ * @method string getInstanceId() 获取灾备实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+ * @method void setInstanceId(string $InstanceId) 设置灾备实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
  */
 class SwitchDrInstanceToMasterRequest extends AbstractModel
 {
     /**
-     * @var string 灾备实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+     * @var string 灾备实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId 灾备实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同。
+     * @param string $InstanceId 灾备实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     function __construct()
     {

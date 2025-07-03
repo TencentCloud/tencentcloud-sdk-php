@@ -104,6 +104,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlarmLevel(integer $AlarmLevel) 设置1/2/3:低/中/高
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTriggerCondition() 获取触发条件
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTriggerCondition(string $TriggerCondition) 设置触发条件
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleExecResult extends AbstractModel
 {
@@ -234,6 +238,12 @@ class RuleExecResult extends AbstractModel
     public $AlarmLevel;
 
     /**
+     * @var string 触发条件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TriggerCondition;
+
+    /**
      * @param integer $RuleExecId 规则执行ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleGroupExecId 规则组执行ID
@@ -275,6 +285,8 @@ class RuleExecResult extends AbstractModel
      * @param string $StartTime 执行时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AlarmLevel 1/2/3:低/中/高
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TriggerCondition 触发条件
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -374,6 +386,10 @@ class RuleExecResult extends AbstractModel
 
         if (array_key_exists("AlarmLevel",$param) and $param["AlarmLevel"] !== null) {
             $this->AlarmLevel = $param["AlarmLevel"];
+        }
+
+        if (array_key_exists("TriggerCondition",$param) and $param["TriggerCondition"] !== null) {
+            $this->TriggerCondition = $param["TriggerCondition"];
         }
     }
 }

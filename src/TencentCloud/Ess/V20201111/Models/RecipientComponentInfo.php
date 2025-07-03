@@ -20,44 +20,43 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 参与方填写控件信息
  *
- * @method string getRecipientId() 获取参与方Id
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRecipientId(string $RecipientId) 设置参与方Id
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRecipientId() 获取签署方经办人在合同流程中的参与方ID，与控件绑定，是控件的归属方
+ * @method void setRecipientId(string $RecipientId) 设置签署方经办人在合同流程中的参与方ID，与控件绑定，是控件的归属方
  * @method string getRecipientFillStatus() 获取参与方填写状态
-<ul><li>0-未填写</li>
-<li>1-已填写</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
+<ul>
+<li>**空值** : 此参与方没有填写控件</li>
+<li>**0**:  未填写, 表示此参与方还没有填写合同的填写控件</li>
+<li>**1**:  已填写, 表示此参与方已经填写所有的填写控件</li></ul>
+
  * @method void setRecipientFillStatus(string $RecipientFillStatus) 设置参与方填写状态
-<ul><li>0-未填写</li>
-<li>1-已填写</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
+<ul>
+<li>**空值** : 此参与方没有填写控件</li>
+<li>**0**:  未填写, 表示此参与方还没有填写合同的填写控件</li>
+<li>**1**:  已填写, 表示此参与方已经填写所有的填写控件</li></ul>
+
  * @method boolean getIsPromoter() 获取是否为发起方
 <ul><li>true-发起方</li>
 <li>false-参与方</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsPromoter(boolean $IsPromoter) 设置是否为发起方
 <ul><li>true-发起方</li>
 <li>false-参与方</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
- * @method array getComponents() 获取填写控件列表
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setComponents(array $Components) 设置填写控件列表
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getComponents() 获取改参与方填写控件信息列表
+ * @method void setComponents(array $Components) 设置改参与方填写控件信息列表
  */
 class RecipientComponentInfo extends AbstractModel
 {
     /**
-     * @var string 参与方Id
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 签署方经办人在合同流程中的参与方ID，与控件绑定，是控件的归属方
      */
     public $RecipientId;
 
     /**
      * @var string 参与方填写状态
-<ul><li>0-未填写</li>
-<li>1-已填写</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
+<ul>
+<li>**空值** : 此参与方没有填写控件</li>
+<li>**0**:  未填写, 表示此参与方还没有填写合同的填写控件</li>
+<li>**1**:  已填写, 表示此参与方已经填写所有的填写控件</li></ul>
+
      */
     public $RecipientFillStatus;
 
@@ -65,29 +64,26 @@ class RecipientComponentInfo extends AbstractModel
      * @var boolean 是否为发起方
 <ul><li>true-发起方</li>
 <li>false-参与方</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsPromoter;
 
     /**
-     * @var array 填写控件列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 改参与方填写控件信息列表
      */
     public $Components;
 
     /**
-     * @param string $RecipientId 参与方Id
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RecipientId 签署方经办人在合同流程中的参与方ID，与控件绑定，是控件的归属方
      * @param string $RecipientFillStatus 参与方填写状态
-<ul><li>0-未填写</li>
-<li>1-已填写</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
+<ul>
+<li>**空值** : 此参与方没有填写控件</li>
+<li>**0**:  未填写, 表示此参与方还没有填写合同的填写控件</li>
+<li>**1**:  已填写, 表示此参与方已经填写所有的填写控件</li></ul>
+
      * @param boolean $IsPromoter 是否为发起方
 <ul><li>true-发起方</li>
 <li>false-参与方</li></ul>
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Components 填写控件列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Components 改参与方填写控件信息列表
      */
     function __construct()
     {

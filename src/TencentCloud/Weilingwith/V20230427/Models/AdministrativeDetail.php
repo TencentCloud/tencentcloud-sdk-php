@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 行政区划详情
  *
  * @method string getAdministrativeTypeCode() 获取行政区域类型编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdministrativeTypeCode(string $AdministrativeTypeCode) 设置行政区域类型编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAdministrativeCode() 获取行政区域编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdministrativeCode(string $AdministrativeCode) 设置行政区域编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAdministrativeName() 获取行政区域名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAdministrativeName(string $AdministrativeName) 设置行政区域名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AdministrativeDetail extends AbstractModel
 {
     /**
      * @var string 行政区域类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AdministrativeTypeCode;
 
     /**
      * @var string 行政区域编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AdministrativeCode;
 
     /**
      * @var string 行政区域名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AdministrativeName;
 
     /**
      * @param string $AdministrativeTypeCode 行政区域类型编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AdministrativeCode 行政区域编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AdministrativeName 行政区域名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

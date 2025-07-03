@@ -71,13 +71,13 @@ use TencentCloud\Common\AbstractModel;
 <li><b>HONGKONG_AND_MACAO</b> : 港澳居民来往内地通行证</li>
 <li><b>HONGKONG_MACAO_AND_TAIWAN</b> : 港澳台居民居住证(格式同居民身份证)</li></ul>
  * @method string getApproverIdCardNumber() 获取证件号码，应符合以下规则
-<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
-<li>港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给香港居民，“M”字头签发给澳门居民；第2位至第11位为数字。</li>
-<li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
+<ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+<li>中国港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。</li>
+<li>中国港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
  * @method void setApproverIdCardNumber(string $ApproverIdCardNumber) 设置证件号码，应符合以下规则
-<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
-<li>港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给香港居民，“M”字头签发给澳门居民；第2位至第11位为数字。</li>
-<li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
+<ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+<li>中国港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。</li>
+<li>中国港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
  * @method string getRecipientId() 获取签署方经办人在模板中配置的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。
 
 <b>模板发起合同时，该参数为必填项，可以通过[查询模板信息接口](https://qian.tencent.com/developers/companyApis/templatesAndFiles/DescribeFlowTemplates)获得。</b>
@@ -92,10 +92,10 @@ use TencentCloud\Common\AbstractModel;
 如果开发者后续用合同模板发起合同，建议保存此值，在用合同模板发起合同中需此值绑定对应的签署经办人 。
  * @method array getVerifyChannel() 获取签署意愿确认渠道，默认为WEIXINAPP:人脸识别
 
-注: <font color="red">将要废弃</font >, `用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置`
+注: <font color="red">不再使用</font >, `用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置`
  * @method void setVerifyChannel(array $VerifyChannel) 设置签署意愿确认渠道，默认为WEIXINAPP:人脸识别
 
-注: <font color="red">将要废弃</font >, `用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置`
+注: <font color="red">不再使用</font >, `用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置`
  * @method string getNotifyType() 获取通知签署方经办人的方式,  有以下途径:
 <ul><li>  **sms**  :  (默认)短信</li>
 <li>   **none**   : 不通知</li></ul>
@@ -132,8 +132,8 @@ use TencentCloud\Common\AbstractModel;
 
 注： 
 如果传进来的<font color="red">UserId已经实名， 则忽略ApproverName，ApproverIdCardType，ApproverIdCardNumber，ApproverMobile这四个入参</font>（会用此UserId实名的身份证和登录的手机号覆盖）
- * @method boolean getRequired() 获取<font color="red">字段已经废弃</font>，当前只支持true，默认为true
- * @method void setRequired(boolean $Required) 设置<font color="red">字段已经废弃</font>，当前只支持true，默认为true
+ * @method boolean getRequired() 获取<font color="red">字段不再使用</font>，当前只支持true，默认为true
+ * @method void setRequired(boolean $Required) 设置<font color="red">字段不再使用</font>，当前只支持true，默认为true
  * @method string getApproverSource() 获取在企微场景下使用，需设置参数为**WEWORKAPP**，以表明合同来源于企微。
  * @method void setApproverSource(string $ApproverSource) 设置在企微场景下使用，需设置参数为**WEWORKAPP**，以表明合同来源于企微。
  * @method string getCustomApproverTag() 获取在企业微信场景下，表明该合同流程为或签，其最大长度为64位字符串。
@@ -144,8 +144,8 @@ use TencentCloud\Common\AbstractModel;
 所有参与或签的人员均需具备该标识。
 注意，在合同中，不同的或签参与人必须保证其CustomApproverTag唯一。
 如果或签签署人为本方企业微信参与人，则需要指定ApproverSource参数为WEWORKAPP。
- * @method RegisterInfo getRegisterInfo() 获取已经废弃, 快速注册相关信息
- * @method void setRegisterInfo(RegisterInfo $RegisterInfo) 设置已经废弃, 快速注册相关信息
+ * @method RegisterInfo getRegisterInfo() 获取快速注册相关信息
+ * @method void setRegisterInfo(RegisterInfo $RegisterInfo) 设置快速注册相关信息
  * @method ApproverOption getApproverOption() 获取签署人个性化能力值，如是否可以转发他人处理、是否可以拒签、是否为动态补充签署人等功能开关。
  * @method void setApproverOption(ApproverOption $ApproverOption) 设置签署人个性化能力值，如是否可以转发他人处理、是否可以拒签、是否为动态补充签署人等功能开关。
  * @method string getJumpUrl() 获取签署完前端跳转的url，暂未使用
@@ -162,22 +162,26 @@ use TencentCloud\Common\AbstractModel;
 <li>在CreateFlow、CreatePrepareFlow等发起流程时不需要传入此参数，电子签后台系统会自动生成。</li>
 <li>在CreateFlowSignUrl、CreateBatchQuickSignUrl等生成签署链接时，可以通过查询详情接口获取签署人的SignId，然后可以将此值传入，为该签署人创建签署链接。这样可以避免重复传输姓名、手机号、证件号等其他信息。</li>
 </ul>
- * @method boolean getApproverNeedSignReview() 获取发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
+ * @method boolean getApproverNeedSignReview() 获取此签署人(员工或者个人)签署时，是否需要发起方企业审批，取值如下：
 <ul><li>**false**：（默认）不需要审批，直接签署。</li>
 <li>**true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
 企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
 <ul><li>如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
 <li>如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
 
-注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
- * @method void setApproverNeedSignReview(boolean $ApproverNeedSignReview) 设置发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
+注：`此功能可用于与发起方企业内部的审批流程进行关联，支持手动、静默签署合同`
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/b14d5188ed0229d1401e74a9a49cab6d.png)
+ * @method void setApproverNeedSignReview(boolean $ApproverNeedSignReview) 设置此签署人(员工或者个人)签署时，是否需要发起方企业审批，取值如下：
 <ul><li>**false**：（默认）不需要审批，直接签署。</li>
 <li>**true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
 企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
 <ul><li>如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
 <li>如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
 
-注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
+注：`此功能可用于与发起方企业内部的审批流程进行关联，支持手动、静默签署合同`
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/b14d5188ed0229d1401e74a9a49cab6d.png)
  * @method array getSignComponents() 获取签署人签署控件， 此参数仅针对文件发起（CreateFlowByFiles）生效
 
 合同中的签署控件列表，列表中可支持下列多种签署控件,控件的详细定义参考开发者中心的Component结构体
@@ -263,20 +267,30 @@ use TencentCloud\Common\AbstractModel;
  * @method array getApproverSignTypes() 获取您可以指定签署方签署合同的认证校验方式，可传递以下值：
 <ul><li>**1**：人脸认证，需进行人脸识别成功后才能签署合同；</li>
 <li>**2**：签署密码，需输入与用户在腾讯电子签设置的密码一致才能校验成功进行合同签署；</li>
-<li>**3**：运营商三要素，需到运营商处比对手机号实名信息（名字、手机号、证件号）校验一致才能成功进行合同签署。</li></ul>
+<li>**3**：运营商三要素，需到运营商处比对手机号实名信息（名字、手机号、证件号）校验一致才能成功进行合同签署。（如果是港澳台客户，建议不要选择这个）</li>
+<li>**5**：设备指纹识别，需要对比手机机主预留的指纹信息，校验一致才能成功进行合同签署。（iOS系统暂不支持该校验方式）</li>
+<li>**6**：设备面容识别，需要对比手机机主预留的人脸信息，校验一致才能成功进行合同签署。（Android系统暂不支持该校验方式）</li></ul>
+
 注：
 <ul><li>默认情况下，认证校验方式为人脸认证和签署密码两种形式；</li>
-<li>您可以传递多种值，表示可用多种认证校验方式。</li></ul>
+<li>您可以传递多种值，表示可用多种认证校验方式。</li>
+<li>校验方式不允许只包含设备指纹识别和设备面容识别，至少需要再增加一种其他校验方式。</li>
+<li>设备指纹识别和设备面容识别只支持小程序使用，其他端暂不支持。</li></ul>
 
 注:
 `此参数仅针对文件发起设置生效,模板发起合同签署流程, 请以模板配置为主`
  * @method void setApproverSignTypes(array $ApproverSignTypes) 设置您可以指定签署方签署合同的认证校验方式，可传递以下值：
 <ul><li>**1**：人脸认证，需进行人脸识别成功后才能签署合同；</li>
 <li>**2**：签署密码，需输入与用户在腾讯电子签设置的密码一致才能校验成功进行合同签署；</li>
-<li>**3**：运营商三要素，需到运营商处比对手机号实名信息（名字、手机号、证件号）校验一致才能成功进行合同签署。</li></ul>
+<li>**3**：运营商三要素，需到运营商处比对手机号实名信息（名字、手机号、证件号）校验一致才能成功进行合同签署。（如果是港澳台客户，建议不要选择这个）</li>
+<li>**5**：设备指纹识别，需要对比手机机主预留的指纹信息，校验一致才能成功进行合同签署。（iOS系统暂不支持该校验方式）</li>
+<li>**6**：设备面容识别，需要对比手机机主预留的人脸信息，校验一致才能成功进行合同签署。（Android系统暂不支持该校验方式）</li></ul>
+
 注：
 <ul><li>默认情况下，认证校验方式为人脸认证和签署密码两种形式；</li>
-<li>您可以传递多种值，表示可用多种认证校验方式。</li></ul>
+<li>您可以传递多种值，表示可用多种认证校验方式。</li>
+<li>校验方式不允许只包含设备指纹识别和设备面容识别，至少需要再增加一种其他校验方式。</li>
+<li>设备指纹识别和设备面容识别只支持小程序使用，其他端暂不支持。</li></ul>
 
 注:
 `此参数仅针对文件发起设置生效,模板发起合同签署流程, 请以模板配置为主`
@@ -296,16 +310,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeadline(integer $Deadline) 设置签署人的签署截止时间，格式为Unix标准时间戳（秒）, 超过此时间未签署的合同变成已过期状态，不能在继续签署
 
 注: `若不设置此参数，则默认使用合同的截止时间，此参数暂不支持合同组子合同`
- * @method Intention getIntention() 获取视频核身意图配置，可指定问答模式或者点头模式的语音文本。
+ * @method Intention getIntention() 获取<b>只有在生成H5签署链接的情形下</b>（ 如调用<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateFlowSignUrl" target="_blank">获取H5签署链接</a>、<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateBatchQuickSignUrl" target="_blank">获取H5批量签署链接</a>等接口），该配置才会生效。
 
-注:
- `1.视频认证为白名单功能，使用前请联系对接的客户经理沟通。`
-`2.使用视频认证必须指定签署认证方式为人脸（即ApproverSignTypes）。`
- * @method void setIntention(Intention $Intention) 设置视频核身意图配置，可指定问答模式或者点头模式的语音文本。
+您可以指定H5签署视频核身的意图配置，选择问答模式或点头模式的语音文本。
 
-注:
- `1.视频认证为白名单功能，使用前请联系对接的客户经理沟通。`
-`2.使用视频认证必须指定签署认证方式为人脸（即ApproverSignTypes）。`
+注意：
+1. 视频认证为<b>白名单功能，使用前请联系对接的客户经理沟通</b>。
+2. 使用视频认证时，<b>生成H5签署链接必须将签署认证方式指定为人脸</b>（即ApproverSignTypes设置成人脸签署）。
+3. 签署完成后，可以通过<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeSignFaceVideo" target="_blank">查询签署认证人脸视频</a>获取到当时的视频。
+ * @method void setIntention(Intention $Intention) 设置<b>只有在生成H5签署链接的情形下</b>（ 如调用<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateFlowSignUrl" target="_blank">获取H5签署链接</a>、<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateBatchQuickSignUrl" target="_blank">获取H5批量签署链接</a>等接口），该配置才会生效。
+
+您可以指定H5签署视频核身的意图配置，选择问答模式或点头模式的语音文本。
+
+注意：
+1. 视频认证为<b>白名单功能，使用前请联系对接的客户经理沟通</b>。
+2. 使用视频认证时，<b>生成H5签署链接必须将签署认证方式指定为人脸</b>（即ApproverSignTypes设置成人脸签署）。
+3. 签署完成后，可以通过<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeSignFaceVideo" target="_blank">查询签署认证人脸视频</a>获取到当时的视频。
+ * @method array getSignEndpoints() 获取进入签署流程的限制，目前支持以下选项：
+<ul><li> <b>空值（默认）</b> :无限制，可在任何场景进入签署流程。</li><li> <b>link</b> :选择此选项后，将无法通过控制台或电子签小程序列表进入填写或签署操作，仅可预览合同。填写或签署流程只能通过短信或发起方提供的专用链接进行。</li></ul>
+ * @method void setSignEndpoints(array $SignEndpoints) 设置进入签署流程的限制，目前支持以下选项：
+<ul><li> <b>空值（默认）</b> :无限制，可在任何场景进入签署流程。</li><li> <b>link</b> :选择此选项后，将无法通过控制台或电子签小程序列表进入填写或签署操作，仅可预览合同。填写或签署流程只能通过短信或发起方提供的专用链接进行。</li></ul>
  */
 class FlowCreateApprover extends AbstractModel
 {
@@ -356,9 +380,9 @@ class FlowCreateApprover extends AbstractModel
 
     /**
      * @var string 证件号码，应符合以下规则
-<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
-<li>港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给香港居民，“M”字头签发给澳门居民；第2位至第11位为数字。</li>
-<li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
+<ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+<li>中国港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。</li>
+<li>中国港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
      */
     public $ApproverIdCardNumber;
 
@@ -375,7 +399,7 @@ class FlowCreateApprover extends AbstractModel
     /**
      * @var array 签署意愿确认渠道，默认为WEIXINAPP:人脸识别
 
-注: <font color="red">将要废弃</font >, `用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置`
+注: <font color="red">不再使用</font >, `用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置`
      */
     public $VerifyChannel;
 
@@ -414,7 +438,7 @@ class FlowCreateApprover extends AbstractModel
     public $UserId;
 
     /**
-     * @var boolean <font color="red">字段已经废弃</font>，当前只支持true，默认为true
+     * @var boolean <font color="red">字段不再使用</font>，当前只支持true，默认为true
      */
     public $Required;
 
@@ -432,7 +456,7 @@ class FlowCreateApprover extends AbstractModel
     public $CustomApproverTag;
 
     /**
-     * @var RegisterInfo 已经废弃, 快速注册相关信息
+     * @var RegisterInfo 快速注册相关信息
      */
     public $RegisterInfo;
 
@@ -458,14 +482,16 @@ class FlowCreateApprover extends AbstractModel
     public $SignId;
 
     /**
-     * @var boolean 发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
+     * @var boolean 此签署人(员工或者个人)签署时，是否需要发起方企业审批，取值如下：
 <ul><li>**false**：（默认）不需要审批，直接签署。</li>
 <li>**true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
 企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
 <ul><li>如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
 <li>如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
 
-注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
+注：`此功能可用于与发起方企业内部的审批流程进行关联，支持手动、静默签署合同`
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/b14d5188ed0229d1401e74a9a49cab6d.png)
      */
     public $ApproverNeedSignReview;
 
@@ -530,10 +556,15 @@ class FlowCreateApprover extends AbstractModel
      * @var array 您可以指定签署方签署合同的认证校验方式，可传递以下值：
 <ul><li>**1**：人脸认证，需进行人脸识别成功后才能签署合同；</li>
 <li>**2**：签署密码，需输入与用户在腾讯电子签设置的密码一致才能校验成功进行合同签署；</li>
-<li>**3**：运营商三要素，需到运营商处比对手机号实名信息（名字、手机号、证件号）校验一致才能成功进行合同签署。</li></ul>
+<li>**3**：运营商三要素，需到运营商处比对手机号实名信息（名字、手机号、证件号）校验一致才能成功进行合同签署。（如果是港澳台客户，建议不要选择这个）</li>
+<li>**5**：设备指纹识别，需要对比手机机主预留的指纹信息，校验一致才能成功进行合同签署。（iOS系统暂不支持该校验方式）</li>
+<li>**6**：设备面容识别，需要对比手机机主预留的人脸信息，校验一致才能成功进行合同签署。（Android系统暂不支持该校验方式）</li></ul>
+
 注：
 <ul><li>默认情况下，认证校验方式为人脸认证和签署密码两种形式；</li>
-<li>您可以传递多种值，表示可用多种认证校验方式。</li></ul>
+<li>您可以传递多种值，表示可用多种认证校验方式。</li>
+<li>校验方式不允许只包含设备指纹识别和设备面容识别，至少需要再增加一种其他校验方式。</li>
+<li>设备指纹识别和设备面容识别只支持小程序使用，其他端暂不支持。</li></ul>
 
 注:
 `此参数仅针对文件发起设置生效,模板发起合同签署流程, 请以模板配置为主`
@@ -557,13 +588,22 @@ class FlowCreateApprover extends AbstractModel
     public $Deadline;
 
     /**
-     * @var Intention 视频核身意图配置，可指定问答模式或者点头模式的语音文本。
+     * @var Intention <b>只有在生成H5签署链接的情形下</b>（ 如调用<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateFlowSignUrl" target="_blank">获取H5签署链接</a>、<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateBatchQuickSignUrl" target="_blank">获取H5批量签署链接</a>等接口），该配置才会生效。
 
-注:
- `1.视频认证为白名单功能，使用前请联系对接的客户经理沟通。`
-`2.使用视频认证必须指定签署认证方式为人脸（即ApproverSignTypes）。`
+您可以指定H5签署视频核身的意图配置，选择问答模式或点头模式的语音文本。
+
+注意：
+1. 视频认证为<b>白名单功能，使用前请联系对接的客户经理沟通</b>。
+2. 使用视频认证时，<b>生成H5签署链接必须将签署认证方式指定为人脸</b>（即ApproverSignTypes设置成人脸签署）。
+3. 签署完成后，可以通过<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeSignFaceVideo" target="_blank">查询签署认证人脸视频</a>获取到当时的视频。
      */
     public $Intention;
+
+    /**
+     * @var array 进入签署流程的限制，目前支持以下选项：
+<ul><li> <b>空值（默认）</b> :无限制，可在任何场景进入签署流程。</li><li> <b>link</b> :选择此选项后，将无法通过控制台或电子签小程序列表进入填写或签署操作，仅可预览合同。填写或签署流程只能通过短信或发起方提供的专用链接进行。</li></ul>
+     */
+    public $SignEndpoints;
 
     /**
      * @param integer $ApproverType 在指定签署方时，可以选择企业B端或个人C端等不同的参与者类型，可选类型如下：
@@ -592,9 +632,9 @@ class FlowCreateApprover extends AbstractModel
 <li><b>HONGKONG_AND_MACAO</b> : 港澳居民来往内地通行证</li>
 <li><b>HONGKONG_MACAO_AND_TAIWAN</b> : 港澳台居民居住证(格式同居民身份证)</li></ul>
      * @param string $ApproverIdCardNumber 证件号码，应符合以下规则
-<ul><li>居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
-<li>港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给香港居民，“M”字头签发给澳门居民；第2位至第11位为数字。</li>
-<li>港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
+<ul><li>中国大陆居民身份证号码应为18位字符串，由数字和大写字母X组成（如存在X，请大写）。</li>
+<li>中国港澳居民来往内地通行证号码共11位。第1位为字母，“H”字头签发给中国香港居民，“M”字头签发给中国澳门居民；第2位至第11位为数字。</li>
+<li>中国港澳台居民居住证号码编码规则与中国大陆身份证相同，应为18位字符串。</li></ul>
      * @param string $RecipientId 签署方经办人在模板中配置的参与方ID，与控件绑定，是控件的归属方，ID为32位字符串。
 
 <b>模板发起合同时，该参数为必填项，可以通过[查询模板信息接口](https://qian.tencent.com/developers/companyApis/templatesAndFiles/DescribeFlowTemplates)获得。</b>
@@ -603,7 +643,7 @@ class FlowCreateApprover extends AbstractModel
 如果开发者后续用合同模板发起合同，建议保存此值，在用合同模板发起合同中需此值绑定对应的签署经办人 。
      * @param array $VerifyChannel 签署意愿确认渠道，默认为WEIXINAPP:人脸识别
 
-注: <font color="red">将要废弃</font >, `用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置`
+注: <font color="red">不再使用</font >, `用ApproverSignTypes签署人签署合同时的认证方式代替, 新客户可请用ApproverSignTypes来设置`
      * @param string $NotifyType 通知签署方经办人的方式,  有以下途径:
 <ul><li>  **sms**  :  (默认)短信</li>
 <li>   **none**   : 不通知</li></ul>
@@ -622,13 +662,13 @@ class FlowCreateApprover extends AbstractModel
 
 注： 
 如果传进来的<font color="red">UserId已经实名， 则忽略ApproverName，ApproverIdCardType，ApproverIdCardNumber，ApproverMobile这四个入参</font>（会用此UserId实名的身份证和登录的手机号覆盖）
-     * @param boolean $Required <font color="red">字段已经废弃</font>，当前只支持true，默认为true
+     * @param boolean $Required <font color="red">字段不再使用</font>，当前只支持true，默认为true
      * @param string $ApproverSource 在企微场景下使用，需设置参数为**WEWORKAPP**，以表明合同来源于企微。
      * @param string $CustomApproverTag 在企业微信场景下，表明该合同流程为或签，其最大长度为64位字符串。
 所有参与或签的人员均需具备该标识。
 注意，在合同中，不同的或签参与人必须保证其CustomApproverTag唯一。
 如果或签签署人为本方企业微信参与人，则需要指定ApproverSource参数为WEWORKAPP。
-     * @param RegisterInfo $RegisterInfo 已经废弃, 快速注册相关信息
+     * @param RegisterInfo $RegisterInfo 快速注册相关信息
      * @param ApproverOption $ApproverOption 签署人个性化能力值，如是否可以转发他人处理、是否可以拒签、是否为动态补充签署人等功能开关。
      * @param string $JumpUrl 签署完前端跳转的url，暂未使用
      * @param string $SignId 签署人的签署ID
@@ -637,14 +677,16 @@ class FlowCreateApprover extends AbstractModel
 <li>在CreateFlow、CreatePrepareFlow等发起流程时不需要传入此参数，电子签后台系统会自动生成。</li>
 <li>在CreateFlowSignUrl、CreateBatchQuickSignUrl等生成签署链接时，可以通过查询详情接口获取签署人的SignId，然后可以将此值传入，为该签署人创建签署链接。这样可以避免重复传输姓名、手机号、证件号等其他信息。</li>
 </ul>
-     * @param boolean $ApproverNeedSignReview 发起方企业的签署人进行签署操作前，是否需要企业内部走审批流程，取值如下：
+     * @param boolean $ApproverNeedSignReview 此签署人(员工或者个人)签署时，是否需要发起方企业审批，取值如下：
 <ul><li>**false**：（默认）不需要审批，直接签署。</li>
 <li>**true**：需要走审批流程。当到对应参与人签署时，会阻塞其签署操作，等待企业内部审批完成。</li></ul>
 企业可以通过CreateFlowSignReview审批接口通知腾讯电子签平台企业内部审批结果
 <ul><li>如果企业通知腾讯电子签平台审核通过，签署方可继续签署动作。</li>
 <li>如果企业通知腾讯电子签平台审核未通过，平台将继续阻塞签署方的签署动作，直到企业通知平台审核通过。</li></ul>
 
-注：`此功能可用于与企业内部的审批流程进行关联，支持手动、静默签署合同`
+注：`此功能可用于与发起方企业内部的审批流程进行关联，支持手动、静默签署合同`
+
+![image](https://qcloudimg.tencent-cloud.cn/raw/b14d5188ed0229d1401e74a9a49cab6d.png)
      * @param array $SignComponents 签署人签署控件， 此参数仅针对文件发起（CreateFlowByFiles）生效
 
 合同中的签署控件列表，列表中可支持下列多种签署控件,控件的详细定义参考开发者中心的Component结构体
@@ -689,10 +731,15 @@ class FlowCreateApprover extends AbstractModel
      * @param array $ApproverSignTypes 您可以指定签署方签署合同的认证校验方式，可传递以下值：
 <ul><li>**1**：人脸认证，需进行人脸识别成功后才能签署合同；</li>
 <li>**2**：签署密码，需输入与用户在腾讯电子签设置的密码一致才能校验成功进行合同签署；</li>
-<li>**3**：运营商三要素，需到运营商处比对手机号实名信息（名字、手机号、证件号）校验一致才能成功进行合同签署。</li></ul>
+<li>**3**：运营商三要素，需到运营商处比对手机号实名信息（名字、手机号、证件号）校验一致才能成功进行合同签署。（如果是港澳台客户，建议不要选择这个）</li>
+<li>**5**：设备指纹识别，需要对比手机机主预留的指纹信息，校验一致才能成功进行合同签署。（iOS系统暂不支持该校验方式）</li>
+<li>**6**：设备面容识别，需要对比手机机主预留的人脸信息，校验一致才能成功进行合同签署。（Android系统暂不支持该校验方式）</li></ul>
+
 注：
 <ul><li>默认情况下，认证校验方式为人脸认证和签署密码两种形式；</li>
-<li>您可以传递多种值，表示可用多种认证校验方式。</li></ul>
+<li>您可以传递多种值，表示可用多种认证校验方式。</li>
+<li>校验方式不允许只包含设备指纹识别和设备面容识别，至少需要再增加一种其他校验方式。</li>
+<li>设备指纹识别和设备面容识别只支持小程序使用，其他端暂不支持。</li></ul>
 
 注:
 `此参数仅针对文件发起设置生效,模板发起合同签署流程, 请以模板配置为主`
@@ -704,11 +751,16 @@ class FlowCreateApprover extends AbstractModel
      * @param integer $Deadline 签署人的签署截止时间，格式为Unix标准时间戳（秒）, 超过此时间未签署的合同变成已过期状态，不能在继续签署
 
 注: `若不设置此参数，则默认使用合同的截止时间，此参数暂不支持合同组子合同`
-     * @param Intention $Intention 视频核身意图配置，可指定问答模式或者点头模式的语音文本。
+     * @param Intention $Intention <b>只有在生成H5签署链接的情形下</b>（ 如调用<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateFlowSignUrl" target="_blank">获取H5签署链接</a>、<a href="https://qian.tencent.com/developers/companyApis/startFlows/CreateBatchQuickSignUrl" target="_blank">获取H5批量签署链接</a>等接口），该配置才会生效。
 
-注:
- `1.视频认证为白名单功能，使用前请联系对接的客户经理沟通。`
-`2.使用视频认证必须指定签署认证方式为人脸（即ApproverSignTypes）。`
+您可以指定H5签署视频核身的意图配置，选择问答模式或点头模式的语音文本。
+
+注意：
+1. 视频认证为<b>白名单功能，使用前请联系对接的客户经理沟通</b>。
+2. 使用视频认证时，<b>生成H5签署链接必须将签署认证方式指定为人脸</b>（即ApproverSignTypes设置成人脸签署）。
+3. 签署完成后，可以通过<a href="https://qian.tencent.com/developers/companyApis/queryFlows/DescribeSignFaceVideo" target="_blank">查询签署认证人脸视频</a>获取到当时的视频。
+     * @param array $SignEndpoints 进入签署流程的限制，目前支持以下选项：
+<ul><li> <b>空值（默认）</b> :无限制，可在任何场景进入签署流程。</li><li> <b>link</b> :选择此选项后，将无法通过控制台或电子签小程序列表进入填写或签署操作，仅可预览合同。填写或签署流程只能通过短信或发起方提供的专用链接进行。</li></ul>
      */
     function __construct()
     {
@@ -846,6 +898,10 @@ class FlowCreateApprover extends AbstractModel
         if (array_key_exists("Intention",$param) and $param["Intention"] !== null) {
             $this->Intention = new Intention();
             $this->Intention->deserialize($param["Intention"]);
+        }
+
+        if (array_key_exists("SignEndpoints",$param) and $param["SignEndpoints"] !== null) {
+            $this->SignEndpoints = $param["SignEndpoints"];
         }
     }
 }

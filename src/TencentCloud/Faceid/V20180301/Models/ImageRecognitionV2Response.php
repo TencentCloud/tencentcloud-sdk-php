@@ -20,24 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ImageRecognitionV2返回参数结构体
  *
- * @method float getSim() 获取相似度，取值范围 [0.00, 100.00]。推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）
- * @method void setSim(float $Sim) 设置相似度，取值范围 [0.00, 100.00]。推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）
- * @method string getResult() 获取业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分
- * @method void setResult(string $Result) 设置业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分
+ * @method float getSim() 获取相似度。
+- 取值范围 [0.00, 100.00]。
+- 推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）
+ * @method void setSim(float $Sim) 设置相似度。
+- 取值范围 [0.00, 100.00]。
+- 推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）
+ * @method string getResult() 获取业务错误码。
+- 成功情况返回Success。
+- 错误情况请参考下方错误码 列表中FailedOperation部分
+ * @method void setResult(string $Result) 设置业务错误码。
+- 成功情况返回Success。
+- 错误情况请参考下方错误码 列表中FailedOperation部分
  * @method string getDescription() 获取业务结果描述。
  * @method void setDescription(string $Description) 设置业务结果描述。
+ * @method string getExtra() 获取调用接口中自定义的描述字段。
+ * @method void setExtra(string $Extra) 设置调用接口中自定义的描述字段。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ImageRecognitionV2Response extends AbstractModel
 {
     /**
-     * @var float 相似度，取值范围 [0.00, 100.00]。推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）
+     * @var float 相似度。
+- 取值范围 [0.00, 100.00]。
+- 推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）
      */
     public $Sim;
 
     /**
-     * @var string 业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分
+     * @var string 业务错误码。
+- 成功情况返回Success。
+- 错误情况请参考下方错误码 列表中FailedOperation部分
      */
     public $Result;
 
@@ -47,14 +61,24 @@ class ImageRecognitionV2Response extends AbstractModel
     public $Description;
 
     /**
+     * @var string 调用接口中自定义的描述字段。
+     */
+    public $Extra;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param float $Sim 相似度，取值范围 [0.00, 100.00]。推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）
-     * @param string $Result 业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分
+     * @param float $Sim 相似度。
+- 取值范围 [0.00, 100.00]。
+- 推荐相似度大于等于70时可判断为同一人，可根据具体场景自行调整阈值（阈值70的误通过率为千分之一，阈值80的误通过率是万分之一）
+     * @param string $Result 业务错误码。
+- 成功情况返回Success。
+- 错误情况请参考下方错误码 列表中FailedOperation部分
      * @param string $Description 业务结果描述。
+     * @param string $Extra 调用接口中自定义的描述字段。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -80,6 +104,10 @@ class ImageRecognitionV2Response extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("Extra",$param) and $param["Extra"] !== null) {
+            $this->Extra = $param["Extra"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

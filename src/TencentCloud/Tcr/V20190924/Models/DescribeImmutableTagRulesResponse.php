@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * DescribeImmutableTagRules返回参数结构体
  *
  * @method array getRules() 获取规则列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRules(array $Rules) 设置规则列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getEmptyNs() 获取未创建规则的命名空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEmptyNs(array $EmptyNs) 设置未创建规则的命名空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotal() 获取规则总量
  * @method void setTotal(integer $Total) 设置规则总量
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -37,13 +33,11 @@ class DescribeImmutableTagRulesResponse extends AbstractModel
 {
     /**
      * @var array 规则列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Rules;
 
     /**
      * @var array 未创建规则的命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EmptyNs;
 
@@ -59,9 +53,7 @@ class DescribeImmutableTagRulesResponse extends AbstractModel
 
     /**
      * @param array $Rules 规则列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $EmptyNs 未创建规则的命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Total 规则总量
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

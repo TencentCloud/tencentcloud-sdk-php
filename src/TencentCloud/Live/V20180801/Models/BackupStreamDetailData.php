@@ -21,68 +21,52 @@ use TencentCloud\Common\AbstractModel;
  * 主备流详细信息。
  *
  * @method string getDomainName() 获取推流域名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomainName(string $DomainName) 设置推流域名。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAppName() 获取推流路径。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppName(string $AppName) 设置推流路径。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPublishTime() 获取 UTC 格式，例如：2018-06-29T19:00:00Z。
 注意：和北京时间相差8小时。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPublishTime(string $PublishTime) 设置 UTC 格式，例如：2018-06-29T19:00:00Z。
 注意：和北京时间相差8小时。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpstreamSequence() 获取推流唯一标识。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpstreamSequence(string $UpstreamSequence) 设置推流唯一标识。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSourceFrom() 获取推流来源。示例：
 直推流；
 拉流转推(1234)；
 注意：拉流转推来源括号中为拉流转推的任务 
  ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSourceFrom(string $SourceFrom) 设置推流来源。示例：
 直推流；
 拉流转推(1234)；
 注意：拉流转推来源括号中为拉流转推的任务 
  ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMasterFlag() 获取主备标识。
 当前流为主流：1，
 当前流为备流: 0。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMasterFlag(integer $MasterFlag) 设置主备标识。
 当前流为主流：1，
 当前流为备流: 0。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BackupStreamDetailData extends AbstractModel
 {
     /**
      * @var string 推流域名。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DomainName;
 
     /**
      * @var string 推流路径。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppName;
 
     /**
      * @var string  UTC 格式，例如：2018-06-29T19:00:00Z。
 注意：和北京时间相差8小时。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PublishTime;
 
     /**
      * @var string 推流唯一标识。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpstreamSequence;
 
@@ -92,7 +76,6 @@ class BackupStreamDetailData extends AbstractModel
 拉流转推(1234)；
 注意：拉流转推来源括号中为拉流转推的任务 
  ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SourceFrom;
 
@@ -100,30 +83,23 @@ class BackupStreamDetailData extends AbstractModel
      * @var integer 主备标识。
 当前流为主流：1，
 当前流为备流: 0。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MasterFlag;
 
     /**
      * @param string $DomainName 推流域名。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AppName 推流路径。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PublishTime  UTC 格式，例如：2018-06-29T19:00:00Z。
 注意：和北京时间相差8小时。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpstreamSequence 推流唯一标识。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SourceFrom 推流来源。示例：
 直推流；
 拉流转推(1234)；
 注意：拉流转推来源括号中为拉流转推的任务 
  ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MasterFlag 主备标识。
 当前流为主流：1，
 当前流为备流: 0。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

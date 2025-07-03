@@ -84,8 +84,8 @@ true为启用，false为不启用
 80：80端口
  * @method string getProtocol() 获取协议；TCP/UDP/ICMP/ANY
  * @method void setProtocol(string $Protocol) 设置协议；TCP/UDP/ICMP/ANY
- * @method string getServiceTemplateId() 获取端口协议类型参数模板id；协议端口模板id；与Protocol,Port互斥
- * @method void setServiceTemplateId(string $ServiceTemplateId) 设置端口协议类型参数模板id；协议端口模板id；与Protocol,Port互斥
+ * @method string getServiceTemplateId() 获取端口协议类型参数模板id；协议端口模板id
+ * @method void setServiceTemplateId(string $ServiceTemplateId) 设置端口协议类型参数模板id；协议端口模板id
  * @method integer getRuleUuid() 获取规则的uuid
  * @method void setRuleUuid(integer $RuleUuid) 设置规则的uuid
  */
@@ -160,7 +160,7 @@ true为启用，false为不启用
     public $Protocol;
 
     /**
-     * @var string 端口协议类型参数模板id；协议端口模板id；与Protocol,Port互斥
+     * @var string 端口协议类型参数模板id；协议端口模板id
      */
     public $ServiceTemplateId;
 
@@ -202,7 +202,7 @@ true为启用，false为不启用
 -1/-1：全部端口
 80：80端口
      * @param string $Protocol 协议；TCP/UDP/ICMP/ANY
-     * @param string $ServiceTemplateId 端口协议类型参数模板id；协议端口模板id；与Protocol,Port互斥
+     * @param string $ServiceTemplateId 端口协议类型参数模板id；协议端口模板id
      * @param integer $RuleUuid 规则的uuid
      */
     function __construct()

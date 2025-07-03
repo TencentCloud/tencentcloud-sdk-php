@@ -41,25 +41,23 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInitialAddress() 获取初始查询IP
  * @method void setInitialAddress(string $InitialAddress) 设置初始查询IP
  * @method string getDbName() 获取数据库名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDbName(string $DbName) 设置数据库名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsQuery() 获取是否是查询，0：否，1：查询语句
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsQuery(integer $IsQuery) 设置是否是查询，0：否，1：查询语句
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getResultBytesMB() 获取ResultBytes的MB格式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResultBytesMB(float $ResultBytesMB) 设置ResultBytes的MB格式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getMemoryUsageMB() 获取MemoryUsage的MB表示
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMemoryUsageMB(float $MemoryUsageMB) 设置MemoryUsage的MB表示
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getDurationSec() 获取DurationMs的秒表示
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDurationSec(float $DurationSec) 设置DurationMs的秒表示
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getState() 获取状态
+ * @method void setState(string $State) 设置状态
+ * @method string getCatalogName() 获取Catalog  Name
+ * @method void setCatalogName(string $CatalogName) 设置Catalog  Name
+ * @method integer getCpuTimeMs() 获取cpu执行时间 
+ * @method void setCpuTimeMs(integer $CpuTimeMs) 设置cpu执行时间 
+ * @method string getComputeGroup() 获取计算组
+ * @method void setComputeGroup(string $ComputeGroup) 设置计算组
  */
 class SlowQueryRecord extends AbstractModel
 {
@@ -115,33 +113,48 @@ class SlowQueryRecord extends AbstractModel
 
     /**
      * @var string 数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DbName;
 
     /**
      * @var integer 是否是查询，0：否，1：查询语句
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsQuery;
 
     /**
      * @var float ResultBytes的MB格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResultBytesMB;
 
     /**
      * @var float MemoryUsage的MB表示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MemoryUsageMB;
 
     /**
      * @var float DurationMs的秒表示
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DurationSec;
+
+    /**
+     * @var string 状态
+     */
+    public $State;
+
+    /**
+     * @var string Catalog  Name
+     */
+    public $CatalogName;
+
+    /**
+     * @var integer cpu执行时间 
+     */
+    public $CpuTimeMs;
+
+    /**
+     * @var string 计算组
+     */
+    public $ComputeGroup;
 
     /**
      * @param string $OsUser 查询用户
@@ -155,15 +168,14 @@ class SlowQueryRecord extends AbstractModel
      * @param integer $MemoryUsage 内存
      * @param string $InitialAddress 初始查询IP
      * @param string $DbName 数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsQuery 是否是查询，0：否，1：查询语句
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $ResultBytesMB ResultBytes的MB格式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $MemoryUsageMB MemoryUsage的MB表示
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $DurationSec DurationMs的秒表示
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $State 状态
+     * @param string $CatalogName Catalog  Name
+     * @param integer $CpuTimeMs cpu执行时间 
+     * @param string $ComputeGroup 计算组
      */
     function __construct()
     {
@@ -236,6 +248,22 @@ class SlowQueryRecord extends AbstractModel
 
         if (array_key_exists("DurationSec",$param) and $param["DurationSec"] !== null) {
             $this->DurationSec = $param["DurationSec"];
+        }
+
+        if (array_key_exists("State",$param) and $param["State"] !== null) {
+            $this->State = $param["State"];
+        }
+
+        if (array_key_exists("CatalogName",$param) and $param["CatalogName"] !== null) {
+            $this->CatalogName = $param["CatalogName"];
+        }
+
+        if (array_key_exists("CpuTimeMs",$param) and $param["CpuTimeMs"] !== null) {
+            $this->CpuTimeMs = $param["CpuTimeMs"];
+        }
+
+        if (array_key_exists("ComputeGroup",$param) and $param["ComputeGroup"] !== null) {
+            $this->ComputeGroup = $param["ComputeGroup"];
         }
     }
 }

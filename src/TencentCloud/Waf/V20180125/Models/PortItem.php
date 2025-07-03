@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpstreamPort(string $UpstreamPort) 设置与Port一一对应,  表示回源端口
  * @method string getUpstreamProtocol() 获取与Port一一对应,  表示回源协议
  * @method void setUpstreamProtocol(string $UpstreamProtocol) 设置与Port一一对应,  表示回源协议
- * @method string getNginxServerId() 获取Nginx的服务器ID
- * @method void setNginxServerId(string $NginxServerId) 设置Nginx的服务器ID
+ * @method string getNginxServerId() 获取Nginx的服务器ID,新增域名时填"0"
+ * @method void setNginxServerId(string $NginxServerId) 设置Nginx的服务器ID,新增域名时填"0"
  */
 class PortItem extends AbstractModel
 {
@@ -54,7 +54,7 @@ class PortItem extends AbstractModel
     public $UpstreamProtocol;
 
     /**
-     * @var string Nginx的服务器ID
+     * @var string Nginx的服务器ID,新增域名时填"0"
      */
     public $NginxServerId;
 
@@ -63,7 +63,7 @@ class PortItem extends AbstractModel
      * @param string $Protocol 与Port一一对应，表示端口对应的协议
      * @param string $UpstreamPort 与Port一一对应,  表示回源端口
      * @param string $UpstreamProtocol 与Port一一对应,  表示回源协议
-     * @param string $NginxServerId Nginx的服务器ID
+     * @param string $NginxServerId Nginx的服务器ID,新增域名时填"0"
      */
     function __construct()
     {

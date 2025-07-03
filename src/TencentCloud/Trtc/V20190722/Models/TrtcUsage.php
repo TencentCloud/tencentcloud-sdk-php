@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTimeKey() 获取时间点，格式为YYYY-MM-DD HH:mm:ss。多天查询时，HH:mm:ss为00:00:00。
  * @method void setTimeKey(string $TimeKey) 设置时间点，格式为YYYY-MM-DD HH:mm:ss。多天查询时，HH:mm:ss为00:00:00。
- * @method array getUsageValue() 获取用量数组。每个数值含义与UsageKey对应。单位：分钟。
- * @method void setUsageValue(array $UsageValue) 设置用量数组。每个数值含义与UsageKey对应。单位：分钟。
+ * @method integer getTimeStampKey() 获取时间点时间戳
+ * @method void setTimeStampKey(integer $TimeStampKey) 设置时间点时间戳
+ * @method array getUsageValue() 获取用量数组。每个数值含义与UsageKey对应。单位:分钟。
+ * @method void setUsageValue(array $UsageValue) 设置用量数组。每个数值含义与UsageKey对应。单位:分钟。
  */
 class TrtcUsage extends AbstractModel
 {
@@ -33,13 +35,19 @@ class TrtcUsage extends AbstractModel
     public $TimeKey;
 
     /**
-     * @var array 用量数组。每个数值含义与UsageKey对应。单位：分钟。
+     * @var integer 时间点时间戳
+     */
+    public $TimeStampKey;
+
+    /**
+     * @var array 用量数组。每个数值含义与UsageKey对应。单位:分钟。
      */
     public $UsageValue;
 
     /**
      * @param string $TimeKey 时间点，格式为YYYY-MM-DD HH:mm:ss。多天查询时，HH:mm:ss为00:00:00。
-     * @param array $UsageValue 用量数组。每个数值含义与UsageKey对应。单位：分钟。
+     * @param integer $TimeStampKey 时间点时间戳
+     * @param array $UsageValue 用量数组。每个数值含义与UsageKey对应。单位:分钟。
      */
     function __construct()
     {
@@ -56,6 +64,10 @@ class TrtcUsage extends AbstractModel
         }
         if (array_key_exists("TimeKey",$param) and $param["TimeKey"] !== null) {
             $this->TimeKey = $param["TimeKey"];
+        }
+
+        if (array_key_exists("TimeStampKey",$param) and $param["TimeStampKey"] !== null) {
+            $this->TimeStampKey = $param["TimeStampKey"];
         }
 
         if (array_key_exists("UsageValue",$param) and $param["UsageValue"] !== null) {

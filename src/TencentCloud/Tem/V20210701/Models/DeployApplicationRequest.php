@@ -24,12 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApplicationId(string $ApplicationId) 设置应用ID
  * @method integer getInitPodNum() 获取初始化 pod 数
  * @method void setInitPodNum(integer $InitPodNum) 设置初始化 pod 数
- * @method float getCpuSpec() 获取cpu规格
- * @method void setCpuSpec(float $CpuSpec) 设置cpu规格
- * @method float getMemorySpec() 获取内存规格
- * @method void setMemorySpec(float $MemorySpec) 设置内存规格
+ * @method float getCpuSpec() 获取cpu规格 单位：核
+ * @method void setCpuSpec(float $CpuSpec) 设置cpu规格 单位：核
+ * @method float getMemorySpec() 获取内存规格 单位：G
+ * @method void setMemorySpec(float $MemorySpec) 设置内存规格 单位：G
  * @method string getEnvironmentId() 获取环境ID
  * @method void setEnvironmentId(string $EnvironmentId) 设置环境ID
+ * @method string getDeployVersion() 获取部署类型为 IMAGE 时，该参数表示镜像 tag。
+部署类型为 JAR/WAR 时，该参数表示包版本号。
+ * @method void setDeployVersion(string $DeployVersion) 设置部署类型为 IMAGE 时，该参数表示镜像 tag。
+部署类型为 JAR/WAR 时，该参数表示包版本号。
  * @method string getImgRepo() 获取镜像仓库
  * @method void setImgRepo(string $ImgRepo) 设置镜像仓库
  * @method string getVersionDesc() 获取版本描述信息
@@ -54,12 +58,16 @@ use TencentCloud\Common\AbstractModel;
 - JAR：通过 jar 包部署
 - WAR：通过 war 包部署
 - IMAGE：通过镜像部署
- * @method string getDeployVersion() 获取部署类型为 IMAGE 时，该参数表示镜像 tag。
-部署类型为 JAR/WAR 时，该参数表示包版本号。
- * @method void setDeployVersion(string $DeployVersion) 设置部署类型为 IMAGE 时，该参数表示镜像 tag。
-部署类型为 JAR/WAR 时，该参数表示包版本号。
- * @method string getPkgName() 获取包名。使用 JAR 包或者 WAR 包部署的时候必填。
- * @method void setPkgName(string $PkgName) 设置包名。使用 JAR 包或者 WAR 包部署的时候必填。
+ * @method string getPkgName() 获取传入内容为 /jar包名字 的形式。也就是在 jar包名字前增加一个/。
+
+如上传的 jar 包名字为 demo-1.0.0.jar，那么这里传入内容为：/demo-1.0.0.jar
+
+注：jar 包需要通过 tem 页面上传过，tem 后端才能拉到该 jar 包。
+ * @method void setPkgName(string $PkgName) 设置传入内容为 /jar包名字 的形式。也就是在 jar包名字前增加一个/。
+
+如上传的 jar 包名字为 demo-1.0.0.jar，那么这里传入内容为：/demo-1.0.0.jar
+
+注：jar 包需要通过 tem 页面上传过，tem 后端才能拉到该 jar 包。
  * @method string getJdkVersion() 获取JDK 版本。
 - KONA:8：使用 kona jdk 8。
 - OPEN:8：使用 open jdk 8。
@@ -142,6 +150,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRepoServer(string $RepoServer) 设置镜像部署时，选择的镜像服务器地址
  * @method integer getRepoType() 获取镜像部署时，仓库类型：0：个人仓库；1：企业版；2：公共仓库；3：tem托管仓库；4：demo仓库
  * @method void setRepoType(integer $RepoType) 设置镜像部署时，仓库类型：0：个人仓库；1：企业版；2：公共仓库；3：tem托管仓库；4：demo仓库
+ * @method string getPostStartEncoded() 获取启动后执行的脚本，base64 编码
+ * @method void setPostStartEncoded(string $PostStartEncoded) 设置启动后执行的脚本，base64 编码
+ * @method string getPreStopEncoded() 获取停止前执行的脚本，base64 编码
+ * @method void setPreStopEncoded(string $PreStopEncoded) 设置停止前执行的脚本，base64 编码
  */
 class DeployApplicationRequest extends AbstractModel
 {
@@ -156,12 +168,12 @@ class DeployApplicationRequest extends AbstractModel
     public $InitPodNum;
 
     /**
-     * @var float cpu规格
+     * @var float cpu规格 单位：核
      */
     public $CpuSpec;
 
     /**
-     * @var float 内存规格
+     * @var float 内存规格 单位：G
      */
     public $MemorySpec;
 
@@ -169,6 +181,12 @@ class DeployApplicationRequest extends AbstractModel
      * @var string 环境ID
      */
     public $EnvironmentId;
+
+    /**
+     * @var string 部署类型为 IMAGE 时，该参数表示镜像 tag。
+部署类型为 JAR/WAR 时，该参数表示包版本号。
+     */
+    public $DeployVersion;
 
     /**
      * @var string 镜像仓库
@@ -219,13 +237,11 @@ class DeployApplicationRequest extends AbstractModel
     public $DeployMode;
 
     /**
-     * @var string 部署类型为 IMAGE 时，该参数表示镜像 tag。
-部署类型为 JAR/WAR 时，该参数表示包版本号。
-     */
-    public $DeployVersion;
+     * @var string 传入内容为 /jar包名字 的形式。也就是在 jar包名字前增加一个/。
 
-    /**
-     * @var string 包名。使用 JAR 包或者 WAR 包部署的时候必填。
+如上传的 jar 包名字为 demo-1.0.0.jar，那么这里传入内容为：/demo-1.0.0.jar
+
+注：jar 包需要通过 tem 页面上传过，tem 后端才能拉到该 jar 包。
      */
     public $PkgName;
 
@@ -387,11 +403,23 @@ class DeployApplicationRequest extends AbstractModel
     public $RepoType;
 
     /**
+     * @var string 启动后执行的脚本，base64 编码
+     */
+    public $PostStartEncoded;
+
+    /**
+     * @var string 停止前执行的脚本，base64 编码
+     */
+    public $PreStopEncoded;
+
+    /**
      * @param string $ApplicationId 应用ID
      * @param integer $InitPodNum 初始化 pod 数
-     * @param float $CpuSpec cpu规格
-     * @param float $MemorySpec 内存规格
+     * @param float $CpuSpec cpu规格 单位：核
+     * @param float $MemorySpec 内存规格 单位：G
      * @param string $EnvironmentId 环境ID
+     * @param string $DeployVersion 部署类型为 IMAGE 时，该参数表示镜像 tag。
+部署类型为 JAR/WAR 时，该参数表示包版本号。
      * @param string $ImgRepo 镜像仓库
      * @param string $VersionDesc 版本描述信息
      * @param string $JvmOpts 启动参数
@@ -404,9 +432,11 @@ class DeployApplicationRequest extends AbstractModel
 - JAR：通过 jar 包部署
 - WAR：通过 war 包部署
 - IMAGE：通过镜像部署
-     * @param string $DeployVersion 部署类型为 IMAGE 时，该参数表示镜像 tag。
-部署类型为 JAR/WAR 时，该参数表示包版本号。
-     * @param string $PkgName 包名。使用 JAR 包或者 WAR 包部署的时候必填。
+     * @param string $PkgName 传入内容为 /jar包名字 的形式。也就是在 jar包名字前增加一个/。
+
+如上传的 jar 包名字为 demo-1.0.0.jar，那么这里传入内容为：/demo-1.0.0.jar
+
+注：jar 包需要通过 tem 页面上传过，tem 后端才能拉到该 jar 包。
      * @param string $JdkVersion JDK 版本。
 - KONA:8：使用 kona jdk 8。
 - OPEN:8：使用 open jdk 8。
@@ -448,6 +478,8 @@ class DeployApplicationRequest extends AbstractModel
      * @param string $TcrInstanceId 镜像部署时，选择的tcr实例id
      * @param string $RepoServer 镜像部署时，选择的镜像服务器地址
      * @param integer $RepoType 镜像部署时，仓库类型：0：个人仓库；1：企业版；2：公共仓库；3：tem托管仓库；4：demo仓库
+     * @param string $PostStartEncoded 启动后执行的脚本，base64 编码
+     * @param string $PreStopEncoded 停止前执行的脚本，base64 编码
      */
     function __construct()
     {
@@ -480,6 +512,10 @@ class DeployApplicationRequest extends AbstractModel
 
         if (array_key_exists("EnvironmentId",$param) and $param["EnvironmentId"] !== null) {
             $this->EnvironmentId = $param["EnvironmentId"];
+        }
+
+        if (array_key_exists("DeployVersion",$param) and $param["DeployVersion"] !== null) {
+            $this->DeployVersion = $param["DeployVersion"];
         }
 
         if (array_key_exists("ImgRepo",$param) and $param["ImgRepo"] !== null) {
@@ -532,10 +568,6 @@ class DeployApplicationRequest extends AbstractModel
 
         if (array_key_exists("DeployMode",$param) and $param["DeployMode"] !== null) {
             $this->DeployMode = $param["DeployMode"];
-        }
-
-        if (array_key_exists("DeployVersion",$param) and $param["DeployVersion"] !== null) {
-            $this->DeployVersion = $param["DeployVersion"];
         }
 
         if (array_key_exists("PkgName",$param) and $param["PkgName"] !== null) {
@@ -678,6 +710,14 @@ class DeployApplicationRequest extends AbstractModel
 
         if (array_key_exists("RepoType",$param) and $param["RepoType"] !== null) {
             $this->RepoType = $param["RepoType"];
+        }
+
+        if (array_key_exists("PostStartEncoded",$param) and $param["PostStartEncoded"] !== null) {
+            $this->PostStartEncoded = $param["PostStartEncoded"];
+        }
+
+        if (array_key_exists("PreStopEncoded",$param) and $param["PreStopEncoded"] !== null) {
+            $this->PreStopEncoded = $param["PreStopEncoded"];
         }
     }
 }

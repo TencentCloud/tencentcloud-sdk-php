@@ -24,8 +24,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuery(string $Query) 设置查询语句，使用PromQL语法	
  * @method string getTopicId() 获取指标主题ID
  * @method void setTopicId(string $TopicId) 设置指标主题ID
- * @method integer getTime() 获取查询时间，秒级Unix时间戳	
- * @method void setTime(integer $Time) 设置查询时间，秒级Unix时间戳	
+ * @method integer getTime() 获取查询时间，秒级Unix时间戳。为空时代表当前时间戳。
+
+ * @method void setTime(integer $Time) 设置查询时间，秒级Unix时间戳。为空时代表当前时间戳。
  */
 class QueryMetricRequest extends AbstractModel
 {
@@ -40,14 +41,15 @@ class QueryMetricRequest extends AbstractModel
     public $TopicId;
 
     /**
-     * @var integer 查询时间，秒级Unix时间戳	
+     * @var integer 查询时间，秒级Unix时间戳。为空时代表当前时间戳。
+
      */
     public $Time;
 
     /**
      * @param string $Query 查询语句，使用PromQL语法	
      * @param string $TopicId 指标主题ID
-     * @param integer $Time 查询时间，秒级Unix时间戳	
+     * @param integer $Time 查询时间，秒级Unix时间戳。为空时代表当前时间戳。
      */
     function __construct()
     {

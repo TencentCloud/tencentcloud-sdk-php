@@ -21,17 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * 健康探针
  *
  * @method Probe getProbe() 获取探针参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProbe(Probe $Probe) 设置探针参数
-注意：此字段可能返回 null，表示取不到有效值。
- * @method HttpGet getHttpGet() 获取HttpGet检测参数
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHttpGet(HttpGet $HttpGet) 设置HttpGet检测参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method Exec getExec() 获取容器内检测命令参数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExec(Exec $Exec) 设置容器内检测命令参数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method HttpGet getHttpGet() 获取HttpGet检测参数
+ * @method void setHttpGet(HttpGet $HttpGet) 设置HttpGet检测参数
  * @method TcpSocket getTcpSocket() 获取TcpSocket检测的端口参数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTcpSocket(TcpSocket $TcpSocket) 设置TcpSocket检测的端口参数
@@ -41,21 +37,19 @@ class LivenessOrReadinessProbe extends AbstractModel
 {
     /**
      * @var Probe 探针参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Probe;
-
-    /**
-     * @var HttpGet HttpGet检测参数
-注意：此字段可能返回 null，表示取不到有效值。
-     */
-    public $HttpGet;
 
     /**
      * @var Exec 容器内检测命令参数
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Exec;
+
+    /**
+     * @var HttpGet HttpGet检测参数
+     */
+    public $HttpGet;
 
     /**
      * @var TcpSocket TcpSocket检测的端口参数
@@ -65,11 +59,9 @@ class LivenessOrReadinessProbe extends AbstractModel
 
     /**
      * @param Probe $Probe 探针参数
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param HttpGet $HttpGet HttpGet检测参数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param Exec $Exec 容器内检测命令参数
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param HttpGet $HttpGet HttpGet检测参数
      * @param TcpSocket $TcpSocket TcpSocket检测的端口参数
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -91,14 +83,14 @@ class LivenessOrReadinessProbe extends AbstractModel
             $this->Probe->deserialize($param["Probe"]);
         }
 
-        if (array_key_exists("HttpGet",$param) and $param["HttpGet"] !== null) {
-            $this->HttpGet = new HttpGet();
-            $this->HttpGet->deserialize($param["HttpGet"]);
-        }
-
         if (array_key_exists("Exec",$param) and $param["Exec"] !== null) {
             $this->Exec = new Exec();
             $this->Exec->deserialize($param["Exec"]);
+        }
+
+        if (array_key_exists("HttpGet",$param) and $param["HttpGet"] !== null) {
+            $this->HttpGet = new HttpGet();
+            $this->HttpGet->deserialize($param["HttpGet"]);
         }
 
         if (array_key_exists("TcpSocket",$param) and $param["TcpSocket"] !== null) {

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置开始时间
  * @method string getEndTime() 获取结束时间
  * @method void setEndTime(string $EndTime) 设置结束时间
- * @method string getPeriod() 获取时间范围精度，1分钟/5分钟
- * @method void setPeriod(string $Period) 设置时间范围精度，1分钟/5分钟
+ * @method string getPeriod() 获取时间范围精度，1分钟(ONE_MINUTE)/5分钟(FIVE_MINUTE)
+ * @method void setPeriod(string $Period) 设置时间范围精度，1分钟(ONE_MINUTE)/5分钟(FIVE_MINUTE)
  */
 class DescribeDedicatedClusterHostStatisticsRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class DescribeDedicatedClusterHostStatisticsRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string 时间范围精度，1分钟/5分钟
+     * @var string 时间范围精度，1分钟(ONE_MINUTE)/5分钟(FIVE_MINUTE)
      */
     public $Period;
 
@@ -63,7 +63,7 @@ class DescribeDedicatedClusterHostStatisticsRequest extends AbstractModel
      * @param string $HostId 宿主机id
      * @param string $StartTime 开始时间
      * @param string $EndTime 结束时间
-     * @param string $Period 时间范围精度，1分钟/5分钟
+     * @param string $Period 时间范围精度，1分钟(ONE_MINUTE)/5分钟(FIVE_MINUTE)
      */
     function __construct()
     {

@@ -28,10 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIpAddress(string $IpAddress) 设置挂载点 IP
  * @method string getFSID() 获取挂载根目录
  * @method void setFSID(string $FSID) 设置挂载根目录
- * @method string getLifeCycleState() 获取挂载点状态
- * @method void setLifeCycleState(string $LifeCycleState) 设置挂载点状态
- * @method string getNetworkInterface() 获取网络类型
- * @method void setNetworkInterface(string $NetworkInterface) 设置网络类型
+ * @method string getLifeCycleState() 获取挂载点状态，包括creating：创建中；available：运行中；
+deleting：删除中；
+create_failed： 创建失败
+ * @method void setLifeCycleState(string $LifeCycleState) 设置挂载点状态，包括creating：创建中；available：运行中；
+deleting：删除中；
+create_failed： 创建失败
+ * @method string getNetworkInterface() 获取网络类型，包括VPC,CCN
+ * @method void setNetworkInterface(string $NetworkInterface) 设置网络类型，包括VPC,CCN
  * @method string getVpcId() 获取私有网络 ID
  * @method void setVpcId(string $VpcId) 设置私有网络 ID
  * @method string getVpcName() 获取私有网络名称
@@ -68,12 +72,14 @@ class MountInfo extends AbstractModel
     public $FSID;
 
     /**
-     * @var string 挂载点状态
+     * @var string 挂载点状态，包括creating：创建中；available：运行中；
+deleting：删除中；
+create_failed： 创建失败
      */
     public $LifeCycleState;
 
     /**
-     * @var string 网络类型
+     * @var string 网络类型，包括VPC,CCN
      */
     public $NetworkInterface;
 
@@ -112,8 +118,10 @@ class MountInfo extends AbstractModel
      * @param string $MountTargetId 挂载点 ID
      * @param string $IpAddress 挂载点 IP
      * @param string $FSID 挂载根目录
-     * @param string $LifeCycleState 挂载点状态
-     * @param string $NetworkInterface 网络类型
+     * @param string $LifeCycleState 挂载点状态，包括creating：创建中；available：运行中；
+deleting：删除中；
+create_failed： 创建失败
+     * @param string $NetworkInterface 网络类型，包括VPC,CCN
      * @param string $VpcId 私有网络 ID
      * @param string $VpcName 私有网络名称
      * @param string $SubnetId 子网 Id

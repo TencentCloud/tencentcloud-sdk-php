@@ -21,117 +21,81 @@ use TencentCloud\Common\AbstractModel;
  * 配置文件模板
  *
  * @method integer getId() 获取配置文件模板id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(integer $Id) 设置配置文件模板id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取配置文件模板名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置配置文件模板名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContent() 获取配置文件模板内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContent(string $Content) 设置配置文件模板内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFormat() 获取配置文件模板格式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFormat(string $Format) 设置配置文件模板格式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getComment() 获取配置文件模板注释
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComment(string $Comment) 设置配置文件模板注释
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取配置文件模板创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置配置文件模板创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateBy() 获取配置文件模板创建者
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateBy(string $CreateBy) 设置配置文件模板创建者
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifyTime() 获取配置文件模板修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyTime(string $ModifyTime) 设置配置文件模板修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifyBy() 获取配置文件模板修改者
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyBy(string $ModifyBy) 设置配置文件模板修改者
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ConfigFileTemplate extends AbstractModel
 {
     /**
      * @var integer 配置文件模板id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var string 配置文件模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 配置文件模板内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Content;
 
     /**
      * @var string 配置文件模板格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Format;
 
     /**
      * @var string 配置文件模板注释
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Comment;
 
     /**
      * @var string 配置文件模板创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 配置文件模板创建者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateBy;
 
     /**
      * @var string 配置文件模板修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyTime;
 
     /**
      * @var string 配置文件模板修改者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyBy;
 
     /**
      * @param integer $Id 配置文件模板id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 配置文件模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Content 配置文件模板内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Format 配置文件模板格式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Comment 配置文件模板注释
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 配置文件模板创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateBy 配置文件模板创建者
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyTime 配置文件模板修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyBy 配置文件模板修改者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetActionSequence请求参数结构体
  *
- * @method string getActionType() 获取默认不需要使用
- * @method void setActionType(string $ActionType) 设置默认不需要使用
+ * @method string getActionType() 获取默认不需要使用。
+ * @method void setActionType(string $ActionType) 设置默认不需要使用。
  */
 class GetActionSequenceRequest extends AbstractModel
 {
     /**
-     * @var string 默认不需要使用
+     * @var string 默认不需要使用。
      */
     public $ActionType;
 
     /**
-     * @param string $ActionType 默认不需要使用
+     * @param string $ActionType 默认不需要使用。
      */
     function __construct()
     {

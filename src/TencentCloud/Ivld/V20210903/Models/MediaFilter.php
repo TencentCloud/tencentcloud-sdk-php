@@ -19,8 +19,6 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * 媒资过滤条件
-
-
  *
  * @method array getMediaNameSet() 获取媒资名称过滤条件
  * @method void setMediaNameSet(array $MediaNameSet) 设置媒资名称过滤条件

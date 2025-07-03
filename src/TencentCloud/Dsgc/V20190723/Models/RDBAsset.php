@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * rdb的资产统计结果
  *
  * @method integer getDbNums() 获取DB总数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDbNums(integer $DbNums) 设置DB总数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSensitiveDbNums() 获取敏感DB数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSensitiveDbNums(integer $SensitiveDbNums) 设置敏感DB数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTableNums() 获取表数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTableNums(integer $TableNums) 设置表数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSensitiveTableNums() 获取敏感表的数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSensitiveTableNums(integer $SensitiveTableNums) 设置敏感表的数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFieldNums() 获取字段数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFieldNums(integer $FieldNums) 设置字段数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSensitiveFieldNums() 获取敏感的字段数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSensitiveFieldNums(integer $SensitiveFieldNums) 设置敏感的字段数量
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RDBAsset extends AbstractModel
 {
     /**
      * @var integer DB总数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DbNums;
 
     /**
      * @var integer 敏感DB数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SensitiveDbNums;
 
     /**
      * @var integer 表数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TableNums;
 
     /**
      * @var integer 敏感表的数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SensitiveTableNums;
 
     /**
      * @var integer 字段数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FieldNums;
 
     /**
      * @var integer 敏感的字段数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SensitiveFieldNums;
 
     /**
      * @param integer $DbNums DB总数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SensitiveDbNums 敏感DB数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TableNums 表数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SensitiveTableNums 敏感表的数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FieldNums 字段数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SensitiveFieldNums 敏感的字段数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

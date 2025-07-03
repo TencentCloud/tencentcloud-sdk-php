@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsDelay(integer $IsDelay) 设置（IsDelay为老版参数，新版无需输入）是否延迟下发，1则延迟下发，否则立即下发
  * @method string getFrom() 获取来源 默认空 覆盖导入是 batch_import_cover
  * @method void setFrom(string $From) 设置来源 默认空 覆盖导入是 batch_import_cover
- * @method integer getIsUseId() 获取是否使用id 默认不需要
- * @method void setIsUseId(integer $IsUseId) 设置是否使用id 默认不需要
+ * @method integer getIsUseId() 获取是否复用rule id，1为是，默认不需要
+ * @method void setIsUseId(integer $IsUseId) 设置是否复用rule id，1为是，默认不需要
  */
 class AddEnterpriseSecurityGroupRulesRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class AddEnterpriseSecurityGroupRulesRequest extends AbstractModel
     public $From;
 
     /**
-     * @var integer 是否使用id 默认不需要
+     * @var integer 是否复用rule id，1为是，默认不需要
      */
     public $IsUseId;
 
@@ -71,7 +71,7 @@ class AddEnterpriseSecurityGroupRulesRequest extends AbstractModel
      * @param string $ClientToken 保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。
      * @param integer $IsDelay （IsDelay为老版参数，新版无需输入）是否延迟下发，1则延迟下发，否则立即下发
      * @param string $From 来源 默认空 覆盖导入是 batch_import_cover
-     * @param integer $IsUseId 是否使用id 默认不需要
+     * @param integer $IsUseId 是否复用rule id，1为是，默认不需要
      */
     function __construct()
     {

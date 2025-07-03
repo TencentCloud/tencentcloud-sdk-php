@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 用于生成默认的风险级别矩阵
  *
  * @method string getName() 获取名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getId() 获取就是id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(integer $Id) 设置就是id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getScore() 获取分数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScore(float $Score) 设置分数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RiskMatrixLevel extends AbstractModel
 {
     /**
      * @var string 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var integer 就是id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var float 分数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Score;
 
     /**
      * @param string $Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Id 就是id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Score 分数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 免疫接种证明
  *
  * @method array getVaccineList() 获取免疫接种列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVaccineList(array $VaccineList) 设置免疫接种列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPage() 获取数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPage(integer $Page) 设置数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VaccineCertificate extends AbstractModel
 {
     /**
      * @var array 免疫接种列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VaccineList;
 
     /**
      * @var integer 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Page;
 
     /**
      * @param array $VaccineList 免疫接种列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Page 数据在原PDF文件中的第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

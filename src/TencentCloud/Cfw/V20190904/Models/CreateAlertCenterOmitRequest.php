@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
 AlertTable 告警中心  InterceptionTable拦截列表
  * @method void setTableType(string $TableType) 设置忽略数据来源：
 AlertTable 告警中心  InterceptionTable拦截列表
+ * @method array getHandleEventIdList() 获取处置对象,事件ID列表
+ * @method void setHandleEventIdList(array $HandleEventIdList) 设置处置对象,事件ID列表
  */
 class CreateAlertCenterOmitRequest extends AbstractModel
 {
@@ -41,9 +43,15 @@ AlertTable 告警中心  InterceptionTable拦截列表
     public $TableType;
 
     /**
+     * @var array 处置对象,事件ID列表
+     */
+    public $HandleEventIdList;
+
+    /**
      * @param array $HandleIdList 处置对象,ID列表，  IdLists和IpList二选一
      * @param string $TableType 忽略数据来源：
 AlertTable 告警中心  InterceptionTable拦截列表
+     * @param array $HandleEventIdList 处置对象,事件ID列表
      */
     function __construct()
     {
@@ -64,6 +72,10 @@ AlertTable 告警中心  InterceptionTable拦截列表
 
         if (array_key_exists("TableType",$param) and $param["TableType"] !== null) {
             $this->TableType = $param["TableType"];
+        }
+
+        if (array_key_exists("HandleEventIdList",$param) and $param["HandleEventIdList"] !== null) {
+            $this->HandleEventIdList = $param["HandleEventIdList"];
         }
     }
 }

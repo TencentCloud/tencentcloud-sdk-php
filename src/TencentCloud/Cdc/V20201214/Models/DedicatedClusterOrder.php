@@ -43,40 +43,50 @@ use TencentCloud\Common\AbstractModel;
  * @method string getAction() 获取订单类型，创建CREATE或扩容EXTEND
  * @method void setAction(string $Action) 设置订单类型，创建CREATE或扩容EXTEND
  * @method array getDedicatedClusterOrderItems() 获取子订单详情列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDedicatedClusterOrderItems(array $DedicatedClusterOrderItems) 设置子订单详情列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCpu() 获取cpu值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCpu(integer $Cpu) 设置cpu值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMem() 获取mem值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMem(integer $Mem) 设置mem值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getGpu() 获取gpu值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGpu(integer $Gpu) 设置gpu值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPayStatus() 获取0代表未支付，1代表已支付
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayStatus(integer $PayStatus) 设置0代表未支付，1代表已支付
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPayType() 获取支付方式，一次性、按月、按年
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayType(string $PayType) 设置支付方式，一次性、按月、按年
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTimeUnit() 获取购买时长的单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeUnit(string $TimeUnit) 设置购买时长的单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTimeSpan() 获取购买时长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeSpan(integer $TimeSpan) 设置购买时长
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOrderType() 获取订单类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrderType(string $OrderType) 设置订单类型
+ * @method string getCheckStatus() 获取验收状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCheckStatus(string $CheckStatus) 设置验收状态
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDeliverExpectTime() 获取交付预期时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeliverExpectTime(string $DeliverExpectTime) 设置交付预期时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDeliverFinishTime() 获取交付实际完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeliverFinishTime(string $DeliverFinishTime) 设置交付实际完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCheckExpectTime() 获取验收预期时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCheckExpectTime(string $CheckExpectTime) 设置验收预期时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCheckFinishTime() 获取验收实际完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCheckFinishTime(string $CheckFinishTime) 设置验收实际完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOrderSLA() 获取订单SLA
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOrderSLA(string $OrderSLA) 设置订单SLA
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOrderPayPlan() 获取订单支付计划
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOrderPayPlan(string $OrderPayPlan) 设置订单支付计划
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DedicatedClusterOrder extends AbstractModel
@@ -88,21 +98,25 @@ class DedicatedClusterOrder extends AbstractModel
 
     /**
      * @var string 专用集群类型id（移到下一层级，已经废弃，后续将删除）
+     * @deprecated
      */
     public $DedicatedClusterTypeId;
 
     /**
      * @var array 支持的存储类型列表（移到下一层级，已经废弃，后续将删除）
+     * @deprecated
      */
     public $SupportedStorageType;
 
     /**
      * @var array 支持的上连交换机的链路传输速率(GiB)（移到下一层级，已经废弃，后续将删除）
+     * @deprecated
      */
     public $SupportedUplinkSpeed;
 
     /**
      * @var array 支持的实例族列表（移到下一层级，已经废弃，后续将删除）
+     * @deprecated
      */
     public $SupportedInstanceFamily;
 
@@ -138,57 +152,90 @@ class DedicatedClusterOrder extends AbstractModel
 
     /**
      * @var array 子订单详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DedicatedClusterOrderItems;
 
     /**
      * @var integer cpu值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Cpu;
 
     /**
      * @var integer mem值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Mem;
 
     /**
      * @var integer gpu值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Gpu;
 
     /**
      * @var integer 0代表未支付，1代表已支付
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PayStatus;
 
     /**
      * @var string 支付方式，一次性、按月、按年
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PayType;
 
     /**
      * @var string 购买时长的单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeUnit;
 
     /**
      * @var integer 购买时长
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeSpan;
 
     /**
      * @var string 订单类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OrderType;
+
+    /**
+     * @var string 验收状态
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CheckStatus;
+
+    /**
+     * @var string 交付预期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeliverExpectTime;
+
+    /**
+     * @var string 交付实际完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeliverFinishTime;
+
+    /**
+     * @var string 验收预期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CheckExpectTime;
+
+    /**
+     * @var string 验收实际完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CheckFinishTime;
+
+    /**
+     * @var string 订单SLA
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OrderSLA;
+
+    /**
+     * @var string 订单支付计划
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OrderPayPlan;
 
     /**
      * @param string $DedicatedClusterId 专用集群id
@@ -203,22 +250,27 @@ class DedicatedClusterOrder extends AbstractModel
      * @param string $DedicatedClusterOrderId 大订单ID
      * @param string $Action 订单类型，创建CREATE或扩容EXTEND
      * @param array $DedicatedClusterOrderItems 子订单详情列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Cpu cpu值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Mem mem值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Gpu gpu值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PayStatus 0代表未支付，1代表已支付
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PayType 支付方式，一次性、按月、按年
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TimeUnit 购买时长的单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TimeSpan 购买时长
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OrderType 订单类型
+     * @param string $CheckStatus 验收状态
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DeliverExpectTime 交付预期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DeliverFinishTime 交付实际完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CheckExpectTime 验收预期时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CheckFinishTime 验收实际完成时间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OrderSLA 订单SLA
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OrderPayPlan 订单支付计划
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -317,6 +369,34 @@ class DedicatedClusterOrder extends AbstractModel
 
         if (array_key_exists("OrderType",$param) and $param["OrderType"] !== null) {
             $this->OrderType = $param["OrderType"];
+        }
+
+        if (array_key_exists("CheckStatus",$param) and $param["CheckStatus"] !== null) {
+            $this->CheckStatus = $param["CheckStatus"];
+        }
+
+        if (array_key_exists("DeliverExpectTime",$param) and $param["DeliverExpectTime"] !== null) {
+            $this->DeliverExpectTime = $param["DeliverExpectTime"];
+        }
+
+        if (array_key_exists("DeliverFinishTime",$param) and $param["DeliverFinishTime"] !== null) {
+            $this->DeliverFinishTime = $param["DeliverFinishTime"];
+        }
+
+        if (array_key_exists("CheckExpectTime",$param) and $param["CheckExpectTime"] !== null) {
+            $this->CheckExpectTime = $param["CheckExpectTime"];
+        }
+
+        if (array_key_exists("CheckFinishTime",$param) and $param["CheckFinishTime"] !== null) {
+            $this->CheckFinishTime = $param["CheckFinishTime"];
+        }
+
+        if (array_key_exists("OrderSLA",$param) and $param["OrderSLA"] !== null) {
+            $this->OrderSLA = $param["OrderSLA"];
+        }
+
+        if (array_key_exists("OrderPayPlan",$param) and $param["OrderPayPlan"] !== null) {
+            $this->OrderPayPlan = $param["OrderPayPlan"];
         }
     }
 }

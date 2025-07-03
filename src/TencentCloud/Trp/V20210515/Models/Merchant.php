@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getName() 获取商户名称
  * @method void setName(string $Name) 设置商户名称
  * @method string getRemark() 获取备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method string getUpdateTime() 获取更新时间
@@ -39,9 +37,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getCodeType() 获取码来源类型 0: 安心平台 1: 第三方码
  * @method void setCodeType(integer $CodeType) 设置码来源类型 0: 安心平台 1: 第三方码
  * @method string getCodeUrl() 获取第三方码域名前缀
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCodeUrl(string $CodeUrl) 设置第三方码域名前缀
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Merchant extends AbstractModel
 {
@@ -62,7 +58,6 @@ class Merchant extends AbstractModel
 
     /**
      * @var string 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
@@ -88,7 +83,6 @@ class Merchant extends AbstractModel
 
     /**
      * @var string 第三方码域名前缀
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CodeUrl;
 
@@ -97,13 +91,11 @@ class Merchant extends AbstractModel
      * @param integer $CorpId 企业id
      * @param string $Name 商户名称
      * @param string $Remark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
      * @param string $UpdateTime 更新时间
      * @param string $CodeRule 商户码规则
      * @param integer $CodeType 码来源类型 0: 安心平台 1: 第三方码
      * @param string $CodeUrl 第三方码域名前缀
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

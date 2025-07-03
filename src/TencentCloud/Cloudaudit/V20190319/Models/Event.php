@@ -35,9 +35,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEventName() 获取事件名称
  * @method void setEventName(string $EventName) 设置事件名称
  * @method string getSecretId() 获取证书ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecretId(string $SecretId) 设置证书ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEventSource() 获取请求来源
  * @method void setEventSource(string $EventSource) 设置请求来源
  * @method string getRequestID() 获取请求ID
@@ -47,9 +45,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getAccountID() 获取主账号ID
  * @method void setAccountID(integer $AccountID) 设置主账号ID
  * @method string getSourceIPAddress() 获取源IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSourceIPAddress(string $SourceIPAddress) 设置源IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEventNameCn() 获取事件名称中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述）
  * @method void setEventNameCn(string $EventNameCn) 设置事件名称中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述）
  * @method Resource getResources() 获取资源对
@@ -98,7 +94,6 @@ class Event extends AbstractModel
 
     /**
      * @var string 证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SecretId;
 
@@ -124,7 +119,6 @@ class Event extends AbstractModel
 
     /**
      * @var string 源IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SourceIPAddress;
 
@@ -157,13 +151,11 @@ class Event extends AbstractModel
      * @param integer $ErrorCode 鉴权错误码
      * @param string $EventName 事件名称
      * @param string $SecretId 证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EventSource 请求来源
      * @param string $RequestID 请求ID
      * @param string $ResourceRegion 资源地域
      * @param integer $AccountID 主账号ID
      * @param string $SourceIPAddress 源IP
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EventNameCn 事件名称中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述）
      * @param Resource $Resources 资源对
      * @param string $EventRegion 事件地域

@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method MultiLevelTag getTextTagSet() 获取音频识别标签数据
  * @method void setTextTagSet(MultiLevelTag $TextTagSet) 设置音频识别标签数据
+ * @method string getWebMediaURL() 获取音频下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setWebMediaURL(string $WebMediaURL) 设置音频下载地址
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AudioData extends AbstractModel
 {
@@ -41,9 +45,17 @@ class AudioData extends AbstractModel
     public $TextTagSet;
 
     /**
+     * @var string 音频下载地址
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $WebMediaURL;
+
+    /**
      * @param array $AudioInfoSet 音频识别文本结果
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MultiLevelTag $TextTagSet 音频识别标签数据
+     * @param string $WebMediaURL 音频下载地址
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -70,6 +82,10 @@ class AudioData extends AbstractModel
         if (array_key_exists("TextTagSet",$param) and $param["TextTagSet"] !== null) {
             $this->TextTagSet = new MultiLevelTag();
             $this->TextTagSet->deserialize($param["TextTagSet"]);
+        }
+
+        if (array_key_exists("WebMediaURL",$param) and $param["WebMediaURL"] !== null) {
+            $this->WebMediaURL = $param["WebMediaURL"];
         }
     }
 }

@@ -20,18 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBiddingAppointDetail请求参数结构体
  *
- * @method string getBusinessID() 获取business_id
- * @method void setBusinessID(string $BusinessID) 设置business_id
+ * @method string getBusinessID() 获取预约ID
+可通过[DescribeBiddingAppointList](https://cloud.tencent.com/document/api/242/106600)接口获取
+ * @method void setBusinessID(string $BusinessID) 设置预约ID
+可通过[DescribeBiddingAppointList](https://cloud.tencent.com/document/api/242/106600)接口获取
  */
 class DescribeBiddingAppointDetailRequest extends AbstractModel
 {
     /**
-     * @var string business_id
+     * @var string 预约ID
+可通过[DescribeBiddingAppointList](https://cloud.tencent.com/document/api/242/106600)接口获取
      */
     public $BusinessID;
 
     /**
-     * @param string $BusinessID business_id
+     * @param string $BusinessID 预约ID
+可通过[DescribeBiddingAppointList](https://cloud.tencent.com/document/api/242/106600)接口获取
      */
     function __construct()
     {

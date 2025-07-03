@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 数据同步view的描述
  *
  * @method string getViewName() 获取view名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setViewName(string $ViewName) 设置view名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNewViewName() 获取预留字段、目前暂时不支持view的重命名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNewViewName(string $NewViewName) 设置预留字段、目前暂时不支持view的重命名
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class View extends AbstractModel
 {
     /**
      * @var string view名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ViewName;
 
     /**
      * @var string 预留字段、目前暂时不支持view的重命名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NewViewName;
 
     /**
      * @param string $ViewName view名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NewViewName 预留字段、目前暂时不支持view的重命名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

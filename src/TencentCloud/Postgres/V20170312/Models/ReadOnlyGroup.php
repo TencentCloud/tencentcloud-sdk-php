@@ -21,25 +21,15 @@ use TencentCloud\Common\AbstractModel;
  * 只读组信息
  *
  * @method string getReadOnlyGroupId() 获取只读组标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReadOnlyGroupId(string $ReadOnlyGroupId) 设置只读组标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReadOnlyGroupName() 获取只读组名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReadOnlyGroupName(string $ReadOnlyGroupName) 设置只读组名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProjectId() 获取项目id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectId(integer $ProjectId) 设置项目id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMasterDBInstanceId() 获取主实例id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMasterDBInstanceId(string $MasterDBInstanceId) 设置主实例id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMinDelayEliminateReserve() 获取最小保留实例数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMinDelayEliminateReserve(integer $MinDelayEliminateReserve) 设置最小保留实例数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxReplayLatency() 获取延迟空间大小阈值
  * @method void setMaxReplayLatency(integer $MaxReplayLatency) 设置延迟空间大小阈值
  * @method integer getReplayLatencyEliminate() 获取延迟大小开关
@@ -51,9 +41,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getVpcId() 获取虚拟网络id
  * @method void setVpcId(string $VpcId) 设置虚拟网络id
  * @method string getSubnetId() 获取子网id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetId(string $SubnetId) 设置子网id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegion() 获取地域id
  * @method void setRegion(string $Region) 设置地域id
  * @method string getZone() 获取地区id
@@ -75,31 +63,26 @@ class ReadOnlyGroup extends AbstractModel
 {
     /**
      * @var string 只读组标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReadOnlyGroupId;
 
     /**
      * @var string 只读组名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReadOnlyGroupName;
 
     /**
      * @var integer 项目id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectId;
 
     /**
      * @var string 主实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MasterDBInstanceId;
 
     /**
      * @var integer 最小保留实例数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MinDelayEliminateReserve;
 
@@ -130,7 +113,6 @@ class ReadOnlyGroup extends AbstractModel
 
     /**
      * @var string 子网id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetId;
 
@@ -172,22 +154,16 @@ class ReadOnlyGroup extends AbstractModel
 
     /**
      * @param string $ReadOnlyGroupId 只读组标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReadOnlyGroupName 只读组名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProjectId 项目id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MasterDBInstanceId 主实例id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MinDelayEliminateReserve 最小保留实例数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxReplayLatency 延迟空间大小阈值
      * @param integer $ReplayLatencyEliminate 延迟大小开关
      * @param float $MaxReplayLag 延迟时间大小阈值
      * @param integer $ReplayLagEliminate 延迟时间开关
      * @param string $VpcId 虚拟网络id
      * @param string $SubnetId 子网id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 地域id
      * @param string $Zone 地区id
      * @param string $Status 状态

@@ -21,9 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * DescribeTopicRule返回参数结构体
  *
  * @method TopicRule getRule() 获取规则描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRule(TopicRule $Rule) 设置规则描述。
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getCamTag() 获取规则绑定的标签
+ * @method void setCamTag(array $CamTag) 设置规则绑定的标签
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -31,9 +31,13 @@ class DescribeTopicRuleResponse extends AbstractModel
 {
     /**
      * @var TopicRule 规则描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Rule;
+
+    /**
+     * @var array 规则绑定的标签
+     */
+    public $CamTag;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -42,7 +46,7 @@ class DescribeTopicRuleResponse extends AbstractModel
 
     /**
      * @param TopicRule $Rule 规则描述。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $CamTag 规则绑定的标签
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -61,6 +65,15 @@ class DescribeTopicRuleResponse extends AbstractModel
         if (array_key_exists("Rule",$param) and $param["Rule"] !== null) {
             $this->Rule = new TopicRule();
             $this->Rule->deserialize($param["Rule"]);
+        }
+
+        if (array_key_exists("CamTag",$param) and $param["CamTag"] !== null) {
+            $this->CamTag = [];
+            foreach ($param["CamTag"] as $key => $value){
+                $obj = new CamTag();
+                $obj->deserialize($value);
+                array_push($this->CamTag, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -28,8 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置备机网络ID，不填默认和主实例保持一致
  * @method string getSubnetId() 获取备机网络子网ID，不填默认和主实例保持一致
  * @method void setSubnetId(string $SubnetId) 设置备机网络子网ID，不填默认和主实例保持一致
- * @method string getVip() 获取指定的备机只读vip，不填自动分配
- * @method void setVip(string $Vip) 设置指定的备机只读vip，不填自动分配
+ * @method string getVip() 获取指定的备机只读vip，不填自动分配。多节点SingleReadOnly模式不支持指定vip。
+ * @method void setVip(string $Vip) 设置指定的备机只读vip，不填自动分配。多节点SingleReadOnly模式不支持指定vip。
+ * @method string getReadMode() 获取备机只读模式，多节点架构默认取值BalancedReadOnly。SingleReadOnly-每个备机各对应一个只读地址（多节点架构），BalancedReadOnly-所有备机共用一个只读地址。当实例是双节点架构时，固定取值SingleReadOnly。
+ * @method void setReadMode(string $ReadMode) 设置备机只读模式，多节点架构默认取值BalancedReadOnly。SingleReadOnly-每个备机各对应一个只读地址（多节点架构），BalancedReadOnly-所有备机共用一个只读地址。当实例是双节点架构时，固定取值SingleReadOnly。
  */
 class ModifyDReadableRequest extends AbstractModel
 {
@@ -54,16 +56,22 @@ class ModifyDReadableRequest extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var string 指定的备机只读vip，不填自动分配
+     * @var string 指定的备机只读vip，不填自动分配。多节点SingleReadOnly模式不支持指定vip。
      */
     public $Vip;
+
+    /**
+     * @var string 备机只读模式，多节点架构默认取值BalancedReadOnly。SingleReadOnly-每个备机各对应一个只读地址（多节点架构），BalancedReadOnly-所有备机共用一个只读地址。当实例是双节点架构时，固定取值SingleReadOnly。
+     */
+    public $ReadMode;
 
     /**
      * @param string $InstanceId 实例ID
      * @param string $Type 操作类型。enable-开启备机只读，disable-关闭备机只读
      * @param string $VpcId 备机网络ID，不填默认和主实例保持一致
      * @param string $SubnetId 备机网络子网ID，不填默认和主实例保持一致
-     * @param string $Vip 指定的备机只读vip，不填自动分配
+     * @param string $Vip 指定的备机只读vip，不填自动分配。多节点SingleReadOnly模式不支持指定vip。
+     * @param string $ReadMode 备机只读模式，多节点架构默认取值BalancedReadOnly。SingleReadOnly-每个备机各对应一个只读地址（多节点架构），BalancedReadOnly-所有备机共用一个只读地址。当实例是双节点架构时，固定取值SingleReadOnly。
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class ModifyDReadableRequest extends AbstractModel
 
         if (array_key_exists("Vip",$param) and $param["Vip"] !== null) {
             $this->Vip = $param["Vip"];
+        }
+
+        if (array_key_exists("ReadMode",$param) and $param["ReadMode"] !== null) {
+            $this->ReadMode = $param["ReadMode"];
         }
     }
 }

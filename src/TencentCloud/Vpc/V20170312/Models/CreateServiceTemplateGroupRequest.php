@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceTemplateGroupName(string $ServiceTemplateGroupName) 设置协议端口模板集合名称。
  * @method array getServiceTemplateIds() 获取协议端口模板实例ID，例如：ppm-4dw6agho。
  * @method void setServiceTemplateIds(array $ServiceTemplateIds) 设置协议端口模板实例ID，例如：ppm-4dw6agho。
+ * @method array getTags() 获取指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+ * @method void setTags(array $Tags) 设置指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
  */
 class CreateServiceTemplateGroupRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreateServiceTemplateGroupRequest extends AbstractModel
     public $ServiceTemplateIds;
 
     /**
+     * @var array 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
+     */
+    public $Tags;
+
+    /**
      * @param string $ServiceTemplateGroupName 协议端口模板集合名称。
      * @param array $ServiceTemplateIds 协议端口模板实例ID，例如：ppm-4dw6agho。
+     * @param array $Tags 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]。
      */
     function __construct()
     {
@@ -60,6 +68,15 @@ class CreateServiceTemplateGroupRequest extends AbstractModel
 
         if (array_key_exists("ServiceTemplateIds",$param) and $param["ServiceTemplateIds"] !== null) {
             $this->ServiceTemplateIds = $param["ServiceTemplateIds"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

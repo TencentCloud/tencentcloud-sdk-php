@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 创建云原生网关服务结果
  *
  * @method string getServiceId() 获取网关服务ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceId(string $ServiceId) 设置网关服务ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CreateGatewayServiceResult extends AbstractModel
 {
     /**
      * @var string 网关服务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceId;
 
     /**
      * @param string $ServiceId 网关服务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

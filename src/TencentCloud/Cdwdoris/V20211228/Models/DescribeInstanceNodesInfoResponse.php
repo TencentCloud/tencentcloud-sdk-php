@@ -21,23 +21,15 @@ use TencentCloud\Common\AbstractModel;
  * DescribeInstanceNodesInfo返回参数结构体
  *
  * @method array getBeNodes() 获取Be节点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBeNodes(array $BeNodes) 设置Be节点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getFeNodes() 获取Fe节点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFeNodes(array $FeNodes) 设置Fe节点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFeMaster() 获取Fe master节点
  * @method void setFeMaster(string $FeMaster) 设置Fe master节点
  * @method array getBeNodeInfos() 获取Be节点信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBeNodeInfos(array $BeNodeInfos) 设置Be节点信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getFeNodeInfos() 获取Fe节点信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFeNodeInfos(array $FeNodeInfos) 设置Fe节点信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -45,13 +37,11 @@ class DescribeInstanceNodesInfoResponse extends AbstractModel
 {
     /**
      * @var array Be节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BeNodes;
 
     /**
      * @var array Fe节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FeNodes;
 
@@ -62,13 +52,11 @@ class DescribeInstanceNodesInfoResponse extends AbstractModel
 
     /**
      * @var array Be节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BeNodeInfos;
 
     /**
      * @var array Fe节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FeNodeInfos;
 
@@ -79,14 +67,10 @@ class DescribeInstanceNodesInfoResponse extends AbstractModel
 
     /**
      * @param array $BeNodes Be节点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FeNodes Fe节点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FeMaster Fe master节点
      * @param array $BeNodeInfos Be节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FeNodeInfos Fe节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

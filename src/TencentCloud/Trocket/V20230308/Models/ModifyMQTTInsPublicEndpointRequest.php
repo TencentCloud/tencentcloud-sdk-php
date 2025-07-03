@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyMQTTInsPublicEndpoint请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method string getInstanceId() 获取集群ID
+ * @method void setInstanceId(string $InstanceId) 设置集群ID
  * @method integer getBandwidth() 获取带宽
  * @method void setBandwidth(integer $Bandwidth) 设置带宽
  * @method array getRules() 获取公网访问规则
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyMQTTInsPublicEndpointRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 集群ID
      */
     public $InstanceId;
 
@@ -45,7 +45,7 @@ class ModifyMQTTInsPublicEndpointRequest extends AbstractModel
     public $Rules;
 
     /**
-     * @param string $InstanceId 实例ID
+     * @param string $InstanceId 集群ID
      * @param integer $Bandwidth 带宽
      * @param array $Rules 公网访问规则
      */

@@ -21,15 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * 核心文件监控规则列表
  *
  * @method string getName() 获取规则名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置规则名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRuleCategory() 获取规则类型 0 ：系统规则  1：用户规则
  * @method void setRuleCategory(integer $RuleCategory) 设置规则类型 0 ：系统规则  1：用户规则
  * @method integer getHostCount() 获取影响主机数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostCount(integer $HostCount) 设置影响主机数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifyTime() 获取更新时间
  * @method void setModifyTime(string $ModifyTime) 设置更新时间
  * @method string getCreateTime() 获取创建时间
@@ -43,41 +39,30 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLevel() 获取风险等级 0：无， 1: 高危， 2:中危， 3: 低危
  * @method void setLevel(integer $Level) 设置风险等级 0：无， 1: 高危， 2:中危， 3: 低危
  * @method integer getWriteRuleCount() 获取子规则写条目数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWriteRuleCount(integer $WriteRuleCount) 设置子规则写条目数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getReadRuleCount() 获取子规则读条目数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReadRuleCount(integer $ReadRuleCount) 设置子规则读条目数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getReadWriteRuleCount() 获取子规则读写条目数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReadWriteRuleCount(integer $ReadWriteRuleCount) 设置子规则读写条目数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileAction() 获取监控行为
 <li>read 读取文件</li>
 <li>write 修改文件</li>
 <li>read-write 读取修改文件</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileAction(string $FileAction) 设置监控行为
 <li>read 读取文件</li>
 <li>write 修改文件</li>
 <li>read-write 读取修改文件</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAddWhiteType() 获取加白处理类型
 <li>cur 仅对当前加白</li>
 <li>all 所有符合条件加白</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddWhiteType(string $AddWhiteType) 设置加白处理类型
 <li>cur 仅对当前加白</li>
 <li>all 所有符合条件加白</li>
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class FileTamperRuleInfo extends AbstractModel
 {
     /**
      * @var string 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
@@ -88,7 +73,6 @@ class FileTamperRuleInfo extends AbstractModel
 
     /**
      * @var integer 影响主机数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostCount;
 
@@ -124,19 +108,16 @@ class FileTamperRuleInfo extends AbstractModel
 
     /**
      * @var integer 子规则写条目数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WriteRuleCount;
 
     /**
      * @var integer 子规则读条目数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReadRuleCount;
 
     /**
      * @var integer 子规则读写条目数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReadWriteRuleCount;
 
@@ -145,7 +126,6 @@ class FileTamperRuleInfo extends AbstractModel
 <li>read 读取文件</li>
 <li>write 修改文件</li>
 <li>read-write 读取修改文件</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileAction;
 
@@ -153,16 +133,13 @@ class FileTamperRuleInfo extends AbstractModel
      * @var string 加白处理类型
 <li>cur 仅对当前加白</li>
 <li>all 所有符合条件加白</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AddWhiteType;
 
     /**
      * @param string $Name 规则名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleCategory 规则类型 0 ：系统规则  1：用户规则
      * @param integer $HostCount 影响主机数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyTime 更新时间
      * @param string $CreateTime 创建时间
      * @param integer $Status 状态 0: 启用 1: 已关闭
@@ -170,20 +147,15 @@ class FileTamperRuleInfo extends AbstractModel
      * @param integer $IsGlobal 是否是全局的 0：否 ，1：是
      * @param integer $Level 风险等级 0：无， 1: 高危， 2:中危， 3: 低危
      * @param integer $WriteRuleCount 子规则写条目数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ReadRuleCount 子规则读条目数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ReadWriteRuleCount 子规则读写条目数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileAction 监控行为
 <li>read 读取文件</li>
 <li>write 修改文件</li>
 <li>read-write 读取修改文件</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AddWhiteType 加白处理类型
 <li>cur 仅对当前加白</li>
 <li>all 所有符合条件加白</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

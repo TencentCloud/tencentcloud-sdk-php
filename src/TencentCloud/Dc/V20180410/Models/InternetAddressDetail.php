@@ -21,27 +21,19 @@ use TencentCloud\Common\AbstractModel;
  * 互联网地址详细信息
  *
  * @method string getInstanceId() 获取互联网地址ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置互联网地址ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubnet() 获取互联网网络地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnet(string $Subnet) 设置互联网网络地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaskLen() 获取网络地址掩码长度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaskLen(integer $MaskLen) 设置网络地址掩码长度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAddrType() 获取0:BGP
 1:电信
 2:移动
 3:联通
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddrType(integer $AddrType) 设置0:BGP
 1:电信
 2:移动
 3:联通
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取0:使用中
 1:已停用
 2:已退还
@@ -49,51 +41,34 @@ use TencentCloud\Common\AbstractModel;
 1:已停用
 2:已退还
  * @method string getApplyTime() 获取申请时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplyTime(string $ApplyTime) 设置申请时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStopTime() 获取停用时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStopTime(string $StopTime) 设置停用时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReleaseTime() 获取退还时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReleaseTime(string $ReleaseTime) 设置退还时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegion() 获取地域信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置地域信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAppId() 获取用户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppId(integer $AppId) 设置用户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAddrProto() 获取0:IPv4 1:IPv6
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddrProto(integer $AddrProto) 设置0:IPv4 1:IPv6
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getReserveTime() 获取释放状态的IP地址保留的天数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReserveTime(integer $ReserveTime) 设置释放状态的IP地址保留的天数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InternetAddressDetail extends AbstractModel
 {
     /**
      * @var string 互联网地址ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var string 互联网网络地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Subnet;
 
     /**
      * @var integer 网络地址掩码长度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaskLen;
 
@@ -102,7 +77,6 @@ class InternetAddressDetail extends AbstractModel
 1:电信
 2:移动
 3:联通
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AddrType;
 
@@ -115,75 +89,57 @@ class InternetAddressDetail extends AbstractModel
 
     /**
      * @var string 申请时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplyTime;
 
     /**
      * @var string 停用时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StopTime;
 
     /**
      * @var string 退还时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReleaseTime;
 
     /**
      * @var string 地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
      * @var integer 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppId;
 
     /**
      * @var integer 0:IPv4 1:IPv6
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AddrProto;
 
     /**
      * @var integer 释放状态的IP地址保留的天数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReserveTime;
 
     /**
      * @param string $InstanceId 互联网地址ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Subnet 互联网网络地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaskLen 网络地址掩码长度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AddrType 0:BGP
 1:电信
 2:移动
 3:联通
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 0:使用中
 1:已停用
 2:已退还
      * @param string $ApplyTime 申请时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StopTime 停用时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReleaseTime 退还时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AppId 用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AddrProto 0:IPv4 1:IPv6
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ReserveTime 释放状态的IP地址保留的天数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

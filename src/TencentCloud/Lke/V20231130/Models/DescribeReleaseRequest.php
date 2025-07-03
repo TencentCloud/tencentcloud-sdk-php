@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRelease请求参数结构体
  *
- * @method string getBotBizId() 获取机器人ID
- * @method void setBotBizId(string $BotBizId) 设置机器人ID
+ * @method string getBotBizId() 获取应用ID
+ * @method void setBotBizId(string $BotBizId) 设置应用ID
  * @method string getReleaseBizId() 获取发布详情
  * @method void setReleaseBizId(string $ReleaseBizId) 设置发布详情
  */
 class DescribeReleaseRequest extends AbstractModel
 {
     /**
-     * @var string 机器人ID
+     * @var string 应用ID
      */
     public $BotBizId;
 
@@ -38,7 +38,7 @@ class DescribeReleaseRequest extends AbstractModel
     public $ReleaseBizId;
 
     /**
-     * @param string $BotBizId 机器人ID
+     * @param string $BotBizId 应用ID
      * @param string $ReleaseBizId 发布详情
      */
     function __construct()

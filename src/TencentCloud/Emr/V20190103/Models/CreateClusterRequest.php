@@ -54,8 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置实例所属安全组的ID，形如sg-xxxxxxxx。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的SecurityGroupId字段来获取。
  * @method array getScriptBootstrapActionConfig() 获取[引导操作](https://cloud.tencent.com/document/product/589/35656)脚本设置。
  * @method void setScriptBootstrapActionConfig(array $ScriptBootstrapActionConfig) 设置[引导操作](https://cloud.tencent.com/document/product/589/35656)脚本设置。
- * @method string getClientToken() 获取唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-751a-41b6-aad6-fae360632808
- * @method void setClientToken(string $ClientToken) 设置唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-751a-41b6-aad6-fae360632808
+ * @method string getClientToken() 获取唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808
+ * @method void setClientToken(string $ClientToken) 设置唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808
  * @method string getNeedMasterWan() 获取是否开启集群Master节点公网。取值范围：
 <li>NEED_MASTER_WAN：表示开启集群Master节点公网。</li>
 <li>NOT_NEED_MASTER_WAN：表示不开启。</li>默认开启集群Master节点公网。
@@ -98,6 +98,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDependService(array $DependService) 设置共享组件信息
  * @method array getZoneResourceConfiguration() 获取节点资源的规格，有几个可用区，就填几个，按顺序第一个为主可用区，第二个为备可用区，第三个为仲裁可用区。如果没有开启跨AZ，则长度为1即可。
  * @method void setZoneResourceConfiguration(array $ZoneResourceConfiguration) 设置节点资源的规格，有几个可用区，就填几个，按顺序第一个为主可用区，第二个为备可用区，第三个为仲裁可用区。如果没有开启跨AZ，则长度为1即可。
+ * @method string getCosBucket() 获取cos桶路径，创建StarRocks存算分离集群时用到
+ * @method void setCosBucket(string $CosBucket) 设置cos桶路径，创建StarRocks存算分离集群时用到
+ * @method array getNodeMarks() 获取节点标识信息，目前只提供给tf平台使用
+ * @method void setNodeMarks(array $NodeMarks) 设置节点标识信息，目前只提供给tf平台使用
  */
 class CreateClusterRequest extends AbstractModel
 {
@@ -155,7 +159,7 @@ class CreateClusterRequest extends AbstractModel
     public $ScriptBootstrapActionConfig;
 
     /**
-     * @var string 唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-751a-41b6-aad6-fae360632808
+     * @var string 唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808
      */
     public $ClientToken;
 
@@ -221,6 +225,16 @@ class CreateClusterRequest extends AbstractModel
     public $ZoneResourceConfiguration;
 
     /**
+     * @var string cos桶路径，创建StarRocks存算分离集群时用到
+     */
+    public $CosBucket;
+
+    /**
+     * @var array 节点标识信息，目前只提供给tf平台使用
+     */
+    public $NodeMarks;
+
+    /**
      * @param string $ProductVersion EMR产品版本名称如EMR-V2.3.0 表示2.3.0版本的EMR， 当前支持产品版本名称查询：[产品版本名称](https://cloud.tencent.com/document/product/589/66338)
      * @param boolean $EnableSupportHAFlag 是否开启节点高可用。取值范围：
 <li>true：表示开启节点高可用。</li>
@@ -238,7 +252,7 @@ class CreateClusterRequest extends AbstractModel
      * @param InstanceChargePrepaid $InstanceChargePrepaid 即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。若指定实例的付费模式为预付费则该参数必传。
      * @param array $SecurityGroupIds 实例所属安全组的ID，形如sg-xxxxxxxx。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的SecurityGroupId字段来获取。
      * @param array $ScriptBootstrapActionConfig [引导操作](https://cloud.tencent.com/document/product/589/35656)脚本设置。
-     * @param string $ClientToken 唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-751a-41b6-aad6-fae360632808
+     * @param string $ClientToken 唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808
      * @param string $NeedMasterWan 是否开启集群Master节点公网。取值范围：
 <li>NEED_MASTER_WAN：表示开启集群Master节点公网。</li>
 <li>NOT_NEED_MASTER_WAN：表示不开启。</li>默认开启集群Master节点公网。
@@ -260,6 +274,8 @@ class CreateClusterRequest extends AbstractModel
 当MetaType选择USER_CUSTOM_META时，填写MetaDataJdbcUrl MetaDataUser MetaDataPass
      * @param array $DependService 共享组件信息
      * @param array $ZoneResourceConfiguration 节点资源的规格，有几个可用区，就填几个，按顺序第一个为主可用区，第二个为备可用区，第三个为仲裁可用区。如果没有开启跨AZ，则长度为1即可。
+     * @param string $CosBucket cos桶路径，创建StarRocks存算分离集群时用到
+     * @param array $NodeMarks 节点标识信息，目前只提供给tf平台使用
      */
     function __construct()
     {
@@ -375,6 +391,19 @@ class CreateClusterRequest extends AbstractModel
                 $obj = new ZoneResourceConfiguration();
                 $obj->deserialize($value);
                 array_push($this->ZoneResourceConfiguration, $obj);
+            }
+        }
+
+        if (array_key_exists("CosBucket",$param) and $param["CosBucket"] !== null) {
+            $this->CosBucket = $param["CosBucket"];
+        }
+
+        if (array_key_exists("NodeMarks",$param) and $param["NodeMarks"] !== null) {
+            $this->NodeMarks = [];
+            foreach ($param["NodeMarks"] as $key => $value){
+                $obj = new NodeMark();
+                $obj->deserialize($value);
+                array_push($this->NodeMarks, $obj);
             }
         }
     }

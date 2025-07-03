@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateCCCSkillGroup请求参数结构体
  *
- * @method integer getSdkAppId() 获取应用 ID（必填）
- * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID（必填）
+ * @method integer getSdkAppId() 获取应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
+ * @method void setSdkAppId(integer $SdkAppId) 设置应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
  * @method integer getSkillGroupID() 获取技能组ID
  * @method void setSkillGroupID(integer $SkillGroupID) 设置技能组ID
  * @method string getSkillGroupName() 获取修改后的技能组名字
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class UpdateCCCSkillGroupRequest extends AbstractModel
 {
     /**
-     * @var integer 应用 ID（必填）
+     * @var integer 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      */
     public $SdkAppId;
 
@@ -59,7 +59,7 @@ class UpdateCCCSkillGroupRequest extends AbstractModel
     public $RingAll;
 
     /**
-     * @param integer $SdkAppId 应用 ID（必填）
+     * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param integer $SkillGroupID 技能组ID
      * @param string $SkillGroupName 修改后的技能组名字
      * @param integer $MaxConcurrency 修改后的最大并发数,同振最大为2

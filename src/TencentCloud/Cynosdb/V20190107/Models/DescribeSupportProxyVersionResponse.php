@@ -21,13 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * DescribeSupportProxyVersion返回参数结构体
  *
  * @method array getSupportProxyVersions() 获取支持的数据库代理版本集合
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSupportProxyVersions(array $SupportProxyVersions) 设置支持的数据库代理版本集合
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCurrentProxyVersion() 获取当前proxy版本号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCurrentProxyVersion(string $CurrentProxyVersion) 设置当前proxy版本号
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSupportProxyVersionDetail() 获取代理版本详情
+ * @method void setSupportProxyVersionDetail(array $SupportProxyVersionDetail) 设置代理版本详情
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,15 +33,18 @@ class DescribeSupportProxyVersionResponse extends AbstractModel
 {
     /**
      * @var array 支持的数据库代理版本集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SupportProxyVersions;
 
     /**
      * @var string 当前proxy版本号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CurrentProxyVersion;
+
+    /**
+     * @var array 代理版本详情
+     */
+    public $SupportProxyVersionDetail;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -52,9 +53,8 @@ class DescribeSupportProxyVersionResponse extends AbstractModel
 
     /**
      * @param array $SupportProxyVersions 支持的数据库代理版本集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CurrentProxyVersion 当前proxy版本号
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SupportProxyVersionDetail 代理版本详情
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -76,6 +76,15 @@ class DescribeSupportProxyVersionResponse extends AbstractModel
 
         if (array_key_exists("CurrentProxyVersion",$param) and $param["CurrentProxyVersion"] !== null) {
             $this->CurrentProxyVersion = $param["CurrentProxyVersion"];
+        }
+
+        if (array_key_exists("SupportProxyVersionDetail",$param) and $param["SupportProxyVersionDetail"] !== null) {
+            $this->SupportProxyVersionDetail = [];
+            foreach ($param["SupportProxyVersionDetail"] as $key => $value){
+                $obj = new ProxyVersionInfo();
+                $obj->deserialize($value);
+                array_push($this->SupportProxyVersionDetail, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

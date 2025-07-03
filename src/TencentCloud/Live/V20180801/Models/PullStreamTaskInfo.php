@@ -179,39 +179,25 @@ pause：暂停中。
  * @method string getBackupSourceType() 获取备源类型：
 PullLivePushLive -直播，
 PullVodPushLive -点播。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackupSourceType(string $BackupSourceType) 设置备源类型：
 PullLivePushLive -直播，
 PullVodPushLive -点播。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBackupSourceUrl() 获取备源URL。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackupSourceUrl(string $BackupSourceUrl) 设置备源URL。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getWatermarkList() 获取水印信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWatermarkList(array $WatermarkList) 设置水印信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVodLocalMode() 获取点播源是否启用本地推流模式，默认0，不启用。
 0 - 不启用。
 1 - 启用。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVodLocalMode(integer $VodLocalMode) 设置点播源是否启用本地推流模式，默认0，不启用。
 0 - 不启用。
 1 - 启用。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRecordTemplateId() 获取录制模板 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordTemplateId(string $RecordTemplateId) 设置录制模板 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBackupToUrl() 获取新增的推流地址。用于单任务推两路场景。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackupToUrl(string $BackupToUrl) 设置新增的推流地址。用于单任务推两路场景。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTranscodeTemplateName() 获取直播转码模板。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTranscodeTemplateName(string $TranscodeTemplateName) 设置直播转码模板。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PullStreamTaskInfo extends AbstractModel
 {
@@ -389,19 +375,16 @@ pause：暂停中。
      * @var string 备源类型：
 PullLivePushLive -直播，
 PullVodPushLive -点播。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BackupSourceType;
 
     /**
      * @var string 备源URL。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BackupSourceUrl;
 
     /**
      * @var array 水印信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WatermarkList;
 
@@ -409,25 +392,21 @@ PullVodPushLive -点播。
      * @var integer 点播源是否启用本地推流模式，默认0，不启用。
 0 - 不启用。
 1 - 启用。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VodLocalMode;
 
     /**
      * @var string 录制模板 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecordTemplateId;
 
     /**
      * @var string 新增的推流地址。用于单任务推两路场景。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BackupToUrl;
 
     /**
      * @var string 直播转码模板。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TranscodeTemplateName;
 
@@ -513,21 +492,14 @@ pause：暂停中。
      * @param string $BackupSourceType 备源类型：
 PullLivePushLive -直播，
 PullVodPushLive -点播。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BackupSourceUrl 备源URL。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $WatermarkList 水印信息列表。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VodLocalMode 点播源是否启用本地推流模式，默认0，不启用。
 0 - 不启用。
 1 - 启用。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RecordTemplateId 录制模板 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BackupToUrl 新增的推流地址。用于单任务推两路场景。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TranscodeTemplateName 直播转码模板。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

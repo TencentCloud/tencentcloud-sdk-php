@@ -182,6 +182,20 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagOperation(string $TagOperation) 设置多标签交/并集关系
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getNoticeTmplBindInfos() 获取通知模板绑定内容模板信息
+ * @method void setNoticeTmplBindInfos(array $NoticeTmplBindInfos) 设置通知模板绑定内容模板信息
+ * @method array getHierarchicalNotices() 获取模板通知的等级
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHierarchicalNotices(array $HierarchicalNotices) 设置模板通知的等级
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getNoticeContentTmplBindInfos() 获取通知模板绑定内容模板信息，同NoticeTmplBindInfos
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNoticeContentTmplBindInfos(array $NoticeContentTmplBindInfos) 设置通知模板绑定内容模板信息，同NoticeTmplBindInfos
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPredefinedConfigID() 获取预设配置id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPredefinedConfigID(string $PredefinedConfigID) 设置预设配置id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmPolicy extends AbstractModel
 {
@@ -423,6 +437,29 @@ class AlarmPolicy extends AbstractModel
     public $TagOperation;
 
     /**
+     * @var array 通知模板绑定内容模板信息
+     */
+    public $NoticeTmplBindInfos;
+
+    /**
+     * @var array 模板通知的等级
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HierarchicalNotices;
+
+    /**
+     * @var array 通知模板绑定内容模板信息，同NoticeTmplBindInfos
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NoticeContentTmplBindInfos;
+
+    /**
+     * @var string 预设配置id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PredefinedConfigID;
+
+    /**
      * @param string $PolicyId 告警策略 ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PolicyName 告警策略名称
@@ -503,6 +540,13 @@ class AlarmPolicy extends AbstractModel
      * @param integer $IsSupportAlarmTag 是否支持告警标签
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TagOperation 多标签交/并集关系
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $NoticeTmplBindInfos 通知模板绑定内容模板信息
+     * @param array $HierarchicalNotices 模板通知的等级
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $NoticeContentTmplBindInfos 通知模板绑定内容模板信息，同NoticeTmplBindInfos
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PredefinedConfigID 预设配置id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -701,6 +745,37 @@ class AlarmPolicy extends AbstractModel
 
         if (array_key_exists("TagOperation",$param) and $param["TagOperation"] !== null) {
             $this->TagOperation = $param["TagOperation"];
+        }
+
+        if (array_key_exists("NoticeTmplBindInfos",$param) and $param["NoticeTmplBindInfos"] !== null) {
+            $this->NoticeTmplBindInfos = [];
+            foreach ($param["NoticeTmplBindInfos"] as $key => $value){
+                $obj = new NoticeContentTmplBindInfo();
+                $obj->deserialize($value);
+                array_push($this->NoticeTmplBindInfos, $obj);
+            }
+        }
+
+        if (array_key_exists("HierarchicalNotices",$param) and $param["HierarchicalNotices"] !== null) {
+            $this->HierarchicalNotices = [];
+            foreach ($param["HierarchicalNotices"] as $key => $value){
+                $obj = new AlarmHierarchicalNotice();
+                $obj->deserialize($value);
+                array_push($this->HierarchicalNotices, $obj);
+            }
+        }
+
+        if (array_key_exists("NoticeContentTmplBindInfos",$param) and $param["NoticeContentTmplBindInfos"] !== null) {
+            $this->NoticeContentTmplBindInfos = [];
+            foreach ($param["NoticeContentTmplBindInfos"] as $key => $value){
+                $obj = new NoticeContentTmplBindInfo();
+                $obj->deserialize($value);
+                array_push($this->NoticeContentTmplBindInfos, $obj);
+            }
+        }
+
+        if (array_key_exists("PredefinedConfigID",$param) and $param["PredefinedConfigID"] !== null) {
+            $this->PredefinedConfigID = $param["PredefinedConfigID"];
         }
     }
 }

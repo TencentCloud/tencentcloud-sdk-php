@@ -20,37 +20,40 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateBatchOrganizationRegistrationTasks返回参数结构体
  *
- * @method string getTaskId() 获取生成注册链接的任务Id，
-根据这个id， 调用DescribeBatchOrganizationRegistrationUrls 获取生成的链接，进入认证流程
-若存在其中任意一条链接错误，则返回具体的错误描述, 不会返回TaskId
- * @method void setTaskId(string $TaskId) 设置生成注册链接的任务Id，
-根据这个id， 调用DescribeBatchOrganizationRegistrationUrls 获取生成的链接，进入认证流程
-若存在其中任意一条链接错误，则返回具体的错误描述, 不会返回TaskId
- * @method array getErrorMessages() 获取批量生成企业认证链接的详细错误信息，
-顺序与输入参数保持一致。
-若企业认证均成功生成，则不返回错误信息；
-若存在任何错误，则返回具体的错误描述。
- * @method void setErrorMessages(array $ErrorMessages) 设置批量生成企业认证链接的详细错误信息，
-顺序与输入参数保持一致。
-若企业认证均成功生成，则不返回错误信息；
-若存在任何错误，则返回具体的错误描述。
+ * @method string getTaskId() 获取生成注册链接的任务ID，后序根据这个任务ID， 调用<a href="https://qian.tencent.com/developers/partnerApis/accounts/DescribeBatchOrganizationRegistrationUrls" target="_blank">查询子企业批量认证链接</a>获取生成的链接，发给对应的客户使用。
+
+注：`如果有错误，则不会返回任务ID`
+ * @method void setTaskId(string $TaskId) 设置生成注册链接的任务ID，后序根据这个任务ID， 调用<a href="https://qian.tencent.com/developers/partnerApis/accounts/DescribeBatchOrganizationRegistrationUrls" target="_blank">查询子企业批量认证链接</a>获取生成的链接，发给对应的客户使用。
+
+注：`如果有错误，则不会返回任务ID`
+ * @method array getErrorMessages() 获取批量生成企业认证链接的详细错误信息，顺序与输入参数子企业列表顺序一致。
+<ul>
+<li>如果所有企业认证链接都成功生成，将不返回错误信息</li>
+<li>如果存在任何错误，将返回具体的错误描述。（没有错误的企业返回空字符串）</li>
+</ul>
+ * @method void setErrorMessages(array $ErrorMessages) 设置批量生成企业认证链接的详细错误信息，顺序与输入参数子企业列表顺序一致。
+<ul>
+<li>如果所有企业认证链接都成功生成，将不返回错误信息</li>
+<li>如果存在任何错误，将返回具体的错误描述。（没有错误的企业返回空字符串）</li>
+</ul>
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateBatchOrganizationRegistrationTasksResponse extends AbstractModel
 {
     /**
-     * @var string 生成注册链接的任务Id，
-根据这个id， 调用DescribeBatchOrganizationRegistrationUrls 获取生成的链接，进入认证流程
-若存在其中任意一条链接错误，则返回具体的错误描述, 不会返回TaskId
+     * @var string 生成注册链接的任务ID，后序根据这个任务ID， 调用<a href="https://qian.tencent.com/developers/partnerApis/accounts/DescribeBatchOrganizationRegistrationUrls" target="_blank">查询子企业批量认证链接</a>获取生成的链接，发给对应的客户使用。
+
+注：`如果有错误，则不会返回任务ID`
      */
     public $TaskId;
 
     /**
-     * @var array 批量生成企业认证链接的详细错误信息，
-顺序与输入参数保持一致。
-若企业认证均成功生成，则不返回错误信息；
-若存在任何错误，则返回具体的错误描述。
+     * @var array 批量生成企业认证链接的详细错误信息，顺序与输入参数子企业列表顺序一致。
+<ul>
+<li>如果所有企业认证链接都成功生成，将不返回错误信息</li>
+<li>如果存在任何错误，将返回具体的错误描述。（没有错误的企业返回空字符串）</li>
+</ul>
      */
     public $ErrorMessages;
 
@@ -60,13 +63,14 @@ class CreateBatchOrganizationRegistrationTasksResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TaskId 生成注册链接的任务Id，
-根据这个id， 调用DescribeBatchOrganizationRegistrationUrls 获取生成的链接，进入认证流程
-若存在其中任意一条链接错误，则返回具体的错误描述, 不会返回TaskId
-     * @param array $ErrorMessages 批量生成企业认证链接的详细错误信息，
-顺序与输入参数保持一致。
-若企业认证均成功生成，则不返回错误信息；
-若存在任何错误，则返回具体的错误描述。
+     * @param string $TaskId 生成注册链接的任务ID，后序根据这个任务ID， 调用<a href="https://qian.tencent.com/developers/partnerApis/accounts/DescribeBatchOrganizationRegistrationUrls" target="_blank">查询子企业批量认证链接</a>获取生成的链接，发给对应的客户使用。
+
+注：`如果有错误，则不会返回任务ID`
+     * @param array $ErrorMessages 批量生成企业认证链接的详细错误信息，顺序与输入参数子企业列表顺序一致。
+<ul>
+<li>如果所有企业认证链接都成功生成，将不返回错误信息</li>
+<li>如果存在任何错误，将返回具体的错误描述。（没有错误的企业返回空字符串）</li>
+</ul>
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileName(string $FileName) 设置附件名称，最大支持255个字符长度，不支持部分附件类型，详情请参考[附件类型](https://cloud.tencent.com/document/product/1288/51951)。
  * @method string getContent() 获取Base64之后的附件内容，您可以发送的附件大小上限为4M。注意：腾讯云接口请求最大支持 8M 的请求包，附件内容经过 Base64 预期扩大1.5倍。应该控制所有附件的总大小最大在 4M 以内，整体请求超出 8M 接口会返回错误。
  * @method void setContent(string $Content) 设置Base64之后的附件内容，您可以发送的附件大小上限为4M。注意：腾讯云接口请求最大支持 8M 的请求包，附件内容经过 Base64 预期扩大1.5倍。应该控制所有附件的总大小最大在 4M 以内，整体请求超出 8M 接口会返回错误。
+ * @method string getFileURL() 获取附件URL。未开放功能，请勿使用。
+ * @method void setFileURL(string $FileURL) 设置附件URL。未开放功能，请勿使用。
  */
 class Attachment extends AbstractModel
 {
@@ -38,8 +40,14 @@ class Attachment extends AbstractModel
     public $Content;
 
     /**
+     * @var string 附件URL。未开放功能，请勿使用。
+     */
+    public $FileURL;
+
+    /**
      * @param string $FileName 附件名称，最大支持255个字符长度，不支持部分附件类型，详情请参考[附件类型](https://cloud.tencent.com/document/product/1288/51951)。
      * @param string $Content Base64之后的附件内容，您可以发送的附件大小上限为4M。注意：腾讯云接口请求最大支持 8M 的请求包，附件内容经过 Base64 预期扩大1.5倍。应该控制所有附件的总大小最大在 4M 以内，整体请求超出 8M 接口会返回错误。
+     * @param string $FileURL 附件URL。未开放功能，请勿使用。
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class Attachment extends AbstractModel
 
         if (array_key_exists("Content",$param) and $param["Content"] !== null) {
             $this->Content = $param["Content"];
+        }
+
+        if (array_key_exists("FileURL",$param) and $param["FileURL"] !== null) {
+            $this->FileURL = $param["FileURL"];
         }
     }
 }

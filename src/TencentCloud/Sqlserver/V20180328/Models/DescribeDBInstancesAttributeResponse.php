@@ -40,10 +40,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTDEConfig(TDEConfigAttribute $TDEConfig) 设置TDE透明数据加密配置
  * @method SSLConfig getSSLConfig() 获取SSL加密
  * @method void setSSLConfig(SSLConfig $SSLConfig) 设置SSL加密
- * @method DrReadableInfo getDrReadableInfo() 获取备机只读信息
- * @method void setDrReadableInfo(DrReadableInfo $DrReadableInfo) 设置备机只读信息
+ * @method DrReadableInfo getDrReadableInfo() 获取双节点备机只读信息
+ * @method void setDrReadableInfo(DrReadableInfo $DrReadableInfo) 设置双节点备机只读信息
  * @method array getOldVipList() 获取等待回收的IP列表
  * @method void setOldVipList(array $OldVipList) 设置等待回收的IP列表
+ * @method string getXEventStatus() 获取操作日志采集状态，enable-采集中，disable-不可用，renew_doing-配置开启或关闭中
+ * @method void setXEventStatus(string $XEventStatus) 设置操作日志采集状态，enable-采集中，disable-不可用，renew_doing-配置开启或关闭中
+ * @method array getMultiDrReadableInfo() 获取多节点备机只读信息
+ * @method void setMultiDrReadableInfo(array $MultiDrReadableInfo) 设置多节点备机只读信息
+ * @method integer getIsDiskEncryptFlag() 获取是否开启磁盘加密，1-开启，0-未开启
+ * @method void setIsDiskEncryptFlag(integer $IsDiskEncryptFlag) 设置是否开启磁盘加密，1-开启，0-未开启
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -100,7 +106,7 @@ class DescribeDBInstancesAttributeResponse extends AbstractModel
     public $SSLConfig;
 
     /**
-     * @var DrReadableInfo 备机只读信息
+     * @var DrReadableInfo 双节点备机只读信息
      */
     public $DrReadableInfo;
 
@@ -108,6 +114,21 @@ class DescribeDBInstancesAttributeResponse extends AbstractModel
      * @var array 等待回收的IP列表
      */
     public $OldVipList;
+
+    /**
+     * @var string 操作日志采集状态，enable-采集中，disable-不可用，renew_doing-配置开启或关闭中
+     */
+    public $XEventStatus;
+
+    /**
+     * @var array 多节点备机只读信息
+     */
+    public $MultiDrReadableInfo;
+
+    /**
+     * @var integer 是否开启磁盘加密，1-开启，0-未开启
+     */
+    public $IsDiskEncryptFlag;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -125,8 +146,11 @@ class DescribeDBInstancesAttributeResponse extends AbstractModel
      * @param integer $EventSaveDays 慢SQL、阻塞、死锁扩展事件文件保留时长
      * @param TDEConfigAttribute $TDEConfig TDE透明数据加密配置
      * @param SSLConfig $SSLConfig SSL加密
-     * @param DrReadableInfo $DrReadableInfo 备机只读信息
+     * @param DrReadableInfo $DrReadableInfo 双节点备机只读信息
      * @param array $OldVipList 等待回收的IP列表
+     * @param string $XEventStatus 操作日志采集状态，enable-采集中，disable-不可用，renew_doing-配置开启或关闭中
+     * @param array $MultiDrReadableInfo 多节点备机只读信息
+     * @param integer $IsDiskEncryptFlag 是否开启磁盘加密，1-开启，0-未开启
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -196,6 +220,23 @@ class DescribeDBInstancesAttributeResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->OldVipList, $obj);
             }
+        }
+
+        if (array_key_exists("XEventStatus",$param) and $param["XEventStatus"] !== null) {
+            $this->XEventStatus = $param["XEventStatus"];
+        }
+
+        if (array_key_exists("MultiDrReadableInfo",$param) and $param["MultiDrReadableInfo"] !== null) {
+            $this->MultiDrReadableInfo = [];
+            foreach ($param["MultiDrReadableInfo"] as $key => $value){
+                $obj = new DrReadableInfo();
+                $obj->deserialize($value);
+                array_push($this->MultiDrReadableInfo, $obj);
+            }
+        }
+
+        if (array_key_exists("IsDiskEncryptFlag",$param) and $param["IsDiskEncryptFlag"] !== null) {
+            $this->IsDiskEncryptFlag = $param["IsDiskEncryptFlag"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

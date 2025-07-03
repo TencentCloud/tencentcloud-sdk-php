@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Connection信息
  *
- * @method string getTopicName() 获取Topic名称
- * @method void setTopicName(string $TopicName) 设置Topic名称
+ * @method string getTopicName() 获取主题名
+ * @method void setTopicName(string $TopicName) 设置主题名
  * @method string getGroupId() 获取消费组ID
  * @method void setGroupId(string $GroupId) 设置消费组ID
- * @method string getTopicId() 获取Topic的Id
- * @method void setTopicId(string $TopicId) 设置Topic的Id
+ * @method string getTopicId() 获取主题Id
+ * @method void setTopicId(string $TopicId) 设置主题Id
  */
 class Connection extends AbstractModel
 {
     /**
-     * @var string Topic名称
+     * @var string 主题名
      */
     public $TopicName;
 
@@ -40,14 +40,14 @@ class Connection extends AbstractModel
     public $GroupId;
 
     /**
-     * @var string Topic的Id
+     * @var string 主题Id
      */
     public $TopicId;
 
     /**
-     * @param string $TopicName Topic名称
+     * @param string $TopicName 主题名
      * @param string $GroupId 消费组ID
-     * @param string $TopicId Topic的Id
+     * @param string $TopicId 主题Id
      */
     function __construct()
     {

@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNoticeLanguage(string $NoticeLanguage) 设置通知语言 zh-CN=中文 en-US=英文
  * @method array getUserNotices() 获取用户通知 最多5个
  * @method void setUserNotices(array $UserNotices) 设置用户通知 最多5个
- * @method array getURLNotices() 获取回调通知 最多3个
- * @method void setURLNotices(array $URLNotices) 设置回调通知 最多3个
+ * @method array getURLNotices() 获取回调通知 最多6个
+ * @method void setURLNotices(array $URLNotices) 设置回调通知 最多6个
  * @method array getCLSNotices() 获取推送CLS日志服务的操作 最多1个
  * @method void setCLSNotices(array $CLSNotices) 设置推送CLS日志服务的操作 最多1个
  * @method array getTags() 获取模板绑定的标签
@@ -65,7 +65,7 @@ class CreateAlarmNoticeRequest extends AbstractModel
     public $UserNotices;
 
     /**
-     * @var array 回调通知 最多3个
+     * @var array 回调通知 最多6个
      */
     public $URLNotices;
 
@@ -85,7 +85,7 @@ class CreateAlarmNoticeRequest extends AbstractModel
      * @param string $NoticeType 通知类型 ALARM=未恢复通知 OK=已恢复通知 ALL=都通知
      * @param string $NoticeLanguage 通知语言 zh-CN=中文 en-US=英文
      * @param array $UserNotices 用户通知 最多5个
-     * @param array $URLNotices 回调通知 最多3个
+     * @param array $URLNotices 回调通知 最多6个
      * @param array $CLSNotices 推送CLS日志服务的操作 最多1个
      * @param array $Tags 模板绑定的标签
      */

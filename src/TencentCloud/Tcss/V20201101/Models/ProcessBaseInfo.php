@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 运行时安全，进程基础信息
  *
  * @method string getProcessStartUser() 获取进程启动用户
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProcessStartUser(string $ProcessStartUser) 设置进程启动用户
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProcessUserGroup() 获取进程用户组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProcessUserGroup(string $ProcessUserGroup) 设置进程用户组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProcessPath() 获取进程路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProcessPath(string $ProcessPath) 设置进程路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProcessParam() 获取进程命令行参数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProcessParam(string $ProcessParam) 设置进程命令行参数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProcessBaseInfo extends AbstractModel
 {
     /**
      * @var string 进程启动用户
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProcessStartUser;
 
     /**
      * @var string 进程用户组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProcessUserGroup;
 
     /**
      * @var string 进程路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProcessPath;
 
     /**
      * @var string 进程命令行参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProcessParam;
 
     /**
      * @param string $ProcessStartUser 进程启动用户
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProcessUserGroup 进程用户组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProcessPath 进程路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProcessParam 进程命令行参数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -268,6 +268,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCirculateInstanceList(array $CirculateInstanceList) 设置循环依赖关联的实例
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getConcurrentStrategy() 获取并发策略, 0: 等待并发, 1: kill自身
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConcurrentStrategy(integer $ConcurrentStrategy) 设置并发策略, 0: 等待并发, 1: kill自身
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getScheduleRunType() 获取调度运行方式, 0: 周期调度, 1: 空跑调度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setScheduleRunType(integer $ScheduleRunType) 设置调度运行方式, 0: 周期调度, 1: 空跑调度
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceOpsDto extends AbstractModel
 {
@@ -644,6 +652,18 @@ class InstanceOpsDto extends AbstractModel
     public $CirculateInstanceList;
 
     /**
+     * @var integer 并发策略, 0: 等待并发, 1: kill自身
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ConcurrentStrategy;
+
+    /**
+     * @var integer 调度运行方式, 0: 周期调度, 1: 空跑调度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ScheduleRunType;
+
+    /**
      * @param string $TaskId 任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskName 任务名称
@@ -767,6 +787,10 @@ class InstanceOpsDto extends AbstractModel
      * @param array $DeletedFatherList 紧急去除的依赖父实例列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CirculateInstanceList 循环依赖关联的实例
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ConcurrentStrategy 并发策略, 0: 等待并发, 1: kill自身
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ScheduleRunType 调度运行方式, 0: 周期调度, 1: 空跑调度
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1040,6 +1064,14 @@ class InstanceOpsDto extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->CirculateInstanceList, $obj);
             }
+        }
+
+        if (array_key_exists("ConcurrentStrategy",$param) and $param["ConcurrentStrategy"] !== null) {
+            $this->ConcurrentStrategy = $param["ConcurrentStrategy"];
+        }
+
+        if (array_key_exists("ScheduleRunType",$param) and $param["ScheduleRunType"] !== null) {
+            $this->ScheduleRunType = $param["ScheduleRunType"];
         }
     }
 }

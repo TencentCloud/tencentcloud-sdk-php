@@ -73,11 +73,13 @@ class RestoreMediaTask extends AbstractModel
 
     /**
      * @var integer 该字段已废弃。
+     * @deprecated
      */
     public $Status;
 
     /**
      * @var string 该字段已废弃。
+     * @deprecated
      */
     public $Message;
 

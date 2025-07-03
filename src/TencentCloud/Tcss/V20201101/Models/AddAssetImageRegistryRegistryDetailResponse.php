@@ -21,17 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * AddAssetImageRegistryRegistryDetail返回参数结构体
  *
  * @method string getHealthCheckErr() 获取连接错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHealthCheckErr(string $HealthCheckErr) 设置连接错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getNameRepeatErr() 获取名称错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNameRepeatErr(string $NameRepeatErr) 设置名称错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRegistryId() 获取仓库唯一id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegistryId(integer $RegistryId) 设置仓库唯一id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -39,19 +33,16 @@ class AddAssetImageRegistryRegistryDetailResponse extends AbstractModel
 {
     /**
      * @var string 连接错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HealthCheckErr;
 
     /**
      * @var string 名称错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NameRepeatErr;
 
     /**
      * @var integer 仓库唯一id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RegistryId;
 
@@ -62,11 +53,8 @@ class AddAssetImageRegistryRegistryDetailResponse extends AbstractModel
 
     /**
      * @param string $HealthCheckErr 连接错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $NameRepeatErr 名称错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RegistryId 仓库唯一id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

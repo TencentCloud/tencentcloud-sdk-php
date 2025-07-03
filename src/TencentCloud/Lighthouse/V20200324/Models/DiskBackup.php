@@ -43,17 +43,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getPercent() 获取创建或回滚云硬盘备份点进度百分比，成功后此字段取值为 100。
  * @method void setPercent(integer $Percent) 设置创建或回滚云硬盘备份点进度百分比，成功后此字段取值为 100。
  * @method string getLatestOperation() 获取上一次操作
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLatestOperation(string $LatestOperation) 设置上一次操作
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLatestOperationState() 获取上一次操作状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLatestOperationState(string $LatestOperationState) 设置上一次操作状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLatestOperationRequestId() 获取上一次请求ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLatestOperationRequestId(string $LatestOperationRequestId) 设置上一次请求ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedTime() 获取创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
 格式为： YYYY-MM-DDThh:mm:ssZ。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
@@ -102,19 +96,16 @@ class DiskBackup extends AbstractModel
 
     /**
      * @var string 上一次操作
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LatestOperation;
 
     /**
      * @var string 上一次操作状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LatestOperationState;
 
     /**
      * @var string 上一次请求ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LatestOperationRequestId;
 
@@ -137,11 +128,8 @@ class DiskBackup extends AbstractModel
 <li>DELETING：删除中。</li>
      * @param integer $Percent 创建或回滚云硬盘备份点进度百分比，成功后此字段取值为 100。
      * @param string $LatestOperation 上一次操作
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LatestOperationState 上一次操作状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LatestOperationRequestId 上一次请求ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedTime 创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
 格式为： YYYY-MM-DDThh:mm:ssZ。
      */

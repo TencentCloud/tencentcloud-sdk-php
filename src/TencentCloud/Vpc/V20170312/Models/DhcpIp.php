@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
 <li>`UNBIND`：未绑定</li>
  * @method string getCreatedTime() 获取创建时间。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
+ * @method array getTagSet() 获取标签键值对。	
+ * @method void setTagSet(array $TagSet) 设置标签键值对。	
  */
 class DhcpIp extends AbstractModel
 {
@@ -100,6 +102,11 @@ class DhcpIp extends AbstractModel
     public $CreatedTime;
 
     /**
+     * @var array 标签键值对。	
+     */
+    public $TagSet;
+
+    /**
      * @param string $DhcpIpId `DhcpIp`的`ID`，是`DhcpIp`的唯一标识。
      * @param string $VpcId `DhcpIp`所在私有网络`ID`。
      * @param string $SubnetId `DhcpIp`所在子网`ID`。
@@ -112,6 +119,7 @@ class DhcpIp extends AbstractModel
 <li>`AVAILABLE`：运行中</li>
 <li>`UNBIND`：未绑定</li>
      * @param string $CreatedTime 创建时间。
+     * @param array $TagSet 标签键值对。	
      */
     function __construct()
     {
@@ -164,6 +172,15 @@ class DhcpIp extends AbstractModel
 
         if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
             $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+            $this->TagSet = [];
+            foreach ($param["TagSet"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagSet, $obj);
+            }
         }
     }
 }

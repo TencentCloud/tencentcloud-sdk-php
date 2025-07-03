@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取集群ID。
  * @method void setClusterId(string $ClusterId) 设置集群ID。
- * @method StorageOption getStorageOption() 获取集群存储选项。
- * @method void setStorageOption(StorageOption $StorageOption) 设置集群存储选项。
+ * @method StorageOption getStorageOption() 获取集群存储选项；集群已存在的节点和新增节点都会挂载此存储。
+ * @method void setStorageOption(StorageOption $StorageOption) 设置集群存储选项；集群已存在的节点和新增节点都会挂载此存储。
  */
 class AddClusterStorageOptionRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class AddClusterStorageOptionRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var StorageOption 集群存储选项。
+     * @var StorageOption 集群存储选项；集群已存在的节点和新增节点都会挂载此存储。
      */
     public $StorageOption;
 
     /**
      * @param string $ClusterId 集群ID。
-     * @param StorageOption $StorageOption 集群存储选项。
+     * @param StorageOption $StorageOption 集群存储选项；集群已存在的节点和新增节点都会挂载此存储。
      */
     function __construct()
     {

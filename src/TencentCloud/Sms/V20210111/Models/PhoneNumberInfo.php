@@ -26,14 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) 设置号码信息查询错误码描述。
  * @method string getNationCode() 获取国家（或地区）码。
  * @method void setNationCode(string $NationCode) 设置国家（或地区）码。
- * @method string getSubscriberNumber() 获取用户号码，去除国家或地区码前缀的普通格式，示例如：13711112222。
- * @method void setSubscriberNumber(string $SubscriberNumber) 设置用户号码，去除国家或地区码前缀的普通格式，示例如：13711112222。
+ * @method string getSubscriberNumber() 获取用户号码，去除国家或地区码前缀的普通格式，示例如：18501234444。
+ * @method void setSubscriberNumber(string $SubscriberNumber) 设置用户号码，去除国家或地区码前缀的普通格式，示例如：18501234444。
  * @method string getPhoneNumber() 获取解析后的规范的 E.164 号码，与下发短信的号码解析结果一致。解析失败时会原样返回。
  * @method void setPhoneNumber(string $PhoneNumber) 设置解析后的规范的 E.164 号码，与下发短信的号码解析结果一致。解析失败时会原样返回。
  * @method string getIsoCode() 获取国家码或地区码，例如 CN、US 等，对于未识别出国家码或者地区码，默认返回 DEF。
  * @method void setIsoCode(string $IsoCode) 设置国家码或地区码，例如 CN、US 等，对于未识别出国家码或者地区码，默认返回 DEF。
- * @method string getIsoName() 获取国家码或地区名，例如 China，可参考 [国际/港澳台短信价格总览](https://cloud.tencent.com/document/product/382/18051#.E6.97.A5.E7.BB.93.E5.90.8E.E4.BB.98.E8.B4.B9.3Ca-id.3D.22post-payment.22.3E.3C.2Fa.3E)
- * @method void setIsoName(string $IsoName) 设置国家码或地区名，例如 China，可参考 [国际/港澳台短信价格总览](https://cloud.tencent.com/document/product/382/18051#.E6.97.A5.E7.BB.93.E5.90.8E.E4.BB.98.E8.B4.B9.3Ca-id.3D.22post-payment.22.3E.3C.2Fa.3E)
+ * @method string getIsoName() 获取国家码或地区名，例如 China，可参考 [国际/港澳台短信价格总览](https://cloud.tencent.com/document/product/382/18051)
+ * @method void setIsoName(string $IsoName) 设置国家码或地区名，例如 China，可参考 [国际/港澳台短信价格总览](https://cloud.tencent.com/document/product/382/18051)
  */
 class PhoneNumberInfo extends AbstractModel
 {
@@ -53,7 +53,7 @@ class PhoneNumberInfo extends AbstractModel
     public $NationCode;
 
     /**
-     * @var string 用户号码，去除国家或地区码前缀的普通格式，示例如：13711112222。
+     * @var string 用户号码，去除国家或地区码前缀的普通格式，示例如：18501234444。
      */
     public $SubscriberNumber;
 
@@ -68,7 +68,7 @@ class PhoneNumberInfo extends AbstractModel
     public $IsoCode;
 
     /**
-     * @var string 国家码或地区名，例如 China，可参考 [国际/港澳台短信价格总览](https://cloud.tencent.com/document/product/382/18051#.E6.97.A5.E7.BB.93.E5.90.8E.E4.BB.98.E8.B4.B9.3Ca-id.3D.22post-payment.22.3E.3C.2Fa.3E)
+     * @var string 国家码或地区名，例如 China，可参考 [国际/港澳台短信价格总览](https://cloud.tencent.com/document/product/382/18051)
      */
     public $IsoName;
 
@@ -76,10 +76,10 @@ class PhoneNumberInfo extends AbstractModel
      * @param string $Code 号码信息查询错误码，查询成功返回 "Ok"。
      * @param string $Message 号码信息查询错误码描述。
      * @param string $NationCode 国家（或地区）码。
-     * @param string $SubscriberNumber 用户号码，去除国家或地区码前缀的普通格式，示例如：13711112222。
+     * @param string $SubscriberNumber 用户号码，去除国家或地区码前缀的普通格式，示例如：18501234444。
      * @param string $PhoneNumber 解析后的规范的 E.164 号码，与下发短信的号码解析结果一致。解析失败时会原样返回。
      * @param string $IsoCode 国家码或地区码，例如 CN、US 等，对于未识别出国家码或者地区码，默认返回 DEF。
-     * @param string $IsoName 国家码或地区名，例如 China，可参考 [国际/港澳台短信价格总览](https://cloud.tencent.com/document/product/382/18051#.E6.97.A5.E7.BB.93.E5.90.8E.E4.BB.98.E8.B4.B9.3Ca-id.3D.22post-payment.22.3E.3C.2Fa.3E)
+     * @param string $IsoName 国家码或地区名，例如 China，可参考 [国际/港澳台短信价格总览](https://cloud.tencent.com/document/product/382/18051)
      */
     function __construct()
     {

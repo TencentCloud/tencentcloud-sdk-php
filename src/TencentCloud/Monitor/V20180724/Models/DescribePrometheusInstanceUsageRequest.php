@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePrometheusInstanceUsage请求参数结构体
  *
- * @method array getInstanceIds() 获取按照一个或者多个实例ID查询。实例ID形如：prom-xxxxxxxx。请求的实例的上限为100。
- * @method void setInstanceIds(array $InstanceIds) 设置按照一个或者多个实例ID查询。实例ID形如：prom-xxxxxxxx。请求的实例的上限为100。
+ * @method array getInstanceIds() 获取按照一个或者多个实例ID查询。实例ID形如：prom-xxxxxxxx。
+ * @method void setInstanceIds(array $InstanceIds) 设置按照一个或者多个实例ID查询。实例ID形如：prom-xxxxxxxx。
  * @method string getStartCalcDate() 获取开始时间
  * @method void setStartCalcDate(string $StartCalcDate) 设置开始时间
  * @method string getEndCalcDate() 获取结束时间
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribePrometheusInstanceUsageRequest extends AbstractModel
 {
     /**
-     * @var array 按照一个或者多个实例ID查询。实例ID形如：prom-xxxxxxxx。请求的实例的上限为100。
+     * @var array 按照一个或者多个实例ID查询。实例ID形如：prom-xxxxxxxx。
      */
     public $InstanceIds;
 
@@ -45,7 +45,7 @@ class DescribePrometheusInstanceUsageRequest extends AbstractModel
     public $EndCalcDate;
 
     /**
-     * @param array $InstanceIds 按照一个或者多个实例ID查询。实例ID形如：prom-xxxxxxxx。请求的实例的上限为100。
+     * @param array $InstanceIds 按照一个或者多个实例ID查询。实例ID形如：prom-xxxxxxxx。
      * @param string $StartCalcDate 开始时间
      * @param string $EndCalcDate 结束时间
      */

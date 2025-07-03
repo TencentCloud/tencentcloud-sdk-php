@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyLaunchTemplateDefaultVersion请求参数结构体
  *
- * @method string getLaunchTemplateId() 获取启动模板ID。
- * @method void setLaunchTemplateId(string $LaunchTemplateId) 设置启动模板ID。
- * @method integer getDefaultVersion() 获取待设置的默认版本号。
- * @method void setDefaultVersion(integer $DefaultVersion) 设置待设置的默认版本号。
+ * @method string getLaunchTemplateId() 获取启动模板ID。可通过 [DescribeLaunchTemplates](https://cloud.tencent.com/document/api/213/66322) 接口返回值中的`LaunchTemplateId `获取。
+ * @method void setLaunchTemplateId(string $LaunchTemplateId) 设置启动模板ID。可通过 [DescribeLaunchTemplates](https://cloud.tencent.com/document/api/213/66322) 接口返回值中的`LaunchTemplateId `获取。
+ * @method integer getDefaultVersion() 获取待设置的默认版本号。可通过 [DescribeLaunchTemplateVersions](https://cloud.tencent.com/document/api/213/66323) 接口返回值中的`LaunchTemplateVersion`获取。
+ * @method void setDefaultVersion(integer $DefaultVersion) 设置待设置的默认版本号。可通过 [DescribeLaunchTemplateVersions](https://cloud.tencent.com/document/api/213/66323) 接口返回值中的`LaunchTemplateVersion`获取。
  */
 class ModifyLaunchTemplateDefaultVersionRequest extends AbstractModel
 {
     /**
-     * @var string 启动模板ID。
+     * @var string 启动模板ID。可通过 [DescribeLaunchTemplates](https://cloud.tencent.com/document/api/213/66322) 接口返回值中的`LaunchTemplateId `获取。
      */
     public $LaunchTemplateId;
 
     /**
-     * @var integer 待设置的默认版本号。
+     * @var integer 待设置的默认版本号。可通过 [DescribeLaunchTemplateVersions](https://cloud.tencent.com/document/api/213/66323) 接口返回值中的`LaunchTemplateVersion`获取。
      */
     public $DefaultVersion;
 
     /**
-     * @param string $LaunchTemplateId 启动模板ID。
-     * @param integer $DefaultVersion 待设置的默认版本号。
+     * @param string $LaunchTemplateId 启动模板ID。可通过 [DescribeLaunchTemplates](https://cloud.tencent.com/document/api/213/66322) 接口返回值中的`LaunchTemplateId `获取。
+     * @param integer $DefaultVersion 待设置的默认版本号。可通过 [DescribeLaunchTemplateVersions](https://cloud.tencent.com/document/api/213/66323) 接口返回值中的`LaunchTemplateVersion`获取。
      */
     function __construct()
     {

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置层的版本的描述
  * @method string getLicenseInfo() 获取层的软件许可证
  * @method void setLicenseInfo(string $LicenseInfo) 设置层的软件许可证
+ * @method array getTags() 获取层Tag 参数，以键值对数组形式传入
+ * @method void setTags(array $Tags) 设置层Tag 参数，以键值对数组形式传入
  */
 class PublishLayerVersionRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class PublishLayerVersionRequest extends AbstractModel
     public $LicenseInfo;
 
     /**
+     * @var array 层Tag 参数，以键值对数组形式传入
+     */
+    public $Tags;
+
+    /**
      * @param string $LayerName 层名称，支持26个英文字母大小写、数字、连接符和下划线，第一个字符只能以字母开头，最后一个字符不能为连接符或者下划线，名称长度1-64
      * @param array $CompatibleRuntimes 层适用的运行时，可多选，可选的值对应函数的 Runtime 可选值。
      * @param Code $Content 层的文件来源或文件内容
      * @param string $Description 层的版本的描述
      * @param string $LicenseInfo 层的软件许可证
+     * @param array $Tags 层Tag 参数，以键值对数组形式传入
      */
     function __construct()
     {
@@ -97,6 +105,15 @@ class PublishLayerVersionRequest extends AbstractModel
 
         if (array_key_exists("LicenseInfo",$param) and $param["LicenseInfo"] !== null) {
             $this->LicenseInfo = $param["LicenseInfo"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

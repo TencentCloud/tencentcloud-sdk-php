@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDeviceId() 获取设备ID
  * @method void setDeviceId(string $DeviceId) 设置设备ID
  * @method string getSignature() 获取签名字符串
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSignature(string $Signature) 设置签名字符串
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -45,7 +43,6 @@ class AddDeviceResponse extends AbstractModel
 
     /**
      * @var string 签名字符串
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Signature;
 
@@ -58,7 +55,6 @@ class AddDeviceResponse extends AbstractModel
      * @param string $DataKey 经过加密算法加密后的base64格式密钥
      * @param string $DeviceId 设备ID
      * @param string $Signature 签名字符串
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -21,117 +21,81 @@ use TencentCloud\Common\AbstractModel;
  * 告警通知接收组
  *
  * @method string getNoticeId() 获取Notice ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNoticeId(string $NoticeId) 设置Notice ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAMPConsumerId() 获取Consumer ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAMPConsumerId(string $AMPConsumerId) 设置Consumer ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProjectId() 获取项目 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProjectId(string $ProjectId) 设置项目 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedAt() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedAt(string $CreatedAt) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdatedAt() 获取更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdatedAt(string $UpdatedAt) 设置更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAppId() 获取App ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppId(integer $AppId) 设置App ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUin() 获取主账号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUin(string $Uin) 设置主账号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubAccountUin() 获取子账号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubAccountUin(string $SubAccountUin) 设置子账号
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlertChannelRecord extends AbstractModel
 {
     /**
      * @var string Notice ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NoticeId;
 
     /**
      * @var string Consumer ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AMPConsumerId;
 
     /**
      * @var string 项目 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProjectId;
 
     /**
      * @var integer 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedAt;
 
     /**
      * @var string 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdatedAt;
 
     /**
      * @var integer App ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppId;
 
     /**
      * @var string 主账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uin;
 
     /**
      * @var string 子账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubAccountUin;
 
     /**
      * @param string $NoticeId Notice ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AMPConsumerId Consumer ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProjectId 项目 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedAt 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdatedAt 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AppId App ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uin 主账号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubAccountUin 子账号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

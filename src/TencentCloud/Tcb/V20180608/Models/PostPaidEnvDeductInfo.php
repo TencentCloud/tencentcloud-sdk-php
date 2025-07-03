@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 后付费计费详情
  *
  * @method string getResourceType() 获取资源方
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceType(string $ResourceType) 设置资源方
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMetricName() 获取指标名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetricName(string $MetricName) 设置指标名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getResQuota() 获取按量计费详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResQuota(float $ResQuota) 设置按量计费详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getPkgQuota() 获取资源包抵扣详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPkgQuota(float $PkgQuota) 设置资源包抵扣详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getFreeQuota() 获取免费额度抵扣详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFreeQuota(float $FreeQuota) 设置免费额度抵扣详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEnvId() 获取环境id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnvId(string $EnvId) 设置环境id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PostPaidEnvDeductInfo extends AbstractModel
 {
     /**
      * @var string 资源方
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceType;
 
     /**
      * @var string 指标名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MetricName;
 
     /**
      * @var float 按量计费详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResQuota;
 
     /**
      * @var float 资源包抵扣详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PkgQuota;
 
     /**
      * @var float 免费额度抵扣详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FreeQuota;
 
     /**
      * @var string 环境id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnvId;
 
     /**
      * @param string $ResourceType 资源方
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MetricName 指标名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $ResQuota 按量计费详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $PkgQuota 资源包抵扣详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $FreeQuota 免费额度抵扣详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EnvId 环境id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

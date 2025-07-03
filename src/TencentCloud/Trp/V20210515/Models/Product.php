@@ -31,31 +31,21 @@ use TencentCloud\Common\AbstractModel;
  * @method string getProductCode() 获取商品编号
  * @method void setProductCode(string $ProductCode) 设置商品编号
  * @method string getSpecification() 获取商品规格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpecification(string $Specification) 设置商品规格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRemark() 获取备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLogo() 获取商品图片
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogo(array $Logo) 设置商品图片
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method string getUpdateTime() 获取修改时间
  * @method void setUpdateTime(string $UpdateTime) 设置修改时间
  * @method Ext getExt() 获取预留字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExt(Ext $Ext) 设置预留字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMerchantName() 获取商户名称
  * @method void setMerchantName(string $MerchantName) 设置商户名称
  * @method integer getCertState() 获取认证状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertState(integer $CertState) 设置认证状态
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Product extends AbstractModel
 {
@@ -86,19 +76,16 @@ class Product extends AbstractModel
 
     /**
      * @var string 商品规格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Specification;
 
     /**
      * @var string 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
     /**
      * @var array 商品图片
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Logo;
 
@@ -114,7 +101,6 @@ class Product extends AbstractModel
 
     /**
      * @var Ext 预留字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ext;
 
@@ -125,7 +111,6 @@ class Product extends AbstractModel
 
     /**
      * @var integer 认证状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CertState;
 
@@ -136,18 +121,13 @@ class Product extends AbstractModel
      * @param integer $CorpId 企业id
      * @param string $ProductCode 商品编号
      * @param string $Specification 商品规格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Remark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Logo 商品图片
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
      * @param string $UpdateTime 修改时间
      * @param Ext $Ext 预留字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MerchantName 商户名称
      * @param integer $CertState 认证状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

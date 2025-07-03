@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * DescribeRecordInfo返回参数结构体
  *
  * @method array getRecordInfo() 获取录制信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordInfo(array $RecordInfo) 设置录制信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRecordMode() 获取录制类型：1代表单流 2代表混流 3代表单流和混流。
  * @method void setRecordMode(integer $RecordMode) 设置录制类型：1代表单流 2代表混流 3代表单流和混流。
  * @method string getRoomId() 获取房间ID。
@@ -35,7 +33,6 @@ class DescribeRecordInfoResponse extends AbstractModel
 {
     /**
      * @var array 录制信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecordInfo;
 
@@ -56,7 +53,6 @@ class DescribeRecordInfoResponse extends AbstractModel
 
     /**
      * @param array $RecordInfo 录制信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RecordMode 录制类型：1代表单流 2代表混流 3代表单流和混流。
      * @param string $RoomId 房间ID。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。

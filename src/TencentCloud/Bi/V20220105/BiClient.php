@@ -35,11 +35,13 @@ use TencentCloud\Bi\V20220105\Models as Models;
  * @method Models\DeleteUserRoleResponse DeleteUserRole(Models\DeleteUserRoleRequest $req) 删除用户角色，会删除用户
  * @method Models\DeleteUserRoleProjectResponse DeleteUserRoleProject(Models\DeleteUserRoleProjectRequest $req) 项目内-删除用户角色
  * @method Models\DescribeDatasourceListResponse DescribeDatasourceList(Models\DescribeDatasourceListRequest $req) 查询数据源列表
+ * @method Models\DescribePageWidgetListResponse DescribePageWidgetList(Models\DescribePageWidgetListRequest $req) 查询页面组件信息
  * @method Models\DescribeProjectInfoResponse DescribeProjectInfo(Models\DescribeProjectInfoRequest $req) 项目详情接口
  * @method Models\DescribeProjectListResponse DescribeProjectList(Models\DescribeProjectListRequest $req) 项目信息
  * @method Models\DescribeUserProjectListResponse DescribeUserProjectList(Models\DescribeUserProjectListRequest $req) 项目内-用户接口
  * @method Models\DescribeUserRoleListResponse DescribeUserRoleList(Models\DescribeUserRoleListRequest $req) 用户角色列表
  * @method Models\DescribeUserRoleProjectListResponse DescribeUserRoleProjectList(Models\DescribeUserRoleProjectListRequest $req) 项目内-用户角色列表
+ * @method Models\ExportScreenPageResponse ExportScreenPage(Models\ExportScreenPageRequest $req) 页面截图导出
  * @method Models\ModifyDatasourceResponse ModifyDatasource(Models\ModifyDatasourceRequest $req) 更新数据源
  * @method Models\ModifyDatasourceCloudResponse ModifyDatasourceCloud(Models\ModifyDatasourceCloudRequest $req) 更新云数据库
  * @method Models\ModifyProjectResponse ModifyProject(Models\ModifyProjectRequest $req) 修改项目信息

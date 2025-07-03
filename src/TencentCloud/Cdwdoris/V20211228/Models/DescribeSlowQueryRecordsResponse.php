@@ -25,13 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method array getSlowQueryRecords() 获取记录列表
  * @method void setSlowQueryRecords(array $SlowQueryRecords) 设置记录列表
  * @method array getDBNameList() 获取所有数据库名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDBNameList(array $DBNameList) 设置所有数据库名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCatalogNameList() 获取所有catalog名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCatalogNameList(array $CatalogNameList) 设置所有catalog名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -49,13 +45,11 @@ class DescribeSlowQueryRecordsResponse extends AbstractModel
 
     /**
      * @var array 所有数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DBNameList;
 
     /**
      * @var array 所有catalog名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CatalogNameList;
 
@@ -68,9 +62,7 @@ class DescribeSlowQueryRecordsResponse extends AbstractModel
      * @param integer $TotalCount 总数
      * @param array $SlowQueryRecords 记录列表
      * @param array $DBNameList 所有数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CatalogNameList 所有catalog名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

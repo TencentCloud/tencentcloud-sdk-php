@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * Proxy节点信息
  *
  * @method string getNodeId() 获取节点ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodeId(string $NodeId) 设置节点ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProxyNodeInfo extends AbstractModel
 {
     /**
      * @var string 节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeId;
 
     /**
      * @param string $NodeId 节点ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -39,17 +39,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getSyntaxRule() 获取检索语法规则，默认值为0。
 0：Lucene语法，1：CQL语法。
 详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSyntaxRule(integer $SyntaxRule) 设置检索语法规则，默认值为0。
 0：Lucene语法，1：CQL语法。
 详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBizType() 获取主题类型。
 0: 日志主题，1: 指标主题
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBizType(integer $BizType) 设置主题类型。
 0: 日志主题，1: 指标主题
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AlarmTargetInfo extends AbstractModel
 {
@@ -97,14 +93,12 @@ class AlarmTargetInfo extends AbstractModel
      * @var integer 检索语法规则，默认值为0。
 0：Lucene语法，1：CQL语法。
 详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SyntaxRule;
 
     /**
      * @var integer 主题类型。
 0: 日志主题，1: 指标主题
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BizType;
 
@@ -120,10 +114,8 @@ class AlarmTargetInfo extends AbstractModel
      * @param integer $SyntaxRule 检索语法规则，默认值为0。
 0：Lucene语法，1：CQL语法。
 详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BizType 主题类型。
 0: 日志主题，1: 指标主题
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

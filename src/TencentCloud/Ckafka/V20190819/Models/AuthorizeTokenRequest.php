@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AuthorizeToken请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method string getInstanceId() 获取ckafka集群实例Id
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
  * @method string getUser() 获取用户
  * @method void setUser(string $User) 设置用户
  * @method string getTokens() 获取token串
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class AuthorizeTokenRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string ckafka集群实例Id
      */
     public $InstanceId;
 
@@ -45,7 +45,7 @@ class AuthorizeTokenRequest extends AbstractModel
     public $Tokens;
 
     /**
-     * @param string $InstanceId 实例ID
+     * @param string $InstanceId ckafka集群实例Id
      * @param string $User 用户
      * @param string $Tokens token串
      */

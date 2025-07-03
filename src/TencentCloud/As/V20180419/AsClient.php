@@ -26,12 +26,14 @@ use TencentCloud\As\V20180419\Models as Models;
  * @method Models\AttachInstancesResponse AttachInstances(Models\AttachInstancesRequest $req) 本接口（AttachInstances）用于将 CVM 实例添加到伸缩组。
 * 仅支持添加处于`RUNNING`（运行中）或`STOPPED`（已关机）状态的 CVM 实例
 * 添加的 CVM 实例需要和伸缩组 VPC 网络一致
-
  * @method Models\AttachLoadBalancersResponse AttachLoadBalancers(Models\AttachLoadBalancersRequest $req) 此接口（AttachLoadBalancers）用于将负载均衡器添加到伸缩组。
  * @method Models\CancelInstanceRefreshResponse CancelInstanceRefresh(Models\CancelInstanceRefreshRequest $req) 取消伸缩组的实例刷新活动。
-* 已刷新/正在刷新的批次不受影响，待刷新批次被取消
+* 已刷新的批次不受影响，待刷新批次被取消
+* 如存在正在刷新的批次，不允许取消；可先暂停活动，等待当前批次结束后再取消
 * 刷新失败的实例保持备用中状态，需用户手动处理后尝试退出备用中状态或销毁
 * 取消后不允许回滚操作，也不支持恢复操作
+* 因 maxSurge 参数而临时扩容的实例在取消后会自动销毁
+* 进行缩容时，所有实例都已经更新完成，此时无法取消
  * @method Models\ClearLaunchConfigurationAttributesResponse ClearLaunchConfigurationAttributes(Models\ClearLaunchConfigurationAttributesRequest $req) 本接口（ClearLaunchConfigurationAttributes）用于将启动配置内的特定属性完全清空。
  * @method Models\CompleteLifecycleActionResponse CompleteLifecycleAction(Models\CompleteLifecycleActionRequest $req) 本接口（CompleteLifecycleAction）用于完成生命周期动作。
 
@@ -42,9 +44,9 @@ use TencentCloud\As\V20180419\Models as Models;
 说明：根据按包年包月计费的实例所创建的伸缩组，其扩容的实例为按量计费实例。
  * @method Models\CreateLaunchConfigurationResponse CreateLaunchConfiguration(Models\CreateLaunchConfigurationRequest $req) 本接口（CreateLaunchConfiguration）用于创建新的启动配置。
 
-* 启动配置，可以通过 `ModifyLaunchConfigurationAttributes` 修改少量字段。如需使用新的启动配置，建议重新创建启动配置。
+* 启动配置，可以通过 [ModifyLaunchConfigurationAttributes](https://cloud.tencent.com/document/api/377/31298) 修改少量字段。如需使用新的启动配置，建议重新创建启动配置。
 
-* 每个项目最多只能创建20个启动配置，详见[使用限制](https://cloud.tencent.com/document/product/377/3120)。
+* 每个地域默认只能创建50个启动配置，详见[使用限制](https://cloud.tencent.com/document/product/377/3120)。
  * @method Models\CreateLifecycleHookResponse CreateLifecycleHook(Models\CreateLifecycleHookRequest $req) 本接口（CreateLifecycleHook）用于创建生命周期挂钩。
 
 * 您可以为生命周期挂钩配置消息通知或执行自动化助手命令。
@@ -57,11 +59,11 @@ use TencentCloud\As\V20180419\Models as Models;
 	"Time": "2019-03-14T10:15:11Z",
 	"AppId": "1251783334",
 	"ActivityId": "asa-fznnvrja",
-	"AutoScalingGroupId": "asg-rrrrtttt",
-	"LifecycleHookId": "ash-xxxxyyyy",
+	"AutoScalingGroupId": "asg-ft6y7u8n",
+	"LifecycleHookId": "ash-p9i7y6t5",
 	"LifecycleHookName": "my-hook",
 	"LifecycleActionToken": "3080e1c9-0efe-4dd7-ad3b-90cd6618298f",
-	"InstanceId": "ins-aaaabbbb",
+	"InstanceId": "ins-y6dr5e43",
 	"LifecycleTransition": "INSTANCE_LAUNCHING",
 	"NotificationMetadata": ""
 }
@@ -100,7 +102,6 @@ use TencentCloud\As\V20180419\Models as Models;
  * @method Models\DeleteLaunchConfigurationResponse DeleteLaunchConfiguration(Models\DeleteLaunchConfigurationRequest $req) 本接口（DeleteLaunchConfiguration）用于删除启动配置。
 
 * 若启动配置在伸缩组中属于生效状态，则该启动配置不允许删除。
-
  * @method Models\DeleteLifecycleHookResponse DeleteLifecycleHook(Models\DeleteLifecycleHookRequest $req) 本接口（DeleteLifecycleHook）用于删除生命周期挂钩。
  * @method Models\DeleteNotificationConfigurationResponse DeleteNotificationConfiguration(Models\DeleteNotificationConfigurationRequest $req) 本接口（DeleteNotificationConfiguration）用于删除特定的通知。
  * @method Models\DeleteScalingPolicyResponse DeleteScalingPolicy(Models\DeleteScalingPolicyRequest $req) 本接口（DeleteScalingPolicy）用于删除告警触发策略。
@@ -155,20 +156,24 @@ use TencentCloud\As\V20180419\Models as Models;
     - 关闭伸缩组内 CVM 实例（StopAutoScalingInstances）
     - 开启伸缩组内 CVM 实例（StartAutoScalingInstances）
  * @method Models\EnableAutoScalingGroupResponse EnableAutoScalingGroup(Models\EnableAutoScalingGroupRequest $req) 本接口（EnableAutoScalingGroup）用于启用指定伸缩组。
+ * @method Models\EnterStandbyResponse EnterStandby(Models\EnterStandbyRequest $req) 伸缩组内实例进入备用中状态。
+* 备用中状态实例的 CLB 权重值为 0，不会被自动缩容、不健康替换、实例刷新操作选中
+* 调用弹性伸缩开关机接口会使得备用中状态发生变化，而云服务器开关机接口不会影响
+* 实例进入备用中状态后，伸缩组会尝试下调期望实例数，新期望数不会小于最小值
  * @method Models\ExecuteScalingPolicyResponse ExecuteScalingPolicy(Models\ExecuteScalingPolicyRequest $req) 本接口（ExecuteScalingPolicy）用于执行伸缩策略。
 
 * 可以根据伸缩策略ID执行伸缩策略。
 * 伸缩策略所属伸缩组处于伸缩活动时，会拒绝执行伸缩策略。
 * 本接口不支持执行目标追踪策略。
  * @method Models\ExitStandbyResponse ExitStandby(Models\ExitStandbyRequest $req) 伸缩组内实例退出备用中状态。
-* 备用中状态的实例负载均衡器权重值为 0，退出备用中状态后，权重值也会恢复
-* 对备用中状态实例进行开关机操作也会使其退出备用中状态
+* 退出备用中状态后，实例会进入运行中状态，CLB 权重值恢复为预设值
+* 调用弹性伸缩开关机接口会使得备用中状态发生变化，而云服务器开关机接口不会影响
+* 实例退出备用中状态后，伸缩组会上调期望实例数，新期望数不能大于最大值
  * @method Models\ModifyAutoScalingGroupResponse ModifyAutoScalingGroup(Models\ModifyAutoScalingGroupRequest $req) 本接口（ModifyAutoScalingGroup）用于修改伸缩组。
  * @method Models\ModifyDesiredCapacityResponse ModifyDesiredCapacity(Models\ModifyDesiredCapacityRequest $req) 本接口（ModifyDesiredCapacity）用于修改指定伸缩组的期望实例数
  * @method Models\ModifyLaunchConfigurationAttributesResponse ModifyLaunchConfigurationAttributes(Models\ModifyLaunchConfigurationAttributesRequest $req) 本接口（ModifyLaunchConfigurationAttributes）用于修改启动配置部分属性。
 
 * 修改启动配置后，已经使用该启动配置扩容的存量实例不会发生变更，此后使用该启动配置的新增实例会按照新的配置进行扩容。
-* 本接口支持修改部分简单类型。
  * @method Models\ModifyLifecycleHookResponse ModifyLifecycleHook(Models\ModifyLifecycleHookRequest $req) 此接口用于修改生命周期挂钩。
  * @method Models\ModifyLoadBalancerTargetAttributesResponse ModifyLoadBalancerTargetAttributes(Models\ModifyLoadBalancerTargetAttributesRequest $req) 本接口（ModifyLoadBalancerTargetAttributes）用于修改伸缩组内负载均衡器的目标规则属性。
  * @method Models\ModifyLoadBalancersResponse ModifyLoadBalancers(Models\ModifyLoadBalancersRequest $req) 本接口（ModifyLoadBalancers）用于修改伸缩组的负载均衡器。
@@ -185,11 +190,14 @@ use TencentCloud\As\V20180419\Models as Models;
 * 如果伸缩组处于`DISABLED`状态，删除操作不校验`IN_SERVICE`实例数量和最小值的关系
 * 对于伸缩组配置的 CLB，实例在离开伸缩组时，AS 会进行解挂载动作
  * @method Models\ResumeInstanceRefreshResponse ResumeInstanceRefresh(Models\ResumeInstanceRefreshRequest $req) 恢复暂停状态的实例刷新活动，使其重试当前批次刷新失败实例或继续刷新后续批次，非暂停状态下调用该接口无效。
+
+- 使用 MaxSurge 参数时活动可能会处于扩容或缩容失败导致的暂停状态，也可以使用该接口重试扩缩容。
  * @method Models\RollbackInstanceRefreshResponse RollbackInstanceRefresh(Models\RollbackInstanceRefreshRequest $req) 回滚操作会生成一个新的实例刷新活动，该活动也支持分批次刷新以及暂停、恢复、取消操作，接口返回回滚活动的 RefreshActivityId。
 * 原活动中待刷新实例变更为已取消，忽略不存在实例，其他状态实例进入回滚流程
 * 原活动中正在刷新的实例不会立刻终止，刷新结束后再执行回滚活动
 * 暂停状态或最近一次成功的刷新活动支持回滚，其他状态不支持回滚
 * 原活动刷新方式为重装实例时，对于 ImageId参数，会自动恢复到回滚前镜像 ID；对于 UserData、EnhancedService、LoginSettings、 HostName 参数，依然会从启动配置中读取，需用户在回滚前自行修改启动配置
+* 回滚活动暂不支持 MaxSurge 参数
  * @method Models\ScaleInInstancesResponse ScaleInInstances(Models\ScaleInInstancesRequest $req) 为伸缩组指定数量缩容实例，返回缩容活动的 ActivityId。
 * 伸缩组需要未处于活动中
 * 伸缩组处于停用状态时，该接口也会生效，可参考[停用伸缩组](https://cloud.tencent.com/document/api/377/20435)文档查看伸缩组停用状态的影响范围
@@ -221,7 +229,8 @@ use TencentCloud\As\V20180419\Models as Models;
 * 本接口支持批量操作，每次请求关机实例的上限为100
  * @method Models\StopInstanceRefreshResponse StopInstanceRefresh(Models\StopInstanceRefreshRequest $req) 暂停正在执行的实例刷新活动。
 * 暂停状态下，伸缩组也会处于停用中状态
-* 当前正在更新的实例不会暂停，待更新的实例会暂停更新
+* 当前正在更新或扩容的实例不会暂停，待更新的实例会暂停更新
+* 进行缩容时，所有实例都已经更新完成，此时无法暂停
  * @method Models\UpgradeLaunchConfigurationResponse UpgradeLaunchConfiguration(Models\UpgradeLaunchConfigurationRequest $req) 已有替代接口ModifyLaunchConfiguration。该接口存在覆盖参数风险，目前官网已隐藏
 
 本接口（UpgradeLaunchConfiguration）用于升级启动配置。

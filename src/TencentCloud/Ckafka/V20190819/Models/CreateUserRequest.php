@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateUser请求参数结构体
  *
- * @method string getInstanceId() 获取实例Id
- * @method void setInstanceId(string $InstanceId) 设置实例Id
+ * @method string getInstanceId() 获取ckafka集群实例Id
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
  * @method string getName() 获取用户名称
  * @method void setName(string $Name) 设置用户名称
  * @method string getPassword() 获取用户密码
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateUserRequest extends AbstractModel
 {
     /**
-     * @var string 实例Id
+     * @var string ckafka集群实例Id
      */
     public $InstanceId;
 
@@ -45,7 +45,7 @@ class CreateUserRequest extends AbstractModel
     public $Password;
 
     /**
-     * @param string $InstanceId 实例Id
+     * @param string $InstanceId ckafka集群实例Id
      * @param string $Name 用户名称
      * @param string $Password 用户密码
      */

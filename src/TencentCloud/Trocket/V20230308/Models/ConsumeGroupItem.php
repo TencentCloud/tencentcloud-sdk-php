@@ -34,6 +34,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxRetryTimes(integer $MaxRetryTimes) 设置最大重试次数
  * @method string getRemark() 获取备注
  * @method void setRemark(string $Remark) 设置备注
+ * @method string getClusterIdV4() 获取4.x的集群ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusterIdV4(string $ClusterIdV4) 设置4.x的集群ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNamespaceV4() 获取4.x的命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNamespaceV4(string $NamespaceV4) 设置4.x的命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getConsumerGroupV4() 获取4.x的消费组名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setConsumerGroupV4(string $ConsumerGroupV4) 设置4.x的消费组名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFullNamespaceV4() 获取4.x的完整命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFullNamespaceV4(string $FullNamespaceV4) 设置4.x的完整命名空间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ConsumeGroupItem extends AbstractModel
 {
@@ -69,6 +85,30 @@ class ConsumeGroupItem extends AbstractModel
     public $Remark;
 
     /**
+     * @var string 4.x的集群ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClusterIdV4;
+
+    /**
+     * @var string 4.x的命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $NamespaceV4;
+
+    /**
+     * @var string 4.x的消费组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ConsumerGroupV4;
+
+    /**
+     * @var string 4.x的完整命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FullNamespaceV4;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $ConsumerGroup 消费组名称
      * @param boolean $ConsumeEnable 是否开启消费
@@ -76,6 +116,14 @@ class ConsumeGroupItem extends AbstractModel
 并发投递：false
      * @param integer $MaxRetryTimes 最大重试次数
      * @param string $Remark 备注
+     * @param string $ClusterIdV4 4.x的集群ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $NamespaceV4 4.x的命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ConsumerGroupV4 4.x的消费组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FullNamespaceV4 4.x的完整命名空间
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -112,6 +160,22 @@ class ConsumeGroupItem extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("ClusterIdV4",$param) and $param["ClusterIdV4"] !== null) {
+            $this->ClusterIdV4 = $param["ClusterIdV4"];
+        }
+
+        if (array_key_exists("NamespaceV4",$param) and $param["NamespaceV4"] !== null) {
+            $this->NamespaceV4 = $param["NamespaceV4"];
+        }
+
+        if (array_key_exists("ConsumerGroupV4",$param) and $param["ConsumerGroupV4"] !== null) {
+            $this->ConsumerGroupV4 = $param["ConsumerGroupV4"];
+        }
+
+        if (array_key_exists("FullNamespaceV4",$param) and $param["FullNamespaceV4"] !== null) {
+            $this->FullNamespaceV4 = $param["FullNamespaceV4"];
         }
     }
 }

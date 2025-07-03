@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 创建任务时的返回结果
  *
  * @method string getDataId() 获取请求时传入的DataId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataId(string $DataId) 设置请求时传入的DataId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTaskId() 获取TaskId，任务ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskId(string $TaskId) 设置TaskId，任务ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCode() 获取错误码。如果code为OK，则表示创建成功，其他则参考公共错误码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCode(string $Code) 设置错误码。如果code为OK，则表示创建成功，其他则参考公共错误码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMessage() 获取如果错误，该字段表示错误详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置如果错误，该字段表示错误详情
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskResult extends AbstractModel
 {
     /**
      * @var string 请求时传入的DataId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DataId;
 
     /**
      * @var string TaskId，任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskId;
 
     /**
      * @var string 错误码。如果code为OK，则表示创建成功，其他则参考公共错误码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Code;
 
     /**
      * @var string 如果错误，该字段表示错误详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
     /**
      * @param string $DataId 请求时传入的DataId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskId TaskId，任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Code 错误码。如果code为OK，则表示创建成功，其他则参考公共错误码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message 如果错误，该字段表示错误详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,165 +21,113 @@ use TencentCloud\Common\AbstractModel;
  * 容器安全镜像病毒信息
  *
  * @method string getPath() 获取路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPath(string $Path) 设置路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRiskLevel() 获取风险等级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskLevel(string $RiskLevel) 设置风险等级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCategory() 获取分类
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCategory(string $Category) 设置分类
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVirusName() 获取病毒名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVirusName(string $VirusName) 设置病毒名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDesc() 获取描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDesc(string $Desc) 设置描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSolution() 获取解决方案
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSolution(string $Solution) 设置解决方案
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileType() 获取文件类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileType(string $FileType) 设置文件类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileName() 获取文件路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileName(string $FileName) 设置文件路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileMd5() 获取文件md5
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileMd5(string $FileMd5) 设置文件md5
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFileSize() 获取大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileSize(integer $FileSize) 设置大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFirstScanTime() 获取首次发现时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFirstScanTime(string $FirstScanTime) 设置首次发现时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLatestScanTime() 获取最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLatestScanTime(string $LatestScanTime) 设置最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ImageVirus extends AbstractModel
 {
     /**
      * @var string 路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Path;
 
     /**
      * @var string 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskLevel;
 
     /**
      * @var string 分类
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Category;
 
     /**
      * @var string 病毒名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VirusName;
 
     /**
      * @var array 标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
      * @var string 描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Desc;
 
     /**
      * @var string 解决方案
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Solution;
 
     /**
      * @var string 文件类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileType;
 
     /**
      * @var string 文件路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileName;
 
     /**
      * @var string 文件md5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileMd5;
 
     /**
      * @var integer 大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileSize;
 
     /**
      * @var string 首次发现时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FirstScanTime;
 
     /**
      * @var string 最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LatestScanTime;
 
     /**
      * @param string $Path 路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RiskLevel 风险等级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Category 分类
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VirusName 病毒名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Desc 描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Solution 解决方案
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileType 文件类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileName 文件路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileMd5 文件md5
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FileSize 大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FirstScanTime 首次发现时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LatestScanTime 最近扫描时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

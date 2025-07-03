@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getName() 获取项目名
  * @method void setName(string $Name) 设置项目名
  * @method string getDescription() 获取项目描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置项目描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取标签数组
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签数组
@@ -59,7 +57,6 @@ class Project extends AbstractModel
 
     /**
      * @var string 项目描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
@@ -103,7 +100,6 @@ class Project extends AbstractModel
      * @param string $ProjectId 项目ID
      * @param string $Name 项目名
      * @param string $Description 项目描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 标签数组
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 项目状态

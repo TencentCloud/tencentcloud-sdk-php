@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 日志存储量记录
  *
  * @method string getMonth() 获取年月份
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMonth(string $Month) 设置年月份
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUsedSize() 获取存储量，字节
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsedSize(integer $UsedSize) 设置存储量，字节
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getInquireSize() 获取总量，字节
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInquireSize(integer $InquireSize) 设置总量，字节
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class LogStorageRecord extends AbstractModel
 {
     /**
      * @var string 年月份
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Month;
 
     /**
      * @var integer 存储量，字节
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UsedSize;
 
     /**
      * @var integer 总量，字节
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InquireSize;
 
     /**
      * @param string $Month 年月份
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UsedSize 存储量，字节
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InquireSize 总量，字节
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

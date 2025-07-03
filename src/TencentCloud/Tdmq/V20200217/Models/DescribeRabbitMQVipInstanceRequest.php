@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRabbitMQVipInstance请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
+ * @method string getClusterId() 获取集群 ID
+ * @method void setClusterId(string $ClusterId) 设置集群 ID
  */
 class DescribeRabbitMQVipInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string 集群 ID
      */
     public $ClusterId;
 
     /**
-     * @param string $ClusterId 集群ID
+     * @param string $ClusterId 集群 ID
      */
     function __construct()
     {

@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 过滤器
  *
  * @method string getKey() 获取指标名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKey(string $Key) 设置指标名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取指标内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置指标内容
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MetricLabel extends AbstractModel
 {
     /**
      * @var string 指标名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Key;
 
     /**
      * @var string 指标内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @param string $Key 指标名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 指标内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

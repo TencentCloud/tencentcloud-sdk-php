@@ -86,8 +86,8 @@ UpstreamProtocol：与Protocol相同
  * @method void setPrivateKey(string $PrivateKey) 设置CertType为1时，需要填充此参数，表示自有证书的私钥
  * @method string getSSLId() 获取CertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
  * @method void setSSLId(string $SSLId) 设置CertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
- * @method string getResourceId() 获取待废弃，可不填。Waf的资源ID。
- * @method void setResourceId(string $ResourceId) 设置待废弃，可不填。Waf的资源ID。
+ * @method string getResourceId() 获取Waf的资源ID。
+ * @method void setResourceId(string $ResourceId) 设置Waf的资源ID。
  * @method array getIpHeaders() 获取IsCdn为3时，需要填此参数，表示自定义header
  * @method void setIpHeaders(array $IpHeaders) 设置IsCdn为3时，需要填此参数，表示自定义header
  * @method string getUpstreamScheme() 获取服务配置有HTTPS端口时，HTTPS的回源协议。
@@ -98,10 +98,10 @@ http：使用http协议回源，和HttpsUpstreamPort配合使用
 https：使用https协议回源
  * @method string getHttpsUpstreamPort() 获取HTTPS回源端口,仅UpstreamScheme为http时需要填当前字段
  * @method void setHttpsUpstreamPort(string $HttpsUpstreamPort) 设置HTTPS回源端口,仅UpstreamScheme为http时需要填当前字段
- * @method integer getIsGray() 获取待废弃，可不填。是否开启灰度，0表示不开启灰度。
- * @method void setIsGray(integer $IsGray) 设置待废弃，可不填。是否开启灰度，0表示不开启灰度。
- * @method array getGrayAreas() 获取待废弃，可不填。灰度的地区
- * @method void setGrayAreas(array $GrayAreas) 设置待废弃，可不填。灰度的地区
+ * @method integer getIsGray() 获取是否开启灰度，0表示不开启灰度。
+ * @method void setIsGray(integer $IsGray) 设置是否开启灰度，0表示不开启灰度。
+ * @method array getGrayAreas() 获取灰度的地区
+ * @method void setGrayAreas(array $GrayAreas) 设置灰度的地区
  * @method integer getHttpsRewrite() 获取必填项，是否开启HTTP强制跳转到HTTPS。
 0：不强制跳转
 1：开启强制跳转
@@ -118,16 +118,16 @@ https：使用https协议回源
  * @method void setIsHttp2(integer $IsHttp2) 设置必填项，是否开启HTTP2，需要开启HTTPS协议支持。
 0：关闭
 1：开启
- * @method string getEdition() 获取待废弃，可不填。WAF实例类型。
+ * @method string getEdition() 获取WAF实例类型。
 sparta-waf：SAAS型WAF
 clb-waf：负载均衡型WAF
 cdn-waf：CDN上的Web防护能力
- * @method void setEdition(string $Edition) 设置待废弃，可不填。WAF实例类型。
+ * @method void setEdition(string $Edition) 设置WAF实例类型。
 sparta-waf：SAAS型WAF
 clb-waf：负载均衡型WAF
 cdn-waf：CDN上的Web防护能力
- * @method integer getAnycast() 获取待废弃，目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
- * @method void setAnycast(integer $Anycast) 设置待废弃，目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
+ * @method integer getAnycast() 获取目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
+ * @method void setAnycast(integer $Anycast) 设置目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
  * @method array getWeights() 获取回源IP列表各IP的权重，和SrcList一一对应。当且仅当UpstreamType为0，并且SrcList有多个IP，并且LoadBalance为2时需要填写，否则填 []
  * @method void setWeights(array $Weights) 设置回源IP列表各IP的权重，和SrcList一一对应。当且仅当UpstreamType为0，并且SrcList有多个IP，并且LoadBalance为2时需要填写，否则填 []
  * @method integer getActiveCheck() 获取必填项，是否开启主动健康检测。
@@ -166,20 +166,36 @@ cdn-waf：CDN上的Web防护能力
 3：开启SNI，SNI为自定义域名
  * @method string getSniHost() 获取SniType为3时，需要填此参数，表示自定义的SNI；
  * @method void setSniHost(string $SniHost) 设置SniType为3时，需要填此参数，表示自定义的SNI；
- * @method integer getXFFReset() 获取是否开启XFF重置。
-0：关闭
-1：开启
- * @method void setXFFReset(integer $XFFReset) 设置是否开启XFF重置。
-0：关闭
-1：开启
+ * @method integer getXFFReset() 获取是否开启XFF重置。0：关闭 1：开启
+ * @method void setXFFReset(integer $XFFReset) 设置是否开启XFF重置。0：关闭 1：开启
  * @method string getNote() 获取域名备注信息
  * @method void setNote(string $Note) 设置域名备注信息
  * @method string getUpstreamHost() 获取自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
  * @method void setUpstreamHost(string $UpstreamHost) 设置自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
- * @method integer getProxyBuffer() 获取是否开启缓存 0-关闭 1-开启
- * @method void setProxyBuffer(integer $ProxyBuffer) 设置是否开启缓存 0-关闭 1-开启
- * @method integer getProbeStatus() 获取0: 禁用拨测, 1: 启用拨测。默认启用拨测
- * @method void setProbeStatus(integer $ProbeStatus) 设置0: 禁用拨测, 1: 启用拨测。默认启用拨测
+ * @method integer getProxyBuffer() 获取是否开启缓存。 0：关闭 1：开启
+ * @method void setProxyBuffer(integer $ProxyBuffer) 设置是否开启缓存。 0：关闭 1：开启
+ * @method integer getProbeStatus() 获取是否开启拨测。 0: 禁用拨测  1: 启用拨测。默认启用拨测
+ * @method void setProbeStatus(integer $ProbeStatus) 设置是否开启拨测。 0: 禁用拨测  1: 启用拨测。默认启用拨测
+ * @method integer getGmType() 获取国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问
+ * @method void setGmType(integer $GmType) 设置国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问
+ * @method integer getGmCertType() 获取国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
+ * @method void setGmCertType(integer $GmCertType) 设置国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
+ * @method string getGmCert() 获取GmCertType为1时，需要填充此参数，表示自有国密证书的证书链
+ * @method void setGmCert(string $GmCert) 设置GmCertType为1时，需要填充此参数，表示自有国密证书的证书链
+ * @method string getGmPrivateKey() 获取GmCertType为1时，需要填充此参数，表示自有国密证书的私钥
+ * @method void setGmPrivateKey(string $GmPrivateKey) 设置GmCertType为1时，需要填充此参数，表示自有国密证书的私钥
+ * @method string getGmEncCert() 获取GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书
+ * @method void setGmEncCert(string $GmEncCert) 设置GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书
+ * @method string getGmEncPrivateKey() 获取GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
+ * @method void setGmEncPrivateKey(string $GmEncPrivateKey) 设置GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
+ * @method string getGmSSLId() 获取GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
+ * @method void setGmSSLId(string $GmSSLId) 设置GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
+ * @method integer getUpstreamPolicy() 获取回源策略，支持负载均衡回源和分流回源两种方式。0：默认值，负载均衡回源；1：分流回源
+ * @method void setUpstreamPolicy(integer $UpstreamPolicy) 设置回源策略，支持负载均衡回源和分流回源两种方式。0：默认值，负载均衡回源；1：分流回源
+ * @method array getUpstreamRules() 获取分流回源时生效，分流回源的规则。
+ * @method void setUpstreamRules(array $UpstreamRules) 设置分流回源时生效，分流回源的规则。
+ * @method integer getUseCase() 获取业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
+ * @method void setUseCase(integer $UseCase) 设置业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
  */
 class AddSpartaProtectionRequest extends AbstractModel
 {
@@ -265,7 +281,8 @@ UpstreamProtocol：与Protocol相同
     public $SSLId;
 
     /**
-     * @var string 待废弃，可不填。Waf的资源ID。
+     * @var string Waf的资源ID。
+     * @deprecated
      */
     public $ResourceId;
 
@@ -287,12 +304,14 @@ https：使用https协议回源
     public $HttpsUpstreamPort;
 
     /**
-     * @var integer 待废弃，可不填。是否开启灰度，0表示不开启灰度。
+     * @var integer 是否开启灰度，0表示不开启灰度。
+     * @deprecated
      */
     public $IsGray;
 
     /**
-     * @var array 待废弃，可不填。灰度的地区
+     * @var array 灰度的地区
+     * @deprecated
      */
     public $GrayAreas;
 
@@ -321,15 +340,17 @@ https：使用https协议回源
     public $IsHttp2;
 
     /**
-     * @var string 待废弃，可不填。WAF实例类型。
+     * @var string WAF实例类型。
 sparta-waf：SAAS型WAF
 clb-waf：负载均衡型WAF
 cdn-waf：CDN上的Web防护能力
+     * @deprecated
      */
     public $Edition;
 
     /**
-     * @var integer 待废弃，目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
+     * @var integer 目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
+     * @deprecated
      */
     public $Anycast;
 
@@ -389,9 +410,7 @@ cdn-waf：CDN上的Web防护能力
     public $SniHost;
 
     /**
-     * @var integer 是否开启XFF重置。
-0：关闭
-1：开启
+     * @var integer 是否开启XFF重置。0：关闭 1：开启
      */
     public $XFFReset;
 
@@ -406,14 +425,64 @@ cdn-waf：CDN上的Web防护能力
     public $UpstreamHost;
 
     /**
-     * @var integer 是否开启缓存 0-关闭 1-开启
+     * @var integer 是否开启缓存。 0：关闭 1：开启
      */
     public $ProxyBuffer;
 
     /**
-     * @var integer 0: 禁用拨测, 1: 启用拨测。默认启用拨测
+     * @var integer 是否开启拨测。 0: 禁用拨测  1: 启用拨测。默认启用拨测
      */
     public $ProbeStatus;
+
+    /**
+     * @var integer 国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问
+     */
+    public $GmType;
+
+    /**
+     * @var integer 国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
+     */
+    public $GmCertType;
+
+    /**
+     * @var string GmCertType为1时，需要填充此参数，表示自有国密证书的证书链
+     */
+    public $GmCert;
+
+    /**
+     * @var string GmCertType为1时，需要填充此参数，表示自有国密证书的私钥
+     */
+    public $GmPrivateKey;
+
+    /**
+     * @var string GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书
+     */
+    public $GmEncCert;
+
+    /**
+     * @var string GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
+     */
+    public $GmEncPrivateKey;
+
+    /**
+     * @var string GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
+     */
+    public $GmSSLId;
+
+    /**
+     * @var integer 回源策略，支持负载均衡回源和分流回源两种方式。0：默认值，负载均衡回源；1：分流回源
+     */
+    public $UpstreamPolicy;
+
+    /**
+     * @var array 分流回源时生效，分流回源的规则。
+     */
+    public $UpstreamRules;
+
+    /**
+     * @var integer 业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
+     */
+    public $UseCase;
 
     /**
      * @param string $Domain 需要防护的域名
@@ -449,14 +518,14 @@ UpstreamProtocol：与Protocol相同
      * @param string $Cert CertType为1时，需要填充此参数，表示自有证书的证书链
      * @param string $PrivateKey CertType为1时，需要填充此参数，表示自有证书的私钥
      * @param string $SSLId CertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
-     * @param string $ResourceId 待废弃，可不填。Waf的资源ID。
+     * @param string $ResourceId Waf的资源ID。
      * @param array $IpHeaders IsCdn为3时，需要填此参数，表示自定义header
      * @param string $UpstreamScheme 服务配置有HTTPS端口时，HTTPS的回源协议。
 http：使用http协议回源，和HttpsUpstreamPort配合使用
 https：使用https协议回源
      * @param string $HttpsUpstreamPort HTTPS回源端口,仅UpstreamScheme为http时需要填当前字段
-     * @param integer $IsGray 待废弃，可不填。是否开启灰度，0表示不开启灰度。
-     * @param array $GrayAreas 待废弃，可不填。灰度的地区
+     * @param integer $IsGray 是否开启灰度，0表示不开启灰度。
+     * @param array $GrayAreas 灰度的地区
      * @param integer $HttpsRewrite 必填项，是否开启HTTP强制跳转到HTTPS。
 0：不强制跳转
 1：开启强制跳转
@@ -465,11 +534,11 @@ https：使用https协议回源
      * @param integer $IsHttp2 必填项，是否开启HTTP2，需要开启HTTPS协议支持。
 0：关闭
 1：开启
-     * @param string $Edition 待废弃，可不填。WAF实例类型。
+     * @param string $Edition WAF实例类型。
 sparta-waf：SAAS型WAF
 clb-waf：负载均衡型WAF
 cdn-waf：CDN上的Web防护能力
-     * @param integer $Anycast 待废弃，目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
+     * @param integer $Anycast 目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
      * @param array $Weights 回源IP列表各IP的权重，和SrcList一一对应。当且仅当UpstreamType为0，并且SrcList有多个IP，并且LoadBalance为2时需要填写，否则填 []
      * @param integer $ActiveCheck 必填项，是否开启主动健康检测。
 0：不开启
@@ -489,13 +558,21 @@ cdn-waf：CDN上的Web防护能力
 2：开启SNI，SNI为域名回源时的源站域名
 3：开启SNI，SNI为自定义域名
      * @param string $SniHost SniType为3时，需要填此参数，表示自定义的SNI；
-     * @param integer $XFFReset 是否开启XFF重置。
-0：关闭
-1：开启
+     * @param integer $XFFReset 是否开启XFF重置。0：关闭 1：开启
      * @param string $Note 域名备注信息
      * @param string $UpstreamHost 自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
-     * @param integer $ProxyBuffer 是否开启缓存 0-关闭 1-开启
-     * @param integer $ProbeStatus 0: 禁用拨测, 1: 启用拨测。默认启用拨测
+     * @param integer $ProxyBuffer 是否开启缓存。 0：关闭 1：开启
+     * @param integer $ProbeStatus 是否开启拨测。 0: 禁用拨测  1: 启用拨测。默认启用拨测
+     * @param integer $GmType 国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问
+     * @param integer $GmCertType 国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
+     * @param string $GmCert GmCertType为1时，需要填充此参数，表示自有国密证书的证书链
+     * @param string $GmPrivateKey GmCertType为1时，需要填充此参数，表示自有国密证书的私钥
+     * @param string $GmEncCert GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书
+     * @param string $GmEncPrivateKey GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
+     * @param string $GmSSLId GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
+     * @param integer $UpstreamPolicy 回源策略，支持负载均衡回源和分流回源两种方式。0：默认值，负载均衡回源；1：分流回源
+     * @param array $UpstreamRules 分流回源时生效，分流回源的规则。
+     * @param integer $UseCase 业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
      */
     function __construct()
     {
@@ -665,6 +742,51 @@ cdn-waf：CDN上的Web防护能力
 
         if (array_key_exists("ProbeStatus",$param) and $param["ProbeStatus"] !== null) {
             $this->ProbeStatus = $param["ProbeStatus"];
+        }
+
+        if (array_key_exists("GmType",$param) and $param["GmType"] !== null) {
+            $this->GmType = $param["GmType"];
+        }
+
+        if (array_key_exists("GmCertType",$param) and $param["GmCertType"] !== null) {
+            $this->GmCertType = $param["GmCertType"];
+        }
+
+        if (array_key_exists("GmCert",$param) and $param["GmCert"] !== null) {
+            $this->GmCert = $param["GmCert"];
+        }
+
+        if (array_key_exists("GmPrivateKey",$param) and $param["GmPrivateKey"] !== null) {
+            $this->GmPrivateKey = $param["GmPrivateKey"];
+        }
+
+        if (array_key_exists("GmEncCert",$param) and $param["GmEncCert"] !== null) {
+            $this->GmEncCert = $param["GmEncCert"];
+        }
+
+        if (array_key_exists("GmEncPrivateKey",$param) and $param["GmEncPrivateKey"] !== null) {
+            $this->GmEncPrivateKey = $param["GmEncPrivateKey"];
+        }
+
+        if (array_key_exists("GmSSLId",$param) and $param["GmSSLId"] !== null) {
+            $this->GmSSLId = $param["GmSSLId"];
+        }
+
+        if (array_key_exists("UpstreamPolicy",$param) and $param["UpstreamPolicy"] !== null) {
+            $this->UpstreamPolicy = $param["UpstreamPolicy"];
+        }
+
+        if (array_key_exists("UpstreamRules",$param) and $param["UpstreamRules"] !== null) {
+            $this->UpstreamRules = [];
+            foreach ($param["UpstreamRules"] as $key => $value){
+                $obj = new UpstreamRule();
+                $obj->deserialize($value);
+                array_push($this->UpstreamRules, $obj);
+            }
+        }
+
+        if (array_key_exists("UseCase",$param) and $param["UseCase"] !== null) {
+            $this->UseCase = $param["UseCase"];
         }
     }
 }

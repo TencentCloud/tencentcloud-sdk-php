@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method float getDuration() 获取素材时长，单位秒。
  * @method void setDuration(float $Duration) 设置素材时长，单位秒。
+ * @method float getStartTime() 获取卡槽起始时间，单位秒。
+ * @method void setStartTime(float $StartTime) 设置卡槽起始时间，单位秒。
  */
 class SlotInfo extends AbstractModel
 {
@@ -74,6 +76,11 @@ class SlotInfo extends AbstractModel
     public $Duration;
 
     /**
+     * @var float 卡槽起始时间，单位秒。
+     */
+    public $StartTime;
+
+    /**
      * @param integer $Id 卡槽 Id。
      * @param string $Type 卡槽类型，可取值有：
 <li> AUDIO：音频卡槽，可替换素材类型为 AUDIO 的音频素材;</li>
@@ -84,6 +91,7 @@ class SlotInfo extends AbstractModel
      * @param TextSlotInfo $DefaultTextSlotInfo 默认文本卡槽信息。当卡槽类型为 TEXT 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Duration 素材时长，单位秒。
+     * @param float $StartTime 卡槽起始时间，单位秒。
      */
     function __construct()
     {
@@ -117,6 +125,10 @@ class SlotInfo extends AbstractModel
 
         if (array_key_exists("Duration",$param) and $param["Duration"] !== null) {
             $this->Duration = $param["Duration"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
         }
     }
 }

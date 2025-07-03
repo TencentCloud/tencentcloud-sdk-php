@@ -21,253 +21,173 @@ use TencentCloud\Common\AbstractModel;
  * 计量标准接入类产品支持API接口获取用量明细返回数据结构
  *
  * @method string getDate() 获取日期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDate(string $Date) 设置日期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUin() 获取账号 ID 是用户在腾讯云的唯一账号标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUin(string $Uin) 设置账号 ID 是用户在腾讯云的唯一账号标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDosageType() 获取用量统计类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDosageType(string $DosageType) 设置用量统计类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProductCode() 获取产品编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductCode(string $ProductCode) 设置产品编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubProductCode() 获取子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubProductCode(string $SubProductCode) 设置子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBillingItemCode() 获取组件类型编码
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBillingItemCode(string $BillingItemCode) 设置组件类型编码
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubBillingItemCode() 获取组件编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubBillingItemCode(string $SubBillingItemCode) 设置组件编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProductCodeName() 获取产品名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductCodeName(string $ProductCodeName) 设置产品名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubProductCodeName() 获取子产品名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubProductCodeName(string $SubProductCodeName) 设置子产品名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBillingItemCodeName() 获取组件类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBillingItemCodeName(string $BillingItemCodeName) 设置组件类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubBillingItemCodeName() 获取组件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubBillingItemCodeName(string $SubBillingItemCodeName) 设置组件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDosageUnit() 获取用量单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDosageUnit(string $DosageUnit) 设置用量单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDosageBeginTime() 获取用量起始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDosageBeginTime(string $DosageBeginTime) 设置用量起始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDosageEndTime() 获取用量截止时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDosageEndTime(string $DosageEndTime) 设置用量截止时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getDosageValue() 获取标准用量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDosageValue(float $DosageValue) 设置标准用量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getDeductValue() 获取抵扣用量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeductValue(float $DeductValue) 设置抵扣用量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getRemainValue() 获取抵扣余量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemainValue(float $RemainValue) 设置抵扣余量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSdkAppId() 获取sdkAppId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSdkAppId(string $SdkAppId) 设置sdkAppId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAttrStr() 获取其他信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAttrStr(array $AttrStr) 设置其他信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSheetName() 获取用量模板名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSheetName(array $SheetName) 设置用量模板名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeDosageDetail extends AbstractModel
 {
     /**
      * @var string 日期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Date;
 
     /**
      * @var string 账号 ID 是用户在腾讯云的唯一账号标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Uin;
 
     /**
      * @var string 用量统计类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DosageType;
 
     /**
      * @var string 产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductCode;
 
     /**
      * @var string 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubProductCode;
 
     /**
      * @var string 组件类型编码
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BillingItemCode;
 
     /**
      * @var string 组件编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubBillingItemCode;
 
     /**
      * @var string 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductCodeName;
 
     /**
      * @var string 子产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubProductCodeName;
 
     /**
      * @var string 组件类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BillingItemCodeName;
 
     /**
      * @var string 组件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubBillingItemCodeName;
 
     /**
      * @var string 用量单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DosageUnit;
 
     /**
      * @var string 用量起始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DosageBeginTime;
 
     /**
      * @var string 用量截止时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DosageEndTime;
 
     /**
      * @var float 标准用量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DosageValue;
 
     /**
      * @var float 抵扣用量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeductValue;
 
     /**
      * @var float 抵扣余量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RemainValue;
 
     /**
      * @var string sdkAppId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SdkAppId;
 
     /**
      * @var array 其他信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AttrStr;
 
     /**
      * @var array 用量模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SheetName;
 
     /**
      * @param string $Date 日期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uin 账号 ID 是用户在腾讯云的唯一账号标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DosageType 用量统计类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProductCode 产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubProductCode 子产品编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BillingItemCode 组件类型编码
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubBillingItemCode 组件编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProductCodeName 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubProductCodeName 子产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BillingItemCodeName 组件类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubBillingItemCodeName 组件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DosageUnit 用量单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DosageBeginTime 用量起始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DosageEndTime 用量截止时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $DosageValue 标准用量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $DeductValue 抵扣用量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $RemainValue 抵扣余量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SdkAppId sdkAppId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AttrStr 其他信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SheetName 用量模板名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

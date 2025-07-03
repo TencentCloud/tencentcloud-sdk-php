@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAuditRuleTemplates请求参数结构体
  *
- * @method array getRuleTemplateIds() 获取审计规则模板ID。
- * @method void setRuleTemplateIds(array $RuleTemplateIds) 设置审计规则模板ID。
+ * @method array getRuleTemplateIds() 获取审计规则模板 ID。可通过 [DescribeAuditRuleTemplates](https://cloud.tencent.com/document/api/236/101811) 接口获取。
+ * @method void setRuleTemplateIds(array $RuleTemplateIds) 设置审计规则模板 ID。可通过 [DescribeAuditRuleTemplates](https://cloud.tencent.com/document/api/236/101811) 接口获取。
  * @method array getRuleFilters() 获取修改后的审计规则。
  * @method void setRuleFilters(array $RuleFilters) 设置修改后的审计规则。
  * @method string getRuleTemplateName() 获取修改后的规则模板名称。	
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyAuditRuleTemplatesRequest extends AbstractModel
 {
     /**
-     * @var array 审计规则模板ID。
+     * @var array 审计规则模板 ID。可通过 [DescribeAuditRuleTemplates](https://cloud.tencent.com/document/api/236/101811) 接口获取。
      */
     public $RuleTemplateIds;
 
@@ -66,7 +66,7 @@ class ModifyAuditRuleTemplatesRequest extends AbstractModel
     public $AlarmPolicy;
 
     /**
-     * @param array $RuleTemplateIds 审计规则模板ID。
+     * @param array $RuleTemplateIds 审计规则模板 ID。可通过 [DescribeAuditRuleTemplates](https://cloud.tencent.com/document/api/236/101811) 接口获取。
      * @param array $RuleFilters 修改后的审计规则。
      * @param string $RuleTemplateName 修改后的规则模板名称。	
      * @param string $Description 修改后的规则模板描述。

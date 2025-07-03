@@ -21,117 +21,81 @@ use TencentCloud\Common\AbstractModel;
  * 工作负载详情
  *
  * @method string getClusterId() 获取资源 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterId(string $ClusterId) 设置资源 ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApplicationName() 获取应用名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationName(string $ApplicationName) 设置应用名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVersionName() 获取版本名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersionName(string $VersionName) 设置版本名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getReadyReplicas() 获取Ready实例数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReadyReplicas(integer $ReadyReplicas) 设置Ready实例数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getReplicas() 获取实例数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReplicas(integer $Replicas) 设置实例数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUpdatedReplicas() 获取Updated实例数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdatedReplicas(integer $UpdatedReplicas) 设置Updated实例数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUpdatedReadyReplicas() 获取UpdatedReady实例数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdatedReadyReplicas(integer $UpdatedReadyReplicas) 设置UpdatedReady实例数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateRevision() 获取更新版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateRevision(string $UpdateRevision) 设置更新版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCurrentRevision() 获取当前版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCurrentRevision(string $CurrentRevision) 设置当前版本
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkloadInfo extends AbstractModel
 {
     /**
      * @var string 资源 ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterId;
 
     /**
      * @var string 应用名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationName;
 
     /**
      * @var string 版本名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VersionName;
 
     /**
      * @var integer Ready实例数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReadyReplicas;
 
     /**
      * @var integer 实例数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Replicas;
 
     /**
      * @var integer Updated实例数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdatedReplicas;
 
     /**
      * @var integer UpdatedReady实例数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdatedReadyReplicas;
 
     /**
      * @var string 更新版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateRevision;
 
     /**
      * @var string 当前版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CurrentRevision;
 
     /**
      * @param string $ClusterId 资源 ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationName 应用名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VersionName 版本名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ReadyReplicas Ready实例数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Replicas 实例数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UpdatedReplicas Updated实例数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UpdatedReadyReplicas UpdatedReady实例数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateRevision 更新版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CurrentRevision 当前版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

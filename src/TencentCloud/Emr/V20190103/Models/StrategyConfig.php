@@ -22,22 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getRollingRestartSwitch() 获取0:关闭滚动重启
 1:开启滚动启动
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRollingRestartSwitch(integer $RollingRestartSwitch) 设置0:关闭滚动重启
 1:开启滚动启动
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBatchSize() 获取滚动重启每批次的重启数量，最大重启台数为 99999 台
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBatchSize(integer $BatchSize) 设置滚动重启每批次的重启数量，最大重启台数为 99999 台
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTimeWait() 获取滚动重启每批停止等待时间 ,最大间隔为 5 分钟 单位是秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeWait(integer $TimeWait) 设置滚动重启每批停止等待时间 ,最大间隔为 5 分钟 单位是秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDealOnFail() 获取操作失败处理策略，0:失败阻塞, 1:失败自动跳过
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDealOnFail(integer $DealOnFail) 设置操作失败处理策略，0:失败阻塞, 1:失败自动跳过
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getArgs() 获取指令需要指定的参数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setArgs(array $Args) 设置指令需要指定的参数
@@ -48,25 +40,21 @@ class StrategyConfig extends AbstractModel
     /**
      * @var integer 0:关闭滚动重启
 1:开启滚动启动
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RollingRestartSwitch;
 
     /**
      * @var integer 滚动重启每批次的重启数量，最大重启台数为 99999 台
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BatchSize;
 
     /**
      * @var integer 滚动重启每批停止等待时间 ,最大间隔为 5 分钟 单位是秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeWait;
 
     /**
      * @var integer 操作失败处理策略，0:失败阻塞, 1:失败自动跳过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DealOnFail;
 
@@ -79,13 +67,9 @@ class StrategyConfig extends AbstractModel
     /**
      * @param integer $RollingRestartSwitch 0:关闭滚动重启
 1:开启滚动启动
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BatchSize 滚动重启每批次的重启数量，最大重启台数为 99999 台
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TimeWait 滚动重启每批停止等待时间 ,最大间隔为 5 分钟 单位是秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DealOnFail 操作失败处理策略，0:失败阻塞, 1:失败自动跳过
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Args 指令需要指定的参数
 注意：此字段可能返回 null，表示取不到有效值。
      */

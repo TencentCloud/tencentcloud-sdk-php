@@ -21,21 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * DescribeImageConfig返回参数结构体
  *
  * @method WebpAdapter getWebpAdapter() 获取WebpAdapter配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWebpAdapter(WebpAdapter $WebpAdapter) 设置WebpAdapter配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method TpgAdapter getTpgAdapter() 获取TpgAdapter配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTpgAdapter(TpgAdapter $TpgAdapter) 设置TpgAdapter配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method GuetzliAdapter getGuetzliAdapter() 获取GuetzliAdapter配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGuetzliAdapter(GuetzliAdapter $GuetzliAdapter) 设置GuetzliAdapter配置
-注意：此字段可能返回 null，表示取不到有效值。
  * @method AvifAdapter getAvifAdapter() 获取AvifAdapter配置项
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAvifAdapter(AvifAdapter $AvifAdapter) 设置AvifAdapter配置项
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -43,25 +35,21 @@ class DescribeImageConfigResponse extends AbstractModel
 {
     /**
      * @var WebpAdapter WebpAdapter配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WebpAdapter;
 
     /**
      * @var TpgAdapter TpgAdapter配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TpgAdapter;
 
     /**
      * @var GuetzliAdapter GuetzliAdapter配置
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GuetzliAdapter;
 
     /**
      * @var AvifAdapter AvifAdapter配置项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AvifAdapter;
 
@@ -72,13 +60,9 @@ class DescribeImageConfigResponse extends AbstractModel
 
     /**
      * @param WebpAdapter $WebpAdapter WebpAdapter配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TpgAdapter $TpgAdapter TpgAdapter配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param GuetzliAdapter $GuetzliAdapter GuetzliAdapter配置
-注意：此字段可能返回 null，表示取不到有效值。
      * @param AvifAdapter $AvifAdapter AvifAdapter配置项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

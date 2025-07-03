@@ -31,33 +31,19 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getCount() 获取该规格宿主机的数量
  * @method void setCount(integer $Count) 设置该规格宿主机的数量
  * @method float getCpuAverage() 获取平均cpu负载百分比
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCpuAverage(float $CpuAverage) 设置平均cpu负载百分比
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getMemAverage() 获取平均内存使用率百分比
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMemAverage(float $MemAverage) 设置平均内存使用率百分比
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getNetAverage() 获取平均网络流量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetAverage(float $NetAverage) 设置平均网络流量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DetailData getCpuDetailData() 获取cpu详细监控数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCpuDetailData(DetailData $CpuDetailData) 设置cpu详细监控数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DetailData getMemDetailData() 获取内存详细数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMemDetailData(DetailData $MemDetailData) 设置内存详细数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DetailData getNetRateDetailData() 获取网络速率详细数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetRateDetailData(DetailData $NetRateDetailData) 设置网络速率详细数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DetailData getNetPacketDetailData() 获取网速包详细数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetPacketDetailData(DetailData $NetPacketDetailData) 设置网速包详细数据
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class HostStatistic extends AbstractModel
 {
@@ -88,43 +74,36 @@ class HostStatistic extends AbstractModel
 
     /**
      * @var float 平均cpu负载百分比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CpuAverage;
 
     /**
      * @var float 平均内存使用率百分比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MemAverage;
 
     /**
      * @var float 平均网络流量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NetAverage;
 
     /**
      * @var DetailData cpu详细监控数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CpuDetailData;
 
     /**
      * @var DetailData 内存详细数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MemDetailData;
 
     /**
      * @var DetailData 网络速率详细数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NetRateDetailData;
 
     /**
      * @var DetailData 网速包详细数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NetPacketDetailData;
 
@@ -135,19 +114,12 @@ class HostStatistic extends AbstractModel
      * @param integer $Memory 宿主机内存大小，单位：GB
      * @param integer $Count 该规格宿主机的数量
      * @param float $CpuAverage 平均cpu负载百分比
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $MemAverage 平均内存使用率百分比
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $NetAverage 平均网络流量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DetailData $CpuDetailData cpu详细监控数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DetailData $MemDetailData 内存详细数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DetailData $NetRateDetailData 网络速率详细数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DetailData $NetPacketDetailData 网速包详细数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

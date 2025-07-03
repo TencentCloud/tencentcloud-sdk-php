@@ -18,18 +18,18 @@ namespace TencentCloud\Cwp\V20180228\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 专家服务-旗舰护网信息
+ * 专家服务-旗舰重保信息
  *
  * @method string getTaskId() 获取任务id
  * @method void setTaskId(string $TaskId) 设置任务id
- * @method integer getProtectDays() 获取护网天数
- * @method void setProtectDays(integer $ProtectDays) 设置护网天数
- * @method integer getStatus() 获取护网状态 0未启动，1护网中，2已完成
- * @method void setStatus(integer $Status) 设置护网状态 0未启动，1护网中，2已完成
- * @method string getStartTime() 获取护网启动时间
- * @method void setStartTime(string $StartTime) 设置护网启动时间
- * @method string getEndTime() 获取护网完成时间
- * @method void setEndTime(string $EndTime) 设置护网完成时间
+ * @method integer getProtectDays() 获取重保天数
+ * @method void setProtectDays(integer $ProtectDays) 设置重保天数
+ * @method integer getStatus() 获取重保状态 0未启动，1重保中，2已完成
+ * @method void setStatus(integer $Status) 设置重保状态 0未启动，1重保中，2已完成
+ * @method string getStartTime() 获取重保启动时间
+ * @method void setStartTime(string $StartTime) 设置重保启动时间
+ * @method string getEndTime() 获取重保完成时间
+ * @method void setEndTime(string $EndTime) 设置重保完成时间
  * @method string getReportPath() 获取报告下载地址
  * @method void setReportPath(string $ReportPath) 设置报告下载地址
  */
@@ -41,22 +41,22 @@ class ProtectNetInfo extends AbstractModel
     public $TaskId;
 
     /**
-     * @var integer 护网天数
+     * @var integer 重保天数
      */
     public $ProtectDays;
 
     /**
-     * @var integer 护网状态 0未启动，1护网中，2已完成
+     * @var integer 重保状态 0未启动，1重保中，2已完成
      */
     public $Status;
 
     /**
-     * @var string 护网启动时间
+     * @var string 重保启动时间
      */
     public $StartTime;
 
     /**
-     * @var string 护网完成时间
+     * @var string 重保完成时间
      */
     public $EndTime;
 
@@ -67,10 +67,10 @@ class ProtectNetInfo extends AbstractModel
 
     /**
      * @param string $TaskId 任务id
-     * @param integer $ProtectDays 护网天数
-     * @param integer $Status 护网状态 0未启动，1护网中，2已完成
-     * @param string $StartTime 护网启动时间
-     * @param string $EndTime 护网完成时间
+     * @param integer $ProtectDays 重保天数
+     * @param integer $Status 重保状态 0未启动，1重保中，2已完成
+     * @param string $StartTime 重保启动时间
+     * @param string $EndTime 重保完成时间
      * @param string $ReportPath 报告下载地址
      */
     function __construct()

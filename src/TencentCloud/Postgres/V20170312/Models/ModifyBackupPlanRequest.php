@@ -28,10 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxBackupStartTime(string $MaxBackupStartTime) 设置实例最晚开始备份时间
  * @method integer getBaseBackupRetentionPeriod() 获取实例备份保留时长，取值范围为7-1830，单位是天
  * @method void setBaseBackupRetentionPeriod(integer $BaseBackupRetentionPeriod) 设置实例备份保留时长，取值范围为7-1830，单位是天
- * @method array getBackupPeriod() 获取实例备份周期，按照星期维度，格式为小写星期英文单词
- * @method void setBackupPeriod(array $BackupPeriod) 设置实例备份周期，按照星期维度，格式为小写星期英文单词
+ * @method array getBackupPeriod() 获取实例备份周期，若是星期维度，格式为小写星期英文单词；若是按月维度，格式为数字字符，如["1","2"]。
+ * @method void setBackupPeriod(array $BackupPeriod) 设置实例备份周期，若是星期维度，格式为小写星期英文单词；若是按月维度，格式为数字字符，如["1","2"]。
  * @method integer getLogBackupRetentionPeriod() 获取实例日志备份保留时长，取值范围为7-1830，单位是天
  * @method void setLogBackupRetentionPeriod(integer $LogBackupRetentionPeriod) 设置实例日志备份保留时长，取值范围为7-1830，单位是天
+ * @method string getPlanId() 获取备份计划ID，用于指明要修改哪个备份计划，不传则是修改默认备份计划。
+ * @method void setPlanId(string $PlanId) 设置备份计划ID，用于指明要修改哪个备份计划，不传则是修改默认备份计划。
+ * @method string getPlanName() 获取要修改的备份计划名称。
+ * @method void setPlanName(string $PlanName) 设置要修改的备份计划名称。
  */
 class ModifyBackupPlanRequest extends AbstractModel
 {
@@ -56,7 +60,7 @@ class ModifyBackupPlanRequest extends AbstractModel
     public $BaseBackupRetentionPeriod;
 
     /**
-     * @var array 实例备份周期，按照星期维度，格式为小写星期英文单词
+     * @var array 实例备份周期，若是星期维度，格式为小写星期英文单词；若是按月维度，格式为数字字符，如["1","2"]。
      */
     public $BackupPeriod;
 
@@ -66,12 +70,24 @@ class ModifyBackupPlanRequest extends AbstractModel
     public $LogBackupRetentionPeriod;
 
     /**
+     * @var string 备份计划ID，用于指明要修改哪个备份计划，不传则是修改默认备份计划。
+     */
+    public $PlanId;
+
+    /**
+     * @var string 要修改的备份计划名称。
+     */
+    public $PlanName;
+
+    /**
      * @param string $DBInstanceId 实例ID
      * @param string $MinBackupStartTime 实例最早开始备份时间
      * @param string $MaxBackupStartTime 实例最晚开始备份时间
      * @param integer $BaseBackupRetentionPeriod 实例备份保留时长，取值范围为7-1830，单位是天
-     * @param array $BackupPeriod 实例备份周期，按照星期维度，格式为小写星期英文单词
+     * @param array $BackupPeriod 实例备份周期，若是星期维度，格式为小写星期英文单词；若是按月维度，格式为数字字符，如["1","2"]。
      * @param integer $LogBackupRetentionPeriod 实例日志备份保留时长，取值范围为7-1830，单位是天
+     * @param string $PlanId 备份计划ID，用于指明要修改哪个备份计划，不传则是修改默认备份计划。
+     * @param string $PlanName 要修改的备份计划名称。
      */
     function __construct()
     {
@@ -108,6 +124,14 @@ class ModifyBackupPlanRequest extends AbstractModel
 
         if (array_key_exists("LogBackupRetentionPeriod",$param) and $param["LogBackupRetentionPeriod"] !== null) {
             $this->LogBackupRetentionPeriod = $param["LogBackupRetentionPeriod"];
+        }
+
+        if (array_key_exists("PlanId",$param) and $param["PlanId"] !== null) {
+            $this->PlanId = $param["PlanId"];
+        }
+
+        if (array_key_exists("PlanName",$param) and $param["PlanName"] !== null) {
+            $this->PlanName = $param["PlanName"];
         }
     }
 }

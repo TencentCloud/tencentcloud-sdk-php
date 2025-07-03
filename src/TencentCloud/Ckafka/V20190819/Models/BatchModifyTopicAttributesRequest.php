@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BatchModifyTopicAttributes请求参数结构体
  *
- * @method string getInstanceId() 获取实例id
- * @method void setInstanceId(string $InstanceId) 设置实例id
- * @method array getTopic() 获取主题属性列表
- * @method void setTopic(array $Topic) 设置主题属性列表
+ * @method string getInstanceId() 获取ckafka集群实例Id
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
+ * @method array getTopic() 获取主题属性列表 (同一个批次最多支持10个)
+ * @method void setTopic(array $Topic) 设置主题属性列表 (同一个批次最多支持10个)
  */
 class BatchModifyTopicAttributesRequest extends AbstractModel
 {
     /**
-     * @var string 实例id
+     * @var string ckafka集群实例Id
      */
     public $InstanceId;
 
     /**
-     * @var array 主题属性列表
+     * @var array 主题属性列表 (同一个批次最多支持10个)
      */
     public $Topic;
 
     /**
-     * @param string $InstanceId 实例id
-     * @param array $Topic 主题属性列表
+     * @param string $InstanceId ckafka集群实例Id
+     * @param array $Topic 主题属性列表 (同一个批次最多支持10个)
      */
     function __construct()
     {

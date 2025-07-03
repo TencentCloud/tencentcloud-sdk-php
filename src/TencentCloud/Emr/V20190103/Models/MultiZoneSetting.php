@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 各个可用区的参数信息
  *
  * @method string getZoneTag() 获取"master"、"standby"、"third-party"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZoneTag(string $ZoneTag) 设置"master"、"standby"、"third-party"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method VPCSettings getVPCSettings() 获取无
  * @method void setVPCSettings(VPCSettings $VPCSettings) 设置无
  * @method Placement getPlacement() 获取无
@@ -35,7 +33,6 @@ class MultiZoneSetting extends AbstractModel
 {
     /**
      * @var string "master"、"standby"、"third-party"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneTag;
 
@@ -56,7 +53,6 @@ class MultiZoneSetting extends AbstractModel
 
     /**
      * @param string $ZoneTag "master"、"standby"、"third-party"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VPCSettings $VPCSettings 无
      * @param Placement $Placement 无
      * @param NewResourceSpec $ResourceSpec 无

@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSparkImageVersion() 获取spark镜像名称
  * @method void setSparkImageVersion(string $SparkImageVersion) 设置spark镜像名称
  * @method string getDescription() 获取spark镜像描述信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置spark镜像描述信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method string getUpdateTime() 获取更新时间
@@ -54,7 +52,6 @@ class PythonSparkImage extends AbstractModel
 
     /**
      * @var string spark镜像描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
@@ -73,7 +70,6 @@ class PythonSparkImage extends AbstractModel
      * @param string $ChildImageVersionId 集群小版本镜像id
      * @param string $SparkImageVersion spark镜像名称
      * @param string $Description spark镜像描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
      * @param string $UpdateTime 更新时间
      */

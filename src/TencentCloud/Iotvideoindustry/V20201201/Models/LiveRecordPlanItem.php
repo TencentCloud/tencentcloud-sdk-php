@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 直播录制计划详情
  *
  * @method string getPlanId() 获取计划ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPlanId(string $PlanId) 设置计划ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPlanName() 获取计划名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPlanName(string $PlanName) 设置计划名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class LiveRecordPlanItem extends AbstractModel
 {
     /**
      * @var string 计划ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PlanId;
 
     /**
      * @var string 计划名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PlanName;
 
     /**
      * @param string $PlanId 计划ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PlanName 计划名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

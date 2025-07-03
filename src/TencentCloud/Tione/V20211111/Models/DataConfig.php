@@ -22,6 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getMappingPath() 获取映射路径
  * @method void setMappingPath(string $MappingPath) 设置映射路径
+ * @method string getDataSourceUsage() 获取存储用途
+可选值为 BUILTIN_CODE, BUILTIN_DATA, BUILTIN_MODEL, USER_DATA, USER_CODE, USER_MODEL, OUTPUT, OTHER
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDataSourceUsage(string $DataSourceUsage) 设置存储用途
+可选值为 BUILTIN_CODE, BUILTIN_DATA, BUILTIN_MODEL, USER_DATA, USER_CODE, USER_MODEL, OUTPUT, OTHER
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDataSourceType() 获取DATASET、COS、CFS、CFSTurbo、GooseFSx、HDFS、WEDATA_HDFS
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataSourceType(string $DataSourceType) 设置DATASET、COS、CFS、CFSTurbo、GooseFSx、HDFS、WEDATA_HDFS
@@ -58,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCBSSource(CBSConfig $CBSSource) 设置CBS配置信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method HostPath getHostPathSource() 获取主机路径信息
+ * @method void setHostPathSource(HostPath $HostPathSource) 设置主机路径信息
  */
 class DataConfig extends AbstractModel
 {
@@ -65,6 +73,13 @@ class DataConfig extends AbstractModel
      * @var string 映射路径
      */
     public $MappingPath;
+
+    /**
+     * @var string 存储用途
+可选值为 BUILTIN_CODE, BUILTIN_DATA, BUILTIN_MODEL, USER_DATA, USER_CODE, USER_MODEL, OUTPUT, OTHER
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DataSourceUsage;
 
     /**
      * @var string DATASET、COS、CFS、CFSTurbo、GooseFSx、HDFS、WEDATA_HDFS
@@ -121,7 +136,15 @@ class DataConfig extends AbstractModel
     public $CBSSource;
 
     /**
+     * @var HostPath 主机路径信息
+     */
+    public $HostPathSource;
+
+    /**
      * @param string $MappingPath 映射路径
+     * @param string $DataSourceUsage 存储用途
+可选值为 BUILTIN_CODE, BUILTIN_DATA, BUILTIN_MODEL, USER_DATA, USER_CODE, USER_MODEL, OUTPUT, OTHER
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataSourceType DATASET、COS、CFS、CFSTurbo、GooseFSx、HDFS、WEDATA_HDFS
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DataSetConfig $DataSetSource 来自数据集的数据
@@ -140,6 +163,7 @@ class DataConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CBSConfig $CBSSource CBS配置信息
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param HostPath $HostPathSource 主机路径信息
      */
     function __construct()
     {
@@ -156,6 +180,10 @@ class DataConfig extends AbstractModel
         }
         if (array_key_exists("MappingPath",$param) and $param["MappingPath"] !== null) {
             $this->MappingPath = $param["MappingPath"];
+        }
+
+        if (array_key_exists("DataSourceUsage",$param) and $param["DataSourceUsage"] !== null) {
+            $this->DataSourceUsage = $param["DataSourceUsage"];
         }
 
         if (array_key_exists("DataSourceType",$param) and $param["DataSourceType"] !== null) {
@@ -200,6 +228,11 @@ class DataConfig extends AbstractModel
         if (array_key_exists("CBSSource",$param) and $param["CBSSource"] !== null) {
             $this->CBSSource = new CBSConfig();
             $this->CBSSource->deserialize($param["CBSSource"]);
+        }
+
+        if (array_key_exists("HostPathSource",$param) and $param["HostPathSource"] !== null) {
+            $this->HostPathSource = new HostPath();
+            $this->HostPathSource->deserialize($param["HostPathSource"]);
         }
     }
 }

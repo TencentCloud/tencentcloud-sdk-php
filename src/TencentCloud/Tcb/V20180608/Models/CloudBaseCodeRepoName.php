@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 代码仓库 repo的名字
  *
  * @method string getName() 获取repo的名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置repo的名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFullName() 获取repo的完整全名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFullName(string $FullName) 设置repo的完整全名
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudBaseCodeRepoName extends AbstractModel
 {
     /**
      * @var string repo的名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string repo的完整全名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FullName;
 
     /**
      * @param string $Name repo的名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FullName repo的完整全名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

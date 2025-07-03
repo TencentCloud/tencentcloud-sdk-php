@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCbsInfo(CbsInfo $CbsInfo) 设置order关联的cbs存储信息
  * @method string getPurchaseSource() 获取购买来源，默认为cloudApi
  * @method void setPurchaseSource(string $PurchaseSource) 设置购买来源，默认为cloudApi
- * @method string getDedicatedClusterOrderId() 获取当调用API接口提交订单时，需要提交DedicatedClusterOrderId
- * @method void setDedicatedClusterOrderId(string $DedicatedClusterOrderId) 设置当调用API接口提交订单时，需要提交DedicatedClusterOrderId
+ * @method string getDedicatedClusterOrderId() 获取当调用API接口提交订单时，需要提交DedicatedClusterOrderId，此处DedicatedClusterOrderId是之前创建的订单，可通过DescribeDedicatedClusterOrders接口查询，这里传入DedicatedClusterOrderId用于调整订单和支付。
+ * @method void setDedicatedClusterOrderId(string $DedicatedClusterOrderId) 设置当调用API接口提交订单时，需要提交DedicatedClusterOrderId，此处DedicatedClusterOrderId是之前创建的订单，可通过DescribeDedicatedClusterOrders接口查询，这里传入DedicatedClusterOrderId用于调整订单和支付。
  */
 class CreateDedicatedClusterOrderRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class CreateDedicatedClusterOrderRequest extends AbstractModel
     public $PurchaseSource;
 
     /**
-     * @var string 当调用API接口提交订单时，需要提交DedicatedClusterOrderId
+     * @var string 当调用API接口提交订单时，需要提交DedicatedClusterOrderId，此处DedicatedClusterOrderId是之前创建的订单，可通过DescribeDedicatedClusterOrders接口查询，这里传入DedicatedClusterOrderId用于调整订单和支付。
      */
     public $DedicatedClusterOrderId;
 
@@ -71,7 +71,7 @@ class CreateDedicatedClusterOrderRequest extends AbstractModel
      * @param CosInfo $CosInfo order关联的cos存储信息
      * @param CbsInfo $CbsInfo order关联的cbs存储信息
      * @param string $PurchaseSource 购买来源，默认为cloudApi
-     * @param string $DedicatedClusterOrderId 当调用API接口提交订单时，需要提交DedicatedClusterOrderId
+     * @param string $DedicatedClusterOrderId 当调用API接口提交订单时，需要提交DedicatedClusterOrderId，此处DedicatedClusterOrderId是之前创建的订单，可通过DescribeDedicatedClusterOrders接口查询，这里传入DedicatedClusterOrderId用于调整订单和支付。
      */
     function __construct()
     {

@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 既往史
  *
  * @method string getName() 获取名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSrc() 获取原文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSrc(string $Src) 设置原文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getState() 获取状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setState(boolean $State) 设置状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取对外输出值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置对外输出值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method NeglistBlock getNeglist() 获取否定列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNeglist(NeglistBlock $Neglist) 设置否定列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method PoslistBlock getPoslist() 获取肯定列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPoslist(PoslistBlock $Poslist) 设置肯定列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MainDiseaseHistoryBlock extends AbstractModel
 {
     /**
      * @var string 名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Src;
 
     /**
      * @var boolean 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $State;
 
     /**
      * @var string 对外输出值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @var NeglistBlock 否定列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Neglist;
 
     /**
      * @var PoslistBlock 肯定列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Poslist;
 
     /**
      * @param string $Name 名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $State 状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 对外输出值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NeglistBlock $Neglist 否定列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PoslistBlock $Poslist 肯定列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

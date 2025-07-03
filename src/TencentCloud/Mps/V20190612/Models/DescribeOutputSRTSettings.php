@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSourceAddresses(array $SourceAddresses) 设置服务器监听地址，SRT模式为LISTENER时使用。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method SRTFECFullOptions getFEC() 获取FEC 配置
+ * @method void setFEC(SRTFECFullOptions $FEC) 设置FEC 配置
  */
 class DescribeOutputSRTSettings extends AbstractModel
 {
@@ -124,6 +126,11 @@ class DescribeOutputSRTSettings extends AbstractModel
     public $SourceAddresses;
 
     /**
+     * @var SRTFECFullOptions FEC 配置
+     */
+    public $FEC;
+
+    /**
      * @param array $Destinations 转推的目标的地址信息列表，SRT模式为CALLER时使用。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StreamId 流Id。
@@ -144,6 +151,7 @@ class DescribeOutputSRTSettings extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SourceAddresses 服务器监听地址，SRT模式为LISTENER时使用。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param SRTFECFullOptions $FEC FEC 配置
      */
     function __construct()
     {
@@ -206,6 +214,11 @@ class DescribeOutputSRTSettings extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SourceAddresses, $obj);
             }
+        }
+
+        if (array_key_exists("FEC",$param) and $param["FEC"] !== null) {
+            $this->FEC = new SRTFECFullOptions();
+            $this->FEC->deserialize($param["FEC"]);
         }
     }
 }

@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 机型信息和其可支持的最大VPC-CNI模式Pod数量信息
  *
  * @method string getZone() 获取机型所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZone(string $Zone) 设置机型所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceFamily() 获取机型所属机型族
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceFamily(string $InstanceFamily) 设置机型所属机型族
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceType() 获取实例机型名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceType(string $InstanceType) 设置实例机型名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method PodLimitsByType getPodLimits() 获取机型可支持的最大VPC-CNI模式Pod数量信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPodLimits(PodLimitsByType $PodLimits) 设置机型可支持的最大VPC-CNI模式Pod数量信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PodLimitsInstance extends AbstractModel
 {
     /**
      * @var string 机型所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Zone;
 
     /**
      * @var string 机型所属机型族
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceFamily;
 
     /**
      * @var string 实例机型名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceType;
 
     /**
      * @var PodLimitsByType 机型可支持的最大VPC-CNI模式Pod数量信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PodLimits;
 
     /**
      * @param string $Zone 机型所在可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceFamily 机型所属机型族
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceType 实例机型名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PodLimitsByType $PodLimits 机型可支持的最大VPC-CNI模式Pod数量信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

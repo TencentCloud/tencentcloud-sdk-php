@@ -31,9 +31,7 @@ use TencentCloud\Common\AbstractModel;
  * @method AiRecognitionTaskAsrFullTextResultInput getInput() 获取语音全文识别任务输入信息。
  * @method void setInput(AiRecognitionTaskAsrFullTextResultInput $Input) 设置语音全文识别任务输入信息。
  * @method AiRecognitionTaskAsrFullTextResultOutput getOutput() 获取语音全文识别任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutput(AiRecognitionTaskAsrFullTextResultOutput $Output) 设置语音全文识别任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProgress() 获取语音全文识别任务进度，取值范围 [0-100] 。
  * @method void setProgress(integer $Progress) 设置语音全文识别任务进度，取值范围 [0-100] 。
  * @method string getBeginProcessTime() 获取语音全文识别任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
@@ -70,7 +68,6 @@ class AiRecognitionTaskAsrFullTextResult extends AbstractModel
 
     /**
      * @var AiRecognitionTaskAsrFullTextResultOutput 语音全文识别任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Output;
 
@@ -96,7 +93,6 @@ class AiRecognitionTaskAsrFullTextResult extends AbstractModel
      * @param string $Message 错误信息。
      * @param AiRecognitionTaskAsrFullTextResultInput $Input 语音全文识别任务输入信息。
      * @param AiRecognitionTaskAsrFullTextResultOutput $Output 语音全文识别任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Progress 语音全文识别任务进度，取值范围 [0-100] 。
      * @param string $BeginProcessTime 语音全文识别任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
      * @param string $FinishTime 语音全文识别任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。

@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getAlias() 获取前台展示指标名称
  * @method void setAlias(string $Alias) 设置前台展示指标名称
  * @method string getDescription() 获取指标描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置指标描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMetricType() 获取指标类型
  * @method void setMetricType(string $MetricType) 设置指标类型
  * @method string getUnit() 获取默认指标单位
@@ -51,7 +49,6 @@ class MetricInfo extends AbstractModel
 
     /**
      * @var string 指标描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
@@ -79,7 +76,6 @@ class MetricInfo extends AbstractModel
      * @param string $Metric 后台指标
      * @param string $Alias 前台展示指标名称
      * @param string $Description 指标描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MetricType 指标类型
      * @param string $Unit 默认指标单位
      * @param array $Aggregations 指标支持的聚合函数

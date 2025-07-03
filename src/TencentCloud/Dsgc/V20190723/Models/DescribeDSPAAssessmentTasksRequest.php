@@ -26,20 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量。默认为0
  * @method integer getLimit() 获取结果集个数限制。默认为20，最大值为100
  * @method void setLimit(integer $Limit) 设置结果集个数限制。默认为20，最大值为100
- * @method array getFilters() 获取过滤项。
-支持模糊搜索：TaskId，TaskName
-支持过滤：
-BusinessName：业务名称
-BusinessDept：业务部门名称
-TemplateName：评估模版名称
-Status：评估状态 (waiting待评估，processing评估中, , finished已评估, failed评估失败)
- * @method void setFilters(array $Filters) 设置过滤项。
-支持模糊搜索：TaskId，TaskName
-支持过滤：
-BusinessName：业务名称
-BusinessDept：业务部门名称
-TemplateName：评估模版名称
-Status：评估状态 (waiting待评估，processing评估中, , finished已评估, failed评估失败)
+ * @method array getFilters() 获取过滤项。支持模糊搜索：TaskId，TaskName支持过滤：BusinessName：业务名称BusinessDept：业务部门名称TemplateName：评估模板名称Status：评估状态 (waiting待评估，processing评估中, , finished已评估, failed评估失败)
+ * @method void setFilters(array $Filters) 设置过滤项。支持模糊搜索：TaskId，TaskName支持过滤：BusinessName：业务名称BusinessDept：业务部门名称TemplateName：评估模板名称Status：评估状态 (waiting待评估，processing评估中, , finished已评估, failed评估失败)
  */
 class DescribeDSPAAssessmentTasksRequest extends AbstractModel
 {
@@ -59,13 +47,7 @@ class DescribeDSPAAssessmentTasksRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var array 过滤项。
-支持模糊搜索：TaskId，TaskName
-支持过滤：
-BusinessName：业务名称
-BusinessDept：业务部门名称
-TemplateName：评估模版名称
-Status：评估状态 (waiting待评估，processing评估中, , finished已评估, failed评估失败)
+     * @var array 过滤项。支持模糊搜索：TaskId，TaskName支持过滤：BusinessName：业务名称BusinessDept：业务部门名称TemplateName：评估模板名称Status：评估状态 (waiting待评估，processing评估中, , finished已评估, failed评估失败)
      */
     public $Filters;
 
@@ -73,13 +55,7 @@ Status：评估状态 (waiting待评估，processing评估中, , finished已评�
      * @param string $DspaId DSPA实例Id，格式“dspa-xxxxxxxx”
      * @param integer $Offset 偏移量。默认为0
      * @param integer $Limit 结果集个数限制。默认为20，最大值为100
-     * @param array $Filters 过滤项。
-支持模糊搜索：TaskId，TaskName
-支持过滤：
-BusinessName：业务名称
-BusinessDept：业务部门名称
-TemplateName：评估模版名称
-Status：评估状态 (waiting待评估，processing评估中, , finished已评估, failed评估失败)
+     * @param array $Filters 过滤项。支持模糊搜索：TaskId，TaskName支持过滤：BusinessName：业务名称BusinessDept：业务部门名称TemplateName：评估模板名称Status：评估状态 (waiting待评估，processing评估中, , finished已评估, failed评估失败)
      */
     function __construct()
     {

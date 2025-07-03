@@ -25,33 +25,19 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getHostCount() 获取宿主机数量
  * @method void setHostCount(integer $HostCount) 设置宿主机数量
  * @method string getVpnConnectionState() 获取vpn通道状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpnConnectionState(string $VpnConnectionState) 设置vpn通道状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method VpngwBandwidthData getVpngwBandwidthData() 获取vpn网关监控数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpngwBandwidthData(VpngwBandwidthData $VpngwBandwidthData) 设置vpn网关监控数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method LocalNetInfo getLocalNetInfo() 获取本地网关信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocalNetInfo(LocalNetInfo $LocalNetInfo) 设置本地网关信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getVpnConnectionBandwidthData() 获取vpn网关通道监控数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpnConnectionBandwidthData(array $VpnConnectionBandwidthData) 设置vpn网关通道监控数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getHostDetailInfo() 获取宿主机资源概览信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostDetailInfo(array $HostDetailInfo) 设置宿主机资源概览信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHostStandbyCount() 获取热备宿主机数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostStandbyCount(integer $HostStandbyCount) 设置热备宿主机数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHostNormalCount() 获取普通宿主机数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHostNormalCount(integer $HostNormalCount) 设置普通宿主机数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -69,43 +55,36 @@ class DescribeDedicatedClusterOverviewResponse extends AbstractModel
 
     /**
      * @var string vpn通道状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpnConnectionState;
 
     /**
      * @var VpngwBandwidthData vpn网关监控数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpngwBandwidthData;
 
     /**
      * @var LocalNetInfo 本地网关信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LocalNetInfo;
 
     /**
      * @var array vpn网关通道监控数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpnConnectionBandwidthData;
 
     /**
      * @var array 宿主机资源概览信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostDetailInfo;
 
     /**
      * @var integer 热备宿主机数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostStandbyCount;
 
     /**
      * @var integer 普通宿主机数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HostNormalCount;
 
@@ -118,19 +97,12 @@ class DescribeDedicatedClusterOverviewResponse extends AbstractModel
      * @param integer $CvmCount 云服务器数量
      * @param integer $HostCount 宿主机数量
      * @param string $VpnConnectionState vpn通道状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param VpngwBandwidthData $VpngwBandwidthData vpn网关监控数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param LocalNetInfo $LocalNetInfo 本地网关信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $VpnConnectionBandwidthData vpn网关通道监控数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $HostDetailInfo 宿主机资源概览信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HostStandbyCount 热备宿主机数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HostNormalCount 普通宿主机数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

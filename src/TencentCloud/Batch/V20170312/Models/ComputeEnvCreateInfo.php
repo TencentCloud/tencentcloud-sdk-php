@@ -23,39 +23,25 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEnvId() 获取计算环境 ID
  * @method void setEnvId(string $EnvId) 设置计算环境 ID
  * @method string getEnvName() 获取计算环境名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnvName(string $EnvName) 设置计算环境名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEnvDescription() 获取计算环境描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnvDescription(string $EnvDescription) 设置计算环境描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEnvType() 获取计算环境类型，仅支持“MANAGED”类型
  * @method void setEnvType(string $EnvType) 设置计算环境类型，仅支持“MANAGED”类型
  * @method EnvData getEnvData() 获取计算环境参数
  * @method void setEnvData(EnvData $EnvData) 设置计算环境参数
  * @method array getMountDataDisks() 获取数据盘挂载选项
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMountDataDisks(array $MountDataDisks) 设置数据盘挂载选项
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getInputMappings() 获取输入映射
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInputMappings(array $InputMappings) 设置输入映射
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAuthentications() 获取授权信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuthentications(array $Authentications) 设置授权信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getNotifications() 获取通知信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNotifications(array $Notifications) 设置通知信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDesiredComputeNodeCount() 获取计算节点期望个数
  * @method void setDesiredComputeNodeCount(integer $DesiredComputeNodeCount) 设置计算节点期望个数
  * @method array getTags() 获取计算环境标签列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置计算环境标签列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ComputeEnvCreateInfo extends AbstractModel
 {
@@ -66,13 +52,11 @@ class ComputeEnvCreateInfo extends AbstractModel
 
     /**
      * @var string 计算环境名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnvName;
 
     /**
      * @var string 计算环境描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnvDescription;
 
@@ -88,25 +72,21 @@ class ComputeEnvCreateInfo extends AbstractModel
 
     /**
      * @var array 数据盘挂载选项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MountDataDisks;
 
     /**
      * @var array 输入映射
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InputMappings;
 
     /**
      * @var array 授权信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Authentications;
 
     /**
      * @var array 通知信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Notifications;
 
@@ -117,29 +97,21 @@ class ComputeEnvCreateInfo extends AbstractModel
 
     /**
      * @var array 计算环境标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
      * @param string $EnvId 计算环境 ID
      * @param string $EnvName 计算环境名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EnvDescription 计算环境描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EnvType 计算环境类型，仅支持“MANAGED”类型
      * @param EnvData $EnvData 计算环境参数
      * @param array $MountDataDisks 数据盘挂载选项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $InputMappings 输入映射
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Authentications 授权信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Notifications 通知信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DesiredComputeNodeCount 计算节点期望个数
      * @param array $Tags 计算环境标签列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

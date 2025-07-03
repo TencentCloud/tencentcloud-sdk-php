@@ -29,13 +29,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStoragePrefix() 获取存储目录前缀，cos日志文件前缀仅支持字母和数字的组合，3-40个字符
  * @method void setStoragePrefix(string $StoragePrefix) 设置存储目录前缀，cos日志文件前缀仅支持字母和数字的组合，3-40个字符
  * @method string getStorageAccountId() 获取被指定存储用户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStorageAccountId(string $StorageAccountId) 设置被指定存储用户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStorageAppId() 获取被指定存储用户appid
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStorageAppId(string $StorageAppId) 设置被指定存储用户appid
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Storage extends AbstractModel
 {
@@ -61,13 +57,11 @@ class Storage extends AbstractModel
 
     /**
      * @var string 被指定存储用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StorageAccountId;
 
     /**
      * @var string 被指定存储用户appid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StorageAppId;
 
@@ -77,9 +71,7 @@ class Storage extends AbstractModel
      * @param string $StorageName 存储名称(cos：存储名称为用户自定义的存储桶名称，不包含"-APPID"，仅支持小写字母、数字以及中划线"-"的组合，不能超过50字符，且不支持中划线"-"开头或结尾； cls：存储名称为日志主题id，字符长度为1-50个字符)
      * @param string $StoragePrefix 存储目录前缀，cos日志文件前缀仅支持字母和数字的组合，3-40个字符
      * @param string $StorageAccountId 被指定存储用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StorageAppId 被指定存储用户appid
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -60,8 +60,8 @@ use TencentCloud\Common\AbstractModel;
 注意：需要同时设置 ResourceType 参数指定资源类型
  * @method CreateFlowOption getFlowOption() 获取合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑
  * @method void setFlowOption(CreateFlowOption $FlowOption) 设置合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑
- * @method array getFlowApproverList() 获取合同签署人信息
- * @method void setFlowApproverList(array $FlowApproverList) 设置合同签署人信息
+ * @method array getFlowApproverList() 获取已废弃，请用FlowInfo.Approvers
+ * @method void setFlowApproverList(array $FlowApproverList) 设置已废弃，请用FlowInfo.Approvers
  * @method string getFlowId() 获取合同Id：用于通过一个已发起的合同快速生成一个发起流程web链接
 注: `该参数必须是一个待发起审核的合同id，并且还未审核通过`
  * @method void setFlowId(string $FlowId) 设置合同Id：用于通过一个已发起的合同快速生成一个发起流程web链接
@@ -72,6 +72,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrganization(OrganizationInfo $Organization) 设置企业机构信息，不用传
  * @method UserInfo getOperator() 获取操作人（用户）信息，不用传
  * @method void setOperator(UserInfo $Operator) 设置操作人（用户）信息，不用传
+ * @method SignComponentConfig getSignComponentConfig() 获取<font color="red">此参数已经废弃，请使用 CreateFlowOption 里面的 SignComponentConfig</font>
+签署控件的配置信息，用在嵌入式发起的页面配置，包括
+
+- 签署控件 是否默认展示日期.
+ * @method void setSignComponentConfig(SignComponentConfig $SignComponentConfig) 设置<font color="red">此参数已经废弃，请使用 CreateFlowOption 里面的 SignComponentConfig</font>
+签署控件的配置信息，用在嵌入式发起的页面配置，包括
+
+- 签署控件 是否默认展示日期.
  */
 class ChannelCreatePrepareFlowRequest extends AbstractModel
 {
@@ -116,7 +124,8 @@ class ChannelCreatePrepareFlowRequest extends AbstractModel
     public $FlowOption;
 
     /**
-     * @var array 合同签署人信息
+     * @var array 已废弃，请用FlowInfo.Approvers
+     * @deprecated
      */
     public $FlowApproverList;
 
@@ -145,6 +154,15 @@ class ChannelCreatePrepareFlowRequest extends AbstractModel
     public $Operator;
 
     /**
+     * @var SignComponentConfig <font color="red">此参数已经废弃，请使用 CreateFlowOption 里面的 SignComponentConfig</font>
+签署控件的配置信息，用在嵌入式发起的页面配置，包括
+
+- 签署控件 是否默认展示日期.
+     * @deprecated
+     */
+    public $SignComponentConfig;
+
+    /**
      * @param integer $ResourceType 资源类型，取值有：
 <ul><li> **1**：模板</li>
 <li> **2**：文件（默认值）</li></ul>
@@ -165,12 +183,16 @@ class ChannelCreatePrepareFlowRequest extends AbstractModel
 </ul>
 注意：需要同时设置 ResourceType 参数指定资源类型
      * @param CreateFlowOption $FlowOption 合同流程配置信息，用于配置发起合同时定制化如是否允许修改，某些按钮的隐藏等逻辑
-     * @param array $FlowApproverList 合同签署人信息
+     * @param array $FlowApproverList 已废弃，请用FlowInfo.Approvers
      * @param string $FlowId 合同Id：用于通过一个已发起的合同快速生成一个发起流程web链接
 注: `该参数必须是一个待发起审核的合同id，并且还未审核通过`
      * @param boolean $NeedPreview 该参数不可用，请通过获取 web 可嵌入接口获取合同流程预览 URL
      * @param OrganizationInfo $Organization 企业机构信息，不用传
      * @param UserInfo $Operator 操作人（用户）信息，不用传
+     * @param SignComponentConfig $SignComponentConfig <font color="red">此参数已经废弃，请使用 CreateFlowOption 里面的 SignComponentConfig</font>
+签署控件的配置信息，用在嵌入式发起的页面配置，包括
+
+- 签署控件 是否默认展示日期.
      */
     function __construct()
     {
@@ -233,6 +255,11 @@ class ChannelCreatePrepareFlowRequest extends AbstractModel
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
             $this->Operator = new UserInfo();
             $this->Operator->deserialize($param["Operator"]);
+        }
+
+        if (array_key_exists("SignComponentConfig",$param) and $param["SignComponentConfig"] !== null) {
+            $this->SignComponentConfig = new SignComponentConfig();
+            $this->SignComponentConfig->deserialize($param["SignComponentConfig"]);
         }
     }
 }

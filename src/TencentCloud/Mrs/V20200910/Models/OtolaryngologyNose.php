@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 体检报告-耳鼻喉科-鼻
  *
  * @method KeyValueItem getText() 获取鼻总体描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setText(KeyValueItem $Text) 设置鼻总体描述
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OtolaryngologyNose extends AbstractModel
 {
     /**
      * @var KeyValueItem 鼻总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Text;
 
     /**
      * @param KeyValueItem $Text 鼻总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

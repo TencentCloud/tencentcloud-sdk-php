@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStatus() 获取执行状态 init:初始化, pending: 执行中, done: 执行成功, error: 执行失败
  * @method void setStatus(string $Status) 设置执行状态 init:初始化, pending: 执行中, done: 执行成功, error: 执行失败
  * @method string getErrorMessage() 获取任务错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorMessage(string $ErrorMessage) 设置任务错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Job extends AbstractModel
 {
@@ -43,7 +41,6 @@ class Job extends AbstractModel
 
     /**
      * @var string 任务错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrorMessage;
 
@@ -51,7 +48,6 @@ class Job extends AbstractModel
      * @param integer $JobId 调度ID
      * @param string $Status 执行状态 init:初始化, pending: 执行中, done: 执行成功, error: 执行失败
      * @param string $ErrorMessage 任务错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

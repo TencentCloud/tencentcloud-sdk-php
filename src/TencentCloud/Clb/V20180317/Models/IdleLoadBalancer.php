@@ -37,9 +37,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getForward() 获取负载均衡类型标识，1：负载均衡，0：传统型负载均衡。
  * @method void setForward(integer $Forward) 设置负载均衡类型标识，1：负载均衡，0：传统型负载均衡。
  * @method string getDomain() 获取负载均衡域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomain(string $Domain) 设置负载均衡域名
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class IdleLoadBalancer extends AbstractModel
 {
@@ -81,7 +79,6 @@ class IdleLoadBalancer extends AbstractModel
 
     /**
      * @var string 负载均衡域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Domain;
 
@@ -95,7 +92,6 @@ class IdleLoadBalancer extends AbstractModel
 0：创建中，1：正常运行。
      * @param integer $Forward 负载均衡类型标识，1：负载均衡，0：传统型负载均衡。
      * @param string $Domain 负载均衡域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

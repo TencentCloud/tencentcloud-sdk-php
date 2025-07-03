@@ -20,23 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AnalyzeAuditLogs请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID。
- * @method void setInstanceId(string $InstanceId) 设置实例ID。
+ * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
  * @method string getStartTime() 获取要分析的日志开始时间，格式为："2023-02-16 00:00:20"。
  * @method void setStartTime(string $StartTime) 设置要分析的日志开始时间，格式为："2023-02-16 00:00:20"。
  * @method string getEndTime() 获取要分析的日志结束时间，格式为："2023-02-16 00:10:20"。
  * @method void setEndTime(string $EndTime) 设置要分析的日志结束时间，格式为："2023-02-16 00:10:20"。
  * @method array getAggregationConditions() 获取聚合维度的排序条件。
  * @method void setAggregationConditions(array $AggregationConditions) 设置聚合维度的排序条件。
- * @method AuditLogFilter getAuditLogFilter() 获取已废弃。该过滤条件下的审计日志结果集作为分析日志。
- * @method void setAuditLogFilter(AuditLogFilter $AuditLogFilter) 设置已废弃。该过滤条件下的审计日志结果集作为分析日志。
+ * @method AuditLogFilter getAuditLogFilter() 获取已废弃。
+ * @method void setAuditLogFilter(AuditLogFilter $AuditLogFilter) 设置已废弃。
  * @method array getLogFilter() 获取该过滤条件下的审计日志结果集作为分析日志。
  * @method void setLogFilter(array $LogFilter) 设置该过滤条件下的审计日志结果集作为分析日志。
  */
 class AnalyzeAuditLogsRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID。
+     * @var string 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public $InstanceId;
 
@@ -56,7 +56,8 @@ class AnalyzeAuditLogsRequest extends AbstractModel
     public $AggregationConditions;
 
     /**
-     * @var AuditLogFilter 已废弃。该过滤条件下的审计日志结果集作为分析日志。
+     * @var AuditLogFilter 已废弃。
+     * @deprecated
      */
     public $AuditLogFilter;
 
@@ -66,11 +67,11 @@ class AnalyzeAuditLogsRequest extends AbstractModel
     public $LogFilter;
 
     /**
-     * @param string $InstanceId 实例ID。
+     * @param string $InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      * @param string $StartTime 要分析的日志开始时间，格式为："2023-02-16 00:00:20"。
      * @param string $EndTime 要分析的日志结束时间，格式为："2023-02-16 00:10:20"。
      * @param array $AggregationConditions 聚合维度的排序条件。
-     * @param AuditLogFilter $AuditLogFilter 已废弃。该过滤条件下的审计日志结果集作为分析日志。
+     * @param AuditLogFilter $AuditLogFilter 已废弃。
      * @param array $LogFilter 该过滤条件下的审计日志结果集作为分析日志。
      */
     function __construct()

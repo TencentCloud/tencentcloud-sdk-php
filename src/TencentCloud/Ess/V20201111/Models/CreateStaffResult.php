@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 创建员工的结果
  *
  * @method array getSuccessEmployeeData() 获取创建员工的成功列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSuccessEmployeeData(array $SuccessEmployeeData) 设置创建员工的成功列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getFailedEmployeeData() 获取创建员工的失败列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailedEmployeeData(array $FailedEmployeeData) 设置创建员工的失败列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CreateStaffResult extends AbstractModel
 {
     /**
      * @var array 创建员工的成功列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SuccessEmployeeData;
 
     /**
      * @var array 创建员工的失败列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailedEmployeeData;
 
     /**
      * @param array $SuccessEmployeeData 创建员工的成功列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FailedEmployeeData 创建员工的失败列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getIsDraft() 获取false表示不是草稿，提交刷新请求成功
  * @method void setIsDraft(boolean $IsDraft) 设置false表示不是草稿，提交刷新请求成功
  * @method string getErrorMsg() 获取扩展字段，暂时没用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorMsg(string $ErrorMsg) 设置扩展字段，暂时没用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -38,7 +36,6 @@ class ModifyResourcePoolsResponse extends AbstractModel
 
     /**
      * @var string 扩展字段，暂时没用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrorMsg;
 
@@ -50,7 +47,6 @@ class ModifyResourcePoolsResponse extends AbstractModel
     /**
      * @param boolean $IsDraft false表示不是草稿，提交刷新请求成功
      * @param string $ErrorMsg 扩展字段，暂时没用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

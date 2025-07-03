@@ -21,17 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * DescribeNatFwVpcDnsLst返回参数结构体
  *
  * @method array getVpcDnsSwitchLst() 获取nat防火墙vpc dns 信息数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcDnsSwitchLst(array $VpcDnsSwitchLst) 设置nat防火墙vpc dns 信息数组
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getReturnMsg() 获取返回参数
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReturnMsg(string $ReturnMsg) 设置返回参数
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getReturnMsg() 获取返回参数 success成功 failed 失败
+ * @method void setReturnMsg(string $ReturnMsg) 设置返回参数 success成功 failed 失败
  * @method integer getTotal() 获取开关总条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotal(integer $Total) 设置开关总条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -39,19 +33,16 @@ class DescribeNatFwVpcDnsLstResponse extends AbstractModel
 {
     /**
      * @var array nat防火墙vpc dns 信息数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcDnsSwitchLst;
 
     /**
-     * @var string 返回参数
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 返回参数 success成功 failed 失败
      */
     public $ReturnMsg;
 
     /**
      * @var integer 开关总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Total;
 
@@ -62,11 +53,8 @@ class DescribeNatFwVpcDnsLstResponse extends AbstractModel
 
     /**
      * @param array $VpcDnsSwitchLst nat防火墙vpc dns 信息数组
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ReturnMsg 返回参数
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ReturnMsg 返回参数 success成功 failed 失败
      * @param integer $Total 开关总条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 上链数据 key-value
  *
  * @method string getLabel() 获取标题名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabel(string $Label) 设置标题名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取类型，文字："text"，图片："image"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置类型，文字："text"，图片："image"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取值，文字类型："abc"，图片类型：""/images/img.png"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置值，文字类型："abc"，图片类型：""/images/img.png"
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ChainValue extends AbstractModel
 {
     /**
      * @var string 标题名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Label;
 
     /**
      * @var string 类型，文字："text"，图片："image"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 值，文字类型："abc"，图片类型：""/images/img.png"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @param string $Label 标题名字
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 类型，文字："text"，图片："image"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 值，文字类型："abc"，图片类型：""/images/img.png"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -35,9 +35,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getFileUrl() 获取媒体文件地址。
  * @method void setFileUrl(string $FileUrl) 设置媒体文件地址。
  * @method MediaMetaData getMetaData() 获取原始视频的元信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetaData(MediaMetaData $MetaData) 设置原始视频的元信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getMediaProcessResultSet() 获取降码率任务执行状态与结果。
  * @method void setMediaProcessResultSet(array $MediaProcessResultSet) 设置降码率任务执行状态与结果。
  * @method integer getTasksPriority() 获取任务流的优先级，取值范围为 [-10, 10]。
@@ -84,7 +82,6 @@ class ReduceMediaBitrateTask extends AbstractModel
 
     /**
      * @var MediaMetaData 原始视频的元信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MetaData;
 
@@ -124,7 +121,6 @@ class ReduceMediaBitrateTask extends AbstractModel
      * @param string $FileName 媒体文件名称。
      * @param string $FileUrl 媒体文件地址。
      * @param MediaMetaData $MetaData 原始视频的元信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $MediaProcessResultSet 降码率任务执行状态与结果。
      * @param integer $TasksPriority 任务流的优先级，取值范围为 [-10, 10]。
      * @param string $TasksNotifyMode 任务流状态变更通知模式。

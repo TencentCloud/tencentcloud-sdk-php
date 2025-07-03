@@ -23,15 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRegion() 获取地域
  * @method void setRegion(string $Region) 设置地域
  * @method array getInstanceList() 获取clb实例详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceList(array $InstanceList) 设置clb实例详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取该地域下Clb实例总数
  * @method void setTotalCount(integer $TotalCount) 设置该地域下Clb实例总数
  * @method string getError() 获取是否查询异常
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setError(string $Error) 设置是否查询异常
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClbInstanceList extends AbstractModel
 {
@@ -42,7 +38,6 @@ class ClbInstanceList extends AbstractModel
 
     /**
      * @var array clb实例详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceList;
 
@@ -53,17 +48,14 @@ class ClbInstanceList extends AbstractModel
 
     /**
      * @var string 是否查询异常
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Error;
 
     /**
      * @param string $Region 地域
      * @param array $InstanceList clb实例详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 该地域下Clb实例总数
      * @param string $Error 是否查询异常
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

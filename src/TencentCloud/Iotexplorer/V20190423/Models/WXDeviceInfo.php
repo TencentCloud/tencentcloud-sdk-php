@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 微信硬件设备信息
  *
  * @method string getDeviceId() 获取设备ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceId(string $DeviceId) 设置设备ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method WXIoTDeviceInfo getWXIoTDeviceInfo() 获取设备信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWXIoTDeviceInfo(WXIoTDeviceInfo $WXIoTDeviceInfo) 设置设备信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class WXDeviceInfo extends AbstractModel
 {
     /**
      * @var string 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceId;
 
     /**
      * @var WXIoTDeviceInfo 设备信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WXIoTDeviceInfo;
 
     /**
      * @param string $DeviceId 设备ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WXIoTDeviceInfo $WXIoTDeviceInfo 设备信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

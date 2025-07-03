@@ -25,17 +25,11 @@ use TencentCloud\Common\AbstractModel;
  * @method array getConfigList() 获取分组网络配置列表。
  * @method void setConfigList(array $ConfigList) 设置分组网络配置列表。
  * @method string getGroupSubnetId() 获取分组子网信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupSubnetId(string $GroupSubnetId) 设置分组子网信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupVpcId() 获取分组VPC信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupVpcId(string $GroupVpcId) 设置分组VPC信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupId() 获取分组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupId(string $GroupId) 设置分组ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeCloudNativeAPIGatewayConfigResult extends AbstractModel
 {
@@ -51,19 +45,16 @@ class DescribeCloudNativeAPIGatewayConfigResult extends AbstractModel
 
     /**
      * @var string 分组子网信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupSubnetId;
 
     /**
      * @var string 分组VPC信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupVpcId;
 
     /**
      * @var string 分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupId;
 
@@ -71,11 +62,8 @@ class DescribeCloudNativeAPIGatewayConfigResult extends AbstractModel
      * @param string $GatewayId 网关实例ID。
      * @param array $ConfigList 分组网络配置列表。
      * @param string $GroupSubnetId 分组子网信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupVpcId 分组VPC信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupId 分组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

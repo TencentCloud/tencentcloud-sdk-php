@@ -20,28 +20,28 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRabbitMQNodeList请求参数结构体
  *
- * @method string getInstanceId() 获取rabbitmq集群ID
- * @method void setInstanceId(string $InstanceId) 设置rabbitmq集群ID
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
- * @method integer getLimit() 获取一页限制
- * @method void setLimit(integer $Limit) 设置一页限制
+ * @method string getInstanceId() 获取实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
+ * @method integer getOffset() 获取偏移量，默认值 0
+ * @method void setOffset(integer $Offset) 设置偏移量，默认值 0
+ * @method integer getLimit() 获取一页限制，默认值 20
+ * @method void setLimit(integer $Limit) 设置一页限制，默认值 20
  * @method string getNodeName() 获取模糊搜索节点名字
  * @method void setNodeName(string $NodeName) 设置模糊搜索节点名字
- * @method array getFilters() 获取过滤参数的名字和数值
-现在只有一个nodeStatus
-running/down
-数组类型，兼容后续添加过滤参数
+ * @method array getFilters() 获取过滤参数的名字和数值，当前仅支持根据节点状态筛选。
+"Name": "nodeStatus"
+"Value": running or down
 
- * @method void setFilters(array $Filters) 设置过滤参数的名字和数值
-现在只有一个nodeStatus
-running/down
-数组类型，兼容后续添加过滤参数
+ * @method void setFilters(array $Filters) 设置过滤参数的名字和数值，当前仅支持根据节点状态筛选。
+"Name": "nodeStatus"
+"Value": running or down
 
  * @method string getSortElement() 获取按指定元素排序，现在只有2个
-cpuUsage/diskUsage
+cpuUsage：节点CPU利用率
+diskUsage：节点磁盘利用率
  * @method void setSortElement(string $SortElement) 设置按指定元素排序，现在只有2个
-cpuUsage/diskUsage
+cpuUsage：节点CPU利用率
+diskUsage：节点磁盘利用率
  * @method string getSortOrder() 获取升序/降序
 ascend/descend
  * @method void setSortOrder(string $SortOrder) 设置升序/降序
@@ -50,17 +50,17 @@ ascend/descend
 class DescribeRabbitMQNodeListRequest extends AbstractModel
 {
     /**
-     * @var string rabbitmq集群ID
+     * @var string 实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
      */
     public $InstanceId;
 
     /**
-     * @var integer 偏移量
+     * @var integer 偏移量，默认值 0
      */
     public $Offset;
 
     /**
-     * @var integer 一页限制
+     * @var integer 一页限制，默认值 20
      */
     public $Limit;
 
@@ -70,17 +70,17 @@ class DescribeRabbitMQNodeListRequest extends AbstractModel
     public $NodeName;
 
     /**
-     * @var array 过滤参数的名字和数值
-现在只有一个nodeStatus
-running/down
-数组类型，兼容后续添加过滤参数
+     * @var array 过滤参数的名字和数值，当前仅支持根据节点状态筛选。
+"Name": "nodeStatus"
+"Value": running or down
 
      */
     public $Filters;
 
     /**
      * @var string 按指定元素排序，现在只有2个
-cpuUsage/diskUsage
+cpuUsage：节点CPU利用率
+diskUsage：节点磁盘利用率
      */
     public $SortElement;
 
@@ -91,17 +91,17 @@ ascend/descend
     public $SortOrder;
 
     /**
-     * @param string $InstanceId rabbitmq集群ID
-     * @param integer $Offset 偏移量
-     * @param integer $Limit 一页限制
+     * @param string $InstanceId 实例 ID，形如amqp-xxxxxxxx。有效的 InstanceId 可通过登录 [TDMQ RabbitMQ 控制台](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1)查询。
+     * @param integer $Offset 偏移量，默认值 0
+     * @param integer $Limit 一页限制，默认值 20
      * @param string $NodeName 模糊搜索节点名字
-     * @param array $Filters 过滤参数的名字和数值
-现在只有一个nodeStatus
-running/down
-数组类型，兼容后续添加过滤参数
+     * @param array $Filters 过滤参数的名字和数值，当前仅支持根据节点状态筛选。
+"Name": "nodeStatus"
+"Value": running or down
 
      * @param string $SortElement 按指定元素排序，现在只有2个
-cpuUsage/diskUsage
+cpuUsage：节点CPU利用率
+diskUsage：节点磁盘利用率
      * @param string $SortOrder 升序/降序
 ascend/descend
      */

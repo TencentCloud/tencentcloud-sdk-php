@@ -25,13 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUploadUrl() 获取上传url(任务来源为2时:Post方法（100:apk,101:txt）, 任务来源为1时:put方法)
  * @method void setUploadUrl(string $UploadUrl) 设置上传url(任务来源为2时:Post方法（100:apk,101:txt）, 任务来源为1时:put方法)
  * @method string getUploadSign() 获取上传url鉴权信息(任务来源为1时上传需要, Authorization参数值)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUploadSign(string $UploadSign) 设置上传url鉴权信息(任务来源为1时上传需要, Authorization参数值)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFildID() 获取上传文件ID(任务来源为1时提交诊断任务需要)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFildID(string $FildID) 设置上传文件ID(任务来源为1时提交诊断任务需要)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -49,13 +45,11 @@ class DescribeFileTicketResponse extends AbstractModel
 
     /**
      * @var string 上传url鉴权信息(任务来源为1时上传需要, Authorization参数值)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UploadSign;
 
     /**
      * @var string 上传文件ID(任务来源为1时提交诊断任务需要)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FildID;
 
@@ -68,9 +62,7 @@ class DescribeFileTicketResponse extends AbstractModel
      * @param integer $Result 返回值, 0:成功, 其他值请查看“返回值”定义
      * @param string $UploadUrl 上传url(任务来源为2时:Post方法（100:apk,101:txt）, 任务来源为1时:put方法)
      * @param string $UploadSign 上传url鉴权信息(任务来源为1时上传需要, Authorization参数值)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FildID 上传文件ID(任务来源为1时提交诊断任务需要)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -36,7 +36,7 @@ use TencentCloud\Iotvideoindustry\V20201201\Models as Models;
  * @method Models\CreateDeviceResponse CreateDevice(Models\CreateDeviceRequest $req) 本接口(CreateDevice) 用于创建设备。
  * @method Models\CreateDeviceGroupResponse CreateDeviceGroup(Models\CreateDeviceGroupRequest $req) 本接口(CreateDeviceGroup) 用于创建设备管理分组。
  * @method Models\CreateLiveChannelResponse CreateLiveChannel(Models\CreateLiveChannelRequest $req) 创建直播频道
- * @method Models\CreateLiveRecordPlanResponse CreateLiveRecordPlan(Models\CreateLiveRecordPlanRequest $req) 创建直播录制计划
+ * @method Models\CreateLiveRecordPlanResponse CreateLiveRecordPlan(Models\CreateLiveRecordPlanRequest $req) 创建直播录制计划，直播录制接口，暂时下线中，只有国标接口支持云端录制
  * @method Models\CreateMessageForwardResponse CreateMessageForward(Models\CreateMessageForwardRequest $req) 创建消息转发配置
  * @method Models\CreateRecordPlanResponse CreateRecordPlan(Models\CreateRecordPlanRequest $req) 本接口(CreateRecordPlan) 用于创建录制计划，使设备与时间模板绑定，以便及时启动录制
 请使用CreateRecordingPlan代替
@@ -122,8 +122,7 @@ RecordId和StartTime/EndTime互斥
  * @method Models\DescribeXP2PDataResponse DescribeXP2PData(Models\DescribeXP2PDataRequest $req) 获取X-P2P的统计数据
  * @method Models\GetRecordDatesByDevResponse GetRecordDatesByDev(Models\GetRecordDatesByDevRequest $req) 本接口(GetRecordDatesByDev)用于查询设备含有录像文件的日期列表。
 请使用DescribeRecordDatesByChannel接口
- * @method Models\GetRecordPlanByDevResponse GetRecordPlanByDev(Models\GetRecordPlanByDevRequest $req) 本接口(GetRecordPlanByDev)用于根据设备ID查询其绑定的录制计划.
-
+ * @method Models\GetRecordPlanByDevResponse GetRecordPlanByDev(Models\GetRecordPlanByDevRequest $req) 本接口(GetRecordPlanByDev)用于根据设备ID查询其绑定的录制计划. 这个接口没有业务逻辑用到, 已废弃，统一用DescribeDevice
  * @method Models\GetRecordPlanByIdResponse GetRecordPlanById(Models\GetRecordPlanByIdRequest $req) 本接口(GetRecordPlanById)用于根据录制计划ID获取录制计划。
 请使用DescribeRecordingPlanById接口
  * @method Models\GetRecordPlansResponse GetRecordPlans(Models\GetRecordPlansRequest $req) 本接口(GetRecordPlans)用于获取用户的全部录制计划。
@@ -143,7 +142,6 @@ RecordId和StartTime/EndTime互斥
  * @method Models\ModifyMessageForwardResponse ModifyMessageForward(Models\ModifyMessageForwardRequest $req) 修改消息转发配置
  * @method Models\ModifyPresetResponse ModifyPreset(Models\ModifyPresetRequest $req) 编辑预置位信息
  * @method Models\ModifyRecordingPlanResponse ModifyRecordingPlan(Models\ModifyRecordingPlanRequest $req) 本接口(ModifyRecordingPlan)用于更新录制计划。
-
  * @method Models\ModifySceneResponse ModifyScene(Models\ModifySceneRequest $req) 修改场景
  * @method Models\ModifySubscriptionStatusResponse ModifySubscriptionStatus(Models\ModifySubscriptionStatusRequest $req) 编辑设备订阅状态
  * @method Models\ModifyVideoInfoResponse ModifyVideoInfo(Models\ModifyVideoInfoRequest $req) 修改录像存储列表

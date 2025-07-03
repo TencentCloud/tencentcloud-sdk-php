@@ -24,13 +24,18 @@ use TencentCloud\Smh\V20210712\Models as Models;
 
 /**
  * @method Models\CreateLibraryResponse CreateLibrary(Models\CreateLibraryRequest $req) 创建 PaaS 服务媒体库
+ * @method Models\CreateUserResponse CreateUser(Models\CreateUserRequest $req) 新建用户。
+ * @method Models\CreateUserLifecycleResponse CreateUserLifecycle(Models\CreateUserLifecycleRequest $req) 设置用户生命周期。如果指定的用户已经设置了生命周期，重复调用此接口将覆盖已有的设置。也可用于清除指定用户的生命周期。
  * @method Models\DeleteLibraryResponse DeleteLibrary(Models\DeleteLibraryRequest $req) 删除 PaaS 服务媒体库
+ * @method Models\DeleteUserResponse DeleteUser(Models\DeleteUserRequest $req) 一次删除多个用户。
  * @method Models\DescribeLibrariesResponse DescribeLibraries(Models\DescribeLibrariesRequest $req) 查询 PaaS 服务媒体库列表
  * @method Models\DescribeLibrarySecretResponse DescribeLibrarySecret(Models\DescribeLibrarySecretRequest $req) 查询 PaaS 服务媒体库密钥
  * @method Models\DescribeOfficialInstancesResponse DescribeOfficialInstances(Models\DescribeOfficialInstancesRequest $req) 查询官方云盘实例
  * @method Models\DescribeOfficialOverviewResponse DescribeOfficialOverview(Models\DescribeOfficialOverviewRequest $req) 查询官方云盘实例概览数据
  * @method Models\DescribeTrafficPackagesResponse DescribeTrafficPackages(Models\DescribeTrafficPackagesRequest $req) 查询流量资源包
+ * @method Models\DescribeUserLifecycleResponse DescribeUserLifecycle(Models\DescribeUserLifecycleRequest $req) 查询用户生命周期。
  * @method Models\ModifyLibraryResponse ModifyLibrary(Models\ModifyLibraryRequest $req) 修改 PaaS 服务媒体库配置项
+ * @method Models\ModifyUserResponse ModifyUser(Models\ModifyUserRequest $req) 更新用户信息。
  * @method Models\SendSmsCodeResponse SendSmsCode(Models\SendSmsCodeRequest $req) 发送用于换绑官方云盘实例的超级管理员账号的短信验证码
  * @method Models\VerifySmsCodeResponse VerifySmsCode(Models\VerifySmsCodeRequest $req) 验证短信验证码以换绑官方云盘实例的超级管理员账号
  */

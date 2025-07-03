@@ -21,17 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * ModifyApiAnalyzeStatus返回参数结构体
  *
  * @method integer getCount() 获取已经开启的数量,如果返回值为3（大于支持的域名开启数量），则表示开启失败
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCount(integer $Count) 设置已经开启的数量,如果返回值为3（大于支持的域名开启数量），则表示开启失败
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getUnSupportedList() 获取不支持开启的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnSupportedList(array $UnSupportedList) 设置不支持开启的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getFailDomainList() 获取开启/关闭失败的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailDomainList(array $FailDomainList) 设置开启/关闭失败的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -39,19 +33,16 @@ class ModifyApiAnalyzeStatusResponse extends AbstractModel
 {
     /**
      * @var integer 已经开启的数量,如果返回值为3（大于支持的域名开启数量），则表示开启失败
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Count;
 
     /**
      * @var array 不支持开启的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UnSupportedList;
 
     /**
      * @var array 开启/关闭失败的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailDomainList;
 
@@ -62,11 +53,8 @@ class ModifyApiAnalyzeStatusResponse extends AbstractModel
 
     /**
      * @param integer $Count 已经开启的数量,如果返回值为3（大于支持的域名开启数量），则表示开启失败
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $UnSupportedList 不支持开启的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FailDomainList 开启/关闭失败的域名列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -21,177 +21,121 @@ use TencentCloud\Common\AbstractModel;
  * 详情
  *
  * @method Part getPart() 获取部位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPart(Part $Part) 设置部位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTissueSizes() 获取组织大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTissueSizes(array $TissueSizes) 设置组织大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTuberSizes() 获取结节大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTuberSizes(array $TuberSizes) 设置结节大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCancerSizes() 获取肿瘤大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCancerSizes(array $CancerSizes) 设置肿瘤大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BaseInfo getHistologyLevel() 获取组织学等级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHistologyLevel(BaseInfo $HistologyLevel) 设置组织学等级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method HistologyTypeV2 getHistologyType() 获取组织学类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHistologyType(HistologyTypeV2 $HistologyType) 设置组织学类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getInvasive() 获取侵犯
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInvasive(array $Invasive) 设置侵犯
-注意：此字段可能返回 null，表示取不到有效值。
  * @method PTNM getPTNM() 获取pTNM
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPTNM(PTNM $PTNM) 设置pTNM
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BaseInfo getInfiltrationDepth() 获取浸润深度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInfiltrationDepth(BaseInfo $InfiltrationDepth) 设置浸润深度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BaseInfo getTuberNum() 获取结节数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTuberNum(BaseInfo $TuberNum) 设置结节数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BaseInfo getCalcification() 获取钙化
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCalcification(BaseInfo $Calcification) 设置钙化
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BaseInfo getNecrosis() 获取坏死
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNecrosis(BaseInfo $Necrosis) 设置坏死
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BaseInfo getAbnormity() 获取异形
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAbnormity(BaseInfo $Abnormity) 设置异形
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BaseInfo getBreaked() 获取断链
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBreaked(BaseInfo $Breaked) 设置断链
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DetailInformation extends AbstractModel
 {
     /**
      * @var Part 部位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Part;
 
     /**
      * @var array 组织大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TissueSizes;
 
     /**
      * @var array 结节大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TuberSizes;
 
     /**
      * @var array 肿瘤大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CancerSizes;
 
     /**
      * @var BaseInfo 组织学等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HistologyLevel;
 
     /**
      * @var HistologyTypeV2 组织学类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HistologyType;
 
     /**
      * @var array 侵犯
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Invasive;
 
     /**
      * @var PTNM pTNM
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PTNM;
 
     /**
      * @var BaseInfo 浸润深度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InfiltrationDepth;
 
     /**
      * @var BaseInfo 结节数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TuberNum;
 
     /**
      * @var BaseInfo 钙化
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Calcification;
 
     /**
      * @var BaseInfo 坏死
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Necrosis;
 
     /**
      * @var BaseInfo 异形
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Abnormity;
 
     /**
      * @var BaseInfo 断链
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Breaked;
 
     /**
      * @param Part $Part 部位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TissueSizes 组织大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TuberSizes 结节大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CancerSizes 肿瘤大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BaseInfo $HistologyLevel 组织学等级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HistologyTypeV2 $HistologyType 组织学类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Invasive 侵犯
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PTNM $PTNM pTNM
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BaseInfo $InfiltrationDepth 浸润深度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BaseInfo $TuberNum 结节数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BaseInfo $Calcification 钙化
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BaseInfo $Necrosis 坏死
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BaseInfo $Abnormity 异形
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BaseInfo $Breaked 断链
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

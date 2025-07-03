@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 磁盘信息
  *
  * @method string getDiskType() 获取盘类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskType(string $DiskType) 设置盘类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDiskSize() 获取大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskSize(integer $DiskSize) 设置大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDiskCount() 获取个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiskCount(integer $DiskCount) 设置个数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CBSSpecInfo extends AbstractModel
 {
     /**
      * @var string 盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskType;
 
     /**
      * @var integer 大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskSize;
 
     /**
      * @var integer 个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiskCount;
 
     /**
      * @param string $DiskType 盘类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DiskSize 大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DiskCount 个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

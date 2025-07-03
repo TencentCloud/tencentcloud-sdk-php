@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * Ctsdb连接源参数
  *
  * @method integer getPort() 获取Ctsdb的连接port
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPort(integer $Port) 设置Ctsdb的连接port
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getServiceVip() 获取Ctsdb连接源的实例vip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceVip(string $ServiceVip) 设置Ctsdb连接源的实例vip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUniqVpcId() 获取Ctsdb连接源的vpcId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUniqVpcId(string $UniqVpcId) 设置Ctsdb连接源的vpcId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserName() 获取Ctsdb连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserName(string $UserName) 设置Ctsdb连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPassword() 获取Ctsdb连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPassword(string $Password) 设置Ctsdb连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResource() 获取Ctsdb连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResource(string $Resource) 设置Ctsdb连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CtsdbConnectParam extends AbstractModel
 {
     /**
      * @var integer Ctsdb的连接port
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Port;
 
     /**
      * @var string Ctsdb连接源的实例vip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceVip;
 
     /**
      * @var string Ctsdb连接源的vpcId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UniqVpcId;
 
     /**
      * @var string Ctsdb连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserName;
 
     /**
      * @var string Ctsdb连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Password;
 
     /**
      * @var string Ctsdb连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Resource;
 
     /**
      * @param integer $Port Ctsdb的连接port
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ServiceVip Ctsdb连接源的实例vip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UniqVpcId Ctsdb连接源的vpcId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserName Ctsdb连接源的用户名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Password Ctsdb连接源的密码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Resource Ctsdb连接源的实例资源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

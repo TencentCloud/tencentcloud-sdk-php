@@ -21,17 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * DescribeAuditConfig返回参数结构体
  *
  * @method integer getLogExpireDay() 获取审计日志保存时长。目前支持的值包括：[0，7，30，180，365，1095，1825]。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogExpireDay(integer $LogExpireDay) 设置审计日志保存时长。目前支持的值包括：[0，7，30，180，365，1095，1825]。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLogType() 获取审计日志存储类型。目前支持的值包括："storage" - 存储型。
  * @method void setLogType(string $LogType) 设置审计日志存储类型。目前支持的值包括："storage" - 存储型。
  * @method string getIsClosing() 获取是否正在关闭审计。目前支持的值包括："false"-否，"true"-是
  * @method void setIsClosing(string $IsClosing) 设置是否正在关闭审计。目前支持的值包括："false"-否，"true"-是
  * @method string getCreateTime() 获取审计服务开通时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置审计服务开通时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -39,7 +35,6 @@ class DescribeAuditConfigResponse extends AbstractModel
 {
     /**
      * @var integer 审计日志保存时长。目前支持的值包括：[0，7，30，180，365，1095，1825]。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogExpireDay;
 
@@ -55,7 +50,6 @@ class DescribeAuditConfigResponse extends AbstractModel
 
     /**
      * @var string 审计服务开通时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
@@ -66,11 +60,9 @@ class DescribeAuditConfigResponse extends AbstractModel
 
     /**
      * @param integer $LogExpireDay 审计日志保存时长。目前支持的值包括：[0，7，30，180，365，1095，1825]。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LogType 审计日志存储类型。目前支持的值包括："storage" - 存储型。
      * @param string $IsClosing 是否正在关闭审计。目前支持的值包括："false"-否，"true"-是
      * @param string $CreateTime 审计服务开通时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

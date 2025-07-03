@@ -59,31 +59,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getHealthCheckStatus() 获取通道健康检查状态，AVAILABLE：正常，UNAVAILABLE：不正常。 未配置健康检查不返回该对象
  * @method void setHealthCheckStatus(string $HealthCheckStatus) 设置通道健康检查状态，AVAILABLE：正常，UNAVAILABLE：不正常。 未配置健康检查不返回该对象
  * @method integer getDpdEnable() 获取DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDpdEnable(integer $DpdEnable) 设置DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDpdTimeout() 获取DPD超时时间。即探测确认对端不存在需要的时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDpdTimeout(string $DpdTimeout) 设置DPD超时时间。即探测确认对端不存在需要的时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDpdAction() 获取DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDpdAction(string $DpdAction) 设置DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTagSet() 获取标签键值对数组
  * @method void setTagSet(array $TagSet) 设置标签键值对数组
  * @method string getNegotiationType() 获取协商类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNegotiationType(string $NegotiationType) 设置协商类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BgpConfigAndAsn getBgpConfig() 获取Bgp配置信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBgpConfig(BgpConfigAndAsn $BgpConfig) 设置Bgp配置信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method HealthCheckConfig getHealthCheckConfig() 获取Nqa配置信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHealthCheckConfig(HealthCheckConfig $HealthCheckConfig) 设置Nqa配置信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VpnConnection extends AbstractModel
 {
@@ -184,19 +172,16 @@ class VpnConnection extends AbstractModel
 
     /**
      * @var integer DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DpdEnable;
 
     /**
      * @var string DPD超时时间。即探测确认对端不存在需要的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DpdTimeout;
 
     /**
      * @var string DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DpdAction;
 
@@ -207,19 +192,16 @@ class VpnConnection extends AbstractModel
 
     /**
      * @var string 协商类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NegotiationType;
 
     /**
      * @var BgpConfigAndAsn Bgp配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BgpConfig;
 
     /**
      * @var HealthCheckConfig Nqa配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HealthCheckConfig;
 
@@ -244,18 +226,12 @@ class VpnConnection extends AbstractModel
      * @param string $HealthCheckRemoteIp 对端探测ip
      * @param string $HealthCheckStatus 通道健康检查状态，AVAILABLE：正常，UNAVAILABLE：不正常。 未配置健康检查不返回该对象
      * @param integer $DpdEnable DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DpdTimeout DPD超时时间。即探测确认对端不存在需要的时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DpdAction DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TagSet 标签键值对数组
      * @param string $NegotiationType 协商类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BgpConfigAndAsn $BgpConfig Bgp配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param HealthCheckConfig $HealthCheckConfig Nqa配置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

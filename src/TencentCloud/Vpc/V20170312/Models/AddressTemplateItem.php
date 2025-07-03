@@ -20,29 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 地址信息
  *
- * @method string getAddressTemplateId() 获取ipm-xxxxxxxx
- * @method void setAddressTemplateId(string $AddressTemplateId) 设置ipm-xxxxxxxx
- * @method string getAddressTemplateName() 获取IP模板名称
- * @method void setAddressTemplateName(string $AddressTemplateName) 设置IP模板名称
- * @method string getFrom() 获取废弃字段
- * @method void setFrom(string $From) 设置废弃字段
+ * @method string getAddressTemplateId() 获取IP地址模板ID
+ * @method void setAddressTemplateId(string $AddressTemplateId) 设置IP地址模板ID
+ * @method string getAddressTemplateName() 获取IP模板名称，废弃字段。
+ * @method void setAddressTemplateName(string $AddressTemplateName) 设置IP模板名称，废弃字段。
+ * @method string getFrom() 获取废弃字段。
+ * @method void setFrom(string $From) 设置废弃字段。
  * @method string getTo() 获取废弃字段
  * @method void setTo(string $To) 设置废弃字段
+ * @method string getDescription() 获取备注。
+ * @method void setDescription(string $Description) 设置备注。
+ * @method string getUpdatedTime() 获取最后更新时间。
+ * @method void setUpdatedTime(string $UpdatedTime) 设置最后更新时间。
  */
 class AddressTemplateItem extends AbstractModel
 {
     /**
-     * @var string ipm-xxxxxxxx
+     * @var string IP地址模板ID
      */
     public $AddressTemplateId;
 
     /**
-     * @var string IP模板名称
+     * @var string IP模板名称，废弃字段。
      */
     public $AddressTemplateName;
 
     /**
-     * @var string 废弃字段
+     * @var string 废弃字段。
      */
     public $From;
 
@@ -52,10 +56,22 @@ class AddressTemplateItem extends AbstractModel
     public $To;
 
     /**
-     * @param string $AddressTemplateId ipm-xxxxxxxx
-     * @param string $AddressTemplateName IP模板名称
-     * @param string $From 废弃字段
+     * @var string 备注。
+     */
+    public $Description;
+
+    /**
+     * @var string 最后更新时间。
+     */
+    public $UpdatedTime;
+
+    /**
+     * @param string $AddressTemplateId IP地址模板ID
+     * @param string $AddressTemplateName IP模板名称，废弃字段。
+     * @param string $From 废弃字段。
      * @param string $To 废弃字段
+     * @param string $Description 备注。
+     * @param string $UpdatedTime 最后更新时间。
      */
     function __construct()
     {
@@ -84,6 +100,14 @@ class AddressTemplateItem extends AbstractModel
 
         if (array_key_exists("To",$param) and $param["To"] !== null) {
             $this->To = $param["To"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("UpdatedTime",$param) and $param["UpdatedTime"] !== null) {
+            $this->UpdatedTime = $param["UpdatedTime"];
         }
     }
 }

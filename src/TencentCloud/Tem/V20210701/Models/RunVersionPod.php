@@ -31,49 +31,29 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPodIp() 获取实例的ip
  * @method void setPodIp(string $PodIp) 设置实例的ip
  * @method string getZone() 获取可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZone(string $Zone) 设置可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeployVersion() 获取部署版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeployVersion(string $DeployVersion) 设置部署版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRestartCount() 获取重启次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRestartCount(integer $RestartCount) 设置重启次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getReady() 获取pod是否就绪
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReady(boolean $Ready) 设置pod是否就绪
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getContainerState() 获取容器状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContainerState(string $ContainerState) 设置容器状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method NodeInfo getNodeInfo() 获取实例所在节点信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodeInfo(NodeInfo $NodeInfo) 设置实例所在节点信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStartTime() 获取启动时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(string $StartTime) 设置启动时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getUnhealthy() 获取是否健康
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnhealthy(boolean $Unhealthy) 设置是否健康
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUnhealthyWarningMsg() 获取不健康时的提示信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnhealthyWarningMsg(string $UnhealthyWarningMsg) 设置不健康时的提示信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVersionId() 获取版本ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersionId(string $VersionId) 设置版本ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApplicationName() 获取应用名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationName(string $ApplicationName) 设置应用名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RunVersionPod extends AbstractModel
 {
@@ -104,43 +84,36 @@ class RunVersionPod extends AbstractModel
 
     /**
      * @var string 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Zone;
 
     /**
      * @var string 部署版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeployVersion;
 
     /**
      * @var integer 重启次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RestartCount;
 
     /**
      * @var boolean pod是否就绪
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ready;
 
     /**
      * @var string 容器状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ContainerState;
 
     /**
      * @var NodeInfo 实例所在节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeInfo;
 
     /**
      * @var string 启动时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
@@ -152,19 +125,16 @@ class RunVersionPod extends AbstractModel
 
     /**
      * @var string 不健康时的提示信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UnhealthyWarningMsg;
 
     /**
      * @var string 版本ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VersionId;
 
     /**
      * @var string 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationName;
 
@@ -175,27 +145,17 @@ class RunVersionPod extends AbstractModel
      * @param string $CreateTime 创建时间
      * @param string $PodIp 实例的ip
      * @param string $Zone 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeployVersion 部署版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RestartCount 重启次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Ready pod是否就绪
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ContainerState 容器状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param NodeInfo $NodeInfo 实例所在节点信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StartTime 启动时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Unhealthy 是否健康
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UnhealthyWarningMsg 不健康时的提示信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VersionId 版本ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationName 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

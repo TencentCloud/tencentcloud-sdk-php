@@ -28,6 +28,10 @@ MachineName主机名模糊查询, Type，Status精确匹配，CreateBeginTime，
 MachineName主机名模糊查询, Type，Status精确匹配，CreateBeginTime，CreateEndTime时间段
  * @method array getWhere() 获取导出字段
  * @method void setWhere(array $Where) 设置导出字段
+ * @method string getOrder() 获取排序，大小写无关：asc 升序，desc降序
+ * @method void setOrder(string $Order) 设置排序，大小写无关：asc 升序，desc降序
+ * @method string getBy() 获取排序列，严格相等：最近检测时间RecentFoundTime
+ * @method void setBy(string $By) 设置排序列，严格相等：最近检测时间RecentFoundTime
  */
 class ExportJavaMemShellsRequest extends AbstractModel
 {
@@ -44,10 +48,22 @@ MachineName主机名模糊查询, Type，Status精确匹配，CreateBeginTime，
     public $Where;
 
     /**
+     * @var string 排序，大小写无关：asc 升序，desc降序
+     */
+    public $Order;
+
+    /**
+     * @var string 排序列，严格相等：最近检测时间RecentFoundTime
+     */
+    public $By;
+
+    /**
      * @param array $Filters 过滤条件：InstanceID、IP、
 
 MachineName主机名模糊查询, Type，Status精确匹配，CreateBeginTime，CreateEndTime时间段
      * @param array $Where 导出字段
+     * @param string $Order 排序，大小写无关：asc 升序，desc降序
+     * @param string $By 排序列，严格相等：最近检测时间RecentFoundTime
      */
     function __construct()
     {
@@ -73,6 +89,14 @@ MachineName主机名模糊查询, Type，Status精确匹配，CreateBeginTime，
 
         if (array_key_exists("Where",$param) and $param["Where"] !== null) {
             $this->Where = $param["Where"];
+        }
+
+        if (array_key_exists("Order",$param) and $param["Order"] !== null) {
+            $this->Order = $param["Order"];
+        }
+
+        if (array_key_exists("By",$param) and $param["By"] !== null) {
+            $this->By = $param["By"];
         }
     }
 }

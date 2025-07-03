@@ -31,9 +31,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCreationTime() 获取制品的创建时间
  * @method void setCreationTime(string $CreationTime) 设置制品的创建时间
  * @method string getDurationDays() 获取制品创建至今时间长度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDurationDays(string $DurationDays) 设置制品创建至今时间长度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAuthor() 获取标注的制品作者
  * @method void setAuthor(string $Author) 设置标注的制品作者
  * @method string getArchitecture() 获取标注的制品平台
@@ -82,7 +80,6 @@ class TagInfo extends AbstractModel
 
     /**
      * @var string 制品创建至今时间长度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DurationDays;
 
@@ -138,7 +135,6 @@ class TagInfo extends AbstractModel
      * @param string $Size 大小
      * @param string $CreationTime 制品的创建时间
      * @param string $DurationDays 制品创建至今时间长度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Author 标注的制品作者
      * @param string $Architecture 标注的制品平台
      * @param string $DockerVersion 创建制品的 Docker 版本

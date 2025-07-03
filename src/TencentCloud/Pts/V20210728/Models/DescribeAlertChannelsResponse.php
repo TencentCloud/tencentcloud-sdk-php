@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlertChannelSet(array $AlertChannelSet) 设置告警通知接收组列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotal() 获取告警通知接收组数目
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotal(integer $Total) 设置告警通知接收组数目
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -41,7 +39,6 @@ class DescribeAlertChannelsResponse extends AbstractModel
 
     /**
      * @var integer 告警通知接收组数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Total;
 
@@ -54,7 +51,6 @@ class DescribeAlertChannelsResponse extends AbstractModel
      * @param array $AlertChannelSet 告警通知接收组列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Total 告警通知接收组数目
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

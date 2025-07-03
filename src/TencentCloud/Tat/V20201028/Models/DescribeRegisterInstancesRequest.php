@@ -20,25 +20,48 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRegisterInstances请求参数结构体
  *
- * @method array getInstanceIds() 获取实例id。
- * @method void setInstanceIds(array $InstanceIds) 设置实例id。
- * @method array getFilters() 获取过滤器列表。
+ * @method array getInstanceIds() 获取托管实例 id。
+
+每次请求的上限为 100。
+
+参数不支持同时指定 `InstanceIds` 和 `Filters` 。
+
+ * @method void setInstanceIds(array $InstanceIds) 设置托管实例 id。
+
+每次请求的上限为 100。
+
+参数不支持同时指定 `InstanceIds` 和 `Filters` 。
+
+ * @method array getFilters() 获取过滤器列表。每次请求的 `Filters` 的上限为 10，`Filter.Values` 的上限为 5。参数不支持同时指定 `InstanceIds` 和 `Filters` 。
+
 
 - instance-name
 
-按照【实例名称】进行过滤。
+按照【托管实例名称】进行过滤。
 类型：String
 必选：否
 
 - instance-id
 
-按照【实例ID】进行过滤。
+按照【托管实例ID】进行过滤。
+类型：String
+必选：否
+
+- register-status
+
+按照【托管实例状态】进行过滤，取值：Online | Offline。
+类型：String
+必选：否
+
+- local-ip
+
+按照【托管实例网卡IP】进行过滤。
 类型：String
 必选：否
 
 - register-code-id
 
-按照【注册码ID】进行过滤。
+按照【托管实例注册码ID】进行过滤。可通过 [DescribeRegisterCodes(查询注册码)](https://cloud.tencent.com/document/api/1340/96925) 接口获取。
 类型：String
 必选：否
 
@@ -48,24 +71,57 @@ use TencentCloud\Common\AbstractModel;
 类型：String
 必选：否
 
+- tag-key
 
- * @method void setFilters(array $Filters) 设置过滤器列表。
+按照【标签键】进行过滤。
+类型：String
+必选：否
+
+- tag-value
+
+按照【标签值】进行过滤。
+类型：String
+必选：否
+
+- tag:tag-key
+
+按照【标签键值对】进行过滤。 tag-key使用具体的标签键进行替换。
+类型：String
+必选：否
+
+例如 Filter 为 {"Name": "tag:key1", "Values": ["v1", "v2"] } ，即查询所有标签为 key1:v1 或 key1:v2 的资源。
+
+
+ * @method void setFilters(array $Filters) 设置过滤器列表。每次请求的 `Filters` 的上限为 10，`Filter.Values` 的上限为 5。参数不支持同时指定 `InstanceIds` 和 `Filters` 。
+
 
 - instance-name
 
-按照【实例名称】进行过滤。
+按照【托管实例名称】进行过滤。
 类型：String
 必选：否
 
 - instance-id
 
-按照【实例ID】进行过滤。
+按照【托管实例ID】进行过滤。
+类型：String
+必选：否
+
+- register-status
+
+按照【托管实例状态】进行过滤，取值：Online | Offline。
+类型：String
+必选：否
+
+- local-ip
+
+按照【托管实例网卡IP】进行过滤。
 类型：String
 必选：否
 
 - register-code-id
 
-按照【注册码ID】进行过滤。
+按照【托管实例注册码ID】进行过滤。可通过 [DescribeRegisterCodes(查询注册码)](https://cloud.tencent.com/document/api/1340/96925) 接口获取。
 类型：String
 必选：否
 
@@ -74,6 +130,26 @@ use TencentCloud\Common\AbstractModel;
 按照【操作系统类型】进行过滤，取值：Linux | Windows。
 类型：String
 必选：否
+
+- tag-key
+
+按照【标签键】进行过滤。
+类型：String
+必选：否
+
+- tag-value
+
+按照【标签值】进行过滤。
+类型：String
+必选：否
+
+- tag:tag-key
+
+按照【标签键值对】进行过滤。 tag-key使用具体的标签键进行替换。
+类型：String
+必选：否
+
+例如 Filter 为 {"Name": "tag:key1", "Values": ["v1", "v2"] } ，即查询所有标签为 key1:v1 或 key1:v2 的资源。
 
 
  * @method integer getOffset() 获取偏移量，默认为 0。
@@ -84,28 +160,46 @@ use TencentCloud\Common\AbstractModel;
 class DescribeRegisterInstancesRequest extends AbstractModel
 {
     /**
-     * @var array 实例id。
+     * @var array 托管实例 id。
+
+每次请求的上限为 100。
+
+参数不支持同时指定 `InstanceIds` 和 `Filters` 。
+
      */
     public $InstanceIds;
 
     /**
-     * @var array 过滤器列表。
+     * @var array 过滤器列表。每次请求的 `Filters` 的上限为 10，`Filter.Values` 的上限为 5。参数不支持同时指定 `InstanceIds` 和 `Filters` 。
+
 
 - instance-name
 
-按照【实例名称】进行过滤。
+按照【托管实例名称】进行过滤。
 类型：String
 必选：否
 
 - instance-id
 
-按照【实例ID】进行过滤。
+按照【托管实例ID】进行过滤。
+类型：String
+必选：否
+
+- register-status
+
+按照【托管实例状态】进行过滤，取值：Online | Offline。
+类型：String
+必选：否
+
+- local-ip
+
+按照【托管实例网卡IP】进行过滤。
 类型：String
 必选：否
 
 - register-code-id
 
-按照【注册码ID】进行过滤。
+按照【托管实例注册码ID】进行过滤。可通过 [DescribeRegisterCodes(查询注册码)](https://cloud.tencent.com/document/api/1340/96925) 接口获取。
 类型：String
 必选：否
 
@@ -114,6 +208,26 @@ class DescribeRegisterInstancesRequest extends AbstractModel
 按照【操作系统类型】进行过滤，取值：Linux | Windows。
 类型：String
 必选：否
+
+- tag-key
+
+按照【标签键】进行过滤。
+类型：String
+必选：否
+
+- tag-value
+
+按照【标签值】进行过滤。
+类型：String
+必选：否
+
+- tag:tag-key
+
+按照【标签键值对】进行过滤。 tag-key使用具体的标签键进行替换。
+类型：String
+必选：否
+
+例如 Filter 为 {"Name": "tag:key1", "Values": ["v1", "v2"] } ，即查询所有标签为 key1:v1 或 key1:v2 的资源。
 
 
      */
@@ -130,24 +244,42 @@ class DescribeRegisterInstancesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param array $InstanceIds 实例id。
-     * @param array $Filters 过滤器列表。
+     * @param array $InstanceIds 托管实例 id。
+
+每次请求的上限为 100。
+
+参数不支持同时指定 `InstanceIds` 和 `Filters` 。
+
+     * @param array $Filters 过滤器列表。每次请求的 `Filters` 的上限为 10，`Filter.Values` 的上限为 5。参数不支持同时指定 `InstanceIds` 和 `Filters` 。
+
 
 - instance-name
 
-按照【实例名称】进行过滤。
+按照【托管实例名称】进行过滤。
 类型：String
 必选：否
 
 - instance-id
 
-按照【实例ID】进行过滤。
+按照【托管实例ID】进行过滤。
+类型：String
+必选：否
+
+- register-status
+
+按照【托管实例状态】进行过滤，取值：Online | Offline。
+类型：String
+必选：否
+
+- local-ip
+
+按照【托管实例网卡IP】进行过滤。
 类型：String
 必选：否
 
 - register-code-id
 
-按照【注册码ID】进行过滤。
+按照【托管实例注册码ID】进行过滤。可通过 [DescribeRegisterCodes(查询注册码)](https://cloud.tencent.com/document/api/1340/96925) 接口获取。
 类型：String
 必选：否
 
@@ -156,6 +288,26 @@ class DescribeRegisterInstancesRequest extends AbstractModel
 按照【操作系统类型】进行过滤，取值：Linux | Windows。
 类型：String
 必选：否
+
+- tag-key
+
+按照【标签键】进行过滤。
+类型：String
+必选：否
+
+- tag-value
+
+按照【标签值】进行过滤。
+类型：String
+必选：否
+
+- tag:tag-key
+
+按照【标签键值对】进行过滤。 tag-key使用具体的标签键进行替换。
+类型：String
+必选：否
+
+例如 Filter 为 {"Name": "tag:key1", "Values": ["v1", "v2"] } ，即查询所有标签为 key1:v1 或 key1:v2 的资源。
 
 
      * @param integer $Offset 偏移量，默认为 0。

@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * TCB静态托管服务实例
  *
  * @method string getDomain() 获取域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDomain(string $Domain) 设置域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDNSStatus() 获取解析状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDNSStatus(string $DNSStatus) 设置解析状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOldCertificateId() 获取已绑定证书ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOldCertificateId(string $OldCertificateId) 设置已绑定证书ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TCBHostInstance extends AbstractModel
 {
     /**
      * @var string 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Domain;
 
     /**
      * @var string 状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 解析状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DNSStatus;
 
     /**
      * @var string 已绑定证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OldCertificateId;
 
     /**
      * @param string $Domain 域名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DNSStatus 解析状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OldCertificateId 已绑定证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) 设置Target所属地域，如 ap-guangzhou
  * @method string getVpcId() 获取Target所属网络，私有网络格式如 vpc-abcd1234，如果是基础网络，则为"0"
  * @method void setVpcId(string $VpcId) 设置Target所属网络，私有网络格式如 vpc-abcd1234，如果是基础网络，则为"0"
+ * @method integer getNumericalVpcId() 获取Target所属网络，私有网络格式如86323，如果是基础网络，则为0
+ * @method void setNumericalVpcId(integer $NumericalVpcId) 设置Target所属网络，私有网络格式如86323，如果是基础网络，则为0
  */
 class TargetRegionInfo extends AbstractModel
 {
@@ -38,8 +40,14 @@ class TargetRegionInfo extends AbstractModel
     public $VpcId;
 
     /**
+     * @var integer Target所属网络，私有网络格式如86323，如果是基础网络，则为0
+     */
+    public $NumericalVpcId;
+
+    /**
      * @param string $Region Target所属地域，如 ap-guangzhou
      * @param string $VpcId Target所属网络，私有网络格式如 vpc-abcd1234，如果是基础网络，则为"0"
+     * @param integer $NumericalVpcId Target所属网络，私有网络格式如86323，如果是基础网络，则为0
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class TargetRegionInfo extends AbstractModel
 
         if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
             $this->VpcId = $param["VpcId"];
+        }
+
+        if (array_key_exists("NumericalVpcId",$param) and $param["NumericalVpcId"] !== null) {
+            $this->NumericalVpcId = $param["NumericalVpcId"];
         }
     }
 }

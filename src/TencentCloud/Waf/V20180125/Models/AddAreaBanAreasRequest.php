@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAreas(array $Areas) 设置需要新增的封禁地域
  * @method string getEdition() 获取waf版本信息，spart-waf或者clb-waf，其他无效，请一定填写
  * @method void setEdition(string $Edition) 设置waf版本信息，spart-waf或者clb-waf，其他无效，请一定填写
- * @method string getJobType() 获取定时任务类型
- * @method void setJobType(string $JobType) 设置定时任务类型
+ * @method string getJobType() 获取规则执行的方式，TimedJob为定时执行，CronJob为周期执行
+ * @method void setJobType(string $JobType) 设置规则执行的方式，TimedJob为定时执行，CronJob为周期执行
  * @method JobDateTime getJobDateTime() 获取定时任务配置
  * @method void setJobDateTime(JobDateTime $JobDateTime) 设置定时任务配置
  */
@@ -49,7 +49,7 @@ class AddAreaBanAreasRequest extends AbstractModel
     public $Edition;
 
     /**
-     * @var string 定时任务类型
+     * @var string 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
      */
     public $JobType;
 
@@ -62,7 +62,7 @@ class AddAreaBanAreasRequest extends AbstractModel
      * @param string $Domain 需要修改的域名
      * @param array $Areas 需要新增的封禁地域
      * @param string $Edition waf版本信息，spart-waf或者clb-waf，其他无效，请一定填写
-     * @param string $JobType 定时任务类型
+     * @param string $JobType 规则执行的方式，TimedJob为定时执行，CronJob为周期执行
      * @param JobDateTime $JobDateTime 定时任务配置
      */
     function __construct()

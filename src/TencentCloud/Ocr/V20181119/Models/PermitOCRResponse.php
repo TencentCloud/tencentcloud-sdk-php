@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIssueAddress(string $IssueAddress) 设置签发地点
  * @method string getBirthday() 获取出生日期
  * @method void setBirthday(string $Birthday) 设置出生日期
+ * @method string getPortraitImage() 获取头像照片的base64
+ * @method void setPortraitImage(string $PortraitImage) 设置头像照片的base64
+ * @method string getType() 获取返回类型
+ * @method void setType(string $Type) 设置返回类型
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -82,6 +86,16 @@ class PermitOCRResponse extends AbstractModel
     public $Birthday;
 
     /**
+     * @var string 头像照片的base64
+     */
+    public $PortraitImage;
+
+    /**
+     * @var string 返回类型
+     */
+    public $Type;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -95,6 +109,8 @@ class PermitOCRResponse extends AbstractModel
      * @param string $IssueAuthority 签发机关
      * @param string $IssueAddress 签发地点
      * @param string $Birthday 出生日期
+     * @param string $PortraitImage 头像照片的base64
+     * @param string $Type 返回类型
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -140,6 +156,14 @@ class PermitOCRResponse extends AbstractModel
 
         if (array_key_exists("Birthday",$param) and $param["Birthday"] !== null) {
             $this->Birthday = $param["Birthday"];
+        }
+
+        if (array_key_exists("PortraitImage",$param) and $param["PortraitImage"] !== null) {
+            $this->PortraitImage = $param["PortraitImage"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

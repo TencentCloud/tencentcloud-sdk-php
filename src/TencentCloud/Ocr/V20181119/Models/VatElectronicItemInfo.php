@@ -54,6 +54,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEstateNumber(string $EstateNumber) 设置产权证书/不动产权证号，仅不动产经营租赁服务发票返回
  * @method string getAreaUnit() 获取面积单位，仅不动产经营租赁服务发票返回
  * @method void setAreaUnit(string $AreaUnit) 设置面积单位，仅不动产经营租赁服务发票返回
+ * @method string getTraveler() 获取出行人，仅旅客运输服务发票返回
+ * @method void setTraveler(string $Traveler) 设置出行人，仅旅客运输服务发票返回
+ * @method string getTravelerID() 获取有效身份证件号，仅旅客运输服务发票返回
+ * @method void setTravelerID(string $TravelerID) 设置有效身份证件号，仅旅客运输服务发票返回
+ * @method string getTravelDate() 获取出行日期，仅旅客运输服务发票返回
+ * @method void setTravelDate(string $TravelDate) 设置出行日期，仅旅客运输服务发票返回
+ * @method string getTravelLevel() 获取等级，仅旅客运输服务发票返回
+ * @method void setTravelLevel(string $TravelLevel) 设置等级，仅旅客运输服务发票返回
  */
 class VatElectronicItemInfo extends AbstractModel
 {
@@ -143,6 +151,26 @@ class VatElectronicItemInfo extends AbstractModel
     public $AreaUnit;
 
     /**
+     * @var string 出行人，仅旅客运输服务发票返回
+     */
+    public $Traveler;
+
+    /**
+     * @var string 有效身份证件号，仅旅客运输服务发票返回
+     */
+    public $TravelerID;
+
+    /**
+     * @var string 出行日期，仅旅客运输服务发票返回
+     */
+    public $TravelDate;
+
+    /**
+     * @var string 等级，仅旅客运输服务发票返回
+     */
+    public $TravelLevel;
+
+    /**
      * @param string $Name 项目名称
      * @param string $Quantity 数量
      * @param string $Specification 规格型号
@@ -160,6 +188,10 @@ class VatElectronicItemInfo extends AbstractModel
      * @param string $BuildingName 建筑项目名称，仅建筑发票返回
      * @param string $EstateNumber 产权证书/不动产权证号，仅不动产经营租赁服务发票返回
      * @param string $AreaUnit 面积单位，仅不动产经营租赁服务发票返回
+     * @param string $Traveler 出行人，仅旅客运输服务发票返回
+     * @param string $TravelerID 有效身份证件号，仅旅客运输服务发票返回
+     * @param string $TravelDate 出行日期，仅旅客运输服务发票返回
+     * @param string $TravelLevel 等级，仅旅客运输服务发票返回
      */
     function __construct()
     {
@@ -240,6 +272,22 @@ class VatElectronicItemInfo extends AbstractModel
 
         if (array_key_exists("AreaUnit",$param) and $param["AreaUnit"] !== null) {
             $this->AreaUnit = $param["AreaUnit"];
+        }
+
+        if (array_key_exists("Traveler",$param) and $param["Traveler"] !== null) {
+            $this->Traveler = $param["Traveler"];
+        }
+
+        if (array_key_exists("TravelerID",$param) and $param["TravelerID"] !== null) {
+            $this->TravelerID = $param["TravelerID"];
+        }
+
+        if (array_key_exists("TravelDate",$param) and $param["TravelDate"] !== null) {
+            $this->TravelDate = $param["TravelDate"];
+        }
+
+        if (array_key_exists("TravelLevel",$param) and $param["TravelLevel"] !== null) {
+            $this->TravelLevel = $param["TravelLevel"];
         }
     }
 }

@@ -46,6 +46,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNetType(string $NetType) 设置连接类型，wifi表示WIFI连接，cellular表示4G连接
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getCategoryId() 获取产品品类id，113：摄像头
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCategoryId(integer $CategoryId) 设置产品品类id，113：摄像头
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VideoProduct extends AbstractModel
 {
@@ -111,6 +115,12 @@ class VideoProduct extends AbstractModel
     public $NetType;
 
     /**
+     * @var integer 产品品类id，113：摄像头
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CategoryId;
+
+    /**
      * @param string $ProductId 产品ID
      * @param string $ProductName 产品名称
      * @param integer $DeviceType 产品设备类型（普通设备)	1.普通设备
@@ -123,6 +133,8 @@ class VideoProduct extends AbstractModel
      * @param integer $CreateTime 创建时间unix时间戳
      * @param integer $UpdateTime 修改时间unix时间戳
      * @param string $NetType 连接类型，wifi表示WIFI连接，cellular表示4G连接
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $CategoryId 产品品类id，113：摄像头
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -184,6 +196,10 @@ class VideoProduct extends AbstractModel
 
         if (array_key_exists("NetType",$param) and $param["NetType"] !== null) {
             $this->NetType = $param["NetType"];
+        }
+
+        if (array_key_exists("CategoryId",$param) and $param["CategoryId"] !== null) {
+            $this->CategoryId = $param["CategoryId"];
         }
     }
 }

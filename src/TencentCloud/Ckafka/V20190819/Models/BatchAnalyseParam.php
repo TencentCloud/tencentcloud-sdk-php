@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 批量解析
  *
  * @method string getFormat() 获取ONE_BY_ONE单条输出，MERGE合并输出
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFormat(string $Format) 设置ONE_BY_ONE单条输出，MERGE合并输出
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BatchAnalyseParam extends AbstractModel
 {
     /**
      * @var string ONE_BY_ONE单条输出，MERGE合并输出
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Format;
 
     /**
      * @param string $Format ONE_BY_ONE单条输出，MERGE合并输出
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

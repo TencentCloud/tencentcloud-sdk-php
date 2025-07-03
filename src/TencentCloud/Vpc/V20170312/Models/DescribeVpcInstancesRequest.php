@@ -20,12 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeVpcInstances请求参数结构体
  *
- * @method array getFilters() 获取过滤条件，参数不支持同时指定RouteTableIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
+ * @method array getFilters() 获取<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
 <li>instance-id - String - （过滤条件）云主机实例ID。</li>
 <li>instance-name - String - （过滤条件）云主机名称。</li>
- * @method void setFilters(array $Filters) 设置过滤条件，参数不支持同时指定RouteTableIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
+ * @method void setFilters(array $Filters) 设置<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
 <li>instance-id - String - （过滤条件）云主机实例ID。</li>
 <li>instance-name - String - （过滤条件）云主机名称。</li>
  * @method integer getOffset() 获取偏移量，默认为0。
@@ -36,8 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeVpcInstancesRequest extends AbstractModel
 {
     /**
-     * @var array 过滤条件，参数不支持同时指定RouteTableIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
+     * @var array <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
 <li>instance-id - String - （过滤条件）云主机实例ID。</li>
 <li>instance-name - String - （过滤条件）云主机名称。</li>
      */
@@ -54,8 +51,7 @@ class DescribeVpcInstancesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param array $Filters 过滤条件，参数不支持同时指定RouteTableIds和Filters。
-<li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
+     * @param array $Filters <li>vpc-id - String - （过滤条件）VPC实例ID，形如：vpc-f49l6u0z。</li>
 <li>instance-id - String - （过滤条件）云主机实例ID。</li>
 <li>instance-name - String - （过滤条件）云主机名称。</li>
      * @param integer $Offset 偏移量，默认为0。

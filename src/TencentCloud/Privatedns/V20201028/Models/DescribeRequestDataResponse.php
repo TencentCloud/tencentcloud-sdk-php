@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setData(array $Data) 设置请求量统计表
  * @method string getInterval() 获取请求量单位时间: Day：天，Hour：小时
  * @method void setInterval(string $Interval) 设置请求量单位时间: Day：天，Hour：小时
+ * @method string getUrl() 获取导出数据下载地址
+ * @method void setUrl(string $Url) 设置导出数据下载地址
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +42,11 @@ class DescribeRequestDataResponse extends AbstractModel
     public $Interval;
 
     /**
+     * @var string 导出数据下载地址
+     */
+    public $Url;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +54,7 @@ class DescribeRequestDataResponse extends AbstractModel
     /**
      * @param array $Data 请求量统计表
      * @param string $Interval 请求量单位时间: Day：天，Hour：小时
+     * @param string $Url 导出数据下载地址
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -73,6 +81,10 @@ class DescribeRequestDataResponse extends AbstractModel
 
         if (array_key_exists("Interval",$param) and $param["Interval"] !== null) {
             $this->Interval = $param["Interval"];
+        }
+
+        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
+            $this->Url = $param["Url"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

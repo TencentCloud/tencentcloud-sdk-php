@@ -27,25 +27,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getType() 获取（废弃）类型：IM、TEL、ALL（全媒体）
  * @method void setType(string $Type) 设置（废弃）类型：IM、TEL、ALL（全媒体）
  * @method string getRoutePolicy() 获取会话分配策略
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoutePolicy(string $RoutePolicy) 设置会话分配策略
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUsingLastSeat() 获取会话分配是否优先上次服务座席
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsingLastSeat(integer $UsingLastSeat) 设置会话分配是否优先上次服务座席
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxConcurrency() 获取单客服最大并发数（电话类型默认1）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaxConcurrency(integer $MaxConcurrency) 设置单客服最大并发数（电话类型默认1）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLastModifyTimestamp() 获取最后修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastModifyTimestamp(integer $LastModifyTimestamp) 设置最后修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSkillGroupType() 获取技能组类型0-电话，1-在线，3-音频，4-视频	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSkillGroupType(integer $SkillGroupType) 设置技能组类型0-电话，1-在线，3-音频，4-视频	
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAlias() 获取技能组内线号码
+ * @method void setAlias(string $Alias) 设置技能组内线号码
  */
 class SkillGroupInfoItem extends AbstractModel
 {
@@ -66,48 +58,44 @@ class SkillGroupInfoItem extends AbstractModel
 
     /**
      * @var string 会话分配策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoutePolicy;
 
     /**
      * @var integer 会话分配是否优先上次服务座席
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UsingLastSeat;
 
     /**
      * @var integer 单客服最大并发数（电话类型默认1）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxConcurrency;
 
     /**
      * @var integer 最后修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastModifyTimestamp;
 
     /**
      * @var integer 技能组类型0-电话，1-在线，3-音频，4-视频	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SkillGroupType;
+
+    /**
+     * @var string 技能组内线号码
+     */
+    public $Alias;
 
     /**
      * @param integer $SkillGroupId 技能组ID
      * @param string $SkillGroupName 技能组名称
      * @param string $Type （废弃）类型：IM、TEL、ALL（全媒体）
      * @param string $RoutePolicy 会话分配策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UsingLastSeat 会话分配是否优先上次服务座席
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxConcurrency 单客服最大并发数（电话类型默认1）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LastModifyTimestamp 最后修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SkillGroupType 技能组类型0-电话，1-在线，3-音频，4-视频	
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Alias 技能组内线号码
      */
     function __construct()
     {
@@ -152,6 +140,10 @@ class SkillGroupInfoItem extends AbstractModel
 
         if (array_key_exists("SkillGroupType",$param) and $param["SkillGroupType"] !== null) {
             $this->SkillGroupType = $param["SkillGroupType"];
+        }
+
+        if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
+            $this->Alias = $param["Alias"];
         }
     }
 }

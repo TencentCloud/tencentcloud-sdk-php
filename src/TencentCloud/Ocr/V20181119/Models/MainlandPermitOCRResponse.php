@@ -38,10 +38,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIssueAddress(string $IssueAddress) 设置签发地点
  * @method string getIssueNumber() 获取签发次数
  * @method void setIssueNumber(string $IssueNumber) 设置签发次数
- * @method string getType() 获取证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证。
- * @method void setType(string $Type) 设置证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证。
+ * @method string getType() 获取证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证、往来港澳通行证。
+ * @method void setType(string $Type) 设置证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证、往来港澳通行证。
  * @method string getProfile() 获取RetProfile为True时返回头像字段， Base64编码
  * @method void setProfile(string $Profile) 设置RetProfile为True时返回头像字段， Base64编码
+ * @method string getNationality() 获取国籍
+ * @method void setNationality(string $Nationality) 设置国籍
  * @method MainlandTravelPermitBackInfos getMainlandTravelPermitBackInfos() 获取背面字段信息
  * @method void setMainlandTravelPermitBackInfos(MainlandTravelPermitBackInfos $MainlandTravelPermitBackInfos) 设置背面字段信息
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -95,7 +97,7 @@ class MainlandPermitOCRResponse extends AbstractModel
     public $IssueNumber;
 
     /**
-     * @var string 证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证。
+     * @var string 证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证、往来港澳通行证。
      */
     public $Type;
 
@@ -103,6 +105,11 @@ class MainlandPermitOCRResponse extends AbstractModel
      * @var string RetProfile为True时返回头像字段， Base64编码
      */
     public $Profile;
+
+    /**
+     * @var string 国籍
+     */
+    public $Nationality;
 
     /**
      * @var MainlandTravelPermitBackInfos 背面字段信息
@@ -124,8 +131,9 @@ class MainlandPermitOCRResponse extends AbstractModel
      * @param string $Number 证件号
      * @param string $IssueAddress 签发地点
      * @param string $IssueNumber 签发次数
-     * @param string $Type 证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证。
+     * @param string $Type 证件类别， 如：台湾居民来往大陆通行证、港澳居民来往内地通行证、往来港澳通行证。
      * @param string $Profile RetProfile为True时返回头像字段， Base64编码
+     * @param string $Nationality 国籍
      * @param MainlandTravelPermitBackInfos $MainlandTravelPermitBackInfos 背面字段信息
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -184,6 +192,10 @@ class MainlandPermitOCRResponse extends AbstractModel
 
         if (array_key_exists("Profile",$param) and $param["Profile"] !== null) {
             $this->Profile = $param["Profile"];
+        }
+
+        if (array_key_exists("Nationality",$param) and $param["Nationality"] !== null) {
+            $this->Nationality = $param["Nationality"];
         }
 
         if (array_key_exists("MainlandTravelPermitBackInfos",$param) and $param["MainlandTravelPermitBackInfos"] !== null) {

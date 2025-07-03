@@ -35,13 +35,9 @@ use TencentCloud\Common\AbstractModel;
  * @method array getRegion() 获取地域
  * @method void setRegion(array $Region) 设置地域
  * @method integer getPayType() 获取支付类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayType(integer $PayType) 设置支付类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBuyTime() 获取购买时间 yyyy-mm-dd HH:mm:ss格式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBuyTime(string $BuyTime) 设置购买时间 yyyy-mm-dd HH:mm:ss格式
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SavingPlanOverviewDetail extends AbstractModel
 {
@@ -82,13 +78,11 @@ class SavingPlanOverviewDetail extends AbstractModel
 
     /**
      * @var integer 支付类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PayType;
 
     /**
      * @var string 购买时间 yyyy-mm-dd HH:mm:ss格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BuyTime;
 
@@ -101,9 +95,7 @@ class SavingPlanOverviewDetail extends AbstractModel
      * @param string $SavingAmount 累计节省金额（单位：元）
      * @param array $Region 地域
      * @param integer $PayType 支付类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BuyTime 购买时间 yyyy-mm-dd HH:mm:ss格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

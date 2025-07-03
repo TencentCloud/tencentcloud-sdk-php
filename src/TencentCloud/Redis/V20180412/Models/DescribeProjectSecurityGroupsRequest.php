@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProduct() 获取数据库引擎名称，本接口取值：redis。
  * @method void setProduct(string $Product) 设置数据库引擎名称，本接口取值：redis。
- * @method integer getProjectId() 获取项目 ID。
- * @method void setProjectId(integer $ProjectId) 设置项目 ID。
+ * @method integer getProjectId() 获取项目 ID，请登录[Redis控制台的项目管理](https://console.cloud.tencent.com/project)页面，在**项目名称**中复制项目 ID。
+ * @method void setProjectId(integer $ProjectId) 设置项目 ID，请登录[Redis控制台的项目管理](https://console.cloud.tencent.com/project)页面，在**项目名称**中复制项目 ID。
  * @method integer getOffset() 获取偏移量，取值为Limit的整数倍。
  * @method void setOffset(integer $Offset) 设置偏移量，取值为Limit的整数倍。
  * @method integer getLimit() 获取拉取数量限制，默认 20。
@@ -39,7 +39,7 @@ class DescribeProjectSecurityGroupsRequest extends AbstractModel
     public $Product;
 
     /**
-     * @var integer 项目 ID。
+     * @var integer 项目 ID，请登录[Redis控制台的项目管理](https://console.cloud.tencent.com/project)页面，在**项目名称**中复制项目 ID。
      */
     public $ProjectId;
 
@@ -60,7 +60,7 @@ class DescribeProjectSecurityGroupsRequest extends AbstractModel
 
     /**
      * @param string $Product 数据库引擎名称，本接口取值：redis。
-     * @param integer $ProjectId 项目 ID。
+     * @param integer $ProjectId 项目 ID，请登录[Redis控制台的项目管理](https://console.cloud.tencent.com/project)页面，在**项目名称**中复制项目 ID。
      * @param integer $Offset 偏移量，取值为Limit的整数倍。
      * @param integer $Limit 拉取数量限制，默认 20。
      * @param string $SearchKey 搜索条件，支持安全组 ID 或者安全组名称。

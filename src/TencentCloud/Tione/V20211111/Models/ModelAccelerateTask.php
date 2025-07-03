@@ -136,6 +136,18 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFrameworkVersion(string $FrameworkVersion) 设置加速引擎对应的框架版本
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getModelVersionId() 获取模型版本ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setModelVersionId(string $ModelVersionId) 设置模型版本ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getResourceGroupId() 获取资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceGroupId(string $ResourceGroupId) 设置资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getResourceGroupName() 获取资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceGroupName(string $ResourceGroupName) 设置资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ModelAccelerateTask extends AbstractModel
 {
@@ -314,6 +326,24 @@ class ModelAccelerateTask extends AbstractModel
     public $FrameworkVersion;
 
     /**
+     * @var string 模型版本ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ModelVersionId;
+
+    /**
+     * @var string 资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceGroupId;
+
+    /**
+     * @var string 资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceGroupName;
+
+    /**
      * @param string $ModelAccTaskId 模型加速任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModelAccTaskName 模型加速任务名称
@@ -371,6 +401,12 @@ class ModelAccelerateTask extends AbstractModel
      * @param boolean $QATModel 是否是QAT模型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FrameworkVersion 加速引擎对应的框架版本
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ModelVersionId 模型版本ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ResourceGroupId 资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ResourceGroupName 资源组名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -513,6 +549,18 @@ class ModelAccelerateTask extends AbstractModel
 
         if (array_key_exists("FrameworkVersion",$param) and $param["FrameworkVersion"] !== null) {
             $this->FrameworkVersion = $param["FrameworkVersion"];
+        }
+
+        if (array_key_exists("ModelVersionId",$param) and $param["ModelVersionId"] !== null) {
+            $this->ModelVersionId = $param["ModelVersionId"];
+        }
+
+        if (array_key_exists("ResourceGroupId",$param) and $param["ResourceGroupId"] !== null) {
+            $this->ResourceGroupId = $param["ResourceGroupId"];
+        }
+
+        if (array_key_exists("ResourceGroupName",$param) and $param["ResourceGroupName"] !== null) {
+            $this->ResourceGroupName = $param["ResourceGroupName"];
         }
     }
 }

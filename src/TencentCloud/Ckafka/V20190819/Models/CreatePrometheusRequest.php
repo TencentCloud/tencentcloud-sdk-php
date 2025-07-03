@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreatePrometheus请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka实例id
- * @method void setInstanceId(string $InstanceId) 设置ckafka实例id
- * @method string getVpcId() 获取vpc地址
- * @method void setVpcId(string $VpcId) 设置vpc地址
- * @method string getSubnetId() 获取子网地址
- * @method void setSubnetId(string $SubnetId) 设置子网地址
+ * @method string getInstanceId() 获取ckafka集群实例Id
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
+ * @method string getVpcId() 获取私有网络Id
+ * @method void setVpcId(string $VpcId) 设置私有网络Id
+ * @method string getSubnetId() 获取子网Id
+ * @method void setSubnetId(string $SubnetId) 设置子网Id
  */
 class CreatePrometheusRequest extends AbstractModel
 {
     /**
-     * @var string ckafka实例id
+     * @var string ckafka集群实例Id
      */
     public $InstanceId;
 
     /**
-     * @var string vpc地址
+     * @var string 私有网络Id
      */
     public $VpcId;
 
     /**
-     * @var string 子网地址
+     * @var string 子网Id
      */
     public $SubnetId;
 
     /**
-     * @param string $InstanceId ckafka实例id
-     * @param string $VpcId vpc地址
-     * @param string $SubnetId 子网地址
+     * @param string $InstanceId ckafka集群实例Id
+     * @param string $VpcId 私有网络Id
+     * @param string $SubnetId 子网Id
      */
     function __construct()
     {

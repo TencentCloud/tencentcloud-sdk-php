@@ -126,6 +126,30 @@ use TencentCloud\Common\AbstractModel;
 <li> ALL: 检查全部上游父任务 </li>
 <li> MAKE_SCOPE: 只在（当前补录计划）选中任务中检查 </li>
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getSameSelfWorkflowDependType() 获取是否和原任务保持相同工作流自依赖属性
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSameSelfWorkflowDependType(boolean $SameSelfWorkflowDependType) 设置是否和原任务保持相同工作流自依赖属性
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSelfWorkflowDependency() 获取工作流自依赖类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSelfWorkflowDependency(string $SelfWorkflowDependency) 设置工作流自依赖类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMakeDataTimeOrder() 获取补录时间顺序
+NORMAL： 正常
+ORDER ： 按照实例时间顺序执行
+REVERSE： 实例数据时间逆序
+ * @method void setMakeDataTimeOrder(string $MakeDataTimeOrder) 设置补录时间顺序
+NORMAL： 正常
+ORDER ： 按照实例时间顺序执行
+REVERSE： 实例数据时间逆序
+ * @method string getScheduleTimeZone() 获取补录时间范围的时区
+ * @method void setScheduleTimeZone(string $ScheduleTimeZone) 设置补录时间范围的时区
+ * @method string getAppParam() 获取执行应用参数
+ * @method void setAppParam(string $AppParam) 设置执行应用参数
+ * @method string getTimeType() 获取补录计划时间范围的类型： 
+DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
+ * @method void setTimeType(string $TimeType) 设置补录计划时间范围的类型： 
+DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
  */
 class MakePlanOpsDto extends AbstractModel
 {
@@ -283,6 +307,42 @@ class MakePlanOpsDto extends AbstractModel
     public $CheckParentType;
 
     /**
+     * @var boolean 是否和原任务保持相同工作流自依赖属性
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SameSelfWorkflowDependType;
+
+    /**
+     * @var string 工作流自依赖类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SelfWorkflowDependency;
+
+    /**
+     * @var string 补录时间顺序
+NORMAL： 正常
+ORDER ： 按照实例时间顺序执行
+REVERSE： 实例数据时间逆序
+     */
+    public $MakeDataTimeOrder;
+
+    /**
+     * @var string 补录时间范围的时区
+     */
+    public $ScheduleTimeZone;
+
+    /**
+     * @var string 执行应用参数
+     */
+    public $AppParam;
+
+    /**
+     * @var string 补录计划时间范围的类型： 
+DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
+     */
+    public $TimeType;
+
+    /**
      * @param string $PlanId 补录计划ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MakeName 补录计划名称
@@ -336,6 +396,18 @@ class MakePlanOpsDto extends AbstractModel
 <li> ALL: 检查全部上游父任务 </li>
 <li> MAKE_SCOPE: 只在（当前补录计划）选中任务中检查 </li>
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $SameSelfWorkflowDependType 是否和原任务保持相同工作流自依赖属性
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SelfWorkflowDependency 工作流自依赖类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MakeDataTimeOrder 补录时间顺序
+NORMAL： 正常
+ORDER ： 按照实例时间顺序执行
+REVERSE： 实例数据时间逆序
+     * @param string $ScheduleTimeZone 补录时间范围的时区
+     * @param string $AppParam 执行应用参数
+     * @param string $TimeType 补录计划时间范围的类型： 
+DATA_TIME：实例数据时间；SCHEDULE_TIME 计划调度时间
      */
     function __construct()
     {
@@ -458,6 +530,30 @@ class MakePlanOpsDto extends AbstractModel
 
         if (array_key_exists("CheckParentType",$param) and $param["CheckParentType"] !== null) {
             $this->CheckParentType = $param["CheckParentType"];
+        }
+
+        if (array_key_exists("SameSelfWorkflowDependType",$param) and $param["SameSelfWorkflowDependType"] !== null) {
+            $this->SameSelfWorkflowDependType = $param["SameSelfWorkflowDependType"];
+        }
+
+        if (array_key_exists("SelfWorkflowDependency",$param) and $param["SelfWorkflowDependency"] !== null) {
+            $this->SelfWorkflowDependency = $param["SelfWorkflowDependency"];
+        }
+
+        if (array_key_exists("MakeDataTimeOrder",$param) and $param["MakeDataTimeOrder"] !== null) {
+            $this->MakeDataTimeOrder = $param["MakeDataTimeOrder"];
+        }
+
+        if (array_key_exists("ScheduleTimeZone",$param) and $param["ScheduleTimeZone"] !== null) {
+            $this->ScheduleTimeZone = $param["ScheduleTimeZone"];
+        }
+
+        if (array_key_exists("AppParam",$param) and $param["AppParam"] !== null) {
+            $this->AppParam = $param["AppParam"];
+        }
+
+        if (array_key_exists("TimeType",$param) and $param["TimeType"] !== null) {
+            $this->TimeType = $param["TimeType"];
         }
     }
 }

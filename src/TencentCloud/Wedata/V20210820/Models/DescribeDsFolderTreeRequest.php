@@ -50,6 +50,28 @@ false 否
 false 否
  * @method void setIncludeTaskFolder(boolean $IncludeTaskFolder) 设置是否包含任务目录 true 是 
 false 否
+ * @method boolean getNewFolderTreeMode() 获取是否使用最新模式展示目录树
+ * @method void setNewFolderTreeMode(boolean $NewFolderTreeMode) 设置是否使用最新模式展示目录树
+ * @method string getTaskNodeId() 获取节点分类ID
+ * @method void setTaskNodeId(string $TaskNodeId) 设置节点分类ID
+ * @method string getWorkflowType() 获取工作流类型, 使用场景: 任务复制,选择工作流. 取值范围
+
+- cycle    周期工作流
+- manual    手动工作流
+ * @method void setWorkflowType(string $WorkflowType) 设置工作流类型, 使用场景: 任务复制,选择工作流. 取值范围
+
+- cycle    周期工作流
+- manual    手动工作流
+ * @method array getTaskTypeIdList() 获取任务类型id列表
+ * @method void setTaskTypeIdList(array $TaskTypeIdList) 设置任务类型id列表
+ * @method array getInChargeIdList() 获取责任人id列表
+ * @method void setInChargeIdList(array $InChargeIdList) 设置责任人id列表
+ * @method boolean getOnlyMe() 获取自身责任人
+ * @method void setOnlyMe(boolean $OnlyMe) 设置自身责任人
+ * @method boolean getIncludeCodeTemplate() 获取是否包含代码模版
+ * @method void setIncludeCodeTemplate(boolean $IncludeCodeTemplate) 设置是否包含代码模版
+ * @method string getFolderForm() 获取编排空间 或代码模版 orchestrationSpace 编排空间 template模版管理
+ * @method void setFolderForm(string $FolderForm) 设置编排空间 或代码模版 orchestrationSpace 编排空间 template模版管理
  */
 class DescribeDsFolderTreeRequest extends AbstractModel
 {
@@ -113,6 +135,49 @@ false 否
     public $IncludeTaskFolder;
 
     /**
+     * @var boolean 是否使用最新模式展示目录树
+     */
+    public $NewFolderTreeMode;
+
+    /**
+     * @var string 节点分类ID
+     */
+    public $TaskNodeId;
+
+    /**
+     * @var string 工作流类型, 使用场景: 任务复制,选择工作流. 取值范围
+
+- cycle    周期工作流
+- manual    手动工作流
+     */
+    public $WorkflowType;
+
+    /**
+     * @var array 任务类型id列表
+     */
+    public $TaskTypeIdList;
+
+    /**
+     * @var array 责任人id列表
+     */
+    public $InChargeIdList;
+
+    /**
+     * @var boolean 自身责任人
+     */
+    public $OnlyMe;
+
+    /**
+     * @var boolean 是否包含代码模版
+     */
+    public $IncludeCodeTemplate;
+
+    /**
+     * @var string 编排空间 或代码模版 orchestrationSpace 编排空间 template模版管理
+     */
+    public $FolderForm;
+
+    /**
      * @param string $ProjectId 项目id
      * @param boolean $FirstLevelPull 是否一级拉取 true 是 
 false 否
@@ -128,6 +193,17 @@ false 否
      * @param string $DisplayType classification.分类展示  catalog.目录展示
      * @param boolean $IncludeTaskFolder 是否包含任务目录 true 是 
 false 否
+     * @param boolean $NewFolderTreeMode 是否使用最新模式展示目录树
+     * @param string $TaskNodeId 节点分类ID
+     * @param string $WorkflowType 工作流类型, 使用场景: 任务复制,选择工作流. 取值范围
+
+- cycle    周期工作流
+- manual    手动工作流
+     * @param array $TaskTypeIdList 任务类型id列表
+     * @param array $InChargeIdList 责任人id列表
+     * @param boolean $OnlyMe 自身责任人
+     * @param boolean $IncludeCodeTemplate 是否包含代码模版
+     * @param string $FolderForm 编排空间 或代码模版 orchestrationSpace 编排空间 template模版管理
      */
     function __construct()
     {
@@ -184,6 +260,38 @@ false 否
 
         if (array_key_exists("IncludeTaskFolder",$param) and $param["IncludeTaskFolder"] !== null) {
             $this->IncludeTaskFolder = $param["IncludeTaskFolder"];
+        }
+
+        if (array_key_exists("NewFolderTreeMode",$param) and $param["NewFolderTreeMode"] !== null) {
+            $this->NewFolderTreeMode = $param["NewFolderTreeMode"];
+        }
+
+        if (array_key_exists("TaskNodeId",$param) and $param["TaskNodeId"] !== null) {
+            $this->TaskNodeId = $param["TaskNodeId"];
+        }
+
+        if (array_key_exists("WorkflowType",$param) and $param["WorkflowType"] !== null) {
+            $this->WorkflowType = $param["WorkflowType"];
+        }
+
+        if (array_key_exists("TaskTypeIdList",$param) and $param["TaskTypeIdList"] !== null) {
+            $this->TaskTypeIdList = $param["TaskTypeIdList"];
+        }
+
+        if (array_key_exists("InChargeIdList",$param) and $param["InChargeIdList"] !== null) {
+            $this->InChargeIdList = $param["InChargeIdList"];
+        }
+
+        if (array_key_exists("OnlyMe",$param) and $param["OnlyMe"] !== null) {
+            $this->OnlyMe = $param["OnlyMe"];
+        }
+
+        if (array_key_exists("IncludeCodeTemplate",$param) and $param["IncludeCodeTemplate"] !== null) {
+            $this->IncludeCodeTemplate = $param["IncludeCodeTemplate"];
+        }
+
+        if (array_key_exists("FolderForm",$param) and $param["FolderForm"] !== null) {
+            $this->FolderForm = $param["FolderForm"];
         }
     }
 }

@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getOperator() 获取操作符；只能取and, or的其中一种
  * @method void setOperator(string $Operator) 设置操作符；只能取and, or的其中一种
  * @method array getContents() 获取规则
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContents(array $Contents) 设置规则
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataRules extends AbstractModel
 {
@@ -36,14 +34,12 @@ class DataRules extends AbstractModel
 
     /**
      * @var array 规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Contents;
 
     /**
      * @param string $Operator 操作符；只能取and, or的其中一种
      * @param array $Contents 规则
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

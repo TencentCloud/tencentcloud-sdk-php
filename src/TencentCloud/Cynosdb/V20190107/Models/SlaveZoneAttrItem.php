@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 可用区属性项
  *
  * @method string getZone() 获取可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZone(string $Zone) 设置可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBinlogSyncWay() 获取binlog同步方式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBinlogSyncWay(string $BinlogSyncWay) 设置binlog同步方式
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SlaveZoneAttrItem extends AbstractModel
 {
     /**
      * @var string 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Zone;
 
     /**
      * @var string binlog同步方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BinlogSyncWay;
 
     /**
      * @param string $Zone 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BinlogSyncWay binlog同步方式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

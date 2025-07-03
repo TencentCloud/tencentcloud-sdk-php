@@ -21,93 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * 子网信息
  *
  * @method string getId() 获取子网id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(string $Id) 设置子网id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCidr() 获取子网的ipv4
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCidr(string $Cidr) 设置子网的ipv4
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getZone() 获取可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setZone(string $Zone) 设置可用区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTarget() 获取subnet类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTarget(string $Target) 设置subnet类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegion() 获取地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取名字
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置名字
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudBaseRunVpcSubnet extends AbstractModel
 {
     /**
      * @var string 子网id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var string 子网的ipv4
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Cidr;
 
     /**
      * @var string 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Zone;
 
     /**
      * @var string 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string subnet类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Target;
 
     /**
      * @var string 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
     /**
      * @var string 名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @param string $Id 子网id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Cidr 子网的ipv4
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Zone 可用区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Target subnet类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 名字
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

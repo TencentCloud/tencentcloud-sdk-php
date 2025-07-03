@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvironmentId(string $EnvironmentId) 设置环境 ID
  * @method string getName() 获取配置名
  * @method void setName(string $Name) 设置配置名
- * @method integer getSourceChannel() 获取来源渠道
- * @method void setSourceChannel(integer $SourceChannel) 设置来源渠道
  * @method array getData() 获取配置信息
  * @method void setData(array $Data) 设置配置信息
+ * @method integer getSourceChannel() 获取来源渠道
+ * @method void setSourceChannel(integer $SourceChannel) 设置来源渠道
  */
 class ModifyConfigDataRequest extends AbstractModel
 {
@@ -42,20 +42,20 @@ class ModifyConfigDataRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var integer 来源渠道
-     */
-    public $SourceChannel;
-
-    /**
      * @var array 配置信息
      */
     public $Data;
 
     /**
+     * @var integer 来源渠道
+     */
+    public $SourceChannel;
+
+    /**
      * @param string $EnvironmentId 环境 ID
      * @param string $Name 配置名
-     * @param integer $SourceChannel 来源渠道
      * @param array $Data 配置信息
+     * @param integer $SourceChannel 来源渠道
      */
     function __construct()
     {
@@ -78,10 +78,6 @@ class ModifyConfigDataRequest extends AbstractModel
             $this->Name = $param["Name"];
         }
 
-        if (array_key_exists("SourceChannel",$param) and $param["SourceChannel"] !== null) {
-            $this->SourceChannel = $param["SourceChannel"];
-        }
-
         if (array_key_exists("Data",$param) and $param["Data"] !== null) {
             $this->Data = [];
             foreach ($param["Data"] as $key => $value){
@@ -89,6 +85,10 @@ class ModifyConfigDataRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Data, $obj);
             }
+        }
+
+        if (array_key_exists("SourceChannel",$param) and $param["SourceChannel"] !== null) {
+            $this->SourceChannel = $param["SourceChannel"];
         }
     }
 }

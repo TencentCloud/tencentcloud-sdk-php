@@ -21,141 +21,97 @@ use TencentCloud\Common\AbstractModel;
  * 规则详情查询结果
  *
  * @method integer getRuleId() 获取联动id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleId(integer $RuleId) 设置联动id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRuleName() 获取联动名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleName(string $RuleName) 设置联动名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRuleDesc() 获取联动说明
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleDesc(string $RuleDesc) 设置联动说明
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getValidType() 获取1 全天有效，0：固定时间段有效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValidType(integer $ValidType) 设置1 全天有效，0：固定时间段有效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValidPeriod() 获取有效期，json字符串（全天有效时为空）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValidPeriod(string $ValidPeriod) 设置有效期，json字符串（全天有效时为空）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBeginDate() 获取起始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBeginDate(string $BeginDate) 设置起始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndDate() 获取结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndDate(string $EndDate) 设置结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取启用状态。1-启用，0-停用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置启用状态。1-启用，0-停用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEventRule() 获取触发规则，事件的组合
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEventRule(string $EventRule) 设置触发规则，事件的组合
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getEventInfoSet() 获取事件对象集合
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEventInfoSet(array $EventInfoSet) 设置事件对象集合
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getActionInfoSet() 获取动作对象集合
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActionInfoSet(array $ActionInfoSet) 设置动作对象集合
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleDetailRes extends AbstractModel
 {
     /**
      * @var integer 联动id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleId;
 
     /**
      * @var string 联动名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleName;
 
     /**
      * @var string 联动说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleDesc;
 
     /**
      * @var integer 1 全天有效，0：固定时间段有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ValidType;
 
     /**
      * @var string 有效期，json字符串（全天有效时为空）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ValidPeriod;
 
     /**
      * @var string 起始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BeginDate;
 
     /**
      * @var string 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndDate;
 
     /**
      * @var integer 启用状态。1-启用，0-停用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 触发规则，事件的组合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventRule;
 
     /**
      * @var array 事件对象集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EventInfoSet;
 
     /**
      * @var array 动作对象集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActionInfoSet;
 
     /**
      * @param integer $RuleId 联动id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RuleName 联动名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RuleDesc 联动说明
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ValidType 1 全天有效，0：固定时间段有效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ValidPeriod 有效期，json字符串（全天有效时为空）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BeginDate 起始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndDate 结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 启用状态。1-启用，0-停用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EventRule 触发规则，事件的组合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $EventInfoSet 事件对象集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ActionInfoSet 动作对象集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

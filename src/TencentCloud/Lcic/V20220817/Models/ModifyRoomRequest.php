@@ -110,6 +110,10 @@ video 纯视频
  * @method void setRecordScene(string $RecordScene) 设置录制自定义场景，仅recordlayout=9的时候此参数有效,数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
  * @method string getRecordLang() 获取录制自定义语言，仅recordlayout=9的时候此参数有效
  * @method void setRecordLang(string $RecordLang) 设置录制自定义语言，仅recordlayout=9的时候此参数有效
+ * @method integer getWhiteBoardSnapshotMode() 获取板书截图生成类型。0 不生成板书；1 全量模式；2 单页去重模式
+ * @method void setWhiteBoardSnapshotMode(integer $WhiteBoardSnapshotMode) 设置板书截图生成类型。0 不生成板书；1 全量模式；2 单页去重模式
+ * @method integer getSubtitlesTranscription() 获取字幕转写功能开关：0关闭，1开启，默认关闭
+ * @method void setSubtitlesTranscription(integer $SubtitlesTranscription) 设置字幕转写功能开关：0关闭，1开启，默认关闭
  */
 class ModifyRoomRequest extends AbstractModel
 {
@@ -264,6 +268,16 @@ video 纯视频
     public $RecordLang;
 
     /**
+     * @var integer 板书截图生成类型。0 不生成板书；1 全量模式；2 单页去重模式
+     */
+    public $WhiteBoardSnapshotMode;
+
+    /**
+     * @var integer 字幕转写功能开关：0关闭，1开启，默认关闭
+     */
+    public $SubtitlesTranscription;
+
+    /**
      * @param integer $RoomId 房间ID。
      * @param integer $SdkAppId 低代码互动课堂的SdkAppId
      * @param integer $StartTime 预定的房间开始时间，unix时间戳（秒）。直播开始后不允许修改。
@@ -309,6 +323,8 @@ video 纯视频
      * @param integer $EnableAutoStart 是否自动开始上课：0 不自动上课（默认） 1 自动上课 live_type=1的时候有效
      * @param string $RecordScene 录制自定义场景，仅recordlayout=9的时候此参数有效,数据内容为用户自定义场景参数，数据格式为json键值对方式，其中键值对的value为string类型。
      * @param string $RecordLang 录制自定义语言，仅recordlayout=9的时候此参数有效
+     * @param integer $WhiteBoardSnapshotMode 板书截图生成类型。0 不生成板书；1 全量模式；2 单页去重模式
+     * @param integer $SubtitlesTranscription 字幕转写功能开关：0关闭，1开启，默认关闭
      */
     function __construct()
     {
@@ -425,6 +441,14 @@ video 纯视频
 
         if (array_key_exists("RecordLang",$param) and $param["RecordLang"] !== null) {
             $this->RecordLang = $param["RecordLang"];
+        }
+
+        if (array_key_exists("WhiteBoardSnapshotMode",$param) and $param["WhiteBoardSnapshotMode"] !== null) {
+            $this->WhiteBoardSnapshotMode = $param["WhiteBoardSnapshotMode"];
+        }
+
+        if (array_key_exists("SubtitlesTranscription",$param) and $param["SubtitlesTranscription"] !== null) {
+            $this->SubtitlesTranscription = $param["SubtitlesTranscription"];
         }
     }
 }

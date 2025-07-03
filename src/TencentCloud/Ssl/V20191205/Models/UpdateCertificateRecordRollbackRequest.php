@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateCertificateRecordRollback请求参数结构体
  *
- * @method integer getDeployRecordId() 获取待重试部署记录ID
- * @method void setDeployRecordId(integer $DeployRecordId) 设置待重试部署记录ID
+ * @method integer getDeployRecordId() 获取更新证书待回滚的记录ID, 通过UpdateCertificateInstance获得
+ * @method void setDeployRecordId(integer $DeployRecordId) 设置更新证书待回滚的记录ID, 通过UpdateCertificateInstance获得
  */
 class UpdateCertificateRecordRollbackRequest extends AbstractModel
 {
     /**
-     * @var integer 待重试部署记录ID
+     * @var integer 更新证书待回滚的记录ID, 通过UpdateCertificateInstance获得
      */
     public $DeployRecordId;
 
     /**
-     * @param integer $DeployRecordId 待重试部署记录ID
+     * @param integer $DeployRecordId 更新证书待回滚的记录ID, 通过UpdateCertificateInstance获得
      */
     function __construct()
     {

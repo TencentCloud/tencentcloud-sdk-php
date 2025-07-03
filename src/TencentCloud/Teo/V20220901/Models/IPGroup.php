@@ -24,8 +24,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupId(integer $GroupId) 设置组 Id，创建时填 0 即可。
  * @method string getName() 获取组名称。
  * @method void setName(string $Name) 设置组名称。
- * @method array getContent() 获取IP 组内容，仅支持 IP 及 IP 掩码。
- * @method void setContent(array $Content) 设置IP 组内容，仅支持 IP 及 IP 掩码。
+ * @method array getContent() 获取IP 组内容，仅支持 IP 及 IP 网段。
+ * @method void setContent(array $Content) 设置IP 组内容，仅支持 IP 及 IP 网段。
+ * @method array getIPExpireInfo() 获取IP 定时过期信息。
+作为入参：用于为指定的 IP 地址或网段配置定时过期时间。
+作为出参，包含以下两类信息：
+<li>当前未到期的定时过期信息：尚未触发的过期配置。</li>
+<li>一周内已到期的定时过期信息：已触发的过期配置。</li>
+ * @method void setIPExpireInfo(array $IPExpireInfo) 设置IP 定时过期信息。
+作为入参：用于为指定的 IP 地址或网段配置定时过期时间。
+作为出参，包含以下两类信息：
+<li>当前未到期的定时过期信息：尚未触发的过期配置。</li>
+<li>一周内已到期的定时过期信息：已触发的过期配置。</li>
  */
 class IPGroup extends AbstractModel
 {
@@ -40,14 +50,28 @@ class IPGroup extends AbstractModel
     public $Name;
 
     /**
-     * @var array IP 组内容，仅支持 IP 及 IP 掩码。
+     * @var array IP 组内容，仅支持 IP 及 IP 网段。
      */
     public $Content;
 
     /**
+     * @var array IP 定时过期信息。
+作为入参：用于为指定的 IP 地址或网段配置定时过期时间。
+作为出参，包含以下两类信息：
+<li>当前未到期的定时过期信息：尚未触发的过期配置。</li>
+<li>一周内已到期的定时过期信息：已触发的过期配置。</li>
+     */
+    public $IPExpireInfo;
+
+    /**
      * @param integer $GroupId 组 Id，创建时填 0 即可。
      * @param string $Name 组名称。
-     * @param array $Content IP 组内容，仅支持 IP 及 IP 掩码。
+     * @param array $Content IP 组内容，仅支持 IP 及 IP 网段。
+     * @param array $IPExpireInfo IP 定时过期信息。
+作为入参：用于为指定的 IP 地址或网段配置定时过期时间。
+作为出参，包含以下两类信息：
+<li>当前未到期的定时过期信息：尚未触发的过期配置。</li>
+<li>一周内已到期的定时过期信息：已触发的过期配置。</li>
      */
     function __construct()
     {
@@ -72,6 +96,15 @@ class IPGroup extends AbstractModel
 
         if (array_key_exists("Content",$param) and $param["Content"] !== null) {
             $this->Content = $param["Content"];
+        }
+
+        if (array_key_exists("IPExpireInfo",$param) and $param["IPExpireInfo"] !== null) {
+            $this->IPExpireInfo = [];
+            foreach ($param["IPExpireInfo"] as $key => $value){
+                $obj = new IPExpireInfo();
+                $obj->deserialize($value);
+                array_push($this->IPExpireInfo, $obj);
+            }
         }
     }
 }

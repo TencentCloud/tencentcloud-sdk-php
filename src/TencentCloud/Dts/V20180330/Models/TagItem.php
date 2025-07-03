@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTagKey() 获取标签键值
  * @method void setTagKey(string $TagKey) 设置标签键值
  * @method string getTagValue() 获取标签值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagValue(string $TagValue) 设置标签值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TagItem extends AbstractModel
 {
@@ -36,14 +34,12 @@ class TagItem extends AbstractModel
 
     /**
      * @var string 标签值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagValue;
 
     /**
      * @param string $TagKey 标签键值
      * @param string $TagValue 标签值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

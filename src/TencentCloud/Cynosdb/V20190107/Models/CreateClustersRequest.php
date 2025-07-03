@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
 普通实例内存,单位GB
  * @method void setMemory(integer $Memory) 设置当DbMode为NORMAL或不填时必选
 普通实例内存,单位GB
+ * @method integer getInstanceCount() 获取实例数量，数量范围为(0,16]，默认值为2（即一个rw实例+一个ro实例），传递的n表示1个rw实例+n-1个ro实例（规格相同），如需要更精确的集群组成搭配，请使用InstanceInitInfos
+ * @method void setInstanceCount(integer $InstanceCount) 设置实例数量，数量范围为(0,16]，默认值为2（即一个rw实例+一个ro实例），传递的n表示1个rw实例+n-1个ro实例（规格相同），如需要更精确的集群组成搭配，请使用InstanceInitInfos
  * @method integer getStorage() 获取该参数无实际意义，已废弃。
 存储大小，单位GB。
  * @method void setStorage(integer $Storage) 设置该参数无实际意义，已废弃。
@@ -80,16 +82,14 @@ timeRollback，时间点回档
 当DbType为MYSQL，且存储计费模式为预付费时，该参数需不大于cpu与memory对应存储规格上限
  * @method void setStorageLimit(integer $StorageLimit) 设置普通实例存储上限，单位GB
 当DbType为MYSQL，且存储计费模式为预付费时，该参数需不大于cpu与memory对应存储规格上限
- * @method integer getInstanceCount() 获取实例数量，数量范围为(0,16]
- * @method void setInstanceCount(integer $InstanceCount) 设置实例数量，数量范围为(0,16]
  * @method integer getTimeSpan() 获取包年包月购买时长
  * @method void setTimeSpan(integer $TimeSpan) 设置包年包月购买时长
  * @method string getTimeUnit() 获取包年包月购买时长单位，['s','d','m','y']
  * @method void setTimeUnit(string $TimeUnit) 设置包年包月购买时长单位，['s','d','m','y']
  * @method integer getAutoRenewFlag() 获取包年包月购买是否自动续费，默认为0。
-0标识默认续费方式，1表示自动续费，2表示手不自动续费。
+0标识默认续费方式，1表示自动续费，2表示不自动续费。
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置包年包月购买是否自动续费，默认为0。
-0标识默认续费方式，1表示自动续费，2表示手不自动续费。
+0标识默认续费方式，1表示自动续费，2表示不自动续费。
  * @method integer getAutoVoucher() 获取是否自动选择代金券 1是 0否 默认为0
  * @method void setAutoVoucher(integer $AutoVoucher) 设置是否自动选择代金券 1是 0否 默认为0
  * @method integer getHaCount() 获取实例数量（该参数已不再使用，只做存量兼容处理）
@@ -146,6 +146,14 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
  * @method void setSlaveZone(string $SlaveZone) 设置多可用区地址
  * @method array getInstanceInitInfos() 获取实例初始化配置信息，主要用于购买集群时选不同规格实例
  * @method void setInstanceInitInfos(array $InstanceInitInfos) 设置实例初始化配置信息，主要用于购买集群时选不同规格实例
+ * @method string getGdnId() 获取全球数据库唯一标识
+ * @method void setGdnId(string $GdnId) 设置全球数据库唯一标识
+ * @method ProxyConfig getProxyConfig() 获取数据库代理配置
+ * @method void setProxyConfig(ProxyConfig $ProxyConfig) 设置数据库代理配置
+ * @method string getAutoArchive() 获取是否自动归档
+ * @method void setAutoArchive(string $AutoArchive) 设置是否自动归档
+ * @method integer getAutoArchiveDelayHours() 获取暂停后的归档处理时间
+ * @method void setAutoArchiveDelayHours(integer $AutoArchiveDelayHours) 设置暂停后的归档处理时间
  */
 class CreateClustersRequest extends AbstractModel
 {
@@ -192,6 +200,11 @@ class CreateClustersRequest extends AbstractModel
 普通实例内存,单位GB
      */
     public $Memory;
+
+    /**
+     * @var integer 实例数量，数量范围为(0,16]，默认值为2（即一个rw实例+一个ro实例），传递的n表示1个rw实例+n-1个ro实例（规格相同），如需要更精确的集群组成搭配，请使用InstanceInitInfos
+     */
+    public $InstanceCount;
 
     /**
      * @var integer 该参数无实际意义，已废弃。
@@ -260,11 +273,6 @@ timeRollback，时间点回档
     public $StorageLimit;
 
     /**
-     * @var integer 实例数量，数量范围为(0,16]
-     */
-    public $InstanceCount;
-
-    /**
      * @var integer 包年包月购买时长
      */
     public $TimeSpan;
@@ -276,7 +284,7 @@ timeRollback，时间点回档
 
     /**
      * @var integer 包年包月购买是否自动续费，默认为0。
-0标识默认续费方式，1表示自动续费，2表示手不自动续费。
+0标识默认续费方式，1表示自动续费，2表示不自动续费。
      */
     public $AutoRenewFlag;
 
@@ -377,6 +385,26 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
     public $InstanceInitInfos;
 
     /**
+     * @var string 全球数据库唯一标识
+     */
+    public $GdnId;
+
+    /**
+     * @var ProxyConfig 数据库代理配置
+     */
+    public $ProxyConfig;
+
+    /**
+     * @var string 是否自动归档
+     */
+    public $AutoArchive;
+
+    /**
+     * @var integer 暂停后的归档处理时间
+     */
+    public $AutoArchiveDelayHours;
+
+    /**
      * @param string $Zone 可用区
      * @param string $VpcId 所属VPC网络ID
      * @param string $SubnetId 所属子网ID
@@ -389,6 +417,7 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
 普通实例Cpu核数
      * @param integer $Memory 当DbMode为NORMAL或不填时必选
 普通实例内存,单位GB
+     * @param integer $InstanceCount 实例数量，数量范围为(0,16]，默认值为2（即一个rw实例+一个ro实例），传递的n表示1个rw实例+n-1个ro实例（规格相同），如需要更精确的集群组成搭配，请使用InstanceInitInfos
      * @param integer $Storage 该参数无实际意义，已废弃。
 存储大小，单位GB。
      * @param string $ClusterName 集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（'-','_','.'）
@@ -407,11 +436,10 @@ timeRollback，时间点回档
 时间点回档，指定时间允许范围
      * @param integer $StorageLimit 普通实例存储上限，单位GB
 当DbType为MYSQL，且存储计费模式为预付费时，该参数需不大于cpu与memory对应存储规格上限
-     * @param integer $InstanceCount 实例数量，数量范围为(0,16]
      * @param integer $TimeSpan 包年包月购买时长
      * @param string $TimeUnit 包年包月购买时长单位，['s','d','m','y']
      * @param integer $AutoRenewFlag 包年包月购买是否自动续费，默认为0。
-0标识默认续费方式，1表示自动续费，2表示手不自动续费。
+0标识默认续费方式，1表示自动续费，2表示不自动续费。
      * @param integer $AutoVoucher 是否自动选择代金券 1是 0否 默认为0
      * @param integer $HaCount 实例数量（该参数已不再使用，只做存量兼容处理）
      * @param string $OrderSource 订单来源
@@ -440,6 +468,10 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
      * @param integer $ParamTemplateId 参数模板ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
      * @param string $SlaveZone 多可用区地址
      * @param array $InstanceInitInfos 实例初始化配置信息，主要用于购买集群时选不同规格实例
+     * @param string $GdnId 全球数据库唯一标识
+     * @param ProxyConfig $ProxyConfig 数据库代理配置
+     * @param string $AutoArchive 是否自动归档
+     * @param integer $AutoArchiveDelayHours 暂停后的归档处理时间
      */
     function __construct()
     {
@@ -484,6 +516,10 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
 
         if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
             $this->Memory = $param["Memory"];
+        }
+
+        if (array_key_exists("InstanceCount",$param) and $param["InstanceCount"] !== null) {
+            $this->InstanceCount = $param["InstanceCount"];
         }
 
         if (array_key_exists("Storage",$param) and $param["Storage"] !== null) {
@@ -532,10 +568,6 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
 
         if (array_key_exists("StorageLimit",$param) and $param["StorageLimit"] !== null) {
             $this->StorageLimit = $param["StorageLimit"];
-        }
-
-        if (array_key_exists("InstanceCount",$param) and $param["InstanceCount"] !== null) {
-            $this->InstanceCount = $param["InstanceCount"];
         }
 
         if (array_key_exists("TimeSpan",$param) and $param["TimeSpan"] !== null) {
@@ -631,6 +663,23 @@ cpu最大值，可选范围参考DescribeServerlessInstanceSpecs接口返回
                 $obj->deserialize($value);
                 array_push($this->InstanceInitInfos, $obj);
             }
+        }
+
+        if (array_key_exists("GdnId",$param) and $param["GdnId"] !== null) {
+            $this->GdnId = $param["GdnId"];
+        }
+
+        if (array_key_exists("ProxyConfig",$param) and $param["ProxyConfig"] !== null) {
+            $this->ProxyConfig = new ProxyConfig();
+            $this->ProxyConfig->deserialize($param["ProxyConfig"]);
+        }
+
+        if (array_key_exists("AutoArchive",$param) and $param["AutoArchive"] !== null) {
+            $this->AutoArchive = $param["AutoArchive"];
+        }
+
+        if (array_key_exists("AutoArchiveDelayHours",$param) and $param["AutoArchiveDelayHours"] !== null) {
+            $this->AutoArchiveDelayHours = $param["AutoArchiveDelayHours"];
         }
     }
 }

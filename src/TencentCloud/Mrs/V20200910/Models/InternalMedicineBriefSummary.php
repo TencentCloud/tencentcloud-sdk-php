@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 体检报告-内科-内科小结
  *
  * @method KeyValueItem getText() 获取内科小结
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setText(KeyValueItem $Text) 设置内科小结
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InternalMedicineBriefSummary extends AbstractModel
 {
     /**
      * @var KeyValueItem 内科小结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Text;
 
     /**
      * @param KeyValueItem $Text 内科小结
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

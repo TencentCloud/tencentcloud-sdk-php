@@ -25,13 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStatus() 获取伸缩组状态(开启 enabled 开启中 enabling 关闭 disabled 关闭中 disabling 更新中 updating 删除中 deleting 开启缩容中 scaleDownEnabling 关闭缩容中 scaleDownDisabling)
  * @method void setStatus(string $Status) 设置伸缩组状态(开启 enabled 开启中 enabling 关闭 disabled 关闭中 disabling 更新中 updating 删除中 deleting 开启缩容中 scaleDownEnabling 关闭缩容中 scaleDownDisabling)
  * @method boolean getIsUnschedulable() 获取节点是否设置成不可调度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsUnschedulable(boolean $IsUnschedulable) 设置节点是否设置成不可调度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLabels() 获取伸缩组的label列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabels(array $Labels) 设置伸缩组的label列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedTime() 获取创建时间
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间
  */
@@ -49,13 +45,11 @@ class ClusterAsGroup extends AbstractModel
 
     /**
      * @var boolean 节点是否设置成不可调度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsUnschedulable;
 
     /**
      * @var array 伸缩组的label列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Labels;
 
@@ -68,9 +62,7 @@ class ClusterAsGroup extends AbstractModel
      * @param string $AutoScalingGroupId 伸缩组ID
      * @param string $Status 伸缩组状态(开启 enabled 开启中 enabling 关闭 disabled 关闭中 disabling 更新中 updating 删除中 deleting 开启缩容中 scaleDownEnabling 关闭缩容中 scaleDownDisabling)
      * @param boolean $IsUnschedulable 节点是否设置成不可调度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Labels 伸缩组的label列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedTime 创建时间
      */
     function __construct()

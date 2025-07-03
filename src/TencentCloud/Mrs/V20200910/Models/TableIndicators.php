@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 检验报告结构
  *
  * @method array getIndicators() 获取项目列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIndicators(array $Indicators) 设置项目列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method BaseItem getSample() 获取采样标本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSample(BaseItem $Sample) 设置采样标本
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TableIndicators extends AbstractModel
 {
     /**
      * @var array 项目列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Indicators;
 
     /**
      * @var BaseItem 采样标本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Sample;
 
     /**
      * @param array $Indicators 项目列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param BaseItem $Sample 采样标本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

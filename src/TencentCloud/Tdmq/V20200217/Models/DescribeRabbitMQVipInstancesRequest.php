@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getFilters() 获取查询条件过滤器
  * @method void setFilters(array $Filters) 设置查询条件过滤器
- * @method integer getLimit() 获取查询数目上限，默认20
- * @method void setLimit(integer $Limit) 设置查询数目上限，默认20
- * @method integer getOffset() 获取查询起始位置
- * @method void setOffset(integer $Offset) 设置查询起始位置
+ * @method integer getLimit() 获取查询数目上限，默认 20
+ * @method void setLimit(integer $Limit) 设置查询数目上限，默认 20
+ * @method integer getOffset() 获取查询起始位置，默认 0
+ * @method void setOffset(integer $Offset) 设置查询起始位置，默认 0
  */
 class DescribeRabbitMQVipInstancesRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class DescribeRabbitMQVipInstancesRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var integer 查询数目上限，默认20
+     * @var integer 查询数目上限，默认 20
      */
     public $Limit;
 
     /**
-     * @var integer 查询起始位置
+     * @var integer 查询起始位置，默认 0
      */
     public $Offset;
 
     /**
      * @param array $Filters 查询条件过滤器
-     * @param integer $Limit 查询数目上限，默认20
-     * @param integer $Offset 查询起始位置
+     * @param integer $Limit 查询数目上限，默认 20
+     * @param integer $Offset 查询起始位置，默认 0
      */
     function __construct()
     {

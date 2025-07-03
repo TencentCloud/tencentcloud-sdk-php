@@ -44,6 +44,22 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLineCount(integer $LineCount) 设置日志行数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getExtInfo() 获取统一执行平台日志分页查询参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExtInfo(string $ExtInfo) 设置统一执行平台日志分页查询参数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsEnd() 获取日志分页查询，是否最后一页
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsEnd(boolean $IsEnd) 设置日志分页查询，是否最后一页
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFileSize() 获取文件大小
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFileSize(string $FileSize) 设置文件大小
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMatchedBrokerIp() 获取日志匹配节点信息
+ * @method void setMatchedBrokerIp(string $MatchedBrokerIp) 设置日志匹配节点信息
+ * @method array getExecutionExtendedProps() 获取执行平台通用协议
+ * @method void setExecutionExtendedProps(array $ExecutionExtendedProps) 设置执行平台通用协议
  */
 class InstanceLogInfoOpsDto extends AbstractModel
 {
@@ -84,6 +100,34 @@ class InstanceLogInfoOpsDto extends AbstractModel
     public $LineCount;
 
     /**
+     * @var string 统一执行平台日志分页查询参数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExtInfo;
+
+    /**
+     * @var boolean 日志分页查询，是否最后一页
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsEnd;
+
+    /**
+     * @var string 文件大小
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FileSize;
+
+    /**
+     * @var string 日志匹配节点信息
+     */
+    public $MatchedBrokerIp;
+
+    /**
+     * @var array 执行平台通用协议
+     */
+    public $ExecutionExtendedProps;
+
+    /**
      * @param string $LogInfo 实例运行日志
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $YarnLogInfo 实例运行提交的yarn日志地址
@@ -96,6 +140,14 @@ class InstanceLogInfoOpsDto extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LineCount 日志行数
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ExtInfo 统一执行平台日志分页查询参数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsEnd 日志分页查询，是否最后一页
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FileSize 文件大小
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MatchedBrokerIp 日志匹配节点信息
+     * @param array $ExecutionExtendedProps 执行平台通用协议
      */
     function __construct()
     {
@@ -132,6 +184,31 @@ class InstanceLogInfoOpsDto extends AbstractModel
 
         if (array_key_exists("LineCount",$param) and $param["LineCount"] !== null) {
             $this->LineCount = $param["LineCount"];
+        }
+
+        if (array_key_exists("ExtInfo",$param) and $param["ExtInfo"] !== null) {
+            $this->ExtInfo = $param["ExtInfo"];
+        }
+
+        if (array_key_exists("IsEnd",$param) and $param["IsEnd"] !== null) {
+            $this->IsEnd = $param["IsEnd"];
+        }
+
+        if (array_key_exists("FileSize",$param) and $param["FileSize"] !== null) {
+            $this->FileSize = $param["FileSize"];
+        }
+
+        if (array_key_exists("MatchedBrokerIp",$param) and $param["MatchedBrokerIp"] !== null) {
+            $this->MatchedBrokerIp = $param["MatchedBrokerIp"];
+        }
+
+        if (array_key_exists("ExecutionExtendedProps",$param) and $param["ExecutionExtendedProps"] !== null) {
+            $this->ExecutionExtendedProps = [];
+            foreach ($param["ExecutionExtendedProps"] as $key => $value){
+                $obj = new PairDto();
+                $obj->deserialize($value);
+                array_push($this->ExecutionExtendedProps, $obj);
+            }
         }
     }
 }

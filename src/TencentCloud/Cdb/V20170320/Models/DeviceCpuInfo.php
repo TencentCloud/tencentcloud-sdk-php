@@ -18,7 +18,7 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- *  CPU负载
+ * CPU负载
  *
  * @method array getRate() 获取实例CPU平均使用率
  * @method void setRate(array $Rate) 设置实例CPU平均使用率

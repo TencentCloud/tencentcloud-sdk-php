@@ -55,13 +55,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUser() 获取账号
  * @method void setUser(string $User) 设置账号
  * @method string getExampleSql() 获取样例Sql
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExampleSql(string $ExampleSql) 设置样例Sql
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHost() 获取账户的域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHost(string $Host) 设置账户的域名
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SlowLogData extends AbstractModel
 {
@@ -152,13 +148,11 @@ class SlowLogData extends AbstractModel
 
     /**
      * @var string 样例Sql
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExampleSql;
 
     /**
      * @var string 账户的域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Host;
 
@@ -181,9 +175,7 @@ class SlowLogData extends AbstractModel
      * @param string $TsMin 首次执行时间
      * @param string $User 账号
      * @param string $ExampleSql 样例Sql
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Host 账户的域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

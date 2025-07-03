@@ -21,43 +21,32 @@ use TencentCloud\Common\AbstractModel;
  * Emr询价描述
  *
  * @method string getOriginalCost() 获取刊例价格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOriginalCost(string $OriginalCost) 设置刊例价格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDiscountCost() 获取折扣价格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiscountCost(string $DiscountCost) 设置折扣价格
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUnit() 获取单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnit(string $Unit) 设置单位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method PriceResource getPriceSpec() 获取询价配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPriceSpec(PriceResource $PriceSpec) 设置询价配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getSupportSpotPaid() 获取是否支持竞价实例
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSupportSpotPaid(boolean $SupportSpotPaid) 设置是否支持竞价实例
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class EmrPrice extends AbstractModel
 {
     /**
      * @var string 刊例价格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OriginalCost;
 
     /**
      * @var string 折扣价格
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DiscountCost;
 
     /**
      * @var string 单位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Unit;
 
@@ -69,21 +58,16 @@ class EmrPrice extends AbstractModel
 
     /**
      * @var boolean 是否支持竞价实例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SupportSpotPaid;
 
     /**
      * @param string $OriginalCost 刊例价格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DiscountCost 折扣价格
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Unit 单位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param PriceResource $PriceSpec 询价配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $SupportSpotPaid 是否支持竞价实例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

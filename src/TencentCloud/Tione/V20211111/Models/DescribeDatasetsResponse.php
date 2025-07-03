@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatasetIdNums(integer $DatasetIdNums) 设置数据集ID总量
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getCFSNotReady() 获取若开启了CFSChecking，则检查CFS是否准备完毕。若CFS未准备完毕，则返回true，并且TotalCount为0，DatasetGroups为空。
+ * @method void setCFSNotReady(boolean $CFSNotReady) 设置若开启了CFSChecking，则检查CFS是否准备完毕。若CFS未准备完毕，则返回true，并且TotalCount为0，DatasetGroups为空。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -56,6 +58,11 @@ class DescribeDatasetsResponse extends AbstractModel
     public $DatasetIdNums;
 
     /**
+     * @var boolean 若开启了CFSChecking，则检查CFS是否准备完毕。若CFS未准备完毕，则返回true，并且TotalCount为0，DatasetGroups为空。
+     */
+    public $CFSNotReady;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -67,6 +74,7 @@ class DescribeDatasetsResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DatasetIdNums 数据集ID总量
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $CFSNotReady 若开启了CFSChecking，则检查CFS是否准备完毕。若CFS未准备完毕，则返回true，并且TotalCount为0，DatasetGroups为空。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -97,6 +105,10 @@ class DescribeDatasetsResponse extends AbstractModel
 
         if (array_key_exists("DatasetIdNums",$param) and $param["DatasetIdNums"] !== null) {
             $this->DatasetIdNums = $param["DatasetIdNums"];
+        }
+
+        if (array_key_exists("CFSNotReady",$param) and $param["CFSNotReady"] !== null) {
+            $this->CFSNotReady = $param["CFSNotReady"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

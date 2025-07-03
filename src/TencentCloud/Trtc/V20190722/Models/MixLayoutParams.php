@@ -62,16 +62,16 @@ use TencentCloud\Common\AbstractModel;
 这个位置的MediaId代表的是对应MaxResolutionUserId的主辅路，MixLayoutList内代表的是自定义用户的主辅路。
  * @method string getBackgroundImageUrl() 获取图片的url地址，只支持jpg, png, jpeg，大小限制不超过5M。注意，url必须携带格式后缀，url内只支持特定的字符串, 范围是a-z A-Z 0-9 '-', '.', '_', '~', ':', '/', '?', '#', '[', ']' '@', '!', '&', '(', ')', '*', '+', ',', '%', '='
  * @method void setBackgroundImageUrl(string $BackgroundImageUrl) 设置图片的url地址，只支持jpg, png, jpeg，大小限制不超过5M。注意，url必须携带格式后缀，url内只支持特定的字符串, 范围是a-z A-Z 0-9 '-', '.', '_', '~', ':', '/', '?', '#', '[', ']' '@', '!', '&', '(', ')', '*', '+', ',', '%', '='
- * @method integer getPlaceHolderMode() 获取设置为1时代表启用占位图功能，0时代表不启用占位图功能，默认为0。启用占位图功能时，在预设位置的用户没有上行视频时可显示对应的占位图。
- * @method void setPlaceHolderMode(integer $PlaceHolderMode) 设置设置为1时代表启用占位图功能，0时代表不启用占位图功能，默认为0。启用占位图功能时，在预设位置的用户没有上行视频时可显示对应的占位图。
- * @method integer getBackgroundImageRenderMode() 获取背景画面宽高比不一致的时候处理方案，与MixLayoufList定义的RenderMode一致。
- * @method void setBackgroundImageRenderMode(integer $BackgroundImageRenderMode) 设置背景画面宽高比不一致的时候处理方案，与MixLayoufList定义的RenderMode一致。
+ * @method integer getPlaceHolderMode() 获取设置为1时代表启用占位图功能，0时代表不启用占位图功能，默认为0。启用占位图功能时，在预设位置的用户没有上行音视频时可显示对应的占位图。
+ * @method void setPlaceHolderMode(integer $PlaceHolderMode) 设置设置为1时代表启用占位图功能，0时代表不启用占位图功能，默认为0。启用占位图功能时，在预设位置的用户没有上行音视频时可显示对应的占位图。
+ * @method integer getBackgroundImageRenderMode() 获取背景画面宽高比不一致的时候处理方案，与MixLayoutList定义的RenderMode一致。
+ * @method void setBackgroundImageRenderMode(integer $BackgroundImageRenderMode) 设置背景画面宽高比不一致的时候处理方案，与MixLayoutList定义的RenderMode一致。
  * @method string getDefaultSubBackgroundImage() 获取子画面占位图url地址，只支持jpg, png, jpeg，大小限制不超过5M。注意，url必须携带格式后缀，url内只支持特定的字符串, 范围是a-z A-Z 0-9 '-', '.', '_', '~', ':', '/', '?', '#', '[', ']' '@', '!', '&', '(', ')', '*', '+', ',', '%', '='
  * @method void setDefaultSubBackgroundImage(string $DefaultSubBackgroundImage) 设置子画面占位图url地址，只支持jpg, png, jpeg，大小限制不超过5M。注意，url必须携带格式后缀，url内只支持特定的字符串, 范围是a-z A-Z 0-9 '-', '.', '_', '~', ':', '/', '?', '#', '[', ']' '@', '!', '&', '(', ')', '*', '+', ',', '%', '='
  * @method array getWaterMarkList() 获取水印布局参数， 最多支持25个。
  * @method void setWaterMarkList(array $WaterMarkList) 设置水印布局参数， 最多支持25个。
- * @method integer getRenderMode() 获取模板布局下，背景画面宽高比不一致的时候处理方案。自定义布局不生效，与MixLayoufList定义的RenderMode一致。
- * @method void setRenderMode(integer $RenderMode) 设置模板布局下，背景画面宽高比不一致的时候处理方案。自定义布局不生效，与MixLayoufList定义的RenderMode一致。
+ * @method integer getRenderMode() 获取模板布局下，背景画面宽高比不一致的时候处理方案。自定义布局不生效，与MixLayoutList定义的RenderMode一致。
+ * @method void setRenderMode(integer $RenderMode) 设置模板布局下，背景画面宽高比不一致的时候处理方案。自定义布局不生效，与MixLayoutList定义的RenderMode一致。
  * @method integer getMaxResolutionUserAlign() 获取屏幕分享模板有效。设置为1时代表大画面居右，小画面居左布局。默认为0。
  * @method void setMaxResolutionUserAlign(integer $MaxResolutionUserAlign) 设置屏幕分享模板有效。设置为1时代表大画面居右，小画面居左布局。默认为0。
  */
@@ -123,12 +123,12 @@ class MixLayoutParams extends AbstractModel
     public $BackgroundImageUrl;
 
     /**
-     * @var integer 设置为1时代表启用占位图功能，0时代表不启用占位图功能，默认为0。启用占位图功能时，在预设位置的用户没有上行视频时可显示对应的占位图。
+     * @var integer 设置为1时代表启用占位图功能，0时代表不启用占位图功能，默认为0。启用占位图功能时，在预设位置的用户没有上行音视频时可显示对应的占位图。
      */
     public $PlaceHolderMode;
 
     /**
-     * @var integer 背景画面宽高比不一致的时候处理方案，与MixLayoufList定义的RenderMode一致。
+     * @var integer 背景画面宽高比不一致的时候处理方案，与MixLayoutList定义的RenderMode一致。
      */
     public $BackgroundImageRenderMode;
 
@@ -143,7 +143,7 @@ class MixLayoutParams extends AbstractModel
     public $WaterMarkList;
 
     /**
-     * @var integer 模板布局下，背景画面宽高比不一致的时候处理方案。自定义布局不生效，与MixLayoufList定义的RenderMode一致。
+     * @var integer 模板布局下，背景画面宽高比不一致的时候处理方案。自定义布局不生效，与MixLayoutList定义的RenderMode一致。
      */
     public $RenderMode;
 
@@ -174,11 +174,11 @@ class MixLayoutParams extends AbstractModel
 1：辅流（屏幕分享）；
 这个位置的MediaId代表的是对应MaxResolutionUserId的主辅路，MixLayoutList内代表的是自定义用户的主辅路。
      * @param string $BackgroundImageUrl 图片的url地址，只支持jpg, png, jpeg，大小限制不超过5M。注意，url必须携带格式后缀，url内只支持特定的字符串, 范围是a-z A-Z 0-9 '-', '.', '_', '~', ':', '/', '?', '#', '[', ']' '@', '!', '&', '(', ')', '*', '+', ',', '%', '='
-     * @param integer $PlaceHolderMode 设置为1时代表启用占位图功能，0时代表不启用占位图功能，默认为0。启用占位图功能时，在预设位置的用户没有上行视频时可显示对应的占位图。
-     * @param integer $BackgroundImageRenderMode 背景画面宽高比不一致的时候处理方案，与MixLayoufList定义的RenderMode一致。
+     * @param integer $PlaceHolderMode 设置为1时代表启用占位图功能，0时代表不启用占位图功能，默认为0。启用占位图功能时，在预设位置的用户没有上行音视频时可显示对应的占位图。
+     * @param integer $BackgroundImageRenderMode 背景画面宽高比不一致的时候处理方案，与MixLayoutList定义的RenderMode一致。
      * @param string $DefaultSubBackgroundImage 子画面占位图url地址，只支持jpg, png, jpeg，大小限制不超过5M。注意，url必须携带格式后缀，url内只支持特定的字符串, 范围是a-z A-Z 0-9 '-', '.', '_', '~', ':', '/', '?', '#', '[', ']' '@', '!', '&', '(', ')', '*', '+', ',', '%', '='
      * @param array $WaterMarkList 水印布局参数， 最多支持25个。
-     * @param integer $RenderMode 模板布局下，背景画面宽高比不一致的时候处理方案。自定义布局不生效，与MixLayoufList定义的RenderMode一致。
+     * @param integer $RenderMode 模板布局下，背景画面宽高比不一致的时候处理方案。自定义布局不生效，与MixLayoutList定义的RenderMode一致。
      * @param integer $MaxResolutionUserAlign 屏幕分享模板有效。设置为1时代表大画面居右，小画面居左布局。默认为0。
      */
     function __construct()

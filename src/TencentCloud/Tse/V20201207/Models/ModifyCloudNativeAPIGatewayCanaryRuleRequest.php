@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPriority(integer $Priority) 设置优先级，同一个服务的灰度规则优先级是唯一的
  * @method CloudNativeAPIGatewayCanaryRule getCanaryRule() 获取灰度规则配置
  * @method void setCanaryRule(CloudNativeAPIGatewayCanaryRule $CanaryRule) 设置灰度规则配置
+ * @method array getCanaryRuleList() 获取灰度规则配置列表，如果配置了此参数，将以此参数为准，忽略Priority和CanaryRule参数
+ * @method void setCanaryRuleList(array $CanaryRuleList) 设置灰度规则配置列表，如果配置了此参数，将以此参数为准，忽略Priority和CanaryRule参数
  */
 class ModifyCloudNativeAPIGatewayCanaryRuleRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ModifyCloudNativeAPIGatewayCanaryRuleRequest extends AbstractModel
     public $CanaryRule;
 
     /**
+     * @var array 灰度规则配置列表，如果配置了此参数，将以此参数为准，忽略Priority和CanaryRule参数
+     */
+    public $CanaryRuleList;
+
+    /**
      * @param string $GatewayId 网关 ID
      * @param string $ServiceId 服务 ID
      * @param integer $Priority 优先级，同一个服务的灰度规则优先级是唯一的
      * @param CloudNativeAPIGatewayCanaryRule $CanaryRule 灰度规则配置
+     * @param array $CanaryRuleList 灰度规则配置列表，如果配置了此参数，将以此参数为准，忽略Priority和CanaryRule参数
      */
     function __construct()
     {
@@ -85,6 +93,15 @@ class ModifyCloudNativeAPIGatewayCanaryRuleRequest extends AbstractModel
         if (array_key_exists("CanaryRule",$param) and $param["CanaryRule"] !== null) {
             $this->CanaryRule = new CloudNativeAPIGatewayCanaryRule();
             $this->CanaryRule->deserialize($param["CanaryRule"]);
+        }
+
+        if (array_key_exists("CanaryRuleList",$param) and $param["CanaryRuleList"] !== null) {
+            $this->CanaryRuleList = [];
+            foreach ($param["CanaryRuleList"] as $key => $value){
+                $obj = new CanaryPriorityRule();
+                $obj->deserialize($value);
+                array_push($this->CanaryRuleList, $obj);
+            }
         }
     }
 }

@@ -41,13 +41,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getErrCodeExt() 获取错误码，空字符串表示成功，其他值表示失败，取值请参考 [视频处理类错误码](https://cloud.tencent.com/document/product/266/50368#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) 列表。
  * @method void setErrCodeExt(string $ErrCodeExt) 设置错误码，空字符串表示成功，其他值表示失败，取值请参考 [视频处理类错误码](https://cloud.tencent.com/document/product/266/50368#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) 列表。
  * @method ExtractCopyRightWatermarkTaskInput getInput() 获取提取版权水印任务输入信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInput(ExtractCopyRightWatermarkTaskInput $Input) 设置提取版权水印任务输入信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ExtractCopyRightWatermarkTaskOutput getOutput() 获取提取版权水印任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutput(ExtractCopyRightWatermarkTaskOutput $Output) 设置提取版权水印任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSessionId() 获取用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
  * @method void setSessionId(string $SessionId) 设置用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
  * @method string getSessionContext() 获取来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
@@ -87,13 +83,11 @@ class ExtractCopyRightWatermarkTask extends AbstractModel
 
     /**
      * @var ExtractCopyRightWatermarkTaskInput 提取版权水印任务输入信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Input;
 
     /**
      * @var ExtractCopyRightWatermarkTaskOutput 提取版权水印任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Output;
 
@@ -119,9 +113,7 @@ class ExtractCopyRightWatermarkTask extends AbstractModel
      * @param string $Message 错误信息。
      * @param string $ErrCodeExt 错误码，空字符串表示成功，其他值表示失败，取值请参考 [视频处理类错误码](https://cloud.tencent.com/document/product/266/50368#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81) 列表。
      * @param ExtractCopyRightWatermarkTaskInput $Input 提取版权水印任务输入信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ExtractCopyRightWatermarkTaskOutput $Output 提取版权水印任务输出信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SessionId 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
      * @param string $SessionContext 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
      */

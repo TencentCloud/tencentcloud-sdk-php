@@ -49,13 +49,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getEventsCount() 获取所有事件总数
  * @method void setEventsCount(integer $EventsCount) 设置所有事件总数
  * @method SecurityEventInfo getWindowVul() 获取window 系统漏洞事件总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWindowVul(SecurityEventInfo $WindowVul) 设置window 系统漏洞事件总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method SecurityEventInfo getLinuxVul() 获取linux系统漏洞事件总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLinuxVul(SecurityEventInfo $LinuxVul) 设置linux系统漏洞事件总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -133,13 +129,11 @@ class DescribeSecurityEventsCntResponse extends AbstractModel
 
     /**
      * @var SecurityEventInfo window 系统漏洞事件总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WindowVul;
 
     /**
      * @var SecurityEventInfo linux系统漏洞事件总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LinuxVul;
 
@@ -164,9 +158,7 @@ class DescribeSecurityEventsCntResponse extends AbstractModel
      * @param integer $EffectMachineCount 受影响机器数
      * @param integer $EventsCount 所有事件总数
      * @param SecurityEventInfo $WindowVul window 系统漏洞事件总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param SecurityEventInfo $LinuxVul linux系统漏洞事件总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

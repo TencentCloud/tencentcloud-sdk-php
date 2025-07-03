@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
 需要与taskId对应
  * @method integer getNodeIpType() 获取拨测节点的IP类型，0-不限，1-IPv4，2-IPv6
  * @method void setNodeIpType(integer $NodeIpType) 设置拨测节点的IP类型，0-不限，1-IPv4，2-IPv6
+ * @method array getBatchTasks() 获取批量任务名-地址
+ * @method void setBatchTasks(array $BatchTasks) 设置批量任务名-地址
  */
 class UpdateProbeTaskConfigurationListRequest extends AbstractModel
 {
@@ -76,6 +78,11 @@ class UpdateProbeTaskConfigurationListRequest extends AbstractModel
     public $NodeIpType;
 
     /**
+     * @var array 批量任务名-地址
+     */
+    public $BatchTasks;
+
+    /**
      * @param array $TaskIds 任务 ID，如task-n1wchki8
      * @param array $Nodes 拨测节点，如10001，详细地区运营商拨测编号请联系云拨测。
      * @param integer $Interval 拨测间隔，如30，单位为分钟。
@@ -84,6 +91,7 @@ class UpdateProbeTaskConfigurationListRequest extends AbstractModel
      * @param array $ResourceIDs 预付费套餐id
 需要与taskId对应
      * @param integer $NodeIpType 拨测节点的IP类型，0-不限，1-IPv4，2-IPv6
+     * @param array $BatchTasks 批量任务名-地址
      */
     function __construct()
     {
@@ -124,6 +132,15 @@ class UpdateProbeTaskConfigurationListRequest extends AbstractModel
 
         if (array_key_exists("NodeIpType",$param) and $param["NodeIpType"] !== null) {
             $this->NodeIpType = $param["NodeIpType"];
+        }
+
+        if (array_key_exists("BatchTasks",$param) and $param["BatchTasks"] !== null) {
+            $this->BatchTasks = [];
+            foreach ($param["BatchTasks"] as $key => $value){
+                $obj = new ProbeTaskBasicConfiguration();
+                $obj->deserialize($value);
+                array_push($this->BatchTasks, $obj);
+            }
         }
     }
 }

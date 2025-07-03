@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutputName(string $OutputName) 设置输出名称。
  * @method string getOutputType() 获取输出类型。
  * @method void setOutputType(string $OutputType) 设置输出类型。
+ * @method string getOutputKind() 获取输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出。
+ * @method void setOutputKind(string $OutputKind) 设置输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出。
  * @method string getDescription() 获取输出描述。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置输出描述。
@@ -76,6 +78,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getZones() 获取可用区，output目前最多只支持一个。	
  * @method void setZones(array $Zones) 设置可用区，output目前最多只支持一个。	
+ * @method DescribeOutputRISTSettings getRISTSettings() 获取输出的RIST配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRISTSettings(DescribeOutputRISTSettings $RISTSettings) 设置输出的RIST配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method PidSelector getPidSelector() 获取对于含有多个音/视频轨的流，可以指定需要使用的轨道
+ * @method void setPidSelector(PidSelector $PidSelector) 设置对于含有多个音/视频轨的流，可以指定需要使用的轨道
+ * @method array getStreamUrls() 获取输出模块配置，相关的URL，包括提供的拉流地址，或者配置的输出到第三方的转推地址
+ * @method void setStreamUrls(array $StreamUrls) 设置输出模块配置，相关的URL，包括提供的拉流地址，或者配置的输出到第三方的转推地址
  */
 class DescribeOutput extends AbstractModel
 {
@@ -93,6 +103,11 @@ class DescribeOutput extends AbstractModel
      * @var string 输出类型。
      */
     public $OutputType;
+
+    /**
+     * @var string 输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出。
+     */
+    public $OutputKind;
 
     /**
      * @var string 输出描述。
@@ -176,9 +191,26 @@ class DescribeOutput extends AbstractModel
     public $Zones;
 
     /**
+     * @var DescribeOutputRISTSettings 输出的RIST配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RISTSettings;
+
+    /**
+     * @var PidSelector 对于含有多个音/视频轨的流，可以指定需要使用的轨道
+     */
+    public $PidSelector;
+
+    /**
+     * @var array 输出模块配置，相关的URL，包括提供的拉流地址，或者配置的输出到第三方的转推地址
+     */
+    public $StreamUrls;
+
+    /**
      * @param string $OutputId 输出Id。
      * @param string $OutputName 输出名称。
      * @param string $OutputType 输出类型。
+     * @param string $OutputKind 输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出。
      * @param string $Description 输出描述。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Protocol 输出协议。
@@ -204,6 +236,10 @@ class DescribeOutput extends AbstractModel
      * @param array $SecurityGroupIds 绑定的安全组 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Zones 可用区，output目前最多只支持一个。	
+     * @param DescribeOutputRISTSettings $RISTSettings 输出的RIST配置信息。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param PidSelector $PidSelector 对于含有多个音/视频轨的流，可以指定需要使用的轨道
+     * @param array $StreamUrls 输出模块配置，相关的URL，包括提供的拉流地址，或者配置的输出到第三方的转推地址
      */
     function __construct()
     {
@@ -228,6 +264,10 @@ class DescribeOutput extends AbstractModel
 
         if (array_key_exists("OutputType",$param) and $param["OutputType"] !== null) {
             $this->OutputType = $param["OutputType"];
+        }
+
+        if (array_key_exists("OutputKind",$param) and $param["OutputKind"] !== null) {
+            $this->OutputKind = $param["OutputKind"];
         }
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
@@ -295,6 +335,25 @@ class DescribeOutput extends AbstractModel
 
         if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
             $this->Zones = $param["Zones"];
+        }
+
+        if (array_key_exists("RISTSettings",$param) and $param["RISTSettings"] !== null) {
+            $this->RISTSettings = new DescribeOutputRISTSettings();
+            $this->RISTSettings->deserialize($param["RISTSettings"]);
+        }
+
+        if (array_key_exists("PidSelector",$param) and $param["PidSelector"] !== null) {
+            $this->PidSelector = new PidSelector();
+            $this->PidSelector->deserialize($param["PidSelector"]);
+        }
+
+        if (array_key_exists("StreamUrls",$param) and $param["StreamUrls"] !== null) {
+            $this->StreamUrls = [];
+            foreach ($param["StreamUrls"] as $key => $value){
+                $obj = new StreamUrlDetail();
+                $obj->deserialize($value);
+                array_push($this->StreamUrls, $obj);
+            }
         }
     }
 }

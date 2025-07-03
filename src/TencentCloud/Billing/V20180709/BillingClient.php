@@ -23,19 +23,29 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Billing\V20180709\Models as Models;
 
 /**
+ * @method Models\CreateAllocationRuleResponse CreateAllocationRule(Models\CreateAllocationRuleRequest $req) 创建公摊规则
  * @method Models\CreateAllocationTagResponse CreateAllocationTag(Models\CreateAllocationTagRequest $req) 批量设置分账标签
- * @method Models\CreateSavingPlanOrderResponse CreateSavingPlanOrder(Models\CreateSavingPlanOrderRequest $req) 创建节省计划订单，创建订单完成需调用PayDeals接口完成订单支付
+ * @method Models\CreateAllocationUnitResponse CreateAllocationUnit(Models\CreateAllocationUnitRequest $req) 创建分账单元
+ * @method Models\CreateGatherRuleResponse CreateGatherRule(Models\CreateGatherRuleRequest $req) 创建归集规则
+ * @method Models\DeleteAllocationRuleResponse DeleteAllocationRule(Models\DeleteAllocationRuleRequest $req) 公摊规则删除接口
  * @method Models\DeleteAllocationTagResponse DeleteAllocationTag(Models\DeleteAllocationTagRequest $req) 批量取消设置分账标签
+ * @method Models\DeleteAllocationUnitResponse DeleteAllocationUnit(Models\DeleteAllocationUnitRequest $req) 删除分账单元
+ * @method Models\DeleteGatherRuleResponse DeleteGatherRule(Models\DeleteGatherRuleRequest $req) 删除归集规则
  * @method Models\DescribeAccountBalanceResponse DescribeAccountBalance(Models\DescribeAccountBalanceRequest $req) 获取云账户余额信息。
  * @method Models\DescribeAllocateConditionsResponse DescribeAllocateConditions(Models\DescribeAllocateConditionsRequest $req) 查询资源目录筛选条件
  * @method Models\DescribeAllocationBillConditionsResponse DescribeAllocationBillConditions(Models\DescribeAllocationBillConditionsRequest $req) 查询分账账单筛选条件
  * @method Models\DescribeAllocationBillDetailResponse DescribeAllocationBillDetail(Models\DescribeAllocationBillDetailRequest $req) 查询分账账单明细
  * @method Models\DescribeAllocationMonthOverviewResponse DescribeAllocationMonthOverview(Models\DescribeAllocationMonthOverviewRequest $req) 查询分账账单月概览
  * @method Models\DescribeAllocationOverviewResponse DescribeAllocationOverview(Models\DescribeAllocationOverviewRequest $req) 查询分账账单日概览
+ * @method Models\DescribeAllocationRuleDetailResponse DescribeAllocationRuleDetail(Models\DescribeAllocationRuleDetailRequest $req) 查询公摊规则详情
+ * @method Models\DescribeAllocationRuleSummaryResponse DescribeAllocationRuleSummary(Models\DescribeAllocationRuleSummaryRequest $req) 查询所有公摊规则概览
  * @method Models\DescribeAllocationSummaryByBusinessResponse DescribeAllocationSummaryByBusiness(Models\DescribeAllocationSummaryByBusinessRequest $req) 查询分账账单按产品汇总
  * @method Models\DescribeAllocationSummaryByItemResponse DescribeAllocationSummaryByItem(Models\DescribeAllocationSummaryByItemRequest $req) 查询分账账单按组件汇总
  * @method Models\DescribeAllocationSummaryByResourceResponse DescribeAllocationSummaryByResource(Models\DescribeAllocationSummaryByResourceRequest $req) 查询分账账单按资源汇总
+ * @method Models\DescribeAllocationTreeResponse DescribeAllocationTree(Models\DescribeAllocationTreeRequest $req) 查询分账目录树
  * @method Models\DescribeAllocationTrendByMonthResponse DescribeAllocationTrendByMonth(Models\DescribeAllocationTrendByMonthRequest $req) 查询分账账单费用趋势
+ * @method Models\DescribeAllocationUnitDetailResponse DescribeAllocationUnitDetail(Models\DescribeAllocationUnitDetailRequest $req) 查询分账单元详情
+ * @method Models\DescribeBillAdjustInfoResponse DescribeBillAdjustInfo(Models\DescribeBillAdjustInfoRequest $req) 可以通过API获取当前UIN是否有调账，客户可以更快地主动地获取调账情况。
  * @method Models\DescribeBillDetailResponse DescribeBillDetail(Models\DescribeBillDetailRequest $req) 获取账单明细数据。
 注意事项：
 1.在请求接口时，由于网络不稳定或其它异常，可能会导致请求失败。如果您遇到这种情况，我们建议您在接口请求失败时，手动发起重试操作，这样可以更好地确保您的接口请求能够成功执行。
@@ -54,6 +64,9 @@ use TencentCloud\Billing\V20180709\Models as Models;
  * @method Models\DescribeBillSummaryByTagResponse DescribeBillSummaryByTag(Models\DescribeBillSummaryByTagRequest $req) 获取按标签汇总费用分布
  * @method Models\DescribeBillSummaryForOrganizationResponse DescribeBillSummaryForOrganization(Models\DescribeBillSummaryForOrganizationRequest $req) 该接口支持通过传参，按照产品、项目、地域、计费模式和标签五个维度获取账单费用明细。
  * @method Models\DescribeCostDetailResponse DescribeCostDetail(Models\DescribeCostDetailRequest $req) 查询消耗明细
+
+注意事项：
+1. 对于消耗明细数据量级很大（例如每月消耗明细量级超过100w）的客户，通过 API 调用明细数据会有超时风险，建议您开通消耗账单数据存储功能，通过存储桶中获取账单文件进行分析。[账单存储至COS桶](https://cloud.tencent.com/document/product/555/61275)
  * @method Models\DescribeCostExplorerSummaryResponse DescribeCostExplorerSummary(Models\DescribeCostExplorerSummaryRequest $req) 查看成本分析明细
  * @method Models\DescribeCostSummaryByProductResponse DescribeCostSummaryByProduct(Models\DescribeCostSummaryByProductRequest $req) 获取按产品汇总消耗详情
  * @method Models\DescribeCostSummaryByProjectResponse DescribeCostSummaryByProject(Models\DescribeCostSummaryByProjectRequest $req) 获取按项目汇总消耗详情
@@ -64,13 +77,14 @@ use TencentCloud\Billing\V20180709\Models as Models;
  * @method Models\DescribeDosageDetailByDateResponse DescribeDosageDetailByDate(Models\DescribeDosageDetailByDateRequest $req) 按日期获取产品用量明细
  * @method Models\DescribeDosageDetailListResponse DescribeDosageDetailList(Models\DescribeDosageDetailListRequest $req) 获取已接入标准用量明细模板产品的用量明细数据，目前已接入并支持查询的产品包括：云联络中心、实时音视频、实时音视频、智能媒资托管、CODING DevOps、全球IP应用加速
  * @method Models\DescribeGatherResourceResponse DescribeGatherResource(Models\DescribeGatherResourceRequest $req) 查询分账账单资源归集汇总
- * @method Models\DescribeSavingPlanCoverageResponse DescribeSavingPlanCoverage(Models\DescribeSavingPlanCoverageRequest $req) 查询当前用户节省计划覆盖率明细数据，如无特别说明，金额单位均为元（国内站）或者美元（国际站）。
- * @method Models\DescribeSavingPlanOverviewResponse DescribeSavingPlanOverview(Models\DescribeSavingPlanOverviewRequest $req) 查用当前用户明细节省计划总览查询时段内的使用情况
+ * @method Models\DescribeGatherRuleDetailResponse DescribeGatherRuleDetail(Models\DescribeGatherRuleDetailRequest $req) 查询归集规则详情
  * @method Models\DescribeSavingPlanResourceInfoResponse DescribeSavingPlanResourceInfo(Models\DescribeSavingPlanResourceInfoRequest $req) 查询节省计划详情
- * @method Models\DescribeSavingPlanUsageResponse DescribeSavingPlanUsage(Models\DescribeSavingPlanUsageRequest $req) 查用当前用户明细节省计划查询时段内的使用情况
  * @method Models\DescribeTagListResponse DescribeTagList(Models\DescribeTagListRequest $req) 获取分账标签
  * @method Models\DescribeVoucherInfoResponse DescribeVoucherInfo(Models\DescribeVoucherInfoRequest $req) 获取代金券相关信息
  * @method Models\DescribeVoucherUsageDetailsResponse DescribeVoucherUsageDetails(Models\DescribeVoucherUsageDetailsRequest $req) 获取代金券使用记录
+ * @method Models\ModifyAllocationRuleResponse ModifyAllocationRule(Models\ModifyAllocationRuleRequest $req) 编辑公摊规则
+ * @method Models\ModifyAllocationUnitResponse ModifyAllocationUnit(Models\ModifyAllocationUnitRequest $req) 修改分账单元信息
+ * @method Models\ModifyGatherRuleResponse ModifyGatherRule(Models\ModifyGatherRuleRequest $req) 编辑归集规则
  * @method Models\PayDealsResponse PayDeals(Models\PayDealsRequest $req) 支付订单
  */
 

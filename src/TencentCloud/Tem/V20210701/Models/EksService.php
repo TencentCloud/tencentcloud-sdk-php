@@ -27,67 +27,41 @@ use TencentCloud\Common\AbstractModel;
  * @method string getYaml() 获取yaml 内容
  * @method void setYaml(string $Yaml) 设置yaml 内容
  * @method string getApplicationName() 获取服务名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationName(string $ApplicationName) 设置服务名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVersionName() 获取版本名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersionName(string $VersionName) 设置版本名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getClusterIp() 获取内网ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterIp(array $ClusterIp) 设置内网ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExternalIp() 获取外网ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExternalIp(string $ExternalIp) 设置外网ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取访问类型，可选值：
 - EXTERNAL（公网访问）
 - VPC（vpc内访问）
 - CLUSTER（集群内访问）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置访问类型，可选值：
 - EXTERNAL（公网访问）
 - VPC（vpc内访问）
 - CLUSTER（集群内访问）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubnetId() 获取子网ID，只在类型为vpc访问时才有值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetId(string $SubnetId) 设置子网ID，只在类型为vpc访问时才有值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLoadBalanceId() 获取负载均衡ID，只在外网访问和vpc内访问才有值，默认自动创建
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLoadBalanceId(string $LoadBalanceId) 设置负载均衡ID，只在外网访问和vpc内访问才有值，默认自动创建
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPortMappings() 获取端口映射
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPortMappings(array $PortMappings) 设置端口映射
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getServicePortMappingList() 获取每种类型访问配置详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServicePortMappingList(array $ServicePortMappingList) 设置每种类型访问配置详情
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getFlushAll() 获取刷新复写所有类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlushAll(boolean $FlushAll) 设置刷新复写所有类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEnableRegistryNextDeploy() 获取1: 下次部署自动注入注册中心信息；0：不注入
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableRegistryNextDeploy(integer $EnableRegistryNextDeploy) 设置1: 下次部署自动注入注册中心信息；0：不注入
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApplicationId() 获取返回应用id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationId(string $ApplicationId) 设置返回应用id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getAllIpDone() 获取所有服务IP是否已经ready
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAllIpDone(boolean $AllIpDone) 设置所有服务IP是否已经ready
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExternalDomain() 获取clb 域名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExternalDomain(string $ExternalDomain) 设置clb 域名
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class EksService extends AbstractModel
 {
@@ -108,25 +82,21 @@ class EksService extends AbstractModel
 
     /**
      * @var string 服务名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationName;
 
     /**
      * @var string 版本名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VersionName;
 
     /**
      * @var array 内网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterIp;
 
     /**
      * @var string 外网ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExternalIp;
 
@@ -135,37 +105,31 @@ class EksService extends AbstractModel
 - EXTERNAL（公网访问）
 - VPC（vpc内访问）
 - CLUSTER（集群内访问）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 子网ID，只在类型为vpc访问时才有值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetId;
 
     /**
      * @var string 负载均衡ID，只在外网访问和vpc内访问才有值，默认自动创建
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LoadBalanceId;
 
     /**
      * @var array 端口映射
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PortMappings;
 
     /**
      * @var array 每种类型访问配置详情
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServicePortMappingList;
 
     /**
      * @var boolean 刷新复写所有类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlushAll;
 
@@ -177,19 +141,16 @@ class EksService extends AbstractModel
 
     /**
      * @var string 返回应用id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationId;
 
     /**
      * @var boolean 所有服务IP是否已经ready
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AllIpDone;
 
     /**
      * @var string clb 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExternalDomain;
 
@@ -198,36 +159,23 @@ class EksService extends AbstractModel
      * @param array $Ports 可用端口
      * @param string $Yaml yaml 内容
      * @param string $ApplicationName 服务名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VersionName 版本名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ClusterIp 内网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExternalIp 外网ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 访问类型，可选值：
 - EXTERNAL（公网访问）
 - VPC（vpc内访问）
 - CLUSTER（集群内访问）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 子网ID，只在类型为vpc访问时才有值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LoadBalanceId 负载均衡ID，只在外网访问和vpc内访问才有值，默认自动创建
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PortMappings 端口映射
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ServicePortMappingList 每种类型访问配置详情
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $FlushAll 刷新复写所有类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EnableRegistryNextDeploy 1: 下次部署自动注入注册中心信息；0：不注入
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationId 返回应用id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $AllIpDone 所有服务IP是否已经ready
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExternalDomain clb 域名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

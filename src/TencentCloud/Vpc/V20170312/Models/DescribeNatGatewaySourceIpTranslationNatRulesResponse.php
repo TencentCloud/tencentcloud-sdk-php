@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * DescribeNatGatewaySourceIpTranslationNatRules返回参数结构体
  *
  * @method array getSourceIpTranslationNatRuleSet() 获取NAT网关SNAT规则对象数组。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSourceIpTranslationNatRuleSet(array $SourceIpTranslationNatRuleSet) 设置NAT网关SNAT规则对象数组。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取符合条件的NAT网关端口转发规则对象数目。
  * @method void setTotalCount(integer $TotalCount) 设置符合条件的NAT网关端口转发规则对象数目。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -33,7 +31,6 @@ class DescribeNatGatewaySourceIpTranslationNatRulesResponse extends AbstractMode
 {
     /**
      * @var array NAT网关SNAT规则对象数组。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SourceIpTranslationNatRuleSet;
 
@@ -49,7 +46,6 @@ class DescribeNatGatewaySourceIpTranslationNatRulesResponse extends AbstractMode
 
     /**
      * @param array $SourceIpTranslationNatRuleSet NAT网关SNAT规则对象数组。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 符合条件的NAT网关端口转发规则对象数目。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

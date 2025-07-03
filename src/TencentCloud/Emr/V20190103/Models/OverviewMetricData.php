@@ -21,21 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * 概览数据
  *
  * @method string getMetric() 获取指标名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetric(string $Metric) 设置指标名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFirst() 获取第一个数据时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFirst(integer $First) 设置第一个数据时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLast() 获取最后一个数据时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLast(integer $Last) 设置最后一个数据时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getInterval() 获取采样点时间间隔
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInterval(integer $Interval) 设置采样点时间间隔
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDataPoints() 获取采样点数据
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataPoints(array $DataPoints) 设置采样点数据
@@ -49,25 +41,21 @@ class OverviewMetricData extends AbstractModel
 {
     /**
      * @var string 指标名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Metric;
 
     /**
      * @var integer 第一个数据时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $First;
 
     /**
      * @var integer 最后一个数据时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Last;
 
     /**
      * @var integer 采样点时间间隔
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Interval;
 
@@ -85,13 +73,9 @@ class OverviewMetricData extends AbstractModel
 
     /**
      * @param string $Metric 指标名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $First 第一个数据时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Last 最后一个数据时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Interval 采样点时间间隔
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DataPoints 采样点数据
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MetricTags $Tags 指标tags

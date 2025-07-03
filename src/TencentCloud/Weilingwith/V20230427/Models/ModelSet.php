@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 模型列表查询结果
  *
  * @method integer getPageNumber() 获取第几页
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPageNumber(integer $PageNumber) 设置第几页
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPageSize() 获取每页条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPageSize(integer $PageSize) 设置每页条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalPage() 获取总页数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalPage(integer $TotalPage) 设置总页数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalRow() 获取总条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalRow(integer $TotalRow) 设置总条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSet() 获取模型基础信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSet(array $Set) 设置模型基础信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ModelSet extends AbstractModel
 {
     /**
      * @var integer 第几页
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PageNumber;
 
     /**
      * @var integer 每页条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PageSize;
 
     /**
      * @var integer 总页数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalPage;
 
     /**
      * @var integer 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalRow;
 
     /**
      * @var array 模型基础信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Set;
 
     /**
      * @param integer $PageNumber 第几页
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PageSize 每页条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalPage 总页数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalRow 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Set 模型基础信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

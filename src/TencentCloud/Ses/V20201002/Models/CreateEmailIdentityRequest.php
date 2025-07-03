@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEmailIdentity() 获取您的发信域名，建议使用三级以上域名。例如：mail.qcloud.com。
  * @method void setEmailIdentity(string $EmailIdentity) 设置您的发信域名，建议使用三级以上域名。例如：mail.qcloud.com。
+ * @method integer getDKIMOption() 获取生成的dkim密钥长度。0:1024，1:2048
+ * @method void setDKIMOption(integer $DKIMOption) 设置生成的dkim密钥长度。0:1024，1:2048
  */
 class CreateEmailIdentityRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class CreateEmailIdentityRequest extends AbstractModel
     public $EmailIdentity;
 
     /**
+     * @var integer 生成的dkim密钥长度。0:1024，1:2048
+     */
+    public $DKIMOption;
+
+    /**
      * @param string $EmailIdentity 您的发信域名，建议使用三级以上域名。例如：mail.qcloud.com。
+     * @param integer $DKIMOption 生成的dkim密钥长度。0:1024，1:2048
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class CreateEmailIdentityRequest extends AbstractModel
         }
         if (array_key_exists("EmailIdentity",$param) and $param["EmailIdentity"] !== null) {
             $this->EmailIdentity = $param["EmailIdentity"];
+        }
+
+        if (array_key_exists("DKIMOption",$param) and $param["DKIMOption"] !== null) {
+            $this->DKIMOption = $param["DKIMOption"];
         }
     }
 }

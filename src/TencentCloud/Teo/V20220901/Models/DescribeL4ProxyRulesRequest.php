@@ -28,11 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置分页查询偏移量，不填写时默认为 0。	
  * @method integer getLimit() 获取分页查询限制数目。默认值：20，最大值：1000。	
  * @method void setLimit(integer $Limit) 设置分页查询限制数目。默认值：20，最大值：1000。	
- * @method array getFilters() 获取过滤条件，Filters.Values的上限为20。不填写时返回当前四层实例下所有的规则信息，详细的过滤条件如下： 
- <li>rule-tag：按照规则标签对四层代理实例下的规则进行过滤。</li>
-
- * @method void setFilters(array $Filters) 设置过滤条件，Filters.Values的上限为20。不填写时返回当前四层实例下所有的规则信息，详细的过滤条件如下： 
- <li>rule-tag：按照规则标签对四层代理实例下的规则进行过滤。</li>
+ * @method array getFilters() 获取过滤条件，Filters.Values的上限为20。不填写时返回当前四层实例下所有的规则信息，详细的过滤条件如下：  <li>rule-id：按照规则 ID 对四层代理实例下的规则进行过滤。规则 ID 形如：rule-31vv7qig0vjy；</li> <li>rule-tag：按照规则标签对四层代理实例下的规则进行过滤。</li>
+ * @method void setFilters(array $Filters) 设置过滤条件，Filters.Values的上限为20。不填写时返回当前四层实例下所有的规则信息，详细的过滤条件如下：  <li>rule-id：按照规则 ID 对四层代理实例下的规则进行过滤。规则 ID 形如：rule-31vv7qig0vjy；</li> <li>rule-tag：按照规则标签对四层代理实例下的规则进行过滤。</li>
  */
 class DescribeL4ProxyRulesRequest extends AbstractModel
 {
@@ -57,9 +54,7 @@ class DescribeL4ProxyRulesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var array 过滤条件，Filters.Values的上限为20。不填写时返回当前四层实例下所有的规则信息，详细的过滤条件如下： 
- <li>rule-tag：按照规则标签对四层代理实例下的规则进行过滤。</li>
-
+     * @var array 过滤条件，Filters.Values的上限为20。不填写时返回当前四层实例下所有的规则信息，详细的过滤条件如下：  <li>rule-id：按照规则 ID 对四层代理实例下的规则进行过滤。规则 ID 形如：rule-31vv7qig0vjy；</li> <li>rule-tag：按照规则标签对四层代理实例下的规则进行过滤。</li>
      */
     public $Filters;
 
@@ -68,8 +63,7 @@ class DescribeL4ProxyRulesRequest extends AbstractModel
      * @param string $ProxyId 四层代理实例 ID。
      * @param integer $Offset 分页查询偏移量，不填写时默认为 0。	
      * @param integer $Limit 分页查询限制数目。默认值：20，最大值：1000。	
-     * @param array $Filters 过滤条件，Filters.Values的上限为20。不填写时返回当前四层实例下所有的规则信息，详细的过滤条件如下： 
- <li>rule-tag：按照规则标签对四层代理实例下的规则进行过滤。</li>
+     * @param array $Filters 过滤条件，Filters.Values的上限为20。不填写时返回当前四层实例下所有的规则信息，详细的过滤条件如下：  <li>rule-id：按照规则 ID 对四层代理实例下的规则进行过滤。规则 ID 形如：rule-31vv7qig0vjy；</li> <li>rule-tag：按照规则标签对四层代理实例下的规则进行过滤。</li>
      */
     function __construct()
     {

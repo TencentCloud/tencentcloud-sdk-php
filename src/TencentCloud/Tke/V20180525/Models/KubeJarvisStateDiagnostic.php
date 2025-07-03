@@ -21,105 +21,73 @@ use TencentCloud\Common\AbstractModel;
  * 集群巡检诊断结果
  *
  * @method string getStartTime() 获取诊断开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(string $StartTime) 设置诊断开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndTime() 获取诊断结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置诊断结束时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCatalogues() 获取诊断目录
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCatalogues(array $Catalogues) 设置诊断目录
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取诊断类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置诊断类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取诊断名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置诊断名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDesc() 获取诊断描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDesc(string $Desc) 设置诊断描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getResults() 获取诊断结果列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResults(array $Results) 设置诊断结果列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getStatistics() 获取诊断结果统计
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatistics(array $Statistics) 设置诊断结果统计
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class KubeJarvisStateDiagnostic extends AbstractModel
 {
     /**
      * @var string 诊断开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
      * @var string 诊断结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
     /**
      * @var array 诊断目录
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Catalogues;
 
     /**
      * @var string 诊断类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 诊断名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 诊断描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Desc;
 
     /**
      * @var array 诊断结果列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Results;
 
     /**
      * @var array 诊断结果统计
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Statistics;
 
     /**
      * @param string $StartTime 诊断开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndTime 诊断结束时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Catalogues 诊断目录
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type 诊断类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 诊断名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Desc 诊断描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Results 诊断结果列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Statistics 诊断结果统计
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

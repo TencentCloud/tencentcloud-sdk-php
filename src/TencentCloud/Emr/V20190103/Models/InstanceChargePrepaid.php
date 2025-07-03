@@ -19,7 +19,6 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * 实例预付费参数，只有在付费类型为PREPAID时生效。
-
  *
  * @method integer getPeriod() 获取包年包月时间，默认为1，单位：月。
 取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11, 12, 24, 36, 48, 60。

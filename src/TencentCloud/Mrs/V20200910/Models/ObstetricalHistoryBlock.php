@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 婚姻-生育史
  *
  * @method MenstrualHistoryDetailBlock getMarriageHistory() 获取婚姻史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMarriageHistory(MenstrualHistoryDetailBlock $MarriageHistory) 设置婚姻史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method FertilityHistoryBlock getFertilityHistory() 获取婚育史
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFertilityHistory(FertilityHistoryBlock $FertilityHistory) 设置婚育史
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ObstetricalHistoryBlock extends AbstractModel
 {
     /**
      * @var MenstrualHistoryDetailBlock 婚姻史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MarriageHistory;
 
     /**
      * @var FertilityHistoryBlock 婚育史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FertilityHistory;
 
     /**
      * @param MenstrualHistoryDetailBlock $MarriageHistory 婚姻史
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FertilityHistoryBlock $FertilityHistory 婚育史
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

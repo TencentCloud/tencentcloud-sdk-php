@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 文字水印配置
  *
  * @method string getText() 获取文字水印内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setText(string $Text) 设置文字水印内容
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getColor() 获取文字水印颜色
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setColor(string $Color) 设置文字水印颜色
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TextMarkConfig extends AbstractModel
 {
     /**
      * @var string 文字水印内容
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Text;
 
     /**
      * @var string 文字水印颜色
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Color;
 
     /**
      * @param string $Text 文字水印内容
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Color 文字水印颜色
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

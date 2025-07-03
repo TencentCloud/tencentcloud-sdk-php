@@ -21,13 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * DescribeDSPACOSDiscoveryTaskResult返回参数结构体
  *
  * @method array getItems() 获取扫描任务结果项
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setItems(array $Items) 设置扫描任务结果项
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取符合条件的数据结果数目
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置符合条件的数据结果数目
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMaxCount() 获取最大展示扫描结果次数
+ * @method void setMaxCount(integer $MaxCount) 设置最大展示扫描结果次数
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,15 +33,18 @@ class DescribeDSPACOSDiscoveryTaskResultResponse extends AbstractModel
 {
     /**
      * @var array 扫描任务结果项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Items;
 
     /**
      * @var integer 符合条件的数据结果数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
+
+    /**
+     * @var integer 最大展示扫描结果次数
+     */
+    public $MaxCount;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -52,9 +53,8 @@ class DescribeDSPACOSDiscoveryTaskResultResponse extends AbstractModel
 
     /**
      * @param array $Items 扫描任务结果项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 符合条件的数据结果数目
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MaxCount 最大展示扫描结果次数
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -81,6 +81,10 @@ class DescribeDSPACOSDiscoveryTaskResultResponse extends AbstractModel
 
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("MaxCount",$param) and $param["MaxCount"] !== null) {
+            $this->MaxCount = $param["MaxCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -33,7 +33,6 @@ use TencentCloud\Common\AbstractModel;
 注释：支持标准中国大陆11位手机号MD5加密后位的32位小写字符串；
      支持标准中国大陆11位手机号SHA256加密后位的64位小写字符串。
  * @method string getDeviceId() 获取用户设备号（已不推荐使用）。
-
  * @method void setDeviceId(string $DeviceId) 设置用户设备号（已不推荐使用）。
  */
 class QQAccountInfo extends AbstractModel
@@ -62,7 +61,6 @@ class QQAccountInfo extends AbstractModel
 
     /**
      * @var string 用户设备号（已不推荐使用）。
-
      */
     public $DeviceId;
 

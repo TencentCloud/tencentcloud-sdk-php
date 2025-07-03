@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 删除员工结果
  *
  * @method array getSuccessEmployeeData() 获取删除员工的成功数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSuccessEmployeeData(array $SuccessEmployeeData) 设置删除员工的成功数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getFailedEmployeeData() 获取删除员工的失败数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailedEmployeeData(array $FailedEmployeeData) 设置删除员工的失败数据
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DeleteStaffsResult extends AbstractModel
 {
     /**
      * @var array 删除员工的成功数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SuccessEmployeeData;
 
     /**
      * @var array 删除员工的失败数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailedEmployeeData;
 
     /**
      * @param array $SuccessEmployeeData 删除员工的成功数据
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FailedEmployeeData 删除员工的失败数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

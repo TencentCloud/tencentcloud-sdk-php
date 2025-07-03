@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * DestroyInstance返回参数结构体
  *
  * @method string getFlowID() 获取作业id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowID(string $FlowID) 设置作业id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceID() 获取集群id
  * @method void setInstanceID(string $InstanceID) 设置集群id
  * @method string getErrorMsg() 获取错误信息
@@ -35,7 +33,6 @@ class DestroyInstanceResponse extends AbstractModel
 {
     /**
      * @var string 作业id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowID;
 
@@ -56,7 +53,6 @@ class DestroyInstanceResponse extends AbstractModel
 
     /**
      * @param string $FlowID 作业id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceID 集群id
      * @param string $ErrorMsg 错误信息
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。

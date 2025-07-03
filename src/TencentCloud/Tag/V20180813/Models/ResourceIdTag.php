@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 资源标签键值
  *
  * @method string getResourceId() 获取资源唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceId(string $ResourceId) 设置资源唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTagKeyValues() 获取标签键值对
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagKeyValues(array $TagKeyValues) 设置标签键值对
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ResourceIdTag extends AbstractModel
 {
     /**
      * @var string 资源唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceId;
 
     /**
      * @var array 标签键值对
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagKeyValues;
 
     /**
      * @param string $ResourceId 资源唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TagKeyValues 标签键值对
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

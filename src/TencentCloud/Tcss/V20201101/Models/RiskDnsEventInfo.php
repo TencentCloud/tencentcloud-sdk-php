@@ -128,6 +128,10 @@ EVENT_ADD_WHITE：已加白
  * @method void setNodeUniqueID(string $NodeUniqueID) 设置节点唯一id
  * @method string getClusterName() 获取集群名称
  * @method void setClusterName(string $ClusterName) 设置集群名称
+ * @method string getImageId() 获取镜像ID
+ * @method void setImageId(string $ImageId) 设置镜像ID
+ * @method string getContainerId() 获取容器ID
+ * @method void setContainerId(string $ContainerId) 设置容器ID
  */
 class RiskDnsEventInfo extends AbstractModel
 {
@@ -306,6 +310,16 @@ EVENT_ADD_WHITE：已加白
     public $ClusterName;
 
     /**
+     * @var string 镜像ID
+     */
+    public $ImageId;
+
+    /**
+     * @var string 容器ID
+     */
+    public $ContainerId;
+
+    /**
      * @param integer $EventID 事件ID
      * @param string $EventType 事件类型，恶意域名请求：DOMAIN，恶意IP请求：IP
      * @param string $Address 恶意请求域名/IP
@@ -360,6 +374,8 @@ EVENT_ADD_WHITE：已加白
      * @param string $NodeID 节点id
      * @param string $NodeUniqueID 节点唯一id
      * @param string $ClusterName 集群名称
+     * @param string $ImageId 镜像ID
+     * @param string $ContainerId 容器ID
      */
     function __construct()
     {
@@ -492,6 +508,14 @@ EVENT_ADD_WHITE：已加白
 
         if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
             $this->ClusterName = $param["ClusterName"];
+        }
+
+        if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
+            $this->ImageId = $param["ImageId"];
+        }
+
+        if (array_key_exists("ContainerId",$param) and $param["ContainerId"] !== null) {
+            $this->ContainerId = $param["ContainerId"];
         }
     }
 }

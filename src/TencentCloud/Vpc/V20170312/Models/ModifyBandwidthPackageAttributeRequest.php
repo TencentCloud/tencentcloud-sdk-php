@@ -24,10 +24,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBandwidthPackageId(string $BandwidthPackageId) 设置带宽包唯一标识ID
  * @method string getBandwidthPackageName() 获取带宽包名称
  * @method void setBandwidthPackageName(string $BandwidthPackageName) 设置带宽包名称
- * @method string getChargeType() 获取带宽包计费模式，示例 ：
-'TOP5_POSTPAID_BY_MONTH'（后付费-TOP5计费）
- * @method void setChargeType(string $ChargeType) 设置带宽包计费模式，示例 ：
-'TOP5_POSTPAID_BY_MONTH'（后付费-TOP5计费）
+ * @method string getChargeType() 获取带宽包计费模式，可选值:
+<li>ENHANCED95_POSTPAID_BY_MONTH: 后付费-增强型95计费</li>
+<li>PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: 后付费-按主流量计费</li>
+<li>BANDWIDTH_POSTPAID_BY_DAY: 常规BGP-后付费-按带宽计费</li>
+<li>FIXED_PREPAID_BY_MONTH: 常规BGP-预付费</li>
+<li>PEAK_BANDWIDTH_POSTPAID_BY_DAY: 静态单线-后付费-按日结算</li>
+<li>TOP5_POSTPAID_BY_MONTH: 后付费-TOP5计费，如需使用，请提交工单申请</li>
+ * @method void setChargeType(string $ChargeType) 设置带宽包计费模式，可选值:
+<li>ENHANCED95_POSTPAID_BY_MONTH: 后付费-增强型95计费</li>
+<li>PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: 后付费-按主流量计费</li>
+<li>BANDWIDTH_POSTPAID_BY_DAY: 常规BGP-后付费-按带宽计费</li>
+<li>FIXED_PREPAID_BY_MONTH: 常规BGP-预付费</li>
+<li>PEAK_BANDWIDTH_POSTPAID_BY_DAY: 静态单线-后付费-按日结算</li>
+<li>TOP5_POSTPAID_BY_MONTH: 后付费-TOP5计费，如需使用，请提交工单申请</li>
  */
 class ModifyBandwidthPackageAttributeRequest extends AbstractModel
 {
@@ -42,16 +52,26 @@ class ModifyBandwidthPackageAttributeRequest extends AbstractModel
     public $BandwidthPackageName;
 
     /**
-     * @var string 带宽包计费模式，示例 ：
-'TOP5_POSTPAID_BY_MONTH'（后付费-TOP5计费）
+     * @var string 带宽包计费模式，可选值:
+<li>ENHANCED95_POSTPAID_BY_MONTH: 后付费-增强型95计费</li>
+<li>PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: 后付费-按主流量计费</li>
+<li>BANDWIDTH_POSTPAID_BY_DAY: 常规BGP-后付费-按带宽计费</li>
+<li>FIXED_PREPAID_BY_MONTH: 常规BGP-预付费</li>
+<li>PEAK_BANDWIDTH_POSTPAID_BY_DAY: 静态单线-后付费-按日结算</li>
+<li>TOP5_POSTPAID_BY_MONTH: 后付费-TOP5计费，如需使用，请提交工单申请</li>
      */
     public $ChargeType;
 
     /**
      * @param string $BandwidthPackageId 带宽包唯一标识ID
      * @param string $BandwidthPackageName 带宽包名称
-     * @param string $ChargeType 带宽包计费模式，示例 ：
-'TOP5_POSTPAID_BY_MONTH'（后付费-TOP5计费）
+     * @param string $ChargeType 带宽包计费模式，可选值:
+<li>ENHANCED95_POSTPAID_BY_MONTH: 后付费-增强型95计费</li>
+<li>PRIMARY_TRAFFIC_POSTPAID_BY_HOUR: 后付费-按主流量计费</li>
+<li>BANDWIDTH_POSTPAID_BY_DAY: 常规BGP-后付费-按带宽计费</li>
+<li>FIXED_PREPAID_BY_MONTH: 常规BGP-预付费</li>
+<li>PEAK_BANDWIDTH_POSTPAID_BY_DAY: 静态单线-后付费-按日结算</li>
+<li>TOP5_POSTPAID_BY_MONTH: 后付费-TOP5计费，如需使用，请提交工单申请</li>
      */
     function __construct()
     {

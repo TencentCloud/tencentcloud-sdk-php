@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 指定tag镜像内容相同的tag列表
  *
  * @method array getSameImages() 获取tag列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSameImages(array $SameImages) 设置tag列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SameImagesResp extends AbstractModel
 {
     /**
      * @var array tag列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SameImages;
 
     /**
      * @param array $SameImages tag列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

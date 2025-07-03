@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 数据库不一致的详情，mongodb业务用到
  *
  * @method integer getTotalCount() 获取总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getItems() 获取不一致详情
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setItems(array $Items) 设置不一致详情
@@ -33,7 +31,6 @@ class DifferenceAdvancedObjectsDetail extends AbstractModel
 {
     /**
      * @var integer 总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
@@ -45,7 +42,6 @@ class DifferenceAdvancedObjectsDetail extends AbstractModel
 
     /**
      * @param integer $TotalCount 总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Items 不一致详情
 注意：此字段可能返回 null，表示取不到有效值。
      */

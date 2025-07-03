@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 接收组信息
  *
  * @method array getReceiveGroup() 获取接收组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReceiveGroup(array $ReceiveGroup) 设置接收组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndReceiveTime() 获取最后接收时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndReceiveTime(string $EndReceiveTime) 设置最后接收时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReceiveName() 获取接收名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReceiveName(string $ReceiveName) 设置接收名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSendChannel() 获取推送渠道
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSendChannel(array $SendChannel) 设置推送渠道
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStartReceiveTime() 获取开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartReceiveTime(string $StartReceiveTime) 设置开始时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getReceiveUin() 获取接收用户列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReceiveUin(array $ReceiveUin) 设置接收用户列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ReceiveInfo extends AbstractModel
 {
     /**
      * @var array 接收组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReceiveGroup;
 
     /**
      * @var string 最后接收时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndReceiveTime;
 
     /**
      * @var string 接收名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReceiveName;
 
     /**
      * @var array 推送渠道
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SendChannel;
 
     /**
      * @var string 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartReceiveTime;
 
     /**
      * @var array 接收用户列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReceiveUin;
 
     /**
      * @param array $ReceiveGroup 接收组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndReceiveTime 最后接收时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReceiveName 接收名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SendChannel 推送渠道
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StartReceiveTime 开始时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ReceiveUin 接收用户列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

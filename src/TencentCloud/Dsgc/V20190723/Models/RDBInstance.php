@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getResourceRegion() 获取资源所在地域
  * @method void setResourceRegion(string $ResourceRegion) 设置资源所在地域
  * @method array getDBs() 获取若未来扩展到DBName粒度，可采用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDBs(array $DBs) 设置若未来扩展到DBName粒度，可采用
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RDBInstance extends AbstractModel
 {
@@ -50,7 +48,6 @@ class RDBInstance extends AbstractModel
 
     /**
      * @var array 若未来扩展到DBName粒度，可采用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DBs;
 
@@ -59,7 +56,6 @@ class RDBInstance extends AbstractModel
      * @param string $DataSourceType cdb, dcdb, mariadb, postgres, cynosdbpg, cynosdbmysql, cos, mysql_like_proto, postgre_like_proto
      * @param string $ResourceRegion 资源所在地域
      * @param array $DBs 若未来扩展到DBName粒度，可采用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -20,62 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BankCard4EVerification请求参数结构体
  *
- * @method string getName() 获取姓名
- * @method void setName(string $Name) 设置姓名
- * @method string getBankCard() 获取银行卡
- * @method void setBankCard(string $BankCard) 设置银行卡
- * @method string getPhone() 获取手机号码
- * @method void setPhone(string $Phone) 设置手机号码
- * @method string getIdCard() 获取开户证件号，与CertType参数的证件类型一致，如：身份证，则传入身份证号。
- * @method void setIdCard(string $IdCard) 设置开户证件号，与CertType参数的证件类型一致，如：身份证，则传入身份证号。
- * @method integer getCertType() 获取证件类型，请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。
-目前默认为0：身份证，其他证件类型暂不支持。
- * @method void setCertType(integer $CertType) 设置证件类型，请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。
-目前默认为0：身份证，其他证件类型暂不支持。
- * @method Encryption getEncryption() 获取敏感数据加密信息。对传入信息（姓名、身份证号、手机号、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
- * @method void setEncryption(Encryption $Encryption) 设置敏感数据加密信息。对传入信息（姓名、身份证号、手机号、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+ * @method string getName() 获取姓名。
+ * @method void setName(string $Name) 设置姓名。
+ * @method string getBankCard() 获取银行卡。
+ * @method void setBankCard(string $BankCard) 设置银行卡。
+ * @method string getPhone() 获取手机号码。
+ * @method void setPhone(string $Phone) 设置手机号码。
+ * @method string getIdCard() 获取开户证件号。
+- 与CertType参数的证件类型一致，如：身份证，则传入身份证号。
+ * @method void setIdCard(string $IdCard) 设置开户证件号。
+- 与CertType参数的证件类型一致，如：身份证，则传入身份证号。
+ * @method integer getCertType() 获取证件类型。
+- 请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。
+- 目前默认为0：身份证，其他证件类型暂不支持。
+ * @method void setCertType(integer $CertType) 设置证件类型。
+- 请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。
+- 目前默认为0：身份证，其他证件类型暂不支持。
+ * @method Encryption getEncryption() 获取敏感数据加密信息。
+- 对传入信息（姓名、身份证号、手机号、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+ * @method void setEncryption(Encryption $Encryption) 设置敏感数据加密信息。
+- 对传入信息（姓名、身份证号、手机号、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
  */
 class BankCard4EVerificationRequest extends AbstractModel
 {
     /**
-     * @var string 姓名
+     * @var string 姓名。
      */
     public $Name;
 
     /**
-     * @var string 银行卡
+     * @var string 银行卡。
      */
     public $BankCard;
 
     /**
-     * @var string 手机号码
+     * @var string 手机号码。
      */
     public $Phone;
 
     /**
-     * @var string 开户证件号，与CertType参数的证件类型一致，如：身份证，则传入身份证号。
+     * @var string 开户证件号。
+- 与CertType参数的证件类型一致，如：身份证，则传入身份证号。
      */
     public $IdCard;
 
     /**
-     * @var integer 证件类型，请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。
-目前默认为0：身份证，其他证件类型暂不支持。
+     * @var integer 证件类型。
+- 请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。
+- 目前默认为0：身份证，其他证件类型暂不支持。
      */
     public $CertType;
 
     /**
-     * @var Encryption 敏感数据加密信息。对传入信息（姓名、身份证号、手机号、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * @var Encryption 敏感数据加密信息。
+- 对传入信息（姓名、身份证号、手机号、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
      */
     public $Encryption;
 
     /**
-     * @param string $Name 姓名
-     * @param string $BankCard 银行卡
-     * @param string $Phone 手机号码
-     * @param string $IdCard 开户证件号，与CertType参数的证件类型一致，如：身份证，则传入身份证号。
-     * @param integer $CertType 证件类型，请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。
-目前默认为0：身份证，其他证件类型暂不支持。
-     * @param Encryption $Encryption 敏感数据加密信息。对传入信息（姓名、身份证号、手机号、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+     * @param string $Name 姓名。
+     * @param string $BankCard 银行卡。
+     * @param string $Phone 手机号码。
+     * @param string $IdCard 开户证件号。
+- 与CertType参数的证件类型一致，如：身份证，则传入身份证号。
+     * @param integer $CertType 证件类型。
+- 请确认该证件为开户时使用的证件类型，未用于开户的证件信息不支持验证。
+- 目前默认为0：身份证，其他证件类型暂不支持。
+     * @param Encryption $Encryption 敏感数据加密信息。
+- 对传入信息（姓名、身份证号、手机号、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
      */
     function __construct()
     {

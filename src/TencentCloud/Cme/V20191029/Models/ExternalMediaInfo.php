@@ -36,6 +36,7 @@ class ExternalMediaInfo extends AbstractModel
 
     /**
      * @var integer 该字段废弃，请勿使用。
+     * @deprecated
      */
     public $Definition;
 

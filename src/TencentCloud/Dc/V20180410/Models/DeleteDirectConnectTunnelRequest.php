@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteDirectConnectTunnel请求参数结构体
  *
- * @method string getDirectConnectTunnelId() 获取专用通道ID
- * @method void setDirectConnectTunnelId(string $DirectConnectTunnelId) 设置专用通道ID
+ * @method string getDirectConnectTunnelId() 获取专用通道ID。
+ * @method void setDirectConnectTunnelId(string $DirectConnectTunnelId) 设置专用通道ID。
  */
 class DeleteDirectConnectTunnelRequest extends AbstractModel
 {
     /**
-     * @var string 专用通道ID
+     * @var string 专用通道ID。
      */
     public $DirectConnectTunnelId;
 
     /**
-     * @param string $DirectConnectTunnelId 专用通道ID
+     * @param string $DirectConnectTunnelId 专用通道ID。
      */
     function __construct()
     {

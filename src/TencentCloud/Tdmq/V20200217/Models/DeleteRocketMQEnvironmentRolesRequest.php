@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvironmentId(string $EnvironmentId) 设置环境（命名空间）名称。
  * @method array getRoleNames() 获取角色名称数组。
  * @method void setRoleNames(array $RoleNames) 设置角色名称数组。
- * @method string getClusterId() 获取必填字段，集群的ID
- * @method void setClusterId(string $ClusterId) 设置必填字段，集群的ID
+ * @method string getClusterId() 获取集群的ID
+ * @method void setClusterId(string $ClusterId) 设置集群的ID
  */
 class DeleteRocketMQEnvironmentRolesRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DeleteRocketMQEnvironmentRolesRequest extends AbstractModel
     public $RoleNames;
 
     /**
-     * @var string 必填字段，集群的ID
+     * @var string 集群的ID
      */
     public $ClusterId;
 
     /**
      * @param string $EnvironmentId 环境（命名空间）名称。
      * @param array $RoleNames 角色名称数组。
-     * @param string $ClusterId 必填字段，集群的ID
+     * @param string $ClusterId 集群的ID
      */
     function __construct()
     {

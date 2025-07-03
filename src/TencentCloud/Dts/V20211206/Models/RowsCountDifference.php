@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * mongodb行校验不一致详细信息
  *
  * @method string getDb() 获取数据库名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDb(string $Db) 设置数据库名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTable() 获取集合
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTable(string $Table) 设置集合
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSrcCount() 获取源端行数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSrcCount(integer $SrcCount) 设置源端行数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDstCount() 获取目标端行数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDstCount(integer $DstCount) 设置目标端行数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RowsCountDifference extends AbstractModel
 {
     /**
      * @var string 数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Db;
 
     /**
      * @var string 集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Table;
 
     /**
      * @var integer 源端行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SrcCount;
 
     /**
      * @var integer 目标端行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DstCount;
 
     /**
      * @param string $Db 数据库名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Table 集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SrcCount 源端行数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DstCount 目标端行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

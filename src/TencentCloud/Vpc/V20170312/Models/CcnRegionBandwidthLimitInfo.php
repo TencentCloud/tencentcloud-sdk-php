@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 云联网（CCN）地域出带宽上限。
  *
  * @method string getSourceRegion() 获取源地域，例如：ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSourceRegion(string $SourceRegion) 设置源地域，例如：ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDestinationRegion() 获取目的地域， 例如：ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDestinationRegion(string $DestinationRegion) 设置目的地域， 例如：ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBandwidthLimit() 获取出带宽上限，单位：Mbps。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBandwidthLimit(integer $BandwidthLimit) 设置出带宽上限，单位：Mbps。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CcnRegionBandwidthLimitInfo extends AbstractModel
 {
     /**
      * @var string 源地域，例如：ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SourceRegion;
 
     /**
      * @var string 目的地域， 例如：ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DestinationRegion;
 
     /**
      * @var integer 出带宽上限，单位：Mbps。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BandwidthLimit;
 
     /**
      * @param string $SourceRegion 源地域，例如：ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DestinationRegion 目的地域， 例如：ap-shanghai
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BandwidthLimit 出带宽上限，单位：Mbps。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

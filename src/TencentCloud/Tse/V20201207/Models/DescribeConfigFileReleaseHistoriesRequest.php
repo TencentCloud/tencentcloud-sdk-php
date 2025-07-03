@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置名称
  * @method integer getEndId() 获取发布历史记录id，用于分页优化，一般指定 EndId，就不用指定 Offset，否则分页可能不连续
  * @method void setEndId(integer $EndId) 设置发布历史记录id，用于分页优化，一般指定 EndId，就不用指定 Offset，否则分页可能不连续
+ * @method string getConfigFileId() 获取配置文件ID
+ * @method void setConfigFileId(string $ConfigFileId) 设置配置文件ID
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。	
  * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。	
  * @method integer getOffset() 获取偏移量，默认为0。	
@@ -63,6 +65,11 @@ class DescribeConfigFileReleaseHistoriesRequest extends AbstractModel
     public $EndId;
 
     /**
+     * @var string 配置文件ID
+     */
+    public $ConfigFileId;
+
+    /**
      * @var integer 返回数量，默认为20，最大值为100。	
      */
     public $Limit;
@@ -78,6 +85,7 @@ class DescribeConfigFileReleaseHistoriesRequest extends AbstractModel
      * @param string $Group 组
      * @param string $Name 名称
      * @param integer $EndId 发布历史记录id，用于分页优化，一般指定 EndId，就不用指定 Offset，否则分页可能不连续
+     * @param string $ConfigFileId 配置文件ID
      * @param integer $Limit 返回数量，默认为20，最大值为100。	
      * @param integer $Offset 偏移量，默认为0。	
      */
@@ -112,6 +120,10 @@ class DescribeConfigFileReleaseHistoriesRequest extends AbstractModel
 
         if (array_key_exists("EndId",$param) and $param["EndId"] !== null) {
             $this->EndId = $param["EndId"];
+        }
+
+        if (array_key_exists("ConfigFileId",$param) and $param["ConfigFileId"] !== null) {
+            $this->ConfigFileId = $param["ConfigFileId"];
         }
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotal(ConsumptionSummaryTotal $Total) 设置消耗详情
  * @method array getData() 获取消耗按业务汇总详情
  * @method void setData(array $Data) 设置消耗按业务汇总详情
- * @method integer getRecordNum() 获取记录数量，NeedRecordNum为0是返回null
- * @method void setRecordNum(integer $RecordNum) 设置记录数量，NeedRecordNum为0是返回null
+ * @method integer getRecordNum() 获取记录数量，NeedRecordNum为0时返回null
+ * @method void setRecordNum(integer $RecordNum) 设置记录数量，NeedRecordNum为0时返回null
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -49,7 +49,7 @@ class DescribeCostSummaryByProjectResponse extends AbstractModel
     public $Data;
 
     /**
-     * @var integer 记录数量，NeedRecordNum为0是返回null
+     * @var integer 记录数量，NeedRecordNum为0时返回null
      */
     public $RecordNum;
 
@@ -62,7 +62,7 @@ class DescribeCostSummaryByProjectResponse extends AbstractModel
      * @param integer $Ready 数据是否准备好，0未准备好，1准备好
      * @param ConsumptionSummaryTotal $Total 消耗详情
      * @param array $Data 消耗按业务汇总详情
-     * @param integer $RecordNum 记录数量，NeedRecordNum为0是返回null
+     * @param integer $RecordNum 记录数量，NeedRecordNum为0时返回null
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

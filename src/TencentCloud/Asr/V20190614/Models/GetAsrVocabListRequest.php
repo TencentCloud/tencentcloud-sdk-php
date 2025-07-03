@@ -31,6 +31,7 @@ class GetAsrVocabListRequest extends AbstractModel
 {
     /**
      * @var array 标签信息，格式为“$TagKey : $TagValue ”，中间分隔符为“空格”+“:”+“空格”
+     * @deprecated
      */
     public $TagInfos;
 

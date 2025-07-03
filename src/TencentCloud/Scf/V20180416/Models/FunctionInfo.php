@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFunctionId(string $FunctionId) 设置函数ID
  * @method string getNamespace() 获取命名空间
  * @method void setNamespace(string $Namespace) 设置命名空间
- * @method string getStatus() 获取函数状态，状态值及流转[参考此处](https://cloud.tencent.com/document/product/583/47175)
- * @method void setStatus(string $Status) 设置函数状态，状态值及流转[参考此处](https://cloud.tencent.com/document/product/583/47175)
+ * @method string getStatus() 获取函数状态，状态值及流转[参考此处](https://cloud.tencent.com/document/product/583/17244)
+ * @method void setStatus(string $Status) 设置函数状态，状态值及流转[参考此处](https://cloud.tencent.com/document/product/583/17244)
  * @method string getStatusDesc() 获取函数状态详情
  * @method void setStatusDesc(string $StatusDesc) 设置函数状态详情
  * @method string getDescription() 获取函数描述
@@ -93,7 +93,7 @@ class FunctionInfo extends AbstractModel
     public $Namespace;
 
     /**
-     * @var string 函数状态，状态值及流转[参考此处](https://cloud.tencent.com/document/product/583/47175)
+     * @var string 函数状态，状态值及流转[参考此处](https://cloud.tencent.com/document/product/583/17244)
      */
     public $Status;
 
@@ -152,7 +152,7 @@ class FunctionInfo extends AbstractModel
      * @param string $FunctionName 函数名称
      * @param string $FunctionId 函数ID
      * @param string $Namespace 命名空间
-     * @param string $Status 函数状态，状态值及流转[参考此处](https://cloud.tencent.com/document/product/583/47175)
+     * @param string $Status 函数状态，状态值及流转[参考此处](https://cloud.tencent.com/document/product/583/17244)
      * @param string $StatusDesc 函数状态详情
      * @param string $Description 函数描述
      * @param array $Tags 函数标签

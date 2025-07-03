@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * DescribeGatherResource返回参数结构体
  *
  * @method integer getRecordNum() 获取总条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecordNum(integer $RecordNum) 设置总条数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getGatherResourceSummary() 获取资源归集汇总
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGatherResourceSummary(array $GatherResourceSummary) 设置资源归集汇总
@@ -39,7 +37,6 @@ class DescribeGatherResourceResponse extends AbstractModel
 {
     /**
      * @var integer 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecordNum;
 
@@ -62,7 +59,6 @@ class DescribeGatherResourceResponse extends AbstractModel
 
     /**
      * @param integer $RecordNum 总条数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $GatherResourceSummary 资源归集汇总
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastUpdateTime 数据更新时间

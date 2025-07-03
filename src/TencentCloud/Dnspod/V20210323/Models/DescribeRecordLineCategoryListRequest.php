@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() 获取要查询线路列表的域名。
  * @method void setDomain(string $Domain) 设置要查询线路列表的域名。
- * @method integer getDomainId() 获取要查询线路列表的域名 ID。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain。可以通过接口 DescribeDomainList 查到所有的 Domain 以及 DomainId。
- * @method void setDomainId(integer $DomainId) 设置要查询线路列表的域名 ID。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain。可以通过接口 DescribeDomainList 查到所有的 Domain 以及 DomainId。
+ * @method integer getDomainId() 获取要查询线路列表的域名 ID。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain。
+ * @method void setDomainId(integer $DomainId) 设置要查询线路列表的域名 ID。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain。
  */
 class DescribeRecordLineCategoryListRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DescribeRecordLineCategoryListRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var integer 要查询线路列表的域名 ID。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain。可以通过接口 DescribeDomainList 查到所有的 Domain 以及 DomainId。
+     * @var integer 要查询线路列表的域名 ID。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain。
      */
     public $DomainId;
 
     /**
      * @param string $Domain 要查询线路列表的域名。
-     * @param integer $DomainId 要查询线路列表的域名 ID。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain。可以通过接口 DescribeDomainList 查到所有的 Domain 以及 DomainId。
+     * @param integer $DomainId 要查询线路列表的域名 ID。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain。
      */
     function __construct()
     {

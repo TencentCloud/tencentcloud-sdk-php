@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComment(string $Comment) 设置字段备注
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCategory() 获取category
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCategory(string $Category) 设置category
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class IntegrationNodeSchema extends AbstractModel
 {
@@ -85,6 +89,12 @@ class IntegrationNodeSchema extends AbstractModel
     public $Comment;
 
     /**
+     * @var string category
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Category;
+
+    /**
      * @param string $Id schema id 随机唯一
      * @param string $Name schema名称
      * @param string $Type schema类型
@@ -95,6 +105,8 @@ class IntegrationNodeSchema extends AbstractModel
      * @param string $Alias schema别名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Comment 字段备注
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Category category
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -141,6 +153,10 @@ class IntegrationNodeSchema extends AbstractModel
 
         if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
             $this->Comment = $param["Comment"];
+        }
+
+        if (array_key_exists("Category",$param) and $param["Category"] !== null) {
+            $this->Category = $param["Category"];
         }
     }
 }

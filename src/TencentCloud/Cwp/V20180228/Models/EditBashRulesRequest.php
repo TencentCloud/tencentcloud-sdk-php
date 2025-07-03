@@ -40,6 +40,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEventId(integer $EventId) 设置事件列表点击“加入白名单”时,需要传EventId 事件的id
  * @method integer getDealOldEvents() 获取是否处理旧事件为白名单 0=不处理 1=处理
  * @method void setDealOldEvents(integer $DealOldEvents) 设置是否处理旧事件为白名单 0=不处理 1=处理
+ * @method string getDescript() 获取策略描述
+ * @method void setDescript(string $Descript) 设置策略描述
+ * @method integer getStatus() 获取生效与否  0:不生效 1:生效
+ * @method void setStatus(integer $Status) 设置生效与否  0:不生效 1:生效
+ * @method integer getBashAction() 获取0:告警  1:白名单  2:拦截
+ * @method void setBashAction(integer $BashAction) 设置0:告警  1:白名单  2:拦截
+ * @method integer getScope() 获取生效范围（0:一组quuid 1:所有专业版 2:所有专业版+旗舰版 3:所有主机）
+ * @method void setScope(integer $Scope) 设置生效范围（0:一组quuid 1:所有专业版 2:所有专业版+旗舰版 3:所有主机）
+ * @method array getQuuids() 获取生效主机的QUUID集合
+ * @method void setQuuids(array $Quuids) 设置生效主机的QUUID集合
  */
 class EditBashRulesRequest extends AbstractModel
 {
@@ -94,6 +104,31 @@ class EditBashRulesRequest extends AbstractModel
     public $DealOldEvents;
 
     /**
+     * @var string 策略描述
+     */
+    public $Descript;
+
+    /**
+     * @var integer 生效与否  0:不生效 1:生效
+     */
+    public $Status;
+
+    /**
+     * @var integer 0:告警  1:白名单  2:拦截
+     */
+    public $BashAction;
+
+    /**
+     * @var integer 生效范围（0:一组quuid 1:所有专业版 2:所有专业版+旗舰版 3:所有主机）
+     */
+    public $Scope;
+
+    /**
+     * @var array 生效主机的QUUID集合
+     */
+    public $Quuids;
+
+    /**
      * @param integer $Id 规则ID（新增时不填）
      * @param array $Uuids 客户端ID数组
      * @param string $HostIp 主机IP
@@ -104,6 +139,11 @@ class EditBashRulesRequest extends AbstractModel
      * @param integer $White 0=黑名单， 1=白名单
      * @param integer $EventId 事件列表点击“加入白名单”时,需要传EventId 事件的id
      * @param integer $DealOldEvents 是否处理旧事件为白名单 0=不处理 1=处理
+     * @param string $Descript 策略描述
+     * @param integer $Status 生效与否  0:不生效 1:生效
+     * @param integer $BashAction 0:告警  1:白名单  2:拦截
+     * @param integer $Scope 生效范围（0:一组quuid 1:所有专业版 2:所有专业版+旗舰版 3:所有主机）
+     * @param array $Quuids 生效主机的QUUID集合
      */
     function __construct()
     {
@@ -156,6 +196,26 @@ class EditBashRulesRequest extends AbstractModel
 
         if (array_key_exists("DealOldEvents",$param) and $param["DealOldEvents"] !== null) {
             $this->DealOldEvents = $param["DealOldEvents"];
+        }
+
+        if (array_key_exists("Descript",$param) and $param["Descript"] !== null) {
+            $this->Descript = $param["Descript"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("BashAction",$param) and $param["BashAction"] !== null) {
+            $this->BashAction = $param["BashAction"];
+        }
+
+        if (array_key_exists("Scope",$param) and $param["Scope"] !== null) {
+            $this->Scope = $param["Scope"];
+        }
+
+        if (array_key_exists("Quuids",$param) and $param["Quuids"] !== null) {
+            $this->Quuids = $param["Quuids"];
         }
     }
 }

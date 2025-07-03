@@ -31,9 +31,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getNeedRestart() 获取用于表示当前配置文件是不是有过修改后没有重启，提醒用户需要重启
  * @method void setNeedRestart(integer $NeedRestart) 设置用于表示当前配置文件是不是有过修改后没有重启，提醒用户需要重启
  * @method string getFilePath() 获取保存配置文件的路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFilePath(string $FilePath) 设置保存配置文件的路径
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterConfigsInfoFromEMR extends AbstractModel
 {
@@ -64,7 +62,6 @@ class ClusterConfigsInfoFromEMR extends AbstractModel
 
     /**
      * @var string 保存配置文件的路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FilePath;
 
@@ -75,7 +72,6 @@ class ClusterConfigsInfoFromEMR extends AbstractModel
      * @param string $OriParam 配置文件的内容，base64编码
      * @param integer $NeedRestart 用于表示当前配置文件是不是有过修改后没有重启，提醒用户需要重启
      * @param string $FilePath 保存配置文件的路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

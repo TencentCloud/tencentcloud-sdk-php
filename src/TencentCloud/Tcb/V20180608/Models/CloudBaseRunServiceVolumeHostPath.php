@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 主机路径挂载参数
  *
-
+ * @method string getPath() 获取主机路径
+ * @method void setPath(string $Path) 设置主机路径
  */
 class CloudBaseRunServiceVolumeHostPath extends AbstractModel
 {
-
+    /**
+     * @var string 主机路径
+     */
+    public $Path;
 
     /**
-
+     * @param string $Path 主机路径
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class CloudBaseRunServiceVolumeHostPath extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("Path",$param) and $param["Path"] !== null) {
+            $this->Path = $param["Path"];
+        }
     }
 }

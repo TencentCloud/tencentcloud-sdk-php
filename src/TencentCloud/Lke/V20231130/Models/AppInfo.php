@@ -64,9 +64,17 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModelName(string $ModelName) 设置模型名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getModelAliasName() 获取模型别名
+ * @method string getModelAliasName() 获取生成模型别名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setModelAliasName(string $ModelAliasName) 设置模型别名
+ * @method void setModelAliasName(string $ModelAliasName) 设置生成模型别名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPattern() 获取应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPattern(string $Pattern) 设置应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getThoughtModelAliasName() 获取思考模型别名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setThoughtModelAliasName(string $ThoughtModelAliasName) 设置思考模型别名
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class AppInfo extends AbstractModel
@@ -138,10 +146,22 @@ class AppInfo extends AbstractModel
     public $ModelName;
 
     /**
-     * @var string 模型别名
+     * @var string 生成模型别名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModelAliasName;
+
+    /**
+     * @var string 应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Pattern;
+
+    /**
+     * @var string 思考模型别名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ThoughtModelAliasName;
 
     /**
      * @param string $AppType 应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classifys-知识标签提取
@@ -166,7 +186,11 @@ class AppInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModelName 模型名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ModelAliasName 模型别名
+     * @param string $ModelAliasName 生成模型别名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Pattern 应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ThoughtModelAliasName 思考模型别名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -228,6 +252,14 @@ class AppInfo extends AbstractModel
 
         if (array_key_exists("ModelAliasName",$param) and $param["ModelAliasName"] !== null) {
             $this->ModelAliasName = $param["ModelAliasName"];
+        }
+
+        if (array_key_exists("Pattern",$param) and $param["Pattern"] !== null) {
+            $this->Pattern = $param["Pattern"];
+        }
+
+        if (array_key_exists("ThoughtModelAliasName",$param) and $param["ThoughtModelAliasName"] !== null) {
+            $this->ThoughtModelAliasName = $param["ThoughtModelAliasName"];
         }
     }
 }

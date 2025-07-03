@@ -20,24 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeListeners请求参数结构体
  *
- * @method string getLoadBalancerId() 获取负载均衡实例 ID。
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID。
- * @method array getListenerIds() 获取要查询的负载均衡监听器 ID 数组，最大为100个。
- * @method void setListenerIds(array $ListenerIds) 设置要查询的负载均衡监听器 ID 数组，最大为100个。
+ * @method string getLoadBalancerId() 获取负载均衡实例 ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/api/214/30685) 接口获取。
+ * @method void setLoadBalancerId(string $LoadBalancerId) 设置负载均衡实例 ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/api/214/30685) 接口获取。
+ * @method array getListenerIds() 获取要查询的负载均衡监听器 ID 数组，最大为100个，可以通过 [DescribeListeners](https://cloud.tencent.com/document/api/214/30686) 接口获取。
+ * @method void setListenerIds(array $ListenerIds) 设置要查询的负载均衡监听器 ID 数组，最大为100个，可以通过 [DescribeListeners](https://cloud.tencent.com/document/api/214/30686) 接口获取。
  * @method string getProtocol() 获取要查询的监听器协议类型，取值 TCP | UDP | HTTP | HTTPS | TCP_SSL | QUIC。
  * @method void setProtocol(string $Protocol) 设置要查询的监听器协议类型，取值 TCP | UDP | HTTP | HTTPS | TCP_SSL | QUIC。
- * @method integer getPort() 获取要查询的监听器的端口。
- * @method void setPort(integer $Port) 设置要查询的监听器的端口。
+ * @method integer getPort() 获取要查询的监听器的端口，端口范围：1-65535
+ * @method void setPort(integer $Port) 设置要查询的监听器的端口，端口范围：1-65535
  */
 class DescribeListenersRequest extends AbstractModel
 {
     /**
-     * @var string 负载均衡实例 ID。
+     * @var string 负载均衡实例 ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/api/214/30685) 接口获取。
      */
     public $LoadBalancerId;
 
     /**
-     * @var array 要查询的负载均衡监听器 ID 数组，最大为100个。
+     * @var array 要查询的负载均衡监听器 ID 数组，最大为100个，可以通过 [DescribeListeners](https://cloud.tencent.com/document/api/214/30686) 接口获取。
      */
     public $ListenerIds;
 
@@ -47,15 +47,15 @@ class DescribeListenersRequest extends AbstractModel
     public $Protocol;
 
     /**
-     * @var integer 要查询的监听器的端口。
+     * @var integer 要查询的监听器的端口，端口范围：1-65535
      */
     public $Port;
 
     /**
-     * @param string $LoadBalancerId 负载均衡实例 ID。
-     * @param array $ListenerIds 要查询的负载均衡监听器 ID 数组，最大为100个。
+     * @param string $LoadBalancerId 负载均衡实例 ID，可以通过 [DescribeLoadBalancers](https://cloud.tencent.com/document/api/214/30685) 接口获取。
+     * @param array $ListenerIds 要查询的负载均衡监听器 ID 数组，最大为100个，可以通过 [DescribeListeners](https://cloud.tencent.com/document/api/214/30686) 接口获取。
      * @param string $Protocol 要查询的监听器协议类型，取值 TCP | UDP | HTTP | HTTPS | TCP_SSL | QUIC。
-     * @param integer $Port 要查询的监听器的端口。
+     * @param integer $Port 要查询的监听器的端口，端口范围：1-65535
      */
     function __construct()
     {

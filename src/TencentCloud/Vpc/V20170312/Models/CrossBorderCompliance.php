@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setState(string $State) 设置状态。待审批：`PENDING`，已通过：`APPROVED`，已拒绝：`DENY`。
  * @method string getCreatedTime() 获取审批单创建时间。
  * @method void setCreatedTime(string $CreatedTime) 设置审批单创建时间。
+ * @method string getLegalPersonId() 获取法定代表人身份证号。
+ * @method void setLegalPersonId(string $LegalPersonId) 设置法定代表人身份证号。
+ * @method string getLegalPersonIdCard() 获取法定代表人身份证。
+ * @method void setLegalPersonIdCard(string $LegalPersonIdCard) 设置法定代表人身份证。
  */
 class CrossBorderCompliance extends AbstractModel
 {
@@ -178,6 +182,16 @@ class CrossBorderCompliance extends AbstractModel
     public $CreatedTime;
 
     /**
+     * @var string 法定代表人身份证号。
+     */
+    public $LegalPersonId;
+
+    /**
+     * @var string 法定代表人身份证。
+     */
+    public $LegalPersonIdCard;
+
+    /**
      * @param string $ServiceProvider 服务商，可选值：`UNICOM`。
      * @param integer $ComplianceId 合规化审批单`ID`。
      * @param string $Company 公司全称。
@@ -200,6 +214,8 @@ class CrossBorderCompliance extends AbstractModel
      * @param string $ServiceEndDate 服务截止时间。
      * @param string $State 状态。待审批：`PENDING`，已通过：`APPROVED`，已拒绝：`DENY`。
      * @param string $CreatedTime 审批单创建时间。
+     * @param string $LegalPersonId 法定代表人身份证号。
+     * @param string $LegalPersonIdCard 法定代表人身份证。
      */
     function __construct()
     {
@@ -300,6 +316,14 @@ class CrossBorderCompliance extends AbstractModel
 
         if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
             $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("LegalPersonId",$param) and $param["LegalPersonId"] !== null) {
+            $this->LegalPersonId = $param["LegalPersonId"];
+        }
+
+        if (array_key_exists("LegalPersonIdCard",$param) and $param["LegalPersonIdCard"] !== null) {
+            $this->LegalPersonIdCard = $param["LegalPersonIdCard"];
         }
     }
 }

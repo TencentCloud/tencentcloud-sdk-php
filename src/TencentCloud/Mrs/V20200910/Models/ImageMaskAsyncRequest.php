@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImage(ImageInfo $Image) 设置图片信息,目前只支持传图片base64
  * @method ImageMaskFlags getMaskFlag() 获取图片脱敏选项, 不传默认都脱敏
  * @method void setMaskFlag(ImageMaskFlags $MaskFlag) 设置图片脱敏选项, 不传默认都脱敏
+ * @method boolean getAutoFixImageDirection() 获取是否自动矫正图片方向
+ * @method void setAutoFixImageDirection(boolean $AutoFixImageDirection) 设置是否自动矫正图片方向
  */
 class ImageMaskAsyncRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ImageMaskAsyncRequest extends AbstractModel
     public $MaskFlag;
 
     /**
+     * @var boolean 是否自动矫正图片方向
+     */
+    public $AutoFixImageDirection;
+
+    /**
      * @param ImageInfo $Image 图片信息,目前只支持传图片base64
      * @param ImageMaskFlags $MaskFlag 图片脱敏选项, 不传默认都脱敏
+     * @param boolean $AutoFixImageDirection 是否自动矫正图片方向
      */
     function __construct()
     {
@@ -62,6 +70,10 @@ class ImageMaskAsyncRequest extends AbstractModel
         if (array_key_exists("MaskFlag",$param) and $param["MaskFlag"] !== null) {
             $this->MaskFlag = new ImageMaskFlags();
             $this->MaskFlag->deserialize($param["MaskFlag"]);
+        }
+
+        if (array_key_exists("AutoFixImageDirection",$param) and $param["AutoFixImageDirection"] !== null) {
+            $this->AutoFixImageDirection = $param["AutoFixImageDirection"];
         }
     }
 }

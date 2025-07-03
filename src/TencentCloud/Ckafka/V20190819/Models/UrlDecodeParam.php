@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * Url解析
  *
  * @method string getCharsetName() 获取编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCharsetName(string $CharsetName) 设置编码
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class UrlDecodeParam extends AbstractModel
 {
     /**
      * @var string 编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CharsetName;
 
     /**
      * @param string $CharsetName 编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

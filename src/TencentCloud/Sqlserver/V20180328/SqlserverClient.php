@@ -43,6 +43,7 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\CreateMigrationResponse CreateMigration(Models\CreateMigrationRequest $req) 本接口（CreateMigration）作用是创建一个迁移任务
  * @method Models\CreatePublishSubscribeResponse CreatePublishSubscribe(Models\CreatePublishSubscribeRequest $req) 本接口（CreatePublishSubscribe）用于创建两个数据库之间的发布订阅关系。作为订阅者，不能再充当发布者，作为发布者可以有多个订阅者实例。
  * @method Models\CreateReadOnlyDBInstancesResponse CreateReadOnlyDBInstances(Models\CreateReadOnlyDBInstancesRequest $req) 本接口（CreateReadOnlyDBInstances）用于创建只读实例 (本地盘)。
+ * @method Models\CutXEventsResponse CutXEvents(Models\CutXEventsRequest $req) 本接口（CutXEvents）用于手动切割阻塞日志和死锁日志。
  * @method Models\DeleteAccountResponse DeleteAccount(Models\DeleteAccountRequest $req) 本接口（DeleteAccount）用于删除实例账号。
  * @method Models\DeleteBackupMigrationResponse DeleteBackupMigration(Models\DeleteBackupMigrationRequest $req) 本接口（DeleteBackupMigration）用于删除备份导入任务。
  * @method Models\DeleteBusinessIntelligenceFileResponse DeleteBusinessIntelligenceFile(Models\DeleteBusinessIntelligenceFileRequest $req) 本接口（DeleteBusinessIntelligenceFile）用于删除商业智能文件。
@@ -56,7 +57,7 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\DescribeAccountsResponse DescribeAccounts(Models\DescribeAccountsRequest $req) 本接口（DescribeAccounts）用于拉取实例账户列表。
  * @method Models\DescribeBackupByFlowIdResponse DescribeBackupByFlowId(Models\DescribeBackupByFlowIdRequest $req) 本接口(DescribeBackupByFlowId)用于通过备份创建流程的ID查询创建的备份详情，流程ID可从接口CreateBackup中获得。
  * @method Models\DescribeBackupCommandResponse DescribeBackupCommand(Models\DescribeBackupCommandRequest $req) 本接口（DescribeBackupCommand）用于查询以规范的格式创建备份的命令。
- * @method Models\DescribeBackupFilesResponse DescribeBackupFiles(Models\DescribeBackupFilesRequest $req) 本接口(DescribeBackupFiles)用于查询单库备份明细
+ * @method Models\DescribeBackupFilesResponse DescribeBackupFiles(Models\DescribeBackupFilesRequest $req) 本接口（DescribeBackupFiles）用于查询单库备份明细。
  * @method Models\DescribeBackupMigrationResponse DescribeBackupMigration(Models\DescribeBackupMigrationRequest $req) 本接口（DescribeBackupMigration）用于创建增量备份导入任务。
  * @method Models\DescribeBackupMonitorResponse DescribeBackupMonitor(Models\DescribeBackupMonitorRequest $req) 本接口(DescribeBackupMonitor)用于查询备份空间使用详情。
  * @method Models\DescribeBackupStatisticalResponse DescribeBackupStatistical(Models\DescribeBackupStatisticalRequest $req) 本接口(DescribeBackupStatistical)用于查询备份实时统计列表。
@@ -88,7 +89,7 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\DescribeInstanceParamRecordsResponse DescribeInstanceParamRecords(Models\DescribeInstanceParamRecordsRequest $req) 该接口（DescribeInstanceParamRecords）用于查询实例参数修改历史。
  * @method Models\DescribeInstanceParamsResponse DescribeInstanceParams(Models\DescribeInstanceParamsRequest $req) 该接口（DescribeInstanceParams）用于查询实例的参数列表。
  * @method Models\DescribeInstanceTasksResponse DescribeInstanceTasks(Models\DescribeInstanceTasksRequest $req) 本接口（DescribeInstanceTasks）用于查询实例相关的异步任务列表。
- * @method Models\DescribeInstanceTradeParameterResponse DescribeInstanceTradeParameter(Models\DescribeInstanceTradeParameterRequest $req) 本接口（DescribeInstanceTradeParameter）用于查询实例的计费参数，当前接口默认返回创建实例时需要的计费参数。内部接口用于活动页售卖场景。
+ * @method Models\DescribeInstanceTradeParameterResponse DescribeInstanceTradeParameter(Models\DescribeInstanceTradeParameterRequest $req) 本接口（DescribeInstanceTradeParameter）用于查询实例的计费参数
  * @method Models\DescribeMaintenanceSpanResponse DescribeMaintenanceSpan(Models\DescribeMaintenanceSpanRequest $req) 本接口（DescribeMaintenanceSpan）根据实例ID查询该实例的可维护时间窗。
  * @method Models\DescribeMigrationDatabasesResponse DescribeMigrationDatabases(Models\DescribeMigrationDatabasesRequest $req) 本接口（DescribeMigrationDatabases）的作用是查询待迁移数据库列表
  * @method Models\DescribeMigrationDetailResponse DescribeMigrationDetail(Models\DescribeMigrationDetailRequest $req) 本接口（DescribeMigrationDetail）用于查询迁移任务的详细情况
@@ -139,6 +140,7 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\ModifyDatabaseCDCResponse ModifyDatabaseCDC(Models\ModifyDatabaseCDCRequest $req) 本接口(ModifyDatabaseCDC)用于开启、关闭数据库数据变更捕获(CDC)
  * @method Models\ModifyDatabaseCTResponse ModifyDatabaseCT(Models\ModifyDatabaseCTRequest $req) 本接口(ModifyDatabaseCT)用于启用、禁用数据库数据变更跟踪(CT)
  * @method Models\ModifyDatabaseMdfResponse ModifyDatabaseMdf(Models\ModifyDatabaseMdfRequest $req) 本接口(ModifyDatabaseMdf)用于收缩数据库mdf(Shrink mdf)。**本接口已废弃，请使用接口ModifyDatabaseShrinkMDF**。
+ * @method Models\ModifyDatabasePrivilegeResponse ModifyDatabasePrivilege(Models\ModifyDatabasePrivilegeRequest $req) 本接口（ModifyDatabasePrivilege）用于修改实例数据库权限。
  * @method Models\ModifyDatabaseShrinkMDFResponse ModifyDatabaseShrinkMDF(Models\ModifyDatabaseShrinkMDFRequest $req) 本接口(ModifyDatabaseShrinkDMF)用于收缩数据库mdf(Shrink mdf)。
  * @method Models\ModifyIncrementalMigrationResponse ModifyIncrementalMigration(Models\ModifyIncrementalMigrationRequest $req) 本接口（ModifyIncrementalMigration）用于修改增量备份导入任务。
  * @method Models\ModifyInstanceEncryptAttributesResponse ModifyInstanceEncryptAttributes(Models\ModifyInstanceEncryptAttributesRequest $req) 本接口（ModifyInstanceEncryptAttributes）用于开通实例的TDE加密功能。

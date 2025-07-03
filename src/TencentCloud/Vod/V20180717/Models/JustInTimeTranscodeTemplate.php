@@ -27,13 +27,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getComment() 获取模板描述。
  * @method void setComment(string $Comment) 设置模板描述。
  * @method VideoConfigureInfo getVideoConfigure() 获取视频参数配置。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVideoConfigure(VideoConfigureInfo $VideoConfigure) 设置视频参数配置。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method WatermarkConfigureData getWatermarkConfigure() 获取水印参数配置。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWatermarkConfigure(WatermarkConfigureData $WatermarkConfigure) 设置水印参数配置。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class JustInTimeTranscodeTemplate extends AbstractModel
 {
@@ -54,13 +50,11 @@ class JustInTimeTranscodeTemplate extends AbstractModel
 
     /**
      * @var VideoConfigureInfo 视频参数配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VideoConfigure;
 
     /**
      * @var WatermarkConfigureData 水印参数配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WatermarkConfigure;
 
@@ -69,9 +63,7 @@ class JustInTimeTranscodeTemplate extends AbstractModel
      * @param string $Name 模板名。
      * @param string $Comment 模板描述。
      * @param VideoConfigureInfo $VideoConfigure 视频参数配置。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param WatermarkConfigureData $WatermarkConfigure 水印参数配置。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

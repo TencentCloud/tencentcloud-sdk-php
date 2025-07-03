@@ -35,17 +35,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) 设置健康检查的检查域名。
 当调用ModifyRuleAttribute时，不支持修改该参数。
  * @method integer getFailedCountInter() 获取源站服务失败统计频率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailedCountInter(integer $FailedCountInter) 设置源站服务失败统计频率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFailedThreshold() 获取源站健康性检查阀值，超过该阀值会屏蔽服务
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailedThreshold(integer $FailedThreshold) 设置源站健康性检查阀值，超过该阀值会屏蔽服务
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBlockInter() 获取源站健康性检测超出阀值后，屏蔽的时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBlockInter(integer $BlockInter) 设置源站健康性检测超出阀值后，屏蔽的时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleCheckParams extends AbstractModel
 {
@@ -82,19 +76,16 @@ class RuleCheckParams extends AbstractModel
 
     /**
      * @var integer 源站服务失败统计频率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailedCountInter;
 
     /**
      * @var integer 源站健康性检查阀值，超过该阀值会屏蔽服务
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FailedThreshold;
 
     /**
      * @var integer 源站健康性检测超出阀值后，屏蔽的时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BlockInter;
 
@@ -107,11 +98,8 @@ class RuleCheckParams extends AbstractModel
      * @param string $Domain 健康检查的检查域名。
 当调用ModifyRuleAttribute时，不支持修改该参数。
      * @param integer $FailedCountInter 源站服务失败统计频率
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FailedThreshold 源站健康性检查阀值，超过该阀值会屏蔽服务
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BlockInter 源站健康性检测超出阀值后，屏蔽的时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

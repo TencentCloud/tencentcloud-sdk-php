@@ -33,11 +33,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getProjectId() 获取主机业务组ID
  * @method void setProjectId(integer $ProjectId) 设置主机业务组ID
  * @method array getTag() 获取主机标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTag(array $Tag) 设置主机标签
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getName() 获取数据库名
- * @method void setName(string $Name) 设置数据库名
+ * @method string getName() 获取Web应用名
+ * @method void setName(string $Name) 设置Web应用名
  * @method string getVersion() 获取版本
  * @method void setVersion(string $Version) 设置版本
  * @method string getLang() 获取语言
@@ -53,9 +51,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getIsNew() 获取是否新增[0:否|1:是]
  * @method void setIsNew(integer $IsNew) 设置是否新增[0:否|1:是]
  * @method MachineExtraInfo getMachineExtraInfo() 获取 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置 附加信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPath() 获取应用路径
  * @method void setPath(string $Path) 设置应用路径
  */
@@ -93,12 +89,11 @@ class AssetWebFrameBaseInfo extends AbstractModel
 
     /**
      * @var array 主机标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tag;
 
     /**
-     * @var string 数据库名
+     * @var string Web应用名
      */
     public $Name;
 
@@ -139,7 +134,6 @@ class AssetWebFrameBaseInfo extends AbstractModel
 
     /**
      * @var MachineExtraInfo  附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineExtraInfo;
 
@@ -156,8 +150,7 @@ class AssetWebFrameBaseInfo extends AbstractModel
      * @param string $OsInfo 操作系统信息
      * @param integer $ProjectId 主机业务组ID
      * @param array $Tag 主机标签
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Name 数据库名
+     * @param string $Name Web应用名
      * @param string $Version 版本
      * @param string $Lang 语言
      * @param string $ServiceType 服务类型
@@ -166,7 +159,6 @@ class AssetWebFrameBaseInfo extends AbstractModel
      * @param string $FirstTime 首次采集时间
      * @param integer $IsNew 是否新增[0:否|1:是]
      * @param MachineExtraInfo $MachineExtraInfo  附加信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Path 应用路径
      */
     function __construct()

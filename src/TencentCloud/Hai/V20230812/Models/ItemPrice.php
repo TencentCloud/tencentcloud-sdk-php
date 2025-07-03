@@ -20,74 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 套餐价格
  *
- * @method float getUnitPrice() 获取原单价
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUnitPrice(float $UnitPrice) 设置原单价
-注意：此字段可能返回 null，表示取不到有效值。
- * @method float getDiscountUnitPrice() 获取折扣后单价
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDiscountUnitPrice(float $DiscountUnitPrice) 设置折扣后单价
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getUnitPrice() 获取原单价，元
+ * @method void setUnitPrice(float $UnitPrice) 设置原单价，元
+ * @method float getDiscountUnitPrice() 获取折扣后单价，元
+ * @method void setDiscountUnitPrice(float $DiscountUnitPrice) 设置折扣后单价，元
  * @method float getDiscount() 获取折扣
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDiscount(float $Discount) 设置折扣
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getChargeUnit() 获取单位：时
+ * @method string getChargeUnit() 获取单位：时/月
 
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setChargeUnit(string $ChargeUnit) 设置单位：时
+ * @method void setChargeUnit(string $ChargeUnit) 设置单位：时/月
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAmount() 获取商品数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAmount(integer $Amount) 设置商品数量
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ItemPrice extends AbstractModel
 {
     /**
-     * @var float 原单价
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var float 原单价，元
      */
     public $UnitPrice;
 
     /**
-     * @var float 折扣后单价
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var float 折扣后单价，元
      */
     public $DiscountUnitPrice;
 
     /**
      * @var float 折扣
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Discount;
 
     /**
-     * @var string 单位：时
+     * @var string 单位：时/月
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChargeUnit;
 
     /**
      * @var integer 商品数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Amount;
 
     /**
-     * @param float $UnitPrice 原单价
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param float $DiscountUnitPrice 折扣后单价
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $UnitPrice 原单价，元
+     * @param float $DiscountUnitPrice 折扣后单价，元
      * @param float $Discount 折扣
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ChargeUnit 单位：时
+     * @param string $ChargeUnit 单位：时/月
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Amount 商品数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 黑名单详情
  *
  * @method integer getId() 获取黑名单地址id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(integer $Id) 设置黑名单地址id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEmail() 获取邮箱地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEmail(string $Email) 设置邮箱地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExpireDate() 获取过期时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExpireDate(string $ExpireDate) 设置过期时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取黑名单状态，0:已过期，1:生效中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置黑名单状态，0:已过期，1:生效中
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BlackAddressDetail extends AbstractModel
 {
     /**
      * @var integer 黑名单地址id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var string 邮箱地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Email;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExpireDate;
 
     /**
      * @var integer 黑名单状态，0:已过期，1:生效中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @param integer $Id 黑名单地址id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Email 邮箱地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExpireDate 过期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 黑名单状态，0:已过期，1:生效中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

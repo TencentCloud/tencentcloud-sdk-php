@@ -27,9 +27,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
  * @method string getCertId() 获取证书ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCertId(string $CertId) 设置证书ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProtocol() 获取使用协议
  * @method void setProtocol(string $Protocol) 设置使用协议
  */
@@ -52,7 +50,6 @@ class ApiGatewayInstanceDetail extends AbstractModel
 
     /**
      * @var string 证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CertId;
 
@@ -66,7 +63,6 @@ class ApiGatewayInstanceDetail extends AbstractModel
      * @param string $ServiceName 实例名称
      * @param string $Domain 域名
      * @param string $CertId 证书ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Protocol 使用协议
      */
     function __construct()

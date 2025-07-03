@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 坐标
  *
  * @method integer getX() 获取左上角x坐标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setX(integer $X) 设置左上角x坐标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getY() 获取左上角y坐标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setY(integer $Y) 设置左上角y坐标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWidth() 获取宽度，单位像素
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWidth(integer $Width) 设置宽度，单位像素
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHeight() 获取高度，单位像素
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeight(integer $Height) 设置高度，单位像素
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Coordinate extends AbstractModel
 {
     /**
      * @var integer 左上角x坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $X;
 
     /**
      * @var integer 左上角y坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Y;
 
     /**
      * @var integer 宽度，单位像素
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Width;
 
     /**
      * @var integer 高度，单位像素
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Height;
 
     /**
      * @param integer $X 左上角x坐标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Y 左上角y坐标
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Width 宽度，单位像素
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Height 高度，单位像素
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

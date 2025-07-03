@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置统一网络ID，不传表示基础网络
  * @method string getSubnetId() 获取统一子网ID，VpcId有值时需填写
  * @method void setSubnetId(string $SubnetId) 设置统一子网ID，VpcId有值时需填写
- * @method string getDbVersionId() 获取数据库引擎版本，当前可选：8.0，5.7，10.1，10.0。
- * @method void setDbVersionId(string $DbVersionId) 设置数据库引擎版本，当前可选：8.0，5.7，10.1，10.0。
+ * @method string getDbVersionId() 获取数据库引擎版本，当前可选：8.0，5.7，10.1。
+ * @method void setDbVersionId(string $DbVersionId) 设置数据库引擎版本，当前可选：8.0，5.7，10.1。
  * @method string getInstanceName() 获取自定义实例名称
  * @method void setInstanceName(string $InstanceName) 设置自定义实例名称
  * @method array getSecurityGroupIds() 获取安全组ID，不传表示不绑定安全组
@@ -62,6 +62,8 @@ innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0
  * @method void setRollbackTime(string $RollbackTime) 设置回档时间
  * @method integer getDcnSyncMode() 获取DCN同步模式，0：异步， 1：强同步
  * @method void setDcnSyncMode(integer $DcnSyncMode) 设置DCN同步模式，0：异步， 1：强同步
+ * @method string getCpuType() 获取cpu类型，英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD
+ * @method void setCpuType(string $CpuType) 设置cpu类型，英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD
  */
 class CreateHourDBInstanceRequest extends AbstractModel
 {
@@ -106,7 +108,7 @@ class CreateHourDBInstanceRequest extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var string 数据库引擎版本，当前可选：8.0，5.7，10.1，10.0。
+     * @var string 数据库引擎版本，当前可选：8.0，5.7，10.1。
      */
     public $DbVersionId;
 
@@ -163,6 +165,11 @@ innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0
     public $DcnSyncMode;
 
     /**
+     * @var string cpu类型，英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD
+     */
+    public $CpuType;
+
+    /**
      * @param array $Zones 节点可用区分布，可填写多个可用区。
      * @param integer $NodeCount 节点个数
      * @param integer $Memory 内存大小，单位：GB
@@ -171,7 +178,7 @@ innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0
      * @param integer $ProjectId 项目ID，不传表示默认项目
      * @param string $VpcId 统一网络ID，不传表示基础网络
      * @param string $SubnetId 统一子网ID，VpcId有值时需填写
-     * @param string $DbVersionId 数据库引擎版本，当前可选：8.0，5.7，10.1，10.0。
+     * @param string $DbVersionId 数据库引擎版本，当前可选：8.0，5.7，10.1。
      * @param string $InstanceName 自定义实例名称
      * @param array $SecurityGroupIds 安全组ID，不传表示不绑定安全组
      * @param integer $Ipv6Flag 是否支持IPv6，0:不支持，1:支持
@@ -184,6 +191,7 @@ innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0
      * @param string $RollbackInstanceId 回档源实例ID，例如“2021-11-22 00:00:00”
      * @param string $RollbackTime 回档时间
      * @param integer $DcnSyncMode DCN同步模式，0：异步， 1：强同步
+     * @param string $CpuType cpu类型，英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD
      */
     function __construct()
     {
@@ -282,6 +290,10 @@ innodb_page_size（innodb数据页，默认16K），sync_mode（同步模式：0
 
         if (array_key_exists("DcnSyncMode",$param) and $param["DcnSyncMode"] !== null) {
             $this->DcnSyncMode = $param["DcnSyncMode"];
+        }
+
+        if (array_key_exists("CpuType",$param) and $param["CpuType"] !== null) {
+            $this->CpuType = $param["CpuType"];
         }
     }
 }

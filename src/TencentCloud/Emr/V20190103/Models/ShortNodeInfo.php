@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 节点信息
  *
  * @method string getNodeType() 获取节点类型，Master/Core/Task/Router/Common
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodeType(string $NodeType) 设置节点类型，Master/Core/Task/Router/Common
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNodeSize() 获取节点数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodeSize(integer $NodeSize) 设置节点数量
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ShortNodeInfo extends AbstractModel
 {
     /**
      * @var string 节点类型，Master/Core/Task/Router/Common
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeType;
 
     /**
      * @var integer 节点数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodeSize;
 
     /**
      * @param string $NodeType 节点类型，Master/Core/Task/Router/Common
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NodeSize 节点数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

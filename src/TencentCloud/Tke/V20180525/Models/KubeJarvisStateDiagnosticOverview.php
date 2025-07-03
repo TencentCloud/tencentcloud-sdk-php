@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 集群巡检诊断概览
  *
  * @method array getCatalogues() 获取诊断目录
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCatalogues(array $Catalogues) 设置诊断目录
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getStatistics() 获取诊断结果统计
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatistics(array $Statistics) 设置诊断结果统计
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class KubeJarvisStateDiagnosticOverview extends AbstractModel
 {
     /**
      * @var array 诊断目录
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Catalogues;
 
     /**
      * @var array 诊断结果统计
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Statistics;
 
     /**
      * @param array $Catalogues 诊断目录
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Statistics 诊断结果统计
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -35,9 +35,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDestinationInfos(array $DestinationInfos) 设置输出源信息。具体操作方式详见 [操作类型](#Operation) 及下文示例。
 当 Operation 为 AddDestination、DeleteDestination、EnableDestination、DisableDestination、ModifyDestination 时必填。
  * @method MediaCastOutputMediaSetting getOutputMediaSetting() 获取输出媒体配置。具体操作方式详见 [操作类型](#Operation) 及下文示例。
-当 Operation 为 ModfiyOutputSetting 时必填。
+当 Operation 为 ModifyOutputSetting 时必填。
  * @method void setOutputMediaSetting(MediaCastOutputMediaSetting $OutputMediaSetting) 设置输出媒体配置。具体操作方式详见 [操作类型](#Operation) 及下文示例。
-当 Operation 为 ModfiyOutputSetting 时必填。
+当 Operation 为 ModifyOutputSetting 时必填。
  * @method MediaCastPlaySetting getPlaySetting() 获取播放控制参数。具体操作方式详见 [操作类型](#Operation) 及下文示例。
 当 Operation 为 ModifyPlaySetting 时必填。
  * @method void setPlaySetting(MediaCastPlaySetting $PlaySetting) 设置播放控制参数。具体操作方式详见 [操作类型](#Operation) 及下文示例。
@@ -80,7 +80,7 @@ class HandleMediaCastProjectRequest extends AbstractModel
 
     /**
      * @var MediaCastOutputMediaSetting 输出媒体配置。具体操作方式详见 [操作类型](#Operation) 及下文示例。
-当 Operation 为 ModfiyOutputSetting 时必填。
+当 Operation 为 ModifyOutputSetting 时必填。
      */
     public $OutputMediaSetting;
 
@@ -110,7 +110,7 @@ class HandleMediaCastProjectRequest extends AbstractModel
      * @param array $DestinationInfos 输出源信息。具体操作方式详见 [操作类型](#Operation) 及下文示例。
 当 Operation 为 AddDestination、DeleteDestination、EnableDestination、DisableDestination、ModifyDestination 时必填。
      * @param MediaCastOutputMediaSetting $OutputMediaSetting 输出媒体配置。具体操作方式详见 [操作类型](#Operation) 及下文示例。
-当 Operation 为 ModfiyOutputSetting 时必填。
+当 Operation 为 ModifyOutputSetting 时必填。
      * @param MediaCastPlaySetting $PlaySetting 播放控制参数。具体操作方式详见 [操作类型](#Operation) 及下文示例。
 当 Operation 为 ModifyPlaySetting 时必填。
      * @param integer $Position 新添加的输入源位于输入源列表的位置，从0开始。默认加在输入源列表的后面。具体操作方式详见 [操作类型](#Operation) 及下文示例。

@@ -21,247 +21,169 @@ use TencentCloud\Common\AbstractModel;
  * VPC防火墙实例卡片信息
  *
  * @method string getFwInsName() 获取VPC防火墙实例名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFwInsName(string $FwInsName) 设置VPC防火墙实例名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFwInsId() 获取VPC防火墙实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFwInsId(string $FwInsId) 设置VPC防火墙实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFwMode() 获取VPC防火墙实例模式 0: 旧VPC模式防火墙 1: CCN模式防火墙
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFwMode(integer $FwMode) 设置VPC防火墙实例模式 0: 旧VPC模式防火墙 1: CCN模式防火墙
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getJoinInsNum() 获取VPC防火墙接入网络实例个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJoinInsNum(integer $JoinInsNum) 设置VPC防火墙接入网络实例个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFwSwitchNum() 获取VPC防火墙开关个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFwSwitchNum(integer $FwSwitchNum) 设置VPC防火墙开关个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取VPC防火墙状态 0:正常 ， 1：创建中 2: 变更中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置VPC防火墙状态 0:正常 ， 1：创建中 2: 变更中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTime() 获取VPC防火墙创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTime(string $Time) 设置VPC防火墙创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCcnId() 获取VPC 相关云联网ID列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCcnId(array $CcnId) 设置VPC 相关云联网ID列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCcnName() 获取VPC 相关云联网名称列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCcnName(array $CcnName) 设置VPC 相关云联网名称列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPeerConnectionId() 获取VPC 相关对等连接ID列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPeerConnectionId(array $PeerConnectionId) 设置VPC 相关对等连接ID列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPeerConnectionName() 获取VPC 相关对等连接名称列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPeerConnectionName(array $PeerConnectionName) 设置VPC 相关对等连接名称列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getFwCvmLst() 获取VPC防火墙CVM的列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFwCvmLst(array $FwCvmLst) 设置VPC防火墙CVM的列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getJoinInsLst() 获取VPC防火墙接入网络实例类型列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJoinInsLst(array $JoinInsLst) 设置VPC防火墙接入网络实例类型列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getFwGateway() 获取防火墙网关信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFwGateway(array $FwGateway) 设置防火墙网关信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFwGroupId() 获取防火墙(组)ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFwGroupId(string $FwGroupId) 设置防火墙(组)ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRuleUsed() 获取已使用规则数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleUsed(integer $RuleUsed) 设置已使用规则数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRuleMax() 获取最大规则数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleMax(integer $RuleMax) 设置最大规则数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWidth() 获取防火墙实例带宽
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWidth(integer $Width) 设置防火墙实例带宽
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUserVpcWidth() 获取用户VPC墙总带宽
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserVpcWidth(integer $UserVpcWidth) 设置用户VPC墙总带宽
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getJoinInsIdLst() 获取接入的vpc列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJoinInsIdLst(array $JoinInsIdLst) 设置接入的vpc列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFlowMax() 获取内网间峰值带宽 (单位 bps )
  * @method void setFlowMax(integer $FlowMax) 设置内网间峰值带宽 (单位 bps )
  * @method string getEngineVersion() 获取实例引擎版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEngineVersion(string $EngineVersion) 设置实例引擎版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUpdateEnable() 获取引擎是否可升级：0，不可升级；1，可升级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateEnable(integer $UpdateEnable) 设置引擎是否可升级：0，不可升级；1，可升级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTrafficMode() 获取引擎运行模式，Normal:正常, OnlyRoute:透明模式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrafficMode(string $TrafficMode) 设置引擎运行模式，Normal:正常, OnlyRoute:透明模式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReserveTime() 获取引擎预约升级时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReserveTime(string $ReserveTime) 设置引擎预约升级时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReserveVersion() 获取预约引擎升级版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReserveVersion(string $ReserveVersion) 设置预约引擎升级版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReserveVersionState() 获取引擎预约升级版本状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReserveVersionState(string $ReserveVersionState) 设置引擎预约升级版本状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getElasticSwitch() 获取弹性开关 1打开 0关闭
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setElasticSwitch(integer $ElasticSwitch) 设置弹性开关 1打开 0关闭
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getElasticBandwidth() 获取弹性带宽，单位Mbps
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setElasticBandwidth(integer $ElasticBandwidth) 设置弹性带宽，单位Mbps
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsFirstAfterPay() 获取是否首次开通按量付费
 1 是
 0 不是
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsFirstAfterPay(integer $IsFirstAfterPay) 设置是否首次开通按量付费
 1 是
 0 不是
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VpcFwInstanceInfo extends AbstractModel
 {
     /**
      * @var string VPC防火墙实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FwInsName;
 
     /**
      * @var string VPC防火墙实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FwInsId;
 
     /**
      * @var integer VPC防火墙实例模式 0: 旧VPC模式防火墙 1: CCN模式防火墙
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FwMode;
 
     /**
      * @var integer VPC防火墙接入网络实例个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JoinInsNum;
 
     /**
      * @var integer VPC防火墙开关个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FwSwitchNum;
 
     /**
      * @var integer VPC防火墙状态 0:正常 ， 1：创建中 2: 变更中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string VPC防火墙创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Time;
 
     /**
      * @var array VPC 相关云联网ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CcnId;
 
     /**
      * @var array VPC 相关云联网名称列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CcnName;
 
     /**
      * @var array VPC 相关对等连接ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PeerConnectionId;
 
     /**
      * @var array VPC 相关对等连接名称列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PeerConnectionName;
 
     /**
      * @var array VPC防火墙CVM的列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FwCvmLst;
 
     /**
      * @var array VPC防火墙接入网络实例类型列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JoinInsLst;
 
     /**
      * @var array 防火墙网关信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FwGateway;
 
     /**
      * @var string 防火墙(组)ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FwGroupId;
 
     /**
      * @var integer 已使用规则数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleUsed;
 
     /**
      * @var integer 最大规则数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleMax;
 
     /**
      * @var integer 防火墙实例带宽
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Width;
 
     /**
      * @var integer 用户VPC墙总带宽
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserVpcWidth;
 
     /**
      * @var array 接入的vpc列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JoinInsIdLst;
 
@@ -272,49 +194,41 @@ class VpcFwInstanceInfo extends AbstractModel
 
     /**
      * @var string 实例引擎版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EngineVersion;
 
     /**
      * @var integer 引擎是否可升级：0，不可升级；1，可升级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateEnable;
 
     /**
      * @var string 引擎运行模式，Normal:正常, OnlyRoute:透明模式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TrafficMode;
 
     /**
      * @var string 引擎预约升级时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReserveTime;
 
     /**
      * @var string 预约引擎升级版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReserveVersion;
 
     /**
      * @var string 引擎预约升级版本状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReserveVersionState;
 
     /**
      * @var integer 弹性开关 1打开 0关闭
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ElasticSwitch;
 
     /**
      * @var integer 弹性带宽，单位Mbps
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ElasticBandwidth;
 
@@ -322,72 +236,42 @@ class VpcFwInstanceInfo extends AbstractModel
      * @var integer 是否首次开通按量付费
 1 是
 0 不是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsFirstAfterPay;
 
     /**
      * @param string $FwInsName VPC防火墙实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FwInsId VPC防火墙实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FwMode VPC防火墙实例模式 0: 旧VPC模式防火墙 1: CCN模式防火墙
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $JoinInsNum VPC防火墙接入网络实例个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FwSwitchNum VPC防火墙开关个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status VPC防火墙状态 0:正常 ， 1：创建中 2: 变更中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Time VPC防火墙创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CcnId VPC 相关云联网ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CcnName VPC 相关云联网名称列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PeerConnectionId VPC 相关对等连接ID列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PeerConnectionName VPC 相关对等连接名称列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FwCvmLst VPC防火墙CVM的列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $JoinInsLst VPC防火墙接入网络实例类型列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FwGateway 防火墙网关信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FwGroupId 防火墙(组)ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleUsed 已使用规则数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleMax 最大规则数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Width 防火墙实例带宽
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UserVpcWidth 用户VPC墙总带宽
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $JoinInsIdLst 接入的vpc列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FlowMax 内网间峰值带宽 (单位 bps )
      * @param string $EngineVersion 实例引擎版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UpdateEnable 引擎是否可升级：0，不可升级；1，可升级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TrafficMode 引擎运行模式，Normal:正常, OnlyRoute:透明模式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReserveTime 引擎预约升级时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReserveVersion 预约引擎升级版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReserveVersionState 引擎预约升级版本状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ElasticSwitch 弹性开关 1打开 0关闭
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ElasticBandwidth 弹性带宽，单位Mbps
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsFirstAfterPay 是否首次开通按量付费
 1 是
 0 不是
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

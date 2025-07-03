@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceBaseType(string $ResourceBaseType) 设置类型为ComputeResource和EMR以及默认，默认为EMR
  * @method string getComputeResourceId() 获取计算资源id
  * @method void setComputeResourceId(string $ComputeResourceId) 设置计算资源id
+ * @method string getHardwareResourceType() 获取扩容资源类型
+ * @method void setHardwareResourceType(string $HardwareResourceType) 设置扩容资源类型
  */
 class InquiryPriceScaleOutInstanceRequest extends AbstractModel
 {
@@ -129,6 +131,11 @@ class InquiryPriceScaleOutInstanceRequest extends AbstractModel
     public $ComputeResourceId;
 
     /**
+     * @var string 扩容资源类型
+     */
+    public $HardwareResourceType;
+
+    /**
      * @param string $TimeUnit 扩容的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
 <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
@@ -148,6 +155,7 @@ class InquiryPriceScaleOutInstanceRequest extends AbstractModel
      * @param integer $MasterCount 扩容的Master节点数量。
      * @param string $ResourceBaseType 类型为ComputeResource和EMR以及默认，默认为EMR
      * @param string $ComputeResourceId 计算资源id
+     * @param string $HardwareResourceType 扩容资源类型
      */
     function __construct()
     {
@@ -208,6 +216,10 @@ class InquiryPriceScaleOutInstanceRequest extends AbstractModel
 
         if (array_key_exists("ComputeResourceId",$param) and $param["ComputeResourceId"] !== null) {
             $this->ComputeResourceId = $param["ComputeResourceId"];
+        }
+
+        if (array_key_exists("HardwareResourceType",$param) and $param["HardwareResourceType"] !== null) {
+            $this->HardwareResourceType = $param["HardwareResourceType"];
         }
     }
 }

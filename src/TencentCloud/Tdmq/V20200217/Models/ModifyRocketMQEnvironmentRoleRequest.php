@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPermissions(array $Permissions) 设置授权项，最多只能包含produce、consume两项的非空字符串数组。
  * @method string getClusterId() 获取必填字段，集群的ID
  * @method void setClusterId(string $ClusterId) 设置必填字段，集群的ID
+ * @method array getDetailedPerms() 获取Topic&Group维度权限配置
+ * @method void setDetailedPerms(array $DetailedPerms) 设置Topic&Group维度权限配置
  */
 class ModifyRocketMQEnvironmentRoleRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ModifyRocketMQEnvironmentRoleRequest extends AbstractModel
     public $ClusterId;
 
     /**
+     * @var array Topic&Group维度权限配置
+     */
+    public $DetailedPerms;
+
+    /**
      * @param string $EnvironmentId 环境（命名空间）名称。
      * @param string $RoleName 角色名称。
      * @param array $Permissions 授权项，最多只能包含produce、consume两项的非空字符串数组。
      * @param string $ClusterId 必填字段，集群的ID
+     * @param array $DetailedPerms Topic&Group维度权限配置
      */
     function __construct()
     {
@@ -84,6 +92,15 @@ class ModifyRocketMQEnvironmentRoleRequest extends AbstractModel
 
         if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
             $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("DetailedPerms",$param) and $param["DetailedPerms"] !== null) {
+            $this->DetailedPerms = [];
+            foreach ($param["DetailedPerms"] as $key => $value){
+                $obj = new DetailedRolePerm();
+                $obj->deserialize($value);
+                array_push($this->DetailedPerms, $obj);
+            }
         }
     }
 }

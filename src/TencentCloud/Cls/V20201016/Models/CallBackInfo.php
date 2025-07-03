@@ -51,13 +51,11 @@ use TencentCloud\Common\AbstractModel;
 ```
 "Content-Type: application/json"
 ```
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHeaders(array $Headers) 设置回调时的HTTP请求头部字段。
 例如：下面请求头部字段来告知服务器请求主体的内容类型为JSON。
 ```
 "Content-Type: application/json"
 ```
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CallBackInfo extends AbstractModel
 {
@@ -84,7 +82,6 @@ class CallBackInfo extends AbstractModel
 ```
 "Content-Type: application/json"
 ```
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Headers;
 
@@ -107,7 +104,6 @@ class CallBackInfo extends AbstractModel
 ```
 "Content-Type: application/json"
 ```
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 漏洞影响组件信息
  *
  * @method string getComponent() 获取组件名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComponent(string $Component) 设置组件名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVersion() 获取版本名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersion(string $Version) 设置版本名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VulImpactComponentInfo extends AbstractModel
 {
     /**
      * @var string 组件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Component;
 
     /**
      * @var string 版本名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Version;
 
     /**
      * @param string $Component 组件名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Version 版本名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

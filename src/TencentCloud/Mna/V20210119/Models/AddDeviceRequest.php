@@ -41,15 +41,17 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLicensePayMode() 获取license付费方式： 
 0，月度授权 
 1，永久授权 
-若不传则默认为月度授权
+若不传则默认为月度授权，永久授权设备需要调用OrderPerLicense接口支付授权费，否则设备无法使用
  * @method void setLicensePayMode(integer $LicensePayMode) 设置license付费方式： 
 0，月度授权 
 1，永久授权 
-若不传则默认为月度授权
+若不传则默认为月度授权，永久授权设备需要调用OrderPerLicense接口支付授权费，否则设备无法使用
  * @method string getGroupName() 获取设备分组名称，非必选，预留参数，需要分组时传入GroupId
  * @method void setGroupName(string $GroupName) 设置设备分组名称，非必选，预留参数，需要分组时传入GroupId
  * @method string getGroupId() 获取设备分组ID，非必选，如果不填写则默认设备无分组
  * @method void setGroupId(string $GroupId) 设置设备分组ID，非必选，如果不填写则默认设备无分组
+ * @method integer getFlowTrunc() 获取设备无流量包处理方式，0: 按量付费，1: 截断加速
+ * @method void setFlowTrunc(integer $FlowTrunc) 设置设备无流量包处理方式，0: 按量付费，1: 截断加速
  */
 class AddDeviceRequest extends AbstractModel
 {
@@ -86,7 +88,7 @@ class AddDeviceRequest extends AbstractModel
      * @var integer license付费方式： 
 0，月度授权 
 1，永久授权 
-若不传则默认为月度授权
+若不传则默认为月度授权，永久授权设备需要调用OrderPerLicense接口支付授权费，否则设备无法使用
      */
     public $LicensePayMode;
 
@@ -101,6 +103,11 @@ class AddDeviceRequest extends AbstractModel
     public $GroupId;
 
     /**
+     * @var integer 设备无流量包处理方式，0: 按量付费，1: 截断加速
+     */
+    public $FlowTrunc;
+
+    /**
      * @param string $DeviceName 新建设备的名称
      * @param string $Remark 新建设备的备注
      * @param string $DataKey 新建设备的base64密钥字符串，非必选，如果不填写则由系统自动生成
@@ -113,9 +120,10 @@ class AddDeviceRequest extends AbstractModel
      * @param integer $LicensePayMode license付费方式： 
 0，月度授权 
 1，永久授权 
-若不传则默认为月度授权
+若不传则默认为月度授权，永久授权设备需要调用OrderPerLicense接口支付授权费，否则设备无法使用
      * @param string $GroupName 设备分组名称，非必选，预留参数，需要分组时传入GroupId
      * @param string $GroupId 设备分组ID，非必选，如果不填写则默认设备无分组
+     * @param integer $FlowTrunc 设备无流量包处理方式，0: 按量付费，1: 截断加速
      */
     function __construct()
     {
@@ -160,6 +168,10 @@ class AddDeviceRequest extends AbstractModel
 
         if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
             $this->GroupId = $param["GroupId"];
+        }
+
+        if (array_key_exists("FlowTrunc",$param) and $param["FlowTrunc"] !== null) {
+            $this->FlowTrunc = $param["FlowTrunc"];
         }
     }
 }

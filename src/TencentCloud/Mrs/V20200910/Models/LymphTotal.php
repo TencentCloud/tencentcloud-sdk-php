@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 淋巴结总计转移信息
  *
  * @method string getName() 获取项目名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置项目名称
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTransferNum() 获取转移数量
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTransferNum(string $TransferNum) 设置转移数量
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTotal() 获取总数量
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotal(string $Total) 设置总数量
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTransferNum() 获取转移数量
+ * @method void setTransferNum(integer $TransferNum) 设置转移数量
+ * @method integer getTotal() 获取总数量
+ * @method void setTotal(integer $Total) 设置总数量
  * @method string getSrc() 获取原文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSrc(string $Src) 设置原文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getIndex() 获取索引
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIndex(array $Index) 设置索引
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCoords() 获取原文对应坐标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCoords(array $Coords) 设置原文对应坐标
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class LymphTotal extends AbstractModel
 {
     /**
      * @var string 项目名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
-     * @var string 转移数量
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 转移数量
      */
     public $TransferNum;
 
     /**
-     * @var string 总数量
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 总数量
      */
     public $Total;
 
     /**
      * @var string 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Src;
 
     /**
      * @var array 索引
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Index;
 
     /**
      * @var array 原文对应坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Coords;
 
     /**
      * @param string $Name 项目名称
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TransferNum 转移数量
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Total 总数量
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TransferNum 转移数量
+     * @param integer $Total 总数量
      * @param string $Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Index 索引
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Coords 原文对应坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRetentionMs(integer $RetentionMs) 设置可选参数。消息保留时间，单位ms，当前最小值为60000ms
  * @method integer getSegmentMs() 获取Segment分片滚动的时长，单位ms，当前最小为3600000ms
  * @method void setSegmentMs(integer $SegmentMs) 设置Segment分片滚动的时长，单位ms，当前最小为3600000ms
- * @method integer getMaxMessageBytes() 获取主题消息最大值，单位为 Byte，最小值1024Byte(即1KB)，最大值为8388608Byte（即8MB）。
- * @method void setMaxMessageBytes(integer $MaxMessageBytes) 设置主题消息最大值，单位为 Byte，最小值1024Byte(即1KB)，最大值为8388608Byte（即8MB）。
+ * @method integer getMaxMessageBytes() 获取主题消息最大值，单位为 Byte，最小值1024Byte(即1KB)，最大值为12582912Byte（即12MB）
+ * @method void setMaxMessageBytes(integer $MaxMessageBytes) 设置主题消息最大值，单位为 Byte，最小值1024Byte(即1KB)，最大值为12582912Byte（即12MB）
  * @method integer getEnableAclRule() 获取预设ACL规则, 1:打开  0:关闭，默认不打开
  * @method void setEnableAclRule(integer $EnableAclRule) 设置预设ACL规则, 1:打开  0:关闭，默认不打开
  * @method string getAclRuleName() 获取预设ACL规则的名称
@@ -118,7 +118,7 @@ class CreateTopicRequest extends AbstractModel
     public $SegmentMs;
 
     /**
-     * @var integer 主题消息最大值，单位为 Byte，最小值1024Byte(即1KB)，最大值为8388608Byte（即8MB）。
+     * @var integer 主题消息最大值，单位为 Byte，最小值1024Byte(即1KB)，最大值为12582912Byte（即12MB）
      */
     public $MaxMessageBytes;
 
@@ -155,7 +155,7 @@ class CreateTopicRequest extends AbstractModel
      * @param integer $UncleanLeaderElectionEnable 是否允许未同步的副本选为leader，false:不允许，true:允许，默认不允许
      * @param integer $RetentionMs 可选参数。消息保留时间，单位ms，当前最小值为60000ms
      * @param integer $SegmentMs Segment分片滚动的时长，单位ms，当前最小为3600000ms
-     * @param integer $MaxMessageBytes 主题消息最大值，单位为 Byte，最小值1024Byte(即1KB)，最大值为8388608Byte（即8MB）。
+     * @param integer $MaxMessageBytes 主题消息最大值，单位为 Byte，最小值1024Byte(即1KB)，最大值为12582912Byte（即12MB）
      * @param integer $EnableAclRule 预设ACL规则, 1:打开  0:关闭，默认不打开
      * @param string $AclRuleName 预设ACL规则的名称
      * @param integer $RetentionBytes 可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B

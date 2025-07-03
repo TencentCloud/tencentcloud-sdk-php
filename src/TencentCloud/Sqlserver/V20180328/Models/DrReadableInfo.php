@@ -20,82 +20,126 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 备机只读信息
  *
- * @method string getSlaveStatus() 获取备机状态，enable-运行中，disable-不可用
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSlaveStatus(string $SlaveStatus) 设置备机状态，enable-运行中，disable-不可用
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDrInstanceId() 获取备机资源ID
+ * @method void setDrInstanceId(string $DrInstanceId) 设置备机资源ID
+ * @method string getZone() 获取备机可用区
+ * @method void setZone(string $Zone) 设置备机可用区
+ * @method string getSlaveStatus() 获取备机状态
+DR_CREATING-备机创建中
+DR_RUNNING-备机运行中
+DR_UNAVAILABLE-备机不可用
+DR_ISOLATED-备机已隔离
+DR_RECYCLING-备机回收中
+DR_RECYCLED-备机已回收
+DR_JOB_RUNNING-备机执行任务中
+DR_OFFLINE-备机已下线
+DR_FAIL_OVER-备机只读故障转移中
+ * @method void setSlaveStatus(string $SlaveStatus) 设置备机状态
+DR_CREATING-备机创建中
+DR_RUNNING-备机运行中
+DR_UNAVAILABLE-备机不可用
+DR_ISOLATED-备机已隔离
+DR_RECYCLING-备机回收中
+DR_RECYCLED-备机已回收
+DR_JOB_RUNNING-备机执行任务中
+DR_OFFLINE-备机已下线
+DR_FAIL_OVER-备机只读故障转移中
  * @method string getReadableStatus() 获取备机可读状态，enable-已开启，disable-已关闭
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReadableStatus(string $ReadableStatus) 设置备机可读状态，enable-已开启，disable-已关闭
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVip() 获取备机只读vip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVip(string $Vip) 设置备机只读vip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVPort() 获取备机只读端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVPort(integer $VPort) 设置备机只读端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUniqVpcId() 获取备机所在私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUniqVpcId(string $UniqVpcId) 设置备机所在私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUniqSubnetId() 获取备机所在私有网络子网ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUniqSubnetId(string $UniqSubnetId) 设置备机所在私有网络子网ID
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRoWeight() 获取备机只读权重
+ * @method void setRoWeight(integer $RoWeight) 设置备机只读权重
+ * @method string getReadMode() 获取备机只读模式，BalancedReadOnly-多备一读模式，SingleReadOnly-一备一读模式
+ * @method void setReadMode(string $ReadMode) 设置备机只读模式，BalancedReadOnly-多备一读模式，SingleReadOnly-一备一读模式
  */
 class DrReadableInfo extends AbstractModel
 {
     /**
-     * @var string 备机状态，enable-运行中，disable-不可用
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 备机资源ID
+     */
+    public $DrInstanceId;
+
+    /**
+     * @var string 备机可用区
+     */
+    public $Zone;
+
+    /**
+     * @var string 备机状态
+DR_CREATING-备机创建中
+DR_RUNNING-备机运行中
+DR_UNAVAILABLE-备机不可用
+DR_ISOLATED-备机已隔离
+DR_RECYCLING-备机回收中
+DR_RECYCLED-备机已回收
+DR_JOB_RUNNING-备机执行任务中
+DR_OFFLINE-备机已下线
+DR_FAIL_OVER-备机只读故障转移中
      */
     public $SlaveStatus;
 
     /**
      * @var string 备机可读状态，enable-已开启，disable-已关闭
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReadableStatus;
 
     /**
      * @var string 备机只读vip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Vip;
 
     /**
      * @var integer 备机只读端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VPort;
 
     /**
      * @var string 备机所在私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UniqVpcId;
 
     /**
      * @var string 备机所在私有网络子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UniqSubnetId;
 
     /**
-     * @param string $SlaveStatus 备机状态，enable-运行中，disable-不可用
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 备机只读权重
+     */
+    public $RoWeight;
+
+    /**
+     * @var string 备机只读模式，BalancedReadOnly-多备一读模式，SingleReadOnly-一备一读模式
+     */
+    public $ReadMode;
+
+    /**
+     * @param string $DrInstanceId 备机资源ID
+     * @param string $Zone 备机可用区
+     * @param string $SlaveStatus 备机状态
+DR_CREATING-备机创建中
+DR_RUNNING-备机运行中
+DR_UNAVAILABLE-备机不可用
+DR_ISOLATED-备机已隔离
+DR_RECYCLING-备机回收中
+DR_RECYCLED-备机已回收
+DR_JOB_RUNNING-备机执行任务中
+DR_OFFLINE-备机已下线
+DR_FAIL_OVER-备机只读故障转移中
      * @param string $ReadableStatus 备机可读状态，enable-已开启，disable-已关闭
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Vip 备机只读vip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VPort 备机只读端口
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UniqVpcId 备机所在私有网络ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UniqSubnetId 备机所在私有网络子网ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RoWeight 备机只读权重
+     * @param string $ReadMode 备机只读模式，BalancedReadOnly-多备一读模式，SingleReadOnly-一备一读模式
      */
     function __construct()
     {
@@ -110,6 +154,14 @@ class DrReadableInfo extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("DrInstanceId",$param) and $param["DrInstanceId"] !== null) {
+            $this->DrInstanceId = $param["DrInstanceId"];
+        }
+
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
+        }
+
         if (array_key_exists("SlaveStatus",$param) and $param["SlaveStatus"] !== null) {
             $this->SlaveStatus = $param["SlaveStatus"];
         }
@@ -132,6 +184,14 @@ class DrReadableInfo extends AbstractModel
 
         if (array_key_exists("UniqSubnetId",$param) and $param["UniqSubnetId"] !== null) {
             $this->UniqSubnetId = $param["UniqSubnetId"];
+        }
+
+        if (array_key_exists("RoWeight",$param) and $param["RoWeight"] !== null) {
+            $this->RoWeight = $param["RoWeight"];
+        }
+
+        if (array_key_exists("ReadMode",$param) and $param["ReadMode"] !== null) {
+            $this->ReadMode = $param["ReadMode"];
         }
     }
 }

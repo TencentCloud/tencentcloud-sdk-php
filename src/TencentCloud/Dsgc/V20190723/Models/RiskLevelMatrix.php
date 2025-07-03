@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 风险级别详情的矩阵
  *
  * @method integer getId() 获取存储id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(integer $Id) 设置存储id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSensitiveLevelId() 获取分类分级levelID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSensitiveLevelId(integer $SensitiveLevelId) 设置分类分级levelID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSensitiveLevelName() 获取分类分级名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSensitiveLevelName(string $SensitiveLevelName) 设置分类分级名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVulnerabilityLevel() 获取漏洞级别
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVulnerabilityLevel(string $VulnerabilityLevel) 设置漏洞级别
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRiskLevel() 获取风险级别
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRiskLevel(string $RiskLevel) 设置风险级别
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RiskLevelMatrix extends AbstractModel
 {
     /**
      * @var integer 存储id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var integer 分类分级levelID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SensitiveLevelId;
 
     /**
      * @var string 分类分级名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SensitiveLevelName;
 
     /**
      * @var string 漏洞级别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VulnerabilityLevel;
 
     /**
      * @var string 风险级别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RiskLevel;
 
     /**
      * @param integer $Id 存储id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SensitiveLevelId 分类分级levelID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SensitiveLevelName 分类分级名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VulnerabilityLevel 漏洞级别
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RiskLevel 风险级别
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

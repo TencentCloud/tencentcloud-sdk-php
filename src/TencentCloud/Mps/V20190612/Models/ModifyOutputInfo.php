@@ -26,8 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutputName(string $OutputName) 设置输出的名称。
  * @method string getDescription() 获取输出的描述。
  * @method void setDescription(string $Description) 设置输出的描述。
- * @method string getProtocol() 获取输出的转推协议，支持SRT|RTP|RTMP。
- * @method void setProtocol(string $Protocol) 设置输出的转推协议，支持SRT|RTP|RTMP。
+ * @method string getProtocol() 获取输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST。
+ * @method void setProtocol(string $Protocol) 设置输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST。
+ * @method string getOutputKind() 获取输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出。
+ * @method void setOutputKind(string $OutputKind) 设置输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出。
  * @method CreateOutputSRTSettings getSRTSettings() 获取转推SRT的配置。
  * @method void setSRTSettings(CreateOutputSRTSettings $SRTSettings) 设置转推SRT的配置。
  * @method CreateOutputInfoRTPSettings getRTPSettings() 获取转推RTP的配置。
@@ -42,6 +44,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxConcurrent(integer $MaxConcurrent) 设置最大拉流并发数，最大4，默认4。
  * @method array getSecurityGroupIds() 获取绑定的安全组 ID。 仅支持关联一组安全组。	
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置绑定的安全组 ID。 仅支持关联一组安全组。	
+ * @method array getZones() 获取可用区
+ * @method void setZones(array $Zones) 设置可用区
+ * @method CreateOutputRistSettings getRISTSettings() 获取转推RIST的配置。
+ * @method void setRISTSettings(CreateOutputRistSettings $RISTSettings) 设置转推RIST的配置。
+ * @method string getOutputType() 获取输出类型：Internet/TencentCSS/StreamLive
+ * @method void setOutputType(string $OutputType) 设置输出类型：Internet/TencentCSS/StreamLive
+ * @method PidSelector getPidSelector() 获取对于含有多个音/视频轨的流，可以指定需要使用的轨道
+ * @method void setPidSelector(PidSelector $PidSelector) 设置对于含有多个音/视频轨的流，可以指定需要使用的轨道
  */
 class ModifyOutputInfo extends AbstractModel
 {
@@ -61,9 +71,14 @@ class ModifyOutputInfo extends AbstractModel
     public $Description;
 
     /**
-     * @var string 输出的转推协议，支持SRT|RTP|RTMP。
+     * @var string 输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST。
      */
     public $Protocol;
+
+    /**
+     * @var string 输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出。
+     */
+    public $OutputKind;
 
     /**
      * @var CreateOutputSRTSettings 转推SRT的配置。
@@ -97,10 +112,31 @@ class ModifyOutputInfo extends AbstractModel
     public $SecurityGroupIds;
 
     /**
+     * @var array 可用区
+     */
+    public $Zones;
+
+    /**
+     * @var CreateOutputRistSettings 转推RIST的配置。
+     */
+    public $RISTSettings;
+
+    /**
+     * @var string 输出类型：Internet/TencentCSS/StreamLive
+     */
+    public $OutputType;
+
+    /**
+     * @var PidSelector 对于含有多个音/视频轨的流，可以指定需要使用的轨道
+     */
+    public $PidSelector;
+
+    /**
      * @param string $OutputId 需要修改的Output的Id。
      * @param string $OutputName 输出的名称。
      * @param string $Description 输出的描述。
-     * @param string $Protocol 输出的转推协议，支持SRT|RTP|RTMP。
+     * @param string $Protocol 输出的转推协议，支持SRT|RTP|RTMP|RTMP_PULL|RTSP_PULL|RIST。
+     * @param string $OutputKind 输出模块类型，包括Pinpoint（单点输出，最多支持四路并发输出）；MultiMesh（多路输出，支持大于四路的并发输出，目前可以达到200路）。默认类型为 Pinpoint 输出。对于单个 Flow 一个区域最多只能有一个 MultiMesh 输出。
      * @param CreateOutputSRTSettings $SRTSettings 转推SRT的配置。
      * @param CreateOutputInfoRTPSettings $RTPSettings 转推RTP的配置。
      * @param CreateOutputRTMPSettings $RTMPSettings 转推RTMP的配置。
@@ -108,6 +144,10 @@ class ModifyOutputInfo extends AbstractModel
 当Protocol为RTMP_PULL有效，为空代表不限制客户端IP。
      * @param integer $MaxConcurrent 最大拉流并发数，最大4，默认4。
      * @param array $SecurityGroupIds 绑定的安全组 ID。 仅支持关联一组安全组。	
+     * @param array $Zones 可用区
+     * @param CreateOutputRistSettings $RISTSettings 转推RIST的配置。
+     * @param string $OutputType 输出类型：Internet/TencentCSS/StreamLive
+     * @param PidSelector $PidSelector 对于含有多个音/视频轨的流，可以指定需要使用的轨道
      */
     function __construct()
     {
@@ -138,6 +178,10 @@ class ModifyOutputInfo extends AbstractModel
             $this->Protocol = $param["Protocol"];
         }
 
+        if (array_key_exists("OutputKind",$param) and $param["OutputKind"] !== null) {
+            $this->OutputKind = $param["OutputKind"];
+        }
+
         if (array_key_exists("SRTSettings",$param) and $param["SRTSettings"] !== null) {
             $this->SRTSettings = new CreateOutputSRTSettings();
             $this->SRTSettings->deserialize($param["SRTSettings"]);
@@ -163,6 +207,24 @@ class ModifyOutputInfo extends AbstractModel
 
         if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
             $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        }
+
+        if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
+            $this->Zones = $param["Zones"];
+        }
+
+        if (array_key_exists("RISTSettings",$param) and $param["RISTSettings"] !== null) {
+            $this->RISTSettings = new CreateOutputRistSettings();
+            $this->RISTSettings->deserialize($param["RISTSettings"]);
+        }
+
+        if (array_key_exists("OutputType",$param) and $param["OutputType"] !== null) {
+            $this->OutputType = $param["OutputType"];
+        }
+
+        if (array_key_exists("PidSelector",$param) and $param["PidSelector"] !== null) {
+            $this->PidSelector = new PidSelector();
+            $this->PidSelector->deserialize($param["PidSelector"]);
         }
     }
 }

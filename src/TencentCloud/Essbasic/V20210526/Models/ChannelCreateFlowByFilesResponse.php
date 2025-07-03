@@ -24,16 +24,16 @@ use TencentCloud\Common\AbstractModel;
 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
 
 [点击查看FlowId在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowId(string $FlowId) 设置合同流程ID，为32位字符串。
 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
 
 [点击查看FlowId在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getApprovers() 获取签署方信息，如角色ID、角色名称等
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApprovers(array $Approvers) 设置签署方信息，如角色ID、角色名称等
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPreviewUrl() 获取预览链接，有效期5分钟
+注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
+ * @method void setPreviewUrl(string $PreviewUrl) 设置预览链接，有效期5分钟
+注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -44,15 +44,19 @@ class ChannelCreateFlowByFilesResponse extends AbstractModel
 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
 
 [点击查看FlowId在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowId;
 
     /**
      * @var array 签署方信息，如角色ID、角色名称等
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Approvers;
+
+    /**
+     * @var string 预览链接，有效期5分钟
+注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
+     */
+    public $PreviewUrl;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -64,9 +68,9 @@ class ChannelCreateFlowByFilesResponse extends AbstractModel
 建议开发者妥善保存此流程ID，以便于顺利进行后续操作。
 
 [点击查看FlowId在控制台上的位置](https://qcloudimg.tencent-cloud.cn/raw/05af26573d5106763b4cfbb9f7c64b41.png)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Approvers 签署方信息，如角色ID、角色名称等
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PreviewUrl 预览链接，有效期5分钟
+注：如果是预览模式(即NeedPreview设置为true)时, 才会有此预览链接URL
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -93,6 +97,10 @@ class ChannelCreateFlowByFilesResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Approvers, $obj);
             }
+        }
+
+        if (array_key_exists("PreviewUrl",$param) and $param["PreviewUrl"] !== null) {
+            $this->PreviewUrl = $param["PreviewUrl"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

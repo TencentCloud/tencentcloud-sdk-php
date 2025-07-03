@@ -34,7 +34,7 @@ SourceType 为点播（PullVodPushLive）可以填多个，上限30个。
 当前支持的文件格式：flv，mp4，hls。
 当前支持的拉流协议：http，https，rtmp，rtmps，rtsp，srt。
 注意：
-1. 建议优先使用 flv 文件，对于 mp4 未交织好的文件轮播推流易产生卡顿，可通过点播转码进行重新交织后再轮播。
+1. 建议优先使用 flv 文件，对于 mp4 未交织好的文件轮播推流易产生卡顿以及因为频繁拉取导致源产生大量源出口带宽成本，可通过点播转码进行重新交织后再轮播，或提前创建任务并开启本地模式。
 2. 拒绝内网域名等攻击性拉流地址，如有使用，则做账号封禁处理。
 3. 源文件请保持时间戳正常交织递增，避免因源文件异常影响推流及播放。
 4. 视频编码格式仅支持: H264, H265。
@@ -47,7 +47,7 @@ SourceType 为点播（PullVodPushLive）可以填多个，上限30个。
 当前支持的文件格式：flv，mp4，hls。
 当前支持的拉流协议：http，https，rtmp，rtmps，rtsp，srt。
 注意：
-1. 建议优先使用 flv 文件，对于 mp4 未交织好的文件轮播推流易产生卡顿，可通过点播转码进行重新交织后再轮播。
+1. 建议优先使用 flv 文件，对于 mp4 未交织好的文件轮播推流易产生卡顿以及因为频繁拉取导致源产生大量源出口带宽成本，可通过点播转码进行重新交织后再轮播，或提前创建任务并开启本地模式。
 2. 拒绝内网域名等攻击性拉流地址，如有使用，则做账号封禁处理。
 3. 源文件请保持时间戳正常交织递增，避免因源文件异常影响推流及播放。
 4. 视频编码格式仅支持: H264, H265。
@@ -76,20 +76,8 @@ SourceType 为点播（PullVodPushLive）可以填多个，上限30个。
 使用 UTC 格式时间，
 例如：2019-01-08T10:00:00Z。
 注意：北京时间值为 UTC 时间值 + 8 小时。
- * @method string getEndTime() 获取结束时间，注意：
-1. 结束时间必须大于开始时间；
-2. 结束时间必须大于当前时间；
-3. 结束时间 和 开始时间 间隔必须小于七天。
-使用 UTC 格式时间，
-例如：2019-01-08T10:00:00Z。
-注意：北京时间值为 UTC 时间值 + 8 小时。
- * @method void setEndTime(string $EndTime) 设置结束时间，注意：
-1. 结束时间必须大于开始时间；
-2. 结束时间必须大于当前时间；
-3. 结束时间 和 开始时间 间隔必须小于七天。
-使用 UTC 格式时间，
-例如：2019-01-08T10:00:00Z。
-注意：北京时间值为 UTC 时间值 + 8 小时。
+ * @method string getEndTime() 获取结束时间，注意：1. 结束时间必须大于开始时间；2. 结束时间必须大于当前时间；3. 结束时间 和 开始时间 间隔必须小于30天。使用 UTC 格式时间，例如：2019-01-08T10:00:00Z。注意：北京时间值为 UTC 时间值 + 8 小时。
+ * @method void setEndTime(string $EndTime) 设置结束时间，注意：1. 结束时间必须大于开始时间；2. 结束时间必须大于当前时间；3. 结束时间 和 开始时间 间隔必须小于30天。使用 UTC 格式时间，例如：2019-01-08T10:00:00Z。注意：北京时间值为 UTC 时间值 + 8 小时。
  * @method string getOperator() 获取任务操作人备注。
  * @method void setOperator(string $Operator) 设置任务操作人备注。
  * @method string getPushArgs() 获取推流参数。
@@ -184,6 +172,20 @@ rtmp、rtmps、rtsp、rtp、srt。
 rtmp、rtmps、rtsp、rtp、srt。
 
 注意：签名时间需要超过任务结束时间，避免因签名过期造成任务失败。
+ * @method integer getFileIndex() 获取指定播放文件索引。
+注意： 1. 从1开始，不大于SourceUrls中文件个数。
+2. 该偏移仅在首次轮播时有效。
+3. 提前创建的任务指定的偏移最长有效期为24小时，24小时后未开始的任务偏移失效。
+ * @method void setFileIndex(integer $FileIndex) 设置指定播放文件索引。
+注意： 1. 从1开始，不大于SourceUrls中文件个数。
+2. 该偏移仅在首次轮播时有效。
+3. 提前创建的任务指定的偏移最长有效期为24小时，24小时后未开始的任务偏移失效。
+ * @method integer getOffsetTime() 获取指定播放文件偏移。
+注意：
+1. 单位：秒，配合FileIndex使用。
+ * @method void setOffsetTime(integer $OffsetTime) 设置指定播放文件偏移。
+注意：
+1. 单位：秒，配合FileIndex使用。
  * @method string getBackupSourceType() 获取备源的类型：
 PullLivePushLive -直播，
 PullVodPushLive -点播。
@@ -244,7 +246,7 @@ SourceType 为点播（PullVodPushLive）可以填多个，上限30个。
 当前支持的文件格式：flv，mp4，hls。
 当前支持的拉流协议：http，https，rtmp，rtmps，rtsp，srt。
 注意：
-1. 建议优先使用 flv 文件，对于 mp4 未交织好的文件轮播推流易产生卡顿，可通过点播转码进行重新交织后再轮播。
+1. 建议优先使用 flv 文件，对于 mp4 未交织好的文件轮播推流易产生卡顿以及因为频繁拉取导致源产生大量源出口带宽成本，可通过点播转码进行重新交织后再轮播，或提前创建任务并开启本地模式。
 2. 拒绝内网域名等攻击性拉流地址，如有使用，则做账号封禁处理。
 3. 源文件请保持时间戳正常交织递增，避免因源文件异常影响推流及播放。
 4. 视频编码格式仅支持: H264, H265。
@@ -282,13 +284,7 @@ SourceType 为点播（PullVodPushLive）可以填多个，上限30个。
     public $StartTime;
 
     /**
-     * @var string 结束时间，注意：
-1. 结束时间必须大于开始时间；
-2. 结束时间必须大于当前时间；
-3. 结束时间 和 开始时间 间隔必须小于七天。
-使用 UTC 格式时间，
-例如：2019-01-08T10:00:00Z。
-注意：北京时间值为 UTC 时间值 + 8 小时。
+     * @var string 结束时间，注意：1. 结束时间必须大于开始时间；2. 结束时间必须大于当前时间；3. 结束时间 和 开始时间 间隔必须小于30天。使用 UTC 格式时间，例如：2019-01-08T10:00:00Z。注意：北京时间值为 UTC 时间值 + 8 小时。
      */
     public $EndTime;
 
@@ -380,6 +376,21 @@ rtmp、rtmps、rtsp、rtp、srt。
     public $ToUrl;
 
     /**
+     * @var integer 指定播放文件索引。
+注意： 1. 从1开始，不大于SourceUrls中文件个数。
+2. 该偏移仅在首次轮播时有效。
+3. 提前创建的任务指定的偏移最长有效期为24小时，24小时后未开始的任务偏移失效。
+     */
+    public $FileIndex;
+
+    /**
+     * @var integer 指定播放文件偏移。
+注意：
+1. 单位：秒，配合FileIndex使用。
+     */
+    public $OffsetTime;
+
+    /**
      * @var string 备源的类型：
 PullLivePushLive -直播，
 PullVodPushLive -点播。
@@ -439,7 +450,7 @@ SourceType 为点播（PullVodPushLive）可以填多个，上限30个。
 当前支持的文件格式：flv，mp4，hls。
 当前支持的拉流协议：http，https，rtmp，rtmps，rtsp，srt。
 注意：
-1. 建议优先使用 flv 文件，对于 mp4 未交织好的文件轮播推流易产生卡顿，可通过点播转码进行重新交织后再轮播。
+1. 建议优先使用 flv 文件，对于 mp4 未交织好的文件轮播推流易产生卡顿以及因为频繁拉取导致源产生大量源出口带宽成本，可通过点播转码进行重新交织后再轮播，或提前创建任务并开启本地模式。
 2. 拒绝内网域名等攻击性拉流地址，如有使用，则做账号封禁处理。
 3. 源文件请保持时间戳正常交织递增，避免因源文件异常影响推流及播放。
 4. 视频编码格式仅支持: H264, H265。
@@ -457,13 +468,7 @@ SourceType 为点播（PullVodPushLive）可以填多个，上限30个。
 使用 UTC 格式时间，
 例如：2019-01-08T10:00:00Z。
 注意：北京时间值为 UTC 时间值 + 8 小时。
-     * @param string $EndTime 结束时间，注意：
-1. 结束时间必须大于开始时间；
-2. 结束时间必须大于当前时间；
-3. 结束时间 和 开始时间 间隔必须小于七天。
-使用 UTC 格式时间，
-例如：2019-01-08T10:00:00Z。
-注意：北京时间值为 UTC 时间值 + 8 小时。
+     * @param string $EndTime 结束时间，注意：1. 结束时间必须大于开始时间；2. 结束时间必须大于当前时间；3. 结束时间 和 开始时间 间隔必须小于30天。使用 UTC 格式时间，例如：2019-01-08T10:00:00Z。注意：北京时间值为 UTC 时间值 + 8 小时。
      * @param string $Operator 任务操作人备注。
      * @param string $PushArgs 推流参数。
 推流时携带自定义参数。
@@ -511,6 +516,13 @@ https://cloud.tencent.com/document/product/267/56208
 rtmp、rtmps、rtsp、rtp、srt。
 
 注意：签名时间需要超过任务结束时间，避免因签名过期造成任务失败。
+     * @param integer $FileIndex 指定播放文件索引。
+注意： 1. 从1开始，不大于SourceUrls中文件个数。
+2. 该偏移仅在首次轮播时有效。
+3. 提前创建的任务指定的偏移最长有效期为24小时，24小时后未开始的任务偏移失效。
+     * @param integer $OffsetTime 指定播放文件偏移。
+注意：
+1. 单位：秒，配合FileIndex使用。
      * @param string $BackupSourceType 备源的类型：
 PullLivePushLive -直播，
 PullVodPushLive -点播。
@@ -612,6 +624,14 @@ PullVodPushLive -点播。
 
         if (array_key_exists("ToUrl",$param) and $param["ToUrl"] !== null) {
             $this->ToUrl = $param["ToUrl"];
+        }
+
+        if (array_key_exists("FileIndex",$param) and $param["FileIndex"] !== null) {
+            $this->FileIndex = $param["FileIndex"];
+        }
+
+        if (array_key_exists("OffsetTime",$param) and $param["OffsetTime"] !== null) {
+            $this->OffsetTime = $param["OffsetTime"];
         }
 
         if (array_key_exists("BackupSourceType",$param) and $param["BackupSourceType"] !== null) {

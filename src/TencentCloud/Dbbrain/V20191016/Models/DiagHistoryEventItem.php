@@ -35,17 +35,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDiagItem() 获取诊断项。
  * @method void setDiagItem(string $DiagItem) 设置诊断项。
  * @method string getInstanceId() 获取实例 ID 。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID 。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMetric() 获取保留字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetric(string $Metric) 设置保留字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRegion() 获取地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRegion(string $Region) 设置地域
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DiagHistoryEventItem extends AbstractModel
 {
@@ -86,19 +80,16 @@ class DiagHistoryEventItem extends AbstractModel
 
     /**
      * @var string 实例 ID 。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var string 保留字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Metric;
 
     /**
      * @var string 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Region;
 
@@ -111,11 +102,8 @@ class DiagHistoryEventItem extends AbstractModel
      * @param string $Outline 概要。
      * @param string $DiagItem 诊断项。
      * @param string $InstanceId 实例 ID 。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Metric 保留字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Region 地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,67 +21,50 @@ use TencentCloud\Common\AbstractModel;
  * 子账号信息
  *
  * @method string getInstanceId() 获取实例 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAccountName() 获取账号名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccountName(string $AccountName) 设置账号名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRemark() 获取账号描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置账号描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPrivilege() 获取读写权限策略。
 - r：只读。
 - w：只写。
 - rw：读写。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPrivilege(string $Privilege) 设置读写权限策略。
 - r：只读。
 - w：只写。
 - rw：读写。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getReadonlyPolicy() 获取只读路由策略。
 - master：主节点。
 - replication：从节点。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReadonlyPolicy(array $ReadonlyPolicy) 设置只读路由策略。
 - master：主节点。
 - replication：从节点。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取子账号状态.
 - 1：账号变更中。
 - 2：账号有效。
 - 4：账号已删除。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置子账号状态.
 - 1：账号变更中。
 - 2：账号有效。
 - 4：账号已删除。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Account extends AbstractModel
 {
     /**
      * @var string 实例 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var string 账号名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccountName;
 
     /**
      * @var string 账号描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
@@ -90,7 +73,6 @@ class Account extends AbstractModel
 - r：只读。
 - w：只写。
 - rw：读写。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Privilege;
 
@@ -98,7 +80,6 @@ class Account extends AbstractModel
      * @var array 只读路由策略。
 - master：主节点。
 - replication：从节点。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReadonlyPolicy;
 
@@ -107,39 +88,30 @@ class Account extends AbstractModel
 - 1：账号变更中。
 - 2：账号有效。
 - 4：账号已删除。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @param string $InstanceId 实例 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AccountName 账号名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Remark 账号描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Privilege 读写权限策略。
 - r：只读。
 - w：只写。
 - rw：读写。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ReadonlyPolicy 只读路由策略。
 - master：主节点。
 - replication：从节点。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 子账号状态.
 - 1：账号变更中。
 - 2：账号有效。
 - 4：账号已删除。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

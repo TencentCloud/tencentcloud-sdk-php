@@ -21,21 +21,15 @@ use TencentCloud\Common\AbstractModel;
  * DescribeProVersionInfo返回参数结构体
  *
  * @method string getStartTime() 获取专业版开始时间，补充购买时才不为空
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStartTime(string $StartTime) 设置专业版开始时间，补充购买时才不为空
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndTime() 获取专业版结束时间，补充购买时才不为空
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置专业版结束时间，补充购买时才不为空
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCoresCnt() 获取需购买的机器核数
  * @method void setCoresCnt(integer $CoresCnt) 设置需购买的机器核数
  * @method integer getMaxPostPayCoresCnt() 获取弹性计费上限
  * @method void setMaxPostPayCoresCnt(integer $MaxPostPayCoresCnt) 设置弹性计费上限
  * @method string getResourceId() 获取资源ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceId(string $ResourceId) 设置资源ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBuyStatus() 获取购买状态
 待购: Pending
 已购: Normal
@@ -53,13 +47,11 @@ class DescribeProVersionInfoResponse extends AbstractModel
 {
     /**
      * @var string 专业版开始时间，补充购买时才不为空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StartTime;
 
     /**
      * @var string 专业版结束时间，补充购买时才不为空
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
@@ -75,7 +67,6 @@ class DescribeProVersionInfoResponse extends AbstractModel
 
     /**
      * @var string 资源ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceId;
 
@@ -99,13 +90,10 @@ class DescribeProVersionInfoResponse extends AbstractModel
 
     /**
      * @param string $StartTime 专业版开始时间，补充购买时才不为空
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndTime 专业版结束时间，补充购买时才不为空
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CoresCnt 需购买的机器核数
      * @param integer $MaxPostPayCoresCnt 弹性计费上限
      * @param string $ResourceId 资源ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BuyStatus 购买状态
 待购: Pending
 已购: Normal

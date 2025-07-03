@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
 按照总 Token 数量计费。
  * @method string getNote() 获取免责声明。
  * @method void setNote(string $Note) 设置免责声明。
- * @method string getId() 获取本轮对话的 ID。
- * @method void setId(string $Id) 设置本轮对话的 ID。
+ * @method string getId() 获取本次请求的 RequestId。
+ * @method void setId(string $Id) 设置本次请求的 RequestId。
  * @method array getChoices() 获取回复内容。
  * @method void setChoices(array $Choices) 设置回复内容。
  * @method ErrorMsg getErrorMsg() 获取错误信息。
@@ -38,6 +38,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrorMsg(ErrorMsg $ErrorMsg) 设置错误信息。
 如果流式返回中服务处理异常，返回该错误信息。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getModerationLevel() 获取多轮会话风险审核，值为1时，表明存在信息安全风险，建议终止客户多轮会话。
+ * @method void setModerationLevel(string $ModerationLevel) 设置多轮会话风险审核，值为1时，表明存在信息安全风险，建议终止客户多轮会话。
+ * @method SearchInfo getSearchInfo() 获取搜索结果信息
+ * @method void setSearchInfo(SearchInfo $SearchInfo) 设置搜索结果信息
+ * @method array getReplaces() 获取多媒体信息。
+说明：
+1. 可以用多媒体信息替换回复内容里的占位符，得到完整的消息。
+2. 可能会出现回复内容里存在占位符，但是因为审核等原因没有返回多媒体信息。
+ * @method void setReplaces(array $Replaces) 设置多媒体信息。
+说明：
+1. 可以用多媒体信息替换回复内容里的占位符，得到完整的消息。
+2. 可能会出现回复内容里存在占位符，但是因为审核等原因没有返回多媒体信息。
+ * @method array getRecommendedQuestions() 获取推荐问答。
+ * @method void setRecommendedQuestions(array $RecommendedQuestions) 设置推荐问答。
+ * @method Processes getProcesses() 获取AI搜索返回状态
+ * @method void setProcesses(Processes $Processes) 设置AI搜索返回状态
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。本接口为流式响应接口，当请求成功时，RequestId 会被放在 HTTP 响应的 Header "X-TC-RequestId" 中。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。本接口为流式响应接口，当请求成功时，RequestId 会被放在 HTTP 响应的 Header "X-TC-RequestId" 中。
  */
@@ -60,7 +76,7 @@ class ChatCompletionsResponse extends AbstractModel
     public $Note;
 
     /**
-     * @var string 本轮对话的 ID。
+     * @var string 本次请求的 RequestId。
      */
     public $Id;
 
@@ -77,6 +93,35 @@ class ChatCompletionsResponse extends AbstractModel
     public $ErrorMsg;
 
     /**
+     * @var string 多轮会话风险审核，值为1时，表明存在信息安全风险，建议终止客户多轮会话。
+     * @deprecated
+     */
+    public $ModerationLevel;
+
+    /**
+     * @var SearchInfo 搜索结果信息
+     */
+    public $SearchInfo;
+
+    /**
+     * @var array 多媒体信息。
+说明：
+1. 可以用多媒体信息替换回复内容里的占位符，得到完整的消息。
+2. 可能会出现回复内容里存在占位符，但是因为审核等原因没有返回多媒体信息。
+     */
+    public $Replaces;
+
+    /**
+     * @var array 推荐问答。
+     */
+    public $RecommendedQuestions;
+
+    /**
+     * @var Processes AI搜索返回状态
+     */
+    public $Processes;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。本接口为流式响应接口，当请求成功时，RequestId 会被放在 HTTP 响应的 Header "X-TC-RequestId" 中。
      */
     public $RequestId;
@@ -86,11 +131,19 @@ class ChatCompletionsResponse extends AbstractModel
      * @param Usage $Usage Token 统计信息。
 按照总 Token 数量计费。
      * @param string $Note 免责声明。
-     * @param string $Id 本轮对话的 ID。
+     * @param string $Id 本次请求的 RequestId。
      * @param array $Choices 回复内容。
      * @param ErrorMsg $ErrorMsg 错误信息。
 如果流式返回中服务处理异常，返回该错误信息。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ModerationLevel 多轮会话风险审核，值为1时，表明存在信息安全风险，建议终止客户多轮会话。
+     * @param SearchInfo $SearchInfo 搜索结果信息
+     * @param array $Replaces 多媒体信息。
+说明：
+1. 可以用多媒体信息替换回复内容里的占位符，得到完整的消息。
+2. 可能会出现回复内容里存在占位符，但是因为审核等原因没有返回多媒体信息。
+     * @param array $RecommendedQuestions 推荐问答。
+     * @param Processes $Processes AI搜索返回状态
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。本接口为流式响应接口，当请求成功时，RequestId 会被放在 HTTP 响应的 Header "X-TC-RequestId" 中。
      */
     function __construct()
@@ -135,6 +188,33 @@ class ChatCompletionsResponse extends AbstractModel
         if (array_key_exists("ErrorMsg",$param) and $param["ErrorMsg"] !== null) {
             $this->ErrorMsg = new ErrorMsg();
             $this->ErrorMsg->deserialize($param["ErrorMsg"]);
+        }
+
+        if (array_key_exists("ModerationLevel",$param) and $param["ModerationLevel"] !== null) {
+            $this->ModerationLevel = $param["ModerationLevel"];
+        }
+
+        if (array_key_exists("SearchInfo",$param) and $param["SearchInfo"] !== null) {
+            $this->SearchInfo = new SearchInfo();
+            $this->SearchInfo->deserialize($param["SearchInfo"]);
+        }
+
+        if (array_key_exists("Replaces",$param) and $param["Replaces"] !== null) {
+            $this->Replaces = [];
+            foreach ($param["Replaces"] as $key => $value){
+                $obj = new Replace();
+                $obj->deserialize($value);
+                array_push($this->Replaces, $obj);
+            }
+        }
+
+        if (array_key_exists("RecommendedQuestions",$param) and $param["RecommendedQuestions"] !== null) {
+            $this->RecommendedQuestions = $param["RecommendedQuestions"];
+        }
+
+        if (array_key_exists("Processes",$param) and $param["Processes"] !== null) {
+            $this->Processes = new Processes();
+            $this->Processes->deserialize($param["Processes"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

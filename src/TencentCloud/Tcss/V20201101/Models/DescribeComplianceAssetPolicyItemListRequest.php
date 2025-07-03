@@ -27,9 +27,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLimit() 获取要获取的数据量，默认为10，最大为100。
  * @method void setLimit(integer $Limit) 设置要获取的数据量，默认为10，最大为100。
  * @method array getFilters() 获取过滤器列表。Name字段支持
-RiskLevel
+RiskLevel， AppId
  * @method void setFilters(array $Filters) 设置过滤器列表。Name字段支持
-RiskLevel
+RiskLevel， AppId
+ * @method string getAssetType() 获取资产类型 <li>ASSET_CONTAINER Docker容器</li> <li>ASSET_IMAGE Docker镜像</li> <li>ASSET_HOST Docker主机</li> <li>ASSET_K8S Kubernetes</li> <li>ASSET_CONTAINERD Containerd主机</li> <li>ASSET_CONTAINERD_CONTAINER Containerd容器</li>
+ * @method void setAssetType(string $AssetType) 设置资产类型 <li>ASSET_CONTAINER Docker容器</li> <li>ASSET_IMAGE Docker镜像</li> <li>ASSET_HOST Docker主机</li> <li>ASSET_K8S Kubernetes</li> <li>ASSET_CONTAINERD Containerd主机</li> <li>ASSET_CONTAINERD_CONTAINER Containerd容器</li>
  */
 class DescribeComplianceAssetPolicyItemListRequest extends AbstractModel
 {
@@ -50,16 +52,22 @@ class DescribeComplianceAssetPolicyItemListRequest extends AbstractModel
 
     /**
      * @var array 过滤器列表。Name字段支持
-RiskLevel
+RiskLevel， AppId
      */
     public $Filters;
+
+    /**
+     * @var string 资产类型 <li>ASSET_CONTAINER Docker容器</li> <li>ASSET_IMAGE Docker镜像</li> <li>ASSET_HOST Docker主机</li> <li>ASSET_K8S Kubernetes</li> <li>ASSET_CONTAINERD Containerd主机</li> <li>ASSET_CONTAINERD_CONTAINER Containerd容器</li>
+     */
+    public $AssetType;
 
     /**
      * @param integer $CustomerAssetId 客户资产的ID。
      * @param integer $Offset 起始偏移量，默认为0。
      * @param integer $Limit 要获取的数据量，默认为10，最大为100。
      * @param array $Filters 过滤器列表。Name字段支持
-RiskLevel
+RiskLevel， AppId
+     * @param string $AssetType 资产类型 <li>ASSET_CONTAINER Docker容器</li> <li>ASSET_IMAGE Docker镜像</li> <li>ASSET_HOST Docker主机</li> <li>ASSET_K8S Kubernetes</li> <li>ASSET_CONTAINERD Containerd主机</li> <li>ASSET_CONTAINERD_CONTAINER Containerd容器</li>
      */
     function __construct()
     {
@@ -93,6 +101,10 @@ RiskLevel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("AssetType",$param) and $param["AssetType"] !== null) {
+            $this->AssetType = $param["AssetType"];
         }
     }
 }

@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 弹性扩缩容执行一次规则上下文
  *
  * @method string getExecuteAt() 获取该次任务执行的具体完整时间，格式为"2020-07-13 00:00:00"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExecuteAt(string $ExecuteAt) 设置该次任务执行的具体完整时间，格式为"2020-07-13 00:00:00"
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class NotRepeatStrategy extends AbstractModel
 {
     /**
      * @var string 该次任务执行的具体完整时间，格式为"2020-07-13 00:00:00"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecuteAt;
 
     /**
      * @param string $ExecuteAt 该次任务执行的具体完整时间，格式为"2020-07-13 00:00:00"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

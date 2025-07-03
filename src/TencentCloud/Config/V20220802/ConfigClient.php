@@ -23,8 +23,12 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Config\V20220802\Models as Models;
 
 /**
+ * @method Models\DescribeAggregateDiscoveredResourceResponse DescribeAggregateDiscoveredResource(Models\DescribeAggregateDiscoveredResourceRequest $req) 账号组资源详情
+ * @method Models\DescribeDiscoveredResourceResponse DescribeDiscoveredResource(Models\DescribeDiscoveredResourceRequest $req) 资源详情
  * @method Models\ListAggregateConfigRulesResponse ListAggregateConfigRules(Models\ListAggregateConfigRulesRequest $req) 账号组获取规则列表
+ * @method Models\ListAggregateDiscoveredResourcesResponse ListAggregateDiscoveredResources(Models\ListAggregateDiscoveredResourcesRequest $req) 账号组获取资源列表
  * @method Models\ListConfigRulesResponse ListConfigRules(Models\ListConfigRulesRequest $req) 获取规则列表
+ * @method Models\ListDiscoveredResourcesResponse ListDiscoveredResources(Models\ListDiscoveredResourcesRequest $req) 获取资源列表
  * @method Models\PutEvaluationsResponse PutEvaluations(Models\PutEvaluationsRequest $req) 上报自定义规则评估结果
  */
 

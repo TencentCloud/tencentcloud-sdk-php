@@ -61,9 +61,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataDisks(array $DataDisks) 设置多盘数据盘挂载信息：新建节点时请确保购买CVM的参数传递了购买多个数据盘的信息，如CreateClusterInstances API的RunInstancesPara下的DataDisks也需要设置购买多个数据盘, 具体可以参考CreateClusterInstances接口的添加集群节点(多块数据盘)样例；添加已有节点时，请确保填写的分区信息在节点上真实存在
 注意：此字段可能返回 null，表示取不到有效值。
  * @method InstanceExtraArgs getExtraArgs() 获取节点相关的自定义参数信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtraArgs(InstanceExtraArgs $ExtraArgs) 设置节点相关的自定义参数信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceAdvancedSettings extends AbstractModel
 {
@@ -129,7 +127,6 @@ class InstanceAdvancedSettings extends AbstractModel
 
     /**
      * @var InstanceExtraArgs 节点相关的自定义参数信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExtraArgs;
 
@@ -155,7 +152,6 @@ class InstanceAdvancedSettings extends AbstractModel
      * @param array $DataDisks 多盘数据盘挂载信息：新建节点时请确保购买CVM的参数传递了购买多个数据盘的信息，如CreateClusterInstances API的RunInstancesPara下的DataDisks也需要设置购买多个数据盘, 具体可以参考CreateClusterInstances接口的添加集群节点(多块数据盘)样例；添加已有节点时，请确保填写的分区信息在节点上真实存在
 注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceExtraArgs $ExtraArgs 节点相关的自定义参数信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

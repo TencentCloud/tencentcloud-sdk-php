@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getRuleUuids() 获取规则的uuid列表，可通过查询规则列表获取，注意：如果传入的是[-1]将删除所有规则
  * @method void setRuleUuids(array $RuleUuids) 设置规则的uuid列表，可通过查询规则列表获取，注意：如果传入的是[-1]将删除所有规则
+ * @method integer getIpVersion() 获取仅当RuleUuids为-1时有效；0：删除Ipv4规则，1：删除Ipv6规则；默认为Ipv4类型规则
+ * @method void setIpVersion(integer $IpVersion) 设置仅当RuleUuids为-1时有效；0：删除Ipv4规则，1：删除Ipv6规则；默认为Ipv4类型规则
  */
 class RemoveVpcAcRuleRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class RemoveVpcAcRuleRequest extends AbstractModel
     public $RuleUuids;
 
     /**
+     * @var integer 仅当RuleUuids为-1时有效；0：删除Ipv4规则，1：删除Ipv6规则；默认为Ipv4类型规则
+     */
+    public $IpVersion;
+
+    /**
      * @param array $RuleUuids 规则的uuid列表，可通过查询规则列表获取，注意：如果传入的是[-1]将删除所有规则
+     * @param integer $IpVersion 仅当RuleUuids为-1时有效；0：删除Ipv4规则，1：删除Ipv6规则；默认为Ipv4类型规则
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class RemoveVpcAcRuleRequest extends AbstractModel
         }
         if (array_key_exists("RuleUuids",$param) and $param["RuleUuids"] !== null) {
             $this->RuleUuids = $param["RuleUuids"];
+        }
+
+        if (array_key_exists("IpVersion",$param) and $param["IpVersion"] !== null) {
+            $this->IpVersion = $param["IpVersion"];
         }
     }
 }

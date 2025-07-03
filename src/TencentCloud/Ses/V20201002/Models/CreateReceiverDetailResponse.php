@@ -20,17 +20,57 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateReceiverDetail返回参数结构体
  *
+ * @method integer getTotalCount() 获取收件人总数
+ * @method void setTotalCount(integer $TotalCount) 设置收件人总数
+ * @method integer getValidCount() 获取实际上传数量
+ * @method void setValidCount(integer $ValidCount) 设置实际上传数量
+ * @method integer getTooLongCount() 获取数据过长数量
+ * @method void setTooLongCount(integer $TooLongCount) 设置数据过长数量
+ * @method integer getEmptyEmailCount() 获取邮件地址为空数量
+ * @method void setEmptyEmailCount(integer $EmptyEmailCount) 设置邮件地址为空数量
+ * @method integer getRepeatCount() 获取重复数量
+ * @method void setRepeatCount(integer $RepeatCount) 设置重复数量
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateReceiverDetailResponse extends AbstractModel
 {
     /**
+     * @var integer 收件人总数
+     */
+    public $TotalCount;
+
+    /**
+     * @var integer 实际上传数量
+     */
+    public $ValidCount;
+
+    /**
+     * @var integer 数据过长数量
+     */
+    public $TooLongCount;
+
+    /**
+     * @var integer 邮件地址为空数量
+     */
+    public $EmptyEmailCount;
+
+    /**
+     * @var integer 重复数量
+     */
+    public $RepeatCount;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param integer $TotalCount 收件人总数
+     * @param integer $ValidCount 实际上传数量
+     * @param integer $TooLongCount 数据过长数量
+     * @param integer $EmptyEmailCount 邮件地址为空数量
+     * @param integer $RepeatCount 重复数量
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +86,26 @@ class CreateReceiverDetailResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("ValidCount",$param) and $param["ValidCount"] !== null) {
+            $this->ValidCount = $param["ValidCount"];
+        }
+
+        if (array_key_exists("TooLongCount",$param) and $param["TooLongCount"] !== null) {
+            $this->TooLongCount = $param["TooLongCount"];
+        }
+
+        if (array_key_exists("EmptyEmailCount",$param) and $param["EmptyEmailCount"] !== null) {
+            $this->EmptyEmailCount = $param["EmptyEmailCount"];
+        }
+
+        if (array_key_exists("RepeatCount",$param) and $param["RepeatCount"] !== null) {
+            $this->RepeatCount = $param["RepeatCount"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

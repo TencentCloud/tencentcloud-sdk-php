@@ -62,8 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRole(string $Role) 设置函数绑定的角色
  * @method string getInstallDependency() 获取是否自动安装依赖
  * @method void setInstallDependency(string $InstallDependency) 设置是否自动安装依赖
- * @method string getStatus() 获取函数状态，状态值及流转[参考说明](https://cloud.tencent.com/document/product/583/47175)
- * @method void setStatus(string $Status) 设置函数状态，状态值及流转[参考说明](https://cloud.tencent.com/document/product/583/47175)
+ * @method string getStatus() 获取函数状态，状态值及流转[参考说明](https://cloud.tencent.com/document/product/583/115197)
+ * @method void setStatus(string $Status) 设置函数状态，状态值及流转[参考说明](https://cloud.tencent.com/document/product/583/115197)
  * @method string getStatusDesc() 获取状态描述
  * @method void setStatusDesc(string $StatusDesc) 设置状态描述
  * @method string getClsLogsetId() 获取日志投递到的Cls日志集
@@ -97,31 +97,19 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOnsEnable(string $OnsEnable) 设置是否启用Ons
 注意：此字段可能返回 null，表示取不到有效值。
  * @method CfsConfig getCfsConfig() 获取文件系统配置参数，用于云函数挂载文件系统
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCfsConfig(CfsConfig $CfsConfig) 设置文件系统配置参数，用于云函数挂载文件系统
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAvailableStatus() 获取函数的计费状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/47175#.E5.87.BD.E6.95.B0.E8.AE.A1.E8.B4.B9.E7.8A.B6.E6.80.81)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAvailableStatus(string $AvailableStatus) 设置函数的计费状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/47175#.E5.87.BD.E6.95.B0.E8.AE.A1.E8.B4.B9.E7.8A.B6.E6.80.81)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getQualifier() 获取函数版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQualifier(string $Qualifier) 设置函数版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getInitTimeout() 获取函数初始化超时时间
  * @method void setInitTimeout(integer $InitTimeout) 设置函数初始化超时时间
  * @method array getStatusReasons() 获取函数状态失败原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatusReasons(array $StatusReasons) 设置函数状态失败原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAsyncRunEnable() 获取是否开启异步属性
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAsyncRunEnable(string $AsyncRunEnable) 设置是否开启异步属性
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTraceEnable() 获取是否开启事件追踪
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTraceEnable(string $TraceEnable) 设置是否开启事件追踪
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ImageConfig getImageConfig() 获取镜像配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setImageConfig(ImageConfig $ImageConfig) 设置镜像配置
@@ -135,9 +123,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProtocolParams(ProtocolParams $ProtocolParams) 设置HTTP函数配置ProtocolType访问协议，当前协议配置的参数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDnsCache() 获取是否开启DNS缓存
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDnsCache(string $DnsCache) 设置是否开启DNS缓存
-注意：此字段可能返回 null，表示取不到有效值。
  * @method IntranetConfigOut getIntranetConfig() 获取内网访问配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIntranetConfig(IntranetConfigOut $IntranetConfig) 设置内网访问配置
@@ -249,7 +235,7 @@ class GetFunctionResponse extends AbstractModel
     public $InstallDependency;
 
     /**
-     * @var string 函数状态，状态值及流转[参考说明](https://cloud.tencent.com/document/product/583/47175)
+     * @var string 函数状态，状态值及流转[参考说明](https://cloud.tencent.com/document/product/583/115197)
      */
     public $Status;
 
@@ -327,19 +313,16 @@ class GetFunctionResponse extends AbstractModel
 
     /**
      * @var CfsConfig 文件系统配置参数，用于云函数挂载文件系统
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CfsConfig;
 
     /**
      * @var string 函数的计费状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/47175#.E5.87.BD.E6.95.B0.E8.AE.A1.E8.B4.B9.E7.8A.B6.E6.80.81)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AvailableStatus;
 
     /**
      * @var string 函数版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Qualifier;
 
@@ -350,19 +333,16 @@ class GetFunctionResponse extends AbstractModel
 
     /**
      * @var array 函数状态失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StatusReasons;
 
     /**
      * @var string 是否开启异步属性
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AsyncRunEnable;
 
     /**
      * @var string 是否开启事件追踪
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TraceEnable;
 
@@ -386,7 +366,6 @@ class GetFunctionResponse extends AbstractModel
 
     /**
      * @var string 是否开启DNS缓存
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DnsCache;
 
@@ -423,7 +402,7 @@ class GetFunctionResponse extends AbstractModel
      * @param string $Namespace 函数的命名空间
      * @param string $Role 函数绑定的角色
      * @param string $InstallDependency 是否自动安装依赖
-     * @param string $Status 函数状态，状态值及流转[参考说明](https://cloud.tencent.com/document/product/583/47175)
+     * @param string $Status 函数状态，状态值及流转[参考说明](https://cloud.tencent.com/document/product/583/115197)
      * @param string $StatusDesc 状态描述
      * @param string $ClsLogsetId 日志投递到的Cls日志集
      * @param string $ClsTopicId 日志投递到的Cls Topic
@@ -441,18 +420,12 @@ class GetFunctionResponse extends AbstractModel
      * @param string $OnsEnable 是否启用Ons
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CfsConfig $CfsConfig 文件系统配置参数，用于云函数挂载文件系统
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AvailableStatus 函数的计费状态，状态值[参考此处](https://cloud.tencent.com/document/product/583/47175#.E5.87.BD.E6.95.B0.E8.AE.A1.E8.B4.B9.E7.8A.B6.E6.80.81)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Qualifier 函数版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InitTimeout 函数初始化超时时间
      * @param array $StatusReasons 函数状态失败原因
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AsyncRunEnable 是否开启异步属性
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TraceEnable 是否开启事件追踪
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageConfig $ImageConfig 镜像配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProtocolType HTTP函数支持的访问协议。当前支持WebSockets协议。
@@ -460,7 +433,6 @@ class GetFunctionResponse extends AbstractModel
      * @param ProtocolParams $ProtocolParams HTTP函数配置ProtocolType访问协议，当前协议配置的参数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DnsCache 是否开启DNS缓存
-注意：此字段可能返回 null，表示取不到有效值。
      * @param IntranetConfigOut $IntranetConfig 内网访问配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。

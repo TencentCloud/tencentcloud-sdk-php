@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BatchCreateAcl请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
+ * @method string getInstanceId() 获取ckafka集群实例Id
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
  * @method integer getResourceType() 获取Acl资源类型，(2:TOPIC）
  * @method void setResourceType(integer $ResourceType) 设置Acl资源类型，(2:TOPIC）
  * @method array getResourceNames() 获取资源列表数组
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class BatchCreateAclRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string ckafka集群实例Id
      */
     public $InstanceId;
 
@@ -52,7 +52,7 @@ class BatchCreateAclRequest extends AbstractModel
     public $RuleList;
 
     /**
-     * @param string $InstanceId 实例ID
+     * @param string $InstanceId ckafka集群实例Id
      * @param integer $ResourceType Acl资源类型，(2:TOPIC）
      * @param array $ResourceNames 资源列表数组
      * @param array $RuleList 设置的ACL规则列表

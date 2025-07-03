@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) 设置订单状态为过滤条件：PENDING INCONSTRUCTION DELIVERING DELIVERED EXPIRED CANCELLED  OFFLINE
  * @method string getActionType() 获取订单类型为过滤条件：CREATE  EXTEND
  * @method void setActionType(string $ActionType) 设置订单类型为过滤条件：CREATE  EXTEND
+ * @method array getOrderTypes() 获取订单类型列表
+ * @method void setOrderTypes(array $OrderTypes) 设置订单类型列表
  */
 class DescribeDedicatedClusterOrdersRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DescribeDedicatedClusterOrdersRequest extends AbstractModel
     public $ActionType;
 
     /**
+     * @var array 订单类型列表
+     */
+    public $OrderTypes;
+
+    /**
      * @param array $DedicatedClusterIds 按照专用集群id过滤
      * @param string $DedicatedClusterOrderIds 按照专用集群订单id过滤
      * @param integer $Offset 偏移量，默认为0。关于`Offset`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      * @param integer $Limit 返回数量，默认为20，最大值为100。关于`Limit`的更进一步介绍请参考 API [简介](https://cloud.tencent.com/document/api/213/15688)中的相关小节。
      * @param string $Status 订单状态为过滤条件：PENDING INCONSTRUCTION DELIVERING DELIVERED EXPIRED CANCELLED  OFFLINE
      * @param string $ActionType 订单类型为过滤条件：CREATE  EXTEND
+     * @param array $OrderTypes 订单类型列表
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DescribeDedicatedClusterOrdersRequest extends AbstractModel
 
         if (array_key_exists("ActionType",$param) and $param["ActionType"] !== null) {
             $this->ActionType = $param["ActionType"];
+        }
+
+        if (array_key_exists("OrderTypes",$param) and $param["OrderTypes"] !== null) {
+            $this->OrderTypes = $param["OrderTypes"];
         }
     }
 }

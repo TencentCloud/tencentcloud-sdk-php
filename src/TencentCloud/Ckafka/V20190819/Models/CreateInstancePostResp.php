@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getReturnMessage() 获取接口返回消息，当接口报错时提示错误信息
  * @method void setReturnMessage(string $ReturnMessage) 设置接口返回消息，当接口报错时提示错误信息
  * @method CreateInstancePostData getData() 获取返回的Data数据
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(CreateInstancePostData $Data) 设置返回的Data数据
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CreateInstancePostResp extends AbstractModel
 {
@@ -43,7 +41,6 @@ class CreateInstancePostResp extends AbstractModel
 
     /**
      * @var CreateInstancePostData 返回的Data数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
 
@@ -51,7 +48,6 @@ class CreateInstancePostResp extends AbstractModel
      * @param string $ReturnCode 返回的code，0为正常，非0为错误
      * @param string $ReturnMessage 接口返回消息，当接口报错时提示错误信息
      * @param CreateInstancePostData $Data 返回的Data数据
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -39,21 +39,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getAutoRestoreSwitchStatus() 获取自动恢复开关 (Filters 过滤Quuid 时 返回) 默认0
  * @method void setAutoRestoreSwitchStatus(integer $AutoRestoreSwitchStatus) 设置自动恢复开关 (Filters 过滤Quuid 时 返回) 默认0
  * @method string getFirstProtectTime() 获取首次开启防护时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFirstProtectTime(string $FirstProtectTime) 设置首次开启防护时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLatestProtectTime() 获取最近开启防护时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLatestProtectTime(string $LatestProtectTime) 设置最近开启防护时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProtectFileType() 获取防护文件类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProtectFileType(string $ProtectFileType) 设置防护文件类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProtectFilesCount() 获取防护文件总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProtectFilesCount(integer $ProtectFilesCount) 设置防护文件总数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProtectDirInfo extends AbstractModel
 {
@@ -104,25 +96,21 @@ class ProtectDirInfo extends AbstractModel
 
     /**
      * @var string 首次开启防护时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FirstProtectTime;
 
     /**
      * @var string 最近开启防护时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LatestProtectTime;
 
     /**
      * @var string 防护文件类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProtectFileType;
 
     /**
      * @var integer 防护文件总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProtectFilesCount;
 
@@ -137,13 +125,9 @@ class ProtectDirInfo extends AbstractModel
      * @param integer $ProtectException 防护异常
      * @param integer $AutoRestoreSwitchStatus 自动恢复开关 (Filters 过滤Quuid 时 返回) 默认0
      * @param string $FirstProtectTime 首次开启防护时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LatestProtectTime 最近开启防护时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProtectFileType 防护文件类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ProtectFilesCount 防护文件总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -37,17 +37,11 @@ use TencentCloud\Common\AbstractModel;
  * @method array getFilterParam() 获取过滤器
  * @method void setFilterParam(array $FilterParam) 设置过滤器
  * @method string getResult() 获取测试结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResult(string $Result) 设置测试结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAnalyseResult() 获取解析结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAnalyseResult(array $AnalyseResult) 设置解析结果
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getUseEventBus() 获取底层引擎是否使用eb
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUseEventBus(boolean $UseEventBus) 设置底层引擎是否使用eb
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TransformParam extends AbstractModel
 {
@@ -93,19 +87,16 @@ class TransformParam extends AbstractModel
 
     /**
      * @var string 测试结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Result;
 
     /**
      * @var array 解析结果
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AnalyseResult;
 
     /**
      * @var boolean 底层引擎是否使用eb
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UseEventBus;
 
@@ -119,11 +110,8 @@ class TransformParam extends AbstractModel
      * @param array $MapParam Map
      * @param array $FilterParam 过滤器
      * @param string $Result 测试结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AnalyseResult 解析结果
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $UseEventBus 底层引擎是否使用eb
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 成本分析支付方式复杂类型
  *
  * @method string getPayMode() 获取计费模式code
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayMode(string $PayMode) 设置计费模式code
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPayModeName() 获取计费模式Name
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPayModeName(string $PayModeName) 设置计费模式Name
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AnalysePayModeDetail extends AbstractModel
 {
     /**
      * @var string 计费模式code
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PayMode;
 
     /**
      * @var string 计费模式Name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PayModeName;
 
     /**
      * @param string $PayMode 计费模式code
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PayModeName 计费模式Name
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

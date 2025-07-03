@@ -21,153 +21,105 @@ use TencentCloud\Common\AbstractModel;
  * MongoDB类型入参
  *
  * @method string getDatabase() 获取MongoDB的数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatabase(string $Database) 设置MongoDB的数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCollection() 获取MongoDB的集群
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCollection(string $Collection) 设置MongoDB的集群
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getCopyExisting() 获取是否复制存量数据，默认传参true
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCopyExisting(boolean $CopyExisting) 设置是否复制存量数据，默认传参true
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResource() 获取实例资源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResource(string $Resource) 设置实例资源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIp() 获取MongoDB的连接ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIp(string $Ip) 设置MongoDB的连接ip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPort() 获取MongoDB的连接port
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPort(integer $Port) 设置MongoDB的连接port
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserName() 获取MongoDB数据库用户名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserName(string $UserName) 设置MongoDB数据库用户名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPassword() 获取MongoDB数据库密码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPassword(string $Password) 设置MongoDB数据库密码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getListeningEvent() 获取监听事件类型，为空时表示全选。取值包括insert,update,replace,delete,invalidate,drop,dropdatabase,rename，多个类型间使用,逗号分隔
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setListeningEvent(string $ListeningEvent) 设置监听事件类型，为空时表示全选。取值包括insert,update,replace,delete,invalidate,drop,dropdatabase,rename，多个类型间使用,逗号分隔
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReadPreference() 获取主从优先级，默认主节点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReadPreference(string $ReadPreference) 设置主从优先级，默认主节点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPipeline() 获取聚合管道
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPipeline(string $Pipeline) 设置聚合管道
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getSelfBuilt() 获取是否为自建集群
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSelfBuilt(boolean $SelfBuilt) 设置是否为自建集群
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MongoDBParam extends AbstractModel
 {
     /**
      * @var string MongoDB的数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Database;
 
     /**
      * @var string MongoDB的集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Collection;
 
     /**
      * @var boolean 是否复制存量数据，默认传参true
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CopyExisting;
 
     /**
      * @var string 实例资源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Resource;
 
     /**
      * @var string MongoDB的连接ip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ip;
 
     /**
      * @var integer MongoDB的连接port
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Port;
 
     /**
      * @var string MongoDB数据库用户名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserName;
 
     /**
      * @var string MongoDB数据库密码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Password;
 
     /**
      * @var string 监听事件类型，为空时表示全选。取值包括insert,update,replace,delete,invalidate,drop,dropdatabase,rename，多个类型间使用,逗号分隔
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ListeningEvent;
 
     /**
      * @var string 主从优先级，默认主节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReadPreference;
 
     /**
      * @var string 聚合管道
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Pipeline;
 
     /**
      * @var boolean 是否为自建集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SelfBuilt;
 
     /**
      * @param string $Database MongoDB的数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Collection MongoDB的集群
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $CopyExisting 是否复制存量数据，默认传参true
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Resource 实例资源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Ip MongoDB的连接ip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Port MongoDB的连接port
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserName MongoDB数据库用户名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Password MongoDB数据库密码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ListeningEvent 监听事件类型，为空时表示全选。取值包括insert,update,replace,delete,invalidate,drop,dropdatabase,rename，多个类型间使用,逗号分隔
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReadPreference 主从优先级，默认主节点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Pipeline 聚合管道
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $SelfBuilt 是否为自建集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

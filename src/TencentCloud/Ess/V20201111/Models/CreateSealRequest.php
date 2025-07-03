@@ -42,22 +42,8 @@ use TencentCloud\Common\AbstractModel;
 <li><strong>空值</strong>:(默认)使用上传的图片生成印章, 此时需要上传SealImage图片</li>
 <li><strong>SealGenerateSourceSystem</strong>: 系统生成印章, 无需上传SealImage图片</li>
 </ul>
- * @method string getSealType() 获取电子印章类型 , 可选类型如下: 
-<ul><li>**OFFICIAL**: (默认)公章</li>
-<li>**CONTRACT**: 合同专用章;</li>
-<li>**FINANCE**: 财务专用章;</li>
-<li>**PERSONNEL**: 人事专用章</li>
-<li>**INVOICE**: 发票专用章</li>
-</ul>
-注: `同企业下只能有一个公章, 重复创建会报错`
- * @method void setSealType(string $SealType) 设置电子印章类型 , 可选类型如下: 
-<ul><li>**OFFICIAL**: (默认)公章</li>
-<li>**CONTRACT**: 合同专用章;</li>
-<li>**FINANCE**: 财务专用章;</li>
-<li>**PERSONNEL**: 人事专用章</li>
-<li>**INVOICE**: 发票专用章</li>
-</ul>
-注: `同企业下只能有一个公章, 重复创建会报错`
+ * @method string getSealType() 获取电子印章类型 , 可选类型如下: <ul><li>**OFFICIAL**: (默认)公章</li><li>**CONTRACT**: 合同专用章;</li><li>**FINANCE**: 财务专用章;</li><li>**PERSONNEL**: 人事专用章</li><li>**INVOICE**: 发票专用章</li><li>**OTHER**: 其他</li></ul>注: 同企业下只能有<font color="red">一个</font>公章, 重复创建会报错
+ * @method void setSealType(string $SealType) 设置电子印章类型 , 可选类型如下: <ul><li>**OFFICIAL**: (默认)公章</li><li>**CONTRACT**: 合同专用章;</li><li>**FINANCE**: 财务专用章;</li><li>**PERSONNEL**: 人事专用章</li><li>**INVOICE**: 发票专用章</li><li>**OTHER**: 其他</li></ul>注: 同企业下只能有<font color="red">一个</font>公章, 重复创建会报错
  * @method string getFileName() 获取电子印章图片文件名称，1-50个中文字符。
  * @method void setFileName(string $FileName) 设置电子印章图片文件名称，1-50个中文字符。
  * @method string getImage() 获取电子印章图片base64编码，大小不超过10M（原始图片不超过5M），只支持PNG或JPG图片格式
@@ -108,16 +94,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSealStyle(string $SealStyle) 设置印章样式, 可以选择的样式如下: 
 <ul><li>**circle**:(默认)圆形印章</li>
 <li>**ellipse**:椭圆印章</li></ul>
- * @method string getSealSize() 获取印章尺寸取值描述, 可以选择的尺寸如下: 
-<ul><li> **42_42**: 圆形企业公章直径42mm, 当SealStyle是圆形的时候才有效</li>
-<li> **40_40**: 圆形企业印章直径40mm, 当SealStyle是圆形的时候才有效</li>
-<li> **45_30**: 椭圆形印章45mm x 30mm, 当SealStyle是椭圆的时候才有效</li>
-<li> **40_30**: 椭圆形印章40mm x 30mm, 当SealStyle是椭圆的时候才有效</li></ul>
- * @method void setSealSize(string $SealSize) 设置印章尺寸取值描述, 可以选择的尺寸如下: 
-<ul><li> **42_42**: 圆形企业公章直径42mm, 当SealStyle是圆形的时候才有效</li>
-<li> **40_40**: 圆形企业印章直径40mm, 当SealStyle是圆形的时候才有效</li>
-<li> **45_30**: 椭圆形印章45mm x 30mm, 当SealStyle是椭圆的时候才有效</li>
-<li> **40_30**: 椭圆形印章40mm x 30mm, 当SealStyle是椭圆的时候才有效</li></ul>
+ * @method string getSealSize() 获取印章尺寸取值描述, 可以选择的尺寸如下: <ul><li> **38_38**: 圆形企业公章直径38mm, 当SealStyle是圆形的时候才有效</li> <li> **40_40**: 圆形企业公章直径40mm, 当SealStyle是圆形的时候才有效</li> <li> **42_42**（默认）: 圆形企业公章直径42mm, 当SealStyle是圆形的时候才有效</li> <li> **45_45**: 圆形企业印章直径45mm, 当SealStyle是圆形的时候才有效</li> <li> **50_50**: 圆形企业印章直径45mm, 当SealStyle是圆形的时候才有效</li> <li> **58_58**: 圆形企业印章直径45mm, 当SealStyle是圆形的时候才有效</li>  <li> **40_30**: 椭圆形印章40mm x 30mm, 当SealStyle是椭圆的时候才有效</li> <li> **45_30**: 椭圆形印章45mm x 30mm, 当SealStyle是椭圆的时候才有效</li> </ul>
+ * @method void setSealSize(string $SealSize) 设置印章尺寸取值描述, 可以选择的尺寸如下: <ul><li> **38_38**: 圆形企业公章直径38mm, 当SealStyle是圆形的时候才有效</li> <li> **40_40**: 圆形企业公章直径40mm, 当SealStyle是圆形的时候才有效</li> <li> **42_42**（默认）: 圆形企业公章直径42mm, 当SealStyle是圆形的时候才有效</li> <li> **45_45**: 圆形企业印章直径45mm, 当SealStyle是圆形的时候才有效</li> <li> **50_50**: 圆形企业印章直径45mm, 当SealStyle是圆形的时候才有效</li> <li> **58_58**: 圆形企业印章直径45mm, 当SealStyle是圆形的时候才有效</li>  <li> **40_30**: 椭圆形印章40mm x 30mm, 当SealStyle是椭圆的时候才有效</li> <li> **45_30**: 椭圆形印章45mm x 30mm, 当SealStyle是椭圆的时候才有效</li> </ul>
  * @method string getTaxIdentifyCode() 获取企业税号
 注:
 <ul>
@@ -161,14 +139,7 @@ class CreateSealRequest extends AbstractModel
     public $GenerateSource;
 
     /**
-     * @var string 电子印章类型 , 可选类型如下: 
-<ul><li>**OFFICIAL**: (默认)公章</li>
-<li>**CONTRACT**: 合同专用章;</li>
-<li>**FINANCE**: 财务专用章;</li>
-<li>**PERSONNEL**: 人事专用章</li>
-<li>**INVOICE**: 发票专用章</li>
-</ul>
-注: `同企业下只能有一个公章, 重复创建会报错`
+     * @var string 电子印章类型 , 可选类型如下: <ul><li>**OFFICIAL**: (默认)公章</li><li>**CONTRACT**: 合同专用章;</li><li>**FINANCE**: 财务专用章;</li><li>**PERSONNEL**: 人事专用章</li><li>**INVOICE**: 发票专用章</li><li>**OTHER**: 其他</li></ul>注: 同企业下只能有<font color="red">一个</font>公章, 重复创建会报错
      */
     public $SealType;
 
@@ -238,11 +209,7 @@ class CreateSealRequest extends AbstractModel
     public $SealStyle;
 
     /**
-     * @var string 印章尺寸取值描述, 可以选择的尺寸如下: 
-<ul><li> **42_42**: 圆形企业公章直径42mm, 当SealStyle是圆形的时候才有效</li>
-<li> **40_40**: 圆形企业印章直径40mm, 当SealStyle是圆形的时候才有效</li>
-<li> **45_30**: 椭圆形印章45mm x 30mm, 当SealStyle是椭圆的时候才有效</li>
-<li> **40_30**: 椭圆形印章40mm x 30mm, 当SealStyle是椭圆的时候才有效</li></ul>
+     * @var string 印章尺寸取值描述, 可以选择的尺寸如下: <ul><li> **38_38**: 圆形企业公章直径38mm, 当SealStyle是圆形的时候才有效</li> <li> **40_40**: 圆形企业公章直径40mm, 当SealStyle是圆形的时候才有效</li> <li> **42_42**（默认）: 圆形企业公章直径42mm, 当SealStyle是圆形的时候才有效</li> <li> **45_45**: 圆形企业印章直径45mm, 当SealStyle是圆形的时候才有效</li> <li> **50_50**: 圆形企业印章直径45mm, 当SealStyle是圆形的时候才有效</li> <li> **58_58**: 圆形企业印章直径45mm, 当SealStyle是圆形的时候才有效</li>  <li> **40_30**: 椭圆形印章40mm x 30mm, 当SealStyle是椭圆的时候才有效</li> <li> **45_30**: 椭圆形印章45mm x 30mm, 当SealStyle是椭圆的时候才有效</li> </ul>
      */
     public $SealSize;
 
@@ -268,14 +235,7 @@ class CreateSealRequest extends AbstractModel
 <li><strong>空值</strong>:(默认)使用上传的图片生成印章, 此时需要上传SealImage图片</li>
 <li><strong>SealGenerateSourceSystem</strong>: 系统生成印章, 无需上传SealImage图片</li>
 </ul>
-     * @param string $SealType 电子印章类型 , 可选类型如下: 
-<ul><li>**OFFICIAL**: (默认)公章</li>
-<li>**CONTRACT**: 合同专用章;</li>
-<li>**FINANCE**: 财务专用章;</li>
-<li>**PERSONNEL**: 人事专用章</li>
-<li>**INVOICE**: 发票专用章</li>
-</ul>
-注: `同企业下只能有一个公章, 重复创建会报错`
+     * @param string $SealType 电子印章类型 , 可选类型如下: <ul><li>**OFFICIAL**: (默认)公章</li><li>**CONTRACT**: 合同专用章;</li><li>**FINANCE**: 财务专用章;</li><li>**PERSONNEL**: 人事专用章</li><li>**INVOICE**: 发票专用章</li><li>**OTHER**: 其他</li></ul>注: 同企业下只能有<font color="red">一个</font>公章, 重复创建会报错
      * @param string $FileName 电子印章图片文件名称，1-50个中文字符。
      * @param string $Image 电子印章图片base64编码，大小不超过10M（原始图片不超过5M），只支持PNG或JPG图片格式
 
@@ -301,11 +261,7 @@ class CreateSealRequest extends AbstractModel
      * @param string $SealStyle 印章样式, 可以选择的样式如下: 
 <ul><li>**circle**:(默认)圆形印章</li>
 <li>**ellipse**:椭圆印章</li></ul>
-     * @param string $SealSize 印章尺寸取值描述, 可以选择的尺寸如下: 
-<ul><li> **42_42**: 圆形企业公章直径42mm, 当SealStyle是圆形的时候才有效</li>
-<li> **40_40**: 圆形企业印章直径40mm, 当SealStyle是圆形的时候才有效</li>
-<li> **45_30**: 椭圆形印章45mm x 30mm, 当SealStyle是椭圆的时候才有效</li>
-<li> **40_30**: 椭圆形印章40mm x 30mm, 当SealStyle是椭圆的时候才有效</li></ul>
+     * @param string $SealSize 印章尺寸取值描述, 可以选择的尺寸如下: <ul><li> **38_38**: 圆形企业公章直径38mm, 当SealStyle是圆形的时候才有效</li> <li> **40_40**: 圆形企业公章直径40mm, 当SealStyle是圆形的时候才有效</li> <li> **42_42**（默认）: 圆形企业公章直径42mm, 当SealStyle是圆形的时候才有效</li> <li> **45_45**: 圆形企业印章直径45mm, 当SealStyle是圆形的时候才有效</li> <li> **50_50**: 圆形企业印章直径45mm, 当SealStyle是圆形的时候才有效</li> <li> **58_58**: 圆形企业印章直径45mm, 当SealStyle是圆形的时候才有效</li>  <li> **40_30**: 椭圆形印章40mm x 30mm, 当SealStyle是椭圆的时候才有效</li> <li> **45_30**: 椭圆形印章45mm x 30mm, 当SealStyle是椭圆的时候才有效</li> </ul>
      * @param string $TaxIdentifyCode 企业税号
 注:
 <ul>

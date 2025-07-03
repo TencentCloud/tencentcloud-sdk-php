@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 结论
  *
  * @method array getSymptom() 获取症状
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSymptom(array $Symptom) 设置症状
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getText() 获取文本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setText(string $Text) 设置文本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCoords() 获取坐标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCoords(array $Coords) 设置坐标
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Summary extends AbstractModel
 {
     /**
      * @var array 症状
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Symptom;
 
     /**
      * @var string 文本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Text;
 
     /**
      * @var array 坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Coords;
 
     /**
      * @param array $Symptom 症状
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Text 文本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Coords 坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

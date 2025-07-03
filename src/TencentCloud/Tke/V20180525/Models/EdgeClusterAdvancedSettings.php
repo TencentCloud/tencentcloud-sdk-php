@@ -25,13 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExtraArgs(EdgeClusterExtraArgs $ExtraArgs) 设置集群自定义参数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRuntime() 获取运行时类型，支持"docker"和"containerd"，默认为docker
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuntime(string $Runtime) 设置运行时类型，支持"docker"和"containerd"，默认为docker
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProxyMode() 获取集群kube-proxy转发模式，支持"iptables"和"ipvs"，默认为iptables
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProxyMode(string $ProxyMode) 设置集群kube-proxy转发模式，支持"iptables"和"ipvs"，默认为iptables
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class EdgeClusterAdvancedSettings extends AbstractModel
 {
@@ -43,13 +39,11 @@ class EdgeClusterAdvancedSettings extends AbstractModel
 
     /**
      * @var string 运行时类型，支持"docker"和"containerd"，默认为docker
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Runtime;
 
     /**
      * @var string 集群kube-proxy转发模式，支持"iptables"和"ipvs"，默认为iptables
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProxyMode;
 
@@ -57,9 +51,7 @@ class EdgeClusterAdvancedSettings extends AbstractModel
      * @param EdgeClusterExtraArgs $ExtraArgs 集群自定义参数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Runtime 运行时类型，支持"docker"和"containerd"，默认为docker
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProxyMode 集群kube-proxy转发模式，支持"iptables"和"ipvs"，默认为iptables
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,25 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 企业组织策略列表
  *
  * @method string getAddTime() 获取策略创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddTime(string $AddTime) 设置策略创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAttachedTimes() 获取策略绑定次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAttachedTimes(integer $AttachedTimes) 设置策略绑定次数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取策略描述信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置策略描述信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPolicyName() 获取策略名称
  * @method void setPolicyName(string $PolicyName) 设置策略名称
  * @method integer getPolicyId() 获取策略Id
  * @method void setPolicyId(integer $PolicyId) 设置策略Id
  * @method string getUpdateTime() 获取策略更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置策略更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getType() 获取策略类型 1-自定义 2-预设
  * @method void setType(integer $Type) 设置策略类型 1-自定义 2-预设
  */
@@ -47,19 +39,16 @@ class ListPolicyNode extends AbstractModel
 {
     /**
      * @var string 策略创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AddTime;
 
     /**
      * @var integer 策略绑定次数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AttachedTimes;
 
     /**
      * @var string 策略描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
@@ -75,7 +64,6 @@ class ListPolicyNode extends AbstractModel
 
     /**
      * @var string 策略更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
@@ -86,15 +74,11 @@ class ListPolicyNode extends AbstractModel
 
     /**
      * @param string $AddTime 策略创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AttachedTimes 策略绑定次数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 策略描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PolicyName 策略名称
      * @param integer $PolicyId 策略Id
      * @param string $UpdateTime 策略更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Type 策略类型 1-自定义 2-预设
      */
     function __construct()

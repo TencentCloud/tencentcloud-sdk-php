@@ -18,7 +18,7 @@ namespace TencentCloud\Keewidb\V20220308\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 实例枚举类型参数描述
+ * 实例枚举类型参数描述，keewidb暂无枚举值
  *
  * @method string getParamName() 获取参数名
  * @method void setParamName(string $ParamName) 设置参数名

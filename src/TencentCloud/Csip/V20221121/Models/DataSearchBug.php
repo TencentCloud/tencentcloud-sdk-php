@@ -22,34 +22,24 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStateCode() 获取返回查询状态
  * @method void setStateCode(string $StateCode) 设置返回查询状态
- * @method array getDataBug() 获取无
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDataBug(array $DataBug) 设置无
-注意：此字段可能返回 null，表示取不到有效值。
- * @method array getDataAsset() 获取无
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDataAsset(array $DataAsset) 设置无
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getDataBug() 获取漏洞详情
+ * @method void setDataBug(array $DataBug) 设置漏洞详情
+ * @method array getDataAsset() 获取漏洞影响资产详情
+ * @method void setDataAsset(array $DataAsset) 设置漏洞影响资产详情
  * @method boolean getVSSScan() 获取true支持扫描。false不支持扫描
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVSSScan(boolean $VSSScan) 设置true支持扫描。false不支持扫描
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCWPScan() 获取0不支持，1支持
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCWPScan(string $CWPScan) 设置0不支持，1支持
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCFWPatch() 获取1支持虚拟补丁，0或空不支持
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCFWPatch(string $CFWPatch) 设置1支持虚拟补丁，0或空不支持
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWafPatch() 获取0不支持，1支持
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWafPatch(integer $WafPatch) 设置0不支持，1支持
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCWPFix() 获取0不支持，1支持
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCWPFix(integer $CWPFix) 设置0不支持，1支持
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getDataSupport() 获取产品支持状态
+ * @method void setDataSupport(array $DataSupport) 设置产品支持状态
+ * @method string getCveId() 获取cveId
+ * @method void setCveId(string $CveId) 设置cveId
  */
 class DataSearchBug extends AbstractModel
 {
@@ -59,63 +49,61 @@ class DataSearchBug extends AbstractModel
     public $StateCode;
 
     /**
-     * @var array 无
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 漏洞详情
      */
     public $DataBug;
 
     /**
-     * @var array 无
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 漏洞影响资产详情
      */
     public $DataAsset;
 
     /**
      * @var boolean true支持扫描。false不支持扫描
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VSSScan;
 
     /**
      * @var string 0不支持，1支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CWPScan;
 
     /**
      * @var string 1支持虚拟补丁，0或空不支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CFWPatch;
 
     /**
      * @var integer 0不支持，1支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WafPatch;
 
     /**
      * @var integer 0不支持，1支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CWPFix;
 
     /**
+     * @var array 产品支持状态
+     */
+    public $DataSupport;
+
+    /**
+     * @var string cveId
+     */
+    public $CveId;
+
+    /**
      * @param string $StateCode 返回查询状态
-     * @param array $DataBug 无
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $DataAsset 无
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $DataBug 漏洞详情
+     * @param array $DataAsset 漏洞影响资产详情
      * @param boolean $VSSScan true支持扫描。false不支持扫描
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CWPScan 0不支持，1支持
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CFWPatch 1支持虚拟补丁，0或空不支持
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $WafPatch 0不支持，1支持
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CWPFix 0不支持，1支持
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $DataSupport 产品支持状态
+     * @param string $CveId cveId
      */
     function __construct()
     {
@@ -170,6 +158,19 @@ class DataSearchBug extends AbstractModel
 
         if (array_key_exists("CWPFix",$param) and $param["CWPFix"] !== null) {
             $this->CWPFix = $param["CWPFix"];
+        }
+
+        if (array_key_exists("DataSupport",$param) and $param["DataSupport"] !== null) {
+            $this->DataSupport = [];
+            foreach ($param["DataSupport"] as $key => $value){
+                $obj = new ProductSupport();
+                $obj->deserialize($value);
+                array_push($this->DataSupport, $obj);
+            }
+        }
+
+        if (array_key_exists("CveId",$param) and $param["CveId"] !== null) {
+            $this->CveId = $param["CveId"];
         }
     }
 }

@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 视频通道码率返回结果
  *
  * @method string getChannelId() 获取通道Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChannelId(string $ChannelId) 设置通道Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getBitrate() 获取码率,单位:kbps
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBitrate(float $Bitrate) 设置码率,单位:kbps
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BitRateInfo extends AbstractModel
 {
     /**
      * @var string 通道Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChannelId;
 
     /**
      * @var float 码率,单位:kbps
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Bitrate;
 
     /**
      * @param string $ChannelId 通道Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $Bitrate 码率,单位:kbps
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 查询Limiter的接入地址
  *
  * @method string getIntranetAddress() 获取VPC接入IP列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIntranetAddress(string $IntranetAddress) 设置VPC接入IP列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PolarisLimiterAddress extends AbstractModel
 {
     /**
      * @var string VPC接入IP列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IntranetAddress;
 
     /**
      * @param string $IntranetAddress VPC接入IP列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -20,10 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDeviceGroupMembers请求参数结构体
  *
- * @method integer getId() 获取资产组ID
- * @method void setId(integer $Id) 设置资产组ID
  * @method boolean getBound() 获取true - 查询已在该资产组的资产，false - 查询未在该资产组的资产
  * @method void setBound(boolean $Bound) 设置true - 查询已在该资产组的资产，false - 查询未在该资产组的资产
+ * @method integer getId() 获取资产组ID，Id和IdSet二选一
+ * @method void setId(integer $Id) 设置资产组ID，Id和IdSet二选一
+ * @method array getIdSet() 获取资产组ID集合，传Id，IdSet不生效。
+ * @method void setIdSet(array $IdSet) 设置资产组ID集合，传Id，IdSet不生效。
  * @method string getName() 获取资产名或资产IP，模糊查询
  * @method void setName(string $Name) 设置资产名或资产IP，模糊查询
  * @method integer getOffset() 获取分页偏移位置，默认值为0
@@ -40,14 +42,19 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDeviceGroupMembersRequest extends AbstractModel
 {
     /**
-     * @var integer 资产组ID
+     * @var boolean true - 查询已在该资产组的资产，false - 查询未在该资产组的资产
+     */
+    public $Bound;
+
+    /**
+     * @var integer 资产组ID，Id和IdSet二选一
      */
     public $Id;
 
     /**
-     * @var boolean true - 查询已在该资产组的资产，false - 查询未在该资产组的资产
+     * @var array 资产组ID集合，传Id，IdSet不生效。
      */
-    public $Bound;
+    public $IdSet;
 
     /**
      * @var string 资产名或资产IP，模糊查询
@@ -80,8 +87,9 @@ class DescribeDeviceGroupMembersRequest extends AbstractModel
     public $TagFilters;
 
     /**
-     * @param integer $Id 资产组ID
      * @param boolean $Bound true - 查询已在该资产组的资产，false - 查询未在该资产组的资产
+     * @param integer $Id 资产组ID，Id和IdSet二选一
+     * @param array $IdSet 资产组ID集合，传Id，IdSet不生效。
      * @param string $Name 资产名或资产IP，模糊查询
      * @param integer $Offset 分页偏移位置，默认值为0
      * @param integer $Limit 每页条目数，默认20, 最大500
@@ -102,12 +110,16 @@ class DescribeDeviceGroupMembersRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Bound",$param) and $param["Bound"] !== null) {
+            $this->Bound = $param["Bound"];
+        }
+
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
         }
 
-        if (array_key_exists("Bound",$param) and $param["Bound"] !== null) {
-            $this->Bound = $param["Bound"];
+        if (array_key_exists("IdSet",$param) and $param["IdSet"] !== null) {
+            $this->IdSet = $param["IdSet"];
         }
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {

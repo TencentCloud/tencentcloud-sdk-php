@@ -20,28 +20,32 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCdbProxy请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getUniqVpcId() 获取私有网络ID
- * @method void setUniqVpcId(string $UniqVpcId) 设置私有网络ID
- * @method string getUniqSubnetId() 获取私有子网ID
- * @method void setUniqSubnetId(string $UniqSubnetId) 设置私有子网ID
- * @method array getProxyNodeCustom() 获取节点规格配置
-备注：数据库代理支持的节点规格为：2C4000MB、4C8000MB、8C16000MB。
+ * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+ * @method string getUniqVpcId() 获取私有网络 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+ * @method void setUniqVpcId(string $UniqVpcId) 设置私有网络 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+ * @method string getUniqSubnetId() 获取私有子网 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+ * @method void setUniqSubnetId(string $UniqSubnetId) 设置私有子网 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+ * @method array getProxyNodeCustom() 获取节点规格配置。
 示例中参数说明：
 NodeCount：节点个数。
 Region：节点地域。
 Zone：节点可用区。
 Cpu：单个代理节点核数（单位：核）。
 Mem：单个代理节点内存数（单位：MB）。
- * @method void setProxyNodeCustom(array $ProxyNodeCustom) 设置节点规格配置
-备注：数据库代理支持的节点规格为：2C4000MB、4C8000MB、8C16000MB。
+备注：
+1. 数据库代理支持的节点规格为：2C4000MB、4C8000MB、8C16000MB。
+2. 上述参数项（如节点个数、可用区等）均为必填，在调用接口时如未填写完整，可能会创建失败。
+ * @method void setProxyNodeCustom(array $ProxyNodeCustom) 设置节点规格配置。
 示例中参数说明：
 NodeCount：节点个数。
 Region：节点地域。
 Zone：节点可用区。
 Cpu：单个代理节点核数（单位：核）。
 Mem：单个代理节点内存数（单位：MB）。
+备注：
+1. 数据库代理支持的节点规格为：2C4000MB、4C8000MB、8C16000MB。
+2. 上述参数项（如节点个数、可用区等）均为必填，在调用接口时如未填写完整，可能会创建失败。
  * @method array getSecurityGroup() 获取安全组
  * @method void setSecurityGroup(array $SecurityGroup) 设置安全组
  * @method string getDesc() 获取描述
@@ -56,29 +60,31 @@ Mem：单个代理节点内存数（单位：MB）。
 class CreateCdbProxyRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public $InstanceId;
 
     /**
-     * @var string 私有网络ID
+     * @var string 私有网络 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public $UniqVpcId;
 
     /**
-     * @var string 私有子网ID
+     * @var string 私有子网 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public $UniqSubnetId;
 
     /**
-     * @var array 节点规格配置
-备注：数据库代理支持的节点规格为：2C4000MB、4C8000MB、8C16000MB。
+     * @var array 节点规格配置。
 示例中参数说明：
 NodeCount：节点个数。
 Region：节点地域。
 Zone：节点可用区。
 Cpu：单个代理节点核数（单位：核）。
 Mem：单个代理节点内存数（单位：MB）。
+备注：
+1. 数据库代理支持的节点规格为：2C4000MB、4C8000MB、8C16000MB。
+2. 上述参数项（如节点个数、可用区等）均为必填，在调用接口时如未填写完整，可能会创建失败。
      */
     public $ProxyNodeCustom;
 
@@ -104,17 +110,19 @@ Mem：单个代理节点内存数（单位：MB）。
     public $ProxyVersion;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $UniqVpcId 私有网络ID
-     * @param string $UniqSubnetId 私有子网ID
-     * @param array $ProxyNodeCustom 节点规格配置
-备注：数据库代理支持的节点规格为：2C4000MB、4C8000MB、8C16000MB。
+     * @param string $InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @param string $UniqVpcId 私有网络 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @param string $UniqSubnetId 私有子网 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @param array $ProxyNodeCustom 节点规格配置。
 示例中参数说明：
 NodeCount：节点个数。
 Region：节点地域。
 Zone：节点可用区。
 Cpu：单个代理节点核数（单位：核）。
 Mem：单个代理节点内存数（单位：MB）。
+备注：
+1. 数据库代理支持的节点规格为：2C4000MB、4C8000MB、8C16000MB。
+2. 上述参数项（如节点个数、可用区等）均为必填，在调用接口时如未填写完整，可能会创建失败。
      * @param array $SecurityGroup 安全组
      * @param string $Desc 描述
      * @param integer $ConnectionPoolLimit 连接池阈值

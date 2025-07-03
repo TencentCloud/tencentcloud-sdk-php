@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubAppId(integer $SubAppId) 设置<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
  * @method string getName() 获取雪碧图模板名称，长度限制：64 个字符。
  * @method void setName(string $Name) 设置雪碧图模板名称，长度限制：64 个字符。
- * @method integer getWidth() 获取雪碧图中小图的宽度，取值范围： [128, 4096]，单位：px。
- * @method void setWidth(integer $Width) 设置雪碧图中小图的宽度，取值范围： [128, 4096]，单位：px。
- * @method integer getHeight() 获取雪碧图中小图的高度，取值范围： [128, 4096]，单位：px。
- * @method void setHeight(integer $Height) 设置雪碧图中小图的高度，取值范围： [128, 4096]，单位：px。
+ * @method integer getWidth() 获取雪碧图中小图的宽度，取值范围： [32, 4096]，单位：px。
+ * @method void setWidth(integer $Width) 设置雪碧图中小图的宽度，取值范围： [32, 4096]，单位：px。
+ * @method integer getHeight() 获取雪碧图中小图的高度，取值范围： [32, 4096]，单位：px。
+ * @method void setHeight(integer $Height) 设置雪碧图中小图的高度，取值范围： [32, 4096]，单位：px。
  * @method string getResolutionAdaptive() 获取分辨率自适应，可选值：
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
@@ -54,14 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRowCount(integer $RowCount) 设置雪碧图中小图的行数。
  * @method integer getColumnCount() 获取雪碧图中小图的列数。
  * @method void setColumnCount(integer $ColumnCount) 设置雪碧图中小图的列数。
- * @method string getFillType() 获取填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
-<li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
-<li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
-默认值：black 。
- * @method void setFillType(string $FillType) 设置填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
-<li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
-<li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
-默认值：black 。
+ * @method string getFillType() 获取填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：<li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li><li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li><li>white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。</li><li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊。</li>默认值：black 。
+ * @method void setFillType(string $FillType) 设置填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：<li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li><li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li><li>white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。</li><li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊。</li>默认值：black 。
  * @method string getComment() 获取模板描述信息，长度限制：256 个字符。
  * @method void setComment(string $Comment) 设置模板描述信息，长度限制：256 个字符。
  * @method string getFormat() 获取图片格式，取值：
@@ -91,12 +85,12 @@ class ModifyImageSpriteTemplateRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var integer 雪碧图中小图的宽度，取值范围： [128, 4096]，单位：px。
+     * @var integer 雪碧图中小图的宽度，取值范围： [32, 4096]，单位：px。
      */
     public $Width;
 
     /**
-     * @var integer 雪碧图中小图的高度，取值范围： [128, 4096]，单位：px。
+     * @var integer 雪碧图中小图的高度，取值范围： [32, 4096]，单位：px。
      */
     public $Height;
 
@@ -133,10 +127,7 @@ class ModifyImageSpriteTemplateRequest extends AbstractModel
     public $ColumnCount;
 
     /**
-     * @var string 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
-<li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
-<li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
-默认值：black 。
+     * @var string 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：<li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li><li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li><li>white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。</li><li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊。</li>默认值：black 。
      */
     public $FillType;
 
@@ -157,8 +148,8 @@ class ModifyImageSpriteTemplateRequest extends AbstractModel
      * @param integer $Definition 雪碧图模板唯一标识。
      * @param integer $SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
      * @param string $Name 雪碧图模板名称，长度限制：64 个字符。
-     * @param integer $Width 雪碧图中小图的宽度，取值范围： [128, 4096]，单位：px。
-     * @param integer $Height 雪碧图中小图的高度，取值范围： [128, 4096]，单位：px。
+     * @param integer $Width 雪碧图中小图的宽度，取值范围： [32, 4096]，单位：px。
+     * @param integer $Height 雪碧图中小图的高度，取值范围： [32, 4096]，单位：px。
      * @param string $ResolutionAdaptive 分辨率自适应，可选值：
 <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
 <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
@@ -171,10 +162,7 @@ class ModifyImageSpriteTemplateRequest extends AbstractModel
 <li>当 SampleType 为 Time 时，指定采样间隔的时间，单位为秒。</li>
      * @param integer $RowCount 雪碧图中小图的行数。
      * @param integer $ColumnCount 雪碧图中小图的列数。
-     * @param string $FillType 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：
-<li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li>
-<li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li>
-默认值：black 。
+     * @param string $FillType 填充方式，当视频流配置宽高参数与原始视频的宽高比不一致时，对转码的处理方式，即为“填充”。可选填充方式：<li> stretch：拉伸，对每一帧进行拉伸，填满整个画面，可能导致转码后的视频被“压扁“或者“拉长“；</li><li>black：留黑，保持视频宽高比不变，边缘剩余部分使用黑色填充。</li><li>white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。</li><li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊。</li>默认值：black 。
      * @param string $Comment 模板描述信息，长度限制：256 个字符。
      * @param string $Format 图片格式，取值：
 <li> jpg：jpg 格式；</li>

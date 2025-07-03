@@ -102,6 +102,8 @@ HYBRID_PAID:
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModelHotUpdateEnable(boolean $ModelHotUpdateEnable) 设置是否开启模型的热更新。默认不开启
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceAlias() 获取服务的规格别名
+ * @method void setInstanceAlias(string $InstanceAlias) 设置服务的规格别名
  * @method string getScaleMode() 获取实例数量调节方式,默认为手动
 支持：自动 - "AUTO", 手动 - "MANUAL"
 注意：此字段可能返回 null，表示取不到有效值。
@@ -116,9 +118,9 @@ HYBRID_PAID:
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScaleStrategy(string $ScaleStrategy) 设置定时伸缩策略
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getScheduledAction() 获取定时停止的配置
+ * @method ScheduledAction getScheduledAction() 获取定时停止的配置
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setScheduledAction(string $ScheduledAction) 设置定时停止的配置
+ * @method void setScheduledAction(ScheduledAction $ScheduledAction) 设置定时停止的配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPodList() 获取实例列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -160,6 +162,16 @@ HYBRID_PAID:
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServicePort(integer $ServicePort) 设置服务端口，默认为8501
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTerminationGracePeriodSeconds() 获取服务的优雅退出时限。单位为秒，默认值为30，最小为1
+ * @method void setTerminationGracePeriodSeconds(integer $TerminationGracePeriodSeconds) 设置服务的优雅退出时限。单位为秒，默认值为30，最小为1
+ * @method array getPreStopCommand() 获取服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束
+ * @method void setPreStopCommand(array $PreStopCommand) 设置服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束
+ * @method boolean getGrpcEnable() 获取是否启用grpc端口
+ * @method void setGrpcEnable(boolean $GrpcEnable) 设置是否启用grpc端口
+ * @method HealthProbe getHealthProbe() 获取健康探针
+ * @method void setHealthProbe(HealthProbe $HealthProbe) 设置健康探针
+ * @method RollingUpdate getRollingUpdate() 获取滚动更新配置
+ * @method void setRollingUpdate(RollingUpdate $RollingUpdate) 设置滚动更新配置
  */
 class ServiceInfo extends AbstractModel
 {
@@ -273,6 +285,11 @@ HYBRID_PAID:
     public $ModelHotUpdateEnable;
 
     /**
+     * @var string 服务的规格别名
+     */
+    public $InstanceAlias;
+
+    /**
      * @var string 实例数量调节方式,默认为手动
 支持：自动 - "AUTO", 手动 - "MANUAL"
 注意：此字段可能返回 null，表示取不到有效值。
@@ -292,7 +309,7 @@ HYBRID_PAID:
     public $ScaleStrategy;
 
     /**
-     * @var string 定时停止的配置
+     * @var ScheduledAction 定时停止的配置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ScheduledAction;
@@ -360,6 +377,31 @@ HYBRID_PAID:
     public $ServicePort;
 
     /**
+     * @var integer 服务的优雅退出时限。单位为秒，默认值为30，最小为1
+     */
+    public $TerminationGracePeriodSeconds;
+
+    /**
+     * @var array 服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束
+     */
+    public $PreStopCommand;
+
+    /**
+     * @var boolean 是否启用grpc端口
+     */
+    public $GrpcEnable;
+
+    /**
+     * @var HealthProbe 健康探针
+     */
+    public $HealthProbe;
+
+    /**
+     * @var RollingUpdate 滚动更新配置
+     */
+    public $RollingUpdate;
+
+    /**
      * @param integer $Replicas 期望运行的Pod数量，停止状态是0
 不同计费模式和调节模式下对应关系如下
 PREPAID 和 POSTPAID_BY_HOUR:
@@ -401,6 +443,7 @@ HYBRID_PAID:
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $ModelHotUpdateEnable 是否开启模型的热更新。默认不开启
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceAlias 服务的规格别名
      * @param string $ScaleMode 实例数量调节方式,默认为手动
 支持：自动 - "AUTO", 手动 - "MANUAL"
 注意：此字段可能返回 null，表示取不到有效值。
@@ -408,7 +451,7 @@ HYBRID_PAID:
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ScaleStrategy 定时伸缩策略
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ScheduledAction 定时停止的配置
+     * @param ScheduledAction $ScheduledAction 定时停止的配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PodList 实例列表
 注意：此字段可能返回 null，表示取不到有效值。
@@ -430,6 +473,11 @@ HYBRID_PAID:
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ServicePort 服务端口，默认为8501
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TerminationGracePeriodSeconds 服务的优雅退出时限。单位为秒，默认值为30，最小为1
+     * @param array $PreStopCommand 服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束
+     * @param boolean $GrpcEnable 是否启用grpc端口
+     * @param HealthProbe $HealthProbe 健康探针
+     * @param RollingUpdate $RollingUpdate 滚动更新配置
      */
     function __construct()
     {
@@ -524,6 +572,10 @@ HYBRID_PAID:
             $this->ModelHotUpdateEnable = $param["ModelHotUpdateEnable"];
         }
 
+        if (array_key_exists("InstanceAlias",$param) and $param["InstanceAlias"] !== null) {
+            $this->InstanceAlias = $param["InstanceAlias"];
+        }
+
         if (array_key_exists("ScaleMode",$param) and $param["ScaleMode"] !== null) {
             $this->ScaleMode = $param["ScaleMode"];
         }
@@ -542,7 +594,8 @@ HYBRID_PAID:
         }
 
         if (array_key_exists("ScheduledAction",$param) and $param["ScheduledAction"] !== null) {
-            $this->ScheduledAction = $param["ScheduledAction"];
+            $this->ScheduledAction = new ScheduledAction();
+            $this->ScheduledAction->deserialize($param["ScheduledAction"]);
         }
 
         if (array_key_exists("PodList",$param) and $param["PodList"] !== null) {
@@ -593,6 +646,28 @@ HYBRID_PAID:
 
         if (array_key_exists("ServicePort",$param) and $param["ServicePort"] !== null) {
             $this->ServicePort = $param["ServicePort"];
+        }
+
+        if (array_key_exists("TerminationGracePeriodSeconds",$param) and $param["TerminationGracePeriodSeconds"] !== null) {
+            $this->TerminationGracePeriodSeconds = $param["TerminationGracePeriodSeconds"];
+        }
+
+        if (array_key_exists("PreStopCommand",$param) and $param["PreStopCommand"] !== null) {
+            $this->PreStopCommand = $param["PreStopCommand"];
+        }
+
+        if (array_key_exists("GrpcEnable",$param) and $param["GrpcEnable"] !== null) {
+            $this->GrpcEnable = $param["GrpcEnable"];
+        }
+
+        if (array_key_exists("HealthProbe",$param) and $param["HealthProbe"] !== null) {
+            $this->HealthProbe = new HealthProbe();
+            $this->HealthProbe->deserialize($param["HealthProbe"]);
+        }
+
+        if (array_key_exists("RollingUpdate",$param) and $param["RollingUpdate"] !== null) {
+            $this->RollingUpdate = new RollingUpdate();
+            $this->RollingUpdate->deserialize($param["RollingUpdate"]);
         }
     }
 }

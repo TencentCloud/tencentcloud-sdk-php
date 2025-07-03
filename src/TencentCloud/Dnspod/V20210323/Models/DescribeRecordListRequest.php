@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRecordList请求参数结构体
  *
- * @method string getDomain() 获取要获取的解析记录所属的域名
- * @method void setDomain(string $Domain) 设置要获取的解析记录所属的域名
- * @method integer getDomainId() 获取要获取的解析记录所属的域名Id，如果传了DomainId，系统将会忽略Domain参数。 可以通过接口DescribeDomainList查到所有的Domain以及DomainId
- * @method void setDomainId(integer $DomainId) 设置要获取的解析记录所属的域名Id，如果传了DomainId，系统将会忽略Domain参数。 可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+ * @method string getDomain() 获取域名
+ * @method void setDomain(string $Domain) 设置域名
+ * @method integer getDomainId() 获取域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+ * @method void setDomainId(integer $DomainId) 设置域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
  * @method string getSubdomain() 获取解析记录的主机头，如果传了此参数，则只会返回此主机头对应的解析记录
  * @method void setSubdomain(string $Subdomain) 设置解析记录的主机头，如果传了此参数，则只会返回此主机头对应的解析记录
  * @method string getRecordType() 获取获取某种类型的解析记录，如 A，CNAME，NS，AAAA，显性URL，隐性URL，CAA，SPF等
@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRecordLine(string $RecordLine) 设置获取某条线路名称的解析记录。可以通过接口DescribeRecordLineList查看当前域名允许的线路信息
  * @method string getRecordLineId() 获取获取某个线路Id对应的解析记录，如果传RecordLineId，系统会忽略RecordLine参数。可以通过接口DescribeRecordLineList查看当前域名允许的线路信息
  * @method void setRecordLineId(string $RecordLineId) 设置获取某个线路Id对应的解析记录，如果传RecordLineId，系统会忽略RecordLine参数。可以通过接口DescribeRecordLineList查看当前域名允许的线路信息
- * @method integer getGroupId() 获取获取某个分组下的解析记录时，传这个分组Id。
- * @method void setGroupId(integer $GroupId) 设置获取某个分组下的解析记录时，传这个分组Id。
+ * @method integer getGroupId() 获取获取某个分组下的解析记录时，传这个分组Id。可通过DescribeRecordGroupList接口获取所有分组
+ * @method void setGroupId(integer $GroupId) 设置获取某个分组下的解析记录时，传这个分组Id。可通过DescribeRecordGroupList接口获取所有分组
  * @method string getKeyword() 获取通过关键字搜索解析记录，当前支持搜索主机头和记录值
  * @method void setKeyword(string $Keyword) 设置通过关键字搜索解析记录，当前支持搜索主机头和记录值
  * @method string getSortField() 获取排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段。
@@ -48,12 +48,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeRecordListRequest extends AbstractModel
 {
     /**
-     * @var string 要获取的解析记录所属的域名
+     * @var string 域名
      */
     public $Domain;
 
     /**
-     * @var integer 要获取的解析记录所属的域名Id，如果传了DomainId，系统将会忽略Domain参数。 可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+     * @var integer 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
      */
     public $DomainId;
 
@@ -78,7 +78,7 @@ class DescribeRecordListRequest extends AbstractModel
     public $RecordLineId;
 
     /**
-     * @var integer 获取某个分组下的解析记录时，传这个分组Id。
+     * @var integer 获取某个分组下的解析记录时，传这个分组Id。可通过DescribeRecordGroupList接口获取所有分组
      */
     public $GroupId;
 
@@ -108,13 +108,13 @@ class DescribeRecordListRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param string $Domain 要获取的解析记录所属的域名
-     * @param integer $DomainId 要获取的解析记录所属的域名Id，如果传了DomainId，系统将会忽略Domain参数。 可以通过接口DescribeDomainList查到所有的Domain以及DomainId
+     * @param string $Domain 域名
+     * @param integer $DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
      * @param string $Subdomain 解析记录的主机头，如果传了此参数，则只会返回此主机头对应的解析记录
      * @param string $RecordType 获取某种类型的解析记录，如 A，CNAME，NS，AAAA，显性URL，隐性URL，CAA，SPF等
      * @param string $RecordLine 获取某条线路名称的解析记录。可以通过接口DescribeRecordLineList查看当前域名允许的线路信息
      * @param string $RecordLineId 获取某个线路Id对应的解析记录，如果传RecordLineId，系统会忽略RecordLine参数。可以通过接口DescribeRecordLineList查看当前域名允许的线路信息
-     * @param integer $GroupId 获取某个分组下的解析记录时，传这个分组Id。
+     * @param integer $GroupId 获取某个分组下的解析记录时，传这个分组Id。可通过DescribeRecordGroupList接口获取所有分组
      * @param string $Keyword 通过关键字搜索解析记录，当前支持搜索主机头和记录值
      * @param string $SortField 排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段。
      * @param string $SortType 排序方式，正序：ASC，逆序：DESC。默认值为ASC。

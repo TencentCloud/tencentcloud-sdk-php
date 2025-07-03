@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAdaptiveDynamicStreamingDefinition(integer $AdaptiveDynamicStreamingDefinition) 设置[转自适应码流模板号](https://cloud.tencent.com/document/product/266/34071#zsy)。
  * @method array getSubtitleIds() 获取字幕的唯一标识。
  * @method void setSubtitleIds(array $SubtitleIds) 设置字幕的唯一标识。
+ * @method string getDefaultSubtitleId() 获取默认字幕的唯一标识。不填则不设置默认字幕。
+ * @method void setDefaultSubtitleId(string $DefaultSubtitleId) 设置默认字幕的唯一标识。不填则不设置默认字幕。
  * @method integer getSubAppId() 获取<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
  * @method void setSubAppId(integer $SubAppId) 设置<b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
  */
@@ -60,6 +62,11 @@ class AttachMediaSubtitlesRequest extends AbstractModel
     public $SubtitleIds;
 
     /**
+     * @var string 默认字幕的唯一标识。不填则不设置默认字幕。
+     */
+    public $DefaultSubtitleId;
+
+    /**
      * @var integer <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
      */
     public $SubAppId;
@@ -71,6 +78,7 @@ class AttachMediaSubtitlesRequest extends AbstractModel
 <li>Detach：解除关联字幕。</li>
      * @param integer $AdaptiveDynamicStreamingDefinition [转自适应码流模板号](https://cloud.tencent.com/document/product/266/34071#zsy)。
      * @param array $SubtitleIds 字幕的唯一标识。
+     * @param string $DefaultSubtitleId 默认字幕的唯一标识。不填则不设置默认字幕。
      * @param integer $SubAppId <b>点播[应用](/document/product/266/14574) ID。从2023年12月25日起开通点播的客户，如访问点播应用中的资源（无论是默认应用还是新创建的应用），必须将该字段填写为应用 ID。</b>
      */
     function __construct()
@@ -100,6 +108,10 @@ class AttachMediaSubtitlesRequest extends AbstractModel
 
         if (array_key_exists("SubtitleIds",$param) and $param["SubtitleIds"] !== null) {
             $this->SubtitleIds = $param["SubtitleIds"];
+        }
+
+        if (array_key_exists("DefaultSubtitleId",$param) and $param["DefaultSubtitleId"] !== null) {
+            $this->DefaultSubtitleId = $param["DefaultSubtitleId"];
         }
 
         if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {

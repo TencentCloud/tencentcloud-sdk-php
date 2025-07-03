@@ -21,11 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * DeployCertificateInstance返回参数结构体
  *
  * @method integer getDeployRecordId() 获取云资源部署任务ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeployRecordId(integer $DeployRecordId) 设置云资源部署任务ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDeployStatus() 获取部署状态，1表示部署成功，0表示部署失败
- * @method void setDeployStatus(integer $DeployStatus) 设置部署状态，1表示部署成功，0表示部署失败
+ * @method integer getDeployStatus() 获取部署任务创建状态；1表示创建成功； 0表示当前存在部署中的任务，未创建新的部署任务；返回值DeployRecordId为部署中的任务ID
+ * @method void setDeployStatus(integer $DeployStatus) 设置部署任务创建状态；1表示创建成功； 0表示当前存在部署中的任务，未创建新的部署任务；返回值DeployRecordId为部署中的任务ID
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +31,11 @@ class DeployCertificateInstanceResponse extends AbstractModel
 {
     /**
      * @var integer 云资源部署任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeployRecordId;
 
     /**
-     * @var integer 部署状态，1表示部署成功，0表示部署失败
+     * @var integer 部署任务创建状态；1表示创建成功； 0表示当前存在部署中的任务，未创建新的部署任务；返回值DeployRecordId为部署中的任务ID
      */
     public $DeployStatus;
 
@@ -49,8 +46,7 @@ class DeployCertificateInstanceResponse extends AbstractModel
 
     /**
      * @param integer $DeployRecordId 云资源部署任务ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $DeployStatus 部署状态，1表示部署成功，0表示部署失败
+     * @param integer $DeployStatus 部署任务创建状态；1表示创建成功； 0表示当前存在部署中的任务，未创建新的部署任务；返回值DeployRecordId为部署中的任务ID
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

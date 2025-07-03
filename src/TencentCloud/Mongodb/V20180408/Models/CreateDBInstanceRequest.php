@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemory(integer $Memory) 设置实例内存大小，单位：GB
  * @method integer getVolume() 获取实例硬盘大小，单位：GB
  * @method void setVolume(integer $Volume) 设置实例硬盘大小，单位：GB
- * @method string getMongoVersion() 获取版本号，当前支持 MONGO_3_WT、MONGO_3_ROCKS、MONGO_36_WT
- * @method void setMongoVersion(string $MongoVersion) 设置版本号，当前支持 MONGO_3_WT、MONGO_3_ROCKS、MONGO_36_WT
- * @method string getMachineCode() 获取机器类型，GIO：高IO版；TGIO：高IO万兆
- * @method void setMachineCode(string $MachineCode) 设置机器类型，GIO：高IO版；TGIO：高IO万兆
+ * @method string getMongoVersion() 获取指版本信息。具体支持的版本信息 ，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。 - MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。 - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。 - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。 - MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+ * @method void setMongoVersion(string $MongoVersion) 设置指版本信息。具体支持的版本信息 ，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。 - MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。 - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。 - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。 - MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+ * @method string getMachineCode() 获取机器类型，HIO10G：高IO万兆。
+ * @method void setMachineCode(string $MachineCode) 设置机器类型，HIO10G：高IO万兆。
  * @method integer getGoodsNum() 获取实例数量，默认值为1, 最小值1，最大值为10
  * @method void setGoodsNum(integer $GoodsNum) 设置实例数量，默认值为1, 最小值1，最大值为10
  * @method string getZone() 获取实例所属区域名称，格式如：ap-guangzhou-2
@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUniqVpcId(string $UniqVpcId) 设置私有网络ID，如果不传则默认选择基础网络
  * @method string getUniqSubnetId() 获取私有网络下的子网ID，如果设置了 VpcId，则 SubnetId必填
  * @method void setUniqSubnetId(string $UniqSubnetId) 设置私有网络下的子网ID，如果设置了 VpcId，则 SubnetId必填
+ * @method string getInstanceType() 获取实例类型，REPLSET-副本集，SHARD-分片集群，默认为REPLSET
+ * @method void setInstanceType(string $InstanceType) 设置实例类型，REPLSET-副本集，SHARD-分片集群，默认为REPLSET
  */
 class CreateDBInstanceRequest extends AbstractModel
 {
@@ -65,12 +67,12 @@ class CreateDBInstanceRequest extends AbstractModel
     public $Volume;
 
     /**
-     * @var string 版本号，当前支持 MONGO_3_WT、MONGO_3_ROCKS、MONGO_36_WT
+     * @var string 指版本信息。具体支持的版本信息 ，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。 - MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。 - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。 - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。 - MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
      */
     public $MongoVersion;
 
     /**
-     * @var string 机器类型，GIO：高IO版；TGIO：高IO万兆
+     * @var string 机器类型，HIO10G：高IO万兆。
      */
     public $MachineCode;
 
@@ -115,11 +117,16 @@ class CreateDBInstanceRequest extends AbstractModel
     public $UniqSubnetId;
 
     /**
+     * @var string 实例类型，REPLSET-副本集，SHARD-分片集群，默认为REPLSET
+     */
+    public $InstanceType;
+
+    /**
      * @param integer $SecondaryNum 每个副本集内从节点个数
      * @param integer $Memory 实例内存大小，单位：GB
      * @param integer $Volume 实例硬盘大小，单位：GB
-     * @param string $MongoVersion 版本号，当前支持 MONGO_3_WT、MONGO_3_ROCKS、MONGO_36_WT
-     * @param string $MachineCode 机器类型，GIO：高IO版；TGIO：高IO万兆
+     * @param string $MongoVersion 指版本信息。具体支持的版本信息 ，请通过接口 [DescribeSpecInfo](https://cloud.tencent.com/document/product/240/38567) 获取。 - MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本。 - MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本。 - MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本。 - MONGO_44_WT：MongoDB 4.4 WiredTiger存储引擎版本。 - MONGO_50_WT：MongoDB 5.0 WiredTiger存储引擎版本。 - MONGO_60_WT：MongoDB 6.0 WiredTiger存储引擎版本。
+     * @param string $MachineCode 机器类型，HIO10G：高IO万兆。
      * @param integer $GoodsNum 实例数量，默认值为1, 最小值1，最大值为10
      * @param string $Zone 实例所属区域名称，格式如：ap-guangzhou-2
      * @param integer $TimeSpan 时长，购买月数
@@ -128,6 +135,7 @@ class CreateDBInstanceRequest extends AbstractModel
      * @param array $SecurityGroup 安全组参数
      * @param string $UniqVpcId 私有网络ID，如果不传则默认选择基础网络
      * @param string $UniqSubnetId 私有网络下的子网ID，如果设置了 VpcId，则 SubnetId必填
+     * @param string $InstanceType 实例类型，REPLSET-副本集，SHARD-分片集群，默认为REPLSET
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class CreateDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("UniqSubnetId",$param) and $param["UniqSubnetId"] !== null) {
             $this->UniqSubnetId = $param["UniqSubnetId"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
         }
     }
 }

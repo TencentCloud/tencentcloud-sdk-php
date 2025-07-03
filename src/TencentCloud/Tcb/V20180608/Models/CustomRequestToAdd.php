@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 安全网关请求自定义头部
  *
  * @method string getKey() 获取Header名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKey(string $Key) 设置Header名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取Header值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置Header值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAppendAction() 获取Header类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAppendAction(string $AppendAction) 设置Header类型
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CustomRequestToAdd extends AbstractModel
 {
     /**
      * @var string Header名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Key;
 
     /**
      * @var string Header值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @var string Header类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AppendAction;
 
     /**
      * @param string $Key Header名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value Header值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AppendAction Header类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

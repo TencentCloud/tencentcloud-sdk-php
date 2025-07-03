@@ -27,6 +27,9 @@ use TencentCloud\Cvm\V20170312\Models as Models;
 * 当HostChargeType为PREPAID时，必须指定HostChargePrepaid参数。
  * @method Models\AssociateInstancesKeyPairsResponse AssociateInstancesKeyPairs(Models\AssociateInstancesKeyPairsRequest $req) 本接口 (AssociateInstancesKeyPairs) 用于将密钥绑定到实例上。
 
+* 仅支持对 `Linux` 操作系统实例进行绑定操作。
+* 非强制关机场景下，仅支持对 [STOPPED](https://cloud.tencent.com/document/product/213/15753#InstanceStatus) 状态实例进行绑定操作。
+* 强制关机场景下，先执行强制关机，再绑定密钥；如实例原状态为 [RUNNING](https://cloud.tencent.com/document/product/213/15753#InstanceStatus)，绑定完成后实例会自动开机。
 * 将密钥的公钥写入到实例的`SSH`配置当中，用户就可以通过该密钥的私钥来登录实例。
 * 如果实例原来绑定过密钥，那么原来的密钥将失效。
 * 如果实例原来是通过密码登录，绑定密钥后无法使用密码登录。
@@ -38,6 +41,7 @@ use TencentCloud\Cvm\V20170312\Models as Models;
 </dx-alert>
  * @method Models\ConfigureChcAssistVpcResponse ConfigureChcAssistVpc(Models\ConfigureChcAssistVpcRequest $req) 配置CHC物理服务器的带外和部署网络。传入带外网络和部署网络信息
  * @method Models\ConfigureChcDeployVpcResponse ConfigureChcDeployVpc(Models\ConfigureChcDeployVpcRequest $req) 配置CHC物理服务器部署网络
+ * @method Models\ConvertOperatingSystemsResponse ConvertOperatingSystems(Models\ConvertOperatingSystemsRequest $req) 本接口(ConvertOperatingSystem)用于转换实例的操作系统，仅支持源操作系统为 CentOS 7、CentOS 8 的实例。
  * @method Models\CreateDisasterRecoverGroupResponse CreateDisasterRecoverGroup(Models\CreateDisasterRecoverGroupRequest $req) 本接口 (CreateDisasterRecoverGroup)用于创建[分散置放群组](https://cloud.tencent.com/document/product/213/15486)。创建好的置放群组，可在[创建实例](https://cloud.tencent.com/document/api/213/15730)时指定。
  * @method Models\CreateHpcClusterResponse CreateHpcCluster(Models\CreateHpcClusterRequest $req) 创建高性能计算集群
  * @method Models\CreateImageResponse CreateImage(Models\CreateImageRequest $req) 本接口(CreateImage)用于将实例的系统盘制作为新镜像，创建后的镜像可以用于创建实例。
@@ -53,6 +57,7 @@ use TencentCloud\Cvm\V20170312\Models as Models;
 
 初次创建实例模板后，其模板版本为默认版本1，新版本的创建可使用 [CreateLaunchTemplateVersion](https://cloud.tencent.com/document/product/213/66326) 创建，版本号递增。默认情况下，在[RunInstances](https://cloud.tencent.com/document/product/213/15730) 中指定实例启动模板，若不指定模板版本号，则使用默认版本。
  * @method Models\CreateLaunchTemplateVersionResponse CreateLaunchTemplateVersion(Models\CreateLaunchTemplateVersionRequest $req) 本接口（CreateLaunchTemplateVersion）根据指定的实例模板ID以及对应的模板版本号创建新的实例启动模板，若未指定模板版本号则使用默认版本号。每个实例启动模板最多创建30个版本。
+* 新实例模板中未显式指定的参数值，使用指定版本号对应参数值覆盖。
  * @method Models\DeleteDisasterRecoverGroupsResponse DeleteDisasterRecoverGroups(Models\DeleteDisasterRecoverGroupsRequest $req) 本接口 (DeleteDisasterRecoverGroups)用于删除[分散置放群组](https://cloud.tencent.com/document/product/213/15486)。只有空的置放群组才能被删除，非空的群组需要先销毁组内所有云服务器，才能执行删除操作，不然会产生删除置放群组失败的错误。
  * @method Models\DeleteHpcClustersResponse DeleteHpcClusters(Models\DeleteHpcClustersRequest $req) 当高性能计算集群为空, 即集群内没有任何设备时候, 可以删除该集群。
  * @method Models\DeleteImagesResponse DeleteImages(Models\DeleteImagesRequest $req) 本接口（DeleteImages）用于删除一个或多个镜像。
@@ -77,6 +82,7 @@ use TencentCloud\Cvm\V20170312\Models as Models;
  * @method Models\DescribeDisasterRecoverGroupsResponse DescribeDisasterRecoverGroups(Models\DescribeDisasterRecoverGroupsRequest $req) 本接口 (DescribeDisasterRecoverGroups)用于查询[分散置放群组](https://cloud.tencent.com/document/product/213/15486)信息。
  * @method Models\DescribeHostsResponse DescribeHosts(Models\DescribeHostsRequest $req) 本接口 (DescribeHosts) 用于获取一个或多个CDH实例的详细信息。
  * @method Models\DescribeHpcClustersResponse DescribeHpcClusters(Models\DescribeHpcClustersRequest $req) 查询高性能集群信息
+ * @method Models\DescribeImageFromFamilyResponse DescribeImageFromFamily(Models\DescribeImageFromFamilyRequest $req) 本接口(DescribeImageFromFamily) 用于查看镜像族内可用镜像信息。
  * @method Models\DescribeImageQuotaResponse DescribeImageQuota(Models\DescribeImageQuotaRequest $req) 本接口(DescribeImageQuota)用于查询用户账号的镜像配额。
  * @method Models\DescribeImageSharePermissionResponse DescribeImageSharePermission(Models\DescribeImageSharePermissionRequest $req) 本接口（DescribeImageSharePermission）用于查询镜像分享信息。
  * @method Models\DescribeImagesResponse DescribeImages(Models\DescribeImagesRequest $req) 本接口(DescribeImages) 用于查看镜像列表。
@@ -108,13 +114,13 @@ use TencentCloud\Cvm\V20170312\Models as Models;
 ```
 https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F%2Fbjvnc.qcloud.com%3A26789%2Fvnc%3Fs%3DaHpjWnRVMFNhYmxKdDM5MjRHNlVTSVQwajNUSW0wb2tBbmFtREFCTmFrcy8vUUNPMG0wSHZNOUUxRm5PMmUzWmFDcWlOdDJIbUJxSTZDL0RXcHZxYnZZMmRkWWZWcEZia2lyb09XMzdKNmM9
 ```
-
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 本接口 (DescribeInstances) 用于查询一个或多个实例的详细信息。
 
 * 可以根据实例`ID`、实例名称或者实例计费模式等信息来查询实例的详细信息。过滤信息详细请见过滤器`Filter`。
 * 如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的实例。
 * 支持查询实例的最新操作（LatestOperation）以及最新操作状态(LatestOperationState)。
  * @method Models\DescribeInstancesActionTimerResponse DescribeInstancesActionTimer(Models\DescribeInstancesActionTimerRequest $req) 本接口 (DescribeInstancesActionTimer) 用于查询定时任务信息。
+ * @method Models\DescribeInstancesAttributesResponse DescribeInstancesAttributes(Models\DescribeInstancesAttributesRequest $req) 获取指定实例的属性，目前支持查询实例自定义数据User-Data。
  * @method Models\DescribeInstancesModificationResponse DescribeInstancesModification(Models\DescribeInstancesModificationRequest $req) 本接口 (DescribeInstancesModification) 用于查询指定实例支持调整的机型配置。
  * @method Models\DescribeInstancesOperationLimitResponse DescribeInstancesOperationLimit(Models\DescribeInstancesOperationLimitRequest $req) 本接口（DescribeInstancesOperationLimit）用于查询实例操作限制。
 
@@ -130,9 +136,8 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
  * @method Models\DescribeLaunchTemplateVersionsResponse DescribeLaunchTemplateVersions(Models\DescribeLaunchTemplateVersionsRequest $req) 本接口（DescribeLaunchTemplateVersions）用于查询实例模板版本信息。
  * @method Models\DescribeLaunchTemplatesResponse DescribeLaunchTemplates(Models\DescribeLaunchTemplatesRequest $req) 本接口（DescribeLaunchTemplates）用于查询一个或者多个实例启动模板。
  * @method Models\DescribeRegionsResponse DescribeRegions(Models\DescribeRegionsRequest $req) 本接口(DescribeRegions)用于查询地域信息。因平台策略原因，该接口暂时停止更新，为确保您正常调用，可切换至新链接：https://cloud.tencent.com/document/product/1596/77930。
- * @method Models\DescribeReservedInstancesResponse DescribeReservedInstances(Models\DescribeReservedInstancesRequest $req) 本接口(DescribeReservedInstances)可提供列出用户已购买的预留实例
  * @method Models\DescribeReservedInstancesConfigInfosResponse DescribeReservedInstancesConfigInfos(Models\DescribeReservedInstancesConfigInfosRequest $req) 本接口(DescribeReservedInstancesConfigInfos)供用户列出可购买预留实例机型配置。预留实例当前只针对国际站白名单用户开放。
- * @method Models\DescribeReservedInstancesOfferingsResponse DescribeReservedInstancesOfferings(Models\DescribeReservedInstancesOfferingsRequest $req) 本接口(DescribeReservedInstancesOfferings)供用户列出可购买的预留实例配置
+ * @method Models\DescribeReservedInstancesOfferingsResponse DescribeReservedInstancesOfferings(Models\DescribeReservedInstancesOfferingsRequest $req) 本接口(DescribeReservedInstancesOfferings)供用户列出可购买的预留实例配置，预留实例当前只针对国际站白名单用户开放。
  * @method Models\DescribeTaskInfoResponse DescribeTaskInfo(Models\DescribeTaskInfoRequest $req) 本接口 (DescribeTaskInfo) 用于查询云服务器维修任务列表及详细信息。
 
 - 可以根据实例ID、实例名称或任务状态等信息来查询维修任务列表。过滤信息详情可参考入参说明。
@@ -141,18 +146,22 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
  * @method Models\DescribeZonesResponse DescribeZones(Models\DescribeZonesRequest $req) 本接口(DescribeZones)用于查询可用区信息。
  * @method Models\DisassociateInstancesKeyPairsResponse DisassociateInstancesKeyPairs(Models\DisassociateInstancesKeyPairsRequest $req) 本接口 (DisassociateInstancesKeyPairs) 用于解除实例的密钥绑定关系。
 
-* 只支持[`STOPPED`](https://cloud.tencent.com/document/product/213/15753#InstanceStatus)状态的`Linux`操作系统的实例。
+* 仅支持对 Linux 操作系统实例进行解绑操作。
+* 非强制关机场景下，仅支持对 [STOPPED](https://cloud.tencent.com/document/product/213/15753#InstanceStatus) 状态实例进行解绑操作。
+* 强制关机场景下，先执行强制关机，再解绑密钥；如实例原状态为 [RUNNING](https://cloud.tencent.com/document/product/213/15753#InstanceStatus)，解绑完成后实例会自动开机。
 * 解绑密钥后，实例可以通过原来设置的密码登录。
 * 如果原来没有设置密码，解绑后将无法使用 `SSH` 登录。可以调用 [ResetInstancesPassword](https://cloud.tencent.com/document/api/213/15736) 接口来设置登录密码。
 * 支持批量操作。每次请求批量实例的上限为100。如果批量实例存在不允许操作的实例，操作会以特定错误码返回。
  * @method Models\DisassociateSecurityGroupsResponse DisassociateSecurityGroups(Models\DisassociateSecurityGroupsRequest $req) 本接口 (DisassociateSecurityGroups) 用于解绑实例的指定安全组。
 * 实例操作结果可以通过调用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表操作成功。
+ * @method Models\EnterRescueModeResponse EnterRescueMode(Models\EnterRescueModeRequest $req) 本接口（EnterRescueMode）用于进入救援模式。
+ * @method Models\ExitRescueModeResponse ExitRescueMode(Models\ExitRescueModeRequest $req) 本接口（ExitRescueMode）用于退出救援模式。
  * @method Models\ExportImagesResponse ExportImages(Models\ExportImagesRequest $req) 提供导出自定义镜像到指定COS存储桶的能力
- * @method Models\ImportImageResponse ImportImage(Models\ImportImageRequest $req) 本接口(ImportImage)用于导入镜像，导入后的镜像可用于创建实例。目前支持 RAW、VHD、QCOW2、VMDK 镜像格式。
- * @method Models\ImportInstancesActionTimerResponse ImportInstancesActionTimer(Models\ImportInstancesActionTimerRequest $req) 导入定时任务
+ * @method Models\ImportImageResponse ImportImage(Models\ImportImageRequest $req) 本接口(ImportImage)用于导入镜像，导入后的镜像可用于创建实例。目前支持RAW、VHD、QCOW2、VMDK镜像格式。
+ * @method Models\ImportInstancesActionTimerResponse ImportInstancesActionTimer(Models\ImportInstancesActionTimerRequest $req) 本接口（ImportInstancesActionTimer）用于导入定时任务
  * @method Models\ImportKeyPairResponse ImportKeyPair(Models\ImportKeyPairRequest $req) 本接口 (ImportKeyPair) 用于导入密钥对。
 
-* 本接口的功能是将密钥对导入到用户账户，并不会自动绑定到实例。如需绑定可以使用[AssociasteInstancesKeyPair](https://cloud.tencent.com/document/api/213/9404)接口。
+* 本接口的功能是将密钥对导入到用户账户，并不会自动绑定到实例。如需绑定可以使用[AssociateInstancesKeyPairs](https://cloud.tencent.com/document/product/213/15698)接口。
 * 需指定密钥对名称以及该密钥对的公钥文本。
 * 如果用户只有私钥，可以通过 `SSL` 工具将私钥转换成公钥后再导入。
  * @method Models\InquirePricePurchaseReservedInstancesOfferingResponse InquirePricePurchaseReservedInstancesOffering(Models\InquirePricePurchaseReservedInstancesOfferingRequest $req) 本接口(InquirePricePurchaseReservedInstancesOffering)用于创建预留实例询价。本接口仅允许针对购买限制范围内的预留实例配置进行询价。预留实例当前只针对国际站白名单用户开放。
@@ -184,8 +193,9 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 * 目前不支持[CDH](https://cloud.tencent.com/document/product/416)实例使用该接口调整机型询价。
  * @method Models\InquiryPriceResizeInstanceDisksResponse InquiryPriceResizeInstanceDisks(Models\InquiryPriceResizeInstanceDisksRequest $req) 本接口 (InquiryPriceResizeInstanceDisks) 用于扩容实例的数据盘询价。
 
-* 目前只支持扩容非弹性数据盘（[`DescribeDisks`](https://cloud.tencent.com/document/api/362/16315)接口返回值中的`Portable`为`false`表示非弹性）询价。
-* 目前不支持[CDH](https://cloud.tencent.com/document/product/416)实例使用该接口扩容数据盘询价。* 仅支持包年包月实例随机器购买的数据盘。* 目前只支持扩容一块数据盘询价。
+* 目前只支持扩容非弹性数据盘（[DescribeDisks ](https://cloud.tencent.com/document/api/362/16315)接口返回值中的`Portable`为`false`表示非弹性）询价。
+* 目前不支持[CDH](https://cloud.tencent.com/document/product/416)实例使用该接口扩容数据盘询价。
+* 目前只支持扩容一块数据盘询价。
  * @method Models\InquiryPriceRunInstancesResponse InquiryPriceRunInstances(Models\InquiryPriceRunInstancesRequest $req) 本接口(InquiryPriceRunInstances)用于创建实例询价。本接口仅允许针对购买限制范围内的实例配置进行询价, 详见：[创建实例](https://cloud.tencent.com/document/api/213/15730)。
  * @method Models\InquiryPriceTerminateInstancesResponse InquiryPriceTerminateInstances(Models\InquiryPriceTerminateInstancesRequest $req) 本接口 (InquiryPriceTerminateInstances) 用于退还实例询价。
 
@@ -211,8 +221,8 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 * 只支持实例在关机状态下转换成指定云硬盘介质。
 * 不支持竞价实例类型。
 * 若实例同时存在本地系统盘和本地数据盘，需同时调整系统盘和数据盘的介质类型，不支持单独针对本地系统盘或本地数据盘修改介质类型。
-* 修改前请确保账户余额充足。可通过[DescribeAccountBalance](https://cloud.tencent.com/document/product/378/4397)接口查询账户余额。
- * @method Models\ModifyInstancesAttributeResponse ModifyInstancesAttribute(Models\ModifyInstancesAttributeRequest $req) 本接口 (ModifyInstancesAttribute) 用于修改实例的属性（目前只支持修改实例的名称和关联的安全组）。
+* 修改前请确保账户余额充足。可通过[ DescribeAccountBalance ](https://cloud.tencent.com/document/product/555/20253)接口查询账户余额。
+ * @method Models\ModifyInstancesAttributeResponse ModifyInstancesAttribute(Models\ModifyInstancesAttributeRequest $req) 本接口 (ModifyInstancesAttribute) 用于修改实例的属性。
 
 * 每次请求必须指定实例的一种属性用于修改。
 * “实例名称”仅为方便用户自己管理之用，腾讯云并不以此名称作为在线支持或是进行实例管理操作的依据。
@@ -224,6 +234,8 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 
 * 关机不收费的实例、`批量计算型BC1`和`批量计算型BS1`机型族的实例、设置定时销毁的实例不支持该操作。
 * 实例操作结果可以通过调用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表操作成功。
+ * @method Models\ModifyInstancesDisasterRecoverGroupResponse ModifyInstancesDisasterRecoverGroup(Models\ModifyInstancesDisasterRecoverGroupRequest $req) 本接口 (ModifyInstancesDisasterRecoverGroup) 用于调整实例所在置放群组。
+* 目前只支持基础网络或私有网络实例。
  * @method Models\ModifyInstancesProjectResponse ModifyInstancesProject(Models\ModifyInstancesProjectRequest $req) 本接口 (ModifyInstancesProject) 用于修改实例所属项目。
 
 * 项目为一个虚拟概念，用户可以在一个账户下面建立多个项目，每个项目中管理不同的资源；将多个不同实例分属到不同项目中，后续使用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728)接口查询实例，项目ID可用于过滤结果。
@@ -249,7 +261,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
  * @method Models\ProgramFpgaImageResponse ProgramFpgaImage(Models\ProgramFpgaImageRequest $req) 本接口(ProgramFpgaImage)用于在线烧录由客户提供的FPGA镜像文件到指定实例的指定FPGA卡上。
 * 只支持对单个实例发起在线烧录FPGA镜像的操作。
 * 支持对单个实例的多块FPGA卡同时烧录FPGA镜像，DBDFs参数为空时，默认对指定实例的所有FPGA卡进行烧录。
- * @method Models\PurchaseReservedInstancesOfferingResponse PurchaseReservedInstancesOffering(Models\PurchaseReservedInstancesOfferingRequest $req) 本接口(PurchaseReservedInstancesOffering)用于用户购买一个或者多个指定配置的预留实例
+ * @method Models\PurchaseReservedInstancesOfferingResponse PurchaseReservedInstancesOffering(Models\PurchaseReservedInstancesOfferingRequest $req) 本接口(PurchaseReservedInstancesOffering)用于用户购买一个或者多个指定配置的预留实例，预留实例当前只针对国际站白名单用户开放。
  * @method Models\RebootInstancesResponse RebootInstances(Models\RebootInstancesRequest $req) 本接口 (RebootInstances) 用于重启实例。
 
 * 只有状态为`RUNNING`的实例才可以进行此操作。
@@ -284,7 +296,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
  * @method Models\ResetInstancesInternetMaxBandwidthResponse ResetInstancesInternetMaxBandwidth(Models\ResetInstancesInternetMaxBandwidthRequest $req) 本接口 (ResetInstancesInternetMaxBandwidth) 用于调整实例公网带宽上限。
 
 * 不同机型带宽上限范围不一致，具体限制详见[公网带宽上限](https://cloud.tencent.com/document/product/213/12523)。
-* 对于 `BANDWIDTH_PREPAID` 计费方式的带宽，需要输入参数 `StartTime` 和 `EndTime` ，指定调整后的带宽的生效时间段。在这种场景下目前不支持调小带宽，会涉及扣费，请确保账户余额充足。可通过 [DescribeAccountBalance] https://cloud.tencent.com/document/product/555/20253) 接口查询账户余额。
+* 对于 `BANDWIDTH_PREPAID` 计费方式的带宽，需要输入参数 `StartTime` 和 `EndTime` ，指定调整后的带宽的生效时间段。在这种场景下目前不支持调小带宽，会涉及扣费，请确保账户余额充足。可通过 [DescribeAccountBalance](https://cloud.tencent.com/document/product/555/20253)接口查询账户余额。
 * 对于 `TRAFFIC_POSTPAID_BY_HOUR` 、 `BANDWIDTH_POSTPAID_BY_HOUR` 和 `BANDWIDTH_PACKAGE` 计费方式的带宽，使用该接口调整带宽上限是实时生效的，可以在带宽允许的范围内调大或者调小带宽，不支持输入参数 `StartTime` 和 `EndTime` 。
 * 接口不支持调整 `BANDWIDTH_POSTPAID_BY_MONTH` 计费方式的带宽。
 * 接口不支持批量调整 `BANDWIDTH_PREPAID` 和 `BANDWIDTH_POSTPAID_BY_HOUR` 计费方式的带宽。
@@ -309,6 +321,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 * 默认扩容方式为关机后扩容。
 * 实例操作结果可以通过调用 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728#.E7.A4.BA.E4.BE.8B3-.E6.9F.A5.E8.AF.A2.E5.AE.9E.E4.BE.8B.E7.9A.84.E6.9C.80.E6.96.B0.E6.93.8D.E4.BD.9C.E6.83.85.E5.86.B5) 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表操作成功。
 * 如果是系统盘，目前只支持扩容，不支持缩容。
+*  如果是运行中的实例，必须指定ForceStop或ResizeOnline任意一个参数为true，否则操作失败。
  * @method Models\RunInstancesResponse RunInstances(Models\RunInstancesRequest $req) 本接口 (RunInstances) 用于创建一个或多个指定配置的实例。
  
 * 实例创建成功后将自动开机启动，[实例状态](https://cloud.tencent.com/document/product/213/15753#InstanceStatus)变为“运行中”。
@@ -332,7 +345,9 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
  * @method Models\SyncImagesResponse SyncImages(Models\SyncImagesRequest $req) 本接口（SyncImages）用于将自定义镜像同步到其它地区。
 
 * 该接口每次调用只支持同步一个镜像。
-* 该接口支持多个同步地域。
+* 该接口支持自定义镜像向多个地域同步。
+* 共享镜像仅支持同步为源地域（单个）的自定义镜像。
+* 自定义镜像仅支持同步为源地域（单个）的加密自定义镜像。
 * 单个账号在每个地域最多支持存在500个自定义镜像。
  * @method Models\TerminateInstancesResponse TerminateInstances(Models\TerminateInstancesRequest $req) 本接口 (TerminateInstances) 用于主动退还实例。
 

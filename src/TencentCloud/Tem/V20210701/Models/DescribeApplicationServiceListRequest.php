@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvironmentId(string $EnvironmentId) 设置namespace id
  * @method string getApplicationId() 获取服务ID
  * @method void setApplicationId(string $ApplicationId) 设置服务ID
- * @method integer getSourceChannel() 获取xx
- * @method void setSourceChannel(integer $SourceChannel) 设置xx
+ * @method integer getSourceChannel() 获取来源渠道
+ * @method void setSourceChannel(integer $SourceChannel) 设置来源渠道
  */
 class DescribeApplicationServiceListRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DescribeApplicationServiceListRequest extends AbstractModel
     public $ApplicationId;
 
     /**
-     * @var integer xx
+     * @var integer 来源渠道
      */
     public $SourceChannel;
 
     /**
      * @param string $EnvironmentId namespace id
      * @param string $ApplicationId 服务ID
-     * @param integer $SourceChannel xx
+     * @param integer $SourceChannel 来源渠道
      */
     function __construct()
     {

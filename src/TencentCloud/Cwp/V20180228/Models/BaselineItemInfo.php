@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getItemName() 获取检测项名字
  * @method void setItemName(string $ItemName) 设置检测项名字
  * @method integer getRuleId() 获取检测项所属规则的ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleId(integer $RuleId) 设置检测项所属规则的ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getItemDesc() 获取检测项描述
  * @method void setItemDesc(string $ItemDesc) 设置检测项描述
  * @method string getFixMethod() 获取检测项的修复方法
@@ -37,13 +35,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLevel() 获取危险等级
  * @method void setLevel(integer $Level) 设置危险等级
  * @method integer getSysRuleId() 获取系统规则ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSysRuleId(integer $SysRuleId) 设置系统规则ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRelatedCustomRuleInfo() 获取被引自定义规则信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRelatedCustomRuleInfo(array $RelatedCustomRuleInfo) 设置被引自定义规则信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class BaselineItemInfo extends AbstractModel
 {
@@ -59,7 +53,6 @@ class BaselineItemInfo extends AbstractModel
 
     /**
      * @var integer 检测项所属规则的ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleId;
 
@@ -85,13 +78,11 @@ class BaselineItemInfo extends AbstractModel
 
     /**
      * @var integer 系统规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SysRuleId;
 
     /**
      * @var array 被引自定义规则信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RelatedCustomRuleInfo;
 
@@ -99,15 +90,12 @@ class BaselineItemInfo extends AbstractModel
      * @param integer $ItemId 基线检测项ID
      * @param string $ItemName 检测项名字
      * @param integer $RuleId 检测项所属规则的ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ItemDesc 检测项描述
      * @param string $FixMethod 检测项的修复方法
      * @param string $RuleName 检测项所属规则名字
      * @param integer $Level 危险等级
      * @param integer $SysRuleId 系统规则ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RelatedCustomRuleInfo 被引自定义规则信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

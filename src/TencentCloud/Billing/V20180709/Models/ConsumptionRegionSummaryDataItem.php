@@ -31,21 +31,13 @@ use TencentCloud\Common\AbstractModel;
  * @method array getBusiness() 获取产品消费详情
  * @method void setBusiness(array $Business) 设置产品消费详情
  * @method string getCashPayAmount() 获取现金
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCashPayAmount(string $CashPayAmount) 设置现金
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVoucherPayAmount() 获取代金券
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVoucherPayAmount(string $VoucherPayAmount) 设置代金券
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIncentivePayAmount() 获取赠送金
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIncentivePayAmount(string $IncentivePayAmount) 设置赠送金
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTransferPayAmount() 获取分成金
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTransferPayAmount(string $TransferPayAmount) 设置分成金
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ConsumptionRegionSummaryDataItem extends AbstractModel
 {
@@ -76,25 +68,21 @@ class ConsumptionRegionSummaryDataItem extends AbstractModel
 
     /**
      * @var string 现金
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CashPayAmount;
 
     /**
      * @var string 代金券
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VoucherPayAmount;
 
     /**
      * @var string 赠送金
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IncentivePayAmount;
 
     /**
      * @var string 分成金
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TransferPayAmount;
 
@@ -105,13 +93,9 @@ class ConsumptionRegionSummaryDataItem extends AbstractModel
      * @param ConsumptionSummaryTrend $Trend 趋势
      * @param array $Business 产品消费详情
      * @param string $CashPayAmount 现金
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VoucherPayAmount 代金券
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IncentivePayAmount 赠送金
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TransferPayAmount 分成金
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

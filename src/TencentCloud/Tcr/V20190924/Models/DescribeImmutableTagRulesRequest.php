@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRegistryId() 获取实例 Id
  * @method void setRegistryId(string $RegistryId) 设置实例 Id
+ * @method integer getPage() 获取页数，默认为1
+ * @method void setPage(integer $Page) 设置页数，默认为1
+ * @method integer getPageSize() 获取每页展示个数，最大值为100
+ * @method void setPageSize(integer $PageSize) 设置每页展示个数，最大值为100
  */
 class DescribeImmutableTagRulesRequest extends AbstractModel
 {
@@ -31,7 +35,19 @@ class DescribeImmutableTagRulesRequest extends AbstractModel
     public $RegistryId;
 
     /**
+     * @var integer 页数，默认为1
+     */
+    public $Page;
+
+    /**
+     * @var integer 每页展示个数，最大值为100
+     */
+    public $PageSize;
+
+    /**
      * @param string $RegistryId 实例 Id
+     * @param integer $Page 页数，默认为1
+     * @param integer $PageSize 每页展示个数，最大值为100
      */
     function __construct()
     {
@@ -48,6 +64,14 @@ class DescribeImmutableTagRulesRequest extends AbstractModel
         }
         if (array_key_exists("RegistryId",$param) and $param["RegistryId"] !== null) {
             $this->RegistryId = $param["RegistryId"];
+        }
+
+        if (array_key_exists("Page",$param) and $param["Page"] !== null) {
+            $this->Page = $param["Page"];
+        }
+
+        if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
+            $this->PageSize = $param["PageSize"];
         }
     }
 }

@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 文本类型
  *
  * @method integer getId() 获取类别Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(integer $Id) 设置类别Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLevel() 获取类别层级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLevel(integer $Level) 设置类别层级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取类别名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置类别名
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TextType extends AbstractModel
 {
     /**
      * @var integer 类别Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var integer 类别层级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Level;
 
     /**
      * @var string 类别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @param integer $Id 类别Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Level 类别层级
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 类别名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

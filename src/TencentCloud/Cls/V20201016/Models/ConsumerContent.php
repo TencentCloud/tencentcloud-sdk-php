@@ -22,14 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getEnableTag() 获取是否投递 TAG 信息。
 当EnableTag为true时，表示投递TAG元信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableTag(boolean $EnableTag) 设置是否投递 TAG 信息。
 当EnableTag为true时，表示投递TAG元信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getMetaFields() 获取需要投递的元数据列表，目前仅支持：\_\_SOURCE\_\_，\_\_FILENAME\_\_，\_\_TIMESTAMP\_\_，\_\_HOSTNAME\_\_和\_\_PKGID\_\_
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetaFields(array $MetaFields) 设置需要投递的元数据列表，目前仅支持：\_\_SOURCE\_\_，\_\_FILENAME\_\_，\_\_TIMESTAMP\_\_，\_\_HOSTNAME\_\_和\_\_PKGID\_\_
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getTagJsonNotTiled() 获取当EnableTag为true时，必须填写TagJsonNotTiled字段。
 TagJsonNotTiled用于标识tag信息是否json平铺。
 
@@ -40,7 +36,6 @@ TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 TagJsonNotTiled为false时平铺，示例：
 TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 平铺：`{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTagJsonNotTiled(boolean $TagJsonNotTiled) 设置当EnableTag为true时，必须填写TagJsonNotTiled字段。
 TagJsonNotTiled用于标识tag信息是否json平铺。
 
@@ -51,11 +46,8 @@ TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 TagJsonNotTiled为false时平铺，示例：
 TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 平铺：`{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTimestampAccuracy() 获取投递时间戳精度，可选项 [1：秒；2：毫秒] ，默认是1。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimestampAccuracy(integer $TimestampAccuracy) 设置投递时间戳精度，可选项 [1：秒；2：毫秒] ，默认是1。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getJsonType() 获取投递Json格式。
 JsonType为0：和原始日志一致，不转义。示例：
 日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
@@ -64,7 +56,6 @@ JsonType为0：和原始日志一致，不转义。示例：
 JsonType为1：转义。示例：
 日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
 投递到Ckafka：`{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setJsonType(integer $JsonType) 设置投递Json格式。
 JsonType为0：和原始日志一致，不转义。示例：
 日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
@@ -73,20 +64,17 @@ JsonType为0：和原始日志一致，不转义。示例：
 JsonType为1：转义。示例：
 日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
 投递到Ckafka：`{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ConsumerContent extends AbstractModel
 {
     /**
      * @var boolean 是否投递 TAG 信息。
 当EnableTag为true时，表示投递TAG元信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableTag;
 
     /**
      * @var array 需要投递的元数据列表，目前仅支持：\_\_SOURCE\_\_，\_\_FILENAME\_\_，\_\_TIMESTAMP\_\_，\_\_HOSTNAME\_\_和\_\_PKGID\_\_
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MetaFields;
 
@@ -101,13 +89,11 @@ TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 TagJsonNotTiled为false时平铺，示例：
 TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 平铺：`{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TagJsonNotTiled;
 
     /**
      * @var integer 投递时间戳精度，可选项 [1：秒；2：毫秒] ，默认是1。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimestampAccuracy;
 
@@ -120,16 +106,13 @@ JsonType为0：和原始日志一致，不转义。示例：
 JsonType为1：转义。示例：
 日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
 投递到Ckafka：`{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $JsonType;
 
     /**
      * @param boolean $EnableTag 是否投递 TAG 信息。
 当EnableTag为true时，表示投递TAG元信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $MetaFields 需要投递的元数据列表，目前仅支持：\_\_SOURCE\_\_，\_\_FILENAME\_\_，\_\_TIMESTAMP\_\_，\_\_HOSTNAME\_\_和\_\_PKGID\_\_
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $TagJsonNotTiled 当EnableTag为true时，必须填写TagJsonNotTiled字段。
 TagJsonNotTiled用于标识tag信息是否json平铺。
 
@@ -140,9 +123,7 @@ TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 TagJsonNotTiled为false时平铺，示例：
 TAG信息：`{"__TAG__":{"fieldA":200,"fieldB":"text"}}`
 平铺：`{"__TAG__.fieldA":200,"__TAG__.fieldB":"text"}`
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TimestampAccuracy 投递时间戳精度，可选项 [1：秒；2：毫秒] ，默认是1。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $JsonType 投递Json格式。
 JsonType为0：和原始日志一致，不转义。示例：
 日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
@@ -151,7 +132,6 @@ JsonType为0：和原始日志一致，不转义。示例：
 JsonType为1：转义。示例：
 日志原文：`{"a":"aa", "b":{"b1":"b1b1", "c1":"c1c1"}}`
 投递到Ckafka：`{"a":"aa","b":"{\"b1\":\"b1b1\", \"c1\":\"c1c1\"}"}`
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

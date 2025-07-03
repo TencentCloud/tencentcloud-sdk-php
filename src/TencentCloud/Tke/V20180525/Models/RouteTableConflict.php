@@ -23,17 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getRouteTableType() 获取路由表类型。
  * @method void setRouteTableType(string $RouteTableType) 设置路由表类型。
  * @method string getRouteTableCidrBlock() 获取路由表CIDR。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRouteTableCidrBlock(string $RouteTableCidrBlock) 设置路由表CIDR。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRouteTableName() 获取路由表名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRouteTableName(string $RouteTableName) 设置路由表名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRouteTableId() 获取路由表ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRouteTableId(string $RouteTableId) 设置路由表ID。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class RouteTableConflict extends AbstractModel
 {
@@ -44,30 +38,24 @@ class RouteTableConflict extends AbstractModel
 
     /**
      * @var string 路由表CIDR。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RouteTableCidrBlock;
 
     /**
      * @var string 路由表名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RouteTableName;
 
     /**
      * @var string 路由表ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RouteTableId;
 
     /**
      * @param string $RouteTableType 路由表类型。
      * @param string $RouteTableCidrBlock 路由表CIDR。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RouteTableName 路由表名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RouteTableId 路由表ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * kong实例的服务列表
  *
  * @method array getServiceList() 获取kong实例的服务列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setServiceList(array $ServiceList) 设置kong实例的服务列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取列表总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置列表总数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class KongServices extends AbstractModel
 {
     /**
      * @var array kong实例的服务列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ServiceList;
 
     /**
      * @var integer 列表总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
      * @param array $ServiceList kong实例的服务列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 列表总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,93 +21,65 @@ use TencentCloud\Common\AbstractModel;
  * 体检报告-外科-脊柱
  *
  * @method KeyValueItem getText() 获取脊柱四肢总体描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setText(KeyValueItem $Text) 设置脊柱四肢总体描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method KeyValueItem getSpinalColumn() 获取脊柱
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSpinalColumn(KeyValueItem $SpinalColumn) 设置脊柱
-注意：此字段可能返回 null，表示取不到有效值。
  * @method KeyValueItem getLimbJoint() 获取四肢和关节
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLimbJoint(KeyValueItem $LimbJoint) 设置四肢和关节
-注意：此字段可能返回 null，表示取不到有效值。
  * @method KeyValueItem getFoot() 获取平跛足
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFoot(KeyValueItem $Foot) 设置平跛足
-注意：此字段可能返回 null，表示取不到有效值。
  * @method KeyValueItem getBone() 获取骨骼
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBone(KeyValueItem $Bone) 设置骨骼
-注意：此字段可能返回 null，表示取不到有效值。
  * @method KeyValueItem getGait() 获取步态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGait(KeyValueItem $Gait) 设置步态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method KeyValueItem getDeformity() 获取残疾或畸形
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeformity(KeyValueItem $Deformity) 设置残疾或畸形
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SurgerySpinalExtremities extends AbstractModel
 {
     /**
      * @var KeyValueItem 脊柱四肢总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Text;
 
     /**
      * @var KeyValueItem 脊柱
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SpinalColumn;
 
     /**
      * @var KeyValueItem 四肢和关节
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LimbJoint;
 
     /**
      * @var KeyValueItem 平跛足
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Foot;
 
     /**
      * @var KeyValueItem 骨骼
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Bone;
 
     /**
      * @var KeyValueItem 步态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Gait;
 
     /**
      * @var KeyValueItem 残疾或畸形
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Deformity;
 
     /**
      * @param KeyValueItem $Text 脊柱四肢总体描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyValueItem $SpinalColumn 脊柱
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyValueItem $LimbJoint 四肢和关节
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyValueItem $Foot 平跛足
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyValueItem $Bone 骨骼
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyValueItem $Gait 步态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param KeyValueItem $Deformity 残疾或畸形
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

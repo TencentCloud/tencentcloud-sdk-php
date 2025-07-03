@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDestinationPath() 获取目的端路径
  * @method void setDestinationPath(string $DestinationPath) 设置目的端路径
  * @method OutputMappingOption getOutputMappingOption() 获取输出映射选项
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutputMappingOption(OutputMappingOption $OutputMappingOption) 设置输出映射选项
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OutputMapping extends AbstractModel
 {
@@ -43,7 +41,6 @@ class OutputMapping extends AbstractModel
 
     /**
      * @var OutputMappingOption 输出映射选项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutputMappingOption;
 
@@ -51,7 +48,6 @@ class OutputMapping extends AbstractModel
      * @param string $SourcePath 源端路径
      * @param string $DestinationPath 目的端路径
      * @param OutputMappingOption $OutputMappingOption 输出映射选项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

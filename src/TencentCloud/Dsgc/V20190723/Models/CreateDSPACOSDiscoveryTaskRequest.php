@@ -30,8 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnable(integer $Enable) 设置任务开关，0 关闭，1 启用
  * @method string getBucket() 获取桶名
  * @method void setBucket(string $Bucket) 设置桶名
- * @method integer getGeneralRuleSetEnable() 获取通用规则集开关，0 关闭，1 启用
- * @method void setGeneralRuleSetEnable(integer $GeneralRuleSetEnable) 设置通用规则集开关，0 关闭，1 启用
  * @method integer getPlan() 获取执行计划， 0立即 1定时，选择“立即”时，扫描周期只能选择单次。
  * @method void setPlan(integer $Plan) 设置执行计划， 0立即 1定时，选择“立即”时，扫描周期只能选择单次。
  * @method integer getPeriod() 获取扫描周期，0单次 1每天 2每周 3每月
@@ -44,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceRegion(string $ResourceRegion) 设置资源所在地域
  * @method string getDescription() 获取任务描述，最大长度为1024个字符
  * @method void setDescription(string $Description) 设置任务描述，最大长度为1024个字符
+ * @method integer getGeneralRuleSetEnable() 获取通用规则集开关，0 关闭，1 启用
+ * @method void setGeneralRuleSetEnable(integer $GeneralRuleSetEnable) 设置通用规则集开关，0 关闭，1 启用
  * @method array getComplianceGroupIds() 获取合规组ID列表，最多支持添加5个
  * @method void setComplianceGroupIds(array $ComplianceGroupIds) 设置合规组ID列表，最多支持添加5个
  * @method string getTimingStartTime() 获取任务定时启动时间，格式如：2006-01-02 15:04:05
@@ -79,11 +79,6 @@ class CreateDSPACOSDiscoveryTaskRequest extends AbstractModel
     public $Bucket;
 
     /**
-     * @var integer 通用规则集开关，0 关闭，1 启用
-     */
-    public $GeneralRuleSetEnable;
-
-    /**
      * @var integer 执行计划， 0立即 1定时，选择“立即”时，扫描周期只能选择单次。
      */
     public $Plan;
@@ -114,6 +109,11 @@ class CreateDSPACOSDiscoveryTaskRequest extends AbstractModel
     public $Description;
 
     /**
+     * @var integer 通用规则集开关，0 关闭，1 启用
+     */
+    public $GeneralRuleSetEnable;
+
+    /**
      * @var array 合规组ID列表，最多支持添加5个
      */
     public $ComplianceGroupIds;
@@ -130,13 +130,13 @@ class CreateDSPACOSDiscoveryTaskRequest extends AbstractModel
      * @param string $DataSourceId 数据源ID
      * @param integer $Enable 任务开关，0 关闭，1 启用
      * @param string $Bucket 桶名
-     * @param integer $GeneralRuleSetEnable 通用规则集开关，0 关闭，1 启用
      * @param integer $Plan 执行计划， 0立即 1定时，选择“立即”时，扫描周期只能选择单次。
      * @param integer $Period 扫描周期，0单次 1每天 2每周 3每月
      * @param array $FileTypes 待扫描文件类型，用逗号隔开，格式如：[".txt", ".csv", ".log", ".xml",".html", ".json"]。
      * @param integer $FileSizeLimit 文件大小上限，单位为KB，如1000, 目前单个文件最大只支持100MB（102400KB）
      * @param string $ResourceRegion 资源所在地域
      * @param string $Description 任务描述，最大长度为1024个字符
+     * @param integer $GeneralRuleSetEnable 通用规则集开关，0 关闭，1 启用
      * @param array $ComplianceGroupIds 合规组ID列表，最多支持添加5个
      * @param string $TimingStartTime 任务定时启动时间，格式如：2006-01-02 15:04:05
 当执行计划（Plan字段）为”立即“时，定时启动时间不会生效，此场景下给该字段传值不会被保存。
@@ -174,10 +174,6 @@ class CreateDSPACOSDiscoveryTaskRequest extends AbstractModel
             $this->Bucket = $param["Bucket"];
         }
 
-        if (array_key_exists("GeneralRuleSetEnable",$param) and $param["GeneralRuleSetEnable"] !== null) {
-            $this->GeneralRuleSetEnable = $param["GeneralRuleSetEnable"];
-        }
-
         if (array_key_exists("Plan",$param) and $param["Plan"] !== null) {
             $this->Plan = $param["Plan"];
         }
@@ -200,6 +196,10 @@ class CreateDSPACOSDiscoveryTaskRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("GeneralRuleSetEnable",$param) and $param["GeneralRuleSetEnable"] !== null) {
+            $this->GeneralRuleSetEnable = $param["GeneralRuleSetEnable"];
         }
 
         if (array_key_exists("ComplianceGroupIds",$param) and $param["ComplianceGroupIds"] !== null) {

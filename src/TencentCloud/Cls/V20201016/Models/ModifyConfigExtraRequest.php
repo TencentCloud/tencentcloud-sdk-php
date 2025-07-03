@@ -139,6 +139,7 @@ class ModifyConfigExtraRequest extends AbstractModel
      * @var string 日志格式化方式，用于容器采集场景。
 - stdout-docker-json：用于docker容器采集场景
 - stdout-containerd：用于containerd容器采集场景
+     * @deprecated
      */
     public $LogFormat;
 

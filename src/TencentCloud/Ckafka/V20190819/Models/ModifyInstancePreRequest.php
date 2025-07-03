@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyInstancePre请求参数结构体
  *
- * @method string getInstanceId() 获取实例名称
- * @method void setInstanceId(string $InstanceId) 设置实例名称
+ * @method string getInstanceId() 获取ckafka集群实例Id
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
  * @method integer getDiskSize() 获取预计磁盘，根据磁盘步长，规格向上调整。
  * @method void setDiskSize(integer $DiskSize) 设置预计磁盘，根据磁盘步长，规格向上调整。
  * @method integer getBandWidth() 获取预计带宽，根据带宽步长，规格向上调整。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyInstancePreRequest extends AbstractModel
 {
     /**
-     * @var string 实例名称
+     * @var string ckafka集群实例Id
      */
     public $InstanceId;
 
@@ -52,7 +52,7 @@ class ModifyInstancePreRequest extends AbstractModel
     public $Partition;
 
     /**
-     * @param string $InstanceId 实例名称
+     * @param string $InstanceId ckafka集群实例Id
      * @param integer $DiskSize 预计磁盘，根据磁盘步长，规格向上调整。
      * @param integer $BandWidth 预计带宽，根据带宽步长，规格向上调整。
      * @param integer $Partition 预计分区，根据带宽步长，规格向上调整。

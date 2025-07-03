@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBuyerTaxID(string $BuyerTaxID) 设置统一社会信用代码
  * @method string getOriginalNumber() 获取原发票号码
  * @method void setOriginalNumber(string $OriginalNumber) 设置原发票号码
+ * @method string getIDInfo() 获取标识信息
+ * @method void setIDInfo(string $IDInfo) 设置标识信息
  */
 class ElectronicTrainTicketFull extends AbstractModel
 {
@@ -164,6 +166,11 @@ class ElectronicTrainTicketFull extends AbstractModel
     public $OriginalNumber;
 
     /**
+     * @var string 标识信息
+     */
+    public $IDInfo;
+
+    /**
      * @param string $TypeOfVoucher 电子发票类型
      * @param string $ElectronicTicketNum 电子客票号
      * @param string $Date 开票日期
@@ -184,6 +191,7 @@ class ElectronicTrainTicketFull extends AbstractModel
      * @param string $Buyer 购买方名称
      * @param string $BuyerTaxID 统一社会信用代码
      * @param string $OriginalNumber 原发票号码
+     * @param string $IDInfo 标识信息
      */
     function __construct()
     {
@@ -276,6 +284,10 @@ class ElectronicTrainTicketFull extends AbstractModel
 
         if (array_key_exists("OriginalNumber",$param) and $param["OriginalNumber"] !== null) {
             $this->OriginalNumber = $param["OriginalNumber"];
+        }
+
+        if (array_key_exists("IDInfo",$param) and $param["IDInfo"] !== null) {
+            $this->IDInfo = $param["IDInfo"];
         }
     }
 }

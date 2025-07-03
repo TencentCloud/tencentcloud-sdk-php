@@ -21,69 +21,37 @@ use TencentCloud\Common\AbstractModel;
  * DescribeAssetOverview返回参数结构体
  *
  * @method integer getDBInstanceNums() 获取数据库实例id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDBInstanceNums(integer $DBInstanceNums) 设置数据库实例id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDBNums() 获取数据库个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDBNums(integer $DBNums) 设置数据库个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTableNums() 获取表的个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTableNums(integer $TableNums) 设置表的个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFieldNums() 获取字段个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFieldNums(integer $FieldNums) 设置字段个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDBInstanceDistribution() 获取数据库实例的分布情况
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDBInstanceDistribution(array $DBInstanceDistribution) 设置数据库实例的分布情况
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDBDistribution() 获取db分布情况
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDBDistribution(array $DBDistribution) 设置db分布情况
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBucketNums() 获取cos桶的数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBucketNums(integer $BucketNums) 设置cos桶的数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFileNums() 获取文件个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileNums(integer $FileNums) 设置文件个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRemark() 获取用于对用户进行提示信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置用于对用户进行提示信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEsInstanceNums() 获取es实例数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEsInstanceNums(integer $EsInstanceNums) 设置es实例数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEsIndexNums() 获取es索引数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEsIndexNums(integer $EsIndexNums) 设置es索引数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEsFieldNums() 获取es字段数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEsFieldNums(integer $EsFieldNums) 设置es字段数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMongoInstanceNums() 获取mongo实例数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMongoInstanceNums(integer $MongoInstanceNums) 设置mongo实例数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMongoDbNums() 获取mongo数据库数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMongoDbNums(integer $MongoDbNums) 设置mongo数据库数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMongoColNums() 获取mongo集合数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMongoColNums(integer $MongoColNums) 设置mongo集合数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMongoFieldNums() 获取mongo字段数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMongoFieldNums(integer $MongoFieldNums) 设置mongo字段数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -91,97 +59,81 @@ class DescribeAssetOverviewResponse extends AbstractModel
 {
     /**
      * @var integer 数据库实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DBInstanceNums;
 
     /**
      * @var integer 数据库个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DBNums;
 
     /**
      * @var integer 表的个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TableNums;
 
     /**
      * @var integer 字段个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FieldNums;
 
     /**
      * @var array 数据库实例的分布情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DBInstanceDistribution;
 
     /**
      * @var array db分布情况
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DBDistribution;
 
     /**
      * @var integer cos桶的数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BucketNums;
 
     /**
      * @var integer 文件个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileNums;
 
     /**
      * @var string 用于对用户进行提示信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
     /**
      * @var integer es实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EsInstanceNums;
 
     /**
      * @var integer es索引数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EsIndexNums;
 
     /**
      * @var integer es字段数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EsFieldNums;
 
     /**
      * @var integer mongo实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MongoInstanceNums;
 
     /**
      * @var integer mongo数据库数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MongoDbNums;
 
     /**
      * @var integer mongo集合数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MongoColNums;
 
     /**
      * @var integer mongo字段数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MongoFieldNums;
 
@@ -192,37 +144,21 @@ class DescribeAssetOverviewResponse extends AbstractModel
 
     /**
      * @param integer $DBInstanceNums 数据库实例id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DBNums 数据库个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TableNums 表的个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FieldNums 字段个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DBInstanceDistribution 数据库实例的分布情况
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DBDistribution db分布情况
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BucketNums cos桶的数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FileNums 文件个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Remark 用于对用户进行提示信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EsInstanceNums es实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EsIndexNums es索引数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EsFieldNums es字段数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MongoInstanceNums mongo实例数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MongoDbNums mongo数据库数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MongoColNums mongo集合数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MongoFieldNums mongo字段数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

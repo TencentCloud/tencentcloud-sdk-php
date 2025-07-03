@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataDisks(array $DataDisks) 设置原生节点池数据盘列表
  * @method array getKeyIds() 获取节点池ssh公钥id数组
  * @method void setKeyIds(array $KeyIds) 设置节点池ssh公钥id数组
+ * @method string getMachineType() 获取节点池类型
+ * @method void setMachineType(string $MachineType) 设置节点池类型
  */
 class CreateNativeNodePoolParam extends AbstractModel
 {
@@ -164,6 +166,11 @@ class CreateNativeNodePoolParam extends AbstractModel
     public $KeyIds;
 
     /**
+     * @var string 节点池类型
+     */
+    public $MachineType;
+
+    /**
      * @param MachineSetScaling $Scaling 节点池伸缩配置
      * @param array $SubnetIds 子网列表
      * @param string $InstanceChargeType 节点计费类型。PREPAID：包年包月；POSTPAID_BY_HOUR：按量计费（默认）；
@@ -184,6 +191,7 @@ class CreateNativeNodePoolParam extends AbstractModel
      * @param InternetAccessible $InternetAccessible 公网带宽设置
      * @param array $DataDisks 原生节点池数据盘列表
      * @param array $KeyIds 节点池ssh公钥id数组
+     * @param string $MachineType 节点池类型
      */
     function __construct()
     {
@@ -288,6 +296,10 @@ class CreateNativeNodePoolParam extends AbstractModel
 
         if (array_key_exists("KeyIds",$param) and $param["KeyIds"] !== null) {
             $this->KeyIds = $param["KeyIds"];
+        }
+
+        if (array_key_exists("MachineType",$param) and $param["MachineType"] !== null) {
+            $this->MachineType = $param["MachineType"];
         }
     }
 }

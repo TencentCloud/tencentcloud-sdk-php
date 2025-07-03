@@ -44,6 +44,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFormat(string $Format) 设置媒资音频文件格式
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getBitDepth() 获取Audio Bit Depth: 16/24 bit .etc
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBitDepth(integer $BitDepth) 设置Audio Bit Depth: 16/24 bit .etc
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getShortFormat() 获取封装格式短后缀
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setShortFormat(string $ShortFormat) 设置封装格式短后缀
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AudioMetadata extends AbstractModel
 {
@@ -84,6 +92,18 @@ class AudioMetadata extends AbstractModel
     public $Format;
 
     /**
+     * @var integer Audio Bit Depth: 16/24 bit .etc
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BitDepth;
+
+    /**
+     * @var string 封装格式短后缀
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ShortFormat;
+
+    /**
      * @param integer $FileSize 媒资音频文件大小，单位为Byte
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MD5 媒资音频文件MD5
@@ -95,6 +115,10 @@ class AudioMetadata extends AbstractModel
      * @param integer $BitRate 媒资音频码率，单位为kbps
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Format 媒资音频文件格式
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $BitDepth Audio Bit Depth: 16/24 bit .etc
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ShortFormat 封装格式短后缀
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -132,6 +156,14 @@ class AudioMetadata extends AbstractModel
 
         if (array_key_exists("Format",$param) and $param["Format"] !== null) {
             $this->Format = $param["Format"];
+        }
+
+        if (array_key_exists("BitDepth",$param) and $param["BitDepth"] !== null) {
+            $this->BitDepth = $param["BitDepth"];
+        }
+
+        if (array_key_exists("ShortFormat",$param) and $param["ShortFormat"] !== null) {
+            $this->ShortFormat = $param["ShortFormat"];
         }
     }
 }

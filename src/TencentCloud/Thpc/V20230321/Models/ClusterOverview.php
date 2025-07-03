@@ -33,9 +33,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSchedulerType() 获取集群调度器。
  * @method void setSchedulerType(string $SchedulerType) 设置集群调度器。
  * @method string getSchedulerVersion() 获取集群调度器版本。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSchedulerVersion(string $SchedulerVersion) 设置集群调度器版本。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getComputeNodeCount() 获取计算节点数量。
  * @method void setComputeNodeCount(integer $ComputeNodeCount) 设置计算节点数量。
  * @method array getComputeNodeSet() 获取计算节点概览。
@@ -48,10 +46,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoginNodeSet(array $LoginNodeSet) 设置登录节点概览。
  * @method integer getLoginNodeCount() 获取登录节点数量。
  * @method void setLoginNodeCount(integer $LoginNodeCount) 设置登录节点数量。
- * @method string getAutoScalingType() 获取弹性伸缩类型。取值范围：<li>THPC_AS：集群自动扩缩容由THPC产品内部实现。</li><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。</li>
- * @method void setAutoScalingType(string $AutoScalingType) 设置弹性伸缩类型。取值范围：<li>THPC_AS：集群自动扩缩容由THPC产品内部实现。</li><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。</li>
+ * @method string getAutoScalingType() 获取弹性伸缩类型。
+ * @method void setAutoScalingType(string $AutoScalingType) 设置弹性伸缩类型。
  * @method string getVpcId() 获取集群所属私有网络ID。
  * @method void setVpcId(string $VpcId) 设置集群所属私有网络ID。
+ * @method string getClusterType() 获取集群类型
+ * @method void setClusterType(string $ClusterType) 设置集群类型
  */
 class ClusterOverview extends AbstractModel
 {
@@ -87,7 +87,6 @@ class ClusterOverview extends AbstractModel
 
     /**
      * @var string 集群调度器版本。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SchedulerVersion;
 
@@ -122,7 +121,7 @@ class ClusterOverview extends AbstractModel
     public $LoginNodeCount;
 
     /**
-     * @var string 弹性伸缩类型。取值范围：<li>THPC_AS：集群自动扩缩容由THPC产品内部实现。</li><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。</li>
+     * @var string 弹性伸缩类型。
      */
     public $AutoScalingType;
 
@@ -132,6 +131,11 @@ class ClusterOverview extends AbstractModel
     public $VpcId;
 
     /**
+     * @var string 集群类型
+     */
+    public $ClusterType;
+
+    /**
      * @param string $ClusterId 集群ID。
      * @param string $ClusterStatus 集群状态。取值范围：<li>PENDING：创建中</li><li>INITING：初始化中</li><li>INIT_FAILED：初始化失败</li><li>RUNNING：运行中</li><li>TERMINATING：销毁中</li>
      * @param string $ClusterName 集群名称。
@@ -139,15 +143,15 @@ class ClusterOverview extends AbstractModel
      * @param string $CreateTime 集群创建时间。
      * @param string $SchedulerType 集群调度器。
      * @param string $SchedulerVersion 集群调度器版本。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ComputeNodeCount 计算节点数量。
      * @param array $ComputeNodeSet 计算节点概览。
      * @param integer $ManagerNodeCount 管控节点数量。
      * @param array $ManagerNodeSet 管控节点概览。
      * @param array $LoginNodeSet 登录节点概览。
      * @param integer $LoginNodeCount 登录节点数量。
-     * @param string $AutoScalingType 弹性伸缩类型。取值范围：<li>THPC_AS：集群自动扩缩容由THPC产品内部实现。</li><li>AS：集群自动扩缩容由[弹性伸缩](https://cloud.tencent.com/document/product/377/3154)产品实现。</li>
+     * @param string $AutoScalingType 弹性伸缩类型。
      * @param string $VpcId 集群所属私有网络ID。
+     * @param string $ClusterType 集群类型
      */
     function __construct()
     {
@@ -236,6 +240,10 @@ class ClusterOverview extends AbstractModel
 
         if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
             $this->VpcId = $param["VpcId"];
+        }
+
+        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
+            $this->ClusterType = $param["ClusterType"];
         }
     }
 }

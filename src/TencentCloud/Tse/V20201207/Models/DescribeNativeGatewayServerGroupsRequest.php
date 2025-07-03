@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getGatewayId() 获取云原生API网关实例ID。
  * @method void setGatewayId(string $GatewayId) 设置云原生API网关实例ID。
- * @method integer getOffset() 获取翻页从第几个开始获取
- * @method void setOffset(integer $Offset) 设置翻页从第几个开始获取
- * @method integer getLimit() 获取翻页获取多少个
- * @method void setLimit(integer $Limit) 设置翻页获取多少个
- * @method array getFilters() 获取过滤参数
- * @method void setFilters(array $Filters) 设置过滤参数
+ * @method integer getOffset() 获取偏移量，默认为 0。
+ * @method void setOffset(integer $Offset) 设置偏移量，默认为 0。
+ * @method integer getLimit() 获取返回数量，默认为 20。
+ * @method void setLimit(integer $Limit) 设置返回数量，默认为 20。
+ * @method array getFilters() 获取过滤参数，支持按照分组名称、分组ID（Name、GroupId）筛选
+ * @method void setFilters(array $Filters) 设置过滤参数，支持按照分组名称、分组ID（Name、GroupId）筛选
  */
 class DescribeNativeGatewayServerGroupsRequest extends AbstractModel
 {
@@ -37,25 +37,25 @@ class DescribeNativeGatewayServerGroupsRequest extends AbstractModel
     public $GatewayId;
 
     /**
-     * @var integer 翻页从第几个开始获取
+     * @var integer 偏移量，默认为 0。
      */
     public $Offset;
 
     /**
-     * @var integer 翻页获取多少个
+     * @var integer 返回数量，默认为 20。
      */
     public $Limit;
 
     /**
-     * @var array 过滤参数
+     * @var array 过滤参数，支持按照分组名称、分组ID（Name、GroupId）筛选
      */
     public $Filters;
 
     /**
      * @param string $GatewayId 云原生API网关实例ID。
-     * @param integer $Offset 翻页从第几个开始获取
-     * @param integer $Limit 翻页获取多少个
-     * @param array $Filters 过滤参数
+     * @param integer $Offset 偏移量，默认为 0。
+     * @param integer $Limit 返回数量，默认为 20。
+     * @param array $Filters 过滤参数，支持按照分组名称、分组ID（Name、GroupId）筛选
      */
     function __construct()
     {

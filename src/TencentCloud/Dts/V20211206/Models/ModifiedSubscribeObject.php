@@ -22,48 +22,36 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getObjectsType() 获取订阅对象的类型，枚举值为：0-库，1-表(该值对于mongo任务来说，是集合) 。
 注意：mongo只支持全实例、单库或者单集合订阅，因此该字段不要与SubscribeObjectType冲突。如：SubscribeObjectType=4，表示mongo单库订阅，那么该字段应该传0。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setObjectsType(integer $ObjectsType) 设置订阅对象的类型，枚举值为：0-库，1-表(该值对于mongo任务来说，是集合) 。
 注意：mongo只支持全实例、单库或者单集合订阅，因此该字段不要与SubscribeObjectType冲突。如：SubscribeObjectType=4，表示mongo单库订阅，那么该字段应该传0。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDatabaseName() 获取订阅数据库的名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatabaseName(string $DatabaseName) 设置订阅数据库的名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTableNames() 获取订阅数据库中表(或集合)的名称。如果 ObjectsType 为 1，那么此字段为必填，且不为空；
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTableNames(array $TableNames) 设置订阅数据库中表(或集合)的名称。如果 ObjectsType 为 1，那么此字段为必填，且不为空；
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ModifiedSubscribeObject extends AbstractModel
 {
     /**
      * @var integer 订阅对象的类型，枚举值为：0-库，1-表(该值对于mongo任务来说，是集合) 。
 注意：mongo只支持全实例、单库或者单集合订阅，因此该字段不要与SubscribeObjectType冲突。如：SubscribeObjectType=4，表示mongo单库订阅，那么该字段应该传0。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ObjectsType;
 
     /**
      * @var string 订阅数据库的名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DatabaseName;
 
     /**
      * @var array 订阅数据库中表(或集合)的名称。如果 ObjectsType 为 1，那么此字段为必填，且不为空；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TableNames;
 
     /**
      * @param integer $ObjectsType 订阅对象的类型，枚举值为：0-库，1-表(该值对于mongo任务来说，是集合) 。
 注意：mongo只支持全实例、单库或者单集合订阅，因此该字段不要与SubscribeObjectType冲突。如：SubscribeObjectType=4，表示mongo单库订阅，那么该字段应该传0。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatabaseName 订阅数据库的名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TableNames 订阅数据库中表(或集合)的名称。如果 ObjectsType 为 1，那么此字段为必填，且不为空；
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

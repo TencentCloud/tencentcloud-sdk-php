@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRDBRules(DspaDiscoveryRDBRules $RDBRules) 设置RDB类敏感数据识别规则
  * @method DspaDiscoveryCOSRules getCOSRules() 获取COS类敏感数据识别规则
  * @method void setCOSRules(DspaDiscoveryCOSRules $COSRules) 设置COS类敏感数据识别规则
+ * @method integer getStatus() 获取规则状态；0 不启用, 1 启用
+ * @method void setStatus(integer $Status) 设置规则状态；0 不启用, 1 启用
  */
 class CreateDSPADiscoveryRuleRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class CreateDSPADiscoveryRuleRequest extends AbstractModel
     public $COSRules;
 
     /**
+     * @var integer 规则状态；0 不启用, 1 启用
+     */
+    public $Status;
+
+    /**
      * @param string $DspaId DSPA实例ID
      * @param string $Name 规则名称，1-60个字符，仅允许输入中文、英文字母、数字、'_'、'-'，并且开头和结尾需为中文、英文字母或者数字，Name不可重复
      * @param string $Description 规则描述，最大长度为1024个字符
      * @param DspaDiscoveryRDBRules $RDBRules RDB类敏感数据识别规则
      * @param DspaDiscoveryCOSRules $COSRules COS类敏感数据识别规则
+     * @param integer $Status 规则状态；0 不启用, 1 启用
      */
     function __construct()
     {
@@ -98,6 +106,10 @@ class CreateDSPADiscoveryRuleRequest extends AbstractModel
         if (array_key_exists("COSRules",$param) and $param["COSRules"] !== null) {
             $this->COSRules = new DspaDiscoveryCOSRules();
             $this->COSRules->deserialize($param["COSRules"]);
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

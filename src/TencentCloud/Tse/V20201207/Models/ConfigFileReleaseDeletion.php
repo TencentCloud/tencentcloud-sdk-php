@@ -21,57 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 配置发布删除
  *
  * @method string getNamespace() 获取命名空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespace(string $Namespace) 设置命名空间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroup() 获取配置分组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroup(string $Group) 设置配置分组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileName() 获取文件名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileName(string $FileName) 设置文件名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReleaseVersion() 获取发布版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReleaseVersion(string $ReleaseVersion) 设置发布版本
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getId() 获取配置发布ID
+ * @method void setId(integer $Id) 设置配置发布ID
  */
 class ConfigFileReleaseDeletion extends AbstractModel
 {
     /**
      * @var string 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Namespace;
 
     /**
      * @var string 配置分组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Group;
 
     /**
      * @var string 文件名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileName;
 
     /**
      * @var string 发布版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReleaseVersion;
 
     /**
+     * @var integer 配置发布ID
+     */
+    public $Id;
+
+    /**
      * @param string $Namespace 命名空间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Group 配置分组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileName 文件名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReleaseVersion 发布版本
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Id 配置发布ID
      */
     function __construct()
     {
@@ -100,6 +92,10 @@ class ConfigFileReleaseDeletion extends AbstractModel
 
         if (array_key_exists("ReleaseVersion",$param) and $param["ReleaseVersion"] !== null) {
             $this->ReleaseVersion = $param["ReleaseVersion"];
+        }
+
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
         }
     }
 }

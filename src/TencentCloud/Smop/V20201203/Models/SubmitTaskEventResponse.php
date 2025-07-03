@@ -20,48 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SubmitTaskEvent返回参数结构体
  *
- * @method string getOrderId() 获取订单ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setOrderId(string $OrderId) 设置订单ID
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getCode() 获取信息码
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCode(integer $Code) 设置信息码
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getMessage() 获取success
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMessage(string $Message) 设置success
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOrderId() 获取任务的唯一订单号
+ * @method void setOrderId(string $OrderId) 设置任务的唯一订单号
+ * @method integer getCode() 获取信息码。0表示成功，-1标识失败
+ * @method void setCode(integer $Code) 设置信息码。0表示成功，-1标识失败
+ * @method string getMessage() 获取提示信息
+ * @method void setMessage(string $Message) 设置提示信息
  * @method array getData() 获取任务处理结果列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setData(array $Data) 设置任务处理结果列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class SubmitTaskEventResponse extends AbstractModel
 {
     /**
-     * @var string 订单ID
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 任务的唯一订单号
      */
     public $OrderId;
 
     /**
-     * @var integer 信息码
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 信息码。0表示成功，-1标识失败
      */
     public $Code;
 
     /**
-     * @var string success
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 提示信息
      */
     public $Message;
 
     /**
      * @var array 任务处理结果列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
 
@@ -71,14 +59,10 @@ class SubmitTaskEventResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $OrderId 订单ID
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Code 信息码
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Message success
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OrderId 任务的唯一订单号
+     * @param integer $Code 信息码。0表示成功，-1标识失败
+     * @param string $Message 提示信息
      * @param array $Data 任务处理结果列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

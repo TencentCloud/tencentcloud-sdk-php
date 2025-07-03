@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * VPN网关的流量监控数据。
  *
  * @method OutBandwidth getOutBandwidth() 获取出带宽流量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutBandwidth(OutBandwidth $OutBandwidth) 设置出带宽流量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method InBandwidth getInBandwidth() 获取入带宽流量
  * @method void setInBandwidth(InBandwidth $InBandwidth) 设置入带宽流量
  */
@@ -31,7 +29,6 @@ class VpngwBandwidthData extends AbstractModel
 {
     /**
      * @var OutBandwidth 出带宽流量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OutBandwidth;
 
@@ -42,7 +39,6 @@ class VpngwBandwidthData extends AbstractModel
 
     /**
      * @param OutBandwidth $OutBandwidth 出带宽流量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InBandwidth $InBandwidth 入带宽流量
      */
     function __construct()

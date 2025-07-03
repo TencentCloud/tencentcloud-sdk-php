@@ -18,7 +18,7 @@ namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 	端口对象
+ * 端口对象
  *
  * @method string getProtocol() 获取TCP UDP
  * @method void setProtocol(string $Protocol) 设置TCP UDP
@@ -27,9 +27,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTargetPort() 获取容器端口
  * @method void setTargetPort(integer $TargetPort) 设置容器端口
  * @method integer getNodePort() 获取主机端口
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNodePort(integer $NodePort) 设置主机端口
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getName() 获取端口名称
+ * @method void setName(string $Name) 设置端口名称
  */
 class ProtocolPort extends AbstractModel
 {
@@ -50,16 +50,20 @@ class ProtocolPort extends AbstractModel
 
     /**
      * @var integer 主机端口
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NodePort;
+
+    /**
+     * @var string 端口名称
+     */
+    public $Name;
 
     /**
      * @param string $Protocol TCP UDP
      * @param integer $Port 服务端口
      * @param integer $TargetPort 容器端口
      * @param integer $NodePort 主机端口
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Name 端口名称
      */
     function __construct()
     {
@@ -88,6 +92,10 @@ class ProtocolPort extends AbstractModel
 
         if (array_key_exists("NodePort",$param) and $param["NodePort"] !== null) {
             $this->NodePort = $param["NodePort"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
     }
 }

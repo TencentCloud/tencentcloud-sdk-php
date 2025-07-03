@@ -32,8 +32,12 @@ use TencentCloud\Common\AbstractModel;
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
  * @method void setCaller(Caller $Caller) 设置执行本接口操作的员工信息。其中OperatorId为必填字段，即用户的UserId。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
- * @method array getFileInfos() 获取上传文件内容数组，最多支持上传20个文件。
- * @method void setFileInfos(array $FileInfos) 设置上传文件内容数组，最多支持上传20个文件。
+ * @method array getFileInfos() 获取请上传文件内容数组，最多可上传20个文件。
+
+<b>所有文件必须符合<font color="red">FileType</font>指定的文件类型。</b>
+ * @method void setFileInfos(array $FileInfos) 设置请上传文件内容数组，最多可上传20个文件。
+
+<b>所有文件必须符合<font color="red">FileType</font>指定的文件类型。</b>
  * @method string getFileType() 获取文件类型， 默认通过文件内容和文件后缀一起解析得到文件类型，调用接口时可以显示的指定上传文件的类型。
 可支持的指定类型如下:
 <ul><li>pdf</li>
@@ -68,12 +72,8 @@ use TencentCloud\Common\AbstractModel;
 <li>**false**：无需处理，不会将灰色矩阵置为白色（默认）。</li></ul>
 
 注: `该参数仅在关键字定位时，需要去除关键字所在的灰框场景下使用。`
- * @method array getCustomIds() 获取用户自定义ID数组，与上传文件一一对应
-
-注: `历史遗留问题，已经废弃，调用接口时不用赋值`
- * @method void setCustomIds(array $CustomIds) 设置用户自定义ID数组，与上传文件一一对应
-
-注: `历史遗留问题，已经废弃，调用接口时不用赋值`
+ * @method array getCustomIds() 获取该字段已不再使用
+ * @method void setCustomIds(array $CustomIds) 设置该字段已不再使用
  * @method string getFileUrls() 获取不再使用，上传文件链接数组，最多支持20个URL
  * @method void setFileUrls(string $FileUrls) 设置不再使用，上传文件链接数组，最多支持20个URL
  * @method Agent getAgent() 获取代理企业和员工的信息。
@@ -98,7 +98,9 @@ class UploadFilesRequest extends AbstractModel
     public $Caller;
 
     /**
-     * @var array 上传文件内容数组，最多支持上传20个文件。
+     * @var array 请上传文件内容数组，最多可上传20个文件。
+
+<b>所有文件必须符合<font color="red">FileType</font>指定的文件类型。</b>
      */
     public $FileInfos;
 
@@ -128,9 +130,7 @@ class UploadFilesRequest extends AbstractModel
     public $CoverRect;
 
     /**
-     * @var array 用户自定义ID数组，与上传文件一一对应
-
-注: `历史遗留问题，已经废弃，调用接口时不用赋值`
+     * @var array 该字段已不再使用
      */
     public $CustomIds;
 
@@ -153,7 +153,9 @@ class UploadFilesRequest extends AbstractModel
 <li> **SEAL** : 此文件用于印章的生成，文件类型支持.jpg/.jpeg/.png</li></ul>
      * @param Caller $Caller 执行本接口操作的员工信息。其中OperatorId为必填字段，即用户的UserId。
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
-     * @param array $FileInfos 上传文件内容数组，最多支持上传20个文件。
+     * @param array $FileInfos 请上传文件内容数组，最多可上传20个文件。
+
+<b>所有文件必须符合<font color="red">FileType</font>指定的文件类型。</b>
      * @param string $FileType 文件类型， 默认通过文件内容和文件后缀一起解析得到文件类型，调用接口时可以显示的指定上传文件的类型。
 可支持的指定类型如下:
 <ul><li>pdf</li>
@@ -171,9 +173,7 @@ class UploadFilesRequest extends AbstractModel
 <li>**false**：无需处理，不会将灰色矩阵置为白色（默认）。</li></ul>
 
 注: `该参数仅在关键字定位时，需要去除关键字所在的灰框场景下使用。`
-     * @param array $CustomIds 用户自定义ID数组，与上传文件一一对应
-
-注: `历史遗留问题，已经废弃，调用接口时不用赋值`
+     * @param array $CustomIds 该字段已不再使用
      * @param string $FileUrls 不再使用，上传文件链接数组，最多支持20个URL
      * @param Agent $Agent 代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。

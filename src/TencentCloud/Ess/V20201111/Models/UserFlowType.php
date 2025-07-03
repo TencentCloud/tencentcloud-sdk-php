@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 用户自定义合同类型， 自定义合同类型的管理可以[点击查看在控制台位置的截图](https://qcloudimg.tencent-cloud.cn/raw/85a9b2ebce07b0cd6d75d5327d538235.png)
  *
  * @method string getUserFlowTypeId() 获取合同类型ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserFlowTypeId(string $UserFlowTypeId) 设置合同类型ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取合同类型名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置合同类型名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDescription() 获取合同类型说明
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescription(string $Description) 设置合同类型说明
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class UserFlowType extends AbstractModel
 {
     /**
      * @var string 合同类型ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserFlowTypeId;
 
     /**
      * @var string 合同类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 合同类型说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Description;
 
     /**
      * @param string $UserFlowTypeId 合同类型ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 合同类型名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 合同类型说明
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

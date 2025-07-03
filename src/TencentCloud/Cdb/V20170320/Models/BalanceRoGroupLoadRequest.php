@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BalanceRoGroupLoad请求参数结构体
  *
- * @method string getRoGroupId() 获取RO 组的 ID，格式如：cdbrg-c1nl9rpv。
- * @method void setRoGroupId(string $RoGroupId) 设置RO 组的 ID，格式如：cdbrg-c1nl9rpv。
+ * @method string getRoGroupId() 获取RO 组的 ID，格式如：cdbrg-c1nl9rpv。可通过 [DescribeRoGroups](https://cloud.tencent.com/document/api/236/40939) 获取。
+ * @method void setRoGroupId(string $RoGroupId) 设置RO 组的 ID，格式如：cdbrg-c1nl9rpv。可通过 [DescribeRoGroups](https://cloud.tencent.com/document/api/236/40939) 获取。
  */
 class BalanceRoGroupLoadRequest extends AbstractModel
 {
     /**
-     * @var string RO 组的 ID，格式如：cdbrg-c1nl9rpv。
+     * @var string RO 组的 ID，格式如：cdbrg-c1nl9rpv。可通过 [DescribeRoGroups](https://cloud.tencent.com/document/api/236/40939) 获取。
      */
     public $RoGroupId;
 
     /**
-     * @param string $RoGroupId RO 组的 ID，格式如：cdbrg-c1nl9rpv。
+     * @param string $RoGroupId RO 组的 ID，格式如：cdbrg-c1nl9rpv。可通过 [DescribeRoGroups](https://cloud.tencent.com/document/api/236/40939) 获取。
      */
     function __construct()
     {

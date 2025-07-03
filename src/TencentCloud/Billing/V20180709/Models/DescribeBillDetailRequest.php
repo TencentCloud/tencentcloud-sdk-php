@@ -152,6 +152,7 @@ class DescribeBillDetailRequest extends AbstractModel
 
     /**
      * @var string 已废弃参数，未开放
+     * @deprecated
      */
     public $ProductCode;
 

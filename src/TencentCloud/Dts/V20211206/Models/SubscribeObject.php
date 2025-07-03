@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * 订阅的数据库表信息，用于配置和查询订阅任务接口。
  *
  * @method string getObjectType() 获取订阅数据的类型，枚举值：database-数据库，table-数据库的表(如果 DatabaseType 为 mongodb，则表示集合)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setObjectType(string $ObjectType) 设置订阅数据的类型，枚举值：database-数据库，table-数据库的表(如果 DatabaseType 为 mongodb，则表示集合)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDatabase() 获取订阅的数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatabase(string $Database) 设置订阅的数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTables() 获取订阅数据库中表的名称。如果 DatabaseType 为 mongodb，填集合名。mongodb只支持订阅单库或者单集合。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTables(array $Tables) 设置订阅数据库中表的名称。如果 DatabaseType 为 mongodb，填集合名。mongodb只支持订阅单库或者单集合。
@@ -37,13 +33,11 @@ class SubscribeObject extends AbstractModel
 {
     /**
      * @var string 订阅数据的类型，枚举值：database-数据库，table-数据库的表(如果 DatabaseType 为 mongodb，则表示集合)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ObjectType;
 
     /**
      * @var string 订阅的数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Database;
 
@@ -55,9 +49,7 @@ class SubscribeObject extends AbstractModel
 
     /**
      * @param string $ObjectType 订阅数据的类型，枚举值：database-数据库，table-数据库的表(如果 DatabaseType 为 mongodb，则表示集合)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Database 订阅的数据库名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tables 订阅数据库中表的名称。如果 DatabaseType 为 mongodb，填集合名。mongodb只支持订阅单库或者单集合。
 注意：此字段可能返回 null，表示取不到有效值。
      */

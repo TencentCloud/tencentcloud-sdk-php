@@ -20,19 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InstallAddon请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
+ * @method string getClusterId() 获取集群ID（仅支持标准tke集群）
+ * @method void setClusterId(string $ClusterId) 设置集群ID（仅支持标准tke集群）
  * @method string getAddonName() 获取addon名称
  * @method void setAddonName(string $AddonName) 设置addon名称
  * @method string getAddonVersion() 获取addon版本（不传默认安装最新版本）
  * @method void setAddonVersion(string $AddonVersion) 设置addon版本（不传默认安装最新版本）
  * @method string getRawValues() 获取addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取）
  * @method void setRawValues(string $RawValues) 设置addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取）
+ * @method boolean getDryRun() 获取是否仅做安装检查，设置为true时仅做检查，不会安装组件
+ * @method void setDryRun(boolean $DryRun) 设置是否仅做安装检查，设置为true时仅做检查，不会安装组件
  */
 class InstallAddonRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string 集群ID（仅支持标准tke集群）
      */
     public $ClusterId;
 
@@ -52,10 +54,16 @@ class InstallAddonRequest extends AbstractModel
     public $RawValues;
 
     /**
-     * @param string $ClusterId 集群ID
+     * @var boolean 是否仅做安装检查，设置为true时仅做检查，不会安装组件
+     */
+    public $DryRun;
+
+    /**
+     * @param string $ClusterId 集群ID（仅支持标准tke集群）
      * @param string $AddonName addon名称
      * @param string $AddonVersion addon版本（不传默认安装最新版本）
      * @param string $RawValues addon的参数，是一个json格式的base64转码后的字符串（addon参数由DescribeAddonValues获取）
+     * @param boolean $DryRun 是否仅做安装检查，设置为true时仅做检查，不会安装组件
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class InstallAddonRequest extends AbstractModel
 
         if (array_key_exists("RawValues",$param) and $param["RawValues"] !== null) {
             $this->RawValues = $param["RawValues"];
+        }
+
+        if (array_key_exists("DryRun",$param) and $param["DryRun"] !== null) {
+            $this->DryRun = $param["DryRun"];
         }
     }
 }

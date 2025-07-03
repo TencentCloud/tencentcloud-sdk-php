@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyRiskEventsStatus请求参数结构体
  *
- * @method integer getOperate() 获取操作-0:标记已处理,1:忽略,2:删除记录,3:木马隔离,4:木马恢复隔离,5:木马信任,6:木马取消信任,7:查杀异常进程
- * @method void setOperate(integer $Operate) 设置操作-0:标记已处理,1:忽略,2:删除记录,3:木马隔离,4:木马恢复隔离,5:木马信任,6:木马取消信任,7:查杀异常进程
+ * @method integer getOperate() 获取操作-0:标记已处理,1:忽略,2:删除记录,3:木马隔离,4:木马恢复隔离,5:木马信任,6:木马取消信任,7:查杀异常进程,8:加入白名单
+ * @method void setOperate(integer $Operate) 设置操作-0:标记已处理,1:忽略,2:删除记录,3:木马隔离,4:木马恢复隔离,5:木马信任,6:木马取消信任,7:查杀异常进程,8:加入白名单
  * @method string getRiskType() 获取操作事件类型，文件查杀：MALWARE，异常登录：HOST_LOGIN，密码破解：BRUTE_ATTACK，恶意请求：MALICIOUS_REQUEST，高危命令：BASH_EVENT，本地提权：PRIVILEGE_EVENT，反弹shell：REVERSE_SHELL. 异常进程:PROCESS
  * @method void setRiskType(string $RiskType) 设置操作事件类型，文件查杀：MALWARE，异常登录：HOST_LOGIN，密码破解：BRUTE_ATTACK，恶意请求：MALICIOUS_REQUEST，高危命令：BASH_EVENT，本地提权：PRIVILEGE_EVENT，反弹shell：REVERSE_SHELL. 异常进程:PROCESS
  * @method array getIds() 获取需要修改的事件id 数组，支持批量
@@ -64,11 +64,15 @@ RiskType 为PROCESS时:
 <li>BeginTime - String - 是否必填：否 - 进程启动时间-开始</li>
 <li>EndTime - String - 是否必填：否 - 进程启动时间-结束</li>
 <li>Status - String - 是否必填：否 - 状态筛选 0待处理；1查杀中;2已查杀3已退出;4已信任</li>
+ * @method boolean getDoClean() 获取当Operate 是木马隔离时
+<li> 本操作会修复被篡改的系统命令，计划任务等系统文件，操作中请确保yum/apt 可用。</li>
+ * @method void setDoClean(boolean $DoClean) 设置当Operate 是木马隔离时
+<li> 本操作会修复被篡改的系统命令，计划任务等系统文件，操作中请确保yum/apt 可用。</li>
  */
 class ModifyRiskEventsStatusRequest extends AbstractModel
 {
     /**
-     * @var integer 操作-0:标记已处理,1:忽略,2:删除记录,3:木马隔离,4:木马恢复隔离,5:木马信任,6:木马取消信任,7:查杀异常进程
+     * @var integer 操作-0:标记已处理,1:忽略,2:删除记录,3:木马隔离,4:木马恢复隔离,5:木马信任,6:木马取消信任,7:查杀异常进程,8:加入白名单
      */
     public $Operate;
 
@@ -122,7 +126,13 @@ RiskType 为PROCESS时:
     public $Filters;
 
     /**
-     * @param integer $Operate 操作-0:标记已处理,1:忽略,2:删除记录,3:木马隔离,4:木马恢复隔离,5:木马信任,6:木马取消信任,7:查杀异常进程
+     * @var boolean 当Operate 是木马隔离时
+<li> 本操作会修复被篡改的系统命令，计划任务等系统文件，操作中请确保yum/apt 可用。</li>
+     */
+    public $DoClean;
+
+    /**
+     * @param integer $Operate 操作-0:标记已处理,1:忽略,2:删除记录,3:木马隔离,4:木马恢复隔离,5:木马信任,6:木马取消信任,7:查杀异常进程,8:加入白名单
      * @param string $RiskType 操作事件类型，文件查杀：MALWARE，异常登录：HOST_LOGIN，密码破解：BRUTE_ATTACK，恶意请求：MALICIOUS_REQUEST，高危命令：BASH_EVENT，本地提权：PRIVILEGE_EVENT，反弹shell：REVERSE_SHELL. 异常进程:PROCESS
      * @param array $Ids 需要修改的事件id 数组，支持批量
      * @param boolean $UpdateAll 是否更新全部，即是否对所有的事件进行操作，当ids 不为空时，此参数无效
@@ -144,6 +154,8 @@ RiskType 为PROCESS时:
 <li>BeginTime - String - 是否必填：否 - 进程启动时间-开始</li>
 <li>EndTime - String - 是否必填：否 - 进程启动时间-结束</li>
 <li>Status - String - 是否必填：否 - 状态筛选 0待处理；1查杀中;2已查杀3已退出;4已信任</li>
+     * @param boolean $DoClean 当Operate 是木马隔离时
+<li> 本操作会修复被篡改的系统命令，计划任务等系统文件，操作中请确保yum/apt 可用。</li>
      */
     function __construct()
     {
@@ -193,6 +205,10 @@ RiskType 为PROCESS时:
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("DoClean",$param) and $param["DoClean"] !== null) {
+            $this->DoClean = $param["DoClean"];
         }
     }
 }

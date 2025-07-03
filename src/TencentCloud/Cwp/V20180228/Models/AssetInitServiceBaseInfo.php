@@ -78,10 +78,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMachineWanIp(string $MachineWanIp) 设置服务器外网IP
  * @method MachineExtraInfo getMachineExtraInfo() 获取 附加信息
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置 附加信息
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsAutoRun() 获取开机自启动[0:否|1:是]
  * @method void setIsAutoRun(integer $IsAutoRun) 设置开机自启动[0:否|1:是]
  */
@@ -174,7 +172,6 @@ class AssetInitServiceBaseInfo extends AbstractModel
     /**
      * @var MachineExtraInfo  附加信息
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MachineExtraInfo;
 
@@ -214,7 +211,6 @@ class AssetInitServiceBaseInfo extends AbstractModel
      * @param string $MachineWanIp 服务器外网IP
      * @param MachineExtraInfo $MachineExtraInfo  附加信息
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsAutoRun 开机自启动[0:否|1:是]
      */
     function __construct()

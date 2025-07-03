@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 当前集群共用组件与集群对应关系
  *
  * @method integer getDependType() 获取依赖关系，0:被其他集群依赖，1:依赖其他集群
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDependType(integer $DependType) 设置依赖关系，0:被其他集群依赖，1:依赖其他集群
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getService() 获取共用组件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setService(string $Service) 设置共用组件
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getClusterId() 获取共用集群
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterId(string $ClusterId) 设置共用集群
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getClusterStatus() 获取共用集群状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterStatus(integer $ClusterStatus) 设置共用集群状态
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ClusterExternalServiceInfo extends AbstractModel
 {
     /**
      * @var integer 依赖关系，0:被其他集群依赖，1:依赖其他集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DependType;
 
     /**
      * @var string 共用组件
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Service;
 
     /**
      * @var string 共用集群
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterId;
 
     /**
      * @var integer 共用集群状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterStatus;
 
     /**
      * @param integer $DependType 依赖关系，0:被其他集群依赖，1:依赖其他集群
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Service 共用组件
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterId 共用集群
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ClusterStatus 共用集群状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

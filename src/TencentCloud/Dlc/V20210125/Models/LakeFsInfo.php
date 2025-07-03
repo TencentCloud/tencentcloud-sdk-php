@@ -28,6 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSpaceUsedSize(float $SpaceUsedSize) 设置容量
  * @method integer getCreateTimeStamp() 获取创建时候的时间戳
  * @method void setCreateTimeStamp(integer $CreateTimeStamp) 设置创建时候的时间戳
+ * @method integer getDefaultBucket() 获取是否是用户默认桶，0：默认桶，1：非默认桶
+ * @method void setDefaultBucket(integer $DefaultBucket) 设置是否是用户默认桶，0：默认桶，1：非默认桶
+ * @method string getShortName() 获取托管存储short name
+ * @method void setShortName(string $ShortName) 设置托管存储short name
+ * @method string getDescription() 获取桶描述信息
+ * @method void setDescription(string $Description) 设置桶描述信息
+ * @method string getStatus() 获取托管桶状态，当前取值为：creating、bind、readOnly、isolate
+ * @method void setStatus(string $Status) 设置托管桶状态，当前取值为：creating、bind、readOnly、isolate
  */
 class LakeFsInfo extends AbstractModel
 {
@@ -52,10 +60,34 @@ class LakeFsInfo extends AbstractModel
     public $CreateTimeStamp;
 
     /**
+     * @var integer 是否是用户默认桶，0：默认桶，1：非默认桶
+     */
+    public $DefaultBucket;
+
+    /**
+     * @var string 托管存储short name
+     */
+    public $ShortName;
+
+    /**
+     * @var string 桶描述信息
+     */
+    public $Description;
+
+    /**
+     * @var string 托管桶状态，当前取值为：creating、bind、readOnly、isolate
+     */
+    public $Status;
+
+    /**
      * @param string $Name 托管存储名称
      * @param string $Type 托管存储类型
      * @param float $SpaceUsedSize 容量
      * @param integer $CreateTimeStamp 创建时候的时间戳
+     * @param integer $DefaultBucket 是否是用户默认桶，0：默认桶，1：非默认桶
+     * @param string $ShortName 托管存储short name
+     * @param string $Description 桶描述信息
+     * @param string $Status 托管桶状态，当前取值为：creating、bind、readOnly、isolate
      */
     function __construct()
     {
@@ -84,6 +116,22 @@ class LakeFsInfo extends AbstractModel
 
         if (array_key_exists("CreateTimeStamp",$param) and $param["CreateTimeStamp"] !== null) {
             $this->CreateTimeStamp = $param["CreateTimeStamp"];
+        }
+
+        if (array_key_exists("DefaultBucket",$param) and $param["DefaultBucket"] !== null) {
+            $this->DefaultBucket = $param["DefaultBucket"];
+        }
+
+        if (array_key_exists("ShortName",$param) and $param["ShortName"] !== null) {
+            $this->ShortName = $param["ShortName"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

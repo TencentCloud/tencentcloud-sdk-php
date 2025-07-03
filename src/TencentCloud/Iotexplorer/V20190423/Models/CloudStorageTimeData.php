@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method array getTimeList() 获取云存时间轴信息列表
  * @method void setTimeList(array $TimeList) 设置云存时间轴信息列表
  * @method string getVideoURL() 获取播放地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVideoURL(string $VideoURL) 设置播放地址
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CloudStorageTimeData extends AbstractModel
 {
@@ -36,14 +34,12 @@ class CloudStorageTimeData extends AbstractModel
 
     /**
      * @var string 播放地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VideoURL;
 
     /**
      * @param array $TimeList 云存时间轴信息列表
      * @param string $VideoURL 播放地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

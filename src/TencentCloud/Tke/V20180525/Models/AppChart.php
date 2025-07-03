@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getName() 获取chart名称
  * @method void setName(string $Name) 设置chart名称
  * @method string getLabel() 获取chart的标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabel(string $Label) 设置chart的标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLatestVersion() 获取chart的版本
  * @method void setLatestVersion(string $LatestVersion) 设置chart的版本
  */
@@ -38,7 +36,6 @@ class AppChart extends AbstractModel
 
     /**
      * @var string chart的标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Label;
 
@@ -50,7 +47,6 @@ class AppChart extends AbstractModel
     /**
      * @param string $Name chart名称
      * @param string $Label chart的标签
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LatestVersion chart的版本
      */
     function __construct()

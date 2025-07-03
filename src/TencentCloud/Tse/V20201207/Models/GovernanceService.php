@@ -25,69 +25,39 @@ use TencentCloud\Common\AbstractModel;
  * @method string getNamespace() 获取命名空间名称。
  * @method void setNamespace(string $Namespace) 设置命名空间名称。
  * @method array getMetadatas() 获取元数据信息数组。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetadatas(array $Metadatas) 设置元数据信息数组。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getComment() 获取描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComment(string $Comment) 设置描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifyTime() 获取修改时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyTime(string $ModifyTime) 设置修改时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDepartment() 获取服务所属部门。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDepartment(string $Department) 设置服务所属部门。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBusiness() 获取服务所属业务。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBusiness(string $Business) 设置服务所属业务。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getHealthyInstanceCount() 获取健康服务实例数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHealthyInstanceCount(integer $HealthyInstanceCount) 设置健康服务实例数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalInstanceCount() 获取服务实例总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalInstanceCount(integer $TotalInstanceCount) 设置服务实例总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getId() 获取服务ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(string $Id) 设置服务ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getEditable() 获取是否可以编辑
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEditable(boolean $Editable) 设置是否可以编辑
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getUserIds() 获取可以编辑该资源的用户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserIds(array $UserIds) 设置可以编辑该资源的用户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getGroupIds() 获取可以编辑该资源的用户组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupIds(array $GroupIds) 设置可以编辑该资源的用户组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRemoveUserIds() 获取移除可以编辑该资源的用户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemoveUserIds(array $RemoveUserIds) 设置移除可以编辑该资源的用户ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRemoveGroupIds() 获取移除可以编辑该资源的用户组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemoveGroupIds(array $RemoveGroupIds) 设置移除可以编辑该资源的用户组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getExportTo() 获取该服务对哪些命名空间可见	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExportTo(array $ExportTo) 设置该服务对哪些命名空间可见	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRevision() 获取该服务信息摘要签名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRevision(string $Revision) 设置该服务信息摘要签名
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getSyncToGlobalRegistry() 获取是否开启同步到全局注册中心
+ * @method void setSyncToGlobalRegistry(boolean $SyncToGlobalRegistry) 设置是否开启同步到全局注册中心
  */
 class GovernanceService extends AbstractModel
 {
@@ -103,135 +73,109 @@ class GovernanceService extends AbstractModel
 
     /**
      * @var array 元数据信息数组。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Metadatas;
 
     /**
      * @var string 描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Comment;
 
     /**
      * @var string 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 修改时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyTime;
 
     /**
      * @var string 服务所属部门。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Department;
 
     /**
      * @var string 服务所属业务。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Business;
 
     /**
      * @var integer 健康服务实例数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HealthyInstanceCount;
 
     /**
      * @var integer 服务实例总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalInstanceCount;
 
     /**
      * @var string 服务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var boolean 是否可以编辑
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Editable;
 
     /**
      * @var array 可以编辑该资源的用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserIds;
 
     /**
      * @var array 可以编辑该资源的用户组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $GroupIds;
 
     /**
      * @var array 移除可以编辑该资源的用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RemoveUserIds;
 
     /**
      * @var array 移除可以编辑该资源的用户组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RemoveGroupIds;
 
     /**
      * @var array 该服务对哪些命名空间可见	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExportTo;
 
     /**
      * @var string 该服务信息摘要签名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Revision;
+
+    /**
+     * @var boolean 是否开启同步到全局注册中心
+     */
+    public $SyncToGlobalRegistry;
 
     /**
      * @param string $Name 服务名称。
      * @param string $Namespace 命名空间名称。
      * @param array $Metadatas 元数据信息数组。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Comment 描述信息。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyTime 修改时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Department 服务所属部门。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Business 服务所属业务。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $HealthyInstanceCount 健康服务实例数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalInstanceCount 服务实例总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Id 服务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Editable 是否可以编辑
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $UserIds 可以编辑该资源的用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $GroupIds 可以编辑该资源的用户组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RemoveUserIds 移除可以编辑该资源的用户ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RemoveGroupIds 移除可以编辑该资源的用户组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ExportTo 该服务对哪些命名空间可见	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Revision 该服务信息摘要签名
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $SyncToGlobalRegistry 是否开启同步到全局注册中心
      */
     function __construct()
     {
@@ -321,6 +265,10 @@ class GovernanceService extends AbstractModel
 
         if (array_key_exists("Revision",$param) and $param["Revision"] !== null) {
             $this->Revision = $param["Revision"];
+        }
+
+        if (array_key_exists("SyncToGlobalRegistry",$param) and $param["SyncToGlobalRegistry"] !== null) {
+            $this->SyncToGlobalRegistry = $param["SyncToGlobalRegistry"];
         }
     }
 }

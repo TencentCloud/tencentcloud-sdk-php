@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 药物史
  *
  * @method string getName() 获取药品名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置药品名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSrc() 获取原文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSrc(string $Src) 设置原文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDrugList() 获取药物列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDrugList(array $DrugList) 设置药物列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValue() 获取归一化值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置归一化值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DrugHistoryBlock extends AbstractModel
 {
     /**
      * @var string 药品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Src;
 
     /**
      * @var array 药物列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DrugList;
 
     /**
      * @var string 归一化值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Value;
 
     /**
      * @param string $Name 药品名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Src 原文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DrugList 药物列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 归一化值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

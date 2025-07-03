@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ReturnNormalAddresses请求参数结构体
  *
- * @method array getAddressIps() 获取普通公网IP 的 IP 地址,示例：101.35.139.183
- * @method void setAddressIps(array $AddressIps) 设置普通公网IP 的 IP 地址,示例：101.35.139.183
+ * @method array getAddressIps() 获取普通公网IP 的 IP 地址，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressIps。
+ * @method void setAddressIps(array $AddressIps) 设置普通公网IP 的 IP 地址，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressIps。
  */
 class ReturnNormalAddressesRequest extends AbstractModel
 {
     /**
-     * @var array 普通公网IP 的 IP 地址,示例：101.35.139.183
+     * @var array 普通公网IP 的 IP 地址，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressIps。
      */
     public $AddressIps;
 
     /**
-     * @param array $AddressIps 普通公网IP 的 IP 地址,示例：101.35.139.183
+     * @param array $AddressIps 普通公网IP 的 IP 地址，可以使用[DescribeAddresses](https://cloud.tencent.com/document/product/215/16702)接口获取AddressIps。
      */
     function __construct()
     {

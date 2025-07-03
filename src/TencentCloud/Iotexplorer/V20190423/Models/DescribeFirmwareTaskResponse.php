@@ -21,45 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * DescribeFirmwareTask返回参数结构体
  *
  * @method integer getTaskId() 获取固件任务ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskId(integer $TaskId) 设置固件任务ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取固件任务状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置固件任务状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreateTime() 获取固件任务创建时间，单位：秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(integer $CreateTime) 设置固件任务创建时间，单位：秒
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getType() 获取固件任务升级类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(integer $Type) 设置固件任务升级类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProductName() 获取产品名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductName(string $ProductName) 设置产品名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpgradeMode() 获取固件任务升级模式。originalVersion（按版本号升级）、filename（提交文件升级）、devicenames（按设备名称升级）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpgradeMode(string $UpgradeMode) 设置固件任务升级模式。originalVersion（按版本号升级）、filename（提交文件升级）、devicenames（按设备名称升级）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProductId() 获取产品ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductId(string $ProductId) 设置产品ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOriginalVersion() 获取原始固件版本号，在UpgradeMode是originalVersion升级模式下会返回
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOriginalVersion(string $OriginalVersion) 设置原始固件版本号，在UpgradeMode是originalVersion升级模式下会返回
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreateUserId() 获取创建账号ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateUserId(integer $CreateUserId) 设置创建账号ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatorNickName() 获取创建账号ID昵称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatorNickName(string $CreatorNickName) 设置创建账号ID昵称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -67,61 +47,51 @@ class DescribeFirmwareTaskResponse extends AbstractModel
 {
     /**
      * @var integer 固件任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskId;
 
     /**
      * @var integer 固件任务状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var integer 固件任务创建时间，单位：秒
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var integer 固件任务升级类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductName;
 
     /**
      * @var string 固件任务升级模式。originalVersion（按版本号升级）、filename（提交文件升级）、devicenames（按设备名称升级）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpgradeMode;
 
     /**
      * @var string 产品ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductId;
 
     /**
      * @var string 原始固件版本号，在UpgradeMode是originalVersion升级模式下会返回
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OriginalVersion;
 
     /**
      * @var integer 创建账号ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateUserId;
 
     /**
      * @var string 创建账号ID昵称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatorNickName;
 
@@ -132,25 +102,15 @@ class DescribeFirmwareTaskResponse extends AbstractModel
 
     /**
      * @param integer $TaskId 固件任务ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 固件任务状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateTime 固件任务创建时间，单位：秒
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Type 固件任务升级类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProductName 产品名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpgradeMode 固件任务升级模式。originalVersion（按版本号升级）、filename（提交文件升级）、devicenames（按设备名称升级）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ProductId 产品ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OriginalVersion 原始固件版本号，在UpgradeMode是originalVersion升级模式下会返回
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateUserId 创建账号ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatorNickName 创建账号ID昵称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

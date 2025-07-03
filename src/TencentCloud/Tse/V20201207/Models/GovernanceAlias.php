@@ -29,24 +29,18 @@ use TencentCloud\Common\AbstractModel;
  * @method string getNamespace() 获取服务别名指向的服务命名空间
  * @method void setNamespace(string $Namespace) 设置服务别名指向的服务命名空间
  * @method string getComment() 获取服务别名的描述信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setComment(string $Comment) 设置服务别名的描述信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取服务别名创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置服务别名创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getModifyTime() 获取服务别名修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setModifyTime(string $ModifyTime) 设置服务别名修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getId() 获取服务别名ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(string $Id) 设置服务别名ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getEditable() 获取该服务别名是否可以编辑
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEditable(boolean $Editable) 设置该服务别名是否可以编辑
+ * @method array getMetadatas() 获取元数据信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMetadatas(array $Metadatas) 设置元数据信息
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class GovernanceAlias extends AbstractModel
@@ -73,33 +67,34 @@ class GovernanceAlias extends AbstractModel
 
     /**
      * @var string 服务别名的描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Comment;
 
     /**
      * @var string 服务别名创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 服务别名修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ModifyTime;
 
     /**
      * @var string 服务别名ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var boolean 该服务别名是否可以编辑
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Editable;
+
+    /**
+     * @var array 元数据信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Metadatas;
 
     /**
      * @param string $Alias 服务别名
@@ -107,14 +102,11 @@ class GovernanceAlias extends AbstractModel
      * @param string $Service 服务别名指向的服务名
      * @param string $Namespace 服务别名指向的服务命名空间
      * @param string $Comment 服务别名的描述信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 服务别名创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModifyTime 服务别名修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Id 服务别名ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Editable 该服务别名是否可以编辑
+     * @param array $Metadatas 元数据信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -164,6 +156,15 @@ class GovernanceAlias extends AbstractModel
 
         if (array_key_exists("Editable",$param) and $param["Editable"] !== null) {
             $this->Editable = $param["Editable"];
+        }
+
+        if (array_key_exists("Metadatas",$param) and $param["Metadatas"] !== null) {
+            $this->Metadatas = [];
+            foreach ($param["Metadatas"] as $key => $value){
+                $obj = new Metadata();
+                $obj->deserialize($value);
+                array_push($this->Metadatas, $obj);
+            }
         }
     }
 }

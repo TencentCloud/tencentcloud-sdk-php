@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 管理端规则条件
  *
  * @method string getEmptyAs() 获取条件为空，合规：COMPLIANT，不合规：NON_COMPLIANT，无法应用：NOT_APPLICABLE
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEmptyAs(string $EmptyAs) 设置条件为空，合规：COMPLIANT，不合规：NON_COMPLIANT，无法应用：NOT_APPLICABLE
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSelectPath() 获取配置路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSelectPath(string $SelectPath) 设置配置路径
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getOperator() 获取操作运算符
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOperator(string $Operator) 设置操作运算符
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getRequired() 获取是否必须
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRequired(boolean $Required) 设置是否必须
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDesiredValue() 获取期望值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDesiredValue(string $DesiredValue) 设置期望值
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SourceConditionForManage extends AbstractModel
 {
     /**
      * @var string 条件为空，合规：COMPLIANT，不合规：NON_COMPLIANT，无法应用：NOT_APPLICABLE
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EmptyAs;
 
     /**
      * @var string 配置路径
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SelectPath;
 
     /**
      * @var string 操作运算符
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Operator;
 
     /**
      * @var boolean 是否必须
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Required;
 
     /**
      * @var string 期望值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DesiredValue;
 
     /**
      * @param string $EmptyAs 条件为空，合规：COMPLIANT，不合规：NON_COMPLIANT，无法应用：NOT_APPLICABLE
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SelectPath 配置路径
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Operator 操作运算符
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Required 是否必须
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DesiredValue 期望值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -40,6 +40,24 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置作业状态 启动或者停止或者暂停
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getScalingType() 获取0:代表没开启调优任务，1:开启智能调优，2:代表定时调优
+
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setScalingType(integer $ScalingType) 设置0:代表没开启调优任务，1:开启智能调优，2:代表定时调优
+
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getRunningCpu() 获取RunningCpu
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRunningCpu(float $RunningCpu) 设置RunningCpu
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getRunningMem() 获取RunningMem
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRunningMem(float $RunningMem) 设置RunningMem
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDecodeSqlCode() 获取sql
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDecodeSqlCode(string $DecodeSqlCode) 设置sql
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TreeJobSets extends AbstractModel
 {
@@ -74,6 +92,31 @@ class TreeJobSets extends AbstractModel
     public $Status;
 
     /**
+     * @var integer 0:代表没开启调优任务，1:开启智能调优，2:代表定时调优
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ScalingType;
+
+    /**
+     * @var float RunningCpu
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RunningCpu;
+
+    /**
+     * @var float RunningMem
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RunningMem;
+
+    /**
+     * @var string sql
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DecodeSqlCode;
+
+    /**
      * @param string $JobId 作业Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 作业名
@@ -83,6 +126,15 @@ class TreeJobSets extends AbstractModel
      * @param float $RunningCu 作业占用资源
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 作业状态 启动或者停止或者暂停
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ScalingType 0:代表没开启调优任务，1:开启智能调优，2:代表定时调优
+
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $RunningCpu RunningCpu
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $RunningMem RunningMem
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DecodeSqlCode sql
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -116,6 +168,22 @@ class TreeJobSets extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("ScalingType",$param) and $param["ScalingType"] !== null) {
+            $this->ScalingType = $param["ScalingType"];
+        }
+
+        if (array_key_exists("RunningCpu",$param) and $param["RunningCpu"] !== null) {
+            $this->RunningCpu = $param["RunningCpu"];
+        }
+
+        if (array_key_exists("RunningMem",$param) and $param["RunningMem"] !== null) {
+            $this->RunningMem = $param["RunningMem"];
+        }
+
+        if (array_key_exists("DecodeSqlCode",$param) and $param["DecodeSqlCode"] !== null) {
+            $this->DecodeSqlCode = $param["DecodeSqlCode"];
         }
     }
 }

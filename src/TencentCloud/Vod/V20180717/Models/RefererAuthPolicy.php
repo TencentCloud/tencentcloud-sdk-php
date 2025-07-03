@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
 <li>Black：黑名单方式校验。HTTP 请求携带了 Referers 列表中的某个 Referer 将被拒绝访问。</li>
 <li>White：白名单方式校验。HTTP 请求携带了 Referers 列表中的 Referer 时才允许访问。</li>
 当 Status 取值为 Enabled 时，AuthType 必须赋值。
- * @method array getReferers() 获取用于校验的 Referer 列表，最大支持20个 Referer。当 Status 取值为 Enabled 时， Referers 不能为空数组。Referer 的格式参考域名的格式。
- * @method void setReferers(array $Referers) 设置用于校验的 Referer 列表，最大支持20个 Referer。当 Status 取值为 Enabled 时， Referers 不能为空数组。Referer 的格式参考域名的格式。
+ * @method array getReferers() 获取用于校验的 Referer 列表，最大支持  400 个 Referer。当 Status 取值为 Enabled 时， Referers 不能为空数组。Referer 的格式参考域名的格式。
+ * @method void setReferers(array $Referers) 设置用于校验的 Referer 列表，最大支持  400 个 Referer。当 Status 取值为 Enabled 时， Referers 不能为空数组。Referer 的格式参考域名的格式。
  * @method string getBlankRefererAllowed() 获取是否允许空 Referer 访问本域名，可选值：
 <li>Yes： 是。</li>
 <li>No： 否。</li>
@@ -63,7 +63,7 @@ class RefererAuthPolicy extends AbstractModel
     public $AuthType;
 
     /**
-     * @var array 用于校验的 Referer 列表，最大支持20个 Referer。当 Status 取值为 Enabled 时， Referers 不能为空数组。Referer 的格式参考域名的格式。
+     * @var array 用于校验的 Referer 列表，最大支持  400 个 Referer。当 Status 取值为 Enabled 时， Referers 不能为空数组。Referer 的格式参考域名的格式。
      */
     public $Referers;
 
@@ -83,7 +83,7 @@ class RefererAuthPolicy extends AbstractModel
 <li>Black：黑名单方式校验。HTTP 请求携带了 Referers 列表中的某个 Referer 将被拒绝访问。</li>
 <li>White：白名单方式校验。HTTP 请求携带了 Referers 列表中的 Referer 时才允许访问。</li>
 当 Status 取值为 Enabled 时，AuthType 必须赋值。
-     * @param array $Referers 用于校验的 Referer 列表，最大支持20个 Referer。当 Status 取值为 Enabled 时， Referers 不能为空数组。Referer 的格式参考域名的格式。
+     * @param array $Referers 用于校验的 Referer 列表，最大支持  400 个 Referer。当 Status 取值为 Enabled 时， Referers 不能为空数组。Referer 的格式参考域名的格式。
      * @param string $BlankRefererAllowed 是否允许空 Referer 访问本域名，可选值：
 <li>Yes： 是。</li>
 <li>No： 否。</li>

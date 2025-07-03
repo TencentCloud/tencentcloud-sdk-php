@@ -31,49 +31,27 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getPid() 获取计费策略id
  * @method void setPid(integer $Pid) 设置计费策略id
  * @method array getProductInfo() 获取waf产品码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProductInfo(array $ProductInfo) 设置waf产品码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceName() 获取waf实例名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceName(string $InstanceName) 设置waf实例名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getElasticQps() 获取QPS数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setElasticQps(integer $ElasticQps) 设置QPS数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFlexBill() 获取弹性账单
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlexBill(integer $FlexBill) 设置弹性账单
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAutoRenewFlag() 获取1:自动续费，0:不自动续费
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置1:自动续费，0:不自动续费
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRealRegion() 获取waf购买的实际地域信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealRegion(integer $RealRegion) 设置waf购买的实际地域信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getType() 获取Waf实例对应的二级产品码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置Waf实例对应的二级产品码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLabelTypes() 获取计费细项标签数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabelTypes(array $LabelTypes) 设置计费细项标签数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLabelCounts() 获取计费细项标签数量，一般和SvLabelType一一对应
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabelCounts(array $LabelCounts) 设置计费细项标签数量，一般和SvLabelType一一对应
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCurDeadline() 获取变配使用，实例到期时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCurDeadline(string $CurDeadline) 设置变配使用，实例到期时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceId() 获取对存在的实例购买bot 或api 安全
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置对存在的实例购买bot 或api 安全
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class GoodsDetail extends AbstractModel
 {
@@ -104,67 +82,56 @@ class GoodsDetail extends AbstractModel
 
     /**
      * @var array waf产品码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ProductInfo;
 
     /**
      * @var string waf实例名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceName;
 
     /**
      * @var integer QPS数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ElasticQps;
 
     /**
      * @var integer 弹性账单
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlexBill;
 
     /**
      * @var integer 1:自动续费，0:不自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AutoRenewFlag;
 
     /**
      * @var integer waf购买的实际地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RealRegion;
 
     /**
      * @var string Waf实例对应的二级产品码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var array 计费细项标签数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LabelTypes;
 
     /**
      * @var array 计费细项标签数量，一般和SvLabelType一一对应
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LabelCounts;
 
     /**
      * @var string 变配使用，实例到期时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CurDeadline;
 
     /**
      * @var string 对存在的实例购买bot 或api 安全
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
@@ -175,27 +142,16 @@ class GoodsDetail extends AbstractModel
      * @param string $SubProductCode 二级产品码
      * @param integer $Pid 计费策略id
      * @param array $ProductInfo waf产品码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName waf实例名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ElasticQps QPS数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FlexBill 弹性账单
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AutoRenewFlag 1:自动续费，0:不自动续费
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RealRegion waf购买的实际地域信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Type Waf实例对应的二级产品码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $LabelTypes 计费细项标签数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $LabelCounts 计费细项标签数量，一般和SvLabelType一一对应
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CurDeadline 变配使用，实例到期时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceId 对存在的实例购买bot 或api 安全
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

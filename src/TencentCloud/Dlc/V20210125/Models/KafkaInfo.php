@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Kafka连接信息
  *
- * @method string getInstanceId() 获取kakfa实例Id
- * @method void setInstanceId(string $InstanceId) 设置kakfa实例Id
- * @method DatasourceConnectionLocation getLocation() 获取kakfa数据源的网络信息
- * @method void setLocation(DatasourceConnectionLocation $Location) 设置kakfa数据源的网络信息
+ * @method string getInstanceId() 获取kafka实例Id
+ * @method void setInstanceId(string $InstanceId) 设置kafka实例Id
+ * @method DatasourceConnectionLocation getLocation() 获取kafka数据源的网络信息
+ * @method void setLocation(DatasourceConnectionLocation $Location) 设置kafka数据源的网络信息
  */
 class KafkaInfo extends AbstractModel
 {
     /**
-     * @var string kakfa实例Id
+     * @var string kafka实例Id
      */
     public $InstanceId;
 
     /**
-     * @var DatasourceConnectionLocation kakfa数据源的网络信息
+     * @var DatasourceConnectionLocation kafka数据源的网络信息
      */
     public $Location;
 
     /**
-     * @param string $InstanceId kakfa实例Id
-     * @param DatasourceConnectionLocation $Location kakfa数据源的网络信息
+     * @param string $InstanceId kafka实例Id
+     * @param DatasourceConnectionLocation $Location kafka数据源的网络信息
      */
     function __construct()
     {

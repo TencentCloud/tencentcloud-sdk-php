@@ -20,34 +20,63 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 描述了操作系统所在块设备即系统盘的信息
  *
- * @method string getDiskType() 获取系统盘类型。系统盘类型限制详见[存储概述](https://cloud.tencent.com/document/product/213/4952)。取值范围：<br><li>LOCAL_BASIC：本地硬盘<br><li>LOCAL_SSD：本地SSD硬盘<br><li>CLOUD_BASIC：普通云硬盘<br><li>CLOUD_SSD：SSD云硬盘<br><li>CLOUD_PREMIUM：高性能云硬盘<br><li>CLOUD_BSSD：通用性SSD云硬盘<br><li>CLOUD_HSSD：增强型SSD云硬盘<br><li>CLOUD_TSSD：极速型SSD云硬盘<br><br>默认取值：当前有库存的硬盘类型。
- * @method void setDiskType(string $DiskType) 设置系统盘类型。系统盘类型限制详见[存储概述](https://cloud.tencent.com/document/product/213/4952)。取值范围：<br><li>LOCAL_BASIC：本地硬盘<br><li>LOCAL_SSD：本地SSD硬盘<br><li>CLOUD_BASIC：普通云硬盘<br><li>CLOUD_SSD：SSD云硬盘<br><li>CLOUD_PREMIUM：高性能云硬盘<br><li>CLOUD_BSSD：通用性SSD云硬盘<br><li>CLOUD_HSSD：增强型SSD云硬盘<br><li>CLOUD_TSSD：极速型SSD云硬盘<br><br>默认取值：当前有库存的硬盘类型。
- * @method string getDiskId() 获取系统盘ID。LOCAL_BASIC 和 LOCAL_SSD 类型没有ID。暂时不支持该参数。
+ * @method string getDiskType() 获取系统盘类型。系统盘类型限制详见[存储概述](https://cloud.tencent.com/document/product/213/4952)。取值范围：<br>
+<li>LOCAL_BASIC：本地硬盘</li>
+<li>LOCAL_SSD：本地SSD硬盘</li>
+<li>CLOUD_BASIC：普通云硬盘</li>
+<li>CLOUD_SSD：SSD云硬盘</li>
+<li>CLOUD_PREMIUM：高性能云硬盘</li>
+<li>CLOUD_BSSD：通用型SSD云硬盘</li>
+<li>CLOUD_HSSD：增强型SSD云硬盘</li>
+<li>CLOUD_TSSD：极速型SSD云硬盘</li><br>
+默认取值：当前有库存的硬盘类型。
+ * @method void setDiskType(string $DiskType) 设置系统盘类型。系统盘类型限制详见[存储概述](https://cloud.tencent.com/document/product/213/4952)。取值范围：<br>
+<li>LOCAL_BASIC：本地硬盘</li>
+<li>LOCAL_SSD：本地SSD硬盘</li>
+<li>CLOUD_BASIC：普通云硬盘</li>
+<li>CLOUD_SSD：SSD云硬盘</li>
+<li>CLOUD_PREMIUM：高性能云硬盘</li>
+<li>CLOUD_BSSD：通用型SSD云硬盘</li>
+<li>CLOUD_HSSD：增强型SSD云硬盘</li>
+<li>CLOUD_TSSD：极速型SSD云硬盘</li><br>
+默认取值：当前有库存的硬盘类型。
+ * @method string getDiskId() 获取系统盘ID。
 该参数目前仅用于`DescribeInstances`等查询类接口的返回参数，不可用于`RunInstances`等写接口的入参。
- * @method void setDiskId(string $DiskId) 设置系统盘ID。LOCAL_BASIC 和 LOCAL_SSD 类型没有ID。暂时不支持该参数。
+ * @method void setDiskId(string $DiskId) 设置系统盘ID。
 该参数目前仅用于`DescribeInstances`等查询类接口的返回参数，不可用于`RunInstances`等写接口的入参。
- * @method integer getDiskSize() 获取系统盘大小，单位：GB。默认值为 50
- * @method void setDiskSize(integer $DiskSize) 设置系统盘大小，单位：GB。默认值为 50
+ * @method integer getDiskSize() 获取系统盘大小，单位：GiB。默认值为 50
+ * @method void setDiskSize(integer $DiskSize) 设置系统盘大小，单位：GiB。默认值为 50
  * @method string getCdcId() 获取所属的独享集群ID。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCdcId(string $CdcId) 设置所属的独享集群ID。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDiskName() 获取磁盘名称，长度不超过128 个字符。
+ * @method void setDiskName(string $DiskName) 设置磁盘名称，长度不超过128 个字符。
  */
 class SystemDisk extends AbstractModel
 {
     /**
-     * @var string 系统盘类型。系统盘类型限制详见[存储概述](https://cloud.tencent.com/document/product/213/4952)。取值范围：<br><li>LOCAL_BASIC：本地硬盘<br><li>LOCAL_SSD：本地SSD硬盘<br><li>CLOUD_BASIC：普通云硬盘<br><li>CLOUD_SSD：SSD云硬盘<br><li>CLOUD_PREMIUM：高性能云硬盘<br><li>CLOUD_BSSD：通用性SSD云硬盘<br><li>CLOUD_HSSD：增强型SSD云硬盘<br><li>CLOUD_TSSD：极速型SSD云硬盘<br><br>默认取值：当前有库存的硬盘类型。
+     * @var string 系统盘类型。系统盘类型限制详见[存储概述](https://cloud.tencent.com/document/product/213/4952)。取值范围：<br>
+<li>LOCAL_BASIC：本地硬盘</li>
+<li>LOCAL_SSD：本地SSD硬盘</li>
+<li>CLOUD_BASIC：普通云硬盘</li>
+<li>CLOUD_SSD：SSD云硬盘</li>
+<li>CLOUD_PREMIUM：高性能云硬盘</li>
+<li>CLOUD_BSSD：通用型SSD云硬盘</li>
+<li>CLOUD_HSSD：增强型SSD云硬盘</li>
+<li>CLOUD_TSSD：极速型SSD云硬盘</li><br>
+默认取值：当前有库存的硬盘类型。
      */
     public $DiskType;
 
     /**
-     * @var string 系统盘ID。LOCAL_BASIC 和 LOCAL_SSD 类型没有ID。暂时不支持该参数。
+     * @var string 系统盘ID。
 该参数目前仅用于`DescribeInstances`等查询类接口的返回参数，不可用于`RunInstances`等写接口的入参。
      */
     public $DiskId;
 
     /**
-     * @var integer 系统盘大小，单位：GB。默认值为 50
+     * @var integer 系统盘大小，单位：GiB。默认值为 50
      */
     public $DiskSize;
 
@@ -58,12 +87,27 @@ class SystemDisk extends AbstractModel
     public $CdcId;
 
     /**
-     * @param string $DiskType 系统盘类型。系统盘类型限制详见[存储概述](https://cloud.tencent.com/document/product/213/4952)。取值范围：<br><li>LOCAL_BASIC：本地硬盘<br><li>LOCAL_SSD：本地SSD硬盘<br><li>CLOUD_BASIC：普通云硬盘<br><li>CLOUD_SSD：SSD云硬盘<br><li>CLOUD_PREMIUM：高性能云硬盘<br><li>CLOUD_BSSD：通用性SSD云硬盘<br><li>CLOUD_HSSD：增强型SSD云硬盘<br><li>CLOUD_TSSD：极速型SSD云硬盘<br><br>默认取值：当前有库存的硬盘类型。
-     * @param string $DiskId 系统盘ID。LOCAL_BASIC 和 LOCAL_SSD 类型没有ID。暂时不支持该参数。
+     * @var string 磁盘名称，长度不超过128 个字符。
+     */
+    public $DiskName;
+
+    /**
+     * @param string $DiskType 系统盘类型。系统盘类型限制详见[存储概述](https://cloud.tencent.com/document/product/213/4952)。取值范围：<br>
+<li>LOCAL_BASIC：本地硬盘</li>
+<li>LOCAL_SSD：本地SSD硬盘</li>
+<li>CLOUD_BASIC：普通云硬盘</li>
+<li>CLOUD_SSD：SSD云硬盘</li>
+<li>CLOUD_PREMIUM：高性能云硬盘</li>
+<li>CLOUD_BSSD：通用型SSD云硬盘</li>
+<li>CLOUD_HSSD：增强型SSD云硬盘</li>
+<li>CLOUD_TSSD：极速型SSD云硬盘</li><br>
+默认取值：当前有库存的硬盘类型。
+     * @param string $DiskId 系统盘ID。
 该参数目前仅用于`DescribeInstances`等查询类接口的返回参数，不可用于`RunInstances`等写接口的入参。
-     * @param integer $DiskSize 系统盘大小，单位：GB。默认值为 50
+     * @param integer $DiskSize 系统盘大小，单位：GiB。默认值为 50
      * @param string $CdcId 所属的独享集群ID。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DiskName 磁盘名称，长度不超过128 个字符。
      */
     function __construct()
     {
@@ -92,6 +136,10 @@ class SystemDisk extends AbstractModel
 
         if (array_key_exists("CdcId",$param) and $param["CdcId"] !== null) {
             $this->CdcId = $param["CdcId"];
+        }
+
+        if (array_key_exists("DiskName",$param) and $param["DiskName"] !== null) {
+            $this->DiskName = $param["DiskName"];
         }
     }
 }

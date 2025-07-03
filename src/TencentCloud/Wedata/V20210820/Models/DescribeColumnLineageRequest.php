@@ -20,8 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeColumnLineage请求参数结构体
  *
- * @method string getDirection() 获取查询方向，INPUT,OUTPUT,BOTH枚举值
- * @method void setDirection(string $Direction) 设置查询方向，INPUT,OUTPUT,BOTH枚举值
+ * @method string getDirection() 获取查询方向枚举值
+
+- INPUT
+- OUTPUT
+- BOTH
+ * @method void setDirection(string $Direction) 设置查询方向枚举值
+
+- INPUT
+- OUTPUT
+- BOTH
  * @method ColumnLineageInfo getData() 获取字段信息
  * @method void setData(ColumnLineageInfo $Data) 设置字段信息
  * @method integer getInputDepth() 获取单次查询入度
@@ -36,7 +44,11 @@ use TencentCloud\Common\AbstractModel;
 class DescribeColumnLineageRequest extends AbstractModel
 {
     /**
-     * @var string 查询方向，INPUT,OUTPUT,BOTH枚举值
+     * @var string 查询方向枚举值
+
+- INPUT
+- OUTPUT
+- BOTH
      */
     public $Direction;
 
@@ -66,7 +78,11 @@ class DescribeColumnLineageRequest extends AbstractModel
     public $IgnoreTemp;
 
     /**
-     * @param string $Direction 查询方向，INPUT,OUTPUT,BOTH枚举值
+     * @param string $Direction 查询方向枚举值
+
+- INPUT
+- OUTPUT
+- BOTH
      * @param ColumnLineageInfo $Data 字段信息
      * @param integer $InputDepth 单次查询入度
      * @param integer $OutputDepth 单次查询出度

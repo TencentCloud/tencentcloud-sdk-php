@@ -61,21 +61,15 @@ use TencentCloud\Common\AbstractModel;
 <li>prepayment 预付费</li>
 <li>postpaid 后付费</li>
  * @method string getExtensionId() 获取订单绑定的扩展ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExtensionId(string $ExtensionId) 设置订单绑定的扩展ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getResourceReady() 获取资源初始化结果(仅当ExtensionId不为空时有效): successful(初始化成功), failed(初始化失败), doing(初始化进行中), init(准备初始化)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceReady(string $ResourceReady) 设置资源初始化结果(仅当ExtensionId不为空时有效): successful(初始化成功), failed(初始化失败), doing(初始化进行中), init(准备初始化)
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFlag() 获取安装标记。建议使用方统一转大小写之后再判断。
 <li>QuickStart：快速启动来源</li>
 <li>Activity：活动来源</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlag(string $Flag) 设置安装标记。建议使用方统一转大小写之后再判断。
 <li>QuickStart：快速启动来源</li>
 <li>Activity：活动来源</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getReqBody() 获取下单时的参数
  * @method void setReqBody(string $ReqBody) 设置下单时的参数
  */
@@ -131,13 +125,11 @@ class OrderInfo extends AbstractModel
 
     /**
      * @var string 订单绑定的扩展ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExtensionId;
 
     /**
      * @var string 资源初始化结果(仅当ExtensionId不为空时有效): successful(初始化成功), failed(初始化失败), doing(初始化进行中), init(准备初始化)
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceReady;
 
@@ -145,7 +137,6 @@ class OrderInfo extends AbstractModel
      * @var string 安装标记。建议使用方统一转大小写之后再判断。
 <li>QuickStart：快速启动来源</li>
 <li>Activity：活动来源</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Flag;
 
@@ -176,13 +167,10 @@ class OrderInfo extends AbstractModel
 <li>prepayment 预付费</li>
 <li>postpaid 后付费</li>
      * @param string $ExtensionId 订单绑定的扩展ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ResourceReady 资源初始化结果(仅当ExtensionId不为空时有效): successful(初始化成功), failed(初始化失败), doing(初始化进行中), init(准备初始化)
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Flag 安装标记。建议使用方统一转大小写之后再判断。
 <li>QuickStart：快速启动来源</li>
 <li>Activity：活动来源</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReqBody 下单时的参数
      */
     function __construct()

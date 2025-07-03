@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppType(string $AppType) 设置应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classifys-知识标签提取
  * @method BaseConfig getBaseConfig() 获取应用基础配置
  * @method void setBaseConfig(BaseConfig $BaseConfig) 设置应用基础配置
- * @method string getLoginSubAccountUin() 获取登录用户子账号(集成商模式必填)	
- * @method void setLoginSubAccountUin(string $LoginSubAccountUin) 设置登录用户子账号(集成商模式必填)	
  * @method AppConfig getAppConfig() 获取应用配置
  * @method void setAppConfig(AppConfig $AppConfig) 设置应用配置
+ * @method string getLoginSubAccountUin() 获取登录用户子账号(集成商模式必填)	
+ * @method void setLoginSubAccountUin(string $LoginSubAccountUin) 设置登录用户子账号(集成商模式必填)	
  */
 class ModifyAppRequest extends AbstractModel
 {
@@ -49,21 +49,21 @@ class ModifyAppRequest extends AbstractModel
     public $BaseConfig;
 
     /**
-     * @var string 登录用户子账号(集成商模式必填)	
-     */
-    public $LoginSubAccountUin;
-
-    /**
      * @var AppConfig 应用配置
      */
     public $AppConfig;
 
     /**
+     * @var string 登录用户子账号(集成商模式必填)	
+     */
+    public $LoginSubAccountUin;
+
+    /**
      * @param string $AppBizId 应用 ID
      * @param string $AppType 应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classifys-知识标签提取
      * @param BaseConfig $BaseConfig 应用基础配置
-     * @param string $LoginSubAccountUin 登录用户子账号(集成商模式必填)	
      * @param AppConfig $AppConfig 应用配置
+     * @param string $LoginSubAccountUin 登录用户子账号(集成商模式必填)	
      */
     function __construct()
     {
@@ -91,13 +91,13 @@ class ModifyAppRequest extends AbstractModel
             $this->BaseConfig->deserialize($param["BaseConfig"]);
         }
 
-        if (array_key_exists("LoginSubAccountUin",$param) and $param["LoginSubAccountUin"] !== null) {
-            $this->LoginSubAccountUin = $param["LoginSubAccountUin"];
-        }
-
         if (array_key_exists("AppConfig",$param) and $param["AppConfig"] !== null) {
             $this->AppConfig = new AppConfig();
             $this->AppConfig->deserialize($param["AppConfig"]);
+        }
+
+        if (array_key_exists("LoginSubAccountUin",$param) and $param["LoginSubAccountUin"] !== null) {
+            $this->LoginSubAccountUin = $param["LoginSubAccountUin"];
         }
     }
 }

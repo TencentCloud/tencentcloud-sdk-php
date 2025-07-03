@@ -53,6 +53,7 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\CreateNamespaceResponse CreateNamespace(Models\CreateNamespaceRequest $req) 创建命名空间
  * @method Models\CreatePathRewritesResponse CreatePathRewrites(Models\CreatePathRewritesRequest $req) 创建路径重写
  * @method Models\CreatePathRewritesWithDetailRespResponse CreatePathRewritesWithDetailResp(Models\CreatePathRewritesWithDetailRespRequest $req) 创建路径重写，并返回路径重写规则信息
+ * @method Models\CreateProgramResponse CreateProgram(Models\CreateProgramRequest $req) 创建数据集
  * @method Models\CreatePublicConfigResponse CreatePublicConfig(Models\CreatePublicConfigRequest $req) 创建公共配置项
  * @method Models\CreatePublicConfigWithDetailRespResponse CreatePublicConfigWithDetailResp(Models\CreatePublicConfigWithDetailRespRequest $req) 创建公共配置项，并返回配置项详细信息
  * @method Models\CreateRepositoryResponse CreateRepository(Models\CreateRepositoryRequest $req) 创建仓库
@@ -81,7 +82,9 @@ use TencentCloud\Tsf\V20180326\Models as Models;
 一次最多支持删除1000个包，数量超过1000，返回UpperDeleteLimit错误。
  * @method Models\DeletePublicConfigResponse DeletePublicConfig(Models\DeletePublicConfigRequest $req) 删除公共配置项
  * @method Models\DeleteRepositoryResponse DeleteRepository(Models\DeleteRepositoryRequest $req) 删除仓库
- * @method Models\DeleteServerlessGroupResponse DeleteServerlessGroup(Models\DeleteServerlessGroupRequest $req) 删除Serverless部署组
+ * @method Models\DeleteServerlessGroupResponse DeleteServerlessGroup(Models\DeleteServerlessGroupRequest $req) serverless 能力已下线。下线对应接口。
+
+删除Serverless部署组
  * @method Models\DeleteTaskResponse DeleteTask(Models\DeleteTaskRequest $req) 删除任务
  * @method Models\DeleteUnitNamespacesResponse DeleteUnitNamespaces(Models\DeleteUnitNamespacesRequest $req) 删除单元化命名空间
  * @method Models\DeleteUnitRuleResponse DeleteUnitRule(Models\DeleteUnitRuleRequest $req) 删除单元化规则
@@ -95,9 +98,6 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\DescribeApiVersionsResponse DescribeApiVersions(Models\DescribeApiVersionsRequest $req) 查询API 版本
  * @method Models\DescribeApplicationResponse DescribeApplication(Models\DescribeApplicationRequest $req) 获取应用详情
  * @method Models\DescribeApplicationAttributeResponse DescribeApplicationAttribute(Models\DescribeApplicationAttributeRequest $req) 获取应用列表其它字段，如实例数量信息等
- * @method Models\DescribeApplicationBusinessLogConfigResponse DescribeApplicationBusinessLogConfig(Models\DescribeApplicationBusinessLogConfigRequest $req) 接口未使用，废弃录用
-
-查询应用关联日志配置项信息
  * @method Models\DescribeApplicationsResponse DescribeApplications(Models\DescribeApplicationsRequest $req) 获取应用列表
  * @method Models\DescribeBasicResourceUsageResponse DescribeBasicResourceUsage(Models\DescribeBasicResourceUsageRequest $req) TSF基本资源信息概览接口
  * @method Models\DescribeBusinessLogConfigResponse DescribeBusinessLogConfig(Models\DescribeBusinessLogConfigRequest $req) 查询业务日志配置项信息
@@ -111,9 +111,12 @@ use TencentCloud\Tsf\V20180326\Models as Models;
  * @method Models\DescribeConfigTemplateResponse DescribeConfigTemplate(Models\DescribeConfigTemplateRequest $req) 导入配置
  * @method Models\DescribeConfigsResponse DescribeConfigs(Models\DescribeConfigsRequest $req) 查询配置项列表
  * @method Models\DescribeContainerEventsResponse DescribeContainerEvents(Models\DescribeContainerEventsRequest $req) 获取容器事件列表
+参数限制
+
+- 当类型是 instance 时，GroupId是必填项
  * @method Models\DescribeContainerGroupAttributeResponse DescribeContainerGroupAttribute(Models\DescribeContainerGroupAttributeRequest $req) 获取部署组其他字段-用于前端并发调用
- * @method Models\DescribeContainerGroupDeployInfoResponse DescribeContainerGroupDeployInfo(Models\DescribeContainerGroupDeployInfoRequest $req)  获取部署组详情
- * @method Models\DescribeContainerGroupDetailResponse DescribeContainerGroupDetail(Models\DescribeContainerGroupDetailRequest $req)  容器部署组详情（已废弃，请使用  DescribeContainerGroupDeployInfo）
+ * @method Models\DescribeContainerGroupDeployInfoResponse DescribeContainerGroupDeployInfo(Models\DescribeContainerGroupDeployInfoRequest $req) 获取部署组详情
+ * @method Models\DescribeContainerGroupDetailResponse DescribeContainerGroupDetail(Models\DescribeContainerGroupDetailRequest $req) 容器部署组详情（已废弃，请使用  DescribeContainerGroupDeployInfo）
  * @method Models\DescribeContainerGroupsResponse DescribeContainerGroups(Models\DescribeContainerGroupsRequest $req) 容器部署组列表
  * @method Models\DescribeCreateGatewayApiStatusResponse DescribeCreateGatewayApiStatus(Models\DescribeCreateGatewayApiStatusRequest $req) 查询一键导入API分组任务的状态
  * @method Models\DescribeDeliveryConfigResponse DescribeDeliveryConfig(Models\DescribeDeliveryConfigRequest $req) 获取单个投递项配置信息
@@ -140,7 +143,9 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\DescribeGroupsWithPluginResponse DescribeGroupsWithPlugin(Models\DescribeGroupsWithPluginRequest $req) 查询某个插件下绑定或未绑定的API分组
  * @method Models\DescribeImageRepositoryResponse DescribeImageRepository(Models\DescribeImageRepositoryRequest $req) 查询镜像仓库列表
  * @method Models\DescribeImageTagsResponse DescribeImageTags(Models\DescribeImageTagsRequest $req) 镜像版本列表
- * @method Models\DescribeInovcationIndicatorsResponse DescribeInovcationIndicators(Models\DescribeInovcationIndicatorsRequest $req) 废弃
+ * @method Models\DescribeInovcationIndicatorsResponse DescribeInovcationIndicators(Models\DescribeInovcationIndicatorsRequest $req) 废弃接口
+
+废弃
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 无
  * @method Models\DescribeInvocationMetricDataCurveResponse DescribeInvocationMetricDataCurve(Models\DescribeInvocationMetricDataCurveRequest $req) 查询调用指标数据变化曲线
  * @method Models\DescribeInvocationMetricDataDimensionResponse DescribeInvocationMetricDataDimension(Models\DescribeInvocationMetricDataDimensionRequest $req) 查询维度
@@ -151,6 +156,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\DescribeLanesResponse DescribeLanes(Models\DescribeLanesRequest $req) 查询泳道列表
  * @method Models\DescribeMicroserviceResponse DescribeMicroservice(Models\DescribeMicroserviceRequest $req) 查询微服务详情
  * @method Models\DescribeMicroservicesResponse DescribeMicroservices(Models\DescribeMicroservicesRequest $req) 获取微服务列表
+ * @method Models\DescribeMicroservicesByGroupIdsResponse DescribeMicroservicesByGroupIds(Models\DescribeMicroservicesByGroupIdsRequest $req) 通过部署组ID获取微服务
  * @method Models\DescribeMsApiListResponse DescribeMsApiList(Models\DescribeMsApiListRequest $req) 查询服务API列表
  * @method Models\DescribeOverviewInvocationResponse DescribeOverviewInvocation(Models\DescribeOverviewInvocationRequest $req) 服务调用监控统计概览
  * @method Models\DescribePathRewriteResponse DescribePathRewrite(Models\DescribePathRewriteRequest $req) 查询路径重写
@@ -210,11 +216,14 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\ModifyMicroserviceResponse ModifyMicroservice(Models\ModifyMicroserviceRequest $req) 修改微服务详情
  * @method Models\ModifyNamespaceResponse ModifyNamespace(Models\ModifyNamespaceRequest $req) 修改命名空间
  * @method Models\ModifyPathRewriteResponse ModifyPathRewrite(Models\ModifyPathRewriteRequest $req) 修改路径重写
+ * @method Models\ModifyProgramResponse ModifyProgram(Models\ModifyProgramRequest $req) 更新数据集
  * @method Models\ModifyTaskResponse ModifyTask(Models\ModifyTaskRequest $req) 修改任务
  * @method Models\ModifyUploadInfoResponse ModifyUploadInfo(Models\ModifyUploadInfoRequest $req) 调用该接口和COS的上传接口后，需要调用此接口更新TSF中保存的程序包状态。
 调用此接口完成后，才标志上传包流程结束。
  * @method Models\OperateApplicationTcrBindingResponse OperateApplicationTcrBinding(Models\OperateApplicationTcrBindingRequest $req) 绑定解绑tcr仓库
- * @method Models\ReassociateBusinessLogConfigResponse ReassociateBusinessLogConfig(Models\ReassociateBusinessLogConfigRequest $req) 重关联业务日志配置
+ * @method Models\ReassociateBusinessLogConfigResponse ReassociateBusinessLogConfig(Models\ReassociateBusinessLogConfigRequest $req) 后端服务已经删除这个接口,  API 接口下线处理
+
+重关联业务日志配置
  * @method Models\RedoTaskResponse RedoTask(Models\RedoTaskRequest $req) 重新执行任务
  * @method Models\RedoTaskBatchResponse RedoTaskBatch(Models\RedoTaskBatchRequest $req) 重新执行任务批次
  * @method Models\RedoTaskExecuteResponse RedoTaskExecute(Models\RedoTaskExecuteRequest $req) 重新执行在某个节点上执行任务。

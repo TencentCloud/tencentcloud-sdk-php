@@ -24,6 +24,7 @@ use TencentCloud\Svp\V20240125\Models as Models;
 
 /**
  * @method Models\CreateSavingPlanOrderResponse CreateSavingPlanOrder(Models\CreateSavingPlanOrderRequest $req) 创建节省计划订单
+ * @method Models\DescribeSavingPlanCoverageResponse DescribeSavingPlanCoverage(Models\DescribeSavingPlanCoverageRequest $req) 查询当前用户节省计划覆盖率明细数据，如无特别说明，金额单位均为元（国内站）或者美元（国际站）。
  * @method Models\DescribeSavingPlanDeductResponse DescribeSavingPlanDeduct(Models\DescribeSavingPlanDeductRequest $req) 查询节省计划抵扣明细
  * @method Models\DescribeSavingPlanOverviewResponse DescribeSavingPlanOverview(Models\DescribeSavingPlanOverviewRequest $req) 查用当前用户明细节省计划总览查询时段内的使用情况
  * @method Models\DescribeSavingPlanUsageResponse DescribeSavingPlanUsage(Models\DescribeSavingPlanUsageRequest $req) 查用当前用户明细节省计划查询时段内的使用情况

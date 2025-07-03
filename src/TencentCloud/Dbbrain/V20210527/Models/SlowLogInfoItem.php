@@ -27,27 +27,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDatabase() 获取数据库
  * @method void setDatabase(string $Database) 设置数据库
  * @method string getUserName() 获取User来源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserName(string $UserName) 设置User来源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserHost() 获取IP来源
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserHost(string $UserHost) 设置IP来源
-注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getQueryTime() 获取执行时间,单位秒
- * @method void setQueryTime(integer $QueryTime) 设置执行时间,单位秒
- * @method integer getLockTime() 获取锁时间,单位秒
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLockTime(integer $LockTime) 设置锁时间,单位秒
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getQueryTime() 获取执行时间,单位秒
+ * @method void setQueryTime(float $QueryTime) 设置执行时间,单位秒
+ * @method float getLockTime() 获取锁时间,单位秒
+ * @method void setLockTime(float $LockTime) 设置锁时间,单位秒
  * @method integer getRowsExamined() 获取扫描行数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRowsExamined(integer $RowsExamined) 设置扫描行数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRowsSent() 获取返回行数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRowsSent(integer $RowsSent) 设置返回行数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SlowLogInfoItem extends AbstractModel
 {
@@ -68,36 +58,31 @@ class SlowLogInfoItem extends AbstractModel
 
     /**
      * @var string User来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserName;
 
     /**
      * @var string IP来源
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserHost;
 
     /**
-     * @var integer 执行时间,单位秒
+     * @var float 执行时间,单位秒
      */
     public $QueryTime;
 
     /**
-     * @var integer 锁时间,单位秒
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var float 锁时间,单位秒
      */
     public $LockTime;
 
     /**
      * @var integer 扫描行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RowsExamined;
 
     /**
      * @var integer 返回行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RowsSent;
 
@@ -106,16 +91,11 @@ class SlowLogInfoItem extends AbstractModel
      * @param string $SqlText sql语句
      * @param string $Database 数据库
      * @param string $UserName User来源
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserHost IP来源
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $QueryTime 执行时间,单位秒
-     * @param integer $LockTime 锁时间,单位秒
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $QueryTime 执行时间,单位秒
+     * @param float $LockTime 锁时间,单位秒
      * @param integer $RowsExamined 扫描行数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RowsSent 返回行数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

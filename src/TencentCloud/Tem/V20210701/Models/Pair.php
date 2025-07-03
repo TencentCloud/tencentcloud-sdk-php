@@ -25,17 +25,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getValue() 获取值
  * @method void setValue(string $Value) 设置值
  * @method string getType() 获取类型，default 为自定义，reserved 为系统变量，referenced 为引用配置项
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(string $Type) 设置类型，default 为自定义，reserved 为系统变量，referenced 为引用配置项
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConfig() 获取配置名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConfig(string $Config) 设置配置名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSecret() 获取加密配置名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSecret(string $Secret) 设置加密配置名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Pair extends AbstractModel
 {
@@ -51,19 +45,16 @@ class Pair extends AbstractModel
 
     /**
      * @var string 类型，default 为自定义，reserved 为系统变量，referenced 为引用配置项
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 配置名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Config;
 
     /**
      * @var string 加密配置名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Secret;
 
@@ -71,11 +62,8 @@ class Pair extends AbstractModel
      * @param string $Key 键
      * @param string $Value 值
      * @param string $Type 类型，default 为自定义，reserved 为系统变量，referenced 为引用配置项
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Config 配置名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Secret 加密配置名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

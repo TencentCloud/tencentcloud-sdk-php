@@ -27,17 +27,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getComment() 获取对分区的描述。
  * @method void setComment(string $Comment) 设置对分区的描述。
  * @method string getTransform() 获取隐式分区转换策略
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTransform(string $Transform) 设置隐式分区转换策略
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTransformArgs() 获取转换策略参数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTransformArgs(array $TransformArgs) 设置转换策略参数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(integer $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Partition extends AbstractModel
 {
@@ -58,7 +54,6 @@ class Partition extends AbstractModel
 
     /**
      * @var string 隐式分区转换策略
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Transform;
 
@@ -70,7 +65,6 @@ class Partition extends AbstractModel
 
     /**
      * @var integer 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
@@ -79,11 +73,9 @@ class Partition extends AbstractModel
      * @param string $Type 分区类型。
      * @param string $Comment 对分区的描述。
      * @param string $Transform 隐式分区转换策略
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $TransformArgs 转换策略参数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

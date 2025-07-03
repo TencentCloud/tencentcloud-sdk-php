@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 云资源地域列表
  *
- * @method string getResourceType() 获取云资源类型
- * @method void setResourceType(string $ResourceType) 设置云资源类型
+ * @method string getResourceType() 获取云资源类型，支持clb、waf、apigateway、cos、tke、tse、tcb
+ * @method void setResourceType(string $ResourceType) 设置云资源类型，支持clb、waf、apigateway、cos、tke、tse、tcb
  * @method array getRegions() 获取地域列表
  * @method void setRegions(array $Regions) 设置地域列表
  */
 class ResourceTypeRegions extends AbstractModel
 {
     /**
-     * @var string 云资源类型
+     * @var string 云资源类型，支持clb、waf、apigateway、cos、tke、tse、tcb
      */
     public $ResourceType;
 
@@ -38,7 +38,7 @@ class ResourceTypeRegions extends AbstractModel
     public $Regions;
 
     /**
-     * @param string $ResourceType 云资源类型
+     * @param string $ResourceType 云资源类型，支持clb、waf、apigateway、cos、tke、tse、tcb
      * @param array $Regions 地域列表
      */
     function __construct()

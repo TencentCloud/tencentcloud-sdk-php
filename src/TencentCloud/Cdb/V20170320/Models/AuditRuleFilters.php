@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 审计规则的过滤条件
  *
  * @method array getRuleFilters() 获取单条审计规则。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleFilters(array $RuleFilters) 设置单条审计规则。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AuditRuleFilters extends AbstractModel
 {
     /**
      * @var array 单条审计规则。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleFilters;
 
     /**
      * @param array $RuleFilters 单条审计规则。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

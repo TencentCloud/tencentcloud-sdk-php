@@ -30,16 +30,12 @@ use TencentCloud\Common\AbstractModel;
 0表示正常；
 1表示异常。
 未开启健康检查状态时，该状态始终为正常。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealServerStatus(integer $RealServerStatus) 设置源站健康检查状态，其中：
 0表示正常；
 1表示异常。
 未开启健康检查状态时，该状态始终为正常。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRealServerPort() 获取源站的端口号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRealServerPort(integer $RealServerPort) 设置源站的端口号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getDownIPList() 获取当源站为域名时，域名被解析成一个或者多个IP，该字段表示其中异常的IP列表。状态异常，但该字段为空时，表示域名解析异常。
  * @method void setDownIPList(array $DownIPList) 设置当源站为域名时，域名被解析成一个或者多个IP，该字段表示其中异常的IP列表。状态异常，但该字段为空时，表示域名解析异常。
  * @method string getRealServerFailoverRole() 获取源站主备角色：master表示主，slave表示备，该参数必须在监听器打开了源站主备模式。
@@ -67,13 +63,11 @@ class BindRealServer extends AbstractModel
 0表示正常；
 1表示异常。
 未开启健康检查状态时，该状态始终为正常。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RealServerStatus;
 
     /**
      * @var integer 源站的端口号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RealServerPort;
 
@@ -95,9 +89,7 @@ class BindRealServer extends AbstractModel
 0表示正常；
 1表示异常。
 未开启健康检查状态时，该状态始终为正常。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RealServerPort 源站的端口号
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DownIPList 当源站为域名时，域名被解析成一个或者多个IP，该字段表示其中异常的IP列表。状态异常，但该字段为空时，表示域名解析异常。
      * @param string $RealServerFailoverRole 源站主备角色：master表示主，slave表示备，该参数必须在监听器打开了源站主备模式。
      */

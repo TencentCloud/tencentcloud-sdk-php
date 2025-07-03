@@ -21,117 +21,81 @@ use TencentCloud\Common\AbstractModel;
  * Subnet对象
  *
  * @method string getVpcId() 获取VPC实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(string $VpcId) 设置VPC实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubnetId() 获取子网实例ID，例如：subnet-bthucmmy。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetId(string $SubnetId) 设置子网实例ID，例如：subnet-bthucmmy。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubnetName() 获取子网名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubnetName(string $SubnetName) 设置子网名称。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCidrBlock() 获取子网的 IPv4 CIDR。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCidrBlock(string $CidrBlock) 设置子网的 IPv4 CIDR。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedTime() 获取创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAvailableIpAddressCount() 获取可用IP数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAvailableIpAddressCount(integer $AvailableIpAddressCount) 设置可用IP数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIpv6CidrBlock() 获取子网的 IPv6 CIDR。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIpv6CidrBlock(string $Ipv6CidrBlock) 设置子网的 IPv6 CIDR。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalIpAddressCount() 获取总IP数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalIpAddressCount(integer $TotalIpAddressCount) 设置总IP数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsDefault() 获取是否为默认Subnet
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsDefault(boolean $IsDefault) 设置是否为默认Subnet
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Subnet extends AbstractModel
 {
     /**
      * @var string VPC实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
     /**
      * @var string 子网实例ID，例如：subnet-bthucmmy。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetId;
 
     /**
      * @var string 子网名称。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubnetName;
 
     /**
      * @var string 子网的 IPv4 CIDR。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CidrBlock;
 
     /**
      * @var string 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedTime;
 
     /**
      * @var integer 可用IP数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AvailableIpAddressCount;
 
     /**
      * @var string 子网的 IPv6 CIDR。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ipv6CidrBlock;
 
     /**
      * @var integer 总IP数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalIpAddressCount;
 
     /**
      * @var boolean 是否为默认Subnet
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsDefault;
 
     /**
      * @param string $VpcId VPC实例ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetId 子网实例ID，例如：subnet-bthucmmy。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubnetName 子网名称。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CidrBlock 子网的 IPv4 CIDR。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedTime 创建时间。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AvailableIpAddressCount 可用IP数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Ipv6CidrBlock 子网的 IPv6 CIDR。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalIpAddressCount 总IP数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsDefault 是否为默认Subnet
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置VPC ID(可通过 vpc:DescribeVpcs 接口获取，与实例同地域)
  * @method string getSubnetId() 获取子网 ID(可通过 vpc:DescribeSubnets 接口获取)
  * @method void setSubnetId(string $SubnetId) 设置子网 ID(可通过 vpc:DescribeSubnets 接口获取)
- * @method integer getDataRetentionTime() 获取数据存储时间（单位天），限制值为15，30，45之一
- * @method void setDataRetentionTime(integer $DataRetentionTime) 设置数据存储时间（单位天），限制值为15，30，45之一
+ * @method integer getDataRetentionTime() 获取数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一
+ * @method void setDataRetentionTime(integer $DataRetentionTime) 设置数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一
  * @method string getZone() 获取可用区(与子网同可用区)
  * @method void setZone(string $Zone) 设置可用区(与子网同可用区)
  * @method array getTagSpecification() 获取实例的标签
@@ -53,7 +53,7 @@ class CreatePrometheusMultiTenantInstancePostPayModeRequest extends AbstractMode
     public $SubnetId;
 
     /**
-     * @var integer 数据存储时间（单位天），限制值为15，30，45之一
+     * @var integer 数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一
      */
     public $DataRetentionTime;
 
@@ -76,7 +76,7 @@ class CreatePrometheusMultiTenantInstancePostPayModeRequest extends AbstractMode
      * @param string $InstanceName 实例名
      * @param string $VpcId VPC ID(可通过 vpc:DescribeVpcs 接口获取，与实例同地域)
      * @param string $SubnetId 子网 ID(可通过 vpc:DescribeSubnets 接口获取)
-     * @param integer $DataRetentionTime 数据存储时间（单位天），限制值为15，30，45之一
+     * @param integer $DataRetentionTime 数据存储时间（单位天），限制值为15, 30, 45, 90, 180, 365, 730之一
      * @param string $Zone 可用区(与子网同可用区)
      * @param array $TagSpecification 实例的标签
      * @param string $GrafanaInstanceId 需要关联的 Grafana 实例

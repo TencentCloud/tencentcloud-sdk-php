@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceGroupId(string $InstanceGroupId) 设置实例组ID
  * @method string getStatus() 获取状态
  * @method void setStatus(string $Status) 设置状态
- * @method string getType() 获取实例组类型。ha-ha组；ro-只读组
- * @method void setType(string $Type) 设置实例组类型。ha-ha组；ro-只读组
+ * @method string getType() 获取实例组（网络）类型。ha-ha组；ro-只读组；proxy-代理；singleRo-只读实例独占
+ * @method void setType(string $Type) 设置实例组（网络）类型。ha-ha组；ro-只读组；proxy-代理；singleRo-只读实例独占
  * @method string getUpdatedTime() 获取更新时间
  * @method void setUpdatedTime(string $UpdatedTime) 设置更新时间
  * @method string getVip() 获取内网IP
@@ -51,17 +51,11 @@ use TencentCloud\Common\AbstractModel;
  * @method array getInstanceSet() 获取实例组包含实例信息
  * @method void setInstanceSet(array $InstanceSet) 设置实例组包含实例信息
  * @method string getUniqVpcId() 获取VPC的ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUniqVpcId(string $UniqVpcId) 设置VPC的ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUniqSubnetId() 获取子网ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUniqSubnetId(string $UniqSubnetId) 设置子网ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method OldAddrInfo getOldAddrInfo() 获取正在回收IP信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOldAddrInfo(OldAddrInfo $OldAddrInfo) 设置正在回收IP信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getProcessingTasks() 获取正在进行的任务
  * @method void setProcessingTasks(array $ProcessingTasks) 设置正在进行的任务
  * @method array getTasks() 获取任务列表
@@ -102,7 +96,7 @@ class CynosdbInstanceGroup extends AbstractModel
     public $Status;
 
     /**
-     * @var string 实例组类型。ha-ha组；ro-只读组
+     * @var string 实例组（网络）类型。ha-ha组；ro-只读组；proxy-代理；singleRo-只读实例独占
      */
     public $Type;
 
@@ -148,19 +142,16 @@ class CynosdbInstanceGroup extends AbstractModel
 
     /**
      * @var string VPC的ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UniqVpcId;
 
     /**
      * @var string 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UniqSubnetId;
 
     /**
      * @var OldAddrInfo 正在回收IP信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OldAddrInfo;
 
@@ -186,7 +177,7 @@ class CynosdbInstanceGroup extends AbstractModel
      * @param string $DeletedTime 删除时间
      * @param string $InstanceGroupId 实例组ID
      * @param string $Status 状态
-     * @param string $Type 实例组类型。ha-ha组；ro-只读组
+     * @param string $Type 实例组（网络）类型。ha-ha组；ro-只读组；proxy-代理；singleRo-只读实例独占
      * @param string $UpdatedTime 更新时间
      * @param string $Vip 内网IP
      * @param integer $Vport 内网端口
@@ -196,11 +187,8 @@ class CynosdbInstanceGroup extends AbstractModel
      * @param string $WanStatus 外网状态
      * @param array $InstanceSet 实例组包含实例信息
      * @param string $UniqVpcId VPC的ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UniqSubnetId 子网ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OldAddrInfo $OldAddrInfo 正在回收IP信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ProcessingTasks 正在进行的任务
      * @param array $Tasks 任务列表
      * @param integer $NetServiceId biz_net_service表id

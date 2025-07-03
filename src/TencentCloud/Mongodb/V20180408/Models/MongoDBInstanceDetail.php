@@ -75,25 +75,15 @@ use TencentCloud\Common\AbstractModel;
  * @method array getReplicaSets() 获取分片信息
  * @method void setReplicaSets(array $ReplicaSets) 设置分片信息
  * @method array getReadonlyInstances() 获取只读实例信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReadonlyInstances(array $ReadonlyInstances) 设置只读实例信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getStandbyInstances() 获取灾备实例信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStandbyInstances(array $StandbyInstances) 设置灾备实例信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCloneInstances() 获取临时实例信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCloneInstances(array $CloneInstances) 设置临时实例信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method MongoDBInstance getRelatedInstance() 获取关联实例信息，对于正式实例，该字段表示它的临时实例信息；对于临时实例，则表示它的正式实例信息;如果为只读/灾备实例,则表示他的主实例信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRelatedInstance(MongoDBInstance $RelatedInstance) 设置关联实例信息，对于正式实例，该字段表示它的临时实例信息；对于临时实例，则表示它的正式实例信息;如果为只读/灾备实例,则表示他的主实例信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取实例标签信息集合
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置实例标签信息集合
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getInstanceVer() 获取实例标记
  * @method void setInstanceVer(integer $InstanceVer) 设置实例标记
  * @method integer getClusterVer() 获取实例标记
@@ -246,31 +236,26 @@ class MongoDBInstanceDetail extends AbstractModel
 
     /**
      * @var array 只读实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReadonlyInstances;
 
     /**
      * @var array 灾备实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StandbyInstances;
 
     /**
      * @var array 临时实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CloneInstances;
 
     /**
      * @var MongoDBInstance 关联实例信息，对于正式实例，该字段表示它的临时实例信息；对于临时实例，则表示它的正式实例信息;如果为只读/灾备实例,则表示他的主实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RelatedInstance;
 
     /**
      * @var array 实例标签信息集合
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
@@ -333,15 +318,10 @@ class MongoDBInstanceDetail extends AbstractModel
      * @param string $MaintenanceEnd 维护窗口结束时间
      * @param array $ReplicaSets 分片信息
      * @param array $ReadonlyInstances 只读实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $StandbyInstances 灾备实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $CloneInstances 临时实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param MongoDBInstance $RelatedInstance 关联实例信息，对于正式实例，该字段表示它的临时实例信息；对于临时实例，则表示它的正式实例信息;如果为只读/灾备实例,则表示他的主实例信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 实例标签信息集合
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $InstanceVer 实例标记
      * @param integer $ClusterVer 实例标记
      * @param integer $Protocol 协议信息，可能的返回值：1-mongodb，2-dynamodb

@@ -26,30 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomainId(string $DomainId) 设置必填项。域名唯一ID
  * @method string getInstanceID() 获取必填项。域名所属实例id
  * @method void setInstanceID(string $InstanceID) 设置必填项。域名所属实例id
- * @method integer getCertType() 获取必填项。证书类型。
-0：仅配置HTTP监听端口，没有证书
-1：证书来源为自有证书
-2：证书来源为托管证书
- * @method void setCertType(integer $CertType) 设置必填项。证书类型。
-0：仅配置HTTP监听端口，没有证书
-1：证书来源为自有证书
-2：证书来源为托管证书
+ * @method integer getCertType() 获取证书类型。0：仅配置HTTP监听端口，没有证书1：证书来源为自有证书2：证书来源为托管证书
+ * @method void setCertType(integer $CertType) 设置证书类型。0：仅配置HTTP监听端口，没有证书1：证书来源为自有证书2：证书来源为托管证书
  * @method string getCert() 获取CertType为1时，需要填充此参数，表示自有证书的证书链
  * @method void setCert(string $Cert) 设置CertType为1时，需要填充此参数，表示自有证书的证书链
  * @method string getPrivateKey() 获取CertType为1时，需要填充此参数，表示自有证书的私钥
  * @method void setPrivateKey(string $PrivateKey) 设置CertType为1时，需要填充此参数，表示自有证书的私钥
  * @method string getSSLId() 获取CertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
  * @method void setSSLId(string $SSLId) 设置CertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
- * @method integer getIsCdn() 获取必填项。waf前是否部署有七层代理服务。
-0：没有部署代理服务
-1：有部署代理服务，waf将使用XFF获取客户端IP
-2：有部署代理服务，waf将使用remote_addr获取客户端IP
-3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
- * @method void setIsCdn(integer $IsCdn) 设置必填项。waf前是否部署有七层代理服务。
-0：没有部署代理服务
-1：有部署代理服务，waf将使用XFF获取客户端IP
-2：有部署代理服务，waf将使用remote_addr获取客户端IP
-3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
+ * @method integer getIsCdn() 获取waf前是否部署有七层代理服务。0：没有部署代理服务1：有部署代理服务，waf将使用XFF获取客户端IP2：有部署代理服务，waf将使用remote_addr获取客户端IP3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
+ * @method void setIsCdn(integer $IsCdn) 设置waf前是否部署有七层代理服务。0：没有部署代理服务1：有部署代理服务，waf将使用XFF获取客户端IP2：有部署代理服务，waf将使用remote_addr获取客户端IP3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
  * @method string getUpstreamScheme() 获取服务配置有HTTPS端口时，HTTPS的回源协议。
 http：使用http协议回源，和HttpsUpstreamPort配合使用
 https：使用https协议回源
@@ -58,78 +44,40 @@ http：使用http协议回源，和HttpsUpstreamPort配合使用
 https：使用https协议回源
  * @method string getHttpsUpstreamPort() 获取HTTPS回源端口,仅UpstreamScheme为http时需要填当前字段
  * @method void setHttpsUpstreamPort(string $HttpsUpstreamPort) 设置HTTPS回源端口,仅UpstreamScheme为http时需要填当前字段
- * @method integer getHttpsRewrite() 获取必填项。是否开启HTTP强制跳转到HTTPS。
-0：不强制跳转
-1：开启强制跳转
- * @method void setHttpsRewrite(integer $HttpsRewrite) 设置必填项。是否开启HTTP强制跳转到HTTPS。
-0：不强制跳转
-1：开启强制跳转
- * @method integer getUpstreamType() 获取必填项。回源类型。
-0：通过IP回源
-1：通过域名回源
- * @method void setUpstreamType(integer $UpstreamType) 设置必填项。回源类型。
-0：通过IP回源
-1：通过域名回源
+ * @method integer getHttpsRewrite() 获取是否开启HTTP强制跳转到HTTPS。0：不强制跳转1：开启强制跳转
+ * @method void setHttpsRewrite(integer $HttpsRewrite) 设置是否开启HTTP强制跳转到HTTPS。0：不强制跳转1：开启强制跳转
+ * @method integer getUpstreamType() 获取回源类型。0：通过IP回源1：通过域名回源
+ * @method void setUpstreamType(integer $UpstreamType) 设置回源类型。0：通过IP回源1：通过域名回源
  * @method string getUpstreamDomain() 获取域名回源时的回源域名。UpstreamType为1时，需要填充此字段
  * @method void setUpstreamDomain(string $UpstreamDomain) 设置域名回源时的回源域名。UpstreamType为1时，需要填充此字段
  * @method array getSrcList() 获取IP回源时的回源IP列表。UpstreamType为0时，需要填充此字段
  * @method void setSrcList(array $SrcList) 设置IP回源时的回源IP列表。UpstreamType为0时，需要填充此字段
- * @method integer getIsHttp2() 获取必填项。是否开启HTTP2，需要开启HTTPS协议支持。
-0：关闭
-1：开启
- * @method void setIsHttp2(integer $IsHttp2) 设置必填项。是否开启HTTP2，需要开启HTTPS协议支持。
-0：关闭
-1：开启
- * @method integer getIsWebsocket() 获取必填项。是否开启WebSocket支持。
-0：关闭
-1：开启
- * @method void setIsWebsocket(integer $IsWebsocket) 设置必填项。是否开启WebSocket支持。
-0：关闭
-1：开启
- * @method integer getLoadBalance() 获取必填项。回源负载均衡策略。
-0：轮询
-1：IP hash
-2：加权轮询
- * @method void setLoadBalance(integer $LoadBalance) 设置必填项。回源负载均衡策略。
-0：轮询
-1：IP hash
-2：加权轮询
- * @method integer getIsGray() 获取待废弃，可不填。是否开启灰度，0表示不开启灰度。
- * @method void setIsGray(integer $IsGray) 设置待废弃，可不填。是否开启灰度，0表示不开启灰度。
+ * @method integer getIsHttp2() 获取是否开启HTTP2，需要开启HTTPS协议支持。0：关闭1：开启
+ * @method void setIsHttp2(integer $IsHttp2) 设置是否开启HTTP2，需要开启HTTPS协议支持。0：关闭1：开启
+ * @method integer getIsWebsocket() 获取是否开启WebSocket支持。0：关闭1：开启
+ * @method void setIsWebsocket(integer $IsWebsocket) 设置是否开启WebSocket支持。0：关闭1：开启
+ * @method integer getLoadBalance() 获取回源负载均衡策略。0：轮询1：IP hash2：加权轮询
+ * @method void setLoadBalance(integer $LoadBalance) 设置回源负载均衡策略。0：轮询1：IP hash2：加权轮询
+ * @method integer getIsGray() 获取是否开启灰度，0表示不开启灰度。
+ * @method void setIsGray(integer $IsGray) 设置是否开启灰度，0表示不开启灰度。
  * @method string getEdition() 获取域名所属实例类型
  * @method void setEdition(string $Edition) 设置域名所属实例类型
- * @method array getPorts() 获取必填项。端口信息，可通过DescribeDomains接口获取具体参数信息。
- * @method void setPorts(array $Ports) 设置必填项。端口信息，可通过DescribeDomains接口获取具体参数信息。
- * @method string getIsKeepAlive() 获取必填项。是否开启长连接。
-0： 短连接
-1： 长连接
- * @method void setIsKeepAlive(string $IsKeepAlive) 设置必填项。是否开启长连接。
-0： 短连接
-1： 长连接
- * @method integer getAnycast() 获取必填项，待废弃。目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
- * @method void setAnycast(integer $Anycast) 设置必填项，待废弃。目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
+ * @method array getPorts() 获取端口信息，可通过DescribeDomains接口获取具体参数信息。
+ * @method void setPorts(array $Ports) 设置端口信息，可通过DescribeDomains接口获取具体参数信息。
+ * @method string getIsKeepAlive() 获取是否开启长连接。0： 短连接1： 长连接
+ * @method void setIsKeepAlive(string $IsKeepAlive) 设置是否开启长连接。0： 短连接1： 长连接
+ * @method integer getAnycast() 获取目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
+ * @method void setAnycast(integer $Anycast) 设置目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
  * @method array getWeights() 获取回源IP列表各IP的权重，和SrcList一一对应。当且仅当UpstreamType为0，并且SrcList有多个IP，并且LoadBalance为2时需要填写，否则填 []
  * @method void setWeights(array $Weights) 设置回源IP列表各IP的权重，和SrcList一一对应。当且仅当UpstreamType为0，并且SrcList有多个IP，并且LoadBalance为2时需要填写，否则填 []
- * @method integer getActiveCheck() 获取必填项，是否开启主动健康检测。
-0：不开启
-1：开启
- * @method void setActiveCheck(integer $ActiveCheck) 设置必填项，是否开启主动健康检测。
-0：不开启
-1：开启
+ * @method integer getActiveCheck() 获取是否开启主动健康检测。0：不开启1：开启
+ * @method void setActiveCheck(integer $ActiveCheck) 设置是否开启主动健康检测。0：不开启1：开启
  * @method integer getTLSVersion() 获取TLS版本信息
  * @method void setTLSVersion(integer $TLSVersion) 设置TLS版本信息
  * @method array getCiphers() 获取加密套件信息
  * @method void setCiphers(array $Ciphers) 设置加密套件信息
- * @method integer getCipherTemplate() 获取必填项。加密套件模板。
-0：不支持选择，使用默认模板  
-1：通用型模板 
-2：安全型模板
-3：自定义模板
- * @method void setCipherTemplate(integer $CipherTemplate) 设置必填项。加密套件模板。
-0：不支持选择，使用默认模板  
-1：通用型模板 
-2：安全型模板
-3：自定义模板
+ * @method integer getCipherTemplate() 获取加密套件模板。0：不支持选择，使用默认模板  1：通用型模板 2：安全型模板3：自定义模板
+ * @method void setCipherTemplate(integer $CipherTemplate) 设置加密套件模板。0：不支持选择，使用默认模板  1：通用型模板 2：安全型模板3：自定义模板
  * @method integer getProxyReadTimeout() 获取WAF与源站的读超时时间，默认300s。
  * @method void setProxyReadTimeout(integer $ProxyReadTimeout) 设置WAF与源站的读超时时间，默认300s。
  * @method integer getProxySendTimeout() 获取WAF与源站的写超时时间，默认300s。
@@ -148,20 +96,36 @@ https：使用https协议回源
  * @method void setSniHost(string $SniHost) 设置SniType为3时，需要填此参数，表示自定义的SNI；
  * @method array getIpHeaders() 获取IsCdn=3时，需要填此参数，表示自定义header
  * @method void setIpHeaders(array $IpHeaders) 设置IsCdn=3时，需要填此参数，表示自定义header
- * @method integer getXFFReset() 获取必填项。是否开启XFF重置。
-0：关闭
-1：开启
- * @method void setXFFReset(integer $XFFReset) 设置必填项。是否开启XFF重置。
-0：关闭
-1：开启
+ * @method integer getXFFReset() 获取是否开启XFF重置。0：关闭1：开启
+ * @method void setXFFReset(integer $XFFReset) 设置是否开启XFF重置。0：关闭1：开启
  * @method string getNote() 获取域名备注信息
  * @method void setNote(string $Note) 设置域名备注信息
  * @method string getUpstreamHost() 获取自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
  * @method void setUpstreamHost(string $UpstreamHost) 设置自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
- * @method integer getProxyBuffer() 获取是否开启缓存 0-关闭 1-开启
- * @method void setProxyBuffer(integer $ProxyBuffer) 设置是否开启缓存 0-关闭 1-开启
- * @method integer getProbeStatus() 获取0: 禁用拨测, 1: 启用拨测。默认启用拨测
- * @method void setProbeStatus(integer $ProbeStatus) 设置0: 禁用拨测, 1: 启用拨测。默认启用拨测
+ * @method integer getProxyBuffer() 获取是否开启缓存。 0：关闭 1：开启
+ * @method void setProxyBuffer(integer $ProxyBuffer) 设置是否开启缓存。 0：关闭 1：开启
+ * @method integer getProbeStatus() 获取是否开启拨测。 0: 禁用拨测 1: 启用拨测。默认启用拨测
+ * @method void setProbeStatus(integer $ProbeStatus) 设置是否开启拨测。 0: 禁用拨测 1: 启用拨测。默认启用拨测
+ * @method integer getGmType() 获取国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问
+ * @method void setGmType(integer $GmType) 设置国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问
+ * @method integer getGmCertType() 获取国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
+ * @method void setGmCertType(integer $GmCertType) 设置国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
+ * @method string getGmCert() 获取GmCertType为1时，需要填充此参数，表示自有国密证书的证书链
+ * @method void setGmCert(string $GmCert) 设置GmCertType为1时，需要填充此参数，表示自有国密证书的证书链
+ * @method string getGmPrivateKey() 获取GmCertType为1时，需要填充此参数，表示自有国密证书的私钥
+ * @method void setGmPrivateKey(string $GmPrivateKey) 设置GmCertType为1时，需要填充此参数，表示自有国密证书的私钥
+ * @method string getGmEncCert() 获取GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书
+ * @method void setGmEncCert(string $GmEncCert) 设置GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书
+ * @method string getGmEncPrivateKey() 获取GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
+ * @method void setGmEncPrivateKey(string $GmEncPrivateKey) 设置GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
+ * @method string getGmSSLId() 获取GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
+ * @method void setGmSSLId(string $GmSSLId) 设置GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
+ * @method integer getUpstreamPolicy() 获取回源策略，支持负载均衡回源和分流回源两种方式。0：默认值，负载均衡回源；1：分流回源
+ * @method void setUpstreamPolicy(integer $UpstreamPolicy) 设置回源策略，支持负载均衡回源和分流回源两种方式。0：默认值，负载均衡回源；1：分流回源
+ * @method array getUpstreamRules() 获取分流回源时生效，分流回源的规则。
+ * @method void setUpstreamRules(array $UpstreamRules) 设置分流回源时生效，分流回源的规则。
+ * @method integer getUseCase() 获取业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
+ * @method void setUseCase(integer $UseCase) 设置业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
  */
 class ModifySpartaProtectionRequest extends AbstractModel
 {
@@ -181,10 +145,7 @@ class ModifySpartaProtectionRequest extends AbstractModel
     public $InstanceID;
 
     /**
-     * @var integer 必填项。证书类型。
-0：仅配置HTTP监听端口，没有证书
-1：证书来源为自有证书
-2：证书来源为托管证书
+     * @var integer 证书类型。0：仅配置HTTP监听端口，没有证书1：证书来源为自有证书2：证书来源为托管证书
      */
     public $CertType;
 
@@ -204,11 +165,7 @@ class ModifySpartaProtectionRequest extends AbstractModel
     public $SSLId;
 
     /**
-     * @var integer 必填项。waf前是否部署有七层代理服务。
-0：没有部署代理服务
-1：有部署代理服务，waf将使用XFF获取客户端IP
-2：有部署代理服务，waf将使用remote_addr获取客户端IP
-3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
+     * @var integer waf前是否部署有七层代理服务。0：没有部署代理服务1：有部署代理服务，waf将使用XFF获取客户端IP2：有部署代理服务，waf将使用remote_addr获取客户端IP3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
      */
     public $IsCdn;
 
@@ -225,16 +182,12 @@ https：使用https协议回源
     public $HttpsUpstreamPort;
 
     /**
-     * @var integer 必填项。是否开启HTTP强制跳转到HTTPS。
-0：不强制跳转
-1：开启强制跳转
+     * @var integer 是否开启HTTP强制跳转到HTTPS。0：不强制跳转1：开启强制跳转
      */
     public $HttpsRewrite;
 
     /**
-     * @var integer 必填项。回源类型。
-0：通过IP回源
-1：通过域名回源
+     * @var integer 回源类型。0：通过IP回源1：通过域名回源
      */
     public $UpstreamType;
 
@@ -249,29 +202,23 @@ https：使用https协议回源
     public $SrcList;
 
     /**
-     * @var integer 必填项。是否开启HTTP2，需要开启HTTPS协议支持。
-0：关闭
-1：开启
+     * @var integer 是否开启HTTP2，需要开启HTTPS协议支持。0：关闭1：开启
      */
     public $IsHttp2;
 
     /**
-     * @var integer 必填项。是否开启WebSocket支持。
-0：关闭
-1：开启
+     * @var integer 是否开启WebSocket支持。0：关闭1：开启
      */
     public $IsWebsocket;
 
     /**
-     * @var integer 必填项。回源负载均衡策略。
-0：轮询
-1：IP hash
-2：加权轮询
+     * @var integer 回源负载均衡策略。0：轮询1：IP hash2：加权轮询
      */
     public $LoadBalance;
 
     /**
-     * @var integer 待废弃，可不填。是否开启灰度，0表示不开启灰度。
+     * @var integer 是否开启灰度，0表示不开启灰度。
+     * @deprecated
      */
     public $IsGray;
 
@@ -281,19 +228,18 @@ https：使用https协议回源
     public $Edition;
 
     /**
-     * @var array 必填项。端口信息，可通过DescribeDomains接口获取具体参数信息。
+     * @var array 端口信息，可通过DescribeDomains接口获取具体参数信息。
      */
     public $Ports;
 
     /**
-     * @var string 必填项。是否开启长连接。
-0： 短连接
-1： 长连接
+     * @var string 是否开启长连接。0： 短连接1： 长连接
      */
     public $IsKeepAlive;
 
     /**
-     * @var integer 必填项，待废弃。目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
+     * @var integer 目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
+     * @deprecated
      */
     public $Anycast;
 
@@ -303,9 +249,7 @@ https：使用https协议回源
     public $Weights;
 
     /**
-     * @var integer 必填项，是否开启主动健康检测。
-0：不开启
-1：开启
+     * @var integer 是否开启主动健康检测。0：不开启1：开启
      */
     public $ActiveCheck;
 
@@ -320,11 +264,7 @@ https：使用https协议回源
     public $Ciphers;
 
     /**
-     * @var integer 必填项。加密套件模板。
-0：不支持选择，使用默认模板  
-1：通用型模板 
-2：安全型模板
-3：自定义模板
+     * @var integer 加密套件模板。0：不支持选择，使用默认模板  1：通用型模板 2：安全型模板3：自定义模板
      */
     public $CipherTemplate;
 
@@ -358,9 +298,7 @@ https：使用https协议回源
     public $IpHeaders;
 
     /**
-     * @var integer 必填项。是否开启XFF重置。
-0：关闭
-1：开启
+     * @var integer 是否开启XFF重置。0：关闭1：开启
      */
     public $XFFReset;
 
@@ -375,71 +313,95 @@ https：使用https协议回源
     public $UpstreamHost;
 
     /**
-     * @var integer 是否开启缓存 0-关闭 1-开启
+     * @var integer 是否开启缓存。 0：关闭 1：开启
      */
     public $ProxyBuffer;
 
     /**
-     * @var integer 0: 禁用拨测, 1: 启用拨测。默认启用拨测
+     * @var integer 是否开启拨测。 0: 禁用拨测 1: 启用拨测。默认启用拨测
      */
     public $ProbeStatus;
+
+    /**
+     * @var integer 国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问
+     */
+    public $GmType;
+
+    /**
+     * @var integer 国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
+     */
+    public $GmCertType;
+
+    /**
+     * @var string GmCertType为1时，需要填充此参数，表示自有国密证书的证书链
+     */
+    public $GmCert;
+
+    /**
+     * @var string GmCertType为1时，需要填充此参数，表示自有国密证书的私钥
+     */
+    public $GmPrivateKey;
+
+    /**
+     * @var string GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书
+     */
+    public $GmEncCert;
+
+    /**
+     * @var string GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
+     */
+    public $GmEncPrivateKey;
+
+    /**
+     * @var string GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
+     */
+    public $GmSSLId;
+
+    /**
+     * @var integer 回源策略，支持负载均衡回源和分流回源两种方式。0：默认值，负载均衡回源；1：分流回源
+     */
+    public $UpstreamPolicy;
+
+    /**
+     * @var array 分流回源时生效，分流回源的规则。
+     */
+    public $UpstreamRules;
+
+    /**
+     * @var integer 业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
+     */
+    public $UseCase;
 
     /**
      * @param string $Domain 域名
      * @param string $DomainId 必填项。域名唯一ID
      * @param string $InstanceID 必填项。域名所属实例id
-     * @param integer $CertType 必填项。证书类型。
-0：仅配置HTTP监听端口，没有证书
-1：证书来源为自有证书
-2：证书来源为托管证书
+     * @param integer $CertType 证书类型。0：仅配置HTTP监听端口，没有证书1：证书来源为自有证书2：证书来源为托管证书
      * @param string $Cert CertType为1时，需要填充此参数，表示自有证书的证书链
      * @param string $PrivateKey CertType为1时，需要填充此参数，表示自有证书的私钥
      * @param string $SSLId CertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
-     * @param integer $IsCdn 必填项。waf前是否部署有七层代理服务。
-0：没有部署代理服务
-1：有部署代理服务，waf将使用XFF获取客户端IP
-2：有部署代理服务，waf将使用remote_addr获取客户端IP
-3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
+     * @param integer $IsCdn waf前是否部署有七层代理服务。0：没有部署代理服务1：有部署代理服务，waf将使用XFF获取客户端IP2：有部署代理服务，waf将使用remote_addr获取客户端IP3：有部署代理服务，waf将使用ip_headers中的自定义header获取客户端IP
      * @param string $UpstreamScheme 服务配置有HTTPS端口时，HTTPS的回源协议。
 http：使用http协议回源，和HttpsUpstreamPort配合使用
 https：使用https协议回源
      * @param string $HttpsUpstreamPort HTTPS回源端口,仅UpstreamScheme为http时需要填当前字段
-     * @param integer $HttpsRewrite 必填项。是否开启HTTP强制跳转到HTTPS。
-0：不强制跳转
-1：开启强制跳转
-     * @param integer $UpstreamType 必填项。回源类型。
-0：通过IP回源
-1：通过域名回源
+     * @param integer $HttpsRewrite 是否开启HTTP强制跳转到HTTPS。0：不强制跳转1：开启强制跳转
+     * @param integer $UpstreamType 回源类型。0：通过IP回源1：通过域名回源
      * @param string $UpstreamDomain 域名回源时的回源域名。UpstreamType为1时，需要填充此字段
      * @param array $SrcList IP回源时的回源IP列表。UpstreamType为0时，需要填充此字段
-     * @param integer $IsHttp2 必填项。是否开启HTTP2，需要开启HTTPS协议支持。
-0：关闭
-1：开启
-     * @param integer $IsWebsocket 必填项。是否开启WebSocket支持。
-0：关闭
-1：开启
-     * @param integer $LoadBalance 必填项。回源负载均衡策略。
-0：轮询
-1：IP hash
-2：加权轮询
-     * @param integer $IsGray 待废弃，可不填。是否开启灰度，0表示不开启灰度。
+     * @param integer $IsHttp2 是否开启HTTP2，需要开启HTTPS协议支持。0：关闭1：开启
+     * @param integer $IsWebsocket 是否开启WebSocket支持。0：关闭1：开启
+     * @param integer $LoadBalance 回源负载均衡策略。0：轮询1：IP hash2：加权轮询
+     * @param integer $IsGray 是否开启灰度，0表示不开启灰度。
      * @param string $Edition 域名所属实例类型
-     * @param array $Ports 必填项。端口信息，可通过DescribeDomains接口获取具体参数信息。
-     * @param string $IsKeepAlive 必填项。是否开启长连接。
-0： 短连接
-1： 长连接
-     * @param integer $Anycast 必填项，待废弃。目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
+     * @param array $Ports 端口信息，可通过DescribeDomains接口获取具体参数信息。
+     * @param string $IsKeepAlive 是否开启长连接。0： 短连接1： 长连接
+     * @param integer $Anycast 目前填0即可。anycast IP类型开关： 0 普通IP 1 Anycast IP
      * @param array $Weights 回源IP列表各IP的权重，和SrcList一一对应。当且仅当UpstreamType为0，并且SrcList有多个IP，并且LoadBalance为2时需要填写，否则填 []
-     * @param integer $ActiveCheck 必填项，是否开启主动健康检测。
-0：不开启
-1：开启
+     * @param integer $ActiveCheck 是否开启主动健康检测。0：不开启1：开启
      * @param integer $TLSVersion TLS版本信息
      * @param array $Ciphers 加密套件信息
-     * @param integer $CipherTemplate 必填项。加密套件模板。
-0：不支持选择，使用默认模板  
-1：通用型模板 
-2：安全型模板
-3：自定义模板
+     * @param integer $CipherTemplate 加密套件模板。0：不支持选择，使用默认模板  1：通用型模板 2：安全型模板3：自定义模板
      * @param integer $ProxyReadTimeout WAF与源站的读超时时间，默认300s。
      * @param integer $ProxySendTimeout WAF与源站的写超时时间，默认300s。
      * @param integer $SniType WAF回源时的SNI类型。
@@ -449,13 +411,21 @@ https：使用https协议回源
 3：开启SNI，SNI为自定义域名
      * @param string $SniHost SniType为3时，需要填此参数，表示自定义的SNI；
      * @param array $IpHeaders IsCdn=3时，需要填此参数，表示自定义header
-     * @param integer $XFFReset 必填项。是否开启XFF重置。
-0：关闭
-1：开启
+     * @param integer $XFFReset 是否开启XFF重置。0：关闭1：开启
      * @param string $Note 域名备注信息
      * @param string $UpstreamHost 自定义回源Host。默认为空字符串，表示使用防护域名作为回源Host。
-     * @param integer $ProxyBuffer 是否开启缓存 0-关闭 1-开启
-     * @param integer $ProbeStatus 0: 禁用拨测, 1: 启用拨测。默认启用拨测
+     * @param integer $ProxyBuffer 是否开启缓存。 0：关闭 1：开启
+     * @param integer $ProbeStatus 是否开启拨测。 0: 禁用拨测 1: 启用拨测。默认启用拨测
+     * @param integer $GmType 国密选项。0：不开启国密 1：在原有TLS选项的基础上追加支持国密 2：开启国密并仅支持国密客户端访问
+     * @param integer $GmCertType 国密证书类型。0：无国密证书 1：证书来源为自有国密证书 2：证书来源为托管国密证书
+     * @param string $GmCert GmCertType为1时，需要填充此参数，表示自有国密证书的证书链
+     * @param string $GmPrivateKey GmCertType为1时，需要填充此参数，表示自有国密证书的私钥
+     * @param string $GmEncCert GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书
+     * @param string $GmEncPrivateKey GmCertType为1时，需要填充此参数，表示自有国密证书的加密证书的私钥
+     * @param string $GmSSLId GmCertType为2时，需要填充此参数，表示腾讯云SSL平台托管的证书id
+     * @param integer $UpstreamPolicy 回源策略，支持负载均衡回源和分流回源两种方式。0：默认值，负载均衡回源；1：分流回源
+     * @param array $UpstreamRules 分流回源时生效，分流回源的规则。
+     * @param integer $UseCase 业务场景。0：默认值，表示常规业务场景 1：大模型业务场景
      */
     function __construct()
     {
@@ -621,6 +591,51 @@ https：使用https协议回源
 
         if (array_key_exists("ProbeStatus",$param) and $param["ProbeStatus"] !== null) {
             $this->ProbeStatus = $param["ProbeStatus"];
+        }
+
+        if (array_key_exists("GmType",$param) and $param["GmType"] !== null) {
+            $this->GmType = $param["GmType"];
+        }
+
+        if (array_key_exists("GmCertType",$param) and $param["GmCertType"] !== null) {
+            $this->GmCertType = $param["GmCertType"];
+        }
+
+        if (array_key_exists("GmCert",$param) and $param["GmCert"] !== null) {
+            $this->GmCert = $param["GmCert"];
+        }
+
+        if (array_key_exists("GmPrivateKey",$param) and $param["GmPrivateKey"] !== null) {
+            $this->GmPrivateKey = $param["GmPrivateKey"];
+        }
+
+        if (array_key_exists("GmEncCert",$param) and $param["GmEncCert"] !== null) {
+            $this->GmEncCert = $param["GmEncCert"];
+        }
+
+        if (array_key_exists("GmEncPrivateKey",$param) and $param["GmEncPrivateKey"] !== null) {
+            $this->GmEncPrivateKey = $param["GmEncPrivateKey"];
+        }
+
+        if (array_key_exists("GmSSLId",$param) and $param["GmSSLId"] !== null) {
+            $this->GmSSLId = $param["GmSSLId"];
+        }
+
+        if (array_key_exists("UpstreamPolicy",$param) and $param["UpstreamPolicy"] !== null) {
+            $this->UpstreamPolicy = $param["UpstreamPolicy"];
+        }
+
+        if (array_key_exists("UpstreamRules",$param) and $param["UpstreamRules"] !== null) {
+            $this->UpstreamRules = [];
+            foreach ($param["UpstreamRules"] as $key => $value){
+                $obj = new UpstreamRule();
+                $obj->deserialize($value);
+                array_push($this->UpstreamRules, $obj);
+            }
+        }
+
+        if (array_key_exists("UseCase",$param) and $param["UseCase"] !== null) {
+            $this->UseCase = $param["UseCase"];
         }
     }
 }

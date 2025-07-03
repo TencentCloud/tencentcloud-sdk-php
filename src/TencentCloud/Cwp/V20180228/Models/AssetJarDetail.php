@@ -37,17 +37,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getOsInfo() 获取操作系统
  * @method void setOsInfo(string $OsInfo) 设置操作系统
  * @method array getProcess() 获取引用进程列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProcess(array $Process) 设置引用进程列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMd5() 获取Jar包Md5
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMd5(string $Md5) 设置Jar包Md5
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AssetJarDetail extends AbstractModel
 {
@@ -93,19 +87,16 @@ class AssetJarDetail extends AbstractModel
 
     /**
      * @var array 引用进程列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Process;
 
     /**
      * @var string Jar包Md5
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Md5;
 
     /**
      * @var string 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
@@ -119,11 +110,8 @@ class AssetJarDetail extends AbstractModel
      * @param string $MachineName 服务器名称
      * @param string $OsInfo 操作系统
      * @param array $Process 引用进程列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Md5 Jar包Md5
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 数据更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

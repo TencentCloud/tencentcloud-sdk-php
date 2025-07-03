@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 漏洞top统计实体
  *
  * @method string getVulName() 获取漏洞 名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVulName(string $VulName) 设置漏洞 名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVulLevel() 获取危害等级：1-低危；2-中危；3-高危；4-严重
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVulLevel(integer $VulLevel) 设置危害等级：1-低危；2-中危；3-高危；4-严重
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVulCount() 获取漏洞数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVulCount(integer $VulCount) 设置漏洞数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getVulId() 获取漏洞id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVulId(integer $VulId) 设置漏洞id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VulTopInfo extends AbstractModel
 {
     /**
      * @var string 漏洞 名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VulName;
 
     /**
      * @var integer 危害等级：1-低危；2-中危；3-高危；4-严重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VulLevel;
 
     /**
      * @var integer 漏洞数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VulCount;
 
     /**
      * @var integer 漏洞id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VulId;
 
     /**
      * @param string $VulName 漏洞 名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VulLevel 危害等级：1-低危；2-中危；3-高危；4-严重
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VulCount 漏洞数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $VulId 漏洞id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

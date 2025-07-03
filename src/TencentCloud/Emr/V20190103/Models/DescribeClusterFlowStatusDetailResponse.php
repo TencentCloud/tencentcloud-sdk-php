@@ -29,15 +29,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowDesc(array $FlowDesc) 设置任务参数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFlowName() 获取任务名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowName(string $FlowName) 设置任务名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getFlowTotalProgress() 获取总任务流程进度：
 例如：0.8
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowTotalProgress(float $FlowTotalProgress) 设置总任务流程进度：
 例如：0.8
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFlowTotalStatus() 获取定义流程总状态：
 0:初始化，
 1:运行中，
@@ -45,7 +41,6 @@ use TencentCloud\Common\AbstractModel;
 3:完成（存在跳过步骤），
 -1:失败，
 -3:阻塞，
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowTotalStatus(integer $FlowTotalStatus) 设置定义流程总状态：
 0:初始化，
 1:运行中，
@@ -53,13 +48,14 @@ use TencentCloud\Common\AbstractModel;
 3:完成（存在跳过步骤），
 -1:失败，
 -3:阻塞，
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getFlowExtraDetail() 获取流程额外信息
 NeedExtraDetail为true时返回
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowExtraDetail(array $FlowExtraDetail) 设置流程额外信息
 NeedExtraDetail为true时返回
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFlowInfo() 获取流程描述
+ * @method void setFlowInfo(string $FlowInfo) 设置流程描述
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -79,14 +75,12 @@ class DescribeClusterFlowStatusDetailResponse extends AbstractModel
 
     /**
      * @var string 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowName;
 
     /**
      * @var float 总任务流程进度：
 例如：0.8
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowTotalProgress;
 
@@ -98,7 +92,6 @@ class DescribeClusterFlowStatusDetailResponse extends AbstractModel
 3:完成（存在跳过步骤），
 -1:失败，
 -3:阻塞，
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowTotalStatus;
 
@@ -108,6 +101,11 @@ NeedExtraDetail为true时返回
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowExtraDetail;
+
+    /**
+     * @var string 流程描述
+     */
+    public $FlowInfo;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -120,10 +118,8 @@ NeedExtraDetail为true时返回
      * @param array $FlowDesc 任务参数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FlowName 任务名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $FlowTotalProgress 总任务流程进度：
 例如：0.8
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FlowTotalStatus 定义流程总状态：
 0:初始化，
 1:运行中，
@@ -131,10 +127,10 @@ NeedExtraDetail为true时返回
 3:完成（存在跳过步骤），
 -1:失败，
 -3:阻塞，
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FlowExtraDetail 流程额外信息
 NeedExtraDetail为true时返回
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FlowInfo 流程描述
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -187,6 +183,10 @@ NeedExtraDetail为true时返回
                 $obj->deserialize($value);
                 array_push($this->FlowExtraDetail, $obj);
             }
+        }
+
+        if (array_key_exists("FlowInfo",$param) and $param["FlowInfo"] !== null) {
+            $this->FlowInfo = $param["FlowInfo"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

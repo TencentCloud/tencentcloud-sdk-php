@@ -21,153 +21,105 @@ use TencentCloud\Common\AbstractModel;
  * 云硬盘的仓库级别信息
  *
  * @method string getSetId() 获取云硬盘仓库id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSetId(string $SetId) 设置云硬盘仓库id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSetName() 获取云硬盘仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSetName(string $SetName) 设置云硬盘仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSetType() 获取云硬盘仓库类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSetType(string $SetType) 设置云硬盘仓库类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getSetSize() 获取云硬盘仓库容量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSetSize(float $SetSize) 设置云硬盘仓库容量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSetStatus() 获取云硬盘仓库状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSetStatus(string $SetStatus) 设置云硬盘仓库状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取云硬盘仓库创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置云硬盘仓库创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DetailData getReadTraffic() 获取读流量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReadTraffic(DetailData $ReadTraffic) 设置读流量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DetailData getWriteTraffic() 获取写流量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWriteTraffic(DetailData $WriteTraffic) 设置写流量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DetailData getReadIO() 获取读IO
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReadIO(DetailData $ReadIO) 设置读IO
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DetailData getWriteIO() 获取写IO
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWriteIO(DetailData $WriteIO) 设置写IO
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DetailData getAwait() 获取平均等待时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAwait(DetailData $Await) 设置平均等待时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method DetailData getUtil() 获取利用率
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUtil(DetailData $Util) 设置利用率
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SetInfo extends AbstractModel
 {
     /**
      * @var string 云硬盘仓库id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SetId;
 
     /**
      * @var string 云硬盘仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SetName;
 
     /**
      * @var string 云硬盘仓库类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SetType;
 
     /**
      * @var float 云硬盘仓库容量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SetSize;
 
     /**
      * @var string 云硬盘仓库状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SetStatus;
 
     /**
      * @var string 云硬盘仓库创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var DetailData 读流量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReadTraffic;
 
     /**
      * @var DetailData 写流量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WriteTraffic;
 
     /**
      * @var DetailData 读IO
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReadIO;
 
     /**
      * @var DetailData 写IO
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WriteIO;
 
     /**
      * @var DetailData 平均等待时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Await;
 
     /**
      * @var DetailData 利用率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Util;
 
     /**
      * @param string $SetId 云硬盘仓库id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SetName 云硬盘仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SetType 云硬盘仓库类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $SetSize 云硬盘仓库容量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SetStatus 云硬盘仓库状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 云硬盘仓库创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DetailData $ReadTraffic 读流量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DetailData $WriteTraffic 写流量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DetailData $ReadIO 读IO
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DetailData $WriteIO 写IO
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DetailData $Await 平均等待时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param DetailData $Util 利用率
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 孕产结论部分
  *
  * @method array getFetus() 获取胎儿数据结构
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFetus(array $Fetus) 设置胎儿数据结构
-注意：此字段可能返回 null，表示取不到有效值。
  * @method FieldInfo getFetusNum() 获取胎儿数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFetusNum(FieldInfo $FetusNum) 设置胎儿数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSym() 获取病变
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSym(array $Sym) 设置病变
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getText() 获取原文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setText(string $Text) 设置原文
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getCoords() 获取坐标
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCoords(array $Coords) 设置坐标
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MaternitySummary extends AbstractModel
 {
     /**
      * @var array 胎儿数据结构
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Fetus;
 
     /**
      * @var FieldInfo 胎儿数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FetusNum;
 
     /**
      * @var array 病变
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Sym;
 
     /**
      * @var string 原文
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Text;
 
     /**
      * @var array 坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Coords;
 
     /**
      * @param array $Fetus 胎儿数据结构
-注意：此字段可能返回 null，表示取不到有效值。
      * @param FieldInfo $FetusNum 胎儿数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Sym 病变
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Text 原文
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Coords 坐标
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

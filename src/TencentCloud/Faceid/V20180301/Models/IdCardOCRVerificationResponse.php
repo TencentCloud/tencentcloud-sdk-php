@@ -21,48 +21,48 @@ use TencentCloud\Common\AbstractModel;
  * IdCardOCRVerification返回参数结构体
  *
  * @method string getResult() 获取认证结果码，收费情况如下。
-收费结果码：
-0: 姓名和身份证号一致
--1: 姓名和身份证号不一致
-不收费结果码：
--2: 非法身份证号（长度、校验位等不正确）
--3: 非法姓名（长度、格式等不正确）
--4: 证件库服务异常
--5: 证件库中无此身份证记录
--6: 权威比对系统升级中，请稍后再试
--7: 认证次数超过当日限制
+- 收费结果码：
+0: 姓名和身份证号一致。
+-1: 姓名和身份证号不一致。
+- 不收费结果码：
+-2: 非法身份证号（长度、校验位等不正确）。
+-3: 非法姓名（长度、格式等不正确）。
+-4: 证件库服务异常。
+-5: 证件库中无此身份证记录。
+-6: 权威比对系统升级中，请稍后再试。
+-7: 认证次数超过当日限制。
  * @method void setResult(string $Result) 设置认证结果码，收费情况如下。
-收费结果码：
-0: 姓名和身份证号一致
--1: 姓名和身份证号不一致
-不收费结果码：
--2: 非法身份证号（长度、校验位等不正确）
--3: 非法姓名（长度、格式等不正确）
--4: 证件库服务异常
--5: 证件库中无此身份证记录
--6: 权威比对系统升级中，请稍后再试
--7: 认证次数超过当日限制
+- 收费结果码：
+0: 姓名和身份证号一致。
+-1: 姓名和身份证号不一致。
+- 不收费结果码：
+-2: 非法身份证号（长度、校验位等不正确）。
+-3: 非法姓名（长度、格式等不正确）。
+-4: 证件库服务异常。
+-5: 证件库中无此身份证记录。
+-6: 权威比对系统升级中，请稍后再试。
+-7: 认证次数超过当日限制。
  * @method string getDescription() 获取业务结果描述。
  * @method void setDescription(string $Description) 设置业务结果描述。
- * @method string getName() 获取用于验证的姓名
- * @method void setName(string $Name) 设置用于验证的姓名
- * @method string getIdCard() 获取用于验证的身份证号
- * @method void setIdCard(string $IdCard) 设置用于验证的身份证号
- * @method string getSex() 获取OCR得到的性别
+ * @method string getName() 获取用于验证的姓名。
+ * @method void setName(string $Name) 设置用于验证的姓名。
+ * @method string getIdCard() 获取用于验证的身份证号。
+ * @method void setIdCard(string $IdCard) 设置用于验证的身份证号。
+ * @method string getSex() 获取OCR得到的性别。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSex(string $Sex) 设置OCR得到的性别
+ * @method void setSex(string $Sex) 设置OCR得到的性别。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getNation() 获取OCR得到的民族
+ * @method string getNation() 获取OCR得到的民族。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNation(string $Nation) 设置OCR得到的民族
+ * @method void setNation(string $Nation) 设置OCR得到的民族。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getBirth() 获取OCR得到的生日
+ * @method string getBirth() 获取OCR得到的生日。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBirth(string $Birth) 设置OCR得到的生日
+ * @method void setBirth(string $Birth) 设置OCR得到的生日。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAddress() 获取OCR得到的地址
+ * @method string getAddress() 获取OCR得到的地址。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAddress(string $Address) 设置OCR得到的地址
+ * @method void setAddress(string $Address) 设置OCR得到的地址。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -71,16 +71,16 @@ class IdCardOCRVerificationResponse extends AbstractModel
 {
     /**
      * @var string 认证结果码，收费情况如下。
-收费结果码：
-0: 姓名和身份证号一致
--1: 姓名和身份证号不一致
-不收费结果码：
--2: 非法身份证号（长度、校验位等不正确）
--3: 非法姓名（长度、格式等不正确）
--4: 证件库服务异常
--5: 证件库中无此身份证记录
--6: 权威比对系统升级中，请稍后再试
--7: 认证次数超过当日限制
+- 收费结果码：
+0: 姓名和身份证号一致。
+-1: 姓名和身份证号不一致。
+- 不收费结果码：
+-2: 非法身份证号（长度、校验位等不正确）。
+-3: 非法姓名（长度、格式等不正确）。
+-4: 证件库服务异常。
+-5: 证件库中无此身份证记录。
+-6: 权威比对系统升级中，请稍后再试。
+-7: 认证次数超过当日限制。
      */
     public $Result;
 
@@ -90,35 +90,35 @@ class IdCardOCRVerificationResponse extends AbstractModel
     public $Description;
 
     /**
-     * @var string 用于验证的姓名
+     * @var string 用于验证的姓名。
      */
     public $Name;
 
     /**
-     * @var string 用于验证的身份证号
+     * @var string 用于验证的身份证号。
      */
     public $IdCard;
 
     /**
-     * @var string OCR得到的性别
+     * @var string OCR得到的性别。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Sex;
 
     /**
-     * @var string OCR得到的民族
+     * @var string OCR得到的民族。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Nation;
 
     /**
-     * @var string OCR得到的生日
+     * @var string OCR得到的生日。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Birth;
 
     /**
-     * @var string OCR得到的地址
+     * @var string OCR得到的地址。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Address;
@@ -130,26 +130,26 @@ class IdCardOCRVerificationResponse extends AbstractModel
 
     /**
      * @param string $Result 认证结果码，收费情况如下。
-收费结果码：
-0: 姓名和身份证号一致
--1: 姓名和身份证号不一致
-不收费结果码：
--2: 非法身份证号（长度、校验位等不正确）
--3: 非法姓名（长度、格式等不正确）
--4: 证件库服务异常
--5: 证件库中无此身份证记录
--6: 权威比对系统升级中，请稍后再试
--7: 认证次数超过当日限制
+- 收费结果码：
+0: 姓名和身份证号一致。
+-1: 姓名和身份证号不一致。
+- 不收费结果码：
+-2: 非法身份证号（长度、校验位等不正确）。
+-3: 非法姓名（长度、格式等不正确）。
+-4: 证件库服务异常。
+-5: 证件库中无此身份证记录。
+-6: 权威比对系统升级中，请稍后再试。
+-7: 认证次数超过当日限制。
      * @param string $Description 业务结果描述。
-     * @param string $Name 用于验证的姓名
-     * @param string $IdCard 用于验证的身份证号
-     * @param string $Sex OCR得到的性别
+     * @param string $Name 用于验证的姓名。
+     * @param string $IdCard 用于验证的身份证号。
+     * @param string $Sex OCR得到的性别。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Nation OCR得到的民族
+     * @param string $Nation OCR得到的民族。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Birth OCR得到的生日
+     * @param string $Birth OCR得到的生日。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Address OCR得到的地址
+     * @param string $Address OCR得到的地址。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

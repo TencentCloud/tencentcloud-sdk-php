@@ -37,9 +37,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getCapacity() 获取取回容量，单位MB
  * @method void setCapacity(integer $Capacity) 设置取回容量，单位MB
  * @method string getDescribe() 获取任务描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDescribe(string $Describe) 设置任务描述
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getChannelCount() 获取任务通道数量
  * @method void setChannelCount(integer $ChannelCount) 设置任务通道数量
  */
@@ -87,7 +85,6 @@ class RecordRetrieveTaskDetailsInfo extends AbstractModel
 
     /**
      * @var string 任务描述
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Describe;
 
@@ -106,7 +103,6 @@ class RecordRetrieveTaskDetailsInfo extends AbstractModel
      * @param integer $Status 任务状态， 0:已取回，1:取回中，2:待取回
      * @param integer $Capacity 取回容量，单位MB
      * @param string $Describe 任务描述
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ChannelCount 任务通道数量
      */
     function __construct()

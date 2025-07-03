@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVoucherIds(array $VoucherIds) 设置代金券ID列表,目前仅支持指定一张代金券
  * @method array getBigDealIds() 获取需要支付的一个或者多个大订单号，与OrderIds字段两者必须且仅传一个参数
  * @method void setBigDealIds(array $BigDealIds) 设置需要支付的一个或者多个大订单号，与OrderIds字段两者必须且仅传一个参数
+ * @method integer getAgentPay() 获取0非代理，1代理商代付，3集团代理，4代理商为代客下产品级代付单，默认0
+ * @method void setAgentPay(integer $AgentPay) 设置0非代理，1代理商代付，3集团代理，4代理商为代客下产品级代付单，默认0
+ * @method string getCpsUin() 获取推荐者，用于返利
+ * @method void setCpsUin(string $CpsUin) 设置推荐者，用于返利
  */
 class PayDealsRequest extends AbstractModel
 {
@@ -52,10 +56,22 @@ class PayDealsRequest extends AbstractModel
     public $BigDealIds;
 
     /**
+     * @var integer 0非代理，1代理商代付，3集团代理，4代理商为代客下产品级代付单，默认0
+     */
+    public $AgentPay;
+
+    /**
+     * @var string 推荐者，用于返利
+     */
+    public $CpsUin;
+
+    /**
      * @param array $OrderIds 需要支付的一个或者多个子订单号，与BigDealIds字段两者必须且仅传一个参数
      * @param integer $AutoVoucher 是否自动使用代金券,1:是,0否,默认0
      * @param array $VoucherIds 代金券ID列表,目前仅支持指定一张代金券
      * @param array $BigDealIds 需要支付的一个或者多个大订单号，与OrderIds字段两者必须且仅传一个参数
+     * @param integer $AgentPay 0非代理，1代理商代付，3集团代理，4代理商为代客下产品级代付单，默认0
+     * @param string $CpsUin 推荐者，用于返利
      */
     function __construct()
     {
@@ -84,6 +100,14 @@ class PayDealsRequest extends AbstractModel
 
         if (array_key_exists("BigDealIds",$param) and $param["BigDealIds"] !== null) {
             $this->BigDealIds = $param["BigDealIds"];
+        }
+
+        if (array_key_exists("AgentPay",$param) and $param["AgentPay"] !== null) {
+            $this->AgentPay = $param["AgentPay"];
+        }
+
+        if (array_key_exists("CpsUin",$param) and $param["CpsUin"] !== null) {
+            $this->CpsUin = $param["CpsUin"];
         }
     }
 }

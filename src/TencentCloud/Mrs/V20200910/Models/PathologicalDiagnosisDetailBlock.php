@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 病理详细
  *
  * @method string getPart() 获取部位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPart(string $Part) 设置部位
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHistologicalType() 获取类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHistologicalType(string $HistologicalType) 设置类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHistologicalGrade() 获取等级
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHistologicalGrade(string $HistologicalGrade) 设置等级
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PathologicalDiagnosisDetailBlock extends AbstractModel
 {
     /**
      * @var string 部位
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Part;
 
     /**
      * @var string 类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HistologicalType;
 
     /**
      * @var string 等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HistologicalGrade;
 
     /**
      * @param string $Part 部位
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HistologicalType 类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HistologicalGrade 等级
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,45 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * Kong网关主动健康检查配置
  *
  * @method integer getHealthyInterval() 获取主动健康检查健康探测间隔，单位：秒，0表示不开启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHealthyInterval(integer $HealthyInterval) 设置主动健康检查健康探测间隔，单位：秒，0表示不开启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUnHealthyInterval() 获取主动健康检查异常探测间隔，单位：秒，0表示不开启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnHealthyInterval(integer $UnHealthyInterval) 设置主动健康检查异常探测间隔，单位：秒，0表示不开启
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getHttpPath() 获取在 GET HTTP 请求中使用的路径，以作为主动运行状况检查的探测器运行。默认： ”/”。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setHttpPath(string $HttpPath) 设置在 GET HTTP 请求中使用的路径，以作为主动运行状况检查的探测器运行。默认： ”/”。
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getTimeout() 获取GET HTTP 请求的超时时间，单位：秒。默认 60。
+ * @method void setTimeout(float $Timeout) 设置GET HTTP 请求的超时时间，单位：秒。默认 60。
  */
 class KongActiveHealthCheck extends AbstractModel
 {
     /**
      * @var integer 主动健康检查健康探测间隔，单位：秒，0表示不开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HealthyInterval;
 
     /**
      * @var integer 主动健康检查异常探测间隔，单位：秒，0表示不开启
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UnHealthyInterval;
 
     /**
      * @var string 在 GET HTTP 请求中使用的路径，以作为主动运行状况检查的探测器运行。默认： ”/”。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HttpPath;
 
     /**
+     * @var float GET HTTP 请求的超时时间，单位：秒。默认 60。
+     */
+    public $Timeout;
+
+    /**
      * @param integer $HealthyInterval 主动健康检查健康探测间隔，单位：秒，0表示不开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UnHealthyInterval 主动健康检查异常探测间隔，单位：秒，0表示不开启
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $HttpPath 在 GET HTTP 请求中使用的路径，以作为主动运行状况检查的探测器运行。默认： ”/”。
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $Timeout GET HTTP 请求的超时时间，单位：秒。默认 60。
      */
     function __construct()
     {
@@ -84,6 +80,10 @@ class KongActiveHealthCheck extends AbstractModel
 
         if (array_key_exists("HttpPath",$param) and $param["HttpPath"] !== null) {
             $this->HttpPath = $param["HttpPath"];
+        }
+
+        if (array_key_exists("Timeout",$param) and $param["Timeout"] !== null) {
+            $this->Timeout = $param["Timeout"];
         }
     }
 }

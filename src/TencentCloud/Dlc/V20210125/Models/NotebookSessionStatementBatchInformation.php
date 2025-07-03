@@ -25,13 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNotebookSessionStatementBatch(array $NotebookSessionStatementBatch) 设置任务详情列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsAvailable() 获取当前批任务是否运行完成
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsAvailable(boolean $IsAvailable) 设置当前批任务是否运行完成
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSessionId() 获取Session唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSessionId(string $SessionId) 设置Session唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBatchId() 获取Batch唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBatchId(string $BatchId) 设置Batch唯一标识
@@ -47,13 +43,11 @@ class NotebookSessionStatementBatchInformation extends AbstractModel
 
     /**
      * @var boolean 当前批任务是否运行完成
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsAvailable;
 
     /**
      * @var string Session唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SessionId;
 
@@ -67,9 +61,7 @@ class NotebookSessionStatementBatchInformation extends AbstractModel
      * @param array $NotebookSessionStatementBatch 任务详情列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsAvailable 当前批任务是否运行完成
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SessionId Session唯一标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BatchId Batch唯一标识
 注意：此字段可能返回 null，表示取不到有效值。
      */

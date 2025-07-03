@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setJobIds(array $JobIds) 设置作业Id列表
  * @method string getWorkSpaceId() 获取工作空间Id
  * @method void setWorkSpaceId(string $WorkSpaceId) 设置工作空间Id
+ * @method array getJobNames() 获取作业名称列表
+ * @method void setJobNames(array $JobNames) 设置作业名称列表
  */
 class DeleteJobsRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DeleteJobsRequest extends AbstractModel
     public $WorkSpaceId;
 
     /**
+     * @var array 作业名称列表
+     */
+    public $JobNames;
+
+    /**
      * @param array $JobIds 作业Id列表
      * @param string $WorkSpaceId 工作空间Id
+     * @param array $JobNames 作业名称列表
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DeleteJobsRequest extends AbstractModel
 
         if (array_key_exists("WorkSpaceId",$param) and $param["WorkSpaceId"] !== null) {
             $this->WorkSpaceId = $param["WorkSpaceId"];
+        }
+
+        if (array_key_exists("JobNames",$param) and $param["JobNames"] !== null) {
+            $this->JobNames = $param["JobNames"];
         }
     }
 }

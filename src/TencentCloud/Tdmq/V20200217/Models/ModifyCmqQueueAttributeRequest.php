@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxQueryCount(integer $MaxQueryCount) 设置最大查询次数
  * @method string getDeadLetterQueueName() 获取死信队列名称
  * @method void setDeadLetterQueueName(string $DeadLetterQueueName) 设置死信队列名称
- * @method integer getMaxTimeToLive() 获取MaxTimeToLivepolicy为1时必选。最大未消费过期时间。范围300-43200，单位秒，需要小于消息最大保留时间MsgRetentionSeconds
- * @method void setMaxTimeToLive(integer $MaxTimeToLive) 设置MaxTimeToLivepolicy为1时必选。最大未消费过期时间。范围300-43200，单位秒，需要小于消息最大保留时间MsgRetentionSeconds
+ * @method integer getMaxTimeToLive() 获取policy为1时必选。最大未消费过期时间。范围300-43200，单位秒，需要小于消息最大保留时间MsgRetentionSeconds
+ * @method void setMaxTimeToLive(integer $MaxTimeToLive) 设置policy为1时必选。最大未消费过期时间。范围300-43200，单位秒，需要小于消息最大保留时间MsgRetentionSeconds
  * @method integer getMaxReceiveCount() 获取最大接收次数
  * @method void setMaxReceiveCount(integer $MaxReceiveCount) 设置最大接收次数
  * @method integer getPolicy() 获取死信队列策略
@@ -106,7 +106,7 @@ class ModifyCmqQueueAttributeRequest extends AbstractModel
     public $DeadLetterQueueName;
 
     /**
-     * @var integer MaxTimeToLivepolicy为1时必选。最大未消费过期时间。范围300-43200，单位秒，需要小于消息最大保留时间MsgRetentionSeconds
+     * @var integer policy为1时必选。最大未消费过期时间。范围300-43200，单位秒，需要小于消息最大保留时间MsgRetentionSeconds
      */
     public $MaxTimeToLive;
 
@@ -146,7 +146,7 @@ class ModifyCmqQueueAttributeRequest extends AbstractModel
      * @param integer $FirstQueryInterval 第一次查询时间
      * @param integer $MaxQueryCount 最大查询次数
      * @param string $DeadLetterQueueName 死信队列名称
-     * @param integer $MaxTimeToLive MaxTimeToLivepolicy为1时必选。最大未消费过期时间。范围300-43200，单位秒，需要小于消息最大保留时间MsgRetentionSeconds
+     * @param integer $MaxTimeToLive policy为1时必选。最大未消费过期时间。范围300-43200，单位秒，需要小于消息最大保留时间MsgRetentionSeconds
      * @param integer $MaxReceiveCount 最大接收次数
      * @param integer $Policy 死信队列策略
      * @param boolean $Trace 是否开启消息轨迹标识，true表示开启，false表示不开启，不填表示不开启。

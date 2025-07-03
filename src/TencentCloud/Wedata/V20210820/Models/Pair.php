@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKey(string $Key) 设置键名
  * @method string getValue() 获取值
  * @method void setValue(string $Value) 设置值
+ * @method string getId() 获取 唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setId(string $Id) 设置 唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Pair extends AbstractModel
 {
@@ -38,8 +42,16 @@ class Pair extends AbstractModel
     public $Value;
 
     /**
+     * @var string  唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Id;
+
+    /**
      * @param string $Key 键名
      * @param string $Value 值
+     * @param string $Id  唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -60,6 +72,10 @@ class Pair extends AbstractModel
 
         if (array_key_exists("Value",$param) and $param["Value"] !== null) {
             $this->Value = $param["Value"];
+        }
+
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
         }
     }
 }

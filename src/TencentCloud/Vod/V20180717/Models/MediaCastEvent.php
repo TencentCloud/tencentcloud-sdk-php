@@ -27,13 +27,11 @@ use TencentCloud\Common\AbstractModel;
 <li>Scheduled ：等待定时时间到达后启动；</li>
 <li>Stopped ：已经停止转推；</li>
 <li>Idle ：空闲。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置转推状态，取值有：
 <li>Working ：运行中；</li>
 <li>Scheduled ：等待定时时间到达后启动；</li>
 <li>Stopped ：已经停止转推；</li>
 <li>Idle ：空闲。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MediaCastEvent extends AbstractModel
 {
@@ -48,7 +46,6 @@ class MediaCastEvent extends AbstractModel
 <li>Scheduled ：等待定时时间到达后启动；</li>
 <li>Stopped ：已经停止转推；</li>
 <li>Idle ：空闲。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
@@ -59,7 +56,6 @@ class MediaCastEvent extends AbstractModel
 <li>Scheduled ：等待定时时间到达后启动；</li>
 <li>Stopped ：已经停止转推；</li>
 <li>Idle ：空闲。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

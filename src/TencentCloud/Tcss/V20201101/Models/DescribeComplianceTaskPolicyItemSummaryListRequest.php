@@ -42,14 +42,8 @@ ASSET_K8S, K8S资产
  * @method void setOffset(integer $Offset) 设置起始偏移量，默认为0。
  * @method integer getLimit() 获取需要返回的数量，默认为10，最大值为100。
  * @method void setLimit(integer $Limit) 设置需要返回的数量，默认为10，最大值为100。
- * @method array getFilters() 获取过滤条件。
-Name - String
-Name 可取值：ItemType, StandardId,  RiskLevel。
-当为K8S资产时，还可取ClusterName。
- * @method void setFilters(array $Filters) 设置过滤条件。
-Name - String
-Name 可取值：ItemType, StandardId,  RiskLevel。
-当为K8S资产时，还可取ClusterName。
+ * @method array getFilters() 获取过滤条件 <li>Name      string 检测项名字</li> <li>ItemType  string 检测项类型</li> <li>RiskLevel string 威胁等级</li> <li>IsOpen    int    是否开启</li>
+ * @method void setFilters(array $Filters) 设置过滤条件 <li>Name      string 检测项名字</li> <li>ItemType  string 检测项类型</li> <li>RiskLevel string 威胁等级</li> <li>IsOpen    int    是否开启</li>
  */
 class DescribeComplianceTaskPolicyItemSummaryListRequest extends AbstractModel
 {
@@ -77,10 +71,7 @@ ASSET_K8S, K8S资产
     public $Limit;
 
     /**
-     * @var array 过滤条件。
-Name - String
-Name 可取值：ItemType, StandardId,  RiskLevel。
-当为K8S资产时，还可取ClusterName。
+     * @var array 过滤条件 <li>Name      string 检测项名字</li> <li>ItemType  string 检测项类型</li> <li>RiskLevel string 威胁等级</li> <li>IsOpen    int    是否开启</li>
      */
     public $Filters;
 
@@ -96,10 +87,7 @@ ASSET_HOST, 主机
 ASSET_K8S, K8S资产
      * @param integer $Offset 起始偏移量，默认为0。
      * @param integer $Limit 需要返回的数量，默认为10，最大值为100。
-     * @param array $Filters 过滤条件。
-Name - String
-Name 可取值：ItemType, StandardId,  RiskLevel。
-当为K8S资产时，还可取ClusterName。
+     * @param array $Filters 过滤条件 <li>Name      string 检测项名字</li> <li>ItemType  string 检测项类型</li> <li>RiskLevel string 威胁等级</li> <li>IsOpen    int    是否开启</li>
      */
     function __construct()
     {

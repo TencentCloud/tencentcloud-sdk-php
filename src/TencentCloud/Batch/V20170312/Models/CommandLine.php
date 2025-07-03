@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 任务执行信息描述。
  *
  * @method string getCommand() 获取任务执行命令。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCommand(string $Command) 设置任务执行命令。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CommandLine extends AbstractModel
 {
     /**
      * @var string 任务执行命令。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Command;
 
     /**
      * @param string $Command 任务执行命令。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

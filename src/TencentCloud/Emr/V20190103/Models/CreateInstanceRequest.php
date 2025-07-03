@@ -108,8 +108,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoRenew(integer $AutoRenew) 设置包年包月实例是否自动续费。取值范围：
 <li>0：表示不自动续费。</li>
 <li>1：表示自动续费。</li>
- * @method string getClientToken() 获取唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-751a-41b6-aad6-fae36063280
- * @method void setClientToken(string $ClientToken) 设置唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-751a-41b6-aad6-fae36063280
+ * @method string getClientToken() 获取唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-****-****-****-fae36063280
+ * @method void setClientToken(string $ClientToken) 设置唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-****-****-****-fae36063280
  * @method string getNeedMasterWan() 获取是否开启集群Master节点公网。取值范围：
 <li>NEED_MASTER_WAN：表示开启集群Master节点公网。</li>
 <li>NOT_NEED_MASTER_WAN：表示不开启。</li>默认开启集群Master节点公网。
@@ -162,6 +162,10 @@ Hadoop-Hbase
  * @method void setMultiZone(boolean $MultiZone) 设置true表示开启跨AZ部署；仅为新建集群时的用户参数，后续不支持调整。
  * @method array getMultiZoneSettings() 获取节点资源的规格，有几个可用区，就填几个，按顺序第一个为主可用区，第二个为备可用区，第三个为仲裁可用区。如果没有开启跨AZ，则长度为1即可。
  * @method void setMultiZoneSettings(array $MultiZoneSettings) 设置节点资源的规格，有几个可用区，就填几个，按顺序第一个为主可用区，第二个为备可用区，第三个为仲裁可用区。如果没有开启跨AZ，则长度为1即可。
+ * @method string getCosBucket() 获取cos桶路径，创建StarRocks存算分离集群时用到
+ * @method void setCosBucket(string $CosBucket) 设置cos桶路径，创建StarRocks存算分离集群时用到
+ * @method array getNodeMarks() 获取节点标识信息，目前只提供给tf平台使用
+ * @method void setNodeMarks(array $NodeMarks) 设置节点标识信息，目前只提供给tf平台使用
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -270,7 +274,7 @@ class CreateInstanceRequest extends AbstractModel
     public $AutoRenew;
 
     /**
-     * @var string 唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-751a-41b6-aad6-fae36063280
+     * @var string 唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-****-****-****-fae36063280
      */
     public $ClientToken;
 
@@ -365,6 +369,16 @@ Hadoop-Hbase
     public $MultiZoneSettings;
 
     /**
+     * @var string cos桶路径，创建StarRocks存算分离集群时用到
+     */
+    public $CosBucket;
+
+    /**
+     * @var array 节点标识信息，目前只提供给tf平台使用
+     */
+    public $NodeMarks;
+
+    /**
      * @param integer $ProductId 产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
 51:表示STARROCKS-V1.4.0
 54:表示STARROCKS-V2.0.0
@@ -409,7 +423,7 @@ Hadoop-Hbase
      * @param integer $AutoRenew 包年包月实例是否自动续费。取值范围：
 <li>0：表示不自动续费。</li>
 <li>1：表示自动续费。</li>
-     * @param string $ClientToken 唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-751a-41b6-aad6-fae36063280
+     * @param string $ClientToken 唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，例如 a9a90aa6-****-****-****-fae36063280
      * @param string $NeedMasterWan 是否开启集群Master节点公网。取值范围：
 <li>NEED_MASTER_WAN：表示开启集群Master节点公网。</li>
 <li>NOT_NEED_MASTER_WAN：表示不开启。</li>默认开启集群Master节点公网。
@@ -436,6 +450,8 @@ Hadoop-Hbase
      * @param integer $VersionID 如果为0，则MultiZone、MultiDeployStrategy、MultiZoneSettings是disable的状态，如果为1，则废弃ResourceSpec，使用MultiZoneSettings。
      * @param boolean $MultiZone true表示开启跨AZ部署；仅为新建集群时的用户参数，后续不支持调整。
      * @param array $MultiZoneSettings 节点资源的规格，有几个可用区，就填几个，按顺序第一个为主可用区，第二个为备可用区，第三个为仲裁可用区。如果没有开启跨AZ，则长度为1即可。
+     * @param string $CosBucket cos桶路径，创建StarRocks存算分离集群时用到
+     * @param array $NodeMarks 节点标识信息，目前只提供给tf平台使用
      */
     function __construct()
     {
@@ -601,6 +617,19 @@ Hadoop-Hbase
                 $obj = new MultiZoneSetting();
                 $obj->deserialize($value);
                 array_push($this->MultiZoneSettings, $obj);
+            }
+        }
+
+        if (array_key_exists("CosBucket",$param) and $param["CosBucket"] !== null) {
+            $this->CosBucket = $param["CosBucket"];
+        }
+
+        if (array_key_exists("NodeMarks",$param) and $param["NodeMarks"] !== null) {
+            $this->NodeMarks = [];
+            foreach ($param["NodeMarks"] as $key => $value){
+                $obj = new NodeMark();
+                $obj->deserialize($value);
+                array_push($this->NodeMarks, $obj);
             }
         }
     }

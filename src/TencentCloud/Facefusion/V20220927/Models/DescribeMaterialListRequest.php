@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setActivityId(string $ActivityId) 设置活动Id
  * @method string getMaterialId() 获取素材Id
  * @method void setMaterialId(string $MaterialId) 设置素材Id
- * @method integer getLimit() 获取每次拉取条数
- * @method void setLimit(integer $Limit) 设置每次拉取条数
+ * @method integer getLimit() 获取每次拉取条数。
+每次拉取素材最多可支持拉取20条素材信息，如果需要拉取全部素材信息，可以分多次请求拉取全部素材信息。
+ * @method void setLimit(integer $Limit) 设置每次拉取条数。
+每次拉取素材最多可支持拉取20条素材信息，如果需要拉取全部素材信息，可以分多次请求拉取全部素材信息。
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
  */
@@ -42,7 +44,8 @@ class DescribeMaterialListRequest extends AbstractModel
     public $MaterialId;
 
     /**
-     * @var integer 每次拉取条数
+     * @var integer 每次拉取条数。
+每次拉取素材最多可支持拉取20条素材信息，如果需要拉取全部素材信息，可以分多次请求拉取全部素材信息。
      */
     public $Limit;
 
@@ -54,7 +57,8 @@ class DescribeMaterialListRequest extends AbstractModel
     /**
      * @param string $ActivityId 活动Id
      * @param string $MaterialId 素材Id
-     * @param integer $Limit 每次拉取条数
+     * @param integer $Limit 每次拉取条数。
+每次拉取素材最多可支持拉取20条素材信息，如果需要拉取全部素材信息，可以分多次请求拉取全部素材信息。
      * @param integer $Offset 偏移量
      */
     function __construct()

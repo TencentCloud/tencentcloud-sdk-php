@@ -21,117 +21,81 @@ use TencentCloud\Common\AbstractModel;
  * 事件详细信息
  *
  * @method integer getId() 获取事件id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setId(integer $Id) 设置事件id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取事件名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置事件名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTriggerType() 获取事件触发类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTriggerType(string $TriggerType) 设置事件触发类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTriggerCondition() 获取事件触发条件，返回为x-json后的字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTriggerCondition(string $TriggerCondition) 设置事件触发条件，返回为x-json后的字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValidPeriod() 获取有效期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValidPeriod(string $ValidPeriod) 设置有效期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLinkRuleSet() 获取关联规则列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLinkRuleSet(array $LinkRuleSet) 设置关联规则列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDeviceType() 获取设备类型，当触发类型为deviceType时返回
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceType(string $DeviceType) 设置设备类型，当触发类型为deviceType时返回
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWID() 获取设备的wid，当触发类型是device返回
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWID(string $WID) 设置设备的wid，当触发类型是device返回
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class EventDetail extends AbstractModel
 {
     /**
      * @var integer 事件id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Id;
 
     /**
      * @var string 事件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @var string 事件触发类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TriggerType;
 
     /**
      * @var string 事件触发条件，返回为x-json后的字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TriggerCondition;
 
     /**
      * @var string 有效期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ValidPeriod;
 
     /**
      * @var array 关联规则列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LinkRuleSet;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 设备类型，当触发类型为deviceType时返回
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceType;
 
     /**
      * @var string 设备的wid，当触发类型是device返回
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WID;
 
     /**
      * @param integer $Id 事件id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 事件名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TriggerType 事件触发类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TriggerCondition 事件触发条件，返回为x-json后的字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ValidPeriod 有效期
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $LinkRuleSet 关联规则列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DeviceType 设备类型，当触发类型为deviceType时返回
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WID 设备的wid，当触发类型是device返回
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

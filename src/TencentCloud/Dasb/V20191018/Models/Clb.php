@@ -21,21 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 负载均衡
  *
  * @method string getClbIp() 获取负载均衡IP
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClbIp(string $ClbIp) 设置负载均衡IP
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Clb extends AbstractModel
 {
     /**
      * @var string 负载均衡IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClbIp;
 
     /**
      * @param string $ClbIp 负载均衡IP
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

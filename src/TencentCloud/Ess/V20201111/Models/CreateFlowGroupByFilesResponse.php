@@ -21,13 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * CreateFlowGroupByFiles返回参数结构体
  *
  * @method string getFlowGroupId() 获取合同(流程)组的合同组Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowGroupId(string $FlowGroupId) 设置合同(流程)组的合同组Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getFlowIds() 获取合同(流程)组中子合同列表.
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFlowIds(array $FlowIds) 设置合同(流程)组中子合同列表.
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getApprovers() 获取合同组签署方信息。
  * @method void setApprovers(array $Approvers) 设置合同组签署方信息。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -37,13 +33,11 @@ class CreateFlowGroupByFilesResponse extends AbstractModel
 {
     /**
      * @var string 合同(流程)组的合同组Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowGroupId;
 
     /**
      * @var array 合同(流程)组中子合同列表.
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FlowIds;
 
@@ -59,9 +53,7 @@ class CreateFlowGroupByFilesResponse extends AbstractModel
 
     /**
      * @param string $FlowGroupId 合同(流程)组的合同组Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $FlowIds 合同(流程)组中子合同列表.
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Approvers 合同组签署方信息。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

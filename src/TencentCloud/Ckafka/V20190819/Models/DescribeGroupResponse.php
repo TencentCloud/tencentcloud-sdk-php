@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGroup返回参数结构体
  *
- * @method GroupResponse getResult() 获取返回结果集列表
- * @method void setResult(GroupResponse $Result) 设置返回结果集列表
+ * @method GroupResponse getResult() 获取返回结果
+ * @method void setResult(GroupResponse $Result) 设置返回结果
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeGroupResponse extends AbstractModel
 {
     /**
-     * @var GroupResponse 返回结果集列表
+     * @var GroupResponse 返回结果
      */
     public $Result;
 
@@ -38,7 +38,7 @@ class DescribeGroupResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param GroupResponse $Result 返回结果集列表
+     * @param GroupResponse $Result 返回结果
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

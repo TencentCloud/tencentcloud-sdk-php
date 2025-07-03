@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置限制数目。最大50
  * @method integer getOffset() 获取偏移量。取值是limit的整数倍。默认值 : 0。
  * @method void setOffset(integer $Offset) 设置偏移量。取值是limit的整数倍。默认值 : 0。
+ * @method array getTags() 获取部门标签搜索列表，最大10个
+ * @method void setTags(array $Tags) 设置部门标签搜索列表，最大10个
  */
 class DescribeOrganizationNodesRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeOrganizationNodesRequest extends AbstractModel
     public $Offset;
 
     /**
+     * @var array 部门标签搜索列表，最大10个
+     */
+    public $Tags;
+
+    /**
      * @param integer $Limit 限制数目。最大50
      * @param integer $Offset 偏移量。取值是limit的整数倍。默认值 : 0。
+     * @param array $Tags 部门标签搜索列表，最大10个
      */
     function __construct()
     {
@@ -60,6 +68,15 @@ class DescribeOrganizationNodesRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

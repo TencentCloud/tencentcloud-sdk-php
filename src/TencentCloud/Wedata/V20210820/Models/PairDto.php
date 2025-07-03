@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setValue(string $Value) 设置值
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDescription() 获取描述
+ * @method void setDescription(string $Description) 设置描述
  */
 class PairDto extends AbstractModel
 {
@@ -44,10 +46,16 @@ class PairDto extends AbstractModel
     public $Value;
 
     /**
+     * @var string 描述
+     */
+    public $Description;
+
+    /**
      * @param string $Key 键名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Value 值
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Description 描述
      */
     function __construct()
     {
@@ -68,6 +76,10 @@ class PairDto extends AbstractModel
 
         if (array_key_exists("Value",$param) and $param["Value"] !== null) {
             $this->Value = $param["Value"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

@@ -23,7 +23,33 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMaterialId() 获取素材Id
  * @method void setMaterialId(string $MaterialId) 设置素材Id
  * @method integer getMaterialStatus() 获取素材状态
+
+字段取值: 
+0   审核中
+1   人工审核通过
+2   人工审核失败
+3   申诉中
+11  申诉成功
+12  申诉失败
+21  机器审核通过
+22  机器审核失败
+31  视频素材预处理成功，素材可用
+32  视频素材预处理失败
+33  角色不在视频中
  * @method void setMaterialStatus(integer $MaterialStatus) 设置素材状态
+
+字段取值: 
+0   审核中
+1   人工审核通过
+2   人工审核失败
+3   申诉中
+11  申诉成功
+12  申诉失败
+21  机器审核通过
+22  机器审核失败
+31  视频素材预处理成功，素材可用
+32  视频素材预处理失败
+33  角色不在视频中
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
  * @method string getUpdateTime() 获取修改时间
@@ -33,9 +59,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMaterialName() 获取素材名
  * @method void setMaterialName(string $MaterialName) 设置素材名
  * @method string getAuditResult() 获取审核原因
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAuditResult(string $AuditResult) 设置审核原因
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PublicMaterialInfos extends AbstractModel
 {
@@ -46,6 +70,19 @@ class PublicMaterialInfos extends AbstractModel
 
     /**
      * @var integer 素材状态
+
+字段取值: 
+0   审核中
+1   人工审核通过
+2   人工审核失败
+3   申诉中
+11  申诉成功
+12  申诉失败
+21  机器审核通过
+22  机器审核失败
+31  视频素材预处理成功，素材可用
+32  视频素材预处理失败
+33  角色不在视频中
      */
     public $MaterialStatus;
 
@@ -71,19 +108,30 @@ class PublicMaterialInfos extends AbstractModel
 
     /**
      * @var string 审核原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AuditResult;
 
     /**
      * @param string $MaterialId 素材Id
      * @param integer $MaterialStatus 素材状态
+
+字段取值: 
+0   审核中
+1   人工审核通过
+2   人工审核失败
+3   申诉中
+11  申诉成功
+12  申诉失败
+21  机器审核通过
+22  机器审核失败
+31  视频素材预处理成功，素材可用
+32  视频素材预处理失败
+33  角色不在视频中
      * @param string $CreateTime 创建时间
      * @param string $UpdateTime 修改时间
      * @param array $MaterialFaceList 人脸信息
      * @param string $MaterialName 素材名
      * @param string $AuditResult 审核原因
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 交易显示概述信息
  *
  * @method string getTxId() 获取交易ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTxId(string $TxId) 设置交易ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getChaincodeName() 获取合约名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChaincodeName(string $ChaincodeName) 设置合约名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSender() 获取交易发送者
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSender(string $Sender) 设置交易发送者
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取交易创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置交易创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBlockHeight() 获取交易所在区块高度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBlockHeight(integer $BlockHeight) 设置交易所在区块高度
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTxIndex() 获取交易在区块中的序号
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTxIndex(integer $TxIndex) 设置交易在区块中的序号
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Transaction extends AbstractModel
 {
     /**
      * @var string 交易ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TxId;
 
     /**
      * @var string 合约名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChaincodeName;
 
     /**
      * @var string 交易发送者
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Sender;
 
     /**
      * @var string 交易创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var integer 交易所在区块高度
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BlockHeight;
 
     /**
      * @var integer 交易在区块中的序号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TxIndex;
 
     /**
      * @param string $TxId 交易ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ChaincodeName 合约名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Sender 交易发送者
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 交易创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BlockHeight 交易所在区块高度
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TxIndex 交易在区块中的序号
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

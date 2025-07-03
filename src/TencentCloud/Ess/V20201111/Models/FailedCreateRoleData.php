@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 绑定角色失败信息
  *
  * @method string getUserId() 获取用户userId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserId(string $UserId) 设置用户userId
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getRoleIds() 获取角色id列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRoleIds(array $RoleIds) 设置角色id列表
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class FailedCreateRoleData extends AbstractModel
 {
     /**
      * @var string 用户userId
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserId;
 
     /**
      * @var array 角色id列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoleIds;
 
     /**
      * @param string $UserId 用户userId
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RoleIds 角色id列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

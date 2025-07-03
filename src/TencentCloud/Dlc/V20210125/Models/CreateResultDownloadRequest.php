@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(string $TaskId) 设置查询结果任务Id
  * @method string getFormat() 获取下载格式
  * @method void setFormat(string $Format) 设置下载格式
- * @method boolean getForce() 获取是否重新生成下载文件，仅当之前任务为 Timout | Error 时有效
- * @method void setForce(boolean $Force) 设置是否重新生成下载文件，仅当之前任务为 Timout | Error 时有效
+ * @method boolean getForce() 获取是否重新生成下载文件，仅当之前任务状态为 timeout | error 时有效
+ * @method void setForce(boolean $Force) 设置是否重新生成下载文件，仅当之前任务状态为 timeout | error 时有效
  */
 class CreateResultDownloadRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class CreateResultDownloadRequest extends AbstractModel
     public $Format;
 
     /**
-     * @var boolean 是否重新生成下载文件，仅当之前任务为 Timout | Error 时有效
+     * @var boolean 是否重新生成下载文件，仅当之前任务状态为 timeout | error 时有效
      */
     public $Force;
 
     /**
      * @param string $TaskId 查询结果任务Id
      * @param string $Format 下载格式
-     * @param boolean $Force 是否重新生成下载文件，仅当之前任务为 Timout | Error 时有效
+     * @param boolean $Force 是否重新生成下载文件，仅当之前任务状态为 timeout | error 时有效
      */
     function __construct()
     {

@@ -27,47 +27,29 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getDefaultTimeSwitch() 获取使用默认时间，true：开启（默认值）， flase：关闭
  * @method void setDefaultTimeSwitch(boolean $DefaultTimeSwitch) 设置使用默认时间，true：开启（默认值）， flase：关闭
  * @method string getLogRegex() 获取整条日志匹配规则，只有RechargeType为fullregex_log时有效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogRegex(string $LogRegex) 设置整条日志匹配规则，只有RechargeType为fullregex_log时有效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getUnMatchLogSwitch() 获取解析失败日志是否上传，true表示上传，false表示不上传
  * @method void setUnMatchLogSwitch(boolean $UnMatchLogSwitch) 设置解析失败日志是否上传，true表示上传，false表示不上传
  * @method string getUnMatchLogKey() 获取解析失败日志的键名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnMatchLogKey(string $UnMatchLogKey) 设置解析失败日志的键名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUnMatchLogTimeSrc() 获取解析失败日志时间来源，0: 系统当前时间，1: Kafka消息时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUnMatchLogTimeSrc(integer $UnMatchLogTimeSrc) 设置解析失败日志时间来源，0: 系统当前时间，1: Kafka消息时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDefaultTimeSrc() 获取默认时间来源，0: 系统当前时间，1: Kafka消息时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDefaultTimeSrc(integer $DefaultTimeSrc) 设置默认时间来源，0: 系统当前时间，1: Kafka消息时间戳
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTimeKey() 获取时间字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeKey(string $TimeKey) 设置时间字段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTimeRegex() 获取时间提取正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeRegex(string $TimeRegex) 设置时间提取正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTimeFormat() 获取时间字段格式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeFormat(string $TimeFormat) 设置时间字段格式
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTimeZone() 获取时间字段时区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTimeZone(string $TimeZone) 设置时间字段时区
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getMetadata() 获取元数据信息，Kafka导入支持kafka_topic,kafka_partition,kafka_offset,kafka_timestamp
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMetadata(array $Metadata) 设置元数据信息，Kafka导入支持kafka_topic,kafka_partition,kafka_offset,kafka_timestamp
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getKeys() 获取日志Key列表，RechargeType为full_regex_log时必填
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeys(array $Keys) 设置日志Key列表，RechargeType为full_regex_log时必填
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getParseArray() 获取json解析模式，开启首层数据解析
+ * @method void setParseArray(boolean $ParseArray) 设置json解析模式，开启首层数据解析
  */
 class LogRechargeRuleInfo extends AbstractModel
 {
@@ -88,7 +70,6 @@ class LogRechargeRuleInfo extends AbstractModel
 
     /**
      * @var string 整条日志匹配规则，只有RechargeType为fullregex_log时有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogRegex;
 
@@ -99,83 +80,70 @@ class LogRechargeRuleInfo extends AbstractModel
 
     /**
      * @var string 解析失败日志的键名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UnMatchLogKey;
 
     /**
      * @var integer 解析失败日志时间来源，0: 系统当前时间，1: Kafka消息时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UnMatchLogTimeSrc;
 
     /**
      * @var integer 默认时间来源，0: 系统当前时间，1: Kafka消息时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DefaultTimeSrc;
 
     /**
      * @var string 时间字段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeKey;
 
     /**
      * @var string 时间提取正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeRegex;
 
     /**
      * @var string 时间字段格式
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeFormat;
 
     /**
      * @var string 时间字段时区
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TimeZone;
 
     /**
      * @var array 元数据信息，Kafka导入支持kafka_topic,kafka_partition,kafka_offset,kafka_timestamp
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Metadata;
 
     /**
      * @var array 日志Key列表，RechargeType为full_regex_log时必填
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Keys;
+
+    /**
+     * @var boolean json解析模式，开启首层数据解析
+     */
+    public $ParseArray;
 
     /**
      * @param string $RechargeType 导入类型，支持json_log：json格式日志，minimalist_log: 单行全文，fullregex_log: 单行完全正则
      * @param integer $EncodingFormat 解析编码格式，0: UTF-8（默认值），1: GBK
      * @param boolean $DefaultTimeSwitch 使用默认时间，true：开启（默认值）， flase：关闭
      * @param string $LogRegex 整条日志匹配规则，只有RechargeType为fullregex_log时有效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $UnMatchLogSwitch 解析失败日志是否上传，true表示上传，false表示不上传
      * @param string $UnMatchLogKey 解析失败日志的键名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UnMatchLogTimeSrc 解析失败日志时间来源，0: 系统当前时间，1: Kafka消息时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DefaultTimeSrc 默认时间来源，0: 系统当前时间，1: Kafka消息时间戳
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TimeKey 时间字段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TimeRegex 时间提取正则表达式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TimeFormat 时间字段格式
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TimeZone 时间字段时区
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Metadata 元数据信息，Kafka导入支持kafka_topic,kafka_partition,kafka_offset,kafka_timestamp
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Keys 日志Key列表，RechargeType为full_regex_log时必填
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $ParseArray json解析模式，开启首层数据解析
      */
     function __construct()
     {
@@ -244,6 +212,10 @@ class LogRechargeRuleInfo extends AbstractModel
 
         if (array_key_exists("Keys",$param) and $param["Keys"] !== null) {
             $this->Keys = $param["Keys"];
+        }
+
+        if (array_key_exists("ParseArray",$param) and $param["ParseArray"] !== null) {
+            $this->ParseArray = $param["ParseArray"];
         }
     }
 }

@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCdcId(string $CdcId) 设置CDC 实例ID。
  * @method integer getMaxConnection() 获取SSL-VPN 客户端连接数。
  * @method void setMaxConnection(integer $MaxConnection) 设置SSL-VPN 客户端连接数。
+ * @method integer getBgpAsn() 获取Bgp ASN
+ * @method void setBgpAsn(integer $BgpAsn) 设置Bgp ASN
  */
 class VpnGateway extends AbstractModel
 {
@@ -164,6 +166,11 @@ class VpnGateway extends AbstractModel
     public $MaxConnection;
 
     /**
+     * @var integer Bgp ASN
+     */
+    public $BgpAsn;
+
+    /**
      * @param string $VpnGatewayId 网关实例ID。
      * @param string $VpcId VPC实例ID。
      * @param string $VpnGatewayName 网关实例名称。
@@ -184,6 +191,7 @@ class VpnGateway extends AbstractModel
      * @param string $NetworkInstanceId Type值为CCN时，该值表示云联网实例ID。
      * @param string $CdcId CDC 实例ID。
      * @param integer $MaxConnection SSL-VPN 客户端连接数。
+     * @param integer $BgpAsn Bgp ASN
      */
     function __construct()
     {
@@ -281,6 +289,10 @@ class VpnGateway extends AbstractModel
 
         if (array_key_exists("MaxConnection",$param) and $param["MaxConnection"] !== null) {
             $this->MaxConnection = $param["MaxConnection"];
+        }
+
+        if (array_key_exists("BgpAsn",$param) and $param["BgpAsn"] !== null) {
+            $this->BgpAsn = $param["BgpAsn"];
         }
     }
 }

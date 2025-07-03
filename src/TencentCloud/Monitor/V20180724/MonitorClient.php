@@ -26,16 +26,16 @@ use TencentCloud\Monitor\V20180724\Models as Models;
  * @method Models\BindPrometheusManagedGrafanaResponse BindPrometheusManagedGrafana(Models\BindPrometheusManagedGrafanaRequest $req) 绑定 Grafana 可视化服务实例
  * @method Models\BindingPolicyObjectResponse BindingPolicyObject(Models\BindingPolicyObjectRequest $req) 将告警策略绑定到特定对象
  * @method Models\BindingPolicyTagResponse BindingPolicyTag(Models\BindingPolicyTagRequest $req) 策略绑定标签
- * @method Models\CheckIsPrometheusNewUserResponse CheckIsPrometheusNewUser(Models\CheckIsPrometheusNewUserRequest $req) 接口功能是检查是否为prometheus新用户，已有其他功能更加全面的接口替代
-
-判断用户是否为云原生监控新用户，即在任何地域下均未创建过监控实例的用户
  * @method Models\CleanGrafanaInstanceResponse CleanGrafanaInstance(Models\CleanGrafanaInstanceRequest $req) 强制销毁 Grafana 实例
  * @method Models\CreateAlarmNoticeResponse CreateAlarmNotice(Models\CreateAlarmNoticeRequest $req) 创建通知模板
  * @method Models\CreateAlarmPolicyResponse CreateAlarmPolicy(Models\CreateAlarmPolicyRequest $req) 创建告警策略
+ * @method Models\CreateAlarmShieldResponse CreateAlarmShield(Models\CreateAlarmShieldRequest $req) 创建告警屏蔽规则
  * @method Models\CreateAlertRuleResponse CreateAlertRule(Models\CreateAlertRuleRequest $req) 创建 Prometheus 告警规则。
 
 请注意，**告警对象和告警消息是 Prometheus Rule Annotations 的特殊字段，需要通过 annotations 来传递，对应的 Key 分别为summary/description**，，请参考 [Prometheus Rule更多配置请参考](https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/)。
+ * @method Models\CreateConditionsTemplateResponse CreateConditionsTemplate(Models\CreateConditionsTemplateRequest $req) 创建告警条件模板
  * @method Models\CreateExporterIntegrationResponse CreateExporterIntegration(Models\CreateExporterIntegrationRequest $req) 创建集成中心 exporter 集成，因集成较多，建议控制台创建集成。(前提：已授权创建托管 EKS 集群，验证方式：1. 控制台界面确认，未提示授权则表示已授权创建；2. 通过 DescribePrometheusInstanceInitStatus 接口查询集群状态，如果托管集群不存在，可通过 RunPrometheusInstance 接口创建)
+ * @method Models\CreateExternalClusterResponse CreateExternalCluster(Models\CreateExternalClusterRequest $req) 注册外部集群到云上 TMP 实例
  * @method Models\CreateGrafanaInstanceResponse CreateGrafanaInstance(Models\CreateGrafanaInstanceRequest $req) 本接口（CreateGrafanaInstance）用于创建 Grafana 包年包月实例，默认基础版、到期自动续费、不可使用代金券。
  * @method Models\CreateGrafanaIntegrationResponse CreateGrafanaIntegration(Models\CreateGrafanaIntegrationRequest $req) 创建 Grafana 集成配置，其中 Prometheus 集成不通过该接口创建，可参考 BindPrometheusManagedGrafana 接口
  * @method Models\CreateGrafanaNotificationChannelResponse CreateGrafanaNotificationChannel(Models\CreateGrafanaNotificationChannelRequest $req) 创建 Grafana 告警通道
@@ -60,6 +60,7 @@ use TencentCloud\Monitor\V20180724\Models as Models;
 <a href="https://cloud.tencent.com/document/product/248/48859" target="_blank">Agent 安装</a>。</p>
  * @method Models\DeleteAlarmNoticesResponse DeleteAlarmNotices(Models\DeleteAlarmNoticesRequest $req) 删除告警通知模板
  * @method Models\DeleteAlarmPolicyResponse DeleteAlarmPolicy(Models\DeleteAlarmPolicyRequest $req) 删除告警策略
+ * @method Models\DeleteAlarmShieldsResponse DeleteAlarmShields(Models\DeleteAlarmShieldsRequest $req) 删除告警屏蔽规则
  * @method Models\DeleteAlertRulesResponse DeleteAlertRules(Models\DeleteAlertRulesRequest $req) 批量删除 Prometheus 报警规则
  * @method Models\DeleteExporterIntegrationResponse DeleteExporterIntegration(Models\DeleteExporterIntegrationRequest $req) 删除集成中心 exporter 集成
  * @method Models\DeleteGrafanaInstanceResponse DeleteGrafanaInstance(Models\DeleteGrafanaInstanceRequest $req) 本接口（DeleteGrafanaInstance）用于 Grafana 包年包月实例的退费，调用后实例处于停服状态，不可使用，7天后自动销毁。
@@ -100,6 +101,8 @@ use TencentCloud\Monitor\V20180724\Models as Models;
  * @method Models\DescribeConditionsTemplateListResponse DescribeConditionsTemplateList(Models\DescribeConditionsTemplateListRequest $req) 获取条件模板列表
  * @method Models\DescribeDNSConfigResponse DescribeDNSConfig(Models\DescribeDNSConfigRequest $req) 列出 Grafana DNS 配置
  * @method Models\DescribeExporterIntegrationsResponse DescribeExporterIntegrations(Models\DescribeExporterIntegrationsRequest $req) 查询集成中心 exporter 集成列表
+ * @method Models\DescribeExternalClusterRegisterCommandResponse DescribeExternalClusterRegisterCommand(Models\DescribeExternalClusterRegisterCommandRequest $req) 查看外部集群注册命令
+ * @method Models\DescribeExternalClusterUninstallCommandResponse DescribeExternalClusterUninstallCommand(Models\DescribeExternalClusterUninstallCommandRequest $req) 查看外部集群 Agent 卸载命令
  * @method Models\DescribeGrafanaChannelsResponse DescribeGrafanaChannels(Models\DescribeGrafanaChannelsRequest $req) 列出 Grafana 所有告警通道
  * @method Models\DescribeGrafanaConfigResponse DescribeGrafanaConfig(Models\DescribeGrafanaConfigRequest $req) 列出 Grafana 的设置，即 grafana.ini 文件内容
  * @method Models\DescribeGrafanaEnvironmentsResponse DescribeGrafanaEnvironments(Models\DescribeGrafanaEnvironmentsRequest $req) 列出 Grafana 环境变量
@@ -115,6 +118,7 @@ use TencentCloud\Monitor\V20180724\Models as Models;
  * @method Models\DescribePolicyConditionListResponse DescribePolicyConditionList(Models\DescribePolicyConditionListRequest $req) 获取基础告警策略条件
  * @method Models\DescribePolicyGroupInfoResponse DescribePolicyGroupInfo(Models\DescribePolicyGroupInfoRequest $req) 获取基础策略组详情
  * @method Models\DescribePolicyGroupListResponse DescribePolicyGroupList(Models\DescribePolicyGroupListRequest $req) 获取基础策略告警组列表
+ * @method Models\DescribePolicyObjectCountResponse DescribePolicyObjectCount(Models\DescribePolicyObjectCountRequest $req) 查询策略组在每个地域下面绑定的对象数统计
  * @method Models\DescribeProductEventListResponse DescribeProductEventList(Models\DescribeProductEventListRequest $req) 分页获取产品事件的列表
  * @method Models\DescribeProductListResponse DescribeProductList(Models\DescribeProductListRequest $req) 查询腾讯云可观测平台云产品列表，支持云服务器CVM、云数据库、云消息队列、负载均衡、容器服务、专线等云产品。
  * @method Models\DescribePrometheusAgentInstancesResponse DescribePrometheusAgentInstances(Models\DescribePrometheusAgentInstancesRequest $req) 获取关联目标集群的实例列表
@@ -134,9 +138,7 @@ use TencentCloud\Monitor\V20180724\Models as Models;
 <li>如果参数为空，返回当前用户一定数量（Limit所指定的数量，默认为20）的实例。</li>
 </ul>
  * @method Models\DescribePrometheusInstancesOverviewResponse DescribePrometheusInstancesOverview(Models\DescribePrometheusInstancesOverviewRequest $req) 获取与 Prometheus 监控融合实例列表
- * @method Models\DescribePrometheusRecordRuleYamlResponse DescribePrometheusRecordRuleYaml(Models\DescribePrometheusRecordRuleYamlRequest $req) DescribePrometheusRecordRules 接口可完全代替该接口。近30天仅有3次调用，且都是报错请求
-
-拉取Prometheus聚合规则yaml列表
+ * @method Models\DescribePrometheusIntegrationMetricsResponse DescribePrometheusIntegrationMetrics(Models\DescribePrometheusIntegrationMetricsRequest $req) 获取prometheus集成指标
  * @method Models\DescribePrometheusRecordRulesResponse DescribePrometheusRecordRules(Models\DescribePrometheusRecordRulesRequest $req) 获取聚合规则列表，包含关联集群内crd资源创建的record rule
  * @method Models\DescribePrometheusRegionsResponse DescribePrometheusRegions(Models\DescribePrometheusRegionsRequest $req) 列出 Prometheus 服务所有可用的地域
  * @method Models\DescribePrometheusScrapeJobsResponse DescribePrometheusScrapeJobs(Models\DescribePrometheusScrapeJobsRequest $req) 列出 Prometheus 抓取任务
@@ -145,6 +147,7 @@ use TencentCloud\Monitor\V20180724\Models as Models;
  * @method Models\DescribePrometheusTempSyncResponse DescribePrometheusTempSync(Models\DescribePrometheusTempSyncRequest $req) 获取模板关联实例信息，针对V2版本实例
  * @method Models\DescribePrometheusZonesResponse DescribePrometheusZones(Models\DescribePrometheusZonesRequest $req) 列出 Prometheus 服务可用区。
  * @method Models\DescribeRecordingRulesResponse DescribeRecordingRules(Models\DescribeRecordingRulesRequest $req) 根据条件查询 Prometheus 预聚合规则
+ * @method Models\DescribeRemoteURLsResponse DescribeRemoteURLs(Models\DescribeRemoteURLsRequest $req) 获取多写配置详情
  * @method Models\DescribeSSOAccountResponse DescribeSSOAccount(Models\DescribeSSOAccountRequest $req) 列出当前grafana实例的所有授权账号
  * @method Models\DescribeServiceDiscoveryResponse DescribeServiceDiscovery(Models\DescribeServiceDiscoveryRequest $req) 列出在腾讯云容器服务下创建的 Prometheus 服务发现。
 <p>注意：前提条件，已经通过 Prometheus 控制台集成了对应的腾讯云容器服务，具体请参考
@@ -154,17 +157,19 @@ use TencentCloud\Monitor\V20180724\Models as Models;
  * @method Models\EnableGrafanaInternetResponse EnableGrafanaInternet(Models\EnableGrafanaInternetRequest $req) 设置 Grafana 公网访问
  * @method Models\EnableGrafanaSSOResponse EnableGrafanaSSO(Models\EnableGrafanaSSORequest $req) 设置 Grafana 单点登录，使用腾讯云账号
  * @method Models\EnableSSOCamCheckResponse EnableSSOCamCheck(Models\EnableSSOCamCheckRequest $req) SSO单点登录时，设置是否cam鉴权
+ * @method Models\ExportPrometheusReadOnlyDynamicAPIResponse ExportPrometheusReadOnlyDynamicAPI(Models\ExportPrometheusReadOnlyDynamicAPIRequest $req) Prometheus 内部动态 api 代理，仅内部使用
  * @method Models\GetMonitorDataResponse GetMonitorData(Models\GetMonitorDataRequest $req) 获取云产品的监控数据。此接口不适用于拉取容器服务监控数据，如需拉取容器服务监控数据，请使用[根据维度条件查询监控数据](https://cloud.tencent.com/document/product/248/51845)接口。
 传入产品的命名空间、对象维度描述和监控指标即可获得相应的监控数据。
 接口调用限制：单请求最多可支持批量拉取10个实例的监控数据，单请求的数据点数限制为1440个。
 若您需要调用的指标、对象较多，可能存在因限频出现拉取失败的情况，建议尽量将请求按时间维度均摊。
 参数SpecifyStatistics目前可支持返回三种统计方式（avg，max，min），分别为二进制1，2，4。
 例子：3:avg+max，5:avg+min，6:max+min，7:avg+max+min
-拉取数据的粒度和统计方式的对应关系尽量在接入平台进行配置，如果没有配置，因为更小粒度数据存储时间有限，拉取时间范围也是有限。
+拉取数据的粒度和统计方式的对应关系尽量在接入平台进行配置，如果没有配置对应统计方式，请提工单反馈。
 
 >?
 >- 2022年9月1日起，腾讯云可观测平台开始对GetMonitorData接口计费。每个主账号每月可获得100万次免费请求额度，超过免费额度后如需继续调用接口需要开通 [API请求按量付费](https://buy.cloud.tencent.com/APIRequestBuy)。计费规则可查看[API计费文档](https://cloud.tencent.com/document/product/248/77914)。
  * @method Models\GetPrometheusAgentManagementCommandResponse GetPrometheusAgentManagementCommand(Models\GetPrometheusAgentManagementCommandRequest $req) 获取 Prometheus Agent 管理相关的命令行
+ * @method Models\GetTopNMonitorDataResponse GetTopNMonitorData(Models\GetTopNMonitorDataRequest $req) 支持TopN查询，对于给定的监控指标和时间区间，按照指标大小按序返回不同维度组合及数据。
  * @method Models\InstallPluginsResponse InstallPlugins(Models\InstallPluginsRequest $req) 安装 Grafana Plugin
  * @method Models\ModifyAlarmNoticeResponse ModifyAlarmNotice(Models\ModifyAlarmNoticeRequest $req) 编辑告警通知模板
  * @method Models\ModifyAlarmPolicyConditionResponse ModifyAlarmPolicyCondition(Models\ModifyAlarmPolicyConditionRequest $req) 修改告警策略触发条件
@@ -177,11 +182,12 @@ use TencentCloud\Monitor\V20180724\Models as Models;
  * @method Models\ModifyPolicyGroupResponse ModifyPolicyGroup(Models\ModifyPolicyGroupRequest $req) 更新策略组
  * @method Models\ModifyPrometheusAgentExternalLabelsResponse ModifyPrometheusAgentExternalLabels(Models\ModifyPrometheusAgentExternalLabelsRequest $req) 修改被关联集群的external labels
  * @method Models\ModifyPrometheusAlertPolicyResponse ModifyPrometheusAlertPolicy(Models\ModifyPrometheusAlertPolicyRequest $req) 修改2.0实例告警策略
- * @method Models\ModifyPrometheusConfigResponse ModifyPrometheusConfig(Models\ModifyPrometheusConfigRequest $req) 修改prometheus配置，如果配置项不存在，则会新增
+ * @method Models\ModifyPrometheusConfigResponse ModifyPrometheusConfig(Models\ModifyPrometheusConfigRequest $req) 修改prometheus采集配置
  * @method Models\ModifyPrometheusGlobalNotificationResponse ModifyPrometheusGlobalNotification(Models\ModifyPrometheusGlobalNotificationRequest $req) 修改全局告警通知渠道
  * @method Models\ModifyPrometheusInstanceAttributesResponse ModifyPrometheusInstanceAttributes(Models\ModifyPrometheusInstanceAttributesRequest $req) 修改 Prometheus 实例相关属性
- * @method Models\ModifyPrometheusRecordRuleYamlResponse ModifyPrometheusRecordRuleYaml(Models\ModifyPrometheusRecordRuleYamlRequest $req) 通过yaml的方式修改Prometheus聚合实例
+ * @method Models\ModifyPrometheusRecordRuleYamlResponse ModifyPrometheusRecordRuleYaml(Models\ModifyPrometheusRecordRuleYamlRequest $req) 通过yaml的方式修改Prometheus预聚合规则
  * @method Models\ModifyPrometheusTempResponse ModifyPrometheusTemp(Models\ModifyPrometheusTempRequest $req) 修改模板内容
+ * @method Models\ModifyRemoteURLsResponse ModifyRemoteURLs(Models\ModifyRemoteURLsRequest $req) 修改多写配置
  * @method Models\ResumeGrafanaInstanceResponse ResumeGrafanaInstance(Models\ResumeGrafanaInstanceRequest $req) 本接口（ResumeGrafanaInstance）用于 Grafana 包年包月实例的停服续费，调用后按原版本续费一个月。仍在运行中的实例无法使用该接口进行续费。
  * @method Models\RunPrometheusInstanceResponse RunPrometheusInstance(Models\RunPrometheusInstanceRequest $req) 初始化TMP实例，开启集成中心时调用
  * @method Models\SetDefaultAlarmPolicyResponse SetDefaultAlarmPolicy(Models\SetDefaultAlarmPolicyRequest $req) 设置一个策略为该告警策略类型、该项目的默认告警策略。
@@ -195,7 +201,7 @@ use TencentCloud\Monitor\V20180724\Models as Models;
  * @method Models\UninstallGrafanaPluginsResponse UninstallGrafanaPlugins(Models\UninstallGrafanaPluginsRequest $req) 删除已安装的插件
  * @method Models\UpdateAlertRuleResponse UpdateAlertRule(Models\UpdateAlertRuleRequest $req) 更新 Prometheus 的告警规则。
 
-请注意，**告警对象和告警消息是 Prometheus Rule Annotations 的特殊字段，需要通过 annotations 来传递，对应的 Key 分别为summary/description**，，请参考 [Prometheus Rule更多配置请参考](https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/)。
+请注意，**告警对象和告警消息是 Prometheus Rule Annotations 的特殊字段，需要通过 annotations 来传递，对应的 Key 分别为summary/description**，请参考 [Prometheus Rule更多配置请参考](https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/)。
  * @method Models\UpdateAlertRuleStateResponse UpdateAlertRuleState(Models\UpdateAlertRuleStateRequest $req) 更新 Prometheus 报警策略状态
  * @method Models\UpdateDNSConfigResponse UpdateDNSConfig(Models\UpdateDNSConfigRequest $req) 更新 Grafana 的 DNS 配置
  * @method Models\UpdateExporterIntegrationResponse UpdateExporterIntegration(Models\UpdateExporterIntegrationRequest $req) 更新 exporter 集成配置

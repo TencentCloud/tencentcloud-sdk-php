@@ -36,10 +36,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSchemaId(string $SchemaId) 设置选择所要绑定的SchemaId
  * @method TransformsParam getTransformsParam() 获取数据处理规则
  * @method void setTransformsParam(TransformsParam $TransformsParam) 设置数据处理规则
- * @method string getTaskId() 获取任务ID
- * @method void setTaskId(string $TaskId) 设置任务ID
+ * @method string getTaskId() 获取任务Id
+ * @method void setTaskId(string $TaskId) 设置任务Id
  * @method array getTags() 获取标签列表
  * @method void setTags(array $Tags) 设置标签列表
+ * @method string getDescription() 获取任务描述信息
+ * @method void setDescription(string $Description) 设置任务描述信息
  */
 class CreateDatahubTaskRequest extends AbstractModel
 {
@@ -70,6 +72,7 @@ class CreateDatahubTaskRequest extends AbstractModel
 
     /**
      * @var PrivateLinkParam 实例连接参数【已废弃】
+     * @deprecated
      */
     public $PrivateLinkParam;
 
@@ -84,7 +87,7 @@ class CreateDatahubTaskRequest extends AbstractModel
     public $TransformsParam;
 
     /**
-     * @var string 任务ID
+     * @var string 任务Id
      */
     public $TaskId;
 
@@ -92,6 +95,11 @@ class CreateDatahubTaskRequest extends AbstractModel
      * @var array 标签列表
      */
     public $Tags;
+
+    /**
+     * @var string 任务描述信息
+     */
+    public $Description;
 
     /**
      * @param string $TaskName 任务名称
@@ -102,8 +110,9 @@ class CreateDatahubTaskRequest extends AbstractModel
      * @param PrivateLinkParam $PrivateLinkParam 实例连接参数【已废弃】
      * @param string $SchemaId 选择所要绑定的SchemaId
      * @param TransformsParam $TransformsParam 数据处理规则
-     * @param string $TaskId 任务ID
+     * @param string $TaskId 任务Id
      * @param array $Tags 标签列表
+     * @param string $Description 任务描述信息
      */
     function __construct()
     {
@@ -166,6 +175,10 @@ class CreateDatahubTaskRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

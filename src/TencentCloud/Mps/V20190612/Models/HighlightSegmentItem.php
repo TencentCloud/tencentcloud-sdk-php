@@ -26,6 +26,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTimeOffset(float $StartTimeOffset) 设置片段起始时间偏移。
  * @method float getEndTimeOffset() 获取片段结束时间偏移。
  * @method void setEndTimeOffset(float $EndTimeOffset) 设置片段结束时间偏移。
+ * @method array getSegmentTags() 获取片段标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSegmentTags(array $SegmentTags) 设置片段标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBeginTime() 获取直播切片对应直播起始时间点，采用 ISO 日期格式。	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBeginTime(string $BeginTime) 设置直播切片对应直播起始时间点，采用 ISO 日期格式。	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEndTime() 获取直播切片对应直播结束时间点，采用 ISO 日期格式。	
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEndTime(string $EndTime) 设置直播切片对应直播结束时间点，采用 ISO 日期格式。	
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class HighlightSegmentItem extends AbstractModel
 {
@@ -45,9 +57,33 @@ class HighlightSegmentItem extends AbstractModel
     public $EndTimeOffset;
 
     /**
+     * @var array 片段标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SegmentTags;
+
+    /**
+     * @var string 直播切片对应直播起始时间点，采用 ISO 日期格式。	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BeginTime;
+
+    /**
+     * @var string 直播切片对应直播结束时间点，采用 ISO 日期格式。	
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EndTime;
+
+    /**
      * @param float $Confidence 置信度。
      * @param float $StartTimeOffset 片段起始时间偏移。
      * @param float $EndTimeOffset 片段结束时间偏移。
+     * @param array $SegmentTags 片段标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BeginTime 直播切片对应直播起始时间点，采用 ISO 日期格式。	
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EndTime 直播切片对应直播结束时间点，采用 ISO 日期格式。	
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -72,6 +108,18 @@ class HighlightSegmentItem extends AbstractModel
 
         if (array_key_exists("EndTimeOffset",$param) and $param["EndTimeOffset"] !== null) {
             $this->EndTimeOffset = $param["EndTimeOffset"];
+        }
+
+        if (array_key_exists("SegmentTags",$param) and $param["SegmentTags"] !== null) {
+            $this->SegmentTags = $param["SegmentTags"];
+        }
+
+        if (array_key_exists("BeginTime",$param) and $param["BeginTime"] !== null) {
+            $this->BeginTime = $param["BeginTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
         }
     }
 }

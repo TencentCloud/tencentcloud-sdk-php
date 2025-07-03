@@ -79,8 +79,12 @@ DeadLetter 死信
  * @method void setIsOnline(boolean $IsOnline) 设置是否在线
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getConsumeType() 获取消费类型
+0: 广播消费
+1: 集群消费
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setConsumeType(integer $ConsumeType) 设置消费类型
+0: 广播消费
+1: 集群消费
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getConsistency() 获取订阅一致性
 注意：此字段可能返回 null，表示取不到有效值。
@@ -97,6 +101,10 @@ DeadLetter 死信
  * @method string getClientProtocol() 获取协议类型
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClientProtocol(string $ClientProtocol) 设置协议类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getClientSubscriptionInfos() 获取客户端订阅详情
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClientSubscriptionInfos(array $ClientSubscriptionInfos) 设置客户端订阅详情
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class RocketMQSubscription extends AbstractModel
@@ -172,6 +180,8 @@ DeadLetter 死信
 
     /**
      * @var integer 消费类型
+0: 广播消费
+1: 集群消费
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConsumeType;
@@ -199,6 +209,12 @@ DeadLetter 死信
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClientProtocol;
+
+    /**
+     * @var array 客户端订阅详情
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ClientSubscriptionInfos;
 
     /**
      * @param string $Topic 主题名称
@@ -231,6 +247,8 @@ DeadLetter 死信
      * @param boolean $IsOnline 是否在线
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ConsumeType 消费类型
+0: 广播消费
+1: 集群消费
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Consistency 订阅一致性
 注意：此字段可能返回 null，表示取不到有效值。
@@ -239,6 +257,8 @@ DeadLetter 死信
      * @param integer $MaxRetryTimes 最大重试次数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClientProtocol 协议类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ClientSubscriptionInfos 客户端订阅详情
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -312,6 +332,15 @@ DeadLetter 死信
 
         if (array_key_exists("ClientProtocol",$param) and $param["ClientProtocol"] !== null) {
             $this->ClientProtocol = $param["ClientProtocol"];
+        }
+
+        if (array_key_exists("ClientSubscriptionInfos",$param) and $param["ClientSubscriptionInfos"] !== null) {
+            $this->ClientSubscriptionInfos = [];
+            foreach ($param["ClientSubscriptionInfos"] as $key => $value){
+                $obj = new ClientSubscriptionInfo();
+                $obj->deserialize($value);
+                array_push($this->ClientSubscriptionInfos, $obj);
+            }
         }
     }
 }

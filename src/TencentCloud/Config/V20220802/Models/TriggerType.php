@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMessageType() 获取触发类型
  * @method void setMessageType(string $MessageType) 设置触发类型
  * @method string getMaximumExecutionFrequency() 获取触发时间周期
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMaximumExecutionFrequency(string $MaximumExecutionFrequency) 设置触发时间周期
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TriggerType extends AbstractModel
 {
@@ -36,14 +34,12 @@ class TriggerType extends AbstractModel
 
     /**
      * @var string 触发时间周期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaximumExecutionFrequency;
 
     /**
      * @param string $MessageType 触发类型
      * @param string $MaximumExecutionFrequency 触发时间周期
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -23,21 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTotalCount() 获取程序包总量
  * @method void setTotalCount(integer $TotalCount) 设置程序包总量
  * @method array getContent() 获取程序包信息列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContent(array $Content) 设置程序包信息列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRepositoryId() 获取程序包仓库id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRepositoryId(string $RepositoryId) 设置程序包仓库id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRepositoryType() 获取程序包仓库类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRepositoryType(string $RepositoryType) 设置程序包仓库类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRepositoryName() 获取程序包仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRepositoryName(string $RepositoryName) 设置程序包仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class PkgList extends AbstractModel
 {
@@ -48,38 +40,30 @@ class PkgList extends AbstractModel
 
     /**
      * @var array 程序包信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Content;
 
     /**
      * @var string 程序包仓库id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RepositoryId;
 
     /**
      * @var string 程序包仓库类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RepositoryType;
 
     /**
      * @var string 程序包仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RepositoryName;
 
     /**
      * @param integer $TotalCount 程序包总量
      * @param array $Content 程序包信息列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RepositoryId 程序包仓库id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RepositoryType 程序包仓库类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RepositoryName 程序包仓库名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

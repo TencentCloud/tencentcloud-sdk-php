@@ -33,25 +33,15 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getApiAssetsCount() 获取api资产总数
  * @method void setApiAssetsCount(integer $ApiAssetsCount) 设置api资产总数
  * @method integer getApiRiskEventCount() 获取api风险事件数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApiRiskEventCount(integer $ApiRiskEventCount) 设置api风险事件数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIPBlackCount() 获取黑名单总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIPBlackCount(integer $IPBlackCount) 设置黑名单总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTamperCount() 获取防篡改总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTamperCount(integer $TamperCount) 设置防篡改总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLeakCount() 获取信息泄露总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLeakCount(integer $LeakCount) 设置信息泄露总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getApiRiskEventCircleCount() 获取API风险事件周环比
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApiRiskEventCircleCount(integer $ApiRiskEventCircleCount) 设置API风险事件周环比
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -89,31 +79,26 @@ class DescribeAttackOverviewResponse extends AbstractModel
 
     /**
      * @var integer api风险事件数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApiRiskEventCount;
 
     /**
      * @var integer 黑名单总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IPBlackCount;
 
     /**
      * @var integer 防篡改总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TamperCount;
 
     /**
      * @var integer 信息泄露总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LeakCount;
 
     /**
      * @var integer API风险事件周环比
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApiRiskEventCircleCount;
 
@@ -130,15 +115,10 @@ class DescribeAttackOverviewResponse extends AbstractModel
      * @param integer $BotCount Bot攻击总数
      * @param integer $ApiAssetsCount api资产总数
      * @param integer $ApiRiskEventCount api风险事件数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IPBlackCount 黑名单总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TamperCount 防篡改总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LeakCount 信息泄露总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ApiRiskEventCircleCount API风险事件周环比
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

@@ -25,11 +25,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getVpcRestrictionEffect() 获取vpc限制效力，ALLOW 允许；DENY 拒绝。
  * @method void setVpcRestrictionEffect(string $VpcRestrictionEffect) 设置vpc限制效力，ALLOW 允许；DENY 拒绝。
  * @method array getVpcIdSet() 获取允许或拒绝下载备份文件的vpcId列表。
+**注意：**该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
  * @method void setVpcIdSet(array $VpcIdSet) 设置允许或拒绝下载备份文件的vpcId列表。
+**注意：**该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
  * @method string getIpRestrictionEffect() 获取ip限制效力，ALLOW 允许；DENY 拒绝。
  * @method void setIpRestrictionEffect(string $IpRestrictionEffect) 设置ip限制效力，ALLOW 允许；DENY 拒绝。
  * @method array getIpSet() 获取允许或拒绝下载备份文件的ip列表。
+**注意：**该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
  * @method void setIpSet(array $IpSet) 设置允许或拒绝下载备份文件的ip列表。
+**注意：**该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
  */
 class ModifyBackupDownloadRestrictionRequest extends AbstractModel
 {
@@ -45,6 +49,7 @@ class ModifyBackupDownloadRestrictionRequest extends AbstractModel
 
     /**
      * @var array 允许或拒绝下载备份文件的vpcId列表。
+**注意：**该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
      */
     public $VpcIdSet;
 
@@ -55,6 +60,7 @@ class ModifyBackupDownloadRestrictionRequest extends AbstractModel
 
     /**
      * @var array 允许或拒绝下载备份文件的ip列表。
+**注意：**该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
      */
     public $IpSet;
 
@@ -62,8 +68,10 @@ class ModifyBackupDownloadRestrictionRequest extends AbstractModel
      * @param string $RestrictionType 备份文件下载限制类型，NONE 无限制，内外网都可以下载；INTRANET 只允许内网下载；CUSTOMIZE 自定义限制下载的vpc或ip。
      * @param string $VpcRestrictionEffect vpc限制效力，ALLOW 允许；DENY 拒绝。
      * @param array $VpcIdSet 允许或拒绝下载备份文件的vpcId列表。
+**注意：**该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
      * @param string $IpRestrictionEffect ip限制效力，ALLOW 允许；DENY 拒绝。
      * @param array $IpSet 允许或拒绝下载备份文件的ip列表。
+**注意：**该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
      */
     function __construct()
     {

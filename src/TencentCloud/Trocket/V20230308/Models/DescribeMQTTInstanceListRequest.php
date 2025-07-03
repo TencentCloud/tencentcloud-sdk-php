@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置查询起始位置
  * @method integer getLimit() 获取查询结果限制数量
  * @method void setLimit(integer $Limit) 设置查询结果限制数量
+ * @method boolean getIncludeNew() 获取是否包含新控制台集群：默认为包含
+ * @method void setIncludeNew(boolean $IncludeNew) 设置是否包含新控制台集群：默认为包含
  */
 class DescribeMQTTInstanceListRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeMQTTInstanceListRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var boolean 是否包含新控制台集群：默认为包含
+     */
+    public $IncludeNew;
+
+    /**
      * @param array $Filters 查询条件列表
      * @param integer $Offset 查询起始位置
      * @param integer $Limit 查询结果限制数量
+     * @param boolean $IncludeNew 是否包含新控制台集群：默认为包含
      */
     function __construct()
     {
@@ -77,6 +85,10 @@ class DescribeMQTTInstanceListRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("IncludeNew",$param) and $param["IncludeNew"] !== null) {
+            $this->IncludeNew = $param["IncludeNew"];
         }
     }
 }

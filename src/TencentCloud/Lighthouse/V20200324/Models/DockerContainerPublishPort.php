@@ -25,13 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getContainerPort() 获取容器端口
  * @method void setContainerPort(integer $ContainerPort) 设置容器端口
  * @method string getIp() 获取对外绑定IP，默认0.0.0.0
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIp(string $Ip) 设置对外绑定IP，默认0.0.0.0
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProtocol() 获取协议，默认tcp，支持tcp/udp/sctp
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProtocol(string $Protocol) 设置协议，默认tcp，支持tcp/udp/sctp
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DockerContainerPublishPort extends AbstractModel
 {
@@ -47,13 +43,11 @@ class DockerContainerPublishPort extends AbstractModel
 
     /**
      * @var string 对外绑定IP，默认0.0.0.0
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Ip;
 
     /**
      * @var string 协议，默认tcp，支持tcp/udp/sctp
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Protocol;
 
@@ -61,9 +55,7 @@ class DockerContainerPublishPort extends AbstractModel
      * @param integer $HostPort 主机端口
      * @param integer $ContainerPort 容器端口
      * @param string $Ip 对外绑定IP，默认0.0.0.0
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Protocol 协议，默认tcp，支持tcp/udp/sctp
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

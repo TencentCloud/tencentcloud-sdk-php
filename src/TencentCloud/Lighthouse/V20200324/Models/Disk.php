@@ -29,18 +29,38 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDiskName() 获取磁盘名称
  * @method void setDiskName(string $DiskName) 设置磁盘名称
  * @method string getDiskUsage() 获取磁盘类型
+枚举值：
+<li> SYSTEM_DISK: 系统盘 </li>
+<li> DATA_DISK: 数据盘 </li>
+
  * @method void setDiskUsage(string $DiskUsage) 设置磁盘类型
+枚举值：
+<li> SYSTEM_DISK: 系统盘 </li>
+<li> DATA_DISK: 数据盘 </li>
+
  * @method string getDiskType() 获取磁盘介质类型
+枚举值:
+<li> CLOUD_BASIC: 普通云硬盘 </li>
+<li> CLOUD_PREMIUM: 高性能云硬盘 </li>
+<li> CLOUD_SSD: SSD云硬盘 </li>
  * @method void setDiskType(string $DiskType) 设置磁盘介质类型
+枚举值:
+<li> CLOUD_BASIC: 普通云硬盘 </li>
+<li> CLOUD_PREMIUM: 高性能云硬盘 </li>
+<li> CLOUD_SSD: SSD云硬盘 </li>
  * @method string getDiskChargeType() 获取磁盘付费类型
+<li> PREPAID: 预付费 </li>
+<li> POSTPAID_BY_HOUR: 按小时后付费 </li>
  * @method void setDiskChargeType(string $DiskChargeType) 设置磁盘付费类型
- * @method integer getDiskSize() 获取磁盘大小
- * @method void setDiskSize(integer $DiskSize) 设置磁盘大小
+<li> PREPAID: 预付费 </li>
+<li> POSTPAID_BY_HOUR: 按小时后付费 </li>
+ * @method integer getDiskSize() 获取磁盘大小, 单位GB
+ * @method void setDiskSize(integer $DiskSize) 设置磁盘大小, 单位GB
  * @method string getRenewFlag() 获取续费标识
  * @method void setRenewFlag(string $RenewFlag) 设置续费标识
  * @method string getDiskState() 获取磁盘状态，取值范围：
 <li>PENDING：创建中。 </li>
-<li>UNATTACHED：未挂载。</li>
+<li>UNATTACHED：待挂载。</li>
 <li>ATTACHING：挂载中。</li>
 <li>ATTACHED：已挂载。</li>
 <li>DETACHING：卸载中。 </li>
@@ -51,7 +71,7 @@ use TencentCloud\Common\AbstractModel;
 <li> FREEZING：冻结中。</li>
  * @method void setDiskState(string $DiskState) 设置磁盘状态，取值范围：
 <li>PENDING：创建中。 </li>
-<li>UNATTACHED：未挂载。</li>
+<li>UNATTACHED：待挂载。</li>
 <li>ATTACHING：挂载中。</li>
 <li>ATTACHED：已挂载。</li>
 <li>DETACHING：卸载中。 </li>
@@ -117,21 +137,31 @@ class Disk extends AbstractModel
 
     /**
      * @var string 磁盘类型
+枚举值：
+<li> SYSTEM_DISK: 系统盘 </li>
+<li> DATA_DISK: 数据盘 </li>
+
      */
     public $DiskUsage;
 
     /**
      * @var string 磁盘介质类型
+枚举值:
+<li> CLOUD_BASIC: 普通云硬盘 </li>
+<li> CLOUD_PREMIUM: 高性能云硬盘 </li>
+<li> CLOUD_SSD: SSD云硬盘 </li>
      */
     public $DiskType;
 
     /**
      * @var string 磁盘付费类型
+<li> PREPAID: 预付费 </li>
+<li> POSTPAID_BY_HOUR: 按小时后付费 </li>
      */
     public $DiskChargeType;
 
     /**
-     * @var integer 磁盘大小
+     * @var integer 磁盘大小, 单位GB
      */
     public $DiskSize;
 
@@ -143,7 +173,7 @@ class Disk extends AbstractModel
     /**
      * @var string 磁盘状态，取值范围：
 <li>PENDING：创建中。 </li>
-<li>UNATTACHED：未挂载。</li>
+<li>UNATTACHED：待挂载。</li>
 <li>ATTACHING：挂载中。</li>
 <li>ATTACHED：已挂载。</li>
 <li>DETACHING：卸载中。 </li>
@@ -217,13 +247,23 @@ class Disk extends AbstractModel
      * @param string $Zone 可用区
      * @param string $DiskName 磁盘名称
      * @param string $DiskUsage 磁盘类型
+枚举值：
+<li> SYSTEM_DISK: 系统盘 </li>
+<li> DATA_DISK: 数据盘 </li>
+
      * @param string $DiskType 磁盘介质类型
+枚举值:
+<li> CLOUD_BASIC: 普通云硬盘 </li>
+<li> CLOUD_PREMIUM: 高性能云硬盘 </li>
+<li> CLOUD_SSD: SSD云硬盘 </li>
      * @param string $DiskChargeType 磁盘付费类型
-     * @param integer $DiskSize 磁盘大小
+<li> PREPAID: 预付费 </li>
+<li> POSTPAID_BY_HOUR: 按小时后付费 </li>
+     * @param integer $DiskSize 磁盘大小, 单位GB
      * @param string $RenewFlag 续费标识
      * @param string $DiskState 磁盘状态，取值范围：
 <li>PENDING：创建中。 </li>
-<li>UNATTACHED：未挂载。</li>
+<li>UNATTACHED：待挂载。</li>
 <li>ATTACHING：挂载中。</li>
 <li>ATTACHED：已挂载。</li>
 <li>DETACHING：卸载中。 </li>

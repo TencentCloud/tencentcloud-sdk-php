@@ -21,117 +21,81 @@ use TencentCloud\Common\AbstractModel;
  * 查询网关监控信息返回结果
  *
  * @method integer getDeviceTotal() 获取设备接入总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceTotal(integer $DeviceTotal) 设置设备接入总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDeviceOnline() 获取设备在线数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceOnline(integer $DeviceOnline) 设置设备在线数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getDeviceOffline() 获取设备离线数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeviceOffline(integer $DeviceOffline) 设置设备离线数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getChannelTotal() 获取视频通道总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChannelTotal(integer $ChannelTotal) 设置视频通道总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getChannelOnline() 获取视频通道在线数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChannelOnline(integer $ChannelOnline) 设置视频通道在线数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getChannelOffline() 获取视频通道离线数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChannelOffline(integer $ChannelOffline) 设置视频通道离线数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUpFlow() 获取网关上行流量,单位kbps
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpFlow(integer $UpFlow) 设置网关上行流量,单位kbps
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getChannelPull() 获取流在传输中的通道数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChannelPull(integer $ChannelPull) 设置流在传输中的通道数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getChannelUnPull() 获取流未传输中的通道数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setChannelUnPull(integer $ChannelUnPull) 设置流未传输中的通道数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeGatewayMonitor extends AbstractModel
 {
     /**
      * @var integer 设备接入总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceTotal;
 
     /**
      * @var integer 设备在线数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceOnline;
 
     /**
      * @var integer 设备离线数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DeviceOffline;
 
     /**
      * @var integer 视频通道总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChannelTotal;
 
     /**
      * @var integer 视频通道在线数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChannelOnline;
 
     /**
      * @var integer 视频通道离线数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChannelOffline;
 
     /**
      * @var integer 网关上行流量,单位kbps
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpFlow;
 
     /**
      * @var integer 流在传输中的通道数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChannelPull;
 
     /**
      * @var integer 流未传输中的通道数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ChannelUnPull;
 
     /**
      * @param integer $DeviceTotal 设备接入总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DeviceOnline 设备在线数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DeviceOffline 设备离线数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ChannelTotal 视频通道总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ChannelOnline 视频通道在线数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ChannelOffline 视频通道离线数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UpFlow 网关上行流量,单位kbps
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ChannelPull 流在传输中的通道数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ChannelUnPull 流未传输中的通道数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

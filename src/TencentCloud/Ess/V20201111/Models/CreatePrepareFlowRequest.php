@@ -40,10 +40,12 @@ use TencentCloud\Common\AbstractModel;
 <li>模板Id（通过控制台创建模板后获取模板Id）</li>
 </ul>
 注意：需要同时设置 ResourceType 参数指定资源类型
- * @method string getFlowName() 获取合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+ * @method string getFlowName() 获取自定义的合同流程的名称，长度不能超过200个字符，只能由中文汉字、中文标点、英文字母、阿拉伯数字、空格、小括号、中括号、中划线、下划线以及（,）、（;）、（.）、(&)、（+）组成。
 
- * @method void setFlowName(string $FlowName) 设置合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+该名称还将用于合同签署完成后文件下载的默认文件名称。
+ * @method void setFlowName(string $FlowName) 设置自定义的合同流程的名称，长度不能超过200个字符，只能由中文汉字、中文标点、英文字母、阿拉伯数字、空格、小括号、中括号、中划线、下划线以及（,）、（;）、（.）、(&)、（+）组成。
 
+该名称还将用于合同签署完成后文件下载的默认文件名称。
  * @method integer getResourceType() 获取资源类型，取值有：
 <ul><li> **1**：模板</li>
 <li> **2**：文件（默认值）</li></ul>
@@ -82,8 +84,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIntelligentStatus(string $IntelligentStatus) 设置开启或者关闭智能添加填写区：
 <ul><li> **OPEN**：开启（默认值）</li>
 <li> **CLOSE**：关闭</li></ul>
- * @method Component getComponents() 获取该字段已废弃，请使用InitiatorComponents
- * @method void setComponents(Component $Components) 设置该字段已废弃，请使用InitiatorComponents
+ * @method Component getComponents() 获取该字段已不再使用，请使用InitiatorComponents
+ * @method void setComponents(Component $Components) 设置该字段已不再使用，请使用InitiatorComponents
  * @method CreateFlowOption getFlowOption() 获取发起合同个性化参数
 用于满足创建及页面操作过程中的个性化要求
 具体定制化内容详见数据接口说明
@@ -120,9 +122,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserData(string $UserData) 设置调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 20480长度。
 
 在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
- * @method CcInfo getCcInfos() 获取合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
+ * @method array getCcInfos() 获取合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
 
- * @method void setCcInfos(CcInfo $CcInfos) 设置合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
+ * @method void setCcInfos(array $CcInfos) 设置合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
 
  * @method string getFlowId() 获取合同Id：用于通过一个已发起的合同快速生成一个发起流程web链接
 注: `该参数必须是一个待发起审核的合同id，并且还未审核通过`
@@ -135,6 +137,19 @@ use TencentCloud\Common\AbstractModel;
  * @method array getInitiatorComponents() 获取模板或者合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
 
  * @method void setInitiatorComponents(array $InitiatorComponents) 设置模板或者合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
+
+ * @method integer getFlowDisplayType() 获取在短信通知、填写、签署流程中，若标题、按钮、合同详情等地方存在“合同”字样时，可根据此配置指定文案，可选文案如下：  <ul><li> <b>0</b> :合同（默认值）</li> <li> <b>1</b> :文件</li> <li> <b>2</b> :协议</li><li> <b>3</b> :文书</li></ul>效果如下:![FlowDisplayType](https://qcloudimg.tencent-cloud.cn/raw/e4a2c4d638717cc901d3dbd5137c9bbc.png)
+ * @method void setFlowDisplayType(integer $FlowDisplayType) 设置在短信通知、填写、签署流程中，若标题、按钮、合同详情等地方存在“合同”字样时，可根据此配置指定文案，可选文案如下：  <ul><li> <b>0</b> :合同（默认值）</li> <li> <b>1</b> :文件</li> <li> <b>2</b> :协议</li><li> <b>3</b> :文书</li></ul>效果如下:![FlowDisplayType](https://qcloudimg.tencent-cloud.cn/raw/e4a2c4d638717cc901d3dbd5137c9bbc.png)
+ * @method SignComponentConfig getSignComponentConfig() 获取<font color="red">此字段已不再使用，请使用 CreateFlowOption 里面的 SignComponentConfig</font>
+签署控件的配置信息，用在嵌入式发起的页面配置，
+包括  
+
+- 签署控件 是否默认展示日期.
+ * @method void setSignComponentConfig(SignComponentConfig $SignComponentConfig) 设置<font color="red">此字段已不再使用，请使用 CreateFlowOption 里面的 SignComponentConfig</font>
+签署控件的配置信息，用在嵌入式发起的页面配置，
+包括  
+
+- 签署控件 是否默认展示日期.
  */
 class CreatePrepareFlowRequest extends AbstractModel
 {
@@ -157,8 +172,9 @@ class CreatePrepareFlowRequest extends AbstractModel
     public $ResourceId;
 
     /**
-     * @var string 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+     * @var string 自定义的合同流程的名称，长度不能超过200个字符，只能由中文汉字、中文标点、英文字母、阿拉伯数字、空格、小括号、中括号、中划线、下划线以及（,）、（;）、（.）、(&)、（+）组成。
 
+该名称还将用于合同签署完成后文件下载的默认文件名称。
      */
     public $FlowName;
 
@@ -210,7 +226,7 @@ class CreatePrepareFlowRequest extends AbstractModel
     public $IntelligentStatus;
 
     /**
-     * @var Component 该字段已废弃，请使用InitiatorComponents
+     * @var Component 该字段已不再使用，请使用InitiatorComponents
      */
     public $Components;
 
@@ -249,7 +265,7 @@ class CreatePrepareFlowRequest extends AbstractModel
     public $UserData;
 
     /**
-     * @var CcInfo 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
+     * @var array 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
 
      */
     public $CcInfos;
@@ -273,6 +289,21 @@ class CreatePrepareFlowRequest extends AbstractModel
     public $InitiatorComponents;
 
     /**
+     * @var integer 在短信通知、填写、签署流程中，若标题、按钮、合同详情等地方存在“合同”字样时，可根据此配置指定文案，可选文案如下：  <ul><li> <b>0</b> :合同（默认值）</li> <li> <b>1</b> :文件</li> <li> <b>2</b> :协议</li><li> <b>3</b> :文书</li></ul>效果如下:![FlowDisplayType](https://qcloudimg.tencent-cloud.cn/raw/e4a2c4d638717cc901d3dbd5137c9bbc.png)
+     */
+    public $FlowDisplayType;
+
+    /**
+     * @var SignComponentConfig <font color="red">此字段已不再使用，请使用 CreateFlowOption 里面的 SignComponentConfig</font>
+签署控件的配置信息，用在嵌入式发起的页面配置，
+包括  
+
+- 签署控件 是否默认展示日期.
+     * @deprecated
+     */
+    public $SignComponentConfig;
+
+    /**
      * @param UserInfo $Operator 执行本接口操作的员工信息。使用此接口时，必须填写userId。
 支持填入集团子公司经办人 userId 代发合同。
 
@@ -283,8 +314,9 @@ class CreatePrepareFlowRequest extends AbstractModel
 <li>模板Id（通过控制台创建模板后获取模板Id）</li>
 </ul>
 注意：需要同时设置 ResourceType 参数指定资源类型
-     * @param string $FlowName 合同流程的名称（可自定义此名称），长度不能超过200，只能由中文、字母、数字和下划线组成。
+     * @param string $FlowName 自定义的合同流程的名称，长度不能超过200个字符，只能由中文汉字、中文标点、英文字母、阿拉伯数字、空格、小括号、中括号、中划线、下划线以及（,）、（;）、（.）、(&)、（+）组成。
 
+该名称还将用于合同签署完成后文件下载的默认文件名称。
      * @param integer $ResourceType 资源类型，取值有：
 <ul><li> **1**：模板</li>
 <li> **2**：文件（默认值）</li></ul>
@@ -304,7 +336,7 @@ class CreatePrepareFlowRequest extends AbstractModel
      * @param string $IntelligentStatus 开启或者关闭智能添加填写区：
 <ul><li> **OPEN**：开启（默认值）</li>
 <li> **CLOSE**：关闭</li></ul>
-     * @param Component $Components 该字段已废弃，请使用InitiatorComponents
+     * @param Component $Components 该字段已不再使用，请使用InitiatorComponents
      * @param CreateFlowOption $FlowOption 发起合同个性化参数
 用于满足创建及页面操作过程中的个性化要求
 具体定制化内容详见数据接口说明
@@ -323,13 +355,20 @@ class CreatePrepareFlowRequest extends AbstractModel
      * @param string $UserData 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 20480长度。
 
 在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_v2" target="_blank">回调通知</a>模块。
-     * @param CcInfo $CcInfos 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
+     * @param array $CcInfos 合同流程的抄送人列表，最多可支持50个抄送人，抄送人可查看合同内容及签署进度，但无需参与合同签署。
 
      * @param string $FlowId 合同Id：用于通过一个已发起的合同快速生成一个发起流程web链接
 注: `该参数必须是一个待发起审核的合同id，并且还未审核通过`
      * @param Agent $Agent 代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
      * @param array $InitiatorComponents 模板或者合同中的填写控件列表，列表中可支持下列多种填写控件，控件的详细定义参考开发者中心的Component结构体
+
+     * @param integer $FlowDisplayType 在短信通知、填写、签署流程中，若标题、按钮、合同详情等地方存在“合同”字样时，可根据此配置指定文案，可选文案如下：  <ul><li> <b>0</b> :合同（默认值）</li> <li> <b>1</b> :文件</li> <li> <b>2</b> :协议</li><li> <b>3</b> :文书</li></ul>效果如下:![FlowDisplayType](https://qcloudimg.tencent-cloud.cn/raw/e4a2c4d638717cc901d3dbd5137c9bbc.png)
+     * @param SignComponentConfig $SignComponentConfig <font color="red">此字段已不再使用，请使用 CreateFlowOption 里面的 SignComponentConfig</font>
+签署控件的配置信息，用在嵌入式发起的页面配置，
+包括  
+
+- 签署控件 是否默认展示日期.
      */
     function __construct()
     {
@@ -413,8 +452,12 @@ class CreatePrepareFlowRequest extends AbstractModel
         }
 
         if (array_key_exists("CcInfos",$param) and $param["CcInfos"] !== null) {
-            $this->CcInfos = new CcInfo();
-            $this->CcInfos->deserialize($param["CcInfos"]);
+            $this->CcInfos = [];
+            foreach ($param["CcInfos"] as $key => $value){
+                $obj = new CcInfo();
+                $obj->deserialize($value);
+                array_push($this->CcInfos, $obj);
+            }
         }
 
         if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
@@ -433,6 +476,15 @@ class CreatePrepareFlowRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->InitiatorComponents, $obj);
             }
+        }
+
+        if (array_key_exists("FlowDisplayType",$param) and $param["FlowDisplayType"] !== null) {
+            $this->FlowDisplayType = $param["FlowDisplayType"];
+        }
+
+        if (array_key_exists("SignComponentConfig",$param) and $param["SignComponentConfig"] !== null) {
+            $this->SignComponentConfig = new SignComponentConfig();
+            $this->SignComponentConfig->deserialize($param["SignComponentConfig"]);
         }
     }
 }

@@ -21,45 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 用户组删除时关联的应用信息
  *
  * @method string getUserGroupId() 获取用户组id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUserGroupId(string $UserGroupId) 设置用户组id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApplicationId() 获取应用id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationId(string $ApplicationId) 设置应用id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApplicationName() 获取应用名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationName(string $ApplicationName) 设置应用名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AppAssociatedUserGroupIds extends AbstractModel
 {
     /**
      * @var string 用户组id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserGroupId;
 
     /**
      * @var string 应用id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationId;
 
     /**
      * @var string 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationName;
 
     /**
      * @param string $UserGroupId 用户组id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationId 应用id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationName 应用名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

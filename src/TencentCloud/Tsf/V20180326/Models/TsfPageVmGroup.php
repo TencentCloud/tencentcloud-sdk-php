@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 列表中部署组分页信息
  *
  * @method integer getTotalCount() 获取虚拟机部署组总数目
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置虚拟机部署组总数目
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getContent() 获取虚拟机部署组列表信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContent(array $Content) 设置虚拟机部署组列表信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TsfPageVmGroup extends AbstractModel
 {
     /**
      * @var integer 虚拟机部署组总数目
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
      * @var array 虚拟机部署组列表信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Content;
 
     /**
      * @param integer $TotalCount 虚拟机部署组总数目
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Content 虚拟机部署组列表信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

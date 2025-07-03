@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * vpc信息
  *
  * @method string getVpcId() 获取vpc Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(string $VpcId) 设置vpc Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVpcCidrBlock() 获取vpc子网
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcCidrBlock(string $VpcCidrBlock) 设置vpc子网
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getRuleId() 获取规则Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRuleId(integer $RuleId) 设置规则Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAccessGroupId() 获取权限组Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAccessGroupId(string $AccessGroupId) 设置权限组Id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class VpcInfo extends AbstractModel
 {
     /**
      * @var string vpc Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcId;
 
     /**
      * @var string vpc子网
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VpcCidrBlock;
 
     /**
      * @var integer 规则Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RuleId;
 
     /**
      * @var string 权限组Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AccessGroupId;
 
     /**
      * @param string $VpcId vpc Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcCidrBlock vpc子网
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleId 规则Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AccessGroupId 权限组Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

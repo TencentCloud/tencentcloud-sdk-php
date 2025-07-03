@@ -20,18 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AcknowledgeMessage返回参数结构体
  *
- * @method string getErrorMsg() 获取如果为“”，则说明没有错误返回
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setErrorMsg(string $ErrorMsg) 设置如果为“”，则说明没有错误返回
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getErrorMsg() 获取如果为""，则说明没有错误返回，否则返回具体的错误信息。
+ * @method void setErrorMsg(string $ErrorMsg) 设置如果为""，则说明没有错误返回，否则返回具体的错误信息。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class AcknowledgeMessageResponse extends AbstractModel
 {
     /**
-     * @var string 如果为“”，则说明没有错误返回
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var string 如果为""，则说明没有错误返回，否则返回具体的错误信息。
      */
     public $ErrorMsg;
 
@@ -41,8 +38,7 @@ class AcknowledgeMessageResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ErrorMsg 如果为“”，则说明没有错误返回
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ErrorMsg 如果为""，则说明没有错误返回，否则返回具体的错误信息。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

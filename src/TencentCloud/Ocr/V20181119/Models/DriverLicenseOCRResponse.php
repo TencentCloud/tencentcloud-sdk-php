@@ -49,18 +49,30 @@ use TencentCloud\Common\AbstractModel;
  * @method array getRecognizeWarnCode() 获取Code 告警码列表和释义：
 -9102  复印件告警
 -9103  翻拍件告警
+-9104  反光告警
+-9105  模糊告警
+-9106  边框不完整告警
 注：告警码可以同时存在多个
  * @method void setRecognizeWarnCode(array $RecognizeWarnCode) 设置Code 告警码列表和释义：
 -9102  复印件告警
 -9103  翻拍件告警
+-9104  反光告警
+-9105  模糊告警
+-9106  边框不完整告警
 注：告警码可以同时存在多个
  * @method array getRecognizeWarnMsg() 获取告警码说明：
 WARN_DRIVER_LICENSE_COPY_CARD 复印件告警
 WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
+WARN_DRIVER_LICENSE_REFLECTION 反光告警
+WARN_DRIVER_LICENSE_BLUR 模糊告警
+WARN_DRIVER_LICENSE_BORDER_INCOMPLETE 边框不完整告警
 注：告警信息可以同时存在多个
  * @method void setRecognizeWarnMsg(array $RecognizeWarnMsg) 设置告警码说明：
 WARN_DRIVER_LICENSE_COPY_CARD 复印件告警
 WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
+WARN_DRIVER_LICENSE_REFLECTION 反光告警
+WARN_DRIVER_LICENSE_BLUR 模糊告警
+WARN_DRIVER_LICENSE_BORDER_INCOMPLETE 边框不完整告警
 注：告警信息可以同时存在多个
  * @method string getIssuingAuthority() 获取发证单位
  * @method void setIssuingAuthority(string $IssuingAuthority) 设置发证单位
@@ -76,6 +88,12 @@ WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
  * @method void setBackPageName(string $BackPageName) 设置驾驶证副页姓名
  * @method string getBackPageCardCode() 获取驾驶证副页证号
  * @method void setBackPageCardCode(string $BackPageCardCode) 设置驾驶证副页证号
+ * @method string getDriverLicenseType() 获取驾驶证类型
+电子驾驶证：Electronic
+普通驾驶证：Normal
+ * @method void setDriverLicenseType(string $DriverLicenseType) 设置驾驶证类型
+电子驾驶证：Electronic
+普通驾驶证：Normal
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -146,6 +164,9 @@ class DriverLicenseOCRResponse extends AbstractModel
      * @var array Code 告警码列表和释义：
 -9102  复印件告警
 -9103  翻拍件告警
+-9104  反光告警
+-9105  模糊告警
+-9106  边框不完整告警
 注：告警码可以同时存在多个
      */
     public $RecognizeWarnCode;
@@ -154,6 +175,9 @@ class DriverLicenseOCRResponse extends AbstractModel
      * @var array 告警码说明：
 WARN_DRIVER_LICENSE_COPY_CARD 复印件告警
 WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
+WARN_DRIVER_LICENSE_REFLECTION 反光告警
+WARN_DRIVER_LICENSE_BLUR 模糊告警
+WARN_DRIVER_LICENSE_BORDER_INCOMPLETE 边框不完整告警
 注：告警信息可以同时存在多个
      */
     public $RecognizeWarnMsg;
@@ -194,6 +218,13 @@ WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
     public $BackPageCardCode;
 
     /**
+     * @var string 驾驶证类型
+电子驾驶证：Electronic
+普通驾驶证：Normal
+     */
+    public $DriverLicenseType;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -215,10 +246,16 @@ WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
      * @param array $RecognizeWarnCode Code 告警码列表和释义：
 -9102  复印件告警
 -9103  翻拍件告警
+-9104  反光告警
+-9105  模糊告警
+-9106  边框不完整告警
 注：告警码可以同时存在多个
      * @param array $RecognizeWarnMsg 告警码说明：
 WARN_DRIVER_LICENSE_COPY_CARD 复印件告警
 WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
+WARN_DRIVER_LICENSE_REFLECTION 反光告警
+WARN_DRIVER_LICENSE_BLUR 模糊告警
+WARN_DRIVER_LICENSE_BORDER_INCOMPLETE 边框不完整告警
 注：告警信息可以同时存在多个
      * @param string $IssuingAuthority 发证单位
      * @param string $State 状态（仅电子驾驶证支持返回该字段）
@@ -227,6 +264,9 @@ WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
      * @param string $GenerateTime 生成时间（仅电子驾驶证支持返回该字段）
      * @param string $BackPageName 驾驶证副页姓名
      * @param string $BackPageCardCode 驾驶证副页证号
+     * @param string $DriverLicenseType 驾驶证类型
+电子驾驶证：Electronic
+普通驾驶证：Normal
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -324,6 +364,10 @@ WARN_DRIVER_LICENSE_SCREENED_CARD 翻拍件告警
 
         if (array_key_exists("BackPageCardCode",$param) and $param["BackPageCardCode"] !== null) {
             $this->BackPageCardCode = $param["BackPageCardCode"];
+        }
+
+        if (array_key_exists("DriverLicenseType",$param) and $param["DriverLicenseType"] !== null) {
+            $this->DriverLicenseType = $param["DriverLicenseType"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

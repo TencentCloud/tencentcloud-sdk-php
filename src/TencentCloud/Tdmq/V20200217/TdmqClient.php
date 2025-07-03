@@ -33,8 +33,9 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
  * @method Models\CreateEnvironmentResponse CreateEnvironment(Models\CreateEnvironmentRequest $req) 用于在用户账户下创建消息队列 Tdmq 命名空间
  * @method Models\CreateEnvironmentRoleResponse CreateEnvironmentRole(Models\CreateEnvironmentRoleRequest $req) 创建环境角色授权
  * @method Models\CreateProClusterResponse CreateProCluster(Models\CreateProClusterRequest $req) 创建专业集群——预付费，仅通过api调用
+ * @method Models\CreateRabbitMQBindingResponse CreateRabbitMQBinding(Models\CreateRabbitMQBindingRequest $req) 创建RabbitMQ路由关系
  * @method Models\CreateRabbitMQUserResponse CreateRabbitMQUser(Models\CreateRabbitMQUserRequest $req) 创建RabbitMQ的用户
- * @method Models\CreateRabbitMQVipInstanceResponse CreateRabbitMQVipInstance(Models\CreateRabbitMQVipInstanceRequest $req) 创建RabbitMQ专享版实例
+ * @method Models\CreateRabbitMQVipInstanceResponse CreateRabbitMQVipInstance(Models\CreateRabbitMQVipInstanceRequest $req) 创建 RabbitMQ 托管版实例
  * @method Models\CreateRabbitMQVirtualHostResponse CreateRabbitMQVirtualHost(Models\CreateRabbitMQVirtualHostRequest $req) 创建RabbitMQ的vhost
  * @method Models\CreateRocketMQClusterResponse CreateRocketMQCluster(Models\CreateRocketMQClusterRequest $req) 此接口用于创建一个RocketMQ集群
  * @method Models\CreateRocketMQEnvironmentRoleResponse CreateRocketMQEnvironmentRole(Models\CreateRocketMQEnvironmentRoleRequest $req) 创建环境角色授权
@@ -53,8 +54,10 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
  * @method Models\DeleteEnvironmentRolesResponse DeleteEnvironmentRoles(Models\DeleteEnvironmentRolesRequest $req) 删除环境角色授权。
  * @method Models\DeleteEnvironmentsResponse DeleteEnvironments(Models\DeleteEnvironmentsRequest $req) 批量删除租户下的命名空间
  * @method Models\DeleteProClusterResponse DeleteProCluster(Models\DeleteProClusterRequest $req) 删除专业集群——预付费，仅通过API 调用
+ * @method Models\DeleteRabbitMQBindingResponse DeleteRabbitMQBinding(Models\DeleteRabbitMQBindingRequest $req) 解绑RabbitMQ路由关系
+ * @method Models\DeleteRabbitMQPermissionResponse DeleteRabbitMQPermission(Models\DeleteRabbitMQPermissionRequest $req) 删除RabbitMQ的权限
  * @method Models\DeleteRabbitMQUserResponse DeleteRabbitMQUser(Models\DeleteRabbitMQUserRequest $req) 删除RabbitMQ的用户
- * @method Models\DeleteRabbitMQVipInstanceResponse DeleteRabbitMQVipInstance(Models\DeleteRabbitMQVipInstanceRequest $req) 删除RabbitMQ专享版实例
+ * @method Models\DeleteRabbitMQVipInstanceResponse DeleteRabbitMQVipInstance(Models\DeleteRabbitMQVipInstanceRequest $req) 删除 RabbitMQ 托管版实例
  * @method Models\DeleteRabbitMQVirtualHostResponse DeleteRabbitMQVirtualHost(Models\DeleteRabbitMQVirtualHostRequest $req) 删除RabbitMQ的vhost
  * @method Models\DeleteRocketMQClusterResponse DeleteRocketMQCluster(Models\DeleteRocketMQClusterRequest $req) 删除RocketMQ集群
  * @method Models\DeleteRocketMQEnvironmentRolesResponse DeleteRocketMQEnvironmentRoles(Models\DeleteRocketMQEnvironmentRolesRequest $req) 删除环境角色授权。
@@ -66,15 +69,14 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
  * @method Models\DeleteRolesResponse DeleteRoles(Models\DeleteRolesRequest $req) 删除角色，支持批量。
  * @method Models\DeleteSubscriptionsResponse DeleteSubscriptions(Models\DeleteSubscriptionsRequest $req) 删除订阅关系
  * @method Models\DeleteTopicsResponse DeleteTopics(Models\DeleteTopicsRequest $req) 批量删除topics
- * @method Models\DescribeAMQPClustersResponse DescribeAMQPClusters(Models\DescribeAMQPClustersRequest $req) 获取amqp集群列表
+ * @method Models\DescribeAMQPClustersResponse DescribeAMQPClusters(Models\DescribeAMQPClustersRequest $req) 历史原因，该接口位于tdmq-manager，目前rabbitmq产品没有使用该接口，当前使用的是DescribeRabbitMQVipInstances。不过从调用链上看，线网还有请求流程，所以走预下线流程。
+
+获取amqp集群列表
  * @method Models\DescribeAllTenantsResponse DescribeAllTenants(Models\DescribeAllTenantsRequest $req) 获取某个租户的虚拟集群列表
  * @method Models\DescribeBindClustersResponse DescribeBindClusters(Models\DescribeBindClustersRequest $req) 获取用户绑定的专享集群列表
  * @method Models\DescribeBindVpcsResponse DescribeBindVpcs(Models\DescribeBindVpcsRequest $req) 获取租户VPC绑定关系
  * @method Models\DescribeClusterDetailResponse DescribeClusterDetail(Models\DescribeClusterDetailRequest $req) 获取集群的详细信息
  * @method Models\DescribeClustersResponse DescribeClusters(Models\DescribeClustersRequest $req) 获取集群列表
- * @method Models\DescribeCmqDeadLetterSourceQueuesResponse DescribeCmqDeadLetterSourceQueues(Models\DescribeCmqDeadLetterSourceQueuesRequest $req) 接口很久之前已删除，需下线
-
-枚举cmq死信队列源队列
  * @method Models\DescribeCmqQueueDetailResponse DescribeCmqQueueDetail(Models\DescribeCmqQueueDetailRequest $req) 查询cmq队列详情
  * @method Models\DescribeCmqQueuesResponse DescribeCmqQueues(Models\DescribeCmqQueuesRequest $req) 查询cmq全量队列
  * @method Models\DescribeCmqSubscriptionDetailResponse DescribeCmqSubscriptionDetail(Models\DescribeCmqSubscriptionDetailRequest $req) 查询cmq订阅详情
@@ -92,15 +94,16 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
  * @method Models\DescribePublishersResponse DescribePublishers(Models\DescribePublishersRequest $req) 获取生产者信息列表
  * @method Models\DescribePulsarProInstanceDetailResponse DescribePulsarProInstanceDetail(Models\DescribePulsarProInstanceDetailRequest $req) 获取Pulsar专业版集群实例信息
  * @method Models\DescribePulsarProInstancesResponse DescribePulsarProInstances(Models\DescribePulsarProInstancesRequest $req) 查询用户已购的Pulsar专业版实例列表
+ * @method Models\DescribeRabbitMQBindingsResponse DescribeRabbitMQBindings(Models\DescribeRabbitMQBindingsRequest $req) 查询RabbitMQ路由关系列表
  * @method Models\DescribeRabbitMQExchangesResponse DescribeRabbitMQExchanges(Models\DescribeRabbitMQExchangesRequest $req) 查询RabbitMQ exchange 列表
- * @method Models\DescribeRabbitMQNodeListResponse DescribeRabbitMQNodeList(Models\DescribeRabbitMQNodeListRequest $req) RabbitMQ专享版查询节点列表
+ * @method Models\DescribeRabbitMQNodeListResponse DescribeRabbitMQNodeList(Models\DescribeRabbitMQNodeListRequest $req) 查询 RabbitMQ 托管版节点列表
+ * @method Models\DescribeRabbitMQPermissionResponse DescribeRabbitMQPermission(Models\DescribeRabbitMQPermissionRequest $req) 查询RabbitMQ权限列表
  * @method Models\DescribeRabbitMQQueueDetailResponse DescribeRabbitMQQueueDetail(Models\DescribeRabbitMQQueueDetailRequest $req) 查询RabbitMQ队列详情
  * @method Models\DescribeRabbitMQQueuesResponse DescribeRabbitMQQueues(Models\DescribeRabbitMQQueuesRequest $req) 查询RabbitMQ队列列表
  * @method Models\DescribeRabbitMQUserResponse DescribeRabbitMQUser(Models\DescribeRabbitMQUserRequest $req) 查询RabbitMQ用户列表
- * @method Models\DescribeRabbitMQVipInstanceResponse DescribeRabbitMQVipInstance(Models\DescribeRabbitMQVipInstanceRequest $req) 获取单个RabbitMQ专享实例信息
- * @method Models\DescribeRabbitMQVipInstancesResponse DescribeRabbitMQVipInstances(Models\DescribeRabbitMQVipInstancesRequest $req) 查询用户已购的RabbitMQ专享实例列表
+ * @method Models\DescribeRabbitMQVipInstanceResponse DescribeRabbitMQVipInstance(Models\DescribeRabbitMQVipInstanceRequest $req) 获取单个 RabbitMQ 托管版实例信息
+ * @method Models\DescribeRabbitMQVipInstancesResponse DescribeRabbitMQVipInstances(Models\DescribeRabbitMQVipInstancesRequest $req) 查询用户已购的 RabbitMQ 托管版实例列表
  * @method Models\DescribeRabbitMQVirtualHostResponse DescribeRabbitMQVirtualHost(Models\DescribeRabbitMQVirtualHostRequest $req) 查询RabbitMQ vhost列表
- * @method Models\DescribeRabbitMQVirtualHostListResponse DescribeRabbitMQVirtualHostList(Models\DescribeRabbitMQVirtualHostListRequest $req) RabbitMQ专享版查询虚拟主机列表
  * @method Models\DescribeRocketMQClusterResponse DescribeRocketMQCluster(Models\DescribeRocketMQClusterRequest $req) 获取单个RocketMQ集群信息
  * @method Models\DescribeRocketMQClustersResponse DescribeRocketMQClusters(Models\DescribeRocketMQClustersRequest $req) 获取RocketMQ集群列表
  * @method Models\DescribeRocketMQConsumeStatsResponse DescribeRocketMQConsumeStats(Models\DescribeRocketMQConsumeStatsRequest $req) 获取消费详情列表
@@ -116,12 +119,21 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
  * @method Models\DescribeRocketMQPublicAccessPointResponse DescribeRocketMQPublicAccessPoint(Models\DescribeRocketMQPublicAccessPointRequest $req) 接口用于查询RocketMQ实例的公网接入信息
  * @method Models\DescribeRocketMQRolesResponse DescribeRocketMQRoles(Models\DescribeRocketMQRolesRequest $req) 获取角色列表
  * @method Models\DescribeRocketMQSmoothMigrationTaskResponse DescribeRocketMQSmoothMigrationTask(Models\DescribeRocketMQSmoothMigrationTaskRequest $req) 用于获取RocketMQ平滑迁移任务详情
- * @method Models\DescribeRocketMQSmoothMigrationTaskListResponse DescribeRocketMQSmoothMigrationTaskList(Models\DescribeRocketMQSmoothMigrationTaskListRequest $req) 用于查询RocketMQ平滑迁移任务列表
- * @method Models\DescribeRocketMQSourceClusterGroupListResponse DescribeRocketMQSourceClusterGroupList(Models\DescribeRocketMQSourceClusterGroupListRequest $req) 平滑迁移过程获取源集群group列表接口
- * @method Models\DescribeRocketMQSourceClusterTopicListResponse DescribeRocketMQSourceClusterTopicList(Models\DescribeRocketMQSourceClusterTopicListRequest $req) 平滑迁移过程获取源集群topic列表接口
+ * @method Models\DescribeRocketMQSmoothMigrationTaskListResponse DescribeRocketMQSmoothMigrationTaskList(Models\DescribeRocketMQSmoothMigrationTaskListRequest $req) 平滑迁移相关接口已迁移至trocket产品下，该接口已废弃
+
+用于查询RocketMQ平滑迁移任务列表
+ * @method Models\DescribeRocketMQSourceClusterGroupListResponse DescribeRocketMQSourceClusterGroupList(Models\DescribeRocketMQSourceClusterGroupListRequest $req) 平滑迁移相关接口已迁移至trocket产品下，该接口已废弃
+
+平滑迁移过程获取源集群group列表接口
+ * @method Models\DescribeRocketMQSourceClusterTopicListResponse DescribeRocketMQSourceClusterTopicList(Models\DescribeRocketMQSourceClusterTopicListRequest $req) 平滑迁移相关接口已迁移至trocket产品下，该接口已废弃
+
+平滑迁移过程获取源集群topic列表接口
  * @method Models\DescribeRocketMQSubscriptionsResponse DescribeRocketMQSubscriptions(Models\DescribeRocketMQSubscriptionsRequest $req) 用于获取RocketMQ消费组订阅关系数据
+ * @method Models\DescribeRocketMQTopUsagesResponse DescribeRocketMQTopUsages(Models\DescribeRocketMQTopUsagesRequest $req) 用于获取RocketMQ指标排序列表，比如集群实例下占用存储空间最多的主题排序。
  * @method Models\DescribeRocketMQTopicMsgsResponse DescribeRocketMQTopicMsgs(Models\DescribeRocketMQTopicMsgsRequest $req) rocketmq 消息查询
+ * @method Models\DescribeRocketMQTopicStatsResponse DescribeRocketMQTopicStats(Models\DescribeRocketMQTopicStatsRequest $req) 获取Topic生产详情列表
  * @method Models\DescribeRocketMQTopicsResponse DescribeRocketMQTopics(Models\DescribeRocketMQTopicsRequest $req) 获取RocketMQ主题列表
+ * @method Models\DescribeRocketMQTopicsByGroupResponse DescribeRocketMQTopicsByGroup(Models\DescribeRocketMQTopicsByGroupRequest $req) 获取指定消费组下订阅的主题列表
  * @method Models\DescribeRocketMQVipInstanceDetailResponse DescribeRocketMQVipInstanceDetail(Models\DescribeRocketMQVipInstanceDetailRequest $req) 获取单个RocketMQ专享集群信息
  * @method Models\DescribeRocketMQVipInstancesResponse DescribeRocketMQVipInstances(Models\DescribeRocketMQVipInstancesRequest $req) 查询用户已购的RocketMQ专享实例列表
  * @method Models\DescribeRolesResponse DescribeRoles(Models\DescribeRolesRequest $req) 获取角色列表
@@ -129,22 +141,24 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
  * @method Models\DescribeTopicMsgsResponse DescribeTopicMsgs(Models\DescribeTopicMsgsRequest $req) 消息查询
  * @method Models\DescribeTopicsResponse DescribeTopics(Models\DescribeTopicsRequest $req) 获取环境下主题列表
  * @method Models\ExportRocketMQMessageDetailResponse ExportRocketMQMessageDetail(Models\ExportRocketMQMessageDetailRequest $req) 导出RocketMQ消息详情
+ * @method Models\GetTopicListResponse GetTopicList(Models\GetTopicListRequest $req) 获取环境下主题列表
  * @method Models\ImportRocketMQConsumerGroupsResponse ImportRocketMQConsumerGroups(Models\ImportRocketMQConsumerGroupsRequest $req) 输入迁移任务id和要导入的Group，导入后台
  * @method Models\ImportRocketMQTopicsResponse ImportRocketMQTopics(Models\ImportRocketMQTopicsRequest $req) 导入topic列表
- * @method Models\ModifyAMQPClusterResponse ModifyAMQPCluster(Models\ModifyAMQPClusterRequest $req) 更新Amqp集群信息
  * @method Models\ModifyClusterResponse ModifyCluster(Models\ModifyClusterRequest $req) 更新集群信息
  * @method Models\ModifyCmqQueueAttributeResponse ModifyCmqQueueAttribute(Models\ModifyCmqQueueAttributeRequest $req) 修改cmq队列属性
  * @method Models\ModifyCmqSubscriptionAttributeResponse ModifyCmqSubscriptionAttribute(Models\ModifyCmqSubscriptionAttributeRequest $req) 修改cmq订阅属性
  * @method Models\ModifyCmqTopicAttributeResponse ModifyCmqTopicAttribute(Models\ModifyCmqTopicAttributeRequest $req) 修改cmq主题属性
  * @method Models\ModifyEnvironmentAttributesResponse ModifyEnvironmentAttributes(Models\ModifyEnvironmentAttributesRequest $req) 修改指定命名空间的属性值
  * @method Models\ModifyEnvironmentRoleResponse ModifyEnvironmentRole(Models\ModifyEnvironmentRoleRequest $req) 修改环境角色授权。
- * @method Models\ModifyPublicNetworkAccessPointResponse ModifyPublicNetworkAccessPoint(Models\ModifyPublicNetworkAccessPointRequest $req) RabbitMQ专享版修改公网管控台，vpc15672开关
+ * @method Models\ModifyPublicNetworkSecurityPolicyResponse ModifyPublicNetworkSecurityPolicy(Models\ModifyPublicNetworkSecurityPolicyRequest $req) 修改pulsar专业版公网安全策略
+ * @method Models\ModifyRabbitMQPermissionResponse ModifyRabbitMQPermission(Models\ModifyRabbitMQPermissionRequest $req) 修改RabbitMQ的权限
  * @method Models\ModifyRabbitMQUserResponse ModifyRabbitMQUser(Models\ModifyRabbitMQUserRequest $req) 修改RabbitMQ的用户
  * @method Models\ModifyRabbitMQVipInstanceResponse ModifyRabbitMQVipInstance(Models\ModifyRabbitMQVipInstanceRequest $req) 修改RabbitMQ专享版实例
  * @method Models\ModifyRabbitMQVirtualHostResponse ModifyRabbitMQVirtualHost(Models\ModifyRabbitMQVirtualHostRequest $req) 修改RabbitMQ的vhost
  * @method Models\ModifyRocketMQClusterResponse ModifyRocketMQCluster(Models\ModifyRocketMQClusterRequest $req) 更新RocketMQ集群信息
  * @method Models\ModifyRocketMQEnvironmentRoleResponse ModifyRocketMQEnvironmentRole(Models\ModifyRocketMQEnvironmentRoleRequest $req) 修改环境角色授权。
  * @method Models\ModifyRocketMQGroupResponse ModifyRocketMQGroup(Models\ModifyRocketMQGroupRequest $req) 更新RocketMQ消费组信息
+ * @method Models\ModifyRocketMQInstanceResponse ModifyRocketMQInstance(Models\ModifyRocketMQInstanceRequest $req) 修改RocketMQ专享实例
  * @method Models\ModifyRocketMQInstanceSpecResponse ModifyRocketMQInstanceSpec(Models\ModifyRocketMQInstanceSpecRequest $req) 本API用于修改RocketMQ专享实例配置，可以支持实例规格、节点数和存储的升配和实例规格的降配。本API发起订单并成功支付后进入实例配置变更的流程，可通过DescribeRocketMQVipInstances查询实例是否已变更完成。
  * @method Models\ModifyRocketMQNamespaceResponse ModifyRocketMQNamespace(Models\ModifyRocketMQNamespaceRequest $req) 更新RocketMQ命名空间
  * @method Models\ModifyRocketMQRoleResponse ModifyRocketMQRole(Models\ModifyRocketMQRoleRequest $req) 角色修改
@@ -172,9 +186,9 @@ BatchReceivePolicy 的接口会一次性返回多条消息：
 
 1. 多条消息的内容之间使用特殊字符 '###' 来进行分割，业务侧接收到消息之后，可以利用不同语言提供的 Split 工具分割不同的消息。
 2. 多条消息的 MessageID 之间使用特殊字符 '###' 来进行分割，业务侧接收到消息之后，可以利用不同语言提供的 Split 工具分割不同的消息。（用于在调用 AcknowledgeMessage 接口中填入所需要的 MessageID 字段信息）
-
  * @method Models\ResetMsgSubOffsetByTimestampResponse ResetMsgSubOffsetByTimestamp(Models\ResetMsgSubOffsetByTimestampRequest $req) 根据时间戳进行消息回溯，精确到毫秒
  * @method Models\ResetRocketMQConsumerOffSetResponse ResetRocketMQConsumerOffSet(Models\ResetRocketMQConsumerOffSetRequest $req) 重置指定Group的消费位点到指定时间戳
+ * @method Models\RetryRocketMQDlqMessageResponse RetryRocketMQDlqMessage(Models\RetryRocketMQDlqMessageRequest $req) 重发RocketMQ死信消息
  * @method Models\RewindCmqQueueResponse RewindCmqQueue(Models\RewindCmqQueueRequest $req) 回溯cmq队列
  * @method Models\SendBatchMessagesResponse SendBatchMessages(Models\SendBatchMessagesRequest $req) 批量发送消息
 

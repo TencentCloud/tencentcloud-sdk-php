@@ -20,10 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 证书信息
  *
- * @method string getSSLMode() 获取认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
- * @method void setSSLMode(string $SSLMode) 设置认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
- * @method string getCertId() 获取服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent，CertKey，CertName。
- * @method void setCertId(string $CertId) 设置服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent，CertKey，CertName。
+ * @method string getSSLMode() 获取认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证。
+默认为 UNIDIRECTIONAL。
+ * @method void setSSLMode(string $SSLMode) 设置认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证。
+默认为 UNIDIRECTIONAL。
+ * @method string getSSLVerifyClient() 获取双向认证时，是否开启客户端认证，ON:开启，OPTIONAL:自适应，默认ON。
+ * @method void setSSLVerifyClient(string $SSLVerifyClient) 设置双向认证时，是否开启客户端认证，ON:开启，OPTIONAL:自适应，默认ON。
+ * @method string getCertId() 获取服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent（服务端证书内容），CertKey（服务端证书密钥），CertName（服务端证书名称）。
+ * @method void setCertId(string $CertId) 设置服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent（服务端证书内容），CertKey（服务端证书密钥），CertName（服务端证书名称）。
  * @method string getCertCaId() 获取客户端证书的 ID，当监听器采用双向认证，即 SSLMode=MUTUAL 时，如果不填写此项则必须上传客户端证书，包括 CertCaContent，CertCaName。
  * @method void setCertCaId(string $CertCaId) 设置客户端证书的 ID，当监听器采用双向认证，即 SSLMode=MUTUAL 时，如果不填写此项则必须上传客户端证书，包括 CertCaContent，CertCaName。
  * @method string getCertName() 获取上传服务端证书的名称，如果没有 CertId，则此项必传。
@@ -32,20 +36,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCertKey(string $CertKey) 设置上传服务端证书的 key，如果没有 CertId，则此项必传。
  * @method string getCertContent() 获取上传服务端证书的内容，如果没有 CertId，则此项必传。
  * @method void setCertContent(string $CertContent) 设置上传服务端证书的内容，如果没有 CertId，则此项必传。
- * @method string getCertCaName() 获取上传客户端 CA 证书的名称，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。
- * @method void setCertCaName(string $CertCaName) 设置上传客户端 CA 证书的名称，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。
- * @method string getCertCaContent() 获取上传客户端证书的内容，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。
- * @method void setCertCaContent(string $CertCaContent) 设置上传客户端证书的内容，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。
+ * @method string getCertCaName() 获取上传客户端 CA 证书的名称，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。
+ * @method void setCertCaName(string $CertCaName) 设置上传客户端 CA 证书的名称，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。
+ * @method string getCertCaContent() 获取上传客户端证书的内容，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。
+ * @method void setCertCaContent(string $CertCaContent) 设置上传客户端证书的内容，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。
  */
 class CertificateInput extends AbstractModel
 {
     /**
-     * @var string 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
+     * @var string 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证。
+默认为 UNIDIRECTIONAL。
      */
     public $SSLMode;
 
     /**
-     * @var string 服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent，CertKey，CertName。
+     * @var string 双向认证时，是否开启客户端认证，ON:开启，OPTIONAL:自适应，默认ON。
+     */
+    public $SSLVerifyClient;
+
+    /**
+     * @var string 服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent（服务端证书内容），CertKey（服务端证书密钥），CertName（服务端证书名称）。
      */
     public $CertId;
 
@@ -70,24 +80,26 @@ class CertificateInput extends AbstractModel
     public $CertContent;
 
     /**
-     * @var string 上传客户端 CA 证书的名称，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。
+     * @var string 上传客户端 CA 证书的名称，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。
      */
     public $CertCaName;
 
     /**
-     * @var string 上传客户端证书的内容，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。
+     * @var string 上传客户端证书的内容，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。
      */
     public $CertCaContent;
 
     /**
-     * @param string $SSLMode 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证
-     * @param string $CertId 服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent，CertKey，CertName。
+     * @param string $SSLMode 认证类型，UNIDIRECTIONAL：单向认证，MUTUAL：双向认证。
+默认为 UNIDIRECTIONAL。
+     * @param string $SSLVerifyClient 双向认证时，是否开启客户端认证，ON:开启，OPTIONAL:自适应，默认ON。
+     * @param string $CertId 服务端证书的 ID，如果不填写此项则必须上传证书，包括 CertContent（服务端证书内容），CertKey（服务端证书密钥），CertName（服务端证书名称）。
      * @param string $CertCaId 客户端证书的 ID，当监听器采用双向认证，即 SSLMode=MUTUAL 时，如果不填写此项则必须上传客户端证书，包括 CertCaContent，CertCaName。
      * @param string $CertName 上传服务端证书的名称，如果没有 CertId，则此项必传。
      * @param string $CertKey 上传服务端证书的 key，如果没有 CertId，则此项必传。
      * @param string $CertContent 上传服务端证书的内容，如果没有 CertId，则此项必传。
-     * @param string $CertCaName 上传客户端 CA 证书的名称，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。
-     * @param string $CertCaContent 上传客户端证书的内容，如果 SSLMode=mutual，如果没有 CertCaId，则此项必传。
+     * @param string $CertCaName 上传客户端 CA 证书的名称，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。
+     * @param string $CertCaContent 上传客户端证书的内容，如果 SSLMode=MUTUAL，如果没有 CertCaId，则此项必传。
      */
     function __construct()
     {
@@ -104,6 +116,10 @@ class CertificateInput extends AbstractModel
         }
         if (array_key_exists("SSLMode",$param) and $param["SSLMode"] !== null) {
             $this->SSLMode = $param["SSLMode"];
+        }
+
+        if (array_key_exists("SSLVerifyClient",$param) and $param["SSLVerifyClient"] !== null) {
+            $this->SSLVerifyClient = $param["SSLVerifyClient"];
         }
 
         if (array_key_exists("CertId",$param) and $param["CertId"] !== null) {

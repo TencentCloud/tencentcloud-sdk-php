@@ -66,6 +66,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCollation(string $Collation) 设置系统字符集排序规则，默认：Chinese_PRC_CI_AS
  * @method string getTimeZone() 获取系统时区，默认：China Standard Time
  * @method void setTimeZone(string $TimeZone) 设置系统时区，默认：China Standard Time
+ * @method boolean getMultiNodes() 获取是否多节点架构实例，默认值为false。当MultiNodes = true时，参数MultiZones必须取值为true。
+ * @method void setMultiNodes(boolean $MultiNodes) 设置是否多节点架构实例，默认值为false。当MultiNodes = true时，参数MultiZones必须取值为true。
+ * @method array getDrZones() 获取备节点可用区，默认为空。当MultiNodes = true时，主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
+ * @method void setDrZones(array $DrZones) 设置备节点可用区，默认为空。当MultiNodes = true时，主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
+ * @method integer getDiskEncryptFlag() 获取磁盘加密标识，0-不加密，1-加密
+ * @method void setDiskEncryptFlag(integer $DiskEncryptFlag) 设置磁盘加密标识，0-不加密，1-加密
  */
 class CreateCloudDBInstancesRequest extends AbstractModel
 {
@@ -185,6 +191,21 @@ class CreateCloudDBInstancesRequest extends AbstractModel
     public $TimeZone;
 
     /**
+     * @var boolean 是否多节点架构实例，默认值为false。当MultiNodes = true时，参数MultiZones必须取值为true。
+     */
+    public $MultiNodes;
+
+    /**
+     * @var array 备节点可用区，默认为空。当MultiNodes = true时，主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
+     */
+    public $DrZones;
+
+    /**
+     * @var integer 磁盘加密标识，0-不加密，1-加密
+     */
+    public $DiskEncryptFlag;
+
+    /**
      * @param string $Zone 实例可用区，类似ap-guangzhou-1（广州一区）；实例可售卖区域可以通过接口DescribeZones获取
      * @param integer $Memory 实例内存大小，单位GB
      * @param integer $Storage 实例磁盘大小，单位GB
@@ -208,6 +229,9 @@ class CreateCloudDBInstancesRequest extends AbstractModel
      * @param array $ResourceTags 新建实例绑定的标签集合
      * @param string $Collation 系统字符集排序规则，默认：Chinese_PRC_CI_AS
      * @param string $TimeZone 系统时区，默认：China Standard Time
+     * @param boolean $MultiNodes 是否多节点架构实例，默认值为false。当MultiNodes = true时，参数MultiZones必须取值为true。
+     * @param array $DrZones 备节点可用区，默认为空。当MultiNodes = true时，主节点和备节点可用区不能全部相同。备机可用区集合最小为2个，最大不超过5个。
+     * @param integer $DiskEncryptFlag 磁盘加密标识，0-不加密，1-加密
      */
     function __construct()
     {
@@ -317,6 +341,18 @@ class CreateCloudDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("TimeZone",$param) and $param["TimeZone"] !== null) {
             $this->TimeZone = $param["TimeZone"];
+        }
+
+        if (array_key_exists("MultiNodes",$param) and $param["MultiNodes"] !== null) {
+            $this->MultiNodes = $param["MultiNodes"];
+        }
+
+        if (array_key_exists("DrZones",$param) and $param["DrZones"] !== null) {
+            $this->DrZones = $param["DrZones"];
+        }
+
+        if (array_key_exists("DiskEncryptFlag",$param) and $param["DiskEncryptFlag"] !== null) {
+            $this->DiskEncryptFlag = $param["DiskEncryptFlag"];
         }
     }
 }

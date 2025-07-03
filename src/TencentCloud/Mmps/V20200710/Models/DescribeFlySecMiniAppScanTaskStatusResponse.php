@@ -25,17 +25,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getStatus() 获取诊断状态, 0:排队中, 1:成功, 2:失败, 3:进行中
  * @method void setStatus(integer $Status) 设置诊断状态, 0:排队中, 1:成功, 2:失败, 3:进行中
  * @method integer getErrno() 获取诊断失败错误码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrno(integer $Errno) 设置诊断失败错误码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMiniAppName() 获取小程序名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMiniAppName(string $MiniAppName) 设置小程序名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMiniAppVersion() 获取小程序版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMiniAppVersion(string $MiniAppVersion) 设置小程序版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -53,19 +47,16 @@ class DescribeFlySecMiniAppScanTaskStatusResponse extends AbstractModel
 
     /**
      * @var integer 诊断失败错误码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Errno;
 
     /**
      * @var string 小程序名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MiniAppName;
 
     /**
      * @var string 小程序版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MiniAppVersion;
 
@@ -78,11 +69,8 @@ class DescribeFlySecMiniAppScanTaskStatusResponse extends AbstractModel
      * @param integer $Ret 返回值, 0:成功, 其他值请查看“返回值”定义
      * @param integer $Status 诊断状态, 0:排队中, 1:成功, 2:失败, 3:进行中
      * @param integer $Errno 诊断失败错误码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MiniAppName 小程序名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MiniAppVersion 小程序版本
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

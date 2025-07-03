@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilters(array $Filters) 设置筛选参数：
  * @method string getTimeRangeEnd() 获取请求量统计结束时间，格式：2020-11-22 23:59:59
  * @method void setTimeRangeEnd(string $TimeRangeEnd) 设置请求量统计结束时间，格式：2020-11-22 23:59:59
+ * @method boolean getExport() 获取是否导出：true导出，false不导出
+ * @method void setExport(boolean $Export) 设置是否导出：true导出，false不导出
  */
 class DescribeRequestDataRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeRequestDataRequest extends AbstractModel
     public $TimeRangeEnd;
 
     /**
+     * @var boolean 是否导出：true导出，false不导出
+     */
+    public $Export;
+
+    /**
      * @param string $TimeRangeBegin 请求量统计起始时间，格式：2020-11-22 00:00:00
      * @param array $Filters 筛选参数：
      * @param string $TimeRangeEnd 请求量统计结束时间，格式：2020-11-22 23:59:59
+     * @param boolean $Export 是否导出：true导出，false不导出
      */
     function __construct()
     {
@@ -77,6 +85,10 @@ class DescribeRequestDataRequest extends AbstractModel
 
         if (array_key_exists("TimeRangeEnd",$param) and $param["TimeRangeEnd"] !== null) {
             $this->TimeRangeEnd = $param["TimeRangeEnd"];
+        }
+
+        if (array_key_exists("Export",$param) and $param["Export"] !== null) {
+            $this->Export = $param["Export"];
         }
     }
 }

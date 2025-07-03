@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 用户返回实体
  *
  * @method array getUsers() 获取符合条件的用户列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsers(array $Users) 设置符合条件的用户列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取符合条件的总用户数
  * @method void setTotalCount(integer $TotalCount) 设置符合条件的总用户数
  */
@@ -31,7 +29,6 @@ class UserResponse extends AbstractModel
 {
     /**
      * @var array 符合条件的用户列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Users;
 
@@ -42,7 +39,6 @@ class UserResponse extends AbstractModel
 
     /**
      * @param array $Users 符合条件的用户列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 符合条件的总用户数
      */
     function __construct()

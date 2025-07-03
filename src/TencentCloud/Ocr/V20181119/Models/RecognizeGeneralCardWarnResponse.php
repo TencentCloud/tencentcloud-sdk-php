@@ -31,6 +31,7 @@ BizLicense：营业执照
 HmtResidentPermit：港澳台居住证
 ForeignPermanentResident：外国人永居证
 MainlandPermit：港澳台来往内地通行证
+SocialSecurityCard：社保卡
  * @method void setCardType(string $CardType) 设置卡证类型参数，包含以下范围： 
 General：通用卡证
 IDCard：身份证 
@@ -42,6 +43,7 @@ BizLicense：营业执照
 HmtResidentPermit：港澳台居住证
 ForeignPermanentResident：外国人永居证
 MainlandPermit：港澳台来往内地通行证
+SocialSecurityCard：社保卡
  * @method GeneralCardWarnInfo getBlur() 获取模糊信息
  * @method void setBlur(GeneralCardWarnInfo $Blur) 设置模糊信息
  * @method GeneralCardWarnInfo getBorderIncomplete() 获取边框不完整信息
@@ -79,6 +81,7 @@ BizLicense：营业执照
 HmtResidentPermit：港澳台居住证
 ForeignPermanentResident：外国人永居证
 MainlandPermit：港澳台来往内地通行证
+SocialSecurityCard：社保卡
      */
     public $CardType;
 
@@ -149,6 +152,7 @@ BizLicense：营业执照
 HmtResidentPermit：港澳台居住证
 ForeignPermanentResident：外国人永居证
 MainlandPermit：港澳台来往内地通行证
+SocialSecurityCard：社保卡
      * @param GeneralCardWarnInfo $Blur 模糊信息
      * @param GeneralCardWarnInfo $BorderIncomplete 边框不完整信息
      * @param GeneralCardWarnInfo $Copy 复印件信息

@@ -24,16 +24,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopic(string $Topic) 设置主题名称
  * @method string getTopicType() 获取主题类型，枚举值如下：
 
-- NORMAL：普通消息主题
-- FIFO：顺序消息主题
-- DELAY：延迟消息主题
-- TRANSACTION：事务消息主题
+- UNSPECIFIED：未指定
+- NORMAL：普通消息
+- FIFO：顺序消息
+- DELAY：延时消息
+- TRANSACTION：事务消息
  * @method void setTopicType(string $TopicType) 设置主题类型，枚举值如下：
 
-- NORMAL：普通消息主题
-- FIFO：顺序消息主题
-- DELAY：延迟消息主题
-- TRANSACTION：事务消息主题
+- UNSPECIFIED：未指定
+- NORMAL：普通消息
+- FIFO：顺序消息
+- DELAY：延时消息
+- TRANSACTION：事务消息
  * @method integer getQueueNum() 获取单节点主题队列数量
  * @method void setQueueNum(integer $QueueNum) 设置单节点主题队列数量
  * @method integer getConsumerLag() 获取消费堆积
@@ -53,10 +55,11 @@ class TopicConsumeStats extends AbstractModel
     /**
      * @var string 主题类型，枚举值如下：
 
-- NORMAL：普通消息主题
-- FIFO：顺序消息主题
-- DELAY：延迟消息主题
-- TRANSACTION：事务消息主题
+- UNSPECIFIED：未指定
+- NORMAL：普通消息
+- FIFO：顺序消息
+- DELAY：延时消息
+- TRANSACTION：事务消息
      */
     public $TopicType;
 
@@ -84,10 +87,11 @@ class TopicConsumeStats extends AbstractModel
      * @param string $Topic 主题名称
      * @param string $TopicType 主题类型，枚举值如下：
 
-- NORMAL：普通消息主题
-- FIFO：顺序消息主题
-- DELAY：延迟消息主题
-- TRANSACTION：事务消息主题
+- UNSPECIFIED：未指定
+- NORMAL：普通消息
+- FIFO：顺序消息
+- DELAY：延时消息
+- TRANSACTION：事务消息
      * @param integer $QueueNum 单节点主题队列数量
      * @param integer $ConsumerLag 消费堆积
      * @param string $SubString 订阅规则，`*`表示订阅全部TAG

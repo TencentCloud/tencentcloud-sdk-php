@@ -35,6 +35,7 @@ BizLicense：营业执照
 HmtResidentPermit：港澳台居住证
 ForeignPermanentResident：外国人永居证
 MainlandPermit：港澳台来往内地通行证
+SocialSecurityCard：社保卡
  * @method void setCardType(string $CardType) 设置卡证类型参数，包含以下范围：  
 General：通用卡证
 IDCard：身份证 
@@ -46,6 +47,7 @@ BizLicense：营业执照
 HmtResidentPermit：港澳台居住证
 ForeignPermanentResident：外国人永居证
 MainlandPermit：港澳台来往内地通行证
+SocialSecurityCard：社保卡
  * @method boolean getIsPdf() 获取是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。
  * @method void setIsPdf(boolean $IsPdf) 设置是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。
  * @method integer getPdfPageNumber() 获取需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
@@ -75,6 +77,7 @@ BizLicense：营业执照
 HmtResidentPermit：港澳台居住证
 ForeignPermanentResident：外国人永居证
 MainlandPermit：港澳台来往内地通行证
+SocialSecurityCard：社保卡
      */
     public $CardType;
 
@@ -102,6 +105,7 @@ BizLicense：营业执照
 HmtResidentPermit：港澳台居住证
 ForeignPermanentResident：外国人永居证
 MainlandPermit：港澳台来往内地通行证
+SocialSecurityCard：社保卡
      * @param boolean $IsPdf 是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。
      * @param integer $PdfPageNumber 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
      */

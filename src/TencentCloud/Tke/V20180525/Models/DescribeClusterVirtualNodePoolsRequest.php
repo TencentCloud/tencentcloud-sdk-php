@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClusterVirtualNodePools请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
+ * @method string getClusterId() 获取集群ID，通过DescribeClusters接口获取
+ * @method void setClusterId(string $ClusterId) 设置集群ID，通过DescribeClusters接口获取
  */
 class DescribeClusterVirtualNodePoolsRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string 集群ID，通过DescribeClusters接口获取
      */
     public $ClusterId;
 
     /**
-     * @param string $ClusterId 集群ID
+     * @param string $ClusterId 集群ID，通过DescribeClusters接口获取
      */
     function __construct()
     {

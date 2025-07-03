@@ -28,6 +28,7 @@ use TencentCloud\Emr\V20190103\Models as Models;
  * @method Models\AddUsersForUserManagerResponse AddUsersForUserManager(Models\AddUsersForUserManagerRequest $req) 该接口支持安装了OpenLdap组件的集群。
 新增用户列表（用户管理）。
  * @method Models\AttachDisksResponse AttachDisks(Models\AttachDisksRequest $req) 云盘挂载
+ * @method Models\ConvertPreToPostClusterResponse ConvertPreToPostCluster(Models\ConvertPreToPostClusterRequest $req) 包月集群转按量集群（不含cdb）
  * @method Models\CreateCloudInstanceResponse CreateCloudInstance(Models\CreateCloudInstanceRequest $req) 创建EMR容器集群实例
  * @method Models\CreateClusterResponse CreateCluster(Models\CreateClusterRequest $req) 创建EMR集群实例
  * @method Models\CreateGroupsSTDResponse CreateGroupsSTD(Models\CreateGroupsSTDRequest $req) 用户管理-批量创建用户组
@@ -64,10 +65,12 @@ use TencentCloud\Emr\V20190103\Models as Models;
  * @method Models\DescribeKyuubiQueryInfoResponse DescribeKyuubiQueryInfo(Models\DescribeKyuubiQueryInfoRequest $req) 查询Kyuubi查询信息
  * @method Models\DescribeNodeDataDisksResponse DescribeNodeDataDisks(Models\DescribeNodeDataDisksRequest $req) 查询节点数据盘信息
  * @method Models\DescribeNodeResourceConfigFastResponse DescribeNodeResourceConfigFast(Models\DescribeNodeResourceConfigFastRequest $req) 快速获取当前集群的节点规格配置
+ * @method Models\DescribeNodeSpecResponse DescribeNodeSpec(Models\DescribeNodeSpecRequest $req) 查询节点规格
  * @method Models\DescribeResourceScheduleResponse DescribeResourceSchedule(Models\DescribeResourceScheduleRequest $req) 查询YARN资源调度数据信息。已废弃，请使用`DescribeYarnQueue`去查询队列信息。
  * @method Models\DescribeResourceScheduleDiffDetailResponse DescribeResourceScheduleDiffDetail(Models\DescribeResourceScheduleDiffDetailRequest $req) YARN资源调度-变更详情
  * @method Models\DescribeSLInstanceResponse DescribeSLInstance(Models\DescribeSLInstanceRequest $req) 本接口（DescribeSLInstance）用于查询 Serverless HBase实例基本信息
  * @method Models\DescribeSLInstanceListResponse DescribeSLInstanceList(Models\DescribeSLInstanceListRequest $req) 本接口（DescribeSLInstanceList）用于查询Serverless HBase实例列表详细信息
+ * @method Models\DescribeServiceConfGroupInfosResponse DescribeServiceConfGroupInfos(Models\DescribeServiceConfGroupInfosRequest $req) 描述服务配置组信息
  * @method Models\DescribeServiceNodeInfosResponse DescribeServiceNodeInfos(Models\DescribeServiceNodeInfosRequest $req) 查询服务进程信息
  * @method Models\DescribeSparkApplicationsResponse DescribeSparkApplications(Models\DescribeSparkApplicationsRequest $req) 获取spark应用列表
  * @method Models\DescribeSparkQueriesResponse DescribeSparkQueries(Models\DescribeSparkQueriesRequest $req) 查询Spark查询信息列表

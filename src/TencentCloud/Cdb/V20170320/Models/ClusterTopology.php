@@ -21,25 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 集群版的节点拓扑配置。
  *
  * @method ReadWriteNode getReadWriteNode() 获取RW 节点拓扑。
+说明：NodeId 可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 获取。
  * @method void setReadWriteNode(ReadWriteNode $ReadWriteNode) 设置RW 节点拓扑。
+说明：NodeId 可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 获取。
  * @method array getReadOnlyNodes() 获取RO 节点拓扑。
+说明：NodeId 可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 获取。
  * @method void setReadOnlyNodes(array $ReadOnlyNodes) 设置RO 节点拓扑。
+说明：NodeId 可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 获取。
  */
 class ClusterTopology extends AbstractModel
 {
     /**
      * @var ReadWriteNode RW 节点拓扑。
+说明：NodeId 可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 获取。
      */
     public $ReadWriteNode;
 
     /**
      * @var array RO 节点拓扑。
+说明：NodeId 可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 获取。
      */
     public $ReadOnlyNodes;
 
     /**
      * @param ReadWriteNode $ReadWriteNode RW 节点拓扑。
+说明：NodeId 可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 获取。
      * @param array $ReadOnlyNodes RO 节点拓扑。
+说明：NodeId 可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 获取。
      */
     function __construct()
     {

@@ -38,16 +38,16 @@ DELAY:延时消息,
 TRANSACTION:事务消息
  * @method string getRemark() 获取备注
  * @method void setRemark(string $Remark) 设置备注
- * @method integer getCreatedTime() 获取创建时间，秒为单位
- * @method void setCreatedTime(integer $CreatedTime) 设置创建时间，秒为单位
- * @method integer getLastUpdateTime() 获取最后写入时间，秒为单位
- * @method void setLastUpdateTime(integer $LastUpdateTime) 设置最后写入时间，秒为单位
+ * @method integer getCreatedTime() 获取创建时间，**Unix时间戳（毫秒）**
+ * @method void setCreatedTime(integer $CreatedTime) 设置创建时间，**Unix时间戳（毫秒）**
+ * @method integer getLastUpdateTime() 获取最后写入时间，**Unix时间戳（毫秒）**
+ * @method void setLastUpdateTime(integer $LastUpdateTime) 设置最后写入时间，**Unix时间戳（毫秒）**
  * @method integer getSubscriptionCount() 获取订阅数量
  * @method void setSubscriptionCount(integer $SubscriptionCount) 设置订阅数量
  * @method array getSubscriptionData() 获取订阅关系列表
  * @method void setSubscriptionData(array $SubscriptionData) 设置订阅关系列表
- * @method integer getMsgTTL() 获取消息保留时长
- * @method void setMsgTTL(integer $MsgTTL) 设置消息保留时长
+ * @method integer getMsgTTL() 获取消息保留时长，单位：小时
+ * @method void setMsgTTL(integer $MsgTTL) 设置消息保留时长，单位：小时
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -79,12 +79,12 @@ TRANSACTION:事务消息
     public $Remark;
 
     /**
-     * @var integer 创建时间，秒为单位
+     * @var integer 创建时间，**Unix时间戳（毫秒）**
      */
     public $CreatedTime;
 
     /**
-     * @var integer 最后写入时间，秒为单位
+     * @var integer 最后写入时间，**Unix时间戳（毫秒）**
      */
     public $LastUpdateTime;
 
@@ -99,7 +99,7 @@ TRANSACTION:事务消息
     public $SubscriptionData;
 
     /**
-     * @var integer 消息保留时长
+     * @var integer 消息保留时长，单位：小时
      */
     public $MsgTTL;
 
@@ -118,11 +118,11 @@ FIFO:顺序消息,
 DELAY:延时消息,
 TRANSACTION:事务消息
      * @param string $Remark 备注
-     * @param integer $CreatedTime 创建时间，秒为单位
-     * @param integer $LastUpdateTime 最后写入时间，秒为单位
+     * @param integer $CreatedTime 创建时间，**Unix时间戳（毫秒）**
+     * @param integer $LastUpdateTime 最后写入时间，**Unix时间戳（毫秒）**
      * @param integer $SubscriptionCount 订阅数量
      * @param array $SubscriptionData 订阅关系列表
-     * @param integer $MsgTTL 消息保留时长
+     * @param integer $MsgTTL 消息保留时长，单位：小时
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

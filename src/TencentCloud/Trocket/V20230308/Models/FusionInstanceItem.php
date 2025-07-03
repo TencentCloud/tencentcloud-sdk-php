@@ -116,9 +116,9 @@ DELETING，删除中
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDestroyTime(integer $DestroyTime) 设置预销毁时间，**Unix时间戳（毫秒）**
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getZoneIds() 获取所属可用区列表，参考 [DescribeZones](https://cloud.tencent.com/document/product/1596/77929) 接口。
+ * @method array getZoneIds() 获取所属可用区列表，参考 [DescribeZones](https://cloud.tencent.com/document/product/1596/77929) 接口返回中的 [ZoneInfo](https://cloud.tencent.com/document/api/1596/77932#ZoneInfo) 数据结构。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setZoneIds(array $ZoneIds) 设置所属可用区列表，参考 [DescribeZones](https://cloud.tencent.com/document/product/1596/77929) 接口。
+ * @method void setZoneIds(array $ZoneIds) 设置所属可用区列表，参考 [DescribeZones](https://cloud.tencent.com/document/product/1596/77929) 接口返回中的 [ZoneInfo](https://cloud.tencent.com/document/api/1596/77932#ZoneInfo) 数据结构。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getEnableDeletionProtection() 获取是否开启删除保护
  * @method void setEnableDeletionProtection(boolean $EnableDeletionProtection) 设置是否开启删除保护
@@ -258,7 +258,7 @@ DELETING，删除中
     public $DestroyTime;
 
     /**
-     * @var array 所属可用区列表，参考 [DescribeZones](https://cloud.tencent.com/document/product/1596/77929) 接口。
+     * @var array 所属可用区列表，参考 [DescribeZones](https://cloud.tencent.com/document/product/1596/77929) 接口返回中的 [ZoneInfo](https://cloud.tencent.com/document/api/1596/77932#ZoneInfo) 数据结构。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ZoneIds;
@@ -317,7 +317,7 @@ DELETING，删除中
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $DestroyTime 预销毁时间，**Unix时间戳（毫秒）**
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ZoneIds 所属可用区列表，参考 [DescribeZones](https://cloud.tencent.com/document/product/1596/77929) 接口。
+     * @param array $ZoneIds 所属可用区列表，参考 [DescribeZones](https://cloud.tencent.com/document/product/1596/77929) 接口返回中的 [ZoneInfo](https://cloud.tencent.com/document/api/1596/77932#ZoneInfo) 数据结构。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $EnableDeletionProtection 是否开启删除保护
      */

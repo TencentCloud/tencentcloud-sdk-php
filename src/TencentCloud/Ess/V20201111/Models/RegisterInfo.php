@@ -40,13 +40,13 @@ use TencentCloud\Common\AbstractModel;
 <li><strong>2</strong>: 法人授权方式</li>
 <li><strong>5</strong>: 授权书+对公打款方式</li>
 </ul>
- * @method integer getAuthorizationType() 获取指定企业认证的授权方式 支持多选:
+ * @method integer getAuthorizationType() 获取指定企业认证的授权方式:
 
 <ul>
 <li><strong>2</strong>: 法人授权方式</li>
 <li><strong>5</strong>: 授权书+对公打款方式</li>
 </ul>
- * @method void setAuthorizationType(integer $AuthorizationType) 设置指定企业认证的授权方式 支持多选:
+ * @method void setAuthorizationType(integer $AuthorizationType) 设置指定企业认证的授权方式:
 
 <ul>
 <li><strong>2</strong>: 法人授权方式</li>
@@ -84,7 +84,7 @@ class RegisterInfo extends AbstractModel
     public $AuthorizationTypes;
 
     /**
-     * @var integer 指定企业认证的授权方式 支持多选:
+     * @var integer 指定企业认证的授权方式:
 
 <ul>
 <li><strong>2</strong>: 法人授权方式</li>
@@ -104,7 +104,7 @@ class RegisterInfo extends AbstractModel
 <li><strong>2</strong>: 法人授权方式</li>
 <li><strong>5</strong>: 授权书+对公打款方式</li>
 </ul>
-     * @param integer $AuthorizationType 指定企业认证的授权方式 支持多选:
+     * @param integer $AuthorizationType 指定企业认证的授权方式:
 
 <ul>
 <li><strong>2</strong>: 法人授权方式</li>

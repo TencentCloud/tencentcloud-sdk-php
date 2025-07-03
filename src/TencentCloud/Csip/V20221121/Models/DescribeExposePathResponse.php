@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeExposePath返回参数结构体
  *
- * @method string getContent() 获取暴露路径节点内容
- * @method void setContent(string $Content) 设置暴露路径节点内容
+ * @method string getContent() 获取云边界分析路径节点内容
+ * @method void setContent(string $Content) 设置云边界分析路径节点内容
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeExposePathResponse extends AbstractModel
 {
     /**
-     * @var string 暴露路径节点内容
+     * @var string 云边界分析路径节点内容
      */
     public $Content;
 
@@ -38,7 +38,7 @@ class DescribeExposePathResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Content 暴露路径节点内容
+     * @param string $Content 云边界分析路径节点内容
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

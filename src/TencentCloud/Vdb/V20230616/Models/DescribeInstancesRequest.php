@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceTags(array $ResourceTags) 设置按照标签筛选实例
  * @method array getTaskStatus() 获取任务状态：1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中
  * @method void setTaskStatus(array $TaskStatus) 设置任务状态：1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中
+ * @method array getNetworks() 获取根据实例vip搜索实例
+ * @method void setNetworks(array $Networks) 设置根据实例vip搜索实例
  */
 class DescribeInstancesRequest extends AbstractModel
 {
@@ -131,6 +133,11 @@ class DescribeInstancesRequest extends AbstractModel
     public $TaskStatus;
 
     /**
+     * @var array 根据实例vip搜索实例
+     */
+    public $Networks;
+
+    /**
      * @param array $InstanceIds 实例ID数组。
      * @param array $InstanceNames 实例名称，支持模糊搜索。
      * @param array $InstanceKeys 实例模糊搜索字段。
@@ -146,6 +153,7 @@ class DescribeInstancesRequest extends AbstractModel
      * @param integer $Limit 列表查询数量。
      * @param array $ResourceTags 按照标签筛选实例
      * @param array $TaskStatus 任务状态：1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中
+     * @param array $Networks 根据实例vip搜索实例
      */
     function __construct()
     {
@@ -223,6 +231,10 @@ class DescribeInstancesRequest extends AbstractModel
 
         if (array_key_exists("TaskStatus",$param) and $param["TaskStatus"] !== null) {
             $this->TaskStatus = $param["TaskStatus"];
+        }
+
+        if (array_key_exists("Networks",$param) and $param["Networks"] !== null) {
+            $this->Networks = $param["Networks"];
         }
     }
 }

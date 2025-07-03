@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExtensionAddons(array $ExtensionAddons) 设置需要安装的扩展组件信息
  * @method string getCdcId() 获取本地专用集群Id
  * @method void setCdcId(string $CdcId) 设置本地专用集群Id
+ * @method array getDisableAddons() 获取屏蔽安装指定Addon组件，填写相应的AddonName
+ * @method void setDisableAddons(array $DisableAddons) 设置屏蔽安装指定Addon组件，填写相应的AddonName
  */
 class CreateClusterRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class CreateClusterRequest extends AbstractModel
     public $CdcId;
 
     /**
+     * @var array 屏蔽安装指定Addon组件，填写相应的AddonName
+     */
+    public $DisableAddons;
+
+    /**
      * @param string $ClusterType 集群类型，托管集群：MANAGED_CLUSTER，独立集群：INDEPENDENT_CLUSTER。
      * @param ClusterCIDRSettings $ClusterCIDRSettings 集群容器网络配置信息
      * @param array $RunInstancesForNode CVM创建透传参数，json化字符串格式，详见[CVM创建实例](https://cloud.tencent.com/document/product/213/15730)接口。总机型(包括地域)数量不超过10个，相同机型(地域)购买多台机器可以通过设置参数中RunInstances中InstanceCount来实现。
@@ -104,6 +111,7 @@ class CreateClusterRequest extends AbstractModel
      * @param array $InstanceDataDiskMountSettings CVM类型和其对应的数据盘挂载配置信息
      * @param array $ExtensionAddons 需要安装的扩展组件信息
      * @param string $CdcId 本地专用集群Id
+     * @param array $DisableAddons 屏蔽安装指定Addon组件，填写相应的AddonName
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class CreateClusterRequest extends AbstractModel
 
         if (array_key_exists("CdcId",$param) and $param["CdcId"] !== null) {
             $this->CdcId = $param["CdcId"];
+        }
+
+        if (array_key_exists("DisableAddons",$param) and $param["DisableAddons"] !== null) {
+            $this->DisableAddons = $param["DisableAddons"];
         }
     }
 }

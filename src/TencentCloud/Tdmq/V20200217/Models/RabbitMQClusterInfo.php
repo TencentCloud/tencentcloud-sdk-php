@@ -74,6 +74,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsolatedTime(integer $IsolatedTime) 设置开始隔离时间。unix 时间戳
  * @method boolean getContainer() 获取是否为容器实例，默认 true
  * @method void setContainer(boolean $Container) 设置是否为容器实例，默认 true
+ * @method array getTags() 获取标签列表
+ * @method void setTags(array $Tags) 设置标签列表
+ * @method boolean getEnableDeletionProtection() 获取是否已开启删除保护
+ * @method void setEnableDeletionProtection(boolean $EnableDeletionProtection) 设置是否已开启删除保护
  */
 class RabbitMQClusterInfo extends AbstractModel
 {
@@ -209,6 +213,16 @@ class RabbitMQClusterInfo extends AbstractModel
     public $Container;
 
     /**
+     * @var array 标签列表
+     */
+    public $Tags;
+
+    /**
+     * @var boolean 是否已开启删除保护
+     */
+    public $EnableDeletionProtection;
+
+    /**
      * @param string $ClusterId 集群 ID
      * @param string $ClusterName 集群名称
      * @param string $Region 地域信息
@@ -236,6 +250,8 @@ class RabbitMQClusterInfo extends AbstractModel
      * @param integer $InstanceType 实例类型，0 专享版、1 Serverless 版
      * @param integer $IsolatedTime 开始隔离时间。unix 时间戳
      * @param boolean $Container 是否为容器实例，默认 true
+     * @param array $Tags 标签列表
+     * @param boolean $EnableDeletionProtection 是否已开启删除保护
      */
     function __construct()
     {
@@ -357,6 +373,19 @@ class RabbitMQClusterInfo extends AbstractModel
 
         if (array_key_exists("Container",$param) and $param["Container"] !== null) {
             $this->Container = $param["Container"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("EnableDeletionProtection",$param) and $param["EnableDeletionProtection"] !== null) {
+            $this->EnableDeletionProtection = $param["EnableDeletionProtection"];
         }
     }
 }

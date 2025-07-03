@@ -76,6 +76,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpiredAt(string $ExpiredAt) 设置过期时间。
  * @method boolean getIsNoExpired() 获取是否不过期(永久)。
  * @method void setIsNoExpired(boolean $IsNoExpired) 设置是否不过期(永久)。
+ * @method integer getProductType() 获取产品版本，0-标准版，1-容量增强版
+ * @method void setProductType(integer $ProductType) 设置产品版本，0-标准版，1-容量增强版
+ * @method string getInstanceType() 获取实例类型
+ * @method void setInstanceType(string $InstanceType) 设置实例类型
+ * @method string getNodeType() 获取节点类型
+ * @method void setNodeType(string $NodeType) 设置节点类型
  * @method string getWanAddress() 获取外网地址。
  * @method void setWanAddress(string $WanAddress) 设置外网地址。
  * @method string getIsolateAt() 获取隔离时间
@@ -84,6 +90,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoRenew(integer $AutoRenew) 设置是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费.
  * @method integer getTaskStatus() 获取任务状态：0-无任务；1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中
  * @method void setTaskStatus(integer $TaskStatus) 设置任务状态：0-无任务；1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中
+ * @method array getSecurityGroupIds() 获取绑定的安全组id
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置绑定的安全组id
  */
 class InstanceInfo extends AbstractModel
 {
@@ -219,6 +227,21 @@ class InstanceInfo extends AbstractModel
     public $IsNoExpired;
 
     /**
+     * @var integer 产品版本，0-标准版，1-容量增强版
+     */
+    public $ProductType;
+
+    /**
+     * @var string 实例类型
+     */
+    public $InstanceType;
+
+    /**
+     * @var string 节点类型
+     */
+    public $NodeType;
+
+    /**
      * @var string 外网地址。
      */
     public $WanAddress;
@@ -237,6 +260,11 @@ class InstanceInfo extends AbstractModel
      * @var integer 任务状态：0-无任务；1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中
      */
     public $TaskStatus;
+
+    /**
+     * @var array 绑定的安全组id
+     */
+    public $SecurityGroupIds;
 
     /**
      * @param string $InstanceId 实例ID。
@@ -267,10 +295,14 @@ class InstanceInfo extends AbstractModel
      * @param string $Extend 差异化扩展信息, json格式。
      * @param string $ExpiredAt 过期时间。
      * @param boolean $IsNoExpired 是否不过期(永久)。
+     * @param integer $ProductType 产品版本，0-标准版，1-容量增强版
+     * @param string $InstanceType 实例类型
+     * @param string $NodeType 节点类型
      * @param string $WanAddress 外网地址。
      * @param string $IsolateAt 隔离时间
      * @param integer $AutoRenew 是否自动续费。0: 不自动续费(可以支持特权不停服)；1:自动续费；2:到期不续费.
      * @param integer $TaskStatus 任务状态：0-无任务；1-待执行任务；2-密钥更新中；3-网络变更中；4-参数变更中；5-embedding变更中；6-ai套件变更中；7-滚动升级中；8-纵向扩容中；9-纵向缩容中；10-横向扩容中；11-横向缩容中
+     * @param array $SecurityGroupIds 绑定的安全组id
      */
     function __construct()
     {
@@ -395,6 +427,18 @@ class InstanceInfo extends AbstractModel
             $this->IsNoExpired = $param["IsNoExpired"];
         }
 
+        if (array_key_exists("ProductType",$param) and $param["ProductType"] !== null) {
+            $this->ProductType = $param["ProductType"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {
+            $this->NodeType = $param["NodeType"];
+        }
+
         if (array_key_exists("WanAddress",$param) and $param["WanAddress"] !== null) {
             $this->WanAddress = $param["WanAddress"];
         }
@@ -409,6 +453,10 @@ class InstanceInfo extends AbstractModel
 
         if (array_key_exists("TaskStatus",$param) and $param["TaskStatus"] !== null) {
             $this->TaskStatus = $param["TaskStatus"];
+        }
+
+        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
+            $this->SecurityGroupIds = $param["SecurityGroupIds"];
         }
     }
 }

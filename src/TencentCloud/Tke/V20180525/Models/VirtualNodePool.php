@@ -29,7 +29,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getName() 获取节点池名称
  * @method void setName(string $Name) 设置节点池名称
  * @method string getLifeState() 获取节点池生命周期
+- creating：创建中
+- normal：正常
+- updating：更新中
  * @method void setLifeState(string $LifeState) 设置节点池生命周期
+- creating：创建中
+- normal：正常
+- updating：更新中
  * @method array getLabels() 获取虚拟节点label
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabels(array $Labels) 设置虚拟节点label
@@ -59,6 +65,9 @@ class VirtualNodePool extends AbstractModel
 
     /**
      * @var string 节点池生命周期
+- creating：创建中
+- normal：正常
+- updating：更新中
      */
     public $LifeState;
 
@@ -80,6 +89,9 @@ class VirtualNodePool extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 节点池名称
      * @param string $LifeState 节点池生命周期
+- creating：创建中
+- normal：正常
+- updating：更新中
      * @param array $Labels 虚拟节点label
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Taints 虚拟节点taint

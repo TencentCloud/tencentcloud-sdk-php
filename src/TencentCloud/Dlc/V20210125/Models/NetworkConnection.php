@@ -78,6 +78,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDatasourceConnectionSubnetCidrBlock(string $DatasourceConnectionSubnetCidrBlock) 设置数据源SubnetCidrBlock
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getEGSupport() 获取支持 eg
+ * @method void setEGSupport(integer $EGSupport) 设置支持 eg
  */
 class NetworkConnection extends AbstractModel
 {
@@ -183,6 +185,11 @@ class NetworkConnection extends AbstractModel
     public $DatasourceConnectionSubnetCidrBlock;
 
     /**
+     * @var integer 支持 eg
+     */
+    public $EGSupport;
+
+    /**
      * @param integer $Id 网络配置id
      * @param string $AssociateId 网络配置唯一标志符
      * @param string $HouseId 计算引擎id
@@ -212,6 +219,7 @@ class NetworkConnection extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DatasourceConnectionSubnetCidrBlock 数据源SubnetCidrBlock
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $EGSupport 支持 eg
      */
     function __construct()
     {
@@ -296,6 +304,10 @@ class NetworkConnection extends AbstractModel
 
         if (array_key_exists("DatasourceConnectionSubnetCidrBlock",$param) and $param["DatasourceConnectionSubnetCidrBlock"] !== null) {
             $this->DatasourceConnectionSubnetCidrBlock = $param["DatasourceConnectionSubnetCidrBlock"];
+        }
+
+        if (array_key_exists("EGSupport",$param) and $param["EGSupport"] !== null) {
+            $this->EGSupport = $param["EGSupport"];
         }
     }
 }

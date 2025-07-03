@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStartTime() 获取开始时间。
  * @method void setStartTime(string $StartTime) 设置开始时间。
- * @method string getEndTime() 获取结束时间。
- * @method void setEndTime(string $EndTime) 设置结束时间。
+ * @method string getEndTime() 获取结束时间。查询时间范围（`EndTime` - `StartTime`）需小于等于 31 天。
+ * @method void setEndTime(string $EndTime) 设置结束时间。查询时间范围（`EndTime` - `StartTime`）需小于等于 31 天。
  * @method string getMetricName() 获取查询的统计指标，取值有：
 <li>ddos_attackFlux_protocol：按各协议的攻击流量排行；</li>
 <li>ddos_attackPackageNum_protocol：按各协议的攻击包量排行；</li>
@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
 <li>ddos_attackNum_sregion：按攻击源地区的攻击数量排行；</li>
 <li>ddos_attackFlux_sip：按攻击源IP的攻击数量排行；</li>
 <li>ddos_attackFlux_sregion：按攻击源地区的攻击数量排行。</li>
- * @method array getZoneIds() 获取站点ID集合，此参数必填。
- * @method void setZoneIds(array $ZoneIds) 设置站点ID集合，此参数必填。
+ * @method array getZoneIds() 获取站点 ID 集合，此参数必填。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
+ * @method void setZoneIds(array $ZoneIds) 设置站点 ID 集合，此参数必填。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
  * @method array getPolicyIds() 获取DDoS策略组ID集合，不填默认选择全部策略ID。
  * @method void setPolicyIds(array $PolicyIds) 设置DDoS策略组ID集合，不填默认选择全部策略ID。
  * @method string getAttackType() 获取攻击类型，取值有：
@@ -77,7 +77,7 @@ class DescribeDDoSAttackTopDataRequest extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string 结束时间。
+     * @var string 结束时间。查询时间范围（`EndTime` - `StartTime`）需小于等于 31 天。
      */
     public $EndTime;
 
@@ -93,7 +93,7 @@ class DescribeDDoSAttackTopDataRequest extends AbstractModel
     public $MetricName;
 
     /**
-     * @var array 站点ID集合，此参数必填。
+     * @var array 站点 ID 集合，此参数必填。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
      */
     public $ZoneIds;
 
@@ -137,7 +137,7 @@ class DescribeDDoSAttackTopDataRequest extends AbstractModel
 
     /**
      * @param string $StartTime 开始时间。
-     * @param string $EndTime 结束时间。
+     * @param string $EndTime 结束时间。查询时间范围（`EndTime` - `StartTime`）需小于等于 31 天。
      * @param string $MetricName 查询的统计指标，取值有：
 <li>ddos_attackFlux_protocol：按各协议的攻击流量排行；</li>
 <li>ddos_attackPackageNum_protocol：按各协议的攻击包量排行；</li>
@@ -145,7 +145,7 @@ class DescribeDDoSAttackTopDataRequest extends AbstractModel
 <li>ddos_attackNum_sregion：按攻击源地区的攻击数量排行；</li>
 <li>ddos_attackFlux_sip：按攻击源IP的攻击数量排行；</li>
 <li>ddos_attackFlux_sregion：按攻击源地区的攻击数量排行。</li>
-     * @param array $ZoneIds 站点ID集合，此参数必填。
+     * @param array $ZoneIds 站点 ID 集合，此参数必填。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
      * @param array $PolicyIds DDoS策略组ID集合，不填默认选择全部策略ID。
      * @param string $AttackType 攻击类型，取值有：
 <li>flood：洪泛攻击；</li>

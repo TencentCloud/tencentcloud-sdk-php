@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStartTime() 获取开始时间。
  * @method void setStartTime(string $StartTime) 设置开始时间。
- * @method string getEndTime() 获取结束时间。
- * @method void setEndTime(string $EndTime) 设置结束时间。
+ * @method string getEndTime() 获取结束时间。查询时间范围（`EndTime` - `StartTime`）需小于等于 31 天。
+ * @method void setEndTime(string $EndTime) 设置结束时间。查询时间范围（`EndTime` - `StartTime`）需小于等于 31 天。
  * @method array getMetricNames() 获取查询指标，取值有：
 <li>l4Flow_connections: 访问并发连接数；</li>
 <li>l4Flow_flux: 访问总流量；</li>
@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
 <li>l4Flow_outFlux: 访问出流量；</li>
 <li>l4Flow_inBandwidth: 访问入向带宽峰值；</li>
 <li>l4Flow_outBandwidth: 访问出向带宽峰值。</li>
- * @method array getZoneIds() 获取站点 ID 集合，此参数必填。
- * @method void setZoneIds(array $ZoneIds) 设置站点 ID 集合，此参数必填。
+ * @method array getZoneIds() 获取站点 ID 集合，此参数必填。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
+ * @method void setZoneIds(array $ZoneIds) 设置站点 ID 集合，此参数必填。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
  * @method array getProxyIds() 获取四层实例列表, 不填表示选择全部实例。
  * @method void setProxyIds(array $ProxyIds) 设置四层实例列表, 不填表示选择全部实例。
  * @method string getInterval() 获取查询时间粒度，取值有：
@@ -69,7 +69,7 @@ class DescribeTimingL4DataRequest extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string 结束时间。
+     * @var string 结束时间。查询时间范围（`EndTime` - `StartTime`）需小于等于 31 天。
      */
     public $EndTime;
 
@@ -85,7 +85,7 @@ class DescribeTimingL4DataRequest extends AbstractModel
     public $MetricNames;
 
     /**
-     * @var array 站点 ID 集合，此参数必填。
+     * @var array 站点 ID 集合，此参数必填。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
      */
     public $ZoneIds;
 
@@ -117,7 +117,7 @@ class DescribeTimingL4DataRequest extends AbstractModel
 
     /**
      * @param string $StartTime 开始时间。
-     * @param string $EndTime 结束时间。
+     * @param string $EndTime 结束时间。查询时间范围（`EndTime` - `StartTime`）需小于等于 31 天。
      * @param array $MetricNames 查询指标，取值有：
 <li>l4Flow_connections: 访问并发连接数；</li>
 <li>l4Flow_flux: 访问总流量；</li>
@@ -125,7 +125,7 @@ class DescribeTimingL4DataRequest extends AbstractModel
 <li>l4Flow_outFlux: 访问出流量；</li>
 <li>l4Flow_inBandwidth: 访问入向带宽峰值；</li>
 <li>l4Flow_outBandwidth: 访问出向带宽峰值。</li>
-     * @param array $ZoneIds 站点 ID 集合，此参数必填。
+     * @param array $ZoneIds 站点 ID 集合，此参数必填。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
      * @param array $ProxyIds 四层实例列表, 不填表示选择全部实例。
      * @param string $Interval 查询时间粒度，取值有：
 <li>min: 1分钟 ；</li>

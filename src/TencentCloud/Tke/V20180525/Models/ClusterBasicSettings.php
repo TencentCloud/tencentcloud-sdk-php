@@ -38,8 +38,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOsCustomizeType(string $OsCustomizeType) 设置容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
  * @method boolean getNeedWorkSecurityGroup() 获取是否开启节点的默认安全组(默认: 否，Alpha特性)
  * @method void setNeedWorkSecurityGroup(boolean $NeedWorkSecurityGroup) 设置是否开启节点的默认安全组(默认: 否，Alpha特性)
- * @method string getSubnetId() 获取当选择Cilium Overlay网络插件时，TKE会从该子网获取2个IP用来创建内网负载均衡
- * @method void setSubnetId(string $SubnetId) 设置当选择Cilium Overlay网络插件时，TKE会从该子网获取2个IP用来创建内网负载均衡
+ * @method string getSubnetId() 获取控制面子网信息，仅在以下场景使用时要求必填。
+- 容器网络插件为CiliumOverlay时，TKE会从该子网获取2个IP用来创建内网负载均衡。
+- 创建支持CDC的托管集群，且网络插件为VPC-CNI时，要求预留至少12个IP。
+ * @method void setSubnetId(string $SubnetId) 设置控制面子网信息，仅在以下场景使用时要求必填。
+- 容器网络插件为CiliumOverlay时，TKE会从该子网获取2个IP用来创建内网负载均衡。
+- 创建支持CDC的托管集群，且网络插件为VPC-CNI时，要求预留至少12个IP。
  * @method string getClusterLevel() 获取集群等级，针对托管集群生效
  * @method void setClusterLevel(string $ClusterLevel) 设置集群等级，针对托管集群生效
  * @method AutoUpgradeClusterLevel getAutoUpgradeClusterLevel() 获取自动变配集群等级，针对托管集群生效
@@ -93,7 +97,9 @@ class ClusterBasicSettings extends AbstractModel
     public $NeedWorkSecurityGroup;
 
     /**
-     * @var string 当选择Cilium Overlay网络插件时，TKE会从该子网获取2个IP用来创建内网负载均衡
+     * @var string 控制面子网信息，仅在以下场景使用时要求必填。
+- 容器网络插件为CiliumOverlay时，TKE会从该子网获取2个IP用来创建内网负载均衡。
+- 创建支持CDC的托管集群，且网络插件为VPC-CNI时，要求预留至少12个IP。
      */
     public $SubnetId;
 
@@ -117,7 +123,9 @@ class ClusterBasicSettings extends AbstractModel
      * @param array $TagSpecification 标签描述列表。通过指定该参数可以同时绑定标签到相应的资源实例，当前仅支持绑定标签到集群实例。
      * @param string $OsCustomizeType 容器的镜像版本，"DOCKER_CUSTOMIZE"(容器定制版),"GENERAL"(普通版本，默认值)
      * @param boolean $NeedWorkSecurityGroup 是否开启节点的默认安全组(默认: 否，Alpha特性)
-     * @param string $SubnetId 当选择Cilium Overlay网络插件时，TKE会从该子网获取2个IP用来创建内网负载均衡
+     * @param string $SubnetId 控制面子网信息，仅在以下场景使用时要求必填。
+- 容器网络插件为CiliumOverlay时，TKE会从该子网获取2个IP用来创建内网负载均衡。
+- 创建支持CDC的托管集群，且网络插件为VPC-CNI时，要求预留至少12个IP。
      * @param string $ClusterLevel 集群等级，针对托管集群生效
      * @param AutoUpgradeClusterLevel $AutoUpgradeClusterLevel 自动变配集群等级，针对托管集群生效
      */

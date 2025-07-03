@@ -78,6 +78,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSessionAffinity(string $SessionAffinity) 设置会话亲和性开关
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method VpcConf getVpcConf() 获取Vpc 配置参数
+ * @method void setVpcConf(VpcConf $VpcConf) 设置Vpc 配置参数
  */
 class ServerBaseConfig extends AbstractModel
 {
@@ -223,6 +225,11 @@ class ServerBaseConfig extends AbstractModel
     public $SessionAffinity;
 
     /**
+     * @var VpcConf Vpc 配置参数
+     */
+    public $VpcConf;
+
+    /**
      * @param string $EnvId 环境 Id
      * @param string $ServerName 服务名
      * @param array $OpenAccessTypes 是否开启公网访问
@@ -252,6 +259,7 @@ class ServerBaseConfig extends AbstractModel
      * @param array $Cmd Dockerfile Cmd 参数
      * @param string $SessionAffinity 会话亲和性开关
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param VpcConf $VpcConf Vpc 配置参数
      */
     function __construct()
     {
@@ -386,6 +394,11 @@ class ServerBaseConfig extends AbstractModel
 
         if (array_key_exists("SessionAffinity",$param) and $param["SessionAffinity"] !== null) {
             $this->SessionAffinity = $param["SessionAffinity"];
+        }
+
+        if (array_key_exists("VpcConf",$param) and $param["VpcConf"] !== null) {
+            $this->VpcConf = new VpcConf();
+            $this->VpcConf->deserialize($param["VpcConf"]);
         }
     }
 }

@@ -20,24 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RecognizeMedicalInvoiceOCR请求参数结构体
  *
- * @method string getImageBase64() 获取图片的Base64 值。
-支持的文件格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-支持的图片大小：所下载文件经Base64编码后不超过 7M。文件下载时间不超过 3 秒。
-输入参数 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
- * @method void setImageBase64(string $ImageBase64) 设置图片的Base64 值。
-支持的文件格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-支持的图片大小：所下载文件经Base64编码后不超过 7M。文件下载时间不超过 3 秒。
-输入参数 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
- * @method string getImageUrl() 获取图片的Url 地址。
-支持的文件格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-支持的图片大小：所下载文件经 Base64 编码后不超过 7M。文件下载时间不超过 3 秒。
-图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
-非腾讯云存储的 Url 速度和稳定性可能受一定影响。
- * @method void setImageUrl(string $ImageUrl) 设置图片的Url 地址。
-支持的文件格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-支持的图片大小：所下载文件经 Base64 编码后不超过 7M。文件下载时间不超过 3 秒。
-图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
-非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+ * @method string getImageBase64() 获取图片的Base64 值。支持的文件格式：PNG、JPG、JPEG，暂不支持 GIF 格式。支持的图片大小：所下载文件经Base64编码后不超过 10M。文件下载时间不超过 3 秒。输入参数 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+ * @method void setImageBase64(string $ImageBase64) 设置图片的Base64 值。支持的文件格式：PNG、JPG、JPEG，暂不支持 GIF 格式。支持的图片大小：所下载文件经Base64编码后不超过 10M。文件下载时间不超过 3 秒。输入参数 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+ * @method string getImageUrl() 获取图片的Url 地址。支持的文件格式：PNG、JPG、JPEG，暂不支持 GIF 格式。支持的图片大小：所下载文件经 Base64 编码后不超过 10M。文件下载时间不超过 3 秒。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+ * @method void setImageUrl(string $ImageUrl) 设置图片的Url 地址。支持的文件格式：PNG、JPG、JPEG，暂不支持 GIF 格式。支持的图片大小：所下载文件经 Base64 编码后不超过 10M。文件下载时间不超过 3 秒。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
  * @method boolean getReturnVertex() 获取是否需要返回识别出的文本行在原图上的四点坐标，默认不返回
  * @method void setReturnVertex(boolean $ReturnVertex) 设置是否需要返回识别出的文本行在原图上的四点坐标，默认不返回
  * @method boolean getReturnCoord() 获取是否需要返回识别出的文本行在旋转纠正之后的图像中的四点坐标，默认不返回
@@ -50,19 +36,12 @@ use TencentCloud\Common\AbstractModel;
 class RecognizeMedicalInvoiceOCRRequest extends AbstractModel
 {
     /**
-     * @var string 图片的Base64 值。
-支持的文件格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-支持的图片大小：所下载文件经Base64编码后不超过 7M。文件下载时间不超过 3 秒。
-输入参数 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+     * @var string 图片的Base64 值。支持的文件格式：PNG、JPG、JPEG，暂不支持 GIF 格式。支持的图片大小：所下载文件经Base64编码后不超过 10M。文件下载时间不超过 3 秒。输入参数 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
      */
     public $ImageBase64;
 
     /**
-     * @var string 图片的Url 地址。
-支持的文件格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-支持的图片大小：所下载文件经 Base64 编码后不超过 7M。文件下载时间不超过 3 秒。
-图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
-非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+     * @var string 图片的Url 地址。支持的文件格式：PNG、JPG、JPEG，暂不支持 GIF 格式。支持的图片大小：所下载文件经 Base64 编码后不超过 10M。文件下载时间不超过 3 秒。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
      */
     public $ImageUrl;
 
@@ -87,15 +66,8 @@ class RecognizeMedicalInvoiceOCRRequest extends AbstractModel
     public $PdfPageNumber;
 
     /**
-     * @param string $ImageBase64 图片的Base64 值。
-支持的文件格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-支持的图片大小：所下载文件经Base64编码后不超过 7M。文件下载时间不超过 3 秒。
-输入参数 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
-     * @param string $ImageUrl 图片的Url 地址。
-支持的文件格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-支持的图片大小：所下载文件经 Base64 编码后不超过 7M。文件下载时间不超过 3 秒。
-图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。
-非腾讯云存储的 Url 速度和稳定性可能受一定影响。
+     * @param string $ImageBase64 图片的Base64 值。支持的文件格式：PNG、JPG、JPEG，暂不支持 GIF 格式。支持的图片大小：所下载文件经Base64编码后不超过 10M。文件下载时间不超过 3 秒。输入参数 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
+     * @param string $ImageUrl 图片的Url 地址。支持的文件格式：PNG、JPG、JPEG，暂不支持 GIF 格式。支持的图片大小：所下载文件经 Base64 编码后不超过 10M。文件下载时间不超过 3 秒。图片存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
      * @param boolean $ReturnVertex 是否需要返回识别出的文本行在原图上的四点坐标，默认不返回
      * @param boolean $ReturnCoord 是否需要返回识别出的文本行在旋转纠正之后的图像中的四点坐标，默认不返回
      * @param boolean $IsPdf 是否开启PDF识别，默认值为true，开启后可同时支持图片和PDF的识别。

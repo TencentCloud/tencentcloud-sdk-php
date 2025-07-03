@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRoleList请求参数结构体
  *
- * @method string getInstanceId() 获取腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
- * @method void setInstanceId(string $InstanceId) 设置腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
+ * @method string getInstanceId() 获取腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
+ * @method void setInstanceId(string $InstanceId) 设置腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
  * @method integer getOffset() 获取查询起始位置，默认为0。
  * @method void setOffset(integer $Offset) 设置查询起始位置，默认为0。
  * @method integer getLimit() 获取查询结果限制数量，默认20。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeRoleListRequest extends AbstractModel
 {
     /**
-     * @var string 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
+     * @var string 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
      */
     public $InstanceId;
 
@@ -52,7 +52,7 @@ class DescribeRoleListRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @param string $InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
+     * @param string $InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
      * @param integer $Offset 查询起始位置，默认为0。
      * @param integer $Limit 查询结果限制数量，默认20。
      * @param array $Filters 过滤查询条件列表，请在引用此参数的API说明中了解使用方法。

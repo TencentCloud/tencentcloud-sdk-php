@@ -20,24 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 导入任务记录
  *
- * @method integer getStatus() 获取状态值
- * @method void setStatus(integer $Status) 设置状态值
- * @method integer getCode() 获取状态值
- * @method void setCode(integer $Code) 设置状态值
- * @method integer getCostTime() 获取执行时间
- * @method void setCostTime(integer $CostTime) 设置执行时间
+ * @method integer getStatus() 获取状态值。0 - 初始化中，1 - 运行中，2 - 运行成功，3 - 运行失败。
+ * @method void setStatus(integer $Status) 设置状态值。0 - 初始化中，1 - 运行中，2 - 运行成功，3 - 运行失败。
+ * @method integer getCode() 获取状态值，为负数时任务异常。
+ * @method void setCode(integer $Code) 设置状态值，为负数时任务异常。
+ * @method integer getCostTime() 获取执行时间，单位：秒。
+ * @method void setCostTime(integer $CostTime) 设置执行时间，单位：秒。
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method string getWorkId() 获取后端任务ID
  * @method void setWorkId(string $WorkId) 设置后端任务ID
  * @method string getFileName() 获取导入文件名
  * @method void setFileName(string $FileName) 设置导入文件名
- * @method integer getProcess() 获取执行进度
- * @method void setProcess(integer $Process) 设置执行进度
+ * @method integer getProcess() 获取执行进度，单位：百分比。
+ * @method void setProcess(integer $Process) 设置执行进度，单位：百分比。
  * @method string getCreateTime() 获取任务创建时间
  * @method void setCreateTime(string $CreateTime) 设置任务创建时间
- * @method string getFileSize() 获取文件大小
- * @method void setFileSize(string $FileSize) 设置文件大小
+ * @method string getFileSize() 获取文件大小，单位：byte。
+ * @method void setFileSize(string $FileSize) 设置文件大小，单位：byte。
  * @method string getMessage() 获取任务执行信息
  * @method void setMessage(string $Message) 设置任务执行信息
  * @method integer getJobId() 获取任务ID
@@ -50,17 +50,17 @@ use TencentCloud\Common\AbstractModel;
 class ImportRecord extends AbstractModel
 {
     /**
-     * @var integer 状态值
+     * @var integer 状态值。0 - 初始化中，1 - 运行中，2 - 运行成功，3 - 运行失败。
      */
     public $Status;
 
     /**
-     * @var integer 状态值
+     * @var integer 状态值，为负数时任务异常。
      */
     public $Code;
 
     /**
-     * @var integer 执行时间
+     * @var integer 执行时间，单位：秒。
      */
     public $CostTime;
 
@@ -80,7 +80,7 @@ class ImportRecord extends AbstractModel
     public $FileName;
 
     /**
-     * @var integer 执行进度
+     * @var integer 执行进度，单位：百分比。
      */
     public $Process;
 
@@ -90,7 +90,7 @@ class ImportRecord extends AbstractModel
     public $CreateTime;
 
     /**
-     * @var string 文件大小
+     * @var string 文件大小，单位：byte。
      */
     public $FileSize;
 
@@ -115,15 +115,15 @@ class ImportRecord extends AbstractModel
     public $AsyncRequestId;
 
     /**
-     * @param integer $Status 状态值
-     * @param integer $Code 状态值
-     * @param integer $CostTime 执行时间
+     * @param integer $Status 状态值。0 - 初始化中，1 - 运行中，2 - 运行成功，3 - 运行失败。
+     * @param integer $Code 状态值，为负数时任务异常。
+     * @param integer $CostTime 执行时间，单位：秒。
      * @param string $InstanceId 实例ID
      * @param string $WorkId 后端任务ID
      * @param string $FileName 导入文件名
-     * @param integer $Process 执行进度
+     * @param integer $Process 执行进度，单位：百分比。
      * @param string $CreateTime 任务创建时间
-     * @param string $FileSize 文件大小
+     * @param string $FileSize 文件大小，单位：byte。
      * @param string $Message 任务执行信息
      * @param integer $JobId 任务ID
      * @param string $DbName 导入库表名

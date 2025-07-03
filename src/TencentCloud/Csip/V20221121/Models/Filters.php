@@ -20,13 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * filter过滤条件
  *
- * @method string getName() 获取无
+ * @method string getName() 获取实例ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置无
+ * @method void setName(string $Name) 设置实例ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getValues() 获取无
+ * @method array getValues() 获取实例ID内容
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setValues(array $Values) 设置无
+ * @method void setValues(array $Values) 设置实例ID内容
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExactMatch() 获取模糊匹配
 注意：此字段可能返回 null，表示取不到有效值。
@@ -36,13 +36,13 @@ use TencentCloud\Common\AbstractModel;
 class Filters extends AbstractModel
 {
     /**
-     * @var string 无
+     * @var string 实例ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
-     * @var array 无
+     * @var array 实例ID内容
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Values;
@@ -54,9 +54,9 @@ class Filters extends AbstractModel
     public $ExactMatch;
 
     /**
-     * @param string $Name 无
+     * @param string $Name 实例ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Values 无
+     * @param array $Values 实例ID内容
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExactMatch 模糊匹配
 注意：此字段可能返回 null，表示取不到有效值。

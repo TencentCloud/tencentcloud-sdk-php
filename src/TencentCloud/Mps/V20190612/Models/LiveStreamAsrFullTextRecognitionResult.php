@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSteadyState(boolean $SteadyState) 设置稳态标记。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUserId() 获取websocket与trtc识别结果的UserId
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUserId(string $UserId) 设置websocket与trtc识别结果的UserId
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class LiveStreamAsrFullTextRecognitionResult extends AbstractModel
 {
@@ -82,6 +86,12 @@ class LiveStreamAsrFullTextRecognitionResult extends AbstractModel
     public $SteadyState;
 
     /**
+     * @var string websocket与trtc识别结果的UserId
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UserId;
+
+    /**
      * @param string $Text 识别文本。
      * @param float $StartPtsTime 识别片段起始的 PTS 时间，单位：秒。
      * @param float $EndPtsTime 识别片段终止的 PTS 时间，单位：秒。
@@ -91,6 +101,8 @@ class LiveStreamAsrFullTextRecognitionResult extends AbstractModel
      * @param string $EndTime 识别结束UTC时间。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $SteadyState 稳态标记。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UserId websocket与trtc识别结果的UserId
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -132,6 +144,10 @@ class LiveStreamAsrFullTextRecognitionResult extends AbstractModel
 
         if (array_key_exists("SteadyState",$param) and $param["SteadyState"] !== null) {
             $this->SteadyState = $param["SteadyState"];
+        }
+
+        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
+            $this->UserId = $param["UserId"];
         }
     }
 }

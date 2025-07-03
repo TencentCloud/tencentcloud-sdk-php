@@ -22,10 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例Id
  * @method void setInstanceId(string $InstanceId) 设置实例Id
- * @method string getClusterName() 获取集群名称
- * @method void setClusterName(string $ClusterName) 设置集群名称
- * @method string getRemark() 获取备注
- * @method void setRemark(string $Remark) 设置备注
+ * @method string getClusterName() 获取集群名称，不填则不修改。非空字符串时必须 3-64 个字符，只能包含数字、字母、“-”和“_”
+ * @method void setClusterName(string $ClusterName) 设置集群名称，不填则不修改。非空字符串时必须 3-64 个字符，只能包含数字、字母、“-”和“_”
+ * @method string getRemark() 获取备注，不填则不修改
+ * @method void setRemark(string $Remark) 设置备注，不填则不修改
+ * @method boolean getEnableDeletionProtection() 获取是否开启删除保护，不填则不修改
+ * @method void setEnableDeletionProtection(boolean $EnableDeletionProtection) 设置是否开启删除保护，不填则不修改
  */
 class ModifyRabbitMQVipInstanceRequest extends AbstractModel
 {
@@ -35,19 +37,25 @@ class ModifyRabbitMQVipInstanceRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 集群名称
+     * @var string 集群名称，不填则不修改。非空字符串时必须 3-64 个字符，只能包含数字、字母、“-”和“_”
      */
     public $ClusterName;
 
     /**
-     * @var string 备注
+     * @var string 备注，不填则不修改
      */
     public $Remark;
 
     /**
+     * @var boolean 是否开启删除保护，不填则不修改
+     */
+    public $EnableDeletionProtection;
+
+    /**
      * @param string $InstanceId 实例Id
-     * @param string $ClusterName 集群名称
-     * @param string $Remark 备注
+     * @param string $ClusterName 集群名称，不填则不修改。非空字符串时必须 3-64 个字符，只能包含数字、字母、“-”和“_”
+     * @param string $Remark 备注，不填则不修改
+     * @param boolean $EnableDeletionProtection 是否开启删除保护，不填则不修改
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ModifyRabbitMQVipInstanceRequest extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("EnableDeletionProtection",$param) and $param["EnableDeletionProtection"] !== null) {
+            $this->EnableDeletionProtection = $param["EnableDeletionProtection"];
         }
     }
 }

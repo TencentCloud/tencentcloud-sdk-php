@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClusterVirtualNode请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getNodePoolId() 获取节点池ID
- * @method void setNodePoolId(string $NodePoolId) 设置节点池ID
- * @method array getNodeNames() 获取节点名称
- * @method void setNodeNames(array $NodeNames) 设置节点名称
+ * @method string getClusterId() 获取集群ID，通过DescribeClusters接口获取
+ * @method void setClusterId(string $ClusterId) 设置集群ID，通过DescribeClusters接口获取
+ * @method string getNodePoolId() 获取节点池ID，通过DescribeNodePools接口获取
+ * @method void setNodePoolId(string $NodePoolId) 设置节点池ID，通过DescribeNodePools接口获取
+ * @method array getNodeNames() 获取节点名称，可搜索DescribeClusterVirtualNode接口节点
+ * @method void setNodeNames(array $NodeNames) 设置节点名称，可搜索DescribeClusterVirtualNode接口节点
  */
 class DescribeClusterVirtualNodeRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string 集群ID，通过DescribeClusters接口获取
      */
     public $ClusterId;
 
     /**
-     * @var string 节点池ID
+     * @var string 节点池ID，通过DescribeNodePools接口获取
      */
     public $NodePoolId;
 
     /**
-     * @var array 节点名称
+     * @var array 节点名称，可搜索DescribeClusterVirtualNode接口节点
      */
     public $NodeNames;
 
     /**
-     * @param string $ClusterId 集群ID
-     * @param string $NodePoolId 节点池ID
-     * @param array $NodeNames 节点名称
+     * @param string $ClusterId 集群ID，通过DescribeClusters接口获取
+     * @param string $NodePoolId 节点池ID，通过DescribeNodePools接口获取
+     * @param array $NodeNames 节点名称，可搜索DescribeClusterVirtualNode接口节点
      */
     function __construct()
     {

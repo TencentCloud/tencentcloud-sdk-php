@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTagsOfInstanceIds请求参数结构体
  *
- * @method array getInstanceIds() 获取实例列表。
- * @method void setInstanceIds(array $InstanceIds) 设置实例列表。
+ * @method array getInstanceIds() 获取实例列表。实例 ID 可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。可传入的数组长度暂无限制。
+ * @method void setInstanceIds(array $InstanceIds) 设置实例列表。实例 ID 可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。可传入的数组长度暂无限制。
  * @method integer getOffset() 获取分页偏移量。
  * @method void setOffset(integer $Offset) 设置分页偏移量。
- * @method integer getLimit() 获取分页大小。
- * @method void setLimit(integer $Limit) 设置分页大小。
+ * @method integer getLimit() 获取分页大小。默认为15。
+ * @method void setLimit(integer $Limit) 设置分页大小。默认为15。
  */
 class DescribeTagsOfInstanceIdsRequest extends AbstractModel
 {
     /**
-     * @var array 实例列表。
+     * @var array 实例列表。实例 ID 可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。可传入的数组长度暂无限制。
      */
     public $InstanceIds;
 
@@ -40,14 +40,14 @@ class DescribeTagsOfInstanceIdsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 分页大小。
+     * @var integer 分页大小。默认为15。
      */
     public $Limit;
 
     /**
-     * @param array $InstanceIds 实例列表。
+     * @param array $InstanceIds 实例列表。实例 ID 可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。可传入的数组长度暂无限制。
      * @param integer $Offset 分页偏移量。
-     * @param integer $Limit 分页大小。
+     * @param integer $Limit 分页大小。默认为15。
      */
     function __construct()
     {

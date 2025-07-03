@@ -82,10 +82,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcs(array $Vpcs) 设置VPC 接入点列表
  * @method integer getCreateTime() 获取创建时间，毫秒为单位。unix 时间戳
  * @method void setCreateTime(integer $CreateTime) 设置创建时间，毫秒为单位。unix 时间戳
- * @method integer getInstanceType() 获取实例类型，0 专享版、1 Serverless 版
- * @method void setInstanceType(integer $InstanceType) 设置实例类型，0 专享版、1 Serverless 版
- * @method integer getIsolatedTime() 获取隔离时间，毫秒为单位
- * @method void setIsolatedTime(integer $IsolatedTime) 设置隔离时间，毫秒为单位
+ * @method integer getInstanceType() 获取实例类型，0 托管版、1 Serverless 版
+ * @method void setInstanceType(integer $InstanceType) 设置实例类型，0 托管版、1 Serverless 版
+ * @method integer getIsolatedTime() 获取隔离时间，毫秒为单位。unix 时间戳
+ * @method void setIsolatedTime(integer $IsolatedTime) 设置隔离时间，毫秒为单位。unix 时间戳
+ * @method boolean getEnableDeletionProtection() 获取是否已开启删除保护
+ * @method void setEnableDeletionProtection(boolean $EnableDeletionProtection) 设置是否已开启删除保护
+ * @method array getTags() 获取标签列表
+ * @method void setTags(array $Tags) 设置标签列表
  */
 class RabbitMQVipInstance extends AbstractModel
 {
@@ -197,14 +201,24 @@ class RabbitMQVipInstance extends AbstractModel
     public $CreateTime;
 
     /**
-     * @var integer 实例类型，0 专享版、1 Serverless 版
+     * @var integer 实例类型，0 托管版、1 Serverless 版
      */
     public $InstanceType;
 
     /**
-     * @var integer 隔离时间，毫秒为单位
+     * @var integer 隔离时间，毫秒为单位。unix 时间戳
      */
     public $IsolatedTime;
+
+    /**
+     * @var boolean 是否已开启删除保护
+     */
+    public $EnableDeletionProtection;
+
+    /**
+     * @var array 标签列表
+     */
+    public $Tags;
 
     /**
      * @param string $InstanceId 实例 ID
@@ -238,8 +252,10 @@ class RabbitMQVipInstance extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Vpcs VPC 接入点列表
      * @param integer $CreateTime 创建时间，毫秒为单位。unix 时间戳
-     * @param integer $InstanceType 实例类型，0 专享版、1 Serverless 版
-     * @param integer $IsolatedTime 隔离时间，毫秒为单位
+     * @param integer $InstanceType 实例类型，0 托管版、1 Serverless 版
+     * @param integer $IsolatedTime 隔离时间，毫秒为单位。unix 时间戳
+     * @param boolean $EnableDeletionProtection 是否已开启删除保护
+     * @param array $Tags 标签列表
      */
     function __construct()
     {
@@ -341,6 +357,19 @@ class RabbitMQVipInstance extends AbstractModel
 
         if (array_key_exists("IsolatedTime",$param) and $param["IsolatedTime"] !== null) {
             $this->IsolatedTime = $param["IsolatedTime"];
+        }
+
+        if (array_key_exists("EnableDeletionProtection",$param) and $param["EnableDeletionProtection"] !== null) {
+            $this->EnableDeletionProtection = $param["EnableDeletionProtection"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

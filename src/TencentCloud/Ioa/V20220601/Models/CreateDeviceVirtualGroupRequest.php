@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDeviceVirtualGroup请求参数结构体
  *
+ * @method string getDomainInstanceId() 获取管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+ * @method void setDomainInstanceId(string $DomainInstanceId) 设置管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
  * @method string getDeviceVirtualGroupName() 获取必填，终端自定义分组名
  * @method void setDeviceVirtualGroupName(string $DeviceVirtualGroupName) 设置必填，终端自定义分组名
  * @method string getDescription() 获取详情
@@ -35,6 +37,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class CreateDeviceVirtualGroupRequest extends AbstractModel
 {
+    /**
+     * @var string 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+     */
+    public $DomainInstanceId;
+
     /**
      * @var string 必填，终端自定义分组名
      */
@@ -66,6 +73,7 @@ class CreateDeviceVirtualGroupRequest extends AbstractModel
     public $AutoRules;
 
     /**
+     * @param string $DomainInstanceId 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
      * @param string $DeviceVirtualGroupName 必填，终端自定义分组名
      * @param string $Description 详情
      * @param integer $OsType 必填，系统类型（0: win，1：linux，2: mac，3: win_srv，4：android，5：ios ）(只支持32位)
@@ -86,6 +94,10 @@ class CreateDeviceVirtualGroupRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("DomainInstanceId",$param) and $param["DomainInstanceId"] !== null) {
+            $this->DomainInstanceId = $param["DomainInstanceId"];
+        }
+
         if (array_key_exists("DeviceVirtualGroupName",$param) and $param["DeviceVirtualGroupName"] !== null) {
             $this->DeviceVirtualGroupName = $param["DeviceVirtualGroupName"];
         }

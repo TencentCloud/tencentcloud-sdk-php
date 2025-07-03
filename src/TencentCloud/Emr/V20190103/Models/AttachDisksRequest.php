@@ -40,6 +40,10 @@ ALIGN_DEADLINE：自动对其到期时间
  * @method void setDeleteWithInstance(boolean $DeleteWithInstance) 设置可选参数，不传该参数则仅执行挂载操作。传入True时，会在挂载成功后将云硬盘设置为随云主机销毁模式，仅对按量计费云硬盘有效。
  * @method array getSelectiveConfServices() 获取新挂磁盘时可支持配置的服务名称列表
  * @method void setSelectiveConfServices(array $SelectiveConfServices) 设置新挂磁盘时可支持配置的服务名称列表
+ * @method integer getChargeType() 获取磁盘计费类型（1包月、3包销）
+ * @method void setChargeType(integer $ChargeType) 设置磁盘计费类型（1包月、3包销）
+ * @method integer getUnderWriteDuration() 获取磁盘包销购买时长（仅支持12、24、36、48、60）
+ * @method void setUnderWriteDuration(integer $UnderWriteDuration) 设置磁盘包销购买时长（仅支持12、24、36、48、60）
  */
 class AttachDisksRequest extends AbstractModel
 {
@@ -86,6 +90,16 @@ ALIGN_DEADLINE：自动对其到期时间
     public $SelectiveConfServices;
 
     /**
+     * @var integer 磁盘计费类型（1包月、3包销）
+     */
+    public $ChargeType;
+
+    /**
+     * @var integer 磁盘包销购买时长（仅支持12、24、36、48、60）
+     */
+    public $UnderWriteDuration;
+
+    /**
      * @param string $InstanceId EMR集群实例ID
      * @param array $DiskIds 需要挂载的云盘ID
      * @param string $AlignType 挂载模式，取值范围：
@@ -96,6 +110,8 @@ ALIGN_DEADLINE：自动对其到期时间
      * @param NodeSpecDiskV2 $DiskSpec 新购云盘规格
      * @param boolean $DeleteWithInstance 可选参数，不传该参数则仅执行挂载操作。传入True时，会在挂载成功后将云硬盘设置为随云主机销毁模式，仅对按量计费云硬盘有效。
      * @param array $SelectiveConfServices 新挂磁盘时可支持配置的服务名称列表
+     * @param integer $ChargeType 磁盘计费类型（1包月、3包销）
+     * @param integer $UnderWriteDuration 磁盘包销购买时长（仅支持12、24、36、48、60）
      */
     function __construct()
     {
@@ -141,6 +157,14 @@ ALIGN_DEADLINE：自动对其到期时间
 
         if (array_key_exists("SelectiveConfServices",$param) and $param["SelectiveConfServices"] !== null) {
             $this->SelectiveConfServices = $param["SelectiveConfServices"];
+        }
+
+        if (array_key_exists("ChargeType",$param) and $param["ChargeType"] !== null) {
+            $this->ChargeType = $param["ChargeType"];
+        }
+
+        if (array_key_exists("UnderWriteDuration",$param) and $param["UnderWriteDuration"] !== null) {
+            $this->UnderWriteDuration = $param["UnderWriteDuration"];
         }
     }
 }

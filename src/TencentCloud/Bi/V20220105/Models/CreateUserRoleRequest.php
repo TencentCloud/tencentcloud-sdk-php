@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserList(array $UserList) 设置用户列表（废弃）
  * @method array getUserInfoList() 获取用户列表（新）
  * @method void setUserInfoList(array $UserInfoList) 设置用户列表（新）
+ * @method array getUserGroups() 获取用户组id列表
+ * @method void setUserGroups(array $UserGroups) 设置用户组id列表
  */
 class CreateUserRoleRequest extends AbstractModel
 {
@@ -46,9 +48,15 @@ class CreateUserRoleRequest extends AbstractModel
     public $UserInfoList;
 
     /**
+     * @var array 用户组id列表
+     */
+    public $UserGroups;
+
+    /**
      * @param array $RoleIdList 角色ID列表
      * @param array $UserList 用户列表（废弃）
      * @param array $UserInfoList 用户列表（新）
+     * @param array $UserGroups 用户组id列表
      */
     function __construct()
     {
@@ -83,6 +91,10 @@ class CreateUserRoleRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->UserInfoList, $obj);
             }
+        }
+
+        if (array_key_exists("UserGroups",$param) and $param["UserGroups"] !== null) {
+            $this->UserGroups = $param["UserGroups"];
         }
     }
 }

@@ -40,12 +40,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlanId(string $PlanId) 设置套餐 ID。形如 edgeone-2y041pblwaxe。
  * @method string getArea() 获取服务区域，取值有：
 <li>mainland: 中国大陆；</li>
-<li>overseas: 全球（不包括中国大陆)；</li>
-<li>global: 全球（包括中国大陆)。</li>
+<li>overseas: 全球（不包括中国大陆）；</li>
+<li>global: 全球（包括中国大陆）。</li>
  * @method void setArea(string $Area) 设置服务区域，取值有：
 <li>mainland: 中国大陆；</li>
-<li>overseas: 全球（不包括中国大陆)；</li>
-<li>global: 全球（包括中国大陆)。</li>
+<li>overseas: 全球（不包括中国大陆）；</li>
+<li>global: 全球（包括中国大陆）。</li>
+ * @method boolean getAutoRenewal() 获取自动续费开关。取值有：
+<li>true: 已开启自动续费；</li>
+<li>false: 未开启自动续费。</li>
+ * @method void setAutoRenewal(boolean $AutoRenewal) 设置自动续费开关。取值有：
+<li>true: 已开启自动续费；</li>
+<li>false: 未开启自动续费。</li>
  * @method string getStatus() 获取套餐状态，取值有：
 <li>normal：正常状态；</li>
 <li>expiring-soon：即将到期状态；</li>
@@ -119,10 +125,17 @@ class Plan extends AbstractModel
     /**
      * @var string 服务区域，取值有：
 <li>mainland: 中国大陆；</li>
-<li>overseas: 全球（不包括中国大陆)；</li>
-<li>global: 全球（包括中国大陆)。</li>
+<li>overseas: 全球（不包括中国大陆）；</li>
+<li>global: 全球（包括中国大陆）。</li>
      */
     public $Area;
+
+    /**
+     * @var boolean 自动续费开关。取值有：
+<li>true: 已开启自动续费；</li>
+<li>false: 未开启自动续费。</li>
+     */
+    public $AutoRenewal;
 
     /**
      * @var string 套餐状态，取值有：
@@ -225,8 +238,11 @@ class Plan extends AbstractModel
      * @param string $PlanId 套餐 ID。形如 edgeone-2y041pblwaxe。
      * @param string $Area 服务区域，取值有：
 <li>mainland: 中国大陆；</li>
-<li>overseas: 全球（不包括中国大陆)；</li>
-<li>global: 全球（包括中国大陆)。</li>
+<li>overseas: 全球（不包括中国大陆）；</li>
+<li>global: 全球（包括中国大陆）。</li>
+     * @param boolean $AutoRenewal 自动续费开关。取值有：
+<li>true: 已开启自动续费；</li>
+<li>false: 未开启自动续费。</li>
      * @param string $Status 套餐状态，取值有：
 <li>normal：正常状态；</li>
 <li>expiring-soon：即将到期状态；</li>
@@ -276,6 +292,10 @@ class Plan extends AbstractModel
 
         if (array_key_exists("Area",$param) and $param["Area"] !== null) {
             $this->Area = $param["Area"];
+        }
+
+        if (array_key_exists("AutoRenewal",$param) and $param["AutoRenewal"] !== null) {
+            $this->AutoRenewal = $param["AutoRenewal"];
         }
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {

@@ -180,6 +180,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterRelationInfoList(array $ClusterRelationInfoList) 设置rss集群的绑定列表
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRedisId() 获取Redis信息
+ * @method void setRedisId(string $RedisId) 设置Redis信息
  */
 class ClusterInstancesInfo extends AbstractModel
 {
@@ -450,6 +452,11 @@ class ClusterInstancesInfo extends AbstractModel
     public $ClusterRelationInfoList;
 
     /**
+     * @var string Redis信息
+     */
+    public $RedisId;
+
+    /**
      * @param integer $Id ID号
      * @param string $ClusterId 集群ID
      * @param string $Ftitle 标题
@@ -530,6 +537,7 @@ class ClusterInstancesInfo extends AbstractModel
      * @param integer $BindFileSystemNum 集群绑定的文件系统数
      * @param array $ClusterRelationInfoList rss集群的绑定列表
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RedisId Redis信息
      */
     function __construct()
     {
@@ -748,6 +756,10 @@ class ClusterInstancesInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ClusterRelationInfoList, $obj);
             }
+        }
+
+        if (array_key_exists("RedisId",$param) and $param["RedisId"] !== null) {
+            $this->RedisId = $param["RedisId"];
         }
     }
 }

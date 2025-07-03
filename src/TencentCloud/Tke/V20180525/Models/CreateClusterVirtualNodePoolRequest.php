@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateClusterVirtualNodePool请求参数结构体
  *
- * @method string getClusterId() 获取集群Id
- * @method void setClusterId(string $ClusterId) 设置集群Id
+ * @method string getClusterId() 获取集群ID，通过DescribeClusters接口获取
+ * @method void setClusterId(string $ClusterId) 设置集群ID，通过DescribeClusters接口获取
  * @method string getName() 获取节点池名称
  * @method void setName(string $Name) 设置节点池名称
  * @method array getSubnetIds() 获取子网ID列表
  * @method void setSubnetIds(array $SubnetIds) 设置子网ID列表
- * @method array getSecurityGroupIds() 获取安全组ID列表
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组ID列表
+ * @method array getSecurityGroupIds() 获取安全组ID列表，必选参数
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组ID列表，必选参数
  * @method array getLabels() 获取虚拟节点label
  * @method void setLabels(array $Labels) 设置虚拟节点label
  * @method array getTaints() 获取虚拟节点taint
  * @method void setTaints(array $Taints) 设置虚拟节点taint
  * @method array getVirtualNodes() 获取节点列表
  * @method void setVirtualNodes(array $VirtualNodes) 设置节点列表
- * @method boolean getDeletionProtection() 获取删除保护开关
- * @method void setDeletionProtection(boolean $DeletionProtection) 设置删除保护开关
+ * @method boolean getDeletionProtection() 获取删除保护开关，默认关闭
+ * @method void setDeletionProtection(boolean $DeletionProtection) 设置删除保护开关，默认关闭
  * @method string getOS() 获取节点池操作系统：
 - linux（默认）
 - windows
@@ -46,7 +46,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateClusterVirtualNodePoolRequest extends AbstractModel
 {
     /**
-     * @var string 集群Id
+     * @var string 集群ID，通过DescribeClusters接口获取
      */
     public $ClusterId;
 
@@ -61,7 +61,7 @@ class CreateClusterVirtualNodePoolRequest extends AbstractModel
     public $SubnetIds;
 
     /**
-     * @var array 安全组ID列表
+     * @var array 安全组ID列表，必选参数
      */
     public $SecurityGroupIds;
 
@@ -81,7 +81,7 @@ class CreateClusterVirtualNodePoolRequest extends AbstractModel
     public $VirtualNodes;
 
     /**
-     * @var boolean 删除保护开关
+     * @var boolean 删除保护开关，默认关闭
      */
     public $DeletionProtection;
 
@@ -93,14 +93,14 @@ class CreateClusterVirtualNodePoolRequest extends AbstractModel
     public $OS;
 
     /**
-     * @param string $ClusterId 集群Id
+     * @param string $ClusterId 集群ID，通过DescribeClusters接口获取
      * @param string $Name 节点池名称
      * @param array $SubnetIds 子网ID列表
-     * @param array $SecurityGroupIds 安全组ID列表
+     * @param array $SecurityGroupIds 安全组ID列表，必选参数
      * @param array $Labels 虚拟节点label
      * @param array $Taints 虚拟节点taint
      * @param array $VirtualNodes 节点列表
-     * @param boolean $DeletionProtection 删除保护开关
+     * @param boolean $DeletionProtection 删除保护开关，默认关闭
      * @param string $OS 节点池操作系统：
 - linux（默认）
 - windows

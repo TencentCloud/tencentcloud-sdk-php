@@ -54,16 +54,14 @@ use TencentCloud\Common\AbstractModel;
 CREATING-创建中
 NORMAL-正常
 CREATEFAILED-创建失败
-USING-使用中
-SYNCING-同步中
+SYNCING-复制中
 IMPORTING-导入中
 IMPORTFAILED-导入失败
  * @method void setImageState(string $ImageState) 设置镜像状态:
 CREATING-创建中
 NORMAL-正常
 CREATEFAILED-创建失败
-USING-使用中
-SYNCING-同步中
+SYNCING-复制中
 IMPORTING-导入中
 IMPORTFAILED-导入失败
  * @method string getPlatform() 获取镜像来源平台，包括如TencentOS、 CentOS、 Windows、 Ubuntu、 Debian、Fedora等。
@@ -155,8 +153,7 @@ class Image extends AbstractModel
 CREATING-创建中
 NORMAL-正常
 CREATEFAILED-创建失败
-USING-使用中
-SYNCING-同步中
+SYNCING-复制中
 IMPORTING-导入中
 IMPORTFAILED-导入失败
      */
@@ -243,8 +240,7 @@ IMPORTFAILED-导入失败
 CREATING-创建中
 NORMAL-正常
 CREATEFAILED-创建失败
-USING-使用中
-SYNCING-同步中
+SYNCING-复制中
 IMPORTING-导入中
 IMPORTFAILED-导入失败
      * @param string $Platform 镜像来源平台，包括如TencentOS、 CentOS、 Windows、 Ubuntu、 Debian、Fedora等。

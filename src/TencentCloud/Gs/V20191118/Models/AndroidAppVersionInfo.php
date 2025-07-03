@@ -36,8 +36,12 @@ CREATE_FAIL：创建失败、CREATE_SUCCESS：创建成功）
  * @method void setUninstallCommand(string $UninstallCommand) 设置shell 卸载命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
  * @method string getCleanupMode() 获取应用资源清理模式（实例安装应用所用资源），取值：CLEANUP_ON_UNINSTALL（默认值），卸载 App 时清理；CLEANUP_AFTER_INSTALL，安装 App 后立即清理。普通应用只有 CLEANUP_AFTER_INSTALL 模式。
  * @method void setCleanupMode(string $CleanupMode) 设置应用资源清理模式（实例安装应用所用资源），取值：CLEANUP_ON_UNINSTALL（默认值），卸载 App 时清理；CLEANUP_AFTER_INSTALL，安装 App 后立即清理。普通应用只有 CLEANUP_AFTER_INSTALL 模式。
- * @method string getAndroidAppVersionName() 获取安卓应用版本名称
- * @method void setAndroidAppVersionName(string $AndroidAppVersionName) 设置安卓应用版本名称
+ * @method string getAndroidAppVersionName() 获取安卓应用版本名称（版本描述、备注）
+ * @method void setAndroidAppVersionName(string $AndroidAppVersionName) 设置安卓应用版本名称（版本描述、备注）
+ * @method string getActivity() 获取安卓应用启动页
+ * @method void setActivity(string $Activity) 设置安卓应用启动页
+ * @method string getVersionName() 获取应用版本号（Version Name）
+ * @method void setVersionName(string $VersionName) 设置应用版本号（Version Name）
  */
 class AndroidAppVersionInfo extends AbstractModel
 {
@@ -74,9 +78,19 @@ CREATE_FAIL：创建失败、CREATE_SUCCESS：创建成功）
     public $CleanupMode;
 
     /**
-     * @var string 安卓应用版本名称
+     * @var string 安卓应用版本名称（版本描述、备注）
      */
     public $AndroidAppVersionName;
+
+    /**
+     * @var string 安卓应用启动页
+     */
+    public $Activity;
+
+    /**
+     * @var string 应用版本号（Version Name）
+     */
+    public $VersionName;
 
     /**
      * @param string $AndroidAppVersion 安卓应用版本
@@ -87,7 +101,9 @@ CREATE_FAIL：创建失败、CREATE_SUCCESS：创建成功）
      * @param string $Command shell 安装命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
      * @param string $UninstallCommand shell 卸载命令（支持多条命令执行，通过 && 组合；只在应用 AppMode 为 ADVANCED 高级模式下 才会生效）
      * @param string $CleanupMode 应用资源清理模式（实例安装应用所用资源），取值：CLEANUP_ON_UNINSTALL（默认值），卸载 App 时清理；CLEANUP_AFTER_INSTALL，安装 App 后立即清理。普通应用只有 CLEANUP_AFTER_INSTALL 模式。
-     * @param string $AndroidAppVersionName 安卓应用版本名称
+     * @param string $AndroidAppVersionName 安卓应用版本名称（版本描述、备注）
+     * @param string $Activity 安卓应用启动页
+     * @param string $VersionName 应用版本号（Version Name）
      */
     function __construct()
     {
@@ -128,6 +144,14 @@ CREATE_FAIL：创建失败、CREATE_SUCCESS：创建成功）
 
         if (array_key_exists("AndroidAppVersionName",$param) and $param["AndroidAppVersionName"] !== null) {
             $this->AndroidAppVersionName = $param["AndroidAppVersionName"];
+        }
+
+        if (array_key_exists("Activity",$param) and $param["Activity"] !== null) {
+            $this->Activity = $param["Activity"];
+        }
+
+        if (array_key_exists("VersionName",$param) and $param["VersionName"] !== null) {
+            $this->VersionName = $param["VersionName"];
         }
     }
 }

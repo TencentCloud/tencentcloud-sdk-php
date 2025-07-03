@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStartTime() 获取开始时间，时间范围为 30 天。
  * @method void setStartTime(string $StartTime) 设置开始时间，时间范围为 30 天。
- * @method string getEndTime() 获取结束时间，时间范围为 30 天。
- * @method void setEndTime(string $EndTime) 设置结束时间，时间范围为 30 天。
+ * @method string getEndTime() 获取结束时间。查询时间范围（`EndTime` - `StartTime`）需小于等于 31 天。
+ * @method void setEndTime(string $EndTime) 设置结束时间。查询时间范围（`EndTime` - `StartTime`）需小于等于 31 天。
  * @method array getPolicyIds() 获取ddos策略组集合，不填默认选择全部策略。
  * @method void setPolicyIds(array $PolicyIds) 设置ddos策略组集合，不填默认选择全部策略。
- * @method array getZoneIds() 获取站点集合，此参数必填。
- * @method void setZoneIds(array $ZoneIds) 设置站点集合，此参数必填。
+ * @method array getZoneIds() 获取站点 ID 集合，此参数必填。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
+ * @method void setZoneIds(array $ZoneIds) 设置站点 ID 集合，此参数必填。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
  * @method integer getLimit() 获取分页查询的限制数目，默认值为20，最大查询条目为1000。
  * @method void setLimit(integer $Limit) 设置分页查询的限制数目，默认值为20，最大查询条目为1000。
  * @method integer getOffset() 获取分页的偏移量，默认值为0。
@@ -63,7 +63,7 @@ class DescribeDDoSAttackEventRequest extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string 结束时间，时间范围为 30 天。
+     * @var string 结束时间。查询时间范围（`EndTime` - `StartTime`）需小于等于 31 天。
      */
     public $EndTime;
 
@@ -73,7 +73,7 @@ class DescribeDDoSAttackEventRequest extends AbstractModel
     public $PolicyIds;
 
     /**
-     * @var array 站点集合，此参数必填。
+     * @var array 站点 ID 集合，此参数必填。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
      */
     public $ZoneIds;
 
@@ -116,9 +116,9 @@ class DescribeDDoSAttackEventRequest extends AbstractModel
 
     /**
      * @param string $StartTime 开始时间，时间范围为 30 天。
-     * @param string $EndTime 结束时间，时间范围为 30 天。
+     * @param string $EndTime 结束时间。查询时间范围（`EndTime` - `StartTime`）需小于等于 31 天。
      * @param array $PolicyIds ddos策略组集合，不填默认选择全部策略。
-     * @param array $ZoneIds 站点集合，此参数必填。
+     * @param array $ZoneIds 站点 ID 集合，此参数必填。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
      * @param integer $Limit 分页查询的限制数目，默认值为20，最大查询条目为1000。
      * @param integer $Offset 分页的偏移量，默认值为0。
      * @param boolean $ShowDetail 展示攻击详情的参数，若填false，默认只返回攻击次数，不返回攻击详情；若填true，返回攻击详情。

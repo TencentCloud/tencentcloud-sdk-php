@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStartTime() 获取开始时间。
  * @method void setStartTime(string $StartTime) 设置开始时间。
- * @method string getEndTime() 获取结束时间。
- * @method void setEndTime(string $EndTime) 设置结束时间。
+ * @method string getEndTime() 获取结束时间。查询时间范围（`EndTime` - `StartTime`）需小于等于 31 天。
+ * @method void setEndTime(string $EndTime) 设置结束时间。查询时间范围（`EndTime` - `StartTime`）需小于等于 31 天。
  * @method string getMetricName() 获取查询的指标，取值有：
 <li> l7Flow_outFlux_country：按国家/地区维度统计 L7 EdgeOne 响应流量指标；</li>
 <li> l7Flow_outFlux_province：按中国大陆境内省份维度统计 L7 EdgeOne 响应流量指标；</li>
@@ -78,8 +78,8 @@ use TencentCloud\Common\AbstractModel;
 <li> l7Flow_request_ua：按 User-Agent 维度统计 L7 访问请求数指标。</li>
 
 
- * @method array getZoneIds() 获取站点 ID 集合，此参数必填。
- * @method void setZoneIds(array $ZoneIds) 设置站点 ID 集合，此参数必填。
+ * @method array getZoneIds() 获取站点 ID 集合，此参数必填。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
+ * @method void setZoneIds(array $ZoneIds) 设置站点 ID 集合，此参数必填。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
  * @method integer getLimit() 获取查询前多少个 top 数据，最大值为1000。不填默认为10，表示查询 top10 的数据。
  * @method void setLimit(integer $Limit) 设置查询前多少个 top 数据，最大值为1000。不填默认为10，表示查询 top10 的数据。
  * @method array getFilters() 获取过滤条件，详细的过滤条件 Key 值如下：
@@ -141,7 +141,7 @@ class DescribeTopL7AnalysisDataRequest extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string 结束时间。
+     * @var string 结束时间。查询时间范围（`EndTime` - `StartTime`）需小于等于 31 天。
      */
     public $EndTime;
 
@@ -177,7 +177,7 @@ class DescribeTopL7AnalysisDataRequest extends AbstractModel
     public $MetricName;
 
     /**
-     * @var array 站点 ID 集合，此参数必填。
+     * @var array 站点 ID 集合，此参数必填。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
      */
     public $ZoneIds;
 
@@ -225,7 +225,7 @@ class DescribeTopL7AnalysisDataRequest extends AbstractModel
 
     /**
      * @param string $StartTime 开始时间。
-     * @param string $EndTime 结束时间。
+     * @param string $EndTime 结束时间。查询时间范围（`EndTime` - `StartTime`）需小于等于 31 天。
      * @param string $MetricName 查询的指标，取值有：
 <li> l7Flow_outFlux_country：按国家/地区维度统计 L7 EdgeOne 响应流量指标；</li>
 <li> l7Flow_outFlux_province：按中国大陆境内省份维度统计 L7 EdgeOne 响应流量指标；</li>
@@ -253,7 +253,7 @@ class DescribeTopL7AnalysisDataRequest extends AbstractModel
 <li> l7Flow_request_ua：按 User-Agent 维度统计 L7 访问请求数指标。</li>
 
 
-     * @param array $ZoneIds 站点 ID 集合，此参数必填。
+     * @param array $ZoneIds 站点 ID 集合，此参数必填。最多传入 100 个站点 ID。若需查询腾讯云主账号下所有站点数据，请用 `*` 代替，查询账号级别数据需具备本接口全部站点资源权限。
      * @param integer $Limit 查询前多少个 top 数据，最大值为1000。不填默认为10，表示查询 top10 的数据。
      * @param array $Filters 过滤条件，详细的过滤条件 Key 值如下：
 <li>country：按照国家/地区进行过滤，国家/地区遵循 <a href="https://baike.baidu.com/item/ISO%203166-1/5269555">ISO 3166-1 alpha-2</a> 规范。示例值：CN。</li>

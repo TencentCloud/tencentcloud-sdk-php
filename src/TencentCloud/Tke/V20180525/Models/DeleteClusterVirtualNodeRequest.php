@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteClusterVirtualNode请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method array getNodeNames() 获取虚拟节点列表
- * @method void setNodeNames(array $NodeNames) 设置虚拟节点列表
+ * @method string getClusterId() 获取集群ID，通过DescribeClusters接口获取
+ * @method void setClusterId(string $ClusterId) 设置集群ID，通过DescribeClusters接口获取
+ * @method array getNodeNames() 获取虚拟节点ID列表
+ * @method void setNodeNames(array $NodeNames) 设置虚拟节点ID列表
  * @method boolean getForce() 获取是否强制删除：如果虚拟节点上有运行中Pod，则非强制删除状态下不会进行删除
  * @method void setForce(boolean $Force) 设置是否强制删除：如果虚拟节点上有运行中Pod，则非强制删除状态下不会进行删除
  */
 class DeleteClusterVirtualNodeRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string 集群ID，通过DescribeClusters接口获取
      */
     public $ClusterId;
 
     /**
-     * @var array 虚拟节点列表
+     * @var array 虚拟节点ID列表
      */
     public $NodeNames;
 
@@ -45,8 +45,8 @@ class DeleteClusterVirtualNodeRequest extends AbstractModel
     public $Force;
 
     /**
-     * @param string $ClusterId 集群ID
-     * @param array $NodeNames 虚拟节点列表
+     * @param string $ClusterId 集群ID，通过DescribeClusters接口获取
+     * @param array $NodeNames 虚拟节点ID列表
      * @param boolean $Force 是否强制删除：如果虚拟节点上有运行中Pod，则非强制删除状态下不会进行删除
      */
     function __construct()

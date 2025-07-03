@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateRole请求参数结构体
  *
- * @method string getInstanceId() 获取腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
- * @method void setInstanceId(string $InstanceId) 设置腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
- * @method string getRole() 获取角色名称
- * @method void setRole(string $Role) 设置角色名称
+ * @method string getInstanceId() 获取腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
+ * @method void setInstanceId(string $InstanceId) 设置腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
+ * @method string getRole() 获取角色名称，不能为空，只支持数字 大小写字母 分隔符("_","-")，不能超过 32 个字符
+ * @method void setRole(string $Role) 设置角色名称，不能为空，只支持数字 大小写字母 分隔符("_","-")，不能超过 32 个字符
  * @method boolean getPermWrite() 获取是否开启生产权限
  * @method void setPermWrite(boolean $PermWrite) 设置是否开启生产权限
  * @method boolean getPermRead() 获取是否开启消费权限
@@ -38,12 +38,12 @@ use TencentCloud\Common\AbstractModel;
 class CreateRoleRequest extends AbstractModel
 {
     /**
-     * @var string 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
+     * @var string 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
      */
     public $InstanceId;
 
     /**
-     * @var string 角色名称
+     * @var string 角色名称，不能为空，只支持数字 大小写字母 分隔符("_","-")，不能超过 32 个字符
      */
     public $Role;
 
@@ -73,8 +73,8 @@ class CreateRoleRequest extends AbstractModel
     public $DetailedPerms;
 
     /**
-     * @param string $InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
-     * @param string $Role 角色名称
+     * @param string $InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
+     * @param string $Role 角色名称，不能为空，只支持数字 大小写字母 分隔符("_","-")，不能超过 32 个字符
      * @param boolean $PermWrite 是否开启生产权限
      * @param boolean $PermRead 是否开启消费权限
      * @param string $Remark 备注

@@ -52,10 +52,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCdbErrors(array $CdbErrors) 设置是否锁定标记，可选值：0 - 不锁定，1 - 锁定，默认为0。
  * @method string getOrderBy() 获取返回结果集排序的字段，目前支持："InstanceId"，"InstanceName"，"CreateTime"，"DeadlineTime"。
  * @method void setOrderBy(string $OrderBy) 设置返回结果集排序的字段，目前支持："InstanceId"，"InstanceName"，"CreateTime"，"DeadlineTime"。
- * @method string getOrderDirection() 获取返回结果集排序方式，目前支持："ASC" 或者 "DESC"。
- * @method void setOrderDirection(string $OrderDirection) 设置返回结果集排序方式，目前支持："ASC" 或者 "DESC"。
+ * @method string getOrderDirection() 获取返回结果集排序方式。目前支持值："ASC" - 表示升序，"DESC" - 表示降序，默认为 "DESC"。
+ * @method void setOrderDirection(string $OrderDirection) 设置返回结果集排序方式。目前支持值："ASC" - 表示升序，"DESC" - 表示降序，默认为 "DESC"。
  * @method integer getWithSecurityGroup() 获取是否以安全组 ID 为过滤条件。
+说明：0表示否，1表示是。
  * @method void setWithSecurityGroup(integer $WithSecurityGroup) 设置是否以安全组 ID 为过滤条件。
+说明：0表示否，1表示是。
  * @method integer getWithExCluster() 获取是否包含独享集群详细信息，可取值：0 - 不包含，1 - 包含。
  * @method void setWithExCluster(integer $WithExCluster) 设置是否包含独享集群详细信息，可取值：0 - 不包含，1 - 包含。
  * @method string getExClusterId() 获取独享集群 ID。
@@ -90,10 +92,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProxyVips(array $ProxyVips) 设置数据库代理 IP 。
  * @method array getProxyIds() 获取数据库代理 ID 。
  * @method void setProxyIds(array $ProxyIds) 设置数据库代理 ID 。
- * @method array getEngineTypes() 获取数据库引擎类型。
- * @method void setEngineTypes(array $EngineTypes) 设置数据库引擎类型。
- * @method boolean getQueryClusterInfo() 获取是否获取集群版实例节点信息，可填：true或false
- * @method void setQueryClusterInfo(boolean $QueryClusterInfo) 设置是否获取集群版实例节点信息，可填：true或false
+ * @method array getEngineTypes() 获取数据库引擎类型。可选值为：InnoDB、RocksDB。
+ * @method void setEngineTypes(array $EngineTypes) 设置数据库引擎类型。可选值为：InnoDB、RocksDB。
+ * @method boolean getQueryClusterInfo() 获取是否获取集群版实例节点信息，可填：true 或 false。默认为 false。
+ * @method void setQueryClusterInfo(boolean $QueryClusterInfo) 设置是否获取集群版实例节点信息，可填：true 或 false。默认为 false。
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
@@ -178,12 +180,13 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $OrderBy;
 
     /**
-     * @var string 返回结果集排序方式，目前支持："ASC" 或者 "DESC"。
+     * @var string 返回结果集排序方式。目前支持值："ASC" - 表示升序，"DESC" - 表示降序，默认为 "DESC"。
      */
     public $OrderDirection;
 
     /**
      * @var integer 是否以安全组 ID 为过滤条件。
+说明：0表示否，1表示是。
      */
     public $WithSecurityGroup;
 
@@ -269,12 +272,12 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $ProxyIds;
 
     /**
-     * @var array 数据库引擎类型。
+     * @var array 数据库引擎类型。可选值为：InnoDB、RocksDB。
      */
     public $EngineTypes;
 
     /**
-     * @var boolean 是否获取集群版实例节点信息，可填：true或false
+     * @var boolean 是否获取集群版实例节点信息，可填：true 或 false。默认为 false。
      */
     public $QueryClusterInfo;
 
@@ -295,8 +298,9 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param array $SubnetIds 子网 ID。
      * @param array $CdbErrors 是否锁定标记，可选值：0 - 不锁定，1 - 锁定，默认为0。
      * @param string $OrderBy 返回结果集排序的字段，目前支持："InstanceId"，"InstanceName"，"CreateTime"，"DeadlineTime"。
-     * @param string $OrderDirection 返回结果集排序方式，目前支持："ASC" 或者 "DESC"。
+     * @param string $OrderDirection 返回结果集排序方式。目前支持值："ASC" - 表示升序，"DESC" - 表示降序，默认为 "DESC"。
      * @param integer $WithSecurityGroup 是否以安全组 ID 为过滤条件。
+说明：0表示否，1表示是。
      * @param integer $WithExCluster 是否包含独享集群详细信息，可取值：0 - 不包含，1 - 包含。
      * @param string $ExClusterId 独享集群 ID。
      * @param array $InstanceIds 实例 ID。
@@ -314,8 +318,8 @@ class DescribeDBInstancesRequest extends AbstractModel
 请注意，创建中的实例无法查询到标签。
      * @param array $ProxyVips 数据库代理 IP 。
      * @param array $ProxyIds 数据库代理 ID 。
-     * @param array $EngineTypes 数据库引擎类型。
-     * @param boolean $QueryClusterInfo 是否获取集群版实例节点信息，可填：true或false
+     * @param array $EngineTypes 数据库引擎类型。可选值为：InnoDB、RocksDB。
+     * @param boolean $QueryClusterInfo 是否获取集群版实例节点信息，可填：true 或 false。默认为 false。
      */
     function __construct()
     {

@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConnectivityState(integer $ConnectivityState) 设置连通性状态：0（未测试，默认）、1（正常）、2（失败）
  * @method string getConnectivityTips() 获取连通性测试提示信息
  * @method void setConnectivityTips(string $ConnectivityTips) 设置连通性测试提示信息
+ * @method array getCustomConfig() 获取自定义参数
+ * @method void setCustomConfig(array $CustomConfig) 设置自定义参数
+ * @method boolean getAllowRollback() 获取是否允许回退
+ * @method void setAllowRollback(boolean $AllowRollback) 设置是否允许回退
  */
 class DatasourceConnectionInfo extends AbstractModel
 {
@@ -152,6 +156,16 @@ class DatasourceConnectionInfo extends AbstractModel
     public $ConnectivityTips;
 
     /**
+     * @var array 自定义参数
+     */
+    public $CustomConfig;
+
+    /**
+     * @var boolean 是否允许回退
+     */
+    public $AllowRollback;
+
+    /**
      * @param integer $Id 数据源数字Id
      * @param string $DatasourceConnectionId 数据源字符串Id
      * @param string $DatasourceConnectionName 数据源名称
@@ -172,6 +186,8 @@ class DatasourceConnectionInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ConnectivityState 连通性状态：0（未测试，默认）、1（正常）、2（失败）
      * @param string $ConnectivityTips 连通性测试提示信息
+     * @param array $CustomConfig 自定义参数
+     * @param boolean $AllowRollback 是否允许回退
      */
     function __construct()
     {
@@ -263,6 +279,19 @@ class DatasourceConnectionInfo extends AbstractModel
 
         if (array_key_exists("ConnectivityTips",$param) and $param["ConnectivityTips"] !== null) {
             $this->ConnectivityTips = $param["ConnectivityTips"];
+        }
+
+        if (array_key_exists("CustomConfig",$param) and $param["CustomConfig"] !== null) {
+            $this->CustomConfig = [];
+            foreach ($param["CustomConfig"] as $key => $value){
+                $obj = new CustomConfig();
+                $obj->deserialize($value);
+                array_push($this->CustomConfig, $obj);
+            }
+        }
+
+        if (array_key_exists("AllowRollback",$param) and $param["AllowRollback"] !== null) {
+            $this->AllowRollback = $param["AllowRollback"];
         }
     }
 }

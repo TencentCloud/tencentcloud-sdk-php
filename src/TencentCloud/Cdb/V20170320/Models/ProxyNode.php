@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProxyId(string $ProxyId) 设置代理节点ID
  * @method integer getCpu() 获取CPU核数
  * @method void setCpu(integer $Cpu) 设置CPU核数
- * @method integer getMem() 获取内存大小
- * @method void setMem(integer $Mem) 设置内存大小
- * @method string getStatus() 获取节点状态
- * @method void setStatus(string $Status) 设置节点状态
+ * @method integer getMem() 获取内存大小，单位为 MB。
+ * @method void setMem(integer $Mem) 设置内存大小，单位为 MB。
+ * @method string getStatus() 获取节点状态，0 - 初始化中，1 - 在线中，2 - 下线中，3 - 销毁中，4 - 故障恢复中，5 - 节点故障，6 - 切换中。
+ * @method void setStatus(string $Status) 设置节点状态，0 - 初始化中，1 - 在线中，2 - 下线中，3 - 销毁中，4 - 故障恢复中，5 - 节点故障，6 - 切换中。
  * @method string getZone() 获取代理节点可用区
  * @method void setZone(string $Zone) 设置代理节点可用区
  * @method string getRegion() 获取代理节点地域
@@ -48,12 +48,12 @@ class ProxyNode extends AbstractModel
     public $Cpu;
 
     /**
-     * @var integer 内存大小
+     * @var integer 内存大小，单位为 MB。
      */
     public $Mem;
 
     /**
-     * @var string 节点状态
+     * @var string 节点状态，0 - 初始化中，1 - 在线中，2 - 下线中，3 - 销毁中，4 - 故障恢复中，5 - 节点故障，6 - 切换中。
      */
     public $Status;
 
@@ -75,8 +75,8 @@ class ProxyNode extends AbstractModel
     /**
      * @param string $ProxyId 代理节点ID
      * @param integer $Cpu CPU核数
-     * @param integer $Mem 内存大小
-     * @param string $Status 节点状态
+     * @param integer $Mem 内存大小，单位为 MB。
+     * @param string $Status 节点状态，0 - 初始化中，1 - 在线中，2 - 下线中，3 - 销毁中，4 - 故障恢复中，5 - 节点故障，6 - 切换中。
      * @param string $Zone 代理节点可用区
      * @param string $Region 代理节点地域
      * @param integer $Connection 连接数

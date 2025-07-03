@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 超级节点
  *
- * @method string getDisplayName() 获取节点展示名称
- * @method void setDisplayName(string $DisplayName) 设置节点展示名称
+ * @method string getDisplayName() 获取节点展示名称，建议不超过20个字符
+ * @method void setDisplayName(string $DisplayName) 设置节点展示名称，建议不超过20个字符
  * @method string getSubnetId() 获取子网ID
  * @method void setSubnetId(string $SubnetId) 设置子网ID
  * @method array getTags() 获取腾讯云标签
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class VirtualNodeSpec extends AbstractModel
 {
     /**
-     * @var string 节点展示名称
+     * @var string 节点展示名称，建议不超过20个字符
      */
     public $DisplayName;
 
@@ -45,7 +45,7 @@ class VirtualNodeSpec extends AbstractModel
     public $Tags;
 
     /**
-     * @param string $DisplayName 节点展示名称
+     * @param string $DisplayName 节点展示名称，建议不超过20个字符
      * @param string $SubnetId 子网ID
      * @param array $Tags 腾讯云标签
      */

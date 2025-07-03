@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeployInfo(DeployParam $DeployInfo) 设置部署信息
  * @method ServerBaseConfig getServerConfig() 获取服务配置信息
  * @method void setServerConfig(ServerBaseConfig $ServerConfig) 设置服务配置信息
+ * @method string getBusiness() 获取业务类型，默认tcr
+ * @method void setBusiness(string $Business) 设置业务类型，默认tcr
  */
 class UpdateCloudRunServerRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class UpdateCloudRunServerRequest extends AbstractModel
     public $ServerConfig;
 
     /**
+     * @var string 业务类型，默认tcr
+     */
+    public $Business;
+
+    /**
      * @param string $EnvId 环境Id
      * @param string $ServerName 服务名
      * @param DeployParam $DeployInfo 部署信息
      * @param ServerBaseConfig $ServerConfig 服务配置信息
+     * @param string $Business 业务类型，默认tcr
      */
     function __construct()
     {
@@ -86,6 +94,10 @@ class UpdateCloudRunServerRequest extends AbstractModel
         if (array_key_exists("ServerConfig",$param) and $param["ServerConfig"] !== null) {
             $this->ServerConfig = new ServerBaseConfig();
             $this->ServerConfig->deserialize($param["ServerConfig"]);
+        }
+
+        if (array_key_exists("Business",$param) and $param["Business"] !== null) {
+            $this->Business = $param["Business"];
         }
     }
 }

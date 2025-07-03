@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例Id
  * @method void setInstanceId(string $InstanceId) 设置实例Id
- * @method string getTopicName() 获取主题名称，是一个不超过 128 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
- * @method void setTopicName(string $TopicName) 设置主题名称，是一个不超过 128 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
+ * @method string getTopicName() 获取只能包含字母、数字、下划线、“-”、“.”
+ * @method void setTopicName(string $TopicName) 设置只能包含字母、数字、下划线、“-”、“.”
  * @method integer getPartitionNum() 获取Partition个数，大于0
  * @method void setPartitionNum(integer $PartitionNum) 设置Partition个数，大于0
  * @method integer getReplicaNum() 获取副本个数，不能多于 broker 数，最大为3
@@ -63,7 +63,7 @@ class CreateTopicRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 主题名称，是一个不超过 128 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
+     * @var string 只能包含字母、数字、下划线、“-”、“.”
      */
     public $TopicName;
 
@@ -144,7 +144,7 @@ class CreateTopicRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 实例Id
-     * @param string $TopicName 主题名称，是一个不超过 128 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
+     * @param string $TopicName 只能包含字母、数字、下划线、“-”、“.”
      * @param integer $PartitionNum Partition个数，大于0
      * @param integer $ReplicaNum 副本个数，不能多于 broker 数，最大为3
      * @param integer $EnableWhiteList ip白名单开关, 1:打开  0:关闭，默认不打开

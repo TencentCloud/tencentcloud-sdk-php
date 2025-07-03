@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeExposeAssetCategory返回参数结构体
  *
- * @method array getExposeAssetTypeList() 获取暴露资产分类列表
- * @method void setExposeAssetTypeList(array $ExposeAssetTypeList) 设置暴露资产分类列表
+ * @method array getExposeAssetTypeList() 获取云边界分析资产分类列表
+ * @method void setExposeAssetTypeList(array $ExposeAssetTypeList) 设置云边界分析资产分类列表
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeExposeAssetCategoryResponse extends AbstractModel
 {
     /**
-     * @var array 暴露资产分类列表
+     * @var array 云边界分析资产分类列表
      */
     public $ExposeAssetTypeList;
 
@@ -38,7 +38,7 @@ class DescribeExposeAssetCategoryResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $ExposeAssetTypeList 暴露资产分类列表
+     * @param array $ExposeAssetTypeList 云边界分析资产分类列表
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

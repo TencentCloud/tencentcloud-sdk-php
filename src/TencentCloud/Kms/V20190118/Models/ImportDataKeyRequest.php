@@ -28,20 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImportType(integer $ImportType) 设置1:密文导入(由KMS接口生成的密文数据密钥)，2:明文导入。
  * @method string getDescription() 获取数据密钥 的描述，最大100字节
  * @method void setDescription(string $Description) 设置数据密钥 的描述，最大100字节
- * @method string getKeyId() 获取当导入密文数据密钥时，无需传入根密钥,如果传入也会忽略。
-当KeyId 为空，如果指定了独享集群HsmClusterId，则会在独享集群下创建一个根密钥，根据生成的根密钥加密数据密钥。
-如果没有指定独享集群HsmClusterId,则会在公有云共享集群下创建一个根密钥，根据生成的根密钥加密数据密钥。
-如果KeyId 不为空，根据指定的根密钥加密数据密钥。
- * @method void setKeyId(string $KeyId) 设置当导入密文数据密钥时，无需传入根密钥,如果传入也会忽略。
-当KeyId 为空，如果指定了独享集群HsmClusterId，则会在独享集群下创建一个根密钥，根据生成的根密钥加密数据密钥。
-如果没有指定独享集群HsmClusterId,则会在公有云共享集群下创建一个根密钥，根据生成的根密钥加密数据密钥。
-如果KeyId 不为空，根据指定的根密钥加密数据密钥。
- * @method string getHsmClusterId() 获取KMS 独享版对应的 HSM 集群 ID。
-当KeyId 没有传入时有效，如果指定了独享集群HsmClusterId，则会在独享集群下创建一个根密钥，根据产生的根密钥加密数据密钥。
-如果没有指定独享集群HsmClusterId,则会在公有云共享集群下创建一个根密钥，根据产生的根密钥加密数据密钥。
- * @method void setHsmClusterId(string $HsmClusterId) 设置KMS 独享版对应的 HSM 集群 ID。
-当KeyId 没有传入时有效，如果指定了独享集群HsmClusterId，则会在独享集群下创建一个根密钥，根据产生的根密钥加密数据密钥。
-如果没有指定独享集群HsmClusterId,则会在公有云共享集群下创建一个根密钥，根据产生的根密钥加密数据密钥。
+ * @method string getKeyId() 获取当导入密文数据密钥时，无需传入根密钥,如果传入会校验此KeyId是否和密文中一致。
+当导入明文数据密钥，KeyId 不能为空，会根据指定的根密钥加密数据密钥。
+ * @method void setKeyId(string $KeyId) 设置当导入密文数据密钥时，无需传入根密钥,如果传入会校验此KeyId是否和密文中一致。
+当导入明文数据密钥，KeyId 不能为空，会根据指定的根密钥加密数据密钥。
+ * @method string getHsmClusterId() 获取KMS 独享版对应的 HSM 集群 ID。如果指定HsmClusterId，表明根密钥在此集群里，会校验KeyId是否和HsmClusterId对应。
+ * @method void setHsmClusterId(string $HsmClusterId) 设置KMS 独享版对应的 HSM 集群 ID。如果指定HsmClusterId，表明根密钥在此集群里，会校验KeyId是否和HsmClusterId对应。
  */
 class ImportDataKeyRequest extends AbstractModel
 {
@@ -66,17 +58,13 @@ class ImportDataKeyRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var string 当导入密文数据密钥时，无需传入根密钥,如果传入也会忽略。
-当KeyId 为空，如果指定了独享集群HsmClusterId，则会在独享集群下创建一个根密钥，根据生成的根密钥加密数据密钥。
-如果没有指定独享集群HsmClusterId,则会在公有云共享集群下创建一个根密钥，根据生成的根密钥加密数据密钥。
-如果KeyId 不为空，根据指定的根密钥加密数据密钥。
+     * @var string 当导入密文数据密钥时，无需传入根密钥,如果传入会校验此KeyId是否和密文中一致。
+当导入明文数据密钥，KeyId 不能为空，会根据指定的根密钥加密数据密钥。
      */
     public $KeyId;
 
     /**
-     * @var string KMS 独享版对应的 HSM 集群 ID。
-当KeyId 没有传入时有效，如果指定了独享集群HsmClusterId，则会在独享集群下创建一个根密钥，根据产生的根密钥加密数据密钥。
-如果没有指定独享集群HsmClusterId,则会在公有云共享集群下创建一个根密钥，根据产生的根密钥加密数据密钥。
+     * @var string KMS 独享版对应的 HSM 集群 ID。如果指定HsmClusterId，表明根密钥在此集群里，会校验KeyId是否和HsmClusterId对应。
      */
     public $HsmClusterId;
 
@@ -85,13 +73,9 @@ class ImportDataKeyRequest extends AbstractModel
      * @param string $ImportKeyMaterial 如果导入的是明文数据密钥，则是base64 转换后的明文数据密钥，  如果导入的是密文数据密钥，则是由KMS GenerateDataKey接口生成的密文数据密钥。
      * @param integer $ImportType 1:密文导入(由KMS接口生成的密文数据密钥)，2:明文导入。
      * @param string $Description 数据密钥 的描述，最大100字节
-     * @param string $KeyId 当导入密文数据密钥时，无需传入根密钥,如果传入也会忽略。
-当KeyId 为空，如果指定了独享集群HsmClusterId，则会在独享集群下创建一个根密钥，根据生成的根密钥加密数据密钥。
-如果没有指定独享集群HsmClusterId,则会在公有云共享集群下创建一个根密钥，根据生成的根密钥加密数据密钥。
-如果KeyId 不为空，根据指定的根密钥加密数据密钥。
-     * @param string $HsmClusterId KMS 独享版对应的 HSM 集群 ID。
-当KeyId 没有传入时有效，如果指定了独享集群HsmClusterId，则会在独享集群下创建一个根密钥，根据产生的根密钥加密数据密钥。
-如果没有指定独享集群HsmClusterId,则会在公有云共享集群下创建一个根密钥，根据产生的根密钥加密数据密钥。
+     * @param string $KeyId 当导入密文数据密钥时，无需传入根密钥,如果传入会校验此KeyId是否和密文中一致。
+当导入明文数据密钥，KeyId 不能为空，会根据指定的根密钥加密数据密钥。
+     * @param string $HsmClusterId KMS 独享版对应的 HSM 集群 ID。如果指定HsmClusterId，表明根密钥在此集群里，会校验KeyId是否和HsmClusterId对应。
      */
     function __construct()
     {

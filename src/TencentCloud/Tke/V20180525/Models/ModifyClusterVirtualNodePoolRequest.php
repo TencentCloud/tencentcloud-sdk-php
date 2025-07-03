@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyClusterVirtualNodePool请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getNodePoolId() 获取节点池ID
- * @method void setNodePoolId(string $NodePoolId) 设置节点池ID
- * @method string getName() 获取节点池名称
- * @method void setName(string $Name) 设置节点池名称
- * @method array getSecurityGroupIds() 获取安全组ID列表
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组ID列表
- * @method array getLabels() 获取虚拟节点label
- * @method void setLabels(array $Labels) 设置虚拟节点label
- * @method array getTaints() 获取虚拟节点taint
- * @method void setTaints(array $Taints) 设置虚拟节点taint
- * @method boolean getDeletionProtection() 获取删除保护开关
- * @method void setDeletionProtection(boolean $DeletionProtection) 设置删除保护开关
+ * @method string getClusterId() 获取集群ID，通过DescribeClusters接口获取
+ * @method void setClusterId(string $ClusterId) 设置集群ID，通过DescribeClusters接口获取
+ * @method string getNodePoolId() 获取节点池ID，通过DescribeNodePools接口获取
+ * @method void setNodePoolId(string $NodePoolId) 设置节点池ID，通过DescribeNodePools接口获取
+ * @method string getName() 获取节点池名称，必须修改至少一个参数
+ * @method void setName(string $Name) 设置节点池名称，必须修改至少一个参数
+ * @method array getSecurityGroupIds() 获取安全组ID列表，必须修改至少一个参数
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组ID列表，必须修改至少一个参数
+ * @method array getLabels() 获取虚拟节点label，必须修改至少一个参数
+ * @method void setLabels(array $Labels) 设置虚拟节点label，必须修改至少一个参数
+ * @method array getTaints() 获取虚拟节点taint，必须修改至少一个参数
+ * @method void setTaints(array $Taints) 设置虚拟节点taint，必须修改至少一个参数
+ * @method boolean getDeletionProtection() 获取删除保护开关，必须修改至少一个参数
+ * @method void setDeletionProtection(boolean $DeletionProtection) 设置删除保护开关，必须修改至少一个参数
  */
 class ModifyClusterVirtualNodePoolRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string 集群ID，通过DescribeClusters接口获取
      */
     public $ClusterId;
 
     /**
-     * @var string 节点池ID
+     * @var string 节点池ID，通过DescribeNodePools接口获取
      */
     public $NodePoolId;
 
     /**
-     * @var string 节点池名称
+     * @var string 节点池名称，必须修改至少一个参数
      */
     public $Name;
 
     /**
-     * @var array 安全组ID列表
+     * @var array 安全组ID列表，必须修改至少一个参数
      */
     public $SecurityGroupIds;
 
     /**
-     * @var array 虚拟节点label
+     * @var array 虚拟节点label，必须修改至少一个参数
      */
     public $Labels;
 
     /**
-     * @var array 虚拟节点taint
+     * @var array 虚拟节点taint，必须修改至少一个参数
      */
     public $Taints;
 
     /**
-     * @var boolean 删除保护开关
+     * @var boolean 删除保护开关，必须修改至少一个参数
      */
     public $DeletionProtection;
 
     /**
-     * @param string $ClusterId 集群ID
-     * @param string $NodePoolId 节点池ID
-     * @param string $Name 节点池名称
-     * @param array $SecurityGroupIds 安全组ID列表
-     * @param array $Labels 虚拟节点label
-     * @param array $Taints 虚拟节点taint
-     * @param boolean $DeletionProtection 删除保护开关
+     * @param string $ClusterId 集群ID，通过DescribeClusters接口获取
+     * @param string $NodePoolId 节点池ID，通过DescribeNodePools接口获取
+     * @param string $Name 节点池名称，必须修改至少一个参数
+     * @param array $SecurityGroupIds 安全组ID列表，必须修改至少一个参数
+     * @param array $Labels 虚拟节点label，必须修改至少一个参数
+     * @param array $Taints 虚拟节点taint，必须修改至少一个参数
+     * @param boolean $DeletionProtection 删除保护开关，必须修改至少一个参数
      */
     function __construct()
     {

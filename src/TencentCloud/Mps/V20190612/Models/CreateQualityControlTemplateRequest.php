@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQualityControlItemSet(array $QualityControlItemSet) 设置媒体质检控制参数。
  * @method string getComment() 获取媒体质检模板描述信息，长度限制：256 个字符。
  * @method void setComment(string $Comment) 设置媒体质检模板描述信息，长度限制：256 个字符。
+ * @method string getRecordFormat() 获取录制文件格式。可选值：
+<li>PNG: PNG图片</li>
+ * @method void setRecordFormat(string $RecordFormat) 设置录制文件格式。可选值：
+<li>PNG: PNG图片</li>
  */
 class CreateQualityControlTemplateRequest extends AbstractModel
 {
@@ -45,9 +49,17 @@ class CreateQualityControlTemplateRequest extends AbstractModel
     public $Comment;
 
     /**
+     * @var string 录制文件格式。可选值：
+<li>PNG: PNG图片</li>
+     */
+    public $RecordFormat;
+
+    /**
      * @param string $Name 媒体质检模板名称，长度限制：64 个字符。
      * @param array $QualityControlItemSet 媒体质检控制参数。
      * @param string $Comment 媒体质检模板描述信息，长度限制：256 个字符。
+     * @param string $RecordFormat 录制文件格式。可选值：
+<li>PNG: PNG图片</li>
      */
     function __construct()
     {
@@ -77,6 +89,10 @@ class CreateQualityControlTemplateRequest extends AbstractModel
 
         if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
             $this->Comment = $param["Comment"];
+        }
+
+        if (array_key_exists("RecordFormat",$param) and $param["RecordFormat"] !== null) {
+            $this->RecordFormat = $param["RecordFormat"];
         }
     }
 }

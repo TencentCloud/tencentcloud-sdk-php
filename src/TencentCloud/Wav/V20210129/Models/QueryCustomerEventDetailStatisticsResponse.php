@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * QueryCustomerEventDetailStatistics返回参数结构体
  *
- * @method string getNextCursor() 获取分页游标，再下次请求时填写以获取之后分页的记录，如果已经没有更多的数据则返回空
+ * @method string getNextCursor() 获取分页游标，在下次请求时填写以获取之后分页的记录，如果已经没有更多的数据则返回空
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setNextCursor(string $NextCursor) 设置分页游标，再下次请求时填写以获取之后分页的记录，如果已经没有更多的数据则返回空
+ * @method void setNextCursor(string $NextCursor) 设置分页游标，在下次请求时填写以获取之后分页的记录，如果已经没有更多的数据则返回空
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPageData() 获取外部联系人SaaS使用明细统计响应数据
 注意：此字段可能返回 null，表示取不到有效值。
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class QueryCustomerEventDetailStatisticsResponse extends AbstractModel
 {
     /**
-     * @var string 分页游标，再下次请求时填写以获取之后分页的记录，如果已经没有更多的数据则返回空
+     * @var string 分页游标，在下次请求时填写以获取之后分页的记录，如果已经没有更多的数据则返回空
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NextCursor;
@@ -51,7 +51,7 @@ class QueryCustomerEventDetailStatisticsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $NextCursor 分页游标，再下次请求时填写以获取之后分页的记录，如果已经没有更多的数据则返回空
+     * @param string $NextCursor 分页游标，在下次请求时填写以获取之后分页的记录，如果已经没有更多的数据则返回空
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PageData 外部联系人SaaS使用明细统计响应数据
 注意：此字段可能返回 null，表示取不到有效值。

@@ -46,6 +46,7 @@ use TencentCloud\Batch\V20170312\Models as Models;
  * @method Models\DescribeCvmZoneInstanceConfigInfosResponse DescribeCvmZoneInstanceConfigInfos(Models\DescribeCvmZoneInstanceConfigInfosRequest $req) 获取批量计算可用区机型配置信息
  * @method Models\DescribeInstanceCategoriesResponse DescribeInstanceCategories(Models\DescribeInstanceCategoriesRequest $req) 目前对CVM现有实例族分类，每一类包含若干实例族。该接口用于查询实例分类信息。
  * @method Models\DescribeJobResponse DescribeJob(Models\DescribeJobRequest $req) 用于查看一个作业的详细信息，包括内部任务（Task）和依赖（Dependence）信息。
+ * @method Models\DescribeJobMonitorDataResponse DescribeJobMonitorData(Models\DescribeJobMonitorDataRequest $req) 查询作业任务实例的资源使用监控信息。当前只支持查询弹性节点任务并且Job未删除；暂不支持计算环境类任务；该接口只支持查询作业实例时间范围之内的资源使用情况。
  * @method Models\DescribeJobSubmitInfoResponse DescribeJobSubmitInfo(Models\DescribeJobSubmitInfoRequest $req) 用于查询指定作业的提交信息，其返回内容包括 JobId 和 SubmitJob 接口中作为输入参数的作业提交信息
  * @method Models\DescribeJobsResponse DescribeJobs(Models\DescribeJobsRequest $req) 用于查询若干个作业的概览信息
  * @method Models\DescribeTaskResponse DescribeTask(Models\DescribeTaskRequest $req) 用于查询指定任务的详细信息，包括任务内部的任务实例信息。

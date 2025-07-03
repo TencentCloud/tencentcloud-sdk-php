@@ -20,8 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ProcessLiveStream请求参数结构体
  *
- * @method string getUrl() 获取直播流 URL（必须是直播文件地址，支持 rtmp，hls 和 flv 等）。
- * @method void setUrl(string $Url) 设置直播流 URL（必须是直播文件地址，支持 rtmp，hls 和 flv 等）。
+ * @method string getUrl() 获取直播流 URL（必须是直播文件地址，支持 rtmp，hls 和 flv, trtc 等）。
+trtc地址如下：
+ trtc: //trtc.rtc.qq.com/mps/`<roomid>`?sdkappid=`<sdkappid>`&userid=`<userid>`&usersig=<`usersig>`
+`<roomid>` 为trtc的房间号id, 为数字
+`<sdkappid>` 为trtc的sdk app id
+`<userid>` 为服务进入房间的用户id,可以区分谁是机器人
+<`usersig>` 为trtc 用户的签名
+ * @method void setUrl(string $Url) 设置直播流 URL（必须是直播文件地址，支持 rtmp，hls 和 flv, trtc 等）。
+trtc地址如下：
+ trtc: //trtc.rtc.qq.com/mps/`<roomid>`?sdkappid=`<sdkappid>`&userid=`<userid>`&usersig=<`usersig>`
+`<roomid>` 为trtc的房间号id, 为数字
+`<sdkappid>` 为trtc的sdk app id
+`<userid>` 为服务进入房间的用户id,可以区分谁是机器人
+<`usersig>` 为trtc 用户的签名
  * @method LiveStreamTaskNotifyConfig getTaskNotifyConfig() 获取任务的事件通知信息，用于指定直播流处理的结果。
  * @method void setTaskNotifyConfig(LiveStreamTaskNotifyConfig $TaskNotifyConfig) 设置任务的事件通知信息，用于指定直播流处理的结果。
  * @method TaskOutputStorage getOutputStorage() 获取直播流处理输出文件的目标存储。如处理有文件输出，该参数为必填项。
@@ -54,7 +66,13 @@ use TencentCloud\Common\AbstractModel;
 class ProcessLiveStreamRequest extends AbstractModel
 {
     /**
-     * @var string 直播流 URL（必须是直播文件地址，支持 rtmp，hls 和 flv 等）。
+     * @var string 直播流 URL（必须是直播文件地址，支持 rtmp，hls 和 flv, trtc 等）。
+trtc地址如下：
+ trtc: //trtc.rtc.qq.com/mps/`<roomid>`?sdkappid=`<sdkappid>`&userid=`<userid>`&usersig=<`usersig>`
+`<roomid>` 为trtc的房间号id, 为数字
+`<sdkappid>` 为trtc的sdk app id
+`<userid>` 为服务进入房间的用户id,可以区分谁是机器人
+<`usersig>` 为trtc 用户的签名
      */
     public $Url;
 
@@ -113,7 +131,13 @@ class ProcessLiveStreamRequest extends AbstractModel
     public $ScheduleId;
 
     /**
-     * @param string $Url 直播流 URL（必须是直播文件地址，支持 rtmp，hls 和 flv 等）。
+     * @param string $Url 直播流 URL（必须是直播文件地址，支持 rtmp，hls 和 flv, trtc 等）。
+trtc地址如下：
+ trtc: //trtc.rtc.qq.com/mps/`<roomid>`?sdkappid=`<sdkappid>`&userid=`<userid>`&usersig=<`usersig>`
+`<roomid>` 为trtc的房间号id, 为数字
+`<sdkappid>` 为trtc的sdk app id
+`<userid>` 为服务进入房间的用户id,可以区分谁是机器人
+<`usersig>` 为trtc 用户的签名
      * @param LiveStreamTaskNotifyConfig $TaskNotifyConfig 任务的事件通知信息，用于指定直播流处理的结果。
      * @param TaskOutputStorage $OutputStorage 直播流处理输出文件的目标存储。如处理有文件输出，该参数为必填项。
      * @param string $OutputDir 直播流处理生成的文件输出的目标目录，如`/movie/201909/`，如果不填为 `/` 目录。

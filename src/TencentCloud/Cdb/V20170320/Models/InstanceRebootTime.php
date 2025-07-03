@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实例预期重启时间
  *
- * @method string getInstanceId() 获取实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同
- * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同
- * @method integer getTimeInSeconds() 获取预期重启时间
- * @method void setTimeInSeconds(integer $TimeInSeconds) 设置预期重启时间
+ * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+ * @method integer getTimeInSeconds() 获取预期重启时间，单位：秒。
+ * @method void setTimeInSeconds(integer $TimeInSeconds) 设置预期重启时间，单位：秒。
  */
 class InstanceRebootTime extends AbstractModel
 {
     /**
-     * @var string 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同
+     * @var string 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
      */
     public $InstanceId;
 
     /**
-     * @var integer 预期重启时间
+     * @var integer 预期重启时间，单位：秒。
      */
     public $TimeInSeconds;
 
     /**
-     * @param string $InstanceId 实例ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例ID相同
-     * @param integer $TimeInSeconds 预期重启时间
+     * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
+     * @param integer $TimeInSeconds 预期重启时间，单位：秒。
      */
     function __construct()
     {

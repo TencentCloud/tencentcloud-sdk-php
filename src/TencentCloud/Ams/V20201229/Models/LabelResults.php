@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getScene() 获取场景
  * @method void setScene(string $Scene) 设置场景
- * @method integer getSuggestion() 获取建议
- * @method void setSuggestion(integer $Suggestion) 设置建议
+ * @method integer getSuggestion() 获取建议值
+ * @method void setSuggestion(integer $Suggestion) 设置建议值
  * @method string getLabel() 获取标签
  * @method void setLabel(string $Label) 设置标签
  * @method string getName() 获取名称：歌曲名，语种名，说话人名 等
@@ -43,7 +43,7 @@ class LabelResults extends AbstractModel
     public $Scene;
 
     /**
-     * @var integer 建议
+     * @var integer 建议值
      */
     public $Suggestion;
 
@@ -74,7 +74,7 @@ class LabelResults extends AbstractModel
 
     /**
      * @param string $Scene 场景
-     * @param integer $Suggestion 建议
+     * @param integer $Suggestion 建议值
      * @param string $Label 标签
      * @param string $Name 名称：歌曲名，语种名，说话人名 等
      * @param integer $Score 得分

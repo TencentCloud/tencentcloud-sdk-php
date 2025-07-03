@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrorMessage(string $ErrorMessage) 设置异常信息
  * @method array getTags() 获取任务标签列表
  * @method void setTags(array $Tags) 设置任务标签列表
+ * @method string getDescription() 获取任务描述信息	
+ * @method void setDescription(string $Description) 设置任务描述信息	
+ * @method integer getIsolateStatus() 获取1:正常 2:隔离中
+ * @method void setIsolateStatus(integer $IsolateStatus) 设置1:正常 2:隔离中
  */
 class DescribeDatahubTaskRes extends AbstractModel
 {
@@ -135,6 +139,16 @@ class DescribeDatahubTaskRes extends AbstractModel
     public $Tags;
 
     /**
+     * @var string 任务描述信息	
+     */
+    public $Description;
+
+    /**
+     * @var integer 1:正常 2:隔离中
+     */
+    public $IsolateStatus;
+
+    /**
      * @param string $TaskId 任务ID
      * @param string $TaskName 任务名称
      * @param string $TaskType 任务类型，SOURCE数据接入，SINK数据流出
@@ -152,6 +166,8 @@ class DescribeDatahubTaskRes extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ErrorMessage 异常信息
      * @param array $Tags 任务标签列表
+     * @param string $Description 任务描述信息	
+     * @param integer $IsolateStatus 1:正常 2:隔离中
      */
     function __construct()
     {
@@ -238,6 +254,14 @@ class DescribeDatahubTaskRes extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("IsolateStatus",$param) and $param["IsolateStatus"] !== null) {
+            $this->IsolateStatus = $param["IsolateStatus"];
         }
     }
 }

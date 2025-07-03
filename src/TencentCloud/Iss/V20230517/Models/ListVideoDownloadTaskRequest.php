@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChannelName(string $ChannelName) 设置通道名称，用于模糊搜索
  * @method integer getStatus() 获取任务状态（0：准备中，1：执行中，2：已完成，3：失败）
  * @method void setStatus(integer $Status) 设置任务状态（0：准备中，1：执行中，2：已完成，3：失败）
- * @method string getSortRule() 获取排序规则（仅支持 StartTime，EndTime，倒序为-StartTime，-EndTime）
- * @method void setSortRule(string $SortRule) 设置排序规则（仅支持 StartTime，EndTime，倒序为-StartTime，-EndTime）
+ * @method string getSortRule() 获取排序规则（仅支持 StartTime，倒序为-StartTime）
+ * @method void setSortRule(string $SortRule) 设置排序规则（仅支持 StartTime，倒序为-StartTime）
  * @method integer getWithPreviewUrl() 获取响应是否携带预览地址(0:不携带；1:携带)
  * @method void setWithPreviewUrl(integer $WithPreviewUrl) 设置响应是否携带预览地址(0:不携带；1:携带)
  * @method integer getPageNumber() 获取分页页数
@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDownloadTaskId(string $DownloadTaskId) 设置下载任务 ID
  * @method integer getUrlExpires() 获取下载地址过期时间，单位秒，最大为 1 天， 86400秒
  * @method void setUrlExpires(integer $UrlExpires) 设置下载地址过期时间，单位秒，最大为 1 天， 86400秒
+ * @method string getDate() 获取任务日期，默认当天
+ * @method void setDate(string $Date) 设置任务日期，默认当天
  */
 class ListVideoDownloadTaskRequest extends AbstractModel
 {
@@ -57,7 +59,7 @@ class ListVideoDownloadTaskRequest extends AbstractModel
     public $Status;
 
     /**
-     * @var string 排序规则（仅支持 StartTime，EndTime，倒序为-StartTime，-EndTime）
+     * @var string 排序规则（仅支持 StartTime，倒序为-StartTime）
      */
     public $SortRule;
 
@@ -87,15 +89,21 @@ class ListVideoDownloadTaskRequest extends AbstractModel
     public $UrlExpires;
 
     /**
+     * @var string 任务日期，默认当天
+     */
+    public $Date;
+
+    /**
      * @param string $DeviceName 设备名称，用于模糊搜索
      * @param string $ChannelName 通道名称，用于模糊搜索
      * @param integer $Status 任务状态（0：准备中，1：执行中，2：已完成，3：失败）
-     * @param string $SortRule 排序规则（仅支持 StartTime，EndTime，倒序为-StartTime，-EndTime）
+     * @param string $SortRule 排序规则（仅支持 StartTime，倒序为-StartTime）
      * @param integer $WithPreviewUrl 响应是否携带预览地址(0:不携带；1:携带)
      * @param integer $PageNumber 分页页数
      * @param integer $PageSize 分页大小
      * @param string $DownloadTaskId 下载任务 ID
      * @param integer $UrlExpires 下载地址过期时间，单位秒，最大为 1 天， 86400秒
+     * @param string $Date 任务日期，默认当天
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class ListVideoDownloadTaskRequest extends AbstractModel
 
         if (array_key_exists("UrlExpires",$param) and $param["UrlExpires"] !== null) {
             $this->UrlExpires = $param["UrlExpires"];
+        }
+
+        if (array_key_exists("Date",$param) and $param["Date"] !== null) {
+            $this->Date = $param["Date"];
         }
     }
 }

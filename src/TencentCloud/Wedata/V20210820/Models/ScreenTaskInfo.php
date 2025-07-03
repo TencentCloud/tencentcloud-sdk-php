@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMinuteNum(integer $MinuteNum) 设置分钟任务
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getWorkflowNum() 获取工作流总数
+ * @method void setWorkflowNum(integer $WorkflowNum) 设置工作流总数
  */
 class ScreenTaskInfo extends AbstractModel
 {
@@ -151,6 +153,11 @@ class ScreenTaskInfo extends AbstractModel
     public $MinuteNum;
 
     /**
+     * @var integer 工作流总数
+     */
+    public $WorkflowNum;
+
+    /**
      * @param integer $CountTag 统计标示 0：全部、1：当前天、2：昨天
      * @param integer $TotalNum 总数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -176,6 +183,7 @@ class ScreenTaskInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MinuteNum 分钟任务
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $WorkflowNum 工作流总数
      */
     function __construct()
     {
@@ -240,6 +248,10 @@ class ScreenTaskInfo extends AbstractModel
 
         if (array_key_exists("MinuteNum",$param) and $param["MinuteNum"] !== null) {
             $this->MinuteNum = $param["MinuteNum"];
+        }
+
+        if (array_key_exists("WorkflowNum",$param) and $param["WorkflowNum"] !== null) {
+            $this->WorkflowNum = $param["WorkflowNum"];
         }
     }
 }

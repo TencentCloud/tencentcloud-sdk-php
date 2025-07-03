@@ -22,35 +22,26 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getLabel() 获取该字段用于返回检测结果所对应的恶意标签。
 返回值：Porn：色情，Abuse：谩骂，Ad：广告；以及其他令人反感、不安全或不适宜的内容类型。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLabel(string $Label) 设置该字段用于返回检测结果所对应的恶意标签。
 返回值：Porn：色情，Abuse：谩骂，Ad：广告；以及其他令人反感、不安全或不适宜的内容类型。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSuggestion() 获取审核建议，可选值：
 Pass 通过，
 Review 建议人审，
 Block 确认违规
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSuggestion(string $Suggestion) 设置审核建议，可选值：
 Pass 通过，
 Review 建议人审，
 Block 确认违规
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getScore() 获取得分，分数是 0 ～ 100
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScore(integer $Score) 设置得分，分数是 0 ～ 100
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSubLabel() 获取命中的二级标签
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubLabel(string $SubLabel) 设置命中的二级标签
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskLabel extends AbstractModel
 {
     /**
      * @var string 该字段用于返回检测结果所对应的恶意标签。
 返回值：Porn：色情，Abuse：谩骂，Ad：广告；以及其他令人反感、不安全或不适宜的内容类型。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Label;
 
@@ -59,35 +50,28 @@ class TaskLabel extends AbstractModel
 Pass 通过，
 Review 建议人审，
 Block 确认违规
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Suggestion;
 
     /**
      * @var integer 得分，分数是 0 ～ 100
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Score;
 
     /**
      * @var string 命中的二级标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubLabel;
 
     /**
      * @param string $Label 该字段用于返回检测结果所对应的恶意标签。
 返回值：Porn：色情，Abuse：谩骂，Ad：广告；以及其他令人反感、不安全或不适宜的内容类型。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Suggestion 审核建议，可选值：
 Pass 通过，
 Review 建议人审，
 Block 确认违规
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Score 得分，分数是 0 ～ 100
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SubLabel 命中的二级标签
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

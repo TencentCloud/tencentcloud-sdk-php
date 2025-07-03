@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLoadMetrics(array $LoadMetrics) 设置触发规则条件
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMatch() 获取0:所有条件满足
+1：满足任意一个
+ * @method void setMatch(integer $Match) 设置0:所有条件满足
+1：满足任意一个
  */
 class LoadMetricsConditions extends AbstractModel
 {
@@ -34,8 +38,16 @@ class LoadMetricsConditions extends AbstractModel
     public $LoadMetrics;
 
     /**
+     * @var integer 0:所有条件满足
+1：满足任意一个
+     */
+    public $Match;
+
+    /**
      * @param array $LoadMetrics 触发规则条件
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Match 0:所有条件满足
+1：满足任意一个
      */
     function __construct()
     {
@@ -57,6 +69,10 @@ class LoadMetricsConditions extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->LoadMetrics, $obj);
             }
+        }
+
+        if (array_key_exists("Match",$param) and $param["Match"] !== null) {
+            $this->Match = $param["Match"];
         }
     }
 }

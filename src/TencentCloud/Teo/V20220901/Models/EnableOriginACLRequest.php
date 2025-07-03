@@ -20,74 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * EnableOriginACL请求参数结构体
  *
- * @method string getZoneId() 获取站点ID。
- * @method void setZoneId(string $ZoneId) 设置站点ID。
- * @method string getL7EnableMode() 获取七层加速域名开启回源白名单的模式。
-<li>all：为站点下的所有七层加速域名开启回源白名单。</li>
-<li>specific：为站点下指定的七层加速域名开启回源白名单。</li>
-当参数为空时，默认为specific。
- * @method void setL7EnableMode(string $L7EnableMode) 设置七层加速域名开启回源白名单的模式。
-<li>all：为站点下的所有七层加速域名开启回源白名单。</li>
-<li>specific：为站点下指定的七层加速域名开启回源白名单。</li>
-当参数为空时，默认为specific。
- * @method array getL7Hosts() 获取开启回源白名单的七层加速域名列表，当请求参数 L7EnableMode 为 all 时必须为空。
- * @method void setL7Hosts(array $L7Hosts) 设置开启回源白名单的七层加速域名列表，当请求参数 L7EnableMode 为 all 时必须为空。
- * @method string getL4EnableMode() 获取四层代理 ID 开启回源白名单的模式。
-<li>all：为站点下的所有四层代理开启回源白名单。</li>
-<li>specific：为站点下指定的四层代理 ID 开启回源白名单。</li>
-当参数为空时，默认为specific。
- * @method void setL4EnableMode(string $L4EnableMode) 设置四层代理 ID 开启回源白名单的模式。
-<li>all：为站点下的所有四层代理开启回源白名单。</li>
-<li>specific：为站点下指定的四层代理 ID 开启回源白名单。</li>
-当参数为空时，默认为specific。
- * @method array getL4ProxyIds() 获取开启回源白名单的四层代理 ID 列表，当请求参数 L4EnableMode 为 all 时必须为空。单次最多支持 200 个实例。
- * @method void setL4ProxyIds(array $L4ProxyIds) 设置开启回源白名单的四层代理 ID 列表，当请求参数 L4EnableMode 为 all 时必须为空。单次最多支持 200 个实例。
+ * @method string getZoneId() 获取站点 ID。
+ * @method void setZoneId(string $ZoneId) 设置站点 ID。
+ * @method string getL7EnableMode() 获取七层加速域名开启源站防护的模式。
+<li>all：针对站点下的所有七层加速域名开启。</li>
+<li>specific：针对站点下指定的七层加速域名开启。</li>当参数为空时，默认为 specific。
+ * @method void setL7EnableMode(string $L7EnableMode) 设置七层加速域名开启源站防护的模式。
+<li>all：针对站点下的所有七层加速域名开启。</li>
+<li>specific：针对站点下指定的七层加速域名开启。</li>当参数为空时，默认为 specific。
+ * @method array getL7Hosts() 获取开启源站防护的七层加速域名列表，仅当参数 L7EnableMode 为 specific 时生效。L7EnableMode 为 all 时，请保留此参数为空。单次最大仅支持填写 200 个七层加速域名。
+ * @method void setL7Hosts(array $L7Hosts) 设置开启源站防护的七层加速域名列表，仅当参数 L7EnableMode 为 specific 时生效。L7EnableMode 为 all 时，请保留此参数为空。单次最大仅支持填写 200 个七层加速域名。
+ * @method string getL4EnableMode() 获取四层代理实例开启源站防护的模式。
+<li>all：针对站点下的所有四层代理实例开启。</li>
+<li>specific：针对站点下指定的四层代理实例开启。</li>当参数为空时，默认为 specific。
+ * @method void setL4EnableMode(string $L4EnableMode) 设置四层代理实例开启源站防护的模式。
+<li>all：针对站点下的所有四层代理实例开启。</li>
+<li>specific：针对站点下指定的四层代理实例开启。</li>当参数为空时，默认为 specific。
+ * @method array getL4ProxyIds() 获取开启源站防护的四层代理实例列表，仅当参数 L4EnableMode 为 specific 时生效。L4EnableMode 为 all 时，请保留此参数为空。单次最大仅支持填写 100 个四层代理实例。
+ * @method void setL4ProxyIds(array $L4ProxyIds) 设置开启源站防护的四层代理实例列表，仅当参数 L4EnableMode 为 specific 时生效。L4EnableMode 为 all 时，请保留此参数为空。单次最大仅支持填写 100 个四层代理实例。
  */
 class EnableOriginACLRequest extends AbstractModel
 {
     /**
-     * @var string 站点ID。
+     * @var string 站点 ID。
      */
     public $ZoneId;
 
     /**
-     * @var string 七层加速域名开启回源白名单的模式。
-<li>all：为站点下的所有七层加速域名开启回源白名单。</li>
-<li>specific：为站点下指定的七层加速域名开启回源白名单。</li>
-当参数为空时，默认为specific。
+     * @var string 七层加速域名开启源站防护的模式。
+<li>all：针对站点下的所有七层加速域名开启。</li>
+<li>specific：针对站点下指定的七层加速域名开启。</li>当参数为空时，默认为 specific。
      */
     public $L7EnableMode;
 
     /**
-     * @var array 开启回源白名单的七层加速域名列表，当请求参数 L7EnableMode 为 all 时必须为空。
+     * @var array 开启源站防护的七层加速域名列表，仅当参数 L7EnableMode 为 specific 时生效。L7EnableMode 为 all 时，请保留此参数为空。单次最大仅支持填写 200 个七层加速域名。
      */
     public $L7Hosts;
 
     /**
-     * @var string 四层代理 ID 开启回源白名单的模式。
-<li>all：为站点下的所有四层代理开启回源白名单。</li>
-<li>specific：为站点下指定的四层代理 ID 开启回源白名单。</li>
-当参数为空时，默认为specific。
+     * @var string 四层代理实例开启源站防护的模式。
+<li>all：针对站点下的所有四层代理实例开启。</li>
+<li>specific：针对站点下指定的四层代理实例开启。</li>当参数为空时，默认为 specific。
      */
     public $L4EnableMode;
 
     /**
-     * @var array 开启回源白名单的四层代理 ID 列表，当请求参数 L4EnableMode 为 all 时必须为空。单次最多支持 200 个实例。
+     * @var array 开启源站防护的四层代理实例列表，仅当参数 L4EnableMode 为 specific 时生效。L4EnableMode 为 all 时，请保留此参数为空。单次最大仅支持填写 100 个四层代理实例。
      */
     public $L4ProxyIds;
 
     /**
-     * @param string $ZoneId 站点ID。
-     * @param string $L7EnableMode 七层加速域名开启回源白名单的模式。
-<li>all：为站点下的所有七层加速域名开启回源白名单。</li>
-<li>specific：为站点下指定的七层加速域名开启回源白名单。</li>
-当参数为空时，默认为specific。
-     * @param array $L7Hosts 开启回源白名单的七层加速域名列表，当请求参数 L7EnableMode 为 all 时必须为空。
-     * @param string $L4EnableMode 四层代理 ID 开启回源白名单的模式。
-<li>all：为站点下的所有四层代理开启回源白名单。</li>
-<li>specific：为站点下指定的四层代理 ID 开启回源白名单。</li>
-当参数为空时，默认为specific。
-     * @param array $L4ProxyIds 开启回源白名单的四层代理 ID 列表，当请求参数 L4EnableMode 为 all 时必须为空。单次最多支持 200 个实例。
+     * @param string $ZoneId 站点 ID。
+     * @param string $L7EnableMode 七层加速域名开启源站防护的模式。
+<li>all：针对站点下的所有七层加速域名开启。</li>
+<li>specific：针对站点下指定的七层加速域名开启。</li>当参数为空时，默认为 specific。
+     * @param array $L7Hosts 开启源站防护的七层加速域名列表，仅当参数 L7EnableMode 为 specific 时生效。L7EnableMode 为 all 时，请保留此参数为空。单次最大仅支持填写 200 个七层加速域名。
+     * @param string $L4EnableMode 四层代理实例开启源站防护的模式。
+<li>all：针对站点下的所有四层代理实例开启。</li>
+<li>specific：针对站点下指定的四层代理实例开启。</li>当参数为空时，默认为 specific。
+     * @param array $L4ProxyIds 开启源站防护的四层代理实例列表，仅当参数 L4EnableMode 为 specific 时生效。L4EnableMode 为 all 时，请保留此参数为空。单次最大仅支持填写 100 个四层代理实例。
      */
     function __construct()
     {

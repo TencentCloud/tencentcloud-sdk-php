@@ -22,16 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
- * @method string getEngineVersion() 获取主实例数据库引擎版本，支持值包括：5.6 和 5.7。
- * @method void setEngineVersion(string $EngineVersion) 设置主实例数据库引擎版本，支持值包括：5.6 和 5.7。
+ * @method string getEngineVersion() 获取主实例数据库引擎版本，支持值包括：5.6、5.7、8.0。
+说明：不支持越级升级，升级后不支持降级。
+ * @method void setEngineVersion(string $EngineVersion) 设置主实例数据库引擎版本，支持值包括：5.6、5.7、8.0。
+说明：不支持越级升级，升级后不支持降级。
  * @method integer getWaitSwitch() 获取切换访问新实例的方式，默认为 0。支持值包括：0 - 立刻切换，1 - 时间窗切换；当该值为 1 时，升级过程中，切换访问新实例的流程将会在时间窗内进行，或者用户主动调用接口 [切换访问新实例](https://cloud.tencent.com/document/product/236/15864) 触发该流程。
  * @method void setWaitSwitch(integer $WaitSwitch) 设置切换访问新实例的方式，默认为 0。支持值包括：0 - 立刻切换，1 - 时间窗切换；当该值为 1 时，升级过程中，切换访问新实例的流程将会在时间窗内进行，或者用户主动调用接口 [切换访问新实例](https://cloud.tencent.com/document/product/236/15864) 触发该流程。
- * @method integer getUpgradeSubversion() 获取是否是内核子版本升级，支持的值：1 - 升级内核子版本；0 - 升级数据库引擎版本。
- * @method void setUpgradeSubversion(integer $UpgradeSubversion) 设置是否是内核子版本升级，支持的值：1 - 升级内核子版本；0 - 升级数据库引擎版本。
- * @method integer getMaxDelayTime() 获取延迟阈值。取值范围1~10
- * @method void setMaxDelayTime(integer $MaxDelayTime) 设置延迟阈值。取值范围1~10
- * @method integer getIgnoreErrKeyword() 获取5.7升级8.0是否忽略关键字错误，取值范围[0,1]，1表示忽略，0表示不忽略
- * @method void setIgnoreErrKeyword(integer $IgnoreErrKeyword) 设置5.7升级8.0是否忽略关键字错误，取值范围[0,1]，1表示忽略，0表示不忽略
+ * @method integer getUpgradeSubversion() 获取是否是内核子版本升级，支持的值：1 - 升级内核子版本；0 - 升级数据库引擎版本。无默认值，请指定要升级的版本类型。
+ * @method void setUpgradeSubversion(integer $UpgradeSubversion) 设置是否是内核子版本升级，支持的值：1 - 升级内核子版本；0 - 升级数据库引擎版本。无默认值，请指定要升级的版本类型。
+ * @method integer getMaxDelayTime() 获取延迟阈值。取值范围：1 - 10。无默认值，不传此参数时，延迟阈值为0，表示延迟阈值不做设置。
+ * @method void setMaxDelayTime(integer $MaxDelayTime) 设置延迟阈值。取值范围：1 - 10。无默认值，不传此参数时，延迟阈值为0，表示延迟阈值不做设置。
+ * @method integer getIgnoreErrKeyword() 获取5.7升级8.0是否忽略关键字错误，取值范围[0,1]，1表示忽略，0表示不忽略。无默认值，不传此参数表示不做处理。
+ * @method void setIgnoreErrKeyword(integer $IgnoreErrKeyword) 设置5.7升级8.0是否忽略关键字错误，取值范围[0,1]，1表示忽略，0表示不忽略。无默认值，不传此参数表示不做处理。
  * @method array getParamList() 获取版本升级支持指定参数
  * @method void setParamList(array $ParamList) 设置版本升级支持指定参数
  */
@@ -43,7 +45,8 @@ class UpgradeDBInstanceEngineVersionRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 主实例数据库引擎版本，支持值包括：5.6 和 5.7。
+     * @var string 主实例数据库引擎版本，支持值包括：5.6、5.7、8.0。
+说明：不支持越级升级，升级后不支持降级。
      */
     public $EngineVersion;
 
@@ -53,17 +56,17 @@ class UpgradeDBInstanceEngineVersionRequest extends AbstractModel
     public $WaitSwitch;
 
     /**
-     * @var integer 是否是内核子版本升级，支持的值：1 - 升级内核子版本；0 - 升级数据库引擎版本。
+     * @var integer 是否是内核子版本升级，支持的值：1 - 升级内核子版本；0 - 升级数据库引擎版本。无默认值，请指定要升级的版本类型。
      */
     public $UpgradeSubversion;
 
     /**
-     * @var integer 延迟阈值。取值范围1~10
+     * @var integer 延迟阈值。取值范围：1 - 10。无默认值，不传此参数时，延迟阈值为0，表示延迟阈值不做设置。
      */
     public $MaxDelayTime;
 
     /**
-     * @var integer 5.7升级8.0是否忽略关键字错误，取值范围[0,1]，1表示忽略，0表示不忽略
+     * @var integer 5.7升级8.0是否忽略关键字错误，取值范围[0,1]，1表示忽略，0表示不忽略。无默认值，不传此参数表示不做处理。
      */
     public $IgnoreErrKeyword;
 
@@ -74,11 +77,12 @@ class UpgradeDBInstanceEngineVersionRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv 或者 cdbro-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
-     * @param string $EngineVersion 主实例数据库引擎版本，支持值包括：5.6 和 5.7。
+     * @param string $EngineVersion 主实例数据库引擎版本，支持值包括：5.6、5.7、8.0。
+说明：不支持越级升级，升级后不支持降级。
      * @param integer $WaitSwitch 切换访问新实例的方式，默认为 0。支持值包括：0 - 立刻切换，1 - 时间窗切换；当该值为 1 时，升级过程中，切换访问新实例的流程将会在时间窗内进行，或者用户主动调用接口 [切换访问新实例](https://cloud.tencent.com/document/product/236/15864) 触发该流程。
-     * @param integer $UpgradeSubversion 是否是内核子版本升级，支持的值：1 - 升级内核子版本；0 - 升级数据库引擎版本。
-     * @param integer $MaxDelayTime 延迟阈值。取值范围1~10
-     * @param integer $IgnoreErrKeyword 5.7升级8.0是否忽略关键字错误，取值范围[0,1]，1表示忽略，0表示不忽略
+     * @param integer $UpgradeSubversion 是否是内核子版本升级，支持的值：1 - 升级内核子版本；0 - 升级数据库引擎版本。无默认值，请指定要升级的版本类型。
+     * @param integer $MaxDelayTime 延迟阈值。取值范围：1 - 10。无默认值，不传此参数时，延迟阈值为0，表示延迟阈值不做设置。
+     * @param integer $IgnoreErrKeyword 5.7升级8.0是否忽略关键字错误，取值范围[0,1]，1表示忽略，0表示不忽略。无默认值，不传此参数表示不做处理。
      * @param array $ParamList 版本升级支持指定参数
      */
     function __construct()

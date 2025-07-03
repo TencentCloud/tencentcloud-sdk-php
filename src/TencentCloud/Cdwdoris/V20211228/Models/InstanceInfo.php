@@ -52,8 +52,8 @@ Modify 集群变更中；
  * @method void setMasterSummary(NodesSummary $MasterSummary) 设置数据节点描述信息
  * @method NodesSummary getCoreSummary() 获取zookeeper节点描述信息
  * @method void setCoreSummary(NodesSummary $CoreSummary) 设置zookeeper节点描述信息
- * @method string getHA() 获取高可用，“true" "false"
- * @method void setHA(string $HA) 设置高可用，“true" "false"
+ * @method string getHA() 获取高可用，"true" "false"
+ * @method void setHA(string $HA) 设置高可用，"true" "false"
  * @method integer getHaType() 获取高可用类型：
 0：非高可用
 1：读高可用
@@ -142,6 +142,10 @@ Modify 集群变更中；
  * @method void setCNSummary(NodesSummary $CNSummary) 设置cn节点信息
  * @method integer getComputeGroupCount() 获取计算组个数
  * @method void setComputeGroupCount(integer $ComputeGroupCount) 设置计算组个数
+ * @method float getCosStorageSize() 获取存算分离cos存储数据
+ * @method void setCosStorageSize(float $CosStorageSize) 设置存算分离cos存储数据
+ * @method boolean getIsMasterNonVM() 获取存算分离的指标 当是true 不支持新建计算组
+ * @method void setIsMasterNonVM(boolean $IsMasterNonVM) 设置存算分离的指标 当是true 不支持新建计算组
  */
 class InstanceInfo extends AbstractModel
 {
@@ -214,7 +218,7 @@ Modify 集群变更中；
     public $CoreSummary;
 
     /**
-     * @var string 高可用，“true" "false"
+     * @var string 高可用，"true" "false"
      */
     public $HA;
 
@@ -420,6 +424,16 @@ Modify 集群变更中；
     public $ComputeGroupCount;
 
     /**
+     * @var float 存算分离cos存储数据
+     */
+    public $CosStorageSize;
+
+    /**
+     * @var boolean 存算分离的指标 当是true 不支持新建计算组
+     */
+    public $IsMasterNonVM;
+
+    /**
      * @param string $InstanceId 集群实例ID, "cdw-xxxx" 字符串类型
      * @param string $InstanceName 集群实例名称
      * @param string $Status 状态,
@@ -436,7 +450,7 @@ Modify 集群变更中；
      * @param string $ExpireTime 过期时间
      * @param NodesSummary $MasterSummary 数据节点描述信息
      * @param NodesSummary $CoreSummary zookeeper节点描述信息
-     * @param string $HA 高可用，“true" "false"
+     * @param string $HA 高可用，"true" "false"
      * @param integer $HaType 高可用类型：
 0：非高可用
 1：读高可用
@@ -481,6 +495,8 @@ Modify 集群变更中；
      * @param integer $MonitorMode 监控模式 0: 老监控 1：新监控
      * @param NodesSummary $CNSummary cn节点信息
      * @param integer $ComputeGroupCount 计算组个数
+     * @param float $CosStorageSize 存算分离cos存储数据
+     * @param boolean $IsMasterNonVM 存算分离的指标 当是true 不支持新建计算组
      */
     function __construct()
     {
@@ -714,6 +730,14 @@ Modify 集群变更中；
 
         if (array_key_exists("ComputeGroupCount",$param) and $param["ComputeGroupCount"] !== null) {
             $this->ComputeGroupCount = $param["ComputeGroupCount"];
+        }
+
+        if (array_key_exists("CosStorageSize",$param) and $param["CosStorageSize"] !== null) {
+            $this->CosStorageSize = $param["CosStorageSize"];
+        }
+
+        if (array_key_exists("IsMasterNonVM",$param) and $param["IsMasterNonVM"] !== null) {
+            $this->IsMasterNonVM = $param["IsMasterNonVM"];
         }
     }
 }

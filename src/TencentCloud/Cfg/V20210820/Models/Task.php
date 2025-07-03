@@ -118,6 +118,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskRegionName(string $TaskRegionName) 设置region信息
  * @method string getTaskArchId() 获取架构ID
  * @method void setTaskArchId(string $TaskArchId) 设置架构ID
+ * @method array getTaskScenario() 获取演练场景
+ * @method void setTaskScenario(array $TaskScenario) 设置演练场景
+ * @method array getTaskPurpose() 获取演练目的
+ * @method void setTaskPurpose(array $TaskPurpose) 设置演练目的
  */
 class Task extends AbstractModel
 {
@@ -311,6 +315,16 @@ class Task extends AbstractModel
     public $TaskArchId;
 
     /**
+     * @var array 演练场景
+     */
+    public $TaskScenario;
+
+    /**
+     * @var array 演练目的
+     */
+    public $TaskPurpose;
+
+    /**
      * @param integer $TaskId 任务ID
      * @param string $TaskTitle 任务标题
      * @param string $TaskDescription 任务描述
@@ -360,6 +374,8 @@ class Task extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskRegionName region信息
      * @param string $TaskArchId 架构ID
+     * @param array $TaskScenario 演练场景
+     * @param array $TaskPurpose 演练目的
      */
     function __construct()
     {
@@ -538,6 +554,24 @@ class Task extends AbstractModel
 
         if (array_key_exists("TaskArchId",$param) and $param["TaskArchId"] !== null) {
             $this->TaskArchId = $param["TaskArchId"];
+        }
+
+        if (array_key_exists("TaskScenario",$param) and $param["TaskScenario"] !== null) {
+            $this->TaskScenario = [];
+            foreach ($param["TaskScenario"] as $key => $value){
+                $obj = new TaskTarget();
+                $obj->deserialize($value);
+                array_push($this->TaskScenario, $obj);
+            }
+        }
+
+        if (array_key_exists("TaskPurpose",$param) and $param["TaskPurpose"] !== null) {
+            $this->TaskPurpose = [];
+            foreach ($param["TaskPurpose"] as $key => $value){
+                $obj = new TaskTarget();
+                $obj->deserialize($value);
+                array_push($this->TaskPurpose, $obj);
+            }
         }
     }
 }

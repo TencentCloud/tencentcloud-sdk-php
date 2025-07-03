@@ -74,6 +74,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTenant() 获取自定义租户
  * @method void setTenant(string $Tenant) 设置自定义租户
+ * @method array getCertificateList() 获取集群的证书列表
+ * @method void setCertificateList(array $CertificateList) 设置集群的证书列表
  */
 class PulsarProInstance extends AbstractModel
 {
@@ -185,6 +187,11 @@ class PulsarProInstance extends AbstractModel
     public $Tenant;
 
     /**
+     * @var array 集群的证书列表
+     */
+    public $CertificateList;
+
+    /**
      * @param string $InstanceId 实例id
      * @param string $InstanceName 实例名称
      * @param string $InstanceVersion 实例版本
@@ -212,6 +219,7 @@ class PulsarProInstance extends AbstractModel
      * @param string $BillingLabelVersion 代表是专业版和小规格专业版的不同计费规格PULSAR.P1固定存储PULSAR.P2弹性存储
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Tenant 自定义租户
+     * @param array $CertificateList 集群的证书列表
      */
     function __construct()
     {
@@ -309,6 +317,15 @@ class PulsarProInstance extends AbstractModel
 
         if (array_key_exists("Tenant",$param) and $param["Tenant"] !== null) {
             $this->Tenant = $param["Tenant"];
+        }
+
+        if (array_key_exists("CertificateList",$param) and $param["CertificateList"] !== null) {
+            $this->CertificateList = [];
+            foreach ($param["CertificateList"] as $key => $value){
+                $obj = new CertificateInfo();
+                $obj->deserialize($value);
+                array_push($this->CertificateList, $obj);
+            }
         }
     }
 }

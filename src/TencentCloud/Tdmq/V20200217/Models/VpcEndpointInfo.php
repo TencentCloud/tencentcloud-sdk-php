@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcEndpoint(string $VpcEndpoint) 设置vpc接入点信息
  * @method string getVpcDataStreamEndpointStatus() 获取vpc接入点状态 OFF/ON/CREATING/DELETING
  * @method void setVpcDataStreamEndpointStatus(string $VpcDataStreamEndpointStatus) 设置vpc接入点状态 OFF/ON/CREATING/DELETING
+ * @method string getVpcTlsEndpoint() 获取TLS加密的数据流接入点
+ * @method void setVpcTlsEndpoint(string $VpcTlsEndpoint) 设置TLS加密的数据流接入点
  */
 class VpcEndpointInfo extends AbstractModel
 {
@@ -52,10 +54,16 @@ class VpcEndpointInfo extends AbstractModel
     public $VpcDataStreamEndpointStatus;
 
     /**
+     * @var string TLS加密的数据流接入点
+     */
+    public $VpcTlsEndpoint;
+
+    /**
      * @param string $VpcId vpc的id
      * @param string $SubnetId 子网id
      * @param string $VpcEndpoint vpc接入点信息
      * @param string $VpcDataStreamEndpointStatus vpc接入点状态 OFF/ON/CREATING/DELETING
+     * @param string $VpcTlsEndpoint TLS加密的数据流接入点
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class VpcEndpointInfo extends AbstractModel
 
         if (array_key_exists("VpcDataStreamEndpointStatus",$param) and $param["VpcDataStreamEndpointStatus"] !== null) {
             $this->VpcDataStreamEndpointStatus = $param["VpcDataStreamEndpointStatus"];
+        }
+
+        if (array_key_exists("VpcTlsEndpoint",$param) and $param["VpcTlsEndpoint"] !== null) {
+            $this->VpcTlsEndpoint = $param["VpcTlsEndpoint"];
         }
     }
 }

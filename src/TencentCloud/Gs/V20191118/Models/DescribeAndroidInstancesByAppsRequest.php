@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置限制量，默认为20，最大值为100	
  * @method array getAndroidAppIds() 获取应用 ID 列表。通过应用 ID 做集合查询
  * @method void setAndroidAppIds(array $AndroidAppIds) 设置应用 ID 列表。通过应用 ID 做集合查询
+ * @method array getFilters() 获取字段过滤器。Filter 的 Name 有以下值： AndroidInstanceId：实例 ID
+ * @method void setFilters(array $Filters) 设置字段过滤器。Filter 的 Name 有以下值： AndroidInstanceId：实例 ID
  */
 class DescribeAndroidInstancesByAppsRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeAndroidInstancesByAppsRequest extends AbstractModel
     public $AndroidAppIds;
 
     /**
+     * @var array 字段过滤器。Filter 的 Name 有以下值： AndroidInstanceId：实例 ID
+     */
+    public $Filters;
+
+    /**
      * @param integer $Offset 偏移量，默认为 0	
      * @param integer $Limit 限制量，默认为20，最大值为100	
      * @param array $AndroidAppIds 应用 ID 列表。通过应用 ID 做集合查询
+     * @param array $Filters 字段过滤器。Filter 的 Name 有以下值： AndroidInstanceId：实例 ID
      */
     function __construct()
     {
@@ -72,6 +80,15 @@ class DescribeAndroidInstancesByAppsRequest extends AbstractModel
 
         if (array_key_exists("AndroidAppIds",$param) and $param["AndroidAppIds"] !== null) {
             $this->AndroidAppIds = $param["AndroidAppIds"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

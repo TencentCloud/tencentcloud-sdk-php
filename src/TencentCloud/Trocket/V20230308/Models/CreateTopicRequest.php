@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTopic请求参数结构体
  *
- * @method string getInstanceId() 获取腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
- * @method void setInstanceId(string $InstanceId) 设置腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
- * @method string getTopic() 获取主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口或控制台获得。
- * @method void setTopic(string $Topic) 设置主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口或控制台获得。
- * @method string getTopicType() 获取主题类型
-UNSPECIFIED:未指定,
-NORMAL:普通消息,
-FIFO:顺序消息,
-DELAY:延时消息,
-TRANSACTION:事务消息
- * @method void setTopicType(string $TopicType) 设置主题类型
-UNSPECIFIED:未指定,
-NORMAL:普通消息,
-FIFO:顺序消息,
-DELAY:延时消息,
-TRANSACTION:事务消息
+ * @method string getInstanceId() 获取腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
+ * @method void setInstanceId(string $InstanceId) 设置腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
+ * @method string getTopic() 获取主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口返回的 [TopicItem](https://cloud.tencent.com/document/api/1493/96031#TopicItem) 或控制台获得。
+ * @method void setTopic(string $Topic) 设置主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口返回的 [TopicItem](https://cloud.tencent.com/document/api/1493/96031#TopicItem) 或控制台获得。
+ * @method string getTopicType() 获取主题类型，枚举值如下：
+
+- NORMAL: 普通消息
+- FIFO: 顺序消息
+- DELAY: 延时消息
+- TRANSACTION: 事务消息
+ * @method void setTopicType(string $TopicType) 设置主题类型，枚举值如下：
+
+- NORMAL: 普通消息
+- FIFO: 顺序消息
+- DELAY: 延时消息
+- TRANSACTION: 事务消息
  * @method integer getQueueNum() 获取队列数量，取值范围3～16
  * @method void setQueueNum(integer $QueueNum) 设置队列数量，取值范围3～16
- * @method string getRemark() 获取备注，最多 128 字符
- * @method void setRemark(string $Remark) 设置备注，最多 128 字符
+ * @method string getRemark() 获取备注信息，最多 128 个字符
+ * @method void setRemark(string $Remark) 设置备注信息，最多 128 个字符
  * @method integer getMsgTTL() 获取消息保留时长（单位：小时）
  * @method void setMsgTTL(integer $MsgTTL) 设置消息保留时长（单位：小时）
  * @method array getTagList() 获取标签列表
@@ -48,22 +48,22 @@ TRANSACTION:事务消息
 class CreateTopicRequest extends AbstractModel
 {
     /**
-     * @var string 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
+     * @var string 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
      */
     public $InstanceId;
 
     /**
-     * @var string 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口或控制台获得。
+     * @var string 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口返回的 [TopicItem](https://cloud.tencent.com/document/api/1493/96031#TopicItem) 或控制台获得。
      */
     public $Topic;
 
     /**
-     * @var string 主题类型
-UNSPECIFIED:未指定,
-NORMAL:普通消息,
-FIFO:顺序消息,
-DELAY:延时消息,
-TRANSACTION:事务消息
+     * @var string 主题类型，枚举值如下：
+
+- NORMAL: 普通消息
+- FIFO: 顺序消息
+- DELAY: 延时消息
+- TRANSACTION: 事务消息
      */
     public $TopicType;
 
@@ -73,7 +73,7 @@ TRANSACTION:事务消息
     public $QueueNum;
 
     /**
-     * @var string 备注，最多 128 字符
+     * @var string 备注信息，最多 128 个字符
      */
     public $Remark;
 
@@ -88,16 +88,16 @@ TRANSACTION:事务消息
     public $TagList;
 
     /**
-     * @param string $InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1493/96028) 接口或控制台获得。
-     * @param string $Topic 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口或控制台获得。
-     * @param string $TopicType 主题类型
-UNSPECIFIED:未指定,
-NORMAL:普通消息,
-FIFO:顺序消息,
-DELAY:延时消息,
-TRANSACTION:事务消息
+     * @param string $InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
+     * @param string $Topic 主题名称，从 [DescribeTopicList](https://cloud.tencent.com/document/api/1493/96030) 接口返回的 [TopicItem](https://cloud.tencent.com/document/api/1493/96031#TopicItem) 或控制台获得。
+     * @param string $TopicType 主题类型，枚举值如下：
+
+- NORMAL: 普通消息
+- FIFO: 顺序消息
+- DELAY: 延时消息
+- TRANSACTION: 事务消息
      * @param integer $QueueNum 队列数量，取值范围3～16
-     * @param string $Remark 备注，最多 128 字符
+     * @param string $Remark 备注信息，最多 128 个字符
      * @param integer $MsgTTL 消息保留时长（单位：小时）
      * @param array $TagList 标签列表
      */

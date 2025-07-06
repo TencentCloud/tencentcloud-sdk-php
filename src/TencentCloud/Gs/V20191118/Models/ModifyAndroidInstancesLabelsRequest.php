@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getAndroidInstanceIds() 获取安卓实例 ID 列表
  * @method void setAndroidInstanceIds(array $AndroidInstanceIds) 设置安卓实例 ID 列表
- * @method array getAndroidInstanceLabels() 获取安卓实例标签列表
- * @method void setAndroidInstanceLabels(array $AndroidInstanceLabels) 设置安卓实例标签列表
  * @method string getOperation() 获取操作类型。ADD：标签键不存在的添加新标签，标签键存在的将覆盖原有标签REMOVE：根据标签键删除标签REPLACE：使用请求标签列表替换原来所有标签CLEAR：清除所有标签
  * @method void setOperation(string $Operation) 设置操作类型。ADD：标签键不存在的添加新标签，标签键存在的将覆盖原有标签REMOVE：根据标签键删除标签REPLACE：使用请求标签列表替换原来所有标签CLEAR：清除所有标签
+ * @method array getAndroidInstanceLabels() 获取安卓实例标签列表
+ * @method void setAndroidInstanceLabels(array $AndroidInstanceLabels) 设置安卓实例标签列表
  */
 class ModifyAndroidInstancesLabelsRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class ModifyAndroidInstancesLabelsRequest extends AbstractModel
     public $AndroidInstanceIds;
 
     /**
-     * @var array 安卓实例标签列表
-     */
-    public $AndroidInstanceLabels;
-
-    /**
      * @var string 操作类型。ADD：标签键不存在的添加新标签，标签键存在的将覆盖原有标签REMOVE：根据标签键删除标签REPLACE：使用请求标签列表替换原来所有标签CLEAR：清除所有标签
      */
     public $Operation;
 
     /**
+     * @var array 安卓实例标签列表
+     */
+    public $AndroidInstanceLabels;
+
+    /**
      * @param array $AndroidInstanceIds 安卓实例 ID 列表
-     * @param array $AndroidInstanceLabels 安卓实例标签列表
      * @param string $Operation 操作类型。ADD：标签键不存在的添加新标签，标签键存在的将覆盖原有标签REMOVE：根据标签键删除标签REPLACE：使用请求标签列表替换原来所有标签CLEAR：清除所有标签
+     * @param array $AndroidInstanceLabels 安卓实例标签列表
      */
     function __construct()
     {
@@ -66,6 +66,10 @@ class ModifyAndroidInstancesLabelsRequest extends AbstractModel
             $this->AndroidInstanceIds = $param["AndroidInstanceIds"];
         }
 
+        if (array_key_exists("Operation",$param) and $param["Operation"] !== null) {
+            $this->Operation = $param["Operation"];
+        }
+
         if (array_key_exists("AndroidInstanceLabels",$param) and $param["AndroidInstanceLabels"] !== null) {
             $this->AndroidInstanceLabels = [];
             foreach ($param["AndroidInstanceLabels"] as $key => $value){
@@ -73,10 +77,6 @@ class ModifyAndroidInstancesLabelsRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->AndroidInstanceLabels, $obj);
             }
-        }
-
-        if (array_key_exists("Operation",$param) and $param["Operation"] !== null) {
-            $this->Operation = $param["Operation"];
         }
     }
 }

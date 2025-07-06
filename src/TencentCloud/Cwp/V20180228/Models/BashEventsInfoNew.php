@@ -74,6 +74,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMachineType(integer $MachineType) 设置0:普通 1:专业版 2:旗舰版
  * @method integer getDetectBy() 获取检测来源 0:bash日志 1:实时监控
  * @method void setDetectBy(integer $DetectBy) 设置检测来源 0:bash日志 1:实时监控
+ * @method string getBashCmdDecoded() 获取执行命令(解码后)
+ * @method void setBashCmdDecoded(string $BashCmdDecoded) 设置执行命令(解码后)
  */
 class BashEventsInfoNew extends AbstractModel
 {
@@ -213,6 +215,11 @@ class BashEventsInfoNew extends AbstractModel
     public $DetectBy;
 
     /**
+     * @var string 执行命令(解码后)
+     */
+    public $BashCmdDecoded;
+
+    /**
      * @param integer $Id 数据ID
      * @param string $Uuid 主机安全ID
      * @param string $Quuid 主机ID
@@ -240,6 +247,7 @@ class BashEventsInfoNew extends AbstractModel
      * @param string $Pid 进程号
      * @param integer $MachineType 0:普通 1:专业版 2:旗舰版
      * @param integer $DetectBy 检测来源 0:bash日志 1:实时监控
+     * @param string $BashCmdDecoded 执行命令(解码后)
      */
     function __construct()
     {
@@ -360,6 +368,10 @@ class BashEventsInfoNew extends AbstractModel
 
         if (array_key_exists("DetectBy",$param) and $param["DetectBy"] !== null) {
             $this->DetectBy = $param["DetectBy"];
+        }
+
+        if (array_key_exists("BashCmdDecoded",$param) and $param["BashCmdDecoded"] !== null) {
+            $this->BashCmdDecoded = $param["BashCmdDecoded"];
         }
     }
 }

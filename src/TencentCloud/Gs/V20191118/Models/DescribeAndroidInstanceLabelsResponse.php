@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotal(integer $Total) 设置安卓实例标签总数
  * @method array getLabels() 获取安卓实例标签列表
  * @method void setLabels(array $Labels) 设置安卓实例标签列表
+ * @method array getAndroidInstanceLabels() 获取安卓实例标签详情列表
+ * @method void setAndroidInstanceLabels(array $AndroidInstanceLabels) 设置安卓实例标签详情列表
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -36,8 +38,14 @@ class DescribeAndroidInstanceLabelsResponse extends AbstractModel
 
     /**
      * @var array 安卓实例标签列表
+     * @deprecated
      */
     public $Labels;
+
+    /**
+     * @var array 安卓实例标签详情列表
+     */
+    public $AndroidInstanceLabels;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -47,6 +55,7 @@ class DescribeAndroidInstanceLabelsResponse extends AbstractModel
     /**
      * @param integer $Total 安卓实例标签总数
      * @param array $Labels 安卓实例标签列表
+     * @param array $AndroidInstanceLabels 安卓实例标签详情列表
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -72,6 +81,15 @@ class DescribeAndroidInstanceLabelsResponse extends AbstractModel
                 $obj = new AndroidInstanceLabel();
                 $obj->deserialize($value);
                 array_push($this->Labels, $obj);
+            }
+        }
+
+        if (array_key_exists("AndroidInstanceLabels",$param) and $param["AndroidInstanceLabels"] !== null) {
+            $this->AndroidInstanceLabels = [];
+            foreach ($param["AndroidInstanceLabels"] as $key => $value){
+                $obj = new AndroidInstanceLabelDetail();
+                $obj->deserialize($value);
+                array_push($this->AndroidInstanceLabels, $obj);
             }
         }
 

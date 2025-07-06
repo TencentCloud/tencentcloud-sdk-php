@@ -31,11 +31,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEngineVersion(string $EngineVersion) 设置MySQL 版本，值包括：5.5、5.6、5.7和8.0，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的实例版本。
 说明：创建非集群版实例时，请根据需要指定实例版本（推荐5.7或8.0），若此参数不填，则默认值为5.6；若创建的是集群版实例，则此参数仅能指定为5.7或8.0。
  * @method string getUniqVpcId() 获取私有网络 ID，请使用 [查询私有网络列表](/document/api/215/15778)。
-说明：如果创建的是集群版实例，此参数为必填且为私有网络类型。
+说明：如果创建的是集群版实例，此参数为必填且为私有网络类型。若此项不填，则系统会选择默认的 VPC。
  * @method void setUniqVpcId(string $UniqVpcId) 设置私有网络 ID，请使用 [查询私有网络列表](/document/api/215/15778)。
-说明：如果创建的是集群版实例，此参数为必填且为私有网络类型。
+说明：如果创建的是集群版实例，此参数为必填且为私有网络类型。若此项不填，则系统会选择默认的 VPC。
  * @method string getUniqSubnetId() 获取私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用 [查询子网列表](/document/api/215/15784)。
+说明：若此项不填，则系统会选择默认 VPC 下的默认子网。
  * @method void setUniqSubnetId(string $UniqSubnetId) 设置私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用 [查询子网列表](/document/api/215/15784)。
+说明：若此项不填，则系统会选择默认 VPC 下的默认子网。
  * @method integer getProjectId() 获取项目 ID，不填为默认项目。
  * @method void setProjectId(integer $ProjectId) 设置项目 ID，不填为默认项目。
  * @method string getZone() 获取可用区信息，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的可用区。
@@ -45,13 +47,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMasterInstanceId() 获取实例 ID，购买只读实例或者灾备实例时必填，该字段表示只读实例或者灾备实例的主实例 ID，请使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口查询云数据库实例 ID。
  * @method void setMasterInstanceId(string $MasterInstanceId) 设置实例 ID，购买只读实例或者灾备实例时必填，该字段表示只读实例或者灾备实例的主实例 ID，请使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口查询云数据库实例 ID。
  * @method string getInstanceRole() 获取实例类型，支持值包括：master - 表示主实例，dr - 表示灾备实例，ro - 表示只读实例。
-说明：必填项。
+说明：请选择实例类型，不填会默认选择 master。
  * @method void setInstanceRole(string $InstanceRole) 设置实例类型，支持值包括：master - 表示主实例，dr - 表示灾备实例，ro - 表示只读实例。
-说明：必填项。
+说明：请选择实例类型，不填会默认选择 master。
  * @method string getMasterRegion() 获取主实例地域信息，购买灾备、RO实例时，该字段必填。
  * @method void setMasterRegion(string $MasterRegion) 设置主实例地域信息，购买灾备、RO实例时，该字段必填。
- * @method integer getPort() 获取自定义端口，端口支持范围：[ 1024-65535 ] 。
- * @method void setPort(integer $Port) 设置自定义端口，端口支持范围：[ 1024-65535 ] 。
+ * @method integer getPort() 获取自定义端口，端口支持范围：[1024 - 65535]。
+说明：不填则默认为3306。
+ * @method void setPort(integer $Port) 设置自定义端口，端口支持范围：[1024 - 65535]。
+说明：不填则默认为3306。
  * @method string getPassword() 获取设置 root 账号密码，密码规则：8 - 64 个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()）中的两种，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
  * @method void setPassword(string $Password) 设置设置 root 账号密码，密码规则：8 - 64 个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()）中的两种，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
  * @method array getParamList() 获取参数列表，参数格式如 ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过 [查询默认的可设置参数列表](https://cloud.tencent.com/document/api/236/32662) 查询支持设置的参数。
@@ -150,12 +154,13 @@ class CreateDBInstanceHourRequest extends AbstractModel
 
     /**
      * @var string 私有网络 ID，请使用 [查询私有网络列表](/document/api/215/15778)。
-说明：如果创建的是集群版实例，此参数为必填且为私有网络类型。
+说明：如果创建的是集群版实例，此参数为必填且为私有网络类型。若此项不填，则系统会选择默认的 VPC。
      */
     public $UniqVpcId;
 
     /**
      * @var string 私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用 [查询子网列表](/document/api/215/15784)。
+说明：若此项不填，则系统会选择默认 VPC 下的默认子网。
      */
     public $UniqSubnetId;
 
@@ -177,7 +182,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
 
     /**
      * @var string 实例类型，支持值包括：master - 表示主实例，dr - 表示灾备实例，ro - 表示只读实例。
-说明：必填项。
+说明：请选择实例类型，不填会默认选择 master。
      */
     public $InstanceRole;
 
@@ -187,7 +192,8 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $MasterRegion;
 
     /**
-     * @var integer 自定义端口，端口支持范围：[ 1024-65535 ] 。
+     * @var integer 自定义端口，端口支持范围：[1024 - 65535]。
+说明：不填则默认为3306。
      */
     public $Port;
 
@@ -350,16 +356,18 @@ class CreateDBInstanceHourRequest extends AbstractModel
      * @param string $EngineVersion MySQL 版本，值包括：5.5、5.6、5.7和8.0，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的实例版本。
 说明：创建非集群版实例时，请根据需要指定实例版本（推荐5.7或8.0），若此参数不填，则默认值为5.6；若创建的是集群版实例，则此参数仅能指定为5.7或8.0。
      * @param string $UniqVpcId 私有网络 ID，请使用 [查询私有网络列表](/document/api/215/15778)。
-说明：如果创建的是集群版实例，此参数为必填且为私有网络类型。
+说明：如果创建的是集群版实例，此参数为必填且为私有网络类型。若此项不填，则系统会选择默认的 VPC。
      * @param string $UniqSubnetId 私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用 [查询子网列表](/document/api/215/15784)。
+说明：若此项不填，则系统会选择默认 VPC 下的默认子网。
      * @param integer $ProjectId 项目 ID，不填为默认项目。
      * @param string $Zone 可用区信息，请使用 [获取云数据库可售卖规格](https://cloud.tencent.com/document/api/236/17229) 接口获取可创建的可用区。
 说明：若您创建单节点、双节点、三节点实例，此参数为必填项，请指定可用区，若不指定可用区，则系统会自动选择一个可用区（可能不是您希望部署的可用区）；若您创建集群版实例，此参数不填，请通过参数 ClusterTopology 进行读写节点和只读节点的可用区配置。
      * @param string $MasterInstanceId 实例 ID，购买只读实例或者灾备实例时必填，该字段表示只读实例或者灾备实例的主实例 ID，请使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口查询云数据库实例 ID。
      * @param string $InstanceRole 实例类型，支持值包括：master - 表示主实例，dr - 表示灾备实例，ro - 表示只读实例。
-说明：必填项。
+说明：请选择实例类型，不填会默认选择 master。
      * @param string $MasterRegion 主实例地域信息，购买灾备、RO实例时，该字段必填。
-     * @param integer $Port 自定义端口，端口支持范围：[ 1024-65535 ] 。
+     * @param integer $Port 自定义端口，端口支持范围：[1024 - 65535]。
+说明：不填则默认为3306。
      * @param string $Password 设置 root 账号密码，密码规则：8 - 64 个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()）中的两种，购买主实例时可指定该参数，购买只读实例或者灾备实例时指定该参数无意义。
      * @param array $ParamList 参数列表，参数格式如 ParamList.0.Name=auto_increment&ParamList.0.Value=1。可通过 [查询默认的可设置参数列表](https://cloud.tencent.com/document/api/236/32662) 查询支持设置的参数。
 说明：表名大小写敏感的开启和关闭可通过参数 lower_case_table_names 进行设置，参数值为0表示开启，参数值为1表示关闭，若不设置则此参数默认值为0。若您创建的是 MySQL 8.0 版本的实例，则需要在创建实例时通过设置 lower_case_table_names 参数来开启或关闭表名大小写敏感，创建实例后无法修改参数，即创建后无法修改表名大小写敏感。其他数据库版本的实例支持在创建实例后修改 lower_case_table_names 参数。创建实例时设置表名大小写敏感的 API 调用方法请参见本文中的示例2。

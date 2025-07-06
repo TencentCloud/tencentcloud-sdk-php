@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) 设置类型
  * @method string getDeviceType() 获取设备类型
  * @method void setDeviceType(string $DeviceType) 设置设备类型
- * @method integer getMemory() 获取内存
- * @method void setMemory(integer $Memory) 设置内存
+ * @method integer getMemory() 获取内存，单位为MB
+ * @method void setMemory(integer $Memory) 设置内存，单位为MB
  * @method integer getCpu() 获取核数
  * @method void setCpu(integer $Cpu) 设置核数
  */
@@ -49,7 +49,7 @@ class CustomConfig extends AbstractModel
     public $DeviceType;
 
     /**
-     * @var integer 内存
+     * @var integer 内存，单位为MB
      */
     public $Memory;
 
@@ -62,7 +62,7 @@ class CustomConfig extends AbstractModel
      * @param string $Device 设备
      * @param string $Type 类型
      * @param string $DeviceType 设备类型
-     * @param integer $Memory 内存
+     * @param integer $Memory 内存，单位为MB
      * @param integer $Cpu 核数
      */
     function __construct()

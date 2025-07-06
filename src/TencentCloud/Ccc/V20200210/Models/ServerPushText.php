@@ -53,6 +53,9 @@ use TencentCloud\Common\AbstractModel;
 例子：
 - Priority=1、Interrupt=true，会打断现有交互，立刻播报，播报过程中不会被打断
 - Priority=1、Interrupt=false、DropMode=1，会等待当前交互结束，再进行播报，播报过程中不会被打断
+
+ * @method boolean getAddHistory() 获取是否将文本加入到llm历史上下文中
+ * @method void setAddHistory(boolean $AddHistory) 设置是否将文本加入到llm历史上下文中
  */
 class ServerPushText extends AbstractModel
 {
@@ -98,6 +101,11 @@ class ServerPushText extends AbstractModel
     public $Priority;
 
     /**
+     * @var boolean 是否将文本加入到llm历史上下文中
+     */
+    public $AddHistory;
+
+    /**
      * @param string $Text 服务端推送播报文本
      * @param boolean $Interrupt 是否允许该文本打断机器人说话
      * @param boolean $StopAfterPlay 播报完文本后，是否自动关闭对话任务
@@ -114,6 +122,8 @@ class ServerPushText extends AbstractModel
 例子：
 - Priority=1、Interrupt=true，会打断现有交互，立刻播报，播报过程中不会被打断
 - Priority=1、Interrupt=false、DropMode=1，会等待当前交互结束，再进行播报，播报过程中不会被打断
+
+     * @param boolean $AddHistory 是否将文本加入到llm历史上下文中
      */
     function __construct()
     {
@@ -150,6 +160,10 @@ class ServerPushText extends AbstractModel
 
         if (array_key_exists("Priority",$param) and $param["Priority"] !== null) {
             $this->Priority = $param["Priority"];
+        }
+
+        if (array_key_exists("AddHistory",$param) and $param["AddHistory"] !== null) {
+            $this->AddHistory = $param["AddHistory"];
         }
     }
 }

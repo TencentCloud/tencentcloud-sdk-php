@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置附加信息
  * @method string getUuid() 获取主机uuid
  * @method void setUuid(string $Uuid) 设置主机uuid
+ * @method integer getFirstDetectionMethod() 获取首次检出方式 0扫描;1实时监控
+ * @method void setFirstDetectionMethod(integer $FirstDetectionMethod) 设置首次检出方式 0扫描;1实时监控
  */
 class RiskProcessEvent extends AbstractModel
 {
@@ -157,6 +159,11 @@ class RiskProcessEvent extends AbstractModel
     public $Uuid;
 
     /**
+     * @var integer 首次检出方式 0扫描;1实时监控
+     */
+    public $FirstDetectionMethod;
+
+    /**
      * @param integer $EventId 事件ID
      * @param string $HostName 主机名称
      * @param string $HostIp 主机IP
@@ -176,6 +183,7 @@ class RiskProcessEvent extends AbstractModel
      * @param integer $OnlineStatus 主机在线状态
      * @param MachineExtraInfo $MachineExtraInfo 附加信息
      * @param string $Uuid 主机uuid
+     * @param integer $FirstDetectionMethod 首次检出方式 0扫描;1实时监控
      */
     function __construct()
     {
@@ -265,6 +273,10 @@ class RiskProcessEvent extends AbstractModel
 
         if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
             $this->Uuid = $param["Uuid"];
+        }
+
+        if (array_key_exists("FirstDetectionMethod",$param) and $param["FirstDetectionMethod"] !== null) {
+            $this->FirstDetectionMethod = $param["FirstDetectionMethod"];
         }
     }
 }

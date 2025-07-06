@@ -52,6 +52,8 @@ A6：六开
  * @method void setHostSerialNumbers(array $HostSerialNumbers) 设置宿主机 ID 列表。可以指定宿主机 ID 进行创建；也可以不指定由系统自动分配宿主机。
  * @method string getImageId() 获取镜像 ID。如果不填，将使用默认的系统镜像
  * @method void setImageId(string $ImageId) 设置镜像 ID。如果不填，将使用默认的系统镜像
+ * @method array getLabels() 获取安卓实例标签列表
+ * @method void setLabels(array $Labels) 设置安卓实例标签列表
  */
 class CreateAndroidInstancesRequest extends AbstractModel
 {
@@ -92,6 +94,11 @@ A6：六开
     public $ImageId;
 
     /**
+     * @var array 安卓实例标签列表
+     */
+    public $Labels;
+
+    /**
      * @param string $Zone 安卓实例可用区。
 ap-guangzhou-3：广州三区
 ap-shenzhen-1：深圳一区
@@ -108,6 +115,7 @@ A6：六开
 当 HostSerialNumbers 为空时，该参数表示要创建安卓实例的总数量，最大值为 100。
      * @param array $HostSerialNumbers 宿主机 ID 列表。可以指定宿主机 ID 进行创建；也可以不指定由系统自动分配宿主机。
      * @param string $ImageId 镜像 ID。如果不填，将使用默认的系统镜像
+     * @param array $Labels 安卓实例标签列表
      */
     function __construct()
     {
@@ -140,6 +148,15 @@ A6：六开
 
         if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
             $this->ImageId = $param["ImageId"];
+        }
+
+        if (array_key_exists("Labels",$param) and $param["Labels"] !== null) {
+            $this->Labels = [];
+            foreach ($param["Labels"] as $key => $value){
+                $obj = new AndroidInstanceLabel();
+                $obj->deserialize($value);
+                array_push($this->Labels, $obj);
+            }
         }
     }
 }

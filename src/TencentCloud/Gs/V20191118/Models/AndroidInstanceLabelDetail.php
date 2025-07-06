@@ -18,26 +18,21 @@ namespace TencentCloud\Gs\V20191118\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateAndroidInstanceLabel请求参数结构体
+ * 安卓实例标签详情
  *
- * @method string getKey() 获取标签键
- * @method void setKey(string $Key) 设置标签键
- * @method string getValue() 获取标签值。普通场景下，该值不需要填写；高级场景下，需要两个层级进行分组时才填写。
- * @method void setValue(string $Value) 设置标签值。普通场景下，该值不需要填写；高级场景下，需要两个层级进行分组时才填写。
+ * @method AndroidInstanceLabel getLabel() 获取标签
+ * @method void setLabel(AndroidInstanceLabel $Label) 设置标签
  * @method string getDescription() 获取标签描述
  * @method void setDescription(string $Description) 设置标签描述
+ * @method string getCreateTime() 获取标签创建时间
+ * @method void setCreateTime(string $CreateTime) 设置标签创建时间
  */
-class CreateAndroidInstanceLabelRequest extends AbstractModel
+class AndroidInstanceLabelDetail extends AbstractModel
 {
     /**
-     * @var string 标签键
+     * @var AndroidInstanceLabel 标签
      */
-    public $Key;
-
-    /**
-     * @var string 标签值。普通场景下，该值不需要填写；高级场景下，需要两个层级进行分组时才填写。
-     */
-    public $Value;
+    public $Label;
 
     /**
      * @var string 标签描述
@@ -45,9 +40,14 @@ class CreateAndroidInstanceLabelRequest extends AbstractModel
     public $Description;
 
     /**
-     * @param string $Key 标签键
-     * @param string $Value 标签值。普通场景下，该值不需要填写；高级场景下，需要两个层级进行分组时才填写。
+     * @var string 标签创建时间
+     */
+    public $CreateTime;
+
+    /**
+     * @param AndroidInstanceLabel $Label 标签
      * @param string $Description 标签描述
+     * @param string $CreateTime 标签创建时间
      */
     function __construct()
     {
@@ -62,16 +62,17 @@ class CreateAndroidInstanceLabelRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
-            $this->Key = $param["Key"];
-        }
-
-        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
-            $this->Value = $param["Value"];
+        if (array_key_exists("Label",$param) and $param["Label"] !== null) {
+            $this->Label = new AndroidInstanceLabel();
+            $this->Label->deserialize($param["Label"]);
         }
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
     }
 }

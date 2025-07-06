@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPackageVersion(string $PackageVersion) 设置应用包版本
  * @method string getPackageLabel() 获取应用包标签
  * @method void setPackageLabel(string $PackageLabel) 设置应用包标签
+ * @method string getVersionName() 获取应用包版本号
+ * @method void setVersionName(string $VersionName) 设置应用包版本号
  */
 class AndroidInstanceAppInfo extends AbstractModel
 {
@@ -57,6 +59,7 @@ class AndroidInstanceAppInfo extends AbstractModel
 
     /**
      * @var string 应用包版本
+     * @deprecated
      */
     public $PackageVersion;
 
@@ -66,12 +69,18 @@ class AndroidInstanceAppInfo extends AbstractModel
     public $PackageLabel;
 
     /**
+     * @var string 应用包版本号
+     */
+    public $VersionName;
+
+    /**
      * @param string $AndroidAppId 应用id
      * @param string $Name 应用名称
      * @param string $AndroidAppVersion 应用版本
      * @param string $PackageName 应用包名
      * @param string $PackageVersion 应用包版本
      * @param string $PackageLabel 应用包标签
+     * @param string $VersionName 应用包版本号
      */
     function __construct()
     {
@@ -108,6 +117,10 @@ class AndroidInstanceAppInfo extends AbstractModel
 
         if (array_key_exists("PackageLabel",$param) and $param["PackageLabel"] !== null) {
             $this->PackageLabel = $param["PackageLabel"];
+        }
+
+        if (array_key_exists("VersionName",$param) and $param["VersionName"] !== null) {
+            $this->VersionName = $param["VersionName"];
         }
     }
 }

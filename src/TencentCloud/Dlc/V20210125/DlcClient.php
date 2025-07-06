@@ -37,6 +37,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\CancelNotebookSessionStatementBatchResponse CancelNotebookSessionStatementBatch(Models\CancelNotebookSessionStatementBatchRequest $req) 本接口（CancelNotebookSessionStatementBatch）用于批量取消Session 中执行的任务
  * @method Models\CancelSparkSessionBatchSQLResponse CancelSparkSessionBatchSQL(Models\CancelSparkSessionBatchSQLRequest $req) 本接口（CancelSparkSessionBatchSQL）用于取消Spark SQL批任务。
  * @method Models\CancelTaskResponse CancelTask(Models\CancelTaskRequest $req) 本接口（CancelTask），用于取消任务
+ * @method Models\CancelTasksResponse CancelTasks(Models\CancelTasksRequest $req) 批量取消任务
  * @method Models\CheckDataEngineConfigPairsValidityResponse CheckDataEngineConfigPairsValidity(Models\CheckDataEngineConfigPairsValidityRequest $req) 本接口（CheckDataEngineConfigPairsValidity）用于检查引擎用户自定义参数的有效性
  * @method Models\CheckDataEngineImageCanBeRollbackResponse CheckDataEngineImageCanBeRollback(Models\CheckDataEngineImageCanBeRollbackRequest $req) 本接口（CheckDataEngineImageCanBeRollback）用于查看集群是否能回滚。
  * @method Models\CheckDataEngineImageCanBeUpgradeResponse CheckDataEngineImageCanBeUpgrade(Models\CheckDataEngineImageCanBeUpgradeRequest $req) 本接口（CheckDataEngineImageCanBeUpgrade）用于查看集群镜像是否能够升级。

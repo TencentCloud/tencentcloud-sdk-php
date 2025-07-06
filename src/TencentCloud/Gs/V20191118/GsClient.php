@@ -55,7 +55,7 @@ use TencentCloud\Gs\V20191118\Models as Models;
  * @method Models\DescribeAndroidInstanceTasksStatusResponse DescribeAndroidInstanceTasksStatus(Models\DescribeAndroidInstanceTasksStatusRequest $req) 查询安卓实例任务状态
  * @method Models\DescribeAndroidInstancesResponse DescribeAndroidInstances(Models\DescribeAndroidInstancesRequest $req) 查询安卓实例
  * @method Models\DescribeAndroidInstancesAppBlacklistResponse DescribeAndroidInstancesAppBlacklist(Models\DescribeAndroidInstancesAppBlacklistRequest $req) 查询安卓实例黑名单
- * @method Models\DescribeAndroidInstancesByAppsResponse DescribeAndroidInstancesByApps(Models\DescribeAndroidInstancesByAppsRequest $req) 查询安装指定应用的安卓实例
+ * @method Models\DescribeAndroidInstancesByAppsResponse DescribeAndroidInstancesByApps(Models\DescribeAndroidInstancesByAppsRequest $req) 批量查询安装指定应用的安卓实例
  * @method Models\DescribeInstancesCountResponse DescribeInstancesCount(Models\DescribeInstancesCountRequest $req) 获取并发总数和运行数
  * @method Models\DestroyAndroidInstancesResponse DestroyAndroidInstances(Models\DestroyAndroidInstancesRequest $req) 销毁安卓实例
  * @method Models\DisableAndroidInstancesAppResponse DisableAndroidInstancesApp(Models\DisableAndroidInstancesAppRequest $req) 批量禁用安卓实例应用

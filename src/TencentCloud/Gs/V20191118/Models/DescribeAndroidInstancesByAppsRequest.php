@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getOffset() 获取偏移量，默认为 0	
  * @method void setOffset(integer $Offset) 设置偏移量，默认为 0	
- * @method integer getLimit() 获取限制量，默认为20，最大值为100	
- * @method void setLimit(integer $Limit) 设置限制量，默认为20，最大值为100	
- * @method array getAndroidAppIds() 获取应用 ID 列表。通过应用 ID 做集合查询
- * @method void setAndroidAppIds(array $AndroidAppIds) 设置应用 ID 列表。通过应用 ID 做集合查询
- * @method array getFilters() 获取字段过滤器。Filter 的 Name 有以下值： AndroidInstanceId：实例 ID
- * @method void setFilters(array $Filters) 设置字段过滤器。Filter 的 Name 有以下值： AndroidInstanceId：实例 ID
+ * @method integer getLimit() 获取限制量，默认为 20，最大值为 500	
+ * @method void setLimit(integer $Limit) 设置限制量，默认为 20，最大值为 500	
+ * @method array getAndroidAppIds() 获取应用 ID 列表。当 AndroidIds 为多条数据时（例如 app1, app2），返回的实例列表为：安装了 app1 应用的实例和安装了 app2 应用的实例集合（并集）。
+ * @method void setAndroidAppIds(array $AndroidAppIds) 设置应用 ID 列表。当 AndroidIds 为多条数据时（例如 app1, app2），返回的实例列表为：安装了 app1 应用的实例和安装了 app2 应用的实例集合（并集）。
+ * @method array getFilters() 获取字段过滤器，Filter 的 Name 有以下值： AndroidInstanceId：实例 Id
+ * @method void setFilters(array $Filters) 设置字段过滤器，Filter 的 Name 有以下值： AndroidInstanceId：实例 Id
  */
 class DescribeAndroidInstancesByAppsRequest extends AbstractModel
 {
@@ -37,25 +37,25 @@ class DescribeAndroidInstancesByAppsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 限制量，默认为20，最大值为100	
+     * @var integer 限制量，默认为 20，最大值为 500	
      */
     public $Limit;
 
     /**
-     * @var array 应用 ID 列表。通过应用 ID 做集合查询
+     * @var array 应用 ID 列表。当 AndroidIds 为多条数据时（例如 app1, app2），返回的实例列表为：安装了 app1 应用的实例和安装了 app2 应用的实例集合（并集）。
      */
     public $AndroidAppIds;
 
     /**
-     * @var array 字段过滤器。Filter 的 Name 有以下值： AndroidInstanceId：实例 ID
+     * @var array 字段过滤器，Filter 的 Name 有以下值： AndroidInstanceId：实例 Id
      */
     public $Filters;
 
     /**
      * @param integer $Offset 偏移量，默认为 0	
-     * @param integer $Limit 限制量，默认为20，最大值为100	
-     * @param array $AndroidAppIds 应用 ID 列表。通过应用 ID 做集合查询
-     * @param array $Filters 字段过滤器。Filter 的 Name 有以下值： AndroidInstanceId：实例 ID
+     * @param integer $Limit 限制量，默认为 20，最大值为 500	
+     * @param array $AndroidAppIds 应用 ID 列表。当 AndroidIds 为多条数据时（例如 app1, app2），返回的实例列表为：安装了 app1 应用的实例和安装了 app2 应用的实例集合（并集）。
+     * @param array $Filters 字段过滤器，Filter 的 Name 有以下值： AndroidInstanceId：实例 Id
      */
     function __construct()
     {

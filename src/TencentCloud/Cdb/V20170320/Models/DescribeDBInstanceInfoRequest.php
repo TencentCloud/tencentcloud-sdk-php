@@ -20,18 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBInstanceInfo请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID。
+ * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+说明：仅主实例支持查询，此项仅支持输入主实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+说明：仅主实例支持查询，此项仅支持输入主实例 ID。
  */
 class DescribeDBInstanceInfoRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID。
+     * @var string 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+说明：仅主实例支持查询，此项仅支持输入主实例 ID。
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId 实例 ID。
+     * @param string $InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+说明：仅主实例支持查询，此项仅支持输入主实例 ID。
      */
     function __construct()
     {

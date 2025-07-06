@@ -31,6 +31,7 @@ use TencentCloud\Ioa\V20220601\Models as Models;
  * @method Models\DescribeDLPFileDetectResultResponse DescribeDLPFileDetectResult(Models\DescribeDLPFileDetectResultRequest $req) webservice查询文件检测结果
  * @method Models\DescribeDeviceHardwareInfoListResponse DescribeDeviceHardwareInfoList(Models\DescribeDeviceHardwareInfoListRequest $req) 查询满足条件的查询终端硬件信息列表，私有化调用path为：/capi/Assets/Device/DescribeDeviceHardwareInfoList
  * @method Models\DescribeDeviceInfoResponse DescribeDeviceInfo(Models\DescribeDeviceInfoRequest $req) 获取终端进程网络服务信息，私有化调用path为：capi/Assets/Device/DescribeDeviceInfo
+ * @method Models\DescribeDeviceVirtualGroupsResponse DescribeDeviceVirtualGroups(Models\DescribeDeviceVirtualGroupsRequest $req) 查询终端自定义分组列表，私有化调用path为：/capi/Assets/Device/DescribeDeviceVirtualGroups
  * @method Models\DescribeDevicesResponse DescribeDevices(Models\DescribeDevicesRequest $req) 查询满足条件的终端数据详情，私有化调用path为：/capi/Assets/Device/DescribeDevices
  * @method Models\DescribeLocalAccountsResponse DescribeLocalAccounts(Models\DescribeLocalAccountsRequest $req) 获取账号列表，支持分页，模糊搜索，私有化调用path为：/capi/Assets/Account/DescribeLocalAccounts
  * @method Models\DescribeRootAccountGroupResponse DescribeRootAccountGroup(Models\DescribeRootAccountGroupRequest $req) 查询账号根分组详情。对应“用户与授权管理”里内置不可见的全网根账号组，所有新建的目录，都挂在该全网根账号组下。

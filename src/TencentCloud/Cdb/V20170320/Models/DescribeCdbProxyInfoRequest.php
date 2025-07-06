@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCdbProxyInfo请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID
- * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method string getProxyGroupId() 获取代理组ID
- * @method void setProxyGroupId(string $ProxyGroupId) 设置代理组ID
+ * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+ * @method string getProxyGroupId() 获取代理组 ID。
+ * @method void setProxyGroupId(string $ProxyGroupId) 设置代理组 ID。
  */
 class DescribeCdbProxyInfoRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public $InstanceId;
 
     /**
-     * @var string 代理组ID
+     * @var string 代理组 ID。
      */
     public $ProxyGroupId;
 
     /**
-     * @param string $InstanceId 实例ID
-     * @param string $ProxyGroupId 代理组ID
+     * @param string $InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @param string $ProxyGroupId 代理组 ID。
      */
     function __construct()
     {

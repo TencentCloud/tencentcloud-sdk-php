@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnablePSCheck(boolean $EnablePSCheck) 设置默认值为false，打开返回证件是否存在PS。类型为：临时、港澳台居住证、外国人居住证失效
  * @method boolean getEnableWordCheck() 获取默认值为false，打开返回字段级反光和字段级完整性告警。类型为：临时、港澳台居住证、外国人居住证失效
  * @method void setEnableWordCheck(boolean $EnableWordCheck) 设置默认值为false，打开返回字段级反光和字段级完整性告警。类型为：临时、港澳台居住证、外国人居住证失效
+ * @method boolean getEnableQualityCheck() 获取默认值为false，打开返回证件是否模糊。
+ * @method void setEnableQualityCheck(boolean $EnableQualityCheck) 设置默认值为false，打开返回证件是否模糊。
  */
 class RecognizeValidIDCardOCRRequest extends AbstractModel
 {
@@ -140,6 +142,11 @@ class RecognizeValidIDCardOCRRequest extends AbstractModel
     public $EnableWordCheck;
 
     /**
+     * @var boolean 默认值为false，打开返回证件是否模糊。
+     */
+    public $EnableQualityCheck;
+
+    /**
      * @param string $ImageBase64 图片的 Base64 值。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。图片的 ImageUrl、ImageBase64 必须提供一个，如果都提供，只使用 ImageUrl。
      * @param string $ImageUrl 图片的 Url 地址。要求图片经Base64编码后不超过 10M，分辨率建议500*800以上，支持PNG、JPG、JPEG、BMP格式。建议卡片部分占据图片2/3以上。建议图片存储于腾讯云，可保障更高的下载速度和稳定性。
      * @param integer $CardType 0 自动，自动判断输入证件的类型
@@ -164,6 +171,7 @@ class RecognizeValidIDCardOCRRequest extends AbstractModel
      * @param boolean $EnableReshootCheck 默认值为false，打开返回证件是否存在屏幕翻拍。
      * @param boolean $EnablePSCheck 默认值为false，打开返回证件是否存在PS。类型为：临时、港澳台居住证、外国人居住证失效
      * @param boolean $EnableWordCheck 默认值为false，打开返回字段级反光和字段级完整性告警。类型为：临时、港澳台居住证、外国人居住证失效
+     * @param boolean $EnableQualityCheck 默认值为false，打开返回证件是否模糊。
      */
     function __construct()
     {
@@ -220,6 +228,10 @@ class RecognizeValidIDCardOCRRequest extends AbstractModel
 
         if (array_key_exists("EnableWordCheck",$param) and $param["EnableWordCheck"] !== null) {
             $this->EnableWordCheck = $param["EnableWordCheck"];
+        }
+
+        if (array_key_exists("EnableQualityCheck",$param) and $param["EnableQualityCheck"] !== null) {
+            $this->EnableQualityCheck = $param["EnableQualityCheck"];
         }
     }
 }

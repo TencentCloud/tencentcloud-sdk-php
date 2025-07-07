@@ -22,6 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getInstanceIds() 获取一个或多个待操作的实例ID。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。每次请求批量实例的上限为100。
  * @method void setInstanceIds(array $InstanceIds) 设置一个或多个待操作的实例ID。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。每次请求批量实例的上限为100。
+ * @method boolean getReleaseAddress() 获取释放弹性IP。EIP2.0下，仅提供主网卡下首个EIP，EIP类型限定在HighQualityEIP、AntiDDoSEIP、EIPv6、HighQualityEIPv6这几种类型。默认行为不释放。
+
+示例值：true
+默认值：false
+ * @method void setReleaseAddress(boolean $ReleaseAddress) 设置释放弹性IP。EIP2.0下，仅提供主网卡下首个EIP，EIP类型限定在HighQualityEIP、AntiDDoSEIP、EIPv6、HighQualityEIPv6这几种类型。默认行为不释放。
+
+示例值：true
+默认值：false
  * @method boolean getReleasePrepaidDataDisks() 获取释放实例挂载的包年包月数据盘。true表示销毁实例同时释放包年包月数据盘，false表示只销毁实例。
 默认值：false
  * @method void setReleasePrepaidDataDisks(boolean $ReleasePrepaidDataDisks) 设置释放实例挂载的包年包月数据盘。true表示销毁实例同时释放包年包月数据盘，false表示只销毁实例。
@@ -35,6 +43,14 @@ class TerminateInstancesRequest extends AbstractModel
     public $InstanceIds;
 
     /**
+     * @var boolean 释放弹性IP。EIP2.0下，仅提供主网卡下首个EIP，EIP类型限定在HighQualityEIP、AntiDDoSEIP、EIPv6、HighQualityEIPv6这几种类型。默认行为不释放。
+
+示例值：true
+默认值：false
+     */
+    public $ReleaseAddress;
+
+    /**
      * @var boolean 释放实例挂载的包年包月数据盘。true表示销毁实例同时释放包年包月数据盘，false表示只销毁实例。
 默认值：false
      */
@@ -42,6 +58,10 @@ class TerminateInstancesRequest extends AbstractModel
 
     /**
      * @param array $InstanceIds 一个或多个待操作的实例ID。可通过 [DescribeInstances](https://cloud.tencent.com/document/api/213/15728) 接口返回值中的`InstanceId`获取。每次请求批量实例的上限为100。
+     * @param boolean $ReleaseAddress 释放弹性IP。EIP2.0下，仅提供主网卡下首个EIP，EIP类型限定在HighQualityEIP、AntiDDoSEIP、EIPv6、HighQualityEIPv6这几种类型。默认行为不释放。
+
+示例值：true
+默认值：false
      * @param boolean $ReleasePrepaidDataDisks 释放实例挂载的包年包月数据盘。true表示销毁实例同时释放包年包月数据盘，false表示只销毁实例。
 默认值：false
      */
@@ -60,6 +80,10 @@ class TerminateInstancesRequest extends AbstractModel
         }
         if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
             $this->InstanceIds = $param["InstanceIds"];
+        }
+
+        if (array_key_exists("ReleaseAddress",$param) and $param["ReleaseAddress"] !== null) {
+            $this->ReleaseAddress = $param["ReleaseAddress"];
         }
 
         if (array_key_exists("ReleasePrepaidDataDisks",$param) and $param["ReleasePrepaidDataDisks"] !== null) {

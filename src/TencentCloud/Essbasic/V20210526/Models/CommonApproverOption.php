@@ -18,7 +18,8 @@ namespace TencentCloud\Essbasic\V20210526\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 签署人配置信息
+ * 签署人配置信息。
+此参数对子客和自动签无效，不允许进行修改。
  *
  * @method boolean getCanEditApprover() 获取是否允许修改签署人信息
  * @method void setCanEditApprover(boolean $CanEditApprover) 设置是否允许修改签署人信息

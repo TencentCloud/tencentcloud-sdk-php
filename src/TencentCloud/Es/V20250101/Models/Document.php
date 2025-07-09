@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
 支持的图片像素：单边介于20-10000px之间。
  * @method string getFileName() 获取文件名称，当使用 base64上传的时候使用。
  * @method void setFileName(string $FileName) 设置文件名称，当使用 base64上传的时候使用。
+ * @method integer getFileStartPageNumber() 获取文档的起始页码
+ * @method void setFileStartPageNumber(integer $FileStartPageNumber) 设置文档的起始页码
+ * @method integer getFileEndPageNumber() 获取文档的结束页码
+ * @method void setFileEndPageNumber(integer $FileEndPageNumber) 设置文档的结束页码
  */
 class Document extends AbstractModel
 {
@@ -73,6 +77,16 @@ class Document extends AbstractModel
     public $FileName;
 
     /**
+     * @var integer 文档的起始页码
+     */
+    public $FileStartPageNumber;
+
+    /**
+     * @var integer 文档的结束页码
+     */
+    public $FileEndPageNumber;
+
+    /**
      * @param string $FileType 文件类型。
 支持的文件类型：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、IM、PCX、PPM、TIFF、XBM、HEIF、JP2
 支持的文件大小：
@@ -84,6 +98,8 @@ class Document extends AbstractModel
 支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过3秒。
 支持的图片像素：单边介于20-10000px之间。
      * @param string $FileName 文件名称，当使用 base64上传的时候使用。
+     * @param integer $FileStartPageNumber 文档的起始页码
+     * @param integer $FileEndPageNumber 文档的结束页码
      */
     function __construct()
     {
@@ -112,6 +128,14 @@ class Document extends AbstractModel
 
         if (array_key_exists("FileName",$param) and $param["FileName"] !== null) {
             $this->FileName = $param["FileName"];
+        }
+
+        if (array_key_exists("FileStartPageNumber",$param) and $param["FileStartPageNumber"] !== null) {
+            $this->FileStartPageNumber = $param["FileStartPageNumber"];
+        }
+
+        if (array_key_exists("FileEndPageNumber",$param) and $param["FileEndPageNumber"] !== null) {
+            $this->FileEndPageNumber = $param["FileEndPageNumber"];
         }
     }
 }

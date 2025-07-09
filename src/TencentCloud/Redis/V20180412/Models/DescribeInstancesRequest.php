@@ -113,6 +113,7 @@ use TencentCloud\Common\AbstractModel;
 - 16：Redis 6.2 内存版（集群架构）。
 - 17：Redis 7.0 内存版（标准架构）。
 - 18：Redis 7.0 内存版（集群架构）。
+- 200:Memcached 1.6 内存版（集群架构）。
  * @method void setType(integer $Type) 设置实例类型。
 - 2：Redis 2.8 内存版（标准架构）。
 - 3：CKV 3.2 内存版（标准架构）。
@@ -126,6 +127,7 @@ use TencentCloud\Common\AbstractModel;
 - 16：Redis 6.2 内存版（集群架构）。
 - 17：Redis 7.0 内存版（标准架构）。
 - 18：Redis 7.0 内存版（集群架构）。
+- 200:Memcached 1.6 内存版（集群架构）。
  * @method array getSearchKeys() 获取该参数为数组类型，支持配置实例名称、实例 ID、IP地址，其中实例名称为模糊匹配，实例 ID 和 IP 地址精确匹配。
 
 - 数组中每一个元素取并集进行匹配查询。
@@ -285,6 +287,7 @@ class DescribeInstancesRequest extends AbstractModel
 - 16：Redis 6.2 内存版（集群架构）。
 - 17：Redis 7.0 内存版（标准架构）。
 - 18：Redis 7.0 内存版（集群架构）。
+- 200:Memcached 1.6 内存版（集群架构）。
      */
     public $Type;
 
@@ -389,6 +392,7 @@ class DescribeInstancesRequest extends AbstractModel
 - 16：Redis 6.2 内存版（集群架构）。
 - 17：Redis 7.0 内存版（标准架构）。
 - 18：Redis 7.0 内存版（集群架构）。
+- 200:Memcached 1.6 内存版（集群架构）。
      * @param array $SearchKeys 该参数为数组类型，支持配置实例名称、实例 ID、IP地址，其中实例名称为模糊匹配，实例 ID 和 IP 地址精确匹配。
 
 - 数组中每一个元素取并集进行匹配查询。

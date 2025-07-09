@@ -22,36 +22,36 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTaskName() 获取迁移任务名称
  * @method void setTaskName(string $TaskName) 设置迁移任务名称
- * @method integer getMigrationType() 获取迁移方式标志位，默认为0。0: 桶迁移；1: 清单迁移
- * @method void setMigrationType(integer $MigrationType) 设置迁移方式标志位，默认为0。0: 桶迁移；1: 清单迁移
+ * @method integer getMigrationType() 获取迁移方式标志位，默认为0。0：桶迁移；1：清单迁移
+ * @method void setMigrationType(integer $MigrationType) 设置迁移方式标志位，默认为0。0：桶迁移；1：清单迁移
  * @method integer getMigrationMode() 获取迁移模式，默认为0。0: 全量迁移
  * @method void setMigrationMode(integer $MigrationMode) 设置迁移模式，默认为0。0: 全量迁移
- * @method string getSrcSecretId() 获取数据源账号的SecretId
- * @method void setSrcSecretId(string $SrcSecretId) 设置数据源账号的SecretId
- * @method string getSrcSecretKey() 获取数据源账号的SecretKey
- * @method void setSrcSecretKey(string $SrcSecretKey) 设置数据源账号的SecretKey
- * @method string getFileSystemId() 获取文件系统实例Id
- * @method void setFileSystemId(string $FileSystemId) 设置文件系统实例Id
+ * @method string getSrcSecretId() 获取数据源账号的 SecretId
+ * @method void setSrcSecretId(string $SrcSecretId) 设置数据源账号的 SecretId
+ * @method string getSrcSecretKey() 获取数据源账号的 SecretKey
+ * @method void setSrcSecretKey(string $SrcSecretKey) 设置数据源账号的 SecretKey
+ * @method string getFileSystemId() 获取文件系统实例 ID，通过查询文件系统 [DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170) 获取
+ * @method void setFileSystemId(string $FileSystemId) 设置文件系统实例 ID，通过查询文件系统 [DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170) 获取
  * @method string getFsPath() 获取文件系统路径
  * @method void setFsPath(string $FsPath) 设置文件系统路径
  * @method integer getCoverType() 获取同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖
  * @method void setCoverType(integer $CoverType) 设置同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖
- * @method string getSrcService() 获取数据源服务商。COS: 腾讯云COS，OSS: 阿里云OSS，OBS:华为云OBS
- * @method void setSrcService(string $SrcService) 设置数据源服务商。COS: 腾讯云COS，OSS: 阿里云OSS，OBS:华为云OBS
- * @method string getBucketName() 获取数据源桶名称，名称和地址至少有一个
- * @method void setBucketName(string $BucketName) 设置数据源桶名称，名称和地址至少有一个
+ * @method string getSrcService() 获取数据源服务商。COS：腾讯云COS，OSS：阿里云OSS，OBS：华为云OBS
+ * @method void setSrcService(string $SrcService) 设置数据源服务商。COS：腾讯云COS，OSS：阿里云OSS，OBS：华为云OBS
+ * @method string getBucketName() 获取数据源桶名称；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数
+ * @method void setBucketName(string $BucketName) 设置数据源桶名称；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数
  * @method string getBucketRegion() 获取数据源桶地域
  * @method void setBucketRegion(string $BucketRegion) 设置数据源桶地域
- * @method string getBucketAddress() 获取数据源桶地址，名称和地址至少有一个
- * @method void setBucketAddress(string $BucketAddress) 设置数据源桶地址，名称和地址至少有一个
+ * @method string getBucketAddress() 获取数据源桶地址；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数
+ * @method void setBucketAddress(string $BucketAddress) 设置数据源桶地址；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数
  * @method string getListAddress() 获取清单地址，迁移方式为清单迁移时必填
  * @method void setListAddress(string $ListAddress) 设置清单地址，迁移方式为清单迁移时必填
  * @method string getFsName() 获取目标文件系统名称
  * @method void setFsName(string $FsName) 设置目标文件系统名称
- * @method string getBucketPath() 获取源桶路径，默认为/
- * @method void setBucketPath(string $BucketPath) 设置源桶路径，默认为/
- * @method integer getDirection() 获取迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0
- * @method void setDirection(integer $Direction) 设置迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0
+ * @method string getBucketPath() 获取源桶路径，默认为 /
+ * @method void setBucketPath(string $BucketPath) 设置源桶路径，默认为 /
+ * @method integer getDirection() 获取迁移方向；0：对象存储迁移至文件系统，1：文件系统迁移至对象存储。默认为0
+ * @method void setDirection(integer $Direction) 设置迁移方向；0：对象存储迁移至文件系统，1：文件系统迁移至对象存储。默认为0
  */
 class CreateMigrationTaskRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class CreateMigrationTaskRequest extends AbstractModel
     public $TaskName;
 
     /**
-     * @var integer 迁移方式标志位，默认为0。0: 桶迁移；1: 清单迁移
+     * @var integer 迁移方式标志位，默认为0。0：桶迁移；1：清单迁移
      */
     public $MigrationType;
 
@@ -71,17 +71,17 @@ class CreateMigrationTaskRequest extends AbstractModel
     public $MigrationMode;
 
     /**
-     * @var string 数据源账号的SecretId
+     * @var string 数据源账号的 SecretId
      */
     public $SrcSecretId;
 
     /**
-     * @var string 数据源账号的SecretKey
+     * @var string 数据源账号的 SecretKey
      */
     public $SrcSecretKey;
 
     /**
-     * @var string 文件系统实例Id
+     * @var string 文件系统实例 ID，通过查询文件系统 [DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170) 获取
      */
     public $FileSystemId;
 
@@ -96,12 +96,12 @@ class CreateMigrationTaskRequest extends AbstractModel
     public $CoverType;
 
     /**
-     * @var string 数据源服务商。COS: 腾讯云COS，OSS: 阿里云OSS，OBS:华为云OBS
+     * @var string 数据源服务商。COS：腾讯云COS，OSS：阿里云OSS，OBS：华为云OBS
      */
     public $SrcService;
 
     /**
-     * @var string 数据源桶名称，名称和地址至少有一个
+     * @var string 数据源桶名称；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数
      */
     public $BucketName;
 
@@ -111,7 +111,7 @@ class CreateMigrationTaskRequest extends AbstractModel
     public $BucketRegion;
 
     /**
-     * @var string 数据源桶地址，名称和地址至少有一个
+     * @var string 数据源桶地址；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数
      */
     public $BucketAddress;
 
@@ -126,32 +126,32 @@ class CreateMigrationTaskRequest extends AbstractModel
     public $FsName;
 
     /**
-     * @var string 源桶路径，默认为/
+     * @var string 源桶路径，默认为 /
      */
     public $BucketPath;
 
     /**
-     * @var integer 迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0
+     * @var integer 迁移方向；0：对象存储迁移至文件系统，1：文件系统迁移至对象存储。默认为0
      */
     public $Direction;
 
     /**
      * @param string $TaskName 迁移任务名称
-     * @param integer $MigrationType 迁移方式标志位，默认为0。0: 桶迁移；1: 清单迁移
+     * @param integer $MigrationType 迁移方式标志位，默认为0。0：桶迁移；1：清单迁移
      * @param integer $MigrationMode 迁移模式，默认为0。0: 全量迁移
-     * @param string $SrcSecretId 数据源账号的SecretId
-     * @param string $SrcSecretKey 数据源账号的SecretKey
-     * @param string $FileSystemId 文件系统实例Id
+     * @param string $SrcSecretId 数据源账号的 SecretId
+     * @param string $SrcSecretKey 数据源账号的 SecretKey
+     * @param string $FileSystemId 文件系统实例 ID，通过查询文件系统 [DescribeCfsFileSystems](https://cloud.tencent.com/document/product/582/38170) 获取
      * @param string $FsPath 文件系统路径
      * @param integer $CoverType 同名文件迁移时覆盖策略，默认为0。0: 最后修改时间优先；1: 全覆盖；2: 不覆盖
-     * @param string $SrcService 数据源服务商。COS: 腾讯云COS，OSS: 阿里云OSS，OBS:华为云OBS
-     * @param string $BucketName 数据源桶名称，名称和地址至少有一个
+     * @param string $SrcService 数据源服务商。COS：腾讯云COS，OSS：阿里云OSS，OBS：华为云OBS
+     * @param string $BucketName 数据源桶名称；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数
      * @param string $BucketRegion 数据源桶地域
-     * @param string $BucketAddress 数据源桶地址，名称和地址至少有一个
+     * @param string $BucketAddress 数据源桶地址；桶迁移时，BucketName 和 BucketAddress 必填其一，清单迁移时无需填写此参数
      * @param string $ListAddress 清单地址，迁移方式为清单迁移时必填
      * @param string $FsName 目标文件系统名称
-     * @param string $BucketPath 源桶路径，默认为/
-     * @param integer $Direction 迁移方向。0: 对象存储迁移至文件系统，1: 文件系统迁移至对象存储。默认 0
+     * @param string $BucketPath 源桶路径，默认为 /
+     * @param integer $Direction 迁移方向；0：对象存储迁移至文件系统，1：文件系统迁移至对象存储。默认为0
      */
     function __construct()
     {

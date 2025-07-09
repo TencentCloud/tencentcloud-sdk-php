@@ -78,6 +78,7 @@ use TencentCloud\Cfw\V20190904\Models as Models;
  * @method Models\DescribeIdsWhiteRuleResponse DescribeIdsWhiteRule(Models\DescribeIdsWhiteRuleRequest $req) 历史方案，业务已迁移，接口不再适用
 
 查询入侵防御规则白名单接口
+ * @method Models\DescribeLogStorageStatisticResponse DescribeLogStorageStatistic(Models\DescribeLogStorageStatisticRequest $req) 租户日志存储统计
  * @method Models\DescribeLogsResponse DescribeLogs(Models\DescribeLogsRequest $req) 日志审计日志查询
  * @method Models\DescribeNatAcRuleResponse DescribeNatAcRule(Models\DescribeNatAcRuleRequest $req) 查询NAT访问控制列表
  * @method Models\DescribeNatFwDnatRuleResponse DescribeNatFwDnatRule(Models\DescribeNatFwDnatRuleRequest $req) 查询Nat防火墙Dnat规则

@@ -102,6 +102,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserUnsubscribed(boolean $UserUnsubscribed) 设置用户是否取消该发送者的订阅
  * @method boolean getUserComplainted() 获取用户是否举报该发送者
  * @method void setUserComplainted(boolean $UserComplainted) 设置用户是否举报该发送者
+ * @method boolean getUserComplained() 获取用户是否举报该发送者
+ * @method void setUserComplained(boolean $UserComplained) 设置用户是否举报该发送者
  */
 class SendEmailStatus extends AbstractModel
 {
@@ -191,8 +193,14 @@ class SendEmailStatus extends AbstractModel
 
     /**
      * @var boolean 用户是否举报该发送者
+     * @deprecated
      */
     public $UserComplainted;
+
+    /**
+     * @var boolean 用户是否举报该发送者
+     */
+    public $UserComplained;
 
     /**
      * @param string $MessageId SendEmail返回的MessageId
@@ -236,6 +244,7 @@ class SendEmailStatus extends AbstractModel
      * @param boolean $UserClicked 用户是否点击该邮件中的链接
      * @param boolean $UserUnsubscribed 用户是否取消该发送者的订阅
      * @param boolean $UserComplainted 用户是否举报该发送者
+     * @param boolean $UserComplained 用户是否举报该发送者
      */
     function __construct()
     {
@@ -296,6 +305,10 @@ class SendEmailStatus extends AbstractModel
 
         if (array_key_exists("UserComplainted",$param) and $param["UserComplainted"] !== null) {
             $this->UserComplainted = $param["UserComplainted"];
+        }
+
+        if (array_key_exists("UserComplained",$param) and $param["UserComplained"] !== null) {
+            $this->UserComplained = $param["UserComplained"];
         }
     }
 }

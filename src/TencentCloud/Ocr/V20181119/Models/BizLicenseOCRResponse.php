@@ -76,6 +76,8 @@ WARN_RESHOOT_CARD翻拍件告警
  * @method void setRegistrationAuthority(string $RegistrationAuthority) 设置登记机关
  * @method boolean getElectronic() 获取是否是电子营业执照。false为没有，true为有。
  * @method void setElectronic(boolean $Electronic) 设置是否是电子营业执照。false为没有，true为有。
+ * @method array getBusinessCertificate() 获取非营业执照的营业类证件识别结果，将以结构化形式呈现。
+ * @method void setBusinessCertificate(array $BusinessCertificate) 设置非营业执照的营业类证件识别结果，将以结构化形式呈现。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -198,6 +200,11 @@ WARN_RESHOOT_CARD翻拍件告警
     public $Electronic;
 
     /**
+     * @var array 非营业执照的营业类证件识别结果，将以结构化形式呈现。
+     */
+    public $BusinessCertificate;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -231,6 +238,7 @@ WARN_RESHOOT_CARD翻拍件告警
      * @param string $SerialNumber 编号
      * @param string $RegistrationAuthority 登记机关
      * @param boolean $Electronic 是否是电子营业执照。false为没有，true为有。
+     * @param array $BusinessCertificate 非营业执照的营业类证件识别结果，将以结构化形式呈现。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -332,6 +340,15 @@ WARN_RESHOOT_CARD翻拍件告警
 
         if (array_key_exists("Electronic",$param) and $param["Electronic"] !== null) {
             $this->Electronic = $param["Electronic"];
+        }
+
+        if (array_key_exists("BusinessCertificate",$param) and $param["BusinessCertificate"] !== null) {
+            $this->BusinessCertificate = [];
+            foreach ($param["BusinessCertificate"] as $key => $value){
+                $obj = new BusinessCertificateInfo();
+                $obj->deserialize($value);
+                array_push($this->BusinessCertificate, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

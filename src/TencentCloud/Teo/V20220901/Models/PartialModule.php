@@ -21,9 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * 例外规则的详细模块配置。
  *
  * @method string getModule() 获取模块名称，取值为：
-<li>waf：托管规则。</li>
+<li>managed-rule：托管规则 Id；</li>
+<li>managed-group：托管规则组；</li>
+<li>waf：待废弃，托管规则。</li>
  * @method void setModule(string $Module) 设置模块名称，取值为：
-<li>waf：托管规则。</li>
+<li>managed-rule：托管规则 Id；</li>
+<li>managed-group：托管规则组；</li>
+<li>waf：待废弃，托管规则。</li>
  * @method array getInclude() 获取模块下的需要例外的具体规则ID列表。
  * @method void setInclude(array $Include) 设置模块下的需要例外的具体规则ID列表。
  */
@@ -31,7 +35,9 @@ class PartialModule extends AbstractModel
 {
     /**
      * @var string 模块名称，取值为：
-<li>waf：托管规则。</li>
+<li>managed-rule：托管规则 Id；</li>
+<li>managed-group：托管规则组；</li>
+<li>waf：待废弃，托管规则。</li>
      */
     public $Module;
 
@@ -42,7 +48,9 @@ class PartialModule extends AbstractModel
 
     /**
      * @param string $Module 模块名称，取值为：
-<li>waf：托管规则。</li>
+<li>managed-rule：托管规则 Id；</li>
+<li>managed-group：托管规则组；</li>
+<li>waf：待废弃，托管规则。</li>
      * @param array $Include 模块下的需要例外的具体规则ID列表。
      */
     function __construct()

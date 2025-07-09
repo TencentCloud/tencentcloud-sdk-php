@@ -26,13 +26,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置组名称。
  * @method array getContent() 获取IP 组内容，仅支持 IP 及 IP 网段。
  * @method void setContent(array $Content) 设置IP 组内容，仅支持 IP 及 IP 网段。
+ * @method integer getIPTotalCount() 获取IP 组中正在生效的 IP 或网段个数。作为出参时有效，作为入参时无需填写该字段。
+ * @method void setIPTotalCount(integer $IPTotalCount) 设置IP 组中正在生效的 IP 或网段个数。作为出参时有效，作为入参时无需填写该字段。
  * @method array getIPExpireInfo() 获取IP 定时过期信息。
-作为入参：用于为指定的 IP 地址或网段配置定时过期时间。
+作为入参，用于为指定的 IP 地址或网段配置定时过期时间。
 作为出参，包含以下两类信息：
 <li>当前未到期的定时过期信息：尚未触发的过期配置。</li>
 <li>一周内已到期的定时过期信息：已触发的过期配置。</li>
  * @method void setIPExpireInfo(array $IPExpireInfo) 设置IP 定时过期信息。
-作为入参：用于为指定的 IP 地址或网段配置定时过期时间。
+作为入参，用于为指定的 IP 地址或网段配置定时过期时间。
 作为出参，包含以下两类信息：
 <li>当前未到期的定时过期信息：尚未触发的过期配置。</li>
 <li>一周内已到期的定时过期信息：已触发的过期配置。</li>
@@ -55,8 +57,13 @@ class IPGroup extends AbstractModel
     public $Content;
 
     /**
+     * @var integer IP 组中正在生效的 IP 或网段个数。作为出参时有效，作为入参时无需填写该字段。
+     */
+    public $IPTotalCount;
+
+    /**
      * @var array IP 定时过期信息。
-作为入参：用于为指定的 IP 地址或网段配置定时过期时间。
+作为入参，用于为指定的 IP 地址或网段配置定时过期时间。
 作为出参，包含以下两类信息：
 <li>当前未到期的定时过期信息：尚未触发的过期配置。</li>
 <li>一周内已到期的定时过期信息：已触发的过期配置。</li>
@@ -67,8 +74,9 @@ class IPGroup extends AbstractModel
      * @param integer $GroupId 组 Id，创建时填 0 即可。
      * @param string $Name 组名称。
      * @param array $Content IP 组内容，仅支持 IP 及 IP 网段。
+     * @param integer $IPTotalCount IP 组中正在生效的 IP 或网段个数。作为出参时有效，作为入参时无需填写该字段。
      * @param array $IPExpireInfo IP 定时过期信息。
-作为入参：用于为指定的 IP 地址或网段配置定时过期时间。
+作为入参，用于为指定的 IP 地址或网段配置定时过期时间。
 作为出参，包含以下两类信息：
 <li>当前未到期的定时过期信息：尚未触发的过期配置。</li>
 <li>一周内已到期的定时过期信息：已触发的过期配置。</li>
@@ -96,6 +104,10 @@ class IPGroup extends AbstractModel
 
         if (array_key_exists("Content",$param) and $param["Content"] !== null) {
             $this->Content = $param["Content"];
+        }
+
+        if (array_key_exists("IPTotalCount",$param) and $param["IPTotalCount"] !== null) {
+            $this->IPTotalCount = $param["IPTotalCount"];
         }
 
         if (array_key_exists("IPExpireInfo",$param) and $param["IPExpireInfo"] !== null) {

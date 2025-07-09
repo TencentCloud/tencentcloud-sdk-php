@@ -90,6 +90,7 @@ use TencentCloud\Lcic\V20220817\Models as Models;
  * @method Models\DescribeSdkAppIdUsersResponse DescribeSdkAppIdUsers(Models\DescribeSdkAppIdUsersRequest $req) 此接口用于获取指定应用ID下用户列表
  * @method Models\DescribeSupervisorsResponse DescribeSupervisors(Models\DescribeSupervisorsRequest $req) 获取巡课列表
  * @method Models\DescribeUserResponse DescribeUser(Models\DescribeUserRequest $req) 获取用户信息
+ * @method Models\DescribeUserDetailResponse DescribeUserDetail(Models\DescribeUserDetailRequest $req) 获取用户信息
  * @method Models\DescribeWhiteBoardSnapshotResponse DescribeWhiteBoardSnapshot(Models\DescribeWhiteBoardSnapshotRequest $req) 查询白板板书截图
  * @method Models\EndRoomResponse EndRoom(Models\EndRoomRequest $req) 结束房间的直播
  * @method Models\ForbidSendMsgResponse ForbidSendMsg(Models\ForbidSendMsgRequest $req) 禁止指定房间中某些用户在一段时间内发言。

@@ -156,6 +156,12 @@ p.s. 如果上传授权书 ，需遵循以下条件
 p.s. 如果上传授权书 ，需遵循以下条件 
 1.  超管的信息（超管姓名，超管手机号）必须为必填参数。
 2.  认证方式AuthorizationTypes必须只能是上传授权书方式 
+ * @method string getUserData() 获取调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 4096长度。
+
+在. 企业引导企业实名认证后回调中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_staffs" target="_blank">回调通知</a>模块。
+ * @method void setUserData(string $UserData) 设置调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 4096长度。
+
+在. 企业引导企业实名认证后回调中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_staffs" target="_blank">回调通知</a>模块。
  */
 class CreateOrganizationAuthUrlRequest extends AbstractModel
 {
@@ -312,6 +318,13 @@ p.s. 如果上传授权书 ，需遵循以下条件
     public $PowerOfAttorneys;
 
     /**
+     * @var string 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 4096长度。
+
+在. 企业引导企业实名认证后回调中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_staffs" target="_blank">回调通知</a>模块。
+     */
+    public $UserData;
+
+    /**
      * @param UserInfo $Operator 操作人信息
      * @param array $AuthorizationTypes 指定授权方式 支持多选:
 
@@ -380,6 +393,9 @@ p.s. 仅在企业名称不为空时有效
 p.s. 如果上传授权书 ，需遵循以下条件 
 1.  超管的信息（超管姓名，超管手机号）必须为必填参数。
 2.  认证方式AuthorizationTypes必须只能是上传授权书方式 
+     * @param string $UserData 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 4096长度。
+
+在. 企业引导企业实名认证后回调中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的<a href="https://qian.tencent.com/developers/company/callback_types_staffs" target="_blank">回调通知</a>模块。
      */
     function __construct()
     {
@@ -477,6 +493,10 @@ p.s. 如果上传授权书 ，需遵循以下条件
 
         if (array_key_exists("PowerOfAttorneys",$param) and $param["PowerOfAttorneys"] !== null) {
             $this->PowerOfAttorneys = $param["PowerOfAttorneys"];
+        }
+
+        if (array_key_exists("UserData",$param) and $param["UserData"] !== null) {
+            $this->UserData = $param["UserData"];
         }
     }
 }

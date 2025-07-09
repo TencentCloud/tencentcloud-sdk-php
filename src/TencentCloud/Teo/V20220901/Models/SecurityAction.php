@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDenyActionParameters(DenyActionParameters $DenyActionParameters) 设置当 Name 为 Deny 时的附加参数。
  * @method RedirectActionParameters getRedirectActionParameters() 获取当 Name 为 Redirect 时的附加参数。
  * @method void setRedirectActionParameters(RedirectActionParameters $RedirectActionParameters) 设置当 Name 为 Redirect 时的附加参数。
+ * @method AllowActionParameters getAllowActionParameters() 获取当 Name 为 Allow 时的附加参数。
+ * @method void setAllowActionParameters(AllowActionParameters $AllowActionParameters) 设置当 Name 为 Allow 时的附加参数。
  * @method ChallengeActionParameters getChallengeActionParameters() 获取当 Name 为 Challenge 时的附加参数。
  * @method void setChallengeActionParameters(ChallengeActionParameters $ChallengeActionParameters) 设置当 Name 为 Challenge 时的附加参数。
  * @method BlockIPActionParameters getBlockIPActionParameters() 获取待废弃，当 Name 为 BlockIP 时的附加参数。
@@ -81,6 +83,11 @@ class SecurityAction extends AbstractModel
     public $RedirectActionParameters;
 
     /**
+     * @var AllowActionParameters 当 Name 为 Allow 时的附加参数。
+     */
+    public $AllowActionParameters;
+
+    /**
      * @var ChallengeActionParameters 当 Name 为 Challenge 时的附加参数。
      */
     public $ChallengeActionParameters;
@@ -109,6 +116,7 @@ class SecurityAction extends AbstractModel
 <li>ManagedChallenge：待废弃，托管挑战。</li>
      * @param DenyActionParameters $DenyActionParameters 当 Name 为 Deny 时的附加参数。
      * @param RedirectActionParameters $RedirectActionParameters 当 Name 为 Redirect 时的附加参数。
+     * @param AllowActionParameters $AllowActionParameters 当 Name 为 Allow 时的附加参数。
      * @param ChallengeActionParameters $ChallengeActionParameters 当 Name 为 Challenge 时的附加参数。
      * @param BlockIPActionParameters $BlockIPActionParameters 待废弃，当 Name 为 BlockIP 时的附加参数。
      * @param ReturnCustomPageActionParameters $ReturnCustomPageActionParameters 待废弃，当 Name 为 ReturnCustomPage 时的附加参数。
@@ -138,6 +146,11 @@ class SecurityAction extends AbstractModel
         if (array_key_exists("RedirectActionParameters",$param) and $param["RedirectActionParameters"] !== null) {
             $this->RedirectActionParameters = new RedirectActionParameters();
             $this->RedirectActionParameters->deserialize($param["RedirectActionParameters"]);
+        }
+
+        if (array_key_exists("AllowActionParameters",$param) and $param["AllowActionParameters"] !== null) {
+            $this->AllowActionParameters = new AllowActionParameters();
+            $this->AllowActionParameters->deserialize($param["AllowActionParameters"]);
         }
 
         if (array_key_exists("ChallengeActionParameters",$param) and $param["ChallengeActionParameters"] !== null) {

@@ -63,6 +63,7 @@ use TencentCloud\Common\AbstractModel;
 - 16：Redis 6.2 内存版（集群架构）。
 - 17：Redis 7.0 内存版（标准架构）。
 - 18：Redis 7.0 内存版（集群架构）。
+- 200:Memcached 1.6 内存版（集群架构）。
  * @method void setType(integer $Type) 设置实例类型。
 - 2：Redis 2.8 内存版（标准架构）。
 - 3：CKV 3.2 内存版（标准架构）。
@@ -76,6 +77,7 @@ use TencentCloud\Common\AbstractModel;
 - 16：Redis 6.2 内存版（集群架构）。
 - 17：Redis 7.0 内存版（标准架构）。
 - 18：Redis 7.0 内存版（集群架构）。
+- 200:Memcached 1.6 内存版（集群架构）。
  * @method integer getAutoRenewFlag() 获取实例是否设置自动续费标识。<ul><li>1：设置自动续费。</li><li>0：未设置自动续费。</li></ul>
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置实例是否设置自动续费标识。<ul><li>1：设置自动续费。</li><li>0：未设置自动续费。</li></ul>
  * @method string getDeadlineTime() 获取包年包月计费实例到期的时间。
@@ -147,7 +149,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getClientLimitMax() 获取客户端最大连接数可设置的最大值。
  * @method void setClientLimitMax(integer $ClientLimitMax) 设置客户端最大连接数可设置的最大值。
  * @method array getNodeSet() 获取实例的节点详细信息。
+只有多可用区实例会返回。
  * @method void setNodeSet(array $NodeSet) 设置实例的节点详细信息。
+只有多可用区实例会返回。
  * @method string getRegion() 获取实例所在的地域信息，比如ap-guangzhou。
  * @method void setRegion(string $Region) 设置实例所在的地域信息，比如ap-guangzhou。
  * @method string getWanAddress() 获取外网地址。
@@ -259,6 +263,7 @@ class InstanceSet extends AbstractModel
 - 16：Redis 6.2 内存版（集群架构）。
 - 17：Redis 7.0 内存版（标准架构）。
 - 18：Redis 7.0 内存版（集群架构）。
+- 200:Memcached 1.6 内存版（集群架构）。
      */
     public $Type;
 
@@ -431,6 +436,7 @@ class InstanceSet extends AbstractModel
 
     /**
      * @var array 实例的节点详细信息。
+只有多可用区实例会返回。
      */
     public $NodeSet;
 
@@ -518,6 +524,7 @@ class InstanceSet extends AbstractModel
 - 16：Redis 6.2 内存版（集群架构）。
 - 17：Redis 7.0 内存版（标准架构）。
 - 18：Redis 7.0 内存版（集群架构）。
+- 200:Memcached 1.6 内存版（集群架构）。
      * @param integer $AutoRenewFlag 实例是否设置自动续费标识。<ul><li>1：设置自动续费。</li><li>0：未设置自动续费。</li></ul>
      * @param string $DeadlineTime 包年包月计费实例到期的时间。
      * @param string $Engine 引擎：社区版Redis、腾讯云CKV。
@@ -554,6 +561,7 @@ class InstanceSet extends AbstractModel
      * @param integer $ClientLimitMin 客户端最大连接数可设置的最小值。
      * @param integer $ClientLimitMax 客户端最大连接数可设置的最大值。
      * @param array $NodeSet 实例的节点详细信息。
+只有多可用区实例会返回。
      * @param string $Region 实例所在的地域信息，比如ap-guangzhou。
      * @param string $WanAddress 外网地址。
      * @param string $PolarisServer 北极星服务地址，内部使用。

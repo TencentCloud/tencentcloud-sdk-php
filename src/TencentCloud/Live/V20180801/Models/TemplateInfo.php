@@ -120,6 +120,18 @@ baseline/main/high。默认baseline
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDRMTracks(string $DRMTracks) 设置DRM 加密项，多个用|分割，可选值：AUDIO、SD、HD、UHD1、UHD2，后四个为一组，同组中的内容只能选一个。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getIsAdaptiveBitRate() 获取是否创建自适应码率，默认值 0。
+0：否。
+1：是。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIsAdaptiveBitRate(integer $IsAdaptiveBitRate) 设置是否创建自适应码率，默认值 0。
+0：否。
+1：是。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAdaptiveChildren() 获取自适应码率，子转码模板信息，当 IsAdaptiveBitRate 为 1 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAdaptiveChildren(array $AdaptiveChildren) 设置自适应码率，子转码模板信息，当 IsAdaptiveBitRate 为 1 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TemplateInfo extends AbstractModel
 {
@@ -266,6 +278,20 @@ baseline/main/high。默认baseline
     public $DRMTracks;
 
     /**
+     * @var integer 是否创建自适应码率，默认值 0。
+0：否。
+1：是。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IsAdaptiveBitRate;
+
+    /**
+     * @var array 自适应码率，子转码模板信息，当 IsAdaptiveBitRate 为 1 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AdaptiveChildren;
+
+    /**
      * @param string $Vcodec 视频编码：h264/h265/origin，默认h264。
 
 origin: 保持原始编码格式
@@ -315,6 +341,12 @@ baseline/main/high。默认baseline
      * @param string $DRMType DRM 加密类型，可选值：fairplay、normalaes、widevine。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DRMTracks DRM 加密项，多个用|分割，可选值：AUDIO、SD、HD、UHD1、UHD2，后四个为一组，同组中的内容只能选一个。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $IsAdaptiveBitRate 是否创建自适应码率，默认值 0。
+0：否。
+1：是。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AdaptiveChildren 自适应码率，子转码模板信息，当 IsAdaptiveBitRate 为 1 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -420,6 +452,19 @@ baseline/main/high。默认baseline
 
         if (array_key_exists("DRMTracks",$param) and $param["DRMTracks"] !== null) {
             $this->DRMTracks = $param["DRMTracks"];
+        }
+
+        if (array_key_exists("IsAdaptiveBitRate",$param) and $param["IsAdaptiveBitRate"] !== null) {
+            $this->IsAdaptiveBitRate = $param["IsAdaptiveBitRate"];
+        }
+
+        if (array_key_exists("AdaptiveChildren",$param) and $param["AdaptiveChildren"] !== null) {
+            $this->AdaptiveChildren = [];
+            foreach ($param["AdaptiveChildren"] as $key => $value){
+                $obj = new ChildTemplateInfo();
+                $obj->deserialize($value);
+                array_push($this->AdaptiveChildren, $obj);
+            }
         }
     }
 }

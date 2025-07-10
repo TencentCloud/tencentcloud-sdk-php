@@ -14,24 +14,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Nlp\V20190408\Models;
+namespace TencentCloud\Tione\V20211111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 通过关键词生成的句子信息
+ * 公有云数据源结构
  *
- * @method string getTargetText() 获取通过关键词生成的句子。
- * @method void setTargetText(string $TargetText) 设置通过关键词生成的句子。
+
  */
-class KeywordSentence extends AbstractModel
+class PublicDataSourceFS extends AbstractModel
 {
-    /**
-     * @var string 通过关键词生成的句子。
-     */
-    public $TargetText;
+
 
     /**
-     * @param string $TargetText 通过关键词生成的句子。
+
      */
     function __construct()
     {
@@ -46,8 +42,6 @@ class KeywordSentence extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TargetText",$param) and $param["TargetText"] !== null) {
-            $this->TargetText = $param["TargetText"];
-        }
+
     }
 }

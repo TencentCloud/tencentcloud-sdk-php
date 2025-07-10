@@ -43,6 +43,7 @@ class ThreadPicture extends AbstractModel
 
     /**
      * @var array 守护线程数 拼写错误，废弃
+     * @deprecated
      */
     public $DeamonThreadCount;
 

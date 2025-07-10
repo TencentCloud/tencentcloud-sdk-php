@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceName() 获取实例名称。
  * @method void setInstanceName(string $InstanceName) 设置实例名称。
- * @method integer getPayMode() 获取实例计费模式，0表示后付费，即按量计费。
- * @method void setPayMode(integer $PayMode) 设置实例计费模式，0表示后付费，即按量计费。
- * @method string getDiskType() 获取实例存储类型，填写CLOUD_HSSD，表示性能云存储。
- * @method void setDiskType(string $DiskType) 设置实例存储类型，填写CLOUD_HSSD，表示性能云存储。
+ * @method integer getPayMode() 获取实例计费模式，0表示后付费，即按量计费，1表示预付费，即包年包月。
+ * @method void setPayMode(integer $PayMode) 设置实例计费模式，0表示后付费，即按量计费，1表示预付费，即包年包月。
+ * @method string getDiskType() 获取实例存储类型，CLOUD_HSSD表示性能云存储， CLOUD_BSSD表示标准云存储。
+ * @method void setDiskType(string $DiskType) 设置实例存储类型，CLOUD_HSSD表示性能云存储， CLOUD_BSSD表示标准云存储。
  * @method integer getDiskSize() 获取实例单节点磁盘容量，单位GB，单节点磁盘容量需大于等于100，小于等于250*CPU核心数，容量调整步长为100。
  * @method void setDiskSize(integer $DiskSize) 设置实例单节点磁盘容量，单位GB，单节点磁盘容量需大于等于100，小于等于250*CPU核心数，容量调整步长为100。
  * @method string getNodeType() 获取实例节点规格，可填写4C16G、8C32G、16C64G、32C128G，不区分大小写。
@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrePaySetting(PrePaySetting $PrePaySetting) 设置预付费参数
  * @method string getClientToken() 获取唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808	
  * @method void setClientToken(string $ClientToken) 设置唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808	
+ * @method string getDeploymentMode() 获取部署模式
+ * @method void setDeploymentMode(string $DeploymentMode) 设置部署模式
  */
 class CreateSLInstanceRequest extends AbstractModel
 {
@@ -47,12 +49,12 @@ class CreateSLInstanceRequest extends AbstractModel
     public $InstanceName;
 
     /**
-     * @var integer 实例计费模式，0表示后付费，即按量计费。
+     * @var integer 实例计费模式，0表示后付费，即按量计费，1表示预付费，即包年包月。
      */
     public $PayMode;
 
     /**
-     * @var string 实例存储类型，填写CLOUD_HSSD，表示性能云存储。
+     * @var string 实例存储类型，CLOUD_HSSD表示性能云存储， CLOUD_BSSD表示标准云存储。
      */
     public $DiskType;
 
@@ -87,15 +89,21 @@ class CreateSLInstanceRequest extends AbstractModel
     public $ClientToken;
 
     /**
+     * @var string 部署模式
+     */
+    public $DeploymentMode;
+
+    /**
      * @param string $InstanceName 实例名称。
-     * @param integer $PayMode 实例计费模式，0表示后付费，即按量计费。
-     * @param string $DiskType 实例存储类型，填写CLOUD_HSSD，表示性能云存储。
+     * @param integer $PayMode 实例计费模式，0表示后付费，即按量计费，1表示预付费，即包年包月。
+     * @param string $DiskType 实例存储类型，CLOUD_HSSD表示性能云存储， CLOUD_BSSD表示标准云存储。
      * @param integer $DiskSize 实例单节点磁盘容量，单位GB，单节点磁盘容量需大于等于100，小于等于250*CPU核心数，容量调整步长为100。
      * @param string $NodeType 实例节点规格，可填写4C16G、8C32G、16C64G、32C128G，不区分大小写。
      * @param array $ZoneSettings 实例可用区详细配置，当前支持多可用区，可用区数量只能为1或3，包含区域名称，VPC信息、节点数量，其中所有区域节点总数需大于等于3，小于等于50。
      * @param array $Tags 实例要绑定的标签列表。
      * @param PrePaySetting $PrePaySetting 预付费参数
      * @param string $ClientToken 唯一随机标识，时效性为5分钟，需要调用者指定 防止客户端重复创建资源，例如 a9a90aa6-****-****-****-fae360632808	
+     * @param string $DeploymentMode 部署模式
      */
     function __construct()
     {
@@ -155,6 +163,10 @@ class CreateSLInstanceRequest extends AbstractModel
 
         if (array_key_exists("ClientToken",$param) and $param["ClientToken"] !== null) {
             $this->ClientToken = $param["ClientToken"];
+        }
+
+        if (array_key_exists("DeploymentMode",$param) and $param["DeploymentMode"] !== null) {
+            $this->DeploymentMode = $param["DeploymentMode"];
         }
     }
 }

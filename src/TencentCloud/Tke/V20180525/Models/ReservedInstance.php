@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) 设置集群 ID
  * @method string getNodeName() 获取节点名称
  * @method void setNodeName(string $NodeName) 设置节点名称
- * @method string getDeductStatus() 获取 上个周期预留券的抵扣状态，Deduct、NotDeduct
- * @method void setDeductStatus(string $DeductStatus) 设置 上个周期预留券的抵扣状态，Deduct、NotDeduct
+ * @method string getDeductStatus() 获取 上个周期预留券的抵扣状态，Deduct：已抵扣、NotDeduct：未抵扣
+ * @method void setDeductStatus(string $DeductStatus) 设置 上个周期预留券的抵扣状态，Deduct：已抵扣、NotDeduct：未抵扣
  */
 class ReservedInstance extends AbstractModel
 {
@@ -131,7 +131,7 @@ class ReservedInstance extends AbstractModel
     public $NodeName;
 
     /**
-     * @var string  上个周期预留券的抵扣状态，Deduct、NotDeduct
+     * @var string  上个周期预留券的抵扣状态，Deduct：已抵扣、NotDeduct：未抵扣
      */
     public $DeductStatus;
 
@@ -151,7 +151,7 @@ class ReservedInstance extends AbstractModel
      * @param integer $AutoRenewFlag 自动续费标记
      * @param string $ClusterId 集群 ID
      * @param string $NodeName 节点名称
-     * @param string $DeductStatus  上个周期预留券的抵扣状态，Deduct、NotDeduct
+     * @param string $DeductStatus  上个周期预留券的抵扣状态，Deduct：已抵扣、NotDeduct：未抵扣
      */
     function __construct()
     {

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAppBizId() 获取应用 ID
  * @method void setAppBizId(string $AppBizId) 设置应用 ID
- * @method string getAppType() 获取应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classifys-知识标签提取
- * @method void setAppType(string $AppType) 设置应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classifys-知识标签提取
+ * @method string getAppType() 获取应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classify-知识标签提取
+ * @method void setAppType(string $AppType) 设置应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classify-知识标签提取
  * @method BaseConfig getBaseConfig() 获取应用基础配置
  * @method void setBaseConfig(BaseConfig $BaseConfig) 设置应用基础配置
  * @method AppConfig getAppConfig() 获取应用配置
@@ -39,7 +39,7 @@ class ModifyAppRequest extends AbstractModel
     public $AppBizId;
 
     /**
-     * @var string 应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classifys-知识标签提取
+     * @var string 应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classify-知识标签提取
      */
     public $AppType;
 
@@ -60,7 +60,7 @@ class ModifyAppRequest extends AbstractModel
 
     /**
      * @param string $AppBizId 应用 ID
-     * @param string $AppType 应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classifys-知识标签提取
+     * @param string $AppType 应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classify-知识标签提取
      * @param BaseConfig $BaseConfig 应用基础配置
      * @param AppConfig $AppConfig 应用配置
      * @param string $LoginSubAccountUin 登录用户子账号(集成商模式必填)	

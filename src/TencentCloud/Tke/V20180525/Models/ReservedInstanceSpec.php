@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) 设置资源类型：common、amd、v100、t4、a10\*gnv4、a10\*gnv4v、a10\*pnv4、windows-common、windows-amd，common表示通用类型。
  * @method float getCpu() 获取核数
  * @method void setCpu(float $Cpu) 设置核数
- * @method float getMemory() 获取内存
- * @method void setMemory(float $Memory) 设置内存
+ * @method float getMemory() 获取内存，单位：GiB
+ * @method void setMemory(float $Memory) 设置内存，单位：GiB
  * @method float getGpu() 获取GPU卡数，当Type为GPU类型时设置。
  * @method void setGpu(float $Gpu) 设置GPU卡数，当Type为GPU类型时设置。
  */
@@ -42,7 +42,7 @@ class ReservedInstanceSpec extends AbstractModel
     public $Cpu;
 
     /**
-     * @var float 内存
+     * @var float 内存，单位：GiB
      */
     public $Memory;
 
@@ -54,7 +54,7 @@ class ReservedInstanceSpec extends AbstractModel
     /**
      * @param string $Type 资源类型：common、amd、v100、t4、a10\*gnv4、a10\*gnv4v、a10\*pnv4、windows-common、windows-amd，common表示通用类型。
      * @param float $Cpu 核数
-     * @param float $Memory 内存
+     * @param float $Memory 内存，单位：GiB
      * @param float $Gpu GPU卡数，当Type为GPU类型时设置。
      */
     function __construct()

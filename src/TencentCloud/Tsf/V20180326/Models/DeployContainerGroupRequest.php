@@ -257,11 +257,13 @@ class DeployContainerGroupRequest extends AbstractModel
 
     /**
      * @var VolumeInfo 数据卷信息-废弃，请用VolumeInfoList参数
+     * @deprecated
      */
     public $VolumeInfos;
 
     /**
      * @var VolumeMountInfo 数据卷挂载点信息-废弃，请用VolumeMountInfoList参数
+     * @deprecated
      */
     public $VolumeMountInfos;
 

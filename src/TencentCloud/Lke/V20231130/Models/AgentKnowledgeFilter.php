@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDocAndAnswer(AgentKnowledgeFilterDocAndAnswer $DocAndAnswer) 设置文档和问答过滤器
  * @method AgentKnowledgeFilterTag getTag() 获取标签过滤器
  * @method void setTag(AgentKnowledgeFilterTag $Tag) 设置标签过滤器
+ * @method array getKnowledgeList() 获取知识库列表
+ * @method void setKnowledgeList(array $KnowledgeList) 设置知识库列表
+ * @method boolean getAllKnowledge() 获取是否检索全部知识
+ * @method void setAllKnowledge(boolean $AllKnowledge) 设置是否检索全部知识
  */
 class AgentKnowledgeFilter extends AbstractModel
 {
@@ -45,9 +49,21 @@ class AgentKnowledgeFilter extends AbstractModel
     public $Tag;
 
     /**
+     * @var array 知识库列表
+     */
+    public $KnowledgeList;
+
+    /**
+     * @var boolean 是否检索全部知识
+     */
+    public $AllKnowledge;
+
+    /**
      * @param integer $FilterType 知识检索筛选方式; 0: 全部知识; 1:按文档和问答; 2: 按标签
      * @param AgentKnowledgeFilterDocAndAnswer $DocAndAnswer 文档和问答过滤器
      * @param AgentKnowledgeFilterTag $Tag 标签过滤器
+     * @param array $KnowledgeList 知识库列表
+     * @param boolean $AllKnowledge 是否检索全部知识
      */
     function __construct()
     {
@@ -74,6 +90,19 @@ class AgentKnowledgeFilter extends AbstractModel
         if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
             $this->Tag = new AgentKnowledgeFilterTag();
             $this->Tag->deserialize($param["Tag"]);
+        }
+
+        if (array_key_exists("KnowledgeList",$param) and $param["KnowledgeList"] !== null) {
+            $this->KnowledgeList = [];
+            foreach ($param["KnowledgeList"] as $key => $value){
+                $obj = new AgentKnowledge();
+                $obj->deserialize($value);
+                array_push($this->KnowledgeList, $obj);
+            }
+        }
+
+        if (array_key_exists("AllKnowledge",$param) and $param["AllKnowledge"] !== null) {
+            $this->AllKnowledge = $param["AllKnowledge"];
         }
     }
 }

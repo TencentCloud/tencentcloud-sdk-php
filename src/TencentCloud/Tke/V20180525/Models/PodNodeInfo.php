@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() 获取集群 ID
  * @method void setClusterId(string $ClusterId) 设置集群 ID
- * @method string getNodeName() 获取 节点名称
- * @method void setNodeName(string $NodeName) 设置 节点名称
+ * @method string getNodeName() 获取节点 ID
+ * @method void setNodeName(string $NodeName) 设置节点 ID
  * @method string getZone() 获取可用区
  * @method void setZone(string $Zone) 设置可用区
  * @method string getNamespace() 获取命名空间
@@ -39,7 +39,7 @@ class PodNodeInfo extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string  节点名称
+     * @var string 节点 ID
      */
     public $NodeName;
 
@@ -60,7 +60,7 @@ class PodNodeInfo extends AbstractModel
 
     /**
      * @param string $ClusterId 集群 ID
-     * @param string $NodeName  节点名称
+     * @param string $NodeName 节点 ID
      * @param string $Zone 可用区
      * @param string $Namespace 命名空间
      * @param string $Name  Pod 名称

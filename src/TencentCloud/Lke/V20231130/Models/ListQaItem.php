@@ -66,6 +66,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSimilarQuestionTips(string $SimilarQuestionTips) 设置返回问答关联的相似问,联动搜索,仅展示一条
  * @method boolean getIsDisabled() 获取问答是否停用，false:未停用，ture:已停用
  * @method void setIsDisabled(boolean $IsDisabled) 设置问答是否停用，false:未停用，ture:已停用
+ * @method string getStaffName() 获取员工名称
+ * @method void setStaffName(string $StaffName) 设置员工名称
  */
 class ListQaItem extends AbstractModel
 {
@@ -185,6 +187,11 @@ class ListQaItem extends AbstractModel
     public $IsDisabled;
 
     /**
+     * @var string 员工名称
+     */
+    public $StaffName;
+
+    /**
      * @param string $QaBizId 问答ID
      * @param string $Question 问题
      * @param string $Answer 答案
@@ -208,6 +215,7 @@ class ListQaItem extends AbstractModel
      * @param integer $SimilarQuestionNum 相似问个数
      * @param string $SimilarQuestionTips 返回问答关联的相似问,联动搜索,仅展示一条
      * @param boolean $IsDisabled 问答是否停用，false:未停用，ture:已停用
+     * @param string $StaffName 员工名称
      */
     function __construct()
     {
@@ -317,6 +325,10 @@ class ListQaItem extends AbstractModel
 
         if (array_key_exists("IsDisabled",$param) and $param["IsDisabled"] !== null) {
             $this->IsDisabled = $param["IsDisabled"];
+        }
+
+        if (array_key_exists("StaffName",$param) and $param["StaffName"] !== null) {
+            $this->StaffName = $param["StaffName"];
         }
     }
 }

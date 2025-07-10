@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 包年包月配置
  *
- * @method integer getPeriod() 获取购买实例的时长，单位：月。取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60。
- * @method void setPeriod(integer $Period) 设置购买实例的时长，单位：月。取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60。
+ * @method integer getPeriod() 获取购买实例的时长，单位：月。取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36。
+ * @method void setPeriod(integer $Period) 设置购买实例的时长，单位：月。取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36。
  * @method string getRenewFlag() 获取自动续费标识。取值范围：
 NOTIFY_AND_AUTO_RENEW：通知过期且自动续费
 NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费
@@ -38,7 +38,7 @@ DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费
 class InstanceChargePrepaid extends AbstractModel
 {
     /**
-     * @var integer 购买实例的时长，单位：月。取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60。
+     * @var integer 购买实例的时长，单位：月。取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36。
      */
     public $Period;
 
@@ -53,7 +53,7 @@ DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费
     public $RenewFlag;
 
     /**
-     * @param integer $Period 购买实例的时长，单位：月。取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36, 48, 60。
+     * @param integer $Period 购买实例的时长，单位：月。取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36。
      * @param string $RenewFlag 自动续费标识。取值范围：
 NOTIFY_AND_AUTO_RENEW：通知过期且自动续费
 NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费

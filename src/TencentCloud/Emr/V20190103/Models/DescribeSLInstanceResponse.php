@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置自动续费标记， 0：表示通知即将过期，但不自动续费 1：表示通知即将过期，而且自动续费 2：表示不通知即将过期，也不自动续费，若业务无续费概念为0
  * @method integer getNodeNum() 获取实例节点总数。
  * @method void setNodeNum(integer $NodeNum) 设置实例节点总数。
+ * @method array getSLInstance() 获取Serverless Instance infomation
+ * @method void setSLInstance(array $SLInstance) 设置Serverless Instance infomation
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -148,6 +150,11 @@ class DescribeSLInstanceResponse extends AbstractModel
     public $NodeNum;
 
     /**
+     * @var array Serverless Instance infomation
+     */
+    public $SLInstance;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -171,6 +178,7 @@ class DescribeSLInstanceResponse extends AbstractModel
      * @param integer $Status 实例状态码，-2:  "TERMINATED", 2:   "RUNNING", 14:  "TERMINATING", 19:  "ISOLATING", 22:  "ADJUSTING", 201: "ISOLATED"。
      * @param integer $AutoRenewFlag 自动续费标记， 0：表示通知即将过期，但不自动续费 1：表示通知即将过期，而且自动续费 2：表示不通知即将过期，也不自动续费，若业务无续费概念为0
      * @param integer $NodeNum 实例节点总数。
+     * @param array $SLInstance Serverless Instance infomation
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -262,6 +270,15 @@ class DescribeSLInstanceResponse extends AbstractModel
 
         if (array_key_exists("NodeNum",$param) and $param["NodeNum"] !== null) {
             $this->NodeNum = $param["NodeNum"];
+        }
+
+        if (array_key_exists("SLInstance",$param) and $param["SLInstance"] !== null) {
+            $this->SLInstance = [];
+            foreach ($param["SLInstance"] as $key => $value){
+                $obj = new SLInstance();
+                $obj->deserialize($value);
+                array_push($this->SLInstance, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) 设置可用区
  * @method string getClusterId() 获取集群 ID
  * @method void setClusterId(string $ClusterId) 设置集群 ID
- * @method string getNodeName() 获取 节点名称
- * @method void setNodeName(string $NodeName) 设置 节点名称
+ * @method string getNodeName() 获取节点 ID
+ * @method void setNodeName(string $NodeName) 设置节点 ID
  */
 class DescribePodDeductionRateRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DescribePodDeductionRateRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string  节点名称
+     * @var string 节点 ID
      */
     public $NodeName;
 
     /**
      * @param string $Zone 可用区
      * @param string $ClusterId 集群 ID
-     * @param string $NodeName  节点名称
+     * @param string $NodeName 节点 ID
      */
     function __construct()
     {

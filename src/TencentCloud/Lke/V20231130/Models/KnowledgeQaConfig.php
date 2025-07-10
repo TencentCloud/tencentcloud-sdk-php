@@ -106,6 +106,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getShareKnowledgeBases() 获取共享知识库关联配置
  * @method void setShareKnowledgeBases(array $ShareKnowledgeBases) 设置共享知识库关联配置
+ * @method BackgroundImageConfig getBackgroundImage() 获取背景图相关信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBackgroundImage(BackgroundImageConfig $BackgroundImage) 设置背景图相关信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getOpeningQuestions() 获取开场问题
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOpeningQuestions(array $OpeningQuestions) 设置开场问题
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class KnowledgeQaConfig extends AbstractModel
 {
@@ -217,6 +225,18 @@ class KnowledgeQaConfig extends AbstractModel
     public $ShareKnowledgeBases;
 
     /**
+     * @var BackgroundImageConfig 背景图相关信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BackgroundImage;
+
+    /**
+     * @var array 开场问题
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OpeningQuestions;
+
+    /**
      * @param string $Greeting 欢迎语，200字符以内
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RoleDescription 角色描述，4000字符以内。通过填写描述，设定应用的 #角色名称、 #风格特点 及可达成的#意图。建议按照下面的模板填写，且自定义意图建议不超过5个。
@@ -260,6 +280,10 @@ class KnowledgeQaConfig extends AbstractModel
      * @param AICallConfig $AiCall 配置语音通话参数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ShareKnowledgeBases 共享知识库关联配置
+     * @param BackgroundImageConfig $BackgroundImage 背景图相关信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $OpeningQuestions 开场问题
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -364,6 +388,15 @@ class KnowledgeQaConfig extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ShareKnowledgeBases, $obj);
             }
+        }
+
+        if (array_key_exists("BackgroundImage",$param) and $param["BackgroundImage"] !== null) {
+            $this->BackgroundImage = new BackgroundImageConfig();
+            $this->BackgroundImage->deserialize($param["BackgroundImage"]);
+        }
+
+        if (array_key_exists("OpeningQuestions",$param) and $param["OpeningQuestions"] !== null) {
+            $this->OpeningQuestions = $param["OpeningQuestions"];
         }
     }
 }

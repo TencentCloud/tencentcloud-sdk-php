@@ -135,6 +135,7 @@ class ImageRepository extends AbstractModel
 
     /**
      * @var ScalableRule ApplicationName值（废弃）
+     * @deprecated
      */
     public $ApplicationName;
 

@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method float getCpu() 获取Pod的 CPU
  * @method void setCpu(float $Cpu) 设置Pod的 CPU
- * @method float getMemory() 获取Pod 的内存
- * @method void setMemory(float $Memory) 设置Pod 的内存
- * @method string getType() 获取 Pod 的类型
- * @method void setType(string $Type) 设置 Pod 的类型
+ * @method float getMemory() 获取Pod 的内存，单位：GiB
+ * @method void setMemory(float $Memory) 设置Pod 的内存，单位：GiB
+ * @method string getType() 获取 Pod 的类型， intel，amd，windows-common，windows-amd，sa4，sa5，s7，s8，t4，v100，l20，l40，a10\*gnv4，a10\*gnv4v，a10\*pnv4
+ * @method void setType(string $Type) 设置 Pod 的类型， intel，amd，windows-common，windows-amd，sa4，sa5，s7，s8，t4，v100，l20，l40，a10\*gnv4，a10\*gnv4v，a10\*pnv4
  * @method string getGpuNum() 获取 Pod 的 GPU 卡数，Pod 类型为 GPU 时有效。
  * @method void setGpuNum(string $GpuNum) 设置 Pod 的 GPU 卡数，Pod 类型为 GPU 时有效。
  * @method integer getTotalNum() 获取这种规格的 Pod总数
@@ -41,12 +41,12 @@ class PodDeductionRate extends AbstractModel
     public $Cpu;
 
     /**
-     * @var float Pod 的内存
+     * @var float Pod 的内存，单位：GiB
      */
     public $Memory;
 
     /**
-     * @var string  Pod 的类型
+     * @var string  Pod 的类型， intel，amd，windows-common，windows-amd，sa4，sa5，s7，s8，t4，v100，l20，l40，a10\*gnv4，a10\*gnv4v，a10\*pnv4
      */
     public $Type;
 
@@ -67,8 +67,8 @@ class PodDeductionRate extends AbstractModel
 
     /**
      * @param float $Cpu Pod的 CPU
-     * @param float $Memory Pod 的内存
-     * @param string $Type  Pod 的类型
+     * @param float $Memory Pod 的内存，单位：GiB
+     * @param string $Type  Pod 的类型， intel，amd，windows-common，windows-amd，sa4，sa5，s7，s8，t4，v100，l20，l40，a10\*gnv4，a10\*gnv4v，a10\*pnv4
      * @param string $GpuNum  Pod 的 GPU 卡数，Pod 类型为 GPU 时有效。
      * @param integer $TotalNum 这种规格的 Pod总数
      * @param integer $DeductionNum 这种规格的 Pod被预留券抵扣的数量

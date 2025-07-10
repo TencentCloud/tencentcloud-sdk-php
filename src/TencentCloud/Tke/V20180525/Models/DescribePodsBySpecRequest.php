@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method float getCpu() 获取核数
  * @method void setCpu(float $Cpu) 设置核数
- * @method float getMemory() 获取内存
- * @method void setMemory(float $Memory) 设置内存
- * @method string getGpuNum() 获取卡数，有0.25、0.5、1、2、4等
- * @method void setGpuNum(string $GpuNum) 设置卡数，有0.25、0.5、1、2、4等
+ * @method float getMemory() 获取内存，单位：GiB
+ * @method void setMemory(float $Memory) 设置内存，单位：GiB
+ * @method string getGpuNum() 获取卡数，有0.25、0.5、1、2、4和8
+ * @method void setGpuNum(string $GpuNum) 设置卡数，有0.25、0.5、1、2、4和8
  * @method string getZone() 获取可用区
  * @method void setZone(string $Zone) 设置可用区
  * @method string getClusterId() 获取集群 ID
  * @method void setClusterId(string $ClusterId) 设置集群 ID
- * @method string getNodeName() 获取节点名称
- * @method void setNodeName(string $NodeName) 设置节点名称
+ * @method string getNodeName() 获取节点 ID
+ * @method void setNodeName(string $NodeName) 设置节点 ID
  * @method integer getOffset() 获取偏移量，默认0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认0。
  * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
@@ -69,12 +69,12 @@ class DescribePodsBySpecRequest extends AbstractModel
     public $Cpu;
 
     /**
-     * @var float 内存
+     * @var float 内存，单位：GiB
      */
     public $Memory;
 
     /**
-     * @var string 卡数，有0.25、0.5、1、2、4等
+     * @var string 卡数，有0.25、0.5、1、2、4和8
      */
     public $GpuNum;
 
@@ -89,7 +89,7 @@ class DescribePodsBySpecRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string 节点名称
+     * @var string 节点 ID
      */
     public $NodeName;
 
@@ -121,11 +121,11 @@ pod-not-deduct
 
     /**
      * @param float $Cpu 核数
-     * @param float $Memory 内存
-     * @param string $GpuNum 卡数，有0.25、0.5、1、2、4等
+     * @param float $Memory 内存，单位：GiB
+     * @param string $GpuNum 卡数，有0.25、0.5、1、2、4和8
      * @param string $Zone 可用区
      * @param string $ClusterId 集群 ID
-     * @param string $NodeName 节点名称
+     * @param string $NodeName 节点 ID
      * @param integer $Offset 偏移量，默认0。
      * @param integer $Limit 返回数量，默认为20，最大值为100。
      * @param array $Filters pod-type

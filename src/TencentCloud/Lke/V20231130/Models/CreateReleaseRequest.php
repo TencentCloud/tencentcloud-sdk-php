@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBotBizId(string $BotBizId) 设置应用ID
  * @method string getDesc() 获取发布描述
  * @method void setDesc(string $Desc) 设置发布描述
+ * @method array getChannelBizIds() 获取渠道业务ID
+ * @method void setChannelBizIds(array $ChannelBizIds) 设置渠道业务ID
  */
 class CreateReleaseRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreateReleaseRequest extends AbstractModel
     public $Desc;
 
     /**
+     * @var array 渠道业务ID
+     */
+    public $ChannelBizIds;
+
+    /**
      * @param string $BotBizId 应用ID
      * @param string $Desc 发布描述
+     * @param array $ChannelBizIds 渠道业务ID
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class CreateReleaseRequest extends AbstractModel
 
         if (array_key_exists("Desc",$param) and $param["Desc"] !== null) {
             $this->Desc = $param["Desc"];
+        }
+
+        if (array_key_exists("ChannelBizIds",$param) and $param["ChannelBizIds"] !== null) {
+            $this->ChannelBizIds = $param["ChannelBizIds"];
         }
     }
 }

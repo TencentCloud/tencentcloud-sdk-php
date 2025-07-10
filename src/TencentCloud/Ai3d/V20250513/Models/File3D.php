@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 3D文件
  *
- * @method string getType() 获取3D文件的格式。取值范围：OBJ
- * @method void setType(string $Type) 设置3D文件的格式。取值范围：OBJ
+ * @method string getType() 获取文件格式
+ * @method void setType(string $Type) 设置文件格式
  * @method string getUrl() 获取文件的Url（有效期24小时）
  * @method void setUrl(string $Url) 设置文件的Url（有效期24小时）
  * @method string getPreviewImageUrl() 获取预览图片Url
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class File3D extends AbstractModel
 {
     /**
-     * @var string 3D文件的格式。取值范围：OBJ
+     * @var string 文件格式
      */
     public $Type;
 
@@ -45,7 +45,7 @@ class File3D extends AbstractModel
     public $PreviewImageUrl;
 
     /**
-     * @param string $Type 3D文件的格式。取值范围：OBJ
+     * @param string $Type 文件格式
      * @param string $Url 文件的Url（有效期24小时）
      * @param string $PreviewImageUrl 预览图片Url
      */

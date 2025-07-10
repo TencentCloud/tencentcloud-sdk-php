@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePodChargeInfo请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
+ * @method string getClusterId() 获取集群 ID。TKE 集群可通过 [DescribeClusters](https://cloud.tencent.com/document/api/457/31862) 接口返回值中的ClusterId获取。
+ * @method void setClusterId(string $ClusterId) 设置集群 ID。TKE 集群可通过 [DescribeClusters](https://cloud.tencent.com/document/api/457/31862) 接口返回值中的ClusterId获取。
  * @method string getNamespace() 获取命名空间
  * @method void setNamespace(string $Namespace) 设置命名空间
  * @method string getName() 获取Pod名称
  * @method void setName(string $Name) 设置Pod名称
- * @method array getUids() 获取Pod的Uid
- * @method void setUids(array $Uids) 设置Pod的Uid
+ * @method array getUids() 获取Pod的Uid，可以通过Uids 来批量查询，也可以通过 Namespace 和 Name 来查询某个 Pod 的计费信息。Uids 不传时，Namespace 和 Name 必须同时传。
+ * @method void setUids(array $Uids) 设置Pod的Uid，可以通过Uids 来批量查询，也可以通过 Namespace 和 Name 来查询某个 Pod 的计费信息。Uids 不传时，Namespace 和 Name 必须同时传。
  */
 class DescribePodChargeInfoRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string 集群 ID。TKE 集群可通过 [DescribeClusters](https://cloud.tencent.com/document/api/457/31862) 接口返回值中的ClusterId获取。
      */
     public $ClusterId;
 
@@ -47,15 +47,15 @@ class DescribePodChargeInfoRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var array Pod的Uid
+     * @var array Pod的Uid，可以通过Uids 来批量查询，也可以通过 Namespace 和 Name 来查询某个 Pod 的计费信息。Uids 不传时，Namespace 和 Name 必须同时传。
      */
     public $Uids;
 
     /**
-     * @param string $ClusterId 集群ID
+     * @param string $ClusterId 集群 ID。TKE 集群可通过 [DescribeClusters](https://cloud.tencent.com/document/api/457/31862) 接口返回值中的ClusterId获取。
      * @param string $Namespace 命名空间
      * @param string $Name Pod名称
-     * @param array $Uids Pod的Uid
+     * @param array $Uids Pod的Uid，可以通过Uids 来批量查询，也可以通过 Namespace 和 Name 来查询某个 Pod 的计费信息。Uids 不传时，Namespace 和 Name 必须同时传。
      */
     function __construct()
     {

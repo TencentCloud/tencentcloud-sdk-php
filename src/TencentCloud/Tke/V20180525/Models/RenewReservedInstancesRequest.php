@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RenewReservedInstances请求参数结构体
  *
- * @method array getReservedInstanceIds() 获取预留券实例ID，每次请求实例的上限为100。
- * @method void setReservedInstanceIds(array $ReservedInstanceIds) 设置预留券实例ID，每次请求实例的上限为100。
+ * @method array getReservedInstanceIds() 获取预留券实例ID。可通过 [DescribeReservedInstances](https://cloud.tencent.com/document/product/457/99162) 接口返回值中的ReservedInstanceId获取，每次请求实例的上限为100。
+ * @method void setReservedInstanceIds(array $ReservedInstanceIds) 设置预留券实例ID。可通过 [DescribeReservedInstances](https://cloud.tencent.com/document/product/457/99162) 接口返回值中的ReservedInstanceId获取，每次请求实例的上限为100。
  * @method InstanceChargePrepaid getInstanceChargePrepaid() 获取预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的续费时长、是否设置自动续费等属性。
  * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) 设置预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的续费时长、是否设置自动续费等属性。
  * @method string getClientToken() 获取用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class RenewReservedInstancesRequest extends AbstractModel
 {
     /**
-     * @var array 预留券实例ID，每次请求实例的上限为100。
+     * @var array 预留券实例ID。可通过 [DescribeReservedInstances](https://cloud.tencent.com/document/product/457/99162) 接口返回值中的ReservedInstanceId获取，每次请求实例的上限为100。
      */
     public $ReservedInstanceIds;
 
@@ -45,7 +45,7 @@ class RenewReservedInstancesRequest extends AbstractModel
     public $ClientToken;
 
     /**
-     * @param array $ReservedInstanceIds 预留券实例ID，每次请求实例的上限为100。
+     * @param array $ReservedInstanceIds 预留券实例ID。可通过 [DescribeReservedInstances](https://cloud.tencent.com/document/product/457/99162) 接口返回值中的ReservedInstanceId获取，每次请求实例的上限为100。
      * @param InstanceChargePrepaid $InstanceChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的续费时长、是否设置自动续费等属性。
      * @param string $ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
      */

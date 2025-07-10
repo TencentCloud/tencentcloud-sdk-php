@@ -156,8 +156,8 @@ https://cloud.tencent.com/document/product/267/56208
 注：
 1. 该自定义 ID 为可选参数，如果传入，请确保该账号下传入的 ID 唯一。
 2. 该自定义 ID 用于防止重复发起请求时产生重复任务。后面也可以用 SpecifyTaskId 来修改或删除任务。
- * @method string getComment() 获取任务描述，限制 512 字节。
- * @method void setComment(string $Comment) 设置任务描述，限制 512 字节。
+ * @method string getComment() 获取任务描述，限制 512 字节。不可以使用特殊字符，如Unicode的特殊字符集。
+ * @method void setComment(string $Comment) 设置任务描述，限制 512 字节。不可以使用特殊字符，如Unicode的特殊字符集。
  * @method string getToUrl() 获取完整目标 URL 地址。
 用法注意：如果使用该参数来传完整目标地址，则 DomainName, AppName, StreamName 需要传入空字符串，任务将会使用该 ToUrl 参数指定的目标地址。
 
@@ -360,7 +360,7 @@ https://cloud.tencent.com/document/product/267/56208
     public $SpecifyTaskId;
 
     /**
-     * @var string 任务描述，限制 512 字节。
+     * @var string 任务描述，限制 512 字节。不可以使用特殊字符，如Unicode的特殊字符集。
      */
     public $Comment;
 
@@ -508,7 +508,7 @@ https://cloud.tencent.com/document/product/267/56208
 注：
 1. 该自定义 ID 为可选参数，如果传入，请确保该账号下传入的 ID 唯一。
 2. 该自定义 ID 用于防止重复发起请求时产生重复任务。后面也可以用 SpecifyTaskId 来修改或删除任务。
-     * @param string $Comment 任务描述，限制 512 字节。
+     * @param string $Comment 任务描述，限制 512 字节。不可以使用特殊字符，如Unicode的特殊字符集。
      * @param string $ToUrl 完整目标 URL 地址。
 用法注意：如果使用该参数来传完整目标地址，则 DomainName, AppName, StreamName 需要传入空字符串，任务将会使用该 ToUrl 参数指定的目标地址。
 

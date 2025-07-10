@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsolateTime(string $IsolateTime) 设置隔离时间，未隔离返回0000-00-00 00:00:00。
  * @method string getExpireTime() 获取过期时间，后付费返回0000-00-00 00:00:00
  * @method void setExpireTime(string $ExpireTime) 设置过期时间，后付费返回0000-00-00 00:00:00
+ * @method string getDeployRole() 获取主备部署角色
+ * @method void setDeployRole(string $DeployRole) 设置主备部署角色
  */
 class SLInstanceInfo extends AbstractModel
 {
@@ -163,6 +165,11 @@ class SLInstanceInfo extends AbstractModel
     public $ExpireTime;
 
     /**
+     * @var string 主备部署角色
+     */
+    public $DeployRole;
+
+    /**
      * @param string $ClusterId 集群实例字符串ID
      * @param integer $Id 集群实例数字ID
      * @param string $StatusDesc 状态描述
@@ -184,6 +191,7 @@ class SLInstanceInfo extends AbstractModel
      * @param integer $AutoRenewFlag 自动续费标记， 0：表示通知即将过期，但不自动续费 1：表示通知即将过期，而且自动续费 2：表示不通知即将过期，也不自动续费，若业务无续费概念，设置为0
      * @param string $IsolateTime 隔离时间，未隔离返回0000-00-00 00:00:00。
      * @param string $ExpireTime 过期时间，后付费返回0000-00-00 00:00:00
+     * @param string $DeployRole 主备部署角色
      */
     function __construct()
     {
@@ -282,6 +290,10 @@ class SLInstanceInfo extends AbstractModel
 
         if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
             $this->ExpireTime = $param["ExpireTime"];
+        }
+
+        if (array_key_exists("DeployRole",$param) and $param["DeployRole"] !== null) {
+            $this->DeployRole = $param["DeployRole"];
         }
     }
 }

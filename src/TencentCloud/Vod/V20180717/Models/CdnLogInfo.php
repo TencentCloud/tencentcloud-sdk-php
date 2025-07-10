@@ -23,9 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDate() 获取日志所属日期， 格式为：yyyy-MM-dd ，如2018-03-01。
  * @method void setDate(string $Date) 设置日志所属日期， 格式为：yyyy-MM-dd ，如2018-03-01。
  * @method string getName() 获取日志名称，格式为：日期小时-域名
-如 2018120101-test.vod2.mqcloud.com。
+如 example.com。
  * @method void setName(string $Name) 设置日志名称，格式为：日期小时-域名
-如 2018120101-test.vod2.mqcloud.com。
+如 example.com。
  * @method string getUrl() 获取日志下载链接，24小时内下载有效。
  * @method void setUrl(string $Url) 设置日志下载链接，24小时内下载有效。
  * @method string getStartTime() 获取日志起始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
@@ -42,7 +42,7 @@ class CdnLogInfo extends AbstractModel
 
     /**
      * @var string 日志名称，格式为：日期小时-域名
-如 2018120101-test.vod2.mqcloud.com。
+如 example.com。
      */
     public $Name;
 
@@ -64,7 +64,7 @@ class CdnLogInfo extends AbstractModel
     /**
      * @param string $Date 日志所属日期， 格式为：yyyy-MM-dd ，如2018-03-01。
      * @param string $Name 日志名称，格式为：日期小时-域名
-如 2018120101-test.vod2.mqcloud.com。
+如 example.com。
      * @param string $Url 日志下载链接，24小时内下载有效。
      * @param string $StartTime 日志起始时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。
      * @param string $EndTime 日志结束时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F)。

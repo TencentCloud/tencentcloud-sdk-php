@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyReservedInstanceScope请求参数结构体
  *
- * @method array getReservedInstanceIds() 获取预留券唯一 ID
- * @method void setReservedInstanceIds(array $ReservedInstanceIds) 设置预留券唯一 ID
+ * @method array getReservedInstanceIds() 获取预留券实例ID。可通过 [DescribeReservedInstances](https://cloud.tencent.com/document/product/457/99162) 接口返回值中的ReservedInstanceId获取。
+ * @method void setReservedInstanceIds(array $ReservedInstanceIds) 设置预留券实例ID。可通过 [DescribeReservedInstances](https://cloud.tencent.com/document/product/457/99162) 接口返回值中的ReservedInstanceId获取。
  * @method ReservedInstanceScope getReservedInstanceScope() 获取预留券抵扣范围信息
  * @method void setReservedInstanceScope(ReservedInstanceScope $ReservedInstanceScope) 设置预留券抵扣范围信息
  */
 class ModifyReservedInstanceScopeRequest extends AbstractModel
 {
     /**
-     * @var array 预留券唯一 ID
+     * @var array 预留券实例ID。可通过 [DescribeReservedInstances](https://cloud.tencent.com/document/product/457/99162) 接口返回值中的ReservedInstanceId获取。
      */
     public $ReservedInstanceIds;
 
@@ -38,7 +38,7 @@ class ModifyReservedInstanceScopeRequest extends AbstractModel
     public $ReservedInstanceScope;
 
     /**
-     * @param array $ReservedInstanceIds 预留券唯一 ID
+     * @param array $ReservedInstanceIds 预留券实例ID。可通过 [DescribeReservedInstances](https://cloud.tencent.com/document/product/457/99162) 接口返回值中的ReservedInstanceId获取。
      * @param ReservedInstanceScope $ReservedInstanceScope 预留券抵扣范围信息
      */
     function __construct()

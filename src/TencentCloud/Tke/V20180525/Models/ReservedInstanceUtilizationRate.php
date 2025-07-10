@@ -26,18 +26,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNum(integer $Num) 设置预留券数量
  * @method float getCPU() 获取核数
  * @method void setCPU(float $CPU) 设置核数
- * @method float getMemory() 获取内存
- * @method void setMemory(float $Memory) 设置内存
- * @method string getType() 获取 预留券类型
- * @method void setType(string $Type) 设置 预留券类型
+ * @method float getMemory() 获取内存，单位：GiB
+ * @method void setMemory(float $Memory) 设置内存，单位：GiB
+ * @method string getType() 获取 预留券类型, common：CPU通用，amd：AMD专用，windows-common: Windows容器 CPU通用，windows-amd：Windows容器 AMD专用，sa4，sa5，s7，s8，t4，v100，l20，l40，a10\*gnv4，a10\*gnv4v，a10\*pnv4
+ * @method void setType(string $Type) 设置 预留券类型, common：CPU通用，amd：AMD专用，windows-common: Windows容器 CPU通用，windows-amd：Windows容器 AMD专用，sa4，sa5，s7，s8，t4，v100，l20，l40，a10\*gnv4，a10\*gnv4v，a10\*pnv4
  * @method string getGpuNum() 获取GPU 卡数
  * @method void setGpuNum(string $GpuNum) 设置GPU 卡数
  * @method string getZone() 获取可用区
  * @method void setZone(string $Zone) 设置可用区
  * @method string getClusterId() 获取集群 ID
  * @method void setClusterId(string $ClusterId) 设置集群 ID
- * @method string getNodeName() 获取节点名称
- * @method void setNodeName(string $NodeName) 设置节点名称
+ * @method string getNodeName() 获取节点 ID
+ * @method void setNodeName(string $NodeName) 设置节点 ID
  * @method integer getPodNum() 获取Pod 数量
  * @method void setPodNum(integer $PodNum) 设置Pod 数量
  */
@@ -59,12 +59,12 @@ class ReservedInstanceUtilizationRate extends AbstractModel
     public $CPU;
 
     /**
-     * @var float 内存
+     * @var float 内存，单位：GiB
      */
     public $Memory;
 
     /**
-     * @var string  预留券类型
+     * @var string  预留券类型, common：CPU通用，amd：AMD专用，windows-common: Windows容器 CPU通用，windows-amd：Windows容器 AMD专用，sa4，sa5，s7，s8，t4，v100，l20，l40，a10\*gnv4，a10\*gnv4v，a10\*pnv4
      */
     public $Type;
 
@@ -84,7 +84,7 @@ class ReservedInstanceUtilizationRate extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string 节点名称
+     * @var string 节点 ID
      */
     public $NodeName;
 
@@ -97,12 +97,12 @@ class ReservedInstanceUtilizationRate extends AbstractModel
      * @param float $Rate 使用率
      * @param integer $Num 预留券数量
      * @param float $CPU 核数
-     * @param float $Memory 内存
-     * @param string $Type  预留券类型
+     * @param float $Memory 内存，单位：GiB
+     * @param string $Type  预留券类型, common：CPU通用，amd：AMD专用，windows-common: Windows容器 CPU通用，windows-amd：Windows容器 AMD专用，sa4，sa5，s7，s8，t4，v100，l20，l40，a10\*gnv4，a10\*gnv4v，a10\*pnv4
      * @param string $GpuNum GPU 卡数
      * @param string $Zone 可用区
      * @param string $ClusterId 集群 ID
-     * @param string $NodeName 节点名称
+     * @param string $NodeName 节点 ID
      * @param integer $PodNum Pod 数量
      */
     function __construct()

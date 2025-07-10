@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteReservedInstances请求参数结构体
  *
- * @method array getReservedInstanceIds() 获取预留券实例ID。
- * @method void setReservedInstanceIds(array $ReservedInstanceIds) 设置预留券实例ID。
+ * @method array getReservedInstanceIds() 获取预留券实例ID。可通过 [DescribeReservedInstances](https://cloud.tencent.com/document/product/457/99162) 接口返回值中的ReservedInstanceId获取。
+ * @method void setReservedInstanceIds(array $ReservedInstanceIds) 设置预留券实例ID。可通过 [DescribeReservedInstances](https://cloud.tencent.com/document/product/457/99162) 接口返回值中的ReservedInstanceId获取。
  */
 class DeleteReservedInstancesRequest extends AbstractModel
 {
     /**
-     * @var array 预留券实例ID。
+     * @var array 预留券实例ID。可通过 [DescribeReservedInstances](https://cloud.tencent.com/document/product/457/99162) 接口返回值中的ReservedInstanceId获取。
      */
     public $ReservedInstanceIds;
 
     /**
-     * @param array $ReservedInstanceIds 预留券实例ID。
+     * @param array $ReservedInstanceIds 预留券实例ID。可通过 [DescribeReservedInstances](https://cloud.tencent.com/document/product/457/99162) 接口返回值中的ReservedInstanceId获取。
      */
     function __construct()
     {

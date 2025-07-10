@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceCount(integer $InstanceCount) 设置购买实例数量，一次最大购买数量为300。
  * @method InstanceChargePrepaid getInstanceChargePrepaid() 获取预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
  * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) 设置预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
- * @method string getInstanceName() 获取预留券名称。
- * @method void setInstanceName(string $InstanceName) 设置预留券名称。
+ * @method string getInstanceName() 获取预留券名称，名称不得超过60个字符。
+ * @method void setInstanceName(string $InstanceName) 设置预留券名称，名称不得超过60个字符。
  * @method string getClientToken() 获取用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
  * @method void setClientToken(string $ClientToken) 设置用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
  */
@@ -49,7 +49,7 @@ class CreateReservedInstancesRequest extends AbstractModel
     public $InstanceChargePrepaid;
 
     /**
-     * @var string 预留券名称。
+     * @var string 预留券名称，名称不得超过60个字符。
      */
     public $InstanceName;
 
@@ -62,7 +62,7 @@ class CreateReservedInstancesRequest extends AbstractModel
      * @param ReservedInstanceSpec $ReservedInstanceSpec 预留券实例规格。
      * @param integer $InstanceCount 购买实例数量，一次最大购买数量为300。
      * @param InstanceChargePrepaid $InstanceChargePrepaid 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
-     * @param string $InstanceName 预留券名称。
+     * @param string $InstanceName 预留券名称，名称不得超过60个字符。
      * @param string $ClientToken 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
      */
     function __construct()

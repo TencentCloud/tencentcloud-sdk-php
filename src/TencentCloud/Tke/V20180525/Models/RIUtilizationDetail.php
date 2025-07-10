@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置Pod的名称
  * @method string getNamespace() 获取Pod的命名空间
  * @method void setNamespace(string $Namespace) 设置Pod的命名空间
- * @method string getKind() 获取工作负载类型
- * @method void setKind(string $Kind) 设置工作负载类型
+ * @method string getKind() 获取工作负载类型，如 deployment、statefulset和pod等。
+ * @method void setKind(string $Kind) 设置工作负载类型，如 deployment、statefulset和pod等。
  * @method string getKindName() 获取工作负载名称
  * @method void setKindName(string $KindName) 设置工作负载名称
  * @method string getUid() 获取Pod的uid
@@ -71,7 +71,7 @@ class RIUtilizationDetail extends AbstractModel
     public $Namespace;
 
     /**
-     * @var string 工作负载类型
+     * @var string 工作负载类型，如 deployment、statefulset和pod等。
      */
     public $Kind;
 
@@ -106,7 +106,7 @@ class RIUtilizationDetail extends AbstractModel
      * @param string $ClusterId 集群ID
      * @param string $Name Pod的名称
      * @param string $Namespace Pod的命名空间
-     * @param string $Kind 工作负载类型
+     * @param string $Kind 工作负载类型，如 deployment、statefulset和pod等。
      * @param string $KindName 工作负载名称
      * @param string $Uid Pod的uid
      * @param string $StartTime 用量开始时间

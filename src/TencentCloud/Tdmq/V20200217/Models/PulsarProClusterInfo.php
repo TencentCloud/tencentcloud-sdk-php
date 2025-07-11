@@ -63,6 +63,9 @@ true就是开启了，false是关闭
  * @method string getTenant() 获取用户自定义的租户别名，如果没有，会复用专业集群 ID
 
  * @method void setTenant(string $Tenant) 设置用户自定义的租户别名，如果没有，会复用专业集群 ID
+
+ * @method integer getDeleteProtection() 获取删除保护开关标识
+ * @method void setDeleteProtection(integer $DeleteProtection) 设置删除保护开关标识
  */
 class PulsarProClusterInfo extends AbstractModel
 {
@@ -145,6 +148,11 @@ true就是开启了，false是关闭
     public $Tenant;
 
     /**
+     * @var integer 删除保护开关标识
+     */
+    public $DeleteProtection;
+
+    /**
      * @param string $ClusterId 集群Id。
      * @param string $ClusterName 集群名称。
      * @param string $Remark 说明信息。
@@ -166,6 +174,8 @@ true就是开启了，false是关闭
      * @param integer $DefaultPartitionNumber 自动创建主题的默认分区数，如果没开启就是0
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Tenant 用户自定义的租户别名，如果没有，会复用专业集群 ID
+
+     * @param integer $DeleteProtection 删除保护开关标识
      */
     function __construct()
     {
@@ -239,6 +249,10 @@ true就是开启了，false是关闭
 
         if (array_key_exists("Tenant",$param) and $param["Tenant"] !== null) {
             $this->Tenant = $param["Tenant"];
+        }
+
+        if (array_key_exists("DeleteProtection",$param) and $param["DeleteProtection"] !== null) {
+            $this->DeleteProtection = $param["DeleteProtection"];
         }
     }
 }

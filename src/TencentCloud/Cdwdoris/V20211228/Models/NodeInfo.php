@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setComputeGroupId(string $ComputeGroupId) 设置计算组ID
  * @method string getCreateTime() 获取创建时间
  * @method void setCreateTime(string $CreateTime) 设置创建时间
+ * @method string getVirtualZone() 获取虚拟可用区
+ * @method void setVirtualZone(string $VirtualZone) 设置虚拟可用区
  */
 class NodeInfo extends AbstractModel
 {
@@ -101,6 +103,11 @@ class NodeInfo extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var string 虚拟可用区
+     */
+    public $VirtualZone;
+
+    /**
      * @param string $Ip 用户IP
      * @param integer $Status 节点状态
      * @param string $NodeName 节点角色名
@@ -112,6 +119,7 @@ class NodeInfo extends AbstractModel
      * @param string $RIp RIP
      * @param string $ComputeGroupId 计算组ID
      * @param string $CreateTime 创建时间
+     * @param string $VirtualZone 虚拟可用区
      */
     function __construct()
     {
@@ -168,6 +176,10 @@ class NodeInfo extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("VirtualZone",$param) and $param["VirtualZone"] !== null) {
+            $this->VirtualZone = $param["VirtualZone"];
         }
     }
 }

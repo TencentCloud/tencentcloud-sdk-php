@@ -28,8 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAndroidInstanceImageState(string $AndroidInstanceImageState) 设置镜像状态
  * @method string getAndroidInstanceImageZone() 获取镜像可用区
  * @method void setAndroidInstanceImageZone(string $AndroidInstanceImageZone) 设置镜像可用区
+ * @method string getAndroidInstanceImageDescription() 获取镜像描述
+ * @method void setAndroidInstanceImageDescription(string $AndroidInstanceImageDescription) 设置镜像描述
  * @method string getAndroidVersion() 获取安卓10
  * @method void setAndroidVersion(string $AndroidVersion) 设置安卓10
+ * @method string getCreateTime() 获取创建时间
+ * @method void setCreateTime(string $CreateTime) 设置创建时间
  */
 class AndroidInstanceImage extends AbstractModel
 {
@@ -54,16 +58,28 @@ class AndroidInstanceImage extends AbstractModel
     public $AndroidInstanceImageZone;
 
     /**
+     * @var string 镜像描述
+     */
+    public $AndroidInstanceImageDescription;
+
+    /**
      * @var string 安卓10
      */
     public $AndroidVersion;
+
+    /**
+     * @var string 创建时间
+     */
+    public $CreateTime;
 
     /**
      * @param string $AndroidInstanceImageId 镜像 ID
      * @param string $AndroidInstanceImageName 镜像名称，由业务方自定义，仅用于展示
      * @param string $AndroidInstanceImageState 镜像状态
      * @param string $AndroidInstanceImageZone 镜像可用区
+     * @param string $AndroidInstanceImageDescription 镜像描述
      * @param string $AndroidVersion 安卓10
+     * @param string $CreateTime 创建时间
      */
     function __construct()
     {
@@ -94,8 +110,16 @@ class AndroidInstanceImage extends AbstractModel
             $this->AndroidInstanceImageZone = $param["AndroidInstanceImageZone"];
         }
 
+        if (array_key_exists("AndroidInstanceImageDescription",$param) and $param["AndroidInstanceImageDescription"] !== null) {
+            $this->AndroidInstanceImageDescription = $param["AndroidInstanceImageDescription"];
+        }
+
         if (array_key_exists("AndroidVersion",$param) and $param["AndroidVersion"] !== null) {
             $this->AndroidVersion = $param["AndroidVersion"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
     }
 }

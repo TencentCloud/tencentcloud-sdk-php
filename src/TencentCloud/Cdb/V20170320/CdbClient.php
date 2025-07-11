@@ -77,7 +77,7 @@ use TencentCloud\Cdb\V20170320\Models as Models;
  * @method Models\DeleteAuditRuleResponse DeleteAuditRule(Models\DeleteAuditRuleRequest $req) 不再支持审计规则创建
 
 本接口(DeleteAuditRule)用于删除用户的审计规则。
- * @method Models\DeleteAuditRuleTemplatesResponse DeleteAuditRuleTemplates(Models\DeleteAuditRuleTemplatesRequest $req) 删除审计规则模板
+ * @method Models\DeleteAuditRuleTemplatesResponse DeleteAuditRuleTemplates(Models\DeleteAuditRuleTemplatesRequest $req) 本接口（DeleteAuditRuleTemplates）用于删除审计规则模板。
  * @method Models\DeleteBackupResponse DeleteBackup(Models\DeleteBackupRequest $req) 本接口(DeleteBackup)用于删除数据库备份。本接口只支持删除手动发起的备份。
  * @method Models\DeleteDatabaseResponse DeleteDatabase(Models\DeleteDatabaseRequest $req) 本接口(DeleteDatabase)用于在云数据库实例中删除数据库。
  * @method Models\DeleteDeployGroupsResponse DeleteDeployGroups(Models\DeleteDeployGroupsRequest $req) 根据置放群组ID删除置放群组（置放群组中有资源存在时不能删除该置放群组）

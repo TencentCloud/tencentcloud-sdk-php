@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceQuota(ResourceQuota $ResourceQuota) 设置资源配额。
  * @method LimitRange getLimitRange() 获取限制范围。
  * @method void setLimitRange(LimitRange $LimitRange) 设置限制范围。
+ * @method string getSystemNodeInstanceType() 获取系统节点池实例规格。
+ * @method void setSystemNodeInstanceType(string $SystemNodeInstanceType) 设置系统节点池实例规格。
+ * @method integer getSystemNodeCount() 获取系统节点池实例数量。
+ * @method void setSystemNodeCount(integer $SystemNodeCount) 设置系统节点池实例数量。
  */
 class ClusterOption extends AbstractModel
 {
@@ -62,12 +66,24 @@ class ClusterOption extends AbstractModel
     public $LimitRange;
 
     /**
+     * @var string 系统节点池实例规格。
+     */
+    public $SystemNodeInstanceType;
+
+    /**
+     * @var integer 系统节点池实例数量。
+     */
+    public $SystemNodeCount;
+
+    /**
      * @param string $Zone 计算集群可用区。
      * @param string $Type 计算集群类型，取值范围：
 - KUBERNETES
      * @param string $ServiceCidr 计算集群Service CIDR，不能与VPC网段重合。
      * @param ResourceQuota $ResourceQuota 资源配额。
      * @param LimitRange $LimitRange 限制范围。
+     * @param string $SystemNodeInstanceType 系统节点池实例规格。
+     * @param integer $SystemNodeCount 系统节点池实例数量。
      */
     function __construct()
     {
@@ -102,6 +118,14 @@ class ClusterOption extends AbstractModel
         if (array_key_exists("LimitRange",$param) and $param["LimitRange"] !== null) {
             $this->LimitRange = new LimitRange();
             $this->LimitRange->deserialize($param["LimitRange"]);
+        }
+
+        if (array_key_exists("SystemNodeInstanceType",$param) and $param["SystemNodeInstanceType"] !== null) {
+            $this->SystemNodeInstanceType = $param["SystemNodeInstanceType"];
+        }
+
+        if (array_key_exists("SystemNodeCount",$param) and $param["SystemNodeCount"] !== null) {
+            $this->SystemNodeCount = $param["SystemNodeCount"];
         }
     }
 }

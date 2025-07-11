@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsUserDefineBucket(boolean $IsUserDefineBucket) 设置是否使用的自定义桶
  * @method string getErrorReason() 获取错误原因
  * @method void setErrorReason(string $ErrorReason) 设置错误原因
+ * @method SnapshotRemainPolicy getSnapshotRemainPolicy() 获取快照保留策略
+ * @method void setSnapshotRemainPolicy(SnapshotRemainPolicy $SnapshotRemainPolicy) 设置快照保留策略
  */
 class BackUpJobDisplay extends AbstractModel
 {
@@ -122,6 +124,11 @@ class BackUpJobDisplay extends AbstractModel
     public $ErrorReason;
 
     /**
+     * @var SnapshotRemainPolicy 快照保留策略
+     */
+    public $SnapshotRemainPolicy;
+
+    /**
      * @param integer $JobId 备份实例id
      * @param string $Snapshot 备份实例名
      * @param integer $BackUpSize 备份数据量
@@ -136,6 +143,7 @@ class BackUpJobDisplay extends AbstractModel
      * @param BackupCosInfo $BackupCosInfo 备份实例中关于cos的信息	
      * @param boolean $IsUserDefineBucket 是否使用的自定义桶
      * @param string $ErrorReason 错误原因
+     * @param SnapshotRemainPolicy $SnapshotRemainPolicy 快照保留策略
      */
     function __construct()
     {
@@ -206,6 +214,11 @@ class BackUpJobDisplay extends AbstractModel
 
         if (array_key_exists("ErrorReason",$param) and $param["ErrorReason"] !== null) {
             $this->ErrorReason = $param["ErrorReason"];
+        }
+
+        if (array_key_exists("SnapshotRemainPolicy",$param) and $param["SnapshotRemainPolicy"] !== null) {
+            $this->SnapshotRemainPolicy = new SnapshotRemainPolicy();
+            $this->SnapshotRemainPolicy->deserialize($param["SnapshotRemainPolicy"]);
         }
     }
 }

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAndroidInstanceImageName(string $AndroidInstanceImageName) 设置安卓实例镜像名称
  * @method string getAndroidInstanceId() 获取安卓实例 ID
  * @method void setAndroidInstanceId(string $AndroidInstanceId) 设置安卓实例 ID
+ * @method string getAndroidInstanceImageDescription() 获取安卓实例镜像描述
+ * @method void setAndroidInstanceImageDescription(string $AndroidInstanceImageDescription) 设置安卓实例镜像描述
  */
 class CreateAndroidInstanceImageRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreateAndroidInstanceImageRequest extends AbstractModel
     public $AndroidInstanceId;
 
     /**
+     * @var string 安卓实例镜像描述
+     */
+    public $AndroidInstanceImageDescription;
+
+    /**
      * @param string $AndroidInstanceImageName 安卓实例镜像名称
      * @param string $AndroidInstanceId 安卓实例 ID
+     * @param string $AndroidInstanceImageDescription 安卓实例镜像描述
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class CreateAndroidInstanceImageRequest extends AbstractModel
 
         if (array_key_exists("AndroidInstanceId",$param) and $param["AndroidInstanceId"] !== null) {
             $this->AndroidInstanceId = $param["AndroidInstanceId"];
+        }
+
+        if (array_key_exists("AndroidInstanceImageDescription",$param) and $param["AndroidInstanceImageDescription"] !== null) {
+            $this->AndroidInstanceImageDescription = $param["AndroidInstanceImageDescription"];
         }
     }
 }

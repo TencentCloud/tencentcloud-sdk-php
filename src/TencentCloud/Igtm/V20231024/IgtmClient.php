@@ -33,10 +33,13 @@ use TencentCloud\Igtm\V20231024\Models as Models;
  * @method Models\DescribeAddressLocationResponse DescribeAddressLocation(Models\DescribeAddressLocationRequest $req) 获取地址所属地域
  * @method Models\DescribeAddressPoolDetailResponse DescribeAddressPoolDetail(Models\DescribeAddressPoolDetailRequest $req) 地址池详情
  * @method Models\DescribeAddressPoolListResponse DescribeAddressPoolList(Models\DescribeAddressPoolListRequest $req) 地址池列表
+ * @method Models\DescribeDetectPackageDetailResponse DescribeDetectPackageDetail(Models\DescribeDetectPackageDetailRequest $req) 探测任务包详情
+ * @method Models\DescribeDetectTaskPackageListResponse DescribeDetectTaskPackageList(Models\DescribeDetectTaskPackageListRequest $req) 探测任务套餐列表
  * @method Models\DescribeDetectorsResponse DescribeDetectors(Models\DescribeDetectorsRequest $req) 获取探测节点列表接口
  * @method Models\DescribeDnsLineListResponse DescribeDnsLineList(Models\DescribeDnsLineListRequest $req) 查询分组线路列表接口
  * @method Models\DescribeInstanceDetailResponse DescribeInstanceDetail(Models\DescribeInstanceDetailRequest $req) 实例详情
  * @method Models\DescribeInstanceListResponse DescribeInstanceList(Models\DescribeInstanceListRequest $req) 实例列表
+ * @method Models\DescribeInstancePackageListResponse DescribeInstancePackageList(Models\DescribeInstancePackageListRequest $req) 实例套餐列表
  * @method Models\DescribeMonitorDetailResponse DescribeMonitorDetail(Models\DescribeMonitorDetailRequest $req) 查询监控器详情接口
  * @method Models\DescribeMonitorsResponse DescribeMonitors(Models\DescribeMonitorsRequest $req) 获取所有监控器
  * @method Models\DescribeQuotasResponse DescribeQuotas(Models\DescribeQuotasRequest $req) 配额查询

@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupType(integer $BackupType) 设置0为默认。1时是对远端的doris进行备份，不周期，一次性
  * @method DorisSourceInfo getDorisSourceInfo() 获取远端doris集群的连接信息
  * @method void setDorisSourceInfo(DorisSourceInfo $DorisSourceInfo) 设置远端doris集群的连接信息
- * @method integer getBackupTimeType() 获取0为默认。1时是一次性备份。2时是远端备份
- * @method void setBackupTimeType(integer $BackupTimeType) 设置0为默认。1时是一次性备份。2时是远端备份
+ * @method integer getBackupTimeType() 获取0为周期备份。1时是立即备份。3时是定时备份。
+ * @method void setBackupTimeType(integer $BackupTimeType) 设置0为周期备份。1时是立即备份。3时是定时备份。
  * @method integer getRestoreType() 获取0为默认。1时是备份完成后立即恢复
  * @method void setRestoreType(integer $RestoreType) 设置0为默认。1时是备份完成后立即恢复
  * @method integer getAuthType() 获取0为默认。1时是提供自定义的secret连接cos
@@ -62,6 +62,10 @@ use TencentCloud\Common\AbstractModel;
 1-启动
  * @method string getCosBucket() 获取当前任务的cos桶信息
  * @method void setCosBucket(string $CosBucket) 设置当前任务的cos桶信息
+ * @method SnapshotRemainPolicy getSnapshotRemainPolicy() 获取快照保留策略
+ * @method void setSnapshotRemainPolicy(SnapshotRemainPolicy $SnapshotRemainPolicy) 设置快照保留策略
+ * @method string getDataRemoteRegion() 获取备份数据所在地域，当前地域应该为空
+ * @method void setDataRemoteRegion(string $DataRemoteRegion) 设置备份数据所在地域，当前地域应该为空
  */
 class CreateBackUpScheduleRequest extends AbstractModel
 {
@@ -101,31 +105,36 @@ class CreateBackUpScheduleRequest extends AbstractModel
 
     /**
      * @var integer 0为默认。1时是对远端的doris进行备份，不周期，一次性
+     * @deprecated
      */
     public $BackupType;
 
     /**
      * @var DorisSourceInfo 远端doris集群的连接信息
+     * @deprecated
      */
     public $DorisSourceInfo;
 
     /**
-     * @var integer 0为默认。1时是一次性备份。2时是远端备份
+     * @var integer 0为周期备份。1时是立即备份。3时是定时备份。
      */
     public $BackupTimeType;
 
     /**
      * @var integer 0为默认。1时是备份完成后立即恢复
+     * @deprecated
      */
     public $RestoreType;
 
     /**
      * @var integer 0为默认。1时是提供自定义的secret连接cos
+     * @deprecated
      */
     public $AuthType;
 
     /**
      * @var CosSourceInfo cos认证的信息
+     * @deprecated
      */
     public $CosSourceInfo;
 
@@ -153,6 +162,16 @@ class CreateBackUpScheduleRequest extends AbstractModel
     public $CosBucket;
 
     /**
+     * @var SnapshotRemainPolicy 快照保留策略
+     */
+    public $SnapshotRemainPolicy;
+
+    /**
+     * @var string 备份数据所在地域，当前地域应该为空
+     */
+    public $DataRemoteRegion;
+
+    /**
      * @param string $InstanceId 集群id
      * @param string $OperationType 操作类型 create(创建) update(编辑修改)
      * @param integer $ScheduleId 编辑时需要传
@@ -163,7 +182,7 @@ class CreateBackUpScheduleRequest extends AbstractModel
      * @param array $BackUpTables 备份表列表
      * @param integer $BackupType 0为默认。1时是对远端的doris进行备份，不周期，一次性
      * @param DorisSourceInfo $DorisSourceInfo 远端doris集群的连接信息
-     * @param integer $BackupTimeType 0为默认。1时是一次性备份。2时是远端备份
+     * @param integer $BackupTimeType 0为周期备份。1时是立即备份。3时是定时备份。
      * @param integer $RestoreType 0为默认。1时是备份完成后立即恢复
      * @param integer $AuthType 0为默认。1时是提供自定义的secret连接cos
      * @param CosSourceInfo $CosSourceInfo cos认证的信息
@@ -174,6 +193,8 @@ class CreateBackUpScheduleRequest extends AbstractModel
 2-删除,
 1-启动
      * @param string $CosBucket 当前任务的cos桶信息
+     * @param SnapshotRemainPolicy $SnapshotRemainPolicy 快照保留策略
+     * @param string $DataRemoteRegion 备份数据所在地域，当前地域应该为空
      */
     function __construct()
     {
@@ -258,6 +279,15 @@ class CreateBackUpScheduleRequest extends AbstractModel
 
         if (array_key_exists("CosBucket",$param) and $param["CosBucket"] !== null) {
             $this->CosBucket = $param["CosBucket"];
+        }
+
+        if (array_key_exists("SnapshotRemainPolicy",$param) and $param["SnapshotRemainPolicy"] !== null) {
+            $this->SnapshotRemainPolicy = new SnapshotRemainPolicy();
+            $this->SnapshotRemainPolicy->deserialize($param["SnapshotRemainPolicy"]);
+        }
+
+        if (array_key_exists("DataRemoteRegion",$param) and $param["DataRemoteRegion"] !== null) {
+            $this->DataRemoteRegion = $param["DataRemoteRegion"];
         }
     }
 }

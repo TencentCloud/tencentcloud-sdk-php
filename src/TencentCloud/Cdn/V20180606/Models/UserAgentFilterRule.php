@@ -36,9 +36,9 @@ path: 根据完整访问路径生效
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRulePaths(array $RulePaths) 设置访问路径生效内容
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getUserAgents() 获取UserAgent列表
+ * @method array getUserAgents() 获取UserAgent列表，UserAgent 个数不能超过 10个
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUserAgents(array $UserAgents) 设置UserAgent列表
+ * @method void setUserAgents(array $UserAgents) 设置UserAgent列表，UserAgent 个数不能超过 10个
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFilterType() 获取黑名单或白名单，blacklist或whitelist
 注意：此字段可能返回 null，表示取不到有效值。
@@ -64,7 +64,7 @@ path: 根据完整访问路径生效
     public $RulePaths;
 
     /**
-     * @var array UserAgent列表
+     * @var array UserAgent列表，UserAgent 个数不能超过 10个
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UserAgents;
@@ -84,7 +84,7 @@ path: 根据完整访问路径生效
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $RulePaths 访问路径生效内容
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $UserAgents UserAgent列表
+     * @param array $UserAgents UserAgent列表，UserAgent 个数不能超过 10个
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FilterType 黑名单或白名单，blacklist或whitelist
 注意：此字段可能返回 null，表示取不到有效值。

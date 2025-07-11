@@ -29,7 +29,9 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\BindProductsResponse BindProducts(Models\BindProductsRequest $req) 批量绑定子产品。
  * @method Models\CallDeviceActionAsyncResponse CallDeviceActionAsync(Models\CallDeviceActionAsyncRequest $req) 提供给用户异步调用设备行为的能力
  * @method Models\CallDeviceActionSyncResponse CallDeviceActionSync(Models\CallDeviceActionSyncRequest $req) 为用户提供同步调用设备行为的能力。
- * @method Models\CancelAssignTWeCallLicenseResponse CancelAssignTWeCallLicense(Models\CancelAssignTWeCallLicenseRequest $req) 取消分配
+ * @method Models\CancelAssignTWeCallLicenseResponse CancelAssignTWeCallLicense(Models\CancelAssignTWeCallLicenseRequest $req) 业务已下线
+
+取消分配
  * @method Models\ChangeP2PRouteResponse ChangeP2PRoute(Models\ChangeP2PRouteRequest $req) p2p路线切换（此接口目前处于内测接口，可以联系申请加白 ）
  * @method Models\CheckFirmwareUpdateResponse CheckFirmwareUpdate(Models\CheckFirmwareUpdateRequest $req) 本接口（CheckFirmwareUpdate）用于查询设备可升级固件版本
  * @method Models\ControlDeviceDataResponse ControlDeviceData(Models\ControlDeviceDataRequest $req) 根据设备产品ID、设备名称，设置控制设备的属性数据。

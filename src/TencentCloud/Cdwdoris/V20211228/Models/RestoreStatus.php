@@ -66,6 +66,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupJobId(integer $BackupJobId) 设置备份实例id
  * @method integer getTaskId() 获取实例对应snapshot的id
  * @method void setTaskId(integer $TaskId) 设置实例对应snapshot的id
+ * @method integer getID() 获取恢复任务id
+ * @method void setID(integer $ID) 设置恢复任务id
  */
 class RestoreStatus extends AbstractModel
 {
@@ -185,6 +187,11 @@ class RestoreStatus extends AbstractModel
     public $TaskId;
 
     /**
+     * @var integer 恢复任务id
+     */
+    public $ID;
+
+    /**
      * @param integer $JobId 恢复任务id
      * @param string $Label 恢复任务标签
      * @param string $Timestamp 恢复任务时间戳
@@ -208,6 +215,7 @@ class RestoreStatus extends AbstractModel
      * @param boolean $ReserveDynamicPartitionEnable 是否保持源表中的动态分区
      * @param integer $BackupJobId 备份实例id
      * @param integer $TaskId 实例对应snapshot的id
+     * @param integer $ID 恢复任务id
      */
     function __construct()
     {
@@ -312,6 +320,10 @@ class RestoreStatus extends AbstractModel
 
         if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
             $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("ID",$param) and $param["ID"] !== null) {
+            $this->ID = $param["ID"];
         }
     }
 }

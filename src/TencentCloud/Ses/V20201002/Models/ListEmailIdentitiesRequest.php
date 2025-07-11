@@ -20,14 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListEmailIdentities请求参数结构体
  *
-
+ * @method array getTagList() 获取tag 标签
+ * @method void setTagList(array $TagList) 设置tag 标签
+ * @method integer getLimit() 获取分页 limit
+ * @method void setLimit(integer $Limit) 设置分页 limit
+ * @method integer getOffset() 获取分页 offset
+ * @method void setOffset(integer $Offset) 设置分页 offset
  */
 class ListEmailIdentitiesRequest extends AbstractModel
 {
-
+    /**
+     * @var array tag 标签
+     */
+    public $TagList;
 
     /**
+     * @var integer 分页 limit
+     */
+    public $Limit;
 
+    /**
+     * @var integer 分页 offset
+     */
+    public $Offset;
+
+    /**
+     * @param array $TagList tag 标签
+     * @param integer $Limit 分页 limit
+     * @param integer $Offset 分页 offset
      */
     function __construct()
     {
@@ -42,6 +62,21 @@ class ListEmailIdentitiesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TagList",$param) and $param["TagList"] !== null) {
+            $this->TagList = [];
+            foreach ($param["TagList"] as $key => $value){
+                $obj = new TagList();
+                $obj->deserialize($value);
+                array_push($this->TagList, $obj);
+            }
+        }
 
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
     }
 }

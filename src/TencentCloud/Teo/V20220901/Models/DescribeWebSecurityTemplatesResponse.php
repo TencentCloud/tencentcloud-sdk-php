@@ -14,44 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ses\V20201002\Models;
+namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ListEmailIdentities返回参数结构体
+ * DescribeWebSecurityTemplates返回参数结构体
  *
- * @method array getEmailIdentities() 获取发信域名列表
- * @method void setEmailIdentities(array $EmailIdentities) 设置发信域名列表
- * @method integer getMaxReputationLevel() 获取最大信誉等级
- * @method void setMaxReputationLevel(integer $MaxReputationLevel) 设置最大信誉等级
- * @method integer getMaxDailyQuota() 获取单域名最高日发送量
- * @method void setMaxDailyQuota(integer $MaxDailyQuota) 设置单域名最高日发送量
- * @method integer getTotal() 获取总数
- * @method void setTotal(integer $Total) 设置总数
+ * @method integer getTotalCount() 获取策略模板总数。
+ * @method void setTotalCount(integer $TotalCount) 设置策略模板总数。
+ * @method array getSecurityPolicyTemplates() 获取策略模板列表。
+ * @method void setSecurityPolicyTemplates(array $SecurityPolicyTemplates) 设置策略模板列表。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class ListEmailIdentitiesResponse extends AbstractModel
+class DescribeWebSecurityTemplatesResponse extends AbstractModel
 {
     /**
-     * @var array 发信域名列表
+     * @var integer 策略模板总数。
      */
-    public $EmailIdentities;
+    public $TotalCount;
 
     /**
-     * @var integer 最大信誉等级
+     * @var array 策略模板列表。
      */
-    public $MaxReputationLevel;
-
-    /**
-     * @var integer 单域名最高日发送量
-     */
-    public $MaxDailyQuota;
-
-    /**
-     * @var integer 总数
-     */
-    public $Total;
+    public $SecurityPolicyTemplates;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -59,10 +45,8 @@ class ListEmailIdentitiesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $EmailIdentities 发信域名列表
-     * @param integer $MaxReputationLevel 最大信誉等级
-     * @param integer $MaxDailyQuota 单域名最高日发送量
-     * @param integer $Total 总数
+     * @param integer $TotalCount 策略模板总数。
+     * @param array $SecurityPolicyTemplates 策略模板列表。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -78,25 +62,17 @@ class ListEmailIdentitiesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EmailIdentities",$param) and $param["EmailIdentities"] !== null) {
-            $this->EmailIdentities = [];
-            foreach ($param["EmailIdentities"] as $key => $value){
-                $obj = new EmailIdentity();
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("SecurityPolicyTemplates",$param) and $param["SecurityPolicyTemplates"] !== null) {
+            $this->SecurityPolicyTemplates = [];
+            foreach ($param["SecurityPolicyTemplates"] as $key => $value){
+                $obj = new SecurityPolicyTemplateInfo();
                 $obj->deserialize($value);
-                array_push($this->EmailIdentities, $obj);
+                array_push($this->SecurityPolicyTemplates, $obj);
             }
-        }
-
-        if (array_key_exists("MaxReputationLevel",$param) and $param["MaxReputationLevel"] !== null) {
-            $this->MaxReputationLevel = $param["MaxReputationLevel"];
-        }
-
-        if (array_key_exists("MaxDailyQuota",$param) and $param["MaxDailyQuota"] !== null) {
-            $this->MaxDailyQuota = $param["MaxDailyQuota"];
-        }
-
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

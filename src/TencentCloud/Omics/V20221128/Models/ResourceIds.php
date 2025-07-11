@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCVMId(string $CVMId) 设置云服务器ID。
  * @method string getEKSId() 获取弹性容器集群ID。
  * @method void setEKSId(string $EKSId) 设置弹性容器集群ID。
+ * @method string getTKEId() 获取TKE容器集群ID。
+ * @method void setTKEId(string $TKEId) 设置TKE容器集群ID。
+ * @method string getTKESystemNodePoolId() 获取TKE系统节点池ID。
+ * @method void setTKESystemNodePoolId(string $TKESystemNodePoolId) 设置TKE系统节点池ID。
  */
 class ResourceIds extends AbstractModel
 {
@@ -92,6 +96,16 @@ class ResourceIds extends AbstractModel
     public $EKSId;
 
     /**
+     * @var string TKE容器集群ID。
+     */
+    public $TKEId;
+
+    /**
+     * @var string TKE系统节点池ID。
+     */
+    public $TKESystemNodePoolId;
+
+    /**
      * @param string $VPCId 私有网络ID。
      * @param string $SubnetId 子网ID。
      * @param string $SecurityGroupId 安全组ID。
@@ -104,6 +118,8 @@ class ResourceIds extends AbstractModel
 - TP：turbo性能型
      * @param string $CVMId 云服务器ID。
      * @param string $EKSId 弹性容器集群ID。
+     * @param string $TKEId TKE容器集群ID。
+     * @param string $TKESystemNodePoolId TKE系统节点池ID。
      */
     function __construct()
     {
@@ -148,6 +164,14 @@ class ResourceIds extends AbstractModel
 
         if (array_key_exists("EKSId",$param) and $param["EKSId"] !== null) {
             $this->EKSId = $param["EKSId"];
+        }
+
+        if (array_key_exists("TKEId",$param) and $param["TKEId"] !== null) {
+            $this->TKEId = $param["TKEId"];
+        }
+
+        if (array_key_exists("TKESystemNodePoolId",$param) and $param["TKESystemNodePoolId"] !== null) {
+            $this->TKESystemNodePoolId = $param["TKESystemNodePoolId"];
         }
     }
 }

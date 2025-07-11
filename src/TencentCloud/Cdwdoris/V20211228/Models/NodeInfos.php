@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setComputeGroupId(string $ComputeGroupId) 设置计算组id
  * @method string getRIp() 获取rip
  * @method void setRIp(string $RIp) 设置rip
+ * @method string getVirtualZone() 获取虚拟可用区
+ * @method void setVirtualZone(string $VirtualZone) 设置虚拟可用区
  */
 class NodeInfos extends AbstractModel
 {
@@ -101,6 +103,11 @@ class NodeInfos extends AbstractModel
     public $RIp;
 
     /**
+     * @var string 虚拟可用区
+     */
+    public $VirtualZone;
+
+    /**
      * @param string $NodeName 节点名称
      * @param integer $Status 节点状态
      * @param string $Ip 节点ip
@@ -112,6 +119,7 @@ class NodeInfos extends AbstractModel
      * @param string $CreateTime 创建时间
      * @param string $ComputeGroupId 计算组id
      * @param string $RIp rip
+     * @param string $VirtualZone 虚拟可用区
      */
     function __construct()
     {
@@ -168,6 +176,10 @@ class NodeInfos extends AbstractModel
 
         if (array_key_exists("RIp",$param) and $param["RIp"] !== null) {
             $this->RIp = $param["RIp"];
+        }
+
+        if (array_key_exists("VirtualZone",$param) and $param["VirtualZone"] !== null) {
+            $this->VirtualZone = $param["VirtualZone"];
         }
     }
 }

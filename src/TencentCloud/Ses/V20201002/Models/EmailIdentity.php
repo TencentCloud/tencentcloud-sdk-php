@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDailyQuota(integer $DailyQuota) 设置当日最高发信量
  * @method array getSendIp() 获取域名配置的独立ip
  * @method void setSendIp(array $SendIp) 设置域名配置的独立ip
+ * @method array getTagList() 获取tag 标签
+ * @method void setTagList(array $TagList) 设置tag 标签
  */
 class EmailIdentity extends AbstractModel
 {
@@ -66,12 +68,18 @@ class EmailIdentity extends AbstractModel
     public $SendIp;
 
     /**
+     * @var array tag 标签
+     */
+    public $TagList;
+
+    /**
      * @param string $IdentityName 发信域名
      * @param string $IdentityType 验证类型，固定为DOMAIN
      * @param boolean $SendingEnabled 是否已通过验证
      * @param integer $CurrentReputationLevel 当前信誉等级
      * @param integer $DailyQuota 当日最高发信量
      * @param array $SendIp 域名配置的独立ip
+     * @param array $TagList tag 标签
      */
     function __construct()
     {
@@ -108,6 +116,15 @@ class EmailIdentity extends AbstractModel
 
         if (array_key_exists("SendIp",$param) and $param["SendIp"] !== null) {
             $this->SendIp = $param["SendIp"];
+        }
+
+        if (array_key_exists("TagList",$param) and $param["TagList"] !== null) {
+            $this->TagList = [];
+            foreach ($param["TagList"] as $key => $value){
+                $obj = new TagList();
+                $obj->deserialize($value);
+                array_push($this->TagList, $obj);
+            }
         }
     }
 }

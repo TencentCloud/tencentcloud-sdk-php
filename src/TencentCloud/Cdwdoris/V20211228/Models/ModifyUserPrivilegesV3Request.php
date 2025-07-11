@@ -28,10 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserPrivileges(UpdateUserPrivileges $UserPrivileges) 设置用户权限
  * @method string getWhiteHost() 获取用户链接来自的 IP	
  * @method void setWhiteHost(string $WhiteHost) 设置用户链接来自的 IP	
- * @method integer getUpdateType() 获取更新类型，默认0，1为更新绑定计算组
- * @method void setUpdateType(integer $UpdateType) 设置更新类型，默认0，1为更新绑定计算组
+ * @method integer getUpdateType() 获取更新类型，默认0，1为更新绑定计算组，2为更新默认计算组
+ * @method void setUpdateType(integer $UpdateType) 设置更新类型，默认0，1为更新绑定计算组，2为更新默认计算组
  * @method array getUpdateComputeGroups() 获取需绑定计算组列表
  * @method void setUpdateComputeGroups(array $UpdateComputeGroups) 设置需绑定计算组列表
+ * @method string getDefaultComputeGroup() 获取默认计算组
+ * @method void setDefaultComputeGroup(string $DefaultComputeGroup) 设置默认计算组
  */
 class ModifyUserPrivilegesV3Request extends AbstractModel
 {
@@ -56,7 +58,7 @@ class ModifyUserPrivilegesV3Request extends AbstractModel
     public $WhiteHost;
 
     /**
-     * @var integer 更新类型，默认0，1为更新绑定计算组
+     * @var integer 更新类型，默认0，1为更新绑定计算组，2为更新默认计算组
      */
     public $UpdateType;
 
@@ -66,12 +68,18 @@ class ModifyUserPrivilegesV3Request extends AbstractModel
     public $UpdateComputeGroups;
 
     /**
+     * @var string 默认计算组
+     */
+    public $DefaultComputeGroup;
+
+    /**
      * @param string $InstanceId 集群id
      * @param string $UserName 用户名
      * @param UpdateUserPrivileges $UserPrivileges 用户权限
      * @param string $WhiteHost 用户链接来自的 IP	
-     * @param integer $UpdateType 更新类型，默认0，1为更新绑定计算组
+     * @param integer $UpdateType 更新类型，默认0，1为更新绑定计算组，2为更新默认计算组
      * @param array $UpdateComputeGroups 需绑定计算组列表
+     * @param string $DefaultComputeGroup 默认计算组
      */
     function __construct()
     {
@@ -109,6 +117,10 @@ class ModifyUserPrivilegesV3Request extends AbstractModel
 
         if (array_key_exists("UpdateComputeGroups",$param) and $param["UpdateComputeGroups"] !== null) {
             $this->UpdateComputeGroups = $param["UpdateComputeGroups"];
+        }
+
+        if (array_key_exists("DefaultComputeGroup",$param) and $param["DefaultComputeGroup"] !== null) {
+            $this->DefaultComputeGroup = $param["DefaultComputeGroup"];
         }
     }
 }

@@ -28,6 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0
  * @method integer getLimit() 获取限制量，默认为20，最大值为100
  * @method void setLimit(integer $Limit) 设置限制量，默认为20，最大值为100
+ * @method array getFilters() 获取字段过滤器。Filter 的 Name 有以下值：
+ImageName：镜像名称
+ImageState：镜像状态
+AndroidVersion：安卓版本
+ * @method void setFilters(array $Filters) 设置字段过滤器。Filter 的 Name 有以下值：
+ImageName：镜像名称
+ImageState：镜像状态
+AndroidVersion：安卓版本
  */
 class DescribeAndroidInstanceImagesRequest extends AbstractModel
 {
@@ -52,10 +60,22 @@ class DescribeAndroidInstanceImagesRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var array 字段过滤器。Filter 的 Name 有以下值：
+ImageName：镜像名称
+ImageState：镜像状态
+AndroidVersion：安卓版本
+     */
+    public $Filters;
+
+    /**
      * @param array $AndroidInstanceImageIds 镜像 ID 列表
      * @param array $AndroidInstanceImageZones 镜像可用区列表
      * @param integer $Offset 偏移量，默认为0
      * @param integer $Limit 限制量，默认为20，最大值为100
+     * @param array $Filters 字段过滤器。Filter 的 Name 有以下值：
+ImageName：镜像名称
+ImageState：镜像状态
+AndroidVersion：安卓版本
      */
     function __construct()
     {
@@ -84,6 +104,15 @@ class DescribeAndroidInstanceImagesRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

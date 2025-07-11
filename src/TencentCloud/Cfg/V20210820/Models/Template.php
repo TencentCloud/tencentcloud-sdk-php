@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlarmPolicy(array $AlarmPolicy) 设置告警指标
  * @method integer getPolicyDealType() 获取护栏处理方式，1--顺序回滚，2--演练暂停
  * @method void setPolicyDealType(integer $PolicyDealType) 设置护栏处理方式，1--顺序回滚，2--演练暂停
+ * @method array getTemplateScenario() 获取演练场景
+ * @method void setTemplateScenario(array $TemplateScenario) 设置演练场景
+ * @method array getTemplatePurpose() 获取演练目的
+ * @method void setTemplatePurpose(array $TemplatePurpose) 设置演练目的
  */
 class Template extends AbstractModel
 {
@@ -160,6 +164,16 @@ class Template extends AbstractModel
     public $PolicyDealType;
 
     /**
+     * @var array 演练场景
+     */
+    public $TemplateScenario;
+
+    /**
+     * @var array 演练目的
+     */
+    public $TemplatePurpose;
+
+    /**
      * @param integer $TemplateId 经验库ID
      * @param string $TemplateTitle 经验库标题
      * @param string $TemplateDescription 经验库描述
@@ -180,6 +194,8 @@ class Template extends AbstractModel
      * @param array $ApmServiceList apm应用信息
      * @param array $AlarmPolicy 告警指标
      * @param integer $PolicyDealType 护栏处理方式，1--顺序回滚，2--演练暂停
+     * @param array $TemplateScenario 演练场景
+     * @param array $TemplatePurpose 演练目的
      */
     function __construct()
     {
@@ -289,6 +305,24 @@ class Template extends AbstractModel
 
         if (array_key_exists("PolicyDealType",$param) and $param["PolicyDealType"] !== null) {
             $this->PolicyDealType = $param["PolicyDealType"];
+        }
+
+        if (array_key_exists("TemplateScenario",$param) and $param["TemplateScenario"] !== null) {
+            $this->TemplateScenario = [];
+            foreach ($param["TemplateScenario"] as $key => $value){
+                $obj = new TaskTarget();
+                $obj->deserialize($value);
+                array_push($this->TemplateScenario, $obj);
+            }
+        }
+
+        if (array_key_exists("TemplatePurpose",$param) and $param["TemplatePurpose"] !== null) {
+            $this->TemplatePurpose = [];
+            foreach ($param["TemplatePurpose"] as $key => $value){
+                $obj = new TaskTarget();
+                $obj->deserialize($value);
+                array_push($this->TemplatePurpose, $obj);
+            }
         }
     }
 }

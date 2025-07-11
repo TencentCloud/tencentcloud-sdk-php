@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCosPath(string $CosPath) 设置备份文件所在的完整cos路径
  * @method string getSnapShotPath() 获取备份文件名称
  * @method void setSnapShotPath(string $SnapShotPath) 设置备份文件名称
+ * @method string getRegion() 获取cos桶所在地域
+ * @method void setRegion(string $Region) 设置cos桶所在地域
  */
 class BackupCosInfo extends AbstractModel
 {
@@ -45,9 +47,15 @@ class BackupCosInfo extends AbstractModel
     public $SnapShotPath;
 
     /**
+     * @var string cos桶所在地域
+     */
+    public $Region;
+
+    /**
      * @param string $CosBucket 备份文件所在的cos桶
      * @param string $CosPath 备份文件所在的完整cos路径
      * @param string $SnapShotPath 备份文件名称
+     * @param string $Region cos桶所在地域
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class BackupCosInfo extends AbstractModel
 
         if (array_key_exists("SnapShotPath",$param) and $param["SnapShotPath"] !== null) {
             $this->SnapShotPath = $param["SnapShotPath"];
+        }
+
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
         }
     }
 }

@@ -46,6 +46,8 @@ GetCatalog：获取Catalog列表；
  * @method void setDatabaseName(string $DatabaseName) 设置数据库名
  * @method string getTableName() 获取表名
  * @method void setTableName(string $TableName) 设置表名
+ * @method array getUserNames() 获取用户名列表
+ * @method void setUserNames(array $UserNames) 设置用户名列表
  */
 class DescribeSqlApisRequest extends AbstractModel
 {
@@ -95,6 +97,11 @@ GetCatalog：获取Catalog列表；
     public $TableName;
 
     /**
+     * @var array 用户名列表
+     */
+    public $UserNames;
+
+    /**
      * @param string $InstanceId 实例id
      * @param string $ApiType GetUsers：获取用户列表；
 GetDatabases：获取数据库列表；
@@ -108,6 +115,7 @@ GetCatalog：获取Catalog列表；
      * @param array $Catalogs catalog集合
      * @param string $DatabaseName 数据库名
      * @param string $TableName 表名
+     * @param array $UserNames 用户名列表
      */
     function __construct()
     {
@@ -152,6 +160,10 @@ GetCatalog：获取Catalog列表；
 
         if (array_key_exists("TableName",$param) and $param["TableName"] !== null) {
             $this->TableName = $param["TableName"];
+        }
+
+        if (array_key_exists("UserNames",$param) and $param["UserNames"] !== null) {
+            $this->UserNames = $param["UserNames"];
         }
     }
 }

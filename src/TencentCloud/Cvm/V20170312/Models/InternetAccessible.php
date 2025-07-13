@@ -62,7 +62,7 @@ use TencentCloud\Common\AbstractModel;
 
 示例值：WanIP
 
-此功能仅部分地区灰度开发，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category)
+此功能仅部分地区灰度开放，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category)
  * @method void setIPv4AddressType(string $IPv4AddressType) 设置公网 IP 类型。
 
 - WanIP：普通公网IP。
@@ -73,7 +73,7 @@ use TencentCloud\Common\AbstractModel;
 
 示例值：WanIP
 
-此功能仅部分地区灰度开发，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category)
+此功能仅部分地区灰度开放，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category)
  * @method string getIPv6AddressType() 获取弹性公网 IPv6 类型。
 - EIPv6：弹性公网 IPv6。
 - HighQualityEIPv6：精品 IPv6。仅中国香港支持精品IPv6。
@@ -81,7 +81,7 @@ use TencentCloud\Common\AbstractModel;
 如需为资源分配IPv6地址，请指定弹性公网IPv6类型。
 示例值：EIPv6
 
-此功能仅部分地区灰度开发，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category)
+此功能仅部分地区灰度开放，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category)
  * @method void setIPv6AddressType(string $IPv6AddressType) 设置弹性公网 IPv6 类型。
 - EIPv6：弹性公网 IPv6。
 - HighQualityEIPv6：精品 IPv6。仅中国香港支持精品IPv6。
@@ -89,7 +89,7 @@ use TencentCloud\Common\AbstractModel;
 如需为资源分配IPv6地址，请指定弹性公网IPv6类型。
 示例值：EIPv6
 
-此功能仅部分地区灰度开发，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category)
+此功能仅部分地区灰度开放，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category)
  * @method string getAntiDDoSPackageId() 获取高防包唯一ID，申请高防IP时，该字段必传。
 示例值：bgp-12345678
 
@@ -145,7 +145,7 @@ class InternetAccessible extends AbstractModel
 
 示例值：WanIP
 
-此功能仅部分地区灰度开发，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category)
+此功能仅部分地区灰度开放，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category)
      */
     public $IPv4AddressType;
 
@@ -157,7 +157,7 @@ class InternetAccessible extends AbstractModel
 如需为资源分配IPv6地址，请指定弹性公网IPv6类型。
 示例值：EIPv6
 
-此功能仅部分地区灰度开发，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category)
+此功能仅部分地区灰度开放，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category)
      */
     public $IPv6AddressType;
 
@@ -195,7 +195,7 @@ class InternetAccessible extends AbstractModel
 
 示例值：WanIP
 
-此功能仅部分地区灰度开发，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category)
+此功能仅部分地区灰度开放，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category)
      * @param string $IPv6AddressType 弹性公网 IPv6 类型。
 - EIPv6：弹性公网 IPv6。
 - HighQualityEIPv6：精品 IPv6。仅中国香港支持精品IPv6。
@@ -203,7 +203,7 @@ class InternetAccessible extends AbstractModel
 如需为资源分配IPv6地址，请指定弹性公网IPv6类型。
 示例值：EIPv6
 
-此功能仅部分地区灰度开发，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category)
+此功能仅部分地区灰度开放，如需使用[请提交工单咨询](https://console.cloud.tencent.com/workorder/category)
      * @param string $AntiDDoSPackageId 高防包唯一ID，申请高防IP时，该字段必传。
 示例值：bgp-12345678
      */

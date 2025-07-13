@@ -20,18 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DetectAIFakeFaces返回参数结构体
  *
- * @method string getAttackRiskLevel() 获取检测到的图片是否存在攻击。
-- Low：无攻击风险。
+ * @method string getAttackRiskLevel() 获取对于输入图片/视频的检测结果，检测是否存在人脸攻击。
+- Low：低攻击风险。
 - Mid：中度疑似攻击。
 - High：高度疑似攻击。
- * @method void setAttackRiskLevel(string $AttackRiskLevel) 设置检测到的图片是否存在攻击。
-- Low：无攻击风险。
+
+建议返回值为High时判断为拦截，Mid和Low判断为通过，以更好平衡安全性和通过率。
+ * @method void setAttackRiskLevel(string $AttackRiskLevel) 设置对于输入图片/视频的检测结果，检测是否存在人脸攻击。
+- Low：低攻击风险。
 - Mid：中度疑似攻击。
 - High：高度疑似攻击。
- * @method array getAttackRiskDetailList() 获取检测到疑似的攻击痕迹列表。
+
+建议返回值为High时判断为拦截，Mid和Low判断为通过，以更好平衡安全性和通过率。
+ * @method array getAttackRiskDetailList() 获取检测到的疑似攻击痕迹列表，仅当AttackRiskLevel为High或Mid时返回。
 - 说明：未检测到攻击痕迹时，返回空数组。
 - 此出参仅作为结果判断的参考，实际应用仍建议使用AttackRiskLevel的结果。
- * @method void setAttackRiskDetailList(array $AttackRiskDetailList) 设置检测到疑似的攻击痕迹列表。
+ * @method void setAttackRiskDetailList(array $AttackRiskDetailList) 设置检测到的疑似攻击痕迹列表，仅当AttackRiskLevel为High或Mid时返回。
 - 说明：未检测到攻击痕迹时，返回空数组。
 - 此出参仅作为结果判断的参考，实际应用仍建议使用AttackRiskLevel的结果。
  * @method ExtraInfo getExtraInfo() 获取额外信息。
@@ -42,15 +46,17 @@ use TencentCloud\Common\AbstractModel;
 class DetectAIFakeFacesResponse extends AbstractModel
 {
     /**
-     * @var string 检测到的图片是否存在攻击。
-- Low：无攻击风险。
+     * @var string 对于输入图片/视频的检测结果，检测是否存在人脸攻击。
+- Low：低攻击风险。
 - Mid：中度疑似攻击。
 - High：高度疑似攻击。
+
+建议返回值为High时判断为拦截，Mid和Low判断为通过，以更好平衡安全性和通过率。
      */
     public $AttackRiskLevel;
 
     /**
-     * @var array 检测到疑似的攻击痕迹列表。
+     * @var array 检测到的疑似攻击痕迹列表，仅当AttackRiskLevel为High或Mid时返回。
 - 说明：未检测到攻击痕迹时，返回空数组。
 - 此出参仅作为结果判断的参考，实际应用仍建议使用AttackRiskLevel的结果。
      */
@@ -67,11 +73,13 @@ class DetectAIFakeFacesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $AttackRiskLevel 检测到的图片是否存在攻击。
-- Low：无攻击风险。
+     * @param string $AttackRiskLevel 对于输入图片/视频的检测结果，检测是否存在人脸攻击。
+- Low：低攻击风险。
 - Mid：中度疑似攻击。
 - High：高度疑似攻击。
-     * @param array $AttackRiskDetailList 检测到疑似的攻击痕迹列表。
+
+建议返回值为High时判断为拦截，Mid和Low判断为通过，以更好平衡安全性和通过率。
+     * @param array $AttackRiskDetailList 检测到的疑似攻击痕迹列表，仅当AttackRiskLevel为High或Mid时返回。
 - 说明：未检测到攻击痕迹时，返回空数组。
 - 此出参仅作为结果判断的参考，实际应用仍建议使用AttackRiskLevel的结果。
      * @param ExtraInfo $ExtraInfo 额外信息。

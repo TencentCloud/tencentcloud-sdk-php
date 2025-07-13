@@ -52,8 +52,8 @@ Modify 集群变更中；
  * @method void setMasterSummary(NodesSummary $MasterSummary) 设置数据节点描述信息
  * @method NodesSummary getCommonSummary() 获取zookeeper节点描述信息
  * @method void setCommonSummary(NodesSummary $CommonSummary) 设置zookeeper节点描述信息
- * @method string getHA() 获取高可用，“true" "false"
- * @method void setHA(string $HA) 设置高可用，“true" "false"
+ * @method string getHA() 获取高可用,"true" "false"
+ * @method void setHA(string $HA) 设置高可用,"true" "false"
  * @method string getAccessInfo() 获取访问地址，例如 "10.0.0.1:9000"
  * @method void setAccessInfo(string $AccessInfo) 设置访问地址，例如 "10.0.0.1:9000"
  * @method integer getId() 获取记录ID，数值型
@@ -132,6 +132,8 @@ Modify 集群变更中；
  * @method void setBindSGs(array $BindSGs) 设置绑定的安全组
  * @method boolean getHasPublicCloudClb() 获取是否开启公网clb
  * @method void setHasPublicCloudClb(boolean $HasPublicCloudClb) 设置是否开启公网clb
+ * @method string getUpgradeZkVersions() 获取可升级的zk版本
+ * @method void setUpgradeZkVersions(string $UpgradeZkVersions) 设置可升级的zk版本
  */
 class InstanceInfo extends AbstractModel
 {
@@ -204,7 +206,7 @@ Modify 集群变更中；
     public $CommonSummary;
 
     /**
-     * @var string 高可用，“true" "false"
+     * @var string 高可用,"true" "false"
      */
     public $HA;
 
@@ -404,6 +406,11 @@ Modify 集群变更中；
     public $HasPublicCloudClb;
 
     /**
+     * @var string 可升级的zk版本
+     */
+    public $UpgradeZkVersions;
+
+    /**
      * @param string $InstanceId 集群实例ID, "cdw-xxxx" 字符串类型
      * @param string $InstanceName 集群实例名称
      * @param string $Status 状态,
@@ -420,7 +427,7 @@ Modify 集群变更中；
      * @param string $ExpireTime 过期时间
      * @param NodesSummary $MasterSummary 数据节点描述信息
      * @param NodesSummary $CommonSummary zookeeper节点描述信息
-     * @param string $HA 高可用，“true" "false"
+     * @param string $HA 高可用,"true" "false"
      * @param string $AccessInfo 访问地址，例如 "10.0.0.1:9000"
      * @param integer $Id 记录ID，数值型
      * @param integer $RegionId regionId, 表示地域
@@ -460,6 +467,7 @@ Modify 集群变更中；
      * @param boolean $IsWhiteSGs 安全组白名单
      * @param array $BindSGs 绑定的安全组
      * @param boolean $HasPublicCloudClb 是否开启公网clb
+     * @param string $UpgradeZkVersions 可升级的zk版本
      */
     function __construct()
     {
@@ -698,6 +706,10 @@ Modify 集群变更中；
 
         if (array_key_exists("HasPublicCloudClb",$param) and $param["HasPublicCloudClb"] !== null) {
             $this->HasPublicCloudClb = $param["HasPublicCloudClb"];
+        }
+
+        if (array_key_exists("UpgradeZkVersions",$param) and $param["UpgradeZkVersions"] !== null) {
+            $this->UpgradeZkVersions = $param["UpgradeZkVersions"];
         }
     }
 }

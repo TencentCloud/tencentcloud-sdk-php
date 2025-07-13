@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsHoneypot(boolean $IsHoneypot) 设置是否蜜罐
  * @method string getScreenshotUrl() 获取截图
  * @method void setScreenshotUrl(string $ScreenshotUrl) 设置截图
+ * @method string getStatus() 获取状态：unrepaired:未修复，repaired:已修复, offline:资产已下线, ignore:已忽略, checking:复测中
+ * @method void setStatus(string $Status) 设置状态：unrepaired:未修复，repaired:已修复, offline:资产已下线, ignore:已忽略, checking:复测中
+ * @method string getLastCheckTime() 获取上次复测时间
+ * @method void setLastCheckTime(string $LastCheckTime) 设置上次复测时间
  */
 class DisplayWeakPassword extends AbstractModel
 {
@@ -94,6 +98,16 @@ class DisplayWeakPassword extends AbstractModel
     public $ScreenshotUrl;
 
     /**
+     * @var string 状态：unrepaired:未修复，repaired:已修复, offline:资产已下线, ignore:已忽略, checking:复测中
+     */
+    public $Status;
+
+    /**
+     * @var string 上次复测时间
+     */
+    public $LastCheckTime;
+
+    /**
      * @param integer $Id 主键ID
      * @param DisplayToolCommon $DisplayToolCommon 公共字段
      * @param string $Ip 解析的IP
@@ -104,6 +118,8 @@ class DisplayWeakPassword extends AbstractModel
      * @param string $Password 弱口令密码
      * @param boolean $IsHoneypot 是否蜜罐
      * @param string $ScreenshotUrl 截图
+     * @param string $Status 状态：unrepaired:未修复，repaired:已修复, offline:资产已下线, ignore:已忽略, checking:复测中
+     * @param string $LastCheckTime 上次复测时间
      */
     function __construct()
     {
@@ -157,6 +173,14 @@ class DisplayWeakPassword extends AbstractModel
 
         if (array_key_exists("ScreenshotUrl",$param) and $param["ScreenshotUrl"] !== null) {
             $this->ScreenshotUrl = $param["ScreenshotUrl"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("LastCheckTime",$param) and $param["LastCheckTime"] !== null) {
+            $this->LastCheckTime = $param["LastCheckTime"];
         }
     }
 }

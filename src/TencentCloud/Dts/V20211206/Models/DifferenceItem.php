@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDb() 获取数据库名
  * @method void setDb(string $Db) 设置数据库名
+ * @method string getSchema() 获取schema
+ * @method void setSchema(string $Schema) 设置schema
  * @method string getTable() 获取表名
  * @method void setTable(string $Table) 设置表名
  * @method integer getChunk() 获取分块号
@@ -47,6 +49,11 @@ class DifferenceItem extends AbstractModel
      * @var string 数据库名
      */
     public $Db;
+
+    /**
+     * @var string schema
+     */
+    public $Schema;
 
     /**
      * @var string 表名
@@ -95,6 +102,7 @@ class DifferenceItem extends AbstractModel
 
     /**
      * @param string $Db 数据库名
+     * @param string $Schema schema
      * @param string $Table 表名
      * @param integer $Chunk 分块号
      * @param string $SrcItem 源库数值
@@ -120,6 +128,10 @@ class DifferenceItem extends AbstractModel
         }
         if (array_key_exists("Db",$param) and $param["Db"] !== null) {
             $this->Db = $param["Db"];
+        }
+
+        if (array_key_exists("Schema",$param) and $param["Schema"] !== null) {
+            $this->Schema = $param["Schema"];
         }
 
         if (array_key_exists("Table",$param) and $param["Table"] !== null) {

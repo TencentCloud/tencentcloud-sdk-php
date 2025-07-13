@@ -36,6 +36,7 @@ use TencentCloud\Live\V20180801\Models as Models;
  * @method Models\AuthenticateDomainOwnerResponse AuthenticateDomainOwner(Models\AuthenticateDomainOwnerRequest $req) 验证用户是否拥有特定直播域名。
  * @method Models\CancelCommonMixStreamResponse CancelCommonMixStream(Models\CancelCommonMixStreamRequest $req) 该接口用来取消混流。用法与 mix_streamv2.cancel_mix_stream 基本一致。
  * @method Models\CopyCasterResponse CopyCaster(Models\CopyCasterRequest $req) 该接口用来复制导播台配置
+ * @method Models\CreateAuditKeywordsResponse CreateAuditKeywords(Models\CreateAuditKeywordsRequest $req) 创建关键词，并关联到关键词库。
  * @method Models\CreateCasterResponse CreateCaster(Models\CreateCasterRequest $req) 该接口用来创建新的导播台
  * @method Models\CreateCasterInputPushUrlResponse CreateCasterInputPushUrl(Models\CreateCasterInputPushUrlRequest $req) 该接口用来生成导播台推流地址
  * @method Models\CreateCasterPgmResponse CreateCasterPgm(Models\CreateCasterPgmRequest $req) 该接口用来启动主监任务，并将获取主监画面的播放地址。
@@ -117,6 +118,7 @@ use TencentCloud\Live\V20180801\Models as Models;
 3. 创建的截图任务记录在平台侧只保留3个月。
 4. 当前截图任务管理API（CreateScreenshotTask/StopScreenshotTask/DeleteScreenshotTask）与旧API（CreateLiveInstantSnapshot/StopLiveInstantSnapshot）不兼容，两套接口不能混用。
 5. 避免 创建截图任务 与 推流 操作同时进行，可能导致因截图任务未生效而引起任务延迟启动问题，两者操作间隔建议大于3秒。
+ * @method Models\DeleteAuditKeywordsResponse DeleteAuditKeywords(Models\DeleteAuditKeywordsRequest $req) 删除关键词信息。
  * @method Models\DeleteCasterResponse DeleteCaster(Models\DeleteCasterRequest $req) 该接口用来删除一个导播台的所有信息。
 注意，调用该接口后，所有的导播台信息将被清除，包括正在直播的内容也将直接中断。
  * @method Models\DeleteCasterInputInfoResponse DeleteCasterInputInfo(Models\DeleteCasterInputInfoRequest $req) 该接口用来删除导播台中的输入源信息。
@@ -153,6 +155,7 @@ DomainName+AppName+StreamName+TemplateId唯一标识单个转码规则，如需�
  * @method Models\DescribeAllStreamPlayInfoListResponse DescribeAllStreamPlayInfoList(Models\DescribeAllStreamPlayInfoListRequest $req) 该接口为监控数据接口，数据采集及统计方式与计费数据不同，仅供运营分析使用，不能用于计费对账参考。
 输入某个时间点（1分钟维度），查询该时间点所有流的下行信息。
  * @method Models\DescribeAreaBillBandwidthAndFluxListResponse DescribeAreaBillBandwidthAndFluxList(Models\DescribeAreaBillBandwidthAndFluxListRequest $req) 海外分区直播播放带宽和流量数据查询。
+ * @method Models\DescribeAuditKeywordsResponse DescribeAuditKeywords(Models\DescribeAuditKeywordsRequest $req) 获取关键词信息。
  * @method Models\DescribeBackupStreamListResponse DescribeBackupStreamList(Models\DescribeBackupStreamListRequest $req) 返回正在直播中的流列表。适用于推流成功后查询在线流信息。
 
 注意：

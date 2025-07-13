@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDb() 获取数据库名
  * @method void setDb(string $Db) 设置数据库名
+ * @method string getSchema() 获取schema名
+ * @method void setSchema(string $Schema) 设置schema名
  * @method string getTable() 获取表名
  * @method void setTable(string $Table) 设置表名
  * @method string getReason() 获取未发起检查的原因
@@ -35,6 +37,11 @@ class SkippedItem extends AbstractModel
     public $Db;
 
     /**
+     * @var string schema名
+     */
+    public $Schema;
+
+    /**
      * @var string 表名
      */
     public $Table;
@@ -46,6 +53,7 @@ class SkippedItem extends AbstractModel
 
     /**
      * @param string $Db 数据库名
+     * @param string $Schema schema名
      * @param string $Table 表名
      * @param string $Reason 未发起检查的原因
      */
@@ -64,6 +72,10 @@ class SkippedItem extends AbstractModel
         }
         if (array_key_exists("Db",$param) and $param["Db"] !== null) {
             $this->Db = $param["Db"];
+        }
+
+        if (array_key_exists("Schema",$param) and $param["Schema"] !== null) {
+            $this->Schema = $param["Schema"];
         }
 
         if (array_key_exists("Table",$param) and $param["Table"] !== null) {

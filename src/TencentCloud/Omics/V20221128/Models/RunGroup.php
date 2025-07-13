@@ -72,8 +72,8 @@ use TencentCloud\Common\AbstractModel;
 - COS: COS文件
  * @method string getInputCosUri() 获取输入COS地址。
  * @method void setInputCosUri(string $InputCosUri) 设置输入COS地址。
- * @method string getInputTemplateId() 获取输入模版ID。
- * @method void setInputTemplateId(string $InputTemplateId) 设置输入模版ID。
+ * @method string getInputTemplateId() 获取输入模板ID。
+ * @method void setInputTemplateId(string $InputTemplateId) 设置输入模板ID。
  * @method RunOption getOption() 获取WDL运行选项。
  * @method void setOption(RunOption $Option) 设置WDL运行选项。
  * @method NFOption getNFOption() 获取Nextflow运行选项。
@@ -204,7 +204,7 @@ class RunGroup extends AbstractModel
     public $InputCosUri;
 
     /**
-     * @var string 输入模版ID。
+     * @var string 输入模板ID。
      */
     public $InputTemplateId;
 
@@ -295,7 +295,7 @@ class RunGroup extends AbstractModel
 - MANUAL: 手动输入
 - COS: COS文件
      * @param string $InputCosUri 输入COS地址。
-     * @param string $InputTemplateId 输入模版ID。
+     * @param string $InputTemplateId 输入模板ID。
      * @param RunOption $Option WDL运行选项。
      * @param NFOption $NFOption Nextflow运行选项。
      * @param array $Volumes 使用的缓存卷。

@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Monitor\V20230616\Models;
+namespace TencentCloud\Ctem\V20231128\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 计算算子
+ * 代码泄露详情
  *
- * @method string getFunction() 获取算子名称
- * @method void setFunction(string $Function) 设置算子名称
- * @method float getN() 获取算子入参值
- * @method void setN(float $N) 设置算子入参值
+ * @method integer getId() 获取主键ID
+ * @method void setId(integer $Id) 设置主键ID
+ * @method string getUrl() 获取链接
+ * @method void setUrl(string $Url) 设置链接
  */
-class Expr extends AbstractModel
+class DisplayLeakageCode extends AbstractModel
 {
     /**
-     * @var string 算子名称
+     * @var integer 主键ID
      */
-    public $Function;
+    public $Id;
 
     /**
-     * @var float 算子入参值
+     * @var string 链接
      */
-    public $N;
+    public $Url;
 
     /**
-     * @param string $Function 算子名称
-     * @param float $N 算子入参值
+     * @param integer $Id 主键ID
+     * @param string $Url 链接
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class Expr extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Function",$param) and $param["Function"] !== null) {
-            $this->Function = $param["Function"];
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
         }
 
-        if (array_key_exists("N",$param) and $param["N"] !== null) {
-            $this->N = $param["N"];
+        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
+            $this->Url = $param["Url"];
         }
     }
 }

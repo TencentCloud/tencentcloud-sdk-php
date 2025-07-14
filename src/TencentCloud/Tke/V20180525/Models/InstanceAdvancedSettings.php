@@ -37,14 +37,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaints(array $Taints) 设置节点污点
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMountTarget() 获取数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 (tlinux系统格式化成xfs)并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。
-注意，注意，多盘场景请使用下方的DataDisks数据结构，设置对应的云盘类型、云盘大小、挂载路径、是否格式化等信息。
+注意：多盘场景请使用下方的DataDisks数据结构，设置对应的云盘类型、云盘大小、挂载路径、是否格式化等信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMountTarget(string $MountTarget) 设置数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 (tlinux系统格式化成xfs)并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。
-注意，注意，多盘场景请使用下方的DataDisks数据结构，设置对应的云盘类型、云盘大小、挂载路径、是否格式化等信息。
+注意：多盘场景请使用下方的DataDisks数据结构，设置对应的云盘类型、云盘大小、挂载路径、是否格式化等信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getDockerGraphPath() 获取dockerd --graph 指定值, 默认为 /var/lib/docker
+ * @method string getDockerGraphPath() 获取dockerd --graph 指定值。若未指定此参数，将使用内置默认路径 /var/lib/docker 作为存储根目录。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDockerGraphPath(string $DockerGraphPath) 设置dockerd --graph 指定值, 默认为 /var/lib/docker
+ * @method void setDockerGraphPath(string $DockerGraphPath) 设置dockerd --graph 指定值。若未指定此参数，将使用内置默认路径 /var/lib/docker 作为存储根目录。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUserScript() 获取base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看, 如果要求节点需要在进行初始化完成后才可加入调度, 可配合 unschedulable 参数使用, 在 userScript 最后初始化完成后, 添加 kubectl uncordon nodename --kubeconfig=/root/.kube/config 命令使节点加入调度
 注意：此字段可能返回 null，表示取不到有效值。
@@ -91,13 +91,13 @@ class InstanceAdvancedSettings extends AbstractModel
 
     /**
      * @var string 数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 (tlinux系统格式化成xfs)并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。
-注意，注意，多盘场景请使用下方的DataDisks数据结构，设置对应的云盘类型、云盘大小、挂载路径、是否格式化等信息。
+注意：多盘场景请使用下方的DataDisks数据结构，设置对应的云盘类型、云盘大小、挂载路径、是否格式化等信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MountTarget;
 
     /**
-     * @var string dockerd --graph 指定值, 默认为 /var/lib/docker
+     * @var string dockerd --graph 指定值。若未指定此参数，将使用内置默认路径 /var/lib/docker 作为存储根目录。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DockerGraphPath;
@@ -140,9 +140,9 @@ class InstanceAdvancedSettings extends AbstractModel
      * @param array $Taints 节点污点
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MountTarget 数据盘挂载点, 默认不挂载数据盘. 已格式化的 ext3，ext4，xfs 文件系统的数据盘将直接挂载，其他文件系统或未格式化的数据盘将自动格式化为ext4 (tlinux系统格式化成xfs)并挂载，请注意备份数据! 无数据盘或有多块数据盘的云主机此设置不生效。
-注意，注意，多盘场景请使用下方的DataDisks数据结构，设置对应的云盘类型、云盘大小、挂载路径、是否格式化等信息。
+注意：多盘场景请使用下方的DataDisks数据结构，设置对应的云盘类型、云盘大小、挂载路径、是否格式化等信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $DockerGraphPath dockerd --graph 指定值, 默认为 /var/lib/docker
+     * @param string $DockerGraphPath dockerd --graph 指定值。若未指定此参数，将使用内置默认路径 /var/lib/docker 作为存储根目录。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UserScript base64 编码的用户脚本, 此脚本会在 k8s 组件运行后执行, 需要用户保证脚本的可重入及重试逻辑, 脚本及其生成的日志文件可在节点的 /data/ccs_userscript/ 路径查看, 如果要求节点需要在进行初始化完成后才可加入调度, 可配合 unschedulable 参数使用, 在 userScript 最后初始化完成后, 添加 kubectl uncordon nodename --kubeconfig=/root/.kube/config 命令使节点加入调度
 注意：此字段可能返回 null，表示取不到有效值。

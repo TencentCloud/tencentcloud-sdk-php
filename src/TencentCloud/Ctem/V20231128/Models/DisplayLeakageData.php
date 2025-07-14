@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Lke\V20231130\Models;
+namespace TencentCloud\Ctem\V20231128\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 重排数据, 计算2段内容的关联性
+ * 数据泄露详情
  *
- * @method string getPromptA() 获取第一段内容
- * @method void setPromptA(string $PromptA) 设置第一段内容
- * @method string getPromptB() 获取第二段内容
- * @method void setPromptB(string $PromptB) 设置第二段内容
+ * @method integer getId() 获取主键ID
+ * @method void setId(integer $Id) 设置主键ID
+ * @method string getUrl() 获取链接
+ * @method void setUrl(string $Url) 设置链接
  */
-class ReRankDataObject extends AbstractModel
+class DisplayLeakageData extends AbstractModel
 {
     /**
-     * @var string 第一段内容
+     * @var integer 主键ID
      */
-    public $PromptA;
+    public $Id;
 
     /**
-     * @var string 第二段内容
+     * @var string 链接
      */
-    public $PromptB;
+    public $Url;
 
     /**
-     * @param string $PromptA 第一段内容
-     * @param string $PromptB 第二段内容
+     * @param integer $Id 主键ID
+     * @param string $Url 链接
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class ReRankDataObject extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PromptA",$param) and $param["PromptA"] !== null) {
-            $this->PromptA = $param["PromptA"];
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
         }
 
-        if (array_key_exists("PromptB",$param) and $param["PromptB"] !== null) {
-            $this->PromptB = $param["PromptB"];
+        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
+            $this->Url = $param["Url"];
         }
     }
 }

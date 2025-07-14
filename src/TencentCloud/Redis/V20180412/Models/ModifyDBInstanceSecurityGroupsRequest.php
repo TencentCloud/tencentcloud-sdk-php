@@ -25,9 +25,11 @@ use TencentCloud\Common\AbstractModel;
  * @method array getSecurityGroupIds() 获取更换为新的安全组 ID 列表，即一个或者多个安全组 ID 组成的数组。
 - 若实例第一次配置安全组，请使用接口[AssociateSecurityGroups](https://cloud.tencent.com/document/product/239/41260)先绑定安全组。
 - 更换安全组，请在[控制台安全组](https://console.cloud.tencent.com/vpc/security-group)页面获取安全组 ID。
+  **注意：**该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置更换为新的安全组 ID 列表，即一个或者多个安全组 ID 组成的数组。
 - 若实例第一次配置安全组，请使用接口[AssociateSecurityGroups](https://cloud.tencent.com/document/product/239/41260)先绑定安全组。
 - 更换安全组，请在[控制台安全组](https://console.cloud.tencent.com/vpc/security-group)页面获取安全组 ID。
+  **注意：**该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
  * @method string getInstanceId() 获取实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
  */
@@ -42,6 +44,7 @@ class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel
      * @var array 更换为新的安全组 ID 列表，即一个或者多个安全组 ID 组成的数组。
 - 若实例第一次配置安全组，请使用接口[AssociateSecurityGroups](https://cloud.tencent.com/document/product/239/41260)先绑定安全组。
 - 更换安全组，请在[控制台安全组](https://console.cloud.tencent.com/vpc/security-group)页面获取安全组 ID。
+  **注意：**该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
      */
     public $SecurityGroupIds;
 
@@ -55,6 +58,7 @@ class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel
      * @param array $SecurityGroupIds 更换为新的安全组 ID 列表，即一个或者多个安全组 ID 组成的数组。
 - 若实例第一次配置安全组，请使用接口[AssociateSecurityGroups](https://cloud.tencent.com/document/product/239/41260)先绑定安全组。
 - 更换安全组，请在[控制台安全组](https://console.cloud.tencent.com/vpc/security-group)页面获取安全组 ID。
+  **注意：**该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
      * @param string $InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     function __construct()

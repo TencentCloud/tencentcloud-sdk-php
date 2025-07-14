@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFreeDataKeyLimit(integer $FreeDataKeyLimit) 设置IsAllowedDataKeyHosted为1时有效，数据密钥免费额度。
  * @method integer getDataKeyUsedCount() 获取IsAllowedDataKeyHosted为1时有效，已使用的数据密钥数量。
  * @method void setDataKeyUsedCount(integer $DataKeyUsedCount) 设置IsAllowedDataKeyHosted为1时有效，已使用的数据密钥数量。
+ * @method array getSyncTaskList() 获取同步任务的目标地域信息
+ * @method void setSyncTaskList(array $SyncTaskList) 设置同步任务的目标地域信息
+ * @method boolean getIsAllowedSync() 获取是否支持同步任务。true:支持，false:不支持。
+ * @method void setIsAllowedSync(boolean $IsAllowedSync) 设置是否支持同步任务。true:支持，false:不支持。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -138,6 +142,16 @@ class GetServiceStatusResponse extends AbstractModel
     public $DataKeyUsedCount;
 
     /**
+     * @var array 同步任务的目标地域信息
+     */
+    public $SyncTaskList;
+
+    /**
+     * @var boolean 是否支持同步任务。true:支持，false:不支持。
+     */
+    public $IsAllowedSync;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -159,6 +173,8 @@ class GetServiceStatusResponse extends AbstractModel
      * @param integer $DataKeyLimit IsAllowedDataKeyHosted为1时有效，数据密钥的购买额度
      * @param integer $FreeDataKeyLimit IsAllowedDataKeyHosted为1时有效，数据密钥免费额度。
      * @param integer $DataKeyUsedCount IsAllowedDataKeyHosted为1时有效，已使用的数据密钥数量。
+     * @param array $SyncTaskList 同步任务的目标地域信息
+     * @param boolean $IsAllowedSync 是否支持同步任务。true:支持，false:不支持。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -241,6 +257,19 @@ class GetServiceStatusResponse extends AbstractModel
 
         if (array_key_exists("DataKeyUsedCount",$param) and $param["DataKeyUsedCount"] !== null) {
             $this->DataKeyUsedCount = $param["DataKeyUsedCount"];
+        }
+
+        if (array_key_exists("SyncTaskList",$param) and $param["SyncTaskList"] !== null) {
+            $this->SyncTaskList = [];
+            foreach ($param["SyncTaskList"] as $key => $value){
+                $obj = new DestinationSyncConfig();
+                $obj->deserialize($value);
+                array_push($this->SyncTaskList, $obj);
+            }
+        }
+
+        if (array_key_exists("IsAllowedSync",$param) and $param["IsAllowedSync"] !== null) {
+            $this->IsAllowedSync = $param["IsAllowedSync"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

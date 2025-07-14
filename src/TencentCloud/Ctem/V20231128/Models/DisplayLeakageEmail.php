@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Lke\V20231130\Models;
+namespace TencentCloud\Ctem\V20231128\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * GetReconstructDocumentResult请求参数结构体
+ * 邮箱泄露详情
  *
- * @method string getTaskId() 获取任务唯一Id。[CreateReconstructDocumentFlow](https://cloud.tencent.com/document/product/1759/107506) 返回的TaskId。
- * @method void setTaskId(string $TaskId) 设置任务唯一Id。[CreateReconstructDocumentFlow](https://cloud.tencent.com/document/product/1759/107506) 返回的TaskId。
+ * @method integer getId() 获取主键ID
+ * @method void setId(integer $Id) 设置主键ID
+ * @method string getEmail() 获取邮箱
+ * @method void setEmail(string $Email) 设置邮箱
  */
-class GetReconstructDocumentResultRequest extends AbstractModel
+class DisplayLeakageEmail extends AbstractModel
 {
     /**
-     * @var string 任务唯一Id。[CreateReconstructDocumentFlow](https://cloud.tencent.com/document/product/1759/107506) 返回的TaskId。
+     * @var integer 主键ID
      */
-    public $TaskId;
+    public $Id;
 
     /**
-     * @param string $TaskId 任务唯一Id。[CreateReconstructDocumentFlow](https://cloud.tencent.com/document/product/1759/107506) 返回的TaskId。
+     * @var string 邮箱
+     */
+    public $Email;
+
+    /**
+     * @param integer $Id 主键ID
+     * @param string $Email 邮箱
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class GetReconstructDocumentResultRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("Email",$param) and $param["Email"] !== null) {
+            $this->Email = $param["Email"];
         }
     }
 }

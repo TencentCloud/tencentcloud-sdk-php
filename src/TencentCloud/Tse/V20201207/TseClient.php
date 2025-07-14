@@ -81,6 +81,7 @@ use TencentCloud\Tse\V20201207\Models as Models;
  * @method Models\DescribeCloudNativeAPIGatewayRoutesResponse DescribeCloudNativeAPIGatewayRoutes(Models\DescribeCloudNativeAPIGatewayRoutesRequest $req) 查询云原生网关路由列表
  * @method Models\DescribeCloudNativeAPIGatewayServiceRateLimitResponse DescribeCloudNativeAPIGatewayServiceRateLimit(Models\DescribeCloudNativeAPIGatewayServiceRateLimitRequest $req) 查询云原生网关的限流插件(服务)
  * @method Models\DescribeCloudNativeAPIGatewayServicesResponse DescribeCloudNativeAPIGatewayServices(Models\DescribeCloudNativeAPIGatewayServicesRequest $req) 查询云原生网关服务列表
+ * @method Models\DescribeCloudNativeAPIGatewayServicesLightResponse DescribeCloudNativeAPIGatewayServicesLight(Models\DescribeCloudNativeAPIGatewayServicesLightRequest $req) 轻量查询云原生网关服务列表
  * @method Models\DescribeCloudNativeAPIGatewayUpstreamResponse DescribeCloudNativeAPIGatewayUpstream(Models\DescribeCloudNativeAPIGatewayUpstreamRequest $req) 获取云原生网关服务详情下的Upstream列表
  * @method Models\DescribeCloudNativeAPIGatewaysResponse DescribeCloudNativeAPIGateways(Models\DescribeCloudNativeAPIGatewaysRequest $req) 获取云原生API网关实例列表
  * @method Models\DescribeConfigFileResponse DescribeConfigFile(Models\DescribeConfigFileRequest $req) 根据命名空间、组、名字查找配置文件

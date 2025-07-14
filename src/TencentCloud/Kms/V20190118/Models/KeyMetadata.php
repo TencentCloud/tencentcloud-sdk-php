@@ -56,6 +56,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRotateDays(integer $RotateDays) 设置密钥轮转周期（天）
  * @method integer getLastRotateTime() 获取上次乱转时间（Unix timestamp）
  * @method void setLastRotateTime(integer $LastRotateTime) 设置上次乱转时间（Unix timestamp）
+ * @method integer getIsSyncReplica() 获取 密钥是否是主副本。0:主本，1:同步副本。
+ * @method void setIsSyncReplica(integer $IsSyncReplica) 设置 密钥是否是主副本。0:主本，1:同步副本。
+ * @method string getSourceRegion() 获取同步的原始地域
+ * @method void setSourceRegion(string $SourceRegion) 设置同步的原始地域
+ * @method integer getSyncStatus() 获取密钥同步的状态，0:未同步,1:同步成功,2:同步失败,3:同步中。
+ * @method void setSyncStatus(integer $SyncStatus) 设置密钥同步的状态，0:未同步,1:同步成功,2:同步失败,3:同步中。
+ * @method string getSyncMessages() 获取同步的结果描述
+ * @method void setSyncMessages(string $SyncMessages) 设置同步的结果描述
+ * @method integer getSyncStartTime() 获取同步的开始时间
+ * @method void setSyncStartTime(integer $SyncStartTime) 设置同步的开始时间
+ * @method integer getSyncEndTime() 获取同步的结束时间
+ * @method void setSyncEndTime(integer $SyncEndTime) 设置同步的结束时间
+ * @method string getSourceHsmClusterId() 获取同步的原始集群，如果为空，是公有云公共集群
+ * @method void setSourceHsmClusterId(string $SourceHsmClusterId) 设置同步的原始集群，如果为空，是公有云公共集群
  */
 class KeyMetadata extends AbstractModel
 {
@@ -150,6 +164,41 @@ class KeyMetadata extends AbstractModel
     public $LastRotateTime;
 
     /**
+     * @var integer  密钥是否是主副本。0:主本，1:同步副本。
+     */
+    public $IsSyncReplica;
+
+    /**
+     * @var string 同步的原始地域
+     */
+    public $SourceRegion;
+
+    /**
+     * @var integer 密钥同步的状态，0:未同步,1:同步成功,2:同步失败,3:同步中。
+     */
+    public $SyncStatus;
+
+    /**
+     * @var string 同步的结果描述
+     */
+    public $SyncMessages;
+
+    /**
+     * @var integer 同步的开始时间
+     */
+    public $SyncStartTime;
+
+    /**
+     * @var integer 同步的结束时间
+     */
+    public $SyncEndTime;
+
+    /**
+     * @var string 同步的原始集群，如果为空，是公有云公共集群
+     */
+    public $SourceHsmClusterId;
+
+    /**
      * @param string $KeyId CMK的全局唯一标识
      * @param string $Alias 作为密钥更容易辨识，更容易被人看懂的别名
      * @param integer $CreateTime 密钥创建时间
@@ -168,6 +217,13 @@ class KeyMetadata extends AbstractModel
      * @param string $HsmClusterId HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
      * @param integer $RotateDays 密钥轮转周期（天）
      * @param integer $LastRotateTime 上次乱转时间（Unix timestamp）
+     * @param integer $IsSyncReplica  密钥是否是主副本。0:主本，1:同步副本。
+     * @param string $SourceRegion 同步的原始地域
+     * @param integer $SyncStatus 密钥同步的状态，0:未同步,1:同步成功,2:同步失败,3:同步中。
+     * @param string $SyncMessages 同步的结果描述
+     * @param integer $SyncStartTime 同步的开始时间
+     * @param integer $SyncEndTime 同步的结束时间
+     * @param string $SourceHsmClusterId 同步的原始集群，如果为空，是公有云公共集群
      */
     function __construct()
     {
@@ -252,6 +308,34 @@ class KeyMetadata extends AbstractModel
 
         if (array_key_exists("LastRotateTime",$param) and $param["LastRotateTime"] !== null) {
             $this->LastRotateTime = $param["LastRotateTime"];
+        }
+
+        if (array_key_exists("IsSyncReplica",$param) and $param["IsSyncReplica"] !== null) {
+            $this->IsSyncReplica = $param["IsSyncReplica"];
+        }
+
+        if (array_key_exists("SourceRegion",$param) and $param["SourceRegion"] !== null) {
+            $this->SourceRegion = $param["SourceRegion"];
+        }
+
+        if (array_key_exists("SyncStatus",$param) and $param["SyncStatus"] !== null) {
+            $this->SyncStatus = $param["SyncStatus"];
+        }
+
+        if (array_key_exists("SyncMessages",$param) and $param["SyncMessages"] !== null) {
+            $this->SyncMessages = $param["SyncMessages"];
+        }
+
+        if (array_key_exists("SyncStartTime",$param) and $param["SyncStartTime"] !== null) {
+            $this->SyncStartTime = $param["SyncStartTime"];
+        }
+
+        if (array_key_exists("SyncEndTime",$param) and $param["SyncEndTime"] !== null) {
+            $this->SyncEndTime = $param["SyncEndTime"];
+        }
+
+        if (array_key_exists("SourceHsmClusterId",$param) and $param["SourceHsmClusterId"] !== null) {
+            $this->SourceHsmClusterId = $param["SourceHsmClusterId"];
         }
     }
 }

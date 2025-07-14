@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置托管资源部署状态：0 等待部署， 1 部署成功， 2 部署失败 3 部署中， 4 回滚成功， 5 回滚失败
  * @method string getCreateTime() 获取托管资源创建时间
  * @method void setCreateTime(string $CreateTime) 设置托管资源创建时间
+ * @method integer getPendingTotalCount() 获取待部署总数
+ * @method void setPendingTotalCount(integer $PendingTotalCount) 设置待部署总数
  */
 class DeployRecord extends AbstractModel
 {
@@ -80,6 +82,11 @@ class DeployRecord extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var integer 待部署总数
+     */
+    public $PendingTotalCount;
+
+    /**
      * @param integer $TotalCount 总数
      * @param integer $SuccessTotalCount 成功总数
      * @param integer $FailedTotalCount 失败总数
@@ -88,6 +95,7 @@ class DeployRecord extends AbstractModel
      * @param array $RecordDetailList 部署记录详情列表
      * @param integer $Status 托管资源部署状态：0 等待部署， 1 部署成功， 2 部署失败 3 部署中， 4 回滚成功， 5 回滚失败
      * @param string $CreateTime 托管资源创建时间
+     * @param integer $PendingTotalCount 待部署总数
      */
     function __construct()
     {
@@ -137,6 +145,10 @@ class DeployRecord extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("PendingTotalCount",$param) and $param["PendingTotalCount"] !== null) {
+            $this->PendingTotalCount = $param["PendingTotalCount"];
         }
     }
 }

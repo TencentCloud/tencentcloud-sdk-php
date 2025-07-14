@@ -46,6 +46,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPcuDataOversea(array $PcuDataOversea) 设置海外地区Pcu统计数据，单位人
  * @method array getPcuDataSum() 获取大陆和海外地区Pcu统计数据汇总，单位人
  * @method void setPcuDataSum(array $PcuDataSum) 设置大陆和海外地区Pcu统计数据汇总，单位人
+ * @method integer getMiniGameDataNum() 获取小游戏时长统计项数目
+ * @method void setMiniGameDataNum(integer $MiniGameDataNum) 设置小游戏时长统计项数目
+ * @method array getMiniGameDataMainland() 获取大陆地区小游戏时长统计数据，单位分钟
+ * @method void setMiniGameDataMainland(array $MiniGameDataMainland) 设置大陆地区小游戏时长统计数据，单位分钟
+ * @method array getMiniGameDataOversea() 获取海外地区小游戏时长统计数据，单位分钟
+ * @method void setMiniGameDataOversea(array $MiniGameDataOversea) 设置海外地区小游戏时长统计数据，单位分钟
+ * @method array getMiniGameDataSum() 获取大陆和海外地区小游戏时长统计数据汇总，单位分钟
+ * @method void setMiniGameDataSum(array $MiniGameDataSum) 设置大陆和海外地区小游戏时长统计数据汇总，单位分钟
  */
 class ApplicationDataStatistics extends AbstractModel
 {
@@ -115,6 +123,26 @@ class ApplicationDataStatistics extends AbstractModel
     public $PcuDataSum;
 
     /**
+     * @var integer 小游戏时长统计项数目
+     */
+    public $MiniGameDataNum;
+
+    /**
+     * @var array 大陆地区小游戏时长统计数据，单位分钟
+     */
+    public $MiniGameDataMainland;
+
+    /**
+     * @var array 海外地区小游戏时长统计数据，单位分钟
+     */
+    public $MiniGameDataOversea;
+
+    /**
+     * @var array 大陆和海外地区小游戏时长统计数据汇总，单位分钟
+     */
+    public $MiniGameDataSum;
+
+    /**
      * @param integer $BizId 应用ID
      * @param integer $DauDataNum Dau统计项数目
      * @param array $DauDataMainland 大陆地区Dau统计数据，单位人
@@ -128,6 +156,10 @@ class ApplicationDataStatistics extends AbstractModel
      * @param array $PcuDataMainland 大陆地区Pcu统计数据，单位人
      * @param array $PcuDataOversea 海外地区Pcu统计数据，单位人
      * @param array $PcuDataSum 大陆和海外地区Pcu统计数据汇总，单位人
+     * @param integer $MiniGameDataNum 小游戏时长统计项数目
+     * @param array $MiniGameDataMainland 大陆地区小游戏时长统计数据，单位分钟
+     * @param array $MiniGameDataOversea 海外地区小游戏时长统计数据，单位分钟
+     * @param array $MiniGameDataSum 大陆和海外地区小游戏时长统计数据汇总，单位分钟
      */
     function __construct()
     {
@@ -236,6 +268,37 @@ class ApplicationDataStatistics extends AbstractModel
                 $obj = new StatisticsItem();
                 $obj->deserialize($value);
                 array_push($this->PcuDataSum, $obj);
+            }
+        }
+
+        if (array_key_exists("MiniGameDataNum",$param) and $param["MiniGameDataNum"] !== null) {
+            $this->MiniGameDataNum = $param["MiniGameDataNum"];
+        }
+
+        if (array_key_exists("MiniGameDataMainland",$param) and $param["MiniGameDataMainland"] !== null) {
+            $this->MiniGameDataMainland = [];
+            foreach ($param["MiniGameDataMainland"] as $key => $value){
+                $obj = new StatisticsItem();
+                $obj->deserialize($value);
+                array_push($this->MiniGameDataMainland, $obj);
+            }
+        }
+
+        if (array_key_exists("MiniGameDataOversea",$param) and $param["MiniGameDataOversea"] !== null) {
+            $this->MiniGameDataOversea = [];
+            foreach ($param["MiniGameDataOversea"] as $key => $value){
+                $obj = new StatisticsItem();
+                $obj->deserialize($value);
+                array_push($this->MiniGameDataOversea, $obj);
+            }
+        }
+
+        if (array_key_exists("MiniGameDataSum",$param) and $param["MiniGameDataSum"] !== null) {
+            $this->MiniGameDataSum = [];
+            foreach ($param["MiniGameDataSum"] as $key => $value){
+                $obj = new StatisticsItem();
+                $obj->deserialize($value);
+                array_push($this->MiniGameDataSum, $obj);
             }
         }
     }

@@ -25,13 +25,9 @@ use TencentCloud\Lke\V20231130\Models as Models;
 /**
  * @method Models\CheckAttributeLabelExistResponse CheckAttributeLabelExist(Models\CheckAttributeLabelExistRequest $req) 检查属性下的标签名是否存在
  * @method Models\CheckAttributeLabelReferResponse CheckAttributeLabelRefer(Models\CheckAttributeLabelReferRequest $req) 检查属性标签引用
- * @method Models\ConvertDocumentResponse ConvertDocument(Models\ConvertDocumentRequest $req) 产品规划
-
-接口支持图片和PDF转可编辑word格式文件，将文件中的图片、文本、表格等元素识别，并根据位置进行还原。
  * @method Models\CreateAgentResponse CreateAgent(Models\CreateAgentRequest $req) 你创建一个Agent
  * @method Models\CreateAppResponse CreateApp(Models\CreateAppRequest $req) 创建知识引擎应用。
  * @method Models\CreateAttributeLabelResponse CreateAttributeLabel(Models\CreateAttributeLabelRequest $req) 创建标签
- * @method Models\CreateCorpResponse CreateCorp(Models\CreateCorpRequest $req) 创建企业
  * @method Models\CreateDocCateResponse CreateDocCate(Models\CreateDocCateRequest $req) 创建Doc分类
  * @method Models\CreateQAResponse CreateQA(Models\CreateQARequest $req) 录入问答
  * @method Models\CreateQACateResponse CreateQACate(Models\CreateQACateRequest $req) 创建QA分类
@@ -57,7 +53,6 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\DescribeCallStatsGraphResponse DescribeCallStatsGraph(Models\DescribeCallStatsGraphRequest $req) 接口调用折线图
  * @method Models\DescribeConcurrencyUsageResponse DescribeConcurrencyUsage(Models\DescribeConcurrencyUsageRequest $req) 并发调用响应
  * @method Models\DescribeConcurrencyUsageGraphResponse DescribeConcurrencyUsageGraph(Models\DescribeConcurrencyUsageGraphRequest $req) 并发调用折线图
- * @method Models\DescribeCorpResponse DescribeCorp(Models\DescribeCorpRequest $req) 企业详情
  * @method Models\DescribeDocResponse DescribeDoc(Models\DescribeDocRequest $req) 文档详情
  * @method Models\DescribeKnowledgeUsageResponse DescribeKnowledgeUsage(Models\DescribeKnowledgeUsageRequest $req) 查询知识库用量
  * @method Models\DescribeKnowledgeUsagePieGraphResponse DescribeKnowledgeUsagePieGraph(Models\DescribeKnowledgeUsagePieGraphRequest $req) 查询企业知识库容量饼图
@@ -83,13 +78,9 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\GetAppKnowledgeCountResponse GetAppKnowledgeCount(Models\GetAppKnowledgeCountRequest $req) 获取模型列表
  * @method Models\GetAppSecretResponse GetAppSecret(Models\GetAppSecretRequest $req) 获取应用密钥
  * @method Models\GetDocPreviewResponse GetDocPreview(Models\GetDocPreviewRequest $req) 获取文档预览信息
- * @method Models\GetEmbeddingResponse GetEmbedding(Models\GetEmbeddingRequest $req) 本接口（GetEmbedding）调用文本表示模型，将文本转化为用数值表示的向量形式，可用于文本检索、信息推荐、知识挖掘等场景。
-开通[产品体验](https://lke.cloud.tencent.com/lke/#/trialProduct)后可获得50wtoken体验额度。
-本接口（GetEmbedding）有单账号调用上限控制，如您有提高并发限制的需求请 [联系我们](https://cloud.tencent.com/act/event/Online_service) 。
  * @method Models\GetLikeDataCountResponse GetLikeDataCount(Models\GetLikeDataCountRequest $req) 点赞点踩数据统计
  * @method Models\GetMsgRecordResponse GetMsgRecord(Models\GetMsgRecordRequest $req) 获取聊天历史
 根据会话session id获取聊天历史（仅保留180天内的历史对话数据）
- * @method Models\GetReconstructDocumentResultResponse GetReconstructDocumentResult(Models\GetReconstructDocumentResultRequest $req) 本接口为异步接口的查询结果接口，用于获取文档解析处理结果。
  * @method Models\GetTaskStatusResponse GetTaskStatus(Models\GetTaskStatusRequest $req) 获取任务状态
  * @method Models\GetVarListResponse GetVarList(Models\GetVarListRequest $req) 查询自定义变量列表
  * @method Models\GetWsTokenResponse GetWsToken(Models\GetWsTokenRequest $req) 获取ws token
@@ -128,18 +119,12 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\ModifyQAAttrRangeResponse ModifyQAAttrRange(Models\ModifyQAAttrRangeRequest $req) 批量修改问答适用范围
  * @method Models\ModifyQACateResponse ModifyQACate(Models\ModifyQACateRequest $req) 更新QA分类
  * @method Models\ModifyRejectedQuestionResponse ModifyRejectedQuestion(Models\ModifyRejectedQuestionRequest $req) 修改拒答问题
- * @method Models\QueryRewriteResponse QueryRewrite(Models\QueryRewriteRequest $req) 多轮改写（QueryRewrite）主要用于多轮对话中，进行指代消解和省略补全。使用本接口，无需输入prompt描述，根据对话历史即可生成更精确的用户查询。在应用场景上，本接口可应用于智能问答、对话式搜索等多种场景。
-开通[产品体验](https://lke.cloud.tencent.com/lke/#/trialProduct)后可获得50wtoken体验额度。本接口（QueryRewrite）有单账号调用上限控制，如您有提高并发限制的需求请 [联系我们](https://cloud.tencent.com/act/event/Online_service) 。
  * @method Models\RateMsgRecordResponse RateMsgRecord(Models\RateMsgRecordRequest $req) 点赞点踩消息
- * @method Models\ReconstructDocumentResponse ReconstructDocument(Models\ReconstructDocumentRequest $req) 支持将图片或PDF文件转换成Markdown格式文件，可解析包括表格、公式、图片、标题、段落、页眉、页脚等内容元素，并将内容智能转换成阅读顺序。
-
-体验期间单账号限制qps仅为1，若有正式接入需要请与产研团队沟通开放。
  * @method Models\ReferShareKnowledgeResponse ReferShareKnowledge(Models\ReferShareKnowledgeRequest $req) 应用引用共享知识库，可以引用一个或多个，每次都是全量覆盖
  * @method Models\RenameDocResponse RenameDoc(Models\RenameDocRequest $req) 文档重命名
  * @method Models\RetryDocAuditResponse RetryDocAudit(Models\RetryDocAuditRequest $req) 文档解析重试
  * @method Models\RetryDocParseResponse RetryDocParse(Models\RetryDocParseRequest $req) 文档解析重试
  * @method Models\RetryReleaseResponse RetryRelease(Models\RetryReleaseRequest $req) 发布暂停后重试
- * @method Models\RunReRankResponse RunReRank(Models\RunReRankRequest $req) 基于知识引擎精调模型技术的rerank模型，支持对多路召回的结果进行重排序，根据query与切片内容的相关性，按分数由高到低对切片进行排序，并输出对应的打分结果。（这个接口已下线，请使用新接口，接口文档：https://cloud.tencent.com/document/product/1772/115339）。
  * @method Models\SaveDocResponse SaveDoc(Models\SaveDocRequest $req) 知识库文档问答保存。
 将文件存储到应用的知识库内需要三步：
 1.获取临时密钥，参考[接口文档](https://cloud.tencent.com/document/product/1759/105050)。获取临时密钥不同参数组合权限不一样，可参考 [智能体开发平台操作 cos 指南](https://cloud.tencent.com/document/product/1759/116238)

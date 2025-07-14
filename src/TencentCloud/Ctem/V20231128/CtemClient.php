@@ -36,6 +36,9 @@ use TencentCloud\Ctem\V20231128\Models as Models;
  * @method Models\DescribeHttpsResponse DescribeHttps(Models\DescribeHttpsRequest $req) 查看http数据
  * @method Models\DescribeJobRecordDetailsResponse DescribeJobRecordDetails(Models\DescribeJobRecordDetailsRequest $req) 查看链路详情
  * @method Models\DescribeJobRecordsResponse DescribeJobRecords(Models\DescribeJobRecordsRequest $req) 查看任务运行记录列表
+ * @method Models\DescribeLeakageCodesResponse DescribeLeakageCodes(Models\DescribeLeakageCodesRequest $req) 获取代码泄露数据
+ * @method Models\DescribeLeakageDatasResponse DescribeLeakageDatas(Models\DescribeLeakageDatasRequest $req) 获取数据泄露事件
+ * @method Models\DescribeLeakageEmailsResponse DescribeLeakageEmails(Models\DescribeLeakageEmailsRequest $req) 获取邮箱泄露数据
  * @method Models\DescribeManagesResponse DescribeManages(Models\DescribeManagesRequest $req) 查看后台管理数据
  * @method Models\DescribeNetDisksResponse DescribeNetDisks(Models\DescribeNetDisksRequest $req) 查看网盘泄露数据
  * @method Models\DescribePortsResponse DescribePorts(Models\DescribePortsRequest $req) 查看端口数据

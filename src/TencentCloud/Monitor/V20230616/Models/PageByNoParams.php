@@ -14,45 +14,39 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Lke\V20231130\Models;
+namespace TencentCloud\Monitor\V20230616\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 一条message代表一条对话记录
-role表示角色  user或者assistant
-content表示对话内容
+ * 分页请求参数
  *
- * @method string getRole() 获取role表示角色  user标识用户提问，assistant标识返回的答案
-
+ * @method integer getPerPage() 获取每个分页的数量是多少
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRole(string $Role) 设置role表示角色  user标识用户提问，assistant标识返回的答案
-
+ * @method void setPerPage(integer $PerPage) 设置每个分页的数量是多少
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getContent() 获取对话内容
+ * @method string getPageNo() 获取第几个分页，从1开始
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setContent(string $Content) 设置对话内容
+ * @method void setPageNo(string $PageNo) 设置第几个分页，从1开始
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class Message extends AbstractModel
+class PageByNoParams extends AbstractModel
 {
     /**
-     * @var string role表示角色  user标识用户提问，assistant标识返回的答案
-
+     * @var integer 每个分页的数量是多少
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Role;
+    public $PerPage;
 
     /**
-     * @var string 对话内容
+     * @var string 第几个分页，从1开始
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Content;
+    public $PageNo;
 
     /**
-     * @param string $Role role表示角色  user标识用户提问，assistant标识返回的答案
-
+     * @param integer $PerPage 每个分页的数量是多少
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Content 对话内容
+     * @param string $PageNo 第几个分页，从1开始
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -68,12 +62,12 @@ class Message extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Role",$param) and $param["Role"] !== null) {
-            $this->Role = $param["Role"];
+        if (array_key_exists("PerPage",$param) and $param["PerPage"] !== null) {
+            $this->PerPage = $param["PerPage"];
         }
 
-        if (array_key_exists("Content",$param) and $param["Content"] !== null) {
-            $this->Content = $param["Content"];
+        if (array_key_exists("PageNo",$param) and $param["PageNo"] !== null) {
+            $this->PageNo = $param["PageNo"];
         }
     }
 }

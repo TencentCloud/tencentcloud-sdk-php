@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
  * @method string getProxyID() 获取实例 ProxyID，请通过接口[DescribeInstanceNodeInfo](https://cloud.tencent.com/document/product/239/48603)的返回参数**Proxy**中的**NodeId**获取。  
  * @method void setProxyID(string $ProxyID) 设置实例 ProxyID，请通过接口[DescribeInstanceNodeInfo](https://cloud.tencent.com/document/product/239/48603)的返回参数**Proxy**中的**NodeId**获取。  
+ * @method array getProxyIDList() 获取实例 ProxyID列表，请通过接口[DescribeInstanceNodeInfo](https://cloud.tencent.com/document/product/239/48603)的返回参数**Proxy**中的**NodeId**获取。
+ * @method void setProxyIDList(array $ProxyIDList) 设置实例 ProxyID列表，请通过接口[DescribeInstanceNodeInfo](https://cloud.tencent.com/document/product/239/48603)的返回参数**Proxy**中的**NodeId**获取。
  */
 class SwitchProxyRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class SwitchProxyRequest extends AbstractModel
     public $ProxyID;
 
     /**
+     * @var array 实例 ProxyID列表，请通过接口[DescribeInstanceNodeInfo](https://cloud.tencent.com/document/product/239/48603)的返回参数**Proxy**中的**NodeId**获取。
+     */
+    public $ProxyIDList;
+
+    /**
      * @param string $InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      * @param string $ProxyID 实例 ProxyID，请通过接口[DescribeInstanceNodeInfo](https://cloud.tencent.com/document/product/239/48603)的返回参数**Proxy**中的**NodeId**获取。  
+     * @param array $ProxyIDList 实例 ProxyID列表，请通过接口[DescribeInstanceNodeInfo](https://cloud.tencent.com/document/product/239/48603)的返回参数**Proxy**中的**NodeId**获取。
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class SwitchProxyRequest extends AbstractModel
 
         if (array_key_exists("ProxyID",$param) and $param["ProxyID"] !== null) {
             $this->ProxyID = $param["ProxyID"];
+        }
+
+        if (array_key_exists("ProxyIDList",$param) and $param["ProxyIDList"] !== null) {
+            $this->ProxyIDList = $param["ProxyIDList"];
         }
     }
 }

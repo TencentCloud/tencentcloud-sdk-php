@@ -27,31 +27,19 @@ use TencentCloud\Common\AbstractModel;
  * @method float getEndTimeOffset() 获取片段结束时间偏移。
  * @method void setEndTimeOffset(float $EndTimeOffset) 设置片段结束时间偏移。
  * @method string getSegmentUrl() 获取拆条片段URL。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSegmentUrl(string $SegmentUrl) 设置拆条片段URL。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCovImgUrl() 获取拆条片段封面。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCovImgUrl(string $CovImgUrl) 设置拆条片段封面。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTitle() 获取分段标题。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTitle(string $Title) 设置分段标题。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSummary() 获取分段概要。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSummary(string $Summary) 设置分段概要。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getKeywords() 获取分段关键词。
  * @method void setKeywords(array $Keywords) 设置分段关键词。
  * @method string getBeginTime() 获取直播切片对应直播起始时间点，采用 ISO 日期格式。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBeginTime(string $BeginTime) 设置直播切片对应直播起始时间点，采用 ISO 日期格式。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndTime() 获取直播切片对应直播结束时间点，采用 ISO 日期格式。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置直播切片对应直播结束时间点，采用 ISO 日期格式。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAudioUrl() 获取直播拆条用，音频url。
  * @method void setAudioUrl(string $AudioUrl) 设置直播拆条用，音频url。
  * @method float getAudioBeginTime() 获取直播拆条用，音频对应起始时间戳；
@@ -82,25 +70,21 @@ class SegmentRecognitionItem extends AbstractModel
 
     /**
      * @var string 拆条片段URL。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SegmentUrl;
 
     /**
      * @var string 拆条片段封面。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CovImgUrl;
 
     /**
      * @var string 分段标题。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Title;
 
     /**
      * @var string 分段概要。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Summary;
 
@@ -111,13 +95,11 @@ class SegmentRecognitionItem extends AbstractModel
 
     /**
      * @var string 直播切片对应直播起始时间点，采用 ISO 日期格式。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BeginTime;
 
     /**
      * @var string 直播切片对应直播结束时间点，采用 ISO 日期格式。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
@@ -151,18 +133,12 @@ class SegmentRecognitionItem extends AbstractModel
      * @param float $StartTimeOffset 片段起始时间偏移。
      * @param float $EndTimeOffset 片段结束时间偏移。
      * @param string $SegmentUrl 拆条片段URL。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CovImgUrl 拆条片段封面。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Title 分段标题。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Summary 分段概要。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Keywords 分段关键词。
      * @param string $BeginTime 直播切片对应直播起始时间点，采用 ISO 日期格式。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndTime 直播切片对应直播结束时间点，采用 ISO 日期格式。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AudioUrl 直播拆条用，音频url。
      * @param float $AudioBeginTime 直播拆条用，音频对应起始时间戳；
      * @param float $AudioEndTime 直播拆条用，音频对应结束时间戳。

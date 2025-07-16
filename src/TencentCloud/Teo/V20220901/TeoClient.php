@@ -47,6 +47,9 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
  * @method Models\CreateL4ProxyRulesResponse CreateL4ProxyRules(Models\CreateL4ProxyRulesRequest $req) 用于创建四层代理实例规则，支持单条或者批量创建。
  * @method Models\CreateL7AccRulesResponse CreateL7AccRules(Models\CreateL7AccRulesRequest $req) 本接口用于在[规则引擎](https://cloud.tencent.com/document/product/1552/70901)中创建规则，支持批量创建。
  * @method Models\CreateLoadBalancerResponse CreateLoadBalancer(Models\CreateLoadBalancerRequest $req) 创建负载均衡实例。详情请参考 [快速创建负载均衡实例](https://cloud.tencent.com/document/product/1552/104223)。负载均衡功能内测中，如您需要使用请 [联系我们](https://cloud.tencent.com/online-service)。
+ * @method Models\CreateMultiPathGatewayResponse CreateMultiPathGateway(Models\CreateMultiPathGatewayRequest $req) 通过本接口创建多通道安全加速网关，包括云上网关（腾讯云创建和管理的网关）和自有网关（用户部署的私有网关），需要通过接口 DescribeMultiPathGateway，查询状态为 online 即创建成功。
+ * @method Models\CreateMultiPathGatewayLineResponse CreateMultiPathGatewayLine(Models\CreateMultiPathGatewayLineRequest $req) 通过本接口创建接入多通道安全加速网关的线路。包括 EdgeOne 四层代理线路、自定义线路。
+ * @method Models\CreateMultiPathGatewaySecretKeyResponse CreateMultiPathGatewaySecretKey(Models\CreateMultiPathGatewaySecretKeyRequest $req) 通过本接口创建接入多通道安全加速网关的密钥，客户基于接入密钥签名接入多通道安全加速网关。每个站点下只有一个密钥，可用于接入该站点下的所有网关，可通过接口 DescribeMultiPathGatewaySecretKey 查询。
  * @method Models\CreateOriginGroupResponse CreateOriginGroup(Models\CreateOriginGroupRequest $req) 创建源站组，以源站组的方式管理业务源站。此处配置的源站组可于**添加加速域名**和**四层代理**等功能中引用。
  * @method Models\CreatePlanResponse CreatePlan(Models\CreatePlanRequest $req) 若您需要使用 Edgeone 产品，您需要通过此接口创建计费套餐。
 > 创建套餐后，您需要通过 [CreateZone](https://cloud.tencent.com/document/product/1552/80719) 完成创建站点，绑定套餐的流程，Edgeone 才能正常提供服务。
@@ -80,6 +83,8 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
  * @method Models\DeleteL4ProxyRulesResponse DeleteL4ProxyRules(Models\DeleteL4ProxyRulesRequest $req) 用于删除四层代理转发规则，支持单条或者批量操作。
  * @method Models\DeleteL7AccRulesResponse DeleteL7AccRules(Models\DeleteL7AccRulesRequest $req) 本接口用于删除[规则引擎](https://cloud.tencent.com/document/product/1552/70901)的规则，支持批量删除。
  * @method Models\DeleteLoadBalancerResponse DeleteLoadBalancer(Models\DeleteLoadBalancerRequest $req) 删除负载均衡实例，若负载均衡示例被其他服务（例如：四层代理等）引用的时候，示例无法被删除，需要先解除引用关系。负载均衡功能内测中，如您需要使用请 [联系我们](https://cloud.tencent.com/online-service)。
+ * @method Models\DeleteMultiPathGatewayResponse DeleteMultiPathGateway(Models\DeleteMultiPathGatewayRequest $req) 通过本接口删除多通道安全加速网关，包括自有网关和云上网关。
+ * @method Models\DeleteMultiPathGatewayLineResponse DeleteMultiPathGatewayLine(Models\DeleteMultiPathGatewayLineRequest $req) 通过本接口删除接入多通道安全加速网关的线路，仅自定义线路支持删除。
  * @method Models\DeleteOriginGroupResponse DeleteOriginGroup(Models\DeleteOriginGroupRequest $req) 删除源站组，若源站组仍然被服务（例如：四层代理，域名服务，负载均衡，规则引起）引用，将不允许删除。
  * @method Models\DeleteRealtimeLogDeliveryTaskResponse DeleteRealtimeLogDeliveryTask(Models\DeleteRealtimeLogDeliveryTaskRequest $req) 通过本接口删除实时日志投递任务。
  * @method Models\DeleteRulesResponse DeleteRules(Models\DeleteRulesRequest $req) 本接口为旧版本删除规则引擎接口，EdgeOne 于 2025 年 1 月 21 日已对规则引擎相关接口全面升级，新版本删除七层加速规则接口详情请参考 [DeleteL7AccRules](https://cloud.tencent.com/document/product/1552/115821)。
@@ -118,6 +123,11 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
  * @method Models\DescribeL7AccRulesResponse DescribeL7AccRules(Models\DescribeL7AccRulesRequest $req) 本接口用于查询[规则引擎](https://cloud.tencent.com/document/product/1552/70901)的规则列表。
  * @method Models\DescribeL7AccSettingResponse DescribeL7AccSetting(Models\DescribeL7AccSettingRequest $req) 本接口用于查询[站点加速](https://cloud.tencent.com/document/product/1552/96193)全局配置。
  * @method Models\DescribeLoadBalancerListResponse DescribeLoadBalancerList(Models\DescribeLoadBalancerListRequest $req) 查询负载均衡实例列表。负载均衡功能内测中，如您需要使用请 [联系我们](https://cloud.tencent.com/online-service)。
+ * @method Models\DescribeMultiPathGatewayResponse DescribeMultiPathGateway(Models\DescribeMultiPathGatewayRequest $req) 通过本接口查询多通道安全加速网关详情。如名称、网关 ID、IP、端口、类型等。
+ * @method Models\DescribeMultiPathGatewayLineResponse DescribeMultiPathGatewayLine(Models\DescribeMultiPathGatewayLineRequest $req) 通过本接口查询接入多通道安全加速网关的线路。包括直连、EdgeOne 四层代理线路、自定义线路。
+ * @method Models\DescribeMultiPathGatewayRegionsResponse DescribeMultiPathGatewayRegions(Models\DescribeMultiPathGatewayRegionsRequest $req) 通过本接口查询用户创建的多通道安全加速网关（云上网关）的可用地域列表。
+ * @method Models\DescribeMultiPathGatewaySecretKeyResponse DescribeMultiPathGatewaySecretKey(Models\DescribeMultiPathGatewaySecretKeyRequest $req) 通过本接口查询接入多通道安全加速网关的密钥，客户基于接入密钥签名接入多通道安全加速网关。
+ * @method Models\DescribeMultiPathGatewaysResponse DescribeMultiPathGateways(Models\DescribeMultiPathGatewaysRequest $req) 通过本接口查询用户创建的多通道安全加速网关列表。支持翻页。
  * @method Models\DescribeOriginACLResponse DescribeOriginACL(Models\DescribeOriginACLRequest $req) 本接口用于查询站点下的七层加速域名/四层代理实例与回源 IP 网段的绑定关系，以及回源 IP 网段详情。如果您想通过自动化脚本定期获取回源 IP 网段的最新版本，可以较低频率（建议每三天一次）轮询本接口，若 NextOriginACL 字段有返回值，则将最新的回源 IP 网段同步到源站防火墙配置中。
  * @method Models\DescribeOriginGroupResponse DescribeOriginGroup(Models\DescribeOriginGroupRequest $req) 获取源站组列表
  * @method Models\DescribeOriginGroupHealthStatusResponse DescribeOriginGroupHealthStatus(Models\DescribeOriginGroupHealthStatusRequest $req) 查询负载均衡实例下源站组健康状态。负载均衡功能内测中，如您需要使用请 [联系我们](https://cloud.tencent.com/online-service)。
@@ -203,6 +213,9 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
  * @method Models\ModifyL7AccRulePriorityResponse ModifyL7AccRulePriority(Models\ModifyL7AccRulePriorityRequest $req) 本接口用于修改[规则引擎](https://cloud.tencent.com/document/product/1552/70901)中规则列表的优先级，本接口需要传入站点 ID 下完整的规则 ID 列表，规则 ID 列表可以通过[查询七层加速规则](https://cloud.tencent.com/document/product/1552/115820)接口获取，最终优先级顺序将调整成规则 ID 列表的顺序，从前往后执行。
  * @method Models\ModifyL7AccSettingResponse ModifyL7AccSetting(Models\ModifyL7AccSettingRequest $req) 本接口用于修改[站点加速](https://cloud.tencent.com/document/product/1552/96193)全局配置。
  * @method Models\ModifyLoadBalancerResponse ModifyLoadBalancer(Models\ModifyLoadBalancerRequest $req) 修改负载均衡实例配置。负载均衡功能内测中，如您需要使用请 [联系我们](https://cloud.tencent.com/online-service)。
+ * @method Models\ModifyMultiPathGatewayResponse ModifyMultiPathGateway(Models\ModifyMultiPathGatewayRequest $req) 通过本接口修改多通道安全加速网关信息，如名称、网关 ID、IP、端口等。
+ * @method Models\ModifyMultiPathGatewayLineResponse ModifyMultiPathGatewayLine(Models\ModifyMultiPathGatewayLineRequest $req) 通过本接口修改接入多通道安全加速网关的线路，包括 EdgeOne 四层代理线路、自定义线路。
+ * @method Models\ModifyMultiPathGatewaySecretKeyResponse ModifyMultiPathGatewaySecretKey(Models\ModifyMultiPathGatewaySecretKeyRequest $req) 通过本接口修改接入多通道安全加速网关的密钥，客户基于接入密钥签名接入多通道安全加速网关，修改后原密钥失效。
  * @method Models\ModifyOriginACLResponse ModifyOriginACL(Models\ModifyOriginACLRequest $req) 本接口用于对七层加速域名/四层代理实例启用/关闭特定回源 IP 网段回源。单次支持提交的七层加速域名的数量最大为 200，四层代理实例的数量最大为 100，支持七层加速域名/四层代理实例混合提交，总实例个数最大为 200。如需变更超过 200 个实例，请通过本接口分批提交。
  * @method Models\ModifyOriginGroupResponse ModifyOriginGroup(Models\ModifyOriginGroupRequest $req) 修改源站组配置，新提交的源站记录将会覆盖原有源站组中的源站记录。
  * @method Models\ModifyPlanResponse ModifyPlan(Models\ModifyPlanRequest $req) 修改套餐配置。目前仅支持修改预付费套餐的自动续费开关。
@@ -215,6 +228,7 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
  * @method Models\ModifyZoneResponse ModifyZone(Models\ModifyZoneRequest $req) 修改站点信息。
  * @method Models\ModifyZoneSettingResponse ModifyZoneSetting(Models\ModifyZoneSettingRequest $req) 本接口为旧版，EdgeOne 已对规则引擎相关接口全面升级，详情请参考 [ModifyL7AccSetting](https://cloud.tencent.com/document/product/1552/115817)。
  * @method Models\ModifyZoneStatusResponse ModifyZoneStatus(Models\ModifyZoneStatusRequest $req) 用于开启，关闭站点。
+ * @method Models\RefreshMultiPathGatewaySecretKeyResponse RefreshMultiPathGatewaySecretKey(Models\RefreshMultiPathGatewaySecretKeyRequest $req) 通过本接口刷新多通道安全加速网关的密钥。客户基于接入密钥签名接入多通道安全加速网关。每个站点下只有一个密钥，可用于接入该站点下的所有网关，刷新密钥后，原始密钥会失效。
  * @method Models\RenewPlanResponse RenewPlan(Models\RenewPlanRequest $req) 当您的套餐需要延长有效期，可以通过该接口进行续费。套餐续费仅支持个人版，基础版，标准版套餐。
 > 费用详情可参考 [套餐费用](https://cloud.tencent.com/document/product/1552/94158)
  * @method Models\UpgradePlanResponse UpgradePlan(Models\UpgradePlanRequest $req) 当您需要使用高等级套餐才拥有的功能，可以通过本接口升级套餐，仅支持个人版，基础版套餐进行升级。

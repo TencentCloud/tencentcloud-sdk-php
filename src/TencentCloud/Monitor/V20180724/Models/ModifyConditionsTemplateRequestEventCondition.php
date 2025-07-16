@@ -28,34 +28,54 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEventID(string $EventID) 设置事件ID
  * @method integer getRuleID() 获取规则ID
  * @method void setRuleID(integer $RuleID) 设置规则ID
+ * @method string getMetricName() 获取重构后的eventType
+ * @method void setMetricName(string $MetricName) 设置重构后的eventType
+ * @method string getDescription() 获取事件描述信息
+ * @method void setDescription(string $Description) 设置事件描述信息
  */
 class ModifyConditionsTemplateRequestEventCondition extends AbstractModel
 {
     /**
      * @var string 告警通知周期
+     * @deprecated
      */
     public $AlarmNotifyPeriod;
 
     /**
      * @var string 告警通知方式
+     * @deprecated
      */
     public $AlarmNotifyType;
 
     /**
      * @var string 事件ID
+     * @deprecated
      */
     public $EventID;
 
     /**
      * @var integer 规则ID
+     * @deprecated
      */
     public $RuleID;
+
+    /**
+     * @var string 重构后的eventType
+     */
+    public $MetricName;
+
+    /**
+     * @var string 事件描述信息
+     */
+    public $Description;
 
     /**
      * @param string $AlarmNotifyPeriod 告警通知周期
      * @param string $AlarmNotifyType 告警通知方式
      * @param string $EventID 事件ID
      * @param integer $RuleID 规则ID
+     * @param string $MetricName 重构后的eventType
+     * @param string $Description 事件描述信息
      */
     function __construct()
     {
@@ -84,6 +104,14 @@ class ModifyConditionsTemplateRequestEventCondition extends AbstractModel
 
         if (array_key_exists("RuleID",$param) and $param["RuleID"] !== null) {
             $this->RuleID = $param["RuleID"];
+        }
+
+        if (array_key_exists("MetricName",$param) and $param["MetricName"] !== null) {
+            $this->MetricName = $param["MetricName"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

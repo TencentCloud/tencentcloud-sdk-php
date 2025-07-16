@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSplitTokens(integer $SplitTokens) 设置拆分消耗的token数
  * @method integer getMllmTokens() 获取mllm消耗的token数
  * @method void setMllmTokens(integer $MllmTokens) 设置mllm消耗的token数
+ * @method integer getSuccessPageNum() 获取解析成功页数
+ * @method void setSuccessPageNum(integer $SuccessPageNum) 设置解析成功页数
+ * @method integer getFailPageNum() 获取解析失败页数
+ * @method void setFailPageNum(integer $FailPageNum) 设置解析失败页数
  */
 class DocumentUsage extends AbstractModel
 {
@@ -60,11 +64,23 @@ class DocumentUsage extends AbstractModel
     public $MllmTokens;
 
     /**
+     * @var integer 解析成功页数
+     */
+    public $SuccessPageNum;
+
+    /**
+     * @var integer 解析失败页数
+     */
+    public $FailPageNum;
+
+    /**
      * @param integer $PageNumber 文档拆分任务的页数
      * @param integer $TotalToken 文档拆分任务消耗的总token数
      * @param integer $TotalTokens 文档拆分任务消耗的总token数
      * @param integer $SplitTokens 拆分消耗的token数
      * @param integer $MllmTokens mllm消耗的token数
+     * @param integer $SuccessPageNum 解析成功页数
+     * @param integer $FailPageNum 解析失败页数
      */
     function __construct()
     {
@@ -97,6 +113,14 @@ class DocumentUsage extends AbstractModel
 
         if (array_key_exists("MllmTokens",$param) and $param["MllmTokens"] !== null) {
             $this->MllmTokens = $param["MllmTokens"];
+        }
+
+        if (array_key_exists("SuccessPageNum",$param) and $param["SuccessPageNum"] !== null) {
+            $this->SuccessPageNum = $param["SuccessPageNum"];
+        }
+
+        if (array_key_exists("FailPageNum",$param) and $param["FailPageNum"] !== null) {
+            $this->FailPageNum = $param["FailPageNum"];
         }
     }
 }

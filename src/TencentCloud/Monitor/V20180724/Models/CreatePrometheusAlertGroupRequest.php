@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
 3 -- 禁用
 不为空时会覆盖 `Rules`字段下所有告警规则状态
 
- * @method array getAMPReceivers() 获取云监控告警通知模板ID列表，形如Consumer-xxxx或notice-xxxx
- * @method void setAMPReceivers(array $AMPReceivers) 设置云监控告警通知模板ID列表，形如Consumer-xxxx或notice-xxxx
+ * @method array getAMPReceivers() 获取腾讯云可观测平台告警通知模板ID列表，形如Consumer-xxxx或notice-xxxx
+ * @method void setAMPReceivers(array $AMPReceivers) 设置腾讯云可观测平台告警通知模板ID列表，形如Consumer-xxxx或notice-xxxx
  * @method PrometheusAlertCustomReceiver getCustomReceiver() 获取自定义告警通知模板
  * @method void setCustomReceiver(PrometheusAlertCustomReceiver $CustomReceiver) 设置自定义告警通知模板
  * @method string getRepeatInterval() 获取告警通知周期（收敛时间），为空默认1h
@@ -65,7 +65,7 @@ class CreatePrometheusAlertGroupRequest extends AbstractModel
     public $GroupState;
 
     /**
-     * @var array 云监控告警通知模板ID列表，形如Consumer-xxxx或notice-xxxx
+     * @var array 腾讯云可观测平台告警通知模板ID列表，形如Consumer-xxxx或notice-xxxx
      */
     public $AMPReceivers;
 
@@ -92,7 +92,7 @@ class CreatePrometheusAlertGroupRequest extends AbstractModel
 3 -- 禁用
 不为空时会覆盖 `Rules`字段下所有告警规则状态
 
-     * @param array $AMPReceivers 云监控告警通知模板ID列表，形如Consumer-xxxx或notice-xxxx
+     * @param array $AMPReceivers 腾讯云可观测平台告警通知模板ID列表，形如Consumer-xxxx或notice-xxxx
      * @param PrometheusAlertCustomReceiver $CustomReceiver 自定义告警通知模板
      * @param string $RepeatInterval 告警通知周期（收敛时间），为空默认1h
      * @param array $Rules 要创建的告警规则列表

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStyleId() 获取字幕样式，Styles 列表中对应的 Subtitle样式的 ID。
  * @method void setStyleId(string $StyleId) 设置字幕样式，Styles 列表中对应的 Subtitle样式的 ID。
- * @method string getText() 获取字幕文本。
- * @method void setText(string $Text) 设置字幕文本。
+ * @method string getText() 获取字幕文本。<br/>注：长文本可能超出画面范围，建议使用 \n 进行换行。
+ * @method void setText(string $Text) 设置字幕文本。<br/>注：长文本可能超出画面范围，建议使用 \n 进行换行。
  * @method ComposeTrackTime getTrackTime() 获取元素在轨道时间轴上的时间信息，不填则紧跟上一个元素。	
  * @method void setTrackTime(ComposeTrackTime $TrackTime) 设置元素在轨道时间轴上的时间信息，不填则紧跟上一个元素。	
  */
@@ -35,7 +35,7 @@ class ComposeSubtitleItem extends AbstractModel
     public $StyleId;
 
     /**
-     * @var string 字幕文本。
+     * @var string 字幕文本。<br/>注：长文本可能超出画面范围，建议使用 \n 进行换行。
      */
     public $Text;
 
@@ -46,7 +46,7 @@ class ComposeSubtitleItem extends AbstractModel
 
     /**
      * @param string $StyleId 字幕样式，Styles 列表中对应的 Subtitle样式的 ID。
-     * @param string $Text 字幕文本。
+     * @param string $Text 字幕文本。<br/>注：长文本可能超出画面范围，建议使用 \n 进行换行。
      * @param ComposeTrackTime $TrackTime 元素在轨道时间轴上的时间信息，不填则紧跟上一个元素。	
      */
     function __construct()

@@ -45,9 +45,7 @@ use TencentCloud\Common\AbstractModel;
  * @method TEHDConfig getTEHDConfig() 获取极速高清转码参数。
  * @method void setTEHDConfig(TEHDConfig $TEHDConfig) 设置极速高清转码参数。
  * @method string getStdExtInfo() 获取扩展参数，序列化的 json 字符串。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStdExtInfo(string $StdExtInfo) 设置扩展参数，序列化的 json 字符串。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method EnhanceConfig getEnhanceConfig() 获取音视频增强配置
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnhanceConfig(EnhanceConfig $EnhanceConfig) 设置音视频增强配置
@@ -93,7 +91,6 @@ class RawTranscodeParameter extends AbstractModel
 
     /**
      * @var string 扩展参数，序列化的 json 字符串。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StdExtInfo;
 
@@ -117,7 +114,6 @@ class RawTranscodeParameter extends AbstractModel
      * @param AudioTemplateInfo $AudioTemplate 音频流配置参数，当 RemoveAudio 为 0，该字段必填。
      * @param TEHDConfig $TEHDConfig 极速高清转码参数。
      * @param string $StdExtInfo 扩展参数，序列化的 json 字符串。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param EnhanceConfig $EnhanceConfig 音视频增强配置
 注意：此字段可能返回 null，表示取不到有效值。
      */

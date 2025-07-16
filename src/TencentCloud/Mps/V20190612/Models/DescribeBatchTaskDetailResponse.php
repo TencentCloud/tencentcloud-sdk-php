@@ -41,9 +41,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTaskId() 获取媒体处理任务 ID。
  * @method void setTaskId(string $TaskId) 设置媒体处理任务 ID。
  * @method BatchSubTaskResult getBatchTaskResult() 获取视频处理任务信息，仅当 TaskType 为 BatchTask，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBatchTaskResult(BatchSubTaskResult $BatchTaskResult) 设置视频处理任务信息，仅当 TaskType 为 BatchTask，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method TaskNotifyConfig getTaskNotifyConfig() 获取任务的事件通知信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskNotifyConfig(TaskNotifyConfig $TaskNotifyConfig) 设置任务的事件通知信息。
@@ -97,7 +95,6 @@ class DescribeBatchTaskDetailResponse extends AbstractModel
 
     /**
      * @var BatchSubTaskResult 视频处理任务信息，仅当 TaskType 为 BatchTask，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BatchTaskResult;
 
@@ -144,7 +141,6 @@ class DescribeBatchTaskDetailResponse extends AbstractModel
      * @param string $FinishTime 任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
      * @param string $TaskId 媒体处理任务 ID。
      * @param BatchSubTaskResult $BatchTaskResult 视频处理任务信息，仅当 TaskType 为 BatchTask，该字段有值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param TaskNotifyConfig $TaskNotifyConfig 任务的事件通知信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TasksPriority 任务流的优先级，取值范围为 [-10, 10]。

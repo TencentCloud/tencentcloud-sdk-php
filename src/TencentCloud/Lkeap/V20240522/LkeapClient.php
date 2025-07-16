@@ -163,6 +163,9 @@ except TencentCloudSDKException as err:
  * @method Models\QueryRewriteResponse QueryRewrite(Models\QueryRewriteRequest $req) 多轮改写（QueryRewrite）主要用于多轮对话中，进行指代消解和省略补全。使用本接口，无需输入prompt描述，根据对话历史即可生成更精确的用户查询。在应用场景上，本接口可应用于智能问答、对话式搜索等多种场景。
 开通[产品体验](https://lke.cloud.tencent.com/lke/#/trialProduct)后可获得50wtoken体验额度。本接口（QueryRewrite）有单账号调用上限控制，如您有提高并发限制的需求请 [联系我们](https://cloud.tencent.com/act/event/Online_service) 。
  * @method Models\ReconstructDocumentSSEResponse ReconstructDocumentSSE(Models\ReconstructDocumentSSERequest $req) 准实时文档解析接口，使用HTTP SSE 协议通信。
+支持将图片或PDF文件转换成Markdown格式文件，可解析包括表格、公式、图片、标题、段落、页眉、页脚等内容元素，并将内容智能转换成阅读顺序。
+输入：pdf、ppt、docx、doc、jpg等
+输出：正常阅读顺序的md文件、识别结果的json（可选）等
  * @method Models\RetrieveKnowledgeResponse RetrieveKnowledge(Models\RetrieveKnowledgeRequest $req) 用于检索知识库中的文档和问答对内容。 使用场景：适用于查询长期存储在知识库中的文档和问答对，比如产品手册、用户指南等内容的检索。
  * @method Models\RunRerankResponse RunRerank(Models\RunRerankRequest $req) 基于知识引擎精调模型技术的rerank模型，支持对多路召回的结果进行重排序，根据query与切片内容的相关性，按分数由高到低对切片进行排序，并输出对应的打分结果。
  * @method Models\UploadDocResponse UploadDoc(Models\UploadDocRequest $req) 用于上传文档内容。上传的文档将存储在知识库中，可以通过RetrieveKnowledge[知识库内容检索接口](https://cloud.tencent.com/document/product/1772/115349)进行检索。 

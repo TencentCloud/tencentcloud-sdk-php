@@ -29,21 +29,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMessage() 获取错误信息。
  * @method void setMessage(string $Message) 设置错误信息。
  * @method SmartSubtitlesTaskInput getInput() 获取识别任务的输入。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInput(SmartSubtitlesTaskInput $Input) 设置识别任务的输入。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getOutput() 获取识别任务的输出。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutput(array $Output) 设置识别任务的输出。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBeginProcessTime() 获取任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBeginProcessTime(string $BeginProcessTime) 设置任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFinishTime() 获取任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFinishTime(string $FinishTime) 设置任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ScheduleSmartSubtitleTaskResult extends AbstractModel
 {
@@ -69,25 +61,21 @@ class ScheduleSmartSubtitleTaskResult extends AbstractModel
 
     /**
      * @var SmartSubtitlesTaskInput 识别任务的输入。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Input;
 
     /**
      * @var array 识别任务的输出。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Output;
 
     /**
      * @var string 任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BeginProcessTime;
 
     /**
      * @var string 任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FinishTime;
 
@@ -97,13 +85,9 @@ class ScheduleSmartSubtitleTaskResult extends AbstractModel
      * @param integer $ErrCode 错误码，0 表示成功，其他值表示失败（该字段已不推荐使用，建议使用新的错误码字段 ErrCodeExt）。
      * @param string $Message 错误信息。
      * @param SmartSubtitlesTaskInput $Input 识别任务的输入。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Output 识别任务的输出。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BeginProcessTime 任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FinishTime 任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

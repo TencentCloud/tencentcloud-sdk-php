@@ -35,9 +35,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutput(MediaTranscodeItem $Output) 设置转码任务的输出。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getProgress() 获取转码进度，取值范围 [0-100]
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProgress(integer $Progress) 设置转码进度，取值范围 [0-100]
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MediaProcessTaskTranscodeResult extends AbstractModel
 {
@@ -74,7 +72,6 @@ class MediaProcessTaskTranscodeResult extends AbstractModel
 
     /**
      * @var integer 转码进度，取值范围 [0-100]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Progress;
 
@@ -87,7 +84,6 @@ class MediaProcessTaskTranscodeResult extends AbstractModel
      * @param MediaTranscodeItem $Output 转码任务的输出。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Progress 转码进度，取值范围 [0-100]
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDocumentRecognizeResultUrl(string $DocumentRecognizeResultUrl) 设置解析结果的临时下载地址。文件类型为zip压缩包，下载链接有效期30分钟
  * @method array getFailedPages() 获取文档解析失败的页码
  * @method void setFailedPages(array $FailedPages) 设置文档解析失败的页码
+ * @method DocumentUsage getUsage() 获取文档拆分任务的用量	
+ * @method void setUsage(DocumentUsage $Usage) 设置文档拆分任务的用量	
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -62,6 +64,11 @@ class GetReconstructDocumentResultResponse extends AbstractModel
     public $FailedPages;
 
     /**
+     * @var DocumentUsage 文档拆分任务的用量	
+     */
+    public $Usage;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -75,6 +82,7 @@ class GetReconstructDocumentResultResponse extends AbstractModel
 -  `WaitExecute`：等待执行
      * @param string $DocumentRecognizeResultUrl 解析结果的临时下载地址。文件类型为zip压缩包，下载链接有效期30分钟
      * @param array $FailedPages 文档解析失败的页码
+     * @param DocumentUsage $Usage 文档拆分任务的用量	
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -105,6 +113,11 @@ class GetReconstructDocumentResultResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->FailedPages, $obj);
             }
+        }
+
+        if (array_key_exists("Usage",$param) and $param["Usage"] !== null) {
+            $this->Usage = new DocumentUsage();
+            $this->Usage->deserialize($param["Usage"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

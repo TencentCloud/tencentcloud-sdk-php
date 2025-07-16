@@ -24,10 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDefinition(integer $Definition) 设置视频转码模板 ID。
  * @method RawTranscodeParameter getRawParameter() 获取视频转码自定义参数，当 Definition 填 0 时有效。
 该参数用于高度定制场景，建议您优先使用 Definition 指定转码参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRawParameter(RawTranscodeParameter $RawParameter) 设置视频转码自定义参数，当 Definition 填 0 时有效。
 该参数用于高度定制场景，建议您优先使用 Definition 指定转码参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method OverrideTranscodeParameter getOverrideParameter() 获取视频转码自定义参数，当 Definition 不填 0 时有效。
 当填写了该结构中的部分转码参数时，将使用填写的参数覆盖转码模板中的参数。
 该参数用于高度定制场景，建议您仅使用 Definition 指定转码参数。
@@ -37,9 +35,7 @@ use TencentCloud\Common\AbstractModel;
 该参数用于高度定制场景，建议您仅使用 Definition 指定转码参数。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getWatermarkSet() 获取水印列表，支持多张图片或文字水印，最大可支持 10 张。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWatermarkSet(array $WatermarkSet) 设置水印列表，支持多张图片或文字水印，最大可支持 10 张。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getMosaicSet() 获取马赛克列表，最大可支持 10 张。
  * @method void setMosaicSet(array $MosaicSet) 设置马赛克列表，最大可支持 10 张。
  * @method float getStartTimeOffset() 获取转码后的视频的起始时间偏移，单位：秒。
@@ -101,7 +97,6 @@ class TranscodeTaskInput extends AbstractModel
     /**
      * @var RawTranscodeParameter 视频转码自定义参数，当 Definition 填 0 时有效。
 该参数用于高度定制场景，建议您优先使用 Definition 指定转码参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RawParameter;
 
@@ -115,7 +110,6 @@ class TranscodeTaskInput extends AbstractModel
 
     /**
      * @var array 水印列表，支持多张图片或文字水印，最大可支持 10 张。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WatermarkSet;
 
@@ -180,13 +174,11 @@ class TranscodeTaskInput extends AbstractModel
      * @param integer $Definition 视频转码模板 ID。
      * @param RawTranscodeParameter $RawParameter 视频转码自定义参数，当 Definition 填 0 时有效。
 该参数用于高度定制场景，建议您优先使用 Definition 指定转码参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param OverrideTranscodeParameter $OverrideParameter 视频转码自定义参数，当 Definition 不填 0 时有效。
 当填写了该结构中的部分转码参数时，将使用填写的参数覆盖转码模板中的参数。
 该参数用于高度定制场景，建议您仅使用 Definition 指定转码参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $MosaicSet 马赛克列表，最大可支持 10 张。
      * @param float $StartTimeOffset 转码后的视频的起始时间偏移，单位：秒。
 <li>不填或填0，表示转码后的视频从原始视频的起始位置开始；</li>

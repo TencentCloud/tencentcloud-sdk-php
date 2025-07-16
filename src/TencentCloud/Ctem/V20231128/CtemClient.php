@@ -32,6 +32,10 @@ use TencentCloud\Ctem\V20231128\Models as Models;
  * @method Models\DescribeDarkWebsResponse DescribeDarkWebs(Models\DescribeDarkWebsRequest $req) 查看暗网数据
  * @method Models\DescribeDomainsResponse DescribeDomains(Models\DescribeDomainsRequest $req) 查看主域名数据
  * @method Models\DescribeEnterprisesResponse DescribeEnterprises(Models\DescribeEnterprisesRequest $req) 查看企业架构数据
+ * @method Models\DescribeFakeAppsResponse DescribeFakeApps(Models\DescribeFakeAppsRequest $req) 查询仿冒应用
+ * @method Models\DescribeFakeMiniProgramsResponse DescribeFakeMiniPrograms(Models\DescribeFakeMiniProgramsRequest $req) 查询仿冒小程序
+ * @method Models\DescribeFakeWebsitesResponse DescribeFakeWebsites(Models\DescribeFakeWebsitesRequest $req) 查询仿冒网站
+ * @method Models\DescribeFakeWechatOfficialsResponse DescribeFakeWechatOfficials(Models\DescribeFakeWechatOfficialsRequest $req) 查询仿冒公众号
  * @method Models\DescribeGithubsResponse DescribeGithubs(Models\DescribeGithubsRequest $req) 查看Github泄露数据
  * @method Models\DescribeHttpsResponse DescribeHttps(Models\DescribeHttpsRequest $req) 查看http数据
  * @method Models\DescribeJobRecordDetailsResponse DescribeJobRecordDetails(Models\DescribeJobRecordDetailsRequest $req) 查看链路详情

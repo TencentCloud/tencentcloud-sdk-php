@@ -43,21 +43,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTEHDConfig(TEHDConfigForUpdate $TEHDConfig) 设置极速高清转码参数。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method SubtitleTemplate getSubtitleTemplate() 获取字幕流配置参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubtitleTemplate(SubtitleTemplate $SubtitleTemplate) 设置字幕流配置参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAddonAudioStream() 获取外挂音轨参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddonAudioStream(array $AddonAudioStream) 设置外挂音轨参数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStdExtInfo() 获取转码扩展字段。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStdExtInfo(string $StdExtInfo) 设置转码扩展字段。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getAddOnSubtitles() 获取要插入的字幕文件。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddOnSubtitles(array $AddOnSubtitles) 设置要插入的字幕文件。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class OverrideTranscodeParameter extends AbstractModel
 {
@@ -98,25 +90,21 @@ class OverrideTranscodeParameter extends AbstractModel
 
     /**
      * @var SubtitleTemplate 字幕流配置参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubtitleTemplate;
 
     /**
      * @var array 外挂音轨参数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AddonAudioStream;
 
     /**
      * @var string 转码扩展字段。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StdExtInfo;
 
     /**
      * @var array 要插入的字幕文件。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AddOnSubtitles;
 
@@ -133,13 +121,9 @@ class OverrideTranscodeParameter extends AbstractModel
      * @param TEHDConfigForUpdate $TEHDConfig 极速高清转码参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SubtitleTemplate $SubtitleTemplate 字幕流配置参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AddonAudioStream 外挂音轨参数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StdExtInfo 转码扩展字段。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AddOnSubtitles 要插入的字幕文件。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

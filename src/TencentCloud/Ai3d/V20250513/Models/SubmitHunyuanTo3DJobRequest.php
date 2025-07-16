@@ -21,10 +21,10 @@ use TencentCloud\Common\AbstractModel;
  * SubmitHunyuanTo3DJob请求参数结构体
  *
  * @method string getPrompt() 获取文生3D，3D内容的描述，中文正向提示词。
-最多支持200个 utf-8 字符。
+最多支持1024个 utf-8 字符。
 文生3D, image、image_url和 prompt必填其一，且prompt和image/image_url不能同时存在。
  * @method void setPrompt(string $Prompt) 设置文生3D，3D内容的描述，中文正向提示词。
-最多支持200个 utf-8 字符。
+最多支持1024个 utf-8 字符。
 文生3D, image、image_url和 prompt必填其一，且prompt和image/image_url不能同时存在。
  * @method string getImageBase64() 获取输入图 Base64 数据。
 大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过6m）
@@ -73,7 +73,7 @@ class SubmitHunyuanTo3DJobRequest extends AbstractModel
 {
     /**
      * @var string 文生3D，3D内容的描述，中文正向提示词。
-最多支持200个 utf-8 字符。
+最多支持1024个 utf-8 字符。
 文生3D, image、image_url和 prompt必填其一，且prompt和image/image_url不能同时存在。
      */
     public $Prompt;
@@ -121,7 +121,7 @@ back：后视图；
 
     /**
      * @param string $Prompt 文生3D，3D内容的描述，中文正向提示词。
-最多支持200个 utf-8 字符。
+最多支持1024个 utf-8 字符。
 文生3D, image、image_url和 prompt必填其一，且prompt和image/image_url不能同时存在。
      * @param string $ImageBase64 输入图 Base64 数据。
 大小：单边分辨率要求不小于128，不大于5000。大小不超过8m（base64编码后会大30%左右，建议实际输入图片不超过6m）

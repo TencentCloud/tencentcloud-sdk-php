@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReturnPageFormat(boolean $ReturnPageFormat) 设置Markdown文件中是否包含页码信息
  * @method string getPageFormat() 获取自定义输出页码样式,{{p}}为页码占位符，开启ReturnPageFormat生效。未填默认样式:<page_num>page {{p}}</page_num>
  * @method void setPageFormat(string $PageFormat) 设置自定义输出页码样式,{{p}}为页码占位符，开启ReturnPageFormat生效。未填默认样式:<page_num>page {{p}}</page_num>
+ * @method boolean getIgnoreFailedPage() 获取是否忽略失败页，返回已成功的页数据
+ * @method void setIgnoreFailedPage(boolean $IgnoreFailedPage) 设置是否忽略失败页，返回已成功的页数据
  */
 class ReconstructDocumentSSEConfig extends AbstractModel
 {
@@ -70,6 +72,11 @@ class ReconstructDocumentSSEConfig extends AbstractModel
     public $PageFormat;
 
     /**
+     * @var boolean 是否忽略失败页，返回已成功的页数据
+     */
+    public $IgnoreFailedPage;
+
+    /**
      * @param string $TableResultType Markdown文件中表格返回的形式
 0，表格以MD形式返回
 1，表格以HTML形式返回
@@ -80,6 +87,7 @@ class ReconstructDocumentSSEConfig extends AbstractModel
 默认是0
      * @param boolean $ReturnPageFormat Markdown文件中是否包含页码信息
      * @param string $PageFormat 自定义输出页码样式,{{p}}为页码占位符，开启ReturnPageFormat生效。未填默认样式:<page_num>page {{p}}</page_num>
+     * @param boolean $IgnoreFailedPage 是否忽略失败页，返回已成功的页数据
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class ReconstructDocumentSSEConfig extends AbstractModel
 
         if (array_key_exists("PageFormat",$param) and $param["PageFormat"] !== null) {
             $this->PageFormat = $param["PageFormat"];
+        }
+
+        if (array_key_exists("IgnoreFailedPage",$param) and $param["IgnoreFailedPage"] !== null) {
+            $this->IgnoreFailedPage = $param["IgnoreFailedPage"];
         }
     }
 }

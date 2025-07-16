@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAuditKeywords请求参数结构体
  *
-
+ * @method array getKeywords() 获取关键词列表。
+ * @method void setKeywords(array $Keywords) 设置关键词列表。
+ * @method string getLibId() 获取直播审核词库Id。
+ * @method void setLibId(string $LibId) 设置直播审核词库Id。
  */
 class CreateAuditKeywordsRequest extends AbstractModel
 {
-
+    /**
+     * @var array 关键词列表。
+     */
+    public $Keywords;
 
     /**
+     * @var string 直播审核词库Id。
+     */
+    public $LibId;
 
+    /**
+     * @param array $Keywords 关键词列表。
+     * @param string $LibId 直播审核词库Id。
      */
     function __construct()
     {
@@ -42,6 +54,17 @@ class CreateAuditKeywordsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Keywords",$param) and $param["Keywords"] !== null) {
+            $this->Keywords = [];
+            foreach ($param["Keywords"] as $key => $value){
+                $obj = new AuditKeyword();
+                $obj->deserialize($value);
+                array_push($this->Keywords, $obj);
+            }
+        }
 
+        if (array_key_exists("LibId",$param) and $param["LibId"] !== null) {
+            $this->LibId = $param["LibId"];
+        }
     }
 }

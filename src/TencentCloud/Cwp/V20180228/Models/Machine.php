@@ -100,6 +100,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method string getRemark() 获取备注信息
  * @method void setRemark(string $Remark) 设置备注信息
+ * @method string getAgentVersion() 获取主机安全agent版本
+ * @method void setAgentVersion(string $AgentVersion) 设置主机安全agent版本
  */
 class Machine extends AbstractModel
 {
@@ -276,6 +278,11 @@ class Machine extends AbstractModel
     public $Remark;
 
     /**
+     * @var string 主机安全agent版本
+     */
+    public $AgentVersion;
+
+    /**
      * @param string $MachineName 主机名称。
      * @param string $MachineOs 主机系统。
      * @param string $MachineStatus 主机状态。 <li>OFFLINE: 离线 </li> <li>ONLINE: 在线</li> <li>SHUTDOWN: 已关机</li> <li>UNINSTALLED: 未防护</li>	
@@ -316,6 +323,7 @@ class Machine extends AbstractModel
      * @param MachineExtraInfo $MachineExtraInfo 附加信息
      * @param string $InstanceId 实例ID
      * @param string $Remark 备注信息
+     * @param string $AgentVersion 主机安全agent版本
      */
     function __construct()
     {
@@ -472,6 +480,10 @@ class Machine extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("AgentVersion",$param) and $param["AgentVersion"] !== null) {
+            $this->AgentVersion = $param["AgentVersion"];
         }
     }
 }

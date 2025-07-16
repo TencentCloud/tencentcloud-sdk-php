@@ -23,7 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInstanceId() 获取实例 ID。例如：cmgo-7pje****。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID。例如：cmgo-7pje****。
  * @method array getSecurityGroupIds() 获取目标安全组 ID。请通过接口[DescribeSecurityGroup](https://cloud.tencent.com/document/product/240/55675)查看具体的安全组 ID。
+**注意**：该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置目标安全组 ID。请通过接口[DescribeSecurityGroup](https://cloud.tencent.com/document/product/240/55675)查看具体的安全组 ID。
+**注意**：该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
  */
 class ModifyDBInstanceSecurityGroupRequest extends AbstractModel
 {
@@ -34,12 +36,14 @@ class ModifyDBInstanceSecurityGroupRequest extends AbstractModel
 
     /**
      * @var array 目标安全组 ID。请通过接口[DescribeSecurityGroup](https://cloud.tencent.com/document/product/240/55675)查看具体的安全组 ID。
+**注意**：该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
      */
     public $SecurityGroupIds;
 
     /**
      * @param string $InstanceId 实例 ID。例如：cmgo-7pje****。
      * @param array $SecurityGroupIds 目标安全组 ID。请通过接口[DescribeSecurityGroup](https://cloud.tencent.com/document/product/240/55675)查看具体的安全组 ID。
+**注意**：该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
      */
     function __construct()
     {

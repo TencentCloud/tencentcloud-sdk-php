@@ -28,9 +28,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGroupName(string $GroupName) 设置告警分组名称
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getAMPReceivers() 获取云监控告警模板ID ，返回告警模板转换后的notice ID。
+ * @method array getAMPReceivers() 获取腾讯云可观测平台告警模板ID ，返回告警模板转换后的notice ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAMPReceivers(array $AMPReceivers) 设置云监控告警模板ID ，返回告警模板转换后的notice ID。
+ * @method void setAMPReceivers(array $AMPReceivers) 设置腾讯云可观测平台告警模板ID ，返回告警模板转换后的notice ID。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method PrometheusAlertCustomReceiver getCustomReceiver() 获取自定义告警模板
 注意：此字段可能返回 null，表示取不到有效值。
@@ -72,7 +72,7 @@ class PrometheusAlertGroupSet extends AbstractModel
     public $GroupName;
 
     /**
-     * @var array 云监控告警模板ID ，返回告警模板转换后的notice ID。
+     * @var array 腾讯云可观测平台告警模板ID ，返回告警模板转换后的notice ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AMPReceivers;
@@ -118,7 +118,7 @@ class PrometheusAlertGroupSet extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupName 告警分组名称
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $AMPReceivers 云监控告警模板ID ，返回告警模板转换后的notice ID。
+     * @param array $AMPReceivers 腾讯云可观测平台告警模板ID ，返回告警模板转换后的notice ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param PrometheusAlertCustomReceiver $CustomReceiver 自定义告警模板
 注意：此字段可能返回 null，表示取不到有效值。

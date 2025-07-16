@@ -130,6 +130,8 @@ HYBRID_PAID:
  * @method void setRollingUpdate(RollingUpdate $RollingUpdate) 设置滚动更新策略
  * @method SidecarSpec getSidecar() 获取sidecar配置
  * @method void setSidecar(SidecarSpec $Sidecar) 设置sidecar配置
+ * @method string getResourceGroupId() 获取资源组 id
+ * @method void setResourceGroupId(string $ResourceGroupId) 设置资源组 id
  */
 class ModifyModelServiceRequest extends AbstractModel
 {
@@ -317,6 +319,11 @@ HYBRID_PAID:
     public $Sidecar;
 
     /**
+     * @var string 资源组 id
+     */
+    public $ResourceGroupId;
+
+    /**
      * @param string $ServiceId 服务id
      * @param ModelInfo $ModelInfo 模型信息，需要挂载模型时填写
      * @param ImageInfo $ImageInfo 镜像信息，配置服务运行所需的镜像地址等信息
@@ -372,6 +379,7 @@ HYBRID_PAID:
      * @param HealthProbe $HealthProbe 健康探针
      * @param RollingUpdate $RollingUpdate 滚动更新策略
      * @param SidecarSpec $Sidecar sidecar配置
+     * @param string $ResourceGroupId 资源组 id
      */
     function __construct()
     {
@@ -534,6 +542,10 @@ HYBRID_PAID:
         if (array_key_exists("Sidecar",$param) and $param["Sidecar"] !== null) {
             $this->Sidecar = new SidecarSpec();
             $this->Sidecar->deserialize($param["Sidecar"]);
+        }
+
+        if (array_key_exists("ResourceGroupId",$param) and $param["ResourceGroupId"] !== null) {
+            $this->ResourceGroupId = $param["ResourceGroupId"];
         }
     }
 }

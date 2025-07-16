@@ -37,7 +37,6 @@ use TencentCloud\Common\AbstractModel;
 
 
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActivityType(string $ActivityType) 设置原子任务类型：
 <li>input: 起始节点</li>
 <li>output：终止节点</li>
@@ -55,11 +54,8 @@ use TencentCloud\Common\AbstractModel;
 
 
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getReardriveIndex() 获取后驱节点索引数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReardriveIndex(array $ReardriveIndex) 设置后驱节点索引数组
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ActivityPara getActivityPara() 获取原子任务参数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActivityPara(ActivityPara $ActivityPara) 设置原子任务参数
@@ -85,13 +81,11 @@ class Activity extends AbstractModel
 
 
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActivityType;
 
     /**
      * @var array 后驱节点索引数组
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReardriveIndex;
 
@@ -119,9 +113,7 @@ class Activity extends AbstractModel
 
 
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ReardriveIndex 后驱节点索引数组
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ActivityPara $ActivityPara 原子任务参数
 注意：此字段可能返回 null，表示取不到有效值。
      */

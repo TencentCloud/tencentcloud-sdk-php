@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) 设置可用区
  * @method string getBinlogSyncWay() 获取binlog同步方式
  * @method void setBinlogSyncWay(string $BinlogSyncWay) 设置binlog同步方式
+ * @method integer getSemiSyncTimeout() 获取半同步超时时间，单位ms
+ * @method void setSemiSyncTimeout(integer $SemiSyncTimeout) 设置半同步超时时间，单位ms
  */
 class SlaveZoneAttrItem extends AbstractModel
 {
@@ -38,8 +40,14 @@ class SlaveZoneAttrItem extends AbstractModel
     public $BinlogSyncWay;
 
     /**
+     * @var integer 半同步超时时间，单位ms
+     */
+    public $SemiSyncTimeout;
+
+    /**
      * @param string $Zone 可用区
      * @param string $BinlogSyncWay binlog同步方式
+     * @param integer $SemiSyncTimeout 半同步超时时间，单位ms
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class SlaveZoneAttrItem extends AbstractModel
 
         if (array_key_exists("BinlogSyncWay",$param) and $param["BinlogSyncWay"] !== null) {
             $this->BinlogSyncWay = $param["BinlogSyncWay"];
+        }
+
+        if (array_key_exists("SemiSyncTimeout",$param) and $param["SemiSyncTimeout"] !== null) {
+            $this->SemiSyncTimeout = $param["SemiSyncTimeout"];
         }
     }
 }

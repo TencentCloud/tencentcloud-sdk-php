@@ -20,49 +20,62 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ReconstructDocumentSSE请求参数结构体
  *
- * @method string getFileType() 获取文件类型。
+ * @method string getFileType() 获取支持解析的文件类型。
 **支持的文件类型**：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、IM、PCX、PPM、TIFF、XBM、HEIF、JP2
 **支持的文件大小**：
 - PDF、DOC、DOCX、PPT、PPTX 支持100M
 - MD、TXT、XLS、XLSX、CSV 支持10M
 - 其他支持20M
 
- * @method void setFileType(string $FileType) 设置文件类型。
+ * @method void setFileType(string $FileType) 设置支持解析的文件类型。
 **支持的文件类型**：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、IM、PCX、PPM、TIFF、XBM、HEIF、JP2
 **支持的文件大小**：
 - PDF、DOC、DOCX、PPT、PPTX 支持100M
 - MD、TXT、XLS、XLSX、CSV 支持10M
 - 其他支持20M
 
- * @method string getFileUrl() 获取文件的 URL 地址。
-文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 URL 速度和稳定性可能受一定影响。
+ * @method string getFileUrl() 获取文件的 URL 地址。文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 URL 速度和稳定性可能受一定影响。文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
 参考：[腾讯云COS文档](https://cloud.tencent.com/document/product/436/7749)
- * @method void setFileUrl(string $FileUrl) 设置文件的 URL 地址。
-文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 URL 速度和稳定性可能受一定影响。
+
+默认值：无
+ * @method void setFileUrl(string $FileUrl) 设置文件的 URL 地址。文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 URL 速度和稳定性可能受一定影响。文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
 参考：[腾讯云COS文档](https://cloud.tencent.com/document/product/436/7749)
- * @method string getFileBase64() 获取文件的 Base64 值。
-支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过 3 秒。
-支持的图片像素：单边介于20-10000px之间。
-文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
- * @method void setFileBase64(string $FileBase64) 设置文件的 Base64 值。
-支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过 3 秒。
-支持的图片像素：单边介于20-10000px之间。
-文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
- * @method integer getFileStartPageNumber() 获取文档的起始页码。
-当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的起始页码，识别的页码包含当前值。
- * @method void setFileStartPageNumber(integer $FileStartPageNumber) 设置文档的起始页码。
-当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的起始页码，识别的页码包含当前值。
- * @method integer getFileEndPageNumber() 获取文档的结束页码。
-当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值。
- * @method void setFileEndPageNumber(integer $FileEndPageNumber) 设置文档的结束页码。
-当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值。
- * @method ReconstructDocumentSSEConfig getConfig() 获取文档解析配置信息	
- * @method void setConfig(ReconstructDocumentSSEConfig $Config) 设置文档解析配置信息	
+
+默认值：无
+ * @method string getFileBase64() 获取说明：文件的 Base64 值。
+备注：支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过 3 秒。
+支持的图片像素：单边介于20-10000px之间。文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
+
+默认值：无
+ * @method void setFileBase64(string $FileBase64) 设置说明：文件的 Base64 值。
+备注：支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过 3 秒。
+支持的图片像素：单边介于20-10000px之间。文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
+
+默认值：无
+ * @method integer getFileStartPageNumber() 获取说明：文档的起始页码。
+备注：当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的起始页码，识别的页码包含当前值。
+默认值：无
+ * @method void setFileStartPageNumber(integer $FileStartPageNumber) 设置说明：文档的起始页码。
+备注：当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的起始页码，识别的页码包含当前值。
+默认值：无
+ * @method integer getFileEndPageNumber() 获取说明：文档的结束页码。
+备注：当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值。
+默认值：无
+ * @method void setFileEndPageNumber(integer $FileEndPageNumber) 设置说明：文档的结束页码。
+备注：当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值。
+默认值：无
+ * @method ReconstructDocumentSSEConfig getConfig() 获取说明：文档解析配置信息	
+备注：可设置返回markdown结果的格式
+默认值：无
+
+ * @method void setConfig(ReconstructDocumentSSEConfig $Config) 设置说明：文档解析配置信息	
+备注：可设置返回markdown结果的格式
+默认值：无
  */
 class ReconstructDocumentSSERequest extends AbstractModel
 {
     /**
-     * @var string 文件类型。
+     * @var string 支持解析的文件类型。
 **支持的文件类型**：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、IM、PCX、PPM、TIFF、XBM、HEIF、JP2
 **支持的文件大小**：
 - PDF、DOC、DOCX、PPT、PPTX 支持100M
@@ -73,57 +86,70 @@ class ReconstructDocumentSSERequest extends AbstractModel
     public $FileType;
 
     /**
-     * @var string 文件的 URL 地址。
-文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 URL 速度和稳定性可能受一定影响。
+     * @var string 文件的 URL 地址。文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 URL 速度和稳定性可能受一定影响。文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
 参考：[腾讯云COS文档](https://cloud.tencent.com/document/product/436/7749)
+
+默认值：无
      */
     public $FileUrl;
 
     /**
-     * @var string 文件的 Base64 值。
-支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过 3 秒。
-支持的图片像素：单边介于20-10000px之间。
-文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
+     * @var string 说明：文件的 Base64 值。
+备注：支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过 3 秒。
+支持的图片像素：单边介于20-10000px之间。文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
+
+默认值：无
      */
     public $FileBase64;
 
     /**
-     * @var integer 文档的起始页码。
-当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的起始页码，识别的页码包含当前值。
+     * @var integer 说明：文档的起始页码。
+备注：当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的起始页码，识别的页码包含当前值。
+默认值：无
      */
     public $FileStartPageNumber;
 
     /**
-     * @var integer 文档的结束页码。
-当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值。
+     * @var integer 说明：文档的结束页码。
+备注：当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值。
+默认值：无
      */
     public $FileEndPageNumber;
 
     /**
-     * @var ReconstructDocumentSSEConfig 文档解析配置信息	
+     * @var ReconstructDocumentSSEConfig 说明：文档解析配置信息	
+备注：可设置返回markdown结果的格式
+默认值：无
+
      */
     public $Config;
 
     /**
-     * @param string $FileType 文件类型。
+     * @param string $FileType 支持解析的文件类型。
 **支持的文件类型**：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、IM、PCX、PPM、TIFF、XBM、HEIF、JP2
 **支持的文件大小**：
 - PDF、DOC、DOCX、PPT、PPTX 支持100M
 - MD、TXT、XLS、XLSX、CSV 支持10M
 - 其他支持20M
 
-     * @param string $FileUrl 文件的 URL 地址。
-文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 URL 速度和稳定性可能受一定影响。
+     * @param string $FileUrl 文件的 URL 地址。文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 URL 速度和稳定性可能受一定影响。文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
 参考：[腾讯云COS文档](https://cloud.tencent.com/document/product/436/7749)
-     * @param string $FileBase64 文件的 Base64 值。
-支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过 3 秒。
-支持的图片像素：单边介于20-10000px之间。
-文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
-     * @param integer $FileStartPageNumber 文档的起始页码。
-当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的起始页码，识别的页码包含当前值。
-     * @param integer $FileEndPageNumber 文档的结束页码。
-当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值。
-     * @param ReconstructDocumentSSEConfig $Config 文档解析配置信息	
+
+默认值：无
+     * @param string $FileBase64 说明：文件的 Base64 值。
+备注：支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过 3 秒。
+支持的图片像素：单边介于20-10000px之间。文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
+
+默认值：无
+     * @param integer $FileStartPageNumber 说明：文档的起始页码。
+备注：当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的起始页码，识别的页码包含当前值。
+默认值：无
+     * @param integer $FileEndPageNumber 说明：文档的结束页码。
+备注：当传入文件是PDF、PDF、PPT、PPTX、DOC类型时，用来指定识别的结束页码，识别的页码包含当前值。
+默认值：无
+     * @param ReconstructDocumentSSEConfig $Config 说明：文档解析配置信息	
+备注：可设置返回markdown结果的格式
+默认值：无
      */
     function __construct()
     {

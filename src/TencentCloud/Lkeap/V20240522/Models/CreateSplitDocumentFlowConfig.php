@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableMllm(boolean $EnableMllm) 设置是否开启mllm
  * @method integer getMaxChunkSize() 获取最大分片长度
  * @method void setMaxChunkSize(integer $MaxChunkSize) 设置最大分片长度
+ * @method boolean getIgnoreFailedPage() 获取是否忽略返回失败页码
+ * @method void setIgnoreFailedPage(boolean $IgnoreFailedPage) 设置是否忽略返回失败页码
  */
 class CreateSplitDocumentFlowConfig extends AbstractModel
 {
@@ -87,6 +89,11 @@ class CreateSplitDocumentFlowConfig extends AbstractModel
     public $MaxChunkSize;
 
     /**
+     * @var boolean 是否忽略返回失败页码
+     */
+    public $IgnoreFailedPage;
+
+    /**
      * @param string $TableResultType Markdown文件中表格返回的形式
 0，表格以MD形式返回
 1，表格以HTML形式返回
@@ -102,6 +109,7 @@ class CreateSplitDocumentFlowConfig extends AbstractModel
 
      * @param boolean $EnableMllm 是否开启mllm
      * @param integer $MaxChunkSize 最大分片长度
+     * @param boolean $IgnoreFailedPage 是否忽略返回失败页码
      */
     function __construct()
     {
@@ -130,6 +138,10 @@ class CreateSplitDocumentFlowConfig extends AbstractModel
 
         if (array_key_exists("MaxChunkSize",$param) and $param["MaxChunkSize"] !== null) {
             $this->MaxChunkSize = $param["MaxChunkSize"];
+        }
+
+        if (array_key_exists("IgnoreFailedPage",$param) and $param["IgnoreFailedPage"] !== null) {
+            $this->IgnoreFailedPage = $param["IgnoreFailedPage"];
         }
     }
 }

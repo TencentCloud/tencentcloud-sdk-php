@@ -124,6 +124,14 @@ baseline/main/high。默认baseline
 不传递或者为空字符串，清空之前的DRM配置。
  * @method void setDRMTracks(string $DRMTracks) 设置DRM 加密项，可选值：AUDIO、SD、HD、UHD1、UHD2，后四个为一组，同组中的内容只能选一个。
 不传递或者为空字符串，清空之前的DRM配置。
+ * @method integer getIsAdaptiveBitRate() 获取是否创建自适应码率，默认值 0。
+0：否。
+1：是。
+ * @method void setIsAdaptiveBitRate(integer $IsAdaptiveBitRate) 设置是否创建自适应码率，默认值 0。
+0：否。
+1：是。
+ * @method array getAdaptiveChildren() 获取自适应码率，子转码模板信息，当 IsAdaptiveBitRate 为 1 时有效。
+ * @method void setAdaptiveChildren(array $AdaptiveChildren) 设置自适应码率，子转码模板信息，当 IsAdaptiveBitRate 为 1 时有效。
  */
 class CreateLiveTranscodeTemplateRequest extends AbstractModel
 {
@@ -268,6 +276,18 @@ baseline/main/high。默认baseline
     public $DRMTracks;
 
     /**
+     * @var integer 是否创建自适应码率，默认值 0。
+0：否。
+1：是。
+     */
+    public $IsAdaptiveBitRate;
+
+    /**
+     * @var array 自适应码率，子转码模板信息，当 IsAdaptiveBitRate 为 1 时有效。
+     */
+    public $AdaptiveChildren;
+
+    /**
      * @param string $TemplateName 模板名称，例： 900p 仅支持字母和数字的组合。
 长度限制：
   标准转码：1-10个字符
@@ -320,6 +340,10 @@ baseline/main/high。默认baseline
 不传递或者为空字符串，清空之前的DRM配置。
      * @param string $DRMTracks DRM 加密项，可选值：AUDIO、SD、HD、UHD1、UHD2，后四个为一组，同组中的内容只能选一个。
 不传递或者为空字符串，清空之前的DRM配置。
+     * @param integer $IsAdaptiveBitRate 是否创建自适应码率，默认值 0。
+0：否。
+1：是。
+     * @param array $AdaptiveChildren 自适应码率，子转码模板信息，当 IsAdaptiveBitRate 为 1 时有效。
      */
     function __construct()
     {
@@ -420,6 +444,19 @@ baseline/main/high。默认baseline
 
         if (array_key_exists("DRMTracks",$param) and $param["DRMTracks"] !== null) {
             $this->DRMTracks = $param["DRMTracks"];
+        }
+
+        if (array_key_exists("IsAdaptiveBitRate",$param) and $param["IsAdaptiveBitRate"] !== null) {
+            $this->IsAdaptiveBitRate = $param["IsAdaptiveBitRate"];
+        }
+
+        if (array_key_exists("AdaptiveChildren",$param) and $param["AdaptiveChildren"] !== null) {
+            $this->AdaptiveChildren = [];
+            foreach ($param["AdaptiveChildren"] as $key => $value){
+                $obj = new ChildTemplateInfo();
+                $obj->deserialize($value);
+                array_push($this->AdaptiveChildren, $obj);
+            }
         }
     }
 }

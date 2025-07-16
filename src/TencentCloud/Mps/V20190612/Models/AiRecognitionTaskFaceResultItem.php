@@ -35,51 +35,33 @@ use TencentCloud\Common\AbstractModel;
  * @method string getGender() 获取人物性别：
 <li>Male：男性；</li>
 <li>Female：女性。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setGender(string $Gender) 设置人物性别：
 <li>Male：男性；</li>
 <li>Female：女性。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBirthday() 获取人物出生日期。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBirthday(string $Birthday) 设置人物出生日期。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getProfession() 获取人物职业或者职务。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProfession(string $Profession) 设置人物职业或者职务。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSchoolOfGraduation() 获取人物毕业院校。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSchoolOfGraduation(string $SchoolOfGraduation) 设置人物毕业院校。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAbstract() 获取人物简介。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAbstract(string $Abstract) 设置人物简介。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPlaceOfBirth() 获取人物出生地或者籍贯。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPlaceOfBirth(string $PlaceOfBirth) 设置人物出生地或者籍贯。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPersonType() 获取人物类型：
 <li>Politician：官员；</li>
 <li>Artist：艺人。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPersonType(string $PersonType) 设置人物类型：
 <li>Politician：官员；</li>
 <li>Artist：艺人。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRemark() 获取敏感度标注：
 <li>Normal：正常；</li>
 <li>Sensitive：敏感。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置敏感度标注：
 <li>Normal：正常；</li>
 <li>Sensitive：敏感。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUrl() 获取截图链接
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUrl(string $Url) 设置截图链接
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AiRecognitionTaskFaceResultItem extends AbstractModel
 {
@@ -109,37 +91,31 @@ class AiRecognitionTaskFaceResultItem extends AbstractModel
      * @var string 人物性别：
 <li>Male：男性；</li>
 <li>Female：女性。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Gender;
 
     /**
      * @var string 人物出生日期。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Birthday;
 
     /**
      * @var string 人物职业或者职务。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Profession;
 
     /**
      * @var string 人物毕业院校。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SchoolOfGraduation;
 
     /**
      * @var string 人物简介。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Abstract;
 
     /**
      * @var string 人物出生地或者籍贯。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PlaceOfBirth;
 
@@ -147,7 +123,6 @@ class AiRecognitionTaskFaceResultItem extends AbstractModel
      * @var string 人物类型：
 <li>Politician：官员；</li>
 <li>Artist：艺人。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PersonType;
 
@@ -155,13 +130,11 @@ class AiRecognitionTaskFaceResultItem extends AbstractModel
      * @var string 敏感度标注：
 <li>Normal：正常；</li>
 <li>Sensitive：敏感。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
     /**
      * @var string 截图链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Url;
 
@@ -175,27 +148,18 @@ class AiRecognitionTaskFaceResultItem extends AbstractModel
      * @param string $Gender 人物性别：
 <li>Male：男性；</li>
 <li>Female：女性。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Birthday 人物出生日期。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Profession 人物职业或者职务。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SchoolOfGraduation 人物毕业院校。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Abstract 人物简介。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PlaceOfBirth 人物出生地或者籍贯。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PersonType 人物类型：
 <li>Politician：官员；</li>
 <li>Artist：艺人。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Remark 敏感度标注：
 <li>Normal：正常；</li>
 <li>Sensitive：敏感。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Url 截图链接
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
 3：返回全文MD + 每一页的OCR原始Json；
 4：返回全文MD + 每一页的MD，
 默认值为0
+ * @method boolean getIgnoreFailedPage() 获取是否忽略失败页，返回已成功的页数据。默认为true。
+ * @method void setIgnoreFailedPage(boolean $IgnoreFailedPage) 设置是否忽略失败页，返回已成功的页数据。默认为true。
  */
 class CreateReconstructDocumentFlowConfig extends AbstractModel
 {
@@ -65,6 +67,11 @@ class CreateReconstructDocumentFlowConfig extends AbstractModel
     public $ResultType;
 
     /**
+     * @var boolean 是否忽略失败页，返回已成功的页数据。默认为true。
+     */
+    public $IgnoreFailedPage;
+
+    /**
      * @param string $TableResultType Markdown文件中表格返回的形式
 0，表格以MD形式返回
 1，表格以HTML形式返回
@@ -76,6 +83,7 @@ class CreateReconstructDocumentFlowConfig extends AbstractModel
 3：返回全文MD + 每一页的OCR原始Json；
 4：返回全文MD + 每一页的MD，
 默认值为0
+     * @param boolean $IgnoreFailedPage 是否忽略失败页，返回已成功的页数据。默认为true。
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class CreateReconstructDocumentFlowConfig extends AbstractModel
 
         if (array_key_exists("ResultType",$param) and $param["ResultType"] !== null) {
             $this->ResultType = $param["ResultType"];
+        }
+
+        if (array_key_exists("IgnoreFailedPage",$param) and $param["IgnoreFailedPage"] !== null) {
+            $this->IgnoreFailedPage = $param["IgnoreFailedPage"];
         }
     }
 }

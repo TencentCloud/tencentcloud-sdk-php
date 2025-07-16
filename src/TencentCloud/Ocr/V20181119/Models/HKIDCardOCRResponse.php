@@ -56,16 +56,18 @@ use TencentCloud\Common\AbstractModel;
 1：假；
 2：真。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getHeadImage() 获取人像照片Base64后的结果
+ * @method string getHeadImage() 获取Base64编码的证件左侧人像大图
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setHeadImage(string $HeadImage) 设置人像照片Base64后的结果
+ * @method void setHeadImage(string $HeadImage) 设置Base64编码的证件左侧人像大图
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getWarningCode() 获取多重告警码，当身份证是翻拍、复印件时返回对应告警码。
--9102：证照复印件告警
--9103：证照翻拍告警
- * @method void setWarningCode(array $WarningCode) 设置多重告警码，当身份证是翻拍、复印件时返回对应告警码。
--9102：证照复印件告警
--9103：证照翻拍告警
+ * @method string getSmallHeadImage() 获取Base64编码的证件右侧人像小图
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSmallHeadImage(string $SmallHeadImage) 设置Base64编码的证件右侧人像小图
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getWarningCode() 获取该字段已废弃， 将固定返回空数组，不建议使用。
+This field is deprecated and will always return an empty array. Usage is not recommended.
+ * @method void setWarningCode(array $WarningCode) 设置该字段已废弃， 将固定返回空数组，不建议使用。
+This field is deprecated and will always return an empty array. Usage is not recommended.
  * @method array getWarnCardInfos() 获取告警码
 -9101 证件边框不完整告警
 -9102 证件复印件告警
@@ -82,6 +84,8 @@ use TencentCloud\Common\AbstractModel;
 -9107 证件反光告警
 -9108 证件模糊告警
 -9109 告警能力未开通
+ * @method string getWindowEmbeddedText() 获取证件透明视窗内的文本信息
+ * @method void setWindowEmbeddedText(string $WindowEmbeddedText) 设置证件透明视窗内的文本信息
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -151,15 +155,20 @@ class HKIDCardOCRResponse extends AbstractModel
     public $FakeDetectResult;
 
     /**
-     * @var string 人像照片Base64后的结果
+     * @var string Base64编码的证件左侧人像大图
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $HeadImage;
 
     /**
-     * @var array 多重告警码，当身份证是翻拍、复印件时返回对应告警码。
--9102：证照复印件告警
--9103：证照翻拍告警
+     * @var string Base64编码的证件右侧人像小图
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SmallHeadImage;
+
+    /**
+     * @var array 该字段已废弃， 将固定返回空数组，不建议使用。
+This field is deprecated and will always return an empty array. Usage is not recommended.
      * @deprecated
      */
     public $WarningCode;
@@ -175,6 +184,11 @@ class HKIDCardOCRResponse extends AbstractModel
 -9109 告警能力未开通
      */
     public $WarnCardInfos;
+
+    /**
+     * @var string 证件透明视窗内的文本信息
+     */
+    public $WindowEmbeddedText;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -200,11 +214,12 @@ class HKIDCardOCRResponse extends AbstractModel
 1：假；
 2：真。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $HeadImage 人像照片Base64后的结果
+     * @param string $HeadImage Base64编码的证件左侧人像大图
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $WarningCode 多重告警码，当身份证是翻拍、复印件时返回对应告警码。
--9102：证照复印件告警
--9103：证照翻拍告警
+     * @param string $SmallHeadImage Base64编码的证件右侧人像小图
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $WarningCode 该字段已废弃， 将固定返回空数组，不建议使用。
+This field is deprecated and will always return an empty array. Usage is not recommended.
      * @param array $WarnCardInfos 告警码
 -9101 证件边框不完整告警
 -9102 证件复印件告警
@@ -213,6 +228,7 @@ class HKIDCardOCRResponse extends AbstractModel
 -9107 证件反光告警
 -9108 证件模糊告警
 -9109 告警能力未开通
+     * @param string $WindowEmbeddedText 证件透明视窗内的文本信息
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -276,12 +292,20 @@ class HKIDCardOCRResponse extends AbstractModel
             $this->HeadImage = $param["HeadImage"];
         }
 
+        if (array_key_exists("SmallHeadImage",$param) and $param["SmallHeadImage"] !== null) {
+            $this->SmallHeadImage = $param["SmallHeadImage"];
+        }
+
         if (array_key_exists("WarningCode",$param) and $param["WarningCode"] !== null) {
             $this->WarningCode = $param["WarningCode"];
         }
 
         if (array_key_exists("WarnCardInfos",$param) and $param["WarnCardInfos"] !== null) {
             $this->WarnCardInfos = $param["WarnCardInfos"];
+        }
+
+        if (array_key_exists("WindowEmbeddedText",$param) and $param["WindowEmbeddedText"] !== null) {
+            $this->WindowEmbeddedText = $param["WindowEmbeddedText"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

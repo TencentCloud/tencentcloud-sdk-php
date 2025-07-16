@@ -78,6 +78,13 @@ use TencentCloud\Ess\V20201111\Models as Models;
 3. <font color='red'>只有撤销没有参与方签署过或只有自动签署签署过的合同，才会返还合同额度。</font>
 
 4. 撤销后可以看合同PDF内容的人员： 发起方的超管， 发起方自己，发起方撤销合同的操作人员，已经签署合同、已经填写合同、邀请填写已经补充信息的参与人员， 其他参与人员看不到合同的内容。
+ * @method Models\CreateBatchInformationExtractionTaskResponse CreateBatchInformationExtractionTask(Models\CreateBatchInformationExtractionTaskRequest $req) 此接口（CreateBatchInformationExtractionTask）用来通过上传后的PDF资源编号来批量创建合同智能审查任务。<br/>
+
+适用场景：根据合同关键词（字段名称）来提取PDF合同文件的字段结果信息。
+
+注: 
+1. PDF格式限制大小为10M以下
+2. 仅支持5个PDF文件批量发起
  * @method Models\CreateBatchInitOrganizationUrlResponse CreateBatchInitOrganizationUrl(Models\CreateBatchInitOrganizationUrlRequest $req) 支持企业进行批量初始化操作：
 
 此接口存在以下限制：
@@ -904,6 +911,7 @@ use TencentCloud\Ess\V20201111\Models as Models;
 
 模板中各元素的层级关系, 所有的填写控件和签署控件都归属某一个角色(通过控件的ComponentRecipientId来关联)
 ![image](https://qcloudimg.tencent-cloud.cn/raw/45c638bd93f9c8024763add9ab47c27f.png)
+ * @method Models\DescribeInformationExtractionTaskResponse DescribeInformationExtractionTask(Models\DescribeInformationExtractionTaskRequest $req) 本接口（DescribeInformationExtractionTask）用于获取合同智能提取任务详情，包括任务的状态和提取的字段结果信息。
  * @method Models\DescribeIntegrationDepartmentsResponse DescribeIntegrationDepartments(Models\DescribeIntegrationDepartmentsRequest $req) 此接口（DescribeIntegrationDepartments）用于查询企业的部门信息列表，支持查询单个部门节点或单个部门节点及一级子节点部门列表。
  * @method Models\DescribeIntegrationEmployeesResponse DescribeIntegrationEmployees(Models\DescribeIntegrationEmployeesRequest $req) 此接口（DescribeIntegrationEmployees）用于分页查询企业员工信息列表，支持设置过滤条件以筛选员工查询结果。
  * @method Models\DescribeIntegrationRolesResponse DescribeIntegrationRoles(Models\DescribeIntegrationRolesRequest $req) 此接口（DescribeIntegrationRoles）用于分页查询企业角色列表，列表按照角色创建时间升序排列。

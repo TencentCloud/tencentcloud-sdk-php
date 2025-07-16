@@ -23,57 +23,37 @@ use TencentCloud\Common\AbstractModel;
  * @method string getHotwordsId() 获取需要查询的热词库 id
  * @method void setHotwordsId(string $HotwordsId) 设置需要查询的热词库 id
  * @method integer getStatus() 获取当前热词库 id 状态，为 0 表示查询的时刻，没有模板绑定这个热词库，可以删除
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(integer $Status) 设置当前热词库 id 状态，为 0 表示查询的时刻，没有模板绑定这个热词库，可以删除
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取热词库的名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置热词库的名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getType() 获取临时热词库为 0，返回创建时候的字符串
 文件热词库为 1，返回创建是上传的文件内容
 
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setType(integer $Type) 设置临时热词库为 0，返回创建时候的字符串
 文件热词库为 1，返回创建是上传的文件内容
 
 
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileName() 获取热词文件上传时的文件名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileName(string $FileName) 设置热词文件上传时的文件名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getHotWords() 获取查询返回的热词库列表
  * @method void setHotWords(array $HotWords) 设置查询返回的热词库列表
  * @method string getContent() 获取热词库文本，根据 Type 区分
 如果 Type 为 0，是热词库字符串
 如果 Type 是 1，是热词库文本文件的文件内容 base64 编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setContent(string $Content) 设置热词库文本，根据 Type 区分
 如果 Type 为 0，是热词库字符串
 如果 Type 是 1，是热词库文本文件的文件内容 base64 编码
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWordCount() 获取当前热词库包含的词语数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWordCount(integer $WordCount) 设置当前热词库包含的词语数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getOffset() 获取分页偏移量，默认值：0。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOffset(integer $Offset) 设置分页偏移量，默认值：0。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLimit() 获取返回记录条数，默认值：10，最大值：100。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLimit(integer $Limit) 设置返回记录条数，默认值：10，最大值：100。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreateTime() 获取热词库创建时间 ISOUTC 格式 "2006-01-02T15:04:05Z"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreateTime(string $CreateTime) 设置热词库创建时间 ISOUTC 格式 "2006-01-02T15:04:05Z"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取热词库修改时间 ISOUTC 格式 "2006-01-02T15:04:05Z"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置热词库修改时间 ISOUTC 格式 "2006-01-02T15:04:05Z"
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -86,13 +66,11 @@ class DescribeAsrHotwordsResponse extends AbstractModel
 
     /**
      * @var integer 当前热词库 id 状态，为 0 表示查询的时刻，没有模板绑定这个热词库，可以删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 热词库的名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
@@ -101,13 +79,11 @@ class DescribeAsrHotwordsResponse extends AbstractModel
 文件热词库为 1，返回创建是上传的文件内容
 
 
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Type;
 
     /**
      * @var string 热词文件上传时的文件名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileName;
 
@@ -120,37 +96,31 @@ class DescribeAsrHotwordsResponse extends AbstractModel
      * @var string 热词库文本，根据 Type 区分
 如果 Type 为 0，是热词库字符串
 如果 Type 是 1，是热词库文本文件的文件内容 base64 编码
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Content;
 
     /**
      * @var integer 当前热词库包含的词语数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WordCount;
 
     /**
      * @var integer 分页偏移量，默认值：0。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Offset;
 
     /**
      * @var integer 返回记录条数，默认值：10，最大值：100。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Limit;
 
     /**
      * @var string 热词库创建时间 ISOUTC 格式 "2006-01-02T15:04:05Z"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
      * @var string 热词库修改时间 ISOUTC 格式 "2006-01-02T15:04:05Z"
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
@@ -162,31 +132,21 @@ class DescribeAsrHotwordsResponse extends AbstractModel
     /**
      * @param string $HotwordsId 需要查询的热词库 id
      * @param integer $Status 当前热词库 id 状态，为 0 表示查询的时刻，没有模板绑定这个热词库，可以删除
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 热词库的名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Type 临时热词库为 0，返回创建时候的字符串
 文件热词库为 1，返回创建是上传的文件内容
 
 
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileName 热词文件上传时的文件名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $HotWords 查询返回的热词库列表
      * @param string $Content 热词库文本，根据 Type 区分
 如果 Type 为 0，是热词库字符串
 如果 Type 是 1，是热词库文本文件的文件内容 base64 编码
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $WordCount 当前热词库包含的词语数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Offset 分页偏移量，默认值：0。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Limit 返回记录条数，默认值：10，最大值：100。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreateTime 热词库创建时间 ISOUTC 格式 "2006-01-02T15:04:05Z"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 热词库修改时间 ISOUTC 格式 "2006-01-02T15:04:05Z"
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

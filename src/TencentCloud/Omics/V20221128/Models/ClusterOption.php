@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSystemNodeInstanceType(string $SystemNodeInstanceType) 设置系统节点池实例规格。
  * @method integer getSystemNodeCount() 获取系统节点池实例数量。
  * @method void setSystemNodeCount(integer $SystemNodeCount) 设置系统节点池实例数量。
+ * @method boolean getAutoUpgradeClusterLevel() 获取纳管环境自动升配
+ * @method void setAutoUpgradeClusterLevel(boolean $AutoUpgradeClusterLevel) 设置纳管环境自动升配
  */
 class ClusterOption extends AbstractModel
 {
@@ -76,6 +78,11 @@ class ClusterOption extends AbstractModel
     public $SystemNodeCount;
 
     /**
+     * @var boolean 纳管环境自动升配
+     */
+    public $AutoUpgradeClusterLevel;
+
+    /**
      * @param string $Zone 计算集群可用区。
      * @param string $Type 计算集群类型，取值范围：
 - KUBERNETES
@@ -84,6 +91,7 @@ class ClusterOption extends AbstractModel
      * @param LimitRange $LimitRange 限制范围。
      * @param string $SystemNodeInstanceType 系统节点池实例规格。
      * @param integer $SystemNodeCount 系统节点池实例数量。
+     * @param boolean $AutoUpgradeClusterLevel 纳管环境自动升配
      */
     function __construct()
     {
@@ -126,6 +134,10 @@ class ClusterOption extends AbstractModel
 
         if (array_key_exists("SystemNodeCount",$param) and $param["SystemNodeCount"] !== null) {
             $this->SystemNodeCount = $param["SystemNodeCount"];
+        }
+
+        if (array_key_exists("AutoUpgradeClusterLevel",$param) and $param["AutoUpgradeClusterLevel"] !== null) {
+            $this->AutoUpgradeClusterLevel = $param["AutoUpgradeClusterLevel"];
         }
     }
 }

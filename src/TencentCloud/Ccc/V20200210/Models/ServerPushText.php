@@ -42,13 +42,13 @@ use TencentCloud\Common\AbstractModel;
 - 1表示当前有交互发生时，不会丢弃Interrupt为false的消息，而是缓存下来，等待当前交互结束后，再去处理
 
 注意：DropMode为1时，允许缓存多个消息，如果后续出现了打断，缓存的消息会被清空
- * @method integer getPriority() 获取ServerPushText消息的优先级，0表示可被打断，1表示不会被打断。**目前仅支持传入0，如果需要传入1，请提工单联系我们添加权限。**
+ * @method integer getPriority() 获取ServerPushText消息的优先级，0表示可被打断，1表示不会被打断。
 注意：在接收到Priority=1的消息后，后续其他任何消息都会被忽略（包括Priority=1的消息），直到Priority=1的消息处理结束。该字段可与Interrupt、DropMode字段配合使用。
 例子：
 - Priority=1、Interrupt=true，会打断现有交互，立刻播报，播报过程中不会被打断
 - Priority=1、Interrupt=false、DropMode=1，会等待当前交互结束，再进行播报，播报过程中不会被打断
 
- * @method void setPriority(integer $Priority) 设置ServerPushText消息的优先级，0表示可被打断，1表示不会被打断。**目前仅支持传入0，如果需要传入1，请提工单联系我们添加权限。**
+ * @method void setPriority(integer $Priority) 设置ServerPushText消息的优先级，0表示可被打断，1表示不会被打断。
 注意：在接收到Priority=1的消息后，后续其他任何消息都会被忽略（包括Priority=1的消息），直到Priority=1的消息处理结束。该字段可与Interrupt、DropMode字段配合使用。
 例子：
 - Priority=1、Interrupt=true，会打断现有交互，立刻播报，播报过程中不会被打断
@@ -91,7 +91,7 @@ class ServerPushText extends AbstractModel
     public $DropMode;
 
     /**
-     * @var integer ServerPushText消息的优先级，0表示可被打断，1表示不会被打断。**目前仅支持传入0，如果需要传入1，请提工单联系我们添加权限。**
+     * @var integer ServerPushText消息的优先级，0表示可被打断，1表示不会被打断。
 注意：在接收到Priority=1的消息后，后续其他任何消息都会被忽略（包括Priority=1的消息），直到Priority=1的消息处理结束。该字段可与Interrupt、DropMode字段配合使用。
 例子：
 - Priority=1、Interrupt=true，会打断现有交互，立刻播报，播报过程中不会被打断
@@ -117,7 +117,7 @@ class ServerPushText extends AbstractModel
 - 1表示当前有交互发生时，不会丢弃Interrupt为false的消息，而是缓存下来，等待当前交互结束后，再去处理
 
 注意：DropMode为1时，允许缓存多个消息，如果后续出现了打断，缓存的消息会被清空
-     * @param integer $Priority ServerPushText消息的优先级，0表示可被打断，1表示不会被打断。**目前仅支持传入0，如果需要传入1，请提工单联系我们添加权限。**
+     * @param integer $Priority ServerPushText消息的优先级，0表示可被打断，1表示不会被打断。
 注意：在接收到Priority=1的消息后，后续其他任何消息都会被忽略（包括Priority=1的消息），直到Priority=1的消息处理结束。该字段可与Interrupt、DropMode字段配合使用。
 例子：
 - Priority=1、Interrupt=true，会打断现有交互，立刻播报，播报过程中不会被打断

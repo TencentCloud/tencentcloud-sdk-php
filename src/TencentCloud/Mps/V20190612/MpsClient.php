@@ -36,6 +36,10 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\CreateContentReviewTemplateResponse CreateContentReviewTemplate(Models\CreateContentReviewTemplateRequest $req) 创建用户自定义内容审核模板，数量上限：50。
  * @method Models\CreateImageSpriteTemplateResponse CreateImageSpriteTemplate(Models\CreateImageSpriteTemplateRequest $req) 创建用户自定义雪碧图模板，数量上限：16。
  * @method Models\CreateLiveRecordTemplateResponse CreateLiveRecordTemplate(Models\CreateLiveRecordTemplateRequest $req) 创建直播录制模板
+ * @method Models\CreateMediaEvaluationResponse CreateMediaEvaluation(Models\CreateMediaEvaluationRequest $req) 发起视频评测任务，功能包括：
+
+1. 对一个原视频和多个转码后的视频进行评分。
+2. 计算不同转码方式的 BD-Rate。
  * @method Models\CreatePersonSampleResponse CreatePersonSample(Models\CreatePersonSampleRequest $req) 该接口用于创建素材样本，用于通过五官定位等技术，进行内容识别、内容不适宜等视频处理。
  * @method Models\CreateQualityControlTemplateResponse CreateQualityControlTemplate(Models\CreateQualityControlTemplateRequest $req) 创建媒体质检模板，数量上限：50。
  * @method Models\CreateSampleSnapshotTemplateResponse CreateSampleSnapshotTemplate(Models\CreateSampleSnapshotTemplateRequest $req) 创建用户自定义采样截图模板，数量上限：16。

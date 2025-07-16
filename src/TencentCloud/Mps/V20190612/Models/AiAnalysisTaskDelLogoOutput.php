@@ -25,13 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method TaskOutputStorage getOutputStorage() 获取擦除后文件的存储位置。
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置擦除后文件的存储位置。
  * @method string getOriginSubtitlePath() 获取基于画面提取的字幕文件路径。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOriginSubtitlePath(string $OriginSubtitlePath) 设置基于画面提取的字幕文件路径。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTranslateSubtitlePath() 获取基于画面提取的字幕翻译文件路径。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTranslateSubtitlePath(string $TranslateSubtitlePath) 设置基于画面提取的字幕翻译文件路径。
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AiAnalysisTaskDelLogoOutput extends AbstractModel
 {
@@ -47,13 +43,11 @@ class AiAnalysisTaskDelLogoOutput extends AbstractModel
 
     /**
      * @var string 基于画面提取的字幕文件路径。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OriginSubtitlePath;
 
     /**
      * @var string 基于画面提取的字幕翻译文件路径。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TranslateSubtitlePath;
 
@@ -61,9 +55,7 @@ class AiAnalysisTaskDelLogoOutput extends AbstractModel
      * @param string $Path 擦除后文件的路径。
      * @param TaskOutputStorage $OutputStorage 擦除后文件的存储位置。
      * @param string $OriginSubtitlePath 基于画面提取的字幕文件路径。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TranslateSubtitlePath 基于画面提取的字幕翻译文件路径。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

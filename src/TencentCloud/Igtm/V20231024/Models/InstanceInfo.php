@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 实例相关信息
  *
  * @method string getInstanceId() 获取实例id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置实例id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceName() 获取实例名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceName(string $InstanceName) 设置实例名称
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceInfo extends AbstractModel
 {
     /**
      * @var string 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var string 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceName;
 
     /**
      * @param string $InstanceId 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName 实例名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInstanceName() 获取实例名
  * @method void setInstanceName(string $InstanceName) 设置实例名
  * @method string getResourceId() 获取资源 id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceId(string $ResourceId) 设置资源 id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDomain() 获取业务域名
  * @method void setDomain(string $Domain) 设置业务域名
  * @method string getAccessType() 获取Cname域名接入方式
@@ -46,58 +44,36 @@ SYSTEM: 系统接入域名
 FREE: 免费版
 STANDARD：标准版
 ULTIMATE：旗舰版
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPackageType(string $PackageType) 设置套餐类型
 FREE: 免费版
 STANDARD：标准版
 ULTIMATE：旗舰版
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWorkingStatus() 获取实例运行状态
 NORMAL: 健康
 FAULTY: 有风险
 DOWN: 宕机
 UNKNOWN: 未知
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWorkingStatus(string $WorkingStatus) 设置实例运行状态
 NORMAL: 健康
 FAULTY: 有风险
 DOWN: 宕机
 UNKNOWN: 未知
-注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取实例状态
-ENABLED: 正常
-DISABLED: 禁用
- * @method void setStatus(string $Status) 设置实例状态
-ENABLED: 正常
-DISABLED: 禁用
+ * @method string getStatus() 获取实例状态，ENABLED: 正常，DISABLED: 禁用
+ * @method void setStatus(string $Status) 设置实例状态，ENABLED: 正常，DISABLED: 禁用
  * @method boolean getIsCnameConfigured() 获取是否cname接入：true已接入；false未接入
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsCnameConfigured(boolean $IsCnameConfigured) 设置是否cname接入：true已接入；false未接入
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRemark() 获取备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStrategyNum() 获取策略数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStrategyNum(integer $StrategyNum) 设置策略数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAddressPoolNum() 获取绑定地址池个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddressPoolNum(integer $AddressPoolNum) 设置绑定地址池个数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMonitorNum() 获取绑定监控器数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMonitorNum(integer $MonitorNum) 设置绑定监控器数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPoolId() 获取地址池id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPoolId(integer $PoolId) 设置地址池id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPoolName() 获取地址池名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPoolName(string $PoolName) 设置地址池名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedOn() 获取实例创建时间
  * @method void setCreatedOn(string $CreatedOn) 设置实例创建时间
  * @method string getUpdatedOn() 获取实例更新时间
@@ -117,7 +93,6 @@ class Instance extends AbstractModel
 
     /**
      * @var string 资源 id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceId;
 
@@ -153,7 +128,6 @@ SYSTEM: 系统接入域名
 FREE: 免费版
 STANDARD：标准版
 ULTIMATE：旗舰版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PackageType;
 
@@ -163,56 +137,46 @@ NORMAL: 健康
 FAULTY: 有风险
 DOWN: 宕机
 UNKNOWN: 未知
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $WorkingStatus;
 
     /**
-     * @var string 实例状态
-ENABLED: 正常
-DISABLED: 禁用
+     * @var string 实例状态，ENABLED: 正常，DISABLED: 禁用
      */
     public $Status;
 
     /**
      * @var boolean 是否cname接入：true已接入；false未接入
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsCnameConfigured;
 
     /**
      * @var string 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
     /**
      * @var integer 策略数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StrategyNum;
 
     /**
      * @var integer 绑定地址池个数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AddressPoolNum;
 
     /**
      * @var integer 绑定监控器数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MonitorNum;
 
     /**
      * @var integer 地址池id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PoolId;
 
     /**
      * @var string 地址池名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PoolName;
 
@@ -230,7 +194,6 @@ DISABLED: 禁用
      * @param string $InstanceId 实例id
      * @param string $InstanceName 实例名
      * @param string $ResourceId 资源 id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Domain 业务域名
      * @param string $AccessType Cname域名接入方式
 CUSTOM: 自定义接入域名
@@ -242,30 +205,19 @@ SYSTEM: 系统接入域名
 FREE: 免费版
 STANDARD：标准版
 ULTIMATE：旗舰版
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WorkingStatus 实例运行状态
 NORMAL: 健康
 FAULTY: 有风险
 DOWN: 宕机
 UNKNOWN: 未知
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status 实例状态
-ENABLED: 正常
-DISABLED: 禁用
+     * @param string $Status 实例状态，ENABLED: 正常，DISABLED: 禁用
      * @param boolean $IsCnameConfigured 是否cname接入：true已接入；false未接入
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Remark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StrategyNum 策略数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AddressPoolNum 绑定地址池个数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MonitorNum 绑定监控器数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PoolId 地址池id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PoolName 地址池名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedOn 实例创建时间
      * @param string $UpdatedOn 实例更新时间
      */

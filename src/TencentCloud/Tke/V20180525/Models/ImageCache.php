@@ -52,6 +52,12 @@ Failed：创建失败
 Updating：更新中
 UpdateFailed：更新失败
 只有状态为Ready时，才能正常使用镜像缓存
+ * @method integer getRetentionDays() 获取镜像缓存保留时间天数，过期将会自动清理，默认为0，永不过期。
+ * @method void setRetentionDays(integer $RetentionDays) 设置镜像缓存保留时间天数，过期将会自动清理，默认为0，永不过期。
+ * @method array getImageRegistryCredentials() 获取镜像拉取凭证
+ * @method void setImageRegistryCredentials(array $ImageRegistryCredentials) 设置镜像拉取凭证
+ * @method array getTags() 获取腾讯云标签
+ * @method void setTags(array $Tags) 设置腾讯云标签
  */
 class ImageCache extends AbstractModel
 {
@@ -112,6 +118,21 @@ UpdateFailed：更新失败
     public $Status;
 
     /**
+     * @var integer 镜像缓存保留时间天数，过期将会自动清理，默认为0，永不过期。
+     */
+    public $RetentionDays;
+
+    /**
+     * @var array 镜像拉取凭证
+     */
+    public $ImageRegistryCredentials;
+
+    /**
+     * @var array 腾讯云标签
+     */
+    public $Tags;
+
+    /**
      * @param string $ImageCacheId 镜像缓存Id
      * @param string $ImageCacheName 镜像缓存名称
      * @param integer $ImageCacheSize 镜像缓存大小。单位：GiB
@@ -128,6 +149,9 @@ Failed：创建失败
 Updating：更新中
 UpdateFailed：更新失败
 只有状态为Ready时，才能正常使用镜像缓存
+     * @param integer $RetentionDays 镜像缓存保留时间天数，过期将会自动清理，默认为0，永不过期。
+     * @param array $ImageRegistryCredentials 镜像拉取凭证
+     * @param array $Tags 腾讯云标签
      */
     function __construct()
     {
@@ -185,6 +209,28 @@ UpdateFailed：更新失败
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("RetentionDays",$param) and $param["RetentionDays"] !== null) {
+            $this->RetentionDays = $param["RetentionDays"];
+        }
+
+        if (array_key_exists("ImageRegistryCredentials",$param) and $param["ImageRegistryCredentials"] !== null) {
+            $this->ImageRegistryCredentials = [];
+            foreach ($param["ImageRegistryCredentials"] as $key => $value){
+                $obj = new ImageRegistryCredential();
+                $obj->deserialize($value);
+                array_push($this->ImageRegistryCredentials, $obj);
+            }
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

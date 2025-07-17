@@ -163,8 +163,6 @@ use TencentCloud\Iai\V20180301\Models as Models;
 
 >     
 - 公共参数中的签名方式请使用V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
-
-
  * @method Models\SearchPersonsResponse SearchPersons(Models\SearchPersonsRequest $req) 用于对一张待识别的人脸图片，在一个或多个人员库中识别出最相似的 TopK 人员，按照相似度从大到小排列。
 
 支持一次性识别图片中的最多 10 张人脸，支持一次性跨 100 个人员库（Group）搜索。

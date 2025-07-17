@@ -21,105 +21,73 @@ use TencentCloud\Common\AbstractModel;
  * 线路列表
  *
  * @method integer getDnsLineId() 获取分组线路id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDnsLineId(integer $DnsLineId) 设置分组线路id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getParent() 获取父节点 0为根节点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setParent(integer $Parent) 设置父节点 0为根节点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLineName() 获取线路名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLineName(string $LineName) 设置线路名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLineId() 获取10=9 DNSPod 线路 id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLineId(string $LineId) 设置10=9 DNSPod 线路 id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getUseful() 获取是否已使用过
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUseful(boolean $Useful) 设置是否已使用过
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSubGroup() 获取0为未使用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubGroup(integer $SubGroup) 设置0为未使用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getLinePackage() 获取权限标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLinePackage(integer $LinePackage) 设置权限标识
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWeight() 获取1
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWeight(integer $Weight) 设置1
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class GroupLine extends AbstractModel
 {
     /**
      * @var integer 分组线路id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DnsLineId;
 
     /**
      * @var integer 父节点 0为根节点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Parent;
 
     /**
      * @var string 线路名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LineName;
 
     /**
      * @var string 10=9 DNSPod 线路 id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LineId;
 
     /**
      * @var boolean 是否已使用过
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Useful;
 
     /**
      * @var integer 0为未使用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubGroup;
 
     /**
      * @var integer 权限标识
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LinePackage;
 
     /**
      * @var integer 1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Weight;
 
     /**
      * @param integer $DnsLineId 分组线路id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Parent 父节点 0为根节点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LineName 线路名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LineId 10=9 DNSPod 线路 id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Useful 是否已使用过
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SubGroup 0为未使用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $LinePackage 权限标识
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Weight 1
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

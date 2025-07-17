@@ -90,6 +90,14 @@ Available:可用
  * @method void setAutoScaleUpRule(AutoScaleUpRule $AutoScaleUpRule) 设置文件系统自动扩容策略
  * @method string getVersion() 获取文件系统版本
  * @method void setVersion(string $Version) 设置文件系统版本
+ * @method array getExstraPerformanceInfo() 获取额外性能信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExstraPerformanceInfo(array $ExstraPerformanceInfo) 设置额外性能信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getMetaType() 获取basic：标准版元数据类型
+enhanced：增项版元数据类型
+ * @method void setMetaType(string $MetaType) 设置basic：标准版元数据类型
+enhanced：增项版元数据类型
  */
 class FileSystemInfo extends AbstractModel
 {
@@ -233,6 +241,18 @@ Available:可用
     public $Version;
 
     /**
+     * @var array 额外性能信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExstraPerformanceInfo;
+
+    /**
+     * @var string basic：标准版元数据类型
+enhanced：增项版元数据类型
+     */
+    public $MetaType;
+
+    /**
      * @param string $CreationTime 创建时间
      * @param string $CreationToken 用户自定义名称
      * @param string $FileSystemId 文件系统 ID
@@ -268,6 +288,10 @@ Available:可用
      * @param TieringDetailInfo $TieringDetail 分层存储详情
      * @param AutoScaleUpRule $AutoScaleUpRule 文件系统自动扩容策略
      * @param string $Version 文件系统版本
+     * @param array $ExstraPerformanceInfo 额外性能信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $MetaType basic：标准版元数据类型
+enhanced：增项版元数据类型
      */
     function __construct()
     {
@@ -392,6 +416,19 @@ Available:可用
 
         if (array_key_exists("Version",$param) and $param["Version"] !== null) {
             $this->Version = $param["Version"];
+        }
+
+        if (array_key_exists("ExstraPerformanceInfo",$param) and $param["ExstraPerformanceInfo"] !== null) {
+            $this->ExstraPerformanceInfo = [];
+            foreach ($param["ExstraPerformanceInfo"] as $key => $value){
+                $obj = new ExstraPerformanceInfo();
+                $obj->deserialize($value);
+                array_push($this->ExstraPerformanceInfo, $obj);
+            }
+        }
+
+        if (array_key_exists("MetaType",$param) and $param["MetaType"] !== null) {
+            $this->MetaType = $param["MetaType"];
         }
     }
 }

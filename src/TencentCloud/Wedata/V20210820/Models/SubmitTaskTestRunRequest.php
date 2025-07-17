@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setScriptContent(string $ScriptContent) 设置脚本内容
  * @method string getVersionId() 获取版本号
  * @method void setVersionId(string $VersionId) 设置版本号
+ * @method string getSubmitTaskTestRunType() 获取提交任务测试运行类型
+ * @method void setSubmitTaskTestRunType(string $SubmitTaskTestRunType) 设置提交任务测试运行类型
  */
 class SubmitTaskTestRunRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class SubmitTaskTestRunRequest extends AbstractModel
     public $VersionId;
 
     /**
+     * @var string 提交任务测试运行类型
+     */
+    public $SubmitTaskTestRunType;
+
+    /**
      * @param string $TaskIds taskId列表
      * @param string $ProjectId 项目Id
      * @param string $WorkFlowId 工作流id
@@ -96,6 +103,7 @@ class SubmitTaskTestRunRequest extends AbstractModel
      * @param string $RunParams 运行参数，map的Json形式
      * @param string $ScriptContent 脚本内容
      * @param string $VersionId 版本号
+     * @param string $SubmitTaskTestRunType 提交任务测试运行类型
      */
     function __construct()
     {
@@ -149,6 +157,10 @@ class SubmitTaskTestRunRequest extends AbstractModel
 
         if (array_key_exists("VersionId",$param) and $param["VersionId"] !== null) {
             $this->VersionId = $param["VersionId"];
+        }
+
+        if (array_key_exists("SubmitTaskTestRunType",$param) and $param["SubmitTaskTestRunType"] !== null) {
+            $this->SubmitTaskTestRunType = $param["SubmitTaskTestRunType"];
         }
     }
 }

@@ -22,69 +22,50 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAddr() 获取地址值：只支持ipv4、ipv6和域名格式；
 不支持回环地址、保留地址、内网地址与腾讯保留网段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddr(string $Addr) 设置地址值：只支持ipv4、ipv6和域名格式；
 不支持回环地址、保留地址、内网地址与腾讯保留网段
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIsEnable() 获取是否启用:DISABLED不启用；ENABLED启用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsEnable(string $IsEnable) 设置是否启用:DISABLED不启用；ENABLED启用
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAddressId() 获取地址id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddressId(integer $AddressId) 设置地址id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLocation() 获取地址名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocation(string $Location) 设置地址名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取OK正常，DOWN故障，WARN风险，UNKNOWN探测中，UNMONITORED未知
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置OK正常，DOWN故障，WARN风险，UNKNOWN探测中，UNMONITORED未知
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWeight() 获取权重，流量策略为WEIGHT时，必填；范围1-100
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWeight(integer $Weight) 设置权重，流量策略为WEIGHT时，必填；范围1-100
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedOn() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedOn(string $CreatedOn) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdatedOn() 获取修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdatedOn(string $UpdatedOn) 设置修改时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Address extends AbstractModel
 {
     /**
      * @var string 地址值：只支持ipv4、ipv6和域名格式；
 不支持回环地址、保留地址、内网地址与腾讯保留网段
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Addr;
 
     /**
      * @var string 是否启用:DISABLED不启用；ENABLED启用
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsEnable;
 
     /**
      * @var integer 地址id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AddressId;
 
     /**
      * @var string 地址名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Location;
 
     /**
      * @var string OK正常，DOWN故障，WARN风险，UNKNOWN探测中，UNMONITORED未知
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
@@ -96,34 +77,25 @@ class Address extends AbstractModel
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedOn;
 
     /**
      * @var string 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdatedOn;
 
     /**
      * @param string $Addr 地址值：只支持ipv4、ipv6和域名格式；
 不支持回环地址、保留地址、内网地址与腾讯保留网段
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IsEnable 是否启用:DISABLED不启用；ENABLED启用
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AddressId 地址id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Location 地址名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status OK正常，DOWN故障，WARN风险，UNKNOWN探测中，UNMONITORED未知
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Weight 权重，流量策略为WEIGHT时，必填；范围1-100
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedOn 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdatedOn 修改时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

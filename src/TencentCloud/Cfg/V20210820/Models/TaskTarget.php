@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
 2:演练目标
  * @method integer getSource() 获取1:平台 2:用户个人
  * @method void setSource(integer $Source) 设置1:平台 2:用户个人
+ * @method integer getTargetStatus() 获取目标标签是否已被删除
+ * @method void setTargetStatus(integer $TargetStatus) 设置目标标签是否已被删除
  */
 class TaskTarget extends AbstractModel
 {
@@ -55,11 +57,17 @@ class TaskTarget extends AbstractModel
     public $Source;
 
     /**
+     * @var integer 目标标签是否已被删除
+     */
+    public $TargetStatus;
+
+    /**
      * @param integer $TargetId 目标标签ID
      * @param string $TargetDesc 目标描述
      * @param integer $Type 1:演练场景
 2:演练目标
      * @param integer $Source 1:平台 2:用户个人
+     * @param integer $TargetStatus 目标标签是否已被删除
      */
     function __construct()
     {
@@ -88,6 +96,10 @@ class TaskTarget extends AbstractModel
 
         if (array_key_exists("Source",$param) and $param["Source"] !== null) {
             $this->Source = $param["Source"];
+        }
+
+        if (array_key_exists("TargetStatus",$param) and $param["TargetStatus"] !== null) {
+            $this->TargetStatus = $param["TargetStatus"];
         }
     }
 }

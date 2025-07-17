@@ -42,12 +42,10 @@ SYSTEM: 系统接入域名
 FREE: 免费版
 STANDARD：标准版
 ULTIMATE：旗舰版
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPackageType(string $PackageType) 设置套餐类型
 FREE: 免费版
 STANDARD：标准版
 ULTIMATE：旗舰版
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getWorkingStatus() 获取实例运行状态
 NORMAL: 健康
 FAULTY: 有风险
@@ -58,20 +56,12 @@ NORMAL: 健康
 FAULTY: 有风险
 DOWN: 宕机
 UNKNOWN: 未知
- * @method string getStatus() 获取实例状态
-ENABLED: 正常
-DISABLED: 禁用
- * @method void setStatus(string $Status) 设置实例状态
-ENABLED: 正常
-DISABLED: 禁用
+ * @method string getStatus() 获取实例状态，ENABLED: 正常；DISABLED: 禁用
+ * @method void setStatus(string $Status) 设置实例状态，ENABLED: 正常；DISABLED: 禁用
  * @method boolean getIsCnameConfigured() 获取cname是否接入：true已接入；false未接入
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsCnameConfigured(boolean $IsCnameConfigured) 设置cname是否接入：true已接入；false未接入
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRemark() 获取备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRemark(string $Remark) 设置备注
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStrategyNum() 获取策略数量
  * @method void setStrategyNum(integer $StrategyNum) 设置策略数量
  * @method integer getAddressPoolNum() 获取绑定地址池个数
@@ -79,9 +69,7 @@ DISABLED: 禁用
  * @method integer getMonitorNum() 获取绑定监控器数量
  * @method void setMonitorNum(integer $MonitorNum) 设置绑定监控器数量
  * @method string getResourceId() 获取实例绑定套餐资源id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceId(string $ResourceId) 设置实例绑定套餐资源id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getNotifyEventSet() 获取订阅事件列表
  * @method void setNotifyEventSet(array $NotifyEventSet) 设置订阅事件列表
  * @method string getCreatedOn() 获取实例创建时间
@@ -133,7 +121,6 @@ SYSTEM: 系统接入域名
 FREE: 免费版
 STANDARD：标准版
 ULTIMATE：旗舰版
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PackageType;
 
@@ -147,21 +134,17 @@ UNKNOWN: 未知
     public $WorkingStatus;
 
     /**
-     * @var string 实例状态
-ENABLED: 正常
-DISABLED: 禁用
+     * @var string 实例状态，ENABLED: 正常；DISABLED: 禁用
      */
     public $Status;
 
     /**
      * @var boolean cname是否接入：true已接入；false未接入
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsCnameConfigured;
 
     /**
      * @var string 备注
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Remark;
 
@@ -182,7 +165,6 @@ DISABLED: 禁用
 
     /**
      * @var string 实例绑定套餐资源id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ResourceId;
 
@@ -215,24 +197,18 @@ SYSTEM: 系统接入域名
 FREE: 免费版
 STANDARD：标准版
 ULTIMATE：旗舰版
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $WorkingStatus 实例运行状态
 NORMAL: 健康
 FAULTY: 有风险
 DOWN: 宕机
 UNKNOWN: 未知
-     * @param string $Status 实例状态
-ENABLED: 正常
-DISABLED: 禁用
+     * @param string $Status 实例状态，ENABLED: 正常；DISABLED: 禁用
      * @param boolean $IsCnameConfigured cname是否接入：true已接入；false未接入
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Remark 备注
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StrategyNum 策略数量
      * @param integer $AddressPoolNum 绑定地址池个数
      * @param integer $MonitorNum 绑定监控器数量
      * @param string $ResourceId 实例绑定套餐资源id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $NotifyEventSet 订阅事件列表
      * @param string $CreatedOn 实例创建时间
      * @param string $UpdatedOn 实例更新时间

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
  * @method void setAgent(Agent $Agent) 设置代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
- * @method string getTaskId() 获取批量创建合同智能提取任务接口返回的合同智能提取任务ID。
- * @method void setTaskId(string $TaskId) 设置批量创建合同智能提取任务接口返回的合同智能提取任务ID。
+ * @method string getTaskId() 获取合同智能提取任务ID，该参数通过调用接口[批量创建合同智能提取任务接口](https://qian.tencent.com/developers/companyApis/%E5%90%88%E5%90%8C%E6%99%BA%E8%83%BD%E7%9B%B8%E5%85%B3%E6%8E%A5%E5%8F%A3/CreateBatchInformationExtractionTask)获取。
+ * @method void setTaskId(string $TaskId) 设置合同智能提取任务ID，该参数通过调用接口[批量创建合同智能提取任务接口](https://qian.tencent.com/developers/companyApis/%E5%90%88%E5%90%8C%E6%99%BA%E8%83%BD%E7%9B%B8%E5%85%B3%E6%8E%A5%E5%8F%A3/CreateBatchInformationExtractionTask)获取。
  */
 class DescribeInformationExtractionTaskRequest extends AbstractModel
 {
@@ -46,7 +46,7 @@ class DescribeInformationExtractionTaskRequest extends AbstractModel
     public $Agent;
 
     /**
-     * @var string 批量创建合同智能提取任务接口返回的合同智能提取任务ID。
+     * @var string 合同智能提取任务ID，该参数通过调用接口[批量创建合同智能提取任务接口](https://qian.tencent.com/developers/companyApis/%E5%90%88%E5%90%8C%E6%99%BA%E8%83%BD%E7%9B%B8%E5%85%B3%E6%8E%A5%E5%8F%A3/CreateBatchInformationExtractionTask)获取。
      */
     public $TaskId;
 
@@ -55,7 +55,7 @@ class DescribeInformationExtractionTaskRequest extends AbstractModel
 注: `在调用此接口时，请确保指定的员工已获得所需的接口调用权限，并具备接口传入的相应资源的数据权限。`
      * @param Agent $Agent 代理企业和员工的信息。
 在集团企业代理子企业操作的场景中，需设置此参数。在此情境下，ProxyOrganizationId（子企业的组织ID）为必填项。
-     * @param string $TaskId 批量创建合同智能提取任务接口返回的合同智能提取任务ID。
+     * @param string $TaskId 合同智能提取任务ID，该参数通过调用接口[批量创建合同智能提取任务接口](https://qian.tencent.com/developers/companyApis/%E5%90%88%E5%90%8C%E6%99%BA%E8%83%BD%E7%9B%B8%E5%85%B3%E6%8E%A5%E5%8F%A3/CreateBatchInformationExtractionTask)获取。
      */
     function __construct()
     {

@@ -21,57 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * 地址池详情
  *
  * @method integer getPoolId() 获取地址池 id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPoolId(integer $PoolId) 设置地址池 id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPoolName() 获取地址池名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPoolName(string $PoolName) 设置地址池名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAddrType() 获取地址池地址类型：IPV4、IPV6、DOMAIN
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddrType(string $AddrType) 设置地址池地址类型：IPV4、IPV6、DOMAIN
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTrafficStrategy() 获取流量策略: WEIGHT负载均衡，ALL解析全部
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrafficStrategy(string $TrafficStrategy) 设置流量策略: WEIGHT负载均衡，ALL解析全部
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMonitorId() 获取监控器id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMonitorId(integer $MonitorId) 设置监控器id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedOn() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedOn(string $CreatedOn) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdatedOn() 获取更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdatedOn(string $UpdatedOn) 设置更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AddressPoolDetail extends AbstractModel
 {
     /**
      * @var integer 地址池 id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PoolId;
 
     /**
      * @var string 地址池名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PoolName;
 
     /**
      * @var string 地址池地址类型：IPV4、IPV6、DOMAIN
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AddrType;
 
     /**
      * @var string 流量策略: WEIGHT负载均衡，ALL解析全部
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TrafficStrategy;
 
@@ -83,31 +67,23 @@ class AddressPoolDetail extends AbstractModel
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedOn;
 
     /**
      * @var string 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdatedOn;
 
     /**
      * @param integer $PoolId 地址池 id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $PoolName 地址池名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AddrType 地址池地址类型：IPV4、IPV6、DOMAIN
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TrafficStrategy 流量策略: WEIGHT负载均衡，ALL解析全部
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MonitorId 监控器id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedOn 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdatedOn 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

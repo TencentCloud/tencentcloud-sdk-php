@@ -30,8 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCodeTemplateDesc(string $CodeTemplateDesc) 设置模版描述
  * @method string getFolderId() 获取文件夹ID
  * @method void setFolderId(string $FolderId) 设置文件夹ID
- * @method string getContent() 获取指定脚本内容
- * @method void setContent(string $Content) 设置指定脚本内容
+ * @method string getContent() 获取Base64转化的脚本内容
+ * @method void setContent(string $Content) 设置Base64转化的脚本内容
+ * @method string getProductName() 获取代码模板类型
+ * @method void setProductName(string $ProductName) 设置代码模板类型
  */
 class CreateCodeTemplateRequest extends AbstractModel
 {
@@ -61,9 +63,14 @@ class CreateCodeTemplateRequest extends AbstractModel
     public $FolderId;
 
     /**
-     * @var string 指定脚本内容
+     * @var string Base64转化的脚本内容
      */
     public $Content;
+
+    /**
+     * @var string 代码模板类型
+     */
+    public $ProductName;
 
     /**
      * @param string $ProjectId 项目Id
@@ -71,7 +78,8 @@ class CreateCodeTemplateRequest extends AbstractModel
      * @param integer $TaskType 30Python，32DLC，50 DLC-PySpark
      * @param string $CodeTemplateDesc 模版描述
      * @param string $FolderId 文件夹ID
-     * @param string $Content 指定脚本内容
+     * @param string $Content Base64转化的脚本内容
+     * @param string $ProductName 代码模板类型
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class CreateCodeTemplateRequest extends AbstractModel
 
         if (array_key_exists("Content",$param) and $param["Content"] !== null) {
             $this->Content = $param["Content"];
+        }
+
+        if (array_key_exists("ProductName",$param) and $param["ProductName"] !== null) {
+            $this->ProductName = $param["ProductName"];
         }
     }
 }

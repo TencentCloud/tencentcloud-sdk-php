@@ -21,33 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * 地址所属地域
  *
  * @method string getAddr() 获取ip地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddr(string $Addr) 设置ip地址
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getLocation() 获取所属地域
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLocation(string $Location) 设置所属地域
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class AddressLocation extends AbstractModel
 {
     /**
      * @var string ip地址
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Addr;
 
     /**
      * @var string 所属地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Location;
 
     /**
      * @param string $Addr ip地址
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Location 所属地域
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

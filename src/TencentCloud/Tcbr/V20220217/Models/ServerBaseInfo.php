@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServerType(string $ServerType) 设置服务类型: function 云函数2.0；container 容器服务
  * @method string getTrafficType() 获取流量类型，目前只有 FLOW
  * @method void setTrafficType(string $TrafficType) 设置流量类型，目前只有 FLOW
+ * @method string getCreateTime() 获取创建时间
+ * @method void setCreateTime(string $CreateTime) 设置创建时间
  */
 class ServerBaseInfo extends AbstractModel
 {
@@ -87,6 +89,11 @@ class ServerBaseInfo extends AbstractModel
     public $TrafficType;
 
     /**
+     * @var string 创建时间
+     */
+    public $CreateTime;
+
+    /**
      * @param string $ServerName 服务名
      * @param string $DefaultDomainName 默认服务域名
      * @param string $CustomDomainName 自定义域名
@@ -96,6 +103,7 @@ class ServerBaseInfo extends AbstractModel
      * @param array $CustomDomainNames 展示自定义域名
      * @param string $ServerType 服务类型: function 云函数2.0；container 容器服务
      * @param string $TrafficType 流量类型，目前只有 FLOW
+     * @param string $CreateTime 创建时间
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class ServerBaseInfo extends AbstractModel
 
         if (array_key_exists("TrafficType",$param) and $param["TrafficType"] !== null) {
             $this->TrafficType = $param["TrafficType"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
     }
 }

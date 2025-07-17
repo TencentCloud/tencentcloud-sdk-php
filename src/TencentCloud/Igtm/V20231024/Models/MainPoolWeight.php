@@ -21,9 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * 主力地址池id与权重
  *
  * @method integer getPoolId() 获取地址池id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPoolId(integer $PoolId) 设置地址池id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getWeight() 获取权重
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWeight(integer $Weight) 设置权重
@@ -33,7 +31,6 @@ class MainPoolWeight extends AbstractModel
 {
     /**
      * @var integer 地址池id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PoolId;
 
@@ -45,7 +42,6 @@ class MainPoolWeight extends AbstractModel
 
     /**
      * @param integer $PoolId 地址池id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Weight 权重
 注意：此字段可能返回 null，表示取不到有效值。
      */

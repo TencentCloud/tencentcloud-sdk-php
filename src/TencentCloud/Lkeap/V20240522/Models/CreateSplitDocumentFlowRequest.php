@@ -20,28 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSplitDocumentFlow请求参数结构体
  *
- * @method string getFileType() 获取文件类型。
-
-**支持的文件类型：**
-- `PDF`、`DOC`、`DOCX`、`XLS`、`XLSX`、`PPT`、`PPTX`、`MD`、`TXT`、`PNG`、`JPG`、`JPEG`、`CSV`、`HTML`、`EPUB`
-
-**支持的文件大小：**
- - `PDF` 最大300M
- - `DOCX`、`DOC`、`PPT`、`PPTX` 最大 200M
- - `TXT`、`MD` 最大10M
- - 其他 最大20M
-
- * @method void setFileType(string $FileType) 设置文件类型。
-
-**支持的文件类型：**
-- `PDF`、`DOC`、`DOCX`、`XLS`、`XLSX`、`PPT`、`PPTX`、`MD`、`TXT`、`PNG`、`JPG`、`JPEG`、`CSV`、`HTML`、`EPUB`
-
-**支持的文件大小：**
- - `PDF` 最大300M
- - `DOCX`、`DOC`、`PPT`、`PPTX` 最大 200M
- - `TXT`、`MD` 最大10M
- - 其他 最大20M
-
+ * @method string getFileType() 获取文件类型。**支持的文件类型：**- `WPS`、`PDF`、`DOC`、`DOCX`、`XLS`、`XLSX`、`PPT`、`PPTX`、`MD`、`TXT`、`PNG`、`JPG`、`JPEG`、`CSV`、`HTML`、`EPUB`**支持的文件大小：** - `PDF` 最大300M - `WPS`、`DOCX`、`DOC`、`PPT`、`PPTX` 最大 200M - `TXT`、`MD` 最大10M - 其他 最大20M
+ * @method void setFileType(string $FileType) 设置文件类型。**支持的文件类型：**- `WPS`、`PDF`、`DOC`、`DOCX`、`XLS`、`XLSX`、`PPT`、`PPTX`、`MD`、`TXT`、`PNG`、`JPG`、`JPEG`、`CSV`、`HTML`、`EPUB`**支持的文件大小：** - `PDF` 最大300M - `WPS`、`DOCX`、`DOC`、`PPT`、`PPTX` 最大 200M - `TXT`、`MD` 最大10M - 其他 最大20M
  * @method string getFileUrl() 获取文件的 URL 地址。
 文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 URL 速度和稳定性可能受一定影响。
 参考：[腾讯云COS文档](https://cloud.tencent.com/document/product/436/7749)
@@ -75,17 +55,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateSplitDocumentFlowRequest extends AbstractModel
 {
     /**
-     * @var string 文件类型。
-
-**支持的文件类型：**
-- `PDF`、`DOC`、`DOCX`、`XLS`、`XLSX`、`PPT`、`PPTX`、`MD`、`TXT`、`PNG`、`JPG`、`JPEG`、`CSV`、`HTML`、`EPUB`
-
-**支持的文件大小：**
- - `PDF` 最大300M
- - `DOCX`、`DOC`、`PPT`、`PPTX` 最大 200M
- - `TXT`、`MD` 最大10M
- - 其他 最大20M
-
+     * @var string 文件类型。**支持的文件类型：**- `WPS`、`PDF`、`DOC`、`DOCX`、`XLS`、`XLSX`、`PPT`、`PPTX`、`MD`、`TXT`、`PNG`、`JPG`、`JPEG`、`CSV`、`HTML`、`EPUB`**支持的文件大小：** - `PDF` 最大300M - `WPS`、`DOCX`、`DOC`、`PPT`、`PPTX` 最大 200M - `TXT`、`MD` 最大10M - 其他 最大20M
      */
     public $FileType;
 
@@ -130,17 +100,7 @@ class CreateSplitDocumentFlowRequest extends AbstractModel
     public $Config;
 
     /**
-     * @param string $FileType 文件类型。
-
-**支持的文件类型：**
-- `PDF`、`DOC`、`DOCX`、`XLS`、`XLSX`、`PPT`、`PPTX`、`MD`、`TXT`、`PNG`、`JPG`、`JPEG`、`CSV`、`HTML`、`EPUB`
-
-**支持的文件大小：**
- - `PDF` 最大300M
- - `DOCX`、`DOC`、`PPT`、`PPTX` 最大 200M
- - `TXT`、`MD` 最大10M
- - 其他 最大20M
-
+     * @param string $FileType 文件类型。**支持的文件类型：**- `WPS`、`PDF`、`DOC`、`DOCX`、`XLS`、`XLSX`、`PPT`、`PPTX`、`MD`、`TXT`、`PNG`、`JPG`、`JPEG`、`CSV`、`HTML`、`EPUB`**支持的文件大小：** - `PDF` 最大300M - `WPS`、`DOCX`、`DOC`、`PPT`、`PPTX` 最大 200M - `TXT`、`MD` 最大10M - 其他 最大20M
      * @param string $FileUrl 文件的 URL 地址。
 文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 URL 速度和稳定性可能受一定影响。
 参考：[腾讯云COS文档](https://cloud.tencent.com/document/product/436/7749)

@@ -80,6 +80,8 @@ use TencentCloud\Common\AbstractModel;
 "ACTIVITY": 活动套餐,
 "NORMAL": 普通套餐
 "CAREFREE": 无忧套餐
+ * @method boolean getTrafficUnlimited() 获取流量是否无上限。
+ * @method void setTrafficUnlimited(boolean $TrafficUnlimited) 设置流量是否无上限。
  */
 class Bundle extends AbstractModel
 {
@@ -174,6 +176,11 @@ class Bundle extends AbstractModel
     public $BundleDisplayLabel;
 
     /**
+     * @var boolean 流量是否无上限。
+     */
+    public $TrafficUnlimited;
+
+    /**
      * @param string $BundleId 套餐 ID。
      * @param integer $Memory 内存大小，单位 GB。
      * @param string $SystemDiskType 系统盘类型。
@@ -204,6 +211,7 @@ class Bundle extends AbstractModel
 "ACTIVITY": 活动套餐,
 "NORMAL": 普通套餐
 "CAREFREE": 无忧套餐
+     * @param boolean $TrafficUnlimited 流量是否无上限。
      */
     function __construct()
     {
@@ -277,6 +285,10 @@ class Bundle extends AbstractModel
 
         if (array_key_exists("BundleDisplayLabel",$param) and $param["BundleDisplayLabel"] !== null) {
             $this->BundleDisplayLabel = $param["BundleDisplayLabel"];
+        }
+
+        if (array_key_exists("TrafficUnlimited",$param) and $param["TrafficUnlimited"] !== null) {
+            $this->TrafficUnlimited = $param["TrafficUnlimited"];
         }
     }
 }

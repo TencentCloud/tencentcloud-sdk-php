@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
 "nameserver 4.4.4.4\nnameserver 8.8.8.8"
  * @method void setResolveConfig(string $ResolveConfig) 设置自定义制作镜像缓存过程中容器实例的宿主机上的 DNS。如：
 "nameserver 4.4.4.4\nnameserver 8.8.8.8"
+ * @method array getTags() 获取腾讯云标签
+ * @method void setTags(array $Tags) 设置腾讯云标签
  */
 class CreateImageCacheRequest extends AbstractModel
 {
@@ -128,6 +130,11 @@ class CreateImageCacheRequest extends AbstractModel
     public $ResolveConfig;
 
     /**
+     * @var array 腾讯云标签
+     */
+    public $Tags;
+
+    /**
      * @param array $Images 用于制作镜像缓存的容器镜像列表
      * @param string $SubnetId 实例所属子网 ID
      * @param string $VpcId 实例所属 VPC ID
@@ -144,6 +151,7 @@ class CreateImageCacheRequest extends AbstractModel
      * @param array $RegistryHttpEndPointList 指定拉取镜像仓库的镜像时使用 HTTP 协议。如["harbor.example.com"]。
      * @param string $ResolveConfig 自定义制作镜像缓存过程中容器实例的宿主机上的 DNS。如：
 "nameserver 4.4.4.4\nnameserver 8.8.8.8"
+     * @param array $Tags 腾讯云标签
      */
     function __construct()
     {
@@ -218,6 +226,15 @@ class CreateImageCacheRequest extends AbstractModel
 
         if (array_key_exists("ResolveConfig",$param) and $param["ResolveConfig"] !== null) {
             $this->ResolveConfig = $param["ResolveConfig"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

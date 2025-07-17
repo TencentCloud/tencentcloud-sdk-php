@@ -20,20 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ReconstructDocumentSSE请求参数结构体
  *
- * @method string getFileType() 获取支持解析的文件类型。
-**支持的文件类型**：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、IM、PCX、PPM、TIFF、XBM、HEIF、JP2
-**支持的文件大小**：
-- PDF、DOC、DOCX、PPT、PPTX 支持100M
-- MD、TXT、XLS、XLSX、CSV 支持10M
-- 其他支持20M
-
- * @method void setFileType(string $FileType) 设置支持解析的文件类型。
-**支持的文件类型**：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、IM、PCX、PPM、TIFF、XBM、HEIF、JP2
-**支持的文件大小**：
-- PDF、DOC、DOCX、PPT、PPTX 支持100M
-- MD、TXT、XLS、XLSX、CSV 支持10M
-- 其他支持20M
-
+ * @method string getFileType() 获取支持解析的文件类型。**支持的文件类型**：WPS、PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、IM、PCX、PPM、TIFF、XBM、HEIF、JP2**支持的文件大小**：- WPS、PDF、DOC、DOCX、PPT、PPTX 支持100M- MD、TXT、XLS、XLSX、CSV 支持10M- 其他支持20M
+ * @method void setFileType(string $FileType) 设置支持解析的文件类型。**支持的文件类型**：WPS、PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、IM、PCX、PPM、TIFF、XBM、HEIF、JP2**支持的文件大小**：- WPS、PDF、DOC、DOCX、PPT、PPTX 支持100M- MD、TXT、XLS、XLSX、CSV 支持10M- 其他支持20M
  * @method string getFileUrl() 获取文件的 URL 地址。文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 URL 速度和稳定性可能受一定影响。文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
 参考：[腾讯云COS文档](https://cloud.tencent.com/document/product/436/7749)
 
@@ -75,13 +63,7 @@ use TencentCloud\Common\AbstractModel;
 class ReconstructDocumentSSERequest extends AbstractModel
 {
     /**
-     * @var string 支持解析的文件类型。
-**支持的文件类型**：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、IM、PCX、PPM、TIFF、XBM、HEIF、JP2
-**支持的文件大小**：
-- PDF、DOC、DOCX、PPT、PPTX 支持100M
-- MD、TXT、XLS、XLSX、CSV 支持10M
-- 其他支持20M
-
+     * @var string 支持解析的文件类型。**支持的文件类型**：WPS、PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、IM、PCX、PPM、TIFF、XBM、HEIF、JP2**支持的文件大小**：- WPS、PDF、DOC、DOCX、PPT、PPTX 支持100M- MD、TXT、XLS、XLSX、CSV 支持10M- 其他支持20M
      */
     public $FileType;
 
@@ -125,13 +107,7 @@ class ReconstructDocumentSSERequest extends AbstractModel
     public $Config;
 
     /**
-     * @param string $FileType 支持解析的文件类型。
-**支持的文件类型**：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、IM、PCX、PPM、TIFF、XBM、HEIF、JP2
-**支持的文件大小**：
-- PDF、DOC、DOCX、PPT、PPTX 支持100M
-- MD、TXT、XLS、XLSX、CSV 支持10M
-- 其他支持20M
-
+     * @param string $FileType 支持解析的文件类型。**支持的文件类型**：WPS、PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、IM、PCX、PPM、TIFF、XBM、HEIF、JP2**支持的文件大小**：- WPS、PDF、DOC、DOCX、PPT、PPTX 支持100M- MD、TXT、XLS、XLSX、CSV 支持10M- 其他支持20M
      * @param string $FileUrl 文件的 URL 地址。文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，建议文件存储于腾讯云。 非腾讯云存储的 URL 速度和稳定性可能受一定影响。文件的 FileUrl、FileBase64 必须提供一个，如果都提供，只使用 FileUrl。
 参考：[腾讯云COS文档](https://cloud.tencent.com/document/product/436/7749)
 

@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccessKeyList(array $AccessKeyList) 设置访问密钥列表
  * @method array getSubUinList() 获取账号uin列表
  * @method void setSubUinList(array $SubUinList) 设置账号uin列表
+ * @method array getRiskRuleIDList() 获取风险规则id列表
+ * @method void setRiskRuleIDList(array $RiskRuleIDList) 设置风险规则id列表
  */
 class CreateAccessKeyCheckTaskRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CreateAccessKeyCheckTaskRequest extends AbstractModel
     public $SubUinList;
 
     /**
+     * @var array 风险规则id列表
+     */
+    public $RiskRuleIDList;
+
+    /**
      * @param array $MemberId 集团账号的成员id
      * @param array $RiskIDList 风险列表
      * @param array $AccessKeyList 访问密钥列表
      * @param array $SubUinList 账号uin列表
+     * @param array $RiskRuleIDList 风险规则id列表
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class CreateAccessKeyCheckTaskRequest extends AbstractModel
 
         if (array_key_exists("SubUinList",$param) and $param["SubUinList"] !== null) {
             $this->SubUinList = $param["SubUinList"];
+        }
+
+        if (array_key_exists("RiskRuleIDList",$param) and $param["RiskRuleIDList"] !== null) {
+            $this->RiskRuleIDList = $param["RiskRuleIDList"];
         }
     }
 }

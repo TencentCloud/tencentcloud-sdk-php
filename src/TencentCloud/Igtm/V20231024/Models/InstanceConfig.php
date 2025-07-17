@@ -24,20 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceName(string $InstanceName) 设置实例名称
  * @method string getDomain() 获取业务域名
  * @method void setDomain(string $Domain) 设置业务域名
- * @method string getAccessType() 获取CUSTOM: 自定义接入域名
-SYSTEM: 系统接入域名
- * @method void setAccessType(string $AccessType) 设置CUSTOM: 自定义接入域名
-SYSTEM: 系统接入域名
+ * @method string getAccessType() 获取CUSTOM: 自定义接入域名，SYSTEM: 系统接入域名
+ * @method void setAccessType(string $AccessType) 设置CUSTOM: 自定义接入域名，SYSTEM: 系统接入域名
  * @method string getRemark() 获取备注
  * @method void setRemark(string $Remark) 设置备注
  * @method integer getGlobalTtl() 获取全局记录过期时间	
  * @method void setGlobalTtl(integer $GlobalTtl) 设置全局记录过期时间	
- * @method string getAccessDomain() 获取接入主域名，自定义接入域名时必填
-
- * @method void setAccessDomain(string $AccessDomain) 设置接入主域名，自定义接入域名时必填
-
- * @method string getAccessSubDomain() 获取接入子域名，自定义接入域名时必填
- * @method void setAccessSubDomain(string $AccessSubDomain) 设置接入子域名，自定义接入域名时必填
+ * @method string getAccessDomain() 获取接入主域名
+ * @method void setAccessDomain(string $AccessDomain) 设置接入主域名
+ * @method string getAccessSubDomain() 获取接入子域名
+ * @method void setAccessSubDomain(string $AccessSubDomain) 设置接入子域名
  */
 class InstanceConfig extends AbstractModel
 {
@@ -52,8 +48,7 @@ class InstanceConfig extends AbstractModel
     public $Domain;
 
     /**
-     * @var string CUSTOM: 自定义接入域名
-SYSTEM: 系统接入域名
+     * @var string CUSTOM: 自定义接入域名，SYSTEM: 系统接入域名
      */
     public $AccessType;
 
@@ -68,26 +63,23 @@ SYSTEM: 系统接入域名
     public $GlobalTtl;
 
     /**
-     * @var string 接入主域名，自定义接入域名时必填
-
+     * @var string 接入主域名
      */
     public $AccessDomain;
 
     /**
-     * @var string 接入子域名，自定义接入域名时必填
+     * @var string 接入子域名
      */
     public $AccessSubDomain;
 
     /**
      * @param string $InstanceName 实例名称
      * @param string $Domain 业务域名
-     * @param string $AccessType CUSTOM: 自定义接入域名
-SYSTEM: 系统接入域名
+     * @param string $AccessType CUSTOM: 自定义接入域名，SYSTEM: 系统接入域名
      * @param string $Remark 备注
      * @param integer $GlobalTtl 全局记录过期时间	
-     * @param string $AccessDomain 接入主域名，自定义接入域名时必填
-
-     * @param string $AccessSubDomain 接入子域名，自定义接入域名时必填
+     * @param string $AccessDomain 接入主域名
+     * @param string $AccessSubDomain 接入子域名
      */
     function __construct()
     {

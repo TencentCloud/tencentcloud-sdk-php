@@ -41,6 +41,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\BatchStopWorkflowsByIdsResponse BatchStopWorkflowsByIds(Models\BatchStopWorkflowsByIdsRequest $req) 批量停止工作流
  * @method Models\BatchSuspendIntegrationTasksResponse BatchSuspendIntegrationTasks(Models\BatchSuspendIntegrationTasksRequest $req) 批量暂停集成任务
  * @method Models\BatchUpdateIntegrationTasksResponse BatchUpdateIntegrationTasks(Models\BatchUpdateIntegrationTasksRequest $req) 批量更新集成任务（暂时仅支持批量更新责任人）
+ * @method Models\BindProjectExecutorResourceResponse BindProjectExecutorResource(Models\BindProjectExecutorResourceRequest $req) 商业化版本：执行资源组-资源包绑定项目
  * @method Models\CheckAlarmRegularNameExistResponse CheckAlarmRegularNameExist(Models\CheckAlarmRegularNameExistRequest $req) 判断告警规则重名
  * @method Models\CheckIntegrationNodeNameExistsResponse CheckIntegrationNodeNameExists(Models\CheckIntegrationNodeNameExistsRequest $req) 判断集成节点名称是否存在
  * @method Models\CheckIntegrationTaskNameExistsResponse CheckIntegrationTaskNameExists(Models\CheckIntegrationTaskNameExistsRequest $req) 判断集成任务名称是否存在
@@ -48,6 +49,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\CommitIntegrationTaskResponse CommitIntegrationTask(Models\CommitIntegrationTaskRequest $req) 提交集成任务
  * @method Models\CommitRuleGroupTaskResponse CommitRuleGroupTask(Models\CommitRuleGroupTaskRequest $req) 提交规则组运行任务接口
  * @method Models\CountOpsInstanceStateResponse CountOpsInstanceState(Models\CountOpsInstanceStateRequest $req) 统计任务实例状态
+ * @method Models\CreateBaseProjectResponse CreateBaseProject(Models\CreateBaseProjectRequest $req) 创建项目 仅项目本身，不包含集群等信息
  * @method Models\CreateCodeTemplateResponse CreateCodeTemplate(Models\CreateCodeTemplateRequest $req) 创建代码模版
  * @method Models\CreateCodeTemplateVersionResponse CreateCodeTemplateVersion(Models\CreateCodeTemplateVersionRequest $req) 提交代码模版
  * @method Models\CreateCustomFunctionResponse CreateCustomFunction(Models\CreateCustomFunctionRequest $req) 创建用户自定义函数
@@ -89,6 +91,7 @@ use TencentCloud\Wedata\V20210820\Models as Models;
  * @method Models\DeleteRuleTemplateResponse DeleteRuleTemplate(Models\DeleteRuleTemplateRequest $req) 删除规则模板
  * @method Models\DeleteTaskAlarmRegularResponse DeleteTaskAlarmRegular(Models\DeleteTaskAlarmRegularRequest $req) 删除任务告警规则
  * @method Models\DeleteTaskDsResponse DeleteTaskDs(Models\DeleteTaskDsRequest $req) 删除编排空间任务
+ * @method Models\DeleteTaskLineageResponse DeleteTaskLineage(Models\DeleteTaskLineageRequest $req) 删除任务血缘信息
  * @method Models\DeleteWorkflowByIdResponse DeleteWorkflowById(Models\DeleteWorkflowByIdRequest $req) 通过工作流Id删除工作流
  * @method Models\DescribeAlarmEventsResponse DescribeAlarmEvents(Models\DescribeAlarmEventsRequest $req) 告警事件列表
  * @method Models\DescribeAlarmReceiverResponse DescribeAlarmReceiver(Models\DescribeAlarmReceiverRequest $req) 告警接收人详情
@@ -237,8 +240,10 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
  * @method Models\DescribeWorkflowSchedulerInfoDsResponse DescribeWorkflowSchedulerInfoDs(Models\DescribeWorkflowSchedulerInfoDsRequest $req) 获取工作流调度信息
  * @method Models\DescribeWorkflowTaskCountResponse DescribeWorkflowTaskCount(Models\DescribeWorkflowTaskCountRequest $req) 查询工作流任务数
  * @method Models\DiagnoseProResponse DiagnosePro(Models\DiagnoseProRequest $req) 实例诊断，用于诊断 INITIAL、DEPENDENCE、ALLOCATED、LAUNCHED、EVENT_LISTENING、BEFORE_ASPECT、EXPIRED、FAILED状态的实例
+ * @method Models\DisableProjectResponse DisableProject(Models\DisableProjectRequest $req) 禁用项目
  * @method Models\DownloadLogByLineResponse DownloadLogByLine(Models\DownloadLogByLineRequest $req) 按行下载日志信息
  * @method Models\DryRunDIOfflineTaskResponse DryRunDIOfflineTask(Models\DryRunDIOfflineTaskRequest $req) 调试运行集成任务
+ * @method Models\EnableProjectResponse EnableProject(Models\EnableProjectRequest $req) 启用项目
  * @method Models\FindAllFolderResponse FindAllFolder(Models\FindAllFolderRequest $req) 编排空间批量操作页面查找全部的文件夹
  * @method Models\FreezeOpsTasksResponse FreezeOpsTasks(Models\FreezeOpsTasksRequest $req) 任务运维-批量暂停任务
  * @method Models\FreezeTasksByWorkflowIdsResponse FreezeTasksByWorkflowIds(Models\FreezeTasksByWorkflowIdsRequest $req) 暂停工作流下的所有任务
@@ -266,6 +271,7 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
  * @method Models\ModifyIntegrationNodeResponse ModifyIntegrationNode(Models\ModifyIntegrationNodeRequest $req) 更新集成节点
  * @method Models\ModifyIntegrationTaskResponse ModifyIntegrationTask(Models\ModifyIntegrationTaskRequest $req) 更新集成任务
  * @method Models\ModifyMonitorStatusResponse ModifyMonitorStatus(Models\ModifyMonitorStatusRequest $req) 更新监控状态
+ * @method Models\ModifyProjectResponse ModifyProject(Models\ModifyProjectRequest $req) 修改项目基础信息。
  * @method Models\ModifyRuleResponse ModifyRule(Models\ModifyRuleRequest $req) 更新质量规则接口
  * @method Models\ModifyRuleGroupSubscriptionResponse ModifyRuleGroupSubscription(Models\ModifyRuleGroupSubscriptionRequest $req) 更新规则组订阅信息
  * @method Models\ModifyRuleTemplateResponse ModifyRuleTemplate(Models\ModifyRuleTemplateRequest $req) 编辑规则模板
@@ -314,6 +320,7 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
  * @method Models\TriggerEventResponse TriggerEvent(Models\TriggerEventRequest $req) <p style="color:red;">[注意：该版本只满足广州区部分白名单客户使用]</p>
 触发事件。本接口已废弃，请使用接口TriggerDsEvent。
  * @method Models\TriggerManualTasksResponse TriggerManualTasks(Models\TriggerManualTasksRequest $req) 手动任务触发运行
+ * @method Models\UnboundProjectExecutorResourceResponse UnboundProjectExecutorResource(Models\UnboundProjectExecutorResourceRequest $req) 商业化版本：执行资源组/资源包解除绑定项目
  * @method Models\UnlockIntegrationTaskResponse UnlockIntegrationTask(Models\UnlockIntegrationTaskRequest $req) 解锁集成任务
  * @method Models\UpdateCodeTemplateResponse UpdateCodeTemplate(Models\UpdateCodeTemplateRequest $req) 更新模版
  * @method Models\UpdateDataModelRegistryInfoResponse UpdateDataModelRegistryInfo(Models\UpdateDataModelRegistryInfoRequest $req) 数语向wedata注册，提供自身cam角色信息，跳转域名、ip、端口信息等

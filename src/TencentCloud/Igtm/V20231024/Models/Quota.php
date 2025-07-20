@@ -21,141 +21,97 @@ use TencentCloud\Common\AbstractModel;
  * 配额
  *
  * @method integer getTaskQuota() 获取探测任务配额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskQuota(integer $TaskQuota) 设置探测任务配额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getPoolQuota() 获取地址池配额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPoolQuota(integer $PoolQuota) 设置地址池配额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getAddressQuota() 获取地址配额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddressQuota(integer $AddressQuota) 设置地址配额
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMonitorQuota() 获取探点资源数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMonitorQuota(integer $MonitorQuota) 设置探点资源数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMessageQuota() 获取消息资源数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessageQuota(integer $MessageQuota) 设置消息资源数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUsedTaskQuota() 获取已使用探测任务数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsedTaskQuota(integer $UsedTaskQuota) 设置已使用探测任务数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUsedFreeInstanceNum() 获取已使用体验实例数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsedFreeInstanceNum(integer $UsedFreeInstanceNum) 设置已使用体验实例数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUsedBillInstanceNum() 获取已使用付费实例
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsedBillInstanceNum(integer $UsedBillInstanceNum) 设置已使用付费实例
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFreePackageNum() 获取体验套餐总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFreePackageNum(integer $FreePackageNum) 设置体验套餐总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUsedBillPackageNum() 获取已使用付费套餐数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUsedBillPackageNum(integer $UsedBillPackageNum) 设置已使用付费套餐数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getBillPackageNum() 获取付费套餐总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBillPackageNum(integer $BillPackageNum) 设置付费套餐总数
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Quota extends AbstractModel
 {
     /**
      * @var integer 探测任务配额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskQuota;
 
     /**
      * @var integer 地址池配额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $PoolQuota;
 
     /**
      * @var integer 地址配额
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AddressQuota;
 
     /**
      * @var integer 探点资源数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MonitorQuota;
 
     /**
      * @var integer 消息资源数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MessageQuota;
 
     /**
      * @var integer 已使用探测任务数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UsedTaskQuota;
 
     /**
      * @var integer 已使用体验实例数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UsedFreeInstanceNum;
 
     /**
      * @var integer 已使用付费实例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UsedBillInstanceNum;
 
     /**
      * @var integer 体验套餐总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FreePackageNum;
 
     /**
      * @var integer 已使用付费套餐数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UsedBillPackageNum;
 
     /**
      * @var integer 付费套餐总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BillPackageNum;
 
     /**
      * @param integer $TaskQuota 探测任务配额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PoolQuota 地址池配额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $AddressQuota 地址配额
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MonitorQuota 探点资源数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MessageQuota 消息资源数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UsedTaskQuota 已使用探测任务数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UsedFreeInstanceNum 已使用体验实例数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UsedBillInstanceNum 已使用付费实例
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FreePackageNum 体验套餐总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UsedBillPackageNum 已使用付费套餐数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $BillPackageNum 付费套餐总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

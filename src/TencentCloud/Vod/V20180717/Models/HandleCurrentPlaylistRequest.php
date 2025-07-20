@@ -24,10 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubAppId(integer $SubAppId) 设置<b>点播[应用](/document/product/266/14574) ID。</b>
  * @method string getRoundPlayId() 获取轮播播单唯一标识。
  * @method void setRoundPlayId(string $RoundPlayId) 设置轮播播单唯一标识。
- * @method string getOperation() 获取操作类型，取值有：<li>Insert：向当前播放列表插入播放节目。</li> <li>InsertTemporary：向当前播放列表临时插入播放节目。只能插入到当前正在播放的节目后面，临时插入的节目只在本次轮播过程生效。</li><li>Delete：删除播放列表中的播放节目。不能删除正在播放的节目。</li>
- * @method void setOperation(string $Operation) 设置操作类型，取值有：<li>Insert：向当前播放列表插入播放节目。</li> <li>InsertTemporary：向当前播放列表临时插入播放节目。只能插入到当前正在播放的节目后面，临时插入的节目只在本次轮播过程生效。</li><li>Delete：删除播放列表中的播放节目。不能删除正在播放的节目。</li>
- * @method string getItemId() 获取播单节目 ID。当 Operation 为 Insert 时必填，表示插入的节目列表位于该播放节目之后。插入的位置必须在当前正在播放的节目之后。
- * @method void setItemId(string $ItemId) 设置播单节目 ID。当 Operation 为 Insert 时必填，表示插入的节目列表位于该播放节目之后。插入的位置必须在当前正在播放的节目之后。
+ * @method string getOperation() 获取操作类型，取值有：<li>Insert：向当前播放列表插入节目。插入的节目在后续轮播过程仍然有效。</li> <li>InsertTemporary：向当前播放列表临时插入节目。临时插入的节目只在本次轮播过程生效。</li><li>Delete：删除播放列表中的节目。不能删除正在播放的节目。</li>
+ * @method void setOperation(string $Operation) 设置操作类型，取值有：<li>Insert：向当前播放列表插入节目。插入的节目在后续轮播过程仍然有效。</li> <li>InsertTemporary：向当前播放列表临时插入节目。临时插入的节目只在本次轮播过程生效。</li><li>Delete：删除播放列表中的节目。不能删除正在播放的节目。</li>
+ * @method string getItemId() 获取播单节目 ID。 <li>当 Operation 为 Insert 时，该字段必填，表示插入的节目列表位于该节目之后。</li> <li>当 Operation 为 InsertTemporary 时，该字段选填，不填时表示插入节目到最近的一个插入点上。当该字段填写时，如果同时填写 SegmentIndex，表示节目被插入到 ItemId 对应节目的第 SegmentIndex 分片后面，否则插入到该节目之后。</li> <li>当 Operation 为 Delete 时，该字段必填，表示删除该节目。不能删除正在播放的节目。</li>
+ * @method void setItemId(string $ItemId) 设置播单节目 ID。 <li>当 Operation 为 Insert 时，该字段必填，表示插入的节目列表位于该节目之后。</li> <li>当 Operation 为 InsertTemporary 时，该字段选填，不填时表示插入节目到最近的一个插入点上。当该字段填写时，如果同时填写 SegmentIndex，表示节目被插入到 ItemId 对应节目的第 SegmentIndex 分片后面，否则插入到该节目之后。</li> <li>当 Operation 为 Delete 时，该字段必填，表示删除该节目。不能删除正在播放的节目。</li>
+ * @method integer getSegmentIndex() 获取M3U8 文件分片的索引号。M3U8 文件第一个分片的 SegmentIndex 为0。当 Operation 为 InsertTemporary 且 ItemId 有值时该参数有效。
+ * @method void setSegmentIndex(integer $SegmentIndex) 设置M3U8 文件分片的索引号。M3U8 文件第一个分片的 SegmentIndex 为0。当 Operation 为 InsertTemporary 且 ItemId 有值时该参数有效。
  * @method array getRoundPlaylist() 获取节目列表。当 Operation 为 Insert、InsertTemporary、Delete 时必填，表示要操作的节目列表。列表长度最大为10。
  * @method void setRoundPlaylist(array $RoundPlaylist) 设置节目列表。当 Operation 为 Insert、InsertTemporary、Delete 时必填，表示要操作的节目列表。列表长度最大为10。
  */
@@ -44,14 +46,19 @@ class HandleCurrentPlaylistRequest extends AbstractModel
     public $RoundPlayId;
 
     /**
-     * @var string 操作类型，取值有：<li>Insert：向当前播放列表插入播放节目。</li> <li>InsertTemporary：向当前播放列表临时插入播放节目。只能插入到当前正在播放的节目后面，临时插入的节目只在本次轮播过程生效。</li><li>Delete：删除播放列表中的播放节目。不能删除正在播放的节目。</li>
+     * @var string 操作类型，取值有：<li>Insert：向当前播放列表插入节目。插入的节目在后续轮播过程仍然有效。</li> <li>InsertTemporary：向当前播放列表临时插入节目。临时插入的节目只在本次轮播过程生效。</li><li>Delete：删除播放列表中的节目。不能删除正在播放的节目。</li>
      */
     public $Operation;
 
     /**
-     * @var string 播单节目 ID。当 Operation 为 Insert 时必填，表示插入的节目列表位于该播放节目之后。插入的位置必须在当前正在播放的节目之后。
+     * @var string 播单节目 ID。 <li>当 Operation 为 Insert 时，该字段必填，表示插入的节目列表位于该节目之后。</li> <li>当 Operation 为 InsertTemporary 时，该字段选填，不填时表示插入节目到最近的一个插入点上。当该字段填写时，如果同时填写 SegmentIndex，表示节目被插入到 ItemId 对应节目的第 SegmentIndex 分片后面，否则插入到该节目之后。</li> <li>当 Operation 为 Delete 时，该字段必填，表示删除该节目。不能删除正在播放的节目。</li>
      */
     public $ItemId;
+
+    /**
+     * @var integer M3U8 文件分片的索引号。M3U8 文件第一个分片的 SegmentIndex 为0。当 Operation 为 InsertTemporary 且 ItemId 有值时该参数有效。
+     */
+    public $SegmentIndex;
 
     /**
      * @var array 节目列表。当 Operation 为 Insert、InsertTemporary、Delete 时必填，表示要操作的节目列表。列表长度最大为10。
@@ -61,8 +68,9 @@ class HandleCurrentPlaylistRequest extends AbstractModel
     /**
      * @param integer $SubAppId <b>点播[应用](/document/product/266/14574) ID。</b>
      * @param string $RoundPlayId 轮播播单唯一标识。
-     * @param string $Operation 操作类型，取值有：<li>Insert：向当前播放列表插入播放节目。</li> <li>InsertTemporary：向当前播放列表临时插入播放节目。只能插入到当前正在播放的节目后面，临时插入的节目只在本次轮播过程生效。</li><li>Delete：删除播放列表中的播放节目。不能删除正在播放的节目。</li>
-     * @param string $ItemId 播单节目 ID。当 Operation 为 Insert 时必填，表示插入的节目列表位于该播放节目之后。插入的位置必须在当前正在播放的节目之后。
+     * @param string $Operation 操作类型，取值有：<li>Insert：向当前播放列表插入节目。插入的节目在后续轮播过程仍然有效。</li> <li>InsertTemporary：向当前播放列表临时插入节目。临时插入的节目只在本次轮播过程生效。</li><li>Delete：删除播放列表中的节目。不能删除正在播放的节目。</li>
+     * @param string $ItemId 播单节目 ID。 <li>当 Operation 为 Insert 时，该字段必填，表示插入的节目列表位于该节目之后。</li> <li>当 Operation 为 InsertTemporary 时，该字段选填，不填时表示插入节目到最近的一个插入点上。当该字段填写时，如果同时填写 SegmentIndex，表示节目被插入到 ItemId 对应节目的第 SegmentIndex 分片后面，否则插入到该节目之后。</li> <li>当 Operation 为 Delete 时，该字段必填，表示删除该节目。不能删除正在播放的节目。</li>
+     * @param integer $SegmentIndex M3U8 文件分片的索引号。M3U8 文件第一个分片的 SegmentIndex 为0。当 Operation 为 InsertTemporary 且 ItemId 有值时该参数有效。
      * @param array $RoundPlaylist 节目列表。当 Operation 为 Insert、InsertTemporary、Delete 时必填，表示要操作的节目列表。列表长度最大为10。
      */
     function __construct()
@@ -92,6 +100,10 @@ class HandleCurrentPlaylistRequest extends AbstractModel
 
         if (array_key_exists("ItemId",$param) and $param["ItemId"] !== null) {
             $this->ItemId = $param["ItemId"];
+        }
+
+        if (array_key_exists("SegmentIndex",$param) and $param["SegmentIndex"] !== null) {
+            $this->SegmentIndex = $param["SegmentIndex"];
         }
 
         if (array_key_exists("RoundPlaylist",$param) and $param["RoundPlaylist"] !== null) {

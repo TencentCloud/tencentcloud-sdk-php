@@ -40,6 +40,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMetric(string $Metric) 设置保留字段。
  * @method string getRegion() 获取地域。
  * @method void setRegion(string $Region) 设置地域。
+ * @method string getClusterId() 获取集群ID。
+ * @method void setClusterId(string $ClusterId) 设置集群ID。
+ * @method string getClusterName() 获取集群名称。
+ * @method void setClusterName(string $ClusterName) 设置集群名称。
+ * @method string getVip() 获取vip地址。
+ * @method void setVip(string $Vip) 设置vip地址。
+ * @method integer getVport() 获取vip端口。
+ * @method void setVport(integer $Vport) 设置vip端口。
  */
 class DiagHistoryEventItem extends AbstractModel
 {
@@ -94,6 +102,26 @@ class DiagHistoryEventItem extends AbstractModel
     public $Region;
 
     /**
+     * @var string 集群ID。
+     */
+    public $ClusterId;
+
+    /**
+     * @var string 集群名称。
+     */
+    public $ClusterName;
+
+    /**
+     * @var string vip地址。
+     */
+    public $Vip;
+
+    /**
+     * @var integer vip端口。
+     */
+    public $Vport;
+
+    /**
      * @param string $DiagType 诊断类型。
      * @param string $EndTime 结束时间。
      * @param string $StartTime 开始时间。
@@ -104,6 +132,10 @@ class DiagHistoryEventItem extends AbstractModel
      * @param string $InstanceId 实例 ID 。
      * @param string $Metric 保留字段。
      * @param string $Region 地域。
+     * @param string $ClusterId 集群ID。
+     * @param string $ClusterName 集群名称。
+     * @param string $Vip vip地址。
+     * @param integer $Vport vip端口。
      */
     function __construct()
     {
@@ -156,6 +188,22 @@ class DiagHistoryEventItem extends AbstractModel
 
         if (array_key_exists("Region",$param) and $param["Region"] !== null) {
             $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
+            $this->ClusterName = $param["ClusterName"];
+        }
+
+        if (array_key_exists("Vip",$param) and $param["Vip"] !== null) {
+            $this->Vip = $param["Vip"];
+        }
+
+        if (array_key_exists("Vport",$param) and $param["Vport"] !== null) {
+            $this->Vport = $param["Vport"];
         }
     }
 }

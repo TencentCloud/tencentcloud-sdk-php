@@ -25,17 +25,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAddressPools(array $AddressPools) 设置集合中的地址池id与权重，数组
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMainAddressPoolId() 获取地址池集合id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMainAddressPoolId(integer $MainAddressPoolId) 设置地址池集合id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMinSurviveNum() 获取切换阀值，不能大于主力集合内地址总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMinSurviveNum(integer $MinSurviveNum) 设置切换阀值，不能大于主力集合内地址总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTrafficStrategy() 获取切换策略:ALL解析所有地址；WEIGHT：负载均衡。当为ALL时，解析地址的权重值为1；当为WEIGHT时；权重为地址池权重*地址权重
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTrafficStrategy(string $TrafficStrategy) 设置切换策略:ALL解析所有地址；WEIGHT：负载均衡。当为ALL时，解析地址的权重值为1；当为WEIGHT时；权重为地址池权重*地址权重
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MainAddressPool extends AbstractModel
 {
@@ -47,19 +41,16 @@ class MainAddressPool extends AbstractModel
 
     /**
      * @var integer 地址池集合id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MainAddressPoolId;
 
     /**
      * @var integer 切换阀值，不能大于主力集合内地址总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MinSurviveNum;
 
     /**
      * @var string 切换策略:ALL解析所有地址；WEIGHT：负载均衡。当为ALL时，解析地址的权重值为1；当为WEIGHT时；权重为地址池权重*地址权重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TrafficStrategy;
 
@@ -67,11 +58,8 @@ class MainAddressPool extends AbstractModel
      * @param array $AddressPools 集合中的地址池id与权重，数组
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MainAddressPoolId 地址池集合id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MinSurviveNum 切换阀值，不能大于主力集合内地址总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TrafficStrategy 切换策略:ALL解析所有地址；WEIGHT：负载均衡。当为ALL时，解析地址的权重值为1；当为WEIGHT时；权重为地址池权重*地址权重
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

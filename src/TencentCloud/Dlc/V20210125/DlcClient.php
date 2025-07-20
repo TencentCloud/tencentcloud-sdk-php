@@ -130,6 +130,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DescribeUpdatableDataEnginesResponse DescribeUpdatableDataEngines(Models\DescribeUpdatableDataEnginesRequest $req) 查询可更新配置的引擎列表
  * @method Models\DescribeUserDataEngineConfigResponse DescribeUserDataEngineConfig(Models\DescribeUserDataEngineConfigRequest $req) 查询用户自定义引擎参数
  * @method Models\DescribeUserInfoResponse DescribeUserInfo(Models\DescribeUserInfoRequest $req) 获取用户详细信息
+ * @method Models\DescribeUserRegisterTimeResponse DescribeUserRegisterTime(Models\DescribeUserRegisterTimeRequest $req) 该接口（DescribeUserRegisterTime）用于查询当前用户注册时间，并判断是否是老用户。
  * @method Models\DescribeUserRolesResponse DescribeUserRoles(Models\DescribeUserRolesRequest $req) 列举用户角色信息
  * @method Models\DescribeUserTypeResponse DescribeUserType(Models\DescribeUserTypeRequest $req) 获取用户类型
  * @method Models\DescribeUsersResponse DescribeUsers(Models\DescribeUsersRequest $req) 获取用户列表信息

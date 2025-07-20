@@ -21,17 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * 策略详情
  *
  * @method string getInstanceId() 获取实例id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置实例id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStrategyId() 获取策略id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStrategyId(integer $StrategyId) 设置策略id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取策略名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置策略名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSource() 获取线路
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSource(array $Source) 设置线路
@@ -45,43 +39,32 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFallbackAddressPoolSet(array $FallbackAddressPoolSet) 设置兜底地址池id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getKeepDomainRecords() 获取是否保留线路：enabled保留，disabled不保留，只保留默认线路
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeepDomainRecords(string $KeepDomainRecords) 设置是否保留线路：enabled保留，disabled不保留，只保留默认线路
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getActivateMainPoolId() 获取生效主力地址池id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActivateMainPoolId(integer $ActivateMainPoolId) 设置生效主力地址池id
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedOn() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedOn(string $CreatedOn) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdatedOn() 获取更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdatedOn(string $UpdatedOn) 设置更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSwitchPoolType() 获取调度模式：AUTO默认；PAUSE仅暂停不切换
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSwitchPoolType(string $SwitchPoolType) 设置调度模式：AUTO默认；PAUSE仅暂停不切换
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class StrategyDetail extends AbstractModel
 {
     /**
      * @var string 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var integer 策略id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StrategyId;
 
     /**
      * @var string 策略名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
@@ -105,7 +88,6 @@ class StrategyDetail extends AbstractModel
 
     /**
      * @var string 是否保留线路：enabled保留，disabled不保留，只保留默认线路
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KeepDomainRecords;
 
@@ -117,29 +99,23 @@ class StrategyDetail extends AbstractModel
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedOn;
 
     /**
      * @var string 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdatedOn;
 
     /**
      * @var string 调度模式：AUTO默认；PAUSE仅暂停不切换
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SwitchPoolType;
 
     /**
      * @param string $InstanceId 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StrategyId 策略id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 策略名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Source 线路
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $MainAddressPoolSet 主力地址池集合
@@ -147,15 +123,11 @@ class StrategyDetail extends AbstractModel
      * @param array $FallbackAddressPoolSet 兜底地址池id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $KeepDomainRecords 是否保留线路：enabled保留，disabled不保留，只保留默认线路
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ActivateMainPoolId 生效主力地址池id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedOn 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdatedOn 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SwitchPoolType 调度模式：AUTO默认；PAUSE仅暂停不切换
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

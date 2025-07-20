@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置备份文件名
  * @method integer getSize() 获取备份文件大小，单位：Byte
  * @method void setSize(integer $Size) 设置备份文件大小，单位：Byte
- * @method string getDate() 获取备份快照时间，时间格式：2016-03-17 02:10:37
- * @method void setDate(string $Date) 设置备份快照时间，时间格式：2016-03-17 02:10:37
+ * @method string getDate() 获取备份快照时间，时间格式：2016-03-17
+ * @method void setDate(string $Date) 设置备份快照时间，时间格式：2016-03-17
  * @method string getIntranetUrl() 获取内网下载地址
  * @method void setIntranetUrl(string $IntranetUrl) 设置内网下载地址
  * @method string getInternetUrl() 获取外网下载地址
@@ -46,7 +46,7 @@ class SlowLogInfo extends AbstractModel
     public $Size;
 
     /**
-     * @var string 备份快照时间，时间格式：2016-03-17 02:10:37
+     * @var string 备份快照时间，时间格式：2016-03-17
      */
     public $Date;
 
@@ -68,7 +68,7 @@ class SlowLogInfo extends AbstractModel
     /**
      * @param string $Name 备份文件名
      * @param integer $Size 备份文件大小，单位：Byte
-     * @param string $Date 备份快照时间，时间格式：2016-03-17 02:10:37
+     * @param string $Date 备份快照时间，时间格式：2016-03-17
      * @param string $IntranetUrl 内网下载地址
      * @param string $InternetUrl 外网下载地址
      * @param string $Type 日志具体类型，可能的值：slowlog - 慢日志

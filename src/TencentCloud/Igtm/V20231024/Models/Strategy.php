@@ -21,25 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 地址池
  *
  * @method string getInstanceId() 获取实例id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceId(string $InstanceId) 设置实例id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getName() 获取策略名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置策略名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getSource() 获取地址来源
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSource(array $Source) 设置地址来源
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStrategyId() 获取策略id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStrategyId(integer $StrategyId) 设置策略id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取健康状态：ok健康、warn风险、down故障
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置健康状态：ok健康、warn风险、down故障
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getActivateMainPoolId() 获取生效的主力池id，null则为未知
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActivateMainPoolId(integer $ActivateMainPoolId) 设置生效的主力池id，null则为未知
@@ -49,49 +41,31 @@ use TencentCloud\Common\AbstractModel;
  * @method void setActivateLevel(integer $ActivateLevel) 设置当前生效地址池所在级数，为0则代表兜底生效，null则为未知
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getActivePoolType() 获取当前生效地址池集合类型：main主力；fallback兜底
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActivePoolType(string $ActivePoolType) 设置当前生效地址池集合类型：main主力；fallback兜底
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getActiveTrafficStrategy() 获取当前生效地址池流量策略：all解析所有；weight负载均衡
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setActiveTrafficStrategy(string $ActiveTrafficStrategy) 设置当前生效地址池流量策略：all解析所有；weight负载均衡
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMonitorNum() 获取监控器数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMonitorNum(integer $MonitorNum) 设置监控器数量
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getIsEnabled() 获取是否开启：ENABLED开启；DISABLED关闭
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsEnabled(string $IsEnabled) 设置是否开启：ENABLED开启；DISABLED关闭
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getKeepDomainRecords() 获取是否保留线路：enabled保留，disabled不保留，只保留默认线路
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKeepDomainRecords(string $KeepDomainRecords) 设置是否保留线路：enabled保留，disabled不保留，只保留默认线路
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSwitchPoolType() 获取调度模式：AUTO默认；PAUSE仅暂停不切换
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSwitchPoolType(string $SwitchPoolType) 设置调度模式：AUTO默认；PAUSE仅暂停不切换
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCreatedOn() 获取创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCreatedOn(string $CreatedOn) 设置创建时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdatedOn() 获取更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdatedOn(string $UpdatedOn) 设置更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Strategy extends AbstractModel
 {
     /**
      * @var string 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceId;
 
     /**
      * @var string 策略名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
@@ -103,13 +77,11 @@ class Strategy extends AbstractModel
 
     /**
      * @var integer 策略id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StrategyId;
 
     /**
      * @var string 健康状态：ok健康、warn风险、down故障
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
@@ -127,83 +99,63 @@ class Strategy extends AbstractModel
 
     /**
      * @var string 当前生效地址池集合类型：main主力；fallback兜底
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActivePoolType;
 
     /**
      * @var string 当前生效地址池流量策略：all解析所有；weight负载均衡
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ActiveTrafficStrategy;
 
     /**
      * @var integer 监控器数量
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MonitorNum;
 
     /**
      * @var string 是否开启：ENABLED开启；DISABLED关闭
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsEnabled;
 
     /**
      * @var string 是否保留线路：enabled保留，disabled不保留，只保留默认线路
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KeepDomainRecords;
 
     /**
      * @var string 调度模式：AUTO默认；PAUSE仅暂停不切换
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SwitchPoolType;
 
     /**
      * @var string 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreatedOn;
 
     /**
      * @var string 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdatedOn;
 
     /**
      * @param string $InstanceId 实例id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 策略名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Source 地址来源
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StrategyId 策略id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 健康状态：ok健康、warn风险、down故障
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ActivateMainPoolId 生效的主力池id，null则为未知
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ActivateLevel 当前生效地址池所在级数，为0则代表兜底生效，null则为未知
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ActivePoolType 当前生效地址池集合类型：main主力；fallback兜底
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ActiveTrafficStrategy 当前生效地址池流量策略：all解析所有；weight负载均衡
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MonitorNum 监控器数量
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $IsEnabled 是否开启：ENABLED开启；DISABLED关闭
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $KeepDomainRecords 是否保留线路：enabled保留，disabled不保留，只保留默认线路
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SwitchPoolType 调度模式：AUTO默认；PAUSE仅暂停不切换
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreatedOn 创建时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdatedOn 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

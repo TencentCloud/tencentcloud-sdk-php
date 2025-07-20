@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSkillGroupType(integer $SkillGroupType) 设置技能组类型0-电话，1-在线，3-音频，4-视频	
  * @method string getAlias() 获取技能组内线号码
  * @method void setAlias(string $Alias) 设置技能组内线号码
+ * @method boolean getRingAll() 获取是否同振
+ * @method void setRingAll(boolean $RingAll) 设置是否同振
  */
 class SkillGroupInfoItem extends AbstractModel
 {
@@ -87,6 +89,11 @@ class SkillGroupInfoItem extends AbstractModel
     public $Alias;
 
     /**
+     * @var boolean 是否同振
+     */
+    public $RingAll;
+
+    /**
      * @param integer $SkillGroupId 技能组ID
      * @param string $SkillGroupName 技能组名称
      * @param string $Type （废弃）类型：IM、TEL、ALL（全媒体）
@@ -96,6 +103,7 @@ class SkillGroupInfoItem extends AbstractModel
      * @param integer $LastModifyTimestamp 最后修改时间
      * @param integer $SkillGroupType 技能组类型0-电话，1-在线，3-音频，4-视频	
      * @param string $Alias 技能组内线号码
+     * @param boolean $RingAll 是否同振
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class SkillGroupInfoItem extends AbstractModel
 
         if (array_key_exists("Alias",$param) and $param["Alias"] !== null) {
             $this->Alias = $param["Alias"];
+        }
+
+        if (array_key_exists("RingAll",$param) and $param["RingAll"] !== null) {
+            $this->RingAll = $param["RingAll"];
         }
     }
 }

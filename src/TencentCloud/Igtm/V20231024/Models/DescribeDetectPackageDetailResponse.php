@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsExpire(integer $IsExpire) 设置是否过期
  * @method string getStatus() 获取状态 ENABLED: 正常 ISOLATED: 隔离 DESTROYED：销毁 REFUNDED：已退款
  * @method void setStatus(string $Status) 设置状态 ENABLED: 正常 ISOLATED: 隔离 DESTROYED：销毁 REFUNDED：已退款
- * @method integer getAutoRenewFlag() 获取是否自动续费0不1是
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置是否自动续费0不1是
+ * @method integer getAutoRenewFlag() 获取是否自动续费：0否1是
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) 设置是否自动续费：0否1是
  * @method string getRemark() 获取备注
  * @method void setRemark(string $Remark) 设置备注
  * @method array getCostItemList() 获取计费项
@@ -83,7 +83,7 @@ class DescribeDetectPackageDetailResponse extends AbstractModel
     public $Status;
 
     /**
-     * @var integer 是否自动续费0不1是
+     * @var integer 是否自动续费：0否1是
      */
     public $AutoRenewFlag;
 
@@ -115,7 +115,7 @@ class DescribeDetectPackageDetailResponse extends AbstractModel
      * @param string $CreateTime 创建时间
      * @param integer $IsExpire 是否过期
      * @param string $Status 状态 ENABLED: 正常 ISOLATED: 隔离 DESTROYED：销毁 REFUNDED：已退款
-     * @param integer $AutoRenewFlag 是否自动续费0不1是
+     * @param integer $AutoRenewFlag 是否自动续费：0否1是
      * @param string $Remark 备注
      * @param array $CostItemList 计费项
      * @param integer $UsedNum 使用数量

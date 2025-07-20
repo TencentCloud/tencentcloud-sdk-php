@@ -23,9 +23,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getDnsLineId() 获取解析请求来源线路id
  * @method void setDnsLineId(integer $DnsLineId) 设置解析请求来源线路id
  * @method string getName() 获取解析请求来源线路名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setName(string $Name) 设置解析请求来源线路名
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Source extends AbstractModel
 {
@@ -36,14 +34,12 @@ class Source extends AbstractModel
 
     /**
      * @var string 解析请求来源线路名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
      * @param integer $DnsLineId 解析请求来源线路id
      * @param string $Name 解析请求来源线路名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

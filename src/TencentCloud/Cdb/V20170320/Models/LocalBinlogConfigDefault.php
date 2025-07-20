@@ -18,28 +18,28 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 本地binlog保留策略默认配置。
+ * 本地 binlog 保留策略默认配置
  *
- * @method integer getSaveHours() 获取本地binlog保留时长，可取值范围：[72,168]。
- * @method void setSaveHours(integer $SaveHours) 设置本地binlog保留时长，可取值范围：[72,168]。
- * @method integer getMaxUsage() 获取本地binlog空间使用率，可取值范围：[30,50]。
- * @method void setMaxUsage(integer $MaxUsage) 设置本地binlog空间使用率，可取值范围：[30,50]。
+ * @method integer getSaveHours() 获取本地 binlog 保留时长，可取值范围：[6,168]。
+ * @method void setSaveHours(integer $SaveHours) 设置本地 binlog 保留时长，可取值范围：[6,168]。
+ * @method integer getMaxUsage() 获取本地 binlog 空间使用率，可取值范围：[30,50]。
+ * @method void setMaxUsage(integer $MaxUsage) 设置本地 binlog 空间使用率，可取值范围：[30,50]。
  */
 class LocalBinlogConfigDefault extends AbstractModel
 {
     /**
-     * @var integer 本地binlog保留时长，可取值范围：[72,168]。
+     * @var integer 本地 binlog 保留时长，可取值范围：[6,168]。
      */
     public $SaveHours;
 
     /**
-     * @var integer 本地binlog空间使用率，可取值范围：[30,50]。
+     * @var integer 本地 binlog 空间使用率，可取值范围：[30,50]。
      */
     public $MaxUsage;
 
     /**
-     * @param integer $SaveHours 本地binlog保留时长，可取值范围：[72,168]。
-     * @param integer $MaxUsage 本地binlog空间使用率，可取值范围：[30,50]。
+     * @param integer $SaveHours 本地 binlog 保留时长，可取值范围：[6,168]。
+     * @param integer $MaxUsage 本地 binlog 空间使用率，可取值范围：[30,50]。
      */
     function __construct()
     {

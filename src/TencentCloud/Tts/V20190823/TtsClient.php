@@ -52,6 +52,7 @@ use TencentCloud\Tts\V20190823\Models as Models;
 精品音色和标准音色：默认20并发
 大模型音色：默认20并发
 超自然大模型音色：暂不支持
+一句话复刻音色：默认10并发
  */
 
 class TtsClient extends AbstractClient

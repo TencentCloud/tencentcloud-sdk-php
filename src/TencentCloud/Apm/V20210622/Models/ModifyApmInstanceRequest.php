@@ -100,6 +100,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsWebshellBackdoorAnalysis(integer $IsWebshellBackdoorAnalysis) 设置是否开启Webshell后门检测（0-关闭，1-开启）
  * @method integer getIsDeserializationAnalysis() 获取是否开启反序列化检测（0-关闭，1-开启）
  * @method void setIsDeserializationAnalysis(integer $IsDeserializationAnalysis) 设置是否开启反序列化检测（0-关闭，1-开启）
+ * @method integer getUrlLongSegmentThreshold() 获取URL长分段收敛阈值
+ * @method void setUrlLongSegmentThreshold(integer $UrlLongSegmentThreshold) 设置URL长分段收敛阈值
+ * @method integer getUrlNumberSegmentThreshold() 获取URL数字分段收敛阈值
+ * @method void setUrlNumberSegmentThreshold(integer $UrlNumberSegmentThreshold) 设置URL数字分段收敛阈值
  */
 class ModifyApmInstanceRequest extends AbstractModel
 {
@@ -304,6 +308,16 @@ class ModifyApmInstanceRequest extends AbstractModel
     public $IsDeserializationAnalysis;
 
     /**
+     * @var integer URL长分段收敛阈值
+     */
+    public $UrlLongSegmentThreshold;
+
+    /**
+     * @var integer URL数字分段收敛阈值
+     */
+    public $UrlNumberSegmentThreshold;
+
+    /**
      * @param string $InstanceId 业务系统 ID
      * @param string $Name 业务系统名
      * @param array $Tags Tag 列表
@@ -344,6 +358,8 @@ class ModifyApmInstanceRequest extends AbstractModel
      * @param integer $IsJNIInjectionAnalysis 是否开启JNI注入检测（0-关闭，1-开启）
      * @param integer $IsWebshellBackdoorAnalysis 是否开启Webshell后门检测（0-关闭，1-开启）
      * @param integer $IsDeserializationAnalysis 是否开启反序列化检测（0-关闭，1-开启）
+     * @param integer $UrlLongSegmentThreshold URL长分段收敛阈值
+     * @param integer $UrlNumberSegmentThreshold URL数字分段收敛阈值
      */
     function __construct()
     {
@@ -521,6 +537,14 @@ class ModifyApmInstanceRequest extends AbstractModel
 
         if (array_key_exists("IsDeserializationAnalysis",$param) and $param["IsDeserializationAnalysis"] !== null) {
             $this->IsDeserializationAnalysis = $param["IsDeserializationAnalysis"];
+        }
+
+        if (array_key_exists("UrlLongSegmentThreshold",$param) and $param["UrlLongSegmentThreshold"] !== null) {
+            $this->UrlLongSegmentThreshold = $param["UrlLongSegmentThreshold"];
+        }
+
+        if (array_key_exists("UrlNumberSegmentThreshold",$param) and $param["UrlNumberSegmentThreshold"] !== null) {
+            $this->UrlNumberSegmentThreshold = $param["UrlNumberSegmentThreshold"];
         }
     }
 }

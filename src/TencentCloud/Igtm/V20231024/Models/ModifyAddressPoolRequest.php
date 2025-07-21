@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPoolId(integer $PoolId) 设置地址池id
  * @method string getPoolName() 获取地址池名称，不允许重复
  * @method void setPoolName(string $PoolName) 设置地址池名称，不允许重复
- * @method string getTrafficStrategy() 获取流量策略: WEIGHT负载均衡，ALl解析全部
- * @method void setTrafficStrategy(string $TrafficStrategy) 设置流量策略: WEIGHT负载均衡，ALl解析全部
+ * @method string getTrafficStrategy() 获取流量策略: WEIGHT负载均衡，ALL解析全部
+ * @method void setTrafficStrategy(string $TrafficStrategy) 设置流量策略: WEIGHT负载均衡，ALL解析全部
  * @method integer getMonitorId() 获取监控器id
  * @method void setMonitorId(integer $MonitorId) 设置监控器id
  * @method array getAddressSet() 获取地址列表
@@ -44,7 +44,7 @@ class ModifyAddressPoolRequest extends AbstractModel
     public $PoolName;
 
     /**
-     * @var string 流量策略: WEIGHT负载均衡，ALl解析全部
+     * @var string 流量策略: WEIGHT负载均衡，ALL解析全部
      */
     public $TrafficStrategy;
 
@@ -61,7 +61,7 @@ class ModifyAddressPoolRequest extends AbstractModel
     /**
      * @param integer $PoolId 地址池id
      * @param string $PoolName 地址池名称，不允许重复
-     * @param string $TrafficStrategy 流量策略: WEIGHT负载均衡，ALl解析全部
+     * @param string $TrafficStrategy 流量策略: WEIGHT负载均衡，ALL解析全部
      * @param integer $MonitorId 监控器id
      * @param array $AddressSet 地址列表
      */

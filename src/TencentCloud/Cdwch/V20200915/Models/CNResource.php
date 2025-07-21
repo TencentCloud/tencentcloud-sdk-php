@@ -20,170 +20,170 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 资源信息
  *
- * @method integer getID() 获取无
- * @method void setID(integer $ID) 设置无
- * @method string getInstanceID() 获取无
- * @method void setInstanceID(string $InstanceID) 设置无
- * @method integer getAppID() 获取无
- * @method void setAppID(integer $AppID) 设置无
- * @method string getUin() 获取无
- * @method void setUin(string $Uin) 设置无
- * @method string getComponent() 获取无
- * @method void setComponent(string $Component) 设置无
- * @method integer getDeployMode() 获取无
- * @method void setDeployMode(integer $DeployMode) 设置无
- * @method string getSpecName() 获取无
- * @method void setSpecName(string $SpecName) 设置无
- * @method string getResourceID() 获取无
- * @method void setResourceID(string $ResourceID) 设置无
- * @method integer getStatus() 获取无
- * @method void setStatus(integer $Status) 设置无
- * @method string getIP() 获取无
- * @method void setIP(string $IP) 设置无
- * @method integer getCPU() 获取无
- * @method void setCPU(integer $CPU) 设置无
- * @method integer getMemory() 获取无
- * @method void setMemory(integer $Memory) 设置无
- * @method integer getStorage() 获取无
- * @method void setStorage(integer $Storage) 设置无
- * @method string getUUID() 获取无
- * @method void setUUID(string $UUID) 设置无
- * @method string getRegion() 获取无
- * @method void setRegion(string $Region) 设置无
- * @method string getZone() 获取无
- * @method void setZone(string $Zone) 设置无
- * @method string getDetails() 获取无
- * @method void setDetails(string $Details) 设置无
- * @method string getCreateTime() 获取无
- * @method void setCreateTime(string $CreateTime) 设置无
- * @method string getModifyTime() 获取无
- * @method void setModifyTime(string $ModifyTime) 设置无
- * @method string getExpireTime() 获取无
- * @method void setExpireTime(string $ExpireTime) 设置无
+ * @method integer getID() 获取资源id
+ * @method void setID(integer $ID) 设置资源id
+ * @method string getInstanceID() 获取集群的id
+ * @method void setInstanceID(string $InstanceID) 设置集群的id
+ * @method integer getAppID() 获取用户appid
+ * @method void setAppID(integer $AppID) 设置用户appid
+ * @method string getUin() 获取用户uin
+ * @method void setUin(string $Uin) 设置用户uin
+ * @method string getComponent() 获取组件
+ * @method void setComponent(string $Component) 设置组件
+ * @method integer getDeployMode() 获取部署模式
+ * @method void setDeployMode(integer $DeployMode) 设置部署模式
+ * @method string getSpecName() 获取规格名称
+ * @method void setSpecName(string $SpecName) 设置规格名称
+ * @method string getResourceID() 获取资源id
+ * @method void setResourceID(string $ResourceID) 设置资源id
+ * @method integer getStatus() 获取资源的状态
+ * @method void setStatus(integer $Status) 设置资源的状态
+ * @method string getIP() 获取私有网络ip
+ * @method void setIP(string $IP) 设置私有网络ip
+ * @method integer getCPU() 获取核数
+ * @method void setCPU(integer $CPU) 设置核数
+ * @method integer getMemory() 获取内存
+ * @method void setMemory(integer $Memory) 设置内存
+ * @method integer getStorage() 获取存储大小
+ * @method void setStorage(integer $Storage) 设置存储大小
+ * @method string getUUID() 获取服务器ID
+ * @method void setUUID(string $UUID) 设置服务器ID
+ * @method string getRegion() 获取地域
+ * @method void setRegion(string $Region) 设置地域
+ * @method string getZone() 获取地区
+ * @method void setZone(string $Zone) 设置地区
+ * @method string getDetails() 获取详细信息
+ * @method void setDetails(string $Details) 设置详细信息
+ * @method string getCreateTime() 获取创建时间
+ * @method void setCreateTime(string $CreateTime) 设置创建时间
+ * @method string getModifyTime() 获取修改时间
+ * @method void setModifyTime(string $ModifyTime) 设置修改时间
+ * @method string getExpireTime() 获取过期时间
+ * @method void setExpireTime(string $ExpireTime) 设置过期时间
  */
 class CNResource extends AbstractModel
 {
     /**
-     * @var integer 无
+     * @var integer 资源id
      */
     public $ID;
 
     /**
-     * @var string 无
+     * @var string 集群的id
      */
     public $InstanceID;
 
     /**
-     * @var integer 无
+     * @var integer 用户appid
      */
     public $AppID;
 
     /**
-     * @var string 无
+     * @var string 用户uin
      */
     public $Uin;
 
     /**
-     * @var string 无
+     * @var string 组件
      */
     public $Component;
 
     /**
-     * @var integer 无
+     * @var integer 部署模式
      */
     public $DeployMode;
 
     /**
-     * @var string 无
+     * @var string 规格名称
      */
     public $SpecName;
 
     /**
-     * @var string 无
+     * @var string 资源id
      */
     public $ResourceID;
 
     /**
-     * @var integer 无
+     * @var integer 资源的状态
      */
     public $Status;
 
     /**
-     * @var string 无
+     * @var string 私有网络ip
      */
     public $IP;
 
     /**
-     * @var integer 无
+     * @var integer 核数
      */
     public $CPU;
 
     /**
-     * @var integer 无
+     * @var integer 内存
      */
     public $Memory;
 
     /**
-     * @var integer 无
+     * @var integer 存储大小
      */
     public $Storage;
 
     /**
-     * @var string 无
+     * @var string 服务器ID
      */
     public $UUID;
 
     /**
-     * @var string 无
+     * @var string 地域
      */
     public $Region;
 
     /**
-     * @var string 无
+     * @var string 地区
      */
     public $Zone;
 
     /**
-     * @var string 无
+     * @var string 详细信息
      */
     public $Details;
 
     /**
-     * @var string 无
+     * @var string 创建时间
      */
     public $CreateTime;
 
     /**
-     * @var string 无
+     * @var string 修改时间
      */
     public $ModifyTime;
 
     /**
-     * @var string 无
+     * @var string 过期时间
      */
     public $ExpireTime;
 
     /**
-     * @param integer $ID 无
-     * @param string $InstanceID 无
-     * @param integer $AppID 无
-     * @param string $Uin 无
-     * @param string $Component 无
-     * @param integer $DeployMode 无
-     * @param string $SpecName 无
-     * @param string $ResourceID 无
-     * @param integer $Status 无
-     * @param string $IP 无
-     * @param integer $CPU 无
-     * @param integer $Memory 无
-     * @param integer $Storage 无
-     * @param string $UUID 无
-     * @param string $Region 无
-     * @param string $Zone 无
-     * @param string $Details 无
-     * @param string $CreateTime 无
-     * @param string $ModifyTime 无
-     * @param string $ExpireTime 无
+     * @param integer $ID 资源id
+     * @param string $InstanceID 集群的id
+     * @param integer $AppID 用户appid
+     * @param string $Uin 用户uin
+     * @param string $Component 组件
+     * @param integer $DeployMode 部署模式
+     * @param string $SpecName 规格名称
+     * @param string $ResourceID 资源id
+     * @param integer $Status 资源的状态
+     * @param string $IP 私有网络ip
+     * @param integer $CPU 核数
+     * @param integer $Memory 内存
+     * @param integer $Storage 存储大小
+     * @param string $UUID 服务器ID
+     * @param string $Region 地域
+     * @param string $Zone 地区
+     * @param string $Details 详细信息
+     * @param string $CreateTime 创建时间
+     * @param string $ModifyTime 修改时间
+     * @param string $ExpireTime 过期时间
      */
     function __construct()
     {

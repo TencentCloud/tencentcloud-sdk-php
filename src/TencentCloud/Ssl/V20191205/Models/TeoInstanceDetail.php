@@ -40,6 +40,8 @@ processing：部署中；
 applying：申请中；
 failed：申请失败；
 issued：绑定失败。
+ * @method string getAlgorithm() 获取证书加密算法
+ * @method void setAlgorithm(string $Algorithm) 设置证书加密算法
  */
 class TeoInstanceDetail extends AbstractModel
 {
@@ -70,6 +72,11 @@ issued：绑定失败。
     public $Status;
 
     /**
+     * @var string 证书加密算法
+     */
+    public $Algorithm;
+
+    /**
      * @param string $Host 域名
      * @param string $CertId 证书ID
      * @param string $ZoneId 区域ID
@@ -80,6 +87,7 @@ processing：部署中；
 applying：申请中；
 failed：申请失败；
 issued：绑定失败。
+     * @param string $Algorithm 证书加密算法
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ issued：绑定失败。
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Algorithm",$param) and $param["Algorithm"] !== null) {
+            $this->Algorithm = $param["Algorithm"];
         }
     }
 }

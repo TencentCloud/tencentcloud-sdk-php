@@ -18,17 +18,25 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 计费数据项
+ * 计费数据项。
  *
- * @method string getTime() 获取时间。
- * @method void setTime(string $Time) 设置时间。
+ * @method string getTime() 获取数据时间戳。
+ * @method void setTime(string $Time) 设置数据时间戳。
  * @method integer getValue() 获取数值。
  * @method void setValue(integer $Value) 设置数值。
+ * @method string getZoneId() 获取数据点所属站点 ID。若使用内容标识符功能，则该项值为内容标识符。
+ * @method void setZoneId(string $ZoneId) 设置数据点所属站点 ID。若使用内容标识符功能，则该项值为内容标识符。
+ * @method string getHost() 获取数据点所属域名。
+ * @method void setHost(string $Host) 设置数据点所属域名。
+ * @method string getProxyId() 获取数据点所属四层代理实例 ID。
+ * @method void setProxyId(string $ProxyId) 设置数据点所属四层代理实例 ID。
+ * @method string getRegionId() 获取数据点所属计费大区 ID。计费大区以实际服务用户客户端的 EdgeOne 节点所在区域为准。取值有：<li>CH：中国大陆境内</li><li>AF：非洲</li><li>AS1：亚太一区</li><li>AS2：亚太二区</li><li>AS3：亚太三区</li><li>EU：欧洲</li><li>MidEast：中东</li><li>NA：北美</li><li> SA：南美</li>
+ * @method void setRegionId(string $RegionId) 设置数据点所属计费大区 ID。计费大区以实际服务用户客户端的 EdgeOne 节点所在区域为准。取值有：<li>CH：中国大陆境内</li><li>AF：非洲</li><li>AS1：亚太一区</li><li>AS2：亚太二区</li><li>AS3：亚太三区</li><li>EU：欧洲</li><li>MidEast：中东</li><li>NA：北美</li><li> SA：南美</li>
  */
 class BillingData extends AbstractModel
 {
     /**
-     * @var string 时间。
+     * @var string 数据时间戳。
      */
     public $Time;
 
@@ -38,8 +46,32 @@ class BillingData extends AbstractModel
     public $Value;
 
     /**
-     * @param string $Time 时间。
+     * @var string 数据点所属站点 ID。若使用内容标识符功能，则该项值为内容标识符。
+     */
+    public $ZoneId;
+
+    /**
+     * @var string 数据点所属域名。
+     */
+    public $Host;
+
+    /**
+     * @var string 数据点所属四层代理实例 ID。
+     */
+    public $ProxyId;
+
+    /**
+     * @var string 数据点所属计费大区 ID。计费大区以实际服务用户客户端的 EdgeOne 节点所在区域为准。取值有：<li>CH：中国大陆境内</li><li>AF：非洲</li><li>AS1：亚太一区</li><li>AS2：亚太二区</li><li>AS3：亚太三区</li><li>EU：欧洲</li><li>MidEast：中东</li><li>NA：北美</li><li> SA：南美</li>
+     */
+    public $RegionId;
+
+    /**
+     * @param string $Time 数据时间戳。
      * @param integer $Value 数值。
+     * @param string $ZoneId 数据点所属站点 ID。若使用内容标识符功能，则该项值为内容标识符。
+     * @param string $Host 数据点所属域名。
+     * @param string $ProxyId 数据点所属四层代理实例 ID。
+     * @param string $RegionId 数据点所属计费大区 ID。计费大区以实际服务用户客户端的 EdgeOne 节点所在区域为准。取值有：<li>CH：中国大陆境内</li><li>AF：非洲</li><li>AS1：亚太一区</li><li>AS2：亚太二区</li><li>AS3：亚太三区</li><li>EU：欧洲</li><li>MidEast：中东</li><li>NA：北美</li><li> SA：南美</li>
      */
     function __construct()
     {
@@ -60,6 +92,22 @@ class BillingData extends AbstractModel
 
         if (array_key_exists("Value",$param) and $param["Value"] !== null) {
             $this->Value = $param["Value"];
+        }
+
+        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
+            $this->ZoneId = $param["ZoneId"];
+        }
+
+        if (array_key_exists("Host",$param) and $param["Host"] !== null) {
+            $this->Host = $param["Host"];
+        }
+
+        if (array_key_exists("ProxyId",$param) and $param["ProxyId"] !== null) {
+            $this->ProxyId = $param["ProxyId"];
+        }
+
+        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
+            $this->RegionId = $param["RegionId"];
         }
     }
 }

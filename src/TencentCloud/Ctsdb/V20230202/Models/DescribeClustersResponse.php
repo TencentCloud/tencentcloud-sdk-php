@@ -14,23 +14,36 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Igtm\V20231024\Models;
+namespace TencentCloud\Ctsdb\V20230202\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteStrategy返回参数结构体
+ * DescribeClusters返回参数结构体
  *
- * @method string getMsg() 获取是否成功
- * @method void setMsg(string $Msg) 设置是否成功
+ * @method integer getTotalCount() 获取当前条件下的总记录数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTotalCount(integer $TotalCount) 设置当前条件下的总记录数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getClusters() 获取符合条件的实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setClusters(array $Clusters) 设置符合条件的实例列表
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DeleteStrategyResponse extends AbstractModel
+class DescribeClustersResponse extends AbstractModel
 {
     /**
-     * @var string 是否成功
+     * @var integer 当前条件下的总记录数
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Msg;
+    public $TotalCount;
+
+    /**
+     * @var array 符合条件的实例列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Clusters;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -38,7 +51,10 @@ class DeleteStrategyResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Msg 是否成功
+     * @param integer $TotalCount 当前条件下的总记录数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $Clusters 符合条件的实例列表
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -54,8 +70,17 @@ class DeleteStrategyResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Msg",$param) and $param["Msg"] !== null) {
-            $this->Msg = $param["Msg"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("Clusters",$param) and $param["Clusters"] !== null) {
+            $this->Clusters = [];
+            foreach ($param["Clusters"] as $key => $value){
+                $obj = new Cluster();
+                $obj->deserialize($value);
+                array_push($this->Clusters, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

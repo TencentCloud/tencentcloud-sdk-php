@@ -140,6 +140,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsDeserializationAnalysis(integer $IsDeserializationAnalysis) 设置是否开启反序列化检测（0-关闭，1-开启）
  * @method string getToken() 获取业务系统鉴权 token
  * @method void setToken(string $Token) 设置业务系统鉴权 token
+ * @method integer getUrlLongSegmentThreshold() 获取URL长分段收敛阈值
+ * @method void setUrlLongSegmentThreshold(integer $UrlLongSegmentThreshold) 设置URL长分段收敛阈值
+ * @method integer getUrlNumberSegmentThreshold() 获取URL数字分段收敛阈值
+ * @method void setUrlNumberSegmentThreshold(integer $UrlNumberSegmentThreshold) 设置URL数字分段收敛阈值
  */
 class ApmInstanceDetail extends AbstractModel
 {
@@ -420,6 +424,16 @@ class ApmInstanceDetail extends AbstractModel
     public $Token;
 
     /**
+     * @var integer URL长分段收敛阈值
+     */
+    public $UrlLongSegmentThreshold;
+
+    /**
+     * @var integer URL数字分段收敛阈值
+     */
+    public $UrlNumberSegmentThreshold;
+
+    /**
      * @param string $InstanceId 业务系统 ID
      * @param string $Name 业务系统名
      * @param string $Description 业务系统描述信息
@@ -480,6 +494,8 @@ class ApmInstanceDetail extends AbstractModel
      * @param integer $IsWebshellBackdoorAnalysis 是否开启Webshell后门检测（0-关闭，1-开启）
      * @param integer $IsDeserializationAnalysis 是否开启反序列化检测（0-关闭，1-开启）
      * @param string $Token 业务系统鉴权 token
+     * @param integer $UrlLongSegmentThreshold URL长分段收敛阈值
+     * @param integer $UrlNumberSegmentThreshold URL数字分段收敛阈值
      */
     function __construct()
     {
@@ -713,6 +729,14 @@ class ApmInstanceDetail extends AbstractModel
 
         if (array_key_exists("Token",$param) and $param["Token"] !== null) {
             $this->Token = $param["Token"];
+        }
+
+        if (array_key_exists("UrlLongSegmentThreshold",$param) and $param["UrlLongSegmentThreshold"] !== null) {
+            $this->UrlLongSegmentThreshold = $param["UrlLongSegmentThreshold"];
+        }
+
+        if (array_key_exists("UrlNumberSegmentThreshold",$param) and $param["UrlNumberSegmentThreshold"] !== null) {
+            $this->UrlNumberSegmentThreshold = $param["UrlNumberSegmentThreshold"];
         }
     }
 }

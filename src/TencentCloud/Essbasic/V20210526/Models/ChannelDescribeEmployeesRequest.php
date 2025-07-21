@@ -54,10 +54,8 @@ use TencentCloud\Common\AbstractModel;
   <li>Key:**"StaffOpenId"**，Values: **["OpenId1","OpenId2",...]**, 根据第三方系统用户OpenId查询员工</li>
 </ul>
 注: `同名字的Key的过滤条件会冲突,  只能填写一个`
- * @method integer getOffset() 获取指定分页返回第几页的数据，如果不传默认返回第一页。
-页码从 0 开始，即首页为 0，最大20000。
- * @method void setOffset(integer $Offset) 设置指定分页返回第几页的数据，如果不传默认返回第一页。
-页码从 0 开始，即首页为 0，最大20000。
+ * @method integer getOffset() 获取偏移量:从 0 开始，最大20000。
+ * @method void setOffset(integer $Offset) 设置偏移量:从 0 开始，最大20000。
  * @method UserInfo getOperator() 获取暂未开放
  * @method void setOperator(UserInfo $Operator) 设置暂未开放
  */
@@ -93,8 +91,7 @@ class ChannelDescribeEmployeesRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var integer 指定分页返回第几页的数据，如果不传默认返回第一页。
-页码从 0 开始，即首页为 0，最大20000。
+     * @var integer 偏移量:从 0 开始，最大20000。
      */
     public $Offset;
 
@@ -122,8 +119,7 @@ class ChannelDescribeEmployeesRequest extends AbstractModel
   <li>Key:**"StaffOpenId"**，Values: **["OpenId1","OpenId2",...]**, 根据第三方系统用户OpenId查询员工</li>
 </ul>
 注: `同名字的Key的过滤条件会冲突,  只能填写一个`
-     * @param integer $Offset 指定分页返回第几页的数据，如果不传默认返回第一页。
-页码从 0 开始，即首页为 0，最大20000。
+     * @param integer $Offset 偏移量:从 0 开始，最大20000。
      * @param UserInfo $Operator 暂未开放
      */
     function __construct()

@@ -21,17 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * DescribeInstanceList返回参数结构体
  *
  * @method array getInstanceSet() 获取实例列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceSet(array $InstanceSet) 设置实例列表
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getTotalCount() 获取列表总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTotalCount(integer $TotalCount) 设置列表总数
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getSystemAccessEnabled() 获取是否支持系统域名接入：true支持；false不支持
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSystemAccessEnabled(boolean $SystemAccessEnabled) 设置是否支持系统域名接入：true支持；false不支持
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -39,19 +33,16 @@ class DescribeInstanceListResponse extends AbstractModel
 {
     /**
      * @var array 实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceSet;
 
     /**
      * @var integer 列表总数
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TotalCount;
 
     /**
      * @var boolean 是否支持系统域名接入：true支持；false不支持
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SystemAccessEnabled;
 
@@ -62,11 +53,8 @@ class DescribeInstanceListResponse extends AbstractModel
 
     /**
      * @param array $InstanceSet 实例列表
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalCount 列表总数
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $SystemAccessEnabled 是否支持系统域名接入：true支持；false不支持
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

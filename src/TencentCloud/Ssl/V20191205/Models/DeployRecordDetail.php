@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) 设置部署的TCB地域
  * @method array getUrl() 获取部署CLB监听器的Url
  * @method void setUrl(array $Url) 设置部署CLB监听器的Url
+ * @method string getAlgorithm() 获取当前部署证书加密算法
+ * @method void setAlgorithm(string $Algorithm) 设置当前部署证书加密算法
+ * @method string getOldAlgorithm() 获取原证书加密算法
+ * @method void setOldAlgorithm(string $OldAlgorithm) 设置原证书加密算法
  */
 class DeployRecordDetail extends AbstractModel
 {
@@ -178,6 +182,16 @@ class DeployRecordDetail extends AbstractModel
     public $Url;
 
     /**
+     * @var string 当前部署证书加密算法
+     */
+    public $Algorithm;
+
+    /**
+     * @var string 原证书加密算法
+     */
+    public $OldAlgorithm;
+
+    /**
      * @param integer $Id 部署记录详情ID
      * @param string $CertId 部署证书ID
      * @param string $OldCertId 原绑定证书ID
@@ -200,6 +214,8 @@ class DeployRecordDetail extends AbstractModel
      * @param string $TCBType 部署的TCB类型
      * @param string $Region 部署的TCB地域
      * @param array $Url 部署CLB监听器的Url
+     * @param string $Algorithm 当前部署证书加密算法
+     * @param string $OldAlgorithm 原证书加密算法
      */
     function __construct()
     {
@@ -300,6 +316,14 @@ class DeployRecordDetail extends AbstractModel
 
         if (array_key_exists("Url",$param) and $param["Url"] !== null) {
             $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("Algorithm",$param) and $param["Algorithm"] !== null) {
+            $this->Algorithm = $param["Algorithm"];
+        }
+
+        if (array_key_exists("OldAlgorithm",$param) and $param["OldAlgorithm"] !== null) {
+            $this->OldAlgorithm = $param["OldAlgorithm"];
         }
     }
 }

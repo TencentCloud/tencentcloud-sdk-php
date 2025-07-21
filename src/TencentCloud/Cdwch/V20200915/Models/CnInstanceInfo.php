@@ -21,105 +21,73 @@ use TencentCloud\Common\AbstractModel;
  * 云原生实例详情
  *
  * @method integer getID() 获取ID值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setID(integer $ID) 设置ID值
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceType() 获取cdwch-cn或者其他
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceType(string $InstanceType) 设置cdwch-cn或者其他
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceName() 获取cdwch-cn或者其他
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceName(string $InstanceName) 设置cdwch-cn或者其他
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取Running
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置Running
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatusDesc() 获取运行中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatusDesc(string $StatusDesc) 设置运行中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method InstanceStateInfo getInstanceStateInfo() 获取无
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceStateInfo(InstanceStateInfo $InstanceStateInfo) 设置无
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstanceID() 获取-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstanceID(string $InstanceID) 设置-
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getResources() 获取无
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResources(array $Resources) 设置无
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class CnInstanceInfo extends AbstractModel
 {
     /**
      * @var integer ID值
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ID;
 
     /**
      * @var string cdwch-cn或者其他
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceType;
 
     /**
      * @var string cdwch-cn或者其他
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceName;
 
     /**
      * @var string Running
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var string 运行中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StatusDesc;
 
     /**
      * @var InstanceStateInfo 无
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceStateInfo;
 
     /**
      * @var string -
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $InstanceID;
 
     /**
      * @var array 无
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Resources;
 
     /**
      * @param integer $ID ID值
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceType cdwch-cn或者其他
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceName cdwch-cn或者其他
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status Running
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StatusDesc 运行中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param InstanceStateInfo $InstanceStateInfo 无
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InstanceID -
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Resources 无
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

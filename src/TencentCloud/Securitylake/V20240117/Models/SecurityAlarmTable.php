@@ -105,9 +105,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSdlId() 获取实例id
  * @method void setSdlId(string $SdlId) 设置实例id
  * @method array getRichCustomInfos() 获取自定义富化字段信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRichCustomInfos(array $RichCustomInfos) 设置自定义富化字段信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getAttackerIp() 获取攻击者ip
  * @method void setAttackerIp(string $AttackerIp) 设置攻击者ip
  * @method string getAttackerAsset() 获取攻击者资产ID
@@ -337,7 +335,6 @@ class SecurityAlarmTable extends AbstractModel
 
     /**
      * @var array 自定义富化字段信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RichCustomInfos;
 
@@ -420,7 +417,6 @@ class SecurityAlarmTable extends AbstractModel
      * @param string $HostAsset 主机资产
      * @param string $SdlId 实例id
      * @param array $RichCustomInfos 自定义富化字段信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AttackerIp 攻击者ip
      * @param string $AttackerAsset 攻击者资产ID
      * @param string $VictimIp 受害者ip

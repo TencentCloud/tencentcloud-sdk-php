@@ -420,6 +420,12 @@ HoaiMy
 1. dify-inputs-xxx 为dify的inputs变量
 2.  dify-inputs-user 为dify的user值
 3.  dify-inputs-conversation_id 为dify的conversation_id值
+ * @method float getTopP() 获取模型topP
+ * @method void setTopP(float $TopP) 设置模型topP
+ * @method integer getVadLevel() 获取vad的远场人声抑制能力（不会对asr识别效果造成影响），范围为[0, 3]，默认为0。推荐设置为2，有较好的远场人声抑制能力。
+ * @method void setVadLevel(integer $VadLevel) 设置vad的远场人声抑制能力（不会对asr识别效果造成影响），范围为[0, 3]，默认为0。推荐设置为2，有较好的远场人声抑制能力。
+ * @method ToneWordInfo getToneWord() 获取衔接语
+ * @method void setToneWord(ToneWordInfo $ToneWord) 设置衔接语
  */
 class CreateAICallRequest extends AbstractModel
 {
@@ -741,6 +747,21 @@ HoaiMy
     public $Variables;
 
     /**
+     * @var float 模型topP
+     */
+    public $TopP;
+
+    /**
+     * @var integer vad的远场人声抑制能力（不会对asr识别效果造成影响），范围为[0, 3]，默认为0。推荐设置为2，有较好的远场人声抑制能力。
+     */
+    public $VadLevel;
+
+    /**
+     * @var ToneWordInfo 衔接语
+     */
+    public $ToneWord;
+
+    /**
      * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param string $Callee 被叫号码
      * @param string $LLMType 模型接口协议类型，目前兼容四种协议类型：
@@ -941,6 +962,9 @@ HoaiMy
 1. dify-inputs-xxx 为dify的inputs变量
 2.  dify-inputs-user 为dify的user值
 3.  dify-inputs-conversation_id 为dify的conversation_id值
+     * @param float $TopP 模型topP
+     * @param integer $VadLevel vad的远场人声抑制能力（不会对asr识别效果造成影响），范围为[0, 3]，默认为0。推荐设置为2，有较好的远场人声抑制能力。
+     * @param ToneWordInfo $ToneWord 衔接语
      */
     function __construct()
     {
@@ -1089,6 +1113,19 @@ HoaiMy
                 $obj->deserialize($value);
                 array_push($this->Variables, $obj);
             }
+        }
+
+        if (array_key_exists("TopP",$param) and $param["TopP"] !== null) {
+            $this->TopP = $param["TopP"];
+        }
+
+        if (array_key_exists("VadLevel",$param) and $param["VadLevel"] !== null) {
+            $this->VadLevel = $param["VadLevel"];
+        }
+
+        if (array_key_exists("ToneWord",$param) and $param["ToneWord"] !== null) {
+            $this->ToneWord = new ToneWordInfo();
+            $this->ToneWord->deserialize($param["ToneWord"]);
         }
     }
 }

@@ -169,6 +169,7 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\ReloadBalanceProxyNodeResponse ReloadBalanceProxyNode(Models\ReloadBalanceProxyNodeRequest $req) 本接口（ReloadBalanceProxyNode）用于负载均衡数据库代理。
  * @method Models\RemoveClusterSlaveZoneResponse RemoveClusterSlaveZone(Models\RemoveClusterSlaveZoneRequest $req) 本接口（RemoveClusterSlaveZone）用于关闭集群多可用区部署。
  * @method Models\RenewClustersResponse RenewClusters(Models\RenewClustersRequest $req) 续费集群
+ * @method Models\ReplayInstanceAuditLogResponse ReplayInstanceAuditLog(Models\ReplayInstanceAuditLogRequest $req) 回放实例审计日志
  * @method Models\ResetAccountPasswordResponse ResetAccountPassword(Models\ResetAccountPasswordRequest $req) 本接口（ResetAccountPassword）用于修改数据库账号密码。
  * @method Models\RestartInstanceResponse RestartInstance(Models\RestartInstanceRequest $req) 本接口（RestartInstance）用于重启实例。
  * @method Models\ResumeServerlessResponse ResumeServerless(Models\ResumeServerlessRequest $req) 本接口（ResumeServerless）用于恢复 serverless 集群（启动暂停的集群）。

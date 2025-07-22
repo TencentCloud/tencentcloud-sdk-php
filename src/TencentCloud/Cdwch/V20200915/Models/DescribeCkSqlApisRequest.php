@@ -46,8 +46,8 @@ RevokeClusterUser:解绑cluster用户
 DeleteSystemUser:删除系统用户 —— 必须所有cluster先解绑
 GetUserOptionMessages:获取用户配置备注信息
 GET_USER_CONFIGS:获取用户配置列表  QUOTA、PROFILE、POLICY
- * @method string getCluster() 获取集群名称，GET_SYSTEM_USERS，GET_PRIVILEGE_USERS，GET_CLUSTER_DATABASES，GET_CLUSTER_TABLES 必填
- * @method void setCluster(string $Cluster) 设置集群名称，GET_SYSTEM_USERS，GET_PRIVILEGE_USERS，GET_CLUSTER_DATABASES，GET_CLUSTER_TABLES 必填
+ * @method string getCluster() 获取集群名称，当ApiType取值为GET_SYSTEM_USERS，GET_PRIVILEGE_USERS，GET_CLUSTER_DATABASES，GET_CLUSTER_TABLES 时，此参数必填
+ * @method void setCluster(string $Cluster) 设置集群名称，当ApiType取值为GET_SYSTEM_USERS，GET_PRIVILEGE_USERS，GET_CLUSTER_DATABASES，GET_CLUSTER_TABLES 时，此参数必填
  * @method string getUserName() 获取用户名称，api与user相关的必填
  * @method void setUserName(string $UserName) 设置用户名称，api与user相关的必填
  * @method string getUserType() 获取账户的类型
@@ -77,7 +77,7 @@ GET_USER_CONFIGS:获取用户配置列表  QUOTA、PROFILE、POLICY
     public $ApiType;
 
     /**
-     * @var string 集群名称，GET_SYSTEM_USERS，GET_PRIVILEGE_USERS，GET_CLUSTER_DATABASES，GET_CLUSTER_TABLES 必填
+     * @var string 集群名称，当ApiType取值为GET_SYSTEM_USERS，GET_PRIVILEGE_USERS，GET_CLUSTER_DATABASES，GET_CLUSTER_TABLES 时，此参数必填
      */
     public $Cluster;
 
@@ -105,7 +105,7 @@ RevokeClusterUser:解绑cluster用户
 DeleteSystemUser:删除系统用户 —— 必须所有cluster先解绑
 GetUserOptionMessages:获取用户配置备注信息
 GET_USER_CONFIGS:获取用户配置列表  QUOTA、PROFILE、POLICY
-     * @param string $Cluster 集群名称，GET_SYSTEM_USERS，GET_PRIVILEGE_USERS，GET_CLUSTER_DATABASES，GET_CLUSTER_TABLES 必填
+     * @param string $Cluster 集群名称，当ApiType取值为GET_SYSTEM_USERS，GET_PRIVILEGE_USERS，GET_CLUSTER_DATABASES，GET_CLUSTER_TABLES 时，此参数必填
      * @param string $UserName 用户名称，api与user相关的必填
      * @param string $UserType 账户的类型
      */

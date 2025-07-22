@@ -80,8 +80,8 @@ OPEN：公网属性， INTERNAL：内网属性。
 注：备可用区是主可用区故障后，需要承载流量的可用区。可通过 [DescribeResources](https://cloud.tencent.com/document/api/214/70213) 接口查询一个地域的主/备可用区的列表。【如果您需要体验该功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)】
  * @method string getEipAddressId() 获取EIP 的唯一 ID，可以通过 [DescribeAddresses](https://cloud.tencent.com/document/product/215/16702) 接口查询。形如：eip-qhx8udkc，仅适用于内网负载均衡绑定EIP。
  * @method void setEipAddressId(string $EipAddressId) 设置EIP 的唯一 ID，可以通过 [DescribeAddresses](https://cloud.tencent.com/document/product/215/16702) 接口查询。形如：eip-qhx8udkc，仅适用于内网负载均衡绑定EIP。
- * @method boolean getLoadBalancerPassToTarget() 获取Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。
- * @method void setLoadBalancerPassToTarget(boolean $LoadBalancerPassToTarget) 设置Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。
+ * @method boolean getLoadBalancerPassToTarget() 获取Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。IPv6 CLB安全组默认放通，不需要传此参数。
+ * @method void setLoadBalancerPassToTarget(boolean $LoadBalancerPassToTarget) 设置Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。IPv6 CLB安全组默认放通，不需要传此参数。
  * @method boolean getDynamicVip() 获取创建域名化负载均衡。
  * @method void setDynamicVip(boolean $DynamicVip) 设置创建域名化负载均衡。
  * @method string getEgress() 获取网络出口
@@ -222,7 +222,7 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $EipAddressId;
 
     /**
-     * @var boolean Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。
+     * @var boolean Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。IPv6 CLB安全组默认放通，不需要传此参数。
      */
     public $LoadBalancerPassToTarget;
 
@@ -282,7 +282,7 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @param string $SlaveZoneId 仅适用于公网且IP版本为IPv4的负载均衡。设置跨可用区容灾时的备可用区ID，可用区 ID 和名称均支持，例如 100001 或 ap-guangzhou-1
 注：备可用区是主可用区故障后，需要承载流量的可用区。可通过 [DescribeResources](https://cloud.tencent.com/document/api/214/70213) 接口查询一个地域的主/备可用区的列表。【如果您需要体验该功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)】
      * @param string $EipAddressId EIP 的唯一 ID，可以通过 [DescribeAddresses](https://cloud.tencent.com/document/product/215/16702) 接口查询。形如：eip-qhx8udkc，仅适用于内网负载均衡绑定EIP。
-     * @param boolean $LoadBalancerPassToTarget Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。
+     * @param boolean $LoadBalancerPassToTarget Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。IPv6 CLB安全组默认放通，不需要传此参数。
      * @param boolean $DynamicVip 创建域名化负载均衡。
      * @param string $Egress 网络出口
      * @param LBChargePrepaid $LBChargePrepaid 负载均衡实例的预付费相关属性，API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)

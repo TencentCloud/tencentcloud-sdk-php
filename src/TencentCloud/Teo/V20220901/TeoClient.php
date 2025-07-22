@@ -108,6 +108,7 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
  * @method Models\DescribeDDoSAttackDataResponse DescribeDDoSAttackData(Models\DescribeDDoSAttackDataRequest $req) 本接口（DescribeDDoSAttackData）用于查询DDoS攻击时序数据。
  * @method Models\DescribeDDoSAttackEventResponse DescribeDDoSAttackEvent(Models\DescribeDDoSAttackEventRequest $req) 本接口（DescribeDDoSAttackEvent）用于查询DDoS攻击事件列表。
  * @method Models\DescribeDDoSAttackTopDataResponse DescribeDDoSAttackTopData(Models\DescribeDDoSAttackTopDataRequest $req) 本接口（DescribeDDoSAttackTopData）用于查询DDoS攻击Top数据。
+ * @method Models\DescribeDDoSProtectionResponse DescribeDDoSProtection(Models\DescribeDDoSProtectionRequest $req) 获取站点的独立 DDoS 防护信息。
  * @method Models\DescribeDefaultCertificatesResponse DescribeDefaultCertificates(Models\DescribeDefaultCertificatesRequest $req) 查询默认证书列表
  * @method Models\DescribeDeployHistoryResponse DescribeDeployHistory(Models\DescribeDeployHistoryRequest $req) 在版本管理模式下，用于查询生产/测试环境的版本发布历史。版本管理功能内测中，当前仅白名单开放。
  * @method Models\DescribeDnsRecordsResponse DescribeDnsRecords(Models\DescribeDnsRecordsRequest $req) 您可以用过本接口查看站点下的 DNS 记录信息，包括 DNS 记录名、记录类型以及记录内容等信息，支持指定过滤条件查询对应的 DNS 记录信息。
@@ -197,6 +198,7 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
  * @method Models\ModifyApplicationProxyStatusResponse ModifyApplicationProxyStatus(Models\ModifyApplicationProxyStatusRequest $req) 本接口为旧版，如需调用请尽快迁移至新版，详情请参考 [修改四层代理实例状态](https://cloud.tencent.com/document/product/1552/103408) 。
  * @method Models\ModifyContentIdentifierResponse ModifyContentIdentifier(Models\ModifyContentIdentifierRequest $req) 修改内容标识符，仅支持修改描述。该功能仅白名单开放。
  * @method Models\ModifyCustomErrorPageResponse ModifyCustomErrorPage(Models\ModifyCustomErrorPageRequest $req) 修改自定义错误页面。
+ * @method Models\ModifyDDoSProtectionResponse ModifyDDoSProtection(Models\ModifyDDoSProtectionRequest $req) 修改站点的独立 DDoS 防护。
  * @method Models\ModifyDnsRecordsResponse ModifyDnsRecords(Models\ModifyDnsRecordsRequest $req) 您可以通过本接口批量修改 DNS 记录。
  * @method Models\ModifyDnsRecordsStatusResponse ModifyDnsRecordsStatus(Models\ModifyDnsRecordsStatusRequest $req) 您可以通过本接口批量修改 DNS 记录的状态，批量对记录进行开启和停用。
  * @method Models\ModifyFunctionResponse ModifyFunction(Models\ModifyFunctionRequest $req) 修改边缘函数，支持修改函数的内容及描述信息，修改且重新部署后，函数立刻生效。

@@ -204,6 +204,7 @@ use TencentCloud\Cdb\V20170320\Models as Models;
 说明：仅专属集群可调用，该接口即将下线。
  * @method Models\ModifyRemoteBackupConfigResponse ModifyRemoteBackupConfig(Models\ModifyRemoteBackupConfigRequest $req) 本接口(ModifyRemoteBackupConfig)用于修改数据库异地备份配置信息。
  * @method Models\ModifyRoGroupInfoResponse ModifyRoGroupInfo(Models\ModifyRoGroupInfoRequest $req) 本接口（ModifyRoGroupInfo）用于更新云数据库只读组的信息。包括设置实例延迟超限剔除策略，设置只读实例读权重，设置复制延迟时间等。
+ * @method Models\ModifyRoGroupVipVportResponse ModifyRoGroupVipVport(Models\ModifyRoGroupVipVportRequest $req) 该接口（ModifyRoGroupVipVport）用于修改Ro组的vip和vport。
  * @method Models\ModifyTimeWindowResponse ModifyTimeWindow(Models\ModifyTimeWindowRequest $req) 本接口(ModifyTimeWindow)用于更新云数据库实例的维护时间窗口。
  * @method Models\OfflineIsolatedInstancesResponse OfflineIsolatedInstances(Models\OfflineIsolatedInstancesRequest $req) 本接口(OfflineIsolatedInstances)用于立即下线隔离状态的云数据库实例。进行操作的实例状态必须为隔离状态，即通过 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口查询到 Status 值为 5 的实例。
 

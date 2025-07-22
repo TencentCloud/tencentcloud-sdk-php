@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyInstanceParam请求参数结构体
  *
- * @method array getInstanceIds() 获取实例短 ID 列表。
- * @method void setInstanceIds(array $InstanceIds) 设置实例短 ID 列表。
+ * @method array getInstanceIds() 获取实例 ID 列表。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+ * @method void setInstanceIds(array $InstanceIds) 设置实例 ID 列表。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
  * @method array getParamList() 获取要修改的参数列表。每一个元素是 Name 和 CurrentValue 的组合。Name 是参数名，CurrentValue 是要修改成的值。
  * @method void setParamList(array $ParamList) 设置要修改的参数列表。每一个元素是 Name 和 CurrentValue 的组合。Name 是参数名，CurrentValue 是要修改成的值。
- * @method integer getTemplateId() 获取模板id，ParamList和TemplateId必须至少传其中之一
- * @method void setTemplateId(integer $TemplateId) 设置模板id，ParamList和TemplateId必须至少传其中之一
+ * @method integer getTemplateId() 获取模板 ID，ParamList 和 TemplateId 必须至少传其中之一。可通过 [DescribeParamTemplateInfo](https://cloud.tencent.com/document/product/236/32660) 接口获取。
+ * @method void setTemplateId(integer $TemplateId) 设置模板 ID，ParamList 和 TemplateId 必须至少传其中之一。可通过 [DescribeParamTemplateInfo](https://cloud.tencent.com/document/product/236/32660) 接口获取。
  * @method integer getWaitSwitch() 获取执行参数调整任务的方式，默认为 0。支持值包括：0 - 立刻执行，1 - 时间窗执行；当该值为 1 时，每次只能传一个实例（InstanceIds数量为1）
  * @method void setWaitSwitch(integer $WaitSwitch) 设置执行参数调整任务的方式，默认为 0。支持值包括：0 - 立刻执行，1 - 时间窗执行；当该值为 1 时，每次只能传一个实例（InstanceIds数量为1）
  * @method boolean getNotSyncRo() 获取参数是否同步到主实例下的只读实例。true 为不同步，false 为同步。默认为 false。
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyInstanceParamRequest extends AbstractModel
 {
     /**
-     * @var array 实例短 ID 列表。
+     * @var array 实例 ID 列表。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public $InstanceIds;
 
@@ -46,7 +46,7 @@ class ModifyInstanceParamRequest extends AbstractModel
     public $ParamList;
 
     /**
-     * @var integer 模板id，ParamList和TemplateId必须至少传其中之一
+     * @var integer 模板 ID，ParamList 和 TemplateId 必须至少传其中之一。可通过 [DescribeParamTemplateInfo](https://cloud.tencent.com/document/product/236/32660) 接口获取。
      */
     public $TemplateId;
 
@@ -66,9 +66,9 @@ class ModifyInstanceParamRequest extends AbstractModel
     public $NotSyncDr;
 
     /**
-     * @param array $InstanceIds 实例短 ID 列表。
+     * @param array $InstanceIds 实例 ID 列表。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      * @param array $ParamList 要修改的参数列表。每一个元素是 Name 和 CurrentValue 的组合。Name 是参数名，CurrentValue 是要修改成的值。
-     * @param integer $TemplateId 模板id，ParamList和TemplateId必须至少传其中之一
+     * @param integer $TemplateId 模板 ID，ParamList 和 TemplateId 必须至少传其中之一。可通过 [DescribeParamTemplateInfo](https://cloud.tencent.com/document/product/236/32660) 接口获取。
      * @param integer $WaitSwitch 执行参数调整任务的方式，默认为 0。支持值包括：0 - 立刻执行，1 - 时间窗执行；当该值为 1 时，每次只能传一个实例（InstanceIds数量为1）
      * @param boolean $NotSyncRo 参数是否同步到主实例下的只读实例。true 为不同步，false 为同步。默认为 false。
      * @param boolean $NotSyncDr 参数是否同步到主实例下的灾备实例。true 为不同步，false 为同步。默认为 false。

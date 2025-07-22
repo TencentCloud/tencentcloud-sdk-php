@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * IKE配置（Internet Key Exchange，因特网密钥交换），IKE具有一套自我保护机制，用户配置网络安全协议
  *
- * @method string getPropoEncryAlgorithm() 获取加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，'SM4', 默认为3DES-CBC
- * @method void setPropoEncryAlgorithm(string $PropoEncryAlgorithm) 设置加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，'SM4', 默认为3DES-CBC
- * @method string getPropoAuthenAlgorithm() 获取认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为MD5
- * @method void setPropoAuthenAlgorithm(string $PropoAuthenAlgorithm) 设置认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为MD5
- * @method string getExchangeMode() 获取协商模式：可选值：'AGGRESSIVE', 'MAIN'，默认为MAIN
- * @method void setExchangeMode(string $ExchangeMode) 设置协商模式：可选值：'AGGRESSIVE', 'MAIN'，默认为MAIN
+ * @method string getPropoEncryAlgorithm() 获取加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC'，'SM4', 默认为3DES-CBC
+ * @method void setPropoEncryAlgorithm(string $PropoEncryAlgorithm) 设置加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC'，'SM4', 默认为3DES-CBC
+ * @method string getPropoAuthenAlgorithm() 获取认证算法：可选值：'MD5'，'SHA'，'SHA-256'，'SHA-512'， 默认为SHA。
+ * @method void setPropoAuthenAlgorithm(string $PropoAuthenAlgorithm) 设置认证算法：可选值：'MD5'，'SHA'，'SHA-256'，'SHA-512'， 默认为SHA。
+ * @method string getExchangeMode() 获取协商模式：可选值：'AGGRESSIVE'， 'MAIN'，默认为MAIN。
+ * @method void setExchangeMode(string $ExchangeMode) 设置协商模式：可选值：'AGGRESSIVE'， 'MAIN'，默认为MAIN。
  * @method string getLocalIdentity() 获取本端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
  * @method void setLocalIdentity(string $LocalIdentity) 设置本端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
  * @method string getRemoteIdentity() 获取对端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLocalFqdnName(string $LocalFqdnName) 设置本端标识，当LocalIdentity选为FQDN时，LocalFqdnName必填
  * @method string getRemoteFqdnName() 获取对端标识，当remoteIdentity选为FQDN时，RemoteFqdnName必填
  * @method void setRemoteFqdnName(string $RemoteFqdnName) 设置对端标识，当remoteIdentity选为FQDN时，RemoteFqdnName必填
- * @method string getDhGroupName() 获取DH group，指定IKE交换密钥时使用的DH组，可选值：'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', 'GROUP24'，
- * @method void setDhGroupName(string $DhGroupName) 设置DH group，指定IKE交换密钥时使用的DH组，可选值：'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', 'GROUP24'，
+ * @method string getDhGroupName() 获取DH group，指定IKE交换密钥时使用的DH组，可选值：'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', 'GROUP24'，默认是GROUP1。
+ * @method void setDhGroupName(string $DhGroupName) 设置DH group，指定IKE交换密钥时使用的DH组，可选值：'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', 'GROUP24'，默认是GROUP1。
  * @method integer getIKESaLifetimeSeconds() 获取IKE SA Lifetime，单位：秒，设置IKE SA的生存周期，取值范围：60-604800
  * @method void setIKESaLifetimeSeconds(integer $IKESaLifetimeSeconds) 设置IKE SA Lifetime，单位：秒，设置IKE SA的生存周期，取值范围：60-604800
  * @method string getIKEVersion() 获取IKE版本
@@ -48,17 +48,17 @@ use TencentCloud\Common\AbstractModel;
 class IKEOptionsSpecification extends AbstractModel
 {
     /**
-     * @var string 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，'SM4', 默认为3DES-CBC
+     * @var string 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC'，'SM4', 默认为3DES-CBC
      */
     public $PropoEncryAlgorithm;
 
     /**
-     * @var string 认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为MD5
+     * @var string 认证算法：可选值：'MD5'，'SHA'，'SHA-256'，'SHA-512'， 默认为SHA。
      */
     public $PropoAuthenAlgorithm;
 
     /**
-     * @var string 协商模式：可选值：'AGGRESSIVE', 'MAIN'，默认为MAIN
+     * @var string 协商模式：可选值：'AGGRESSIVE'， 'MAIN'，默认为MAIN。
      */
     public $ExchangeMode;
 
@@ -93,7 +93,7 @@ class IKEOptionsSpecification extends AbstractModel
     public $RemoteFqdnName;
 
     /**
-     * @var string DH group，指定IKE交换密钥时使用的DH组，可选值：'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', 'GROUP24'，
+     * @var string DH group，指定IKE交换密钥时使用的DH组，可选值：'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', 'GROUP24'，默认是GROUP1。
      */
     public $DhGroupName;
 
@@ -108,16 +108,16 @@ class IKEOptionsSpecification extends AbstractModel
     public $IKEVersion;
 
     /**
-     * @param string $PropoEncryAlgorithm 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', 'DES-CBC'，'SM4', 默认为3DES-CBC
-     * @param string $PropoAuthenAlgorithm 认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为MD5
-     * @param string $ExchangeMode 协商模式：可选值：'AGGRESSIVE', 'MAIN'，默认为MAIN
+     * @param string $PropoEncryAlgorithm 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC'，'SM4', 默认为3DES-CBC
+     * @param string $PropoAuthenAlgorithm 认证算法：可选值：'MD5'，'SHA'，'SHA-256'，'SHA-512'， 默认为SHA。
+     * @param string $ExchangeMode 协商模式：可选值：'AGGRESSIVE'， 'MAIN'，默认为MAIN。
      * @param string $LocalIdentity 本端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
      * @param string $RemoteIdentity 对端标识类型：可选值：'ADDRESS', 'FQDN'，默认为ADDRESS
      * @param string $LocalAddress 本端标识，当LocalIdentity选为ADDRESS时，LocalAddress必填。localAddress默认为vpn网关公网IP
      * @param string $RemoteAddress 对端标识，当RemoteIdentity选为ADDRESS时，RemoteAddress必填
      * @param string $LocalFqdnName 本端标识，当LocalIdentity选为FQDN时，LocalFqdnName必填
      * @param string $RemoteFqdnName 对端标识，当remoteIdentity选为FQDN时，RemoteFqdnName必填
-     * @param string $DhGroupName DH group，指定IKE交换密钥时使用的DH组，可选值：'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', 'GROUP24'，
+     * @param string $DhGroupName DH group，指定IKE交换密钥时使用的DH组，可选值：'GROUP1', 'GROUP2', 'GROUP5', 'GROUP14', 'GROUP24'，默认是GROUP1。
      * @param integer $IKESaLifetimeSeconds IKE SA Lifetime，单位：秒，设置IKE SA的生存周期，取值范围：60-604800
      * @param string $IKEVersion IKE版本
      */

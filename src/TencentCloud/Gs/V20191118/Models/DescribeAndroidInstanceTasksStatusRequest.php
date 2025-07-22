@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为 0
  * @method integer getLimit() 获取限制量，默认为20，最大值为100
  * @method void setLimit(integer $Limit) 设置限制量，默认为20，最大值为100
+ * @method integer getRecentDays() 获取时间范围限制，以天数为单位
+ * @method void setRecentDays(integer $RecentDays) 设置时间范围限制，以天数为单位
  */
 class DescribeAndroidInstanceTasksStatusRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeAndroidInstanceTasksStatusRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var integer 时间范围限制，以天数为单位
+     */
+    public $RecentDays;
+
+    /**
      * @param array $TaskIds 任务 ID 列表
      * @param array $Filter 条件过滤器
      * @param integer $Offset 偏移量，默认为 0
      * @param integer $Limit 限制量，默认为20，最大值为100
+     * @param integer $RecentDays 时间范围限制，以天数为单位
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class DescribeAndroidInstanceTasksStatusRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("RecentDays",$param) and $param["RecentDays"] !== null) {
+            $this->RecentDays = $param["RecentDays"];
         }
     }
 }

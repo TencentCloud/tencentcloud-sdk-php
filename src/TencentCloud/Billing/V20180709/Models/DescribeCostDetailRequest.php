@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
 1-表示需要， 0-表示不需要
  * @method string getMonth() 获取月份，格式为yyyy-mm，Month和BeginTime&EndTime必传一个，如果有传BeginTime&EndTime则Month字段无效。不能早于开通成本分析的月份，最多可拉取24个月内的数据。
  * @method void setMonth(string $Month) 设置月份，格式为yyyy-mm，Month和BeginTime&EndTime必传一个，如果有传BeginTime&EndTime则Month字段无效。不能早于开通成本分析的月份，最多可拉取24个月内的数据。
- * @method string getProductCode() 获取查询指定产品信息（暂时未开放获取）
- * @method void setProductCode(string $ProductCode) 设置查询指定产品信息（暂时未开放获取）
+ * @method string getProductCode() 获取查询指定产品信息
+ * @method void setProductCode(string $ProductCode) 设置查询指定产品信息
  * @method string getPayMode() 获取付费模式 prePay/postPay
  * @method void setPayMode(string $PayMode) 设置付费模式 prePay/postPay
  * @method string getResourceId() 获取查询指定资源信息
@@ -75,7 +75,7 @@ class DescribeCostDetailRequest extends AbstractModel
     public $Month;
 
     /**
-     * @var string 查询指定产品信息（暂时未开放获取）
+     * @var string 查询指定产品信息
      */
     public $ProductCode;
 
@@ -97,7 +97,7 @@ class DescribeCostDetailRequest extends AbstractModel
      * @param integer $NeedRecordNum 是否需要访问列表的总记录数，用于前端分页
 1-表示需要， 0-表示不需要
      * @param string $Month 月份，格式为yyyy-mm，Month和BeginTime&EndTime必传一个，如果有传BeginTime&EndTime则Month字段无效。不能早于开通成本分析的月份，最多可拉取24个月内的数据。
-     * @param string $ProductCode 查询指定产品信息（暂时未开放获取）
+     * @param string $ProductCode 查询指定产品信息
      * @param string $PayMode 付费模式 prePay/postPay
      * @param string $ResourceId 查询指定资源信息
      */

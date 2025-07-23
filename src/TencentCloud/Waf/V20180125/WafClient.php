@@ -155,7 +155,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\ModifyDomainPostActionResponse ModifyDomainPostAction(Models\ModifyDomainPostActionRequest $req) 修改域名投递状态
  * @method Models\ModifyDomainWhiteRuleResponse ModifyDomainWhiteRule(Models\ModifyDomainWhiteRuleRequest $req) 更改某一条规则
  * @method Models\ModifyDomainsCLSStatusResponse ModifyDomainsCLSStatus(Models\ModifyDomainsCLSStatusRequest $req) 修改域名列表的访问日志开关
- * @method Models\ModifyGenerateDealsResponse ModifyGenerateDeals(Models\ModifyGenerateDealsRequest $req) 提供给clb等使用的waf实例下单接口，目前只支持clb旗舰版实例的下单，该接口会进行入参校验，然后调用是否为收购用户，然后调用计费接口下单。目前只支持预付费下单，计费侧接口：https://tcb.woa.com/magical-brush/docs/754661947
+ * @method Models\ModifyGenerateDealsResponse ModifyGenerateDeals(Models\ModifyGenerateDealsRequest $req) 提供给clb等使用的waf实例下单接口，目前只支持clb旗舰版实例的下单，该接口会进行入参校验，然后调用是否为收购用户，然后调用计费接口下单。目前只支持预付费下单
  * @method Models\ModifyHostResponse ModifyHost(Models\ModifyHostRequest $req) 编辑负载均衡型WAF防护域名配置
  * @method Models\ModifyHostFlowModeResponse ModifyHostFlowMode(Models\ModifyHostFlowModeRequest $req) 设置负载均衡型WAF防护域名的流量模式，切换镜像模式和清洗模式
  * @method Models\ModifyHostModeResponse ModifyHostMode(Models\ModifyHostModeRequest $req) clb-waf设置防护域名防护状态

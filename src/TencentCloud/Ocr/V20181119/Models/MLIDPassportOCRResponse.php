@@ -34,34 +34,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIssuingCountry(string $IssuingCountry) 设置发行国（机读码区的解析结果）
  * @method string getNationality() 获取国家地区代码（机读码区的解析结果）
  * @method void setNationality(string $Nationality) 设置国家地区代码（机读码区的解析结果）
- * @method array getWarn() 获取告警码：
--9103	证照翻拍告警
--9102	证照复印件告警（包括黑白复印件、彩色复印件）
--9106       证件遮挡告警
- * @method void setWarn(array $Warn) 设置告警码：
--9103	证照翻拍告警
--9102	证照复印件告警（包括黑白复印件、彩色复印件）
--9106       证件遮挡告警
+ * @method array getWarn() 获取该字段已废弃， 将固定返回空数组，不建议使用。
+
+ * @method void setWarn(array $Warn) 设置该字段已废弃， 将固定返回空数组，不建议使用。
+
  * @method string getImage() 获取证件中的人像图片base64
  * @method void setImage(string $Image) 设置证件中的人像图片base64
- * @method string getAdvancedInfo() 获取扩展字段:
-{
-    ID:{
-        Confidence:0.9999
-    },
-    Name:{
-        Confidence:0.9996
-    }
-}
- * @method void setAdvancedInfo(string $AdvancedInfo) 设置扩展字段:
-{
-    ID:{
-        Confidence:0.9999
-    },
-    Name:{
-        Confidence:0.9996
-    }
-}
+ * @method string getAdvancedInfo() 获取该字段已废弃， 将固定返回"1"，不建议使用。
+
+ * @method void setAdvancedInfo(string $AdvancedInfo) 设置该字段已废弃， 将固定返回"1"，不建议使用。
+
  * @method string getCodeSet() 获取最下方第一行 MRZ Code 序列
  * @method void setCodeSet(string $CodeSet) 设置最下方第一行 MRZ Code 序列
  * @method string getCodeCrc() 获取最下方第二行 MRZ Code 序列
@@ -135,10 +117,9 @@ class MLIDPassportOCRResponse extends AbstractModel
     public $Nationality;
 
     /**
-     * @var array 告警码：
--9103	证照翻拍告警
--9102	证照复印件告警（包括黑白复印件、彩色复印件）
--9106       证件遮挡告警
+     * @var array 该字段已废弃， 将固定返回空数组，不建议使用。
+
+     * @deprecated
      */
     public $Warn;
 
@@ -148,15 +129,9 @@ class MLIDPassportOCRResponse extends AbstractModel
     public $Image;
 
     /**
-     * @var string 扩展字段:
-{
-    ID:{
-        Confidence:0.9999
-    },
-    Name:{
-        Confidence:0.9996
-    }
-}
+     * @var string 该字段已废弃， 将固定返回"1"，不建议使用。
+
+     * @deprecated
      */
     public $AdvancedInfo;
 
@@ -217,20 +192,11 @@ class MLIDPassportOCRResponse extends AbstractModel
      * @param string $DateOfExpiration 有效期（机读码区的解析结果）
      * @param string $IssuingCountry 发行国（机读码区的解析结果）
      * @param string $Nationality 国家地区代码（机读码区的解析结果）
-     * @param array $Warn 告警码：
--9103	证照翻拍告警
--9102	证照复印件告警（包括黑白复印件、彩色复印件）
--9106       证件遮挡告警
+     * @param array $Warn 该字段已废弃， 将固定返回空数组，不建议使用。
+
      * @param string $Image 证件中的人像图片base64
-     * @param string $AdvancedInfo 扩展字段:
-{
-    ID:{
-        Confidence:0.9999
-    },
-    Name:{
-        Confidence:0.9996
-    }
-}
+     * @param string $AdvancedInfo 该字段已废弃， 将固定返回"1"，不建议使用。
+
      * @param string $CodeSet 最下方第一行 MRZ Code 序列
      * @param string $CodeCrc 最下方第二行 MRZ Code 序列
      * @param string $Surname 姓（机读码区的解析结果）

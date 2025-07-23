@@ -95,6 +95,7 @@ class TreatmentRecord extends AbstractModel
 
     /**
      * @var string 现病史
+     * @deprecated
      */
     public $DiseasePresent;
 

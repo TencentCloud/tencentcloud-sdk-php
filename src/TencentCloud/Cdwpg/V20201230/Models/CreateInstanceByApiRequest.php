@@ -80,6 +80,7 @@ class CreateInstanceByApiRequest extends AbstractModel
 
     /**
      * @var Tag 废弃，用TagItems
+     * @deprecated
      */
     public $Tags;
 

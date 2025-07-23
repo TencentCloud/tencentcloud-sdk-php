@@ -64,24 +64,8 @@ use TencentCloud\Common\AbstractModel;
 -9107 证件反光告警
 -9108 证件模糊告警
 -9109 告警能力未开通
- * @method string getAdvancedInfo() 获取字段置信度：
-{
-    "ID": {
-        "Confidence": 0.9999
-    },
-    "ThaiName": {
-        "Confidence": 0.9996
-    }
-}
- * @method void setAdvancedInfo(string $AdvancedInfo) 设置字段置信度：
-{
-    "ID": {
-        "Confidence": 0.9999
-    },
-    "ThaiName": {
-        "Confidence": 0.9996
-    }
-}
+ * @method string getAdvancedInfo() 获取该字段已废弃， 将固定返回"1"，不建议使用。 
+ * @method void setAdvancedInfo(string $AdvancedInfo) 设置该字段已废弃， 将固定返回"1"，不建议使用。 
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -174,15 +158,8 @@ class RecognizeThaiIDCardOCRResponse extends AbstractModel
     public $WarnCardInfos;
 
     /**
-     * @var string 字段置信度：
-{
-    "ID": {
-        "Confidence": 0.9999
-    },
-    "ThaiName": {
-        "Confidence": 0.9996
-    }
-}
+     * @var string 该字段已废弃， 将固定返回"1"，不建议使用。 
+     * @deprecated
      */
     public $AdvancedInfo;
 
@@ -214,15 +191,7 @@ class RecognizeThaiIDCardOCRResponse extends AbstractModel
 -9107 证件反光告警
 -9108 证件模糊告警
 -9109 告警能力未开通
-     * @param string $AdvancedInfo 字段置信度：
-{
-    "ID": {
-        "Confidence": 0.9999
-    },
-    "ThaiName": {
-        "Confidence": 0.9996
-    }
-}
+     * @param string $AdvancedInfo 该字段已废弃， 将固定返回"1"，不建议使用。 
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

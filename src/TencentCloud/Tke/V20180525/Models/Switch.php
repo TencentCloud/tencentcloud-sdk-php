@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 集群日志开关集合
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method SwitchInfo getAudit() 获取审计开关的详细信息
  * @method void setAudit(SwitchInfo $Audit) 设置审计开关的详细信息
+ * @method string getClusterId() 获取集群ID
+ * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method SwitchInfo getEvent() 获取事件开关的详细信息
  * @method void setEvent(SwitchInfo $Event) 设置事件开关的详细信息
  * @method SwitchInfo getLog() 获取普通日志的详细信息
@@ -34,14 +34,14 @@ use TencentCloud\Common\AbstractModel;
 class Switch extends AbstractModel
 {
     /**
-     * @var string 集群ID
-     */
-    public $ClusterId;
-
-    /**
      * @var SwitchInfo 审计开关的详细信息
      */
     public $Audit;
+
+    /**
+     * @var string 集群ID
+     */
+    public $ClusterId;
 
     /**
      * @var SwitchInfo 事件开关的详细信息
@@ -59,8 +59,8 @@ class Switch extends AbstractModel
     public $MasterLog;
 
     /**
-     * @param string $ClusterId 集群ID
      * @param SwitchInfo $Audit 审计开关的详细信息
+     * @param string $ClusterId 集群ID
      * @param SwitchInfo $Event 事件开关的详细信息
      * @param SwitchInfo $Log 普通日志的详细信息
      * @param SwitchInfo $MasterLog master 日志详细信息
@@ -78,13 +78,13 @@ class Switch extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
-        }
-
         if (array_key_exists("Audit",$param) and $param["Audit"] !== null) {
             $this->Audit = new SwitchInfo();
             $this->Audit->deserialize($param["Audit"]);
+        }
+
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
         }
 
         if (array_key_exists("Event",$param) and $param["Event"] !== null) {

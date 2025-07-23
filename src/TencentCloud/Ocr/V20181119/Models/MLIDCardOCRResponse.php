@@ -28,32 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAddress(string $Address) 设置地址
  * @method string getSex() 获取性别
  * @method void setSex(string $Sex) 设置性别
- * @method array getWarn() 获取告警码
--9103	证照翻拍告警
--9102	证照复印件告警
--9106       证件遮挡告警
--9107       模糊图片告警
- * @method void setWarn(array $Warn) 设置告警码
--9103	证照翻拍告警
--9102	证照复印件告警
--9106       证件遮挡告警
--9107       模糊图片告警
+ * @method array getWarn() 获取该字段已废弃， 将固定返回空数组，不建议使用。
+ * @method void setWarn(array $Warn) 设置该字段已废弃， 将固定返回空数组，不建议使用。
  * @method string getImage() 获取证件图片
  * @method void setImage(string $Image) 设置证件图片
- * @method string getAdvancedInfo() 获取此字段为扩展字段。
-返回字段识别结果的置信度，格式如下
-{
-  字段名:{
-    Confidence:0.9999
-  }
-}
- * @method void setAdvancedInfo(string $AdvancedInfo) 设置此字段为扩展字段。
-返回字段识别结果的置信度，格式如下
-{
-  字段名:{
-    Confidence:0.9999
-  }
-}
+ * @method string getAdvancedInfo() 获取该字段已废弃， 将固定返回"1"，不建议使用。
+ * @method void setAdvancedInfo(string $AdvancedInfo) 设置该字段已废弃， 将固定返回"1"，不建议使用。
  * @method string getType() 获取证件类型
 MyKad  身份证
 MyPR    永居证
@@ -116,11 +96,7 @@ class MLIDCardOCRResponse extends AbstractModel
     public $Sex;
 
     /**
-     * @var array 告警码
--9103	证照翻拍告警
--9102	证照复印件告警
--9106       证件遮挡告警
--9107       模糊图片告警
+     * @var array 该字段已废弃， 将固定返回空数组，不建议使用。
      * @deprecated
      */
     public $Warn;
@@ -131,13 +107,8 @@ class MLIDCardOCRResponse extends AbstractModel
     public $Image;
 
     /**
-     * @var string 此字段为扩展字段。
-返回字段识别结果的置信度，格式如下
-{
-  字段名:{
-    Confidence:0.9999
-  }
-}
+     * @var string 该字段已废弃， 将固定返回"1"，不建议使用。
+     * @deprecated
      */
     public $AdvancedInfo;
 
@@ -185,19 +156,9 @@ MyKid 儿童卡
      * @param string $Name 姓名
      * @param string $Address 地址
      * @param string $Sex 性别
-     * @param array $Warn 告警码
--9103	证照翻拍告警
--9102	证照复印件告警
--9106       证件遮挡告警
--9107       模糊图片告警
+     * @param array $Warn 该字段已废弃， 将固定返回空数组，不建议使用。
      * @param string $Image 证件图片
-     * @param string $AdvancedInfo 此字段为扩展字段。
-返回字段识别结果的置信度，格式如下
-{
-  字段名:{
-    Confidence:0.9999
-  }
-}
+     * @param string $AdvancedInfo 该字段已废弃， 将固定返回"1"，不建议使用。
      * @param string $Type 证件类型
 MyKad  身份证
 MyPR    永居证

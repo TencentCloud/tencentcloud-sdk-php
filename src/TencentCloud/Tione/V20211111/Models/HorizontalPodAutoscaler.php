@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 "gpu-util": GPU利用率。范围{10, 100}      "cpu-util": CPU利用率。范围{10, 100}	      "memory-util": 内存利用率。范围{10, 100}      "service-qps": 单个实例QPS值。范围{1, 5000}
 "concurrency-util":单个实例请求数量值。范围{1,100000}
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getScaleUpStabilizationWindowSeconds() 获取扩容观察期，单位秒
+ * @method void setScaleUpStabilizationWindowSeconds(integer $ScaleUpStabilizationWindowSeconds) 设置扩容观察期，单位秒
+ * @method integer getScaleDownStabilizationWindowSeconds() 获取缩容观察期，单位秒
+ * @method void setScaleDownStabilizationWindowSeconds(integer $ScaleDownStabilizationWindowSeconds) 设置缩容观察期，单位秒
  */
 class HorizontalPodAutoscaler extends AbstractModel
 {
@@ -60,6 +64,16 @@ class HorizontalPodAutoscaler extends AbstractModel
     public $HpaMetrics;
 
     /**
+     * @var integer 扩容观察期，单位秒
+     */
+    public $ScaleUpStabilizationWindowSeconds;
+
+    /**
+     * @var integer 缩容观察期，单位秒
+     */
+    public $ScaleDownStabilizationWindowSeconds;
+
+    /**
      * @param integer $MinReplicas 最小实例数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxReplicas 最大实例数
@@ -68,6 +82,8 @@ class HorizontalPodAutoscaler extends AbstractModel
 "gpu-util": GPU利用率。范围{10, 100}      "cpu-util": CPU利用率。范围{10, 100}	      "memory-util": 内存利用率。范围{10, 100}      "service-qps": 单个实例QPS值。范围{1, 5000}
 "concurrency-util":单个实例请求数量值。范围{1,100000}
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $ScaleUpStabilizationWindowSeconds 扩容观察期，单位秒
+     * @param integer $ScaleDownStabilizationWindowSeconds 缩容观察期，单位秒
      */
     function __construct()
     {
@@ -97,6 +113,14 @@ class HorizontalPodAutoscaler extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->HpaMetrics, $obj);
             }
+        }
+
+        if (array_key_exists("ScaleUpStabilizationWindowSeconds",$param) and $param["ScaleUpStabilizationWindowSeconds"] !== null) {
+            $this->ScaleUpStabilizationWindowSeconds = $param["ScaleUpStabilizationWindowSeconds"];
+        }
+
+        if (array_key_exists("ScaleDownStabilizationWindowSeconds",$param) and $param["ScaleDownStabilizationWindowSeconds"] !== null) {
+            $this->ScaleDownStabilizationWindowSeconds = $param["ScaleDownStabilizationWindowSeconds"];
         }
     }
 }

@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFailedReason(string $FailedReason) 设置如果stage失败，失败原因
  * @method string getTimeConsuming() 获取步骤耗时
  * @method void setTimeConsuming(string $TimeConsuming) 设置步骤耗时
+ * @method integer getId() 获取id，前端用
+ * @method void setId(integer $Id) 设置id，前端用
  */
 class StageInfoDetail extends AbstractModel
 {
@@ -135,6 +137,11 @@ class StageInfoDetail extends AbstractModel
     public $TimeConsuming;
 
     /**
+     * @var integer id，前端用
+     */
+    public $Id;
+
+    /**
      * @param string $Stage 步骤
      * @param string $Name 步骤名
      * @param boolean $IsShow 是否展示
@@ -152,6 +159,7 @@ class StageInfoDetail extends AbstractModel
      * @param string $LanguageKey 多语言版本Key
      * @param string $FailedReason 如果stage失败，失败原因
      * @param string $TimeConsuming 步骤耗时
+     * @param integer $Id id，前端用
      */
     function __construct()
     {
@@ -224,6 +232,10 @@ class StageInfoDetail extends AbstractModel
 
         if (array_key_exists("TimeConsuming",$param) and $param["TimeConsuming"] !== null) {
             $this->TimeConsuming = $param["TimeConsuming"];
+        }
+
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
         }
     }
 }

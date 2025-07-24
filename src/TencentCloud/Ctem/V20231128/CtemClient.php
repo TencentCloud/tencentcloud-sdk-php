@@ -54,6 +54,7 @@ use TencentCloud\Ctem\V20231128\Models as Models;
  * @method Models\DescribeWechatAppletsResponse DescribeWechatApplets(Models\DescribeWechatAppletsRequest $req) 查看微信小程序
  * @method Models\DescribeWechatOfficialAccountsResponse DescribeWechatOfficialAccounts(Models\DescribeWechatOfficialAccountsRequest $req) 查看公众号数据
  * @method Models\ModifyCustomerResponse ModifyCustomer(Models\ModifyCustomerRequest $req) 编辑企业
+ * @method Models\ModifyLabelResponse ModifyLabel(Models\ModifyLabelRequest $req) 修改标签
  * @method Models\StopJobRecordResponse StopJobRecord(Models\StopJobRecordRequest $req) 停止扫描
  */
 

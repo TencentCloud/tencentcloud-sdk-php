@@ -44,9 +44,11 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) 设置AI 智能内容分析类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method AiRecognitionTaskInput getAiRecognitionTask() 获取AI 内容识别类型任务参数。
+ * @method array getAiRecognitionTaskSet() 获取AI 内容识别类型任务参数。
+ * @method void setAiRecognitionTaskSet(array $AiRecognitionTaskSet) 设置AI 内容识别类型任务参数。
+ * @method AiRecognitionTaskInput getAiRecognitionTask() 获取该参数已不推荐使用，建议使用 AiRecognitionTaskSet。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) 设置AI 内容识别类型任务参数。
+ * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) 设置该参数已不推荐使用，建议使用 AiRecognitionTaskSet。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method WechatMiniProgramPublishTaskInput getMiniProgramPublishTask() 获取微信小程序发布任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -100,8 +102,14 @@ class ProcedureTemplate extends AbstractModel
     public $AiAnalysisTask;
 
     /**
-     * @var AiRecognitionTaskInput AI 内容识别类型任务参数。
+     * @var array AI 内容识别类型任务参数。
+     */
+    public $AiRecognitionTaskSet;
+
+    /**
+     * @var AiRecognitionTaskInput 该参数已不推荐使用，建议使用 AiRecognitionTaskSet。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @deprecated
      */
     public $AiRecognitionTask;
 
@@ -140,7 +148,8 @@ class ProcedureTemplate extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AiAnalysisTaskInput $AiAnalysisTask AI 智能内容分析类型任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param AiRecognitionTaskInput $AiRecognitionTask AI 内容识别类型任务参数。
+     * @param array $AiRecognitionTaskSet AI 内容识别类型任务参数。
+     * @param AiRecognitionTaskInput $AiRecognitionTask 该参数已不推荐使用，建议使用 AiRecognitionTaskSet。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param WechatMiniProgramPublishTaskInput $MiniProgramPublishTask 微信小程序发布任务参数。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -187,6 +196,15 @@ class ProcedureTemplate extends AbstractModel
         if (array_key_exists("AiAnalysisTask",$param) and $param["AiAnalysisTask"] !== null) {
             $this->AiAnalysisTask = new AiAnalysisTaskInput();
             $this->AiAnalysisTask->deserialize($param["AiAnalysisTask"]);
+        }
+
+        if (array_key_exists("AiRecognitionTaskSet",$param) and $param["AiRecognitionTaskSet"] !== null) {
+            $this->AiRecognitionTaskSet = [];
+            foreach ($param["AiRecognitionTaskSet"] as $key => $value){
+                $obj = new AiRecognitionTaskInput();
+                $obj->deserialize($value);
+                array_push($this->AiRecognitionTaskSet, $obj);
+            }
         }
 
         if (array_key_exists("AiRecognitionTask",$param) and $param["AiRecognitionTask"] !== null) {

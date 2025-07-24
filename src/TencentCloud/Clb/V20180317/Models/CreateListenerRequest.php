@@ -56,8 +56,8 @@ use TencentCloud\Common\AbstractModel;
 若后端服务对连接数上限有限制，则建议谨慎开启。此功能目前处于内测中，如需使用，请提交 [内测申请](https://cloud.tencent.com/apply/p/tsodp6qm21)。
  * @method integer getEndPort() 获取创建端口段监听器时必须传入此参数，用以标识结束端口。同时，入参Ports只允许传入一个成员，用以标识开始端口。【如果您需要体验端口段功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)】。
  * @method void setEndPort(integer $EndPort) 设置创建端口段监听器时必须传入此参数，用以标识结束端口。同时，入参Ports只允许传入一个成员，用以标识开始端口。【如果您需要体验端口段功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)】。
- * @method boolean getDeregisterTargetRst() 获取解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
- * @method void setDeregisterTargetRst(boolean $DeregisterTargetRst) 设置解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
+ * @method boolean getDeregisterTargetRst() 获取解绑后端目标时，是否发RST给两端（客户端和服务器），此参数仅适用于TCP监听器。
+ * @method void setDeregisterTargetRst(boolean $DeregisterTargetRst) 设置解绑后端目标时，是否发RST给两端（客户端和服务器），此参数仅适用于TCP监听器。
  * @method MultiCertInfo getMultiCertInfo() 获取证书信息，支持同时传入不同算法类型的多本服务端证书，参数限制如下：
 <li>此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。</li>
 <li>创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数Certificate至少需要传一个， 但不能同时传入。</li>
@@ -162,7 +162,7 @@ class CreateListenerRequest extends AbstractModel
     public $EndPort;
 
     /**
-     * @var boolean 解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
+     * @var boolean 解绑后端目标时，是否发RST给两端（客户端和服务器），此参数仅适用于TCP监听器。
      */
     public $DeregisterTargetRst;
 
@@ -240,7 +240,7 @@ class CreateListenerRequest extends AbstractModel
      * @param integer $KeepaliveEnable 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器，0:关闭；1:开启， 默认关闭。
 若后端服务对连接数上限有限制，则建议谨慎开启。此功能目前处于内测中，如需使用，请提交 [内测申请](https://cloud.tencent.com/apply/p/tsodp6qm21)。
      * @param integer $EndPort 创建端口段监听器时必须传入此参数，用以标识结束端口。同时，入参Ports只允许传入一个成员，用以标识开始端口。【如果您需要体验端口段功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)】。
-     * @param boolean $DeregisterTargetRst 解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
+     * @param boolean $DeregisterTargetRst 解绑后端目标时，是否发RST给两端（客户端和服务器），此参数仅适用于TCP监听器。
      * @param MultiCertInfo $MultiCertInfo 证书信息，支持同时传入不同算法类型的多本服务端证书，参数限制如下：
 <li>此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。</li>
 <li>创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数Certificate至少需要传一个， 但不能同时传入。</li>

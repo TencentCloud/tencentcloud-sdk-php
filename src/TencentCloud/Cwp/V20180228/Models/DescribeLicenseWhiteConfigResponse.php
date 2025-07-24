@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProfessional(VersionWhiteConfig $Professional) 设置专业版 配置信息
  * @method VersionWhiteConfig getPrattWhitney() 获取轻量版 配置信息
  * @method void setPrattWhitney(VersionWhiteConfig $PrattWhitney) 设置轻量版 配置信息
+ * @method VersionWhiteConfig getRASP() 获取重保授权包 配置信息
+ * @method void setRASP(VersionWhiteConfig $RASP) 设置重保授权包 配置信息
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -47,6 +49,11 @@ class DescribeLicenseWhiteConfigResponse extends AbstractModel
     public $PrattWhitney;
 
     /**
+     * @var VersionWhiteConfig 重保授权包 配置信息
+     */
+    public $RASP;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -55,6 +62,7 @@ class DescribeLicenseWhiteConfigResponse extends AbstractModel
      * @param VersionWhiteConfig $FlagShip 旗舰版 配置信息
      * @param VersionWhiteConfig $Professional 专业版 配置信息
      * @param VersionWhiteConfig $PrattWhitney 轻量版 配置信息
+     * @param VersionWhiteConfig $RASP 重保授权包 配置信息
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -83,6 +91,11 @@ class DescribeLicenseWhiteConfigResponse extends AbstractModel
         if (array_key_exists("PrattWhitney",$param) and $param["PrattWhitney"] !== null) {
             $this->PrattWhitney = new VersionWhiteConfig();
             $this->PrattWhitney->deserialize($param["PrattWhitney"]);
+        }
+
+        if (array_key_exists("RASP",$param) and $param["RASP"] !== null) {
+            $this->RASP = new VersionWhiteConfig();
+            $this->RASP->deserialize($param["RASP"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

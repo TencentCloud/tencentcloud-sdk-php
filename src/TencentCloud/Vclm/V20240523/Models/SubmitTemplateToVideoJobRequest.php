@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
 默认在生成视频的右下角添加“视频由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
  * @method void setLogoParam(LogoParam $LogoParam) 设置标识内容设置。
 默认在生成视频的右下角添加“视频由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
+ * @method string getResolution() 获取视频输出分辨率，默认值：360p  - 枚举值：  720p  360p。
+ * @method void setResolution(string $Resolution) 设置视频输出分辨率，默认值：360p  - 枚举值：  720p  360p。
  */
 class SubmitTemplateToVideoJobRequest extends AbstractModel
 {
@@ -79,6 +81,11 @@ class SubmitTemplateToVideoJobRequest extends AbstractModel
     public $LogoParam;
 
     /**
+     * @var string 视频输出分辨率，默认值：360p  - 枚举值：  720p  360p。
+     */
+    public $Resolution;
+
+    /**
      * @param string $Template 特效模板名称。请在 [视频特效模版列表](https://cloud.tencent.com/document/product/1616/119194)  中选择想要生成的特效对应的 template 名称。
      * @param array $Images 参考图像，最多输入2张图。
 - 支持传入图片Base64编码或图片URL（确保可访问）
@@ -92,6 +99,7 @@ class SubmitTemplateToVideoJobRequest extends AbstractModel
 建议您使用显著标识来提示，该视频是 AI 生成的视频。
      * @param LogoParam $LogoParam 标识内容设置。
 默认在生成视频的右下角添加“视频由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
+     * @param string $Resolution 视频输出分辨率，默认值：360p  - 枚举值：  720p  360p。
      */
     function __construct()
     {
@@ -126,6 +134,10 @@ class SubmitTemplateToVideoJobRequest extends AbstractModel
         if (array_key_exists("LogoParam",$param) and $param["LogoParam"] !== null) {
             $this->LogoParam = new LogoParam();
             $this->LogoParam->deserialize($param["LogoParam"]);
+        }
+
+        if (array_key_exists("Resolution",$param) and $param["Resolution"] !== null) {
+            $this->Resolution = $param["Resolution"];
         }
     }
 }

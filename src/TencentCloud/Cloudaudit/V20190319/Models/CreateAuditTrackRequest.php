@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEventNames(array $EventNames) 设置跟踪事件接口名列表（ResourceType为 * 时，EventNames必须为全部：["*"]；指定ResourceType时，支持全部接口：["*"]；支持部分接口：["cos", "cls"]，接口列表上限10个）
  * @method integer getTrackForAllMembers() 获取是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能) 
  * @method void setTrackForAllMembers(integer $TrackForAllMembers) 设置是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能) 
+ * @method string getExportId() 获取任务ID
+ * @method void setExportId(string $ExportId) 设置任务ID
  */
 class CreateAuditTrackRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreateAuditTrackRequest extends AbstractModel
     public $TrackForAllMembers;
 
     /**
+     * @var string 任务ID
+     */
+    public $ExportId;
+
+    /**
      * @param string $Name 跟踪集名称，仅支持大小写字母、数字、-以及_的组合，3-48个字符
      * @param integer $Status 跟踪集状态（未开启：0；开启：1）
      * @param Storage $Storage 数据投递存储（目前支持 cos、cls）
@@ -80,6 +87,7 @@ class CreateAuditTrackRequest extends AbstractModel
      * @param string $ResourceType 跟踪事件所属产品（支持全部产品或单个产品，如：cos，全部：*）
      * @param array $EventNames 跟踪事件接口名列表（ResourceType为 * 时，EventNames必须为全部：["*"]；指定ResourceType时，支持全部接口：["*"]；支持部分接口：["cos", "cls"]，接口列表上限10个）
      * @param integer $TrackForAllMembers 是否开启将集团成员操作日志投递到集团管理账号或者可信服务管理账号(0：未开启，1：开启，只能集团管理账号或者可信服务管理账号开启此项功能) 
+     * @param string $ExportId 任务ID
      */
     function __construct()
     {
@@ -121,6 +129,10 @@ class CreateAuditTrackRequest extends AbstractModel
 
         if (array_key_exists("TrackForAllMembers",$param) and $param["TrackForAllMembers"] !== null) {
             $this->TrackForAllMembers = $param["TrackForAllMembers"];
+        }
+
+        if (array_key_exists("ExportId",$param) and $param["ExportId"] !== null) {
+            $this->ExportId = $param["ExportId"];
         }
     }
 }

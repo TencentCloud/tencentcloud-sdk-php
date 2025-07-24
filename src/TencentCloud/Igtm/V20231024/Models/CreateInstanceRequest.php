@@ -44,8 +44,8 @@ ULTIMATE：旗舰版
  * @method void setAccessSubDomain(string $AccessSubDomain) 设置接入子域名
  * @method string getRemark() 获取备注
  * @method void setRemark(string $Remark) 设置备注
- * @method string getResourceId() 获取套餐资源id，必填
- * @method void setResourceId(string $ResourceId) 设置套餐资源id，必填
+ * @method string getResourceId() 获取套餐资源id
+ * @method void setResourceId(string $ResourceId) 设置套餐资源id
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -94,7 +94,7 @@ ULTIMATE：旗舰版
     public $Remark;
 
     /**
-     * @var string 套餐资源id，必填
+     * @var string 套餐资源id
      */
     public $ResourceId;
 
@@ -111,7 +111,7 @@ ULTIMATE：旗舰版
      * @param string $AccessDomain 接入主域名
      * @param string $AccessSubDomain 接入子域名
      * @param string $Remark 备注
-     * @param string $ResourceId 套餐资源id，必填
+     * @param string $ResourceId 套餐资源id
      */
     function __construct()
     {

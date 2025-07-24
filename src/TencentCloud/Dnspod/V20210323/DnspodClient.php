@@ -91,6 +91,7 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
 2.  API获取的记录总条数会比控制台多2条，原因是： 为了防止用户误操作导致解析服务不可用，对2021-10-29 14:24:26之后添加的域名，在控制台都不显示这2条NS记录。
  * @method Models\DescribeRecordSnapshotRollbackResultResponse DescribeRecordSnapshotRollbackResult(Models\DescribeRecordSnapshotRollbackResultRequest $req) 查询解析记录重新回滚的结果
  * @method Models\DescribeRecordTypeResponse DescribeRecordType(Models\DescribeRecordTypeRequest $req) 获取等级允许的记录类型
+ * @method Models\DescribeResolveCountResponse DescribeResolveCount(Models\DescribeResolveCountRequest $req) 查看域名的解析量
  * @method Models\DescribeSnapshotConfigResponse DescribeSnapshotConfig(Models\DescribeSnapshotConfigRequest $req) 查询解析快照配置
  * @method Models\DescribeSnapshotListResponse DescribeSnapshotList(Models\DescribeSnapshotListRequest $req) 查询快照列表
  * @method Models\DescribeSnapshotRollbackResultResponse DescribeSnapshotRollbackResult(Models\DescribeSnapshotRollbackResultRequest $req) 查询快照回滚结果

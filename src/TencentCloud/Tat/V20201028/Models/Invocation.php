@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInvocationId(string $InvocationId) 设置执行活动ID。
  * @method string getCommandId() 获取命令ID。
  * @method void setCommandId(string $CommandId) 设置命令ID。
+ * @method string getCommandName() 获取执行的命令的名称
+ * @method void setCommandName(string $CommandName) 设置执行的命令的名称
  * @method string getInvocationStatus() 获取执行任务状态。取值范围：
 
 - PENDING：等待下发
@@ -98,6 +100,11 @@ class Invocation extends AbstractModel
      * @var string 命令ID。
      */
     public $CommandId;
+
+    /**
+     * @var string 执行的命令的名称
+     */
+    public $CommandName;
 
     /**
      * @var string 执行任务状态。取值范围：
@@ -205,6 +212,7 @@ class Invocation extends AbstractModel
     /**
      * @param string $InvocationId 执行活动ID。
      * @param string $CommandId 命令ID。
+     * @param string $CommandName 执行的命令的名称
      * @param string $InvocationStatus 执行任务状态。取值范围：
 
 - PENDING：等待下发
@@ -256,6 +264,10 @@ class Invocation extends AbstractModel
 
         if (array_key_exists("CommandId",$param) and $param["CommandId"] !== null) {
             $this->CommandId = $param["CommandId"];
+        }
+
+        if (array_key_exists("CommandName",$param) and $param["CommandName"] !== null) {
+            $this->CommandName = $param["CommandName"];
         }
 
         if (array_key_exists("InvocationStatus",$param) and $param["InvocationStatus"] !== null) {

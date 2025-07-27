@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setId(string $Id) 设置备份文件唯一标识。
  * @method string getName() 获取备份文件名称。
  * @method void setName(string $Name) 设置备份文件名称。
- * @method string getBackupMethod() 获取备份方式：物理备份、逻辑备份。
- * @method void setBackupMethod(string $BackupMethod) 设置备份方式：物理备份、逻辑备份。
- * @method string getBackupMode() 获取备份模式：自动备份、手动备份。
- * @method void setBackupMode(string $BackupMode) 设置备份模式：自动备份、手动备份。
- * @method string getState() 获取备份任务状态。
- * @method void setState(string $State) 设置备份任务状态。
+ * @method string getBackupMethod() 获取备份方式：physical - 物理备份、logical - 逻辑备份。
+ * @method void setBackupMethod(string $BackupMethod) 设置备份方式：physical - 物理备份、logical - 逻辑备份。
+ * @method string getBackupMode() 获取备份模式：automatic - 自动备份、manual - 手动备份。
+ * @method void setBackupMode(string $BackupMode) 设置备份模式：automatic - 自动备份、manual - 手动备份。
+ * @method string getState() 获取备份任务状态。枚举值：init、running、finished、failed、canceled
+ * @method void setState(string $State) 设置备份任务状态。枚举值：init、running、finished、failed、canceled
  * @method integer getSize() 获取备份集大小，单位bytes。
  * @method void setSize(integer $Size) 设置备份集大小，单位bytes。
  * @method string getStartTime() 获取备份的开始时间。
@@ -59,17 +59,17 @@ class BaseBackup extends AbstractModel
     public $Name;
 
     /**
-     * @var string 备份方式：物理备份、逻辑备份。
+     * @var string 备份方式：physical - 物理备份、logical - 逻辑备份。
      */
     public $BackupMethod;
 
     /**
-     * @var string 备份模式：自动备份、手动备份。
+     * @var string 备份模式：automatic - 自动备份、manual - 手动备份。
      */
     public $BackupMode;
 
     /**
-     * @var string 备份任务状态。
+     * @var string 备份任务状态。枚举值：init、running、finished、failed、canceled
      */
     public $State;
 
@@ -97,9 +97,9 @@ class BaseBackup extends AbstractModel
      * @param string $DBInstanceId 实例ID。
      * @param string $Id 备份文件唯一标识。
      * @param string $Name 备份文件名称。
-     * @param string $BackupMethod 备份方式：物理备份、逻辑备份。
-     * @param string $BackupMode 备份模式：自动备份、手动备份。
-     * @param string $State 备份任务状态。
+     * @param string $BackupMethod 备份方式：physical - 物理备份、logical - 逻辑备份。
+     * @param string $BackupMode 备份模式：automatic - 自动备份、manual - 手动备份。
+     * @param string $State 备份任务状态。枚举值：init、running、finished、failed、canceled
      * @param integer $Size 备份集大小，单位bytes。
      * @param string $StartTime 备份的开始时间。
      * @param string $FinishTime 备份的结束时间。

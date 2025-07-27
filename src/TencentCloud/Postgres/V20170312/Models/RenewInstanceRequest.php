@@ -20,14 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RenewInstance请求参数结构体
  *
- * @method string getDBInstanceId() 获取实例ID，形如postgres-6fego161
- * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID，形如postgres-6fego161
+ * @method string getDBInstanceId() 获取实例ID，形如postgres-6fego161。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。仅支持预付费（包年包月）实例。
+ * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID，形如postgres-6fego161。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。仅支持预付费（包年包月）实例。
  * @method integer getPeriod() 获取购买时长，单位：月。
 <li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
-<li>后付费：只支持1</li>
  * @method void setPeriod(integer $Period) 设置购买时长，单位：月。
 <li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
-<li>后付费：只支持1</li>
  * @method integer getAutoVoucher() 获取是否自动使用代金券：
 <li>0：否</li>
 <li>1：是</li>
@@ -42,14 +40,13 @@ use TencentCloud\Common\AbstractModel;
 class RenewInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID，形如postgres-6fego161
+     * @var string 实例ID，形如postgres-6fego161。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。仅支持预付费（包年包月）实例。
      */
     public $DBInstanceId;
 
     /**
      * @var integer 购买时长，单位：月。
 <li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
-<li>后付费：只支持1</li>
      */
     public $Period;
 
@@ -67,10 +64,9 @@ class RenewInstanceRequest extends AbstractModel
     public $VoucherIds;
 
     /**
-     * @param string $DBInstanceId 实例ID，形如postgres-6fego161
+     * @param string $DBInstanceId 实例ID，形如postgres-6fego161。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。仅支持预付费（包年包月）实例。
      * @param integer $Period 购买时长，单位：月。
 <li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
-<li>后付费：只支持1</li>
      * @param integer $AutoVoucher 是否自动使用代金券：
 <li>0：否</li>
 <li>1：是</li>

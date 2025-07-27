@@ -14,37 +14,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Live\V20180801\Models;
+namespace TencentCloud\Ocr\V20181119\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeLiveCloudEffectList返回参数结构体
+ * RecognizeTableMultiOCR返回参数结构体
  *
- * @method array getInfoList() 获取云端特效信息列表。
- * @method void setInfoList(array $InfoList) 设置云端特效信息列表。
- * @method integer getEnableCreateNum() 获取允许创建的云端特效个数。
- * @method void setEnableCreateNum(integer $EnableCreateNum) 设置允许创建的云端特效个数。
- * @method integer getTotalNum() 获取当前已有的特效总个数。
- * @method void setTotalNum(integer $TotalNum) 设置当前已有的特效总个数。
+ * @method string getDataBase64() 获取Base64 编码后的 Excel 数据或 Markdown 数据。  注意：此字段可能返回空，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDataBase64(string $DataBase64) 设置Base64 编码后的 Excel 数据或 Markdown 数据。  注意：此字段可能返回空，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeLiveCloudEffectListResponse extends AbstractModel
+class RecognizeTableMultiOCRResponse extends AbstractModel
 {
     /**
-     * @var array 云端特效信息列表。
+     * @var string Base64 编码后的 Excel 数据或 Markdown 数据。  注意：此字段可能返回空，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $InfoList;
-
-    /**
-     * @var integer 允许创建的云端特效个数。
-     */
-    public $EnableCreateNum;
-
-    /**
-     * @var integer 当前已有的特效总个数。
-     */
-    public $TotalNum;
+    public $DataBase64;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -52,9 +41,8 @@ class DescribeLiveCloudEffectListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $InfoList 云端特效信息列表。
-     * @param integer $EnableCreateNum 允许创建的云端特效个数。
-     * @param integer $TotalNum 当前已有的特效总个数。
+     * @param string $DataBase64 Base64 编码后的 Excel 数据或 Markdown 数据。  注意：此字段可能返回空，表示取不到有效值。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -70,21 +58,8 @@ class DescribeLiveCloudEffectListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InfoList",$param) and $param["InfoList"] !== null) {
-            $this->InfoList = [];
-            foreach ($param["InfoList"] as $key => $value){
-                $obj = new CloudEffectInfo();
-                $obj->deserialize($value);
-                array_push($this->InfoList, $obj);
-            }
-        }
-
-        if (array_key_exists("EnableCreateNum",$param) and $param["EnableCreateNum"] !== null) {
-            $this->EnableCreateNum = $param["EnableCreateNum"];
-        }
-
-        if (array_key_exists("TotalNum",$param) and $param["TotalNum"] !== null) {
-            $this->TotalNum = $param["TotalNum"];
+        if (array_key_exists("DataBase64",$param) and $param["DataBase64"] !== null) {
+            $this->DataBase64 = $param["DataBase64"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

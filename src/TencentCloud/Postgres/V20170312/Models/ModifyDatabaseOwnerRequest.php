@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDatabaseOwner请求参数结构体
  *
- * @method string getDBInstanceId() 获取实例ID
- * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID
- * @method string getDatabaseName() 获取数据库名称
- * @method void setDatabaseName(string $DatabaseName) 设置数据库名称
- * @method string getDatabaseOwner() 获取数据库新所有者
- * @method void setDatabaseOwner(string $DatabaseOwner) 设置数据库新所有者
+ * @method string getDBInstanceId() 获取实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+ * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+ * @method string getDatabaseName() 获取数据库名称。可通过[DescribeDatabases](https://cloud.tencent.com/document/api/409/43353)接口获取
+ * @method void setDatabaseName(string $DatabaseName) 设置数据库名称。可通过[DescribeDatabases](https://cloud.tencent.com/document/api/409/43353)接口获取
+ * @method string getDatabaseOwner() 获取数据库新所有者。可通过[DescribeAccounts](https://cloud.tencent.com/document/api/409/18109)接口获取
+ * @method void setDatabaseOwner(string $DatabaseOwner) 设置数据库新所有者。可通过[DescribeAccounts](https://cloud.tencent.com/document/api/409/18109)接口获取
  */
 class ModifyDatabaseOwnerRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public $DBInstanceId;
 
     /**
-     * @var string 数据库名称
+     * @var string 数据库名称。可通过[DescribeDatabases](https://cloud.tencent.com/document/api/409/43353)接口获取
      */
     public $DatabaseName;
 
     /**
-     * @var string 数据库新所有者
+     * @var string 数据库新所有者。可通过[DescribeAccounts](https://cloud.tencent.com/document/api/409/18109)接口获取
      */
     public $DatabaseOwner;
 
     /**
-     * @param string $DBInstanceId 实例ID
-     * @param string $DatabaseName 数据库名称
-     * @param string $DatabaseOwner 数据库新所有者
+     * @param string $DBInstanceId 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * @param string $DatabaseName 数据库名称。可通过[DescribeDatabases](https://cloud.tencent.com/document/api/409/43353)接口获取
+     * @param string $DatabaseOwner 数据库新所有者。可通过[DescribeAccounts](https://cloud.tencent.com/document/api/409/18109)接口获取
      */
     function __construct()
     {

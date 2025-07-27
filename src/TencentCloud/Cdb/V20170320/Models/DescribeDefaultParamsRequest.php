@@ -20,34 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDefaultParams请求参数结构体
  *
- * @method string getEngineVersion() 获取引擎版本，目前支持 ["5.1", "5.5", "5.6", "5.7", "8.0"]
- * @method void setEngineVersion(string $EngineVersion) 设置引擎版本，目前支持 ["5.1", "5.5", "5.6", "5.7", "8.0"]
- * @method string getTemplateType() 获取默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。
- * @method void setTemplateType(string $TemplateType) 设置默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。
- * @method string getEngineType() 获取参数模板引擎，默认值：InnoDB
- * @method void setEngineType(string $EngineType) 设置参数模板引擎，默认值：InnoDB
+ * @method string getEngineVersion() 获取引擎版本，目前支持 ["5.1", "5.5", "5.6", "5.7", "8.0"]。
+说明：引擎版本为必填。
+ * @method void setEngineVersion(string $EngineVersion) 设置引擎版本，目前支持 ["5.1", "5.5", "5.6", "5.7", "8.0"]。
+说明：引擎版本为必填。
+ * @method string getTemplateType() 获取默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。默认值为：HIGH_STABILITY。
+ * @method void setTemplateType(string $TemplateType) 设置默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。默认值为：HIGH_STABILITY。
+ * @method string getEngineType() 获取参数模板引擎，默认值：InnoDB，可取值：InnoDB、RocksDB。
+ * @method void setEngineType(string $EngineType) 设置参数模板引擎，默认值：InnoDB，可取值：InnoDB、RocksDB。
  */
 class DescribeDefaultParamsRequest extends AbstractModel
 {
     /**
-     * @var string 引擎版本，目前支持 ["5.1", "5.5", "5.6", "5.7", "8.0"]
+     * @var string 引擎版本，目前支持 ["5.1", "5.5", "5.6", "5.7", "8.0"]。
+说明：引擎版本为必填。
      */
     public $EngineVersion;
 
     /**
-     * @var string 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。
+     * @var string 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。默认值为：HIGH_STABILITY。
      */
     public $TemplateType;
 
     /**
-     * @var string 参数模板引擎，默认值：InnoDB
+     * @var string 参数模板引擎，默认值：InnoDB，可取值：InnoDB、RocksDB。
      */
     public $EngineType;
 
     /**
-     * @param string $EngineVersion 引擎版本，目前支持 ["5.1", "5.5", "5.6", "5.7", "8.0"]
-     * @param string $TemplateType 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。
-     * @param string $EngineType 参数模板引擎，默认值：InnoDB
+     * @param string $EngineVersion 引擎版本，目前支持 ["5.1", "5.5", "5.6", "5.7", "8.0"]。
+说明：引擎版本为必填。
+     * @param string $TemplateType 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。默认值为：HIGH_STABILITY。
+     * @param string $EngineType 参数模板引擎，默认值：InnoDB，可取值：InnoDB、RocksDB。
      */
     function __construct()
     {

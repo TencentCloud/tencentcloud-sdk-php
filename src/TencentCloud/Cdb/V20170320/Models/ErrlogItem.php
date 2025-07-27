@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 结构化的错误日志详情
  *
- * @method integer getTimestamp() 获取错误发生时间。
- * @method void setTimestamp(integer $Timestamp) 设置错误发生时间。
+ * @method integer getTimestamp() 获取错误发生时间。时间戳，秒级
+ * @method void setTimestamp(integer $Timestamp) 设置错误发生时间。时间戳，秒级
  * @method string getContent() 获取错误详情
  * @method void setContent(string $Content) 设置错误详情
  */
 class ErrlogItem extends AbstractModel
 {
     /**
-     * @var integer 错误发生时间。
+     * @var integer 错误发生时间。时间戳，秒级
      */
     public $Timestamp;
 
@@ -38,7 +38,7 @@ class ErrlogItem extends AbstractModel
     public $Content;
 
     /**
-     * @param integer $Timestamp 错误发生时间。
+     * @param integer $Timestamp 错误发生时间。时间戳，秒级
      * @param string $Content 错误详情
      */
     function __construct()

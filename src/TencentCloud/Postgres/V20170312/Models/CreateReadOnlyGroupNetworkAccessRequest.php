@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateReadOnlyGroupNetworkAccess请求参数结构体
  *
- * @method string getReadOnlyGroupId() 获取RO组ID，形如：pgro-4t9c6g7k。
- * @method void setReadOnlyGroupId(string $ReadOnlyGroupId) 设置RO组ID，形如：pgro-4t9c6g7k。
+ * @method string getReadOnlyGroupId() 获取RO组ID，形如：pgrogrp-4t9c6g7k。可通过[DescribeReadOnlyGroups](https://cloud.tencent.com/document/api/409/52599)接口获取
+ * @method void setReadOnlyGroupId(string $ReadOnlyGroupId) 设置RO组ID，形如：pgrogrp-4t9c6g7k。可通过[DescribeReadOnlyGroups](https://cloud.tencent.com/document/api/409/52599)接口获取
  * @method string getVpcId() 获取私有网络统一 ID。
  * @method void setVpcId(string $VpcId) 设置私有网络统一 ID。
  * @method string getSubnetId() 获取子网ID。
  * @method void setSubnetId(string $SubnetId) 设置子网ID。
  * @method boolean getIsAssignVip() 获取是否指定分配vip true-指定分配  false-自动分配。
  * @method void setIsAssignVip(boolean $IsAssignVip) 设置是否指定分配vip true-指定分配  false-自动分配。
- * @method string getVip() 获取目标VIP地址。
- * @method void setVip(string $Vip) 设置目标VIP地址。
+ * @method string getVip() 获取目标VIP地址。当不指定该参数，且IsAssignVip为true时，默认自动分配Vip。
+ * @method void setVip(string $Vip) 设置目标VIP地址。当不指定该参数，且IsAssignVip为true时，默认自动分配Vip。
  */
 class CreateReadOnlyGroupNetworkAccessRequest extends AbstractModel
 {
     /**
-     * @var string RO组ID，形如：pgro-4t9c6g7k。
+     * @var string RO组ID，形如：pgrogrp-4t9c6g7k。可通过[DescribeReadOnlyGroups](https://cloud.tencent.com/document/api/409/52599)接口获取
      */
     public $ReadOnlyGroupId;
 
@@ -54,16 +54,16 @@ class CreateReadOnlyGroupNetworkAccessRequest extends AbstractModel
     public $IsAssignVip;
 
     /**
-     * @var string 目标VIP地址。
+     * @var string 目标VIP地址。当不指定该参数，且IsAssignVip为true时，默认自动分配Vip。
      */
     public $Vip;
 
     /**
-     * @param string $ReadOnlyGroupId RO组ID，形如：pgro-4t9c6g7k。
+     * @param string $ReadOnlyGroupId RO组ID，形如：pgrogrp-4t9c6g7k。可通过[DescribeReadOnlyGroups](https://cloud.tencent.com/document/api/409/52599)接口获取
      * @param string $VpcId 私有网络统一 ID。
      * @param string $SubnetId 子网ID。
      * @param boolean $IsAssignVip 是否指定分配vip true-指定分配  false-自动分配。
-     * @param string $Vip 目标VIP地址。
+     * @param string $Vip 目标VIP地址。当不指定该参数，且IsAssignVip为true时，默认自动分配Vip。
      */
     function __construct()
     {

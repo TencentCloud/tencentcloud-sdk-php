@@ -20,34 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyLocalBinlogConfig请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
- * @method integer getSaveHours() 获取本地binlog保留时长，可取值范围：[72,168]，当实例存在灾备实例时，可取值范围：[120,168]。
- * @method void setSaveHours(integer $SaveHours) 设置本地binlog保留时长，可取值范围：[72,168]，当实例存在灾备实例时，可取值范围：[120,168]。
- * @method integer getMaxUsage() 获取本地binlog空间使用率，可取值范围：[30,50]。
- * @method void setMaxUsage(integer $MaxUsage) 设置本地binlog空间使用率，可取值范围：[30,50]。
+ * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+ * @method integer getSaveHours() 获取本地 binlog 保留时长。不同实例的可取值如下：
+1. 云盘版实例、双节点实例、三节点实例的本地 binlog 保留时长（小时）默认为120，范围：6 - 168。
+2. 灾备实例的本地 binlog 保留时长（小时）默认为120，范围：120 - 168。
+3. 单节点云盘实例的本地 binlog 保留时长（小时）默认为120，范围：0 - 168。
+4. 若双节点实例、三节点实例下无灾备实例，则该主实例的本地 binlog 保留时长（小时）范围是：6 - 168；若双节点实例、三节点实例下有灾备实例，或者要为双节点实例、三节点实例添加灾备实例，为避免同步异常，该主实例的本地 binlog 保留时长（小时）不能设置低于120小时，范围是：120 - 168。
+ * @method void setSaveHours(integer $SaveHours) 设置本地 binlog 保留时长。不同实例的可取值如下：
+1. 云盘版实例、双节点实例、三节点实例的本地 binlog 保留时长（小时）默认为120，范围：6 - 168。
+2. 灾备实例的本地 binlog 保留时长（小时）默认为120，范围：120 - 168。
+3. 单节点云盘实例的本地 binlog 保留时长（小时）默认为120，范围：0 - 168。
+4. 若双节点实例、三节点实例下无灾备实例，则该主实例的本地 binlog 保留时长（小时）范围是：6 - 168；若双节点实例、三节点实例下有灾备实例，或者要为双节点实例、三节点实例添加灾备实例，为避免同步异常，该主实例的本地 binlog 保留时长（小时）不能设置低于120小时，范围是：120 - 168。
+ * @method integer getMaxUsage() 获取本地 binlog 空间使用率，可取值范围：[30,50]。
+ * @method void setMaxUsage(integer $MaxUsage) 设置本地 binlog 空间使用率，可取值范围：[30,50]。
  */
 class ModifyLocalBinlogConfigRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
+     * @var string 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
      */
     public $InstanceId;
 
     /**
-     * @var integer 本地binlog保留时长，可取值范围：[72,168]，当实例存在灾备实例时，可取值范围：[120,168]。
+     * @var integer 本地 binlog 保留时长。不同实例的可取值如下：
+1. 云盘版实例、双节点实例、三节点实例的本地 binlog 保留时长（小时）默认为120，范围：6 - 168。
+2. 灾备实例的本地 binlog 保留时长（小时）默认为120，范围：120 - 168。
+3. 单节点云盘实例的本地 binlog 保留时长（小时）默认为120，范围：0 - 168。
+4. 若双节点实例、三节点实例下无灾备实例，则该主实例的本地 binlog 保留时长（小时）范围是：6 - 168；若双节点实例、三节点实例下有灾备实例，或者要为双节点实例、三节点实例添加灾备实例，为避免同步异常，该主实例的本地 binlog 保留时长（小时）不能设置低于120小时，范围是：120 - 168。
      */
     public $SaveHours;
 
     /**
-     * @var integer 本地binlog空间使用率，可取值范围：[30,50]。
+     * @var integer 本地 binlog 空间使用率，可取值范围：[30,50]。
      */
     public $MaxUsage;
 
     /**
-     * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同。
-     * @param integer $SaveHours 本地binlog保留时长，可取值范围：[72,168]，当实例存在灾备实例时，可取值范围：[120,168]。
-     * @param integer $MaxUsage 本地binlog空间使用率，可取值范围：[30,50]。
+     * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+     * @param integer $SaveHours 本地 binlog 保留时长。不同实例的可取值如下：
+1. 云盘版实例、双节点实例、三节点实例的本地 binlog 保留时长（小时）默认为120，范围：6 - 168。
+2. 灾备实例的本地 binlog 保留时长（小时）默认为120，范围：120 - 168。
+3. 单节点云盘实例的本地 binlog 保留时长（小时）默认为120，范围：0 - 168。
+4. 若双节点实例、三节点实例下无灾备实例，则该主实例的本地 binlog 保留时长（小时）范围是：6 - 168；若双节点实例、三节点实例下有灾备实例，或者要为双节点实例、三节点实例添加灾备实例，为避免同步异常，该主实例的本地 binlog 保留时长（小时）不能设置低于120小时，范围是：120 - 168。
+     * @param integer $MaxUsage 本地 binlog 空间使用率，可取值范围：[30,50]。
      */
     function __construct()
     {

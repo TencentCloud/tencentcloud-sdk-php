@@ -20,78 +20,78 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateReadOnlyGroup请求参数结构体
  *
- * @method string getMasterDBInstanceId() 获取主实例ID
- * @method void setMasterDBInstanceId(string $MasterDBInstanceId) 设置主实例ID
- * @method string getName() 获取只读组名称
- * @method void setName(string $Name) 设置只读组名称
- * @method integer getProjectId() 获取项目ID
- * @method void setProjectId(integer $ProjectId) 设置项目ID
- * @method string getVpcId() 获取私有网络ID
- * @method void setVpcId(string $VpcId) 设置私有网络ID
- * @method string getSubnetId() 获取子网ID
- * @method void setSubnetId(string $SubnetId) 设置子网ID
- * @method integer getReplayLagEliminate() 获取延迟时间大小开关：0关、1开
- * @method void setReplayLagEliminate(integer $ReplayLagEliminate) 设置延迟时间大小开关：0关、1开
- * @method integer getReplayLatencyEliminate() 获取延迟空间大小开关： 0关、1开
- * @method void setReplayLatencyEliminate(integer $ReplayLatencyEliminate) 设置延迟空间大小开关： 0关、1开
- * @method integer getMaxReplayLag() 获取延迟时间大小阈值，单位ms
- * @method void setMaxReplayLag(integer $MaxReplayLag) 设置延迟时间大小阈值，单位ms
- * @method integer getMaxReplayLatency() 获取延迟空间大小阈值，单位MB
- * @method void setMaxReplayLatency(integer $MaxReplayLatency) 设置延迟空间大小阈值，单位MB
- * @method integer getMinDelayEliminateReserve() 获取延迟剔除最小保留实例数
- * @method void setMinDelayEliminateReserve(integer $MinDelayEliminateReserve) 设置延迟剔除最小保留实例数
+ * @method string getMasterDBInstanceId() 获取主实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+ * @method void setMasterDBInstanceId(string $MasterDBInstanceId) 设置主实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+ * @method string getName() 获取只读组名称。仅支持长度小于60的中文/英文/数字/"_"/"-"。
+ * @method void setName(string $Name) 设置只读组名称。仅支持长度小于60的中文/英文/数字/"_"/"-"。
+ * @method integer getProjectId() 获取项目ID。默认值为0，表示归属于默认项目。
+ * @method void setProjectId(integer $ProjectId) 设置项目ID。默认值为0，表示归属于默认项目。
+ * @method string getVpcId() 获取私有网络ID。注：默认使用基础网络，当前不支持基础网络，故该参数必填。
+ * @method void setVpcId(string $VpcId) 设置私有网络ID。注：默认使用基础网络，当前不支持基础网络，故该参数必填。
+ * @method string getSubnetId() 获取子网ID。注：默认使用基础网络，当前不支持基础网络，故该参数必填。
+ * @method void setSubnetId(string $SubnetId) 设置子网ID。注：默认使用基础网络，当前不支持基础网络，故该参数必填。
+ * @method integer getReplayLagEliminate() 获取延迟时间大小开关：0关、1开。该参数必填。
+ * @method void setReplayLagEliminate(integer $ReplayLagEliminate) 设置延迟时间大小开关：0关、1开。该参数必填。
+ * @method integer getReplayLatencyEliminate() 获取延迟空间大小开关： 0关、1开。该参数的填写需要与ReplayLagEliminate一致。
+ * @method void setReplayLatencyEliminate(integer $ReplayLatencyEliminate) 设置延迟空间大小开关： 0关、1开。该参数的填写需要与ReplayLagEliminate一致。
+ * @method integer getMaxReplayLag() 获取延迟时间大小阈值，取值为正整数，单位s。当ReplayLagEliminate为1时，该参数必填；当ReplayLagEliminate为0时，该参数需填0。
+ * @method void setMaxReplayLag(integer $MaxReplayLag) 设置延迟时间大小阈值，取值为正整数，单位s。当ReplayLagEliminate为1时，该参数必填；当ReplayLagEliminate为0时，该参数需填0。
+ * @method integer getMaxReplayLatency() 获取延迟空间大小阈值，取值为正整数，单位MB。当ReplayLatencyEliminate为1时，该参数必填；当ReplayLatencyEliminate为0时，该参数需填0。
+ * @method void setMaxReplayLatency(integer $MaxReplayLatency) 设置延迟空间大小阈值，取值为正整数，单位MB。当ReplayLatencyEliminate为1时，该参数必填；当ReplayLatencyEliminate为0时，该参数需填0。
+ * @method integer getMinDelayEliminateReserve() 获取延迟剔除最小保留实例数。取值范围[0,100]。当ReplayLatencyEliminate为1时，该参数必填；当ReplayLagEliminate为0时，该参数无效。
+ * @method void setMinDelayEliminateReserve(integer $MinDelayEliminateReserve) 设置延迟剔除最小保留实例数。取值范围[0,100]。当ReplayLatencyEliminate为1时，该参数必填；当ReplayLagEliminate为0时，该参数无效。
  * @method array getSecurityGroupIds() 获取安全组id
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置安全组id
  */
 class CreateReadOnlyGroupRequest extends AbstractModel
 {
     /**
-     * @var string 主实例ID
+     * @var string 主实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public $MasterDBInstanceId;
 
     /**
-     * @var string 只读组名称
+     * @var string 只读组名称。仅支持长度小于60的中文/英文/数字/"_"/"-"。
      */
     public $Name;
 
     /**
-     * @var integer 项目ID
+     * @var integer 项目ID。默认值为0，表示归属于默认项目。
      */
     public $ProjectId;
 
     /**
-     * @var string 私有网络ID
+     * @var string 私有网络ID。注：默认使用基础网络，当前不支持基础网络，故该参数必填。
      */
     public $VpcId;
 
     /**
-     * @var string 子网ID
+     * @var string 子网ID。注：默认使用基础网络，当前不支持基础网络，故该参数必填。
      */
     public $SubnetId;
 
     /**
-     * @var integer 延迟时间大小开关：0关、1开
+     * @var integer 延迟时间大小开关：0关、1开。该参数必填。
      */
     public $ReplayLagEliminate;
 
     /**
-     * @var integer 延迟空间大小开关： 0关、1开
+     * @var integer 延迟空间大小开关： 0关、1开。该参数的填写需要与ReplayLagEliminate一致。
      */
     public $ReplayLatencyEliminate;
 
     /**
-     * @var integer 延迟时间大小阈值，单位ms
+     * @var integer 延迟时间大小阈值，取值为正整数，单位s。当ReplayLagEliminate为1时，该参数必填；当ReplayLagEliminate为0时，该参数需填0。
      */
     public $MaxReplayLag;
 
     /**
-     * @var integer 延迟空间大小阈值，单位MB
+     * @var integer 延迟空间大小阈值，取值为正整数，单位MB。当ReplayLatencyEliminate为1时，该参数必填；当ReplayLatencyEliminate为0时，该参数需填0。
      */
     public $MaxReplayLatency;
 
     /**
-     * @var integer 延迟剔除最小保留实例数
+     * @var integer 延迟剔除最小保留实例数。取值范围[0,100]。当ReplayLatencyEliminate为1时，该参数必填；当ReplayLagEliminate为0时，该参数无效。
      */
     public $MinDelayEliminateReserve;
 
@@ -101,16 +101,16 @@ class CreateReadOnlyGroupRequest extends AbstractModel
     public $SecurityGroupIds;
 
     /**
-     * @param string $MasterDBInstanceId 主实例ID
-     * @param string $Name 只读组名称
-     * @param integer $ProjectId 项目ID
-     * @param string $VpcId 私有网络ID
-     * @param string $SubnetId 子网ID
-     * @param integer $ReplayLagEliminate 延迟时间大小开关：0关、1开
-     * @param integer $ReplayLatencyEliminate 延迟空间大小开关： 0关、1开
-     * @param integer $MaxReplayLag 延迟时间大小阈值，单位ms
-     * @param integer $MaxReplayLatency 延迟空间大小阈值，单位MB
-     * @param integer $MinDelayEliminateReserve 延迟剔除最小保留实例数
+     * @param string $MasterDBInstanceId 主实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * @param string $Name 只读组名称。仅支持长度小于60的中文/英文/数字/"_"/"-"。
+     * @param integer $ProjectId 项目ID。默认值为0，表示归属于默认项目。
+     * @param string $VpcId 私有网络ID。注：默认使用基础网络，当前不支持基础网络，故该参数必填。
+     * @param string $SubnetId 子网ID。注：默认使用基础网络，当前不支持基础网络，故该参数必填。
+     * @param integer $ReplayLagEliminate 延迟时间大小开关：0关、1开。该参数必填。
+     * @param integer $ReplayLatencyEliminate 延迟空间大小开关： 0关、1开。该参数的填写需要与ReplayLagEliminate一致。
+     * @param integer $MaxReplayLag 延迟时间大小阈值，取值为正整数，单位s。当ReplayLagEliminate为1时，该参数必填；当ReplayLagEliminate为0时，该参数需填0。
+     * @param integer $MaxReplayLatency 延迟空间大小阈值，取值为正整数，单位MB。当ReplayLatencyEliminate为1时，该参数必填；当ReplayLatencyEliminate为0时，该参数需填0。
+     * @param integer $MinDelayEliminateReserve 延迟剔除最小保留实例数。取值范围[0,100]。当ReplayLatencyEliminate为1时，该参数必填；当ReplayLagEliminate为0时，该参数无效。
      * @param array $SecurityGroupIds 安全组id
      */
     function __construct()

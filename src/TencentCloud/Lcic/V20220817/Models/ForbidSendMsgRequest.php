@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getSdkAppId() 获取低代码互动课堂的SdkAppId。
  * @method void setSdkAppId(integer $SdkAppId) 设置低代码互动课堂的SdkAppId。
- * @method integer getRoomId() 获取房间ID。
- * @method void setRoomId(integer $RoomId) 设置房间ID。
+ * @method integer getRoomId() 获取课堂ID
+ * @method void setRoomId(integer $RoomId) 设置课堂ID
  * @method array getMembersAccount() 获取需要禁言的用户账号，最多支持500个账号
  * @method void setMembersAccount(array $MembersAccount) 设置需要禁言的用户账号，最多支持500个账号
  * @method integer getMuteTime() 获取需禁言时间，单位为秒，为0时表示取消禁言，4294967295为永久禁言。
@@ -37,7 +37,7 @@ class ForbidSendMsgRequest extends AbstractModel
     public $SdkAppId;
 
     /**
-     * @var integer 房间ID。
+     * @var integer 课堂ID
      */
     public $RoomId;
 
@@ -53,7 +53,7 @@ class ForbidSendMsgRequest extends AbstractModel
 
     /**
      * @param integer $SdkAppId 低代码互动课堂的SdkAppId。
-     * @param integer $RoomId 房间ID。
+     * @param integer $RoomId 课堂ID
      * @param array $MembersAccount 需要禁言的用户账号，最多支持500个账号
      * @param integer $MuteTime 需禁言时间，单位为秒，为0时表示取消禁言，4294967295为永久禁言。
      */

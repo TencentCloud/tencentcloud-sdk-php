@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDBInstanceChargeType请求参数结构体
  *
- * @method string getDBInstanceId() 获取实例ID，形如postgres-6fego161
- * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID，形如postgres-6fego161
+ * @method string getDBInstanceId() 获取实例ID，形如postgres-6fego161。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+ * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID，形如postgres-6fego161。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
  * @method string getInstanceChargeType() 获取实例计费类型，目前支持：
 <li>PREPAID：预付费，即包年包月</li>
 <li>POSTPAID_BY_HOUR：后付费，即按量计费</li>
@@ -56,7 +56,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyDBInstanceChargeTypeRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID，形如postgres-6fego161
+     * @var string 实例ID，形如postgres-6fego161。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public $DBInstanceId;
 
@@ -92,7 +92,7 @@ class ModifyDBInstanceChargeTypeRequest extends AbstractModel
     public $AutoVoucher;
 
     /**
-     * @param string $DBInstanceId 实例ID，形如postgres-6fego161
+     * @param string $DBInstanceId 实例ID，形如postgres-6fego161。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      * @param string $InstanceChargeType 实例计费类型，目前支持：
 <li>PREPAID：预付费，即包年包月</li>
 <li>POSTPAID_BY_HOUR：后付费，即按量计费</li>

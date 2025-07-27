@@ -20,25 +20,27 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateParamTemplate请求参数结构体
  *
- * @method string getName() 获取参数模板名称。
- * @method void setName(string $Name) 设置参数模板名称。
+ * @method string getName() 获取参数模板名称。支持输入最大60个字符。
+ * @method void setName(string $Name) 设置参数模板名称。支持输入最大60个字符。
  * @method string getDescription() 获取参数模板描述。
  * @method void setDescription(string $Description) 设置参数模板描述。
- * @method string getEngineVersion() 获取MySQL 版本号。
- * @method void setEngineVersion(string $EngineVersion) 设置MySQL 版本号。
- * @method integer getTemplateId() 获取源参数模板 ID。
- * @method void setTemplateId(integer $TemplateId) 设置源参数模板 ID。
+ * @method string getEngineVersion() 获取MySQL 版本号。可选值：5.6、5.7、8.0。
+ * @method void setEngineVersion(string $EngineVersion) 设置MySQL 版本号。可选值：5.6、5.7、8.0。
+ * @method integer getTemplateId() 获取源参数模板 ID。可通过 [DescribeParamTemplates](https://cloud.tencent.com/document/api/236/32659) 接口获取。
+ * @method void setTemplateId(integer $TemplateId) 设置源参数模板 ID。可通过 [DescribeParamTemplates](https://cloud.tencent.com/document/api/236/32659) 接口获取。
  * @method array getParamList() 获取参数列表。
  * @method void setParamList(array $ParamList) 设置参数列表。
  * @method string getTemplateType() 获取默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。
  * @method void setTemplateType(string $TemplateType) 设置默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。
  * @method string getEngineType() 获取实例引擎类型，默认为"InnoDB"，支持值包括："InnoDB"，"RocksDB"。
+说明：数据库版本 MySQL 5.7、MySQL 8.0才支持 RocksDB。
  * @method void setEngineType(string $EngineType) 设置实例引擎类型，默认为"InnoDB"，支持值包括："InnoDB"，"RocksDB"。
+说明：数据库版本 MySQL 5.7、MySQL 8.0才支持 RocksDB。
  */
 class CreateParamTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 参数模板名称。
+     * @var string 参数模板名称。支持输入最大60个字符。
      */
     public $Name;
 
@@ -48,12 +50,12 @@ class CreateParamTemplateRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var string MySQL 版本号。
+     * @var string MySQL 版本号。可选值：5.6、5.7、8.0。
      */
     public $EngineVersion;
 
     /**
-     * @var integer 源参数模板 ID。
+     * @var integer 源参数模板 ID。可通过 [DescribeParamTemplates](https://cloud.tencent.com/document/api/236/32659) 接口获取。
      */
     public $TemplateId;
 
@@ -69,17 +71,19 @@ class CreateParamTemplateRequest extends AbstractModel
 
     /**
      * @var string 实例引擎类型，默认为"InnoDB"，支持值包括："InnoDB"，"RocksDB"。
+说明：数据库版本 MySQL 5.7、MySQL 8.0才支持 RocksDB。
      */
     public $EngineType;
 
     /**
-     * @param string $Name 参数模板名称。
+     * @param string $Name 参数模板名称。支持输入最大60个字符。
      * @param string $Description 参数模板描述。
-     * @param string $EngineVersion MySQL 版本号。
-     * @param integer $TemplateId 源参数模板 ID。
+     * @param string $EngineVersion MySQL 版本号。可选值：5.6、5.7、8.0。
+     * @param integer $TemplateId 源参数模板 ID。可通过 [DescribeParamTemplates](https://cloud.tencent.com/document/api/236/32659) 接口获取。
      * @param array $ParamList 参数列表。
      * @param string $TemplateType 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。
      * @param string $EngineType 实例引擎类型，默认为"InnoDB"，支持值包括："InnoDB"，"RocksDB"。
+说明：数据库版本 MySQL 5.7、MySQL 8.0才支持 RocksDB。
      */
     function __construct()
     {

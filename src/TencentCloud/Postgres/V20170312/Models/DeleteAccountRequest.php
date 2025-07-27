@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteAccount请求参数结构体
  *
- * @method string getDBInstanceId() 获取实例ID。	
- * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID。	
- * @method string getUserName() 获取删除的账号名称。	
- * @method void setUserName(string $UserName) 设置删除的账号名称。	
+ * @method string getDBInstanceId() 获取实例ID。	可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+ * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID。	可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+ * @method string getUserName() 获取删除的账号名称。	可通过[DescribeAccounts](https://cloud.tencent.com/document/api/409/18109)接口获取
+ * @method void setUserName(string $UserName) 设置删除的账号名称。	可通过[DescribeAccounts](https://cloud.tencent.com/document/api/409/18109)接口获取
  */
 class DeleteAccountRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID。	
+     * @var string 实例ID。	可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public $DBInstanceId;
 
     /**
-     * @var string 删除的账号名称。	
+     * @var string 删除的账号名称。	可通过[DescribeAccounts](https://cloud.tencent.com/document/api/409/18109)接口获取
      */
     public $UserName;
 
     /**
-     * @param string $DBInstanceId 实例ID。	
-     * @param string $UserName 删除的账号名称。	
+     * @param string $DBInstanceId 实例ID。	可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * @param string $UserName 删除的账号名称。	可通过[DescribeAccounts](https://cloud.tencent.com/document/api/409/18109)接口获取
      */
     function __construct()
     {

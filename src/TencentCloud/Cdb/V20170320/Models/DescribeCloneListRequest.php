@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCloneList请求参数结构体
  *
- * @method string getInstanceId() 获取查询指定源实例的克隆任务列表。
- * @method void setInstanceId(string $InstanceId) 设置查询指定源实例的克隆任务列表。
+ * @method string getInstanceId() 获取查询指定源实例的克隆任务列表。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/api/236/15872) 接口获取实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置查询指定源实例的克隆任务列表。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/api/236/15872) 接口获取实例 ID。
  * @method integer getOffset() 获取分页查询时的偏移量，默认值为0。
  * @method void setOffset(integer $Offset) 设置分页查询时的偏移量，默认值为0。
- * @method integer getLimit() 获取分页查询时的每页条目数，默认值为20。
- * @method void setLimit(integer $Limit) 设置分页查询时的每页条目数，默认值为20。
+ * @method integer getLimit() 获取分页查询时的每页条目数，默认值为20，建议最大取值100。
+ * @method void setLimit(integer $Limit) 设置分页查询时的每页条目数，默认值为20，建议最大取值100。
  */
 class DescribeCloneListRequest extends AbstractModel
 {
     /**
-     * @var string 查询指定源实例的克隆任务列表。
+     * @var string 查询指定源实例的克隆任务列表。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/api/236/15872) 接口获取实例 ID。
      */
     public $InstanceId;
 
@@ -40,14 +40,14 @@ class DescribeCloneListRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 分页查询时的每页条目数，默认值为20。
+     * @var integer 分页查询时的每页条目数，默认值为20，建议最大取值100。
      */
     public $Limit;
 
     /**
-     * @param string $InstanceId 查询指定源实例的克隆任务列表。
+     * @param string $InstanceId 查询指定源实例的克隆任务列表。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/api/236/15872) 接口获取实例 ID。
      * @param integer $Offset 分页查询时的偏移量，默认值为0。
-     * @param integer $Limit 分页查询时的每页条目数，默认值为20。
+     * @param integer $Limit 分页查询时的每页条目数，默认值为20，建议最大取值100。
      */
     function __construct()
     {

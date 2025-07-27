@@ -26,6 +26,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrompt(string $Prompt) 设置云端特效描述词。
  * @method string getFlag() 获取云端特效标签。
  * @method void setFlag(string $Flag) 设置云端特效标签。
+ * @method string getStatus() 获取云端特效生成状态。
+生成中 - GENERATING。
+处理中 - PROCESSING。
+生成失败 - FAILED。
+已完成 - FINISH。
+
+ * @method void setStatus(string $Status) 设置云端特效生成状态。
+生成中 - GENERATING。
+处理中 - PROCESSING。
+生成失败 - FAILED。
+已完成 - FINISH。
+
+ * @method string getMessage() 获取特效信息，生成失败时，此处返回失败原因。
+ * @method void setMessage(string $Message) 设置特效信息，生成失败时，此处返回失败原因。
  * @method string getPreviewImageUrl() 获取云端特效预览图片。
  * @method void setPreviewImageUrl(string $PreviewImageUrl) 设置云端特效预览图片。
  * @method string getType() 获取云端特效类型。
@@ -59,6 +73,21 @@ class CloudEffectInfo extends AbstractModel
     public $Flag;
 
     /**
+     * @var string 云端特效生成状态。
+生成中 - GENERATING。
+处理中 - PROCESSING。
+生成失败 - FAILED。
+已完成 - FINISH。
+
+     */
+    public $Status;
+
+    /**
+     * @var string 特效信息，生成失败时，此处返回失败原因。
+     */
+    public $Message;
+
+    /**
      * @var string 云端特效预览图片。
      */
     public $PreviewImageUrl;
@@ -85,6 +114,13 @@ UGC : 用户上传特效。
      * @param string $Id 云端特效 ID。
      * @param string $Prompt 云端特效描述词。
      * @param string $Flag 云端特效标签。
+     * @param string $Status 云端特效生成状态。
+生成中 - GENERATING。
+处理中 - PROCESSING。
+生成失败 - FAILED。
+已完成 - FINISH。
+
+     * @param string $Message 特效信息，生成失败时，此处返回失败原因。
      * @param string $PreviewImageUrl 云端特效预览图片。
      * @param string $Type 云端特效类型。
 PGC : 官方精品特效。
@@ -116,6 +152,14 @@ UGC : 用户上传特效。
 
         if (array_key_exists("Flag",$param) and $param["Flag"] !== null) {
             $this->Flag = $param["Flag"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
+            $this->Message = $param["Message"];
         }
 
         if (array_key_exists("PreviewImageUrl",$param) and $param["PreviewImageUrl"] !== null) {

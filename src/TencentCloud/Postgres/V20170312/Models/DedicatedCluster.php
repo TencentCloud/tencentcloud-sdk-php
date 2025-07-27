@@ -30,18 +30,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStandbyDedicatedClusterSet(array $StandbyDedicatedClusterSet) 设置灾备集群
  * @method integer getInstanceCount() 获取实例数量
  * @method void setInstanceCount(integer $InstanceCount) 设置实例数量
- * @method integer getCpuTotal() 获取Cpu总量
- * @method void setCpuTotal(integer $CpuTotal) 设置Cpu总量
+ * @method integer getCpuTotal() 获取Cpu总数量
+ * @method void setCpuTotal(integer $CpuTotal) 设置Cpu总数量
  * @method integer getCpuAvailable() 获取Cpu可用数量
  * @method void setCpuAvailable(integer $CpuAvailable) 设置Cpu可用数量
- * @method integer getMemTotal() 获取内存总量
- * @method void setMemTotal(integer $MemTotal) 设置内存总量
- * @method integer getMemAvailable() 获取内存可用量
- * @method void setMemAvailable(integer $MemAvailable) 设置内存可用量
- * @method integer getDiskTotal() 获取磁盘总量
- * @method void setDiskTotal(integer $DiskTotal) 设置磁盘总量
- * @method integer getDiskAvailable() 获取磁盘可用量
- * @method void setDiskAvailable(integer $DiskAvailable) 设置磁盘可用量
+ * @method integer getMemTotal() 获取内存总量，单位GB
+ * @method void setMemTotal(integer $MemTotal) 设置内存总量，单位GB
+ * @method integer getMemAvailable() 获取内存可用量，单位GB
+ * @method void setMemAvailable(integer $MemAvailable) 设置内存可用量，单位GB
+ * @method integer getDiskTotal() 获取磁盘总量，单位GB
+ * @method void setDiskTotal(integer $DiskTotal) 设置磁盘总量，单位GB
+ * @method integer getDiskAvailable() 获取磁盘可用量，单位GB
+ * @method void setDiskAvailable(integer $DiskAvailable) 设置磁盘可用量，单位GB
  */
 class DedicatedCluster extends AbstractModel
 {
@@ -71,7 +71,7 @@ class DedicatedCluster extends AbstractModel
     public $InstanceCount;
 
     /**
-     * @var integer Cpu总量
+     * @var integer Cpu总数量
      */
     public $CpuTotal;
 
@@ -81,22 +81,22 @@ class DedicatedCluster extends AbstractModel
     public $CpuAvailable;
 
     /**
-     * @var integer 内存总量
+     * @var integer 内存总量，单位GB
      */
     public $MemTotal;
 
     /**
-     * @var integer 内存可用量
+     * @var integer 内存可用量，单位GB
      */
     public $MemAvailable;
 
     /**
-     * @var integer 磁盘总量
+     * @var integer 磁盘总量，单位GB
      */
     public $DiskTotal;
 
     /**
-     * @var integer 磁盘可用量
+     * @var integer 磁盘可用量，单位GB
      */
     public $DiskAvailable;
 
@@ -106,12 +106,12 @@ class DedicatedCluster extends AbstractModel
      * @param string $Zone 专属集群所在可用区
      * @param array $StandbyDedicatedClusterSet 灾备集群
      * @param integer $InstanceCount 实例数量
-     * @param integer $CpuTotal Cpu总量
+     * @param integer $CpuTotal Cpu总数量
      * @param integer $CpuAvailable Cpu可用数量
-     * @param integer $MemTotal 内存总量
-     * @param integer $MemAvailable 内存可用量
-     * @param integer $DiskTotal 磁盘总量
-     * @param integer $DiskAvailable 磁盘可用量
+     * @param integer $MemTotal 内存总量，单位GB
+     * @param integer $MemAvailable 内存可用量，单位GB
+     * @param integer $DiskTotal 磁盘总量，单位GB
+     * @param integer $DiskAvailable 磁盘可用量，单位GB
      */
     function __construct()
     {

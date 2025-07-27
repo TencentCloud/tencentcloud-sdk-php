@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteParameterTemplate请求参数结构体
  *
- * @method string getTemplateId() 获取参数模板ID，用于唯一确认待操作的参数模板
- * @method void setTemplateId(string $TemplateId) 设置参数模板ID，用于唯一确认待操作的参数模板
+ * @method string getTemplateId() 获取参数模板ID，用于唯一确认待操作的参数模板。可通过[DescribeParameterTemplates](https://cloud.tencent.com/document/api/409/84067)接口获取
+ * @method void setTemplateId(string $TemplateId) 设置参数模板ID，用于唯一确认待操作的参数模板。可通过[DescribeParameterTemplates](https://cloud.tencent.com/document/api/409/84067)接口获取
  */
 class DeleteParameterTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 参数模板ID，用于唯一确认待操作的参数模板
+     * @var string 参数模板ID，用于唯一确认待操作的参数模板。可通过[DescribeParameterTemplates](https://cloud.tencent.com/document/api/409/84067)接口获取
      */
     public $TemplateId;
 
     /**
-     * @param string $TemplateId 参数模板ID，用于唯一确认待操作的参数模板
+     * @param string $TemplateId 参数模板ID，用于唯一确认待操作的参数模板。可通过[DescribeParameterTemplates](https://cloud.tencent.com/document/api/409/84067)接口获取
      */
     function __construct()
     {

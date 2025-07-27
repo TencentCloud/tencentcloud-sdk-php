@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCosCredential请求参数结构体
  *
- * @method string getCosType() 获取Cos 密钥类型， Mobile 移动端, PC 桌面, AndroidApp 安卓应用
- * @method void setCosType(string $CosType) 设置Cos 密钥类型， Mobile 移动端, PC 桌面, AndroidApp 安卓应用
- * @method AndroidAppCosInfo getAndroidAppCosInfo() 获取云手机 Cos 数据
- * @method void setAndroidAppCosInfo(AndroidAppCosInfo $AndroidAppCosInfo) 设置云手机 Cos 数据
+ * @method string getCosType() 获取Cos 密钥类型，取值： Mobile 云手游、PC 云端游、AndroidApp 云手机应用管理、AndroidAppFile 云手机文件管理、AndroidAppBackup 云手机备份还原
+ * @method void setCosType(string $CosType) 设置Cos 密钥类型，取值： Mobile 云手游、PC 云端游、AndroidApp 云手机应用管理、AndroidAppFile 云手机文件管理、AndroidAppBackup 云手机备份还原
+ * @method AndroidAppCosInfo getAndroidAppCosInfo() 获取云手机应用管理 Cos 数据
+ * @method void setAndroidAppCosInfo(AndroidAppCosInfo $AndroidAppCosInfo) 设置云手机应用管理 Cos 数据
+ * @method FileCosInfo getAndroidAppFileCosInfo() 获取云手机文件管理 Cos 数据
+ * @method void setAndroidAppFileCosInfo(FileCosInfo $AndroidAppFileCosInfo) 设置云手机文件管理 Cos 数据
  */
 class CreateCosCredentialRequest extends AbstractModel
 {
     /**
-     * @var string Cos 密钥类型， Mobile 移动端, PC 桌面, AndroidApp 安卓应用
+     * @var string Cos 密钥类型，取值： Mobile 云手游、PC 云端游、AndroidApp 云手机应用管理、AndroidAppFile 云手机文件管理、AndroidAppBackup 云手机备份还原
      */
     public $CosType;
 
     /**
-     * @var AndroidAppCosInfo 云手机 Cos 数据
+     * @var AndroidAppCosInfo 云手机应用管理 Cos 数据
      */
     public $AndroidAppCosInfo;
 
     /**
-     * @param string $CosType Cos 密钥类型， Mobile 移动端, PC 桌面, AndroidApp 安卓应用
-     * @param AndroidAppCosInfo $AndroidAppCosInfo 云手机 Cos 数据
+     * @var FileCosInfo 云手机文件管理 Cos 数据
+     */
+    public $AndroidAppFileCosInfo;
+
+    /**
+     * @param string $CosType Cos 密钥类型，取值： Mobile 云手游、PC 云端游、AndroidApp 云手机应用管理、AndroidAppFile 云手机文件管理、AndroidAppBackup 云手机备份还原
+     * @param AndroidAppCosInfo $AndroidAppCosInfo 云手机应用管理 Cos 数据
+     * @param FileCosInfo $AndroidAppFileCosInfo 云手机文件管理 Cos 数据
      */
     function __construct()
     {
@@ -61,6 +69,11 @@ class CreateCosCredentialRequest extends AbstractModel
         if (array_key_exists("AndroidAppCosInfo",$param) and $param["AndroidAppCosInfo"] !== null) {
             $this->AndroidAppCosInfo = new AndroidAppCosInfo();
             $this->AndroidAppCosInfo->deserialize($param["AndroidAppCosInfo"]);
+        }
+
+        if (array_key_exists("AndroidAppFileCosInfo",$param) and $param["AndroidAppFileCosInfo"] !== null) {
+            $this->AndroidAppFileCosInfo = new FileCosInfo();
+            $this->AndroidAppFileCosInfo->deserialize($param["AndroidAppFileCosInfo"]);
         }
     }
 }

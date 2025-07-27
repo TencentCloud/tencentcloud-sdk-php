@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddDBInstanceToReadOnlyGroup请求参数结构体
  *
- * @method string getDBInstanceId() 获取实例ID
- * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID
- * @method string getReadOnlyGroupId() 获取只读组ID
- * @method void setReadOnlyGroupId(string $ReadOnlyGroupId) 设置只读组ID
+ * @method string getDBInstanceId() 获取实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+ * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+ * @method string getReadOnlyGroupId() 获取只读组ID。可通过[DescribeReadOnlyGroups](https://cloud.tencent.com/document/api/409/52599)接口获取
+ * @method void setReadOnlyGroupId(string $ReadOnlyGroupId) 设置只读组ID。可通过[DescribeReadOnlyGroups](https://cloud.tencent.com/document/api/409/52599)接口获取
  */
 class AddDBInstanceToReadOnlyGroupRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public $DBInstanceId;
 
     /**
-     * @var string 只读组ID
+     * @var string 只读组ID。可通过[DescribeReadOnlyGroups](https://cloud.tencent.com/document/api/409/52599)接口获取
      */
     public $ReadOnlyGroupId;
 
     /**
-     * @param string $DBInstanceId 实例ID
-     * @param string $ReadOnlyGroupId 只读组ID
+     * @param string $DBInstanceId 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * @param string $ReadOnlyGroupId 只读组ID。可通过[DescribeReadOnlyGroups](https://cloud.tencent.com/document/api/409/52599)接口获取
      */
     function __construct()
     {

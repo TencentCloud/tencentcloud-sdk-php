@@ -20,32 +20,32 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyReadOnlyGroupConfig请求参数结构体
  *
- * @method string getReadOnlyGroupId() 获取只读组ID
- * @method void setReadOnlyGroupId(string $ReadOnlyGroupId) 设置只读组ID
- * @method string getReadOnlyGroupName() 获取只读组名称
- * @method void setReadOnlyGroupName(string $ReadOnlyGroupName) 设置只读组名称
+ * @method string getReadOnlyGroupId() 获取只读组ID。
+ * @method void setReadOnlyGroupId(string $ReadOnlyGroupId) 设置只读组ID。
+ * @method string getReadOnlyGroupName() 获取只读组名称。仅支持长度小于60的中文/英文/数字/"_"/"-"
+ * @method void setReadOnlyGroupName(string $ReadOnlyGroupName) 设置只读组名称。仅支持长度小于60的中文/英文/数字/"_"/"-"
  * @method integer getReplayLagEliminate() 获取延迟时间配置开关：0关、1开
  * @method void setReplayLagEliminate(integer $ReplayLagEliminate) 设置延迟时间配置开关：0关、1开
  * @method integer getReplayLatencyEliminate() 获取延迟日志大小配置开关：0关、1开
  * @method void setReplayLatencyEliminate(integer $ReplayLatencyEliminate) 设置延迟日志大小配置开关：0关、1开
- * @method integer getMaxReplayLatency() 获取延迟日志大小阈值，单位MB
- * @method void setMaxReplayLatency(integer $MaxReplayLatency) 设置延迟日志大小阈值，单位MB
- * @method integer getMaxReplayLag() 获取延迟时间大小阈值，单位ms
- * @method void setMaxReplayLag(integer $MaxReplayLag) 设置延迟时间大小阈值，单位ms
+ * @method integer getMaxReplayLatency() 获取延迟日志大小阈值，单位MB。当开启延迟日志大小配置，应输入正整数
+ * @method void setMaxReplayLatency(integer $MaxReplayLatency) 设置延迟日志大小阈值，单位MB。当开启延迟日志大小配置，应输入正整数
+ * @method integer getMaxReplayLag() 获取延迟时间大小阈值，单位s。当开启延迟时间配置时，应输入正整数。
+ * @method void setMaxReplayLag(integer $MaxReplayLag) 设置延迟时间大小阈值，单位s。当开启延迟时间配置时，应输入正整数。
  * @method integer getRebalance() 获取自动负载均衡开关：0关、1开
  * @method void setRebalance(integer $Rebalance) 设置自动负载均衡开关：0关、1开
- * @method integer getMinDelayEliminateReserve() 获取延迟剔除最小保留实例数
- * @method void setMinDelayEliminateReserve(integer $MinDelayEliminateReserve) 设置延迟剔除最小保留实例数
+ * @method integer getMinDelayEliminateReserve() 获取延迟剔除最小保留实例数。取值范围[0,100]
+ * @method void setMinDelayEliminateReserve(integer $MinDelayEliminateReserve) 设置延迟剔除最小保留实例数。取值范围[0,100]
  */
 class ModifyReadOnlyGroupConfigRequest extends AbstractModel
 {
     /**
-     * @var string 只读组ID
+     * @var string 只读组ID。
      */
     public $ReadOnlyGroupId;
 
     /**
-     * @var string 只读组名称
+     * @var string 只读组名称。仅支持长度小于60的中文/英文/数字/"_"/"-"
      */
     public $ReadOnlyGroupName;
 
@@ -60,12 +60,12 @@ class ModifyReadOnlyGroupConfigRequest extends AbstractModel
     public $ReplayLatencyEliminate;
 
     /**
-     * @var integer 延迟日志大小阈值，单位MB
+     * @var integer 延迟日志大小阈值，单位MB。当开启延迟日志大小配置，应输入正整数
      */
     public $MaxReplayLatency;
 
     /**
-     * @var integer 延迟时间大小阈值，单位ms
+     * @var integer 延迟时间大小阈值，单位s。当开启延迟时间配置时，应输入正整数。
      */
     public $MaxReplayLag;
 
@@ -75,19 +75,19 @@ class ModifyReadOnlyGroupConfigRequest extends AbstractModel
     public $Rebalance;
 
     /**
-     * @var integer 延迟剔除最小保留实例数
+     * @var integer 延迟剔除最小保留实例数。取值范围[0,100]
      */
     public $MinDelayEliminateReserve;
 
     /**
-     * @param string $ReadOnlyGroupId 只读组ID
-     * @param string $ReadOnlyGroupName 只读组名称
+     * @param string $ReadOnlyGroupId 只读组ID。
+     * @param string $ReadOnlyGroupName 只读组名称。仅支持长度小于60的中文/英文/数字/"_"/"-"
      * @param integer $ReplayLagEliminate 延迟时间配置开关：0关、1开
      * @param integer $ReplayLatencyEliminate 延迟日志大小配置开关：0关、1开
-     * @param integer $MaxReplayLatency 延迟日志大小阈值，单位MB
-     * @param integer $MaxReplayLag 延迟时间大小阈值，单位ms
+     * @param integer $MaxReplayLatency 延迟日志大小阈值，单位MB。当开启延迟日志大小配置，应输入正整数
+     * @param integer $MaxReplayLag 延迟时间大小阈值，单位s。当开启延迟时间配置时，应输入正整数。
      * @param integer $Rebalance 自动负载均衡开关：0关、1开
-     * @param integer $MinDelayEliminateReserve 延迟剔除最小保留实例数
+     * @param integer $MinDelayEliminateReserve 延迟剔除最小保留实例数。取值范围[0,100]
      */
     function __construct()
     {

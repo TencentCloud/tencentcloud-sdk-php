@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAccountPrivileges请求参数结构体
  *
- * @method string getDBInstanceId() 获取实例ID。	
- * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID。	
- * @method string getUserName() 获取查询此账号对某数据库对象所拥有的权限信息。
- * @method void setUserName(string $UserName) 设置查询此账号对某数据库对象所拥有的权限信息。
+ * @method string getDBInstanceId() 获取实例ID。	可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+ * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID。	可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+ * @method string getUserName() 获取查询此账号对某数据库对象所拥有的权限信息。账号名可通过[DescribeAccounts](https://cloud.tencent.com/document/api/409/18109)接口获取
+ * @method void setUserName(string $UserName) 设置查询此账号对某数据库对象所拥有的权限信息。账号名可通过[DescribeAccounts](https://cloud.tencent.com/document/api/409/18109)接口获取
  * @method array getDatabaseObjectSet() 获取要查询的数据库对象信息
  * @method void setDatabaseObjectSet(array $DatabaseObjectSet) 设置要查询的数据库对象信息
  */
 class DescribeAccountPrivilegesRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID。	
+     * @var string 实例ID。	可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public $DBInstanceId;
 
     /**
-     * @var string 查询此账号对某数据库对象所拥有的权限信息。
+     * @var string 查询此账号对某数据库对象所拥有的权限信息。账号名可通过[DescribeAccounts](https://cloud.tencent.com/document/api/409/18109)接口获取
      */
     public $UserName;
 
@@ -45,8 +45,8 @@ class DescribeAccountPrivilegesRequest extends AbstractModel
     public $DatabaseObjectSet;
 
     /**
-     * @param string $DBInstanceId 实例ID。	
-     * @param string $UserName 查询此账号对某数据库对象所拥有的权限信息。
+     * @param string $DBInstanceId 实例ID。	可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * @param string $UserName 查询此账号对某数据库对象所拥有的权限信息。账号名可通过[DescribeAccounts](https://cloud.tencent.com/document/api/409/18109)接口获取
      * @param array $DatabaseObjectSet 要查询的数据库对象信息
      */
     function __construct()

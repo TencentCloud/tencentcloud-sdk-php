@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyParamTemplate请求参数结构体
  *
- * @method integer getTemplateId() 获取模板 ID。
- * @method void setTemplateId(integer $TemplateId) 设置模板 ID。
- * @method string getName() 获取模板名称，长度不超过64。
- * @method void setName(string $Name) 设置模板名称，长度不超过64。
+ * @method integer getTemplateId() 获取模板 ID。可通过 [DescribeParamTemplateInfo](https://cloud.tencent.com/document/product/236/32660) 接口获取。
+ * @method void setTemplateId(integer $TemplateId) 设置模板 ID。可通过 [DescribeParamTemplateInfo](https://cloud.tencent.com/document/product/236/32660) 接口获取。
+ * @method string getName() 获取模板名称，仅支持数字、英文大小写字母、中文以及特殊字符_-./()（）[]+=：:@,且长度不能超过60。
+ * @method void setName(string $Name) 设置模板名称，仅支持数字、英文大小写字母、中文以及特殊字符_-./()（）[]+=：:@,且长度不能超过60。
  * @method string getDescription() 获取模板描述，长度不超过255。
  * @method void setDescription(string $Description) 设置模板描述，长度不超过255。
  * @method array getParamList() 获取参数列表。
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class ModifyParamTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer 模板 ID。
+     * @var integer 模板 ID。可通过 [DescribeParamTemplateInfo](https://cloud.tencent.com/document/product/236/32660) 接口获取。
      */
     public $TemplateId;
 
     /**
-     * @var string 模板名称，长度不超过64。
+     * @var string 模板名称，仅支持数字、英文大小写字母、中文以及特殊字符_-./()（）[]+=：:@,且长度不能超过60。
      */
     public $Name;
 
@@ -52,8 +52,8 @@ class ModifyParamTemplateRequest extends AbstractModel
     public $ParamList;
 
     /**
-     * @param integer $TemplateId 模板 ID。
-     * @param string $Name 模板名称，长度不超过64。
+     * @param integer $TemplateId 模板 ID。可通过 [DescribeParamTemplateInfo](https://cloud.tencent.com/document/product/236/32660) 接口获取。
+     * @param string $Name 模板名称，仅支持数字、英文大小写字母、中文以及特殊字符_-./()（）[]+=：:@,且长度不能超过60。
      * @param string $Description 模板描述，长度不超过255。
      * @param array $ParamList 参数列表。
      */

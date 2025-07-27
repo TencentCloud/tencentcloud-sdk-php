@@ -24,12 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStorage(integer $Storage) 设置实例的磁盘大小，单位GB
  * @method integer getMemory() 获取实例的内存大小，单位GB
  * @method void setMemory(integer $Memory) 设置实例的内存大小，单位GB
- * @method string getDBInstanceId() 获取实例ID，形如postgres-hez4fh0v
- * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID，形如postgres-hez4fh0v
+ * @method string getDBInstanceId() 获取实例ID，形如postgres-hez4fh0v。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+ * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID，形如postgres-hez4fh0v。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
  * @method string getInstanceChargeType() 获取实例计费类型。
  * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例计费类型。
- * @method integer getCpu() 获取实例的Cpu大小，单位Core
- * @method void setCpu(integer $Cpu) 设置实例的Cpu大小，单位Core
+ * @method integer getCpu() 获取实例的Cpu大小，单位Core。
+不传入此参数时，默认根据Memory确定的售卖规格所对应的Cpu进行设置。如Memory为2，支持的售卖规格有1核2GiB，则不传入Cpu时，Cpu默认为1。
+ * @method void setCpu(integer $Cpu) 设置实例的Cpu大小，单位Core。
+不传入此参数时，默认根据Memory确定的售卖规格所对应的Cpu进行设置。如Memory为2，支持的售卖规格有1核2GiB，则不传入Cpu时，Cpu默认为1。
  */
 class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel
 {
@@ -44,7 +46,7 @@ class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel
     public $Memory;
 
     /**
-     * @var string 实例ID，形如postgres-hez4fh0v
+     * @var string 实例ID，形如postgres-hez4fh0v。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public $DBInstanceId;
 
@@ -55,16 +57,18 @@ class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel
     public $InstanceChargeType;
 
     /**
-     * @var integer 实例的Cpu大小，单位Core
+     * @var integer 实例的Cpu大小，单位Core。
+不传入此参数时，默认根据Memory确定的售卖规格所对应的Cpu进行设置。如Memory为2，支持的售卖规格有1核2GiB，则不传入Cpu时，Cpu默认为1。
      */
     public $Cpu;
 
     /**
      * @param integer $Storage 实例的磁盘大小，单位GB
      * @param integer $Memory 实例的内存大小，单位GB
-     * @param string $DBInstanceId 实例ID，形如postgres-hez4fh0v
+     * @param string $DBInstanceId 实例ID，形如postgres-hez4fh0v。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      * @param string $InstanceChargeType 实例计费类型。
-     * @param integer $Cpu 实例的Cpu大小，单位Core
+     * @param integer $Cpu 实例的Cpu大小，单位Core。
+不传入此参数时，默认根据Memory确定的售卖规格所对应的Cpu进行设置。如Memory为2，支持的售卖规格有1核2GiB，则不传入Cpu时，Cpu默认为1。
      */
     function __construct()
     {

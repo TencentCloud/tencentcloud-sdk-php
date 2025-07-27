@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpgradeDBInstanceMajorVersion请求参数结构体
  *
- * @method string getDBInstanceId() 获取实例ID。
- * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID。
- * @method string getTargetDBKernelVersion() 获取目标内核版本号，可以通过API DescribeDBVersions获取可以升级的目标内核版本号。
- * @method void setTargetDBKernelVersion(string $TargetDBKernelVersion) 设置目标内核版本号，可以通过API DescribeDBVersions获取可以升级的目标内核版本号。
+ * @method string getDBInstanceId() 获取实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+ * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+ * @method string getTargetDBKernelVersion() 获取目标内核版本号，可以通过API [DescribeDBVersions](https://cloud.tencent.com/document/product/409/89018)获取可以升级的目标内核版本号。
+ * @method void setTargetDBKernelVersion(string $TargetDBKernelVersion) 设置目标内核版本号，可以通过API [DescribeDBVersions](https://cloud.tencent.com/document/product/409/89018)获取可以升级的目标内核版本号。
  * @method boolean getUpgradeCheck() 获取是否为校验模式，若UpgradeCheck为True，表示仅进行内核版本兼容性检查，不会进行实质性的升级操作，对原实例无影响。检查结果可以通过升级日志查看。
  * @method void setUpgradeCheck(boolean $UpgradeCheck) 设置是否为校验模式，若UpgradeCheck为True，表示仅进行内核版本兼容性检查，不会进行实质性的升级操作，对原实例无影响。检查结果可以通过升级日志查看。
  * @method boolean getBackupBeforeUpgrade() 获取升级前备份选项。True，表示升级前需要创建全量备份，False，表示升级前不需要创建全量备份。当实例已有备份集可以恢复到升级前的状态时，可选择False，否则需要指定为True。UpgradeCheck为True时，此参数无效。
@@ -70,12 +70,12 @@ UpgradeCheck为True时，此参数无效。
 class UpgradeDBInstanceMajorVersionRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID。
+     * @var string 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public $DBInstanceId;
 
     /**
-     * @var string 目标内核版本号，可以通过API DescribeDBVersions获取可以升级的目标内核版本号。
+     * @var string 目标内核版本号，可以通过API [DescribeDBVersions](https://cloud.tencent.com/document/product/409/89018)获取可以升级的目标内核版本号。
      */
     public $TargetDBKernelVersion;
 
@@ -129,8 +129,8 @@ UpgradeCheck为True时，此参数无效。
     public $UpgradeTimeEnd;
 
     /**
-     * @param string $DBInstanceId 实例ID。
-     * @param string $TargetDBKernelVersion 目标内核版本号，可以通过API DescribeDBVersions获取可以升级的目标内核版本号。
+     * @param string $DBInstanceId 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * @param string $TargetDBKernelVersion 目标内核版本号，可以通过API [DescribeDBVersions](https://cloud.tencent.com/document/product/409/89018)获取可以升级的目标内核版本号。
      * @param boolean $UpgradeCheck 是否为校验模式，若UpgradeCheck为True，表示仅进行内核版本兼容性检查，不会进行实质性的升级操作，对原实例无影响。检查结果可以通过升级日志查看。
      * @param boolean $BackupBeforeUpgrade 升级前备份选项。True，表示升级前需要创建全量备份，False，表示升级前不需要创建全量备份。当实例已有备份集可以恢复到升级前的状态时，可选择False，否则需要指定为True。UpgradeCheck为True时，此参数无效。
      * @param integer $StatisticsRefreshOption 统计信息收集选项，对主例运行 ANALYZE 以在升级后更新系统统计信息。可选值包括，

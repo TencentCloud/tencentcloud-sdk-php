@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDBInstanceSSLConfig请求参数结构体
  *
- * @method string getDBInstanceId() 获取实例 ID
- * @method void setDBInstanceId(string $DBInstanceId) 设置实例 ID
- * @method boolean getSSLEnabled() 获取开启或关闭SSL
- * @method void setSSLEnabled(boolean $SSLEnabled) 设置开启或关闭SSL
+ * @method string getDBInstanceId() 获取实例 ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+ * @method void setDBInstanceId(string $DBInstanceId) 设置实例 ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+ * @method boolean getSSLEnabled() 获取开启或关闭SSL。true - 开启 ；false - 关闭。
+ * @method void setSSLEnabled(boolean $SSLEnabled) 设置开启或关闭SSL。true - 开启 ；false - 关闭。
  * @method string getConnectAddress() 获取SSL证书保护的唯一连接地址，若为主实例，可设置为内外网IP地址；若为只读实例，可设置为实例IP或只读组IP。在开启SSL或修改SSL保护的连接地址时，该参数为必传项；在关闭SSL时，该参数将被忽略。
  * @method void setConnectAddress(string $ConnectAddress) 设置SSL证书保护的唯一连接地址，若为主实例，可设置为内外网IP地址；若为只读实例，可设置为实例IP或只读组IP。在开启SSL或修改SSL保护的连接地址时，该参数为必传项；在关闭SSL时，该参数将被忽略。
  */
 class ModifyDBInstanceSSLConfigRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID
+     * @var string 实例 ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public $DBInstanceId;
 
     /**
-     * @var boolean 开启或关闭SSL
+     * @var boolean 开启或关闭SSL。true - 开启 ；false - 关闭。
      */
     public $SSLEnabled;
 
@@ -45,8 +45,8 @@ class ModifyDBInstanceSSLConfigRequest extends AbstractModel
     public $ConnectAddress;
 
     /**
-     * @param string $DBInstanceId 实例 ID
-     * @param boolean $SSLEnabled 开启或关闭SSL
+     * @param string $DBInstanceId 实例 ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * @param boolean $SSLEnabled 开启或关闭SSL。true - 开启 ；false - 关闭。
      * @param string $ConnectAddress SSL证书保护的唯一连接地址，若为主实例，可设置为内外网IP地址；若为只读实例，可设置为实例IP或只读组IP。在开启SSL或修改SSL保护的连接地址时，该参数为必传项；在关闭SSL时，该参数将被忽略。
      */
     function __construct()

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getBackupPeriod() 获取备份周期
  * @method void setBackupPeriod(string $BackupPeriod) 设置备份周期
- * @method integer getBaseBackupRetentionPeriod() 获取数据备份保留时长
- * @method void setBaseBackupRetentionPeriod(integer $BaseBackupRetentionPeriod) 设置数据备份保留时长
+ * @method integer getBaseBackupRetentionPeriod() 获取数据备份保留时长。单位：天
+ * @method void setBaseBackupRetentionPeriod(integer $BaseBackupRetentionPeriod) 设置数据备份保留时长。单位：天
  * @method string getMinBackupStartTime() 获取开始备份的最早时间
  * @method void setMinBackupStartTime(string $MinBackupStartTime) 设置开始备份的最早时间
  * @method string getMaxBackupStartTime() 获取开始备份的最晚时间
@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlanId(string $PlanId) 设置备份计划ID
  * @method string getPlanName() 获取备份计划自定义名称。
  * @method void setPlanName(string $PlanName) 设置备份计划自定义名称。
- * @method integer getLogBackupRetentionPeriod() 获取日志备份保留时长。
- * @method void setLogBackupRetentionPeriod(integer $LogBackupRetentionPeriod) 设置日志备份保留时长。
+ * @method integer getLogBackupRetentionPeriod() 获取日志备份保留时长。单位：天
+ * @method void setLogBackupRetentionPeriod(integer $LogBackupRetentionPeriod) 设置日志备份保留时长。单位：天
  * @method string getCreatedTime() 获取创建时间。
  * @method void setCreatedTime(string $CreatedTime) 设置创建时间。
  * @method string getUpdatedTime() 获取最近一次的修改时间。
@@ -51,7 +51,7 @@ class BackupPlan extends AbstractModel
     public $BackupPeriod;
 
     /**
-     * @var integer 数据备份保留时长
+     * @var integer 数据备份保留时长。单位：天
      */
     public $BaseBackupRetentionPeriod;
 
@@ -76,7 +76,7 @@ class BackupPlan extends AbstractModel
     public $PlanName;
 
     /**
-     * @var integer 日志备份保留时长。
+     * @var integer 日志备份保留时长。单位：天
      */
     public $LogBackupRetentionPeriod;
 
@@ -102,12 +102,12 @@ class BackupPlan extends AbstractModel
 
     /**
      * @param string $BackupPeriod 备份周期
-     * @param integer $BaseBackupRetentionPeriod 数据备份保留时长
+     * @param integer $BaseBackupRetentionPeriod 数据备份保留时长。单位：天
      * @param string $MinBackupStartTime 开始备份的最早时间
      * @param string $MaxBackupStartTime 开始备份的最晚时间
      * @param string $PlanId 备份计划ID
      * @param string $PlanName 备份计划自定义名称。
-     * @param integer $LogBackupRetentionPeriod 日志备份保留时长。
+     * @param integer $LogBackupRetentionPeriod 日志备份保留时长。单位：天
      * @param string $CreatedTime 创建时间。
      * @param string $UpdatedTime 最近一次的修改时间。
      * @param string $PlanType 备份计划类型。系统默认创建的为default，自定义的为custom。

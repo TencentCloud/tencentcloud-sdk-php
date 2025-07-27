@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyMaintainTimeWindow请求参数结构体
  *
- * @method string getDBInstanceId() 获取实例ID
- * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID
+ * @method string getDBInstanceId() 获取实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+ * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
  * @method string getMaintainStartTime() 获取维护开始时间。时区为东八区（UTC+8）
  * @method void setMaintainStartTime(string $MaintainStartTime) 设置维护开始时间。时区为东八区（UTC+8）
- * @method integer getMaintainDuration() 获取维护持续时间。单位：小时
- * @method void setMaintainDuration(integer $MaintainDuration) 设置维护持续时间。单位：小时
+ * @method integer getMaintainDuration() 获取维护持续时间。单位：小时。取值范围：[1,4]
+ * @method void setMaintainDuration(integer $MaintainDuration) 设置维护持续时间。单位：小时。取值范围：[1,4]
  * @method array getMaintainWeekDays() 获取维护周期
  * @method void setMaintainWeekDays(array $MaintainWeekDays) 设置维护周期
  */
 class ModifyMaintainTimeWindowRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public $DBInstanceId;
 
@@ -42,7 +42,7 @@ class ModifyMaintainTimeWindowRequest extends AbstractModel
     public $MaintainStartTime;
 
     /**
-     * @var integer 维护持续时间。单位：小时
+     * @var integer 维护持续时间。单位：小时。取值范围：[1,4]
      */
     public $MaintainDuration;
 
@@ -52,9 +52,9 @@ class ModifyMaintainTimeWindowRequest extends AbstractModel
     public $MaintainWeekDays;
 
     /**
-     * @param string $DBInstanceId 实例ID
+     * @param string $DBInstanceId 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      * @param string $MaintainStartTime 维护开始时间。时区为东八区（UTC+8）
-     * @param integer $MaintainDuration 维护持续时间。单位：小时
+     * @param integer $MaintainDuration 维护持续时间。单位：小时。取值范围：[1,4]
      * @param array $MaintainWeekDays 维护周期
      */
     function __construct()

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSlowQueryAnalysis请求参数结构体
  *
- * @method string getDBInstanceId() 获取实例ID。
- * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID。
+ * @method string getDBInstanceId() 获取实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+ * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
  * @method string getStartTime() 获取查询起始时间，形如2018-01-01 00:00:00。日志保留时间默认为7天，起始时间不能超出保留时间范围。
  * @method void setStartTime(string $StartTime) 设置查询起始时间，形如2018-01-01 00:00:00。日志保留时间默认为7天，起始时间不能超出保留时间范围。
  * @method string getEndTime() 获取查询结束时间，形如2018-01-01 00:00:00。
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeSlowQueryAnalysisRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID。
+     * @var string 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public $DBInstanceId;
 
@@ -80,7 +80,7 @@ class DescribeSlowQueryAnalysisRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @param string $DBInstanceId 实例ID。
+     * @param string $DBInstanceId 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      * @param string $StartTime 查询起始时间，形如2018-01-01 00:00:00。日志保留时间默认为7天，起始时间不能超出保留时间范围。
      * @param string $EndTime 查询结束时间，形如2018-01-01 00:00:00。
      * @param string $DatabaseName 数据库名字。	

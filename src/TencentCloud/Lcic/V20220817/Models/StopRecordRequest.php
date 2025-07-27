@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getSdkAppId() 获取学校ID
  * @method void setSdkAppId(integer $SdkAppId) 设置学校ID
- * @method integer getRoomId() 获取房间ID
- * @method void setRoomId(integer $RoomId) 设置房间ID
+ * @method integer getRoomId() 获取课堂ID
+ * @method void setRoomId(integer $RoomId) 设置课堂ID
  * @method string getTaskId() 获取任务ID
  * @method void setTaskId(string $TaskId) 设置任务ID
  */
@@ -35,7 +35,7 @@ class StopRecordRequest extends AbstractModel
     public $SdkAppId;
 
     /**
-     * @var integer 房间ID
+     * @var integer 课堂ID
      */
     public $RoomId;
 
@@ -46,7 +46,7 @@ class StopRecordRequest extends AbstractModel
 
     /**
      * @param integer $SdkAppId 学校ID
-     * @param integer $RoomId 房间ID
+     * @param integer $RoomId 课堂ID
      * @param string $TaskId 任务ID
      */
     function __construct()

@@ -44,6 +44,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRequestId(string $RequestId) 设置请求ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPageAttach() 获取attach-000
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setPageAttach(string $PageAttach) 设置attach-000
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getHasMore() 获取bool
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHasMore(boolean $HasMore) 设置bool
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeTreeJobsRsp extends AbstractModel
 {
@@ -84,6 +92,18 @@ class DescribeTreeJobsRsp extends AbstractModel
     public $RequestId;
 
     /**
+     * @var string attach-000
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $PageAttach;
+
+    /**
+     * @var boolean bool
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HasMore;
+
+    /**
      * @param string $ParentId 父节点ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Id 当前文件夹ID
@@ -95,6 +115,10 @@ class DescribeTreeJobsRsp extends AbstractModel
      * @param array $Children 迭代子目录
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 请求ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PageAttach attach-000
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $HasMore bool
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -142,6 +166,14 @@ class DescribeTreeJobsRsp extends AbstractModel
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
+        }
+
+        if (array_key_exists("PageAttach",$param) and $param["PageAttach"] !== null) {
+            $this->PageAttach = $param["PageAttach"];
+        }
+
+        if (array_key_exists("HasMore",$param) and $param["HasMore"] !== null) {
+            $this->HasMore = $param["HasMore"];
         }
     }
 }

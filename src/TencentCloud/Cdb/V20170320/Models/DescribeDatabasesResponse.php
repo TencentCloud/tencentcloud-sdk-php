@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotalCount() 获取符合查询条件的实例总数。
  * @method void setTotalCount(integer $TotalCount) 设置符合查询条件的实例总数。
- * @method array getItems() 获取返回的实例信息。
- * @method void setItems(array $Items) 设置返回的实例信息。
+ * @method array getItems() 获取实例中的数据库名称列表。
+ * @method void setItems(array $Items) 设置实例中的数据库名称列表。
  * @method array getDatabaseList() 获取数据库名以及字符集
  * @method void setDatabaseList(array $DatabaseList) 设置数据库名以及字符集
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -37,7 +37,7 @@ class DescribeDatabasesResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var array 返回的实例信息。
+     * @var array 实例中的数据库名称列表。
      */
     public $Items;
 
@@ -53,7 +53,7 @@ class DescribeDatabasesResponse extends AbstractModel
 
     /**
      * @param integer $TotalCount 符合查询条件的实例总数。
-     * @param array $Items 返回的实例信息。
+     * @param array $Items 实例中的数据库名称列表。
      * @param array $DatabaseList 数据库名以及字符集
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

@@ -20,20 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquiryPriceCreateDBInstances请求参数结构体
  *
- * @method string getZone() 获取可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
- * @method void setZone(string $Zone) 设置可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
- * @method string getSpecCode() 获取规格ID。该参数可以通过调用DescribeClasses接口的返回值中的SpecCode字段来获取。
- * @method void setSpecCode(string $SpecCode) 设置规格ID。该参数可以通过调用DescribeClasses接口的返回值中的SpecCode字段来获取。
- * @method integer getStorage() 获取存储容量大小，单位：GB。
- * @method void setStorage(integer $Storage) 设置存储容量大小，单位：GB。
+ * @method string getZone() 获取可用区名称。该参数可以通过调用[ DescribeZones](https://cloud.tencent.com/document/product/409/16769) 接口的返回值中的Zone字段来获取。
+ * @method void setZone(string $Zone) 设置可用区名称。该参数可以通过调用[ DescribeZones](https://cloud.tencent.com/document/product/409/16769) 接口的返回值中的Zone字段来获取。
+ * @method string getSpecCode() 获取规格ID。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/product/409/89019)接口的返回值中的SpecCode字段来获取。
+ * @method void setSpecCode(string $SpecCode) 设置规格ID。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/product/409/89019)接口的返回值中的SpecCode字段来获取。
+ * @method integer getStorage() 获取存储容量大小，单位：GB。该参数的设置步长为10。
+ * @method void setStorage(integer $Storage) 设置存储容量大小，单位：GB。该参数的设置步长为10。
  * @method integer getInstanceCount() 获取实例数量。目前最大数量不超过100，如需一次性创建更多实例，请联系客服支持。
  * @method void setInstanceCount(integer $InstanceCount) 设置实例数量。目前最大数量不超过100，如需一次性创建更多实例，请联系客服支持。
  * @method integer getPeriod() 获取购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值。
  * @method void setPeriod(integer $Period) 设置购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值。
  * @method integer getPid() 获取【弃字段，不再生效】，计费ID。该参数可以通过调用DescribeProductConfig接口的返回值中的Pid字段来获取。
  * @method void setPid(integer $Pid) 设置【弃字段，不再生效】，计费ID。该参数可以通过调用DescribeProductConfig接口的返回值中的Pid字段来获取。
- * @method string getInstanceChargeType() 获取实例计费类型。目前只支持：PREPAID（预付费，即包年包月）。
- * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例计费类型。目前只支持：PREPAID（预付费，即包年包月）。
+ * @method string getInstanceChargeType() 获取实例计费类型。目前支持：PREPAID（预付费，即包年包月）和 POSTPAID（按量计费）。
+默认值：PREPAID
+ * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例计费类型。目前支持：PREPAID（预付费，即包年包月）和 POSTPAID（按量计费）。
+默认值：PREPAID
  * @method string getInstanceType() 获取实例类型，默认primary，支持如下：
 primary（双机高可用（一主一从））
 readonly（只读实例）
@@ -50,17 +52,17 @@ mssql_compatible（MSSQL兼容-云数据库PostgreSQL）
 class InquiryPriceCreateDBInstancesRequest extends AbstractModel
 {
     /**
-     * @var string 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
+     * @var string 可用区名称。该参数可以通过调用[ DescribeZones](https://cloud.tencent.com/document/product/409/16769) 接口的返回值中的Zone字段来获取。
      */
     public $Zone;
 
     /**
-     * @var string 规格ID。该参数可以通过调用DescribeClasses接口的返回值中的SpecCode字段来获取。
+     * @var string 规格ID。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/product/409/89019)接口的返回值中的SpecCode字段来获取。
      */
     public $SpecCode;
 
     /**
-     * @var integer 存储容量大小，单位：GB。
+     * @var integer 存储容量大小，单位：GB。该参数的设置步长为10。
      */
     public $Storage;
 
@@ -80,7 +82,8 @@ class InquiryPriceCreateDBInstancesRequest extends AbstractModel
     public $Pid;
 
     /**
-     * @var string 实例计费类型。目前只支持：PREPAID（预付费，即包年包月）。
+     * @var string 实例计费类型。目前支持：PREPAID（预付费，即包年包月）和 POSTPAID（按量计费）。
+默认值：PREPAID
      */
     public $InstanceChargeType;
 
@@ -99,13 +102,14 @@ mssql_compatible（MSSQL兼容-云数据库PostgreSQL）
     public $DBEngine;
 
     /**
-     * @param string $Zone 可用区ID。该参数可以通过调用 DescribeZones 接口的返回值中的Zone字段来获取。
-     * @param string $SpecCode 规格ID。该参数可以通过调用DescribeClasses接口的返回值中的SpecCode字段来获取。
-     * @param integer $Storage 存储容量大小，单位：GB。
+     * @param string $Zone 可用区名称。该参数可以通过调用[ DescribeZones](https://cloud.tencent.com/document/product/409/16769) 接口的返回值中的Zone字段来获取。
+     * @param string $SpecCode 规格ID。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/product/409/89019)接口的返回值中的SpecCode字段来获取。
+     * @param integer $Storage 存储容量大小，单位：GB。该参数的设置步长为10。
      * @param integer $InstanceCount 实例数量。目前最大数量不超过100，如需一次性创建更多实例，请联系客服支持。
      * @param integer $Period 购买时长，单位：月。目前只支持1,2,3,4,5,6,7,8,9,10,11,12,24,36这些值。
      * @param integer $Pid 【弃字段，不再生效】，计费ID。该参数可以通过调用DescribeProductConfig接口的返回值中的Pid字段来获取。
-     * @param string $InstanceChargeType 实例计费类型。目前只支持：PREPAID（预付费，即包年包月）。
+     * @param string $InstanceChargeType 实例计费类型。目前支持：PREPAID（预付费，即包年包月）和 POSTPAID（按量计费）。
+默认值：PREPAID
      * @param string $InstanceType 实例类型，默认primary，支持如下：
 primary（双机高可用（一主一从））
 readonly（只读实例）

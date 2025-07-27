@@ -63,6 +63,7 @@ use TencentCloud\Lcic\V20220817\Models as Models;
  * @method Models\DeleteGroupMemberResponse DeleteGroupMember(Models\DeleteGroupMemberRequest $req) 此接口用于删除群组中指定成员
  * @method Models\DeleteRecordResponse DeleteRecord(Models\DeleteRecordRequest $req) 删除指定房间的录制文件
  * @method Models\DeleteRoomResponse DeleteRoom(Models\DeleteRoomRequest $req) 删除房间
+删除课堂前，请先删除该课堂下的各类资源（包括录制文件、板书等），并解绑相关课件。
  * @method Models\DeleteSupervisorResponse DeleteSupervisor(Models\DeleteSupervisorRequest $req) 删除巡课
  * @method Models\DeleteUserResponse DeleteUser(Models\DeleteUserRequest $req) 删除已注册用户。注：如果该成员已被添加到群组，请先在群组中删除该成员。
  * @method Models\DeleteWhiteBoardSnapshotResponse DeleteWhiteBoardSnapshot(Models\DeleteWhiteBoardSnapshotRequest $req) 删除白板板书截图
@@ -92,6 +93,8 @@ use TencentCloud\Lcic\V20220817\Models as Models;
  * @method Models\DescribeUserResponse DescribeUser(Models\DescribeUserRequest $req) 获取用户信息
  * @method Models\DescribeUserDetailResponse DescribeUserDetail(Models\DescribeUserDetailRequest $req) 获取用户信息
  * @method Models\DescribeWhiteBoardSnapshotResponse DescribeWhiteBoardSnapshot(Models\DescribeWhiteBoardSnapshotRequest $req) 查询白板板书截图
+课程结束后，可以查询和以图片的形式导出这些内容，方便后续查看、整理与分享。
+注意：不支持屏幕共享中的板书导出。
  * @method Models\EndRoomResponse EndRoom(Models\EndRoomRequest $req) 结束房间的直播
  * @method Models\ForbidSendMsgResponse ForbidSendMsg(Models\ForbidSendMsgRequest $req) 禁止指定房间中某些用户在一段时间内发言。
 取消对某些用户的禁言。

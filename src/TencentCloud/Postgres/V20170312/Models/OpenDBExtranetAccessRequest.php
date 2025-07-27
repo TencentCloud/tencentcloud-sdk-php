@@ -20,26 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * OpenDBExtranetAccess请求参数结构体
  *
- * @method string getDBInstanceId() 获取实例ID，形如postgres-hez4fh0v
- * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID，形如postgres-hez4fh0v
+ * @method string getDBInstanceId() 获取实例ID，形如postgres-hez4fh0v。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。
+ * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID，形如postgres-hez4fh0v。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。
  * @method integer getIsIpv6() 获取是否开通Ipv6外网，1：是，0：否
+默认值：0
  * @method void setIsIpv6(integer $IsIpv6) 设置是否开通Ipv6外网，1：是，0：否
+默认值：0
  */
 class OpenDBExtranetAccessRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID，形如postgres-hez4fh0v
+     * @var string 实例ID，形如postgres-hez4fh0v。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。
      */
     public $DBInstanceId;
 
     /**
      * @var integer 是否开通Ipv6外网，1：是，0：否
+默认值：0
      */
     public $IsIpv6;
 
     /**
-     * @param string $DBInstanceId 实例ID，形如postgres-hez4fh0v
+     * @param string $DBInstanceId 实例ID，形如postgres-hez4fh0v。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。
      * @param integer $IsIpv6 是否开通Ipv6外网，1：是，0：否
+默认值：0
      */
     function __construct()
     {

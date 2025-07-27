@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCloneInstance请求参数结构体
  *
- * @method string getInstanceId() 获取克隆源实例Id。
- * @method void setInstanceId(string $InstanceId) 设置克隆源实例Id。
+ * @method string getInstanceId() 获取克隆源实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/api/236/15872) 接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置克隆源实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/api/236/15872) 接口获取。
  * @method string getSpecifiedRollbackTime() 获取如果需要克隆实例回档到指定时间，则指定该值。时间格式为：yyyy-mm-dd hh:mm:ss。
 说明：此参数和 SpecifiedBackupId 参数需要2选1进行设置。
  * @method void setSpecifiedRollbackTime(string $SpecifiedRollbackTime) 设置如果需要克隆实例回档到指定时间，则指定该值。时间格式为：yyyy-mm-dd hh:mm:ss。
@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemory(integer $Memory) 设置实例内存大小，单位：MB，需要不低于克隆源实例，默认和源实例相同。
  * @method integer getVolume() 获取实例硬盘大小，单位：GB，需要不低于克隆源实例，默认和源实例相同。
  * @method void setVolume(integer $Volume) 设置实例硬盘大小，单位：GB，需要不低于克隆源实例，默认和源实例相同。
- * @method string getInstanceName() 获取新产生的克隆实例名称。
- * @method void setInstanceName(string $InstanceName) 设置新产生的克隆实例名称。
+ * @method string getInstanceName() 获取新产生的克隆实例名称。支持输入最大60个字符。
+ * @method void setInstanceName(string $InstanceName) 设置新产生的克隆实例名称。支持输入最大60个字符。
  * @method array getSecurityGroup() 获取安全组参数，可使用 [查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850) 接口查询某个项目的安全组详情。
  * @method void setSecurityGroup(array $SecurityGroup) 设置安全组参数，可使用 [查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850) 接口查询某个项目的安全组详情。
  * @method array getResourceTags() 获取实例标签信息。
@@ -80,7 +80,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateCloneInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 克隆源实例Id。
+     * @var string 克隆源实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/api/236/15872) 接口获取。
      */
     public $InstanceId;
 
@@ -117,7 +117,7 @@ class CreateCloneInstanceRequest extends AbstractModel
     public $Volume;
 
     /**
-     * @var string 新产生的克隆实例名称。
+     * @var string 新产生的克隆实例名称。支持输入最大60个字符。
      */
     public $InstanceName;
 
@@ -212,7 +212,7 @@ class CreateCloneInstanceRequest extends AbstractModel
     public $SpecifiedSubBackupId;
 
     /**
-     * @param string $InstanceId 克隆源实例Id。
+     * @param string $InstanceId 克隆源实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/api/236/15872) 接口获取。
      * @param string $SpecifiedRollbackTime 如果需要克隆实例回档到指定时间，则指定该值。时间格式为：yyyy-mm-dd hh:mm:ss。
 说明：此参数和 SpecifiedBackupId 参数需要2选1进行设置。
      * @param integer $SpecifiedBackupId 如果需要克隆实例回档到指定备份集，则指定该值为备份文件的 Id。请使用 [查询数据备份文件列表](/document/api/236/15842)。
@@ -221,7 +221,7 @@ class CreateCloneInstanceRequest extends AbstractModel
      * @param string $UniqSubnetId 私有网络下的子网 ID，如果设置了 UniqVpcId，则 UniqSubnetId 必填，请使用 [查询子网列表](/document/api/215/15784)。
      * @param integer $Memory 实例内存大小，单位：MB，需要不低于克隆源实例，默认和源实例相同。
      * @param integer $Volume 实例硬盘大小，单位：GB，需要不低于克隆源实例，默认和源实例相同。
-     * @param string $InstanceName 新产生的克隆实例名称。
+     * @param string $InstanceName 新产生的克隆实例名称。支持输入最大60个字符。
      * @param array $SecurityGroup 安全组参数，可使用 [查询项目安全组信息](https://cloud.tencent.com/document/api/236/15850) 接口查询某个项目的安全组详情。
      * @param array $ResourceTags 实例标签信息。
      * @param integer $Cpu 实例Cpu核数，需要不低于克隆源实例，默认和源实例相同。

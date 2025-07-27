@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
 可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
  * @method void setZone(string $Zone) 设置实例所属主可用区， 如：ap-guangzhou-3；
 可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
- * @method string getMasterDBInstanceId() 获取只读实例的主实例ID。
- * @method void setMasterDBInstanceId(string $MasterDBInstanceId) 设置只读实例的主实例ID。
+ * @method string getMasterDBInstanceId() 获取只读实例的主实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+ * @method void setMasterDBInstanceId(string $MasterDBInstanceId) 设置只读实例的主实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
  * @method string getSpecCode() 获取售卖规格码。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/api/409/89019)的返回值中的SpecCode字段来获取。
  * @method void setSpecCode(string $SpecCode) 设置售卖规格码。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/api/409/89019)的返回值中的SpecCode字段来获取。
- * @method integer getStorage() 获取实例容量大小，单位：GB。
- * @method void setStorage(integer $Storage) 设置实例容量大小，单位：GB。
+ * @method integer getStorage() 获取实例硬盘容量大小，单位：GB。该参数的设置步长为10。
+ * @method void setStorage(integer $Storage) 设置实例硬盘容量大小，单位：GB。该参数的设置步长为10。
  * @method integer getInstanceCount() 获取购买实例数量，取值范围：[1-10]。一次性购买支持最大数量10个，若超过该数量，可进行多次调用进行购买。
  * @method void setInstanceCount(integer $InstanceCount) 设置购买实例数量，取值范围：[1-10]。一次性购买支持最大数量10个，若超过该数量，可进行多次调用进行购买。
  * @method integer getPeriod() 获取购买时长，单位：月。
@@ -68,8 +68,8 @@ use TencentCloud\Common\AbstractModel;
 <li>0：手动续费</li>
 <li>1：自动续费</li>
 默认值：0
- * @method integer getProjectId() 获取项目ID。
- * @method void setProjectId(integer $ProjectId) 设置项目ID。
+ * @method integer getProjectId() 获取项目ID。默认值为0，表示归属默认项目。
+ * @method void setProjectId(integer $ProjectId) 设置项目ID。默认值为0，表示归属默认项目。
  * @method integer getActivityId() 获取优惠活动ID
  * @method void setActivityId(integer $ActivityId) 设置优惠活动ID
  * @method string getReadOnlyGroupId() 获取只读组ID。
@@ -88,8 +88,8 @@ use TencentCloud\Common\AbstractModel;
 <li>0：否</li>
 <li>1：是</li>
 默认值：0
- * @method string getName() 获取实例名(后续支持)
- * @method void setName(string $Name) 设置实例名(后续支持)
+ * @method string getName() 获取实例名。仅支持长度小于60的中文/英文/数字/"_"/"-"
+ * @method void setName(string $Name) 设置实例名。仅支持长度小于60的中文/英文/数字/"_"/"-"
  * @method string getDBVersion() 获取不再需要指定，内核版本号与主实例保持一致
  * @method void setDBVersion(string $DBVersion) 设置不再需要指定，内核版本号与主实例保持一致
  * @method string getDedicatedClusterId() 获取专属集群ID
@@ -104,7 +104,7 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
     public $Zone;
 
     /**
-     * @var string 只读实例的主实例ID。
+     * @var string 只读实例的主实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public $MasterDBInstanceId;
 
@@ -114,7 +114,7 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
     public $SpecCode;
 
     /**
-     * @var integer 实例容量大小，单位：GB。
+     * @var integer 实例硬盘容量大小，单位：GB。该参数的设置步长为10。
      */
     public $Storage;
 
@@ -170,7 +170,7 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
     public $AutoRenewFlag;
 
     /**
-     * @var integer 项目ID。
+     * @var integer 项目ID。默认值为0，表示归属默认项目。
      */
     public $ProjectId;
 
@@ -204,7 +204,7 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
     public $NeedSupportIpv6;
 
     /**
-     * @var string 实例名(后续支持)
+     * @var string 实例名。仅支持长度小于60的中文/英文/数字/"_"/"-"
      */
     public $Name;
 
@@ -222,9 +222,9 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
     /**
      * @param string $Zone 实例所属主可用区， 如：ap-guangzhou-3；
 可用区信息可以通过调用 [DescribeZones](https://cloud.tencent.com/document/api/409/16769) 接口的返回值中的Zone字段来获取。
-     * @param string $MasterDBInstanceId 只读实例的主实例ID。
+     * @param string $MasterDBInstanceId 只读实例的主实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      * @param string $SpecCode 售卖规格码。该参数可以通过调用[DescribeClasses](https://cloud.tencent.com/document/api/409/89019)的返回值中的SpecCode字段来获取。
-     * @param integer $Storage 实例容量大小，单位：GB。
+     * @param integer $Storage 实例硬盘容量大小，单位：GB。该参数的设置步长为10。
      * @param integer $InstanceCount 购买实例数量，取值范围：[1-10]。一次性购买支持最大数量10个，若超过该数量，可进行多次调用进行购买。
      * @param integer $Period 购买时长，单位：月。
 <li>预付费：支持1,2,3,4,5,6,7,8,9,10,11,12,24,36</li>
@@ -244,7 +244,7 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
 <li>0：手动续费</li>
 <li>1：自动续费</li>
 默认值：0
-     * @param integer $ProjectId 项目ID。
+     * @param integer $ProjectId 项目ID。默认值为0，表示归属默认项目。
      * @param integer $ActivityId 优惠活动ID
      * @param string $ReadOnlyGroupId 只读组ID。
      * @param Tag $TagList 实例需要绑定的Tag信息，默认为空；可以通过调用 [DescribeTags](https://cloud.tencent.com/document/api/651/35316) 返回值中的 Tags 字段来获取。
@@ -254,7 +254,7 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
 <li>0：否</li>
 <li>1：是</li>
 默认值：0
-     * @param string $Name 实例名(后续支持)
+     * @param string $Name 实例名。仅支持长度小于60的中文/英文/数字/"_"/"-"
      * @param string $DBVersion 不再需要指定，内核版本号与主实例保持一致
      * @param string $DedicatedClusterId 专属集群ID
      */

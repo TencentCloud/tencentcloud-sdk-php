@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDBInstanceReadOnlyGroup请求参数结构体
  *
- * @method string getDBInstanceId() 获取实例ID
- * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID
+ * @method string getDBInstanceId() 获取实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+ * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
  * @method string getReadOnlyGroupId() 获取当前实例所在只读组ID
  * @method void setReadOnlyGroupId(string $ReadOnlyGroupId) 设置当前实例所在只读组ID
  * @method string getNewReadOnlyGroupId() 获取实例修改的目标只读组ID
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyDBInstanceReadOnlyGroupRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public $DBInstanceId;
 
@@ -45,7 +45,7 @@ class ModifyDBInstanceReadOnlyGroupRequest extends AbstractModel
     public $NewReadOnlyGroupId;
 
     /**
-     * @param string $DBInstanceId 实例ID
+     * @param string $DBInstanceId 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      * @param string $ReadOnlyGroupId 当前实例所在只读组ID
      * @param string $NewReadOnlyGroupId 实例修改的目标只读组ID
      */

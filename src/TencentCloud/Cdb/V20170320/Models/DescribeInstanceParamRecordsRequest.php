@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
  * @method integer getOffset() 获取分页偏移量，默认值：0。
  * @method void setOffset(integer $Offset) 设置分页偏移量，默认值：0。
- * @method integer getLimit() 获取分页大小，默认值：20。
- * @method void setLimit(integer $Limit) 设置分页大小，默认值：20。
+ * @method integer getLimit() 获取分页大小，默认值：20，最大值为100。
+ * @method void setLimit(integer $Limit) 设置分页大小，默认值：20，最大值为100。
  */
 class DescribeInstanceParamRecordsRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DescribeInstanceParamRecordsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 分页大小，默认值：20。
+     * @var integer 分页大小，默认值：20，最大值为100。
      */
     public $Limit;
 
     /**
      * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同，可使用 [查询实例列表](https://cloud.tencent.com/document/api/236/15872) 接口获取，其值为输出参数中字段 InstanceId 的值。
      * @param integer $Offset 分页偏移量，默认值：0。
-     * @param integer $Limit 分页大小，默认值：20。
+     * @param integer $Limit 分页大小，默认值：20，最大值为100。
      */
     function __construct()
     {

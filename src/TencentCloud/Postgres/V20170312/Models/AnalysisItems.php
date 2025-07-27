@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClientAddr(string $ClientAddr) 设置慢SQL执行的客户端地址
  * @method integer getCallNum() 获取在选定时间范围内慢SQL语句执行的次数
  * @method void setCallNum(integer $CallNum) 设置在选定时间范围内慢SQL语句执行的次数
- * @method float getCallPercent() 获取在选定时间范围内，慢SQL语句执行的次数占所有慢SQL的比例（小数返回）
- * @method void setCallPercent(float $CallPercent) 设置在选定时间范围内，慢SQL语句执行的次数占所有慢SQL的比例（小数返回）
+ * @method float getCallPercent() 获取在选定时间范围内，慢SQL语句执行的次数占所有慢SQL的百分比。
+ * @method void setCallPercent(float $CallPercent) 设置在选定时间范围内，慢SQL语句执行的次数占所有慢SQL的百分比。
  * @method float getCostTime() 获取在选定时间范围内，慢SQL执行的总时间
  * @method void setCostTime(float $CostTime) 设置在选定时间范围内，慢SQL执行的总时间
  * @method float getCostPercent() 获取在选定时间范围内，慢SQL语句执行的总时间占所有慢SQL的比例（小数返回）
@@ -42,10 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxCostTime(float $MaxCostTime) 设置在选定时间范围内，慢SQL语句执行的耗时最长的时间（单位：ms）
  * @method float getAvgCostTime() 获取在选定时间范围内，慢SQL语句执行的耗时平均时间（单位：ms）
  * @method void setAvgCostTime(float $AvgCostTime) 设置在选定时间范围内，慢SQL语句执行的耗时平均时间（单位：ms）
- * @method string getFirstTime() 获取在选定时间范围内，慢SQL第一条开始执行的时间戳
- * @method void setFirstTime(string $FirstTime) 设置在选定时间范围内，慢SQL第一条开始执行的时间戳
- * @method string getLastTime() 获取在选定时间范围内，慢SQL最后一条开始执行的时间戳
- * @method void setLastTime(string $LastTime) 设置在选定时间范围内，慢SQL最后一条开始执行的时间戳
+ * @method string getFirstTime() 获取在选定时间范围内，慢SQL第一条开始执行的时间
+ * @method void setFirstTime(string $FirstTime) 设置在选定时间范围内，慢SQL第一条开始执行的时间
+ * @method string getLastTime() 获取在选定时间范围内，慢SQL最后一条开始执行的时间
+ * @method void setLastTime(string $LastTime) 设置在选定时间范围内，慢SQL最后一条开始执行的时间
  */
 class AnalysisItems extends AbstractModel
 {
@@ -75,7 +75,7 @@ class AnalysisItems extends AbstractModel
     public $CallNum;
 
     /**
-     * @var float 在选定时间范围内，慢SQL语句执行的次数占所有慢SQL的比例（小数返回）
+     * @var float 在选定时间范围内，慢SQL语句执行的次数占所有慢SQL的百分比。
      */
     public $CallPercent;
 
@@ -105,12 +105,12 @@ class AnalysisItems extends AbstractModel
     public $AvgCostTime;
 
     /**
-     * @var string 在选定时间范围内，慢SQL第一条开始执行的时间戳
+     * @var string 在选定时间范围内，慢SQL第一条开始执行的时间
      */
     public $FirstTime;
 
     /**
-     * @var string 在选定时间范围内，慢SQL最后一条开始执行的时间戳
+     * @var string 在选定时间范围内，慢SQL最后一条开始执行的时间
      */
     public $LastTime;
 
@@ -120,14 +120,14 @@ class AnalysisItems extends AbstractModel
      * @param string $NormalQuery 抽象参数之后的慢SQL
      * @param string $ClientAddr 慢SQL执行的客户端地址
      * @param integer $CallNum 在选定时间范围内慢SQL语句执行的次数
-     * @param float $CallPercent 在选定时间范围内，慢SQL语句执行的次数占所有慢SQL的比例（小数返回）
+     * @param float $CallPercent 在选定时间范围内，慢SQL语句执行的次数占所有慢SQL的百分比。
      * @param float $CostTime 在选定时间范围内，慢SQL执行的总时间
      * @param float $CostPercent 在选定时间范围内，慢SQL语句执行的总时间占所有慢SQL的比例（小数返回）
      * @param float $MinCostTime 在选定时间范围内，慢SQL语句执行的耗时最短的时间（单位：ms）
      * @param float $MaxCostTime 在选定时间范围内，慢SQL语句执行的耗时最长的时间（单位：ms）
      * @param float $AvgCostTime 在选定时间范围内，慢SQL语句执行的耗时平均时间（单位：ms）
-     * @param string $FirstTime 在选定时间范围内，慢SQL第一条开始执行的时间戳
-     * @param string $LastTime 在选定时间范围内，慢SQL最后一条开始执行的时间戳
+     * @param string $FirstTime 在选定时间范围内，慢SQL第一条开始执行的时间
+     * @param string $LastTime 在选定时间范围内，慢SQL最后一条开始执行的时间
      */
     function __construct()
     {

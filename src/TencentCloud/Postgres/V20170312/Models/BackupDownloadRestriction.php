@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 备份下载限制信息
  *
- * @method string getRestrictionType() 获取备份文件下载限制类型，NONE 无限制，内外网都可以下载；INTRANET 只允许内网下载；CUSTOMIZE 自定义限制下载的vpc或ip。
- * @method void setRestrictionType(string $RestrictionType) 设置备份文件下载限制类型，NONE 无限制，内外网都可以下载；INTRANET 只允许内网下载；CUSTOMIZE 自定义限制下载的vpc或ip。
+ * @method string getRestrictionType() 获取备份文件下载限制类型，NONE 无限制，内外网都可以下载；INTRANET 只允许内网下载；CUSTOMIZE 自定义限制下载的vpc或ip。当该参数取值为CUSTOMIZE 时，vpc或ip信息至少填写一项
+ * @method void setRestrictionType(string $RestrictionType) 设置备份文件下载限制类型，NONE 无限制，内外网都可以下载；INTRANET 只允许内网下载；CUSTOMIZE 自定义限制下载的vpc或ip。当该参数取值为CUSTOMIZE 时，vpc或ip信息至少填写一项
  * @method string getVpcRestrictionEffect() 获取vpc限制效力，ALLOW 允许；DENY 拒绝。
  * @method void setVpcRestrictionEffect(string $VpcRestrictionEffect) 设置vpc限制效力，ALLOW 允许；DENY 拒绝。
  * @method array getVpcIdSet() 获取允许或拒绝下载备份文件的vpcId列表。
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class BackupDownloadRestriction extends AbstractModel
 {
     /**
-     * @var string 备份文件下载限制类型，NONE 无限制，内外网都可以下载；INTRANET 只允许内网下载；CUSTOMIZE 自定义限制下载的vpc或ip。
+     * @var string 备份文件下载限制类型，NONE 无限制，内外网都可以下载；INTRANET 只允许内网下载；CUSTOMIZE 自定义限制下载的vpc或ip。当该参数取值为CUSTOMIZE 时，vpc或ip信息至少填写一项
      */
     public $RestrictionType;
 
@@ -59,7 +59,7 @@ class BackupDownloadRestriction extends AbstractModel
     public $IpSet;
 
     /**
-     * @param string $RestrictionType 备份文件下载限制类型，NONE 无限制，内外网都可以下载；INTRANET 只允许内网下载；CUSTOMIZE 自定义限制下载的vpc或ip。
+     * @param string $RestrictionType 备份文件下载限制类型，NONE 无限制，内外网都可以下载；INTRANET 只允许内网下载；CUSTOMIZE 自定义限制下载的vpc或ip。当该参数取值为CUSTOMIZE 时，vpc或ip信息至少填写一项
      * @param string $VpcRestrictionEffect vpc限制效力，ALLOW 允许；DENY 拒绝。
      * @param array $VpcIdSet 允许或拒绝下载备份文件的vpcId列表。
      * @param string $IpRestrictionEffect ip限制效力，ALLOW 允许；DENY 拒绝。

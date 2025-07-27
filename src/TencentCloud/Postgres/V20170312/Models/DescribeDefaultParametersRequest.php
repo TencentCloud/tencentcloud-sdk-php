@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDefaultParameters请求参数结构体
  *
- * @method string getDBMajorVersion() 获取数据库版本，大版本号，例如11，12，13
- * @method void setDBMajorVersion(string $DBMajorVersion) 设置数据库版本，大版本号，例如11，12，13
+ * @method string getDBMajorVersion() 获取数据库版本，大版本号，例如11，12，13。可从[DescribeDBVersions](https://cloud.tencent.com/document/api/409/89018)接口获取
+ * @method void setDBMajorVersion(string $DBMajorVersion) 设置数据库版本，大版本号，例如11，12，13。可从[DescribeDBVersions](https://cloud.tencent.com/document/api/409/89018)接口获取
  * @method string getDBEngine() 获取数据库引擎，例如：postgresql,mssql_compatible
  * @method void setDBEngine(string $DBEngine) 设置数据库引擎，例如：postgresql,mssql_compatible
  */
 class DescribeDefaultParametersRequest extends AbstractModel
 {
     /**
-     * @var string 数据库版本，大版本号，例如11，12，13
+     * @var string 数据库版本，大版本号，例如11，12，13。可从[DescribeDBVersions](https://cloud.tencent.com/document/api/409/89018)接口获取
      */
     public $DBMajorVersion;
 
@@ -38,7 +38,7 @@ class DescribeDefaultParametersRequest extends AbstractModel
     public $DBEngine;
 
     /**
-     * @param string $DBMajorVersion 数据库版本，大版本号，例如11，12，13
+     * @param string $DBMajorVersion 数据库版本，大版本号，例如11，12，13。可从[DescribeDBVersions](https://cloud.tencent.com/document/api/409/89018)接口获取
      * @param string $DBEngine 数据库引擎，例如：postgresql,mssql_compatible
      */
     function __construct()

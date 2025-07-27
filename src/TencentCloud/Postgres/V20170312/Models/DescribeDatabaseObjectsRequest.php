@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDatabaseObjects请求参数结构体
  *
- * @method string getDBInstanceId() 获取实例ID。	
- * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID。	
+ * @method string getDBInstanceId() 获取实例ID。	可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+ * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID。	可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
  * @method string getObjectType() 获取查询的对象类型。支持查询的数据对象有：database,schema,sequence,procedure,type,function,table,view,matview,column。
  * @method void setObjectType(string $ObjectType) 设置查询的对象类型。支持查询的数据对象有：database,schema,sequence,procedure,type,function,table,view,matview,column。
  * @method integer getLimit() 获取单次显示数量，默认20。可选范围为[0,100]。
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDatabaseObjectsRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID。	
+     * @var string 实例ID。	可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public $DBInstanceId;
 
@@ -73,7 +73,7 @@ class DescribeDatabaseObjectsRequest extends AbstractModel
     public $TableName;
 
     /**
-     * @param string $DBInstanceId 实例ID。	
+     * @param string $DBInstanceId 实例ID。	可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      * @param string $ObjectType 查询的对象类型。支持查询的数据对象有：database,schema,sequence,procedure,type,function,table,view,matview,column。
      * @param integer $Limit 单次显示数量，默认20。可选范围为[0,100]。
      * @param integer $Offset 数据偏移量，从0开始。	

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBInstanceParameters请求参数结构体
  *
- * @method string getDBInstanceId() 获取实例ID
- * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID
+ * @method string getDBInstanceId() 获取实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+ * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
  * @method string getParamName() 获取查询指定参数详情。ParamName为空或不传，默认返回全部参数列表
  * @method void setParamName(string $ParamName) 设置查询指定参数详情。ParamName为空或不传，默认返回全部参数列表
  */
 class DescribeDBInstanceParametersRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public $DBInstanceId;
 
@@ -38,7 +38,7 @@ class DescribeDBInstanceParametersRequest extends AbstractModel
     public $ParamName;
 
     /**
-     * @param string $DBInstanceId 实例ID
+     * @param string $DBInstanceId 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      * @param string $ParamName 查询指定参数详情。ParamName为空或不传，默认返回全部参数列表
      */
     function __construct()

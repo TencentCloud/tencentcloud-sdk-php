@@ -20,34 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ResetAccountPassword请求参数结构体
  *
- * @method string getDBInstanceId() 获取实例ID，形如postgres-4wdeb0zv
- * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID，形如postgres-4wdeb0zv
- * @method string getUserName() 获取实例账户名
- * @method void setUserName(string $UserName) 设置实例账户名
- * @method string getPassword() 获取UserName账户对应的新密码
- * @method void setPassword(string $Password) 设置UserName账户对应的新密码
+ * @method string getDBInstanceId() 获取实例ID，形如postgres-4wdeb0zv。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+ * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID，形如postgres-4wdeb0zv。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+ * @method string getUserName() 获取实例账户名。可通过[DescribeAccounts](https://cloud.tencent.com/document/api/409/18109)接口获取
+ * @method void setUserName(string $UserName) 设置实例账户名。可通过[DescribeAccounts](https://cloud.tencent.com/document/api/409/18109)接口获取
+ * @method string getPassword() 获取UserName账户对应的新密码。
+密码设置规则如下：
+- 长度8~ 32位，推荐使用12位以上的密码
+- 不能以" / "开头
+- 必须包含以下四项:
+  1.    小写字母a ~ z
+  2.    大写字母 A ～ Z
+  3.    数字 0 ～ 9
+  4.    特殊字符 ()`~!@#$%^&*-+=_|{}[]:<>,.?/
+ * @method void setPassword(string $Password) 设置UserName账户对应的新密码。
+密码设置规则如下：
+- 长度8~ 32位，推荐使用12位以上的密码
+- 不能以" / "开头
+- 必须包含以下四项:
+  1.    小写字母a ~ z
+  2.    大写字母 A ～ Z
+  3.    数字 0 ～ 9
+  4.    特殊字符 ()`~!@#$%^&*-+=_|{}[]:<>,.?/
  */
 class ResetAccountPasswordRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID，形如postgres-4wdeb0zv
+     * @var string 实例ID，形如postgres-4wdeb0zv。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public $DBInstanceId;
 
     /**
-     * @var string 实例账户名
+     * @var string 实例账户名。可通过[DescribeAccounts](https://cloud.tencent.com/document/api/409/18109)接口获取
      */
     public $UserName;
 
     /**
-     * @var string UserName账户对应的新密码
+     * @var string UserName账户对应的新密码。
+密码设置规则如下：
+- 长度8~ 32位，推荐使用12位以上的密码
+- 不能以" / "开头
+- 必须包含以下四项:
+  1.    小写字母a ~ z
+  2.    大写字母 A ～ Z
+  3.    数字 0 ～ 9
+  4.    特殊字符 ()`~!@#$%^&*-+=_|{}[]:<>,.?/
      */
     public $Password;
 
     /**
-     * @param string $DBInstanceId 实例ID，形如postgres-4wdeb0zv
-     * @param string $UserName 实例账户名
-     * @param string $Password UserName账户对应的新密码
+     * @param string $DBInstanceId 实例ID，形如postgres-4wdeb0zv。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * @param string $UserName 实例账户名。可通过[DescribeAccounts](https://cloud.tencent.com/document/api/409/18109)接口获取
+     * @param string $Password UserName账户对应的新密码。
+密码设置规则如下：
+- 长度8~ 32位，推荐使用12位以上的密码
+- 不能以" / "开头
+- 必须包含以下四项:
+  1.    小写字母a ~ z
+  2.    大写字母 A ～ Z
+  3.    数字 0 ～ 9
+  4.    特殊字符 ()`~!@#$%^&*-+=_|{}[]:<>,.?/
      */
     function __construct()
     {

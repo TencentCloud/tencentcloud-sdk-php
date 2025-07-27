@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SwitchDBInstancePrimary请求参数结构体
  *
- * @method string getDBInstanceId() 获取实例ID
- * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID
+ * @method string getDBInstanceId() 获取实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+ * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
  * @method boolean getForce() 获取是否强制切换。强制切换时只要备节点可访问，无论主备延迟多大都会发起切换。只有SwitchTag为0时，才可使用立即切换。
-<li>默认：false
+<li>默认：false</li>
  * @method void setForce(boolean $Force) 设置是否强制切换。强制切换时只要备节点可访问，无论主备延迟多大都会发起切换。只有SwitchTag为0时，才可使用立即切换。
-<li>默认：false
+<li>默认：false</li>
  * @method integer getSwitchTag() 获取指定实例配置完成变更后的切换时间。
-<li>0：立即切换 
-<li>1：指定时间切换
-<li>2：维护时间窗口内切换
-<li>默认值：0 
+<li>0：立即切换 </li>
+<li>1：指定时间切换</li>
+<li>2：维护时间窗口内切换</li>
+默认值：0 
  * @method void setSwitchTag(integer $SwitchTag) 设置指定实例配置完成变更后的切换时间。
-<li>0：立即切换 
-<li>1：指定时间切换
-<li>2：维护时间窗口内切换
-<li>默认值：0 
+<li>0：立即切换 </li>
+<li>1：指定时间切换</li>
+<li>2：维护时间窗口内切换</li>
+默认值：0 
  * @method string getSwitchStartTime() 获取切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。当SwitchTag为0或2时，该参数失效。
  * @method void setSwitchStartTime(string $SwitchStartTime) 设置切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。当SwitchTag为0或2时，该参数失效。
  * @method string getSwitchEndTime() 获取切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。当SwitchTag为0或2时，该参数失效。SwitchStartTime和SwitchEndTime时间窗口不能小于30分钟。
@@ -44,22 +44,22 @@ use TencentCloud\Common\AbstractModel;
 class SwitchDBInstancePrimaryRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public $DBInstanceId;
 
     /**
      * @var boolean 是否强制切换。强制切换时只要备节点可访问，无论主备延迟多大都会发起切换。只有SwitchTag为0时，才可使用立即切换。
-<li>默认：false
+<li>默认：false</li>
      */
     public $Force;
 
     /**
      * @var integer 指定实例配置完成变更后的切换时间。
-<li>0：立即切换 
-<li>1：指定时间切换
-<li>2：维护时间窗口内切换
-<li>默认值：0 
+<li>0：立即切换 </li>
+<li>1：指定时间切换</li>
+<li>2：维护时间窗口内切换</li>
+默认值：0 
      */
     public $SwitchTag;
 
@@ -74,14 +74,14 @@ class SwitchDBInstancePrimaryRequest extends AbstractModel
     public $SwitchEndTime;
 
     /**
-     * @param string $DBInstanceId 实例ID
+     * @param string $DBInstanceId 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      * @param boolean $Force 是否强制切换。强制切换时只要备节点可访问，无论主备延迟多大都会发起切换。只有SwitchTag为0时，才可使用立即切换。
-<li>默认：false
+<li>默认：false</li>
      * @param integer $SwitchTag 指定实例配置完成变更后的切换时间。
-<li>0：立即切换 
-<li>1：指定时间切换
-<li>2：维护时间窗口内切换
-<li>默认值：0 
+<li>0：立即切换 </li>
+<li>1：指定时间切换</li>
+<li>2：维护时间窗口内切换</li>
+默认值：0 
      * @param string $SwitchStartTime 切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。当SwitchTag为0或2时，该参数失效。
      * @param string $SwitchEndTime 切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。当SwitchTag为0或2时，该参数失效。SwitchStartTime和SwitchEndTime时间窗口不能小于30分钟。
      */

@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClasses请求参数结构体
  *
- * @method string getZone() 获取可用区ID。可以通过接口DescribeZones获取。
- * @method void setZone(string $Zone) 设置可用区ID。可以通过接口DescribeZones获取。
+ * @method string getZone() 获取可用区名称。可以通过接口[DescribeZones](https://cloud.tencent.com/document/product/409/16769)获取。
+ * @method void setZone(string $Zone) 设置可用区名称。可以通过接口[DescribeZones](https://cloud.tencent.com/document/product/409/16769)获取。
  * @method string getDBEngine() 获取数据库引擎，支持：
 1、postgresql（云数据库PostgreSQL）；
 2、mssql_compatible（MSSQL兼容-云数据库PostgreSQL）；
  * @method void setDBEngine(string $DBEngine) 设置数据库引擎，支持：
 1、postgresql（云数据库PostgreSQL）；
 2、mssql_compatible（MSSQL兼容-云数据库PostgreSQL）；
- * @method string getDBMajorVersion() 获取数据库主版本号。例如12，13，可以通过接口DescribeDBVersions获取。
- * @method void setDBMajorVersion(string $DBMajorVersion) 设置数据库主版本号。例如12，13，可以通过接口DescribeDBVersions获取。
+ * @method string getDBMajorVersion() 获取数据库主版本号。例如12，13，可以通过接口[DescribeDBVersions](https://cloud.tencent.com/document/product/409/89018)获取。
+ * @method void setDBMajorVersion(string $DBMajorVersion) 设置数据库主版本号。例如12，13，可以通过接口[DescribeDBVersions](https://cloud.tencent.com/document/product/409/89018)获取。
  */
 class DescribeClassesRequest extends AbstractModel
 {
     /**
-     * @var string 可用区ID。可以通过接口DescribeZones获取。
+     * @var string 可用区名称。可以通过接口[DescribeZones](https://cloud.tencent.com/document/product/409/16769)获取。
      */
     public $Zone;
 
@@ -46,16 +46,16 @@ class DescribeClassesRequest extends AbstractModel
     public $DBEngine;
 
     /**
-     * @var string 数据库主版本号。例如12，13，可以通过接口DescribeDBVersions获取。
+     * @var string 数据库主版本号。例如12，13，可以通过接口[DescribeDBVersions](https://cloud.tencent.com/document/product/409/89018)获取。
      */
     public $DBMajorVersion;
 
     /**
-     * @param string $Zone 可用区ID。可以通过接口DescribeZones获取。
+     * @param string $Zone 可用区名称。可以通过接口[DescribeZones](https://cloud.tencent.com/document/product/409/16769)获取。
      * @param string $DBEngine 数据库引擎，支持：
 1、postgresql（云数据库PostgreSQL）；
 2、mssql_compatible（MSSQL兼容-云数据库PostgreSQL）；
-     * @param string $DBMajorVersion 数据库主版本号。例如12，13，可以通过接口DescribeDBVersions获取。
+     * @param string $DBMajorVersion 数据库主版本号。例如12，13，可以通过接口[DescribeDBVersions](https://cloud.tencent.com/document/product/409/89018)获取。
      */
     function __construct()
     {

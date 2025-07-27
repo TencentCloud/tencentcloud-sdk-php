@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 用于回档的实例详情
  *
- * @method string getInstanceId() 获取云数据库实例ID
- * @method void setInstanceId(string $InstanceId) 设置云数据库实例ID
- * @method string getStrategy() 获取回档策略。可选值为：table、db、full；默认值为full。table - 极速回档模式，仅导入所选中表级别的备份和binlog，如有跨表操作，且关联表未被同时选中，将会导致回档失败，该模式下参数Databases必须为空；db - 快速模式，仅导入所选中库级别的备份和binlog，如有跨库操作，且关联库未被同时选中，将会导致回档失败；full - 普通回档模式，将导入整个实例的备份和binlog，速度较慢。
- * @method void setStrategy(string $Strategy) 设置回档策略。可选值为：table、db、full；默认值为full。table - 极速回档模式，仅导入所选中表级别的备份和binlog，如有跨表操作，且关联表未被同时选中，将会导致回档失败，该模式下参数Databases必须为空；db - 快速模式，仅导入所选中库级别的备份和binlog，如有跨库操作，且关联库未被同时选中，将会导致回档失败；full - 普通回档模式，将导入整个实例的备份和binlog，速度较慢。
- * @method string getRollbackTime() 获取数据库回档时间，时间格式为：yyyy-mm-dd hh:mm:ss
- * @method void setRollbackTime(string $RollbackTime) 设置数据库回档时间，时间格式为：yyyy-mm-dd hh:mm:ss
- * @method array getDatabases() 获取待回档的数据库信息，表示整库回档
- * @method void setDatabases(array $Databases) 设置待回档的数据库信息，表示整库回档
- * @method array getTables() 获取待回档的数据库表信息，表示按表回档
- * @method void setTables(array $Tables) 设置待回档的数据库表信息，表示按表回档
+ * @method string getInstanceId() 获取云数据库实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置云数据库实例 ID。
+ * @method string getStrategy() 获取回档策略。可选值为：table、db、full。table - 极速回档模式，仅导入所选中表级别的备份和binlog，如有跨表操作，且关联表未被同时选中，将会导致回档失败，该模式下参数Databases必须为空；db - 快速模式，仅导入所选中库级别的备份和binlog，如有跨库操作，且关联库未被同时选中，将会导致回档失败；full - 普通回档模式，将导入整个实例的备份和 binlog，速度较慢。
+ * @method void setStrategy(string $Strategy) 设置回档策略。可选值为：table、db、full。table - 极速回档模式，仅导入所选中表级别的备份和binlog，如有跨表操作，且关联表未被同时选中，将会导致回档失败，该模式下参数Databases必须为空；db - 快速模式，仅导入所选中库级别的备份和binlog，如有跨库操作，且关联库未被同时选中，将会导致回档失败；full - 普通回档模式，将导入整个实例的备份和 binlog，速度较慢。
+ * @method string getRollbackTime() 获取数据库回档时间，时间格式为：yyyy-mm-dd hh:mm:ss。
+ * @method void setRollbackTime(string $RollbackTime) 设置数据库回档时间，时间格式为：yyyy-mm-dd hh:mm:ss。
+ * @method array getDatabases() 获取待回档的数据库信息，表示整库回档。
+ * @method void setDatabases(array $Databases) 设置待回档的数据库信息，表示整库回档。
+ * @method array getTables() 获取待回档的数据库表信息，表示按表回档。
+ * @method void setTables(array $Tables) 设置待回档的数据库表信息，表示按表回档。
  */
 class RollbackInstancesInfo extends AbstractModel
 {
     /**
-     * @var string 云数据库实例ID
+     * @var string 云数据库实例 ID。
      */
     public $InstanceId;
 
     /**
-     * @var string 回档策略。可选值为：table、db、full；默认值为full。table - 极速回档模式，仅导入所选中表级别的备份和binlog，如有跨表操作，且关联表未被同时选中，将会导致回档失败，该模式下参数Databases必须为空；db - 快速模式，仅导入所选中库级别的备份和binlog，如有跨库操作，且关联库未被同时选中，将会导致回档失败；full - 普通回档模式，将导入整个实例的备份和binlog，速度较慢。
+     * @var string 回档策略。可选值为：table、db、full。table - 极速回档模式，仅导入所选中表级别的备份和binlog，如有跨表操作，且关联表未被同时选中，将会导致回档失败，该模式下参数Databases必须为空；db - 快速模式，仅导入所选中库级别的备份和binlog，如有跨库操作，且关联库未被同时选中，将会导致回档失败；full - 普通回档模式，将导入整个实例的备份和 binlog，速度较慢。
      */
     public $Strategy;
 
     /**
-     * @var string 数据库回档时间，时间格式为：yyyy-mm-dd hh:mm:ss
+     * @var string 数据库回档时间，时间格式为：yyyy-mm-dd hh:mm:ss。
      */
     public $RollbackTime;
 
     /**
-     * @var array 待回档的数据库信息，表示整库回档
+     * @var array 待回档的数据库信息，表示整库回档。
      */
     public $Databases;
 
     /**
-     * @var array 待回档的数据库表信息，表示按表回档
+     * @var array 待回档的数据库表信息，表示按表回档。
      */
     public $Tables;
 
     /**
-     * @param string $InstanceId 云数据库实例ID
-     * @param string $Strategy 回档策略。可选值为：table、db、full；默认值为full。table - 极速回档模式，仅导入所选中表级别的备份和binlog，如有跨表操作，且关联表未被同时选中，将会导致回档失败，该模式下参数Databases必须为空；db - 快速模式，仅导入所选中库级别的备份和binlog，如有跨库操作，且关联库未被同时选中，将会导致回档失败；full - 普通回档模式，将导入整个实例的备份和binlog，速度较慢。
-     * @param string $RollbackTime 数据库回档时间，时间格式为：yyyy-mm-dd hh:mm:ss
-     * @param array $Databases 待回档的数据库信息，表示整库回档
-     * @param array $Tables 待回档的数据库表信息，表示按表回档
+     * @param string $InstanceId 云数据库实例 ID。
+     * @param string $Strategy 回档策略。可选值为：table、db、full。table - 极速回档模式，仅导入所选中表级别的备份和binlog，如有跨表操作，且关联表未被同时选中，将会导致回档失败，该模式下参数Databases必须为空；db - 快速模式，仅导入所选中库级别的备份和binlog，如有跨库操作，且关联库未被同时选中，将会导致回档失败；full - 普通回档模式，将导入整个实例的备份和 binlog，速度较慢。
+     * @param string $RollbackTime 数据库回档时间，时间格式为：yyyy-mm-dd hh:mm:ss。
+     * @param array $Databases 待回档的数据库信息，表示整库回档。
+     * @param array $Tables 待回档的数据库表信息，表示按表回档。
      */
     function __construct()
     {

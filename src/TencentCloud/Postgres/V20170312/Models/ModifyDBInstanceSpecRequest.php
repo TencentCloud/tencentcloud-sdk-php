@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDBInstanceSpec请求参数结构体
  *
- * @method string getDBInstanceId() 获取实例ID，形如：postgres-6bwgamo3。
- * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID，形如：postgres-6bwgamo3。
+ * @method string getDBInstanceId() 获取实例ID，形如：postgres-6bwgamo3。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+ * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID，形如：postgres-6bwgamo3。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
  * @method integer getMemory() 获取修改后的实例内存大小，单位GiB。
  * @method void setMemory(integer $Memory) 设置修改后的实例内存大小，单位GiB。
- * @method integer getStorage() 获取修改后的实例磁盘大小，单位GiB。
- * @method void setStorage(integer $Storage) 设置修改后的实例磁盘大小，单位GiB。
+ * @method integer getStorage() 获取修改后的实例磁盘大小，单位GiB。该参数的设置步长为10。
+ * @method void setStorage(integer $Storage) 设置修改后的实例磁盘大小，单位GiB。该参数的设置步长为10。
  * @method integer getAutoVoucher() 获取是否自动使用代金券：
 <li>0：否</li>
 <li>1：是</li>
@@ -52,13 +52,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitchStartTime(string $SwitchStartTime) 设置切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。当SwitchTag为0或2时，该参数失效。
  * @method string getSwitchEndTime() 获取切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。当SwitchTag为0或2时，该参数失效。
  * @method void setSwitchEndTime(string $SwitchEndTime) 设置切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。当SwitchTag为0或2时，该参数失效。
- * @method integer getCpu() 获取修改后的实例CPU大小，单位Core。
- * @method void setCpu(integer $Cpu) 设置修改后的实例CPU大小，单位Core。
+ * @method integer getCpu() 获取修改后的实例CPU大小，单位Core。不填写该参数时，默认根据Memory确定Cpu大小。如Memory为2，支持的规格有1核2GiB，则不传入Cpu时，Cpu默认为1。
+ * @method void setCpu(integer $Cpu) 设置修改后的实例CPU大小，单位Core。不填写该参数时，默认根据Memory确定Cpu大小。如Memory为2，支持的规格有1核2GiB，则不传入Cpu时，Cpu默认为1。
  */
 class ModifyDBInstanceSpecRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID，形如：postgres-6bwgamo3。
+     * @var string 实例ID，形如：postgres-6bwgamo3。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public $DBInstanceId;
 
@@ -68,7 +68,7 @@ class ModifyDBInstanceSpecRequest extends AbstractModel
     public $Memory;
 
     /**
-     * @var integer 修改后的实例磁盘大小，单位GiB。
+     * @var integer 修改后的实例磁盘大小，单位GiB。该参数的设置步长为10。
      */
     public $Storage;
 
@@ -110,14 +110,14 @@ class ModifyDBInstanceSpecRequest extends AbstractModel
     public $SwitchEndTime;
 
     /**
-     * @var integer 修改后的实例CPU大小，单位Core。
+     * @var integer 修改后的实例CPU大小，单位Core。不填写该参数时，默认根据Memory确定Cpu大小。如Memory为2，支持的规格有1核2GiB，则不传入Cpu时，Cpu默认为1。
      */
     public $Cpu;
 
     /**
-     * @param string $DBInstanceId 实例ID，形如：postgres-6bwgamo3。
+     * @param string $DBInstanceId 实例ID，形如：postgres-6bwgamo3。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      * @param integer $Memory 修改后的实例内存大小，单位GiB。
-     * @param integer $Storage 修改后的实例磁盘大小，单位GiB。
+     * @param integer $Storage 修改后的实例磁盘大小，单位GiB。该参数的设置步长为10。
      * @param integer $AutoVoucher 是否自动使用代金券：
 <li>0：否</li>
 <li>1：是</li>
@@ -131,7 +131,7 @@ class ModifyDBInstanceSpecRequest extends AbstractModel
 默认值：0 
      * @param string $SwitchStartTime 切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。当SwitchTag为0或2时，该参数失效。
      * @param string $SwitchEndTime 切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。当SwitchTag为0或2时，该参数失效。
-     * @param integer $Cpu 修改后的实例CPU大小，单位Core。
+     * @param integer $Cpu 修改后的实例CPU大小，单位Core。不填写该参数时，默认根据Memory确定Cpu大小。如Memory为2，支持的规格有1核2GiB，则不传入Cpu时，Cpu默认为1。
      */
     function __construct()
     {

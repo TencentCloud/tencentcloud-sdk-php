@@ -222,6 +222,7 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
  * @method Models\DescribeTaskDetailDsResponse DescribeTaskDetailDs(Models\DescribeTaskDetailDsRequest $req) 查询任务具体详情【新】
  * @method Models\DescribeTaskLineageResponse DescribeTaskLineage(Models\DescribeTaskLineageRequest $req) 通过任务查询表的血缘关系
  * @method Models\DescribeTaskLockStatusResponse DescribeTaskLockStatus(Models\DescribeTaskLockStatusRequest $req) 查看任务锁状态信息
+ * @method Models\DescribeTaskParamDsResponse DescribeTaskParamDs(Models\DescribeTaskParamDsRequest $req) 查询任务引用参数
  * @method Models\DescribeTaskRunHistoryResponse DescribeTaskRunHistory(Models\DescribeTaskRunHistoryRequest $req) 分页查询任务运行历史
  * @method Models\DescribeTaskScriptResponse DescribeTaskScript(Models\DescribeTaskScriptRequest $req) 查询任务脚本。本接口已废弃，请使用接口GetPaginationTaskScript。
  * @method Models\DescribeTaskTableMetricOverviewResponse DescribeTaskTableMetricOverview(Models\DescribeTaskTableMetricOverviewRequest $req) 查询实时任务表粒度指标概览
@@ -253,6 +254,7 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
  * @method Models\GetFileInfoResponse GetFileInfo(Models\GetFileInfoRequest $req) 开发空间-获取数据开发脚本信息
  * @method Models\GetInstanceLogResponse GetInstanceLog(Models\GetInstanceLogRequest $req) 获取实例列表
  * @method Models\GetIntegrationNodeColumnSchemaResponse GetIntegrationNodeColumnSchema(Models\GetIntegrationNodeColumnSchemaRequest $req) 提取数据集成节点字段Schema
+ * @method Models\GetJobStatusResponse GetJobStatus(Models\GetJobStatusRequest $req) 获取异步任务执行结果
  * @method Models\GetOfflineDIInstanceListResponse GetOfflineDIInstanceList(Models\GetOfflineDIInstanceListRequest $req) 获取离线任务实例列表(新)
  * @method Models\GetOfflineInstanceListResponse GetOfflineInstanceList(Models\GetOfflineInstanceListRequest $req) 获取离线任务实例
  * @method Models\GetPaginationTaskScriptResponse GetPaginationTaskScript(Models\GetPaginationTaskScriptRequest $req) 获取带分页的任务脚本
@@ -294,9 +296,15 @@ https://capi.woa.com/api/detail?product=wedata&env=api_formal&version=2021-08-20
 注册事件。本接口已废弃，请使用接口RegisterDsEvent。
  * @method Models\RegisterEventListenerResponse RegisterEventListener(Models\RegisterEventListenerRequest $req) <p style="color:red;">[注意：该版本只满足广州区部分白名单客户使用]</p>
 注册事件监听器。本接口已废弃，请使用接口RegisterDsEventListener。
+ * @method Models\RemoveDatabaseResponse RemoveDatabase(Models\RemoveDatabaseRequest $req) 移除database元数据
+ * @method Models\RemoveSchemaResponse RemoveSchema(Models\RemoveSchemaRequest $req) 移除schema元数据
+ * @method Models\RemoveTableResponse RemoveTable(Models\RemoveTableRequest $req) 移除table元数据
  * @method Models\RemoveWorkflowDsResponse RemoveWorkflowDs(Models\RemoveWorkflowDsRequest $req) 删除编排空间工作流
  * @method Models\RenewWorkflowOwnerDsResponse RenewWorkflowOwnerDs(Models\RenewWorkflowOwnerDsRequest $req) 批量更新工作流下任务责任人
  * @method Models\RenewWorkflowSchedulerInfoDsResponse RenewWorkflowSchedulerInfoDs(Models\RenewWorkflowSchedulerInfoDsRequest $req) 更新工作流下任务调度信息
+ * @method Models\ReportDatabaseResponse ReportDatabase(Models\ReportDatabaseRequest $req) 上报database元数据
+ * @method Models\ReportSchemaResponse ReportSchema(Models\ReportSchemaRequest $req) 上报schema元数据
+ * @method Models\ReportTableResponse ReportTable(Models\ReportTableRequest $req) 上报table元数据
  * @method Models\ReportTaskLineageResponse ReportTaskLineage(Models\ReportTaskLineageRequest $req) 血缘上报接口
  * @method Models\ResumeIntegrationTaskResponse ResumeIntegrationTask(Models\ResumeIntegrationTaskRequest $req) 继续集成任务
  * @method Models\RobAndLockIntegrationTaskResponse RobAndLockIntegrationTask(Models\RobAndLockIntegrationTaskRequest $req) 抢占锁定集成任务

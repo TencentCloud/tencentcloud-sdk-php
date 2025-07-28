@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeParameterTemplates请求参数结构体
  *
- * @method array getFilters() 获取过滤条件，目前支持的过滤条件有：TemplateName, TemplateId，DBMajorVersion，DBEngine
- * @method void setFilters(array $Filters) 设置过滤条件，目前支持的过滤条件有：TemplateName, TemplateId，DBMajorVersion，DBEngine
+ * @method array getFilters() 获取过滤条件，目前支持的过滤条件有：TemplateName, TemplateId，DBMajorVersion，DBEngine。TemplateName不支持模糊匹配。
+ * @method void setFilters(array $Filters) 设置过滤条件，目前支持的过滤条件有：TemplateName, TemplateId，DBMajorVersion，DBEngine。TemplateName不支持模糊匹配。
  * @method integer getLimit() 获取每页显示数量，[0，100]，默认 20
  * @method void setLimit(integer $Limit) 设置每页显示数量，[0，100]，默认 20
  * @method integer getOffset() 获取数据偏移量
  * @method void setOffset(integer $Offset) 设置数据偏移量
- * @method string getOrderBy() 获取排序指标，枚举值，支持：CreateTime，TemplateName，DBMajorVersion
- * @method void setOrderBy(string $OrderBy) 设置排序指标，枚举值，支持：CreateTime，TemplateName，DBMajorVersion
- * @method string getOrderByType() 获取排序方式，枚举值，支持：asc（升序） ，desc（降序）
- * @method void setOrderByType(string $OrderByType) 设置排序方式，枚举值，支持：asc（升序） ，desc（降序）
+ * @method string getOrderBy() 获取排序指标，枚举值，支持：CreateTime，TemplateName，DBMajorVersion。如果不指定该参数，默认将按照参数模板的编号倒序排列，也就是说最新添加的参数模板会排在最前面。
+ * @method void setOrderBy(string $OrderBy) 设置排序指标，枚举值，支持：CreateTime，TemplateName，DBMajorVersion。如果不指定该参数，默认将按照参数模板的编号倒序排列，也就是说最新添加的参数模板会排在最前面。
+ * @method string getOrderByType() 获取排序方式，枚举值，支持：asc（升序） ，desc（降序）。默认值为asc。当未指定OrderBy时，该参数失效，此时排序方式为OrderBy参数描述中给出的默认排序方式。
+ * @method void setOrderByType(string $OrderByType) 设置排序方式，枚举值，支持：asc（升序） ，desc（降序）。默认值为asc。当未指定OrderBy时，该参数失效，此时排序方式为OrderBy参数描述中给出的默认排序方式。
  */
 class DescribeParameterTemplatesRequest extends AbstractModel
 {
     /**
-     * @var array 过滤条件，目前支持的过滤条件有：TemplateName, TemplateId，DBMajorVersion，DBEngine
+     * @var array 过滤条件，目前支持的过滤条件有：TemplateName, TemplateId，DBMajorVersion，DBEngine。TemplateName不支持模糊匹配。
      */
     public $Filters;
 
@@ -49,21 +49,21 @@ class DescribeParameterTemplatesRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var string 排序指标，枚举值，支持：CreateTime，TemplateName，DBMajorVersion
+     * @var string 排序指标，枚举值，支持：CreateTime，TemplateName，DBMajorVersion。如果不指定该参数，默认将按照参数模板的编号倒序排列，也就是说最新添加的参数模板会排在最前面。
      */
     public $OrderBy;
 
     /**
-     * @var string 排序方式，枚举值，支持：asc（升序） ，desc（降序）
+     * @var string 排序方式，枚举值，支持：asc（升序） ，desc（降序）。默认值为asc。当未指定OrderBy时，该参数失效，此时排序方式为OrderBy参数描述中给出的默认排序方式。
      */
     public $OrderByType;
 
     /**
-     * @param array $Filters 过滤条件，目前支持的过滤条件有：TemplateName, TemplateId，DBMajorVersion，DBEngine
+     * @param array $Filters 过滤条件，目前支持的过滤条件有：TemplateName, TemplateId，DBMajorVersion，DBEngine。TemplateName不支持模糊匹配。
      * @param integer $Limit 每页显示数量，[0，100]，默认 20
      * @param integer $Offset 数据偏移量
-     * @param string $OrderBy 排序指标，枚举值，支持：CreateTime，TemplateName，DBMajorVersion
-     * @param string $OrderByType 排序方式，枚举值，支持：asc（升序） ，desc（降序）
+     * @param string $OrderBy 排序指标，枚举值，支持：CreateTime，TemplateName，DBMajorVersion。如果不指定该参数，默认将按照参数模板的编号倒序排列，也就是说最新添加的参数模板会排在最前面。
+     * @param string $OrderByType 排序方式，枚举值，支持：asc（升序） ，desc（降序）。默认值为asc。当未指定OrderBy时，该参数失效，此时排序方式为OrderBy参数描述中给出的默认排序方式。
      */
     function __construct()
     {

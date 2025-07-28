@@ -64,6 +64,8 @@ PureAudio：纯音频类型
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSubtitleTemplate(SubtitleTemplate $SubtitleTemplate) 设置字幕参数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getStdExtInfo() 获取转码参数扩展字段
+ * @method void setStdExtInfo(string $StdExtInfo) 设置转码参数扩展字段
  */
 class AdaptiveDynamicStreamingTaskInput extends AbstractModel
 {
@@ -130,6 +132,11 @@ PureAudio：纯音频类型
     public $SubtitleTemplate;
 
     /**
+     * @var string 转码参数扩展字段
+     */
+    public $StdExtInfo;
+
+    /**
      * @param integer $Definition 转自适应码流模板 ID。
      * @param array $WatermarkSet 水印列表，支持多张图片或文字水印，最大可支持 10 张。
      * @param TaskOutputStorage $OutputStorage 转自适应码流后文件的目标存储，不填则继承上层的 OutputStorage 值。
@@ -152,6 +159,7 @@ Common：音视频类型
 PureAudio：纯音频类型
      * @param SubtitleTemplate $SubtitleTemplate 字幕参数
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $StdExtInfo 转码参数扩展字段
      */
     function __construct()
     {
@@ -217,6 +225,10 @@ PureAudio：纯音频类型
         if (array_key_exists("SubtitleTemplate",$param) and $param["SubtitleTemplate"] !== null) {
             $this->SubtitleTemplate = new SubtitleTemplate();
             $this->SubtitleTemplate->deserialize($param["SubtitleTemplate"]);
+        }
+
+        if (array_key_exists("StdExtInfo",$param) and $param["StdExtInfo"] !== null) {
+            $this->StdExtInfo = $param["StdExtInfo"];
         }
     }
 }

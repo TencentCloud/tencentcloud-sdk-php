@@ -428,6 +428,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTemplateId(string $TemplateId) 设置引用的代码模版id
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAllowRedoType() 获取允许重跑类 ALL 无论实例成功或者失败，都允许重跑 FAILURE 只有失败的实例允许重跑，成功的实例不允许重跑 NONE 无论成功或者失败，都不允许重跑
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAllowRedoType(string $AllowRedoType) 设置允许重跑类 ALL 无论实例成功或者失败，都允许重跑 FAILURE 只有失败的实例允许重跑，成功的实例不允许重跑 NONE 无论成功或者失败，都不允许重跑
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskDsDTO extends AbstractModel
 {
@@ -1036,6 +1040,12 @@ class TaskDsDTO extends AbstractModel
     public $TemplateId;
 
     /**
+     * @var string 允许重跑类 ALL 无论实例成功或者失败，都允许重跑 FAILURE 只有失败的实例允许重跑，成功的实例不允许重跑 NONE 无论成功或者失败，都不允许重跑
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AllowRedoType;
+
+    /**
      * @param string $TaskId 任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VirtualTaskId 虚拟任务标记
@@ -1239,6 +1249,8 @@ class TaskDsDTO extends AbstractModel
      * @param string $ScheduleTimeZone UTC+8;UDC-8
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TemplateId 引用的代码模版id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AllowRedoType 允许重跑类 ALL 无论实例成功或者失败，都允许重跑 FAILURE 只有失败的实例允许重跑，成功的实例不允许重跑 NONE 无论成功或者失败，都不允许重跑
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1699,6 +1711,10 @@ class TaskDsDTO extends AbstractModel
 
         if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
             $this->TemplateId = $param["TemplateId"];
+        }
+
+        if (array_key_exists("AllowRedoType",$param) and $param["AllowRedoType"] !== null) {
+            $this->AllowRedoType = $param["AllowRedoType"];
         }
     }
 }

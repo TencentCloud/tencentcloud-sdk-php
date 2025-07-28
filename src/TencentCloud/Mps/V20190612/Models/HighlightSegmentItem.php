@@ -31,13 +31,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSegmentTags(array $SegmentTags) 设置片段标签
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBeginTime() 获取直播切片对应直播起始时间点，采用 ISO 日期格式。	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBeginTime(string $BeginTime) 设置直播切片对应直播起始时间点，采用 ISO 日期格式。	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getEndTime() 获取直播切片对应直播结束时间点，采用 ISO 日期格式。	
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEndTime(string $EndTime) 设置直播切片对应直播结束时间点，采用 ISO 日期格式。	
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class HighlightSegmentItem extends AbstractModel
 {
@@ -64,13 +60,11 @@ class HighlightSegmentItem extends AbstractModel
 
     /**
      * @var string 直播切片对应直播起始时间点，采用 ISO 日期格式。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $BeginTime;
 
     /**
      * @var string 直播切片对应直播结束时间点，采用 ISO 日期格式。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EndTime;
 
@@ -81,9 +75,7 @@ class HighlightSegmentItem extends AbstractModel
      * @param array $SegmentTags 片段标签
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BeginTime 直播切片对应直播起始时间点，采用 ISO 日期格式。	
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EndTime 直播切片对应直播结束时间点，采用 ISO 日期格式。	
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

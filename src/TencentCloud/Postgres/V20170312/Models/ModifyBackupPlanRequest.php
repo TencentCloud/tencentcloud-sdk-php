@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyBackupPlan请求参数结构体
  *
- * @method string getDBInstanceId() 获取实例ID
- * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID
+ * @method string getDBInstanceId() 获取实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+ * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
  * @method string getMinBackupStartTime() 获取实例最早开始备份时间
  * @method void setMinBackupStartTime(string $MinBackupStartTime) 设置实例最早开始备份时间
  * @method string getMaxBackupStartTime() 获取实例最晚开始备份时间
  * @method void setMaxBackupStartTime(string $MaxBackupStartTime) 设置实例最晚开始备份时间
  * @method integer getBaseBackupRetentionPeriod() 获取实例备份保留时长，取值范围为7-1830，单位是天
  * @method void setBaseBackupRetentionPeriod(integer $BaseBackupRetentionPeriod) 设置实例备份保留时长，取值范围为7-1830，单位是天
- * @method array getBackupPeriod() 获取实例备份周期，若是星期维度，格式为小写星期英文单词；若是按月维度，格式为数字字符，如["1","2"]。
- * @method void setBackupPeriod(array $BackupPeriod) 设置实例备份周期，若是星期维度，格式为小写星期英文单词；若是按月维度，格式为数字字符，如["1","2"]。
+ * @method array getBackupPeriod() 获取实例备份周期，若是星期维度，格式为小写星期英文单词，且至少设置两天备份；若是按月维度，格式为数字字符，如["1","2"]。
+ * @method void setBackupPeriod(array $BackupPeriod) 设置实例备份周期，若是星期维度，格式为小写星期英文单词，且至少设置两天备份；若是按月维度，格式为数字字符，如["1","2"]。
  * @method integer getLogBackupRetentionPeriod() 获取实例日志备份保留时长，取值范围为7-1830，单位是天
  * @method void setLogBackupRetentionPeriod(integer $LogBackupRetentionPeriod) 设置实例日志备份保留时长，取值范围为7-1830，单位是天
  * @method string getPlanId() 获取备份计划ID，用于指明要修改哪个备份计划，不传则是修改默认备份计划。
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyBackupPlanRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public $DBInstanceId;
 
@@ -60,7 +60,7 @@ class ModifyBackupPlanRequest extends AbstractModel
     public $BaseBackupRetentionPeriod;
 
     /**
-     * @var array 实例备份周期，若是星期维度，格式为小写星期英文单词；若是按月维度，格式为数字字符，如["1","2"]。
+     * @var array 实例备份周期，若是星期维度，格式为小写星期英文单词，且至少设置两天备份；若是按月维度，格式为数字字符，如["1","2"]。
      */
     public $BackupPeriod;
 
@@ -80,11 +80,11 @@ class ModifyBackupPlanRequest extends AbstractModel
     public $PlanName;
 
     /**
-     * @param string $DBInstanceId 实例ID
+     * @param string $DBInstanceId 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      * @param string $MinBackupStartTime 实例最早开始备份时间
      * @param string $MaxBackupStartTime 实例最晚开始备份时间
      * @param integer $BaseBackupRetentionPeriod 实例备份保留时长，取值范围为7-1830，单位是天
-     * @param array $BackupPeriod 实例备份周期，若是星期维度，格式为小写星期英文单词；若是按月维度，格式为数字字符，如["1","2"]。
+     * @param array $BackupPeriod 实例备份周期，若是星期维度，格式为小写星期英文单词，且至少设置两天备份；若是按月维度，格式为数字字符，如["1","2"]。
      * @param integer $LogBackupRetentionPeriod 实例日志备份保留时长，取值范围为7-1830，单位是天
      * @param string $PlanId 备份计划ID，用于指明要修改哪个备份计划，不传则是修改默认备份计划。
      * @param string $PlanName 要修改的备份计划名称。

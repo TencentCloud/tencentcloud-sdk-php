@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyParameterTemplate请求参数结构体
  *
- * @method string getTemplateId() 获取参数模板ID，用于唯一确认参数模板，不可修改
- * @method void setTemplateId(string $TemplateId) 设置参数模板ID，用于唯一确认参数模板，不可修改
+ * @method string getTemplateId() 获取参数模板ID，用于唯一确认参数模板，不可修改。可通过[DescribeParameterTemplates](https://cloud.tencent.com/document/api/409/84067)接口获取
+ * @method void setTemplateId(string $TemplateId) 设置参数模板ID，用于唯一确认参数模板，不可修改。可通过[DescribeParameterTemplates](https://cloud.tencent.com/document/api/409/84067)接口获取
  * @method string getTemplateName() 获取参数模板名称，长度为1～60个字符，仅支持数字,英文大小写字母、中文以及特殊字符_-./()（）[]+=：:@  注：若该字段为空    ，则保持原参数模板名称
  * @method void setTemplateName(string $TemplateName) 设置参数模板名称，长度为1～60个字符，仅支持数字,英文大小写字母、中文以及特殊字符_-./()（）[]+=：:@  注：若该字段为空    ，则保持原参数模板名称
  * @method string getTemplateDescription() 获取参数模板描述，长度为0～60个字符，仅支持数字,英文大小写字母、中文以及特殊字符_-./()（）[]+=：:@  注：若不传入该参数，则保持原参数模板描述
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyParameterTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 参数模板ID，用于唯一确认参数模板，不可修改
+     * @var string 参数模板ID，用于唯一确认参数模板，不可修改。可通过[DescribeParameterTemplates](https://cloud.tencent.com/document/api/409/84067)接口获取
      */
     public $TemplateId;
 
@@ -59,7 +59,7 @@ class ModifyParameterTemplateRequest extends AbstractModel
     public $DeleteParamSet;
 
     /**
-     * @param string $TemplateId 参数模板ID，用于唯一确认参数模板，不可修改
+     * @param string $TemplateId 参数模板ID，用于唯一确认参数模板，不可修改。可通过[DescribeParameterTemplates](https://cloud.tencent.com/document/api/409/84067)接口获取
      * @param string $TemplateName 参数模板名称，长度为1～60个字符，仅支持数字,英文大小写字母、中文以及特殊字符_-./()（）[]+=：:@  注：若该字段为空    ，则保持原参数模板名称
      * @param string $TemplateDescription 参数模板描述，长度为0～60个字符，仅支持数字,英文大小写字母、中文以及特殊字符_-./()（）[]+=：:@  注：若不传入该参数，则保持原参数模板描述
      * @param array $ModifyParamEntrySet 需要修改或添加的参数集合，注：同一参数不能同时出现在修改添加集合和删除集合中

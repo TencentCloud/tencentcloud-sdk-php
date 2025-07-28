@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 媒体质检结果输出。
  *
  * @method boolean getNoAudio() 获取为true时表示视频无音频轨。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNoAudio(boolean $NoAudio) 设置为true时表示视频无音频轨。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getNoVideo() 获取为true时表示视频无视频轨。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNoVideo(boolean $NoVideo) 设置为true时表示视频无视频轨。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getQualityEvaluationScore() 获取视频无参考质量评分，百分制。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQualityEvaluationScore(integer $QualityEvaluationScore) 设置视频无参考质量评分，百分制。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method float getQualityEvaluationMeanOpinionScore() 获取视频无参考质量评分，MOS分数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQualityEvaluationMeanOpinionScore(float $QualityEvaluationMeanOpinionScore) 设置视频无参考质量评分，MOS分数。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getQualityControlResultSet() 获取内容质检检出异常项。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQualityControlResultSet(array $QualityControlResultSet) 设置内容质检检出异常项。
-注意：此字段可能返回 null，表示取不到有效值。
- * @method array getContainerDiagnoseResultSet() 获取格式诊断检出异常项
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setContainerDiagnoseResultSet(array $ContainerDiagnoseResultSet) 设置格式诊断检出异常项
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getContainerDiagnoseResultSet() 获取格式诊断检出异常项。
+ * @method void setContainerDiagnoseResultSet(array $ContainerDiagnoseResultSet) 设置格式诊断检出异常项。
  */
 class QualityControlData extends AbstractModel
 {
     /**
      * @var boolean 为true时表示视频无音频轨。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NoAudio;
 
     /**
      * @var boolean 为true时表示视频无视频轨。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $NoVideo;
 
     /**
      * @var integer 视频无参考质量评分，百分制。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QualityEvaluationScore;
 
     /**
      * @var float 视频无参考质量评分，MOS分数。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QualityEvaluationMeanOpinionScore;
 
     /**
      * @var array 内容质检检出异常项。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $QualityControlResultSet;
 
     /**
-     * @var array 格式诊断检出异常项
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var array 格式诊断检出异常项。
      */
     public $ContainerDiagnoseResultSet;
 
     /**
      * @param boolean $NoAudio 为true时表示视频无音频轨。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $NoVideo 为true时表示视频无视频轨。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $QualityEvaluationScore 视频无参考质量评分，百分制。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param float $QualityEvaluationMeanOpinionScore 视频无参考质量评分，MOS分数。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $QualityControlResultSet 内容质检检出异常项。
-注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $ContainerDiagnoseResultSet 格式诊断检出异常项
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ContainerDiagnoseResultSet 格式诊断检出异常项。
      */
     function __construct()
     {

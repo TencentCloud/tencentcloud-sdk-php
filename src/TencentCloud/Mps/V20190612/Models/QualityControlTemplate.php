@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method QualityControlStrategy getStrategy() 获取媒体质检的抽检策略。
+ * @method void setStrategy(QualityControlStrategy $Strategy) 设置媒体质检的抽检策略。
  */
 class QualityControlTemplate extends AbstractModel
 {
@@ -97,6 +99,11 @@ class QualityControlTemplate extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var QualityControlStrategy 媒体质检的抽检策略。
+     */
+    public $Strategy;
+
+    /**
      * @param integer $Definition 媒体质检模板唯一标识。
      * @param string $Name 媒体质检模板名称。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -112,6 +119,7 @@ class QualityControlTemplate extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param QualityControlStrategy $Strategy 媒体质检的抽检策略。
      */
     function __construct()
     {
@@ -157,6 +165,11 @@ class QualityControlTemplate extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("Strategy",$param) and $param["Strategy"] !== null) {
+            $this->Strategy = new QualityControlStrategy();
+            $this->Strategy->deserialize($param["Strategy"]);
         }
     }
 }

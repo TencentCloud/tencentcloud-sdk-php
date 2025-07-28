@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置返回记录条数，默认值：10，最大值：100。
  * @method string getScrollToken() 获取翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。
  * @method void setScrollToken(string $ScrollToken) 设置翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。
+ * @method string getStartTime() 获取查询任务开始时间
+ * @method void setStartTime(string $StartTime) 设置查询任务开始时间
+ * @method string getEndTime() 获取查询任务结束时间。
+ * @method void setEndTime(string $EndTime) 设置查询任务结束时间。
  */
 class DescribeTasksRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class DescribeTasksRequest extends AbstractModel
     public $ScrollToken;
 
     /**
+     * @var string 查询任务开始时间
+     */
+    public $StartTime;
+
+    /**
+     * @var string 查询任务结束时间。
+     */
+    public $EndTime;
+
+    /**
      * @param string $Status 过滤条件：任务状态，可选值：WAITING（等待中）、PROCESSING（处理中）、FINISH（已完成）。
      * @param integer $Limit 返回记录条数，默认值：10，最大值：100。
      * @param string $ScrollToken 翻页标识，分批拉取时使用：当单次请求无法拉取所有数据，接口将会返回 ScrollToken，下一次请求携带该 Token，将会从下一条记录开始获取。
+     * @param string $StartTime 查询任务开始时间
+     * @param string $EndTime 查询任务结束时间。
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class DescribeTasksRequest extends AbstractModel
 
         if (array_key_exists("ScrollToken",$param) and $param["ScrollToken"] !== null) {
             $this->ScrollToken = $param["ScrollToken"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
         }
     }
 }

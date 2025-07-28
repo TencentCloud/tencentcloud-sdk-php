@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyReadOnlyDBInstanceWeight请求参数结构体
  *
- * @method string getDBInstanceId() 获取实例ID
- * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID
- * @method string getReadOnlyGroupId() 获取只读组ID
- * @method void setReadOnlyGroupId(string $ReadOnlyGroupId) 设置只读组ID
+ * @method string getDBInstanceId() 获取实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+ * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+ * @method string getReadOnlyGroupId() 获取只读组ID。可通过[DescribeReadOnlyGroups](https://cloud.tencent.com/document/api/409/52599)接口获取
+ * @method void setReadOnlyGroupId(string $ReadOnlyGroupId) 设置只读组ID。可通过[DescribeReadOnlyGroups](https://cloud.tencent.com/document/api/409/52599)接口获取
  * @method integer getWeight() 获取只读实例在只读组中的流量权重(1-50)
  * @method void setWeight(integer $Weight) 设置只读实例在只读组中的流量权重(1-50)
  */
 class ModifyReadOnlyDBInstanceWeightRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public $DBInstanceId;
 
     /**
-     * @var string 只读组ID
+     * @var string 只读组ID。可通过[DescribeReadOnlyGroups](https://cloud.tencent.com/document/api/409/52599)接口获取
      */
     public $ReadOnlyGroupId;
 
@@ -45,8 +45,8 @@ class ModifyReadOnlyDBInstanceWeightRequest extends AbstractModel
     public $Weight;
 
     /**
-     * @param string $DBInstanceId 实例ID
-     * @param string $ReadOnlyGroupId 只读组ID
+     * @param string $DBInstanceId 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * @param string $ReadOnlyGroupId 只读组ID。可通过[DescribeReadOnlyGroups](https://cloud.tencent.com/document/api/409/52599)接口获取
      * @param integer $Weight 只读实例在只读组中的流量权重(1-50)
      */
     function __construct()

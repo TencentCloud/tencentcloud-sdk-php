@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteLogBackup请求参数结构体
  *
- * @method string getDBInstanceId() 获取实例ID。
- * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID。
- * @method string getLogBackupId() 获取日志备份ID。
- * @method void setLogBackupId(string $LogBackupId) 设置日志备份ID。
+ * @method string getDBInstanceId() 获取实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+ * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+ * @method string getLogBackupId() 获取日志备份ID。可通过[DescribeLogBackups](https://cloud.tencent.com/document/api/409/89021)接口获取。注：7天内自动备份集不允许删除。
+ * @method void setLogBackupId(string $LogBackupId) 设置日志备份ID。可通过[DescribeLogBackups](https://cloud.tencent.com/document/api/409/89021)接口获取。注：7天内自动备份集不允许删除。
  */
 class DeleteLogBackupRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID。
+     * @var string 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public $DBInstanceId;
 
     /**
-     * @var string 日志备份ID。
+     * @var string 日志备份ID。可通过[DescribeLogBackups](https://cloud.tencent.com/document/api/409/89021)接口获取。注：7天内自动备份集不允许删除。
      */
     public $LogBackupId;
 
     /**
-     * @param string $DBInstanceId 实例ID。
-     * @param string $LogBackupId 日志备份ID。
+     * @param string $DBInstanceId 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * @param string $LogBackupId 日志备份ID。可通过[DescribeLogBackups](https://cloud.tencent.com/document/api/409/89021)接口获取。注：7天内自动备份集不允许删除。
      */
     function __construct()
     {

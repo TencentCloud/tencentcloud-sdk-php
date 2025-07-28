@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBackupDownloadURL请求参数结构体
  *
- * @method string getDBInstanceId() 获取实例ID。
- * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID。
+ * @method string getDBInstanceId() 获取实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+ * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
  * @method string getBackupType() 获取备份类型，目前支持：LogBackup，BaseBackup。
  * @method void setBackupType(string $BackupType) 设置备份类型，目前支持：LogBackup，BaseBackup。
  * @method string getBackupId() 获取备份的唯一ID。
  * @method void setBackupId(string $BackupId) 设置备份的唯一ID。
- * @method integer getURLExpireTime() 获取链接的有效时间，默认为12小时。
- * @method void setURLExpireTime(integer $URLExpireTime) 设置链接的有效时间，默认为12小时。
+ * @method integer getURLExpireTime() 获取链接的有效时间，取值为[0,36]，默认为12小时。
+ * @method void setURLExpireTime(integer $URLExpireTime) 设置链接的有效时间，取值为[0,36]，默认为12小时。
  * @method BackupDownloadRestriction getBackupDownloadRestriction() 获取备份下载限制
  * @method void setBackupDownloadRestriction(BackupDownloadRestriction $BackupDownloadRestriction) 设置备份下载限制
  */
 class DescribeBackupDownloadURLRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID。
+     * @var string 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public $DBInstanceId;
 
@@ -49,7 +49,7 @@ class DescribeBackupDownloadURLRequest extends AbstractModel
     public $BackupId;
 
     /**
-     * @var integer 链接的有效时间，默认为12小时。
+     * @var integer 链接的有效时间，取值为[0,36]，默认为12小时。
      */
     public $URLExpireTime;
 
@@ -59,10 +59,10 @@ class DescribeBackupDownloadURLRequest extends AbstractModel
     public $BackupDownloadRestriction;
 
     /**
-     * @param string $DBInstanceId 实例ID。
+     * @param string $DBInstanceId 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      * @param string $BackupType 备份类型，目前支持：LogBackup，BaseBackup。
      * @param string $BackupId 备份的唯一ID。
-     * @param integer $URLExpireTime 链接的有效时间，默认为12小时。
+     * @param integer $URLExpireTime 链接的有效时间，取值为[0,36]，默认为12小时。
      * @param BackupDownloadRestriction $BackupDownloadRestriction 备份下载限制
      */
     function __construct()

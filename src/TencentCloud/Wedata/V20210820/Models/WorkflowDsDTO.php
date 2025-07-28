@@ -82,6 +82,14 @@ use TencentCloud\Common\AbstractModel;
 - cycle 周期工作流
 - manual 手动工作流
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUpdateUser() 获取最近更新人名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUpdateUser(string $UpdateUser) 设置最近更新人名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getUpdateUserId() 获取最近更新人id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUpdateUserId(string $UpdateUserId) 设置最近更新人id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkflowDsDTO extends AbstractModel
 {
@@ -173,6 +181,18 @@ class WorkflowDsDTO extends AbstractModel
     public $WorkflowType;
 
     /**
+     * @var string 最近更新人名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UpdateUser;
+
+    /**
+     * @var string 最近更新人id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UpdateUserId;
+
+    /**
      * @param string $WorkflowId 工作流ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Owner 责任人
@@ -203,6 +223,10 @@ class WorkflowDsDTO extends AbstractModel
 
 - cycle 周期工作流
 - manual 手动工作流
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UpdateUser 最近更新人名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $UpdateUserId 最近更新人id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -287,6 +311,14 @@ class WorkflowDsDTO extends AbstractModel
 
         if (array_key_exists("WorkflowType",$param) and $param["WorkflowType"] !== null) {
             $this->WorkflowType = $param["WorkflowType"];
+        }
+
+        if (array_key_exists("UpdateUser",$param) and $param["UpdateUser"] !== null) {
+            $this->UpdateUser = $param["UpdateUser"];
+        }
+
+        if (array_key_exists("UpdateUserId",$param) and $param["UpdateUserId"] !== null) {
+            $this->UpdateUserId = $param["UpdateUserId"];
         }
     }
 }

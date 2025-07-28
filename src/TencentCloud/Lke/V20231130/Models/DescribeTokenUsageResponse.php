@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRagSearchUsage(float $RagSearchUsage) 设置Rag检索次数
  * @method float getInternetSearchUsage() 获取联网搜索次数
  * @method void setInternetSearchUsage(float $InternetSearchUsage) 设置联网搜索次数
+ * @method float getDosageTypeLimit() 获取dosage配额限制
+ * @method void setDosageTypeLimit(float $DosageTypeLimit) 设置dosage配额限制
+ * @method float getDosageTypeCurr() 获取dosage当前用量	
+ * @method void setDosageTypeCurr(float $DosageTypeCurr) 设置dosage当前用量	
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -89,6 +93,16 @@ class DescribeTokenUsageResponse extends AbstractModel
     public $InternetSearchUsage;
 
     /**
+     * @var float dosage配额限制
+     */
+    public $DosageTypeLimit;
+
+    /**
+     * @var float dosage当前用量	
+     */
+    public $DosageTypeCurr;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -103,6 +117,8 @@ class DescribeTokenUsageResponse extends AbstractModel
      * @param float $SplitTokenUsage 拆分token消耗量
      * @param float $RagSearchUsage Rag检索次数
      * @param float $InternetSearchUsage 联网搜索次数
+     * @param float $DosageTypeLimit dosage配额限制
+     * @param float $DosageTypeCurr dosage当前用量	
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -152,6 +168,14 @@ class DescribeTokenUsageResponse extends AbstractModel
 
         if (array_key_exists("InternetSearchUsage",$param) and $param["InternetSearchUsage"] !== null) {
             $this->InternetSearchUsage = $param["InternetSearchUsage"];
+        }
+
+        if (array_key_exists("DosageTypeLimit",$param) and $param["DosageTypeLimit"] !== null) {
+            $this->DosageTypeLimit = $param["DosageTypeLimit"];
+        }
+
+        if (array_key_exists("DosageTypeCurr",$param) and $param["DosageTypeCurr"] !== null) {
+            $this->DosageTypeCurr = $param["DosageTypeCurr"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

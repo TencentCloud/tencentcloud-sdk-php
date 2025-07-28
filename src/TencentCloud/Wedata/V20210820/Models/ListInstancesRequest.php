@@ -158,6 +158,14 @@ use TencentCloud\Common\AbstractModel;
 timeZone, 默认UTC+8
  * @method void setScheduleTimeZone(string $ScheduleTimeZone) 设置**时区**
 timeZone, 默认UTC+8
+ * @method string getLastUpdateTimeFrom() 获取**实例最近更新时间过滤条件**
+过滤截止时间，时间格式为 yyyy-MM-dd HH:mm:ss
+ * @method void setLastUpdateTimeFrom(string $LastUpdateTimeFrom) 设置**实例最近更新时间过滤条件**
+过滤截止时间，时间格式为 yyyy-MM-dd HH:mm:ss
+ * @method string getLastUpdateTimeTo() 获取**实例最近更新时间过滤条件**
+过滤截止时间，时间格式为 yyyy-MM-dd HH:mm:ss
+ * @method void setLastUpdateTimeTo(string $LastUpdateTimeTo) 设置**实例最近更新时间过滤条件**
+过滤截止时间，时间格式为 yyyy-MM-dd HH:mm:ss
  */
 class ListInstancesRequest extends AbstractModel
 {
@@ -307,6 +315,18 @@ timeZone, 默认UTC+8
     public $ScheduleTimeZone;
 
     /**
+     * @var string **实例最近更新时间过滤条件**
+过滤截止时间，时间格式为 yyyy-MM-dd HH:mm:ss
+     */
+    public $LastUpdateTimeFrom;
+
+    /**
+     * @var string **实例最近更新时间过滤条件**
+过滤截止时间，时间格式为 yyyy-MM-dd HH:mm:ss
+     */
+    public $LastUpdateTimeTo;
+
+    /**
      * @param string $ProjectId **项目ID**
      * @param string $ScheduleTimeFrom **实例计划调度时间过滤条件**
 过滤起始时间，时间格式为 yyyy-MM-dd HH:mm:ss
@@ -376,6 +396,10 @@ timeZone, 默认UTC+8
 过滤截止时间，时间格式为 yyyy-MM-dd HH:mm:ss
      * @param string $ScheduleTimeZone **时区**
 timeZone, 默认UTC+8
+     * @param string $LastUpdateTimeFrom **实例最近更新时间过滤条件**
+过滤截止时间，时间格式为 yyyy-MM-dd HH:mm:ss
+     * @param string $LastUpdateTimeTo **实例最近更新时间过滤条件**
+过滤截止时间，时间格式为 yyyy-MM-dd HH:mm:ss
      */
     function __construct()
     {
@@ -464,6 +488,14 @@ timeZone, 默认UTC+8
 
         if (array_key_exists("ScheduleTimeZone",$param) and $param["ScheduleTimeZone"] !== null) {
             $this->ScheduleTimeZone = $param["ScheduleTimeZone"];
+        }
+
+        if (array_key_exists("LastUpdateTimeFrom",$param) and $param["LastUpdateTimeFrom"] !== null) {
+            $this->LastUpdateTimeFrom = $param["LastUpdateTimeFrom"];
+        }
+
+        if (array_key_exists("LastUpdateTimeTo",$param) and $param["LastUpdateTimeTo"] !== null) {
+            $this->LastUpdateTimeTo = $param["LastUpdateTimeTo"];
         }
     }
 }

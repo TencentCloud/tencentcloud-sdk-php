@@ -26,22 +26,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxFinishTime(string $MaxFinishTime) 设置备份的最大结束时间，形如2018-01-01 00:00:00。默认为当前时间。
  * @method array getFilters() 获取按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
 db-instance-id：按照实例ID过滤，类型为string。
-db-instance-name：按照实例名过滤，类型为string。
+db-instance-name：按照实例名过滤，支持模糊匹配，类型为string。
 db-instance-ip：按照实例私有网络IP地址过滤，类型为string。
-db-instance-status：按实例状态过滤，类型为string。取值参考DBInstance结构的DBInstanceStatus字段。
+db-instance-status：按实例状态过滤，类型为string。取值参考[DBInstance](https://cloud.tencent.com/document/api/409/16778#DBInstance)结构的DBInstanceStatus字段。
  * @method void setFilters(array $Filters) 设置按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
 db-instance-id：按照实例ID过滤，类型为string。
-db-instance-name：按照实例名过滤，类型为string。
+db-instance-name：按照实例名过滤，支持模糊匹配，类型为string。
 db-instance-ip：按照实例私有网络IP地址过滤，类型为string。
-db-instance-status：按实例状态过滤，类型为string。取值参考DBInstance结构的DBInstanceStatus字段。
+db-instance-status：按实例状态过滤，类型为string。取值参考[DBInstance](https://cloud.tencent.com/document/api/409/16778#DBInstance)结构的DBInstanceStatus字段。
  * @method integer getLimit() 获取每页显示数量，取值范围为1-100，默认为返回10条。
  * @method void setLimit(integer $Limit) 设置每页显示数量，取值范围为1-100，默认为返回10条。
  * @method integer getOffset() 获取数据偏移量，从0开始。
  * @method void setOffset(integer $Offset) 设置数据偏移量，从0开始。
- * @method string getOrderBy() 获取排序字段，支持StartTime,FinishTime,Size。
- * @method void setOrderBy(string $OrderBy) 设置排序字段，支持StartTime,FinishTime,Size。
- * @method string getOrderByType() 获取排序方式，包括升序：asc，降序：desc。
- * @method void setOrderByType(string $OrderByType) 设置排序方式，包括升序：asc，降序：desc。
+ * @method string getOrderBy() 获取排序字段，支持StartTime,FinishTime,Size。默认值：StartTime
+ * @method void setOrderBy(string $OrderBy) 设置排序字段，支持StartTime,FinishTime,Size。默认值：StartTime
+ * @method string getOrderByType() 获取排序方式，包括升序：asc，降序：desc。默认值：desc。
+ * @method void setOrderByType(string $OrderByType) 设置排序方式，包括升序：asc，降序：desc。默认值：desc。
  */
 class DescribeLogBackupsRequest extends AbstractModel
 {
@@ -58,9 +58,9 @@ class DescribeLogBackupsRequest extends AbstractModel
     /**
      * @var array 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
 db-instance-id：按照实例ID过滤，类型为string。
-db-instance-name：按照实例名过滤，类型为string。
+db-instance-name：按照实例名过滤，支持模糊匹配，类型为string。
 db-instance-ip：按照实例私有网络IP地址过滤，类型为string。
-db-instance-status：按实例状态过滤，类型为string。取值参考DBInstance结构的DBInstanceStatus字段。
+db-instance-status：按实例状态过滤，类型为string。取值参考[DBInstance](https://cloud.tencent.com/document/api/409/16778#DBInstance)结构的DBInstanceStatus字段。
      */
     public $Filters;
 
@@ -75,12 +75,12 @@ db-instance-status：按实例状态过滤，类型为string。取值参考DBIns
     public $Offset;
 
     /**
-     * @var string 排序字段，支持StartTime,FinishTime,Size。
+     * @var string 排序字段，支持StartTime,FinishTime,Size。默认值：StartTime
      */
     public $OrderBy;
 
     /**
-     * @var string 排序方式，包括升序：asc，降序：desc。
+     * @var string 排序方式，包括升序：asc，降序：desc。默认值：desc。
      */
     public $OrderByType;
 
@@ -89,13 +89,13 @@ db-instance-status：按实例状态过滤，类型为string。取值参考DBIns
      * @param string $MaxFinishTime 备份的最大结束时间，形如2018-01-01 00:00:00。默认为当前时间。
      * @param array $Filters 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
 db-instance-id：按照实例ID过滤，类型为string。
-db-instance-name：按照实例名过滤，类型为string。
+db-instance-name：按照实例名过滤，支持模糊匹配，类型为string。
 db-instance-ip：按照实例私有网络IP地址过滤，类型为string。
-db-instance-status：按实例状态过滤，类型为string。取值参考DBInstance结构的DBInstanceStatus字段。
+db-instance-status：按实例状态过滤，类型为string。取值参考[DBInstance](https://cloud.tencent.com/document/api/409/16778#DBInstance)结构的DBInstanceStatus字段。
      * @param integer $Limit 每页显示数量，取值范围为1-100，默认为返回10条。
      * @param integer $Offset 数据偏移量，从0开始。
-     * @param string $OrderBy 排序字段，支持StartTime,FinishTime,Size。
-     * @param string $OrderByType 排序方式，包括升序：asc，降序：desc。
+     * @param string $OrderBy 排序字段，支持StartTime,FinishTime,Size。默认值：StartTime
+     * @param string $OrderByType 排序方式，包括升序：asc，降序：desc。默认值：desc。
      */
     function __construct()
     {

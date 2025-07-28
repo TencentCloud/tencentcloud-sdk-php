@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOriginSubtitlePath(string $OriginSubtitlePath) 设置基于画面提取的字幕文件路径。
  * @method string getTranslateSubtitlePath() 获取基于画面提取的字幕翻译文件路径。
  * @method void setTranslateSubtitlePath(string $TranslateSubtitlePath) 设置基于画面提取的字幕翻译文件路径。
+ * @method SubtitlePosition getSubtitlePos() 获取擦除的字幕位置。**注意**：仅对字幕提取且开启返回字幕位置时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubtitlePos(SubtitlePosition $SubtitlePos) 设置擦除的字幕位置。**注意**：仅对字幕提取且开启返回字幕位置时有效。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AiAnalysisTaskDelLogoOutput extends AbstractModel
 {
@@ -52,10 +56,18 @@ class AiAnalysisTaskDelLogoOutput extends AbstractModel
     public $TranslateSubtitlePath;
 
     /**
+     * @var SubtitlePosition 擦除的字幕位置。**注意**：仅对字幕提取且开启返回字幕位置时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubtitlePos;
+
+    /**
      * @param string $Path 擦除后文件的路径。
      * @param TaskOutputStorage $OutputStorage 擦除后文件的存储位置。
      * @param string $OriginSubtitlePath 基于画面提取的字幕文件路径。
      * @param string $TranslateSubtitlePath 基于画面提取的字幕翻译文件路径。
+     * @param SubtitlePosition $SubtitlePos 擦除的字幕位置。**注意**：仅对字幕提取且开启返回字幕位置时有效。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -85,6 +97,11 @@ class AiAnalysisTaskDelLogoOutput extends AbstractModel
 
         if (array_key_exists("TranslateSubtitlePath",$param) and $param["TranslateSubtitlePath"] !== null) {
             $this->TranslateSubtitlePath = $param["TranslateSubtitlePath"];
+        }
+
+        if (array_key_exists("SubtitlePos",$param) and $param["SubtitlePos"] !== null) {
+            $this->SubtitlePos = new SubtitlePosition();
+            $this->SubtitlePos->deserialize($param["SubtitlePos"]);
         }
     }
 }

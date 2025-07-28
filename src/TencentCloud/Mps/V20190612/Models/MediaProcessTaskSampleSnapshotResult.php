@@ -31,7 +31,9 @@ use TencentCloud\Common\AbstractModel;
  * @method SampleSnapshotTaskInput getInput() 获取对视频做采样截图任务输入。
  * @method void setInput(SampleSnapshotTaskInput $Input) 设置对视频做采样截图任务输入。
  * @method MediaSampleSnapshotItem getOutput() 获取对视频做采样截图任务输出。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOutput(MediaSampleSnapshotItem $Output) 设置对视频做采样截图任务输出。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getBeginProcessTime() 获取任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
  * @method void setBeginProcessTime(string $BeginProcessTime) 设置任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
  * @method string getFinishTime() 获取任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
@@ -66,6 +68,7 @@ class MediaProcessTaskSampleSnapshotResult extends AbstractModel
 
     /**
      * @var MediaSampleSnapshotItem 对视频做采样截图任务输出。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Output;
 
@@ -86,6 +89,7 @@ class MediaProcessTaskSampleSnapshotResult extends AbstractModel
      * @param string $Message 错误信息。
      * @param SampleSnapshotTaskInput $Input 对视频做采样截图任务输入。
      * @param MediaSampleSnapshotItem $Output 对视频做采样截图任务输出。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BeginProcessTime 任务开始执行的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
      * @param string $FinishTime 任务执行完毕的时间，采用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
      */

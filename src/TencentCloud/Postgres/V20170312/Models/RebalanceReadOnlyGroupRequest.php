@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RebalanceReadOnlyGroup请求参数结构体
  *
- * @method string getReadOnlyGroupId() 获取只读组ID
- * @method void setReadOnlyGroupId(string $ReadOnlyGroupId) 设置只读组ID
+ * @method string getReadOnlyGroupId() 获取只读组ID。可通过[DescribeReadOnlyGroups](https://cloud.tencent.com/document/api/409/52599)接口获取
+ * @method void setReadOnlyGroupId(string $ReadOnlyGroupId) 设置只读组ID。可通过[DescribeReadOnlyGroups](https://cloud.tencent.com/document/api/409/52599)接口获取
  */
 class RebalanceReadOnlyGroupRequest extends AbstractModel
 {
     /**
-     * @var string 只读组ID
+     * @var string 只读组ID。可通过[DescribeReadOnlyGroups](https://cloud.tencent.com/document/api/409/52599)接口获取
      */
     public $ReadOnlyGroupId;
 
     /**
-     * @param string $ReadOnlyGroupId 只读组ID
+     * @param string $ReadOnlyGroupId 只读组ID。可通过[DescribeReadOnlyGroups](https://cloud.tencent.com/document/api/409/52599)接口获取
      */
     function __construct()
     {

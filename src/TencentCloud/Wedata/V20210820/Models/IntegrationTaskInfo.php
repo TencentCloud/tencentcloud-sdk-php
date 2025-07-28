@@ -222,6 +222,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCurrentSyncPosition(integer $CurrentSyncPosition) 设置当前同步位点
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getTagList() 获取标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTagList(array $TagList) 设置标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getErrorMessage() 获取错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setErrorMessage(string $ErrorMessage) 设置错误信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class IntegrationTaskInfo extends AbstractModel
 {
@@ -535,6 +543,18 @@ class IntegrationTaskInfo extends AbstractModel
     public $CurrentSyncPosition;
 
     /**
+     * @var array 标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TagList;
+
+    /**
+     * @var string 错误信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ErrorMessage;
+
+    /**
      * @param string $TaskName 任务名称
      * @param string $Description 任务描述
 注意：此字段可能返回 null，表示取不到有效值。
@@ -635,6 +655,10 @@ class IntegrationTaskInfo extends AbstractModel
      * @param integer $BusinessLatency 业务延迟
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CurrentSyncPosition 当前同步位点
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $TagList 标签列表
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ErrorMessage 错误信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -883,6 +907,19 @@ class IntegrationTaskInfo extends AbstractModel
 
         if (array_key_exists("CurrentSyncPosition",$param) and $param["CurrentSyncPosition"] !== null) {
             $this->CurrentSyncPosition = $param["CurrentSyncPosition"];
+        }
+
+        if (array_key_exists("TagList",$param) and $param["TagList"] !== null) {
+            $this->TagList = [];
+            foreach ($param["TagList"] as $key => $value){
+                $obj = new IntegrationTag();
+                $obj->deserialize($value);
+                array_push($this->TagList, $obj);
+            }
+        }
+
+        if (array_key_exists("ErrorMessage",$param) and $param["ErrorMessage"] !== null) {
+            $this->ErrorMessage = $param["ErrorMessage"];
         }
     }
 }

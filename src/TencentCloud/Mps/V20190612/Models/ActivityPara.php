@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQualityControlTask(AiQualityControlTaskInput $QualityControlTask) 设置媒体质检任务
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ExecRulesTask getExecRulesTask() 获取任务条件判断
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExecRulesTask(ExecRulesTask $ExecRulesTask) 设置任务条件判断
+注意：此字段可能返回 null，表示取不到有效值。
  * @method SmartSubtitlesTaskInput getSmartSubtitlesTask() 获取智能字幕任务
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSmartSubtitlesTask(SmartSubtitlesTaskInput $SmartSubtitlesTask) 设置智能字幕任务
@@ -128,6 +132,12 @@ class ActivityPara extends AbstractModel
     public $QualityControlTask;
 
     /**
+     * @var ExecRulesTask 任务条件判断
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExecRulesTask;
+
+    /**
      * @var SmartSubtitlesTaskInput 智能字幕任务
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -153,6 +163,8 @@ class ActivityPara extends AbstractModel
      * @param AiRecognitionTaskInput $AiRecognitionTask 视频内容识别类型任务
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AiQualityControlTaskInput $QualityControlTask 媒体质检任务
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExecRulesTask $ExecRulesTask 任务条件判断
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SmartSubtitlesTaskInput $SmartSubtitlesTask 智能字幕任务
 注意：此字段可能返回 null，表示取不到有效值。
@@ -218,6 +230,11 @@ class ActivityPara extends AbstractModel
         if (array_key_exists("QualityControlTask",$param) and $param["QualityControlTask"] !== null) {
             $this->QualityControlTask = new AiQualityControlTaskInput();
             $this->QualityControlTask->deserialize($param["QualityControlTask"]);
+        }
+
+        if (array_key_exists("ExecRulesTask",$param) and $param["ExecRulesTask"] !== null) {
+            $this->ExecRulesTask = new ExecRulesTask();
+            $this->ExecRulesTask->deserialize($param["ExecRulesTask"]);
         }
 
         if (array_key_exists("SmartSubtitlesTask",$param) and $param["SmartSubtitlesTask"] !== null) {

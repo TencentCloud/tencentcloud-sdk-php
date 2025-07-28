@@ -21,29 +21,19 @@ use TencentCloud\Common\AbstractModel;
  * 直播编排任务信息
  *
  * @method string getTaskId() 获取直播编排任务 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskId(string $TaskId) 设置直播编排任务 ID。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatus() 获取任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getErrCode() 获取源异常时返回非0错误码，返回0 时请使用各个具体任务的 ErrCode。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrCode(integer $ErrCode) 设置源异常时返回非0错误码，返回0 时请使用各个具体任务的 ErrCode。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getMessage() 获取源异常时返回对应异常Message，否则请使用各个具体任务的 Message。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessage(string $Message) 设置源异常时返回对应异常Message，否则请使用各个具体任务的 Message。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUrl() 获取直播流 URL。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUrl(string $Url) 设置直播流 URL。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLiveActivityResultSet() 获取直播编排任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLiveActivityResultSet(array $LiveActivityResultSet) 设置直播编排任务输出。
@@ -53,7 +43,6 @@ class LiveScheduleTask extends AbstractModel
 {
     /**
      * @var string 直播编排任务 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskId;
 
@@ -61,25 +50,21 @@ class LiveScheduleTask extends AbstractModel
      * @var string 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
      * @var integer 源异常时返回非0错误码，返回0 时请使用各个具体任务的 ErrCode。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ErrCode;
 
     /**
      * @var string 源异常时返回对应异常Message，否则请使用各个具体任务的 Message。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Message;
 
     /**
      * @var string 直播流 URL。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Url;
 
@@ -91,17 +76,12 @@ class LiveScheduleTask extends AbstractModel
 
     /**
      * @param string $TaskId 直播编排任务 ID。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
 <li>FINISH：已完成。</li>
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ErrCode 源异常时返回非0错误码，返回0 时请使用各个具体任务的 ErrCode。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Message 源异常时返回对应异常Message，否则请使用各个具体任务的 Message。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Url 直播流 URL。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $LiveActivityResultSet 直播编排任务输出。
 注意：此字段可能返回 null，表示取不到有效值。
      */

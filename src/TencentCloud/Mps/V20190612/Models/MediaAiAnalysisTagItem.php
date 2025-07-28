@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTag(string $Tag) 设置标签名称。
  * @method float getConfidence() 获取标签的可信度，取值范围是 0 到 100。
  * @method void setConfidence(float $Confidence) 设置标签的可信度，取值范围是 0 到 100。
+ * @method string getSpecialInfo() 获取根据不同类型决定
+ * @method void setSpecialInfo(string $SpecialInfo) 设置根据不同类型决定
  */
 class MediaAiAnalysisTagItem extends AbstractModel
 {
@@ -38,8 +40,14 @@ class MediaAiAnalysisTagItem extends AbstractModel
     public $Confidence;
 
     /**
+     * @var string 根据不同类型决定
+     */
+    public $SpecialInfo;
+
+    /**
      * @param string $Tag 标签名称。
      * @param float $Confidence 标签的可信度，取值范围是 0 到 100。
+     * @param string $SpecialInfo 根据不同类型决定
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class MediaAiAnalysisTagItem extends AbstractModel
 
         if (array_key_exists("Confidence",$param) and $param["Confidence"] !== null) {
             $this->Confidence = $param["Confidence"];
+        }
+
+        if (array_key_exists("SpecialInfo",$param) and $param["SpecialInfo"] !== null) {
+            $this->SpecialInfo = $param["SpecialInfo"];
         }
     }
 }

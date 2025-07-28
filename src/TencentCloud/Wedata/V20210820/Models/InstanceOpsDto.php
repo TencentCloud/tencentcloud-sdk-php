@@ -276,6 +276,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScheduleRunType(integer $ScheduleRunType) 设置调度运行方式, 0: 周期调度, 1: 空跑调度
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAllowRedoType() 获取允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑
+ * @method void setAllowRedoType(string $AllowRedoType) 设置允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑
  */
 class InstanceOpsDto extends AbstractModel
 {
@@ -664,6 +666,11 @@ class InstanceOpsDto extends AbstractModel
     public $ScheduleRunType;
 
     /**
+     * @var string 允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑
+     */
+    public $AllowRedoType;
+
+    /**
      * @param string $TaskId 任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskName 任务名称
@@ -792,6 +799,7 @@ class InstanceOpsDto extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ScheduleRunType 调度运行方式, 0: 周期调度, 1: 空跑调度
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AllowRedoType 允许重跑类型，ALL 表示无论实例运行成功还是失败都允许重跑，NONE表示无论成功或者失败都不允许重跑，FAILURE 表示只有运行失败才能重跑
      */
     function __construct()
     {
@@ -1072,6 +1080,10 @@ class InstanceOpsDto extends AbstractModel
 
         if (array_key_exists("ScheduleRunType",$param) and $param["ScheduleRunType"] !== null) {
             $this->ScheduleRunType = $param["ScheduleRunType"];
+        }
+
+        if (array_key_exists("AllowRedoType",$param) and $param["AllowRedoType"] !== null) {
+            $this->AllowRedoType = $param["AllowRedoType"];
         }
     }
 }

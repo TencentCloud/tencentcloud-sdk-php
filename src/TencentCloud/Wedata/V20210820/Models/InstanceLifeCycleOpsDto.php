@@ -86,6 +86,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskType(TaskTypeOpsDto $TaskType) 设置任务类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getResourceGroup() 获取资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResourceGroup(string $ResourceGroup) 设置资源组id
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceLifeCycleOpsDto extends AbstractModel
 {
@@ -191,6 +195,12 @@ class InstanceLifeCycleOpsDto extends AbstractModel
     public $TaskType;
 
     /**
+     * @var string 资源组id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ResourceGroup;
+
+    /**
      * @param string $TaskId 任务id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskName 任务名
@@ -223,6 +233,8 @@ class InstanceLifeCycleOpsDto extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalLifeRound 实例当前总生命周期数
      * @param TaskTypeOpsDto $TaskType 任务类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ResourceGroup 资源组id
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -311,6 +323,10 @@ class InstanceLifeCycleOpsDto extends AbstractModel
         if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
             $this->TaskType = new TaskTypeOpsDto();
             $this->TaskType->deserialize($param["TaskType"]);
+        }
+
+        if (array_key_exists("ResourceGroup",$param) and $param["ResourceGroup"] !== null) {
+            $this->ResourceGroup = $param["ResourceGroup"];
         }
     }
 }

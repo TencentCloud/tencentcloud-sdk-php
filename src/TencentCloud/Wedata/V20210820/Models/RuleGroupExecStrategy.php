@@ -104,6 +104,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDatasourceId(string $DatasourceId) 设置数据源id
  * @method string getDescription() 获取任务描述
  * @method void setDescription(string $Description) 设置任务描述
+ * @method string getScheduleTimeZone() 获取时区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setScheduleTimeZone(string $ScheduleTimeZone) 设置时区
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleGroupExecStrategy extends AbstractModel
 {
@@ -246,6 +250,12 @@ class RuleGroupExecStrategy extends AbstractModel
     public $Description;
 
     /**
+     * @var string 时区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ScheduleTimeZone;
+
+    /**
      * @param integer $RuleGroupId 规则组Id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MonitorType 监控类型 1.未配置, 2.关联生产调度, 3.离线周期检测
@@ -288,6 +298,8 @@ class RuleGroupExecStrategy extends AbstractModel
      * @param string $TableName 表名称
      * @param string $DatasourceId 数据源id
      * @param string $Description 任务描述
+     * @param string $ScheduleTimeZone 时区
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -401,6 +413,10 @@ class RuleGroupExecStrategy extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("ScheduleTimeZone",$param) and $param["ScheduleTimeZone"] !== null) {
+            $this->ScheduleTimeZone = $param["ScheduleTimeZone"];
         }
     }
 }

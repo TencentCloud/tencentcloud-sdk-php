@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteBackupPlan请求参数结构体
  *
- * @method string getDBInstanceId() 获取实例ID。	
- * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID。	
- * @method string getPlanId() 获取备份计划的ID。
- * @method void setPlanId(string $PlanId) 设置备份计划的ID。
+ * @method string getDBInstanceId() 获取实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+ * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+ * @method string getPlanId() 获取备份计划的ID。可通过[DescribeBackupPlans](https://cloud.tencent.com/document/api/409/68069)接口获取
+ * @method void setPlanId(string $PlanId) 设置备份计划的ID。可通过[DescribeBackupPlans](https://cloud.tencent.com/document/api/409/68069)接口获取
  */
 class DeleteBackupPlanRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID。	
+     * @var string 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public $DBInstanceId;
 
     /**
-     * @var string 备份计划的ID。
+     * @var string 备份计划的ID。可通过[DescribeBackupPlans](https://cloud.tencent.com/document/api/409/68069)接口获取
      */
     public $PlanId;
 
     /**
-     * @param string $DBInstanceId 实例ID。	
-     * @param string $PlanId 备份计划的ID。
+     * @param string $DBInstanceId 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+     * @param string $PlanId 备份计划的ID。可通过[DescribeBackupPlans](https://cloud.tencent.com/document/api/409/68069)接口获取
      */
     function __construct()
     {

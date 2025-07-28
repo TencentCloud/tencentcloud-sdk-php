@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getDBInstanceIdSet() 获取实例ID集合。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。支持同时操作多个实例。
  * @method void setDBInstanceIdSet(array $DBInstanceIdSet) 设置实例ID集合。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。支持同时操作多个实例。
- * @method string getProjectId() 获取所属新项目的ID。可通过[DescribeProject](https://cloud.tencent.com/document/api/651/78725)获取
- * @method void setProjectId(string $ProjectId) 设置所属新项目的ID。可通过[DescribeProject](https://cloud.tencent.com/document/api/651/78725)获取
+ * @method string getProjectId() 获取所属新项目的ID。可通过[DescribeProjects](https://cloud.tencent.com/document/api/651/78725)获取
+ * @method void setProjectId(string $ProjectId) 设置所属新项目的ID。可通过[DescribeProjects](https://cloud.tencent.com/document/api/651/78725)获取
  */
 class ModifyDBInstancesProjectRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ModifyDBInstancesProjectRequest extends AbstractModel
     public $DBInstanceIdSet;
 
     /**
-     * @var string 所属新项目的ID。可通过[DescribeProject](https://cloud.tencent.com/document/api/651/78725)获取
+     * @var string 所属新项目的ID。可通过[DescribeProjects](https://cloud.tencent.com/document/api/651/78725)获取
      */
     public $ProjectId;
 
     /**
      * @param array $DBInstanceIdSet 实例ID集合。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取。支持同时操作多个实例。
-     * @param string $ProjectId 所属新项目的ID。可通过[DescribeProject](https://cloud.tencent.com/document/api/651/78725)获取
+     * @param string $ProjectId 所属新项目的ID。可通过[DescribeProjects](https://cloud.tencent.com/document/api/651/78725)获取
      */
     function __construct()
     {

@@ -47,13 +47,11 @@ use TencentCloud\Common\AbstractModel;
 “FluxPerSecond”：平均流量
 “Flux”：流量
 “Request”：请求数
-“Online”：并发连接数
  * @method void setStatType(string $StatType) 设置统计指标类型：
 “Bandwidth”：带宽
 “FluxPerSecond”：平均流量
 “Flux”：流量
 “Request”：请求数
-“Online”：并发连接数
  * @method array getPlayDomains() 获取播放域名列表。
  * @method void setPlayDomains(array $PlayDomains) 设置播放域名列表。
  * @method array getProvinceNames() 获取要查询的省份（地区）英文名称列表，如 Beijing。
@@ -100,7 +98,6 @@ class DescribeProvinceIspPlayInfoListRequest extends AbstractModel
 “FluxPerSecond”：平均流量
 “Flux”：流量
 “Request”：请求数
-“Online”：并发连接数
      */
     public $StatType;
 
@@ -148,7 +145,6 @@ class DescribeProvinceIspPlayInfoListRequest extends AbstractModel
 “FluxPerSecond”：平均流量
 “Flux”：流量
 “Request”：请求数
-“Online”：并发连接数
      * @param array $PlayDomains 播放域名列表。
      * @param array $ProvinceNames 要查询的省份（地区）英文名称列表，如 Beijing。
      * @param array $IspNames 要查询的运营商英文名称列表，如 China Mobile ，如果为空，查询所有运营商的数据。

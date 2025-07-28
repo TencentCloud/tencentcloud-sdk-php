@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQualityControlTask(ScheduleQualityControlTaskResult $QualityControlTask) 设置媒体质检任务输出
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ScheduleExecRuleTaskResult getExecRuleTask() 获取条件判断任务输出
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setExecRuleTask(ScheduleExecRuleTaskResult $ExecRuleTask) 设置条件判断任务输出
+注意：此字段可能返回 null，表示取不到有效值。
  * @method ScheduleSmartSubtitleTaskResult getSmartSubtitlesTask() 获取智能字幕任务输出
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSmartSubtitlesTask(ScheduleSmartSubtitleTaskResult $SmartSubtitlesTask) 设置智能字幕任务输出
@@ -128,6 +132,12 @@ class ActivityResItem extends AbstractModel
     public $QualityControlTask;
 
     /**
+     * @var ScheduleExecRuleTaskResult 条件判断任务输出
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ExecRuleTask;
+
+    /**
      * @var ScheduleSmartSubtitleTaskResult 智能字幕任务输出
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -153,6 +163,8 @@ class ActivityResItem extends AbstractModel
      * @param ScheduleAnalysisTaskResult $AnalysisTask 分析任务输出
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ScheduleQualityControlTaskResult $QualityControlTask 媒体质检任务输出
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScheduleExecRuleTaskResult $ExecRuleTask 条件判断任务输出
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ScheduleSmartSubtitleTaskResult $SmartSubtitlesTask 智能字幕任务输出
 注意：此字段可能返回 null，表示取不到有效值。
@@ -218,6 +230,11 @@ class ActivityResItem extends AbstractModel
         if (array_key_exists("QualityControlTask",$param) and $param["QualityControlTask"] !== null) {
             $this->QualityControlTask = new ScheduleQualityControlTaskResult();
             $this->QualityControlTask->deserialize($param["QualityControlTask"]);
+        }
+
+        if (array_key_exists("ExecRuleTask",$param) and $param["ExecRuleTask"] !== null) {
+            $this->ExecRuleTask = new ScheduleExecRuleTaskResult();
+            $this->ExecRuleTask->deserialize($param["ExecRuleTask"]);
         }
 
         if (array_key_exists("SmartSubtitlesTask",$param) and $param["SmartSubtitlesTask"] !== null) {

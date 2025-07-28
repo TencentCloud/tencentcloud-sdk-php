@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWorkflowTypeList(array $WorkflowTypeList) 设置工作流类型列表 多个用英文逗号连接 cycle,manual. 默认只查询 cycle
  * @method string getKeyWord() 获取工作流过滤keyword，支持工作流 id/name 模糊匹配， 多个用|分割
  * @method void setKeyWord(string $KeyWord) 设置工作流过滤keyword，支持工作流 id/name 模糊匹配， 多个用|分割
+ * @method string getScheduleTimeZone() 获取**时区** timeZone, 默认UTC+8
+ * @method void setScheduleTimeZone(string $ScheduleTimeZone) 设置**时区** timeZone, 默认UTC+8
  */
 class DescribeOpsWorkflowsRequest extends AbstractModel
 {
@@ -136,6 +138,11 @@ class DescribeOpsWorkflowsRequest extends AbstractModel
     public $KeyWord;
 
     /**
+     * @var string **时区** timeZone, 默认UTC+8
+     */
+    public $ScheduleTimeZone;
+
+    /**
      * @param string $ProjectId 项目id
      * @param string $ProductNameList 任务产品类型名称列表，以 ',' 号分割
      * @param string $FolderIdList 文件id列表，以 ',' 号分割
@@ -152,6 +159,7 @@ class DescribeOpsWorkflowsRequest extends AbstractModel
      * @param array $ProjectIds 项目ID列表，用于多项目工作流筛选
      * @param array $WorkflowTypeList 工作流类型列表 多个用英文逗号连接 cycle,manual. 默认只查询 cycle
      * @param string $KeyWord 工作流过滤keyword，支持工作流 id/name 模糊匹配， 多个用|分割
+     * @param string $ScheduleTimeZone **时区** timeZone, 默认UTC+8
      */
     function __construct()
     {
@@ -228,6 +236,10 @@ class DescribeOpsWorkflowsRequest extends AbstractModel
 
         if (array_key_exists("KeyWord",$param) and $param["KeyWord"] !== null) {
             $this->KeyWord = $param["KeyWord"];
+        }
+
+        if (array_key_exists("ScheduleTimeZone",$param) and $param["ScheduleTimeZone"] !== null) {
+            $this->ScheduleTimeZone = $param["ScheduleTimeZone"];
         }
     }
 }

@@ -150,6 +150,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSchedulerTime(string $SchedulerTime) 设置计划调度时间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLastUpdateTime() 获取实例最近更新时间, 时间格式为 yyyy-MM-dd HH:mm:ss
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLastUpdateTime(string $LastUpdateTime) 设置实例最近更新时间, 时间格式为 yyyy-MM-dd HH:mm:ss
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExecutorGroupId() 获取执行资源组ID
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExecutorGroupId(string $ExecutorGroupId) 设置执行资源组ID
@@ -157,6 +161,10 @@ use TencentCloud\Common\AbstractModel;
  * @method string getExecutorGroupName() 获取资源组名称
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExecutorGroupName(string $ExecutorGroupName) 设置资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getJobErrorMsg() 获取简要的任务失败信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setJobErrorMsg(string $JobErrorMsg) 设置简要的任务失败信息
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class InstanceVO extends AbstractModel
@@ -311,6 +319,12 @@ class InstanceVO extends AbstractModel
     public $SchedulerTime;
 
     /**
+     * @var string 实例最近更新时间, 时间格式为 yyyy-MM-dd HH:mm:ss
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LastUpdateTime;
+
+    /**
      * @var string 执行资源组ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -321,6 +335,12 @@ class InstanceVO extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecutorGroupName;
+
+    /**
+     * @var string 简要的任务失败信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $JobErrorMsg;
 
     /**
      * @param string $InstanceKey **实例唯一标识**
@@ -388,9 +408,13 @@ class InstanceVO extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SchedulerTime 计划调度时间
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LastUpdateTime 实例最近更新时间, 时间格式为 yyyy-MM-dd HH:mm:ss
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExecutorGroupId 执行资源组ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExecutorGroupName 资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $JobErrorMsg 简要的任务失败信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -491,12 +515,20 @@ class InstanceVO extends AbstractModel
             $this->SchedulerTime = $param["SchedulerTime"];
         }
 
+        if (array_key_exists("LastUpdateTime",$param) and $param["LastUpdateTime"] !== null) {
+            $this->LastUpdateTime = $param["LastUpdateTime"];
+        }
+
         if (array_key_exists("ExecutorGroupId",$param) and $param["ExecutorGroupId"] !== null) {
             $this->ExecutorGroupId = $param["ExecutorGroupId"];
         }
 
         if (array_key_exists("ExecutorGroupName",$param) and $param["ExecutorGroupName"] !== null) {
             $this->ExecutorGroupName = $param["ExecutorGroupName"];
+        }
+
+        if (array_key_exists("JobErrorMsg",$param) and $param["JobErrorMsg"] !== null) {
+            $this->JobErrorMsg = $param["JobErrorMsg"];
         }
     }
 }

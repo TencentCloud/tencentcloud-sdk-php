@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTemplateName() 获取模板名称，长度为1～60个字符，仅支持数字,英文大小写字母、中文以及特殊字符_-./()（）[]+=：:@
  * @method void setTemplateName(string $TemplateName) 设置模板名称，长度为1～60个字符，仅支持数字,英文大小写字母、中文以及特殊字符_-./()（）[]+=：:@
- * @method string getDBMajorVersion() 获取数据库大版本号，例如：11，12，13
- * @method void setDBMajorVersion(string $DBMajorVersion) 设置数据库大版本号，例如：11，12，13
+ * @method string getDBMajorVersion() 获取数据库大版本号，例如：11，12，13。可通过[DescribeDBVersions](https://cloud.tencent.com/document/api/409/89018)接口获取
+ * @method void setDBMajorVersion(string $DBMajorVersion) 设置数据库大版本号，例如：11，12，13。可通过[DescribeDBVersions](https://cloud.tencent.com/document/api/409/89018)接口获取
  * @method string getDBEngine() 获取数据库引擎，例如：postgresql，mssql_compatible
  * @method void setDBEngine(string $DBEngine) 设置数据库引擎，例如：postgresql，mssql_compatible
  * @method string getTemplateDescription() 获取参数模板描述，长度为0～60个字符，仅支持数字,英文大小写字母、中文以及特殊字符_-./()（）[]+=：:@
@@ -37,7 +37,7 @@ class CreateParameterTemplateRequest extends AbstractModel
     public $TemplateName;
 
     /**
-     * @var string 数据库大版本号，例如：11，12，13
+     * @var string 数据库大版本号，例如：11，12，13。可通过[DescribeDBVersions](https://cloud.tencent.com/document/api/409/89018)接口获取
      */
     public $DBMajorVersion;
 
@@ -53,7 +53,7 @@ class CreateParameterTemplateRequest extends AbstractModel
 
     /**
      * @param string $TemplateName 模板名称，长度为1～60个字符，仅支持数字,英文大小写字母、中文以及特殊字符_-./()（）[]+=：:@
-     * @param string $DBMajorVersion 数据库大版本号，例如：11，12，13
+     * @param string $DBMajorVersion 数据库大版本号，例如：11，12，13。可通过[DescribeDBVersions](https://cloud.tencent.com/document/api/409/89018)接口获取
      * @param string $DBEngine 数据库引擎，例如：postgresql，mssql_compatible
      * @param string $TemplateDescription 参数模板描述，长度为0～60个字符，仅支持数字,英文大小写字母、中文以及特殊字符_-./()（）[]+=：:@
      */

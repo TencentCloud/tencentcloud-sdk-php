@@ -76,6 +76,8 @@ use TencentCloud\Common\AbstractModel;
 -9107 证件反光告警
 -9108 证件模糊告警
 -9109 告警能力未开通
+ * @method integer getCardCount() 获取输入图片中的卡证数量（仅请求曼谷地域[ap-bangkok]返回）
+ * @method void setCardCount(integer $CardCount) 设置输入图片中的卡证数量（仅请求曼谷地域[ap-bangkok]返回）
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -180,6 +182,11 @@ class MLIDPassportOCRResponse extends AbstractModel
     public $WarnCardInfos;
 
     /**
+     * @var integer 输入图片中的卡证数量（仅请求曼谷地域[ap-bangkok]返回）
+     */
+    public $CardCount;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -213,6 +220,7 @@ class MLIDPassportOCRResponse extends AbstractModel
 -9107 证件反光告警
 -9108 证件模糊告警
 -9109 告警能力未开通
+     * @param integer $CardCount 输入图片中的卡证数量（仅请求曼谷地域[ap-bangkok]返回）
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -295,6 +303,10 @@ class MLIDPassportOCRResponse extends AbstractModel
 
         if (array_key_exists("WarnCardInfos",$param) and $param["WarnCardInfos"] !== null) {
             $this->WarnCardInfos = $param["WarnCardInfos"];
+        }
+
+        if (array_key_exists("CardCount",$param) and $param["CardCount"] !== null) {
+            $this->CardCount = $param["CardCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

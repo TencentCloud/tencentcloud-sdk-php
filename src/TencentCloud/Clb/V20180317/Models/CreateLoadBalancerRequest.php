@@ -92,6 +92,8 @@ OPEN：公网属性， INTERNAL：内网属性。
  * @method void setLBChargeType(string $LBChargeType) 设置负载均衡实例计费类型，取值：POSTPAID_BY_HOUR，PREPAID，默认是POSTPAID_BY_HOUR。API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)
  * @method string getAccessLogTopicId() 获取七层访问日志主题ID
  * @method void setAccessLogTopicId(string $AccessLogTopicId) 设置七层访问日志主题ID
+ * @method boolean getAdvancedRoute() 获取是否开启七层高级路由
+ * @method void setAdvancedRoute(boolean $AdvancedRoute) 设置是否开启七层高级路由
  */
 class CreateLoadBalancerRequest extends AbstractModel
 {
@@ -252,6 +254,11 @@ OPEN：公网属性， INTERNAL：内网属性。
     public $AccessLogTopicId;
 
     /**
+     * @var boolean 是否开启七层高级路由
+     */
+    public $AdvancedRoute;
+
+    /**
      * @param string $LoadBalancerType 负载均衡实例的网络类型：
 OPEN：公网属性， INTERNAL：内网属性。
      * @param integer $Forward 负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1。
@@ -288,6 +295,7 @@ OPEN：公网属性， INTERNAL：内网属性。
      * @param LBChargePrepaid $LBChargePrepaid 负载均衡实例的预付费相关属性，API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)
      * @param string $LBChargeType 负载均衡实例计费类型，取值：POSTPAID_BY_HOUR，PREPAID，默认是POSTPAID_BY_HOUR。API接口购买包年包月实例还在灰度中，如您需要体验该功能，请通过 [工单申请](https://console.cloud.tencent.com/workorder/category)
      * @param string $AccessLogTopicId 七层访问日志主题ID
+     * @param boolean $AdvancedRoute 是否开启七层高级路由
      */
     function __construct()
     {
@@ -433,6 +441,10 @@ OPEN：公网属性， INTERNAL：内网属性。
 
         if (array_key_exists("AccessLogTopicId",$param) and $param["AccessLogTopicId"] !== null) {
             $this->AccessLogTopicId = $param["AccessLogTopicId"];
+        }
+
+        if (array_key_exists("AdvancedRoute",$param) and $param["AdvancedRoute"] !== null) {
+            $this->AdvancedRoute = $param["AdvancedRoute"];
         }
     }
 }

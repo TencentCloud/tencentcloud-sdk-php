@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setListenerName(string $ListenerName) 设置监听器名称
  * @method integer getWeight() 获取关联目标组的权重， 该参数只有v2新版目标组生效。
  * @method void setWeight(integer $Weight) 设置关联目标组的权重， 该参数只有v2新版目标组生效。
+ * @method string getRuleId() 获取高级路由规则ID
+ * @method void setRuleId(string $RuleId) 设置高级路由规则ID
  */
 class AssociationItem extends AbstractModel
 {
@@ -103,6 +105,11 @@ class AssociationItem extends AbstractModel
     public $Weight;
 
     /**
+     * @var string 高级路由规则ID
+     */
+    public $RuleId;
+
+    /**
      * @param string $LoadBalancerId 关联到的负载均衡ID
      * @param string $ListenerId 关联到的监听器ID
      * @param string $LocationId 关联到的转发规则ID
@@ -116,6 +123,7 @@ class AssociationItem extends AbstractModel
      * @param string $LoadBalancerName 负载均衡名称
      * @param string $ListenerName 监听器名称
      * @param integer $Weight 关联目标组的权重， 该参数只有v2新版目标组生效。
+     * @param string $RuleId 高级路由规则ID
      */
     function __construct()
     {
@@ -168,6 +176,10 @@ class AssociationItem extends AbstractModel
 
         if (array_key_exists("Weight",$param) and $param["Weight"] !== null) {
             $this->Weight = $param["Weight"];
+        }
+
+        if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
+            $this->RuleId = $param["RuleId"];
         }
     }
 }

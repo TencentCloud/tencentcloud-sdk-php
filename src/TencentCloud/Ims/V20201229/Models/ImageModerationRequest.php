@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ImageModeration请求参数结构体
  *
- * @method string getBizType() 获取该字段表示使用的策略的具体编号，该字段需要先在[内容安全控制台](#https://console.cloud.tencent.com/cms/clouds/manage)中配置。
+ * @method string getBizType() 获取该字段表示使用的策略的具体编号，该字段需要先在[内容安全控制台](https://console.cloud.tencent.com/cms/clouds/manage)中配置。
 备注：不同Biztype关联不同的业务场景与识别能力策略，调用前请确认正确的Biztype。
- * @method void setBizType(string $BizType) 设置该字段表示使用的策略的具体编号，该字段需要先在[内容安全控制台](#https://console.cloud.tencent.com/cms/clouds/manage)中配置。
+ * @method void setBizType(string $BizType) 设置该字段表示使用的策略的具体编号，该字段需要先在[内容安全控制台](https://console.cloud.tencent.com/cms/clouds/manage)中配置。
 备注：不同Biztype关联不同的业务场景与识别能力策略，调用前请确认正确的Biztype。
  * @method string getDataId() 获取该字段表示您为待检测对象分配的数据ID，传入后可方便您对文件进行标识和管理。<br>取值：由英文字母（大小写均可）、数字及四个特殊符号（_，-，@，#）组成，**长度不超过64个字符**。
  * @method void setDataId(string $DataId) 设置该字段表示您为待检测对象分配的数据ID，传入后可方便您对文件进行标识和管理。<br>取值：由英文字母（大小写均可）、数字及四个特殊符号（_，-，@，#）组成，**长度不超过64个字符**。
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class ImageModerationRequest extends AbstractModel
 {
     /**
-     * @var string 该字段表示使用的策略的具体编号，该字段需要先在[内容安全控制台](#https://console.cloud.tencent.com/cms/clouds/manage)中配置。
+     * @var string 该字段表示使用的策略的具体编号，该字段需要先在[内容安全控制台](https://console.cloud.tencent.com/cms/clouds/manage)中配置。
 备注：不同Biztype关联不同的业务场景与识别能力策略，调用前请确认正确的Biztype。
      */
     public $BizType;
@@ -90,7 +90,7 @@ class ImageModerationRequest extends AbstractModel
     public $Type;
 
     /**
-     * @param string $BizType 该字段表示使用的策略的具体编号，该字段需要先在[内容安全控制台](#https://console.cloud.tencent.com/cms/clouds/manage)中配置。
+     * @param string $BizType 该字段表示使用的策略的具体编号，该字段需要先在[内容安全控制台](https://console.cloud.tencent.com/cms/clouds/manage)中配置。
 备注：不同Biztype关联不同的业务场景与识别能力策略，调用前请确认正确的Biztype。
      * @param string $DataId 该字段表示您为待检测对象分配的数据ID，传入后可方便您对文件进行标识和管理。<br>取值：由英文字母（大小写均可）、数字及四个特殊符号（_，-，@，#）组成，**长度不超过64个字符**。
      * @param string $FileContent 该字段表示待检测图片文件内容的Base64编码，由于云API对请求包体有大小限制，图片的**Base64编码内容大小不得超过10MB**。<br/>备注：**该字段与FileUrl必须选择输入其中一个**。

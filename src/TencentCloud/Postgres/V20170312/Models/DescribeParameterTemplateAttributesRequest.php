@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeParameterTemplateAttributes请求参数结构体
  *
- * @method string getTemplateId() 获取参数模板ID。可通过[DescribeParameterTemplates](https://tapd.woa.com/tapd_fe/20400322/story/detail/1020400322125673714)接口获取
- * @method void setTemplateId(string $TemplateId) 设置参数模板ID。可通过[DescribeParameterTemplates](https://tapd.woa.com/tapd_fe/20400322/story/detail/1020400322125673714)接口获取
+ * @method string getTemplateId() 获取参数模板ID。可通过[DescribeParameterTemplates](https://cloud.tencent.com/document/api/409/84067)接口获取
+ * @method void setTemplateId(string $TemplateId) 设置参数模板ID。可通过[DescribeParameterTemplates](https://cloud.tencent.com/document/api/409/84067)接口获取
  */
 class DescribeParameterTemplateAttributesRequest extends AbstractModel
 {
     /**
-     * @var string 参数模板ID。可通过[DescribeParameterTemplates](https://tapd.woa.com/tapd_fe/20400322/story/detail/1020400322125673714)接口获取
+     * @var string 参数模板ID。可通过[DescribeParameterTemplates](https://cloud.tencent.com/document/api/409/84067)接口获取
      */
     public $TemplateId;
 
     /**
-     * @param string $TemplateId 参数模板ID。可通过[DescribeParameterTemplates](https://tapd.woa.com/tapd_fe/20400322/story/detail/1020400322125673714)接口获取
+     * @param string $TemplateId 参数模板ID。可通过[DescribeParameterTemplates](https://cloud.tencent.com/document/api/409/84067)接口获取
      */
     function __construct()
     {

@@ -14,24 +14,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ecdn\V20191012\Models;
+namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * PurgeUrlsCache请求参数结构体
+ * type FailOverOption struct 
+{ FailOverType string json:"FailOverType" // 新增 冷/热备 COLDSTANDBY、HOTSTANDBY }
  *
- * @method array getUrls() 获取要刷新的Url列表，必须包含协议头部。
- * @method void setUrls(array $Urls) 设置要刷新的Url列表，必须包含协议头部。
+ * @method string getFailOverType() 获取热备
+ * @method void setFailOverType(string $FailOverType) 设置热备
  */
-class PurgeUrlsCacheRequest extends AbstractModel
+class FailOverOption extends AbstractModel
 {
     /**
-     * @var array 要刷新的Url列表，必须包含协议头部。
+     * @var string 热备
      */
-    public $Urls;
+    public $FailOverType;
 
     /**
-     * @param array $Urls 要刷新的Url列表，必须包含协议头部。
+     * @param string $FailOverType 热备
      */
     function __construct()
     {
@@ -46,8 +47,8 @@ class PurgeUrlsCacheRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Urls",$param) and $param["Urls"] !== null) {
-            $this->Urls = $param["Urls"];
+        if (array_key_exists("FailOverType",$param) and $param["FailOverType"] !== null) {
+            $this->FailOverType = $param["FailOverType"];
         }
     }
 }

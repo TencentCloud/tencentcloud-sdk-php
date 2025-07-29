@@ -23,7 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Wsa\V20250508\Models as Models;
 
 /**
- * @method Models\SearchProResponse SearchPro(Models\SearchProRequest $req) 联网搜索API，以json形式向客户提供搜索结果数据，包含不仅限于标题、摘要、内容来源url等信息
+ * @method Models\SearchProResponse SearchPro(Models\SearchProRequest $req) 联网搜索API，以json形式向客户提供搜索结果数据，包含标题、摘要、内容来源url等信息
  */
 
 class WsaClient extends AbstractClient

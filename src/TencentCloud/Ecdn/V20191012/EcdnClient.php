@@ -57,16 +57,6 @@ DescribeEcdnStatistics用于查询 ECDN 实时访问监控数据，支持以下�
 DescribeIpStatus 用于查询域名所在加速平台的所有节点信息, 如果您的源站有白名单设置,可以通过本接口获取ECDN服务的节点IP进行加白, 本接口为内测接口,请联系腾讯云工程师开白。
 
 由于产品服务节点常有更新，对于源站开白的使用场景，请定期调用接口获取最新节点信息，若新增服务节点发布7日后您尚未更新加白导致回源失败等问题，ECDN侧不对此承担责任。
- * @method Models\DescribePurgeTasksResponse DescribePurgeTasks(Models\DescribePurgeTasksRequest $req) ECDN即将下线，如需要动态加速请使用EdgeOne
-
-DescribePurgeTasks 用于查询刷新任务提交历史记录及执行进度。
-
->?  若您的业务已迁移至 CDN 控制台，请参考<a href="https://cloud.tencent.com/document/api/228/37873"> CDN 接口文档</a>，使用  CDN 相关API 进行操作。
- * @method Models\PurgeUrlsCacheResponse PurgeUrlsCache(Models\PurgeUrlsCacheRequest $req) ECDN即将下线，如需要动态加速请使用EdgeOne
-
-PurgeUrlsCache 用于批量刷新Url，一次提交将返回一个刷新任务id。
-
->?  若您的业务已迁移至 CDN 控制台，请参考<a href="https://cloud.tencent.com/document/api/228/37870"> CDN 接口文档</a>，使用  CDN 相关API 进行操作。
  */
 
 class EcdnClient extends AbstractClient

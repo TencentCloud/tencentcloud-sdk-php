@@ -26,10 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTemplateName(string $TemplateName) 设置模板名称。
 长度上限：255字节。
 仅支持中文、英文、数字、_、-。
- * @method integer getDuration() 获取时移时长。
-单位：s。
- * @method void setDuration(integer $Duration) 设置时移时长。
-单位：s。
+ * @method integer getDuration() 获取时移时长。单位：s。取值范围：86400 259200 604800 1296000 2592000。
+ * @method void setDuration(integer $Duration) 设置时移时长。单位：s。取值范围：86400 259200 604800 1296000 2592000。
  * @method string getDescription() 获取描述信息。
 仅支持中文、英文、数字、_、-。
  * @method void setDescription(string $Description) 设置描述信息。
@@ -71,8 +69,7 @@ class CreateLiveTimeShiftTemplateRequest extends AbstractModel
     public $TemplateName;
 
     /**
-     * @var integer 时移时长。
-单位：s。
+     * @var integer 时移时长。单位：s。取值范围：86400 259200 604800 1296000 2592000。
      */
     public $Duration;
 
@@ -115,8 +112,7 @@ Overseas：海外及港澳台地区。
      * @param string $TemplateName 模板名称。
 长度上限：255字节。
 仅支持中文、英文、数字、_、-。
-     * @param integer $Duration 时移时长。
-单位：s。
+     * @param integer $Duration 时移时长。单位：s。取值范围：86400 259200 604800 1296000 2592000。
      * @param string $Description 描述信息。
 仅支持中文、英文、数字、_、-。
      * @param string $Area 地域。

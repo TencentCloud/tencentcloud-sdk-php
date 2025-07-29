@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
 <li>PNG: PNG图片</li>
  * @method void setRecordFormat(string $RecordFormat) 设置录制文件格式。可选值：
 <li>PNG: PNG图片</li>
+ * @method QualityControlStrategy getStrategy() 获取媒体质检抽检策略。
+ * @method void setStrategy(QualityControlStrategy $Strategy) 设置媒体质检抽检策略。
  */
 class CreateQualityControlTemplateRequest extends AbstractModel
 {
@@ -55,11 +57,17 @@ class CreateQualityControlTemplateRequest extends AbstractModel
     public $RecordFormat;
 
     /**
+     * @var QualityControlStrategy 媒体质检抽检策略。
+     */
+    public $Strategy;
+
+    /**
      * @param string $Name 媒体质检模板名称，长度限制：64 个字符。
      * @param array $QualityControlItemSet 媒体质检控制参数。
      * @param string $Comment 媒体质检模板描述信息，长度限制：256 个字符。
      * @param string $RecordFormat 录制文件格式。可选值：
 <li>PNG: PNG图片</li>
+     * @param QualityControlStrategy $Strategy 媒体质检抽检策略。
      */
     function __construct()
     {
@@ -93,6 +101,11 @@ class CreateQualityControlTemplateRequest extends AbstractModel
 
         if (array_key_exists("RecordFormat",$param) and $param["RecordFormat"] !== null) {
             $this->RecordFormat = $param["RecordFormat"];
+        }
+
+        if (array_key_exists("Strategy",$param) and $param["Strategy"] !== null) {
+            $this->Strategy = new QualityControlStrategy();
+            $this->Strategy->deserialize($param["Strategy"]);
         }
     }
 }

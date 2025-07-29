@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCamUin(string $CamUin) 设置绑定的子用户uin
  * @method array getCamRangerGroupIds() 获取ranger group id列表
  * @method void setCamRangerGroupIds(array $CamRangerGroupIds) 设置ranger group id列表
+ * @method integer getComputeGroupType() 获取0: 灵活场景 1: 固定场景
+ * @method void setComputeGroupType(integer $ComputeGroupType) 设置0: 灵活场景 1: 固定场景
  */
 class UserInfo extends AbstractModel
 {
@@ -87,6 +89,11 @@ class UserInfo extends AbstractModel
     public $CamRangerGroupIds;
 
     /**
+     * @var integer 0: 灵活场景 1: 固定场景
+     */
+    public $ComputeGroupType;
+
+    /**
      * @param string $InstanceId 集群实例id
      * @param string $UserName 用户名
      * @param string $PassWord 密码
@@ -96,6 +103,7 @@ class UserInfo extends AbstractModel
      * @param string $OldPwd 旧密码
      * @param string $CamUin 绑定的子用户uin
      * @param array $CamRangerGroupIds ranger group id列表
+     * @param integer $ComputeGroupType 0: 灵活场景 1: 固定场景
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class UserInfo extends AbstractModel
 
         if (array_key_exists("CamRangerGroupIds",$param) and $param["CamRangerGroupIds"] !== null) {
             $this->CamRangerGroupIds = $param["CamRangerGroupIds"];
+        }
+
+        if (array_key_exists("ComputeGroupType",$param) and $param["ComputeGroupType"] !== null) {
+            $this->ComputeGroupType = $param["ComputeGroupType"];
         }
     }
 }

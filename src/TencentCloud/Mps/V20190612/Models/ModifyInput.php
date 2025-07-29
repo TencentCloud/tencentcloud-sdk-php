@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRISTSettings(CreateInputRISTSettings $RISTSettings) 设置RIST的配置信息。
  * @method string getInputRegion() 获取输入节点的地区
  * @method void setInputRegion(string $InputRegion) 设置输入节点的地区
+ * @method FailOverOption getFailOverOption() 获取冷热备相关
+ * @method void setFailOverOption(FailOverOption $FailOverOption) 设置冷热备相关
  */
 class ModifyInput extends AbstractModel
 {
@@ -136,6 +138,11 @@ class ModifyInput extends AbstractModel
     public $InputRegion;
 
     /**
+     * @var FailOverOption 冷热备相关
+     */
+    public $FailOverOption;
+
+    /**
      * @param string $InputId 输入Id。
      * @param string $InputName 输入名称。
      * @param string $Description 输入描述。
@@ -152,6 +159,7 @@ class ModifyInput extends AbstractModel
      * @param array $Zones 可用区，非必填，最多支持输入两个可用区，对于需改接口，只要第二个可用区会参与到资源分配。如果input开启容灾或者涉及RTSP_PULL协议切换时有效(会重新分配地址)。	
      * @param CreateInputRISTSettings $RISTSettings RIST的配置信息。
      * @param string $InputRegion 输入节点的地区
+     * @param FailOverOption $FailOverOption 冷热备相关
      */
     function __construct()
     {
@@ -235,6 +243,11 @@ class ModifyInput extends AbstractModel
 
         if (array_key_exists("InputRegion",$param) and $param["InputRegion"] !== null) {
             $this->InputRegion = $param["InputRegion"];
+        }
+
+        if (array_key_exists("FailOverOption",$param) and $param["FailOverOption"] !== null) {
+            $this->FailOverOption = new FailOverOption();
+            $this->FailOverOption->deserialize($param["FailOverOption"]);
         }
     }
 }

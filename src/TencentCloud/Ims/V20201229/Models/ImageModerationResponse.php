@@ -22,32 +22,26 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSuggestion() 获取该字段用于返回Label标签下的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
  * @method void setSuggestion(string $Suggestion) 设置该字段用于返回Label标签下的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
- * @method string getLabel() 获取该字段用于返回检测结果（LabelResults）中所对应的**优先级最高的恶意标签**，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告；以及其他令人反感、不安全或不适宜的内容类型。
- * @method void setLabel(string $Label) 设置该字段用于返回检测结果（LabelResults）中所对应的**优先级最高的恶意标签**，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告；以及其他令人反感、不安全或不适宜的内容类型。
+ * @method string getLabel() 获取该字段用于返回检测结果（LabelResults）中所对应的**优先级最高的恶意标签**，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值标签示例：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告；（说明：文档仅示例了部分风险类型，更多返回类型请以实际值为准或[提交工单](https://console.cloud.tencent.com/workorder/category)进行咨询）。
+ * @method void setLabel(string $Label) 设置该字段用于返回检测结果（LabelResults）中所对应的**优先级最高的恶意标签**，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值标签示例：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告；（说明：文档仅示例了部分风险类型，更多返回类型请以实际值为准或[提交工单](https://console.cloud.tencent.com/workorder/category)进行咨询）。
  * @method string getSubLabel() 获取该字段用于返回检测结果所命中优先级最高的恶意标签下的子标签名称，如：*色情--性行为*；若未命中任何子标签则返回空字符串。
  * @method void setSubLabel(string $SubLabel) 设置该字段用于返回检测结果所命中优先级最高的恶意标签下的子标签名称，如：*色情--性行为*；若未命中任何子标签则返回空字符串。
  * @method integer getScore() 获取该字段用于返回当前标签（Label）下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表图片越有可能属于当前返回的标签；如：*色情 99*，则表明该图片非常有可能属于色情内容；*色情 0*，则表明该图片不属于色情内容。
  * @method void setScore(integer $Score) 设置该字段用于返回当前标签（Label）下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表图片越有可能属于当前返回的标签；如：*色情 99*，则表明该图片非常有可能属于色情内容；*色情 0*，则表明该图片不属于色情内容。
- * @method array getLabelResults() 获取该字段用于返回检测结果(LabelResults)中所对应的优先级最高的恶意标签，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。
+ * @method array getLabelResults() 获取该字段用于返回分类检测模型的详细检测结果；表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。详细返回值信息可参阅对应的数据结构（LabelResults）描述。
 
-返回值标签示例：Normal:正常，Porn:色情，Abuse:谩骂，Ad:广告（说明：文档仅示例了部分风险类型，更多返回类型请以实际值为准或咨询客服）
+返回值标签示例：Normal:正常，Porn:色情，Abuse:谩骂，Ad:广告（说明：文档仅示例了部分风险类型，更多返回类型请以实际值为准或[提交工单](https://console.cloud.tencent.com/workorder/category)进行咨询）
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLabelResults(array $LabelResults) 设置该字段用于返回检测结果(LabelResults)中所对应的优先级最高的恶意标签，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。
+ * @method void setLabelResults(array $LabelResults) 设置该字段用于返回分类检测模型的详细检测结果；表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。详细返回值信息可参阅对应的数据结构（LabelResults）描述。
 
-返回值标签示例：Normal:正常，Porn:色情，Abuse:谩骂，Ad:广告（说明：文档仅示例了部分风险类型，更多返回类型请以实际值为准或咨询客服）
+返回值标签示例：Normal:正常，Porn:色情，Abuse:谩骂，Ad:广告（说明：文档仅示例了部分风险类型，更多返回类型请以实际值为准或[提交工单](https://console.cloud.tencent.com/workorder/category)进行咨询）
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getObjectResults() 获取该字段用于返回物体检测模型的详细检测结果；包括：实体、广告台标、二维码等内容命中的标签名称、标签分数、坐标信息、场景识别结果、建议操作等内容审核信息；详细返回值信息可参阅对应的数据结构（ObjectResults）描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setObjectResults(array $ObjectResults) 设置该字段用于返回物体检测模型的详细检测结果；包括：实体、广告台标、二维码等内容命中的标签名称、标签分数、坐标信息、场景识别结果、建议操作等内容审核信息；详细返回值信息可参阅对应的数据结构（ObjectResults）描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getOcrResults() 获取该字段用于返回OCR文本识别的详细检测结果；包括：文本坐标信息、文本识别结果、建议操作等内容审核信息；详细返回值信息可参阅对应的数据结构（OcrResults）描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOcrResults(array $OcrResults) 设置该字段用于返回OCR文本识别的详细检测结果；包括：文本坐标信息、文本识别结果、建议操作等内容审核信息；详细返回值信息可参阅对应的数据结构（OcrResults）描述。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getLibResults() 获取该字段用于返回基于图片风险库（风险黑库与正常白库）识别的结果,详细返回值信息可参阅对应的数据结构（LibResults）描述。<br>备注：图片风险库目前**暂不支持自定义库**。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLibResults(array $LibResults) 设置该字段用于返回基于图片风险库（风险黑库与正常白库）识别的结果,详细返回值信息可参阅对应的数据结构（LibResults）描述。<br>备注：图片风险库目前**暂不支持自定义库**。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDataId() 获取该字段用于返回检测对象对应请求参数中的DataId。
  * @method void setDataId(string $DataId) 设置该字段用于返回检测对象对应请求参数中的DataId。
  * @method string getBizType() 获取该字段用于返回检测对象对应请求参数中的BizType。
@@ -59,9 +53,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getFileMD5() 获取该字段用于返回检测对象对应的MD5校验值，以方便校验文件完整性。
  * @method void setFileMD5(string $FileMD5) 设置该字段用于返回检测对象对应的MD5校验值，以方便校验文件完整性。
  * @method array getRecognitionResults() 获取该字段用于返回仅识别图片元素的模型结果；包括：场景模型命中的标签、置信度和位置信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRecognitionResults(array $RecognitionResults) 设置该字段用于返回仅识别图片元素的模型结果；包括：场景模型命中的标签、置信度和位置信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -73,7 +65,7 @@ class ImageModerationResponse extends AbstractModel
     public $Suggestion;
 
     /**
-     * @var string 该字段用于返回检测结果（LabelResults）中所对应的**优先级最高的恶意标签**，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告；以及其他令人反感、不安全或不适宜的内容类型。
+     * @var string 该字段用于返回检测结果（LabelResults）中所对应的**优先级最高的恶意标签**，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值标签示例：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告；（说明：文档仅示例了部分风险类型，更多返回类型请以实际值为准或[提交工单](https://console.cloud.tencent.com/workorder/category)进行咨询）。
      */
     public $Label;
 
@@ -88,28 +80,25 @@ class ImageModerationResponse extends AbstractModel
     public $Score;
 
     /**
-     * @var array 该字段用于返回检测结果(LabelResults)中所对应的优先级最高的恶意标签，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。
+     * @var array 该字段用于返回分类检测模型的详细检测结果；表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。详细返回值信息可参阅对应的数据结构（LabelResults）描述。
 
-返回值标签示例：Normal:正常，Porn:色情，Abuse:谩骂，Ad:广告（说明：文档仅示例了部分风险类型，更多返回类型请以实际值为准或咨询客服）
+返回值标签示例：Normal:正常，Porn:色情，Abuse:谩骂，Ad:广告（说明：文档仅示例了部分风险类型，更多返回类型请以实际值为准或[提交工单](https://console.cloud.tencent.com/workorder/category)进行咨询）
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LabelResults;
 
     /**
      * @var array 该字段用于返回物体检测模型的详细检测结果；包括：实体、广告台标、二维码等内容命中的标签名称、标签分数、坐标信息、场景识别结果、建议操作等内容审核信息；详细返回值信息可参阅对应的数据结构（ObjectResults）描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ObjectResults;
 
     /**
      * @var array 该字段用于返回OCR文本识别的详细检测结果；包括：文本坐标信息、文本识别结果、建议操作等内容审核信息；详细返回值信息可参阅对应的数据结构（OcrResults）描述。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OcrResults;
 
     /**
      * @var array 该字段用于返回基于图片风险库（风险黑库与正常白库）识别的结果,详细返回值信息可参阅对应的数据结构（LibResults）描述。<br>备注：图片风险库目前**暂不支持自定义库**。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LibResults;
 
@@ -136,7 +125,6 @@ class ImageModerationResponse extends AbstractModel
 
     /**
      * @var array 该字段用于返回仅识别图片元素的模型结果；包括：场景模型命中的标签、置信度和位置信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RecognitionResults;
 
@@ -147,26 +135,22 @@ class ImageModerationResponse extends AbstractModel
 
     /**
      * @param string $Suggestion 该字段用于返回Label标签下的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
-     * @param string $Label 该字段用于返回检测结果（LabelResults）中所对应的**优先级最高的恶意标签**，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告；以及其他令人反感、不安全或不适宜的内容类型。
+     * @param string $Label 该字段用于返回检测结果（LabelResults）中所对应的**优先级最高的恶意标签**，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值标签示例：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告；（说明：文档仅示例了部分风险类型，更多返回类型请以实际值为准或[提交工单](https://console.cloud.tencent.com/workorder/category)进行咨询）。
      * @param string $SubLabel 该字段用于返回检测结果所命中优先级最高的恶意标签下的子标签名称，如：*色情--性行为*；若未命中任何子标签则返回空字符串。
      * @param integer $Score 该字段用于返回当前标签（Label）下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表图片越有可能属于当前返回的标签；如：*色情 99*，则表明该图片非常有可能属于色情内容；*色情 0*，则表明该图片不属于色情内容。
-     * @param array $LabelResults 该字段用于返回检测结果(LabelResults)中所对应的优先级最高的恶意标签，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。
+     * @param array $LabelResults 该字段用于返回分类检测模型的详细检测结果；表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。详细返回值信息可参阅对应的数据结构（LabelResults）描述。
 
-返回值标签示例：Normal:正常，Porn:色情，Abuse:谩骂，Ad:广告（说明：文档仅示例了部分风险类型，更多返回类型请以实际值为准或咨询客服）
+返回值标签示例：Normal:正常，Porn:色情，Abuse:谩骂，Ad:广告（说明：文档仅示例了部分风险类型，更多返回类型请以实际值为准或[提交工单](https://console.cloud.tencent.com/workorder/category)进行咨询）
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ObjectResults 该字段用于返回物体检测模型的详细检测结果；包括：实体、广告台标、二维码等内容命中的标签名称、标签分数、坐标信息、场景识别结果、建议操作等内容审核信息；详细返回值信息可参阅对应的数据结构（ObjectResults）描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $OcrResults 该字段用于返回OCR文本识别的详细检测结果；包括：文本坐标信息、文本识别结果、建议操作等内容审核信息；详细返回值信息可参阅对应的数据结构（OcrResults）描述。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $LibResults 该字段用于返回基于图片风险库（风险黑库与正常白库）识别的结果,详细返回值信息可参阅对应的数据结构（LibResults）描述。<br>备注：图片风险库目前**暂不支持自定义库**。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DataId 该字段用于返回检测对象对应请求参数中的DataId。
      * @param string $BizType 该字段用于返回检测对象对应请求参数中的BizType。
      * @param string $Extra 该字段用于返回根据您的需求配置的额外附加信息（Extra），如未配置则默认返回值为空。<br>备注：不同客户或Biztype下返回信息不同，如需配置该字段请提交工单咨询或联系售后专员处理。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileMD5 该字段用于返回检测对象对应的MD5校验值，以方便校验文件完整性。
      * @param array $RecognitionResults 该字段用于返回仅识别图片元素的模型结果；包括：场景模型命中的标签、置信度和位置信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

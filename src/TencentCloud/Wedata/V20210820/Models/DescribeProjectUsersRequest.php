@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProjectUsers请求参数结构体
  *
+ * @method string getProjectId() 获取项目id
+ * @method void setProjectId(string $ProjectId) 设置项目id
  * @method integer getPageNumber() 获取分页号
  * @method void setPageNumber(integer $PageNumber) 设置分页号
  * @method integer getPageSize() 获取分页大小
@@ -33,6 +35,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class DescribeProjectUsersRequest extends AbstractModel
 {
+    /**
+     * @var string 项目id
+     */
+    public $ProjectId;
+
     /**
      * @var integer 分页号
      */
@@ -59,6 +66,7 @@ class DescribeProjectUsersRequest extends AbstractModel
     public $IsProjectAdmin;
 
     /**
+     * @param string $ProjectId 项目id
      * @param integer $PageNumber 分页号
      * @param integer $PageSize 分页大小
      * @param array $Filters 【过滤参数】自定义条件查询
@@ -78,6 +86,10 @@ class DescribeProjectUsersRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
+        }
+
         if (array_key_exists("PageNumber",$param) and $param["PageNumber"] !== null) {
             $this->PageNumber = $param["PageNumber"];
         }

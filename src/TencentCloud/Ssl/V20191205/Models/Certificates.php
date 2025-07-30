@@ -222,14 +222,14 @@ null：用户上传证书（没有套餐类型），
  * @method void setStatusMsg(string $StatusMsg) 设置状态信息。
  * @method string getVerifyType() 获取验证类型：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证，DNS_PROXY = DNS代理验证。FILE_PROXY = 文件代理验证
  * @method void setVerifyType(string $VerifyType) 设置验证类型：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证，DNS_PROXY = DNS代理验证。FILE_PROXY = 文件代理验证
- * @method string getCertBeginTime() 获取证书生效时间。
- * @method void setCertBeginTime(string $CertBeginTime) 设置证书生效时间。
- * @method string getCertEndTime() 获取证书过期时间。
- * @method void setCertEndTime(string $CertEndTime) 设置证书过期时间。
+ * @method string getCertBeginTime() 获取证书生效时间。时区为GMT+8:00
+ * @method void setCertBeginTime(string $CertBeginTime) 设置证书生效时间。时区为GMT+8:00
+ * @method string getCertEndTime() 获取证书过期时间。时区为GMT+8:00
+ * @method void setCertEndTime(string $CertEndTime) 设置证书过期时间。时区为GMT+8:00
  * @method string getValidityPeriod() 获取证书有效期，单位（月）。
  * @method void setValidityPeriod(string $ValidityPeriod) 设置证书有效期，单位（月）。
- * @method string getInsertTime() 获取创建时间。
- * @method void setInsertTime(string $InsertTime) 设置创建时间。
+ * @method string getInsertTime() 获取创建时间。时区为GMT+8:00
+ * @method void setInsertTime(string $InsertTime) 设置创建时间。时区为GMT+8:00
  * @method string getCertificateId() 获取证书 ID。
  * @method void setCertificateId(string $CertificateId) 设置证书 ID。
  * @method array getSubjectAltName() 获取证书包含的多个域名（包含主域名）。
@@ -284,10 +284,10 @@ null：用户上传证书（没有套餐类型），
  * @method void setReplaceOriCertIsDelete(boolean $ReplaceOriCertIsDelete) 设置重颁发证书原证书是否删除
  * @method boolean getIsExpiring() 获取是否即将过期， 证书即将到期的30天内为即将过期
  * @method void setIsExpiring(boolean $IsExpiring) 设置是否即将过期， 证书即将到期的30天内为即将过期
- * @method string getDVAuthDeadline() 获取DV证书添加验证截止时间
- * @method void setDVAuthDeadline(string $DVAuthDeadline) 设置DV证书添加验证截止时间
- * @method string getValidationPassedTime() 获取域名验证通过时间
- * @method void setValidationPassedTime(string $ValidationPassedTime) 设置域名验证通过时间
+ * @method string getDVAuthDeadline() 获取DV证书添加验证截止时间，时区为GMT+8:00
+ * @method void setDVAuthDeadline(string $DVAuthDeadline) 设置DV证书添加验证截止时间，时区为GMT+8:00
+ * @method string getValidationPassedTime() 获取域名验证通过时间，时区为GMT+8:00
+ * @method void setValidationPassedTime(string $ValidationPassedTime) 设置域名验证通过时间，时区为GMT+8:00
  * @method array getCertSANs() 获取证书关联的多域名
  * @method void setCertSANs(array $CertSANs) 设置证书关联的多域名
  * @method string getAwaitingValidationMsg() 获取域名验证驳回信息
@@ -302,8 +302,8 @@ null：用户上传证书（没有套餐类型），
  * @method void setKeyPasswordCustomFlag(boolean $KeyPasswordCustomFlag) 设置是否存在私钥密码
  * @method SupportDownloadType getSupportDownloadType() 获取支持下载的WEB服务器类型： nginx、apache、iis、tomcat、jks、root、other
  * @method void setSupportDownloadType(SupportDownloadType $SupportDownloadType) 设置支持下载的WEB服务器类型： nginx、apache、iis、tomcat、jks、root、other
- * @method string getCertRevokedTime() 获取证书吊销完成时间
- * @method void setCertRevokedTime(string $CertRevokedTime) 设置证书吊销完成时间
+ * @method string getCertRevokedTime() 获取证书吊销完成时间，时区为GMT+8:00
+ * @method void setCertRevokedTime(string $CertRevokedTime) 设置证书吊销完成时间，时区为GMT+8:00
  * @method array getHostingResourceTypes() 获取托管资源类型列表
  * @method void setHostingResourceTypes(array $HostingResourceTypes) 设置托管资源类型列表
  * @method HostingConfig getHostingConfig() 获取托管配置信息
@@ -469,12 +469,12 @@ null：用户上传证书（没有套餐类型），
     public $VerifyType;
 
     /**
-     * @var string 证书生效时间。
+     * @var string 证书生效时间。时区为GMT+8:00
      */
     public $CertBeginTime;
 
     /**
-     * @var string 证书过期时间。
+     * @var string 证书过期时间。时区为GMT+8:00
      */
     public $CertEndTime;
 
@@ -484,7 +484,7 @@ null：用户上传证书（没有套餐类型），
     public $ValidityPeriod;
 
     /**
-     * @var string 创建时间。
+     * @var string 创建时间。时区为GMT+8:00
      */
     public $InsertTime;
 
@@ -624,12 +624,12 @@ null：用户上传证书（没有套餐类型），
     public $IsExpiring;
 
     /**
-     * @var string DV证书添加验证截止时间
+     * @var string DV证书添加验证截止时间，时区为GMT+8:00
      */
     public $DVAuthDeadline;
 
     /**
-     * @var string 域名验证通过时间
+     * @var string 域名验证通过时间，时区为GMT+8:00
      */
     public $ValidationPassedTime;
 
@@ -669,7 +669,7 @@ null：用户上传证书（没有套餐类型），
     public $SupportDownloadType;
 
     /**
-     * @var string 证书吊销完成时间
+     * @var string 证书吊销完成时间，时区为GMT+8:00
      */
     public $CertRevokedTime;
 
@@ -791,10 +791,10 @@ null：用户上传证书（没有套餐类型），
      * @param string $VulnerabilityStatus 漏洞扫描状态：INACTIVE = 未开启，ACTIVE = 已开启
      * @param string $StatusMsg 状态信息。
      * @param string $VerifyType 验证类型：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证，DNS_PROXY = DNS代理验证。FILE_PROXY = 文件代理验证
-     * @param string $CertBeginTime 证书生效时间。
-     * @param string $CertEndTime 证书过期时间。
+     * @param string $CertBeginTime 证书生效时间。时区为GMT+8:00
+     * @param string $CertEndTime 证书过期时间。时区为GMT+8:00
      * @param string $ValidityPeriod 证书有效期，单位（月）。
-     * @param string $InsertTime 创建时间。
+     * @param string $InsertTime 创建时间。时区为GMT+8:00
      * @param string $CertificateId 证书 ID。
      * @param array $SubjectAltName 证书包含的多个域名（包含主域名）。
      * @param string $PackageTypeName 证书类型名称。
@@ -822,8 +822,8 @@ null：用户上传证书（没有套餐类型），
      * @param string $HasRenewOrder 存在的续费证书ID
      * @param boolean $ReplaceOriCertIsDelete 重颁发证书原证书是否删除
      * @param boolean $IsExpiring 是否即将过期， 证书即将到期的30天内为即将过期
-     * @param string $DVAuthDeadline DV证书添加验证截止时间
-     * @param string $ValidationPassedTime 域名验证通过时间
+     * @param string $DVAuthDeadline DV证书添加验证截止时间，时区为GMT+8:00
+     * @param string $ValidationPassedTime 域名验证通过时间，时区为GMT+8:00
      * @param array $CertSANs 证书关联的多域名
      * @param string $AwaitingValidationMsg 域名验证驳回信息
      * @param boolean $AllowDownload 是否允许下载
@@ -831,7 +831,7 @@ null：用户上传证书（没有套餐类型），
      * @param boolean $IsPackage 是否是权益点购买的证书
      * @param boolean $KeyPasswordCustomFlag 是否存在私钥密码
      * @param SupportDownloadType $SupportDownloadType 支持下载的WEB服务器类型： nginx、apache、iis、tomcat、jks、root、other
-     * @param string $CertRevokedTime 证书吊销完成时间
+     * @param string $CertRevokedTime 证书吊销完成时间，时区为GMT+8:00
      * @param array $HostingResourceTypes 托管资源类型列表
      * @param HostingConfig $HostingConfig 托管配置信息
 注意：此字段可能返回 null，表示取不到有效值。

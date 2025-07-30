@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFailedTotalCount(integer $FailedTotalCount) 设置失败总数
  * @method integer getRunningTotalCount() 获取部署中总数
  * @method void setRunningTotalCount(integer $RunningTotalCount) 设置部署中总数
- * @method integer getPendingTotalCount() 获取带部署总数
- * @method void setPendingTotalCount(integer $PendingTotalCount) 设置带部署总数
+ * @method integer getPendingTotalCount() 获取待部署总数
+ * @method void setPendingTotalCount(integer $PendingTotalCount) 设置待部署总数
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -63,7 +63,7 @@ class DescribeHostDeployRecordDetailResponse extends AbstractModel
     public $RunningTotalCount;
 
     /**
-     * @var integer 带部署总数
+     * @var integer 待部署总数
      */
     public $PendingTotalCount;
 
@@ -78,7 +78,7 @@ class DescribeHostDeployRecordDetailResponse extends AbstractModel
      * @param integer $SuccessTotalCount 成功总数
      * @param integer $FailedTotalCount 失败总数
      * @param integer $RunningTotalCount 部署中总数
-     * @param integer $PendingTotalCount 带部署总数
+     * @param integer $PendingTotalCount 待部署总数
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

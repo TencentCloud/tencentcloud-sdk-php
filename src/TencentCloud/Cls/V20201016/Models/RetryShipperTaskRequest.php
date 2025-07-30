@@ -20,26 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RetryShipperTask请求参数结构体
  *
- * @method string getShipperId() 获取投递规则ID
- * @method void setShipperId(string $ShipperId) 设置投递规则ID
- * @method string getTaskId() 获取投递任务ID
- * @method void setTaskId(string $TaskId) 设置投递任务ID
+ * @method string getShipperId() 获取投递规则Id。
+
+- 通过 [获取投递任务列表](https://cloud.tencent.com/document/product/614/58745)获取ShipperId。
+ * @method void setShipperId(string $ShipperId) 设置投递规则Id。
+
+- 通过 [获取投递任务列表](https://cloud.tencent.com/document/product/614/58745)获取ShipperId。
+ * @method string getTaskId() 获取投递任务Id。
+
+- 通过 [获取投递任务列表](https://cloud.tencent.com/document/product/614/58745) 获取TaskId。
+ * @method void setTaskId(string $TaskId) 设置投递任务Id。
+
+- 通过 [获取投递任务列表](https://cloud.tencent.com/document/product/614/58745) 获取TaskId。
  */
 class RetryShipperTaskRequest extends AbstractModel
 {
     /**
-     * @var string 投递规则ID
+     * @var string 投递规则Id。
+
+- 通过 [获取投递任务列表](https://cloud.tencent.com/document/product/614/58745)获取ShipperId。
      */
     public $ShipperId;
 
     /**
-     * @var string 投递任务ID
+     * @var string 投递任务Id。
+
+- 通过 [获取投递任务列表](https://cloud.tencent.com/document/product/614/58745) 获取TaskId。
      */
     public $TaskId;
 
     /**
-     * @param string $ShipperId 投递规则ID
-     * @param string $TaskId 投递任务ID
+     * @param string $ShipperId 投递规则Id。
+
+- 通过 [获取投递任务列表](https://cloud.tencent.com/document/product/614/58745)获取ShipperId。
+     * @param string $TaskId 投递任务Id。
+
+- 通过 [获取投递任务列表](https://cloud.tencent.com/document/product/614/58745) 获取TaskId。
      */
     function __construct()
     {

@@ -20,62 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMachines请求参数结构体
  *
- * @method string getGroupId() 获取查询的机器组ID
- * @method void setGroupId(string $GroupId) 设置查询的机器组ID
+ * @method string getGroupId() 获取查询的机器组ID。
+
+- 通过[获取机器组列表](https://cloud.tencent.com/document/api/614/56438)获取机器组ID。
+ * @method void setGroupId(string $GroupId) 设置查询的机器组ID。
+
+- 通过[获取机器组列表](https://cloud.tencent.com/document/api/614/56438)获取机器组ID。
  * @method array getFilters() 获取ip
-- 按照【ip】进行过滤。
+- 按照ip进行过滤。
 - 类型：String
 - 必选：否
 
 instance
-- 按照【instance】进行过滤。
+- 按照实例id进行过滤。
 - 类型：String
 - 必选：否
 
 version
-- 按照【LogListener版本】进行过滤。
+- 按照LogListener版本进行过滤。
 - 类型：String
 - 必选：否
 
 status
-- 按照【状态】进行过滤。
+- 按照机器状态进行过滤。
 - 类型：String
 - 必选：否
 - 可选值：0：离线，1：正常
 
 offlineTime
-- 按照【机器离线时间】进行过滤。
+- 按照机器离线时间进行过滤。
 - 类型：String
 - 必选：否
-- - 可选值：0：无离线时间，12：12小时内，24：一天内，48：两天内，99：两天前
+- -可选值：0：无离线时间，12：12小时内，24：一天内，48：两天内，99：两天前
 
 每次请求的Filters的上限为10，Filter.Values的上限为100。
  * @method void setFilters(array $Filters) 设置ip
-- 按照【ip】进行过滤。
+- 按照ip进行过滤。
 - 类型：String
 - 必选：否
 
 instance
-- 按照【instance】进行过滤。
+- 按照实例id进行过滤。
 - 类型：String
 - 必选：否
 
 version
-- 按照【LogListener版本】进行过滤。
+- 按照LogListener版本进行过滤。
 - 类型：String
 - 必选：否
 
 status
-- 按照【状态】进行过滤。
+- 按照机器状态进行过滤。
 - 类型：String
 - 必选：否
 - 可选值：0：离线，1：正常
 
 offlineTime
-- 按照【机器离线时间】进行过滤。
+- 按照机器离线时间进行过滤。
 - 类型：String
 - 必选：否
-- - 可选值：0：无离线时间，12：12小时内，24：一天内，48：两天内，99：两天前
+- -可选值：0：无离线时间，12：12小时内，24：一天内，48：两天内，99：两天前
 
 每次请求的Filters的上限为10，Filter.Values的上限为100。
  * @method integer getOffset() 获取分页的偏移量。
@@ -86,37 +90,39 @@ offlineTime
 class DescribeMachinesRequest extends AbstractModel
 {
     /**
-     * @var string 查询的机器组ID
+     * @var string 查询的机器组ID。
+
+- 通过[获取机器组列表](https://cloud.tencent.com/document/api/614/56438)获取机器组ID。
      */
     public $GroupId;
 
     /**
      * @var array ip
-- 按照【ip】进行过滤。
+- 按照ip进行过滤。
 - 类型：String
 - 必选：否
 
 instance
-- 按照【instance】进行过滤。
+- 按照实例id进行过滤。
 - 类型：String
 - 必选：否
 
 version
-- 按照【LogListener版本】进行过滤。
+- 按照LogListener版本进行过滤。
 - 类型：String
 - 必选：否
 
 status
-- 按照【状态】进行过滤。
+- 按照机器状态进行过滤。
 - 类型：String
 - 必选：否
 - 可选值：0：离线，1：正常
 
 offlineTime
-- 按照【机器离线时间】进行过滤。
+- 按照机器离线时间进行过滤。
 - 类型：String
 - 必选：否
-- - 可选值：0：无离线时间，12：12小时内，24：一天内，48：两天内，99：两天前
+- -可选值：0：无离线时间，12：12小时内，24：一天内，48：两天内，99：两天前
 
 每次请求的Filters的上限为10，Filter.Values的上限为100。
      */
@@ -133,33 +139,35 @@ offlineTime
     public $Limit;
 
     /**
-     * @param string $GroupId 查询的机器组ID
+     * @param string $GroupId 查询的机器组ID。
+
+- 通过[获取机器组列表](https://cloud.tencent.com/document/api/614/56438)获取机器组ID。
      * @param array $Filters ip
-- 按照【ip】进行过滤。
+- 按照ip进行过滤。
 - 类型：String
 - 必选：否
 
 instance
-- 按照【instance】进行过滤。
+- 按照实例id进行过滤。
 - 类型：String
 - 必选：否
 
 version
-- 按照【LogListener版本】进行过滤。
+- 按照LogListener版本进行过滤。
 - 类型：String
 - 必选：否
 
 status
-- 按照【状态】进行过滤。
+- 按照机器状态进行过滤。
 - 类型：String
 - 必选：否
 - 可选值：0：离线，1：正常
 
 offlineTime
-- 按照【机器离线时间】进行过滤。
+- 按照机器离线时间进行过滤。
 - 类型：String
 - 必选：否
-- - 可选值：0：无离线时间，12：12小时内，24：一天内，48：两天内，99：两天前
+- -可选值：0：无离线时间，12：12小时内，24：一天内，48：两天内，99：两天前
 
 每次请求的Filters的上限为10，Filter.Values的上限为100。
      * @param integer $Offset 分页的偏移量。

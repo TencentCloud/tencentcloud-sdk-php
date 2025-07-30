@@ -74,10 +74,10 @@ origin: 保持原始编码格式
 范围0-60fps
  * @method integer getGop() 获取关键帧间隔，单位：秒。
 默认原始的间隔
-范围2-6
+范围1-6
  * @method void setGop(integer $Gop) 设置关键帧间隔，单位：秒。
 默认原始的间隔
-范围2-6
+范围1-6
  * @method integer getRotate() 获取旋转角度，默认0。
 可取值：0，90，180，270
  * @method void setRotate(integer $Rotate) 设置旋转角度，默认0。
@@ -208,7 +208,7 @@ origin: 保持原始编码格式
     /**
      * @var integer 关键帧间隔，单位：秒。
 默认原始的间隔
-范围2-6
+范围1-6
      */
     public $Gop;
 
@@ -316,7 +316,7 @@ origin: 保持原始编码格式
 范围0-60fps
      * @param integer $Gop 关键帧间隔，单位：秒。
 默认原始的间隔
-范围2-6
+范围1-6
      * @param integer $Rotate 旋转角度，默认0。
 可取值：0，90，180，270
      * @param string $Profile 编码质量：

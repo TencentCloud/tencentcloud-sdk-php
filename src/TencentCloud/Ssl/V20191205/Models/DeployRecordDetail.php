@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlgorithm(string $Algorithm) 设置当前部署证书加密算法
  * @method string getOldAlgorithm() 获取原证书加密算法
  * @method void setOldAlgorithm(string $OldAlgorithm) 设置原证书加密算法
+ * @method string getInstanceStatus() 获取实例状态，不同云产品状态不一样
+ * @method void setInstanceStatus(string $InstanceStatus) 设置实例状态，不同云产品状态不一样
  */
 class DeployRecordDetail extends AbstractModel
 {
@@ -192,6 +194,11 @@ class DeployRecordDetail extends AbstractModel
     public $OldAlgorithm;
 
     /**
+     * @var string 实例状态，不同云产品状态不一样
+     */
+    public $InstanceStatus;
+
+    /**
      * @param integer $Id 部署记录详情ID
      * @param string $CertId 部署证书ID
      * @param string $OldCertId 原绑定证书ID
@@ -216,6 +223,7 @@ class DeployRecordDetail extends AbstractModel
      * @param array $Url 部署CLB监听器的Url
      * @param string $Algorithm 当前部署证书加密算法
      * @param string $OldAlgorithm 原证书加密算法
+     * @param string $InstanceStatus 实例状态，不同云产品状态不一样
      */
     function __construct()
     {
@@ -324,6 +332,10 @@ class DeployRecordDetail extends AbstractModel
 
         if (array_key_exists("OldAlgorithm",$param) and $param["OldAlgorithm"] !== null) {
             $this->OldAlgorithm = $param["OldAlgorithm"];
+        }
+
+        if (array_key_exists("InstanceStatus",$param) and $param["InstanceStatus"] !== null) {
+            $this->InstanceStatus = $param["InstanceStatus"];
         }
     }
 }

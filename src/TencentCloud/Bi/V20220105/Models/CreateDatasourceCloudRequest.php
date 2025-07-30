@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataOriginDatasourceId(string $DataOriginDatasourceId) 设置第三方数据源id
  * @method string getClusterId() 获取集群id
  * @method void setClusterId(string $ClusterId) 设置集群id
+ * @method string getSchema() 获取数据库schema
+ * @method void setSchema(string $Schema) 设置数据库schema
+ * @method string getDbVersion() 获取数据库版本
+ * @method void setDbVersion(string $DbVersion) 设置数据库版本
  */
 class CreateDatasourceCloudRequest extends AbstractModel
 {
@@ -164,6 +168,16 @@ class CreateDatasourceCloudRequest extends AbstractModel
     public $ClusterId;
 
     /**
+     * @var string 数据库schema
+     */
+    public $Schema;
+
+    /**
+     * @var string 数据库版本
+     */
+    public $DbVersion;
+
+    /**
      * @param string $ServiceType 后端提供字典：域类型，1、腾讯云，2、本地
      * @param string $DbType 驱动
      * @param string $Charset 数据库编码
@@ -184,6 +198,8 @@ class CreateDatasourceCloudRequest extends AbstractModel
      * @param string $DataOriginProjectId 第三方项目id
      * @param string $DataOriginDatasourceId 第三方数据源id
      * @param string $ClusterId 集群id
+     * @param string $Schema 数据库schema
+     * @param string $DbVersion 数据库版本
      */
     function __construct()
     {
@@ -276,6 +292,14 @@ class CreateDatasourceCloudRequest extends AbstractModel
 
         if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
             $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("Schema",$param) and $param["Schema"] !== null) {
+            $this->Schema = $param["Schema"];
+        }
+
+        if (array_key_exists("DbVersion",$param) and $param["DbVersion"] !== null) {
+            $this->DbVersion = $param["DbVersion"];
         }
     }
 }

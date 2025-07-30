@@ -27,9 +27,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDate() 获取文件存储时间，时间格式：2016-03-17 02:10:37
  * @method void setDate(string $Date) 设置文件存储时间，时间格式：2016-03-17 02:10:37
  * @method string getIntranetUrl() 获取下载地址
+说明：此下载地址和参数 InternetUrl 的下载地址一样。
  * @method void setIntranetUrl(string $IntranetUrl) 设置下载地址
+说明：此下载地址和参数 InternetUrl 的下载地址一样。
  * @method string getInternetUrl() 获取下载地址
+说明：此下载地址和参数 IntranetUrl 的下载地址一样。
  * @method void setInternetUrl(string $InternetUrl) 设置下载地址
+说明：此下载地址和参数 IntranetUrl 的下载地址一样。
  * @method string getType() 获取日志具体类型，可能的值有：binlog - 二进制日志
  * @method void setType(string $Type) 设置日志具体类型，可能的值有：binlog - 二进制日志
  * @method string getBinlogStartTime() 获取binlog 文件起始时间
@@ -66,11 +70,13 @@ class BinlogInfo extends AbstractModel
 
     /**
      * @var string 下载地址
+说明：此下载地址和参数 InternetUrl 的下载地址一样。
      */
     public $IntranetUrl;
 
     /**
      * @var string 下载地址
+说明：此下载地址和参数 IntranetUrl 的下载地址一样。
      */
     public $InternetUrl;
 
@@ -111,6 +117,7 @@ class BinlogInfo extends AbstractModel
 
     /**
      * @var string 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+     * @deprecated
      */
     public $InstanceId;
 
@@ -119,7 +126,9 @@ class BinlogInfo extends AbstractModel
      * @param integer $Size 备份文件大小，单位：Byte
      * @param string $Date 文件存储时间，时间格式：2016-03-17 02:10:37
      * @param string $IntranetUrl 下载地址
+说明：此下载地址和参数 InternetUrl 的下载地址一样。
      * @param string $InternetUrl 下载地址
+说明：此下载地址和参数 IntranetUrl 的下载地址一样。
      * @param string $Type 日志具体类型，可能的值有：binlog - 二进制日志
      * @param string $BinlogStartTime binlog 文件起始时间
      * @param string $BinlogFinishTime binlog 文件截止时间

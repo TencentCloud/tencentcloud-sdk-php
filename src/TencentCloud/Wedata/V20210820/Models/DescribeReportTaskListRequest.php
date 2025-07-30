@@ -24,8 +24,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageNum(integer $PageNum) 设置页码
  * @method integer getPageSize() 获取每页条数
  * @method void setPageSize(integer $PageSize) 设置每页条数
- * @method string getTenantId() 获取租户id
- * @method void setTenantId(string $TenantId) 设置租户id
  * @method string getProjectId() 获取项目id
  * @method void setProjectId(string $ProjectId) 设置项目id
  * @method string getTaskId() 获取任务id
@@ -56,11 +54,6 @@ class DescribeReportTaskListRequest extends AbstractModel
      * @var integer 每页条数
      */
     public $PageSize;
-
-    /**
-     * @var string 租户id
-     */
-    public $TenantId;
 
     /**
      * @var string 项目id
@@ -110,7 +103,6 @@ class DescribeReportTaskListRequest extends AbstractModel
     /**
      * @param integer $PageNum 页码
      * @param integer $PageSize 每页条数
-     * @param string $TenantId 租户id
      * @param string $ProjectId 项目id
      * @param string $TaskId 任务id
      * @param string $InstanceId 实例id
@@ -140,10 +132,6 @@ class DescribeReportTaskListRequest extends AbstractModel
 
         if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
             $this->PageSize = $param["PageSize"];
-        }
-
-        if (array_key_exists("TenantId",$param) and $param["TenantId"] !== null) {
-            $this->TenantId = $param["TenantId"];
         }
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {

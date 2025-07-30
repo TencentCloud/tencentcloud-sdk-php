@@ -29,10 +29,9 @@ use TencentCloud\Common\AbstractModel;
 - topicId：按照【日志主题】进行过滤。
     类型：String。
     必选：否
-- taskStatus
-按照【任务运行状态】进行过滤。 支持`0`：停止，`1`：运行中，`2`：异常
-类型：String
-必选：否
+- taskStatus：按照【任务运行状态】进行过滤。 支持`0`：停止，`1`：运行中，`2`：异常
+    类型：String
+    必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为10。
  * @method void setFilters(array $Filters) 设置- shipperName：按照【投递规则名称】进行过滤。
@@ -44,10 +43,9 @@ use TencentCloud\Common\AbstractModel;
 - topicId：按照【日志主题】进行过滤。
     类型：String。
     必选：否
-- taskStatus
-按照【任务运行状态】进行过滤。 支持`0`：停止，`1`：运行中，`2`：异常
-类型：String
-必选：否
+- taskStatus：按照【任务运行状态】进行过滤。 支持`0`：停止，`1`：运行中，`2`：异常
+    类型：String
+    必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为10。
  * @method integer getOffset() 获取分页的偏移量，默认值为0
@@ -69,10 +67,9 @@ class DescribeShippersRequest extends AbstractModel
 - topicId：按照【日志主题】进行过滤。
     类型：String。
     必选：否
-- taskStatus
-按照【任务运行状态】进行过滤。 支持`0`：停止，`1`：运行中，`2`：异常
-类型：String
-必选：否
+- taskStatus：按照【任务运行状态】进行过滤。 支持`0`：停止，`1`：运行中，`2`：异常
+    类型：String
+    必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为10。
      */
@@ -103,10 +100,9 @@ class DescribeShippersRequest extends AbstractModel
 - topicId：按照【日志主题】进行过滤。
     类型：String。
     必选：否
-- taskStatus
-按照【任务运行状态】进行过滤。 支持`0`：停止，`1`：运行中，`2`：异常
-类型：String
-必选：否
+- taskStatus：按照【任务运行状态】进行过滤。 支持`0`：停止，`1`：运行中，`2`：异常
+    类型：String
+    必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为10。
      * @param integer $Offset 分页的偏移量，默认值为0

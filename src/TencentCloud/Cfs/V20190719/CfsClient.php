@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Cfs\V20190719\Models as Models;
 
 /**
+ * @method Models\ApplyPathLifecyclePolicyResponse ApplyPathLifecyclePolicy(Models\ApplyPathLifecyclePolicyRequest $req) 配置生命周期策略关联到的目录列表
  * @method Models\BindAutoSnapshotPolicyResponse BindAutoSnapshotPolicy(Models\BindAutoSnapshotPolicyRequest $req) 文件系统绑定快照策略，可以同时绑定多个fs，一个fs 只能跟一个策略绑定
  * @method Models\CreateAccessCertResponse CreateAccessCert(Models\CreateAccessCertRequest $req) 创建用于访问文件系统的凭证
  * @method Models\CreateAutoSnapshotPolicyResponse CreateAutoSnapshotPolicy(Models\CreateAutoSnapshotPolicyRequest $req) 创建定期快照策略
@@ -30,12 +31,18 @@ use TencentCloud\Cfs\V20190719\Models as Models;
  * @method Models\CreateCfsPGroupResponse CreateCfsPGroup(Models\CreateCfsPGroupRequest $req) 本接口（CreateCfsPGroup）用于创建权限组
  * @method Models\CreateCfsRuleResponse CreateCfsRule(Models\CreateCfsRuleRequest $req) 本接口（CreateCfsRule）用于创建权限组规则。
  * @method Models\CreateCfsSnapshotResponse CreateCfsSnapshot(Models\CreateCfsSnapshotRequest $req) 创建文件系统快照
+ * @method Models\CreateDataFlowResponse CreateDataFlow(Models\CreateDataFlowRequest $req) 创建数据流动接口
+ * @method Models\CreateLifecycleDataTaskResponse CreateLifecycleDataTask(Models\CreateLifecycleDataTaskRequest $req) 支持主动沉降/预热接口
+ * @method Models\CreateLifecyclePolicyResponse CreateLifecyclePolicy(Models\CreateLifecyclePolicyRequest $req) 创建文件存储生命周期策略
+ * @method Models\CreateLifecyclePolicyDownloadTaskResponse CreateLifecyclePolicyDownloadTask(Models\CreateLifecyclePolicyDownloadTaskRequest $req) 下载生命周期任务中文件列表
  * @method Models\CreateMigrationTaskResponse CreateMigrationTask(Models\CreateMigrationTaskRequest $req) 用于创建迁移任务。
  * @method Models\DeleteAutoSnapshotPolicyResponse DeleteAutoSnapshotPolicy(Models\DeleteAutoSnapshotPolicyRequest $req) 删除快照定期策略
  * @method Models\DeleteCfsFileSystemResponse DeleteCfsFileSystem(Models\DeleteCfsFileSystemRequest $req) 用于删除文件系统
  * @method Models\DeleteCfsPGroupResponse DeleteCfsPGroup(Models\DeleteCfsPGroupRequest $req) 本接口（DeleteCfsPGroup）用于删除权限组，只有未绑定文件系统的权限组才能够被此接口删除。
  * @method Models\DeleteCfsRuleResponse DeleteCfsRule(Models\DeleteCfsRuleRequest $req) 本接口（DeleteCfsRule）用于删除权限组规则。
  * @method Models\DeleteCfsSnapshotResponse DeleteCfsSnapshot(Models\DeleteCfsSnapshotRequest $req) 删除文件系统快照
+ * @method Models\DeleteDataFlowResponse DeleteDataFlow(Models\DeleteDataFlowRequest $req) 删除数据流动
+ * @method Models\DeleteLifecyclePolicyResponse DeleteLifecyclePolicy(Models\DeleteLifecyclePolicyRequest $req) 删除生命周期管理策略
  * @method Models\DeleteMigrationTaskResponse DeleteMigrationTask(Models\DeleteMigrationTaskRequest $req) 用于删除迁移任务。不支持删除等待中、创建中、运行中、取消中、终止中状态的任务。
  * @method Models\DeleteMountTargetResponse DeleteMountTarget(Models\DeleteMountTargetRequest $req) 本接口（DeleteMountTarget）用于删除挂载点
 说明：2022年6月1日之后创建的CFS文件系统删除时无需单独调用删除挂载点操作，此API仅适用老版本的CFS实例。
@@ -50,15 +57,21 @@ use TencentCloud\Cfs\V20190719\Models as Models;
  * @method Models\DescribeCfsServiceStatusResponse DescribeCfsServiceStatus(Models\DescribeCfsServiceStatusRequest $req) 本接口（DescribeCfsServiceStatus）用于查询用户使用CFS的服务状态。
  * @method Models\DescribeCfsSnapshotOverviewResponse DescribeCfsSnapshotOverview(Models\DescribeCfsSnapshotOverviewRequest $req) 文件系统快照概览
  * @method Models\DescribeCfsSnapshotsResponse DescribeCfsSnapshots(Models\DescribeCfsSnapshotsRequest $req) 查询文件系统快照列表
+ * @method Models\DescribeDataFlowResponse DescribeDataFlow(Models\DescribeDataFlowRequest $req) 查询数据流动信息接口
+ * @method Models\DescribeLifecycleDataTaskResponse DescribeLifecycleDataTask(Models\DescribeLifecycleDataTaskRequest $req) 查询生命周期任务的接口
+ * @method Models\DescribeLifecyclePoliciesResponse DescribeLifecyclePolicies(Models\DescribeLifecyclePoliciesRequest $req) 查询生命周期管理策略
  * @method Models\DescribeMigrationTasksResponse DescribeMigrationTasks(Models\DescribeMigrationTasksRequest $req) 用于获取迁移任务列表。
 此接口需提交工单，开启白名单之后才能使用。
  * @method Models\DescribeMountTargetsResponse DescribeMountTargets(Models\DescribeMountTargetsRequest $req) 本接口（DescribeMountTargets）用于查询文件系统挂载点信息
  * @method Models\DescribeSnapshotOperationLogsResponse DescribeSnapshotOperationLogs(Models\DescribeSnapshotOperationLogsRequest $req) 查询快照操作日志
  * @method Models\DescribeUserQuotaResponse DescribeUserQuota(Models\DescribeUserQuotaRequest $req) 查询文件系统配额（仅部分Turbo实例能使用，若需要调用请提交工单与我们联系）
+ * @method Models\ModifyDataFlowResponse ModifyDataFlow(Models\ModifyDataFlowRequest $req) 修改数据流动相关参数
  * @method Models\ModifyFileSystemAutoScaleUpRuleResponse ModifyFileSystemAutoScaleUpRule(Models\ModifyFileSystemAutoScaleUpRuleRequest $req) 用来设置文件系统扩容策略，该接口只支持turbo文件系统
+ * @method Models\ModifyLifecyclePolicyResponse ModifyLifecyclePolicy(Models\ModifyLifecyclePolicyRequest $req) 更新文件存储生命周期策略
  * @method Models\ScaleUpFileSystemResponse ScaleUpFileSystem(Models\ScaleUpFileSystemRequest $req) 该接口用于对turbo 文件系统扩容使用,该接口只支持扩容不支持缩容。turbo标准型扩容步长是10240GIB，turbo性能型扩容步长是5120GIB
  * @method Models\SetUserQuotaResponse SetUserQuota(Models\SetUserQuotaRequest $req) 设置文件系统配额，提供UID/GID的配额设置的接口（仅部分Turbo实例能使用，若需要调用请提交工单与我们联系）
  * @method Models\SignUpCfsServiceResponse SignUpCfsService(Models\SignUpCfsServiceRequest $req) 本接口（SignUpCfsService）用于开通CFS服务。
+ * @method Models\StopLifecycleDataTaskResponse StopLifecycleDataTask(Models\StopLifecycleDataTaskRequest $req) 终止生命周期任务的接口
  * @method Models\StopMigrationTaskResponse StopMigrationTask(Models\StopMigrationTaskRequest $req) 用于终止迁移任务，可以终止等待中、运行中状态的任务。
  * @method Models\UnbindAutoSnapshotPolicyResponse UnbindAutoSnapshotPolicy(Models\UnbindAutoSnapshotPolicyRequest $req) 解除文件系统绑定的快照策略
  * @method Models\UpdateAutoSnapshotPolicyResponse UpdateAutoSnapshotPolicy(Models\UpdateAutoSnapshotPolicyRequest $req) 更新定期自动快照策略

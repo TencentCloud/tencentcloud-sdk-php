@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBackups请求参数结构体
  *
- * @method string getInstanceId() 获取实例ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
- * @method void setInstanceId(string $InstanceId) 设置实例ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+ * @method string getInstanceId() 获取实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
  * @method integer getOffset() 获取偏移量，最小值为0。
  * @method void setOffset(integer $Offset) 设置偏移量，最小值为0。
- * @method integer getLimit() 获取分页大小，默认值为20，最小值为1，最大值为100。
- * @method void setLimit(integer $Limit) 设置分页大小，默认值为20，最小值为1，最大值为100。
+ * @method integer getLimit() 获取分页大小，默认值为20，最小值为1，最大值为1000。
+ * @method void setLimit(integer $Limit) 设置分页大小，默认值为20，最小值为1，最大值为1000。
  */
 class DescribeBackupsRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+     * @var string 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
      */
     public $InstanceId;
 
@@ -40,14 +40,14 @@ class DescribeBackupsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 分页大小，默认值为20，最小值为1，最大值为100。
+     * @var integer 分页大小，默认值为20，最小值为1，最大值为1000。
      */
     public $Limit;
 
     /**
-     * @param string $InstanceId 实例ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+     * @param string $InstanceId 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
      * @param integer $Offset 偏移量，最小值为0。
-     * @param integer $Limit 分页大小，默认值为20，最小值为1，最大值为100。
+     * @param integer $Limit 分页大小，默认值为20，最小值为1，最大值为1000。
      */
     function __construct()
     {

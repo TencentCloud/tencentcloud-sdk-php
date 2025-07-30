@@ -20,10 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyShipper请求参数结构体
  *
- * @method string getShipperId() 获取投递规则ID
- * @method void setShipperId(string $ShipperId) 设置投递规则ID
- * @method string getBucket() 获取COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。
- * @method void setBucket(string $Bucket) 设置COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。
+ * @method string getShipperId() 获取投递规则Id。
+
+- 通过 [获取投递任务列表](https://cloud.tencent.com/document/product/614/58745)获取ShipperId。
+ * @method void setShipperId(string $ShipperId) 设置投递规则Id。
+
+- 通过 [获取投递任务列表](https://cloud.tencent.com/document/product/614/58745)获取ShipperId。
+ * @method string getBucket() 获取COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。	
+
+- 通过[GET Service（List Buckets）](https://cloud.tencent.com/document/product/436/8291)获取COS存储桶。
+ * @method void setBucket(string $Bucket) 设置COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。	
+
+- 通过[GET Service（List Buckets）](https://cloud.tencent.com/document/product/436/8291)获取COS存储桶。
  * @method string getPrefix() 获取投递规则投递的新的目录前缀。
 - 仅支持0-9A-Za-z-_/
 - 最大支持256个字符
@@ -48,34 +56,42 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContent(ContentInfo $Content) 设置投递日志的内容格式配置
  * @method integer getFilenameMode() 获取投递文件命名配置，0：随机数命名，1：投递时间命名。
  * @method void setFilenameMode(integer $FilenameMode) 设置投递文件命名配置，0：随机数命名，1：投递时间命名。
- * @method string getStorageType() 获取cos桶存储类型。支持：STANDARD_IA、ARCHIVE、DEEP_ARCHIVE、STANDARD、MAZ_STANDARD、MAZ_STANDARD_IA、INTELLIGENT_TIERING。
+ * @method string getStorageType() 获取对象存储类型，默认值为 STANDARD。枚举值请参见[ 存储类型概述](https://cloud.tencent.com/document/product/436/33417) 文档。
+参考值有：
 
-1. STANDARD_IA：低频存储；
-2. ARCHIVE：归档存储；
-3. DEEP_ARCHIVE：深度归档存储；
-4. STANDARD：标准存储；
-5. MAZ_STANDARD：标准存储（多 AZ）；
-6. MAZ_STANDARD_IA：低频存储（多 AZ）；
-7. INTELLIGENT_TIERING：智能分层存储。
- * @method void setStorageType(string $StorageType) 设置cos桶存储类型。支持：STANDARD_IA、ARCHIVE、DEEP_ARCHIVE、STANDARD、MAZ_STANDARD、MAZ_STANDARD_IA、INTELLIGENT_TIERING。
+- STANDARD：标准存储
+- STANDARD_IA：低频存储
+- ARCHIVE：归档存储
+- DEEP_ARCHIVE：深度归档存储
+- MAZ_STANDARD：标准存储（多 AZ）
+- MAZ_STANDARD_IA：低频存储（多 AZ）
+- INTELLIGENT_TIERING：智能分层存储
+- MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）
+ * @method void setStorageType(string $StorageType) 设置对象存储类型，默认值为 STANDARD。枚举值请参见[ 存储类型概述](https://cloud.tencent.com/document/product/436/33417) 文档。
+参考值有：
 
-1. STANDARD_IA：低频存储；
-2. ARCHIVE：归档存储；
-3. DEEP_ARCHIVE：深度归档存储；
-4. STANDARD：标准存储；
-5. MAZ_STANDARD：标准存储（多 AZ）；
-6. MAZ_STANDARD_IA：低频存储（多 AZ）；
-7. INTELLIGENT_TIERING：智能分层存储。
+- STANDARD：标准存储
+- STANDARD_IA：低频存储
+- ARCHIVE：归档存储
+- DEEP_ARCHIVE：深度归档存储
+- MAZ_STANDARD：标准存储（多 AZ）
+- MAZ_STANDARD_IA：低频存储（多 AZ）
+- INTELLIGENT_TIERING：智能分层存储
+- MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）
  */
 class ModifyShipperRequest extends AbstractModel
 {
     /**
-     * @var string 投递规则ID
+     * @var string 投递规则Id。
+
+- 通过 [获取投递任务列表](https://cloud.tencent.com/document/product/614/58745)获取ShipperId。
      */
     public $ShipperId;
 
     /**
-     * @var string COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。
+     * @var string COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。	
+
+- 通过[GET Service（List Buckets）](https://cloud.tencent.com/document/product/436/8291)获取COS存储桶。
      */
     public $Bucket;
 
@@ -132,21 +148,27 @@ class ModifyShipperRequest extends AbstractModel
     public $FilenameMode;
 
     /**
-     * @var string cos桶存储类型。支持：STANDARD_IA、ARCHIVE、DEEP_ARCHIVE、STANDARD、MAZ_STANDARD、MAZ_STANDARD_IA、INTELLIGENT_TIERING。
+     * @var string 对象存储类型，默认值为 STANDARD。枚举值请参见[ 存储类型概述](https://cloud.tencent.com/document/product/436/33417) 文档。
+参考值有：
 
-1. STANDARD_IA：低频存储；
-2. ARCHIVE：归档存储；
-3. DEEP_ARCHIVE：深度归档存储；
-4. STANDARD：标准存储；
-5. MAZ_STANDARD：标准存储（多 AZ）；
-6. MAZ_STANDARD_IA：低频存储（多 AZ）；
-7. INTELLIGENT_TIERING：智能分层存储。
+- STANDARD：标准存储
+- STANDARD_IA：低频存储
+- ARCHIVE：归档存储
+- DEEP_ARCHIVE：深度归档存储
+- MAZ_STANDARD：标准存储（多 AZ）
+- MAZ_STANDARD_IA：低频存储（多 AZ）
+- INTELLIGENT_TIERING：智能分层存储
+- MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）
      */
     public $StorageType;
 
     /**
-     * @param string $ShipperId 投递规则ID
-     * @param string $Bucket COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。
+     * @param string $ShipperId 投递规则Id。
+
+- 通过 [获取投递任务列表](https://cloud.tencent.com/document/product/614/58745)获取ShipperId。
+     * @param string $Bucket COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。	
+
+- 通过[GET Service（List Buckets）](https://cloud.tencent.com/document/product/436/8291)获取COS存储桶。
      * @param string $Prefix 投递规则投递的新的目录前缀。
 - 仅支持0-9A-Za-z-_/
 - 最大支持256个字符
@@ -159,15 +181,17 @@ class ModifyShipperRequest extends AbstractModel
      * @param CompressInfo $Compress 投递日志的压缩配置
      * @param ContentInfo $Content 投递日志的内容格式配置
      * @param integer $FilenameMode 投递文件命名配置，0：随机数命名，1：投递时间命名。
-     * @param string $StorageType cos桶存储类型。支持：STANDARD_IA、ARCHIVE、DEEP_ARCHIVE、STANDARD、MAZ_STANDARD、MAZ_STANDARD_IA、INTELLIGENT_TIERING。
+     * @param string $StorageType 对象存储类型，默认值为 STANDARD。枚举值请参见[ 存储类型概述](https://cloud.tencent.com/document/product/436/33417) 文档。
+参考值有：
 
-1. STANDARD_IA：低频存储；
-2. ARCHIVE：归档存储；
-3. DEEP_ARCHIVE：深度归档存储；
-4. STANDARD：标准存储；
-5. MAZ_STANDARD：标准存储（多 AZ）；
-6. MAZ_STANDARD_IA：低频存储（多 AZ）；
-7. INTELLIGENT_TIERING：智能分层存储。
+- STANDARD：标准存储
+- STANDARD_IA：低频存储
+- ARCHIVE：归档存储
+- DEEP_ARCHIVE：深度归档存储
+- MAZ_STANDARD：标准存储（多 AZ）
+- MAZ_STANDARD_IA：低频存储（多 AZ）
+- INTELLIGENT_TIERING：智能分层存储
+- MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）
      */
     function __construct()
     {

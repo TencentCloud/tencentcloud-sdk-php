@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceID(string $InstanceID) 设置机器实例ID
  * @method integer getStatus() 获取机器状态，0:异常，1:正常
  * @method void setStatus(integer $Status) 设置机器状态，0:异常，1:正常
- * @method string getOfflineTime() 获取机器离线时间，空为正常，异常返回具体时间
- * @method void setOfflineTime(string $OfflineTime) 设置机器离线时间，空为正常，异常返回具体时间
+ * @method string getOfflineTime() 获取机器离线时间，空为正常，异常返回具体时间。时间格式：YYYY-MM-DD HH:mm:ss
+ * @method void setOfflineTime(string $OfflineTime) 设置机器离线时间，空为正常，异常返回具体时间。时间格式：YYYY-MM-DD HH:mm:ss
  * @method integer getAutoUpdate() 获取机器是否开启自动升级。0:关闭，1:开启
  * @method void setAutoUpdate(integer $AutoUpdate) 设置机器是否开启自动升级。0:关闭，1:开启
  * @method string getVersion() 获取机器当前版本号。
@@ -61,7 +61,7 @@ class MachineInfo extends AbstractModel
     public $Status;
 
     /**
-     * @var string 机器离线时间，空为正常，异常返回具体时间
+     * @var string 机器离线时间，空为正常，异常返回具体时间。时间格式：YYYY-MM-DD HH:mm:ss
      */
     public $OfflineTime;
 
@@ -96,7 +96,7 @@ class MachineInfo extends AbstractModel
      * @param string $Ip 机器的IP
      * @param string $InstanceID 机器实例ID
      * @param integer $Status 机器状态，0:异常，1:正常
-     * @param string $OfflineTime 机器离线时间，空为正常，异常返回具体时间
+     * @param string $OfflineTime 机器离线时间，空为正常，异常返回具体时间。时间格式：YYYY-MM-DD HH:mm:ss
      * @param integer $AutoUpdate 机器是否开启自动升级。0:关闭，1:开启
      * @param string $Version 机器当前版本号。
      * @param integer $UpdateStatus 机器升级功能状态。 0：升级成功；1：升级中；-1：升级失败。

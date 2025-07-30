@@ -20,19 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyLabel请求参数结构体
  *
+ * @method string getModule() 获取模块，包括：enterprise：企业架构，domain：主域名，sub_domain：子域名，asset：IP资产，port：端口服务，http：HTTP资产，vul：漏洞信息，app：APP，wechat_applet：微信小程序，wechat_official_account：微信公众号，github：Github信息泄露，manage：管理后台暴露，config：目录爆破，dark_web：暗网泄露，net_disk：文库网盘泄露，supply_chain：供应链，weak_password：弱口令，sensitive_info：敏感信息泄露
+ * @method void setModule(string $Module) 设置模块，包括：enterprise：企业架构，domain：主域名，sub_domain：子域名，asset：IP资产，port：端口服务，http：HTTP资产，vul：漏洞信息，app：APP，wechat_applet：微信小程序，wechat_official_account：微信公众号，github：Github信息泄露，manage：管理后台暴露，config：目录爆破，dark_web：暗网泄露，net_disk：文库网盘泄露，supply_chain：供应链，weak_password：弱口令，sensitive_info：敏感信息泄露
+ * @method array getCustomerIdList() 获取企业ID列表，可多选
+ * @method void setCustomerIdList(array $CustomerIdList) 设置企业ID列表，可多选
  * @method integer getId() 获取资产或风险主键ID
  * @method void setId(integer $Id) 设置资产或风险主键ID
  * @method integer getCustomerId() 获取企业ID，在企业管理页面查看
  * @method void setCustomerId(integer $CustomerId) 设置企业ID，在企业管理页面查看
- * @method string getModule() 获取模块，包括：enterprise：企业架构，domain：主域名，sub_domain：子域名，asset：IP资产，port：端口服务，http：HTTP资产，vul：漏洞信息，app：APP，wechat_applet：微信小程序，wechat_official_account：微信公众号，github：Github信息泄露，manage：管理后台暴露，config：目录爆破，dark_web：暗网泄露，net_disk：文库网盘泄露，supply_chain：供应链，weak_password：弱口令，sensitive_info：敏感信息泄露
- * @method void setModule(string $Module) 设置模块，包括：enterprise：企业架构，domain：主域名，sub_domain：子域名，asset：IP资产，port：端口服务，http：HTTP资产，vul：漏洞信息，app：APP，wechat_applet：微信小程序，wechat_official_account：微信公众号，github：Github信息泄露，manage：管理后台暴露，config：目录爆破，dark_web：暗网泄露，net_disk：文库网盘泄露，supply_chain：供应链，weak_password：弱口令，sensitive_info：敏感信息泄露
  * @method boolean getIsAggregation() 获取是否聚合数据
  * @method void setIsAggregation(boolean $IsAggregation) 设置是否聚合数据
  * @method string getLabels() 获取标签详情
  * @method void setLabels(string $Labels) 设置标签详情
+ * @method array getIds() 获取资产或风险主键ID列表
+ * @method void setIds(array $Ids) 设置资产或风险主键ID列表
  */
 class ModifyLabelRequest extends AbstractModel
 {
+    /**
+     * @var string 模块，包括：enterprise：企业架构，domain：主域名，sub_domain：子域名，asset：IP资产，port：端口服务，http：HTTP资产，vul：漏洞信息，app：APP，wechat_applet：微信小程序，wechat_official_account：微信公众号，github：Github信息泄露，manage：管理后台暴露，config：目录爆破，dark_web：暗网泄露，net_disk：文库网盘泄露，supply_chain：供应链，weak_password：弱口令，sensitive_info：敏感信息泄露
+     */
+    public $Module;
+
+    /**
+     * @var array 企业ID列表，可多选
+     */
+    public $CustomerIdList;
+
     /**
      * @var integer 资产或风险主键ID
      */
@@ -42,11 +56,6 @@ class ModifyLabelRequest extends AbstractModel
      * @var integer 企业ID，在企业管理页面查看
      */
     public $CustomerId;
-
-    /**
-     * @var string 模块，包括：enterprise：企业架构，domain：主域名，sub_domain：子域名，asset：IP资产，port：端口服务，http：HTTP资产，vul：漏洞信息，app：APP，wechat_applet：微信小程序，wechat_official_account：微信公众号，github：Github信息泄露，manage：管理后台暴露，config：目录爆破，dark_web：暗网泄露，net_disk：文库网盘泄露，supply_chain：供应链，weak_password：弱口令，sensitive_info：敏感信息泄露
-     */
-    public $Module;
 
     /**
      * @var boolean 是否聚合数据
@@ -59,11 +68,18 @@ class ModifyLabelRequest extends AbstractModel
     public $Labels;
 
     /**
+     * @var array 资产或风险主键ID列表
+     */
+    public $Ids;
+
+    /**
+     * @param string $Module 模块，包括：enterprise：企业架构，domain：主域名，sub_domain：子域名，asset：IP资产，port：端口服务，http：HTTP资产，vul：漏洞信息，app：APP，wechat_applet：微信小程序，wechat_official_account：微信公众号，github：Github信息泄露，manage：管理后台暴露，config：目录爆破，dark_web：暗网泄露，net_disk：文库网盘泄露，supply_chain：供应链，weak_password：弱口令，sensitive_info：敏感信息泄露
+     * @param array $CustomerIdList 企业ID列表，可多选
      * @param integer $Id 资产或风险主键ID
      * @param integer $CustomerId 企业ID，在企业管理页面查看
-     * @param string $Module 模块，包括：enterprise：企业架构，domain：主域名，sub_domain：子域名，asset：IP资产，port：端口服务，http：HTTP资产，vul：漏洞信息，app：APP，wechat_applet：微信小程序，wechat_official_account：微信公众号，github：Github信息泄露，manage：管理后台暴露，config：目录爆破，dark_web：暗网泄露，net_disk：文库网盘泄露，supply_chain：供应链，weak_password：弱口令，sensitive_info：敏感信息泄露
      * @param boolean $IsAggregation 是否聚合数据
      * @param string $Labels 标签详情
+     * @param array $Ids 资产或风险主键ID列表
      */
     function __construct()
     {
@@ -78,6 +94,14 @@ class ModifyLabelRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Module",$param) and $param["Module"] !== null) {
+            $this->Module = $param["Module"];
+        }
+
+        if (array_key_exists("CustomerIdList",$param) and $param["CustomerIdList"] !== null) {
+            $this->CustomerIdList = $param["CustomerIdList"];
+        }
+
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
         }
@@ -86,16 +110,16 @@ class ModifyLabelRequest extends AbstractModel
             $this->CustomerId = $param["CustomerId"];
         }
 
-        if (array_key_exists("Module",$param) and $param["Module"] !== null) {
-            $this->Module = $param["Module"];
-        }
-
         if (array_key_exists("IsAggregation",$param) and $param["IsAggregation"] !== null) {
             $this->IsAggregation = $param["IsAggregation"];
         }
 
         if (array_key_exists("Labels",$param) and $param["Labels"] !== null) {
             $this->Labels = $param["Labels"];
+        }
+
+        if (array_key_exists("Ids",$param) and $param["Ids"] !== null) {
+            $this->Ids = $param["Ids"];
         }
     }
 }

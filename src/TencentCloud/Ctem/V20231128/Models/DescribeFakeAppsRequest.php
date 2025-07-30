@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFakeApps请求参数结构体
  *
+ * @method array getCustomerIdList() 获取企业ID列表，可多选
+ * @method void setCustomerIdList(array $CustomerIdList) 设置企业ID列表，可多选
  * @method boolean getIsNew() 获取是否新增数据
  * @method void setIsNew(boolean $IsNew) 设置是否新增数据
  * @method integer getCustomerId() 获取企业ID
@@ -47,6 +49,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class DescribeFakeAppsRequest extends AbstractModel
 {
+    /**
+     * @var array 企业ID列表，可多选
+     */
+    public $CustomerIdList;
+
     /**
      * @var boolean 是否新增数据
      */
@@ -108,6 +115,7 @@ class DescribeFakeAppsRequest extends AbstractModel
     public $Ignored;
 
     /**
+     * @param array $CustomerIdList 企业ID列表，可多选
      * @param boolean $IsNew 是否新增数据
      * @param integer $CustomerId 企业ID
      * @param integer $Limit 分页大小
@@ -134,6 +142,10 @@ class DescribeFakeAppsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("CustomerIdList",$param) and $param["CustomerIdList"] !== null) {
+            $this->CustomerIdList = $param["CustomerIdList"];
+        }
+
         if (array_key_exists("IsNew",$param) and $param["IsNew"] !== null) {
             $this->IsNew = $param["IsNew"];
         }

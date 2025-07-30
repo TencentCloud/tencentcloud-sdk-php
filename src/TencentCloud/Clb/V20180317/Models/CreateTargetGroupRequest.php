@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetGroupInstances(array $TargetGroupInstances) 设置目标组绑定的后端服务器，单次最多支持50个。
  * @method string getType() 获取目标组类型，当前支持v1(旧版目标组), v2(新版目标组), 默认为v1(旧版目标组)。
  * @method void setType(string $Type) 设置目标组类型，当前支持v1(旧版目标组), v2(新版目标组), 默认为v1(旧版目标组)。
- * @method string getProtocol() 获取目标组后端转发协议。v2新版目标组该项必填。目前支持tcp、udp。
- * @method void setProtocol(string $Protocol) 设置目标组后端转发协议。v2新版目标组该项必填。目前支持tcp、udp。
+ * @method string getProtocol() 获取目标组后端转发协议。v2新版目标组该项必填。目前支持TCP、UDP、HTTP、HTTPS、GRPC。
+ * @method void setProtocol(string $Protocol) 设置目标组后端转发协议。v2新版目标组该项必填。目前支持TCP、UDP、HTTP、HTTPS、GRPC。
  * @method array getTags() 获取标签。
  * @method void setTags(array $Tags) 设置标签。
  * @method integer getWeight() 获取后端服务默认权重。
@@ -48,12 +48,12 @@ v1 目标组类型不支持设置 Weight 参数。
     <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li>
 </ul>
 v1 目标组类型不支持设置 Weight 参数。
- * @method boolean getFullListenSwitch() 获取全监听目标组标识，为true表示是全监听目标组，false表示不是全监听目标组。
- * @method void setFullListenSwitch(boolean $FullListenSwitch) 设置全监听目标组标识，为true表示是全监听目标组，false表示不是全监听目标组。
+ * @method boolean getFullListenSwitch() 获取全监听目标组标识，true表示是全监听目标组，false表示不是全监听目标组。仅V2新版类型目标组支持该参数。
+ * @method void setFullListenSwitch(boolean $FullListenSwitch) 设置全监听目标组标识，true表示是全监听目标组，false表示不是全监听目标组。仅V2新版类型目标组支持该参数。
  * @method boolean getKeepaliveEnable() 获取是否开启长连接，此参数仅适用于HTTP/HTTPS目标组，0:关闭；1:开启， 默认关闭。
  * @method void setKeepaliveEnable(boolean $KeepaliveEnable) 设置是否开启长连接，此参数仅适用于HTTP/HTTPS目标组，0:关闭；1:开启， 默认关闭。
- * @method integer getSessionExpireTime() 获取会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。TCP/UDP目标组不支持该参数。
- * @method void setSessionExpireTime(integer $SessionExpireTime) 设置会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。TCP/UDP目标组不支持该参数。
+ * @method integer getSessionExpireTime() 获取会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。仅V2新版且后端转发协议为HTTP/HTTPS/GRPC目标组支持该参数。
+ * @method void setSessionExpireTime(integer $SessionExpireTime) 设置会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。仅V2新版且后端转发协议为HTTP/HTTPS/GRPC目标组支持该参数。
  */
 class CreateTargetGroupRequest extends AbstractModel
 {
@@ -84,7 +84,7 @@ class CreateTargetGroupRequest extends AbstractModel
     public $Type;
 
     /**
-     * @var string 目标组后端转发协议。v2新版目标组该项必填。目前支持tcp、udp。
+     * @var string 目标组后端转发协议。v2新版目标组该项必填。目前支持TCP、UDP、HTTP、HTTPS、GRPC。
      */
     public $Protocol;
 
@@ -104,7 +104,7 @@ v1 目标组类型不支持设置 Weight 参数。
     public $Weight;
 
     /**
-     * @var boolean 全监听目标组标识，为true表示是全监听目标组，false表示不是全监听目标组。
+     * @var boolean 全监听目标组标识，true表示是全监听目标组，false表示不是全监听目标组。仅V2新版类型目标组支持该参数。
      */
     public $FullListenSwitch;
 
@@ -114,7 +114,7 @@ v1 目标组类型不支持设置 Weight 参数。
     public $KeepaliveEnable;
 
     /**
-     * @var integer 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。TCP/UDP目标组不支持该参数。
+     * @var integer 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。仅V2新版且后端转发协议为HTTP/HTTPS/GRPC目标组支持该参数。
      */
     public $SessionExpireTime;
 
@@ -125,7 +125,7 @@ v1 目标组类型不支持设置 Weight 参数。
 
      * @param array $TargetGroupInstances 目标组绑定的后端服务器，单次最多支持50个。
      * @param string $Type 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), 默认为v1(旧版目标组)。
-     * @param string $Protocol 目标组后端转发协议。v2新版目标组该项必填。目前支持tcp、udp。
+     * @param string $Protocol 目标组后端转发协议。v2新版目标组该项必填。目前支持TCP、UDP、HTTP、HTTPS、GRPC。
      * @param array $Tags 标签。
      * @param integer $Weight 后端服务默认权重。
 <ul>
@@ -133,9 +133,9 @@ v1 目标组类型不支持设置 Weight 参数。
     <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li>
 </ul>
 v1 目标组类型不支持设置 Weight 参数。
-     * @param boolean $FullListenSwitch 全监听目标组标识，为true表示是全监听目标组，false表示不是全监听目标组。
+     * @param boolean $FullListenSwitch 全监听目标组标识，true表示是全监听目标组，false表示不是全监听目标组。仅V2新版类型目标组支持该参数。
      * @param boolean $KeepaliveEnable 是否开启长连接，此参数仅适用于HTTP/HTTPS目标组，0:关闭；1:开启， 默认关闭。
-     * @param integer $SessionExpireTime 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。TCP/UDP目标组不支持该参数。
+     * @param integer $SessionExpireTime 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。仅V2新版且后端转发协议为HTTP/HTTPS/GRPC目标组支持该参数。
      */
     function __construct()
     {

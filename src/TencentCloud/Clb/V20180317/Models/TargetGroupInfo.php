@@ -38,14 +38,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAssociatedRule(array $AssociatedRule) 设置关联到的规则数组。在DescribeTargetGroupList接口调用时无法获取到该参数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getProtocol() 获取后端转发协议类型，支持类型TCP， UDP。仅V2新版目标组支持返回该参数。
-
+ * @method string getProtocol() 获取目标组后端转发协议, 仅v2新版目标组返回有效值。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setProtocol(string $Protocol) 设置后端转发协议类型，支持类型TCP， UDP。仅V2新版目标组支持返回该参数。
-
+ * @method void setProtocol(string $Protocol) 设置目标组后端转发协议, 仅v2新版目标组返回有效值。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getTargetGroupType() 获取目标组类型，当前支持v1(旧版目标组), v2(新版目标组), gwlb(全局负载均衡目标组)。
- * @method void setTargetGroupType(string $TargetGroupType) 设置目标组类型，当前支持v1(旧版目标组), v2(新版目标组), gwlb(全局负载均衡目标组)。
+ * @method string getTargetGroupType() 获取目标组类型，当前支持v1(旧版目标组), v2(新版目标组)。默认为v1旧版目标组。
+ * @method void setTargetGroupType(string $TargetGroupType) 设置目标组类型，当前支持v1(旧版目标组), v2(新版目标组)。默认为v1旧版目标组。
  * @method integer getAssociatedRuleCount() 获取目标组已关联的规则数。
  * @method void setAssociatedRuleCount(integer $AssociatedRuleCount) 设置目标组已关联的规则数。
  * @method integer getRegisteredInstancesCount() 获取目标组内的实例数量。
@@ -53,9 +51,15 @@ use TencentCloud\Common\AbstractModel;
  * @method array getTag() 获取标签。
  * @method void setTag(array $Tag) 设置标签。
  * @method integer getWeight() 获取默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setWeight(integer $Weight) 设置默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。
- * @method boolean getFullListenSwitch() 获取是否全监听目标组
- * @method void setFullListenSwitch(boolean $FullListenSwitch) 设置是否全监听目标组
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getFullListenSwitch() 获取是否全监听目标组。
+ * @method void setFullListenSwitch(boolean $FullListenSwitch) 设置是否全监听目标组。
+ * @method boolean getKeepaliveEnable() 获取是否开启长连接,  仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。
+ * @method void setKeepaliveEnable(boolean $KeepaliveEnable) 设置是否开启长连接,  仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。
+ * @method integer getSessionExpireTime() 获取会话保持时间，仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。
+ * @method void setSessionExpireTime(integer $SessionExpireTime) 设置会话保持时间，仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。
  */
 class TargetGroupInfo extends AbstractModel
 {
@@ -97,14 +101,13 @@ class TargetGroupInfo extends AbstractModel
     public $AssociatedRule;
 
     /**
-     * @var string 后端转发协议类型，支持类型TCP， UDP。仅V2新版目标组支持返回该参数。
-
+     * @var string 目标组后端转发协议, 仅v2新版目标组返回有效值。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Protocol;
 
     /**
-     * @var string 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), gwlb(全局负载均衡目标组)。
+     * @var string 目标组类型，当前支持v1(旧版目标组), v2(新版目标组)。默认为v1旧版目标组。
      */
     public $TargetGroupType;
 
@@ -125,13 +128,24 @@ class TargetGroupInfo extends AbstractModel
 
     /**
      * @var integer 默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Weight;
 
     /**
-     * @var boolean 是否全监听目标组
+     * @var boolean 是否全监听目标组。
      */
     public $FullListenSwitch;
+
+    /**
+     * @var boolean 是否开启长连接,  仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。
+     */
+    public $KeepaliveEnable;
+
+    /**
+     * @var integer 会话保持时间，仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。
+     */
+    public $SessionExpireTime;
 
     /**
      * @param string $TargetGroupId 目标组ID
@@ -143,15 +157,17 @@ class TargetGroupInfo extends AbstractModel
      * @param string $UpdatedTime 目标组的修改时间
      * @param array $AssociatedRule 关联到的规则数组。在DescribeTargetGroupList接口调用时无法获取到该参数。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Protocol 后端转发协议类型，支持类型TCP， UDP。仅V2新版目标组支持返回该参数。
-
+     * @param string $Protocol 目标组后端转发协议, 仅v2新版目标组返回有效值。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $TargetGroupType 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), gwlb(全局负载均衡目标组)。
+     * @param string $TargetGroupType 目标组类型，当前支持v1(旧版目标组), v2(新版目标组)。默认为v1旧版目标组。
      * @param integer $AssociatedRuleCount 目标组已关联的规则数。
      * @param integer $RegisteredInstancesCount 目标组内的实例数量。
      * @param array $Tag 标签。
      * @param integer $Weight 默认权重。只有v2类型目标组返回该字段。当返回为NULL时， 表示未设置默认权重。
-     * @param boolean $FullListenSwitch 是否全监听目标组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $FullListenSwitch 是否全监听目标组。
+     * @param boolean $KeepaliveEnable 是否开启长连接,  仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。
+     * @param integer $SessionExpireTime 会话保持时间，仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。
      */
     function __construct()
     {
@@ -230,6 +246,14 @@ class TargetGroupInfo extends AbstractModel
 
         if (array_key_exists("FullListenSwitch",$param) and $param["FullListenSwitch"] !== null) {
             $this->FullListenSwitch = $param["FullListenSwitch"];
+        }
+
+        if (array_key_exists("KeepaliveEnable",$param) and $param["KeepaliveEnable"] !== null) {
+            $this->KeepaliveEnable = $param["KeepaliveEnable"];
+        }
+
+        if (array_key_exists("SessionExpireTime",$param) and $param["SessionExpireTime"] !== null) {
+            $this->SessionExpireTime = $param["SessionExpireTime"];
         }
     }
 }

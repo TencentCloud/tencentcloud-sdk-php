@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSlowLogData请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID。
+ * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
  * @method integer getStartTime() 获取开始时间戳。例如 1585142640。
 说明：此参数单位为秒的时间戳。
  * @method void setStartTime(integer $StartTime) 设置开始时间戳。例如 1585142640。
@@ -36,14 +36,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserNames(array $UserNames) 设置客户端 用户名 列表。
  * @method array getDataBases() 获取访问的 数据库 列表。
  * @method void setDataBases(array $DataBases) 设置访问的 数据库 列表。
- * @method string getSortBy() 获取排序字段。当前支持：Timestamp,QueryTime,LockTime,RowsExamined,RowsSent 。
- * @method void setSortBy(string $SortBy) 设置排序字段。当前支持：Timestamp,QueryTime,LockTime,RowsExamined,RowsSent 。
- * @method string getOrderBy() 获取升序还是降序排列。当前支持：ASC,DESC 。
- * @method void setOrderBy(string $OrderBy) 设置升序还是降序排列。当前支持：ASC,DESC 。
+ * @method string getSortBy() 获取排序字段，当前支持字段及含义如下，默认值为 Timestamp。
+1. Timestamp：SQL 的执行时间
+2. QueryTime：SQL 的执行时长（秒）
+3. LockTime：锁时长（秒）
+4. RowsExamined：扫描行数
+5. RowsSent：结果集行数
+ * @method void setSortBy(string $SortBy) 设置排序字段，当前支持字段及含义如下，默认值为 Timestamp。
+1. Timestamp：SQL 的执行时间
+2. QueryTime：SQL 的执行时长（秒）
+3. LockTime：锁时长（秒）
+4. RowsExamined：扫描行数
+5. RowsSent：结果集行数
+ * @method string getOrderBy() 获取升序还是降序排列。当前支持值为 ASC - 升序，DESC - 降序 ，默认值为 ASC。
+ * @method void setOrderBy(string $OrderBy) 设置升序还是降序排列。当前支持值为 ASC - 升序，DESC - 降序 ，默认值为 ASC。
  * @method integer getOffset() 获取偏移量，默认为0，最大为9999。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0，最大为9999。
- * @method integer getLimit() 获取一次性返回的记录数量，默认为100，最大为400。
- * @method void setLimit(integer $Limit) 设置一次性返回的记录数量，默认为100，最大为400。
+ * @method integer getLimit() 获取一次性返回的记录数量，默认为100，最大为800。
+ * @method void setLimit(integer $Limit) 设置一次性返回的记录数量，默认为100，最大为800。
  * @method string getInstType() 获取仅在实例为主实例或者灾备实例时生效，可选值：slave，代表拉取从机的日志。
  * @method void setInstType(string $InstType) 设置仅在实例为主实例或者灾备实例时生效，可选值：slave，代表拉取从机的日志。
  * @method string getOpResourceId() 获取节点ID
@@ -52,7 +62,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeSlowLogDataRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID。
+     * @var string 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public $InstanceId;
 
@@ -84,12 +94,17 @@ class DescribeSlowLogDataRequest extends AbstractModel
     public $DataBases;
 
     /**
-     * @var string 排序字段。当前支持：Timestamp,QueryTime,LockTime,RowsExamined,RowsSent 。
+     * @var string 排序字段，当前支持字段及含义如下，默认值为 Timestamp。
+1. Timestamp：SQL 的执行时间
+2. QueryTime：SQL 的执行时长（秒）
+3. LockTime：锁时长（秒）
+4. RowsExamined：扫描行数
+5. RowsSent：结果集行数
      */
     public $SortBy;
 
     /**
-     * @var string 升序还是降序排列。当前支持：ASC,DESC 。
+     * @var string 升序还是降序排列。当前支持值为 ASC - 升序，DESC - 降序 ，默认值为 ASC。
      */
     public $OrderBy;
 
@@ -99,7 +114,7 @@ class DescribeSlowLogDataRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 一次性返回的记录数量，默认为100，最大为400。
+     * @var integer 一次性返回的记录数量，默认为100，最大为800。
      */
     public $Limit;
 
@@ -114,7 +129,7 @@ class DescribeSlowLogDataRequest extends AbstractModel
     public $OpResourceId;
 
     /**
-     * @param string $InstanceId 实例 ID。
+     * @param string $InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      * @param integer $StartTime 开始时间戳。例如 1585142640。
 说明：此参数单位为秒的时间戳。
      * @param integer $EndTime 结束时间戳。例如 1585142640。
@@ -122,10 +137,15 @@ class DescribeSlowLogDataRequest extends AbstractModel
      * @param array $UserHosts 客户端 Host 列表。
      * @param array $UserNames 客户端 用户名 列表。
      * @param array $DataBases 访问的 数据库 列表。
-     * @param string $SortBy 排序字段。当前支持：Timestamp,QueryTime,LockTime,RowsExamined,RowsSent 。
-     * @param string $OrderBy 升序还是降序排列。当前支持：ASC,DESC 。
+     * @param string $SortBy 排序字段，当前支持字段及含义如下，默认值为 Timestamp。
+1. Timestamp：SQL 的执行时间
+2. QueryTime：SQL 的执行时长（秒）
+3. LockTime：锁时长（秒）
+4. RowsExamined：扫描行数
+5. RowsSent：结果集行数
+     * @param string $OrderBy 升序还是降序排列。当前支持值为 ASC - 升序，DESC - 降序 ，默认值为 ASC。
      * @param integer $Offset 偏移量，默认为0，最大为9999。
-     * @param integer $Limit 一次性返回的记录数量，默认为100，最大为400。
+     * @param integer $Limit 一次性返回的记录数量，默认为100，最大为800。
      * @param string $InstType 仅在实例为主实例或者灾备实例时生效，可选值：slave，代表拉取从机的日志。
      * @param string $OpResourceId 节点ID
      */

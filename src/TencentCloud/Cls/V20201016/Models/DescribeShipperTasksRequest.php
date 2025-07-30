@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeShipperTasks请求参数结构体
  *
- * @method string getShipperId() 获取投递规则ID
- * @method void setShipperId(string $ShipperId) 设置投递规则ID
+ * @method string getShipperId() 获取投递规则Id。
+
+- 通过 [获取投递任务列表](https://cloud.tencent.com/document/product/614/58745)获取ShipperId。
+ * @method void setShipperId(string $ShipperId) 设置投递规则Id。
+
+- 通过 [获取投递任务列表](https://cloud.tencent.com/document/product/614/58745)获取ShipperId。
  * @method integer getStartTime() 获取查询的开始时间戳，支持最近3天的查询， 毫秒。
 StartTime必须小于EndTime
  * @method void setStartTime(integer $StartTime) 设置查询的开始时间戳，支持最近3天的查询， 毫秒。
@@ -34,7 +38,9 @@ StartTime必须小于EndTime
 class DescribeShipperTasksRequest extends AbstractModel
 {
     /**
-     * @var string 投递规则ID
+     * @var string 投递规则Id。
+
+- 通过 [获取投递任务列表](https://cloud.tencent.com/document/product/614/58745)获取ShipperId。
      */
     public $ShipperId;
 
@@ -51,7 +57,9 @@ StartTime必须小于EndTime
     public $EndTime;
 
     /**
-     * @param string $ShipperId 投递规则ID
+     * @param string $ShipperId 投递规则Id。
+
+- 通过 [获取投递任务列表](https://cloud.tencent.com/document/product/614/58745)获取ShipperId。
      * @param integer $StartTime 查询的开始时间戳，支持最近3天的查询， 毫秒。
 StartTime必须小于EndTime
      * @param integer $EndTime 查询的结束时间戳， 毫秒。

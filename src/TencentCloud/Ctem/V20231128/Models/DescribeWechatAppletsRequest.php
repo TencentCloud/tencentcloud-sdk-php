@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeWechatApplets请求参数结构体
  *
+ * @method array getCustomerIdList() 获取企业ID列表，可多选
+ * @method void setCustomerIdList(array $CustomerIdList) 设置企业ID列表，可多选
  * @method integer getCustomerId() 获取企业ID
  * @method void setCustomerId(integer $CustomerId) 设置企业ID
  * @method boolean getIsNew() 获取是否新增数据
@@ -47,6 +49,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class DescribeWechatAppletsRequest extends AbstractModel
 {
+    /**
+     * @var array 企业ID列表，可多选
+     */
+    public $CustomerIdList;
+
     /**
      * @var integer 企业ID
      */
@@ -108,6 +115,7 @@ class DescribeWechatAppletsRequest extends AbstractModel
     public $Ignored;
 
     /**
+     * @param array $CustomerIdList 企业ID列表，可多选
      * @param integer $CustomerId 企业ID
      * @param boolean $IsNew 是否新增数据
      * @param integer $Limit 分页大小
@@ -134,6 +142,10 @@ class DescribeWechatAppletsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("CustomerIdList",$param) and $param["CustomerIdList"] !== null) {
+            $this->CustomerIdList = $param["CustomerIdList"];
+        }
+
         if (array_key_exists("CustomerId",$param) and $param["CustomerId"] !== null) {
             $this->CustomerId = $param["CustomerId"];
         }

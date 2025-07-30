@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTemplateId(integer $TemplateId) 设置参数模板 ID。
  * @method string getName() 获取参数模板名称。
  * @method void setName(string $Name) 设置参数模板名称。
- * @method string getEngineVersion() 获取参数模板对应实例版本
- * @method void setEngineVersion(string $EngineVersion) 设置参数模板对应实例版本
+ * @method string getEngineVersion() 获取参数模板对应实例版本，可取值：5.5、5.6、5.7、8.0。
+ * @method void setEngineVersion(string $EngineVersion) 设置参数模板对应实例版本，可取值：5.5、5.6、5.7、8.0。
  * @method integer getTotalCount() 获取参数模板中的参数数量
  * @method void setTotalCount(integer $TotalCount) 设置参数模板中的参数数量
  * @method array getItems() 获取参数详情
@@ -52,7 +52,7 @@ class DescribeParamTemplateInfoResponse extends AbstractModel
     public $Name;
 
     /**
-     * @var string 参数模板对应实例版本
+     * @var string 参数模板对应实例版本，可取值：5.5、5.6、5.7、8.0。
      */
     public $EngineVersion;
 
@@ -89,7 +89,7 @@ class DescribeParamTemplateInfoResponse extends AbstractModel
     /**
      * @param integer $TemplateId 参数模板 ID。
      * @param string $Name 参数模板名称。
-     * @param string $EngineVersion 参数模板对应实例版本
+     * @param string $EngineVersion 参数模板对应实例版本，可取值：5.5、5.6、5.7、8.0。
      * @param integer $TotalCount 参数模板中的参数数量
      * @param array $Items 参数详情
      * @param string $Description 参数模板描述

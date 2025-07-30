@@ -20,40 +20,55 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SearchCosRechargeInfo请求参数结构体
  *
- * @method string getTopicId() 获取日志主题 ID
- * @method void setTopicId(string $TopicId) 设置日志主题 ID
- * @method string getLogsetId() 获取日志集ID
- * @method void setLogsetId(string $LogsetId) 设置日志集ID
- * @method string getName() 获取投递任务名称
- * @method void setName(string $Name) 设置投递任务名称
- * @method string getBucket() 获取COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。
- * @method void setBucket(string $Bucket) 设置COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。
+ * @method string getTopicId() 获取日志主题Id。
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+ * @method void setTopicId(string $TopicId) 设置日志主题Id。
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+ * @method string getLogsetId() 获取日志集Id。
+
+- 通过[获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集Id。
+ * @method void setLogsetId(string $LogsetId) 设置日志集Id。
+
+- 通过[获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集Id。
+ * @method string getName() 获取COS导入任务名称,最大支持128个字节。
+ * @method void setName(string $Name) 设置COS导入任务名称,最大支持128个字节。
+ * @method string getBucket() 获取COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。	
+
+- 通过[GET Service（List Buckets）](https://cloud.tencent.com/document/product/436/8291)获取COS存储桶。
+ * @method void setBucket(string $Bucket) 设置COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。	
+
+- 通过[GET Service（List Buckets）](https://cloud.tencent.com/document/product/436/8291)获取COS存储桶。
  * @method string getBucketRegion() 获取COS存储桶所在地域，详见产品支持的[地域列表](https://cloud.tencent.com/document/product/436/6224)。
  * @method void setBucketRegion(string $BucketRegion) 设置COS存储桶所在地域，详见产品支持的[地域列表](https://cloud.tencent.com/document/product/436/6224)。
  * @method string getPrefix() 获取COS文件所在文件夹的前缀。默认为空，投递存储桶下所有的文件。
  * @method void setPrefix(string $Prefix) 设置COS文件所在文件夹的前缀。默认为空，投递存储桶下所有的文件。
- * @method string getCompress() 获取压缩模式:   "", "gzip", "lzop", "snappy";   默认""
- * @method void setCompress(string $Compress) 设置压缩模式:   "", "gzip", "lzop", "snappy";   默认""
+ * @method string getCompress() 获取压缩模式:   "", "gzip", "lzop", "snappy"。  默认："" 不压缩
+ * @method void setCompress(string $Compress) 设置压缩模式:   "", "gzip", "lzop", "snappy"。  默认："" 不压缩
  */
 class SearchCosRechargeInfoRequest extends AbstractModel
 {
     /**
-     * @var string 日志主题 ID
+     * @var string 日志主题Id。
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public $TopicId;
 
     /**
-     * @var string 日志集ID
+     * @var string 日志集Id。
+
+- 通过[获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集Id。
      */
     public $LogsetId;
 
     /**
-     * @var string 投递任务名称
+     * @var string COS导入任务名称,最大支持128个字节。
      */
     public $Name;
 
     /**
-     * @var string COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。
+     * @var string COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。	
+
+- 通过[GET Service（List Buckets）](https://cloud.tencent.com/document/product/436/8291)获取COS存储桶。
      */
     public $Bucket;
 
@@ -68,18 +83,23 @@ class SearchCosRechargeInfoRequest extends AbstractModel
     public $Prefix;
 
     /**
-     * @var string 压缩模式:   "", "gzip", "lzop", "snappy";   默认""
+     * @var string 压缩模式:   "", "gzip", "lzop", "snappy"。  默认："" 不压缩
      */
     public $Compress;
 
     /**
-     * @param string $TopicId 日志主题 ID
-     * @param string $LogsetId 日志集ID
-     * @param string $Name 投递任务名称
-     * @param string $Bucket COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。
+     * @param string $TopicId 日志主题Id。
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * @param string $LogsetId 日志集Id。
+
+- 通过[获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集Id。
+     * @param string $Name COS导入任务名称,最大支持128个字节。
+     * @param string $Bucket COS存储桶，详见产品支持的[存储桶命名规范](https://cloud.tencent.com/document/product/436/13312)。	
+
+- 通过[GET Service（List Buckets）](https://cloud.tencent.com/document/product/436/8291)获取COS存储桶。
      * @param string $BucketRegion COS存储桶所在地域，详见产品支持的[地域列表](https://cloud.tencent.com/document/product/436/6224)。
      * @param string $Prefix COS文件所在文件夹的前缀。默认为空，投递存储桶下所有的文件。
-     * @param string $Compress 压缩模式:   "", "gzip", "lzop", "snappy";   默认""
+     * @param string $Compress 压缩模式:   "", "gzip", "lzop", "snappy"。  默认："" 不压缩
      */
     function __construct()
     {

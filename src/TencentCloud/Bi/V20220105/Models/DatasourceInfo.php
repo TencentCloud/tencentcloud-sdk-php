@@ -156,6 +156,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOwnerName(string $OwnerName) 设置所属人名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSchema() 获取数据库schema
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSchema(string $Schema) 设置数据库schema
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDbVersion() 获取数据库版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDbVersion(string $DbVersion) 设置数据库版本
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DatasourceInfo extends AbstractModel
 {
@@ -384,6 +392,18 @@ class DatasourceInfo extends AbstractModel
     public $OwnerName;
 
     /**
+     * @var string 数据库schema
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Schema;
+
+    /**
+     * @var string 数据库版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DbVersion;
+
+    /**
      * @param integer $Id 数据库ID
      * @param string $DbName 数据库名称
      * @param string $ServiceType 域类型，1、腾讯云，2、本地
@@ -451,6 +471,10 @@ class DatasourceInfo extends AbstractModel
      * @param string $Owner 所属人ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $OwnerName 所属人名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Schema 数据库schema
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DbVersion 数据库版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -626,6 +650,14 @@ class DatasourceInfo extends AbstractModel
 
         if (array_key_exists("OwnerName",$param) and $param["OwnerName"] !== null) {
             $this->OwnerName = $param["OwnerName"];
+        }
+
+        if (array_key_exists("Schema",$param) and $param["Schema"] !== null) {
+            $this->Schema = $param["Schema"];
+        }
+
+        if (array_key_exists("DbVersion",$param) and $param["DbVersion"] !== null) {
+            $this->DbVersion = $param["DbVersion"];
         }
     }
 }

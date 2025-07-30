@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeParamTemplates请求参数结构体
  *
- * @method array getEngineVersions() 获取引擎版本，缺省则查询所有
- * @method void setEngineVersions(array $EngineVersions) 设置引擎版本，缺省则查询所有
- * @method array getEngineTypes() 获取引擎类型，缺省则查询所有
- * @method void setEngineTypes(array $EngineTypes) 设置引擎类型，缺省则查询所有
- * @method array getTemplateNames() 获取模板名称，缺省则查询所有
- * @method void setTemplateNames(array $TemplateNames) 设置模板名称，缺省则查询所有
- * @method array getTemplateIds() 获取模板id，缺省则查询所有
- * @method void setTemplateIds(array $TemplateIds) 设置模板id，缺省则查询所有
+ * @method array getEngineVersions() 获取引擎版本，缺省则查询所有。可取值为：5.5、5.6、5.7、8.0。
+ * @method void setEngineVersions(array $EngineVersions) 设置引擎版本，缺省则查询所有。可取值为：5.5、5.6、5.7、8.0。
+ * @method array getEngineTypes() 获取引擎类型，缺省则查询所有。可取值为：InnoDB、RocksDB，不区分大小写。
+ * @method void setEngineTypes(array $EngineTypes) 设置引擎类型，缺省则查询所有。可取值为：InnoDB、RocksDB，不区分大小写。
+ * @method array getTemplateNames() 获取模板名称，缺省则查询所有。支持模糊匹配。
+ * @method void setTemplateNames(array $TemplateNames) 设置模板名称，缺省则查询所有。支持模糊匹配。
+ * @method array getTemplateIds() 获取模板 ID，缺省则查询所有。
+ * @method void setTemplateIds(array $TemplateIds) 设置模板 ID，缺省则查询所有。
  */
 class DescribeParamTemplatesRequest extends AbstractModel
 {
     /**
-     * @var array 引擎版本，缺省则查询所有
+     * @var array 引擎版本，缺省则查询所有。可取值为：5.5、5.6、5.7、8.0。
      */
     public $EngineVersions;
 
     /**
-     * @var array 引擎类型，缺省则查询所有
+     * @var array 引擎类型，缺省则查询所有。可取值为：InnoDB、RocksDB，不区分大小写。
      */
     public $EngineTypes;
 
     /**
-     * @var array 模板名称，缺省则查询所有
+     * @var array 模板名称，缺省则查询所有。支持模糊匹配。
      */
     public $TemplateNames;
 
     /**
-     * @var array 模板id，缺省则查询所有
+     * @var array 模板 ID，缺省则查询所有。
      */
     public $TemplateIds;
 
     /**
-     * @param array $EngineVersions 引擎版本，缺省则查询所有
-     * @param array $EngineTypes 引擎类型，缺省则查询所有
-     * @param array $TemplateNames 模板名称，缺省则查询所有
-     * @param array $TemplateIds 模板id，缺省则查询所有
+     * @param array $EngineVersions 引擎版本，缺省则查询所有。可取值为：5.5、5.6、5.7、8.0。
+     * @param array $EngineTypes 引擎类型，缺省则查询所有。可取值为：InnoDB、RocksDB，不区分大小写。
+     * @param array $TemplateNames 模板名称，缺省则查询所有。支持模糊匹配。
+     * @param array $TemplateIds 模板 ID，缺省则查询所有。
      */
     function __construct()
     {

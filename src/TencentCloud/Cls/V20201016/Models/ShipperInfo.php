@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCompress(CompressInfo $Compress) 设置投递日志的压缩配置
  * @method ContentInfo getContent() 获取投递日志的内容格式配置
  * @method void setContent(ContentInfo $Content) 设置投递日志的内容格式配置
- * @method string getCreateTime() 获取投递日志的创建时间
- * @method void setCreateTime(string $CreateTime) 设置投递日志的创建时间
+ * @method string getCreateTime() 获取投递日志的创建时间。格式：YYYY-MM-DD HH:MM:SS
+ * @method void setCreateTime(string $CreateTime) 设置投递日志的创建时间。格式：YYYY-MM-DD HH:MM:SS
  * @method integer getFilenameMode() 获取投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
  * @method void setFilenameMode(integer $FilenameMode) 设置投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
  * @method integer getStartTime() 获取投递数据范围的开始时间点
@@ -68,8 +68,26 @@ use TencentCloud\Common\AbstractModel;
 2：任务运行中
 3：任务运行异常
 4：任务运行结束
- * @method string getStorageType() 获取cos桶类型
- * @method void setStorageType(string $StorageType) 设置cos桶类型
+ * @method string getStorageType() 获取对象存储类型，默认值为 STANDARD。枚举值请参见[ 存储类型概述](https://cloud.tencent.com/document/product/436/33417) 文档。
+参考值有：
+STANDARD：标准存储
+STANDARD_IA：低频存储
+ARCHIVE：归档存储
+DEEP_ARCHIVE：深度归档存储
+MAZ_STANDARD：标准存储（多 AZ）
+MAZ_STANDARD_IA：低频存储（多 AZ）
+INTELLIGENT_TIERING：智能分层存储
+MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）
+ * @method void setStorageType(string $StorageType) 设置对象存储类型，默认值为 STANDARD。枚举值请参见[ 存储类型概述](https://cloud.tencent.com/document/product/436/33417) 文档。
+参考值有：
+STANDARD：标准存储
+STANDARD_IA：低频存储
+ARCHIVE：归档存储
+DEEP_ARCHIVE：深度归档存储
+MAZ_STANDARD：标准存储（多 AZ）
+MAZ_STANDARD_IA：低频存储（多 AZ）
+INTELLIGENT_TIERING：智能分层存储
+MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）
  */
 class ShipperInfo extends AbstractModel
 {
@@ -134,7 +152,7 @@ class ShipperInfo extends AbstractModel
     public $Content;
 
     /**
-     * @var string 投递日志的创建时间
+     * @var string 投递日志的创建时间。格式：YYYY-MM-DD HH:MM:SS
      */
     public $CreateTime;
 
@@ -174,7 +192,16 @@ class ShipperInfo extends AbstractModel
     public $HistoryStatus;
 
     /**
-     * @var string cos桶类型
+     * @var string 对象存储类型，默认值为 STANDARD。枚举值请参见[ 存储类型概述](https://cloud.tencent.com/document/product/436/33417) 文档。
+参考值有：
+STANDARD：标准存储
+STANDARD_IA：低频存储
+ARCHIVE：归档存储
+DEEP_ARCHIVE：深度归档存储
+MAZ_STANDARD：标准存储（多 AZ）
+MAZ_STANDARD_IA：低频存储（多 AZ）
+INTELLIGENT_TIERING：智能分层存储
+MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）
      */
     public $StorageType;
 
@@ -191,7 +218,7 @@ class ShipperInfo extends AbstractModel
      * @param string $Partition 投递日志的分区规则，支持strftime的时间格式表示
      * @param CompressInfo $Compress 投递日志的压缩配置
      * @param ContentInfo $Content 投递日志的内容格式配置
-     * @param string $CreateTime 投递日志的创建时间
+     * @param string $CreateTime 投递日志的创建时间。格式：YYYY-MM-DD HH:MM:SS
      * @param integer $FilenameMode 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
      * @param integer $StartTime 投递数据范围的开始时间点
      * @param integer $EndTime 投递数据范围的结束时间点
@@ -203,7 +230,16 @@ class ShipperInfo extends AbstractModel
 2：任务运行中
 3：任务运行异常
 4：任务运行结束
-     * @param string $StorageType cos桶类型
+     * @param string $StorageType 对象存储类型，默认值为 STANDARD。枚举值请参见[ 存储类型概述](https://cloud.tencent.com/document/product/436/33417) 文档。
+参考值有：
+STANDARD：标准存储
+STANDARD_IA：低频存储
+ARCHIVE：归档存储
+DEEP_ARCHIVE：深度归档存储
+MAZ_STANDARD：标准存储（多 AZ）
+MAZ_STANDARD_IA：低频存储（多 AZ）
+INTELLIGENT_TIERING：智能分层存储
+MAZ_INTELLIGENT_TIERING：智能分层存储（多 AZ）
      */
     function __construct()
     {

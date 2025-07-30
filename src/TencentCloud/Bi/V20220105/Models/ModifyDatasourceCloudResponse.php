@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrorInfo(ErrorInfo $ErrorInfo) 设置自定义错误信息对象
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getData() 获取成功无
+ * @method string getData() 获取无
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setData(string $Data) 设置成功无
+ * @method void setData(string $Data) 设置无
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExtra() 获取额外信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -48,7 +48,7 @@ class ModifyDatasourceCloudResponse extends AbstractModel
     public $ErrorInfo;
 
     /**
-     * @var string 成功无
+     * @var string 无
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
@@ -73,7 +73,7 @@ class ModifyDatasourceCloudResponse extends AbstractModel
     /**
      * @param ErrorInfo $ErrorInfo 自定义错误信息对象
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Data 成功无
+     * @param string $Data 无
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Extra 额外信息
 注意：此字段可能返回 null，表示取不到有效值。

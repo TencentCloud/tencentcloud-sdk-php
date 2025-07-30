@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUseVPC(boolean $UseVPC) 设置开启vpc	
  * @method string getRegionId() 获取地域
  * @method void setRegionId(string $RegionId) 设置地域
+ * @method string getSchema() 获取数据库schema
+ * @method void setSchema(string $Schema) 设置数据库schema
+ * @method string getDbVersion() 获取数据库版本
+ * @method void setDbVersion(string $DbVersion) 设置数据库版本
  */
 class ModifyDatasourceRequest extends AbstractModel
 {
@@ -178,6 +182,16 @@ class ModifyDatasourceRequest extends AbstractModel
     public $RegionId;
 
     /**
+     * @var string 数据库schema
+     */
+    public $Schema;
+
+    /**
+     * @var string 数据库版本
+     */
+    public $DbVersion;
+
+    /**
      * @param string $DbHost HOST
      * @param integer $DbPort 端口
      * @param string $ServiceType 后端提供字典：域类型，1、腾讯云，2、本地
@@ -200,6 +214,8 @@ class ModifyDatasourceRequest extends AbstractModel
      * @param string $VpcId 腾讯云私有网络标识
      * @param boolean $UseVPC 开启vpc	
      * @param string $RegionId 地域
+     * @param string $Schema 数据库schema
+     * @param string $DbVersion 数据库版本
      */
     function __construct()
     {
@@ -300,6 +316,14 @@ class ModifyDatasourceRequest extends AbstractModel
 
         if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
             $this->RegionId = $param["RegionId"];
+        }
+
+        if (array_key_exists("Schema",$param) and $param["Schema"] !== null) {
+            $this->Schema = $param["Schema"];
+        }
+
+        if (array_key_exists("DbVersion",$param) and $param["DbVersion"] !== null) {
+            $this->DbVersion = $param["DbVersion"];
         }
     }
 }

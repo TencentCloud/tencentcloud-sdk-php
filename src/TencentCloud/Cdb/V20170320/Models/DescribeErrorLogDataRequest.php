@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeErrorLogData请求参数结构体
  *
- * @method string getInstanceId() 获取实例 ID 。
- * @method void setInstanceId(string $InstanceId) 设置实例 ID 。
- * @method integer getStartTime() 获取开始时间戳。例如 1585142640 。
- * @method void setStartTime(integer $StartTime) 设置开始时间戳。例如 1585142640 。
- * @method integer getEndTime() 获取结束时间戳。例如 1585142640 。
- * @method void setEndTime(integer $EndTime) 设置结束时间戳。例如 1585142640 。
- * @method array getKeyWords() 获取要匹配的关键字列表，最多支持15个关键字。
- * @method void setKeyWords(array $KeyWords) 设置要匹配的关键字列表，最多支持15个关键字。
+ * @method string getInstanceId() 获取实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+ * @method integer getStartTime() 获取开始时间戳。例如1585142640，秒级。
+ * @method void setStartTime(integer $StartTime) 设置开始时间戳。例如1585142640，秒级。
+ * @method integer getEndTime() 获取结束时间戳。例如1585142640，秒级。
+ * @method void setEndTime(integer $EndTime) 设置结束时间戳。例如1585142640，秒级。
+ * @method array getKeyWords() 获取要匹配的关键字列表，最多支持15个关键字，支持模糊匹配。
+ * @method void setKeyWords(array $KeyWords) 设置要匹配的关键字列表，最多支持15个关键字，支持模糊匹配。
  * @method integer getLimit() 获取分页的返回数量，默认为100，最大为400。
  * @method void setLimit(integer $Limit) 设置分页的返回数量，默认为100，最大为400。
  * @method integer getOffset() 获取偏移量，默认为0。
@@ -38,22 +38,22 @@ use TencentCloud\Common\AbstractModel;
 class DescribeErrorLogDataRequest extends AbstractModel
 {
     /**
-     * @var string 实例 ID 。
+     * @var string 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
      */
     public $InstanceId;
 
     /**
-     * @var integer 开始时间戳。例如 1585142640 。
+     * @var integer 开始时间戳。例如1585142640，秒级。
      */
     public $StartTime;
 
     /**
-     * @var integer 结束时间戳。例如 1585142640 。
+     * @var integer 结束时间戳。例如1585142640，秒级。
      */
     public $EndTime;
 
     /**
-     * @var array 要匹配的关键字列表，最多支持15个关键字。
+     * @var array 要匹配的关键字列表，最多支持15个关键字，支持模糊匹配。
      */
     public $KeyWords;
 
@@ -73,10 +73,10 @@ class DescribeErrorLogDataRequest extends AbstractModel
     public $InstType;
 
     /**
-     * @param string $InstanceId 实例 ID 。
-     * @param integer $StartTime 开始时间戳。例如 1585142640 。
-     * @param integer $EndTime 结束时间戳。例如 1585142640 。
-     * @param array $KeyWords 要匹配的关键字列表，最多支持15个关键字。
+     * @param string $InstanceId 实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/product/236/15872) 接口获取。
+     * @param integer $StartTime 开始时间戳。例如1585142640，秒级。
+     * @param integer $EndTime 结束时间戳。例如1585142640，秒级。
+     * @param array $KeyWords 要匹配的关键字列表，最多支持15个关键字，支持模糊匹配。
      * @param integer $Limit 分页的返回数量，默认为100，最大为400。
      * @param integer $Offset 偏移量，默认为0。
      * @param string $InstType 仅在实例为主实例或者灾备实例时生效，可选值：slave，代表拉取从机的日志。

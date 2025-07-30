@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLeakageDatas请求参数结构体
  *
+ * @method array getCustomerIdList() 获取企业ID列表，可多选
+ * @method void setCustomerIdList(array $CustomerIdList) 设置企业ID列表，可多选
  * @method boolean getIsAggregation() 获取是否聚合数据
  * @method void setIsAggregation(boolean $IsAggregation) 设置是否聚合数据
  * @method boolean getIsNew() 获取是否新增数据
@@ -49,6 +51,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class DescribeLeakageDatasRequest extends AbstractModel
 {
+    /**
+     * @var array 企业ID列表，可多选
+     */
+    public $CustomerIdList;
+
     /**
      * @var boolean 是否聚合数据
      */
@@ -115,6 +122,7 @@ class DescribeLeakageDatasRequest extends AbstractModel
     public $Ignored;
 
     /**
+     * @param array $CustomerIdList 企业ID列表，可多选
      * @param boolean $IsAggregation 是否聚合数据
      * @param boolean $IsNew 是否新增数据
      * @param integer $CustomerId 企业ID
@@ -142,6 +150,10 @@ class DescribeLeakageDatasRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("CustomerIdList",$param) and $param["CustomerIdList"] !== null) {
+            $this->CustomerIdList = $param["CustomerIdList"];
+        }
+
         if (array_key_exists("IsAggregation",$param) and $param["IsAggregation"] !== null) {
             $this->IsAggregation = $param["IsAggregation"];
         }

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDashboardName(string $DashboardName) 设置仪表盘名字
  * @method string getData() 获取仪表盘数据
  * @method void setData(string $Data) 设置仪表盘数据
- * @method string getCreateTime() 获取创建仪表盘的时间
- * @method void setCreateTime(string $CreateTime) 设置创建仪表盘的时间
+ * @method string getCreateTime() 获取创建仪表盘的时间。格式：YYYY-MM-DD HH:MM:SS
+ * @method void setCreateTime(string $CreateTime) 设置创建仪表盘的时间。格式：YYYY-MM-DD HH:MM:SS
  * @method integer getAssumerUin() 获取AssumerUin非空则表示创建该日志主题的服务方Uin
  * @method void setAssumerUin(integer $AssumerUin) 设置AssumerUin非空则表示创建该日志主题的服务方Uin
  * @method string getRoleName() 获取RoleName非空则表示创建该日志主题的服务方使用的角色
@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置日志主题绑定的标签信息
  * @method string getDashboardRegion() 获取仪表盘所在地域： 为了兼容老的地域。
  * @method void setDashboardRegion(string $DashboardRegion) 设置仪表盘所在地域： 为了兼容老的地域。
- * @method string getUpdateTime() 获取修改仪表盘的时间
- * @method void setUpdateTime(string $UpdateTime) 设置修改仪表盘的时间
+ * @method string getUpdateTime() 获取修改仪表盘的时间。格式：YYYY-MM-DD HH:MM:SS
+ * @method void setUpdateTime(string $UpdateTime) 设置修改仪表盘的时间。格式：YYYY-MM-DD HH:MM:SS
  * @method array getDashboardTopicInfos() 获取仪表盘对应的topic相关信息
  * @method void setDashboardTopicInfos(array $DashboardTopicInfos) 设置仪表盘对应的topic相关信息
  */
@@ -61,7 +61,7 @@ class DashboardInfo extends AbstractModel
     public $Data;
 
     /**
-     * @var string 创建仪表盘的时间
+     * @var string 创建仪表盘的时间。格式：YYYY-MM-DD HH:MM:SS
      */
     public $CreateTime;
 
@@ -91,7 +91,7 @@ class DashboardInfo extends AbstractModel
     public $DashboardRegion;
 
     /**
-     * @var string 修改仪表盘的时间
+     * @var string 修改仪表盘的时间。格式：YYYY-MM-DD HH:MM:SS
      */
     public $UpdateTime;
 
@@ -104,13 +104,13 @@ class DashboardInfo extends AbstractModel
      * @param string $DashboardId 仪表盘id
      * @param string $DashboardName 仪表盘名字
      * @param string $Data 仪表盘数据
-     * @param string $CreateTime 创建仪表盘的时间
+     * @param string $CreateTime 创建仪表盘的时间。格式：YYYY-MM-DD HH:MM:SS
      * @param integer $AssumerUin AssumerUin非空则表示创建该日志主题的服务方Uin
      * @param string $RoleName RoleName非空则表示创建该日志主题的服务方使用的角色
      * @param string $AssumerName AssumerName非空则表示创建该日志主题的服务方名称
      * @param array $Tags 日志主题绑定的标签信息
      * @param string $DashboardRegion 仪表盘所在地域： 为了兼容老的地域。
-     * @param string $UpdateTime 修改仪表盘的时间
+     * @param string $UpdateTime 修改仪表盘的时间。格式：YYYY-MM-DD HH:MM:SS
      * @param array $DashboardTopicInfos 仪表盘对应的topic相关信息
      */
     function __construct()

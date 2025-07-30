@@ -35,19 +35,33 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStatus() 获取状态。取值有：
 <li>processing：处理中；</li>
 <li>success：成功；</li>
-<li> failed：失败；</li>
+<li>failed：失败；</li>
 <li>timeout：超时；</li>
 <li>canceled：已取消。</li>
  * @method void setStatus(string $Status) 设置状态。取值有：
 <li>processing：处理中；</li>
 <li>success：成功；</li>
-<li> failed：失败；</li>
+<li>failed：失败；</li>
 <li>timeout：超时；</li>
 <li>canceled：已取消。</li>
  * @method string getCreateTime() 获取任务创建时间。
  * @method void setCreateTime(string $CreateTime) 设置任务创建时间。
  * @method string getUpdateTime() 获取任务完成时间。
  * @method void setUpdateTime(string $UpdateTime) 设置任务完成时间。
+ * @method string getFailType() 获取刷新、预热失败类型。取值有：
+<li>taskFailed：任务失败；</li>
+<li>quotaExceeded：配额超限；</li>
+<li>downloadManifestFailed：下载描述文件失败；</li>
+<li>accessDenied：访问被拒绝。</li>
+<li>originPullFailed：回源失败。</li>
+ * @method void setFailType(string $FailType) 设置刷新、预热失败类型。取值有：
+<li>taskFailed：任务失败；</li>
+<li>quotaExceeded：配额超限；</li>
+<li>downloadManifestFailed：下载描述文件失败；</li>
+<li>accessDenied：访问被拒绝。</li>
+<li>originPullFailed：回源失败。</li>
+ * @method string getFailMessage() 获取刷新、预热失败描述。
+ * @method void setFailMessage(string $FailMessage) 设置刷新、预热失败描述。
  */
 class Task extends AbstractModel
 {
@@ -77,7 +91,7 @@ class Task extends AbstractModel
      * @var string 状态。取值有：
 <li>processing：处理中；</li>
 <li>success：成功；</li>
-<li> failed：失败；</li>
+<li>failed：失败；</li>
 <li>timeout：超时；</li>
 <li>canceled：已取消。</li>
      */
@@ -94,6 +108,21 @@ class Task extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var string 刷新、预热失败类型。取值有：
+<li>taskFailed：任务失败；</li>
+<li>quotaExceeded：配额超限；</li>
+<li>downloadManifestFailed：下载描述文件失败；</li>
+<li>accessDenied：访问被拒绝。</li>
+<li>originPullFailed：回源失败。</li>
+     */
+    public $FailType;
+
+    /**
+     * @var string 刷新、预热失败描述。
+     */
+    public $FailMessage;
+
+    /**
      * @param string $JobId 任务 ID。
      * @param string $Target 资源。
      * @param string $Type 任务类型。
@@ -103,11 +132,18 @@ class Task extends AbstractModel
      * @param string $Status 状态。取值有：
 <li>processing：处理中；</li>
 <li>success：成功；</li>
-<li> failed：失败；</li>
+<li>failed：失败；</li>
 <li>timeout：超时；</li>
 <li>canceled：已取消。</li>
      * @param string $CreateTime 任务创建时间。
      * @param string $UpdateTime 任务完成时间。
+     * @param string $FailType 刷新、预热失败类型。取值有：
+<li>taskFailed：任务失败；</li>
+<li>quotaExceeded：配额超限；</li>
+<li>downloadManifestFailed：下载描述文件失败；</li>
+<li>accessDenied：访问被拒绝。</li>
+<li>originPullFailed：回源失败。</li>
+     * @param string $FailMessage 刷新、预热失败描述。
      */
     function __construct()
     {
@@ -148,6 +184,14 @@ class Task extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("FailType",$param) and $param["FailType"] !== null) {
+            $this->FailType = $param["FailType"];
+        }
+
+        if (array_key_exists("FailMessage",$param) and $param["FailMessage"] !== null) {
+            $this->FailMessage = $param["FailMessage"];
         }
     }
 }

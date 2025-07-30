@@ -22,8 +22,52 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTopicId() 获取主题id
  * @method void setTopicId(string $TopicId) 设置主题id
- * @method string getRegion() 获取topic所在的地域
- * @method void setRegion(string $Region) 设置topic所在的地域
+ * @method string getRegion() 获取topic所在的地域。
+- 1:广州
+- 4:上海
+- 5:中国香港
+- 7:上海金融
+- 8:北京
+- 9:新加坡
+- 11:深圳金融
+- 15:硅谷
+- 16:成都
+- 17:法兰克福
+- 18:首尔
+- 19:重庆
+- 22:弗吉尼亚
+- 23:曼谷
+- 25:东京
+- 33:南京
+- 36:天津
+- 39:台北
+- 46:北京金融
+- 72:雅加达
+- 74:圣保罗
+- 78:上海自动驾驶云
+ * @method void setRegion(string $Region) 设置topic所在的地域。
+- 1:广州
+- 4:上海
+- 5:中国香港
+- 7:上海金融
+- 8:北京
+- 9:新加坡
+- 11:深圳金融
+- 15:硅谷
+- 16:成都
+- 17:法兰克福
+- 18:首尔
+- 19:重庆
+- 22:弗吉尼亚
+- 23:曼谷
+- 25:东京
+- 33:南京
+- 36:天津
+- 39:台北
+- 46:北京金融
+- 72:雅加达
+- 74:圣保罗
+- 78:上海自动驾驶云
  */
 class DashboardTopicInfo extends AbstractModel
 {
@@ -33,13 +77,57 @@ class DashboardTopicInfo extends AbstractModel
     public $TopicId;
 
     /**
-     * @var string topic所在的地域
+     * @var string topic所在的地域。
+- 1:广州
+- 4:上海
+- 5:中国香港
+- 7:上海金融
+- 8:北京
+- 9:新加坡
+- 11:深圳金融
+- 15:硅谷
+- 16:成都
+- 17:法兰克福
+- 18:首尔
+- 19:重庆
+- 22:弗吉尼亚
+- 23:曼谷
+- 25:东京
+- 33:南京
+- 36:天津
+- 39:台北
+- 46:北京金融
+- 72:雅加达
+- 74:圣保罗
+- 78:上海自动驾驶云
      */
     public $Region;
 
     /**
      * @param string $TopicId 主题id
-     * @param string $Region topic所在的地域
+     * @param string $Region topic所在的地域。
+- 1:广州
+- 4:上海
+- 5:中国香港
+- 7:上海金融
+- 8:北京
+- 9:新加坡
+- 11:深圳金融
+- 15:硅谷
+- 16:成都
+- 17:法兰克福
+- 18:首尔
+- 19:重庆
+- 22:弗吉尼亚
+- 23:曼谷
+- 25:东京
+- 33:南京
+- 36:天津
+- 39:台北
+- 46:北京金融
+- 72:雅加达
+- 74:圣保罗
+- 78:上海自动驾驶云
      */
     function __construct()
     {

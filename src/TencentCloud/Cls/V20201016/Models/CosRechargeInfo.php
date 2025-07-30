@@ -30,8 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置COS导入任务名称
  * @method string getBucket() 获取COS存储桶
  * @method void setBucket(string $Bucket) 设置COS存储桶
- * @method string getBucketRegion() 获取COS存储桶所在地域
- * @method void setBucketRegion(string $BucketRegion) 设置COS存储桶所在地域
+ * @method string getBucketRegion() 获取COS存储桶所在地域。
+
+- 通过[地域和访问域名](https://cloud.tencent.com/document/product/436/6224)获取地域信息。
+ * @method void setBucketRegion(string $BucketRegion) 设置COS存储桶所在地域。
+
+- 通过[地域和访问域名](https://cloud.tencent.com/document/product/436/6224)获取地域信息。
  * @method string getPrefix() 获取COS文件所在文件夹的前缀
  * @method void setPrefix(string $Prefix) 设置COS文件所在文件夹的前缀
  * @method string getLogType() 获取采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表单行全文；
@@ -42,14 +46,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置状态   status 0: 已创建, 1: 运行中, 2: 已停止, 3: 已完成, 4: 运行失败。
  * @method integer getEnable() 获取是否启用:   0： 未启用  ， 1：启用
  * @method void setEnable(integer $Enable) 设置是否启用:   0： 未启用  ， 1：启用
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method string getUpdateTime() 获取更新时间
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间
+ * @method string getCreateTime() 获取创建时间。时间格式：YYYY-MM-DD HH:mm:ss
+ * @method void setCreateTime(string $CreateTime) 设置创建时间。时间格式：YYYY-MM-DD HH:mm:ss
+ * @method string getUpdateTime() 获取更新时间。时间格式：YYYY-MM-DD HH:mm:ss
+ * @method void setUpdateTime(string $UpdateTime) 设置更新时间。时间格式：YYYY-MM-DD HH:mm:ss
  * @method integer getProgress() 获取进度条百分值
  * @method void setProgress(integer $Progress) 设置进度条百分值
- * @method string getCompress() 获取supported: "", "gzip", "lzop", "snappy”; 默认空
- * @method void setCompress(string $Compress) 设置supported: "", "gzip", "lzop", "snappy”; 默认空
+ * @method string getCompress() 获取压缩方式supported: "", "gzip", "lzop", "snappy”;  默认空不压缩
+ * @method void setCompress(string $Compress) 设置压缩方式supported: "", "gzip", "lzop", "snappy”;  默认空不压缩
  * @method ExtractRuleInfo getExtractRuleInfo() 获取见： ExtractRuleInfo 结构描述
  * @method void setExtractRuleInfo(ExtractRuleInfo $ExtractRuleInfo) 设置见： ExtractRuleInfo 结构描述
  * @method integer getTaskType() 获取COS导入任务类型。1：一次性导入任务；2：持续性导入任务。
@@ -85,7 +89,9 @@ class CosRechargeInfo extends AbstractModel
     public $Bucket;
 
     /**
-     * @var string COS存储桶所在地域
+     * @var string COS存储桶所在地域。
+
+- 通过[地域和访问域名](https://cloud.tencent.com/document/product/436/6224)获取地域信息。
      */
     public $BucketRegion;
 
@@ -111,12 +117,12 @@ class CosRechargeInfo extends AbstractModel
     public $Enable;
 
     /**
-     * @var string 创建时间
+     * @var string 创建时间。时间格式：YYYY-MM-DD HH:mm:ss
      */
     public $CreateTime;
 
     /**
-     * @var string 更新时间
+     * @var string 更新时间。时间格式：YYYY-MM-DD HH:mm:ss
      */
     public $UpdateTime;
 
@@ -126,7 +132,7 @@ class CosRechargeInfo extends AbstractModel
     public $Progress;
 
     /**
-     * @var string supported: "", "gzip", "lzop", "snappy”; 默认空
+     * @var string 压缩方式supported: "", "gzip", "lzop", "snappy”;  默认空不压缩
      */
     public $Compress;
 
@@ -151,16 +157,18 @@ class CosRechargeInfo extends AbstractModel
      * @param string $LogsetId 日志集ID
      * @param string $Name COS导入任务名称
      * @param string $Bucket COS存储桶
-     * @param string $BucketRegion COS存储桶所在地域
+     * @param string $BucketRegion COS存储桶所在地域。
+
+- 通过[地域和访问域名](https://cloud.tencent.com/document/product/436/6224)获取地域信息。
      * @param string $Prefix COS文件所在文件夹的前缀
      * @param string $LogType 采集的日志类型，json_log代表json格式日志，delimiter_log代表分隔符格式日志，minimalist_log代表单行全文；
 默认为minimalist_log
      * @param integer $Status 状态   status 0: 已创建, 1: 运行中, 2: 已停止, 3: 已完成, 4: 运行失败。
      * @param integer $Enable 是否启用:   0： 未启用  ， 1：启用
-     * @param string $CreateTime 创建时间
-     * @param string $UpdateTime 更新时间
+     * @param string $CreateTime 创建时间。时间格式：YYYY-MM-DD HH:mm:ss
+     * @param string $UpdateTime 更新时间。时间格式：YYYY-MM-DD HH:mm:ss
      * @param integer $Progress 进度条百分值
-     * @param string $Compress supported: "", "gzip", "lzop", "snappy”; 默认空
+     * @param string $Compress 压缩方式supported: "", "gzip", "lzop", "snappy”;  默认空不压缩
      * @param ExtractRuleInfo $ExtractRuleInfo 见： ExtractRuleInfo 结构描述
      * @param integer $TaskType COS导入任务类型。1：一次性导入任务；2：持续性导入任务。
      * @param array $Metadata 元数据。支持 bucket，object。

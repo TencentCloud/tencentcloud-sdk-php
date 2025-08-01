@@ -20,27 +20,43 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 媒体质检的检测策略。
  *
- * @method integer getCheckDuration() 获取抽检策略的每次循环检测的时长。取值范围（单位s）：
+ * @method integer getCheckDuration() 获取每次循环检测的时长。取值范围（单位s）：
 
 - 最小值：10
 - 最大值：86400
 
- * @method void setCheckDuration(integer $CheckDuration) 设置抽检策略的每次循环检测的时长。取值范围（单位s）：
+ * @method void setCheckDuration(integer $CheckDuration) 设置每次循环检测的时长。取值范围（单位s）：
 
 - 最小值：10
 - 最大值：86400
 
- * @method integer getCheckInterval() 获取抽检测略的检测间隔，表示在一次检测结束后，等待多长时间后，再次检测。
- * @method void setCheckInterval(integer $CheckInterval) 设置抽检测略的检测间隔，表示在一次检测结束后，等待多长时间后，再次检测。
- * @method integer getSkipDuration() 获取片头跳过时长。
- * @method void setSkipDuration(integer $SkipDuration) 设置片头跳过时长。
- * @method integer getCirclesNumber() 获取循环次数，该字段为空或 0 时，默认循环直至视频结束。
- * @method void setCirclesNumber(integer $CirclesNumber) 设置循环次数，该字段为空或 0 时，默认循环直至视频结束。
+ * @method integer getCheckInterval() 获取抽检间隔，表示在一次检测结束后，等待多长时间后，再次检测。取值范围（单位 s）：
+- 最小值：10
+- 最大值：3600
+ * @method void setCheckInterval(integer $CheckInterval) 设置抽检间隔，表示在一次检测结束后，等待多长时间后，再次检测。取值范围（单位 s）：
+- 最小值：10
+- 最大值：3600
+ * @method integer getSkipDuration() 获取片头跳过时长。取值范围（单位 s）：
+- 最小值：1
+- 最大值：1800
+ * @method void setSkipDuration(integer $SkipDuration) 设置片头跳过时长。取值范围（单位 s）：
+- 最小值：1
+- 最大值：1800
+ * @method integer getCirclesNumber() 获取循环次数。取值范围:
+- 最小值：0
+- 最大值：1000
+
+取值为 0 或为空时，表示循环至视频结束。
+ * @method void setCirclesNumber(integer $CirclesNumber) 设置循环次数。取值范围:
+- 最小值：0
+- 最大值：1000
+
+取值为 0 或为空时，表示循环至视频结束。
  */
 class TimeSpotCheck extends AbstractModel
 {
     /**
-     * @var integer 抽检策略的每次循环检测的时长。取值范围（单位s）：
+     * @var integer 每次循环检测的时长。取值范围（单位s）：
 
 - 最小值：10
 - 最大值：86400
@@ -49,29 +65,45 @@ class TimeSpotCheck extends AbstractModel
     public $CheckDuration;
 
     /**
-     * @var integer 抽检测略的检测间隔，表示在一次检测结束后，等待多长时间后，再次检测。
+     * @var integer 抽检间隔，表示在一次检测结束后，等待多长时间后，再次检测。取值范围（单位 s）：
+- 最小值：10
+- 最大值：3600
      */
     public $CheckInterval;
 
     /**
-     * @var integer 片头跳过时长。
+     * @var integer 片头跳过时长。取值范围（单位 s）：
+- 最小值：1
+- 最大值：1800
      */
     public $SkipDuration;
 
     /**
-     * @var integer 循环次数，该字段为空或 0 时，默认循环直至视频结束。
+     * @var integer 循环次数。取值范围:
+- 最小值：0
+- 最大值：1000
+
+取值为 0 或为空时，表示循环至视频结束。
      */
     public $CirclesNumber;
 
     /**
-     * @param integer $CheckDuration 抽检策略的每次循环检测的时长。取值范围（单位s）：
+     * @param integer $CheckDuration 每次循环检测的时长。取值范围（单位s）：
 
 - 最小值：10
 - 最大值：86400
 
-     * @param integer $CheckInterval 抽检测略的检测间隔，表示在一次检测结束后，等待多长时间后，再次检测。
-     * @param integer $SkipDuration 片头跳过时长。
-     * @param integer $CirclesNumber 循环次数，该字段为空或 0 时，默认循环直至视频结束。
+     * @param integer $CheckInterval 抽检间隔，表示在一次检测结束后，等待多长时间后，再次检测。取值范围（单位 s）：
+- 最小值：10
+- 最大值：3600
+     * @param integer $SkipDuration 片头跳过时长。取值范围（单位 s）：
+- 最小值：1
+- 最大值：1800
+     * @param integer $CirclesNumber 循环次数。取值范围:
+- 最小值：0
+- 最大值：1000
+
+取值为 0 或为空时，表示循环至视频结束。
      */
     function __construct()
     {

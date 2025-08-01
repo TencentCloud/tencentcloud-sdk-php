@@ -250,18 +250,18 @@ null：用户上传证书（没有套餐类型），
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVulnerabilityStatus() 获取漏洞扫描状态。
  * @method void setVulnerabilityStatus(string $VulnerabilityStatus) 设置漏洞扫描状态。
- * @method string getCertBeginTime() 获取证书生效时间。
+ * @method string getCertBeginTime() 获取证书生效时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCertBeginTime(string $CertBeginTime) 设置证书生效时间。
+ * @method void setCertBeginTime(string $CertBeginTime) 设置证书生效时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCertEndTime() 获取证书失效时间。
+ * @method string getCertEndTime() 获取证书失效时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCertEndTime(string $CertEndTime) 设置证书失效时间。
+ * @method void setCertEndTime(string $CertEndTime) 设置证书失效时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getValidityPeriod() 获取证书有效期：单位（月）。
  * @method void setValidityPeriod(string $ValidityPeriod) 设置证书有效期：单位（月）。
- * @method string getInsertTime() 获取证书申请时间。
- * @method void setInsertTime(string $InsertTime) 设置证书申请时间。
+ * @method string getInsertTime() 获取证书申请时间。时区为GMT+8:00
+ * @method void setInsertTime(string $InsertTime) 设置证书申请时间。时区为GMT+8:00
  * @method string getOrderId() 获取CA订单 ID。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOrderId(string $OrderId) 设置CA订单 ID。
@@ -513,13 +513,13 @@ null：用户上传证书（没有套餐类型），
     public $VulnerabilityStatus;
 
     /**
-     * @var string 证书生效时间。
+     * @var string 证书生效时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CertBeginTime;
 
     /**
-     * @var string 证书失效时间。
+     * @var string 证书失效时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CertEndTime;
@@ -530,7 +530,7 @@ null：用户上传证书（没有套餐类型），
     public $ValidityPeriod;
 
     /**
-     * @var string 证书申请时间。
+     * @var string 证书申请时间。时区为GMT+8:00
      */
     public $InsertTime;
 
@@ -808,12 +808,12 @@ null：用户上传证书（没有套餐类型），
      * @param string $VerifyType 验证类型：DNS_AUTO = 自动DNS验证，DNS = 手动DNS验证，FILE = 文件验证，EMAIL = 邮件验证。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VulnerabilityStatus 漏洞扫描状态。
-     * @param string $CertBeginTime 证书生效时间。
+     * @param string $CertBeginTime 证书生效时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CertEndTime 证书失效时间。
+     * @param string $CertEndTime 证书失效时间。时区为GMT+8:00
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ValidityPeriod 证书有效期：单位（月）。
-     * @param string $InsertTime 证书申请时间。
+     * @param string $InsertTime 证书申请时间。时区为GMT+8:00
      * @param string $OrderId CA订单 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CertificateExtra $CertificateExtra 证书扩展信息。

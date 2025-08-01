@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFailedPages(array $FailedPages) 设置失败的页码。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method PageUsage getUsage() 获取消耗页数
+ * @method void setUsage(PageUsage $Usage) 设置消耗页数
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -50,6 +52,11 @@ class GetDocumentParseResultResponse extends AbstractModel
     public $FailedPages;
 
     /**
+     * @var PageUsage 消耗页数
+     */
+    public $Usage;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -59,6 +66,7 @@ class GetDocumentParseResultResponse extends AbstractModel
      * @param string $DocumentParseResultUrl 结果文件。
      * @param array $FailedPages 失败的页码。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param PageUsage $Usage 消耗页数
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -84,6 +92,11 @@ class GetDocumentParseResultResponse extends AbstractModel
 
         if (array_key_exists("FailedPages",$param) and $param["FailedPages"] !== null) {
             $this->FailedPages = $param["FailedPages"];
+        }
+
+        if (array_key_exists("Usage",$param) and $param["Usage"] !== null) {
+            $this->Usage = new PageUsage();
+            $this->Usage->deserialize($param["Usage"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

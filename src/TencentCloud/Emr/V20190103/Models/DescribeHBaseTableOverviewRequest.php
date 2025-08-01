@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例ID
  * @method void setInstanceId(string $InstanceId) 设置实例ID
- * @method integer getOffset() 获取分页查询编号偏移量，从0开始	
- * @method void setOffset(integer $Offset) 设置分页查询编号偏移量，从0开始	
+ * @method integer getOffset() 获取页码，第一页:0，第二页:1
+ * @method void setOffset(integer $Offset) 设置页码，第一页:0，第二页:1
  * @method integer getLimit() 获取分页查询时的分页大小，最小1，最大100
  * @method void setLimit(integer $Limit) 设置分页查询时的分页大小，最小1，最大100
  * @method string getTable() 获取表名称，模糊匹配
@@ -41,7 +41,7 @@ class DescribeHBaseTableOverviewRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 分页查询编号偏移量，从0开始	
+     * @var integer 页码，第一页:0，第二页:1
      */
     public $Offset;
 
@@ -67,7 +67,7 @@ class DescribeHBaseTableOverviewRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 实例ID
-     * @param integer $Offset 分页查询编号偏移量，从0开始	
+     * @param integer $Offset 页码，第一页:0，第二页:1
      * @param integer $Limit 分页查询时的分页大小，最小1，最大100
      * @param string $Table 表名称，模糊匹配
      * @param string $OrderField 排序的字段，有默认值

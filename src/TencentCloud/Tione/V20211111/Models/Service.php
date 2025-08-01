@@ -170,6 +170,8 @@ DEFAULT: 其他来源
 枚举值，部分情况下与CreateSource不同，通过该字段兼容
  * @method void setMonitorSource(string $MonitorSource) 设置用于监控查询的Source
 枚举值，部分情况下与CreateSource不同，通过该字段兼容
+ * @method string getSubUinName() 获取服务创建者的子账号名称
+ * @method void setSubUinName(string $SubUinName) 设置服务创建者的子账号名称
  */
 class Service extends AbstractModel
 {
@@ -387,6 +389,11 @@ DEFAULT: 其他来源
     public $MonitorSource;
 
     /**
+     * @var string 服务创建者的子账号名称
+     */
+    public $SubUinName;
+
+    /**
      * @param string $ServiceGroupId 服务组id
      * @param string $ServiceId 服务id
      * @param string $ServiceGroupName 服务组名
@@ -462,6 +469,7 @@ DEFAULT: 其他来源
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MonitorSource 用于监控查询的Source
 枚举值，部分情况下与CreateSource不同，通过该字段兼容
+     * @param string $SubUinName 服务创建者的子账号名称
      */
     function __construct()
     {
@@ -618,6 +626,10 @@ DEFAULT: 其他来源
 
         if (array_key_exists("MonitorSource",$param) and $param["MonitorSource"] !== null) {
             $this->MonitorSource = $param["MonitorSource"];
+        }
+
+        if (array_key_exists("SubUinName",$param) and $param["SubUinName"] !== null) {
+            $this->SubUinName = $param["SubUinName"];
         }
     }
 }

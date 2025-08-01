@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 投递日志的内容格式配置
  *
- * @method string getFormat() 获取内容格式，支持json、csv
- * @method void setFormat(string $Format) 设置内容格式，支持json、csv
+ * @method string getFormat() 获取内容格式，支持json，csv，parquet
+ * @method void setFormat(string $Format) 设置内容格式，支持json，csv，parquet
  * @method CsvInfo getCsv() 获取csv格式内容描述
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCsv(CsvInfo $Csv) 设置csv格式内容描述
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class ContentInfo extends AbstractModel
 {
     /**
-     * @var string 内容格式，支持json、csv
+     * @var string 内容格式，支持json，csv，parquet
      */
     public $Format;
 
@@ -61,7 +61,7 @@ class ContentInfo extends AbstractModel
     public $Parquet;
 
     /**
-     * @param string $Format 内容格式，支持json、csv
+     * @param string $Format 内容格式，支持json，csv，parquet
      * @param CsvInfo $Csv csv格式内容描述
 注意：此字段可能返回 null，表示取不到有效值。
      * @param JsonInfo $Json json格式内容描述

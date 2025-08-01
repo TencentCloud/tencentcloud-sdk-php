@@ -43,6 +43,9 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
  * @method Models\CreateDnsRecordResponse CreateDnsRecord(Models\CreateDnsRecordRequest $req) 在创建完站点后，并且站点为 NS 模式接入时，您可以通过本接口创建 DNS 记录。
  * @method Models\CreateFunctionResponse CreateFunction(Models\CreateFunctionRequest $req) 创建并部署边缘函数至 EdgeOne 的边缘节点。
  * @method Models\CreateFunctionRuleResponse CreateFunctionRule(Models\CreateFunctionRuleRequest $req) 创建边缘函数的触发规则。
+ * @method Models\CreateJustInTimeTranscodeTemplateResponse CreateJustInTimeTranscodeTemplate(Models\CreateJustInTimeTranscodeTemplateRequest $req) 即时转码已经提供了预置转码模板，满足大部分的需求。如果有个性化的转码需求，可以通过本接口创建自定义的转码模板，最多可创建100个自定义转码模板。
+为了确保即时转码效果的一致性，避免因 EO 缓存或 M3U8 分片处理过程中的模板变更导致视频输出异常，模板在创建后不可进行修改。
+即时转码详细能力了解：[EdgeOne视频即时处理功能介绍](https://cloud.tencent.com/document/product/1552/111927)。
  * @method Models\CreateL4ProxyResponse CreateL4Proxy(Models\CreateL4ProxyRequest $req) 用于创建四层代理实例。
  * @method Models\CreateL4ProxyRulesResponse CreateL4ProxyRules(Models\CreateL4ProxyRulesRequest $req) 用于创建四层代理实例规则，支持单条或者批量创建。
  * @method Models\CreateL7AccRulesResponse CreateL7AccRules(Models\CreateL7AccRulesRequest $req) 本接口用于在[规则引擎](https://cloud.tencent.com/document/product/1552/70901)中创建规则，支持批量创建。
@@ -62,7 +65,11 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
 同一个实体（七层域名或者四层代理实例）在同种数据投递类型（LogType）和数据投递区域（Area）的组合下，只能被添加到一个实时日志投递任务中。建议先通过 [DescribeRealtimeLogDeliveryTasks](https://cloud.tencent.com/document/product/1552/104110)  接口根据实体查询实时日志投递任务列表，检查实体是否已经被添加到另一实时日志投递任务中。
  * @method Models\CreateRuleResponse CreateRule(Models\CreateRuleRequest $req) 本接口为旧版本创建规则引擎接口，EdgeOne 于 2025 年 1 月 21 日已对规则引擎相关接口全面升级，新版本创建七层加速规则接口详情请参考 [CreateL7AccRules](https://cloud.tencent.com/document/product/1552/115822)。
 <p style="color: red;">注意：自 2025 年 1 月 21 日起，旧版接口停止更新迭代，后续新增功能将仅在新版接口中提供，旧版接口支持的原有能力将不受影响。为避免在使用旧版接口时出现数据字段冲突，建议您尽早迁移到新版规则引擎接口。</p>
+ * @method Models\CreateSecurityAPIResourceResponse CreateSecurityAPIResource(Models\CreateSecurityAPIResourceRequest $req) 用于创建 API 资源。
+ * @method Models\CreateSecurityAPIServiceResponse CreateSecurityAPIService(Models\CreateSecurityAPIServiceRequest $req) 用于创建 API 服务。
+ * @method Models\CreateSecurityClientAttesterResponse CreateSecurityClientAttester(Models\CreateSecurityClientAttesterRequest $req) 创建客户端认证选项。
  * @method Models\CreateSecurityIPGroupResponse CreateSecurityIPGroup(Models\CreateSecurityIPGroupRequest $req) 创建安全 IP 组
+ * @method Models\CreateSecurityJSInjectionRuleResponse CreateSecurityJSInjectionRule(Models\CreateSecurityJSInjectionRuleRequest $req) 创建 JavaScript 注入规则。
  * @method Models\CreateSharedCNAMEResponse CreateSharedCNAME(Models\CreateSharedCNAMERequest $req) 用于创建共享 CNAME，该功能白名单内测中。
  * @method Models\CreateWebSecurityTemplateResponse CreateWebSecurityTemplate(Models\CreateWebSecurityTemplateRequest $req) 创建安全策略配置模板
  * @method Models\CreateZoneResponse CreateZone(Models\CreateZoneRequest $req) EdgeOne 为您提供 CNAME、NS 和无域名接入三种接入方式，您需要先通过此接口完成站点创建。CNAME 和 NS 接入站点的场景可参考 [从零开始快速接入 EdgeOne](https://cloud.tencent.com/document/product/1552/87601); 无域名接入的场景可参考 [快速启用四层代理服务](https://cloud.tencent.com/document/product/1552/96051)。
@@ -79,6 +86,7 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
  * @method Models\DeleteDnsRecordsResponse DeleteDnsRecords(Models\DeleteDnsRecordsRequest $req) 您可以用本接口批量删除 DNS 记录。
  * @method Models\DeleteFunctionResponse DeleteFunction(Models\DeleteFunctionRequest $req) 删除边缘函数，删除后函数无法恢复，关联的触发规则会一并删除。
  * @method Models\DeleteFunctionRulesResponse DeleteFunctionRules(Models\DeleteFunctionRulesRequest $req) 删除边缘函数触发规则。
+ * @method Models\DeleteJustInTimeTranscodeTemplatesResponse DeleteJustInTimeTranscodeTemplates(Models\DeleteJustInTimeTranscodeTemplatesRequest $req) 根据站点 id 下唯一的模板标识，删除相应的即时转码模板。
  * @method Models\DeleteL4ProxyResponse DeleteL4Proxy(Models\DeleteL4ProxyRequest $req) 用于删除四层代理实例。
  * @method Models\DeleteL4ProxyRulesResponse DeleteL4ProxyRules(Models\DeleteL4ProxyRulesRequest $req) 用于删除四层代理转发规则，支持单条或者批量操作。
  * @method Models\DeleteL7AccRulesResponse DeleteL7AccRules(Models\DeleteL7AccRulesRequest $req) 本接口用于删除[规则引擎](https://cloud.tencent.com/document/product/1552/70901)的规则，支持批量删除。
@@ -89,7 +97,11 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
  * @method Models\DeleteRealtimeLogDeliveryTaskResponse DeleteRealtimeLogDeliveryTask(Models\DeleteRealtimeLogDeliveryTaskRequest $req) 通过本接口删除实时日志投递任务。
  * @method Models\DeleteRulesResponse DeleteRules(Models\DeleteRulesRequest $req) 本接口为旧版本删除规则引擎接口，EdgeOne 于 2025 年 1 月 21 日已对规则引擎相关接口全面升级，新版本删除七层加速规则接口详情请参考 [DeleteL7AccRules](https://cloud.tencent.com/document/product/1552/115821)。
 <p style="color: red;">注意：自 2025 年 1 月 21 日起，旧版接口停止更新迭代，后续新增功能将仅在新版接口中提供，旧版接口支持的原有能力将不受影响。为避免在使用旧版接口时出现数据字段冲突，建议您尽早迁移到新版规则引擎接口。</p>
+ * @method Models\DeleteSecurityAPIResourceResponse DeleteSecurityAPIResource(Models\DeleteSecurityAPIResourceRequest $req) 用于删除 API 资源。
+ * @method Models\DeleteSecurityAPIServiceResponse DeleteSecurityAPIService(Models\DeleteSecurityAPIServiceRequest $req) 用于删除 API 服务。
+ * @method Models\DeleteSecurityClientAttesterResponse DeleteSecurityClientAttester(Models\DeleteSecurityClientAttesterRequest $req) 删除客户端认证选项。
  * @method Models\DeleteSecurityIPGroupResponse DeleteSecurityIPGroup(Models\DeleteSecurityIPGroupRequest $req) 删除指定 IP 组，如果有规则引用了 IP 组情况，则不允许删除。
+ * @method Models\DeleteSecurityJSInjectionRuleResponse DeleteSecurityJSInjectionRule(Models\DeleteSecurityJSInjectionRuleRequest $req) 删除 JavaScript 注入规则。
  * @method Models\DeleteSharedCNAMEResponse DeleteSharedCNAME(Models\DeleteSharedCNAMERequest $req) 用于删除共享 CNAME，该功能白名单内测中。
  * @method Models\DeleteWebSecurityTemplateResponse DeleteWebSecurityTemplate(Models\DeleteWebSecurityTemplateRequest $req) 删除安全策略配置模板
  * @method Models\DeleteZoneResponse DeleteZone(Models\DeleteZoneRequest $req) 删除站点。
@@ -119,6 +131,7 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
  * @method Models\DescribeHostsSettingResponse DescribeHostsSetting(Models\DescribeHostsSettingRequest $req) 本接口为旧版，EdgeOne 已对规则引擎相关接口全面升级，可通过 [DescribeL7AccSetting](https://cloud.tencent.com/document/product/1552/115819) 和 [DescribeL7AccRules](https://cloud.tencent.com/document/product/1552/115820) 来获取域名的详细配置。
  * @method Models\DescribeIPRegionResponse DescribeIPRegion(Models\DescribeIPRegionRequest $req) 该接口可用于查询 IP 是否为 EdgeOne IP。
  * @method Models\DescribeIdentificationsResponse DescribeIdentifications(Models\DescribeIdentificationsRequest $req) 查询站点的验证信息。
+ * @method Models\DescribeJustInTimeTranscodeTemplatesResponse DescribeJustInTimeTranscodeTemplates(Models\DescribeJustInTimeTranscodeTemplatesRequest $req) 根据即时转码模板名字、模板类型或唯一标识，获取即时转码模板详情列表。返回结果包含符合条件的所有用户自定义模板及预置模板。
  * @method Models\DescribeL4ProxyResponse DescribeL4Proxy(Models\DescribeL4ProxyRequest $req) 用于查询四层代理实例列表。
  * @method Models\DescribeL4ProxyRulesResponse DescribeL4ProxyRules(Models\DescribeL4ProxyRulesRequest $req) 查询四层代理实例下的转发规则列表。
  * @method Models\DescribeL7AccRulesResponse DescribeL7AccRules(Models\DescribeL7AccRulesRequest $req) 本接口用于查询[规则引擎](https://cloud.tencent.com/document/product/1552/70901)的规则列表。
@@ -143,11 +156,16 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
  * @method Models\DescribeRulesResponse DescribeRules(Models\DescribeRulesRequest $req) 本接口为旧版本查询规则引擎规则接口，EdgeOne 于 2025 年 1 月 21 日已对规则引擎相关接口全面升级，新版本查询七层加速规则接口详情请参考  [DescribeL7AccRules](https://cloud.tencent.com/document/product/1552/115820)。
 <p style="color: red;">注意：自 2025 年 1 月 21 日起，旧版接口停止更新迭代，后续新增功能将仅在新版接口中提供，旧版接口支持的原有能力将不受影响。为避免在使用旧版接口时出现数据字段冲突，建议您尽早迁移到新版规则引擎接口。</p>
  * @method Models\DescribeRulesSettingResponse DescribeRulesSetting(Models\DescribeRulesSettingRequest $req) 本接口为旧版，EdgeOne 已对规则引擎相关接口全面升级，详情请参考 [RuleEngineAction](https://cloud.tencent.com/document/product/1552/80721#RuleEngineAction)。
+ * @method Models\DescribeSecurityAPIResourceResponse DescribeSecurityAPIResource(Models\DescribeSecurityAPIResourceRequest $req) 查询站点下的 API 资源。
+ * @method Models\DescribeSecurityAPIServiceResponse DescribeSecurityAPIService(Models\DescribeSecurityAPIServiceRequest $req) 查询站点下的 API 服务。
+ * @method Models\DescribeSecurityClientAttesterResponse DescribeSecurityClientAttester(Models\DescribeSecurityClientAttesterRequest $req) 查询客户端认证选项配置。
  * @method Models\DescribeSecurityIPGroupResponse DescribeSecurityIPGroup(Models\DescribeSecurityIPGroupRequest $req) 查询安全 IP 组的配置信息，包括安全 IP 组的 ID、名称和内容。本接口的查询结果中，每个 IP 组最多只返回 2000 个 IP / 网段。如果存在超过 2000 个 IP / 网段的超大 IP 组，请调用 DescribeSecurityIPGroupContent 进行分页查询。
+ * @method Models\DescribeSecurityIPGroupContentResponse DescribeSecurityIPGroupContent(Models\DescribeSecurityIPGroupContentRequest $req) 该接口用于分页查询指定 IP 组中的 IP 地址列表。当 IP 组中的 IP 地址数量超过 2000 个时，可以使用此接口进行分页查询，以获取完整的 IP 地址列表。
  * @method Models\DescribeSecurityIPGroupInfoResponse DescribeSecurityIPGroupInfo(Models\DescribeSecurityIPGroupInfoRequest $req) 接口已废弃，将于 2024 年 6 月 30 日停止服务。请使用 [查询安全 IP 组
 ](https://cloud.tencent.com/document/product/1552/105866) 接口。
 
 查询 IP 组的配置信息，包括 IP 组名称、 IP 组内容、 IP 组归属站点。
+ * @method Models\DescribeSecurityJSInjectionRuleResponse DescribeSecurityJSInjectionRule(Models\DescribeSecurityJSInjectionRuleRequest $req) 查询 JavaScript 注入规则。
  * @method Models\DescribeSecurityPolicyResponse DescribeSecurityPolicy(Models\DescribeSecurityPolicyRequest $req) 查询安全防护配置详情。
  * @method Models\DescribeSecurityTemplateBindingsResponse DescribeSecurityTemplateBindings(Models\DescribeSecurityTemplateBindingsRequest $req) 查询指定策略模板的绑定关系列表。
  * @method Models\DescribeTimingL4DataResponse DescribeTimingL4Data(Models\DescribeTimingL4DataRequest $req) 本接口（DescribeTimingL4Data）用于查询四层时序流量数据列表。
@@ -224,7 +242,11 @@ CNAME 模式接入时，若您未完成站点归属权校验，本接口将为�
  * @method Models\ModifyRealtimeLogDeliveryTaskResponse ModifyRealtimeLogDeliveryTask(Models\ModifyRealtimeLogDeliveryTaskRequest $req) 通过本接口修改实时日志投递任务配置。本接口有如下限制：<li>不支持修改实时日志投递任务目的地类型（TaskType）；</li><li>不支持修改数据投递类型（LogType）</li><li>不支持修改数据投递区域（Area）</li><li>当原实时日志投递任务的目的地为腾讯云 CLS 时，不支持修改目的地详细配置，如日志集、日志主题。</li>
  * @method Models\ModifyRuleResponse ModifyRule(Models\ModifyRuleRequest $req) 本接口为旧版本修改规则引擎接口，EdgeOne 于 2025 年 1 月 21 日已对规则引擎相关接口全面升级，新版本修改七层加速规则接口详情请参考 [ModifyL7AccRule](https://cloud.tencent.com/document/product/1552/115818)。
 <p style="color: red;">注意：自 2025 年 1 月 21 日起，旧版接口停止更新迭代，后续新增功能将仅在新版接口中提供，旧版接口支持的原有能力将不受影响。为避免在使用旧版接口时出现数据字段冲突，建议您尽早迁移到新版规则引擎接口。</p>
+ * @method Models\ModifySecurityAPIResourceResponse ModifySecurityAPIResource(Models\ModifySecurityAPIResourceRequest $req) 该接口用于修改 API 资源。
+ * @method Models\ModifySecurityAPIServiceResponse ModifySecurityAPIService(Models\ModifySecurityAPIServiceRequest $req) 该接口用于修改 API 服务。
+ * @method Models\ModifySecurityClientAttesterResponse ModifySecurityClientAttester(Models\ModifySecurityClientAttesterRequest $req) 修改客户端认证选项。
  * @method Models\ModifySecurityIPGroupResponse ModifySecurityIPGroup(Models\ModifySecurityIPGroupRequest $req) 修改安全 IP 组。
+ * @method Models\ModifySecurityJSInjectionRuleResponse ModifySecurityJSInjectionRule(Models\ModifySecurityJSInjectionRuleRequest $req) 修改 JavaScript 注入规则。
  * @method Models\ModifySecurityPolicyResponse ModifySecurityPolicy(Models\ModifySecurityPolicyRequest $req) 修改Web&Bot安全配置。
  * @method Models\ModifyWebSecurityTemplateResponse ModifyWebSecurityTemplate(Models\ModifyWebSecurityTemplateRequest $req) 修改安全策略配置模板
  * @method Models\ModifyZoneResponse ModifyZone(Models\ModifyZoneRequest $req) 修改站点信息。

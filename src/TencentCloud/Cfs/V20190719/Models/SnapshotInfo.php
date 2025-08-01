@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSnapshotName(string $SnapshotName) 设置快照名称
  * @method string getSnapshotId() 获取快照ID
  * @method void setSnapshotId(string $SnapshotId) 设置快照ID
- * @method string getStatus() 获取快照状态，createing-创建中；available-运行中；deleting-删除中；rollbacking-new 创建新文件系统中；create-failed 创建失败
- * @method void setStatus(string $Status) 设置快照状态，createing-创建中；available-运行中；deleting-删除中；rollbacking-new 创建新文件系统中；create-failed 创建失败
+ * @method string getStatus() 获取快照状态，creating-创建中；available-运行中；deleting-删除中；rollbacking-new 创建新文件系统中；create-failed 创建失败
+ * @method void setStatus(string $Status) 设置快照状态，creating-创建中；available-运行中；deleting-删除中；rollbacking-new 创建新文件系统中；create-failed 创建失败
  * @method string getRegionName() 获取地域名称
  * @method void setRegionName(string $RegionName) 设置地域名称
  * @method string getFileSystemId() 获取文件系统ID
@@ -46,13 +46,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFsName(string $FsName) 设置文件系统名称
  * @method array getTags() 获取快照标签
  * @method void setTags(array $Tags) 设置快照标签
- * @method string getSnapshotType() 获取快照类型, general为通用系列快照，turbo为Turbo系列快照
+ * @method string getSnapshotType() 获取快照类型，general为通用系列快照，turbo为Turbo系列快照
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSnapshotType(string $SnapshotType) 设置快照类型, general为通用系列快照，turbo为Turbo系列快照
+ * @method void setSnapshotType(string $SnapshotType) 设置快照类型，general为通用系列快照，turbo为Turbo系列快照
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSnapshotTime() 获取实际快照时间，反应快照对应文件系统某个时刻的数据。
+ * @method string getSnapshotTime() 获取实际快照时间，反映快照对应文件系统某个时刻的数据。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSnapshotTime(string $SnapshotTime) 设置实际快照时间，反应快照对应文件系统某个时刻的数据。
+ * @method void setSnapshotTime(string $SnapshotTime) 设置实际快照时间，反映快照对应文件系统某个时刻的数据。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class SnapshotInfo extends AbstractModel
@@ -73,7 +73,7 @@ class SnapshotInfo extends AbstractModel
     public $SnapshotId;
 
     /**
-     * @var string 快照状态，createing-创建中；available-运行中；deleting-删除中；rollbacking-new 创建新文件系统中；create-failed 创建失败
+     * @var string 快照状态，creating-创建中；available-运行中；deleting-删除中；rollbacking-new 创建新文件系统中；create-failed 创建失败
      */
     public $Status;
 
@@ -123,13 +123,13 @@ class SnapshotInfo extends AbstractModel
     public $Tags;
 
     /**
-     * @var string 快照类型, general为通用系列快照，turbo为Turbo系列快照
+     * @var string 快照类型，general为通用系列快照，turbo为Turbo系列快照
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SnapshotType;
 
     /**
-     * @var string 实际快照时间，反应快照对应文件系统某个时刻的数据。
+     * @var string 实际快照时间，反映快照对应文件系统某个时刻的数据。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SnapshotTime;
@@ -138,7 +138,7 @@ class SnapshotInfo extends AbstractModel
      * @param string $CreationTime 创建快照时间
      * @param string $SnapshotName 快照名称
      * @param string $SnapshotId 快照ID
-     * @param string $Status 快照状态，createing-创建中；available-运行中；deleting-删除中；rollbacking-new 创建新文件系统中；create-failed 创建失败
+     * @param string $Status 快照状态，creating-创建中；available-运行中；deleting-删除中；rollbacking-new 创建新文件系统中；create-failed 创建失败
      * @param string $RegionName 地域名称
      * @param string $FileSystemId 文件系统ID
      * @param integer $Size 快照大小
@@ -148,9 +148,9 @@ class SnapshotInfo extends AbstractModel
      * @param string $DeleteTime 快照删除时间
      * @param string $FsName 文件系统名称
      * @param array $Tags 快照标签
-     * @param string $SnapshotType 快照类型, general为通用系列快照，turbo为Turbo系列快照
+     * @param string $SnapshotType 快照类型，general为通用系列快照，turbo为Turbo系列快照
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SnapshotTime 实际快照时间，反应快照对应文件系统某个时刻的数据。
+     * @param string $SnapshotTime 实际快照时间，反映快照对应文件系统某个时刻的数据。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

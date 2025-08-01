@@ -34,8 +34,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(integer $StartTime) 设置本次投递任务的开始时间戳， 毫秒
  * @method integer getEndTime() 获取本次投递任务的结束时间戳， 毫秒
  * @method void setEndTime(integer $EndTime) 设置本次投递任务的结束时间戳， 毫秒
- * @method string getStatus() 获取本次投递的结果，"success","running","failed"
- * @method void setStatus(string $Status) 设置本次投递的结果，"success","running","failed"
+ * @method string getStatus() 获取本次投递的结果。"success"，"running"，"failed"
+
+- success：任务成功。
+- running：任务处理中。
+- failed：任务失败。
+ * @method void setStatus(string $Status) 设置本次投递的结果。"success"，"running"，"failed"
+
+- success：任务成功。
+- running：任务处理中。
+- failed：任务失败。
  * @method string getMessage() 获取结果的详细信息
  * @method void setMessage(string $Message) 设置结果的详细信息
  */
@@ -77,7 +85,11 @@ class ShipperTaskInfo extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string 本次投递的结果，"success","running","failed"
+     * @var string 本次投递的结果。"success"，"running"，"failed"
+
+- success：任务成功。
+- running：任务处理中。
+- failed：任务失败。
      */
     public $Status;
 
@@ -94,7 +106,11 @@ class ShipperTaskInfo extends AbstractModel
      * @param integer $RangeEnd 本批投递的日志的结束时间戳， 毫秒
      * @param integer $StartTime 本次投递任务的开始时间戳， 毫秒
      * @param integer $EndTime 本次投递任务的结束时间戳， 毫秒
-     * @param string $Status 本次投递的结果，"success","running","failed"
+     * @param string $Status 本次投递的结果。"success"，"running"，"failed"
+
+- success：任务成功。
+- running：任务处理中。
+- failed：任务失败。
      * @param string $Message 结果的详细信息
      */
     function __construct()

@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBandwidthPackageId(string $BandwidthPackageId) 设置带宽包ID。可通过[DescribeBandwidthPackages](https://cloud.tencent.com/document/api/215/19209)接口返回值中的`BandwidthPackageId`获取。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getInternetServiceProvider() 获取线路类型。各种线路类型详情可参考：[EIP 的 IP 地址类型](https://cloud.tencent.com/document/product/1199/41646)。默认值：BGP。
+ * @method string getInternetServiceProvider() 获取线路类型。各种线路类型及支持地区详情可参考：[EIP 的 IP 地址类型](https://cloud.tencent.com/document/product/1199/41646)。默认值：BGP。
 
 <li>BGP：常规 BGP 线路</li>
 已开通静态单线IP白名单的用户，可选值：
@@ -46,7 +46,7 @@ use TencentCloud\Common\AbstractModel;
 <li>CUCC：中国联通</li>
 注意：仅部分地域支持静态单线IP。
 
- * @method void setInternetServiceProvider(string $InternetServiceProvider) 设置线路类型。各种线路类型详情可参考：[EIP 的 IP 地址类型](https://cloud.tencent.com/document/product/1199/41646)。默认值：BGP。
+ * @method void setInternetServiceProvider(string $InternetServiceProvider) 设置线路类型。各种线路类型及支持地区详情可参考：[EIP 的 IP 地址类型](https://cloud.tencent.com/document/product/1199/41646)。默认值：BGP。
 
 <li>BGP：常规 BGP 线路</li>
 已开通静态单线IP白名单的用户，可选值：
@@ -117,7 +117,7 @@ class InternetAccessible extends AbstractModel
     public $BandwidthPackageId;
 
     /**
-     * @var string 线路类型。各种线路类型详情可参考：[EIP 的 IP 地址类型](https://cloud.tencent.com/document/product/1199/41646)。默认值：BGP。
+     * @var string 线路类型。各种线路类型及支持地区详情可参考：[EIP 的 IP 地址类型](https://cloud.tencent.com/document/product/1199/41646)。默认值：BGP。
 
 <li>BGP：常规 BGP 线路</li>
 已开通静态单线IP白名单的用户，可选值：
@@ -168,7 +168,7 @@ class InternetAccessible extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BandwidthPackageId 带宽包ID。可通过[DescribeBandwidthPackages](https://cloud.tencent.com/document/api/215/19209)接口返回值中的`BandwidthPackageId`获取。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $InternetServiceProvider 线路类型。各种线路类型详情可参考：[EIP 的 IP 地址类型](https://cloud.tencent.com/document/product/1199/41646)。默认值：BGP。
+     * @param string $InternetServiceProvider 线路类型。各种线路类型及支持地区详情可参考：[EIP 的 IP 地址类型](https://cloud.tencent.com/document/product/1199/41646)。默认值：BGP。
 
 <li>BGP：常规 BGP 线路</li>
 已开通静态单线IP白名单的用户，可选值：

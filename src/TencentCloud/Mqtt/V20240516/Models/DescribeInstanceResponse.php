@@ -86,6 +86,12 @@ API：通过API手动注册
  * @method void setAutoSubscriptionPolicyLimit(integer $AutoSubscriptionPolicyLimit) 设置自动订阅规则条数限制
  * @method integer getMaxTopicFilterPerAutoSubscriptionPolicy() 获取单条自动订阅规则TopicFilter数限制
  * @method void setMaxTopicFilterPerAutoSubscriptionPolicy(integer $MaxTopicFilterPerAutoSubscriptionPolicy) 设置单条自动订阅规则TopicFilter数限制
+ * @method boolean getUseDefaultServerCert() 获取是否使用默认的服务端证书
+ * @method void setUseDefaultServerCert(boolean $UseDefaultServerCert) 设置是否使用默认的服务端证书
+ * @method integer getTrustedCaLimit() 获取服务端CA最大数量
+ * @method void setTrustedCaLimit(integer $TrustedCaLimit) 设置服务端CA最大数量
+ * @method integer getServerCertLimit() 获取服务端证书最大数量
+ * @method void setServerCertLimit(integer $ServerCertLimit) 设置服务端证书最大数量
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -237,6 +243,21 @@ API：通过API手动注册
     public $MaxTopicFilterPerAutoSubscriptionPolicy;
 
     /**
+     * @var boolean 是否使用默认的服务端证书
+     */
+    public $UseDefaultServerCert;
+
+    /**
+     * @var integer 服务端CA最大数量
+     */
+    public $TrustedCaLimit;
+
+    /**
+     * @var integer 服务端证书最大数量
+     */
+    public $ServerCertLimit;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -275,6 +296,9 @@ API：通过API手动注册
      * @param integer $MaxTopicFilterPerSharedSubscriptionGroup 单个共享订阅组TopicFilter数限制
      * @param integer $AutoSubscriptionPolicyLimit 自动订阅规则条数限制
      * @param integer $MaxTopicFilterPerAutoSubscriptionPolicy 单条自动订阅规则TopicFilter数限制
+     * @param boolean $UseDefaultServerCert 是否使用默认的服务端证书
+     * @param integer $TrustedCaLimit 服务端CA最大数量
+     * @param integer $ServerCertLimit 服务端证书最大数量
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -400,6 +424,18 @@ API：通过API手动注册
 
         if (array_key_exists("MaxTopicFilterPerAutoSubscriptionPolicy",$param) and $param["MaxTopicFilterPerAutoSubscriptionPolicy"] !== null) {
             $this->MaxTopicFilterPerAutoSubscriptionPolicy = $param["MaxTopicFilterPerAutoSubscriptionPolicy"];
+        }
+
+        if (array_key_exists("UseDefaultServerCert",$param) and $param["UseDefaultServerCert"] !== null) {
+            $this->UseDefaultServerCert = $param["UseDefaultServerCert"];
+        }
+
+        if (array_key_exists("TrustedCaLimit",$param) and $param["TrustedCaLimit"] !== null) {
+            $this->TrustedCaLimit = $param["TrustedCaLimit"];
+        }
+
+        if (array_key_exists("ServerCertLimit",$param) and $param["ServerCertLimit"] !== null) {
+            $this->ServerCertLimit = $param["ServerCertLimit"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

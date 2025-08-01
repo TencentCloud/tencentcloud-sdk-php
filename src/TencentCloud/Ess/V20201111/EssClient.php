@@ -78,6 +78,13 @@ use TencentCloud\Ess\V20201111\Models as Models;
 3. <font color='red'>只有撤销没有参与方签署过或只有自动签署签署过的合同，才会返还合同额度。</font>
 
 4. 撤销后可以看合同PDF内容的人员： 发起方的超管， 发起方自己，发起方撤销合同的操作人员，已经签署合同、已经填写合同、邀请填写已经补充信息的参与人员， 其他参与人员看不到合同的内容。
+ * @method Models\CreateBatchContractReviewTaskResponse CreateBatchContractReviewTask(Models\CreateBatchContractReviewTaskRequest $req) 此接口（CreateBatchContractReviewTask）用来通过上传后的PDF资源编号来批量创建合同智能审查任务。
+
+适用场景：根据合同内容识别出合同的风险信息。审查结果由AI生成，仅供参考。请结合相关法律法规和公司制度要求综合判断。
+
+注: 
+1. PDF格式限制大小为10M以下
+2. 仅支持5个PDF文件批量发起
  * @method Models\CreateBatchInformationExtractionTaskResponse CreateBatchInformationExtractionTask(Models\CreateBatchInformationExtractionTaskRequest $req) 此接口（CreateBatchInformationExtractionTask）用来通过上传后的PDF资源编号来批量创建合同智能审查任务。<br/>
 
 适用场景：根据合同关键词（字段名称）来提取PDF合同文件的字段结果信息。
@@ -778,7 +785,7 @@ use TencentCloud\Ess\V20201111\Models as Models;
  * @method Models\CreateUserNameChangeUrlResponse CreateUserNameChangeUrl(Models\CreateUserNameChangeUrlRequest $req) 生成个人用户实名更名链接，个人用户点击此链接进入更名流程（若用户未完成实名认证，则直接进入实名页面实名后再进行更名）。此链接为通用链接，任何点击生成链接的用户将会被引导至小程序个人更名页面完成更名。
 
 注： 调用此接口需要购买<font color="red"><b>单独的实名套餐包</b></font>。使用前请联系对接的客户经理沟通。
- * @method Models\CreateUserVerifyUrlResponse CreateUserVerifyUrl(Models\CreateUserVerifyUrlRequest $req) 生成个人用户实名认证链接，个人用户点击此链接进入实名流程（若用户已完成实名认证，则直接进入成功页面）。
+ * @method Models\CreateUserVerifyUrlResponse CreateUserVerifyUrl(Models\CreateUserVerifyUrlRequest $req) 生成个人用户实名认证链接，个人用户点击此链接进入实名流程（若用户已完成实名认证，则直接进入成功页面）。用户点击此接口生成的链接完成实名认证后，其数据将通过[企业引导个人实名认证后回调](https://qian.tencent.com/developers/company/callback_types_staffs/#%E5%8D%81%E4%BA%8C-%E4%BC%81%E4%B8%9A%E5%BC%95%E5%AF%BC%E4%B8%AA%E4%BA%BA%E5%AE%9E%E5%90%8D%E8%AE%A4%E8%AF%81%E5%90%8E%E5%9B%9E%E8%B0%83)返回
 
 注： 调用此接口需要购买<font color="red"><b>单独的实名套餐包</b></font>。使用前请联系对接的客户经理沟通。
  * @method Models\CreateWebThemeConfigResponse CreateWebThemeConfig(Models\CreateWebThemeConfigRequest $req) 用来设置本企业嵌入式页面个性化主题配置（例如是否展示电子签logo、定义主题色等），设置后获取的web签署界面都会使用此配置进行展示。
@@ -828,6 +835,7 @@ use TencentCloud\Ess\V20201111\Models as Models;
 
 嵌入页面长相如下：
 ![image](https://qcloudimg.tencent-cloud.cn/raw/c68047feddbc106e261870687b6ab89d.jpg)
+ * @method Models\DescribeContractReviewTaskResponse DescribeContractReviewTask(Models\DescribeContractReviewTaskRequest $req) 本接口（DescribeContractReviewTask）用于获取合同审查任务详情，包括任务的状态和识别出的风险信息。
  * @method Models\DescribeExtendedServiceAuthDetailResponse DescribeExtendedServiceAuthDetail(Models\DescribeExtendedServiceAuthDetailRequest $req) 查询企业扩展服务的授权详情（列表），当前支持查询以下内容：
 1. 企业自动签（本企业授权、集团企业授权、合作企业授权）
 2. 批量签署能力

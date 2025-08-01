@@ -30,6 +30,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\AlterDMSPartitionResponse AlterDMSPartition(Models\AlterDMSPartitionRequest $req) DMS元数据更新分区
  * @method Models\AlterDMSTableResponse AlterDMSTable(Models\AlterDMSTableRequest $req) DMS元数据更新表
  * @method Models\AssignMangedTablePropertiesResponse AssignMangedTableProperties(Models\AssignMangedTablePropertiesRequest $req) 分配原生表表属性
+ * @method Models\AssociateDatasourceHouseResponse AssociateDatasourceHouse(Models\AssociateDatasourceHouseRequest $req) 绑定数据源和队列
  * @method Models\AttachUserPolicyResponse AttachUserPolicy(Models\AttachUserPolicyRequest $req) 绑定鉴权策略到用户
  * @method Models\AttachWorkGroupPolicyResponse AttachWorkGroupPolicy(Models\AttachWorkGroupPolicyRequest $req) 绑定鉴权策略到工作组
  * @method Models\BindWorkGroupsToUserResponse BindWorkGroupsToUser(Models\BindWorkGroupsToUserRequest $req) 绑定工作组到用户
@@ -59,6 +60,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\CreateSparkAppTaskResponse CreateSparkAppTask(Models\CreateSparkAppTaskRequest $req) 启动Spark作业
  * @method Models\CreateSparkSessionBatchSQLResponse CreateSparkSessionBatchSQL(Models\CreateSparkSessionBatchSQLRequest $req) 本接口（CreateSparkSessionBatchSQL）用于向Spark作业引擎提交Spark SQL批任务。
  * @method Models\CreateSparkSubmitTaskResponse CreateSparkSubmitTask(Models\CreateSparkSubmitTaskRequest $req) 本接口（CreateSparkSubmitTask）用于提交SparkSbumit批流任务。
+ * @method Models\CreateStandardEngineResourceGroupResponse CreateStandardEngineResourceGroup(Models\CreateStandardEngineResourceGroupRequest $req) 创建标准引擎资源组
  * @method Models\CreateStoreLocationResponse CreateStoreLocation(Models\CreateStoreLocationRequest $req) 该接口（CreateStoreLocation）新增或覆盖计算结果存储位置。
  * @method Models\CreateTableResponse CreateTable(Models\CreateTableRequest $req) 本接口（CreateTable）用于生成建表SQL。
  * @method Models\CreateTaskResponse CreateTask(Models\CreateTaskRequest $req) 本接口（CreateTask）用于创建并执行SQL任务。（推荐使用CreateTasks接口）
@@ -67,15 +69,19 @@ use TencentCloud\Dlc\V20210125\Models as Models;
 
 按顺序创建任务（已经废弃，后期不再维护，请使用接口CreateTasks）
  * @method Models\CreateUserResponse CreateUser(Models\CreateUserRequest $req) 创建用户
+ * @method Models\CreateUserVpcConnectionResponse CreateUserVpcConnection(Models\CreateUserVpcConnectionRequest $req) 创建用户vpc连接到指定引擎网络
  * @method Models\CreateWorkGroupResponse CreateWorkGroup(Models\CreateWorkGroupRequest $req) 创建工作组
  * @method Models\DeleteCHDFSBindingProductResponse DeleteCHDFSBindingProduct(Models\DeleteCHDFSBindingProductRequest $req) 此接口（DeleteCHDFSBindingProduct）用于删除元数据加速桶和产品绑定关系
  * @method Models\DeleteDataEngineResponse DeleteDataEngine(Models\DeleteDataEngineRequest $req) 删除数据引擎
+ * @method Models\DeleteNativeSparkSessionResponse DeleteNativeSparkSession(Models\DeleteNativeSparkSessionRequest $req) 根据spark session名称销毁eg spark session
  * @method Models\DeleteNotebookSessionResponse DeleteNotebookSession(Models\DeleteNotebookSessionRequest $req) 本接口（DeleteNotebookSession）用于删除交互式session（notebook）
  * @method Models\DeleteScriptResponse DeleteScript(Models\DeleteScriptRequest $req) 该接口（DeleteScript）用于删除sql脚本。
  * @method Models\DeleteSparkAppResponse DeleteSparkApp(Models\DeleteSparkAppRequest $req) 删除spark作业
+ * @method Models\DeleteStandardEngineResourceGroupResponse DeleteStandardEngineResourceGroup(Models\DeleteStandardEngineResourceGroupRequest $req) 删除标准引擎资源组
  * @method Models\DeleteTableResponse DeleteTable(Models\DeleteTableRequest $req) 删除表
  * @method Models\DeleteThirdPartyAccessUserResponse DeleteThirdPartyAccessUser(Models\DeleteThirdPartyAccessUserRequest $req) 本接口（RegisterThirdPartyAccessUser）用于移除第三方平台访问
  * @method Models\DeleteUserResponse DeleteUser(Models\DeleteUserRequest $req) 删除用户
+ * @method Models\DeleteUserVpcConnectionResponse DeleteUserVpcConnection(Models\DeleteUserVpcConnectionRequest $req) 删除用户vpc到引擎网络的连接
  * @method Models\DeleteUsersFromWorkGroupResponse DeleteUsersFromWorkGroup(Models\DeleteUsersFromWorkGroupRequest $req) 从工作组中删除用户
  * @method Models\DeleteWorkGroupResponse DeleteWorkGroup(Models\DeleteWorkGroupRequest $req) 删除工作组
  * @method Models\DescribeAdvancedStoreLocationResponse DescribeAdvancedStoreLocation(Models\DescribeAdvancedStoreLocationRequest $req) 查询sql查询界面高级设置
@@ -89,15 +95,20 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DescribeDataEngineEventsResponse DescribeDataEngineEvents(Models\DescribeDataEngineEventsRequest $req) 查询数据引擎事件
  * @method Models\DescribeDataEngineImageVersionsResponse DescribeDataEngineImageVersions(Models\DescribeDataEngineImageVersionsRequest $req) 本接口（DescribeDataEngineImageVersions）用于获取独享集群大版本镜像列表。
  * @method Models\DescribeDataEnginePythonSparkImagesResponse DescribeDataEnginePythonSparkImages(Models\DescribeDataEnginePythonSparkImagesRequest $req) 本接口（DescribeDataEnginePythonSparkImages）用于获取PYSPARK镜像列表
+ * @method Models\DescribeDataEngineSessionParametersResponse DescribeDataEngineSessionParameters(Models\DescribeDataEngineSessionParametersRequest $req) 本接口（DescribeDataEngineSessionParameters）用于获取指定小版本下的Session配置。
  * @method Models\DescribeDataEnginesResponse DescribeDataEngines(Models\DescribeDataEnginesRequest $req) 本接口（DescribeDataEngines）用于查询DataEngines信息列表.
  * @method Models\DescribeDataEnginesScaleDetailResponse DescribeDataEnginesScaleDetail(Models\DescribeDataEnginesScaleDetailRequest $req) 查询引擎规格详情
  * @method Models\DescribeDatabasesResponse DescribeDatabases(Models\DescribeDatabasesRequest $req) 本接口（DescribeDatabases）用于查询数据库列表。
  * @method Models\DescribeDatasourceConnectionResponse DescribeDatasourceConnection(Models\DescribeDatasourceConnectionRequest $req) 本接口（DescribeDatasourceConnection）用于查询数据源信息
+ * @method Models\DescribeEngineNetworksResponse DescribeEngineNetworks(Models\DescribeEngineNetworksRequest $req) 查询引擎网络信息
+ * @method Models\DescribeEngineNodeSpecResponse DescribeEngineNodeSpec(Models\DescribeEngineNodeSpecRequest $req) 查询引擎可用的节点规格
  * @method Models\DescribeEngineUsageInfoResponse DescribeEngineUsageInfo(Models\DescribeEngineUsageInfoRequest $req) 本接口根据引擎ID查询数据引擎资源使用情况
  * @method Models\DescribeForbiddenTableProResponse DescribeForbiddenTablePro(Models\DescribeForbiddenTableProRequest $req) 本接口（DescribeForbiddenTablePro）用于查询被禁用的表属性列表（新）
  * @method Models\DescribeLakeFsDirSummaryResponse DescribeLakeFsDirSummary(Models\DescribeLakeFsDirSummaryRequest $req) 查询托管存储指定目录的Summary
  * @method Models\DescribeLakeFsInfoResponse DescribeLakeFsInfo(Models\DescribeLakeFsInfoRequest $req) 查询用户的托管存储信息
  * @method Models\DescribeLakeFsTaskResultResponse DescribeLakeFsTaskResult(Models\DescribeLakeFsTaskResultRequest $req) 获取LakeFs上task执行结果访问信息
+ * @method Models\DescribeNativeSparkSessionsResponse DescribeNativeSparkSessions(Models\DescribeNativeSparkSessionsRequest $req) 根据资源组获取spark session列表
+ * @method Models\DescribeNetworkConnectionsResponse DescribeNetworkConnections(Models\DescribeNetworkConnectionsRequest $req) 查询网络配置列表
  * @method Models\DescribeNotebookSessionResponse DescribeNotebookSession(Models\DescribeNotebookSessionRequest $req) 本接口（DescribeNotebookSession）用于查询交互式 session详情信息
  * @method Models\DescribeNotebookSessionLogResponse DescribeNotebookSessionLog(Models\DescribeNotebookSessionLogRequest $req) 本接口（DescribeNotebookSessionLog）用于查询交互式 session日志
  * @method Models\DescribeNotebookSessionStatementResponse DescribeNotebookSessionStatement(Models\DescribeNotebookSessionStatementRequest $req) 本接口（DescribeNotebookSessionStatement）用于查询session 中执行任务的详情
@@ -107,12 +118,15 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DescribeOtherCHDFSBindingListResponse DescribeOtherCHDFSBindingList(Models\DescribeOtherCHDFSBindingListRequest $req) 此接口（DescribeOtherCHDFSBindingList）用于查询其他产品元数据加速桶绑定列表
  * @method Models\DescribeResultDownloadResponse DescribeResultDownload(Models\DescribeResultDownloadRequest $req) 查询结果下载任务
  * @method Models\DescribeScriptsResponse DescribeScripts(Models\DescribeScriptsRequest $req) 该接口（DescribeScripts）用于查询SQL脚本列表
+ * @method Models\DescribeSessionImageVersionResponse DescribeSessionImageVersion(Models\DescribeSessionImageVersionRequest $req) 获取指定大版本下所有小版本的所有内置镜像
  * @method Models\DescribeSparkAppJobResponse DescribeSparkAppJob(Models\DescribeSparkAppJobRequest $req) 查询spark作业信息
  * @method Models\DescribeSparkAppJobsResponse DescribeSparkAppJobs(Models\DescribeSparkAppJobsRequest $req) 查询spark作业列表
  * @method Models\DescribeSparkAppTasksResponse DescribeSparkAppTasks(Models\DescribeSparkAppTasksRequest $req) 查询Spark作业的运行任务列表
  * @method Models\DescribeSparkSessionBatchSQLResponse DescribeSparkSessionBatchSQL(Models\DescribeSparkSessionBatchSQLRequest $req) 本接口（DescribeSparkSessionBatchSQL）用于查询Spark SQL批任务运行状态
  * @method Models\DescribeSparkSessionBatchSQLCostResponse DescribeSparkSessionBatchSQLCost(Models\DescribeSparkSessionBatchSQLCostRequest $req) 本接口（DescribeSparkSessionBatchSQLCost）用于查询Spark SQL批任务消耗
  * @method Models\DescribeSparkSessionBatchSqlLogResponse DescribeSparkSessionBatchSqlLog(Models\DescribeSparkSessionBatchSqlLogRequest $req) 本接口（DescribeSparkSessionBatchSqlLog）用于查询Spark SQL批任务日志
+ * @method Models\DescribeStandardEngineResourceGroupConfigInfoResponse DescribeStandardEngineResourceGroupConfigInfo(Models\DescribeStandardEngineResourceGroupConfigInfoRequest $req) 查询标准引擎资源组信息
+ * @method Models\DescribeStandardEngineResourceGroupsResponse DescribeStandardEngineResourceGroups(Models\DescribeStandardEngineResourceGroupsRequest $req) 查询标准引擎资源组信息
  * @method Models\DescribeStoreLocationResponse DescribeStoreLocation(Models\DescribeStoreLocationRequest $req) 查询计算结果存储位置。
  * @method Models\DescribeSubUserAccessPolicyResponse DescribeSubUserAccessPolicy(Models\DescribeSubUserAccessPolicyRequest $req) 本接口（DescribeSubUserAccessPolicy）用于开通了第三方平台访问的用户，查询其子用户的访问策略
  * @method Models\DescribeTableResponse DescribeTable(Models\DescribeTableRequest $req) 本接口（DescribeTable），用于查询单个表的详细信息。
@@ -133,6 +147,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DescribeUserRegisterTimeResponse DescribeUserRegisterTime(Models\DescribeUserRegisterTimeRequest $req) 该接口（DescribeUserRegisterTime）用于查询当前用户注册时间，并判断是否是老用户。
  * @method Models\DescribeUserRolesResponse DescribeUserRoles(Models\DescribeUserRolesRequest $req) 列举用户角色信息
  * @method Models\DescribeUserTypeResponse DescribeUserType(Models\DescribeUserTypeRequest $req) 获取用户类型
+ * @method Models\DescribeUserVpcConnectionResponse DescribeUserVpcConnection(Models\DescribeUserVpcConnectionRequest $req) 查询用户vpc到引擎网络的连接
  * @method Models\DescribeUsersResponse DescribeUsers(Models\DescribeUsersRequest $req) 获取用户列表信息
  * @method Models\DescribeViewsResponse DescribeViews(Models\DescribeViewsRequest $req) 本接口（DescribeViews）用于查询数据视图列表。
  * @method Models\DescribeWorkGroupInfoResponse DescribeWorkGroupInfo(Models\DescribeWorkGroupInfoRequest $req) 获取工作组详细信息
@@ -145,6 +160,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\GenerateCreateMangedTableSqlResponse GenerateCreateMangedTableSql(Models\GenerateCreateMangedTableSqlRequest $req) 生成创建托管表语句
  * @method Models\GetOptimizerPolicyResponse GetOptimizerPolicy(Models\GetOptimizerPolicyRequest $req) GetOptimizerPolicy
  * @method Models\GrantDLCCatalogAccessResponse GrantDLCCatalogAccess(Models\GrantDLCCatalogAccessRequest $req) 授权访问DLC Catalog
+ * @method Models\LaunchStandardEngineResourceGroupsResponse LaunchStandardEngineResourceGroups(Models\LaunchStandardEngineResourceGroupsRequest $req) 启动标准引擎资源组
  * @method Models\ListTaskJobLogDetailResponse ListTaskJobLogDetail(Models\ListTaskJobLogDetailRequest $req) 本接口（ListTaskJobLogDetail）用于获取spark 作业任务日志详情
  * @method Models\ListTaskJobLogNameResponse ListTaskJobLogName(Models\ListTaskJobLogNameRequest $req) 本接口（ListTaskJobLogName）用于获取spark-jar日志名称列表
  * @method Models\LockMetaDataResponse LockMetaData(Models\LockMetaDataRequest $req) 元数据锁
@@ -156,6 +172,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\ModifyUserResponse ModifyUser(Models\ModifyUserRequest $req) 修改用户信息
  * @method Models\ModifyUserTypeResponse ModifyUserType(Models\ModifyUserTypeRequest $req) 修改用户类型。只有管理员用户能够调用该接口进行操作
  * @method Models\ModifyWorkGroupResponse ModifyWorkGroup(Models\ModifyWorkGroupRequest $req) 修改工作组信息
+ * @method Models\PauseStandardEngineResourceGroupsResponse PauseStandardEngineResourceGroups(Models\PauseStandardEngineResourceGroupsRequest $req) 暂停标准引擎session
  * @method Models\QueryInternalTableWarehouseResponse QueryInternalTableWarehouse(Models\QueryInternalTableWarehouseRequest $req) 本接口（QueryInternalTableWarehouse）用于获取原生表warehouse路径
  * @method Models\QueryResultResponse QueryResult(Models\QueryResultRequest $req) 获取任务结果查询
  * @method Models\QueryTaskCostDetailResponse QueryTaskCostDetail(Models\QueryTaskCostDetailRequest $req) 该接口（QueryTaskCostDetail）用于查询任务消耗明细
@@ -169,10 +186,16 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\SwitchDataEngineResponse SwitchDataEngine(Models\SwitchDataEngineRequest $req) 切换主备集群
  * @method Models\SwitchDataEngineImageResponse SwitchDataEngineImage(Models\SwitchDataEngineImageRequest $req) 切换引擎镜像版本
  * @method Models\UnbindWorkGroupsFromUserResponse UnbindWorkGroupsFromUser(Models\UnbindWorkGroupsFromUserRequest $req) 解绑用户上的用户组
+ * @method Models\UnboundDatasourceHouseResponse UnboundDatasourceHouse(Models\UnboundDatasourceHouseRequest $req) 解绑数据源与队列
  * @method Models\UnlockMetaDataResponse UnlockMetaData(Models\UnlockMetaDataRequest $req) 元数据解锁
  * @method Models\UpdateDataEngineResponse UpdateDataEngine(Models\UpdateDataEngineRequest $req) 本接口用于更新数据引擎配置
  * @method Models\UpdateDataEngineConfigResponse UpdateDataEngineConfig(Models\UpdateDataEngineConfigRequest $req) 用户某种操作，触发引擎配置修改
+ * @method Models\UpdateEngineResourceGroupNetworkConfigInfoResponse UpdateEngineResourceGroupNetworkConfigInfo(Models\UpdateEngineResourceGroupNetworkConfigInfoRequest $req) 更新标准引擎资源组网络配置信息
+ * @method Models\UpdateNetworkConnectionResponse UpdateNetworkConnection(Models\UpdateNetworkConnectionRequest $req) 更新网络配置
  * @method Models\UpdateRowFilterResponse UpdateRowFilter(Models\UpdateRowFilterRequest $req) 此接口用于更新行过滤规则。注意只能更新过滤规则，不能更新规格对象catalog，database和table。
+ * @method Models\UpdateStandardEngineResourceGroupBaseInfoResponse UpdateStandardEngineResourceGroupBaseInfo(Models\UpdateStandardEngineResourceGroupBaseInfoRequest $req) 更新标准引擎资源组基础信息
+ * @method Models\UpdateStandardEngineResourceGroupConfigInfoResponse UpdateStandardEngineResourceGroupConfigInfo(Models\UpdateStandardEngineResourceGroupConfigInfoRequest $req) 更新标准引擎资源组基础信息
+ * @method Models\UpdateStandardEngineResourceGroupResourceInfoResponse UpdateStandardEngineResourceGroupResourceInfo(Models\UpdateStandardEngineResourceGroupResourceInfoRequest $req) 更新标准引擎资源组基础信息
  * @method Models\UpdateUserDataEngineConfigResponse UpdateUserDataEngineConfig(Models\UpdateUserDataEngineConfigRequest $req) 修改用户引擎自定义配置
  * @method Models\UpgradeDataEngineImageResponse UpgradeDataEngineImage(Models\UpgradeDataEngineImageRequest $req) 升级引擎镜像
  */

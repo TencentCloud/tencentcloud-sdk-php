@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDocumentParseResultUrl(string $DocumentParseResultUrl) 设置 解析文件结果。
  * @method array getFailedPages() 获取失败页码。
  * @method void setFailedPages(array $FailedPages) 设置失败页码。
+ * @method PageUsage getUsage() 获取消耗页数
+ * @method void setUsage(PageUsage $Usage) 设置消耗页数
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。本接口为流式响应接口，当请求成功时，RequestId 会被放在 HTTP 响应的 Header "X-TC-RequestId" 中。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。本接口为流式响应接口，当请求成功时，RequestId 会被放在 HTTP 响应的 Header "X-TC-RequestId" 中。
  */
@@ -47,6 +49,11 @@ class ParseDocumentResponse extends AbstractModel
     public $FailedPages;
 
     /**
+     * @var PageUsage 消耗页数
+     */
+    public $Usage;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。本接口为流式响应接口，当请求成功时，RequestId 会被放在 HTTP 响应的 Header "X-TC-RequestId" 中。
      */
     public $RequestId;
@@ -55,6 +62,7 @@ class ParseDocumentResponse extends AbstractModel
      * @param string $Progress 进度：0-100。
      * @param string $DocumentParseResultUrl  解析文件结果。
      * @param array $FailedPages 失败页码。
+     * @param PageUsage $Usage 消耗页数
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。本接口为流式响应接口，当请求成功时，RequestId 会被放在 HTTP 响应的 Header "X-TC-RequestId" 中。
      */
     function __construct()
@@ -80,6 +88,11 @@ class ParseDocumentResponse extends AbstractModel
 
         if (array_key_exists("FailedPages",$param) and $param["FailedPages"] !== null) {
             $this->FailedPages = $param["FailedPages"];
+        }
+
+        if (array_key_exists("Usage",$param) and $param["Usage"] !== null) {
+            $this->Usage = new PageUsage();
+            $this->Usage->deserialize($param["Usage"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

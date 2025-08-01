@@ -40,6 +40,14 @@ API：手动通过API注册
  * @method void setAutomaticActivation(boolean $AutomaticActivation) 设置自动注册证书是否自动激活
  * @method boolean getAuthorizationPolicy() 获取授权策略开关
  * @method void setAuthorizationPolicy(boolean $AuthorizationPolicy) 设置授权策略开关
+ * @method boolean getUseDefaultServerCert() 获取是否使用默认的服务端证书
+ * @method void setUseDefaultServerCert(boolean $UseDefaultServerCert) 设置是否使用默认的服务端证书
+ * @method string getX509Mode() 获取TLS：单向认证
+mTLS；双向认证
+BYOC：一机一证
+ * @method void setX509Mode(string $X509Mode) 设置TLS：单向认证
+mTLS；双向认证
+BYOC：一机一证
  */
 class ModifyInstanceRequest extends AbstractModel
 {
@@ -84,6 +92,18 @@ API：手动通过API注册
     public $AuthorizationPolicy;
 
     /**
+     * @var boolean 是否使用默认的服务端证书
+     */
+    public $UseDefaultServerCert;
+
+    /**
+     * @var string TLS：单向认证
+mTLS；双向认证
+BYOC：一机一证
+     */
+    public $X509Mode;
+
+    /**
      * @param string $InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      * @param string $Name 要修改实例名称，不能为空, 3-64个字符，只能包含数字、字母、“-”和“_”。
      * @param string $Remark 要修改的备注信息，最多128个字符。
@@ -94,6 +114,10 @@ JITP：自动注册
 API：手动通过API注册
      * @param boolean $AutomaticActivation 自动注册证书是否自动激活
      * @param boolean $AuthorizationPolicy 授权策略开关
+     * @param boolean $UseDefaultServerCert 是否使用默认的服务端证书
+     * @param string $X509Mode TLS：单向认证
+mTLS；双向认证
+BYOC：一机一证
      */
     function __construct()
     {
@@ -134,6 +158,14 @@ API：手动通过API注册
 
         if (array_key_exists("AuthorizationPolicy",$param) and $param["AuthorizationPolicy"] !== null) {
             $this->AuthorizationPolicy = $param["AuthorizationPolicy"];
+        }
+
+        if (array_key_exists("UseDefaultServerCert",$param) and $param["UseDefaultServerCert"] !== null) {
+            $this->UseDefaultServerCert = $param["UseDefaultServerCert"];
+        }
+
+        if (array_key_exists("X509Mode",$param) and $param["X509Mode"] !== null) {
+            $this->X509Mode = $param["X509Mode"];
         }
     }
 }

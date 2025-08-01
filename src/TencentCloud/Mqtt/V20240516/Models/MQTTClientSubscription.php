@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLag(integer $Lag) 设置堆积数量
  * @method integer getInflight() 获取投递未确认数量
  * @method void setInflight(integer $Inflight) 设置投递未确认数量
+ * @method array getUserProperties() 获取用户属性
+ * @method void setUserProperties(array $UserProperties) 设置用户属性
  */
 class MQTTClientSubscription extends AbstractModel
 {
@@ -61,6 +63,11 @@ class MQTTClientSubscription extends AbstractModel
     public $Inflight;
 
     /**
+     * @var array 用户属性
+     */
+    public $UserProperties;
+
+    /**
      * @param string $TopicFilter topic 订阅
      * @param integer $Qos 服务质量等级
 0: 至多一次
@@ -68,6 +75,7 @@ class MQTTClientSubscription extends AbstractModel
 2: 恰好一次
      * @param integer $Lag 堆积数量
      * @param integer $Inflight 投递未确认数量
+     * @param array $UserProperties 用户属性
      */
     function __construct()
     {
@@ -96,6 +104,15 @@ class MQTTClientSubscription extends AbstractModel
 
         if (array_key_exists("Inflight",$param) and $param["Inflight"] !== null) {
             $this->Inflight = $param["Inflight"];
+        }
+
+        if (array_key_exists("UserProperties",$param) and $param["UserProperties"] !== null) {
+            $this->UserProperties = [];
+            foreach ($param["UserProperties"] as $key => $value){
+                $obj = new SubscriptionUserProperty();
+                $obj->deserialize($value);
+                array_push($this->UserProperties, $obj);
+            }
         }
     }
 }

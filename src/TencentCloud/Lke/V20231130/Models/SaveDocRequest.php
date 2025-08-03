@@ -76,6 +76,8 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
  * @method void setCateBizId(string $CateBizId) 设置分类ID
  * @method boolean getIsDownload() 获取是否可下载，IsRefer为true并且ReferUrlType为0时，该值才有意义
  * @method void setIsDownload(boolean $IsDownload) 设置是否可下载，IsRefer为true并且ReferUrlType为0时，该值才有意义
+ * @method array getDuplicateFileHandles() 获取重复文档处理方式，按顺序匹配第一个满足条件的方式处理
+ * @method void setDuplicateFileHandles(array $DuplicateFileHandles) 设置重复文档处理方式，按顺序匹配第一个满足条件的方式处理
  */
 class SaveDocRequest extends AbstractModel
 {
@@ -180,6 +182,11 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
     public $IsDownload;
 
     /**
+     * @var array 重复文档处理方式，按顺序匹配第一个满足条件的方式处理
+     */
+    public $DuplicateFileHandles;
+
+    /**
      * @param string $BotBizId 应用ID
      * @param string $FileName 文件名
      * @param string $FileType 文档支持下面类型
@@ -208,6 +215,7 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
      * @param integer $Opt 文档操作类型：1：批量导入（批量导入问答对）；2:文档导入（正常导入单个文档） 默认为1  <br> 请注意，opt=1的时候请从腾讯云智能体开发平台页面下载excel模板
      * @param string $CateBizId 分类ID
      * @param boolean $IsDownload 是否可下载，IsRefer为true并且ReferUrlType为0时，该值才有意义
+     * @param array $DuplicateFileHandles 重复文档处理方式，按顺序匹配第一个满足条件的方式处理
      */
     function __construct()
     {
@@ -297,6 +305,15 @@ cos_hash为文档唯一性标识，与文件名无关 相同的cos_hash会被判
 
         if (array_key_exists("IsDownload",$param) and $param["IsDownload"] !== null) {
             $this->IsDownload = $param["IsDownload"];
+        }
+
+        if (array_key_exists("DuplicateFileHandles",$param) and $param["DuplicateFileHandles"] !== null) {
+            $this->DuplicateFileHandles = [];
+            foreach ($param["DuplicateFileHandles"] as $key => $value){
+                $obj = new DuplicateFileHandle();
+                $obj->deserialize($value);
+                array_push($this->DuplicateFileHandles, $obj);
+            }
         }
     }
 }

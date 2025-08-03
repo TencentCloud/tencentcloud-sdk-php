@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEngineGeneration(string $EngineGeneration) 设置引擎版本，有效值：Native/SuperSQL，为空时默认获取SuperSQL引擎
  * @method string getEngineTypeDetail() 获取引擎类型，支持：SparkSQL、SparkBatch、PrestoSQL、Kyuubi
  * @method void setEngineTypeDetail(string $EngineTypeDetail) 设置引擎类型，支持：SparkSQL、SparkBatch、PrestoSQL、Kyuubi
+ * @method boolean getListHasListener() 获取默认 false, 为 true 时仅列出具有洞察 listener 的引擎
+ * @method void setListHasListener(boolean $ListHasListener) 设置默认 false, 为 true 时仅列出具有洞察 listener 的引擎
  */
 class DescribeDataEnginesRequest extends AbstractModel
 {
@@ -115,6 +117,11 @@ class DescribeDataEnginesRequest extends AbstractModel
     public $EngineTypeDetail;
 
     /**
+     * @var boolean 默认 false, 为 true 时仅列出具有洞察 listener 的引擎
+     */
+    public $ListHasListener;
+
+    /**
      * @param integer $Offset 偏移量，默认为0。
      * @param array $Filters 过滤类型，支持如下的过滤类型，传参Name应为以下其中一个, data-engine-name - String（数据引擎名称）：engine-type - String（引擎类型：spark：spark 引擎，presto：presto引擎），state - String (数据引擎状态 -2已删除 -1失败 0初始化中 1挂起 2运行中 3准备删除 4删除中) ， mode - String（计费模式 0共享模式 1按量计费 2包年包月） ， create-time - String（创建时间，10位时间戳） message - String （描述信息），cluster-type - String (集群资源类型 spark_private/presto_private/presto_cu/spark_cu/kyuubi_cu)，engine-id - String（数据引擎ID），key-word - String（数据引擎名称或集群资源类型或描述信息模糊搜索），engine-exec-type - String（引擎执行任务类型，SQL/BATCH），engine-network-id - String（引擎网络Id）
      * @param string $SortBy 排序字段，支持如下字段类型，create-time
@@ -128,6 +135,7 @@ class DescribeDataEnginesRequest extends AbstractModel
      * @param array $DatasourceConnectionNameSet 网络配置列表，若传入该参数，则返回网络配置关联的计算引擎
      * @param string $EngineGeneration 引擎版本，有效值：Native/SuperSQL，为空时默认获取SuperSQL引擎
      * @param string $EngineTypeDetail 引擎类型，支持：SparkSQL、SparkBatch、PrestoSQL、Kyuubi
+     * @param boolean $ListHasListener 默认 false, 为 true 时仅列出具有洞察 listener 的引擎
      */
     function __construct()
     {
@@ -197,6 +205,10 @@ class DescribeDataEnginesRequest extends AbstractModel
 
         if (array_key_exists("EngineTypeDetail",$param) and $param["EngineTypeDetail"] !== null) {
             $this->EngineTypeDetail = $param["EngineTypeDetail"];
+        }
+
+        if (array_key_exists("ListHasListener",$param) and $param["ListHasListener"] !== null) {
+            $this->ListHasListener = $param["ListHasListener"];
         }
     }
 }

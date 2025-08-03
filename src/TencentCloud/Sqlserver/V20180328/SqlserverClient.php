@@ -71,7 +71,7 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\DescribeCrossRegionsResponse DescribeCrossRegions(Models\DescribeCrossRegionsRequest $req) 本接口(DescribeCrossRegions)用于查询跨地域备份的目标地域。
  * @method Models\DescribeDBCharsetsResponse DescribeDBCharsets(Models\DescribeDBCharsetsRequest $req) 本接口（DescribeDBCharsets）用于查询实例支持的数据库字符集。
  * @method Models\DescribeDBInstanceInterResponse DescribeDBInstanceInter(Models\DescribeDBInstanceInterRequest $req) 本接口（DescribeDBInstanceInter）用于查询互通实例的信息。
- * @method Models\DescribeDBInstancesResponse DescribeDBInstances(Models\DescribeDBInstancesRequest $req) 本接口(DescribeDBInstances)用于查询实例列表。
+ * @method Models\DescribeDBInstancesResponse DescribeDBInstances(Models\DescribeDBInstancesRequest $req) 本接口（DescribeDBInstances）用于查询实例列表。
  * @method Models\DescribeDBInstancesAttributeResponse DescribeDBInstancesAttribute(Models\DescribeDBInstancesAttributeRequest $req) 本接口（DescribeDBInstancesAttribute）用于查询实例附属属性
  * @method Models\DescribeDBPrivilegeByAccountResponse DescribeDBPrivilegeByAccount(Models\DescribeDBPrivilegeByAccountRequest $req) 本接口(DescribeDBPrivilegeByAccount)用于查询账号关联的数据库和权限信息
  * @method Models\DescribeDBRestoreTimeResponse DescribeDBRestoreTime(Models\DescribeDBRestoreTimeRequest $req) 本接口（DescribeDBRestoreTime）用于查询可回档的数据库

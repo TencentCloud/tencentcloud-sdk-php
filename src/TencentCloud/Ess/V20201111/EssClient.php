@@ -84,14 +84,14 @@ use TencentCloud\Ess\V20201111\Models as Models;
 
 注: 
 1. PDF格式限制大小为10M以下
-2. 仅支持5个PDF文件批量发起
+2. 仅支持5份PDF文件批量发起（一份PDF对应一个审查任务）
  * @method Models\CreateBatchInformationExtractionTaskResponse CreateBatchInformationExtractionTask(Models\CreateBatchInformationExtractionTaskRequest $req) 此接口（CreateBatchInformationExtractionTask）用来通过上传后的PDF资源编号来批量创建合同智能审查任务。<br/>
 
 适用场景：根据合同关键词（字段名称）来提取PDF合同文件的字段结果信息。
 
 注: 
 1. PDF格式限制大小为10M以下
-2. 仅支持5个PDF文件批量发起
+2. 仅支持5个PDF文件批量发起（一份PDF对应一个合同提取任务）
  * @method Models\CreateBatchInitOrganizationUrlResponse CreateBatchInitOrganizationUrl(Models\CreateBatchInitOrganizationUrlRequest $req) 支持企业进行批量初始化操作：
 
 此接口存在以下限制：
@@ -615,7 +615,7 @@ use TencentCloud\Ess\V20201111\Models as Models;
  * @method Models\CreateModifyAdminAuthorizationUrlResponse CreateModifyAdminAuthorizationUrl(Models\CreateModifyAdminAuthorizationUrlRequest $req) 本接口（CreateModifyAdminAuthorizationUrl）用于重新上传超管授权书。
 
 注意:
-1. 重新上传超管授权书，必须是审核失败的情况下才能重新上传,可以通过回调[!授权书认证审核结果回调](https://qian.tencent.com/developers/company/callback_types_staffs#%E5%8D%81%E5%85%AD-%E6%8E%88%E6%9D%83%E4%B9%A6%E8%AE%A4%E8%AF%81%E5%AE%A1%E6%A0%B8%E7%BB%93%E6%9E%9C%E5%9B%9E%E8%B0%83)得到
+1. 重新上传超管授权书，必须是审核失败的情况下才能重新上传,可以通过回调[!企业认证审核结果回调](https://qian.tencent.com/developers/company/callback_types_staffs#%E5%8D%81%E5%85%AD-%E6%8E%88%E6%9D%83%E4%B9%A6%E8%AE%A4%E8%AF%81%E5%AE%A1%E6%A0%B8%E7%BB%93%E6%9E%9C%E5%9B%9E%E8%B0%83)得到授权书是否审核失败的结果。
  * @method Models\CreateMultiFlowSignQRCodeResponse CreateMultiFlowSignQRCode(Models\CreateMultiFlowSignQRCodeRequest $req) 此接口（CreateMultiFlowSignQRCode）用于创建一码多签签署码。
 
 **适用场景**:

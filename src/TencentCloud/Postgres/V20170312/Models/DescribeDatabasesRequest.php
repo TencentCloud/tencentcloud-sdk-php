@@ -20,19 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDatabases请求参数结构体
  *
- * @method string getDBInstanceId() 获取实例ID
- * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID
+ * @method string getDBInstanceId() 获取实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/product/409/16773)接口获取
+ * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/product/409/16773)接口获取
  * @method array getFilters() 获取按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：database-name：按照数据库名称过滤，类型为string。此处使用模糊匹配搜索符合条件的数据库。
  * @method void setFilters(array $Filters) 设置按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：database-name：按照数据库名称过滤，类型为string。此处使用模糊匹配搜索符合条件的数据库。
  * @method integer getOffset() 获取数据偏移量，从0开始。	
  * @method void setOffset(integer $Offset) 设置数据偏移量，从0开始。	
- * @method integer getLimit() 获取单次显示数量
- * @method void setLimit(integer $Limit) 设置单次显示数量
+ * @method integer getLimit() 获取单次显示数量。建议最大取值100。
+默认值：20
+ * @method void setLimit(integer $Limit) 设置单次显示数量。建议最大取值100。
+默认值：20
  */
 class DescribeDatabasesRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/product/409/16773)接口获取
      */
     public $DBInstanceId;
 
@@ -47,15 +49,17 @@ class DescribeDatabasesRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 单次显示数量
+     * @var integer 单次显示数量。建议最大取值100。
+默认值：20
      */
     public $Limit;
 
     /**
-     * @param string $DBInstanceId 实例ID
+     * @param string $DBInstanceId 实例ID。可通过[DescribeDBInstances](https://cloud.tencent.com/document/product/409/16773)接口获取
      * @param array $Filters 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：database-name：按照数据库名称过滤，类型为string。此处使用模糊匹配搜索符合条件的数据库。
      * @param integer $Offset 数据偏移量，从0开始。	
-     * @param integer $Limit 单次显示数量
+     * @param integer $Limit 单次显示数量。建议最大取值100。
+默认值：20
      */
     function __construct()
     {

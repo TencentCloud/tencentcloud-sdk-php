@@ -59,7 +59,7 @@ use TencentCloud\Common\AbstractModel;
     <li>**2** - 合同审查任务排队中</li>  
     <li>**3** - 合同审查任务执行中</li>   
     <li>**4** - 合同审查任务执行成功</li>
-    <li>**4** - 合同审查任务执行失败</li>
+    <li>**5** - 合同审查任务执行失败</li>
 </ul>
  * @method void setStatus(integer $Status) 设置合同审查任务状态。
 状态如下：
@@ -68,7 +68,7 @@ use TencentCloud\Common\AbstractModel;
     <li>**2** - 合同审查任务排队中</li>  
     <li>**3** - 合同审查任务执行中</li>   
     <li>**4** - 合同审查任务执行成功</li>
-    <li>**4** - 合同审查任务执行失败</li>
+    <li>**5** - 合同审查任务执行失败</li>
 </ul>
  * @method string getTaskId() 获取合同审查任务ID
  * @method void setTaskId(string $TaskId) 设置合同审查任务ID
@@ -129,7 +129,7 @@ class DescribeContractReviewTaskResponse extends AbstractModel
     <li>**2** - 合同审查任务排队中</li>  
     <li>**3** - 合同审查任务执行中</li>   
     <li>**4** - 合同审查任务执行成功</li>
-    <li>**4** - 合同审查任务执行失败</li>
+    <li>**5** - 合同审查任务执行失败</li>
 </ul>
      */
     public $Status;
@@ -168,7 +168,7 @@ class DescribeContractReviewTaskResponse extends AbstractModel
     <li>**2** - 合同审查任务排队中</li>  
     <li>**3** - 合同审查任务执行中</li>   
     <li>**4** - 合同审查任务执行成功</li>
-    <li>**4** - 合同审查任务执行失败</li>
+    <li>**5** - 合同审查任务执行失败</li>
 </ul>
      * @param string $TaskId 合同审查任务ID
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。

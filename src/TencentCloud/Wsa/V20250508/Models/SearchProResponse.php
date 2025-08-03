@@ -22,8 +22,26 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getQuery() 获取原始查询语
  * @method void setQuery(string $Query) 设置原始查询语
- * @method array getPages() 获取搜索结果页面
- * @method void setPages(array $Pages) 设置搜索结果页面
+ * @method array getPages() 获取搜索结果页面详情，格式为json字符串。
+title：结果标题
+date：内容发布时间
+url：内容发布源url
+passage：标准摘要
+content：动态摘要 （尊享版字段）
+site：网站名称，部分不知名站点结果可能为空
+score：相关性得分，取值0～1，越靠近1表示越相关
+images：图片列表
+favicon：网站图标链接，部分不知名站点结果可能为空
+ * @method void setPages(array $Pages) 设置搜索结果页面详情，格式为json字符串。
+title：结果标题
+date：内容发布时间
+url：内容发布源url
+passage：标准摘要
+content：动态摘要 （尊享版字段）
+site：网站名称，部分不知名站点结果可能为空
+score：相关性得分，取值0～1，越靠近1表示越相关
+images：图片列表
+favicon：网站图标链接，部分不知名站点结果可能为空
  * @method string getMsg() 获取提示信息
  * @method void setMsg(string $Msg) 设置提示信息
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -37,7 +55,16 @@ class SearchProResponse extends AbstractModel
     public $Query;
 
     /**
-     * @var array 搜索结果页面
+     * @var array 搜索结果页面详情，格式为json字符串。
+title：结果标题
+date：内容发布时间
+url：内容发布源url
+passage：标准摘要
+content：动态摘要 （尊享版字段）
+site：网站名称，部分不知名站点结果可能为空
+score：相关性得分，取值0～1，越靠近1表示越相关
+images：图片列表
+favicon：网站图标链接，部分不知名站点结果可能为空
      */
     public $Pages;
 
@@ -53,7 +80,16 @@ class SearchProResponse extends AbstractModel
 
     /**
      * @param string $Query 原始查询语
-     * @param array $Pages 搜索结果页面
+     * @param array $Pages 搜索结果页面详情，格式为json字符串。
+title：结果标题
+date：内容发布时间
+url：内容发布源url
+passage：标准摘要
+content：动态摘要 （尊享版字段）
+site：网站名称，部分不知名站点结果可能为空
+score：相关性得分，取值0～1，越靠近1表示越相关
+images：图片列表
+favicon：网站图标链接，部分不知名站点结果可能为空
      * @param string $Msg 提示信息
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

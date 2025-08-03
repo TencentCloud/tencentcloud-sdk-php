@@ -20,8 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDashboardSubscribes请求参数结构体
  *
- * @method array getFilters() 获取<br><li/> dashboardId：按照【仪表盘id】进行过滤。类型：String必选：否<br><br><li/> 每次请求的Filters的上限为10，Filter.Values的上限为100。
- * @method void setFilters(array $Filters) 设置<br><li/> dashboardId：按照【仪表盘id】进行过滤。类型：String必选：否<br><br><li/> 每次请求的Filters的上限为10，Filter.Values的上限为100。
+ * @method array getFilters() 获取dashboardId：按照【仪表盘id】进行过滤。类型：String必选：否
+
+- 仪表盘id。通过 [获取仪表盘](https://cloud.tencent.com/document/api/614/95636)接口获取DashboardId。
+
+每次请求的Filters的上限为10，Filter.Values的上限为100。
+ * @method void setFilters(array $Filters) 设置dashboardId：按照【仪表盘id】进行过滤。类型：String必选：否
+
+- 仪表盘id。通过 [获取仪表盘](https://cloud.tencent.com/document/api/614/95636)接口获取DashboardId。
+
+每次请求的Filters的上限为10，Filter.Values的上限为100。
  * @method integer getOffset() 获取分页的偏移量，默认值为0。
  * @method void setOffset(integer $Offset) 设置分页的偏移量，默认值为0。
  * @method integer getLimit() 获取分页单页限制数目，默认值为20，最大值100。
@@ -30,7 +38,11 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDashboardSubscribesRequest extends AbstractModel
 {
     /**
-     * @var array <br><li/> dashboardId：按照【仪表盘id】进行过滤。类型：String必选：否<br><br><li/> 每次请求的Filters的上限为10，Filter.Values的上限为100。
+     * @var array dashboardId：按照【仪表盘id】进行过滤。类型：String必选：否
+
+- 仪表盘id。通过 [获取仪表盘](https://cloud.tencent.com/document/api/614/95636)接口获取DashboardId。
+
+每次请求的Filters的上限为10，Filter.Values的上限为100。
      */
     public $Filters;
 
@@ -45,7 +57,11 @@ class DescribeDashboardSubscribesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param array $Filters <br><li/> dashboardId：按照【仪表盘id】进行过滤。类型：String必选：否<br><br><li/> 每次请求的Filters的上限为10，Filter.Values的上限为100。
+     * @param array $Filters dashboardId：按照【仪表盘id】进行过滤。类型：String必选：否
+
+- 仪表盘id。通过 [获取仪表盘](https://cloud.tencent.com/document/api/614/95636)接口获取DashboardId。
+
+每次请求的Filters的上限为10，Filter.Values的上限为100。
      * @param integer $Offset 分页的偏移量，默认值为0。
      * @param integer $Limit 分页单页限制数目，默认值为20，最大值100。
      */

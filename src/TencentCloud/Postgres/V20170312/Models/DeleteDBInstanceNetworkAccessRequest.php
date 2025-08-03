@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteDBInstanceNetworkAccess请求参数结构体
  *
- * @method string getDBInstanceId() 获取实例ID，形如：postgres-6bwgamo3。
- * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID，形如：postgres-6bwgamo3。
+ * @method string getDBInstanceId() 获取实例ID，形如：postgres-6bwgamo3。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
+ * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID，形如：postgres-6bwgamo3。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
  * @method string getVpcId() 获取私有网络统一 ID，若是基础网络则传"0"。
  * @method void setVpcId(string $VpcId) 设置私有网络统一 ID，若是基础网络则传"0"。
  * @method string getSubnetId() 获取子网ID，若是基础网络则传"0"。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DeleteDBInstanceNetworkAccessRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID，形如：postgres-6bwgamo3。
+     * @var string 实例ID，形如：postgres-6bwgamo3。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      */
     public $DBInstanceId;
 
@@ -52,7 +52,7 @@ class DeleteDBInstanceNetworkAccessRequest extends AbstractModel
     public $Vip;
 
     /**
-     * @param string $DBInstanceId 实例ID，形如：postgres-6bwgamo3。
+     * @param string $DBInstanceId 实例ID，形如：postgres-6bwgamo3。可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)接口获取
      * @param string $VpcId 私有网络统一 ID，若是基础网络则传"0"。
      * @param string $SubnetId 子网ID，若是基础网络则传"0"。
      * @param string $Vip 目标VIP地址。

@@ -230,6 +230,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsAIEngine(integer $IsAIEngine) 设置1:AI引擎，0:非AI引擎
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ScheduleElasticityConf getScheduleElasticityConf() 获取引擎资源弹性伸缩策略
+ * @method void setScheduleElasticityConf(ScheduleElasticityConf $ScheduleElasticityConf) 设置引擎资源弹性伸缩策略
  */
 class DataEngineInfo extends AbstractModel
 {
@@ -575,6 +577,11 @@ class DataEngineInfo extends AbstractModel
     public $IsAIEngine;
 
     /**
+     * @var ScheduleElasticityConf 引擎资源弹性伸缩策略
+     */
+    public $ScheduleElasticityConf;
+
+    /**
      * @param string $DataEngineName DataEngine名称
      * @param string $EngineType 引擎类型 spark/presto
      * @param string $ClusterType 集群资源类型 spark_private/presto_private/presto_cu/spark_cu
@@ -680,6 +687,7 @@ class DataEngineInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsAIEngine 1:AI引擎，0:非AI引擎
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param ScheduleElasticityConf $ScheduleElasticityConf 引擎资源弹性伸缩策略
      */
     function __construct()
     {
@@ -945,6 +953,11 @@ class DataEngineInfo extends AbstractModel
 
         if (array_key_exists("IsAIEngine",$param) and $param["IsAIEngine"] !== null) {
             $this->IsAIEngine = $param["IsAIEngine"];
+        }
+
+        if (array_key_exists("ScheduleElasticityConf",$param) and $param["ScheduleElasticityConf"] !== null) {
+            $this->ScheduleElasticityConf = new ScheduleElasticityConf();
+            $this->ScheduleElasticityConf->deserialize($param["ScheduleElasticityConf"]);
         }
     }
 }

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteReadOnlyGroupNetworkAccess请求参数结构体
  *
- * @method string getReadOnlyGroupId() 获取RO组ID，形如：pgro-4t9c6g7k。
- * @method void setReadOnlyGroupId(string $ReadOnlyGroupId) 设置RO组ID，形如：pgro-4t9c6g7k。
+ * @method string getReadOnlyGroupId() 获取RO组ID，形如：pgrogrp-4t9c6g7k。可通过[DescribeReadOnlyGroups](https://cloud.tencent.com/document/api/409/52599)接口获取
+ * @method void setReadOnlyGroupId(string $ReadOnlyGroupId) 设置RO组ID，形如：pgrogrp-4t9c6g7k。可通过[DescribeReadOnlyGroups](https://cloud.tencent.com/document/api/409/52599)接口获取
  * @method string getVpcId() 获取私有网络统一 ID，若是基础网络则传"0"。
  * @method void setVpcId(string $VpcId) 设置私有网络统一 ID，若是基础网络则传"0"。
  * @method string getSubnetId() 获取子网ID，若是基础网络则传"0"。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DeleteReadOnlyGroupNetworkAccessRequest extends AbstractModel
 {
     /**
-     * @var string RO组ID，形如：pgro-4t9c6g7k。
+     * @var string RO组ID，形如：pgrogrp-4t9c6g7k。可通过[DescribeReadOnlyGroups](https://cloud.tencent.com/document/api/409/52599)接口获取
      */
     public $ReadOnlyGroupId;
 
@@ -52,7 +52,7 @@ class DeleteReadOnlyGroupNetworkAccessRequest extends AbstractModel
     public $Vip;
 
     /**
-     * @param string $ReadOnlyGroupId RO组ID，形如：pgro-4t9c6g7k。
+     * @param string $ReadOnlyGroupId RO组ID，形如：pgrogrp-4t9c6g7k。可通过[DescribeReadOnlyGroups](https://cloud.tencent.com/document/api/409/52599)接口获取
      * @param string $VpcId 私有网络统一 ID，若是基础网络则传"0"。
      * @param string $SubnetId 子网ID，若是基础网络则传"0"。
      * @param string $Vip 目标VIP地址。

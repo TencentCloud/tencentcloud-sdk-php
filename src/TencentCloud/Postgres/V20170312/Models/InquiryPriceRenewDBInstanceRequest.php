@@ -20,26 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquiryPriceRenewDBInstance请求参数结构体
  *
- * @method string getDBInstanceId() 获取实例ID
- * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID
- * @method integer getPeriod() 获取续费周期，按月计算，最大不超过48
- * @method void setPeriod(integer $Period) 设置续费周期，按月计算，最大不超过48
+ * @method string getDBInstanceId() 获取实例ID，可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)获取。
+（此接口仅支持预付费实例的查询）
+ * @method void setDBInstanceId(string $DBInstanceId) 设置实例ID，可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)获取。
+（此接口仅支持预付费实例的查询）
+ * @method integer getPeriod() 获取续费周期，按月计算
+ * @method void setPeriod(integer $Period) 设置续费周期，按月计算
  */
 class InquiryPriceRenewDBInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 实例ID
+     * @var string 实例ID，可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)获取。
+（此接口仅支持预付费实例的查询）
      */
     public $DBInstanceId;
 
     /**
-     * @var integer 续费周期，按月计算，最大不超过48
+     * @var integer 续费周期，按月计算
      */
     public $Period;
 
     /**
-     * @param string $DBInstanceId 实例ID
-     * @param integer $Period 续费周期，按月计算，最大不超过48
+     * @param string $DBInstanceId 实例ID，可通过[DescribeDBInstances](https://cloud.tencent.com/document/api/409/16773)获取。
+（此接口仅支持预付费实例的查询）
+     * @param integer $Period 续费周期，按月计算
      */
     function __construct()
     {

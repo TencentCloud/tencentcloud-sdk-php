@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteDashboardSubscribe请求参数结构体
  *
- * @method integer getId() 获取仪表盘订阅记录id。
- * @method void setId(integer $Id) 设置仪表盘订阅记录id。
+ * @method integer getId() 获取仪表盘订阅记录id。通过 [获取仪表盘订阅列表](https://cloud.tencent.com/document/api/614/105779)接口获取Id。
+ * @method void setId(integer $Id) 设置仪表盘订阅记录id。通过 [获取仪表盘订阅列表](https://cloud.tencent.com/document/api/614/105779)接口获取Id。
  */
 class DeleteDashboardSubscribeRequest extends AbstractModel
 {
     /**
-     * @var integer 仪表盘订阅记录id。
+     * @var integer 仪表盘订阅记录id。通过 [获取仪表盘订阅列表](https://cloud.tencent.com/document/api/614/105779)接口获取Id。
      */
     public $Id;
 
     /**
-     * @param integer $Id 仪表盘订阅记录id。
+     * @param integer $Id 仪表盘订阅记录id。通过 [获取仪表盘订阅列表](https://cloud.tencent.com/document/api/614/105779)接口获取Id。
      */
     function __construct()
     {

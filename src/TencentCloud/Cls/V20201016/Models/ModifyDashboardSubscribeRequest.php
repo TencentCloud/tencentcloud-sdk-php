@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDashboardSubscribe请求参数结构体
  *
- * @method integer getId() 获取仪表盘订阅id。
- * @method void setId(integer $Id) 设置仪表盘订阅id。
- * @method string getDashboardId() 获取仪表盘id。
- * @method void setDashboardId(string $DashboardId) 设置仪表盘id。
- * @method string getName() 获取仪表盘订阅名称。
- * @method void setName(string $Name) 设置仪表盘订阅名称。
+ * @method integer getId() 获取仪表盘订阅id。通过 [获取仪表盘订阅列表](https://cloud.tencent.com/document/api/614/105779)接口获取Id。
+ * @method void setId(integer $Id) 设置仪表盘订阅id。通过 [获取仪表盘订阅列表](https://cloud.tencent.com/document/api/614/105779)接口获取Id。
+ * @method string getDashboardId() 获取仪表盘id。通过 [获取仪表盘](https://cloud.tencent.com/document/api/614/95636)接口获取DashboardId。
+ * @method void setDashboardId(string $DashboardId) 设置仪表盘id。通过 [获取仪表盘](https://cloud.tencent.com/document/api/614/95636)接口获取DashboardId。
+ * @method string getName() 获取仪表盘订阅名称。最大支持128个字符，且不支持'|'字符。
+ * @method void setName(string $Name) 设置仪表盘订阅名称。最大支持128个字符，且不支持'|'字符。
  * @method string getCron() 获取订阅时间cron表达式，格式为：{秒数} {分钟} {小时} {日期} {月份} {星期}；（有效数据为：{分钟} {小时} {日期} {月份} {星期}）。
  * @method void setCron(string $Cron) 设置订阅时间cron表达式，格式为：{秒数} {分钟} {小时} {日期} {月份} {星期}；（有效数据为：{分钟} {小时} {日期} {月份} {星期}）。
  * @method DashboardSubscribeData getSubscribeData() 获取仪表盘订阅数据。
@@ -34,17 +34,17 @@ use TencentCloud\Common\AbstractModel;
 class ModifyDashboardSubscribeRequest extends AbstractModel
 {
     /**
-     * @var integer 仪表盘订阅id。
+     * @var integer 仪表盘订阅id。通过 [获取仪表盘订阅列表](https://cloud.tencent.com/document/api/614/105779)接口获取Id。
      */
     public $Id;
 
     /**
-     * @var string 仪表盘id。
+     * @var string 仪表盘id。通过 [获取仪表盘](https://cloud.tencent.com/document/api/614/95636)接口获取DashboardId。
      */
     public $DashboardId;
 
     /**
-     * @var string 仪表盘订阅名称。
+     * @var string 仪表盘订阅名称。最大支持128个字符，且不支持'|'字符。
      */
     public $Name;
 
@@ -59,9 +59,9 @@ class ModifyDashboardSubscribeRequest extends AbstractModel
     public $SubscribeData;
 
     /**
-     * @param integer $Id 仪表盘订阅id。
-     * @param string $DashboardId 仪表盘id。
-     * @param string $Name 仪表盘订阅名称。
+     * @param integer $Id 仪表盘订阅id。通过 [获取仪表盘订阅列表](https://cloud.tencent.com/document/api/614/105779)接口获取Id。
+     * @param string $DashboardId 仪表盘id。通过 [获取仪表盘](https://cloud.tencent.com/document/api/614/95636)接口获取DashboardId。
+     * @param string $Name 仪表盘订阅名称。最大支持128个字符，且不支持'|'字符。
      * @param string $Cron 订阅时间cron表达式，格式为：{秒数} {分钟} {小时} {日期} {月份} {星期}；（有效数据为：{分钟} {小时} {日期} {月份} {星期}）。
      * @param DashboardSubscribeData $SubscribeData 仪表盘订阅数据。
      */

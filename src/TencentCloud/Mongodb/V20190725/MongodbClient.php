@@ -80,7 +80,7 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
  * @method Models\SetAccountUserPrivilegeResponse SetAccountUserPrivilege(Models\SetAccountUserPrivilegeRequest $req) 本接口（SetAccountUserPrivilege）用于设置实例的账号权限。
  * @method Models\SetBackupRulesResponse SetBackupRules(Models\SetBackupRulesRequest $req) 本接口(SetBackupRules)用于设置 MongoDB 云数据库的自动备份规则。
  * @method Models\SetInstanceMaintenanceResponse SetInstanceMaintenance(Models\SetInstanceMaintenanceRequest $req) 本接口（SetInstanceMaintenance ） 用于设置实例维护时间窗。
- * @method Models\TerminateDBInstancesResponse TerminateDBInstances(Models\TerminateDBInstancesRequest $req) 本接口（TerminateDBInstances）可将包年包月实例退还隔离。
+ * @method Models\TerminateDBInstancesResponse TerminateDBInstances(Models\TerminateDBInstancesRequest $req) 本接口（TerminateDBInstances）用于退还包年包月计费实例。
  */
 
 class MongodbClient extends AbstractClient

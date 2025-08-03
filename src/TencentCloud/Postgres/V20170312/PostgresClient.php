@@ -44,11 +44,11 @@ use TencentCloud\Postgres\V20170312\Models as Models;
  * @method Models\DeleteAccountResponse DeleteAccount(Models\DeleteAccountRequest $req) 此接口用于删除数据库账号，需要同时输入Oid与UserName，避免误删。注：该接口可重入，如果账号已经不存在，调用此接口进行删除时不会报错。
  * @method Models\DeleteBackupPlanResponse DeleteBackupPlan(Models\DeleteBackupPlanRequest $req) 删除备份策略
  * @method Models\DeleteBaseBackupResponse DeleteBaseBackup(Models\DeleteBaseBackupRequest $req) 本接口（DeleteBaseBackup）用于删除实例指定数据备份。
- * @method Models\DeleteDBInstanceNetworkAccessResponse DeleteDBInstanceNetworkAccess(Models\DeleteDBInstanceNetworkAccessRequest $req) 可对实例进行网络的删除操作。
+ * @method Models\DeleteDBInstanceNetworkAccessResponse DeleteDBInstanceNetworkAccess(Models\DeleteDBInstanceNetworkAccessRequest $req) 可对实例进行网络的删除操作（实例内至少保留一个网络）。
  * @method Models\DeleteLogBackupResponse DeleteLogBackup(Models\DeleteLogBackupRequest $req) 本接口（DeleteLogBackup）用于删除实例指定日志备份。
  * @method Models\DeleteParameterTemplateResponse DeleteParameterTemplate(Models\DeleteParameterTemplateRequest $req) 本接口（DeleteParameterTemplate）主要用于删除某个参数模板。
  * @method Models\DeleteReadOnlyGroupResponse DeleteReadOnlyGroup(Models\DeleteReadOnlyGroupRequest $req) 本接口(DeleteReadOnlyGroup)用于删除指定的只读组
- * @method Models\DeleteReadOnlyGroupNetworkAccessResponse DeleteReadOnlyGroupNetworkAccess(Models\DeleteReadOnlyGroupNetworkAccessRequest $req) 可对RO组进行网络的删除操作。
+ * @method Models\DeleteReadOnlyGroupNetworkAccessResponse DeleteReadOnlyGroupNetworkAccess(Models\DeleteReadOnlyGroupNetworkAccessRequest $req) 可对RO组进行网络的删除操作（网络数量至少保留1个）。
  * @method Models\DescribeAccountPrivilegesResponse DescribeAccountPrivileges(Models\DescribeAccountPrivilegesRequest $req) 查询数据库账号对某数据库对象拥有的权限列表。
  * @method Models\DescribeAccountsResponse DescribeAccounts(Models\DescribeAccountsRequest $req) 本接口（DescribeAccounts）用于查询实例的数据库账号列表。
  * @method Models\DescribeAvailableRecoveryTimeResponse DescribeAvailableRecoveryTime(Models\DescribeAvailableRecoveryTimeRequest $req) 本接口（DescribeAvailableRecoveryTime）用于查询实例可恢复的时间范围。

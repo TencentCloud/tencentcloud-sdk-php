@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateRepositoryPersonal请求参数结构体
  *
- * @method string getRepoName() 获取仓库名称
- * @method void setRepoName(string $RepoName) 设置仓库名称
+ * @method string getRepoName() 获取仓库名称，格式为 {Namespace}/{lmageName}。
+ * @method void setRepoName(string $RepoName) 设置仓库名称，格式为 {Namespace}/{lmageName}。
  * @method integer getPublic() 获取是否公共,1:公共,0:私有
  * @method void setPublic(integer $Public) 设置是否公共,1:公共,0:私有
  * @method string getDescription() 获取仓库描述
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateRepositoryPersonalRequest extends AbstractModel
 {
     /**
-     * @var string 仓库名称
+     * @var string 仓库名称，格式为 {Namespace}/{lmageName}。
      */
     public $RepoName;
 
@@ -45,7 +45,7 @@ class CreateRepositoryPersonalRequest extends AbstractModel
     public $Description;
 
     /**
-     * @param string $RepoName 仓库名称
+     * @param string $RepoName 仓库名称，格式为 {Namespace}/{lmageName}。
      * @param integer $Public 是否公共,1:公共,0:私有
      * @param string $Description 仓库描述
      */

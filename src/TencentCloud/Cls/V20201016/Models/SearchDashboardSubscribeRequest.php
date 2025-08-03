@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SearchDashboardSubscribe请求参数结构体
  *
- * @method string getDashboardId() 获取仪表盘id。
- * @method void setDashboardId(string $DashboardId) 设置仪表盘id。
+ * @method string getDashboardId() 获取仪表盘id。通过 [获取仪表盘](https://cloud.tencent.com/document/api/614/95636)接口获取DashboardId。
+ * @method void setDashboardId(string $DashboardId) 设置仪表盘id。通过 [获取仪表盘](https://cloud.tencent.com/document/api/614/95636)接口获取DashboardId。
  * @method DashboardSubscribeData getSubscribeData() 获取仪表盘订阅数据。
  * @method void setSubscribeData(DashboardSubscribeData $SubscribeData) 设置仪表盘订阅数据。
- * @method integer getId() 获取仪表盘订阅Id。
- * @method void setId(integer $Id) 设置仪表盘订阅Id。
- * @method string getName() 获取仪表盘订阅名称。
- * @method void setName(string $Name) 设置仪表盘订阅名称。
+ * @method integer getId() 获取仪表盘订阅Id。通过 [获取仪表盘订阅列表](https://cloud.tencent.com/document/api/614/105779)接口获取Id。
+ * @method void setId(integer $Id) 设置仪表盘订阅Id。通过 [获取仪表盘订阅列表](https://cloud.tencent.com/document/api/614/105779)接口获取Id。
+ * @method string getName() 获取仪表盘订阅名称。通过 [获取仪表盘订阅列表](https://cloud.tencent.com/document/api/614/105779)接口获取Name。
+ * @method void setName(string $Name) 设置仪表盘订阅名称。通过 [获取仪表盘订阅列表](https://cloud.tencent.com/document/api/614/105779)接口获取Name。
  */
 class SearchDashboardSubscribeRequest extends AbstractModel
 {
     /**
-     * @var string 仪表盘id。
+     * @var string 仪表盘id。通过 [获取仪表盘](https://cloud.tencent.com/document/api/614/95636)接口获取DashboardId。
      */
     public $DashboardId;
 
@@ -42,20 +42,20 @@ class SearchDashboardSubscribeRequest extends AbstractModel
     public $SubscribeData;
 
     /**
-     * @var integer 仪表盘订阅Id。
+     * @var integer 仪表盘订阅Id。通过 [获取仪表盘订阅列表](https://cloud.tencent.com/document/api/614/105779)接口获取Id。
      */
     public $Id;
 
     /**
-     * @var string 仪表盘订阅名称。
+     * @var string 仪表盘订阅名称。通过 [获取仪表盘订阅列表](https://cloud.tencent.com/document/api/614/105779)接口获取Name。
      */
     public $Name;
 
     /**
-     * @param string $DashboardId 仪表盘id。
+     * @param string $DashboardId 仪表盘id。通过 [获取仪表盘](https://cloud.tencent.com/document/api/614/95636)接口获取DashboardId。
      * @param DashboardSubscribeData $SubscribeData 仪表盘订阅数据。
-     * @param integer $Id 仪表盘订阅Id。
-     * @param string $Name 仪表盘订阅名称。
+     * @param integer $Id 仪表盘订阅Id。通过 [获取仪表盘订阅列表](https://cloud.tencent.com/document/api/614/105779)接口获取Id。
+     * @param string $Name 仪表盘订阅名称。通过 [获取仪表盘订阅列表](https://cloud.tencent.com/document/api/614/105779)接口获取Name。
      */
     function __construct()
     {

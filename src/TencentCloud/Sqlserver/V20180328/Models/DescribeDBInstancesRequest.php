@@ -66,8 +66,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceNameSet(array $InstanceNameSet) 设置实例名称列表，模糊查询
  * @method array getVersionSet() 获取实例版本代号列表，格式如：2008R2，2012SP3等
  * @method void setVersionSet(array $VersionSet) 设置实例版本代号列表，格式如：2008R2，2012SP3等
- * @method string getZone() 获取实例可用区，格式如：ap-guangzhou-2
- * @method void setZone(string $Zone) 设置实例可用区，格式如：ap-guangzhou-2
+ * @method string getZone() 获取实例可用区
+ * @method void setZone(string $Zone) 设置实例可用区
  * @method array getTagKeys() 获取实例标签列表
  * @method void setTagKeys(array $TagKeys) 设置实例标签列表
  * @method string getSearchKey() 获取模糊查询关键字，支持实例id、实例名、内网ip
@@ -149,7 +149,7 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $VersionSet;
 
     /**
-     * @var string 实例可用区，格式如：ap-guangzhou-2
+     * @var string 实例可用区
      */
     public $Zone;
 
@@ -202,7 +202,7 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param array $VipSet 实例内网地址列表，格式如：172.1.0.12
      * @param array $InstanceNameSet 实例名称列表，模糊查询
      * @param array $VersionSet 实例版本代号列表，格式如：2008R2，2012SP3等
-     * @param string $Zone 实例可用区，格式如：ap-guangzhou-2
+     * @param string $Zone 实例可用区
      * @param array $TagKeys 实例标签列表
      * @param string $SearchKey 模糊查询关键字，支持实例id、实例名、内网ip
      * @param array $UidSet 实例唯一Uid列表

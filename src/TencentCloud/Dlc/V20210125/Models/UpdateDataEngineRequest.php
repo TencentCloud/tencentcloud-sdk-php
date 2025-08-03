@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setElasticLimit(integer $ElasticLimit) 设置spark jar 包年包月集群弹性上限
  * @method SessionResourceTemplate getSessionResourceTemplate() 获取Spark批作业集群Session资源配置模板
  * @method void setSessionResourceTemplate(SessionResourceTemplate $SessionResourceTemplate) 设置Spark批作业集群Session资源配置模板
+ * @method ScheduleElasticityConf getScheduleElasticityConf() 获取引擎资源弹性伸缩策略
+ * @method void setScheduleElasticityConf(ScheduleElasticityConf $ScheduleElasticityConf) 设置引擎资源弹性伸缩策略
  */
 class UpdateDataEngineRequest extends AbstractModel
 {
@@ -129,6 +131,11 @@ class UpdateDataEngineRequest extends AbstractModel
     public $SessionResourceTemplate;
 
     /**
+     * @var ScheduleElasticityConf 引擎资源弹性伸缩策略
+     */
+    public $ScheduleElasticityConf;
+
+    /**
      * @param integer $Size 资源大小
      * @param integer $MinClusters 最小资源
      * @param integer $MaxClusters 最大资源
@@ -144,6 +151,7 @@ class UpdateDataEngineRequest extends AbstractModel
      * @param boolean $ElasticSwitch spark jar 包年包月集群是否开启弹性
      * @param integer $ElasticLimit spark jar 包年包月集群弹性上限
      * @param SessionResourceTemplate $SessionResourceTemplate Spark批作业集群Session资源配置模板
+     * @param ScheduleElasticityConf $ScheduleElasticityConf 引擎资源弹性伸缩策略
      */
     function __construct()
     {
@@ -218,6 +226,11 @@ class UpdateDataEngineRequest extends AbstractModel
         if (array_key_exists("SessionResourceTemplate",$param) and $param["SessionResourceTemplate"] !== null) {
             $this->SessionResourceTemplate = new SessionResourceTemplate();
             $this->SessionResourceTemplate->deserialize($param["SessionResourceTemplate"]);
+        }
+
+        if (array_key_exists("ScheduleElasticityConf",$param) and $param["ScheduleElasticityConf"] !== null) {
+            $this->ScheduleElasticityConf = new ScheduleElasticityConf();
+            $this->ScheduleElasticityConf->deserialize($param["ScheduleElasticityConf"]);
         }
     }
 }

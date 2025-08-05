@@ -14,28 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cls\V20201016\Models;
+namespace TencentCloud\Thpc\V20230321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteIndex请求参数结构体
+ * DescribeJobSubmitInfo请求参数结构体
  *
- * @method string getTopicId() 获取日志主题Id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
- * @method void setTopicId(string $TopicId) 设置日志主题Id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+ * @method string getJobId() 获取作业ID
+ * @method void setJobId(string $JobId) 设置作业ID
  */
-class DeleteIndexRequest extends AbstractModel
+class DescribeJobSubmitInfoRequest extends AbstractModel
 {
     /**
-     * @var string 日志主题Id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * @var string 作业ID
      */
-    public $TopicId;
+    public $JobId;
 
     /**
-     * @param string $TopicId 日志主题Id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * @param string $JobId 作业ID
      */
     function __construct()
     {
@@ -50,8 +46,8 @@ class DeleteIndexRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TopicId",$param) and $param["TopicId"] !== null) {
-            $this->TopicId = $param["TopicId"];
+        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
+            $this->JobId = $param["JobId"];
         }
     }
 }

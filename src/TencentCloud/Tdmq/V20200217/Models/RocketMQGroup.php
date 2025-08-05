@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNamespace(string $Namespace) 设置命名空间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSubscribeTopicNum() 获取订阅的主题个数
+ * @method void setSubscribeTopicNum(integer $SubscribeTopicNum) 设置订阅的主题个数
  */
 class RocketMQGroup extends AbstractModel
 {
@@ -83,11 +85,13 @@ class RocketMQGroup extends AbstractModel
 
     /**
      * @var integer 消费TPS
+     * @deprecated
      */
     public $TPS;
 
     /**
      * @var integer 总堆积数量
+     * @deprecated
      */
     public $TotalAccumulative;
 
@@ -164,6 +168,11 @@ class RocketMQGroup extends AbstractModel
     public $Namespace;
 
     /**
+     * @var integer 订阅的主题个数
+     */
+    public $SubscribeTopicNum;
+
+    /**
      * @param string $Name 消费组名称
      * @param integer $ConsumerNum 在线消费者数量
      * @param integer $TPS 消费TPS
@@ -188,6 +197,7 @@ class RocketMQGroup extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Namespace 命名空间
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SubscribeTopicNum 订阅的主题个数
      */
     function __construct()
     {
@@ -268,6 +278,10 @@ class RocketMQGroup extends AbstractModel
 
         if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
             $this->Namespace = $param["Namespace"];
+        }
+
+        if (array_key_exists("SubscribeTopicNum",$param) and $param["SubscribeTopicNum"] !== null) {
+            $this->SubscribeTopicNum = $param["SubscribeTopicNum"];
         }
     }
 }

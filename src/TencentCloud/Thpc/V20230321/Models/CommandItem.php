@@ -14,28 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cls\V20201016\Models;
+namespace TencentCloud\Thpc\V20230321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteIndex请求参数结构体
+ * 任务执行命令脚本。
  *
- * @method string getTopicId() 获取日志主题Id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
- * @method void setTopicId(string $TopicId) 设置日志主题Id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+ * @method string getCommand() 获取脚本命令
+ * @method void setCommand(string $Command) 设置脚本命令
  */
-class DeleteIndexRequest extends AbstractModel
+class CommandItem extends AbstractModel
 {
     /**
-     * @var string 日志主题Id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * @var string 脚本命令
      */
-    public $TopicId;
+    public $Command;
 
     /**
-     * @param string $TopicId 日志主题Id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * @param string $Command 脚本命令
      */
     function __construct()
     {
@@ -50,8 +46,8 @@ class DeleteIndexRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TopicId",$param) and $param["TopicId"] !== null) {
-            $this->TopicId = $param["TopicId"];
+        if (array_key_exists("Command",$param) and $param["Command"] !== null) {
+            $this->Command = $param["Command"];
         }
     }
 }

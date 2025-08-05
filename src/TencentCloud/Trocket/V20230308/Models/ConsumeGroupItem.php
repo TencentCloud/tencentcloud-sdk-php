@@ -50,6 +50,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFullNamespaceV4(string $FullNamespaceV4) 设置4.x的完整命名空间
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getSubscribeTopicNum() 获取订阅的主题个数
+ * @method void setSubscribeTopicNum(integer $SubscribeTopicNum) 设置订阅的主题个数
+ * @method integer getCreateTime() 获取1753153590
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreateTime(integer $CreateTime) 设置1753153590
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ConsumeGroupItem extends AbstractModel
 {
@@ -109,6 +115,17 @@ class ConsumeGroupItem extends AbstractModel
     public $FullNamespaceV4;
 
     /**
+     * @var integer 订阅的主题个数
+     */
+    public $SubscribeTopicNum;
+
+    /**
+     * @var integer 1753153590
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CreateTime;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $ConsumerGroup 消费组名称
      * @param boolean $ConsumeEnable 是否开启消费
@@ -123,6 +140,9 @@ class ConsumeGroupItem extends AbstractModel
      * @param string $ConsumerGroupV4 4.x的消费组名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FullNamespaceV4 4.x的完整命名空间
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $SubscribeTopicNum 订阅的主题个数
+     * @param integer $CreateTime 1753153590
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -176,6 +196,14 @@ class ConsumeGroupItem extends AbstractModel
 
         if (array_key_exists("FullNamespaceV4",$param) and $param["FullNamespaceV4"] !== null) {
             $this->FullNamespaceV4 = $param["FullNamespaceV4"];
+        }
+
+        if (array_key_exists("SubscribeTopicNum",$param) and $param["SubscribeTopicNum"] !== null) {
+            $this->SubscribeTopicNum = $param["SubscribeTopicNum"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
     }
 }

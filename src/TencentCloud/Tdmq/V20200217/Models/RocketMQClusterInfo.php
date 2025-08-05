@@ -110,6 +110,20 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsFrozen() 获取是否已冻结
  * @method void setIsFrozen(boolean $IsFrozen) 设置是否已冻结
+ * @method boolean getAutoCreateTopicEnabled() 获取是否开启自动创建主题
+ * @method void setAutoCreateTopicEnabled(boolean $AutoCreateTopicEnabled) 设置是否开启自动创建主题
+ * @method boolean getAdminFeatureEnabled() 获取是否开启集群Admin能力
+ * @method void setAdminFeatureEnabled(boolean $AdminFeatureEnabled) 设置是否开启集群Admin能力
+ * @method string getAdminAccessKey() 获取Admin AK
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAdminAccessKey(string $AdminAccessKey) 设置Admin AK
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAdminSecretKey() 获取Admin SK
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAdminSecretKey(string $AdminSecretKey) 设置Admin SK
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getEnableDeletionProtection() 获取是否开启删除保护
+ * @method void setEnableDeletionProtection(boolean $EnableDeletionProtection) 设置是否开启删除保护
  */
 class RocketMQClusterInfo extends AbstractModel
 {
@@ -263,6 +277,33 @@ class RocketMQClusterInfo extends AbstractModel
     public $IsFrozen;
 
     /**
+     * @var boolean 是否开启自动创建主题
+     */
+    public $AutoCreateTopicEnabled;
+
+    /**
+     * @var boolean 是否开启集群Admin能力
+     */
+    public $AdminFeatureEnabled;
+
+    /**
+     * @var string Admin AK
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AdminAccessKey;
+
+    /**
+     * @var string Admin SK
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AdminSecretKey;
+
+    /**
+     * @var boolean 是否开启删除保护
+     */
+    public $EnableDeletionProtection;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $ClusterName 集群名称
      * @param string $Region 地域信息
@@ -308,6 +349,13 @@ class RocketMQClusterInfo extends AbstractModel
      * @param array $ZoneIds 集群节点所在的可用区，若该集群为跨可用区集群，则包含该集群节点所在的多个可用区。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsFrozen 是否已冻结
+     * @param boolean $AutoCreateTopicEnabled 是否开启自动创建主题
+     * @param boolean $AdminFeatureEnabled 是否开启集群Admin能力
+     * @param string $AdminAccessKey Admin AK
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $AdminSecretKey Admin SK
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $EnableDeletionProtection 是否开启删除保护
      */
     function __construct()
     {
@@ -429,6 +477,26 @@ class RocketMQClusterInfo extends AbstractModel
 
         if (array_key_exists("IsFrozen",$param) and $param["IsFrozen"] !== null) {
             $this->IsFrozen = $param["IsFrozen"];
+        }
+
+        if (array_key_exists("AutoCreateTopicEnabled",$param) and $param["AutoCreateTopicEnabled"] !== null) {
+            $this->AutoCreateTopicEnabled = $param["AutoCreateTopicEnabled"];
+        }
+
+        if (array_key_exists("AdminFeatureEnabled",$param) and $param["AdminFeatureEnabled"] !== null) {
+            $this->AdminFeatureEnabled = $param["AdminFeatureEnabled"];
+        }
+
+        if (array_key_exists("AdminAccessKey",$param) and $param["AdminAccessKey"] !== null) {
+            $this->AdminAccessKey = $param["AdminAccessKey"];
+        }
+
+        if (array_key_exists("AdminSecretKey",$param) and $param["AdminSecretKey"] !== null) {
+            $this->AdminSecretKey = $param["AdminSecretKey"];
+        }
+
+        if (array_key_exists("EnableDeletionProtection",$param) and $param["EnableDeletionProtection"] !== null) {
+            $this->EnableDeletionProtection = $param["EnableDeletionProtection"];
         }
     }
 }

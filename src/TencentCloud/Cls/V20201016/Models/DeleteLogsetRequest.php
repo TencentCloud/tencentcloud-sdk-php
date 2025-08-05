@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteLogset请求参数结构体
  *
- * @method string getLogsetId() 获取日志集ID
- * @method void setLogsetId(string $LogsetId) 设置日志集ID
+ * @method string getLogsetId() 获取日志集Id。通过 [获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集Id。
+ * @method void setLogsetId(string $LogsetId) 设置日志集Id。通过 [获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集Id。
  */
 class DeleteLogsetRequest extends AbstractModel
 {
     /**
-     * @var string 日志集ID
+     * @var string 日志集Id。通过 [获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集Id。
      */
     public $LogsetId;
 
     /**
-     * @param string $LogsetId 日志集ID
+     * @param string $LogsetId 日志集Id。通过 [获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集Id。
      */
     function __construct()
     {

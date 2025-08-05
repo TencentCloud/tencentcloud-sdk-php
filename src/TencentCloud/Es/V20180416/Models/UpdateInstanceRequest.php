@@ -150,6 +150,10 @@ CLOSE 关闭
  * @method void setEnableScheduleOperationDuration(EnableScheduleOperationDuration $EnableScheduleOperationDuration) 设置置放群组异步任务可维护时间段
  * @method string getEnableDestroyProtection() 获取开启集群保护：OPEN-开启，CLOSE-关闭
  * @method void setEnableDestroyProtection(string $EnableDestroyProtection) 设置开启集群保护：OPEN-开启，CLOSE-关闭
+ * @method array getAutoScaleDiskInfoList() 获取自动扩盘参数
+ * @method void setAutoScaleDiskInfoList(array $AutoScaleDiskInfoList) 设置自动扩盘参数
+ * @method array getAutoScaleDiskDeleteNodeTypeList() 获取自动扩盘删除参数
+ * @method void setAutoScaleDiskDeleteNodeTypeList(array $AutoScaleDiskDeleteNodeTypeList) 设置自动扩盘删除参数
  */
 class UpdateInstanceRequest extends AbstractModel
 {
@@ -395,6 +399,16 @@ CLOSE 关闭
     public $EnableDestroyProtection;
 
     /**
+     * @var array 自动扩盘参数
+     */
+    public $AutoScaleDiskInfoList;
+
+    /**
+     * @var array 自动扩盘删除参数
+     */
+    public $AutoScaleDiskDeleteNodeTypeList;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称（1-50 个英文、汉字、数字、连接线-或下划线_）
      * @param integer $NodeNum 已废弃请使用NodeInfoList
@@ -460,6 +474,8 @@ CLOSE 关闭
      * @param boolean $EnableScheduleRecoverGroup 是否开启置放群组异步任务
      * @param EnableScheduleOperationDuration $EnableScheduleOperationDuration 置放群组异步任务可维护时间段
      * @param string $EnableDestroyProtection 开启集群保护：OPEN-开启，CLOSE-关闭
+     * @param array $AutoScaleDiskInfoList 自动扩盘参数
+     * @param array $AutoScaleDiskDeleteNodeTypeList 自动扩盘删除参数
      */
     function __construct()
     {
@@ -670,6 +686,19 @@ CLOSE 关闭
 
         if (array_key_exists("EnableDestroyProtection",$param) and $param["EnableDestroyProtection"] !== null) {
             $this->EnableDestroyProtection = $param["EnableDestroyProtection"];
+        }
+
+        if (array_key_exists("AutoScaleDiskInfoList",$param) and $param["AutoScaleDiskInfoList"] !== null) {
+            $this->AutoScaleDiskInfoList = [];
+            foreach ($param["AutoScaleDiskInfoList"] as $key => $value){
+                $obj = new AutoScaleDiskInfo();
+                $obj->deserialize($value);
+                array_push($this->AutoScaleDiskInfoList, $obj);
+            }
+        }
+
+        if (array_key_exists("AutoScaleDiskDeleteNodeTypeList",$param) and $param["AutoScaleDiskDeleteNodeTypeList"] !== null) {
+            $this->AutoScaleDiskDeleteNodeTypeList = $param["AutoScaleDiskDeleteNodeTypeList"];
         }
     }
 }

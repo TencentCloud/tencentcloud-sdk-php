@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskName(string $TaskName) 设置任务名
  * @method integer getTaskType() 获取26离线同步，30Python，31PySpark，32DLC，33Impala，34Hive SQL，35Shell，36Spark SQL，39Spark，40CDW PG，92MapReduce
  * @method void setTaskType(integer $TaskType) 设置26离线同步，30Python，31PySpark，32DLC，33Impala，34Hive SQL，35Shell，36Spark SQL，39Spark，40CDW PG，92MapReduce
+ * @method string getContent() 获取（必填参数）指定脚本内容，base64编码
+ * @method void setContent(string $Content) 设置（必填参数）指定脚本内容，base64编码
  * @method array getTaskExt() 获取扩展属性
  * @method void setTaskExt(array $TaskExt) 设置扩展属性
  * @method string getProductName() 获取产品名称
@@ -40,8 +42,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopCoordinate(float $TopCoordinate) 设置画布坐标纵轴
  * @method string getTaskFolderId() 获取工作流目录ID
  * @method void setTaskFolderId(string $TaskFolderId) 设置工作流目录ID
- * @method string getContent() 获取（必填参数）指定脚本内容，base64编码
- * @method void setContent(string $Content) 设置（必填参数）指定脚本内容，base64编码
  * @method string getCodeTemplateId() 获取代码模板ID
  * @method void setCodeTemplateId(string $CodeTemplateId) 设置代码模板ID
  */
@@ -66,6 +66,11 @@ class CreateTaskNewRequest extends AbstractModel
      * @var integer 26离线同步，30Python，31PySpark，32DLC，33Impala，34Hive SQL，35Shell，36Spark SQL，39Spark，40CDW PG，92MapReduce
      */
     public $TaskType;
+
+    /**
+     * @var string （必填参数）指定脚本内容，base64编码
+     */
+    public $Content;
 
     /**
      * @var array 扩展属性
@@ -98,11 +103,6 @@ class CreateTaskNewRequest extends AbstractModel
     public $TaskFolderId;
 
     /**
-     * @var string （必填参数）指定脚本内容，base64编码
-     */
-    public $Content;
-
-    /**
      * @var string 代码模板ID
      */
     public $CodeTemplateId;
@@ -112,13 +112,13 @@ class CreateTaskNewRequest extends AbstractModel
      * @param string $WorkflowId 工作流id
      * @param string $TaskName 任务名
      * @param integer $TaskType 26离线同步，30Python，31PySpark，32DLC，33Impala，34Hive SQL，35Shell，36Spark SQL，39Spark，40CDW PG，92MapReduce
+     * @param string $Content （必填参数）指定脚本内容，base64编码
      * @param array $TaskExt 扩展属性
      * @param string $ProductName 产品名称
      * @param string $InstanceInitStrategy 任务实例初始化策略
      * @param float $LeftCoordinate 画布坐标横轴
      * @param float $TopCoordinate 画布坐标纵轴
      * @param string $TaskFolderId 工作流目录ID
-     * @param string $Content （必填参数）指定脚本内容，base64编码
      * @param string $CodeTemplateId 代码模板ID
      */
     function __construct()
@@ -150,6 +150,10 @@ class CreateTaskNewRequest extends AbstractModel
             $this->TaskType = $param["TaskType"];
         }
 
+        if (array_key_exists("Content",$param) and $param["Content"] !== null) {
+            $this->Content = $param["Content"];
+        }
+
         if (array_key_exists("TaskExt",$param) and $param["TaskExt"] !== null) {
             $this->TaskExt = [];
             foreach ($param["TaskExt"] as $key => $value){
@@ -177,10 +181,6 @@ class CreateTaskNewRequest extends AbstractModel
 
         if (array_key_exists("TaskFolderId",$param) and $param["TaskFolderId"] !== null) {
             $this->TaskFolderId = $param["TaskFolderId"];
-        }
-
-        if (array_key_exists("Content",$param) and $param["Content"] !== null) {
-            $this->Content = $param["Content"];
         }
 
         if (array_key_exists("CodeTemplateId",$param) and $param["CodeTemplateId"] !== null) {

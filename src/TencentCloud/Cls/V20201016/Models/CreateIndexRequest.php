@@ -20,8 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateIndex请求参数结构体
  *
- * @method string getTopicId() 获取日志主题ID
- * @method void setTopicId(string $TopicId) 设置日志主题ID
+ * @method string getTopicId() 获取日志主题Id。
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+ * @method void setTopicId(string $TopicId) 设置日志主题Id。
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
  * @method RuleInfo getRule() 获取索引规则
  * @method void setRule(RuleInfo $Rule) 设置索引规则
  * @method boolean getStatus() 获取是否生效，默认为true
@@ -44,7 +46,8 @@ use TencentCloud\Common\AbstractModel;
 class CreateIndexRequest extends AbstractModel
 {
     /**
-     * @var string 日志主题ID
+     * @var string 日志主题Id。
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public $TopicId;
 
@@ -74,7 +77,8 @@ class CreateIndexRequest extends AbstractModel
     public $MetadataFlag;
 
     /**
-     * @param string $TopicId 日志主题ID
+     * @param string $TopicId 日志主题Id。
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      * @param RuleInfo $Rule 索引规则
      * @param boolean $Status 是否生效，默认为true
      * @param boolean $IncludeInternalFields 内置保留字段（`__FILENAME__`，`__HOSTNAME__`及`__SOURCE__`）是否包含至全文索引，默认为false，推荐设置为true

@@ -14,28 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cls\V20201016\Models;
+namespace TencentCloud\Thpc\V20230321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteIndex请求参数结构体
+ * 容器配置信息。
  *
- * @method string getTopicId() 获取日志主题Id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
- * @method void setTopicId(string $TopicId) 设置日志主题Id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+ * @method string getImage() 获取容器镜像地址
+ * @method void setImage(string $Image) 设置容器镜像地址
+ * @method array getRunArgs() 获取容器运行参数
+ * @method void setRunArgs(array $RunArgs) 设置容器运行参数
  */
-class DeleteIndexRequest extends AbstractModel
+class Docker extends AbstractModel
 {
     /**
-     * @var string 日志主题Id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * @var string 容器镜像地址
      */
-    public $TopicId;
+    public $Image;
 
     /**
-     * @param string $TopicId 日志主题Id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * @var array 容器运行参数
+     */
+    public $RunArgs;
+
+    /**
+     * @param string $Image 容器镜像地址
+     * @param array $RunArgs 容器运行参数
      */
     function __construct()
     {
@@ -50,8 +54,12 @@ class DeleteIndexRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TopicId",$param) and $param["TopicId"] !== null) {
-            $this->TopicId = $param["TopicId"];
+        if (array_key_exists("Image",$param) and $param["Image"] !== null) {
+            $this->Image = $param["Image"];
+        }
+
+        if (array_key_exists("RunArgs",$param) and $param["RunArgs"] !== null) {
+            $this->RunArgs = $param["RunArgs"];
         }
     }
 }

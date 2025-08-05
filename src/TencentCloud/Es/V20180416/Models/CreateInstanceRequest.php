@@ -116,6 +116,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableScheduleRecoverGroup(boolean $EnableScheduleRecoverGroup) 设置置放群组是否开启异步任务
  * @method EnableScheduleOperationDuration getEnableScheduleOperationDuration() 获取置放群组开启异步任务的可维护时间段
  * @method void setEnableScheduleOperationDuration(EnableScheduleOperationDuration $EnableScheduleOperationDuration) 设置置放群组开启异步任务的可维护时间段
+ * @method array getAutoScaleDiskInfoList() 获取自动扩盘参数列表
+ * @method void setAutoScaleDiskInfoList(array $AutoScaleDiskInfoList) 设置自动扩盘参数列表
+ * @method string getEnableKibanaPublicAccess() 获取是否开启kibana公网访问，不传默认开启
+ * @method void setEnableKibanaPublicAccess(string $EnableKibanaPublicAccess) 设置是否开启kibana公网访问，不传默认开启
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -328,6 +332,16 @@ class CreateInstanceRequest extends AbstractModel
     public $EnableScheduleOperationDuration;
 
     /**
+     * @var array 自动扩盘参数列表
+     */
+    public $AutoScaleDiskInfoList;
+
+    /**
+     * @var string 是否开启kibana公网访问，不传默认开启
+     */
+    public $EnableKibanaPublicAccess;
+
+    /**
      * @param string $Zone 可用区
      * @param string $EsVersion 实例版本（支持"5.6.4"、"6.4.3"、"6.8.2"、"7.5.1"、"7.10.1"）
      * @param string $VpcId 私有网络ID
@@ -376,6 +390,8 @@ class CreateInstanceRequest extends AbstractModel
      * @param integer $ReadWriteMode 读写分离模式：0-不开启，1-本地读写分离，2-远端读写分离
      * @param boolean $EnableScheduleRecoverGroup 置放群组是否开启异步任务
      * @param EnableScheduleOperationDuration $EnableScheduleOperationDuration 置放群组开启异步任务的可维护时间段
+     * @param array $AutoScaleDiskInfoList 自动扩盘参数列表
+     * @param string $EnableKibanaPublicAccess 是否开启kibana公网访问，不传默认开启
      */
     function __construct()
     {
@@ -566,6 +582,19 @@ class CreateInstanceRequest extends AbstractModel
         if (array_key_exists("EnableScheduleOperationDuration",$param) and $param["EnableScheduleOperationDuration"] !== null) {
             $this->EnableScheduleOperationDuration = new EnableScheduleOperationDuration();
             $this->EnableScheduleOperationDuration->deserialize($param["EnableScheduleOperationDuration"]);
+        }
+
+        if (array_key_exists("AutoScaleDiskInfoList",$param) and $param["AutoScaleDiskInfoList"] !== null) {
+            $this->AutoScaleDiskInfoList = [];
+            foreach ($param["AutoScaleDiskInfoList"] as $key => $value){
+                $obj = new AutoScaleDiskInfo();
+                $obj->deserialize($value);
+                array_push($this->AutoScaleDiskInfoList, $obj);
+            }
+        }
+
+        if (array_key_exists("EnableKibanaPublicAccess",$param) and $param["EnableKibanaPublicAccess"] !== null) {
+            $this->EnableKibanaPublicAccess = $param["EnableKibanaPublicAccess"];
         }
     }
 }

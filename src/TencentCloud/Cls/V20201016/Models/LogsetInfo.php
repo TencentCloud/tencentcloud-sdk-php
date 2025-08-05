@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogsetId(string $LogsetId) 设置日志集ID
  * @method string getLogsetName() 获取日志集名称
  * @method void setLogsetName(string $LogsetName) 设置日志集名称
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
+ * @method string getCreateTime() 获取创建时间。格式 `YYYY-MM-DD HH:MM:SS`
+ * @method void setCreateTime(string $CreateTime) 设置创建时间。格式 `YYYY-MM-DD HH:MM:SS`
  * @method string getAssumerName() 获取云产品标识，日志集由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
  * @method void setAssumerName(string $AssumerName) 设置云产品标识，日志集由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
  * @method array getTags() 获取日志集绑定的标签
@@ -48,7 +48,7 @@ class LogsetInfo extends AbstractModel
     public $LogsetName;
 
     /**
-     * @var string 创建时间
+     * @var string 创建时间。格式 `YYYY-MM-DD HH:MM:SS`
      */
     public $CreateTime;
 
@@ -75,7 +75,7 @@ class LogsetInfo extends AbstractModel
     /**
      * @param string $LogsetId 日志集ID
      * @param string $LogsetName 日志集名称
-     * @param string $CreateTime 创建时间
+     * @param string $CreateTime 创建时间。格式 `YYYY-MM-DD HH:MM:SS`
      * @param string $AssumerName 云产品标识，日志集由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
      * @param array $Tags 日志集绑定的标签
      * @param integer $TopicCount 日志集下日志主题的数目

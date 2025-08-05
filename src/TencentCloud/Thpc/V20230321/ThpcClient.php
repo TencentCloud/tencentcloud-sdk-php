@@ -35,6 +35,7 @@ use TencentCloud\Thpc\V20230321\Models as Models;
  * @method Models\CreateWorkspacesResponse CreateWorkspaces(Models\CreateWorkspacesRequest $req) 本接口 (CreateWorkspaces) 用于创建工作空间。
  * @method Models\DeleteClusterResponse DeleteCluster(Models\DeleteClusterRequest $req) 本接口（DeleteCluster）用于删除一个指定的集群。
  * @method Models\DeleteClusterStorageOptionResponse DeleteClusterStorageOption(Models\DeleteClusterStorageOptionRequest $req) 本接口 (DeleteClusterStorageOption) 用于删除集群存储选项信息。
+ * @method Models\DeleteJobResponse DeleteJob(Models\DeleteJobRequest $req) 本接口 (DeleteJob) 用于删除一个作业任务。
  * @method Models\DeleteNodesResponse DeleteNodes(Models\DeleteNodesRequest $req) 本接口(DeleteNodes)用于删除指定集群中一个或者多个计算节点或者登录节点。
  * @method Models\DeleteQueueResponse DeleteQueue(Models\DeleteQueueRequest $req) 本接口(DeleteQueue)用于从指定集群删除队列。
 * 本接口为目前只支持SchedulerType为SLURM的集群。
@@ -45,6 +46,9 @@ use TencentCloud\Thpc\V20230321\Models as Models;
  * @method Models\DescribeClusterStorageOptionResponse DescribeClusterStorageOption(Models\DescribeClusterStorageOptionRequest $req) 本接口 (DescribeClusterStorageOption) 用于查询集群存储选项信息。
  * @method Models\DescribeClustersResponse DescribeClusters(Models\DescribeClustersRequest $req) 本接口（DescribeClusters）用于查询集群列表。
  * @method Models\DescribeInitNodeScriptsResponse DescribeInitNodeScripts(Models\DescribeInitNodeScriptsRequest $req) 本接口 (DescribeInitNodeScripts) 用于查询节点初始化脚本列表。
+ * @method Models\DescribeJobSubmitInfoResponse DescribeJobSubmitInfo(Models\DescribeJobSubmitInfoRequest $req) 本接口用于查询作业的提交信息。
+ * @method Models\DescribeJobsResponse DescribeJobs(Models\DescribeJobsRequest $req) 本接口 (DescribeJobs) 用于查询作业任务列表信息。
+ * @method Models\DescribeJobsOverviewResponse DescribeJobsOverview(Models\DescribeJobsOverviewRequest $req) 本接口 (DescribeJobs) 用于查询作业任务列表信息。
  * @method Models\DescribeNodesResponse DescribeNodes(Models\DescribeNodesRequest $req) 本接口 (DescribeNodes) 用于查询指定集群节点概览信息列表。
  * @method Models\DescribeQueuesResponse DescribeQueues(Models\DescribeQueuesRequest $req) 本接口(DescribeQueues)用于查询指定集群队列概览信息列表。
  * @method Models\DescribeWorkspacesResponse DescribeWorkspaces(Models\DescribeWorkspacesRequest $req) 本接口（DescribeWorkspaces）用于查询工作空间列表。
@@ -53,6 +57,8 @@ use TencentCloud\Thpc\V20230321\Models as Models;
  * @method Models\ModifyWorkspacesAttributeResponse ModifyWorkspacesAttribute(Models\ModifyWorkspacesAttributeRequest $req) 本接口 (ModifyWorkspacesAttribute) 用于修改工作空间的属性（目前只支持修改工作空间的名称）。
  * @method Models\ModifyWorkspacesRenewFlagResponse ModifyWorkspacesRenewFlag(Models\ModifyWorkspacesRenewFlagRequest $req) 本接口 (ModifyWorkspacesAttribute) 用于修改工作空间的属性（目前只支持修改工作空间的名称）。
  * @method Models\SetAutoScalingConfigurationResponse SetAutoScalingConfiguration(Models\SetAutoScalingConfigurationRequest $req) 本接口(SetAutoScalingConfiguration)用于为集群设置集群弹性伸缩配置信息。
+ * @method Models\SubmitJobResponse SubmitJob(Models\SubmitJobRequest $req) 本接口 (SubmitJob) 用于提交一个作业任务。
+ * @method Models\TerminateJobResponse TerminateJob(Models\TerminateJobRequest $req) 本接口 (TerminateJob) 用于终止一个作业任务。
  * @method Models\TerminateWorkspacesResponse TerminateWorkspaces(Models\TerminateWorkspacesRequest $req) 本接口 (TerminateWorkspaces) 用于主动退还工作空间。
  */
 

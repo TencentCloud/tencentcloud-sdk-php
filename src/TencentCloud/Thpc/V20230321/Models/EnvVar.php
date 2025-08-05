@@ -14,28 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cls\V20201016\Models;
+namespace TencentCloud\Thpc\V20230321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteIndex请求参数结构体
+ * 用户自定义环境变量。
  *
- * @method string getTopicId() 获取日志主题Id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
- * @method void setTopicId(string $TopicId) 设置日志主题Id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+ * @method string getName() 获取ENV
+ * @method void setName(string $Name) 设置ENV
+ * @method string getValue() 获取test
+ * @method void setValue(string $Value) 设置test
  */
-class DeleteIndexRequest extends AbstractModel
+class EnvVar extends AbstractModel
 {
     /**
-     * @var string 日志主题Id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * @var string ENV
      */
-    public $TopicId;
+    public $Name;
 
     /**
-     * @param string $TopicId 日志主题Id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * @var string test
+     */
+    public $Value;
+
+    /**
+     * @param string $Name ENV
+     * @param string $Value test
      */
     function __construct()
     {
@@ -50,8 +54,12 @@ class DeleteIndexRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TopicId",$param) and $param["TopicId"] !== null) {
-            $this->TopicId = $param["TopicId"];
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
         }
     }
 }

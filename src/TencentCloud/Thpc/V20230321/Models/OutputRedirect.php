@@ -14,28 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cls\V20201016\Models;
+namespace TencentCloud\Thpc\V20230321\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteIndex请求参数结构体
+ * 输出重定向配置
  *
- * @method string getTopicId() 获取日志主题Id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
- * @method void setTopicId(string $TopicId) 设置日志主题Id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+ * @method string getDriver() 获取输出driver类型
+ * @method void setDriver(string $Driver) 设置输出driver类型
+ * @method array getOptions() 获取重定向配置参数
+ * @method void setOptions(array $Options) 设置重定向配置参数
  */
-class DeleteIndexRequest extends AbstractModel
+class OutputRedirect extends AbstractModel
 {
     /**
-     * @var string 日志主题Id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * @var string 输出driver类型
      */
-    public $TopicId;
+    public $Driver;
 
     /**
-     * @param string $TopicId 日志主题Id。
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * @var array 重定向配置参数
+     */
+    public $Options;
+
+    /**
+     * @param string $Driver 输出driver类型
+     * @param array $Options 重定向配置参数
      */
     function __construct()
     {
@@ -50,8 +54,12 @@ class DeleteIndexRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TopicId",$param) and $param["TopicId"] !== null) {
-            $this->TopicId = $param["TopicId"];
+        if (array_key_exists("Driver",$param) and $param["Driver"] !== null) {
+            $this->Driver = $param["Driver"];
+        }
+
+        if (array_key_exists("Options",$param) and $param["Options"] !== null) {
+            $this->Options = $param["Options"];
         }
     }
 }

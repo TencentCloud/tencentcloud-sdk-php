@@ -20,16 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeIndex返回参数结构体
  *
- * @method string getTopicId() 获取日志主题ID
- * @method void setTopicId(string $TopicId) 设置日志主题ID
- * @method boolean getStatus() 获取是否生效
- * @method void setStatus(boolean $Status) 设置是否生效
+ * @method string getTopicId() 获取日志主题Id
+ * @method void setTopicId(string $TopicId) 设置日志主题Id
+ * @method boolean getStatus() 获取索引状态。true：开启状态，false：关闭状态
+开启后可对日志进行检索分析，将产生索引流量、索引存储及相应费用。[费用详情](https://cloud.tencent.com/document/product/614/45802#.E8.AE.A1.E8.B4.B9.E9.A1.B9)
+ * @method void setStatus(boolean $Status) 设置索引状态。true：开启状态，false：关闭状态
+开启后可对日志进行检索分析，将产生索引流量、索引存储及相应费用。[费用详情](https://cloud.tencent.com/document/product/614/45802#.E8.AE.A1.E8.B4.B9.E9.A1.B9)
  * @method RuleInfo getRule() 获取索引配置信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setRule(RuleInfo $Rule) 设置索引配置信息
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getModifyTime() 获取索引修改时间，初始值为索引创建时间。
- * @method void setModifyTime(string $ModifyTime) 设置索引修改时间，初始值为索引创建时间。
+ * @method string getModifyTime() 获取索引修改时间，初始值为索引创建时间。格式 `YYYY-MM-DD HH:MM:SS`
+ * @method void setModifyTime(string $ModifyTime) 设置索引修改时间，初始值为索引创建时间。格式 `YYYY-MM-DD HH:MM:SS`
  * @method boolean getIncludeInternalFields() 获取内置保留字段（`__FILENAME__`，`__HOSTNAME__`及`__SOURCE__`）是否包含至全文索引
 * false:不包含
 * true:包含
@@ -50,12 +52,13 @@ use TencentCloud\Common\AbstractModel;
 class DescribeIndexResponse extends AbstractModel
 {
     /**
-     * @var string 日志主题ID
+     * @var string 日志主题Id
      */
     public $TopicId;
 
     /**
-     * @var boolean 是否生效
+     * @var boolean 索引状态。true：开启状态，false：关闭状态
+开启后可对日志进行检索分析，将产生索引流量、索引存储及相应费用。[费用详情](https://cloud.tencent.com/document/product/614/45802#.E8.AE.A1.E8.B4.B9.E9.A1.B9)
      */
     public $Status;
 
@@ -66,7 +69,7 @@ class DescribeIndexResponse extends AbstractModel
     public $Rule;
 
     /**
-     * @var string 索引修改时间，初始值为索引创建时间。
+     * @var string 索引修改时间，初始值为索引创建时间。格式 `YYYY-MM-DD HH:MM:SS`
      */
     public $ModifyTime;
 
@@ -91,11 +94,12 @@ class DescribeIndexResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TopicId 日志主题ID
-     * @param boolean $Status 是否生效
+     * @param string $TopicId 日志主题Id
+     * @param boolean $Status 索引状态。true：开启状态，false：关闭状态
+开启后可对日志进行检索分析，将产生索引流量、索引存储及相应费用。[费用详情](https://cloud.tencent.com/document/product/614/45802#.E8.AE.A1.E8.B4.B9.E9.A1.B9)
      * @param RuleInfo $Rule 索引配置信息
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ModifyTime 索引修改时间，初始值为索引创建时间。
+     * @param string $ModifyTime 索引修改时间，初始值为索引创建时间。格式 `YYYY-MM-DD HH:MM:SS`
      * @param boolean $IncludeInternalFields 内置保留字段（`__FILENAME__`，`__HOSTNAME__`及`__SOURCE__`）是否包含至全文索引
 * false:不包含
 * true:包含

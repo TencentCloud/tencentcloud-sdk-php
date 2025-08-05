@@ -14,28 +14,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cfw\V20190904\Models;
+namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteIdsWhiteRule请求参数结构体
+ * DescribeResourceConfig
  *
- * @method integer getId() 获取入侵防御白名单id
-参考DescribeIdsWhiteRule接口返回的Id字段
- * @method void setId(integer $Id) 设置入侵防御白名单id
-参考DescribeIdsWhiteRule接口返回的Id字段
+ * @method string getUin() 获取uin
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUin(string $Uin) 设置uin
+注意：此字段可能返回 null，表示取不到有效值。
  */
-class DeleteIdsWhiteRuleRequest extends AbstractModel
+class DescribeResourceConfigSts extends AbstractModel
 {
     /**
-     * @var integer 入侵防御白名单id
-参考DescribeIdsWhiteRule接口返回的Id字段
+     * @var string uin
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Id;
+    public $Uin;
 
     /**
-     * @param integer $Id 入侵防御白名单id
-参考DescribeIdsWhiteRule接口返回的Id字段
+     * @param string $Uin uin
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -50,8 +50,8 @@ class DeleteIdsWhiteRuleRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
-            $this->Id = $param["Id"];
+        if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
+            $this->Uin = $param["Uin"];
         }
     }
 }

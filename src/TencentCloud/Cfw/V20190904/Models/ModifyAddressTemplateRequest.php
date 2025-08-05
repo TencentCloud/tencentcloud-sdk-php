@@ -30,10 +30,8 @@ use TencentCloud\Common\AbstractModel;
 Type为5，域名模板eg：www.qq.com,www.tencent.com
  * @method void setIpString(string $IpString) 设置Type为1，ip模板eg：1.1.1.1,2.2.2.2；
 Type为5，域名模板eg：www.qq.com,www.tencent.com
- * @method integer getType() 获取1 ip模板
-5 域名模板
- * @method void setType(integer $Type) 设置1 ip模板
-5 域名模板
+ * @method integer getType() 获取1 ip模板  5 域名模板
+ * @method void setType(integer $Type) 设置1 ip模板  5 域名模板
  * @method string getProtocolType() 获取协议端口模板，协议类型，4:4层协议，7:7层协议。Type=6时必填。
  * @method void setProtocolType(string $ProtocolType) 设置协议端口模板，协议类型，4:4层协议，7:7层协议。Type=6时必填。
  */
@@ -61,8 +59,7 @@ Type为5，域名模板eg：www.qq.com,www.tencent.com
     public $IpString;
 
     /**
-     * @var integer 1 ip模板
-5 域名模板
+     * @var integer 1 ip模板  5 域名模板
      */
     public $Type;
 
@@ -77,8 +74,7 @@ Type为5，域名模板eg：www.qq.com,www.tencent.com
      * @param string $Detail 模板描述
      * @param string $IpString Type为1，ip模板eg：1.1.1.1,2.2.2.2；
 Type为5，域名模板eg：www.qq.com,www.tencent.com
-     * @param integer $Type 1 ip模板
-5 域名模板
+     * @param integer $Type 1 ip模板  5 域名模板
      * @param string $ProtocolType 协议端口模板，协议类型，4:4层协议，7:7层协议。Type=6时必填。
      */
     function __construct()

@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeHistoryAccounts返回参数结构体
  *
- * @method integer getTotalCount() 获取帐号变更历史列表记录总数。
- * @method void setTotalCount(integer $TotalCount) 设置帐号变更历史列表记录总数。
- * @method array getHistoryAccounts() 获取帐号变更历史数据数组。
- * @method void setHistoryAccounts(array $HistoryAccounts) 设置帐号变更历史数据数组。
+ * @method integer getTotalCount() 获取账号变更历史列表记录总数。
+ * @method void setTotalCount(integer $TotalCount) 设置账号变更历史列表记录总数。
+ * @method array getHistoryAccounts() 获取账号变更历史数据数组。
+ * @method void setHistoryAccounts(array $HistoryAccounts) 设置账号变更历史数据数组。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeHistoryAccountsResponse extends AbstractModel
 {
     /**
-     * @var integer 帐号变更历史列表记录总数。
+     * @var integer 账号变更历史列表记录总数。
      */
     public $TotalCount;
 
     /**
-     * @var array 帐号变更历史数据数组。
+     * @var array 账号变更历史数据数组。
      */
     public $HistoryAccounts;
 
@@ -45,8 +45,8 @@ class DescribeHistoryAccountsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 帐号变更历史列表记录总数。
-     * @param array $HistoryAccounts 帐号变更历史数据数组。
+     * @param integer $TotalCount 账号变更历史列表记录总数。
+     * @param array $HistoryAccounts 账号变更历史数据数组。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

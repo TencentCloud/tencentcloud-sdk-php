@@ -14,55 +14,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cfw\V20190904\Models;
+namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteIdsWhiteRule返回参数结构体
+ * DescribeLicenses返回参数结构体
  *
- * @method integer getReturnCode() 获取返回状态码：
-0 成功
-非0 失败
- * @method void setReturnCode(integer $ReturnCode) 设置返回状态码：
-0 成功
-非0 失败
- * @method string getReturnMsg() 获取返回信息：
-success 成功
-其他
- * @method void setReturnMsg(string $ReturnMsg) 设置返回信息：
-success 成功
-其他
- * @method integer getStatus() 获取返回状态码：
-0  处置成功
--1 通用错误，不用处理
- * @method void setStatus(integer $Status) 设置返回状态码：
-0  处置成功
--1 通用错误，不用处理
+ * @method TsfPageLicenseTag getResult() 获取许可标签列表分页信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setResult(TsfPageLicenseTag $Result) 设置许可标签列表分页信息
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DeleteIdsWhiteRuleResponse extends AbstractModel
+class DescribeLicensesResponse extends AbstractModel
 {
     /**
-     * @var integer 返回状态码：
-0 成功
-非0 失败
+     * @var TsfPageLicenseTag 许可标签列表分页信息
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $ReturnCode;
-
-    /**
-     * @var string 返回信息：
-success 成功
-其他
-     */
-    public $ReturnMsg;
-
-    /**
-     * @var integer 返回状态码：
-0  处置成功
--1 通用错误，不用处理
-     */
-    public $Status;
+    public $Result;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -70,15 +41,8 @@ success 成功
     public $RequestId;
 
     /**
-     * @param integer $ReturnCode 返回状态码：
-0 成功
-非0 失败
-     * @param string $ReturnMsg 返回信息：
-success 成功
-其他
-     * @param integer $Status 返回状态码：
-0  处置成功
--1 通用错误，不用处理
+     * @param TsfPageLicenseTag $Result 许可标签列表分页信息
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -94,16 +58,9 @@ success 成功
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ReturnCode",$param) and $param["ReturnCode"] !== null) {
-            $this->ReturnCode = $param["ReturnCode"];
-        }
-
-        if (array_key_exists("ReturnMsg",$param) and $param["ReturnMsg"] !== null) {
-            $this->ReturnMsg = $param["ReturnMsg"];
-        }
-
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = new TsfPageLicenseTag();
+            $this->Result->deserialize($param["Result"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

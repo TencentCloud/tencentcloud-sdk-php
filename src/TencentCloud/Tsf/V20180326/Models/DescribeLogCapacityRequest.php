@@ -14,24 +14,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Wedata\V20210820\Models;
+namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateBaseProject请求参数结构体
+ * DescribeLogCapacity请求参数结构体
  *
- * @method BaseProject getProject() 获取项目信息
- * @method void setProject(BaseProject $Project) 设置项目信息
+
  */
-class CreateBaseProjectRequest extends AbstractModel
+class DescribeLogCapacityRequest extends AbstractModel
 {
-    /**
-     * @var BaseProject 项目信息
-     */
-    public $Project;
+
 
     /**
-     * @param BaseProject $Project 项目信息
+
      */
     function __construct()
     {
@@ -46,9 +42,6 @@ class CreateBaseProjectRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Project",$param) and $param["Project"] !== null) {
-            $this->Project = new BaseProject();
-            $this->Project->deserialize($param["Project"]);
-        }
+
     }
 }

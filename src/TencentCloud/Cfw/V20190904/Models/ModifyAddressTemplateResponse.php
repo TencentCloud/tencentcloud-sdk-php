@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置创建结果,0成功
  * @method string getUuid() 获取唯一Id
  * @method void setUuid(string $Uuid) 设置唯一Id
+ * @method integer getRuleLimitNum() 获取规则数上限配置
+ * @method void setRuleLimitNum(integer $RuleLimitNum) 设置规则数上限配置
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +42,11 @@ class ModifyAddressTemplateResponse extends AbstractModel
     public $Uuid;
 
     /**
+     * @var integer 规则数上限配置
+     */
+    public $RuleLimitNum;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +54,7 @@ class ModifyAddressTemplateResponse extends AbstractModel
     /**
      * @param integer $Status 创建结果,0成功
      * @param string $Uuid 唯一Id
+     * @param integer $RuleLimitNum 规则数上限配置
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -68,6 +76,10 @@ class ModifyAddressTemplateResponse extends AbstractModel
 
         if (array_key_exists("Uuid",$param) and $param["Uuid"] !== null) {
             $this->Uuid = $param["Uuid"];
+        }
+
+        if (array_key_exists("RuleLimitNum",$param) and $param["RuleLimitNum"] !== null) {
+            $this->RuleLimitNum = $param["RuleLimitNum"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -14,44 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cfw\V20190904\Models;
+namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeIdsWhiteRule返回参数结构体
+ * DescribeLogCapacity返回参数结构体
  *
- * @method integer getTotal() 获取总条数
- * @method void setTotal(integer $Total) 设置总条数
- * @method array getData() 获取规则详情
- * @method void setData(array $Data) 设置规则详情
- * @method integer getReturnCode() 获取返回状态码 0 成功 非0不成功
- * @method void setReturnCode(integer $ReturnCode) 设置返回状态码 0 成功 非0不成功
- * @method string getReturnMsg() 获取返回信息  success 成功 其他 不成功
- * @method void setReturnMsg(string $ReturnMsg) 设置返回信息  success 成功 其他 不成功
+ * @method float getUsedSpace() 获取使用日志容量大小
+ * @method void setUsedSpace(float $UsedSpace) 设置使用日志容量大小
+ * @method float getCapacity() 获取日志总容量大小
+ * @method void setCapacity(float $Capacity) 设置日志总容量大小
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeIdsWhiteRuleResponse extends AbstractModel
+class DescribeLogCapacityResponse extends AbstractModel
 {
     /**
-     * @var integer 总条数
+     * @var float 使用日志容量大小
      */
-    public $Total;
+    public $UsedSpace;
 
     /**
-     * @var array 规则详情
+     * @var float 日志总容量大小
      */
-    public $Data;
-
-    /**
-     * @var integer 返回状态码 0 成功 非0不成功
-     */
-    public $ReturnCode;
-
-    /**
-     * @var string 返回信息  success 成功 其他 不成功
-     */
-    public $ReturnMsg;
+    public $Capacity;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -59,10 +45,8 @@ class DescribeIdsWhiteRuleResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Total 总条数
-     * @param array $Data 规则详情
-     * @param integer $ReturnCode 返回状态码 0 成功 非0不成功
-     * @param string $ReturnMsg 返回信息  success 成功 其他 不成功
+     * @param float $UsedSpace 使用日志容量大小
+     * @param float $Capacity 日志总容量大小
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -78,25 +62,12 @@ class DescribeIdsWhiteRuleResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
+        if (array_key_exists("UsedSpace",$param) and $param["UsedSpace"] !== null) {
+            $this->UsedSpace = $param["UsedSpace"];
         }
 
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = [];
-            foreach ($param["Data"] as $key => $value){
-                $obj = new IdsWhiteInfo();
-                $obj->deserialize($value);
-                array_push($this->Data, $obj);
-            }
-        }
-
-        if (array_key_exists("ReturnCode",$param) and $param["ReturnCode"] !== null) {
-            $this->ReturnCode = $param["ReturnCode"];
-        }
-
-        if (array_key_exists("ReturnMsg",$param) and $param["ReturnMsg"] !== null) {
-            $this->ReturnMsg = $param["ReturnMsg"];
+        if (array_key_exists("Capacity",$param) and $param["Capacity"] !== null) {
+            $this->Capacity = $param["Capacity"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

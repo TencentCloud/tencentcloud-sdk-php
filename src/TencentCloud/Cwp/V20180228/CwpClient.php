@@ -97,7 +97,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DeleteWebPageEventLogResponse DeleteWebPageEventLog(Models\DeleteWebPageEventLogRequest $req) 网站防篡改-删除事件记录
  * @method Models\DescribeABTestConfigResponse DescribeABTestConfig(Models\DescribeABTestConfigRequest $req) 获取用户当前灰度配置
  * @method Models\DescribeAESKeyResponse DescribeAESKey(Models\DescribeAESKeyRequest $req) 获取配置的aeskey和aesiv
- * @method Models\DescribeAccountStatisticsResponse DescribeAccountStatistics(Models\DescribeAccountStatisticsRequest $req) 本接口 (DescribeAccountStatistics) 用于获取帐号统计列表数据。
+ * @method Models\DescribeAccountStatisticsResponse DescribeAccountStatistics(Models\DescribeAccountStatisticsRequest $req) 本接口 (DescribeAccountStatistics) 用于获取账号统计列表数据。
  * @method Models\DescribeAgentInstallCommandResponse DescribeAgentInstallCommand(Models\DescribeAgentInstallCommandRequest $req) 获取agent安装命令
  * @method Models\DescribeAgentInstallationTokenResponse DescribeAgentInstallationToken(Models\DescribeAgentInstallationTokenRequest $req) 混合云安装agent token获取
  * @method Models\DescribeAlarmIncidentNodesResponse DescribeAlarmIncidentNodes(Models\DescribeAlarmIncidentNodesRequest $req) 获取告警点所在事件的所有节点信息
@@ -215,7 +215,7 @@ use TencentCloud\Cwp\V20180228\Models as Models;
  * @method Models\DescribeFileTamperRuleInfoResponse DescribeFileTamperRuleInfo(Models\DescribeFileTamperRuleInfoRequest $req) 查询某个监控规则的详情
  * @method Models\DescribeFileTamperRulesResponse DescribeFileTamperRules(Models\DescribeFileTamperRulesRequest $req) 核心文件监控规则列表
  * @method Models\DescribeGeneralStatResponse DescribeGeneralStat(Models\DescribeGeneralStatRequest $req) 获取主机相关统计
- * @method Models\DescribeHistoryAccountsResponse DescribeHistoryAccounts(Models\DescribeHistoryAccountsRequest $req) 本接口 (DescribeHistoryAccounts) 用于获取帐号变更历史列表数据。
+ * @method Models\DescribeHistoryAccountsResponse DescribeHistoryAccounts(Models\DescribeHistoryAccountsRequest $req) 本接口 (DescribeHistoryAccounts) 用于获取账号变更历史列表数据。
  * @method Models\DescribeHistoryServiceResponse DescribeHistoryService(Models\DescribeHistoryServiceRequest $req) 查询日志检索服务信息
  * @method Models\DescribeHostInfoResponse DescribeHostInfo(Models\DescribeHostInfoRequest $req) 主机信息与标签信息查询
  * @method Models\DescribeHostLoginListResponse DescribeHostLoginList(Models\DescribeHostLoginListRequest $req) 获取异常登录列表

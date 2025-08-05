@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getStatus() 获取0: 修改成功, 其他: 修改失败
  * @method void setStatus(integer $Status) 设置0: 修改成功, 其他: 修改失败
+ * @method integer getRuleLimitNum() 获取规则限制数量
+ * @method void setRuleLimitNum(integer $RuleLimitNum) 设置规则限制数量
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +35,18 @@ class ModifyAllRuleStatusResponse extends AbstractModel
     public $Status;
 
     /**
+     * @var integer 规则限制数量
+     */
+    public $RuleLimitNum;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param integer $Status 0: 修改成功, 其他: 修改失败
+     * @param integer $RuleLimitNum 规则限制数量
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +64,10 @@ class ModifyAllRuleStatusResponse extends AbstractModel
         }
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("RuleLimitNum",$param) and $param["RuleLimitNum"] !== null) {
+            $this->RuleLimitNum = $param["RuleLimitNum"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

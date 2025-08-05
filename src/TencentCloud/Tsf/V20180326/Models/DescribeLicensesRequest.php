@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Wedata\V20210820\Models;
+namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateBaseProject请求参数结构体
+ * DescribeLicenses请求参数结构体
  *
- * @method BaseProject getProject() 获取项目信息
- * @method void setProject(BaseProject $Project) 设置项目信息
+ * @method integer getOffset() 获取偏移量
+ * @method void setOffset(integer $Offset) 设置偏移量
+ * @method integer getLimit() 获取每页条数
+ * @method void setLimit(integer $Limit) 设置每页条数
  */
-class CreateBaseProjectRequest extends AbstractModel
+class DescribeLicensesRequest extends AbstractModel
 {
     /**
-     * @var BaseProject 项目信息
+     * @var integer 偏移量
      */
-    public $Project;
+    public $Offset;
 
     /**
-     * @param BaseProject $Project 项目信息
+     * @var integer 每页条数
+     */
+    public $Limit;
+
+    /**
+     * @param integer $Offset 偏移量
+     * @param integer $Limit 每页条数
      */
     function __construct()
     {
@@ -46,9 +54,12 @@ class CreateBaseProjectRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Project",$param) and $param["Project"] !== null) {
-            $this->Project = new BaseProject();
-            $this->Project->deserialize($param["Project"]);
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
     }
 }

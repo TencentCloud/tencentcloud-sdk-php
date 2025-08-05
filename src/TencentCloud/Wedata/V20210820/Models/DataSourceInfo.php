@@ -180,6 +180,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDataSourceEnvInfos(array $DataSourceEnvInfos) 设置 数据源环境信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getForbidProbe() 获取禁止数据探查
+ * @method void setForbidProbe(boolean $ForbidProbe) 设置禁止数据探查
  */
 class DataSourceInfo extends AbstractModel
 {
@@ -424,6 +426,11 @@ class DataSourceInfo extends AbstractModel
     public $DataSourceEnvInfos;
 
     /**
+     * @var boolean 禁止数据探查
+     */
+    public $ForbidProbe;
+
+    /**
      * @param string $DatabaseName 若数据源列表为绑定数据库，则为db名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 数据源描述信息
@@ -504,6 +511,7 @@ class DataSourceInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DataSourceEnvInfos  数据源环境信息
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $ForbidProbe 禁止数据探查
      */
     function __construct()
     {
@@ -682,6 +690,10 @@ class DataSourceInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->DataSourceEnvInfos, $obj);
             }
+        }
+
+        if (array_key_exists("ForbidProbe",$param) and $param["ForbidProbe"] !== null) {
+            $this->ForbidProbe = $param["ForbidProbe"];
         }
     }
 }

@@ -20,8 +20,6 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListTaskJobLogDetail请求参数结构体
  *
- * @method string getTaskId() 获取列表返回的Id
- * @method void setTaskId(string $TaskId) 设置列表返回的Id
  * @method integer getStartTime() 获取开始运行时间，unix时间戳（毫秒）
  * @method void setStartTime(integer $StartTime) 设置开始运行时间，unix时间戳（毫秒）
  * @method integer getEndTime() 获取结束运行时间，unix时间戳（毫秒）
@@ -30,20 +28,21 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置分页大小，最大1000，配合Context一起使用
  * @method string getContext() 获取下一次分页参数，第一次传空
  * @method void setContext(string $Context) 设置下一次分页参数，第一次传空
+ * @method string getTaskId() 获取列表返回的Id
+ * @method void setTaskId(string $TaskId) 设置列表返回的Id
  * @method boolean getAsc() 获取最近1000条日志是否升序排列，true:升序排序，false:倒序，默认false，倒序排列
  * @method void setAsc(boolean $Asc) 设置最近1000条日志是否升序排列，true:升序排序，false:倒序，默认false，倒序排列
  * @method array getFilters() 获取预览日志的通用过滤条件
  * @method void setFilters(array $Filters) 设置预览日志的通用过滤条件
  * @method string getBatchId() 获取SparkSQL任务唯一ID
  * @method void setBatchId(string $BatchId) 设置SparkSQL任务唯一ID
+ * @method string getDataEngineId() 获取引擎id
+ * @method void setDataEngineId(string $DataEngineId) 设置引擎id
+ * @method string getResourceGroupId() 获取资源组id
+ * @method void setResourceGroupId(string $ResourceGroupId) 设置资源组id
  */
 class ListTaskJobLogDetailRequest extends AbstractModel
 {
-    /**
-     * @var string 列表返回的Id
-     */
-    public $TaskId;
-
     /**
      * @var integer 开始运行时间，unix时间戳（毫秒）
      */
@@ -65,6 +64,11 @@ class ListTaskJobLogDetailRequest extends AbstractModel
     public $Context;
 
     /**
+     * @var string 列表返回的Id
+     */
+    public $TaskId;
+
+    /**
      * @var boolean 最近1000条日志是否升序排列，true:升序排序，false:倒序，默认false，倒序排列
      */
     public $Asc;
@@ -80,14 +84,26 @@ class ListTaskJobLogDetailRequest extends AbstractModel
     public $BatchId;
 
     /**
-     * @param string $TaskId 列表返回的Id
+     * @var string 引擎id
+     */
+    public $DataEngineId;
+
+    /**
+     * @var string 资源组id
+     */
+    public $ResourceGroupId;
+
+    /**
      * @param integer $StartTime 开始运行时间，unix时间戳（毫秒）
      * @param integer $EndTime 结束运行时间，unix时间戳（毫秒）
      * @param integer $Limit 分页大小，最大1000，配合Context一起使用
      * @param string $Context 下一次分页参数，第一次传空
+     * @param string $TaskId 列表返回的Id
      * @param boolean $Asc 最近1000条日志是否升序排列，true:升序排序，false:倒序，默认false，倒序排列
      * @param array $Filters 预览日志的通用过滤条件
      * @param string $BatchId SparkSQL任务唯一ID
+     * @param string $DataEngineId 引擎id
+     * @param string $ResourceGroupId 资源组id
      */
     function __construct()
     {
@@ -102,10 +118,6 @@ class ListTaskJobLogDetailRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
-        }
-
         if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
             $this->StartTime = $param["StartTime"];
         }
@@ -120,6 +132,10 @@ class ListTaskJobLogDetailRequest extends AbstractModel
 
         if (array_key_exists("Context",$param) and $param["Context"] !== null) {
             $this->Context = $param["Context"];
+        }
+
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
 
         if (array_key_exists("Asc",$param) and $param["Asc"] !== null) {
@@ -137,6 +153,14 @@ class ListTaskJobLogDetailRequest extends AbstractModel
 
         if (array_key_exists("BatchId",$param) and $param["BatchId"] !== null) {
             $this->BatchId = $param["BatchId"];
+        }
+
+        if (array_key_exists("DataEngineId",$param) and $param["DataEngineId"] !== null) {
+            $this->DataEngineId = $param["DataEngineId"];
+        }
+
+        if (array_key_exists("ResourceGroupId",$param) and $param["ResourceGroupId"] !== null) {
+            $this->ResourceGroupId = $param["ResourceGroupId"];
         }
     }
 }

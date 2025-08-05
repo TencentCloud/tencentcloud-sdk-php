@@ -95,7 +95,7 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\DescribeMigrationDetailResponse DescribeMigrationDetail(Models\DescribeMigrationDetailRequest $req) 本接口（DescribeMigrationDetail）用于查询迁移任务的详细情况
  * @method Models\DescribeMigrationsResponse DescribeMigrations(Models\DescribeMigrationsRequest $req) 本接口（DescribeMigrations）根据输入的限定条件，查询符合条件的迁移任务列表
  * @method Models\DescribeOrdersResponse DescribeOrders(Models\DescribeOrdersRequest $req) 本接口（DescribeOrders）用于查询订单信息
- * @method Models\DescribeProductConfigResponse DescribeProductConfig(Models\DescribeProductConfigRequest $req) 本接口 (DescribeProductConfig) 用于查询售卖规格配置。
+ * @method Models\DescribeProductConfigResponse DescribeProductConfig(Models\DescribeProductConfigRequest $req) 本接口（DescribeProductConfig）用于查询售卖规格配置。
  * @method Models\DescribeProductSpecResponse DescribeProductSpec(Models\DescribeProductSpecRequest $req) 本接口 (DescribeProductSpec) 用于查询全地域售卖规格配置（内部前端使用不公开）
  * @method Models\DescribeProjectSecurityGroupsResponse DescribeProjectSecurityGroups(Models\DescribeProjectSecurityGroupsRequest $req) 本接口(DescribeProjectSecurityGroups)用于查询项目的安全组详情。
  * @method Models\DescribePublishSubscribeResponse DescribePublishSubscribe(Models\DescribePublishSubscribeRequest $req) 本接口（DescribePublishSubscribe）用于查询发布订阅关系列表。
@@ -114,7 +114,7 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\DescribeUploadBackupInfoResponse DescribeUploadBackupInfo(Models\DescribeUploadBackupInfoRequest $req) 本接口（DescribeUploadBackupInfo）用于查询备份上传权限。
  * @method Models\DescribeUploadIncrementalInfoResponse DescribeUploadIncrementalInfo(Models\DescribeUploadIncrementalInfoRequest $req) 本接口（DescribeUploadIncrementalInfo）用于查询增量备份上传权限。
  * @method Models\DescribeXEventsResponse DescribeXEvents(Models\DescribeXEventsRequest $req) 本接口（DescribeXEvents）用于查询扩展事件列表。
- * @method Models\DescribeZonesResponse DescribeZones(Models\DescribeZonesRequest $req) 本接口 (DescribeZones) 用于查询当前可售卖的可用区信息。
+ * @method Models\DescribeZonesResponse DescribeZones(Models\DescribeZonesRequest $req) 本接口（DescribeZones）用于查询当前可售卖的可用区信息。
  * @method Models\DisassociateSecurityGroupsResponse DisassociateSecurityGroups(Models\DisassociateSecurityGroupsRequest $req) 本接口(DisassociateSecurityGroups)用于安全组批量解绑实例。
  * @method Models\InquiryPriceCreateDBInstancesResponse InquiryPriceCreateDBInstances(Models\InquiryPriceCreateDBInstancesRequest $req) 本接口（InquiryPriceCreateDBInstances）用于查询申请实例价格。
  * @method Models\InquiryPriceRenewDBInstanceResponse InquiryPriceRenewDBInstance(Models\InquiryPriceRenewDBInstanceRequest $req) 本接口（InquiryPriceRenewDBInstance）用于查询包年包月实例的续费价格。

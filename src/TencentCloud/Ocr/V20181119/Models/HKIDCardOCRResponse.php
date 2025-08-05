@@ -65,9 +65,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSmallHeadImage(string $SmallHeadImage) 设置Base64编码的证件右侧人像小图
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getWarningCode() 获取该字段已废弃， 将固定返回空数组，不建议使用。
-This field is deprecated and will always return an empty array. Usage is not recommended.
+
  * @method void setWarningCode(array $WarningCode) 设置该字段已废弃， 将固定返回空数组，不建议使用。
-This field is deprecated and will always return an empty array. Usage is not recommended.
+
  * @method array getWarnCardInfos() 获取告警码
 -9101 证件边框不完整告警
 -9102 证件复印件告警
@@ -168,7 +168,7 @@ class HKIDCardOCRResponse extends AbstractModel
 
     /**
      * @var array 该字段已废弃， 将固定返回空数组，不建议使用。
-This field is deprecated and will always return an empty array. Usage is not recommended.
+
      * @deprecated
      */
     public $WarningCode;
@@ -219,7 +219,7 @@ This field is deprecated and will always return an empty array. Usage is not rec
      * @param string $SmallHeadImage Base64编码的证件右侧人像小图
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $WarningCode 该字段已废弃， 将固定返回空数组，不建议使用。
-This field is deprecated and will always return an empty array. Usage is not recommended.
+
      * @param array $WarnCardInfos 告警码
 -9101 证件边框不完整告警
 -9102 证件复印件告警

@@ -130,6 +130,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSparkMinSize(integer $SparkMinSize) 设置Spark类型资源组资源最小值
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getPublicDomain() 获取自定义镜像容器镜像服务domain 名称
+ * @method void setPublicDomain(string $PublicDomain) 设置自定义镜像容器镜像服务domain 名称
+ * @method string getRegistryId() 获取自定义镜像容器镜像服务tcr实例id
+ * @method void setRegistryId(string $RegistryId) 设置自定义镜像容器镜像服务tcr实例id
+ * @method string getRegionName() 获取容器镜像服务tcr所在地域
+ * @method void setRegionName(string $RegionName) 设置容器镜像服务tcr所在地域
+ * @method string getLaunchTime() 获取资源组启动耗时
+ * @method void setLaunchTime(string $LaunchTime) 设置资源组启动耗时
  */
 class StandardEngineResourceGroupInfo extends AbstractModel
 {
@@ -329,6 +337,26 @@ class StandardEngineResourceGroupInfo extends AbstractModel
     public $SparkMinSize;
 
     /**
+     * @var string 自定义镜像容器镜像服务domain 名称
+     */
+    public $PublicDomain;
+
+    /**
+     * @var string 自定义镜像容器镜像服务tcr实例id
+     */
+    public $RegistryId;
+
+    /**
+     * @var string 容器镜像服务tcr所在地域
+     */
+    public $RegionName;
+
+    /**
+     * @var string 资源组启动耗时
+     */
+    public $LaunchTime;
+
+    /**
      * @param string $EngineResourceGroupId 标准引擎资源组ID
      * @param string $EngineResourceGroupName 标准引擎资源组名称，支持1-50个英文、汉字、数字、连接线-或下划线_
      * @param string $Creator 创建者
@@ -384,6 +412,10 @@ class StandardEngineResourceGroupInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SparkMinSize Spark类型资源组资源最小值
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $PublicDomain 自定义镜像容器镜像服务domain 名称
+     * @param string $RegistryId 自定义镜像容器镜像服务tcr实例id
+     * @param string $RegionName 容器镜像服务tcr所在地域
+     * @param string $LaunchTime 资源组启动耗时
      */
     function __construct()
     {
@@ -536,6 +568,22 @@ class StandardEngineResourceGroupInfo extends AbstractModel
 
         if (array_key_exists("SparkMinSize",$param) and $param["SparkMinSize"] !== null) {
             $this->SparkMinSize = $param["SparkMinSize"];
+        }
+
+        if (array_key_exists("PublicDomain",$param) and $param["PublicDomain"] !== null) {
+            $this->PublicDomain = $param["PublicDomain"];
+        }
+
+        if (array_key_exists("RegistryId",$param) and $param["RegistryId"] !== null) {
+            $this->RegistryId = $param["RegistryId"];
+        }
+
+        if (array_key_exists("RegionName",$param) and $param["RegionName"] !== null) {
+            $this->RegionName = $param["RegionName"];
+        }
+
+        if (array_key_exists("LaunchTime",$param) and $param["LaunchTime"] !== null) {
+            $this->LaunchTime = $param["LaunchTime"];
         }
     }
 }

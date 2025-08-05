@@ -155,6 +155,8 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\DescribeJvmMonitorResponse DescribeJvmMonitor(Models\DescribeJvmMonitorRequest $req) 查询java实例jvm监控数据,返回数据可选
  * @method Models\DescribeLaneRulesResponse DescribeLaneRules(Models\DescribeLaneRulesRequest $req) 查询泳道规则列表
  * @method Models\DescribeLanesResponse DescribeLanes(Models\DescribeLanesRequest $req) 查询泳道列表
+ * @method Models\DescribeLicensesResponse DescribeLicenses(Models\DescribeLicensesRequest $req) 查询许可列表
+ * @method Models\DescribeLogCapacityResponse DescribeLogCapacity(Models\DescribeLogCapacityRequest $req) 获取用户日志使用量
  * @method Models\DescribeMicroserviceResponse DescribeMicroservice(Models\DescribeMicroserviceRequest $req) 查询微服务详情
  * @method Models\DescribeMicroservicesResponse DescribeMicroservices(Models\DescribeMicroservicesRequest $req) 获取微服务列表
  * @method Models\DescribeMicroservicesByGroupIdsResponse DescribeMicroservicesByGroupIds(Models\DescribeMicroservicesByGroupIdsRequest $req) 通过部署组ID获取微服务
@@ -174,6 +176,7 @@ COS相关文档请查阅：https://cloud.tencent.com/document/product/436
  * @method Models\DescribeReleasedConfigResponse DescribeReleasedConfig(Models\DescribeReleasedConfigRequest $req) 查询group发布的配置
  * @method Models\DescribeRepositoriesResponse DescribeRepositories(Models\DescribeRepositoriesRequest $req) 查询仓库列表
  * @method Models\DescribeRepositoryResponse DescribeRepository(Models\DescribeRepositoryRequest $req) 查询仓库信息
+ * @method Models\DescribeResourceConfigResponse DescribeResourceConfig(Models\DescribeResourceConfigRequest $req) 无
  * @method Models\DescribeResourceTaskStatusResponse DescribeResourceTaskStatus(Models\DescribeResourceTaskStatusRequest $req) 资源任务的执行状态描述接口
  * @method Models\DescribeSimpleApplicationsResponse DescribeSimpleApplications(Models\DescribeSimpleApplicationsRequest $req) 查询简单应用列表
  * @method Models\DescribeSimpleClustersResponse DescribeSimpleClusters(Models\DescribeSimpleClustersRequest $req) 查询简单集群列表

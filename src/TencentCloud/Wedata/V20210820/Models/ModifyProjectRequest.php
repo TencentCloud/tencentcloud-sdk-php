@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProjectId() 获取目标修改的项目ID
  * @method void setProjectId(string $ProjectId) 设置目标修改的项目ID
+ * @method string getDisplayName() 获取项目显示名称，可以为中文名,需要租户范围内唯一
+ * @method void setDisplayName(string $DisplayName) 设置项目显示名称，可以为中文名,需要租户范围内唯一
+ * @method string getDescription() 获取备注
+ * @method void setDescription(string $Description) 设置备注
  * @method boolean getTaskSubmitApproval() 获取true/false则修改，不带该参数不修改。
  * @method void setTaskSubmitApproval(boolean $TaskSubmitApproval) 设置true/false则修改，不带该参数不修改。
  * @method ResourcePoolInfo getResourcePoolInfo() 获取资源池信息
@@ -36,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModel(string $Model) 设置项目类型，SIMPLE：简单模式 STANDARD：标准模式
  * @method array getProjectOwner() 获取项目负责人
  * @method void setProjectOwner(array $ProjectOwner) 设置项目负责人
+ * @method string getModifyType() 获取更新类型
+ * @method void setModifyType(string $ModifyType) 设置更新类型
  */
 class ModifyProjectRequest extends AbstractModel
 {
@@ -43,6 +49,16 @@ class ModifyProjectRequest extends AbstractModel
      * @var string 目标修改的项目ID
      */
     public $ProjectId;
+
+    /**
+     * @var string 项目显示名称，可以为中文名,需要租户范围内唯一
+     */
+    public $DisplayName;
+
+    /**
+     * @var string 备注
+     */
+    public $Description;
 
     /**
      * @var boolean true/false则修改，不带该参数不修改。
@@ -80,7 +96,14 @@ class ModifyProjectRequest extends AbstractModel
     public $ProjectOwner;
 
     /**
+     * @var string 更新类型
+     */
+    public $ModifyType;
+
+    /**
      * @param string $ProjectId 目标修改的项目ID
+     * @param string $DisplayName 项目显示名称，可以为中文名,需要租户范围内唯一
+     * @param string $Description 备注
      * @param boolean $TaskSubmitApproval true/false则修改，不带该参数不修改。
      * @param ResourcePoolInfo $ResourcePoolInfo 资源池信息
      * @param array $ProjectManagers 项目管理员
@@ -88,6 +111,7 @@ class ModifyProjectRequest extends AbstractModel
      * @param string $ExtraOptions 以后新增选项可以直接通过前端的json格式写入去实现
      * @param string $Model 项目类型，SIMPLE：简单模式 STANDARD：标准模式
      * @param array $ProjectOwner 项目负责人
+     * @param string $ModifyType 更新类型
      */
     function __construct()
     {
@@ -104,6 +128,14 @@ class ModifyProjectRequest extends AbstractModel
         }
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("DisplayName",$param) and $param["DisplayName"] !== null) {
+            $this->DisplayName = $param["DisplayName"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
 
         if (array_key_exists("TaskSubmitApproval",$param) and $param["TaskSubmitApproval"] !== null) {
@@ -133,6 +165,10 @@ class ModifyProjectRequest extends AbstractModel
 
         if (array_key_exists("ProjectOwner",$param) and $param["ProjectOwner"] !== null) {
             $this->ProjectOwner = $param["ProjectOwner"];
+        }
+
+        if (array_key_exists("ModifyType",$param) and $param["ModifyType"] !== null) {
+            $this->ModifyType = $param["ModifyType"];
         }
     }
 }

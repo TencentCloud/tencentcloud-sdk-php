@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(string $ProjectId) 设置项目Id
  * @method string getTaskId() 获取任务ID
  * @method void setTaskId(string $TaskId) 设置任务ID
- * @method string getScriptContent() 获取必填，脚本内容 base64编码
- * @method void setScriptContent(string $ScriptContent) 设置必填，脚本内容 base64编码
+ * @method string getScriptContent() 获取存在脚本的任务必填（shell任务、Hive任务、python任务等），脚本内容 base64编码
+ * @method void setScriptContent(string $ScriptContent) 设置存在脚本的任务必填（shell任务、Hive任务、python任务等），脚本内容 base64编码
  * @method array getIntegrationNodeDetails() 获取集成任务脚本配置
  * @method void setIntegrationNodeDetails(array $IntegrationNodeDetails) 设置集成任务脚本配置
  */
@@ -42,7 +42,7 @@ class ModifyTaskScriptRequest extends AbstractModel
     public $TaskId;
 
     /**
-     * @var string 必填，脚本内容 base64编码
+     * @var string 存在脚本的任务必填（shell任务、Hive任务、python任务等），脚本内容 base64编码
      */
     public $ScriptContent;
 
@@ -54,7 +54,7 @@ class ModifyTaskScriptRequest extends AbstractModel
     /**
      * @param string $ProjectId 项目Id
      * @param string $TaskId 任务ID
-     * @param string $ScriptContent 必填，脚本内容 base64编码
+     * @param string $ScriptContent 存在脚本的任务必填（shell任务、Hive任务、python任务等），脚本内容 base64编码
      * @param array $IntegrationNodeDetails 集成任务脚本配置
      */
     function __construct()

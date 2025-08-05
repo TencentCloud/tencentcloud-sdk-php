@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
 
 - `minutely`：分钟级（默认值）
 - `immediate`：立即
+ * @method VisionSummaryConfig getSummaryConfig() 获取摘要输出配置
+ * @method void setSummaryConfig(VisionSummaryConfig $SummaryConfig) 设置摘要输出配置
  */
 class InvokeTWeSeeRecognitionTaskRequest extends AbstractModel
 {
@@ -119,6 +121,11 @@ class InvokeTWeSeeRecognitionTaskRequest extends AbstractModel
     public $SummaryQOS;
 
     /**
+     * @var VisionSummaryConfig 摘要输出配置
+     */
+    public $SummaryConfig;
+
+    /**
      * @param string $ProductId 产品ID
      * @param string $DeviceName 设备名称
      * @param string $InputURL 输入视频 / 图片的 URL
@@ -136,6 +143,7 @@ class InvokeTWeSeeRecognitionTaskRequest extends AbstractModel
 
 - `minutely`：分钟级（默认值）
 - `immediate`：立即
+     * @param VisionSummaryConfig $SummaryConfig 摘要输出配置
      */
     function __construct()
     {
@@ -192,6 +200,11 @@ class InvokeTWeSeeRecognitionTaskRequest extends AbstractModel
 
         if (array_key_exists("SummaryQOS",$param) and $param["SummaryQOS"] !== null) {
             $this->SummaryQOS = $param["SummaryQOS"];
+        }
+
+        if (array_key_exists("SummaryConfig",$param) and $param["SummaryConfig"] !== null) {
+            $this->SummaryConfig = new VisionSummaryConfig();
+            $this->SummaryConfig->deserialize($param["SummaryConfig"]);
         }
     }
 }

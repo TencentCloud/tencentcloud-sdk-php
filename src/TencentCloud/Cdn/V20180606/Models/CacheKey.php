@@ -27,8 +27,12 @@ off：关闭全路径缓存（即开启参数忽略）
 on：开启全路径缓存（即关闭参数忽略）
 off：关闭全路径缓存（即开启参数忽略）
  * @method string getIgnoreCase() 获取是否忽略大小写缓存
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIgnoreCase(string $IgnoreCase) 设置是否忽略大小写缓存
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
  * @method QueryStringKey getQueryString() 获取CacheKey中包含请求参数
 注意：此字段可能返回 null，表示取不到有效值。
@@ -66,6 +70,8 @@ off：关闭全路径缓存（即开启参数忽略）
 
     /**
      * @var string 是否忽略大小写缓存
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IgnoreCase;
@@ -111,6 +117,8 @@ off：关闭全路径缓存（即开启参数忽略）
 on：开启全路径缓存（即关闭参数忽略）
 off：关闭全路径缓存（即开启参数忽略）
      * @param string $IgnoreCase 是否忽略大小写缓存
+on：开启
+off：关闭
 注意：此字段可能返回 null，表示取不到有效值。
      * @param QueryStringKey $QueryString CacheKey中包含请求参数
 注意：此字段可能返回 null，表示取不到有效值。

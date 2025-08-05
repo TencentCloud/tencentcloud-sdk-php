@@ -14,24 +14,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Wedata\V20210820\Models;
+namespace TencentCloud\Tsf\V20180326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateBaseProject请求参数结构体
+ * 程序包相关配置信息
  *
- * @method BaseProject getProject() 获取项目信息
- * @method void setProject(BaseProject $Project) 设置项目信息
+ * @method integer getSpaceSize() 获取程序包存储空间大小，单位字节
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSpaceSize(integer $SpaceSize) 设置程序包存储空间大小，单位字节
+注意：此字段可能返回 null，表示取不到有效值。
  */
-class CreateBaseProjectRequest extends AbstractModel
+class PackageConfig extends AbstractModel
 {
     /**
-     * @var BaseProject 项目信息
+     * @var integer 程序包存储空间大小，单位字节
+注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Project;
+    public $SpaceSize;
 
     /**
-     * @param BaseProject $Project 项目信息
+     * @param integer $SpaceSize 程序包存储空间大小，单位字节
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -46,9 +50,8 @@ class CreateBaseProjectRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Project",$param) and $param["Project"] !== null) {
-            $this->Project = new BaseProject();
-            $this->Project->deserialize($param["Project"]);
+        if (array_key_exists("SpaceSize",$param) and $param["SpaceSize"] !== null) {
+            $this->SpaceSize = $param["SpaceSize"];
         }
     }
 }

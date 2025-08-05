@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getCompareVal() 获取同比指标值，已弃用，不建议使用
  * @method void setCompareVal(string $CompareVal) 设置同比指标值，已弃用，不建议使用
+ * @method string getNameCN() 获取指标中文名
+ * @method void setNameCN(string $NameCN) 设置指标中文名
  */
 class ApmField extends AbstractModel
 {
@@ -72,6 +74,11 @@ class ApmField extends AbstractModel
     public $CompareVal;
 
     /**
+     * @var string 指标中文名
+     */
+    public $NameCN;
+
+    /**
      * @param string $Key 指标名
      * @param float $Value 指标数值
      * @param string $Unit 指标所对应的单位
@@ -80,6 +87,7 @@ class ApmField extends AbstractModel
      * @param array $LastPeriodValue 同比上一个周期的具体指标数值
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CompareVal 同比指标值，已弃用，不建议使用
+     * @param string $NameCN 指标中文名
      */
     function __construct()
     {
@@ -126,6 +134,10 @@ class ApmField extends AbstractModel
 
         if (array_key_exists("CompareVal",$param) and $param["CompareVal"] !== null) {
             $this->CompareVal = $param["CompareVal"];
+        }
+
+        if (array_key_exists("NameCN",$param) and $param["NameCN"] !== null) {
+            $this->NameCN = $param["NameCN"];
         }
     }
 }

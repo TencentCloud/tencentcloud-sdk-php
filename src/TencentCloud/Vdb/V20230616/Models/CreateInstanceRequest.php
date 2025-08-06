@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceTags(array $ResourceTags) 设置以数组形式列出标签信息。
  * @method string getProject() 获取指定实例所属项目 ID。
  * @method void setProject(string $Project) 设置指定实例所属项目 ID。
+ * @method integer getProductType() 获取产品版本，0-标准版，1-容量增强版
+ * @method void setProductType(integer $ProductType) 设置产品版本，0-标准版，1-容量增强版
  * @method string getInstanceType() 获取实例类型。
 - base：免费测试版。
 - single：单机版。
@@ -173,6 +175,11 @@ class CreateInstanceRequest extends AbstractModel
      * @deprecated
      */
     public $Project;
+
+    /**
+     * @var integer 产品版本，0-标准版，1-容量增强版
+     */
+    public $ProductType;
 
     /**
      * @var string 实例类型。
@@ -310,6 +317,7 @@ VPC或TCS
      * @param string $Params 实例额外参数，通过json提交。
      * @param array $ResourceTags 以数组形式列出标签信息。
      * @param string $Project 指定实例所属项目 ID。
+     * @param integer $ProductType 产品版本，0-标准版，1-容量增强版
      * @param string $InstanceType 实例类型。
 - base：免费测试版。
 - single：单机版。
@@ -398,6 +406,10 @@ VPC或TCS
 
         if (array_key_exists("Project",$param) and $param["Project"] !== null) {
             $this->Project = $param["Project"];
+        }
+
+        if (array_key_exists("ProductType",$param) and $param["ProductType"] !== null) {
+            $this->ProductType = $param["ProductType"];
         }
 
         if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {

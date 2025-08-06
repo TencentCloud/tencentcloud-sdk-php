@@ -56,6 +56,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsDefault(boolean $IsDefault) 设置是否为默认缓存卷。
  * @method string getStatus() 获取状态。
  * @method void setStatus(string $Status) 设置状态。
+ * @method VolumeAutoScaleUpRule getAutoScaleUpRule() 获取turbo自动扩容策略
+ * @method void setAutoScaleUpRule(VolumeAutoScaleUpRule $AutoScaleUpRule) 设置turbo自动扩容策略
+ * @method string getMetaType() 获取turbo元数据属性
+ * @method void setMetaType(string $MetaType) 设置turbo元数据属性
+ * @method string getZone() 获取可用区
+ * @method void setZone(string $Zone) 设置可用区
  */
 class Volume extends AbstractModel
 {
@@ -126,6 +132,21 @@ class Volume extends AbstractModel
     public $Status;
 
     /**
+     * @var VolumeAutoScaleUpRule turbo自动扩容策略
+     */
+    public $AutoScaleUpRule;
+
+    /**
+     * @var string turbo元数据属性
+     */
+    public $MetaType;
+
+    /**
+     * @var string 可用区
+     */
+    public $Zone;
+
+    /**
      * @param string $VolumeId 缓存卷ID。
      * @param string $Name 名称。
      * @param string $Description 描述。
@@ -144,6 +165,9 @@ class Volume extends AbstractModel
      * @param string $DefaultMountPath 默认挂载路径。
      * @param boolean $IsDefault 是否为默认缓存卷。
      * @param string $Status 状态。
+     * @param VolumeAutoScaleUpRule $AutoScaleUpRule turbo自动扩容策略
+     * @param string $MetaType turbo元数据属性
+     * @param string $Zone 可用区
      */
     function __construct()
     {
@@ -204,6 +228,19 @@ class Volume extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("AutoScaleUpRule",$param) and $param["AutoScaleUpRule"] !== null) {
+            $this->AutoScaleUpRule = new VolumeAutoScaleUpRule();
+            $this->AutoScaleUpRule->deserialize($param["AutoScaleUpRule"]);
+        }
+
+        if (array_key_exists("MetaType",$param) and $param["MetaType"] !== null) {
+            $this->MetaType = $param["MetaType"];
+        }
+
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
         }
     }
 }

@@ -40,9 +40,9 @@ use TencentCloud\Common\AbstractModel;
 <li>创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数MultiCertInfo至少需要传一个， 但不能同时传入。</li>
  * @method integer getSessionExpireTime() 获取会话保持时间，单位：秒。可选值：30~3600，默认为0，默认不开启。此参数仅适用于TCP/UDP监听器。
  * @method void setSessionExpireTime(integer $SessionExpireTime) 设置会话保持时间，单位：秒。可选值：30~3600，默认为0，默认不开启。此参数仅适用于TCP/UDP监听器。
- * @method string getScheduler() 获取监听器转发的方式。可选值：WRR（按权重轮询）、LEAST_CONN（按最小连接数）、IP_HASH（按 IP 地址哈希）
+ * @method string getScheduler() 获取监听器转发的方式。可选值：WRR（按权重轮询）、LEAST_CONN（按最小连接数）
 默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。
- * @method void setScheduler(string $Scheduler) 设置监听器转发的方式。可选值：WRR（按权重轮询）、LEAST_CONN（按最小连接数）、IP_HASH（按 IP 地址哈希）
+ * @method void setScheduler(string $Scheduler) 设置监听器转发的方式。可选值：WRR（按权重轮询）、LEAST_CONN（按最小连接数）
 默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。
  * @method integer getSniSwitch() 获取是否开启SNI特性，此参数仅适用于HTTPS监听器。0表示未开启，1表示开启。
  * @method void setSniSwitch(integer $SniSwitch) 设置是否开启SNI特性，此参数仅适用于HTTPS监听器。0表示未开启，1表示开启。
@@ -130,7 +130,7 @@ class CreateListenerRequest extends AbstractModel
     public $SessionExpireTime;
 
     /**
-     * @var string 监听器转发的方式。可选值：WRR（按权重轮询）、LEAST_CONN（按最小连接数）、IP_HASH（按 IP 地址哈希）
+     * @var string 监听器转发的方式。可选值：WRR（按权重轮询）、LEAST_CONN（按最小连接数）
 默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。
      */
     public $Scheduler;
@@ -232,7 +232,7 @@ class CreateListenerRequest extends AbstractModel
 <li>此参数仅适用于TCP_SSL监听器和未开启SNI特性的HTTPS监听器。</li>
 <li>创建TCP_SSL监听器和未开启SNI特性的HTTPS监听器时，此参数和参数MultiCertInfo至少需要传一个， 但不能同时传入。</li>
      * @param integer $SessionExpireTime 会话保持时间，单位：秒。可选值：30~3600，默认为0，默认不开启。此参数仅适用于TCP/UDP监听器。
-     * @param string $Scheduler 监听器转发的方式。可选值：WRR（按权重轮询）、LEAST_CONN（按最小连接数）、IP_HASH（按 IP 地址哈希）
+     * @param string $Scheduler 监听器转发的方式。可选值：WRR（按权重轮询）、LEAST_CONN（按最小连接数）
 默认为 WRR。此参数仅适用于TCP/UDP/TCP_SSL/QUIC监听器。
      * @param integer $SniSwitch 是否开启SNI特性，此参数仅适用于HTTPS监听器。0表示未开启，1表示开启。
      * @param string $TargetType 后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组。此参数仅适用于TCP/UDP监听器。七层监听器应在转发规则中设置。

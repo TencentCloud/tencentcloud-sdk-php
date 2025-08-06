@@ -46,11 +46,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEventType(integer $EventType) 设置调用类型
 0:控制台调用
 1:API
- * @method string getUserType() 获取用户类型
-CAMUser/root/AssumedRole
+ * @method string getUserType() 获取用户类型CAMUser/root/AssumedRole
 
- * @method void setUserType(string $UserType) 设置用户类型
-CAMUser/root/AssumedRole
+ * @method void setUserType(string $UserType) 设置用户类型CAMUser/root/AssumedRole
 
  * @method string getUserName() 获取用户/角色名称
  * @method void setUserName(string $UserName) 设置用户/角色名称
@@ -78,6 +76,8 @@ CAMUser/root/AssumedRole
  * @method void setShowStatus(boolean $ShowStatus) 设置展示状态
  * @method string getISP() 获取运营商
  * @method void setISP(string $ISP) 设置运营商
+ * @method array getVpcInfo() 获取账号外vpc信息列表
+ * @method void setVpcInfo(array $VpcInfo) 设置账号外vpc信息列表
  */
 class CallRecord extends AbstractModel
 {
@@ -139,8 +139,7 @@ class CallRecord extends AbstractModel
     public $EventType;
 
     /**
-     * @var string 用户类型
-CAMUser/root/AssumedRole
+     * @var string 用户类型CAMUser/root/AssumedRole
 
      */
     public $UserType;
@@ -207,6 +206,11 @@ CAMUser/root/AssumedRole
     public $ISP;
 
     /**
+     * @var array 账号外vpc信息列表
+     */
+    public $VpcInfo;
+
+    /**
      * @param string $CallID 调用记录ID
      * @param string $AccessKey 访问密钥
      * @param string $AccessKeyRemark 访问密钥备注
@@ -220,8 +224,7 @@ CAMUser/root/AssumedRole
      * @param integer $EventType 调用类型
 0:控制台调用
 1:API
-     * @param string $UserType 用户类型
-CAMUser/root/AssumedRole
+     * @param string $UserType 用户类型CAMUser/root/AssumedRole
 
      * @param string $UserName 用户/角色名称
      * @param array $PolicySet 策略列表
@@ -236,6 +239,7 @@ CAMUser/root/AssumedRole
      * @param integer $AppID appid
      * @param boolean $ShowStatus 展示状态
      * @param string $ISP 运营商
+     * @param array $VpcInfo 账号外vpc信息列表
      */
     function __construct()
     {
@@ -344,6 +348,15 @@ CAMUser/root/AssumedRole
 
         if (array_key_exists("ISP",$param) and $param["ISP"] !== null) {
             $this->ISP = $param["ISP"];
+        }
+
+        if (array_key_exists("VpcInfo",$param) and $param["VpcInfo"] !== null) {
+            $this->VpcInfo = [];
+            foreach ($param["VpcInfo"] as $key => $value){
+                $obj = new SourceIPVpcInfo();
+                $obj->deserialize($value);
+                array_push($this->VpcInfo, $obj);
+            }
         }
     }
 }

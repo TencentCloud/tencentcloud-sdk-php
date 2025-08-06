@@ -78,6 +78,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppId(integer $AppId) 设置租户ID
  * @method string getAppIdStr() 获取租户ID字符串
  * @method void setAppIdStr(string $AppIdStr) 设置租户ID字符串
+ * @method integer getExposureID() 获取记录ID
+ * @method void setExposureID(integer $ExposureID) 设置记录ID
+ * @method integer getPortDetectCount() 获取端口开放数量
+ * @method void setPortDetectCount(integer $PortDetectCount) 设置端口开放数量
+ * @method string getPortDetectResult() 获取端口开放结果
+ * @method void setPortDetectResult(string $PortDetectResult) 设置端口开放结果
  */
 class ExposesItem extends AbstractModel
 {
@@ -227,6 +233,21 @@ class ExposesItem extends AbstractModel
     public $AppIdStr;
 
     /**
+     * @var integer 记录ID
+     */
+    public $ExposureID;
+
+    /**
+     * @var integer 端口开放数量
+     */
+    public $PortDetectCount;
+
+    /**
+     * @var string 端口开放结果
+     */
+    public $PortDetectResult;
+
+    /**
      * @param string $Provider 云厂商
      * @param string $CloudAccountName 云账号名称
      * @param string $CloudAccountId 云账号
@@ -256,6 +277,9 @@ class ExposesItem extends AbstractModel
      * @param string $HasScan 是否进行过安全体检
      * @param integer $AppId 租户ID
      * @param string $AppIdStr 租户ID字符串
+     * @param integer $ExposureID 记录ID
+     * @param integer $PortDetectCount 端口开放数量
+     * @param string $PortDetectResult 端口开放结果
      */
     function __construct()
     {
@@ -384,6 +408,18 @@ class ExposesItem extends AbstractModel
 
         if (array_key_exists("AppIdStr",$param) and $param["AppIdStr"] !== null) {
             $this->AppIdStr = $param["AppIdStr"];
+        }
+
+        if (array_key_exists("ExposureID",$param) and $param["ExposureID"] !== null) {
+            $this->ExposureID = $param["ExposureID"];
+        }
+
+        if (array_key_exists("PortDetectCount",$param) and $param["PortDetectCount"] !== null) {
+            $this->PortDetectCount = $param["PortDetectCount"];
+        }
+
+        if (array_key_exists("PortDetectResult",$param) and $param["PortDetectResult"] !== null) {
+            $this->PortDetectResult = $param["PortDetectResult"];
         }
     }
 }

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoUpdate(ManagedRuleAutoUpdate $AutoUpdate) 设置托管规则自动更新选项。
  * @method array getManagedRuleGroups() 获取托管规则组的配置。如果此结构传空数组或 GroupId 未包含在列表内将按照默认方式处理。
  * @method void setManagedRuleGroups(array $ManagedRuleGroups) 设置托管规则组的配置。如果此结构传空数组或 GroupId 未包含在列表内将按照默认方式处理。
+ * @method FrequentScanningProtection getFrequentScanningProtection() 获取高频扫描防护配置选项，当某一访客的请求频繁命中「配置为拦截」的托管规则时，在一段时间内封禁该访客所有请求。
+ * @method void setFrequentScanningProtection(FrequentScanningProtection $FrequentScanningProtection) 设置高频扫描防护配置选项，当某一访客的请求频繁命中「配置为拦截」的托管规则时，在一段时间内封禁该访客所有请求。
  */
 class ManagedRules extends AbstractModel
 {
@@ -59,11 +61,17 @@ class ManagedRules extends AbstractModel
     public $ManagedRuleGroups;
 
     /**
+     * @var FrequentScanningProtection 高频扫描防护配置选项，当某一访客的请求频繁命中「配置为拦截」的托管规则时，在一段时间内封禁该访客所有请求。
+     */
+    public $FrequentScanningProtection;
+
+    /**
      * @param string $Enabled 托管规则是否开启。取值有：<li>on：开启，所有托管规则按配置生效；</li><li>off：关闭，所有托管规则不生效。</li>
      * @param string $DetectionOnly 评估模式是否开启，仅在 Enabled 参数为 on 时有效。取值有：<li>on：开启，表示所有托管规则以观察模式生效；</li><li>off：关闭，表示所有托管规则以实际配置生效。</li>
      * @param string $SemanticAnalysis 托管规则语义分析选项是否开启，仅在 Enabled 参数为 on 时有效。取值有：<li>on：开启，对请求进行语义分析后进行处理；</li><li>off：关闭，对请求不进行语义分析，直接进行处理。</li> <br/>默认为 off。
      * @param ManagedRuleAutoUpdate $AutoUpdate 托管规则自动更新选项。
      * @param array $ManagedRuleGroups 托管规则组的配置。如果此结构传空数组或 GroupId 未包含在列表内将按照默认方式处理。
+     * @param FrequentScanningProtection $FrequentScanningProtection 高频扫描防护配置选项，当某一访客的请求频繁命中「配置为拦截」的托管规则时，在一段时间内封禁该访客所有请求。
      */
     function __construct()
     {
@@ -102,6 +110,11 @@ class ManagedRules extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ManagedRuleGroups, $obj);
             }
+        }
+
+        if (array_key_exists("FrequentScanningProtection",$param) and $param["FrequentScanningProtection"] !== null) {
+            $this->FrequentScanningProtection = new FrequentScanningProtection();
+            $this->FrequentScanningProtection->deserialize($param["FrequentScanningProtection"]);
         }
     }
 }

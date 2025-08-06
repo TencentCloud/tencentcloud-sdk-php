@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccessKeyID(integer $AccessKeyID) 设置访问密钥的ID
  * @method integer getSourceIPID() 获取调用源IP的ID
  * @method void setSourceIPID(integer $SourceIPID) 设置调用源IP的ID
+ * @method string getAccUin() 获取访问账号uin
+ * @method void setAccUin(string $AccUin) 设置访问账号uin
  * @method Filter getFilter() 获取过滤器
  * @method void setFilter(Filter $Filter) 设置过滤器
  */
@@ -47,6 +49,11 @@ class DescribeCallRecordRequest extends AbstractModel
     public $SourceIPID;
 
     /**
+     * @var string 访问账号uin
+     */
+    public $AccUin;
+
+    /**
      * @var Filter 过滤器
      */
     public $Filter;
@@ -55,6 +62,7 @@ class DescribeCallRecordRequest extends AbstractModel
      * @param array $MemberId 集团账号的成员id
      * @param integer $AccessKeyID 访问密钥的ID
      * @param integer $SourceIPID 调用源IP的ID
+     * @param string $AccUin 访问账号uin
      * @param Filter $Filter 过滤器
      */
     function __construct()
@@ -80,6 +88,10 @@ class DescribeCallRecordRequest extends AbstractModel
 
         if (array_key_exists("SourceIPID",$param) and $param["SourceIPID"] !== null) {
             $this->SourceIPID = $param["SourceIPID"];
+        }
+
+        if (array_key_exists("AccUin",$param) and $param["AccUin"] !== null) {
+            $this->AccUin = $param["AccUin"];
         }
 
         if (array_key_exists("Filter",$param) and $param["Filter"] !== null) {

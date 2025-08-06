@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskActionCustomConfiguration(string $TaskActionCustomConfiguration) 设置动作自定义参数，需要json序列化传入，可以从动作详情接口DescribeActionFieldConfigList获取，不填默认使用动作默认参数，注意：必填参数，是没有默认值的 ，务必保证传入有效值
  * @method integer getTaskPauseDuration() 获取演练自动暂停时间，单位分钟, 不填则默认为60
  * @method void setTaskPauseDuration(integer $TaskPauseDuration) 设置演练自动暂停时间，单位分钟, 不填则默认为60
+ * @method array getTaskTags() 获取标签列表
+ * @method void setTaskTags(array $TaskTags) 设置标签列表
  */
 class CreateTaskFromActionRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreateTaskFromActionRequest extends AbstractModel
     public $TaskPauseDuration;
 
     /**
+     * @var array 标签列表
+     */
+    public $TaskTags;
+
+    /**
      * @param integer $TaskActionId 动作ID，可从动作列表接口DescribeActionLibraryList获取
      * @param array $TaskInstances 参与演练的实例ID
      * @param string $TaskTitle 演练名称，不填则默认取动作名称
@@ -80,6 +87,7 @@ class CreateTaskFromActionRequest extends AbstractModel
      * @param string $TaskActionGeneralConfiguration 动作通用参数，需要json序列化传入，可以从动作详情接口DescribeActionFieldConfigList获取，不填默认使用动作默认参数
      * @param string $TaskActionCustomConfiguration 动作自定义参数，需要json序列化传入，可以从动作详情接口DescribeActionFieldConfigList获取，不填默认使用动作默认参数，注意：必填参数，是没有默认值的 ，务必保证传入有效值
      * @param integer $TaskPauseDuration 演练自动暂停时间，单位分钟, 不填则默认为60
+     * @param array $TaskTags 标签列表
      */
     function __construct()
     {
@@ -120,6 +128,15 @@ class CreateTaskFromActionRequest extends AbstractModel
 
         if (array_key_exists("TaskPauseDuration",$param) and $param["TaskPauseDuration"] !== null) {
             $this->TaskPauseDuration = $param["TaskPauseDuration"];
+        }
+
+        if (array_key_exists("TaskTags",$param) and $param["TaskTags"] !== null) {
+            $this->TaskTags = [];
+            foreach ($param["TaskTags"] as $key => $value){
+                $obj = new TagWithCreate();
+                $obj->deserialize($value);
+                array_push($this->TaskTags, $obj);
+            }
         }
     }
 }

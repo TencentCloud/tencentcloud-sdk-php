@@ -55,9 +55,9 @@ use TencentCloud\Common\AbstractModel;
  x4：4倍超分
 在 Resolution 的基础上按比例提高分辨率，例如1024:1024开启2倍超分后将得到2048:2048。
  * @method Image getContentImage() 获取用于引导内容的参考图。
-图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 8MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
+图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 8MB，格式支持 jpg、jpeg、png。
  * @method void setContentImage(Image $ContentImage) 设置用于引导内容的参考图。
-图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 8MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
+图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 8MB，格式支持 jpg、jpeg、png。
  * @method integer getRevise() 获取prompt 扩写开关。1为开启，0为关闭，不传默认开启。
 开启扩写后，将自动扩写原始输入的 prompt 并使用扩写后的 prompt 生成图片，返回生成图片结果时将一并返回扩写后的 prompt 文本。
 如果关闭扩写，将直接使用原始输入的 prompt 生成图片。如果上传了参考图，扩写关闭不生效，将保持开启。
@@ -134,7 +134,7 @@ class SubmitHunyuanImageJobRequest extends AbstractModel
 
     /**
      * @var Image 用于引导内容的参考图。
-图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 8MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
+图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 8MB，格式支持 jpg、jpeg、png。
      */
     public $ContentImage;
 
@@ -188,7 +188,7 @@ class SubmitHunyuanImageJobRequest extends AbstractModel
  x4：4倍超分
 在 Resolution 的基础上按比例提高分辨率，例如1024:1024开启2倍超分后将得到2048:2048。
      * @param Image $ContentImage 用于引导内容的参考图。
-图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 8MB，格式支持 jpg、jpeg、png、bmp、tiff、webp。
+图片限制：单边分辨率小于5000，转成 Base64 字符串后小于 8MB，格式支持 jpg、jpeg、png。
      * @param integer $Revise prompt 扩写开关。1为开启，0为关闭，不传默认开启。
 开启扩写后，将自动扩写原始输入的 prompt 并使用扩写后的 prompt 生成图片，返回生成图片结果时将一并返回扩写后的 prompt 文本。
 如果关闭扩写，将直接使用原始输入的 prompt 生成图片。如果上传了参考图，扩写关闭不生效，将保持开启。

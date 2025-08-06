@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPage(integer $Page) 设置分页查询时的页号，从1开始
  * @method string getType() 获取查询类型,支持HIVE,SPARK,DLC_SPARK,SPARK_SQL,SCHEDULE,MAPREDUCE,TRINO等类型,默认查询全部
  * @method void setType(string $Type) 设置查询类型,支持HIVE,SPARK,DLC_SPARK,SPARK_SQL,SCHEDULE,MAPREDUCE,TRINO等类型,默认查询全部
+ * @method boolean getMustHasContext() 获取是否包含具体参数建议等信息
+ * @method void setMustHasContext(boolean $MustHasContext) 设置是否包含具体参数建议等信息
  */
 class DescribeInsightListRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DescribeInsightListRequest extends AbstractModel
     public $Type;
 
     /**
+     * @var boolean 是否包含具体参数建议等信息
+     */
+    public $MustHasContext;
+
+    /**
      * @param string $InstanceId 集群ID
      * @param integer $StartTime 获取的洞察结果开始时间，此时间针对对App或者Hive查询的开始时间的过滤
      * @param integer $EndTime 获取的洞察结果结束时间，此时间针对对App或者Hive查询的开始时间的过滤
      * @param integer $PageSize 分页查询时的分页大小，最小1，最大100
      * @param integer $Page 分页查询时的页号，从1开始
      * @param string $Type 查询类型,支持HIVE,SPARK,DLC_SPARK,SPARK_SQL,SCHEDULE,MAPREDUCE,TRINO等类型,默认查询全部
+     * @param boolean $MustHasContext 是否包含具体参数建议等信息
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DescribeInsightListRequest extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("MustHasContext",$param) and $param["MustHasContext"] !== null) {
+            $this->MustHasContext = $param["MustHasContext"];
         }
     }
 }

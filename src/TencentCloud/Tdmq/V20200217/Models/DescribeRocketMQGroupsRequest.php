@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterTopic(string $FilterTopic) 设置主题名称，输入此参数可查询该主题下所有的订阅组
  * @method string getFilterGroup() 获取按消费组名称查询消费组，支持模糊查询
  * @method void setFilterGroup(string $FilterGroup) 设置按消费组名称查询消费组，支持模糊查询
- * @method string getSortedBy() 获取按照指定字段排序，可选值为tps，accumulative
- * @method void setSortedBy(string $SortedBy) 设置按照指定字段排序，可选值为tps，accumulative
+ * @method string getSortedBy() 获取按照指定字段排序，可选值为 subscribeNum: 订阅 Topic 个数
+ * @method void setSortedBy(string $SortedBy) 设置按照指定字段排序，可选值为 subscribeNum: 订阅 Topic 个数
  * @method string getSortOrder() 获取按升序或降序排列，可选值为asc，desc
  * @method void setSortOrder(string $SortOrder) 设置按升序或降序排列，可选值为asc，desc
  * @method string getFilterOneGroup() 获取订阅组名称，指定此参数后将只返回该订阅组信息
@@ -74,7 +74,7 @@ class DescribeRocketMQGroupsRequest extends AbstractModel
     public $FilterGroup;
 
     /**
-     * @var string 按照指定字段排序，可选值为tps，accumulative
+     * @var string 按照指定字段排序，可选值为 subscribeNum: 订阅 Topic 个数
      */
     public $SortedBy;
 
@@ -100,7 +100,7 @@ class DescribeRocketMQGroupsRequest extends AbstractModel
      * @param integer $Limit 限制条数
      * @param string $FilterTopic 主题名称，输入此参数可查询该主题下所有的订阅组
      * @param string $FilterGroup 按消费组名称查询消费组，支持模糊查询
-     * @param string $SortedBy 按照指定字段排序，可选值为tps，accumulative
+     * @param string $SortedBy 按照指定字段排序，可选值为 subscribeNum: 订阅 Topic 个数
      * @param string $SortOrder 按升序或降序排列，可选值为asc，desc
      * @param string $FilterOneGroup 订阅组名称，指定此参数后将只返回该订阅组信息
      * @param array $Types group类型

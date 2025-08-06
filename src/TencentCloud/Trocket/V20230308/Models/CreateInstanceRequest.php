@@ -42,12 +42,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置集群名称，不能为空， 3-64个字符，只能包含数字、字母、“-”和“_”
  * @method string getSkuCode() 获取商品规格，从 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/96031#ProductSKU) 出参获得。
  * @method void setSkuCode(string $SkuCode) 设置商品规格，从 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/96031#ProductSKU) 出参获得。
+ * @method array getVpcList() 获取集群绑定的VPC信息
+ * @method void setVpcList(array $VpcList) 设置集群绑定的VPC信息
  * @method string getRemark() 获取备注信息
  * @method void setRemark(string $Remark) 设置备注信息
  * @method array getTagList() 获取标签列表
  * @method void setTagList(array $TagList) 设置标签列表
- * @method array getVpcList() 获取集群绑定的VPC信息，必填
- * @method void setVpcList(array $VpcList) 设置集群绑定的VPC信息，必填
  * @method boolean getEnablePublic() 获取是否开启公网，默认值为false表示不开启
  * @method void setEnablePublic(boolean $EnablePublic) 设置是否开启公网，默认值为false表示不开启
  * @method boolean getBillingFlow() 获取公网是否按流量计费，默认值为false表示不按流量计费
@@ -109,6 +109,11 @@ class CreateInstanceRequest extends AbstractModel
     public $SkuCode;
 
     /**
+     * @var array 集群绑定的VPC信息
+     */
+    public $VpcList;
+
+    /**
      * @var string 备注信息
      */
     public $Remark;
@@ -117,11 +122,6 @@ class CreateInstanceRequest extends AbstractModel
      * @var array 标签列表
      */
     public $TagList;
-
-    /**
-     * @var array 集群绑定的VPC信息，必填
-     */
-    public $VpcList;
 
     /**
      * @var boolean 是否开启公网，默认值为false表示不开启
@@ -192,9 +192,9 @@ class CreateInstanceRequest extends AbstractModel
 - PLATINUM：铂金版
      * @param string $Name 集群名称，不能为空， 3-64个字符，只能包含数字、字母、“-”和“_”
      * @param string $SkuCode 商品规格，从 [DescribeProductSKUs](https://cloud.tencent.com/document/api/1493/107676) 接口中的 [ProductSKU](https://cloud.tencent.com/document/api/1493/96031#ProductSKU) 出参获得。
+     * @param array $VpcList 集群绑定的VPC信息
      * @param string $Remark 备注信息
      * @param array $TagList 标签列表
-     * @param array $VpcList 集群绑定的VPC信息，必填
      * @param boolean $EnablePublic 是否开启公网，默认值为false表示不开启
      * @param boolean $BillingFlow 公网是否按流量计费，默认值为false表示不按流量计费
      * @param integer $Bandwidth 公网带宽（单位：兆），默认值为0。如果开启公网，该字段必须为大于0的正整数
@@ -238,6 +238,15 @@ class CreateInstanceRequest extends AbstractModel
             $this->SkuCode = $param["SkuCode"];
         }
 
+        if (array_key_exists("VpcList",$param) and $param["VpcList"] !== null) {
+            $this->VpcList = [];
+            foreach ($param["VpcList"] as $key => $value){
+                $obj = new VpcInfo();
+                $obj->deserialize($value);
+                array_push($this->VpcList, $obj);
+            }
+        }
+
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
         }
@@ -248,15 +257,6 @@ class CreateInstanceRequest extends AbstractModel
                 $obj = new Tag();
                 $obj->deserialize($value);
                 array_push($this->TagList, $obj);
-            }
-        }
-
-        if (array_key_exists("VpcList",$param) and $param["VpcList"] !== null) {
-            $this->VpcList = [];
-            foreach ($param["VpcList"] as $key => $value){
-                $obj = new VpcInfo();
-                $obj->deserialize($value);
-                array_push($this->VpcList, $obj);
             }
         }
 

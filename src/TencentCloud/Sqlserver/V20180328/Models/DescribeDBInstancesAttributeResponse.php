@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMultiDrReadableInfo(array $MultiDrReadableInfo) 设置多节点备机只读信息
  * @method integer getIsDiskEncryptFlag() 获取是否开启磁盘加密，1-开启，0-未开启
  * @method void setIsDiskEncryptFlag(integer $IsDiskEncryptFlag) 设置是否开启磁盘加密，1-开启，0-未开启
+ * @method integer getIsSafetyLimited() 获取是否安全限制部分功能，0-没有限制，1-有限制。限制的功能有：修改可用区、迁移变配、DTS数据迁移等
+ * @method void setIsSafetyLimited(integer $IsSafetyLimited) 设置是否安全限制部分功能，0-没有限制，1-有限制。限制的功能有：修改可用区、迁移变配、DTS数据迁移等
+ * @method integer getIsSupportSA() 获取是否支持创建SA权限账号，0-不支持，1-支持
+ * @method void setIsSupportSA(integer $IsSupportSA) 设置是否支持创建SA权限账号，0-不支持，1-支持
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -131,6 +135,16 @@ class DescribeDBInstancesAttributeResponse extends AbstractModel
     public $IsDiskEncryptFlag;
 
     /**
+     * @var integer 是否安全限制部分功能，0-没有限制，1-有限制。限制的功能有：修改可用区、迁移变配、DTS数据迁移等
+     */
+    public $IsSafetyLimited;
+
+    /**
+     * @var integer 是否支持创建SA权限账号，0-不支持，1-支持
+     */
+    public $IsSupportSA;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -151,6 +165,8 @@ class DescribeDBInstancesAttributeResponse extends AbstractModel
      * @param string $XEventStatus 操作日志采集状态，enable-采集中，disable-不可用，renew_doing-配置开启或关闭中
      * @param array $MultiDrReadableInfo 多节点备机只读信息
      * @param integer $IsDiskEncryptFlag 是否开启磁盘加密，1-开启，0-未开启
+     * @param integer $IsSafetyLimited 是否安全限制部分功能，0-没有限制，1-有限制。限制的功能有：修改可用区、迁移变配、DTS数据迁移等
+     * @param integer $IsSupportSA 是否支持创建SA权限账号，0-不支持，1-支持
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -237,6 +253,14 @@ class DescribeDBInstancesAttributeResponse extends AbstractModel
 
         if (array_key_exists("IsDiskEncryptFlag",$param) and $param["IsDiskEncryptFlag"] !== null) {
             $this->IsDiskEncryptFlag = $param["IsDiskEncryptFlag"];
+        }
+
+        if (array_key_exists("IsSafetyLimited",$param) and $param["IsSafetyLimited"] !== null) {
+            $this->IsSafetyLimited = $param["IsSafetyLimited"];
+        }
+
+        if (array_key_exists("IsSupportSA",$param) and $param["IsSupportSA"] !== null) {
+            $this->IsSupportSA = $param["IsSupportSA"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

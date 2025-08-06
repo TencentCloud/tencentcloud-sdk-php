@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置描述。
  * @method integer getCapacity() 获取缓存卷大小（GB），Turbo系列需要指定。
  * @method void setCapacity(integer $Capacity) 设置缓存卷大小（GB），Turbo系列需要指定。
+ * @method boolean getEnableAutoScaleUp() 获取是否开启默认扩容，仅turbo类型文件存储支持
+ * @method void setEnableAutoScaleUp(boolean $EnableAutoScaleUp) 设置是否开启默认扩容，仅turbo类型文件存储支持
+ * @method string getMetaType() 获取turbo文件系统元数据属性，basic：标准型元数据；enhanced：增强型元数据
+ * @method void setMetaType(string $MetaType) 设置turbo文件系统元数据属性，basic：标准型元数据；enhanced：增强型元数据
  */
 class CreateVolumeRequest extends AbstractModel
 {
@@ -84,6 +88,16 @@ class CreateVolumeRequest extends AbstractModel
     public $Capacity;
 
     /**
+     * @var boolean 是否开启默认扩容，仅turbo类型文件存储支持
+     */
+    public $EnableAutoScaleUp;
+
+    /**
+     * @var string turbo文件系统元数据属性，basic：标准型元数据；enhanced：增强型元数据
+     */
+    public $MetaType;
+
+    /**
      * @param string $EnvironmentId 环境ID。
      * @param string $Name 名称。
      * @param string $Type 缓存卷类型，取值范围：
@@ -96,6 +110,8 @@ class CreateVolumeRequest extends AbstractModel
 - TP：turbo性能型
      * @param string $Description 描述。
      * @param integer $Capacity 缓存卷大小（GB），Turbo系列需要指定。
+     * @param boolean $EnableAutoScaleUp 是否开启默认扩容，仅turbo类型文件存储支持
+     * @param string $MetaType turbo文件系统元数据属性，basic：标准型元数据；enhanced：增强型元数据
      */
     function __construct()
     {
@@ -132,6 +148,14 @@ class CreateVolumeRequest extends AbstractModel
 
         if (array_key_exists("Capacity",$param) and $param["Capacity"] !== null) {
             $this->Capacity = $param["Capacity"];
+        }
+
+        if (array_key_exists("EnableAutoScaleUp",$param) and $param["EnableAutoScaleUp"] !== null) {
+            $this->EnableAutoScaleUp = $param["EnableAutoScaleUp"];
+        }
+
+        if (array_key_exists("MetaType",$param) and $param["MetaType"] !== null) {
+            $this->MetaType = $param["MetaType"];
         }
     }
 }

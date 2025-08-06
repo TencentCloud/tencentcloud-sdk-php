@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCapacity(integer $Capacity) 设置文件系统容量，turbo系列必填，单位为GiB。 
 - turbo标准型起售40TiB，即40960GiB；扩容步长20TiB，即20480 GiB。
 - turbo性能型起售20TiB，即20480 GiB；扩容步长10TiB，即10240 GiB。
+ * @method boolean getEnableAutoScaleUp() 获取是否开启默认扩容，仅turbo类型文件存储支持
+ * @method void setEnableAutoScaleUp(boolean $EnableAutoScaleUp) 设置是否开启默认扩容，仅turbo类型文件存储支持
+ * @method string getMetaType() 获取turbo文件系统元数据属性，basic：标准型元数据；enhanced：增强型元数据
+ * @method void setMetaType(string $MetaType) 设置turbo文件系统元数据属性，basic：标准型元数据；enhanced：增强型元数据
  */
 class StorageOption extends AbstractModel
 {
@@ -63,6 +67,16 @@ class StorageOption extends AbstractModel
     public $Capacity;
 
     /**
+     * @var boolean 是否开启默认扩容，仅turbo类型文件存储支持
+     */
+    public $EnableAutoScaleUp;
+
+    /**
+     * @var string turbo文件系统元数据属性，basic：标准型元数据；enhanced：增强型元数据
+     */
+    public $MetaType;
+
+    /**
      * @param string $StorageType 文件存储类型，取值范围：
 - SD：通用标准型
 - HP：通用性能型
@@ -72,6 +86,8 @@ class StorageOption extends AbstractModel
      * @param integer $Capacity 文件系统容量，turbo系列必填，单位为GiB。 
 - turbo标准型起售40TiB，即40960GiB；扩容步长20TiB，即20480 GiB。
 - turbo性能型起售20TiB，即20480 GiB；扩容步长10TiB，即10240 GiB。
+     * @param boolean $EnableAutoScaleUp 是否开启默认扩容，仅turbo类型文件存储支持
+     * @param string $MetaType turbo文件系统元数据属性，basic：标准型元数据；enhanced：增强型元数据
      */
     function __construct()
     {
@@ -96,6 +112,14 @@ class StorageOption extends AbstractModel
 
         if (array_key_exists("Capacity",$param) and $param["Capacity"] !== null) {
             $this->Capacity = $param["Capacity"];
+        }
+
+        if (array_key_exists("EnableAutoScaleUp",$param) and $param["EnableAutoScaleUp"] !== null) {
+            $this->EnableAutoScaleUp = $param["EnableAutoScaleUp"];
+        }
+
+        if (array_key_exists("MetaType",$param) and $param["MetaType"] !== null) {
+            $this->MetaType = $param["MetaType"];
         }
     }
 }

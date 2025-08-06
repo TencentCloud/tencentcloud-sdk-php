@@ -22,13 +22,19 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getType() 获取结果的类型，取值范围：
 <li>SegmentRecognition：拆条。</li>
+<li>Highlight ：集锦。</li>
  * @method void setType(string $Type) 设置结果的类型，取值范围：
 <li>SegmentRecognition：拆条。</li>
+<li>Highlight ：集锦。</li>
  * @method array getSegmentResultSet() 获取拆条结果，当 Type 为
 SegmentRecognition 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSegmentResultSet(array $SegmentResultSet) 设置拆条结果，当 Type 为
 SegmentRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getHighlightResultSet() 获取集锦结果，当Type 为 Highlight 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHighlightResultSet(array $HighlightResultSet) 设置集锦结果，当Type 为 Highlight 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class LiveStreamAiAnalysisResultItem extends AbstractModel
@@ -36,6 +42,7 @@ class LiveStreamAiAnalysisResultItem extends AbstractModel
     /**
      * @var string 结果的类型，取值范围：
 <li>SegmentRecognition：拆条。</li>
+<li>Highlight ：集锦。</li>
      */
     public $Type;
 
@@ -47,10 +54,19 @@ SegmentRecognition 时有效。
     public $SegmentResultSet;
 
     /**
+     * @var array 集锦结果，当Type 为 Highlight 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HighlightResultSet;
+
+    /**
      * @param string $Type 结果的类型，取值范围：
 <li>SegmentRecognition：拆条。</li>
+<li>Highlight ：集锦。</li>
      * @param array $SegmentResultSet 拆条结果，当 Type 为
 SegmentRecognition 时有效。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $HighlightResultSet 集锦结果，当Type 为 Highlight 时有效。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -76,6 +92,15 @@ SegmentRecognition 时有效。
                 $obj = new SegmentRecognitionItem();
                 $obj->deserialize($value);
                 array_push($this->SegmentResultSet, $obj);
+            }
+        }
+
+        if (array_key_exists("HighlightResultSet",$param) and $param["HighlightResultSet"] !== null) {
+            $this->HighlightResultSet = [];
+            foreach ($param["HighlightResultSet"] as $key => $value){
+                $obj = new MediaAiAnalysisHighlightItem();
+                $obj->deserialize($value);
+                array_push($this->HighlightResultSet, $obj);
             }
         }
     }

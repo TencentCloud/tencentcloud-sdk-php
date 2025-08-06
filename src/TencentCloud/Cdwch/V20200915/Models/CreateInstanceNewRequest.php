@@ -48,14 +48,14 @@ SpecName从DescribeSpec接口中返回的DataSpec.Name获取
  * @method void setMountDiskType(integer $MountDiskType) 设置是否是裸盘挂载，默认值 0 为 未挂载，1 为挂载。
  * @method boolean getHAZk() 获取是否是ZK高可用
  * @method void setHAZk(boolean $HAZk) 设置是否是ZK高可用
- * @method NodeSpec getCommonSpec() 获取ZK节点
-SpecName从DescribeSpec接口中返回的CommonSpec.Name（ZK节点）获取
- * @method void setCommonSpec(NodeSpec $CommonSpec) 设置ZK节点
-SpecName从DescribeSpec接口中返回的CommonSpec.Name（ZK节点）获取
+ * @method NodeSpec getCommonSpec() 获取ZK节点SpecName从DescribeSpec接口中返回的CommonSpec结构体的Name（ZK节点）获取
+ * @method void setCommonSpec(NodeSpec $CommonSpec) 设置ZK节点SpecName从DescribeSpec接口中返回的CommonSpec结构体的Name（ZK节点）获取
  * @method array getTagItems() 获取标签列表
  * @method void setTagItems(array $TagItems) 设置标签列表
- * @method array getSecondaryZoneInfo() 获取副可用去信息
- * @method void setSecondaryZoneInfo(array $SecondaryZoneInfo) 设置副可用去信息
+ * @method array getSecondaryZoneInfo() 获取副可用区信息
+ * @method void setSecondaryZoneInfo(array $SecondaryZoneInfo) 设置副可用区信息
+ * @method string getCkDefaultUserPwd() 获取default账号登陆实例的密码。8-16个字符，至少包含大写字母、小写字母、数字和特殊字符!@#%^*中的三种，第一个字符不能为特殊字符
+ * @method void setCkDefaultUserPwd(string $CkDefaultUserPwd) 设置default账号登陆实例的密码。8-16个字符，至少包含大写字母、小写字母、数字和特殊字符!@#%^*中的三种，第一个字符不能为特殊字符
  */
 class CreateInstanceNewRequest extends AbstractModel
 {
@@ -127,8 +127,7 @@ SpecName从DescribeSpec接口中返回的DataSpec.Name获取
     public $HAZk;
 
     /**
-     * @var NodeSpec ZK节点
-SpecName从DescribeSpec接口中返回的CommonSpec.Name（ZK节点）获取
+     * @var NodeSpec ZK节点SpecName从DescribeSpec接口中返回的CommonSpec结构体的Name（ZK节点）获取
      */
     public $CommonSpec;
 
@@ -138,9 +137,14 @@ SpecName从DescribeSpec接口中返回的CommonSpec.Name（ZK节点）获取
     public $TagItems;
 
     /**
-     * @var array 副可用去信息
+     * @var array 副可用区信息
      */
     public $SecondaryZoneInfo;
+
+    /**
+     * @var string default账号登陆实例的密码。8-16个字符，至少包含大写字母、小写字母、数字和特殊字符!@#%^*中的三种，第一个字符不能为特殊字符
+     */
+    public $CkDefaultUserPwd;
 
     /**
      * @param string $Zone 可用区
@@ -157,10 +161,10 @@ SpecName从DescribeSpec接口中返回的DataSpec.Name获取
      * @param string $CosBucketName COS桶名称
      * @param integer $MountDiskType 是否是裸盘挂载，默认值 0 为 未挂载，1 为挂载。
      * @param boolean $HAZk 是否是ZK高可用
-     * @param NodeSpec $CommonSpec ZK节点
-SpecName从DescribeSpec接口中返回的CommonSpec.Name（ZK节点）获取
+     * @param NodeSpec $CommonSpec ZK节点SpecName从DescribeSpec接口中返回的CommonSpec结构体的Name（ZK节点）获取
      * @param array $TagItems 标签列表
-     * @param array $SecondaryZoneInfo 副可用去信息
+     * @param array $SecondaryZoneInfo 副可用区信息
+     * @param string $CkDefaultUserPwd default账号登陆实例的密码。8-16个字符，至少包含大写字母、小写字母、数字和特殊字符!@#%^*中的三种，第一个字符不能为特殊字符
      */
     function __construct()
     {
@@ -251,6 +255,10 @@ SpecName从DescribeSpec接口中返回的CommonSpec.Name（ZK节点）获取
                 $obj->deserialize($value);
                 array_push($this->SecondaryZoneInfo, $obj);
             }
+        }
+
+        if (array_key_exists("CkDefaultUserPwd",$param) and $param["CkDefaultUserPwd"] !== null) {
+            $this->CkDefaultUserPwd = $param["CkDefaultUserPwd"];
         }
     }
 }

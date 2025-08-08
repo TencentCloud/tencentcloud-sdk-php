@@ -130,6 +130,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsDcnSwitchSupported(integer $IsDcnSwitchSupported) 设置是否支持DCN切换
  * @method string getCpuType() 获取cpu类型，英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD	
  * @method void setCpuType(string $CpuType) 设置cpu类型，英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD	
+ * @method integer getProtectedProperty() 获取实例删除保护标签，1: 已开启删除保护，0: 未开启删除保护
+ * @method void setProtectedProperty(integer $ProtectedProperty) 设置实例删除保护标签，1: 已开启删除保护，0: 未开启删除保护
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -411,6 +413,11 @@ class DescribeDCDBInstanceDetailResponse extends AbstractModel
     public $CpuType;
 
     /**
+     * @var integer 实例删除保护标签，1: 已开启删除保护，0: 未开启删除保护
+     */
+    public $ProtectedProperty;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -471,6 +478,7 @@ class DescribeDCDBInstanceDetailResponse extends AbstractModel
      * @param integer $IsDcnStrongSyncSupported 是否支持强同步DCN
      * @param integer $IsDcnSwitchSupported 是否支持DCN切换
      * @param string $CpuType cpu类型，英特尔：Intel/AMD，海光：Hygon，默认Intel/AMD	
+     * @param integer $ProtectedProperty 实例删除保护标签，1: 已开启删除保护，0: 未开启删除保护
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -719,6 +727,10 @@ class DescribeDCDBInstanceDetailResponse extends AbstractModel
 
         if (array_key_exists("CpuType",$param) and $param["CpuType"] !== null) {
             $this->CpuType = $param["CpuType"];
+        }
+
+        if (array_key_exists("ProtectedProperty",$param) and $param["ProtectedProperty"] !== null) {
+            $this->ProtectedProperty = $param["ProtectedProperty"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

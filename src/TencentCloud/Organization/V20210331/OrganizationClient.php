@@ -86,6 +86,7 @@ use TencentCloud\Organization\V20210331\Models as Models;
  * @method Models\DescribeOrganizationNodesResponse DescribeOrganizationNodes(Models\DescribeOrganizationNodesRequest $req) 获取组织节点列表
  * @method Models\DescribePolicyResponse DescribePolicy(Models\DescribePolicyRequest $req) 本接口（DescribePolicy）可用于查询查看策略详情。
  * @method Models\DescribePolicyConfigResponse DescribePolicyConfig(Models\DescribePolicyConfigRequest $req) 本接口（DescribePolicyConfig）可用于查询企业组织策略配置
+ * @method Models\DescribeResourceToShareMemberResponse DescribeResourceToShareMember(Models\DescribeResourceToShareMemberRequest $req) 获取与我共享的资源列表。
  * @method Models\DescribeShareAreasResponse DescribeShareAreas(Models\DescribeShareAreasRequest $req) 获取可共享地域列表
  * @method Models\DescribeShareUnitMembersResponse DescribeShareUnitMembers(Models\DescribeShareUnitMembersRequest $req) 获取共享单元成员列表。
  * @method Models\DescribeShareUnitResourcesResponse DescribeShareUnitResources(Models\DescribeShareUnitResourcesRequest $req) 获取共享单元资源列表。

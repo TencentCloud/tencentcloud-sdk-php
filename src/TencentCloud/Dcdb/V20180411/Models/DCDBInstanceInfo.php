@@ -120,6 +120,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceTags(array $ResourceTags) 设置实例标签信息
  * @method string getDbVersionId() 获取数据库引擎版本
  * @method void setDbVersionId(string $DbVersionId) 设置数据库引擎版本
+ * @method integer getProtectedProperty() 获取实例删除保护标签，1: 已开启删除保护，0: 未开启删除保护
+ * @method void setProtectedProperty(integer $ProtectedProperty) 设置实例删除保护标签，1: 已开启删除保护，0: 未开启删除保护
  */
 class DCDBInstanceInfo extends AbstractModel
 {
@@ -374,6 +376,11 @@ class DCDBInstanceInfo extends AbstractModel
     public $DbVersionId;
 
     /**
+     * @var integer 实例删除保护标签，1: 已开启删除保护，0: 未开启删除保护
+     */
+    public $ProtectedProperty;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param integer $AppId 应用ID
@@ -424,6 +431,7 @@ class DCDBInstanceInfo extends AbstractModel
      * @param integer $InstanceType 1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
      * @param array $ResourceTags 实例标签信息
      * @param string $DbVersionId 数据库引擎版本
+     * @param integer $ProtectedProperty 实例删除保护标签，1: 已开启删除保护，0: 未开启删除保护
      */
     function __construct()
     {
@@ -646,6 +654,10 @@ class DCDBInstanceInfo extends AbstractModel
 
         if (array_key_exists("DbVersionId",$param) and $param["DbVersionId"] !== null) {
             $this->DbVersionId = $param["DbVersionId"];
+        }
+
+        if (array_key_exists("ProtectedProperty",$param) and $param["ProtectedProperty"] !== null) {
+            $this->ProtectedProperty = $param["ProtectedProperty"];
         }
     }
 }

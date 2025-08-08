@@ -701,7 +701,7 @@ use TencentCloud\Ess\V20201111\Models as Models;
 
 
 **该接口效果同控制台： 企业设置-> 扩展服务 -> 企业自动签署 -> 合作企业方授权**
-![image](https://qcloudimg.tencent-cloud.cn/raw/489aa0bf74941469b5e740f428f17c3a.png)
+![image](https://qcloudimg.tencent-cloud.cn/raw/4f89c8d5ccc1397db964257fd73dd5e1.png)
  * @method Models\CreatePersonAuthCertificateImageResponse CreatePersonAuthCertificateImage(Models\CreatePersonAuthCertificateImageRequest $req) 获取个人用户认证证书图片下载URL
 
 个人用户认证证书图片样式如下图
@@ -940,6 +940,21 @@ use TencentCloud\Ess\V20201111\Models as Models;
  * @method Models\DescribeIntegrationDepartmentsResponse DescribeIntegrationDepartments(Models\DescribeIntegrationDepartmentsRequest $req) 此接口（DescribeIntegrationDepartments）用于查询企业的部门信息列表，支持查询单个部门节点或单个部门节点及一级子节点部门列表。
  * @method Models\DescribeIntegrationEmployeesResponse DescribeIntegrationEmployees(Models\DescribeIntegrationEmployeesRequest $req) 此接口（DescribeIntegrationEmployees）用于分页查询企业员工信息列表，支持设置过滤条件以筛选员工查询结果。
  * @method Models\DescribeIntegrationRolesResponse DescribeIntegrationRoles(Models\DescribeIntegrationRolesRequest $req) 此接口（DescribeIntegrationRoles）用于分页查询企业角色列表，列表按照角色创建时间升序排列。
+
+角色分为系统默认角色与企业自定义角色，其中系统默认角色不可以禁用、删除、编辑权限项，只可往默认角色中添加成员。企业自定义角色为企业根据自身需要新增的角色，可根据企业具体情况设置各个角色的权限，例如新增财务岗、销售岗等角色。
+
+企业版的系统默认角色包含如下角色：
+
+| 角色名称                     | 角色描述                                                                 |
+|------------------------------|--------------------------------------------------------------------------|
+| 超级管理员（电子签业务最高权限，e.g.法务/业务负责人） | 所有功能和数据管理权限，只能设置一位超管。                              |
+| IT信息管理员（IT系统负责人，e.g. CTO）        | 组织员工、计费模块、应用模块等权限能力。                                |
+| 企业合同管理员（企业法务负责人）             | 企业全部合同管理、可申请出证等权限能力。                                |
+| 企业模板管理员                  | 企业全部模板管理权限能力。                                              |
+| 企业印章管理员（企业行政负责人）             | 管理企业的所有电子印章，如添加印章、启用停用印章、印章授权等。          |
+| 用印审批岗（各部门的印章管理岗）             | 可对被授权的印章进行日常使用管理，如合同盖章用印的审核及登记。          |
+| 部门管理员（部门的合同+印章+模板管理）         | 部门级（含子部门）所有合同管理权限能力。                                |
+| 业务员（销售员、采购员）             | 发起合同、签署合同（含填写、拒签）、撤销合同、持有印章等权限能力。      |
  * @method Models\DescribeOrganizationAuthStatusResponse DescribeOrganizationAuthStatus(Models\DescribeOrganizationAuthStatusRequest $req) 查询企业认证状态- 仅通过[CreateOrganizationAuthUrl](https://qian.tencent.com/developers/companyApis/organizations/CreateOrganizationAuthUrl) 和[CreateBatchOrganizationRegistrationTasks](https://qian.tencent.com/developers/companyApis/organizations/CreateBatchOrganizationRegistrationTasks)这两个接口进行引导认证的企业，调用方企业可以依据这个接口，查询认证状态。
  * @method Models\DescribeOrganizationGroupOrganizationsResponse DescribeOrganizationGroupOrganizations(Models\DescribeOrganizationGroupOrganizationsRequest $req) 此API接口用来查询加入集团的成员企业信息
 适用场景：子企业在加入集团后，主企业可能通过此接口获取到所有的子企业列表，方便进行展示和统计

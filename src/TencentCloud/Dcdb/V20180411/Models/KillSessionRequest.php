@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setShardId(string $ShardId) 设置分片ID，与ShardSerialId设置一个
  * @method string getShardSerialId() 获取分片序列ID，与ShardId设置一个
  * @method void setShardSerialId(string $ShardSerialId) 设置分片序列ID，与ShardId设置一个
+ * @method string getNodeId() 获取节点ID，可指定主节点或者备节点进行kill。可选参数，不传默认为主节点。
+ * @method void setNodeId(string $NodeId) 设置节点ID，可指定主节点或者备节点进行kill。可选参数，不传默认为主节点。
  */
 class KillSessionRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class KillSessionRequest extends AbstractModel
     public $ShardSerialId;
 
     /**
+     * @var string 节点ID，可指定主节点或者备节点进行kill。可选参数，不传默认为主节点。
+     */
+    public $NodeId;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param array $SessionId 会话ID列表
      * @param string $ShardId 分片ID，与ShardSerialId设置一个
      * @param string $ShardSerialId 分片序列ID，与ShardId设置一个
+     * @param string $NodeId 节点ID，可指定主节点或者备节点进行kill。可选参数，不传默认为主节点。
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class KillSessionRequest extends AbstractModel
 
         if (array_key_exists("ShardSerialId",$param) and $param["ShardSerialId"] !== null) {
             $this->ShardSerialId = $param["ShardSerialId"];
+        }
+
+        if (array_key_exists("NodeId",$param) and $param["NodeId"] !== null) {
+            $this->NodeId = $param["NodeId"];
         }
     }
 }

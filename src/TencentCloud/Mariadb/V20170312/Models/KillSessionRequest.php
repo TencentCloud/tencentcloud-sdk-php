@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例ID
  * @method array getSessionId() 获取会话ID列表
  * @method void setSessionId(array $SessionId) 设置会话ID列表
+ * @method string getNodeId() 获取节点ID，可指定主节点或者备节点进行kill。可选参数，不传默认为主节点。
+ * @method void setNodeId(string $NodeId) 设置节点ID，可指定主节点或者备节点进行kill。可选参数，不传默认为主节点。
  */
 class KillSessionRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class KillSessionRequest extends AbstractModel
     public $SessionId;
 
     /**
+     * @var string 节点ID，可指定主节点或者备节点进行kill。可选参数，不传默认为主节点。
+     */
+    public $NodeId;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param array $SessionId 会话ID列表
+     * @param string $NodeId 节点ID，可指定主节点或者备节点进行kill。可选参数，不传默认为主节点。
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class KillSessionRequest extends AbstractModel
 
         if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
             $this->SessionId = $param["SessionId"];
+        }
+
+        if (array_key_exists("NodeId",$param) and $param["NodeId"] !== null) {
+            $this->NodeId = $param["NodeId"];
         }
     }
 }

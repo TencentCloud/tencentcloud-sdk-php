@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setComplianceName(string $ComplianceName) 设置识别模板名称
  * @method integer getProgressPercent() 获取进度百分比
  * @method void setProgressPercent(integer $ProgressPercent) 设置进度百分比
- * @method string getReportTemplateName() 获取报告模版名称
- * @method void setReportTemplateName(string $ReportTemplateName) 设置报告模版名称
+ * @method string getReportTemplateName() 获取报告模板名称
+ * @method void setReportTemplateName(string $ReportTemplateName) 设置报告模板名称
  */
 class ReportInfo extends AbstractModel
 {
@@ -124,7 +124,7 @@ class ReportInfo extends AbstractModel
     public $ProgressPercent;
 
     /**
-     * @var string 报告模版名称
+     * @var string 报告模板名称
      */
     public $ReportTemplateName;
 
@@ -143,7 +143,7 @@ class ReportInfo extends AbstractModel
      * @param integer $Enable 是否启用（0：否 1：是）
      * @param string $ComplianceName 识别模板名称
      * @param integer $ProgressPercent 进度百分比
-     * @param string $ReportTemplateName 报告模版名称
+     * @param string $ReportTemplateName 报告模板名称
      */
     function __construct()
     {

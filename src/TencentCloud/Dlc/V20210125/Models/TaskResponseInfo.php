@@ -112,6 +112,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEngineTypeDetail(string $EngineTypeDetail) 设置引擎类型，SparkSQL：SparkSQL 引擎；SparkBatch：Spark作业引擎；PrestoSQL：Presto引擎
  * @method string getResourceGroupName() 获取spark引擎资源组名称
  * @method void setResourceGroupName(string $ResourceGroupName) 设置spark引擎资源组名称
+ * @method integer getJobTimeSum() 获取任务执行耗时
+ * @method void setJobTimeSum(integer $JobTimeSum) 设置任务执行耗时
  */
 class TaskResponseInfo extends AbstractModel
 {
@@ -334,6 +336,11 @@ class TaskResponseInfo extends AbstractModel
     public $ResourceGroupName;
 
     /**
+     * @var integer 任务执行耗时
+     */
+    public $JobTimeSum;
+
+    /**
      * @param string $DatabaseName 任务所属Database的名称。
      * @param integer $DataAmount 任务数据量。
      * @param string $Id 任务Id。
@@ -380,6 +387,7 @@ class TaskResponseInfo extends AbstractModel
      * @param string $ResultFormat 结果文件格式：默认为csv
      * @param string $EngineTypeDetail 引擎类型，SparkSQL：SparkSQL 引擎；SparkBatch：Spark作业引擎；PrestoSQL：Presto引擎
      * @param string $ResourceGroupName spark引擎资源组名称
+     * @param integer $JobTimeSum 任务执行耗时
      */
     function __construct()
     {
@@ -567,6 +575,10 @@ class TaskResponseInfo extends AbstractModel
 
         if (array_key_exists("ResourceGroupName",$param) and $param["ResourceGroupName"] !== null) {
             $this->ResourceGroupName = $param["ResourceGroupName"];
+        }
+
+        if (array_key_exists("JobTimeSum",$param) and $param["JobTimeSum"] !== null) {
+            $this->JobTimeSum = $param["JobTimeSum"];
         }
     }
 }

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StartInstanceRefresh请求参数结构体
  *
- * @method string getAutoScalingGroupId() 获取伸缩组ID。
- * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置伸缩组ID。
+ * @method string getAutoScalingGroupId() 获取伸缩组ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。
+ * @method void setAutoScalingGroupId(string $AutoScalingGroupId) 设置伸缩组ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。
  * @method RefreshSettings getRefreshSettings() 获取刷新设置。
  * @method void setRefreshSettings(RefreshSettings $RefreshSettings) 设置刷新设置。
  * @method string getRefreshMode() 获取刷新模式。默认值为 ROLLING_UPDATE_RESET，取值范围：
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class StartInstanceRefreshRequest extends AbstractModel
 {
     /**
-     * @var string 伸缩组ID。
+     * @var string 伸缩组ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。
      */
     public $AutoScalingGroupId;
 
@@ -51,7 +51,7 @@ class StartInstanceRefreshRequest extends AbstractModel
     public $RefreshMode;
 
     /**
-     * @param string $AutoScalingGroupId 伸缩组ID。
+     * @param string $AutoScalingGroupId 伸缩组ID。可通过登录 [控制台](https://console.cloud.tencent.com/autoscaling/group) 或调用接口 [DescribeAutoScalingGroups](https://cloud.tencent.com/document/api/377/20438) ，取返回信息中的 AutoScalingGroupId 获取伸缩组ID。
      * @param RefreshSettings $RefreshSettings 刷新设置。
      * @param string $RefreshMode 刷新模式。默认值为 ROLLING_UPDATE_RESET，取值范围：
 <li>ROLLING_UPDATE_RESET：重装系统进行滚动更新</li>

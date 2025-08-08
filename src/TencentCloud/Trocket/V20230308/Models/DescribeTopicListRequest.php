@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置查询起始位置，默认为0。
  * @method integer getLimit() 获取查询结果限制数量，默认20。
  * @method void setLimit(integer $Limit) 设置查询结果限制数量，默认20。
+ * @method string getFromGroup() 获取按照消费组查询订阅的主题
+ * @method void setFromGroup(string $FromGroup) 设置按照消费组查询订阅的主题
  */
 class DescribeTopicListRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeTopicListRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string 按照消费组查询订阅的主题
+     */
+    public $FromGroup;
+
+    /**
      * @param string $InstanceId 腾讯云 RocketMQ 实例 ID，从 [DescribeFusionInstanceList](https://cloud.tencent.com/document/api/1493/106745) 接口或控制台获得。
      * @param array $Filters 过滤查询条件列表，请在引用此参数的API说明中了解使用方法。
      * @param integer $Offset 查询起始位置，默认为0。
      * @param integer $Limit 查询结果限制数量，默认20。
+     * @param string $FromGroup 按照消费组查询订阅的主题
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class DescribeTopicListRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("FromGroup",$param) and $param["FromGroup"] !== null) {
+            $this->FromGroup = $param["FromGroup"];
         }
     }
 }

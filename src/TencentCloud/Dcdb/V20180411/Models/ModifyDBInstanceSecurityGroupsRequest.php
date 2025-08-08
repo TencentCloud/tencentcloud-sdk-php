@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProduct(string $Product) 设置数据库引擎名称，本接口取值：dcdb。
  * @method string getInstanceId() 获取实例ID。
  * @method void setInstanceId(string $InstanceId) 设置实例ID。
- * @method array getSecurityGroupIds() 获取要修改的安全组 ID 列表，一个或者多个安全组 ID 组成的数组。
- * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置要修改的安全组 ID 列表，一个或者多个安全组 ID 组成的数组。
+ * @method array getSecurityGroupIds() 获取要修改的安全组 ID 列表，一个或者多个安全组 ID 组成的数组。<br>注意：该入参会全量替换存量已有安全组集合，并非增量更新。修改需传入全量的预期集合。
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置要修改的安全组 ID 列表，一个或者多个安全组 ID 组成的数组。<br>注意：该入参会全量替换存量已有安全组集合，并非增量更新。修改需传入全量的预期集合。
  */
 class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var array 要修改的安全组 ID 列表，一个或者多个安全组 ID 组成的数组。
+     * @var array 要修改的安全组 ID 列表，一个或者多个安全组 ID 组成的数组。<br>注意：该入参会全量替换存量已有安全组集合，并非增量更新。修改需传入全量的预期集合。
      */
     public $SecurityGroupIds;
 
     /**
      * @param string $Product 数据库引擎名称，本接口取值：dcdb。
      * @param string $InstanceId 实例ID。
-     * @param array $SecurityGroupIds 要修改的安全组 ID 列表，一个或者多个安全组 ID 组成的数组。
+     * @param array $SecurityGroupIds 要修改的安全组 ID 列表，一个或者多个安全组 ID 组成的数组。<br>注意：该入参会全量替换存量已有安全组集合，并非增量更新。修改需传入全量的预期集合。
      */
     function __construct()
     {

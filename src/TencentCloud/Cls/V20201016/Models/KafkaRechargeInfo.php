@@ -44,10 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) 设置状态 ，1：运行中；2：暂停。
  * @method integer getOffset() 获取导入数据位置，-2:最早（默认），-1：最晚
  * @method void setOffset(integer $Offset) 设置导入数据位置，-2:最早（默认），-1：最晚
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method string getUpdateTime() 获取更新时间
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间
+ * @method string getCreateTime() 获取创建时间。格式`YYYY-MM-DD HH:MM:SS`
+ * @method void setCreateTime(string $CreateTime) 设置创建时间。格式`YYYY-MM-DD HH:MM:SS`
+ * @method string getUpdateTime() 获取更新时间。格式`YYYY-MM-DD HH:MM:SS`
+ * @method void setUpdateTime(string $UpdateTime) 设置更新时间。格式`YYYY-MM-DD HH:MM:SS`
  * @method LogRechargeRuleInfo getLogRechargeRule() 获取日志导入规则
  * @method void setLogRechargeRule(LogRechargeRuleInfo $LogRechargeRule) 设置日志导入规则
  */
@@ -114,12 +114,12 @@ class KafkaRechargeInfo extends AbstractModel
     public $Offset;
 
     /**
-     * @var string 创建时间
+     * @var string 创建时间。格式`YYYY-MM-DD HH:MM:SS`
      */
     public $CreateTime;
 
     /**
-     * @var string 更新时间
+     * @var string 更新时间。格式`YYYY-MM-DD HH:MM:SS`
      */
     public $UpdateTime;
 
@@ -141,8 +141,8 @@ class KafkaRechargeInfo extends AbstractModel
      * @param string $ConsumerGroupName 用户Kafka消费组名称	
      * @param integer $Status 状态 ，1：运行中；2：暂停。
      * @param integer $Offset 导入数据位置，-2:最早（默认），-1：最晚
-     * @param string $CreateTime 创建时间
-     * @param string $UpdateTime 更新时间
+     * @param string $CreateTime 创建时间。格式`YYYY-MM-DD HH:MM:SS`
+     * @param string $UpdateTime 更新时间。格式`YYYY-MM-DD HH:MM:SS`
      * @param LogRechargeRuleInfo $LogRechargeRule 日志导入规则
      */
     function __construct()

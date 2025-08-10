@@ -20,26 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteKafkaRecharge请求参数结构体
  *
- * @method string getId() 获取Kafka导入配置ID
- * @method void setId(string $Id) 设置Kafka导入配置ID
- * @method string getTopicId() 获取导入CLS目标topic ID
- * @method void setTopicId(string $TopicId) 设置导入CLS目标topic ID
+ * @method string getId() 获取Kafka导入配置Id。
+
+- 通过 [创建Kafka数据订阅任务](https://cloud.tencent.com/document/product/614/94448)获取Kafka导入配置Id。
+- 通过 [获取Kafka数据订阅任务列表](https://cloud.tencent.com/document/product/614/94446)获取Kafka导入配置Id。
+ * @method void setId(string $Id) 设置Kafka导入配置Id。
+
+- 通过 [创建Kafka数据订阅任务](https://cloud.tencent.com/document/product/614/94448)获取Kafka导入配置Id。
+- 通过 [获取Kafka数据订阅任务列表](https://cloud.tencent.com/document/product/614/94446)获取Kafka导入配置Id。
+ * @method string getTopicId() 获取导入CLS目标日志主题Id。
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+ * @method void setTopicId(string $TopicId) 设置导入CLS目标日志主题Id。
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
  */
 class DeleteKafkaRechargeRequest extends AbstractModel
 {
     /**
-     * @var string Kafka导入配置ID
+     * @var string Kafka导入配置Id。
+
+- 通过 [创建Kafka数据订阅任务](https://cloud.tencent.com/document/product/614/94448)获取Kafka导入配置Id。
+- 通过 [获取Kafka数据订阅任务列表](https://cloud.tencent.com/document/product/614/94446)获取Kafka导入配置Id。
      */
     public $Id;
 
     /**
-     * @var string 导入CLS目标topic ID
+     * @var string 导入CLS目标日志主题Id。
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public $TopicId;
 
     /**
-     * @param string $Id Kafka导入配置ID
-     * @param string $TopicId 导入CLS目标topic ID
+     * @param string $Id Kafka导入配置Id。
+
+- 通过 [创建Kafka数据订阅任务](https://cloud.tencent.com/document/product/614/94448)获取Kafka导入配置Id。
+- 通过 [获取Kafka数据订阅任务列表](https://cloud.tencent.com/document/product/614/94446)获取Kafka导入配置Id。
+     * @param string $TopicId 导入CLS目标日志主题Id。
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     function __construct()
     {

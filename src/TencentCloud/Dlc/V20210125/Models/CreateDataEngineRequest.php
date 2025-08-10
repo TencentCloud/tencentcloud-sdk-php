@@ -44,10 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSize(integer $Size) 设置集群规模
  * @method integer getPayMode() 获取计费类型，后付费：0，预付费：1。当前只支持后付费，不填默认为后付费。
  * @method void setPayMode(integer $PayMode) 设置计费类型，后付费：0，预付费：1。当前只支持后付费，不填默认为后付费。
- * @method integer getTimeSpan() 获取资源使用时长，后付费：固定填3600，预付费：最少填1，代表购买资源一个月，最长不超过120。默认1
- * @method void setTimeSpan(integer $TimeSpan) 设置资源使用时长，后付费：固定填3600，预付费：最少填1，代表购买资源一个月，最长不超过120。默认1
- * @method string getTimeUnit() 获取资源使用时长的单位，后付费：s，预付费：m。默认为s
- * @method void setTimeUnit(string $TimeUnit) 设置资源使用时长的单位，后付费：s，预付费：m。默认为s
+ * @method integer getTimeSpan() 获取资源使用时长，后付费：固定填1，预付费：最少填1，代表购买资源一个月，最长不超过120。默认1
+ * @method void setTimeSpan(integer $TimeSpan) 设置资源使用时长，后付费：固定填1，预付费：最少填1，代表购买资源一个月，最长不超过120。默认1
+ * @method string getTimeUnit() 获取资源使用时长的单位，后付费：h，预付费：m。默认为h
+ * @method void setTimeUnit(string $TimeUnit) 设置资源使用时长的单位，后付费：h，预付费：m。默认为h
  * @method integer getAutoRenew() 获取资源的自动续费标志。后付费无需续费，固定填0；预付费下：0表示手动续费、1代表自动续费、2代表不续费，在0下如果是大客户，会自动帮大客户续费。默认为0
  * @method void setAutoRenew(integer $AutoRenew) 设置资源的自动续费标志。后付费无需续费，固定填0；预付费下：0表示手动续费、1代表自动续费、2代表不续费，在0下如果是大客户，会自动帮大客户续费。默认为0
  * @method array getTags() 获取创建资源的时候需要绑定的标签信息
@@ -58,8 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCrontabResumeSuspend(integer $CrontabResumeSuspend) 设置定时启停集群策略：0（默认）：关闭定时策略、1：开启定时策略（注：定时启停策略与自动挂起策略互斥）
  * @method CrontabResumeSuspendStrategy getCrontabResumeSuspendStrategy() 获取定时启停策略，复杂类型：包含启停时间、挂起集群策略
  * @method void setCrontabResumeSuspendStrategy(CrontabResumeSuspendStrategy $CrontabResumeSuspendStrategy) 设置定时启停策略，复杂类型：包含启停时间、挂起集群策略
- * @method string getEngineExecType() 获取引擎执行任务类型，有效值：SQL/BATCH，默认为SQL
- * @method void setEngineExecType(string $EngineExecType) 设置引擎执行任务类型，有效值：SQL/BATCH，默认为SQL
+ * @method string getEngineExecType() 获取引擎执行任务类型，有效值：SQL/BATCH，标准引擎默认为BATCH
+ * @method void setEngineExecType(string $EngineExecType) 设置引擎执行任务类型，有效值：SQL/BATCH，标准引擎默认为BATCH
  * @method integer getMaxConcurrency() 获取单个集群最大并发任务数，默认5
  * @method void setMaxConcurrency(integer $MaxConcurrency) 设置单个集群最大并发任务数，默认5
  * @method integer getTolerableQueueTime() 获取可容忍的排队时间，默认0。当任务排队的时间超过可容忍的时间时可能会触发扩容。如果该参数为0，则表示一旦有任务排队就可能立即触发扩容。
@@ -151,12 +151,12 @@ class CreateDataEngineRequest extends AbstractModel
     public $PayMode;
 
     /**
-     * @var integer 资源使用时长，后付费：固定填3600，预付费：最少填1，代表购买资源一个月，最长不超过120。默认1
+     * @var integer 资源使用时长，后付费：固定填1，预付费：最少填1，代表购买资源一个月，最长不超过120。默认1
      */
     public $TimeSpan;
 
     /**
-     * @var string 资源使用时长的单位，后付费：s，预付费：m。默认为s
+     * @var string 资源使用时长的单位，后付费：h，预付费：m。默认为h
      */
     public $TimeUnit;
 
@@ -186,7 +186,7 @@ class CreateDataEngineRequest extends AbstractModel
     public $CrontabResumeSuspendStrategy;
 
     /**
-     * @var string 引擎执行任务类型，有效值：SQL/BATCH，默认为SQL
+     * @var string 引擎执行任务类型，有效值：SQL/BATCH，标准引擎默认为BATCH
      */
     public $EngineExecType;
 
@@ -268,14 +268,14 @@ class CreateDataEngineRequest extends AbstractModel
      * @param string $Message 描述信息
      * @param integer $Size 集群规模
      * @param integer $PayMode 计费类型，后付费：0，预付费：1。当前只支持后付费，不填默认为后付费。
-     * @param integer $TimeSpan 资源使用时长，后付费：固定填3600，预付费：最少填1，代表购买资源一个月，最长不超过120。默认1
-     * @param string $TimeUnit 资源使用时长的单位，后付费：s，预付费：m。默认为s
+     * @param integer $TimeSpan 资源使用时长，后付费：固定填1，预付费：最少填1，代表购买资源一个月，最长不超过120。默认1
+     * @param string $TimeUnit 资源使用时长的单位，后付费：h，预付费：m。默认为h
      * @param integer $AutoRenew 资源的自动续费标志。后付费无需续费，固定填0；预付费下：0表示手动续费、1代表自动续费、2代表不续费，在0下如果是大客户，会自动帮大客户续费。默认为0
      * @param array $Tags 创建资源的时候需要绑定的标签信息
      * @param boolean $AutoSuspend 是否自定挂起集群：false（默认）：不自动挂起、true：自动挂起
      * @param integer $CrontabResumeSuspend 定时启停集群策略：0（默认）：关闭定时策略、1：开启定时策略（注：定时启停策略与自动挂起策略互斥）
      * @param CrontabResumeSuspendStrategy $CrontabResumeSuspendStrategy 定时启停策略，复杂类型：包含启停时间、挂起集群策略
-     * @param string $EngineExecType 引擎执行任务类型，有效值：SQL/BATCH，默认为SQL
+     * @param string $EngineExecType 引擎执行任务类型，有效值：SQL/BATCH，标准引擎默认为BATCH
      * @param integer $MaxConcurrency 单个集群最大并发任务数，默认5
      * @param integer $TolerableQueueTime 可容忍的排队时间，默认0。当任务排队的时间超过可容忍的时间时可能会触发扩容。如果该参数为0，则表示一旦有任务排队就可能立即触发扩容。
      * @param integer $AutoSuspendTime 集群自动挂起时间，默认10分钟

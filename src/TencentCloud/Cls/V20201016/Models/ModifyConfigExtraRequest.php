@@ -21,19 +21,23 @@ use TencentCloud\Common\AbstractModel;
  * ModifyConfigExtra请求参数结构体
  *
  * @method string getConfigExtraId() 获取采集配置扩展信息id
+- 通过[获取特殊采集配置](https://cloud.tencent.com/document/api/614/71164)获取采集配置扩展信息id。
  * @method void setConfigExtraId(string $ConfigExtraId) 设置采集配置扩展信息id
+- 通过[获取特殊采集配置](https://cloud.tencent.com/document/api/614/71164)获取采集配置扩展信息id。
  * @method string getName() 获取采集配置规程名称，最长63个字符，只能包含小写字符、数字及分隔符（“-”），且必须以小写字符开头，数字或小写字符结尾
  * @method void setName(string $Name) 设置采集配置规程名称，最长63个字符，只能包含小写字符、数字及分隔符（“-”），且必须以小写字符开头，数字或小写字符结尾
  * @method string getTopicId() 获取日志主题id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
  * @method void setTopicId(string $TopicId) 设置日志主题id
- * @method HostFileInfo getHostFile() 获取节点文件配置信息
- * @method void setHostFile(HostFileInfo $HostFile) 设置节点文件配置信息
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+ * @method HostFileInfo getHostFile() 获取自建k8s-节点文件配置信息,包括文件路径、名称及元数据相关信息，详细参考https://cloud.tencent.com/document/api/614/56471#HostFileInfo
+ * @method void setHostFile(HostFileInfo $HostFile) 设置自建k8s-节点文件配置信息,包括文件路径、名称及元数据相关信息，详细参考https://cloud.tencent.com/document/api/614/56471#HostFileInfo
  * @method ContainerFileInfo getContainerFile() 获取采集配置标记。
 - 目前只支持label_k8s，用于标记自建k8s集群使用的采集配置
  * @method void setContainerFile(ContainerFileInfo $ContainerFile) 设置采集配置标记。
 - 目前只支持label_k8s，用于标记自建k8s集群使用的采集配置
- * @method ContainerStdoutInfo getContainerStdout() 获取容器标准输出信息
- * @method void setContainerStdout(ContainerStdoutInfo $ContainerStdout) 设置容器标准输出信息
+ * @method ContainerStdoutInfo getContainerStdout() 获取自建k8s-容器标准输出信息，包括容器、命名空间等，详细参考https://cloud.tencent.com/document/api/614/56471#ContainerStdoutInfo
+ * @method void setContainerStdout(ContainerStdoutInfo $ContainerStdout) 设置自建k8s-容器标准输出信息，包括容器、命名空间等，详细参考https://cloud.tencent.com/document/api/614/56471#ContainerStdoutInfo
  * @method string getLogType() 获取采集的日志类型，默认为minimalist_log。支持以下类型：
 - json_log代表：JSON-文件日志（详见[使用 JSON 提取模式采集日志](https://cloud.tencent.com/document/product/614/17419)）；
 - delimiter_log代表：分隔符-文件日志（详见[使用分隔符提取模式采集日志](https://cloud.tencent.com/document/product/614/17420)）；
@@ -66,18 +70,32 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserDefineRule(string $UserDefineRule) 设置组合解析采集规则，用于复杂场景下的日志采集。
 - 取值参考：[使用组合解析提取模式采集日志
 ](https://cloud.tencent.com/document/product/614/61310)
- * @method string getType() 获取类型：container_stdout、container_file、host_file
- * @method void setType(string $Type) 设置类型：container_stdout、container_file、host_file
+ * @method string getType() 获取容器场景，日志采集输入类型，支持以下三种类型
+- container_stdout 标准输出
+- container_file 容器文件
+- host_file 主机节点文件
+ * @method void setType(string $Type) 设置容器场景，日志采集输入类型，支持以下三种类型
+- container_stdout 标准输出
+- container_file 容器文件
+- host_file 主机节点文件
  * @method string getGroupId() 获取机器组ID
+- 通过[获取机器组列表](https://cloud.tencent.com/document/api/614/56438)获取机器组Id。
  * @method void setGroupId(string $GroupId) 设置机器组ID
+- 通过[获取机器组列表](https://cloud.tencent.com/document/api/614/56438)获取机器组Id。
  * @method string getConfigFlag() 获取自建采集配置标
  * @method void setConfigFlag(string $ConfigFlag) 设置自建采集配置标
  * @method string getLogsetId() 获取日志集ID
+- 通过[获取日志集列表](https://cloud.tencent.com/document/api/614/58624)获取日志集Id。
  * @method void setLogsetId(string $LogsetId) 设置日志集ID
- * @method string getLogsetName() 获取日志集name
- * @method void setLogsetName(string $LogsetName) 设置日志集name
- * @method string getTopicName() 获取日志主题name
- * @method void setTopicName(string $TopicName) 设置日志主题name
+- 通过[获取日志集列表](https://cloud.tencent.com/document/api/614/58624)获取日志集Id。
+ * @method string getLogsetName() 获取日志集名称
+- 通过[获取日志集列表](https://cloud.tencent.com/document/api/614/58624)获取日志集名称。
+ * @method void setLogsetName(string $LogsetName) 设置日志集名称
+- 通过[获取日志集列表](https://cloud.tencent.com/document/api/614/58624)获取日志集名称。
+ * @method string getTopicName() 获取日志主题名称
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题名称。
+ * @method void setTopicName(string $TopicName) 设置日志主题名称
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题名称。
  * @method string getAdvancedConfig() 获取高级采集配置。 Json字符串， Key/Value定义为如下：
 - ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时
 - ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数
@@ -94,6 +112,7 @@ class ModifyConfigExtraRequest extends AbstractModel
 {
     /**
      * @var string 采集配置扩展信息id
+- 通过[获取特殊采集配置](https://cloud.tencent.com/document/api/614/71164)获取采集配置扩展信息id。
      */
     public $ConfigExtraId;
 
@@ -104,11 +123,12 @@ class ModifyConfigExtraRequest extends AbstractModel
 
     /**
      * @var string 日志主题id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public $TopicId;
 
     /**
-     * @var HostFileInfo 节点文件配置信息
+     * @var HostFileInfo 自建k8s-节点文件配置信息,包括文件路径、名称及元数据相关信息，详细参考https://cloud.tencent.com/document/api/614/56471#HostFileInfo
      */
     public $HostFile;
 
@@ -119,7 +139,7 @@ class ModifyConfigExtraRequest extends AbstractModel
     public $ContainerFile;
 
     /**
-     * @var ContainerStdoutInfo 容器标准输出信息
+     * @var ContainerStdoutInfo 自建k8s-容器标准输出信息，包括容器、命名空间等，详细参考https://cloud.tencent.com/document/api/614/56471#ContainerStdoutInfo
      */
     public $ContainerStdout;
 
@@ -161,12 +181,16 @@ class ModifyConfigExtraRequest extends AbstractModel
     public $UserDefineRule;
 
     /**
-     * @var string 类型：container_stdout、container_file、host_file
+     * @var string 容器场景，日志采集输入类型，支持以下三种类型
+- container_stdout 标准输出
+- container_file 容器文件
+- host_file 主机节点文件
      */
     public $Type;
 
     /**
      * @var string 机器组ID
+- 通过[获取机器组列表](https://cloud.tencent.com/document/api/614/56438)获取机器组Id。
      */
     public $GroupId;
 
@@ -177,16 +201,19 @@ class ModifyConfigExtraRequest extends AbstractModel
 
     /**
      * @var string 日志集ID
+- 通过[获取日志集列表](https://cloud.tencent.com/document/api/614/58624)获取日志集Id。
      */
     public $LogsetId;
 
     /**
-     * @var string 日志集name
+     * @var string 日志集名称
+- 通过[获取日志集列表](https://cloud.tencent.com/document/api/614/58624)获取日志集名称。
      */
     public $LogsetName;
 
     /**
-     * @var string 日志主题name
+     * @var string 日志主题名称
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题名称。
      */
     public $TopicName;
 
@@ -202,12 +229,14 @@ class ModifyConfigExtraRequest extends AbstractModel
 
     /**
      * @param string $ConfigExtraId 采集配置扩展信息id
+- 通过[获取特殊采集配置](https://cloud.tencent.com/document/api/614/71164)获取采集配置扩展信息id。
      * @param string $Name 采集配置规程名称，最长63个字符，只能包含小写字符、数字及分隔符（“-”），且必须以小写字符开头，数字或小写字符结尾
      * @param string $TopicId 日志主题id
-     * @param HostFileInfo $HostFile 节点文件配置信息
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * @param HostFileInfo $HostFile 自建k8s-节点文件配置信息,包括文件路径、名称及元数据相关信息，详细参考https://cloud.tencent.com/document/api/614/56471#HostFileInfo
      * @param ContainerFileInfo $ContainerFile 采集配置标记。
 - 目前只支持label_k8s，用于标记自建k8s集群使用的采集配置
-     * @param ContainerStdoutInfo $ContainerStdout 容器标准输出信息
+     * @param ContainerStdoutInfo $ContainerStdout 自建k8s-容器标准输出信息，包括容器、命名空间等，详细参考https://cloud.tencent.com/document/api/614/56471#ContainerStdoutInfo
      * @param string $LogType 采集的日志类型，默认为minimalist_log。支持以下类型：
 - json_log代表：JSON-文件日志（详见[使用 JSON 提取模式采集日志](https://cloud.tencent.com/document/product/614/17419)）；
 - delimiter_log代表：分隔符-文件日志（详见[使用分隔符提取模式采集日志](https://cloud.tencent.com/document/product/614/17420)）；
@@ -224,12 +253,19 @@ class ModifyConfigExtraRequest extends AbstractModel
      * @param string $UserDefineRule 组合解析采集规则，用于复杂场景下的日志采集。
 - 取值参考：[使用组合解析提取模式采集日志
 ](https://cloud.tencent.com/document/product/614/61310)
-     * @param string $Type 类型：container_stdout、container_file、host_file
+     * @param string $Type 容器场景，日志采集输入类型，支持以下三种类型
+- container_stdout 标准输出
+- container_file 容器文件
+- host_file 主机节点文件
      * @param string $GroupId 机器组ID
+- 通过[获取机器组列表](https://cloud.tencent.com/document/api/614/56438)获取机器组Id。
      * @param string $ConfigFlag 自建采集配置标
      * @param string $LogsetId 日志集ID
-     * @param string $LogsetName 日志集name
-     * @param string $TopicName 日志主题name
+- 通过[获取日志集列表](https://cloud.tencent.com/document/api/614/58624)获取日志集Id。
+     * @param string $LogsetName 日志集名称
+- 通过[获取日志集列表](https://cloud.tencent.com/document/api/614/58624)获取日志集名称。
+     * @param string $TopicName 日志主题名称
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题名称。
      * @param string $AdvancedConfig 高级采集配置。 Json字符串， Key/Value定义为如下：
 - ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时
 - ClsAgentMaxDepth(最大目录深度)，取值范围: 大于等于0的整数

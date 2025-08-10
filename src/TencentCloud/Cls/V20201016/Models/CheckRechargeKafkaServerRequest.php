@@ -24,8 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKafkaType(integer $KafkaType) 设置导入Kafka类型，0: 腾讯云CKafka；1: 用户自建Kafka。
  * @method string getKafkaInstance() 获取腾讯云CKafka实例ID。
 KafkaType为0时，KafkaInstance必填
+
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
  * @method void setKafkaInstance(string $KafkaInstance) 设置腾讯云CKafka实例ID。
 KafkaType为0时，KafkaInstance必填
+
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
  * @method string getServerAddr() 获取服务地址。
 KafkaType为1时，ServerAddr必填
  * @method void setServerAddr(string $ServerAddr) 设置服务地址。
@@ -45,6 +49,8 @@ class CheckRechargeKafkaServerRequest extends AbstractModel
     /**
      * @var string 腾讯云CKafka实例ID。
 KafkaType为0时，KafkaInstance必填
+
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
      */
     public $KafkaInstance;
 
@@ -68,6 +74,8 @@ KafkaType为1时，ServerAddr必填
      * @param integer $KafkaType 导入Kafka类型，0: 腾讯云CKafka；1: 用户自建Kafka。
      * @param string $KafkaInstance 腾讯云CKafka实例ID。
 KafkaType为0时，KafkaInstance必填
+
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
      * @param string $ServerAddr 服务地址。
 KafkaType为1时，ServerAddr必填
      * @param boolean $IsEncryptionAddr ServerAddr是否为加密连接，默认值false。当KafkaType为1用户自建kafka时生效。

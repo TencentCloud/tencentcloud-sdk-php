@@ -20,8 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 自建k8s-工作负载信息
  *
- * @method string getKind() 获取工作负载的类型
- * @method void setKind(string $Kind) 设置工作负载的类型
+ * @method string getKind() 获取工作负载的类型，支持
+- deployment
+- statefulset
+- daemonset
+- job
+- cronjob
+ * @method void setKind(string $Kind) 设置工作负载的类型，支持
+- deployment
+- statefulset
+- daemonset
+- job
+- cronjob
  * @method string getName() 获取工作负载的名称
  * @method void setName(string $Name) 设置工作负载的名称
  * @method string getContainer() 获取容器名
@@ -32,7 +42,12 @@ use TencentCloud\Common\AbstractModel;
 class ContainerWorkLoadInfo extends AbstractModel
 {
     /**
-     * @var string 工作负载的类型
+     * @var string 工作负载的类型，支持
+- deployment
+- statefulset
+- daemonset
+- job
+- cronjob
      */
     public $Kind;
 
@@ -52,7 +67,12 @@ class ContainerWorkLoadInfo extends AbstractModel
     public $Namespace;
 
     /**
-     * @param string $Kind 工作负载的类型
+     * @param string $Kind 工作负载的类型，支持
+- deployment
+- statefulset
+- daemonset
+- job
+- cronjob
      * @param string $Name 工作负载的名称
      * @param string $Container 容器名
      * @param string $Namespace 命名空间

@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetDetectInfoEnhanced返回参数结构体
  *
- * @method DetectInfoText getText() 获取文本类信息。
+ * @method DetectInfoText getText() 获取人脸核身识别结果及文本类信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setText(DetectInfoText $Text) 设置文本类信息。
+ * @method void setText(DetectInfoText $Text) 设置人脸核身识别结果及文本类信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method DetectInfoIdCardData getIdCardData() 获取身份证照片信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -64,13 +64,33 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEncryptedBody(string $EncryptedBody) 设置加密后的数据。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getIsVerifyIntention() 获取本次请求是否配置开启意愿校验。 
+false：未开启意愿校验 
+true：已开启意愿校验 
+说明：若请求开启了意愿校验，可结合IntentionVerifyType中具体使用的校验模式从对应的出参Result中获取最终的核验结果；若请求没有开启意愿校验，则可在出参Text中获取最终的核验结果。
+ * @method void setIsVerifyIntention(boolean $IsVerifyIntention) 设置本次请求是否配置开启意愿校验。 
+false：未开启意愿校验 
+true：已开启意愿校验 
+说明：若请求开启了意愿校验，可结合IntentionVerifyType中具体使用的校验模式从对应的出参Result中获取最终的核验结果；若请求没有开启意愿校验，则可在出参Text中获取最终的核验结果。
+ * @method string getIntentionVerifyType() 获取本次请求意愿校验使用的具体模式。
+0：问答模式
+1：点头确认模式
+2：朗读模式
+若未使用意愿核身功能，该字段返回值可以不处理。
+注意：此字段可能返回 null，表示取不到有效值
+ * @method void setIntentionVerifyType(string $IntentionVerifyType) 设置本次请求意愿校验使用的具体模式。
+0：问答模式
+1：点头确认模式
+2：朗读模式
+若未使用意愿核身功能，该字段返回值可以不处理。
+注意：此字段可能返回 null，表示取不到有效值
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class GetDetectInfoEnhancedResponse extends AbstractModel
 {
     /**
-     * @var DetectInfoText 文本类信息。
+     * @var DetectInfoText 人脸核身识别结果及文本类信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Text;
@@ -128,12 +148,30 @@ class GetDetectInfoEnhancedResponse extends AbstractModel
     public $EncryptedBody;
 
     /**
+     * @var boolean 本次请求是否配置开启意愿校验。 
+false：未开启意愿校验 
+true：已开启意愿校验 
+说明：若请求开启了意愿校验，可结合IntentionVerifyType中具体使用的校验模式从对应的出参Result中获取最终的核验结果；若请求没有开启意愿校验，则可在出参Text中获取最终的核验结果。
+     */
+    public $IsVerifyIntention;
+
+    /**
+     * @var string 本次请求意愿校验使用的具体模式。
+0：问答模式
+1：点头确认模式
+2：朗读模式
+若未使用意愿核身功能，该字段返回值可以不处理。
+注意：此字段可能返回 null，表示取不到有效值
+     */
+    public $IntentionVerifyType;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param DetectInfoText $Text 文本类信息。
+     * @param DetectInfoText $Text 人脸核身识别结果及文本类信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DetectInfoIdCardData $IdCardData 身份证照片信息。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -155,6 +193,16 @@ class GetDetectInfoEnhancedResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EncryptedBody 加密后的数据。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $IsVerifyIntention 本次请求是否配置开启意愿校验。 
+false：未开启意愿校验 
+true：已开启意愿校验 
+说明：若请求开启了意愿校验，可结合IntentionVerifyType中具体使用的校验模式从对应的出参Result中获取最终的核验结果；若请求没有开启意愿校验，则可在出参Text中获取最终的核验结果。
+     * @param string $IntentionVerifyType 本次请求意愿校验使用的具体模式。
+0：问答模式
+1：点头确认模式
+2：朗读模式
+若未使用意愿核身功能，该字段返回值可以不处理。
+注意：此字段可能返回 null，表示取不到有效值
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -212,6 +260,14 @@ class GetDetectInfoEnhancedResponse extends AbstractModel
 
         if (array_key_exists("EncryptedBody",$param) and $param["EncryptedBody"] !== null) {
             $this->EncryptedBody = $param["EncryptedBody"];
+        }
+
+        if (array_key_exists("IsVerifyIntention",$param) and $param["IsVerifyIntention"] !== null) {
+            $this->IsVerifyIntention = $param["IsVerifyIntention"];
+        }
+
+        if (array_key_exists("IntentionVerifyType",$param) and $param["IntentionVerifyType"] !== null) {
+            $this->IntentionVerifyType = $param["IntentionVerifyType"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

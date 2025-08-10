@@ -20,17 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UploadLog请求参数结构体
  *
- * @method string getTopicId() 获取主题id
- * @method void setTopicId(string $TopicId) 设置主题id
+ * @method string getTopicId() 获取日志主题id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+ * @method void setTopicId(string $TopicId) 设置日志主题id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
  * @method string getHashKey() 获取该参数已废弃，请勿使用
  * @method void setHashKey(string $HashKey) 设置该参数已废弃，请勿使用
- * @method string getCompressType() 获取压缩方法
- * @method void setCompressType(string $CompressType) 设置压缩方法
+ * @method string getCompressType() 获取压缩方法，目前支持
+- lz4
+- zstd
+ * @method void setCompressType(string $CompressType) 设置压缩方法，目前支持
+- lz4
+- zstd
  */
 class UploadLogRequest extends AbstractModel
 {
     /**
-     * @var string 主题id
+     * @var string 日志主题id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public $TopicId;
 
@@ -41,14 +48,19 @@ class UploadLogRequest extends AbstractModel
     public $HashKey;
 
     /**
-     * @var string 压缩方法
+     * @var string 压缩方法，目前支持
+- lz4
+- zstd
      */
     public $CompressType;
 
     /**
-     * @param string $TopicId 主题id
+     * @param string $TopicId 日志主题id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      * @param string $HashKey 该参数已废弃，请勿使用
-     * @param string $CompressType 压缩方法
+     * @param string $CompressType 压缩方法，目前支持
+- lz4
+- zstd
      */
     function __construct()
     {

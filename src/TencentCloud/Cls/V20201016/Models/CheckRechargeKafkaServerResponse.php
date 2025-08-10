@@ -20,15 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CheckRechargeKafkaServer返回参数结构体
  *
- * @method integer getStatus() 获取Kafka集群可访问状态，0：可正常访问 ...
- * @method void setStatus(integer $Status) 设置Kafka集群可访问状态，0：可正常访问 ...
+ * @method integer getStatus() 获取Kafka集群可访问状态。
+
+- 0：可正常访问 
+- -1：broker 连接失败
+- -2：sasl 鉴权失败
+- -3：ckafka 角色未授权
+- -4：topic 列表不存在
+- -5：topic 内暂无数据
+- -6：用户没有 ckafka 权限
+- -7：消费组已经存在
+- -8：kafka 实例不存在或已销毁
+- -9：Broker 列表为空
+- -10：Broker 地址格式不正确
+- -11：Broker 端口非整型
+ * @method void setStatus(integer $Status) 设置Kafka集群可访问状态。
+
+- 0：可正常访问 
+- -1：broker 连接失败
+- -2：sasl 鉴权失败
+- -3：ckafka 角色未授权
+- -4：topic 列表不存在
+- -5：topic 内暂无数据
+- -6：用户没有 ckafka 权限
+- -7：消费组已经存在
+- -8：kafka 实例不存在或已销毁
+- -9：Broker 列表为空
+- -10：Broker 地址格式不正确
+- -11：Broker 端口非整型
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CheckRechargeKafkaServerResponse extends AbstractModel
 {
     /**
-     * @var integer Kafka集群可访问状态，0：可正常访问 ...
+     * @var integer Kafka集群可访问状态。
+
+- 0：可正常访问 
+- -1：broker 连接失败
+- -2：sasl 鉴权失败
+- -3：ckafka 角色未授权
+- -4：topic 列表不存在
+- -5：topic 内暂无数据
+- -6：用户没有 ckafka 权限
+- -7：消费组已经存在
+- -8：kafka 实例不存在或已销毁
+- -9：Broker 列表为空
+- -10：Broker 地址格式不正确
+- -11：Broker 端口非整型
      */
     public $Status;
 
@@ -38,7 +77,20 @@ class CheckRechargeKafkaServerResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Status Kafka集群可访问状态，0：可正常访问 ...
+     * @param integer $Status Kafka集群可访问状态。
+
+- 0：可正常访问 
+- -1：broker 连接失败
+- -2：sasl 鉴权失败
+- -3：ckafka 角色未授权
+- -4：topic 列表不存在
+- -5：topic 内暂无数据
+- -6：用户没有 ckafka 权限
+- -7：消费组已经存在
+- -8：kafka 实例不存在或已销毁
+- -9：Broker 列表为空
+- -10：Broker 地址格式不正确
+- -11：Broker 端口非整型
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

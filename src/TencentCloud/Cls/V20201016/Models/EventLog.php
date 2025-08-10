@@ -20,14 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Windows事件日志采集配置
  *
- * @method string getEventChannel() 获取事件通道，支持Application，Security，Setup，System，ALL
+ * @method string getEventChannel() 获取事件通道，支持
+- Application 应用日志
+- Security 安全日志
+- Setup 启动日志
+- System 系统日志
+- ALL 所有日志
 
- * @method void setEventChannel(string $EventChannel) 设置事件通道，支持Application，Security，Setup，System，ALL
+ * @method void setEventChannel(string $EventChannel) 设置事件通道，支持
+- Application 应用日志
+- Security 安全日志
+- Setup 启动日志
+- System 系统日志
+- ALL 所有日志
 
  * @method integer getTimeType() 获取时间类型，1:用户自定义，2:当前时间
  * @method void setTimeType(integer $TimeType) 设置时间类型，1:用户自定义，2:当前时间
- * @method integer getTimestamp() 获取时间，用户选择自定义时间类型时，需要指定时间
- * @method void setTimestamp(integer $Timestamp) 设置时间，用户选择自定义时间类型时，需要指定时间
+ * @method integer getTimestamp() 获取时间，用户选择自定义时间类型时，需要指定时间，单位秒
+ * @method void setTimestamp(integer $Timestamp) 设置时间，用户选择自定义时间类型时，需要指定时间，单位秒
  * @method array getEventIDs() 获取事件ID过滤列表
 	
 选填，为空表示不做过滤
@@ -42,7 +52,12 @@ use TencentCloud\Common\AbstractModel;
 class EventLog extends AbstractModel
 {
     /**
-     * @var string 事件通道，支持Application，Security，Setup，System，ALL
+     * @var string 事件通道，支持
+- Application 应用日志
+- Security 安全日志
+- Setup 启动日志
+- System 系统日志
+- ALL 所有日志
 
      */
     public $EventChannel;
@@ -53,7 +68,7 @@ class EventLog extends AbstractModel
     public $TimeType;
 
     /**
-     * @var integer 时间，用户选择自定义时间类型时，需要指定时间
+     * @var integer 时间，用户选择自定义时间类型时，需要指定时间，单位秒
      */
     public $Timestamp;
 
@@ -67,10 +82,15 @@ class EventLog extends AbstractModel
     public $EventIDs;
 
     /**
-     * @param string $EventChannel 事件通道，支持Application，Security，Setup，System，ALL
+     * @param string $EventChannel 事件通道，支持
+- Application 应用日志
+- Security 安全日志
+- Setup 启动日志
+- System 系统日志
+- ALL 所有日志
 
      * @param integer $TimeType 时间类型，1:用户自定义，2:当前时间
-     * @param integer $Timestamp 时间，用户选择自定义时间类型时，需要指定时间
+     * @param integer $Timestamp 时间，用户选择自定义时间类型时，需要指定时间，单位秒
      * @param array $EventIDs 事件ID过滤列表
 	
 选填，为空表示不做过滤

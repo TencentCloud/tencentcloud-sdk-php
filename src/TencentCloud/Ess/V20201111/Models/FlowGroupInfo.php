@@ -29,9 +29,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApprovers(array $Approvers) 设置签署流程参与者信息，最大限制50方
 注意 approver中的顺序需要和模板中的顺序保持一致， 否则会导致模板中配置的信息无效。
  * @method array getFileIds() 获取文件资源ID，通过多文件上传[UploadFiles](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口获得，为32位字符串。
-建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。
+注：此字段定义为数组，但仅支持单个文件
  * @method void setFileIds(array $FileIds) 设置文件资源ID，通过多文件上传[UploadFiles](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口获得，为32位字符串。
-建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。
+注：此字段定义为数组，但仅支持单个文件
  * @method string getTemplateId() 获取合同模板ID，为32位字符串。
 建议开发者保存此模板ID，后续用此模板发起合同流程需要此参数。
 可登录腾讯电子签控制台，在 "模板"->"模板中心"->"列表展示设置"选中模板 ID 中查看某个模板的TemplateId(在页面中展示为模板ID)。
@@ -115,7 +115,7 @@ class FlowGroupInfo extends AbstractModel
 
     /**
      * @var array 文件资源ID，通过多文件上传[UploadFiles](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口获得，为32位字符串。
-建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。
+注：此字段定义为数组，但仅支持单个文件
      */
     public $FileIds;
 
@@ -203,7 +203,7 @@ false：有序签
      * @param array $Approvers 签署流程参与者信息，最大限制50方
 注意 approver中的顺序需要和模板中的顺序保持一致， 否则会导致模板中配置的信息无效。
      * @param array $FileIds 文件资源ID，通过多文件上传[UploadFiles](https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles)接口获得，为32位字符串。
-建议开发者保存此资源ID，后续创建合同或创建合同流程需此资源ID。
+注：此字段定义为数组，但仅支持单个文件
      * @param string $TemplateId 合同模板ID，为32位字符串。
 建议开发者保存此模板ID，后续用此模板发起合同流程需要此参数。
 可登录腾讯电子签控制台，在 "模板"->"模板中心"->"列表展示设置"选中模板 ID 中查看某个模板的TemplateId(在页面中展示为模板ID)。

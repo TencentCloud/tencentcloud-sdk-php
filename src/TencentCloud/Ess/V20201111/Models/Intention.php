@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIntentionActions(array $IntentionActions) 设置意愿核身（点头确认模式）使用的文案，若未使用意愿核身（点头确认模式），则该字段无需传入。支持传入1～10轮点头确认文本，最多支持10轮。
 
 注：`选择点头模式时，此字段可不传，不传则使用默认语音文本：请问，您是否同意签署本协议？可点头同意。`
+ * @method RuleIdConfig getRuleIdConfig() 获取视频核身相关配置
+ * @method void setRuleIdConfig(RuleIdConfig $RuleIdConfig) 设置视频核身相关配置
  */
 class Intention extends AbstractModel
 {
@@ -71,6 +73,11 @@ class Intention extends AbstractModel
     public $IntentionActions;
 
     /**
+     * @var RuleIdConfig 视频核身相关配置
+     */
+    public $RuleIdConfig;
+
+    /**
      * @param integer $IntentionType 视频认证类型，支持以下类型
 <ul><li>1 : 问答模式</li>
 <li>2 : 点头模式</li></ul>
@@ -82,6 +89,7 @@ class Intention extends AbstractModel
      * @param array $IntentionActions 意愿核身（点头确认模式）使用的文案，若未使用意愿核身（点头确认模式），则该字段无需传入。支持传入1～10轮点头确认文本，最多支持10轮。
 
 注：`选择点头模式时，此字段可不传，不传则使用默认语音文本：请问，您是否同意签署本协议？可点头同意。`
+     * @param RuleIdConfig $RuleIdConfig 视频核身相关配置
      */
     function __construct()
     {
@@ -116,6 +124,11 @@ class Intention extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->IntentionActions, $obj);
             }
+        }
+
+        if (array_key_exists("RuleIdConfig",$param) and $param["RuleIdConfig"] !== null) {
+            $this->RuleIdConfig = new RuleIdConfig();
+            $this->RuleIdConfig->deserialize($param["RuleIdConfig"]);
         }
     }
 }

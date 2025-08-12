@@ -20,8 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * QueryRangeMetric返回参数结构体
  *
- * @method string getResultType() 获取指标查询结果类型
- * @method void setResultType(string $ResultType) 设置指标查询结果类型
+ * @method string getResultType() 获取指标查询结果类型，支持
+- scalar 标量值
+- string 字符串值
+- vector 瞬时向量
+- matrix 区间向量
+ * @method void setResultType(string $ResultType) 设置指标查询结果类型，支持
+- scalar 标量值
+- string 字符串值
+- vector 瞬时向量
+- matrix 区间向量
  * @method string getResult() 获取指标查询结果
  * @method void setResult(string $Result) 设置指标查询结果
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -30,7 +38,11 @@ use TencentCloud\Common\AbstractModel;
 class QueryRangeMetricResponse extends AbstractModel
 {
     /**
-     * @var string 指标查询结果类型
+     * @var string 指标查询结果类型，支持
+- scalar 标量值
+- string 字符串值
+- vector 瞬时向量
+- matrix 区间向量
      */
     public $ResultType;
 
@@ -45,7 +57,11 @@ class QueryRangeMetricResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ResultType 指标查询结果类型
+     * @param string $ResultType 指标查询结果类型，支持
+- scalar 标量值
+- string 字符串值
+- vector 瞬时向量
+- matrix 区间向量
      * @param string $Result 指标查询结果
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */

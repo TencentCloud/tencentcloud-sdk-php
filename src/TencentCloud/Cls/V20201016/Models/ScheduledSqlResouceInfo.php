@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ScheduledSql的资源信息
  *
- * @method string getTopicId() 获取目标主题id
- * @method void setTopicId(string $TopicId) 设置目标主题id
- * @method string getRegion() 获取主题的地域信息
- * @method void setRegion(string $Region) 设置主题的地域信息
+ * @method string getTopicId() 获取通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+ * @method void setTopicId(string $TopicId) 设置通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+ * @method string getRegion() 获取主题的地域信息，当前不支持跨地域，支持地域参考 [地域列表](https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) 文档。
+ * @method void setRegion(string $Region) 设置主题的地域信息，当前不支持跨地域，支持地域参考 [地域列表](https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) 文档。
  * @method integer getBizType() 获取主题类型：0为日志主题，1为指标主题
  * @method void setBizType(integer $BizType) 设置主题类型：0为日志主题，1为指标主题
  * @method string getMetricName() 获取指标名称。当BizType为1时，MetricName需要填写
@@ -44,12 +44,12 @@ BizType为1时，优先使用MetricNames字段多指标只能填充到MetricName
 class ScheduledSqlResouceInfo extends AbstractModel
 {
     /**
-     * @var string 目标主题id
+     * @var string 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
      */
     public $TopicId;
 
     /**
-     * @var string 主题的地域信息
+     * @var string 主题的地域信息，当前不支持跨地域，支持地域参考 [地域列表](https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) 文档。
      */
     public $Region;
 
@@ -86,8 +86,8 @@ BizType为1时，优先使用MetricNames字段多指标只能填充到MetricName
     public $CustomMetricLabels;
 
     /**
-     * @param string $TopicId 目标主题id
-     * @param string $Region 主题的地域信息
+     * @param string $TopicId 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+     * @param string $Region 主题的地域信息，当前不支持跨地域，支持地域参考 [地域列表](https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) 文档。
      * @param integer $BizType 主题类型：0为日志主题，1为指标主题
      * @param string $MetricName 指标名称。当BizType为1时，MetricName需要填写
      * @param array $MetricNames 指标名称

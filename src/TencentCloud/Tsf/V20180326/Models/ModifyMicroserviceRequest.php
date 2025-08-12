@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyMicroservice请求参数结构体
  *
- * @method string getMicroserviceId() 获取微服务 ID
- * @method void setMicroserviceId(string $MicroserviceId) 设置微服务 ID
- * @method string getMicroserviceDesc() 获取微服务备注信息
- * @method void setMicroserviceDesc(string $MicroserviceDesc) 设置微服务备注信息
+ * @method string getMicroserviceId() 获取微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
+ * @method void setMicroserviceId(string $MicroserviceId) 设置微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
+ * @method string getMicroserviceDesc() 获取微服务备注信息，最多支持200个字符。
+ * @method void setMicroserviceDesc(string $MicroserviceDesc) 设置微服务备注信息，最多支持200个字符。
  */
 class ModifyMicroserviceRequest extends AbstractModel
 {
     /**
-     * @var string 微服务 ID
+     * @var string 微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
      */
     public $MicroserviceId;
 
     /**
-     * @var string 微服务备注信息
+     * @var string 微服务备注信息，最多支持200个字符。
      */
     public $MicroserviceDesc;
 
     /**
-     * @param string $MicroserviceId 微服务 ID
-     * @param string $MicroserviceDesc 微服务备注信息
+     * @param string $MicroserviceId 微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
+     * @param string $MicroserviceDesc 微服务备注信息，最多支持200个字符。
      */
     function __construct()
     {

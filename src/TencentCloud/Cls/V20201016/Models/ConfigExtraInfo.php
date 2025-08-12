@@ -26,8 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置采集规则名称
  * @method string getTopicId() 获取日志主题ID
  * @method void setTopicId(string $TopicId) 设置日志主题ID
- * @method string getType() 获取类型：container_stdout、container_file、host_file
- * @method void setType(string $Type) 设置类型：container_stdout、container_file、host_file
+ * @method string getType() 获取自建k8s集群日志采集类型，支持
+- container_stdout 标准输出
+- container_file 标准文件
+- host_file 节点文件
+ * @method void setType(string $Type) 设置自建k8s集群日志采集类型，支持
+- container_stdout 标准输出
+- container_file 标准文件
+- host_file 节点文件
  * @method HostFileInfo getHostFile() 获取节点文件配置信息
  * @method void setHostFile(HostFileInfo $HostFile) 设置节点文件配置信息
  * @method ContainerFileInfo getContainerFile() 获取容器文件路径信息
@@ -45,17 +51,25 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExcludePaths(array $ExcludePaths) 设置采集黑名单路径列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取更新时间
+- 时间格式：yyyy-MM-dd HH:mm:ss
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
+- 时间格式：yyyy-MM-dd HH:mm:ss
  * @method string getCreateTime() 获取创建时间
+- 时间格式：yyyy-MM-dd HH:mm:ss
  * @method void setCreateTime(string $CreateTime) 设置创建时间
+- 时间格式：yyyy-MM-dd HH:mm:ss
  * @method string getUserDefineRule() 获取用户自定义解析字符串
  * @method void setUserDefineRule(string $UserDefineRule) 设置用户自定义解析字符串
  * @method string getGroupId() 获取机器组ID
+- 通过[获取机器组列表](https://cloud.tencent.com/document/api/614/56438)获取机器组Id。
  * @method void setGroupId(string $GroupId) 设置机器组ID
+- 通过[获取机器组列表](https://cloud.tencent.com/document/api/614/56438)获取机器组Id。
  * @method string getConfigFlag() 获取自建采集配置标
  * @method void setConfigFlag(string $ConfigFlag) 设置自建采集配置标
  * @method string getLogsetId() 获取日志集ID
+- 通过[获取日志集列表](https://cloud.tencent.com/document/api/614/58624)获取日志集Id。
  * @method void setLogsetId(string $LogsetId) 设置日志集ID
+- 通过[获取日志集列表](https://cloud.tencent.com/document/api/614/58624)获取日志集Id。
  * @method string getLogsetName() 获取日志集name
  * @method void setLogsetName(string $LogsetName) 设置日志集name
  * @method string getTopicName() 获取日志主题name
@@ -91,7 +105,10 @@ class ConfigExtraInfo extends AbstractModel
     public $TopicId;
 
     /**
-     * @var string 类型：container_stdout、container_file、host_file
+     * @var string 自建k8s集群日志采集类型，支持
+- container_stdout 标准输出
+- container_file 标准文件
+- host_file 节点文件
      */
     public $Type;
 
@@ -133,11 +150,13 @@ class ConfigExtraInfo extends AbstractModel
 
     /**
      * @var string 更新时间
+- 时间格式：yyyy-MM-dd HH:mm:ss
      */
     public $UpdateTime;
 
     /**
      * @var string 创建时间
+- 时间格式：yyyy-MM-dd HH:mm:ss
      */
     public $CreateTime;
 
@@ -148,6 +167,7 @@ class ConfigExtraInfo extends AbstractModel
 
     /**
      * @var string 机器组ID
+- 通过[获取机器组列表](https://cloud.tencent.com/document/api/614/56438)获取机器组Id。
      */
     public $GroupId;
 
@@ -158,6 +178,7 @@ class ConfigExtraInfo extends AbstractModel
 
     /**
      * @var string 日志集ID
+- 通过[获取日志集列表](https://cloud.tencent.com/document/api/614/58624)获取日志集Id。
      */
     public $LogsetId;
 
@@ -189,7 +210,10 @@ class ConfigExtraInfo extends AbstractModel
      * @param string $ConfigExtraId 采集规则扩展配置ID
      * @param string $Name 采集规则名称
      * @param string $TopicId 日志主题ID
-     * @param string $Type 类型：container_stdout、container_file、host_file
+     * @param string $Type 自建k8s集群日志采集类型，支持
+- container_stdout 标准输出
+- container_file 标准文件
+- host_file 节点文件
      * @param HostFileInfo $HostFile 节点文件配置信息
      * @param ContainerFileInfo $ContainerFile 容器文件路径信息
      * @param ContainerStdoutInfo $ContainerStdout 容器标准输出信息
@@ -199,11 +223,15 @@ class ConfigExtraInfo extends AbstractModel
      * @param array $ExcludePaths 采集黑名单路径列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 更新时间
+- 时间格式：yyyy-MM-dd HH:mm:ss
      * @param string $CreateTime 创建时间
+- 时间格式：yyyy-MM-dd HH:mm:ss
      * @param string $UserDefineRule 用户自定义解析字符串
      * @param string $GroupId 机器组ID
+- 通过[获取机器组列表](https://cloud.tencent.com/document/api/614/56438)获取机器组Id。
      * @param string $ConfigFlag 自建采集配置标
      * @param string $LogsetId 日志集ID
+- 通过[获取日志集列表](https://cloud.tencent.com/document/api/614/58624)获取日志集Id。
      * @param string $LogsetName 日志集name
      * @param string $TopicName 日志主题name
      * @param array $CollectInfos 采集相关配置信息。详情见 CollectInfo复杂类型配置。

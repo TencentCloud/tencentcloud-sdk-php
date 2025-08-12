@@ -24,12 +24,16 @@ use TencentCloud\Common\AbstractModel;
 <li/>Uin：腾讯云用户<br>
 <li/>Group：腾讯云用户组<br>
 <li/>Email：自定义Email<br>
-<li/>WeCom: 企业微信回调
+<li/>WeCom: 企业微信回调<br>
+<li/>DingTalk：钉钉<br>
+<li/>Lark：飞书
  * @method void setReceiverType(string $ReceiverType) 设置仪表盘通知方式。<br>
 <li/>Uin：腾讯云用户<br>
 <li/>Group：腾讯云用户组<br>
 <li/>Email：自定义Email<br>
-<li/>WeCom: 企业微信回调
+<li/>WeCom: 企业微信回调<br>
+<li/>DingTalk：钉钉<br>
+<li/>Lark：飞书
  * @method array getValues() 获取知方式对应的值。
 <br> <li/> 当ReceiverType不是 WeCom 时，Values必填。
  * @method void setValues(array $Values) 设置知方式对应的值。
@@ -56,7 +60,9 @@ class DashboardNoticeMode extends AbstractModel
 <li/>Uin：腾讯云用户<br>
 <li/>Group：腾讯云用户组<br>
 <li/>Email：自定义Email<br>
-<li/>WeCom: 企业微信回调
+<li/>WeCom: 企业微信回调<br>
+<li/>DingTalk：钉钉<br>
+<li/>Lark：飞书
      */
     public $ReceiverType;
 
@@ -86,7 +92,9 @@ class DashboardNoticeMode extends AbstractModel
 <li/>Uin：腾讯云用户<br>
 <li/>Group：腾讯云用户组<br>
 <li/>Email：自定义Email<br>
-<li/>WeCom: 企业微信回调
+<li/>WeCom: 企业微信回调<br>
+<li/>DingTalk：钉钉<br>
+<li/>Lark：飞书
      * @param array $Values 知方式对应的值。
 <br> <li/> 当ReceiverType不是 WeCom 时，Values必填。
      * @param array $ReceiverChannels 仪表盘通知渠道。

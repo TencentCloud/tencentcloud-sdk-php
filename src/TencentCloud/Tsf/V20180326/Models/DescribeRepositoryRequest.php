@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRepository请求参数结构体
  *
- * @method string getRepositoryId() 获取仓库ID
- * @method void setRepositoryId(string $RepositoryId) 设置仓库ID
+ * @method string getRepositoryId() 获取仓库ID，可通过调用[仓库信息查询类](https://cloud.tencent.com/document/api/649/45925)接口时出参中的RepositoryId，或登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看
+ * @method void setRepositoryId(string $RepositoryId) 设置仓库ID，可通过调用[仓库信息查询类](https://cloud.tencent.com/document/api/649/45925)接口时出参中的RepositoryId，或登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看
  */
 class DescribeRepositoryRequest extends AbstractModel
 {
     /**
-     * @var string 仓库ID
+     * @var string 仓库ID，可通过调用[仓库信息查询类](https://cloud.tencent.com/document/api/649/45925)接口时出参中的RepositoryId，或登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看
      */
     public $RepositoryId;
 
     /**
-     * @param string $RepositoryId 仓库ID
+     * @param string $RepositoryId 仓库ID，可通过调用[仓库信息查询类](https://cloud.tencent.com/document/api/649/45925)接口时出参中的RepositoryId，或登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看
      */
     function __construct()
     {

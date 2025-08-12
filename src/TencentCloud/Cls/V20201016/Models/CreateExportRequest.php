@@ -20,8 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateExport请求参数结构体
  *
- * @method string getTopicId() 获取日志主题ID
- * @method void setTopicId(string $TopicId) 设置日志主题ID
+ * @method string getTopicId() 获取日志主题Id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+ * @method void setTopicId(string $TopicId) 设置日志主题Id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
  * @method integer getCount() 获取日志导出数量,  最大值5000万
  * @method void setCount(integer $Count) 设置日志导出数量,  最大值5000万
  * @method string getQuery() 获取日志导出检索语句，不支持<a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>
@@ -44,7 +46,8 @@ use TencentCloud\Common\AbstractModel;
 class CreateExportRequest extends AbstractModel
 {
     /**
-     * @var string 日志主题ID
+     * @var string 日志主题Id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public $TopicId;
 
@@ -90,7 +93,8 @@ class CreateExportRequest extends AbstractModel
     public $DerivedFields;
 
     /**
-     * @param string $TopicId 日志主题ID
+     * @param string $TopicId 日志主题Id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      * @param integer $Count 日志导出数量,  最大值5000万
      * @param string $Query 日志导出检索语句，不支持<a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>
      * @param integer $From 日志导出起始时间，毫秒时间戳

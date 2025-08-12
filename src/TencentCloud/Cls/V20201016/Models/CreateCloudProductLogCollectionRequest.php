@@ -21,12 +21,14 @@ use TencentCloud\Common\AbstractModel;
  * CreateCloudProductLogCollection请求参数结构体
  *
  * @method string getInstanceId() 获取实例ID
+- 通过各个接入云产品官方文档获取
  * @method void setInstanceId(string $InstanceId) 设置实例ID
+- 通过各个接入云产品官方文档获取
  * @method string getAssumerName() 获取云产品标识，支持枚举：CDS、CWP、CDB、TDSQL-C、MongoDB、TDStore、DCDB、MariaDB、PostgreSQL、BH、APIS
  * @method void setAssumerName(string $AssumerName) 设置云产品标识，支持枚举：CDS、CWP、CDB、TDSQL-C、MongoDB、TDStore、DCDB、MariaDB、PostgreSQL、BH、APIS
  * @method string getLogType() 获取日志类型，支持枚举：CDS-AUDIT、CDS-RISK、CDB-AUDIT、TDSQL-C-AUDIT、MongoDB-AUDIT、MongoDB-SlowLog、MongoDB-ErrorLog、TDMYSQL-SLOW、DCDB-AUDIT、DCDB-SLOW、DCDB-ERROR、MariaDB-AUDIT、MariaDB-SLOW、MariaDB-ERROR、PostgreSQL-SLOW、PostgreSQL-ERROR、PostgreSQL-AUDIT、BH-FILELOG、BH-COMMANDLOG、APIS-ACCESS
  * @method void setLogType(string $LogType) 设置日志类型，支持枚举：CDS-AUDIT、CDS-RISK、CDB-AUDIT、TDSQL-C-AUDIT、MongoDB-AUDIT、MongoDB-SlowLog、MongoDB-ErrorLog、TDMYSQL-SLOW、DCDB-AUDIT、DCDB-SLOW、DCDB-ERROR、MariaDB-AUDIT、MariaDB-SLOW、MariaDB-ERROR、PostgreSQL-SLOW、PostgreSQL-ERROR、PostgreSQL-AUDIT、BH-FILELOG、BH-COMMANDLOG、APIS-ACCESS
- * @method string getCloudProductRegion() 获取云产品地域。 不同日志类型(LogType)地域入參格式存在差异， 请参考如下示例：
+ * @method string getCloudProductRegion() 获取云产品地域。 不同日志类型(LogType)地域入参格式存在差异， 请参考如下示例：
 - CDS所有日志类型：ap-guangzhou
 - CDB-AUDIT: gz
 - TDSQL-C-AUDIT:  gz
@@ -39,7 +41,7 @@ use TencentCloud\Common\AbstractModel;
 - PostgreSQL所有日志类型：gz
 - BH所有日志类型：overseas-polaris(国内站海外)/fsi-polaris(国内站金融)/general-polaris(国内站普通)/intl-sg-prod(国际站)
 - APIS所有日志类型：gz
- * @method void setCloudProductRegion(string $CloudProductRegion) 设置云产品地域。 不同日志类型(LogType)地域入參格式存在差异， 请参考如下示例：
+ * @method void setCloudProductRegion(string $CloudProductRegion) 设置云产品地域。 不同日志类型(LogType)地域入参格式存在差异， 请参考如下示例：
 - CDS所有日志类型：ap-guangzhou
 - CDB-AUDIT: gz
 - TDSQL-C-AUDIT:  gz
@@ -53,22 +55,29 @@ use TencentCloud\Common\AbstractModel;
 - BH所有日志类型：overseas-polaris(国内站海外)/fsi-polaris(国内站金融)/general-polaris(国内站普通)/intl-sg-prod(国际站)
 - APIS所有日志类型：gz
  * @method string getClsRegion() 获取CLS目标地域
+- 支持地域参考  [地域列表](https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) 文档   
  * @method void setClsRegion(string $ClsRegion) 设置CLS目标地域
+- 支持地域参考  [地域列表](https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) 文档   
  * @method string getLogsetName() 获取日志集名称，未填LogsetId时必填。若日志集不存在, 将自动创建
  * @method void setLogsetName(string $LogsetName) 设置日志集名称，未填LogsetId时必填。若日志集不存在, 将自动创建
  * @method string getTopicName() 获取日志主题名称，在未填TopicId时必填。 若日志主题不存在，将自动创建
  * @method void setTopicName(string $TopicName) 设置日志主题名称，在未填TopicId时必填。 若日志主题不存在，将自动创建
- * @method string getExtend() 获取日志配置拓展信息， 一般用于存储额外的日志投递配置
- * @method void setExtend(string $Extend) 设置日志配置拓展信息， 一般用于存储额外的日志投递配置
+ * @method string getExtend() 获取日志配置扩展信息， 一般用于存储额外的日志投递配置
+ * @method void setExtend(string $Extend) 设置日志配置扩展信息， 一般用于存储额外的日志投递配置
  * @method string getLogsetId() 获取日志集id
+- 通过[获取日志集列表](https://cloud.tencent.com/document/api/614/58624)获取日志集Id。
  * @method void setLogsetId(string $LogsetId) 设置日志集id
+- 通过[获取日志集列表](https://cloud.tencent.com/document/api/614/58624)获取日志集Id。
  * @method string getTopicId() 获取日志主题id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
  * @method void setTopicId(string $TopicId) 设置日志主题id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
  */
 class CreateCloudProductLogCollectionRequest extends AbstractModel
 {
     /**
      * @var string 实例ID
+- 通过各个接入云产品官方文档获取
      */
     public $InstanceId;
 
@@ -83,7 +92,7 @@ class CreateCloudProductLogCollectionRequest extends AbstractModel
     public $LogType;
 
     /**
-     * @var string 云产品地域。 不同日志类型(LogType)地域入參格式存在差异， 请参考如下示例：
+     * @var string 云产品地域。 不同日志类型(LogType)地域入参格式存在差异， 请参考如下示例：
 - CDS所有日志类型：ap-guangzhou
 - CDB-AUDIT: gz
 - TDSQL-C-AUDIT:  gz
@@ -101,6 +110,7 @@ class CreateCloudProductLogCollectionRequest extends AbstractModel
 
     /**
      * @var string CLS目标地域
+- 支持地域参考  [地域列表](https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) 文档   
      */
     public $ClsRegion;
 
@@ -115,25 +125,28 @@ class CreateCloudProductLogCollectionRequest extends AbstractModel
     public $TopicName;
 
     /**
-     * @var string 日志配置拓展信息， 一般用于存储额外的日志投递配置
+     * @var string 日志配置扩展信息， 一般用于存储额外的日志投递配置
      */
     public $Extend;
 
     /**
      * @var string 日志集id
+- 通过[获取日志集列表](https://cloud.tencent.com/document/api/614/58624)获取日志集Id。
      */
     public $LogsetId;
 
     /**
      * @var string 日志主题id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public $TopicId;
 
     /**
      * @param string $InstanceId 实例ID
+- 通过各个接入云产品官方文档获取
      * @param string $AssumerName 云产品标识，支持枚举：CDS、CWP、CDB、TDSQL-C、MongoDB、TDStore、DCDB、MariaDB、PostgreSQL、BH、APIS
      * @param string $LogType 日志类型，支持枚举：CDS-AUDIT、CDS-RISK、CDB-AUDIT、TDSQL-C-AUDIT、MongoDB-AUDIT、MongoDB-SlowLog、MongoDB-ErrorLog、TDMYSQL-SLOW、DCDB-AUDIT、DCDB-SLOW、DCDB-ERROR、MariaDB-AUDIT、MariaDB-SLOW、MariaDB-ERROR、PostgreSQL-SLOW、PostgreSQL-ERROR、PostgreSQL-AUDIT、BH-FILELOG、BH-COMMANDLOG、APIS-ACCESS
-     * @param string $CloudProductRegion 云产品地域。 不同日志类型(LogType)地域入參格式存在差异， 请参考如下示例：
+     * @param string $CloudProductRegion 云产品地域。 不同日志类型(LogType)地域入参格式存在差异， 请参考如下示例：
 - CDS所有日志类型：ap-guangzhou
 - CDB-AUDIT: gz
 - TDSQL-C-AUDIT:  gz
@@ -147,11 +160,14 @@ class CreateCloudProductLogCollectionRequest extends AbstractModel
 - BH所有日志类型：overseas-polaris(国内站海外)/fsi-polaris(国内站金融)/general-polaris(国内站普通)/intl-sg-prod(国际站)
 - APIS所有日志类型：gz
      * @param string $ClsRegion CLS目标地域
+- 支持地域参考  [地域列表](https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) 文档   
      * @param string $LogsetName 日志集名称，未填LogsetId时必填。若日志集不存在, 将自动创建
      * @param string $TopicName 日志主题名称，在未填TopicId时必填。 若日志主题不存在，将自动创建
-     * @param string $Extend 日志配置拓展信息， 一般用于存储额外的日志投递配置
+     * @param string $Extend 日志配置扩展信息， 一般用于存储额外的日志投递配置
      * @param string $LogsetId 日志集id
+- 通过[获取日志集列表](https://cloud.tencent.com/document/api/614/58624)获取日志集Id。
      * @param string $TopicId 日志主题id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     function __construct()
     {

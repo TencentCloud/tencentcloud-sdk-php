@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDnssec(string $Dnssec) 设置dnssec
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRegistrarType() 获取腾讯注册商资质
+ * @method void setRegistrarType(string $RegistrarType) 设置腾讯注册商资质
  */
 class WhoisInfo extends AbstractModel
 {
@@ -134,6 +136,11 @@ class WhoisInfo extends AbstractModel
     public $Dnssec;
 
     /**
+     * @var string 腾讯注册商资质
+     */
+    public $RegistrarType;
+
+    /**
      * @param WhoisContact $Contacts 联系信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CreationDate 域名注册时间
@@ -156,6 +163,7 @@ class WhoisInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Dnssec dnssec
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RegistrarType 腾讯注册商资质
      */
     function __construct()
     {
@@ -213,6 +221,10 @@ class WhoisInfo extends AbstractModel
 
         if (array_key_exists("Dnssec",$param) and $param["Dnssec"] !== null) {
             $this->Dnssec = $param["Dnssec"];
+        }
+
+        if (array_key_exists("RegistrarType",$param) and $param["RegistrarType"] !== null) {
+            $this->RegistrarType = $param["RegistrarType"];
         }
     }
 }

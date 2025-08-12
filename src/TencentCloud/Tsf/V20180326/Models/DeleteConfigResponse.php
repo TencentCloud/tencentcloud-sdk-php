@@ -20,15 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteConfig返回参数结构体
  *
- * @method boolean getResult() 获取true：删除成功；false：删除失败
- * @method void setResult(boolean $Result) 设置true：删除成功；false：删除失败
+ * @method boolean getResult() 获取删除结果。
+- true：删除成功
+- false：删除失败
+ * @method void setResult(boolean $Result) 设置删除结果。
+- true：删除成功
+- false：删除失败
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DeleteConfigResponse extends AbstractModel
 {
     /**
-     * @var boolean true：删除成功；false：删除失败
+     * @var boolean 删除结果。
+- true：删除成功
+- false：删除失败
      */
     public $Result;
 
@@ -38,7 +44,9 @@ class DeleteConfigResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param boolean $Result true：删除成功；false：删除失败
+     * @param boolean $Result 删除结果。
+- true：删除成功
+- false：删除失败
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

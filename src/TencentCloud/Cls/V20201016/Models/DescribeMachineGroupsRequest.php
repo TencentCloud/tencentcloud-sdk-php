@@ -20,7 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMachineGroups请求参数结构体
  *
- * @method array getFilters() 获取machineGroupName
+ * @method array getFilters() 获取过滤条件
+machineGroupName
 - 按照【机器组名称】进行过滤。
 - 类型：String
 - 必选：否
@@ -31,7 +32,7 @@ machineGroupId
 - 必选：否
 
 osType
-- 按照【操作系统类型】进行过滤。
+- 按照【操作系统类型】进行过滤。0： Linux；1： Windows
 - 类型：Int
 - 必选：否
 
@@ -46,7 +47,8 @@ tag:tagKey
 - 必选：否
 
 每次请求的Filters的上限为10，Filter.Values的上限为5。
- * @method void setFilters(array $Filters) 设置machineGroupName
+ * @method void setFilters(array $Filters) 设置过滤条件
+machineGroupName
 - 按照【机器组名称】进行过滤。
 - 类型：String
 - 必选：否
@@ -57,7 +59,7 @@ machineGroupId
 - 必选：否
 
 osType
-- 按照【操作系统类型】进行过滤。
+- 按照【操作系统类型】进行过滤。0： Linux；1： Windows
 - 类型：Int
 - 必选：否
 
@@ -80,7 +82,8 @@ tag:tagKey
 class DescribeMachineGroupsRequest extends AbstractModel
 {
     /**
-     * @var array machineGroupName
+     * @var array 过滤条件
+machineGroupName
 - 按照【机器组名称】进行过滤。
 - 类型：String
 - 必选：否
@@ -91,7 +94,7 @@ machineGroupId
 - 必选：否
 
 osType
-- 按照【操作系统类型】进行过滤。
+- 按照【操作系统类型】进行过滤。0： Linux；1： Windows
 - 类型：Int
 - 必选：否
 
@@ -120,7 +123,8 @@ tag:tagKey
     public $Limit;
 
     /**
-     * @param array $Filters machineGroupName
+     * @param array $Filters 过滤条件
+machineGroupName
 - 按照【机器组名称】进行过滤。
 - 类型：String
 - 必选：否
@@ -131,7 +135,7 @@ machineGroupId
 - 必选：否
 
 osType
-- 按照【操作系统类型】进行过滤。
+- 按照【操作系统类型】进行过滤。0： Linux；1： Windows
 - 类型：Int
 - 必选：否
 

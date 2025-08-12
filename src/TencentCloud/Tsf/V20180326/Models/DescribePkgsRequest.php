@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePkgs请求参数结构体
  *
- * @method string getApplicationId() 获取应用ID（只传入应用ID，返回该应用下所有软件包信息）
- * @method void setApplicationId(string $ApplicationId) 设置应用ID（只传入应用ID，返回该应用下所有软件包信息）
+ * @method string getApplicationId() 获取应用ID，通过调用DescribeApplications接口[获取应用列表](https://cloud.tencent.com/document/api/649/36090)从而获取应用ID，或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)进行查看，调用CreateApplication接口[创建应用](https://cloud.tencent.com/document/product/649/36094)时的返回值
+ * @method void setApplicationId(string $ApplicationId) 设置应用ID，通过调用DescribeApplications接口[获取应用列表](https://cloud.tencent.com/document/api/649/36090)从而获取应用ID，或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)进行查看，调用CreateApplication接口[创建应用](https://cloud.tencent.com/document/product/649/36094)时的返回值
  * @method string getSearchWord() 获取查询关键字（支持根据包ID，包名，包版本号搜索）
  * @method void setSearchWord(string $SearchWord) 设置查询关键字（支持根据包ID，包名，包版本号搜索）
- * @method string getOrderBy() 获取排序关键字（默认为"UploadTime"：上传时间）
- * @method void setOrderBy(string $OrderBy) 设置排序关键字（默认为"UploadTime"：上传时间）
+ * @method string getOrderBy() 获取排序关键字（默认值"UploadTime"），允许值："UploadTime"上传时间, "name"程序包名, "size"应用大小, "id"程序包ID
+ * @method void setOrderBy(string $OrderBy) 设置排序关键字（默认值"UploadTime"），允许值："UploadTime"上传时间, "name"程序包名, "size"应用大小, "id"程序包ID
  * @method integer getOrderType() 获取升序：0/降序：1（默认降序）
  * @method void setOrderType(integer $OrderType) 设置升序：0/降序：1（默认降序）
- * @method integer getOffset() 获取查询起始偏移
- * @method void setOffset(integer $Offset) 设置查询起始偏移
+ * @method integer getOffset() 获取查询起始偏移，大于等于0，默认值为0
+ * @method void setOffset(integer $Offset) 设置查询起始偏移，大于等于0，默认值为0
  * @method integer getLimit() 获取返回数量限制
  * @method void setLimit(integer $Limit) 设置返回数量限制
- * @method string getRepositoryType() 获取程序包仓库类型
- * @method void setRepositoryType(string $RepositoryType) 设置程序包仓库类型
- * @method string getRepositoryId() 获取程序包仓库id
- * @method void setRepositoryId(string $RepositoryId) 设置程序包仓库id
+ * @method string getRepositoryType() 获取程序包仓库类型，允许值："public-demo"TSF公共demo仓库, "private"自定义仓库, "default"TSF公共仓库
+ * @method void setRepositoryType(string $RepositoryType) 设置程序包仓库类型，允许值："public-demo"TSF公共demo仓库, "private"自定义仓库, "default"TSF公共仓库
+ * @method string getRepositoryId() 获取仓库ID，可通过调用[仓库信息查询类](https://cloud.tencent.com/document/api/649/45925)接口时出参中的RepositoryId，或登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看
+ * @method void setRepositoryId(string $RepositoryId) 设置仓库ID，可通过调用[仓库信息查询类](https://cloud.tencent.com/document/api/649/45925)接口时出参中的RepositoryId，或登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看
  * @method array getPackageTypeList() 获取程序包类型数组支持（fatjar jar war tar.gz zip）
  * @method void setPackageTypeList(array $PackageTypeList) 设置程序包类型数组支持（fatjar jar war tar.gz zip）
  */
 class DescribePkgsRequest extends AbstractModel
 {
     /**
-     * @var string 应用ID（只传入应用ID，返回该应用下所有软件包信息）
+     * @var string 应用ID，通过调用DescribeApplications接口[获取应用列表](https://cloud.tencent.com/document/api/649/36090)从而获取应用ID，或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)进行查看，调用CreateApplication接口[创建应用](https://cloud.tencent.com/document/product/649/36094)时的返回值
      */
     public $ApplicationId;
 
@@ -52,7 +52,7 @@ class DescribePkgsRequest extends AbstractModel
     public $SearchWord;
 
     /**
-     * @var string 排序关键字（默认为"UploadTime"：上传时间）
+     * @var string 排序关键字（默认值"UploadTime"），允许值："UploadTime"上传时间, "name"程序包名, "size"应用大小, "id"程序包ID
      */
     public $OrderBy;
 
@@ -62,7 +62,7 @@ class DescribePkgsRequest extends AbstractModel
     public $OrderType;
 
     /**
-     * @var integer 查询起始偏移
+     * @var integer 查询起始偏移，大于等于0，默认值为0
      */
     public $Offset;
 
@@ -72,12 +72,12 @@ class DescribePkgsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 程序包仓库类型
+     * @var string 程序包仓库类型，允许值："public-demo"TSF公共demo仓库, "private"自定义仓库, "default"TSF公共仓库
      */
     public $RepositoryType;
 
     /**
-     * @var string 程序包仓库id
+     * @var string 仓库ID，可通过调用[仓库信息查询类](https://cloud.tencent.com/document/api/649/45925)接口时出参中的RepositoryId，或登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看
      */
     public $RepositoryId;
 
@@ -87,14 +87,14 @@ class DescribePkgsRequest extends AbstractModel
     public $PackageTypeList;
 
     /**
-     * @param string $ApplicationId 应用ID（只传入应用ID，返回该应用下所有软件包信息）
+     * @param string $ApplicationId 应用ID，通过调用DescribeApplications接口[获取应用列表](https://cloud.tencent.com/document/api/649/36090)从而获取应用ID，或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)进行查看，调用CreateApplication接口[创建应用](https://cloud.tencent.com/document/product/649/36094)时的返回值
      * @param string $SearchWord 查询关键字（支持根据包ID，包名，包版本号搜索）
-     * @param string $OrderBy 排序关键字（默认为"UploadTime"：上传时间）
+     * @param string $OrderBy 排序关键字（默认值"UploadTime"），允许值："UploadTime"上传时间, "name"程序包名, "size"应用大小, "id"程序包ID
      * @param integer $OrderType 升序：0/降序：1（默认降序）
-     * @param integer $Offset 查询起始偏移
+     * @param integer $Offset 查询起始偏移，大于等于0，默认值为0
      * @param integer $Limit 返回数量限制
-     * @param string $RepositoryType 程序包仓库类型
-     * @param string $RepositoryId 程序包仓库id
+     * @param string $RepositoryType 程序包仓库类型，允许值："public-demo"TSF公共demo仓库, "private"自定义仓库, "default"TSF公共仓库
+     * @param string $RepositoryId 仓库ID，可通过调用[仓库信息查询类](https://cloud.tencent.com/document/api/649/45925)接口时出参中的RepositoryId，或登录[控制台](https://console.cloud.tencent.com/tsf/product?rid=1)进行查看
      * @param array $PackageTypeList 程序包类型数组支持（fatjar jar war tar.gz zip）
      */
     function __construct()

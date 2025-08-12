@@ -14,26 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Lke\V20231130\Models;
+namespace TencentCloud\Lighthouse\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ListAppCategory返回参数结构体
+ * DescribeImagesToShare返回参数结构体
  *
- * @method array getList() 获取应用类型列表
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setList(array $List) 设置应用类型列表
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTotalCount() 获取符合条件的镜像数量。
+ * @method void setTotalCount(integer $TotalCount) 设置符合条件的镜像数量。
+ * @method array getImageSet() 获取CVM镜像详细信息列表。
+ * @method void setImageSet(array $ImageSet) 设置CVM镜像详细信息列表。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class ListAppCategoryResponse extends AbstractModel
+class DescribeImagesToShareResponse extends AbstractModel
 {
     /**
-     * @var array 应用类型列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 符合条件的镜像数量。
      */
-    public $List;
+    public $TotalCount;
+
+    /**
+     * @var array CVM镜像详细信息列表。
+     */
+    public $ImageSet;
 
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
@@ -41,8 +45,8 @@ class ListAppCategoryResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $List 应用类型列表
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TotalCount 符合条件的镜像数量。
+     * @param array $ImageSet CVM镜像详细信息列表。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -58,12 +62,16 @@ class ListAppCategoryResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("List",$param) and $param["List"] !== null) {
-            $this->List = [];
-            foreach ($param["List"] as $key => $value){
-                $obj = new ListAppCategoryRspOption();
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("ImageSet",$param) and $param["ImageSet"] !== null) {
+            $this->ImageSet = [];
+            foreach ($param["ImageSet"] as $key => $value){
+                $obj = new Image();
                 $obj->deserialize($value);
-                array_push($this->List, $obj);
+                array_push($this->ImageSet, $obj);
             }
         }
 

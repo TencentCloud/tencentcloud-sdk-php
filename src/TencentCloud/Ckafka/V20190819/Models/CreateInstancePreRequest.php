@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPeriod(string $Period) 设置预付费购买时长，例如 "1m",就是一个月
  * @method integer getInstanceType() 获取国际站标准版实例规格。目前只有国际站标准版使用当前字段区分规格，国内站标准版使用峰值带宽区分规格。除了国际站标准版外的所有实例填写 1 即可。国际站标准版实例：入门型(general)]填写1；[标准型(standard)]填写2；[进阶型(advanced)]填写3；[容量型(capacity)]填写4；[高阶型1(specialized-1)]填写5；[高阶型2(specialized-2)]填写6；[高阶型3(specialized-3)]填写7；[高阶型4(specialized-4)]填写8。
  * @method void setInstanceType(integer $InstanceType) 设置国际站标准版实例规格。目前只有国际站标准版使用当前字段区分规格，国内站标准版使用峰值带宽区分规格。除了国际站标准版外的所有实例填写 1 即可。国际站标准版实例：入门型(general)]填写1；[标准型(standard)]填写2；[进阶型(advanced)]填写3；[容量型(capacity)]填写4；[高阶型1(specialized-1)]填写5；[高阶型2(specialized-2)]填写6；[高阶型3(specialized-3)]填写7；[高阶型4(specialized-4)]填写8。
- * @method string getVpcId() 获取私有网络Id，必填
- * @method void setVpcId(string $VpcId) 设置私有网络Id，必填
- * @method string getSubnetId() 获取子网id，必填
- * @method void setSubnetId(string $SubnetId) 设置子网id，必填
+ * @method string getVpcId() 获取私有网络Id
+ * @method void setVpcId(string $VpcId) 设置私有网络Id
+ * @method string getSubnetId() 获取子网id
+ * @method void setSubnetId(string $SubnetId) 设置子网id
  * @method integer getMsgRetentionTime() 获取可选。实例日志的最长保留时间，单位分钟，默认为10080（7天），最大30天，不填默认0，代表不开启日志保留时间回收策略
  * @method void setMsgRetentionTime(integer $MsgRetentionTime) 设置可选。实例日志的最长保留时间，单位分钟，默认为10080（7天），最大30天，不填默认0，代表不开启日志保留时间回收策略
  * @method integer getClusterId() 获取创建实例时可以选择集群Id, 该入参表示集群Id
@@ -88,12 +88,12 @@ class CreateInstancePreRequest extends AbstractModel
     public $InstanceType;
 
     /**
-     * @var string 私有网络Id，必填
+     * @var string 私有网络Id
      */
     public $VpcId;
 
     /**
-     * @var string 子网id，必填
+     * @var string 子网id
      */
     public $SubnetId;
 
@@ -182,8 +182,8 @@ class CreateInstancePreRequest extends AbstractModel
      * @param integer $ZoneId 可用区。当购买多可用区实例时，当前参数为主可用区。  [查看可用区](https://cloud.tencent.com/document/product/597/55246)
      * @param string $Period 预付费购买时长，例如 "1m",就是一个月
      * @param integer $InstanceType 国际站标准版实例规格。目前只有国际站标准版使用当前字段区分规格，国内站标准版使用峰值带宽区分规格。除了国际站标准版外的所有实例填写 1 即可。国际站标准版实例：入门型(general)]填写1；[标准型(standard)]填写2；[进阶型(advanced)]填写3；[容量型(capacity)]填写4；[高阶型1(specialized-1)]填写5；[高阶型2(specialized-2)]填写6；[高阶型3(specialized-3)]填写7；[高阶型4(specialized-4)]填写8。
-     * @param string $VpcId 私有网络Id，必填
-     * @param string $SubnetId 子网id，必填
+     * @param string $VpcId 私有网络Id
+     * @param string $SubnetId 子网id
      * @param integer $MsgRetentionTime 可选。实例日志的最长保留时间，单位分钟，默认为10080（7天），最大30天，不填默认0，代表不开启日志保留时间回收策略
      * @param integer $ClusterId 创建实例时可以选择集群Id, 该入参表示集群Id
      * @param integer $RenewFlag 预付费自动续费标记，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)

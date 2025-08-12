@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RevokeFileConfig请求参数结构体
  *
- * @method string getConfigReleaseId() 获取配置项发布ID
- * @method void setConfigReleaseId(string $ConfigReleaseId) 设置配置项发布ID
+ * @method string getConfigReleaseId() 获取按照【配置项发布ID】进行撤回。可通过调用[DescribeFileConfigReleases](https://cloud.tencent.com/document/product/649/85855)查询已发布的文件配置列表或登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=file)-查看发布信息-发布情况进行查看；也可以调用[ReleaseFileConfig](https://cloud.tencent.com/document/product/649/58592)发布文件配置。
+ * @method void setConfigReleaseId(string $ConfigReleaseId) 设置按照【配置项发布ID】进行撤回。可通过调用[DescribeFileConfigReleases](https://cloud.tencent.com/document/product/649/85855)查询已发布的文件配置列表或登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=file)-查看发布信息-发布情况进行查看；也可以调用[ReleaseFileConfig](https://cloud.tencent.com/document/product/649/58592)发布文件配置。
  */
 class RevokeFileConfigRequest extends AbstractModel
 {
     /**
-     * @var string 配置项发布ID
+     * @var string 按照【配置项发布ID】进行撤回。可通过调用[DescribeFileConfigReleases](https://cloud.tencent.com/document/product/649/85855)查询已发布的文件配置列表或登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=file)-查看发布信息-发布情况进行查看；也可以调用[ReleaseFileConfig](https://cloud.tencent.com/document/product/649/58592)发布文件配置。
      */
     public $ConfigReleaseId;
 
     /**
-     * @param string $ConfigReleaseId 配置项发布ID
+     * @param string $ConfigReleaseId 按照【配置项发布ID】进行撤回。可通过调用[DescribeFileConfigReleases](https://cloud.tencent.com/document/product/649/85855)查询已发布的文件配置列表或登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=file)-查看发布信息-发布情况进行查看；也可以调用[ReleaseFileConfig](https://cloud.tencent.com/document/product/649/58592)发布文件配置。
      */
     function __construct()
     {

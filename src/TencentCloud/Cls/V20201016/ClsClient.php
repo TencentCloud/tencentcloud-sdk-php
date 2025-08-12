@@ -47,7 +47,7 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\CreateDashboardSubscribeResponse CreateDashboardSubscribe(Models\CreateDashboardSubscribeRequest $req) 此接口用于创建仪表盘订阅
  * @method Models\CreateDataTransformResponse CreateDataTransform(Models\CreateDataTransformRequest $req) 本接口用于创建数据加工任务。
  * @method Models\CreateDeliverCloudFunctionResponse CreateDeliverCloudFunction(Models\CreateDeliverCloudFunctionRequest $req) 本接口用于创建投递SCF任务
- * @method Models\CreateExportResponse CreateExport(Models\CreateExportRequest $req) 本接口仅创建下载任务，任务返回的下载地址，请用户调用DescribeExports查看任务列表。其中有下载地址CosPath参数。参考文档https://cloud.tencent.com/document/product/614/56449
+ * @method Models\CreateExportResponse CreateExport(Models\CreateExportRequest $req) 本接口仅创建下载任务。任务返回的下载地址，请用户调用[DescribeExports](https://cloud.tencent.com/document/product/614/56449)查看任务列表，其中有下载地址CosPath参数。
  * @method Models\CreateIndexResponse CreateIndex(Models\CreateIndexRequest $req) 本接口用于创建索引
  * @method Models\CreateKafkaRechargeResponse CreateKafkaRecharge(Models\CreateKafkaRechargeRequest $req) 本接口用于创建Kafka数据订阅任务
  * @method Models\CreateLogsetResponse CreateLogset(Models\CreateLogsetRequest $req) 本接口用于创建日志集，返回新创建的日志集的 ID。
@@ -59,13 +59,13 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\CreateWebCallbackResponse CreateWebCallback(Models\CreateWebCallbackRequest $req) 该接口用于创建告警渠道回调配置。
  * @method Models\DeleteAlarmResponse DeleteAlarm(Models\DeleteAlarmRequest $req) 本接口用于删除告警策略。
  * @method Models\DeleteAlarmNoticeResponse DeleteAlarmNotice(Models\DeleteAlarmNoticeRequest $req) 该接口用于删除通知渠道组
- * @method Models\DeleteAlarmShieldResponse DeleteAlarmShield(Models\DeleteAlarmShieldRequest $req) 该接口用于删除告警屏蔽规则。
+ * @method Models\DeleteAlarmShieldResponse DeleteAlarmShield(Models\DeleteAlarmShieldRequest $req) 该接口用于删除告警屏蔽规则。当告警屏蔽规则在生效中或者是在失效中，无法被删除
  * @method Models\DeleteCloudProductLogCollectionResponse DeleteCloudProductLogCollection(Models\DeleteCloudProductLogCollectionRequest $req) 内部云产品接入使用相关接口
  * @method Models\DeleteConfigResponse DeleteConfig(Models\DeleteConfigRequest $req) 删除采集规则配置
  * @method Models\DeleteConfigExtraResponse DeleteConfigExtra(Models\DeleteConfigExtraRequest $req) 本接口用于删除特殊采集规则配置，特殊采集配置应用于自建K8S环境的采集Agent
  * @method Models\DeleteConfigFromMachineGroupResponse DeleteConfigFromMachineGroup(Models\DeleteConfigFromMachineGroupRequest $req) 删除应用到机器组的采集配置
  * @method Models\DeleteConsoleSharingResponse DeleteConsoleSharing(Models\DeleteConsoleSharingRequest $req) 删除控制台分享
- * @method Models\DeleteConsumerResponse DeleteConsumer(Models\DeleteConsumerRequest $req) 本接口用于删除投递配置
+ * @method Models\DeleteConsumerResponse DeleteConsumer(Models\DeleteConsumerRequest $req) 删除投递Ckafka任务
  * @method Models\DeleteCosRechargeResponse DeleteCosRecharge(Models\DeleteCosRechargeRequest $req) 本接口用于删除cos导入任务
  * @method Models\DeleteDashboardSubscribeResponse DeleteDashboardSubscribe(Models\DeleteDashboardSubscribeRequest $req) 此接口用于删除仪表盘订阅
  * @method Models\DeleteDataTransformResponse DeleteDataTransform(Models\DeleteDataTransformRequest $req) 本接口用于删除数据加工任务

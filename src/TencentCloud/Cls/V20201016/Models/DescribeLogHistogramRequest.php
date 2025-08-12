@@ -24,10 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFrom(integer $From) 设置要查询的日志的起始时间，Unix时间戳，单位ms
  * @method integer getTo() 获取要查询的日志的结束时间，Unix时间戳，单位ms
  * @method void setTo(integer $To) 设置要查询的日志的结束时间，Unix时间戳，单位ms
- * @method string getQuery() 获取查询语句
- * @method void setQuery(string $Query) 设置查询语句
+ * @method string getQuery() 获取检索分析语句。
+语句由 [检索条件] | [SQL语句]构成，无需对日志进行统计分析时，可省略其中的管道符 | 及SQL语句。
+使用*或空字符串可查询所有日志。
+ * @method void setQuery(string $Query) 设置检索分析语句。
+语句由 [检索条件] | [SQL语句]构成，无需对日志进行统计分析时，可省略其中的管道符 | 及SQL语句。
+使用*或空字符串可查询所有日志。
  * @method string getTopicId() 获取要查询的日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
  * @method void setTopicId(string $TopicId) 设置要查询的日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
  * @method integer getInterval() 获取时间间隔: 单位ms  限制性条件：(To-From) / interval <= 200
  * @method void setInterval(integer $Interval) 设置时间间隔: 单位ms  限制性条件：(To-From) / interval <= 200
  * @method integer getSyntaxRule() 获取检索语法规则，默认值为0。
@@ -50,12 +56,15 @@ class DescribeLogHistogramRequest extends AbstractModel
     public $To;
 
     /**
-     * @var string 查询语句
+     * @var string 检索分析语句。
+语句由 [检索条件] | [SQL语句]构成，无需对日志进行统计分析时，可省略其中的管道符 | 及SQL语句。
+使用*或空字符串可查询所有日志。
      */
     public $Query;
 
     /**
      * @var string 要查询的日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public $TopicId;
 
@@ -74,8 +83,11 @@ class DescribeLogHistogramRequest extends AbstractModel
     /**
      * @param integer $From 要查询的日志的起始时间，Unix时间戳，单位ms
      * @param integer $To 要查询的日志的结束时间，Unix时间戳，单位ms
-     * @param string $Query 查询语句
+     * @param string $Query 检索分析语句。
+语句由 [检索条件] | [SQL语句]构成，无需对日志进行统计分析时，可省略其中的管道符 | 及SQL语句。
+使用*或空字符串可查询所有日志。
      * @param string $TopicId 要查询的日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      * @param integer $Interval 时间间隔: 单位ms  限制性条件：(To-From) / interval <= 200
      * @param integer $SyntaxRule 检索语法规则，默认值为0。
 0：Lucene语法，1：CQL语法。

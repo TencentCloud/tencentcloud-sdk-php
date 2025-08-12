@@ -33,7 +33,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getAssumerName() 获取云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
  * @method void setAssumerName(string $AssumerName) 设置云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
  * @method string getCreateTime() 获取创建时间
+时间格式：yyyy-MM-dd HH:mm:ss
  * @method void setCreateTime(string $CreateTime) 设置创建时间
+时间格式：yyyy-MM-dd HH:mm:ss
  * @method boolean getStatus() 获取主题是否开启采集，true：开启采集；false：关闭采集。
 创建日志主题时默认开启，可通过SDK调用ModifyTopic修改此字段。
 控制台目前不支持修改此参数。
@@ -81,9 +83,19 @@ HotPeriod=0为没有开启日志沉降。
  * @method string getTopicAsyncTaskID() 获取异步迁移任务ID
  * @method void setTopicAsyncTaskID(string $TopicAsyncTaskID) 设置异步迁移任务ID
  * @method integer getMigrationStatus() 获取异步迁移状态
+- 1：进行中
+- 2：已完成
+- 3：失败
+- 4：已取消
  * @method void setMigrationStatus(integer $MigrationStatus) 设置异步迁移状态
+- 1：进行中
+- 2：已完成
+- 3：失败
+- 4：已取消
  * @method string getEffectiveDate() 获取异步迁移完成后，预计生效日期
+时间格式：yyyy-MM-dd HH:mm:ss
  * @method void setEffectiveDate(string $EffectiveDate) 设置异步迁移完成后，预计生效日期
+时间格式：yyyy-MM-dd HH:mm:ss
  */
 class TopicInfo extends AbstractModel
 {
@@ -119,6 +131,7 @@ class TopicInfo extends AbstractModel
 
     /**
      * @var string 创建时间
+时间格式：yyyy-MM-dd HH:mm:ss
      */
     public $CreateTime;
 
@@ -199,11 +212,16 @@ HotPeriod=0为没有开启日志沉降。
 
     /**
      * @var integer 异步迁移状态
+- 1：进行中
+- 2：已完成
+- 3：失败
+- 4：已取消
      */
     public $MigrationStatus;
 
     /**
      * @var string 异步迁移完成后，预计生效日期
+时间格式：yyyy-MM-dd HH:mm:ss
      */
     public $EffectiveDate;
 
@@ -215,6 +233,7 @@ HotPeriod=0为没有开启日志沉降。
      * @param boolean $Index 主题是否开启索引（主题类型需为日志主题）
      * @param string $AssumerName 云产品标识，主题由其它云产品创建时，该字段会显示云产品名称，例如CDN、TKE
      * @param string $CreateTime 创建时间
+时间格式：yyyy-MM-dd HH:mm:ss
      * @param boolean $Status 主题是否开启采集，true：开启采集；false：关闭采集。
 创建日志主题时默认开启，可通过SDK调用ModifyTopic修改此字段。
 控制台目前不支持修改此参数。
@@ -239,7 +258,12 @@ HotPeriod=0为没有开启日志沉降。
      * @param TopicExtendInfo $Extends 日志主题扩展信息
      * @param string $TopicAsyncTaskID 异步迁移任务ID
      * @param integer $MigrationStatus 异步迁移状态
+- 1：进行中
+- 2：已完成
+- 3：失败
+- 4：已取消
      * @param string $EffectiveDate 异步迁移完成后，预计生效日期
+时间格式：yyyy-MM-dd HH:mm:ss
      */
     function __construct()
     {

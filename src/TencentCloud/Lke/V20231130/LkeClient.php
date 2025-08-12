@@ -89,7 +89,6 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\IgnoreUnsatisfiedReplyResponse IgnoreUnsatisfiedReply(Models\IgnoreUnsatisfiedReplyRequest $req) 忽略不满意回复
  * @method Models\IsTransferIntentResponse IsTransferIntent(Models\IsTransferIntentRequest $req) 是否意图转人工
  * @method Models\ListAppResponse ListApp(Models\ListAppRequest $req) 获取企业下应用列表
- * @method Models\ListAppCategoryResponse ListAppCategory(Models\ListAppCategoryRequest $req) 应用类型列表
  * @method Models\ListAppKnowledgeDetailResponse ListAppKnowledgeDetail(Models\ListAppKnowledgeDetailRequest $req) 列表查询知识库容量详情
  * @method Models\ListAttributeLabelResponse ListAttributeLabel(Models\ListAttributeLabelRequest $req) 查询属性标签列表
  * @method Models\ListDocResponse ListDoc(Models\ListDocRequest $req) 文档列表

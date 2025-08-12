@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreatePostPaidInstance请求参数结构体
  *
+ * @method string getVpcId() 获取私有网络Id  创建的实例默认接入点所在的 vpc 对应 vpcId
+ * @method void setVpcId(string $VpcId) 设置私有网络Id  创建的实例默认接入点所在的 vpc 对应 vpcId
  * @method string getInstanceName() 获取ckafka集群实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
  * @method void setInstanceName(string $InstanceName) 设置ckafka集群实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
- * @method string getVpcId() 获取私有网络Id  创建的实例默认接入点所在的 vpc 对应 vpcId。目前不支持创建基础网络实例，因此该参数必填
- * @method void setVpcId(string $VpcId) 设置私有网络Id  创建的实例默认接入点所在的 vpc 对应 vpcId。目前不支持创建基础网络实例，因此该参数必填
  * @method string getSubnetId() 获取子网id。创建实例默认接入点所在的子网对应的子网 id
  * @method void setSubnetId(string $SubnetId) 设置子网id。创建实例默认接入点所在的子网对应的子网 id
  * @method integer getInstanceType() 获取国际站标准版实例规格。目前只有国际站标准版使用当前字段区分规格，国内站标准版使用峰值带宽区分规格。除了国际站标准版外的所有实例填写 1 即可。国际站标准版实例：入门型(general)]填写1；[标准型(standard)]填写2；[进阶型(advanced)]填写3；[容量型(capacity)]填写4；[高阶型1(specialized-1)]填写5；[高阶型2(specialized-2)]填写6；[高阶型3(specialized-3)]填写7；[高阶型4(specialized-4)]填写8。
@@ -64,14 +64,14 @@ use TencentCloud\Common\AbstractModel;
 class CreatePostPaidInstanceRequest extends AbstractModel
 {
     /**
+     * @var string 私有网络Id  创建的实例默认接入点所在的 vpc 对应 vpcId
+     */
+    public $VpcId;
+
+    /**
      * @var string ckafka集群实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
      */
     public $InstanceName;
-
-    /**
-     * @var string 私有网络Id  创建的实例默认接入点所在的 vpc 对应 vpcId。目前不支持创建基础网络实例，因此该参数必填
-     */
-    public $VpcId;
 
     /**
      * @var string 子网id。创建实例默认接入点所在的子网对应的子网 id
@@ -164,8 +164,8 @@ class CreatePostPaidInstanceRequest extends AbstractModel
     public $ElasticBandwidthSwitch;
 
     /**
+     * @param string $VpcId 私有网络Id  创建的实例默认接入点所在的 vpc 对应 vpcId
      * @param string $InstanceName ckafka集群实例名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
-     * @param string $VpcId 私有网络Id  创建的实例默认接入点所在的 vpc 对应 vpcId。目前不支持创建基础网络实例，因此该参数必填
      * @param string $SubnetId 子网id。创建实例默认接入点所在的子网对应的子网 id
      * @param integer $InstanceType 国际站标准版实例规格。目前只有国际站标准版使用当前字段区分规格，国内站标准版使用峰值带宽区分规格。除了国际站标准版外的所有实例填写 1 即可。国际站标准版实例：入门型(general)]填写1；[标准型(standard)]填写2；[进阶型(advanced)]填写3；[容量型(capacity)]填写4；[高阶型1(specialized-1)]填写5；[高阶型2(specialized-2)]填写6；[高阶型3(specialized-3)]填写7；[高阶型4(specialized-4)]填写8。
      * @param integer $MsgRetentionTime 实例日志的默认最长保留时间，单位分钟。不传入该参数时默认为 1440 分钟（1天），最大30天。当 topic 显式设置消息保留时间时，以 topic 保留时间为准
@@ -198,12 +198,12 @@ class CreatePostPaidInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
-            $this->InstanceName = $param["InstanceName"];
-        }
-
         if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
             $this->VpcId = $param["VpcId"];
+        }
+
+        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
+            $this->InstanceName = $param["InstanceName"];
         }
 
         if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {

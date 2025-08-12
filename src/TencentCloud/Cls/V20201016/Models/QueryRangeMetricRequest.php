@@ -21,9 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * QueryRangeMetric请求参数结构体
  *
  * @method string getTopicId() 获取指标主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
  * @method void setTopicId(string $TopicId) 设置指标主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
  * @method string getQuery() 获取查询语句，使用PromQL语法
+- 参考 [语法规则](https://cloud.tencent.com/document/product/614/90334) 文档
  * @method void setQuery(string $Query) 设置查询语句，使用PromQL语法
+- 参考 [语法规则](https://cloud.tencent.com/document/product/614/90334) 文档
  * @method integer getStart() 获取查询起始时间，秒级Unix时间戳
  * @method void setStart(integer $Start) 设置查询起始时间，秒级Unix时间戳
  * @method integer getEnd() 获取查询结束时间，秒级Unix时间戳
@@ -35,11 +39,13 @@ class QueryRangeMetricRequest extends AbstractModel
 {
     /**
      * @var string 指标主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public $TopicId;
 
     /**
      * @var string 查询语句，使用PromQL语法
+- 参考 [语法规则](https://cloud.tencent.com/document/product/614/90334) 文档
      */
     public $Query;
 
@@ -60,7 +66,9 @@ class QueryRangeMetricRequest extends AbstractModel
 
     /**
      * @param string $TopicId 指标主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      * @param string $Query 查询语句，使用PromQL语法
+- 参考 [语法规则](https://cloud.tencent.com/document/product/614/90334) 文档
      * @param integer $Start 查询起始时间，秒级Unix时间戳
      * @param integer $End 查询结束时间，秒级Unix时间戳
      * @param integer $Step 查询时间间隔，单位秒

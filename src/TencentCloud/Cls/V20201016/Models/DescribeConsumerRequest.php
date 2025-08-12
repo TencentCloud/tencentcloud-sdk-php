@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeConsumer请求参数结构体
  *
- * @method string getTopicId() 获取投递任务绑定的日志主题 ID
- * @method void setTopicId(string $TopicId) 设置投递任务绑定的日志主题 ID
+ * @method string getTopicId() 获取投递任务绑定的日志主题Id。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
+ * @method void setTopicId(string $TopicId) 设置投递任务绑定的日志主题Id。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
  */
 class DescribeConsumerRequest extends AbstractModel
 {
     /**
-     * @var string 投递任务绑定的日志主题 ID
+     * @var string 投递任务绑定的日志主题Id。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
      */
     public $TopicId;
 
     /**
-     * @param string $TopicId 投递任务绑定的日志主题 ID
+     * @param string $TopicId 投递任务绑定的日志主题Id。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
      */
     function __construct()
     {

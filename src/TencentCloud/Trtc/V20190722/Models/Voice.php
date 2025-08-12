@@ -14,20 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Lke\V20231130\Models;
+namespace TencentCloud\Trtc\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ListAppCategory请求参数结构体
+ * TTS的声音参数
  *
-
+ * @method string getVoiceId() 获取TTS的声音的ID
+ * @method void setVoiceId(string $VoiceId) 设置TTS的声音的ID
  */
-class ListAppCategoryRequest extends AbstractModel
+class Voice extends AbstractModel
 {
-
+    /**
+     * @var string TTS的声音的ID
+     */
+    public $VoiceId;
 
     /**
-
+     * @param string $VoiceId TTS的声音的ID
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class ListAppCategoryRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("VoiceId",$param) and $param["VoiceId"] !== null) {
+            $this->VoiceId = $param["VoiceId"];
+        }
     }
 }

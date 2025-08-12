@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteTask请求参数结构体
  *
- * @method string getTaskId() 获取任务ID
- * @method void setTaskId(string $TaskId) 设置任务ID
+ * @method string getTaskId() 获取任务ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页第一列和任务基本信息页查看任务ID。
+ * @method void setTaskId(string $TaskId) 设置任务ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页第一列和任务基本信息页查看任务ID。
  */
 class DeleteTaskRequest extends AbstractModel
 {
     /**
-     * @var string 任务ID
+     * @var string 任务ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页第一列和任务基本信息页查看任务ID。
      */
     public $TaskId;
 
     /**
-     * @param string $TaskId 任务ID
+     * @param string $TaskId 任务ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页第一列和任务基本信息页查看任务ID。
      */
     function __construct()
     {

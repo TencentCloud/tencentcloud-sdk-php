@@ -20,15 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyConsoleSharing请求参数结构体
  *
- * @method string getSharingId() 获取免密分享链接Id
- * @method void setSharingId(string $SharingId) 设置免密分享链接Id
+ * @method string getSharingId() 获取免密分享Id。
+- 通过 [获取免密分享列表](https://cloud.tencent.com/document/product/614/109798) 获取免密分享Id。 
+- 通过 [创建免密分享](https://cloud.tencent.com/document/product/614/109800) 获取免密分享Id。
+ * @method void setSharingId(string $SharingId) 设置免密分享Id。
+- 通过 [获取免密分享列表](https://cloud.tencent.com/document/product/614/109798) 获取免密分享Id。 
+- 通过 [创建免密分享](https://cloud.tencent.com/document/product/614/109800) 获取免密分享Id。
  * @method integer getDurationMilliseconds() 获取指定分享链接有效期，单位：毫秒，最长可设定有效期为30天
  * @method void setDurationMilliseconds(integer $DurationMilliseconds) 设置指定分享链接有效期，单位：毫秒，最长可设定有效期为30天
  */
 class ModifyConsoleSharingRequest extends AbstractModel
 {
     /**
-     * @var string 免密分享链接Id
+     * @var string 免密分享Id。
+- 通过 [获取免密分享列表](https://cloud.tencent.com/document/product/614/109798) 获取免密分享Id。 
+- 通过 [创建免密分享](https://cloud.tencent.com/document/product/614/109800) 获取免密分享Id。
      */
     public $SharingId;
 
@@ -38,7 +44,9 @@ class ModifyConsoleSharingRequest extends AbstractModel
     public $DurationMilliseconds;
 
     /**
-     * @param string $SharingId 免密分享链接Id
+     * @param string $SharingId 免密分享Id。
+- 通过 [获取免密分享列表](https://cloud.tencent.com/document/product/614/109798) 获取免密分享Id。 
+- 通过 [创建免密分享](https://cloud.tencent.com/document/product/614/109800) 获取免密分享Id。
      * @param integer $DurationMilliseconds 指定分享链接有效期，单位：毫秒，最长可设定有效期为30天
      */
     function __construct()

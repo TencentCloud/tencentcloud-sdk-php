@@ -20,15 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyLane返回参数结构体
  *
- * @method boolean getResult() 获取更新成功: true / 更新失败: false
- * @method void setResult(boolean $Result) 设置更新成功: true / 更新失败: false
+ * @method boolean getResult() 获取更新结果。
+- true：更新成功
+- false：更新失败
+ * @method void setResult(boolean $Result) 设置更新结果。
+- true：更新成功
+- false：更新失败
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ModifyLaneResponse extends AbstractModel
 {
     /**
-     * @var boolean 更新成功: true / 更新失败: false
+     * @var boolean 更新结果。
+- true：更新成功
+- false：更新失败
      */
     public $Result;
 
@@ -38,7 +44,9 @@ class ModifyLaneResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param boolean $Result 更新成功: true / 更新失败: false
+     * @param boolean $Result 更新结果。
+- true：更新成功
+- false：更新失败
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

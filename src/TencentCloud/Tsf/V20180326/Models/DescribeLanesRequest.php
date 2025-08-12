@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLanes请求参数结构体
  *
- * @method integer getLimit() 获取每页展示的条数
- * @method void setLimit(integer $Limit) 设置每页展示的条数
- * @method integer getOffset() 获取翻页偏移量
- * @method void setOffset(integer $Offset) 设置翻页偏移量
- * @method string getSearchWord() 获取搜索关键字
- * @method void setSearchWord(string $SearchWord) 设置搜索关键字
- * @method array getLaneIdList() 获取无
- * @method void setLaneIdList(array $LaneIdList) 设置无
- * @method boolean getDisableProgramAuthCheck() 获取无
- * @method void setDisableProgramAuthCheck(boolean $DisableProgramAuthCheck) 设置无
+ * @method integer getLimit() 获取返回数量，默认为20，最大值为100。
+ * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100。
+ * @method integer getOffset() 获取偏移量，默认为0。
+ * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
+ * @method string getSearchWord() 获取搜索关键字。
+ * @method void setSearchWord(string $SearchWord) 设置搜索关键字。
+ * @method array getLaneIdList() 获取泳道配置ID。该参数可以通过调用 [DescribeLanes](https://cloud.tencent.com/document/product/649/44504) 的返回值中的 LaneId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=grayscale&subTab=lane)查看；也可以调用[CreateLane](https://cloud.tencent.com/document/product/649/44508)创建新的泳道配置。
+ * @method void setLaneIdList(array $LaneIdList) 设置泳道配置ID。该参数可以通过调用 [DescribeLanes](https://cloud.tencent.com/document/product/649/44504) 的返回值中的 LaneId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=grayscale&subTab=lane)查看；也可以调用[CreateLane](https://cloud.tencent.com/document/product/649/44508)创建新的泳道配置。
+ * @method boolean getDisableProgramAuthCheck() 获取忽略传参，业务预留字段。
+ * @method void setDisableProgramAuthCheck(boolean $DisableProgramAuthCheck) 设置忽略传参，业务预留字段。
  */
 class DescribeLanesRequest extends AbstractModel
 {
     /**
-     * @var integer 每页展示的条数
+     * @var integer 返回数量，默认为20，最大值为100。
      */
     public $Limit;
 
     /**
-     * @var integer 翻页偏移量
+     * @var integer 偏移量，默认为0。
      */
     public $Offset;
 
     /**
-     * @var string 搜索关键字
+     * @var string 搜索关键字。
      */
     public $SearchWord;
 
     /**
-     * @var array 无
+     * @var array 泳道配置ID。该参数可以通过调用 [DescribeLanes](https://cloud.tencent.com/document/product/649/44504) 的返回值中的 LaneId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=grayscale&subTab=lane)查看；也可以调用[CreateLane](https://cloud.tencent.com/document/product/649/44508)创建新的泳道配置。
      */
     public $LaneIdList;
 
     /**
-     * @var boolean 无
+     * @var boolean 忽略传参，业务预留字段。
      */
     public $DisableProgramAuthCheck;
 
     /**
-     * @param integer $Limit 每页展示的条数
-     * @param integer $Offset 翻页偏移量
-     * @param string $SearchWord 搜索关键字
-     * @param array $LaneIdList 无
-     * @param boolean $DisableProgramAuthCheck 无
+     * @param integer $Limit 返回数量，默认为20，最大值为100。
+     * @param integer $Offset 偏移量，默认为0。
+     * @param string $SearchWord 搜索关键字。
+     * @param array $LaneIdList 泳道配置ID。该参数可以通过调用 [DescribeLanes](https://cloud.tencent.com/document/product/649/44504) 的返回值中的 LaneId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=grayscale&subTab=lane)查看；也可以调用[CreateLane](https://cloud.tencent.com/document/product/649/44508)创建新的泳道配置。
+     * @param boolean $DisableProgramAuthCheck 忽略传参，业务预留字段。
      */
     function __construct()
     {

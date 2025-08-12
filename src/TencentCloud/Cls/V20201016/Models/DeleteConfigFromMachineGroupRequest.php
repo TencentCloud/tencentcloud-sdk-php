@@ -21,25 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * DeleteConfigFromMachineGroup请求参数结构体
  *
  * @method string getGroupId() 获取机器组ID
+- 通过[获取机器组列表](https://cloud.tencent.com/document/api/614/56438)获取机器组Id。
  * @method void setGroupId(string $GroupId) 设置机器组ID
+- 通过[获取机器组列表](https://cloud.tencent.com/document/api/614/56438)获取机器组Id。
  * @method string getConfigId() 获取采集配置ID
+ - 通过[获取采集规则配置](https://cloud.tencent.com/document/product/614/58616)获取采集配置Id。
  * @method void setConfigId(string $ConfigId) 设置采集配置ID
+ - 通过[获取采集规则配置](https://cloud.tencent.com/document/product/614/58616)获取采集配置Id。
  */
 class DeleteConfigFromMachineGroupRequest extends AbstractModel
 {
     /**
      * @var string 机器组ID
+- 通过[获取机器组列表](https://cloud.tencent.com/document/api/614/56438)获取机器组Id。
      */
     public $GroupId;
 
     /**
      * @var string 采集配置ID
+ - 通过[获取采集规则配置](https://cloud.tencent.com/document/product/614/58616)获取采集配置Id。
      */
     public $ConfigId;
 
     /**
      * @param string $GroupId 机器组ID
+- 通过[获取机器组列表](https://cloud.tencent.com/document/api/614/56438)获取机器组Id。
      * @param string $ConfigId 采集配置ID
+ - 通过[获取采集规则配置](https://cloud.tencent.com/document/product/614/58616)获取采集配置Id。
      */
     function __construct()
     {

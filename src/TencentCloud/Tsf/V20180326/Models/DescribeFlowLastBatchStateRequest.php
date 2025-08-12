@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFlowLastBatchState请求参数结构体
  *
- * @method string getFlowId() 获取工作流 ID
- * @method void setFlowId(string $FlowId) 设置工作流 ID
+ * @method string getFlowId() 获取工作流 ID。前往[工作流管理](https://console.cloud.tencent.com/tsf/tct?rid=1&tab=workflowManage)，在工作流列表第一列和工作流详情页查看工作流ID。
+ * @method void setFlowId(string $FlowId) 设置工作流 ID。前往[工作流管理](https://console.cloud.tencent.com/tsf/tct?rid=1&tab=workflowManage)，在工作流列表第一列和工作流详情页查看工作流ID。
  */
 class DescribeFlowLastBatchStateRequest extends AbstractModel
 {
     /**
-     * @var string 工作流 ID
+     * @var string 工作流 ID。前往[工作流管理](https://console.cloud.tencent.com/tsf/tct?rid=1&tab=workflowManage)，在工作流列表第一列和工作流详情页查看工作流ID。
      */
     public $FlowId;
 
     /**
-     * @param string $FlowId 工作流 ID
+     * @param string $FlowId 工作流 ID。前往[工作流管理](https://console.cloud.tencent.com/tsf/tct?rid=1&tab=workflowManage)，在工作流列表第一列和工作流详情页查看工作流ID。
      */
     function __construct()
     {

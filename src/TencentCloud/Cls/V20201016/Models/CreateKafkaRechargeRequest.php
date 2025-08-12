@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateKafkaRecharge请求参数结构体
  *
- * @method string getTopicId() 获取导入CLS目标topic ID
- * @method void setTopicId(string $TopicId) 设置导入CLS目标topic ID
+ * @method string getTopicId() 获取导入CLS目标TopicId。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
+ * @method void setTopicId(string $TopicId) 设置导入CLS目标TopicId。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
  * @method string getName() 获取Kafka导入配置名称
  * @method void setName(string $Name) 设置Kafka导入配置名称
  * @method integer getKafkaType() 获取导入Kafka类型，0: 腾讯云CKafka，1: 用户自建Kafka
@@ -33,7 +37,9 @@ use TencentCloud\Common\AbstractModel;
  * @method LogRechargeRuleInfo getLogRechargeRule() 获取日志导入规则。
  * @method void setLogRechargeRule(LogRechargeRuleInfo $LogRechargeRule) 设置日志导入规则。
  * @method string getKafkaInstance() 获取腾讯云CKafka实例ID，KafkaType为0时必填。
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
  * @method void setKafkaInstance(string $KafkaInstance) 设置腾讯云CKafka实例ID，KafkaType为0时必填。
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
  * @method string getServerAddr() 获取服务地址，KafkaType为1时必填。
  * @method void setServerAddr(string $ServerAddr) 设置服务地址，KafkaType为1时必填。
  * @method boolean getIsEncryptionAddr() 获取ServerAddr是否为加密连接，KafkaType为1时必填。
@@ -42,13 +48,17 @@ use TencentCloud\Common\AbstractModel;
 KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
  * @method void setProtocol(KafkaProtocolInfo $Protocol) 设置加密访问协议。
 KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
- * @method string getConsumerGroupName() 获取用户Kafka消费组名称
- * @method void setConsumerGroupName(string $ConsumerGroupName) 设置用户Kafka消费组名称
+ * @method string getConsumerGroupName() 获取用户Kafka消费组名称。
+- 消费组是 Kafka 提供的可扩展且具有容错性的消费者机制，一个消费组中存在多个消费者，组内的所有消费者共同消费订阅 Topic 中的消息。一个消费者可同时消费多个 Partition，但一个 Partition 只能被消费组内的一个消费者消费。
+ * @method void setConsumerGroupName(string $ConsumerGroupName) 设置用户Kafka消费组名称。
+- 消费组是 Kafka 提供的可扩展且具有容错性的消费者机制，一个消费组中存在多个消费者，组内的所有消费者共同消费订阅 Topic 中的消息。一个消费者可同时消费多个 Partition，但一个 Partition 只能被消费组内的一个消费者消费。
  */
 class CreateKafkaRechargeRequest extends AbstractModel
 {
     /**
-     * @var string 导入CLS目标topic ID
+     * @var string 导入CLS目标TopicId。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
      */
     public $TopicId;
 
@@ -79,6 +89,7 @@ class CreateKafkaRechargeRequest extends AbstractModel
 
     /**
      * @var string 腾讯云CKafka实例ID，KafkaType为0时必填。
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
      */
     public $KafkaInstance;
 
@@ -99,23 +110,28 @@ KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
     public $Protocol;
 
     /**
-     * @var string 用户Kafka消费组名称
+     * @var string 用户Kafka消费组名称。
+- 消费组是 Kafka 提供的可扩展且具有容错性的消费者机制，一个消费组中存在多个消费者，组内的所有消费者共同消费订阅 Topic 中的消息。一个消费者可同时消费多个 Partition，但一个 Partition 只能被消费组内的一个消费者消费。
      */
     public $ConsumerGroupName;
 
     /**
-     * @param string $TopicId 导入CLS目标topic ID
+     * @param string $TopicId 导入CLS目标TopicId。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
      * @param string $Name Kafka导入配置名称
      * @param integer $KafkaType 导入Kafka类型，0: 腾讯云CKafka，1: 用户自建Kafka
      * @param string $UserKafkaTopics 用户需要导入的Kafka相关topic列表，多个topic之间使用半角逗号隔开
      * @param integer $Offset 导入数据位置，-2:最早（默认），-1：最晚
      * @param LogRechargeRuleInfo $LogRechargeRule 日志导入规则。
      * @param string $KafkaInstance 腾讯云CKafka实例ID，KafkaType为0时必填。
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
      * @param string $ServerAddr 服务地址，KafkaType为1时必填。
      * @param boolean $IsEncryptionAddr ServerAddr是否为加密连接，KafkaType为1时必填。
      * @param KafkaProtocolInfo $Protocol 加密访问协议。
 KafkaType为1并且IsEncryptionAddr为true时Protocol必填。
-     * @param string $ConsumerGroupName 用户Kafka消费组名称
+     * @param string $ConsumerGroupName 用户Kafka消费组名称。
+- 消费组是 Kafka 提供的可扩展且具有容错性的消费者机制，一个消费组中存在多个消费者，组内的所有消费者共同消费订阅 Topic 中的消息。一个消费者可同时消费多个 Partition，但一个 Partition 只能被消费组内的一个消费者消费。
      */
     function __construct()
     {

@@ -21,17 +21,21 @@ use TencentCloud\Common\AbstractModel;
  * DeleteTopic请求参数结构体
  *
  * @method string getTopicId() 获取日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
  * @method void setTopicId(string $TopicId) 设置日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
  */
 class DeleteTopicRequest extends AbstractModel
 {
     /**
      * @var string 日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public $TopicId;
 
     /**
      * @param string $TopicId 日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     function __construct()
     {

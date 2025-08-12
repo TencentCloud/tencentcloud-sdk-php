@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotalCount() 获取分页的总数目
  * @method void setTotalCount(integer $TotalCount) 设置分页的总数目
+ * @method array getConsoleSharingInfos() 获取控制台免密分享列表
+ * @method void setConsoleSharingInfos(array $ConsoleSharingInfos) 设置控制台免密分享列表
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -33,12 +35,18 @@ class DescribeConsoleSharingListResponse extends AbstractModel
     public $TotalCount;
 
     /**
+     * @var array 控制台免密分享列表
+     */
+    public $ConsoleSharingInfos;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
      * @param integer $TotalCount 分页的总数目
+     * @param array $ConsoleSharingInfos 控制台免密分享列表
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -56,6 +64,15 @@ class DescribeConsoleSharingListResponse extends AbstractModel
         }
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("ConsoleSharingInfos",$param) and $param["ConsoleSharingInfos"] !== null) {
+            $this->ConsoleSharingInfos = [];
+            foreach ($param["ConsoleSharingInfos"] as $key => $value){
+                $obj = new ConsoleSharingInfo();
+                $obj->deserialize($value);
+                array_push($this->ConsoleSharingInfos, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

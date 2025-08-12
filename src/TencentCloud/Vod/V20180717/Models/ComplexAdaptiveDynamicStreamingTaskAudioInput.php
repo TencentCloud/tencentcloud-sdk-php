@@ -33,6 +33,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDefault(string $Default) 设置是否设置为自适应码流的默认音频。取值：
 <li>YES：设置为默认音频；</li>
 <li>NO：不设置为默认音频（默认值）。</li>
+
+ * @method integer getAudioTrackIdx() 获取音轨序号，表示选择音频源中的第几个音轨，从0开始计数。默认值为0，表示选择最靠前的音轨。
+ * @method void setAudioTrackIdx(integer $AudioTrackIdx) 设置音轨序号，表示选择音频源中的第几个音轨，从0开始计数。默认值为0，表示选择最靠前的音轨。
  */
 class ComplexAdaptiveDynamicStreamingTaskAudioInput extends AbstractModel
 {
@@ -60,12 +63,19 @@ class ComplexAdaptiveDynamicStreamingTaskAudioInput extends AbstractModel
     public $Default;
 
     /**
+     * @var integer 音轨序号，表示选择音频源中的第几个音轨，从0开始计数。默认值为0，表示选择最靠前的音轨。
+     */
+    public $AudioTrackIdx;
+
+    /**
      * @param string $FileId 音频源的媒体 ID。固定取该媒体中的首个音频流，视频流和其它音频流（如有）将被忽略。
      * @param string $Name 输出的自适应码流中的音频流名称，长度限制为16个字符。
      * @param string $Language 输出的自适应码流中的音频流语言，长度限制为16个字符。要求符合 RFC5646 规范。
      * @param string $Default 是否设置为自适应码流的默认音频。取值：
 <li>YES：设置为默认音频；</li>
 <li>NO：不设置为默认音频（默认值）。</li>
+
+     * @param integer $AudioTrackIdx 音轨序号，表示选择音频源中的第几个音轨，从0开始计数。默认值为0，表示选择最靠前的音轨。
      */
     function __construct()
     {
@@ -94,6 +104,10 @@ class ComplexAdaptiveDynamicStreamingTaskAudioInput extends AbstractModel
 
         if (array_key_exists("Default",$param) and $param["Default"] !== null) {
             $this->Default = $param["Default"];
+        }
+
+        if (array_key_exists("AudioTrackIdx",$param) and $param["AudioTrackIdx"] !== null) {
+            $this->AudioTrackIdx = $param["AudioTrackIdx"];
         }
     }
 }

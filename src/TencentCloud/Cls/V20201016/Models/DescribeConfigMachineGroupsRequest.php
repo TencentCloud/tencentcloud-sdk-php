@@ -21,17 +21,21 @@ use TencentCloud\Common\AbstractModel;
  * DescribeConfigMachineGroups请求参数结构体
  *
  * @method string getConfigId() 获取采集配置ID
+- 通过[获取采集规则配置](https://cloud.tencent.com/document/product/614/58616)获取采集配置Id。
  * @method void setConfigId(string $ConfigId) 设置采集配置ID
+- 通过[获取采集规则配置](https://cloud.tencent.com/document/product/614/58616)获取采集配置Id。
  */
 class DescribeConfigMachineGroupsRequest extends AbstractModel
 {
     /**
      * @var string 采集配置ID
+- 通过[获取采集规则配置](https://cloud.tencent.com/document/product/614/58616)获取采集配置Id。
      */
     public $ConfigId;
 
     /**
      * @param string $ConfigId 采集配置ID
+- 通过[获取采集规则配置](https://cloud.tencent.com/document/product/614/58616)获取采集配置Id。
      */
     function __construct()
     {

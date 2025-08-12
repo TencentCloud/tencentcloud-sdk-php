@@ -21,9 +21,15 @@ use TencentCloud\Common\AbstractModel;
  * CreateConfig请求参数结构体
  *
  * @method string getName() 获取采集配置名称
+- 名称种不得包含特殊字符｜
+- 名称最长255字符，超过截断
  * @method void setName(string $Name) 设置采集配置名称
+- 名称种不得包含特殊字符｜
+- 名称最长255字符，超过截断
  * @method string getOutput() 获取采集配置所属日志主题ID即TopicId
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
  * @method void setOutput(string $Output) 设置采集配置所属日志主题ID即TopicId
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
  * @method string getPath() 获取日志采集路径，包含文件名，支持多个路径，多个路径之间英文逗号分隔，文件采集情况下必填
  * @method void setPath(string $Path) 设置日志采集路径，包含文件名，支持多个路径，多个路径之间英文逗号分隔，文件采集情况下必填
  * @method string getLogType() 获取采集的日志类型，默认为minimalist_log。支持以下类型：
@@ -73,11 +79,14 @@ class CreateConfigRequest extends AbstractModel
 {
     /**
      * @var string 采集配置名称
+- 名称种不得包含特殊字符｜
+- 名称最长255字符，超过截断
      */
     public $Name;
 
     /**
      * @var string 采集配置所属日志主题ID即TopicId
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public $Output;
 
@@ -129,7 +138,10 @@ class CreateConfigRequest extends AbstractModel
 
     /**
      * @param string $Name 采集配置名称
+- 名称种不得包含特殊字符｜
+- 名称最长255字符，超过截断
      * @param string $Output 采集配置所属日志主题ID即TopicId
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      * @param string $Path 日志采集路径，包含文件名，支持多个路径，多个路径之间英文逗号分隔，文件采集情况下必填
      * @param string $LogType 采集的日志类型，默认为minimalist_log。支持以下类型：
 - json_log代表：JSON-文件日志（详见[使用 JSON 提取模式采集日志](https://cloud.tencent.com/document/product/614/17419)）；

@@ -273,12 +273,15 @@ MCU 混流转码费用，请参考文档：[云端混流转码计费说明](http
 停止指定的混流转推任务。如果没有调用 Stop 接口停止任务，所有参与混流转推的主播离开 TRTC 房间超过 AgentParams.MaxIdleTime 设置的时间后，任务也会自动停止。
  * @method Models\StopStreamIngestResponse StopStreamIngest(Models\StopStreamIngestRequest $req) 停止一个输入在线媒体流任务。
  * @method Models\StopWebRecordResponse StopWebRecord(Models\StopWebRecordRequest $req) 停止页面录制任务
+ * @method Models\TextToSpeechResponse TextToSpeech(Models\TextToSpeechRequest $req) 语音合成接口
+ * @method Models\TextToSpeechSSEResponse TextToSpeechSSE(Models\TextToSpeechSSERequest $req) SSE流式文本转语音
  * @method Models\UpdateAIConversationResponse UpdateAIConversation(Models\UpdateAIConversationRequest $req) 更新AIConversation参数
  * @method Models\UpdatePublishCdnStreamResponse UpdatePublishCdnStream(Models\UpdatePublishCdnStreamRequest $req) 接口说明：
 成功发起混流转推后，可以使用此接口来更新任务。仅在任务进行时有效，任务退出后更新将会返回错误。更新操作为增量更新模式。
 注意：为了保障推流的稳定性，更新不支持任务在纯音频、音视频、纯视频之间进行切换。
  * @method Models\UpdateStreamIngestResponse UpdateStreamIngest(Models\UpdateStreamIngestRequest $req) 更新输入在线媒体流任务的StreamUrl
  * @method Models\UpdateVoicePrintResponse UpdateVoicePrint(Models\UpdateVoicePrintRequest $req) 传入声纹ID以及对应音频信息，更新对应声纹信息
+ * @method Models\VoiceCloneResponse VoiceClone(Models\VoiceCloneRequest $req) 声音克隆
  */
 
 class TrtcClient extends AbstractClient

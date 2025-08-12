@@ -1077,7 +1077,9 @@ use TencentCloud\Ess\V20201111\Models as Models;
 
 ## 4. 复制模板 (OperateType=COPY)
 此操作将复制一个完全一样的模板，仅支持修改模板名称，若要修改其他模板内容，需到腾讯电子签控制台操作。
- * @method Models\RenewAutoSignLicenseResponse RenewAutoSignLicense(Models\RenewAutoSignLicenseRequest $req) 给医疗个人自动签许可续期。续期成功后，可对医疗自动签许可追加一年有效期，只可续期一次。
+ * @method Models\RenewAutoSignLicenseResponse RenewAutoSignLicense(Models\RenewAutoSignLicenseRequest $req) 已经不再使用
+
+给医疗个人自动签许可续期。续期成功后，可对医疗自动签许可追加一年有效期，只可续期一次。
 
 注意: `处方单等特殊场景专用，此接口为白名单功能，使用前请联系对接的客户经理沟通。`
  * @method Models\StartFlowResponse StartFlow(Models\StartFlowRequest $req) 此接口用于启动流程。它是模板发起合同的最后一步。

@@ -57,9 +57,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getOutput() 获取采集配置所属日志主题ID即TopicId
  * @method void setOutput(string $Output) 设置采集配置所属日志主题ID即TopicId
  * @method string getUpdateTime() 获取更新时间
+- 时间格式：yyyy-MM-dd HH:mm:ss
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
+- 时间格式：yyyy-MM-dd HH:mm:ss
  * @method string getCreateTime() 获取创建时间
+- 时间格式：yyyy-MM-dd HH:mm:ss
  * @method void setCreateTime(string $CreateTime) 设置创建时间
+- 时间格式：yyyy-MM-dd HH:mm:ss
  * @method string getUserDefineRule() 获取用户自定义解析字符串，详见[使用组合解析提取模式采集日志](https://cloud.tencent.com/document/product/614/61310)。
  * @method void setUserDefineRule(string $UserDefineRule) 设置用户自定义解析字符串，详见[使用组合解析提取模式采集日志](https://cloud.tencent.com/document/product/614/61310)。
  * @method string getAdvancedConfig() 获取高级采集配置。 Json字符串， Key/Value定义为如下：
@@ -133,11 +137,13 @@ class ConfigInfo extends AbstractModel
 
     /**
      * @var string 更新时间
+- 时间格式：yyyy-MM-dd HH:mm:ss
      */
     public $UpdateTime;
 
     /**
      * @var string 创建时间
+- 时间格式：yyyy-MM-dd HH:mm:ss
      */
     public $CreateTime;
 
@@ -178,7 +184,9 @@ class ConfigInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Output 采集配置所属日志主题ID即TopicId
      * @param string $UpdateTime 更新时间
+- 时间格式：yyyy-MM-dd HH:mm:ss
      * @param string $CreateTime 创建时间
+- 时间格式：yyyy-MM-dd HH:mm:ss
      * @param string $UserDefineRule 用户自定义解析字符串，详见[使用组合解析提取模式采集日志](https://cloud.tencent.com/document/product/614/61310)。
      * @param string $AdvancedConfig 高级采集配置。 Json字符串， Key/Value定义为如下：
 - ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时

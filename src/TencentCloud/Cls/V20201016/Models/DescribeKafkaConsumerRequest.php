@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeKafkaConsumer请求参数结构体
  *
- * @method string getFromTopicId() 获取日志主题ID
- * @method void setFromTopicId(string $FromTopicId) 设置日志主题ID
+ * @method string getFromTopicId() 获取日志主题Id。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
+ * @method void setFromTopicId(string $FromTopicId) 设置日志主题Id。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
  */
 class DescribeKafkaConsumerRequest extends AbstractModel
 {
     /**
-     * @var string 日志主题ID
+     * @var string 日志主题Id。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
      */
     public $FromTopicId;
 
     /**
-     * @param string $FromTopicId 日志主题ID
+     * @param string $FromTopicId 日志主题Id。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
      */
     function __construct()
     {

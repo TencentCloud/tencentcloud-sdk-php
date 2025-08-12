@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteDataTransform请求参数结构体
  *
- * @method string getTaskId() 获取数据加工任务id
- * @method void setTaskId(string $TaskId) 设置数据加工任务id
+ * @method string getTaskId() 获取数据加工任务ID- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务Id。
+ * @method void setTaskId(string $TaskId) 设置数据加工任务ID- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务Id。
  */
 class DeleteDataTransformRequest extends AbstractModel
 {
     /**
-     * @var string 数据加工任务id
+     * @var string 数据加工任务ID- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务Id。
      */
     public $TaskId;
 
     /**
-     * @param string $TaskId 数据加工任务id
+     * @param string $TaskId 数据加工任务ID- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务Id。
      */
     function __construct()
     {

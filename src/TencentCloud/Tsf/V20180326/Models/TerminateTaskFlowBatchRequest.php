@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TerminateTaskFlowBatch请求参数结构体
  *
- * @method string getFlowBatchId() 获取工作流批次 ID
- * @method void setFlowBatchId(string $FlowBatchId) 设置工作流批次 ID
+ * @method string getFlowBatchId() 获取工作流批次 ID，在[工作流执行记录](https://console.cloud.tencent.com/tsf/tct?rid=1&tab=taskflow)列表页第一列获取。
+ * @method void setFlowBatchId(string $FlowBatchId) 设置工作流批次 ID，在[工作流执行记录](https://console.cloud.tencent.com/tsf/tct?rid=1&tab=taskflow)列表页第一列获取。
  */
 class TerminateTaskFlowBatchRequest extends AbstractModel
 {
     /**
-     * @var string 工作流批次 ID
+     * @var string 工作流批次 ID，在[工作流执行记录](https://console.cloud.tencent.com/tsf/tct?rid=1&tab=taskflow)列表页第一列获取。
      */
     public $FlowBatchId;
 
     /**
-     * @param string $FlowBatchId 工作流批次 ID
+     * @param string $FlowBatchId 工作流批次 ID，在[工作流执行记录](https://console.cloud.tencent.com/tsf/tct?rid=1&tab=taskflow)列表页第一列获取。
      */
     function __construct()
     {

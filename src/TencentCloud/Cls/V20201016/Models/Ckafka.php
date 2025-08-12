@@ -20,58 +20,114 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CKafka的描述-需要投递到的kafka信息
  *
- * @method string getInstanceId() 获取Ckafka 的 InstanceId
- * @method void setInstanceId(string $InstanceId) 设置Ckafka 的 InstanceId
- * @method string getTopicName() 获取Ckafka 的 TopicName
- * @method void setTopicName(string $TopicName) 设置Ckafka 的 TopicName
- * @method string getVip() 获取Ckafka 的 Vip
- * @method void setVip(string $Vip) 设置Ckafka 的 Vip
- * @method string getVport() 获取Ckafka 的 Vport
- * @method void setVport(string $Vport) 设置Ckafka 的 Vport
- * @method string getInstanceName() 获取Ckafka 的 InstanceName
- * @method void setInstanceName(string $InstanceName) 设置Ckafka 的 InstanceName
- * @method string getTopicId() 获取Ckafka 的 TopicId
- * @method void setTopicId(string $TopicId) 设置Ckafka 的 TopicId
+ * @method string getInstanceId() 获取Ckafka 的 InstanceId。
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
+- 通过 [创建实例](https://cloud.tencent.com/document/product/597/53207) 获取实例id。
+ * @method void setInstanceId(string $InstanceId) 设置Ckafka 的 InstanceId。
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
+- 通过 [创建实例](https://cloud.tencent.com/document/product/597/53207) 获取实例id。
+ * @method string getTopicName() 获取Ckafka 的 TopicName。
+- 通过 [创建 Topic](https://cloud.tencent.com/document/product/597/73566) 获得TopicName。
+- 通过 [获取主题列表](https://cloud.tencent.com/document/product/597/40847) 获得TopicName。
+ * @method void setTopicName(string $TopicName) 设置Ckafka 的 TopicName。
+- 通过 [创建 Topic](https://cloud.tencent.com/document/product/597/73566) 获得TopicName。
+- 通过 [获取主题列表](https://cloud.tencent.com/document/product/597/40847) 获得TopicName。
+ * @method string getVip() 获取Ckafka 的 Vip。
+- 通过 [获取实例属性 ](https://cloud.tencent.com/document/product/597/40836) 获取vip信息。
+- 如果是通过 角色ARN 方式创建投递任务，则Vip字段可为空。
+ * @method void setVip(string $Vip) 设置Ckafka 的 Vip。
+- 通过 [获取实例属性 ](https://cloud.tencent.com/document/product/597/40836) 获取vip信息。
+- 如果是通过 角色ARN 方式创建投递任务，则Vip字段可为空。
+ * @method string getVport() 获取Ckafka 的 Vport。
+- 通过 [获取实例属性 ](https://cloud.tencent.com/document/product/597/40836) 获取vip port信息。
+- 如果是通过 角色ARN 方式创建投递任务，则Vport字段可为空。
+ * @method void setVport(string $Vport) 设置Ckafka 的 Vport。
+- 通过 [获取实例属性 ](https://cloud.tencent.com/document/product/597/40836) 获取vip port信息。
+- 如果是通过 角色ARN 方式创建投递任务，则Vport字段可为空。
+ * @method string getInstanceName() 获取Ckafka 的 InstanceName。
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取InstanceName。
+- 通过 [创建实例](https://cloud.tencent.com/document/product/597/53207) 获取InstanceName。
+- 如果是通过 角色ARN 方式创建投递任务，则InstanceName字段可为空。
+ * @method void setInstanceName(string $InstanceName) 设置Ckafka 的 InstanceName。
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取InstanceName。
+- 通过 [创建实例](https://cloud.tencent.com/document/product/597/53207) 获取InstanceName。
+- 如果是通过 角色ARN 方式创建投递任务，则InstanceName字段可为空。
+ * @method string getTopicId() 获取Ckafka 的 TopicId。
+- 通过 [创建 Topic](https://cloud.tencent.com/document/product/597/73566) 获得TopicId。
+- 通过 [获取主题列表](https://cloud.tencent.com/document/product/597/40847) 获得TopicId。
+- 如果是通过 角色ARN 方式创建投递任务，则TopicId字段可为空。
+ * @method void setTopicId(string $TopicId) 设置Ckafka 的 TopicId。
+- 通过 [创建 Topic](https://cloud.tencent.com/document/product/597/73566) 获得TopicId。
+- 通过 [获取主题列表](https://cloud.tencent.com/document/product/597/40847) 获得TopicId。
+- 如果是通过 角色ARN 方式创建投递任务，则TopicId字段可为空。
  */
 class Ckafka extends AbstractModel
 {
     /**
-     * @var string Ckafka 的 InstanceId
+     * @var string Ckafka 的 InstanceId。
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
+- 通过 [创建实例](https://cloud.tencent.com/document/product/597/53207) 获取实例id。
      */
     public $InstanceId;
 
     /**
-     * @var string Ckafka 的 TopicName
+     * @var string Ckafka 的 TopicName。
+- 通过 [创建 Topic](https://cloud.tencent.com/document/product/597/73566) 获得TopicName。
+- 通过 [获取主题列表](https://cloud.tencent.com/document/product/597/40847) 获得TopicName。
      */
     public $TopicName;
 
     /**
-     * @var string Ckafka 的 Vip
+     * @var string Ckafka 的 Vip。
+- 通过 [获取实例属性 ](https://cloud.tencent.com/document/product/597/40836) 获取vip信息。
+- 如果是通过 角色ARN 方式创建投递任务，则Vip字段可为空。
      */
     public $Vip;
 
     /**
-     * @var string Ckafka 的 Vport
+     * @var string Ckafka 的 Vport。
+- 通过 [获取实例属性 ](https://cloud.tencent.com/document/product/597/40836) 获取vip port信息。
+- 如果是通过 角色ARN 方式创建投递任务，则Vport字段可为空。
      */
     public $Vport;
 
     /**
-     * @var string Ckafka 的 InstanceName
+     * @var string Ckafka 的 InstanceName。
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取InstanceName。
+- 通过 [创建实例](https://cloud.tencent.com/document/product/597/53207) 获取InstanceName。
+- 如果是通过 角色ARN 方式创建投递任务，则InstanceName字段可为空。
      */
     public $InstanceName;
 
     /**
-     * @var string Ckafka 的 TopicId
+     * @var string Ckafka 的 TopicId。
+- 通过 [创建 Topic](https://cloud.tencent.com/document/product/597/73566) 获得TopicId。
+- 通过 [获取主题列表](https://cloud.tencent.com/document/product/597/40847) 获得TopicId。
+- 如果是通过 角色ARN 方式创建投递任务，则TopicId字段可为空。
      */
     public $TopicId;
 
     /**
-     * @param string $InstanceId Ckafka 的 InstanceId
-     * @param string $TopicName Ckafka 的 TopicName
-     * @param string $Vip Ckafka 的 Vip
-     * @param string $Vport Ckafka 的 Vport
-     * @param string $InstanceName Ckafka 的 InstanceName
-     * @param string $TopicId Ckafka 的 TopicId
+     * @param string $InstanceId Ckafka 的 InstanceId。
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取实例id。
+- 通过 [创建实例](https://cloud.tencent.com/document/product/597/53207) 获取实例id。
+     * @param string $TopicName Ckafka 的 TopicName。
+- 通过 [创建 Topic](https://cloud.tencent.com/document/product/597/73566) 获得TopicName。
+- 通过 [获取主题列表](https://cloud.tencent.com/document/product/597/40847) 获得TopicName。
+     * @param string $Vip Ckafka 的 Vip。
+- 通过 [获取实例属性 ](https://cloud.tencent.com/document/product/597/40836) 获取vip信息。
+- 如果是通过 角色ARN 方式创建投递任务，则Vip字段可为空。
+     * @param string $Vport Ckafka 的 Vport。
+- 通过 [获取实例属性 ](https://cloud.tencent.com/document/product/597/40836) 获取vip port信息。
+- 如果是通过 角色ARN 方式创建投递任务，则Vport字段可为空。
+     * @param string $InstanceName Ckafka 的 InstanceName。
+- 通过 [获取实例列表信息](https://cloud.tencent.com/document/product/597/40835) 获取InstanceName。
+- 通过 [创建实例](https://cloud.tencent.com/document/product/597/53207) 获取InstanceName。
+- 如果是通过 角色ARN 方式创建投递任务，则InstanceName字段可为空。
+     * @param string $TopicId Ckafka 的 TopicId。
+- 通过 [创建 Topic](https://cloud.tencent.com/document/product/597/73566) 获得TopicId。
+- 通过 [获取主题列表](https://cloud.tencent.com/document/product/597/40847) 获得TopicId。
+- 如果是通过 角色ARN 方式创建投递任务，则TopicId字段可为空。
      */
     function __construct()
     {

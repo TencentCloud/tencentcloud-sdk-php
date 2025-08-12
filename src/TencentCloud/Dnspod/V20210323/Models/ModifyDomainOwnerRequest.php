@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() 获取域名
  * @method void setDomain(string $Domain) 设置域名
- * @method string getAccount() 获取域名需要转入的账号，支持Uin或者邮箱格式
- * @method void setAccount(string $Account) 设置域名需要转入的账号，支持Uin或者邮箱格式
+ * @method string getAccount() 获取域名需要转入的账号Uin
+ * @method void setAccount(string $Account) 设置域名需要转入的账号Uin
  * @method integer getDomainId() 获取域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
  * @method void setDomainId(integer $DomainId) 设置域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
  */
@@ -35,7 +35,7 @@ class ModifyDomainOwnerRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var string 域名需要转入的账号，支持Uin或者邮箱格式
+     * @var string 域名需要转入的账号Uin
      */
     public $Account;
 
@@ -46,7 +46,7 @@ class ModifyDomainOwnerRequest extends AbstractModel
 
     /**
      * @param string $Domain 域名
-     * @param string $Account 域名需要转入的账号，支持Uin或者邮箱格式
+     * @param string $Account 域名需要转入的账号Uin
      * @param integer $DomainId 域名 ID 。参数 DomainId 优先级比参数 Domain 高，如果传递参数 DomainId 将忽略参数 Domain 。可以通过接口DescribeDomainList查到所有的Domain以及DomainId
      */
     function __construct()

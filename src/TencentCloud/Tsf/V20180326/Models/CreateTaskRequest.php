@@ -24,22 +24,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskName(string $TaskName) 设置任务名称，任务长度64字符
  * @method string getTaskContent() 获取任务内容，长度限制65536个字节
  * @method void setTaskContent(string $TaskContent) 设置任务内容，长度限制65536个字节
- * @method string getExecuteType() 获取执行类型，unicast/broadcast
- * @method void setExecuteType(string $ExecuteType) 设置执行类型，unicast/broadcast
- * @method string getTaskType() 获取任务类型,java
- * @method void setTaskType(string $TaskType) 设置任务类型,java
- * @method integer getTimeOut() 获取任务超时时间， 时间单位 ms
- * @method void setTimeOut(integer $TimeOut) 设置任务超时时间， 时间单位 ms
- * @method string getGroupId() 获取部署组ID
- * @method void setGroupId(string $GroupId) 设置部署组ID
+ * @method string getExecuteType() 获取任务执行方式，unicast：随机单节点执行，broadcast：广播执行，shard：分片执行
+ * @method void setExecuteType(string $ExecuteType) 设置任务执行方式，unicast：随机单节点执行，broadcast：广播执行，shard：分片执行
+ * @method string getTaskType() 获取任务类型。当前只支持一种任务类型。枚举值，java：Java类任务
+ * @method void setTaskType(string $TaskType) 设置任务类型。当前只支持一种任务类型。枚举值，java：Java类任务
+ * @method integer getTimeOut() 获取任务超时时间，取值大于0，单位：毫秒（ms）
+ * @method void setTimeOut(integer $TimeOut) 设置任务超时时间，取值大于0，单位：毫秒（ms）
+ * @method string getGroupId() 获取部署组ID。在[应用管理](https://console.cloud.tencent.com/tsf/app?rid=1)，点击应用ID进入应用部署页查看部署组ID。
+ * @method void setGroupId(string $GroupId) 设置部署组ID。在[应用管理](https://console.cloud.tencent.com/tsf/app?rid=1)，点击应用ID进入应用部署页查看部署组ID。
  * @method TaskRule getTaskRule() 获取触发规则
  * @method void setTaskRule(TaskRule $TaskRule) 设置触发规则
  * @method integer getRetryCount() 获取重试次数，0 <= RetryCount<= 10
  * @method void setRetryCount(integer $RetryCount) 设置重试次数，0 <= RetryCount<= 10
  * @method integer getRetryInterval() 获取重试间隔， 0 <= RetryInterval <= 600000， 时间单位 ms
  * @method void setRetryInterval(integer $RetryInterval) 设置重试间隔， 0 <= RetryInterval <= 600000， 时间单位 ms
- * @method integer getShardCount() 获取分片数量
- * @method void setShardCount(integer $ShardCount) 设置分片数量
+ * @method integer getShardCount() 获取分片数量，仅当任务执行方式为分片执行时需要设置该值，取值范围2~1000
+ * @method void setShardCount(integer $ShardCount) 设置分片数量，仅当任务执行方式为分片执行时需要设置该值，取值范围2~1000
  * @method array getShardArguments() 获取分片参数
  * @method void setShardArguments(array $ShardArguments) 设置分片参数
  * @method string getSuccessOperator() 获取判断任务成功的操作符
@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAdvanceSettings(AdvanceSettings $AdvanceSettings) 设置高级设置
  * @method string getTaskArgument() 获取任务参数，长度限制10000个字符
  * @method void setTaskArgument(string $TaskArgument) 设置任务参数，长度限制10000个字符
- * @method array getProgramIdList() 获取无
- * @method void setProgramIdList(array $ProgramIdList) 设置无
+ * @method array getProgramIdList() 获取数据集列表
+ * @method void setProgramIdList(array $ProgramIdList) 设置数据集列表
  */
 class CreateTaskRequest extends AbstractModel
 {
@@ -66,22 +66,22 @@ class CreateTaskRequest extends AbstractModel
     public $TaskContent;
 
     /**
-     * @var string 执行类型，unicast/broadcast
+     * @var string 任务执行方式，unicast：随机单节点执行，broadcast：广播执行，shard：分片执行
      */
     public $ExecuteType;
 
     /**
-     * @var string 任务类型,java
+     * @var string 任务类型。当前只支持一种任务类型。枚举值，java：Java类任务
      */
     public $TaskType;
 
     /**
-     * @var integer 任务超时时间， 时间单位 ms
+     * @var integer 任务超时时间，取值大于0，单位：毫秒（ms）
      */
     public $TimeOut;
 
     /**
-     * @var string 部署组ID
+     * @var string 部署组ID。在[应用管理](https://console.cloud.tencent.com/tsf/app?rid=1)，点击应用ID进入应用部署页查看部署组ID。
      */
     public $GroupId;
 
@@ -101,7 +101,7 @@ class CreateTaskRequest extends AbstractModel
     public $RetryInterval;
 
     /**
-     * @var integer 分片数量
+     * @var integer 分片数量，仅当任务执行方式为分片执行时需要设置该值，取值范围2~1000
      */
     public $ShardCount;
 
@@ -131,27 +131,27 @@ class CreateTaskRequest extends AbstractModel
     public $TaskArgument;
 
     /**
-     * @var array 无
+     * @var array 数据集列表
      */
     public $ProgramIdList;
 
     /**
      * @param string $TaskName 任务名称，任务长度64字符
      * @param string $TaskContent 任务内容，长度限制65536个字节
-     * @param string $ExecuteType 执行类型，unicast/broadcast
-     * @param string $TaskType 任务类型,java
-     * @param integer $TimeOut 任务超时时间， 时间单位 ms
-     * @param string $GroupId 部署组ID
+     * @param string $ExecuteType 任务执行方式，unicast：随机单节点执行，broadcast：广播执行，shard：分片执行
+     * @param string $TaskType 任务类型。当前只支持一种任务类型。枚举值，java：Java类任务
+     * @param integer $TimeOut 任务超时时间，取值大于0，单位：毫秒（ms）
+     * @param string $GroupId 部署组ID。在[应用管理](https://console.cloud.tencent.com/tsf/app?rid=1)，点击应用ID进入应用部署页查看部署组ID。
      * @param TaskRule $TaskRule 触发规则
      * @param integer $RetryCount 重试次数，0 <= RetryCount<= 10
      * @param integer $RetryInterval 重试间隔， 0 <= RetryInterval <= 600000， 时间单位 ms
-     * @param integer $ShardCount 分片数量
+     * @param integer $ShardCount 分片数量，仅当任务执行方式为分片执行时需要设置该值，取值范围2~1000
      * @param array $ShardArguments 分片参数
      * @param string $SuccessOperator 判断任务成功的操作符
      * @param string $SuccessRatio 判断任务成功率的阈值，如100
      * @param AdvanceSettings $AdvanceSettings 高级设置
      * @param string $TaskArgument 任务参数，长度限制10000个字符
-     * @param array $ProgramIdList 无
+     * @param array $ProgramIdList 数据集列表
      */
     function __construct()
     {

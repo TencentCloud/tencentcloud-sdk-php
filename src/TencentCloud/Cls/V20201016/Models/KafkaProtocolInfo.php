@@ -21,13 +21,37 @@ use TencentCloud\Common\AbstractModel;
  * Kafka访问协议
  *
  * @method string getProtocol() 获取协议类型，支持的协议类型包括 plaintext、sasl_plaintext 或 sasl_ssl。建议使用 sasl_ssl，此协议会进行连接加密同时需要用户认证。
-入参必填
+
+- 当IsEncryptionAddr为true时，Protocol必填。
+- 支持的协议类型如下：
+    - plaintext：纯文本无加密协议
+    - sasl_ssl：SASL 认证 + SSL 加密
+    - ssl：纯 SSL/TLS 加密协议
+    - sasl_plaintext：SASL 认证 + 非加密通道
+
  * @method void setProtocol(string $Protocol) 设置协议类型，支持的协议类型包括 plaintext、sasl_plaintext 或 sasl_ssl。建议使用 sasl_ssl，此协议会进行连接加密同时需要用户认证。
-入参必填
+
+- 当IsEncryptionAddr为true时，Protocol必填。
+- 支持的协议类型如下：
+    - plaintext：纯文本无加密协议
+    - sasl_ssl：SASL 认证 + SSL 加密
+    - ssl：纯 SSL/TLS 加密协议
+    - sasl_plaintext：SASL 认证 + 非加密通道
+
  * @method string getMechanism() 获取加密类型，支持 PLAIN、SCRAM-SHA-256 或 SCRAM-SHA-512。
-当Protocol为sasl_plaintext或sasl_ssl时必填
+
+- 当Protocol为  `sasl_plaintext` 或 `sasl_ssl` 时 Mechanism 必填。
+- 支持加密类型如下
+    -  PLAIN：明文认证
+    -  SCRAM-SHA-256：基于挑战-响应机制，使用PBKDF2-HMAC-SHA256算法
+    -  SCRAM-SHA-512：增强版SCRAM，使用PBKDF2-HMAC-SHA512算法
  * @method void setMechanism(string $Mechanism) 设置加密类型，支持 PLAIN、SCRAM-SHA-256 或 SCRAM-SHA-512。
-当Protocol为sasl_plaintext或sasl_ssl时必填
+
+- 当Protocol为  `sasl_plaintext` 或 `sasl_ssl` 时 Mechanism 必填。
+- 支持加密类型如下
+    -  PLAIN：明文认证
+    -  SCRAM-SHA-256：基于挑战-响应机制，使用PBKDF2-HMAC-SHA256算法
+    -  SCRAM-SHA-512：增强版SCRAM，使用PBKDF2-HMAC-SHA512算法
  * @method string getUserName() 获取用户名。
 当Protocol为sasl_plaintext或sasl_ssl时必填
  * @method void setUserName(string $UserName) 设置用户名。
@@ -41,13 +65,25 @@ class KafkaProtocolInfo extends AbstractModel
 {
     /**
      * @var string 协议类型，支持的协议类型包括 plaintext、sasl_plaintext 或 sasl_ssl。建议使用 sasl_ssl，此协议会进行连接加密同时需要用户认证。
-入参必填
+
+- 当IsEncryptionAddr为true时，Protocol必填。
+- 支持的协议类型如下：
+    - plaintext：纯文本无加密协议
+    - sasl_ssl：SASL 认证 + SSL 加密
+    - ssl：纯 SSL/TLS 加密协议
+    - sasl_plaintext：SASL 认证 + 非加密通道
+
      */
     public $Protocol;
 
     /**
      * @var string 加密类型，支持 PLAIN、SCRAM-SHA-256 或 SCRAM-SHA-512。
-当Protocol为sasl_plaintext或sasl_ssl时必填
+
+- 当Protocol为  `sasl_plaintext` 或 `sasl_ssl` 时 Mechanism 必填。
+- 支持加密类型如下
+    -  PLAIN：明文认证
+    -  SCRAM-SHA-256：基于挑战-响应机制，使用PBKDF2-HMAC-SHA256算法
+    -  SCRAM-SHA-512：增强版SCRAM，使用PBKDF2-HMAC-SHA512算法
      */
     public $Mechanism;
 
@@ -65,9 +101,21 @@ class KafkaProtocolInfo extends AbstractModel
 
     /**
      * @param string $Protocol 协议类型，支持的协议类型包括 plaintext、sasl_plaintext 或 sasl_ssl。建议使用 sasl_ssl，此协议会进行连接加密同时需要用户认证。
-入参必填
+
+- 当IsEncryptionAddr为true时，Protocol必填。
+- 支持的协议类型如下：
+    - plaintext：纯文本无加密协议
+    - sasl_ssl：SASL 认证 + SSL 加密
+    - ssl：纯 SSL/TLS 加密协议
+    - sasl_plaintext：SASL 认证 + 非加密通道
+
      * @param string $Mechanism 加密类型，支持 PLAIN、SCRAM-SHA-256 或 SCRAM-SHA-512。
-当Protocol为sasl_plaintext或sasl_ssl时必填
+
+- 当Protocol为  `sasl_plaintext` 或 `sasl_ssl` 时 Mechanism 必填。
+- 支持加密类型如下
+    -  PLAIN：明文认证
+    -  SCRAM-SHA-256：基于挑战-响应机制，使用PBKDF2-HMAC-SHA256算法
+    -  SCRAM-SHA-512：增强版SCRAM，使用PBKDF2-HMAC-SHA512算法
      * @param string $UserName 用户名。
 当Protocol为sasl_plaintext或sasl_ssl时必填
      * @param string $Password 用户密码。

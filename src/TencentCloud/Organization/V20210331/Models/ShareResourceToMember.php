@@ -20,70 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 与我共享的资源
  *
- * @method string getResourceId() 获取资源ID
- * @method void setResourceId(string $ResourceId) 设置资源ID
- * @method string getType() 获取资源类型
- * @method void setType(string $Type) 设置资源类型
- * @method string getUnitId() 获取共享单元ID
- * @method void setUnitId(string $UnitId) 设置共享单元ID
- * @method string getUnitName() 获取共享单元名
- * @method void setUnitName(string $UnitName) 设置共享单元名
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method string getProductResourceId() 获取业务资源ID
- * @method void setProductResourceId(string $ProductResourceId) 设置业务资源ID
- * @method integer getShareManagerUin() 获取共享管理员uin
-注意：此字段可能返回 null，表示取不到有效值。
- * @method void setShareManagerUin(integer $ShareManagerUin) 设置共享管理员uin
-注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getResourceId() 获取共享单元资源ID。
+ * @method void setResourceId(string $ResourceId) 设置共享单元资源ID。
+ * @method string getType() 获取资源类型。
+ * @method void setType(string $Type) 设置资源类型。
+ * @method string getUnitId() 获取共享单元ID。
+ * @method void setUnitId(string $UnitId) 设置共享单元ID。
+ * @method string getUnitName() 获取共享单元名称。
+ * @method void setUnitName(string $UnitName) 设置共享单元名称。
+ * @method string getCreateTime() 获取创建时间。
+ * @method void setCreateTime(string $CreateTime) 设置创建时间。
+ * @method string getProductResourceId() 获取业务资源ID。
+ * @method void setProductResourceId(string $ProductResourceId) 设置业务资源ID。
+ * @method integer getShareManagerUin() 获取共享账号Uin。
+ * @method void setShareManagerUin(integer $ShareManagerUin) 设置共享账号Uin。
  */
 class ShareResourceToMember extends AbstractModel
 {
     /**
-     * @var string 资源ID
+     * @var string 共享单元资源ID。
      */
     public $ResourceId;
 
     /**
-     * @var string 资源类型
+     * @var string 资源类型。
      */
     public $Type;
 
     /**
-     * @var string 共享单元ID
+     * @var string 共享单元ID。
      */
     public $UnitId;
 
     /**
-     * @var string 共享单元名
+     * @var string 共享单元名称。
      */
     public $UnitName;
 
     /**
-     * @var string 创建时间
+     * @var string 创建时间。
      */
     public $CreateTime;
 
     /**
-     * @var string 业务资源ID
+     * @var string 业务资源ID。
      */
     public $ProductResourceId;
 
     /**
-     * @var integer 共享管理员uin
-注意：此字段可能返回 null，表示取不到有效值。
+     * @var integer 共享账号Uin。
      */
     public $ShareManagerUin;
 
     /**
-     * @param string $ResourceId 资源ID
-     * @param string $Type 资源类型
-     * @param string $UnitId 共享单元ID
-     * @param string $UnitName 共享单元名
-     * @param string $CreateTime 创建时间
-     * @param string $ProductResourceId 业务资源ID
-     * @param integer $ShareManagerUin 共享管理员uin
-注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ResourceId 共享单元资源ID。
+     * @param string $Type 资源类型。
+     * @param string $UnitId 共享单元ID。
+     * @param string $UnitName 共享单元名称。
+     * @param string $CreateTime 创建时间。
+     * @param string $ProductResourceId 业务资源ID。
+     * @param integer $ShareManagerUin 共享账号Uin。
      */
     function __construct()
     {

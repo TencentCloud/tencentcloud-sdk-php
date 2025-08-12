@@ -20,66 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyLaneRule请求参数结构体
  *
- * @method string getRuleId() 获取泳道规则ID
- * @method void setRuleId(string $RuleId) 设置泳道规则ID
- * @method string getRuleName() 获取泳道规则名称
- * @method void setRuleName(string $RuleName) 设置泳道规则名称
- * @method string getRemark() 获取泳道规则备注
- * @method void setRemark(string $Remark) 设置泳道规则备注
- * @method array getRuleTagList() 获取泳道规则标签列表
- * @method void setRuleTagList(array $RuleTagList) 设置泳道规则标签列表
- * @method string getRuleTagRelationship() 获取泳道规则标签关系
- * @method void setRuleTagRelationship(string $RuleTagRelationship) 设置泳道规则标签关系
- * @method string getLaneId() 获取泳道ID
- * @method void setLaneId(string $LaneId) 设置泳道ID
- * @method boolean getEnable() 获取开启状态
- * @method void setEnable(boolean $Enable) 设置开启状态
+ * @method string getRuleId() 获取灰度发布规则ID。该参数可以通过调用 [DescribeLaneRules](https://cloud.tencent.com/document/product/649/44505) 的返回值中的 RuleId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=grayscale&subTab=lanerule)查看；也可以调用[CreateLaneRule](https://cloud.tencent.com/document/product/649/44507)创建新的灰度发布规则。
+ * @method void setRuleId(string $RuleId) 设置灰度发布规则ID。该参数可以通过调用 [DescribeLaneRules](https://cloud.tencent.com/document/product/649/44505) 的返回值中的 RuleId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=grayscale&subTab=lanerule)查看；也可以调用[CreateLaneRule](https://cloud.tencent.com/document/product/649/44507)创建新的灰度发布规则。
+ * @method string getRuleName() 获取灰度发布规则名称，最多支持60个字符，支持中英文字符。
+ * @method void setRuleName(string $RuleName) 设置灰度发布规则名称，最多支持60个字符，支持中英文字符。
+ * @method string getRemark() 获取灰度发布规则备注，最多支持200个字符。
+ * @method void setRemark(string $Remark) 设置灰度发布规则备注，最多支持200个字符。
+ * @method array getRuleTagList() 获取灰度发布规则标签列表。
+ * @method void setRuleTagList(array $RuleTagList) 设置灰度发布规则标签列表。
+ * @method string getRuleTagRelationship() 获取灰度发布规则标签关系。- RELEATION_AND：与- RELEATION_OR：或
+ * @method void setRuleTagRelationship(string $RuleTagRelationship) 设置灰度发布规则标签关系。- RELEATION_AND：与- RELEATION_OR：或
+ * @method string getLaneId() 获取泳道配置ID。该参数可以通过调用 [DescribeLanes](https://cloud.tencent.com/document/product/649/44504) 的返回值中的 LaneId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=grayscale&subTab=lane)查看；也可以调用[CreateLane](https://cloud.tencent.com/document/product/649/44508)创建新的泳道配置。
+ * @method void setLaneId(string $LaneId) 设置泳道配置ID。该参数可以通过调用 [DescribeLanes](https://cloud.tencent.com/document/product/649/44504) 的返回值中的 LaneId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=grayscale&subTab=lane)查看；也可以调用[CreateLane](https://cloud.tencent.com/document/product/649/44508)创建新的泳道配置。
+ * @method boolean getEnable() 获取开启状态。
+- true：开启
+- false：关闭
+ * @method void setEnable(boolean $Enable) 设置开启状态。
+- true：开启
+- false：关闭
  */
 class ModifyLaneRuleRequest extends AbstractModel
 {
     /**
-     * @var string 泳道规则ID
+     * @var string 灰度发布规则ID。该参数可以通过调用 [DescribeLaneRules](https://cloud.tencent.com/document/product/649/44505) 的返回值中的 RuleId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=grayscale&subTab=lanerule)查看；也可以调用[CreateLaneRule](https://cloud.tencent.com/document/product/649/44507)创建新的灰度发布规则。
      */
     public $RuleId;
 
     /**
-     * @var string 泳道规则名称
+     * @var string 灰度发布规则名称，最多支持60个字符，支持中英文字符。
      */
     public $RuleName;
 
     /**
-     * @var string 泳道规则备注
+     * @var string 灰度发布规则备注，最多支持200个字符。
      */
     public $Remark;
 
     /**
-     * @var array 泳道规则标签列表
+     * @var array 灰度发布规则标签列表。
      */
     public $RuleTagList;
 
     /**
-     * @var string 泳道规则标签关系
+     * @var string 灰度发布规则标签关系。- RELEATION_AND：与- RELEATION_OR：或
      */
     public $RuleTagRelationship;
 
     /**
-     * @var string 泳道ID
+     * @var string 泳道配置ID。该参数可以通过调用 [DescribeLanes](https://cloud.tencent.com/document/product/649/44504) 的返回值中的 LaneId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=grayscale&subTab=lane)查看；也可以调用[CreateLane](https://cloud.tencent.com/document/product/649/44508)创建新的泳道配置。
      */
     public $LaneId;
 
     /**
-     * @var boolean 开启状态
+     * @var boolean 开启状态。
+- true：开启
+- false：关闭
      */
     public $Enable;
 
     /**
-     * @param string $RuleId 泳道规则ID
-     * @param string $RuleName 泳道规则名称
-     * @param string $Remark 泳道规则备注
-     * @param array $RuleTagList 泳道规则标签列表
-     * @param string $RuleTagRelationship 泳道规则标签关系
-     * @param string $LaneId 泳道ID
-     * @param boolean $Enable 开启状态
+     * @param string $RuleId 灰度发布规则ID。该参数可以通过调用 [DescribeLaneRules](https://cloud.tencent.com/document/product/649/44505) 的返回值中的 RuleId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=grayscale&subTab=lanerule)查看；也可以调用[CreateLaneRule](https://cloud.tencent.com/document/product/649/44507)创建新的灰度发布规则。
+     * @param string $RuleName 灰度发布规则名称，最多支持60个字符，支持中英文字符。
+     * @param string $Remark 灰度发布规则备注，最多支持200个字符。
+     * @param array $RuleTagList 灰度发布规则标签列表。
+     * @param string $RuleTagRelationship 灰度发布规则标签关系。- RELEATION_AND：与- RELEATION_OR：或
+     * @param string $LaneId 泳道配置ID。该参数可以通过调用 [DescribeLanes](https://cloud.tencent.com/document/product/649/44504) 的返回值中的 LaneId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=grayscale&subTab=lane)查看；也可以调用[CreateLane](https://cloud.tencent.com/document/product/649/44508)创建新的泳道配置。
+     * @param boolean $Enable 开启状态。
+- true：开启
+- false：关闭
      */
     function __construct()
     {

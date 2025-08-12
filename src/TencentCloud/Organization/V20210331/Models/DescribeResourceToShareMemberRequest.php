@@ -20,43 +20,43 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeResourceToShareMember请求参数结构体
  *
- * @method string getArea() 获取地域
- * @method void setArea(string $Area) 设置地域
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
- * @method integer getLimit() 获取每页条数
- * @method void setLimit(integer $Limit) 设置每页条数
- * @method string getSearchKey() 获取搜索关键字，支持业务资源ID搜索
- * @method void setSearchKey(string $SearchKey) 设置搜索关键字，支持业务资源ID搜索
- * @method string getType() 获取资源类型
- * @method void setType(string $Type) 设置资源类型
+ * @method string getArea() 获取共享地域。可通过接口[DescribeShareAreas](https://cloud.tencent.com/document/product/850/103050)获取支持共享的地域。
+ * @method void setArea(string $Area) 设置共享地域。可通过接口[DescribeShareAreas](https://cloud.tencent.com/document/product/850/103050)获取支持共享的地域。
+ * @method integer getOffset() 获取偏移量。取值是limit的整数倍。默认值 : 0。
+ * @method void setOffset(integer $Offset) 设置偏移量。取值是limit的整数倍。默认值 : 0。
+ * @method integer getLimit() 获取限制数目。取值范围：1~50。
+ * @method void setLimit(integer $Limit) 设置限制数目。取值范围：1~50。
+ * @method string getSearchKey() 获取搜索关键字，支持业务资源ID搜索。
+ * @method void setSearchKey(string $SearchKey) 设置搜索关键字，支持业务资源ID搜索。
+ * @method string getType() 获取共享资源类型。支持共享的资源类型,请参见[资源共享概述](https://cloud.tencent.com/document/product/850/59489)
+ * @method void setType(string $Type) 设置共享资源类型。支持共享的资源类型,请参见[资源共享概述](https://cloud.tencent.com/document/product/850/59489)
  * @method array getProductResourceIds() 获取业务资源ID。最大50个
  * @method void setProductResourceIds(array $ProductResourceIds) 设置业务资源ID。最大50个
  */
 class DescribeResourceToShareMemberRequest extends AbstractModel
 {
     /**
-     * @var string 地域
+     * @var string 共享地域。可通过接口[DescribeShareAreas](https://cloud.tencent.com/document/product/850/103050)获取支持共享的地域。
      */
     public $Area;
 
     /**
-     * @var integer 偏移量
+     * @var integer 偏移量。取值是limit的整数倍。默认值 : 0。
      */
     public $Offset;
 
     /**
-     * @var integer 每页条数
+     * @var integer 限制数目。取值范围：1~50。
      */
     public $Limit;
 
     /**
-     * @var string 搜索关键字，支持业务资源ID搜索
+     * @var string 搜索关键字，支持业务资源ID搜索。
      */
     public $SearchKey;
 
     /**
-     * @var string 资源类型
+     * @var string 共享资源类型。支持共享的资源类型,请参见[资源共享概述](https://cloud.tencent.com/document/product/850/59489)
      */
     public $Type;
 
@@ -66,11 +66,11 @@ class DescribeResourceToShareMemberRequest extends AbstractModel
     public $ProductResourceIds;
 
     /**
-     * @param string $Area 地域
-     * @param integer $Offset 偏移量
-     * @param integer $Limit 每页条数
-     * @param string $SearchKey 搜索关键字，支持业务资源ID搜索
-     * @param string $Type 资源类型
+     * @param string $Area 共享地域。可通过接口[DescribeShareAreas](https://cloud.tencent.com/document/product/850/103050)获取支持共享的地域。
+     * @param integer $Offset 偏移量。取值是limit的整数倍。默认值 : 0。
+     * @param integer $Limit 限制数目。取值范围：1~50。
+     * @param string $SearchKey 搜索关键字，支持业务资源ID搜索。
+     * @param string $Type 共享资源类型。支持共享的资源类型,请参见[资源共享概述](https://cloud.tencent.com/document/product/850/59489)
      * @param array $ProductResourceIds 业务资源ID。最大50个
      */
     function __construct()

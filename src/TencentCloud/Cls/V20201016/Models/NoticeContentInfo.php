@@ -21,9 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * 通知模板内容
  *
  * @method string getTitle() 获取通知内容模板标题信息。
-部分通知渠道类型不支持“标题”，请参照腾讯云控制台页面。
+部分通知渠道类型不支持“标题”，请参照[腾讯云控制台页面](https://console.cloud.tencent.com/cls/alarm/notice-template)。
  * @method void setTitle(string $Title) 设置通知内容模板标题信息。
-部分通知渠道类型不支持“标题”，请参照腾讯云控制台页面。
+部分通知渠道类型不支持“标题”，请参照[腾讯云控制台页面](https://console.cloud.tencent.com/cls/alarm/notice-template)。
  * @method string getContent() 获取通知内容模板正文信息。
  * @method void setContent(string $Content) 设置通知内容模板正文信息。
  * @method array getHeaders() 获取请求头（Request Headers）：在HTTP请求中，请求头包含了客户端向服务器发送的附加信息，如用户代理、授权凭证、期望的响应格式等。
@@ -35,7 +35,7 @@ class NoticeContentInfo extends AbstractModel
 {
     /**
      * @var string 通知内容模板标题信息。
-部分通知渠道类型不支持“标题”，请参照腾讯云控制台页面。
+部分通知渠道类型不支持“标题”，请参照[腾讯云控制台页面](https://console.cloud.tencent.com/cls/alarm/notice-template)。
      */
     public $Title;
 
@@ -52,7 +52,7 @@ class NoticeContentInfo extends AbstractModel
 
     /**
      * @param string $Title 通知内容模板标题信息。
-部分通知渠道类型不支持“标题”，请参照腾讯云控制台页面。
+部分通知渠道类型不支持“标题”，请参照[腾讯云控制台页面](https://console.cloud.tencent.com/cls/alarm/notice-template)。
      * @param string $Content 通知内容模板正文信息。
      * @param array $Headers 请求头（Request Headers）：在HTTP请求中，请求头包含了客户端向服务器发送的附加信息，如用户代理、授权凭证、期望的响应格式等。
 仅“自定义回调”支持该配置。

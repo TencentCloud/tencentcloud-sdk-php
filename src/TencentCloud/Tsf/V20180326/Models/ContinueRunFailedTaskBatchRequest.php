@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ContinueRunFailedTaskBatch请求参数结构体
  *
- * @method string getBatchId() 获取批次ID。
- * @method void setBatchId(string $BatchId) 设置批次ID。
+ * @method string getBatchId() 获取任务批次ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)页面点击任务ID进入执行记录页，第一列即为任务批次ID，在[任务执行记录](https://console.cloud.tencent.com/tsf/tct?rid=1&tab=task)页能查看所有任务批次ID。
+ * @method void setBatchId(string $BatchId) 设置任务批次ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)页面点击任务ID进入执行记录页，第一列即为任务批次ID，在[任务执行记录](https://console.cloud.tencent.com/tsf/tct?rid=1&tab=task)页能查看所有任务批次ID。
  */
 class ContinueRunFailedTaskBatchRequest extends AbstractModel
 {
     /**
-     * @var string 批次ID。
+     * @var string 任务批次ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)页面点击任务ID进入执行记录页，第一列即为任务批次ID，在[任务执行记录](https://console.cloud.tencent.com/tsf/tct?rid=1&tab=task)页能查看所有任务批次ID。
      */
     public $BatchId;
 
     /**
-     * @param string $BatchId 批次ID。
+     * @param string $BatchId 任务批次ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)页面点击任务ID进入执行记录页，第一列即为任务批次ID，在[任务执行记录](https://console.cloud.tencent.com/tsf/tct?rid=1&tab=task)页能查看所有任务批次ID。
      */
     function __construct()
     {

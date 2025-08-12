@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RedoTaskFlowBatch返回参数结构体
  *
- * @method string getResult() 获取工作流批次历史 ID
- * @method void setResult(string $Result) 设置工作流批次历史 ID
+ * @method string getResult() 获取工作流批次历史 ID。操作失败时不返回该字段，返回错误码。
+ * @method void setResult(string $Result) 设置工作流批次历史 ID。操作失败时不返回该字段，返回错误码。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class RedoTaskFlowBatchResponse extends AbstractModel
 {
     /**
-     * @var string 工作流批次历史 ID
+     * @var string 工作流批次历史 ID。操作失败时不返回该字段，返回错误码。
      */
     public $Result;
 
@@ -38,7 +38,7 @@ class RedoTaskFlowBatchResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Result 工作流批次历史 ID
+     * @param string $Result 工作流批次历史 ID。操作失败时不返回该字段，返回错误码。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

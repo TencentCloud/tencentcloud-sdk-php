@@ -21,17 +21,21 @@ use TencentCloud\Common\AbstractModel;
  * DescribeMachineGroupConfigs请求参数结构体
  *
  * @method string getGroupId() 获取机器组ID
+- 通过[获取机器组列表](https://cloud.tencent.com/document/api/614/56438)获取机器组Id。
  * @method void setGroupId(string $GroupId) 设置机器组ID
+- 通过[获取机器组列表](https://cloud.tencent.com/document/api/614/56438)获取机器组Id。
  */
 class DescribeMachineGroupConfigsRequest extends AbstractModel
 {
     /**
      * @var string 机器组ID
+- 通过[获取机器组列表](https://cloud.tencent.com/document/api/614/56438)获取机器组Id。
      */
     public $GroupId;
 
     /**
      * @param string $GroupId 机器组ID
+- 通过[获取机器组列表](https://cloud.tencent.com/document/api/614/56438)获取机器组Id。
      */
     function __construct()
     {

@@ -334,6 +334,8 @@ RENEW_FLAG_DEFAULT：不自动续费
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableDestroyProtection(string $EnableDestroyProtection) 设置开启集群保护：OPEN-开启，CLOSE-关闭
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getShowKibanaIpPort() 获取kibana内网访问地址
+ * @method void setShowKibanaIpPort(string $ShowKibanaIpPort) 设置kibana内网访问地址
  */
 class InstanceInfo extends AbstractModel
 {
@@ -871,6 +873,11 @@ RENEW_FLAG_DEFAULT：不自动续费
     public $EnableDestroyProtection;
 
     /**
+     * @var string kibana内网访问地址
+     */
+    public $ShowKibanaIpPort;
+
+    /**
      * @param string $InstanceId 实例ID
      * @param string $InstanceName 实例名称
      * @param string $Region 地域
@@ -1028,6 +1035,7 @@ RENEW_FLAG_DEFAULT：不自动续费
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EnableDestroyProtection 开启集群保护：OPEN-开启，CLOSE-关闭
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ShowKibanaIpPort kibana内网访问地址
      */
     function __construct()
     {
@@ -1455,6 +1463,10 @@ RENEW_FLAG_DEFAULT：不自动续费
 
         if (array_key_exists("EnableDestroyProtection",$param) and $param["EnableDestroyProtection"] !== null) {
             $this->EnableDestroyProtection = $param["EnableDestroyProtection"];
+        }
+
+        if (array_key_exists("ShowKibanaIpPort",$param) and $param["ShowKibanaIpPort"] !== null) {
+            $this->ShowKibanaIpPort = $param["ShowKibanaIpPort"];
         }
     }
 }

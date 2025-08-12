@@ -21,9 +21,21 @@ use TencentCloud\Common\AbstractModel;
  * CreateTopic请求参数结构体
  *
  * @method string getLogsetId() 获取日志集ID
+- 通过[获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集Id。
  * @method void setLogsetId(string $LogsetId) 设置日志集ID
+- 通过[获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集Id。
  * @method string getTopicName() 获取日志主题名称
+名称限制
+- 不能为空字符串
+- 不能包含字符'|'
+- 不能使用以下名称["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]
+
  * @method void setTopicName(string $TopicName) 设置日志主题名称
+名称限制
+- 不能为空字符串
+- 不能包含字符'|'
+- 不能使用以下名称["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]
+
  * @method integer getPartitionCount() 获取日志主题分区个数。默认创建1个，最大支持创建10个分区。
  * @method void setPartitionCount(integer $PartitionCount) 设置日志主题分区个数。默认创建1个，最大支持创建10个分区。
  * @method array getTags() 获取标签描述列表，通过指定该参数可以同时绑定标签到相应的日志主题。最大支持10个标签键值对，同一个资源只能绑定到同一个标签键下。
@@ -65,11 +77,17 @@ class CreateTopicRequest extends AbstractModel
 {
     /**
      * @var string 日志集ID
+- 通过[获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集Id。
      */
     public $LogsetId;
 
     /**
      * @var string 日志主题名称
+名称限制
+- 不能为空字符串
+- 不能包含字符'|'
+- 不能使用以下名称["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]
+
      */
     public $TopicName;
 
@@ -137,7 +155,13 @@ class CreateTopicRequest extends AbstractModel
 
     /**
      * @param string $LogsetId 日志集ID
+- 通过[获取日志集列表](https://cloud.tencent.com/document/product/614/58624)获取日志集Id。
      * @param string $TopicName 日志主题名称
+名称限制
+- 不能为空字符串
+- 不能包含字符'|'
+- 不能使用以下名称["cls_service_log","loglistener_status","loglistener_alarm","loglistener_business","cls_service_metric"]
+
      * @param integer $PartitionCount 日志主题分区个数。默认创建1个，最大支持创建10个分区。
      * @param array $Tags 标签描述列表，通过指定该参数可以同时绑定标签到相应的日志主题。最大支持10个标签键值对，同一个资源只能绑定到同一个标签键下。
      * @param boolean $AutoSplit 是否开启自动分裂，默认值为true

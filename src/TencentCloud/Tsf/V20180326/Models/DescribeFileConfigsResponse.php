@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeFileConfigs返回参数结构体
  *
- * @method TsfPageFileConfig getResult() 获取文件配置项列表
- * @method void setResult(TsfPageFileConfig $Result) 设置文件配置项列表
+ * @method TsfPageFileConfig getResult() 获取文件配置项列表。
+ * @method void setResult(TsfPageFileConfig $Result) 设置文件配置项列表。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeFileConfigsResponse extends AbstractModel
 {
     /**
-     * @var TsfPageFileConfig 文件配置项列表
+     * @var TsfPageFileConfig 文件配置项列表。
      */
     public $Result;
 
@@ -38,7 +38,7 @@ class DescribeFileConfigsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param TsfPageFileConfig $Result 文件配置项列表
+     * @param TsfPageFileConfig $Result 文件配置项列表。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

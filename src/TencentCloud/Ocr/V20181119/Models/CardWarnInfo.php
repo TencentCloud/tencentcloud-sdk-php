@@ -58,6 +58,12 @@ use TencentCloud\Common\AbstractModel;
 1:模糊
  * @method float getBlurScore() 获取模糊分数， 范围：0.0-1.0，分数越高越模糊，建议阈值为0.5
  * @method void setBlurScore(float $BlurScore) 设置模糊分数， 范围：0.0-1.0，分数越高越模糊，建议阈值为0.5
+ * @method integer getElectronCheck() 获取是否电子身份证
+0：否
+1：是电子身份证
+ * @method void setElectronCheck(integer $ElectronCheck) 设置是否电子身份证
+0：否
+1：是电子身份证
  */
 class CardWarnInfo extends AbstractModel
 {
@@ -109,6 +115,13 @@ class CardWarnInfo extends AbstractModel
     public $BlurScore;
 
     /**
+     * @var integer 是否电子身份证
+0：否
+1：是电子身份证
+     */
+    public $ElectronCheck;
+
+    /**
      * @param integer $BorderCheck 证件边缘是否完整
 0：正常
 1：边缘不完整
@@ -128,6 +141,9 @@ class CardWarnInfo extends AbstractModel
 0:正常
 1:模糊
      * @param float $BlurScore 模糊分数， 范围：0.0-1.0，分数越高越模糊，建议阈值为0.5
+     * @param integer $ElectronCheck 是否电子身份证
+0：否
+1：是电子身份证
      */
     function __construct()
     {
@@ -168,6 +184,10 @@ class CardWarnInfo extends AbstractModel
 
         if (array_key_exists("BlurScore",$param) and $param["BlurScore"] !== null) {
             $this->BlurScore = $param["BlurScore"];
+        }
+
+        if (array_key_exists("ElectronCheck",$param) and $param["ElectronCheck"] !== null) {
+            $this->ElectronCheck = $param["ElectronCheck"];
         }
     }
 }

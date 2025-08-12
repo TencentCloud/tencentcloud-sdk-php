@@ -20,10 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 日志提取规则
  *
- * @method string getTimeKey() 获取时间字段的key名字，TikeKey和TimeFormat必须成对出现
- * @method void setTimeKey(string $TimeKey) 设置时间字段的key名字，TikeKey和TimeFormat必须成对出现
+ * @method string getTimeKey() 获取时间字段的key名字，TimeKey和TimeFormat必须成对出现
+ * @method void setTimeKey(string $TimeKey) 设置时间字段的key名字，TimeKey和TimeFormat必须成对出现
  * @method string getTimeFormat() 获取时间字段的格式，参考c语言的strftime函数对于时间的格式说明输出参数
+- 参考 [配置时间格式](https://cloud.tencent.com/document/product/614/38614) 文档 
  * @method void setTimeFormat(string $TimeFormat) 设置时间字段的格式，参考c语言的strftime函数对于时间的格式说明输出参数
+- 参考 [配置时间格式](https://cloud.tencent.com/document/product/614/38614) 文档 
  * @method string getDelimiter() 获取分隔符类型日志的分隔符，只有LogType为delimiter_log时有效
  * @method void setDelimiter(string $Delimiter) 设置分隔符类型日志的分隔符，只有LogType为delimiter_log时有效
  * @method string getLogRegex() 获取整条日志匹配规则，只有LogType为fullregex_log时有效
@@ -150,12 +152,13 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
 class ExtractRuleInfo extends AbstractModel
 {
     /**
-     * @var string 时间字段的key名字，TikeKey和TimeFormat必须成对出现
+     * @var string 时间字段的key名字，TimeKey和TimeFormat必须成对出现
      */
     public $TimeKey;
 
     /**
      * @var string 时间字段的格式，参考c语言的strftime函数对于时间的格式说明输出参数
+- 参考 [配置时间格式](https://cloud.tencent.com/document/product/614/38614) 文档 
      */
     public $TimeFormat;
 
@@ -293,8 +296,9 @@ auto：自动匹配rfc3164或者rfc5424其中一种协议。
     public $AdvanceFilterRules;
 
     /**
-     * @param string $TimeKey 时间字段的key名字，TikeKey和TimeFormat必须成对出现
+     * @param string $TimeKey 时间字段的key名字，TimeKey和TimeFormat必须成对出现
      * @param string $TimeFormat 时间字段的格式，参考c语言的strftime函数对于时间的格式说明输出参数
+- 参考 [配置时间格式](https://cloud.tencent.com/document/product/614/38614) 文档 
      * @param string $Delimiter 分隔符类型日志的分隔符，只有LogType为delimiter_log时有效
      * @param string $LogRegex 整条日志匹配规则，只有LogType为fullregex_log时有效
      * @param string $BeginRegex 行首匹配规则，只有LogType为multiline_log或fullregex_log时有效

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeConfigSummary返回参数结构体
  *
- * @method TsfPageConfig getResult() 获取配置项分页对象
- * @method void setResult(TsfPageConfig $Result) 设置配置项分页对象
+ * @method TsfPageConfig getResult() 获取配置项分页对象。
+ * @method void setResult(TsfPageConfig $Result) 设置配置项分页对象。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeConfigSummaryResponse extends AbstractModel
 {
     /**
-     * @var TsfPageConfig 配置项分页对象
+     * @var TsfPageConfig 配置项分页对象。
      */
     public $Result;
 
@@ -38,7 +38,7 @@ class DescribeConfigSummaryResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param TsfPageConfig $Result 配置项分页对象
+     * @param TsfPageConfig $Result 配置项分页对象。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

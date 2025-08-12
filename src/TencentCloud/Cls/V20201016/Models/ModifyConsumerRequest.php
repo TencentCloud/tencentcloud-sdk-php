@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyConsumer请求参数结构体
  *
- * @method string getTopicId() 获取投递任务绑定的日志主题 ID
- * @method void setTopicId(string $TopicId) 设置投递任务绑定的日志主题 ID
+ * @method string getTopicId() 获取投递任务绑定的日志主题Id。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
+ * @method void setTopicId(string $TopicId) 设置投递任务绑定的日志主题Id。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
  * @method boolean getEffective() 获取投递任务是否生效，默认不生效
  * @method void setEffective(boolean $Effective) 设置投递任务是否生效，默认不生效
  * @method boolean getNeedContent() 获取是否投递日志的元数据信息，默认为 true。
@@ -40,7 +44,9 @@ use TencentCloud\Common\AbstractModel;
 class ModifyConsumerRequest extends AbstractModel
 {
     /**
-     * @var string 投递任务绑定的日志主题 ID
+     * @var string 投递任务绑定的日志主题Id。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
      */
     public $TopicId;
 
@@ -72,7 +78,9 @@ class ModifyConsumerRequest extends AbstractModel
     public $Compression;
 
     /**
-     * @param string $TopicId 投递任务绑定的日志主题 ID
+     * @param string $TopicId 投递任务绑定的日志主题Id。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
      * @param boolean $Effective 投递任务是否生效，默认不生效
      * @param boolean $NeedContent 是否投递日志的元数据信息，默认为 true。
 当NeedContent为true时：字段Content有效。

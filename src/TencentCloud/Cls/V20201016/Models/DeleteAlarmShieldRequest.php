@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteAlarmShield请求参数结构体
  *
- * @method string getTaskId() 获取屏蔽规则id。
- * @method void setTaskId(string $TaskId) 设置屏蔽规则id。
- * @method string getAlarmNoticeId() 获取通知渠道组id。
- * @method void setAlarmNoticeId(string $AlarmNoticeId) 设置通知渠道组id。
+ * @method string getTaskId() 获取屏蔽规则id。通过[获取告警屏蔽配置规则](https://cloud.tencent.com/document/api/614/103650)获取屏蔽规则ID
+ * @method void setTaskId(string $TaskId) 设置屏蔽规则id。通过[获取告警屏蔽配置规则](https://cloud.tencent.com/document/api/614/103650)获取屏蔽规则ID
+ * @method string getAlarmNoticeId() 获取通知渠道组id。通过[获取告警屏蔽配置规则](https://cloud.tencent.com/document/api/614/103650)获取通知渠道组id
+ * @method void setAlarmNoticeId(string $AlarmNoticeId) 设置通知渠道组id。通过[获取告警屏蔽配置规则](https://cloud.tencent.com/document/api/614/103650)获取通知渠道组id
  */
 class DeleteAlarmShieldRequest extends AbstractModel
 {
     /**
-     * @var string 屏蔽规则id。
+     * @var string 屏蔽规则id。通过[获取告警屏蔽配置规则](https://cloud.tencent.com/document/api/614/103650)获取屏蔽规则ID
      */
     public $TaskId;
 
     /**
-     * @var string 通知渠道组id。
+     * @var string 通知渠道组id。通过[获取告警屏蔽配置规则](https://cloud.tencent.com/document/api/614/103650)获取通知渠道组id
      */
     public $AlarmNoticeId;
 
     /**
-     * @param string $TaskId 屏蔽规则id。
-     * @param string $AlarmNoticeId 通知渠道组id。
+     * @param string $TaskId 屏蔽规则id。通过[获取告警屏蔽配置规则](https://cloud.tencent.com/document/api/614/103650)获取屏蔽规则ID
+     * @param string $AlarmNoticeId 通知渠道组id。通过[获取告警屏蔽配置规则](https://cloud.tencent.com/document/api/614/103650)获取通知渠道组id
      */
     function __construct()
     {

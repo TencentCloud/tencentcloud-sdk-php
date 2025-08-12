@@ -29,10 +29,14 @@ use TencentCloud\Common\AbstractModel;
  * @method string getExclusiveEndKey() 获取分区哈希键结束key
  * @method void setExclusiveEndKey(string $ExclusiveEndKey) 设置分区哈希键结束key
  * @method string getCreateTime() 获取分区创建时间
+时间格式：yyyy-MM-dd HH:mm:ss
  * @method void setCreateTime(string $CreateTime) 设置分区创建时间
+时间格式：yyyy-MM-dd HH:mm:ss
  * @method string getLastWriteTime() 获取只读分区数据停止写入时间
+时间格式：yyyy-MM-dd HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastWriteTime(string $LastWriteTime) 设置只读分区数据停止写入时间
+时间格式：yyyy-MM-dd HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class PartitionInfo extends AbstractModel
@@ -59,11 +63,13 @@ class PartitionInfo extends AbstractModel
 
     /**
      * @var string 分区创建时间
+时间格式：yyyy-MM-dd HH:mm:ss
      */
     public $CreateTime;
 
     /**
      * @var string 只读分区数据停止写入时间
+时间格式：yyyy-MM-dd HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LastWriteTime;
@@ -74,7 +80,9 @@ class PartitionInfo extends AbstractModel
      * @param string $InclusiveBeginKey 分区哈希键起始key
      * @param string $ExclusiveEndKey 分区哈希键结束key
      * @param string $CreateTime 分区创建时间
+时间格式：yyyy-MM-dd HH:mm:ss
      * @param string $LastWriteTime 只读分区数据停止写入时间
+时间格式：yyyy-MM-dd HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

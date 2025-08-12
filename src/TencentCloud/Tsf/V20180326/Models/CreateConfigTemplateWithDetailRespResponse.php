@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateConfigTemplateWithDetailResp返回参数结构体
  *
- * @method ConfigTemplate getResult() 获取创建成功，返回 ID
- * @method void setResult(ConfigTemplate $Result) 设置创建成功，返回 ID
+ * @method ConfigTemplate getResult() 获取创建成功，返回配置模板ID。
+ * @method void setResult(ConfigTemplate $Result) 设置创建成功，返回配置模板ID。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class CreateConfigTemplateWithDetailRespResponse extends AbstractModel
 {
     /**
-     * @var ConfigTemplate 创建成功，返回 ID
+     * @var ConfigTemplate 创建成功，返回配置模板ID。
      */
     public $Result;
 
@@ -38,7 +38,7 @@ class CreateConfigTemplateWithDetailRespResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param ConfigTemplate $Result 创建成功，返回 ID
+     * @param ConfigTemplate $Result 创建成功，返回配置模板ID。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

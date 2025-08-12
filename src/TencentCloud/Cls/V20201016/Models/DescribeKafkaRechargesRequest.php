@@ -20,34 +20,46 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeKafkaRecharges请求参数结构体
  *
- * @method string getTopicId() 获取日志主题 ID
- * @method void setTopicId(string $TopicId) 设置日志主题 ID
- * @method string getId() 获取导入配置ID
- * @method void setId(string $Id) 设置导入配置ID
- * @method integer getStatus() 获取状态   status 1: 运行中, 2: 暂停...
- * @method void setStatus(integer $Status) 设置状态   status 1: 运行中, 2: 暂停...
+ * @method string getTopicId() 获取日志主题Id。
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+ * @method void setTopicId(string $TopicId) 设置日志主题Id。
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+ * @method string getId() 获取导入配置Id。
+- 通过 [创建Kafka数据订阅任务](https://cloud.tencent.com/document/product/614/94448)获取Kafka导入配置Id。
+- 通过 [获取Kafka数据订阅任务列表](https://cloud.tencent.com/document/product/614/94446)获取Kafka导入配置Id。
+ * @method void setId(string $Id) 设置导入配置Id。
+- 通过 [创建Kafka数据订阅任务](https://cloud.tencent.com/document/product/614/94448)获取Kafka导入配置Id。
+- 通过 [获取Kafka数据订阅任务列表](https://cloud.tencent.com/document/product/614/94446)获取Kafka导入配置Id。
+ * @method integer getStatus() 获取状态。1: 运行中，2: 暂停，3：错误
+ * @method void setStatus(integer $Status) 设置状态。1: 运行中，2: 暂停，3：错误
  */
 class DescribeKafkaRechargesRequest extends AbstractModel
 {
     /**
-     * @var string 日志主题 ID
+     * @var string 日志主题Id。
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public $TopicId;
 
     /**
-     * @var string 导入配置ID
+     * @var string 导入配置Id。
+- 通过 [创建Kafka数据订阅任务](https://cloud.tencent.com/document/product/614/94448)获取Kafka导入配置Id。
+- 通过 [获取Kafka数据订阅任务列表](https://cloud.tencent.com/document/product/614/94446)获取Kafka导入配置Id。
      */
     public $Id;
 
     /**
-     * @var integer 状态   status 1: 运行中, 2: 暂停...
+     * @var integer 状态。1: 运行中，2: 暂停，3：错误
      */
     public $Status;
 
     /**
-     * @param string $TopicId 日志主题 ID
-     * @param string $Id 导入配置ID
-     * @param integer $Status 状态   status 1: 运行中, 2: 暂停...
+     * @param string $TopicId 日志主题Id。
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * @param string $Id 导入配置Id。
+- 通过 [创建Kafka数据订阅任务](https://cloud.tencent.com/document/product/614/94448)获取Kafka导入配置Id。
+- 通过 [获取Kafka数据订阅任务列表](https://cloud.tencent.com/document/product/614/94446)获取Kafka导入配置Id。
+     * @param integer $Status 状态。1: 运行中，2: 暂停，3：错误
      */
     function __construct()
     {

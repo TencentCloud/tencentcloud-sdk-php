@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTaskTemplates请求参数结构体
  *
- * @method array getTaskTemplateIds() 获取任务模板ID列表，与Filters参数不能同时指定。
- * @method void setTaskTemplateIds(array $TaskTemplateIds) 设置任务模板ID列表，与Filters参数不能同时指定。
+ * @method array getTaskTemplateIds() 获取任务模板ID列表，与Filters参数不能同时指定。模版ID最大限制100.
+ * @method void setTaskTemplateIds(array $TaskTemplateIds) 设置任务模板ID列表，与Filters参数不能同时指定。模版ID最大限制100.
  * @method array getFilters() 获取过滤条件
 <li> task-template-name - String - 是否必填：否 -（过滤条件）按照任务模板名称过滤。</li>
 <li> tag-key - String - 是否必填：否 -（过滤条件）按照标签键进行过滤。</li>
@@ -36,13 +36,13 @@ use TencentCloud\Common\AbstractModel;
 与TaskTemplateIds参数不能同时指定。
  * @method integer getOffset() 获取偏移量
  * @method void setOffset(integer $Offset) 设置偏移量
- * @method integer getLimit() 获取返回数量
- * @method void setLimit(integer $Limit) 设置返回数量
+ * @method integer getLimit() 获取返回数量; 可选范围[1-100]；默认值为20。
+ * @method void setLimit(integer $Limit) 设置返回数量; 可选范围[1-100]；默认值为20。
  */
 class DescribeTaskTemplatesRequest extends AbstractModel
 {
     /**
-     * @var array 任务模板ID列表，与Filters参数不能同时指定。
+     * @var array 任务模板ID列表，与Filters参数不能同时指定。模版ID最大限制100.
      */
     public $TaskTemplateIds;
 
@@ -62,12 +62,12 @@ class DescribeTaskTemplatesRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 返回数量
+     * @var integer 返回数量; 可选范围[1-100]；默认值为20。
      */
     public $Limit;
 
     /**
-     * @param array $TaskTemplateIds 任务模板ID列表，与Filters参数不能同时指定。
+     * @param array $TaskTemplateIds 任务模板ID列表，与Filters参数不能同时指定。模版ID最大限制100.
      * @param array $Filters 过滤条件
 <li> task-template-name - String - 是否必填：否 -（过滤条件）按照任务模板名称过滤。</li>
 <li> tag-key - String - 是否必填：否 -（过滤条件）按照标签键进行过滤。</li>
@@ -75,7 +75,7 @@ class DescribeTaskTemplatesRequest extends AbstractModel
 <li> tag:tag-key - String - 是否必填：否 -（过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。</li>
 与TaskTemplateIds参数不能同时指定。
      * @param integer $Offset 偏移量
-     * @param integer $Limit 返回数量
+     * @param integer $Limit 返回数量; 可选范围[1-100]；默认值为20。
      */
     function __construct()
     {

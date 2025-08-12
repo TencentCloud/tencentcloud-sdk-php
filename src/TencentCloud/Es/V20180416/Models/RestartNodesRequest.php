@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableScheduleRecoverGroup(boolean $EnableScheduleRecoverGroup) 设置是否开启置放群组异步任务
  * @method EnableScheduleOperationDuration getEnableScheduleOperationDuration() 获取置放群组异步任务时间段
  * @method void setEnableScheduleOperationDuration(EnableScheduleOperationDuration $EnableScheduleOperationDuration) 设置置放群组异步任务时间段
+ * @method array getEventTypeIds() 获取事件id列表
+ * @method void setEventTypeIds(array $EventTypeIds) 设置事件id列表
  */
 class RestartNodesRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class RestartNodesRequest extends AbstractModel
     public $EnableScheduleOperationDuration;
 
     /**
+     * @var array 事件id列表
+     */
+    public $EventTypeIds;
+
+    /**
      * @param string $InstanceId 集群实例ID
      * @param array $NodeNames 节点名称列表
      * @param boolean $ForceRestart 是否强制重启
@@ -104,6 +111,7 @@ class RestartNodesRequest extends AbstractModel
      * @param integer $ShardAllocationBytes 分片迁移并发速度
      * @param boolean $EnableScheduleRecoverGroup 是否开启置放群组异步任务
      * @param EnableScheduleOperationDuration $EnableScheduleOperationDuration 置放群组异步任务时间段
+     * @param array $EventTypeIds 事件id列表
      */
     function __construct()
     {
@@ -157,6 +165,10 @@ class RestartNodesRequest extends AbstractModel
         if (array_key_exists("EnableScheduleOperationDuration",$param) and $param["EnableScheduleOperationDuration"] !== null) {
             $this->EnableScheduleOperationDuration = new EnableScheduleOperationDuration();
             $this->EnableScheduleOperationDuration->deserialize($param["EnableScheduleOperationDuration"]);
+        }
+
+        if (array_key_exists("EventTypeIds",$param) and $param["EventTypeIds"] !== null) {
+            $this->EventTypeIds = $param["EventTypeIds"];
         }
     }
 }

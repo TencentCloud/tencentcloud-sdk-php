@@ -20,32 +20,32 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTaskRecords请求参数结构体
  *
- * @method integer getOffset() 获取翻页偏移量。
- * @method void setOffset(integer $Offset) 设置翻页偏移量。
- * @method integer getLimit() 获取翻页查询单页数量。
- * @method void setLimit(integer $Limit) 设置翻页查询单页数量。
+ * @method integer getOffset() 获取翻页偏移量。默认值为0
+ * @method void setOffset(integer $Offset) 设置翻页偏移量。默认值为0
+ * @method integer getLimit() 获取翻页查询单页数量。默认值为 20，最大值为 1000
+ * @method void setLimit(integer $Limit) 设置翻页查询单页数量。默认值为 20，最大值为 1000
  * @method string getSearchWord() 获取模糊查询关键字，支持任务ID和任务名称。
  * @method void setSearchWord(string $SearchWord) 设置模糊查询关键字，支持任务ID和任务名称。
- * @method string getTaskState() 获取任务启用状态。enabled/disabled
- * @method void setTaskState(string $TaskState) 设置任务启用状态。enabled/disabled
- * @method string getGroupId() 获取分组ID。
- * @method void setGroupId(string $GroupId) 设置分组ID。
- * @method string getTaskType() 获取任务类型。
- * @method void setTaskType(string $TaskType) 设置任务类型。
- * @method string getExecuteType() 获取任务触发类型，UNICAST、BROADCAST。
- * @method void setExecuteType(string $ExecuteType) 设置任务触发类型，UNICAST、BROADCAST。
- * @method array getIds() 获取无
- * @method void setIds(array $Ids) 设置无
+ * @method string getTaskState() 获取任务启用状态。一共2种状态可选，ENABLED：启用，DISABLED：停用
+ * @method void setTaskState(string $TaskState) 设置任务启用状态。一共2种状态可选，ENABLED：启用，DISABLED：停用
+ * @method string getGroupId() 获取部署组ID。前往应用管理 - 应用部署，部署组列表页面获取部署组ID。
+ * @method void setGroupId(string $GroupId) 设置部署组ID。前往应用管理 - 应用部署，部署组列表页面获取部署组ID。
+ * @method string getTaskType() 获取任务类型。当前只支持一种任务类型。枚举值，java：Java类任务
+ * @method void setTaskType(string $TaskType) 设置任务类型。当前只支持一种任务类型。枚举值，java：Java类任务
+ * @method string getExecuteType() 获取任务执行方式，unicast：随机单节点执行，broadcast：广播执行，shard：分片执行
+ * @method void setExecuteType(string $ExecuteType) 设置任务执行方式，unicast：随机单节点执行，broadcast：广播执行，shard：分片执行
+ * @method array getIds() 获取任务ID列表。
+ * @method void setIds(array $Ids) 设置任务ID列表。
  */
 class DescribeTaskRecordsRequest extends AbstractModel
 {
     /**
-     * @var integer 翻页偏移量。
+     * @var integer 翻页偏移量。默认值为0
      */
     public $Offset;
 
     /**
-     * @var integer 翻页查询单页数量。
+     * @var integer 翻页查询单页数量。默认值为 20，最大值为 1000
      */
     public $Limit;
 
@@ -55,39 +55,39 @@ class DescribeTaskRecordsRequest extends AbstractModel
     public $SearchWord;
 
     /**
-     * @var string 任务启用状态。enabled/disabled
+     * @var string 任务启用状态。一共2种状态可选，ENABLED：启用，DISABLED：停用
      */
     public $TaskState;
 
     /**
-     * @var string 分组ID。
+     * @var string 部署组ID。前往应用管理 - 应用部署，部署组列表页面获取部署组ID。
      */
     public $GroupId;
 
     /**
-     * @var string 任务类型。
+     * @var string 任务类型。当前只支持一种任务类型。枚举值，java：Java类任务
      */
     public $TaskType;
 
     /**
-     * @var string 任务触发类型，UNICAST、BROADCAST。
+     * @var string 任务执行方式，unicast：随机单节点执行，broadcast：广播执行，shard：分片执行
      */
     public $ExecuteType;
 
     /**
-     * @var array 无
+     * @var array 任务ID列表。
      */
     public $Ids;
 
     /**
-     * @param integer $Offset 翻页偏移量。
-     * @param integer $Limit 翻页查询单页数量。
+     * @param integer $Offset 翻页偏移量。默认值为0
+     * @param integer $Limit 翻页查询单页数量。默认值为 20，最大值为 1000
      * @param string $SearchWord 模糊查询关键字，支持任务ID和任务名称。
-     * @param string $TaskState 任务启用状态。enabled/disabled
-     * @param string $GroupId 分组ID。
-     * @param string $TaskType 任务类型。
-     * @param string $ExecuteType 任务触发类型，UNICAST、BROADCAST。
-     * @param array $Ids 无
+     * @param string $TaskState 任务启用状态。一共2种状态可选，ENABLED：启用，DISABLED：停用
+     * @param string $GroupId 部署组ID。前往应用管理 - 应用部署，部署组列表页面获取部署组ID。
+     * @param string $TaskType 任务类型。当前只支持一种任务类型。枚举值，java：Java类任务
+     * @param string $ExecuteType 任务执行方式，unicast：随机单节点执行，broadcast：广播执行，shard：分片执行
+     * @param array $Ids 任务ID列表。
      */
     function __construct()
     {

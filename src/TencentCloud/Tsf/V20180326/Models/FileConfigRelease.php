@@ -40,9 +40,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReleaseDesc(string $ReleaseDesc) 设置发布描述
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getReleaseTime() 获取发布时间
+ * @method string getReleaseTime() 获取发布时间。格式为 YYYY-MM-DD hh:mm:ss。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setReleaseTime(string $ReleaseTime) 设置发布时间
+ * @method void setReleaseTime(string $ReleaseTime) 设置发布时间。格式为 YYYY-MM-DD hh:mm:ss。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getGroupId() 获取部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -106,7 +106,7 @@ class FileConfigRelease extends AbstractModel
     public $ReleaseDesc;
 
     /**
-     * @var string 发布时间
+     * @var string 发布时间。格式为 YYYY-MM-DD hh:mm:ss。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ReleaseTime;
@@ -164,7 +164,7 @@ class FileConfigRelease extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ReleaseDesc 发布描述
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ReleaseTime 发布时间
+     * @param string $ReleaseTime 发布时间。格式为 YYYY-MM-DD hh:mm:ss。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $GroupId 部署组ID
 注意：此字段可能返回 null，表示取不到有效值。

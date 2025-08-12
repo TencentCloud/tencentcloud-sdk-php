@@ -188,6 +188,10 @@ zk专业版可以为：CLOUD_SSD,CLOUD_SSD_PLUS,CLOUD_PREMIUM
 如果只有一个磁盘，storageCapacity与storageOption里面的capacity应该一致
  * @method string getAffinityConstraint() 获取ZK引擎实例，可用区分布约束，STRICT:强约束，PERMISSIVE: 弱约束
  * @method void setAffinityConstraint(string $AffinityConstraint) 设置ZK引擎实例，可用区分布约束，STRICT:强约束，PERMISSIVE: 弱约束
+ * @method array getZoneIds() 获取指定zone id列表
+ * @method void setZoneIds(array $ZoneIds) 设置指定zone id列表
+ * @method string getEngineRegionTag() 获取地域特殊标签，用于区分相同地域，不通的业务属性
+ * @method void setEngineRegionTag(string $EngineRegionTag) 设置地域特殊标签，用于区分相同地域，不通的业务属性
  */
 class CreateEngineRequest extends AbstractModel
 {
@@ -356,6 +360,16 @@ zk专业版可以为：CLOUD_SSD,CLOUD_SSD_PLUS,CLOUD_PREMIUM
     public $AffinityConstraint;
 
     /**
+     * @var array 指定zone id列表
+     */
+    public $ZoneIds;
+
+    /**
+     * @var string 地域特殊标签，用于区分相同地域，不通的业务属性
+     */
+    public $EngineRegionTag;
+
+    /**
      * @param string $EngineType 引擎类型。参考值：
 - zookeeper
 - nacos
@@ -440,6 +454,8 @@ zk专业版可以为：CLOUD_SSD,CLOUD_SSD_PLUS,CLOUD_PREMIUM
      * @param array $StorageOption zk专业版至多有两个盘，且磁盘的容量在50-3200之间
 如果只有一个磁盘，storageCapacity与storageOption里面的capacity应该一致
      * @param string $AffinityConstraint ZK引擎实例，可用区分布约束，STRICT:强约束，PERMISSIVE: 弱约束
+     * @param array $ZoneIds 指定zone id列表
+     * @param string $EngineRegionTag 地域特殊标签，用于区分相同地域，不通的业务属性
      */
     function __construct()
     {
@@ -553,6 +569,14 @@ zk专业版可以为：CLOUD_SSD,CLOUD_SSD_PLUS,CLOUD_PREMIUM
 
         if (array_key_exists("AffinityConstraint",$param) and $param["AffinityConstraint"] !== null) {
             $this->AffinityConstraint = $param["AffinityConstraint"];
+        }
+
+        if (array_key_exists("ZoneIds",$param) and $param["ZoneIds"] !== null) {
+            $this->ZoneIds = $param["ZoneIds"];
+        }
+
+        if (array_key_exists("EngineRegionTag",$param) and $param["EngineRegionTag"] !== null) {
+            $this->EngineRegionTag = $param["EngineRegionTag"];
         }
     }
 }

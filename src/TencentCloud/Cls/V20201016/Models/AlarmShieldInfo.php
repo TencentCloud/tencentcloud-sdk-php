@@ -44,10 +44,10 @@ use TencentCloud\Common\AbstractModel;
 0：暂未生效，1：生效中，2：已失效
  * @method void setStatus(integer $Status) 设置规则状态。
 0：暂未生效，1：生效中，2：已失效
- * @method integer getCreateTime() 获取规则创建时间。
- * @method void setCreateTime(integer $CreateTime) 设置规则创建时间。
- * @method integer getUpdateTime() 获取规则更新时间。
- * @method void setUpdateTime(integer $UpdateTime) 设置规则更新时间。
+ * @method integer getCreateTime() 获取规则创建时间。秒级时间戳(s)
+ * @method void setCreateTime(integer $CreateTime) 设置规则创建时间。秒级时间戳(s)
+ * @method integer getUpdateTime() 获取规则更新时间。秒级时间戳(s)
+ * @method void setUpdateTime(integer $UpdateTime) 设置规则更新时间。秒级时间戳(s)
  */
 class AlarmShieldInfo extends AbstractModel
 {
@@ -104,12 +104,12 @@ class AlarmShieldInfo extends AbstractModel
     public $Status;
 
     /**
-     * @var integer 规则创建时间。
+     * @var integer 规则创建时间。秒级时间戳(s)
      */
     public $CreateTime;
 
     /**
-     * @var integer 规则更新时间。
+     * @var integer 规则更新时间。秒级时间戳(s)
      */
     public $UpdateTime;
 
@@ -126,8 +126,8 @@ class AlarmShieldInfo extends AbstractModel
      * @param string $Operator 操作者。
      * @param integer $Status 规则状态。
 0：暂未生效，1：生效中，2：已失效
-     * @param integer $CreateTime 规则创建时间。
-     * @param integer $UpdateTime 规则更新时间。
+     * @param integer $CreateTime 规则创建时间。秒级时间戳(s)
+     * @param integer $UpdateTime 规则更新时间。秒级时间戳(s)
      */
     function __construct()
     {

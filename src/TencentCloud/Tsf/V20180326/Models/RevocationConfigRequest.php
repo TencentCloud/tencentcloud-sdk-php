@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RevocationConfig请求参数结构体
  *
- * @method string getConfigReleaseId() 获取配置项发布ID
- * @method void setConfigReleaseId(string $ConfigReleaseId) 设置配置项发布ID
+ * @method string getConfigReleaseId() 获取配置项发布ID。该参数可以通过调用 [DescribeConfigReleases](https://cloud.tencent.com/document/product/649/38342) 的返回值中的 ConfigReleaseId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=app)配置详情-发布情况页查看。
+ * @method void setConfigReleaseId(string $ConfigReleaseId) 设置配置项发布ID。该参数可以通过调用 [DescribeConfigReleases](https://cloud.tencent.com/document/product/649/38342) 的返回值中的 ConfigReleaseId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=app)配置详情-发布情况页查看。
  */
 class RevocationConfigRequest extends AbstractModel
 {
     /**
-     * @var string 配置项发布ID
+     * @var string 配置项发布ID。该参数可以通过调用 [DescribeConfigReleases](https://cloud.tencent.com/document/product/649/38342) 的返回值中的 ConfigReleaseId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=app)配置详情-发布情况页查看。
      */
     public $ConfigReleaseId;
 
     /**
-     * @param string $ConfigReleaseId 配置项发布ID
+     * @param string $ConfigReleaseId 配置项发布ID。该参数可以通过调用 [DescribeConfigReleases](https://cloud.tencent.com/document/product/649/38342) 的返回值中的 ConfigReleaseId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?subTab=app)配置详情-发布情况页查看。
      */
     function __construct()
     {

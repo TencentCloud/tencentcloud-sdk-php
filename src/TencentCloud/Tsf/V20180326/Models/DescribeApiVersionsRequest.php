@@ -20,34 +20,62 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeApiVersions请求参数结构体
  *
- * @method string getMicroserviceId() 获取微服务ID
- * @method void setMicroserviceId(string $MicroserviceId) 设置微服务ID
- * @method string getPath() 获取API 请求路径
- * @method void setPath(string $Path) 设置API 请求路径
- * @method string getMethod() 获取请求方法
- * @method void setMethod(string $Method) 设置请求方法
+ * @method string getMicroserviceId() 获取微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
+ * @method void setMicroserviceId(string $MicroserviceId) 设置微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
+ * @method string getPath() 获取API请求路径。
+ * @method void setPath(string $Path) 设置API请求路径。
+ * @method string getMethod() 获取API请求方法。
+- GET
+- POST
+- PUT
+- DELETE
+- HEAD
+- PATCH
+- OPTIONS
+ * @method void setMethod(string $Method) 设置API请求方法。
+- GET
+- POST
+- PUT
+- DELETE
+- HEAD
+- PATCH
+- OPTIONS
  */
 class DescribeApiVersionsRequest extends AbstractModel
 {
     /**
-     * @var string 微服务ID
+     * @var string 微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
      */
     public $MicroserviceId;
 
     /**
-     * @var string API 请求路径
+     * @var string API请求路径。
      */
     public $Path;
 
     /**
-     * @var string 请求方法
+     * @var string API请求方法。
+- GET
+- POST
+- PUT
+- DELETE
+- HEAD
+- PATCH
+- OPTIONS
      */
     public $Method;
 
     /**
-     * @param string $MicroserviceId 微服务ID
-     * @param string $Path API 请求路径
-     * @param string $Method 请求方法
+     * @param string $MicroserviceId 微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
+     * @param string $Path API请求路径。
+     * @param string $Method API请求方法。
+- GET
+- POST
+- PUT
+- DELETE
+- HEAD
+- PATCH
+- OPTIONS
      */
     function __construct()
     {

@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMsApiList请求参数结构体
  *
- * @method string getMicroserviceId() 获取微服务ID
- * @method void setMicroserviceId(string $MicroserviceId) 设置微服务ID
- * @method string getSearchWord() 获取搜索关键字
- * @method void setSearchWord(string $SearchWord) 设置搜索关键字
- * @method integer getLimit() 获取每页的数量
- * @method void setLimit(integer $Limit) 设置每页的数量
- * @method integer getOffset() 获取翻页偏移量
- * @method void setOffset(integer $Offset) 设置翻页偏移量
+ * @method string getMicroserviceId() 获取微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
+ * @method void setMicroserviceId(string $MicroserviceId) 设置微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
+ * @method string getSearchWord() 获取搜索关键字。
+ * @method void setSearchWord(string $SearchWord) 设置搜索关键字。
+ * @method integer getLimit() 获取返回数量，默认为20，最大值为50。
+ * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为50。
+ * @method integer getOffset() 获取偏移量，默认为0。
+ * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  */
 class DescribeMsApiListRequest extends AbstractModel
 {
     /**
-     * @var string 微服务ID
+     * @var string 微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
      */
     public $MicroserviceId;
 
     /**
-     * @var string 搜索关键字
+     * @var string 搜索关键字。
      */
     public $SearchWord;
 
     /**
-     * @var integer 每页的数量
+     * @var integer 返回数量，默认为20，最大值为50。
      */
     public $Limit;
 
     /**
-     * @var integer 翻页偏移量
+     * @var integer 偏移量，默认为0。
      */
     public $Offset;
 
     /**
-     * @param string $MicroserviceId 微服务ID
-     * @param string $SearchWord 搜索关键字
-     * @param integer $Limit 每页的数量
-     * @param integer $Offset 翻页偏移量
+     * @param string $MicroserviceId 微服务ID。该参数可以通过调用 [DescribeMicroservices](https://cloud.tencent.com/document/product/649/36084) 的返回值中的 MicroserviceId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tse/tsf-consul?tab=service)查看；也可以调用[CreateMicroserviceWithDetailResp](https://cloud.tencent.com/document/product/649/85860)创建新的微服务。
+     * @param string $SearchWord 搜索关键字。
+     * @param integer $Limit 返回数量，默认为20，最大值为50。
+     * @param integer $Offset 偏移量，默认为0。
      */
     function __construct()
     {

@@ -568,7 +568,9 @@ use TencentCloud\Essbasic\V20210526\Models as Models;
 适用场景1：更新当前企业的自定义角色的名称或描述等其他信息，更新时不进行权限的设置（PermissionGroups 参数不传）。
 
 适用场景2：更新当前企业的自定义角色的权限信息，更新时进行权限的设置（PermissionGroups 参数要传），权限树内容 PermissionGroups 可参考[查询角色列表接口](https://qian.tencent.com/developers/partnerApis/accounts/ChannelDescribeRoles) 的输出。此处注意权限树内容可能会更新，需尽量拉取最新的权限树内容，并且权限树内容 PermissionGroups 必须是一颗完整的权限树。
- * @method Models\ChannelRenewAutoSignLicenseResponse ChannelRenewAutoSignLicense(Models\ChannelRenewAutoSignLicenseRequest $req) 给医疗个人自动签许可续期。续期成功后，可对医疗自动签许可追加一年有效期，只可续期一次。
+ * @method Models\ChannelRenewAutoSignLicenseResponse ChannelRenewAutoSignLicense(Models\ChannelRenewAutoSignLicenseRequest $req) 已经不再使用
+
+给医疗个人自动签许可续期。续期成功后，可对医疗自动签许可追加一年有效期，只可续期一次。
 
 注意: `处方单等特殊场景专用，此接口为白名单功能，使用前请联系对接的客户经理沟通。`
  * @method Models\ChannelUpdateSealStatusResponse ChannelUpdateSealStatus(Models\ChannelUpdateSealStatusRequest $req) 此接口（ChannelUpdateSealStatus）用于第三方应用平台为子客企业更新印章状态。

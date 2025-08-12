@@ -113,6 +113,7 @@ use TencentCloud\Lighthouse\V20200324\Models as Models;
  * @method Models\DescribeFirewallTemplateRulesResponse DescribeFirewallTemplateRules(Models\DescribeFirewallTemplateRulesRequest $req) 本接口 (DescribeFirewallTemplateRules) 用于查询防火墙模板规则列表。
  * @method Models\DescribeFirewallTemplatesResponse DescribeFirewallTemplates(Models\DescribeFirewallTemplatesRequest $req) 本接口 (DescribeFirewallTemplates) 用于查询防火墙模板列表。
  * @method Models\DescribeGeneralResourceQuotasResponse DescribeGeneralResourceQuotas(Models\DescribeGeneralResourceQuotasRequest $req) 本接口（DescribeGeneralResourceQuotas）用于查询通用资源配额信息。
+ * @method Models\DescribeImagesToShareResponse DescribeImagesToShare(Models\DescribeImagesToShareRequest $req) 本接口 (DescribeImagesToShare) 用于查询CVM的自定义镜像列表共享到轻量应用服务器。
  * @method Models\DescribeInstanceVncUrlResponse DescribeInstanceVncUrl(Models\DescribeInstanceVncUrlRequest $req) 本接口 ( DescribeInstanceVncUrl ) 用于查询实例管理终端地址，获取的地址可用于实例的 VNC 登录。
 
 * 仅处于 `RUNNING`，`RESCUE_MODE` 状态的机器，且当前机器无变更中操作，才可使用此功能。
@@ -214,6 +215,14 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 * Action 字段只允许输入 ACCEPT 或 DROP。
 * FirewallRuleDescription 字段长度不得超过 64。
  * @method Models\ModifyFirewallTemplateResponse ModifyFirewallTemplate(Models\ModifyFirewallTemplateRequest $req) 本接口 (ModifyFirewallTemplate) 用于修改防火墙模板。
+ * @method Models\ModifyImageSharePermissionResponse ModifyImageSharePermission(Models\ModifyImageSharePermissionRequest $req) 本接口 (ModifyImageSharePermission) 用于共享和取消共享CVM自定义镜像到轻量应用服务器服务。
+CVM镜像共享到轻量应用服务器镜像需要满足如下条件：
+1.已共享过的镜像不支持再次共享。
+2.外部导入的镜像不支持共享。
+3.整机镜像不支持共享。
+4.镜像要支持Cloudinit才支持共享。
+5.镜像的Platform和OsName要满足。
+6.NORMAL状态的镜像才支持共享。
  * @method Models\ModifyInstancesAttributeResponse ModifyInstancesAttribute(Models\ModifyInstancesAttributeRequest $req) 本接口（ModifyInstancesAttribute）用于修改实例的属性。
 * “实例名称”仅为方便用户自己管理之用。
 * 支持批量操作。每次请求批量实例的上限为 100。

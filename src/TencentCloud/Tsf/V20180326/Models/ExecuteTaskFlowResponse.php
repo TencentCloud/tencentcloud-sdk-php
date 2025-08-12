@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ExecuteTaskFlow返回参数结构体
  *
- * @method string getResult() 获取工作流批次ID
- * @method void setResult(string $Result) 设置工作流批次ID
+ * @method string getResult() 获取操作成功返回工作流批次ID，操作失败返回空字符串。
+ * @method void setResult(string $Result) 设置操作成功返回工作流批次ID，操作失败返回空字符串。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class ExecuteTaskFlowResponse extends AbstractModel
 {
     /**
-     * @var string 工作流批次ID
+     * @var string 操作成功返回工作流批次ID，操作失败返回空字符串。
      */
     public $Result;
 
@@ -38,7 +38,7 @@ class ExecuteTaskFlowResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Result 工作流批次ID
+     * @param string $Result 操作成功返回工作流批次ID，操作失败返回空字符串。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

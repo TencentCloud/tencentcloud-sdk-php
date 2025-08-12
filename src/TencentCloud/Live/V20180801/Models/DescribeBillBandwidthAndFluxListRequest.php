@@ -36,16 +36,8 @@ use TencentCloud\Common\AbstractModel;
 起始和结束时间跨度不支持超过31天。支持最近3年的数据查询
  * @method array getPlayDomains() 获取直播播放域名，若不填，表示总体数据。
  * @method void setPlayDomains(array $PlayDomains) 设置直播播放域名，若不填，表示总体数据。
- * @method string getMainlandOrOversea() 获取可选值：
-Mainland：查询国内数据，
-Oversea：则查询国外数据，
-默认：查询国内+国外的数据。
-注：LEB（快直播）只支持国内+国外数据查询。
- * @method void setMainlandOrOversea(string $MainlandOrOversea) 设置可选值：
-Mainland：查询国内数据，
-Oversea：则查询国外数据，
-默认：查询国内+国外的数据。
-注：LEB（快直播）只支持国内+国外数据查询。
+ * @method string getMainlandOrOversea() 获取可选值：Mainland：查询国内数据，Oversea：则查询国外数据，默认：查询国内+国外的数据。
+ * @method void setMainlandOrOversea(string $MainlandOrOversea) 设置可选值：Mainland：查询国内数据，Oversea：则查询国外数据，默认：查询国内+国外的数据。
  * @method integer getGranularity() 获取数据粒度，支持如下粒度：
 5：5分钟粒度，（跨度不支持超过1天），
 60：1小时粒度（跨度不支持超过一个月），
@@ -102,11 +94,7 @@ class DescribeBillBandwidthAndFluxListRequest extends AbstractModel
     public $PlayDomains;
 
     /**
-     * @var string 可选值：
-Mainland：查询国内数据，
-Oversea：则查询国外数据，
-默认：查询国内+国外的数据。
-注：LEB（快直播）只支持国内+国外数据查询。
+     * @var string 可选值：Mainland：查询国内数据，Oversea：则查询国外数据，默认：查询国内+国外的数据。
      */
     public $MainlandOrOversea;
 
@@ -147,11 +135,7 @@ Africa 非洲。
 2）YYYY-MM-DD hh:mm:ss：使用此格式时，默认代表北京时间。
 起始和结束时间跨度不支持超过31天。支持最近3年的数据查询
      * @param array $PlayDomains 直播播放域名，若不填，表示总体数据。
-     * @param string $MainlandOrOversea 可选值：
-Mainland：查询国内数据，
-Oversea：则查询国外数据，
-默认：查询国内+国外的数据。
-注：LEB（快直播）只支持国内+国外数据查询。
+     * @param string $MainlandOrOversea 可选值：Mainland：查询国内数据，Oversea：则查询国外数据，默认：查询国内+国外的数据。
      * @param integer $Granularity 数据粒度，支持如下粒度：
 5：5分钟粒度，（跨度不支持超过1天），
 60：1小时粒度（跨度不支持超过一个月），

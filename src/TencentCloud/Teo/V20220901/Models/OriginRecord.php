@@ -32,9 +32,9 @@ use TencentCloud\Common\AbstractModel;
 <li>AWS_S3：AWS S3对象存储源站。</li>
  * @method string getRecordId() 获取源站记录ID。
  * @method void setRecordId(string $RecordId) 设置源站记录ID。
- * @method integer getWeight() 获取源站权重，取值为0-100, 不填表示不设置权重，由系统自由调度，填0表示权重为0, 流量将不会调度到此源站。
+ * @method integer getWeight() 获取【源站权重】：用于控制流量分配优先级的参数，取值范围：0-100（整数）：<li>空值：不设置权重，系统按默认策略调度；</li><li>0 值：明确设置权重为0，流量将不会分配到该源站，注意事项：必须确保至少有一个源站的权重值大于0；</li><li>正常值：数值越大分配流量越多 ；</li>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setWeight(integer $Weight) 设置源站权重，取值为0-100, 不填表示不设置权重，由系统自由调度，填0表示权重为0, 流量将不会调度到此源站。
+ * @method void setWeight(integer $Weight) 设置【源站权重】：用于控制流量分配优先级的参数，取值范围：0-100（整数）：<li>空值：不设置权重，系统按默认策略调度；</li><li>0 值：明确设置权重为0，流量将不会分配到该源站，注意事项：必须确保至少有一个源站的权重值大于0；</li><li>正常值：数值越大分配流量越多 ；</li>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getPrivate() 获取是否私有鉴权，当源站类型 RecordType=COS/AWS_S3 时生效，取值有：
 <li>true：使用私有鉴权；</li>
@@ -68,7 +68,7 @@ class OriginRecord extends AbstractModel
     public $RecordId;
 
     /**
-     * @var integer 源站权重，取值为0-100, 不填表示不设置权重，由系统自由调度，填0表示权重为0, 流量将不会调度到此源站。
+     * @var integer 【源站权重】：用于控制流量分配优先级的参数，取值范围：0-100（整数）：<li>空值：不设置权重，系统按默认策略调度；</li><li>0 值：明确设置权重为0，流量将不会分配到该源站，注意事项：必须确保至少有一个源站的权重值大于0；</li><li>正常值：数值越大分配流量越多 ；</li>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Weight;
@@ -93,7 +93,7 @@ class OriginRecord extends AbstractModel
 <li>COS：COS源。</li>
 <li>AWS_S3：AWS S3对象存储源站。</li>
      * @param string $RecordId 源站记录ID。
-     * @param integer $Weight 源站权重，取值为0-100, 不填表示不设置权重，由系统自由调度，填0表示权重为0, 流量将不会调度到此源站。
+     * @param integer $Weight 【源站权重】：用于控制流量分配优先级的参数，取值范围：0-100（整数）：<li>空值：不设置权重，系统按默认策略调度；</li><li>0 值：明确设置权重为0，流量将不会分配到该源站，注意事项：必须确保至少有一个源站的权重值大于0；</li><li>正常值：数值越大分配流量越多 ；</li>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $Private 是否私有鉴权，当源站类型 RecordType=COS/AWS_S3 时生效，取值有：
 <li>true：使用私有鉴权；</li>

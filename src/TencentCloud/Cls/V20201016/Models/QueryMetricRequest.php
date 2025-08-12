@@ -21,9 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * QueryMetric请求参数结构体
  *
  * @method string getQuery() 获取查询语句，使用PromQL语法	
+- 参考 [语法规则](https://cloud.tencent.com/document/product/614/90334) 文档
  * @method void setQuery(string $Query) 设置查询语句，使用PromQL语法	
+- 参考 [语法规则](https://cloud.tencent.com/document/product/614/90334) 文档
  * @method string getTopicId() 获取指标主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
  * @method void setTopicId(string $TopicId) 设置指标主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
  * @method integer getTime() 获取查询时间，秒级Unix时间戳。为空时代表当前时间戳。
 
  * @method void setTime(integer $Time) 设置查询时间，秒级Unix时间戳。为空时代表当前时间戳。
@@ -32,11 +36,13 @@ class QueryMetricRequest extends AbstractModel
 {
     /**
      * @var string 查询语句，使用PromQL语法	
+- 参考 [语法规则](https://cloud.tencent.com/document/product/614/90334) 文档
      */
     public $Query;
 
     /**
      * @var string 指标主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public $TopicId;
 
@@ -48,7 +54,9 @@ class QueryMetricRequest extends AbstractModel
 
     /**
      * @param string $Query 查询语句，使用PromQL语法	
+- 参考 [语法规则](https://cloud.tencent.com/document/product/614/90334) 文档
      * @param string $TopicId 指标主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      * @param integer $Time 查询时间，秒级Unix时间戳。为空时代表当前时间戳。
      */
     function __construct()

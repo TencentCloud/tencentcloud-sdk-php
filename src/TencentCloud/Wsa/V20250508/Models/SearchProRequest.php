@@ -24,12 +24,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuery(string $Query) 设置搜索词
  * @method integer getMode() 获取返回结果类型，0-自然检索结果(默认)，1-多模态VR结果，2-混合结果（多模态VR结果+自然检索结果）
  * @method void setMode(integer $Mode) 设置返回结果类型，0-自然检索结果(默认)，1-多模态VR结果，2-混合结果（多模态VR结果+自然检索结果）
- * @method string getSite() 获取指定域名站内搜索（用于过滤自然检索结果）  注意：  mode=1模式下，参数无效 mode=0模式下对所有结果生效 mode=2模式下对输出的自然结果生效
- * @method void setSite(string $Site) 设置指定域名站内搜索（用于过滤自然检索结果）  注意：  mode=1模式下，参数无效 mode=0模式下对所有结果生效 mode=2模式下对输出的自然结果生效
- * @method integer getFromTime() 获取起始时间（用于过滤自然检索结果），精确到秒时间戳格式  注意：  mode=1模式下，参数无效 mode=0模式下对所有结果生效 mode=2模式下对输出的自然结果生效
- * @method void setFromTime(integer $FromTime) 设置起始时间（用于过滤自然检索结果），精确到秒时间戳格式  注意：  mode=1模式下，参数无效 mode=0模式下对所有结果生效 mode=2模式下对输出的自然结果生效
- * @method integer getToTime() 获取结束时间（用于过滤自然检索结果），精确到秒时间戳格式  注意：  mode=1模式下，参数无效 mode=0模式下对所有结果生效 mode=2模式下对输出的自然结果生效
- * @method void setToTime(integer $ToTime) 设置结束时间（用于过滤自然检索结果），精确到秒时间戳格式  注意：  mode=1模式下，参数无效 mode=0模式下对所有结果生效 mode=2模式下对输出的自然结果生效
+ * @method string getSite() 获取指定域名站内搜索（用于过滤自然检索结果）
+注意： mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效
+ * @method void setSite(string $Site) 设置指定域名站内搜索（用于过滤自然检索结果）
+注意： mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效
+ * @method integer getFromTime() 获取起始时间（用于过滤自然检索结果），精确到秒时间戳格式
+注意： mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效
+ * @method void setFromTime(integer $FromTime) 设置起始时间（用于过滤自然检索结果），精确到秒时间戳格式
+注意： mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效
+ * @method integer getToTime() 获取结束时间（用于过滤自然检索结果），精确到秒时间戳格式
+注意：mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效
+ * @method void setToTime(integer $ToTime) 设置结束时间（用于过滤自然检索结果），精确到秒时间戳格式
+注意：mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效
+ * @method integer getCnt() 获取cnt=10/20/30/40/50，最多可支持返回50条搜索结果，**仅限尊享版使用**
+ * @method void setCnt(integer $Cnt) 设置cnt=10/20/30/40/50，最多可支持返回50条搜索结果，**仅限尊享版使用**
+ * @method string getIndustry() 获取Industry=gov/news/acad，对应党政机关、新闻、学术，**仅限尊享版使用**
+ * @method void setIndustry(string $Industry) 设置Industry=gov/news/acad，对应党政机关、新闻、学术，**仅限尊享版使用**
  */
 class SearchProRequest extends AbstractModel
 {
@@ -44,26 +54,44 @@ class SearchProRequest extends AbstractModel
     public $Mode;
 
     /**
-     * @var string 指定域名站内搜索（用于过滤自然检索结果）  注意：  mode=1模式下，参数无效 mode=0模式下对所有结果生效 mode=2模式下对输出的自然结果生效
+     * @var string 指定域名站内搜索（用于过滤自然检索结果）
+注意： mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效
      */
     public $Site;
 
     /**
-     * @var integer 起始时间（用于过滤自然检索结果），精确到秒时间戳格式  注意：  mode=1模式下，参数无效 mode=0模式下对所有结果生效 mode=2模式下对输出的自然结果生效
+     * @var integer 起始时间（用于过滤自然检索结果），精确到秒时间戳格式
+注意： mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效
      */
     public $FromTime;
 
     /**
-     * @var integer 结束时间（用于过滤自然检索结果），精确到秒时间戳格式  注意：  mode=1模式下，参数无效 mode=0模式下对所有结果生效 mode=2模式下对输出的自然结果生效
+     * @var integer 结束时间（用于过滤自然检索结果），精确到秒时间戳格式
+注意：mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效
      */
     public $ToTime;
 
     /**
+     * @var integer cnt=10/20/30/40/50，最多可支持返回50条搜索结果，**仅限尊享版使用**
+     */
+    public $Cnt;
+
+    /**
+     * @var string Industry=gov/news/acad，对应党政机关、新闻、学术，**仅限尊享版使用**
+     */
+    public $Industry;
+
+    /**
      * @param string $Query 搜索词
      * @param integer $Mode 返回结果类型，0-自然检索结果(默认)，1-多模态VR结果，2-混合结果（多模态VR结果+自然检索结果）
-     * @param string $Site 指定域名站内搜索（用于过滤自然检索结果）  注意：  mode=1模式下，参数无效 mode=0模式下对所有结果生效 mode=2模式下对输出的自然结果生效
-     * @param integer $FromTime 起始时间（用于过滤自然检索结果），精确到秒时间戳格式  注意：  mode=1模式下，参数无效 mode=0模式下对所有结果生效 mode=2模式下对输出的自然结果生效
-     * @param integer $ToTime 结束时间（用于过滤自然检索结果），精确到秒时间戳格式  注意：  mode=1模式下，参数无效 mode=0模式下对所有结果生效 mode=2模式下对输出的自然结果生效
+     * @param string $Site 指定域名站内搜索（用于过滤自然检索结果）
+注意： mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效
+     * @param integer $FromTime 起始时间（用于过滤自然检索结果），精确到秒时间戳格式
+注意： mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效
+     * @param integer $ToTime 结束时间（用于过滤自然检索结果），精确到秒时间戳格式
+注意：mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效
+     * @param integer $Cnt cnt=10/20/30/40/50，最多可支持返回50条搜索结果，**仅限尊享版使用**
+     * @param string $Industry Industry=gov/news/acad，对应党政机关、新闻、学术，**仅限尊享版使用**
      */
     function __construct()
     {
@@ -96,6 +124,14 @@ class SearchProRequest extends AbstractModel
 
         if (array_key_exists("ToTime",$param) and $param["ToTime"] !== null) {
             $this->ToTime = $param["ToTime"];
+        }
+
+        if (array_key_exists("Cnt",$param) and $param["Cnt"] !== null) {
+            $this->Cnt = $param["Cnt"];
+        }
+
+        if (array_key_exists("Industry",$param) and $param["Industry"] !== null) {
+            $this->Industry = $param["Industry"];
         }
     }
 }

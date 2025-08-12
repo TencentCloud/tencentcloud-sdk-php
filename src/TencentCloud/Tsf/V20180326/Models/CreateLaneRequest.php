@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateLane请求参数结构体
  *
- * @method string getLaneName() 获取泳道名称
- * @method void setLaneName(string $LaneName) 设置泳道名称
- * @method string getRemark() 获取泳道备注
- * @method void setRemark(string $Remark) 设置泳道备注
- * @method array getLaneGroupList() 获取泳道部署组信息
- * @method void setLaneGroupList(array $LaneGroupList) 设置泳道部署组信息
- * @method array getProgramIdList() 获取无
- * @method void setProgramIdList(array $ProgramIdList) 设置无
+ * @method string getLaneName() 获取泳道配置名称，最多支持60个字符，只能包含字母、数字及分隔符（“-”），且不能以分隔符开头或结尾。
+ * @method void setLaneName(string $LaneName) 设置泳道配置名称，最多支持60个字符，只能包含字母、数字及分隔符（“-”），且不能以分隔符开头或结尾。
+ * @method string getRemark() 获取泳道配置备注，最多支持200个字符。
+ * @method void setRemark(string $Remark) 设置泳道配置备注，最多支持200个字符。
+ * @method array getLaneGroupList() 获取泳道部署组信息。
+ * @method void setLaneGroupList(array $LaneGroupList) 设置泳道部署组信息。
+ * @method array getProgramIdList() 获取需要绑定的数据集ID。该参数可以通过调用 [DescribePrograms](https://cloud.tencent.com/document/product/649/73477) 的返回值中的 ProgramId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/privilege?tab=program&roleId=role-yrle4doy)查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。
+ * @method void setProgramIdList(array $ProgramIdList) 设置需要绑定的数据集ID。该参数可以通过调用 [DescribePrograms](https://cloud.tencent.com/document/product/649/73477) 的返回值中的 ProgramId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/privilege?tab=program&roleId=role-yrle4doy)查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。
  */
 class CreateLaneRequest extends AbstractModel
 {
     /**
-     * @var string 泳道名称
+     * @var string 泳道配置名称，最多支持60个字符，只能包含字母、数字及分隔符（“-”），且不能以分隔符开头或结尾。
      */
     public $LaneName;
 
     /**
-     * @var string 泳道备注
+     * @var string 泳道配置备注，最多支持200个字符。
      */
     public $Remark;
 
     /**
-     * @var array 泳道部署组信息
+     * @var array 泳道部署组信息。
      */
     public $LaneGroupList;
 
     /**
-     * @var array 无
+     * @var array 需要绑定的数据集ID。该参数可以通过调用 [DescribePrograms](https://cloud.tencent.com/document/product/649/73477) 的返回值中的 ProgramId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/privilege?tab=program&roleId=role-yrle4doy)查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。
      */
     public $ProgramIdList;
 
     /**
-     * @param string $LaneName 泳道名称
-     * @param string $Remark 泳道备注
-     * @param array $LaneGroupList 泳道部署组信息
-     * @param array $ProgramIdList 无
+     * @param string $LaneName 泳道配置名称，最多支持60个字符，只能包含字母、数字及分隔符（“-”），且不能以分隔符开头或结尾。
+     * @param string $Remark 泳道配置备注，最多支持200个字符。
+     * @param array $LaneGroupList 泳道部署组信息。
+     * @param array $ProgramIdList 需要绑定的数据集ID。该参数可以通过调用 [DescribePrograms](https://cloud.tencent.com/document/product/649/73477) 的返回值中的 ProgramId 字段来获取或通过登录[控制台](https://console.cloud.tencent.com/tsf/privilege?tab=program&roleId=role-yrle4doy)查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。
      */
     function __construct()
     {

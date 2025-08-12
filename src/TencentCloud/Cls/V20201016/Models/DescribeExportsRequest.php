@@ -20,8 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeExports请求参数结构体
  *
- * @method string getTopicId() 获取日志主题ID
- * @method void setTopicId(string $TopicId) 设置日志主题ID
+ * @method string getTopicId() 获取日志主题Id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+ * @method void setTopicId(string $TopicId) 设置日志主题Id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
  * @method integer getOffset() 获取分页的偏移量，默认值为0
  * @method void setOffset(integer $Offset) 设置分页的偏移量，默认值为0
  * @method integer getLimit() 获取分页单页限制数目，默认值为20，最大值100
@@ -30,7 +32,8 @@ use TencentCloud\Common\AbstractModel;
 class DescribeExportsRequest extends AbstractModel
 {
     /**
-     * @var string 日志主题ID
+     * @var string 日志主题Id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public $TopicId;
 
@@ -45,7 +48,8 @@ class DescribeExportsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param string $TopicId 日志主题ID
+     * @param string $TopicId 日志主题Id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      * @param integer $Offset 分页的偏移量，默认值为0
      * @param integer $Limit 分页单页限制数目，默认值为20，最大值100
      */

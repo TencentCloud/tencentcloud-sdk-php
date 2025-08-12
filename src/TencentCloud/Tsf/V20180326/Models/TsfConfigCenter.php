@@ -20,9 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 配置中心
  *
- * @method string getConfigType() 获取配置中心类型
+ * @method string getConfigType() 获取配置中心类型。
+- SHARE：共享型
+- EXCLUSIVE：独占型
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setConfigType(string $ConfigType) 设置配置中心类型
+ * @method void setConfigType(string $ConfigType) 设置配置中心类型。
+- SHARE：共享型
+- EXCLUSIVE：独占型
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConfigCenterInstanceId() 获取配置中心实例id
 注意：此字段可能返回 null，表示取不到有效值。
@@ -52,7 +56,9 @@ use TencentCloud\Common\AbstractModel;
 class TsfConfigCenter extends AbstractModel
 {
     /**
-     * @var string 配置中心类型
+     * @var string 配置中心类型。
+- SHARE：共享型
+- EXCLUSIVE：独占型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigType;
@@ -94,7 +100,9 @@ class TsfConfigCenter extends AbstractModel
     public $TargetVersion;
 
     /**
-     * @param string $ConfigType 配置中心类型
+     * @param string $ConfigType 配置中心类型。
+- SHARE：共享型
+- EXCLUSIVE：独占型
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConfigCenterInstanceId 配置中心实例id
 注意：此字段可能返回 null，表示取不到有效值。

@@ -23,7 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getConfigId() 获取采集规则配置ID，通过[获取采集规则配置](https://cloud.tencent.com/document/product/614/58616)返回信息获取。
  * @method void setConfigId(string $ConfigId) 设置采集规则配置ID，通过[获取采集规则配置](https://cloud.tencent.com/document/product/614/58616)返回信息获取。
  * @method string getName() 获取采集规则配置名称
+- 不能包含特殊字符｜
+- 长度不能超过255字符，超过会被截断
  * @method void setName(string $Name) 设置采集规则配置名称
+- 不能包含特殊字符｜
+- 长度不能超过255字符，超过会被截断
  * @method string getPath() 获取日志采集路径，包含文件名
  * @method void setPath(string $Path) 设置日志采集路径，包含文件名
  * @method string getLogType() 获取采集的日志类型。支持以下类型：
@@ -55,7 +59,9 @@ use TencentCloud\Common\AbstractModel;
  * @method array getExcludePaths() 获取采集黑名单路径列表
  * @method void setExcludePaths(array $ExcludePaths) 设置采集黑名单路径列表
  * @method string getOutput() 获取采集配置关联的日志主题（TopicId）
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
  * @method void setOutput(string $Output) 设置采集配置关联的日志主题（TopicId）
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
  * @method string getUserDefineRule() 获取用户自定义解析字符串，Json格式序列化的字符串。
  * @method void setUserDefineRule(string $UserDefineRule) 设置用户自定义解析字符串，Json格式序列化的字符串。
  * @method string getAdvancedConfig() 获取高级采集配置。 Json字符串， Key/Value定义为如下：
@@ -80,6 +86,8 @@ class ModifyConfigRequest extends AbstractModel
 
     /**
      * @var string 采集规则配置名称
+- 不能包含特殊字符｜
+- 长度不能超过255字符，超过会被截断
      */
     public $Name;
 
@@ -116,6 +124,7 @@ class ModifyConfigRequest extends AbstractModel
 
     /**
      * @var string 采集配置关联的日志主题（TopicId）
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public $Output;
 
@@ -137,6 +146,8 @@ class ModifyConfigRequest extends AbstractModel
     /**
      * @param string $ConfigId 采集规则配置ID，通过[获取采集规则配置](https://cloud.tencent.com/document/product/614/58616)返回信息获取。
      * @param string $Name 采集规则配置名称
+- 不能包含特殊字符｜
+- 长度不能超过255字符，超过会被截断
      * @param string $Path 日志采集路径，包含文件名
      * @param string $LogType 采集的日志类型。支持以下类型：
 - json_log代表：JSON-文件日志（详见[使用 JSON 提取模式采集日志](https://cloud.tencent.com/document/product/614/17419)）；
@@ -153,6 +164,7 @@ class ModifyConfigRequest extends AbstractModel
      * @param ExtractRuleInfo $ExtractRule 提取规则，如果设置了ExtractRule，则必须设置LogType
      * @param array $ExcludePaths 采集黑名单路径列表
      * @param string $Output 采集配置关联的日志主题（TopicId）
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      * @param string $UserDefineRule 用户自定义解析字符串，Json格式序列化的字符串。
      * @param string $AdvancedConfig 高级采集配置。 Json字符串， Key/Value定义为如下：
 - ClsAgentFileTimeout(超时属性), 取值范围: 大于等于0的整数， 0为不超时

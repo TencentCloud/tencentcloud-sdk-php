@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RedoTask请求参数结构体
  *
- * @method string getTaskId() 获取任务ID
- * @method void setTaskId(string $TaskId) 设置任务ID
+ * @method string getTaskId() 获取任务ID。在任务管理列表页面第一列查看任务ID。
+ * @method void setTaskId(string $TaskId) 设置任务ID。在任务管理列表页面第一列查看任务ID。
  */
 class RedoTaskRequest extends AbstractModel
 {
     /**
-     * @var string 任务ID
+     * @var string 任务ID。在任务管理列表页面第一列查看任务ID。
      */
     public $TaskId;
 
     /**
-     * @param string $TaskId 任务ID
+     * @param string $TaskId 任务ID。在任务管理列表页面第一列查看任务ID。
      */
     function __construct()
     {

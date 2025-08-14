@@ -30,9 +30,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setClusterDesc(string $ClusterDesc) 设置集群描述
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getClusterType() 获取集群类型
+ * @method string getClusterType() 获取集群类型，C表示容器集群，V表示虚拟机集群
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setClusterType(string $ClusterType) 设置集群类型
+ * @method void setClusterType(string $ClusterType) 设置集群类型，C表示容器集群，V表示虚拟机集群
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getVpcId() 获取集群所属私有网络ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -78,13 +78,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDeleteFlag(boolean $DeleteFlag) 设置删除标记：true：可以删除；false：不可删除
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateTime() 获取创建时间
+ * @method string getCreateTime() 获取创建时间，格式为​​YYYY-MM-DD HH:MM:SS
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCreateTime(string $CreateTime) 设置创建时间
+ * @method void setCreateTime(string $CreateTime) 设置创建时间，格式为​​YYYY-MM-DD HH:MM:SS
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdateTime() 获取更新时间
+ * @method string getUpdateTime() 获取更新时间，格式为​​YYYY-MM-DD HH:MM:SS
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间
+ * @method void setUpdateTime(string $UpdateTime) 设置更新时间，格式为​​YYYY-MM-DD HH:MM:SS
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTsfRegionId() 获取集群所属TSF地域ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -154,9 +154,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKuberneteApiServer(string $KuberneteApiServer) 设置api地址
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getKuberneteNativeType() 获取K : kubeconfig, S : service account
+ * @method string getKuberneteNativeType() 获取K 表示通过kubeconfig 导入, S 表示通过service account导入
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKuberneteNativeType(string $KuberneteNativeType) 设置K : kubeconfig, S : service account
+ * @method void setKuberneteNativeType(string $KuberneteNativeType) 设置K 表示通过kubeconfig 导入, S 表示通过service account导入
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getKuberneteNativeSecret() 获取native secret
 注意：此字段可能返回 null，表示取不到有效值。
@@ -187,7 +187,7 @@ class ClusterV2 extends AbstractModel
     public $ClusterDesc;
 
     /**
-     * @var string 集群类型
+     * @var string 集群类型，C表示容器集群，V表示虚拟机集群
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ClusterType;
@@ -259,13 +259,13 @@ class ClusterV2 extends AbstractModel
     public $DeleteFlag;
 
     /**
-     * @var string 创建时间
+     * @var string 创建时间，格式为​​YYYY-MM-DD HH:MM:SS
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CreateTime;
 
     /**
-     * @var string 更新时间
+     * @var string 更新时间，格式为​​YYYY-MM-DD HH:MM:SS
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
@@ -373,7 +373,7 @@ class ClusterV2 extends AbstractModel
     public $KuberneteApiServer;
 
     /**
-     * @var string K : kubeconfig, S : service account
+     * @var string K 表示通过kubeconfig 导入, S 表示通过service account导入
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KuberneteNativeType;
@@ -400,7 +400,7 @@ class ClusterV2 extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ClusterDesc 集群描述
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ClusterType 集群类型
+     * @param string $ClusterType 集群类型，C表示容器集群，V表示虚拟机集群
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VpcId 集群所属私有网络ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -424,9 +424,9 @@ class ClusterV2 extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $DeleteFlag 删除标记：true：可以删除；false：不可删除
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateTime 创建时间
+     * @param string $CreateTime 创建时间，格式为​​YYYY-MM-DD HH:MM:SS
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdateTime 更新时间
+     * @param string $UpdateTime 更新时间，格式为​​YYYY-MM-DD HH:MM:SS
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TsfRegionId 集群所属TSF地域ID
 注意：此字段可能返回 null，表示取不到有效值。
@@ -462,7 +462,7 @@ class ClusterV2 extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $KuberneteApiServer api地址
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $KuberneteNativeType K : kubeconfig, S : service account
+     * @param string $KuberneteNativeType K 表示通过kubeconfig 导入, S 表示通过service account导入
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $KuberneteNativeSecret native secret
 注意：此字段可能返回 null，表示取不到有效值。

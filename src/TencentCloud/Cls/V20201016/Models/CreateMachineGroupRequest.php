@@ -20,8 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateMachineGroup请求参数结构体
  *
- * @method string getGroupName() 获取机器组名字，不能重复
- * @method void setGroupName(string $GroupName) 设置机器组名字，不能重复
+ * @method string getGroupName() 获取机器组名字。
+输入限制：
+- 最大支持255个字符，不能为空字符串
+- 不能包含字符'|'
+ * @method void setGroupName(string $GroupName) 设置机器组名字。
+输入限制：
+- 最大支持255个字符，不能为空字符串
+- 不能包含字符'|'
  * @method MachineGroupTypeInfo getMachineGroupType() 获取创建机器组类型。取值如下：
 - Type：ip，Values中为ip字符串列表创建机器组
 - Type：label，Values中为标签字符串列表创建机器组
@@ -33,13 +39,21 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getAutoUpdate() 获取是否开启机器组自动更新。默认false
  * @method void setAutoUpdate(boolean $AutoUpdate) 设置是否开启机器组自动更新。默认false
  * @method string getUpdateStartTime() 获取升级开始时间，建议业务低峰期升级LogListener
+时间格式：HH:mm:ss
  * @method void setUpdateStartTime(string $UpdateStartTime) 设置升级开始时间，建议业务低峰期升级LogListener
+时间格式：HH:mm:ss
  * @method string getUpdateEndTime() 获取升级结束时间，建议业务低峰期升级LogListener
+时间格式：HH:mm:ss
  * @method void setUpdateEndTime(string $UpdateEndTime) 设置升级结束时间，建议业务低峰期升级LogListener
+时间格式：HH:mm:ss
  * @method boolean getServiceLogging() 获取是否开启服务日志，用于记录因Loglistener 服务自身产生的log，开启后，会创建内部日志集cls_service_logging和日志主题loglistener_status,loglistener_alarm,loglistener_business，不产生计费。默认false
  * @method void setServiceLogging(boolean $ServiceLogging) 设置是否开启服务日志，用于记录因Loglistener 服务自身产生的log，开启后，会创建内部日志集cls_service_logging和日志主题loglistener_status,loglistener_alarm,loglistener_business，不产生计费。默认false
  * @method integer getDelayCleanupTime() 获取机器组中机器离线清理时间。单位：天
+
+- 大于0时生效。
  * @method void setDelayCleanupTime(integer $DelayCleanupTime) 设置机器组中机器离线清理时间。单位：天
+
+- 大于0时生效。
  * @method array getMetaTags() 获取机器组元数据信息列表
  * @method void setMetaTags(array $MetaTags) 设置机器组元数据信息列表
  * @method integer getOSType() 获取系统类型，取值如下：
@@ -52,7 +66,10 @@ use TencentCloud\Common\AbstractModel;
 class CreateMachineGroupRequest extends AbstractModel
 {
     /**
-     * @var string 机器组名字，不能重复
+     * @var string 机器组名字。
+输入限制：
+- 最大支持255个字符，不能为空字符串
+- 不能包含字符'|'
      */
     public $GroupName;
 
@@ -75,11 +92,13 @@ class CreateMachineGroupRequest extends AbstractModel
 
     /**
      * @var string 升级开始时间，建议业务低峰期升级LogListener
+时间格式：HH:mm:ss
      */
     public $UpdateStartTime;
 
     /**
      * @var string 升级结束时间，建议业务低峰期升级LogListener
+时间格式：HH:mm:ss
      */
     public $UpdateEndTime;
 
@@ -90,6 +109,8 @@ class CreateMachineGroupRequest extends AbstractModel
 
     /**
      * @var integer 机器组中机器离线清理时间。单位：天
+
+- 大于0时生效。
      */
     public $DelayCleanupTime;
 
@@ -106,16 +127,23 @@ class CreateMachineGroupRequest extends AbstractModel
     public $OSType;
 
     /**
-     * @param string $GroupName 机器组名字，不能重复
+     * @param string $GroupName 机器组名字。
+输入限制：
+- 最大支持255个字符，不能为空字符串
+- 不能包含字符'|'
      * @param MachineGroupTypeInfo $MachineGroupType 创建机器组类型。取值如下：
 - Type：ip，Values中为ip字符串列表创建机器组
 - Type：label，Values中为标签字符串列表创建机器组
      * @param array $Tags 标签描述列表，通过指定该参数可以同时绑定标签到相应的机器组。最大支持10个标签键值对，同一个资源只能绑定到同一个标签键下。
      * @param boolean $AutoUpdate 是否开启机器组自动更新。默认false
      * @param string $UpdateStartTime 升级开始时间，建议业务低峰期升级LogListener
+时间格式：HH:mm:ss
      * @param string $UpdateEndTime 升级结束时间，建议业务低峰期升级LogListener
+时间格式：HH:mm:ss
      * @param boolean $ServiceLogging 是否开启服务日志，用于记录因Loglistener 服务自身产生的log，开启后，会创建内部日志集cls_service_logging和日志主题loglistener_status,loglistener_alarm,loglistener_business，不产生计费。默认false
      * @param integer $DelayCleanupTime 机器组中机器离线清理时间。单位：天
+
+- 大于0时生效。
      * @param array $MetaTags 机器组元数据信息列表
      * @param integer $OSType 系统类型，取值如下：
 - 0：Linux （默认值）

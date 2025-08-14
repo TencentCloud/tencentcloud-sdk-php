@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTargetGroupName() 获取目标组名称，限定50个字符
  * @method void setTargetGroupName(string $TargetGroupName) 设置目标组名称，限定50个字符
- * @method string getVpcId() 获取目标组的vpcid属性，不填则使用默认vpc
- * @method void setVpcId(string $VpcId) 设置目标组的vpcid属性，不填则使用默认vpc
+ * @method string getVpcId() 获取目标组的vpcId属性，不填则使用默认vpc。
+ * @method void setVpcId(string $VpcId) 设置目标组的vpcId属性，不填则使用默认vpc。
  * @method integer getPort() 获取目标组的默认端口， 后续添加服务器时可使用该默认端口。全监听目标组不支持此参数，非全监听目标组Port和TargetGroupInstances.N中的port二者必填其一。
 
  * @method void setPort(integer $Port) 设置目标组的默认端口， 后续添加服务器时可使用该默认端口。全监听目标组不支持此参数，非全监听目标组Port和TargetGroupInstances.N中的port二者必填其一。
@@ -34,20 +34,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) 设置目标组类型，当前支持v1(旧版目标组), v2(新版目标组), 默认为v1(旧版目标组)。
  * @method string getProtocol() 获取目标组后端转发协议。v2新版目标组该项必填。目前支持TCP、UDP、HTTP、HTTPS、GRPC。
  * @method void setProtocol(string $Protocol) 设置目标组后端转发协议。v2新版目标组该项必填。目前支持TCP、UDP、HTTP、HTTPS、GRPC。
+ * @method TargetGroupHealthCheck getHealthCheck() 获取健康检查。
+ * @method void setHealthCheck(TargetGroupHealthCheck $HealthCheck) 设置健康检查。
+ * @method string getScheduleAlgorithm() 获取调度算法，仅V2新版目标组，且后端转发协议为(HTTP|HTTPS|GRPC)时该参数有效。可选值：
+<ur><li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li><li>默认为 WRR。</li><ur>
+ * @method void setScheduleAlgorithm(string $ScheduleAlgorithm) 设置调度算法，仅V2新版目标组，且后端转发协议为(HTTP|HTTPS|GRPC)时该参数有效。可选值：
+<ur><li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li><li>默认为 WRR。</li><ur>
  * @method array getTags() 获取标签。
  * @method void setTags(array $Tags) 设置标签。
- * @method integer getWeight() 获取后端服务默认权重。
-<ul>
-    <li>取值范围[0, 100]</li>
-    <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li>
-</ul>
-v1 目标组类型不支持设置 Weight 参数。
- * @method void setWeight(integer $Weight) 设置后端服务默认权重。
-<ul>
-    <li>取值范围[0, 100]</li>
-    <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li>
-</ul>
-v1 目标组类型不支持设置 Weight 参数。
+ * @method integer getWeight() 获取后端服务默认权重, 其中：
+<ul><li>取值范围[0, 100]</li><li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li><li>v1 目标组类型不支持设置 Weight 参数。</li></ul>
+ * @method void setWeight(integer $Weight) 设置后端服务默认权重, 其中：
+<ul><li>取值范围[0, 100]</li><li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li><li>v1 目标组类型不支持设置 Weight 参数。</li></ul>
  * @method boolean getFullListenSwitch() 获取全监听目标组标识，true表示是全监听目标组，false表示不是全监听目标组。仅V2新版类型目标组支持该参数。
  * @method void setFullListenSwitch(boolean $FullListenSwitch) 设置全监听目标组标识，true表示是全监听目标组，false表示不是全监听目标组。仅V2新版类型目标组支持该参数。
  * @method boolean getKeepaliveEnable() 获取是否开启长连接，此参数仅适用于HTTP/HTTPS目标组，0:关闭；1:开启， 默认关闭。
@@ -63,7 +61,7 @@ class CreateTargetGroupRequest extends AbstractModel
     public $TargetGroupName;
 
     /**
-     * @var string 目标组的vpcid属性，不填则使用默认vpc
+     * @var string 目标组的vpcId属性，不填则使用默认vpc。
      */
     public $VpcId;
 
@@ -89,17 +87,24 @@ class CreateTargetGroupRequest extends AbstractModel
     public $Protocol;
 
     /**
+     * @var TargetGroupHealthCheck 健康检查。
+     */
+    public $HealthCheck;
+
+    /**
+     * @var string 调度算法，仅V2新版目标组，且后端转发协议为(HTTP|HTTPS|GRPC)时该参数有效。可选值：
+<ur><li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li><li>默认为 WRR。</li><ur>
+     */
+    public $ScheduleAlgorithm;
+
+    /**
      * @var array 标签。
      */
     public $Tags;
 
     /**
-     * @var integer 后端服务默认权重。
-<ul>
-    <li>取值范围[0, 100]</li>
-    <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li>
-</ul>
-v1 目标组类型不支持设置 Weight 参数。
+     * @var integer 后端服务默认权重, 其中：
+<ul><li>取值范围[0, 100]</li><li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li><li>v1 目标组类型不支持设置 Weight 参数。</li></ul>
      */
     public $Weight;
 
@@ -120,19 +125,18 @@ v1 目标组类型不支持设置 Weight 参数。
 
     /**
      * @param string $TargetGroupName 目标组名称，限定50个字符
-     * @param string $VpcId 目标组的vpcid属性，不填则使用默认vpc
+     * @param string $VpcId 目标组的vpcId属性，不填则使用默认vpc。
      * @param integer $Port 目标组的默认端口， 后续添加服务器时可使用该默认端口。全监听目标组不支持此参数，非全监听目标组Port和TargetGroupInstances.N中的port二者必填其一。
 
      * @param array $TargetGroupInstances 目标组绑定的后端服务器，单次最多支持50个。
      * @param string $Type 目标组类型，当前支持v1(旧版目标组), v2(新版目标组), 默认为v1(旧版目标组)。
      * @param string $Protocol 目标组后端转发协议。v2新版目标组该项必填。目前支持TCP、UDP、HTTP、HTTPS、GRPC。
+     * @param TargetGroupHealthCheck $HealthCheck 健康检查。
+     * @param string $ScheduleAlgorithm 调度算法，仅V2新版目标组，且后端转发协议为(HTTP|HTTPS|GRPC)时该参数有效。可选值：
+<ur><li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li><li>默认为 WRR。</li><ur>
      * @param array $Tags 标签。
-     * @param integer $Weight 后端服务默认权重。
-<ul>
-    <li>取值范围[0, 100]</li>
-    <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li>
-</ul>
-v1 目标组类型不支持设置 Weight 参数。
+     * @param integer $Weight 后端服务默认权重, 其中：
+<ul><li>取值范围[0, 100]</li><li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li><li>v1 目标组类型不支持设置 Weight 参数。</li></ul>
      * @param boolean $FullListenSwitch 全监听目标组标识，true表示是全监听目标组，false表示不是全监听目标组。仅V2新版类型目标组支持该参数。
      * @param boolean $KeepaliveEnable 是否开启长连接，此参数仅适用于HTTP/HTTPS目标组，0:关闭；1:开启， 默认关闭。
      * @param integer $SessionExpireTime 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。仅V2新版且后端转发协议为HTTP/HTTPS/GRPC目标组支持该参数。
@@ -177,6 +181,15 @@ v1 目标组类型不支持设置 Weight 参数。
 
         if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
             $this->Protocol = $param["Protocol"];
+        }
+
+        if (array_key_exists("HealthCheck",$param) and $param["HealthCheck"] !== null) {
+            $this->HealthCheck = new TargetGroupHealthCheck();
+            $this->HealthCheck->deserialize($param["HealthCheck"]);
+        }
+
+        if (array_key_exists("ScheduleAlgorithm",$param) and $param["ScheduleAlgorithm"] !== null) {
+            $this->ScheduleAlgorithm = $param["ScheduleAlgorithm"];
         }
 
         if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {

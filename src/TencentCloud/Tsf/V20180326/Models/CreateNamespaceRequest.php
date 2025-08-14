@@ -22,22 +22,24 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getNamespaceName() 获取命名空间名称
  * @method void setNamespaceName(string $NamespaceName) 设置命名空间名称
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
+ * @method string getClusterId() 获取集群ID，按照【集群ID】进行过滤，可通过调用[DescribeClusters](https://cloud.tencent.com/document/product/649/85857)查询已创建的集群列表或登录控制台进行查看；也可以调用[CreateCluster](https://cloud.tencent.com/document/product/649/36049)创建新的集群。仅在集群下无部署组、命名空间、云主机时可以删除。
+ * @method void setClusterId(string $ClusterId) 设置集群ID，按照【集群ID】进行过滤，可通过调用[DescribeClusters](https://cloud.tencent.com/document/product/649/85857)查询已创建的集群列表或登录控制台进行查看；也可以调用[CreateCluster](https://cloud.tencent.com/document/product/649/36049)创建新的集群。仅在集群下无部署组、命名空间、云主机时可以删除。
  * @method string getNamespaceDesc() 获取命名空间描述
  * @method void setNamespaceDesc(string $NamespaceDesc) 设置命名空间描述
- * @method string getNamespaceResourceType() 获取命名空间资源类型(默认值为DEF)
- * @method void setNamespaceResourceType(string $NamespaceResourceType) 设置命名空间资源类型(默认值为DEF)
+ * @method string getNamespaceResourceType() 获取命名空间资源类型(默认值为DEF)。DEF：默认普通命名空间。GLOBAL：全局命名空间
+ * @method void setNamespaceResourceType(string $NamespaceResourceType) 设置命名空间资源类型(默认值为DEF)。DEF：默认普通命名空间。GLOBAL：全局命名空间
  * @method string getNamespaceType() 获取是否是全局命名空间(默认是DEF，表示普通命名空间；GLOBAL表示全局命名空间)
  * @method void setNamespaceType(string $NamespaceType) 设置是否是全局命名空间(默认是DEF，表示普通命名空间；GLOBAL表示全局命名空间)
- * @method string getNamespaceId() 获取命名空间ID
- * @method void setNamespaceId(string $NamespaceId) 设置命名空间ID
+ * @method string getNamespaceId() 获取命名空间ID，按照【命名空间ID】进行过滤，可通过调用[DescribeNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已创建的命名空间列表或登录控制台进行查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新命名空间。
+ * @method void setNamespaceId(string $NamespaceId) 设置命名空间ID，按照【命名空间ID】进行过滤，可通过调用[DescribeNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已创建的命名空间列表或登录控制台进行查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新命名空间。
  * @method string getIsHaEnable() 获取是否开启高可用，1 表示开启，0 表示不开启
  * @method void setIsHaEnable(string $IsHaEnable) 设置是否开启高可用，1 表示开启，0 表示不开启
- * @method string getProgramId() 获取需要绑定的数据集ID
- * @method void setProgramId(string $ProgramId) 设置需要绑定的数据集ID
- * @method array getProgramIdList() 获取需要绑定的数据集ID
- * @method void setProgramIdList(array $ProgramIdList) 设置需要绑定的数据集ID
+ * @method string getProgramId() 获取需要绑定的数据集ID，可通过调用[DescribePrograms](https://cloud.tencent.com/document/api/649/73477)查询已创建的数据集列表或登录控制台进行查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/api/649/108544)创建新的数据集。
+ * @method void setProgramId(string $ProgramId) 设置需要绑定的数据集ID，可通过调用[DescribePrograms](https://cloud.tencent.com/document/api/649/73477)查询已创建的数据集列表或登录控制台进行查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/api/649/108544)创建新的数据集。
+ * @method array getProgramIdList() 获取需要绑定的数据集ID列表，可通过调用[DescribePrograms](https://cloud.tencent.com/document/api/649/73477)查询已创建的数据集列表或登录控制台进行查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/api/649/108544)创建新的数据集。
+ * @method void setProgramIdList(array $ProgramIdList) 设置需要绑定的数据集ID列表，可通过调用[DescribePrograms](https://cloud.tencent.com/document/api/649/73477)查询已创建的数据集列表或登录控制台进行查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/api/649/108544)创建新的数据集。
+ * @method boolean getCreateK8sNamespaceFlag() 获取是否创建k8s命名空间标识
+ * @method void setCreateK8sNamespaceFlag(boolean $CreateK8sNamespaceFlag) 设置是否创建k8s命名空间标识
  */
 class CreateNamespaceRequest extends AbstractModel
 {
@@ -47,7 +49,7 @@ class CreateNamespaceRequest extends AbstractModel
     public $NamespaceName;
 
     /**
-     * @var string 集群ID
+     * @var string 集群ID，按照【集群ID】进行过滤，可通过调用[DescribeClusters](https://cloud.tencent.com/document/product/649/85857)查询已创建的集群列表或登录控制台进行查看；也可以调用[CreateCluster](https://cloud.tencent.com/document/product/649/36049)创建新的集群。仅在集群下无部署组、命名空间、云主机时可以删除。
      */
     public $ClusterId;
 
@@ -57,7 +59,7 @@ class CreateNamespaceRequest extends AbstractModel
     public $NamespaceDesc;
 
     /**
-     * @var string 命名空间资源类型(默认值为DEF)
+     * @var string 命名空间资源类型(默认值为DEF)。DEF：默认普通命名空间。GLOBAL：全局命名空间
      */
     public $NamespaceResourceType;
 
@@ -67,7 +69,7 @@ class CreateNamespaceRequest extends AbstractModel
     public $NamespaceType;
 
     /**
-     * @var string 命名空间ID
+     * @var string 命名空间ID，按照【命名空间ID】进行过滤，可通过调用[DescribeNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已创建的命名空间列表或登录控制台进行查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新命名空间。
      */
     public $NamespaceId;
 
@@ -77,25 +79,31 @@ class CreateNamespaceRequest extends AbstractModel
     public $IsHaEnable;
 
     /**
-     * @var string 需要绑定的数据集ID
+     * @var string 需要绑定的数据集ID，可通过调用[DescribePrograms](https://cloud.tencent.com/document/api/649/73477)查询已创建的数据集列表或登录控制台进行查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/api/649/108544)创建新的数据集。
      */
     public $ProgramId;
 
     /**
-     * @var array 需要绑定的数据集ID
+     * @var array 需要绑定的数据集ID列表，可通过调用[DescribePrograms](https://cloud.tencent.com/document/api/649/73477)查询已创建的数据集列表或登录控制台进行查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/api/649/108544)创建新的数据集。
      */
     public $ProgramIdList;
 
     /**
+     * @var boolean 是否创建k8s命名空间标识
+     */
+    public $CreateK8sNamespaceFlag;
+
+    /**
      * @param string $NamespaceName 命名空间名称
-     * @param string $ClusterId 集群ID
+     * @param string $ClusterId 集群ID，按照【集群ID】进行过滤，可通过调用[DescribeClusters](https://cloud.tencent.com/document/product/649/85857)查询已创建的集群列表或登录控制台进行查看；也可以调用[CreateCluster](https://cloud.tencent.com/document/product/649/36049)创建新的集群。仅在集群下无部署组、命名空间、云主机时可以删除。
      * @param string $NamespaceDesc 命名空间描述
-     * @param string $NamespaceResourceType 命名空间资源类型(默认值为DEF)
+     * @param string $NamespaceResourceType 命名空间资源类型(默认值为DEF)。DEF：默认普通命名空间。GLOBAL：全局命名空间
      * @param string $NamespaceType 是否是全局命名空间(默认是DEF，表示普通命名空间；GLOBAL表示全局命名空间)
-     * @param string $NamespaceId 命名空间ID
+     * @param string $NamespaceId 命名空间ID，按照【命名空间ID】进行过滤，可通过调用[DescribeNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已创建的命名空间列表或登录控制台进行查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新命名空间。
      * @param string $IsHaEnable 是否开启高可用，1 表示开启，0 表示不开启
-     * @param string $ProgramId 需要绑定的数据集ID
-     * @param array $ProgramIdList 需要绑定的数据集ID
+     * @param string $ProgramId 需要绑定的数据集ID，可通过调用[DescribePrograms](https://cloud.tencent.com/document/api/649/73477)查询已创建的数据集列表或登录控制台进行查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/api/649/108544)创建新的数据集。
+     * @param array $ProgramIdList 需要绑定的数据集ID列表，可通过调用[DescribePrograms](https://cloud.tencent.com/document/api/649/73477)查询已创建的数据集列表或登录控制台进行查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/api/649/108544)创建新的数据集。
+     * @param boolean $CreateK8sNamespaceFlag 是否创建k8s命名空间标识
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class CreateNamespaceRequest extends AbstractModel
 
         if (array_key_exists("ProgramIdList",$param) and $param["ProgramIdList"] !== null) {
             $this->ProgramIdList = $param["ProgramIdList"];
+        }
+
+        if (array_key_exists("CreateK8sNamespaceFlag",$param) and $param["CreateK8sNamespaceFlag"] !== null) {
+            $this->CreateK8sNamespaceFlag = $param["CreateK8sNamespaceFlag"];
         }
     }
 }

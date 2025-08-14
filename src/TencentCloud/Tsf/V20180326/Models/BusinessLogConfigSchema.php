@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 业务日志配置解析规则
  *
- * @method integer getSchemaType() 获取解析规则类型
- * @method void setSchemaType(integer $SchemaType) 设置解析规则类型
+ * @method integer getSchemaType() 获取解析规则类型。可选值 0（SPRING_BOOT：默认Spring Boot格式），1（NONE：无解析规则），4（NGINX_ACCESS：nginx access日志），5（CUSTOM_LOGBACK：自定义Logback），6（CUSTOM_LOG4J：自定义Log4J），7（CUSTOM_LOG4J2：自定义Log4J2），8（TEXT：单行/多行文本），9（ENVOY_MSGW_ACCESS：envoy access日志）。
+ * @method void setSchemaType(integer $SchemaType) 设置解析规则类型。可选值 0（SPRING_BOOT：默认Spring Boot格式），1（NONE：无解析规则），4（NGINX_ACCESS：nginx access日志），5（CUSTOM_LOGBACK：自定义Logback），6（CUSTOM_LOG4J：自定义Log4J），7（CUSTOM_LOG4J2：自定义Log4J2），8（TEXT：单行/多行文本），9（ENVOY_MSGW_ACCESS：envoy access日志）。
  * @method string getSchemaContent() 获取解析规则内容
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSchemaContent(string $SchemaContent) 设置解析规则内容
@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSchemaMultilinePattern(string $SchemaMultilinePattern) 设置解析规则对应的多行匹配规则
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getSchemaCreateTime() 获取解析规则创建时间
- * @method void setSchemaCreateTime(string $SchemaCreateTime) 设置解析规则创建时间
+ * @method string getSchemaCreateTime() 获取解析规则创建时间，格式为yyyy-MM-dd HH:mm:ss
+ * @method void setSchemaCreateTime(string $SchemaCreateTime) 设置解析规则创建时间，格式为yyyy-MM-dd HH:mm:ss
  * @method string getSchemaPatternLayout() 获取用户填写的解析规则
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSchemaPatternLayout(string $SchemaPatternLayout) 设置用户填写的解析规则
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class BusinessLogConfigSchema extends AbstractModel
 {
     /**
-     * @var integer 解析规则类型
+     * @var integer 解析规则类型。可选值 0（SPRING_BOOT：默认Spring Boot格式），1（NONE：无解析规则），4（NGINX_ACCESS：nginx access日志），5（CUSTOM_LOGBACK：自定义Logback），6（CUSTOM_LOG4J：自定义Log4J），7（CUSTOM_LOG4J2：自定义Log4J2），8（TEXT：单行/多行文本），9（ENVOY_MSGW_ACCESS：envoy access日志）。
      */
     public $SchemaType;
 
@@ -67,7 +67,7 @@ class BusinessLogConfigSchema extends AbstractModel
     public $SchemaMultilinePattern;
 
     /**
-     * @var string 解析规则创建时间
+     * @var string 解析规则创建时间，格式为yyyy-MM-dd HH:mm:ss
      */
     public $SchemaCreateTime;
 
@@ -78,14 +78,14 @@ class BusinessLogConfigSchema extends AbstractModel
     public $SchemaPatternLayout;
 
     /**
-     * @param integer $SchemaType 解析规则类型
+     * @param integer $SchemaType 解析规则类型。可选值 0（SPRING_BOOT：默认Spring Boot格式），1（NONE：无解析规则），4（NGINX_ACCESS：nginx access日志），5（CUSTOM_LOGBACK：自定义Logback），6（CUSTOM_LOG4J：自定义Log4J），7（CUSTOM_LOG4J2：自定义Log4J2），8（TEXT：单行/多行文本），9（ENVOY_MSGW_ACCESS：envoy access日志）。
      * @param string $SchemaContent 解析规则内容
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SchemaDateFormat 解析规则时间格式
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SchemaMultilinePattern 解析规则对应的多行匹配规则
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $SchemaCreateTime 解析规则创建时间
+     * @param string $SchemaCreateTime 解析规则创建时间，格式为yyyy-MM-dd HH:mm:ss
      * @param string $SchemaPatternLayout 用户填写的解析规则
 注意：此字段可能返回 null，表示取不到有效值。
      */

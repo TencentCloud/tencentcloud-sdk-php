@@ -36,13 +36,13 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getConfigPipeline() 获取配置项对应的ES管道
  * @method void setConfigPipeline(string $ConfigPipeline) 设置配置项对应的ES管道
- * @method string getConfigCreateTime() 获取配置项创建时间
+ * @method string getConfigCreateTime() 获取配置项创建时间，格式为yyyy-MM-dd HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setConfigCreateTime(string $ConfigCreateTime) 设置配置项创建时间
+ * @method void setConfigCreateTime(string $ConfigCreateTime) 设置配置项创建时间，格式为yyyy-MM-dd HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getConfigUpdateTime() 获取配置项更新时间
+ * @method string getConfigUpdateTime() 获取配置项更新时间，格式为yyyy-MM-dd HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setConfigUpdateTime(string $ConfigUpdateTime) 设置配置项更新时间
+ * @method void setConfigUpdateTime(string $ConfigUpdateTime) 设置配置项更新时间，格式为yyyy-MM-dd HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
  * @method BusinessLogConfigSchema getConfigSchema() 获取配置项解析规则
  * @method void setConfigSchema(BusinessLogConfigSchema $ConfigSchema) 设置配置项解析规则
@@ -56,6 +56,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilebeatConfigEnable(boolean $FilebeatConfigEnable) 设置是否开启filebeat高级配置开关
  * @method integer getFilebeatCloseTimeout() 获取close_timeout参数
  * @method void setFilebeatCloseTimeout(integer $FilebeatCloseTimeout) 设置close_timeout参数
+ * @method integer getFilebeatIgnoreOlder() 获取filebeat ignore_older参数
+ * @method void setFilebeatIgnoreOlder(integer $FilebeatIgnoreOlder) 设置filebeat ignore_older参数
+ * @method integer getFilebeatHarvesterLimit() 获取filebeat harvester_limit参数
+ * @method void setFilebeatHarvesterLimit(integer $FilebeatHarvesterLimit) 设置filebeat harvester_limit参数
+ * @method integer getFilebeatCloseInactive() 获取filebeat close_inactive参数
+ * @method void setFilebeatCloseInactive(integer $FilebeatCloseInactive) 设置filebeat close_inactive参数
+ * @method integer getFilebeatCleanInactive() 获取filebeat clean_inactive参数
+ * @method void setFilebeatCleanInactive(integer $FilebeatCleanInactive) 设置filebeat clean_inactive参数
  */
 class BusinessLogConfig extends AbstractModel
 {
@@ -92,13 +100,13 @@ class BusinessLogConfig extends AbstractModel
     public $ConfigPipeline;
 
     /**
-     * @var string 配置项创建时间
+     * @var string 配置项创建时间，格式为yyyy-MM-dd HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigCreateTime;
 
     /**
-     * @var string 配置项更新时间
+     * @var string 配置项更新时间，格式为yyyy-MM-dd HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ConfigUpdateTime;
@@ -131,6 +139,26 @@ class BusinessLogConfig extends AbstractModel
     public $FilebeatCloseTimeout;
 
     /**
+     * @var integer filebeat ignore_older参数
+     */
+    public $FilebeatIgnoreOlder;
+
+    /**
+     * @var integer filebeat harvester_limit参数
+     */
+    public $FilebeatHarvesterLimit;
+
+    /**
+     * @var integer filebeat close_inactive参数
+     */
+    public $FilebeatCloseInactive;
+
+    /**
+     * @var integer filebeat clean_inactive参数
+     */
+    public $FilebeatCleanInactive;
+
+    /**
      * @param string $ConfigId 配置项ID
      * @param string $ConfigName 配置项名称
      * @param string $ConfigPath 配置项日志路径
@@ -139,9 +167,9 @@ class BusinessLogConfig extends AbstractModel
      * @param string $ConfigTags 配置项标签
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConfigPipeline 配置项对应的ES管道
-     * @param string $ConfigCreateTime 配置项创建时间
+     * @param string $ConfigCreateTime 配置项创建时间，格式为yyyy-MM-dd HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $ConfigUpdateTime 配置项更新时间
+     * @param string $ConfigUpdateTime 配置项更新时间，格式为yyyy-MM-dd HH:mm:ss
 注意：此字段可能返回 null，表示取不到有效值。
      * @param BusinessLogConfigSchema $ConfigSchema 配置项解析规则
      * @param array $ConfigAssociatedGroups 配置项关联部署组
@@ -149,6 +177,10 @@ class BusinessLogConfig extends AbstractModel
      * @param array $ConfigAssociatedGroupList 配置项关联部署组
      * @param boolean $FilebeatConfigEnable 是否开启filebeat高级配置开关
      * @param integer $FilebeatCloseTimeout close_timeout参数
+     * @param integer $FilebeatIgnoreOlder filebeat ignore_older参数
+     * @param integer $FilebeatHarvesterLimit filebeat harvester_limit参数
+     * @param integer $FilebeatCloseInactive filebeat close_inactive参数
+     * @param integer $FilebeatCleanInactive filebeat clean_inactive参数
      */
     function __construct()
     {
@@ -224,6 +256,22 @@ class BusinessLogConfig extends AbstractModel
 
         if (array_key_exists("FilebeatCloseTimeout",$param) and $param["FilebeatCloseTimeout"] !== null) {
             $this->FilebeatCloseTimeout = $param["FilebeatCloseTimeout"];
+        }
+
+        if (array_key_exists("FilebeatIgnoreOlder",$param) and $param["FilebeatIgnoreOlder"] !== null) {
+            $this->FilebeatIgnoreOlder = $param["FilebeatIgnoreOlder"];
+        }
+
+        if (array_key_exists("FilebeatHarvesterLimit",$param) and $param["FilebeatHarvesterLimit"] !== null) {
+            $this->FilebeatHarvesterLimit = $param["FilebeatHarvesterLimit"];
+        }
+
+        if (array_key_exists("FilebeatCloseInactive",$param) and $param["FilebeatCloseInactive"] !== null) {
+            $this->FilebeatCloseInactive = $param["FilebeatCloseInactive"];
+        }
+
+        if (array_key_exists("FilebeatCleanInactive",$param) and $param["FilebeatCleanInactive"] !== null) {
+            $this->FilebeatCleanInactive = $param["FilebeatCleanInactive"];
         }
     }
 }

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateWebCallback请求参数结构体
  *
- * @method string getName() 获取通知内容名称。
- * @method void setName(string $Name) 设置通知内容名称。
+ * @method string getName() 获取通知内容名称。最大支持255个字节
+ * @method void setName(string $Name) 设置通知内容名称。最大支持255个字节
  * @method string getType() 获取渠道类型。
 
 WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调。
@@ -36,13 +36,13 @@ WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调。
  * @method void setMethod(string $Method) 设置请求方式。 支持POST、PUT。
 
 当Type为Http时，必填。
- * @method string getKey() 获取秘钥。
- * @method void setKey(string $Key) 设置秘钥。
+ * @method string getKey() 获取秘钥。最大支持1024个字节
+ * @method void setKey(string $Key) 设置秘钥。最大支持1024个字节
  */
 class CreateWebCallbackRequest extends AbstractModel
 {
     /**
-     * @var string 通知内容名称。
+     * @var string 通知内容名称。最大支持255个字节
      */
     public $Name;
 
@@ -66,12 +66,12 @@ WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调。
     public $Method;
 
     /**
-     * @var string 秘钥。
+     * @var string 秘钥。最大支持1024个字节
      */
     public $Key;
 
     /**
-     * @param string $Name 通知内容名称。
+     * @param string $Name 通知内容名称。最大支持255个字节
      * @param string $Type 渠道类型。
 
 WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调。
@@ -79,7 +79,7 @@ WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调。
      * @param string $Method 请求方式。 支持POST、PUT。
 
 当Type为Http时，必填。
-     * @param string $Key 秘钥。
+     * @param string $Key 秘钥。最大支持1024个字节
      */
     function __construct()
     {

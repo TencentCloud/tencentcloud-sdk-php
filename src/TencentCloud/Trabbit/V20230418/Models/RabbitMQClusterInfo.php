@@ -70,6 +70,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceType(integer $InstanceType) 设置集群类型
  * @method integer getMessageRetainTime() 获取消息保留时间，单位小时
  * @method void setMessageRetainTime(integer $MessageRetainTime) 设置消息保留时间，单位小时
+ * @method float getSendReceiveRatio() 获取发送消息流量比例
+ * @method void setSendReceiveRatio(float $SendReceiveRatio) 设置发送消息流量比例
+ * @method integer getTraceTime() 获取消息轨迹保留时间，单位小时
+ * @method void setTraceTime(integer $TraceTime) 设置消息轨迹保留时间，单位小时
  */
 class RabbitMQClusterInfo extends AbstractModel
 {
@@ -199,6 +203,16 @@ class RabbitMQClusterInfo extends AbstractModel
     public $MessageRetainTime;
 
     /**
+     * @var float 发送消息流量比例
+     */
+    public $SendReceiveRatio;
+
+    /**
+     * @var integer 消息轨迹保留时间，单位小时
+     */
+    public $TraceTime;
+
+    /**
      * @param string $ClusterId 集群ID
      * @param string $ClusterName 集群名称
      * @param string $Region 地域信息
@@ -224,6 +238,8 @@ class RabbitMQClusterInfo extends AbstractModel
      * @param integer $PayMode 计费模式，0-后付费，1-预付费
      * @param integer $InstanceType 集群类型
      * @param integer $MessageRetainTime 消息保留时间，单位小时
+     * @param float $SendReceiveRatio 发送消息流量比例
+     * @param integer $TraceTime 消息轨迹保留时间，单位小时
      */
     function __construct()
     {
@@ -341,6 +357,14 @@ class RabbitMQClusterInfo extends AbstractModel
 
         if (array_key_exists("MessageRetainTime",$param) and $param["MessageRetainTime"] !== null) {
             $this->MessageRetainTime = $param["MessageRetainTime"];
+        }
+
+        if (array_key_exists("SendReceiveRatio",$param) and $param["SendReceiveRatio"] !== null) {
+            $this->SendReceiveRatio = $param["SendReceiveRatio"];
+        }
+
+        if (array_key_exists("TraceTime",$param) and $param["TraceTime"] !== null) {
+            $this->TraceTime = $param["TraceTime"];
         }
     }
 }

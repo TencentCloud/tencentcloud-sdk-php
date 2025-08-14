@@ -20,23 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGroupInstances请求参数结构体
  *
- * @method string getGroupId() 获取部署组ID
- * @method void setGroupId(string $GroupId) 设置部署组ID
+ * @method string getGroupId() 获取部署组ID，可通过调用[DescribeGroups](https://cloud.tencent.com/document/api/649/36065)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/api/649/36074)创建新的部署组。
+ * @method void setGroupId(string $GroupId) 设置部署组ID，可通过调用[DescribeGroups](https://cloud.tencent.com/document/api/649/36065)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/api/649/36074)创建新的部署组。
  * @method string getSearchWord() 获取搜索字段
  * @method void setSearchWord(string $SearchWord) 设置搜索字段
  * @method string getOrderBy() 获取排序字段
  * @method void setOrderBy(string $OrderBy) 设置排序字段
- * @method integer getOrderType() 获取排序类型
- * @method void setOrderType(integer $OrderType) 设置排序类型
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
- * @method integer getLimit() 获取分页个数
- * @method void setLimit(integer $Limit) 设置分页个数
+ * @method integer getOrderType() 获取排序类型；0：升序，1：降序
+ * @method void setOrderType(integer $OrderType) 设置排序类型；0：升序，1：降序
+ * @method integer getOffset() 获取偏移量，默认值：0
+ * @method void setOffset(integer $Offset) 设置偏移量，默认值：0
+ * @method integer getLimit() 获取分页个数；默认值：20
+ * @method void setLimit(integer $Limit) 设置分页个数；默认值：20
  */
 class DescribeGroupInstancesRequest extends AbstractModel
 {
     /**
-     * @var string 部署组ID
+     * @var string 部署组ID，可通过调用[DescribeGroups](https://cloud.tencent.com/document/api/649/36065)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/api/649/36074)创建新的部署组。
      */
     public $GroupId;
 
@@ -51,27 +51,27 @@ class DescribeGroupInstancesRequest extends AbstractModel
     public $OrderBy;
 
     /**
-     * @var integer 排序类型
+     * @var integer 排序类型；0：升序，1：降序
      */
     public $OrderType;
 
     /**
-     * @var integer 偏移量
+     * @var integer 偏移量，默认值：0
      */
     public $Offset;
 
     /**
-     * @var integer 分页个数
+     * @var integer 分页个数；默认值：20
      */
     public $Limit;
 
     /**
-     * @param string $GroupId 部署组ID
+     * @param string $GroupId 部署组ID，可通过调用[DescribeGroups](https://cloud.tencent.com/document/api/649/36065)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/api/649/36074)创建新的部署组。
      * @param string $SearchWord 搜索字段
      * @param string $OrderBy 排序字段
-     * @param integer $OrderType 排序类型
-     * @param integer $Offset 偏移量
-     * @param integer $Limit 分页个数
+     * @param integer $OrderType 排序类型；0：升序，1：降序
+     * @param integer $Offset 偏移量，默认值：0
+     * @param integer $Limit 分页个数；默认值：20
      */
     function __construct()
     {

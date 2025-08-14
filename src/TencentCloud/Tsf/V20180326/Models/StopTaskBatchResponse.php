@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StopTaskBatch返回参数结构体
  *
- * @method boolean getResult() 获取操作成功 or 失败
- * @method void setResult(boolean $Result) 设置操作成功 or 失败
+ * @method boolean getResult() 获取返回 true 或 false。true：操作成功，false：操作失败
+ * @method void setResult(boolean $Result) 设置返回 true 或 false。true：操作成功，false：操作失败
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class StopTaskBatchResponse extends AbstractModel
 {
     /**
-     * @var boolean 操作成功 or 失败
+     * @var boolean 返回 true 或 false。true：操作成功，false：操作失败
      */
     public $Result;
 
@@ -38,7 +38,7 @@ class StopTaskBatchResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param boolean $Result 操作成功 or 失败
+     * @param boolean $Result 返回 true 或 false。true：操作成功，false：操作失败
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

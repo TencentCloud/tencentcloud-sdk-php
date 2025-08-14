@@ -38,7 +38,7 @@ flase：输出默认字段+自定义字段
  * @method void setReturnFullText(boolean $ReturnFullText) 设置是否开启全文字段识别
  * @method string getConfigId() 获取配置id支持：
 General -- 通用场景 
-InvoiceEng -- 国际invoice模版 
+InvoiceEng -- 国际invoice模板 
 WayBillEng --海运订单模板
 CustomsDeclaration -- 进出口报关单
 WeightNote -- 磅单
@@ -48,15 +48,15 @@ EntrustmentBook -- 海运托书
 Statement -- 对账单识别模板
 BookingConfirmation -- 配舱通知书识别模板
 AirWayBill -- 航空运单识别模板
-Table -- 表格模版
+Table -- 表格模板
 SteelLabel -- 实物标签识别模板
 CarInsurance -- 车辆保险单识别模板
 MultiRealEstateCertificate -- 房产材料识别模板
 MultiRealEstateMaterial -- 房产证明识别模板
-HongKongUtilityBill -- 香港水电煤单识别模板
+HongKongUtilityBill -- 中国香港水电煤单识别模板
  * @method void setConfigId(string $ConfigId) 设置配置id支持：
 General -- 通用场景 
-InvoiceEng -- 国际invoice模版 
+InvoiceEng -- 国际invoice模板 
 WayBillEng --海运订单模板
 CustomsDeclaration -- 进出口报关单
 WeightNote -- 磅单
@@ -66,18 +66,18 @@ EntrustmentBook -- 海运托书
 Statement -- 对账单识别模板
 BookingConfirmation -- 配舱通知书识别模板
 AirWayBill -- 航空运单识别模板
-Table -- 表格模版
+Table -- 表格模板
 SteelLabel -- 实物标签识别模板
 CarInsurance -- 车辆保险单识别模板
 MultiRealEstateCertificate -- 房产材料识别模板
 MultiRealEstateMaterial -- 房产证明识别模板
-HongKongUtilityBill -- 香港水电煤单识别模板
+HongKongUtilityBill -- 中国香港水电煤单识别模板
  * @method boolean getEnableCoord() 获取是否开启全文字段坐标值的识别
  * @method void setEnableCoord(boolean $EnableCoord) 设置是否开启全文字段坐标值的识别
  * @method boolean getOutputParentKey() 获取是否开启父子key识别，默认是
  * @method void setOutputParentKey(boolean $OutputParentKey) 设置是否开启父子key识别，默认是
- * @method ConfigAdvanced getConfigAdvanced() 获取模版的单个属性配置
- * @method void setConfigAdvanced(ConfigAdvanced $ConfigAdvanced) 设置模版的单个属性配置
+ * @method ConfigAdvanced getConfigAdvanced() 获取模板的单个属性配置
+ * @method void setConfigAdvanced(ConfigAdvanced $ConfigAdvanced) 设置模板的单个属性配置
  * @method string getOutputLanguage() 获取cn时，添加的key为中文  
 en时，添加的key为英语
  * @method void setOutputLanguage(string $OutputLanguage) 设置cn时，添加的key为中文  
@@ -120,7 +120,7 @@ flase：输出默认字段+自定义字段
     /**
      * @var string 配置id支持：
 General -- 通用场景 
-InvoiceEng -- 国际invoice模版 
+InvoiceEng -- 国际invoice模板 
 WayBillEng --海运订单模板
 CustomsDeclaration -- 进出口报关单
 WeightNote -- 磅单
@@ -130,12 +130,12 @@ EntrustmentBook -- 海运托书
 Statement -- 对账单识别模板
 BookingConfirmation -- 配舱通知书识别模板
 AirWayBill -- 航空运单识别模板
-Table -- 表格模版
+Table -- 表格模板
 SteelLabel -- 实物标签识别模板
 CarInsurance -- 车辆保险单识别模板
 MultiRealEstateCertificate -- 房产材料识别模板
 MultiRealEstateMaterial -- 房产证明识别模板
-HongKongUtilityBill -- 香港水电煤单识别模板
+HongKongUtilityBill -- 中国香港水电煤单识别模板
      */
     public $ConfigId;
 
@@ -150,7 +150,7 @@ HongKongUtilityBill -- 香港水电煤单识别模板
     public $OutputParentKey;
 
     /**
-     * @var ConfigAdvanced 模版的单个属性配置
+     * @var ConfigAdvanced 模板的单个属性配置
      */
     public $ConfigAdvanced;
 
@@ -171,7 +171,7 @@ flase：输出默认字段+自定义字段
      * @param boolean $ReturnFullText 是否开启全文字段识别
      * @param string $ConfigId 配置id支持：
 General -- 通用场景 
-InvoiceEng -- 国际invoice模版 
+InvoiceEng -- 国际invoice模板 
 WayBillEng --海运订单模板
 CustomsDeclaration -- 进出口报关单
 WeightNote -- 磅单
@@ -181,15 +181,15 @@ EntrustmentBook -- 海运托书
 Statement -- 对账单识别模板
 BookingConfirmation -- 配舱通知书识别模板
 AirWayBill -- 航空运单识别模板
-Table -- 表格模版
+Table -- 表格模板
 SteelLabel -- 实物标签识别模板
 CarInsurance -- 车辆保险单识别模板
 MultiRealEstateCertificate -- 房产材料识别模板
 MultiRealEstateMaterial -- 房产证明识别模板
-HongKongUtilityBill -- 香港水电煤单识别模板
+HongKongUtilityBill -- 中国香港水电煤单识别模板
      * @param boolean $EnableCoord 是否开启全文字段坐标值的识别
      * @param boolean $OutputParentKey 是否开启父子key识别，默认是
-     * @param ConfigAdvanced $ConfigAdvanced 模版的单个属性配置
+     * @param ConfigAdvanced $ConfigAdvanced 模板的单个属性配置
      * @param string $OutputLanguage cn时，添加的key为中文  
 en时，添加的key为英语
      */

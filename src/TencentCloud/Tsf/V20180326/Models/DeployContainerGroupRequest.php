@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeployContainerGroup请求参数结构体
  *
- * @method string getGroupId() 获取部署组ID，分组唯一标识
- * @method void setGroupId(string $GroupId) 设置部署组ID，分组唯一标识
+ * @method string getGroupId() 获取部署组ID，可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/api/649/36068)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateContainGroup](https://cloud.tencent.com/document/api/649/36075)创建新的部署组。
+ * @method void setGroupId(string $GroupId) 设置部署组ID，可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/api/649/36068)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateContainGroup](https://cloud.tencent.com/document/api/649/36075)创建新的部署组。
  * @method string getTagName() 获取镜像版本名称,如v1
  * @method void setTagName(string $TagName) 设置镜像版本名称,如v1
  * @method integer getInstanceNum() 获取实例数量
@@ -100,7 +100,7 @@ use TencentCloud\Common\AbstractModel;
 class DeployContainerGroupRequest extends AbstractModel
 {
     /**
-     * @var string 部署组ID，分组唯一标识
+     * @var string 部署组ID，可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/api/649/36068)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateContainGroup](https://cloud.tencent.com/document/api/649/36075)创建新的部署组。
      */
     public $GroupId;
 
@@ -293,7 +293,7 @@ class DeployContainerGroupRequest extends AbstractModel
     public $WarmupSetting;
 
     /**
-     * @param string $GroupId 部署组ID，分组唯一标识
+     * @param string $GroupId 部署组ID，可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/api/649/36068)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateContainGroup](https://cloud.tencent.com/document/api/649/36075)创建新的部署组。
      * @param string $TagName 镜像版本名称,如v1
      * @param integer $InstanceNum 实例数量
      * @param string $Server 镜像server

@@ -21,21 +21,21 @@ use TencentCloud\Common\AbstractModel;
  * 回调地址
  *
  * @method string getCallbackType() 获取回调的类型。可选值：
-- Http
-- WeCom
-- DingTalk
-- Lark
+- Http(自定义接口回调)
+- WeCom(企业微信)
+- DingTalk(钉钉)
+- Lark(飞书)
  * @method void setCallbackType(string $CallbackType) 设置回调的类型。可选值：
-- Http
-- WeCom
-- DingTalk
-- Lark
+- Http(自定义接口回调)
+- WeCom(企业微信)
+- DingTalk(钉钉)
+- Lark(飞书)
  * @method string getUrl() 获取回调地址，最大支持1024个字节。
 也可使用WebCallbackId引用集成配置中的URL，此时该字段请填写为空字符串。
  * @method void setUrl(string $Url) 设置回调地址，最大支持1024个字节。
 也可使用WebCallbackId引用集成配置中的URL，此时该字段请填写为空字符串。
- * @method string getWebCallbackId() 获取集成配置ID。
- * @method void setWebCallbackId(string $WebCallbackId) 设置集成配置ID。
+ * @method string getWebCallbackId() 获取集成配置ID。-通过[获取告警渠道回调配置列表](https://cloud.tencent.com/document/product/614/115229)获取集成配置ID
+ * @method void setWebCallbackId(string $WebCallbackId) 设置集成配置ID。-通过[获取告警渠道回调配置列表](https://cloud.tencent.com/document/product/614/115229)获取集成配置ID
  * @method string getMethod() 获取回调方法。可选值：
 - POST（默认值）
 - PUT
@@ -77,10 +77,10 @@ class WebCallback extends AbstractModel
 {
     /**
      * @var string 回调的类型。可选值：
-- Http
-- WeCom
-- DingTalk
-- Lark
+- Http(自定义接口回调)
+- WeCom(企业微信)
+- DingTalk(钉钉)
+- Lark(飞书)
      */
     public $CallbackType;
 
@@ -91,7 +91,7 @@ class WebCallback extends AbstractModel
     public $Url;
 
     /**
-     * @var string 集成配置ID。
+     * @var string 集成配置ID。-通过[获取告警渠道回调配置列表](https://cloud.tencent.com/document/product/614/115229)获取集成配置ID
      */
     public $WebCallbackId;
 
@@ -149,13 +149,13 @@ class WebCallback extends AbstractModel
 
     /**
      * @param string $CallbackType 回调的类型。可选值：
-- Http
-- WeCom
-- DingTalk
-- Lark
+- Http(自定义接口回调)
+- WeCom(企业微信)
+- DingTalk(钉钉)
+- Lark(飞书)
      * @param string $Url 回调地址，最大支持1024个字节。
 也可使用WebCallbackId引用集成配置中的URL，此时该字段请填写为空字符串。
-     * @param string $WebCallbackId 集成配置ID。
+     * @param string $WebCallbackId 集成配置ID。-通过[获取告警渠道回调配置列表](https://cloud.tencent.com/document/product/614/115229)获取集成配置ID
      * @param string $Method 回调方法。可选值：
 - POST（默认值）
 - PUT

@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAlarmShield请求参数结构体
  *
- * @method string getAlarmNoticeId() 获取通知渠道组id。
- * @method void setAlarmNoticeId(string $AlarmNoticeId) 设置通知渠道组id。
- * @method integer getStartTime() 获取屏蔽开始时间（秒级时间戳）。
- * @method void setStartTime(integer $StartTime) 设置屏蔽开始时间（秒级时间戳）。
- * @method integer getEndTime() 获取屏蔽结束时间（秒级时间戳）。
- * @method void setEndTime(integer $EndTime) 设置屏蔽结束时间（秒级时间戳）。
+ * @method string getAlarmNoticeId() 获取通知渠道组id。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取通知渠道组id
+ * @method void setAlarmNoticeId(string $AlarmNoticeId) 设置通知渠道组id。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取通知渠道组id
+ * @method integer getStartTime() 获取屏蔽规则开始时间，秒级(s)时间戳。
+ * @method void setStartTime(integer $StartTime) 设置屏蔽规则开始时间，秒级(s)时间戳。
+ * @method integer getEndTime() 获取屏蔽规则结束时间，秒级(s)时间戳。结束时间需要大于当前时间
+ * @method void setEndTime(integer $EndTime) 设置屏蔽规则结束时间，秒级(s)时间戳。结束时间需要大于当前时间
  * @method integer getType() 获取屏蔽类型。1：屏蔽所有通知，2：按照Rule参数屏蔽匹配规则的通知。
  * @method void setType(integer $Type) 设置屏蔽类型。1：屏蔽所有通知，2：按照Rule参数屏蔽匹配规则的通知。
  * @method string getReason() 获取屏蔽原因。
@@ -36,17 +36,17 @@ use TencentCloud\Common\AbstractModel;
 class CreateAlarmShieldRequest extends AbstractModel
 {
     /**
-     * @var string 通知渠道组id。
+     * @var string 通知渠道组id。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取通知渠道组id
      */
     public $AlarmNoticeId;
 
     /**
-     * @var integer 屏蔽开始时间（秒级时间戳）。
+     * @var integer 屏蔽规则开始时间，秒级(s)时间戳。
      */
     public $StartTime;
 
     /**
-     * @var integer 屏蔽结束时间（秒级时间戳）。
+     * @var integer 屏蔽规则结束时间，秒级(s)时间戳。结束时间需要大于当前时间
      */
     public $EndTime;
 
@@ -66,9 +66,9 @@ class CreateAlarmShieldRequest extends AbstractModel
     public $Rule;
 
     /**
-     * @param string $AlarmNoticeId 通知渠道组id。
-     * @param integer $StartTime 屏蔽开始时间（秒级时间戳）。
-     * @param integer $EndTime 屏蔽结束时间（秒级时间戳）。
+     * @param string $AlarmNoticeId 通知渠道组id。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取通知渠道组id
+     * @param integer $StartTime 屏蔽规则开始时间，秒级(s)时间戳。
+     * @param integer $EndTime 屏蔽规则结束时间，秒级(s)时间戳。结束时间需要大于当前时间
      * @param integer $Type 屏蔽类型。1：屏蔽所有通知，2：按照Rule参数屏蔽匹配规则的通知。
      * @param string $Reason 屏蔽原因。
      * @param string $Rule 屏蔽规则，当Type为2时必填。规则填写方式详见[产品文档](https://cloud.tencent.com/document/product/614/103178#rule)。

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 告警对象
  *
- * @method string getTopicId() 获取日志主题ID。
- * @method void setTopicId(string $TopicId) 设置日志主题ID。
+ * @method string getTopicId() 获取日志主题ID。-通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题ID
+ * @method void setTopicId(string $TopicId) 设置日志主题ID。-通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题ID
  * @method string getQuery() 获取查询语句。
  * @method void setQuery(string $Query) 设置查询语句。
  * @method integer getNumber() 获取告警对象序号；从1开始递增。
@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTimeOffset(integer $StartTimeOffset) 设置查询范围起始时间相对于告警执行时间的偏移，单位为分钟，取值为非正，最大值为0，最小值为-1440。
  * @method integer getEndTimeOffset() 获取查询范围终止时间相对于告警执行时间的偏移，单位为分钟，取值为非正，须大于StartTimeOffset，最大值为0，最小值为-1440。
  * @method void setEndTimeOffset(integer $EndTimeOffset) 设置查询范围终止时间相对于告警执行时间的偏移，单位为分钟，取值为非正，须大于StartTimeOffset，最大值为0，最小值为-1440。
- * @method string getLogsetId() 获取日志集ID。
- * @method void setLogsetId(string $LogsetId) 设置日志集ID。
+ * @method string getLogsetId() 获取日志集ID。通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志集ID
+ * @method void setLogsetId(string $LogsetId) 设置日志集ID。通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志集ID
  * @method integer getSyntaxRule() 获取检索语法规则，默认值为0。
 0：Lucene语法，1：CQL语法。
 详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
@@ -42,7 +42,7 @@ use TencentCloud\Common\AbstractModel;
 class AlarmTarget extends AbstractModel
 {
     /**
-     * @var string 日志主题ID。
+     * @var string 日志主题ID。-通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题ID
      */
     public $TopicId;
 
@@ -67,7 +67,7 @@ class AlarmTarget extends AbstractModel
     public $EndTimeOffset;
 
     /**
-     * @var string 日志集ID。
+     * @var string 日志集ID。通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志集ID
      */
     public $LogsetId;
 
@@ -79,12 +79,12 @@ class AlarmTarget extends AbstractModel
     public $SyntaxRule;
 
     /**
-     * @param string $TopicId 日志主题ID。
+     * @param string $TopicId 日志主题ID。-通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题ID
      * @param string $Query 查询语句。
      * @param integer $Number 告警对象序号；从1开始递增。
      * @param integer $StartTimeOffset 查询范围起始时间相对于告警执行时间的偏移，单位为分钟，取值为非正，最大值为0，最小值为-1440。
      * @param integer $EndTimeOffset 查询范围终止时间相对于告警执行时间的偏移，单位为分钟，取值为非正，须大于StartTimeOffset，最大值为0，最小值为-1440。
-     * @param string $LogsetId 日志集ID。
+     * @param string $LogsetId 日志集ID。通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志集ID
      * @param integer $SyntaxRule 检索语法规则，默认值为0。
 0：Lucene语法，1：CQL语法。
 详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>

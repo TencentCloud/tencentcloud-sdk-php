@@ -20,18 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBusinessLogConfig请求参数结构体
  *
- * @method string getConfigId() 获取配置项ID
- * @method void setConfigId(string $ConfigId) 设置配置项ID
+ * @method string getConfigId() 获取日志配置项ID
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
+ * @method void setConfigId(string $ConfigId) 设置日志配置项ID
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
  */
 class DescribeBusinessLogConfigRequest extends AbstractModel
 {
     /**
-     * @var string 配置项ID
+     * @var string 日志配置项ID
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
      */
     public $ConfigId;
 
     /**
-     * @param string $ConfigId 配置项ID
+     * @param string $ConfigId 日志配置项ID
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
      */
     function __construct()
     {

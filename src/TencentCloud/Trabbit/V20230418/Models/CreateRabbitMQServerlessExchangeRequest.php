@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInternal(boolean $Internal) 设置是否为内部 exchange, 如果为 "true", 则无法直接投递消息到该 exchange, 需要在路由设置中通过其他 exchange 进行转发
  * @method string getAlternateExchange() 获取替代 exchange, 如果消息无法发送到当前 exchange, 就会发送到该替代 exchange
  * @method void setAlternateExchange(string $AlternateExchange) 设置替代 exchange, 如果消息无法发送到当前 exchange, 就会发送到该替代 exchange
+ * @method string getDelayedExchangeType() 获取延迟类型的exchange背后对应的exchange类型, 支持 "fanout","direct","topic","headers"
+ * @method void setDelayedExchangeType(string $DelayedExchangeType) 设置延迟类型的exchange背后对应的exchange类型, 支持 "fanout","direct","topic","headers"
  */
 class CreateRabbitMQServerlessExchangeRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class CreateRabbitMQServerlessExchangeRequest extends AbstractModel
     public $AlternateExchange;
 
     /**
+     * @var string 延迟类型的exchange背后对应的exchange类型, 支持 "fanout","direct","topic","headers"
+     */
+    public $DelayedExchangeType;
+
+    /**
      * @param string $InstanceId 实例Id
      * @param string $VirtualHost VHost参数
      * @param string $ExchangeName exchange 名称
@@ -96,6 +103,7 @@ class CreateRabbitMQServerlessExchangeRequest extends AbstractModel
      * @param boolean $AutoDelete 是否自动删除该 exchange, 如果为 "true", 当解绑所有当前 exchange 上的路由关系时, 该 exchange 将会被自动删除
      * @param boolean $Internal 是否为内部 exchange, 如果为 "true", 则无法直接投递消息到该 exchange, 需要在路由设置中通过其他 exchange 进行转发
      * @param string $AlternateExchange 替代 exchange, 如果消息无法发送到当前 exchange, 就会发送到该替代 exchange
+     * @param string $DelayedExchangeType 延迟类型的exchange背后对应的exchange类型, 支持 "fanout","direct","topic","headers"
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class CreateRabbitMQServerlessExchangeRequest extends AbstractModel
 
         if (array_key_exists("AlternateExchange",$param) and $param["AlternateExchange"] !== null) {
             $this->AlternateExchange = $param["AlternateExchange"];
+        }
+
+        if (array_key_exists("DelayedExchangeType",$param) and $param["DelayedExchangeType"] !== null) {
+            $this->DelayedExchangeType = $param["DelayedExchangeType"];
         }
     }
 }

@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAlarmShield请求参数结构体
  *
- * @method string getTaskId() 获取屏蔽规则ID。
- * @method void setTaskId(string $TaskId) 设置屏蔽规则ID。
- * @method string getAlarmNoticeId() 获取通知渠道组id。
- * @method void setAlarmNoticeId(string $AlarmNoticeId) 设置通知渠道组id。
- * @method integer getStartTime() 获取屏蔽开始时间（秒级时间戳）。
- * @method void setStartTime(integer $StartTime) 设置屏蔽开始时间（秒级时间戳）。
- * @method integer getEndTime() 获取屏蔽结束时间（秒级时间戳）。
- * @method void setEndTime(integer $EndTime) 设置屏蔽结束时间（秒级时间戳）。
+ * @method string getTaskId() 获取屏蔽规则ID。-通过[获取告警屏蔽配置规则](https://cloud.tencent.com/document/api/614/103650)获取屏蔽规则ID
+ * @method void setTaskId(string $TaskId) 设置屏蔽规则ID。-通过[获取告警屏蔽配置规则](https://cloud.tencent.com/document/api/614/103650)获取屏蔽规则ID
+ * @method string getAlarmNoticeId() 获取通知渠道组id。-通过[获取告警屏蔽配置规则](https://cloud.tencent.com/document/api/614/103650)获取通知渠道组id
+ * @method void setAlarmNoticeId(string $AlarmNoticeId) 设置通知渠道组id。-通过[获取告警屏蔽配置规则](https://cloud.tencent.com/document/api/614/103650)获取通知渠道组id
+ * @method integer getStartTime() 获取屏蔽开始时间，秒级(s)时间戳。
+ * @method void setStartTime(integer $StartTime) 设置屏蔽开始时间，秒级(s)时间戳。
+ * @method integer getEndTime() 获取屏蔽结束时间，秒级(s)时间戳。
+ * @method void setEndTime(integer $EndTime) 设置屏蔽结束时间，秒级(s)时间戳。
  * @method integer getType() 获取屏蔽类型。1：屏蔽所有通知，2：按照Rule参数屏蔽匹配规则的通知。
  * @method void setType(integer $Type) 设置屏蔽类型。1：屏蔽所有通知，2：按照Rule参数屏蔽匹配规则的通知。
  * @method string getRule() 获取屏蔽规则，当Type为2时必填。规则填写方式详见[产品文档](https://cloud.tencent.com/document/product/614/103178#rule)。
@@ -35,27 +35,29 @@ use TencentCloud\Common\AbstractModel;
  * @method string getReason() 获取屏蔽原因。
  * @method void setReason(string $Reason) 设置屏蔽原因。
  * @method integer getStatus() 获取规则状态。只有规则状态为生效中（status:1）时，才能将其修改为已失效（status:2）。
+枚举：0（未生效），1（生效中），2（已失效）
  * @method void setStatus(integer $Status) 设置规则状态。只有规则状态为生效中（status:1）时，才能将其修改为已失效（status:2）。
+枚举：0（未生效），1（生效中），2（已失效）
  */
 class ModifyAlarmShieldRequest extends AbstractModel
 {
     /**
-     * @var string 屏蔽规则ID。
+     * @var string 屏蔽规则ID。-通过[获取告警屏蔽配置规则](https://cloud.tencent.com/document/api/614/103650)获取屏蔽规则ID
      */
     public $TaskId;
 
     /**
-     * @var string 通知渠道组id。
+     * @var string 通知渠道组id。-通过[获取告警屏蔽配置规则](https://cloud.tencent.com/document/api/614/103650)获取通知渠道组id
      */
     public $AlarmNoticeId;
 
     /**
-     * @var integer 屏蔽开始时间（秒级时间戳）。
+     * @var integer 屏蔽开始时间，秒级(s)时间戳。
      */
     public $StartTime;
 
     /**
-     * @var integer 屏蔽结束时间（秒级时间戳）。
+     * @var integer 屏蔽结束时间，秒级(s)时间戳。
      */
     public $EndTime;
 
@@ -76,18 +78,20 @@ class ModifyAlarmShieldRequest extends AbstractModel
 
     /**
      * @var integer 规则状态。只有规则状态为生效中（status:1）时，才能将其修改为已失效（status:2）。
+枚举：0（未生效），1（生效中），2（已失效）
      */
     public $Status;
 
     /**
-     * @param string $TaskId 屏蔽规则ID。
-     * @param string $AlarmNoticeId 通知渠道组id。
-     * @param integer $StartTime 屏蔽开始时间（秒级时间戳）。
-     * @param integer $EndTime 屏蔽结束时间（秒级时间戳）。
+     * @param string $TaskId 屏蔽规则ID。-通过[获取告警屏蔽配置规则](https://cloud.tencent.com/document/api/614/103650)获取屏蔽规则ID
+     * @param string $AlarmNoticeId 通知渠道组id。-通过[获取告警屏蔽配置规则](https://cloud.tencent.com/document/api/614/103650)获取通知渠道组id
+     * @param integer $StartTime 屏蔽开始时间，秒级(s)时间戳。
+     * @param integer $EndTime 屏蔽结束时间，秒级(s)时间戳。
      * @param integer $Type 屏蔽类型。1：屏蔽所有通知，2：按照Rule参数屏蔽匹配规则的通知。
      * @param string $Rule 屏蔽规则，当Type为2时必填。规则填写方式详见[产品文档](https://cloud.tencent.com/document/product/614/103178#rule)。
      * @param string $Reason 屏蔽原因。
      * @param integer $Status 规则状态。只有规则状态为生效中（status:1）时，才能将其修改为已失效（status:2）。
+枚举：0（未生效），1（生效中），2（已失效）
      */
     function __construct()
     {

@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddInstances请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method array getInstanceIdList() 获取云主机ID列表
- * @method void setInstanceIdList(array $InstanceIdList) 设置云主机ID列表
+ * @method string getClusterId() 获取集群ID，按照【集群ID】进行过滤，可通过调用[DescribeClusters](https://cloud.tencent.com/document/product/649/85857)查询已创建的集群列表或登录控制台进行查看；也可以调用[CreateCluster](https://cloud.tencent.com/document/product/649/36049)创建新的集群。仅在集群下无部署组、命名空间、云主机时可以删除。
+ * @method void setClusterId(string $ClusterId) 设置集群ID，按照【集群ID】进行过滤，可通过调用[DescribeClusters](https://cloud.tencent.com/document/product/649/85857)查询已创建的集群列表或登录控制台进行查看；也可以调用[CreateCluster](https://cloud.tencent.com/document/product/649/36049)创建新的集群。仅在集群下无部署组、命名空间、云主机时可以删除。
+ * @method array getInstanceIdList() 获取云主机ID列表，可通过调用[DescribeInstances](https://cloud.tencent.com/document/api/213/15728)查询已创建的云主机列表或登录控制台进行查看；也可以调用[RunInstances](https://cloud.tencent.com/document/api/213/15730)创建新的云主机。
+ * @method void setInstanceIdList(array $InstanceIdList) 设置云主机ID列表，可通过调用[DescribeInstances](https://cloud.tencent.com/document/api/213/15728)查询已创建的云主机列表或登录控制台进行查看；也可以调用[RunInstances](https://cloud.tencent.com/document/api/213/15730)创建新的云主机。
  * @method string getOsName() 获取操作系统名称
  * @method void setOsName(string $OsName) 设置操作系统名称
  * @method string getImageId() 获取操作系统镜像ID
@@ -42,12 +42,12 @@ use TencentCloud\Common\AbstractModel;
 class AddInstancesRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string 集群ID，按照【集群ID】进行过滤，可通过调用[DescribeClusters](https://cloud.tencent.com/document/product/649/85857)查询已创建的集群列表或登录控制台进行查看；也可以调用[CreateCluster](https://cloud.tencent.com/document/product/649/36049)创建新的集群。仅在集群下无部署组、命名空间、云主机时可以删除。
      */
     public $ClusterId;
 
     /**
-     * @var array 云主机ID列表
+     * @var array 云主机ID列表，可通过调用[DescribeInstances](https://cloud.tencent.com/document/api/213/15728)查询已创建的云主机列表或登录控制台进行查看；也可以调用[RunInstances](https://cloud.tencent.com/document/api/213/15730)创建新的云主机。
      */
     public $InstanceIdList;
 
@@ -87,8 +87,8 @@ class AddInstancesRequest extends AbstractModel
     public $SecurityGroupIds;
 
     /**
-     * @param string $ClusterId 集群ID
-     * @param array $InstanceIdList 云主机ID列表
+     * @param string $ClusterId 集群ID，按照【集群ID】进行过滤，可通过调用[DescribeClusters](https://cloud.tencent.com/document/product/649/85857)查询已创建的集群列表或登录控制台进行查看；也可以调用[CreateCluster](https://cloud.tencent.com/document/product/649/36049)创建新的集群。仅在集群下无部署组、命名空间、云主机时可以删除。
+     * @param array $InstanceIdList 云主机ID列表，可通过调用[DescribeInstances](https://cloud.tencent.com/document/api/213/15728)查询已创建的云主机列表或登录控制台进行查看；也可以调用[RunInstances](https://cloud.tencent.com/document/api/213/15730)创建新的云主机。
      * @param string $OsName 操作系统名称
      * @param string $ImageId 操作系统镜像ID
      * @param string $Password 重装系统密码设置

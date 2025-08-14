@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstances请求参数结构体
  *
- * @method array getFilters() 获取过滤条件
- * @method void setFilters(array $Filters) 设置过滤条件
+ * @method array getFilters() 获取过滤条件，name表示过滤字段，value表示过滤字段值。
+ * @method void setFilters(array $Filters) 设置过滤条件，name表示过滤字段，value表示过滤字段值。
  * @method integer getOffset() 获取偏移量，默认为0
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0
  * @method integer getLimit() 获取分页个数，默认为20，最大100
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeInstancesRequest extends AbstractModel
 {
     /**
-     * @var array 过滤条件
+     * @var array 过滤条件，name表示过滤字段，value表示过滤字段值。
      */
     public $Filters;
 
@@ -45,7 +45,7 @@ class DescribeInstancesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param array $Filters 过滤条件
+     * @param array $Filters 过滤条件，name表示过滤字段，value表示过滤字段值。
      * @param integer $Offset 偏移量，默认为0
      * @param integer $Limit 分页个数，默认为20，最大100
      */

@@ -22,10 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterName() 获取集群名称
  * @method void setClusterName(string $ClusterName) 设置集群名称
- * @method string getClusterType() 获取集群类型
- * @method void setClusterType(string $ClusterType) 设置集群类型
- * @method string getVpcId() 获取私有网络ID
- * @method void setVpcId(string $VpcId) 设置私有网络ID
+ * @method string getClusterType() 获取指定集群类型，目前支持：
+- `V`：虚拟机集群
+- `C`：容器集群
+- `S`：Serverless 集群
+ * @method void setClusterType(string $ClusterType) 设置指定集群类型，目前支持：
+- `V`：虚拟机集群
+- `C`：容器集群
+- `S`：Serverless 集群
+ * @method string getVpcId() 获取私有网络ID，可通过调用[DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372)查询已创建的私有网络列表或登录控制台进行查看；也可以调用[CreateVpc](https://cloud.tencent.com/document/api/215/1309)创建新的私有网络。
+ * @method void setVpcId(string $VpcId) 设置私有网络ID，可通过调用[DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372)查询已创建的私有网络列表或登录控制台进行查看；也可以调用[CreateVpc](https://cloud.tencent.com/document/api/215/1309)创建新的私有网络。
  * @method string getClusterCIDR() 获取分配给集群容器和服务IP的CIDR
  * @method void setClusterCIDR(string $ClusterCIDR) 设置分配给集群容器和服务IP的CIDR
  * @method string getClusterDesc() 获取集群备注
@@ -63,12 +69,15 @@ class CreateClusterRequest extends AbstractModel
     public $ClusterName;
 
     /**
-     * @var string 集群类型
+     * @var string 指定集群类型，目前支持：
+- `V`：虚拟机集群
+- `C`：容器集群
+- `S`：Serverless 集群
      */
     public $ClusterType;
 
     /**
-     * @var string 私有网络ID
+     * @var string 私有网络ID，可通过调用[DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372)查询已创建的私有网络列表或登录控制台进行查看；也可以调用[CreateVpc](https://cloud.tencent.com/document/api/215/1309)创建新的私有网络。
      */
     public $VpcId;
 
@@ -144,8 +153,11 @@ class CreateClusterRequest extends AbstractModel
 
     /**
      * @param string $ClusterName 集群名称
-     * @param string $ClusterType 集群类型
-     * @param string $VpcId 私有网络ID
+     * @param string $ClusterType 指定集群类型，目前支持：
+- `V`：虚拟机集群
+- `C`：容器集群
+- `S`：Serverless 集群
+     * @param string $VpcId 私有网络ID，可通过调用[DescribeVpcEx](https://cloud.tencent.com/document/api/215/1372)查询已创建的私有网络列表或登录控制台进行查看；也可以调用[CreateVpc](https://cloud.tencent.com/document/api/215/1309)创建新的私有网络。
      * @param string $ClusterCIDR 分配给集群容器和服务IP的CIDR
      * @param string $ClusterDesc 集群备注
      * @param string $TsfRegionId 集群所属TSF地域

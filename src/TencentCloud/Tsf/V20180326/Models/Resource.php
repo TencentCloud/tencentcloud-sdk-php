@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * tsf-privilege 模块，资源
  *
- * @method string getResourceId() 获取资源ID
- * @method void setResourceId(string $ResourceId) 设置资源ID
- * @method string getResourceCode() 获取资源编码
- * @method void setResourceCode(string $ResourceCode) 设置资源编码
+ * @method string getResourceId() 获取资源ID，调用[DescribeResource](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)查询接口获取
+ * @method void setResourceId(string $ResourceId) 设置资源ID，调用[DescribeResource](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)查询接口获取
+ * @method string getResourceCode() 获取资源编码，枚举值描述【cluster、namespace、config】
+ * @method void setResourceCode(string $ResourceCode) 设置资源编码，枚举值描述【cluster、namespace、config】
  * @method string getResourceName() 获取资源名称
  * @method void setResourceName(string $ResourceName) 设置资源名称
- * @method string getServiceCode() 获取资源所属产品编码
- * @method void setServiceCode(string $ServiceCode) 设置资源所属产品编码
- * @method string getResourceAction() 获取选取资源使用的Action
- * @method void setResourceAction(string $ResourceAction) 设置选取资源使用的Action
- * @method string getIdField() 获取资源数据查询的ID字段名
- * @method void setIdField(string $IdField) 设置资源数据查询的ID字段名
+ * @method string getServiceCode() 获取资源所属产品编码，枚举值描述【tsf】
+ * @method void setServiceCode(string $ServiceCode) 设置资源所属产品编码，枚举值描述【tsf】
+ * @method string getResourceAction() 获取选取资源使用的Action，枚举值描述【DescribeSimpleCluster、DescribeLanes、DescribeTaskRecords】
+ * @method void setResourceAction(string $ResourceAction) 设置选取资源使用的Action，枚举值描述【DescribeSimpleCluster、DescribeLanes、DescribeTaskRecords】
+ * @method string getIdField() 获取资源数据查询的ID字段名，调用[DescribeResource](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)查询接口获取
+ * @method void setIdField(string $IdField) 设置资源数据查询的ID字段名，调用[DescribeResource](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)查询接口获取
  * @method string getNameField() 获取资源数据查询的名称字段名
  * @method void setNameField(string $NameField) 设置资源数据查询的名称字段名
  * @method string getSelectIdsField() 获取资源数据查询的ID过滤字段名
  * @method void setSelectIdsField(string $SelectIdsField) 设置资源数据查询的ID过滤字段名
- * @method integer getCreationTime() 获取创建时间
- * @method void setCreationTime(integer $CreationTime) 设置创建时间
- * @method integer getLastUpdateTime() 获取最后更新时间
- * @method void setLastUpdateTime(integer $LastUpdateTime) 设置最后更新时间
+ * @method integer getCreationTime() 获取创建时间，时间戳格式【Long】
+ * @method void setCreationTime(integer $CreationTime) 设置创建时间，时间戳格式【Long】
+ * @method integer getLastUpdateTime() 获取最后更新时间，时间戳格式【Long】
+ * @method void setLastUpdateTime(integer $LastUpdateTime) 设置最后更新时间，时间戳格式【Long】
  * @method boolean getDeleteFlag() 获取删除标识
  * @method void setDeleteFlag(boolean $DeleteFlag) 设置删除标识
  * @method string getResourceDesc() 获取资源描述
@@ -48,18 +48,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCanSelectAll(boolean $CanSelectAll) 设置是否可以选择全部
  * @method string getSearchWordField() 获取资源数据查询的模糊查询字段名
  * @method void setSearchWordField(string $SearchWordField) 设置资源数据查询的模糊查询字段名
- * @method integer getIndex() 获取排序
- * @method void setIndex(integer $Index) 设置排序
+ * @method integer getIndex() 获取排序，枚举值描述【10、20、77】
+ * @method void setIndex(integer $Index) 设置排序，枚举值描述【10、20、77】
  */
 class Resource extends AbstractModel
 {
     /**
-     * @var string 资源ID
+     * @var string 资源ID，调用[DescribeResource](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)查询接口获取
      */
     public $ResourceId;
 
     /**
-     * @var string 资源编码
+     * @var string 资源编码，枚举值描述【cluster、namespace、config】
      */
     public $ResourceCode;
 
@@ -69,17 +69,17 @@ class Resource extends AbstractModel
     public $ResourceName;
 
     /**
-     * @var string 资源所属产品编码
+     * @var string 资源所属产品编码，枚举值描述【tsf】
      */
     public $ServiceCode;
 
     /**
-     * @var string 选取资源使用的Action
+     * @var string 选取资源使用的Action，枚举值描述【DescribeSimpleCluster、DescribeLanes、DescribeTaskRecords】
      */
     public $ResourceAction;
 
     /**
-     * @var string 资源数据查询的ID字段名
+     * @var string 资源数据查询的ID字段名，调用[DescribeResource](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)查询接口获取
      */
     public $IdField;
 
@@ -94,12 +94,12 @@ class Resource extends AbstractModel
     public $SelectIdsField;
 
     /**
-     * @var integer 创建时间
+     * @var integer 创建时间，时间戳格式【Long】
      */
     public $CreationTime;
 
     /**
-     * @var integer 最后更新时间
+     * @var integer 最后更新时间，时间戳格式【Long】
      */
     public $LastUpdateTime;
 
@@ -124,26 +124,26 @@ class Resource extends AbstractModel
     public $SearchWordField;
 
     /**
-     * @var integer 排序
+     * @var integer 排序，枚举值描述【10、20、77】
      */
     public $Index;
 
     /**
-     * @param string $ResourceId 资源ID
-     * @param string $ResourceCode 资源编码
+     * @param string $ResourceId 资源ID，调用[DescribeResource](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)查询接口获取
+     * @param string $ResourceCode 资源编码，枚举值描述【cluster、namespace、config】
      * @param string $ResourceName 资源名称
-     * @param string $ServiceCode 资源所属产品编码
-     * @param string $ResourceAction 选取资源使用的Action
-     * @param string $IdField 资源数据查询的ID字段名
+     * @param string $ServiceCode 资源所属产品编码，枚举值描述【tsf】
+     * @param string $ResourceAction 选取资源使用的Action，枚举值描述【DescribeSimpleCluster、DescribeLanes、DescribeTaskRecords】
+     * @param string $IdField 资源数据查询的ID字段名，调用[DescribeResource](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)查询接口获取
      * @param string $NameField 资源数据查询的名称字段名
      * @param string $SelectIdsField 资源数据查询的ID过滤字段名
-     * @param integer $CreationTime 创建时间
-     * @param integer $LastUpdateTime 最后更新时间
+     * @param integer $CreationTime 创建时间，时间戳格式【Long】
+     * @param integer $LastUpdateTime 最后更新时间，时间戳格式【Long】
      * @param boolean $DeleteFlag 删除标识
      * @param string $ResourceDesc 资源描述
      * @param boolean $CanSelectAll 是否可以选择全部
      * @param string $SearchWordField 资源数据查询的模糊查询字段名
-     * @param integer $Index 排序
+     * @param integer $Index 排序，枚举值描述【10、20、77】
      */
     function __construct()
     {

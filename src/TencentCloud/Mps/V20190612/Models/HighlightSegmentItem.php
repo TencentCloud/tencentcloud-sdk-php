@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBeginTime(string $BeginTime) 设置直播切片对应直播起始时间点，采用 ISO 日期格式。	
  * @method string getEndTime() 获取直播切片对应直播结束时间点，采用 ISO 日期格式。	
  * @method void setEndTime(string $EndTime) 设置直播切片对应直播结束时间点，采用 ISO 日期格式。	
+ * @method string getTitle() 获取集锦标题。
+ * @method void setTitle(string $Title) 设置集锦标题。
+ * @method string getSummary() 获取集锦概要。
+ * @method void setSummary(string $Summary) 设置集锦概要。
  */
 class HighlightSegmentItem extends AbstractModel
 {
@@ -69,6 +73,16 @@ class HighlightSegmentItem extends AbstractModel
     public $EndTime;
 
     /**
+     * @var string 集锦标题。
+     */
+    public $Title;
+
+    /**
+     * @var string 集锦概要。
+     */
+    public $Summary;
+
+    /**
      * @param float $Confidence 置信度。
      * @param float $StartTimeOffset 片段起始时间偏移。
      * @param float $EndTimeOffset 片段结束时间偏移。
@@ -76,6 +90,8 @@ class HighlightSegmentItem extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $BeginTime 直播切片对应直播起始时间点，采用 ISO 日期格式。	
      * @param string $EndTime 直播切片对应直播结束时间点，采用 ISO 日期格式。	
+     * @param string $Title 集锦标题。
+     * @param string $Summary 集锦概要。
      */
     function __construct()
     {
@@ -112,6 +128,14 @@ class HighlightSegmentItem extends AbstractModel
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("Title",$param) and $param["Title"] !== null) {
+            $this->Title = $param["Title"];
+        }
+
+        if (array_key_exists("Summary",$param) and $param["Summary"] !== null) {
+            $this->Summary = $param["Summary"];
         }
     }
 }

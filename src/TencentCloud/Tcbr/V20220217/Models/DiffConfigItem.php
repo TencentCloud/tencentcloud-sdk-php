@@ -92,6 +92,8 @@ AccessTypes，EntryPoint，Cmd
  * @method void setTimerScale(array $TimerScale) 设置定时扩缩容配置项值
  * @method VpcConf getVpcConf() 获取配置内网访问时网络信息
  * @method void setVpcConf(VpcConf $VpcConf) 设置配置内网访问时网络信息
+ * @method array getVolumesConf() 获取存储配置信息
+ * @method void setVolumesConf(array $VolumesConf) 设置存储配置信息
  */
 class DiffConfigItem extends AbstractModel
 {
@@ -168,6 +170,11 @@ AccessTypes，EntryPoint，Cmd
     public $VpcConf;
 
     /**
+     * @var array 存储配置信息
+     */
+    public $VolumesConf;
+
+    /**
      * @param string $Key 配置项 Key
 MinNum 最小副本数
 MaxNum 最大副本数
@@ -204,6 +211,7 @@ AccessTypes，EntryPoint，Cmd
      * @param array $PolicyDetails 扩缩容策略配置项值
      * @param array $TimerScale 定时扩缩容配置项值
      * @param VpcConf $VpcConf 配置内网访问时网络信息
+     * @param array $VolumesConf 存储配置信息
      */
     function __construct()
     {
@@ -263,6 +271,15 @@ AccessTypes，EntryPoint，Cmd
         if (array_key_exists("VpcConf",$param) and $param["VpcConf"] !== null) {
             $this->VpcConf = new VpcConf();
             $this->VpcConf->deserialize($param["VpcConf"]);
+        }
+
+        if (array_key_exists("VolumesConf",$param) and $param["VolumesConf"] !== null) {
+            $this->VolumesConf = [];
+            foreach ($param["VolumesConf"] as $key => $value){
+                $obj = new VolumeConf();
+                $obj->deserialize($value);
+                array_push($this->VolumesConf, $obj);
+            }
         }
     }
 }

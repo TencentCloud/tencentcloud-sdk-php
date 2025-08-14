@@ -21,15 +21,17 @@ use TencentCloud\Common\AbstractModel;
  * 用于描述 MPS 视频处理任务中的返回文件结果。
  *
  * @method string getFileType() 获取文件类型。用于标识 MPS 视频处理任务执行结果中的特定返回文件。
-取值：<li>AiAnalysis.DeLogo.Video: 智能擦除任务中产生的擦除后视频文件；</li><li>AiAnalysis.DeLogo.OriginSubtitle: 智能擦除任务中基于画面提取的字幕文件；</li><li>AiAnalysis.DeLogo.TranslateSubtitle: 智能擦除任务中基于画面提取的字幕翻译文件。</li>
+取值：<li>AiAnalysis.DeLogo.Video: 智能擦除任务中产生的擦除后视频文件，默认以原文件类型存储；</li><li>AiAnalysis.DeLogo.OriginSubtitle: 智能擦除任务中基于画面提取的字幕文件；</li><li>AiAnalysis.DeLogo.TranslateSubtitle: 智能擦除任务中基于画面提取的字幕翻译文件。</li><li>MediaProcess.Transcode.Video: 音视频增强任务中增强后的音视频文件，默认以转码文件类型存储。</li>
  * @method void setFileType(string $FileType) 设置文件类型。用于标识 MPS 视频处理任务执行结果中的特定返回文件。
-取值：<li>AiAnalysis.DeLogo.Video: 智能擦除任务中产生的擦除后视频文件；</li><li>AiAnalysis.DeLogo.OriginSubtitle: 智能擦除任务中基于画面提取的字幕文件；</li><li>AiAnalysis.DeLogo.TranslateSubtitle: 智能擦除任务中基于画面提取的字幕翻译文件。</li>
+取值：<li>AiAnalysis.DeLogo.Video: 智能擦除任务中产生的擦除后视频文件，默认以原文件类型存储；</li><li>AiAnalysis.DeLogo.OriginSubtitle: 智能擦除任务中基于画面提取的字幕文件；</li><li>AiAnalysis.DeLogo.TranslateSubtitle: 智能擦除任务中基于画面提取的字幕翻译文件。</li><li>MediaProcess.Transcode.Video: 音视频增强任务中增强后的音视频文件，默认以转码文件类型存储。</li>
  * @method string getStorageMode() 获取存储形式。用于表示该结果文件的存储形式，取值有：<li> Permanent：永久存储；</li><li> Temporary：临时存储。</li>
  * @method void setStorageMode(string $StorageMode) 设置存储形式。用于表示该结果文件的存储形式，取值有：<li> Permanent：永久存储；</li><li> Temporary：临时存储。</li>
  * @method string getFileId() 获取媒体文件 ID。当 Type 为 Permanent 时有效，表示该结果文件以视频媒资形式存储在点播平台中，字段值为视频媒资的 FileId。
  * @method void setFileId(string $FileId) 设置媒体文件 ID。当 Type 为 Permanent 时有效，表示该结果文件以视频媒资形式存储在点播平台中，字段值为视频媒资的 FileId。
  * @method string getUrl() 获取结果文件的可下载 Url。
  * @method void setUrl(string $Url) 设置结果文件的可下载 Url。
+ * @method string getDefinition() 获取转码规格 ID。当 FileType 等于 MediaProcess.Transcode.Video时有效，取值为0表示原始文件。 
+ * @method void setDefinition(string $Definition) 设置转码规格 ID。当 FileType 等于 MediaProcess.Transcode.Video时有效，取值为0表示原始文件。 
  * @method integer getExpiredTime() 获取过期时间。当 StorageMode 为 Temporary 时有效，表示 Url 的过期时间，单位为秒。
  * @method void setExpiredTime(integer $ExpiredTime) 设置过期时间。当 StorageMode 为 Temporary 时有效，表示 Url 的过期时间，单位为秒。
  */
@@ -37,7 +39,7 @@ class MPSOutputFile extends AbstractModel
 {
     /**
      * @var string 文件类型。用于标识 MPS 视频处理任务执行结果中的特定返回文件。
-取值：<li>AiAnalysis.DeLogo.Video: 智能擦除任务中产生的擦除后视频文件；</li><li>AiAnalysis.DeLogo.OriginSubtitle: 智能擦除任务中基于画面提取的字幕文件；</li><li>AiAnalysis.DeLogo.TranslateSubtitle: 智能擦除任务中基于画面提取的字幕翻译文件。</li>
+取值：<li>AiAnalysis.DeLogo.Video: 智能擦除任务中产生的擦除后视频文件，默认以原文件类型存储；</li><li>AiAnalysis.DeLogo.OriginSubtitle: 智能擦除任务中基于画面提取的字幕文件；</li><li>AiAnalysis.DeLogo.TranslateSubtitle: 智能擦除任务中基于画面提取的字幕翻译文件。</li><li>MediaProcess.Transcode.Video: 音视频增强任务中增强后的音视频文件，默认以转码文件类型存储。</li>
      */
     public $FileType;
 
@@ -57,16 +59,22 @@ class MPSOutputFile extends AbstractModel
     public $Url;
 
     /**
+     * @var string 转码规格 ID。当 FileType 等于 MediaProcess.Transcode.Video时有效，取值为0表示原始文件。 
+     */
+    public $Definition;
+
+    /**
      * @var integer 过期时间。当 StorageMode 为 Temporary 时有效，表示 Url 的过期时间，单位为秒。
      */
     public $ExpiredTime;
 
     /**
      * @param string $FileType 文件类型。用于标识 MPS 视频处理任务执行结果中的特定返回文件。
-取值：<li>AiAnalysis.DeLogo.Video: 智能擦除任务中产生的擦除后视频文件；</li><li>AiAnalysis.DeLogo.OriginSubtitle: 智能擦除任务中基于画面提取的字幕文件；</li><li>AiAnalysis.DeLogo.TranslateSubtitle: 智能擦除任务中基于画面提取的字幕翻译文件。</li>
+取值：<li>AiAnalysis.DeLogo.Video: 智能擦除任务中产生的擦除后视频文件，默认以原文件类型存储；</li><li>AiAnalysis.DeLogo.OriginSubtitle: 智能擦除任务中基于画面提取的字幕文件；</li><li>AiAnalysis.DeLogo.TranslateSubtitle: 智能擦除任务中基于画面提取的字幕翻译文件。</li><li>MediaProcess.Transcode.Video: 音视频增强任务中增强后的音视频文件，默认以转码文件类型存储。</li>
      * @param string $StorageMode 存储形式。用于表示该结果文件的存储形式，取值有：<li> Permanent：永久存储；</li><li> Temporary：临时存储。</li>
      * @param string $FileId 媒体文件 ID。当 Type 为 Permanent 时有效，表示该结果文件以视频媒资形式存储在点播平台中，字段值为视频媒资的 FileId。
      * @param string $Url 结果文件的可下载 Url。
+     * @param string $Definition 转码规格 ID。当 FileType 等于 MediaProcess.Transcode.Video时有效，取值为0表示原始文件。 
      * @param integer $ExpiredTime 过期时间。当 StorageMode 为 Temporary 时有效，表示 Url 的过期时间，单位为秒。
      */
     function __construct()
@@ -96,6 +104,10 @@ class MPSOutputFile extends AbstractModel
 
         if (array_key_exists("Url",$param) and $param["Url"] !== null) {
             $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
+            $this->Definition = $param["Definition"];
         }
 
         if (array_key_exists("ExpiredTime",$param) and $param["ExpiredTime"] !== null) {

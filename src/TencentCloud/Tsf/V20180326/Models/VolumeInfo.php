@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConfigMapOptions(array $ConfigMapOptions) 设置-
  * @method EmptyDirOption getEmptyDirOption() 获取-
  * @method void setEmptyDirOption(EmptyDirOption $EmptyDirOption) 设置-
+ * @method VolumeClaimTemplatesOption getVolumeClaimTemplateOption() 获取数据卷PVC声明模板
+ * @method void setVolumeClaimTemplateOption(VolumeClaimTemplatesOption $VolumeClaimTemplateOption) 设置数据卷PVC声明模板
  */
 class VolumeInfo extends AbstractModel
 {
@@ -59,11 +61,17 @@ class VolumeInfo extends AbstractModel
     public $EmptyDirOption;
 
     /**
+     * @var VolumeClaimTemplatesOption 数据卷PVC声明模板
+     */
+    public $VolumeClaimTemplateOption;
+
+    /**
      * @param string $VolumeType 数据卷类型
      * @param string $VolumeName 数据卷名称
      * @param string $VolumeConfig 数据卷配置
      * @param array $ConfigMapOptions -
      * @param EmptyDirOption $EmptyDirOption -
+     * @param VolumeClaimTemplatesOption $VolumeClaimTemplateOption 数据卷PVC声明模板
      */
     function __construct()
     {
@@ -102,6 +110,11 @@ class VolumeInfo extends AbstractModel
         if (array_key_exists("EmptyDirOption",$param) and $param["EmptyDirOption"] !== null) {
             $this->EmptyDirOption = new EmptyDirOption();
             $this->EmptyDirOption->deserialize($param["EmptyDirOption"]);
+        }
+
+        if (array_key_exists("VolumeClaimTemplateOption",$param) and $param["VolumeClaimTemplateOption"] !== null) {
+            $this->VolumeClaimTemplateOption = new VolumeClaimTemplatesOption();
+            $this->VolumeClaimTemplateOption->deserialize($param["VolumeClaimTemplateOption"]);
         }
     }
 }

@@ -40,10 +40,10 @@ WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调;
  * @method void setUin(integer $Uin) 设置主账号。
  * @method integer getSubUin() 获取子账号。
  * @method void setSubUin(integer $SubUin) 设置子账号。
- * @method integer getCreateTime() 获取创建时间。秒级时间戳
- * @method void setCreateTime(integer $CreateTime) 设置创建时间。秒级时间戳
- * @method integer getUpdateTime() 获取更新时间。秒级时间戳
- * @method void setUpdateTime(integer $UpdateTime) 设置更新时间。秒级时间戳
+ * @method integer getCreateTime() 获取创建时间。秒(s)级时间戳
+ * @method void setCreateTime(integer $CreateTime) 设置创建时间。秒(s)级时间戳
+ * @method integer getUpdateTime() 获取更新时间。秒(s)级时间戳
+ * @method void setUpdateTime(integer $UpdateTime) 设置更新时间。秒(s)级时间戳
  */
 class WebCallbackInfo extends AbstractModel
 {
@@ -90,12 +90,12 @@ WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调;
     public $SubUin;
 
     /**
-     * @var integer 创建时间。秒级时间戳
+     * @var integer 创建时间。秒(s)级时间戳
      */
     public $CreateTime;
 
     /**
-     * @var integer 更新时间。秒级时间戳
+     * @var integer 更新时间。秒(s)级时间戳
      */
     public $UpdateTime;
 
@@ -110,8 +110,8 @@ WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调;
      * @param string $Key 秘钥信息。
      * @param integer $Uin 主账号。
      * @param integer $SubUin 子账号。
-     * @param integer $CreateTime 创建时间。秒级时间戳
-     * @param integer $UpdateTime 更新时间。秒级时间戳
+     * @param integer $CreateTime 创建时间。秒(s)级时间戳
+     * @param integer $UpdateTime 更新时间。秒(s)级时间戳
      */
     function __construct()
     {

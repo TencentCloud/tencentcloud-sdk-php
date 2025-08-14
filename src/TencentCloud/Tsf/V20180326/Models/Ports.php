@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTargetPort() 获取服务端口
  * @method void setTargetPort(integer $TargetPort) 设置服务端口
- * @method string getProtocol() 获取端口协议
- * @method void setProtocol(string $Protocol) 设置端口协议
+ * @method string getProtocol() 获取端口协议，TCP或者UDP
+ * @method void setProtocol(string $Protocol) 设置端口协议，TCP或者UDP
  */
 class Ports extends AbstractModel
 {
@@ -33,13 +33,13 @@ class Ports extends AbstractModel
     public $TargetPort;
 
     /**
-     * @var string 端口协议
+     * @var string 端口协议，TCP或者UDP
      */
     public $Protocol;
 
     /**
      * @param integer $TargetPort 服务端口
-     * @param string $Protocol 端口协议
+     * @param string $Protocol 端口协议，TCP或者UDP
      */
     function __construct()
     {

@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 按照【告警渠道回调配置渠道类型】进行过滤。
 类型：String
 必选：否
-
+枚举值：WeCom，DingTalk，Lark，Http
 每次请求的Filters的上限为10，Filter.Values的上限为100。
  * @method void setFilters(array $Filters) 设置- name
 按照【告警渠道回调配置名称】进行过滤。
@@ -50,7 +50,7 @@ use TencentCloud\Common\AbstractModel;
 按照【告警渠道回调配置渠道类型】进行过滤。
 类型：String
 必选：否
-
+枚举值：WeCom，DingTalk，Lark，Http
 每次请求的Filters的上限为10，Filter.Values的上限为100。
  * @method integer getOffset() 获取分页的偏移量，默认值为0。
  * @method void setOffset(integer $Offset) 设置分页的偏移量，默认值为0。
@@ -74,7 +74,7 @@ class DescribeWebCallbacksRequest extends AbstractModel
 按照【告警渠道回调配置渠道类型】进行过滤。
 类型：String
 必选：否
-
+枚举值：WeCom，DingTalk，Lark，Http
 每次请求的Filters的上限为10，Filter.Values的上限为100。
      */
     public $Filters;
@@ -104,7 +104,7 @@ class DescribeWebCallbacksRequest extends AbstractModel
 按照【告警渠道回调配置渠道类型】进行过滤。
 类型：String
 必选：否
-
+枚举值：WeCom，DingTalk，Lark，Http
 每次请求的Filters的上限为10，Filter.Values的上限为100。
      * @param integer $Offset 分页的偏移量，默认值为0。
      * @param integer $Limit 分页单页限制数目，默认值为20，最大值100。

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateNoticeContent请求参数结构体
  *
- * @method string getName() 获取模板名称。
- * @method void setName(string $Name) 设置模板名称。
+ * @method string getName() 获取模板名称。最大支持255个字节
+ * @method void setName(string $Name) 设置模板名称。最大支持255个字节
  * @method integer getType() 获取模板内容语言。0：中文1：英文
  * @method void setType(integer $Type) 设置模板内容语言。0：中文1：英文
  * @method array getNoticeContents() 获取模板详细配置。
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateNoticeContentRequest extends AbstractModel
 {
     /**
-     * @var string 模板名称。
+     * @var string 模板名称。最大支持255个字节
      */
     public $Name;
 
@@ -45,7 +45,7 @@ class CreateNoticeContentRequest extends AbstractModel
     public $NoticeContents;
 
     /**
-     * @param string $Name 模板名称。
+     * @param string $Name 模板名称。最大支持255个字节
      * @param integer $Type 模板内容语言。0：中文1：英文
      * @param array $NoticeContents 模板详细配置。
      */

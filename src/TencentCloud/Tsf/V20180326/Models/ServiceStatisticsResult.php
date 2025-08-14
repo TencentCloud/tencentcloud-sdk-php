@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPath(string $Path) 设置请求模板路径:type为接口时返回，服务时不返回
  * @method string getMethod() 获取请求方法:type为接口时返回，服务时不返回
  * @method void setMethod(string $Method) 设置请求方法:type为接口时返回，服务时不返回
- * @method string getMicroserviceId() 获取微服务Id
- * @method void setMicroserviceId(string $MicroserviceId) 设置微服务Id
+ * @method string getMicroserviceId() 获取微服务ID
+ * @method void setMicroserviceId(string $MicroserviceId) 设置微服务ID
  * @method string getMicroserviceName() 获取微服务名称
  * @method void setMicroserviceName(string $MicroserviceName) 设置微服务名称
  * @method integer getRequestCount() 获取请求数
@@ -40,20 +40,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例id
  * @method string getInstanceName() 获取实例name
  * @method void setInstanceName(string $InstanceName) 设置实例name
- * @method string getGroupId() 获取部署组id
- * @method void setGroupId(string $GroupId) 设置部署组id
+ * @method string getGroupId() 获取部署组ID
+ * @method void setGroupId(string $GroupId) 设置部署组ID
  * @method string getGroupName() 获取部署组name
  * @method void setGroupName(string $GroupName) 设置部署组name
- * @method string getClusterType() 获取部署组类型
- * @method void setClusterType(string $ClusterType) 设置部署组类型
+ * @method string getClusterType() 获取集群类型，C：容器集群，V：虚拟机集群
+ * @method void setClusterType(string $ClusterType) 设置集群类型，C：容器集群，V：虚拟机集群
  * @method integer getGroupExist() 获取部署组是否存在
  * @method void setGroupExist(integer $GroupExist) 设置部署组是否存在
  * @method integer getInstanceExist() 获取实例是否存在，仅限cvm
  * @method void setInstanceExist(integer $InstanceExist) 设置实例是否存在，仅限cvm
- * @method string getApplicationId() 获取应用id
- * @method void setApplicationId(string $ApplicationId) 设置应用id
- * @method string getMicroserviceType() 获取微服务类型
- * @method void setMicroserviceType(string $MicroserviceType) 设置微服务类型
+ * @method string getApplicationId() 获取应用ID
+ * @method void setApplicationId(string $ApplicationId) 设置应用ID
+ * @method string getMicroserviceType() 获取微服务类型。RAW：裸应用，M：mesh应用，N：普通应用，G：网关应用
+ * @method void setMicroserviceType(string $MicroserviceType) 设置微服务类型。RAW：裸应用，M：mesh应用，N：普通应用，G：网关应用
  * @method integer getCpuPercent() 获取cpu使用率
  * @method void setCpuPercent(integer $CpuPercent) 设置cpu使用率
  * @method integer getHeapUsed() 获取已用堆大小,单位KB
@@ -72,14 +72,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceOnlineCount(integer $InstanceOnlineCount) 设置实例在线数
  * @method integer getInstanceTotalCount() 获取实例总数
  * @method void setInstanceTotalCount(integer $InstanceTotalCount) 设置实例总数
- * @method string getStatus() 获取normal/error
- * @method void setStatus(string $Status) 设置normal/error
- * @method string getErrorRateLevel() 获取normal/warn/error
- * @method void setErrorRateLevel(string $ErrorRateLevel) 设置normal/warn/error
- * @method string getAvgTimeConsumingLevel() 获取normal/warn/error
- * @method void setAvgTimeConsumingLevel(string $AvgTimeConsumingLevel) 设置normal/warn/error
- * @method string getApdexLevel() 获取normal/warn/error
- * @method void setApdexLevel(string $ApdexLevel) 设置normal/warn/error
+ * @method string getStatus() 获取状态。normal：正常，warn：警告，error：错误
+ * @method void setStatus(string $Status) 设置状态。normal：正常，warn：警告，error：错误
+ * @method string getErrorRateLevel() 获取请求错误率等级。normal：正常，warn：警告，error：错误
+ * @method void setErrorRateLevel(string $ErrorRateLevel) 设置请求错误率等级。normal：正常，warn：警告，error：错误
+ * @method string getAvgTimeConsumingLevel() 获取请求平均耗时等级。normal：正常，warn：警告，error：错误
+ * @method void setAvgTimeConsumingLevel(string $AvgTimeConsumingLevel) 设置请求平均耗时等级。normal：正常，warn：警告，error：错误
+ * @method string getApdexLevel() 获取应用程序性能指数等级。normal：正常，warn：警告，error：错误
+ * @method void setApdexLevel(string $ApdexLevel) 设置应用程序性能指数等级。normal：正常，warn：警告，error：错误
  */
 class ServiceStatisticsResult extends AbstractModel
 {
@@ -94,7 +94,7 @@ class ServiceStatisticsResult extends AbstractModel
     public $Method;
 
     /**
-     * @var string 微服务Id
+     * @var string 微服务ID
      */
     public $MicroserviceId;
 
@@ -134,7 +134,7 @@ class ServiceStatisticsResult extends AbstractModel
     public $InstanceName;
 
     /**
-     * @var string 部署组id
+     * @var string 部署组ID
      */
     public $GroupId;
 
@@ -144,7 +144,7 @@ class ServiceStatisticsResult extends AbstractModel
     public $GroupName;
 
     /**
-     * @var string 部署组类型
+     * @var string 集群类型，C：容器集群，V：虚拟机集群
      */
     public $ClusterType;
 
@@ -159,12 +159,12 @@ class ServiceStatisticsResult extends AbstractModel
     public $InstanceExist;
 
     /**
-     * @var string 应用id
+     * @var string 应用ID
      */
     public $ApplicationId;
 
     /**
-     * @var string 微服务类型
+     * @var string 微服务类型。RAW：裸应用，M：mesh应用，N：普通应用，G：网关应用
      */
     public $MicroserviceType;
 
@@ -214,29 +214,29 @@ class ServiceStatisticsResult extends AbstractModel
     public $InstanceTotalCount;
 
     /**
-     * @var string normal/error
+     * @var string 状态。normal：正常，warn：警告，error：错误
      */
     public $Status;
 
     /**
-     * @var string normal/warn/error
+     * @var string 请求错误率等级。normal：正常，warn：警告，error：错误
      */
     public $ErrorRateLevel;
 
     /**
-     * @var string normal/warn/error
+     * @var string 请求平均耗时等级。normal：正常，warn：警告，error：错误
      */
     public $AvgTimeConsumingLevel;
 
     /**
-     * @var string normal/warn/error
+     * @var string 应用程序性能指数等级。normal：正常，warn：警告，error：错误
      */
     public $ApdexLevel;
 
     /**
      * @param string $Path 请求模板路径:type为接口时返回，服务时不返回
      * @param string $Method 请求方法:type为接口时返回，服务时不返回
-     * @param string $MicroserviceId 微服务Id
+     * @param string $MicroserviceId 微服务ID
      * @param string $MicroserviceName 微服务名称
      * @param integer $RequestCount 请求数
      * @param float $ErrorRate 请求错误率，不带百分号
@@ -244,13 +244,13 @@ class ServiceStatisticsResult extends AbstractModel
      * @param array $MetricDataCurves 响应耗时曲线
      * @param string $InstanceId 实例id
      * @param string $InstanceName 实例name
-     * @param string $GroupId 部署组id
+     * @param string $GroupId 部署组ID
      * @param string $GroupName 部署组name
-     * @param string $ClusterType 部署组类型
+     * @param string $ClusterType 集群类型，C：容器集群，V：虚拟机集群
      * @param integer $GroupExist 部署组是否存在
      * @param integer $InstanceExist 实例是否存在，仅限cvm
-     * @param string $ApplicationId 应用id
-     * @param string $MicroserviceType 微服务类型
+     * @param string $ApplicationId 应用ID
+     * @param string $MicroserviceType 微服务类型。RAW：裸应用，M：mesh应用，N：普通应用，G：网关应用
      * @param integer $CpuPercent cpu使用率
      * @param integer $HeapUsed 已用堆大小,单位KB
      * @param string $DbName 数据库
@@ -260,10 +260,10 @@ class ServiceStatisticsResult extends AbstractModel
      * @param float $Qps Qps值
      * @param integer $InstanceOnlineCount 实例在线数
      * @param integer $InstanceTotalCount 实例总数
-     * @param string $Status normal/error
-     * @param string $ErrorRateLevel normal/warn/error
-     * @param string $AvgTimeConsumingLevel normal/warn/error
-     * @param string $ApdexLevel normal/warn/error
+     * @param string $Status 状态。normal：正常，warn：警告，error：错误
+     * @param string $ErrorRateLevel 请求错误率等级。normal：正常，warn：警告，error：错误
+     * @param string $AvgTimeConsumingLevel 请求平均耗时等级。normal：正常，warn：警告，error：错误
+     * @param string $ApdexLevel 应用程序性能指数等级。normal：正常，warn：警告，error：错误
      */
     function __construct()
     {

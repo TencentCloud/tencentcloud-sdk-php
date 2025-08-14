@@ -50,10 +50,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAlarmNoticeDeliverConfig(AlarmNoticeDeliverConfig $AlarmNoticeDeliverConfig) 设置投递相关信息。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCreateTime() 获取创建时间。
- * @method void setCreateTime(string $CreateTime) 设置创建时间。
- * @method string getUpdateTime() 获取最近更新时间。
- * @method void setUpdateTime(string $UpdateTime) 设置最近更新时间。
+ * @method string getCreateTime() 获取创建时间。格式： YYYY-MM-DD HH:MM:SS
+ * @method void setCreateTime(string $CreateTime) 设置创建时间。格式： YYYY-MM-DD HH:MM:SS
+ * @method string getUpdateTime() 获取最近更新时间。格式： YYYY-MM-DD HH:MM:SS
+ * @method void setUpdateTime(string $UpdateTime) 设置最近更新时间。格式： YYYY-MM-DD HH:MM:SS
  */
 class AlarmNotice extends AbstractModel
 {
@@ -113,12 +113,12 @@ class AlarmNotice extends AbstractModel
     public $AlarmNoticeDeliverConfig;
 
     /**
-     * @var string 创建时间。
+     * @var string 创建时间。格式： YYYY-MM-DD HH:MM:SS
      */
     public $CreateTime;
 
     /**
-     * @var string 最近更新时间。
+     * @var string 最近更新时间。格式： YYYY-MM-DD HH:MM:SS
      */
     public $UpdateTime;
 
@@ -138,8 +138,8 @@ class AlarmNotice extends AbstractModel
      * @param string $JumpDomain 调用链接域名。http:// 或者 https:// 开头，不能/结尾
      * @param AlarmNoticeDeliverConfig $AlarmNoticeDeliverConfig 投递相关信息。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CreateTime 创建时间。
-     * @param string $UpdateTime 最近更新时间。
+     * @param string $CreateTime 创建时间。格式： YYYY-MM-DD HH:MM:SS
+     * @param string $UpdateTime 最近更新时间。格式： YYYY-MM-DD HH:MM:SS
      */
     function __construct()
     {

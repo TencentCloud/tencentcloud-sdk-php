@@ -20,16 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeStatistics请求参数结构体
  *
- * @method string getType() 获取类型：Interface、Service、Group、Instance、SQL、NoSQL
- * @method void setType(string $Type) 设置类型：Interface、Service、Group、Instance、SQL、NoSQL
- * @method integer getTimeStep() 获取步长，单位s：60、3600、86400
- * @method void setTimeStep(integer $TimeStep) 设置步长，单位s：60、3600、86400
+ * @method string getType() 获取统计类型。可选值 Interface：接口类型、Service：服务类型、Group：部署组类型、Instance：实例类型、SQL：SQL类型、NoSQL：NoSQL类型
+ * @method void setType(string $Type) 设置统计类型。可选值 Interface：接口类型、Service：服务类型、Group：部署组类型、Instance：实例类型、SQL：SQL类型、NoSQL：NoSQL类型
+ * @method integer getTimeStep() 获取步长，单位秒。可选值 60、3600、86400
+ * @method void setTimeStep(integer $TimeStep) 设置步长，单位秒。可选值 60、3600、86400
  * @method integer getOffset() 获取偏移量，取值范围大于等于0，默认值为0
  * @method void setOffset(integer $Offset) 设置偏移量，取值范围大于等于0，默认值为0
  * @method integer getLimit() 获取单页请求配置数量，取值范围[1, 50]，默认值为10
  * @method void setLimit(integer $Limit) 设置单页请求配置数量，取值范围[1, 50]，默认值为10
- * @method string getNamespaceId() 获取命名空间Id,此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一。
- * @method void setNamespaceId(string $NamespaceId) 设置命名空间Id,此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一。
+ * @method string getNamespaceId() 获取命名空间ID。此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一。
+可通过[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已经创建的命名空间，也可以通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)查看
+
+ * @method void setNamespaceId(string $NamespaceId) 设置命名空间ID。此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一。
+可通过[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已经创建的命名空间，也可以通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)查看
+
  * @method string getOrderBy() 获取排序字段:AvgTimeConsuming[默认]、RequestCount、ErrorRate。实例监控还支持 CpuPercent
  * @method void setOrderBy(string $OrderBy) 设置排序字段:AvgTimeConsuming[默认]、RequestCount、ErrorRate。实例监控还支持 CpuPercent
  * @method integer getOrderType() 获取排序方式：ASC:0、DESC:1
@@ -42,26 +46,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceName(string $ServiceName) 设置服务名称
  * @method string getSearchWord() 获取搜索关键词
  * @method void setSearchWord(string $SearchWord) 设置搜索关键词
- * @method array getMetricDimensionValues() 获取维度
- * @method void setMetricDimensionValues(array $MetricDimensionValues) 设置维度
+ * @method array getMetricDimensionValues() 获取维度。此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一
+ * @method void setMetricDimensionValues(array $MetricDimensionValues) 设置维度。此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一
  * @method string getBucketKey() 获取聚合关键词
  * @method void setBucketKey(string $BucketKey) 设置聚合关键词
- * @method string getDbName() 获取数据库
- * @method void setDbName(string $DbName) 设置数据库
- * @method array getNamespaceIdList() 获取命名空间id数组
- * @method void setNamespaceIdList(array $NamespaceIdList) 设置命名空间id数组
- * @method string getConfigCenterInstanceId() 获取独占配置中心的ID
- * @method void setConfigCenterInstanceId(string $ConfigCenterInstanceId) 设置独占配置中心的ID
+ * @method string getDbName() 获取数据库名称
+ * @method void setDbName(string $DbName) 设置数据库名称
+ * @method array getNamespaceIdList() 获取命名空间ID数组。此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一
+ * @method void setNamespaceIdList(array $NamespaceIdList) 设置命名空间ID数组。此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一
+ * @method string getConfigCenterInstanceId() 获取独占配置中心的ID。
+可通过调用[DescribeClusterInstances](https://cloud.tencent.com/document/product/649/36048)查询已导入的实例列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=instance)进行查询。实例ID例如：ins-6decplwk。
+ * @method void setConfigCenterInstanceId(string $ConfigCenterInstanceId) 设置独占配置中心的ID。
+可通过调用[DescribeClusterInstances](https://cloud.tencent.com/document/product/649/36048)查询已导入的实例列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=instance)进行查询。实例ID例如：ins-6decplwk。
  */
 class DescribeStatisticsRequest extends AbstractModel
 {
     /**
-     * @var string 类型：Interface、Service、Group、Instance、SQL、NoSQL
+     * @var string 统计类型。可选值 Interface：接口类型、Service：服务类型、Group：部署组类型、Instance：实例类型、SQL：SQL类型、NoSQL：NoSQL类型
      */
     public $Type;
 
     /**
-     * @var integer 步长，单位s：60、3600、86400
+     * @var integer 步长，单位秒。可选值 60、3600、86400
      */
     public $TimeStep;
 
@@ -76,7 +82,9 @@ class DescribeStatisticsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 命名空间Id,此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一。
+     * @var string 命名空间ID。此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一。
+可通过[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已经创建的命名空间，也可以通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)查看
+
      */
     public $NamespaceId;
 
@@ -111,7 +119,7 @@ class DescribeStatisticsRequest extends AbstractModel
     public $SearchWord;
 
     /**
-     * @var array 维度
+     * @var array 维度。此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一
      */
     public $MetricDimensionValues;
 
@@ -121,37 +129,41 @@ class DescribeStatisticsRequest extends AbstractModel
     public $BucketKey;
 
     /**
-     * @var string 数据库
+     * @var string 数据库名称
      */
     public $DbName;
 
     /**
-     * @var array 命名空间id数组
+     * @var array 命名空间ID数组。此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一
      */
     public $NamespaceIdList;
 
     /**
-     * @var string 独占配置中心的ID
+     * @var string 独占配置中心的ID。
+可通过调用[DescribeClusterInstances](https://cloud.tencent.com/document/product/649/36048)查询已导入的实例列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=instance)进行查询。实例ID例如：ins-6decplwk。
      */
     public $ConfigCenterInstanceId;
 
     /**
-     * @param string $Type 类型：Interface、Service、Group、Instance、SQL、NoSQL
-     * @param integer $TimeStep 步长，单位s：60、3600、86400
+     * @param string $Type 统计类型。可选值 Interface：接口类型、Service：服务类型、Group：部署组类型、Instance：实例类型、SQL：SQL类型、NoSQL：NoSQL类型
+     * @param integer $TimeStep 步长，单位秒。可选值 60、3600、86400
      * @param integer $Offset 偏移量，取值范围大于等于0，默认值为0
      * @param integer $Limit 单页请求配置数量，取值范围[1, 50]，默认值为10
-     * @param string $NamespaceId 命名空间Id,此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一。
+     * @param string $NamespaceId 命名空间ID。此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一。
+可通过[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已经创建的命名空间，也可以通过登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)查看
+
      * @param string $OrderBy 排序字段:AvgTimeConsuming[默认]、RequestCount、ErrorRate。实例监控还支持 CpuPercent
      * @param integer $OrderType 排序方式：ASC:0、DESC:1
      * @param string $EndTime 开始时间：年月日 时分秒2020-05-12 14:43:12， 不能为空
      * @param string $StartTime 开始时间：年月日 时分秒2020-05-12 14:43:12， 不能为空
      * @param string $ServiceName 服务名称
      * @param string $SearchWord 搜索关键词
-     * @param array $MetricDimensionValues 维度
+     * @param array $MetricDimensionValues 维度。此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一
      * @param string $BucketKey 聚合关键词
-     * @param string $DbName 数据库
-     * @param array $NamespaceIdList 命名空间id数组
-     * @param string $ConfigCenterInstanceId 独占配置中心的ID
+     * @param string $DbName 数据库名称
+     * @param array $NamespaceIdList 命名空间ID数组。此字段，和 NamespaceIdList 或者 MetricDimensionValues 字段包含 namespaceId 维度信息。三者选其一
+     * @param string $ConfigCenterInstanceId 独占配置中心的ID。
+可通过调用[DescribeClusterInstances](https://cloud.tencent.com/document/product/649/36048)查询已导入的实例列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=instance)进行查询。实例ID例如：ins-6decplwk。
      */
     function __construct()
     {

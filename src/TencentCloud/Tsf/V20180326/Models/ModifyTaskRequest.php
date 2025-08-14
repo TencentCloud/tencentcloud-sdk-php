@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyTask请求参数结构体
  *
- * @method string getTaskId() 获取任务ID。在任务管理列表页面第一列查看任务ID。
- * @method void setTaskId(string $TaskId) 设置任务ID。在任务管理列表页面第一列查看任务ID。
+ * @method string getTaskId() 获取任务ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页查看任务ID。
+ * @method void setTaskId(string $TaskId) 设置任务ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页查看任务ID。
  * @method string getTaskName() 获取任务名称，长度限制为64字符。在任务管理列表页面第一列或是任务基本信息页查看任务名称。
  * @method void setTaskName(string $TaskName) 设置任务名称，长度限制为64字符。在任务管理列表页面第一列或是任务基本信息页查看任务名称。
  * @method string getTaskType() 获取任务类型。当前只支持一种任务类型。枚举值，java：Java类任务
@@ -58,7 +58,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyTaskRequest extends AbstractModel
 {
     /**
-     * @var string 任务ID。在任务管理列表页面第一列查看任务ID。
+     * @var string 任务ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页查看任务ID。
      */
     public $TaskId;
 
@@ -143,7 +143,7 @@ class ModifyTaskRequest extends AbstractModel
     public $ProgramIdList;
 
     /**
-     * @param string $TaskId 任务ID。在任务管理列表页面第一列查看任务ID。
+     * @param string $TaskId 任务ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页查看任务ID。
      * @param string $TaskName 任务名称，长度限制为64字符。在任务管理列表页面第一列或是任务基本信息页查看任务名称。
      * @param string $TaskType 任务类型。当前只支持一种任务类型。枚举值，java：Java类任务
      * @param string $TaskContent 任务内容，长度限制为 65536 字节

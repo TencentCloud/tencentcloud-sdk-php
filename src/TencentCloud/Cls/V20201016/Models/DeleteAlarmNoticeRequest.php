@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteAlarmNotice请求参数结构体
  *
- * @method string getAlarmNoticeId() 获取通知渠道组ID
- * @method void setAlarmNoticeId(string $AlarmNoticeId) 设置通知渠道组ID
+ * @method string getAlarmNoticeId() 获取通知渠道组ID。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/api/614/56462)获取通知渠道组ID
+ * @method void setAlarmNoticeId(string $AlarmNoticeId) 设置通知渠道组ID。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/api/614/56462)获取通知渠道组ID
  */
 class DeleteAlarmNoticeRequest extends AbstractModel
 {
     /**
-     * @var string 通知渠道组ID
+     * @var string 通知渠道组ID。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/api/614/56462)获取通知渠道组ID
      */
     public $AlarmNoticeId;
 
     /**
-     * @param string $AlarmNoticeId 通知渠道组ID
+     * @param string $AlarmNoticeId 通知渠道组ID。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/api/614/56462)获取通知渠道组ID
      */
     function __construct()
     {

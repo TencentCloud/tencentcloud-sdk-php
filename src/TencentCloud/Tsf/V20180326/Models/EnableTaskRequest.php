@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * EnableTask请求参数结构体
  *
- * @method string getTaskId() 获取任务ID。在任务管理列表页面和任务基本信息页可以查看任务ID。
- * @method void setTaskId(string $TaskId) 设置任务ID。在任务管理列表页面和任务基本信息页可以查看任务ID。
+ * @method string getTaskId() 获取任务ID。[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页查看任务ID。
+ * @method void setTaskId(string $TaskId) 设置任务ID。[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页查看任务ID。
  */
 class EnableTaskRequest extends AbstractModel
 {
     /**
-     * @var string 任务ID。在任务管理列表页面和任务基本信息页可以查看任务ID。
+     * @var string 任务ID。[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页查看任务ID。
      */
     public $TaskId;
 
     /**
-     * @param string $TaskId 任务ID。在任务管理列表页面和任务基本信息页可以查看任务ID。
+     * @param string $TaskId 任务ID。[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页查看任务ID。
      */
     function __construct()
     {

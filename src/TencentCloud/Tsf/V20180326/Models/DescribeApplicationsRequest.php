@@ -24,12 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSearchWord(string $SearchWord) 设置搜索字段
  * @method string getOrderBy() 获取排序字段
  * @method void setOrderBy(string $OrderBy) 设置排序字段
- * @method integer getOrderType() 获取排序类型
- * @method void setOrderType(integer $OrderType) 设置排序类型
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
- * @method integer getLimit() 获取分页个数
- * @method void setLimit(integer $Limit) 设置分页个数
+ * @method integer getOrderType() 获取指定排序类型，目前支持：
+`0`：降序
+`1`：升序
+ * @method void setOrderType(integer $OrderType) 设置指定排序类型，目前支持：
+`0`：降序
+`1`：升序
+ * @method integer getOffset() 获取偏移量，默认为0。关于Offset详见[API简介](https://cloud.tencent.com/document/api/213/568#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89)
+ * @method void setOffset(integer $Offset) 设置偏移量，默认为0。关于Offset详见[API简介](https://cloud.tencent.com/document/api/213/568#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89)
+ * @method integer getLimit() 获取数量限制，默认为20，最大值为100。关于Limit详见[API简介](https://cloud.tencent.com/document/api/213/568#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89)
+ * @method void setLimit(integer $Limit) 设置数量限制，默认为20，最大值为100。关于Limit详见[API简介](https://cloud.tencent.com/document/api/213/568#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89)
  * @method string getApplicationType() 获取应用类型
  * @method void setApplicationType(string $ApplicationType) 设置应用类型
  * @method string getMicroserviceType() 获取应用的微服务类型
@@ -54,17 +58,19 @@ class DescribeApplicationsRequest extends AbstractModel
     public $OrderBy;
 
     /**
-     * @var integer 排序类型
+     * @var integer 指定排序类型，目前支持：
+`0`：降序
+`1`：升序
      */
     public $OrderType;
 
     /**
-     * @var integer 偏移量
+     * @var integer 偏移量，默认为0。关于Offset详见[API简介](https://cloud.tencent.com/document/api/213/568#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89)
      */
     public $Offset;
 
     /**
-     * @var integer 分页个数
+     * @var integer 数量限制，默认为20，最大值为100。关于Limit详见[API简介](https://cloud.tencent.com/document/api/213/568#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89)
      */
     public $Limit;
 
@@ -96,9 +102,11 @@ class DescribeApplicationsRequest extends AbstractModel
     /**
      * @param string $SearchWord 搜索字段
      * @param string $OrderBy 排序字段
-     * @param integer $OrderType 排序类型
-     * @param integer $Offset 偏移量
-     * @param integer $Limit 分页个数
+     * @param integer $OrderType 指定排序类型，目前支持：
+`0`：降序
+`1`：升序
+     * @param integer $Offset 偏移量，默认为0。关于Offset详见[API简介](https://cloud.tencent.com/document/api/213/568#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89)
+     * @param integer $Limit 数量限制，默认为20，最大值为100。关于Limit详见[API简介](https://cloud.tencent.com/document/api/213/568#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89)
      * @param string $ApplicationType 应用类型
      * @param string $MicroserviceType 应用的微服务类型
      * @param array $ApplicationResourceTypeList 应用资源类型数组

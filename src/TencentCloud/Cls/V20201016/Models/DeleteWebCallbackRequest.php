@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteWebCallback请求参数结构体
  *
- * @method string getWebCallbackId() 获取告警渠道回调配置ID。
- * @method void setWebCallbackId(string $WebCallbackId) 设置告警渠道回调配置ID。
+ * @method string getWebCallbackId() 获取告警渠道回调配置ID。-通过[获取告警渠道回调配置列表](https://cloud.tencent.com/document/api/614/115229)获取告警渠道回调配置ID
+ * @method void setWebCallbackId(string $WebCallbackId) 设置告警渠道回调配置ID。-通过[获取告警渠道回调配置列表](https://cloud.tencent.com/document/api/614/115229)获取告警渠道回调配置ID
  */
 class DeleteWebCallbackRequest extends AbstractModel
 {
     /**
-     * @var string 告警渠道回调配置ID。
+     * @var string 告警渠道回调配置ID。-通过[获取告警渠道回调配置列表](https://cloud.tencent.com/document/api/614/115229)获取告警渠道回调配置ID
      */
     public $WebCallbackId;
 
     /**
-     * @param string $WebCallbackId 告警渠道回调配置ID。
+     * @param string $WebCallbackId 告警渠道回调配置ID。-通过[获取告警渠道回调配置列表](https://cloud.tencent.com/document/api/614/115229)获取告警渠道回调配置ID
      */
     function __construct()
     {

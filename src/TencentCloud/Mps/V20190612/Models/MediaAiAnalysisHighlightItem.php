@@ -30,6 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDuration(float $Duration) 设置智能精彩集锦持续时间。
  * @method array getSegmentSet() 获取智能精彩集锦子片段列表。
  * @method void setSegmentSet(array $SegmentSet) 设置智能精彩集锦子片段列表。
+ * @method string getHighlightUrl() 获取智能精彩集锦地址。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHighlightUrl(string $HighlightUrl) 设置智能精彩集锦地址。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCovImgUrl() 获取智能精彩集锦封面地址。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCovImgUrl(string $CovImgUrl) 设置智能精彩集锦封面地址。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class MediaAiAnalysisHighlightItem extends AbstractModel
 {
@@ -59,11 +67,27 @@ class MediaAiAnalysisHighlightItem extends AbstractModel
     public $SegmentSet;
 
     /**
+     * @var string 智能精彩集锦地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HighlightUrl;
+
+    /**
+     * @var string 智能精彩集锦封面地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $CovImgUrl;
+
+    /**
      * @param string $HighlightPath 智能精彩集锦地址。
      * @param string $CovImgPath 智能精彩集锦封面地址。
      * @param float $Confidence 智能精彩集锦的可信度，取值范围是 0 到 100。
      * @param float $Duration 智能精彩集锦持续时间。
      * @param array $SegmentSet 智能精彩集锦子片段列表。
+     * @param string $HighlightUrl 智能精彩集锦地址。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CovImgUrl 智能精彩集锦封面地址。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -101,6 +125,14 @@ class MediaAiAnalysisHighlightItem extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SegmentSet, $obj);
             }
+        }
+
+        if (array_key_exists("HighlightUrl",$param) and $param["HighlightUrl"] !== null) {
+            $this->HighlightUrl = $param["HighlightUrl"];
+        }
+
+        if (array_key_exists("CovImgUrl",$param) and $param["CovImgUrl"] !== null) {
+            $this->CovImgUrl = $param["CovImgUrl"];
         }
     }
 }

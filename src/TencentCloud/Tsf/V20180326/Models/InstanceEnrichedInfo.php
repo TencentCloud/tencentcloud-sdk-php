@@ -38,14 +38,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApplicationId(string $ApplicationId) 设置应用ID
  * @method string getApplicationName() 获取应用名称
  * @method void setApplicationName(string $ApplicationName) 设置应用名称
- * @method string getApplicationType() 获取应用类型
- * @method void setApplicationType(string $ApplicationType) 设置应用类型
+ * @method string getApplicationType() 获取应用类型，C表示容器应用，V表示虚拟机应用
+ * @method void setApplicationType(string $ApplicationType) 设置应用类型，C表示容器应用，V表示虚拟机应用
  * @method string getClusterId() 获取集群ID
  * @method void setClusterId(string $ClusterId) 设置集群ID
  * @method string getClusterName() 获取集群名称
  * @method void setClusterName(string $ClusterName) 设置集群名称
- * @method string getClusterType() 获取集群类型
- * @method void setClusterType(string $ClusterType) 设置集群类型
+ * @method string getClusterType() 获取集群类型，C表示容器集群，V表示虚拟机集群
+ * @method void setClusterType(string $ClusterType) 设置集群类型，C表示容器集群，V表示虚拟机集群
  * @method string getNamespaceId() 获取命名空间ID
  * @method void setNamespaceId(string $NamespaceId) 设置命名空间ID
  * @method string getNamespaceName() 获取命名空间名称
@@ -103,7 +103,7 @@ class InstanceEnrichedInfo extends AbstractModel
     public $ApplicationName;
 
     /**
-     * @var string 应用类型
+     * @var string 应用类型，C表示容器应用，V表示虚拟机应用
      */
     public $ApplicationType;
 
@@ -118,7 +118,7 @@ class InstanceEnrichedInfo extends AbstractModel
     public $ClusterName;
 
     /**
-     * @var string 集群类型
+     * @var string 集群类型，C表示容器集群，V表示虚拟机集群
      */
     public $ClusterType;
 
@@ -152,10 +152,10 @@ class InstanceEnrichedInfo extends AbstractModel
      * @param string $InstanceAvailableStatus 机器可用状态（表示机器上的Agent在线）
      * @param string $ApplicationId 应用ID
      * @param string $ApplicationName 应用名称
-     * @param string $ApplicationType 应用类型
+     * @param string $ApplicationType 应用类型，C表示容器应用，V表示虚拟机应用
      * @param string $ClusterId 集群ID
      * @param string $ClusterName 集群名称
-     * @param string $ClusterType 集群类型
+     * @param string $ClusterType 集群类型，C表示容器集群，V表示虚拟机集群
      * @param string $NamespaceId 命名空间ID
      * @param string $NamespaceName 命名空间名称
      * @param string $GroupId 机器所在部署组ID

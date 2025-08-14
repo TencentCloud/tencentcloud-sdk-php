@@ -36,14 +36,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRestartCount(integer $RestartCount) 设置实例中容器的重启次数
  * @method integer getReadyCount() 获取实例中已就绪容器的个数
  * @method void setReadyCount(integer $ReadyCount) 设置实例中已就绪容器的个数
- * @method string getRuntime() 获取运行时长
- * @method void setRuntime(string $Runtime) 设置运行时长
- * @method string getCreatedAt() 获取实例启动时间
- * @method void setCreatedAt(string $CreatedAt) 设置实例启动时间
- * @method string getServiceInstanceStatus() 获取服务实例状态
- * @method void setServiceInstanceStatus(string $ServiceInstanceStatus) 设置服务实例状态
- * @method string getInstanceAvailableStatus() 获取机器实例可使用状态
- * @method void setInstanceAvailableStatus(string $InstanceAvailableStatus) 设置机器实例可使用状态
+ * @method string getRuntime() 获取运行时长，单位秒
+ * @method void setRuntime(string $Runtime) 设置运行时长，单位秒
+ * @method string getCreatedAt() 获取实例启动时的时间戳
+ * @method void setCreatedAt(string $CreatedAt) 设置实例启动时的时间戳
+ * @method string getServiceInstanceStatus() 获取服务实例状态，枚举值为Starting/Running/Stopping/Stopped/StopFailed/Abnormal/Unknown
+ * @method void setServiceInstanceStatus(string $ServiceInstanceStatus) 设置服务实例状态，枚举值为Starting/Running/Stopping/Stopped/StopFailed/Abnormal/Unknown
+ * @method string getInstanceAvailableStatus() 获取机器实例可使用状态，枚举值为Starting/Running/Stopping/Stopped/StopFailed/Abnormal/Unknown
+ * @method void setInstanceAvailableStatus(string $InstanceAvailableStatus) 设置机器实例可使用状态，枚举值为Starting/Running/Stopping/Stopped/StopFailed/Abnormal/Unknown
  * @method string getInstanceStatus() 获取机器实例状态
  * @method void setInstanceStatus(string $InstanceStatus) 设置机器实例状态
  * @method string getNodeInstanceId() 获取节点实例id
@@ -94,22 +94,22 @@ class GroupPod extends AbstractModel
     public $ReadyCount;
 
     /**
-     * @var string 运行时长
+     * @var string 运行时长，单位秒
      */
     public $Runtime;
 
     /**
-     * @var string 实例启动时间
+     * @var string 实例启动时的时间戳
      */
     public $CreatedAt;
 
     /**
-     * @var string 服务实例状态
+     * @var string 服务实例状态，枚举值为Starting/Running/Stopping/Stopped/StopFailed/Abnormal/Unknown
      */
     public $ServiceInstanceStatus;
 
     /**
-     * @var string 机器实例可使用状态
+     * @var string 机器实例可使用状态，枚举值为Starting/Running/Stopping/Stopped/StopFailed/Abnormal/Unknown
      */
     public $InstanceAvailableStatus;
 
@@ -137,10 +137,10 @@ class GroupPod extends AbstractModel
      * @param string $Ip 实例IP
      * @param integer $RestartCount 实例中容器的重启次数
      * @param integer $ReadyCount 实例中已就绪容器的个数
-     * @param string $Runtime 运行时长
-     * @param string $CreatedAt 实例启动时间
-     * @param string $ServiceInstanceStatus 服务实例状态
-     * @param string $InstanceAvailableStatus 机器实例可使用状态
+     * @param string $Runtime 运行时长，单位秒
+     * @param string $CreatedAt 实例启动时的时间戳
+     * @param string $ServiceInstanceStatus 服务实例状态，枚举值为Starting/Running/Stopping/Stopped/StopFailed/Abnormal/Unknown
+     * @param string $InstanceAvailableStatus 机器实例可使用状态，枚举值为Starting/Running/Stopping/Stopped/StopFailed/Abnormal/Unknown
      * @param string $InstanceStatus 机器实例状态
      * @param string $NodeInstanceId 节点实例id
      * @param string $SpecTotalCount 预期副本数

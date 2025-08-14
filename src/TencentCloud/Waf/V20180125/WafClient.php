@@ -53,6 +53,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DeleteHostResponse DeleteHost(Models\DeleteHostRequest $req) 删除负载均衡型域名，支持批量操作。
  * @method Models\DeleteIpAccessControlResponse DeleteIpAccessControl(Models\DeleteIpAccessControlRequest $req) Waf IP黑白名单Delete接口（建议使用DeleteIpAccessControlV2来替换当前接口）
  * @method Models\DeleteIpAccessControlV2Response DeleteIpAccessControlV2(Models\DeleteIpAccessControlV2Request $req) Waf IP黑白名单最新版本删除接口
+ * @method Models\DeleteOwaspRuleStatusResponse DeleteOwaspRuleStatus(Models\DeleteOwaspRuleStatusRequest $req) 解除门神规则的状态锁
  * @method Models\DeleteOwaspWhiteRuleResponse DeleteOwaspWhiteRule(Models\DeleteOwaspWhiteRuleRequest $req) 删除用户规则引擎白名单
  * @method Models\DeleteSessionResponse DeleteSession(Models\DeleteSessionRequest $req) 删除CC攻击的session设置
  * @method Models\DeleteSpartaProtectionResponse DeleteSpartaProtection(Models\DeleteSpartaProtectionRequest $req) SaaS型WAF删除防护域名
@@ -100,6 +101,8 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DescribeIpHitItemsResponse DescribeIpHitItems(Models\DescribeIpHitItemsRequest $req) Waf  IP封堵状态查询
  * @method Models\DescribeModuleStatusResponse DescribeModuleStatus(Models\DescribeModuleStatusRequest $req) 查询各个waf基础安全模块的开关状态，看每个模块是否开启
  * @method Models\DescribeObjectsResponse DescribeObjects(Models\DescribeObjectsRequest $req) 查看防护对象列表
+ * @method Models\DescribeOwaspRuleTypesResponse DescribeOwaspRuleTypes(Models\DescribeOwaspRuleTypesRequest $req) 查询规则引擎的规则类型列表
+ * @method Models\DescribeOwaspRulesResponse DescribeOwaspRules(Models\DescribeOwaspRulesRequest $req) 查询规则引擎的规则列表
  * @method Models\DescribeOwaspWhiteRulesResponse DescribeOwaspWhiteRules(Models\DescribeOwaspWhiteRulesRequest $req) 获取规则引擎白名单列表
  * @method Models\DescribePeakPointsResponse DescribePeakPoints(Models\DescribePeakPointsRequest $req) 查询业务和攻击概要趋势
  * @method Models\DescribePeakValueResponse DescribePeakValue(Models\DescribePeakValueRequest $req) 获取业务和攻击概览峰值
@@ -172,6 +175,10 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\ModifyIpAccessControlResponse ModifyIpAccessControl(Models\ModifyIpAccessControlRequest $req) Waf IP黑白名单编辑接口
  * @method Models\ModifyModuleStatusResponse ModifyModuleStatus(Models\ModifyModuleStatusRequest $req) 设置某个domain下基础安全模块的开关
  * @method Models\ModifyObjectResponse ModifyObject(Models\ModifyObjectRequest $req) 修改防护对象
+ * @method Models\ModifyOwaspRuleStatusResponse ModifyOwaspRuleStatus(Models\ModifyOwaspRuleStatusRequest $req) 更新规则的开关
+ * @method Models\ModifyOwaspRuleTypeActionResponse ModifyOwaspRuleTypeAction(Models\ModifyOwaspRuleTypeActionRequest $req) 更新规则类型的防护模式
+ * @method Models\ModifyOwaspRuleTypeLevelResponse ModifyOwaspRuleTypeLevel(Models\ModifyOwaspRuleTypeLevelRequest $req) 更新规则类型的防护等级
+ * @method Models\ModifyOwaspRuleTypeStatusResponse ModifyOwaspRuleTypeStatus(Models\ModifyOwaspRuleTypeStatusRequest $req) 更新规则类型的开关
  * @method Models\ModifyOwaspWhiteRuleResponse ModifyOwaspWhiteRule(Models\ModifyOwaspWhiteRuleRequest $req) 编辑规则引擎白名单
  * @method Models\ModifyProtectionStatusResponse ModifyProtectionStatus(Models\ModifyProtectionStatusRequest $req) 开启、关闭WAF开关
  * @method Models\ModifySpartaProtectionResponse ModifySpartaProtection(Models\ModifySpartaProtectionRequest $req) 编辑SaaS型WAF域名配置

@@ -20,8 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddMachineGroupInfo请求参数结构体
  *
- * @method string getGroupId() 获取机器组ID
- * @method void setGroupId(string $GroupId) 设置机器组ID
+ * @method string getGroupId() 获取机器组Id
+- 通过[获取机器组列表](https://cloud.tencent.com/document/product/614/56438)获取机器组Id。
+ * @method void setGroupId(string $GroupId) 设置机器组Id
+- 通过[获取机器组列表](https://cloud.tencent.com/document/product/614/56438)获取机器组Id。
  * @method MachineGroupTypeInfo getMachineGroupType() 获取机器组类型
 目前type支持 ip 和 label
  * @method void setMachineGroupType(MachineGroupTypeInfo $MachineGroupType) 设置机器组类型
@@ -30,7 +32,8 @@ use TencentCloud\Common\AbstractModel;
 class AddMachineGroupInfoRequest extends AbstractModel
 {
     /**
-     * @var string 机器组ID
+     * @var string 机器组Id
+- 通过[获取机器组列表](https://cloud.tencent.com/document/product/614/56438)获取机器组Id。
      */
     public $GroupId;
 
@@ -41,7 +44,8 @@ class AddMachineGroupInfoRequest extends AbstractModel
     public $MachineGroupType;
 
     /**
-     * @param string $GroupId 机器组ID
+     * @param string $GroupId 机器组Id
+- 通过[获取机器组列表](https://cloud.tencent.com/document/product/614/56438)获取机器组Id。
      * @param MachineGroupTypeInfo $MachineGroupType 机器组类型
 目前type支持 ip 和 label
      */

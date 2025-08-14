@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAlarm请求参数结构体
  *
- * @method string getAlarmId() 获取告警策略ID。
- * @method void setAlarmId(string $AlarmId) 设置告警策略ID。
- * @method string getName() 获取告警策略名称
- * @method void setName(string $Name) 设置告警策略名称
+ * @method string getAlarmId() 获取告警策略ID。-通过[获取告警策略列表](https://cloud.tencent.com/document/product/614/56461)获取告警策略ID
+ * @method void setAlarmId(string $AlarmId) 设置告警策略ID。-通过[获取告警策略列表](https://cloud.tencent.com/document/product/614/56461)获取告警策略ID
+ * @method string getName() 获取告警策略名称。最大支持255个字节，不支持 '|'。
+ * @method void setName(string $Name) 设置告警策略名称。最大支持255个字节，不支持 '|'。
  * @method MonitorTime getMonitorTime() 获取监控任务运行时间点。
  * @method void setMonitorTime(MonitorTime $MonitorTime) 设置监控任务运行时间点。
- * @method string getCondition() 获取触发条件。
+ * @method string getCondition() 获取告警信息发送的触发条件。
 
 注意:  
 - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
- * @method void setCondition(string $Condition) 设置触发条件。
+ * @method void setCondition(string $Condition) 设置告警信息发送的触发条件。
 
 注意:  
 - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
@@ -58,8 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTriggerCount(integer $TriggerCount) 设置持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为2000。
  * @method integer getAlarmPeriod() 获取告警重复的周期。单位是分钟。取值范围是0~1440。
  * @method void setAlarmPeriod(integer $AlarmPeriod) 设置告警重复的周期。单位是分钟。取值范围是0~1440。
- * @method array getAlarmNoticeIds() 获取关联的告警通知模板列表。
- * @method void setAlarmNoticeIds(array $AlarmNoticeIds) 设置关联的告警通知模板列表。
+ * @method array getAlarmNoticeIds() 获取关联的告警通知渠道列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取告警通知渠道列表
+ * @method void setAlarmNoticeIds(array $AlarmNoticeIds) 设置关联的告警通知渠道列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取告警通知渠道列表
  * @method array getAlarmTargets() 获取监控对象列表。
  * @method void setAlarmTargets(array $AlarmTargets) 设置监控对象列表。
  * @method boolean getStatus() 获取是否开启告警策略。
@@ -96,12 +96,12 @@ Classifications元素的Value长度不能超过200个字符。
 class ModifyAlarmRequest extends AbstractModel
 {
     /**
-     * @var string 告警策略ID。
+     * @var string 告警策略ID。-通过[获取告警策略列表](https://cloud.tencent.com/document/product/614/56461)获取告警策略ID
      */
     public $AlarmId;
 
     /**
-     * @var string 告警策略名称
+     * @var string 告警策略名称。最大支持255个字节，不支持 '|'。
      */
     public $Name;
 
@@ -111,7 +111,7 @@ class ModifyAlarmRequest extends AbstractModel
     public $MonitorTime;
 
     /**
-     * @var string 触发条件。
+     * @var string 告警信息发送的触发条件。
 
 注意:  
 - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
@@ -147,7 +147,7 @@ class ModifyAlarmRequest extends AbstractModel
     public $AlarmPeriod;
 
     /**
-     * @var array 关联的告警通知模板列表。
+     * @var array 关联的告警通知渠道列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取告警通知渠道列表
      */
     public $AlarmNoticeIds;
 
@@ -213,10 +213,10 @@ Classifications元素的Value长度不能超过200个字符。
     public $Classifications;
 
     /**
-     * @param string $AlarmId 告警策略ID。
-     * @param string $Name 告警策略名称
+     * @param string $AlarmId 告警策略ID。-通过[获取告警策略列表](https://cloud.tencent.com/document/product/614/56461)获取告警策略ID
+     * @param string $Name 告警策略名称。最大支持255个字节，不支持 '|'。
      * @param MonitorTime $MonitorTime 监控任务运行时间点。
-     * @param string $Condition 触发条件。
+     * @param string $Condition 告警信息发送的触发条件。
 
 注意:  
 - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
@@ -232,7 +232,7 @@ Classifications元素的Value长度不能超过200个字符。
 - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
      * @param integer $TriggerCount 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为2000。
      * @param integer $AlarmPeriod 告警重复的周期。单位是分钟。取值范围是0~1440。
-     * @param array $AlarmNoticeIds 关联的告警通知模板列表。
+     * @param array $AlarmNoticeIds 关联的告警通知渠道列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取告警通知渠道列表
      * @param array $AlarmTargets 监控对象列表。
      * @param boolean $Status 是否开启告警策略。
      * @param boolean $Enable 该参数已废弃，请使用Status参数控制是否开启告警策略。

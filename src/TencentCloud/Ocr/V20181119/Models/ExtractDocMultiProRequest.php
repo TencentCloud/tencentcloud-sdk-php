@@ -48,8 +48,8 @@ ReceiptWeightNote -- 磅单收货单识别模板
  * @method void setEnableCoord(boolean $EnableCoord) 设置是否开启全文字段坐标值的识别
  * @method boolean getOutputParentKey() 获取是否开启父子key识别，默认是
  * @method void setOutputParentKey(boolean $OutputParentKey) 设置是否开启父子key识别，默认是
- * @method ConfigAdvanced getConfigAdvanced() 获取模版的单个属性配置
- * @method void setConfigAdvanced(ConfigAdvanced $ConfigAdvanced) 设置模版的单个属性配置
+ * @method ConfigAdvanced getConfigAdvanced() 获取模板的单个属性配置
+ * @method void setConfigAdvanced(ConfigAdvanced $ConfigAdvanced) 设置模板的单个属性配置
  */
 class ExtractDocMultiProRequest extends AbstractModel
 {
@@ -104,7 +104,7 @@ ReceiptWeightNote -- 磅单收货单识别模板
     public $OutputParentKey;
 
     /**
-     * @var ConfigAdvanced 模版的单个属性配置
+     * @var ConfigAdvanced 模板的单个属性配置
      */
     public $ConfigAdvanced;
 
@@ -123,7 +123,7 @@ ReceiptWeightNote -- 磅单收货单识别模板
 默认：DispatchWeightNote
      * @param boolean $EnableCoord 是否开启全文字段坐标值的识别
      * @param boolean $OutputParentKey 是否开启父子key识别，默认是
-     * @param ConfigAdvanced $ConfigAdvanced 模版的单个属性配置
+     * @param ConfigAdvanced $ConfigAdvanced 模板的单个属性配置
      */
     function __construct()
     {

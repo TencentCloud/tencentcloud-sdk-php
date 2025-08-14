@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlarmTargets(array $AlarmTargets) 设置监控对象列表。
  * @method MonitorTime getMonitorTime() 获取监控任务运行时间点。
  * @method void setMonitorTime(MonitorTime $MonitorTime) 设置监控任务运行时间点。
- * @method string getCondition() 获取单触发条件。与MultiConditions参数互斥。
- * @method void setCondition(string $Condition) 设置单触发条件。与MultiConditions参数互斥。
+ * @method string getCondition() 获取是否触发告警的单触发条件。与MultiConditions参数互斥。
+ * @method void setCondition(string $Condition) 设置是否触发告警的单触发条件。与MultiConditions参数互斥。
  * @method integer getTriggerCount() 获取持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。
  * @method void setTriggerCount(integer $TriggerCount) 设置持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。
  * @method integer getAlarmPeriod() 获取告警重复的周期。单位是min。取值范围是0~1440。
@@ -38,10 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(boolean $Status) 设置开启状态。
  * @method string getAlarmId() 获取告警策略ID。
  * @method void setAlarmId(string $AlarmId) 设置告警策略ID。
- * @method string getCreateTime() 获取创建时间。
- * @method void setCreateTime(string $CreateTime) 设置创建时间。
- * @method string getUpdateTime() 获取最近更新时间。
- * @method void setUpdateTime(string $UpdateTime) 设置最近更新时间。
+ * @method string getCreateTime() 获取创建时间。格式： YYYY-MM-DD HH:MM:SS
+ * @method void setCreateTime(string $CreateTime) 设置创建时间。格式： YYYY-MM-DD HH:MM:SS
+ * @method string getUpdateTime() 获取最近更新时间。格式： YYYY-MM-DD HH:MM:SS
+ * @method void setUpdateTime(string $UpdateTime) 设置最近更新时间。格式： YYYY-MM-DD HH:MM:SS
  * @method string getMessageTemplate() 获取自定义通知模板
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMessageTemplate(string $MessageTemplate) 设置自定义通知模板
@@ -85,7 +85,7 @@ class AlarmInfo extends AbstractModel
     public $MonitorTime;
 
     /**
-     * @var string 单触发条件。与MultiConditions参数互斥。
+     * @var string 是否触发告警的单触发条件。与MultiConditions参数互斥。
      */
     public $Condition;
 
@@ -115,12 +115,12 @@ class AlarmInfo extends AbstractModel
     public $AlarmId;
 
     /**
-     * @var string 创建时间。
+     * @var string 创建时间。格式： YYYY-MM-DD HH:MM:SS
      */
     public $CreateTime;
 
     /**
-     * @var string 最近更新时间。
+     * @var string 最近更新时间。格式： YYYY-MM-DD HH:MM:SS
      */
     public $UpdateTime;
 
@@ -180,14 +180,14 @@ Condition互斥。
      * @param string $Name 告警策略名称。
      * @param array $AlarmTargets 监控对象列表。
      * @param MonitorTime $MonitorTime 监控任务运行时间点。
-     * @param string $Condition 单触发条件。与MultiConditions参数互斥。
+     * @param string $Condition 是否触发告警的单触发条件。与MultiConditions参数互斥。
      * @param integer $TriggerCount 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。
      * @param integer $AlarmPeriod 告警重复的周期。单位是min。取值范围是0~1440。
      * @param array $AlarmNoticeIds 关联的告警通知模板列表。
      * @param boolean $Status 开启状态。
      * @param string $AlarmId 告警策略ID。
-     * @param string $CreateTime 创建时间。
-     * @param string $UpdateTime 最近更新时间。
+     * @param string $CreateTime 创建时间。格式： YYYY-MM-DD HH:MM:SS
+     * @param string $UpdateTime 最近更新时间。格式： YYYY-MM-DD HH:MM:SS
      * @param string $MessageTemplate 自定义通知模板
 注意：此字段可能返回 null，表示取不到有效值。
      * @param CallBackInfo $CallBack 自定义回调模板

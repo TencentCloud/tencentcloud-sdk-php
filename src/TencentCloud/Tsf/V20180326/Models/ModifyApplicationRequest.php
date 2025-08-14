@@ -30,12 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApplicationRemarkName(string $ApplicationRemarkName) 设置应用备注名
  * @method array getServiceConfigList() 获取服务配置信息列表
  * @method void setServiceConfigList(array $ServiceConfigList) 设置服务配置信息列表
- * @method string getMicroserviceType() 获取应用的微服务类型
- * @method void setMicroserviceType(string $MicroserviceType) 设置应用的微服务类型
+ * @method string getMicroserviceType() 获取应用的微服务类型，N表示普通应用，M表示Mesh应用，G表示网关应用，NATIVE表示原生应用，RAW表示裸应用
+ * @method void setMicroserviceType(string $MicroserviceType) 设置应用的微服务类型，N表示普通应用，M表示Mesh应用，G表示网关应用，NATIVE表示原生应用，RAW表示裸应用
  * @method ServiceGovernanceConfig getServiceGovernanceConfig() 获取注册配置治理信息
  * @method void setServiceGovernanceConfig(ServiceGovernanceConfig $ServiceGovernanceConfig) 设置注册配置治理信息
- * @method string getFrameworkType() 获取应用开发框架
- * @method void setFrameworkType(string $FrameworkType) 设置应用开发框架
+ * @method string getFrameworkType() 获取应用开发框架，SpringCloud表示SpringCloud应用，Dubbo表示Dubbo应用，Go-GRPC表示Go-GRPC应用，Other表示其他应用
+ * @method void setFrameworkType(string $FrameworkType) 设置应用开发框架，SpringCloud表示SpringCloud应用，Dubbo表示Dubbo应用，Go-GRPC表示Go-GRPC应用，Other表示其他应用
  */
 class ModifyApplicationRequest extends AbstractModel
 {
@@ -65,7 +65,7 @@ class ModifyApplicationRequest extends AbstractModel
     public $ServiceConfigList;
 
     /**
-     * @var string 应用的微服务类型
+     * @var string 应用的微服务类型，N表示普通应用，M表示Mesh应用，G表示网关应用，NATIVE表示原生应用，RAW表示裸应用
      */
     public $MicroserviceType;
 
@@ -75,7 +75,7 @@ class ModifyApplicationRequest extends AbstractModel
     public $ServiceGovernanceConfig;
 
     /**
-     * @var string 应用开发框架
+     * @var string 应用开发框架，SpringCloud表示SpringCloud应用，Dubbo表示Dubbo应用，Go-GRPC表示Go-GRPC应用，Other表示其他应用
      */
     public $FrameworkType;
 
@@ -85,9 +85,9 @@ class ModifyApplicationRequest extends AbstractModel
      * @param string $ApplicationDesc 应用备注
      * @param string $ApplicationRemarkName 应用备注名
      * @param array $ServiceConfigList 服务配置信息列表
-     * @param string $MicroserviceType 应用的微服务类型
+     * @param string $MicroserviceType 应用的微服务类型，N表示普通应用，M表示Mesh应用，G表示网关应用，NATIVE表示原生应用，RAW表示裸应用
      * @param ServiceGovernanceConfig $ServiceGovernanceConfig 注册配置治理信息
-     * @param string $FrameworkType 应用开发框架
+     * @param string $FrameworkType 应用开发框架，SpringCloud表示SpringCloud应用，Dubbo表示Dubbo应用，Go-GRPC表示Go-GRPC应用，Other表示其他应用
      */
     function __construct()
     {

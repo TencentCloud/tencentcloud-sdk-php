@@ -14,39 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Postgres\V20170312\Models;
+namespace TencentCloud\Waf\V20180125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDBSlowlogs返回参数结构体
+ * ModifyOwaspRuleTypeStatus返回参数结构体
  *
- * @method integer getTotalCount() 获取本次返回多少条数据
- * @method void setTotalCount(integer $TotalCount) 设置本次返回多少条数据
- * @method SlowlogDetail getDetail() 获取慢查询日志详情
- * @method void setDetail(SlowlogDetail $Detail) 设置慢查询日志详情
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeDBSlowlogsResponse extends AbstractModel
+class ModifyOwaspRuleTypeStatusResponse extends AbstractModel
 {
-    /**
-     * @var integer 本次返回多少条数据
-     */
-    public $TotalCount;
-
-    /**
-     * @var SlowlogDetail 慢查询日志详情
-     */
-    public $Detail;
-
     /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param integer $TotalCount 本次返回多少条数据
-     * @param SlowlogDetail $Detail 慢查询日志详情
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -62,15 +46,6 @@ class DescribeDBSlowlogsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
-        if (array_key_exists("Detail",$param) and $param["Detail"] !== null) {
-            $this->Detail = new SlowlogDetail();
-            $this->Detail->deserialize($param["Detail"]);
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

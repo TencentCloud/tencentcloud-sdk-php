@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceNames(array $InstanceNames) 设置实例的新名称。
  * @method integer getProjectId() 获取实例新的项目 ID。
  * @method void setProjectId(integer $ProjectId) 设置实例新的项目 ID。
- * @method array getAutoRenews() 获取包年包月计费的续费模式。<b>InstanceIds</b>数组和<b>AutoRenews</b>数组中的修改值对应。<ul><li>0：默认状态，指手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</ul>
- * @method void setAutoRenews(array $AutoRenews) 设置包年包月计费的续费模式。<b>InstanceIds</b>数组和<b>AutoRenews</b>数组中的修改值对应。<ul><li>0：默认状态，指手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</ul>
+ * @method array getAutoRenews() 获取包年包月计费的续费模式。<b>InstanceIds</b>数组和<b>AutoRenews</b>数组中的修改值对应。<ul><li>0：默认状态，指手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</li></ul>
+ * @method void setAutoRenews(array $AutoRenews) 设置包年包月计费的续费模式。<b>InstanceIds</b>数组和<b>AutoRenews</b>数组中的修改值对应。<ul><li>0：默认状态，指手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</li></ul>
  */
 class ModifyInstanceRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class ModifyInstanceRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var array 包年包月计费的续费模式。<b>InstanceIds</b>数组和<b>AutoRenews</b>数组中的修改值对应。<ul><li>0：默认状态，指手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</ul>
+     * @var array 包年包月计费的续费模式。<b>InstanceIds</b>数组和<b>AutoRenews</b>数组中的修改值对应。<ul><li>0：默认状态，指手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</li></ul>
      */
     public $AutoRenews;
 
@@ -63,7 +63,7 @@ class ModifyInstanceRequest extends AbstractModel
      * @param array $InstanceIds 实例 ID 数组。
      * @param array $InstanceNames 实例的新名称。
      * @param integer $ProjectId 实例新的项目 ID。
-     * @param array $AutoRenews 包年包月计费的续费模式。<b>InstanceIds</b>数组和<b>AutoRenews</b>数组中的修改值对应。<ul><li>0：默认状态，指手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</ul>
+     * @param array $AutoRenews 包年包月计费的续费模式。<b>InstanceIds</b>数组和<b>AutoRenews</b>数组中的修改值对应。<ul><li>0：默认状态，指手动续费。</li><li>1：自动续费。</li><li>2：到期不再续费。</li></ul>
      */
     function __construct()
     {

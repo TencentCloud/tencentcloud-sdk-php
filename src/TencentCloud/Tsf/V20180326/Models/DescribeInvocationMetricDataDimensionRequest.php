@@ -20,30 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInvocationMetricDataDimension请求参数结构体
  *
- * @method string getStartTime() 获取开始时间
- * @method void setStartTime(string $StartTime) 设置开始时间
- * @method string getEndTime() 获取结束时间
- * @method void setEndTime(string $EndTime) 设置结束时间
+ * @method string getStartTime() 获取开始时间，格式yyyy-MM-dd HH:mm:ss
+ * @method void setStartTime(string $StartTime) 设置开始时间，格式yyyy-MM-dd HH:mm:ss
+ * @method string getEndTime() 获取结束时间，格式yyyy-MM-dd HH:mm:ss
+ * @method void setEndTime(string $EndTime) 设置结束时间，格式yyyy-MM-dd HH:mm:ss
  * @method integer getOffset() 获取开始index
  * @method void setOffset(integer $Offset) 设置开始index
  * @method integer getLimit() 获取分页大小
  * @method void setLimit(integer $Limit) 设置分页大小
- * @method string getDimensionName() 获取聚合维度
- * @method void setDimensionName(string $DimensionName) 设置聚合维度
+ * @method string getDimensionName() 获取聚合维度。可选值 NamespaceId：命名空间ID，GroupId：部署组ID，InstanceId：实例ID，ApplicationId：应用ID，OperationMethod：执行方法，OperationName：执行名称，ServiceName：服务名，UpstreamNamespaceId：上游命名空间ID
+ * @method void setDimensionName(string $DimensionName) 设置聚合维度。可选值 NamespaceId：命名空间ID，GroupId：部署组ID，InstanceId：实例ID，ApplicationId：应用ID，OperationMethod：执行方法，OperationName：执行名称，ServiceName：服务名，UpstreamNamespaceId：上游命名空间ID
  * @method string getSearchWord() 获取搜索关键字
  * @method void setSearchWord(string $SearchWord) 设置搜索关键字
- * @method array getMetricDimensionValues() 获取维度
- * @method void setMetricDimensionValues(array $MetricDimensionValues) 设置维度
+ * @method array getMetricDimensionValues() 获取构建维度
+ * @method void setMetricDimensionValues(array $MetricDimensionValues) 设置构建维度
  */
 class DescribeInvocationMetricDataDimensionRequest extends AbstractModel
 {
     /**
-     * @var string 开始时间
+     * @var string 开始时间，格式yyyy-MM-dd HH:mm:ss
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间
+     * @var string 结束时间，格式yyyy-MM-dd HH:mm:ss
      */
     public $EndTime;
 
@@ -58,7 +58,7 @@ class DescribeInvocationMetricDataDimensionRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 聚合维度
+     * @var string 聚合维度。可选值 NamespaceId：命名空间ID，GroupId：部署组ID，InstanceId：实例ID，ApplicationId：应用ID，OperationMethod：执行方法，OperationName：执行名称，ServiceName：服务名，UpstreamNamespaceId：上游命名空间ID
      */
     public $DimensionName;
 
@@ -68,18 +68,18 @@ class DescribeInvocationMetricDataDimensionRequest extends AbstractModel
     public $SearchWord;
 
     /**
-     * @var array 维度
+     * @var array 构建维度
      */
     public $MetricDimensionValues;
 
     /**
-     * @param string $StartTime 开始时间
-     * @param string $EndTime 结束时间
+     * @param string $StartTime 开始时间，格式yyyy-MM-dd HH:mm:ss
+     * @param string $EndTime 结束时间，格式yyyy-MM-dd HH:mm:ss
      * @param integer $Offset 开始index
      * @param integer $Limit 分页大小
-     * @param string $DimensionName 聚合维度
+     * @param string $DimensionName 聚合维度。可选值 NamespaceId：命名空间ID，GroupId：部署组ID，InstanceId：实例ID，ApplicationId：应用ID，OperationMethod：执行方法，OperationName：执行名称，ServiceName：服务名，UpstreamNamespaceId：上游命名空间ID
      * @param string $SearchWord 搜索关键字
-     * @param array $MetricDimensionValues 维度
+     * @param array $MetricDimensionValues 构建维度
      */
     function __construct()
     {

@@ -38,8 +38,8 @@ ap-nanjing 南京地域。
 详细信息请查看官网：
 
 https://cloud.tencent.com/document/product/614/18940
- * @method string getTopicId() 获取日志主题ID。
- * @method void setTopicId(string $TopicId) 设置日志主题ID。
+ * @method string getTopicId() 获取日志主题ID。-通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题ID
+ * @method void setTopicId(string $TopicId) 设置日志主题ID。-通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题ID
  * @method integer getScope() 获取投递数据范围。
 
 0: 全部日志, 包括告警策略日常周期执行的所有日志，也包括告警策略变更产生的日志，默认值
@@ -67,7 +67,7 @@ https://cloud.tencent.com/document/product/614/18940
     public $Region;
 
     /**
-     * @var string 日志主题ID。
+     * @var string 日志主题ID。-通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题ID
      */
     public $TopicId;
 
@@ -90,7 +90,7 @@ ap-nanjing 南京地域。
 详细信息请查看官网：
 
 https://cloud.tencent.com/document/product/614/18940
-     * @param string $TopicId 日志主题ID。
+     * @param string $TopicId 日志主题ID。-通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题ID
      * @param integer $Scope 投递数据范围。
 
 0: 全部日志, 包括告警策略日常周期执行的所有日志，也包括告警策略变更产生的日志，默认值

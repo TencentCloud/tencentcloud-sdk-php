@@ -34,9 +34,9 @@ use TencentCloud\Common\AbstractModel;
 当type为`Period`,`Fixed`时，time字段生效。
  * @method void setTime(integer $Time) 设置执行的周期，或者定制执行的时间节点。单位为分钟，取值范围为1~1440。
 当type为`Period`,`Fixed`时，time字段生效。
- * @method string getCronExpression() 获取执行的周期cron表达式。示例：`"*/1 * * * *"` 从左到右每个field的含义 Minutes field, Hours field,Day of month field,Month field,Day of week field， 不支持秒级别。
+ * @method string getCronExpression() 获取执行的周期cron表达式。示例：`"*/1 * * * *"` 从左到右每个field的含义 Minutes field(分钟), Hours field(小时),Day of month field(日期),Month field(月份),Day of week field(星期)， 不支持秒级别。
 当type为`Cron`时，CronExpression字段生效。
- * @method void setCronExpression(string $CronExpression) 设置执行的周期cron表达式。示例：`"*/1 * * * *"` 从左到右每个field的含义 Minutes field, Hours field,Day of month field,Month field,Day of week field， 不支持秒级别。
+ * @method void setCronExpression(string $CronExpression) 设置执行的周期cron表达式。示例：`"*/1 * * * *"` 从左到右每个field的含义 Minutes field(分钟), Hours field(小时),Day of month field(日期),Month field(月份),Day of week field(星期)， 不支持秒级别。
 当type为`Cron`时，CronExpression字段生效。
  */
 class MonitorTime extends AbstractModel
@@ -57,7 +57,7 @@ class MonitorTime extends AbstractModel
     public $Time;
 
     /**
-     * @var string 执行的周期cron表达式。示例：`"*/1 * * * *"` 从左到右每个field的含义 Minutes field, Hours field,Day of month field,Month field,Day of week field， 不支持秒级别。
+     * @var string 执行的周期cron表达式。示例：`"*/1 * * * *"` 从左到右每个field的含义 Minutes field(分钟), Hours field(小时),Day of month field(日期),Month field(月份),Day of week field(星期)， 不支持秒级别。
 当type为`Cron`时，CronExpression字段生效。
      */
     public $CronExpression;
@@ -70,7 +70,7 @@ class MonitorTime extends AbstractModel
 - Cron：Cron表达式
      * @param integer $Time 执行的周期，或者定制执行的时间节点。单位为分钟，取值范围为1~1440。
 当type为`Period`,`Fixed`时，time字段生效。
-     * @param string $CronExpression 执行的周期cron表达式。示例：`"*/1 * * * *"` 从左到右每个field的含义 Minutes field, Hours field,Day of month field,Month field,Day of week field， 不支持秒级别。
+     * @param string $CronExpression 执行的周期cron表达式。示例：`"*/1 * * * *"` 从左到右每个field的含义 Minutes field(分钟), Hours field(小时),Day of month field(日期),Month field(月份),Day of week field(星期)， 不支持秒级别。
 当type为`Cron`时，CronExpression字段生效。
      */
     function __construct()

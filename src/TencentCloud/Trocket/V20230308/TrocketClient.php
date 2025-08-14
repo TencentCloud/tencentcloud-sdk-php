@@ -123,6 +123,9 @@ Filters示例：
 TaskId，根据任务ID精确查找
 InstanceId，根据实例ID精确查找
 Type，根据任务类型精确查找
+ * @method Models\DescribeProducerListResponse DescribeProducerList(Models\DescribeProducerListRequest $req) 查询主题关联的生产者列表信息，Filters支持以下筛选条件：
+- ClientIP，客户端IP
+- ClientID，客户端ID
  * @method Models\DescribeProductSKUsResponse DescribeProductSKUs(Models\DescribeProductSKUsRequest $req) 查询产品售卖规格，针对 RocketMQ 5.x 集群。
  * @method Models\DescribeRoleListResponse DescribeRoleList(Models\DescribeRoleListRequest $req) 查询角色列表，Filter参数使用说明如下：
 

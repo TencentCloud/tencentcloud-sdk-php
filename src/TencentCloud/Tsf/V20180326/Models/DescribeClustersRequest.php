@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClusters请求参数结构体
  *
- * @method string getSearchWord() 获取搜索词
- * @method void setSearchWord(string $SearchWord) 设置搜索词
- * @method string getOrderBy() 获取排序字段
- * @method void setOrderBy(string $OrderBy) 设置排序字段
- * @method integer getOrderType() 获取排序方式
- * @method void setOrderType(integer $OrderType) 设置排序方式
- * @method integer getOffset() 获取偏移量
- * @method void setOffset(integer $Offset) 设置偏移量
- * @method integer getLimit() 获取分页个数
- * @method void setLimit(integer $Limit) 设置分页个数
- * @method string getClusterType() 获取集群类型
- * @method void setClusterType(string $ClusterType) 设置集群类型
+ * @method string getSearchWord() 获取搜索词，可以搜索ID/名称/备注/标签
+ * @method void setSearchWord(string $SearchWord) 设置搜索词，可以搜索ID/名称/备注/标签
+ * @method string getOrderBy() 获取排序字段，例如创建时间
+ * @method void setOrderBy(string $OrderBy) 设置排序字段，例如创建时间
+ * @method integer getOrderType() 获取排序方式，0表示升序，1表示倒序
+ * @method void setOrderType(integer $OrderType) 设置排序方式，0表示升序，1表示倒序
+ * @method integer getOffset() 获取偏移量，默认0
+ * @method void setOffset(integer $Offset) 设置偏移量，默认0
+ * @method integer getLimit() 获取分页个数，0-50 之间，默认20
+ * @method void setLimit(integer $Limit) 设置分页个数，0-50 之间，默认20
+ * @method string getClusterType() 获取集群类型，C表示容器集群，V表示虚拟机集群
+ * @method void setClusterType(string $ClusterType) 设置集群类型，C表示容器集群，V表示虚拟机集群
  * @method array getClusterIdList() 获取idList
  * @method void setClusterIdList(array $ClusterIdList) 设置idList
  */
 class DescribeClustersRequest extends AbstractModel
 {
     /**
-     * @var string 搜索词
+     * @var string 搜索词，可以搜索ID/名称/备注/标签
      */
     public $SearchWord;
 
     /**
-     * @var string 排序字段
+     * @var string 排序字段，例如创建时间
      */
     public $OrderBy;
 
     /**
-     * @var integer 排序方式
+     * @var integer 排序方式，0表示升序，1表示倒序
      */
     public $OrderType;
 
     /**
-     * @var integer 偏移量
+     * @var integer 偏移量，默认0
      */
     public $Offset;
 
     /**
-     * @var integer 分页个数
+     * @var integer 分页个数，0-50 之间，默认20
      */
     public $Limit;
 
     /**
-     * @var string 集群类型
+     * @var string 集群类型，C表示容器集群，V表示虚拟机集群
      */
     public $ClusterType;
 
@@ -73,12 +73,12 @@ class DescribeClustersRequest extends AbstractModel
     public $ClusterIdList;
 
     /**
-     * @param string $SearchWord 搜索词
-     * @param string $OrderBy 排序字段
-     * @param integer $OrderType 排序方式
-     * @param integer $Offset 偏移量
-     * @param integer $Limit 分页个数
-     * @param string $ClusterType 集群类型
+     * @param string $SearchWord 搜索词，可以搜索ID/名称/备注/标签
+     * @param string $OrderBy 排序字段，例如创建时间
+     * @param integer $OrderType 排序方式，0表示升序，1表示倒序
+     * @param integer $Offset 偏移量，默认0
+     * @param integer $Limit 分页个数，0-50 之间，默认20
+     * @param string $ClusterType 集群类型，C表示容器集群，V表示虚拟机集群
      * @param array $ClusterIdList idList
      */
     function __construct()

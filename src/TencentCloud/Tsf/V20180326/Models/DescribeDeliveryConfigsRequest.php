@@ -26,10 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移
  * @method integer getLimit() 获取搜索条数
  * @method void setLimit(integer $Limit) 设置搜索条数
- * @method array getProgramIdList() 获取数据集idList
- * @method void setProgramIdList(array $ProgramIdList) 设置数据集idList
- * @method array getConfigIdList() 获取ConfigIdList
- * @method void setConfigIdList(array $ConfigIdList) 设置ConfigIdList
+ * @method array getProgramIdList() 获取数据集ID列表
+可通过调用[DescribePrograms](https://cloud.tencent.com/document/product/649/73477)查询已创建的数据集列表或登录[控制台](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program&roleId=role-a22gwdwa)进行查看
+ * @method void setProgramIdList(array $ProgramIdList) 设置数据集ID列表
+可通过调用[DescribePrograms](https://cloud.tencent.com/document/product/649/73477)查询已创建的数据集列表或登录[控制台](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program&roleId=role-a22gwdwa)进行查看
+ * @method array getConfigIdList() 获取日志配置项ID列表
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
+ * @method void setConfigIdList(array $ConfigIdList) 设置日志配置项ID列表
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
  */
 class DescribeDeliveryConfigsRequest extends AbstractModel
 {
@@ -49,12 +53,14 @@ class DescribeDeliveryConfigsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var array 数据集idList
+     * @var array 数据集ID列表
+可通过调用[DescribePrograms](https://cloud.tencent.com/document/product/649/73477)查询已创建的数据集列表或登录[控制台](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program&roleId=role-a22gwdwa)进行查看
      */
     public $ProgramIdList;
 
     /**
-     * @var array ConfigIdList
+     * @var array 日志配置项ID列表
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
      */
     public $ConfigIdList;
 
@@ -62,8 +68,10 @@ class DescribeDeliveryConfigsRequest extends AbstractModel
      * @param string $SearchWord 关键字
      * @param integer $Offset 偏移
      * @param integer $Limit 搜索条数
-     * @param array $ProgramIdList 数据集idList
-     * @param array $ConfigIdList ConfigIdList
+     * @param array $ProgramIdList 数据集ID列表
+可通过调用[DescribePrograms](https://cloud.tencent.com/document/product/649/73477)查询已创建的数据集列表或登录[控制台](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program&roleId=role-a22gwdwa)进行查看
+     * @param array $ConfigIdList 日志配置项ID列表
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
      */
     function __construct()
     {

@@ -28,14 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSearchWord(string $SearchWord) 设置模糊查询关键字，支持任务ID和任务名称。
  * @method string getTaskState() 获取任务启用状态。一共2种状态可选，ENABLED：启用，DISABLED：停用
  * @method void setTaskState(string $TaskState) 设置任务启用状态。一共2种状态可选，ENABLED：启用，DISABLED：停用
- * @method string getGroupId() 获取部署组ID。前往应用管理 - 应用部署，部署组列表页面获取部署组ID。
- * @method void setGroupId(string $GroupId) 设置部署组ID。前往应用管理 - 应用部署，部署组列表页面获取部署组ID。
+ * @method string getGroupId() 获取部署组ID。前往[应用管理](https://console.cloud.tencent.com/tsf/app?rid=1)点击应用ID进入应用部署列表页面获取部署组ID。
+ * @method void setGroupId(string $GroupId) 设置部署组ID。前往[应用管理](https://console.cloud.tencent.com/tsf/app?rid=1)点击应用ID进入应用部署列表页面获取部署组ID。
  * @method string getTaskType() 获取任务类型。当前只支持一种任务类型。枚举值，java：Java类任务
  * @method void setTaskType(string $TaskType) 设置任务类型。当前只支持一种任务类型。枚举值，java：Java类任务
  * @method string getExecuteType() 获取任务执行方式，unicast：随机单节点执行，broadcast：广播执行，shard：分片执行
  * @method void setExecuteType(string $ExecuteType) 设置任务执行方式，unicast：随机单节点执行，broadcast：广播执行，shard：分片执行
- * @method array getIds() 获取任务ID列表。
- * @method void setIds(array $Ids) 设置任务ID列表。
+ * @method array getIds() 获取任务ID列表。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页第一列查看任务ID。
+ * @method void setIds(array $Ids) 设置任务ID列表。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页第一列查看任务ID。
  */
 class DescribeTaskRecordsRequest extends AbstractModel
 {
@@ -60,7 +60,7 @@ class DescribeTaskRecordsRequest extends AbstractModel
     public $TaskState;
 
     /**
-     * @var string 部署组ID。前往应用管理 - 应用部署，部署组列表页面获取部署组ID。
+     * @var string 部署组ID。前往[应用管理](https://console.cloud.tencent.com/tsf/app?rid=1)点击应用ID进入应用部署列表页面获取部署组ID。
      */
     public $GroupId;
 
@@ -75,7 +75,7 @@ class DescribeTaskRecordsRequest extends AbstractModel
     public $ExecuteType;
 
     /**
-     * @var array 任务ID列表。
+     * @var array 任务ID列表。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页第一列查看任务ID。
      */
     public $Ids;
 
@@ -84,10 +84,10 @@ class DescribeTaskRecordsRequest extends AbstractModel
      * @param integer $Limit 翻页查询单页数量。默认值为 20，最大值为 1000
      * @param string $SearchWord 模糊查询关键字，支持任务ID和任务名称。
      * @param string $TaskState 任务启用状态。一共2种状态可选，ENABLED：启用，DISABLED：停用
-     * @param string $GroupId 部署组ID。前往应用管理 - 应用部署，部署组列表页面获取部署组ID。
+     * @param string $GroupId 部署组ID。前往[应用管理](https://console.cloud.tencent.com/tsf/app?rid=1)点击应用ID进入应用部署列表页面获取部署组ID。
      * @param string $TaskType 任务类型。当前只支持一种任务类型。枚举值，java：Java类任务
      * @param string $ExecuteType 任务执行方式，unicast：随机单节点执行，broadcast：广播执行，shard：分片执行
-     * @param array $Ids 任务ID列表。
+     * @param array $Ids 任务ID列表。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页第一列查看任务ID。
      */
     function __construct()
     {

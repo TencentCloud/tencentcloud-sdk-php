@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTriggerRows(integer $TriggerRows) 设置检测不通过行数
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getComputeExpression() 获取比较关系
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setComputeExpression(string $ComputeExpression) 设置比较关系
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class CompareResult extends AbstractModel
 {
@@ -64,6 +68,12 @@ class CompareResult extends AbstractModel
     public $TriggerRows;
 
     /**
+     * @var string 比较关系
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ComputeExpression;
+
+    /**
      * @param array $Items 对比结果项列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TotalRows 检测总行数
@@ -71,6 +81,8 @@ class CompareResult extends AbstractModel
      * @param integer $PassRows 检测通过行数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TriggerRows 检测不通过行数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ComputeExpression 比较关系
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -105,6 +117,10 @@ class CompareResult extends AbstractModel
 
         if (array_key_exists("TriggerRows",$param) and $param["TriggerRows"] !== null) {
             $this->TriggerRows = $param["TriggerRows"];
+        }
+
+        if (array_key_exists("ComputeExpression",$param) and $param["ComputeExpression"] !== null) {
+            $this->ComputeExpression = $param["ComputeExpression"];
         }
     }
 }

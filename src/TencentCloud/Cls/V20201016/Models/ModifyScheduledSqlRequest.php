@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProcessTimeWindow(string $ProcessTimeWindow) 设置单次查询的时间窗口. 例子中为近15分钟
  * @method integer getProcessDelay() 获取执行延迟(秒)，0~120秒，默认60秒
  * @method void setProcessDelay(integer $ProcessDelay) 设置执行延迟(秒)，0~120秒，默认60秒
- * @method string getSrcTopicRegion() 获取源topicId的地域信息,支持地域见(https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)
- * @method void setSrcTopicRegion(string $SrcTopicRegion) 设置源topicId的地域信息,支持地域见(https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)
+ * @method string getSrcTopicRegion() 获取源topicId的地域信息,支持地域见 [地域列表](https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) 文档
+ * @method void setSrcTopicRegion(string $SrcTopicRegion) 设置源topicId的地域信息,支持地域见 [地域列表](https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) 文档
  * @method string getName() 获取任务名称，0~255字符
  * @method void setName(string $Name) 设置任务名称，0~255字符
  * @method integer getSyntaxRule() 获取语法规则。 默认值为0。 0：Lucene语法，1：CQL语法
@@ -86,7 +86,7 @@ class ModifyScheduledSqlRequest extends AbstractModel
     public $ProcessDelay;
 
     /**
-     * @var string 源topicId的地域信息,支持地域见(https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)
+     * @var string 源topicId的地域信息,支持地域见 [地域列表](https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) 文档
      */
     public $SrcTopicRegion;
 
@@ -109,7 +109,7 @@ class ModifyScheduledSqlRequest extends AbstractModel
      * @param integer $ProcessPeriod 调度周期(分钟)，1~1440分钟
      * @param string $ProcessTimeWindow 单次查询的时间窗口. 例子中为近15分钟
      * @param integer $ProcessDelay 执行延迟(秒)，0~120秒，默认60秒
-     * @param string $SrcTopicRegion 源topicId的地域信息,支持地域见(https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)
+     * @param string $SrcTopicRegion 源topicId的地域信息,支持地域见 [地域列表](https://cloud.tencent.com/document/api/614/56474#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8) 文档
      * @param string $Name 任务名称，0~255字符
      * @param integer $SyntaxRule 语法规则。 默认值为0。 0：Lucene语法，1：CQL语法
      */

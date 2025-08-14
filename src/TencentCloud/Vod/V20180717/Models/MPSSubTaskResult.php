@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * MPS 具体子任务查询结果类型。
  *
- * @method string getTaskType() 获取任务类型。MPS 的 WorkflowTask 结构中的具体子任务类型。取值：<li>AiAnalysis.DeLogo：智能擦除任务。</li>
- * @method void setTaskType(string $TaskType) 设置任务类型。MPS 的 WorkflowTask 结构中的具体子任务类型。取值：<li>AiAnalysis.DeLogo：智能擦除任务。</li>
+ * @method string getTaskType() 获取任务类型。MPS 的 WorkflowTask 结构中的具体子任务类型。取值：<li>AiAnalysis.DeLogo：智能擦除任务。</li><li>MediaProcess.Transcode：音视频增强任务。</li>
+ * @method void setTaskType(string $TaskType) 设置任务类型。MPS 的 WorkflowTask 结构中的具体子任务类型。取值：<li>AiAnalysis.DeLogo：智能擦除任务。</li><li>MediaProcess.Transcode：音视频增强任务。</li>
  * @method string getStatus() 获取任务状态。有 PROCESSING，SUCCESS 和 FAIL 三种。
  * @method void setStatus(string $Status) 设置任务状态。有 PROCESSING，SUCCESS 和 FAIL 三种。
  * @method string getErrCode() 获取错误码。返回0时成功，其他值为失败。
@@ -29,14 +29,16 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMessage() 获取错误信息。
  * @method void setMessage(string $Message) 设置错误信息。
  * @method string getInput() 获取MPS 视频处理任务输入。该字段对应 MPS 任务返回中的 Input 结果，以 JSON 格式返回。
+示例：{"Definition": 24}
  * @method void setInput(string $Input) 设置MPS 视频处理任务输入。该字段对应 MPS 任务返回中的 Input 结果，以 JSON 格式返回。
+示例：{"Definition": 24}
  * @method MPSTaskOutput getOutput() 获取MPS 视频处理任务输出。
  * @method void setOutput(MPSTaskOutput $Output) 设置MPS 视频处理任务输出。
  */
 class MPSSubTaskResult extends AbstractModel
 {
     /**
-     * @var string 任务类型。MPS 的 WorkflowTask 结构中的具体子任务类型。取值：<li>AiAnalysis.DeLogo：智能擦除任务。</li>
+     * @var string 任务类型。MPS 的 WorkflowTask 结构中的具体子任务类型。取值：<li>AiAnalysis.DeLogo：智能擦除任务。</li><li>MediaProcess.Transcode：音视频增强任务。</li>
      */
     public $TaskType;
 
@@ -57,6 +59,7 @@ class MPSSubTaskResult extends AbstractModel
 
     /**
      * @var string MPS 视频处理任务输入。该字段对应 MPS 任务返回中的 Input 结果，以 JSON 格式返回。
+示例：{"Definition": 24}
      */
     public $Input;
 
@@ -66,11 +69,12 @@ class MPSSubTaskResult extends AbstractModel
     public $Output;
 
     /**
-     * @param string $TaskType 任务类型。MPS 的 WorkflowTask 结构中的具体子任务类型。取值：<li>AiAnalysis.DeLogo：智能擦除任务。</li>
+     * @param string $TaskType 任务类型。MPS 的 WorkflowTask 结构中的具体子任务类型。取值：<li>AiAnalysis.DeLogo：智能擦除任务。</li><li>MediaProcess.Transcode：音视频增强任务。</li>
      * @param string $Status 任务状态。有 PROCESSING，SUCCESS 和 FAIL 三种。
      * @param string $ErrCode 错误码。返回0时成功，其他值为失败。
      * @param string $Message 错误信息。
      * @param string $Input MPS 视频处理任务输入。该字段对应 MPS 任务返回中的 Input 结果，以 JSON 格式返回。
+示例：{"Definition": 24}
      * @param MPSTaskOutput $Output MPS 视频处理任务输出。
      */
     function __construct()

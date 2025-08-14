@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteCluster请求参数结构体
  *
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
+ * @method string getClusterId() 获取集群ID，按照【集群ID】进行过滤，可通过调用DescribeClusters查询已创建的项目列表或登录控制台进行查看；也可以调用CreateCluster创建新的项目。集群ID例如：cls-6a79x94v。仅在集群下无部署组、命名空间、云主机时可以删除。
+ * @method void setClusterId(string $ClusterId) 设置集群ID，按照【集群ID】进行过滤，可通过调用DescribeClusters查询已创建的项目列表或登录控制台进行查看；也可以调用CreateCluster创建新的项目。集群ID例如：cls-6a79x94v。仅在集群下无部署组、命名空间、云主机时可以删除。
  * @method boolean getUnbind() 获取是否只解绑，不删除容器集群，默认不传则删除容器集群。
  * @method void setUnbind(boolean $Unbind) 设置是否只解绑，不删除容器集群，默认不传则删除容器集群。
  */
 class DeleteClusterRequest extends AbstractModel
 {
     /**
-     * @var string 集群ID
+     * @var string 集群ID，按照【集群ID】进行过滤，可通过调用DescribeClusters查询已创建的项目列表或登录控制台进行查看；也可以调用CreateCluster创建新的项目。集群ID例如：cls-6a79x94v。仅在集群下无部署组、命名空间、云主机时可以删除。
      */
     public $ClusterId;
 
@@ -38,7 +38,7 @@ class DeleteClusterRequest extends AbstractModel
     public $Unbind;
 
     /**
-     * @param string $ClusterId 集群ID
+     * @param string $ClusterId 集群ID，按照【集群ID】进行过滤，可通过调用DescribeClusters查询已创建的项目列表或登录控制台进行查看；也可以调用CreateCluster创建新的项目。集群ID例如：cls-6a79x94v。仅在集群下无部署组、命名空间、云主机时可以删除。
      * @param boolean $Unbind 是否只解绑，不删除容器集群，默认不传则删除容器集群。
      */
     function __construct()

@@ -28,12 +28,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setScrollId(string $ScrollId) 设置游标ID
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取查询状态
+ * @method string getStatus() 获取查询状态，SUCCESS：查询成功完成，ERROR_RANGE_EXCEED：查询范围过大异常，ERROR_COMPLEX_CONDITION：查询条件复杂异常，ERROR_OTHER_CAUSE：其他异常
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(string $Status) 设置查询状态
+ * @method void setStatus(string $Status) 设置查询状态，SUCCESS：查询成功完成，ERROR_RANGE_EXCEED：查询范围过大异常，ERROR_COMPLEX_CONDITION：查询条件复杂异常，ERROR_OTHER_CAUSE：其他异常
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getSearchAfter() 获取游标ID
- * @method void setSearchAfter(array $SearchAfter) 设置游标ID
+ * @method array getSearchAfter() 获取查询es使用searchAfter时，游标
+ * @method void setSearchAfter(array $SearchAfter) 设置查询es使用searchAfter时，游标
  */
 class TsfPageStdoutLogV2 extends AbstractModel
 {
@@ -54,13 +54,13 @@ class TsfPageStdoutLogV2 extends AbstractModel
     public $ScrollId;
 
     /**
-     * @var string 查询状态
+     * @var string 查询状态，SUCCESS：查询成功完成，ERROR_RANGE_EXCEED：查询范围过大异常，ERROR_COMPLEX_CONDITION：查询条件复杂异常，ERROR_OTHER_CAUSE：其他异常
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
 
     /**
-     * @var array 游标ID
+     * @var array 查询es使用searchAfter时，游标
      */
     public $SearchAfter;
 
@@ -69,9 +69,9 @@ class TsfPageStdoutLogV2 extends AbstractModel
      * @param array $Content 标准输出日志列表
      * @param string $ScrollId 游标ID
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status 查询状态
+     * @param string $Status 查询状态，SUCCESS：查询成功完成，ERROR_RANGE_EXCEED：查询范围过大异常，ERROR_COMPLEX_CONDITION：查询条件复杂异常，ERROR_OTHER_CAUSE：其他异常
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $SearchAfter 游标ID
+     * @param array $SearchAfter 查询es使用searchAfter时，游标
      */
     function __construct()
     {

@@ -132,9 +132,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTcrRepoInfo(TcrRepoInfo $TcrRepoInfo) 设置TcrRepoInfo值
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getVolumeInfos() 获取数据卷信息，list
+ * @method array getVolumeInfos() 获取数据卷信息，数组结构
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVolumeInfos(array $VolumeInfos) 设置数据卷信息，list
+ * @method void setVolumeInfos(array $VolumeInfos) 设置数据卷信息，数组结构
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getVolumeMountInfos() 获取数据卷挂载信息，list
 注意：此字段可能返回 null，表示取不到有效值。
@@ -348,7 +348,7 @@ class ContainerGroupDeploy extends AbstractModel
     public $TcrRepoInfo;
 
     /**
-     * @var array 数据卷信息，list
+     * @var array 数据卷信息，数组结构
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VolumeInfos;
@@ -458,7 +458,7 @@ class ContainerGroupDeploy extends AbstractModel
      * @param boolean $HeadlessService service 是否为 headless 类型
      * @param TcrRepoInfo $TcrRepoInfo TcrRepoInfo值
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $VolumeInfos 数据卷信息，list
+     * @param array $VolumeInfos 数据卷信息，数组结构
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $VolumeMountInfos 数据卷挂载信息，list
 注意：此字段可能返回 null，表示取不到有效值。

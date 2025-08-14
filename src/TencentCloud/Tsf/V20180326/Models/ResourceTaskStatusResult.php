@@ -20,18 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 资源任务转态结果
  *
- * @method integer getTaskStatus() 获取任务的执行状态
- * @method void setTaskStatus(integer $TaskStatus) 设置任务的执行状态
+ * @method integer getTaskStatus() 获取变更状态：
+- `0`：成功
+- `1`：失败
+- `2`：执行中
+ * @method void setTaskStatus(integer $TaskStatus) 设置变更状态：
+- `0`：成功
+- `1`：失败
+- `2`：执行中
  */
 class ResourceTaskStatusResult extends AbstractModel
 {
     /**
-     * @var integer 任务的执行状态
+     * @var integer 变更状态：
+- `0`：成功
+- `1`：失败
+- `2`：执行中
      */
     public $TaskStatus;
 
     /**
-     * @param integer $TaskStatus 任务的执行状态
+     * @param integer $TaskStatus 变更状态：
+- `0`：成功
+- `1`：失败
+- `2`：执行中
      */
     function __construct()
     {

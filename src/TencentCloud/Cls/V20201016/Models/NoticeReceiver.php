@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
 - Sms - 短信
 - WeChat - 微信
 - Phone - 电话
- * @method string getNoticeContentId() 获取通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。
- * @method void setNoticeContentId(string $NoticeContentId) 设置通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。
+ * @method string getNoticeContentId() 获取通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。-通过[获取通知内容模板](https://cloud.tencent.com/document/product/614/111714)获取通知内容模板ID
+ * @method void setNoticeContentId(string $NoticeContentId) 设置通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。-通过[获取通知内容模板](https://cloud.tencent.com/document/product/614/111714)获取通知内容模板ID
  * @method string getStartTime() 获取允许接收信息的开始时间。格式：`15:04:05`。必填
  * @method void setStartTime(string $StartTime) 设置允许接收信息的开始时间。格式：`15:04:05`。必填
  * @method string getEndTime() 获取允许接收信息的结束时间。格式：`15:04:05`。必填
@@ -86,7 +86,7 @@ class NoticeReceiver extends AbstractModel
     public $ReceiverChannels;
 
     /**
-     * @var string 通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。
+     * @var string 通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。-通过[获取通知内容模板](https://cloud.tencent.com/document/product/614/111714)获取通知内容模板ID
      */
     public $NoticeContentId;
 
@@ -121,7 +121,7 @@ class NoticeReceiver extends AbstractModel
 - Sms - 短信
 - WeChat - 微信
 - Phone - 电话
-     * @param string $NoticeContentId 通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。
+     * @param string $NoticeContentId 通知内容模板ID，使用Default-zh引用默认模板（中文），使用Default-en引用DefaultTemplate(English)。-通过[获取通知内容模板](https://cloud.tencent.com/document/product/614/111714)获取通知内容模板ID
      * @param string $StartTime 允许接收信息的开始时间。格式：`15:04:05`。必填
      * @param string $EndTime 允许接收信息的结束时间。格式：`15:04:05`。必填
      * @param integer $Index 位序。

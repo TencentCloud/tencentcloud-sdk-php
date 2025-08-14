@@ -20,36 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SearchStdoutLog请求参数结构体
  *
- * @method string getInstanceId() 获取机器实例ID， 和  实例 ID 二者必选其一，不能同时为空
- * @method void setInstanceId(string $InstanceId) 设置机器实例ID， 和  实例 ID 二者必选其一，不能同时为空
+ * @method string getInstanceId() 获取机器实例ID， 和 部署组 ID 二者必选其一，不能同时为空
+可通过调用[DescribeClusterInstances](https://cloud.tencent.com/document/product/649/36048)查询已导入的实例列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=instance)进行查询。实例ID例如：ins-6decplwk
+
+
+
+ * @method void setInstanceId(string $InstanceId) 设置机器实例ID， 和 部署组 ID 二者必选其一，不能同时为空
+可通过调用[DescribeClusterInstances](https://cloud.tencent.com/document/product/649/36048)查询已导入的实例列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=instance)进行查询。实例ID例如：ins-6decplwk
+
+
+
  * @method integer getLimit() 获取单页请求配置数量，取值范围[1, 500]，默认值为100
  * @method void setLimit(integer $Limit) 设置单页请求配置数量，取值范围[1, 500]，默认值为100
  * @method array getSearchWords() 获取检索关键词
  * @method void setSearchWords(array $SearchWords) 设置检索关键词
- * @method string getStartTime() 获取查询起始时间
- * @method void setStartTime(string $StartTime) 设置查询起始时间
+ * @method string getStartTime() 获取查询起始时间，格式yyyy-MM-dd HH:mm:ss
+ * @method void setStartTime(string $StartTime) 设置查询起始时间，格式yyyy-MM-dd HH:mm:ss
  * @method string getGroupId() 获取部署组ID，和 InstanceId 二者必选其一，不能同时为空
+可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/product/649/36068)或[DescribeGroups](https://cloud.tencent.com/document/product/649/36065)查询已创建的部署组列表或登录[控制台](https://console.cloud.tencent.com/tsf/app-detail?rid=1&id=application-yo7kp9dv&tab=publish&subTab=group)进行查看
  * @method void setGroupId(string $GroupId) 设置部署组ID，和 InstanceId 二者必选其一，不能同时为空
- * @method string getEndTime() 获取查询结束时间
- * @method void setEndTime(string $EndTime) 设置查询结束时间
+可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/product/649/36068)或[DescribeGroups](https://cloud.tencent.com/document/product/649/36065)查询已创建的部署组列表或登录[控制台](https://console.cloud.tencent.com/tsf/app-detail?rid=1&id=application-yo7kp9dv&tab=publish&subTab=group)进行查看
+ * @method string getEndTime() 获取查询结束时间，格式yyyy-MM-dd HH:mm:ss
+ * @method void setEndTime(string $EndTime) 设置查询结束时间，格式yyyy-MM-dd HH:mm:ss
  * @method integer getOffset() 获取请求偏移量，取值范围大于等于0，默认值为
 0
  * @method void setOffset(integer $Offset) 设置请求偏移量，取值范围大于等于0，默认值为
 0
- * @method string getOrderBy() 获取排序规则，默认值"time"
- * @method void setOrderBy(string $OrderBy) 设置排序规则，默认值"time"
- * @method string getOrderType() 获取排序方式，取值"asc"或"desc"，默认
-值"desc"
- * @method void setOrderType(string $OrderType) 设置排序方式，取值"asc"或"desc"，默认
-值"desc"
- * @method string getSearchWordType() 获取检索类型，取值"LUCENE", "REGEXP",
-"NORMAL"
- * @method void setSearchWordType(string $SearchWordType) 设置检索类型，取值"LUCENE", "REGEXP",
-"NORMAL"
- * @method string getBatchType() 获取批量请求类型，取值"page"或"scroll"，默认
-值"page"
- * @method void setBatchType(string $BatchType) 设置批量请求类型，取值"page"或"scroll"，默认
-值"page"
+ * @method string getOrderBy() 获取排序规则，time：按时间排序，score：按检索值排序，默认值"time"
+ * @method void setOrderBy(string $OrderBy) 设置排序规则，time：按时间排序，score：按检索值排序，默认值"time"
+ * @method string getOrderType() 获取排序方式，取值 asc：升序 或 desc：降序，默认值desc
+ * @method void setOrderType(string $OrderType) 设置排序方式，取值 asc：升序 或 desc：降序，默认值desc
+ * @method string getSearchWordType() 获取检索类型，取值 LUCENE：Lucene检索，REGEXP：正则检索，NORMAL：普通检索
+ * @method void setSearchWordType(string $SearchWordType) 设置检索类型，取值 LUCENE：Lucene检索，REGEXP：正则检索，NORMAL：普通检索
+ * @method string getBatchType() 获取批量请求类型，取值 PAGE：分页查询，SCROLL：滚动查询，SEARCHAFTER：游标查询，默认值PAGE
+
+ * @method void setBatchType(string $BatchType) 设置批量请求类型，取值 PAGE：分页查询，SCROLL：滚动查询，SEARCHAFTER：游标查询，默认值PAGE
+
  * @method string getScrollId() 获取游标ID
  * @method void setScrollId(string $ScrollId) 设置游标ID
  * @method array getSearchAfter() 获取查询es使用searchAfter时，游标
@@ -58,7 +64,11 @@ use TencentCloud\Common\AbstractModel;
 class SearchStdoutLogRequest extends AbstractModel
 {
     /**
-     * @var string 机器实例ID， 和  实例 ID 二者必选其一，不能同时为空
+     * @var string 机器实例ID， 和 部署组 ID 二者必选其一，不能同时为空
+可通过调用[DescribeClusterInstances](https://cloud.tencent.com/document/product/649/36048)查询已导入的实例列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=instance)进行查询。实例ID例如：ins-6decplwk
+
+
+
      */
     public $InstanceId;
 
@@ -73,17 +83,18 @@ class SearchStdoutLogRequest extends AbstractModel
     public $SearchWords;
 
     /**
-     * @var string 查询起始时间
+     * @var string 查询起始时间，格式yyyy-MM-dd HH:mm:ss
      */
     public $StartTime;
 
     /**
      * @var string 部署组ID，和 InstanceId 二者必选其一，不能同时为空
+可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/product/649/36068)或[DescribeGroups](https://cloud.tencent.com/document/product/649/36065)查询已创建的部署组列表或登录[控制台](https://console.cloud.tencent.com/tsf/app-detail?rid=1&id=application-yo7kp9dv&tab=publish&subTab=group)进行查看
      */
     public $GroupId;
 
     /**
-     * @var string 查询结束时间
+     * @var string 查询结束时间，格式yyyy-MM-dd HH:mm:ss
      */
     public $EndTime;
 
@@ -94,25 +105,23 @@ class SearchStdoutLogRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var string 排序规则，默认值"time"
+     * @var string 排序规则，time：按时间排序，score：按检索值排序，默认值"time"
      */
     public $OrderBy;
 
     /**
-     * @var string 排序方式，取值"asc"或"desc"，默认
-值"desc"
+     * @var string 排序方式，取值 asc：升序 或 desc：降序，默认值desc
      */
     public $OrderType;
 
     /**
-     * @var string 检索类型，取值"LUCENE", "REGEXP",
-"NORMAL"
+     * @var string 检索类型，取值 LUCENE：Lucene检索，REGEXP：正则检索，NORMAL：普通检索
      */
     public $SearchWordType;
 
     /**
-     * @var string 批量请求类型，取值"page"或"scroll"，默认
-值"page"
+     * @var string 批量请求类型，取值 PAGE：分页查询，SCROLL：滚动查询，SEARCHAFTER：游标查询，默认值PAGE
+
      */
     public $BatchType;
 
@@ -127,21 +136,24 @@ class SearchStdoutLogRequest extends AbstractModel
     public $SearchAfter;
 
     /**
-     * @param string $InstanceId 机器实例ID， 和  实例 ID 二者必选其一，不能同时为空
+     * @param string $InstanceId 机器实例ID， 和 部署组 ID 二者必选其一，不能同时为空
+可通过调用[DescribeClusterInstances](https://cloud.tencent.com/document/product/649/36048)查询已导入的实例列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=instance)进行查询。实例ID例如：ins-6decplwk
+
+
+
      * @param integer $Limit 单页请求配置数量，取值范围[1, 500]，默认值为100
      * @param array $SearchWords 检索关键词
-     * @param string $StartTime 查询起始时间
+     * @param string $StartTime 查询起始时间，格式yyyy-MM-dd HH:mm:ss
      * @param string $GroupId 部署组ID，和 InstanceId 二者必选其一，不能同时为空
-     * @param string $EndTime 查询结束时间
+可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/product/649/36068)或[DescribeGroups](https://cloud.tencent.com/document/product/649/36065)查询已创建的部署组列表或登录[控制台](https://console.cloud.tencent.com/tsf/app-detail?rid=1&id=application-yo7kp9dv&tab=publish&subTab=group)进行查看
+     * @param string $EndTime 查询结束时间，格式yyyy-MM-dd HH:mm:ss
      * @param integer $Offset 请求偏移量，取值范围大于等于0，默认值为
 0
-     * @param string $OrderBy 排序规则，默认值"time"
-     * @param string $OrderType 排序方式，取值"asc"或"desc"，默认
-值"desc"
-     * @param string $SearchWordType 检索类型，取值"LUCENE", "REGEXP",
-"NORMAL"
-     * @param string $BatchType 批量请求类型，取值"page"或"scroll"，默认
-值"page"
+     * @param string $OrderBy 排序规则，time：按时间排序，score：按检索值排序，默认值"time"
+     * @param string $OrderType 排序方式，取值 asc：升序 或 desc：降序，默认值desc
+     * @param string $SearchWordType 检索类型，取值 LUCENE：Lucene检索，REGEXP：正则检索，NORMAL：普通检索
+     * @param string $BatchType 批量请求类型，取值 PAGE：分页查询，SCROLL：滚动查询，SEARCHAFTER：游标查询，默认值PAGE
+
      * @param string $ScrollId 游标ID
      * @param array $SearchAfter 查询es使用searchAfter时，游标
      */

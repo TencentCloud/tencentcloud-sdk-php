@@ -26,18 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetGroupName(string $TargetGroupName) 设置目标组的新名称。
  * @method integer getPort() 获取目标组的新默认端口。全监听目标组不支持此参数。
  * @method void setPort(integer $Port) 设置目标组的新默认端口。全监听目标组不支持此参数。
- * @method integer getWeight() 获取后端服务默认权重。
-<ul>
-    <li>取值范围[0, 100]</li>
-    <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li> 
-</ul>
-v1目标组类型不支持设置Weight参数。
- * @method void setWeight(integer $Weight) 设置后端服务默认权重。
-<ul>
-    <li>取值范围[0, 100]</li>
-    <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li> 
-</ul>
-v1目标组类型不支持设置Weight参数。
+ * @method string getScheduleAlgorithm() 获取调度算法，仅V2新版目标组，且后端转发协议为(HTTP|HTTPS|GRPC)时该参数有效。可选值：
+<ur><li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li><li>默认为 WRR。</li><ur>
+ * @method void setScheduleAlgorithm(string $ScheduleAlgorithm) 设置调度算法，仅V2新版目标组，且后端转发协议为(HTTP|HTTPS|GRPC)时该参数有效。可选值：
+<ur><li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li><li>默认为 WRR。</li><ur>
+ * @method TargetGroupHealthCheck getHealthCheck() 获取健康检查详情。
+ * @method void setHealthCheck(TargetGroupHealthCheck $HealthCheck) 设置健康检查详情。
+ * @method integer getWeight() 获取后端服务默认权重, 其中：<ul><li>取值范围[0, 100]</li><li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li><li>v1目标组类型不支持设置Weight参数。</li> </ul>
+ * @method void setWeight(integer $Weight) 设置后端服务默认权重, 其中：<ul><li>取值范围[0, 100]</li><li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li><li>v1目标组类型不支持设置Weight参数。</li> </ul>
  * @method boolean getKeepaliveEnable() 获取是否开启长连接，此参数仅适用于HTTP/HTTPS目标组，true:关闭；false:开启， 默认关闭。
  * @method void setKeepaliveEnable(boolean $KeepaliveEnable) 设置是否开启长连接，此参数仅适用于HTTP/HTTPS目标组，true:关闭；false:开启， 默认关闭。
  * @method integer getSessionExpireTime() 获取会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。TCP/UDP目标组不支持该参数。
@@ -61,12 +57,18 @@ class ModifyTargetGroupAttributeRequest extends AbstractModel
     public $Port;
 
     /**
-     * @var integer 后端服务默认权重。
-<ul>
-    <li>取值范围[0, 100]</li>
-    <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li> 
-</ul>
-v1目标组类型不支持设置Weight参数。
+     * @var string 调度算法，仅V2新版目标组，且后端转发协议为(HTTP|HTTPS|GRPC)时该参数有效。可选值：
+<ur><li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li><li>默认为 WRR。</li><ur>
+     */
+    public $ScheduleAlgorithm;
+
+    /**
+     * @var TargetGroupHealthCheck 健康检查详情。
+     */
+    public $HealthCheck;
+
+    /**
+     * @var integer 后端服务默认权重, 其中：<ul><li>取值范围[0, 100]</li><li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li><li>v1目标组类型不支持设置Weight参数。</li> </ul>
      */
     public $Weight;
 
@@ -84,12 +86,10 @@ v1目标组类型不支持设置Weight参数。
      * @param string $TargetGroupId 目标组的ID。
      * @param string $TargetGroupName 目标组的新名称。
      * @param integer $Port 目标组的新默认端口。全监听目标组不支持此参数。
-     * @param integer $Weight 后端服务默认权重。
-<ul>
-    <li>取值范围[0, 100]</li>
-    <li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li> 
-</ul>
-v1目标组类型不支持设置Weight参数。
+     * @param string $ScheduleAlgorithm 调度算法，仅V2新版目标组，且后端转发协议为(HTTP|HTTPS|GRPC)时该参数有效。可选值：
+<ur><li>WRR:按权重轮询。</li><li>LEAST_CONN:最小连接数。</li><li>IP_HASH:按IP哈希。</li><li>默认为 WRR。</li><ur>
+     * @param TargetGroupHealthCheck $HealthCheck 健康检查详情。
+     * @param integer $Weight 后端服务默认权重, 其中：<ul><li>取值范围[0, 100]</li><li>设置该值后，添加后端服务到目标组时， 若后端服务不单独设置权重， 则使用这里的默认权重。 </li><li>v1目标组类型不支持设置Weight参数。</li> </ul>
      * @param boolean $KeepaliveEnable 是否开启长连接，此参数仅适用于HTTP/HTTPS目标组，true:关闭；false:开启， 默认关闭。
      * @param integer $SessionExpireTime 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。TCP/UDP目标组不支持该参数。
      */
@@ -116,6 +116,15 @@ v1目标组类型不支持设置Weight参数。
 
         if (array_key_exists("Port",$param) and $param["Port"] !== null) {
             $this->Port = $param["Port"];
+        }
+
+        if (array_key_exists("ScheduleAlgorithm",$param) and $param["ScheduleAlgorithm"] !== null) {
+            $this->ScheduleAlgorithm = $param["ScheduleAlgorithm"];
+        }
+
+        if (array_key_exists("HealthCheck",$param) and $param["HealthCheck"] !== null) {
+            $this->HealthCheck = new TargetGroupHealthCheck();
+            $this->HealthCheck->deserialize($param["HealthCheck"]);
         }
 
         if (array_key_exists("Weight",$param) and $param["Weight"] !== null) {

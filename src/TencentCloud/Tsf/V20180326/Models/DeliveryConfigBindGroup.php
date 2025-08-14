@@ -28,19 +28,19 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCollectPath(array $CollectPath) 设置采集路径
  * @method array getGroups() 获取关联部署组信息
  * @method void setGroups(array $Groups) 设置关联部署组信息
- * @method string getCreateTime() 获取创建时间
- * @method void setCreateTime(string $CreateTime) 设置创建时间
- * @method string getKafkaVIp() 获取KafkaVIp
+ * @method string getCreateTime() 获取创建时间，格式yyyy-MM-dd HH:mm:ss
+ * @method void setCreateTime(string $CreateTime) 设置创建时间，格式yyyy-MM-dd HH:mm:ss
+ * @method string getKafkaVIp() 获取Kafka的vip
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKafkaVIp(string $KafkaVIp) 设置KafkaVIp
+ * @method void setKafkaVIp(string $KafkaVIp) 设置Kafka的vip
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getKafkaAddress() 获取KafkaAddress
+ * @method string getKafkaAddress() 获取Kafka地址
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKafkaAddress(string $KafkaAddress) 设置KafkaAddress
+ * @method void setKafkaAddress(string $KafkaAddress) 设置Kafka地址
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getKafkaVPort() 获取KafkaVPort
+ * @method string getKafkaVPort() 获取Kafka端口
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKafkaVPort(string $KafkaVPort) 设置KafkaVPort
+ * @method void setKafkaVPort(string $KafkaVPort) 设置Kafka端口
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTopic() 获取Topic
  * @method void setTopic(string $Topic) 设置Topic
@@ -48,23 +48,23 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLineRule(string $LineRule) 设置LineRule
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getCustomRule() 获取CustomRule
+ * @method string getCustomRule() 获取自定义规则
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setCustomRule(string $CustomRule) 设置CustomRule
+ * @method void setCustomRule(string $CustomRule) 设置自定义规则
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getEnableGlobalLineRule() 获取EnableGlobalLineRule
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableGlobalLineRule(boolean $EnableGlobalLineRule) 设置EnableGlobalLineRule
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getEnableAuth() 获取EnableAuth
- * @method void setEnableAuth(boolean $EnableAuth) 设置EnableAuth
- * @method string getUsername() 获取Username
+ * @method boolean getEnableAuth() 获取是否开启认证
+ * @method void setEnableAuth(boolean $EnableAuth) 设置是否开启认证
+ * @method string getUsername() 获取用户名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUsername(string $Username) 设置Username
+ * @method void setUsername(string $Username) 设置用户名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getPassword() 获取Password
+ * @method string getPassword() 获取密码
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setPassword(string $Password) 设置Password
+ * @method void setPassword(string $Password) 设置密码
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getKafkaInfos() 获取KafkaInfos
 注意：此字段可能返回 null，表示取不到有效值。
@@ -94,24 +94,24 @@ class DeliveryConfigBindGroup extends AbstractModel
     public $Groups;
 
     /**
-     * @var string 创建时间
+     * @var string 创建时间，格式yyyy-MM-dd HH:mm:ss
      */
     public $CreateTime;
 
     /**
-     * @var string KafkaVIp
+     * @var string Kafka的vip
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KafkaVIp;
 
     /**
-     * @var string KafkaAddress
+     * @var string Kafka地址
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KafkaAddress;
 
     /**
-     * @var string KafkaVPort
+     * @var string Kafka端口
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KafkaVPort;
@@ -128,7 +128,7 @@ class DeliveryConfigBindGroup extends AbstractModel
     public $LineRule;
 
     /**
-     * @var string CustomRule
+     * @var string 自定义规则
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CustomRule;
@@ -140,18 +140,18 @@ class DeliveryConfigBindGroup extends AbstractModel
     public $EnableGlobalLineRule;
 
     /**
-     * @var boolean EnableAuth
+     * @var boolean 是否开启认证
      */
     public $EnableAuth;
 
     /**
-     * @var string Username
+     * @var string 用户名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Username;
 
     /**
-     * @var string Password
+     * @var string 密码
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Password;
@@ -167,24 +167,24 @@ class DeliveryConfigBindGroup extends AbstractModel
      * @param string $ConfigName 配置名
      * @param array $CollectPath 采集路径
      * @param array $Groups 关联部署组信息
-     * @param string $CreateTime 创建时间
-     * @param string $KafkaVIp KafkaVIp
+     * @param string $CreateTime 创建时间，格式yyyy-MM-dd HH:mm:ss
+     * @param string $KafkaVIp Kafka的vip
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $KafkaAddress KafkaAddress
+     * @param string $KafkaAddress Kafka地址
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $KafkaVPort KafkaVPort
+     * @param string $KafkaVPort Kafka端口
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Topic Topic
      * @param string $LineRule LineRule
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $CustomRule CustomRule
+     * @param string $CustomRule 自定义规则
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $EnableGlobalLineRule EnableGlobalLineRule
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $EnableAuth EnableAuth
-     * @param string $Username Username
+     * @param boolean $EnableAuth 是否开启认证
+     * @param string $Username 用户名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Password Password
+     * @param string $Password 密码
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $KafkaInfos KafkaInfos
 注意：此字段可能返回 null，表示取不到有效值。

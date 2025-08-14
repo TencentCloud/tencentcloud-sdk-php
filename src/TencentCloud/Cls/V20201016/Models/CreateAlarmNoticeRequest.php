@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAlarmNotice请求参数结构体
  *
- * @method string getName() 获取通知渠道组名称。
- * @method void setName(string $Name) 设置通知渠道组名称。
+ * @method string getName() 获取通知渠道组名称。最大支持255个字节。 不支持 '|'。
+ * @method void setName(string $Name) 设置通知渠道组名称。最大支持255个字节。 不支持 '|'。
  * @method array getTags() 获取标签描述列表，通过指定该参数可以同时绑定标签到相应的通知渠道组。最大支持50个标签键值对，并且不能有重复的键值对。
  * @method void setTags(array $Tags) 设置标签描述列表，通过指定该参数可以同时绑定标签到相应的通知渠道组。最大支持50个标签键值对，并且不能有重复的键值对。
  * @method string getType() 获取【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
@@ -68,7 +68,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateAlarmNoticeRequest extends AbstractModel
 {
     /**
-     * @var string 通知渠道组名称。
+     * @var string 通知渠道组名称。最大支持255个字节。 不支持 '|'。
      */
     public $Name;
 
@@ -130,7 +130,7 @@ class CreateAlarmNoticeRequest extends AbstractModel
     public $AlarmShieldStatus;
 
     /**
-     * @param string $Name 通知渠道组名称。
+     * @param string $Name 通知渠道组名称。最大支持255个字节。 不支持 '|'。
      * @param array $Tags 标签描述列表，通过指定该参数可以同时绑定标签到相应的通知渠道组。最大支持50个标签键值对，并且不能有重复的键值对。
      * @param string $Type 【简易模式】（简易模式/告警模式二选一，分别配置相应参数）
 需要发送通知的告警类型。可选值：

@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyWebCallback请求参数结构体
  *
- * @method string getWebCallbackId() 获取告警渠道回调配置ID。
- * @method void setWebCallbackId(string $WebCallbackId) 设置告警渠道回调配置ID。
- * @method string getName() 获取告警渠道回调配置名称。
- * @method void setName(string $Name) 设置告警渠道回调配置名称。
+ * @method string getWebCallbackId() 获取告警渠道回调配置ID。-通过[获取告警渠道回调配置列表](https://cloud.tencent.com/document/api/614/115229)获取告警渠道回调配置ID
+ * @method void setWebCallbackId(string $WebCallbackId) 设置告警渠道回调配置ID。-通过[获取告警渠道回调配置列表](https://cloud.tencent.com/document/api/614/115229)获取告警渠道回调配置ID
+ * @method string getName() 获取告警渠道回调配置名称。最大支持255个字节
+ * @method void setName(string $Name) 设置告警渠道回调配置名称。最大支持255个字节
  * @method string getType() 获取渠道类型
 
 WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调;
@@ -42,18 +42,18 @@ WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调;
 支持POST、PUT。
 
 注意：当Type为Http时，必填。
- * @method string getKey() 获取秘钥信息。
- * @method void setKey(string $Key) 设置秘钥信息。
+ * @method string getKey() 获取秘钥信息。最大支持1024个字节
+ * @method void setKey(string $Key) 设置秘钥信息。最大支持1024个字节
  */
 class ModifyWebCallbackRequest extends AbstractModel
 {
     /**
-     * @var string 告警渠道回调配置ID。
+     * @var string 告警渠道回调配置ID。-通过[获取告警渠道回调配置列表](https://cloud.tencent.com/document/api/614/115229)获取告警渠道回调配置ID
      */
     public $WebCallbackId;
 
     /**
-     * @var string 告警渠道回调配置名称。
+     * @var string 告警渠道回调配置名称。最大支持255个字节
      */
     public $Name;
 
@@ -79,13 +79,13 @@ WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调;
     public $Method;
 
     /**
-     * @var string 秘钥信息。
+     * @var string 秘钥信息。最大支持1024个字节
      */
     public $Key;
 
     /**
-     * @param string $WebCallbackId 告警渠道回调配置ID。
-     * @param string $Name 告警渠道回调配置名称。
+     * @param string $WebCallbackId 告警渠道回调配置ID。-通过[获取告警渠道回调配置列表](https://cloud.tencent.com/document/api/614/115229)获取告警渠道回调配置ID
+     * @param string $Name 告警渠道回调配置名称。最大支持255个字节
      * @param string $Type 渠道类型
 
 WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调;
@@ -95,7 +95,7 @@ WeCom:企业微信;DingTalk:钉钉;Lark:飞书;Http:自定义回调;
 支持POST、PUT。
 
 注意：当Type为Http时，必填。
-     * @param string $Key 秘钥信息。
+     * @param string $Key 秘钥信息。最大支持1024个字节
      */
     function __construct()
     {

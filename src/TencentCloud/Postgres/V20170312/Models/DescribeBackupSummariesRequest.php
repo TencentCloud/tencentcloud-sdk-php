@@ -26,16 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置数据偏移量，从0开始。
  * @method array getFilters() 获取按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
 db-instance-id：按照实例ID过滤，类型为string。
-db-instance-name：按照实例名过滤，类型为string。
+db-instance-name：按照实例名过滤，支持模糊匹配，类型为string。
 db-instance-ip：按照实例私有网络IP地址过滤，类型为string。
  * @method void setFilters(array $Filters) 设置按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
 db-instance-id：按照实例ID过滤，类型为string。
-db-instance-name：按照实例名过滤，类型为string。
+db-instance-name：按照实例名过滤，支持模糊匹配，类型为string。
 db-instance-ip：按照实例私有网络IP地址过滤，类型为string。
- * @method string getOrderBy() 获取排序字段，支持TotalBackupSize,LogBackupSize,ManualBaseBackupSize,AutoBaseBackupSize。
- * @method void setOrderBy(string $OrderBy) 设置排序字段，支持TotalBackupSize,LogBackupSize,ManualBaseBackupSize,AutoBaseBackupSize。
- * @method string getOrderByType() 获取排序方式，包括升序：asc，降序：desc。
- * @method void setOrderByType(string $OrderByType) 设置排序方式，包括升序：asc，降序：desc。
+ * @method string getOrderBy() 获取排序字段，支持TotalBackupSize - 备份总大小、LogBackupSize - 备份日志的大小、ManualBaseBackupSize - 手动备份数据大小、AutoBaseBackupSize - 自动备份数据大小。当不传入该参数时，默认不进行排序。
+ * @method void setOrderBy(string $OrderBy) 设置排序字段，支持TotalBackupSize - 备份总大小、LogBackupSize - 备份日志的大小、ManualBaseBackupSize - 手动备份数据大小、AutoBaseBackupSize - 自动备份数据大小。当不传入该参数时，默认不进行排序。
+ * @method string getOrderByType() 获取排序方式，包括升序：asc，降序：desc。默认值：asc。
+ * @method void setOrderByType(string $OrderByType) 设置排序方式，包括升序：asc，降序：desc。默认值：asc。
  */
 class DescribeBackupSummariesRequest extends AbstractModel
 {
@@ -52,18 +52,18 @@ class DescribeBackupSummariesRequest extends AbstractModel
     /**
      * @var array 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
 db-instance-id：按照实例ID过滤，类型为string。
-db-instance-name：按照实例名过滤，类型为string。
+db-instance-name：按照实例名过滤，支持模糊匹配，类型为string。
 db-instance-ip：按照实例私有网络IP地址过滤，类型为string。
      */
     public $Filters;
 
     /**
-     * @var string 排序字段，支持TotalBackupSize,LogBackupSize,ManualBaseBackupSize,AutoBaseBackupSize。
+     * @var string 排序字段，支持TotalBackupSize - 备份总大小、LogBackupSize - 备份日志的大小、ManualBaseBackupSize - 手动备份数据大小、AutoBaseBackupSize - 自动备份数据大小。当不传入该参数时，默认不进行排序。
      */
     public $OrderBy;
 
     /**
-     * @var string 排序方式，包括升序：asc，降序：desc。
+     * @var string 排序方式，包括升序：asc，降序：desc。默认值：asc。
      */
     public $OrderByType;
 
@@ -72,10 +72,10 @@ db-instance-ip：按照实例私有网络IP地址过滤，类型为string。
      * @param integer $Offset 数据偏移量，从0开始。
      * @param array $Filters 按照一个或者多个过滤条件进行查询，目前支持的过滤条件有：
 db-instance-id：按照实例ID过滤，类型为string。
-db-instance-name：按照实例名过滤，类型为string。
+db-instance-name：按照实例名过滤，支持模糊匹配，类型为string。
 db-instance-ip：按照实例私有网络IP地址过滤，类型为string。
-     * @param string $OrderBy 排序字段，支持TotalBackupSize,LogBackupSize,ManualBaseBackupSize,AutoBaseBackupSize。
-     * @param string $OrderByType 排序方式，包括升序：asc，降序：desc。
+     * @param string $OrderBy 排序字段，支持TotalBackupSize - 备份总大小、LogBackupSize - 备份日志的大小、ManualBaseBackupSize - 手动备份数据大小、AutoBaseBackupSize - 自动备份数据大小。当不传入该参数时，默认不进行排序。
+     * @param string $OrderByType 排序方式，包括升序：asc，降序：desc。默认值：asc。
      */
     function __construct()
     {

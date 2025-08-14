@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StopTaskBatch请求参数结构体
  *
- * @method string getBatchId() 获取批次ID
- * @method void setBatchId(string $BatchId) 设置批次ID
- * @method string getTaskId() 获取参数ID
- * @method void setTaskId(string $TaskId) 设置参数ID
+ * @method string getBatchId() 获取任务批次ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)页面点击任务ID进入任务详情，进入执行记录列表页，第一列即为任务批次ID。
+ * @method void setBatchId(string $BatchId) 设置任务批次ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)页面点击任务ID进入任务详情，进入执行记录列表页，第一列即为任务批次ID。
+ * @method string getTaskId() 获取任务ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页面可以查看任务ID。
+ * @method void setTaskId(string $TaskId) 设置任务ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页面可以查看任务ID。
  */
 class StopTaskBatchRequest extends AbstractModel
 {
     /**
-     * @var string 批次ID
+     * @var string 任务批次ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)页面点击任务ID进入任务详情，进入执行记录列表页，第一列即为任务批次ID。
      */
     public $BatchId;
 
     /**
-     * @var string 参数ID
+     * @var string 任务ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页面可以查看任务ID。
      */
     public $TaskId;
 
     /**
-     * @param string $BatchId 批次ID
-     * @param string $TaskId 参数ID
+     * @param string $BatchId 任务批次ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)页面点击任务ID进入任务详情，进入执行记录列表页，第一列即为任务批次ID。
+     * @param string $TaskId 任务ID。在[任务管理](https://console.cloud.tencent.com/tsf/tct?rid=1)列表页面可以查看任务ID。
      */
     function __construct()
     {

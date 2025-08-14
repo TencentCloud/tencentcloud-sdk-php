@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInvocationMetricDataPoint请求参数结构体
  *
- * @method string getStartTime() 获取开始时间
- * @method void setStartTime(string $StartTime) 设置开始时间
- * @method string getEndTime() 获取结束时间
- * @method void setEndTime(string $EndTime) 设置结束时间
- * @method array getMetricDimensionValues() 获取维度，并且 维度 key value 不能为空
- * @method void setMetricDimensionValues(array $MetricDimensionValues) 设置维度，并且 维度 key value 不能为空
- * @method array getMetrics() 获取指标，并且 key, value 不能为空
- * @method void setMetrics(array $Metrics) 设置指标，并且 key, value 不能为空
- * @method string getKind() 获取调用视角。可选值：SERVER, CLIENT。默认为SERVER
- * @method void setKind(string $Kind) 设置调用视角。可选值：SERVER, CLIENT。默认为SERVER
+ * @method string getStartTime() 获取开始时间，格式yyyy-MM-dd HH:mm:ss
+ * @method void setStartTime(string $StartTime) 设置开始时间，格式yyyy-MM-dd HH:mm:ss
+ * @method string getEndTime() 获取结束时间，格式yyyy-MM-dd HH:mm:ss
+ * @method void setEndTime(string $EndTime) 设置结束时间，格式yyyy-MM-dd HH:mm:ss
+ * @method array getMetricDimensionValues() 获取查询指标维度, 不能为空
+ * @method void setMetricDimensionValues(array $MetricDimensionValues) 设置查询指标维度, 不能为空
+ * @method array getMetrics() 获取指标，不能为空
+ * @method void setMetrics(array $Metrics) 设置指标，不能为空
+ * @method string getKind() 获取视图视角。可选值：SERVER：服务端, CLIENT：客户端。默认为SERVER
+ * @method void setKind(string $Kind) 设置视图视角。可选值：SERVER：服务端, CLIENT：客户端。默认为SERVER
  */
 class DescribeInvocationMetricDataPointRequest extends AbstractModel
 {
     /**
-     * @var string 开始时间
+     * @var string 开始时间，格式yyyy-MM-dd HH:mm:ss
      */
     public $StartTime;
 
     /**
-     * @var string 结束时间
+     * @var string 结束时间，格式yyyy-MM-dd HH:mm:ss
      */
     public $EndTime;
 
     /**
-     * @var array 维度，并且 维度 key value 不能为空
+     * @var array 查询指标维度, 不能为空
      */
     public $MetricDimensionValues;
 
     /**
-     * @var array 指标，并且 key, value 不能为空
+     * @var array 指标，不能为空
      */
     public $Metrics;
 
     /**
-     * @var string 调用视角。可选值：SERVER, CLIENT。默认为SERVER
+     * @var string 视图视角。可选值：SERVER：服务端, CLIENT：客户端。默认为SERVER
      */
     public $Kind;
 
     /**
-     * @param string $StartTime 开始时间
-     * @param string $EndTime 结束时间
-     * @param array $MetricDimensionValues 维度，并且 维度 key value 不能为空
-     * @param array $Metrics 指标，并且 key, value 不能为空
-     * @param string $Kind 调用视角。可选值：SERVER, CLIENT。默认为SERVER
+     * @param string $StartTime 开始时间，格式yyyy-MM-dd HH:mm:ss
+     * @param string $EndTime 结束时间，格式yyyy-MM-dd HH:mm:ss
+     * @param array $MetricDimensionValues 查询指标维度, 不能为空
+     * @param array $Metrics 指标，不能为空
+     * @param string $Kind 视图视角。可选值：SERVER：服务端, CLIENT：客户端。默认为SERVER
      */
     function __construct()
     {

@@ -88,6 +88,8 @@ use TencentCloud\Common\AbstractModel;
 卸载中: AccessedUninstalling
  * @method string getAccessedSubStatus() 获取接入失败原因
  * @method void setAccessedSubStatus(string $AccessedSubStatus) 设置接入失败原因
+ * @method string getAccessedErrorReason() 获取接入/卸载失败原因
+ * @method void setAccessedErrorReason(string $AccessedErrorReason) 设置接入/卸载失败原因
  * @method integer getNodeCount() 获取节点总数
  * @method void setNodeCount(integer $NodeCount) 设置节点总数
  * @method integer getOffLineNodeCount() 获取离线节点数
@@ -238,6 +240,11 @@ class ClusterInfoItem extends AbstractModel
     public $AccessedSubStatus;
 
     /**
+     * @var string 接入/卸载失败原因
+     */
+    public $AccessedErrorReason;
+
+    /**
      * @var integer 节点总数
      */
     public $NodeCount;
@@ -318,6 +325,7 @@ class ClusterInfoItem extends AbstractModel
 接入中: AccessedInstalling
 卸载中: AccessedUninstalling
      * @param string $AccessedSubStatus 接入失败原因
+     * @param string $AccessedErrorReason 接入/卸载失败原因
      * @param integer $NodeCount 节点总数
      * @param integer $OffLineNodeCount 离线节点数
      * @param integer $UnInstallAgentNodeCount 未安装agent节点数
@@ -432,6 +440,10 @@ class ClusterInfoItem extends AbstractModel
 
         if (array_key_exists("AccessedSubStatus",$param) and $param["AccessedSubStatus"] !== null) {
             $this->AccessedSubStatus = $param["AccessedSubStatus"];
+        }
+
+        if (array_key_exists("AccessedErrorReason",$param) and $param["AccessedErrorReason"] !== null) {
+            $this->AccessedErrorReason = $param["AccessedErrorReason"];
         }
 
         if (array_key_exists("NodeCount",$param) and $param["NodeCount"] !== null) {

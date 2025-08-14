@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublicAccessEndpoint(string $PublicAccessEndpoint) 设置公网域名
  * @method string getPublicDataStreamStatus() 获取公网状态
  * @method void setPublicDataStreamStatus(string $PublicDataStreamStatus) 设置公网状态
+ * @method string getPublicClbId() 获取公网CLB实例ID
+ * @method void setPublicClbId(string $PublicClbId) 设置公网CLB实例ID
  */
 class RabbitMQServerlessAccessInfo extends AbstractModel
 {
@@ -38,8 +40,14 @@ class RabbitMQServerlessAccessInfo extends AbstractModel
     public $PublicDataStreamStatus;
 
     /**
+     * @var string 公网CLB实例ID
+     */
+    public $PublicClbId;
+
+    /**
      * @param string $PublicAccessEndpoint 公网域名
      * @param string $PublicDataStreamStatus 公网状态
+     * @param string $PublicClbId 公网CLB实例ID
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class RabbitMQServerlessAccessInfo extends AbstractModel
 
         if (array_key_exists("PublicDataStreamStatus",$param) and $param["PublicDataStreamStatus"] !== null) {
             $this->PublicDataStreamStatus = $param["PublicDataStreamStatus"];
+        }
+
+        if (array_key_exists("PublicClbId",$param) and $param["PublicClbId"] !== null) {
+            $this->PublicClbId = $param["PublicClbId"];
         }
     }
 }

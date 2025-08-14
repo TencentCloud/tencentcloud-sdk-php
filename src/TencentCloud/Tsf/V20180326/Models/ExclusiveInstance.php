@@ -20,33 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 独占实例
  *
- * @method string getCenterType() 获取配置中心类型[Registration、Configuration]
- * @method void setCenterType(string $CenterType) 设置配置中心类型[Registration、Configuration]
- * @method string getInstanceId() 获取实例id
- * @method void setInstanceId(string $InstanceId) 设置实例id
- * @method string getInstanceType() 获取实例类型[Polaris]
- * @method void setInstanceType(string $InstanceType) 设置实例类型[Polaris]
+ * @method string getCenterType() 获取配置中心类型[注册中心Registration、配置中心Configuration]
+ * @method void setCenterType(string $CenterType) 设置配置中心类型[注册中心Registration、配置中心Configuration]
+ * @method string getInstanceId() 获取实例id，通过北极星控制台获取
+ * @method void setInstanceId(string $InstanceId) 设置实例id，通过北极星控制台获取
+ * @method string getInstanceType() 获取实例类型，例如北极星Polaris
+ * @method void setInstanceType(string $InstanceType) 设置实例类型，例如北极星Polaris
  * @method string getInstanceName() 获取实例名称
  * @method void setInstanceName(string $InstanceName) 设置实例名称
- * @method string getRegionId() 获取实例地域id
- * @method void setRegionId(string $RegionId) 设置实例地域id
- * @method string getInstanceNamespaceId() 获取实例命名空间ID
- * @method void setInstanceNamespaceId(string $InstanceNamespaceId) 设置实例命名空间ID
+ * @method string getRegionId() 获取实例地域id，通过北极星控制台获取
+ * @method void setRegionId(string $RegionId) 设置实例地域id，通过北极星控制台获取
+ * @method string getInstanceNamespaceId() 获取实例命名空间ID，通过北极星控制台获取
+ * @method void setInstanceNamespaceId(string $InstanceNamespaceId) 设置实例命名空间ID，通过北极星控制台获取
  */
 class ExclusiveInstance extends AbstractModel
 {
     /**
-     * @var string 配置中心类型[Registration、Configuration]
+     * @var string 配置中心类型[注册中心Registration、配置中心Configuration]
      */
     public $CenterType;
 
     /**
-     * @var string 实例id
+     * @var string 实例id，通过北极星控制台获取
      */
     public $InstanceId;
 
     /**
-     * @var string 实例类型[Polaris]
+     * @var string 实例类型，例如北极星Polaris
      */
     public $InstanceType;
 
@@ -56,22 +56,22 @@ class ExclusiveInstance extends AbstractModel
     public $InstanceName;
 
     /**
-     * @var string 实例地域id
+     * @var string 实例地域id，通过北极星控制台获取
      */
     public $RegionId;
 
     /**
-     * @var string 实例命名空间ID
+     * @var string 实例命名空间ID，通过北极星控制台获取
      */
     public $InstanceNamespaceId;
 
     /**
-     * @param string $CenterType 配置中心类型[Registration、Configuration]
-     * @param string $InstanceId 实例id
-     * @param string $InstanceType 实例类型[Polaris]
+     * @param string $CenterType 配置中心类型[注册中心Registration、配置中心Configuration]
+     * @param string $InstanceId 实例id，通过北极星控制台获取
+     * @param string $InstanceType 实例类型，例如北极星Polaris
      * @param string $InstanceName 实例名称
-     * @param string $RegionId 实例地域id
-     * @param string $InstanceNamespaceId 实例命名空间ID
+     * @param string $RegionId 实例地域id，通过北极星控制台获取
+     * @param string $InstanceNamespaceId 实例命名空间ID，通过北极星控制台获取
      */
     function __construct()
     {

@@ -108,6 +108,50 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTriggerCondition(string $TriggerCondition) 设置触发条件
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRuleGroupName() 获取任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRuleGroupName(string $RuleGroupName) 设置任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDatasourceId() 获取数据源ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDatasourceId(string $DatasourceId) 设置数据源ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDatasourceName() 获取数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDatasourceName(string $DatasourceName) 设置数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getDatabaseName() 获取数据库名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDatabaseName(string $DatabaseName) 设置数据库名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSchemaName() 获取模式名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSchemaName(string $SchemaName) 设置模式名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getTableName() 获取表名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTableName(string $TableName) 设置表名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRuleGroupExist() 获取判断是否屏蔽监控 0.屏蔽 1.不屏蔽
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRuleGroupExist(integer $RuleGroupExist) 设置判断是否屏蔽监控 0.屏蔽 1.不屏蔽
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDatasourceType() 获取数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDatasourceType(integer $DatasourceType) 设置数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRuleGroupTableId() 获取数据表id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRuleGroupTableId(integer $RuleGroupTableId) 设置数据表id
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMonitorType() 获取监控方式 1.未配置, 2.关联生产调度, 3.离线周期检测
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMonitorType(integer $MonitorType) 设置监控方式 1.未配置, 2.关联生产调度, 3.离线周期检测
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getFinishTime() 获取执行结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setFinishTime(string $FinishTime) 设置执行结束时间
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class RuleExecResult extends AbstractModel
 {
@@ -244,6 +288,72 @@ class RuleExecResult extends AbstractModel
     public $TriggerCondition;
 
     /**
+     * @var string 任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RuleGroupName;
+
+    /**
+     * @var string 数据源ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DatasourceId;
+
+    /**
+     * @var string 数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DatasourceName;
+
+    /**
+     * @var string 数据库名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DatabaseName;
+
+    /**
+     * @var string 模式名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SchemaName;
+
+    /**
+     * @var string 表名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TableName;
+
+    /**
+     * @var integer 判断是否屏蔽监控 0.屏蔽 1.不屏蔽
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RuleGroupExist;
+
+    /**
+     * @var integer 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DatasourceType;
+
+    /**
+     * @var integer 数据表id
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RuleGroupTableId;
+
+    /**
+     * @var integer 监控方式 1.未配置, 2.关联生产调度, 3.离线周期检测
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MonitorType;
+
+    /**
+     * @var string 执行结束时间
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $FinishTime;
+
+    /**
      * @param integer $RuleExecId 规则执行ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $RuleGroupExecId 规则组执行ID
@@ -287,6 +397,28 @@ class RuleExecResult extends AbstractModel
      * @param integer $AlarmLevel 1/2/3:低/中/高
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TriggerCondition 触发条件
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RuleGroupName 任务名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DatasourceId 数据源ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DatasourceName 数据源名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $DatabaseName 数据库名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SchemaName 模式名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $TableName 表名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RuleGroupExist 判断是否屏蔽监控 0.屏蔽 1.不屏蔽
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DatasourceType 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RuleGroupTableId 数据表id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MonitorType 监控方式 1.未配置, 2.关联生产调度, 3.离线周期检测
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $FinishTime 执行结束时间
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -390,6 +522,50 @@ class RuleExecResult extends AbstractModel
 
         if (array_key_exists("TriggerCondition",$param) and $param["TriggerCondition"] !== null) {
             $this->TriggerCondition = $param["TriggerCondition"];
+        }
+
+        if (array_key_exists("RuleGroupName",$param) and $param["RuleGroupName"] !== null) {
+            $this->RuleGroupName = $param["RuleGroupName"];
+        }
+
+        if (array_key_exists("DatasourceId",$param) and $param["DatasourceId"] !== null) {
+            $this->DatasourceId = $param["DatasourceId"];
+        }
+
+        if (array_key_exists("DatasourceName",$param) and $param["DatasourceName"] !== null) {
+            $this->DatasourceName = $param["DatasourceName"];
+        }
+
+        if (array_key_exists("DatabaseName",$param) and $param["DatabaseName"] !== null) {
+            $this->DatabaseName = $param["DatabaseName"];
+        }
+
+        if (array_key_exists("SchemaName",$param) and $param["SchemaName"] !== null) {
+            $this->SchemaName = $param["SchemaName"];
+        }
+
+        if (array_key_exists("TableName",$param) and $param["TableName"] !== null) {
+            $this->TableName = $param["TableName"];
+        }
+
+        if (array_key_exists("RuleGroupExist",$param) and $param["RuleGroupExist"] !== null) {
+            $this->RuleGroupExist = $param["RuleGroupExist"];
+        }
+
+        if (array_key_exists("DatasourceType",$param) and $param["DatasourceType"] !== null) {
+            $this->DatasourceType = $param["DatasourceType"];
+        }
+
+        if (array_key_exists("RuleGroupTableId",$param) and $param["RuleGroupTableId"] !== null) {
+            $this->RuleGroupTableId = $param["RuleGroupTableId"];
+        }
+
+        if (array_key_exists("MonitorType",$param) and $param["MonitorType"] !== null) {
+            $this->MonitorType = $param["MonitorType"];
+        }
+
+        if (array_key_exists("FinishTime",$param) and $param["FinishTime"] !== null) {
+            $this->FinishTime = $param["FinishTime"];
         }
     }
 }

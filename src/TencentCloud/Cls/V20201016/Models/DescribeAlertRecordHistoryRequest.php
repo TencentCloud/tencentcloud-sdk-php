@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAlertRecordHistory请求参数结构体
  *
- * @method integer getFrom() 获取查询时间范围启始时间，毫秒级unix时间戳
- * @method void setFrom(integer $From) 设置查询时间范围启始时间，毫秒级unix时间戳
- * @method integer getTo() 获取查询时间范围结束时间，毫秒级unix时间戳
- * @method void setTo(integer $To) 设置查询时间范围结束时间，毫秒级unix时间戳
+ * @method integer getFrom() 获取查询时间范围启始时间，毫秒级unix时间戳(ms)
+ * @method void setFrom(integer $From) 设置查询时间范围启始时间，毫秒级unix时间戳(ms)
+ * @method integer getTo() 获取查询时间范围结束时间，毫秒级unix时间戳(ms)
+ * @method void setTo(integer $To) 设置查询时间范围结束时间，毫秒级unix时间戳(ms)
  * @method integer getOffset() 获取分页的偏移量，默认值为0。
  * @method void setOffset(integer $Offset) 设置分页的偏移量，默认值为0。
  * @method integer getLimit() 获取分页单页限制数目，最大值100。
@@ -44,12 +44,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAlertRecordHistoryRequest extends AbstractModel
 {
     /**
-     * @var integer 查询时间范围启始时间，毫秒级unix时间戳
+     * @var integer 查询时间范围启始时间，毫秒级unix时间戳(ms)
      */
     public $From;
 
     /**
-     * @var integer 查询时间范围结束时间，毫秒级unix时间戳
+     * @var integer 查询时间范围结束时间，毫秒级unix时间戳(ms)
      */
     public $To;
 
@@ -74,8 +74,8 @@ class DescribeAlertRecordHistoryRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @param integer $From 查询时间范围启始时间，毫秒级unix时间戳
-     * @param integer $To 查询时间范围结束时间，毫秒级unix时间戳
+     * @param integer $From 查询时间范围启始时间，毫秒级unix时间戳(ms)
+     * @param integer $To 查询时间范围结束时间，毫秒级unix时间戳(ms)
      * @param integer $Offset 分页的偏移量，默认值为0。
      * @param integer $Limit 分页单页限制数目，最大值100。
      * @param array $Filters - alertId：按照告警策略ID进行过滤。类型：String 必选：否

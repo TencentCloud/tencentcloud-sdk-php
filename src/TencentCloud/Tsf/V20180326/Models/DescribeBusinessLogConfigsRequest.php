@@ -26,10 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置单页请求配置数量，取值范围[1, 50]，默认值为10
  * @method string getSearchWord() 获取模糊匹配关键词
  * @method void setSearchWord(string $SearchWord) 设置模糊匹配关键词
- * @method boolean getDisableProgramAuthCheck() 获取无
- * @method void setDisableProgramAuthCheck(boolean $DisableProgramAuthCheck) 设置无
- * @method array getConfigIdList() 获取无
- * @method void setConfigIdList(array $ConfigIdList) 设置无
+ * @method boolean getDisableProgramAuthCheck() 获取是否禁用数据集鉴权
+ * @method void setDisableProgramAuthCheck(boolean $DisableProgramAuthCheck) 设置是否禁用数据集鉴权
+ * @method array getConfigIdList() 获取日志配置项ID
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
+ * @method void setConfigIdList(array $ConfigIdList) 设置日志配置项ID
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
  */
 class DescribeBusinessLogConfigsRequest extends AbstractModel
 {
@@ -49,12 +51,13 @@ class DescribeBusinessLogConfigsRequest extends AbstractModel
     public $SearchWord;
 
     /**
-     * @var boolean 无
+     * @var boolean 是否禁用数据集鉴权
      */
     public $DisableProgramAuthCheck;
 
     /**
-     * @var array 无
+     * @var array 日志配置项ID
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
      */
     public $ConfigIdList;
 
@@ -62,8 +65,9 @@ class DescribeBusinessLogConfigsRequest extends AbstractModel
      * @param integer $Offset 偏移量，取值范围大于等于0，默认值为0
      * @param integer $Limit 单页请求配置数量，取值范围[1, 50]，默认值为10
      * @param string $SearchWord 模糊匹配关键词
-     * @param boolean $DisableProgramAuthCheck 无
-     * @param array $ConfigIdList 无
+     * @param boolean $DisableProgramAuthCheck 是否禁用数据集鉴权
+     * @param array $ConfigIdList 日志配置项ID
+可通过调用[DescribeBusinessLogConfigs](https://cloud.tencent.com/document/product/649/75777)查询已创建的日志配置项列表或登录[控制台](https://console.cloud.tencent.com/tsf/observable/log?rid=1)进行查看
      */
     function __construct()
     {

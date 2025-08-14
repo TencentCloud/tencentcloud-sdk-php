@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCiliumMode(string $CiliumMode) 设置启用 CiliumMode 的模式，空值表示不启用，“clusterIP” 表示启用 Cilium 支持 ClusterIP
  * @method string getContainerRuntime() 获取集群使用的runtime类型，包括"docker"和"containerd"两种类型，默认为"docker"
  * @method void setContainerRuntime(string $ContainerRuntime) 设置集群使用的runtime类型，包括"docker"和"containerd"两种类型，默认为"docker"
+ * @method boolean getDataPlaneV2() 获取是否启用 DataPlaneV2（cilium替代kube-proxy） 
+ * @method void setDataPlaneV2(boolean $DataPlaneV2) 设置是否启用 DataPlaneV2（cilium替代kube-proxy） 
  * @method boolean getDeletionProtection() 获取是否启用集群删除保护
  * @method void setDeletionProtection(boolean $DeletionProtection) 设置是否启用集群删除保护
  * @method boolean getEnableCustomizedPodCIDR() 获取是否开节点podCIDR大小的自定义模式
@@ -62,8 +64,8 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
 使用ipvs-bpf的网络模式需要满足以下条件：
 1. 集群版本必须为1.14及以上；
 2. 系统镜像必须是: Tencent Linux 2.4；
- * @method string getNetworkType() 获取集群网络类型（包括GR(全局路由)和VPC-CNI两种模式，默认为GR。
- * @method void setNetworkType(string $NetworkType) 设置集群网络类型（包括GR(全局路由)和VPC-CNI两种模式，默认为GR。
+ * @method string getNetworkType() 获取集群网络类型。包括GR（全局路由）和VPC-CNI两种模式，默认为GR。
+ * @method void setNetworkType(string $NetworkType) 设置集群网络类型。包括GR（全局路由）和VPC-CNI两种模式，默认为GR。
  * @method string getNodeNameType() 获取集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip。如果开启了hostname模式，创建节点时需要设置HostName参数，并且InstanceName需要和HostName一致）
  * @method void setNodeNameType(string $NodeNameType) 设置集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip。如果开启了hostname模式，创建节点时需要设置HostName参数，并且InstanceName需要和HostName一致）
  * @method boolean getQGPUShareEnable() 获取是否开启QGPU共享
@@ -109,6 +111,11 @@ class ClusterAdvancedSettings extends AbstractModel
      * @var string 集群使用的runtime类型，包括"docker"和"containerd"两种类型，默认为"docker"
      */
     public $ContainerRuntime;
+
+    /**
+     * @var boolean 是否启用 DataPlaneV2（cilium替代kube-proxy） 
+     */
+    public $DataPlaneV2;
 
     /**
      * @var boolean 是否启用集群删除保护
@@ -157,7 +164,7 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
     public $KubeProxyMode;
 
     /**
-     * @var string 集群网络类型（包括GR(全局路由)和VPC-CNI两种模式，默认为GR。
+     * @var string 集群网络类型。包括GR（全局路由）和VPC-CNI两种模式，默认为GR。
      */
     public $NetworkType;
 
@@ -189,6 +196,7 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
      * @param integer $BasePodNumber 自定义模式下的基础pod数量
      * @param string $CiliumMode 启用 CiliumMode 的模式，空值表示不启用，“clusterIP” 表示启用 Cilium 支持 ClusterIP
      * @param string $ContainerRuntime 集群使用的runtime类型，包括"docker"和"containerd"两种类型，默认为"docker"
+     * @param boolean $DataPlaneV2 是否启用 DataPlaneV2（cilium替代kube-proxy） 
      * @param boolean $DeletionProtection 是否启用集群删除保护
      * @param boolean $EnableCustomizedPodCIDR 是否开节点podCIDR大小的自定义模式
      * @param array $EtcdOverrideConfigs 元数据拆分存储Etcd配置
@@ -203,7 +211,7 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
 使用ipvs-bpf的网络模式需要满足以下条件：
 1. 集群版本必须为1.14及以上；
 2. 系统镜像必须是: Tencent Linux 2.4；
-     * @param string $NetworkType 集群网络类型（包括GR(全局路由)和VPC-CNI两种模式，默认为GR。
+     * @param string $NetworkType 集群网络类型。包括GR（全局路由）和VPC-CNI两种模式，默认为GR。
      * @param string $NodeNameType 集群中节点NodeName类型（包括 hostname,lan-ip两种形式，默认为lan-ip。如果开启了hostname模式，创建节点时需要设置HostName参数，并且InstanceName需要和HostName一致）
      * @param boolean $QGPUShareEnable 是否开启QGPU共享
      * @param string $RuntimeVersion 运行时版本
@@ -248,6 +256,10 @@ ipvs-bpf模式: 设置KubeProxyMode为kube-proxy-bpf
 
         if (array_key_exists("ContainerRuntime",$param) and $param["ContainerRuntime"] !== null) {
             $this->ContainerRuntime = $param["ContainerRuntime"];
+        }
+
+        if (array_key_exists("DataPlaneV2",$param) and $param["DataPlaneV2"] !== null) {
+            $this->DataPlaneV2 = $param["DataPlaneV2"];
         }
 
         if (array_key_exists("DeletionProtection",$param) and $param["DeletionProtection"] !== null) {

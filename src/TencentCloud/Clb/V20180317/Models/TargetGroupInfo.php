@@ -42,6 +42,26 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProtocol(string $Protocol) 设置目标组后端转发协议, 仅v2新版目标组返回有效值。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getScheduleAlgorithm() 获取调度算法，仅后端转发协议为(HTTP、HTTPS、GRPC)的目标组返回有效值， 可选值：
+<ur>
+<li>WRR:按权重轮询。</li>
+<li>LEAST_CONN:最小连接数。</li>
+<li>IP_HASH:按IP哈希。</li>
+</ur>
+
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setScheduleAlgorithm(string $ScheduleAlgorithm) 设置调度算法，仅后端转发协议为(HTTP、HTTPS、GRPC)的目标组返回有效值， 可选值：
+<ur>
+<li>WRR:按权重轮询。</li>
+<li>LEAST_CONN:最小连接数。</li>
+<li>IP_HASH:按IP哈希。</li>
+</ur>
+
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method TargetGroupHealthCheck getHealthCheck() 获取健康检查详情。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setHealthCheck(TargetGroupHealthCheck $HealthCheck) 设置健康检查详情。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTargetGroupType() 获取目标组类型，当前支持v1(旧版目标组), v2(新版目标组)。默认为v1旧版目标组。
  * @method void setTargetGroupType(string $TargetGroupType) 设置目标组类型，当前支持v1(旧版目标组), v2(新版目标组)。默认为v1旧版目标组。
  * @method integer getAssociatedRuleCount() 获取目标组已关联的规则数。
@@ -107,6 +127,24 @@ class TargetGroupInfo extends AbstractModel
     public $Protocol;
 
     /**
+     * @var string 调度算法，仅后端转发协议为(HTTP、HTTPS、GRPC)的目标组返回有效值， 可选值：
+<ur>
+<li>WRR:按权重轮询。</li>
+<li>LEAST_CONN:最小连接数。</li>
+<li>IP_HASH:按IP哈希。</li>
+</ur>
+
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ScheduleAlgorithm;
+
+    /**
+     * @var TargetGroupHealthCheck 健康检查详情。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $HealthCheck;
+
+    /**
      * @var string 目标组类型，当前支持v1(旧版目标组), v2(新版目标组)。默认为v1旧版目标组。
      */
     public $TargetGroupType;
@@ -158,6 +196,16 @@ class TargetGroupInfo extends AbstractModel
      * @param array $AssociatedRule 关联到的规则数组。在DescribeTargetGroupList接口调用时无法获取到该参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Protocol 目标组后端转发协议, 仅v2新版目标组返回有效值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ScheduleAlgorithm 调度算法，仅后端转发协议为(HTTP、HTTPS、GRPC)的目标组返回有效值， 可选值：
+<ur>
+<li>WRR:按权重轮询。</li>
+<li>LEAST_CONN:最小连接数。</li>
+<li>IP_HASH:按IP哈希。</li>
+</ur>
+
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param TargetGroupHealthCheck $HealthCheck 健康检查详情。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TargetGroupType 目标组类型，当前支持v1(旧版目标组), v2(新版目标组)。默认为v1旧版目标组。
      * @param integer $AssociatedRuleCount 目标组已关联的规则数。
@@ -217,6 +265,15 @@ class TargetGroupInfo extends AbstractModel
 
         if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
             $this->Protocol = $param["Protocol"];
+        }
+
+        if (array_key_exists("ScheduleAlgorithm",$param) and $param["ScheduleAlgorithm"] !== null) {
+            $this->ScheduleAlgorithm = $param["ScheduleAlgorithm"];
+        }
+
+        if (array_key_exists("HealthCheck",$param) and $param["HealthCheck"] !== null) {
+            $this->HealthCheck = new TargetGroupHealthCheck();
+            $this->HealthCheck->deserialize($param["HealthCheck"]);
         }
 
         if (array_key_exists("TargetGroupType",$param) and $param["TargetGroupType"] !== null) {

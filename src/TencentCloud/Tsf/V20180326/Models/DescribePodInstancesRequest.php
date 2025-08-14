@@ -20,23 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePodInstances请求参数结构体
  *
- * @method string getGroupId() 获取实例所属groupId
- * @method void setGroupId(string $GroupId) 设置实例所属groupId
+ * @method string getGroupId() 获取实例所属部署组ID，按照【部署组ID】进行过滤，可通过调用DescribeGroups查询已创建的项目列表或登录控制台进行查看；也可以调用CreateGroup创建新的项目。部署组ID例如：group-9yn2q8yd。部署组所在集群必须是活跃状态的。
+ * @method void setGroupId(string $GroupId) 设置实例所属部署组ID，按照【部署组ID】进行过滤，可通过调用DescribeGroups查询已创建的项目列表或登录控制台进行查看；也可以调用CreateGroup创建新的项目。部署组ID例如：group-9yn2q8yd。部署组所在集群必须是活跃状态的。
  * @method integer getOffset() 获取偏移量，取值从0开始
  * @method void setOffset(integer $Offset) 设置偏移量，取值从0开始
  * @method integer getLimit() 获取分页个数，默认为20， 取值应为1~50
  * @method void setLimit(integer $Limit) 设置分页个数，默认为20， 取值应为1~50
- * @method array getPodNameList() 获取过滤字段
- * @method void setPodNameList(array $PodNameList) 设置过滤字段
- * @method string getDeployVersion() 获取新老版本pod批次标识
- * @method void setDeployVersion(string $DeployVersion) 设置新老版本pod批次标识
- * @method string getTaskId() 获取任务ID
- * @method void setTaskId(string $TaskId) 设置任务ID
+ * @method array getPodNameList() 获取用于通过PodName字段过滤返回结果。
+ * @method void setPodNameList(array $PodNameList) 设置用于通过PodName字段过滤返回结果。
+ * @method string getDeployVersion() 获取新老版本pod批次标识，old表示老版本，new表示新版本。
+ * @method void setDeployVersion(string $DeployVersion) 设置新老版本pod批次标识，old表示老版本，new表示新版本。
+ * @method string getTaskId() 获取实例所属任务ID，登录控制台进行查看。
+ * @method void setTaskId(string $TaskId) 设置实例所属任务ID，登录控制台进行查看。
  */
 class DescribePodInstancesRequest extends AbstractModel
 {
     /**
-     * @var string 实例所属groupId
+     * @var string 实例所属部署组ID，按照【部署组ID】进行过滤，可通过调用DescribeGroups查询已创建的项目列表或登录控制台进行查看；也可以调用CreateGroup创建新的项目。部署组ID例如：group-9yn2q8yd。部署组所在集群必须是活跃状态的。
      */
     public $GroupId;
 
@@ -51,27 +51,27 @@ class DescribePodInstancesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var array 过滤字段
+     * @var array 用于通过PodName字段过滤返回结果。
      */
     public $PodNameList;
 
     /**
-     * @var string 新老版本pod批次标识
+     * @var string 新老版本pod批次标识，old表示老版本，new表示新版本。
      */
     public $DeployVersion;
 
     /**
-     * @var string 任务ID
+     * @var string 实例所属任务ID，登录控制台进行查看。
      */
     public $TaskId;
 
     /**
-     * @param string $GroupId 实例所属groupId
+     * @param string $GroupId 实例所属部署组ID，按照【部署组ID】进行过滤，可通过调用DescribeGroups查询已创建的项目列表或登录控制台进行查看；也可以调用CreateGroup创建新的项目。部署组ID例如：group-9yn2q8yd。部署组所在集群必须是活跃状态的。
      * @param integer $Offset 偏移量，取值从0开始
      * @param integer $Limit 分页个数，默认为20， 取值应为1~50
-     * @param array $PodNameList 过滤字段
-     * @param string $DeployVersion 新老版本pod批次标识
-     * @param string $TaskId 任务ID
+     * @param array $PodNameList 用于通过PodName字段过滤返回结果。
+     * @param string $DeployVersion 新老版本pod批次标识，old表示老版本，new表示新版本。
+     * @param string $TaskId 实例所属任务ID，登录控制台进行查看。
      */
     function __construct()
     {

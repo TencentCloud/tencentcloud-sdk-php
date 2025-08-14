@@ -46,10 +46,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUin(integer $Uin) 设置创建者主账号。
  * @method integer getSubUin() 获取创建/修改者子账号。
  * @method void setSubUin(integer $SubUin) 设置创建/修改者子账号。
- * @method integer getCreateTime() 获取创建时间 秒级时间戳。
- * @method void setCreateTime(integer $CreateTime) 设置创建时间 秒级时间戳。
- * @method integer getUpdateTime() 获取更新时间 秒级时间戳。
- * @method void setUpdateTime(integer $UpdateTime) 设置更新时间 秒级时间戳。
+ * @method integer getCreateTime() 获取创建时间 秒级(s)时间戳。
+ * @method void setCreateTime(integer $CreateTime) 设置创建时间 秒级(s)时间戳。
+ * @method integer getUpdateTime() 获取更新时间 秒级(s)时间戳。
+ * @method void setUpdateTime(integer $UpdateTime) 设置更新时间 秒级(s)时间戳。
  */
 class NoticeContentTemplate extends AbstractModel
 {
@@ -95,12 +95,12 @@ class NoticeContentTemplate extends AbstractModel
     public $SubUin;
 
     /**
-     * @var integer 创建时间 秒级时间戳。
+     * @var integer 创建时间 秒级(s)时间戳。
      */
     public $CreateTime;
 
     /**
-     * @var integer 更新时间 秒级时间戳。
+     * @var integer 更新时间 秒级(s)时间戳。
      */
     public $UpdateTime;
 
@@ -118,8 +118,8 @@ class NoticeContentTemplate extends AbstractModel
 1： 系统内置
      * @param integer $Uin 创建者主账号。
      * @param integer $SubUin 创建/修改者子账号。
-     * @param integer $CreateTime 创建时间 秒级时间戳。
-     * @param integer $UpdateTime 更新时间 秒级时间戳。
+     * @param integer $CreateTime 创建时间 秒级(s)时间戳。
+     * @param integer $UpdateTime 更新时间 秒级(s)时间戳。
      */
     function __construct()
     {

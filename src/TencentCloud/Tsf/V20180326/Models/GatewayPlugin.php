@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatus(string $Status) 设置发布状态
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getDeleteDisabled() 获取是否禁用删除
+ * @method void setDeleteDisabled(boolean $DeleteDisabled) 设置是否禁用删除
+ * @method string getDeleteDisabledReason() 获取禁用原因
+ * @method void setDeleteDisabledReason(string $DeleteDisabledReason) 设置禁用原因
  */
 class GatewayPlugin extends AbstractModel
 {
@@ -94,6 +98,16 @@ class GatewayPlugin extends AbstractModel
     public $Status;
 
     /**
+     * @var boolean 是否禁用删除
+     */
+    public $DeleteDisabled;
+
+    /**
+     * @var string 禁用原因
+     */
+    public $DeleteDisabledReason;
+
+    /**
      * @param string $Id 网关插件id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Name 插件名称
@@ -108,6 +122,8 @@ class GatewayPlugin extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Status 发布状态
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $DeleteDisabled 是否禁用删除
+     * @param string $DeleteDisabledReason 禁用原因
      */
     function __construct()
     {
@@ -148,6 +164,14 @@ class GatewayPlugin extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("DeleteDisabled",$param) and $param["DeleteDisabled"] !== null) {
+            $this->DeleteDisabled = $param["DeleteDisabled"];
+        }
+
+        if (array_key_exists("DeleteDisabledReason",$param) and $param["DeleteDisabledReason"] !== null) {
+            $this->DeleteDisabledReason = $param["DeleteDisabledReason"];
         }
     }
 }

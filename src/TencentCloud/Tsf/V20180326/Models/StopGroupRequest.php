@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StopGroup请求参数结构体
  *
- * @method string getGroupId() 获取部署组ID
- * @method void setGroupId(string $GroupId) 设置部署组ID
+ * @method string getGroupId() 获取按照【部署组ID】进行部署组删除，可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/product/649/36068)查询已创建的部署组列表或登录[控制台](https://console.cloud.tencent.com/tsf/app-detail?rid=1&id=application-zvw6zp9a&tab=publish&subTab=group)进行查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/product/649/36074)创建新的部署组。
+ * @method void setGroupId(string $GroupId) 设置按照【部署组ID】进行部署组删除，可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/product/649/36068)查询已创建的部署组列表或登录[控制台](https://console.cloud.tencent.com/tsf/app-detail?rid=1&id=application-zvw6zp9a&tab=publish&subTab=group)进行查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/product/649/36074)创建新的部署组。
  */
 class StopGroupRequest extends AbstractModel
 {
     /**
-     * @var string 部署组ID
+     * @var string 按照【部署组ID】进行部署组删除，可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/product/649/36068)查询已创建的部署组列表或登录[控制台](https://console.cloud.tencent.com/tsf/app-detail?rid=1&id=application-zvw6zp9a&tab=publish&subTab=group)进行查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/product/649/36074)创建新的部署组。
      */
     public $GroupId;
 
     /**
-     * @param string $GroupId 部署组ID
+     * @param string $GroupId 按照【部署组ID】进行部署组删除，可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/product/649/36068)查询已创建的部署组列表或登录[控制台](https://console.cloud.tencent.com/tsf/app-detail?rid=1&id=application-zvw6zp9a&tab=publish&subTab=group)进行查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/product/649/36074)创建新的部署组。
      */
     function __construct()
     {

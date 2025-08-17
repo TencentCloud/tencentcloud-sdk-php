@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppBizIds(array $AppBizIds) 设置应用id列表
  * @method string getAppType() 获取应用类型(knowledge_qa应用管理， shared_knowlege 共享知识库)
  * @method void setAppType(string $AppType) 设置应用类型(knowledge_qa应用管理， shared_knowlege 共享知识库)
+ * @method array getSubScenes() 获取筛选子场景
+ * @method void setSubScenes(array $SubScenes) 设置筛选子场景
  */
 class DescribeTokenUsageGraphRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class DescribeTokenUsageGraphRequest extends AbstractModel
     public $AppType;
 
     /**
+     * @var array 筛选子场景
+     */
+    public $SubScenes;
+
+    /**
      * @param array $UinAccount 腾讯云主账号
      * @param string $SubBizType 知识引擎子业务类型:  FileParse(文档解析)、Embedding、Rewrite(多轮改写)、 Concurrency(并发)、KnowledgeSummary(知识总结)   KnowledgeQA(知识问答)、KnowledgeCapacity(知识库容量)、SearchEngine(搜索引擎)
      * @param string $ModelName 模型标识
@@ -80,6 +87,7 @@ class DescribeTokenUsageGraphRequest extends AbstractModel
      * @param string $EndTime 结束时间戳, 单位为秒
      * @param array $AppBizIds 应用id列表
      * @param string $AppType 应用类型(knowledge_qa应用管理， shared_knowlege 共享知识库)
+     * @param array $SubScenes 筛选子场景
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class DescribeTokenUsageGraphRequest extends AbstractModel
 
         if (array_key_exists("AppType",$param) and $param["AppType"] !== null) {
             $this->AppType = $param["AppType"];
+        }
+
+        if (array_key_exists("SubScenes",$param) and $param["SubScenes"] !== null) {
+            $this->SubScenes = $param["SubScenes"];
         }
     }
 }

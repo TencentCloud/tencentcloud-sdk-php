@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubScenes(array $SubScenes) 设置筛选子场景(文档解析场景使用)
  * @method string getAppType() 获取应用类型(knowledge_qa应用管理， shared_knowlege 共享知识库)
  * @method void setAppType(string $AppType) 设置应用类型(knowledge_qa应用管理， shared_knowlege 共享知识库)
+ * @method string getSpaceId() 获取空间id
+ * @method void setSpaceId(string $SpaceId) 设置空间id
  */
 class DescribeCallStatsGraphRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class DescribeCallStatsGraphRequest extends AbstractModel
     public $AppType;
 
     /**
+     * @var string 空间id
+     */
+    public $SpaceId;
+
+    /**
      * @param array $UinAccount uin
      * @param string $LoginUin 登录用户主账号(集成商模式必填)
      * @param string $LoginSubAccountUin 登录用户子账号(集成商模式必填)
@@ -104,6 +111,7 @@ class DescribeCallStatsGraphRequest extends AbstractModel
      * @param array $AppBizIds 应用id列表
      * @param array $SubScenes 筛选子场景(文档解析场景使用)
      * @param string $AppType 应用类型(knowledge_qa应用管理， shared_knowlege 共享知识库)
+     * @param string $SpaceId 空间id
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class DescribeCallStatsGraphRequest extends AbstractModel
 
         if (array_key_exists("AppType",$param) and $param["AppType"] !== null) {
             $this->AppType = $param["AppType"];
+        }
+
+        if (array_key_exists("SpaceId",$param) and $param["SpaceId"] !== null) {
+            $this->SpaceId = $param["SpaceId"];
         }
     }
 }

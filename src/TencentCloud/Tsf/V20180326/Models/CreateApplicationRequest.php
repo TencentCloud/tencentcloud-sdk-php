@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateApplication请求参数结构体
  *
- * @method string getApplicationName() 获取应用名称
- * @method void setApplicationName(string $ApplicationName) 设置应用名称
+ * @method string getApplicationName() 获取应用名称，最长60字符
+ * @method void setApplicationName(string $ApplicationName) 设置应用名称，最长60字符
  * @method string getApplicationType() 获取应用类型，V：虚拟机应用；C：容器应用；S：serverless应用
  * @method void setApplicationType(string $ApplicationType) 设置应用类型，V：虚拟机应用；C：容器应用；S：serverless应用
  * @method string getMicroserviceType() 获取应用微服务类型，M：service mesh应用；N：普通应用；G：网关应用
@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApplicationResourceType(string $ApplicationResourceType) 设置应用资源类型，废弃参数
  * @method string getApplicationRuntimeType() 获取应用runtime类型
  * @method void setApplicationRuntimeType(string $ApplicationRuntimeType) 设置应用runtime类型
- * @method string getProgramId() 获取需要绑定的数据集ID
- * @method void setProgramId(string $ProgramId) 设置需要绑定的数据集ID
+ * @method string getProgramId() 获取【数据集ID】。可通过调用[DescribePrograms](https://cloud.tencent.com/document/product/649/73477)查询已创建的数据集列表或登录[控制台](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program&roleId=role-a26486wy)进行查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。
+ * @method void setProgramId(string $ProgramId) 设置【数据集ID】。可通过调用[DescribePrograms](https://cloud.tencent.com/document/product/649/73477)查询已创建的数据集列表或登录[控制台](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program&roleId=role-a26486wy)进行查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。
  * @method array getServiceConfigList() 获取服务配置信息列表
  * @method void setServiceConfigList(array $ServiceConfigList) 设置服务配置信息列表
  * @method boolean getIgnoreCreateImageRepository() 获取忽略创建镜像仓库
@@ -56,7 +56,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateApplicationRequest extends AbstractModel
 {
     /**
-     * @var string 应用名称
+     * @var string 应用名称，最长60字符
      */
     public $ApplicationName;
 
@@ -93,7 +93,7 @@ class CreateApplicationRequest extends AbstractModel
     public $ApplicationRuntimeType;
 
     /**
-     * @var string 需要绑定的数据集ID
+     * @var string 【数据集ID】。可通过调用[DescribePrograms](https://cloud.tencent.com/document/product/649/73477)查询已创建的数据集列表或登录[控制台](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program&roleId=role-a26486wy)进行查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。
      */
     public $ProgramId;
 
@@ -138,14 +138,14 @@ class CreateApplicationRequest extends AbstractModel
     public $CreateSameNameImageRepository;
 
     /**
-     * @param string $ApplicationName 应用名称
+     * @param string $ApplicationName 应用名称，最长60字符
      * @param string $ApplicationType 应用类型，V：虚拟机应用；C：容器应用；S：serverless应用
      * @param string $MicroserviceType 应用微服务类型，M：service mesh应用；N：普通应用；G：网关应用
      * @param string $ApplicationDesc 应用描述
      * @param string $ApplicationLogConfig 应用日志配置项，废弃参数
      * @param string $ApplicationResourceType 应用资源类型，废弃参数
      * @param string $ApplicationRuntimeType 应用runtime类型
-     * @param string $ProgramId 需要绑定的数据集ID
+     * @param string $ProgramId 【数据集ID】。可通过调用[DescribePrograms](https://cloud.tencent.com/document/product/649/73477)查询已创建的数据集列表或登录[控制台](https://console.cloud.tencent.com/tsf/privilege?rid=1&tab=program&roleId=role-a26486wy)进行查看；也可以调用[CreateProgram](https://cloud.tencent.com/document/product/649/108544)创建新的数据集。
      * @param array $ServiceConfigList 服务配置信息列表
      * @param boolean $IgnoreCreateImageRepository 忽略创建镜像仓库
      * @param array $ProgramIdList 数据集id列表

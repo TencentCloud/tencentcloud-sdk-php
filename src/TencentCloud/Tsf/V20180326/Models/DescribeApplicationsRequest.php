@@ -34,12 +34,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。关于Offset详见[API简介](https://cloud.tencent.com/document/api/213/568#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89)
  * @method integer getLimit() 获取数量限制，默认为20，最大值为100。关于Limit详见[API简介](https://cloud.tencent.com/document/api/213/568#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89)
  * @method void setLimit(integer $Limit) 设置数量限制，默认为20，最大值为100。关于Limit详见[API简介](https://cloud.tencent.com/document/api/213/568#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89)
- * @method string getApplicationType() 获取应用类型
- * @method void setApplicationType(string $ApplicationType) 设置应用类型
+ * @method string getApplicationType() 获取指定应用类型，目前支持：
+- `V`：普通应用/CVM应用
+- `C`：容器应用
+- `S`：serverless 应用
+ * @method void setApplicationType(string $ApplicationType) 设置指定应用类型，目前支持：
+- `V`：普通应用/CVM应用
+- `C`：容器应用
+- `S`：serverless 应用
  * @method string getMicroserviceType() 获取应用的微服务类型
  * @method void setMicroserviceType(string $MicroserviceType) 设置应用的微服务类型
- * @method array getApplicationResourceTypeList() 获取应用资源类型数组
- * @method void setApplicationResourceTypeList(array $ApplicationResourceTypeList) 设置应用资源类型数组
+ * @method array getApplicationResourceTypeList() 获取应用资源类型列表；DEF 表示默认资源类型；GW 表示网关资源类型
+ * @method void setApplicationResourceTypeList(array $ApplicationResourceTypeList) 设置应用资源类型列表；DEF 表示默认资源类型；GW 表示网关资源类型
  * @method array getApplicationIdList() 获取IdList
  * @method void setApplicationIdList(array $ApplicationIdList) 设置IdList
  * @method array getMicroserviceTypeList() 获取查询多种微服务类型的应用
@@ -75,7 +81,10 @@ class DescribeApplicationsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 应用类型
+     * @var string 指定应用类型，目前支持：
+- `V`：普通应用/CVM应用
+- `C`：容器应用
+- `S`：serverless 应用
      */
     public $ApplicationType;
 
@@ -85,7 +94,7 @@ class DescribeApplicationsRequest extends AbstractModel
     public $MicroserviceType;
 
     /**
-     * @var array 应用资源类型数组
+     * @var array 应用资源类型列表；DEF 表示默认资源类型；GW 表示网关资源类型
      */
     public $ApplicationResourceTypeList;
 
@@ -107,9 +116,12 @@ class DescribeApplicationsRequest extends AbstractModel
 `1`：升序
      * @param integer $Offset 偏移量，默认为0。关于Offset详见[API简介](https://cloud.tencent.com/document/api/213/568#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89)
      * @param integer $Limit 数量限制，默认为20，最大值为100。关于Limit详见[API简介](https://cloud.tencent.com/document/api/213/568#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89)
-     * @param string $ApplicationType 应用类型
+     * @param string $ApplicationType 指定应用类型，目前支持：
+- `V`：普通应用/CVM应用
+- `C`：容器应用
+- `S`：serverless 应用
      * @param string $MicroserviceType 应用的微服务类型
-     * @param array $ApplicationResourceTypeList 应用资源类型数组
+     * @param array $ApplicationResourceTypeList 应用资源类型列表；DEF 表示默认资源类型；GW 表示网关资源类型
      * @param array $ApplicationIdList IdList
      * @param array $MicroserviceTypeList 查询多种微服务类型的应用
      */

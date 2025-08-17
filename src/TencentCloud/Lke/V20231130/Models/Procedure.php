@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setResourceStatus(integer $ResourceStatus) 设置计费资源状态，1：可用，2：不可用
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getInputCount() 获取输入消耗 token 数
+ * @method void setInputCount(integer $InputCount) 设置输入消耗 token 数
+ * @method integer getOutputCount() 获取输出消耗 token 数
+ * @method void setOutputCount(integer $OutputCount) 设置输出消耗 token 数
  */
 class Procedure extends AbstractModel
 {
@@ -84,6 +88,16 @@ class Procedure extends AbstractModel
     public $ResourceStatus;
 
     /**
+     * @var integer 输入消耗 token 数
+     */
+    public $InputCount;
+
+    /**
+     * @var integer 输出消耗 token 数
+     */
+    public $OutputCount;
+
+    /**
      * @param string $Name 执行过程英语名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Title 中文名, 用于展示
@@ -96,6 +110,8 @@ class Procedure extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ResourceStatus 计费资源状态，1：可用，2：不可用
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $InputCount 输入消耗 token 数
+     * @param integer $OutputCount 输出消耗 token 数
      */
     function __construct()
     {
@@ -133,6 +149,14 @@ class Procedure extends AbstractModel
 
         if (array_key_exists("ResourceStatus",$param) and $param["ResourceStatus"] !== null) {
             $this->ResourceStatus = $param["ResourceStatus"];
+        }
+
+        if (array_key_exists("InputCount",$param) and $param["InputCount"] !== null) {
+            $this->InputCount = $param["InputCount"];
+        }
+
+        if (array_key_exists("OutputCount",$param) and $param["OutputCount"] !== null) {
+            $this->OutputCount = $param["OutputCount"];
         }
     }
 }

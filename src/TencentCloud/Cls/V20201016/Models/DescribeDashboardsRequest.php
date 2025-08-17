@@ -25,23 +25,77 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLimit() 获取分页单页限制数目，默认值为20，最大值100。
  * @method void setLimit(integer $Limit) 设置分页单页限制数目，默认值为20，最大值100。
  * @method array getFilters() 获取- dashboardId 按照【仪表盘id】进行过滤，类型：String， 必选：否。
+    - 示例值：dashboard-522a5609-1f41-4b11-8086-5afd1d7574f5
 - dashboardName 按照【仪表盘名字】进行模糊搜索过滤，类型：String，必选：否。
-- dashboardRegion 按照【仪表盘地域】进行过滤，为了兼容老的仪表盘，通过云API创建的仪表盘没有地域属性，类型：String，必选：否。 [地域和访问域名](https://cloud.tencent.com/document/product/614/18940)，例如：ap-guangzhou
+    - 示例值：业务大盘
+- dashboardRegion 按照【仪表盘地域】进行过滤（兼容老的仪表盘），通过云API创建的仪表盘该属性，类型：String，必选：否。
+    - 参考  [地域和访问域名](https://cloud.tencent.com/document/product/614/18940)
+    - 示例：ap-guangzhou
 - tagKey 按照【标签键】进行过滤，类型：String，必选：否。
-- tag:tagKey 按照【标签键值对】进行过滤。tagKey使用具体的标签键进行替换，类型：String，必选：否，使用请参考[示例2](https://cloud.tencent.com/document/api/614/95636#4.-.E7.A4.BA.E4.BE.8B)。
+    - 示例值：
+    ```
+    "Filters":[
+        {
+            "Key": "tagKey",
+            "Values": [
+                "tag-key-test"
+            ]
+        }
+    ]
+    ```
+
+- tag:tagKey 按照【标签键值对】进行过滤。tagKey使用具体的标签键进行替换，类型：String，必选：否，
+    - 参考 [示例1](https://cloud.tencent.com/document/api/614/95636#4.-.E7.A4.BA.E4.BE.8B) 使用。
+    ```
+    "Filters": [
+        {
+            "Key": "tag:tag-key-test",
+            "Values": [
+                "12"
+            ]
+        }
+    ]
+    ```
 
 每次请求的Filters的上限为10，Filter.Values的上限为100。
  * @method void setFilters(array $Filters) 设置- dashboardId 按照【仪表盘id】进行过滤，类型：String， 必选：否。
+    - 示例值：dashboard-522a5609-1f41-4b11-8086-5afd1d7574f5
 - dashboardName 按照【仪表盘名字】进行模糊搜索过滤，类型：String，必选：否。
-- dashboardRegion 按照【仪表盘地域】进行过滤，为了兼容老的仪表盘，通过云API创建的仪表盘没有地域属性，类型：String，必选：否。 [地域和访问域名](https://cloud.tencent.com/document/product/614/18940)，例如：ap-guangzhou
+    - 示例值：业务大盘
+- dashboardRegion 按照【仪表盘地域】进行过滤（兼容老的仪表盘），通过云API创建的仪表盘该属性，类型：String，必选：否。
+    - 参考  [地域和访问域名](https://cloud.tencent.com/document/product/614/18940)
+    - 示例：ap-guangzhou
 - tagKey 按照【标签键】进行过滤，类型：String，必选：否。
-- tag:tagKey 按照【标签键值对】进行过滤。tagKey使用具体的标签键进行替换，类型：String，必选：否，使用请参考[示例2](https://cloud.tencent.com/document/api/614/95636#4.-.E7.A4.BA.E4.BE.8B)。
+    - 示例值：
+    ```
+    "Filters":[
+        {
+            "Key": "tagKey",
+            "Values": [
+                "tag-key-test"
+            ]
+        }
+    ]
+    ```
+
+- tag:tagKey 按照【标签键值对】进行过滤。tagKey使用具体的标签键进行替换，类型：String，必选：否，
+    - 参考 [示例1](https://cloud.tencent.com/document/api/614/95636#4.-.E7.A4.BA.E4.BE.8B) 使用。
+    ```
+    "Filters": [
+        {
+            "Key": "tag:tag-key-test",
+            "Values": [
+                "12"
+            ]
+        }
+    ]
+    ```
 
 每次请求的Filters的上限为10，Filter.Values的上限为100。
  * @method array getTopicIdRegionFilter() 获取按照topicId和regionId过滤。
-
 - topicId:日志主题Id。
     -  通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+    - 示例值：439a5304-08f9-484b-9c4d-46ff57133816
 - regionId
     - 1:广州
     - 4:上海
@@ -67,9 +121,9 @@ use TencentCloud\Common\AbstractModel;
     - 78:上海自动驾驶云
 
  * @method void setTopicIdRegionFilter(array $TopicIdRegionFilter) 设置按照topicId和regionId过滤。
-
 - topicId:日志主题Id。
     -  通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+    - 示例值：439a5304-08f9-484b-9c4d-46ff57133816
 - regionId
     - 1:广州
     - 4:上海
@@ -108,10 +162,37 @@ class DescribeDashboardsRequest extends AbstractModel
 
     /**
      * @var array - dashboardId 按照【仪表盘id】进行过滤，类型：String， 必选：否。
+    - 示例值：dashboard-522a5609-1f41-4b11-8086-5afd1d7574f5
 - dashboardName 按照【仪表盘名字】进行模糊搜索过滤，类型：String，必选：否。
-- dashboardRegion 按照【仪表盘地域】进行过滤，为了兼容老的仪表盘，通过云API创建的仪表盘没有地域属性，类型：String，必选：否。 [地域和访问域名](https://cloud.tencent.com/document/product/614/18940)，例如：ap-guangzhou
+    - 示例值：业务大盘
+- dashboardRegion 按照【仪表盘地域】进行过滤（兼容老的仪表盘），通过云API创建的仪表盘该属性，类型：String，必选：否。
+    - 参考  [地域和访问域名](https://cloud.tencent.com/document/product/614/18940)
+    - 示例：ap-guangzhou
 - tagKey 按照【标签键】进行过滤，类型：String，必选：否。
-- tag:tagKey 按照【标签键值对】进行过滤。tagKey使用具体的标签键进行替换，类型：String，必选：否，使用请参考[示例2](https://cloud.tencent.com/document/api/614/95636#4.-.E7.A4.BA.E4.BE.8B)。
+    - 示例值：
+    ```
+    "Filters":[
+        {
+            "Key": "tagKey",
+            "Values": [
+                "tag-key-test"
+            ]
+        }
+    ]
+    ```
+
+- tag:tagKey 按照【标签键值对】进行过滤。tagKey使用具体的标签键进行替换，类型：String，必选：否，
+    - 参考 [示例1](https://cloud.tencent.com/document/api/614/95636#4.-.E7.A4.BA.E4.BE.8B) 使用。
+    ```
+    "Filters": [
+        {
+            "Key": "tag:tag-key-test",
+            "Values": [
+                "12"
+            ]
+        }
+    ]
+    ```
 
 每次请求的Filters的上限为10，Filter.Values的上限为100。
      */
@@ -119,9 +200,9 @@ class DescribeDashboardsRequest extends AbstractModel
 
     /**
      * @var array 按照topicId和regionId过滤。
-
 - topicId:日志主题Id。
     -  通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+    - 示例值：439a5304-08f9-484b-9c4d-46ff57133816
 - regionId
     - 1:广州
     - 4:上海
@@ -153,16 +234,43 @@ class DescribeDashboardsRequest extends AbstractModel
      * @param integer $Offset 分页的偏移量，默认值为0。
      * @param integer $Limit 分页单页限制数目，默认值为20，最大值100。
      * @param array $Filters - dashboardId 按照【仪表盘id】进行过滤，类型：String， 必选：否。
+    - 示例值：dashboard-522a5609-1f41-4b11-8086-5afd1d7574f5
 - dashboardName 按照【仪表盘名字】进行模糊搜索过滤，类型：String，必选：否。
-- dashboardRegion 按照【仪表盘地域】进行过滤，为了兼容老的仪表盘，通过云API创建的仪表盘没有地域属性，类型：String，必选：否。 [地域和访问域名](https://cloud.tencent.com/document/product/614/18940)，例如：ap-guangzhou
+    - 示例值：业务大盘
+- dashboardRegion 按照【仪表盘地域】进行过滤（兼容老的仪表盘），通过云API创建的仪表盘该属性，类型：String，必选：否。
+    - 参考  [地域和访问域名](https://cloud.tencent.com/document/product/614/18940)
+    - 示例：ap-guangzhou
 - tagKey 按照【标签键】进行过滤，类型：String，必选：否。
-- tag:tagKey 按照【标签键值对】进行过滤。tagKey使用具体的标签键进行替换，类型：String，必选：否，使用请参考[示例2](https://cloud.tencent.com/document/api/614/95636#4.-.E7.A4.BA.E4.BE.8B)。
+    - 示例值：
+    ```
+    "Filters":[
+        {
+            "Key": "tagKey",
+            "Values": [
+                "tag-key-test"
+            ]
+        }
+    ]
+    ```
+
+- tag:tagKey 按照【标签键值对】进行过滤。tagKey使用具体的标签键进行替换，类型：String，必选：否，
+    - 参考 [示例1](https://cloud.tencent.com/document/api/614/95636#4.-.E7.A4.BA.E4.BE.8B) 使用。
+    ```
+    "Filters": [
+        {
+            "Key": "tag:tag-key-test",
+            "Values": [
+                "12"
+            ]
+        }
+    ]
+    ```
 
 每次请求的Filters的上限为10，Filter.Values的上限为100。
      * @param array $TopicIdRegionFilter 按照topicId和regionId过滤。
-
 - topicId:日志主题Id。
     -  通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+    - 示例值：439a5304-08f9-484b-9c4d-46ff57133816
 - regionId
     - 1:广州
     - 4:上海

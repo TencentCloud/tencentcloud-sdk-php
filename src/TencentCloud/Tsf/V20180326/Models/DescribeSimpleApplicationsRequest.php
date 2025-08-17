@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。关于Offset详见[API简介](https://cloud.tencent.com/document/api/213/568#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89)
  * @method string getMicroserviceType() 获取微服务类型
  * @method void setMicroserviceType(string $MicroserviceType) 设置微服务类型
- * @method array getApplicationResourceTypeList() 获取资源类型数组
- * @method void setApplicationResourceTypeList(array $ApplicationResourceTypeList) 设置资源类型数组
+ * @method array getApplicationResourceTypeList() 获取应用资源类型列表；DEF 表示默认资源类型；GW 表示网关资源类型
+ * @method void setApplicationResourceTypeList(array $ApplicationResourceTypeList) 设置应用资源类型列表；DEF 表示默认资源类型；GW 表示网关资源类型
  * @method string getSearchWord() 获取通过id和name进行关键词过滤
  * @method void setSearchWord(string $SearchWord) 设置通过id和name进行关键词过滤
  * @method boolean getDisableProgramAuthCheck() 获取是否关闭鉴权查询
@@ -76,7 +76,7 @@ class DescribeSimpleApplicationsRequest extends AbstractModel
     public $MicroserviceType;
 
     /**
-     * @var array 资源类型数组
+     * @var array 应用资源类型列表；DEF 表示默认资源类型；GW 表示网关资源类型
      */
     public $ApplicationResourceTypeList;
 
@@ -104,7 +104,7 @@ class DescribeSimpleApplicationsRequest extends AbstractModel
      * @param integer $Limit 数量限制，默认为20，最大值为100。关于Limit详见[API简介](https://cloud.tencent.com/document/api/213/568#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89)
      * @param integer $Offset 偏移量，默认为0。关于Offset详见[API简介](https://cloud.tencent.com/document/api/213/568#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89)
      * @param string $MicroserviceType 微服务类型
-     * @param array $ApplicationResourceTypeList 资源类型数组
+     * @param array $ApplicationResourceTypeList 应用资源类型列表；DEF 表示默认资源类型；GW 表示网关资源类型
      * @param string $SearchWord 通过id和name进行关键词过滤
      * @param boolean $DisableProgramAuthCheck 是否关闭鉴权查询
      * @param array $MicroserviceTypeList 查询指定微服务类型的应用列表

@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeout(integer $Timeout) 设置超时时间，单位秒
  * @method integer getSseReadTimeout() 获取sse服务超时时间，单位秒
  * @method void setSseReadTimeout(integer $SseReadTimeout) 设置sse服务超时时间，单位秒
+ * @method array getQuery() 获取mcp server query信息
+ * @method void setQuery(array $Query) 设置mcp server query信息
  */
 class AgentMCPServerInfo extends AbstractModel
 {
@@ -52,10 +54,16 @@ class AgentMCPServerInfo extends AbstractModel
     public $SseReadTimeout;
 
     /**
+     * @var array mcp server query信息
+     */
+    public $Query;
+
+    /**
      * @param string $McpServerUrl mcp server URL地址
      * @param array $Headers mcp server header信息
      * @param integer $Timeout 超时时间，单位秒
      * @param integer $SseReadTimeout sse服务超时时间，单位秒
+     * @param array $Query mcp server query信息
      */
     function __construct()
     {
@@ -89,6 +97,15 @@ class AgentMCPServerInfo extends AbstractModel
 
         if (array_key_exists("SseReadTimeout",$param) and $param["SseReadTimeout"] !== null) {
             $this->SseReadTimeout = $param["SseReadTimeout"];
+        }
+
+        if (array_key_exists("Query",$param) and $param["Query"] !== null) {
+            $this->Query = [];
+            foreach ($param["Query"] as $key => $value){
+                $obj = new AgentPluginQuery();
+                $obj->deserialize($value);
+                array_push($this->Query, $obj);
+            }
         }
     }
 }

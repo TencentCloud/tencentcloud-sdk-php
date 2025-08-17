@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemark(string $Remark) 设置备注信息
  * @method boolean getTraceFlag() 获取是否开启trace
  * @method void setTraceFlag(boolean $TraceFlag) 设置是否开启trace
+ * @method float getSendReceiveRatio() 获取限流生产消费比例
+ * @method void setSendReceiveRatio(float $SendReceiveRatio) 设置限流生产消费比例
  */
 class ModifyRabbitMQServerlessInstanceRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ModifyRabbitMQServerlessInstanceRequest extends AbstractModel
     public $TraceFlag;
 
     /**
+     * @var float 限流生产消费比例
+     */
+    public $SendReceiveRatio;
+
+    /**
      * @param string $InstanceId 实例id
      * @param string $ClusterName 集群名
      * @param string $Remark 备注信息
      * @param boolean $TraceFlag 是否开启trace
+     * @param float $SendReceiveRatio 限流生产消费比例
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class ModifyRabbitMQServerlessInstanceRequest extends AbstractModel
 
         if (array_key_exists("TraceFlag",$param) and $param["TraceFlag"] !== null) {
             $this->TraceFlag = $param["TraceFlag"];
+        }
+
+        if (array_key_exists("SendReceiveRatio",$param) and $param["SendReceiveRatio"] !== null) {
+            $this->SendReceiveRatio = $param["SendReceiveRatio"];
         }
     }
 }

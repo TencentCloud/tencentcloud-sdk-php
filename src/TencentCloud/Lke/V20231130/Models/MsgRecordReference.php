@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDocBizId(string $DocBizId) 设置文档业务id
  * @method string getQaBizId() 获取问答业务id
  * @method void setQaBizId(string $QaBizId) 设置问答业务id
+ * @method integer getIndex() 获取文档索引id
+ * @method void setIndex(integer $Index) 设置文档索引id
  */
 class MsgRecordReference extends AbstractModel
 {
@@ -87,6 +89,11 @@ class MsgRecordReference extends AbstractModel
     public $QaBizId;
 
     /**
+     * @var integer 文档索引id
+     */
+    public $Index;
+
+    /**
      * @param string $Id id
      * @param string $Url 链接
      * @param integer $Type 类型
@@ -96,6 +103,7 @@ class MsgRecordReference extends AbstractModel
      * @param string $KnowledgeBizId 知识库业务id
      * @param string $DocBizId 文档业务id
      * @param string $QaBizId 问答业务id
+     * @param integer $Index 文档索引id
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class MsgRecordReference extends AbstractModel
 
         if (array_key_exists("QaBizId",$param) and $param["QaBizId"] !== null) {
             $this->QaBizId = $param["QaBizId"];
+        }
+
+        if (array_key_exists("Index",$param) and $param["Index"] !== null) {
+            $this->Index = $param["Index"];
         }
     }
 }

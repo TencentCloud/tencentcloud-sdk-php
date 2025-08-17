@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppType(string $AppType) 设置应用类型(knowledge_qa应用管理， shared_knowlege 共享知识库)
  * @method string getBillingTag() 获取账单明细对应的自定义tag
  * @method void setBillingTag(string $BillingTag) 设置账单明细对应的自定义tag
+ * @method string getSpaceId() 获取空间id
+ * @method void setSpaceId(string $SpaceId) 设置空间id
  */
 class ListUsageCallDetailRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class ListUsageCallDetailRequest extends AbstractModel
     public $BillingTag;
 
     /**
+     * @var string 空间id
+     */
+    public $SpaceId;
+
+    /**
      * @param string $ModelName 模型标识
      * @param string $StartTime 开始时间
      * @param string $EndTime 结束时间
@@ -112,6 +119,7 @@ class ListUsageCallDetailRequest extends AbstractModel
      * @param array $SubScenes 筛选子场景
      * @param string $AppType 应用类型(knowledge_qa应用管理， shared_knowlege 共享知识库)
      * @param string $BillingTag 账单明细对应的自定义tag
+     * @param string $SpaceId 空间id
      */
     function __construct()
     {
@@ -168,6 +176,10 @@ class ListUsageCallDetailRequest extends AbstractModel
 
         if (array_key_exists("BillingTag",$param) and $param["BillingTag"] !== null) {
             $this->BillingTag = $param["BillingTag"];
+        }
+
+        if (array_key_exists("SpaceId",$param) and $param["SpaceId"] !== null) {
+            $this->SpaceId = $param["SpaceId"];
         }
     }
 }

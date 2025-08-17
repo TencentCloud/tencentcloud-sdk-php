@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) 设置结束时间戳, 单位为秒
  * @method array getAppBizIds() 获取应用id列表
  * @method void setAppBizIds(array $AppBizIds) 设置应用id列表
+ * @method string getSpaceId() 获取空间id
+ * @method void setSpaceId(string $SpaceId) 设置空间id
  */
 class DescribeSearchStatsGraphRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class DescribeSearchStatsGraphRequest extends AbstractModel
     public $AppBizIds;
 
     /**
+     * @var string 空间id
+     */
+    public $SpaceId;
+
+    /**
      * @param string $LoginUin 登录用户主账号(集成商模式必填)
      * @param string $LoginSubAccountUin 登录用户子账号(集成商模式必填)
      * @param array $UinAccount uin列表
@@ -88,6 +95,7 @@ class DescribeSearchStatsGraphRequest extends AbstractModel
      * @param string $StartTime 开始时间戳, 单位为秒
      * @param string $EndTime 结束时间戳, 单位为秒
      * @param array $AppBizIds 应用id列表
+     * @param string $SpaceId 空间id
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class DescribeSearchStatsGraphRequest extends AbstractModel
 
         if (array_key_exists("AppBizIds",$param) and $param["AppBizIds"] !== null) {
             $this->AppBizIds = $param["AppBizIds"];
+        }
+
+        if (array_key_exists("SpaceId",$param) and $param["SpaceId"] !== null) {
+            $this->SpaceId = $param["SpaceId"];
         }
     }
 }

@@ -60,6 +60,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTitle(string $Title) 设置标题
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getKnowledgeName() 获取知识库名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setKnowledgeName(string $KnowledgeName) 设置知识库名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getKnowledgeBizId() 获取知识库标识
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setKnowledgeBizId(string $KnowledgeBizId) 设置知识库标识
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AgentReference extends AbstractModel
 {
@@ -124,6 +132,18 @@ class AgentReference extends AbstractModel
     public $Title;
 
     /**
+     * @var string 知识库名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $KnowledgeName;
+
+    /**
+     * @var string 知识库标识
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $KnowledgeBizId;
+
+    /**
      * @param string $DocId 来源文档ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Id id
@@ -143,6 +163,10 @@ class AgentReference extends AbstractModel
      * @param integer $Index 搜索引擎索引
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Title 标题
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $KnowledgeName 知识库名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $KnowledgeBizId 知识库标识
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -196,6 +220,14 @@ class AgentReference extends AbstractModel
 
         if (array_key_exists("Title",$param) and $param["Title"] !== null) {
             $this->Title = $param["Title"];
+        }
+
+        if (array_key_exists("KnowledgeName",$param) and $param["KnowledgeName"] !== null) {
+            $this->KnowledgeName = $param["KnowledgeName"];
+        }
+
+        if (array_key_exists("KnowledgeBizId",$param) and $param["KnowledgeBizId"] !== null) {
+            $this->KnowledgeBizId = $param["KnowledgeBizId"];
         }
     }
 }

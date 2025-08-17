@@ -105,7 +105,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAiCall(AICallConfig $AiCall) 设置配置语音通话参数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getShareKnowledgeBases() 获取共享知识库关联配置
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setShareKnowledgeBases(array $ShareKnowledgeBases) 设置共享知识库关联配置
+注意：此字段可能返回 null，表示取不到有效值。
  * @method BackgroundImageConfig getBackgroundImage() 获取背景图相关信息
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBackgroundImage(BackgroundImageConfig $BackgroundImage) 设置背景图相关信息
@@ -113,6 +115,22 @@ use TencentCloud\Common\AbstractModel;
  * @method array getOpeningQuestions() 获取开场问题
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setOpeningQuestions(array $OpeningQuestions) 设置开场问题
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getLongMemoryOpen() 获取长期记忆开关
+ * @method void setLongMemoryOpen(boolean $LongMemoryOpen) 设置长期记忆开关
+ * @method integer getLongMemoryDay() 获取长期记忆时效
+ * @method void setLongMemoryDay(integer $LongMemoryDay) 设置长期记忆时效
+ * @method KnowledgeQaAgent getAgent() 获取agent配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAgent(KnowledgeQaAgent $Agent) 设置agent配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method KnowledgeModelConfig getKnowledgeModelConfig() 获取知识库模型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setKnowledgeModelConfig(KnowledgeModelConfig $KnowledgeModelConfig) 设置知识库模型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method KnowledgeAdvancedConfig getKnowledgeAdvancedConfig() 获取知识库高级设置
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setKnowledgeAdvancedConfig(KnowledgeAdvancedConfig $KnowledgeAdvancedConfig) 设置知识库高级设置
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class KnowledgeQaConfig extends AbstractModel
@@ -221,6 +239,7 @@ class KnowledgeQaConfig extends AbstractModel
 
     /**
      * @var array 共享知识库关联配置
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ShareKnowledgeBases;
 
@@ -235,6 +254,34 @@ class KnowledgeQaConfig extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $OpeningQuestions;
+
+    /**
+     * @var boolean 长期记忆开关
+     */
+    public $LongMemoryOpen;
+
+    /**
+     * @var integer 长期记忆时效
+     */
+    public $LongMemoryDay;
+
+    /**
+     * @var KnowledgeQaAgent agent配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Agent;
+
+    /**
+     * @var KnowledgeModelConfig 知识库模型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $KnowledgeModelConfig;
+
+    /**
+     * @var KnowledgeAdvancedConfig 知识库高级设置
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $KnowledgeAdvancedConfig;
 
     /**
      * @param string $Greeting 欢迎语，200字符以内
@@ -280,9 +327,18 @@ class KnowledgeQaConfig extends AbstractModel
      * @param AICallConfig $AiCall 配置语音通话参数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ShareKnowledgeBases 共享知识库关联配置
+注意：此字段可能返回 null，表示取不到有效值。
      * @param BackgroundImageConfig $BackgroundImage 背景图相关信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $OpeningQuestions 开场问题
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $LongMemoryOpen 长期记忆开关
+     * @param integer $LongMemoryDay 长期记忆时效
+     * @param KnowledgeQaAgent $Agent agent配置信息
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KnowledgeModelConfig $KnowledgeModelConfig 知识库模型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param KnowledgeAdvancedConfig $KnowledgeAdvancedConfig 知识库高级设置
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -397,6 +453,29 @@ class KnowledgeQaConfig extends AbstractModel
 
         if (array_key_exists("OpeningQuestions",$param) and $param["OpeningQuestions"] !== null) {
             $this->OpeningQuestions = $param["OpeningQuestions"];
+        }
+
+        if (array_key_exists("LongMemoryOpen",$param) and $param["LongMemoryOpen"] !== null) {
+            $this->LongMemoryOpen = $param["LongMemoryOpen"];
+        }
+
+        if (array_key_exists("LongMemoryDay",$param) and $param["LongMemoryDay"] !== null) {
+            $this->LongMemoryDay = $param["LongMemoryDay"];
+        }
+
+        if (array_key_exists("Agent",$param) and $param["Agent"] !== null) {
+            $this->Agent = new KnowledgeQaAgent();
+            $this->Agent->deserialize($param["Agent"]);
+        }
+
+        if (array_key_exists("KnowledgeModelConfig",$param) and $param["KnowledgeModelConfig"] !== null) {
+            $this->KnowledgeModelConfig = new KnowledgeModelConfig();
+            $this->KnowledgeModelConfig->deserialize($param["KnowledgeModelConfig"]);
+        }
+
+        if (array_key_exists("KnowledgeAdvancedConfig",$param) and $param["KnowledgeAdvancedConfig"] !== null) {
+            $this->KnowledgeAdvancedConfig = new KnowledgeAdvancedConfig();
+            $this->KnowledgeAdvancedConfig->deserialize($param["KnowledgeAdvancedConfig"]);
         }
     }
 }

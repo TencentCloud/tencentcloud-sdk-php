@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeContainerGroups请求参数结构体
  *
- * @method string getApplicationId() 获取分组所属应用ID。
- * @method void setApplicationId(string $ApplicationId) 设置分组所属应用ID。
+ * @method string getApplicationId() 获取分组所属【应用ID】，可通过调用[DescribeApplications](https://cloud.tencent.com/document/product/649/36090)查询已创建的应用列表或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)进行查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/product/649/36094)创建新的应用。
+ * @method void setApplicationId(string $ApplicationId) 设置分组所属【应用ID】，可通过调用[DescribeApplications](https://cloud.tencent.com/document/product/649/36090)查询已创建的应用列表或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)进行查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/product/649/36094)创建新的应用。
  * @method string getSearchWord() 获取搜索字段，模糊搜索groupName字段
  * @method void setSearchWord(string $SearchWord) 设置搜索字段，模糊搜索groupName字段
  * @method string getOrderBy() 获取排序字段，默认为 createTime字段，支持id， name， createTime
@@ -32,15 +32,15 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，取值从0开始
  * @method integer getLimit() 获取分页个数，默认为20， 取值应为1~50
  * @method void setLimit(integer $Limit) 设置分页个数，默认为20， 取值应为1~50
- * @method string getClusterId() 获取集群ID
- * @method void setClusterId(string $ClusterId) 设置集群ID
- * @method string getNamespaceId() 获取命名空间 ID
- * @method void setNamespaceId(string $NamespaceId) 设置命名空间 ID
+ * @method string getClusterId() 获取分组所属【集群ID】，可通过调用[DescribeClusters](https://cloud.tencent.com/document/product/649/85857)查询已创建的集群列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=docker)进行查看；也可以调用[CreateCluster](https://cloud.tencent.com/document/product/649/36049)创建新的集群。
+ * @method void setClusterId(string $ClusterId) 设置分组所属【集群ID】，可通过调用[DescribeClusters](https://cloud.tencent.com/document/product/649/85857)查询已创建的集群列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=docker)进行查看；也可以调用[CreateCluster](https://cloud.tencent.com/document/product/649/36049)创建新的集群。
+ * @method string getNamespaceId() 获取分组所属【命名空间 ID】，可通过调用[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已创建的命名空间列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)进行查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。
+ * @method void setNamespaceId(string $NamespaceId) 设置分组所属【命名空间 ID】，可通过调用[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已创建的命名空间列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)进行查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。
  */
 class DescribeContainerGroupsRequest extends AbstractModel
 {
     /**
-     * @var string 分组所属应用ID。
+     * @var string 分组所属【应用ID】，可通过调用[DescribeApplications](https://cloud.tencent.com/document/product/649/36090)查询已创建的应用列表或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)进行查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/product/649/36094)创建新的应用。
      */
     public $ApplicationId;
 
@@ -70,24 +70,24 @@ class DescribeContainerGroupsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 集群ID
+     * @var string 分组所属【集群ID】，可通过调用[DescribeClusters](https://cloud.tencent.com/document/product/649/85857)查询已创建的集群列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=docker)进行查看；也可以调用[CreateCluster](https://cloud.tencent.com/document/product/649/36049)创建新的集群。
      */
     public $ClusterId;
 
     /**
-     * @var string 命名空间 ID
+     * @var string 分组所属【命名空间 ID】，可通过调用[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已创建的命名空间列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)进行查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。
      */
     public $NamespaceId;
 
     /**
-     * @param string $ApplicationId 分组所属应用ID。
+     * @param string $ApplicationId 分组所属【应用ID】，可通过调用[DescribeApplications](https://cloud.tencent.com/document/product/649/36090)查询已创建的应用列表或登录[控制台](https://console.cloud.tencent.com/tsf/app?rid=1)进行查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/product/649/36094)创建新的应用。
      * @param string $SearchWord 搜索字段，模糊搜索groupName字段
      * @param string $OrderBy 排序字段，默认为 createTime字段，支持id， name， createTime
      * @param integer $OrderType 排序方式，默认为1：倒序排序，0：正序，1：倒序
      * @param integer $Offset 偏移量，取值从0开始
      * @param integer $Limit 分页个数，默认为20， 取值应为1~50
-     * @param string $ClusterId 集群ID
-     * @param string $NamespaceId 命名空间 ID
+     * @param string $ClusterId 分组所属【集群ID】，可通过调用[DescribeClusters](https://cloud.tencent.com/document/product/649/85857)查询已创建的集群列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=docker)进行查看；也可以调用[CreateCluster](https://cloud.tencent.com/document/product/649/36049)创建新的集群。
+     * @param string $NamespaceId 分组所属【命名空间 ID】，可通过调用[DescribeSimpleNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已创建的命名空间列表或登录[控制台](https://console.cloud.tencent.com/tsf/resource?rid=1&tab=namespace)进行查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新的命名空间。
      */
     function __construct()
     {

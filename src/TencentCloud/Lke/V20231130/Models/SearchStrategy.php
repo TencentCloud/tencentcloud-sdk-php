@@ -24,9 +24,21 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStrategyType(integer $StrategyType) 设置检索策略类型 0:混合检索，1：语义检索
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getTableEnhancement() 获取Excel检索增强开关
+ * @method boolean getTableEnhancement() 获取Excel检索增强开关, false关闭，true打开
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTableEnhancement(boolean $TableEnhancement) 设置Excel检索增强开关
+ * @method void setTableEnhancement(boolean $TableEnhancement) 设置Excel检索增强开关, false关闭，true打开
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEmbeddingModel() 获取向量模型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEmbeddingModel(string $EmbeddingModel) 设置向量模型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRerankModelSwitch() 获取结果重排序开关， on打开，off关闭
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRerankModelSwitch(string $RerankModelSwitch) 设置结果重排序开关， on打开，off关闭
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRerankModel() 获取结果重排序模型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRerankModel(string $RerankModel) 设置结果重排序模型
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class SearchStrategy extends AbstractModel
@@ -38,15 +50,39 @@ class SearchStrategy extends AbstractModel
     public $StrategyType;
 
     /**
-     * @var boolean Excel检索增强开关
+     * @var boolean Excel检索增强开关, false关闭，true打开
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TableEnhancement;
 
     /**
+     * @var string 向量模型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EmbeddingModel;
+
+    /**
+     * @var string 结果重排序开关， on打开，off关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RerankModelSwitch;
+
+    /**
+     * @var string 结果重排序模型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RerankModel;
+
+    /**
      * @param integer $StrategyType 检索策略类型 0:混合检索，1：语义检索
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $TableEnhancement Excel检索增强开关
+     * @param boolean $TableEnhancement Excel检索增强开关, false关闭，true打开
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EmbeddingModel 向量模型
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RerankModelSwitch 结果重排序开关， on打开，off关闭
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RerankModel 结果重排序模型
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -68,6 +104,18 @@ class SearchStrategy extends AbstractModel
 
         if (array_key_exists("TableEnhancement",$param) and $param["TableEnhancement"] !== null) {
             $this->TableEnhancement = $param["TableEnhancement"];
+        }
+
+        if (array_key_exists("EmbeddingModel",$param) and $param["EmbeddingModel"] !== null) {
+            $this->EmbeddingModel = $param["EmbeddingModel"];
+        }
+
+        if (array_key_exists("RerankModelSwitch",$param) and $param["RerankModelSwitch"] !== null) {
+            $this->RerankModelSwitch = $param["RerankModelSwitch"];
+        }
+
+        if (array_key_exists("RerankModel",$param) and $param["RerankModel"] !== null) {
+            $this->RerankModel = $param["RerankModel"];
         }
     }
 }

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeContainerGroupAttribute请求参数结构体
  *
- * @method string getGroupId() 获取部署组ID
- * @method void setGroupId(string $GroupId) 设置部署组ID
+ * @method string getGroupId() 获取部署组ID，按照【部署组ID】进行过滤，可通过调用DescribeGroups查询已创建的项目列表或登录控制台进行查看；也可以调用CreateGroup创建新的项目。部署组ID例如：group-ab958z6y
+ * @method void setGroupId(string $GroupId) 设置部署组ID，按照【部署组ID】进行过滤，可通过调用DescribeGroups查询已创建的项目列表或登录控制台进行查看；也可以调用CreateGroup创建新的项目。部署组ID例如：group-ab958z6y
  */
 class DescribeContainerGroupAttributeRequest extends AbstractModel
 {
     /**
-     * @var string 部署组ID
+     * @var string 部署组ID，按照【部署组ID】进行过滤，可通过调用DescribeGroups查询已创建的项目列表或登录控制台进行查看；也可以调用CreateGroup创建新的项目。部署组ID例如：group-ab958z6y
      */
     public $GroupId;
 
     /**
-     * @param string $GroupId 部署组ID
+     * @param string $GroupId 部署组ID，按照【部署组ID】进行过滤，可通过调用DescribeGroups查询已创建的项目列表或登录控制台进行查看；也可以调用CreateGroup创建新的项目。部署组ID例如：group-ab958z6y
      */
     function __construct()
     {

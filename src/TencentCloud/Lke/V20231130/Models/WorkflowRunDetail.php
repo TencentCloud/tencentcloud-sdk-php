@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWorkflowId(string $WorkflowId) 设置所属工作流ID
  * @method string getName() 获取名称
  * @method void setName(string $Name) 设置名称
+ * @method string getOutput() 获取工作流输出
+ * @method void setOutput(string $Output) 设置工作流输出
  * @method integer getState() 获取运行状态。0: 排队中；1: 运行中；2: 运行成功；3: 运行失败； 4: 已取消
  * @method void setState(integer $State) 设置运行状态。0: 排队中；1: 运行中；2: 运行成功；3: 运行失败； 4: 已取消
  * @method string getFailMessage() 获取错误信息
@@ -77,6 +79,11 @@ class WorkflowRunDetail extends AbstractModel
      * @var string 名称
      */
     public $Name;
+
+    /**
+     * @var string 工作流输出
+     */
+    public $Output;
 
     /**
      * @var integer 运行状态。0: 排队中；1: 运行中；2: 运行成功；3: 运行失败； 4: 已取消
@@ -134,6 +141,7 @@ class WorkflowRunDetail extends AbstractModel
      * @param string $WorkflowRunId 工作流运行实例的ID
      * @param string $WorkflowId 所属工作流ID
      * @param string $Name 名称
+     * @param string $Output 工作流输出
      * @param integer $State 运行状态。0: 排队中；1: 运行中；2: 运行成功；3: 运行失败； 4: 已取消
      * @param string $FailMessage 错误信息
      * @param integer $TotalTokens 消耗的token总数
@@ -176,6 +184,10 @@ class WorkflowRunDetail extends AbstractModel
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Output",$param) and $param["Output"] !== null) {
+            $this->Output = $param["Output"];
         }
 
         if (array_key_exists("State",$param) and $param["State"] !== null) {

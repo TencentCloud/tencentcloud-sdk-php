@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUser(UserBaseInfo $User) 设置用户信息
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getPermissionIds() 获取权限位信息
+ * @method void setPermissionIds(array $PermissionIds) 设置权限位信息
  */
 class KnowledgeDetailInfo extends AbstractModel
 {
@@ -54,12 +56,18 @@ class KnowledgeDetailInfo extends AbstractModel
     public $User;
 
     /**
+     * @var array 权限位信息
+     */
+    public $PermissionIds;
+
+    /**
      * @param KnowledgeBaseInfo $Knowledge 知识库信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $AppList 应用列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param UserBaseInfo $User 用户信息
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $PermissionIds 权限位信息
      */
     function __construct()
     {
@@ -91,6 +99,10 @@ class KnowledgeDetailInfo extends AbstractModel
         if (array_key_exists("User",$param) and $param["User"] !== null) {
             $this->User = new UserBaseInfo();
             $this->User->deserialize($param["User"]);
+        }
+
+        if (array_key_exists("PermissionIds",$param) and $param["PermissionIds"] !== null) {
+            $this->PermissionIds = $param["PermissionIds"];
         }
     }
 }

@@ -48,6 +48,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCateBizId(string $CateBizId) 设置分类ID
  * @method boolean getIsDownload() 获取是否可下载，IsRefer为true并且ReferUrlType为0时，该值才有意义
  * @method void setIsDownload(boolean $IsDownload) 设置是否可下载，IsRefer为true并且ReferUrlType为0时，该值才有意义
+ * @method array getModifyTypes() 获取需要修改的内容类型  0  无效 1 更新文档cos信息 2 更新文档引用信息 3 更新文档刷新频率 4 腾讯文档刷新
+ * @method void setModifyTypes(array $ModifyTypes) 设置需要修改的内容类型  0  无效 1 更新文档cos信息 2 更新文档引用信息 3 更新文档刷新频率 4 腾讯文档刷新
+ * @method UpdatePeriodInfo getUpdatePeriodInfo() 获取文档更新频率
+ * @method void setUpdatePeriodInfo(UpdatePeriodInfo $UpdatePeriodInfo) 设置文档更新频率
+ * @method string getSplitRule() 获取自定义切分规则
+ * @method void setSplitRule(string $SplitRule) 设置自定义切分规则
  */
 class ModifyDocRequest extends AbstractModel
 {
@@ -118,6 +124,21 @@ class ModifyDocRequest extends AbstractModel
     public $IsDownload;
 
     /**
+     * @var array 需要修改的内容类型  0  无效 1 更新文档cos信息 2 更新文档引用信息 3 更新文档刷新频率 4 腾讯文档刷新
+     */
+    public $ModifyTypes;
+
+    /**
+     * @var UpdatePeriodInfo 文档更新频率
+     */
+    public $UpdatePeriodInfo;
+
+    /**
+     * @var string 自定义切分规则
+     */
+    public $SplitRule;
+
+    /**
      * @param string $BotBizId 应用ID
      * @param string $DocBizId 文档ID
      * @param boolean $IsRefer 是否引用链接
@@ -132,6 +153,9 @@ class ModifyDocRequest extends AbstractModel
      * @param string $ExpireEnd 有效结束时间，unix时间戳，0代表永久有效
      * @param string $CateBizId 分类ID
      * @param boolean $IsDownload 是否可下载，IsRefer为true并且ReferUrlType为0时，该值才有意义
+     * @param array $ModifyTypes 需要修改的内容类型  0  无效 1 更新文档cos信息 2 更新文档引用信息 3 更新文档刷新频率 4 腾讯文档刷新
+     * @param UpdatePeriodInfo $UpdatePeriodInfo 文档更新频率
+     * @param string $SplitRule 自定义切分规则
      */
     function __construct()
     {
@@ -201,6 +225,19 @@ class ModifyDocRequest extends AbstractModel
 
         if (array_key_exists("IsDownload",$param) and $param["IsDownload"] !== null) {
             $this->IsDownload = $param["IsDownload"];
+        }
+
+        if (array_key_exists("ModifyTypes",$param) and $param["ModifyTypes"] !== null) {
+            $this->ModifyTypes = $param["ModifyTypes"];
+        }
+
+        if (array_key_exists("UpdatePeriodInfo",$param) and $param["UpdatePeriodInfo"] !== null) {
+            $this->UpdatePeriodInfo = new UpdatePeriodInfo();
+            $this->UpdatePeriodInfo->deserialize($param["UpdatePeriodInfo"]);
+        }
+
+        if (array_key_exists("SplitRule",$param) and $param["SplitRule"] !== null) {
+            $this->SplitRule = $param["SplitRule"];
         }
     }
 }

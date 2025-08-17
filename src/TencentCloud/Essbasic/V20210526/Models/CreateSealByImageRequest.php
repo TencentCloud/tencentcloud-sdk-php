@@ -98,6 +98,8 @@ use TencentCloud\Common\AbstractModel;
 <li>1.印章类型SealType是INVOICE类型时，此参数才会生效</li>
 <li>2.印章类型SealType是INVOICE类型，且该字段没有传入值或传入空时，会取该企业对应的统一社会信用代码作为默认的企业税号（<font color="red">如果是通过授权书授权方式认证的企业，此参数必传不能为空</font>）</li>
 </ul>
+ * @method string getSealDescription() 获取印章描述内容
+ * @method void setSealDescription(string $SealDescription) 设置印章描述内容
  */
 class CreateSealByImageRequest extends AbstractModel
 {
@@ -182,6 +184,11 @@ class CreateSealByImageRequest extends AbstractModel
     public $TaxIdentifyCode;
 
     /**
+     * @var string 印章描述内容
+     */
+    public $SealDescription;
+
+    /**
      * @param Agent $Agent 关于渠道应用的相关信息，包括渠道应用标识、第三方平台子客企业标识及第三方平台子客企业中的员工标识等内容，您可以参阅开发者中心所提供的 Agent 结构体以获取详细定义。
 
 此接口下面信息必填。
@@ -221,6 +228,7 @@ class CreateSealByImageRequest extends AbstractModel
 <li>1.印章类型SealType是INVOICE类型时，此参数才会生效</li>
 <li>2.印章类型SealType是INVOICE类型，且该字段没有传入值或传入空时，会取该企业对应的统一社会信用代码作为默认的企业税号（<font color="red">如果是通过授权书授权方式认证的企业，此参数必传不能为空</font>）</li>
 </ul>
+     * @param string $SealDescription 印章描述内容
      */
     function __construct()
     {
@@ -275,6 +283,10 @@ class CreateSealByImageRequest extends AbstractModel
 
         if (array_key_exists("TaxIdentifyCode",$param) and $param["TaxIdentifyCode"] !== null) {
             $this->TaxIdentifyCode = $param["TaxIdentifyCode"];
+        }
+
+        if (array_key_exists("SealDescription",$param) and $param["SealDescription"] !== null) {
+            $this->SealDescription = $param["SealDescription"];
         }
     }
 }

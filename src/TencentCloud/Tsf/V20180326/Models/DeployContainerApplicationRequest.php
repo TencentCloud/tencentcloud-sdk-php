@@ -134,6 +134,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvClean(boolean $EnvClean) 设置是否清除Env信息
  * @method string getDeployDesc() 获取本次部署的描述信息
  * @method void setDeployDesc(string $DeployDesc) 设置本次部署的描述信息
+ * @method string getK8sNamespaceName() 获取k8s命名空间名称
+ * @method void setK8sNamespaceName(string $K8sNamespaceName) 设置k8s命名空间名称
+ * @method boolean getStaticIpEnabled() 获取是否启用静态IP
+ * @method void setStaticIpEnabled(boolean $StaticIpEnabled) 设置是否启用静态IP
+ * @method string getPodManagementPolicyType() 获取启动策略[OrderedReady/Parallel]
+ * @method void setPodManagementPolicyType(string $PodManagementPolicyType) 设置启动策略[OrderedReady/Parallel]
+ * @method integer getPartition() 获取滚动更新分区序号
+ * @method void setPartition(integer $Partition) 设置滚动更新分区序号
  */
 class DeployContainerApplicationRequest extends AbstractModel
 {
@@ -423,6 +431,26 @@ class DeployContainerApplicationRequest extends AbstractModel
     public $DeployDesc;
 
     /**
+     * @var string k8s命名空间名称
+     */
+    public $K8sNamespaceName;
+
+    /**
+     * @var boolean 是否启用静态IP
+     */
+    public $StaticIpEnabled;
+
+    /**
+     * @var string 启动策略[OrderedReady/Parallel]
+     */
+    public $PodManagementPolicyType;
+
+    /**
+     * @var integer 滚动更新分区序号
+     */
+    public $Partition;
+
+    /**
      * @param string $ApplicationId 应用ID
      * @param ContainerGroupObservabilityConfig $ObservabilityConfig 可观测配置
      * @param string $ClusterId 集群ID
@@ -480,6 +508,10 @@ class DeployContainerApplicationRequest extends AbstractModel
      * @param boolean $ServiceClean 是否清除Service信息
      * @param boolean $EnvClean 是否清除Env信息
      * @param string $DeployDesc 本次部署的描述信息
+     * @param string $K8sNamespaceName k8s命名空间名称
+     * @param boolean $StaticIpEnabled 是否启用静态IP
+     * @param string $PodManagementPolicyType 启动策略[OrderedReady/Parallel]
+     * @param integer $Partition 滚动更新分区序号
      */
     function __construct()
     {
@@ -766,6 +798,22 @@ class DeployContainerApplicationRequest extends AbstractModel
 
         if (array_key_exists("DeployDesc",$param) and $param["DeployDesc"] !== null) {
             $this->DeployDesc = $param["DeployDesc"];
+        }
+
+        if (array_key_exists("K8sNamespaceName",$param) and $param["K8sNamespaceName"] !== null) {
+            $this->K8sNamespaceName = $param["K8sNamespaceName"];
+        }
+
+        if (array_key_exists("StaticIpEnabled",$param) and $param["StaticIpEnabled"] !== null) {
+            $this->StaticIpEnabled = $param["StaticIpEnabled"];
+        }
+
+        if (array_key_exists("PodManagementPolicyType",$param) and $param["PodManagementPolicyType"] !== null) {
+            $this->PodManagementPolicyType = $param["PodManagementPolicyType"];
+        }
+
+        if (array_key_exists("Partition",$param) and $param["Partition"] !== null) {
+            $this->Partition = $param["Partition"];
         }
     }
 }

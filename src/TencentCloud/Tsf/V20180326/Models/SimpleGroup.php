@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupResourceType(string $GroupResourceType) 设置部署组资源类型
  * @method string getAppMicroServiceType() 获取应用微服务类型
  * @method void setAppMicroServiceType(string $AppMicroServiceType) 设置应用微服务类型
+ * @method string getK8sNamespaceName() 获取k8s 命名空间名称
+ * @method void setK8sNamespaceName(string $K8sNamespaceName) 设置k8s 命名空间名称
  */
 class SimpleGroup extends AbstractModel
 {
@@ -115,6 +117,11 @@ class SimpleGroup extends AbstractModel
     public $AppMicroServiceType;
 
     /**
+     * @var string k8s 命名空间名称
+     */
+    public $K8sNamespaceName;
+
+    /**
      * @param string $GroupId 部署组ID
      * @param string $GroupName 部署组名称
      * @param string $ApplicationId 应用ID
@@ -128,6 +135,7 @@ class SimpleGroup extends AbstractModel
      * @param string $StartupParameters 启动参数
      * @param string $GroupResourceType 部署组资源类型
      * @param string $AppMicroServiceType 应用微服务类型
+     * @param string $K8sNamespaceName k8s 命名空间名称
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class SimpleGroup extends AbstractModel
 
         if (array_key_exists("AppMicroServiceType",$param) and $param["AppMicroServiceType"] !== null) {
             $this->AppMicroServiceType = $param["AppMicroServiceType"];
+        }
+
+        if (array_key_exists("K8sNamespaceName",$param) and $param["K8sNamespaceName"] !== null) {
+            $this->K8sNamespaceName = $param["K8sNamespaceName"];
         }
     }
 }

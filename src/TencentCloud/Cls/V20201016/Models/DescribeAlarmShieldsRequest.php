@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAlarmShields请求参数结构体
  *
- * @method string getAlarmNoticeId() 获取通知渠道组id。
- * @method void setAlarmNoticeId(string $AlarmNoticeId) 设置通知渠道组id。
+ * @method string getAlarmNoticeId() 获取通知渠道组id。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/api/614/56462)获取通知渠道组id
+ * @method void setAlarmNoticeId(string $AlarmNoticeId) 设置通知渠道组id。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/api/614/56462)获取通知渠道组id
  * @method array getFilters() 获取- taskId:按照【规则id】进行过滤。类型：String  必选：否
 - status:按照【规则状态】进行过滤。类型：String。 支持 0:暂未生效，1:生效中，2:已失效。 必选：否
 每次请求的Filters的上限为10，Filter.Values的上限为100。
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAlarmShieldsRequest extends AbstractModel
 {
     /**
-     * @var string 通知渠道组id。
+     * @var string 通知渠道组id。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/api/614/56462)获取通知渠道组id
      */
     public $AlarmNoticeId;
 
@@ -58,7 +58,7 @@ class DescribeAlarmShieldsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param string $AlarmNoticeId 通知渠道组id。
+     * @param string $AlarmNoticeId 通知渠道组id。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/api/614/56462)获取通知渠道组id
      * @param array $Filters - taskId:按照【规则id】进行过滤。类型：String  必选：否
 - status:按照【规则状态】进行过滤。类型：String。 支持 0:暂未生效，1:生效中，2:已失效。 必选：否
 每次请求的Filters的上限为10，Filter.Values的上限为100。

@@ -21,9 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * DeleteCosRecharge请求参数结构体
  *
  * @method string getId() 获取COS导入配置Id。
-- 通过[获取投递任务列表](https://cloud.tencent.com/document/api/614/58745)获取COS导入配置Id。
+- 通过 [获取cos导入配置](https://cloud.tencent.com/document/product/614/88099) 获取COS导入配置Id。
  * @method void setId(string $Id) 设置COS导入配置Id。
-- 通过[获取投递任务列表](https://cloud.tencent.com/document/api/614/58745)获取COS导入配置Id。
+- 通过 [获取cos导入配置](https://cloud.tencent.com/document/product/614/88099) 获取COS导入配置Id。
  * @method string getTopicId() 获取日志主题Id。
 -  通过[获取日志主题列表](https://cloud.tencent.com/document/api/614/56454)获取日志主题Id。
  * @method void setTopicId(string $TopicId) 设置日志主题Id。
@@ -33,7 +33,7 @@ class DeleteCosRechargeRequest extends AbstractModel
 {
     /**
      * @var string COS导入配置Id。
-- 通过[获取投递任务列表](https://cloud.tencent.com/document/api/614/58745)获取COS导入配置Id。
+- 通过 [获取cos导入配置](https://cloud.tencent.com/document/product/614/88099) 获取COS导入配置Id。
      */
     public $Id;
 
@@ -45,7 +45,7 @@ class DeleteCosRechargeRequest extends AbstractModel
 
     /**
      * @param string $Id COS导入配置Id。
-- 通过[获取投递任务列表](https://cloud.tencent.com/document/api/614/58745)获取COS导入配置Id。
+- 通过 [获取cos导入配置](https://cloud.tencent.com/document/product/614/88099) 获取COS导入配置Id。
      * @param string $TopicId 日志主题Id。
 -  通过[获取日志主题列表](https://cloud.tencent.com/document/api/614/56454)获取日志主题Id。
      */

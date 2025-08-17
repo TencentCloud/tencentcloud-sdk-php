@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCrossBackupStatus(string $CrossBackupStatus) 设置跨地域备份状态，enable-开启，disable-关闭
  * @method string getCrossRegion() 获取跨地域备份目标地域
  * @method void setCrossRegion(string $CrossRegion) 设置跨地域备份目标地域
- * @method string getOrderBy() 获取排序字段，默认default-按照备份空间降序排序，data-按照数据备份排序，log-按照日志备份培训
- * @method void setOrderBy(string $OrderBy) 设置排序字段，默认default-按照备份空间降序排序，data-按照数据备份排序，log-按照日志备份培训
+ * @method string getOrderBy() 获取排序字段，默认default-按照备份空间降序排序，data-按照数据备份排序，log-按照日志备份
+ * @method void setOrderBy(string $OrderBy) 设置排序字段，默认default-按照备份空间降序排序，data-按照数据备份排序，log-按照日志备份
  * @method string getOrderByType() 获取排序规则（desc-降序，asc-升序），默认desc
  * @method void setOrderByType(string $OrderByType) 设置排序规则（desc-降序，asc-升序），默认desc
  */
@@ -70,7 +70,7 @@ class DescribeCrossBackupStatisticalRequest extends AbstractModel
     public $CrossRegion;
 
     /**
-     * @var string 排序字段，默认default-按照备份空间降序排序，data-按照数据备份排序，log-按照日志备份培训
+     * @var string 排序字段，默认default-按照备份空间降序排序，data-按照数据备份排序，log-按照日志备份
      */
     public $OrderBy;
 
@@ -86,7 +86,7 @@ class DescribeCrossBackupStatisticalRequest extends AbstractModel
      * @param array $InstanceNameSet 实例名称列表
      * @param string $CrossBackupStatus 跨地域备份状态，enable-开启，disable-关闭
      * @param string $CrossRegion 跨地域备份目标地域
-     * @param string $OrderBy 排序字段，默认default-按照备份空间降序排序，data-按照数据备份排序，log-按照日志备份培训
+     * @param string $OrderBy 排序字段，默认default-按照备份空间降序排序，data-按照数据备份排序，log-按照日志备份
      * @param string $OrderByType 排序规则（desc-降序，asc-升序），默认desc
      */
     function __construct()

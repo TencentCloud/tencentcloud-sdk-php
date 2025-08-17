@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVarDefaultValue(string $VarDefaultValue) 设置自定义变量默认值
  * @method string getVarDefaultFileName() 获取自定义变量文件默认名称
  * @method void setVarDefaultFileName(string $VarDefaultFileName) 设置自定义变量文件默认名称
+ * @method integer getVarModuleType() 获取变量类型
+ * @method void setVarModuleType(integer $VarModuleType) 设置变量类型
  */
 class TaskFLowVar extends AbstractModel
 {
@@ -75,6 +77,11 @@ class TaskFLowVar extends AbstractModel
     public $VarDefaultFileName;
 
     /**
+     * @var integer 变量类型
+     */
+    public $VarModuleType;
+
+    /**
      * @param string $VarId 变量ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VarName 变量名称
@@ -84,6 +91,7 @@ class TaskFLowVar extends AbstractModel
 
      * @param string $VarDefaultValue 自定义变量默认值
      * @param string $VarDefaultFileName 自定义变量文件默认名称
+     * @param integer $VarModuleType 变量类型
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class TaskFLowVar extends AbstractModel
 
         if (array_key_exists("VarDefaultFileName",$param) and $param["VarDefaultFileName"] !== null) {
             $this->VarDefaultFileName = $param["VarDefaultFileName"];
+        }
+
+        if (array_key_exists("VarModuleType",$param) and $param["VarModuleType"] !== null) {
+            $this->VarModuleType = $param["VarModuleType"];
         }
     }
 }

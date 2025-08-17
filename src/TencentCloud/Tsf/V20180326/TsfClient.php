@@ -117,7 +117,7 @@ use TencentCloud\Tsf\V20180326\Models as Models;
 - 当类型是 instance 时，GroupId是必填项
  * @method Models\DescribeContainerGroupAttributeResponse DescribeContainerGroupAttribute(Models\DescribeContainerGroupAttributeRequest $req) 获取部署组其他字段-用于前端并发调用
  * @method Models\DescribeContainerGroupDeployInfoResponse DescribeContainerGroupDeployInfo(Models\DescribeContainerGroupDeployInfoRequest $req) 获取部署组详情
- * @method Models\DescribeContainerGroupDetailResponse DescribeContainerGroupDetail(Models\DescribeContainerGroupDetailRequest $req) 容器部署组详情（已废弃，请使用  DescribeContainerGroupDeployInfo）
+ * @method Models\DescribeContainerGroupDetailResponse DescribeContainerGroupDetail(Models\DescribeContainerGroupDetailRequest $req) 容器部署组详情（已废弃，请使用  [DescribeContainerGroupDeployInfo](https://cloud.tencent.com/document/product/649/67221)）
  * @method Models\DescribeContainerGroupsResponse DescribeContainerGroups(Models\DescribeContainerGroupsRequest $req) 容器部署组列表
  * @method Models\DescribeCreateGatewayApiStatusResponse DescribeCreateGatewayApiStatus(Models\DescribeCreateGatewayApiStatusRequest $req) 查询一键导入API分组任务的状态
  * @method Models\DescribeDeliveryConfigResponse DescribeDeliveryConfig(Models\DescribeDeliveryConfigRequest $req) 获取单个投递项配置信息

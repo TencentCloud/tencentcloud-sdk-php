@@ -56,6 +56,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLaneGroupId(string $LaneGroupId) 设置泳道部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method boolean getDeleteDisabled() 获取是否禁用删除。
+true：禁用
+false：取消禁用
+ * @method void setDeleteDisabled(boolean $DeleteDisabled) 设置是否禁用删除。
+true：禁用
+false：取消禁用
+ * @method string getDeleteDisabledReason() 获取禁用原因
+ * @method void setDeleteDisabledReason(string $DeleteDisabledReason) 设置禁用原因
  */
 class LaneInfo extends AbstractModel
 {
@@ -114,6 +122,18 @@ class LaneInfo extends AbstractModel
     public $LaneGroupId;
 
     /**
+     * @var boolean 是否禁用删除。
+true：禁用
+false：取消禁用
+     */
+    public $DeleteDisabled;
+
+    /**
+     * @var string 禁用原因
+     */
+    public $DeleteDisabledReason;
+
+    /**
      * @param string $LaneId 泳道ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LaneName 泳道名称
@@ -132,6 +152,10 @@ class LaneInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LaneGroupId 泳道部署组ID
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param boolean $DeleteDisabled 是否禁用删除。
+true：禁用
+false：取消禁用
+     * @param string $DeleteDisabledReason 禁用原因
      */
     function __construct()
     {
@@ -185,6 +209,14 @@ class LaneInfo extends AbstractModel
 
         if (array_key_exists("LaneGroupId",$param) and $param["LaneGroupId"] !== null) {
             $this->LaneGroupId = $param["LaneGroupId"];
+        }
+
+        if (array_key_exists("DeleteDisabled",$param) and $param["DeleteDisabled"] !== null) {
+            $this->DeleteDisabled = $param["DeleteDisabled"];
+        }
+
+        if (array_key_exists("DeleteDisabledReason",$param) and $param["DeleteDisabledReason"] !== null) {
+            $this->DeleteDisabledReason = $param["DeleteDisabledReason"];
         }
     }
 }

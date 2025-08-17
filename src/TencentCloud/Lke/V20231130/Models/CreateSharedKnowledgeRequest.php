@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKnowledgeDescription(string $KnowledgeDescription) 设置共享知识库描述，字符数量上限2000
  * @method string getEmbeddingModel() 获取Embedding模型，字符数量上限128
  * @method void setEmbeddingModel(string $EmbeddingModel) 设置Embedding模型，字符数量上限128
+ * @method integer getKnowledgeType() 获取共享知识库类型，0普通，1公众号
+ * @method void setKnowledgeType(integer $KnowledgeType) 设置共享知识库类型，0普通，1公众号
  */
 class CreateSharedKnowledgeRequest extends AbstractModel
 {
@@ -41,13 +43,20 @@ class CreateSharedKnowledgeRequest extends AbstractModel
 
     /**
      * @var string Embedding模型，字符数量上限128
+     * @deprecated
      */
     public $EmbeddingModel;
+
+    /**
+     * @var integer 共享知识库类型，0普通，1公众号
+     */
+    public $KnowledgeType;
 
     /**
      * @param string $KnowledgeName 共享知识库名称，字符数量范围：[1, 50]
      * @param string $KnowledgeDescription 共享知识库描述，字符数量上限2000
      * @param string $EmbeddingModel Embedding模型，字符数量上限128
+     * @param integer $KnowledgeType 共享知识库类型，0普通，1公众号
      */
     function __construct()
     {
@@ -72,6 +81,10 @@ class CreateSharedKnowledgeRequest extends AbstractModel
 
         if (array_key_exists("EmbeddingModel",$param) and $param["EmbeddingModel"] !== null) {
             $this->EmbeddingModel = $param["EmbeddingModel"];
+        }
+
+        if (array_key_exists("KnowledgeType",$param) and $param["KnowledgeType"] !== null) {
+            $this->KnowledgeType = $param["KnowledgeType"];
         }
     }
 }

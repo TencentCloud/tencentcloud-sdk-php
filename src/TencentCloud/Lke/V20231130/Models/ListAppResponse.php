@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTotal() 获取数量
  * @method void setTotal(string $Total) 设置数量
- * @method array getList() 获取标签列表
- * @method void setList(array $List) 设置标签列表
+ * @method array getList() 获取应用列表
+ * @method void setList(array $List) 设置应用列表
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -35,7 +35,7 @@ class ListAppResponse extends AbstractModel
     public $Total;
 
     /**
-     * @var array 标签列表
+     * @var array 应用列表
      */
     public $List;
 
@@ -46,7 +46,7 @@ class ListAppResponse extends AbstractModel
 
     /**
      * @param string $Total 数量
-     * @param array $List 标签列表
+     * @param array $List 应用列表
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

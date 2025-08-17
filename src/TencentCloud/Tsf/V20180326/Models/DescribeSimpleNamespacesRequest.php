@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。关于Offset详见[API简介](https://cloud.tencent.com/document/api/213/568#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89)
  * @method string getNamespaceId() 获取命名空间ID，按照【命名空间ID】进行过滤，可通过调用[DescribeNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已创建的命名空间列表或登录控制台进行查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新命名空间。
  * @method void setNamespaceId(string $NamespaceId) 设置命名空间ID，按照【命名空间ID】进行过滤，可通过调用[DescribeNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已创建的命名空间列表或登录控制台进行查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新命名空间。
- * @method array getNamespaceResourceTypeList() 获取查询资源类型列表
- * @method void setNamespaceResourceTypeList(array $NamespaceResourceTypeList) 设置查询资源类型列表
+ * @method array getNamespaceResourceTypeList() 获取查询资源类型列表；DEF 表示默认资源类型；GW 表示网关资源类型
+ * @method void setNamespaceResourceTypeList(array $NamespaceResourceTypeList) 设置查询资源类型列表；DEF 表示默认资源类型；GW 表示网关资源类型
  * @method string getSearchWord() 获取通过id和name进行过滤
  * @method void setSearchWord(string $SearchWord) 设置通过id和name进行过滤
  * @method array getNamespaceTypeList() 获取查询的命名空间类型列表。DEF：默认普通命名空间。GLOBAL：全局命名空间。
@@ -71,7 +71,7 @@ class DescribeSimpleNamespacesRequest extends AbstractModel
     public $NamespaceId;
 
     /**
-     * @var array 查询资源类型列表
+     * @var array 查询资源类型列表；DEF 表示默认资源类型；GW 表示网关资源类型
      */
     public $NamespaceResourceTypeList;
 
@@ -106,7 +106,7 @@ class DescribeSimpleNamespacesRequest extends AbstractModel
      * @param integer $Limit 数量限制，默认为20，最大值为100。关于Limit详见[API简介](https://cloud.tencent.com/document/api/213/568#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89)
      * @param integer $Offset 偏移量，默认为0。关于Offset详见[API简介](https://cloud.tencent.com/document/api/213/568#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89)
      * @param string $NamespaceId 命名空间ID，按照【命名空间ID】进行过滤，可通过调用[DescribeNamespaces](https://cloud.tencent.com/document/product/649/36096)查询已创建的命名空间列表或登录控制台进行查看；也可以调用[CreateNamespace](https://cloud.tencent.com/document/product/649/36098)创建新命名空间。
-     * @param array $NamespaceResourceTypeList 查询资源类型列表
+     * @param array $NamespaceResourceTypeList 查询资源类型列表；DEF 表示默认资源类型；GW 表示网关资源类型
      * @param string $SearchWord 通过id和name进行过滤
      * @param array $NamespaceTypeList 查询的命名空间类型列表。DEF：默认普通命名空间。GLOBAL：全局命名空间。
      * @param string $NamespaceName 通过命名空间名精确过滤

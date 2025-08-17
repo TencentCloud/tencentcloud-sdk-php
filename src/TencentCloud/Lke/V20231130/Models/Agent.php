@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsStartingAgent(boolean $IsStartingAgent) 设置当前Agent是否是启动Agent
  * @method integer getAgentType() 获取Agent类型; 0: 未指定类型; 1: 知识库检索Agent
  * @method void setAgentType(integer $AgentType) 设置Agent类型; 0: 未指定类型; 1: 知识库检索Agent
+ * @method integer getAgentMode() 获取0 自由转交，1 计划与执行
+ * @method void setAgentMode(integer $AgentMode) 设置0 自由转交，1 计划与执行
  */
 class Agent extends AbstractModel
 {
@@ -108,6 +110,11 @@ class Agent extends AbstractModel
     public $AgentType;
 
     /**
+     * @var integer 0 自由转交，1 计划与执行
+     */
+    public $AgentMode;
+
+    /**
      * @param string $AgentId AgentID
      * @param string $WorkflowId WorkflowID，非空则当前Agent从workflow转换而来
      * @param string $Name Agent名称，同一个应用内，Agent名称不能重复
@@ -120,6 +127,7 @@ class Agent extends AbstractModel
      * @param array $Plugins Agent可使用的插件列表
      * @param boolean $IsStartingAgent 当前Agent是否是启动Agent
      * @param integer $AgentType Agent类型; 0: 未指定类型; 1: 知识库检索Agent
+     * @param integer $AgentMode 0 自由转交，1 计划与执行
      */
     function __construct()
     {
@@ -191,6 +199,10 @@ class Agent extends AbstractModel
 
         if (array_key_exists("AgentType",$param) and $param["AgentType"] !== null) {
             $this->AgentType = $param["AgentType"];
+        }
+
+        if (array_key_exists("AgentMode",$param) and $param["AgentMode"] !== null) {
+            $this->AgentMode = $param["AgentMode"];
         }
     }
 }

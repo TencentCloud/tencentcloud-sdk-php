@@ -22,12 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getBotBizId() 获取应用ID
  * @method void setBotBizId(string $BotBizId) 设置应用ID
- * @method string getFileName() 获取文档名称
-
- * @method void setFileName(string $FileName) 设置文档名称
-
- * @method array getStatus() 获取文档状态： 7 审核中、8 审核失败、10 待发布、11 发布中、12 已发布、13 学习中、14 学习失败 20 已过期
- * @method void setStatus(array $Status) 设置文档状态： 7 审核中、8 审核失败、10 待发布、11 发布中、12 已发布、13 学习中、14 学习失败 20 已过期
+ * @method string getFileName() 获取文档名称。可通过文档名称检索支持生成问答的文档，不支持xlsx、xls、csv格式
+ * @method void setFileName(string $FileName) 设置文档名称。可通过文档名称检索支持生成问答的文档，不支持xlsx、xls、csv格式
+ * @method array getStatus() 获取文档状态筛选。文档状态对应码为7 审核中、8 审核失败、10 待发布、11 发布中、12 已发布、13 学习中、14 学习失败 20 已过期。其中仅状态为10 待发布、12 已发布的文档支持生成问答
+ * @method void setStatus(array $Status) 设置文档状态筛选。文档状态对应码为7 审核中、8 审核失败、10 待发布、11 发布中、12 已发布、13 学习中、14 学习失败 20 已过期。其中仅状态为10 待发布、12 已发布的文档支持生成问答
  */
 class ListSelectDocRequest extends AbstractModel
 {
@@ -37,21 +35,19 @@ class ListSelectDocRequest extends AbstractModel
     public $BotBizId;
 
     /**
-     * @var string 文档名称
-
+     * @var string 文档名称。可通过文档名称检索支持生成问答的文档，不支持xlsx、xls、csv格式
      */
     public $FileName;
 
     /**
-     * @var array 文档状态： 7 审核中、8 审核失败、10 待发布、11 发布中、12 已发布、13 学习中、14 学习失败 20 已过期
+     * @var array 文档状态筛选。文档状态对应码为7 审核中、8 审核失败、10 待发布、11 发布中、12 已发布、13 学习中、14 学习失败 20 已过期。其中仅状态为10 待发布、12 已发布的文档支持生成问答
      */
     public $Status;
 
     /**
      * @param string $BotBizId 应用ID
-     * @param string $FileName 文档名称
-
-     * @param array $Status 文档状态： 7 审核中、8 审核失败、10 待发布、11 发布中、12 已发布、13 学习中、14 学习失败 20 已过期
+     * @param string $FileName 文档名称。可通过文档名称检索支持生成问答的文档，不支持xlsx、xls、csv格式
+     * @param array $Status 文档状态筛选。文档状态对应码为7 审核中、8 审核失败、10 待发布、11 发布中、12 已发布、13 学习中、14 学习失败 20 已过期。其中仅状态为10 待发布、12 已发布的文档支持生成问答
      */
     function __construct()
     {

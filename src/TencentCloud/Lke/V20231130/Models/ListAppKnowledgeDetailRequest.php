@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageSize(integer $PageSize) 设置页面大小
  * @method array getAppBizIds() 获取应用ID列表
  * @method void setAppBizIds(array $AppBizIds) 设置应用ID列表
+ * @method string getSpaceId() 获取空间列表
+ * @method void setSpaceId(string $SpaceId) 设置空间列表
  */
 class ListAppKnowledgeDetailRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ListAppKnowledgeDetailRequest extends AbstractModel
     public $AppBizIds;
 
     /**
+     * @var string 空间列表
+     */
+    public $SpaceId;
+
+    /**
      * @param integer $PageNumber 页码
      * @param integer $PageSize 页面大小
      * @param array $AppBizIds 应用ID列表
+     * @param string $SpaceId 空间列表
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ListAppKnowledgeDetailRequest extends AbstractModel
 
         if (array_key_exists("AppBizIds",$param) and $param["AppBizIds"] !== null) {
             $this->AppBizIds = $param["AppBizIds"];
+        }
+
+        if (array_key_exists("SpaceId",$param) and $param["SpaceId"] !== null) {
+            $this->SpaceId = $param["SpaceId"];
         }
     }
 }

@@ -30,14 +30,24 @@ use TencentCloud\Common\AbstractModel;
 - 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
  * @method void setTopicId(string $TopicId) 设置日志主题id
 - 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
- * @method HostFileInfo getHostFile() 获取自建k8s-节点文件配置信息,包括文件路径、名称及元数据相关信息，详细参考https://cloud.tencent.com/document/api/614/56471#HostFileInfo
- * @method void setHostFile(HostFileInfo $HostFile) 设置自建k8s-节点文件配置信息,包括文件路径、名称及元数据相关信息，详细参考https://cloud.tencent.com/document/api/614/56471#HostFileInfo
+ * @method HostFileInfo getHostFile() 获取自建k8s-节点文件配置信息,包括文件路径、名称及元数据相关信息。
+
+- 详情参考  [HostFileInfo](https://cloud.tencent.com/document/api/614/56471#HostFileInfo) 文档。
+ * @method void setHostFile(HostFileInfo $HostFile) 设置自建k8s-节点文件配置信息,包括文件路径、名称及元数据相关信息。
+
+- 详情参考  [HostFileInfo](https://cloud.tencent.com/document/api/614/56471#HostFileInfo) 文档。
  * @method ContainerFileInfo getContainerFile() 获取采集配置标记。
 - 目前只支持label_k8s，用于标记自建k8s集群使用的采集配置
+- 详情参考 [ ContainerFileInfo](https://cloud.tencent.com/document/api/614/56471#ContainerFileInfo) 文档
  * @method void setContainerFile(ContainerFileInfo $ContainerFile) 设置采集配置标记。
 - 目前只支持label_k8s，用于标记自建k8s集群使用的采集配置
- * @method ContainerStdoutInfo getContainerStdout() 获取自建k8s-容器标准输出信息，包括容器、命名空间等，详细参考https://cloud.tencent.com/document/api/614/56471#ContainerStdoutInfo
- * @method void setContainerStdout(ContainerStdoutInfo $ContainerStdout) 设置自建k8s-容器标准输出信息，包括容器、命名空间等，详细参考https://cloud.tencent.com/document/api/614/56471#ContainerStdoutInfo
+- 详情参考 [ ContainerFileInfo](https://cloud.tencent.com/document/api/614/56471#ContainerFileInfo) 文档
+ * @method ContainerStdoutInfo getContainerStdout() 获取自建k8s-容器标准输出信息，包括容器、命名空间等，
+
+- 详情参考 [ContainerStdoutInfo]( https://cloud.tencent.com/document/api/614/56471#ContainerStdoutInfo) 文档
+ * @method void setContainerStdout(ContainerStdoutInfo $ContainerStdout) 设置自建k8s-容器标准输出信息，包括容器、命名空间等，
+
+- 详情参考 [ContainerStdoutInfo]( https://cloud.tencent.com/document/api/614/56471#ContainerStdoutInfo) 文档
  * @method string getLogType() 获取采集的日志类型，默认为minimalist_log。支持以下类型：
 - json_log代表：JSON-文件日志（详见[使用 JSON 提取模式采集日志](https://cloud.tencent.com/document/product/614/17419)）；
 - delimiter_log代表：分隔符-文件日志（详见[使用分隔符提取模式采集日志](https://cloud.tencent.com/document/product/614/17420)）；
@@ -60,8 +70,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogFormat(string $LogFormat) 设置日志格式化方式，用于容器采集场景。
 - stdout-docker-json：用于docker容器采集场景
 - stdout-containerd：用于containerd容器采集场景
- * @method ExtractRuleInfo getExtractRule() 获取提取规则，如果设置了ExtractRule，则必须设置LogType
- * @method void setExtractRule(ExtractRuleInfo $ExtractRule) 设置提取规则，如果设置了ExtractRule，则必须设置LogType
+ * @method ExtractRuleInfo getExtractRule() 获取提取规则，如果设置了ExtractRule，则必须设置LogType。
+ * @method void setExtractRule(ExtractRuleInfo $ExtractRule) 设置提取规则，如果设置了ExtractRule，则必须设置LogType。
  * @method array getExcludePaths() 获取采集黑名单路径列表
  * @method void setExcludePaths(array $ExcludePaths) 设置采集黑名单路径列表
  * @method string getUserDefineRule() 获取组合解析采集规则，用于复杂场景下的日志采集。
@@ -128,18 +138,23 @@ class ModifyConfigExtraRequest extends AbstractModel
     public $TopicId;
 
     /**
-     * @var HostFileInfo 自建k8s-节点文件配置信息,包括文件路径、名称及元数据相关信息，详细参考https://cloud.tencent.com/document/api/614/56471#HostFileInfo
+     * @var HostFileInfo 自建k8s-节点文件配置信息,包括文件路径、名称及元数据相关信息。
+
+- 详情参考  [HostFileInfo](https://cloud.tencent.com/document/api/614/56471#HostFileInfo) 文档。
      */
     public $HostFile;
 
     /**
      * @var ContainerFileInfo 采集配置标记。
 - 目前只支持label_k8s，用于标记自建k8s集群使用的采集配置
+- 详情参考 [ ContainerFileInfo](https://cloud.tencent.com/document/api/614/56471#ContainerFileInfo) 文档
      */
     public $ContainerFile;
 
     /**
-     * @var ContainerStdoutInfo 自建k8s-容器标准输出信息，包括容器、命名空间等，详细参考https://cloud.tencent.com/document/api/614/56471#ContainerStdoutInfo
+     * @var ContainerStdoutInfo 自建k8s-容器标准输出信息，包括容器、命名空间等，
+
+- 详情参考 [ContainerStdoutInfo]( https://cloud.tencent.com/document/api/614/56471#ContainerStdoutInfo) 文档
      */
     public $ContainerStdout;
 
@@ -164,7 +179,7 @@ class ModifyConfigExtraRequest extends AbstractModel
     public $LogFormat;
 
     /**
-     * @var ExtractRuleInfo 提取规则，如果设置了ExtractRule，则必须设置LogType
+     * @var ExtractRuleInfo 提取规则，如果设置了ExtractRule，则必须设置LogType。
      */
     public $ExtractRule;
 
@@ -233,10 +248,15 @@ class ModifyConfigExtraRequest extends AbstractModel
      * @param string $Name 采集配置规程名称，最长63个字符，只能包含小写字符、数字及分隔符（“-”），且必须以小写字符开头，数字或小写字符结尾
      * @param string $TopicId 日志主题id
 - 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
-     * @param HostFileInfo $HostFile 自建k8s-节点文件配置信息,包括文件路径、名称及元数据相关信息，详细参考https://cloud.tencent.com/document/api/614/56471#HostFileInfo
+     * @param HostFileInfo $HostFile 自建k8s-节点文件配置信息,包括文件路径、名称及元数据相关信息。
+
+- 详情参考  [HostFileInfo](https://cloud.tencent.com/document/api/614/56471#HostFileInfo) 文档。
      * @param ContainerFileInfo $ContainerFile 采集配置标记。
 - 目前只支持label_k8s，用于标记自建k8s集群使用的采集配置
-     * @param ContainerStdoutInfo $ContainerStdout 自建k8s-容器标准输出信息，包括容器、命名空间等，详细参考https://cloud.tencent.com/document/api/614/56471#ContainerStdoutInfo
+- 详情参考 [ ContainerFileInfo](https://cloud.tencent.com/document/api/614/56471#ContainerFileInfo) 文档
+     * @param ContainerStdoutInfo $ContainerStdout 自建k8s-容器标准输出信息，包括容器、命名空间等，
+
+- 详情参考 [ContainerStdoutInfo]( https://cloud.tencent.com/document/api/614/56471#ContainerStdoutInfo) 文档
      * @param string $LogType 采集的日志类型，默认为minimalist_log。支持以下类型：
 - json_log代表：JSON-文件日志（详见[使用 JSON 提取模式采集日志](https://cloud.tencent.com/document/product/614/17419)）；
 - delimiter_log代表：分隔符-文件日志（详见[使用分隔符提取模式采集日志](https://cloud.tencent.com/document/product/614/17420)）；
@@ -248,7 +268,7 @@ class ModifyConfigExtraRequest extends AbstractModel
      * @param string $LogFormat 日志格式化方式，用于容器采集场景。
 - stdout-docker-json：用于docker容器采集场景
 - stdout-containerd：用于containerd容器采集场景
-     * @param ExtractRuleInfo $ExtractRule 提取规则，如果设置了ExtractRule，则必须设置LogType
+     * @param ExtractRuleInfo $ExtractRule 提取规则，如果设置了ExtractRule，则必须设置LogType。
      * @param array $ExcludePaths 采集黑名单路径列表
      * @param string $UserDefineRule 组合解析采集规则，用于复杂场景下的日志采集。
 - 取值参考：[使用组合解析提取模式采集日志

@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageSize(integer $PageSize) 设置分页大小，有效范围为[1,200]
  * @method string getKeyword() 获取搜索关键字
  * @method void setKeyword(string $Keyword) 设置搜索关键字
+ * @method array getKnowledgeTypes() 获取共享知识库类型，0普通，1公众号
+ * @method void setKnowledgeTypes(array $KnowledgeTypes) 设置共享知识库类型，0普通，1公众号
  */
 class ListSharedKnowledgeRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ListSharedKnowledgeRequest extends AbstractModel
     public $Keyword;
 
     /**
+     * @var array 共享知识库类型，0普通，1公众号
+     */
+    public $KnowledgeTypes;
+
+    /**
      * @param integer $PageNumber 分页序号，编码从1开始
      * @param integer $PageSize 分页大小，有效范围为[1,200]
      * @param string $Keyword 搜索关键字
+     * @param array $KnowledgeTypes 共享知识库类型，0普通，1公众号
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ListSharedKnowledgeRequest extends AbstractModel
 
         if (array_key_exists("Keyword",$param) and $param["Keyword"] !== null) {
             $this->Keyword = $param["Keyword"];
+        }
+
+        if (array_key_exists("KnowledgeTypes",$param) and $param["KnowledgeTypes"] !== null) {
+            $this->KnowledgeTypes = $param["KnowledgeTypes"];
         }
     }
 }

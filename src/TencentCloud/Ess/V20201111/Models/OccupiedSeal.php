@@ -44,6 +44,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAuthorizedUsers(array $AuthorizedUsers) 设置授权人列表
  * @method ExtendScene getExtendScene() 获取印章扩展数据信息
  * @method void setExtendScene(ExtendScene $ExtendScene) 设置印章扩展数据信息
+ * @method integer getRealWidth() 获取印章的真实宽度，单位毫米
+ * @method void setRealWidth(integer $RealWidth) 设置印章的真实宽度，单位毫米
+ * @method integer getRealHeight() 获取印章的真实高度，单位毫米
+ * @method void setRealHeight(integer $RealHeight) 设置印章的真实高度，单位毫米
+ * @method string getSubSealType() 获取自定义子类型印章
+ * @method void setSubSealType(string $SubSealType) 设置自定义子类型印章
+ * @method string getSubSealName() 获取自定义子类型印章名称
+ * @method void setSubSealName(string $SubSealName) 设置自定义子类型印章名称
+ * @method string getSealDescription() 获取印章描述
+ * @method void setSealDescription(string $SealDescription) 设置印章描述
  */
 class OccupiedSeal extends AbstractModel
 {
@@ -108,6 +118,31 @@ class OccupiedSeal extends AbstractModel
     public $ExtendScene;
 
     /**
+     * @var integer 印章的真实宽度，单位毫米
+     */
+    public $RealWidth;
+
+    /**
+     * @var integer 印章的真实高度，单位毫米
+     */
+    public $RealHeight;
+
+    /**
+     * @var string 自定义子类型印章
+     */
+    public $SubSealType;
+
+    /**
+     * @var string 自定义子类型印章名称
+     */
+    public $SubSealName;
+
+    /**
+     * @var string 印章描述
+     */
+    public $SealDescription;
+
+    /**
      * @param string $SealId 电子印章编号
      * @param string $SealName 电子印章名称
      * @param integer $CreateOn 电子印章授权时间戳，单位秒
@@ -120,6 +155,11 @@ class OccupiedSeal extends AbstractModel
      * @param boolean $IsAllTime 用印申请是否为永久授权，true-是，false-否
      * @param array $AuthorizedUsers 授权人列表
      * @param ExtendScene $ExtendScene 印章扩展数据信息
+     * @param integer $RealWidth 印章的真实宽度，单位毫米
+     * @param integer $RealHeight 印章的真实高度，单位毫米
+     * @param string $SubSealType 自定义子类型印章
+     * @param string $SubSealName 自定义子类型印章名称
+     * @param string $SealDescription 印章描述
      */
     function __construct()
     {
@@ -186,6 +226,26 @@ class OccupiedSeal extends AbstractModel
         if (array_key_exists("ExtendScene",$param) and $param["ExtendScene"] !== null) {
             $this->ExtendScene = new ExtendScene();
             $this->ExtendScene->deserialize($param["ExtendScene"]);
+        }
+
+        if (array_key_exists("RealWidth",$param) and $param["RealWidth"] !== null) {
+            $this->RealWidth = $param["RealWidth"];
+        }
+
+        if (array_key_exists("RealHeight",$param) and $param["RealHeight"] !== null) {
+            $this->RealHeight = $param["RealHeight"];
+        }
+
+        if (array_key_exists("SubSealType",$param) and $param["SubSealType"] !== null) {
+            $this->SubSealType = $param["SubSealType"];
+        }
+
+        if (array_key_exists("SubSealName",$param) and $param["SubSealName"] !== null) {
+            $this->SubSealName = $param["SubSealName"];
+        }
+
+        if (array_key_exists("SealDescription",$param) and $param["SealDescription"] !== null) {
+            $this->SealDescription = $param["SealDescription"];
         }
     }
 }

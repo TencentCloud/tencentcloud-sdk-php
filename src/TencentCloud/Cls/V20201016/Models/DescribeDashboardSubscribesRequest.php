@@ -23,11 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method array getFilters() 获取dashboardId：按照【仪表盘id】进行过滤。类型：String必选：否
 
 - 仪表盘id。通过 [获取仪表盘](https://cloud.tencent.com/document/api/614/95636)接口获取DashboardId。
+- 入参示例：dashboard-522a5609-1f41-4b11-8086-5afd1d7574f5
 
 每次请求的Filters的上限为10，Filter.Values的上限为100。
  * @method void setFilters(array $Filters) 设置dashboardId：按照【仪表盘id】进行过滤。类型：String必选：否
 
 - 仪表盘id。通过 [获取仪表盘](https://cloud.tencent.com/document/api/614/95636)接口获取DashboardId。
+- 入参示例：dashboard-522a5609-1f41-4b11-8086-5afd1d7574f5
 
 每次请求的Filters的上限为10，Filter.Values的上限为100。
  * @method integer getOffset() 获取分页的偏移量，默认值为0。
@@ -41,6 +43,7 @@ class DescribeDashboardSubscribesRequest extends AbstractModel
      * @var array dashboardId：按照【仪表盘id】进行过滤。类型：String必选：否
 
 - 仪表盘id。通过 [获取仪表盘](https://cloud.tencent.com/document/api/614/95636)接口获取DashboardId。
+- 入参示例：dashboard-522a5609-1f41-4b11-8086-5afd1d7574f5
 
 每次请求的Filters的上限为10，Filter.Values的上限为100。
      */
@@ -60,6 +63,7 @@ class DescribeDashboardSubscribesRequest extends AbstractModel
      * @param array $Filters dashboardId：按照【仪表盘id】进行过滤。类型：String必选：否
 
 - 仪表盘id。通过 [获取仪表盘](https://cloud.tencent.com/document/api/614/95636)接口获取DashboardId。
+- 入参示例：dashboard-522a5609-1f41-4b11-8086-5afd1d7574f5
 
 每次请求的Filters的上限为10，Filter.Values的上限为100。
      * @param integer $Offset 分页的偏移量，默认值为0。

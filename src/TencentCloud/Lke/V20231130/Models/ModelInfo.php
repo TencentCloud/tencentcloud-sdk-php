@@ -78,6 +78,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSupportAiCallStatus(integer $SupportAiCallStatus) 设置模型支持智能通话效果
  * @method integer getConcurrency() 获取专属并发数
  * @method void setConcurrency(integer $Concurrency) 设置专属并发数
+ * @method array getModelTags() 获取模型标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setModelTags(array $ModelTags) 设置模型标签
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getModelParams() 获取模型超参定义
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setModelParams(array $ModelParams) 设置模型超参定义
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getProviderName() 获取提供商名称
+ * @method void setProviderName(string $ProviderName) 设置提供商名称
+ * @method string getProviderAliasName() 获取提供商别名
+ * @method void setProviderAliasName(string $ProviderAliasName) 设置提供商别名
+ * @method string getProviderType() 获取提供商类型 Self:提供商，Custom：自定义模型提供商，Third：第三方模型提供商
+ * @method void setProviderType(string $ProviderType) 设置提供商类型 Self:提供商，Custom：自定义模型提供商，Third：第三方模型提供商
  */
 class ModelInfo extends AbstractModel
 {
@@ -187,6 +201,33 @@ class ModelInfo extends AbstractModel
     public $Concurrency;
 
     /**
+     * @var array 模型标签
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ModelTags;
+
+    /**
+     * @var array 模型超参定义
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ModelParams;
+
+    /**
+     * @var string 提供商名称
+     */
+    public $ProviderName;
+
+    /**
+     * @var string 提供商别名
+     */
+    public $ProviderAliasName;
+
+    /**
+     * @var string 提供商类型 Self:提供商，Custom：自定义模型提供商，Third：第三方模型提供商
+     */
+    public $ProviderType;
+
+    /**
      * @param string $ModelName 模型名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ModelDesc 模型描述
@@ -216,6 +257,13 @@ class ModelInfo extends AbstractModel
      * @param boolean $IsExclusive 是否专属并发模型
      * @param integer $SupportAiCallStatus 模型支持智能通话效果
      * @param integer $Concurrency 专属并发数
+     * @param array $ModelTags 模型标签
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $ModelParams 模型超参定义
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ProviderName 提供商名称
+     * @param string $ProviderAliasName 提供商别名
+     * @param string $ProviderType 提供商类型 Self:提供商，Custom：自定义模型提供商，Third：第三方模型提供商
      */
     function __construct()
     {
@@ -307,6 +355,31 @@ class ModelInfo extends AbstractModel
 
         if (array_key_exists("Concurrency",$param) and $param["Concurrency"] !== null) {
             $this->Concurrency = $param["Concurrency"];
+        }
+
+        if (array_key_exists("ModelTags",$param) and $param["ModelTags"] !== null) {
+            $this->ModelTags = $param["ModelTags"];
+        }
+
+        if (array_key_exists("ModelParams",$param) and $param["ModelParams"] !== null) {
+            $this->ModelParams = [];
+            foreach ($param["ModelParams"] as $key => $value){
+                $obj = new ModelParameter();
+                $obj->deserialize($value);
+                array_push($this->ModelParams, $obj);
+            }
+        }
+
+        if (array_key_exists("ProviderName",$param) and $param["ProviderName"] !== null) {
+            $this->ProviderName = $param["ProviderName"];
+        }
+
+        if (array_key_exists("ProviderAliasName",$param) and $param["ProviderAliasName"] !== null) {
+            $this->ProviderAliasName = $param["ProviderAliasName"];
+        }
+
+        if (array_key_exists("ProviderType",$param) and $param["ProviderType"] !== null) {
+            $this->ProviderType = $param["ProviderType"];
         }
     }
 }

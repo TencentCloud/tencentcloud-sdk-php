@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBaseConfig(BaseConfig $BaseConfig) 设置应用基础配置
  * @method string getPattern() 获取应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式
  * @method void setPattern(string $Pattern) 设置应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式
+ * @method string getAgentType() 获取智能体类型 dialogue 对话式智能体，wechat 公众号智能体
+ * @method void setAgentType(string $AgentType) 设置智能体类型 dialogue 对话式智能体，wechat 公众号智能体
  */
 class CreateAppRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreateAppRequest extends AbstractModel
     public $Pattern;
 
     /**
+     * @var string 智能体类型 dialogue 对话式智能体，wechat 公众号智能体
+     */
+    public $AgentType;
+
+    /**
      * @param string $AppType 应用类型；knowledge_qa-知识问答管理
      * @param BaseConfig $BaseConfig 应用基础配置
      * @param string $Pattern 应用模式 standard:标准模式, agent: agent模式，single_workflow：单工作流模式
+     * @param string $AgentType 智能体类型 dialogue 对话式智能体，wechat 公众号智能体
      */
     function __construct()
     {
@@ -73,6 +81,10 @@ class CreateAppRequest extends AbstractModel
 
         if (array_key_exists("Pattern",$param) and $param["Pattern"] !== null) {
             $this->Pattern = $param["Pattern"];
+        }
+
+        if (array_key_exists("AgentType",$param) and $param["AgentType"] !== null) {
+            $this->AgentType = $param["AgentType"];
         }
     }
 }

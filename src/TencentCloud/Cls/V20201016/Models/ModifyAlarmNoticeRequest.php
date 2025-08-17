@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAlarmNotice请求参数结构体
  *
- * @method string getAlarmNoticeId() 获取通知渠道组ID。-通过[获取通知内容模板](https://cloud.tencent.com/document/api/614/111714)获取通知渠道组ID
- * @method void setAlarmNoticeId(string $AlarmNoticeId) 设置通知渠道组ID。-通过[获取通知内容模板](https://cloud.tencent.com/document/api/614/111714)获取通知渠道组ID
+ * @method string getAlarmNoticeId() 获取通知渠道组ID。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/api/614/56462)获取通知渠道组ID
+ * @method void setAlarmNoticeId(string $AlarmNoticeId) 设置通知渠道组ID。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/api/614/56462)获取通知渠道组ID
  * @method array getTags() 获取标签描述列表，通过指定该参数可以同时绑定标签到相应的通知渠道组。最大支持10个标签键值对，并且不能有重复的键值对。
  * @method void setTags(array $Tags) 设置标签描述列表，通过指定该参数可以同时绑定标签到相应的通知渠道组。最大支持10个标签键值对，并且不能有重复的键值对。
  * @method string getName() 获取通知渠道组名称。
@@ -82,7 +82,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyAlarmNoticeRequest extends AbstractModel
 {
     /**
-     * @var string 通知渠道组ID。-通过[获取通知内容模板](https://cloud.tencent.com/document/api/614/111714)获取通知渠道组ID
+     * @var string 通知渠道组ID。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/api/614/56462)获取通知渠道组ID
      */
     public $AlarmNoticeId;
 
@@ -155,7 +155,7 @@ class ModifyAlarmNoticeRequest extends AbstractModel
     public $AlarmShieldStatus;
 
     /**
-     * @param string $AlarmNoticeId 通知渠道组ID。-通过[获取通知内容模板](https://cloud.tencent.com/document/api/614/111714)获取通知渠道组ID
+     * @param string $AlarmNoticeId 通知渠道组ID。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/api/614/56462)获取通知渠道组ID
      * @param array $Tags 标签描述列表，通过指定该参数可以同时绑定标签到相应的通知渠道组。最大支持10个标签键值对，并且不能有重复的键值对。
      * @param string $Name 通知渠道组名称。
      * @param string $Type 通知类型。可选值：

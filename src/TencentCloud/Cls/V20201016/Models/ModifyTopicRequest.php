@@ -73,9 +73,9 @@ use TencentCloud\Common\AbstractModel;
 - 如果未传MaxSplitPartitions，需要PartitionCount<=50；
 - 如果传递了MaxSplitPartitions，需要PartitionCount<=MaxSplitPartitions；
  * @method string getCancelTopicAsyncTaskID() 获取取消切换存储任务的id
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取取消切换存储任务的id。
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取取消切换存储任务的id【Topics中的TopicAsyncTaskID字段】。
  * @method void setCancelTopicAsyncTaskID(string $CancelTopicAsyncTaskID) 设置取消切换存储任务的id
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取取消切换存储任务的id。
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取取消切换存储任务的id【Topics中的TopicAsyncTaskID字段】。
  */
 class ModifyTopicRequest extends AbstractModel
 {
@@ -155,7 +155,7 @@ class ModifyTopicRequest extends AbstractModel
 
     /**
      * @var string 取消切换存储任务的id
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取取消切换存储任务的id。
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取取消切换存储任务的id【Topics中的TopicAsyncTaskID字段】。
      */
     public $CancelTopicAsyncTaskID;
 
@@ -187,7 +187,7 @@ class ModifyTopicRequest extends AbstractModel
 - 如果未传MaxSplitPartitions，需要PartitionCount<=50；
 - 如果传递了MaxSplitPartitions，需要PartitionCount<=MaxSplitPartitions；
      * @param string $CancelTopicAsyncTaskID 取消切换存储任务的id
-- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取取消切换存储任务的id。
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取取消切换存储任务的id【Topics中的TopicAsyncTaskID字段】。
      */
     function __construct()
     {

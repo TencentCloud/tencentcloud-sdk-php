@@ -28,9 +28,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDisplayContent(string $DisplayContent) 设置展示的具体文本内容
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getDisplayType() 获取展示类型
+ * @method integer getDisplayType() 获取1：搜索引擎参考来源；2：知识库参考来源
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDisplayType(integer $DisplayType) 设置展示类型
+ * @method void setDisplayType(integer $DisplayType) 设置1：搜索引擎参考来源；2：知识库参考来源
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getQuoteInfos() 获取搜索引擎展示的索引
 注意：此字段可能返回 null，表示取不到有效值。
@@ -68,7 +68,7 @@ class AgentProcedureDebugging extends AbstractModel
     public $DisplayContent;
 
     /**
-     * @var integer 展示类型
+     * @var integer 1：搜索引擎参考来源；2：知识库参考来源
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DisplayType;
@@ -108,7 +108,7 @@ class AgentProcedureDebugging extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DisplayContent 展示的具体文本内容
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $DisplayType 展示类型
+     * @param integer $DisplayType 1：搜索引擎参考来源；2：知识库参考来源
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $QuoteInfos 搜索引擎展示的索引
 注意：此字段可能返回 null，表示取不到有效值。

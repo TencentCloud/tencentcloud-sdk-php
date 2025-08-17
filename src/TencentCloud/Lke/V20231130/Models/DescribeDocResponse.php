@@ -74,6 +74,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsDownload(boolean $IsDownload) 设置是否支持下载
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getSplitRule() 获取自定义切分规则
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSplitRule(string $SplitRule) 设置自定义切分规则
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method UpdatePeriodInfo getUpdatePeriodInfo() 获取文档更新频率
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setUpdatePeriodInfo(UpdatePeriodInfo $UpdatePeriodInfo) 设置文档更新频率
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -211,6 +219,18 @@ class DescribeDocResponse extends AbstractModel
     public $IsDownload;
 
     /**
+     * @var string 自定义切分规则
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SplitRule;
+
+    /**
+     * @var UpdatePeriodInfo 文档更新频率
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $UpdatePeriodInfo;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -242,6 +262,10 @@ class DescribeDocResponse extends AbstractModel
      * @param string $CateBizId 分类ID
      * @param boolean $IsDisabled 文档是否停用，false:未停用，true:已停用
      * @param boolean $IsDownload 是否支持下载
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $SplitRule 自定义切分规则
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param UpdatePeriodInfo $UpdatePeriodInfo 文档更新频率
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -365,6 +389,15 @@ class DescribeDocResponse extends AbstractModel
 
         if (array_key_exists("IsDownload",$param) and $param["IsDownload"] !== null) {
             $this->IsDownload = $param["IsDownload"];
+        }
+
+        if (array_key_exists("SplitRule",$param) and $param["SplitRule"] !== null) {
+            $this->SplitRule = $param["SplitRule"];
+        }
+
+        if (array_key_exists("UpdatePeriodInfo",$param) and $param["UpdatePeriodInfo"] !== null) {
+            $this->UpdatePeriodInfo = new UpdatePeriodInfo();
+            $this->UpdatePeriodInfo->deserialize($param["UpdatePeriodInfo"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -29,9 +29,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getClusterName() 获取集群名称
  * @method void setClusterName(string $ClusterName) 设置集群名称
  * @method string getTableGroupName() 获取表格组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTableGroupName(string $TableGroupName) 设置表格组名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTableName() 获取表格名称
  * @method void setTableName(string $TableName) 设置表格名称
  * @method string getApplicant() 获取申请人
@@ -45,29 +43,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTaskId() 获取已提交的任务Id，未提交申请为0
  * @method void setTaskId(string $TaskId) 设置已提交的任务Id，未提交申请为0
  * @method string getTableInstanceId() 获取腾讯云上table的唯一键
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTableInstanceId(string $TableInstanceId) 设置腾讯云上table的唯一键
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUpdateTime() 获取更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExecuteUser() 获取审批人
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExecuteUser(string $ExecuteUser) 设置审批人
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getExecuteStatus() 获取执行状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExecuteStatus(string $ExecuteStatus) 设置执行状态
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getCanCensor() 获取该申请单是否可以被当前用户审批
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCanCensor(boolean $CanCensor) 设置该申请单是否可以被当前用户审批
-注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getCanWithdrawal() 获取该申请单是否可以被当前用户撤回
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCanWithdrawal(boolean $CanWithdrawal) 设置该申请单是否可以被当前用户撤回
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class Application extends AbstractModel
 {
@@ -93,7 +79,6 @@ class Application extends AbstractModel
 
     /**
      * @var string 表格组名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TableGroupName;
 
@@ -129,37 +114,31 @@ class Application extends AbstractModel
 
     /**
      * @var string 腾讯云上table的唯一键
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TableInstanceId;
 
     /**
      * @var string 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UpdateTime;
 
     /**
      * @var string 审批人
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecuteUser;
 
     /**
      * @var string 执行状态
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ExecuteStatus;
 
     /**
      * @var boolean 该申请单是否可以被当前用户审批
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CanCensor;
 
     /**
      * @var boolean 该申请单是否可以被当前用户撤回
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $CanWithdrawal;
 
@@ -169,7 +148,6 @@ class Application extends AbstractModel
      * @param string $ClusterId 集群Id
      * @param string $ClusterName 集群名称
      * @param string $TableGroupName 表格组名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TableName 表格名称
      * @param string $Applicant 申请人
      * @param string $CreatedTime 建单时间
@@ -177,17 +155,11 @@ class Application extends AbstractModel
      * @param string $TableGroupId 表格组Id
      * @param string $TaskId 已提交的任务Id，未提交申请为0
      * @param string $TableInstanceId 腾讯云上table的唯一键
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UpdateTime 更新时间
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExecuteUser 审批人
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExecuteStatus 执行状态
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $CanCensor 该申请单是否可以被当前用户审批
-注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $CanWithdrawal 该申请单是否可以被当前用户撤回
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

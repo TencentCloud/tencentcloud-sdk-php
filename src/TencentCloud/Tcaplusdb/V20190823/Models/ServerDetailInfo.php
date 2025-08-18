@@ -33,9 +33,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getWriteNum() 获取写次数
  * @method void setWriteNum(integer $WriteNum) 设置写次数
  * @method string getVersion() 获取版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersion(string $Version) 设置版本
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ServerDetailInfo extends AbstractModel
 {
@@ -71,7 +69,6 @@ class ServerDetailInfo extends AbstractModel
 
     /**
      * @var string 版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Version;
 
@@ -83,7 +80,6 @@ class ServerDetailInfo extends AbstractModel
      * @param integer $ReadNum 读次数
      * @param integer $WriteNum 写次数
      * @param string $Version 版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

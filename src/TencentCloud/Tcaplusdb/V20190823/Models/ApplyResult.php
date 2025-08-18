@@ -25,17 +25,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getApplicationType() 获取申请类型
  * @method void setApplicationType(integer $ApplicationType) 设置申请类型
  * @method integer getApplicationStatus() 获取处理状态 0-待审核 1-已经审核并提交任务 2-已驳回
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationStatus(integer $ApplicationStatus) 设置处理状态 0-待审核 1-已经审核并提交任务 2-已驳回
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTaskId() 获取已提交的任务Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskId(string $TaskId) 设置已提交的任务Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ErrorInfo getError() 获取错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setError(ErrorInfo $Error) 设置错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ApplyResult extends AbstractModel
 {
@@ -51,19 +45,16 @@ class ApplyResult extends AbstractModel
 
     /**
      * @var integer 处理状态 0-待审核 1-已经审核并提交任务 2-已驳回
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationStatus;
 
     /**
      * @var string 已提交的任务Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskId;
 
     /**
      * @var ErrorInfo 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Error;
 
@@ -71,11 +62,8 @@ class ApplyResult extends AbstractModel
      * @param string $ApplicationId 申请单id
      * @param integer $ApplicationType 申请类型
      * @param integer $ApplicationStatus 处理状态 0-待审核 1-已经审核并提交任务 2-已驳回
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskId 已提交的任务Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorInfo $Error 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

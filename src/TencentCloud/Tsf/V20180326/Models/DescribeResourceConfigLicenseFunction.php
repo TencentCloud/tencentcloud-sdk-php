@@ -20,33 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeResourceConfig
  *
- * @method string getName() 获取name
+ * @method string getName() 获取功能名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setName(string $Name) 设置name
+ * @method void setName(string $Name) 设置功能名
 注意：此字段可能返回 null，表示取不到有效值。
- * @method boolean getEnable() 获取enable
+ * @method boolean getEnable() 获取是否启用
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setEnable(boolean $Enable) 设置enable
+ * @method void setEnable(boolean $Enable) 设置是否启用
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribeResourceConfigLicenseFunction extends AbstractModel
 {
     /**
-     * @var string name
+     * @var string 功能名
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Name;
 
     /**
-     * @var boolean enable
+     * @var boolean 是否启用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Enable;
 
     /**
-     * @param string $Name name
+     * @param string $Name 功能名
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param boolean $Enable enable
+     * @param boolean $Enable 是否启用
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

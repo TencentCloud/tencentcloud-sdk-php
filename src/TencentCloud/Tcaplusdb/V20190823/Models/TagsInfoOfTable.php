@@ -21,69 +21,49 @@ use TencentCloud\Common\AbstractModel;
  * 表格标签信息
  *
  * @method string getTableInstanceId() 获取表格实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTableInstanceId(string $TableInstanceId) 设置表格实例ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTableName() 获取表格名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTableName(string $TableName) 设置表格名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTableGroupId() 获取表格组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTableGroupId(string $TableGroupId) 设置表格组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method array getTags() 获取标签信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ErrorInfo getError() 获取错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setError(ErrorInfo $Error) 设置错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TagsInfoOfTable extends AbstractModel
 {
     /**
      * @var string 表格实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TableInstanceId;
 
     /**
      * @var string 表格名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TableName;
 
     /**
      * @var string 表格组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TableGroupId;
 
     /**
      * @var array 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Tags;
 
     /**
      * @var ErrorInfo 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Error;
 
     /**
      * @param string $TableInstanceId 表格实例ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TableName 表格名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TableGroupId 表格组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Tags 标签信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorInfo $Error 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

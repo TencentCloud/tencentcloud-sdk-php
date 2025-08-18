@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * ckafka地址信息
  *
  * @method string getAddress() 获取Kafka address
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAddress(string $Address) 设置Kafka address
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTopic() 获取Kafka topic
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTopic(string $Topic) 设置Kafka topic
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUser() 获取kafka username
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUser(string $User) 设置kafka username
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getPassword() 获取kafka password
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPassword(string $Password) 设置kafka password
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInstance() 获取ckafka实例
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setInstance(string $Instance) 设置ckafka实例
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getIsVpc() 获取是否走VPC
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsVpc(integer $IsVpc) 设置是否走VPC
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class KafkaInfo extends AbstractModel
 {
     /**
      * @var string Kafka address
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Address;
 
     /**
      * @var string Kafka topic
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Topic;
 
     /**
      * @var string kafka username
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $User;
 
     /**
      * @var string kafka password
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Password;
 
     /**
      * @var string ckafka实例
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Instance;
 
     /**
      * @var integer 是否走VPC
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $IsVpc;
 
     /**
      * @param string $Address Kafka address
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Topic Kafka topic
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $User kafka username
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Password kafka password
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Instance ckafka实例
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $IsVpc 是否走VPC
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

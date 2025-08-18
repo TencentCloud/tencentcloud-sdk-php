@@ -21,31 +21,23 @@ use TencentCloud\Common\AbstractModel;
  * 合服结果
  *
  * @method string getTaskId() 获取任务Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskId(string $TaskId) 设置任务Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ErrorInfo getError() 获取成功时此字段返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setError(ErrorInfo $Error) 设置成功时此字段返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
  * @method CompareTablesInfo getTable() 获取对比的表格信息
  * @method void setTable(CompareTablesInfo $Table) 设置对比的表格信息
  * @method string getApplicationId() 获取申请单Id
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationId(string $ApplicationId) 设置申请单Id
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class MergeTableResult extends AbstractModel
 {
     /**
      * @var string 任务Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskId;
 
     /**
      * @var ErrorInfo 成功时此字段返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Error;
 
@@ -56,18 +48,14 @@ class MergeTableResult extends AbstractModel
 
     /**
      * @var string 申请单Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationId;
 
     /**
      * @param string $TaskId 任务Id
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorInfo $Error 成功时此字段返回 null，表示取不到有效值。
-注意：此字段可能返回 null，表示取不到有效值。
      * @param CompareTablesInfo $Table 对比的表格信息
      * @param string $ApplicationId 申请单Id
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

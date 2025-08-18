@@ -25,9 +25,7 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskType(string $TaskType) 设置MPS 模板的类型。取值：
 <li>Transcode: 转码模板。</li>
  * @method string getMPSTemplateInfo() 获取MPS 任务模板详情内容。
-示例：{"Definition":24214,"Name":"test","Comment":"","Type":"Preset","EnhanceConfig":{"VideoEnhance":{"FrameRate":{"Switch":"ON","Fps":50},"SuperResolution":{"Switch":"ON","Type":"lq"}}}}
  * @method void setMPSTemplateInfo(string $MPSTemplateInfo) 设置MPS 任务模板详情内容。
-示例：{"Definition":24214,"Name":"test","Comment":"","Type":"Preset","EnhanceConfig":{"VideoEnhance":{"FrameRate":{"Switch":"ON","Fps":50},"SuperResolution":{"Switch":"ON","Type":"lq"}}}}
  */
 class MPSTemplate extends AbstractModel
 {
@@ -39,7 +37,6 @@ class MPSTemplate extends AbstractModel
 
     /**
      * @var string MPS 任务模板详情内容。
-示例：{"Definition":24214,"Name":"test","Comment":"","Type":"Preset","EnhanceConfig":{"VideoEnhance":{"FrameRate":{"Switch":"ON","Fps":50},"SuperResolution":{"Switch":"ON","Type":"lq"}}}}
      */
     public $MPSTemplateInfo;
 
@@ -47,7 +44,6 @@ class MPSTemplate extends AbstractModel
      * @param string $TaskType MPS 模板的类型。取值：
 <li>Transcode: 转码模板。</li>
      * @param string $MPSTemplateInfo MPS 任务模板详情内容。
-示例：{"Definition":24214,"Name":"test","Comment":"","Type":"Preset","EnhanceConfig":{"VideoEnhance":{"FrameRate":{"Switch":"ON","Fps":50},"SuperResolution":{"Switch":"ON","Type":"lq"}}}}
      */
     function __construct()
     {

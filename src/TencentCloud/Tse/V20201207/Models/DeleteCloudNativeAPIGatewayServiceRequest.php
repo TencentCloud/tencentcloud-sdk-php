@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGatewayId(string $GatewayId) 设置网关ID
  * @method string getName() 获取服务名字，服务ID
  * @method void setName(string $Name) 设置服务名字，服务ID
+ * @method boolean getDeleteRoutes() 获取是否同步删除服务上绑定的路由
+ * @method void setDeleteRoutes(boolean $DeleteRoutes) 设置是否同步删除服务上绑定的路由
  */
 class DeleteCloudNativeAPIGatewayServiceRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DeleteCloudNativeAPIGatewayServiceRequest extends AbstractModel
     public $Name;
 
     /**
+     * @var boolean 是否同步删除服务上绑定的路由
+     */
+    public $DeleteRoutes;
+
+    /**
      * @param string $GatewayId 网关ID
      * @param string $Name 服务名字，服务ID
+     * @param boolean $DeleteRoutes 是否同步删除服务上绑定的路由
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DeleteCloudNativeAPIGatewayServiceRequest extends AbstractModel
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("DeleteRoutes",$param) and $param["DeleteRoutes"] !== null) {
+            $this->DeleteRoutes = $param["DeleteRoutes"];
         }
     }
 }

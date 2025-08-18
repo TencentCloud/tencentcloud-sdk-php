@@ -31,19 +31,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTotalSize() 获取表格组包含的表格存储总量（MB）
  * @method void setTotalSize(integer $TotalSize) 设置表格组包含的表格存储总量（MB）
  * @method integer getTxhBackupExpireDay() 获取表格Txh备份文件多少天后过期删除
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTxhBackupExpireDay(integer $TxhBackupExpireDay) 设置表格Txh备份文件多少天后过期删除
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getEnableMysql() 获取是否开启mysql负载均衡,0未开启 1开启中 2已开启
  * @method void setEnableMysql(integer $EnableMysql) 设置是否开启mysql负载均衡,0未开启 1开启中 2已开启
  * @method string getMysqlConnIp() 获取mysql负载均衡vip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMysqlConnIp(string $MysqlConnIp) 设置mysql负载均衡vip
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMysqlConnPort() 获取mysql负载均衡vport
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMysqlConnPort(integer $MysqlConnPort) 设置mysql负载均衡vport
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class TableGroupInfo extends AbstractModel
 {
@@ -74,7 +68,6 @@ class TableGroupInfo extends AbstractModel
 
     /**
      * @var integer 表格Txh备份文件多少天后过期删除
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TxhBackupExpireDay;
 
@@ -85,13 +78,11 @@ class TableGroupInfo extends AbstractModel
 
     /**
      * @var string mysql负载均衡vip
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MysqlConnIp;
 
     /**
      * @var integer mysql负载均衡vport
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MysqlConnPort;
 
@@ -102,12 +93,9 @@ class TableGroupInfo extends AbstractModel
      * @param integer $TableCount 表格组包含的表格数量
      * @param integer $TotalSize 表格组包含的表格存储总量（MB）
      * @param integer $TxhBackupExpireDay 表格Txh备份文件多少天后过期删除
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $EnableMysql 是否开启mysql负载均衡,0未开启 1开启中 2已开启
      * @param string $MysqlConnIp mysql负载均衡vip
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MysqlConnPort mysql负载均衡vport
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

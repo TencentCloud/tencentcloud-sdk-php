@@ -21,141 +21,97 @@ use TencentCloud\Common\AbstractModel;
  * 创建快照结果
  *
  * @method string getTableGroupId() 获取表格所属表格组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTableGroupId(string $TableGroupId) 设置表格所属表格组ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTableName() 获取表格名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTableName(string $TableName) 设置表格名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getTaskId() 获取任务ID，对于创建单任务的接口有效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskId(string $TaskId) 设置任务ID，对于创建单任务的接口有效
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ErrorInfo getError() 获取错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setError(ErrorInfo $Error) 设置错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSnapshotName() 获取快照名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSnapshotName(string $SnapshotName) 设置快照名称
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSnapshotTime() 获取快照的时间点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSnapshotTime(string $SnapshotTime) 设置快照的时间点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSnapshotDeadTime() 获取快照的过期时间点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSnapshotDeadTime(string $SnapshotDeadTime) 设置快照的过期时间点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getSnapshotCreateTime() 获取快照创建时间点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSnapshotCreateTime(string $SnapshotCreateTime) 设置快照创建时间点
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSnapshotSize() 获取快照大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSnapshotSize(integer $SnapshotSize) 设置快照大小
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getSnapshotStatus() 获取快照状态，0 生成中 1 正常 2 删除中 3 已失效 4 回档使用中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSnapshotStatus(integer $SnapshotStatus) 设置快照状态，0 生成中 1 正常 2 删除中 3 已失效 4 回档使用中
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getApplicationId() 获取申请单ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setApplicationId(string $ApplicationId) 设置申请单ID
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class SnapshotResult extends AbstractModel
 {
     /**
      * @var string 表格所属表格组ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TableGroupId;
 
     /**
      * @var string 表格名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TableName;
 
     /**
      * @var string 任务ID，对于创建单任务的接口有效
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $TaskId;
 
     /**
      * @var ErrorInfo 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Error;
 
     /**
      * @var string 快照名称
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SnapshotName;
 
     /**
      * @var string 快照的时间点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SnapshotTime;
 
     /**
      * @var string 快照的过期时间点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SnapshotDeadTime;
 
     /**
      * @var string 快照创建时间点
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SnapshotCreateTime;
 
     /**
      * @var integer 快照大小
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SnapshotSize;
 
     /**
      * @var integer 快照状态，0 生成中 1 正常 2 删除中 3 已失效 4 回档使用中
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SnapshotStatus;
 
     /**
      * @var string 申请单ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $ApplicationId;
 
     /**
      * @param string $TableGroupId 表格所属表格组ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TableName 表格名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskId 任务ID，对于创建单任务的接口有效
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorInfo $Error 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SnapshotName 快照名称
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SnapshotTime 快照的时间点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SnapshotDeadTime 快照的过期时间点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $SnapshotCreateTime 快照创建时间点
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SnapshotSize 快照大小
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $SnapshotStatus 快照状态，0 生成中 1 正常 2 删除中 3 已失效 4 回档使用中
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ApplicationId 申请单ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

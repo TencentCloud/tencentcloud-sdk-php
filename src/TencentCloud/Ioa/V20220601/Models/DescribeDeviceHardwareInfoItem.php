@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHardDiskSize(string $HardDiskSize) 设置硬盘信息
  * @method string getMonitor() 获取显示器品牌型号
  * @method void setMonitor(string $Monitor) 设置显示器品牌型号
+ * @method string getRemarkName() 获取终端备注名
+ * @method void setRemarkName(string $RemarkName) 设置终端备注名
  */
 class DescribeDeviceHardwareInfoItem extends AbstractModel
 {
@@ -136,6 +138,11 @@ class DescribeDeviceHardwareInfoItem extends AbstractModel
     public $Monitor;
 
     /**
+     * @var string 终端备注名
+     */
+    public $RemarkName;
+
+    /**
      * @param integer $Id 设备ID
      * @param string $Mid 设备唯一标识符
      * @param integer $OsType OS平台 0 Windows 1 Linux 2 macOS 4 Android 5 iOS
@@ -152,6 +159,7 @@ class DescribeDeviceHardwareInfoItem extends AbstractModel
      * @param string $Memory 内存信息
      * @param string $HardDiskSize 硬盘信息
      * @param string $Monitor 显示器品牌型号
+     * @param string $RemarkName 终端备注名
      */
     function __construct()
     {
@@ -228,6 +236,10 @@ class DescribeDeviceHardwareInfoItem extends AbstractModel
 
         if (array_key_exists("Monitor",$param) and $param["Monitor"] !== null) {
             $this->Monitor = $param["Monitor"];
+        }
+
+        if (array_key_exists("RemarkName",$param) and $param["RemarkName"] !== null) {
+            $this->RemarkName = $param["RemarkName"];
         }
     }
 }

@@ -52,6 +52,12 @@ use TencentCloud\Common\AbstractModel;
 <ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
  * @method void setForbidEditWatermark(boolean $ForbidEditWatermark) 设置是否禁止编辑（展示）水印控件属性
 <ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
+ * @method string getSealDescription() 获取印章描述
+ * @method void setSealDescription(string $SealDescription) 设置印章描述
+ * @method string getForbidEditSealDescription() 获取是否禁止编辑印章描述内容
+<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
+ * @method void setForbidEditSealDescription(string $ForbidEditSealDescription) 设置是否禁止编辑印章描述内容
+<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
  */
 class EmbedUrlOption extends AbstractModel
 {
@@ -88,6 +94,17 @@ class EmbedUrlOption extends AbstractModel
     public $ForbidEditWatermark;
 
     /**
+     * @var string 印章描述
+     */
+    public $SealDescription;
+
+    /**
+     * @var string 是否禁止编辑印章描述内容
+<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
+     */
+    public $ForbidEditSealDescription;
+
+    /**
      * @param boolean $ShowFlowDetailComponent 合同详情预览，允许展示控件信息
 <ul>
 <li><b>true</b>：允许在合同详情页展示控件</li>
@@ -103,6 +120,9 @@ class EmbedUrlOption extends AbstractModel
 
 注意: 此参数仅针对**EmbedType=CREATE_TEMPLATE(创建模板)有效**，
      * @param boolean $ForbidEditWatermark 是否禁止编辑（展示）水印控件属性
+<ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
+     * @param string $SealDescription 印章描述
+     * @param string $ForbidEditSealDescription 是否禁止编辑印章描述内容
 <ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
      */
     function __construct()
@@ -132,6 +152,14 @@ class EmbedUrlOption extends AbstractModel
 
         if (array_key_exists("ForbidEditWatermark",$param) and $param["ForbidEditWatermark"] !== null) {
             $this->ForbidEditWatermark = $param["ForbidEditWatermark"];
+        }
+
+        if (array_key_exists("SealDescription",$param) and $param["SealDescription"] !== null) {
+            $this->SealDescription = $param["SealDescription"];
+        }
+
+        if (array_key_exists("ForbidEditSealDescription",$param) and $param["ForbidEditSealDescription"] !== null) {
+            $this->ForbidEditSealDescription = $param["ForbidEditSealDescription"];
         }
     }
 }

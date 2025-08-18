@@ -31,6 +31,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\AlterDMSTableResponse AlterDMSTable(Models\AlterDMSTableRequest $req) DMS元数据更新表
  * @method Models\AssignMangedTablePropertiesResponse AssignMangedTableProperties(Models\AssignMangedTablePropertiesRequest $req) 分配原生表表属性
  * @method Models\AssociateDatasourceHouseResponse AssociateDatasourceHouse(Models\AssociateDatasourceHouseRequest $req) 绑定数据源和队列
+ * @method Models\AttachDataMaskPolicyResponse AttachDataMaskPolicy(Models\AttachDataMaskPolicyRequest $req) 绑定数据脱敏策略
  * @method Models\AttachUserPolicyResponse AttachUserPolicy(Models\AttachUserPolicyRequest $req) 绑定鉴权策略到用户
  * @method Models\AttachWorkGroupPolicyResponse AttachWorkGroupPolicy(Models\AttachWorkGroupPolicyRequest $req) 绑定鉴权策略到工作组
  * @method Models\BindWorkGroupsToUserResponse BindWorkGroupsToUser(Models\BindWorkGroupsToUserRequest $req) 绑定工作组到用户
@@ -47,6 +48,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\CreateDMSDatabaseResponse CreateDMSDatabase(Models\CreateDMSDatabaseRequest $req) DMS元数据创建库
  * @method Models\CreateDMSTableResponse CreateDMSTable(Models\CreateDMSTableRequest $req) DMS元数据创建表
  * @method Models\CreateDataEngineResponse CreateDataEngine(Models\CreateDataEngineRequest $req) 为用户创建数据引擎
+ * @method Models\CreateDataMaskStrategyResponse CreateDataMaskStrategy(Models\CreateDataMaskStrategyRequest $req) 创建数据脱敏策略
  * @method Models\CreateDatabaseResponse CreateDatabase(Models\CreateDatabaseRequest $req) 本接口（CreateDatabase）用于生成建库SQL语句。
  * @method Models\CreateExportTaskResponse CreateExportTask(Models\CreateExportTaskRequest $req) 该接口（CreateExportTask）用于创建导出任务
  * @method Models\CreateImportTaskResponse CreateImportTask(Models\CreateImportTaskRequest $req) 该接口（CreateImportTask）用于创建导入任务
@@ -73,6 +75,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\CreateWorkGroupResponse CreateWorkGroup(Models\CreateWorkGroupRequest $req) 创建工作组
  * @method Models\DeleteCHDFSBindingProductResponse DeleteCHDFSBindingProduct(Models\DeleteCHDFSBindingProductRequest $req) 此接口（DeleteCHDFSBindingProduct）用于删除元数据加速桶和产品绑定关系
  * @method Models\DeleteDataEngineResponse DeleteDataEngine(Models\DeleteDataEngineRequest $req) 删除数据引擎
+ * @method Models\DeleteDataMaskStrategyResponse DeleteDataMaskStrategy(Models\DeleteDataMaskStrategyRequest $req) 删除数据脱敏策略
  * @method Models\DeleteNativeSparkSessionResponse DeleteNativeSparkSession(Models\DeleteNativeSparkSessionRequest $req) 根据spark session名称销毁eg spark session
  * @method Models\DeleteNotebookSessionResponse DeleteNotebookSession(Models\DeleteNotebookSessionRequest $req) 本接口（DeleteNotebookSession）用于删除交互式session（notebook）
  * @method Models\DeleteScriptResponse DeleteScript(Models\DeleteScriptRequest $req) 该接口（DeleteScript）用于删除sql脚本。
@@ -98,6 +101,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DescribeDataEngineSessionParametersResponse DescribeDataEngineSessionParameters(Models\DescribeDataEngineSessionParametersRequest $req) 本接口（DescribeDataEngineSessionParameters）用于获取指定小版本下的Session配置。
  * @method Models\DescribeDataEnginesResponse DescribeDataEngines(Models\DescribeDataEnginesRequest $req) 本接口（DescribeDataEngines）用于查询DataEngines信息列表.
  * @method Models\DescribeDataEnginesScaleDetailResponse DescribeDataEnginesScaleDetail(Models\DescribeDataEnginesScaleDetailRequest $req) 查询引擎规格详情
+ * @method Models\DescribeDataMaskStrategiesResponse DescribeDataMaskStrategies(Models\DescribeDataMaskStrategiesRequest $req) 查询数据脱敏列表接口
  * @method Models\DescribeDatabasesResponse DescribeDatabases(Models\DescribeDatabasesRequest $req) 本接口（DescribeDatabases）用于查询数据库列表。
  * @method Models\DescribeDatasourceConnectionResponse DescribeDatasourceConnection(Models\DescribeDatasourceConnectionRequest $req) 本接口（DescribeDatasourceConnection）用于查询数据源信息
  * @method Models\DescribeEngineNetworksResponse DescribeEngineNetworks(Models\DescribeEngineNetworksRequest $req) 查询引擎网络信息
@@ -141,6 +145,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DescribeTasksCostInfoResponse DescribeTasksCostInfo(Models\DescribeTasksCostInfoRequest $req) 该接口（DescribeTasksCostInfo）用于查询任务消耗
  * @method Models\DescribeTasksOverviewResponse DescribeTasksOverview(Models\DescribeTasksOverviewRequest $req) 查看任务概览页
  * @method Models\DescribeThirdPartyAccessUserResponse DescribeThirdPartyAccessUser(Models\DescribeThirdPartyAccessUserRequest $req) 本接口（RegisterThirdPartyAccessUser）查询开通第三方平台访问的用户信息
+ * @method Models\DescribeUDFPolicyResponse DescribeUDFPolicy(Models\DescribeUDFPolicyRequest $req) 获取UDF权限信息
  * @method Models\DescribeUpdatableDataEnginesResponse DescribeUpdatableDataEngines(Models\DescribeUpdatableDataEnginesRequest $req) 查询可更新配置的引擎列表
  * @method Models\DescribeUserDataEngineConfigResponse DescribeUserDataEngineConfig(Models\DescribeUserDataEngineConfigRequest $req) 查询用户自定义引擎参数
  * @method Models\DescribeUserInfoResponse DescribeUserInfo(Models\DescribeUserInfoRequest $req) 获取用户详细信息
@@ -190,12 +195,14 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\UnlockMetaDataResponse UnlockMetaData(Models\UnlockMetaDataRequest $req) 元数据解锁
  * @method Models\UpdateDataEngineResponse UpdateDataEngine(Models\UpdateDataEngineRequest $req) 本接口用于更新数据引擎配置
  * @method Models\UpdateDataEngineConfigResponse UpdateDataEngineConfig(Models\UpdateDataEngineConfigRequest $req) 用户某种操作，触发引擎配置修改
+ * @method Models\UpdateDataMaskStrategyResponse UpdateDataMaskStrategy(Models\UpdateDataMaskStrategyRequest $req) 更新数据脱敏策略
  * @method Models\UpdateEngineResourceGroupNetworkConfigInfoResponse UpdateEngineResourceGroupNetworkConfigInfo(Models\UpdateEngineResourceGroupNetworkConfigInfoRequest $req) 更新标准引擎资源组网络配置信息
  * @method Models\UpdateNetworkConnectionResponse UpdateNetworkConnection(Models\UpdateNetworkConnectionRequest $req) 更新网络配置
  * @method Models\UpdateRowFilterResponse UpdateRowFilter(Models\UpdateRowFilterRequest $req) 此接口用于更新行过滤规则。注意只能更新过滤规则，不能更新规格对象catalog，database和table。
  * @method Models\UpdateStandardEngineResourceGroupBaseInfoResponse UpdateStandardEngineResourceGroupBaseInfo(Models\UpdateStandardEngineResourceGroupBaseInfoRequest $req) 更新标准引擎资源组基础信息
  * @method Models\UpdateStandardEngineResourceGroupConfigInfoResponse UpdateStandardEngineResourceGroupConfigInfo(Models\UpdateStandardEngineResourceGroupConfigInfoRequest $req) 更新标准引擎资源组基础信息
  * @method Models\UpdateStandardEngineResourceGroupResourceInfoResponse UpdateStandardEngineResourceGroupResourceInfo(Models\UpdateStandardEngineResourceGroupResourceInfoRequest $req) 更新标准引擎资源组基础信息
+ * @method Models\UpdateUDFPolicyResponse UpdateUDFPolicy(Models\UpdateUDFPolicyRequest $req) UDP权限修改
  * @method Models\UpdateUserDataEngineConfigResponse UpdateUserDataEngineConfig(Models\UpdateUserDataEngineConfigRequest $req) 修改用户引擎自定义配置
  * @method Models\UpgradeDataEngineImageResponse UpgradeDataEngineImage(Models\UpgradeDataEngineImageRequest $req) 升级引擎镜像
  */

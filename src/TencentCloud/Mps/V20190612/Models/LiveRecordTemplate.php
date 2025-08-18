@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
  * @method string getUpdateTime() 获取模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
  * @method void setUpdateTime(string $UpdateTime) 设置模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+ * @method string getRecordType() 获取录制类型，取值为video（音视频录制）、audio（纯音频录制）、auto（自动探测）。
+ * @method void setRecordType(string $RecordType) 设置录制类型，取值为video（音视频录制）、audio（纯音频录制）、auto（自动探测）。
  */
 class LiveRecordTemplate extends AbstractModel
 {
@@ -86,6 +88,11 @@ class LiveRecordTemplate extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var string 录制类型，取值为video（音视频录制）、audio（纯音频录制）、auto（自动探测）。
+     */
+    public $RecordType;
+
+    /**
      * @param integer $Definition 录制模板唯一标识。
      * @param HLSConfigureInfo $HLSConfigure HLS 配置参数
      * @param MP4ConfigureInfo $MP4Configure MP4配置参数
@@ -96,6 +103,7 @@ class LiveRecordTemplate extends AbstractModel
 <li>Custom：用户自定义模板。</li>
      * @param string $CreateTime 模板创建时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
      * @param string $UpdateTime 模板最后修改时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/862/37710#52)。
+     * @param string $RecordType 录制类型，取值为video（音视频录制）、audio（纯音频录制）、auto（自动探测）。
      */
     function __construct()
     {
@@ -142,6 +150,10 @@ class LiveRecordTemplate extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("RecordType",$param) and $param["RecordType"] !== null) {
+            $this->RecordType = $param["RecordType"];
         }
     }
 }

@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) 设置录制模板名称，长度限制：64 个字符。
  * @method string getComment() 获取模板描述信息，长度限制：256 个字符。
  * @method void setComment(string $Comment) 设置模板描述信息，长度限制：256 个字符。
+ * @method string getRecordType() 获取录制类型，取值为video（音视频录制）、audio（纯音频录制）、auto（自动探测）。不填时默认值为video。
+ * @method void setRecordType(string $RecordType) 设置录制类型，取值为video（音视频录制）、audio（纯音频录制）、auto（自动探测）。不填时默认值为video。
  */
 class CreateLiveRecordTemplateRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CreateLiveRecordTemplateRequest extends AbstractModel
     public $Comment;
 
     /**
+     * @var string 录制类型，取值为video（音视频录制）、audio（纯音频录制）、auto（自动探测）。不填时默认值为video。
+     */
+    public $RecordType;
+
+    /**
      * @param HLSConfigureInfo $HLSConfigure HLS配置参数，和MP4Configure需要二选一必填。
      * @param MP4ConfigureInfo $MP4Configure MP4配置参数，和HLSConfigure需要二选一必填。
      * @param string $Name 录制模板名称，长度限制：64 个字符。
      * @param string $Comment 模板描述信息，长度限制：256 个字符。
+     * @param string $RecordType 录制类型，取值为video（音视频录制）、audio（纯音频录制）、auto（自动探测）。不填时默认值为video。
      */
     function __construct()
     {
@@ -86,6 +94,10 @@ class CreateLiveRecordTemplateRequest extends AbstractModel
 
         if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
             $this->Comment = $param["Comment"];
+        }
+
+        if (array_key_exists("RecordType",$param) and $param["RecordType"] !== null) {
+            $this->RecordType = $param["RecordType"];
         }
     }
 }

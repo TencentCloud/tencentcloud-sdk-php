@@ -21,81 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * 表定义描述文件详情，不包含文件内容
  *
  * @method string getFileName() 获取文件名称，不包含扩展名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileName(string $FileName) 设置文件名称，不包含扩展名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileType() 获取数据描述语言（IDL）类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileType(string $FileType) 设置数据描述语言（IDL）类型
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileExtType() 获取文件扩展名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileExtType(string $FileExtType) 设置文件扩展名
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFileSize() 获取文件大小（Bytes）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileSize(integer $FileSize) 设置文件大小（Bytes）
-注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getFileId() 获取文件ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileId(integer $FileId) 设置文件ID
-注意：此字段可能返回 null，表示取不到有效值。
  * @method ErrorInfo getError() 获取错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setError(ErrorInfo $Error) 设置错误信息
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class IdlFileInfoWithoutContent extends AbstractModel
 {
     /**
      * @var string 文件名称，不包含扩展名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileName;
 
     /**
      * @var string 数据描述语言（IDL）类型
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileType;
 
     /**
      * @var string 文件扩展名
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileExtType;
 
     /**
      * @var integer 文件大小（Bytes）
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileSize;
 
     /**
      * @var integer 文件ID
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileId;
 
     /**
      * @var ErrorInfo 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Error;
 
     /**
      * @param string $FileName 文件名称，不包含扩展名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileType 数据描述语言（IDL）类型
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileExtType 文件扩展名
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FileSize 文件大小（Bytes）
-注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $FileId 文件ID
-注意：此字段可能返回 null，表示取不到有效值。
      * @param ErrorInfo $Error 错误信息
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

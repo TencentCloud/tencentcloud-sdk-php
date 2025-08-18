@@ -31,9 +31,7 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getSlowProcessSpeed() 获取慢处理包速度
  * @method void setSlowProcessSpeed(integer $SlowProcessSpeed) 设置慢处理包速度
  * @method string getVersion() 获取版本
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVersion(string $Version) 设置版本
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class ProxyDetailInfo extends AbstractModel
 {
@@ -64,7 +62,6 @@ class ProxyDetailInfo extends AbstractModel
 
     /**
      * @var string 版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Version;
 
@@ -75,7 +72,6 @@ class ProxyDetailInfo extends AbstractModel
      * @param integer $AverageProcessDelay 请求包时延
      * @param integer $SlowProcessSpeed 慢处理包速度
      * @param string $Version 版本
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

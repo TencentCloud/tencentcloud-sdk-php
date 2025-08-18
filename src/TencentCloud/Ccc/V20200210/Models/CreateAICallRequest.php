@@ -426,6 +426,14 @@ HoaiMy
  * @method void setVadLevel(integer $VadLevel) 设置vad的远场人声抑制能力（不会对asr识别效果造成影响），范围为[0, 3]，默认为0。推荐设置为2，有较好的远场人声抑制能力。
  * @method ToneWordInfo getToneWord() 获取衔接语
  * @method void setToneWord(ToneWordInfo $ToneWord) 设置衔接语
+ * @method boolean getEnableComplianceAudio() 获取合规提示音， 
+该参数传true（默认）表示通话开始播放摩斯码，提示对话内容为 AI 生成。
+该参数传false表示关闭合规提示音。该参数传false则代表您知晓并同意以下协议：
+我方充分知悉和理解，根据[《网络安全法》](https://www.gov.cn/xinwen/2016-11/07/content_5129723.htm)[《互联网信息服务深度合成管理规定》](https://www.gov.cn/zhengce/zhengceku/2022-12/12/content_5731431.htm)[《生成式人工智能服务管理暂行办法》](https://www.gov.cn/zhengce/zhengceku/202307/content_6891752.htm)[《人工智能生成合成内容标识办法》](https://www.gov.cn/zhengce/zhengceku/202503/content_7014286.htm)的法律法规的规定，对人工智能生成合成内容应当添加显式标识和隐式标识。我方基于业务需求，请腾讯云对生成合成内容不添加显式标识，我方承诺合法合规使用生成合成内容，避免造成混淆、误认；如果使用生成合成内容对公众提供服务的，或通过网络传播的，我方将自觉主动添加符合法律规定和国家标准要求的显式标识，承担人工智能生成合成内容标识的法律义务。我方未能恰当、合理地履行人工智能内容标识义务造成不良后果的，或遭受主管部门责罚的，相关责任由我方完全承担。
+ * @method void setEnableComplianceAudio(boolean $EnableComplianceAudio) 设置合规提示音， 
+该参数传true（默认）表示通话开始播放摩斯码，提示对话内容为 AI 生成。
+该参数传false表示关闭合规提示音。该参数传false则代表您知晓并同意以下协议：
+我方充分知悉和理解，根据[《网络安全法》](https://www.gov.cn/xinwen/2016-11/07/content_5129723.htm)[《互联网信息服务深度合成管理规定》](https://www.gov.cn/zhengce/zhengceku/2022-12/12/content_5731431.htm)[《生成式人工智能服务管理暂行办法》](https://www.gov.cn/zhengce/zhengceku/202307/content_6891752.htm)[《人工智能生成合成内容标识办法》](https://www.gov.cn/zhengce/zhengceku/202503/content_7014286.htm)的法律法规的规定，对人工智能生成合成内容应当添加显式标识和隐式标识。我方基于业务需求，请腾讯云对生成合成内容不添加显式标识，我方承诺合法合规使用生成合成内容，避免造成混淆、误认；如果使用生成合成内容对公众提供服务的，或通过网络传播的，我方将自觉主动添加符合法律规定和国家标准要求的显式标识，承担人工智能生成合成内容标识的法律义务。我方未能恰当、合理地履行人工智能内容标识义务造成不良后果的，或遭受主管部门责罚的，相关责任由我方完全承担。
  */
 class CreateAICallRequest extends AbstractModel
 {
@@ -762,6 +770,14 @@ HoaiMy
     public $ToneWord;
 
     /**
+     * @var boolean 合规提示音， 
+该参数传true（默认）表示通话开始播放摩斯码，提示对话内容为 AI 生成。
+该参数传false表示关闭合规提示音。该参数传false则代表您知晓并同意以下协议：
+我方充分知悉和理解，根据[《网络安全法》](https://www.gov.cn/xinwen/2016-11/07/content_5129723.htm)[《互联网信息服务深度合成管理规定》](https://www.gov.cn/zhengce/zhengceku/2022-12/12/content_5731431.htm)[《生成式人工智能服务管理暂行办法》](https://www.gov.cn/zhengce/zhengceku/202307/content_6891752.htm)[《人工智能生成合成内容标识办法》](https://www.gov.cn/zhengce/zhengceku/202503/content_7014286.htm)的法律法规的规定，对人工智能生成合成内容应当添加显式标识和隐式标识。我方基于业务需求，请腾讯云对生成合成内容不添加显式标识，我方承诺合法合规使用生成合成内容，避免造成混淆、误认；如果使用生成合成内容对公众提供服务的，或通过网络传播的，我方将自觉主动添加符合法律规定和国家标准要求的显式标识，承担人工智能生成合成内容标识的法律义务。我方未能恰当、合理地履行人工智能内容标识义务造成不良后果的，或遭受主管部门责罚的，相关责任由我方完全承担。
+     */
+    public $EnableComplianceAudio;
+
+    /**
      * @param integer $SdkAppId 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
      * @param string $Callee 被叫号码
      * @param string $LLMType 模型接口协议类型，目前兼容四种协议类型：
@@ -965,6 +981,10 @@ HoaiMy
      * @param float $TopP 模型topP
      * @param integer $VadLevel vad的远场人声抑制能力（不会对asr识别效果造成影响），范围为[0, 3]，默认为0。推荐设置为2，有较好的远场人声抑制能力。
      * @param ToneWordInfo $ToneWord 衔接语
+     * @param boolean $EnableComplianceAudio 合规提示音， 
+该参数传true（默认）表示通话开始播放摩斯码，提示对话内容为 AI 生成。
+该参数传false表示关闭合规提示音。该参数传false则代表您知晓并同意以下协议：
+我方充分知悉和理解，根据[《网络安全法》](https://www.gov.cn/xinwen/2016-11/07/content_5129723.htm)[《互联网信息服务深度合成管理规定》](https://www.gov.cn/zhengce/zhengceku/2022-12/12/content_5731431.htm)[《生成式人工智能服务管理暂行办法》](https://www.gov.cn/zhengce/zhengceku/202307/content_6891752.htm)[《人工智能生成合成内容标识办法》](https://www.gov.cn/zhengce/zhengceku/202503/content_7014286.htm)的法律法规的规定，对人工智能生成合成内容应当添加显式标识和隐式标识。我方基于业务需求，请腾讯云对生成合成内容不添加显式标识，我方承诺合法合规使用生成合成内容，避免造成混淆、误认；如果使用生成合成内容对公众提供服务的，或通过网络传播的，我方将自觉主动添加符合法律规定和国家标准要求的显式标识，承担人工智能生成合成内容标识的法律义务。我方未能恰当、合理地履行人工智能内容标识义务造成不良后果的，或遭受主管部门责罚的，相关责任由我方完全承担。
      */
     function __construct()
     {
@@ -1126,6 +1146,10 @@ HoaiMy
         if (array_key_exists("ToneWord",$param) and $param["ToneWord"] !== null) {
             $this->ToneWord = new ToneWordInfo();
             $this->ToneWord->deserialize($param["ToneWord"]);
+        }
+
+        if (array_key_exists("EnableComplianceAudio",$param) and $param["EnableComplianceAudio"] !== null) {
+            $this->EnableComplianceAudio = $param["EnableComplianceAudio"];
         }
     }
 }

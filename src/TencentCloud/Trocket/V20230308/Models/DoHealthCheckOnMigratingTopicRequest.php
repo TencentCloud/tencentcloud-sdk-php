@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
 
  * @method void setTopicName(string $TopicName) 设置主题名称，可在[DescribeMigratingTopicList](https://cloud.tencent.com/document/api/1493/118007)接口返回的[MigratingTopic](https://cloud.tencent.com/document/api/1493/96031#MigratingTopic)数据结构中获得。
 
- * @method boolean getIgnoreCheck() 获取必填，是否忽略当前检查
- * @method void setIgnoreCheck(boolean $IgnoreCheck) 设置必填，是否忽略当前检查
+ * @method boolean getIgnoreCheck() 获取是否忽略当前检查
+ * @method void setIgnoreCheck(boolean $IgnoreCheck) 设置是否忽略当前检查
  * @method string getNamespace() 获取命名空间，仅迁移至4.x集群有效，可在[DescribeMigratingTopicList](https://cloud.tencent.com/document/api/1493/118007)接口返回的[MigratingTopic](https://cloud.tencent.com/document/api/1493/96031#MigratingTopic)数据结构中获得。
  * @method void setNamespace(string $Namespace) 设置命名空间，仅迁移至4.x集群有效，可在[DescribeMigratingTopicList](https://cloud.tencent.com/document/api/1493/118007)接口返回的[MigratingTopic](https://cloud.tencent.com/document/api/1493/96031#MigratingTopic)数据结构中获得。
  */
@@ -48,7 +48,7 @@ class DoHealthCheckOnMigratingTopicRequest extends AbstractModel
     public $TopicName;
 
     /**
-     * @var boolean 必填，是否忽略当前检查
+     * @var boolean 是否忽略当前检查
      */
     public $IgnoreCheck;
 
@@ -62,7 +62,7 @@ class DoHealthCheckOnMigratingTopicRequest extends AbstractModel
 
      * @param string $TopicName 主题名称，可在[DescribeMigratingTopicList](https://cloud.tencent.com/document/api/1493/118007)接口返回的[MigratingTopic](https://cloud.tencent.com/document/api/1493/96031#MigratingTopic)数据结构中获得。
 
-     * @param boolean $IgnoreCheck 必填，是否忽略当前检查
+     * @param boolean $IgnoreCheck 是否忽略当前检查
      * @param string $Namespace 命名空间，仅迁移至4.x集群有效，可在[DescribeMigratingTopicList](https://cloud.tencent.com/document/api/1493/118007)接口返回的[MigratingTopic](https://cloud.tencent.com/document/api/1493/96031#MigratingTopic)数据结构中获得。
      */
     function __construct()

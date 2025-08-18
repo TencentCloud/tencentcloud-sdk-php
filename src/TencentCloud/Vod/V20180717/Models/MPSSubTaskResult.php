@@ -29,9 +29,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getMessage() 获取错误信息。
  * @method void setMessage(string $Message) 设置错误信息。
  * @method string getInput() 获取MPS 视频处理任务输入。该字段对应 MPS 任务返回中的 Input 结果，以 JSON 格式返回。
-示例：{"Definition": 24}
  * @method void setInput(string $Input) 设置MPS 视频处理任务输入。该字段对应 MPS 任务返回中的 Input 结果，以 JSON 格式返回。
-示例：{"Definition": 24}
  * @method MPSTaskOutput getOutput() 获取MPS 视频处理任务输出。
  * @method void setOutput(MPSTaskOutput $Output) 设置MPS 视频处理任务输出。
  */
@@ -59,7 +57,6 @@ class MPSSubTaskResult extends AbstractModel
 
     /**
      * @var string MPS 视频处理任务输入。该字段对应 MPS 任务返回中的 Input 结果，以 JSON 格式返回。
-示例：{"Definition": 24}
      */
     public $Input;
 
@@ -74,7 +71,6 @@ class MPSSubTaskResult extends AbstractModel
      * @param string $ErrCode 错误码。返回0时成功，其他值为失败。
      * @param string $Message 错误信息。
      * @param string $Input MPS 视频处理任务输入。该字段对应 MPS 任务返回中的 Input 结果，以 JSON 格式返回。
-示例：{"Definition": 24}
      * @param MPSTaskOutput $Output MPS 视频处理任务输出。
      */
     function __construct()

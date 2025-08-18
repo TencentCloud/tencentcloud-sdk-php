@@ -29,13 +29,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getFileSize() 获取文件大小（Bytes）
  * @method void setFileSize(integer $FileSize) 设置文件大小（Bytes）
  * @method integer getFileId() 获取文件ID，对于已上传的文件有意义
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileId(integer $FileId) 设置文件ID，对于已上传的文件有意义
-注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFileContent() 获取文件内容，对于本次新上传的文件有意义
-注意：此字段可能返回 null，表示取不到有效值。
  * @method void setFileContent(string $FileContent) 设置文件内容，对于本次新上传的文件有意义
-注意：此字段可能返回 null，表示取不到有效值。
  */
 class IdlFileInfo extends AbstractModel
 {
@@ -61,13 +57,11 @@ class IdlFileInfo extends AbstractModel
 
     /**
      * @var integer 文件ID，对于已上传的文件有意义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileId;
 
     /**
      * @var string 文件内容，对于本次新上传的文件有意义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileContent;
 
@@ -77,9 +71,7 @@ class IdlFileInfo extends AbstractModel
      * @param string $FileExtType 文件扩展名
      * @param integer $FileSize 文件大小（Bytes）
      * @param integer $FileId 文件ID，对于已上传的文件有意义
-注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FileContent 文件内容，对于本次新上传的文件有意义
-注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {

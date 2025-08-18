@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreatePrivilegeCode请求参数结构体
  *
- * @method string getDomainInstanceId() 获取管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
- * @method void setDomainInstanceId(string $DomainInstanceId) 设置管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
  * @method string getMid() 获取必填；设备唯一标识符;
  * @method void setMid(string $Mid) 设置必填；设备唯一标识符;
+ * @method string getDomainInstanceId() 获取管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+ * @method void setDomainInstanceId(string $DomainInstanceId) 设置管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+ * @method integer getOsType() 获取系统类型（0: win，1：linux，2: mac，4：android，5：ios ）；默认值0
+ * @method void setOsType(integer $OsType) 设置系统类型（0: win，1：linux，2: mac，4：android，5：ios ）；默认值0
  */
 class CreatePrivilegeCodeRequest extends AbstractModel
 {
-    /**
-     * @var string 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
-     */
-    public $DomainInstanceId;
-
     /**
      * @var string 必填；设备唯一标识符;
      */
     public $Mid;
 
     /**
-     * @param string $DomainInstanceId 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+     * @var string 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+     */
+    public $DomainInstanceId;
+
+    /**
+     * @var integer 系统类型（0: win，1：linux，2: mac，4：android，5：ios ）；默认值0
+     */
+    public $OsType;
+
+    /**
      * @param string $Mid 必填；设备唯一标识符;
+     * @param string $DomainInstanceId 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+     * @param integer $OsType 系统类型（0: win，1：linux，2: mac，4：android，5：ios ）；默认值0
      */
     function __construct()
     {
@@ -54,12 +62,16 @@ class CreatePrivilegeCodeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Mid",$param) and $param["Mid"] !== null) {
+            $this->Mid = $param["Mid"];
+        }
+
         if (array_key_exists("DomainInstanceId",$param) and $param["DomainInstanceId"] !== null) {
             $this->DomainInstanceId = $param["DomainInstanceId"];
         }
 
-        if (array_key_exists("Mid",$param) and $param["Mid"] !== null) {
-            $this->Mid = $param["Mid"];
+        if (array_key_exists("OsType",$param) and $param["OsType"] !== null) {
+            $this->OsType = $param["OsType"];
         }
     }
 }

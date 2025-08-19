@@ -20,10 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SplitPartition请求参数结构体
  *
- * @method string getTopicId() 获取日志主题ID
- * @method void setTopicId(string $TopicId) 设置日志主题ID
- * @method integer getPartitionId() 获取待分裂分区ID
- * @method void setPartitionId(integer $PartitionId) 设置待分裂分区ID
+ * @method string getTopicId() 获取日志主题Id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+ * @method void setTopicId(string $TopicId) 设置日志主题Id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+ * @method integer getPartitionId() 获取待分裂分区Id
+- 通过[获取分区列表](https://cloud.tencent.com/document/product/614/56470)获取待分裂分区Id。
+ * @method void setPartitionId(integer $PartitionId) 设置待分裂分区Id
+- 通过[获取分区列表](https://cloud.tencent.com/document/product/614/56470)获取待分裂分区Id。
  * @method string getSplitKey() 获取分区切分的哈希key的位置，只在Number=2时有意义
  * @method void setSplitKey(string $SplitKey) 设置分区切分的哈希key的位置，只在Number=2时有意义
  * @method integer getNumber() 获取分区分裂个数(可选)，默认等于2
@@ -32,12 +36,14 @@ use TencentCloud\Common\AbstractModel;
 class SplitPartitionRequest extends AbstractModel
 {
     /**
-     * @var string 日志主题ID
+     * @var string 日志主题Id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public $TopicId;
 
     /**
-     * @var integer 待分裂分区ID
+     * @var integer 待分裂分区Id
+- 通过[获取分区列表](https://cloud.tencent.com/document/product/614/56470)获取待分裂分区Id。
      */
     public $PartitionId;
 
@@ -52,8 +58,10 @@ class SplitPartitionRequest extends AbstractModel
     public $Number;
 
     /**
-     * @param string $TopicId 日志主题ID
-     * @param integer $PartitionId 待分裂分区ID
+     * @param string $TopicId 日志主题Id
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+     * @param integer $PartitionId 待分裂分区Id
+- 通过[获取分区列表](https://cloud.tencent.com/document/product/614/56470)获取待分裂分区Id。
      * @param string $SplitKey 分区切分的哈希key的位置，只在Number=2时有意义
      * @param integer $Number 分区分裂个数(可选)，默认等于2
      */

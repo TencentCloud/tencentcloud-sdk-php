@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUrl(string $Url) 设置APP地址
  * @method DisplayToolCommon getDisplayToolCommon() 获取公共字段
  * @method void setDisplayToolCommon(DisplayToolCommon $DisplayToolCommon) 设置公共字段
+ * @method string getStatus() 获取状态：unrepaired:未修复，repaired:已修复，ignore:已忽略
+ * @method void setStatus(string $Status) 设置状态：unrepaired:未修复，repaired:已修复，ignore:已忽略
  */
 class DisplayDarkWeb extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DisplayDarkWeb extends AbstractModel
     public $DisplayToolCommon;
 
     /**
+     * @var string 状态：unrepaired:未修复，repaired:已修复，ignore:已忽略
+     */
+    public $Status;
+
+    /**
      * @param integer $Id 主键ID
      * @param string $Content 内容
      * @param string $MatchedKeywords 命中关键字
      * @param string $Url APP地址
      * @param DisplayToolCommon $DisplayToolCommon 公共字段
+     * @param string $Status 状态：unrepaired:未修复，repaired:已修复，ignore:已忽略
      */
     function __construct()
     {
@@ -97,6 +105,10 @@ class DisplayDarkWeb extends AbstractModel
         if (array_key_exists("DisplayToolCommon",$param) and $param["DisplayToolCommon"] !== null) {
             $this->DisplayToolCommon = new DisplayToolCommon();
             $this->DisplayToolCommon->deserialize($param["DisplayToolCommon"]);
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

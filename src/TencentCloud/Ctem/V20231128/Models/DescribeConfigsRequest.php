@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilters(array $Filters) 设置查询数组
  * @method boolean getIgnored() 获取是否显示被忽略的数据
  * @method void setIgnored(boolean $Ignored) 设置是否显示被忽略的数据
+ * @method string getOrderBy() 获取支持按照响应长度排序，例如：+ContentLength或-ContentLength，+是递增，-是递减
+ * @method void setOrderBy(string $OrderBy) 设置支持按照响应长度排序，例如：+ContentLength或-ContentLength，+是递增，-是递减
  */
 class DescribeConfigsRequest extends AbstractModel
 {
@@ -122,6 +124,11 @@ class DescribeConfigsRequest extends AbstractModel
     public $Ignored;
 
     /**
+     * @var string 支持按照响应长度排序，例如：+ContentLength或-ContentLength，+是递增，-是递减
+     */
+    public $OrderBy;
+
+    /**
      * @param array $CustomerIdList 企业ID列表，可多选
      * @param boolean $IsAggregation 是否聚合数据
      * @param boolean $IsNew 是否新增数据
@@ -136,6 +143,7 @@ class DescribeConfigsRequest extends AbstractModel
      * @param string $UpdateAtEnd 更新时间-结束
      * @param array $Filters 查询数组
      * @param boolean $Ignored 是否显示被忽略的数据
+     * @param string $OrderBy 支持按照响应长度排序，例如：+ContentLength或-ContentLength，+是递增，-是递减
      */
     function __construct()
     {
@@ -209,6 +217,10 @@ class DescribeConfigsRequest extends AbstractModel
 
         if (array_key_exists("Ignored",$param) and $param["Ignored"] !== null) {
             $this->Ignored = $param["Ignored"];
+        }
+
+        if (array_key_exists("OrderBy",$param) and $param["OrderBy"] !== null) {
+            $this->OrderBy = $param["OrderBy"];
         }
     }
 }

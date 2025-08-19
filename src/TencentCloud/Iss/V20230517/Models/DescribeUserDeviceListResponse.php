@@ -14,21 +14,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ioa\V20220601\Models;
+namespace TencentCloud\Iss\V20230517\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeSoftCensusListByDevice返回参数结构体
+ * DescribeUserDeviceList返回参数结构体
  *
- * @method DescribeSoftCensusListByDevicePageData getData() 获取业务响应数据
- * @method void setData(DescribeSoftCensusListByDevicePageData $Data) 设置业务响应数据
+ * @method DescribeDeviceListData getData() 获取返回结果
+ * @method void setData(DescribeDeviceListData $Data) 设置返回结果
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeSoftCensusListByDeviceResponse extends AbstractModel
+class DescribeUserDeviceListResponse extends AbstractModel
 {
     /**
-     * @var DescribeSoftCensusListByDevicePageData 业务响应数据
+     * @var DescribeDeviceListData 返回结果
      */
     public $Data;
 
@@ -38,7 +38,7 @@ class DescribeSoftCensusListByDeviceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param DescribeSoftCensusListByDevicePageData $Data 业务响应数据
+     * @param DescribeDeviceListData $Data 返回结果
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -55,7 +55,7 @@ class DescribeSoftCensusListByDeviceResponse extends AbstractModel
             return;
         }
         if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = new DescribeSoftCensusListByDevicePageData();
+            $this->Data = new DescribeDeviceListData();
             $this->Data->deserialize($param["Data"]);
         }
 

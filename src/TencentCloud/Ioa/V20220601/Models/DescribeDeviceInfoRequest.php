@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDeviceInfo请求参数结构体
  *
+ * @method string getDomainInstanceId() 获取管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+ * @method void setDomainInstanceId(string $DomainInstanceId) 设置管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
  * @method string getMid() 获取终端id
  * @method void setMid(string $Mid) 设置终端id
  * @method string getType() 获取查询类型  process_list network_list service_list
@@ -27,6 +29,11 @@ use TencentCloud\Common\AbstractModel;
  */
 class DescribeDeviceInfoRequest extends AbstractModel
 {
+    /**
+     * @var string 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
+     */
+    public $DomainInstanceId;
+
     /**
      * @var string 终端id
      */
@@ -38,6 +45,7 @@ class DescribeDeviceInfoRequest extends AbstractModel
     public $Type;
 
     /**
+     * @param string $DomainInstanceId 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
      * @param string $Mid 终端id
      * @param string $Type 查询类型  process_list network_list service_list
      */
@@ -54,6 +62,10 @@ class DescribeDeviceInfoRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("DomainInstanceId",$param) and $param["DomainInstanceId"] !== null) {
+            $this->DomainInstanceId = $param["DomainInstanceId"];
+        }
+
         if (array_key_exists("Mid",$param) and $param["Mid"] !== null) {
             $this->Mid = $param["Mid"];
         }

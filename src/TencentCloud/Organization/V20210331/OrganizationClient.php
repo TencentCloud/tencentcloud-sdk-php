@@ -83,6 +83,7 @@ use TencentCloud\Organization\V20210331\Models as Models;
  * @method Models\DescribeOrganizationMemberEmailBindResponse DescribeOrganizationMemberEmailBind(Models\DescribeOrganizationMemberEmailBindRequest $req) 查询成员邮箱绑定详细信息
  * @method Models\DescribeOrganizationMemberPoliciesResponse DescribeOrganizationMemberPolicies(Models\DescribeOrganizationMemberPoliciesRequest $req) 获取组织成员的授权策略列表
  * @method Models\DescribeOrganizationMembersResponse DescribeOrganizationMembers(Models\DescribeOrganizationMembersRequest $req) 获取企业组织成员列表
+ * @method Models\DescribeOrganizationMembersAuthPolicyResponse DescribeOrganizationMembersAuthPolicy(Models\DescribeOrganizationMembersAuthPolicyRequest $req) 查询组织成员访问策略列表
  * @method Models\DescribeOrganizationNodesResponse DescribeOrganizationNodes(Models\DescribeOrganizationNodesRequest $req) 获取组织节点列表
  * @method Models\DescribePolicyResponse DescribePolicy(Models\DescribePolicyRequest $req) 本接口（DescribePolicy）可用于查询查看策略详情。
  * @method Models\DescribePolicyConfigResponse DescribePolicyConfig(Models\DescribePolicyConfigRequest $req) 本接口（DescribePolicyConfig）可用于查询企业组织策略配置

@@ -38,13 +38,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDenyOnQuotaLessThanUsage(boolean $DenyOnQuotaLessThanUsage) 设置设置媒体库或租户空间配额且配额小于已使用存储量时，是否拒绝设置请求。默认为 false。
  * @method boolean getEnableFileHistory() 获取是否开启历史版本。默认为 false。
  * @method void setEnableFileHistory(boolean $EnableFileHistory) 设置是否开启历史版本。默认为 false。
- * @method integer getFileHistoryCount() 获取当开启历史版本时，指定单个文件保留的历史版本的数量上限，不能超过 999，指定为 0 则不限制，默认为 0。当未开启历史版本时，该属性为 null。
+ * @method integer getFileHistoryCount() 获取当开启历史版本时，指定单个文件保留的历史版本的数量上限，取值范围为 1 到 999。当未开启历史版本时，该属性可能为 null。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFileHistoryCount(integer $FileHistoryCount) 设置当开启历史版本时，指定单个文件保留的历史版本的数量上限，不能超过 999，指定为 0 则不限制，默认为 0。当未开启历史版本时，该属性为 null。
+ * @method void setFileHistoryCount(integer $FileHistoryCount) 设置当开启历史版本时，指定单个文件保留的历史版本的数量上限，取值范围为 1 到 999。当未开启历史版本时，该属性可能为 null。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getFileHistoryExpireDay() 获取当开启历史版本时，指定历史版本保留的最长天数，不能超过 999，指定为 0 则不限制，默认为 0。当未开启历史版本时，该属性为 null。
+ * @method integer getFileHistoryExpireDay() 获取当开启历史版本时，指定历史版本保留的最长天数，取值范围为 0 到 999，当指定为 0 时代表永久保留。当未开启历史版本时，该属性可能为 null。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setFileHistoryExpireDay(integer $FileHistoryExpireDay) 设置当开启历史版本时，指定历史版本保留的最长天数，不能超过 999，指定为 0 则不限制，默认为 0。当未开启历史版本时，该属性为 null。
+ * @method void setFileHistoryExpireDay(integer $FileHistoryExpireDay) 设置当开启历史版本时，指定历史版本保留的最长天数，取值范围为 0 到 999，当指定为 0 时代表永久保留。当未开启历史版本时，该属性可能为 null。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxDirFileNameLength() 获取目录或文件名的最长长度，不能超过 255，默认为 255。修改该参数不会影响存量目录或文件名，即如果将该字段的值改小，已经存在的长度超过目标值的目录或文件名不会发生变化。
  * @method void setMaxDirFileNameLength(integer $MaxDirFileNameLength) 设置目录或文件名的最长长度，不能超过 255，默认为 255。修改该参数不会影响存量目录或文件名，即如果将该字段的值改小，已经存在的长度超过目标值的目录或文件名不会发生变化。
@@ -125,13 +125,13 @@ class LibraryExtension extends AbstractModel
     public $EnableFileHistory;
 
     /**
-     * @var integer 当开启历史版本时，指定单个文件保留的历史版本的数量上限，不能超过 999，指定为 0 则不限制，默认为 0。当未开启历史版本时，该属性为 null。
+     * @var integer 当开启历史版本时，指定单个文件保留的历史版本的数量上限，取值范围为 1 到 999。当未开启历史版本时，该属性可能为 null。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileHistoryCount;
 
     /**
-     * @var integer 当开启历史版本时，指定历史版本保留的最长天数，不能超过 999，指定为 0 则不限制，默认为 0。当未开启历史版本时，该属性为 null。
+     * @var integer 当开启历史版本时，指定历史版本保留的最长天数，取值范围为 0 到 999，当指定为 0 时代表永久保留。当未开启历史版本时，该属性可能为 null。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $FileHistoryExpireDay;
@@ -199,9 +199,9 @@ class LibraryExtension extends AbstractModel
      * @param boolean $EnableSearch 是否启用文件路径搜索功能。默认为 false。
      * @param boolean $DenyOnQuotaLessThanUsage 设置媒体库或租户空间配额且配额小于已使用存储量时，是否拒绝设置请求。默认为 false。
      * @param boolean $EnableFileHistory 是否开启历史版本。默认为 false。
-     * @param integer $FileHistoryCount 当开启历史版本时，指定单个文件保留的历史版本的数量上限，不能超过 999，指定为 0 则不限制，默认为 0。当未开启历史版本时，该属性为 null。
+     * @param integer $FileHistoryCount 当开启历史版本时，指定单个文件保留的历史版本的数量上限，取值范围为 1 到 999。当未开启历史版本时，该属性可能为 null。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $FileHistoryExpireDay 当开启历史版本时，指定历史版本保留的最长天数，不能超过 999，指定为 0 则不限制，默认为 0。当未开启历史版本时，该属性为 null。
+     * @param integer $FileHistoryExpireDay 当开启历史版本时，指定历史版本保留的最长天数，取值范围为 0 到 999，当指定为 0 时代表永久保留。当未开启历史版本时，该属性可能为 null。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxDirFileNameLength 目录或文件名的最长长度，不能超过 255，默认为 255。修改该参数不会影响存量目录或文件名，即如果将该字段的值改小，已经存在的长度超过目标值的目录或文件名不会发生变化。
      * @param boolean $IsPublicRead 是否开启公有读，开启后读操作无需使用访问令牌，默认为 false。仅单租户空间媒体库支持该属性，否则该属性为 null。

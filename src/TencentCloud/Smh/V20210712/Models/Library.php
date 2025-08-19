@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBucketName(string $BucketName) 设置媒体库绑定的 COS 存储桶
  * @method string getBucketRegion() 获取媒体库绑定的 COS 存储桶所在的地域
  * @method void setBucketRegion(string $BucketRegion) 设置媒体库绑定的 COS 存储桶所在的地域
+ * @method string getAccessDomain() 获取该媒体库的业务 API 访问域名
+ * @method void setAccessDomain(string $AccessDomain) 设置该媒体库的业务 API 访问域名
  * @method string getCreationTime() 获取媒体库创建时间
  * @method void setCreationTime(string $CreationTime) 设置媒体库创建时间
  * @method LibraryExtension getLibraryExtension() 获取媒体库配置项
@@ -69,6 +71,11 @@ class Library extends AbstractModel
     public $BucketRegion;
 
     /**
+     * @var string 该媒体库的业务 API 访问域名
+     */
+    public $AccessDomain;
+
+    /**
      * @var string 媒体库创建时间
      */
     public $CreationTime;
@@ -99,6 +106,7 @@ class Library extends AbstractModel
      * @param string $Remark 备注
      * @param string $BucketName 媒体库绑定的 COS 存储桶
      * @param string $BucketRegion 媒体库绑定的 COS 存储桶所在的地域
+     * @param string $AccessDomain 该媒体库的业务 API 访问域名
      * @param string $CreationTime 媒体库创建时间
      * @param LibraryExtension $LibraryExtension 媒体库配置项
      * @param string $Size 媒体库用量，单位为 Bytes，由于数字类型精度限制，该字段为 String 类型。
@@ -136,6 +144,10 @@ class Library extends AbstractModel
 
         if (array_key_exists("BucketRegion",$param) and $param["BucketRegion"] !== null) {
             $this->BucketRegion = $param["BucketRegion"];
+        }
+
+        if (array_key_exists("AccessDomain",$param) and $param["AccessDomain"] !== null) {
+            $this->AccessDomain = $param["AccessDomain"];
         }
 
         if (array_key_exists("CreationTime",$param) and $param["CreationTime"] !== null) {

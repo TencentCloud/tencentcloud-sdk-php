@@ -34,10 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHasOverdueBill(integer $HasOverdueBill) 设置是否欠费。0：不欠费；1：欠费
  * @method string getClientRemark() 获取客户备注
  * @method void setClientRemark(string $ClientRemark) 设置客户备注
- * @method integer getOffset() 获取偏移量 请保持必传
- * @method void setOffset(integer $Offset) 设置偏移量 请保持必传
- * @method integer getLimit() 获取限制数目 请保持必传，最大2000
- * @method void setLimit(integer $Limit) 设置限制数目 请保持必传，最大2000
+ * @method integer getOffset() 获取*偏移量 【请保持必传】
+ * @method void setOffset(integer $Offset) 设置*偏移量 【请保持必传】
+ * @method integer getLimit() 获取*限制数目 【请保持必传】最大2000
+ * @method void setLimit(integer $Limit) 设置*限制数目 【请保持必传】最大2000
  * @method string getClientType() 获取可以为new(自拓)/assign(指派)/old(官网)/direct(直销)/direct_newopp(直销(新商机))/空
  * @method void setClientType(string $ClientType) 设置可以为new(自拓)/assign(指派)/old(官网)/direct(直销)/direct_newopp(直销(新商机))/空
  * @method string getProjectType() 获取项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
@@ -85,12 +85,12 @@ class DescribeAgentAuditedClientsRequest extends AbstractModel
     public $ClientRemark;
 
     /**
-     * @var integer 偏移量 请保持必传
+     * @var integer *偏移量 【请保持必传】
      */
     public $Offset;
 
     /**
-     * @var integer 限制数目 请保持必传，最大2000
+     * @var integer *限制数目 【请保持必传】最大2000
      */
     public $Limit;
 
@@ -122,8 +122,8 @@ class DescribeAgentAuditedClientsRequest extends AbstractModel
      * @param array $ClientUins 客户账号ID列表
      * @param integer $HasOverdueBill 是否欠费。0：不欠费；1：欠费
      * @param string $ClientRemark 客户备注
-     * @param integer $Offset 偏移量 请保持必传
-     * @param integer $Limit 限制数目 请保持必传，最大2000
+     * @param integer $Offset *偏移量 【请保持必传】
+     * @param integer $Limit *限制数目 【请保持必传】最大2000
      * @param string $ClientType 可以为new(自拓)/assign(指派)/old(官网)/direct(直销)/direct_newopp(直销(新商机))/空
      * @param string $ProjectType 项目类型：可以为self(自拓项目)/platform(合作项目)/repeat(复算项目  )/空
      * @param string $SalesUin 业务员ID

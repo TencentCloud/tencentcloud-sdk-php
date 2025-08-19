@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 实例可回档时间范围
  *
- * @method integer getCode() 获取查询数据库错误码
- * @method void setCode(integer $Code) 设置查询数据库错误码
+ * @method integer getCode() 获取查询数据库错误码。0 - 正常，1600001 - 内部错误，1600003 - 入参异常，1600009 - 实例不存在，1624001 - DB 访问异常。
+ * @method void setCode(integer $Code) 设置查询数据库错误码。0 - 正常，1600001 - 内部错误，1600003 - 入参异常，1600009 - 实例不存在，1624001 - DB 访问异常。
  * @method string getMessage() 获取查询数据库错误信息
  * @method void setMessage(string $Message) 设置查询数据库错误信息
  * @method string getInstanceId() 获取实例ID列表，单个实例Id的格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class InstanceRollbackRangeTime extends AbstractModel
 {
     /**
-     * @var integer 查询数据库错误码
+     * @var integer 查询数据库错误码。0 - 正常，1600001 - 内部错误，1600003 - 入参异常，1600009 - 实例不存在，1624001 - DB 访问异常。
      */
     public $Code;
 
@@ -52,7 +52,7 @@ class InstanceRollbackRangeTime extends AbstractModel
     public $Times;
 
     /**
-     * @param integer $Code 查询数据库错误码
+     * @param integer $Code 查询数据库错误码。0 - 正常，1600001 - 内部错误，1600003 - 入参异常，1600009 - 实例不存在，1624001 - DB 访问异常。
      * @param string $Message 查询数据库错误信息
      * @param string $InstanceId 实例ID列表，单个实例Id的格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例ID相同
      * @param array $Times 可回档时间范围

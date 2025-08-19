@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLogContext请求参数结构体
  *
- * @method string getTopicId() 获取要查询的日志主题ID
- * @method void setTopicId(string $TopicId) 设置要查询的日志主题ID
- * @method string getBTime() 获取日志时间,  即SearchLog接口返回信息中Results结构体中的Time，需按照 UTC+8 时区将该毫秒级Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。
- * @method void setBTime(string $BTime) 设置日志时间,  即SearchLog接口返回信息中Results结构体中的Time，需按照 UTC+8 时区将该毫秒级Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。
- * @method string getPkgId() 获取日志包序号，即SearchLog接口返回信息中Results结构体中的PkgId。
- * @method void setPkgId(string $PkgId) 设置日志包序号，即SearchLog接口返回信息中Results结构体中的PkgId。
- * @method integer getPkgLogId() 获取日志包内一条日志的序号，即SearchLog接口返回信息中Results结构中的PkgLogId。
- * @method void setPkgLogId(integer $PkgLogId) 设置日志包内一条日志的序号，即SearchLog接口返回信息中Results结构中的PkgLogId。
+ * @method string getTopicId() 获取要查询的日志主题Id。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
+ * @method void setTopicId(string $TopicId) 设置要查询的日志主题Id。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
+ * @method string getBTime() 获取日志时间,  即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构体中的Time，需按照 UTC+8 时区将该毫秒级Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。
+ * @method void setBTime(string $BTime) 设置日志时间,  即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构体中的Time，需按照 UTC+8 时区将该毫秒级Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。
+ * @method string getPkgId() 获取日志包序号，即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构体中的PkgId。
+ * @method void setPkgId(string $PkgId) 设置日志包序号，即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构体中的PkgId。
+ * @method integer getPkgLogId() 获取日志包内一条日志的序号，即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构中的PkgLogId。
+ * @method void setPkgLogId(integer $PkgLogId) 设置日志包内一条日志的序号，即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构中的PkgLogId。
  * @method integer getPrevLogs() 获取前${PrevLogs}条日志，默认值10。
  * @method void setPrevLogs(integer $PrevLogs) 设置前${PrevLogs}条日志，默认值10。
  * @method integer getNextLogs() 获取后${NextLogs}条日志，默认值10。
@@ -60,22 +64,24 @@ use TencentCloud\Common\AbstractModel;
 class DescribeLogContextRequest extends AbstractModel
 {
     /**
-     * @var string 要查询的日志主题ID
+     * @var string 要查询的日志主题Id。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
      */
     public $TopicId;
 
     /**
-     * @var string 日志时间,  即SearchLog接口返回信息中Results结构体中的Time，需按照 UTC+8 时区将该毫秒级Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。
+     * @var string 日志时间,  即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构体中的Time，需按照 UTC+8 时区将该毫秒级Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。
      */
     public $BTime;
 
     /**
-     * @var string 日志包序号，即SearchLog接口返回信息中Results结构体中的PkgId。
+     * @var string 日志包序号，即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构体中的PkgId。
      */
     public $PkgId;
 
     /**
-     * @var integer 日志包内一条日志的序号，即SearchLog接口返回信息中Results结构中的PkgLogId。
+     * @var integer 日志包内一条日志的序号，即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构中的PkgLogId。
      */
     public $PkgLogId;
 
@@ -114,10 +120,12 @@ class DescribeLogContextRequest extends AbstractModel
     public $To;
 
     /**
-     * @param string $TopicId 要查询的日志主题ID
-     * @param string $BTime 日志时间,  即SearchLog接口返回信息中Results结构体中的Time，需按照 UTC+8 时区将该毫秒级Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。
-     * @param string $PkgId 日志包序号，即SearchLog接口返回信息中Results结构体中的PkgId。
-     * @param integer $PkgLogId 日志包内一条日志的序号，即SearchLog接口返回信息中Results结构中的PkgLogId。
+     * @param string $TopicId 要查询的日志主题Id。
+- 通过 [获取日志主题列表](https://cloud.tencent.com/document/product/614/56454) 获取日志主题Id。
+- 通过 [创建日志主题](https://cloud.tencent.com/document/product/614/56456) 获取日志主题Id。
+     * @param string $BTime 日志时间,  即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构体中的Time，需按照 UTC+8 时区将该毫秒级Unix时间戳转换为 YYYY-mm-dd HH:MM:SS.FFF 格式的字符串。
+     * @param string $PkgId 日志包序号，即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构体中的PkgId。
+     * @param integer $PkgLogId 日志包内一条日志的序号，即 [检索分析日志](https://cloud.tencent.com/document/product/614/56447) 接口返回信息中Results结构中的PkgLogId。
      * @param integer $PrevLogs 前${PrevLogs}条日志，默认值10。
      * @param integer $NextLogs 后${NextLogs}条日志，默认值10。
      * @param string $Query 检索语句，对日志上下文进行过滤，最大长度为12KB

@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackUpJobId(integer $BackUpJobId) 设置任务id
  * @method boolean getIsDeleteAll() 获取是否删除所有实例
  * @method void setIsDeleteAll(boolean $IsDeleteAll) 设置是否删除所有实例
+ * @method boolean getIsRecover() 获取true代表恢复删除隔离中的job 默认false就是删除
+ * @method void setIsRecover(boolean $IsRecover) 设置true代表恢复删除隔离中的job 默认false就是删除
  */
 class DeleteBackUpDataRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DeleteBackUpDataRequest extends AbstractModel
     public $IsDeleteAll;
 
     /**
+     * @var boolean true代表恢复删除隔离中的job 默认false就是删除
+     */
+    public $IsRecover;
+
+    /**
      * @param string $InstanceId 集群id
      * @param integer $BackUpJobId 任务id
      * @param boolean $IsDeleteAll 是否删除所有实例
+     * @param boolean $IsRecover true代表恢复删除隔离中的job 默认false就是删除
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DeleteBackUpDataRequest extends AbstractModel
 
         if (array_key_exists("IsDeleteAll",$param) and $param["IsDeleteAll"] !== null) {
             $this->IsDeleteAll = $param["IsDeleteAll"];
+        }
+
+        if (array_key_exists("IsRecover",$param) and $param["IsRecover"] !== null) {
+            $this->IsRecover = $param["IsRecover"];
         }
     }
 }

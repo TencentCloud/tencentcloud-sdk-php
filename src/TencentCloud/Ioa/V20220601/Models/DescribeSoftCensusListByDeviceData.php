@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setPiracyRisk(integer $PiracyRisk) 设置盗版风险（1=风险;2=未知）
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getRemarkName() 获取终端备注名
+ * @method void setRemarkName(string $RemarkName) 设置终端备注名
  */
 class DescribeSoftCensusListByDeviceData extends AbstractModel
 {
@@ -144,6 +146,11 @@ class DescribeSoftCensusListByDeviceData extends AbstractModel
     public $PiracyRisk;
 
     /**
+     * @var string 终端备注名
+     */
+    public $RemarkName;
+
+    /**
      * @param string $UserName 终端用户名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $MacAddr mac地址
@@ -168,6 +175,7 @@ class DescribeSoftCensusListByDeviceData extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $PiracyRisk 盗版风险（1=风险;2=未知）
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $RemarkName 终端备注名
      */
     function __construct()
     {
@@ -228,6 +236,10 @@ class DescribeSoftCensusListByDeviceData extends AbstractModel
 
         if (array_key_exists("PiracyRisk",$param) and $param["PiracyRisk"] !== null) {
             $this->PiracyRisk = $param["PiracyRisk"];
+        }
+
+        if (array_key_exists("RemarkName",$param) and $param["RemarkName"] !== null) {
+            $this->RemarkName = $param["RemarkName"];
         }
     }
 }

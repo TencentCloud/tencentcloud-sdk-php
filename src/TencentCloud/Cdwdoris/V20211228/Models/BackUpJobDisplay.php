@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrorReason(string $ErrorReason) 设置错误原因
  * @method SnapshotRemainPolicy getSnapshotRemainPolicy() 获取快照保留策略
  * @method void setSnapshotRemainPolicy(SnapshotRemainPolicy $SnapshotRemainPolicy) 设置快照保留策略
+ * @method integer getIsolationCount() 获取隔离次数
+ * @method void setIsolationCount(integer $IsolationCount) 设置隔离次数
  */
 class BackUpJobDisplay extends AbstractModel
 {
@@ -129,6 +131,11 @@ class BackUpJobDisplay extends AbstractModel
     public $SnapshotRemainPolicy;
 
     /**
+     * @var integer 隔离次数
+     */
+    public $IsolationCount;
+
+    /**
      * @param integer $JobId 备份实例id
      * @param string $Snapshot 备份实例名
      * @param integer $BackUpSize 备份数据量
@@ -144,6 +151,7 @@ class BackUpJobDisplay extends AbstractModel
      * @param boolean $IsUserDefineBucket 是否使用的自定义桶
      * @param string $ErrorReason 错误原因
      * @param SnapshotRemainPolicy $SnapshotRemainPolicy 快照保留策略
+     * @param integer $IsolationCount 隔离次数
      */
     function __construct()
     {
@@ -219,6 +227,10 @@ class BackUpJobDisplay extends AbstractModel
         if (array_key_exists("SnapshotRemainPolicy",$param) and $param["SnapshotRemainPolicy"] !== null) {
             $this->SnapshotRemainPolicy = new SnapshotRemainPolicy();
             $this->SnapshotRemainPolicy->deserialize($param["SnapshotRemainPolicy"]);
+        }
+
+        if (array_key_exists("IsolationCount",$param) and $param["IsolationCount"] !== null) {
+            $this->IsolationCount = $param["IsolationCount"];
         }
     }
 }

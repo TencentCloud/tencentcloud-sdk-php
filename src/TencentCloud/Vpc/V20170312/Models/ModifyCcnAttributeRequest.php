@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRouteECMPFlag(boolean $RouteECMPFlag) 设置是否开启等价路由功能。`False` 不开启，`True` 开启。
  * @method boolean getRouteOverlapFlag() 获取是否开启路由重叠功能。`False` 不开启，`True` 开启。
  * @method void setRouteOverlapFlag(boolean $RouteOverlapFlag) 设置是否开启路由重叠功能。`False` 不开启，`True` 开启。
+ * @method boolean getTrafficMarkingPolicyFlag() 获取是否开启qos功能。`False` 不开启，`True` 开启。
+ * @method void setTrafficMarkingPolicyFlag(boolean $TrafficMarkingPolicyFlag) 设置是否开启qos功能。`False` 不开启，`True` 开启。
  */
 class ModifyCcnAttributeRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class ModifyCcnAttributeRequest extends AbstractModel
     public $RouteOverlapFlag;
 
     /**
+     * @var boolean 是否开启qos功能。`False` 不开启，`True` 开启。
+     */
+    public $TrafficMarkingPolicyFlag;
+
+    /**
      * @param string $CcnId CCN实例ID。形如：ccn-f49l6u0z。
      * @param string $CcnName CCN名称，最大长度不能超过60个字节，限制：CcnName和CcnDescription必须至少选择一个参数输入，否则报错。
      * @param string $CcnDescription CCN描述信息，最大长度不能超过100个字节，限制：CcnName和CcnDescription必须至少选择一个参数输入，否则报错。
      * @param boolean $RouteECMPFlag 是否开启等价路由功能。`False` 不开启，`True` 开启。
      * @param boolean $RouteOverlapFlag 是否开启路由重叠功能。`False` 不开启，`True` 开启。
+     * @param boolean $TrafficMarkingPolicyFlag 是否开启qos功能。`False` 不开启，`True` 开启。
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class ModifyCcnAttributeRequest extends AbstractModel
 
         if (array_key_exists("RouteOverlapFlag",$param) and $param["RouteOverlapFlag"] !== null) {
             $this->RouteOverlapFlag = $param["RouteOverlapFlag"];
+        }
+
+        if (array_key_exists("TrafficMarkingPolicyFlag",$param) and $param["TrafficMarkingPolicyFlag"] !== null) {
+            $this->TrafficMarkingPolicyFlag = $param["TrafficMarkingPolicyFlag"];
         }
     }
 }

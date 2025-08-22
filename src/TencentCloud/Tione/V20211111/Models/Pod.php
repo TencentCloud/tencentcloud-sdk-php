@@ -64,6 +64,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMessage(string $Message) 设置实例状态的补充信息
  * @method string getNodeIP() 获取当前实例所在的节点 IP
  * @method void setNodeIP(string $NodeIP) 设置当前实例所在的节点 IP
+ * @method string getNodeId() 获取当前实例所在节点id
+ * @method void setNodeId(string $NodeId) 设置当前实例所在节点id
+ * @method string getResourceGroupId() 获取当时实例所属资源组 id
+ * @method void setResourceGroupId(string $ResourceGroupId) 设置当时实例所属资源组 id
+ * @method string getResourceGroupName() 获取资源组名称
+ * @method void setResourceGroupName(string $ResourceGroupName) 设置资源组名称
+ * @method ResourceInfo getResourceInfo() 获取实例的资源占用信息
+ * @method void setResourceInfo(ResourceInfo $ResourceInfo) 设置实例的资源占用信息
  */
 class Pod extends AbstractModel
 {
@@ -143,6 +151,26 @@ class Pod extends AbstractModel
     public $NodeIP;
 
     /**
+     * @var string 当前实例所在节点id
+     */
+    public $NodeId;
+
+    /**
+     * @var string 当时实例所属资源组 id
+     */
+    public $ResourceGroupId;
+
+    /**
+     * @var string 资源组名称
+     */
+    public $ResourceGroupName;
+
+    /**
+     * @var ResourceInfo 实例的资源占用信息
+     */
+    public $ResourceInfo;
+
+    /**
      * @param string $Name pod名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Uid pod的唯一id
@@ -165,6 +193,10 @@ class Pod extends AbstractModel
      * @param string $StartScheduleTime 实例的开始调度时间
      * @param string $Message 实例状态的补充信息
      * @param string $NodeIP 当前实例所在的节点 IP
+     * @param string $NodeId 当前实例所在节点id
+     * @param string $ResourceGroupId 当时实例所属资源组 id
+     * @param string $ResourceGroupName 资源组名称
+     * @param ResourceInfo $ResourceInfo 实例的资源占用信息
      */
     function __construct()
     {
@@ -236,6 +268,23 @@ class Pod extends AbstractModel
 
         if (array_key_exists("NodeIP",$param) and $param["NodeIP"] !== null) {
             $this->NodeIP = $param["NodeIP"];
+        }
+
+        if (array_key_exists("NodeId",$param) and $param["NodeId"] !== null) {
+            $this->NodeId = $param["NodeId"];
+        }
+
+        if (array_key_exists("ResourceGroupId",$param) and $param["ResourceGroupId"] !== null) {
+            $this->ResourceGroupId = $param["ResourceGroupId"];
+        }
+
+        if (array_key_exists("ResourceGroupName",$param) and $param["ResourceGroupName"] !== null) {
+            $this->ResourceGroupName = $param["ResourceGroupName"];
+        }
+
+        if (array_key_exists("ResourceInfo",$param) and $param["ResourceInfo"] !== null) {
+            $this->ResourceInfo = new ResourceInfo();
+            $this->ResourceInfo->deserialize($param["ResourceInfo"]);
         }
     }
 }

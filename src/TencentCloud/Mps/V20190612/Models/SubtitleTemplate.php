@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 
 
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method MediaInputInfo getSubtitleFileInput() 获取要压制到视频中的字幕文件的输入信息，目前仅支持存储在COS的字幕文件
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSubtitleFileInput(MediaInputInfo $SubtitleFileInput) 设置要压制到视频中的字幕文件的输入信息，目前仅支持存储在COS的字幕文件
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getFontType() 获取字体类型，支持：
 <li>hei.ttf：黑体</li>
 <li>song.ttf：宋体</li>
@@ -166,6 +170,38 @@ use TencentCloud\Common\AbstractModel;
 <li>1：完全不透明</li>
 默认值：0.8。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getOutlineWidth() 获取描边宽度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOutlineWidth(float $OutlineWidth) 设置描边宽度
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOutlineColor() 获取描边颜色。6位16进制RGB
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOutlineColor(string $OutlineColor) 设置描边颜色。6位16进制RGB
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getOutlineAlpha() 获取描边透明度。(0，1] 正浮点数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOutlineAlpha(float $OutlineAlpha) 设置描边透明度。(0，1] 正浮点数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getShadowWidth() 获取阴影宽度。浮点数  [0, 1000]
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setShadowWidth(float $ShadowWidth) 设置阴影宽度。浮点数  [0, 1000]
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getShadowColor() 获取阴影颜色。6位16进制RGB
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setShadowColor(string $ShadowColor) 设置阴影颜色。6位16进制RGB
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method float getShadowAlpha() 获取阴影透明度。(0，1] 正浮点数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setShadowAlpha(float $ShadowAlpha) 设置阴影透明度。(0，1] 正浮点数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getLineSpacing() 获取行间距。正整数  [0, 1000]
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setLineSpacing(integer $LineSpacing) 设置行间距。正整数  [0, 1000]
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getAlignment() 获取对齐方式，，取值：top: 顶部对齐，字幕顶部按位置固定，底部随行数变化。bottom: 底部对齐，字幕底部按位置固定，顶部随行数变化。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAlignment(string $Alignment) 设置对齐方式，，取值：top: 顶部对齐，字幕顶部按位置固定，底部随行数变化。bottom: 底部对齐，字幕底部按位置固定，顶部随行数变化。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class SubtitleTemplate extends AbstractModel
 {
@@ -184,6 +220,12 @@ class SubtitleTemplate extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $StreamIndex;
+
+    /**
+     * @var MediaInputInfo 要压制到视频中的字幕文件的输入信息，目前仅支持存储在COS的字幕文件
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SubtitleFileInput;
 
     /**
      * @var string 字体类型，支持：
@@ -291,6 +333,54 @@ class SubtitleTemplate extends AbstractModel
     public $BoardAlpha;
 
     /**
+     * @var float 描边宽度
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OutlineWidth;
+
+    /**
+     * @var string 描边颜色。6位16进制RGB
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OutlineColor;
+
+    /**
+     * @var float 描边透明度。(0，1] 正浮点数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $OutlineAlpha;
+
+    /**
+     * @var float 阴影宽度。浮点数  [0, 1000]
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ShadowWidth;
+
+    /**
+     * @var string 阴影颜色。6位16进制RGB
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ShadowColor;
+
+    /**
+     * @var float 阴影透明度。(0，1] 正浮点数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ShadowAlpha;
+
+    /**
+     * @var integer 行间距。正整数  [0, 1000]
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $LineSpacing;
+
+    /**
+     * @var string 对齐方式，，取值：top: 顶部对齐，字幕顶部按位置固定，底部随行数变化。bottom: 底部对齐，字幕底部按位置固定，顶部随行数变化。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Alignment;
+
+    /**
      * @param string $Path 要压制到视频中的字幕文件地址。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $StreamIndex 指定要压制到视频中的字幕轨道，Streamindex的取值从0开始，0表示使用源视频中的第一条字幕轨。如果指定了Path，则优先使用Path。Path 和 StreamIndex 至少指定一个。
@@ -298,6 +388,8 @@ class SubtitleTemplate extends AbstractModel
 - 注意：StreamIndex必须与源文件中的字幕轨索引一致。例如，源文件中的字幕轨为stream#0:3，则StreamIndex应为3，否则可能导致任务处理失败。
 
 
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param MediaInputInfo $SubtitleFileInput 要压制到视频中的字幕文件的输入信息，目前仅支持存储在COS的字幕文件
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $FontType 字体类型，支持：
 <li>hei.ttf：黑体</li>
@@ -364,6 +456,22 @@ class SubtitleTemplate extends AbstractModel
 <li>1：完全不透明</li>
 默认值：0.8。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $OutlineWidth 描边宽度
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OutlineColor 描边颜色。6位16进制RGB
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $OutlineAlpha 描边透明度。(0，1] 正浮点数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $ShadowWidth 阴影宽度。浮点数  [0, 1000]
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ShadowColor 阴影颜色。6位16进制RGB
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param float $ShadowAlpha 阴影透明度。(0，1] 正浮点数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $LineSpacing 行间距。正整数  [0, 1000]
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Alignment 对齐方式，，取值：top: 顶部对齐，字幕顶部按位置固定，底部随行数变化。bottom: 底部对齐，字幕底部按位置固定，顶部随行数变化。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -384,6 +492,11 @@ class SubtitleTemplate extends AbstractModel
 
         if (array_key_exists("StreamIndex",$param) and $param["StreamIndex"] !== null) {
             $this->StreamIndex = $param["StreamIndex"];
+        }
+
+        if (array_key_exists("SubtitleFileInput",$param) and $param["SubtitleFileInput"] !== null) {
+            $this->SubtitleFileInput = new MediaInputInfo();
+            $this->SubtitleFileInput->deserialize($param["SubtitleFileInput"]);
         }
 
         if (array_key_exists("FontType",$param) and $param["FontType"] !== null) {
@@ -424,6 +537,38 @@ class SubtitleTemplate extends AbstractModel
 
         if (array_key_exists("BoardAlpha",$param) and $param["BoardAlpha"] !== null) {
             $this->BoardAlpha = $param["BoardAlpha"];
+        }
+
+        if (array_key_exists("OutlineWidth",$param) and $param["OutlineWidth"] !== null) {
+            $this->OutlineWidth = $param["OutlineWidth"];
+        }
+
+        if (array_key_exists("OutlineColor",$param) and $param["OutlineColor"] !== null) {
+            $this->OutlineColor = $param["OutlineColor"];
+        }
+
+        if (array_key_exists("OutlineAlpha",$param) and $param["OutlineAlpha"] !== null) {
+            $this->OutlineAlpha = $param["OutlineAlpha"];
+        }
+
+        if (array_key_exists("ShadowWidth",$param) and $param["ShadowWidth"] !== null) {
+            $this->ShadowWidth = $param["ShadowWidth"];
+        }
+
+        if (array_key_exists("ShadowColor",$param) and $param["ShadowColor"] !== null) {
+            $this->ShadowColor = $param["ShadowColor"];
+        }
+
+        if (array_key_exists("ShadowAlpha",$param) and $param["ShadowAlpha"] !== null) {
+            $this->ShadowAlpha = $param["ShadowAlpha"];
+        }
+
+        if (array_key_exists("LineSpacing",$param) and $param["LineSpacing"] !== null) {
+            $this->LineSpacing = $param["LineSpacing"];
+        }
+
+        if (array_key_exists("Alignment",$param) and $param["Alignment"] !== null) {
+            $this->Alignment = $param["Alignment"];
         }
     }
 }

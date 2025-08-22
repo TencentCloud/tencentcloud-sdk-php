@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 公有云数据源结构
  *
-
+ * @method string getDataSourceId() 获取数据源id
+ * @method void setDataSourceId(string $DataSourceId) 设置数据源id
+ * @method string getSubPath() 获取相对数据源子路径
+ * @method void setSubPath(string $SubPath) 设置相对数据源子路径
  */
 class PublicDataSourceFS extends AbstractModel
 {
-
+    /**
+     * @var string 数据源id
+     */
+    public $DataSourceId;
 
     /**
+     * @var string 相对数据源子路径
+     */
+    public $SubPath;
 
+    /**
+     * @param string $DataSourceId 数据源id
+     * @param string $SubPath 相对数据源子路径
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class PublicDataSourceFS extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("DataSourceId",$param) and $param["DataSourceId"] !== null) {
+            $this->DataSourceId = $param["DataSourceId"];
+        }
 
+        if (array_key_exists("SubPath",$param) and $param["SubPath"] !== null) {
+            $this->SubPath = $param["SubPath"];
+        }
     }
 }

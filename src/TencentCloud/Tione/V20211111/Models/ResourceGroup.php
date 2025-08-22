@@ -28,9 +28,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFreeInstance(integer $FreeInstance) 设置可用节点个数(运行中的节点)
  * @method integer getTotalInstance() 获取总节点个数(所有节点)
  * @method void setTotalInstance(integer $TotalInstance) 设置总节点个数(所有节点)
- * @method GroupResource getUsedResource() 获取资资源组已用的资源
+ * @method GroupResource getUsedResource() 获取资源组已用的资源
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUsedResource(GroupResource $UsedResource) 设置资资源组已用的资源
+ * @method void setUsedResource(GroupResource $UsedResource) 设置资源组已用的资源
 注意：此字段可能返回 null，表示取不到有效值。
  * @method GroupResource getTotalResource() 获取资源组总资源
 注意：此字段可能返回 null，表示取不到有效值。
@@ -68,7 +68,7 @@ class ResourceGroup extends AbstractModel
     public $TotalInstance;
 
     /**
-     * @var GroupResource 资资源组已用的资源
+     * @var GroupResource 资源组已用的资源
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $UsedResource;
@@ -96,7 +96,7 @@ class ResourceGroup extends AbstractModel
      * @param string $ResourceGroupName 资源组名称
      * @param integer $FreeInstance 可用节点个数(运行中的节点)
      * @param integer $TotalInstance 总节点个数(所有节点)
-     * @param GroupResource $UsedResource 资资源组已用的资源
+     * @param GroupResource $UsedResource 资源组已用的资源
 注意：此字段可能返回 null，表示取不到有效值。
      * @param GroupResource $TotalResource 资源组总资源
 注意：此字段可能返回 null，表示取不到有效值。

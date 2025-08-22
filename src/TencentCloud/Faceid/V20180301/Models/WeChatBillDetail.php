@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getBizToken() 获取token
  * @method void setBizToken(string $BizToken) 设置token
- * @method integer getChargeCount() 获取本token收费次数
- * @method void setChargeCount(integer $ChargeCount) 设置本token收费次数
+ * @method integer getChargeCount() 获取本token收费次数。（说明：一次核身过程用户可能会重试多次，因此一个biztoken可能会对应多次计费，如需配置重试上限，请[联系我们](https://cloud.tencent.com/document/product/1007/56130)配置。）
+ * @method void setChargeCount(integer $ChargeCount) 设置本token收费次数。（说明：一次核身过程用户可能会重试多次，因此一个biztoken可能会对应多次计费，如需配置重试上限，请[联系我们](https://cloud.tencent.com/document/product/1007/56130)配置。）
  * @method array getChargeDetails() 获取本token计费详情
  * @method void setChargeDetails(array $ChargeDetails) 设置本token计费详情
  * @method string getRuleId() 获取业务RuleId
@@ -37,7 +37,7 @@ class WeChatBillDetail extends AbstractModel
     public $BizToken;
 
     /**
-     * @var integer 本token收费次数
+     * @var integer 本token收费次数。（说明：一次核身过程用户可能会重试多次，因此一个biztoken可能会对应多次计费，如需配置重试上限，请[联系我们](https://cloud.tencent.com/document/product/1007/56130)配置。）
      */
     public $ChargeCount;
 
@@ -53,7 +53,7 @@ class WeChatBillDetail extends AbstractModel
 
     /**
      * @param string $BizToken token
-     * @param integer $ChargeCount 本token收费次数
+     * @param integer $ChargeCount 本token收费次数。（说明：一次核身过程用户可能会重试多次，因此一个biztoken可能会对应多次计费，如需配置重试上限，请[联系我们](https://cloud.tencent.com/document/product/1007/56130)配置。）
      * @param array $ChargeDetails 本token计费详情
      * @param string $RuleId 业务RuleId
      */

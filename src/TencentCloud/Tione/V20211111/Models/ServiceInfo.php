@@ -172,6 +172,10 @@ HYBRID_PAID:
  * @method void setHealthProbe(HealthProbe $HealthProbe) 设置健康探针
  * @method RollingUpdate getRollingUpdate() 获取滚动更新配置
  * @method void setRollingUpdate(RollingUpdate $RollingUpdate) 设置滚动更新配置
+ * @method integer getInstancePerReplicas() 获取单副本下的实例数，仅在部署类型为DIST、ROLE时生效，默认1
+ * @method void setInstancePerReplicas(integer $InstancePerReplicas) 设置单副本下的实例数，仅在部署类型为DIST、ROLE时生效，默认1
+ * @method array getVolumeMounts() 获取批量数据盘挂载配置
+ * @method void setVolumeMounts(array $VolumeMounts) 设置批量数据盘挂载配置
  */
 class ServiceInfo extends AbstractModel
 {
@@ -402,6 +406,16 @@ HYBRID_PAID:
     public $RollingUpdate;
 
     /**
+     * @var integer 单副本下的实例数，仅在部署类型为DIST、ROLE时生效，默认1
+     */
+    public $InstancePerReplicas;
+
+    /**
+     * @var array 批量数据盘挂载配置
+     */
+    public $VolumeMounts;
+
+    /**
      * @param integer $Replicas 期望运行的Pod数量，停止状态是0
 不同计费模式和调节模式下对应关系如下
 PREPAID 和 POSTPAID_BY_HOUR:
@@ -478,6 +492,8 @@ HYBRID_PAID:
      * @param boolean $GrpcEnable 是否启用grpc端口
      * @param HealthProbe $HealthProbe 健康探针
      * @param RollingUpdate $RollingUpdate 滚动更新配置
+     * @param integer $InstancePerReplicas 单副本下的实例数，仅在部署类型为DIST、ROLE时生效，默认1
+     * @param array $VolumeMounts 批量数据盘挂载配置
      */
     function __construct()
     {
@@ -668,6 +684,19 @@ HYBRID_PAID:
         if (array_key_exists("RollingUpdate",$param) and $param["RollingUpdate"] !== null) {
             $this->RollingUpdate = new RollingUpdate();
             $this->RollingUpdate->deserialize($param["RollingUpdate"]);
+        }
+
+        if (array_key_exists("InstancePerReplicas",$param) and $param["InstancePerReplicas"] !== null) {
+            $this->InstancePerReplicas = $param["InstancePerReplicas"];
+        }
+
+        if (array_key_exists("VolumeMounts",$param) and $param["VolumeMounts"] !== null) {
+            $this->VolumeMounts = [];
+            foreach ($param["VolumeMounts"] as $key => $value){
+                $obj = new VolumeMount();
+                $obj->deserialize($value);
+                array_push($this->VolumeMounts, $obj);
+            }
         }
     }
 }

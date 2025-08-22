@@ -22,8 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFileSystemId() 获取文件系统Id
  * @method void setFileSystemId(string $FileSystemId) 设置文件系统Id
- * @method string getOpetationType() 获取create：创建目录  check：确认目录是否存在  move: 对目录做mv 操作
- * @method void setOpetationType(string $OpetationType) 设置create：创建目录  check：确认目录是否存在  move: 对目录做mv 操作
+ * @method string getOpetationType() 获取create：创建目录，等同于mkdir。
+check：确认目录是否存在，等同于stat。
+move：对文件/目录进行重命名，等同于mv。
+ * @method void setOpetationType(string $OpetationType) 设置create：创建目录，等同于mkdir。
+check：确认目录是否存在，等同于stat。
+move：对文件/目录进行重命名，等同于mv。
  * @method string getDirectoryPath() 获取目录的绝对路径  默认递归创建（即如果目录中有子目录不存在，则先创建出对应子目录）
  * @method void setDirectoryPath(string $DirectoryPath) 设置目录的绝对路径  默认递归创建（即如果目录中有子目录不存在，则先创建出对应子目录）
  * @method string getMode() 获取创建目录的权限，若不传，默认为0755  若Operation Type为check，此值无实际意义
@@ -39,7 +43,9 @@ class DoDirectoryOperationRequest extends AbstractModel
     public $FileSystemId;
 
     /**
-     * @var string create：创建目录  check：确认目录是否存在  move: 对目录做mv 操作
+     * @var string create：创建目录，等同于mkdir。
+check：确认目录是否存在，等同于stat。
+move：对文件/目录进行重命名，等同于mv。
      */
     public $OpetationType;
 
@@ -60,7 +66,9 @@ class DoDirectoryOperationRequest extends AbstractModel
 
     /**
      * @param string $FileSystemId 文件系统Id
-     * @param string $OpetationType create：创建目录  check：确认目录是否存在  move: 对目录做mv 操作
+     * @param string $OpetationType create：创建目录，等同于mkdir。
+check：确认目录是否存在，等同于stat。
+move：对文件/目录进行重命名，等同于mv。
      * @param string $DirectoryPath 目录的绝对路径  默认递归创建（即如果目录中有子目录不存在，则先创建出对应子目录）
      * @param string $Mode 创建目录的权限，若不传，默认为0755  若Operation Type为check，此值无实际意义
      * @param string $DestPath mv操作的目标目录名称；如果是turbo文件系统必须以/cfs/开头

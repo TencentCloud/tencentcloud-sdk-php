@@ -22,10 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getFuncType() 获取任务类型. 1: 指定主题；2:动态创建。详情请参考[创建加工任务文档](https://cloud.tencent.com/document/product/614/63940)。
  * @method void setFuncType(integer $FuncType) 设置任务类型. 1: 指定主题；2:动态创建。详情请参考[创建加工任务文档](https://cloud.tencent.com/document/product/614/63940)。
- * @method string getSrcTopicId() 获取源日志主题
- * @method void setSrcTopicId(string $SrcTopicId) 设置源日志主题
+ * @method string getSrcTopicId() 获取日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+ * @method void setSrcTopicId(string $SrcTopicId) 设置日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
  * @method string getName() 获取加工任务名称
+名称限制
+- 不能为空字符串
+- 不能包含字符'|'
+- 最长 255 个字符
  * @method void setName(string $Name) 设置加工任务名称
+名称限制
+- 不能为空字符串
+- 不能包含字符'|'
+- 最长 255 个字符
  * @method string getEtlContent() 获取加工语句。 当FuncType为2时，EtlContent必须使用[log_auto_output](https://cloud.tencent.com/document/product/614/70733#b3c58797-4825-4807-bef4-68106e25024f) 
 
 其他参考文档：
@@ -42,12 +52,20 @@ use TencentCloud\Common\AbstractModel;
 1：使用源日志主题中的随机数据，进行加工预览；2：使用用户自定义测试数据，进行加工预览；3：创建真实加工任务。
  * @method void setTaskType(integer $TaskType) 设置加工类型。
 1：使用源日志主题中的随机数据，进行加工预览；2：使用用户自定义测试数据，进行加工预览；3：创建真实加工任务。
- * @method array getDstResources() 获取加工任务目的topic_id以及别名,当FuncType=1时，该参数必填，当FuncType=2时，无需填写。
- * @method void setDstResources(array $DstResources) 设置加工任务目的topic_id以及别名,当FuncType=1时，该参数必填，当FuncType=2时，无需填写。
+ * @method array getDstResources() 获取加工任务目标topic_id以及别名,当FuncType=1时，该参数必填，当FuncType=2时，无需填写。
+目标topic_id，通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+别名限制 1.不能为空字符串，2. 不能包含字符'|'。
+
+ * @method void setDstResources(array $DstResources) 设置加工任务目标topic_id以及别名,当FuncType=1时，该参数必填，当FuncType=2时，无需填写。
+目标topic_id，通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+别名限制 1.不能为空字符串，2. 不能包含字符'|'。
+
  * @method integer getEnableFlag() 获取任务启动状态.   默认为1:开启,  2:关闭
  * @method void setEnableFlag(integer $EnableFlag) 设置任务启动状态.   默认为1:开启,  2:关闭
  * @method array getPreviewLogStatistics() 获取用于预览加工结果的测试数据
+目标日志主题ID通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
  * @method void setPreviewLogStatistics(array $PreviewLogStatistics) 设置用于预览加工结果的测试数据
+目标日志主题ID通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
  * @method integer getDataTransformType() 获取数据加工类型。0：标准加工任务； 1：前置加工任务。前置加工任务将采集的日志处理完成后，再写入日志主题。
  * @method void setDataTransformType(integer $DataTransformType) 设置数据加工类型。0：标准加工任务； 1：前置加工任务。前置加工任务将采集的日志处理完成后，再写入日志主题。
  */
@@ -59,12 +77,17 @@ class CreateDataTransformRequest extends AbstractModel
     public $FuncType;
 
     /**
-     * @var string 源日志主题
+     * @var string 日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public $SrcTopicId;
 
     /**
      * @var string 加工任务名称
+名称限制
+- 不能为空字符串
+- 不能包含字符'|'
+- 最长 255 个字符
      */
     public $Name;
 
@@ -85,7 +108,10 @@ class CreateDataTransformRequest extends AbstractModel
     public $TaskType;
 
     /**
-     * @var array 加工任务目的topic_id以及别名,当FuncType=1时，该参数必填，当FuncType=2时，无需填写。
+     * @var array 加工任务目标topic_id以及别名,当FuncType=1时，该参数必填，当FuncType=2时，无需填写。
+目标topic_id，通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+别名限制 1.不能为空字符串，2. 不能包含字符'|'。
+
      */
     public $DstResources;
 
@@ -96,6 +122,7 @@ class CreateDataTransformRequest extends AbstractModel
 
     /**
      * @var array 用于预览加工结果的测试数据
+目标日志主题ID通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public $PreviewLogStatistics;
 
@@ -106,8 +133,13 @@ class CreateDataTransformRequest extends AbstractModel
 
     /**
      * @param integer $FuncType 任务类型. 1: 指定主题；2:动态创建。详情请参考[创建加工任务文档](https://cloud.tencent.com/document/product/614/63940)。
-     * @param string $SrcTopicId 源日志主题
+     * @param string $SrcTopicId 日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      * @param string $Name 加工任务名称
+名称限制
+- 不能为空字符串
+- 不能包含字符'|'
+- 最长 255 个字符
      * @param string $EtlContent 加工语句。 当FuncType为2时，EtlContent必须使用[log_auto_output](https://cloud.tencent.com/document/product/614/70733#b3c58797-4825-4807-bef4-68106e25024f) 
 
 其他参考文档：
@@ -116,9 +148,13 @@ class CreateDataTransformRequest extends AbstractModel
 -  [函数总览](https://cloud.tencent.com/document/product/614/70395)
      * @param integer $TaskType 加工类型。
 1：使用源日志主题中的随机数据，进行加工预览；2：使用用户自定义测试数据，进行加工预览；3：创建真实加工任务。
-     * @param array $DstResources 加工任务目的topic_id以及别名,当FuncType=1时，该参数必填，当FuncType=2时，无需填写。
+     * @param array $DstResources 加工任务目标topic_id以及别名,当FuncType=1时，该参数必填，当FuncType=2时，无需填写。
+目标topic_id，通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+别名限制 1.不能为空字符串，2. 不能包含字符'|'。
+
      * @param integer $EnableFlag 任务启动状态.   默认为1:开启,  2:关闭
      * @param array $PreviewLogStatistics 用于预览加工结果的测试数据
+目标日志主题ID通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      * @param integer $DataTransformType 数据加工类型。0：标准加工任务； 1：前置加工任务。前置加工任务将采集的日志处理完成后，再写入日志主题。
      */
     function __construct()

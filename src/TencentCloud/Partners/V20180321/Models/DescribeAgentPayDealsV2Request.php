@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) 设置偏移量
  * @method integer getLimit() 获取限制数目 最大100
  * @method void setLimit(integer $Limit) 设置限制数目 最大100
- * @method string getCreatTimeRangeStart() 获取下单时间范围起始点(不传时会默认查15天内订单，传值时需要传15天内的起始时间)
- * @method void setCreatTimeRangeStart(string $CreatTimeRangeStart) 设置下单时间范围起始点(不传时会默认查15天内订单，传值时需要传15天内的起始时间)
+ * @method string getCreatTimeRangeStart() 获取下单时间范围起始点(不传时会默认查最近15天内订单，传值时需要传最近15天内的起始时间)
+ * @method void setCreatTimeRangeStart(string $CreatTimeRangeStart) 设置下单时间范围起始点(不传时会默认查最近15天内订单，传值时需要传最近15天内的起始时间)
  * @method string getCreatTimeRangeEnd() 获取下单时间范围终止点
  * @method void setCreatTimeRangeEnd(string $CreatTimeRangeEnd) 设置下单时间范围终止点
  * @method integer getOrder() 获取0:下单时间降序；其他：下单时间升序
@@ -52,7 +52,7 @@ class DescribeAgentPayDealsV2Request extends AbstractModel
     public $Limit;
 
     /**
-     * @var string 下单时间范围起始点(不传时会默认查15天内订单，传值时需要传15天内的起始时间)
+     * @var string 下单时间范围起始点(不传时会默认查最近15天内订单，传值时需要传最近15天内的起始时间)
      */
     public $CreatTimeRangeStart;
 
@@ -89,7 +89,7 @@ class DescribeAgentPayDealsV2Request extends AbstractModel
     /**
      * @param integer $Offset 偏移量
      * @param integer $Limit 限制数目 最大100
-     * @param string $CreatTimeRangeStart 下单时间范围起始点(不传时会默认查15天内订单，传值时需要传15天内的起始时间)
+     * @param string $CreatTimeRangeStart 下单时间范围起始点(不传时会默认查最近15天内订单，传值时需要传最近15天内的起始时间)
      * @param string $CreatTimeRangeEnd 下单时间范围终止点
      * @param integer $Order 0:下单时间降序；其他：下单时间升序
      * @param integer $Status 订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StopRollback请求参数结构体
  *
- * @method string getInstanceId() 获取撤销回档任务对应的实例Id。
- * @method void setInstanceId(string $InstanceId) 设置撤销回档任务对应的实例Id。
+ * @method string getInstanceId() 获取撤销回档任务对应的实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/api/236/15872) 接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置撤销回档任务对应的实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/api/236/15872) 接口获取。
  */
 class StopRollbackRequest extends AbstractModel
 {
     /**
-     * @var string 撤销回档任务对应的实例Id。
+     * @var string 撤销回档任务对应的实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/api/236/15872) 接口获取。
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId 撤销回档任务对应的实例Id。
+     * @param string $InstanceId 撤销回档任务对应的实例 ID。可通过 [DescribeDBInstances](https://cloud.tencent.com/document/api/236/15872) 接口获取。
      */
     function __construct()
     {

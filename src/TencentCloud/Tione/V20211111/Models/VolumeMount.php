@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCFSConfig(CFSConfig $CFSConfig) 设置cfs的配置信息
  * @method string getVolumeSourceType() 获取挂载源类型，CFS、COS，默认为CFS
  * @method void setVolumeSourceType(string $VolumeSourceType) 设置挂载源类型，CFS、COS，默认为CFS
+ * @method string getMountPath() 获取自定义容器内挂载路径
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMountPath(string $MountPath) 设置自定义容器内挂载路径
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class VolumeMount extends AbstractModel
 {
@@ -38,8 +42,16 @@ class VolumeMount extends AbstractModel
     public $VolumeSourceType;
 
     /**
+     * @var string 自定义容器内挂载路径
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MountPath;
+
+    /**
      * @param CFSConfig $CFSConfig cfs的配置信息
      * @param string $VolumeSourceType 挂载源类型，CFS、COS，默认为CFS
+     * @param string $MountPath 自定义容器内挂载路径
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -61,6 +73,10 @@ class VolumeMount extends AbstractModel
 
         if (array_key_exists("VolumeSourceType",$param) and $param["VolumeSourceType"] !== null) {
             $this->VolumeSourceType = $param["VolumeSourceType"];
+        }
+
+        if (array_key_exists("MountPath",$param) and $param["MountPath"] !== null) {
+            $this->MountPath = $param["MountPath"];
         }
     }
 }

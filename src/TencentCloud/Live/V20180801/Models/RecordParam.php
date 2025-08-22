@@ -22,11 +22,11 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getRecordInterval() 获取录制间隔。
 单位秒，默认：1800。
-取值范围：30-7200。
+FLV、MP4取值范围： 60-43200， AAC取值范围： 60-7200 。
 此参数对 HLS 无效，当录制 HLS 时从推流到断流生成一个文件。
  * @method void setRecordInterval(integer $RecordInterval) 设置录制间隔。
 单位秒，默认：1800。
-取值范围：30-7200。
+FLV、MP4取值范围： 60-43200， AAC取值范围： 60-7200 。
 此参数对 HLS 无效，当录制 HLS 时从推流到断流生成一个文件。
  * @method integer getStorageTime() 获取录制存储时长。
 单位秒，取值范围： 0 - 1500天。
@@ -112,7 +112,7 @@ class RecordParam extends AbstractModel
     /**
      * @var integer 录制间隔。
 单位秒，默认：1800。
-取值范围：30-7200。
+FLV、MP4取值范围： 60-43200， AAC取值范围： 60-7200 。
 此参数对 HLS 无效，当录制 HLS 时从推流到断流生成一个文件。
      */
     public $RecordInterval;
@@ -199,7 +199,7 @@ cold：低频存储。
     /**
      * @param integer $RecordInterval 录制间隔。
 单位秒，默认：1800。
-取值范围：30-7200。
+FLV、MP4取值范围： 60-43200， AAC取值范围： 60-7200 。
 此参数对 HLS 无效，当录制 HLS 时从推流到断流生成一个文件。
      * @param integer $StorageTime 录制存储时长。
 单位秒，取值范围： 0 - 1500天。

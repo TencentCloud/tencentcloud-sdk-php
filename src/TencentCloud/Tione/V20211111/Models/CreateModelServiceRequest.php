@@ -136,10 +136,10 @@ HYBRID_PAID:
  * @method void setDeployType(string $DeployType) 设置服务的部署类型 [STANDARD 标准部署，DIST 分布式多机部署] 默认STANDARD
  * @method integer getInstancePerReplicas() 获取单副本下的实例数，仅在部署类型为DIST时生效，默认1
  * @method void setInstancePerReplicas(integer $InstancePerReplicas) 设置单副本下的实例数，仅在部署类型为DIST时生效，默认1
- * @method integer getTerminationGracePeriodSeconds() 获取30
- * @method void setTerminationGracePeriodSeconds(integer $TerminationGracePeriodSeconds) 设置30
- * @method array getPreStopCommand() 获取["sleep","60"]
- * @method void setPreStopCommand(array $PreStopCommand) 设置["sleep","60"]
+ * @method integer getTerminationGracePeriodSeconds() 获取服务的优雅退出时限。单位为秒，默认值为30，最小为1
+ * @method void setTerminationGracePeriodSeconds(integer $TerminationGracePeriodSeconds) 设置服务的优雅退出时限。单位为秒，默认值为30，最小为1
+ * @method array getPreStopCommand() 获取服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束
+ * @method void setPreStopCommand(array $PreStopCommand) 设置服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束
  * @method boolean getGrpcEnable() 获取是否启用 grpc 端口
  * @method void setGrpcEnable(boolean $GrpcEnable) 设置是否启用 grpc 端口
  * @method HealthProbe getHealthProbe() 获取健康探针
@@ -148,6 +148,8 @@ HYBRID_PAID:
  * @method void setRollingUpdate(RollingUpdate $RollingUpdate) 设置滚动更新策略
  * @method SidecarSpec getSidecar() 获取sidecar配置
  * @method void setSidecar(SidecarSpec $Sidecar) 设置sidecar配置
+ * @method array getVolumeMounts() 获取数据盘批量挂载配置，当前仅支持CFS，仅针对“模型来源-资源组缓存”。
+ * @method void setVolumeMounts(array $VolumeMounts) 设置数据盘批量挂载配置，当前仅支持CFS，仅针对“模型来源-资源组缓存”。
  */
 class CreateModelServiceRequest extends AbstractModel
 {
@@ -350,12 +352,12 @@ HYBRID_PAID:
     public $InstancePerReplicas;
 
     /**
-     * @var integer 30
+     * @var integer 服务的优雅退出时限。单位为秒，默认值为30，最小为1
      */
     public $TerminationGracePeriodSeconds;
 
     /**
-     * @var array ["sleep","60"]
+     * @var array 服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束
      */
     public $PreStopCommand;
 
@@ -378,6 +380,11 @@ HYBRID_PAID:
      * @var SidecarSpec sidecar配置
      */
     public $Sidecar;
+
+    /**
+     * @var array 数据盘批量挂载配置，当前仅支持CFS，仅针对“模型来源-资源组缓存”。
+     */
+    public $VolumeMounts;
 
     /**
      * @param string $ServiceGroupId 新增版本时需要填写
@@ -438,12 +445,13 @@ HYBRID_PAID:
      * @param integer $ServicePort 服务端口，仅在非内置镜像时生效，默认8501。不支持输入8501-8510,6006,9092
      * @param string $DeployType 服务的部署类型 [STANDARD 标准部署，DIST 分布式多机部署] 默认STANDARD
      * @param integer $InstancePerReplicas 单副本下的实例数，仅在部署类型为DIST时生效，默认1
-     * @param integer $TerminationGracePeriodSeconds 30
-     * @param array $PreStopCommand ["sleep","60"]
+     * @param integer $TerminationGracePeriodSeconds 服务的优雅退出时限。单位为秒，默认值为30，最小为1
+     * @param array $PreStopCommand 服务实例停止前执行的命令，执行完毕或执行时间超过优雅退出时限后实例结束
      * @param boolean $GrpcEnable 是否启用 grpc 端口
      * @param HealthProbe $HealthProbe 健康探针
      * @param RollingUpdate $RollingUpdate 滚动更新策略
      * @param SidecarSpec $Sidecar sidecar配置
+     * @param array $VolumeMounts 数据盘批量挂载配置，当前仅支持CFS，仅针对“模型来源-资源组缓存”。
      */
     function __construct()
     {
@@ -647,6 +655,15 @@ HYBRID_PAID:
         if (array_key_exists("Sidecar",$param) and $param["Sidecar"] !== null) {
             $this->Sidecar = new SidecarSpec();
             $this->Sidecar->deserialize($param["Sidecar"]);
+        }
+
+        if (array_key_exists("VolumeMounts",$param) and $param["VolumeMounts"] !== null) {
+            $this->VolumeMounts = [];
+            foreach ($param["VolumeMounts"] as $key => $value){
+                $obj = new VolumeMount();
+                $obj->deserialize($value);
+                array_push($this->VolumeMounts, $obj);
+            }
         }
     }
 }

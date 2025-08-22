@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateTime(string $UpdateTime) 设置账号更新时间。
  * @method string getUserDesc() 获取备注信息。
  * @method void setUserDesc(string $UserDesc) 设置备注信息。
+ * @method string getConsolePassUpdateTime() 获取控制台密码更新时间
+ * @method void setConsolePassUpdateTime(string $ConsolePassUpdateTime) 设置控制台密码更新时间
  */
 class UserInfo extends AbstractModel
 {
@@ -59,11 +61,17 @@ class UserInfo extends AbstractModel
     public $UserDesc;
 
     /**
+     * @var string 控制台密码更新时间
+     */
+    public $ConsolePassUpdateTime;
+
+    /**
      * @param string $UserName 账号名。
      * @param array $AuthRole 账号权限详情。
      * @param string $CreateTime 账号创建时间。
      * @param string $UpdateTime 账号更新时间。
      * @param string $UserDesc 备注信息。
+     * @param string $ConsolePassUpdateTime 控制台密码更新时间
      */
     function __construct()
     {
@@ -101,6 +109,10 @@ class UserInfo extends AbstractModel
 
         if (array_key_exists("UserDesc",$param) and $param["UserDesc"] !== null) {
             $this->UserDesc = $param["UserDesc"];
+        }
+
+        if (array_key_exists("ConsolePassUpdateTime",$param) and $param["ConsolePassUpdateTime"] !== null) {
+            $this->ConsolePassUpdateTime = $param["ConsolePassUpdateTime"];
         }
     }
 }

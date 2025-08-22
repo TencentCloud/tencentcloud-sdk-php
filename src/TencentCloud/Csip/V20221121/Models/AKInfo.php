@@ -22,9 +22,9 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getID() 获取ak对应id
  * @method void setID(integer $ID) 设置ak对应id
- * @method string getName() 获取ak具体值
+ * @method string getName() 获取ak具体值\n
 临时密钥时返回临时密钥
- * @method void setName(string $Name) 设置ak具体值
+ * @method void setName(string $Name) 设置ak具体值\n
 临时密钥时返回临时密钥
  * @method string getUser() 获取所属账号
  * @method void setUser(string $User) 设置所属账号
@@ -39,7 +39,7 @@ class AKInfo extends AbstractModel
     public $ID;
 
     /**
-     * @var string ak具体值
+     * @var string ak具体值\n
 临时密钥时返回临时密钥
      */
     public $Name;
@@ -56,7 +56,7 @@ class AKInfo extends AbstractModel
 
     /**
      * @param integer $ID ak对应id
-     * @param string $Name ak具体值
+     * @param string $Name ak具体值\n
 临时密钥时返回临时密钥
      * @param string $User 所属账号
      * @param string $Remark 备注

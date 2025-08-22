@@ -247,7 +247,7 @@ use TencentCloud\Cdb\V20170320\Models as Models;
  * @method Models\StopDBImportJobResponse StopDBImportJob(Models\StopDBImportJobRequest $req) 本接口（StopDBImportJob）用于终止数据导入任务。
 说明：只有未完成的导入任务支持被终止，且终止后已执行的 SQL 部分会被保留。
  * @method Models\StopReplicationResponse StopReplication(Models\StopReplicationRequest $req) 本接口（StopReplication）用于停止 RO 复制，中断从主实例同步数据。
- * @method Models\StopRollbackResponse StopRollback(Models\StopRollbackRequest $req) 本接口(StopRollback) 用于撤销实例正在进行的回档任务，该接口返回一个异步任务id。 撤销结果可以通过 DescribeAsyncRequestInfo 查询任务的执行情况。
+ * @method Models\StopRollbackResponse StopRollback(Models\StopRollbackRequest $req) 本接口（StopRollback）用于撤销实例正在进行的回档任务，该接口返回一个异步任务 ID。撤销结果可以通过 [DescribeAsyncRequestInfo](https://cloud.tencent.com/document/api/236/20410) 查询任务的执行情况。
  * @method Models\SubmitInstanceUpgradeCheckJobResponse SubmitInstanceUpgradeCheckJob(Models\SubmitInstanceUpgradeCheckJobRequest $req) 该接口（SubmitInstanceUpgradeCheckJob）提交实例版本升级校验任务。
  * @method Models\SwitchCDBProxyResponse SwitchCDBProxy(Models\SwitchCDBProxyRequest $req) 本接口（SwitchCDBProxy）用于数据库代理配置变更或者升级版本后手动发起立即切换。
  * @method Models\SwitchDBInstanceMasterSlaveResponse SwitchDBInstanceMasterSlave(Models\SwitchDBInstanceMasterSlaveRequest $req) 该接口 (SwitchDBInstanceMasterSlave) 支持用户主动切换实例主从角色。

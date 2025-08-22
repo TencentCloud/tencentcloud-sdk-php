@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskId(string $TaskId) 设置数据加工任务id
  * @method integer getEnableFlag() 获取任务启用状态，默认为1，正常开启,  2关闭
  * @method void setEnableFlag(integer $EnableFlag) 设置任务启用状态，默认为1，正常开启,  2关闭
- * @method integer getType() 获取加工任务类型，1： DSL， 2：SQL
- * @method void setType(integer $Type) 设置加工任务类型，1： DSL， 2：SQL
+ * @method integer getType() 获取加工任务类型，1： DSL(使用自定义加工语言的加工任务)， 2：SQL(使用sql的加工任务)
+ * @method void setType(integer $Type) 设置加工任务类型，1： DSL(使用自定义加工语言的加工任务)， 2：SQL(使用sql的加工任务)
  * @method string getSrcTopicId() 获取源日志主题
  * @method void setSrcTopicId(string $SrcTopicId) 设置源日志主题
  * @method integer getStatus() 获取当前加工任务状态（1准备中/2运行中/3停止中/4已停止）
@@ -35,9 +35,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCreateTime() 获取加工任务创建时间
  * @method void setCreateTime(string $CreateTime) 设置加工任务创建时间
  * @method string getUpdateTime() 获取最近修改时间
+示例值：2025-06-18 16:55:54
  * @method void setUpdateTime(string $UpdateTime) 设置最近修改时间
+示例值：2025-06-18 16:55:54
  * @method string getLastEnableTime() 获取最后启用时间，如果需要重建集群，修改该时间
+示例值：2025-06-18 19:55:54
  * @method void setLastEnableTime(string $LastEnableTime) 设置最后启用时间，如果需要重建集群，修改该时间
+示例值：2025-06-18 19:55:54
  * @method string getSrcTopicName() 获取日志主题名称
  * @method void setSrcTopicName(string $SrcTopicName) 设置日志主题名称
  * @method string getLogsetId() 获取日志集id
@@ -71,7 +75,7 @@ class DataTransformTaskInfo extends AbstractModel
     public $EnableFlag;
 
     /**
-     * @var integer 加工任务类型，1： DSL， 2：SQL
+     * @var integer 加工任务类型，1： DSL(使用自定义加工语言的加工任务)， 2：SQL(使用sql的加工任务)
      */
     public $Type;
 
@@ -92,11 +96,13 @@ class DataTransformTaskInfo extends AbstractModel
 
     /**
      * @var string 最近修改时间
+示例值：2025-06-18 16:55:54
      */
     public $UpdateTime;
 
     /**
      * @var string 最后启用时间，如果需要重建集群，修改该时间
+示例值：2025-06-18 19:55:54
      */
     public $LastEnableTime;
 
@@ -139,12 +145,14 @@ class DataTransformTaskInfo extends AbstractModel
      * @param string $Name 数据加工任务名称
      * @param string $TaskId 数据加工任务id
      * @param integer $EnableFlag 任务启用状态，默认为1，正常开启,  2关闭
-     * @param integer $Type 加工任务类型，1： DSL， 2：SQL
+     * @param integer $Type 加工任务类型，1： DSL(使用自定义加工语言的加工任务)， 2：SQL(使用sql的加工任务)
      * @param string $SrcTopicId 源日志主题
      * @param integer $Status 当前加工任务状态（1准备中/2运行中/3停止中/4已停止）
      * @param string $CreateTime 加工任务创建时间
      * @param string $UpdateTime 最近修改时间
+示例值：2025-06-18 16:55:54
      * @param string $LastEnableTime 最后启用时间，如果需要重建集群，修改该时间
+示例值：2025-06-18 19:55:54
      * @param string $SrcTopicName 日志主题名称
      * @param string $LogsetId 日志集id
      * @param array $DstResources 加工任务目的topic_id以及别名

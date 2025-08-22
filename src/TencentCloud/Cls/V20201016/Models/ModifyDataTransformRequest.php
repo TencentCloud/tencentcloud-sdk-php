@@ -20,10 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDataTransform请求参数结构体
  *
- * @method string getTaskId() 获取加工任务id
- * @method void setTaskId(string $TaskId) 设置加工任务id
+ * @method string getTaskId() 获取数据加工任务ID
+- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务Id。
+ * @method void setTaskId(string $TaskId) 设置数据加工任务ID
+- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务Id。
  * @method string getName() 获取加工任务名称
+- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务名称。
+
+名称限制
+- 不能为空字符串
+- 不能包含字符'|'
+- 最长 255 个字符
  * @method void setName(string $Name) 设置加工任务名称
+- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务名称。
+
+名称限制
+- 不能为空字符串
+- 不能包含字符'|'
+- 最长 255 个字符
  * @method string getEtlContent() 获取加工语句。 当FuncType为2时，EtlContent必须使用[log_auto_output](https://cloud.tencent.com/document/product/614/70733#b3c58797-4825-4807-bef4-68106e25024f) 
 
 其他参考文档：
@@ -46,12 +60,19 @@ use TencentCloud\Common\AbstractModel;
 class ModifyDataTransformRequest extends AbstractModel
 {
     /**
-     * @var string 加工任务id
+     * @var string 数据加工任务ID
+- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务Id。
      */
     public $TaskId;
 
     /**
      * @var string 加工任务名称
+- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务名称。
+
+名称限制
+- 不能为空字符串
+- 不能包含字符'|'
+- 最长 255 个字符
      */
     public $Name;
 
@@ -81,8 +102,15 @@ class ModifyDataTransformRequest extends AbstractModel
     public $HasServicesLog;
 
     /**
-     * @param string $TaskId 加工任务id
+     * @param string $TaskId 数据加工任务ID
+- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务Id。
      * @param string $Name 加工任务名称
+- 通过[获取数据加工任务列表基本信息](https://cloud.tencent.com/document/product/614/72182)获取数据加工任务名称。
+
+名称限制
+- 不能为空字符串
+- 不能包含字符'|'
+- 最长 255 个字符
      * @param string $EtlContent 加工语句。 当FuncType为2时，EtlContent必须使用[log_auto_output](https://cloud.tencent.com/document/product/614/70733#b3c58797-4825-4807-bef4-68106e25024f) 
 
 其他参考文档：

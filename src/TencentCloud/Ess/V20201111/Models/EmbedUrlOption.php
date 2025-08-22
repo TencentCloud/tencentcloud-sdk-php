@@ -56,9 +56,9 @@ use TencentCloud\Common\AbstractModel;
 
  * @method string getSealDescription() 获取印章描述
  * @method void setSealDescription(string $SealDescription) 设置印章描述
- * @method string getForbidEditSealDescription() 获取是否禁止编辑印章描述内容
+ * @method boolean getForbidEditSealDescription() 获取是否禁止编辑印章描述内容
 <ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
- * @method void setForbidEditSealDescription(string $ForbidEditSealDescription) 设置是否禁止编辑印章描述内容
+ * @method void setForbidEditSealDescription(boolean $ForbidEditSealDescription) 设置是否禁止编辑印章描述内容
 <ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
  */
 class EmbedUrlOption extends AbstractModel
@@ -102,7 +102,7 @@ class EmbedUrlOption extends AbstractModel
     public $SealDescription;
 
     /**
-     * @var string 是否禁止编辑印章描述内容
+     * @var boolean 是否禁止编辑印章描述内容
 <ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
      */
     public $ForbidEditSealDescription;
@@ -126,7 +126,7 @@ class EmbedUrlOption extends AbstractModel
 <ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
 
      * @param string $SealDescription 印章描述
-     * @param string $ForbidEditSealDescription 是否禁止编辑印章描述内容
+     * @param boolean $ForbidEditSealDescription 是否禁止编辑印章描述内容
 <ul><li>（默认） false -否</li> <li> true - 禁止编辑</li></ul>
      */
     function __construct()

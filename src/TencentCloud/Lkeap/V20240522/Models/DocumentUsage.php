@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSuccessPageNum(integer $SuccessPageNum) 设置解析成功页数
  * @method integer getFailPageNum() 获取解析失败页数
  * @method void setFailPageNum(integer $FailPageNum) 设置解析失败页数
+ * @method integer getFileSize() 获取文件大小，单位KB
+ * @method void setFileSize(integer $FileSize) 设置文件大小，单位KB
  */
 class DocumentUsage extends AbstractModel
 {
@@ -74,6 +76,11 @@ class DocumentUsage extends AbstractModel
     public $FailPageNum;
 
     /**
+     * @var integer 文件大小，单位KB
+     */
+    public $FileSize;
+
+    /**
      * @param integer $PageNumber 文档拆分任务的页数
      * @param integer $TotalToken 文档拆分任务消耗的总token数
      * @param integer $TotalTokens 文档拆分任务消耗的总token数
@@ -81,6 +88,7 @@ class DocumentUsage extends AbstractModel
      * @param integer $MllmTokens mllm消耗的token数
      * @param integer $SuccessPageNum 解析成功页数
      * @param integer $FailPageNum 解析失败页数
+     * @param integer $FileSize 文件大小，单位KB
      */
     function __construct()
     {
@@ -121,6 +129,10 @@ class DocumentUsage extends AbstractModel
 
         if (array_key_exists("FailPageNum",$param) and $param["FailPageNum"] !== null) {
             $this->FailPageNum = $param["FailPageNum"];
+        }
+
+        if (array_key_exists("FileSize",$param) and $param["FileSize"] !== null) {
+            $this->FileSize = $param["FileSize"];
         }
     }
 }

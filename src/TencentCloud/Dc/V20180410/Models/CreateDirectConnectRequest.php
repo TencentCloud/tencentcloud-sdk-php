@@ -76,6 +76,8 @@ ChinaOther：中国其他；
  * @method void setFaultReportContactPerson(string $FaultReportContactPerson) 设置报障联系人。
  * @method string getFaultReportContactNumber() 获取报障联系电话。
  * @method void setFaultReportContactNumber(string $FaultReportContactNumber) 设置报障联系电话。
+ * @method string getFaultReportContactEmail() 获取报障联系邮箱。
+ * @method void setFaultReportContactEmail(string $FaultReportContactEmail) 设置报障联系邮箱。
  * @method boolean getSignLaw() 获取物理专线申请者是否签署了用户使用协议。默认已签署。
  * @method void setSignLaw(boolean $SignLaw) 设置物理专线申请者是否签署了用户使用协议。默认已签署。
  * @method array getTags() 获取标签键值对
@@ -178,6 +180,11 @@ ChinaOther：中国其他；
     public $FaultReportContactNumber;
 
     /**
+     * @var string 报障联系邮箱。
+     */
+    public $FaultReportContactEmail;
+
+    /**
      * @var boolean 物理专线申请者是否签署了用户使用协议。默认已签署。
      */
     public $SignLaw;
@@ -221,6 +228,7 @@ ChinaOther：中国其他；
      * @param string $CustomerContactNumber 物理专线申请者联系号码。默认从账户体系获取。
      * @param string $FaultReportContactPerson 报障联系人。
      * @param string $FaultReportContactNumber 报障联系电话。
+     * @param string $FaultReportContactEmail 报障联系邮箱。
      * @param boolean $SignLaw 物理专线申请者是否签署了用户使用协议。默认已签署。
      * @param array $Tags 标签键值对
      * @param boolean $IsMacSec 是否MACsec需求
@@ -300,6 +308,10 @@ ChinaOther：中国其他；
 
         if (array_key_exists("FaultReportContactNumber",$param) and $param["FaultReportContactNumber"] !== null) {
             $this->FaultReportContactNumber = $param["FaultReportContactNumber"];
+        }
+
+        if (array_key_exists("FaultReportContactEmail",$param) and $param["FaultReportContactEmail"] !== null) {
+            $this->FaultReportContactEmail = $param["FaultReportContactEmail"];
         }
 
         if (array_key_exists("SignLaw",$param) and $param["SignLaw"] !== null) {

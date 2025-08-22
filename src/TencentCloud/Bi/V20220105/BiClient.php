@@ -24,6 +24,7 @@ use TencentCloud\Bi\V20220105\Models as Models;
 
 /**
  * @method Models\ApplyEmbedIntervalResponse ApplyEmbedInterval(Models\ApplyEmbedIntervalRequest $req) 申请延长Token可用时间接口-强鉴权
+ * @method Models\ClearEmbedTokenResponse ClearEmbedToken(Models\ClearEmbedTokenRequest $req) 强鉴权token 清理，只有企业管理员才能调用该接口
  * @method Models\CreateDatasourceResponse CreateDatasource(Models\CreateDatasourceRequest $req) 创建数据源
  * @method Models\CreateDatasourceCloudResponse CreateDatasourceCloud(Models\CreateDatasourceCloudRequest $req) 创建云数据库
  * @method Models\CreateEmbedTokenResponse CreateEmbedToken(Models\CreateEmbedTokenRequest $req) 创建嵌出报表-强鉴权

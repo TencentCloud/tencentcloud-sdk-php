@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(string $SubnetId) 设置控制面子网信息，仅在以下场景返回。
 - 容器网络插件为CiliumOverlay。
 - 支持CDC的托管集群，且网络插件为VPC-CNI。
+ * @method boolean getDataPlaneV2() 获取是否启用了 DataPlaneV2（cilium替代kube-proxy）
+ * @method void setDataPlaneV2(boolean $DataPlaneV2) 设置是否启用了 DataPlaneV2（cilium替代kube-proxy）
  */
 class ClusterNetworkSettings extends AbstractModel
 {
@@ -141,6 +143,11 @@ class ClusterNetworkSettings extends AbstractModel
     public $SubnetId;
 
     /**
+     * @var boolean 是否启用了 DataPlaneV2（cilium替代kube-proxy）
+     */
+    public $DataPlaneV2;
+
+    /**
      * @param string $ClusterCIDR 用于分配集群容器和服务 IP 的 CIDR，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
      * @param boolean $IgnoreClusterCIDRConflict 是否忽略 ClusterCIDR 冲突错误, 默认不忽略
      * @param integer $MaxNodePodNum 集群中每个Node上最大的Pod数量(默认为256)
@@ -160,6 +167,7 @@ class ClusterNetworkSettings extends AbstractModel
      * @param string $SubnetId 控制面子网信息，仅在以下场景返回。
 - 容器网络插件为CiliumOverlay。
 - 支持CDC的托管集群，且网络插件为VPC-CNI。
+     * @param boolean $DataPlaneV2 是否启用了 DataPlaneV2（cilium替代kube-proxy）
      */
     function __construct()
     {
@@ -232,6 +240,10 @@ class ClusterNetworkSettings extends AbstractModel
 
         if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
             $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("DataPlaneV2",$param) and $param["DataPlaneV2"] !== null) {
+            $this->DataPlaneV2 = $param["DataPlaneV2"];
         }
     }
 }

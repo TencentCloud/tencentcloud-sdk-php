@@ -172,6 +172,10 @@ DEFAULT: 其他来源
 枚举值，部分情况下与CreateSource不同，通过该字段兼容
  * @method string getSubUinName() 获取服务创建者的子账号名称
  * @method void setSubUinName(string $SubUinName) 设置服务创建者的子账号名称
+ * @method SchedulingPolicy getSchedulingPolicy() 获取服务的调度策略
+ * @method void setSchedulingPolicy(SchedulingPolicy $SchedulingPolicy) 设置服务的调度策略
+ * @method array getExternalResourceGroups() 获取外部的资源组信息，表示借调了哪些资源组的资源
+ * @method void setExternalResourceGroups(array $ExternalResourceGroups) 设置外部的资源组信息，表示借调了哪些资源组的资源
  */
 class Service extends AbstractModel
 {
@@ -394,6 +398,16 @@ DEFAULT: 其他来源
     public $SubUinName;
 
     /**
+     * @var SchedulingPolicy 服务的调度策略
+     */
+    public $SchedulingPolicy;
+
+    /**
+     * @var array 外部的资源组信息，表示借调了哪些资源组的资源
+     */
+    public $ExternalResourceGroups;
+
+    /**
      * @param string $ServiceGroupId 服务组id
      * @param string $ServiceId 服务id
      * @param string $ServiceGroupName 服务组名
@@ -470,6 +484,8 @@ DEFAULT: 其他来源
      * @param string $MonitorSource 用于监控查询的Source
 枚举值，部分情况下与CreateSource不同，通过该字段兼容
      * @param string $SubUinName 服务创建者的子账号名称
+     * @param SchedulingPolicy $SchedulingPolicy 服务的调度策略
+     * @param array $ExternalResourceGroups 外部的资源组信息，表示借调了哪些资源组的资源
      */
     function __construct()
     {
@@ -630,6 +646,20 @@ DEFAULT: 其他来源
 
         if (array_key_exists("SubUinName",$param) and $param["SubUinName"] !== null) {
             $this->SubUinName = $param["SubUinName"];
+        }
+
+        if (array_key_exists("SchedulingPolicy",$param) and $param["SchedulingPolicy"] !== null) {
+            $this->SchedulingPolicy = new SchedulingPolicy();
+            $this->SchedulingPolicy->deserialize($param["SchedulingPolicy"]);
+        }
+
+        if (array_key_exists("ExternalResourceGroups",$param) and $param["ExternalResourceGroups"] !== null) {
+            $this->ExternalResourceGroups = [];
+            foreach ($param["ExternalResourceGroups"] as $key => $value){
+                $obj = new ResourceGroupInfo();
+                $obj->deserialize($value);
+                array_push($this->ExternalResourceGroups, $obj);
+            }
         }
     }
 }

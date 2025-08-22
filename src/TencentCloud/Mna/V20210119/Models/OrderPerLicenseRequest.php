@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeviceId(string $DeviceId) 设置购买永久授权License的设备ID，如果是厂商未激活设备采用HardwareId
  * @method integer getType() 获取设备类型，0: SDK，1: CPE，作为用户创建或激活设备时传0，作为厂商创建待激活设备时传1
  * @method void setType(integer $Type) 设置设备类型，0: SDK，1: CPE，作为用户创建或激活设备时传0，作为厂商创建待激活设备时传1
- * @method boolean getRollBack() 获取购买失败后是否回滚（删除）设备，默认true，如果设备绑定了生效中的流量包则不能回滚。
- * @method void setRollBack(boolean $RollBack) 设置购买失败后是否回滚（删除）设备，默认true，如果设备绑定了生效中的流量包则不能回滚。
+ * @method boolean getRollBack() 获取购买失败后是否回滚（删除）设备，默认false，如果设备绑定了生效中的流量包则不能回滚。
+ * @method void setRollBack(boolean $RollBack) 设置购买失败后是否回滚（删除）设备，默认false，如果设备绑定了生效中的流量包则不能回滚。
  * @method boolean getAutoVoucher() 获取是否自动选择代金券，默认false。
 有多张券时的选择策略：按照可支付订单全部金额的券，先到期的券，可抵扣金额最大的券，余额最小的券，现金券 这个优先级进行扣券，且最多只抵扣一张券。
  * @method void setAutoVoucher(boolean $AutoVoucher) 设置是否自动选择代金券，默认false。
@@ -48,7 +48,7 @@ class OrderPerLicenseRequest extends AbstractModel
     public $Type;
 
     /**
-     * @var boolean 购买失败后是否回滚（删除）设备，默认true，如果设备绑定了生效中的流量包则不能回滚。
+     * @var boolean 购买失败后是否回滚（删除）设备，默认false，如果设备绑定了生效中的流量包则不能回滚。
      */
     public $RollBack;
 
@@ -67,7 +67,7 @@ class OrderPerLicenseRequest extends AbstractModel
     /**
      * @param string $DeviceId 购买永久授权License的设备ID，如果是厂商未激活设备采用HardwareId
      * @param integer $Type 设备类型，0: SDK，1: CPE，作为用户创建或激活设备时传0，作为厂商创建待激活设备时传1
-     * @param boolean $RollBack 购买失败后是否回滚（删除）设备，默认true，如果设备绑定了生效中的流量包则不能回滚。
+     * @param boolean $RollBack 购买失败后是否回滚（删除）设备，默认false，如果设备绑定了生效中的流量包则不能回滚。
      * @param boolean $AutoVoucher 是否自动选择代金券，默认false。
 有多张券时的选择策略：按照可支付订单全部金额的券，先到期的券，可抵扣金额最大的券，余额最小的券，现金券 这个优先级进行扣券，且最多只抵扣一张券。
      * @param array $VoucherIds 指定代金券ID。自动选择代金券时此参数无效。目前只允许传入一张代金券。

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEngineNetworkId(string $EngineNetworkId) 设置引擎网络ID
  * @method array getDataEngineIds() 获取引擎ID集合
  * @method void setDataEngineIds(array $DataEngineIds) 设置引擎ID集合
+ * @method array getUserVpcEndpointIds() 获取终端节点ID集合
+ * @method void setUserVpcEndpointIds(array $UserVpcEndpointIds) 设置终端节点ID集合
  */
 class DescribeUserVpcConnectionRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeUserVpcConnectionRequest extends AbstractModel
     public $DataEngineIds;
 
     /**
+     * @var array 终端节点ID集合
+     */
+    public $UserVpcEndpointIds;
+
+    /**
      * @param string $EngineNetworkId 引擎网络ID
      * @param array $DataEngineIds 引擎ID集合
+     * @param array $UserVpcEndpointIds 终端节点ID集合
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeUserVpcConnectionRequest extends AbstractModel
 
         if (array_key_exists("DataEngineIds",$param) and $param["DataEngineIds"] !== null) {
             $this->DataEngineIds = $param["DataEngineIds"];
+        }
+
+        if (array_key_exists("UserVpcEndpointIds",$param) and $param["UserVpcEndpointIds"] !== null) {
+            $this->UserVpcEndpointIds = $param["UserVpcEndpointIds"];
         }
     }
 }

@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeletionProtection(boolean $DeletionProtection) 设置是否开启删除保护
  * @method boolean getUnschedulable() 获取节点是否默认不可调度
  * @method void setUnschedulable(boolean $Unschedulable) 设置节点是否默认不可调度
- * @method CreateNativeNodePoolParam getNative() 获取原生节点池创建参数
- * @method void setNative(CreateNativeNodePoolParam $Native) 设置原生节点池创建参数
+ * @method CreateNativeNodePoolParam getNative() 获取原生节点池创建参数（Type字段设置为Native时需填写）
+ * @method void setNative(CreateNativeNodePoolParam $Native) 设置原生节点池创建参数（Type字段设置为Native时需填写）
  * @method array getAnnotations() 获取节点 Annotation 列表
  * @method void setAnnotations(array $Annotations) 设置节点 Annotation 列表
  */
@@ -84,7 +84,7 @@ class CreateNodePoolRequest extends AbstractModel
     public $Unschedulable;
 
     /**
-     * @var CreateNativeNodePoolParam 原生节点池创建参数
+     * @var CreateNativeNodePoolParam 原生节点池创建参数（Type字段设置为Native时需填写）
      */
     public $Native;
 
@@ -102,7 +102,7 @@ class CreateNodePoolRequest extends AbstractModel
      * @param array $Tags 节点标签
      * @param boolean $DeletionProtection 是否开启删除保护
      * @param boolean $Unschedulable 节点是否默认不可调度
-     * @param CreateNativeNodePoolParam $Native 原生节点池创建参数
+     * @param CreateNativeNodePoolParam $Native 原生节点池创建参数（Type字段设置为Native时需填写）
      * @param array $Annotations 节点 Annotation 列表
      */
     function __construct()

@@ -153,6 +153,13 @@ use TencentCloud\Ess\V20201111\Models as Models;
 ![image](https://qcloudimg.tencent-cloud.cn/raw/32f3526ad7152757202a7e4e760356db.jpg)
 跳过上传确认的嵌入页面长相如下：
 ![image](https://qcloudimg.tencent-cloud.cn/raw/c68047feddbc106e261870687b6ab89d.jpg)
+ * @method Models\CreateContractReviewWebUrlResponse CreateContractReviewWebUrl(Models\CreateContractReviewWebUrlRequest $req) 此接口（CreateContractReviewWebUrl）用来创建合同审查web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
+
+适用场景：根据合同内容识别出合同的风险信息。审查结果由AI生成，仅供参考。请结合相关法律法规和公司制度要求综合判断。
+
+注: 
+1. pdf、word格式限制大小为10M以下
+2. 如果文件资源为word类型生成的链接不能进行iframe嵌入，需要在单独窗口打开
  * @method Models\CreateConvertTaskApiResponse CreateConvertTaskApi(Models\CreateConvertTaskApiRequest $req) 此接口（CreateConvertTaskApi）用来将word、excel、html、图片、txt类型文件转换为PDF文件。<br />
 前提条件：源文件已经通过 <a href="https://qian.tencent.com/developers/companyApis/templatesAndFiles/UploadFiles" target="_blank">文件上传接口</a>完成上传，并得到了源文件的资源Id。<br />
 适用场景1：已经上传了一个word文件，希望将该word文件转换成pdf文件后发起合同
@@ -833,6 +840,11 @@ use TencentCloud\Ess\V20201111\Models as Models;
 嵌入页面长相如下：
 ![image](https://qcloudimg.tencent-cloud.cn/raw/c68047feddbc106e261870687b6ab89d.jpg)
  * @method Models\DescribeContractReviewTaskResponse DescribeContractReviewTask(Models\DescribeContractReviewTaskRequest $req) 本接口（DescribeContractReviewTask）用于获取合同审查任务详情，包括任务的状态和识别出的风险信息。
+ * @method Models\DescribeContractReviewWebUrlResponse DescribeContractReviewWebUrl(Models\DescribeContractReviewWebUrlRequest $req) 此接口（DescribeContractReviewWebUrl）用来创建合同审查web页面链接（此web页面可以通过iframe方式嵌入到贵方系统的网页中）。
+
+适用场景：根据合同内容识别出合同的风险信息。审查结果由AI生成，仅供参考。请结合相关法律法规和公司制度要求综合判断。
+
+注意:  `如果文件资源为word类型生成的链接不能进行iframe嵌入，需要在单独窗口打开`
  * @method Models\DescribeExtendedServiceAuthDetailResponse DescribeExtendedServiceAuthDetail(Models\DescribeExtendedServiceAuthDetailRequest $req) 查询企业扩展服务的授权详情（列表），当前支持查询以下内容：
 1. 企业自动签（本企业授权、集团企业授权、合作企业授权）
 2. 批量签署能力

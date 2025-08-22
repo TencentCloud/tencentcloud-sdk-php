@@ -58,10 +58,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInternetAccessible(InternetAccessible $InternetAccessible) 设置公网带宽设置
  * @method array getDataDisks() 获取原生节点池数据盘列表
  * @method void setDataDisks(array $DataDisks) 设置原生节点池数据盘列表
+ * @method boolean getQGPUEnable() 获取qgpu开关
+ * @method void setQGPUEnable(boolean $QGPUEnable) 设置qgpu开关
  * @method array getKeyIds() 获取节点池ssh公钥id数组
  * @method void setKeyIds(array $KeyIds) 设置节点池ssh公钥id数组
  * @method string getMachineType() 获取节点池类型
  * @method void setMachineType(string $MachineType) 设置节点池类型
+ * @method boolean getAutomationService() 获取原生节点池安装节点自动化助手开关
+ * @method void setAutomationService(boolean $AutomationService) 设置原生节点池安装节点自动化助手开关
  */
 class CreateNativeNodePoolParam extends AbstractModel
 {
@@ -161,6 +165,11 @@ class CreateNativeNodePoolParam extends AbstractModel
     public $DataDisks;
 
     /**
+     * @var boolean qgpu开关
+     */
+    public $QGPUEnable;
+
+    /**
      * @var array 节点池ssh公钥id数组
      */
     public $KeyIds;
@@ -169,6 +178,11 @@ class CreateNativeNodePoolParam extends AbstractModel
      * @var string 节点池类型
      */
     public $MachineType;
+
+    /**
+     * @var boolean 原生节点池安装节点自动化助手开关
+     */
+    public $AutomationService;
 
     /**
      * @param MachineSetScaling $Scaling 节点池伸缩配置
@@ -190,8 +204,10 @@ class CreateNativeNodePoolParam extends AbstractModel
      * @param integer $Replicas 期望节点数
      * @param InternetAccessible $InternetAccessible 公网带宽设置
      * @param array $DataDisks 原生节点池数据盘列表
+     * @param boolean $QGPUEnable qgpu开关
      * @param array $KeyIds 节点池ssh公钥id数组
      * @param string $MachineType 节点池类型
+     * @param boolean $AutomationService 原生节点池安装节点自动化助手开关
      */
     function __construct()
     {
@@ -294,12 +310,20 @@ class CreateNativeNodePoolParam extends AbstractModel
             }
         }
 
+        if (array_key_exists("QGPUEnable",$param) and $param["QGPUEnable"] !== null) {
+            $this->QGPUEnable = $param["QGPUEnable"];
+        }
+
         if (array_key_exists("KeyIds",$param) and $param["KeyIds"] !== null) {
             $this->KeyIds = $param["KeyIds"];
         }
 
         if (array_key_exists("MachineType",$param) and $param["MachineType"] !== null) {
             $this->MachineType = $param["MachineType"];
+        }
+
+        if (array_key_exists("AutomationService",$param) and $param["AutomationService"] !== null) {
+            $this->AutomationService = $param["AutomationService"];
         }
     }
 }

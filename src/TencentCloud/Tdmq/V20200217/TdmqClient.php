@@ -198,7 +198,7 @@ BatchReceivePolicy 的接口会一次性返回多条消息：
  * @method Models\SendMessagesResponse SendMessages(Models\SendMessagesRequest $req) 发送单条消息
 不支持持久topic
  * @method Models\SendMsgResponse SendMsg(Models\SendMsgRequest $req) 此接口仅用于测试发生消息，不能作为现网正式生产使用
- * @method Models\SendRocketMQMessageResponse SendRocketMQMessage(Models\SendRocketMQMessageRequest $req) 发送RocketMQ消息
+ * @method Models\SendRocketMQMessageResponse SendRocketMQMessage(Models\SendRocketMQMessageRequest $req) 发送 RocketMQ 消息，该接口仅用于控制台发送少量测试消息，不保证SLA，且云 API 存在限流，在真实业务场景下，请使用 RocketMQ SDK 发送消息。
  * @method Models\SetRocketMQPublicAccessPointResponse SetRocketMQPublicAccessPoint(Models\SetRocketMQPublicAccessPointRequest $req) 该接口用于开启关闭公网访问、设置安全访问策略
  * @method Models\UnbindCmqDeadLetterResponse UnbindCmqDeadLetter(Models\UnbindCmqDeadLetterRequest $req) 解绑cmq死信队列
  * @method Models\VerifyRocketMQConsumeResponse VerifyRocketMQConsume(Models\VerifyRocketMQConsumeRequest $req) Rocketmq消费验证

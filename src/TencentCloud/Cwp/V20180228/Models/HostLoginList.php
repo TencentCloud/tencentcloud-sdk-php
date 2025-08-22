@@ -63,10 +63,10 @@ use TencentCloud\Common\AbstractModel;
  * @method string getQuuid() 获取主机quuid
  * @method void setQuuid(string $Quuid) 设置主机quuid
  * @method string getDesc() 获取高危信息说明：
-ABROAD - 海外IP；
+ABROAD - 境外IP；
 XTI - 威胁情报
  * @method void setDesc(string $Desc) 设置高危信息说明：
-ABROAD - 海外IP；
+ABROAD - 境外IP；
 XTI - 威胁情报
  * @method MachineExtraInfo getMachineExtraInfo() 获取附加信息
  * @method void setMachineExtraInfo(MachineExtraInfo $MachineExtraInfo) 设置附加信息
@@ -174,7 +174,7 @@ class HostLoginList extends AbstractModel
 
     /**
      * @var string 高危信息说明：
-ABROAD - 海外IP；
+ABROAD - 境外IP；
 XTI - 威胁情报
      */
     public $Desc;
@@ -212,7 +212,7 @@ XTI - 威胁情报
      * @param string $Location 位置名称
      * @param string $Quuid 主机quuid
      * @param string $Desc 高危信息说明：
-ABROAD - 海外IP；
+ABROAD - 境外IP；
 XTI - 威胁情报
      * @param MachineExtraInfo $MachineExtraInfo 附加信息
      * @param integer $Port 请求目的端口

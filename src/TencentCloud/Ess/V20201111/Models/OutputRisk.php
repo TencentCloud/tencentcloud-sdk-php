@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRiskPresentation(array $RiskPresentation) 设置风险评估
  * @method string getContent() 获取PDF风险原文内容
  * @method void setContent(string $Content) 设置PDF风险原文内容
+ * @method array getPositions() 获取审查出的PDF段落位置信息
+ * @method void setPositions(array $Positions) 设置审查出的PDF段落位置信息
  * @method string getRiskBasis() 获取审查依据
  * @method void setRiskBasis(string $RiskBasis) 设置审查依据
  */
@@ -93,6 +95,11 @@ class OutputRisk extends AbstractModel
     public $Content;
 
     /**
+     * @var array 审查出的PDF段落位置信息
+     */
+    public $Positions;
+
+    /**
      * @var string 审查依据
      */
     public $RiskBasis;
@@ -111,6 +118,7 @@ class OutputRisk extends AbstractModel
      * @param string $RiskAdvice 风险建议
      * @param array $RiskPresentation 风险评估
      * @param string $Content PDF风险原文内容
+     * @param array $Positions 审查出的PDF段落位置信息
      * @param string $RiskBasis 审查依据
      */
     function __construct()
@@ -152,6 +160,15 @@ class OutputRisk extends AbstractModel
 
         if (array_key_exists("Content",$param) and $param["Content"] !== null) {
             $this->Content = $param["Content"];
+        }
+
+        if (array_key_exists("Positions",$param) and $param["Positions"] !== null) {
+            $this->Positions = [];
+            foreach ($param["Positions"] as $key => $value){
+                $obj = new PositionInfo();
+                $obj->deserialize($value);
+                array_push($this->Positions, $obj);
+            }
         }
 
         if (array_key_exists("RiskBasis",$param) and $param["RiskBasis"] !== null) {

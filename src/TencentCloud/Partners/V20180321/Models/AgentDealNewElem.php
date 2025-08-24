@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 描述代理商代付的订单信息
  *
- * @method string getDealId() 获取订单自增 ID【请勿依赖该字段作为唯一标识】
- * @method void setDealId(string $DealId) 设置订单自增 ID【请勿依赖该字段作为唯一标识】
+ * @method string getDealId() 获取 ID【请勿依赖该字段作为唯一标识】
+ * @method void setDealId(string $DealId) 设置 ID【请勿依赖该字段作为唯一标识】
  * @method string getDealName() 获取订单号【订单唯一键】
  * @method void setDealName(string $DealName) 设置订单号【订单唯一键】
  * @method string getGoodsCategoryId() 获取商品类型 ID
@@ -46,8 +46,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPayer(string $Payer) 设置支付人
  * @method string getDealStatus() 获取订单状态，中文描述
  * @method void setDealStatus(string $DealStatus) 设置订单状态，中文描述
- * @method string getStatus() 获取订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)
- * @method void setStatus(string $Status) 设置订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)
+ * @method string getStatus() 获取子订单状态(1-待支付,2-已支付,3-发货中,4-已发货,5-发货失败,6-已退款,7-已取消,8-已过期,9-已失效,12-支付中,13-退款中,30-处理中)
+
+控制台订单状态为大订单状态，是以上状态的聚合：未支付(1) 处理中(2,3,5,12,13,30) 已取消(7) 交易成功(4) 已过期(8) 已退款(6) 订单错误(9)
+ * @method void setStatus(string $Status) 设置子订单状态(1-待支付,2-已支付,3-发货中,4-已发货,5-发货失败,6-已退款,7-已取消,8-已过期,9-已失效,12-支付中,13-退款中,30-处理中)
+
+控制台订单状态为大订单状态，是以上状态的聚合：未支付(1) 处理中(2,3,5,12,13,30) 已取消(7) 交易成功(4) 已过期(8) 已退款(6) 订单错误(9)
  * @method string getGoodsName() 获取产品名称
  * @method void setGoodsName(string $GoodsName) 设置产品名称
  * @method string getClientRemark() 获取客户备注
@@ -86,7 +90,7 @@ use TencentCloud\Common\AbstractModel;
 class AgentDealNewElem extends AbstractModel
 {
     /**
-     * @var string 订单自增 ID【请勿依赖该字段作为唯一标识】
+     * @var string  ID【请勿依赖该字段作为唯一标识】
      */
     public $DealId;
 
@@ -151,7 +155,9 @@ class AgentDealNewElem extends AbstractModel
     public $DealStatus;
 
     /**
-     * @var string 订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)
+     * @var string 子订单状态(1-待支付,2-已支付,3-发货中,4-已发货,5-发货失败,6-已退款,7-已取消,8-已过期,9-已失效,12-支付中,13-退款中,30-处理中)
+
+控制台订单状态为大订单状态，是以上状态的聚合：未支付(1) 处理中(2,3,5,12,13,30) 已取消(7) 交易成功(4) 已过期(8) 已退款(6) 订单错误(9)
      */
     public $Status;
 
@@ -241,7 +247,7 @@ class AgentDealNewElem extends AbstractModel
     public $SubGoodsName;
 
     /**
-     * @param string $DealId 订单自增 ID【请勿依赖该字段作为唯一标识】
+     * @param string $DealId  ID【请勿依赖该字段作为唯一标识】
      * @param string $DealName 订单号【订单唯一键】
      * @param string $GoodsCategoryId 商品类型 ID
      * @param string $OwnerUin 订单所有者
@@ -254,7 +260,9 @@ class AgentDealNewElem extends AbstractModel
      * @param string $BillId 扣费流水号
      * @param string $Payer 支付人
      * @param string $DealStatus 订单状态，中文描述
-     * @param string $Status 订单的状态(1：未支付;2：已支付;3：发货中;4：已发货;5：发货失败;6：已退款;7：已关单;8：订单过期;9：订单已失效;10：产品已失效;11：代付拒绝;12：支付中)
+     * @param string $Status 子订单状态(1-待支付,2-已支付,3-发货中,4-已发货,5-发货失败,6-已退款,7-已取消,8-已过期,9-已失效,12-支付中,13-退款中,30-处理中)
+
+控制台订单状态为大订单状态，是以上状态的聚合：未支付(1) 处理中(2,3,5,12,13,30) 已取消(7) 交易成功(4) 已过期(8) 已退款(6) 订单错误(9)
      * @param string $GoodsName 产品名称
      * @param string $ClientRemark 客户备注
      * @param string $ActionType 订单操作类型，"purchase":"新购","upgrade":"升配","upConvertExpire":"升配","downgrade":"降配","downConvertExpire":"降配","renew":"续费","refund":"退货","modifyNetworkMode":"调整带宽模式","modifyNetworkSize":"调整带宽大小","preMoveOut":"资源迁出","preMoveIn":"资源迁入","preToPost":"包年包月转按量","modify":"变配","postMoveOut":"资源迁出","postMoveIn":"资源迁入","recoverRefundForward":"调账补偿","recoverPayReserve":"调账补偿","recoverPayForward":"调账扣费","recoverRefundReserve":"调账扣费"

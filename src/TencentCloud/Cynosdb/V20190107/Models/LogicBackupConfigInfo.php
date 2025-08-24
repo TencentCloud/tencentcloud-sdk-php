@@ -27,9 +27,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLogicBackupTimeEnd() 获取自动逻辑备份结束时间
  * @method void setLogicBackupTimeEnd(integer $LogicBackupTimeEnd) 设置自动逻辑备份结束时间
  * @method integer getLogicReserveDuration() 获取自动逻辑备份保留时间
+单位：秒
  * @method void setLogicReserveDuration(integer $LogicReserveDuration) 设置自动逻辑备份保留时间
+单位：秒
  * @method string getLogicCrossRegionsEnable() 获取是否开启跨地域逻辑备份
+可选值：ON/OFF
  * @method void setLogicCrossRegionsEnable(string $LogicCrossRegionsEnable) 设置是否开启跨地域逻辑备份
+可选值：ON/OFF
  * @method array getLogicCrossRegions() 获取逻辑备份所跨地域
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLogicCrossRegions(array $LogicCrossRegions) 设置逻辑备份所跨地域
@@ -54,11 +58,13 @@ class LogicBackupConfigInfo extends AbstractModel
 
     /**
      * @var integer 自动逻辑备份保留时间
+单位：秒
      */
     public $LogicReserveDuration;
 
     /**
      * @var string 是否开启跨地域逻辑备份
+可选值：ON/OFF
      */
     public $LogicCrossRegionsEnable;
 
@@ -73,7 +79,9 @@ class LogicBackupConfigInfo extends AbstractModel
      * @param integer $LogicBackupTimeBeg 自动逻辑备份开始时间
      * @param integer $LogicBackupTimeEnd 自动逻辑备份结束时间
      * @param integer $LogicReserveDuration 自动逻辑备份保留时间
+单位：秒
      * @param string $LogicCrossRegionsEnable 是否开启跨地域逻辑备份
+可选值：ON/OFF
      * @param array $LogicCrossRegions 逻辑备份所跨地域
 注意：此字段可能返回 null，表示取不到有效值。
      */

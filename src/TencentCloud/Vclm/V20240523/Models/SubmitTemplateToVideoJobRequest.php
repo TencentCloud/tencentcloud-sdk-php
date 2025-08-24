@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
 默认在生成视频的右下角添加“视频由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
  * @method string getResolution() 获取视频输出分辨率，默认值：360p  - 枚举值：  720p  360p。
  * @method void setResolution(string $Resolution) 设置视频输出分辨率，默认值：360p  - 枚举值：  720p  360p。
+ * @method boolean getBGM() 获取是否为生成的视频添加背景音乐。默认：false，  传 true 时系统将从预设 BGM 库中自动挑选合适的音乐并添加；不传或为 false 则不添加 BGM。
+ * @method void setBGM(boolean $BGM) 设置是否为生成的视频添加背景音乐。默认：false，  传 true 时系统将从预设 BGM 库中自动挑选合适的音乐并添加；不传或为 false 则不添加 BGM。
  */
 class SubmitTemplateToVideoJobRequest extends AbstractModel
 {
@@ -86,6 +88,11 @@ class SubmitTemplateToVideoJobRequest extends AbstractModel
     public $Resolution;
 
     /**
+     * @var boolean 是否为生成的视频添加背景音乐。默认：false，  传 true 时系统将从预设 BGM 库中自动挑选合适的音乐并添加；不传或为 false 则不添加 BGM。
+     */
+    public $BGM;
+
+    /**
      * @param string $Template 特效模板名称。请在 [视频特效模版列表](https://cloud.tencent.com/document/product/1616/119194)  中选择想要生成的特效对应的 template 名称。
      * @param array $Images 参考图像，最多输入2张图。
 - 支持传入图片Base64编码或图片URL（确保可访问）
@@ -100,6 +107,7 @@ class SubmitTemplateToVideoJobRequest extends AbstractModel
      * @param LogoParam $LogoParam 标识内容设置。
 默认在生成视频的右下角添加“视频由 AI 生成”字样，您可根据自身需要替换为其他的标识图片。
      * @param string $Resolution 视频输出分辨率，默认值：360p  - 枚举值：  720p  360p。
+     * @param boolean $BGM 是否为生成的视频添加背景音乐。默认：false，  传 true 时系统将从预设 BGM 库中自动挑选合适的音乐并添加；不传或为 false 则不添加 BGM。
      */
     function __construct()
     {
@@ -138,6 +146,10 @@ class SubmitTemplateToVideoJobRequest extends AbstractModel
 
         if (array_key_exists("Resolution",$param) and $param["Resolution"] !== null) {
             $this->Resolution = $param["Resolution"];
+        }
+
+        if (array_key_exists("BGM",$param) and $param["BGM"] !== null) {
+            $this->BGM = $param["BGM"];
         }
     }
 }

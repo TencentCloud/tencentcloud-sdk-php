@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeContractReviewTask返回参数结构体
  *
- * @method string getChecklistId() 获取用于审查任务的审查清单ID。
- * @method void setChecklistId(string $ChecklistId) 设置用于审查任务的审查清单ID。
+ * @method string getChecklistId() 获取用于审查任务的审查清单ID。注意：如果用户没有配置清单时此值可能为空，需要等大模型根据合同内容推荐出可以使用的审查清单。
+ * @method void setChecklistId(string $ChecklistId) 设置用于审查任务的审查清单ID。注意：如果用户没有配置清单时此值可能为空，需要等大模型根据合同内容推荐出可以使用的审查清单。
  * @method integer getCreatedOn() 获取合同审查任务创建时间。
  * @method void setCreatedOn(integer $CreatedOn) 设置合同审查任务创建时间。
  * @method integer getFinishedOn() 获取合同审查任务完成时间。
@@ -50,8 +50,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRisks(array $Risks) 设置合同审查识别出的PDF文件风险信息，如果是空数组表示无风险。
 
 注意：`审查结果由AI生成，仅供参考。请结合相关法律法规和公司制度要求综合判断。`
- * @method RiskIdentificationRoleInfo getRole() 获取合同审查中的角色信息。
- * @method void setRole(RiskIdentificationRoleInfo $Role) 设置合同审查中的角色信息。
+ * @method RiskIdentificationRoleInfo getRole() 获取合同审查中的角色信息。注意：注意：如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRole(RiskIdentificationRoleInfo $Role) 设置合同审查中的角色信息。注意：注意：如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取合同审查任务状态。
 状态如下：
 <ul>
@@ -72,13 +74,21 @@ use TencentCloud\Common\AbstractModel;
 </ul>
  * @method string getTaskId() 获取合同审查任务ID
  * @method void setTaskId(string $TaskId) 设置合同审查任务ID
+ * @method string getComment() 获取审查任务备注信息，长度不能超过100个字符
+ * @method void setComment(string $Comment) 设置审查任务备注信息，长度不能超过100个字符
+ * @method string getUserData() 获取调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 1024长度。
+
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的[回调通知](https://qian.tencent.com/developers/company/callback_types_v2)模块。
+ * @method void setUserData(string $UserData) 设置调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 1024长度。
+
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的[回调通知](https://qian.tencent.com/developers/company/callback_types_v2)模块。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeContractReviewTaskResponse extends AbstractModel
 {
     /**
-     * @var string 用于审查任务的审查清单ID。
+     * @var string 用于审查任务的审查清单ID。注意：如果用户没有配置清单时此值可能为空，需要等大模型根据合同内容推荐出可以使用的审查清单。
      */
     public $ChecklistId;
 
@@ -117,7 +127,8 @@ class DescribeContractReviewTaskResponse extends AbstractModel
     public $Risks;
 
     /**
-     * @var RiskIdentificationRoleInfo 合同审查中的角色信息。
+     * @var RiskIdentificationRoleInfo 合同审查中的角色信息。注意：注意：如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Role;
 
@@ -140,12 +151,24 @@ class DescribeContractReviewTaskResponse extends AbstractModel
     public $TaskId;
 
     /**
+     * @var string 审查任务备注信息，长度不能超过100个字符
+     */
+    public $Comment;
+
+    /**
+     * @var string 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 1024长度。
+
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的[回调通知](https://qian.tencent.com/developers/company/callback_types_v2)模块。
+     */
+    public $UserData;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
-     * @param string $ChecklistId 用于审查任务的审查清单ID。
+     * @param string $ChecklistId 用于审查任务的审查清单ID。注意：如果用户没有配置清单时此值可能为空，需要等大模型根据合同内容推荐出可以使用的审查清单。
      * @param integer $CreatedOn 合同审查任务创建时间。
      * @param integer $FinishedOn 合同审查任务完成时间。
      * @param integer $PolicyType 合同审查的审查立场方。
@@ -160,7 +183,8 @@ class DescribeContractReviewTaskResponse extends AbstractModel
      * @param array $Risks 合同审查识别出的PDF文件风险信息，如果是空数组表示无风险。
 
 注意：`审查结果由AI生成，仅供参考。请结合相关法律法规和公司制度要求综合判断。`
-     * @param RiskIdentificationRoleInfo $Role 合同审查中的角色信息。
+     * @param RiskIdentificationRoleInfo $Role 合同审查中的角色信息。注意：注意：如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 合同审查任务状态。
 状态如下：
 <ul>
@@ -171,6 +195,10 @@ class DescribeContractReviewTaskResponse extends AbstractModel
     <li>**5** - 合同审查任务执行失败</li>
 </ul>
      * @param string $TaskId 合同审查任务ID
+     * @param string $Comment 审查任务备注信息，长度不能超过100个字符
+     * @param string $UserData 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 1024长度。
+
+在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的[回调通知](https://qian.tencent.com/developers/company/callback_types_v2)模块。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -226,6 +254,14 @@ class DescribeContractReviewTaskResponse extends AbstractModel
 
         if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
             $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
+            $this->Comment = $param["Comment"];
+        }
+
+        if (array_key_exists("UserData",$param) and $param["UserData"] !== null) {
+            $this->UserData = $param["UserData"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

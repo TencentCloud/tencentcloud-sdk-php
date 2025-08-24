@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * tsf-privilege 模块，资源
  *
- * @method string getResourceId() 获取资源ID，调用[DescribeResource](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)查询接口获取
- * @method void setResourceId(string $ResourceId) 设置资源ID，调用[DescribeResource](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)查询接口获取
- * @method string getResourceCode() 获取资源编码，枚举值描述【cluster、namespace、config】
- * @method void setResourceCode(string $ResourceCode) 设置资源编码，枚举值描述【cluster、namespace、config】
+ * @method string getResourceId() 获取资源ID，调用[DescribeResources](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)接口，查看接口返回的ResourceId
+ * @method void setResourceId(string $ResourceId) 设置资源ID，调用[DescribeResources](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)接口，查看接口返回的ResourceId
+ * @method string getResourceCode() 获取资源编码，枚举值描述【cluster（集群）、namespace（命名空间）、config（应用配置）】
+ * @method void setResourceCode(string $ResourceCode) 设置资源编码，枚举值描述【cluster（集群）、namespace（命名空间）、config（应用配置）】
  * @method string getResourceName() 获取资源名称
  * @method void setResourceName(string $ResourceName) 设置资源名称
  * @method string getServiceCode() 获取资源所属产品编码，枚举值描述【tsf】
  * @method void setServiceCode(string $ServiceCode) 设置资源所属产品编码，枚举值描述【tsf】
- * @method string getResourceAction() 获取选取资源使用的Action，枚举值描述【DescribeSimpleCluster、DescribeLanes、DescribeTaskRecords】
- * @method void setResourceAction(string $ResourceAction) 设置选取资源使用的Action，枚举值描述【DescribeSimpleCluster、DescribeLanes、DescribeTaskRecords】
- * @method string getIdField() 获取资源数据查询的ID字段名，调用[DescribeResource](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)查询接口获取
- * @method void setIdField(string $IdField) 设置资源数据查询的ID字段名，调用[DescribeResource](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)查询接口获取
+ * @method string getResourceAction() 获取选取资源使用的Action，枚举值描述【DescribeSimpleCluster（查询简单集群列表）、DescribeTaskRecords（查询任务列表）】
+ * @method void setResourceAction(string $ResourceAction) 设置选取资源使用的Action，枚举值描述【DescribeSimpleCluster（查询简单集群列表）、DescribeTaskRecords（查询任务列表）】
+ * @method string getIdField() 获取资源数据查询的ID字段名，调用[DescribeResources](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)接口，查看接口返回的IdField
+ * @method void setIdField(string $IdField) 设置资源数据查询的ID字段名，调用[DescribeResources](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)接口，查看接口返回的IdField
  * @method string getNameField() 获取资源数据查询的名称字段名
  * @method void setNameField(string $NameField) 设置资源数据查询的名称字段名
  * @method string getSelectIdsField() 获取资源数据查询的ID过滤字段名
@@ -54,12 +54,12 @@ use TencentCloud\Common\AbstractModel;
 class Resource extends AbstractModel
 {
     /**
-     * @var string 资源ID，调用[DescribeResource](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)查询接口获取
+     * @var string 资源ID，调用[DescribeResources](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)接口，查看接口返回的ResourceId
      */
     public $ResourceId;
 
     /**
-     * @var string 资源编码，枚举值描述【cluster、namespace、config】
+     * @var string 资源编码，枚举值描述【cluster（集群）、namespace（命名空间）、config（应用配置）】
      */
     public $ResourceCode;
 
@@ -74,12 +74,12 @@ class Resource extends AbstractModel
     public $ServiceCode;
 
     /**
-     * @var string 选取资源使用的Action，枚举值描述【DescribeSimpleCluster、DescribeLanes、DescribeTaskRecords】
+     * @var string 选取资源使用的Action，枚举值描述【DescribeSimpleCluster（查询简单集群列表）、DescribeTaskRecords（查询任务列表）】
      */
     public $ResourceAction;
 
     /**
-     * @var string 资源数据查询的ID字段名，调用[DescribeResource](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)查询接口获取
+     * @var string 资源数据查询的ID字段名，调用[DescribeResources](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)接口，查看接口返回的IdField
      */
     public $IdField;
 
@@ -129,12 +129,12 @@ class Resource extends AbstractModel
     public $Index;
 
     /**
-     * @param string $ResourceId 资源ID，调用[DescribeResource](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)查询接口获取
-     * @param string $ResourceCode 资源编码，枚举值描述【cluster、namespace、config】
+     * @param string $ResourceId 资源ID，调用[DescribeResources](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)接口，查看接口返回的ResourceId
+     * @param string $ResourceCode 资源编码，枚举值描述【cluster（集群）、namespace（命名空间）、config（应用配置）】
      * @param string $ResourceName 资源名称
      * @param string $ServiceCode 资源所属产品编码，枚举值描述【tsf】
-     * @param string $ResourceAction 选取资源使用的Action，枚举值描述【DescribeSimpleCluster、DescribeLanes、DescribeTaskRecords】
-     * @param string $IdField 资源数据查询的ID字段名，调用[DescribeResource](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)查询接口获取
+     * @param string $ResourceAction 选取资源使用的Action，枚举值描述【DescribeSimpleCluster（查询简单集群列表）、DescribeTaskRecords（查询任务列表）】
+     * @param string $IdField 资源数据查询的ID字段名，调用[DescribeResources](https://console.cloud.tencent.com/tsf/privilege-program-create?rid=1)接口，查看接口返回的IdField
      * @param string $NameField 资源数据查询的名称字段名
      * @param string $SelectIdsField 资源数据查询的ID过滤字段名
      * @param integer $CreationTime 创建时间，时间戳格式【Long】

@@ -33,15 +33,23 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getStatus() 获取当前加工任务状态（1准备中/2运行中/3停止中/4已停止）
  * @method void setStatus(integer $Status) 设置当前加工任务状态（1准备中/2运行中/3停止中/4已停止）
  * @method string getCreateTime() 获取加工任务创建时间
+示例值：2025-03-18 19:55:54
+时间格式：yyyy-MM-dd HH:mm:ss
  * @method void setCreateTime(string $CreateTime) 设置加工任务创建时间
+示例值：2025-03-18 19:55:54
+时间格式：yyyy-MM-dd HH:mm:ss
  * @method string getUpdateTime() 获取最近修改时间
-示例值：2025-06-18 16:55:54
+示例值：2025-04-18 16:55:54
+时间格式：yyyy-MM-dd HH:mm:ss
  * @method void setUpdateTime(string $UpdateTime) 设置最近修改时间
-示例值：2025-06-18 16:55:54
+示例值：2025-04-18 16:55:54
+时间格式：yyyy-MM-dd HH:mm:ss
  * @method string getLastEnableTime() 获取最后启用时间，如果需要重建集群，修改该时间
-示例值：2025-06-18 19:55:54
+示例值：2025-05-18 19:55:54
+时间格式：yyyy-MM-dd HH:mm:ss
  * @method void setLastEnableTime(string $LastEnableTime) 设置最后启用时间，如果需要重建集群，修改该时间
-示例值：2025-06-18 19:55:54
+示例值：2025-05-18 19:55:54
+时间格式：yyyy-MM-dd HH:mm:ss
  * @method string getSrcTopicName() 获取日志主题名称
  * @method void setSrcTopicName(string $SrcTopicName) 设置日志主题名称
  * @method string getLogsetId() 获取日志集id
@@ -91,18 +99,22 @@ class DataTransformTaskInfo extends AbstractModel
 
     /**
      * @var string 加工任务创建时间
+示例值：2025-03-18 19:55:54
+时间格式：yyyy-MM-dd HH:mm:ss
      */
     public $CreateTime;
 
     /**
      * @var string 最近修改时间
-示例值：2025-06-18 16:55:54
+示例值：2025-04-18 16:55:54
+时间格式：yyyy-MM-dd HH:mm:ss
      */
     public $UpdateTime;
 
     /**
      * @var string 最后启用时间，如果需要重建集群，修改该时间
-示例值：2025-06-18 19:55:54
+示例值：2025-05-18 19:55:54
+时间格式：yyyy-MM-dd HH:mm:ss
      */
     public $LastEnableTime;
 
@@ -149,10 +161,14 @@ class DataTransformTaskInfo extends AbstractModel
      * @param string $SrcTopicId 源日志主题
      * @param integer $Status 当前加工任务状态（1准备中/2运行中/3停止中/4已停止）
      * @param string $CreateTime 加工任务创建时间
+示例值：2025-03-18 19:55:54
+时间格式：yyyy-MM-dd HH:mm:ss
      * @param string $UpdateTime 最近修改时间
-示例值：2025-06-18 16:55:54
+示例值：2025-04-18 16:55:54
+时间格式：yyyy-MM-dd HH:mm:ss
      * @param string $LastEnableTime 最后启用时间，如果需要重建集群，修改该时间
-示例值：2025-06-18 19:55:54
+示例值：2025-05-18 19:55:54
+时间格式：yyyy-MM-dd HH:mm:ss
      * @param string $SrcTopicName 日志主题名称
      * @param string $LogsetId 日志集id
      * @param array $DstResources 加工任务目的topic_id以及别名

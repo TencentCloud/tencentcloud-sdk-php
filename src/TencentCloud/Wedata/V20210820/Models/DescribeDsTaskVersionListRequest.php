@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(string $ProjectId) 设置项目ID
  * @method boolean getIsOnlyCurrentEditingVersion() 获取是否仅返回当前编辑版本
  * @method void setIsOnlyCurrentEditingVersion(boolean $IsOnlyCurrentEditingVersion) 设置是否仅返回当前编辑版本
+ * @method boolean getIsOnlyProductVersion() 获取是否仅只返回生产使用版本
+ * @method void setIsOnlyProductVersion(boolean $IsOnlyProductVersion) 设置是否仅只返回生产使用版本
  */
 class DescribeDsTaskVersionListRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeDsTaskVersionListRequest extends AbstractModel
     public $IsOnlyCurrentEditingVersion;
 
     /**
+     * @var boolean 是否仅只返回生产使用版本
+     */
+    public $IsOnlyProductVersion;
+
+    /**
      * @param string $TaskId 任务ID
      * @param string $ProjectId 项目ID
      * @param boolean $IsOnlyCurrentEditingVersion 是否仅返回当前编辑版本
+     * @param boolean $IsOnlyProductVersion 是否仅只返回生产使用版本
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeDsTaskVersionListRequest extends AbstractModel
 
         if (array_key_exists("IsOnlyCurrentEditingVersion",$param) and $param["IsOnlyCurrentEditingVersion"] !== null) {
             $this->IsOnlyCurrentEditingVersion = $param["IsOnlyCurrentEditingVersion"];
+        }
+
+        if (array_key_exists("IsOnlyProductVersion",$param) and $param["IsOnlyProductVersion"] !== null) {
+            $this->IsOnlyProductVersion = $param["IsOnlyProductVersion"];
         }
     }
 }

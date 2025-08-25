@@ -110,6 +110,26 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCmdArgs(string $CmdArgs) 设置入参
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getVCoreSeconds() 获取使用虚拟核心秒数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVCoreSeconds(integer $VCoreSeconds) 设置使用虚拟核心秒数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getMemorySeconds() 获取使用的内存秒数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setMemorySeconds(integer $MemorySeconds) 设置使用的内存秒数
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getEmrUserName() 获取EMR用户名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setEmrUserName(string $EmrUserName) 设置EMR用户名
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getQueryId() 获取任务的查询ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setQueryId(string $QueryId) 设置任务的查询ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getApplicationId() 获取应用程序ID
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setApplicationId(string $ApplicationId) 设置应用程序ID
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class EngineTaskInfo extends AbstractModel
 {
@@ -239,6 +259,36 @@ class EngineTaskInfo extends AbstractModel
     public $CmdArgs;
 
     /**
+     * @var integer 使用虚拟核心秒数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VCoreSeconds;
+
+    /**
+     * @var integer 使用的内存秒数
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $MemorySeconds;
+
+    /**
+     * @var string EMR用户名
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $EmrUserName;
+
+    /**
+     * @var string 任务的查询ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $QueryId;
+
+    /**
+     * @var string 应用程序ID
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $ApplicationId;
+
+    /**
      * @param string $EngineSubmitTime 引擎提交时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $EngineExeTime 引擎执行时间
@@ -283,6 +333,16 @@ class EngineTaskInfo extends AbstractModel
      * @param integer $QueryResultTime 查询结果时间
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CmdArgs 入参
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $VCoreSeconds 使用虚拟核心秒数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $MemorySeconds 使用的内存秒数
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $EmrUserName EMR用户名
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $QueryId 任务的查询ID
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $ApplicationId 应用程序ID
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -376,6 +436,26 @@ class EngineTaskInfo extends AbstractModel
 
         if (array_key_exists("CmdArgs",$param) and $param["CmdArgs"] !== null) {
             $this->CmdArgs = $param["CmdArgs"];
+        }
+
+        if (array_key_exists("VCoreSeconds",$param) and $param["VCoreSeconds"] !== null) {
+            $this->VCoreSeconds = $param["VCoreSeconds"];
+        }
+
+        if (array_key_exists("MemorySeconds",$param) and $param["MemorySeconds"] !== null) {
+            $this->MemorySeconds = $param["MemorySeconds"];
+        }
+
+        if (array_key_exists("EmrUserName",$param) and $param["EmrUserName"] !== null) {
+            $this->EmrUserName = $param["EmrUserName"];
+        }
+
+        if (array_key_exists("QueryId",$param) and $param["QueryId"] !== null) {
+            $this->QueryId = $param["QueryId"];
+        }
+
+        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
+            $this->ApplicationId = $param["ApplicationId"];
         }
     }
 }

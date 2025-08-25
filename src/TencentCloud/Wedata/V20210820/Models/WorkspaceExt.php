@@ -18,35 +18,47 @@ namespace TencentCloud\Wedata\V20210820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 试运行记录
+ * 项目扩展信息
  *
- * @method integer getTotalCount() 获取记录总数
+ * @method string getProjectId() 获取2670965482618679296
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setTotalCount(integer $TotalCount) 设置记录总数
+ * @method void setProjectId(string $ProjectId) 设置2670965482618679296
 注意：此字段可能返回 null，表示取不到有效值。
- * @method array getItems() 获取记录列表
+ * @method string getKey() 获取metrics
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setItems(array $Items) 设置记录列表
+ * @method void setKey(string $Key) 设置metrics
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getValue() 获取json
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setValue(string $Value) 设置json
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class DrInstanceOpsDtoPage extends AbstractModel
+class WorkspaceExt extends AbstractModel
 {
     /**
-     * @var integer 记录总数
+     * @var string 2670965482618679296
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $TotalCount;
+    public $ProjectId;
 
     /**
-     * @var array 记录列表
+     * @var string metrics
 注意：此字段可能返回 null，表示取不到有效值。
      */
-    public $Items;
+    public $Key;
 
     /**
-     * @param integer $TotalCount 记录总数
+     * @var string json
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param array $Items 记录列表
+     */
+    public $Value;
+
+    /**
+     * @param string $ProjectId 2670965482618679296
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Key metrics
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Value json
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -62,17 +74,16 @@ class DrInstanceOpsDtoPage extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
         }
 
-        if (array_key_exists("Items",$param) and $param["Items"] !== null) {
-            $this->Items = [];
-            foreach ($param["Items"] as $key => $value){
-                $obj = new DrInstanceOpsDto();
-                $obj->deserialize($value);
-                array_push($this->Items, $obj);
-            }
+        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
+            $this->Key = $param["Key"];
+        }
+
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
         }
     }
 }

@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) 设置实例资源标签
  * @method string getName() 获取任务名，自定义
  * @method void setName(string $Name) 设置任务名，自定义
+ * @method string getInstanceClass() 获取订阅实例规格，当前仅支持small、medium、large
+ * @method void setInstanceClass(string $InstanceClass) 设置订阅实例规格，当前仅支持small、medium、large
  */
 class CreateSubscribeRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreateSubscribeRequest extends AbstractModel
     public $Name;
 
     /**
+     * @var string 订阅实例规格，当前仅支持small、medium、large
+     */
+    public $InstanceClass;
+
+    /**
      * @param string $Product 订阅的数据库类型，目前支持 cynosdbmysql(tdsql-c mysql版),mariadb,mongodb,mysql,percona,tdpg(tdsql postgresql版),tdsqlpercona(tdsql mysql版)
      * @param integer $PayType 付费方式，枚举值：0-包年包月，1-按量计费
      * @param integer $Duration 购买时长。当 payType 为包年包月时，该项需要填，单位为月，最小值为 1，最大值为 120。不填默认1
@@ -80,6 +87,7 @@ class CreateSubscribeRequest extends AbstractModel
      * @param integer $Count 购买数量,默认为1，最大为10
      * @param array $Tags 实例资源标签
      * @param string $Name 任务名，自定义
+     * @param string $InstanceClass 订阅实例规格，当前仅支持small、medium、large
      */
     function __construct()
     {
@@ -125,6 +133,10 @@ class CreateSubscribeRequest extends AbstractModel
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("InstanceClass",$param) and $param["InstanceClass"] !== null) {
+            $this->InstanceClass = $param["InstanceClass"];
         }
     }
 }

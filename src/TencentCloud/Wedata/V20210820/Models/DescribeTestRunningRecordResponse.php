@@ -18,19 +18,19 @@ namespace TencentCloud\Wedata\V20210820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeTaskByCycleReport返回参数结构体
+ * DescribeTestRunningRecord返回参数结构体
  *
- * @method array getData() 获取任务周期增长趋势统计
+ * @method array getData() 获取编排空间试运行任务
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setData(array $Data) 设置任务周期增长趋势统计
+ * @method void setData(array $Data) 设置编排空间试运行任务
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
-class DescribeTaskByCycleReportResponse extends AbstractModel
+class DescribeTestRunningRecordResponse extends AbstractModel
 {
     /**
-     * @var array 任务周期增长趋势统计
+     * @var array 编排空间试运行任务
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Data;
@@ -41,7 +41,7 @@ class DescribeTaskByCycleReportResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Data 任务周期增长趋势统计
+     * @param array $Data 编排空间试运行任务
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
@@ -61,7 +61,7 @@ class DescribeTaskByCycleReportResponse extends AbstractModel
         if (array_key_exists("Data",$param) and $param["Data"] !== null) {
             $this->Data = [];
             foreach ($param["Data"] as $key => $value){
-                $obj = new TaskByStatus();
+                $obj = new TestRunningRecord();
                 $obj->deserialize($value);
                 array_push($this->Data, $obj);
             }

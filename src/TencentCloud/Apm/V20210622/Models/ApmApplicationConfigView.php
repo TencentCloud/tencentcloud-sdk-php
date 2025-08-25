@@ -58,6 +58,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstrumentList(array $InstrumentList) 设置组件列表开关（已废弃）
  * @method boolean getTraceSquash() 获取链路压缩开关（已废弃）
  * @method void setTraceSquash(boolean $TraceSquash) 设置链路压缩开关（已废弃）
+ * @method integer getDisableMemoryUsed() 获取探针熔断内存阈值
+ * @method void setDisableMemoryUsed(integer $DisableMemoryUsed) 设置探针熔断内存阈值
+ * @method integer getDisableCpuUsed() 获取探针熔断CPU阈值
+ * @method void setDisableCpuUsed(integer $DisableCpuUsed) 设置探针熔断CPU阈值
  */
 class ApmApplicationConfigView extends AbstractModel
 {
@@ -157,6 +161,16 @@ class ApmApplicationConfigView extends AbstractModel
     public $TraceSquash;
 
     /**
+     * @var integer 探针熔断内存阈值
+     */
+    public $DisableMemoryUsed;
+
+    /**
+     * @var integer 探针熔断CPU阈值
+     */
+    public $DisableCpuUsed;
+
+    /**
      * @param string $InstanceKey 业务系统 ID
      * @param string $ServiceName 应用名	
      * @param string $OperationNameFilter 接口过滤
@@ -176,6 +190,8 @@ class ApmApplicationConfigView extends AbstractModel
      * @param boolean $AgentEnable 探针总开关
      * @param array $InstrumentList 组件列表开关（已废弃）
      * @param boolean $TraceSquash 链路压缩开关（已废弃）
+     * @param integer $DisableMemoryUsed 探针熔断内存阈值
+     * @param integer $DisableCpuUsed 探针熔断CPU阈值
      */
     function __construct()
     {
@@ -269,6 +285,14 @@ class ApmApplicationConfigView extends AbstractModel
 
         if (array_key_exists("TraceSquash",$param) and $param["TraceSquash"] !== null) {
             $this->TraceSquash = $param["TraceSquash"];
+        }
+
+        if (array_key_exists("DisableMemoryUsed",$param) and $param["DisableMemoryUsed"] !== null) {
+            $this->DisableMemoryUsed = $param["DisableMemoryUsed"];
+        }
+
+        if (array_key_exists("DisableCpuUsed",$param) and $param["DisableCpuUsed"] !== null) {
+            $this->DisableCpuUsed = $param["DisableCpuUsed"];
         }
     }
 }

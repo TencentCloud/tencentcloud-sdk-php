@@ -44,6 +44,10 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream，�
 mysql选填参数：ProcessXA-是否处理XA事务，填true处理，不填或填其他值不处理。
 mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream，不填也是默认changeStream。
 其他业务暂没有可选参数。
+ * @method string getConsumerVpcId() 获取vpc id
+ * @method void setConsumerVpcId(string $ConsumerVpcId) 设置vpc id
+ * @method string getConsumerSubnetId() 获取subnet id
+ * @method void setConsumerSubnetId(string $ConsumerSubnetId) 设置subnet id
  */
 class ConfigureSubscribeJobRequest extends AbstractModel
 {
@@ -96,6 +100,16 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream，�
     public $ExtraAttr;
 
     /**
+     * @var string vpc id
+     */
+    public $ConsumerVpcId;
+
+    /**
+     * @var string subnet id
+     */
+    public $ConsumerSubnetId;
+
+    /**
      * @param string $SubscribeId 数据订阅实例的 ID
      * @param string $SubscribeMode 数据订阅的类型，当 DatabaseType 不为 mongodb 时，枚举值为：all-全实例更新；dml-数据更新；ddl-结构更新；dmlAndDdl-数据更新+结构更新。当 DatabaseType 为 mongodb 时，枚举值为 all-全实例更新；database-订阅单库；collection-订阅单集合
      * @param string $AccessType 源数据库接入类型，如：extranet(公网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、cdb(云数据库)、cvm(云服务器自建)、intranet(自研上云)、vpc(私有网络vpc)。注意具体可选值依赖当前链路支持能力
@@ -108,6 +122,8 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream，�
 mysql选填参数：ProcessXA-是否处理XA事务，填true处理，不填或填其他值不处理。
 mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream，不填也是默认changeStream。
 其他业务暂没有可选参数。
+     * @param string $ConsumerVpcId vpc id
+     * @param string $ConsumerSubnetId subnet id
      */
     function __construct()
     {
@@ -177,6 +193,14 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream，�
                 $obj->deserialize($value);
                 array_push($this->ExtraAttr, $obj);
             }
+        }
+
+        if (array_key_exists("ConsumerVpcId",$param) and $param["ConsumerVpcId"] !== null) {
+            $this->ConsumerVpcId = $param["ConsumerVpcId"];
+        }
+
+        if (array_key_exists("ConsumerSubnetId",$param) and $param["ConsumerSubnetId"] !== null) {
+            $this->ConsumerSubnetId = $param["ConsumerSubnetId"];
         }
     }
 }

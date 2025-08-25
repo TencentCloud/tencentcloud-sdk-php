@@ -82,6 +82,14 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
  * @method void setExtraAttr(array $ExtraAttr) 设置为业务添加的额外信息。参数名作key，参数值作value。
 mysql选填参数：ProcessXA-是否处理XA事务，为true处理，其他不处理。
 mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
+ * @method string getSubscribeVersion() 获取数据订阅版本, 当前支持kafka和kafkaPro（专业版）
+ * @method void setSubscribeVersion(string $SubscribeVersion) 设置数据订阅版本, 当前支持kafka和kafkaPro（专业版）
+ * @method string getConsumerVpcId() 获取消费端地址所在vpc
+ * @method void setConsumerVpcId(string $ConsumerVpcId) 设置消费端地址所在vpc
+ * @method string getConsumerSubnetId() 获取消费端地址所在子网
+ * @method void setConsumerSubnetId(string $ConsumerSubnetId) 设置消费端地址所在子网
+ * @method string getInstanceClass() 获取订阅实例规格
+ * @method void setInstanceClass(string $InstanceClass) 设置订阅实例规格
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -231,6 +239,26 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
     public $ExtraAttr;
 
     /**
+     * @var string 数据订阅版本, 当前支持kafka和kafkaPro（专业版）
+     */
+    public $SubscribeVersion;
+
+    /**
+     * @var string 消费端地址所在vpc
+     */
+    public $ConsumerVpcId;
+
+    /**
+     * @var string 消费端地址所在子网
+     */
+    public $ConsumerSubnetId;
+
+    /**
+     * @var string 订阅实例规格
+     */
+    public $InstanceClass;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -267,6 +295,10 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
      * @param array $ExtraAttr 为业务添加的额外信息。参数名作key，参数值作value。
 mysql选填参数：ProcessXA-是否处理XA事务，为true处理，其他不处理。
 mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
+     * @param string $SubscribeVersion 数据订阅版本, 当前支持kafka和kafkaPro（专业版）
+     * @param string $ConsumerVpcId 消费端地址所在vpc
+     * @param string $ConsumerSubnetId 消费端地址所在子网
+     * @param string $InstanceClass 订阅实例规格
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -423,6 +455,22 @@ mongo选填参数：SubscribeType-订阅类型，目前只支持changeStream。
                 $obj->deserialize($value);
                 array_push($this->ExtraAttr, $obj);
             }
+        }
+
+        if (array_key_exists("SubscribeVersion",$param) and $param["SubscribeVersion"] !== null) {
+            $this->SubscribeVersion = $param["SubscribeVersion"];
+        }
+
+        if (array_key_exists("ConsumerVpcId",$param) and $param["ConsumerVpcId"] !== null) {
+            $this->ConsumerVpcId = $param["ConsumerVpcId"];
+        }
+
+        if (array_key_exists("ConsumerSubnetId",$param) and $param["ConsumerSubnetId"] !== null) {
+            $this->ConsumerSubnetId = $param["ConsumerSubnetId"];
+        }
+
+        if (array_key_exists("InstanceClass",$param) and $param["InstanceClass"] !== null) {
+            $this->InstanceClass = $param["InstanceClass"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

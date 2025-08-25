@@ -50,9 +50,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRisks(array $Risks) 设置合同审查识别出的PDF文件风险信息，如果是空数组表示无风险。
 
 注意：`审查结果由AI生成，仅供参考。请结合相关法律法规和公司制度要求综合判断。`
- * @method RiskIdentificationRoleInfo getRole() 获取合同审查中的角色信息。注意：注意：如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。
+ * @method RiskIdentificationRoleInfo getRole() 获取合同审查中的角色信息。注意： `如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。`
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRole(RiskIdentificationRoleInfo $Role) 设置合同审查中的角色信息。注意：注意：如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。
+ * @method void setRole(RiskIdentificationRoleInfo $Role) 设置合同审查中的角色信息。注意： `如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。`
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getStatus() 获取合同审查任务状态。
 状态如下：
@@ -82,6 +82,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserData(string $UserData) 设置调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 1024长度。
 
 在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的[回调通知](https://qian.tencent.com/developers/company/callback_types_v2)模块。
+ * @method integer getHighRiskCount() 获取合同审查出的高风险项数量
+ * @method void setHighRiskCount(integer $HighRiskCount) 设置合同审查出的高风险项数量
+ * @method integer getTotalRiskCount() 获取合同审查出的风险总数
+ * @method void setTotalRiskCount(integer $TotalRiskCount) 设置合同审查出的风险总数
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -127,7 +131,7 @@ class DescribeContractReviewTaskResponse extends AbstractModel
     public $Risks;
 
     /**
-     * @var RiskIdentificationRoleInfo 合同审查中的角色信息。注意：注意：如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。
+     * @var RiskIdentificationRoleInfo 合同审查中的角色信息。注意： `如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。`
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Role;
@@ -163,6 +167,16 @@ class DescribeContractReviewTaskResponse extends AbstractModel
     public $UserData;
 
     /**
+     * @var integer 合同审查出的高风险项数量
+     */
+    public $HighRiskCount;
+
+    /**
+     * @var integer 合同审查出的风险总数
+     */
+    public $TotalRiskCount;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -183,7 +197,7 @@ class DescribeContractReviewTaskResponse extends AbstractModel
      * @param array $Risks 合同审查识别出的PDF文件风险信息，如果是空数组表示无风险。
 
 注意：`审查结果由AI生成，仅供参考。请结合相关法律法规和公司制度要求综合判断。`
-     * @param RiskIdentificationRoleInfo $Role 合同审查中的角色信息。注意：注意：如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。
+     * @param RiskIdentificationRoleInfo $Role 合同审查中的角色信息。注意： `如果用户没有配置审查角色时此值可能为null，需要等大模型根据合同内容推荐出审查角色信息。`
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $Status 合同审查任务状态。
 状态如下：
@@ -199,6 +213,8 @@ class DescribeContractReviewTaskResponse extends AbstractModel
      * @param string $UserData 调用方自定义的个性化字段(可自定义此名称)，并以base64方式编码，支持的最大数据大小为 1024长度。
 
 在合同状态变更的回调信息等场景中，该字段的信息将原封不动地透传给贵方。回调的相关说明可参考开发者中心的[回调通知](https://qian.tencent.com/developers/company/callback_types_v2)模块。
+     * @param integer $HighRiskCount 合同审查出的高风险项数量
+     * @param integer $TotalRiskCount 合同审查出的风险总数
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -262,6 +278,14 @@ class DescribeContractReviewTaskResponse extends AbstractModel
 
         if (array_key_exists("UserData",$param) and $param["UserData"] !== null) {
             $this->UserData = $param["UserData"];
+        }
+
+        if (array_key_exists("HighRiskCount",$param) and $param["HighRiskCount"] !== null) {
+            $this->HighRiskCount = $param["HighRiskCount"];
+        }
+
+        if (array_key_exists("TotalRiskCount",$param) and $param["TotalRiskCount"] !== null) {
+            $this->TotalRiskCount = $param["TotalRiskCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

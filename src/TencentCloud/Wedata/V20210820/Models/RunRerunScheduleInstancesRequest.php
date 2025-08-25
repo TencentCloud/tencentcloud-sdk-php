@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RunRerunScheduleInstances请求参数结构体
  *
- * @method array getInstances() 获取实例列表
- * @method void setInstances(array $Instances) 设置实例列表
- * @method boolean getCheckFather() 获取检查父任务类型, true: 检查父任务; false: 不检查父任务 
- * @method void setCheckFather(boolean $CheckFather) 设置检查父任务类型, true: 检查父任务; false: 不检查父任务 
- * @method string getRerunType() 获取重跑类型, 1: 自身; 3: 孩子; 2: 自身以及孩子 
- * @method void setRerunType(string $RerunType) 设置重跑类型, 1: 自身; 3: 孩子; 2: 自身以及孩子 
+ * @method array getInstances() 获取必填，实例列表，每项必填TaskId ，CurRunDate
+ * @method void setInstances(array $Instances) 设置必填，实例列表，每项必填TaskId ，CurRunDate
+ * @method boolean getCheckFather() 获取必填，检查父任务类型, true: 检查父任务; false: 不检查父任务 
+ * @method void setCheckFather(boolean $CheckFather) 设置必填，检查父任务类型, true: 检查父任务; false: 不检查父任务 
+ * @method string getRerunType() 获取必填，重跑类型, 1: 自身; 3: 孩子; 2: 自身以及孩子 
+ * @method void setRerunType(string $RerunType) 设置必填，重跑类型, 1: 自身; 3: 孩子; 2: 自身以及孩子 
  * @method string getDependentWay() 获取实例依赖方式, 1: 自依赖; 2: 任务依赖; 3: 自依赖及父子依赖 
  * @method void setDependentWay(string $DependentWay) 设置实例依赖方式, 1: 自依赖; 2: 任务依赖; 3: 自依赖及父子依赖 
- * @method boolean getSkipEventListening() 获取重跑忽略事件监听与否 
- * @method void setSkipEventListening(boolean $SkipEventListening) 设置重跑忽略事件监听与否 
+ * @method boolean getSkipEventListening() 获取必填，重跑忽略事件监听与否 
+ * @method void setSkipEventListening(boolean $SkipEventListening) 设置必填，重跑忽略事件监听与否 
  * @method string getSonInstanceType() 获取下游实例范围 1: 所在工作流 2: 所在项目 3: 所有跨工作流依赖的项目
  * @method void setSonInstanceType(string $SonInstanceType) 设置下游实例范围 1: 所在工作流 2: 所在项目 3: 所有跨工作流依赖的项目
  * @method InstanceApiOpsRequest getSearchCondition() 获取查询条件
@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperatorName(string $OperatorName) 设置操作者名称
  * @method string getOperatorId() 获取操作者id
  * @method void setOperatorId(string $OperatorId) 设置操作者id
- * @method string getProjectId() 获取项目id
- * @method void setProjectId(string $ProjectId) 设置项目id
+ * @method string getProjectId() 获取必填，项目id
+ * @method void setProjectId(string $ProjectId) 设置必填，项目id
  * @method string getProjectIdent() 获取项目标志
  * @method void setProjectIdent(string $ProjectIdent) 设置项目标志
  * @method string getProjectName() 获取项目名称
@@ -56,8 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRequestBaseInfo(ProjectBaseInfoOpsRequest $RequestBaseInfo) 设置基础请求信息
  * @method boolean getIsCount() 获取是否计算总数
  * @method void setIsCount(boolean $IsCount) 设置是否计算总数
- * @method boolean getAsyncMode() 获取是否异步模式
- * @method void setAsyncMode(boolean $AsyncMode) 设置是否异步模式
+ * @method boolean getAsyncMode() 获取必填，是否异步模式
+ * @method void setAsyncMode(boolean $AsyncMode) 设置必填，是否异步模式
  * @method string getCheckParentType() 获取是否检查上游任务： ALL（全部）、 MAKE_SCOPE（选中）、NONE （全部不检查）
  * @method void setCheckParentType(string $CheckParentType) 设置是否检查上游任务： ALL（全部）、 MAKE_SCOPE（选中）、NONE （全部不检查）
  * @method boolean getSameSelfDependType() 获取任务原有自依赖配置 true（是）、false（否）
@@ -72,21 +72,25 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataTimeOrder(integer $DataTimeOrder) 设置运行实例数据时间排序 0---正常  1--正序  2 – 逆序
  * @method string getReDoParams() 获取重跑参数
  * @method void setReDoParams(string $ReDoParams) 设置重跑参数
+ * @method array getMapParamList() 获取重跑实例自定义参数
+ * @method void setMapParamList(array $MapParamList) 设置重跑实例自定义参数
+ * @method string getAppParam() 获取引擎应用执行参数
+ * @method void setAppParam(string $AppParam) 设置引擎应用执行参数
  */
 class RunRerunScheduleInstancesRequest extends AbstractModel
 {
     /**
-     * @var array 实例列表
+     * @var array 必填，实例列表，每项必填TaskId ，CurRunDate
      */
     public $Instances;
 
     /**
-     * @var boolean 检查父任务类型, true: 检查父任务; false: 不检查父任务 
+     * @var boolean 必填，检查父任务类型, true: 检查父任务; false: 不检查父任务 
      */
     public $CheckFather;
 
     /**
-     * @var string 重跑类型, 1: 自身; 3: 孩子; 2: 自身以及孩子 
+     * @var string 必填，重跑类型, 1: 自身; 3: 孩子; 2: 自身以及孩子 
      */
     public $RerunType;
 
@@ -96,7 +100,7 @@ class RunRerunScheduleInstancesRequest extends AbstractModel
     public $DependentWay;
 
     /**
-     * @var boolean 重跑忽略事件监听与否 
+     * @var boolean 必填，重跑忽略事件监听与否 
      */
     public $SkipEventListening;
 
@@ -126,7 +130,7 @@ class RunRerunScheduleInstancesRequest extends AbstractModel
     public $OperatorId;
 
     /**
-     * @var string 项目id
+     * @var string 必填，项目id
      */
     public $ProjectId;
 
@@ -166,7 +170,7 @@ class RunRerunScheduleInstancesRequest extends AbstractModel
     public $IsCount;
 
     /**
-     * @var boolean 是否异步模式
+     * @var boolean 必填，是否异步模式
      */
     public $AsyncMode;
 
@@ -206,17 +210,27 @@ class RunRerunScheduleInstancesRequest extends AbstractModel
     public $ReDoParams;
 
     /**
-     * @param array $Instances 实例列表
-     * @param boolean $CheckFather 检查父任务类型, true: 检查父任务; false: 不检查父任务 
-     * @param string $RerunType 重跑类型, 1: 自身; 3: 孩子; 2: 自身以及孩子 
+     * @var array 重跑实例自定义参数
+     */
+    public $MapParamList;
+
+    /**
+     * @var string 引擎应用执行参数
+     */
+    public $AppParam;
+
+    /**
+     * @param array $Instances 必填，实例列表，每项必填TaskId ，CurRunDate
+     * @param boolean $CheckFather 必填，检查父任务类型, true: 检查父任务; false: 不检查父任务 
+     * @param string $RerunType 必填，重跑类型, 1: 自身; 3: 孩子; 2: 自身以及孩子 
      * @param string $DependentWay 实例依赖方式, 1: 自依赖; 2: 任务依赖; 3: 自依赖及父子依赖 
-     * @param boolean $SkipEventListening 重跑忽略事件监听与否 
+     * @param boolean $SkipEventListening 必填，重跑忽略事件监听与否 
      * @param string $SonInstanceType 下游实例范围 1: 所在工作流 2: 所在项目 3: 所有跨工作流依赖的项目
      * @param InstanceApiOpsRequest $SearchCondition 查询条件
      * @param string $OptType 访问类型
      * @param string $OperatorName 操作者名称
      * @param string $OperatorId 操作者id
-     * @param string $ProjectId 项目id
+     * @param string $ProjectId 必填，项目id
      * @param string $ProjectIdent 项目标志
      * @param string $ProjectName 项目名称
      * @param integer $PageIndex 索引页码
@@ -224,7 +238,7 @@ class RunRerunScheduleInstancesRequest extends AbstractModel
      * @param integer $Count 数据总数
      * @param ProjectBaseInfoOpsRequest $RequestBaseInfo 基础请求信息
      * @param boolean $IsCount 是否计算总数
-     * @param boolean $AsyncMode 是否异步模式
+     * @param boolean $AsyncMode 必填，是否异步模式
      * @param string $CheckParentType 是否检查上游任务： ALL（全部）、 MAKE_SCOPE（选中）、NONE （全部不检查）
      * @param boolean $SameSelfDependType 任务原有自依赖配置 true（是）、false（否）
      * @param integer $ParallelNum 实例运行并发度
@@ -232,6 +246,8 @@ class RunRerunScheduleInstancesRequest extends AbstractModel
      * @param string $SelfWorkflowDependency 代表重新指定 的  是 或者 否  yes、 no
      * @param integer $DataTimeOrder 运行实例数据时间排序 0---正常  1--正序  2 – 逆序
      * @param string $ReDoParams 重跑参数
+     * @param array $MapParamList 重跑实例自定义参数
+     * @param string $AppParam 引擎应用执行参数
      */
     function __construct()
     {
@@ -355,6 +371,19 @@ class RunRerunScheduleInstancesRequest extends AbstractModel
 
         if (array_key_exists("ReDoParams",$param) and $param["ReDoParams"] !== null) {
             $this->ReDoParams = $param["ReDoParams"];
+        }
+
+        if (array_key_exists("MapParamList",$param) and $param["MapParamList"] !== null) {
+            $this->MapParamList = [];
+            foreach ($param["MapParamList"] as $key => $value){
+                $obj = new StrToStrMap();
+                $obj->deserialize($value);
+                array_push($this->MapParamList, $obj);
+            }
+        }
+
+        if (array_key_exists("AppParam",$param) and $param["AppParam"] !== null) {
+            $this->AppParam = $param["AppParam"];
         }
     }
 }

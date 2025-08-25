@@ -52,6 +52,66 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setExecutorGroupName(string $ExecutorGroupName) 设置资源组名称
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getTaskTypeId() 获取<p>任务类型id，取值范围：</p>
+<ul>
+<li>26 离线集成任务</li>
+<li>30 Python任务</li>
+<li>31 PySpark任务</li>
+<li>34 HiveSQL任务</li>
+<li>35 Shell任务</li>
+<li>36 SparkSQL任务</li>
+<li>21 JdbcSQL任务</li>
+<li>23 TDSQL-PostgreSQL任务</li>
+<li>32 DLCSQL任务</li>
+<li>33 Impala任务</li>
+<li>41 Kettle任务</li>
+<li>42 Tchouse-X任务</li>
+<li>43 TCHouse-X SQL任务</li>
+<li>46 DLCSpark任务</li>
+<li>50 DLC-PySpark任务</li>
+<li>47 TiOne任务</li>
+<li>48 Trino任务</li>
+<li>39 Spark任务</li>
+<li>92 MapReduce任务</li>
+<li>38 Shell表单模式任务</li>
+<li>130 BranchNode任务</li>
+<li>131 MergeNode任务</li>
+<li>132 Notebook任务</li>
+<li>133 SSH任务</li>
+<li>134 StarRocks任务</li>
+<li>137 For-each任务</li>
+</ul>
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setTaskTypeId(integer $TaskTypeId) 设置<p>任务类型id，取值范围：</p>
+<ul>
+<li>26 离线集成任务</li>
+<li>30 Python任务</li>
+<li>31 PySpark任务</li>
+<li>34 HiveSQL任务</li>
+<li>35 Shell任务</li>
+<li>36 SparkSQL任务</li>
+<li>21 JdbcSQL任务</li>
+<li>23 TDSQL-PostgreSQL任务</li>
+<li>32 DLCSQL任务</li>
+<li>33 Impala任务</li>
+<li>41 Kettle任务</li>
+<li>42 Tchouse-X任务</li>
+<li>43 TCHouse-X SQL任务</li>
+<li>46 DLCSpark任务</li>
+<li>50 DLC-PySpark任务</li>
+<li>47 TiOne任务</li>
+<li>48 Trino任务</li>
+<li>39 Spark任务</li>
+<li>92 MapReduce任务</li>
+<li>38 Shell表单模式任务</li>
+<li>130 BranchNode任务</li>
+<li>131 MergeNode任务</li>
+<li>132 Notebook任务</li>
+<li>133 SSH任务</li>
+<li>134 StarRocks任务</li>
+<li>137 For-each任务</li>
+</ul>
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DescribePendingSubmitTaskInfo extends AbstractModel
 {
@@ -104,6 +164,40 @@ class DescribePendingSubmitTaskInfo extends AbstractModel
     public $ExecutorGroupName;
 
     /**
+     * @var integer <p>任务类型id，取值范围：</p>
+<ul>
+<li>26 离线集成任务</li>
+<li>30 Python任务</li>
+<li>31 PySpark任务</li>
+<li>34 HiveSQL任务</li>
+<li>35 Shell任务</li>
+<li>36 SparkSQL任务</li>
+<li>21 JdbcSQL任务</li>
+<li>23 TDSQL-PostgreSQL任务</li>
+<li>32 DLCSQL任务</li>
+<li>33 Impala任务</li>
+<li>41 Kettle任务</li>
+<li>42 Tchouse-X任务</li>
+<li>43 TCHouse-X SQL任务</li>
+<li>46 DLCSpark任务</li>
+<li>50 DLC-PySpark任务</li>
+<li>47 TiOne任务</li>
+<li>48 Trino任务</li>
+<li>39 Spark任务</li>
+<li>92 MapReduce任务</li>
+<li>38 Shell表单模式任务</li>
+<li>130 BranchNode任务</li>
+<li>131 MergeNode任务</li>
+<li>132 Notebook任务</li>
+<li>133 SSH任务</li>
+<li>134 StarRocks任务</li>
+<li>137 For-each任务</li>
+</ul>
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $TaskTypeId;
+
+    /**
      * @param string $TaskId 任务编号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $TaskName 任务名称
@@ -119,6 +213,36 @@ class DescribePendingSubmitTaskInfo extends AbstractModel
      * @param string $ExecutorGroupId 资源组编号
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ExecutorGroupName 资源组名称
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $TaskTypeId <p>任务类型id，取值范围：</p>
+<ul>
+<li>26 离线集成任务</li>
+<li>30 Python任务</li>
+<li>31 PySpark任务</li>
+<li>34 HiveSQL任务</li>
+<li>35 Shell任务</li>
+<li>36 SparkSQL任务</li>
+<li>21 JdbcSQL任务</li>
+<li>23 TDSQL-PostgreSQL任务</li>
+<li>32 DLCSQL任务</li>
+<li>33 Impala任务</li>
+<li>41 Kettle任务</li>
+<li>42 Tchouse-X任务</li>
+<li>43 TCHouse-X SQL任务</li>
+<li>46 DLCSpark任务</li>
+<li>50 DLC-PySpark任务</li>
+<li>47 TiOne任务</li>
+<li>48 Trino任务</li>
+<li>39 Spark任务</li>
+<li>92 MapReduce任务</li>
+<li>38 Shell表单模式任务</li>
+<li>130 BranchNode任务</li>
+<li>131 MergeNode任务</li>
+<li>132 Notebook任务</li>
+<li>133 SSH任务</li>
+<li>134 StarRocks任务</li>
+<li>137 For-each任务</li>
+</ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -169,6 +293,10 @@ class DescribePendingSubmitTaskInfo extends AbstractModel
 
         if (array_key_exists("ExecutorGroupName",$param) and $param["ExecutorGroupName"] !== null) {
             $this->ExecutorGroupName = $param["ExecutorGroupName"];
+        }
+
+        if (array_key_exists("TaskTypeId",$param) and $param["TaskTypeId"] !== null) {
+            $this->TaskTypeId = $param["TaskTypeId"];
         }
     }
 }

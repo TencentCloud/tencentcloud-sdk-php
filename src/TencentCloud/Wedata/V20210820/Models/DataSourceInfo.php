@@ -182,6 +182,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getForbidProbe() 获取禁止数据探查
  * @method void setForbidProbe(boolean $ForbidProbe) 设置禁止数据探查
+ * @method string getDatasourceType() 获取数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDatasourceType(string $DatasourceType) 设置数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class DataSourceInfo extends AbstractModel
 {
@@ -431,6 +435,12 @@ class DataSourceInfo extends AbstractModel
     public $ForbidProbe;
 
     /**
+     * @var string 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DatasourceType;
+
+    /**
      * @param string $DatabaseName 若数据源列表为绑定数据库，则为db名称
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Description 数据源描述信息
@@ -512,6 +522,8 @@ class DataSourceInfo extends AbstractModel
      * @param array $DataSourceEnvInfos  数据源环境信息
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $ForbidProbe 禁止数据探查
+     * @param string $DatasourceType 数据源类型
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -694,6 +706,10 @@ class DataSourceInfo extends AbstractModel
 
         if (array_key_exists("ForbidProbe",$param) and $param["ForbidProbe"] !== null) {
             $this->ForbidProbe = $param["ForbidProbe"];
+        }
+
+        if (array_key_exists("DatasourceType",$param) and $param["DatasourceType"] !== null) {
+            $this->DatasourceType = $param["DatasourceType"];
         }
     }
 }

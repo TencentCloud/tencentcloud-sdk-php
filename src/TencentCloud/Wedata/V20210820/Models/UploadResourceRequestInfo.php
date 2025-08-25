@@ -18,7 +18,7 @@ namespace TencentCloud\Wedata\V20210820\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 资管管理-上传资源请求
+ * 资源管理-上传资源请求
  *
  * @method string getProjectId() 获取项目id
  * @method void setProjectId(string $ProjectId) 设置项目id
@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileSizeList(array $FileSizeList) 设置资源大小列表
  * @method string getFileMd5() 获取File Md5（适配私有化，公有云可以不传）
  * @method void setFileMd5(string $FileMd5) 设置File Md5（适配私有化，公有云可以不传）
+ * @method string getRemotePath() 获取资源在对象存储上的实际路径
+ * @method void setRemotePath(string $RemotePath) 设置资源在对象存储上的实际路径
  */
 class UploadResourceRequestInfo extends AbstractModel
 {
@@ -80,6 +82,11 @@ class UploadResourceRequestInfo extends AbstractModel
     public $FileMd5;
 
     /**
+     * @var string 资源在对象存储上的实际路径
+     */
+    public $RemotePath;
+
+    /**
      * @param string $ProjectId 项目id
      * @param string $FilePath 资源路径
      * @param string $BucketName 桶名称
@@ -88,6 +95,7 @@ class UploadResourceRequestInfo extends AbstractModel
      * @param array $FileList 资源列表
      * @param array $FileSizeList 资源大小列表
      * @param string $FileMd5 File Md5（适配私有化，公有云可以不传）
+     * @param string $RemotePath 资源在对象存储上的实际路径
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class UploadResourceRequestInfo extends AbstractModel
 
         if (array_key_exists("FileMd5",$param) and $param["FileMd5"] !== null) {
             $this->FileMd5 = $param["FileMd5"];
+        }
+
+        if (array_key_exists("RemotePath",$param) and $param["RemotePath"] !== null) {
+            $this->RemotePath = $param["RemotePath"];
         }
     }
 }

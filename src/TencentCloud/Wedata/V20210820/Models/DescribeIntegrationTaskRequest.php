@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskType(integer $TaskType) 设置任务类型，201: 实时集成任务,   202：离线集成任务，不传默认值为201 实时任务类型
  * @method integer getInstanceVersion() 获取提交版本号
  * @method void setInstanceVersion(integer $InstanceVersion) 设置提交版本号
+ * @method array getExtConfig() 获取额外参数
+ * @method void setExtConfig(array $ExtConfig) 设置额外参数
  */
 class DescribeIntegrationTaskRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeIntegrationTaskRequest extends AbstractModel
     public $InstanceVersion;
 
     /**
+     * @var array 额外参数
+     */
+    public $ExtConfig;
+
+    /**
      * @param string $TaskId 任务id
      * @param string $ProjectId 项目id
      * @param integer $TaskType 任务类型，201: 实时集成任务,   202：离线集成任务，不传默认值为201 实时任务类型
      * @param integer $InstanceVersion 提交版本号
+     * @param array $ExtConfig 额外参数
      */
     function __construct()
     {
@@ -84,6 +92,15 @@ class DescribeIntegrationTaskRequest extends AbstractModel
 
         if (array_key_exists("InstanceVersion",$param) and $param["InstanceVersion"] !== null) {
             $this->InstanceVersion = $param["InstanceVersion"];
+        }
+
+        if (array_key_exists("ExtConfig",$param) and $param["ExtConfig"] !== null) {
+            $this->ExtConfig = [];
+            foreach ($param["ExtConfig"] as $key => $value){
+                $obj = new RecordField();
+                $obj->deserialize($value);
+                array_push($this->ExtConfig, $obj);
+            }
         }
     }
 }

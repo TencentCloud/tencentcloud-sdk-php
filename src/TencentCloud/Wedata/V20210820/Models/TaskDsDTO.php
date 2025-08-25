@@ -64,9 +64,25 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLastUpdate(string $LastUpdate) 设置更新时间
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getStatus() 获取任务状态
+ * @method string getStatus() 获取<p>任务状态，取值范围：</p>
+<ul>
+<li>N 新建</li>
+<li>Y 运行</li>
+<li>F 停止</li>
+<li>O 冻结</li>
+<li>T 停止中</li>
+<li>INVALID 已失效</li>
+</ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(string $Status) 设置任务状态
+ * @method void setStatus(string $Status) 设置<p>任务状态，取值范围：</p>
+<ul>
+<li>N 新建</li>
+<li>Y 运行</li>
+<li>F 停止</li>
+<li>O 冻结</li>
+<li>T 停止中</li>
+<li>INVALID 已失效</li>
+</ul>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getInCharge() 获取责任人
 注意：此字段可能返回 null，表示取不到有效值。
@@ -270,9 +286,25 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDependencyConfigList(array $DependencyConfigList) 设置依赖配置
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getVirtualTaskStatus() 获取虚拟任务状态
+ * @method string getVirtualTaskStatus() 获取<p>任务状态，取值范围：</p>
+<ul>
+<li>N 新建</li>
+<li>Y 运行</li>
+<li>F 停止</li>
+<li>O 冻结</li>
+<li>T 停止中</li>
+<li>INVALID 已失效</li>
+</ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setVirtualTaskStatus(string $VirtualTaskStatus) 设置虚拟任务状态
+ * @method void setVirtualTaskStatus(string $VirtualTaskStatus) 设置<p>任务状态，取值范围：</p>
+<ul>
+<li>N 新建</li>
+<li>Y 运行</li>
+<li>F 停止</li>
+<li>O 冻结</li>
+<li>T 停止中</li>
+<li>INVALID 已失效</li>
+</ul>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getRecycleTips() 获取回收站还原提示语
 注意：此字段可能返回 null，表示取不到有效值。
@@ -432,6 +464,16 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAllowRedoType(string $AllowRedoType) 设置允许重跑类 ALL 无论实例成功或者失败，都允许重跑 FAILURE 只有失败的实例允许重跑，成功的实例不允许重跑 NONE 无论成功或者失败，都不允许重跑
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBundleId() 获取BundleId
+CI/CD工程生成的bundle唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBundleId(string $BundleId) 设置BundleId
+CI/CD工程生成的bundle唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getBundleName() 获取Bundle名称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setBundleName(string $BundleName) 设置Bundle名称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskDsDTO extends AbstractModel
 {
@@ -502,7 +544,15 @@ class TaskDsDTO extends AbstractModel
     public $LastUpdate;
 
     /**
-     * @var string 任务状态
+     * @var string <p>任务状态，取值范围：</p>
+<ul>
+<li>N 新建</li>
+<li>Y 运行</li>
+<li>F 停止</li>
+<li>O 冻结</li>
+<li>T 停止中</li>
+<li>INVALID 已失效</li>
+</ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
@@ -805,7 +855,15 @@ class TaskDsDTO extends AbstractModel
     public $DependencyConfigList;
 
     /**
-     * @var string 虚拟任务状态
+     * @var string <p>任务状态，取值范围：</p>
+<ul>
+<li>N 新建</li>
+<li>Y 运行</li>
+<li>F 停止</li>
+<li>O 冻结</li>
+<li>T 停止中</li>
+<li>INVALID 已失效</li>
+</ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $VirtualTaskStatus;
@@ -1046,6 +1104,19 @@ class TaskDsDTO extends AbstractModel
     public $AllowRedoType;
 
     /**
+     * @var string BundleId
+CI/CD工程生成的bundle唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BundleId;
+
+    /**
+     * @var string Bundle名称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $BundleName;
+
+    /**
      * @param string $TaskId 任务ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $VirtualTaskId 虚拟任务标记
@@ -1068,7 +1139,15 @@ class TaskDsDTO extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $LastUpdate 更新时间
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Status 任务状态
+     * @param string $Status <p>任务状态，取值范围：</p>
+<ul>
+<li>N 新建</li>
+<li>Y 运行</li>
+<li>F 停止</li>
+<li>O 冻结</li>
+<li>T 停止中</li>
+<li>INVALID 已失效</li>
+</ul>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $InCharge 责任人
 注意：此字段可能返回 null，表示取不到有效值。
@@ -1171,7 +1250,15 @@ class TaskDsDTO extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $DependencyConfigList 依赖配置
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $VirtualTaskStatus 虚拟任务状态
+     * @param string $VirtualTaskStatus <p>任务状态，取值范围：</p>
+<ul>
+<li>N 新建</li>
+<li>Y 运行</li>
+<li>F 停止</li>
+<li>O 冻结</li>
+<li>T 停止中</li>
+<li>INVALID 已失效</li>
+</ul>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RecycleTips 回收站还原提示语
 注意：此字段可能返回 null，表示取不到有效值。
@@ -1251,6 +1338,11 @@ class TaskDsDTO extends AbstractModel
      * @param string $TemplateId 引用的代码模版id
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AllowRedoType 允许重跑类 ALL 无论实例成功或者失败，都允许重跑 FAILURE 只有失败的实例允许重跑，成功的实例不允许重跑 NONE 无论成功或者失败，都不允许重跑
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BundleId BundleId
+CI/CD工程生成的bundle唯一标识
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $BundleName Bundle名称
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -1715,6 +1807,14 @@ class TaskDsDTO extends AbstractModel
 
         if (array_key_exists("AllowRedoType",$param) and $param["AllowRedoType"] !== null) {
             $this->AllowRedoType = $param["AllowRedoType"];
+        }
+
+        if (array_key_exists("BundleId",$param) and $param["BundleId"] !== null) {
+            $this->BundleId = $param["BundleId"];
+        }
+
+        if (array_key_exists("BundleName",$param) and $param["BundleName"] !== null) {
+            $this->BundleName = $param["BundleName"];
         }
     }
 }

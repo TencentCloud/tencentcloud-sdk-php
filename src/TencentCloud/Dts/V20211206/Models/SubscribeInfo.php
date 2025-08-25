@@ -56,8 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccessType(string $AccessType) 设置接入方式。枚举值：extranet(公网) vpncloud(vpn接入) dcg(专线接入) ccn(云联网) cdb(云数据库) cvm(云主机自建) intranet(自研上云) vpc(私有网络vpc)
  * @method array getEndpoints() 获取数据库节点信息
  * @method void setEndpoints(array $Endpoints) 设置数据库节点信息
- * @method string getSubscribeVersion() 获取数据订阅版本, 当前只支持 kafka 版本。
- * @method void setSubscribeVersion(string $SubscribeVersion) 设置数据订阅版本, 当前只支持 kafka 版本。
+ * @method string getSubscribeVersion() 获取数据订阅版本, 当前支持kafka和kafkaPro（专业版）
+ * @method void setSubscribeVersion(string $SubscribeVersion) 设置数据订阅版本, 当前支持kafka和kafkaPro（专业版）
  * @method array getTags() 获取标签
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置标签
@@ -66,6 +66,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setErrors(array $Errors) 设置任务报错信息，如果有的话。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getInstanceClass() 获取订阅实例规格
+ * @method void setInstanceClass(string $InstanceClass) 设置订阅实例规格
  */
 class SubscribeInfo extends AbstractModel
 {
@@ -160,7 +162,7 @@ class SubscribeInfo extends AbstractModel
     public $Endpoints;
 
     /**
-     * @var string 数据订阅版本, 当前只支持 kafka 版本。
+     * @var string 数据订阅版本, 当前支持kafka和kafkaPro（专业版）
      */
     public $SubscribeVersion;
 
@@ -175,6 +177,11 @@ class SubscribeInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Errors;
+
+    /**
+     * @var string 订阅实例规格
+     */
+    public $InstanceClass;
 
     /**
      * @param string $SubscribeId 数据订阅的实例ID
@@ -195,11 +202,12 @@ class SubscribeInfo extends AbstractModel
      * @param string $Region 数据订阅实例所属地域
      * @param string $AccessType 接入方式。枚举值：extranet(公网) vpncloud(vpn接入) dcg(专线接入) ccn(云联网) cdb(云数据库) cvm(云主机自建) intranet(自研上云) vpc(私有网络vpc)
      * @param array $Endpoints 数据库节点信息
-     * @param string $SubscribeVersion 数据订阅版本, 当前只支持 kafka 版本。
+     * @param string $SubscribeVersion 数据订阅版本, 当前支持kafka和kafkaPro（专业版）
      * @param array $Tags 标签
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Errors 任务报错信息，如果有的话。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $InstanceClass 订阅实例规格
      */
     function __construct()
     {
@@ -311,6 +319,10 @@ class SubscribeInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Errors, $obj);
             }
+        }
+
+        if (array_key_exists("InstanceClass",$param) and $param["InstanceClass"] !== null) {
+            $this->InstanceClass = $param["InstanceClass"];
         }
     }
 }

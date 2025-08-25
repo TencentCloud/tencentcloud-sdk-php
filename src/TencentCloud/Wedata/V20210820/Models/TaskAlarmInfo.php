@@ -148,6 +148,14 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReportTarget(integer $ReportTarget) 设置 0- wedata, 1-inlong
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getAlarmReceiverGroups() 获取告警接收组
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAlarmReceiverGroups(array $AlarmReceiverGroups) 设置告警接收组
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getAlarmReceiverGroupFlag() 获取告警接收组标记，0代表历史版本，1代表新版本
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setAlarmReceiverGroupFlag(integer $AlarmReceiverGroupFlag) 设置告警接收组标记，0代表历史版本，1代表新版本
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskAlarmInfo extends AbstractModel
 {
@@ -360,6 +368,18 @@ class TaskAlarmInfo extends AbstractModel
     public $ReportTarget;
 
     /**
+     * @var array 告警接收组
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AlarmReceiverGroups;
+
+    /**
+     * @var integer 告警接收组标记，0代表历史版本，1代表新版本
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $AlarmReceiverGroupFlag;
+
+    /**
      * @param string $TaskId 任务ID
      * @param string $RegularName 规则名称
      * @param integer $RegularStatus 规则状态(0表示关闭，1表示打开)
@@ -423,6 +443,10 @@ class TaskAlarmInfo extends AbstractModel
      * @param string $AlarmMessageRule alarm message rule
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $ReportTarget  0- wedata, 1-inlong
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $AlarmReceiverGroups 告警接收组
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $AlarmReceiverGroupFlag 告警接收组标记，0代表历史版本，1代表新版本
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -590,6 +614,19 @@ class TaskAlarmInfo extends AbstractModel
 
         if (array_key_exists("ReportTarget",$param) and $param["ReportTarget"] !== null) {
             $this->ReportTarget = $param["ReportTarget"];
+        }
+
+        if (array_key_exists("AlarmReceiverGroups",$param) and $param["AlarmReceiverGroups"] !== null) {
+            $this->AlarmReceiverGroups = [];
+            foreach ($param["AlarmReceiverGroups"] as $key => $value){
+                $obj = new AlarmReceiverGroup();
+                $obj->deserialize($value);
+                array_push($this->AlarmReceiverGroups, $obj);
+            }
+        }
+
+        if (array_key_exists("AlarmReceiverGroupFlag",$param) and $param["AlarmReceiverGroupFlag"] !== null) {
+            $this->AlarmReceiverGroupFlag = $param["AlarmReceiverGroupFlag"];
         }
     }
 }

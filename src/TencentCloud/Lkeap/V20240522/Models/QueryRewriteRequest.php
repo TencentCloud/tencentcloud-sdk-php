@@ -20,26 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * QueryRewrite请求参数结构体
  *
- * @method array getMessages() 获取需要改写的多轮历史会话，每轮历史对话需要包含user（问）和assistant（答）成对输入，由于模型字符限制，最多提供4轮对话。针对最后一轮对话进行改写
- * @method void setMessages(array $Messages) 设置需要改写的多轮历史会话，每轮历史对话需要包含user（问）和assistant（答）成对输入，由于模型字符限制，最多提供4轮对话。针对最后一轮对话进行改写
- * @method string getModel() 获取模型名称
- * @method void setModel(string $Model) 设置模型名称
+ * @method array getMessages() 获取说明：需要改写的多轮历史会话，每轮历史对话需要包含user（问）和assistant（答）成对输入
+备注：由于模型字符限制，最多提供4轮对话。针对最后一轮对话进行改写。四轮对话最多包含3600个字符。
+ * @method void setMessages(array $Messages) 设置说明：需要改写的多轮历史会话，每轮历史对话需要包含user（问）和assistant（答）成对输入
+备注：由于模型字符限制，最多提供4轮对话。针对最后一轮对话进行改写。四轮对话最多包含3600个字符。
+ * @method string getModel() 获取说明：模型名称
+备注：仅一个模型可选
+默认值：lke-query-rewrite-base
+ * @method void setModel(string $Model) 设置说明：模型名称
+备注：仅一个模型可选
+默认值：lke-query-rewrite-base
  */
 class QueryRewriteRequest extends AbstractModel
 {
     /**
-     * @var array 需要改写的多轮历史会话，每轮历史对话需要包含user（问）和assistant（答）成对输入，由于模型字符限制，最多提供4轮对话。针对最后一轮对话进行改写
+     * @var array 说明：需要改写的多轮历史会话，每轮历史对话需要包含user（问）和assistant（答）成对输入
+备注：由于模型字符限制，最多提供4轮对话。针对最后一轮对话进行改写。四轮对话最多包含3600个字符。
      */
     public $Messages;
 
     /**
-     * @var string 模型名称
+     * @var string 说明：模型名称
+备注：仅一个模型可选
+默认值：lke-query-rewrite-base
      */
     public $Model;
 
     /**
-     * @param array $Messages 需要改写的多轮历史会话，每轮历史对话需要包含user（问）和assistant（答）成对输入，由于模型字符限制，最多提供4轮对话。针对最后一轮对话进行改写
-     * @param string $Model 模型名称
+     * @param array $Messages 说明：需要改写的多轮历史会话，每轮历史对话需要包含user（问）和assistant（答）成对输入
+备注：由于模型字符限制，最多提供4轮对话。针对最后一轮对话进行改写。四轮对话最多包含3600个字符。
+     * @param string $Model 说明：模型名称
+备注：仅一个模型可选
+默认值：lke-query-rewrite-base
      */
     function __construct()
     {

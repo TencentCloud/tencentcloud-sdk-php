@@ -20,34 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RunRerank请求参数结构体
  *
- * @method string getQuery() 获取查询内容
- * @method void setQuery(string $Query) 设置查询内容
- * @method array getDocs() 获取文档列表，最多20个
- * @method void setDocs(array $Docs) 设置文档列表，最多20个
- * @method string getModel() 获取模型名称, 默认: lke-reranker-base
- * @method void setModel(string $Model) 设置模型名称, 默认: lke-reranker-base
+ * @method string getQuery() 获取说明：查询内容
+备注：用于匹配的query
+ * @method void setQuery(string $Query) 设置说明：查询内容
+备注：用于匹配的query
+ * @method array getDocs() 获取说明：文档列表
+备注：最多60个，Query字段和Docs字段的总长度上限为2000字符
+ * @method void setDocs(array $Docs) 设置说明：文档列表
+备注：最多60个，Query字段和Docs字段的总长度上限为2000字符
+ * @method string getModel() 获取说明：模型名称
+备注：仅一个模型可选
+默认值：lke-reranker-base
+ * @method void setModel(string $Model) 设置说明：模型名称
+备注：仅一个模型可选
+默认值：lke-reranker-base
  */
 class RunRerankRequest extends AbstractModel
 {
     /**
-     * @var string 查询内容
+     * @var string 说明：查询内容
+备注：用于匹配的query
      */
     public $Query;
 
     /**
-     * @var array 文档列表，最多20个
+     * @var array 说明：文档列表
+备注：最多60个，Query字段和Docs字段的总长度上限为2000字符
      */
     public $Docs;
 
     /**
-     * @var string 模型名称, 默认: lke-reranker-base
+     * @var string 说明：模型名称
+备注：仅一个模型可选
+默认值：lke-reranker-base
      */
     public $Model;
 
     /**
-     * @param string $Query 查询内容
-     * @param array $Docs 文档列表，最多20个
-     * @param string $Model 模型名称, 默认: lke-reranker-base
+     * @param string $Query 说明：查询内容
+备注：用于匹配的query
+     * @param array $Docs 说明：文档列表
+备注：最多60个，Query字段和Docs字段的总长度上限为2000字符
+     * @param string $Model 说明：模型名称
+备注：仅一个模型可选
+默认值：lke-reranker-base
      */
     function __construct()
     {

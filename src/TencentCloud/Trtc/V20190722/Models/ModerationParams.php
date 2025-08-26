@@ -40,8 +40,8 @@ shumei : 数美审核（支持 1:音频切片审核，2:视频截帧审核，3:�
 yidun : 网易易盾审核 （支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
  * @method ModerationSupplierParam getModerationSupplierParam() 获取第三方审核商送审需要配置信息
  * @method void setModerationSupplierParam(ModerationSupplierParam $ModerationSupplierParam) 设置第三方审核商送审需要配置信息
- * @method integer getSaveModerationFile() 获取是否保存命中文件 0 默认不保存  1 保存命中文件
- * @method void setSaveModerationFile(integer $SaveModerationFile) 设置是否保存命中文件 0 默认不保存  1 保存命中文件
+ * @method integer getSaveModerationFile() 获取是否保存文件  0不保存文件 1保存所有文件 2仅保存命中文件
+ * @method void setSaveModerationFile(integer $SaveModerationFile) 设置是否保存文件  0不保存文件 1保存所有文件 2仅保存命中文件
  * @method integer getCallbackAllResults() 获取是否回调所有审核结果:0 默认回调所有结果 1 仅回调命中结果 
  * @method void setCallbackAllResults(integer $CallbackAllResults) 设置是否回调所有审核结果:0 默认回调所有结果 1 仅回调命中结果 
  * @method SubscribeModerationUserIds getSubscribeStreamUserIds() 获取指定订阅流白名单或者黑名单。
@@ -84,7 +84,7 @@ yidun : 网易易盾审核 （支持 1:音频切片审核，2:视频截帧审核
     public $ModerationSupplierParam;
 
     /**
-     * @var integer 是否保存命中文件 0 默认不保存  1 保存命中文件
+     * @var integer 是否保存文件  0不保存文件 1保存所有文件 2仅保存命中文件
      */
     public $SaveModerationFile;
 
@@ -109,7 +109,7 @@ ace  : ACE内容安全 （支持 1:音频切片审核，2:视频截帧审核，3
 shumei : 数美审核（支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
 yidun : 网易易盾审核 （支持 1:音频切片审核，2:视频截帧审核，3:音视切片审核+视频截帧审核）
      * @param ModerationSupplierParam $ModerationSupplierParam 第三方审核商送审需要配置信息
-     * @param integer $SaveModerationFile 是否保存命中文件 0 默认不保存  1 保存命中文件
+     * @param integer $SaveModerationFile 是否保存文件  0不保存文件 1保存所有文件 2仅保存命中文件
      * @param integer $CallbackAllResults 是否回调所有审核结果:0 默认回调所有结果 1 仅回调命中结果 
      * @param SubscribeModerationUserIds $SubscribeStreamUserIds 指定订阅流白名单或者黑名单。
      */

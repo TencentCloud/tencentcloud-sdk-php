@@ -171,7 +171,7 @@ except TencentCloudSDKException as err:
 输入：pdf、ppt、docx、doc、jpg等
 输出：正常阅读顺序的md文件、识别结果的json（可选）等
  * @method Models\RetrieveKnowledgeResponse RetrieveKnowledge(Models\RetrieveKnowledgeRequest $req) 用于检索知识库中的文档和问答对内容。 使用场景：适用于查询长期存储在知识库中的文档和问答对，比如产品手册、用户指南等内容的检索。
- * @method Models\RunRerankResponse RunRerank(Models\RunRerankRequest $req) 基于知识引擎精调模型技术的rerank模型，支持对多路召回的结果进行重排序，根据query与切片内容的相关性，按分数由高到低对切片进行排序，并输出对应的打分结果。
+ * @method Models\RunRerankResponse RunRerank(Models\RunRerankRequest $req) 基于知识引擎精调模型技术的rerank模型，支持对多路召回的结果进行重排序，根据query与切片内容的相关性，按照顺序给出每一条结果和query的相关性分数。
  * @method Models\UploadDocResponse UploadDoc(Models\UploadDocRequest $req) 用于上传文档内容。上传的文档将存储在知识库中，可以通过RetrieveKnowledge[知识库内容检索接口](https://cloud.tencent.com/document/product/1772/115349)进行检索。 
 使用场景：适用于需要长期存储和检索的文档内容，如产品手册、用户指南等。
  */

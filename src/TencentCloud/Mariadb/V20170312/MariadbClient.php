@@ -61,9 +61,14 @@ use TencentCloud\Mariadb\V20170312\Models as Models;
  * @method Models\DescribeFileDownloadUrlResponse DescribeFileDownloadUrl(Models\DescribeFileDownloadUrlRequest $req) 本接口(DescribeFileDownloadUrl)用于获取数据库指定备份或日志文件的下载连接。
  * @method Models\DescribeFlowResponse DescribeFlow(Models\DescribeFlowRequest $req) 本接口（DescribeFlow）用于查询流程状态。
  * @method Models\DescribeInstanceNodeInfoResponse DescribeInstanceNodeInfo(Models\DescribeInstanceNodeInfoRequest $req) 本接口（DescribeInstanceNodeInfo）用于获取数据库实例主备节点信息
+ * @method Models\DescribeInstanceSSLAttributesResponse DescribeInstanceSSLAttributes(Models\DescribeInstanceSSLAttributesRequest $req) 本接口（DescribeInstanceSSLAttributes）用于拉取实例SSL认证属性
  * @method Models\DescribeLogFileRetentionPeriodResponse DescribeLogFileRetentionPeriod(Models\DescribeLogFileRetentionPeriodRequest $req) 本接口(DescribeLogFileRetentionPeriod)用于查看数据库备份日志的备份天数的设置情况。
  * @method Models\DescribeOrdersResponse DescribeOrders(Models\DescribeOrdersRequest $req) 本接口（DescribeOrders）用于查询云数据库订单信息。传入订单ID来查询订单关联的云数据库实例，和对应的任务流程ID。
  * @method Models\DescribePriceResponse DescribePrice(Models\DescribePriceRequest $req) 本接口（DescribePrice）用于在购买实例前，查询实例的价格。
+ * @method Models\DescribeProcessListResponse DescribeProcessList(Models\DescribeProcessListRequest $req) 本接口 (DescribeProcessList) 用于查询当前正在运行的线程（连接/查询）信息。
+
+- 可以根据客户端IP，DB，执行时间等信息来查询实例正在运行的线程信息。过滤信息详细请见过滤器Filter。
+- 如果参数为空，返回当前用户一定数量（Limit所指定的数量，默认为20）的线程信息。
  * @method Models\DescribeProjectSecurityGroupsResponse DescribeProjectSecurityGroups(Models\DescribeProjectSecurityGroupsRequest $req) 本接口（DescribeProjectSecurityGroups）用于查询项目安全组信息
  * @method Models\DescribeRenewalPriceResponse DescribeRenewalPrice(Models\DescribeRenewalPriceRequest $req) 本接口（DescribeRenewalPrice）用于在续费云数据库实例时，查询续费的价格。
  * @method Models\DescribeSaleInfoResponse DescribeSaleInfo(Models\DescribeSaleInfoRequest $req) 本接口(DescribeSaleInfo)用于查询云数据库可售卖的地域和可用区信息。
@@ -98,6 +103,8 @@ use TencentCloud\Mariadb\V20170312\Models as Models;
  * @method Models\ModifyDBParametersResponse ModifyDBParameters(Models\ModifyDBParametersRequest $req) 本接口(ModifyDBParameters)用于修改数据库参数。
  * @method Models\ModifyDBSyncModeResponse ModifyDBSyncMode(Models\ModifyDBSyncModeRequest $req) 本接口（ModifyDBSyncMode）用于修改云数据库实例的同步模式。
  * @method Models\ModifyInstanceNetworkResponse ModifyInstanceNetwork(Models\ModifyInstanceNetworkRequest $req) 本接口（ModifyInstanceNetwork）用于修改实例所属网络
+ * @method Models\ModifyInstanceProtectedPropertyResponse ModifyInstanceProtectedProperty(Models\ModifyInstanceProtectedPropertyRequest $req) 该接口用于对实例修改删除保护属性
+ * @method Models\ModifyInstanceSSLAttributesResponse ModifyInstanceSSLAttributes(Models\ModifyInstanceSSLAttributesRequest $req) 本接口  （ModifyInstanceSSLAttributes）用于修改实例SSL认证功能属性
  * @method Models\ModifyInstanceVipResponse ModifyInstanceVip(Models\ModifyInstanceVipRequest $req) 本接口（ModifyInstanceVip）用于修改实例VIP
  * @method Models\ModifyInstanceVportResponse ModifyInstanceVport(Models\ModifyInstanceVportRequest $req) 本接口（ModifyInstanceVport）用于修改实例VPORT
  * @method Models\ModifyLogFileRetentionPeriodResponse ModifyLogFileRetentionPeriod(Models\ModifyLogFileRetentionPeriodRequest $req) 本接口(ModifyLogFileRetentionPeriod)用于修改数据库备份日志保存天数。

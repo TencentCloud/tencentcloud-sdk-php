@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SubmitTemplateToVideoJob请求参数结构体
  *
- * @method string getTemplate() 获取特效模板名称。请在 [视频特效模版列表](https://cloud.tencent.com/document/product/1616/119194)  中选择想要生成的特效对应的 template 名称。
- * @method void setTemplate(string $Template) 设置特效模板名称。请在 [视频特效模版列表](https://cloud.tencent.com/document/product/1616/119194)  中选择想要生成的特效对应的 template 名称。
+ * @method string getTemplate() 获取特效模板名称。请在 [视频特效模板列表](https://cloud.tencent.com/document/product/1616/119194)  中选择想要生成的特效对应的 template 名称。
+ * @method void setTemplate(string $Template) 设置特效模板名称。请在 [视频特效模板列表](https://cloud.tencent.com/document/product/1616/119194)  中选择想要生成的特效对应的 template 名称。
  * @method array getImages() 获取参考图像，最多输入2张图。
 - 支持传入图片Base64编码或图片URL（确保可访问）
 - 图片格式：支持png、jpg、jpeg、webp、bmp、tiff
@@ -54,7 +54,7 @@ use TencentCloud\Common\AbstractModel;
 class SubmitTemplateToVideoJobRequest extends AbstractModel
 {
     /**
-     * @var string 特效模板名称。请在 [视频特效模版列表](https://cloud.tencent.com/document/product/1616/119194)  中选择想要生成的特效对应的 template 名称。
+     * @var string 特效模板名称。请在 [视频特效模板列表](https://cloud.tencent.com/document/product/1616/119194)  中选择想要生成的特效对应的 template 名称。
      */
     public $Template;
 
@@ -93,7 +93,7 @@ class SubmitTemplateToVideoJobRequest extends AbstractModel
     public $BGM;
 
     /**
-     * @param string $Template 特效模板名称。请在 [视频特效模版列表](https://cloud.tencent.com/document/product/1616/119194)  中选择想要生成的特效对应的 template 名称。
+     * @param string $Template 特效模板名称。请在 [视频特效模板列表](https://cloud.tencent.com/document/product/1616/119194)  中选择想要生成的特效对应的 template 名称。
      * @param array $Images 参考图像，最多输入2张图。
 - 支持传入图片Base64编码或图片URL（确保可访问）
 - 图片格式：支持png、jpg、jpeg、webp、bmp、tiff

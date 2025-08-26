@@ -180,6 +180,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\ModifyOwaspRuleTypeLevelResponse ModifyOwaspRuleTypeLevel(Models\ModifyOwaspRuleTypeLevelRequest $req) 更新规则类型的防护等级
  * @method Models\ModifyOwaspRuleTypeStatusResponse ModifyOwaspRuleTypeStatus(Models\ModifyOwaspRuleTypeStatusRequest $req) 更新规则类型的开关
  * @method Models\ModifyOwaspWhiteRuleResponse ModifyOwaspWhiteRule(Models\ModifyOwaspWhiteRuleRequest $req) 编辑规则引擎白名单
+ * @method Models\ModifyProtectionLevelResponse ModifyProtectionLevel(Models\ModifyProtectionLevelRequest $req) 更改防护等级
  * @method Models\ModifyProtectionStatusResponse ModifyProtectionStatus(Models\ModifyProtectionStatusRequest $req) 开启、关闭WAF开关
  * @method Models\ModifySpartaProtectionResponse ModifySpartaProtection(Models\ModifySpartaProtectionRequest $req) 编辑SaaS型WAF域名配置
  * @method Models\ModifySpartaProtectionModeResponse ModifySpartaProtectionMode(Models\ModifySpartaProtectionModeRequest $req) 设置waf防护状态

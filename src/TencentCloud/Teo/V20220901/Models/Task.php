@@ -60,8 +60,8 @@ use TencentCloud\Common\AbstractModel;
 <li>downloadManifestFailed：下载描述文件失败；</li>
 <li>accessDenied：访问被拒绝。</li>
 <li>originPullFailed：回源失败。</li>
- * @method string getFailMessage() 获取刷新、预热失败描述。
- * @method void setFailMessage(string $FailMessage) 设置刷新、预热失败描述。
+ * @method string getFailMessage() 获取清除缓存、预热缓存的失败原因描述。
+ * @method void setFailMessage(string $FailMessage) 设置清除缓存、预热缓存的失败原因描述。
  */
 class Task extends AbstractModel
 {
@@ -118,7 +118,7 @@ class Task extends AbstractModel
     public $FailType;
 
     /**
-     * @var string 刷新、预热失败描述。
+     * @var string 清除缓存、预热缓存的失败原因描述。
      */
     public $FailMessage;
 
@@ -143,7 +143,7 @@ class Task extends AbstractModel
 <li>downloadManifestFailed：下载描述文件失败；</li>
 <li>accessDenied：访问被拒绝。</li>
 <li>originPullFailed：回源失败。</li>
-     * @param string $FailMessage 刷新、预热失败描述。
+     * @param string $FailMessage 清除缓存、预热缓存的失败原因描述。
      */
     function __construct()
     {

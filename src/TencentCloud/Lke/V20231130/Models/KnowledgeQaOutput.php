@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUseRecommended(boolean $UseRecommended) 设置是否打开推荐问题开关
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getRecommendedPromptMode() 获取推荐问模式，0.结合知识库&对话历史推荐问题Prompt(默认) 1.仅结合知识库输出推荐问的prompt
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setRecommendedPromptMode(integer $RecommendedPromptMode) 设置推荐问模式，0.结合知识库&对话历史推荐问题Prompt(默认) 1.仅结合知识库输出推荐问的prompt
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class KnowledgeQaOutput extends AbstractModel
 {
@@ -94,6 +98,12 @@ class KnowledgeQaOutput extends AbstractModel
     public $UseRecommended;
 
     /**
+     * @var integer 推荐问模式，0.结合知识库&对话历史推荐问题Prompt(默认) 1.仅结合知识库输出推荐问的prompt
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $RecommendedPromptMode;
+
+    /**
      * @param integer $Method 输出方式 1：流式 2：非流式
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $UseGeneralKnowledge 通用模型回复
@@ -107,6 +117,8 @@ class KnowledgeQaOutput extends AbstractModel
      * @param array $QuestionClarifyKeywords 问题澄清关键词列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $UseRecommended 是否打开推荐问题开关
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $RecommendedPromptMode 推荐问模式，0.结合知识库&对话历史推荐问题Prompt(默认) 1.仅结合知识库输出推荐问的prompt
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -148,6 +160,10 @@ class KnowledgeQaOutput extends AbstractModel
 
         if (array_key_exists("UseRecommended",$param) and $param["UseRecommended"] !== null) {
             $this->UseRecommended = $param["UseRecommended"];
+        }
+
+        if (array_key_exists("RecommendedPromptMode",$param) and $param["RecommendedPromptMode"] !== null) {
+            $this->RecommendedPromptMode = $param["RecommendedPromptMode"];
         }
     }
 }

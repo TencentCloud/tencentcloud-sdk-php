@@ -168,6 +168,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getCheckpointTimeoutSecond() 获取checkpoint 超时时间
  * @method void setCheckpointTimeoutSecond(integer $CheckpointTimeoutSecond) 设置checkpoint 超时时间
+ * @method integer getCheckpointIntervalSecond() 获取checkpoint 间隔时间
+ * @method void setCheckpointIntervalSecond(integer $CheckpointIntervalSecond) 设置checkpoint 间隔时间
  */
 class JobConfig extends AbstractModel
 {
@@ -402,6 +404,11 @@ class JobConfig extends AbstractModel
     public $CheckpointTimeoutSecond;
 
     /**
+     * @var integer checkpoint 间隔时间
+     */
+    public $CheckpointIntervalSecond;
+
+    /**
      * @param string $JobId 作业Id
      * @param string $EntrypointClass 主类
 注意：此字段可能返回 null，表示取不到有效值。
@@ -476,6 +483,7 @@ class JobConfig extends AbstractModel
      * @param JobConfig $JobConfigItem 运行中配置
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $CheckpointTimeoutSecond checkpoint 超时时间
+     * @param integer $CheckpointIntervalSecond checkpoint 间隔时间
      */
     function __construct()
     {
@@ -663,6 +671,10 @@ class JobConfig extends AbstractModel
 
         if (array_key_exists("CheckpointTimeoutSecond",$param) and $param["CheckpointTimeoutSecond"] !== null) {
             $this->CheckpointTimeoutSecond = $param["CheckpointTimeoutSecond"];
+        }
+
+        if (array_key_exists("CheckpointIntervalSecond",$param) and $param["CheckpointIntervalSecond"] !== null) {
+            $this->CheckpointIntervalSecond = $param["CheckpointIntervalSecond"];
         }
     }
 }

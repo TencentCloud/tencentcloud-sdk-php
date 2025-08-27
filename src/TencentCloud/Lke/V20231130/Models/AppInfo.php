@@ -78,6 +78,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getPermissionIds() 获取权限位信息
  * @method void setPermissionIds(array $PermissionIds) 设置权限位信息
+ * @method string getCreator() 获取创建人昵称
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setCreator(string $Creator) 设置创建人昵称
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class AppInfo extends AbstractModel
 {
@@ -171,6 +175,12 @@ class AppInfo extends AbstractModel
     public $PermissionIds;
 
     /**
+     * @var string 创建人昵称
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Creator;
+
+    /**
      * @param string $AppType 应用类型；knowledge_qa-知识问答管理；summary-知识摘要；classifys-知识标签提取
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AppTypeDesc 应用类型描述
@@ -200,6 +210,8 @@ class AppInfo extends AbstractModel
      * @param string $ThoughtModelAliasName 思考模型别名
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $PermissionIds 权限位信息
+     * @param string $Creator 创建人昵称
+注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
     {
@@ -272,6 +284,10 @@ class AppInfo extends AbstractModel
 
         if (array_key_exists("PermissionIds",$param) and $param["PermissionIds"] !== null) {
             $this->PermissionIds = $param["PermissionIds"];
+        }
+
+        if (array_key_exists("Creator",$param) and $param["Creator"] !== null) {
+            $this->Creator = $param["Creator"];
         }
     }
 }

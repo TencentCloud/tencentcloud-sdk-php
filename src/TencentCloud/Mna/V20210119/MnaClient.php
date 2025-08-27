@@ -56,6 +56,7 @@ use TencentCloud\Mna\V20210119\Models as Models;
  * @method Models\ModifyPackageRenewFlagResponse ModifyPackageRenewFlag(Models\ModifyPackageRenewFlagRequest $req) 可开启/关闭流量包自动续费，不影响当前周期正在生效的流量包。
  * @method Models\OrderFlowPackageResponse OrderFlowPackage(Models\OrderFlowPackageRequest $req) 购买预付费流量包
  * @method Models\OrderPerLicenseResponse OrderPerLicense(Models\OrderPerLicenseRequest $req) 购买一次性授权License
+ * @method Models\ReportOrderResponse ReportOrder(Models\ReportOrderRequest $req) 用户上报自定义的订单信息，多网聚合加速服务将相关信息进行保存
  * @method Models\SetNotifyUrlResponse SetNotifyUrl(Models\SetNotifyUrlRequest $req) 设置用户流量告警信息接口，通过该接口设置流量包告警阈值以及告警时回调的url和key
  * @method Models\UpdateDeviceResponse UpdateDevice(Models\UpdateDeviceRequest $req) 更新设备信息
  * @method Models\UpdateGroupResponse UpdateGroup(Models\UpdateGroupRequest $req) 更新分组备注

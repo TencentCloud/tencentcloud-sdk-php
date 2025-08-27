@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setListOver(boolean $ListOver) 设置搜索结果是否已经全部返回
  * @method array getResults() 获取日志内容信息
  * @method void setResults(array $Results) 设置日志内容信息
+ * @method array getAnalysisRecords() 获取日志聚合结果
+ * @method void setAnalysisRecords(array $AnalysisRecords) 设置日志聚合结果
  */
 class LogResObject extends AbstractModel
 {
@@ -45,9 +47,15 @@ class LogResObject extends AbstractModel
     public $Results;
 
     /**
+     * @var array 日志聚合结果
+     */
+    public $AnalysisRecords;
+
+    /**
      * @param string $Context 获取更多检索结果的游标
      * @param boolean $ListOver 搜索结果是否已经全部返回
      * @param array $Results 日志内容信息
+     * @param array $AnalysisRecords 日志聚合结果
      */
     function __construct()
     {
@@ -77,6 +85,10 @@ class LogResObject extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Results, $obj);
             }
+        }
+
+        if (array_key_exists("AnalysisRecords",$param) and $param["AnalysisRecords"] !== null) {
+            $this->AnalysisRecords = $param["AnalysisRecords"];
         }
     }
 }

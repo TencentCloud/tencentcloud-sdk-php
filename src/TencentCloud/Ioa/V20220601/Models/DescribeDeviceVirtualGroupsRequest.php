@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomainInstanceId(string $DomainInstanceId) 设置管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
  * @method Condition getCondition() 获取滤条件、分页参数 <li>Name - String - 是否必填：否 - 操作符: like  - 排序支持：否- 按终端自定义分组过滤。</li> <li>DeviceVirtualGroupName - String - 是否必填：否 - 操作符: like  - 排序支持：否- 按终端自定义分组过滤。</li>
  * @method void setCondition(Condition $Condition) 设置滤条件、分页参数 <li>Name - String - 是否必填：否 - 操作符: like  - 排序支持：否- 按终端自定义分组过滤。</li> <li>DeviceVirtualGroupName - String - 是否必填：否 - 操作符: like  - 排序支持：否- 按终端自定义分组过滤。</li>
- * @method integer getOsType() 获取必填，系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0）
- * @method void setOsType(integer $OsType) 设置必填，系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0）
+ * @method integer getOsType() 获取系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0）
+ * @method void setOsType(integer $OsType) 设置系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0）
  * @method array getVirtualGroupIds() 获取非必填，自定义分组ids
  * @method void setVirtualGroupIds(array $VirtualGroupIds) 设置非必填，自定义分组ids
  */
@@ -42,7 +42,7 @@ class DescribeDeviceVirtualGroupsRequest extends AbstractModel
     public $Condition;
 
     /**
-     * @var integer 必填，系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0）
+     * @var integer 系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0）
      */
     public $OsType;
 
@@ -54,7 +54,7 @@ class DescribeDeviceVirtualGroupsRequest extends AbstractModel
     /**
      * @param string $DomainInstanceId 管理域实例ID，用于CAM管理域权限分配。若企业未进行管理域的划分，可直接传入根域"1"，此时表示针对当前企业的全部设备和账号进行接口CRUD，具体CRUD的影响范围限制于相应接口的入参。
      * @param Condition $Condition 滤条件、分页参数 <li>Name - String - 是否必填：否 - 操作符: like  - 排序支持：否- 按终端自定义分组过滤。</li> <li>DeviceVirtualGroupName - String - 是否必填：否 - 操作符: like  - 排序支持：否- 按终端自定义分组过滤。</li>
-     * @param integer $OsType 必填，系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0）
+     * @param integer $OsType 系统类型（0: win，1：linux，2: mac，4：android，5：ios   默认值0）
      * @param array $VirtualGroupIds 非必填，自定义分组ids
      */
     function __construct()

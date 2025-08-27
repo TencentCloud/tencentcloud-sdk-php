@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSuccessPageNum(integer $SuccessPageNum) 设置解析成功页数
  * @method integer getFailPageNum() 获取解析失败页数
  * @method void setFailPageNum(integer $FailPageNum) 设置解析失败页数
- * @method integer getFileSize() 获取文件大小，单位KB
- * @method void setFileSize(integer $FileSize) 设置文件大小，单位KB
+ * @method integer getFileSize() 获取文件大小，单位：字节
+ * @method void setFileSize(integer $FileSize) 设置文件大小，单位：字节
  */
 class DocumentUsage extends AbstractModel
 {
@@ -76,7 +76,7 @@ class DocumentUsage extends AbstractModel
     public $FailPageNum;
 
     /**
-     * @var integer 文件大小，单位KB
+     * @var integer 文件大小，单位：字节
      */
     public $FileSize;
 
@@ -88,7 +88,7 @@ class DocumentUsage extends AbstractModel
      * @param integer $MllmTokens mllm消耗的token数
      * @param integer $SuccessPageNum 解析成功页数
      * @param integer $FailPageNum 解析失败页数
-     * @param integer $FileSize 文件大小，单位KB
+     * @param integer $FileSize 文件大小，单位：字节
      */
     function __construct()
     {

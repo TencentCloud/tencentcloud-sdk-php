@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvType(string $EnvType) 设置环境类型 tcbr ｜ run
  * @method string getSubnetIds() 获取子网id
  * @method void setSubnetIds(string $SubnetIds) 设置子网id
+ * @method string getRecycle() 获取回收标志，为空则表示正常，recycle表示已回收
+ * @method void setRecycle(string $Recycle) 设置回收标志，为空则表示正常，recycle表示已回收
  */
 class EnvBaseInfo extends AbstractModel
 {
@@ -87,6 +89,11 @@ class EnvBaseInfo extends AbstractModel
     public $SubnetIds;
 
     /**
+     * @var string 回收标志，为空则表示正常，recycle表示已回收
+     */
+    public $Recycle;
+
+    /**
      * @param string $EnvId 环境Id
      * @param string $PackageType 套餐类型：Trial ｜ Standard ｜ Professional ｜ Enterprise
      * @param string $VpcId VPC Id
@@ -96,6 +103,7 @@ class EnvBaseInfo extends AbstractModel
      * @param string $Region 环境地域
      * @param string $EnvType 环境类型 tcbr ｜ run
      * @param string $SubnetIds 子网id
+     * @param string $Recycle 回收标志，为空则表示正常，recycle表示已回收
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class EnvBaseInfo extends AbstractModel
 
         if (array_key_exists("SubnetIds",$param) and $param["SubnetIds"] !== null) {
             $this->SubnetIds = $param["SubnetIds"];
+        }
+
+        if (array_key_exists("Recycle",$param) and $param["Recycle"] !== null) {
+            $this->Recycle = $param["Recycle"];
         }
     }
 }

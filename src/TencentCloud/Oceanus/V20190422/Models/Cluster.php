@@ -192,6 +192,16 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setYarns(array $Yarns) 设置[]
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getDeploymentMode() 获取0 单可用区 1多可用区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setDeploymentMode(integer $DeploymentMode) 设置0 单可用区 1多可用区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method array getSlaveZones() 获取备可用区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSlaveZones(array $SlaveZones) 设置备可用区
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getLogCOSBucket() 获取集群的日志cos存储
+ * @method void setLogCOSBucket(string $LogCOSBucket) 设置集群的日志cos存储
  */
 class Cluster extends AbstractModel
 {
@@ -498,6 +508,23 @@ class Cluster extends AbstractModel
     public $Yarns;
 
     /**
+     * @var integer 0 单可用区 1多可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $DeploymentMode;
+
+    /**
+     * @var array 备可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SlaveZones;
+
+    /**
+     * @var string 集群的日志cos存储
+     */
+    public $LogCOSBucket;
+
+    /**
      * @param string $ClusterId 集群 ID
      * @param string $Name 集群名称
      * @param string $Region 地域
@@ -584,6 +611,11 @@ class Cluster extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Yarns []
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $DeploymentMode 0 单可用区 1多可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param array $SlaveZones 备可用区
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $LogCOSBucket 集群的日志cos存储
      */
     function __construct()
     {
@@ -850,6 +882,23 @@ class Cluster extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Yarns, $obj);
             }
+        }
+
+        if (array_key_exists("DeploymentMode",$param) and $param["DeploymentMode"] !== null) {
+            $this->DeploymentMode = $param["DeploymentMode"];
+        }
+
+        if (array_key_exists("SlaveZones",$param) and $param["SlaveZones"] !== null) {
+            $this->SlaveZones = [];
+            foreach ($param["SlaveZones"] as $key => $value){
+                $obj = new SlaveZone();
+                $obj->deserialize($value);
+                array_push($this->SlaveZones, $obj);
+            }
+        }
+
+        if (array_key_exists("LogCOSBucket",$param) and $param["LogCOSBucket"] !== null) {
+            $this->LogCOSBucket = $param["LogCOSBucket"];
         }
     }
 }

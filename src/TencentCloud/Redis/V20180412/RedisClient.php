@@ -121,7 +121,7 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\ModifyReplicationGroupResponse ModifyReplicationGroup(Models\ModifyReplicationGroupRequest $req) 本接口（ModifyReplicationGroup）用于修改复制组信息。
  * @method Models\OpenSSLResponse OpenSSL(Models\OpenSSLRequest $req) 本接口（OpenSSL）用于开启 SSL 加密认证功能。
  * @method Models\ReleaseWanAddressResponse ReleaseWanAddress(Models\ReleaseWanAddressRequest $req) 本接口（ReleaseWanAddress）用于关闭外网访问。
- * @method Models\RemoveReplicationGroupResponse RemoveReplicationGroup(Models\RemoveReplicationGroupRequest $req) 删除复制组
+ * @method Models\RemoveReplicationGroupResponse RemoveReplicationGroup(Models\RemoveReplicationGroupRequest $req) 本接口（RemoveReplicationGroup）用于删除复制组。
  * @method Models\RemoveReplicationInstanceResponse RemoveReplicationInstance(Models\RemoveReplicationInstanceRequest $req) 本接口（RemoveReplicationInstance）用于移除复制组中的实例。
  * @method Models\RenewInstanceResponse RenewInstance(Models\RenewInstanceRequest $req) 本接口（RenewInstance）可用于为实例续费。
  * @method Models\ResetPasswordResponse ResetPassword(Models\ResetPasswordRequest $req) 本接口（ResetPassword）用于重置实例访问密码。

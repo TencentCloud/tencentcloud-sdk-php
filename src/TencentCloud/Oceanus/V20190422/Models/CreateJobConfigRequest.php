@@ -92,6 +92,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProgramArgsAfterGzip(string $ProgramArgsAfterGzip) 设置压缩参数
  * @method integer getCheckpointTimeoutSecond() 获取checkpoint 超时时间
  * @method void setCheckpointTimeoutSecond(integer $CheckpointTimeoutSecond) 设置checkpoint 超时时间
+ * @method integer getCheckpointIntervalSecond() 获取checkpoint 间隔时间
+ * @method void setCheckpointIntervalSecond(integer $CheckpointIntervalSecond) 设置checkpoint 间隔时间
  */
 class CreateJobConfigRequest extends AbstractModel
 {
@@ -276,6 +278,11 @@ class CreateJobConfigRequest extends AbstractModel
     public $CheckpointTimeoutSecond;
 
     /**
+     * @var integer checkpoint 间隔时间
+     */
+    public $CheckpointIntervalSecond;
+
+    /**
      * @param string $JobId 作业Id
      * @param string $EntrypointClass 主类
      * @param string $ProgramArgs 主类入参，需要区分下Sql作业配置，Jar作业配置，Python作业配置，具体参考下面的示例值
@@ -312,6 +319,7 @@ class CreateJobConfigRequest extends AbstractModel
      * @param integer $UseOldSystemConnector 0=默认使用老的 1=使用新的
      * @param string $ProgramArgsAfterGzip 压缩参数
      * @param integer $CheckpointTimeoutSecond checkpoint 超时时间
+     * @param integer $CheckpointIntervalSecond checkpoint 间隔时间
      */
     function __construct()
     {
@@ -486,6 +494,10 @@ class CreateJobConfigRequest extends AbstractModel
 
         if (array_key_exists("CheckpointTimeoutSecond",$param) and $param["CheckpointTimeoutSecond"] !== null) {
             $this->CheckpointTimeoutSecond = $param["CheckpointTimeoutSecond"];
+        }
+
+        if (array_key_exists("CheckpointIntervalSecond",$param) and $param["CheckpointIntervalSecond"] !== null) {
+            $this->CheckpointIntervalSecond = $param["CheckpointIntervalSecond"];
         }
     }
 }

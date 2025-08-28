@@ -67,6 +67,8 @@ use TencentCloud\Lighthouse\V20200324\Models as Models;
  * @method Models\CreateInstancesResponse CreateInstances(Models\CreateInstancesRequest $req) 本接口(CreateInstances)用于创建一个或多个指定套餐的轻量应用服务器实例。
 *创建实例时，如指定实例访问域名信息时，本次创建请求，仅支持购买一台实例。
  * @method Models\CreateKeyPairResponse CreateKeyPair(Models\CreateKeyPairRequest $req) 本接口（CreateKeyPair）用于创建一个密钥对。
+ * @method Models\CreateMcpServerResponse CreateMcpServer(Models\CreateMcpServerRequest $req) 本接口（CreateMcpServer）用于创建MCP Server。
+- 本接口为异步接口，请求发送成功后会返回一个 McpServerId，此时操作并未立即完成。实例操作结果可以通过调用 DescribeMcpServers 接口查询。
  * @method Models\DeleteBlueprintsResponse DeleteBlueprints(Models\DeleteBlueprintsRequest $req) 本接口 (DeleteBlueprints) 用于删除镜像。可删除的镜像应满足如下条件：
 1、删除镜像接口需要镜像状态为NORMAL（正常）、ISOLATED（已隔离）、CREATEFAILED（创建失败）、SYNCING_FAILED（目的地域同步失败），其他状态下的镜像不支持删除操作。镜像状态，可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值中的BlueprintState获取。
 2、仅支持删除自定义镜像。
@@ -138,6 +140,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
  * @method Models\DescribeInstancesReturnableResponse DescribeInstancesReturnable(Models\DescribeInstancesReturnableRequest $req) 本接口（DescribeInstancesReturnable）用于查询实例是否可退还。
  * @method Models\DescribeInstancesTrafficPackagesResponse DescribeInstancesTrafficPackages(Models\DescribeInstancesTrafficPackagesRequest $req) 本接口（DescribeInstancesTrafficPackages）用于查询一个或多个实例的流量包详情。
  * @method Models\DescribeKeyPairsResponse DescribeKeyPairs(Models\DescribeKeyPairsRequest $req) 本接口 (DescribeKeyPairs) 用于查询用户密钥对信息。
+ * @method Models\DescribeMcpServersResponse DescribeMcpServers(Models\DescribeMcpServersRequest $req) 本接口（DescribeMcpServers）用于查询MCP Server列表。
  * @method Models\DescribeModifyInstanceBundlesResponse DescribeModifyInstanceBundles(Models\DescribeModifyInstanceBundlesRequest $req) 本接口（DescribeModifyInstanceBundles）用于查询实例可变更套餐列表。
  * @method Models\DescribeRegionsResponse DescribeRegions(Models\DescribeRegionsRequest $req) 本接口（DescribeRegions）用于查询地域信息。
  * @method Models\DescribeResetInstanceBlueprintsResponse DescribeResetInstanceBlueprints(Models\DescribeResetInstanceBlueprintsRequest $req) 本接口（DescribeResetInstanceBlueprints）查询重置实例的镜像信息。对于游戏专区实例，该接口只会返回当前镜像，且不支持 Filters 参数。
@@ -234,6 +237,8 @@ CVM镜像共享到轻量应用服务器镜像需要满足如下条件：
 
 * 实例被标识为自动续费后，每次在实例到期时，会自动续费一个月。
 * 支持批量操作。每次请求批量实例的上限为100。
+ * @method Models\ModifyMcpServerResponse ModifyMcpServer(Models\ModifyMcpServerRequest $req) 本接口（ModifyMcpServer）用于修改实例的MCP Server信息。
+- 本接口为异步接口，API返回时修改操作并未立即完成。MCP Server的修改结果可以通过调用 DescribeMcpServers 接口查询。
  * @method Models\ModifySnapshotAttributeResponse ModifySnapshotAttribute(Models\ModifySnapshotAttributeRequest $req) 本接口（ModifySnapshotAttribute）用于修改指定快照的属性。
 <li>“快照名称”仅为方便用户自己管理之用。</li>
  * @method Models\RebootInstancesResponse RebootInstances(Models\RebootInstancesRequest $req) 本接口（RebootInstances）用于重启实例。
@@ -243,6 +248,9 @@ CVM镜像共享到轻量应用服务器镜像需要满足如下条件：
 * 支持批量操作，每次请求批量实例的上限为 100。
 * 本接口为异步接口，请求发送成功后会返回一个 RequestId，此时操作并未立即完成。实例操作结果可以通过调用 <a href="https://cloud.tencent.com/document/product/1207/47573" target="_blank">DescribeInstances</a> 接口查询，如果实例的最新操作状态（LatestOperationState）为“SUCCESS”，则代表操作成功。
  * @method Models\RemoveDockerContainersResponse RemoveDockerContainers(Models\RemoveDockerContainersRequest $req) 删除实例内的Docker容器，之后可以通过返回的ActivityId调用[DescribeDockerActivities](https://cloud.tencent.com/document/product/1207/95476)接口查询删除情况。
+ * @method Models\RemoveMcpServersResponse RemoveMcpServers(Models\RemoveMcpServersRequest $req) 本接口（RemoveMcpServers）用于删除MCP Server。
+- 本接口为异步接口，API返回时操作并未立即完成。MCP Server的操作结果可以通过调用 DescribeMcpServers 接口查询。
+- 本接口在操作多个MCP Server时，不会因为某一个失败而停止。您需要通过调用 DescribeMcpServers 接口查询最终操作结果，如无法查询到，代表删除成功。
  * @method Models\RenameDockerContainerResponse RenameDockerContainer(Models\RenameDockerContainerRequest $req) 重命名实例内的Docker容器，之后可以通过返回的ActivityId调用[DescribeDockerActivities](https://cloud.tencent.com/document/product/1207/95476)接口查询重命名情况。
  * @method Models\RenewDisksResponse RenewDisks(Models\RenewDisksRequest $req) 本接口(RenewDisks)用于续费一个或多个轻量应用服务器云硬盘。
 
@@ -273,6 +281,9 @@ CVM镜像共享到轻量应用服务器镜像需要满足如下条件：
 注意：强制关机的效果等同于关闭物理计算机的电源开关。强制关机可能会导致数据丢失或文件系统损坏。
  * @method Models\ResizeDisksResponse ResizeDisks(Models\ResizeDisksRequest $req) 本接口(ResizeDisks)用于扩容云硬盘。该操作目前仅支持云硬盘类型为数据盘且状态处于ATTACHED（已挂载）或 UNATTACHED（待挂载）的云硬盘。
  * @method Models\RestartDockerContainersResponse RestartDockerContainers(Models\RestartDockerContainersRequest $req) 重启实例内的Docker容器，之后可以通过返回的ActivityId调用[DescribeDockerActivities](https://cloud.tencent.com/document/product/1207/95476)接口查询重启情况。
+ * @method Models\RestartMcpServersResponse RestartMcpServers(Models\RestartMcpServersRequest $req) 本接口（RestartMcpServers）用于重启实例中的MCP Server。
+- 本接口为异步接口，API返回时操作并未立即完成。MCP Server的操作结果可以通过调用 DescribeMcpServers 接口查询。
+- 本接口在操作多个MCP Server时，不会因为某一个失败而停止。您需要通过调用 DescribeMcpServers 接口查询最终操作结果。
  * @method Models\RunDockerContainersResponse RunDockerContainers(Models\RunDockerContainersRequest $req) 创建并运行多个Docker容器，之后可以通过返回的ActivityIds调用<a href="https://cloud.tencent.com/document/product/1207/95476" target="_blank">DescribeDockerActivities</a>接口查询创建情况。
  * @method Models\ShareBlueprintAcrossAccountsResponse ShareBlueprintAcrossAccounts(Models\ShareBlueprintAcrossAccountsRequest $req) 本接口（ShareBlueprintAcrossAccounts）用于跨账号共享镜像。
 仅支持共享自定义镜像， 且用于共享的镜像状态必须为NORMAL。
@@ -284,12 +295,18 @@ CVM镜像共享到轻量应用服务器镜像需要满足如下条件：
 * 接口调用成功时，实例会进入 STARTING 状态；启动实例成功时，实例会进入 RUNNING 状态。
 * 支持批量操作。每次请求批量实例的上限为 100。
 * 本接口为异步接口，请求发送成功后会返回一个 RequestId，此时操作并未立即完成。实例操作结果可以通过调用 <a href="https://cloud.tencent.com/document/product/1207/47573" target="_blank">DescribeInstances</a> 接口查询，如果实例的最新操作状态（LatestOperationState）为“SUCCESS”，则代表操作成功。
+ * @method Models\StartMcpServersResponse StartMcpServers(Models\StartMcpServersRequest $req) 本接口（StartMcpServers）用于开启实例中的MCP Server。
+- 本接口为异步接口，API返回时操作并未立即完成。MCP Server的操作结果可以通过调用 DescribeMcpServers 接口查询。
+- 本接口在操作多个MCP Server时，不会因为某一个失败而停止。您需要通过调用 DescribeMcpServers 接口查询最终操作结果。
  * @method Models\StopDockerContainersResponse StopDockerContainers(Models\StopDockerContainersRequest $req) 停止实例内的Docker容器，之后可以通过返回的ActivityId调用[DescribeDockerActivities](https://cloud.tencent.com/document/product/1207/95476)接口查询停止情况。
  * @method Models\StopInstancesResponse StopInstances(Models\StopInstancesRequest $req) 本接口（StopInstances）用于关闭一个或多个实例。
 * 只有状态为 RUNNING 的实例才可以进行此操作。
 * 接口调用成功时，实例会进入 STOPPING 状态；关闭实例成功时，实例会进入 STOPPED 状态。
 * 支持批量操作。每次请求批量实例的上限为 100。
 * 本接口为异步接口，请求发送成功后会返回一个 RequestId，此时操作并未立即完成。实例操作结果可以通过调用 <a href="https://cloud.tencent.com/document/product/1207/47573" target="_blank">DescribeInstances</a> 接口查询，如果实例的最新操作状态（LatestOperationState）为“SUCCESS”，则代表操作成功。
+ * @method Models\StopMcpServersResponse StopMcpServers(Models\StopMcpServersRequest $req) 本接口（StopMcpServers）用于关闭实例中的MCP Server。
+- 本接口为异步接口，API返回时操作并未立即完成。MCP Server的操作结果可以通过调用 DescribeMcpServers 接口查询。
+- 本接口在操作多个MCP Server时，不会因为某一个失败而停止。您需要通过调用 DescribeMcpServers 接口查询最终操作结果。
  * @method Models\SyncBlueprintResponse SyncBlueprint(Models\SyncBlueprintRequest $req) 本接口 (SyncBlueprint) 用于将自定义镜像同步到其它地域。
 
 * 支持向多个地域同步。最多10个地域。

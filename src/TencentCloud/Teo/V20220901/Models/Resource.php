@@ -53,12 +53,12 @@ use TencentCloud\Common\AbstractModel;
  * @method string getPlanId() 获取套餐关联资源 ID。
  * @method void setPlanId(string $PlanId) 设置套餐关联资源 ID。
  * @method string getArea() 获取地域，取值有：
-<li>mainland：国内；</li>
-<li>overseas：海外。</li>
+<li>mainland：中国大陆境内；</li>
+<li>overseas：中国大陆境外。</li>
 <li>global：全球。</li>
  * @method void setArea(string $Area) 设置地域，取值有：
-<li>mainland：国内；</li>
-<li>overseas：海外。</li>
+<li>mainland：中国大陆境内；</li>
+<li>overseas：中国大陆境外。</li>
 <li>global：全球。</li>
  * @method string getGroup() 获取资源类型，取值有：
 <li>plan：套餐类型；</li>
@@ -135,8 +135,8 @@ class Resource extends AbstractModel
 
     /**
      * @var string 地域，取值有：
-<li>mainland：国内；</li>
-<li>overseas：海外。</li>
+<li>mainland：中国大陆境内；</li>
+<li>overseas：中国大陆境外。</li>
 <li>global：全球。</li>
      */
     public $Area;
@@ -180,8 +180,8 @@ class Resource extends AbstractModel
 <li>2：不自动续费。</li>
      * @param string $PlanId 套餐关联资源 ID。
      * @param string $Area 地域，取值有：
-<li>mainland：国内；</li>
-<li>overseas：海外。</li>
+<li>mainland：中国大陆境内；</li>
+<li>overseas：中国大陆境外。</li>
 <li>global：全球。</li>
      * @param string $Group 资源类型，取值有：
 <li>plan：套餐类型；</li>

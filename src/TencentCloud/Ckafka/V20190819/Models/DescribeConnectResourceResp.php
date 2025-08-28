@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) 设置连接源描述
  * @method string getType() 获取连接源类型
  * @method void setType(string $Type) 设置连接源类型
- * @method integer getStatus() 获取连接源的状态
- * @method void setStatus(integer $Status) 设置连接源的状态
+ * @method integer getStatus() 获取连接源的状态  枚举值: -1 (创建失败) 、0 (创建中) 、 1 (运行中)、 2 (删除中) 、 4 (删除失败) 、 5 (配置更改中) 、 6 (配置更改失败) 、 7 (异常)
+ * @method void setStatus(integer $Status) 设置连接源的状态  枚举值: -1 (创建失败) 、0 (创建中) 、 1 (运行中)、 2 (删除中) 、 4 (删除失败) 、 5 (配置更改中) 、 6 (配置更改失败) 、 7 (异常)
  * @method string getCreateTime() 获取连接源的创建时间
  * @method void setCreateTime(string $CreateTime) 设置连接源的创建时间
  * @method string getErrorMessage() 获取连接源的异常信息
@@ -112,7 +112,7 @@ class DescribeConnectResourceResp extends AbstractModel
     public $Type;
 
     /**
-     * @var integer 连接源的状态
+     * @var integer 连接源的状态  枚举值: -1 (创建失败) 、0 (创建中) 、 1 (运行中)、 2 (删除中) 、 4 (删除失败) 、 5 (配置更改中) 、 6 (配置更改失败) 、 7 (异常)
      */
     public $Status;
 
@@ -214,7 +214,7 @@ class DescribeConnectResourceResp extends AbstractModel
      * @param string $ResourceName 连接源名称
      * @param string $Description 连接源描述
      * @param string $Type 连接源类型
-     * @param integer $Status 连接源的状态
+     * @param integer $Status 连接源的状态  枚举值: -1 (创建失败) 、0 (创建中) 、 1 (运行中)、 2 (删除中) 、 4 (删除失败) 、 5 (配置更改中) 、 6 (配置更改失败) 、 7 (异常)
      * @param string $CreateTime 连接源的创建时间
      * @param string $ErrorMessage 连接源的异常信息
      * @param string $CurrentStep 连接源的当前所处步骤

@@ -20,42 +20,62 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyInstancePre请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka集群实例Id
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
- * @method integer getDiskSize() 获取预计磁盘，根据磁盘步长，规格向上调整。
- * @method void setDiskSize(integer $DiskSize) 设置预计磁盘，根据磁盘步长，规格向上调整。
- * @method integer getBandWidth() 获取预计带宽，根据带宽步长，规格向上调整。
- * @method void setBandWidth(integer $BandWidth) 设置预计带宽，根据带宽步长，规格向上调整。
- * @method integer getPartition() 获取预计分区，根据带宽步长，规格向上调整。
- * @method void setPartition(integer $Partition) 设置预计分区，根据带宽步长，规格向上调整。
+ * @method string getInstanceId() 获取ckafka集群实例Id,可通过DescribeInstances接口获取
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id,可通过DescribeInstances接口获取
+ * @method integer getDiskSize() 获取磁盘大小 单位 GB     最大值为500000,步长100
+可以通过以下链接查看规格限制：https://cloud.tencent.com/document/product/597/122562
+
+ * @method void setDiskSize(integer $DiskSize) 设置磁盘大小 单位 GB     最大值为500000,步长100
+可以通过以下链接查看规格限制：https://cloud.tencent.com/document/product/597/122562
+
+ * @method integer getBandWidth() 获取峰值带宽 单位 MB/s
+可以通过以下链接查看规格限制及对应步长: https://cloud.tencent.com/document/product/597/11745
+
+ * @method void setBandWidth(integer $BandWidth) 设置峰值带宽 单位 MB/s
+可以通过以下链接查看规格限制及对应步长: https://cloud.tencent.com/document/product/597/11745
+
+ * @method integer getPartition() 获取分区上限 最大值: 40000, 步长: 100
+可以通过以下链接查看规格限制: https://cloud.tencent.com/document/product/597/122563
+ * @method void setPartition(integer $Partition) 设置分区上限 最大值: 40000, 步长: 100
+可以通过以下链接查看规格限制: https://cloud.tencent.com/document/product/597/122563
  */
 class ModifyInstancePreRequest extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例Id
+     * @var string ckafka集群实例Id,可通过DescribeInstances接口获取
      */
     public $InstanceId;
 
     /**
-     * @var integer 预计磁盘，根据磁盘步长，规格向上调整。
+     * @var integer 磁盘大小 单位 GB     最大值为500000,步长100
+可以通过以下链接查看规格限制：https://cloud.tencent.com/document/product/597/122562
+
      */
     public $DiskSize;
 
     /**
-     * @var integer 预计带宽，根据带宽步长，规格向上调整。
+     * @var integer 峰值带宽 单位 MB/s
+可以通过以下链接查看规格限制及对应步长: https://cloud.tencent.com/document/product/597/11745
+
      */
     public $BandWidth;
 
     /**
-     * @var integer 预计分区，根据带宽步长，规格向上调整。
+     * @var integer 分区上限 最大值: 40000, 步长: 100
+可以通过以下链接查看规格限制: https://cloud.tencent.com/document/product/597/122563
      */
     public $Partition;
 
     /**
-     * @param string $InstanceId ckafka集群实例Id
-     * @param integer $DiskSize 预计磁盘，根据磁盘步长，规格向上调整。
-     * @param integer $BandWidth 预计带宽，根据带宽步长，规格向上调整。
-     * @param integer $Partition 预计分区，根据带宽步长，规格向上调整。
+     * @param string $InstanceId ckafka集群实例Id,可通过DescribeInstances接口获取
+     * @param integer $DiskSize 磁盘大小 单位 GB     最大值为500000,步长100
+可以通过以下链接查看规格限制：https://cloud.tencent.com/document/product/597/122562
+
+     * @param integer $BandWidth 峰值带宽 单位 MB/s
+可以通过以下链接查看规格限制及对应步长: https://cloud.tencent.com/document/product/597/11745
+
+     * @param integer $Partition 分区上限 最大值: 40000, 步长: 100
+可以通过以下链接查看规格限制: https://cloud.tencent.com/document/product/597/122563
      */
     function __construct()
     {

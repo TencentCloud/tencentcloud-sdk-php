@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileURL(string $FileURL) 设置文件下载 URL
  * @method string getDestinationDirectory() 获取上传目标目录，只能上传到 /sdcard/ 目录或其子目录下
  * @method void setDestinationDirectory(string $DestinationDirectory) 设置上传目标目录，只能上传到 /sdcard/ 目录或其子目录下
+ * @method string getDestinationFileName() 获取目标文件名
+ * @method void setDestinationFileName(string $DestinationFileName) 设置目标文件名
  */
 class UploadFileToAndroidInstancesRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class UploadFileToAndroidInstancesRequest extends AbstractModel
     public $DestinationDirectory;
 
     /**
+     * @var string 目标文件名
+     */
+    public $DestinationFileName;
+
+    /**
      * @param array $AndroidInstanceIds 安卓实例 ID 列表
      * @param string $FileURL 文件下载 URL
      * @param string $DestinationDirectory 上传目标目录，只能上传到 /sdcard/ 目录或其子目录下
+     * @param string $DestinationFileName 目标文件名
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class UploadFileToAndroidInstancesRequest extends AbstractModel
 
         if (array_key_exists("DestinationDirectory",$param) and $param["DestinationDirectory"] !== null) {
             $this->DestinationDirectory = $param["DestinationDirectory"];
+        }
+
+        if (array_key_exists("DestinationFileName",$param) and $param["DestinationFileName"] !== null) {
+            $this->DestinationFileName = $param["DestinationFileName"];
         }
     }
 }

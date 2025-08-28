@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RenewCkafkaInstance请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka集群实例Id
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
+ * @method string getInstanceId() 获取ckafka集群实例Id,可通过DescribeInstances接口获取
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id,可通过DescribeInstances接口获取
  * @method integer getTimeSpan() 获取续费时长, 默认为1, 单位是月
  * @method void setTimeSpan(integer $TimeSpan) 设置续费时长, 默认为1, 单位是月
  */
 class RenewCkafkaInstanceRequest extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例Id
+     * @var string ckafka集群实例Id,可通过DescribeInstances接口获取
      */
     public $InstanceId;
 
@@ -38,7 +38,7 @@ class RenewCkafkaInstanceRequest extends AbstractModel
     public $TimeSpan;
 
     /**
-     * @param string $InstanceId ckafka集群实例Id
+     * @param string $InstanceId ckafka集群实例Id,可通过DescribeInstances接口获取
      * @param integer $TimeSpan 续费时长, 默认为1, 单位是月
      */
     function __construct()

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateInstancePre请求参数结构体
  *
- * @method string getInstanceName() 获取ckafka集群实例Name，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
- * @method void setInstanceName(string $InstanceName) 设置ckafka集群实例Name，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
+ * @method string getInstanceName() 获取ckafka集群实例Name，是一个不超过 128 个字符的任意字符串。
+ * @method void setInstanceName(string $InstanceName) 设置ckafka集群实例Name，是一个不超过 128 个字符的任意字符串。
  * @method integer getZoneId() 获取可用区。当购买多可用区实例时，当前参数为主可用区。  [查看可用区](https://cloud.tencent.com/document/product/597/55246)
  * @method void setZoneId(integer $ZoneId) 设置可用区。当购买多可用区实例时，当前参数为主可用区。  [查看可用区](https://cloud.tencent.com/document/product/597/55246)
  * @method string getPeriod() 获取预付费购买时长，例如 "1m",就是一个月
@@ -32,22 +32,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置私有网络Id
  * @method string getSubnetId() 获取子网id
  * @method void setSubnetId(string $SubnetId) 设置子网id
- * @method integer getMsgRetentionTime() 获取可选。实例日志的最长保留时间，单位分钟，默认为10080（7天），最大30天，不填默认0，代表不开启日志保留时间回收策略
- * @method void setMsgRetentionTime(integer $MsgRetentionTime) 设置可选。实例日志的最长保留时间，单位分钟，默认为10080（7天），最大30天，不填默认0，代表不开启日志保留时间回收策略
+ * @method integer getMsgRetentionTime() 获取可选。实例日志的最长保留时间，单位分钟，不填默认为1440（1天），可设置范围为1分钟到90天。
+ * @method void setMsgRetentionTime(integer $MsgRetentionTime) 设置可选。实例日志的最长保留时间，单位分钟，不填默认为1440（1天），可设置范围为1分钟到90天。
  * @method integer getClusterId() 获取创建实例时可以选择集群Id, 该入参表示集群Id
  * @method void setClusterId(integer $ClusterId) 设置创建实例时可以选择集群Id, 该入参表示集群Id
  * @method integer getRenewFlag() 获取预付费自动续费标记，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
  * @method void setRenewFlag(integer $RenewFlag) 设置预付费自动续费标记，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
- * @method string getKafkaVersion() 获取CKafka版本号[0.10.2、1.1.1、2.4.1、2.4.2、2.8.1、3.2.3], 默认是1.1.1。2.4.1 与 2.4.2 属于同一个版本，传任意一个均可。
- * @method void setKafkaVersion(string $KafkaVersion) 设置CKafka版本号[0.10.2、1.1.1、2.4.1、2.4.2、2.8.1、3.2.3], 默认是1.1.1。2.4.1 与 2.4.2 属于同一个版本，传任意一个均可。
+ * @method string getKafkaVersion() 获取CKafka版本号[2.4.1, 2.4.2, 2.8.1, 3.2.3], 默认取值是2.4.1。2.4.1 与 2.4.2 属于同一个版本，传任意一个均可。
+ * @method void setKafkaVersion(string $KafkaVersion) 设置CKafka版本号[2.4.1, 2.4.2, 2.8.1, 3.2.3], 默认取值是2.4.1。2.4.1 与 2.4.2 属于同一个版本，传任意一个均可。
  * @method string getSpecificationsType() 获取实例类型: [标准版实例]填写 "standard" (默认), [专业版实例]填写 "profession",[高级版实例]填写"premium"
  * @method void setSpecificationsType(string $SpecificationsType) 设置实例类型: [标准版实例]填写 "standard" (默认), [专业版实例]填写 "profession",[高级版实例]填写"premium"
- * @method integer getDiskSize() 获取磁盘大小，如果跟控制台规格配比不相符，则无法创建成功
- * @method void setDiskSize(integer $DiskSize) 设置磁盘大小，如果跟控制台规格配比不相符，则无法创建成功
- * @method integer getBandWidth() 获取实例带宽,单位MB/s; 最小值:20MB/s, 高级版最大值:360MB/s,专业版最大值:100000MB/s  标准版固定带宽规格: 40MB/s, 100MB/s, 150MB/s
- * @method void setBandWidth(integer $BandWidth) 设置实例带宽,单位MB/s; 最小值:20MB/s, 高级版最大值:360MB/s,专业版最大值:100000MB/s  标准版固定带宽规格: 40MB/s, 100MB/s, 150MB/s
- * @method integer getPartition() 获取分区大小，如果跟控制台规格配比不相符，则无法创建成功
- * @method void setPartition(integer $Partition) 设置分区大小，如果跟控制台规格配比不相符，则无法创建成功
+ * @method integer getDiskSize() 获取磁盘大小，如果跟控制台规格配比不相符，则无法创建成功。默认取值为500，步长设置为100。可以通过以下链接查看计费规格：https://cloud.tencent.com/document/product/597/122562
+ * @method void setDiskSize(integer $DiskSize) 设置磁盘大小，如果跟控制台规格配比不相符，则无法创建成功。默认取值为500，步长设置为100。可以通过以下链接查看计费规格：https://cloud.tencent.com/document/product/597/122562
+ * @method integer getBandWidth() 获取实例带宽,默认值为40，单位MB/s; 最小值:20MB/s, 高级版最大值:360MB/s,专业版最大值:100000MB/s  标准版固定带宽规格: 40MB/s, 100MB/s, 150MB/s。可以通过以下链接查看计费规格：https://cloud.tencent.com/document/product/597/11745
+ * @method void setBandWidth(integer $BandWidth) 设置实例带宽,默认值为40，单位MB/s; 最小值:20MB/s, 高级版最大值:360MB/s,专业版最大值:100000MB/s  标准版固定带宽规格: 40MB/s, 100MB/s, 150MB/s。可以通过以下链接查看计费规格：https://cloud.tencent.com/document/product/597/11745
+ * @method integer getPartition() 获取分区大小，如果跟控制台规格配比不相符，则无法创建成功。默认值为800，步长为100。可以通过以下链接查看计费规格：https://cloud.tencent.com/document/product/597/122563
+ * @method void setPartition(integer $Partition) 设置分区大小，如果跟控制台规格配比不相符，则无法创建成功。默认值为800，步长为100。可以通过以下链接查看计费规格：https://cloud.tencent.com/document/product/597/122563
  * @method array getTags() 获取标签
  * @method void setTags(array $Tags) 设置标签
  * @method string getDiskType() 获取专业版/高级版实例磁盘类型，标准版实例不需要填写。"CLOUD_SSD"：SSD云硬盘；"CLOUD_BASIC"：高性能云硬盘。不传默认为 "CLOUD_BASIC"
@@ -68,7 +68,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateInstancePreRequest extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例Name，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
+     * @var string ckafka集群实例Name，是一个不超过 128 个字符的任意字符串。
      */
     public $InstanceName;
 
@@ -98,7 +98,7 @@ class CreateInstancePreRequest extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var integer 可选。实例日志的最长保留时间，单位分钟，默认为10080（7天），最大30天，不填默认0，代表不开启日志保留时间回收策略
+     * @var integer 可选。实例日志的最长保留时间，单位分钟，不填默认为1440（1天），可设置范围为1分钟到90天。
      */
     public $MsgRetentionTime;
 
@@ -113,7 +113,7 @@ class CreateInstancePreRequest extends AbstractModel
     public $RenewFlag;
 
     /**
-     * @var string CKafka版本号[0.10.2、1.1.1、2.4.1、2.4.2、2.8.1、3.2.3], 默认是1.1.1。2.4.1 与 2.4.2 属于同一个版本，传任意一个均可。
+     * @var string CKafka版本号[2.4.1, 2.4.2, 2.8.1, 3.2.3], 默认取值是2.4.1。2.4.1 与 2.4.2 属于同一个版本，传任意一个均可。
      */
     public $KafkaVersion;
 
@@ -123,17 +123,17 @@ class CreateInstancePreRequest extends AbstractModel
     public $SpecificationsType;
 
     /**
-     * @var integer 磁盘大小，如果跟控制台规格配比不相符，则无法创建成功
+     * @var integer 磁盘大小，如果跟控制台规格配比不相符，则无法创建成功。默认取值为500，步长设置为100。可以通过以下链接查看计费规格：https://cloud.tencent.com/document/product/597/122562
      */
     public $DiskSize;
 
     /**
-     * @var integer 实例带宽,单位MB/s; 最小值:20MB/s, 高级版最大值:360MB/s,专业版最大值:100000MB/s  标准版固定带宽规格: 40MB/s, 100MB/s, 150MB/s
+     * @var integer 实例带宽,默认值为40，单位MB/s; 最小值:20MB/s, 高级版最大值:360MB/s,专业版最大值:100000MB/s  标准版固定带宽规格: 40MB/s, 100MB/s, 150MB/s。可以通过以下链接查看计费规格：https://cloud.tencent.com/document/product/597/11745
      */
     public $BandWidth;
 
     /**
-     * @var integer 分区大小，如果跟控制台规格配比不相符，则无法创建成功
+     * @var integer 分区大小，如果跟控制台规格配比不相符，则无法创建成功。默认值为800，步长为100。可以通过以下链接查看计费规格：https://cloud.tencent.com/document/product/597/122563
      */
     public $Partition;
 
@@ -178,20 +178,20 @@ class CreateInstancePreRequest extends AbstractModel
     public $ElasticBandwidthSwitch;
 
     /**
-     * @param string $InstanceName ckafka集群实例Name，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
+     * @param string $InstanceName ckafka集群实例Name，是一个不超过 128 个字符的任意字符串。
      * @param integer $ZoneId 可用区。当购买多可用区实例时，当前参数为主可用区。  [查看可用区](https://cloud.tencent.com/document/product/597/55246)
      * @param string $Period 预付费购买时长，例如 "1m",就是一个月
      * @param integer $InstanceType 国际站标准版实例规格。目前只有国际站标准版使用当前字段区分规格，国内站标准版使用峰值带宽区分规格。除了国际站标准版外的所有实例填写 1 即可。国际站标准版实例：入门型(general)]填写1；[标准型(standard)]填写2；[进阶型(advanced)]填写3；[容量型(capacity)]填写4；[高阶型1(specialized-1)]填写5；[高阶型2(specialized-2)]填写6；[高阶型3(specialized-3)]填写7；[高阶型4(specialized-4)]填写8。
      * @param string $VpcId 私有网络Id
      * @param string $SubnetId 子网id
-     * @param integer $MsgRetentionTime 可选。实例日志的最长保留时间，单位分钟，默认为10080（7天），最大30天，不填默认0，代表不开启日志保留时间回收策略
+     * @param integer $MsgRetentionTime 可选。实例日志的最长保留时间，单位分钟，不填默认为1440（1天），可设置范围为1分钟到90天。
      * @param integer $ClusterId 创建实例时可以选择集群Id, 该入参表示集群Id
      * @param integer $RenewFlag 预付费自动续费标记，0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费(用户设置)
-     * @param string $KafkaVersion CKafka版本号[0.10.2、1.1.1、2.4.1、2.4.2、2.8.1、3.2.3], 默认是1.1.1。2.4.1 与 2.4.2 属于同一个版本，传任意一个均可。
+     * @param string $KafkaVersion CKafka版本号[2.4.1, 2.4.2, 2.8.1, 3.2.3], 默认取值是2.4.1。2.4.1 与 2.4.2 属于同一个版本，传任意一个均可。
      * @param string $SpecificationsType 实例类型: [标准版实例]填写 "standard" (默认), [专业版实例]填写 "profession",[高级版实例]填写"premium"
-     * @param integer $DiskSize 磁盘大小，如果跟控制台规格配比不相符，则无法创建成功
-     * @param integer $BandWidth 实例带宽,单位MB/s; 最小值:20MB/s, 高级版最大值:360MB/s,专业版最大值:100000MB/s  标准版固定带宽规格: 40MB/s, 100MB/s, 150MB/s
-     * @param integer $Partition 分区大小，如果跟控制台规格配比不相符，则无法创建成功
+     * @param integer $DiskSize 磁盘大小，如果跟控制台规格配比不相符，则无法创建成功。默认取值为500，步长设置为100。可以通过以下链接查看计费规格：https://cloud.tencent.com/document/product/597/122562
+     * @param integer $BandWidth 实例带宽,默认值为40，单位MB/s; 最小值:20MB/s, 高级版最大值:360MB/s,专业版最大值:100000MB/s  标准版固定带宽规格: 40MB/s, 100MB/s, 150MB/s。可以通过以下链接查看计费规格：https://cloud.tencent.com/document/product/597/11745
+     * @param integer $Partition 分区大小，如果跟控制台规格配比不相符，则无法创建成功。默认值为800，步长为100。可以通过以下链接查看计费规格：https://cloud.tencent.com/document/product/597/122563
      * @param array $Tags 标签
      * @param string $DiskType 专业版/高级版实例磁盘类型，标准版实例不需要填写。"CLOUD_SSD"：SSD云硬盘；"CLOUD_BASIC"：高性能云硬盘。不传默认为 "CLOUD_BASIC"
      * @param boolean $MultiZoneFlag 是否创建跨可用区实例，当前参数为 true 时，zoneIds必填

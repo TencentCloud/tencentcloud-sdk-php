@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteUser请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka集群实例Id
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
- * @method string getName() 获取用户名称
- * @method void setName(string $Name) 设置用户名称
+ * @method string getInstanceId() 获取ckafka集群实例Id，可通过DescribeInstances接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id，可通过DescribeInstances接口获取。
+ * @method string getName() 获取用户名称，可通过DescribeUser接口获取。
+ * @method void setName(string $Name) 设置用户名称，可通过DescribeUser接口获取。
  */
 class DeleteUserRequest extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例Id
+     * @var string ckafka集群实例Id，可通过DescribeInstances接口获取。
      */
     public $InstanceId;
 
     /**
-     * @var string 用户名称
+     * @var string 用户名称，可通过DescribeUser接口获取。
      */
     public $Name;
 
     /**
-     * @param string $InstanceId ckafka集群实例Id
-     * @param string $Name 用户名称
+     * @param string $InstanceId ckafka集群实例Id，可通过DescribeInstances接口获取。
+     * @param string $Name 用户名称，可通过DescribeUser接口获取。
      */
     function __construct()
     {

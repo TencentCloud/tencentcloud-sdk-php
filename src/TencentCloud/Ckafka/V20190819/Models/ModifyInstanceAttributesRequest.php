@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyInstanceAttributes请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka集群实例Id
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
- * @method integer getMsgRetentionTime() 获取实例日志的最长保留时间，单位分钟，最大90天，0代表不开启日志保留时间回收策略
- * @method void setMsgRetentionTime(integer $MsgRetentionTime) 设置实例日志的最长保留时间，单位分钟，最大90天，0代表不开启日志保留时间回收策略
+ * @method string getInstanceId() 获取ckafka集群实例Id,可通过DescribeInstances接口获取
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id,可通过DescribeInstances接口获取
+ * @method integer getMsgRetentionTime() 获取实例日志的最长保留时间，单位分钟，最大90天，最小为1min
+ * @method void setMsgRetentionTime(integer $MsgRetentionTime) 设置实例日志的最长保留时间，单位分钟，最大90天，最小为1min
  * @method string getInstanceName() 获取ckafka集群实例Name
  * @method void setInstanceName(string $InstanceName) 设置ckafka集群实例Name
  * @method ModifyInstanceAttributesConfig getConfig() 获取实例配置
@@ -38,20 +38,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDynamicDiskConfig(DynamicDiskConfig $DynamicDiskConfig) 设置动态硬盘扩容策略配置
  * @method integer getMaxMessageByte() 获取实例级别单条消息大小（单位byte)  最大 12582912(不包含)  最小1024(不包含)
  * @method void setMaxMessageByte(integer $MaxMessageByte) 设置实例级别单条消息大小（单位byte)  最大 12582912(不包含)  最小1024(不包含)
- * @method integer getUncleanLeaderElectionEnable() 获取集群topic默认 unclean.leader.election.enable配置: 1 开启  0 关闭
- * @method void setUncleanLeaderElectionEnable(integer $UncleanLeaderElectionEnable) 设置集群topic默认 unclean.leader.election.enable配置: 1 开启  0 关闭
+ * @method integer getUncleanLeaderElectionEnable() 获取是否允许未同步的副本选为 leader: 1 开启  0 关闭
+ * @method void setUncleanLeaderElectionEnable(integer $UncleanLeaderElectionEnable) 设置是否允许未同步的副本选为 leader: 1 开启  0 关闭
  * @method integer getDeleteProtectionEnable() 获取实例删除保护开关: 1 开启  0 关闭
  * @method void setDeleteProtectionEnable(integer $DeleteProtectionEnable) 设置实例删除保护开关: 1 开启  0 关闭
  */
 class ModifyInstanceAttributesRequest extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例Id
+     * @var string ckafka集群实例Id,可通过DescribeInstances接口获取
      */
     public $InstanceId;
 
     /**
-     * @var integer 实例日志的最长保留时间，单位分钟，最大90天，0代表不开启日志保留时间回收策略
+     * @var integer 实例日志的最长保留时间，单位分钟，最大90天，最小为1min
      */
     public $MsgRetentionTime;
 
@@ -92,7 +92,7 @@ class ModifyInstanceAttributesRequest extends AbstractModel
     public $MaxMessageByte;
 
     /**
-     * @var integer 集群topic默认 unclean.leader.election.enable配置: 1 开启  0 关闭
+     * @var integer 是否允许未同步的副本选为 leader: 1 开启  0 关闭
      */
     public $UncleanLeaderElectionEnable;
 
@@ -102,8 +102,8 @@ class ModifyInstanceAttributesRequest extends AbstractModel
     public $DeleteProtectionEnable;
 
     /**
-     * @param string $InstanceId ckafka集群实例Id
-     * @param integer $MsgRetentionTime 实例日志的最长保留时间，单位分钟，最大90天，0代表不开启日志保留时间回收策略
+     * @param string $InstanceId ckafka集群实例Id,可通过DescribeInstances接口获取
+     * @param integer $MsgRetentionTime 实例日志的最长保留时间，单位分钟，最大90天，最小为1min
      * @param string $InstanceName ckafka集群实例Name
      * @param ModifyInstanceAttributesConfig $Config 实例配置
      * @param DynamicRetentionTime $DynamicRetentionConfig 动态消息保留策略配置
@@ -111,7 +111,7 @@ class ModifyInstanceAttributesRequest extends AbstractModel
      * @param integer $PublicNetwork 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
      * @param DynamicDiskConfig $DynamicDiskConfig 动态硬盘扩容策略配置
      * @param integer $MaxMessageByte 实例级别单条消息大小（单位byte)  最大 12582912(不包含)  最小1024(不包含)
-     * @param integer $UncleanLeaderElectionEnable 集群topic默认 unclean.leader.election.enable配置: 1 开启  0 关闭
+     * @param integer $UncleanLeaderElectionEnable 是否允许未同步的副本选为 leader: 1 开启  0 关闭
      * @param integer $DeleteProtectionEnable 实例删除保护开关: 1 开启  0 关闭
      */
     function __construct()

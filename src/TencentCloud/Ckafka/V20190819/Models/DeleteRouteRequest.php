@@ -20,24 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteRoute请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka集群实例Id
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
- * @method integer getRouteId() 获取路由id
- * @method void setRouteId(integer $RouteId) 设置路由id
+ * @method string getInstanceId() 获取ckafka集群实例Id,可通过DescribeInstances接口获取
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id,可通过DescribeInstances接口获取
+ * @method integer getRouteId() 获取路由id,可通过DescribeRoute接口获取
+ * @method void setRouteId(integer $RouteId) 设置路由id,可通过DescribeRoute接口获取
  * @method integer getCallerAppid() 获取调用方appId
  * @method void setCallerAppid(integer $CallerAppid) 设置调用方appId
- * @method string getDeleteRouteTime() 获取设置定时删除路由时间,若DeleteRouteTime < now ,设置时间小于当前接口提交时间则立即执行;DeleteRouteTime > now,设置时间大于当前接口提交时间,则按照设置的时间,定时执行删除;  该参数设置提交后,无法撤销!!!
- * @method void setDeleteRouteTime(string $DeleteRouteTime) 设置设置定时删除路由时间,若DeleteRouteTime < now ,设置时间小于当前接口提交时间则立即执行;DeleteRouteTime > now,设置时间大于当前接口提交时间,则按照设置的时间,定时执行删除;  该参数设置提交后,无法撤销!!!
+ * @method string getDeleteRouteTime() 获取设置定时删除路由时间,仅类型为公网路由支持定时删除,可选择未来的24小时的任意时间
+ * @method void setDeleteRouteTime(string $DeleteRouteTime) 设置设置定时删除路由时间,仅类型为公网路由支持定时删除,可选择未来的24小时的任意时间
  */
 class DeleteRouteRequest extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例Id
+     * @var string ckafka集群实例Id,可通过DescribeInstances接口获取
      */
     public $InstanceId;
 
     /**
-     * @var integer 路由id
+     * @var integer 路由id,可通过DescribeRoute接口获取
      */
     public $RouteId;
 
@@ -47,15 +47,15 @@ class DeleteRouteRequest extends AbstractModel
     public $CallerAppid;
 
     /**
-     * @var string 设置定时删除路由时间,若DeleteRouteTime < now ,设置时间小于当前接口提交时间则立即执行;DeleteRouteTime > now,设置时间大于当前接口提交时间,则按照设置的时间,定时执行删除;  该参数设置提交后,无法撤销!!!
+     * @var string 设置定时删除路由时间,仅类型为公网路由支持定时删除,可选择未来的24小时的任意时间
      */
     public $DeleteRouteTime;
 
     /**
-     * @param string $InstanceId ckafka集群实例Id
-     * @param integer $RouteId 路由id
+     * @param string $InstanceId ckafka集群实例Id,可通过DescribeInstances接口获取
+     * @param integer $RouteId 路由id,可通过DescribeRoute接口获取
      * @param integer $CallerAppid 调用方appId
-     * @param string $DeleteRouteTime 设置定时删除路由时间,若DeleteRouteTime < now ,设置时间小于当前接口提交时间则立即执行;DeleteRouteTime > now,设置时间大于当前接口提交时间,则按照设置的时间,定时执行删除;  该参数设置提交后,无法撤销!!!
+     * @param string $DeleteRouteTime 设置定时删除路由时间,仅类型为公网路由支持定时删除,可选择未来的24小时的任意时间
      */
     function __construct()
     {

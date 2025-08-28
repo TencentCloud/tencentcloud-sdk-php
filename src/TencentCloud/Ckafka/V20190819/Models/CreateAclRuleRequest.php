@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAclRule请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka集群实例Id
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
+ * @method string getInstanceId() 获取ckafka集群实例Id，可通过DescribeInstances接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id，可通过DescribeInstances接口获取。
  * @method string getResourceType() 获取Acl资源类型,目前只支持Topic,枚举值列表：Topic
  * @method void setResourceType(string $ResourceType) 设置Acl资源类型,目前只支持Topic,枚举值列表：Topic
  * @method string getPatternType() 获取ACL规则匹配类型，目前支持前缀匹配与预设策略，枚举值列表：PREFIXED/PRESET
@@ -30,17 +30,17 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuleName(string $RuleName) 设置规则名称
  * @method array getRuleList() 获取设置的ACL规则列表
  * @method void setRuleList(array $RuleList) 设置设置的ACL规则列表
- * @method string getPattern() 获取表示前缀匹配的前缀的值
- * @method void setPattern(string $Pattern) 设置表示前缀匹配的前缀的值
- * @method integer getIsApplied() 获取预设ACL规则是否应用到新增的topic中
- * @method void setIsApplied(integer $IsApplied) 设置预设ACL规则是否应用到新增的topic中
+ * @method string getPattern() 获取表示前缀匹配的前缀的值 (当PatternType取值为PREFIXED时，此参数必填)
+ * @method void setPattern(string $Pattern) 设置表示前缀匹配的前缀的值 (当PatternType取值为PREFIXED时，此参数必填)
+ * @method integer getIsApplied() 获取预设ACL规则是否应用到新增的topic中。默认为0，表示否。取值为1时表示是。
+ * @method void setIsApplied(integer $IsApplied) 设置预设ACL规则是否应用到新增的topic中。默认为0，表示否。取值为1时表示是。
  * @method string getComment() 获取ACL规则的备注
  * @method void setComment(string $Comment) 设置ACL规则的备注
  */
 class CreateAclRuleRequest extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例Id
+     * @var string ckafka集群实例Id，可通过DescribeInstances接口获取。
      */
     public $InstanceId;
 
@@ -65,12 +65,12 @@ class CreateAclRuleRequest extends AbstractModel
     public $RuleList;
 
     /**
-     * @var string 表示前缀匹配的前缀的值
+     * @var string 表示前缀匹配的前缀的值 (当PatternType取值为PREFIXED时，此参数必填)
      */
     public $Pattern;
 
     /**
-     * @var integer 预设ACL规则是否应用到新增的topic中
+     * @var integer 预设ACL规则是否应用到新增的topic中。默认为0，表示否。取值为1时表示是。
      */
     public $IsApplied;
 
@@ -80,13 +80,13 @@ class CreateAclRuleRequest extends AbstractModel
     public $Comment;
 
     /**
-     * @param string $InstanceId ckafka集群实例Id
+     * @param string $InstanceId ckafka集群实例Id，可通过DescribeInstances接口获取。
      * @param string $ResourceType Acl资源类型,目前只支持Topic,枚举值列表：Topic
      * @param string $PatternType ACL规则匹配类型，目前支持前缀匹配与预设策略，枚举值列表：PREFIXED/PRESET
      * @param string $RuleName 规则名称
      * @param array $RuleList 设置的ACL规则列表
-     * @param string $Pattern 表示前缀匹配的前缀的值
-     * @param integer $IsApplied 预设ACL规则是否应用到新增的topic中
+     * @param string $Pattern 表示前缀匹配的前缀的值 (当PatternType取值为PREFIXED时，此参数必填)
+     * @param integer $IsApplied 预设ACL规则是否应用到新增的topic中。默认为0，表示否。取值为1时表示是。
      * @param string $Comment ACL规则的备注
      */
     function __construct()

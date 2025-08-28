@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSearchWord() 获取搜索词，可以搜索ID/名称/备注/标签
  * @method void setSearchWord(string $SearchWord) 设置搜索词，可以搜索ID/名称/备注/标签
- * @method string getOrderBy() 获取排序字段，例如创建时间
- * @method void setOrderBy(string $OrderBy) 设置排序字段，例如创建时间
+ * @method string getOrderBy() 获取排序字段，目前仅支持使用“创建时间”
+ * @method void setOrderBy(string $OrderBy) 设置排序字段，目前仅支持使用“创建时间”
  * @method integer getOrderType() 获取排序方式，0表示升序，1表示倒序
  * @method void setOrderType(integer $OrderType) 设置排序方式，0表示升序，1表示倒序
  * @method integer getOffset() 获取偏移量，默认0
@@ -43,7 +43,7 @@ class DescribeClustersRequest extends AbstractModel
     public $SearchWord;
 
     /**
-     * @var string 排序字段，例如创建时间
+     * @var string 排序字段，目前仅支持使用“创建时间”
      */
     public $OrderBy;
 
@@ -74,7 +74,7 @@ class DescribeClustersRequest extends AbstractModel
 
     /**
      * @param string $SearchWord 搜索词，可以搜索ID/名称/备注/标签
-     * @param string $OrderBy 排序字段，例如创建时间
+     * @param string $OrderBy 排序字段，目前仅支持使用“创建时间”
      * @param integer $OrderType 排序方式，0表示升序，1表示倒序
      * @param integer $Offset 偏移量，默认0
      * @param integer $Limit 分页个数，0-50 之间，默认20

@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getCenterType() 获取配置中心类型[注册中心Registration、配置中心Configuration]
  * @method void setCenterType(string $CenterType) 设置配置中心类型[注册中心Registration、配置中心Configuration]
- * @method string getInstanceId() 获取实例id，通过北极星控制台获取
- * @method void setInstanceId(string $InstanceId) 设置实例id，通过北极星控制台获取
+ * @method string getInstanceId() 获取实例id，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
+ * @method void setInstanceId(string $InstanceId) 设置实例id，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
  * @method string getInstanceType() 获取实例类型，例如北极星Polaris
  * @method void setInstanceType(string $InstanceType) 设置实例类型，例如北极星Polaris
  * @method string getInstanceName() 获取实例名称
  * @method void setInstanceName(string $InstanceName) 设置实例名称
- * @method string getRegionId() 获取实例地域id，通过北极星控制台获取
- * @method void setRegionId(string $RegionId) 设置实例地域id，通过北极星控制台获取
- * @method string getInstanceNamespaceId() 获取实例命名空间ID，通过北极星控制台获取
- * @method void setInstanceNamespaceId(string $InstanceNamespaceId) 设置实例命名空间ID，通过北极星控制台获取
+ * @method string getRegionId() 获取实例地域id，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
+ * @method void setRegionId(string $RegionId) 设置实例地域id，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
+ * @method string getInstanceNamespaceId() 获取实例命名空间ID，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
+ * @method void setInstanceNamespaceId(string $InstanceNamespaceId) 设置实例命名空间ID，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
  */
 class ExclusiveInstance extends AbstractModel
 {
@@ -41,7 +41,7 @@ class ExclusiveInstance extends AbstractModel
     public $CenterType;
 
     /**
-     * @var string 实例id，通过北极星控制台获取
+     * @var string 实例id，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
      */
     public $InstanceId;
 
@@ -56,22 +56,22 @@ class ExclusiveInstance extends AbstractModel
     public $InstanceName;
 
     /**
-     * @var string 实例地域id，通过北极星控制台获取
+     * @var string 实例地域id，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
      */
     public $RegionId;
 
     /**
-     * @var string 实例命名空间ID，通过北极星控制台获取
+     * @var string 实例命名空间ID，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
      */
     public $InstanceNamespaceId;
 
     /**
      * @param string $CenterType 配置中心类型[注册中心Registration、配置中心Configuration]
-     * @param string $InstanceId 实例id，通过北极星控制台获取
+     * @param string $InstanceId 实例id，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
      * @param string $InstanceType 实例类型，例如北极星Polaris
      * @param string $InstanceName 实例名称
-     * @param string $RegionId 实例地域id，通过北极星控制台获取
-     * @param string $InstanceNamespaceId 实例命名空间ID，通过北极星控制台获取
+     * @param string $RegionId 实例地域id，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
+     * @param string $InstanceNamespaceId 实例命名空间ID，通过[北极星控制台](https://console.cloud.tencent.com/tse/governance)获取
      */
     function __construct()
     {

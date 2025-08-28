@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getAutoCreateTopicEnable() 获取自动创建 true 表示开启，false 表示不开启
  * @method void setAutoCreateTopicEnable(boolean $AutoCreateTopicEnable) 设置自动创建 true 表示开启，false 表示不开启
- * @method integer getDefaultNumPartitions() 获取可选，如果auto.create.topic.enable设置为true没有设置该值时，默认设置为3
- * @method void setDefaultNumPartitions(integer $DefaultNumPartitions) 设置可选，如果auto.create.topic.enable设置为true没有设置该值时，默认设置为3
- * @method integer getDefaultReplicationFactor() 获取如果auto.create.topic.enable设置为true没有指定该值时默认设置为2
- * @method void setDefaultReplicationFactor(integer $DefaultReplicationFactor) 设置如果auto.create.topic.enable设置为true没有指定该值时默认设置为2
+ * @method integer getDefaultNumPartitions() 获取新创建主题的默认分区数,如果AutoCreateTopicEnable设置为true没有设置该值时，默认设置为3
+ * @method void setDefaultNumPartitions(integer $DefaultNumPartitions) 设置新创建主题的默认分区数,如果AutoCreateTopicEnable设置为true没有设置该值时，默认设置为3
+ * @method integer getDefaultReplicationFactor() 获取新创建主题的默认副本数,如果AutoCreateTopicEnable设置为true没有指定该值时默认设置为2
+ * @method void setDefaultReplicationFactor(integer $DefaultReplicationFactor) 设置新创建主题的默认副本数,如果AutoCreateTopicEnable设置为true没有指定该值时默认设置为2
  */
 class ModifyInstanceAttributesConfig extends AbstractModel
 {
@@ -35,19 +35,19 @@ class ModifyInstanceAttributesConfig extends AbstractModel
     public $AutoCreateTopicEnable;
 
     /**
-     * @var integer 可选，如果auto.create.topic.enable设置为true没有设置该值时，默认设置为3
+     * @var integer 新创建主题的默认分区数,如果AutoCreateTopicEnable设置为true没有设置该值时，默认设置为3
      */
     public $DefaultNumPartitions;
 
     /**
-     * @var integer 如果auto.create.topic.enable设置为true没有指定该值时默认设置为2
+     * @var integer 新创建主题的默认副本数,如果AutoCreateTopicEnable设置为true没有指定该值时默认设置为2
      */
     public $DefaultReplicationFactor;
 
     /**
      * @param boolean $AutoCreateTopicEnable 自动创建 true 表示开启，false 表示不开启
-     * @param integer $DefaultNumPartitions 可选，如果auto.create.topic.enable设置为true没有设置该值时，默认设置为3
-     * @param integer $DefaultReplicationFactor 如果auto.create.topic.enable设置为true没有指定该值时默认设置为2
+     * @param integer $DefaultNumPartitions 新创建主题的默认分区数,如果AutoCreateTopicEnable设置为true没有设置该值时，默认设置为3
+     * @param integer $DefaultReplicationFactor 新创建主题的默认副本数,如果AutoCreateTopicEnable设置为true没有指定该值时默认设置为2
      */
     function __construct()
     {

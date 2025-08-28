@@ -20,8 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Datahub资源配置
  *
- * @method string getType() 获取资源类型
- * @method void setType(string $Type) 设置资源类型
+ * @method string getType() 获取资源类型  type类型如下: 
+KAFKA,
+EB_ES,
+EB_COS,
+EB_CLS,
+EB_,
+MONGODB,
+HTTP,
+TDW,
+ES,
+CLICKHOUSE,
+DTS,
+CLS,
+COS,
+TOPIC,
+MYSQL,
+MQTT,
+MYSQL_DATA,
+DORIS,
+POSTGRESQL,
+TDSQL_C_POSTGRESQL,
+TDSQL_POSTGRESQL,
+WAREHOUSE_POSTGRESQL,
+TDSQL_C_MYSQL,
+MARIADB,
+SQLSERVER,
+CTSDB,
+SCF
+
+
+ * @method void setType(string $Type) 设置资源类型  type类型如下: 
+KAFKA,
+EB_ES,
+EB_COS,
+EB_CLS,
+EB_,
+MONGODB,
+HTTP,
+TDW,
+ES,
+CLICKHOUSE,
+DTS,
+CLS,
+COS,
+TOPIC,
+MYSQL,
+MQTT,
+MYSQL_DATA,
+DORIS,
+POSTGRESQL,
+TDSQL_C_POSTGRESQL,
+TDSQL_POSTGRESQL,
+WAREHOUSE_POSTGRESQL,
+TDSQL_C_MYSQL,
+MARIADB,
+SQLSERVER,
+CTSDB,
+SCF
+
+
  * @method KafkaParam getKafkaParam() 获取ckafka配置，Type为KAFKA时必填
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKafkaParam(KafkaParam $KafkaParam) 设置ckafka配置，Type为KAFKA时必填
@@ -94,7 +152,36 @@ use TencentCloud\Common\AbstractModel;
 class DatahubResource extends AbstractModel
 {
     /**
-     * @var string 资源类型
+     * @var string 资源类型  type类型如下: 
+KAFKA,
+EB_ES,
+EB_COS,
+EB_CLS,
+EB_,
+MONGODB,
+HTTP,
+TDW,
+ES,
+CLICKHOUSE,
+DTS,
+CLS,
+COS,
+TOPIC,
+MYSQL,
+MQTT,
+MYSQL_DATA,
+DORIS,
+POSTGRESQL,
+TDSQL_C_POSTGRESQL,
+TDSQL_POSTGRESQL,
+WAREHOUSE_POSTGRESQL,
+TDSQL_C_MYSQL,
+MARIADB,
+SQLSERVER,
+CTSDB,
+SCF
+
+
      */
     public $Type;
 
@@ -201,7 +288,36 @@ class DatahubResource extends AbstractModel
     public $MqttParam;
 
     /**
-     * @param string $Type 资源类型
+     * @param string $Type 资源类型  type类型如下: 
+KAFKA,
+EB_ES,
+EB_COS,
+EB_CLS,
+EB_,
+MONGODB,
+HTTP,
+TDW,
+ES,
+CLICKHOUSE,
+DTS,
+CLS,
+COS,
+TOPIC,
+MYSQL,
+MQTT,
+MYSQL_DATA,
+DORIS,
+POSTGRESQL,
+TDSQL_C_POSTGRESQL,
+TDSQL_POSTGRESQL,
+WAREHOUSE_POSTGRESQL,
+TDSQL_C_MYSQL,
+MARIADB,
+SQLSERVER,
+CTSDB,
+SCF
+
+
      * @param KafkaParam $KafkaParam ckafka配置，Type为KAFKA时必填
 注意：此字段可能返回 null，表示取不到有效值。
      * @param EventBusParam $EventBusParam EB配置，Type为EB时必填

@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteTopicIpWhiteList请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka集群实例Id
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
- * @method string getTopicName() 获取主题名
- * @method void setTopicName(string $TopicName) 设置主题名
+ * @method string getInstanceId() 获取ckafka集群实例Id，可通过DescribeInstances接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id，可通过DescribeInstances接口获取。
+ * @method string getTopicName() 获取主题名，可通过DescribeTopic接口获取。
+ * @method void setTopicName(string $TopicName) 设置主题名，可通过DescribeTopic接口获取。
  * @method array getIpWhiteList() 获取ip白名单列表
  * @method void setIpWhiteList(array $IpWhiteList) 设置ip白名单列表
  */
 class DeleteTopicIpWhiteListRequest extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例Id
+     * @var string ckafka集群实例Id，可通过DescribeInstances接口获取。
      */
     public $InstanceId;
 
     /**
-     * @var string 主题名
+     * @var string 主题名，可通过DescribeTopic接口获取。
      */
     public $TopicName;
 
@@ -45,8 +45,8 @@ class DeleteTopicIpWhiteListRequest extends AbstractModel
     public $IpWhiteList;
 
     /**
-     * @param string $InstanceId ckafka集群实例Id
-     * @param string $TopicName 主题名
+     * @param string $InstanceId ckafka集群实例Id，可通过DescribeInstances接口获取。
+     * @param string $TopicName 主题名，可通过DescribeTopic接口获取。
      * @param array $IpWhiteList ip白名单列表
      */
     function __construct()

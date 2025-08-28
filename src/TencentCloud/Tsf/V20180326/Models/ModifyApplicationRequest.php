@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyApplication请求参数结构体
  *
- * @method string getApplicationId() 获取应用ID
- * @method void setApplicationId(string $ApplicationId) 设置应用ID
+ * @method string getApplicationId() 获取应用ID，可通过调用[DescribeApplications](https://cloud.tencent.com/document/api/649/36090)查询已创建的应用列表或登录控制台进行查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/api/649/36094)创建新的应用。
+ * @method void setApplicationId(string $ApplicationId) 设置应用ID，可通过调用[DescribeApplications](https://cloud.tencent.com/document/api/649/36090)查询已创建的应用列表或登录控制台进行查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/api/649/36094)创建新的应用。
  * @method string getApplicationName() 获取应用名称
  * @method void setApplicationName(string $ApplicationName) 设置应用名称
  * @method string getApplicationDesc() 获取应用备注
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyApplicationRequest extends AbstractModel
 {
     /**
-     * @var string 应用ID
+     * @var string 应用ID，可通过调用[DescribeApplications](https://cloud.tencent.com/document/api/649/36090)查询已创建的应用列表或登录控制台进行查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/api/649/36094)创建新的应用。
      */
     public $ApplicationId;
 
@@ -80,7 +80,7 @@ class ModifyApplicationRequest extends AbstractModel
     public $FrameworkType;
 
     /**
-     * @param string $ApplicationId 应用ID
+     * @param string $ApplicationId 应用ID，可通过调用[DescribeApplications](https://cloud.tencent.com/document/api/649/36090)查询已创建的应用列表或登录控制台进行查看；也可以调用[CreateApplication](https://cloud.tencent.com/document/api/649/36094)创建新的应用。
      * @param string $ApplicationName 应用名称
      * @param string $ApplicationDesc 应用备注
      * @param string $ApplicationRemarkName 应用备注名

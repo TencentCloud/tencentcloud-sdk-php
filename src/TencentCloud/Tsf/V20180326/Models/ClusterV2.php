@@ -158,9 +158,9 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setKuberneteNativeType(string $KuberneteNativeType) 设置K 表示通过kubeconfig 导入, S 表示通过service account导入
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getKuberneteNativeSecret() 获取native secret
+ * @method string getKuberneteNativeSecret() 获取Kubernetes 密钥
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setKuberneteNativeSecret(string $KuberneteNativeSecret) 设置native secret
+ * @method void setKuberneteNativeSecret(string $KuberneteNativeSecret) 设置Kubernetes 密钥
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getEnableLogCollection() 获取是否开启cls日志功能
  * @method void setEnableLogCollection(boolean $EnableLogCollection) 设置是否开启cls日志功能
@@ -379,7 +379,7 @@ class ClusterV2 extends AbstractModel
     public $KuberneteNativeType;
 
     /**
-     * @var string native secret
+     * @var string Kubernetes 密钥
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $KuberneteNativeSecret;
@@ -464,7 +464,7 @@ class ClusterV2 extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $KuberneteNativeType K 表示通过kubeconfig 导入, S 表示通过service account导入
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $KuberneteNativeSecret native secret
+     * @param string $KuberneteNativeSecret Kubernetes 密钥
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $EnableLogCollection 是否开启cls日志功能
      * @param string $Reason 集群状态的原因

@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlag(boolean $Flag) 设置标识
  * @method string getZoneName() 获取可用区名称
  * @method void setZoneName(string $ZoneName) 设置可用区名称
- * @method integer getZoneStatus() 获取可用区状态
- * @method void setZoneStatus(integer $ZoneStatus) 设置可用区状态
+ * @method integer getZoneStatus() 获取可用区状态  枚举示例:  3: 开启，4: 关闭;  可用区状态以SoldOut为准
+ * @method void setZoneStatus(integer $ZoneStatus) 设置可用区状态  枚举示例:  3: 开启，4: 关闭;  可用区状态以SoldOut为准
  * @method string getExflag() 获取额外标识
  * @method void setExflag(string $Exflag) 设置额外标识
  * @method string getSoldOut() 获取true为售罄，false为未售罄
@@ -69,7 +69,7 @@ class ZoneInfo extends AbstractModel
     public $ZoneName;
 
     /**
-     * @var integer 可用区状态
+     * @var integer 可用区状态  枚举示例:  3: 开启，4: 关闭;  可用区状态以SoldOut为准
      */
     public $ZoneStatus;
 
@@ -100,7 +100,7 @@ class ZoneInfo extends AbstractModel
      * @param integer $AppId 应用标识
      * @param boolean $Flag 标识
      * @param string $ZoneName 可用区名称
-     * @param integer $ZoneStatus 可用区状态
+     * @param integer $ZoneStatus 可用区状态  枚举示例:  3: 开启，4: 关闭;  可用区状态以SoldOut为准
      * @param string $Exflag 额外标识
      * @param string $SoldOut true为售罄，false为未售罄
      * @param array $SalesInfo 标准版售罄信息

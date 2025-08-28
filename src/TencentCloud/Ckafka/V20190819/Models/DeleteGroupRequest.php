@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteGroup请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka集群实例Id
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
- * @method string getGroup() 获取消费分组
- * @method void setGroup(string $Group) 设置消费分组
+ * @method string getInstanceId() 获取ckafka集群实例Id，可通过DescribeInstances接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id，可通过DescribeInstances接口获取。
+ * @method string getGroup() 获取消费组名称，可通过DescribeConsumerGroup接口获取。
+ * @method void setGroup(string $Group) 设置消费组名称，可通过DescribeConsumerGroup接口获取。
  */
 class DeleteGroupRequest extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例Id
+     * @var string ckafka集群实例Id，可通过DescribeInstances接口获取。
      */
     public $InstanceId;
 
     /**
-     * @var string 消费分组
+     * @var string 消费组名称，可通过DescribeConsumerGroup接口获取。
      */
     public $Group;
 
     /**
-     * @param string $InstanceId ckafka集群实例Id
-     * @param string $Group 消费分组
+     * @param string $InstanceId ckafka集群实例Id，可通过DescribeInstances接口获取。
+     * @param string $Group 消费组名称，可通过DescribeConsumerGroup接口获取。
      */
     function __construct()
     {

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDatahubTask请求参数结构体
  *
- * @method string getTaskName() 获取任务名称
- * @method void setTaskName(string $TaskName) 设置任务名称
+ * @method string getTaskName() 获取任务名称,只能以字母起始,允许包含字母、数字、- 、.  、 下划线且长度不超过64 (、为分割符号规则不包含)
+ * @method void setTaskName(string $TaskName) 设置任务名称,只能以字母起始,允许包含字母、数字、- 、.  、 下划线且长度不超过64 (、为分割符号规则不包含)
  * @method string getTaskType() 获取任务类型，SOURCE数据接入，SINK数据流出
  * @method void setTaskType(string $TaskType) 设置任务类型，SOURCE数据接入，SINK数据流出
  * @method DatahubResource getSourceResource() 获取数据源
@@ -46,7 +46,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateDatahubTaskRequest extends AbstractModel
 {
     /**
-     * @var string 任务名称
+     * @var string 任务名称,只能以字母起始,允许包含字母、数字、- 、.  、 下划线且长度不超过64 (、为分割符号规则不包含)
      */
     public $TaskName;
 
@@ -102,7 +102,7 @@ class CreateDatahubTaskRequest extends AbstractModel
     public $Description;
 
     /**
-     * @param string $TaskName 任务名称
+     * @param string $TaskName 任务名称,只能以字母起始,允许包含字母、数字、- 、.  、 下划线且长度不超过64 (、为分割符号规则不包含)
      * @param string $TaskType 任务类型，SOURCE数据接入，SINK数据流出
      * @param DatahubResource $SourceResource 数据源
      * @param DatahubResource $TargetResource 数据目标

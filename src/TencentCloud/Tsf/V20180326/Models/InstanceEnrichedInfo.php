@@ -30,8 +30,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWanIp(string $WanIp) 设置机器外网IP
  * @method string getVpcId() 获取机器所在VPC
  * @method void setVpcId(string $VpcId) 设置机器所在VPC
- * @method string getInstanceStatus() 获取机器运行状态 Pending Running Stopped Rebooting Starting Stopping Abnormal Unknown
- * @method void setInstanceStatus(string $InstanceStatus) 设置机器运行状态 Pending Running Stopped Rebooting Starting Stopping Abnormal Unknown
+ * @method string getInstanceStatus() 获取机器运行状态，枚举值为：
+- `Pending`: 准备中
+-  `Running`: 运行中
+-  `Stopped`: 已停止
+-  `Rebooting`: 重启中
+-  `Starting`: 启动中
+-  `Stopping`: 停止中
+-  `Abnormal`: 异常
+-  `Unknown`: 未知
+-  `Offline`: 离线 
+ * @method void setInstanceStatus(string $InstanceStatus) 设置机器运行状态，枚举值为：
+- `Pending`: 准备中
+-  `Running`: 运行中
+-  `Stopped`: 已停止
+-  `Rebooting`: 重启中
+-  `Starting`: 启动中
+-  `Stopping`: 停止中
+-  `Abnormal`: 异常
+-  `Unknown`: 未知
+-  `Offline`: 离线 
  * @method string getInstanceAvailableStatus() 获取机器可用状态（表示机器上的Agent在线）
  * @method void setInstanceAvailableStatus(string $InstanceAvailableStatus) 设置机器可用状态（表示机器上的Agent在线）
  * @method string getApplicationId() 获取应用ID
@@ -83,7 +101,16 @@ class InstanceEnrichedInfo extends AbstractModel
     public $VpcId;
 
     /**
-     * @var string 机器运行状态 Pending Running Stopped Rebooting Starting Stopping Abnormal Unknown
+     * @var string 机器运行状态，枚举值为：
+- `Pending`: 准备中
+-  `Running`: 运行中
+-  `Stopped`: 已停止
+-  `Rebooting`: 重启中
+-  `Starting`: 启动中
+-  `Stopping`: 停止中
+-  `Abnormal`: 异常
+-  `Unknown`: 未知
+-  `Offline`: 离线 
      */
     public $InstanceStatus;
 
@@ -148,7 +175,16 @@ class InstanceEnrichedInfo extends AbstractModel
      * @param string $LanIp 机器内网IP
      * @param string $WanIp 机器外网IP
      * @param string $VpcId 机器所在VPC
-     * @param string $InstanceStatus 机器运行状态 Pending Running Stopped Rebooting Starting Stopping Abnormal Unknown
+     * @param string $InstanceStatus 机器运行状态，枚举值为：
+- `Pending`: 准备中
+-  `Running`: 运行中
+-  `Stopped`: 已停止
+-  `Rebooting`: 重启中
+-  `Starting`: 启动中
+-  `Stopping`: 停止中
+-  `Abnormal`: 异常
+-  `Unknown`: 未知
+-  `Offline`: 离线 
      * @param string $InstanceAvailableStatus 机器可用状态（表示机器上的Agent在线）
      * @param string $ApplicationId 应用ID
      * @param string $ApplicationName 应用名称

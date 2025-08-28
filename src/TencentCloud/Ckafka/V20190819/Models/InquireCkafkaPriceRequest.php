@@ -29,21 +29,29 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getBandwidth() 获取实例内网带宽大小, 单位MB/s (购买时必填，专业版/高级版询价时带宽信息必填)
  * @method void setBandwidth(integer $Bandwidth) 设置实例内网带宽大小, 单位MB/s (购买时必填，专业版/高级版询价时带宽信息必填)
  * @method InquiryDiskParam getInquiryDiskParam() 获取实例的硬盘购买类型以及大小 (购买时必填，专业版/高级版询价时磁盘信息必填)
+
  * @method void setInquiryDiskParam(InquiryDiskParam $InquiryDiskParam) 设置实例的硬盘购买类型以及大小 (购买时必填，专业版/高级版询价时磁盘信息必填)
+
  * @method integer getMessageRetention() 获取实例消息保留时间大小, 单位小时 (购买时必填)
  * @method void setMessageRetention(integer $MessageRetention) 设置实例消息保留时间大小, 单位小时 (购买时必填)
  * @method integer getTopic() 获取购买实例topic数, 单位个 (购买时必填)
  * @method void setTopic(integer $Topic) 设置购买实例topic数, 单位个 (购买时必填)
  * @method integer getPartition() 获取购买实例分区数, 单位个 (购买时必填，专业版/高级版询价时带宽信息必填)
+分区上限 最大值: 40000,步长: 100
+可以通过以下链接查看规格限制: https://cloud.tencent.com/document/product/597/122563
+
  * @method void setPartition(integer $Partition) 设置购买实例分区数, 单位个 (购买时必填，专业版/高级版询价时带宽信息必填)
+分区上限 最大值: 40000,步长: 100
+可以通过以下链接查看规格限制: https://cloud.tencent.com/document/product/597/122563
+
  * @method array getZoneIds() 获取购买地域, 可通过查看DescribeCkafkaZone这个接口获取ZoneId
  * @method void setZoneIds(array $ZoneIds) 设置购买地域, 可通过查看DescribeCkafkaZone这个接口获取ZoneId
  * @method string getCategoryAction() 获取标记操作, 新购填写purchase, 续费填写renew, (不填时, 默认为purchase)
  * @method void setCategoryAction(string $CategoryAction) 设置标记操作, 新购填写purchase, 续费填写renew, (不填时, 默认为purchase)
  * @method string getBillType() 获取国内站购买的版本, sv_ckafka_instance_s2_1(入门型), sv_ckafka_instance_s2_2(标准版), sv_ckafka_instance_s2_3(进阶型), 如果instanceType为standards2, 但该参数为空, 则默认值为sv_ckafka_instance_s2_1
  * @method void setBillType(string $BillType) 设置国内站购买的版本, sv_ckafka_instance_s2_1(入门型), sv_ckafka_instance_s2_2(标准版), sv_ckafka_instance_s2_3(进阶型), 如果instanceType为standards2, 但该参数为空, 则默认值为sv_ckafka_instance_s2_1
- * @method InquiryPublicNetworkParam getPublicNetworkParam() 获取公网带宽计费模式, 目前只有专业版支持公网带宽 (购买公网带宽时必填)
- * @method void setPublicNetworkParam(InquiryPublicNetworkParam $PublicNetworkParam) 设置公网带宽计费模式, 目前只有专业版支持公网带宽 (购买公网带宽时必填)
+ * @method InquiryPublicNetworkParam getPublicNetworkParam() 获取公网带宽计费模式, 目前只有专业版支持公网带宽 (购买公网带宽时必填),取值为3的倍数
+ * @method void setPublicNetworkParam(InquiryPublicNetworkParam $PublicNetworkParam) 设置公网带宽计费模式, 目前只有专业版支持公网带宽 (购买公网带宽时必填),取值为3的倍数
  * @method string getInstanceId() 获取续费时的实例id, 续费时填写
  * @method void setInstanceId(string $InstanceId) 设置续费时的实例id, 续费时填写
  */
@@ -71,6 +79,7 @@ class InquireCkafkaPriceRequest extends AbstractModel
 
     /**
      * @var InquiryDiskParam 实例的硬盘购买类型以及大小 (购买时必填，专业版/高级版询价时磁盘信息必填)
+
      */
     public $InquiryDiskParam;
 
@@ -86,6 +95,9 @@ class InquireCkafkaPriceRequest extends AbstractModel
 
     /**
      * @var integer 购买实例分区数, 单位个 (购买时必填，专业版/高级版询价时带宽信息必填)
+分区上限 最大值: 40000,步长: 100
+可以通过以下链接查看规格限制: https://cloud.tencent.com/document/product/597/122563
+
      */
     public $Partition;
 
@@ -105,7 +117,7 @@ class InquireCkafkaPriceRequest extends AbstractModel
     public $BillType;
 
     /**
-     * @var InquiryPublicNetworkParam 公网带宽计费模式, 目前只有专业版支持公网带宽 (购买公网带宽时必填)
+     * @var InquiryPublicNetworkParam 公网带宽计费模式, 目前只有专业版支持公网带宽 (购买公网带宽时必填),取值为3的倍数
      */
     public $PublicNetworkParam;
 
@@ -120,13 +132,17 @@ class InquireCkafkaPriceRequest extends AbstractModel
      * @param integer $InstanceNum 购买/续费时购买的实例数量(不填时, 默认为1个)
      * @param integer $Bandwidth 实例内网带宽大小, 单位MB/s (购买时必填，专业版/高级版询价时带宽信息必填)
      * @param InquiryDiskParam $InquiryDiskParam 实例的硬盘购买类型以及大小 (购买时必填，专业版/高级版询价时磁盘信息必填)
+
      * @param integer $MessageRetention 实例消息保留时间大小, 单位小时 (购买时必填)
      * @param integer $Topic 购买实例topic数, 单位个 (购买时必填)
      * @param integer $Partition 购买实例分区数, 单位个 (购买时必填，专业版/高级版询价时带宽信息必填)
+分区上限 最大值: 40000,步长: 100
+可以通过以下链接查看规格限制: https://cloud.tencent.com/document/product/597/122563
+
      * @param array $ZoneIds 购买地域, 可通过查看DescribeCkafkaZone这个接口获取ZoneId
      * @param string $CategoryAction 标记操作, 新购填写purchase, 续费填写renew, (不填时, 默认为purchase)
      * @param string $BillType 国内站购买的版本, sv_ckafka_instance_s2_1(入门型), sv_ckafka_instance_s2_2(标准版), sv_ckafka_instance_s2_3(进阶型), 如果instanceType为standards2, 但该参数为空, 则默认值为sv_ckafka_instance_s2_1
-     * @param InquiryPublicNetworkParam $PublicNetworkParam 公网带宽计费模式, 目前只有专业版支持公网带宽 (购买公网带宽时必填)
+     * @param InquiryPublicNetworkParam $PublicNetworkParam 公网带宽计费模式, 目前只有专业版支持公网带宽 (购买公网带宽时必填),取值为3的倍数
      * @param string $InstanceId 续费时的实例id, 续费时填写
      */
     function __construct()

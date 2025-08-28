@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAcl请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka集群实例Id
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
+ * @method string getInstanceId() 获取ckafka集群实例Id，可通过DescribeInstances接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id，可通过DescribeInstances接口获取。
  * @method integer getResourceType() 获取Acl资源类型，(2:TOPIC，3:GROUP，4:CLUSTER)
  * @method void setResourceType(integer $ResourceType) 设置Acl资源类型，(2:TOPIC，3:GROUP，4:CLUSTER)
  * @method integer getOperation() 获取Acl操作方式，(2:ALL，3:READ，4:WRITE，5:CREATE，6:DELETE，7:ALTER，8:DESCRIBE，9:CLUSTER_ACTION，10:DESCRIBE_CONFIGS，11:ALTER_CONFIGS，12:IDEMPOTENT_WRITE)
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateAclRequest extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例Id
+     * @var string ckafka集群实例Id，可通过DescribeInstances接口获取。
      */
     public $InstanceId;
 
@@ -80,7 +80,7 @@ class CreateAclRequest extends AbstractModel
     public $ResourceNameList;
 
     /**
-     * @param string $InstanceId ckafka集群实例Id
+     * @param string $InstanceId ckafka集群实例Id，可通过DescribeInstances接口获取。
      * @param integer $ResourceType Acl资源类型，(2:TOPIC，3:GROUP，4:CLUSTER)
      * @param integer $Operation Acl操作方式，(2:ALL，3:READ，4:WRITE，5:CREATE，6:DELETE，7:ALTER，8:DESCRIBE，9:CLUSTER_ACTION，10:DESCRIBE_CONFIGS，11:ALTER_CONFIGS，12:IDEMPOTENT_WRITE)
      * @param integer $PermissionType 权限类型，(2:DENY，3:ALLOW)，当前ckafka支持ALLOW(相当于白名单)，其它用于后续兼容开源kafka的acl时使用

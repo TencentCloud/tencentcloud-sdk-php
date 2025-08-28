@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * FetchMessageByOffset请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka集群实例Id
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
- * @method string getTopic() 获取主题名
- * @method void setTopic(string $Topic) 设置主题名
+ * @method string getInstanceId() 获取ckafka集群实例Id，可通过DescribeInstances接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id，可通过DescribeInstances接口获取。
+ * @method string getTopic() 获取主题名，可通过DescribeTopic接口获取。
+ * @method void setTopic(string $Topic) 设置主题名，可通过DescribeTopic接口获取。
  * @method integer getPartition() 获取分区id
  * @method void setPartition(integer $Partition) 设置分区id
  * @method integer getOffset() 获取位点信息
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class FetchMessageByOffsetRequest extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例Id
+     * @var string ckafka集群实例Id，可通过DescribeInstances接口获取。
      */
     public $InstanceId;
 
     /**
-     * @var string 主题名
+     * @var string 主题名，可通过DescribeTopic接口获取。
      */
     public $Topic;
 
@@ -52,8 +52,8 @@ class FetchMessageByOffsetRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @param string $InstanceId ckafka集群实例Id
-     * @param string $Topic 主题名
+     * @param string $InstanceId ckafka集群实例Id，可通过DescribeInstances接口获取。
+     * @param string $Topic 主题名，可通过DescribeTopic接口获取。
      * @param integer $Partition 分区id
      * @param integer $Offset 位点信息
      */

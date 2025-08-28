@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyRoutineMaintenanceTask请求参数结构体
  *
- * @method string getInstanceId() 获取实例id
- * @method void setInstanceId(string $InstanceId) 设置实例id
- * @method string getMaintenanceType() 获取自动化运维类别
- * @method void setMaintenanceType(string $MaintenanceType) 设置自动化运维类别
+ * @method string getInstanceId() 获取ckafka集群实例id,可通过DescribeInstances接口获取
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例id,可通过DescribeInstances接口获取
+ * @method string getMaintenanceType() 获取自动化运维类别, 类别如下: QUOTA、ANALYSIS、RE_BALANCE、ELASTIC_BANDWIDTH
+ * @method void setMaintenanceType(string $MaintenanceType) 设置自动化运维类别, 类别如下: QUOTA、ANALYSIS、RE_BALANCE、ELASTIC_BANDWIDTH
  * @method string getMaintenanceSubtype() 获取INSTANCE_STORAGE_CAPACITY(磁盘自动扩容)/MESSAGE_RETENTION_PERIOD(磁盘动态消息保留策略)
  * @method void setMaintenanceSubtype(string $MaintenanceSubtype) 设置INSTANCE_STORAGE_CAPACITY(磁盘自动扩容)/MESSAGE_RETENTION_PERIOD(磁盘动态消息保留策略)
  * @method string getTopicName() 获取主题名
@@ -38,20 +38,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlannedTime(integer $PlannedTime) 设置任务预期触发时间，存储从当日 0AM 开始偏移的秒数
  * @method string getExtraConfig() 获取任务额外信息
  * @method void setExtraConfig(string $ExtraConfig) 设置任务额外信息
- * @method integer getStatus() 获取任务状态
- * @method void setStatus(integer $Status) 设置任务状态
+ * @method integer getStatus() 获取任务状态,0 开启,1 关闭
+ * @method void setStatus(integer $Status) 设置任务状态,0 开启,1 关闭
  * @method string getWeek() 获取执行week day
  * @method void setWeek(string $Week) 设置执行week day
  */
 class ModifyRoutineMaintenanceTaskRequest extends AbstractModel
 {
     /**
-     * @var string 实例id
+     * @var string ckafka集群实例id,可通过DescribeInstances接口获取
      */
     public $InstanceId;
 
     /**
-     * @var string 自动化运维类别
+     * @var string 自动化运维类别, 类别如下: QUOTA、ANALYSIS、RE_BALANCE、ELASTIC_BANDWIDTH
      */
     public $MaintenanceType;
 
@@ -91,7 +91,7 @@ class ModifyRoutineMaintenanceTaskRequest extends AbstractModel
     public $ExtraConfig;
 
     /**
-     * @var integer 任务状态
+     * @var integer 任务状态,0 开启,1 关闭
      */
     public $Status;
 
@@ -101,8 +101,8 @@ class ModifyRoutineMaintenanceTaskRequest extends AbstractModel
     public $Week;
 
     /**
-     * @param string $InstanceId 实例id
-     * @param string $MaintenanceType 自动化运维类别
+     * @param string $InstanceId ckafka集群实例id,可通过DescribeInstances接口获取
+     * @param string $MaintenanceType 自动化运维类别, 类别如下: QUOTA、ANALYSIS、RE_BALANCE、ELASTIC_BANDWIDTH
      * @param string $MaintenanceSubtype INSTANCE_STORAGE_CAPACITY(磁盘自动扩容)/MESSAGE_RETENTION_PERIOD(磁盘动态消息保留策略)
      * @param string $TopicName 主题名
      * @param integer $ConfigureThreshold 任务触发阈值
@@ -110,7 +110,7 @@ class ModifyRoutineMaintenanceTaskRequest extends AbstractModel
      * @param integer $ConfigureLimit 任务调整上限
      * @param integer $PlannedTime 任务预期触发时间，存储从当日 0AM 开始偏移的秒数
      * @param string $ExtraConfig 任务额外信息
-     * @param integer $Status 任务状态
+     * @param integer $Status 任务状态,0 开启,1 关闭
      * @param string $Week 执行week day
      */
     function __construct()

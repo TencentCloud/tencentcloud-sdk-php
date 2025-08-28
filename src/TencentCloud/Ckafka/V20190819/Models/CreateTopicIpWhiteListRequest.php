@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTopicIpWhiteList请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka集群实例Id
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
- * @method string getTopicName() 获取主题名称
- * @method void setTopicName(string $TopicName) 设置主题名称
- * @method array getIpWhiteList() 获取ip白名单列表
- * @method void setIpWhiteList(array $IpWhiteList) 设置ip白名单列表
+ * @method string getInstanceId() 获取ckafka集群实例Id，可通过DescribeInstances接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id，可通过DescribeInstances接口获取。
+ * @method string getTopicName() 获取主题名称，可通过DescribeTopic接口获取
+ * @method void setTopicName(string $TopicName) 设置主题名称，可通过DescribeTopic接口获取
+ * @method array getIpWhiteList() 获取ip白名单列表，最大值为512，即最大允许传入512个ip。
+ * @method void setIpWhiteList(array $IpWhiteList) 设置ip白名单列表，最大值为512，即最大允许传入512个ip。
  */
 class CreateTopicIpWhiteListRequest extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例Id
+     * @var string ckafka集群实例Id，可通过DescribeInstances接口获取。
      */
     public $InstanceId;
 
     /**
-     * @var string 主题名称
+     * @var string 主题名称，可通过DescribeTopic接口获取
      */
     public $TopicName;
 
     /**
-     * @var array ip白名单列表
+     * @var array ip白名单列表，最大值为512，即最大允许传入512个ip。
      */
     public $IpWhiteList;
 
     /**
-     * @param string $InstanceId ckafka集群实例Id
-     * @param string $TopicName 主题名称
-     * @param array $IpWhiteList ip白名单列表
+     * @param string $InstanceId ckafka集群实例Id，可通过DescribeInstances接口获取。
+     * @param string $TopicName 主题名称，可通过DescribeTopic接口获取
+     * @param array $IpWhiteList ip白名单列表，最大值为512，即最大允许传入512个ip。
      */
     function __construct()
     {

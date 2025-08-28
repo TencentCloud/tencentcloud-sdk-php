@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getCkafkaInstanceId() 获取ckafka集群实例Id
  * @method void setCkafkaInstanceId(string $CkafkaInstanceId) 设置ckafka集群实例Id
- * @method string getInstanceId() 获取CVM实例ID
- * @method void setInstanceId(string $InstanceId) 设置CVM实例ID
+ * @method string getInstanceId() 获取CVM实例ID(ins-test )或POD IP(10.0.0.30)  
+ * @method void setInstanceId(string $InstanceId) 设置CVM实例ID(ins-test )或POD IP(10.0.0.30)  
  * @method string getIp() 获取IP地址
  * @method void setIp(string $Ip) 设置IP地址
  */
@@ -35,7 +35,7 @@ class CvmAndIpInfo extends AbstractModel
     public $CkafkaInstanceId;
 
     /**
-     * @var string CVM实例ID
+     * @var string CVM实例ID(ins-test )或POD IP(10.0.0.30)  
      */
     public $InstanceId;
 
@@ -46,7 +46,7 @@ class CvmAndIpInfo extends AbstractModel
 
     /**
      * @param string $CkafkaInstanceId ckafka集群实例Id
-     * @param string $InstanceId CVM实例ID
+     * @param string $InstanceId CVM实例ID(ins-test )或POD IP(10.0.0.30)  
      * @param string $Ip IP地址
      */
     function __construct()

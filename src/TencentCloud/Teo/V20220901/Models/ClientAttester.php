@@ -31,10 +31,10 @@ use TencentCloud\Common\AbstractModel;
 <li>PRESET: 系统预置规则，仅允许修改 AttesterDuration；</li>
 <li>CUSTOM: 用户自定义规则。</li>
  * @method string getAttesterSource() 获取认证方法。取值有：
-<li>TC-RCE: 使用全栈式风控引擎进行认证；</li>
+<li>TC-RCE: 使用风险识别 RCE 进行认证；</li>
 <li>TC-CAPTCHA: 使用天御验证码进行认证。</li>
  * @method void setAttesterSource(string $AttesterSource) 设置认证方法。取值有：
-<li>TC-RCE: 使用全栈式风控引擎进行认证；</li>
+<li>TC-RCE: 使用风险识别 RCE 进行认证；</li>
 <li>TC-CAPTCHA: 使用天御验证码进行认证。</li>
  * @method string getAttesterDuration() 获取认证有效时间。默认为 60s，支持的单位有：
 <li>s：秒，取值范围 60～43200；</li>
@@ -74,7 +74,7 @@ class ClientAttester extends AbstractModel
 
     /**
      * @var string 认证方法。取值有：
-<li>TC-RCE: 使用全栈式风控引擎进行认证；</li>
+<li>TC-RCE: 使用风险识别 RCE 进行认证；</li>
 <li>TC-CAPTCHA: 使用天御验证码进行认证。</li>
      */
     public $AttesterSource;
@@ -106,7 +106,7 @@ class ClientAttester extends AbstractModel
 <li>PRESET: 系统预置规则，仅允许修改 AttesterDuration；</li>
 <li>CUSTOM: 用户自定义规则。</li>
      * @param string $AttesterSource 认证方法。取值有：
-<li>TC-RCE: 使用全栈式风控引擎进行认证；</li>
+<li>TC-RCE: 使用风险识别 RCE 进行认证；</li>
 <li>TC-CAPTCHA: 使用天御验证码进行认证。</li>
      * @param string $AttesterDuration 认证有效时间。默认为 60s，支持的单位有：
 <li>s：秒，取值范围 60～43200；</li>

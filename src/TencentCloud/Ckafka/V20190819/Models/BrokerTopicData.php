@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopicName(string $TopicName) 设置主题名称
  * @method string getTopicId() 获取主题Id
  * @method void setTopicId(string $TopicId) 设置主题Id
- * @method integer getDataSize() 获取主题占用Broker 容量大小
- * @method void setDataSize(integer $DataSize) 设置主题占用Broker 容量大小
+ * @method integer getDataSize() 获取主题占用Broker 容量大小，单位为Bytes。
+ * @method void setDataSize(integer $DataSize) 设置主题占用Broker 容量大小，单位为Bytes。
  */
 class BrokerTopicData extends AbstractModel
 {
@@ -40,14 +40,14 @@ class BrokerTopicData extends AbstractModel
     public $TopicId;
 
     /**
-     * @var integer 主题占用Broker 容量大小
+     * @var integer 主题占用Broker 容量大小，单位为Bytes。
      */
     public $DataSize;
 
     /**
      * @param string $TopicName 主题名称
      * @param string $TopicId 主题Id
-     * @param integer $DataSize 主题占用Broker 容量大小
+     * @param integer $DataSize 主题占用Broker 容量大小，单位为Bytes。
      */
     function __construct()
     {

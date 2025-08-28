@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPartitionNum(integer $PartitionNum) 设置分区数
  * @method integer getReplicaNum() 获取副本数
  * @method void setReplicaNum(integer $ReplicaNum) 设置副本数
- * @method string getTopicTraffic() 获取Topic 流量
- * @method void setTopicTraffic(string $TopicTraffic) 设置Topic 流量
- * @method integer getMessageHeap() 获取topic消息堆积/占用磁盘
- * @method void setMessageHeap(integer $MessageHeap) 设置topic消息堆积/占用磁盘
+ * @method string getTopicTraffic() 获取Topic 流量，单位为MB。
+ * @method void setTopicTraffic(string $TopicTraffic) 设置Topic 流量，单位为MB。
+ * @method integer getMessageHeap() 获取topic消息堆积/占用磁盘，单位为Bytes。
+ * @method void setMessageHeap(integer $MessageHeap) 设置topic消息堆积/占用磁盘，单位为Bytes。
  */
 class TopicMessageHeapRanking extends AbstractModel
 {
@@ -56,12 +56,12 @@ class TopicMessageHeapRanking extends AbstractModel
     public $ReplicaNum;
 
     /**
-     * @var string Topic 流量
+     * @var string Topic 流量，单位为MB。
      */
     public $TopicTraffic;
 
     /**
-     * @var integer topic消息堆积/占用磁盘
+     * @var integer topic消息堆积/占用磁盘，单位为Bytes。
      */
     public $MessageHeap;
 
@@ -70,8 +70,8 @@ class TopicMessageHeapRanking extends AbstractModel
      * @param string $TopicName 主题名称
      * @param integer $PartitionNum 分区数
      * @param integer $ReplicaNum 副本数
-     * @param string $TopicTraffic Topic 流量
-     * @param integer $MessageHeap topic消息堆积/占用磁盘
+     * @param string $TopicTraffic Topic 流量，单位为MB。
+     * @param integer $MessageHeap topic消息堆积/占用磁盘，单位为Bytes。
      */
     function __construct()
     {

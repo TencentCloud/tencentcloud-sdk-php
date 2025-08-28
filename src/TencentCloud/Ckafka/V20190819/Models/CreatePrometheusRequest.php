@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreatePrometheus请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka集群实例Id
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
+ * @method string getInstanceId() 获取ckafka集群实例Id,可通过DescribeInstances接口获取
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id,可通过DescribeInstances接口获取
  * @method string getVpcId() 获取私有网络Id
  * @method void setVpcId(string $VpcId) 设置私有网络Id
  * @method string getSubnetId() 获取子网Id
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CreatePrometheusRequest extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例Id
+     * @var string ckafka集群实例Id,可通过DescribeInstances接口获取
      */
     public $InstanceId;
 
@@ -45,7 +45,7 @@ class CreatePrometheusRequest extends AbstractModel
     public $SubnetId;
 
     /**
-     * @param string $InstanceId ckafka集群实例Id
+     * @param string $InstanceId ckafka集群实例Id,可通过DescribeInstances接口获取
      * @param string $VpcId 私有网络Id
      * @param string $SubnetId 子网Id
      */

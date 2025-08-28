@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
 2:DISABLE-不可用
  * @method string getPrimaryKey() 获取主要签名key，不传则由系统自动生成，需要base64编码。
  * @method void setPrimaryKey(string $PrimaryKey) 设置主要签名key，不传则由系统自动生成，需要base64编码。
- * @method string getSecondaryKey() 获取次要签名key，不传则油系统自动生成，需要base64编码。
- * @method void setSecondaryKey(string $SecondaryKey) 设置次要签名key，不传则油系统自动生成，需要base64编码。
+ * @method string getSecondaryKey() 获取次要签名key，不传则由系统自动生成，需要base64编码。
+ * @method void setSecondaryKey(string $SecondaryKey) 设置次要签名key，不传则由系统自动生成，需要base64编码。
  * @method array getPropagatingProperties() 获取该设备id的传播属性设置
  * @method void setPropagatingProperties(array $PropagatingProperties) 设置该设备id的传播属性设置
  */
@@ -59,7 +59,7 @@ class CreateDeviceIdentityRequest extends AbstractModel
     public $PrimaryKey;
 
     /**
-     * @var string 次要签名key，不传则油系统自动生成，需要base64编码。
+     * @var string 次要签名key，不传则由系统自动生成，需要base64编码。
      */
     public $SecondaryKey;
 
@@ -74,7 +74,7 @@ class CreateDeviceIdentityRequest extends AbstractModel
      * @param string $Status 1:ENABLED-可用（默认）
 2:DISABLE-不可用
      * @param string $PrimaryKey 主要签名key，不传则由系统自动生成，需要base64编码。
-     * @param string $SecondaryKey 次要签名key，不传则油系统自动生成，需要base64编码。
+     * @param string $SecondaryKey 次要签名key，不传则由系统自动生成，需要base64编码。
      * @param array $PropagatingProperties 该设备id的传播属性设置
      */
     function __construct()

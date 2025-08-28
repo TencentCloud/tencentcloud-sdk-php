@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAclRule请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka集群实例Id
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
+ * @method string getInstanceId() 获取ckafka集群实例Id，可通过DescribeInstances接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id，可通过DescribeInstances接口获取。
  * @method string getRuleName() 获取ACL规则名
  * @method void setRuleName(string $RuleName) 设置ACL规则名
- * @method string getPatternType() 获取ACL规则匹配类型
- * @method void setPatternType(string $PatternType) 设置ACL规则匹配类型
- * @method boolean getIsSimplified() 获取是否读取简略的ACL规则
- * @method void setIsSimplified(boolean $IsSimplified) 设置是否读取简略的ACL规则
+ * @method string getPatternType() 获取ACL规则匹配类型 （PREFIXED：前缀匹配，PRESET：预设策略）
+ * @method void setPatternType(string $PatternType) 设置ACL规则匹配类型 （PREFIXED：前缀匹配，PRESET：预设策略）
+ * @method boolean getIsSimplified() 获取是否读取简略的ACL规则，默认值为false，表示不读取简略的ACL规则。
+ * @method void setIsSimplified(boolean $IsSimplified) 设置是否读取简略的ACL规则，默认值为false，表示不读取简略的ACL规则。
  */
 class DescribeAclRuleRequest extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例Id
+     * @var string ckafka集群实例Id，可通过DescribeInstances接口获取。
      */
     public $InstanceId;
 
@@ -42,20 +42,20 @@ class DescribeAclRuleRequest extends AbstractModel
     public $RuleName;
 
     /**
-     * @var string ACL规则匹配类型
+     * @var string ACL规则匹配类型 （PREFIXED：前缀匹配，PRESET：预设策略）
      */
     public $PatternType;
 
     /**
-     * @var boolean 是否读取简略的ACL规则
+     * @var boolean 是否读取简略的ACL规则，默认值为false，表示不读取简略的ACL规则。
      */
     public $IsSimplified;
 
     /**
-     * @param string $InstanceId ckafka集群实例Id
+     * @param string $InstanceId ckafka集群实例Id，可通过DescribeInstances接口获取。
      * @param string $RuleName ACL规则名
-     * @param string $PatternType ACL规则匹配类型
-     * @param boolean $IsSimplified 是否读取简略的ACL规则
+     * @param string $PatternType ACL规则匹配类型 （PREFIXED：前缀匹配，PRESET：预设策略）
+     * @param boolean $IsSimplified 是否读取简略的ACL规则，默认值为false，表示不读取简略的ACL规则。
      */
     function __construct()
     {

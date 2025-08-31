@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) 设置开始时间，格式yyyy-MM-dd HH:mm:ss
  * @method string getEndTime() 获取结束时间，格式yyyy-MM-dd HH:mm:ss
  * @method void setEndTime(string $EndTime) 设置结束时间，格式yyyy-MM-dd HH:mm:ss
- * @method integer getOffset() 获取开始index
- * @method void setOffset(integer $Offset) 设置开始index
- * @method integer getLimit() 获取分页大小
- * @method void setLimit(integer $Limit) 设置分页大小
+ * @method integer getOffset() 获取开始index，取值范围大于等于0，默认值为0
+ * @method void setOffset(integer $Offset) 设置开始index，取值范围大于等于0，默认值为0
+ * @method integer getLimit() 获取单页请求配置数量，取值范围[1, 50]，默认值为10
+ * @method void setLimit(integer $Limit) 设置单页请求配置数量，取值范围[1, 50]，默认值为10
  * @method string getDimensionName() 获取聚合维度。可选值 NamespaceId：命名空间ID，GroupId：部署组ID，InstanceId：实例ID，ApplicationId：应用ID，OperationMethod：执行方法，OperationName：执行名称，ServiceName：服务名，UpstreamNamespaceId：上游命名空间ID
  * @method void setDimensionName(string $DimensionName) 设置聚合维度。可选值 NamespaceId：命名空间ID，GroupId：部署组ID，InstanceId：实例ID，ApplicationId：应用ID，OperationMethod：执行方法，OperationName：执行名称，ServiceName：服务名，UpstreamNamespaceId：上游命名空间ID
  * @method string getSearchWord() 获取搜索关键字
@@ -48,12 +48,12 @@ class DescribeInvocationMetricDataDimensionRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var integer 开始index
+     * @var integer 开始index，取值范围大于等于0，默认值为0
      */
     public $Offset;
 
     /**
-     * @var integer 分页大小
+     * @var integer 单页请求配置数量，取值范围[1, 50]，默认值为10
      */
     public $Limit;
 
@@ -75,8 +75,8 @@ class DescribeInvocationMetricDataDimensionRequest extends AbstractModel
     /**
      * @param string $StartTime 开始时间，格式yyyy-MM-dd HH:mm:ss
      * @param string $EndTime 结束时间，格式yyyy-MM-dd HH:mm:ss
-     * @param integer $Offset 开始index
-     * @param integer $Limit 分页大小
+     * @param integer $Offset 开始index，取值范围大于等于0，默认值为0
+     * @param integer $Limit 单页请求配置数量，取值范围[1, 50]，默认值为10
      * @param string $DimensionName 聚合维度。可选值 NamespaceId：命名空间ID，GroupId：部署组ID，InstanceId：实例ID，ApplicationId：应用ID，OperationMethod：执行方法，OperationName：执行名称，ServiceName：服务名，UpstreamNamespaceId：上游命名空间ID
      * @param string $SearchWord 搜索关键字
      * @param array $MetricDimensionValues 构建维度

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 返回上报的订单信息
  *
- * @method string getUin() 获取父帐号uin
- * @method void setUin(string $Uin) 设置父帐号uin
+ * @method string getUin() 获取父账号uin
+ * @method void setUin(string $Uin) 设置父账号uin
  * @method string getProjectId() 获取项目id
  * @method void setProjectId(string $ProjectId) 设置项目id
  * @method string getPackageType() 获取用量类型
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class OrderInfo extends AbstractModel
 {
     /**
-     * @var string 父帐号uin
+     * @var string 父账号uin
      */
     public $Uin;
 
@@ -66,7 +66,7 @@ class OrderInfo extends AbstractModel
     public $Updated;
 
     /**
-     * @param string $Uin 父帐号uin
+     * @param string $Uin 父账号uin
      * @param string $ProjectId 项目id
      * @param string $PackageType 用量类型
      * @param string $OrderId 订单编号唯一标识符

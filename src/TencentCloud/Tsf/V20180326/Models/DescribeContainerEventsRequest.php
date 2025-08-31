@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getResourceType() 获取event 的资源类型, 仅支持 group
  * @method void setResourceType(string $ResourceType) 设置event 的资源类型, 仅支持 group
- * @method string getResourceId() 获取部署组ID，按照【部署组ID】进行过滤，可通过调用DescribeGroups查询已创建的项目列表或登录控制台进行查看；也可以调用CreateGroup创建新的项目。部署组ID例如：group-9yn2q8yd
- * @method void setResourceId(string $ResourceId) 设置部署组ID，按照【部署组ID】进行过滤，可通过调用DescribeGroups查询已创建的项目列表或登录控制台进行查看；也可以调用CreateGroup创建新的项目。部署组ID例如：group-9yn2q8yd
+ * @method string getResourceId() 获取部署组ID，按照【部署组ID】进行过滤，可通过调用[DescribeGroups](https://cloud.tencent.com/document/product/649/36065)查询已创建的项目列表或登录控制台进行查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/product/649/36074)创建新的项目。
+ * @method void setResourceId(string $ResourceId) 设置部署组ID，按照【部署组ID】进行过滤，可通过调用[DescribeGroups](https://cloud.tencent.com/document/product/649/36065)查询已创建的项目列表或登录控制台进行查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/product/649/36074)创建新的项目。
  * @method integer getOffset() 获取偏移量，取值从0开始
  * @method void setOffset(integer $Offset) 设置偏移量，取值从0开始
  * @method integer getLimit() 获取分页个数，默认为20， 取值应为1~50
@@ -47,7 +47,7 @@ class DescribeContainerEventsRequest extends AbstractModel
     public $ResourceType;
 
     /**
-     * @var string 部署组ID，按照【部署组ID】进行过滤，可通过调用DescribeGroups查询已创建的项目列表或登录控制台进行查看；也可以调用CreateGroup创建新的项目。部署组ID例如：group-9yn2q8yd
+     * @var string 部署组ID，按照【部署组ID】进行过滤，可通过调用[DescribeGroups](https://cloud.tencent.com/document/product/649/36065)查询已创建的项目列表或登录控制台进行查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/product/649/36074)创建新的项目。
      */
     public $ResourceId;
 
@@ -88,7 +88,7 @@ class DescribeContainerEventsRequest extends AbstractModel
 
     /**
      * @param string $ResourceType event 的资源类型, 仅支持 group
-     * @param string $ResourceId 部署组ID，按照【部署组ID】进行过滤，可通过调用DescribeGroups查询已创建的项目列表或登录控制台进行查看；也可以调用CreateGroup创建新的项目。部署组ID例如：group-9yn2q8yd
+     * @param string $ResourceId 部署组ID，按照【部署组ID】进行过滤，可通过调用[DescribeGroups](https://cloud.tencent.com/document/product/649/36065)查询已创建的项目列表或登录控制台进行查看；也可以调用[CreateGroup](https://cloud.tencent.com/document/product/649/36074)创建新的项目。
      * @param integer $Offset 偏移量，取值从0开始
      * @param integer $Limit 分页个数，默认为20， 取值应为1~50
      * @param string $GroupId 部署组ID，可通过调用[DescribeContainerGroups](https://cloud.tencent.com/document/api/649/36068)查询已创建的部署组列表或登录控制台进行查看；也可以调用[CreateContainGroup](https://cloud.tencent.com/document/api/649/36075)创建新的部署组。

@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemRequest(string $MemRequest) 设置初始分配的内存 MiB 数，对应 K8S request
  * @method string getGroupResourceType() 获取部署组资源类型；DEF 表示默认资源类型
  * @method void setGroupResourceType(string $GroupResourceType) 设置部署组资源类型；DEF 表示默认资源类型
- * @method string getSubnetId() 获取分组所属【子网ID】，可前往TKE侧集群[控制台](https://console.cloud.tencent.com/tke2/cluster/sub/list/basic/info/base?rid=1&clusterId=cls-2nhp3g1i)进行获取
- * @method void setSubnetId(string $SubnetId) 设置分组所属【子网ID】，可前往TKE侧集群[控制台](https://console.cloud.tencent.com/tke2/cluster/sub/list/basic/info/base?rid=1&clusterId=cls-2nhp3g1i)进行获取
+ * @method string getSubnetId() 获取分组所属【子网ID】，可前往私有网络[控制台](https://console.cloud.tencent.com/vpc/subnet?rid=1&unVpcId=vpc-6bs8ytjd)进行获取
+ * @method void setSubnetId(string $SubnetId) 设置分组所属【子网ID】，可前往私有网络[控制台](https://console.cloud.tencent.com/vpc/subnet?rid=1&unVpcId=vpc-6bs8ytjd)进行获取
  * @method string getAgentCpuRequest() 获取agent 容器分配的 CPU 核数，对应 K8S 的 request
  * @method void setAgentCpuRequest(string $AgentCpuRequest) 设置agent 容器分配的 CPU 核数，对应 K8S 的 request
  * @method string getAgentCpuLimit() 获取agent 容器最大的 CPU 核数，对应 K8S 的 limit
@@ -147,7 +147,7 @@ class CreateContainGroupRequest extends AbstractModel
     public $GroupResourceType;
 
     /**
-     * @var string 分组所属【子网ID】，可前往TKE侧集群[控制台](https://console.cloud.tencent.com/tke2/cluster/sub/list/basic/info/base?rid=1&clusterId=cls-2nhp3g1i)进行获取
+     * @var string 分组所属【子网ID】，可前往私有网络[控制台](https://console.cloud.tencent.com/vpc/subnet?rid=1&unVpcId=vpc-6bs8ytjd)进行获取
      */
     public $SubnetId;
 
@@ -207,7 +207,7 @@ class CreateContainGroupRequest extends AbstractModel
      * @param string $CpuRequest 初始分配的 CPU 核数，对应 K8S request
      * @param string $MemRequest 初始分配的内存 MiB 数，对应 K8S request
      * @param string $GroupResourceType 部署组资源类型；DEF 表示默认资源类型
-     * @param string $SubnetId 分组所属【子网ID】，可前往TKE侧集群[控制台](https://console.cloud.tencent.com/tke2/cluster/sub/list/basic/info/base?rid=1&clusterId=cls-2nhp3g1i)进行获取
+     * @param string $SubnetId 分组所属【子网ID】，可前往私有网络[控制台](https://console.cloud.tencent.com/vpc/subnet?rid=1&unVpcId=vpc-6bs8ytjd)进行获取
      * @param string $AgentCpuRequest agent 容器分配的 CPU 核数，对应 K8S 的 request
      * @param string $AgentCpuLimit agent 容器最大的 CPU 核数，对应 K8S 的 limit
      * @param string $AgentMemRequest agent 容器分配的内存 MiB 数，对应 K8S 的 request

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLastTimestamp(integer $LastTimestamp) 设置最后一次出现的时间，以 ms 为单位的时间戳
  * @method string getType() 获取级别
  * @method void setType(string $Type) 设置级别
- * @method string getKind() 获取Kubernetes 资源类型，典型取值有 Deployment、Pod、Service 等
- * @method void setKind(string $Kind) 设置Kubernetes 资源类型，典型取值有 Deployment、Pod、Service 等
+ * @method string getKind() 获取Kubernetes 资源类型，典型取值有 Deployment(部署资源)、Pod(容器组)、Service(服务资源) 等
+ * @method void setKind(string $Kind) 设置Kubernetes 资源类型，典型取值有 Deployment(部署资源)、Pod(容器组)、Service(服务资源) 等
  * @method string getName() 获取资源名称
  * @method void setName(string $Name) 设置资源名称
  * @method string getReason() 获取内容
@@ -55,7 +55,7 @@ class ContainerEvent extends AbstractModel
     public $Type;
 
     /**
-     * @var string Kubernetes 资源类型，典型取值有 Deployment、Pod、Service 等
+     * @var string Kubernetes 资源类型，典型取值有 Deployment(部署资源)、Pod(容器组)、Service(服务资源) 等
      */
     public $Kind;
 
@@ -83,7 +83,7 @@ class ContainerEvent extends AbstractModel
      * @param integer $FirstTimestamp 第一次出现的时间，以 ms 为单位的时间戳
      * @param integer $LastTimestamp 最后一次出现的时间，以 ms 为单位的时间戳
      * @param string $Type 级别
-     * @param string $Kind Kubernetes 资源类型，典型取值有 Deployment、Pod、Service 等
+     * @param string $Kind Kubernetes 资源类型，典型取值有 Deployment(部署资源)、Pod(容器组)、Service(服务资源) 等
      * @param string $Name 资源名称
      * @param string $Reason 内容
      * @param string $Message 详细描述

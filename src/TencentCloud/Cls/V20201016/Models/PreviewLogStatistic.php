@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogContent(string $LogContent) 设置日志内容
  * @method integer getLineNum() 获取行号。从0开始
  * @method void setLineNum(integer $LineNum) 设置行号。从0开始
- * @method string getDstTopicId() 获取目标日志主题
- * @method void setDstTopicId(string $DstTopicId) 设置目标日志主题
+ * @method string getDstTopicId() 获取目标日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
+ * @method void setDstTopicId(string $DstTopicId) 设置目标日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
  * @method string getFailReason() 获取失败错误信息， 空字符串""表示正常
  * @method void setFailReason(string $FailReason) 设置失败错误信息， 空字符串""表示正常
  * @method string getTime() 获取日志时间，格式：`2024-05-07 17:13:17.105`
@@ -54,7 +56,8 @@ class PreviewLogStatistic extends AbstractModel
     public $LineNum;
 
     /**
-     * @var string 目标日志主题
+     * @var string 目标日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      */
     public $DstTopicId;
 
@@ -81,7 +84,8 @@ class PreviewLogStatistic extends AbstractModel
     /**
      * @param string $LogContent 日志内容
      * @param integer $LineNum 行号。从0开始
-     * @param string $DstTopicId 目标日志主题
+     * @param string $DstTopicId 目标日志主题ID
+- 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      * @param string $FailReason 失败错误信息， 空字符串""表示正常
      * @param string $Time 日志时间，格式：`2024-05-07 17:13:17.105`
 

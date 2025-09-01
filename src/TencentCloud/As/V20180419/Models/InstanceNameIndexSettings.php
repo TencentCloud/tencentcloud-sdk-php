@@ -28,18 +28,16 @@ use TencentCloud\Common\AbstractModel;
 
 **TRUE**：表示开启实例创建序号; **FALSE**：表示不开启实例创建序号
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getBeginIndex() 获取初始序号。
-序号固定位数 IndexLength 为默认值0时，取值范围为 [0, 99999999]。
-序号固定位数 IndexLength 为 [1, 8] 时，取值范围为为 [0, 固定位数的最大数字]。
+ * @method integer getBeginIndex() 获取初始序号。取值范围为 [0, 99999999]。
+
 当序号递增后超出取值范围时，扩容活动会失败。
 
 首次开启实例名称序号：默认值为 0。
 非首次开启实例名称序号：若不指定该参数，沿用历史序号。
 下调初始序号可能会造成伸缩组内实例名称序号重复。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setBeginIndex(integer $BeginIndex) 设置初始序号。
-序号固定位数 IndexLength 为默认值0时，取值范围为 [0, 99999999]。
-序号固定位数 IndexLength 为 [1, 8] 时，取值范围为为 [0, 固定位数的最大数字]。
+ * @method void setBeginIndex(integer $BeginIndex) 设置初始序号。取值范围为 [0, 99999999]。
+
 当序号递增后超出取值范围时，扩容活动会失败。
 
 首次开启实例名称序号：默认值为 0。
@@ -58,9 +56,8 @@ class InstanceNameIndexSettings extends AbstractModel
     public $Enabled;
 
     /**
-     * @var integer 初始序号。
-序号固定位数 IndexLength 为默认值0时，取值范围为 [0, 99999999]。
-序号固定位数 IndexLength 为 [1, 8] 时，取值范围为为 [0, 固定位数的最大数字]。
+     * @var integer 初始序号。取值范围为 [0, 99999999]。
+
 当序号递增后超出取值范围时，扩容活动会失败。
 
 首次开启实例名称序号：默认值为 0。
@@ -75,9 +72,8 @@ class InstanceNameIndexSettings extends AbstractModel
 
 **TRUE**：表示开启实例创建序号; **FALSE**：表示不开启实例创建序号
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $BeginIndex 初始序号。
-序号固定位数 IndexLength 为默认值0时，取值范围为 [0, 99999999]。
-序号固定位数 IndexLength 为 [1, 8] 时，取值范围为为 [0, 固定位数的最大数字]。
+     * @param integer $BeginIndex 初始序号。取值范围为 [0, 99999999]。
+
 当序号递增后超出取值范围时，扩容活动会失败。
 
 首次开启实例名称序号：默认值为 0。

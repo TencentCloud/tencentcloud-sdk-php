@@ -35,9 +35,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxIdleTime(integer $MaxIdleTime) 设置房间内持续没有主播的状态超过MaxIdleTime的时长，自动停止录制，单位：秒。默认值为 30 秒，该值需大于等于 5秒，且小于等于 86400秒(24小时)。
 示例值：30
  * @method integer getSliceAudio() 获取音频切片时长，默认15s 示例值：15
+取值范围15-60s
  * @method void setSliceAudio(integer $SliceAudio) 设置音频切片时长，默认15s 示例值：15
- * @method integer getSliceVideo() 获取视频截帧间隔时长，默认5s， 示例值：5
- * @method void setSliceVideo(integer $SliceVideo) 设置视频截帧间隔时长，默认5s， 示例值：5
+取值范围15-60s
+ * @method integer getSliceVideo() 获取视频截帧间隔时长，默认5s， 示例值：5 取值范围5-60s
+ * @method void setSliceVideo(integer $SliceVideo) 设置视频截帧间隔时长，默认5s， 示例值：5 取值范围5-60s
  * @method SubscribeStreamUserIds getSubscribeStreamUserIds() 获取指定订阅流白名单或者黑名单。
  * @method void setSubscribeStreamUserIds(SubscribeStreamUserIds $SubscribeStreamUserIds) 设置指定订阅流白名单或者黑名单。
  * @method string getSliceCallbackUrl() 获取已废弃，从控制台配置回调url
@@ -62,11 +64,12 @@ class SliceParams extends AbstractModel
 
     /**
      * @var integer 音频切片时长，默认15s 示例值：15
+取值范围15-60s
      */
     public $SliceAudio;
 
     /**
-     * @var integer 视频截帧间隔时长，默认5s， 示例值：5
+     * @var integer 视频截帧间隔时长，默认5s， 示例值：5 取值范围5-60s
      */
     public $SliceVideo;
 
@@ -89,7 +92,8 @@ class SliceParams extends AbstractModel
      * @param integer $MaxIdleTime 房间内持续没有主播的状态超过MaxIdleTime的时长，自动停止录制，单位：秒。默认值为 30 秒，该值需大于等于 5秒，且小于等于 86400秒(24小时)。
 示例值：30
      * @param integer $SliceAudio 音频切片时长，默认15s 示例值：15
-     * @param integer $SliceVideo 视频截帧间隔时长，默认5s， 示例值：5
+取值范围15-60s
+     * @param integer $SliceVideo 视频截帧间隔时长，默认5s， 示例值：5 取值范围5-60s
      * @param SubscribeStreamUserIds $SubscribeStreamUserIds 指定订阅流白名单或者黑名单。
      * @param string $SliceCallbackUrl 已废弃，从控制台配置回调url
      */

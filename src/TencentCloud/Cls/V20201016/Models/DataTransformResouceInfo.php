@@ -25,7 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopicId(string $TopicId) 设置日志主题ID
 - 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
  * @method string getAlias() 获取别名
+限制：不能包含字符 |。
  * @method void setAlias(string $Alias) 设置别名
+限制：不能包含字符 |。
  */
 class DataTransformResouceInfo extends AbstractModel
 {
@@ -37,6 +39,7 @@ class DataTransformResouceInfo extends AbstractModel
 
     /**
      * @var string 别名
+限制：不能包含字符 |。
      */
     public $Alias;
 
@@ -44,6 +47,7 @@ class DataTransformResouceInfo extends AbstractModel
      * @param string $TopicId 日志主题ID
 - 通过[获取日志主题列表](https://cloud.tencent.com/document/product/614/56454)获取日志主题Id。
      * @param string $Alias 别名
+限制：不能包含字符 |。
      */
     function __construct()
     {

@@ -70,6 +70,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\CreateTasksInOrderResponse CreateTasksInOrder(Models\CreateTasksInOrderRequest $req) 废弃接口，申请下线
 
 按顺序创建任务（已经废弃，后期不再维护，请使用接口CreateTasks）
+ * @method Models\CreateTcIcebergTableResponse CreateTcIcebergTable(Models\CreateTcIcebergTableRequest $req) 创建TIceberg表
  * @method Models\CreateUserResponse CreateUser(Models\CreateUserRequest $req) 创建用户
  * @method Models\CreateUserVpcConnectionResponse CreateUserVpcConnection(Models\CreateUserVpcConnectionRequest $req) 创建用户vpc连接到指定引擎网络
  * @method Models\CreateWorkGroupResponse CreateWorkGroup(Models\CreateWorkGroupRequest $req) 创建工作组

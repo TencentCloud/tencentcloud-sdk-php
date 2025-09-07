@@ -29,8 +29,11 @@ use TencentCloud\Ioa\V20220601\Models as Models;
  * @method Models\CreatePrivilegeCodeResponse CreatePrivilegeCode(Models\CreatePrivilegeCodeRequest $req) 生成特权码，私有化调用path为：capi/Assets/Device/CreatePrivilegeCode，生成的特权码、卸载码，仅对该设备当天有效
  * @method Models\DescribeAccountGroupsResponse DescribeAccountGroups(Models\DescribeAccountGroupsRequest $req) 以分页的方式查询账号分组列表，私有化调用path为：/capi/Assets/DescribeAccountGroups
  * @method Models\DescribeAggrSoftCategorySoftListResponse DescribeAggrSoftCategorySoftList(Models\DescribeAggrSoftCategorySoftListRequest $req) 聚合的分类软件列表
+ * @method Models\DescribeAggrSoftDetailResponse DescribeAggrSoftDetail(Models\DescribeAggrSoftDetailRequest $req) 聚合的软件详情
+ * @method Models\DescribeAggrSoftDeviceListResponse DescribeAggrSoftDeviceList(Models\DescribeAggrSoftDeviceListRequest $req) 聚合软件的已安装终端列表
  * @method Models\DescribeDLPFileDetectResultResponse DescribeDLPFileDetectResult(Models\DescribeDLPFileDetectResultRequest $req) webservice查询文件检测结果
  * @method Models\DescribeDeviceChildGroupsResponse DescribeDeviceChildGroups(Models\DescribeDeviceChildGroupsRequest $req) 查询设备组子分组详情，私有化调用path为：capi/Assets/Device/DescribeDeviceChildGroups
+ * @method Models\DescribeDeviceDetailListResponse DescribeDeviceDetailList(Models\DescribeDeviceDetailListRequest $req) 基于软件查看终端详情列表,私有化调用path为：capi/Software/DescribeDeviceDetailList
  * @method Models\DescribeDeviceHardwareInfoListResponse DescribeDeviceHardwareInfoList(Models\DescribeDeviceHardwareInfoListRequest $req) 查询满足条件的查询终端硬件信息列表，私有化调用path为：/capi/Assets/Device/DescribeDeviceHardwareInfoList
  * @method Models\DescribeDeviceInfoResponse DescribeDeviceInfo(Models\DescribeDeviceInfoRequest $req) 获取终端进程网络服务信息，私有化调用path为：capi/Assets/Device/DescribeDeviceInfo
  * @method Models\DescribeDeviceVirtualGroupsResponse DescribeDeviceVirtualGroups(Models\DescribeDeviceVirtualGroupsRequest $req) 查询终端自定义分组列表，私有化调用path为：/capi/Assets/Device/DescribeDeviceVirtualGroups
@@ -40,6 +43,7 @@ use TencentCloud\Ioa\V20220601\Models as Models;
  * @method Models\DescribeSoftCensusListByDeviceResponse DescribeSoftCensusListByDevice(Models\DescribeSoftCensusListByDeviceRequest $req) 查看终端树下的软件列表,私有化调用path为：capi/Software/DescribeSoftCensusListByDevice
  * @method Models\DescribeSoftwareInformationResponse DescribeSoftwareInformation(Models\DescribeSoftwareInformationRequest $req) 查看指定终端的软件详情列表,私有化调用path为：capi/Software/DescribeSoftwareInformation
  * @method Models\DescribeVirtualDevicesResponse DescribeVirtualDevices(Models\DescribeVirtualDevicesRequest $req) 展示自定义分组终端列表，私有化调用path为：/capi/Assets/DescribeVirtualDevices
+ * @method Models\ExportSoftwareInformationListResponse ExportSoftwareInformationList(Models\ExportSoftwareInformationListRequest $req) 导出基于指定终端查看软件信息详情列表查询,私有化调用path为：capi/Software/ExportSoftwareInformationList
  * @method Models\ModifyVirtualDeviceGroupsResponse ModifyVirtualDeviceGroups(Models\ModifyVirtualDeviceGroupsRequest $req) 终端自定义分组增减终端，私有化调用path为：/capi/Assets/Device/ModifyVirtualDeviceGroups
  */
 

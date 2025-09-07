@@ -52,6 +52,12 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setAsrResultSimilarity(string $AsrResultSimilarity) 设置本次流程用户语音与传入文本比对的相似度分值，取值范围 [0.00, 100.00]。只有配置了相似度阈值后才进行语音校验并返回相似度分值。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getIntentionVerifyAudio() 获取意愿确认环节中录制的音频（base64）。
+- 若不存在则为空字符串。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setIntentionVerifyAudio(string $IntentionVerifyAudio) 设置意愿确认环节中录制的音频（base64）。
+- 若不存在则为空字符串。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class IntentionVerifyData extends AbstractModel
 {
@@ -97,6 +103,13 @@ class IntentionVerifyData extends AbstractModel
     public $AsrResultSimilarity;
 
     /**
+     * @var string 意愿确认环节中录制的音频（base64）。
+- 若不存在则为空字符串。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $IntentionVerifyAudio;
+
+    /**
      * @param string $IntentionVerifyVideo 意愿确认环节中录制的视频（base64）。
 - 若不存在则为空字符串。
 注意：此字段可能返回 null，表示取不到有效值。
@@ -112,6 +125,9 @@ class IntentionVerifyData extends AbstractModel
 - 若不存在则为空字符串。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $AsrResultSimilarity 本次流程用户语音与传入文本比对的相似度分值，取值范围 [0.00, 100.00]。只有配置了相似度阈值后才进行语音校验并返回相似度分值。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $IntentionVerifyAudio 意愿确认环节中录制的音频（base64）。
+- 若不存在则为空字符串。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -149,6 +165,10 @@ class IntentionVerifyData extends AbstractModel
 
         if (array_key_exists("AsrResultSimilarity",$param) and $param["AsrResultSimilarity"] !== null) {
             $this->AsrResultSimilarity = $param["AsrResultSimilarity"];
+        }
+
+        if (array_key_exists("IntentionVerifyAudio",$param) and $param["IntentionVerifyAudio"] !== null) {
+            $this->IntentionVerifyAudio = $param["IntentionVerifyAudio"];
         }
     }
 }

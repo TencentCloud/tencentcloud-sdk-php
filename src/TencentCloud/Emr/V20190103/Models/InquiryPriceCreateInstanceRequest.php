@@ -78,6 +78,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVersionID(integer $VersionID) 设置当前默认值为0，跨AZ特性支持后为1
  * @method array getMultiZoneSettings() 获取可用区的规格信息
  * @method void setMultiZoneSettings(array $MultiZoneSettings) 设置可用区的规格信息
+ * @method string getDefaultMetaVersion() 获取数据库版本
+ * @method void setDefaultMetaVersion(string $DefaultMetaVersion) 设置数据库版本
+ * @method integer getNeedCdbAudit() 获取0:不开通审计；1:开通审计
+ * @method void setNeedCdbAudit(integer $NeedCdbAudit) 设置0:不开通审计；1:开通审计
  */
 class InquiryPriceCreateInstanceRequest extends AbstractModel
 {
@@ -179,6 +183,16 @@ class InquiryPriceCreateInstanceRequest extends AbstractModel
     public $MultiZoneSettings;
 
     /**
+     * @var string 数据库版本
+     */
+    public $DefaultMetaVersion;
+
+    /**
+     * @var integer 0:不开通审计；1:开通审计
+     */
+    public $NeedCdbAudit;
+
+    /**
      * @param string $TimeUnit 购买实例的时间单位。取值范围：
 <li>s：表示秒。PayMode取值为0时，TimeUnit只能取值为s。</li>
 <li>m：表示月份。PayMode取值为1时，TimeUnit只能取值为m。</li>
@@ -208,6 +222,8 @@ class InquiryPriceCreateInstanceRequest extends AbstractModel
      * @param array $ExternalService 共用组件信息
      * @param integer $VersionID 当前默认值为0，跨AZ特性支持后为1
      * @param array $MultiZoneSettings 可用区的规格信息
+     * @param string $DefaultMetaVersion 数据库版本
+     * @param integer $NeedCdbAudit 0:不开通审计；1:开通审计
      */
     function __construct()
     {
@@ -302,6 +318,14 @@ class InquiryPriceCreateInstanceRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->MultiZoneSettings, $obj);
             }
+        }
+
+        if (array_key_exists("DefaultMetaVersion",$param) and $param["DefaultMetaVersion"] !== null) {
+            $this->DefaultMetaVersion = $param["DefaultMetaVersion"];
+        }
+
+        if (array_key_exists("NeedCdbAudit",$param) and $param["NeedCdbAudit"] !== null) {
+            $this->NeedCdbAudit = $param["NeedCdbAudit"];
         }
     }
 }

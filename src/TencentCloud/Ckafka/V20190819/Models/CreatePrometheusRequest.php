@@ -20,34 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreatePrometheus请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka集群实例Id,可通过DescribeInstances接口获取
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id,可通过DescribeInstances接口获取
- * @method string getVpcId() 获取私有网络Id
- * @method void setVpcId(string $VpcId) 设置私有网络Id
- * @method string getSubnetId() 获取子网Id
- * @method void setSubnetId(string $SubnetId) 设置子网Id
+ * @method string getInstanceId() 获取ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+ * @method string getVpcId() 获取私有网络Id,可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取
+
+ * @method void setVpcId(string $VpcId) 设置私有网络Id,可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取
+
+ * @method string getSubnetId() 获取子网Id,可通过[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)接口获取
+ * @method void setSubnetId(string $SubnetId) 设置子网Id,可通过[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)接口获取
  */
 class CreatePrometheusRequest extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例Id,可通过DescribeInstances接口获取
+     * @var string ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
      */
     public $InstanceId;
 
     /**
-     * @var string 私有网络Id
+     * @var string 私有网络Id,可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取
+
      */
     public $VpcId;
 
     /**
-     * @var string 子网Id
+     * @var string 子网Id,可通过[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)接口获取
      */
     public $SubnetId;
 
     /**
-     * @param string $InstanceId ckafka集群实例Id,可通过DescribeInstances接口获取
-     * @param string $VpcId 私有网络Id
-     * @param string $SubnetId 子网Id
+     * @param string $InstanceId ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+     * @param string $VpcId 私有网络Id,可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口获取
+
+     * @param string $SubnetId 子网Id,可通过[DescribeSubnets](https://cloud.tencent.com/document/product/215/15784)接口获取
      */
     function __construct()
     {

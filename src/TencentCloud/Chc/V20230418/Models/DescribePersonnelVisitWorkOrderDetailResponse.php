@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderStatus(string $OrderStatus) 设置工单状态 订单状态, processing 处理中 ，reject 已拒绝 ，finish 已完成，exception 异常
  * @method string getRejectReason() 获取拒绝原因
  * @method void setRejectReason(string $RejectReason) 设置拒绝原因
+ * @method array getCarSet() 获取到访人员车辆信息
+ * @method void setCarSet(array $CarSet) 设置到访人员车辆信息
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -61,6 +63,11 @@ class DescribePersonnelVisitWorkOrderDetailResponse extends AbstractModel
     public $RejectReason;
 
     /**
+     * @var array 到访人员车辆信息
+     */
+    public $CarSet;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -71,6 +78,7 @@ class DescribePersonnelVisitWorkOrderDetailResponse extends AbstractModel
      * @param array $PersonnelSet 到访人员详情
      * @param string $OrderStatus 工单状态 订单状态, processing 处理中 ，reject 已拒绝 ，finish 已完成，exception 异常
      * @param string $RejectReason 拒绝原因
+     * @param array $CarSet 到访人员车辆信息
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -115,6 +123,15 @@ class DescribePersonnelVisitWorkOrderDetailResponse extends AbstractModel
 
         if (array_key_exists("RejectReason",$param) and $param["RejectReason"] !== null) {
             $this->RejectReason = $param["RejectReason"];
+        }
+
+        if (array_key_exists("CarSet",$param) and $param["CarSet"] !== null) {
+            $this->CarSet = [];
+            foreach ($param["CarSet"] as $key => $value){
+                $obj = new PersonnelVisitCar();
+                $obj->deserialize($value);
+                array_push($this->CarSet, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

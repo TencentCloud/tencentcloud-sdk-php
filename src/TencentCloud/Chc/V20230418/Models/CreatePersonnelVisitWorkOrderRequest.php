@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVisitReason(array $VisitReason) 设置到访原因，映射关系：IT_OPERATION IT运维 OTHER 其他
  * @method string getVisitRemark() 获取到访说明
  * @method void setVisitRemark(string $VisitRemark) 设置到访说明
+ * @method array getCarSet() 获取到访人员车辆信息
+ * @method void setCarSet(array $CarSet) 设置到访人员车辆信息
  */
 class CreatePersonnelVisitWorkOrderRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreatePersonnelVisitWorkOrderRequest extends AbstractModel
     public $VisitRemark;
 
     /**
+     * @var array 到访人员车辆信息
+     */
+    public $CarSet;
+
+    /**
      * @param array $PersonnelSet 到访人员信息
      * @param integer $IdcId 机房 ID
      * @param array $IdcUnitIdSet 机房管理单元列表
@@ -80,6 +87,7 @@ class CreatePersonnelVisitWorkOrderRequest extends AbstractModel
      * @param string $EnterEndTime 到访结束时间
      * @param array $VisitReason 到访原因，映射关系：IT_OPERATION IT运维 OTHER 其他
      * @param string $VisitRemark 到访说明
+     * @param array $CarSet 到访人员车辆信息
      */
     function __construct()
     {
@@ -125,6 +133,15 @@ class CreatePersonnelVisitWorkOrderRequest extends AbstractModel
 
         if (array_key_exists("VisitRemark",$param) and $param["VisitRemark"] !== null) {
             $this->VisitRemark = $param["VisitRemark"];
+        }
+
+        if (array_key_exists("CarSet",$param) and $param["CarSet"] !== null) {
+            $this->CarSet = [];
+            foreach ($param["CarSet"] as $key => $value){
+                $obj = new PersonnelVisitCar();
+                $obj->deserialize($value);
+                array_push($this->CarSet, $obj);
+            }
         }
     }
 }

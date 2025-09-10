@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 普罗米修斯打通的vipVport
  *
- * @method string getType() 获取export类型（jmx_export\node_export）
- * @method void setType(string $Type) 设置export类型（jmx_export\node_export）
+ * @method string getType() 获取export类型（JmxExport\NodeExport）
+ * @method void setType(string $Type) 设置export类型（JmxExport\NodeExport）
  * @method string getSourceIp() 获取vip
  * @method void setSourceIp(string $SourceIp) 设置vip
  * @method integer getSourcePort() 获取vport
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class PrometheusDTO extends AbstractModel
 {
     /**
-     * @var string export类型（jmx_export\node_export）
+     * @var string export类型（JmxExport\NodeExport）
      */
     public $Type;
 
@@ -66,7 +66,7 @@ class PrometheusDTO extends AbstractModel
     public $SubnetId;
 
     /**
-     * @param string $Type export类型（jmx_export\node_export）
+     * @param string $Type export类型（JmxExport\NodeExport）
      * @param string $SourceIp vip
      * @param integer $SourcePort vport
      * @param string $BrokerIp broker地址

@@ -75,7 +75,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\DescribeGroupInfoResponse DescribeGroupInfo(Models\DescribeGroupInfoRequest $req) 获取消费分组信息
  * @method Models\DescribeGroupOffsetsResponse DescribeGroupOffsets(Models\DescribeGroupOffsetsRequest $req) 获取消费分组offset
  * @method Models\DescribeInstanceAttributesResponse DescribeInstanceAttributes(Models\DescribeInstanceAttributesRequest $req) 获取实例属性
- * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 本接口（DescribeInstance）用于在用户账户下获取消息队列 CKafka 实例列表
+ * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) 本接口（DescribeInstances）用于在用户账户下获取消息队列 CKafka 实例列表
  * @method Models\DescribeInstancesDetailResponse DescribeInstancesDetail(Models\DescribeInstancesDetailRequest $req) 用户账户下获取实例列表详情
  * @method Models\DescribePrometheusResponse DescribePrometheus(Models\DescribePrometheusRequest $req) 获取实例Prometheus信息
  * @method Models\DescribeRegionResponse DescribeRegion(Models\DescribeRegionRequest $req) 枚举地域,只支持广州地域

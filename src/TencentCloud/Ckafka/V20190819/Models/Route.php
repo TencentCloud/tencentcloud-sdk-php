@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setVpcId(string $VpcId) 设置私有网络Id
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getNote() 获取备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setNote(string $Note) 设置备注信息
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class Route extends AbstractModel
 {
@@ -118,6 +122,12 @@ class Route extends AbstractModel
     public $VpcId;
 
     /**
+     * @var string 备注信息
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Note;
+
+    /**
      * @param integer $AccessType 实例接入方式
 0：PLAINTEXT (明文方式，没有带用户信息老版本及社区版本都支持)
 1：SASL_PLAINTEXT（明文方式，不过在数据开始时，会通过SASL方式登录鉴权，仅社区版本支持）
@@ -135,6 +145,8 @@ class Route extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $BrokerVipList 虚拟IP列表(1对1 broker节点)
      * @param string $VpcId 私有网络Id
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Note 备注信息
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -198,6 +210,10 @@ class Route extends AbstractModel
 
         if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
             $this->VpcId = $param["VpcId"];
+        }
+
+        if (array_key_exists("Note",$param) and $param["Note"] !== null) {
+            $this->Note = $param["Note"];
         }
     }
 }

@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
 <li>Name - String - 过滤支持：是 - 操作符:eq,like - 排序支持：是 。</li>
  * @method void setCondition(Condition $Condition) 设置过滤条件、分页参数
 <li>Name - String - 过滤支持：是 - 操作符:eq,like - 排序支持：是 。</li>
+ * @method integer getOsType() 获取0:win 2:mac
+ * @method void setOsType(integer $OsType) 设置0:win 2:mac
  */
 class DescribeSoftwareInformationRequest extends AbstractModel
 {
@@ -41,9 +43,15 @@ class DescribeSoftwareInformationRequest extends AbstractModel
     public $Condition;
 
     /**
+     * @var integer 0:win 2:mac
+     */
+    public $OsType;
+
+    /**
      * @param string $Mid 终端唯一标识Mid
      * @param Condition $Condition 过滤条件、分页参数
 <li>Name - String - 过滤支持：是 - 操作符:eq,like - 排序支持：是 。</li>
+     * @param integer $OsType 0:win 2:mac
      */
     function __construct()
     {
@@ -65,6 +73,10 @@ class DescribeSoftwareInformationRequest extends AbstractModel
         if (array_key_exists("Condition",$param) and $param["Condition"] !== null) {
             $this->Condition = new Condition();
             $this->Condition->deserialize($param["Condition"]);
+        }
+
+        if (array_key_exists("OsType",$param) and $param["OsType"] !== null) {
+            $this->OsType = $param["OsType"];
         }
     }
 }

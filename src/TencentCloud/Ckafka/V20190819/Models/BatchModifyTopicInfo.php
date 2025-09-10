@@ -36,10 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUncleanLeaderElectionEnable(boolean $UncleanLeaderElectionEnable) 设置是否允许非ISR的副本成为Leader
  * @method integer getRetentionMs() 获取topic维度的消息保留时间（毫秒）范围1 分钟到90 天
  * @method void setRetentionMs(integer $RetentionMs) 设置topic维度的消息保留时间（毫秒）范围1 分钟到90 天
- * @method integer getRetentionBytes() 获取topic维度的消息保留大小，范围1 MB到1024 GB
- * @method void setRetentionBytes(integer $RetentionBytes) 设置topic维度的消息保留大小，范围1 MB到1024 GB
- * @method integer getSegmentMs() 获取Segment分片滚动的时长（毫秒），范围1 到90 天
- * @method void setSegmentMs(integer $SegmentMs) 设置Segment分片滚动的时长（毫秒），范围1 到90 天
+ * @method integer getRetentionBytes() 获取topic维度的消息保留大小，单位为Byte，范围1 GB到1024 GB。
+ * @method void setRetentionBytes(integer $RetentionBytes) 设置topic维度的消息保留大小，单位为Byte，范围1 GB到1024 GB。
+ * @method integer getSegmentMs() 获取Segment分片滚动的时长（毫秒），范围1 天到90 天
+ * @method void setSegmentMs(integer $SegmentMs) 设置Segment分片滚动的时长（毫秒），范围1 天到90 天
  * @method integer getMaxMessageBytes() 获取批次的消息大小，范围1 KB到12 MB
  * @method void setMaxMessageBytes(integer $MaxMessageBytes) 设置批次的消息大小，范围1 KB到12 MB
  * @method string getLogMsgTimestampType() 获取消息保存的时间类型：CreateTime/LogAppendTime
@@ -88,12 +88,12 @@ class BatchModifyTopicInfo extends AbstractModel
     public $RetentionMs;
 
     /**
-     * @var integer topic维度的消息保留大小，范围1 MB到1024 GB
+     * @var integer topic维度的消息保留大小，单位为Byte，范围1 GB到1024 GB。
      */
     public $RetentionBytes;
 
     /**
-     * @var integer Segment分片滚动的时长（毫秒），范围1 到90 天
+     * @var integer Segment分片滚动的时长（毫秒），范围1 天到90 天
      */
     public $SegmentMs;
 
@@ -116,8 +116,8 @@ class BatchModifyTopicInfo extends AbstractModel
      * @param integer $MinInsyncReplicas 当producer设置request.required.acks为-1时，min.insync.replicas指定replicas的最小数目
      * @param boolean $UncleanLeaderElectionEnable 是否允许非ISR的副本成为Leader
      * @param integer $RetentionMs topic维度的消息保留时间（毫秒）范围1 分钟到90 天
-     * @param integer $RetentionBytes topic维度的消息保留大小，范围1 MB到1024 GB
-     * @param integer $SegmentMs Segment分片滚动的时长（毫秒），范围1 到90 天
+     * @param integer $RetentionBytes topic维度的消息保留大小，单位为Byte，范围1 GB到1024 GB。
+     * @param integer $SegmentMs Segment分片滚动的时长（毫秒），范围1 天到90 天
      * @param integer $MaxMessageBytes 批次的消息大小，范围1 KB到12 MB
      * @param string $LogMsgTimestampType 消息保存的时间类型：CreateTime/LogAppendTime
      */

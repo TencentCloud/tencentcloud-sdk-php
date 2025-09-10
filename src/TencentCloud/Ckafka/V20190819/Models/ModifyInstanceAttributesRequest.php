@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyInstanceAttributes请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka集群实例Id,可通过DescribeInstances接口获取
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id,可通过DescribeInstances接口获取
+ * @method string getInstanceId() 获取ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
  * @method integer getMsgRetentionTime() 获取实例日志的最长保留时间，单位分钟，最大90天，最小为1min
  * @method void setMsgRetentionTime(integer $MsgRetentionTime) 设置实例日志的最长保留时间，单位分钟，最大90天，最小为1min
  * @method string getInstanceName() 获取ckafka集群实例Name
@@ -46,7 +46,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyInstanceAttributesRequest extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例Id,可通过DescribeInstances接口获取
+     * @var string ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
      */
     public $InstanceId;
 
@@ -102,7 +102,7 @@ class ModifyInstanceAttributesRequest extends AbstractModel
     public $DeleteProtectionEnable;
 
     /**
-     * @param string $InstanceId ckafka集群实例Id,可通过DescribeInstances接口获取
+     * @param string $InstanceId ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
      * @param integer $MsgRetentionTime 实例日志的最长保留时间，单位分钟，最大90天，最小为1min
      * @param string $InstanceName ckafka集群实例Name
      * @param ModifyInstanceAttributesConfig $Config 实例配置

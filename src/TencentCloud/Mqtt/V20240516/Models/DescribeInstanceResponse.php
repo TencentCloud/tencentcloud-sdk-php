@@ -92,6 +92,10 @@ API：通过API手动注册
  * @method void setTrustedCaLimit(integer $TrustedCaLimit) 设置服务端CA最大数量
  * @method integer getServerCertLimit() 获取服务端证书最大数量
  * @method void setServerCertLimit(integer $ServerCertLimit) 设置服务端证书最大数量
+ * @method integer getTopicPrefixSlashLimit() 获取topic前缀最大层级
+ * @method void setTopicPrefixSlashLimit(integer $TopicPrefixSlashLimit) 设置topic前缀最大层级
+ * @method integer getMessageRate() 获取单客户端发送消息限速，单位 条/秒
+ * @method void setMessageRate(integer $MessageRate) 设置单客户端发送消息限速，单位 条/秒
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -258,6 +262,16 @@ API：通过API手动注册
     public $ServerCertLimit;
 
     /**
+     * @var integer topic前缀最大层级
+     */
+    public $TopicPrefixSlashLimit;
+
+    /**
+     * @var integer 单客户端发送消息限速，单位 条/秒
+     */
+    public $MessageRate;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -299,6 +313,8 @@ API：通过API手动注册
      * @param boolean $UseDefaultServerCert 是否使用默认的服务端证书
      * @param integer $TrustedCaLimit 服务端CA最大数量
      * @param integer $ServerCertLimit 服务端证书最大数量
+     * @param integer $TopicPrefixSlashLimit topic前缀最大层级
+     * @param integer $MessageRate 单客户端发送消息限速，单位 条/秒
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -436,6 +452,14 @@ API：通过API手动注册
 
         if (array_key_exists("ServerCertLimit",$param) and $param["ServerCertLimit"] !== null) {
             $this->ServerCertLimit = $param["ServerCertLimit"];
+        }
+
+        if (array_key_exists("TopicPrefixSlashLimit",$param) and $param["TopicPrefixSlashLimit"] !== null) {
+            $this->TopicPrefixSlashLimit = $param["TopicPrefixSlashLimit"];
+        }
+
+        if (array_key_exists("MessageRate",$param) and $param["MessageRate"] !== null) {
+            $this->MessageRate = $param["MessageRate"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -104,6 +104,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodeMarks(array $NodeMarks) 设置节点标识信息，目前只提供给tf平台使用
  * @method string getLoadBalancerId() 获取clb id
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置clb id
+ * @method string getDefaultMetaVersion() 获取数据库版本：mysql8/tdsql8/mysql5
+ * @method void setDefaultMetaVersion(string $DefaultMetaVersion) 设置数据库版本：mysql8/tdsql8/mysql5
+ * @method integer getNeedCdbAudit() 获取是否开通数据库审计
+ * @method void setNeedCdbAudit(integer $NeedCdbAudit) 设置是否开通数据库审计
  */
 class CreateClusterRequest extends AbstractModel
 {
@@ -242,6 +246,16 @@ class CreateClusterRequest extends AbstractModel
     public $LoadBalancerId;
 
     /**
+     * @var string 数据库版本：mysql8/tdsql8/mysql5
+     */
+    public $DefaultMetaVersion;
+
+    /**
+     * @var integer 是否开通数据库审计
+     */
+    public $NeedCdbAudit;
+
+    /**
      * @param string $ProductVersion EMR产品版本名称如EMR-V2.3.0 表示2.3.0版本的EMR， 当前支持产品版本名称查询：[产品版本名称](https://cloud.tencent.com/document/product/589/66338)
      * @param boolean $EnableSupportHAFlag 是否开启节点高可用。取值范围：
 <li>true：表示开启节点高可用。</li>
@@ -284,6 +298,8 @@ class CreateClusterRequest extends AbstractModel
      * @param string $CosBucket cos桶路径，创建StarRocks存算分离集群时用到
      * @param array $NodeMarks 节点标识信息，目前只提供给tf平台使用
      * @param string $LoadBalancerId clb id
+     * @param string $DefaultMetaVersion 数据库版本：mysql8/tdsql8/mysql5
+     * @param integer $NeedCdbAudit 是否开通数据库审计
      */
     function __construct()
     {
@@ -417,6 +433,14 @@ class CreateClusterRequest extends AbstractModel
 
         if (array_key_exists("LoadBalancerId",$param) and $param["LoadBalancerId"] !== null) {
             $this->LoadBalancerId = $param["LoadBalancerId"];
+        }
+
+        if (array_key_exists("DefaultMetaVersion",$param) and $param["DefaultMetaVersion"] !== null) {
+            $this->DefaultMetaVersion = $param["DefaultMetaVersion"];
+        }
+
+        if (array_key_exists("NeedCdbAudit",$param) and $param["NeedCdbAudit"] !== null) {
+            $this->NeedCdbAudit = $param["NeedCdbAudit"];
         }
     }
 }

@@ -20,18 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 文档信息
  *
- * @method string getFileType() 获取文件类型。
-支持的文件类型：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、IM、PCX、PPM、TIFF、XBM、HEIF、JP2
-支持的文件大小：
-- PDF、DOC、DOCX、PPT、PPTX 支持100M
-- MD、TXT、XLS、XLSX、CSV 支持10M
-- 其他支持20M
- * @method void setFileType(string $FileType) 设置文件类型。
-支持的文件类型：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、IM、PCX、PPM、TIFF、XBM、HEIF、JP2
-支持的文件大小：
-- PDF、DOC、DOCX、PPT、PPTX 支持100M
-- MD、TXT、XLS、XLSX、CSV 支持10M
-- 其他支持20M
+ * @method string getFileType() 获取支持的文件类型：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、
+XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、
+IM、PCX、PPM、TIFF、XBM、HEIF、JP2
+
+文档解析支持的文件大小：
+-PDF、DOC、DOCX、PPT、PPTX支持100M
+-MD、TXT、XLS、XLSX、CSV支特10M
+-其他支持20M
+
+文本切片支持的文件大小：
+-PDF最大300M
+-D0CX、D0C、PPT、PPTX最大200M
+-TXT、MD最大10M
+-其他最大20M
+ * @method void setFileType(string $FileType) 设置支持的文件类型：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、
+XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、
+IM、PCX、PPM、TIFF、XBM、HEIF、JP2
+
+文档解析支持的文件大小：
+-PDF、DOC、DOCX、PPT、PPTX支持100M
+-MD、TXT、XLS、XLSX、CSV支特10M
+-其他支持20M
+
+文本切片支持的文件大小：
+-PDF最大300M
+-D0CX、D0C、PPT、PPTX最大200M
+-TXT、MD最大10M
+-其他最大20M
  * @method string getFileUrl() 获取文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，使用腾讯云COS 文件地址。
  * @method void setFileUrl(string $FileUrl) 设置文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，使用腾讯云COS 文件地址。
  * @method string getFileContent() 获取文件的 base64 值，携带 MineType前缀信息。编码后的后的文件不超过 10M。
@@ -50,12 +66,20 @@ use TencentCloud\Common\AbstractModel;
 class Document extends AbstractModel
 {
     /**
-     * @var string 文件类型。
-支持的文件类型：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、IM、PCX、PPM、TIFF、XBM、HEIF、JP2
-支持的文件大小：
-- PDF、DOC、DOCX、PPT、PPTX 支持100M
-- MD、TXT、XLS、XLSX、CSV 支持10M
-- 其他支持20M
+     * @var string 支持的文件类型：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、
+XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、
+IM、PCX、PPM、TIFF、XBM、HEIF、JP2
+
+文档解析支持的文件大小：
+-PDF、DOC、DOCX、PPT、PPTX支持100M
+-MD、TXT、XLS、XLSX、CSV支特10M
+-其他支持20M
+
+文本切片支持的文件大小：
+-PDF最大300M
+-D0CX、D0C、PPT、PPTX最大200M
+-TXT、MD最大10M
+-其他最大20M
      */
     public $FileType;
 
@@ -87,12 +111,20 @@ class Document extends AbstractModel
     public $FileEndPageNumber;
 
     /**
-     * @param string $FileType 文件类型。
-支持的文件类型：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、IM、PCX、PPM、TIFF、XBM、HEIF、JP2
-支持的文件大小：
-- PDF、DOC、DOCX、PPT、PPTX 支持100M
-- MD、TXT、XLS、XLSX、CSV 支持10M
-- 其他支持20M
+     * @param string $FileType 支持的文件类型：PDF、DOC、DOCX、PPT、PPTX、MD、TXT、XLS、
+XLSX、CSV、PNG、JPG、JPEG、BMP、GIF、WEBP、HEIC、EPS、ICNS、
+IM、PCX、PPM、TIFF、XBM、HEIF、JP2
+
+文档解析支持的文件大小：
+-PDF、DOC、DOCX、PPT、PPTX支持100M
+-MD、TXT、XLS、XLSX、CSV支特10M
+-其他支持20M
+
+文本切片支持的文件大小：
+-PDF最大300M
+-D0CX、D0C、PPT、PPTX最大200M
+-TXT、MD最大10M
+-其他最大20M
      * @param string $FileUrl 文件存储于腾讯云的 URL 可保障更高的下载速度和稳定性，使用腾讯云COS 文件地址。
      * @param string $FileContent 文件的 base64 值，携带 MineType前缀信息。编码后的后的文件不超过 10M。
 支持的文件大小：所下载文件经Base64编码后不超过 8M。文件下载时间不超过3秒。

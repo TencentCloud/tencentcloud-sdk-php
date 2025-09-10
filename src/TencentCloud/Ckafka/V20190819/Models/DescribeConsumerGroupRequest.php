@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeConsumerGroup请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka集群实例Id,通过DescribeInstances接口获取
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id,通过DescribeInstances接口获取
+ * @method string getInstanceId() 获取ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
  * @method string getGroupName() 获取用户需要查询的group名称。
  * @method void setGroupName(string $GroupName) 设置用户需要查询的group名称。
  * @method string getTopicName() 获取用户需要查询的group中的对应的topic名称，如果指定了该参数，而group又未指定则忽略该参数。
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeConsumerGroupRequest extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例Id,通过DescribeInstances接口获取
+     * @var string ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
      */
     public $InstanceId;
 
@@ -59,7 +59,7 @@ class DescribeConsumerGroupRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @param string $InstanceId ckafka集群实例Id,通过DescribeInstances接口获取
+     * @param string $InstanceId ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
      * @param string $GroupName 用户需要查询的group名称。
      * @param string $TopicName 用户需要查询的group中的对应的topic名称，如果指定了该参数，而group又未指定则忽略该参数。
      * @param integer $Limit 返回消费组的限制数量，最大支持50

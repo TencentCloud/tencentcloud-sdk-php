@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteRoute请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka集群实例Id,可通过DescribeInstances接口获取
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id,可通过DescribeInstances接口获取
+ * @method string getInstanceId() 获取ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
  * @method integer getRouteId() 获取路由id,可通过DescribeRoute接口获取
  * @method void setRouteId(integer $RouteId) 设置路由id,可通过DescribeRoute接口获取
  * @method integer getCallerAppid() 获取调用方appId
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DeleteRouteRequest extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例Id,可通过DescribeInstances接口获取
+     * @var string ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
      */
     public $InstanceId;
 
@@ -52,7 +52,7 @@ class DeleteRouteRequest extends AbstractModel
     public $DeleteRouteTime;
 
     /**
-     * @param string $InstanceId ckafka集群实例Id,可通过DescribeInstances接口获取
+     * @param string $InstanceId ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
      * @param integer $RouteId 路由id,可通过DescribeRoute接口获取
      * @param integer $CallerAppid 调用方appId
      * @param string $DeleteRouteTime 设置定时删除路由时间,仅类型为公网路由支持定时删除,可选择未来的24小时的任意时间

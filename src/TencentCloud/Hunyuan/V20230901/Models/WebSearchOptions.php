@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserLocation(UserLocation $UserLocation) 设置用户位置详细信息
  * @method boolean getProcesses() 获取打开开关，会返回搜索状态
  * @method void setProcesses(boolean $Processes) 设置打开开关，会返回搜索状态
+ * @method boolean getEnableImage() 获取是否开启图文混排
+ * @method void setEnableImage(boolean $EnableImage) 设置是否开启图文混排
+ * @method boolean getEnableMusic() 获取是否开启音乐
+ * @method void setEnableMusic(boolean $EnableMusic) 设置是否开启音乐
  */
 class WebSearchOptions extends AbstractModel
 {
@@ -45,9 +49,21 @@ class WebSearchOptions extends AbstractModel
     public $Processes;
 
     /**
+     * @var boolean 是否开启图文混排
+     */
+    public $EnableImage;
+
+    /**
+     * @var boolean 是否开启音乐
+     */
+    public $EnableMusic;
+
+    /**
      * @param array $Knowledge 表示用户注入的知识信息
      * @param UserLocation $UserLocation 用户位置详细信息
      * @param boolean $Processes 打开开关，会返回搜索状态
+     * @param boolean $EnableImage 是否开启图文混排
+     * @param boolean $EnableMusic 是否开启音乐
      */
     function __construct()
     {
@@ -78,6 +94,14 @@ class WebSearchOptions extends AbstractModel
 
         if (array_key_exists("Processes",$param) and $param["Processes"] !== null) {
             $this->Processes = $param["Processes"];
+        }
+
+        if (array_key_exists("EnableImage",$param) and $param["EnableImage"] !== null) {
+            $this->EnableImage = $param["EnableImage"];
+        }
+
+        if (array_key_exists("EnableMusic",$param) and $param["EnableMusic"] !== null) {
+            $this->EnableMusic = $param["EnableMusic"];
         }
     }
 }

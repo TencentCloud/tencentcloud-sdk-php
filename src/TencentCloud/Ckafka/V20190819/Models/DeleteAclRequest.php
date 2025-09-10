@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteAcl请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka集群实例Id，可通过DescribeInstances接口获取。
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id，可通过DescribeInstances接口获取。
+ * @method string getInstanceId() 获取ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
  * @method integer getResourceType() 获取Acl资源类型，(2:TOPIC，3:GROUP，4:CLUSTER)
  * @method void setResourceType(integer $ResourceType) 设置Acl资源类型，(2:TOPIC，3:GROUP，4:CLUSTER)
  * @method string getResourceName() 获取资源名称，和resourceType相关，如当resourceType为TOPIC时，则该字段表示topic名称，当resourceType为GROUP时，该字段表示group名称，当resourceType为CLUSTER时，该字段可为空。
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class DeleteAclRequest extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例Id，可通过DescribeInstances接口获取。
+     * @var string ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
      */
     public $InstanceId;
 
@@ -73,7 +73,7 @@ class DeleteAclRequest extends AbstractModel
     public $Principal;
 
     /**
-     * @param string $InstanceId ckafka集群实例Id，可通过DescribeInstances接口获取。
+     * @param string $InstanceId ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
      * @param integer $ResourceType Acl资源类型，(2:TOPIC，3:GROUP，4:CLUSTER)
      * @param string $ResourceName 资源名称，和resourceType相关，如当resourceType为TOPIC时，则该字段表示topic名称，当resourceType为GROUP时，该字段表示group名称，当resourceType为CLUSTER时，该字段可为空。
      * @param integer $Operation Acl操作方式，(2:ALL，3:READ，4:WRITE，5:CREATE，6:DELETE，7:ALTER，8:DESCRIBE，9:CLUSTER_ACTION，10:DESCRIBE_CONFIGS，11:ALTER_CONFIGS，12:IDEMPOTENT_WRITE)

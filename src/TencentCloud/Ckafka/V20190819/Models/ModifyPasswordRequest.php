@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyPassword请求参数结构体
  *
- * @method string getInstanceId() 获取实例Id，可通过DescribeInstances接口获取。
- * @method void setInstanceId(string $InstanceId) 设置实例Id，可通过DescribeInstances接口获取。
- * @method string getName() 获取用户名称，可通过DescribeUser接口获取。
- * @method void setName(string $Name) 设置用户名称，可通过DescribeUser接口获取。
+ * @method string getInstanceId() 获取实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+ * @method void setInstanceId(string $InstanceId) 设置实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+ * @method string getName() 获取用户名称，可通过[DescribeUser](https://cloud.tencent.com/document/product/597/40855)接口获取。
+ * @method void setName(string $Name) 设置用户名称，可通过[DescribeUser](https://cloud.tencent.com/document/product/597/40855)接口获取。
  * @method string getPassword() 获取用户当前密码
  * @method void setPassword(string $Password) 设置用户当前密码
  * @method string getPasswordNew() 获取用户新密码
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class ModifyPasswordRequest extends AbstractModel
 {
     /**
-     * @var string 实例Id，可通过DescribeInstances接口获取。
+     * @var string 实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
      */
     public $InstanceId;
 
     /**
-     * @var string 用户名称，可通过DescribeUser接口获取。
+     * @var string 用户名称，可通过[DescribeUser](https://cloud.tencent.com/document/product/597/40855)接口获取。
      */
     public $Name;
 
@@ -52,8 +52,8 @@ class ModifyPasswordRequest extends AbstractModel
     public $PasswordNew;
 
     /**
-     * @param string $InstanceId 实例Id，可通过DescribeInstances接口获取。
-     * @param string $Name 用户名称，可通过DescribeUser接口获取。
+     * @param string $InstanceId 实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+     * @param string $Name 用户名称，可通过[DescribeUser](https://cloud.tencent.com/document/product/597/40855)接口获取。
      * @param string $Password 用户当前密码
      * @param string $PasswordNew 用户新密码
      */

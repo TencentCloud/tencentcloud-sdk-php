@@ -58,8 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTriggerCount(integer $TriggerCount) 设置持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为2000。
  * @method integer getAlarmPeriod() 获取告警重复的周期。单位是分钟。取值范围是0~1440。
  * @method void setAlarmPeriod(integer $AlarmPeriod) 设置告警重复的周期。单位是分钟。取值范围是0~1440。
- * @method array getAlarmNoticeIds() 获取关联的告警通知渠道列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取告警通知渠道列表
- * @method void setAlarmNoticeIds(array $AlarmNoticeIds) 设置关联的告警通知渠道列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取告警通知渠道列表
+ * @method array getAlarmNoticeIds() 获取关联的告警通知渠道组列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取关联的告警通知渠道组列表，和MonitorNotice互斥
+ * @method void setAlarmNoticeIds(array $AlarmNoticeIds) 设置关联的告警通知渠道组列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取关联的告警通知渠道组列表，和MonitorNotice互斥
  * @method array getAlarmTargets() 获取监控对象列表。
  * @method void setAlarmTargets(array $AlarmTargets) 设置监控对象列表。
  * @method boolean getStatus() 获取是否开启告警策略。
@@ -147,7 +147,7 @@ class ModifyAlarmRequest extends AbstractModel
     public $AlarmPeriod;
 
     /**
-     * @var array 关联的告警通知渠道列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取告警通知渠道列表
+     * @var array 关联的告警通知渠道组列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取关联的告警通知渠道组列表，和MonitorNotice互斥
      */
     public $AlarmNoticeIds;
 
@@ -232,7 +232,7 @@ Classifications元素的Value长度不能超过200个字符。
 - Condition和AlarmLevel是一组配置，MultiConditions是另一组配置，2组配置互斥。
      * @param integer $TriggerCount 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为2000。
      * @param integer $AlarmPeriod 告警重复的周期。单位是分钟。取值范围是0~1440。
-     * @param array $AlarmNoticeIds 关联的告警通知渠道列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取告警通知渠道列表
+     * @param array $AlarmNoticeIds 关联的告警通知渠道组列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取关联的告警通知渠道组列表，和MonitorNotice互斥
      * @param array $AlarmTargets 监控对象列表。
      * @param boolean $Status 是否开启告警策略。
      * @param boolean $Enable 该参数已废弃，请使用Status参数控制是否开启告警策略。

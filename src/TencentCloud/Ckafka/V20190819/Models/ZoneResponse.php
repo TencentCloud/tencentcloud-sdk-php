@@ -40,14 +40,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProfession(string $Profession) 设置购买专业版配置
  * @method string getPhysical() 获取购买物理独占版配置
  * @method void setPhysical(string $Physical) 设置购买物理独占版配置
- * @method string getPublicNetwork() 获取公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
- * @method void setPublicNetwork(string $PublicNetwork) 设置公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
+ * @method string getPublicNetwork() 获取公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写   已废弃,无实际意义
+ * @method void setPublicNetwork(string $PublicNetwork) 设置公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写   已废弃,无实际意义
  * @method string getPublicNetworkLimit() 获取公网带宽配置
  * @method void setPublicNetworkLimit(string $PublicNetworkLimit) 设置公网带宽配置
  * @method string getRequestId() 获取请求Id
  * @method void setRequestId(string $RequestId) 设置请求Id
- * @method string getVersion() 获取版本
- * @method void setVersion(string $Version) 设置版本
  * @method integer getOffset() 获取分页offset
  * @method void setOffset(integer $Offset) 设置分页offset
  * @method integer getLimit() 获取分页limit
@@ -108,7 +106,7 @@ class ZoneResponse extends AbstractModel
     public $Physical;
 
     /**
-     * @var string 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
+     * @var string 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写   已废弃,无实际意义
      */
     public $PublicNetwork;
 
@@ -121,11 +119,6 @@ class ZoneResponse extends AbstractModel
      * @var string 请求Id
      */
     public $RequestId;
-
-    /**
-     * @var string 版本
-     */
-    public $Version;
 
     /**
      * @var integer 分页offset
@@ -153,10 +146,9 @@ class ZoneResponse extends AbstractModel
      * @param string $StandardS2 购买标准版S2配置
      * @param string $Profession 购买专业版配置
      * @param string $Physical 购买物理独占版配置
-     * @param string $PublicNetwork 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写
+     * @param string $PublicNetwork 公网带宽 最小3Mbps  最大999Mbps 仅专业版支持填写   已废弃,无实际意义
      * @param string $PublicNetworkLimit 公网带宽配置
      * @param string $RequestId 请求Id
-     * @param string $Version 版本
      * @param integer $Offset 分页offset
      * @param integer $Limit 分页limit
      * @param boolean $ForceCheckTag 是否必须录入tag
@@ -236,10 +228,6 @@ class ZoneResponse extends AbstractModel
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
-        }
-
-        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
-            $this->Version = $param["Version"];
         }
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {

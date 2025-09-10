@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGroupInfo请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka集群实例Id,可通过DescribeInstances接口获取
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id,可通过DescribeInstances接口获取
- * @method array getGroupList() 获取Kafka 消费分组列表,可通过DescribeConsumerGroup接口获取
- * @method void setGroupList(array $GroupList) 设置Kafka 消费分组列表,可通过DescribeConsumerGroup接口获取
+ * @method string getInstanceId() 获取ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+ * @method array getGroupList() 获取Kafka 消费分组列表,可通过[DescribeConsumerGroup](https://cloud.tencent.com/document/product/597/40841)接口获取
+ * @method void setGroupList(array $GroupList) 设置Kafka 消费分组列表,可通过[DescribeConsumerGroup](https://cloud.tencent.com/document/product/597/40841)接口获取
  */
 class DescribeGroupInfoRequest extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例Id,可通过DescribeInstances接口获取
+     * @var string ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
      */
     public $InstanceId;
 
     /**
-     * @var array Kafka 消费分组列表,可通过DescribeConsumerGroup接口获取
+     * @var array Kafka 消费分组列表,可通过[DescribeConsumerGroup](https://cloud.tencent.com/document/product/597/40841)接口获取
      */
     public $GroupList;
 
     /**
-     * @param string $InstanceId ckafka集群实例Id,可通过DescribeInstances接口获取
-     * @param array $GroupList Kafka 消费分组列表,可通过DescribeConsumerGroup接口获取
+     * @param string $InstanceId ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+     * @param array $GroupList Kafka 消费分组列表,可通过[DescribeConsumerGroup](https://cloud.tencent.com/document/product/597/40841)接口获取
      */
     function __construct()
     {

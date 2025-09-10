@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTriggerCount(integer $TriggerCount) 设置持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。
  * @method integer getAlarmPeriod() 获取告警重复的周期。单位是min。取值范围是0~1440。
  * @method void setAlarmPeriod(integer $AlarmPeriod) 设置告警重复的周期。单位是min。取值范围是0~1440。
- * @method array getAlarmNoticeIds() 获取关联的告警通知模板列表。
- * @method void setAlarmNoticeIds(array $AlarmNoticeIds) 设置关联的告警通知模板列表。
+ * @method array getAlarmNoticeIds() 获取关联的告警通知渠道组列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取关联的告警通知渠道组列表，和MonitorNotice互斥
+ * @method void setAlarmNoticeIds(array $AlarmNoticeIds) 设置关联的告警通知渠道组列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取关联的告警通知渠道组列表，和MonitorNotice互斥
  * @method boolean getStatus() 获取开启状态。
  * @method void setStatus(boolean $Status) 设置开启状态。
  * @method string getAlarmId() 获取告警策略ID。
@@ -66,6 +66,8 @@ use TencentCloud\Common\AbstractModel;
 Condition互斥。
  * @method void setMultiConditions(array $MultiConditions) 设置多触发条件。与
 Condition互斥。
+ * @method MonitorNotice getMonitorNotice() 获取云监控通知渠道相关信息，和AlarmNoticeIds互斥
+ * @method void setMonitorNotice(MonitorNotice $MonitorNotice) 设置云监控通知渠道相关信息，和AlarmNoticeIds互斥
  */
 class AlarmInfo extends AbstractModel
 {
@@ -100,7 +102,7 @@ class AlarmInfo extends AbstractModel
     public $AlarmPeriod;
 
     /**
-     * @var array 关联的告警通知模板列表。
+     * @var array 关联的告警通知渠道组列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取关联的告警通知渠道组列表，和MonitorNotice互斥
      */
     public $AlarmNoticeIds;
 
@@ -177,13 +179,18 @@ Condition互斥。
     public $MultiConditions;
 
     /**
+     * @var MonitorNotice 云监控通知渠道相关信息，和AlarmNoticeIds互斥
+     */
+    public $MonitorNotice;
+
+    /**
      * @param string $Name 告警策略名称。
      * @param array $AlarmTargets 监控对象列表。
      * @param MonitorTime $MonitorTime 监控任务运行时间点。
      * @param string $Condition 是否触发告警的单触发条件。与MultiConditions参数互斥。
      * @param integer $TriggerCount 持续周期。持续满足触发条件TriggerCount个周期后，再进行告警；最小值为1，最大值为10。
      * @param integer $AlarmPeriod 告警重复的周期。单位是min。取值范围是0~1440。
-     * @param array $AlarmNoticeIds 关联的告警通知模板列表。
+     * @param array $AlarmNoticeIds 关联的告警通知渠道组列表。-通过[获取通知渠道组列表](https://cloud.tencent.com/document/product/614/56462)获取关联的告警通知渠道组列表，和MonitorNotice互斥
      * @param boolean $Status 开启状态。
      * @param string $AlarmId 告警策略ID。
      * @param string $CreateTime 创建时间。格式： YYYY-MM-DD HH:MM:SS
@@ -200,6 +207,7 @@ Condition互斥。
      * @param array $Classifications 告警附加分类字段。
      * @param array $MultiConditions 多触发条件。与
 Condition互斥。
+     * @param MonitorNotice $MonitorNotice 云监控通知渠道相关信息，和AlarmNoticeIds互斥
      */
     function __construct()
     {
@@ -323,6 +331,11 @@ Condition互斥。
                 $obj->deserialize($value);
                 array_push($this->MultiConditions, $obj);
             }
+        }
+
+        if (array_key_exists("MonitorNotice",$param) and $param["MonitorNotice"] !== null) {
+            $this->MonitorNotice = new MonitorNotice();
+            $this->MonitorNotice->deserialize($param["MonitorNotice"]);
         }
     }
 }

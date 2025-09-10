@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置每页返回数量，默认值为100，最大值为100。
  * @method integer getOffset() 获取数据偏移值
  * @method void setOffset(integer $Offset) 设置数据偏移值
+ * @method string getScene() 获取场景值：
+ModifyDiskExtraPerformance ：调整数据盘额外性能
+ * @method void setScene(string $Scene) 设置场景值：
+ModifyDiskExtraPerformance ：调整数据盘额外性能
  */
 class DescribeNodeDataDisksRequest extends AbstractModel
 {
@@ -66,12 +70,20 @@ class DescribeNodeDataDisksRequest extends AbstractModel
     public $Offset;
 
     /**
+     * @var string 场景值：
+ModifyDiskExtraPerformance ：调整数据盘额外性能
+     */
+    public $Scene;
+
+    /**
      * @param string $InstanceId EMR集群实例ID
      * @param array $CvmInstanceIds 节点CVM实例Id列表
      * @param array $Filters 查询云盘的过滤条件
      * @param string $InnerSearch 模糊搜索
      * @param integer $Limit 每页返回数量，默认值为100，最大值为100。
      * @param integer $Offset 数据偏移值
+     * @param string $Scene 场景值：
+ModifyDiskExtraPerformance ：调整数据盘额外性能
      */
     function __construct()
     {
@@ -113,6 +125,10 @@ class DescribeNodeDataDisksRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Scene",$param) and $param["Scene"] !== null) {
+            $this->Scene = $param["Scene"];
         }
     }
 }

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopicId(string $TopicId) 设置Topic Id
  * @method integer getPartitionNum() 获取分区数
  * @method void setPartitionNum(integer $PartitionNum) 设置分区数
- * @method integer getRetentionMs() 获取过期时间
- * @method void setRetentionMs(integer $RetentionMs) 设置过期时间
+ * @method integer getRetentionMs() 获取过期时间，单位ms
+ * @method void setRetentionMs(integer $RetentionMs) 设置过期时间，单位ms
  * @method string getNote() 获取备注
  * @method void setNote(string $Note) 设置备注
  * @method integer getStatus() 获取状态，1使用中，2删除中
@@ -58,7 +58,7 @@ class DatahubTopicDTO extends AbstractModel
     public $PartitionNum;
 
     /**
-     * @var integer 过期时间
+     * @var integer 过期时间，单位ms
      */
     public $RetentionMs;
 
@@ -77,7 +77,7 @@ class DatahubTopicDTO extends AbstractModel
      * @param string $TopicName Topic名称
      * @param string $TopicId Topic Id
      * @param integer $PartitionNum 分区数
-     * @param integer $RetentionMs 过期时间
+     * @param integer $RetentionMs 过期时间，单位ms
      * @param string $Note 备注
      * @param integer $Status 状态，1使用中，2删除中
      */

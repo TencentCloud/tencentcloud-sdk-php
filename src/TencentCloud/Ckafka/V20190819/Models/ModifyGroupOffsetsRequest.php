@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyGroupOffsets请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka集群实例Id,可通过DescribeInstances接口获取
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id,可通过DescribeInstances接口获取
- * @method string getGroup() 获取消费分组名称,可通过DescribeConsumerGroup接口获取
- * @method void setGroup(string $Group) 设置消费分组名称,可通过DescribeConsumerGroup接口获取
+ * @method string getInstanceId() 获取ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+ * @method string getGroup() 获取消费分组名称,可通过[DescribeConsumerGroup](https://cloud.tencent.com/document/product/597/40841)接口获取
+ * @method void setGroup(string $Group) 设置消费分组名称,可通过[DescribeConsumerGroup](https://cloud.tencent.com/document/product/597/40841)接口获取
  * @method integer getStrategy() 获取重置offset的策略,入参含义 0. 对齐shift-by参数,代表把offset向前或向后移动shift条 1. 对齐参考(by-duration,to-datetime,to-earliest,to-latest),代表把offset移动到指定timestamp的位置 2. 对齐参考(to-offset),代表把offset移动到指定的offset位置
  * @method void setStrategy(integer $Strategy) 设置重置offset的策略,入参含义 0. 对齐shift-by参数,代表把offset向前或向后移动shift条 1. 对齐参考(by-duration,to-datetime,to-earliest,to-latest),代表把offset移动到指定timestamp的位置 2. 对齐参考(to-offset),代表把offset移动到指定的offset位置
  * @method array getTopics() 获取需要重置的主题名列表
@@ -40,12 +40,12 @@ use TencentCloud\Common\AbstractModel;
 class ModifyGroupOffsetsRequest extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例Id,可通过DescribeInstances接口获取
+     * @var string ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
      */
     public $InstanceId;
 
     /**
-     * @var string 消费分组名称,可通过DescribeConsumerGroup接口获取
+     * @var string 消费分组名称,可通过[DescribeConsumerGroup](https://cloud.tencent.com/document/product/597/40841)接口获取
      */
     public $Group;
 
@@ -80,8 +80,8 @@ class ModifyGroupOffsetsRequest extends AbstractModel
     public $Partitions;
 
     /**
-     * @param string $InstanceId ckafka集群实例Id,可通过DescribeInstances接口获取
-     * @param string $Group 消费分组名称,可通过DescribeConsumerGroup接口获取
+     * @param string $InstanceId ckafka集群实例Id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+     * @param string $Group 消费分组名称,可通过[DescribeConsumerGroup](https://cloud.tencent.com/document/product/597/40841)接口获取
      * @param integer $Strategy 重置offset的策略,入参含义 0. 对齐shift-by参数,代表把offset向前或向后移动shift条 1. 对齐参考(by-duration,to-datetime,to-earliest,to-latest),代表把offset移动到指定timestamp的位置 2. 对齐参考(to-offset),代表把offset移动到指定的offset位置
      * @param array $Topics 需要重置的主题名列表
      * @param integer $Shift 当strategy为0时，必须包含该字段，可以大于零代表会把offset向后移动shift条，小于零则将offset向前回溯shift条数。正确重置后新的offset应该是(old_offset + shift)，需要注意的是如果新的offset小于partition的earliest则会设置为earliest，如果大于partition 的latest则会设置为latest

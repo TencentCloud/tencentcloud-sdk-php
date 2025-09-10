@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreatePartition请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka集群实例Id，可通过DescribeInstances接口获取。
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id，可通过DescribeInstances接口获取。
- * @method string getTopicName() 获取主题名称，可通过DescribeTopic接口获取。
- * @method void setTopicName(string $TopicName) 设置主题名称，可通过DescribeTopic接口获取。
+ * @method string getInstanceId() 获取ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+ * @method string getTopicName() 获取主题名称，可通过[DescribeTopic](https://cloud.tencent.com/document/product/597/40847)接口获取
+ * @method void setTopicName(string $TopicName) 设置主题名称，可通过[DescribeTopic](https://cloud.tencent.com/document/product/597/40847)接口获取
  * @method integer getPartitionNum() 获取主题分区个数，传入参数为修改后的分区数，而不是增加的分区数，因此传入参数需要大于当前主题分区个数。
  * @method void setPartitionNum(integer $PartitionNum) 设置主题分区个数，传入参数为修改后的分区数，而不是增加的分区数，因此传入参数需要大于当前主题分区个数。
  */
 class CreatePartitionRequest extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例Id，可通过DescribeInstances接口获取。
+     * @var string ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
      */
     public $InstanceId;
 
     /**
-     * @var string 主题名称，可通过DescribeTopic接口获取。
+     * @var string 主题名称，可通过[DescribeTopic](https://cloud.tencent.com/document/product/597/40847)接口获取
      */
     public $TopicName;
 
@@ -45,8 +45,8 @@ class CreatePartitionRequest extends AbstractModel
     public $PartitionNum;
 
     /**
-     * @param string $InstanceId ckafka集群实例Id，可通过DescribeInstances接口获取。
-     * @param string $TopicName 主题名称，可通过DescribeTopic接口获取。
+     * @param string $InstanceId ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+     * @param string $TopicName 主题名称，可通过[DescribeTopic](https://cloud.tencent.com/document/product/597/40847)接口获取
      * @param integer $PartitionNum 主题分区个数，传入参数为修改后的分区数，而不是增加的分区数，因此传入参数需要大于当前主题分区个数。
      */
     function __construct()

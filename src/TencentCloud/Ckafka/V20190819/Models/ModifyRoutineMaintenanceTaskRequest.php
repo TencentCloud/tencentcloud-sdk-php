@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyRoutineMaintenanceTask请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka集群实例id,可通过DescribeInstances接口获取
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例id,可通过DescribeInstances接口获取
+ * @method string getInstanceId() 获取ckafka集群实例id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
  * @method string getMaintenanceType() 获取自动化运维类别, 类别如下: QUOTA、ANALYSIS、RE_BALANCE、ELASTIC_BANDWIDTH
  * @method void setMaintenanceType(string $MaintenanceType) 设置自动化运维类别, 类别如下: QUOTA、ANALYSIS、RE_BALANCE、ELASTIC_BANDWIDTH
  * @method string getMaintenanceSubtype() 获取INSTANCE_STORAGE_CAPACITY(磁盘自动扩容)/MESSAGE_RETENTION_PERIOD(磁盘动态消息保留策略)
@@ -46,7 +46,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyRoutineMaintenanceTaskRequest extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例id,可通过DescribeInstances接口获取
+     * @var string ckafka集群实例id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
      */
     public $InstanceId;
 
@@ -101,7 +101,7 @@ class ModifyRoutineMaintenanceTaskRequest extends AbstractModel
     public $Week;
 
     /**
-     * @param string $InstanceId ckafka集群实例id,可通过DescribeInstances接口获取
+     * @param string $InstanceId ckafka集群实例id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
      * @param string $MaintenanceType 自动化运维类别, 类别如下: QUOTA、ANALYSIS、RE_BALANCE、ELASTIC_BANDWIDTH
      * @param string $MaintenanceSubtype INSTANCE_STORAGE_CAPACITY(磁盘自动扩容)/MESSAGE_RETENTION_PERIOD(磁盘动态消息保留策略)
      * @param string $TopicName 主题名

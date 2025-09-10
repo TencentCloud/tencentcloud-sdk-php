@@ -26,6 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNeedCreateReview(boolean $NeedCreateReview) 设置是否需要发起前进行审批
  * @method integer getFlowDisplayType() 获取在短信通知、填写、签署流程中，若标题、按钮、合同详情等地方存在“合同”字样时，可根据此配置指定文案，可选文案如下：  <ul><li> <b>0</b> :合同（默认值）</li> <li> <b>1</b> :文件</li> <li> <b>2</b> :协议</li><li> <b>3</b> :文书</li></ul>效果如下:![FlowDisplayType](https://qcloudimg.tencent-cloud.cn/raw/e4a2c4d638717cc901d3dbd5137c9bbc.png)
  * @method void setFlowDisplayType(integer $FlowDisplayType) 设置在短信通知、填写、签署流程中，若标题、按钮、合同详情等地方存在“合同”字样时，可根据此配置指定文案，可选文案如下：  <ul><li> <b>0</b> :合同（默认值）</li> <li> <b>1</b> :文件</li> <li> <b>2</b> :协议</li><li> <b>3</b> :文书</li></ul>效果如下:![FlowDisplayType](https://qcloudimg.tencent-cloud.cn/raw/e4a2c4d638717cc901d3dbd5137c9bbc.png)
+ * @method boolean getForbidEditFlow() 获取小程序集成发起，是否禁止发起时修改合同内容
+<ul>
+<li>false：默认值，不禁止发起时修改合同内容</li>
+<li>true：禁止发起时修改合同内容</li>
+</ul>
+ * @method void setForbidEditFlow(boolean $ForbidEditFlow) 设置小程序集成发起，是否禁止发起时修改合同内容
+<ul>
+<li>false：默认值，不禁止发起时修改合同内容</li>
+<li>true：禁止发起时修改合同内容</li>
+</ul>
  */
 class MiniAppCreateFlowOption extends AbstractModel
 {
@@ -45,9 +55,23 @@ class MiniAppCreateFlowOption extends AbstractModel
     public $FlowDisplayType;
 
     /**
+     * @var boolean 小程序集成发起，是否禁止发起时修改合同内容
+<ul>
+<li>false：默认值，不禁止发起时修改合同内容</li>
+<li>true：禁止发起时修改合同内容</li>
+</ul>
+     */
+    public $ForbidEditFlow;
+
+    /**
      * @param integer $RemindedOn 到期提醒日（linux时间戳） 精确到天
      * @param boolean $NeedCreateReview 是否需要发起前进行审批
      * @param integer $FlowDisplayType 在短信通知、填写、签署流程中，若标题、按钮、合同详情等地方存在“合同”字样时，可根据此配置指定文案，可选文案如下：  <ul><li> <b>0</b> :合同（默认值）</li> <li> <b>1</b> :文件</li> <li> <b>2</b> :协议</li><li> <b>3</b> :文书</li></ul>效果如下:![FlowDisplayType](https://qcloudimg.tencent-cloud.cn/raw/e4a2c4d638717cc901d3dbd5137c9bbc.png)
+     * @param boolean $ForbidEditFlow 小程序集成发起，是否禁止发起时修改合同内容
+<ul>
+<li>false：默认值，不禁止发起时修改合同内容</li>
+<li>true：禁止发起时修改合同内容</li>
+</ul>
      */
     function __construct()
     {
@@ -72,6 +96,10 @@ class MiniAppCreateFlowOption extends AbstractModel
 
         if (array_key_exists("FlowDisplayType",$param) and $param["FlowDisplayType"] !== null) {
             $this->FlowDisplayType = $param["FlowDisplayType"];
+        }
+
+        if (array_key_exists("ForbidEditFlow",$param) and $param["ForbidEditFlow"] !== null) {
+            $this->ForbidEditFlow = $param["ForbidEditFlow"];
         }
     }
 }

@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGraceDownFlag(boolean $GraceDownFlag) 设置优雅缩容开关
  * @method integer getGraceDownTime() 获取优雅缩容等待时间
  * @method void setGraceDownTime(integer $GraceDownTime) 设置优雅缩容等待时间
+ * @method boolean getGraceDownProtectFlag() 获取是否开启任务保护
+ * @method void setGraceDownProtectFlag(boolean $GraceDownProtectFlag) 设置是否开启任务保护
  * @method array getTags() 获取绑定标签列表
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTags(array $Tags) 设置绑定标签列表
@@ -138,6 +140,11 @@ class TimeAutoScaleStrategy extends AbstractModel
     public $GraceDownTime;
 
     /**
+     * @var boolean 是否开启任务保护
+     */
+    public $GraceDownProtectFlag;
+
+    /**
      * @var array 绑定标签列表
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -207,6 +214,7 @@ class TimeAutoScaleStrategy extends AbstractModel
      * @param integer $StrategyId 策略唯一ID。
      * @param boolean $GraceDownFlag 优雅缩容开关
      * @param integer $GraceDownTime 优雅缩容等待时间
+     * @param boolean $GraceDownProtectFlag 是否开启任务保护
      * @param array $Tags 绑定标签列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $ConfigGroupAssigned 预设配置组
@@ -281,6 +289,10 @@ class TimeAutoScaleStrategy extends AbstractModel
 
         if (array_key_exists("GraceDownTime",$param) and $param["GraceDownTime"] !== null) {
             $this->GraceDownTime = $param["GraceDownTime"];
+        }
+
+        if (array_key_exists("GraceDownProtectFlag",$param) and $param["GraceDownProtectFlag"] !== null) {
+            $this->GraceDownProtectFlag = $param["GraceDownProtectFlag"];
         }
 
         if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {

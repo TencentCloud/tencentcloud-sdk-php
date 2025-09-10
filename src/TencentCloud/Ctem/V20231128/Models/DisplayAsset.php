@@ -36,6 +36,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsp(string $Isp) 设置运营商
  * @method DisplayToolCommon getDisplayToolCommon() 获取公共字段
  * @method void setDisplayToolCommon(DisplayToolCommon $DisplayToolCommon) 设置公共字段
+ * @method string getPorts() 获取端口数据
+ * @method void setPorts(string $Ports) 设置端口数据
+ * @method string getServices() 获取服务数据
+ * @method void setServices(string $Services) 设置服务数据
+ * @method string getDomains() 获取域名数据
+ * @method void setDomains(string $Domains) 设置域名数据
+ * @method string getLastModify() 获取端口和服务最近更新时间
+ * @method void setLastModify(string $LastModify) 设置端口和服务最近更新时间
  */
 class DisplayAsset extends AbstractModel
 {
@@ -80,6 +88,26 @@ class DisplayAsset extends AbstractModel
     public $DisplayToolCommon;
 
     /**
+     * @var string 端口数据
+     */
+    public $Ports;
+
+    /**
+     * @var string 服务数据
+     */
+    public $Services;
+
+    /**
+     * @var string 域名数据
+     */
+    public $Domains;
+
+    /**
+     * @var string 端口和服务最近更新时间
+     */
+    public $LastModify;
+
+    /**
      * @param integer $Id 主机资产Id
      * @param string $Os 操作系统类型
      * @param string $Ip 主机地址
@@ -88,6 +116,10 @@ class DisplayAsset extends AbstractModel
      * @param string $City 地域
      * @param string $Isp 运营商
      * @param DisplayToolCommon $DisplayToolCommon 公共字段
+     * @param string $Ports 端口数据
+     * @param string $Services 服务数据
+     * @param string $Domains 域名数据
+     * @param string $LastModify 端口和服务最近更新时间
      */
     function __construct()
     {
@@ -133,6 +165,22 @@ class DisplayAsset extends AbstractModel
         if (array_key_exists("DisplayToolCommon",$param) and $param["DisplayToolCommon"] !== null) {
             $this->DisplayToolCommon = new DisplayToolCommon();
             $this->DisplayToolCommon->deserialize($param["DisplayToolCommon"]);
+        }
+
+        if (array_key_exists("Ports",$param) and $param["Ports"] !== null) {
+            $this->Ports = $param["Ports"];
+        }
+
+        if (array_key_exists("Services",$param) and $param["Services"] !== null) {
+            $this->Services = $param["Services"];
+        }
+
+        if (array_key_exists("Domains",$param) and $param["Domains"] !== null) {
+            $this->Domains = $param["Domains"];
+        }
+
+        if (array_key_exists("LastModify",$param) and $param["LastModify"] !== null) {
+            $this->LastModify = $param["LastModify"];
         }
     }
 }

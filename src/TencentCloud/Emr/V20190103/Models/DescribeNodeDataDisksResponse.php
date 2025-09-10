@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getMaxSize() 获取云盘最大容量
  * @method void setMaxSize(integer $MaxSize) 设置云盘最大容量
+ * @method integer getMaxThroughputPerformance() 获取云硬盘最大额外性能值
+ * @method void setMaxThroughputPerformance(integer $MaxThroughputPerformance) 设置云硬盘最大额外性能值
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -50,6 +52,11 @@ class DescribeNodeDataDisksResponse extends AbstractModel
     public $MaxSize;
 
     /**
+     * @var integer 云硬盘最大额外性能值
+     */
+    public $MaxThroughputPerformance;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -59,6 +66,7 @@ class DescribeNodeDataDisksResponse extends AbstractModel
      * @param array $CBSList 云盘列表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $MaxSize 云盘最大容量
+     * @param integer $MaxThroughputPerformance 云硬盘最大额外性能值
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -89,6 +97,10 @@ class DescribeNodeDataDisksResponse extends AbstractModel
 
         if (array_key_exists("MaxSize",$param) and $param["MaxSize"] !== null) {
             $this->MaxSize = $param["MaxSize"];
+        }
+
+        if (array_key_exists("MaxThroughputPerformance",$param) and $param["MaxThroughputPerformance"] !== null) {
+            $this->MaxThroughputPerformance = $param["MaxThroughputPerformance"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

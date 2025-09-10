@@ -24,10 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCasterId(integer $CasterId) 设置导播台ID
  * @method string getCasterName() 获取导播台名称
  * @method void setCasterName(string $CasterName) 设置导播台名称
- * @method string getDescription() 获取导播台的描述
-最大允许长度256
- * @method void setDescription(string $Description) 设置导播台的描述
-最大允许长度256
+ * @method string getDescription() 获取导播台的描述，最大允许长度256
+ * @method void setDescription(string $Description) 设置导播台的描述，最大允许长度256
  * @method integer getRecordTemplateId() 获取录制模板id。
 默认为0。
 当使用直播录制功能时，可将使用的录制模版填入。
@@ -116,8 +114,7 @@ class ModifyCasterRequest extends AbstractModel
     public $CasterName;
 
     /**
-     * @var string 导播台的描述
-最大允许长度256
+     * @var string 导播台的描述，最大允许长度256
      */
     public $Description;
 
@@ -209,8 +206,7 @@ class ModifyCasterRequest extends AbstractModel
     /**
      * @param integer $CasterId 导播台ID
      * @param string $CasterName 导播台名称
-     * @param string $Description 导播台的描述
-最大允许长度256
+     * @param string $Description 导播台的描述，最大允许长度256
      * @param integer $RecordTemplateId 录制模板id。
 默认为0。
 当使用直播录制功能时，可将使用的录制模版填入。

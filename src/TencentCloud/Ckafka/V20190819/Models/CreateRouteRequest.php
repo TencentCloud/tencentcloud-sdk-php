@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateRoute请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka集群实例id,可通过DescribeInstances接口获取
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例id,可通过DescribeInstances接口获取
+ * @method string getInstanceId() 获取ckafka集群实例id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
  * @method integer getVipType() 获取路由网络类型(3:vpc路由;7:内部支撑路由;1:公网路由)
  * @method void setVipType(integer $VipType) 设置路由网络类型(3:vpc路由;7:内部支撑路由;1:公网路由)
  * @method string getVpcId() 获取vpc网络Id,当vipType为3时必填
@@ -42,15 +42,17 @@ vipType=1,支持1,3
  * @method void setAuthFlag(integer $AuthFlag) 设置是否需要权限管理,该字段已废弃
  * @method integer getCallerAppid() 获取调用方appId
  * @method void setCallerAppid(integer $CallerAppid) 设置调用方appId
- * @method integer getPublicNetwork() 获取公网带宽,公网路由必传,且必选时3的倍数,无默认值
- * @method void setPublicNetwork(integer $PublicNetwork) 设置公网带宽,公网路由必传,且必选时3的倍数,无默认值
+ * @method integer getPublicNetwork() 获取公网带宽,公网路由必传,且是3的倍数,无默认值
+ * @method void setPublicNetwork(integer $PublicNetwork) 设置公网带宽,公网路由必传,且是3的倍数,无默认值
  * @method string getIp() 获取vip地址
  * @method void setIp(string $Ip) 设置vip地址
+ * @method string getNote() 获取备注信息
+ * @method void setNote(string $Note) 设置备注信息
  */
 class CreateRouteRequest extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例id,可通过DescribeInstances接口获取
+     * @var string ckafka集群实例id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
      */
     public $InstanceId;
 
@@ -89,7 +91,7 @@ vipType=1,支持1,3
     public $CallerAppid;
 
     /**
-     * @var integer 公网带宽,公网路由必传,且必选时3的倍数,无默认值
+     * @var integer 公网带宽,公网路由必传,且是3的倍数,无默认值
      */
     public $PublicNetwork;
 
@@ -99,7 +101,12 @@ vipType=1,支持1,3
     public $Ip;
 
     /**
-     * @param string $InstanceId ckafka集群实例id,可通过DescribeInstances接口获取
+     * @var string 备注信息
+     */
+    public $Note;
+
+    /**
+     * @param string $InstanceId ckafka集群实例id,可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
      * @param integer $VipType 路由网络类型(3:vpc路由;7:内部支撑路由;1:公网路由)
      * @param string $VpcId vpc网络Id,当vipType为3时必填
      * @param string $SubnetId vpc子网id,当vipType为3时必填
@@ -110,8 +117,9 @@ vipType=1,支持1,3
 
      * @param integer $AuthFlag 是否需要权限管理,该字段已废弃
      * @param integer $CallerAppid 调用方appId
-     * @param integer $PublicNetwork 公网带宽,公网路由必传,且必选时3的倍数,无默认值
+     * @param integer $PublicNetwork 公网带宽,公网路由必传,且是3的倍数,无默认值
      * @param string $Ip vip地址
+     * @param string $Note 备注信息
      */
     function __construct()
     {
@@ -160,6 +168,10 @@ vipType=1,支持1,3
 
         if (array_key_exists("Ip",$param) and $param["Ip"] !== null) {
             $this->Ip = $param["Ip"];
+        }
+
+        if (array_key_exists("Note",$param) and $param["Note"] !== null) {
+            $this->Note = $param["Note"];
         }
     }
 }

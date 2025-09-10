@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAggrSoftDeviceList请求参数结构体
  *
+ * @method Condition getCondition() 获取过滤条件
+ * @method void setCondition(Condition $Condition) 设置过滤条件
  * @method string getName() 获取软件名
  * @method void setName(string $Name) 设置软件名
- * @method integer getOsType() 获取操作系统
- * @method void setOsType(integer $OsType) 设置操作系统
+ * @method integer getOsType() 获取0:win 2:mac
+ * @method void setOsType(integer $OsType) 设置0:win 2:mac
  */
 class DescribeAggrSoftDeviceListRequest extends AbstractModel
 {
+    /**
+     * @var Condition 过滤条件
+     */
+    public $Condition;
+
     /**
      * @var string 软件名
      */
     public $Name;
 
     /**
-     * @var integer 操作系统
+     * @var integer 0:win 2:mac
      */
     public $OsType;
 
     /**
+     * @param Condition $Condition 过滤条件
      * @param string $Name 软件名
-     * @param integer $OsType 操作系统
+     * @param integer $OsType 0:win 2:mac
      */
     function __construct()
     {
@@ -54,6 +62,11 @@ class DescribeAggrSoftDeviceListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Condition",$param) and $param["Condition"] !== null) {
+            $this->Condition = new Condition();
+            $this->Condition->deserialize($param["Condition"]);
+        }
+
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
         }

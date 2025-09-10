@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAclRule请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka集群实例Id，可通过DescribeInstances接口获取。
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id，可通过DescribeInstances接口获取。
+ * @method string getInstanceId() 获取ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
  * @method string getResourceType() 获取Acl资源类型,目前只支持Topic,枚举值列表：Topic
  * @method void setResourceType(string $ResourceType) 设置Acl资源类型,目前只支持Topic,枚举值列表：Topic
  * @method string getPatternType() 获取ACL规则匹配类型，目前支持前缀匹配与预设策略，枚举值列表：PREFIXED/PRESET
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateAclRuleRequest extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例Id，可通过DescribeInstances接口获取。
+     * @var string ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
      */
     public $InstanceId;
 
@@ -80,7 +80,7 @@ class CreateAclRuleRequest extends AbstractModel
     public $Comment;
 
     /**
-     * @param string $InstanceId ckafka集群实例Id，可通过DescribeInstances接口获取。
+     * @param string $InstanceId ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
      * @param string $ResourceType Acl资源类型,目前只支持Topic,枚举值列表：Topic
      * @param string $PatternType ACL规则匹配类型，目前支持前缀匹配与预设策略，枚举值列表：PREFIXED/PRESET
      * @param string $RuleName 规则名称

@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateMigrationService请求参数结构体
  *
- * @method string getSrcDatabaseType() 获取源实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql
- * @method void setSrcDatabaseType(string $SrcDatabaseType) 设置源实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql
- * @method string getDstDatabaseType() 获取目标实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql
- * @method void setDstDatabaseType(string $DstDatabaseType) 设置目标实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql
+ * @method string getSrcDatabaseType() 获取源实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql(表示TDSQL-C MySQL数据库)
+ * @method void setSrcDatabaseType(string $SrcDatabaseType) 设置源实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql(表示TDSQL-C MySQL数据库)
+ * @method string getDstDatabaseType() 获取目标实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql(表示TDSQL-C MySQL数据库)
+ * @method void setDstDatabaseType(string $DstDatabaseType) 设置目标实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql(表示TDSQL-C MySQL数据库)
  * @method string getSrcRegion() 获取源实例地域，如：ap-guangzhou
  * @method void setSrcRegion(string $SrcRegion) 设置源实例地域，如：ap-guangzhou
  * @method string getDstRegion() 获取目标实例地域，如：ap-guangzhou。注意，目标地域必须和API请求地域保持一致。
  * @method void setDstRegion(string $DstRegion) 设置目标实例地域，如：ap-guangzhou。注意，目标地域必须和API请求地域保持一致。
- * @method string getInstanceClass() 获取实例规格，包括：small、medium、large、xlarge、2xlarge
- * @method void setInstanceClass(string $InstanceClass) 设置实例规格，包括：small、medium、large、xlarge、2xlarge
+ * @method string getInstanceClass() 获取实例规格，包括：small、medium、large、xlarge、2xlarge。当前未计费链路仅支持medium字段值。不同规格类型参考[计费概述](https://cloud.tencent.com/document/product/571/18736)
+ * @method void setInstanceClass(string $InstanceClass) 设置实例规格，包括：small、medium、large、xlarge、2xlarge。当前未计费链路仅支持medium字段值。不同规格类型参考[计费概述](https://cloud.tencent.com/document/product/571/18736)
  * @method integer getCount() 获取购买数量，范围为[1,15]，默认为1
  * @method void setCount(integer $Count) 设置购买数量，范围为[1,15]，默认为1
  * @method string getJobName() 获取迁移服务名称，最大长度128
@@ -40,12 +40,12 @@ use TencentCloud\Common\AbstractModel;
 class CreateMigrationServiceRequest extends AbstractModel
 {
     /**
-     * @var string 源实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql
+     * @var string 源实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql(表示TDSQL-C MySQL数据库)
      */
     public $SrcDatabaseType;
 
     /**
-     * @var string 目标实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql
+     * @var string 目标实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql(表示TDSQL-C MySQL数据库)
      */
     public $DstDatabaseType;
 
@@ -60,7 +60,7 @@ class CreateMigrationServiceRequest extends AbstractModel
     public $DstRegion;
 
     /**
-     * @var string 实例规格，包括：small、medium、large、xlarge、2xlarge
+     * @var string 实例规格，包括：small、medium、large、xlarge、2xlarge。当前未计费链路仅支持medium字段值。不同规格类型参考[计费概述](https://cloud.tencent.com/document/product/571/18736)
      */
     public $InstanceClass;
 
@@ -80,11 +80,11 @@ class CreateMigrationServiceRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @param string $SrcDatabaseType 源实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql
-     * @param string $DstDatabaseType 目标实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql
+     * @param string $SrcDatabaseType 源实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql(表示TDSQL-C MySQL数据库)
+     * @param string $DstDatabaseType 目标实例数据库类型，如mysql,redis,percona,mongodb,postgresql,sqlserver,mariadb,cynosdbmysql(表示TDSQL-C MySQL数据库)
      * @param string $SrcRegion 源实例地域，如：ap-guangzhou
      * @param string $DstRegion 目标实例地域，如：ap-guangzhou。注意，目标地域必须和API请求地域保持一致。
-     * @param string $InstanceClass 实例规格，包括：small、medium、large、xlarge、2xlarge
+     * @param string $InstanceClass 实例规格，包括：small、medium、large、xlarge、2xlarge。当前未计费链路仅支持medium字段值。不同规格类型参考[计费概述](https://cloud.tencent.com/document/product/571/18736)
      * @param integer $Count 购买数量，范围为[1,15]，默认为1
      * @param string $JobName 迁移服务名称，最大长度128
      * @param array $Tags 标签信息

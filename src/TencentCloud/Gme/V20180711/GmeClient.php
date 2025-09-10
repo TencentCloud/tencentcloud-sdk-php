@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Gme\V20180711\Models as Models;
 
 /**
+ * @method Models\ControlAIConversationResponse ControlAIConversation(Models\ControlAIConversationRequest $req) 提供服务端控制机器人的功能
  * @method Models\CreateAgeDetectTaskResponse CreateAgeDetectTask(Models\CreateAgeDetectTaskRequest $req) 目前该功能底层能力已不具备，不对外提供，目前需要下线，走预下线流程。
 
 用于创建年龄语音识别任务的接口，请求频率10次/秒。该接口目前通过白名单开放试用，如有需求，请提交工单申请。
@@ -42,6 +43,8 @@ use TencentCloud\Gme\V20180711\Models as Models;
  * @method Models\DeleteCustomizationResponse DeleteCustomization(Models\DeleteCustomizationRequest $req) 用户通过该接口可以删除语音消息转文本热句模型
  * @method Models\DeleteRoomMemberResponse DeleteRoomMember(Models\DeleteRoomMemberRequest $req) 本接口(DeleteRoomMember)用户删除房间或者剔除房间内用户
  * @method Models\DeleteScanUserResponse DeleteScanUser(Models\DeleteScanUserRequest $req) 删除自定义送检用户。**接口使用前提**：目前 DeleteScanUser 接口通过白名单开放，如需使用，需要 [提交工单申请](https://console.cloud.tencent.com/workorder/category?level1_id=438&level2_id=445&source=0&data_title=%E6%B8%B8%E6%88%8F%E5%A4%9A%E5%AA%92%E4%BD%93%E5%BC%95%E6%93%8EGME&step=1)。
+ * @method Models\DeleteVoicePrintResponse DeleteVoicePrint(Models\DeleteVoicePrintRequest $req) 传入声纹ID，删除之前注册的声纹信息
+ * @method Models\DescribeAIConversationResponse DescribeAIConversation(Models\DescribeAIConversationRequest $req) 查询AI对话任务状态。
  * @method Models\DescribeAgeDetectTaskResponse DescribeAgeDetectTask(Models\DescribeAgeDetectTaskRequest $req) 目前该功能底层能力已不具备，不对外提供，目前需要下线，走预下线流程。
 
 查询年龄语音识别任务结果，请求频率10次/秒。该接口目前通过白名单开放试用，如有需求，请提交工单申请。
@@ -55,6 +58,7 @@ use TencentCloud\Gme\V20180711\Models as Models;
 <p style="color:red">如果在提交语音检测任务时未设置 Callback 字段，则需要通过本接口获取检测结果</p>
  * @method Models\DescribeTaskInfoResponse DescribeTaskInfo(Models\DescribeTaskInfoRequest $req) 查询房间录制的详细信息
  * @method Models\DescribeUserInAndOutTimeResponse DescribeUserInAndOutTime(Models\DescribeUserInAndOutTimeRequest $req) 拉取用户在房间得进出时间
+ * @method Models\DescribeVoicePrintResponse DescribeVoicePrint(Models\DescribeVoicePrintRequest $req) 查询先前注册的声纹信息
  * @method Models\GetCustomizationListResponse GetCustomizationList(Models\GetCustomizationListRequest $req) 查询语音消息转文本热句模型列表
  * @method Models\ModifyAppStatusResponse ModifyAppStatus(Models\ModifyAppStatusRequest $req) 本接口(ModifyAppStatus)用于修改应用总开关状态。
  * @method Models\ModifyCustomizationResponse ModifyCustomization(Models\ModifyCustomizationRequest $req) 用户通过该接口可以更新语音消息转文本热句模型。
@@ -63,6 +67,7 @@ use TencentCloud\Gme\V20180711\Models as Models;
  * @method Models\ModifyUserMicStatusResponse ModifyUserMicStatus(Models\ModifyUserMicStatusRequest $req) **接口作用**：此接口用于修改房间用户的麦克风状态，例如房间内用户麦克风为打开状态，可调用此接口将该用户麦克风进行关闭，关闭后即使该用户使用客户端接口 EnableMic 打开麦克风，依然无法与房间内成员通话，属于被禁言状态。该状态持续到此用户退房后失效，或者调用该接口重新打开此用户麦克风状态。
 **接口应用场景**：此接口多用于游戏业务中台或者风控后台，对一些发表不当言论的玩家进行禁言处理。
 **接口使用前提**：目前 ModifyUserMicStatus 接口通过白名单开放，如需使用，需要 [提交工单申请](https://console.cloud.tencent.com/workorder/category?level1_id=438&level2_id=445&source=0&data_title=%E6%B8%B8%E6%88%8F%E5%A4%9A%E5%AA%92%E4%BD%93%E5%BC%95%E6%93%8EGME&step=1)。
+ * @method Models\RegisterVoicePrintResponse RegisterVoicePrint(Models\RegisterVoicePrintRequest $req) 传入音频base64串，注册声纹信息，返回声纹ID
  * @method Models\ScanVoiceResponse ScanVoice(Models\ScanVoiceRequest $req) 本接口(ScanVoice)用于提交语音检测任务，检测任务列表最多支持100个。使用前请您登录[控制台 - 服务配置](https://console.cloud.tencent.com/gamegme/conf)开启语音内容安全服务。
 </br></br>
 
@@ -199,12 +204,18 @@ use TencentCloud\Gme\V20180711\Models as Models;
 	"Url": "https://xxx/xxx.m4a"
 }
 </code></pre>
+ * @method Models\StartAIConversationResponse StartAIConversation(Models\StartAIConversationRequest $req) 启动AI对话任务，AI通道机器人进入GME房间，与房间内指定的成员进行AI对话，适用于智能客服，AI口语教师等场景
+
+GME AI对话功能内置语音转文本能力，同时提供通道服务，即客户可灵活指定第三方AI模型（LLM）服务和文本转音频（TTS)服务，更多[功能说明](https://cloud.tencent.com/document/product/647/108901)。
  * @method Models\StartRecordResponse StartRecord(Models\StartRecordRequest $req) 开启录制
+ * @method Models\StopAIConversationResponse StopAIConversation(Models\StopAIConversationRequest $req) 停止AI对话任务
  * @method Models\StopRecordResponse StopRecord(Models\StopRecordRequest $req) 停止录制
 
+ * @method Models\UpdateAIConversationResponse UpdateAIConversation(Models\UpdateAIConversationRequest $req) 更新AIConversation参数
  * @method Models\UpdateScanRoomsResponse UpdateScanRooms(Models\UpdateScanRoomsRequest $req) 更新自定义送检房间号。**接口使用前提**：目前 UpdateScanRooms 接口通过白名单开放，如需使用，需要 [提交工单申请](https://console.cloud.tencent.com/workorder/category?level1_id=438&level2_id=445&source=0&data_title=%E6%B8%B8%E6%88%8F%E5%A4%9A%E5%AA%92%E4%BD%93%E5%BC%95%E6%93%8EGME&step=1)。
  * @method Models\UpdateScanUsersResponse UpdateScanUsers(Models\UpdateScanUsersRequest $req) 更新自定义送检用户号。
 **接口使用前提**：目前 UpdateScanUsers 接口通过白名单开放，如需使用，需要 [提交工单申请](https://console.cloud.tencent.com/workorder/category?level1_id=438&level2_id=445&source=0&data_title=%E6%B8%B8%E6%88%8F%E5%A4%9A%E5%AA%92%E4%BD%93%E5%BC%95%E6%93%8EGME&step=1)。
+ * @method Models\UpdateVoicePrintResponse UpdateVoicePrint(Models\UpdateVoicePrintRequest $req) 传入声纹ID以及对应音频信息，更新对应声纹信息
  */
 
 class GmeClient extends AbstractClient

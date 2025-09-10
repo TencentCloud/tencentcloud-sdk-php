@@ -24,6 +24,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
 
 /**
  * @method Models\ActivateTWeCallLicenseResponse ActivateTWeCallLicense(Models\ActivateTWeCallLicenseRequest $req) 激活
+ * @method Models\BatchUpdateFirmwareResponse BatchUpdateFirmware(Models\BatchUpdateFirmwareRequest $req) 本接口（BatchUpdateFirmware）用于批量更新设备固件
  * @method Models\BindCloudStorageUserResponse BindCloudStorageUser(Models\BindCloudStorageUserRequest $req) 绑定云存用户
  * @method Models\BindDevicesResponse BindDevices(Models\BindDevicesRequest $req) 批量绑定子设备
  * @method Models\BindProductsResponse BindProducts(Models\BindProductsRequest $req) 批量绑定子产品。
@@ -47,6 +48,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\CreateIotVideoCloudStorageResponse CreateIotVideoCloudStorage(Models\CreateIotVideoCloudStorageRequest $req) 开通云存服务
  * @method Models\CreateLoRaFrequencyResponse CreateLoRaFrequency(Models\CreateLoRaFrequencyRequest $req) 创建 LoRa 自定义频点
  * @method Models\CreateLoRaGatewayResponse CreateLoRaGateway(Models\CreateLoRaGatewayRequest $req) 创建新 LoRa 网关设备接口
+ * @method Models\CreateOtaModuleResponse CreateOtaModule(Models\CreateOtaModuleRequest $req) 本接口（CreateOtaModule）用于新建OTA模块
  * @method Models\CreatePositionFenceResponse CreatePositionFence(Models\CreatePositionFenceRequest $req) 创建围栏。
  * @method Models\CreatePositionSpaceResponse CreatePositionSpace(Models\CreatePositionSpaceRequest $req) 创建位置空间。
  * @method Models\CreateProjectResponse CreateProject(Models\CreateProjectRequest $req) 为用户提供新建项目的能力，用于集中管理产品和应用。
@@ -62,6 +64,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\DeleteFenceBindResponse DeleteFenceBind(Models\DeleteFenceBindRequest $req) 删除围栏绑定信息。
  * @method Models\DeleteLoRaFrequencyResponse DeleteLoRaFrequency(Models\DeleteLoRaFrequencyRequest $req) 提供删除LoRa自定义频点的能力
  * @method Models\DeleteLoRaGatewayResponse DeleteLoRaGateway(Models\DeleteLoRaGatewayRequest $req) 删除  LoRa 网关的接口
+ * @method Models\DeleteOtaModuleResponse DeleteOtaModule(Models\DeleteOtaModuleRequest $req) 本接口（DeleteOtaModule）用于删除OTA模块
  * @method Models\DeletePositionFenceResponse DeletePositionFence(Models\DeletePositionFenceRequest $req) 删除围栏。
  * @method Models\DeletePositionSpaceResponse DeletePositionSpace(Models\DeletePositionSpaceRequest $req) 删除位置空间。
  * @method Models\DeleteProjectResponse DeleteProject(Models\DeleteProjectRequest $req) 提供删除某个项目的能力。
@@ -106,6 +109,8 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\DescribeFenceEventListResponse DescribeFenceEventList(Models\DescribeFenceEventListRequest $req) 获取围栏告警事件列表。
  * @method Models\DescribeFirmwareResponse DescribeFirmware(Models\DescribeFirmwareRequest $req) 查询固件信息
  * @method Models\DescribeFirmwareTaskResponse DescribeFirmwareTask(Models\DescribeFirmwareTaskRequest $req) 查询固件升级任务列表
+ * @method Models\DescribeFirmwareTaskDevicesResponse DescribeFirmwareTaskDevices(Models\DescribeFirmwareTaskDevicesRequest $req) 查询固件升级任务的设备列表
+ * @method Models\DescribeFirmwareTasksResponse DescribeFirmwareTasks(Models\DescribeFirmwareTasksRequest $req) 搜索固件升级任务列表
  * @method Models\DescribeFirmwareUpdateStatusResponse DescribeFirmwareUpdateStatus(Models\DescribeFirmwareUpdateStatusRequest $req) 本接口（DescribeFirmwareUpdateStatus）用于查询设备固件升级状态及进度。
  * @method Models\DescribeFreeCloudStorageNumResponse DescribeFreeCloudStorageNum(Models\DescribeFreeCloudStorageNumRequest $req) 查询云存卡套餐信息
  * @method Models\DescribeGatewayBindDevicesResponse DescribeGatewayBindDevices(Models\DescribeGatewayBindDevicesRequest $req) 获取网关绑定的子设备列表
@@ -160,6 +165,8 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\InvokeVideosKeywordsAnalyzerResponse InvokeVideosKeywordsAnalyzer(Models\InvokeVideosKeywordsAnalyzerRequest $req) 获取某个时间段的视频内容关键字
  * @method Models\ListEventHistoryResponse ListEventHistory(Models\ListEventHistoryRequest $req) 获取设备的历史事件
  * @method Models\ListFirmwaresResponse ListFirmwares(Models\ListFirmwaresRequest $req) 本接口（ListFirmwares）用于获取固件列表
+ * @method Models\ListOtaModulesResponse ListOtaModules(Models\ListOtaModulesRequest $req) 本接口（ListOtaModules）用于获取OTA模块列表
+ * @method Models\ListProductOtaModulesResponse ListProductOtaModules(Models\ListProductOtaModulesRequest $req) 本接口（ListProductOtaModules）用于获取产品OTA模块列表
  * @method Models\ListTopicPolicyResponse ListTopicPolicy(Models\ListTopicPolicyRequest $req) 本接口（ListTopicPolicy）用于获取Topic列表
  * @method Models\ModifyApplicationResponse ModifyApplication(Models\ModifyApplicationRequest $req) 更新应用信息
  * @method Models\ModifyCloudStorageAIServiceResponse ModifyCloudStorageAIService(Models\ModifyCloudStorageAIServiceRequest $req) 修改指定设备的云存 AI 服务参数配置
@@ -204,6 +211,7 @@ use TencentCloud\Iotexplorer\V20190423\Models as Models;
  * @method Models\UpdateDeviceTWeCallAuthorizeStatusResponse UpdateDeviceTWeCallAuthorizeStatus(Models\UpdateDeviceTWeCallAuthorizeStatusRequest $req) 更新用户对设备的TweCall授权状态
  * @method Models\UpdateDevicesEnableStateResponse UpdateDevicesEnableState(Models\UpdateDevicesEnableStateRequest $req) 批量禁用启用设备
  * @method Models\UpdateFirmwareResponse UpdateFirmware(Models\UpdateFirmwareRequest $req) 本接口（UpdateFirmware）用于对指定设备发起固件升级请求
+ * @method Models\UpdateOtaModuleResponse UpdateOtaModule(Models\UpdateOtaModuleRequest $req) 本接口（UpdateOtaModule）用于修改OTA模块
  * @method Models\UploadFirmwareResponse UploadFirmware(Models\UploadFirmwareRequest $req) 本接口（UploadFirmware）用于创建设备固件版本信息，在平台用于固件版本升级、固件资源下发等。
  */
 

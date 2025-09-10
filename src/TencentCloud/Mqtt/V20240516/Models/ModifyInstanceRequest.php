@@ -48,6 +48,8 @@ BYOC：一机一证
  * @method void setX509Mode(string $X509Mode) 设置TLS：单向认证
 mTLS；双向认证
 BYOC：一机一证
+ * @method integer getMessageRate() 获取单客户端消息收发限速单位 条/秒
+ * @method void setMessageRate(integer $MessageRate) 设置单客户端消息收发限速单位 条/秒
  */
 class ModifyInstanceRequest extends AbstractModel
 {
@@ -104,6 +106,11 @@ BYOC：一机一证
     public $X509Mode;
 
     /**
+     * @var integer 单客户端消息收发限速单位 条/秒
+     */
+    public $MessageRate;
+
+    /**
      * @param string $InstanceId 腾讯云MQTT实例ID，从 [DescribeInstanceList](https://cloud.tencent.com/document/api/1778/111029)接口或控制台获得。
      * @param string $Name 要修改实例名称，不能为空, 3-64个字符，只能包含数字、字母、“-”和“_”。
      * @param string $Remark 要修改的备注信息，最多128个字符。
@@ -118,6 +125,7 @@ API：手动通过API注册
      * @param string $X509Mode TLS：单向认证
 mTLS；双向认证
 BYOC：一机一证
+     * @param integer $MessageRate 单客户端消息收发限速单位 条/秒
      */
     function __construct()
     {
@@ -166,6 +174,10 @@ BYOC：一机一证
 
         if (array_key_exists("X509Mode",$param) and $param["X509Mode"] !== null) {
             $this->X509Mode = $param["X509Mode"];
+        }
+
+        if (array_key_exists("MessageRate",$param) and $param["MessageRate"] !== null) {
+            $this->MessageRate = $param["MessageRate"];
         }
     }
 }

@@ -168,6 +168,10 @@ Hadoop-Hbase
  * @method void setNodeMarks(array $NodeMarks) 设置节点标识信息，目前只提供给tf平台使用
  * @method string getLoadBalancerId() 获取CLB id
  * @method void setLoadBalancerId(string $LoadBalancerId) 设置CLB id
+ * @method string getDefaultMetaVersion() 获取数据库类型：mysql8/tdsql8
+ * @method void setDefaultMetaVersion(string $DefaultMetaVersion) 设置数据库类型：mysql8/tdsql8
+ * @method integer getNeedCdbAudit() 获取是否开通审计：0:不开通,1:开通
+ * @method void setNeedCdbAudit(integer $NeedCdbAudit) 设置是否开通审计：0:不开通,1:开通
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -386,6 +390,16 @@ Hadoop-Hbase
     public $LoadBalancerId;
 
     /**
+     * @var string 数据库类型：mysql8/tdsql8
+     */
+    public $DefaultMetaVersion;
+
+    /**
+     * @var integer 是否开通审计：0:不开通,1:开通
+     */
+    public $NeedCdbAudit;
+
+    /**
      * @param integer $ProductId 产品ID，不同产品ID表示不同的EMR产品版本。取值范围：
 51:表示STARROCKS-V1.4.0
 54:表示STARROCKS-V2.0.0
@@ -460,6 +474,8 @@ Hadoop-Hbase
      * @param string $CosBucket cos桶路径，创建StarRocks存算分离集群时用到
      * @param array $NodeMarks 节点标识信息，目前只提供给tf平台使用
      * @param string $LoadBalancerId CLB id
+     * @param string $DefaultMetaVersion 数据库类型：mysql8/tdsql8
+     * @param integer $NeedCdbAudit 是否开通审计：0:不开通,1:开通
      */
     function __construct()
     {
@@ -643,6 +659,14 @@ Hadoop-Hbase
 
         if (array_key_exists("LoadBalancerId",$param) and $param["LoadBalancerId"] !== null) {
             $this->LoadBalancerId = $param["LoadBalancerId"];
+        }
+
+        if (array_key_exists("DefaultMetaVersion",$param) and $param["DefaultMetaVersion"] !== null) {
+            $this->DefaultMetaVersion = $param["DefaultMetaVersion"];
+        }
+
+        if (array_key_exists("NeedCdbAudit",$param) and $param["NeedCdbAudit"] !== null) {
+            $this->NeedCdbAudit = $param["NeedCdbAudit"];
         }
     }
 }

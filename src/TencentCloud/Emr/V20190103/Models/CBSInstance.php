@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEmrResourceId(string $EmrResourceId) 设置emr节点ID
  * @method string getUnderwriteExpiredTime() 获取包销到期时间
  * @method void setUnderwriteExpiredTime(string $UnderwriteExpiredTime) 设置包销到期时间
+ * @method array getTags() 获取标签
+ * @method void setTags(array $Tags) 设置标签
+ * @method integer getThroughputPerformance() 获取云硬盘额外性能值，单位：MB/s
+ * @method void setThroughputPerformance(integer $ThroughputPerformance) 设置云硬盘额外性能值，单位：MB/s
  */
 class CBSInstance extends AbstractModel
 {
@@ -146,6 +150,16 @@ class CBSInstance extends AbstractModel
     public $UnderwriteExpiredTime;
 
     /**
+     * @var array 标签
+     */
+    public $Tags;
+
+    /**
+     * @var integer 云硬盘额外性能值，单位：MB/s
+     */
+    public $ThroughputPerformance;
+
+    /**
      * @param string $DiskId 云硬盘ID
      * @param string $DiskUsage 云硬盘类型
      * @param string $DiskName 云硬盘名称
@@ -164,6 +178,8 @@ class CBSInstance extends AbstractModel
      * @param boolean $Shareable 云盘是否为共享型云盘。
      * @param string $EmrResourceId emr节点ID
      * @param string $UnderwriteExpiredTime 包销到期时间
+     * @param array $Tags 标签
+     * @param integer $ThroughputPerformance 云硬盘额外性能值，单位：MB/s
      */
     function __construct()
     {
@@ -244,6 +260,19 @@ class CBSInstance extends AbstractModel
 
         if (array_key_exists("UnderwriteExpiredTime",$param) and $param["UnderwriteExpiredTime"] !== null) {
             $this->UnderwriteExpiredTime = $param["UnderwriteExpiredTime"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("ThroughputPerformance",$param) and $param["ThroughputPerformance"] !== null) {
+            $this->ThroughputPerformance = $param["ThroughputPerformance"];
         }
     }
 }

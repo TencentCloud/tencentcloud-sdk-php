@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BatchModifyTopicAttributes请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka集群实例Id
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
- * @method array getTopic() 获取主题属性列表 (同一个批次最多支持10个)
- * @method void setTopic(array $Topic) 设置主题属性列表 (同一个批次最多支持10个)
+ * @method string getInstanceId() 获取ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+ * @method array getTopic() 获取主题属性列表 (同一个批次最多支持10个)，可通过[DescribeTopic](https://cloud.tencent.com/document/product/597/40847)接口获取
+ * @method void setTopic(array $Topic) 设置主题属性列表 (同一个批次最多支持10个)，可通过[DescribeTopic](https://cloud.tencent.com/document/product/597/40847)接口获取
  */
 class BatchModifyTopicAttributesRequest extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例Id
+     * @var string ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
      */
     public $InstanceId;
 
     /**
-     * @var array 主题属性列表 (同一个批次最多支持10个)
+     * @var array 主题属性列表 (同一个批次最多支持10个)，可通过[DescribeTopic](https://cloud.tencent.com/document/product/597/40847)接口获取
      */
     public $Topic;
 
     /**
-     * @param string $InstanceId ckafka集群实例Id
-     * @param array $Topic 主题属性列表 (同一个批次最多支持10个)
+     * @param string $InstanceId ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+     * @param array $Topic 主题属性列表 (同一个批次最多支持10个)，可通过[DescribeTopic](https://cloud.tencent.com/document/product/597/40847)接口获取
      */
     function __construct()
     {

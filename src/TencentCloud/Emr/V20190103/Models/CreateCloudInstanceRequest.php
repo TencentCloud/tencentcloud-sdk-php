@@ -50,10 +50,10 @@ use TencentCloud\Common\AbstractModel;
 <li>60:表示EMR-TKE-V1.1.0</li>
 <li>55:表示EMR-TKE-V1.0.1</li>
 <li>52:表示EMR-TKE-V1.0.0</li>
- * @method string getClientToken() 获取客户端token，唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，小于等于64个字符，例如 a9a90aa6----fae36063280
-示例值：a9a90aa6----fae36063280
- * @method void setClientToken(string $ClientToken) 设置客户端token，唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，小于等于64个字符，例如 a9a90aa6----fae36063280
-示例值：a9a90aa6----fae36063280
+ * @method string getClientToken() 获取客户端token，唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，小于等于64个字符，例如 a9a90aa6fae36063280
+示例值：a9a90aa6fae36063280
+ * @method void setClientToken(string $ClientToken) 设置客户端token，唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，小于等于64个字符，例如 a9a90aa6fae36063280
+示例值：a9a90aa6fae36063280
  * @method VPCSettings getVPCSettings() 获取私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
  * @method void setVPCSettings(VPCSettings $VPCSettings) 设置私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
  * @method array getCloudResources() 获取所有组件角色及其对应的Pod资源请求信息
@@ -70,12 +70,16 @@ MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser M
 当MetaType选择USER_CUSTOM_META时，填写MetaDataJdbcUrl MetaDataUser MetaDataPass
  * @method array getTags() 获取标签信息
  * @method void setTags(array $Tags) 设置标签信息
- * @method LoginSettings getLoginSettings() 获取登陆密码，LoginSettings中的Password字段
- * @method void setLoginSettings(LoginSettings $LoginSettings) 设置登陆密码，LoginSettings中的Password字段
+ * @method LoginSettings getLoginSettings() 获取登录密码，LoginSettings中的Password字段
+ * @method void setLoginSettings(LoginSettings $LoginSettings) 设置登录密码，LoginSettings中的Password字段
  * @method array getExternalService() 获取共享服务信息
  * @method void setExternalService(array $ExternalService) 设置共享服务信息
  * @method integer getZoneId() 获取可用区id
  * @method void setZoneId(integer $ZoneId) 设置可用区id
+ * @method string getDefaultMetaVersion() 获取数据库版本
+ * @method void setDefaultMetaVersion(string $DefaultMetaVersion) 设置数据库版本
+ * @method integer getNeedCdbAudit() 获取是否开通审计
+ * @method void setNeedCdbAudit(integer $NeedCdbAudit) 设置是否开通审计
  */
 class CreateCloudInstanceRequest extends AbstractModel
 {
@@ -123,8 +127,8 @@ class CreateCloudInstanceRequest extends AbstractModel
     public $ProductId;
 
     /**
-     * @var string 客户端token，唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，小于等于64个字符，例如 a9a90aa6----fae36063280
-示例值：a9a90aa6----fae36063280
+     * @var string 客户端token，唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，小于等于64个字符，例如 a9a90aa6fae36063280
+示例值：a9a90aa6fae36063280
      */
     public $ClientToken;
 
@@ -157,7 +161,7 @@ MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser M
     public $Tags;
 
     /**
-     * @var LoginSettings 登陆密码，LoginSettings中的Password字段
+     * @var LoginSettings 登录密码，LoginSettings中的Password字段
      */
     public $LoginSettings;
 
@@ -170,6 +174,16 @@ MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser M
      * @var integer 可用区id
      */
     public $ZoneId;
+
+    /**
+     * @var string 数据库版本
+     */
+    public $DefaultMetaVersion;
+
+    /**
+     * @var integer 是否开通审计
+     */
+    public $NeedCdbAudit;
 
     /**
      * @param string $InstanceName 实例名称。
@@ -187,8 +201,8 @@ MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser M
 <li>60:表示EMR-TKE-V1.1.0</li>
 <li>55:表示EMR-TKE-V1.0.1</li>
 <li>52:表示EMR-TKE-V1.0.0</li>
-     * @param string $ClientToken 客户端token，唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，小于等于64个字符，例如 a9a90aa6----fae36063280
-示例值：a9a90aa6----fae36063280
+     * @param string $ClientToken 客户端token，唯一随机标识，时效5分钟，需要调用者指定 防止客户端重新创建资源，小于等于64个字符，例如 a9a90aa6fae36063280
+示例值：a9a90aa6fae36063280
      * @param VPCSettings $VPCSettings 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
      * @param array $CloudResources 所有组件角色及其对应的Pod资源请求信息
      * @param string $SgId 安全组Id，为空默认创建新的安全组
@@ -197,9 +211,11 @@ MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser M
 当MetaType选择EMR_EXIT_META时，填写UnifyMetaInstanceId
 当MetaType选择USER_CUSTOM_META时，填写MetaDataJdbcUrl MetaDataUser MetaDataPass
      * @param array $Tags 标签信息
-     * @param LoginSettings $LoginSettings 登陆密码，LoginSettings中的Password字段
+     * @param LoginSettings $LoginSettings 登录密码，LoginSettings中的Password字段
      * @param array $ExternalService 共享服务信息
      * @param integer $ZoneId 可用区id
+     * @param string $DefaultMetaVersion 数据库版本
+     * @param integer $NeedCdbAudit 是否开通审计
      */
     function __construct()
     {
@@ -294,6 +310,14 @@ MetaDB信息，当MetaType选择EMR_NEW_META时，MetaDataJdbcUrl MetaDataUser M
 
         if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
             $this->ZoneId = $param["ZoneId"];
+        }
+
+        if (array_key_exists("DefaultMetaVersion",$param) and $param["DefaultMetaVersion"] !== null) {
+            $this->DefaultMetaVersion = $param["DefaultMetaVersion"];
+        }
+
+        if (array_key_exists("NeedCdbAudit",$param) and $param["NeedCdbAudit"] !== null) {
+            $this->NeedCdbAudit = $param["NeedCdbAudit"];
         }
     }
 }

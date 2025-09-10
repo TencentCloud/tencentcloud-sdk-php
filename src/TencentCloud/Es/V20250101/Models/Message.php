@@ -20,15 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 会话内容，按对话时间从旧到新在数组中排列，长度受模型窗口大小限制。
  *
- * @method string getRole() 获取角色, ‘system', ‘user'，'assistant'或者'tool', 在message中, 除了system，其他必须是user与assistant交替(一问一答) 
- * @method void setRole(string $Role) 设置角色, ‘system', ‘user'，'assistant'或者'tool', 在message中, 除了system，其他必须是user与assistant交替(一问一答) 
+ * @method string getRole() 获取角色，可选值包括 system、user、assistant、 tool。
+ * @method void setRole(string $Role) 设置角色，可选值包括 system、user、assistant、 tool。
  * @method string getContent() 获取具体文本内容
  * @method void setContent(string $Content) 设置具体文本内容
+ * @method string getToolCallId() 获取当role为tool时传入，标识具体的函数调用
+ * @method void setToolCallId(string $ToolCallId) 设置当role为tool时传入，标识具体的函数调用
+ * @method array getToolCalls() 获取模型生成的工具调用
+ * @method void setToolCalls(array $ToolCalls) 设置模型生成的工具调用
  */
 class Message extends AbstractModel
 {
     /**
-     * @var string 角色, ‘system', ‘user'，'assistant'或者'tool', 在message中, 除了system，其他必须是user与assistant交替(一问一答) 
+     * @var string 角色，可选值包括 system、user、assistant、 tool。
      */
     public $Role;
 
@@ -38,8 +42,20 @@ class Message extends AbstractModel
     public $Content;
 
     /**
-     * @param string $Role 角色, ‘system', ‘user'，'assistant'或者'tool', 在message中, 除了system，其他必须是user与assistant交替(一问一答) 
+     * @var string 当role为tool时传入，标识具体的函数调用
+     */
+    public $ToolCallId;
+
+    /**
+     * @var array 模型生成的工具调用
+     */
+    public $ToolCalls;
+
+    /**
+     * @param string $Role 角色，可选值包括 system、user、assistant、 tool。
      * @param string $Content 具体文本内容
+     * @param string $ToolCallId 当role为tool时传入，标识具体的函数调用
+     * @param array $ToolCalls 模型生成的工具调用
      */
     function __construct()
     {
@@ -60,6 +76,19 @@ class Message extends AbstractModel
 
         if (array_key_exists("Content",$param) and $param["Content"] !== null) {
             $this->Content = $param["Content"];
+        }
+
+        if (array_key_exists("ToolCallId",$param) and $param["ToolCallId"] !== null) {
+            $this->ToolCallId = $param["ToolCallId"];
+        }
+
+        if (array_key_exists("ToolCalls",$param) and $param["ToolCalls"] !== null) {
+            $this->ToolCalls = [];
+            foreach ($param["ToolCalls"] as $key => $value){
+                $obj = new ToolCall();
+                $obj->deserialize($value);
+                array_push($this->ToolCalls, $obj);
+            }
         }
     }
 }

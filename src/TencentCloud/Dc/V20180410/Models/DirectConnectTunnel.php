@@ -102,6 +102,10 @@ REJECTED:拒绝
  * @method void setCloudAttachId(string $CloudAttachId) 设置高速上云服务ID
  * @method integer getShareOrNot() 获取是否共享通道
  * @method void setShareOrNot(integer $ShareOrNot) 设置是否共享通道
+ * @method string getAccessPointName() 获取接入点名称
+ * @method void setAccessPointName(string $AccessPointName) 设置接入点名称
+ * @method string getAccessPointId() 获取接入点ID
+ * @method void setAccessPointId(string $AccessPointId) 设置接入点ID
  */
 class DirectConnectTunnel extends AbstractModel
 {
@@ -271,6 +275,16 @@ REJECTED:拒绝
     public $ShareOrNot;
 
     /**
+     * @var string 接入点名称
+     */
+    public $AccessPointName;
+
+    /**
+     * @var string 接入点ID
+     */
+    public $AccessPointId;
+
+    /**
      * @param string $DirectConnectTunnelId 专用通道ID
      * @param string $DirectConnectId 物理专线ID
      * @param string $State 专用通道状态
@@ -312,6 +326,8 @@ REJECTED:拒绝
      * @param boolean $SignLaw 专用通道关联的物理专线是否签署了用户协议
      * @param string $CloudAttachId 高速上云服务ID
      * @param integer $ShareOrNot 是否共享通道
+     * @param string $AccessPointName 接入点名称
+     * @param string $AccessPointId 接入点ID
      */
     function __construct()
     {
@@ -459,6 +475,14 @@ REJECTED:拒绝
 
         if (array_key_exists("ShareOrNot",$param) and $param["ShareOrNot"] !== null) {
             $this->ShareOrNot = $param["ShareOrNot"];
+        }
+
+        if (array_key_exists("AccessPointName",$param) and $param["AccessPointName"] !== null) {
+            $this->AccessPointName = $param["AccessPointName"];
+        }
+
+        if (array_key_exists("AccessPointId",$param) and $param["AccessPointId"] !== null) {
+            $this->AccessPointId = $param["AccessPointId"];
         }
     }
 }

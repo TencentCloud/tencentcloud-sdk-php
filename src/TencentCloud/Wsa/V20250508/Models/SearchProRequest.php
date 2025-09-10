@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
 注意：mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效
  * @method integer getCnt() 获取cnt=10/20/30/40/50，最多可支持返回50条搜索结果，**仅限尊享版使用**
  * @method void setCnt(integer $Cnt) 设置cnt=10/20/30/40/50，最多可支持返回50条搜索结果，**仅限尊享版使用**
- * @method string getIndustry() 获取Industry=gov/news/acad，对应党政机关、新闻、学术，**仅限尊享版使用**
- * @method void setIndustry(string $Industry) 设置Industry=gov/news/acad，对应党政机关、新闻、学术，**仅限尊享版使用**
+ * @method string getIndustry() 获取Industry=gov/news/acad，对应党政机关、权威媒体、学术（英文），**仅限尊享版使用**
+ * @method void setIndustry(string $Industry) 设置Industry=gov/news/acad，对应党政机关、权威媒体、学术（英文），**仅限尊享版使用**
  */
 class SearchProRequest extends AbstractModel
 {
@@ -77,7 +77,7 @@ class SearchProRequest extends AbstractModel
     public $Cnt;
 
     /**
-     * @var string Industry=gov/news/acad，对应党政机关、新闻、学术，**仅限尊享版使用**
+     * @var string Industry=gov/news/acad，对应党政机关、权威媒体、学术（英文），**仅限尊享版使用**
      */
     public $Industry;
 
@@ -91,7 +91,7 @@ class SearchProRequest extends AbstractModel
      * @param integer $ToTime 结束时间（用于过滤自然检索结果），精确到秒时间戳格式
 注意：mode=1模式下，参数无效；mode=0模式下，对所有结果生效；mode=2模式下，对输出的自然结果生效
      * @param integer $Cnt cnt=10/20/30/40/50，最多可支持返回50条搜索结果，**仅限尊享版使用**
-     * @param string $Industry Industry=gov/news/acad，对应党政机关、新闻、学术，**仅限尊享版使用**
+     * @param string $Industry Industry=gov/news/acad，对应党政机关、权威媒体、学术（英文），**仅限尊享版使用**
      */
     function __construct()
     {

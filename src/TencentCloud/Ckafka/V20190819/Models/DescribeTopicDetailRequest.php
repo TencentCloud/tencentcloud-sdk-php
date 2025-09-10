@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTopicDetail请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka集群实例Id，可通过DescribeInstances接口获取。
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id，可通过DescribeInstances接口获取。
+ * @method string getInstanceId() 获取ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
  * @method string getSearchWord() 获取（过滤条件）按照topicName过滤，支持模糊查询
  * @method void setSearchWord(string $SearchWord) 设置（过滤条件）按照topicName过滤，支持模糊查询
  * @method integer getOffset() 获取偏移量，不填默认为0
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTopicDetailRequest extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例Id，可通过DescribeInstances接口获取。
+     * @var string ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
      */
     public $InstanceId;
 
@@ -80,7 +80,7 @@ class DescribeTopicDetailRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @param string $InstanceId ckafka集群实例Id，可通过DescribeInstances接口获取。
+     * @param string $InstanceId ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取
      * @param string $SearchWord （过滤条件）按照topicName过滤，支持模糊查询
      * @param integer $Offset 偏移量，不填默认为0
      * @param integer $Limit 返回数量，不填则默认 20，取值要大于0

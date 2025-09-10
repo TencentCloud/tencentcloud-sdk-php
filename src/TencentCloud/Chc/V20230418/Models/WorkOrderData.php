@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) 设置工单创建时间
  * @method string getFinishTime() 获取工单完成时间
  * @method void setFinishTime(string $FinishTime) 设置工单完成时间
+ * @method string getTicketId() 获取工单关联的dcops单号
+ * @method void setTicketId(string $TicketId) 设置工单关联的dcops单号
  */
 class WorkOrderData extends AbstractModel
 {
@@ -73,6 +75,11 @@ class WorkOrderData extends AbstractModel
     public $FinishTime;
 
     /**
+     * @var string 工单关联的dcops单号
+     */
+    public $TicketId;
+
+    /**
      * @param string $WorkOrderId 工单号
      * @param string $ServiceType 服务类型，一个服务可能会产生多个工单
      * @param string $OrderType 工单类型
@@ -80,6 +87,7 @@ class WorkOrderData extends AbstractModel
      * @param string $Creator 工单创建人
      * @param string $CreateTime 工单创建时间
      * @param string $FinishTime 工单完成时间
+     * @param string $TicketId 工单关联的dcops单号
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class WorkOrderData extends AbstractModel
 
         if (array_key_exists("FinishTime",$param) and $param["FinishTime"] !== null) {
             $this->FinishTime = $param["FinishTime"];
+        }
+
+        if (array_key_exists("TicketId",$param) and $param["TicketId"] !== null) {
+            $this->TicketId = $param["TicketId"];
         }
     }
 }

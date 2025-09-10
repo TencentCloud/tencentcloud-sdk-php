@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getProjectId() 获取项目ID
  * @method void setProjectId(integer $ProjectId) 设置项目ID
- * @method integer getPageNo() 获取页数
- * @method void setPageNo(integer $PageNo) 设置页数
+ * @method integer getPageNo() 获取页数 
+ * @method void setPageNo(integer $PageNo) 设置页数 
  * @method integer getPageSize() 获取条数
  * @method void setPageSize(integer $PageSize) 设置条数
  * @method boolean getAllPage() 获取所有页码
@@ -37,7 +37,7 @@ class DescribePermissionRoleInfoRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var integer 页数
+     * @var integer 页数 
      */
     public $PageNo;
 
@@ -53,7 +53,7 @@ class DescribePermissionRoleInfoRequest extends AbstractModel
 
     /**
      * @param integer $ProjectId 项目ID
-     * @param integer $PageNo 页数
+     * @param integer $PageNo 页数 
      * @param integer $PageSize 条数
      * @param boolean $AllPage 所有页码
      */

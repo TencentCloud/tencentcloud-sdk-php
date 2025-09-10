@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcType(boolean $VpcType) 设置是否VPC型私网网关
  * @method string getCcnId() 获取跨域私网NAT关联的云联网ID	
  * @method void setCcnId(string $CcnId) 设置跨域私网NAT关联的云联网ID	
+ * @method boolean getDeletionProtectionEnabled() 获取私网NAT是否开启删除保护
+ * @method void setDeletionProtectionEnabled(boolean $DeletionProtectionEnabled) 设置私网NAT是否开启删除保护
  */
 class PrivateNatGateway extends AbstractModel
 {
@@ -108,6 +110,11 @@ class PrivateNatGateway extends AbstractModel
     public $CcnId;
 
     /**
+     * @var boolean 私网NAT是否开启删除保护
+     */
+    public $DeletionProtectionEnabled;
+
+    /**
      * @param string $NatGatewayId 私网网关`ID`。
      * @param string $NatGatewayName 私网网关名称。
      * @param string $VpcId 私网网关关联`VPC`实例`ID`。
@@ -120,6 +127,7 @@ class PrivateNatGateway extends AbstractModel
      * @param PrivateNatCrossDomainInfo $CrossDomainInfo 私网NAT跨域信息
      * @param boolean $VpcType 是否VPC型私网网关
      * @param string $CcnId 跨域私网NAT关联的云联网ID	
+     * @param boolean $DeletionProtectionEnabled 私网NAT是否开启删除保护
      */
     function __construct()
     {
@@ -186,6 +194,10 @@ class PrivateNatGateway extends AbstractModel
 
         if (array_key_exists("CcnId",$param) and $param["CcnId"] !== null) {
             $this->CcnId = $param["CcnId"];
+        }
+
+        if (array_key_exists("DeletionProtectionEnabled",$param) and $param["DeletionProtectionEnabled"] !== null) {
+            $this->DeletionProtectionEnabled = $param["DeletionProtectionEnabled"];
         }
     }
 }

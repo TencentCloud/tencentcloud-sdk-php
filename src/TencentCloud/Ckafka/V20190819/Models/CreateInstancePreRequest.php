@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceName(string $InstanceName) 设置ckafka集群实例Name，是一个不超过 128 个字符的任意字符串。
  * @method integer getZoneId() 获取可用区。当购买多可用区实例时，当前参数为主可用区。  [查看可用区](https://cloud.tencent.com/document/product/597/55246)
  * @method void setZoneId(integer $ZoneId) 设置可用区。当购买多可用区实例时，当前参数为主可用区。  [查看可用区](https://cloud.tencent.com/document/product/597/55246)
- * @method string getPeriod() 获取预付费购买时长，例如 "1m",就是一个月
- * @method void setPeriod(string $Period) 设置预付费购买时长，例如 "1m",就是一个月
+ * @method string getPeriod() 获取预付费购买时长，例如 "1m",就是一个月,取值范围 1m~36m
+ * @method void setPeriod(string $Period) 设置预付费购买时长，例如 "1m",就是一个月,取值范围 1m~36m
  * @method integer getInstanceType() 获取国际站标准版实例规格。目前只有国际站标准版使用当前字段区分规格，国内站标准版使用峰值带宽区分规格。除了国际站标准版外的所有实例填写 1 即可。国际站标准版实例：入门型(general)]填写1；[标准型(standard)]填写2；[进阶型(advanced)]填写3；[容量型(capacity)]填写4；[高阶型1(specialized-1)]填写5；[高阶型2(specialized-2)]填写6；[高阶型3(specialized-3)]填写7；[高阶型4(specialized-4)]填写8。
  * @method void setInstanceType(integer $InstanceType) 设置国际站标准版实例规格。目前只有国际站标准版使用当前字段区分规格，国内站标准版使用峰值带宽区分规格。除了国际站标准版外的所有实例填写 1 即可。国际站标准版实例：入门型(general)]填写1；[标准型(standard)]填写2；[进阶型(advanced)]填写3；[容量型(capacity)]填写4；[高阶型1(specialized-1)]填写5；[高阶型2(specialized-2)]填写6；[高阶型3(specialized-3)]填写7；[高阶型4(specialized-4)]填写8。
  * @method string getVpcId() 获取私有网络Id
@@ -78,7 +78,7 @@ class CreateInstancePreRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string 预付费购买时长，例如 "1m",就是一个月
+     * @var string 预付费购买时长，例如 "1m",就是一个月,取值范围 1m~36m
      */
     public $Period;
 
@@ -180,7 +180,7 @@ class CreateInstancePreRequest extends AbstractModel
     /**
      * @param string $InstanceName ckafka集群实例Name，是一个不超过 128 个字符的任意字符串。
      * @param integer $ZoneId 可用区。当购买多可用区实例时，当前参数为主可用区。  [查看可用区](https://cloud.tencent.com/document/product/597/55246)
-     * @param string $Period 预付费购买时长，例如 "1m",就是一个月
+     * @param string $Period 预付费购买时长，例如 "1m",就是一个月,取值范围 1m~36m
      * @param integer $InstanceType 国际站标准版实例规格。目前只有国际站标准版使用当前字段区分规格，国内站标准版使用峰值带宽区分规格。除了国际站标准版外的所有实例填写 1 即可。国际站标准版实例：入门型(general)]填写1；[标准型(standard)]填写2；[进阶型(advanced)]填写3；[容量型(capacity)]填写4；[高阶型1(specialized-1)]填写5；[高阶型2(specialized-2)]填写6；[高阶型3(specialized-3)]填写7；[高阶型4(specialized-4)]填写8。
      * @param string $VpcId 私有网络Id
      * @param string $SubnetId 子网id

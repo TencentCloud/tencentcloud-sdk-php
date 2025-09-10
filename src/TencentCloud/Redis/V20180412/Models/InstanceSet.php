@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceName(string $InstanceName) 设置实例名称。
  * @method string getInstanceId() 获取实例 ID。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID。
- * @method integer getAppid() 获取用户APPID。APPID是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 APPID。
+ * @method integer getAppid() 获取用户AppId。AppId是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 AppId。
 
- * @method void setAppid(integer $Appid) 设置用户APPID。APPID是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 APPID。
+ * @method void setAppid(integer $Appid) 设置用户AppId。AppId是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 AppId。
 
  * @method integer getProjectId() 获取项目 ID。
  * @method void setProjectId(integer $ProjectId) 设置项目 ID。
@@ -174,6 +174,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpgradeRedisVersion(string $UpgradeRedisVersion) 设置实例可升级Cache小版本。
  * @method string getBackupMode() 获取备份模式：- SecondLevelBackup   秒级备份- NormalLevelBackup    普通备份
  * @method void setBackupMode(string $BackupMode) 设置备份模式：- SecondLevelBackup   秒级备份- NormalLevelBackup    普通备份
+ * @method integer getDeleteProtectionSwitch() 获取删除保护开关，0关闭，1开启
+ * @method void setDeleteProtectionSwitch(integer $DeleteProtectionSwitch) 设置删除保护开关，0关闭，1开启
  */
 class InstanceSet extends AbstractModel
 {
@@ -188,7 +190,7 @@ class InstanceSet extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer 用户APPID。APPID是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 APPID。
+     * @var integer 用户AppId。AppId是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 AppId。
 
      */
     public $Appid;
@@ -496,9 +498,14 @@ class InstanceSet extends AbstractModel
     public $BackupMode;
 
     /**
+     * @var integer 删除保护开关，0关闭，1开启
+     */
+    public $DeleteProtectionSwitch;
+
+    /**
      * @param string $InstanceName 实例名称。
      * @param string $InstanceId 实例 ID。
-     * @param integer $Appid 用户APPID。APPID是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 APPID。
+     * @param integer $Appid 用户AppId。AppId是与账号ID有唯一对应关系的应用 ID，部分腾讯云产品会使用此 AppId。
 
      * @param integer $ProjectId 项目 ID。
      * @param integer $RegionId 地域 ID。<ul><li>1：广州。</li><li>4：上海。</li><li>5：中国香港。</li><li>7：上海金融。</li> <li>8：北京。</li> <li>9：新加坡。</li> <li>11：深圳金融。</li> <li>15：美西（硅谷）。</li><li>16：成都。</li><li>17：法兰克福。</li><li>18：首尔。</li><li>19：重庆。</li><li>22：美东（弗吉尼亚）。</li><li>23：曼谷。</li><li>25：东京。</li></ul>
@@ -573,6 +580,7 @@ class InstanceSet extends AbstractModel
      * @param string $UpgradeProxyVersion 实例可升级Proxy版本。
      * @param string $UpgradeRedisVersion 实例可升级Cache小版本。
      * @param string $BackupMode 备份模式：- SecondLevelBackup   秒级备份- NormalLevelBackup    普通备份
+     * @param integer $DeleteProtectionSwitch 删除保护开关，0关闭，1开启
      */
     function __construct()
     {
@@ -840,6 +848,10 @@ class InstanceSet extends AbstractModel
 
         if (array_key_exists("BackupMode",$param) and $param["BackupMode"] !== null) {
             $this->BackupMode = $param["BackupMode"];
+        }
+
+        if (array_key_exists("DeleteProtectionSwitch",$param) and $param["DeleteProtectionSwitch"] !== null) {
+            $this->DeleteProtectionSwitch = $param["DeleteProtectionSwitch"];
         }
     }
 }

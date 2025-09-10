@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setProcessingFlags(array $ProcessingFlags) 设置知识库处理中状态标记，1：向量embedding变更中
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOwnerStaffName() 获取知识库拥有者的名字
+ * @method void setOwnerStaffName(string $OwnerStaffName) 设置知识库拥有者的名字
  */
 class KnowledgeBaseInfo extends AbstractModel
 {
@@ -112,6 +114,11 @@ class KnowledgeBaseInfo extends AbstractModel
     public $ProcessingFlags;
 
     /**
+     * @var string 知识库拥有者的名字
+     */
+    public $OwnerStaffName;
+
+    /**
      * @param string $KnowledgeBizId 共享知识库业务ID
      * @param string $KnowledgeName 共享知识库名称
      * @param string $KnowledgeDescription 共享知识库描述
@@ -128,6 +135,7 @@ class KnowledgeBaseInfo extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $ProcessingFlags 知识库处理中状态标记，1：向量embedding变更中
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $OwnerStaffName 知识库拥有者的名字
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class KnowledgeBaseInfo extends AbstractModel
 
         if (array_key_exists("ProcessingFlags",$param) and $param["ProcessingFlags"] !== null) {
             $this->ProcessingFlags = $param["ProcessingFlags"];
+        }
+
+        if (array_key_exists("OwnerStaffName",$param) and $param["OwnerStaffName"] !== null) {
+            $this->OwnerStaffName = $param["OwnerStaffName"];
         }
     }
 }

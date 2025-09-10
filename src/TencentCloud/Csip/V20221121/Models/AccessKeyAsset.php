@@ -63,9 +63,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getStatus() 获取AK状态 
 0:禁用
 1:已启用
+2:已删除(已在cam侧删除，安全中心仍然存留之前的记录)
  * @method void setStatus(integer $Status) 设置AK状态 
 0:禁用
 1:已启用
+2:已删除(已在cam侧删除，安全中心仍然存留之前的记录)
  * @method integer getCheckStatus() 获取0 表示已检测
 1 表示检测中
  * @method void setCheckStatus(integer $CheckStatus) 设置0 表示已检测
@@ -157,6 +159,7 @@ class AccessKeyAsset extends AbstractModel
      * @var integer AK状态 
 0:禁用
 1:已启用
+2:已删除(已在cam侧删除，安全中心仍然存留之前的记录)
      */
     public $Status;
 
@@ -190,6 +193,7 @@ class AccessKeyAsset extends AbstractModel
      * @param integer $Status AK状态 
 0:禁用
 1:已启用
+2:已删除(已在cam侧删除，安全中心仍然存留之前的记录)
      * @param integer $CheckStatus 0 表示已检测
 1 表示检测中
      */

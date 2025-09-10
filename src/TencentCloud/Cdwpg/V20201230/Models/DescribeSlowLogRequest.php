@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderByType(string $OrderByType) 设置升降序
  * @method float getDuration() 获取过滤时间
  * @method void setDuration(float $Duration) 设置过滤时间
+ * @method string getUserName() 获取执行用户
+ * @method void setUserName(string $UserName) 设置执行用户
+ * @method string getQueryString() 获取query 语句
+ * @method void setQueryString(string $QueryString) 设置query 语句
  */
 class DescribeSlowLogRequest extends AbstractModel
 {
@@ -87,6 +91,16 @@ class DescribeSlowLogRequest extends AbstractModel
     public $Duration;
 
     /**
+     * @var string 执行用户
+     */
+    public $UserName;
+
+    /**
+     * @var string query 语句
+     */
+    public $QueryString;
+
+    /**
      * @param string $InstanceId 集群实例ID
      * @param string $StartTime 起始时间
      * @param string $EndTime 结束时间
@@ -96,6 +110,8 @@ class DescribeSlowLogRequest extends AbstractModel
      * @param string $OrderBy 排序根据
      * @param string $OrderByType 升降序
      * @param float $Duration 过滤时间
+     * @param string $UserName 执行用户
+     * @param string $QueryString query 语句
      */
     function __construct()
     {
@@ -144,6 +160,14 @@ class DescribeSlowLogRequest extends AbstractModel
 
         if (array_key_exists("Duration",$param) and $param["Duration"] !== null) {
             $this->Duration = $param["Duration"];
+        }
+
+        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
+            $this->UserName = $param["UserName"];
+        }
+
+        if (array_key_exists("QueryString",$param) and $param["QueryString"] !== null) {
+            $this->QueryString = $param["QueryString"];
         }
     }
 }

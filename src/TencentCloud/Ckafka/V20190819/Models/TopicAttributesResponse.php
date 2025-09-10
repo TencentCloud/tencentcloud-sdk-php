@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTopicId() 获取主题 ID
  * @method void setTopicId(string $TopicId) 设置主题 ID
- * @method integer getCreateTime() 获取创建时间
- * @method void setCreateTime(integer $CreateTime) 设置创建时间
+ * @method integer getCreateTime() 获取创建时间的秒级时间戳
+ * @method void setCreateTime(integer $CreateTime) 设置创建时间的秒级时间戳
  * @method string getNote() 获取主题备注
  * @method void setNote(string $Note) 设置主题备注
  * @method integer getPartitionNum() 获取分区个数
@@ -53,7 +53,7 @@ class TopicAttributesResponse extends AbstractModel
     public $TopicId;
 
     /**
-     * @var integer 创建时间
+     * @var integer 创建时间的秒级时间戳
      */
     public $CreateTime;
 
@@ -109,7 +109,7 @@ class TopicAttributesResponse extends AbstractModel
 
     /**
      * @param string $TopicId 主题 ID
-     * @param integer $CreateTime 创建时间
+     * @param integer $CreateTime 创建时间的秒级时间戳
      * @param string $Note 主题备注
      * @param integer $PartitionNum 分区个数
      * @param integer $EnableWhiteList IP 白名单开关，1：打开； 0：关闭

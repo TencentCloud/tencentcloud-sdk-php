@@ -142,6 +142,8 @@ use TencentCloud\Common\AbstractModel;
 
 - 请登录[腾讯云可观测平台-告警管理-策略管理](https://console.cloud.tencent.com/monitor/alarm/policy)获取告警策略 ID。
 - 若不配置该参数，则绑定默认告警策略。默认告警策略具体信息，请登录[腾讯云可观测平台-告警管理-策略管理](https://console.cloud.tencent.com/monitor/alarm/policy)查看。
+ * @method boolean getEncryptPassword() 获取是否加密密码
+ * @method void setEncryptPassword(boolean $EncryptPassword) 设置是否加密密码
  */
 class CreateInstancesRequest extends AbstractModel
 {
@@ -311,6 +313,11 @@ class CreateInstancesRequest extends AbstractModel
     public $AlarmPolicyList;
 
     /**
+     * @var boolean 是否加密密码
+     */
+    public $EncryptPassword;
+
+    /**
      * @param integer $TypeId 实例类型。
 <ul><li>2：Redis 2.8 内存版（标准架构）。</li><li>3：CKV 3.2 内存版（标准架构）。</li><li>4：CKV 3.2 内存版（集群架构）。</li><li>6：Redis 4.0 内存版（标准架构）。</li><li>7：Redis 4.0 内存版（集群架构）。</li><li>8：Redis 5.0 内存版（标准架构）。</li><li>9：Redis 5.0 内存版（集群架构）。</li><li>15：Redis 6.2 内存版（标准架构）。</li><li>16：Redis 6.2 内存版（集群架构）。</li><li>17：Redis 7.0 内存版（标准架构）。</li><li>18：Redis 7.0 内存版（集群架构）。</li><li>200：Memcached 1.6 内存版（集群架构）。</li>说明：CKV 版本当前有存量用户使用，暂时保留。</ul>
      * @param integer $MemSize 内存容量，单位为MB， 数值需为1024的整数倍。具体规格，请通过 [DescribeProductInfo](https://cloud.tencent.com/document/api/239/30600) 接口查询全地域的售卖规格。
@@ -372,6 +379,7 @@ class CreateInstancesRequest extends AbstractModel
 
 - 请登录[腾讯云可观测平台-告警管理-策略管理](https://console.cloud.tencent.com/monitor/alarm/policy)获取告警策略 ID。
 - 若不配置该参数，则绑定默认告警策略。默认告警策略具体信息，请登录[腾讯云可观测平台-告警管理-策略管理](https://console.cloud.tencent.com/monitor/alarm/policy)查看。
+     * @param boolean $EncryptPassword 是否加密密码
      */
     function __construct()
     {
@@ -498,6 +506,10 @@ class CreateInstancesRequest extends AbstractModel
 
         if (array_key_exists("AlarmPolicyList",$param) and $param["AlarmPolicyList"] !== null) {
             $this->AlarmPolicyList = $param["AlarmPolicyList"];
+        }
+
+        if (array_key_exists("EncryptPassword",$param) and $param["EncryptPassword"] !== null) {
+            $this->EncryptPassword = $param["EncryptPassword"];
         }
     }
 }

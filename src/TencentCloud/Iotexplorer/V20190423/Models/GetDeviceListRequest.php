@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) 设置分页的大小，数值范围 10-100
  * @method string getFirmwareVersion() 获取设备固件版本号，若不带此参数会返回所有固件版本的设备。传"None-FirmwareVersion"查询无版本号的设备
  * @method void setFirmwareVersion(string $FirmwareVersion) 设置设备固件版本号，若不带此参数会返回所有固件版本的设备。传"None-FirmwareVersion"查询无版本号的设备
+ * @method string getFwType() 获取固件类型
+ * @method void setFwType(string $FwType) 设置固件类型
  * @method string getDeviceName() 获取需要过滤的设备名称
  * @method void setDeviceName(string $DeviceName) 设置需要过滤的设备名称
  * @method string getProjectId() 获取项目ID。产品 ID 为 -1 时，该参数必填
@@ -58,6 +60,11 @@ class GetDeviceListRequest extends AbstractModel
     public $FirmwareVersion;
 
     /**
+     * @var string 固件类型
+     */
+    public $FwType;
+
+    /**
      * @var string 需要过滤的设备名称
      */
     public $DeviceName;
@@ -77,6 +84,7 @@ class GetDeviceListRequest extends AbstractModel
      * @param integer $Offset 分页偏移
      * @param integer $Limit 分页的大小，数值范围 10-100
      * @param string $FirmwareVersion 设备固件版本号，若不带此参数会返回所有固件版本的设备。传"None-FirmwareVersion"查询无版本号的设备
+     * @param string $FwType 固件类型
      * @param string $DeviceName 需要过滤的设备名称
      * @param string $ProjectId 项目ID。产品 ID 为 -1 时，该参数必填
      * @param array $Filters 每次请求的Filters的上限为10，Filter.Values的上限为1。
@@ -108,6 +116,10 @@ class GetDeviceListRequest extends AbstractModel
 
         if (array_key_exists("FirmwareVersion",$param) and $param["FirmwareVersion"] !== null) {
             $this->FirmwareVersion = $param["FirmwareVersion"];
+        }
+
+        if (array_key_exists("FwType",$param) and $param["FwType"] !== null) {
+            $this->FwType = $param["FwType"];
         }
 
         if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {

@@ -78,6 +78,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setISP(string $ISP) 设置运营商
  * @method array getVpcInfo() 获取账号外vpc信息列表
  * @method void setVpcInfo(array $VpcInfo) 设置账号外vpc信息列表
+ * @method array getReqClient() 获取调用请求客户端列表
+ * @method void setReqClient(array $ReqClient) 设置调用请求客户端列表
  */
 class CallRecord extends AbstractModel
 {
@@ -211,6 +213,11 @@ class CallRecord extends AbstractModel
     public $VpcInfo;
 
     /**
+     * @var array 调用请求客户端列表
+     */
+    public $ReqClient;
+
+    /**
      * @param string $CallID 调用记录ID
      * @param string $AccessKey 访问密钥
      * @param string $AccessKeyRemark 访问密钥备注
@@ -240,6 +247,7 @@ class CallRecord extends AbstractModel
      * @param boolean $ShowStatus 展示状态
      * @param string $ISP 运营商
      * @param array $VpcInfo 账号外vpc信息列表
+     * @param array $ReqClient 调用请求客户端列表
      */
     function __construct()
     {
@@ -357,6 +365,10 @@ class CallRecord extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->VpcInfo, $obj);
             }
+        }
+
+        if (array_key_exists("ReqClient",$param) and $param["ReqClient"] !== null) {
+            $this->ReqClient = $param["ReqClient"];
         }
     }
 }

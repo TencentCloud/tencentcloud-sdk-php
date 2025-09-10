@@ -23,13 +23,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInstanceId() 获取实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
  * @method integer getBandwidth() 获取附加带宽，大于0，单位MB。
+**说明**：Bandwidth 和 ClientLimit 参数不能同时为空，您必须至少选择其中一个进行配置。
  * @method void setBandwidth(integer $Bandwidth) 设置附加带宽，大于0，单位MB。
+**说明**：Bandwidth 和 ClientLimit 参数不能同时为空，您必须至少选择其中一个进行配置。
  * @method integer getClientLimit() 获取单分片的总连接数。
 - 未开启副本只读时，下限为10000，上限为40000。
 - 开启副本只读时，下限为10000，上限为10000×(只读副本数+3)。
+**说明**：Bandwidth 和 ClientLimit 参数不能同时为空，您必须至少选择其中一个进行配置。
  * @method void setClientLimit(integer $ClientLimit) 设置单分片的总连接数。
 - 未开启副本只读时，下限为10000，上限为40000。
 - 开启副本只读时，下限为10000，上限为10000×(只读副本数+3)。
+**说明**：Bandwidth 和 ClientLimit 参数不能同时为空，您必须至少选择其中一个进行配置。
  */
 class ModifyConnectionConfigRequest extends AbstractModel
 {
@@ -40,6 +44,7 @@ class ModifyConnectionConfigRequest extends AbstractModel
 
     /**
      * @var integer 附加带宽，大于0，单位MB。
+**说明**：Bandwidth 和 ClientLimit 参数不能同时为空，您必须至少选择其中一个进行配置。
      */
     public $Bandwidth;
 
@@ -47,15 +52,18 @@ class ModifyConnectionConfigRequest extends AbstractModel
      * @var integer 单分片的总连接数。
 - 未开启副本只读时，下限为10000，上限为40000。
 - 开启副本只读时，下限为10000，上限为10000×(只读副本数+3)。
+**说明**：Bandwidth 和 ClientLimit 参数不能同时为空，您必须至少选择其中一个进行配置。
      */
     public $ClientLimit;
 
     /**
      * @param string $InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      * @param integer $Bandwidth 附加带宽，大于0，单位MB。
+**说明**：Bandwidth 和 ClientLimit 参数不能同时为空，您必须至少选择其中一个进行配置。
      * @param integer $ClientLimit 单分片的总连接数。
 - 未开启副本只读时，下限为10000，上限为40000。
 - 开启副本只读时，下限为10000，上限为10000×(只读副本数+3)。
+**说明**：Bandwidth 和 ClientLimit 参数不能同时为空，您必须至少选择其中一个进行配置。
      */
     function __construct()
     {

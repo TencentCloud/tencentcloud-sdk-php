@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNoAuth(boolean $NoAuth) 设置是否切换免密实例。
 - false：切换为非免密码实例。
 - true：切换为免密码实例。默认 false。
+ * @method boolean getEncryptPassword() 获取是否加密密码
+ * @method void setEncryptPassword(boolean $EncryptPassword) 设置是否加密密码
  */
 class ResetPasswordRequest extends AbstractModel
 {
@@ -51,11 +53,17 @@ class ResetPasswordRequest extends AbstractModel
     public $NoAuth;
 
     /**
+     * @var boolean 是否加密密码
+     */
+    public $EncryptPassword;
+
+    /**
      * @param string $InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      * @param string $Password 重置的密码。若切换为免密实例时，可不配置该参数。其他情况必须配置。
      * @param boolean $NoAuth 是否切换免密实例。
 - false：切换为非免密码实例。
 - true：切换为免密码实例。默认 false。
+     * @param boolean $EncryptPassword 是否加密密码
      */
     function __construct()
     {
@@ -80,6 +88,10 @@ class ResetPasswordRequest extends AbstractModel
 
         if (array_key_exists("NoAuth",$param) and $param["NoAuth"] !== null) {
             $this->NoAuth = $param["NoAuth"];
+        }
+
+        if (array_key_exists("EncryptPassword",$param) and $param["EncryptPassword"] !== null) {
+            $this->EncryptPassword = $param["EncryptPassword"];
         }
     }
 }

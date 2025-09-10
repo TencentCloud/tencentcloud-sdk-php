@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceSecurityGroup请求参数结构体
  *
- * @method array getInstanceIds() 获取实例 ID 列表，数组长度限制[0,100]。例如：["crs-f2ho5rsz\n"]
- * @method void setInstanceIds(array $InstanceIds) 设置实例 ID 列表，数组长度限制[0,100]。例如：["crs-f2ho5rsz\n"]
+ * @method array getInstanceIds() 获取实例 ID 列表，数组长度限制[0,100]。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+ * @method void setInstanceIds(array $InstanceIds) 设置实例 ID 列表，数组长度限制[0,100]。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
  */
 class DescribeInstanceSecurityGroupRequest extends AbstractModel
 {
     /**
-     * @var array 实例 ID 列表，数组长度限制[0,100]。例如：["crs-f2ho5rsz\n"]
+     * @var array 实例 ID 列表，数组长度限制[0,100]。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public $InstanceIds;
 
     /**
-     * @param array $InstanceIds 实例 ID 列表，数组长度限制[0,100]。例如：["crs-f2ho5rsz\n"]
+     * @param array $InstanceIds 实例 ID 列表，数组长度限制[0,100]。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     function __construct()
     {

@@ -20,17 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTablePartitions返回参数结构体
  *
+ * @method MixedTablePartitions getMixedPartitions() 获取分区信息值
+ * @method void setMixedPartitions(MixedTablePartitions $MixedPartitions) 设置分区信息值
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeTablePartitionsResponse extends AbstractModel
 {
     /**
+     * @var MixedTablePartitions 分区信息值
+     */
+    public $MixedPartitions;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
 
     /**
+     * @param MixedTablePartitions $MixedPartitions 分区信息值
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -46,6 +54,11 @@ class DescribeTablePartitionsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("MixedPartitions",$param) and $param["MixedPartitions"] !== null) {
+            $this->MixedPartitions = new MixedTablePartitions();
+            $this->MixedPartitions->deserialize($param["MixedPartitions"]);
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

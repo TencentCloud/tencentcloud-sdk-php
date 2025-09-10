@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getType() 获取连接源类型
  * @method void setType(string $Type) 设置连接源类型
- * @method string getSearchWord() 获取连接源名称的关键字查询
- * @method void setSearchWord(string $SearchWord) 设置连接源名称的关键字查询
+ * @method string getSearchWord() 获取连接源名称的关键字查询,支持模糊匹配
+ * @method void setSearchWord(string $SearchWord) 设置连接源名称的关键字查询,支持模糊匹配
  * @method integer getOffset() 获取分页偏移量，默认为0
  * @method void setOffset(integer $Offset) 设置分页偏移量，默认为0
- * @method integer getLimit() 获取返回数量，默认为20，最大值为100
- * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100
+ * @method integer getLimit() 获取返回数量，默认为20，最大值为1000 (超过1000,则限制为1000)
+ * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为1000 (超过1000,则限制为1000)
  * @method string getResourceRegion() 获取连接源的关键字查询, 根据地域查询本地域内连接管理列表中的连接(仅支持包含region输入的连接源)
  * @method void setResourceRegion(string $ResourceRegion) 设置连接源的关键字查询, 根据地域查询本地域内连接管理列表中的连接(仅支持包含region输入的连接源)
  */
@@ -39,7 +39,7 @@ class DescribeConnectResourcesRequest extends AbstractModel
     public $Type;
 
     /**
-     * @var string 连接源名称的关键字查询
+     * @var string 连接源名称的关键字查询,支持模糊匹配
      */
     public $SearchWord;
 
@@ -49,7 +49,7 @@ class DescribeConnectResourcesRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 返回数量，默认为20，最大值为100
+     * @var integer 返回数量，默认为20，最大值为1000 (超过1000,则限制为1000)
      */
     public $Limit;
 
@@ -60,9 +60,9 @@ class DescribeConnectResourcesRequest extends AbstractModel
 
     /**
      * @param string $Type 连接源类型
-     * @param string $SearchWord 连接源名称的关键字查询
+     * @param string $SearchWord 连接源名称的关键字查询,支持模糊匹配
      * @param integer $Offset 分页偏移量，默认为0
-     * @param integer $Limit 返回数量，默认为20，最大值为100
+     * @param integer $Limit 返回数量，默认为20，最大值为1000 (超过1000,则限制为1000)
      * @param string $ResourceRegion 连接源的关键字查询, 根据地域查询本地域内连接管理列表中的连接(仅支持包含region输入的连接源)
      */
     function __construct()

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDLPFileDetectResult返回参数结构体
  *
- * @method DescribeDLPFileDetectResultData getData() 获取查询任务结果
- * @method void setData(DescribeDLPFileDetectResultData $Data) 设置查询任务结果
+ * @method DescribeDLPFileDetectResultData getData() 获取文件鉴定任务结果数据。详情查看具体数据结构
+ * @method void setData(DescribeDLPFileDetectResultData $Data) 设置文件鉴定任务结果数据。详情查看具体数据结构
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
 class DescribeDLPFileDetectResultResponse extends AbstractModel
 {
     /**
-     * @var DescribeDLPFileDetectResultData 查询任务结果
+     * @var DescribeDLPFileDetectResultData 文件鉴定任务结果数据。详情查看具体数据结构
      */
     public $Data;
 
@@ -38,7 +38,7 @@ class DescribeDLPFileDetectResultResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param DescribeDLPFileDetectResultData $Data 查询任务结果
+     * @param DescribeDLPFileDetectResultData $Data 文件鉴定任务结果数据。详情查看具体数据结构
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()

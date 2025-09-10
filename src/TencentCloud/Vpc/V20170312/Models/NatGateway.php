@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSmartScheduleMode(boolean $SmartScheduleMode) 设置是否启用根据目的网段选择SNAT使用的EIP功能	
  * @method string getDedicatedClusterId() 获取NAT实例归属的专属集群id
  * @method void setDedicatedClusterId(string $DedicatedClusterId) 设置NAT实例归属的专属集群id
+ * @method boolean getDeletionProtectionEnabled() 获取NAT实例是否开启删除保护
+ * @method void setDeletionProtectionEnabled(boolean $DeletionProtectionEnabled) 设置NAT实例是否开启删除保护
  */
 class NatGateway extends AbstractModel
 {
@@ -184,6 +186,11 @@ class NatGateway extends AbstractModel
     public $DedicatedClusterId;
 
     /**
+     * @var boolean NAT实例是否开启删除保护
+     */
+    public $DeletionProtectionEnabled;
+
+    /**
      * @param string $NatGatewayId NAT网关的ID。
      * @param string $NatGatewayName NAT网关的名称。
      * @param string $CreatedTime NAT网关创建的时间。
@@ -208,6 +215,7 @@ class NatGateway extends AbstractModel
      * @param integer $NatProductVersion NAT网关类型，1表示传统型NAT网关，2表示标准型NAT网关
      * @param boolean $SmartScheduleMode 是否启用根据目的网段选择SNAT使用的EIP功能	
      * @param string $DedicatedClusterId NAT实例归属的专属集群id
+     * @param boolean $DeletionProtectionEnabled NAT实例是否开启删除保护
      */
     function __construct()
     {
@@ -328,6 +336,10 @@ class NatGateway extends AbstractModel
 
         if (array_key_exists("DedicatedClusterId",$param) and $param["DedicatedClusterId"] !== null) {
             $this->DedicatedClusterId = $param["DedicatedClusterId"];
+        }
+
+        if (array_key_exists("DeletionProtectionEnabled",$param) and $param["DeletionProtectionEnabled"] !== null) {
+            $this->DeletionProtectionEnabled = $param["DeletionProtectionEnabled"];
         }
     }
 }

@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RestoreInstance请求参数结构体
  *
- * @method string getInstanceId() 获取待操作的实例ID，可通过 DescribeInstances 接口返回值中的 InstanceId 获取。
- * @method void setInstanceId(string $InstanceId) 设置待操作的实例ID，可通过 DescribeInstances 接口返回值中的 InstanceId 获取。
- * @method string getBackupId() 获取备份ID，可通过 GetRedisBackupList 接口返回值中的 backupId 获取
- * @method void setBackupId(string $BackupId) 设置备份ID，可通过 GetRedisBackupList 接口返回值中的 backupId 获取
+ * @method string getInstanceId() 获取待操作的实例ID，可通过 [DescribeInstances](https://cloud.tencent.com/document/product/239/20018) 接口返回值中的 InstanceId 获取。
+ * @method void setInstanceId(string $InstanceId) 设置待操作的实例ID，可通过 [DescribeInstances](https://cloud.tencent.com/document/product/239/20018) 接口返回值中的 InstanceId 获取。
+ * @method string getBackupId() 获取备份ID，可通过 [DescribeInstanceBackups](https://cloud.tencent.com/document/product/239/20011) 接口返回的参数 RedisBackupSet 获取。
+ * @method void setBackupId(string $BackupId) 设置备份ID，可通过 [DescribeInstanceBackups](https://cloud.tencent.com/document/product/239/20011) 接口返回的参数 RedisBackupSet 获取。
  * @method string getPassword() 获取实例密码，恢复实例时，需要校验实例密码（免密实例不需要传密码）
  * @method void setPassword(string $Password) 设置实例密码，恢复实例时，需要校验实例密码（免密实例不需要传密码）
  */
 class RestoreInstanceRequest extends AbstractModel
 {
     /**
-     * @var string 待操作的实例ID，可通过 DescribeInstances 接口返回值中的 InstanceId 获取。
+     * @var string 待操作的实例ID，可通过 [DescribeInstances](https://cloud.tencent.com/document/product/239/20018) 接口返回值中的 InstanceId 获取。
      */
     public $InstanceId;
 
     /**
-     * @var string 备份ID，可通过 GetRedisBackupList 接口返回值中的 backupId 获取
+     * @var string 备份ID，可通过 [DescribeInstanceBackups](https://cloud.tencent.com/document/product/239/20011) 接口返回的参数 RedisBackupSet 获取。
      */
     public $BackupId;
 
@@ -45,8 +45,8 @@ class RestoreInstanceRequest extends AbstractModel
     public $Password;
 
     /**
-     * @param string $InstanceId 待操作的实例ID，可通过 DescribeInstances 接口返回值中的 InstanceId 获取。
-     * @param string $BackupId 备份ID，可通过 GetRedisBackupList 接口返回值中的 backupId 获取
+     * @param string $InstanceId 待操作的实例ID，可通过 [DescribeInstances](https://cloud.tencent.com/document/product/239/20018) 接口返回值中的 InstanceId 获取。
+     * @param string $BackupId 备份ID，可通过 [DescribeInstanceBackups](https://cloud.tencent.com/document/product/239/20011) 接口返回的参数 RedisBackupSet 获取。
      * @param string $Password 实例密码，恢复实例时，需要校验实例密码（免密实例不需要传密码）
      */
     function __construct()

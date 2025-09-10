@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
 - 长度8 - 64位, 推荐使用12位以上的密码。
 - 不能以"/"开头。
 - 至少包含小写字母a - z、大写字母A - Z、数字0 - 9、特殊字符 ()~!@#$%^&*-+=_|{}[]:;<>,.?/中的两项。
+ * @method boolean getEncryptPassword() 获取是否加密密码
+ * @method void setEncryptPassword(boolean $EncryptPassword) 设置是否加密密码
  */
 class ModfiyInstancePasswordRequest extends AbstractModel
 {
@@ -54,12 +56,18 @@ class ModfiyInstancePasswordRequest extends AbstractModel
     public $Password;
 
     /**
+     * @var boolean 是否加密密码
+     */
+    public $EncryptPassword;
+
+    /**
      * @param string $InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
      * @param string $OldPassword 实例旧密码。
      * @param string $Password 实例新密码。密码复杂度要求如下：
 - 长度8 - 64位, 推荐使用12位以上的密码。
 - 不能以"/"开头。
 - 至少包含小写字母a - z、大写字母A - Z、数字0 - 9、特殊字符 ()~!@#$%^&*-+=_|{}[]:;<>,.?/中的两项。
+     * @param boolean $EncryptPassword 是否加密密码
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class ModfiyInstancePasswordRequest extends AbstractModel
 
         if (array_key_exists("Password",$param) and $param["Password"] !== null) {
             $this->Password = $param["Password"];
+        }
+
+        if (array_key_exists("EncryptPassword",$param) and $param["EncryptPassword"] !== null) {
+            $this->EncryptPassword = $param["EncryptPassword"];
         }
     }
 }

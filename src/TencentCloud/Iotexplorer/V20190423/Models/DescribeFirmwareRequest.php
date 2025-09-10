@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductID(string $ProductID) 设置产品ID
  * @method string getFirmwareVersion() 获取固件版本号
  * @method void setFirmwareVersion(string $FirmwareVersion) 设置固件版本号
+ * @method string getFwType() 获取固件模块
+ * @method void setFwType(string $FwType) 设置固件模块
  */
 class DescribeFirmwareRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeFirmwareRequest extends AbstractModel
     public $FirmwareVersion;
 
     /**
+     * @var string 固件模块
+     */
+    public $FwType;
+
+    /**
      * @param string $ProductID 产品ID
      * @param string $FirmwareVersion 固件版本号
+     * @param string $FwType 固件模块
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeFirmwareRequest extends AbstractModel
 
         if (array_key_exists("FirmwareVersion",$param) and $param["FirmwareVersion"] !== null) {
             $this->FirmwareVersion = $param["FirmwareVersion"];
+        }
+
+        if (array_key_exists("FwType",$param) and $param["FwType"] !== null) {
+            $this->FwType = $param["FwType"];
         }
     }
 }

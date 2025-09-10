@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDesc(string $Desc) 设置发布描述
  * @method string getUpdateTime() 获取更新时间
  * @method void setUpdateTime(string $UpdateTime) 设置更新时间
- * @method integer getStatus() 获取发布状态
- * @method void setStatus(integer $Status) 设置发布状态
+ * @method integer getStatus() 获取发布状态，1：待发布，2：发布中，3：发布成功，5：发布失败
+ * @method void setStatus(integer $Status) 设置发布状态，1：待发布，2：发布中，3：发布成功，5：发布失败
  * @method string getStatusDesc() 获取发布状态描述
  * @method void setStatusDesc(string $StatusDesc) 设置发布状态描述
  * @method string getReason() 获取失败原因
@@ -62,7 +62,7 @@ class ListReleaseItem extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @var integer 发布状态
+     * @var integer 发布状态，1：待发布，2：发布中，3：发布成功，5：发布失败
      */
     public $Status;
 
@@ -91,7 +91,7 @@ class ListReleaseItem extends AbstractModel
      * @param string $Operator 发布人
      * @param string $Desc 发布描述
      * @param string $UpdateTime 更新时间
-     * @param integer $Status 发布状态
+     * @param integer $Status 发布状态，1：待发布，2：发布中，3：发布成功，5：发布失败
      * @param string $StatusDesc 发布状态描述
      * @param string $Reason 失败原因
      * @param integer $SuccessCount 发布成功数

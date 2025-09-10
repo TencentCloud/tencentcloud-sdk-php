@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDatahubTasks请求参数结构体
  *
- * @method integer getLimit() 获取返回数量，默认为20，最大值为100
- * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100
+ * @method integer getLimit() 获取返回数量，默认为20，最大值为100 (超过100限制为100)
+ * @method void setLimit(integer $Limit) 设置返回数量，默认为20，最大值为100 (超过100限制为100)
  * @method integer getOffset() 获取分页偏移量，默认为0
  * @method void setOffset(integer $Offset) 设置分页偏移量，默认为0
  * @method string getSearchWord() 获取过滤条件，按照 TaskName 过滤，支持模糊查询
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeDatahubTasksRequest extends AbstractModel
 {
     /**
-     * @var integer 返回数量，默认为20，最大值为100
+     * @var integer 返回数量，默认为20，最大值为100 (超过100限制为100)
      */
     public $Limit;
 
@@ -73,7 +73,7 @@ class DescribeDatahubTasksRequest extends AbstractModel
     public $Resource;
 
     /**
-     * @param integer $Limit 返回数量，默认为20，最大值为100
+     * @param integer $Limit 返回数量，默认为20，最大值为100 (超过100限制为100)
      * @param integer $Offset 分页偏移量，默认为0
      * @param string $SearchWord 过滤条件，按照 TaskName 过滤，支持模糊查询
      * @param string $TargetType 转储的目标类型

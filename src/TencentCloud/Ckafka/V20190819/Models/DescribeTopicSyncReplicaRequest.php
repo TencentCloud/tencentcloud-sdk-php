@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopicName(string $TopicName) 设置主题名称
  * @method integer getOffset() 获取偏移量，不填默认为0
  * @method void setOffset(integer $Offset) 设置偏移量，不填默认为0
- * @method integer getLimit() 获取返回数量，不填则默认10，最大值20。
- * @method void setLimit(integer $Limit) 设置返回数量，不填则默认10，最大值20。
+ * @method integer getLimit() 获取返回数量，默认值为20，必须大于0。
+ * @method void setLimit(integer $Limit) 设置返回数量，默认值为20，必须大于0。
  * @method boolean getOutOfSyncReplicaOnly() 获取仅筛选未同步副本
  * @method void setOutOfSyncReplicaOnly(boolean $OutOfSyncReplicaOnly) 设置仅筛选未同步副本
  */
@@ -49,7 +49,7 @@ class DescribeTopicSyncReplicaRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 返回数量，不填则默认10，最大值20。
+     * @var integer 返回数量，默认值为20，必须大于0。
      */
     public $Limit;
 
@@ -62,7 +62,7 @@ class DescribeTopicSyncReplicaRequest extends AbstractModel
      * @param string $InstanceId 实例ID
      * @param string $TopicName 主题名称
      * @param integer $Offset 偏移量，不填默认为0
-     * @param integer $Limit 返回数量，不填则默认10，最大值20。
+     * @param integer $Limit 返回数量，默认值为20，必须大于0。
      * @param boolean $OutOfSyncReplicaOnly 仅筛选未同步副本
      */
     function __construct()

@@ -68,6 +68,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppID(integer $AppID) 设置所属appid
  * @method array getLeakEvidence() 获取泄漏证据
  * @method void setLeakEvidence(array $LeakEvidence) 设置泄漏证据
+ * @method boolean getIsSupportEditWhiteAccount() 获取是否支持编辑信任账号
+ * @method void setIsSupportEditWhiteAccount(boolean $IsSupportEditWhiteAccount) 设置是否支持编辑信任账号
+ * @method string getEvidence() 获取告警证据
+ * @method void setEvidence(string $Evidence) 设置告警证据
+ * @method string getRuleKey() 获取告警规则标识
+ * @method void setRuleKey(string $RuleKey) 设置告警规则标识
  */
 class AccessKeyAlarm extends AbstractModel
 {
@@ -172,6 +178,21 @@ class AccessKeyAlarm extends AbstractModel
     public $LeakEvidence;
 
     /**
+     * @var boolean 是否支持编辑信任账号
+     */
+    public $IsSupportEditWhiteAccount;
+
+    /**
+     * @var string 告警证据
+     */
+    public $Evidence;
+
+    /**
+     * @var string 告警规则标识
+     */
+    public $RuleKey;
+
+    /**
      * @param string $Name 告警名称
      * @param integer $Level 告警等级
 0-无效 1-提示 2-低危 3-中危 4-高危 5-严重
@@ -196,6 +217,9 @@ class AccessKeyAlarm extends AbstractModel
 0 主账号AK 1 子账号AK 2 临时密钥
      * @param integer $AppID 所属appid
      * @param array $LeakEvidence 泄漏证据
+     * @param boolean $IsSupportEditWhiteAccount 是否支持编辑信任账号
+     * @param string $Evidence 告警证据
+     * @param string $RuleKey 告警规则标识
      */
     function __construct()
     {
@@ -284,6 +308,18 @@ class AccessKeyAlarm extends AbstractModel
 
         if (array_key_exists("LeakEvidence",$param) and $param["LeakEvidence"] !== null) {
             $this->LeakEvidence = $param["LeakEvidence"];
+        }
+
+        if (array_key_exists("IsSupportEditWhiteAccount",$param) and $param["IsSupportEditWhiteAccount"] !== null) {
+            $this->IsSupportEditWhiteAccount = $param["IsSupportEditWhiteAccount"];
+        }
+
+        if (array_key_exists("Evidence",$param) and $param["Evidence"] !== null) {
+            $this->Evidence = $param["Evidence"];
+        }
+
+        if (array_key_exists("RuleKey",$param) and $param["RuleKey"] !== null) {
+            $this->RuleKey = $param["RuleKey"];
         }
     }
 }

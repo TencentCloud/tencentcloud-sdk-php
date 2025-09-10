@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListRelease请求参数结构体
  *
- * @method string getBotBizId() 获取机器人ID
- * @method void setBotBizId(string $BotBizId) 设置机器人ID
+ * @method string getBotBizId() 获取应用ID
+ * @method void setBotBizId(string $BotBizId) 设置应用ID
  * @method integer getPageNumber() 获取页码
  * @method void setPageNumber(integer $PageNumber) 设置页码
  * @method integer getPageSize() 获取每页数量
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class ListReleaseRequest extends AbstractModel
 {
     /**
-     * @var string 机器人ID
+     * @var string 应用ID
      */
     public $BotBizId;
 
@@ -45,7 +45,7 @@ class ListReleaseRequest extends AbstractModel
     public $PageSize;
 
     /**
-     * @param string $BotBizId 机器人ID
+     * @param string $BotBizId 应用ID
      * @param integer $PageNumber 页码
      * @param integer $PageSize 每页数量
      */

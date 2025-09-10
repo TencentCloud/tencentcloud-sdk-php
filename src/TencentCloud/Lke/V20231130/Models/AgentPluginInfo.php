@@ -31,7 +31,9 @@ use TencentCloud\Common\AbstractModel;
  * @method AgentKnowledgeQAPlugin getKnowledgeQa() 获取知识库问答插件配置
  * @method void setKnowledgeQa(AgentKnowledgeQAPlugin $KnowledgeQa) 设置知识库问答插件配置
  * @method boolean getEnableRoleAuth() 获取是否使用一键授权
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setEnableRoleAuth(boolean $EnableRoleAuth) 设置是否使用一键授权
+注意：此字段可能返回 null，表示取不到有效值。
  * @method array getQuery() 获取应用配置的插件query信息
  * @method void setQuery(array $Query) 设置应用配置的插件query信息
  * @method integer getMcpType() 获取MCP类型
@@ -66,6 +68,7 @@ class AgentPluginInfo extends AbstractModel
 
     /**
      * @var boolean 是否使用一键授权
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $EnableRoleAuth;
 
@@ -86,6 +89,7 @@ class AgentPluginInfo extends AbstractModel
      * @param integer $PluginInfoType 插件信息类型; 0: 未指定类型; 1: 知识库问答插件
      * @param AgentKnowledgeQAPlugin $KnowledgeQa 知识库问答插件配置
      * @param boolean $EnableRoleAuth 是否使用一键授权
+注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Query 应用配置的插件query信息
      * @param integer $McpType MCP类型
      */

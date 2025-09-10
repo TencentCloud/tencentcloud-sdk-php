@@ -65,6 +65,15 @@ use TencentCloud\Common\AbstractModel;
 
 注：
 符合iana标准 https://www.iana.org/time-zones，例如Asia/Shanghai、Asia/Bangkok
+
+ * @method integer getSearchMode() 获取取值为1表示高级搜索，取值为2表示简单搜索，默认为1
+ * @method void setSearchMode(integer $SearchMode) 设置取值为1表示高级搜索，取值为2表示简单搜索，默认为1
+ * @method integer getLimit() 获取最终输出的条数；仅当SearchMode为2时支持自定义设置，默认为50
+ * @method void setLimit(integer $Limit) 设置最终输出的条数；仅当SearchMode为2时支持自定义设置，默认为50
+ * @method float getVectorSearchRadius() 获取向量搜索的相似度搜索半径，取值范围[-1, 1]；仅当SearchMode为2时支持自定义设置，默认为0.5
+ * @method void setVectorSearchRadius(float $VectorSearchRadius) 设置向量搜索的相似度搜索半径，取值范围[-1, 1]；仅当SearchMode为2时支持自定义设置，默认为0.5
+ * @method integer getVectorSearchTopK() 获取指定向量搜索最相似的 Top K；仅当SearchMode为2时支持自定义设置，默认为100
+ * @method void setVectorSearchTopK(integer $VectorSearchTopK) 设置指定向量搜索最相似的 Top K；仅当SearchMode为2时支持自定义设置，默认为100
  */
 class InvokeAISearchServiceRequest extends AbstractModel
 {
@@ -128,6 +137,26 @@ class InvokeAISearchServiceRequest extends AbstractModel
     public $TimeZone;
 
     /**
+     * @var integer 取值为1表示高级搜索，取值为2表示简单搜索，默认为1
+     */
+    public $SearchMode;
+
+    /**
+     * @var integer 最终输出的条数；仅当SearchMode为2时支持自定义设置，默认为50
+     */
+    public $Limit;
+
+    /**
+     * @var float 向量搜索的相似度搜索半径，取值范围[-1, 1]；仅当SearchMode为2时支持自定义设置，默认为0.5
+     */
+    public $VectorSearchRadius;
+
+    /**
+     * @var integer 指定向量搜索最相似的 Top K；仅当SearchMode为2时支持自定义设置，默认为100
+     */
+    public $VectorSearchTopK;
+
+    /**
      * @param string $ProductId 产品ID
      * @param string $DeviceName 设备名称
      * @param string $Query 自然语言查询
@@ -150,6 +179,11 @@ class InvokeAISearchServiceRequest extends AbstractModel
 
 注：
 符合iana标准 https://www.iana.org/time-zones，例如Asia/Shanghai、Asia/Bangkok
+
+     * @param integer $SearchMode 取值为1表示高级搜索，取值为2表示简单搜索，默认为1
+     * @param integer $Limit 最终输出的条数；仅当SearchMode为2时支持自定义设置，默认为50
+     * @param float $VectorSearchRadius 向量搜索的相似度搜索半径，取值范围[-1, 1]；仅当SearchMode为2时支持自定义设置，默认为0.5
+     * @param integer $VectorSearchTopK 指定向量搜索最相似的 Top K；仅当SearchMode为2时支持自定义设置，默认为100
      */
     function __construct()
     {
@@ -198,6 +232,22 @@ class InvokeAISearchServiceRequest extends AbstractModel
 
         if (array_key_exists("TimeZone",$param) and $param["TimeZone"] !== null) {
             $this->TimeZone = $param["TimeZone"];
+        }
+
+        if (array_key_exists("SearchMode",$param) and $param["SearchMode"] !== null) {
+            $this->SearchMode = $param["SearchMode"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("VectorSearchRadius",$param) and $param["VectorSearchRadius"] !== null) {
+            $this->VectorSearchRadius = $param["VectorSearchRadius"];
+        }
+
+        if (array_key_exists("VectorSearchTopK",$param) and $param["VectorSearchTopK"] !== null) {
+            $this->VectorSearchTopK = $param["VectorSearchTopK"];
         }
     }
 }

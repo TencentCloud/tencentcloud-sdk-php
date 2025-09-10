@@ -59,6 +59,7 @@ use TencentCloud\Gs\V20191118\Models as Models;
  * @method Models\DescribeInstancesCountResponse DescribeInstancesCount(Models\DescribeInstancesCountRequest $req) 获取并发总数和运行数
  * @method Models\DestroyAndroidInstancesResponse DestroyAndroidInstances(Models\DestroyAndroidInstancesRequest $req) 销毁安卓实例
  * @method Models\DisableAndroidInstancesAppResponse DisableAndroidInstancesApp(Models\DisableAndroidInstancesAppRequest $req) 批量禁用安卓实例应用
+ * @method Models\DisconnectAndroidInstanceResponse DisconnectAndroidInstance(Models\DisconnectAndroidInstanceRequest $req) 断开安卓实例
  * @method Models\DistributeFileToAndroidInstancesResponse DistributeFileToAndroidInstances(Models\DistributeFileToAndroidInstancesRequest $req) 将一个文件批量分发到多个实例，一次接口调用触发一次文件分发，一次文件分发只会从公网下载一次，然后文件会走内网分发到实例列表中的实例。
  * @method Models\DistributePhotoToAndroidInstancesResponse DistributePhotoToAndroidInstances(Models\DistributePhotoToAndroidInstancesRequest $req) 将一张照片批量分发到多个实例的相册中，一次接口调用触发一次照片分发，一次照片分发只会从公网下载一次，然后照片会走内网分发到实例列表中的实例。
  * @method Models\EnableAndroidInstancesAppResponse EnableAndroidInstancesApp(Models\EnableAndroidInstancesAppRequest $req) 批量启用安卓实例应用

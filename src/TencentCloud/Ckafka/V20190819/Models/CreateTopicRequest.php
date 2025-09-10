@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateTopic请求参数结构体
  *
- * @method string getInstanceId() 获取实例Id
- * @method void setInstanceId(string $InstanceId) 设置实例Id
+ * @method string getInstanceId() 获取实例Id，可通过DescribeInstances接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置实例Id，可通过DescribeInstances接口获取。
  * @method string getTopicName() 获取只能包含字母、数字、下划线、“-”、“.”
  * @method void setTopicName(string $TopicName) 设置只能包含字母、数字、下划线、“-”、“.”
  * @method integer getPartitionNum() 获取Partition个数，大于0
@@ -34,31 +34,31 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIpWhiteList(array $IpWhiteList) 设置Ip白名单列表，配额限制，enableWhileList=1时必选
  * @method string getCleanUpPolicy() 获取清理日志策略，日志清理模式，默认为"delete"。"delete"：日志按保存时间删除，"compact"：日志按 key 压缩，"compact, delete"：日志按 key 压缩且会按保存时间删除。
  * @method void setCleanUpPolicy(string $CleanUpPolicy) 设置清理日志策略，日志清理模式，默认为"delete"。"delete"：日志按保存时间删除，"compact"：日志按 key 压缩，"compact, delete"：日志按 key 压缩且会按保存时间删除。
- * @method string getNote() 获取主题备注，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
- * @method void setNote(string $Note) 设置主题备注，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
- * @method integer getMinInsyncReplicas() 获取默认为1
- * @method void setMinInsyncReplicas(integer $MinInsyncReplicas) 设置默认为1
- * @method integer getUncleanLeaderElectionEnable() 获取是否允许未同步的副本选为leader，false:不允许，true:允许，默认不允许
- * @method void setUncleanLeaderElectionEnable(integer $UncleanLeaderElectionEnable) 设置是否允许未同步的副本选为leader，false:不允许，true:允许，默认不允许
- * @method integer getRetentionMs() 获取可选参数。消息保留时间，单位ms，当前最小值为60000ms
- * @method void setRetentionMs(integer $RetentionMs) 设置可选参数。消息保留时间，单位ms，当前最小值为60000ms
- * @method integer getSegmentMs() 获取Segment分片滚动的时长，单位ms，当前最小为3600000ms
- * @method void setSegmentMs(integer $SegmentMs) 设置Segment分片滚动的时长，单位ms，当前最小为3600000ms
- * @method integer getMaxMessageBytes() 获取主题消息最大值，单位为 Byte，最小值1024Byte(即1KB)，最大值为12582912Byte（即12MB）
- * @method void setMaxMessageBytes(integer $MaxMessageBytes) 设置主题消息最大值，单位为 Byte，最小值1024Byte(即1KB)，最大值为12582912Byte（即12MB）
+ * @method string getNote() 获取主题备注，是一个不超过 64 个字符的字符串，可以用字母和数字为首字符，剩余部分可以包含字母、数字和横划线(-)
+ * @method void setNote(string $Note) 设置主题备注，是一个不超过 64 个字符的字符串，可以用字母和数字为首字符，剩余部分可以包含字母、数字和横划线(-)
+ * @method integer getMinInsyncReplicas() 获取最小同步副本数，默认为1
+ * @method void setMinInsyncReplicas(integer $MinInsyncReplicas) 设置最小同步副本数，默认为1
+ * @method integer getUncleanLeaderElectionEnable() 获取是否允许未同步的副本选为leader，0:不允许，1:允许，默认不允许
+ * @method void setUncleanLeaderElectionEnable(integer $UncleanLeaderElectionEnable) 设置是否允许未同步的副本选为leader，0:不允许，1:允许，默认不允许
+ * @method integer getRetentionMs() 获取可选参数。消息保留时间，单位ms，当前最小值为60000。默认值为7200000ms（2小时），最大值为7776000000 ms（90天）。
+ * @method void setRetentionMs(integer $RetentionMs) 设置可选参数。消息保留时间，单位ms，当前最小值为60000。默认值为7200000ms（2小时），最大值为7776000000 ms（90天）。
+ * @method integer getSegmentMs() 获取Segment分片滚动的时长，单位ms，最小值为86400000ms（1天）。
+ * @method void setSegmentMs(integer $SegmentMs) 设置Segment分片滚动的时长，单位ms，最小值为86400000ms（1天）。
+ * @method integer getMaxMessageBytes() 获取主题消息最大值，单位为 Byte，最小值1024Bytes(即1KB)，最大值为12582912Bytes（即12MB）
+ * @method void setMaxMessageBytes(integer $MaxMessageBytes) 设置主题消息最大值，单位为 Byte，最小值1024Bytes(即1KB)，最大值为12582912Bytes（即12MB）
  * @method integer getEnableAclRule() 获取预设ACL规则, 1:打开  0:关闭，默认不打开
  * @method void setEnableAclRule(integer $EnableAclRule) 设置预设ACL规则, 1:打开  0:关闭，默认不打开
  * @method string getAclRuleName() 获取预设ACL规则的名称
  * @method void setAclRuleName(string $AclRuleName) 设置预设ACL规则的名称
- * @method integer getRetentionBytes() 获取可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B
- * @method void setRetentionBytes(integer $RetentionBytes) 设置可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B
+ * @method integer getRetentionBytes() 获取可选, 保留文件大小. 默认为-1,单位Byte, 当前最小值为1073741824。
+ * @method void setRetentionBytes(integer $RetentionBytes) 设置可选, 保留文件大小. 默认为-1,单位Byte, 当前最小值为1073741824。
  * @method array getTags() 获取标签列表
  * @method void setTags(array $Tags) 设置标签列表
  */
 class CreateTopicRequest extends AbstractModel
 {
     /**
-     * @var string 实例Id
+     * @var string 实例Id，可通过DescribeInstances接口获取。
      */
     public $InstanceId;
 
@@ -93,32 +93,32 @@ class CreateTopicRequest extends AbstractModel
     public $CleanUpPolicy;
 
     /**
-     * @var string 主题备注，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
+     * @var string 主题备注，是一个不超过 64 个字符的字符串，可以用字母和数字为首字符，剩余部分可以包含字母、数字和横划线(-)
      */
     public $Note;
 
     /**
-     * @var integer 默认为1
+     * @var integer 最小同步副本数，默认为1
      */
     public $MinInsyncReplicas;
 
     /**
-     * @var integer 是否允许未同步的副本选为leader，false:不允许，true:允许，默认不允许
+     * @var integer 是否允许未同步的副本选为leader，0:不允许，1:允许，默认不允许
      */
     public $UncleanLeaderElectionEnable;
 
     /**
-     * @var integer 可选参数。消息保留时间，单位ms，当前最小值为60000ms
+     * @var integer 可选参数。消息保留时间，单位ms，当前最小值为60000。默认值为7200000ms（2小时），最大值为7776000000 ms（90天）。
      */
     public $RetentionMs;
 
     /**
-     * @var integer Segment分片滚动的时长，单位ms，当前最小为3600000ms
+     * @var integer Segment分片滚动的时长，单位ms，最小值为86400000ms（1天）。
      */
     public $SegmentMs;
 
     /**
-     * @var integer 主题消息最大值，单位为 Byte，最小值1024Byte(即1KB)，最大值为12582912Byte（即12MB）
+     * @var integer 主题消息最大值，单位为 Byte，最小值1024Bytes(即1KB)，最大值为12582912Bytes（即12MB）
      */
     public $MaxMessageBytes;
 
@@ -133,7 +133,7 @@ class CreateTopicRequest extends AbstractModel
     public $AclRuleName;
 
     /**
-     * @var integer 可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B
+     * @var integer 可选, 保留文件大小. 默认为-1,单位Byte, 当前最小值为1073741824。
      */
     public $RetentionBytes;
 
@@ -143,22 +143,22 @@ class CreateTopicRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @param string $InstanceId 实例Id
+     * @param string $InstanceId 实例Id，可通过DescribeInstances接口获取。
      * @param string $TopicName 只能包含字母、数字、下划线、“-”、“.”
      * @param integer $PartitionNum Partition个数，大于0
      * @param integer $ReplicaNum 副本个数，不能多于 broker 数，最大为3
      * @param integer $EnableWhiteList ip白名单开关, 1:打开  0:关闭，默认不打开
      * @param array $IpWhiteList Ip白名单列表，配额限制，enableWhileList=1时必选
      * @param string $CleanUpPolicy 清理日志策略，日志清理模式，默认为"delete"。"delete"：日志按保存时间删除，"compact"：日志按 key 压缩，"compact, delete"：日志按 key 压缩且会按保存时间删除。
-     * @param string $Note 主题备注，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
-     * @param integer $MinInsyncReplicas 默认为1
-     * @param integer $UncleanLeaderElectionEnable 是否允许未同步的副本选为leader，false:不允许，true:允许，默认不允许
-     * @param integer $RetentionMs 可选参数。消息保留时间，单位ms，当前最小值为60000ms
-     * @param integer $SegmentMs Segment分片滚动的时长，单位ms，当前最小为3600000ms
-     * @param integer $MaxMessageBytes 主题消息最大值，单位为 Byte，最小值1024Byte(即1KB)，最大值为12582912Byte（即12MB）
+     * @param string $Note 主题备注，是一个不超过 64 个字符的字符串，可以用字母和数字为首字符，剩余部分可以包含字母、数字和横划线(-)
+     * @param integer $MinInsyncReplicas 最小同步副本数，默认为1
+     * @param integer $UncleanLeaderElectionEnable 是否允许未同步的副本选为leader，0:不允许，1:允许，默认不允许
+     * @param integer $RetentionMs 可选参数。消息保留时间，单位ms，当前最小值为60000。默认值为7200000ms（2小时），最大值为7776000000 ms（90天）。
+     * @param integer $SegmentMs Segment分片滚动的时长，单位ms，最小值为86400000ms（1天）。
+     * @param integer $MaxMessageBytes 主题消息最大值，单位为 Byte，最小值1024Bytes(即1KB)，最大值为12582912Bytes（即12MB）
      * @param integer $EnableAclRule 预设ACL规则, 1:打开  0:关闭，默认不打开
      * @param string $AclRuleName 预设ACL规则的名称
-     * @param integer $RetentionBytes 可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B
+     * @param integer $RetentionBytes 可选, 保留文件大小. 默认为-1,单位Byte, 当前最小值为1073741824。
      * @param array $Tags 标签列表
      */
     function __construct()

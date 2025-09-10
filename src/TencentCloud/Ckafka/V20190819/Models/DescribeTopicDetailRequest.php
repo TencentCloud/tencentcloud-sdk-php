@@ -20,27 +20,27 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTopicDetail请求参数结构体
  *
- * @method string getInstanceId() 获取ckafka集群实例Id
- * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id
+ * @method string getInstanceId() 获取ckafka集群实例Id，可通过DescribeInstances接口获取。
+ * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id，可通过DescribeInstances接口获取。
  * @method string getSearchWord() 获取（过滤条件）按照topicName过滤，支持模糊查询
  * @method void setSearchWord(string $SearchWord) 设置（过滤条件）按照topicName过滤，支持模糊查询
  * @method integer getOffset() 获取偏移量，不填默认为0
  * @method void setOffset(integer $Offset) 设置偏移量，不填默认为0
- * @method integer getLimit() 获取返回数量，不填则默认 10，最大值20，取值要大于0
- * @method void setLimit(integer $Limit) 设置返回数量，不填则默认 10，最大值20，取值要大于0
+ * @method integer getLimit() 获取返回数量，不填则默认 20，取值要大于0
+ * @method void setLimit(integer $Limit) 设置返回数量，不填则默认 20，取值要大于0
  * @method string getAclRuleName() 获取Acl预设策略名称
  * @method void setAclRuleName(string $AclRuleName) 设置Acl预设策略名称
- * @method string getOrderBy() 获取根据特定的属性排序(目前支持PartitionNum/CreateTime)
- * @method void setOrderBy(string $OrderBy) 设置根据特定的属性排序(目前支持PartitionNum/CreateTime)
- * @method integer getOrderType() 获取0-顺序、1-倒序
- * @method void setOrderType(integer $OrderType) 设置0-顺序、1-倒序
+ * @method string getOrderBy() 获取根据特定的属性排序(目前支持PartitionNum/CreateTime)，默认值为CreateTime。
+ * @method void setOrderBy(string $OrderBy) 设置根据特定的属性排序(目前支持PartitionNum/CreateTime)，默认值为CreateTime。
+ * @method integer getOrderType() 获取0-顺序、1-倒序，默认值为0。
+ * @method void setOrderType(integer $OrderType) 设置0-顺序、1-倒序，默认值为0。
  * @method array getFilters() 获取目前支持 ReplicaNum （副本数）筛选
  * @method void setFilters(array $Filters) 设置目前支持 ReplicaNum （副本数）筛选
  */
 class DescribeTopicDetailRequest extends AbstractModel
 {
     /**
-     * @var string ckafka集群实例Id
+     * @var string ckafka集群实例Id，可通过DescribeInstances接口获取。
      */
     public $InstanceId;
 
@@ -55,7 +55,7 @@ class DescribeTopicDetailRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer 返回数量，不填则默认 10，最大值20，取值要大于0
+     * @var integer 返回数量，不填则默认 20，取值要大于0
      */
     public $Limit;
 
@@ -65,12 +65,12 @@ class DescribeTopicDetailRequest extends AbstractModel
     public $AclRuleName;
 
     /**
-     * @var string 根据特定的属性排序(目前支持PartitionNum/CreateTime)
+     * @var string 根据特定的属性排序(目前支持PartitionNum/CreateTime)，默认值为CreateTime。
      */
     public $OrderBy;
 
     /**
-     * @var integer 0-顺序、1-倒序
+     * @var integer 0-顺序、1-倒序，默认值为0。
      */
     public $OrderType;
 
@@ -80,13 +80,13 @@ class DescribeTopicDetailRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @param string $InstanceId ckafka集群实例Id
+     * @param string $InstanceId ckafka集群实例Id，可通过DescribeInstances接口获取。
      * @param string $SearchWord （过滤条件）按照topicName过滤，支持模糊查询
      * @param integer $Offset 偏移量，不填默认为0
-     * @param integer $Limit 返回数量，不填则默认 10，最大值20，取值要大于0
+     * @param integer $Limit 返回数量，不填则默认 20，取值要大于0
      * @param string $AclRuleName Acl预设策略名称
-     * @param string $OrderBy 根据特定的属性排序(目前支持PartitionNum/CreateTime)
-     * @param integer $OrderType 0-顺序、1-倒序
+     * @param string $OrderBy 根据特定的属性排序(目前支持PartitionNum/CreateTime)，默认值为CreateTime。
+     * @param integer $OrderType 0-顺序、1-倒序，默认值为0。
      * @param array $Filters 目前支持 ReplicaNum （副本数）筛选
      */
     function __construct()

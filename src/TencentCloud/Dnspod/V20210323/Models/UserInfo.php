@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUin(integer $Uin) 设置用户UIN
  * @method array getFreeNs() 获取所属 DNS 服务器
  * @method void setFreeNs(array $FreeNs) 设置所属 DNS 服务器
+ * @method boolean getAllowTransferIn() 获取用户是否允许任何人转移域名到本账号
+ * @method void setAllowTransferIn(boolean $AllowTransferIn) 设置用户是否允许任何人转移域名到本账号
  */
 class UserInfo extends AbstractModel
 {
@@ -108,6 +110,11 @@ class UserInfo extends AbstractModel
     public $FreeNs;
 
     /**
+     * @var boolean 用户是否允许任何人转移域名到本账号
+     */
+    public $AllowTransferIn;
+
+    /**
      * @param string $Nick 用户昵称
      * @param integer $Id 用户ID
      * @param string $Email 用户账号, 邮箱格式
@@ -120,6 +127,7 @@ class UserInfo extends AbstractModel
      * @param string $WechatBinded 是否绑定微信：”yes”: 通过；”no”: 未通过
      * @param integer $Uin 用户UIN
      * @param array $FreeNs 所属 DNS 服务器
+     * @param boolean $AllowTransferIn 用户是否允许任何人转移域名到本账号
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class UserInfo extends AbstractModel
 
         if (array_key_exists("FreeNs",$param) and $param["FreeNs"] !== null) {
             $this->FreeNs = $param["FreeNs"];
+        }
+
+        if (array_key_exists("AllowTransferIn",$param) and $param["AllowTransferIn"] !== null) {
+            $this->AllowTransferIn = $param["AllowTransferIn"];
         }
     }
 }

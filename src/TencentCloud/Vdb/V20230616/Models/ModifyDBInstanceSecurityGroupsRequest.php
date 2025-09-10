@@ -21,7 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * ModifyDBInstanceSecurityGroups请求参数结构体
  *
  * @method array getSecurityGroupIds() 获取要修改的安全组ID列表，一个或者多个安全组 ID 组成的数组。
+注意：该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
  * @method void setSecurityGroupIds(array $SecurityGroupIds) 设置要修改的安全组ID列表，一个或者多个安全组 ID 组成的数组。
+注意：该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
  * @method array getInstanceIds() 获取实例ID，格式如：vdb-c9s3****。
  * @method void setInstanceIds(array $InstanceIds) 设置实例ID，格式如：vdb-c9s3****。
  */
@@ -29,6 +31,7 @@ class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel
 {
     /**
      * @var array 要修改的安全组ID列表，一个或者多个安全组 ID 组成的数组。
+注意：该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
      */
     public $SecurityGroupIds;
 
@@ -39,6 +42,7 @@ class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel
 
     /**
      * @param array $SecurityGroupIds 要修改的安全组ID列表，一个或者多个安全组 ID 组成的数组。
+注意：该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
      * @param array $InstanceIds 实例ID，格式如：vdb-c9s3****。
      */
     function __construct()

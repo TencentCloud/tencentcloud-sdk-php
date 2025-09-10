@@ -40,6 +40,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateUserId(integer $CreateUserId) 设置创建账号ID
  * @method string getCreatorNickName() 获取创建账号ID昵称
  * @method void setCreatorNickName(string $CreatorNickName) 设置创建账号ID昵称
+ * @method integer getDelayTime() 获取延迟时间
+ * @method void setDelayTime(integer $DelayTime) 设置延迟时间
+ * @method integer getTimeoutInterval() 获取超时时间
+ * @method void setTimeoutInterval(integer $TimeoutInterval) 设置超时时间
+ * @method integer getUpgradeMethod() 获取静默升级or用户确认升级
+ * @method void setUpgradeMethod(integer $UpgradeMethod) 设置静默升级or用户确认升级
+ * @method integer getMaxRetryNum() 获取最大重试次数
+ * @method void setMaxRetryNum(integer $MaxRetryNum) 设置最大重试次数
+ * @method string getFwType() 获取固件类型
+ * @method void setFwType(string $FwType) 设置固件类型
+ * @method integer getRetryInterval() 获取重试间隔时间单位min
+ * @method void setRetryInterval(integer $RetryInterval) 设置重试间隔时间单位min
+ * @method integer getOverrideMode() 获取是否覆盖任务
+ * @method void setOverrideMode(integer $OverrideMode) 设置是否覆盖任务
+ * @method string getTaskUserDefine() 获取用户自定义消息
+ * @method void setTaskUserDefine(string $TaskUserDefine) 设置用户自定义消息
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -96,6 +112,46 @@ class DescribeFirmwareTaskResponse extends AbstractModel
     public $CreatorNickName;
 
     /**
+     * @var integer 延迟时间
+     */
+    public $DelayTime;
+
+    /**
+     * @var integer 超时时间
+     */
+    public $TimeoutInterval;
+
+    /**
+     * @var integer 静默升级or用户确认升级
+     */
+    public $UpgradeMethod;
+
+    /**
+     * @var integer 最大重试次数
+     */
+    public $MaxRetryNum;
+
+    /**
+     * @var string 固件类型
+     */
+    public $FwType;
+
+    /**
+     * @var integer 重试间隔时间单位min
+     */
+    public $RetryInterval;
+
+    /**
+     * @var integer 是否覆盖任务
+     */
+    public $OverrideMode;
+
+    /**
+     * @var string 用户自定义消息
+     */
+    public $TaskUserDefine;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -111,6 +167,14 @@ class DescribeFirmwareTaskResponse extends AbstractModel
      * @param string $OriginalVersion 原始固件版本号，在UpgradeMode是originalVersion升级模式下会返回
      * @param integer $CreateUserId 创建账号ID
      * @param string $CreatorNickName 创建账号ID昵称
+     * @param integer $DelayTime 延迟时间
+     * @param integer $TimeoutInterval 超时时间
+     * @param integer $UpgradeMethod 静默升级or用户确认升级
+     * @param integer $MaxRetryNum 最大重试次数
+     * @param string $FwType 固件类型
+     * @param integer $RetryInterval 重试间隔时间单位min
+     * @param integer $OverrideMode 是否覆盖任务
+     * @param string $TaskUserDefine 用户自定义消息
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -164,6 +228,38 @@ class DescribeFirmwareTaskResponse extends AbstractModel
 
         if (array_key_exists("CreatorNickName",$param) and $param["CreatorNickName"] !== null) {
             $this->CreatorNickName = $param["CreatorNickName"];
+        }
+
+        if (array_key_exists("DelayTime",$param) and $param["DelayTime"] !== null) {
+            $this->DelayTime = $param["DelayTime"];
+        }
+
+        if (array_key_exists("TimeoutInterval",$param) and $param["TimeoutInterval"] !== null) {
+            $this->TimeoutInterval = $param["TimeoutInterval"];
+        }
+
+        if (array_key_exists("UpgradeMethod",$param) and $param["UpgradeMethod"] !== null) {
+            $this->UpgradeMethod = $param["UpgradeMethod"];
+        }
+
+        if (array_key_exists("MaxRetryNum",$param) and $param["MaxRetryNum"] !== null) {
+            $this->MaxRetryNum = $param["MaxRetryNum"];
+        }
+
+        if (array_key_exists("FwType",$param) and $param["FwType"] !== null) {
+            $this->FwType = $param["FwType"];
+        }
+
+        if (array_key_exists("RetryInterval",$param) and $param["RetryInterval"] !== null) {
+            $this->RetryInterval = $param["RetryInterval"];
+        }
+
+        if (array_key_exists("OverrideMode",$param) and $param["OverrideMode"] !== null) {
+            $this->OverrideMode = $param["OverrideMode"];
+        }
+
+        if (array_key_exists("TaskUserDefine",$param) and $param["TaskUserDefine"] !== null) {
+            $this->TaskUserDefine = $param["TaskUserDefine"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -20,12 +20,11 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateParamTemplate请求参数结构体
  *
- * @method string getName() 获取参数模板名称。
- * @method void setName(string $Name) 设置参数模板名称。
+ * @method string getName() 获取参数模板名称。字符长度要求为[2,64]。
+ * @method void setName(string $Name) 设置参数模板名称。字符长度要求为[2,64]。
  * @method string getDescription() 获取参数模板描述。
  * @method void setDescription(string $Description) 设置参数模板描述。
  * @method integer getProductType() 获取产品类型。
-- 2：Redis 2.8 内存版（标准架构）。
 - 6：Redis 4.0 内存版（标准架构）。
 - 7：Redis 4.0 内存版（集群架构）。
 - 8：Redis 5.0 内存版（标准架构）。
@@ -35,7 +34,6 @@ use TencentCloud\Common\AbstractModel;
 - 17：Redis 7.0 内存版（标准架构）。
 - 18：Redis 7.0 内存版（集群架构）。
  * @method void setProductType(integer $ProductType) 设置产品类型。
-- 2：Redis 2.8 内存版（标准架构）。
 - 6：Redis 4.0 内存版（标准架构）。
 - 7：Redis 4.0 内存版（集群架构）。
 - 8：Redis 5.0 内存版（标准架构）。
@@ -52,7 +50,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateParamTemplateRequest extends AbstractModel
 {
     /**
-     * @var string 参数模板名称。
+     * @var string 参数模板名称。字符长度要求为[2,64]。
      */
     public $Name;
 
@@ -63,7 +61,6 @@ class CreateParamTemplateRequest extends AbstractModel
 
     /**
      * @var integer 产品类型。
-- 2：Redis 2.8 内存版（标准架构）。
 - 6：Redis 4.0 内存版（标准架构）。
 - 7：Redis 4.0 内存版（集群架构）。
 - 8：Redis 5.0 内存版（标准架构）。
@@ -86,10 +83,9 @@ class CreateParamTemplateRequest extends AbstractModel
     public $ParamList;
 
     /**
-     * @param string $Name 参数模板名称。
+     * @param string $Name 参数模板名称。字符长度要求为[2,64]。
      * @param string $Description 参数模板描述。
      * @param integer $ProductType 产品类型。
-- 2：Redis 2.8 内存版（标准架构）。
 - 6：Redis 4.0 内存版（标准架构）。
 - 7：Redis 4.0 内存版（集群架构）。
 - 8：Redis 5.0 内存版（标准架构）。

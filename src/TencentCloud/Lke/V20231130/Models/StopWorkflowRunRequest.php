@@ -20,17 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * StopWorkflowRun请求参数结构体
  *
+ * @method string getAppBizId() 获取应用ID
+ * @method void setAppBizId(string $AppBizId) 设置应用ID
  * @method string getWorkflowRunId() 获取工作流运行实例ID
  * @method void setWorkflowRunId(string $WorkflowRunId) 设置工作流运行实例ID
  */
 class StopWorkflowRunRequest extends AbstractModel
 {
     /**
+     * @var string 应用ID
+     */
+    public $AppBizId;
+
+    /**
      * @var string 工作流运行实例ID
      */
     public $WorkflowRunId;
 
     /**
+     * @param string $AppBizId 应用ID
      * @param string $WorkflowRunId 工作流运行实例ID
      */
     function __construct()
@@ -46,6 +54,10 @@ class StopWorkflowRunRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("AppBizId",$param) and $param["AppBizId"] !== null) {
+            $this->AppBizId = $param["AppBizId"];
+        }
+
         if (array_key_exists("WorkflowRunId",$param) and $param["WorkflowRunId"] !== null) {
             $this->WorkflowRunId = $param["WorkflowRunId"];
         }

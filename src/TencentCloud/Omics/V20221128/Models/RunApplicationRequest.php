@@ -56,6 +56,14 @@ use TencentCloud\Common\AbstractModel;
 - PUBLIC：公共应用
  * @method array getVolumeIds() 获取缓存卷ID，不填使用默认缓存卷，暂时仅支持Nextflow。
  * @method void setVolumeIds(array $VolumeIds) 设置缓存卷ID，不填使用默认缓存卷，暂时仅支持Nextflow。
+ * @method boolean getResultNotification() 获取是否开启结果通知。
+ * @method void setResultNotification(boolean $ResultNotification) 设置是否开启结果通知。
+ * @method boolean getTimeoutNotification() 获取是否开启超时通知。
+ * @method void setTimeoutNotification(boolean $TimeoutNotification) 设置是否开启超时通知。
+ * @method integer getTimeoutNotificationMinutes() 获取任务超时通知时间（单位：分钟），支持5到2880分钟。
+ * @method void setTimeoutNotificationMinutes(integer $TimeoutNotificationMinutes) 设置任务超时通知时间（单位：分钟），支持5到2880分钟。
+ * @method array getEmailForNotification() 获取接受通知邮件地址列表。
+ * @method void setEmailForNotification(array $EmailForNotification) 设置接受通知邮件地址列表。
  */
 class RunApplicationRequest extends AbstractModel
 {
@@ -142,6 +150,26 @@ class RunApplicationRequest extends AbstractModel
     public $VolumeIds;
 
     /**
+     * @var boolean 是否开启结果通知。
+     */
+    public $ResultNotification;
+
+    /**
+     * @var boolean 是否开启超时通知。
+     */
+    public $TimeoutNotification;
+
+    /**
+     * @var integer 任务超时通知时间（单位：分钟），支持5到2880分钟。
+     */
+    public $TimeoutNotificationMinutes;
+
+    /**
+     * @var array 接受通知邮件地址列表。
+     */
+    public $EmailForNotification;
+
+    /**
      * @param string $ApplicationId 应用ID。
      * @param string $Name 任务批次名称。
      * @param string $EnvironmentId 投递环境ID。
@@ -160,6 +188,10 @@ class RunApplicationRequest extends AbstractModel
 - PRIVATE：私有应用
 - PUBLIC：公共应用
      * @param array $VolumeIds 缓存卷ID，不填使用默认缓存卷，暂时仅支持Nextflow。
+     * @param boolean $ResultNotification 是否开启结果通知。
+     * @param boolean $TimeoutNotification 是否开启超时通知。
+     * @param integer $TimeoutNotificationMinutes 任务超时通知时间（单位：分钟），支持5到2880分钟。
+     * @param array $EmailForNotification 接受通知邮件地址列表。
      */
     function __construct()
     {
@@ -238,6 +270,22 @@ class RunApplicationRequest extends AbstractModel
 
         if (array_key_exists("VolumeIds",$param) and $param["VolumeIds"] !== null) {
             $this->VolumeIds = $param["VolumeIds"];
+        }
+
+        if (array_key_exists("ResultNotification",$param) and $param["ResultNotification"] !== null) {
+            $this->ResultNotification = $param["ResultNotification"];
+        }
+
+        if (array_key_exists("TimeoutNotification",$param) and $param["TimeoutNotification"] !== null) {
+            $this->TimeoutNotification = $param["TimeoutNotification"];
+        }
+
+        if (array_key_exists("TimeoutNotificationMinutes",$param) and $param["TimeoutNotificationMinutes"] !== null) {
+            $this->TimeoutNotificationMinutes = $param["TimeoutNotificationMinutes"];
+        }
+
+        if (array_key_exists("EmailForNotification",$param) and $param["EmailForNotification"] !== null) {
+            $this->EmailForNotification = $param["EmailForNotification"];
         }
     }
 }

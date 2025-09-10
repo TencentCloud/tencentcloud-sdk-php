@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileName(string $FileName) 设置提交任务时的文件名
  * @method string getStatus() 获取状态：等待检测->正在检测->检测失败/检测成功。或任务不存在
  * @method void setStatus(string $Status) 设置状态：等待检测->正在检测->检测失败/检测成功。或任务不存在
- * @method string getDetectResult() 获取文件检测结果，json字符串。
- * @method void setDetectResult(string $DetectResult) 设置文件检测结果，json字符串。
+ * @method string getDetectResult() 获取文件检测结果，json字符串。包含文件基本信息如type，path，md5以及命中的信息。其中State为检测状态，0为待解析文件，1为检测中，2为检测完成；FileAbstract为命中的上下文摘要信息，HitRuleid是命中的规则唯一ID，HitRuleCategoryId是规则分类唯一id，HitLevel是文件的等级，HitRuleDesc是规则的名称，HitContent是具体命中的规则以及词库信息，以及命中的内容。EngineConfigVersion是当前词库版本号
+ * @method void setDetectResult(string $DetectResult) 设置文件检测结果，json字符串。包含文件基本信息如type，path，md5以及命中的信息。其中State为检测状态，0为待解析文件，1为检测中，2为检测完成；FileAbstract为命中的上下文摘要信息，HitRuleid是命中的规则唯一ID，HitRuleCategoryId是规则分类唯一id，HitLevel是文件的等级，HitRuleDesc是规则的名称，HitContent是具体命中的规则以及词库信息，以及命中的内容。EngineConfigVersion是当前词库版本号
  */
 class DescribeDLPFileDetectResultData extends AbstractModel
 {
@@ -47,7 +47,7 @@ class DescribeDLPFileDetectResultData extends AbstractModel
     public $Status;
 
     /**
-     * @var string 文件检测结果，json字符串。
+     * @var string 文件检测结果，json字符串。包含文件基本信息如type，path，md5以及命中的信息。其中State为检测状态，0为待解析文件，1为检测中，2为检测完成；FileAbstract为命中的上下文摘要信息，HitRuleid是命中的规则唯一ID，HitRuleCategoryId是规则分类唯一id，HitLevel是文件的等级，HitRuleDesc是规则的名称，HitContent是具体命中的规则以及词库信息，以及命中的内容。EngineConfigVersion是当前词库版本号
      */
     public $DetectResult;
 
@@ -55,7 +55,7 @@ class DescribeDLPFileDetectResultData extends AbstractModel
      * @param string $FileMd5 提交任务时的文件md5
      * @param string $FileName 提交任务时的文件名
      * @param string $Status 状态：等待检测->正在检测->检测失败/检测成功。或任务不存在
-     * @param string $DetectResult 文件检测结果，json字符串。
+     * @param string $DetectResult 文件检测结果，json字符串。包含文件基本信息如type，path，md5以及命中的信息。其中State为检测状态，0为待解析文件，1为检测中，2为检测完成；FileAbstract为命中的上下文摘要信息，HitRuleid是命中的规则唯一ID，HitRuleCategoryId是规则分类唯一id，HitLevel是文件的等级，HitRuleDesc是规则的名称，HitContent是具体命中的规则以及词库信息，以及命中的内容。EngineConfigVersion是当前词库版本号
      */
     function __construct()
     {

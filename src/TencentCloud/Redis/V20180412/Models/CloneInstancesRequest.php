@@ -71,6 +71,9 @@ use TencentCloud\Common\AbstractModel;
 
  * @method void setCloneTime(string $CloneTime) 设置克隆指定恢复数据的时间。
 仅支持已开通秒级备份的实例
+
+ * @method boolean getEncryptPassword() 获取是否加密密码
+ * @method void setEncryptPassword(boolean $EncryptPassword) 设置是否加密密码
  */
 class CloneInstancesRequest extends AbstractModel
 {
@@ -181,6 +184,11 @@ class CloneInstancesRequest extends AbstractModel
     public $CloneTime;
 
     /**
+     * @var boolean 是否加密密码
+     */
+    public $EncryptPassword;
+
+    /**
      * @param string $InstanceId 指定待克隆的源实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
      * @param integer $GoodsNum 单次克隆实例的数量。
 - 包年包月每次购买最大数量为100。
@@ -206,6 +214,8 @@ class CloneInstancesRequest extends AbstractModel
      * @param array $AlarmPolicyList 指定克隆实例的告警策略 ID。请登录[腾讯云可观测平台控制台](https://console.cloud.tencent.com/monitor/alarm2/policy)，在 <b>告警管理</b> > <b>策略管理</b>页面获取策略 ID 信息。
      * @param string $CloneTime 克隆指定恢复数据的时间。
 仅支持已开通秒级备份的实例
+
+     * @param boolean $EncryptPassword 是否加密密码
      */
     function __construct()
     {
@@ -308,6 +318,10 @@ class CloneInstancesRequest extends AbstractModel
 
         if (array_key_exists("CloneTime",$param) and $param["CloneTime"] !== null) {
             $this->CloneTime = $param["CloneTime"];
+        }
+
+        if (array_key_exists("EncryptPassword",$param) and $param["EncryptPassword"] !== null) {
+            $this->EncryptPassword = $param["EncryptPassword"];
         }
     }
 }

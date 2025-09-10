@@ -22,32 +22,38 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
- * @method string getAccountName() 获取子账号名称，如果要修改主账号，填 root。
- * @method void setAccountName(string $AccountName) 设置子账号名称，如果要修改主账号，填 root。
- * @method string getAccountPassword() 获取子账号密码。
- * @method void setAccountPassword(string $AccountPassword) 设置子账号密码。
- * @method string getRemark() 获取子账号描述信息
- * @method void setRemark(string $Remark) 设置子账号描述信息
- * @method array getReadonlyPolicy() 获取账号读写路由策略。
-- master：表示主节点。
-- replication：表示从节点。
- * @method void setReadonlyPolicy(array $ReadonlyPolicy) 设置账号读写路由策略。
-- master：表示主节点。
-- replication：表示从节点。
- * @method string getPrivilege() 获取子账号读写策略。
+ * @method string getAccountName() 获取指定需修改的账号。
+- root：指在创建 Redis 数据库实例时自动生成的账号。用户无法修改其读写权限，仅可修改其请求路由策略。
+- 自定义的账号：用户在实例创建成功后手动创建的账号。用户可以随时修改其读写权限与请求路由策略。
+ * @method void setAccountName(string $AccountName) 设置指定需修改的账号。
+- root：指在创建 Redis 数据库实例时自动生成的账号。用户无法修改其读写权限，仅可修改其请求路由策略。
+- 自定义的账号：用户在实例创建成功后手动创建的账号。用户可以随时修改其读写权限与请求路由策略。
+ * @method string getAccountPassword() 获取指定所修改账号访问的密码。
+ * @method void setAccountPassword(string $AccountPassword) 设置指定所修改账号访问的密码。
+ * @method string getRemark() 获取账号描述信息
+ * @method void setRemark(string $Remark) 设置账号描述信息
+ * @method array getReadonlyPolicy() 获取指定所修改账号读写请求路由的策略。
+- master：表示读写请求路由至主节点。
+- replication：表示读写请求路由至从节点。
+ * @method void setReadonlyPolicy(array $ReadonlyPolicy) 设置指定所修改账号读写请求路由的策略。
+- master：表示读写请求路由至主节点。
+- replication：表示读写请求路由至从节点。
+ * @method string getPrivilege() 获取指定所修改账号的读写权限。
 - r：只读。
 - w：只写。
 - rw：读写。
- * @method void setPrivilege(string $Privilege) 设置子账号读写策略。
+ * @method void setPrivilege(string $Privilege) 设置指定所修改账号的读写权限。
 - r：只读。
 - w：只写。
 - rw：读写。
- * @method boolean getNoAuth() 获取指定是否将主账号切换为免密账号。这里只适用于主账号，子账号不可免密。
-- true：将主账号切换为免密账号。
-- false：不切换。
- * @method void setNoAuth(boolean $NoAuth) 设置指定是否将主账号切换为免密账号。这里只适用于主账号，子账号不可免密。
-- true：将主账号切换为免密账号。
-- false：不切换。
+ * @method boolean getNoAuth() 获取指定是否将默认账号（root）设置为免密账号。自定义账号不支持免密访问。
+- true：默认账号（root）设置为免密账号。
+- false：默认账号（root）不设置为免密账号。
+ * @method void setNoAuth(boolean $NoAuth) 设置指定是否将默认账号（root）设置为免密账号。自定义账号不支持免密访问。
+- true：默认账号（root）设置为免密账号。
+- false：默认账号（root）不设置为免密账号。
+ * @method boolean getEncryptPassword() 获取指定所修改的账号是否加密密码
+ * @method void setEncryptPassword(boolean $EncryptPassword) 设置指定所修改的账号是否加密密码
  */
 class ModifyInstanceAccountRequest extends AbstractModel
 {
@@ -57,29 +63,31 @@ class ModifyInstanceAccountRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 子账号名称，如果要修改主账号，填 root。
+     * @var string 指定需修改的账号。
+- root：指在创建 Redis 数据库实例时自动生成的账号。用户无法修改其读写权限，仅可修改其请求路由策略。
+- 自定义的账号：用户在实例创建成功后手动创建的账号。用户可以随时修改其读写权限与请求路由策略。
      */
     public $AccountName;
 
     /**
-     * @var string 子账号密码。
+     * @var string 指定所修改账号访问的密码。
      */
     public $AccountPassword;
 
     /**
-     * @var string 子账号描述信息
+     * @var string 账号描述信息
      */
     public $Remark;
 
     /**
-     * @var array 账号读写路由策略。
-- master：表示主节点。
-- replication：表示从节点。
+     * @var array 指定所修改账号读写请求路由的策略。
+- master：表示读写请求路由至主节点。
+- replication：表示读写请求路由至从节点。
      */
     public $ReadonlyPolicy;
 
     /**
-     * @var string 子账号读写策略。
+     * @var string 指定所修改账号的读写权限。
 - r：只读。
 - w：只写。
 - rw：读写。
@@ -87,27 +95,35 @@ class ModifyInstanceAccountRequest extends AbstractModel
     public $Privilege;
 
     /**
-     * @var boolean 指定是否将主账号切换为免密账号。这里只适用于主账号，子账号不可免密。
-- true：将主账号切换为免密账号。
-- false：不切换。
+     * @var boolean 指定是否将默认账号（root）设置为免密账号。自定义账号不支持免密访问。
+- true：默认账号（root）设置为免密账号。
+- false：默认账号（root）不设置为免密账号。
      */
     public $NoAuth;
 
     /**
+     * @var boolean 指定所修改的账号是否加密密码
+     */
+    public $EncryptPassword;
+
+    /**
      * @param string $InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
-     * @param string $AccountName 子账号名称，如果要修改主账号，填 root。
-     * @param string $AccountPassword 子账号密码。
-     * @param string $Remark 子账号描述信息
-     * @param array $ReadonlyPolicy 账号读写路由策略。
-- master：表示主节点。
-- replication：表示从节点。
-     * @param string $Privilege 子账号读写策略。
+     * @param string $AccountName 指定需修改的账号。
+- root：指在创建 Redis 数据库实例时自动生成的账号。用户无法修改其读写权限，仅可修改其请求路由策略。
+- 自定义的账号：用户在实例创建成功后手动创建的账号。用户可以随时修改其读写权限与请求路由策略。
+     * @param string $AccountPassword 指定所修改账号访问的密码。
+     * @param string $Remark 账号描述信息
+     * @param array $ReadonlyPolicy 指定所修改账号读写请求路由的策略。
+- master：表示读写请求路由至主节点。
+- replication：表示读写请求路由至从节点。
+     * @param string $Privilege 指定所修改账号的读写权限。
 - r：只读。
 - w：只写。
 - rw：读写。
-     * @param boolean $NoAuth 指定是否将主账号切换为免密账号。这里只适用于主账号，子账号不可免密。
-- true：将主账号切换为免密账号。
-- false：不切换。
+     * @param boolean $NoAuth 指定是否将默认账号（root）设置为免密账号。自定义账号不支持免密访问。
+- true：默认账号（root）设置为免密账号。
+- false：默认账号（root）不设置为免密账号。
+     * @param boolean $EncryptPassword 指定所修改的账号是否加密密码
      */
     function __construct()
     {
@@ -148,6 +164,10 @@ class ModifyInstanceAccountRequest extends AbstractModel
 
         if (array_key_exists("NoAuth",$param) and $param["NoAuth"] !== null) {
             $this->NoAuth = $param["NoAuth"];
+        }
+
+        if (array_key_exists("EncryptPassword",$param) and $param["EncryptPassword"] !== null) {
+            $this->EncryptPassword = $param["EncryptPassword"];
         }
     }
 }

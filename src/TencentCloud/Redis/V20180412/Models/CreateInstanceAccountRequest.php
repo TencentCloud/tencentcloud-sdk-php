@@ -45,13 +45,15 @@ use TencentCloud\Common\AbstractModel;
 - master：主节点
 - replication：副本节点
  * @method string getPrivilege() 获取账户读写权限，支持选择只读与读写权限。
-- r：只读
-- rw: 读写权限
+- r：只读。
+- rw: 读写。
  * @method void setPrivilege(string $Privilege) 设置账户读写权限，支持选择只读与读写权限。
-- r：只读
-- rw: 读写权限
- * @method string getRemark() 获取子账号描述信息，长度[0,64] 字节，支持中文。
- * @method void setRemark(string $Remark) 设置子账号描述信息，长度[0,64] 字节，支持中文。
+- r：只读。
+- rw: 读写。
+ * @method string getRemark() 获取账号备注描述信息，长度为[0,64] 字节，支持中文。
+ * @method void setRemark(string $Remark) 设置账号备注描述信息，长度为[0,64] 字节，支持中文。
+ * @method boolean getEncryptPassword() 获取是否加密密码
+ * @method void setEncryptPassword(boolean $EncryptPassword) 设置是否加密密码
  */
 class CreateInstanceAccountRequest extends AbstractModel
 {
@@ -85,15 +87,20 @@ class CreateInstanceAccountRequest extends AbstractModel
 
     /**
      * @var string 账户读写权限，支持选择只读与读写权限。
-- r：只读
-- rw: 读写权限
+- r：只读。
+- rw: 读写。
      */
     public $Privilege;
 
     /**
-     * @var string 子账号描述信息，长度[0,64] 字节，支持中文。
+     * @var string 账号备注描述信息，长度为[0,64] 字节，支持中文。
      */
     public $Remark;
+
+    /**
+     * @var boolean 是否加密密码
+     */
+    public $EncryptPassword;
 
     /**
      * @param string $InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis)在实例列表复制实例 ID。
@@ -109,9 +116,10 @@ class CreateInstanceAccountRequest extends AbstractModel
 - master：主节点
 - replication：副本节点
      * @param string $Privilege 账户读写权限，支持选择只读与读写权限。
-- r：只读
-- rw: 读写权限
-     * @param string $Remark 子账号描述信息，长度[0,64] 字节，支持中文。
+- r：只读。
+- rw: 读写。
+     * @param string $Remark 账号备注描述信息，长度为[0,64] 字节，支持中文。
+     * @param boolean $EncryptPassword 是否加密密码
      */
     function __construct()
     {
@@ -148,6 +156,10 @@ class CreateInstanceAccountRequest extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("EncryptPassword",$param) and $param["EncryptPassword"] !== null) {
+            $this->EncryptPassword = $param["EncryptPassword"];
         }
     }
 }

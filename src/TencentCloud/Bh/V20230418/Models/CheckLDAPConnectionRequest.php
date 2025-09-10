@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIpBackup(string $IpBackup) 设置备用服务器地址
  * @method string getDomainId() 获取网络域id
  * @method void setDomainId(string $DomainId) 设置网络域id
+ * @method string getAttributeUserName() 获取用户名称映射属性
+ * @method void setAttributeUserName(string $AttributeUserName) 设置用户名称映射属性
  */
 class CheckLDAPConnectionRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class CheckLDAPConnectionRequest extends AbstractModel
     public $DomainId;
 
     /**
+     * @var string 用户名称映射属性
+     */
+    public $AttributeUserName;
+
+    /**
      * @param boolean $Enable 是否开启LDAP认证，必须为true
      * @param string $Ip 服务器地址
      * @param integer $Port 服务端口
@@ -96,6 +103,7 @@ class CheckLDAPConnectionRequest extends AbstractModel
      * @param string $AdminPassword 管理员密码
      * @param string $IpBackup 备用服务器地址
      * @param string $DomainId 网络域id
+     * @param string $AttributeUserName 用户名称映射属性
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class CheckLDAPConnectionRequest extends AbstractModel
 
         if (array_key_exists("DomainId",$param) and $param["DomainId"] !== null) {
             $this->DomainId = $param["DomainId"];
+        }
+
+        if (array_key_exists("AttributeUserName",$param) and $param["AttributeUserName"] !== null) {
+            $this->AttributeUserName = $param["AttributeUserName"];
         }
     }
 }

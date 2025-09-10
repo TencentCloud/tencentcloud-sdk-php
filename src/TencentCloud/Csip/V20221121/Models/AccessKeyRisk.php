@@ -74,6 +74,8 @@ use TencentCloud\Common\AbstractModel;
 1表示 检测中
  * @method integer getAppID() 获取所属appid
  * @method void setAppID(integer $AppID) 设置所属appid
+ * @method string getQueryParam() 获取对应风险的查询参数
+ * @method void setQueryParam(string $QueryParam) 设置对应风险的查询参数
  */
 class AccessKeyRisk extends AbstractModel
 {
@@ -185,6 +187,11 @@ class AccessKeyRisk extends AbstractModel
     public $AppID;
 
     /**
+     * @var string 对应风险的查询参数
+     */
+    public $QueryParam;
+
+    /**
      * @param string $Name 风险名称
      * @param integer $Level 风险等级
 0-无效 1-提示 2-低危 3-中危 4-高危 5-严重
@@ -212,6 +219,7 @@ class AccessKeyRisk extends AbstractModel
 0表示 已检测
 1表示 检测中
      * @param integer $AppID 所属appid
+     * @param string $QueryParam 对应风险的查询参数
      */
     function __construct()
     {
@@ -304,6 +312,10 @@ class AccessKeyRisk extends AbstractModel
 
         if (array_key_exists("AppID",$param) and $param["AppID"] !== null) {
             $this->AppID = $param["AppID"];
+        }
+
+        if (array_key_exists("QueryParam",$param) and $param["QueryParam"] !== null) {
+            $this->QueryParam = $param["QueryParam"];
         }
     }
 }

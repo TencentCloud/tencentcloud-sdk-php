@@ -80,6 +80,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsReadOnlyUlogBackupExpireDay(integer $IsReadOnlyUlogBackupExpireDay) 设置集群Ulog备份文件过期策略是否为只读， 0： UlogBackupExpire是只读，不可修改， 1： UlogBackupExpire可以修改（当前业务存在Svrid第二段等于clusterid的机器）
  * @method integer getRestProxyStatus() 获取restproxy状态
  * @method void setRestProxyStatus(integer $RestProxyStatus) 设置restproxy状态
+ * @method integer getShardTotalNum() 获取该集群shard总数
+ * @method void setShardTotalNum(integer $ShardTotalNum) 设置该集群shard总数
+ * @method integer getShardUsedNum() 获取已使用的shard总数
+ * @method void setShardUsedNum(integer $ShardUsedNum) 设置已使用的shard总数
  */
 class ClusterInfo extends AbstractModel
 {
@@ -234,6 +238,16 @@ class ClusterInfo extends AbstractModel
     public $RestProxyStatus;
 
     /**
+     * @var integer 该集群shard总数
+     */
+    public $ShardTotalNum;
+
+    /**
+     * @var integer 已使用的shard总数
+     */
+    public $ShardUsedNum;
+
+    /**
      * @param string $ClusterName 集群名称
      * @param string $ClusterId 集群ID
      * @param string $Region 集群所在地域
@@ -264,6 +278,8 @@ class ClusterInfo extends AbstractModel
      * @param integer $UlogBackupExpireDay 集群Ulog备份文件多少天后过期删除
      * @param integer $IsReadOnlyUlogBackupExpireDay 集群Ulog备份文件过期策略是否为只读， 0： UlogBackupExpire是只读，不可修改， 1： UlogBackupExpire可以修改（当前业务存在Svrid第二段等于clusterid的机器）
      * @param integer $RestProxyStatus restproxy状态
+     * @param integer $ShardTotalNum 该集群shard总数
+     * @param integer $ShardUsedNum 已使用的shard总数
      */
     function __construct()
     {
@@ -407,6 +423,14 @@ class ClusterInfo extends AbstractModel
 
         if (array_key_exists("RestProxyStatus",$param) and $param["RestProxyStatus"] !== null) {
             $this->RestProxyStatus = $param["RestProxyStatus"];
+        }
+
+        if (array_key_exists("ShardTotalNum",$param) and $param["ShardTotalNum"] !== null) {
+            $this->ShardTotalNum = $param["ShardTotalNum"];
+        }
+
+        if (array_key_exists("ShardUsedNum",$param) and $param["ShardUsedNum"] !== null) {
+            $this->ShardUsedNum = $param["ShardUsedNum"];
         }
     }
 }

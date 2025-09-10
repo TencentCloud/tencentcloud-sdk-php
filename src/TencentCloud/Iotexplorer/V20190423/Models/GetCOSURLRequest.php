@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFirmwareVersion(string $FirmwareVersion) 设置固件版本
  * @method integer getFileSize() 获取文件大小
  * @method void setFileSize(integer $FileSize) 设置文件大小
+ * @method string getFwType() 获取模块类型or固件类型
+ * @method void setFwType(string $FwType) 设置模块类型or固件类型
  */
 class GetCOSURLRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class GetCOSURLRequest extends AbstractModel
     public $FileSize;
 
     /**
+     * @var string 模块类型or固件类型
+     */
+    public $FwType;
+
+    /**
      * @param string $ProductID 产品ID
      * @param string $FirmwareVersion 固件版本
      * @param integer $FileSize 文件大小
+     * @param string $FwType 模块类型or固件类型
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class GetCOSURLRequest extends AbstractModel
 
         if (array_key_exists("FileSize",$param) and $param["FileSize"] !== null) {
             $this->FileSize = $param["FileSize"];
+        }
+
+        if (array_key_exists("FwType",$param) and $param["FwType"] !== null) {
+            $this->FwType = $param["FwType"];
         }
     }
 }

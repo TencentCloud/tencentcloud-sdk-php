@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductID(string $ProductID) 设置产品 ID。
  * @method string getDeviceName() 获取设备名称。
  * @method void setDeviceName(string $DeviceName) 设置设备名称。
+ * @method string getFwType() 获取固件类型
+ * @method void setFwType(string $FwType) 设置固件类型
  */
 class PublishFirmwareUpdateMessageRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class PublishFirmwareUpdateMessageRequest extends AbstractModel
     public $DeviceName;
 
     /**
+     * @var string 固件类型
+     */
+    public $FwType;
+
+    /**
      * @param string $ProductID 产品 ID。
      * @param string $DeviceName 设备名称。
+     * @param string $FwType 固件类型
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class PublishFirmwareUpdateMessageRequest extends AbstractModel
 
         if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
             $this->DeviceName = $param["DeviceName"];
+        }
+
+        if (array_key_exists("FwType",$param) and $param["FwType"] !== null) {
+            $this->FwType = $param["FwType"];
         }
     }
 }

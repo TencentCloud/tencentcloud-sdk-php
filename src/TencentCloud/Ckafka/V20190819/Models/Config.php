@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 高级配置对象
  *
- * @method integer getRetention() 获取消息保留时间
- * @method void setRetention(integer $Retention) 设置消息保留时间
+ * @method integer getRetention() 获取消息保留时间，单位ms。
+ * @method void setRetention(integer $Retention) 设置消息保留时间，单位ms。
  * @method integer getMinInsyncReplicas() 获取最小同步复制数
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setMinInsyncReplicas(integer $MinInsyncReplicas) 设置最小同步复制数
@@ -32,35 +32,35 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
  * @method void setCleanUpPolicy(string $CleanUpPolicy) 设置日志清理模式，默认 delete。
 delete：日志按保存时间删除；compact：日志按 key 压缩；compact, delete：日志按 key 压缩且会保存时间删除。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getSegmentMs() 获取Segment 分片滚动的时长
+ * @method integer getSegmentMs() 获取Segment 分片滚动的时长，单位ms。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSegmentMs(integer $SegmentMs) 设置Segment 分片滚动的时长
+ * @method void setSegmentMs(integer $SegmentMs) 设置Segment 分片滚动的时长，单位ms。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getUncleanLeaderElectionEnable() 获取0表示 false。 1表示 true。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUncleanLeaderElectionEnable(integer $UncleanLeaderElectionEnable) 设置0表示 false。 1表示 true。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getSegmentBytes() 获取Segment 分片滚动的字节数
+ * @method integer getSegmentBytes() 获取Segment 分片滚动的字节数，单位bytes
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSegmentBytes(integer $SegmentBytes) 设置Segment 分片滚动的字节数
+ * @method void setSegmentBytes(integer $SegmentBytes) 设置Segment 分片滚动的字节数，单位bytes
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getMaxMessageBytes() 获取最大消息字节数
+ * @method integer getMaxMessageBytes() 获取最大消息字节数，单位bytes
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setMaxMessageBytes(integer $MaxMessageBytes) 设置最大消息字节数
+ * @method void setMaxMessageBytes(integer $MaxMessageBytes) 设置最大消息字节数，单位bytes
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getRetentionBytes() 获取消息保留文件大小
+ * @method integer getRetentionBytes() 获取消息保留文件大小，单位Bytes
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRetentionBytes(integer $RetentionBytes) 设置消息保留文件大小
+ * @method void setRetentionBytes(integer $RetentionBytes) 设置消息保留文件大小，单位Bytes
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getLogMsgTimestampType() 获取消息保存的时间类型
+ * @method string getLogMsgTimestampType() 获取消息保存的时间类型，CreateTime表示生产者创建这条消息的时间;LogAppendTime表示broker接收到消息的时间。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setLogMsgTimestampType(string $LogMsgTimestampType) 设置消息保存的时间类型
+ * @method void setLogMsgTimestampType(string $LogMsgTimestampType) 设置消息保存的时间类型，CreateTime表示生产者创建这条消息的时间;LogAppendTime表示broker接收到消息的时间。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class Config extends AbstractModel
 {
     /**
-     * @var integer 消息保留时间
+     * @var integer 消息保留时间，单位ms。
      */
     public $Retention;
 
@@ -78,7 +78,7 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
     public $CleanUpPolicy;
 
     /**
-     * @var integer Segment 分片滚动的时长
+     * @var integer Segment 分片滚动的时长，单位ms。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SegmentMs;
@@ -90,47 +90,47 @@ delete：日志按保存时间删除；compact：日志按 key 压缩；compact,
     public $UncleanLeaderElectionEnable;
 
     /**
-     * @var integer Segment 分片滚动的字节数
+     * @var integer Segment 分片滚动的字节数，单位bytes
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SegmentBytes;
 
     /**
-     * @var integer 最大消息字节数
+     * @var integer 最大消息字节数，单位bytes
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $MaxMessageBytes;
 
     /**
-     * @var integer 消息保留文件大小
+     * @var integer 消息保留文件大小，单位Bytes
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RetentionBytes;
 
     /**
-     * @var string 消息保存的时间类型
+     * @var string 消息保存的时间类型，CreateTime表示生产者创建这条消息的时间;LogAppendTime表示broker接收到消息的时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $LogMsgTimestampType;
 
     /**
-     * @param integer $Retention 消息保留时间
+     * @param integer $Retention 消息保留时间，单位ms。
      * @param integer $MinInsyncReplicas 最小同步复制数
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $CleanUpPolicy 日志清理模式，默认 delete。
 delete：日志按保存时间删除；compact：日志按 key 压缩；compact, delete：日志按 key 压缩且会保存时间删除。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $SegmentMs Segment 分片滚动的时长
+     * @param integer $SegmentMs Segment 分片滚动的时长，单位ms。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $UncleanLeaderElectionEnable 0表示 false。 1表示 true。
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $SegmentBytes Segment 分片滚动的字节数
+     * @param integer $SegmentBytes Segment 分片滚动的字节数，单位bytes
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $MaxMessageBytes 最大消息字节数
+     * @param integer $MaxMessageBytes 最大消息字节数，单位bytes
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $RetentionBytes 消息保留文件大小
+     * @param integer $RetentionBytes 消息保留文件大小，单位Bytes
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $LogMsgTimestampType 消息保存的时间类型
+     * @param string $LogMsgTimestampType 消息保存的时间类型，CreateTime表示生产者创建这条消息的时间;LogAppendTime表示broker接收到消息的时间。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

@@ -107,7 +107,7 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\ModifyConnectionConfigResponse ModifyConnectionConfig(Models\ModifyConnectionConfigRequest $req) 本接口（ModifyConnectionConfig）用于修改实例的连接配置，包括带宽和最大连接数。
  * @method Models\ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroups(Models\ModifyDBInstanceSecurityGroupsRequest $req) 本接口（ModifyDBInstanceSecurityGroups）用于对实例原有的安全组列表进行修改。
  * @method Models\ModifyInstanceResponse ModifyInstance(Models\ModifyInstanceRequest $req) 本接口（ModifyInstance）用于修改实例相关信息。
- * @method Models\ModifyInstanceAccountResponse ModifyInstanceAccount(Models\ModifyInstanceAccountRequest $req) 本接口（ModifyInstanceAccount）用于修改实例子账号。
+ * @method Models\ModifyInstanceAccountResponse ModifyInstanceAccount(Models\ModifyInstanceAccountRequest $req) 本接口（ModifyInstanceAccount）用于修改实例账号。
  * @method Models\ModifyInstanceAvailabilityZonesResponse ModifyInstanceAvailabilityZones(Models\ModifyInstanceAvailabilityZonesRequest $req) 本接口（ModifyInstanceAvailabilityZones）用于变更实例可用区
  * @method Models\ModifyInstanceBackupModeResponse ModifyInstanceBackupMode(Models\ModifyInstanceBackupModeRequest $req) 修改实例的备份模式
  * @method Models\ModifyInstanceEventResponse ModifyInstanceEvent(Models\ModifyInstanceEventRequest $req) 本接口（ModifyInstanceEvent）用于修改实例的运维事件的执行计划。

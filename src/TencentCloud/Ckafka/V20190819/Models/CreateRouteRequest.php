@@ -28,8 +28,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置vpc网络Id,当vipType为3时必填
  * @method string getSubnetId() 获取vpc子网id,当vipType为3时必填
  * @method void setSubnetId(string $SubnetId) 设置vpc子网id,当vipType为3时必填
- * @method integer getAccessType() 获取访问类型：0-plaintext；1-sasl_plaintext；2-ssl；3-sasl_ssl,默认为0
- * @method void setAccessType(integer $AccessType) 设置访问类型：0-plaintext；1-sasl_plaintext；2-ssl；3-sasl_ssl,默认为0
+ * @method integer getAccessType() 获取访问类型：0-plaintext；1-sasl_plaintext；3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512  默认为0
+vipType=3,支持 0,1,3,4,5
+vipType=7,支持0,1,3
+vipType=1,支持1,3
+
+ * @method void setAccessType(integer $AccessType) 设置访问类型：0-plaintext；1-sasl_plaintext；3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512  默认为0
+vipType=3,支持 0,1,3,4,5
+vipType=7,支持0,1,3
+vipType=1,支持1,3
+
  * @method integer getAuthFlag() 获取是否需要权限管理,该字段已废弃
  * @method void setAuthFlag(integer $AuthFlag) 设置是否需要权限管理,该字段已废弃
  * @method integer getCallerAppid() 获取调用方appId
@@ -62,7 +70,11 @@ class CreateRouteRequest extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var integer 访问类型：0-plaintext；1-sasl_plaintext；2-ssl；3-sasl_ssl,默认为0
+     * @var integer 访问类型：0-plaintext；1-sasl_plaintext；3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512  默认为0
+vipType=3,支持 0,1,3,4,5
+vipType=7,支持0,1,3
+vipType=1,支持1,3
+
      */
     public $AccessType;
 
@@ -91,7 +103,11 @@ class CreateRouteRequest extends AbstractModel
      * @param integer $VipType 路由网络类型(3:vpc路由;7:内部支撑路由;1:公网路由)
      * @param string $VpcId vpc网络Id,当vipType为3时必填
      * @param string $SubnetId vpc子网id,当vipType为3时必填
-     * @param integer $AccessType 访问类型：0-plaintext；1-sasl_plaintext；2-ssl；3-sasl_ssl,默认为0
+     * @param integer $AccessType 访问类型：0-plaintext；1-sasl_plaintext；3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512  默认为0
+vipType=3,支持 0,1,3,4,5
+vipType=7,支持0,1,3
+vipType=1,支持1,3
+
      * @param integer $AuthFlag 是否需要权限管理,该字段已废弃
      * @param integer $CallerAppid 调用方appId
      * @param integer $PublicNetwork 公网带宽,公网路由必传,且必选时3的倍数,无默认值

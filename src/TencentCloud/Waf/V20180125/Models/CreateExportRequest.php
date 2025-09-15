@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopicId(string $TopicId) 设置日志主题ID，可以通过DescribeTopics接口获取,访问日志主题ID和攻击日志主题ID方式不同，注意DescribeTopics接口使用方法
  * @method integer getCount() 获取日志导出数量,  最大值5000万
  * @method void setCount(integer $Count) 设置日志导出数量,  最大值5000万
- * @method string getQuery() 获取日志导出检索语句，不支持<a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>
- * @method void setQuery(string $Query) 设置日志导出检索语句，不支持<a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>
+ * @method string getQuery() 获取日志导出检索语句，需要进行base64编码,不支持<a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>
+ * @method void setQuery(string $Query) 设置日志导出检索语句，需要进行base64编码,不支持<a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>
  * @method integer getFrom() 获取日志导出起始时间，毫秒时间戳
  * @method void setFrom(integer $From) 设置日志导出起始时间，毫秒时间戳
  * @method integer getTo() 获取日志导出结束时间，毫秒时间戳
@@ -54,7 +54,7 @@ class CreateExportRequest extends AbstractModel
     public $Count;
 
     /**
-     * @var string 日志导出检索语句，不支持<a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>
+     * @var string 日志导出检索语句，需要进行base64编码,不支持<a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>
      */
     public $Query;
 
@@ -92,7 +92,7 @@ class CreateExportRequest extends AbstractModel
     /**
      * @param string $TopicId 日志主题ID，可以通过DescribeTopics接口获取,访问日志主题ID和攻击日志主题ID方式不同，注意DescribeTopics接口使用方法
      * @param integer $Count 日志导出数量,  最大值5000万
-     * @param string $Query 日志导出检索语句，不支持<a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>
+     * @param string $Query 日志导出检索语句，需要进行base64编码,不支持<a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>
      * @param integer $From 日志导出起始时间，毫秒时间戳
      * @param integer $To 日志导出结束时间，毫秒时间戳
      * @param string $Order 日志导出时间排序。desc，asc，默认为desc

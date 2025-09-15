@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTopics() 获取需要同步的MQTT Topic列表, CSV格式
  * @method void setTopics(string $Topics) 设置需要同步的MQTT Topic列表, CSV格式
- * @method boolean getCleanSession() 获取MQTT clean-session
- * @method void setCleanSession(boolean $CleanSession) 设置MQTT clean-session
+ * @method boolean getCleanSession() 获取用于控制会话的持久性。cleanSession 为true时，连接时会创建一个全新的会话。 cleanSession = false时，连接时会恢复之前的会话。
+ * @method void setCleanSession(boolean $CleanSession) 设置用于控制会话的持久性。cleanSession 为true时，连接时会创建一个全新的会话。 cleanSession = false时，连接时会恢复之前的会话。
  * @method string getResource() 获取MQTT instance-id
  * @method void setResource(string $Resource) 设置MQTT instance-id
  * @method string getIp() 获取MQTT实例VIP
@@ -53,7 +53,7 @@ class MqttParam extends AbstractModel
     public $Topics;
 
     /**
-     * @var boolean MQTT clean-session
+     * @var boolean 用于控制会话的持久性。cleanSession 为true时，连接时会创建一个全新的会话。 cleanSession = false时，连接时会恢复之前的会话。
      */
     public $CleanSession;
 
@@ -109,7 +109,7 @@ class MqttParam extends AbstractModel
 
     /**
      * @param string $Topics 需要同步的MQTT Topic列表, CSV格式
-     * @param boolean $CleanSession MQTT clean-session
+     * @param boolean $CleanSession 用于控制会话的持久性。cleanSession 为true时，连接时会创建一个全新的会话。 cleanSession = false时，连接时会恢复之前的会话。
      * @param string $Resource MQTT instance-id
      * @param string $Ip MQTT实例VIP
      * @param integer $Port MQTT VIP 端口

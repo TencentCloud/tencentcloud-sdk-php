@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWechatFlag(integer $WechatFlag) 设置是否允许微信接收通知
  * @method integer getUin() 获取账号uin
  * @method void setUin(integer $Uin) 设置账号uin
+ * @method string getCountryCode() 获取国家代码
+ * @method void setCountryCode(string $CountryCode) 设置国家代码
  */
 class Receiver extends AbstractModel
 {
@@ -97,6 +99,11 @@ class Receiver extends AbstractModel
     public $Uin;
 
     /**
+     * @var string 国家代码
+     */
+    public $CountryCode;
+
+    /**
      * @param integer $Uid id
      * @param string $Name 名字
      * @param string $Remark 备注
@@ -108,6 +115,7 @@ class Receiver extends AbstractModel
      * @param integer $IsReceiverOwner 是否主联系人
      * @param integer $WechatFlag 是否允许微信接收通知
      * @param integer $Uin 账号uin
+     * @param string $CountryCode 国家代码
      */
     function __construct()
     {
@@ -160,6 +168,10 @@ class Receiver extends AbstractModel
 
         if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
             $this->Uin = $param["Uin"];
+        }
+
+        if (array_key_exists("CountryCode",$param) and $param["CountryCode"] !== null) {
+            $this->CountryCode = $param["CountryCode"];
         }
     }
 }

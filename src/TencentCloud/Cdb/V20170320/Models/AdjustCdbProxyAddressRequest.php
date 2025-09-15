@@ -54,6 +54,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoLoadBalance(boolean $AutoLoadBalance) 设置是否开启自适应负载均衡。默认关闭。
  * @method string getAccessMode() 获取访问模式：nearby - 就近访问，balance - 均衡分配，默认就近访问。
  * @method void setAccessMode(string $AccessMode) 设置访问模式：nearby - 就近访问，balance - 均衡分配，默认就近访问。
+ * @method string getApNodeAsRoNode() 获取是否将libra节点当作普通RO节点
+ * @method void setApNodeAsRoNode(string $ApNodeAsRoNode) 设置是否将libra节点当作普通RO节点
+ * @method string getApQueryToOtherNode() 获取libra节点故障，是否转发给其他节点
+ * @method void setApQueryToOtherNode(string $ApQueryToOtherNode) 设置libra节点故障，是否转发给其他节点
  */
 class AdjustCdbProxyAddressRequest extends AbstractModel
 {
@@ -131,6 +135,16 @@ class AdjustCdbProxyAddressRequest extends AbstractModel
     public $AccessMode;
 
     /**
+     * @var string 是否将libra节点当作普通RO节点
+     */
+    public $ApNodeAsRoNode;
+
+    /**
+     * @var string libra节点故障，是否转发给其他节点
+     */
+    public $ApQueryToOtherNode;
+
+    /**
      * @param string $ProxyGroupId 代理组 ID。可通过 [DescribeCdbProxyInfo](https://cloud.tencent.com/document/api/236/90585) 接口获取。
      * @param string $WeightMode 权重分配模式，
 系统自动分配："system"， 自定义："custom"
@@ -148,6 +162,8 @@ class AdjustCdbProxyAddressRequest extends AbstractModel
      * @param array $ProxyAllocation 读写权重分配。如果 WeightMode 传的是 system ，则传入的权重不生效，由系统分配默认权重。
      * @param boolean $AutoLoadBalance 是否开启自适应负载均衡。默认关闭。
      * @param string $AccessMode 访问模式：nearby - 就近访问，balance - 均衡分配，默认就近访问。
+     * @param string $ApNodeAsRoNode 是否将libra节点当作普通RO节点
+     * @param string $ApQueryToOtherNode libra节点故障，是否转发给其他节点
      */
     function __construct()
     {
@@ -221,6 +237,14 @@ class AdjustCdbProxyAddressRequest extends AbstractModel
 
         if (array_key_exists("AccessMode",$param) and $param["AccessMode"] !== null) {
             $this->AccessMode = $param["AccessMode"];
+        }
+
+        if (array_key_exists("ApNodeAsRoNode",$param) and $param["ApNodeAsRoNode"] !== null) {
+            $this->ApNodeAsRoNode = $param["ApNodeAsRoNode"];
+        }
+
+        if (array_key_exists("ApQueryToOtherNode",$param) and $param["ApQueryToOtherNode"] !== null) {
+            $this->ApQueryToOtherNode = $param["ApQueryToOtherNode"];
         }
     }
 }

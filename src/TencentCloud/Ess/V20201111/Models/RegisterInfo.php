@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getUnifiedSocialCreditCode() 获取<font color="red">字段不再使用</font>，社会统一信用代码
  * @method void setUnifiedSocialCreditCode(string $UnifiedSocialCreditCode) 设置<font color="red">字段不再使用</font>，社会统一信用代码
+ * @method string getOrganizationAddress() 获取组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。
+ * @method void setOrganizationAddress(string $OrganizationAddress) 设置组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。
  * @method array getAuthorizationTypes() 获取指定企业认证的授权方式 支持多选:
 
 <ul>
@@ -73,6 +75,11 @@ class RegisterInfo extends AbstractModel
     public $UnifiedSocialCreditCode;
 
     /**
+     * @var string 组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。
+     */
+    public $OrganizationAddress;
+
+    /**
      * @var array 指定企业认证的授权方式 支持多选:
 
 <ul>
@@ -98,6 +105,7 @@ class RegisterInfo extends AbstractModel
      * @param string $Uscc 社会统一信用代码
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $UnifiedSocialCreditCode <font color="red">字段不再使用</font>，社会统一信用代码
+     * @param string $OrganizationAddress 组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。
      * @param array $AuthorizationTypes 指定企业认证的授权方式 支持多选:
 
 <ul>
@@ -134,6 +142,10 @@ class RegisterInfo extends AbstractModel
 
         if (array_key_exists("UnifiedSocialCreditCode",$param) and $param["UnifiedSocialCreditCode"] !== null) {
             $this->UnifiedSocialCreditCode = $param["UnifiedSocialCreditCode"];
+        }
+
+        if (array_key_exists("OrganizationAddress",$param) and $param["OrganizationAddress"] !== null) {
+            $this->OrganizationAddress = $param["OrganizationAddress"];
         }
 
         if (array_key_exists("AuthorizationTypes",$param) and $param["AuthorizationTypes"] !== null) {

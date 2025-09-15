@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServerName(string $ServerName) 设置服务名
  * @method string getServerType() 获取服务类型：function | container
  * @method void setServerType(string $ServerType) 设置服务类型：function | container
+ * @method string getVpcId() 获取vpcId
+ * @method void setVpcId(string $VpcId) 设置vpcId
  */
 class DescribeCloudRunServersRequest extends AbstractModel
 {
@@ -65,6 +67,11 @@ class DescribeCloudRunServersRequest extends AbstractModel
     public $ServerType;
 
     /**
+     * @var string vpcId
+     */
+    public $VpcId;
+
+    /**
      * @param string $EnvId 环境Id
      * @param integer $PageSize 默认为9， 最大为30
 不传或传0时 取默认9
@@ -72,6 +79,7 @@ class DescribeCloudRunServersRequest extends AbstractModel
      * @param integer $PageNum 不传或传0时 会默认为1
      * @param string $ServerName 服务名
      * @param string $ServerType 服务类型：function | container
+     * @param string $VpcId vpcId
      */
     function __construct()
     {
@@ -104,6 +112,10 @@ class DescribeCloudRunServersRequest extends AbstractModel
 
         if (array_key_exists("ServerType",$param) and $param["ServerType"] !== null) {
             $this->ServerType = $param["ServerType"];
+        }
+
+        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
+            $this->VpcId = $param["VpcId"];
         }
     }
 }

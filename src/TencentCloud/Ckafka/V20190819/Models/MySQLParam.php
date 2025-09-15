@@ -76,8 +76,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDateTimeZone() 获取datetime 类型字段转换为时间戳的时区
  * @method void setDateTimeZone(string $DateTimeZone) 设置datetime 类型字段转换为时间戳的时区
- * @method boolean getSelfBuilt() 获取自建
- * @method void setSelfBuilt(boolean $SelfBuilt) 设置自建
+ * @method boolean getSelfBuilt() 获取是否为自建集群
+ * @method void setSelfBuilt(boolean $SelfBuilt) 设置是否为自建集群
  */
 class MySQLParam extends AbstractModel
 {
@@ -218,7 +218,7 @@ class MySQLParam extends AbstractModel
     public $DateTimeZone;
 
     /**
-     * @var boolean 自建
+     * @var boolean 是否为自建集群
      */
     public $SelfBuilt;
 
@@ -251,7 +251,7 @@ class MySQLParam extends AbstractModel
      * @param string $SignalTable 信号表
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DateTimeZone datetime 类型字段转换为时间戳的时区
-     * @param boolean $SelfBuilt 自建
+     * @param boolean $SelfBuilt 是否为自建集群
      */
     function __construct()
     {

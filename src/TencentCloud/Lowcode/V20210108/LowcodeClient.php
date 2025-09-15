@@ -29,10 +29,13 @@ use TencentCloud\Lowcode\V20210108\Models as Models;
  * @method Models\DeleteKnowledgeDocumentSetResponse DeleteKnowledgeDocumentSet(Models\DeleteKnowledgeDocumentSetRequest $req) 删除知识库下文档
  * @method Models\DeleteKnowledgeSetResponse DeleteKnowledgeSet(Models\DeleteKnowledgeSetRequest $req) 删除知识库
  * @method Models\DeployAppResponse DeployApp(Models\DeployAppRequest $req) 发布应用
+ * @method Models\DescribeAppsResponse DescribeApps(Models\DescribeAppsRequest $req) 分页获取当前用户的应用列表
  * @method Models\DescribeDataSourceListResponse DescribeDataSourceList(Models\DescribeDataSourceListRequest $req) 获取数据源详情列表
  * @method Models\DescribeKnowledgeDocumentSetDetailResponse DescribeKnowledgeDocumentSetDetail(Models\DescribeKnowledgeDocumentSetDetailRequest $req) 获取知识库下文档详情
  * @method Models\DescribeKnowledgeDocumentSetListResponse DescribeKnowledgeDocumentSetList(Models\DescribeKnowledgeDocumentSetListRequest $req) 查询知识库下文件集合
  * @method Models\DescribeKnowledgeSetListResponse DescribeKnowledgeSetList(Models\DescribeKnowledgeSetListRequest $req) 查询知识库
+ * @method Models\DescribeRelatedUsersResponse DescribeRelatedUsers(Models\DescribeRelatedUsersRequest $req) 获取角色关联的用户列表
+ * @method Models\DescribeResourceRoleListResponse DescribeResourceRoleList(Models\DescribeResourceRoleListRequest $req) 查询资源关联的角色列表
  * @method Models\PutWxAppIdToWeAppResponse PutWxAppIdToWeApp(Models\PutWxAppIdToWeAppRequest $req) 接口提供应用绑定微信ID功能。
  * @method Models\SearchDocListResponse SearchDocList(Models\SearchDocListRequest $req) 知识库文档搜索接口
  * @method Models\UpdateKnowledgeSetResponse UpdateKnowledgeSet(Models\UpdateKnowledgeSetRequest $req) 更新知识库

@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAiQualityControlTask(AiQualityControlTaskInput $AiQualityControlTask) 设置媒体质检类型任务参数。
  * @method SmartSubtitlesTaskInput getSmartSubtitlesTask() 获取智能字幕
  * @method void setSmartSubtitlesTask(SmartSubtitlesTaskInput $SmartSubtitlesTask) 设置智能字幕
+ * @method SmartEraseTaskInput getSmartEraseTask() 获取智能擦除类型任务参数
+ * @method void setSmartEraseTask(SmartEraseTaskInput $SmartEraseTask) 设置智能擦除类型任务参数
  * @method TaskNotifyConfig getTaskNotifyConfig() 获取任务的事件通知信息，不填代表不获取事件通知。
  * @method void setTaskNotifyConfig(TaskNotifyConfig $TaskNotifyConfig) 设置任务的事件通知信息，不填代表不获取事件通知。
  * @method integer getTasksPriority() 获取任务流的优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。
@@ -145,6 +147,11 @@ class ProcessMediaRequest extends AbstractModel
     public $SmartSubtitlesTask;
 
     /**
+     * @var SmartEraseTaskInput 智能擦除类型任务参数
+     */
+    public $SmartEraseTask;
+
+    /**
      * @var TaskNotifyConfig 任务的事件通知信息，不填代表不获取事件通知。
      */
     public $TaskNotifyConfig;
@@ -204,6 +211,7 @@ class ProcessMediaRequest extends AbstractModel
      * @param AiRecognitionTaskInput $AiRecognitionTask 视频内容识别类型任务参数。
      * @param AiQualityControlTaskInput $AiQualityControlTask 媒体质检类型任务参数。
      * @param SmartSubtitlesTaskInput $SmartSubtitlesTask 智能字幕
+     * @param SmartEraseTaskInput $SmartEraseTask 智能擦除类型任务参数
      * @param TaskNotifyConfig $TaskNotifyConfig 任务的事件通知信息，不填代表不获取事件通知。
      * @param integer $TasksPriority 任务流的优先级，数值越大优先级越高，取值范围是-10到 10，不填代表0。
      * @param string $SessionId 用于去重的识别码，如果三天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不传该参数或者参数为空字符串则本次请求不做去重操作。
@@ -276,6 +284,11 @@ class ProcessMediaRequest extends AbstractModel
         if (array_key_exists("SmartSubtitlesTask",$param) and $param["SmartSubtitlesTask"] !== null) {
             $this->SmartSubtitlesTask = new SmartSubtitlesTaskInput();
             $this->SmartSubtitlesTask->deserialize($param["SmartSubtitlesTask"]);
+        }
+
+        if (array_key_exists("SmartEraseTask",$param) and $param["SmartEraseTask"] !== null) {
+            $this->SmartEraseTask = new SmartEraseTaskInput();
+            $this->SmartEraseTask->deserialize($param["SmartEraseTask"]);
         }
 
         if (array_key_exists("TaskNotifyConfig",$param) and $param["TaskNotifyConfig"] !== null) {

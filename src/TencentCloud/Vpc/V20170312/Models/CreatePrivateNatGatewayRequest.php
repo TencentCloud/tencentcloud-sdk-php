@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcType(boolean $VpcType) 设置VPC类型私网NAT网关。仅当取值为True时，才会创建VPC类型私网NAT网关。
  * @method string getCcnId() 获取云联网类型私网NAT网关需要绑定的云联网实例ID。
  * @method void setCcnId(string $CcnId) 设置云联网类型私网NAT网关需要绑定的云联网实例ID。
+ * @method boolean getDeletionProtectionEnabled() 获取私网NAT实例是否开启删除保护
+ * @method void setDeletionProtectionEnabled(boolean $DeletionProtectionEnabled) 设置私网NAT实例是否开启删除保护
  */
 class CreatePrivateNatGatewayRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class CreatePrivateNatGatewayRequest extends AbstractModel
     public $CcnId;
 
     /**
+     * @var boolean 私网NAT实例是否开启删除保护
+     */
+    public $DeletionProtectionEnabled;
+
+    /**
      * @param string $NatGatewayName 私网网关名称
      * @param string $VpcId 私有网络实例ID。当创建VPC类型私网NAT网关或者专线网关类型私网NAT网关时，此参数必填。
      * @param boolean $CrossDomain 跨域参数。仅当取值为True时，才会支持跨域绑定VPC。
      * @param array $Tags 实例标签
      * @param boolean $VpcType VPC类型私网NAT网关。仅当取值为True时，才会创建VPC类型私网NAT网关。
      * @param string $CcnId 云联网类型私网NAT网关需要绑定的云联网实例ID。
+     * @param boolean $DeletionProtectionEnabled 私网NAT实例是否开启删除保护
      */
     function __construct()
     {
@@ -113,6 +121,10 @@ class CreatePrivateNatGatewayRequest extends AbstractModel
 
         if (array_key_exists("CcnId",$param) and $param["CcnId"] !== null) {
             $this->CcnId = $param["CcnId"];
+        }
+
+        if (array_key_exists("DeletionProtectionEnabled",$param) and $param["DeletionProtectionEnabled"] !== null) {
+            $this->DeletionProtectionEnabled = $param["DeletionProtectionEnabled"];
         }
     }
 }

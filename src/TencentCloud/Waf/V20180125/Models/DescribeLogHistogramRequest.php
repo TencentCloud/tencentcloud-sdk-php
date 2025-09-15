@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFrom(integer $From) 设置要查询的日志的起始时间，Unix时间戳，单位ms
  * @method integer getTo() 获取要查询的日志的结束时间，Unix时间戳，单位ms
  * @method void setTo(integer $To) 设置要查询的日志的结束时间，Unix时间戳，单位ms
- * @method string getQuery() 获取查询语句
- * @method void setQuery(string $Query) 设置查询语句
+ * @method string getQuery() 获取查询语句，进行base64编码
+ * @method void setQuery(string $Query) 设置查询语句，进行base64编码
  * @method string getTopicId() 获取日志主题ID，可以通过DescribeTopics接口获取,访问日志主题ID和攻击日志主题ID方式不同，注意DescribeTopics接口使用方法
  * @method void setTopicId(string $TopicId) 设置日志主题ID，可以通过DescribeTopics接口获取,访问日志主题ID和攻击日志主题ID方式不同，注意DescribeTopics接口使用方法
  * @method integer getInterval() 获取时间间隔: 单位ms  限制性条件：(To-From) / interval <= 200
@@ -50,7 +50,7 @@ class DescribeLogHistogramRequest extends AbstractModel
     public $To;
 
     /**
-     * @var string 查询语句
+     * @var string 查询语句，进行base64编码
      */
     public $Query;
 
@@ -74,7 +74,7 @@ class DescribeLogHistogramRequest extends AbstractModel
     /**
      * @param integer $From 要查询的日志的起始时间，Unix时间戳，单位ms
      * @param integer $To 要查询的日志的结束时间，Unix时间戳，单位ms
-     * @param string $Query 查询语句
+     * @param string $Query 查询语句，进行base64编码
      * @param string $TopicId 日志主题ID，可以通过DescribeTopics接口获取,访问日志主题ID和攻击日志主题ID方式不同，注意DescribeTopics接口使用方法
      * @param integer $Interval 时间间隔: 单位ms  限制性条件：(To-From) / interval <= 200
      * @param integer $SyntaxRule 检索语法规则，默认值为0。

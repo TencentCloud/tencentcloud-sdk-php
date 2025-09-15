@@ -22,16 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getNatGatewayIds() 获取私网网关唯一`ID`，形如：`intranat-0g3blj80`。
  * @method void setNatGatewayIds(array $NatGatewayIds) 设置私网网关唯一`ID`，形如：`intranat-0g3blj80`。
- * @method array getFilters() 获取过滤条件。
-<li>NatGatewayId - String - 私网网关唯一`ID`，形如：`intranat-0g3blj80`。</li>
-<li>NatGatewayName - String - 专线网关名称，默认模糊查询。</li>
-<li>VpcId - String - 私网网关所在`VpcId`。</li>
-<li>TagKey - Tag数组 - 私网网关标签键值对数组</li>
- * @method void setFilters(array $Filters) 设置过滤条件。
-<li>NatGatewayId - String - 私网网关唯一`ID`，形如：`intranat-0g3blj80`。</li>
-<li>NatGatewayName - String - 专线网关名称，默认模糊查询。</li>
-<li>VpcId - String - 私网网关所在`VpcId`。</li>
-<li>TagKey - Tag数组 - 私网网关标签键值对数组</li>
+ * @method array getFilters() 获取过滤条件。<li>NatGatewayId - String - 私网网关唯一`ID`，形如：`intranat-0g3blj80`。</li><li>NatGatewayName - String - 专线网关名称，默认模糊查询。</li><li>VpcId - String - 私网网关所在`VpcId`。</li><li>TagKey - Tag数组 - 私网网关标签键值对数组</li><li>intranat-status - String - （过滤条件）NAT实例当前状态，形如：`AVAILABLE`。</li>
+ * @method void setFilters(array $Filters) 设置过滤条件。<li>NatGatewayId - String - 私网网关唯一`ID`，形如：`intranat-0g3blj80`。</li><li>NatGatewayName - String - 专线网关名称，默认模糊查询。</li><li>VpcId - String - 私网网关所在`VpcId`。</li><li>TagKey - Tag数组 - 私网网关标签键值对数组</li><li>intranat-status - String - （过滤条件）NAT实例当前状态，形如：`AVAILABLE`。</li>
  * @method integer getOffset() 获取偏移量，默认为0。
  * @method void setOffset(integer $Offset) 设置偏移量，默认为0。
  * @method integer getLimit() 获取返回数量，默认为20。
@@ -49,11 +41,7 @@ class DescribePrivateNatGatewaysRequest extends AbstractModel
     public $NatGatewayIds;
 
     /**
-     * @var array 过滤条件。
-<li>NatGatewayId - String - 私网网关唯一`ID`，形如：`intranat-0g3blj80`。</li>
-<li>NatGatewayName - String - 专线网关名称，默认模糊查询。</li>
-<li>VpcId - String - 私网网关所在`VpcId`。</li>
-<li>TagKey - Tag数组 - 私网网关标签键值对数组</li>
+     * @var array 过滤条件。<li>NatGatewayId - String - 私网网关唯一`ID`，形如：`intranat-0g3blj80`。</li><li>NatGatewayName - String - 专线网关名称，默认模糊查询。</li><li>VpcId - String - 私网网关所在`VpcId`。</li><li>TagKey - Tag数组 - 私网网关标签键值对数组</li><li>intranat-status - String - （过滤条件）NAT实例当前状态，形如：`AVAILABLE`。</li>
      */
     public $Filters;
 
@@ -79,11 +67,7 @@ class DescribePrivateNatGatewaysRequest extends AbstractModel
 
     /**
      * @param array $NatGatewayIds 私网网关唯一`ID`，形如：`intranat-0g3blj80`。
-     * @param array $Filters 过滤条件。
-<li>NatGatewayId - String - 私网网关唯一`ID`，形如：`intranat-0g3blj80`。</li>
-<li>NatGatewayName - String - 专线网关名称，默认模糊查询。</li>
-<li>VpcId - String - 私网网关所在`VpcId`。</li>
-<li>TagKey - Tag数组 - 私网网关标签键值对数组</li>
+     * @param array $Filters 过滤条件。<li>NatGatewayId - String - 私网网关唯一`ID`，形如：`intranat-0g3blj80`。</li><li>NatGatewayName - String - 专线网关名称，默认模糊查询。</li><li>VpcId - String - 私网网关所在`VpcId`。</li><li>TagKey - Tag数组 - 私网网关标签键值对数组</li><li>intranat-status - String - （过滤条件）NAT实例当前状态，形如：`AVAILABLE`。</li>
      * @param integer $Offset 偏移量，默认为0。
      * @param integer $Limit 返回数量，默认为20。
      * @param string $OrderField 排序字段。可选值："NatGatewayId"、"NatGatewayName"、"CreatedTime"

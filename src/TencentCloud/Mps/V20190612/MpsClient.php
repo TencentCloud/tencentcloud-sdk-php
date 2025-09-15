@@ -53,6 +53,9 @@ use TencentCloud\Mps\V20190612\Models as Models;
 7. 智能内容审核（鉴黄、敏感信息检测）；
 8. 智能内容分析（标签、分类、封面、按帧标签）；
 9. 智能内容识别（人脸、文本全文、文本关键词、语音全文、语音关键词）。
+10. 媒体质检（直播流格式诊断、音画内容检测（抖动、模糊、低光照、过曝光、黑边、白边、黑屏、白屏、花屏、噪点、马赛克、二维码等）、无参考打分）
+11. 智能字幕（语音全文、语音热词、语音翻译）
+12. 智能擦除（去水印、去字幕、隐私保护）；
 
 注意：创建编排成功后是禁用状态，需要手动启用。
  * @method Models\CreateSmartSubtitleTemplateResponse CreateSmartSubtitleTemplate(Models\CreateSmartSubtitleTemplateRequest $req) 创建自定义智能字幕模板
@@ -217,8 +220,9 @@ use TencentCloud\Mps\V20190612\Models as Models;
 7. 智能内容审核（例如鉴黄、敏感信息检测）；
 8. 智能内容分析（例如标签、分类、封面、按帧标签、拆条、集锦、片头片尾、游戏打点）；
 9. 智能内容识别（例如人脸、文本全文、文本关键词、语音全文、语音关键词、语音翻译、物体识别）；
-10. 媒体质检（例如媒体格式诊断、音画内容检测（抖动、模糊、低光照、过曝光、黑边、白边、黑屏、白屏、花屏、噪点、马赛克、二维码等）、无参考打分）；
+10. 媒体质检（例如媒体格式诊断、音画内容检测、无参考打分，其中音画内容检测主要针对抖动、模糊、低光照、过曝光、花屏、噪点、马赛克、二维码等问题）;
 11. 智能字幕（例如语音全文、语音热词、语音翻译）；
+12.  智能擦除（去水印、去字幕、隐私保护）；
  * @method Models\RecognizeMediaForZhiXueResponse RecognizeMediaForZhiXue(Models\RecognizeMediaForZhiXueRequest $req) 智能媒体识别，包含表情和动作识别。仅用于智学，其他调用无效。
  * @method Models\ResetWorkflowResponse ResetWorkflow(Models\ResetWorkflowRequest $req) 重新设置一个已经存在且处于禁用状态的工作流。
  * @method Models\StartStreamLinkFlowResponse StartStreamLinkFlow(Models\StartStreamLinkFlowRequest $req) 启动媒体传输流。

@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getBizId() 获取应用ID
  * @method void setBizId(integer $BizId) 设置应用ID
- * @method string getUserIdString() 获取需要送检的所有用户号。多个用户号之间用","分隔。示例："0001,0002,0003"
- * @method void setUserIdString(string $UserIdString) 设置需要送检的所有用户号。多个用户号之间用","分隔。示例："0001,0002,0003"
- * @method array getUserIdRegex() 获取符合此正则表达式规则的用户号将被送检。示例：["^6.*"] 表示所有以6开头的用户号将被送检
- * @method void setUserIdRegex(array $UserIdRegex) 设置符合此正则表达式规则的用户号将被送检。示例：["^6.*"] 表示所有以6开头的用户号将被送检
+ * @method string getUserIdString() 获取需要送检的所有用户号。多个用户号之间用","分隔，长度不超过1024字符。示例："0001,0002,0003"
+ * @method void setUserIdString(string $UserIdString) 设置需要送检的所有用户号。多个用户号之间用","分隔，长度不超过1024字符。示例："0001,0002,0003"
+ * @method array getUserIdRegex() 获取符合此正则表达式规则的用户号将被送检，最大不能超过10个。示例：["^6.*"] 表示所有以6开头的用户号将被送检
+ * @method void setUserIdRegex(array $UserIdRegex) 设置符合此正则表达式规则的用户号将被送检，最大不能超过10个。示例：["^6.*"] 表示所有以6开头的用户号将被送检
  */
 class UpdateScanUsersRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class UpdateScanUsersRequest extends AbstractModel
     public $BizId;
 
     /**
-     * @var string 需要送检的所有用户号。多个用户号之间用","分隔。示例："0001,0002,0003"
+     * @var string 需要送检的所有用户号。多个用户号之间用","分隔，长度不超过1024字符。示例："0001,0002,0003"
      */
     public $UserIdString;
 
     /**
-     * @var array 符合此正则表达式规则的用户号将被送检。示例：["^6.*"] 表示所有以6开头的用户号将被送检
+     * @var array 符合此正则表达式规则的用户号将被送检，最大不能超过10个。示例：["^6.*"] 表示所有以6开头的用户号将被送检
      */
     public $UserIdRegex;
 
     /**
      * @param integer $BizId 应用ID
-     * @param string $UserIdString 需要送检的所有用户号。多个用户号之间用","分隔。示例："0001,0002,0003"
-     * @param array $UserIdRegex 符合此正则表达式规则的用户号将被送检。示例：["^6.*"] 表示所有以6开头的用户号将被送检
+     * @param string $UserIdString 需要送检的所有用户号。多个用户号之间用","分隔，长度不超过1024字符。示例："0001,0002,0003"
+     * @param array $UserIdRegex 符合此正则表达式规则的用户号将被送检，最大不能超过10个。示例：["^6.*"] 表示所有以6开头的用户号将被送检
      */
     function __construct()
     {

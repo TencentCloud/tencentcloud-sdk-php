@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) 设置VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
  * @method integer getInternetMaxBandwidthOut() 获取NAT网关最大外网出带宽(单位：Mbps)，支持的参数值：20, 50, 100, 200, 500, 1000, 2000, 5000，默认: 100Mbps。  当以下NatProductVersion参数值为2即标准型时，此参数无需填写，默认为5000Mbps。
  * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) 设置NAT网关最大外网出带宽(单位：Mbps)，支持的参数值：20, 50, 100, 200, 500, 1000, 2000, 5000，默认: 100Mbps。  当以下NatProductVersion参数值为2即标准型时，此参数无需填写，默认为5000Mbps。
- * @method integer getMaxConcurrentConnection() 获取NAT网关并发连接数上限，支持参数值：1000000、3000000、10000000，默认值为100000。  当以下NatProductVersion参数值为2即标准型时，此参数无需填写，默认为2000000。
- * @method void setMaxConcurrentConnection(integer $MaxConcurrentConnection) 设置NAT网关并发连接数上限，支持参数值：1000000、3000000、10000000，默认值为100000。  当以下NatProductVersion参数值为2即标准型时，此参数无需填写，默认为2000000。
+ * @method integer getMaxConcurrentConnection() 获取NAT网关并发连接数上限，支持参数值：1000000、3000000、10000000，默认值为1000000。 当NatProductVersion参数值为2即标准型时，此参数无需填写，默认为2000000。
+ * @method void setMaxConcurrentConnection(integer $MaxConcurrentConnection) 设置NAT网关并发连接数上限，支持参数值：1000000、3000000、10000000，默认值为1000000。 当NatProductVersion参数值为2即标准型时，此参数无需填写，默认为2000000。
  * @method integer getAddressCount() 获取新建弹性公网IP个数，系统会按您的要求创建对应数量的弹性公网IP，其中AddressCount和PublicAddresses两个参数至少填写一个。
  * @method void setAddressCount(integer $AddressCount) 设置新建弹性公网IP个数，系统会按您的要求创建对应数量的弹性公网IP，其中AddressCount和PublicAddresses两个参数至少填写一个。
  * @method array getPublicIpAddresses() 获取绑定NAT网关的已有弹性公网IP数组，其中AddressCount和PublicAddresses两个参数至少填写一个。 示例值：["139.199.232.119"]
@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublicIpFromSameZone(boolean $PublicIpFromSameZone) 设置公网IP是否强制与NAT网关来自同可用区，true表示需要与NAT网关同可用区；false表示可与NAT网关不是同一个可用区。此参数只有当参数Zone存在时才能生效。
  * @method integer getNatProductVersion() 获取NAT网关类型，1表示传统型NAT网关，2表示标准型NAT网关，默认值是1。
  * @method void setNatProductVersion(integer $NatProductVersion) 设置NAT网关类型，1表示传统型NAT网关，2表示标准型NAT网关，默认值是1。
+ * @method boolean getDeletionProtectionEnabled() 获取NAT实例是否开启删除保护
+ * @method void setDeletionProtectionEnabled(boolean $DeletionProtectionEnabled) 设置NAT实例是否开启删除保护
  */
 class CreateNatGatewayRequest extends AbstractModel
 {
@@ -65,7 +67,7 @@ class CreateNatGatewayRequest extends AbstractModel
     public $InternetMaxBandwidthOut;
 
     /**
-     * @var integer NAT网关并发连接数上限，支持参数值：1000000、3000000、10000000，默认值为100000。  当以下NatProductVersion参数值为2即标准型时，此参数无需填写，默认为2000000。
+     * @var integer NAT网关并发连接数上限，支持参数值：1000000、3000000、10000000，默认值为1000000。 当NatProductVersion参数值为2即标准型时，此参数无需填写，默认为2000000。
      */
     public $MaxConcurrentConnection;
 
@@ -116,10 +118,15 @@ class CreateNatGatewayRequest extends AbstractModel
     public $NatProductVersion;
 
     /**
+     * @var boolean NAT实例是否开启删除保护
+     */
+    public $DeletionProtectionEnabled;
+
+    /**
      * @param string $NatGatewayName NAT网关名称
      * @param string $VpcId VPC实例ID。可通过DescribeVpcs接口返回值中的VpcId获取。
      * @param integer $InternetMaxBandwidthOut NAT网关最大外网出带宽(单位：Mbps)，支持的参数值：20, 50, 100, 200, 500, 1000, 2000, 5000，默认: 100Mbps。  当以下NatProductVersion参数值为2即标准型时，此参数无需填写，默认为5000Mbps。
-     * @param integer $MaxConcurrentConnection NAT网关并发连接数上限，支持参数值：1000000、3000000、10000000，默认值为100000。  当以下NatProductVersion参数值为2即标准型时，此参数无需填写，默认为2000000。
+     * @param integer $MaxConcurrentConnection NAT网关并发连接数上限，支持参数值：1000000、3000000、10000000，默认值为1000000。 当NatProductVersion参数值为2即标准型时，此参数无需填写，默认为2000000。
      * @param integer $AddressCount 新建弹性公网IP个数，系统会按您的要求创建对应数量的弹性公网IP，其中AddressCount和PublicAddresses两个参数至少填写一个。
      * @param array $PublicIpAddresses 绑定NAT网关的已有弹性公网IP数组，其中AddressCount和PublicAddresses两个参数至少填写一个。 示例值：["139.199.232.119"]
      * @param string $Zone 可用区，形如：`ap-guangzhou-1`。
@@ -129,6 +136,7 @@ class CreateNatGatewayRequest extends AbstractModel
      * @param integer $PublicIpAddressesBandwidthOut 需要申请公网IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
      * @param boolean $PublicIpFromSameZone 公网IP是否强制与NAT网关来自同可用区，true表示需要与NAT网关同可用区；false表示可与NAT网关不是同一个可用区。此参数只有当参数Zone存在时才能生效。
      * @param integer $NatProductVersion NAT网关类型，1表示传统型NAT网关，2表示标准型NAT网关，默认值是1。
+     * @param boolean $DeletionProtectionEnabled NAT实例是否开启删除保护
      */
     function __construct()
     {
@@ -198,6 +206,10 @@ class CreateNatGatewayRequest extends AbstractModel
 
         if (array_key_exists("NatProductVersion",$param) and $param["NatProductVersion"] !== null) {
             $this->NatProductVersion = $param["NatProductVersion"];
+        }
+
+        if (array_key_exists("DeletionProtectionEnabled",$param) and $param["DeletionProtectionEnabled"] !== null) {
+            $this->DeletionProtectionEnabled = $param["DeletionProtectionEnabled"];
         }
     }
 }

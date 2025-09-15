@@ -18,23 +18,23 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 在评测中使用的转码模版的信息
+ * 在评测中使用的转码模板的信息
  *
- * @method integer getDefinition() 获取转码模版的 ID。
+ * @method integer getDefinition() 获取转码模板的 ID。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setDefinition(integer $Definition) 设置转码模版的 ID。
+ * @method void setDefinition(integer $Definition) 设置转码模板的 ID。
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class EvaluationTemplateInputInfo extends AbstractModel
 {
     /**
-     * @var integer 转码模版的 ID。
+     * @var integer 转码模板的 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Definition;
 
     /**
-     * @param integer $Definition 转码模版的 ID。
+     * @param integer $Definition 转码模板的 ID。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()

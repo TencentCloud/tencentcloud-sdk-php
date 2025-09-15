@@ -68,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSmartSubtitlesTask(SmartSubtitlesTaskInput $SmartSubtitlesTask) 设置智能字幕任务
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method SmartEraseTaskInput getSmartEraseTask() 获取智能擦除任务
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSmartEraseTask(SmartEraseTaskInput $SmartEraseTask) 设置智能擦除任务
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class ActivityPara extends AbstractModel
 {
@@ -144,6 +148,12 @@ class ActivityPara extends AbstractModel
     public $SmartSubtitlesTask;
 
     /**
+     * @var SmartEraseTaskInput 智能擦除任务
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SmartEraseTask;
+
+    /**
      * @param TranscodeTaskInput $TranscodeTask 视频转码任务
 注意：此字段可能返回 null，表示取不到有效值。
      * @param AnimatedGraphicTaskInput $AnimatedGraphicTask 视频转动图任务
@@ -167,6 +177,8 @@ class ActivityPara extends AbstractModel
      * @param ExecRulesTask $ExecRulesTask 任务条件判断
 注意：此字段可能返回 null，表示取不到有效值。
      * @param SmartSubtitlesTaskInput $SmartSubtitlesTask 智能字幕任务
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SmartEraseTaskInput $SmartEraseTask 智能擦除任务
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -240,6 +252,11 @@ class ActivityPara extends AbstractModel
         if (array_key_exists("SmartSubtitlesTask",$param) and $param["SmartSubtitlesTask"] !== null) {
             $this->SmartSubtitlesTask = new SmartSubtitlesTaskInput();
             $this->SmartSubtitlesTask->deserialize($param["SmartSubtitlesTask"]);
+        }
+
+        if (array_key_exists("SmartEraseTask",$param) and $param["SmartEraseTask"] !== null) {
+            $this->SmartEraseTask = new SmartEraseTaskInput();
+            $this->SmartEraseTask->deserialize($param["SmartEraseTask"]);
         }
     }
 }

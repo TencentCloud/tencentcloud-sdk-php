@@ -54,8 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSrcInfo(Endpoint $SrcInfo) 设置源端信息，单节点数据库使用
  * @method string getSrcNodeType() 获取枚举值：cluster、single。源库为单节点数据库使用single，多节点使用cluster
  * @method void setSrcNodeType(string $SrcNodeType) 设置枚举值：cluster、single。源库为单节点数据库使用single，多节点使用cluster
- * @method SyncDBEndpointInfos getSrcInfos() 获取源端信息，多节点数据库使用
- * @method void setSrcInfos(SyncDBEndpointInfos $SrcInfos) 设置源端信息，多节点数据库使用
+ * @method SyncDBEndpointInfos getSrcInfos() 获取源端信息，若SrcNodeType=cluster，则源端信息在这个字段里，mongodb链路使用此参数透传。
+ * @method void setSrcInfos(SyncDBEndpointInfos $SrcInfos) 设置源端信息，若SrcNodeType=cluster，则源端信息在这个字段里，mongodb链路使用此参数透传。
  * @method string getDstRegion() 获取目标端地域，如：ap-guangzhou等
  * @method void setDstRegion(string $DstRegion) 设置目标端地域，如：ap-guangzhou等
  * @method string getDstDatabaseType() 获取目标端数据库类型，mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql等
@@ -66,8 +66,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDstInfo(Endpoint $DstInfo) 设置目标端信息，单节点数据库使用
  * @method string getDstNodeType() 获取枚举值：cluster、single。目标库为单节点数据库使用single，多节点使用cluster
  * @method void setDstNodeType(string $DstNodeType) 设置枚举值：cluster、single。目标库为单节点数据库使用single，多节点使用cluster
- * @method SyncDBEndpointInfos getDstInfos() 获取目标端信息，多节点数据库使用
- * @method void setDstInfos(SyncDBEndpointInfos $DstInfos) 设置目标端信息，多节点数据库使用
+ * @method SyncDBEndpointInfos getDstInfos() 获取目标端信息，若SrcNodeType=cluster，则源端信息在这个字段里，mongodb链路使用此参数透传。
+ * @method void setDstInfos(SyncDBEndpointInfos $DstInfos) 设置目标端信息，若SrcNodeType=cluster，则源端信息在这个字段里，mongodb链路使用此参数透传。
  * @method string getCreateTime() 获取创建时间，格式为 yyyy-mm-dd hh:mm:ss
  * @method void setCreateTime(string $CreateTime) 设置创建时间，格式为 yyyy-mm-dd hh:mm:ss
  * @method string getStartTime() 获取开始时间，格式为 yyyy-mm-dd hh:mm:ss
@@ -179,7 +179,7 @@ class SyncJobInfo extends AbstractModel
     public $SrcNodeType;
 
     /**
-     * @var SyncDBEndpointInfos 源端信息，多节点数据库使用
+     * @var SyncDBEndpointInfos 源端信息，若SrcNodeType=cluster，则源端信息在这个字段里，mongodb链路使用此参数透传。
      */
     public $SrcInfos;
 
@@ -209,7 +209,7 @@ class SyncJobInfo extends AbstractModel
     public $DstNodeType;
 
     /**
-     * @var SyncDBEndpointInfos 目标端信息，多节点数据库使用
+     * @var SyncDBEndpointInfos 目标端信息，若SrcNodeType=cluster，则源端信息在这个字段里，mongodb链路使用此参数透传。
      */
     public $DstInfos;
 
@@ -296,13 +296,13 @@ class SyncJobInfo extends AbstractModel
      * @param string $SrcAccessType 源端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)
      * @param Endpoint $SrcInfo 源端信息，单节点数据库使用
      * @param string $SrcNodeType 枚举值：cluster、single。源库为单节点数据库使用single，多节点使用cluster
-     * @param SyncDBEndpointInfos $SrcInfos 源端信息，多节点数据库使用
+     * @param SyncDBEndpointInfos $SrcInfos 源端信息，若SrcNodeType=cluster，则源端信息在这个字段里，mongodb链路使用此参数透传。
      * @param string $DstRegion 目标端地域，如：ap-guangzhou等
      * @param string $DstDatabaseType 目标端数据库类型，mysql,cynosdbmysql,tdapg,tdpg,tdsqlmysql等
      * @param string $DstAccessType 目标端接入类型，cdb(云数据库)、cvm(云主机自建)、vpc(私有网络)、extranet(外网)、vpncloud(vpn接入)、dcg(专线接入)、ccn(云联网)、intranet(自研上云)
      * @param Endpoint $DstInfo 目标端信息，单节点数据库使用
      * @param string $DstNodeType 枚举值：cluster、single。目标库为单节点数据库使用single，多节点使用cluster
-     * @param SyncDBEndpointInfos $DstInfos 目标端信息，多节点数据库使用
+     * @param SyncDBEndpointInfos $DstInfos 目标端信息，若SrcNodeType=cluster，则源端信息在这个字段里，mongodb链路使用此参数透传。
      * @param string $CreateTime 创建时间，格式为 yyyy-mm-dd hh:mm:ss
      * @param string $StartTime 开始时间，格式为 yyyy-mm-dd hh:mm:ss
      * @param string $Status 任务状态，UnInitialized(未初始化)、Initialized(已初始化)、Checking(校验中)、CheckPass(校验通过)、CheckNotPass(校验不通过)、ReadyRunning(准备运行)、Running(运行中)、Pausing(暂停中)、Paused(已暂停)、Stopping(停止中)、Stopped(已结束)、ResumableErr(任务错误)、Resuming(恢复中)、Failed(失败)、Released(已释放)、Resetting(重置中)、Unknown(未知)

@@ -23,9 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getType() 获取媒体处理输出对象存储位置的类型，支持：
 <li>COS：COS存储</li>
 <li>AWS-S3：AWS 存储，只适用于AWS任务，且要求同区域</li>
+<li> VOD：点播专业版 </li>
  * @method void setType(string $Type) 设置媒体处理输出对象存储位置的类型，支持：
 <li>COS：COS存储</li>
 <li>AWS-S3：AWS 存储，只适用于AWS任务，且要求同区域</li>
+<li> VOD：点播专业版 </li>
  * @method CosOutputStorage getCosOutputStorage() 获取当 Type 为 COS 时有效，则该项为必填，表示媒体处理 COS 输出位置。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setCosOutputStorage(CosOutputStorage $CosOutputStorage) 设置当 Type 为 COS 时有效，则该项为必填，表示媒体处理 COS 输出位置。
@@ -34,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setS3OutputStorage(S3OutputStorage $S3OutputStorage) 设置当 Type 为 AWS-S3 时有效，则该项为必填，表示媒体处理 AWS S3 输出位置。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method VODOutputStorage getVODOutputStorage() 获取当 Type 为 VOD 时有效，则该项为必填，表示媒体处理 点播专业版 输出位置。
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setVODOutputStorage(VODOutputStorage $VODOutputStorage) 设置当 Type 为 VOD 时有效，则该项为必填，表示媒体处理 点播专业版 输出位置。
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class TaskOutputStorage extends AbstractModel
 {
@@ -41,6 +47,7 @@ class TaskOutputStorage extends AbstractModel
      * @var string 媒体处理输出对象存储位置的类型，支持：
 <li>COS：COS存储</li>
 <li>AWS-S3：AWS 存储，只适用于AWS任务，且要求同区域</li>
+<li> VOD：点播专业版 </li>
      */
     public $Type;
 
@@ -57,12 +64,21 @@ class TaskOutputStorage extends AbstractModel
     public $S3OutputStorage;
 
     /**
+     * @var VODOutputStorage 当 Type 为 VOD 时有效，则该项为必填，表示媒体处理 点播专业版 输出位置。
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $VODOutputStorage;
+
+    /**
      * @param string $Type 媒体处理输出对象存储位置的类型，支持：
 <li>COS：COS存储</li>
 <li>AWS-S3：AWS 存储，只适用于AWS任务，且要求同区域</li>
+<li> VOD：点播专业版 </li>
      * @param CosOutputStorage $CosOutputStorage 当 Type 为 COS 时有效，则该项为必填，表示媒体处理 COS 输出位置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param S3OutputStorage $S3OutputStorage 当 Type 为 AWS-S3 时有效，则该项为必填，表示媒体处理 AWS S3 输出位置。
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param VODOutputStorage $VODOutputStorage 当 Type 为 VOD 时有效，则该项为必填，表示媒体处理 点播专业版 输出位置。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -90,6 +106,11 @@ class TaskOutputStorage extends AbstractModel
         if (array_key_exists("S3OutputStorage",$param) and $param["S3OutputStorage"] !== null) {
             $this->S3OutputStorage = new S3OutputStorage();
             $this->S3OutputStorage->deserialize($param["S3OutputStorage"]);
+        }
+
+        if (array_key_exists("VODOutputStorage",$param) and $param["VODOutputStorage"] !== null) {
+            $this->VODOutputStorage = new VODOutputStorage();
+            $this->VODOutputStorage->deserialize($param["VODOutputStorage"]);
         }
     }
 }

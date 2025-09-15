@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 视频评测任务的视频来源信息
  *
- * @method string getSourceId() 获取对比视频的来源 ID，当评测任务的类型为 BD_RATE 且对比视频来自用户输入时有效；当对比视频来自转码模版时为空
+ * @method string getSourceId() 获取对比视频的来源 ID，当评测任务的类型为 BD_RATE 且对比视频来自用户输入时有效；当对比视频来自转码模板时为空
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSourceId(string $SourceId) 设置对比视频的来源 ID，当评测任务的类型为 BD_RATE 且对比视频来自用户输入时有效；当对比视频来自转码模版时为空
+ * @method void setSourceId(string $SourceId) 设置对比视频的来源 ID，当评测任务的类型为 BD_RATE 且对比视频来自用户输入时有效；当对比视频来自转码模板时为空
 注意：此字段可能返回 null，表示取不到有效值。
  * @method MediaInputInfo getInputInfo() 获取对比视频的输入信息
 注意：此字段可能返回 null，表示取不到有效值。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class EvaluationMediaInputInfo extends AbstractModel
 {
     /**
-     * @var string 对比视频的来源 ID，当评测任务的类型为 BD_RATE 且对比视频来自用户输入时有效；当对比视频来自转码模版时为空
+     * @var string 对比视频的来源 ID，当评测任务的类型为 BD_RATE 且对比视频来自用户输入时有效；当对比视频来自转码模板时为空
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SourceId;
@@ -44,7 +44,7 @@ class EvaluationMediaInputInfo extends AbstractModel
     public $InputInfo;
 
     /**
-     * @param string $SourceId 对比视频的来源 ID，当评测任务的类型为 BD_RATE 且对比视频来自用户输入时有效；当对比视频来自转码模版时为空
+     * @param string $SourceId 对比视频的来源 ID，当评测任务的类型为 BD_RATE 且对比视频来自用户输入时有效；当对比视频来自转码模板时为空
 注意：此字段可能返回 null，表示取不到有效值。
      * @param MediaInputInfo $InputInfo 对比视频的输入信息
 注意：此字段可能返回 null，表示取不到有效值。

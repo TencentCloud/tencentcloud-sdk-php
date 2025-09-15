@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getDiskIds() 获取云硬盘ID列表，可通过[DescribeDisks](https://cloud.tencent.com/document/api/1207/66093)接口查询。列表最大长度为15。
  * @method void setDiskIds(array $DiskIds) 设置云硬盘ID列表，可通过[DescribeDisks](https://cloud.tencent.com/document/api/1207/66093)接口查询。列表最大长度为15。
- * @method integer getDiskBackupQuota() 获取云硬盘备份点配额。取值范围: [0, 500]。调整后的配额必须不小于已存在的备份点数量。
- * @method void setDiskBackupQuota(integer $DiskBackupQuota) 设置云硬盘备份点配额。取值范围: [0, 500]。调整后的配额必须不小于已存在的备份点数量。
+ * @method integer getDiskBackupQuota() 获取云硬盘备份点配额。取值范围: [0, 500]。调整后的配额必须大于等于已存在的备份点数量。
+ * @method void setDiskBackupQuota(integer $DiskBackupQuota) 设置云硬盘备份点配额。取值范围: [0, 500]。调整后的配额必须大于等于已存在的备份点数量。
  */
 class ModifyDisksBackupQuotaRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ModifyDisksBackupQuotaRequest extends AbstractModel
     public $DiskIds;
 
     /**
-     * @var integer 云硬盘备份点配额。取值范围: [0, 500]。调整后的配额必须不小于已存在的备份点数量。
+     * @var integer 云硬盘备份点配额。取值范围: [0, 500]。调整后的配额必须大于等于已存在的备份点数量。
      */
     public $DiskBackupQuota;
 
     /**
      * @param array $DiskIds 云硬盘ID列表，可通过[DescribeDisks](https://cloud.tencent.com/document/api/1207/66093)接口查询。列表最大长度为15。
-     * @param integer $DiskBackupQuota 云硬盘备份点配额。取值范围: [0, 500]。调整后的配额必须不小于已存在的备份点数量。
+     * @param integer $DiskBackupQuota 云硬盘备份点配额。取值范围: [0, 500]。调整后的配额必须大于等于已存在的备份点数量。
      */
     function __construct()
     {

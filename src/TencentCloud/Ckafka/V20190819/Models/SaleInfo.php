@@ -18,10 +18,10 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 标准版销售信息
+ * 各版本销售信息
  *
- * @method boolean getFlag() 获取手动设置的flag标志
- * @method void setFlag(boolean $Flag) 设置手动设置的flag标志
+ * @method boolean getFlag() 获取手动设置的flag标志，true表示售罄，false表示可售。
+ * @method void setFlag(boolean $Flag) 设置手动设置的flag标志，true表示售罄，false表示可售。
  * @method string getVersion() 获取ckafka版本号(1.1.1/2.4.2/0.10.2)
  * @method void setVersion(string $Version) 设置ckafka版本号(1.1.1/2.4.2/0.10.2)
  * @method string getPlatform() 获取专业版、标准版标志
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class SaleInfo extends AbstractModel
 {
     /**
-     * @var boolean 手动设置的flag标志
+     * @var boolean 手动设置的flag标志，true表示售罄，false表示可售。
      */
     public $Flag;
 
@@ -52,7 +52,7 @@ class SaleInfo extends AbstractModel
     public $SoldOut;
 
     /**
-     * @param boolean $Flag 手动设置的flag标志
+     * @param boolean $Flag 手动设置的flag标志，true表示售罄，false表示可售。
      * @param string $Version ckafka版本号(1.1.1/2.4.2/0.10.2)
      * @param string $Platform 专业版、标准版标志
      * @param boolean $SoldOut 售罄标志：true售罄

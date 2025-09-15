@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPublicNetworkChargeType() 获取公网计费模式: BANDWIDTH_PREPAID(包年包月), BANDWIDTH_POSTPAID_BY_HOUR(带宽按小时计费)
  * @method void setPublicNetworkChargeType(string $PublicNetworkChargeType) 设置公网计费模式: BANDWIDTH_PREPAID(包年包月), BANDWIDTH_POSTPAID_BY_HOUR(带宽按小时计费)
- * @method integer getPublicNetworkMonthly() 获取公网带宽, 单位MB
- * @method void setPublicNetworkMonthly(integer $PublicNetworkMonthly) 设置公网带宽, 单位MB
+ * @method integer getPublicNetworkMonthly() 获取公网带宽, 单位MB 取值需是0，或是3的倍数
+ * @method void setPublicNetworkMonthly(integer $PublicNetworkMonthly) 设置公网带宽, 单位MB 取值需是0，或是3的倍数
  */
 class InquiryPublicNetworkParam extends AbstractModel
 {
@@ -33,13 +33,13 @@ class InquiryPublicNetworkParam extends AbstractModel
     public $PublicNetworkChargeType;
 
     /**
-     * @var integer 公网带宽, 单位MB
+     * @var integer 公网带宽, 单位MB 取值需是0，或是3的倍数
      */
     public $PublicNetworkMonthly;
 
     /**
      * @param string $PublicNetworkChargeType 公网计费模式: BANDWIDTH_PREPAID(包年包月), BANDWIDTH_POSTPAID_BY_HOUR(带宽按小时计费)
-     * @param integer $PublicNetworkMonthly 公网带宽, 单位MB
+     * @param integer $PublicNetworkMonthly 公网带宽, 单位MB 取值需是0，或是3的倍数
      */
     function __construct()
     {

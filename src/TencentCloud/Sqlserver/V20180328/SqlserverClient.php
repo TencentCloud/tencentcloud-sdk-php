@@ -141,7 +141,7 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\ModifyDatabaseCTResponse ModifyDatabaseCT(Models\ModifyDatabaseCTRequest $req) 本接口(ModifyDatabaseCT)用于启用、禁用数据库数据变更跟踪(CT)
  * @method Models\ModifyDatabaseMdfResponse ModifyDatabaseMdf(Models\ModifyDatabaseMdfRequest $req) 本接口(ModifyDatabaseMdf)用于收缩数据库mdf(Shrink mdf)。**本接口已废弃，请使用接口ModifyDatabaseShrinkMDF**。
  * @method Models\ModifyDatabasePrivilegeResponse ModifyDatabasePrivilege(Models\ModifyDatabasePrivilegeRequest $req) 本接口（ModifyDatabasePrivilege）用于修改实例数据库权限。
- * @method Models\ModifyDatabaseShrinkMDFResponse ModifyDatabaseShrinkMDF(Models\ModifyDatabaseShrinkMDFRequest $req) 本接口(ModifyDatabaseShrinkDMF)用于收缩数据库mdf(Shrink mdf)。
+ * @method Models\ModifyDatabaseShrinkMDFResponse ModifyDatabaseShrinkMDF(Models\ModifyDatabaseShrinkMDFRequest $req) 本接口（ModifyDatabaseShrinkMDF）用于收缩数据库 mdf（Shrink mdf）。
  * @method Models\ModifyIncrementalMigrationResponse ModifyIncrementalMigration(Models\ModifyIncrementalMigrationRequest $req) 本接口（ModifyIncrementalMigration）用于修改增量备份导入任务。
  * @method Models\ModifyInstanceEncryptAttributesResponse ModifyInstanceEncryptAttributes(Models\ModifyInstanceEncryptAttributesRequest $req) 本接口（ModifyInstanceEncryptAttributes）用于开通实例的TDE加密功能。
  * @method Models\ModifyInstanceParamResponse ModifyInstanceParam(Models\ModifyInstanceParamRequest $req) 本接口(ModifyInstanceParam)用于修改云数据库实例的参数。

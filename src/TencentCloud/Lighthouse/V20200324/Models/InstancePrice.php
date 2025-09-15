@@ -18,7 +18,7 @@ namespace TencentCloud\Lighthouse\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 关于Lighthouse Instance实例的价格信息
+ * 关于Lighthouse Instance实例的价格信息。
  *
  * @method float getOriginalBundlePrice() 获取套餐单价原价。
  * @method void setOriginalBundlePrice(float $OriginalBundlePrice) 设置套餐单价原价。
@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiscountPrice(float $DiscountPrice) 设置折后价。
  * @method string getCurrency() 获取价格货币单位。取值范围CNY:人民币。USD:美元。
  * @method void setCurrency(string $Currency) 设置价格货币单位。取值范围CNY:人民币。USD:美元。
+ * @method array getDetailPrices() 获取计费项目明细。
+ * @method void setDetailPrices(array $DetailPrices) 设置计费项目明细。
  */
 class InstancePrice extends AbstractModel
 {
@@ -59,11 +61,17 @@ class InstancePrice extends AbstractModel
     public $Currency;
 
     /**
+     * @var array 计费项目明细。
+     */
+    public $DetailPrices;
+
+    /**
      * @param float $OriginalBundlePrice 套餐单价原价。
      * @param float $OriginalPrice 原价。
      * @param float $Discount 折扣。
      * @param float $DiscountPrice 折后价。
      * @param string $Currency 价格货币单位。取值范围CNY:人民币。USD:美元。
+     * @param array $DetailPrices 计费项目明细。
      */
     function __construct()
     {
@@ -96,6 +104,15 @@ class InstancePrice extends AbstractModel
 
         if (array_key_exists("Currency",$param) and $param["Currency"] !== null) {
             $this->Currency = $param["Currency"];
+        }
+
+        if (array_key_exists("DetailPrices",$param) and $param["DetailPrices"] !== null) {
+            $this->DetailPrices = [];
+            foreach ($param["DetailPrices"] as $key => $value){
+                $obj = new DetailPrice();
+                $obj->deserialize($value);
+                array_push($this->DetailPrices, $obj);
+            }
         }
     }
 }

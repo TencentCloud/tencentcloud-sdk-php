@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNatGatewaySet(array $NatGatewaySet) 设置NAT网关对象数组。
  * @method integer getTotalCount() 获取符合条件的NAT网关对象个数。
  * @method void setTotalCount(integer $TotalCount) 设置符合条件的NAT网关对象个数。
+ * @method string getVerboseLevel() 获取输出信息详细程度，DETAIL代表输出实例所有信息；COMPACT代表不输出NAT规则和自定义路由，输出实例基本信息、特性开关和EIP信息；SIMPLE代表仅输出实例基本信息和特性开关
+ * @method void setVerboseLevel(string $VerboseLevel) 设置输出信息详细程度，DETAIL代表输出实例所有信息；COMPACT代表不输出NAT规则和自定义路由，输出实例基本信息、特性开关和EIP信息；SIMPLE代表仅输出实例基本信息和特性开关
  * @method string getRequestId() 获取唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  * @method void setRequestId(string $RequestId) 设置唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
  */
@@ -40,6 +42,11 @@ class DescribeNatGatewaysResponse extends AbstractModel
     public $TotalCount;
 
     /**
+     * @var string 输出信息详细程度，DETAIL代表输出实例所有信息；COMPACT代表不输出NAT规则和自定义路由，输出实例基本信息、特性开关和EIP信息；SIMPLE代表仅输出实例基本信息和特性开关
+     */
+    public $VerboseLevel;
+
+    /**
      * @var string 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     public $RequestId;
@@ -47,6 +54,7 @@ class DescribeNatGatewaysResponse extends AbstractModel
     /**
      * @param array $NatGatewaySet NAT网关对象数组。
      * @param integer $TotalCount 符合条件的NAT网关对象个数。
+     * @param string $VerboseLevel 输出信息详细程度，DETAIL代表输出实例所有信息；COMPACT代表不输出NAT规则和自定义路由，输出实例基本信息、特性开关和EIP信息；SIMPLE代表仅输出实例基本信息和特性开关
      * @param string $RequestId 唯一请求 ID，由服务端生成，每次请求都会返回（若请求因其他原因未能抵达服务端，则该次请求不会获得 RequestId）。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
@@ -73,6 +81,10 @@ class DescribeNatGatewaysResponse extends AbstractModel
 
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("VerboseLevel",$param) and $param["VerboseLevel"] !== null) {
+            $this->VerboseLevel = $param["VerboseLevel"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例 ID，格式如：mssql-c1nl9rpv 或者 mssqlro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，格式如：mssql-c1nl9rpv 或者 mssqlro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
- * @method array getSecurityGroupIdSet() 获取要修改的安全组 ID 列表，一个或者多个安全组 ID 组成的数组。
- * @method void setSecurityGroupIdSet(array $SecurityGroupIdSet) 设置要修改的安全组 ID 列表，一个或者多个安全组 ID 组成的数组。
+ * @method array getSecurityGroupIdSet() 获取要修改的安全组 ID 列表，一个或者多个安全组 ID 组成的数组。可通过 DescribeDBSecurityGroups 接口获取。输入的安全组 ID 数组无长度限制。
+注意：该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
+ * @method void setSecurityGroupIdSet(array $SecurityGroupIdSet) 设置要修改的安全组 ID 列表，一个或者多个安全组 ID 组成的数组。可通过 DescribeDBSecurityGroups 接口获取。输入的安全组 ID 数组无长度限制。
+注意：该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
  */
 class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel
 {
@@ -33,13 +35,15 @@ class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var array 要修改的安全组 ID 列表，一个或者多个安全组 ID 组成的数组。
+     * @var array 要修改的安全组 ID 列表，一个或者多个安全组 ID 组成的数组。可通过 DescribeDBSecurityGroups 接口获取。输入的安全组 ID 数组无长度限制。
+注意：该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
      */
     public $SecurityGroupIdSet;
 
     /**
      * @param string $InstanceId 实例 ID，格式如：mssql-c1nl9rpv 或者 mssqlro-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
-     * @param array $SecurityGroupIdSet 要修改的安全组 ID 列表，一个或者多个安全组 ID 组成的数组。
+     * @param array $SecurityGroupIdSet 要修改的安全组 ID 列表，一个或者多个安全组 ID 组成的数组。可通过 DescribeDBSecurityGroups 接口获取。输入的安全组 ID 数组无长度限制。
+注意：该入参会全量替换存量已有集合，非增量更新。修改需传入预期的全量集合。
      */
     function __construct()
     {

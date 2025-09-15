@@ -48,21 +48,23 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubStreamObjectName(string $SubStreamObjectName) 设置转自适应码流后，子流文件的输出路径，只能为相对路径。如果不填，则默认为相对路径：`{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`。
  * @method string getSegmentObjectName() 获取转自适应码流（仅 HLS）后，分片文件的输出路径，只能为相对路径。如果不填，则默认为相对路径：`{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`。
  * @method void setSegmentObjectName(string $SegmentObjectName) 设置转自适应码流（仅 HLS）后，分片文件的输出路径，只能为相对路径。如果不填，则默认为相对路径：`{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`。
- * @method array getAddOnSubtitles() 获取要插入的字幕文件。
+ * @method array getAddOnSubtitles() 获取外挂字幕功能，指定要插入的字幕文件。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAddOnSubtitles(array $AddOnSubtitles) 设置要插入的字幕文件。
+ * @method void setAddOnSubtitles(array $AddOnSubtitles) 设置外挂字幕功能，指定要插入的字幕文件。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method DrmInfo getDrmInfo() 获取Drm信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method void setDrmInfo(DrmInfo $DrmInfo) 设置Drm信息。
+注意：此字段可能返回 null，表示取不到有效值。
  * @method string getDefinitionType() 获取自适应转码模板类型：
 Common：音视频类型
 PureAudio：纯音频类型
  * @method void setDefinitionType(string $DefinitionType) 设置自适应转码模板类型：
 Common：音视频类型
 PureAudio：纯音频类型
- * @method SubtitleTemplate getSubtitleTemplate() 获取字幕参数
+ * @method SubtitleTemplate getSubtitleTemplate() 获取硬字幕（压制字幕）功能，指定字幕来源、字体大小、位置等字幕参数。
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setSubtitleTemplate(SubtitleTemplate $SubtitleTemplate) 设置字幕参数
+ * @method void setSubtitleTemplate(SubtitleTemplate $SubtitleTemplate) 设置硬字幕（压制字幕）功能，指定字幕来源、字体大小、位置等字幕参数。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStdExtInfo() 获取转码参数扩展字段
  * @method void setStdExtInfo(string $StdExtInfo) 设置转码参数扩展字段
@@ -108,13 +110,14 @@ class AdaptiveDynamicStreamingTaskInput extends AbstractModel
     public $SegmentObjectName;
 
     /**
-     * @var array 要插入的字幕文件。
+     * @var array 外挂字幕功能，指定要插入的字幕文件。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $AddOnSubtitles;
 
     /**
      * @var DrmInfo Drm信息。
+注意：此字段可能返回 null，表示取不到有效值。
      */
     public $DrmInfo;
 
@@ -126,7 +129,7 @@ PureAudio：纯音频类型
     public $DefinitionType;
 
     /**
-     * @var SubtitleTemplate 字幕参数
+     * @var SubtitleTemplate 硬字幕（压制字幕）功能，指定字幕来源、字体大小、位置等字幕参数。
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $SubtitleTemplate;
@@ -151,13 +154,14 @@ PureAudio：纯音频类型
 如果不填，则默认为相对路径：{inputName}_adaptiveDynamicStreaming_{definition}.{format}。
      * @param string $SubStreamObjectName 转自适应码流后，子流文件的输出路径，只能为相对路径。如果不填，则默认为相对路径：`{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}.{format}`。
      * @param string $SegmentObjectName 转自适应码流（仅 HLS）后，分片文件的输出路径，只能为相对路径。如果不填，则默认为相对路径：`{inputName}_adaptiveDynamicStreaming_{definition}_{subStreamNumber}_{segmentNumber}.{format}`。
-     * @param array $AddOnSubtitles 要插入的字幕文件。
+     * @param array $AddOnSubtitles 外挂字幕功能，指定要插入的字幕文件。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param DrmInfo $DrmInfo Drm信息。
+注意：此字段可能返回 null，表示取不到有效值。
      * @param string $DefinitionType 自适应转码模板类型：
 Common：音视频类型
 PureAudio：纯音频类型
-     * @param SubtitleTemplate $SubtitleTemplate 字幕参数
+     * @param SubtitleTemplate $SubtitleTemplate 硬字幕（压制字幕）功能，指定字幕来源、字体大小、位置等字幕参数。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StdExtInfo 转码参数扩展字段
      */

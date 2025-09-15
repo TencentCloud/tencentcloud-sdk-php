@@ -58,6 +58,8 @@ hi：印地语
 fr：法语
 de：德语
 zh_dialect：中文方言
+zh_en: 中英
+prime_zh: 中英方言
  * @method void setVideoSrcLanguage(string $VideoSrcLanguage) 设置智能字幕视频源语言
 当前支持以下语言：
 zh：简体中文
@@ -80,11 +82,15 @@ hi：印地语
 fr：法语
 de：德语
 zh_dialect：中文方言
+zh_en: 中英
+prime_zh: 中英方言
  * @method string getSubtitleFormat() 获取智能字幕文件格式
  vtt: WebVTT 格式
+srt: SRT格式
 不填或填空：不生成字幕文件
  * @method void setSubtitleFormat(string $SubtitleFormat) 设置智能字幕文件格式
  vtt: WebVTT 格式
+srt: SRT格式
 不填或填空：不生成字幕文件
  * @method integer getSubtitleType() 获取智能字幕字幕语言类型
 0: 源语言
@@ -190,12 +196,15 @@ hi：印地语
 fr：法语
 de：德语
 zh_dialect：中文方言
+zh_en: 中英
+prime_zh: 中英方言
      */
     public $VideoSrcLanguage;
 
     /**
      * @var string 智能字幕文件格式
  vtt: WebVTT 格式
+srt: SRT格式
 不填或填空：不生成字幕文件
      */
     public $SubtitleFormat;
@@ -270,8 +279,11 @@ hi：印地语
 fr：法语
 de：德语
 zh_dialect：中文方言
+zh_en: 中英
+prime_zh: 中英方言
      * @param string $SubtitleFormat 智能字幕文件格式
  vtt: WebVTT 格式
+srt: SRT格式
 不填或填空：不生成字幕文件
      * @param integer $SubtitleType 智能字幕字幕语言类型
 0: 源语言

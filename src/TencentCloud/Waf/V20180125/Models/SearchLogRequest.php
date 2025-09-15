@@ -24,12 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFrom(integer $From) 设置要检索分析的日志的起始时间，Unix时间戳（毫秒）
  * @method integer getTo() 获取要检索分析的日志的结束时间，Unix时间戳（毫秒）
  * @method void setTo(integer $To) 设置要检索分析的日志的结束时间，Unix时间戳（毫秒）
- * @method string getQuery() 获取检索分析语句，最大长度为12KB
-语句由 <a href="https://cloud.tencent.com/document/product/614/47044" target="_blank">[检索条件]</a> | <a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>构成，无需对日志进行统计分析时，可省略其中的管道符<code> | </code>及SQL语句
-使用*或空字符串可查询所有日志
- * @method void setQuery(string $Query) 设置检索分析语句，最大长度为12KB
-语句由 <a href="https://cloud.tencent.com/document/product/614/47044" target="_blank">[检索条件]</a> | <a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>构成，无需对日志进行统计分析时，可省略其中的管道符<code> | </code>及SQL语句
-使用*或空字符串可查询所有日志
+ * @method string getQuery() 获取检索分析语句，需要进行base64编码，最大长度为12KB语句由 <a href="https://cloud.tencent.com/document/product/614/47044" target="_blank">[检索条件]</a> | <a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>构成，无需对日志进行统计分析时，可省略其中的管道符<code> | </code>及SQL语句使用*或空字符串可查询所有日志
+ * @method void setQuery(string $Query) 设置检索分析语句，需要进行base64编码，最大长度为12KB语句由 <a href="https://cloud.tencent.com/document/product/614/47044" target="_blank">[检索条件]</a> | <a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>构成，无需对日志进行统计分析时，可省略其中的管道符<code> | </code>及SQL语句使用*或空字符串可查询所有日志
  * @method integer getSyntaxRule() 获取检索语法规则，默认值为0，推荐使用1 (CQL语法)。
 0：Lucene语法，1：CQL语法。
 详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>
@@ -112,9 +108,7 @@ class SearchLogRequest extends AbstractModel
     public $To;
 
     /**
-     * @var string 检索分析语句，最大长度为12KB
-语句由 <a href="https://cloud.tencent.com/document/product/614/47044" target="_blank">[检索条件]</a> | <a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>构成，无需对日志进行统计分析时，可省略其中的管道符<code> | </code>及SQL语句
-使用*或空字符串可查询所有日志
+     * @var string 检索分析语句，需要进行base64编码，最大长度为12KB语句由 <a href="https://cloud.tencent.com/document/product/614/47044" target="_blank">[检索条件]</a> | <a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>构成，无需对日志进行统计分析时，可省略其中的管道符<code> | </code>及SQL语句使用*或空字符串可查询所有日志
      */
     public $Query;
 
@@ -187,9 +181,7 @@ class SearchLogRequest extends AbstractModel
     /**
      * @param integer $From 要检索分析的日志的起始时间，Unix时间戳（毫秒）
      * @param integer $To 要检索分析的日志的结束时间，Unix时间戳（毫秒）
-     * @param string $Query 检索分析语句，最大长度为12KB
-语句由 <a href="https://cloud.tencent.com/document/product/614/47044" target="_blank">[检索条件]</a> | <a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>构成，无需对日志进行统计分析时，可省略其中的管道符<code> | </code>及SQL语句
-使用*或空字符串可查询所有日志
+     * @param string $Query 检索分析语句，需要进行base64编码，最大长度为12KB语句由 <a href="https://cloud.tencent.com/document/product/614/47044" target="_blank">[检索条件]</a> | <a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>构成，无需对日志进行统计分析时，可省略其中的管道符<code> | </code>及SQL语句使用*或空字符串可查询所有日志
      * @param integer $SyntaxRule 检索语法规则，默认值为0，推荐使用1 (CQL语法)。
 0：Lucene语法，1：CQL语法。
 详细说明参见<a href="https://cloud.tencent.com/document/product/614/47044#RetrievesConditionalRules" target="_blank">检索条件语法规则</a>

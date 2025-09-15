@@ -60,12 +60,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHotPeriod(integer $HotPeriod) 设置0：关闭日志沉降。
 非0：开启日志沉降后标准存储的天数，HotPeriod需要大于等于7，且小于Period。
 仅在StorageType为 hot 时生效。
- * @method string getTopicId() 获取主题自定义ID，格式为：用户自定义部分-APPID。未填写该参数时将自动生成ID。
+ * @method string getTopicId() 获取主题自定义ID，格式为：用户自定义部分-用户APPID。未填写该参数时将自动生成ID。
 - 用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符
-- APPID可在https://console.cloud.tencent.com/developer页面查询
- * @method void setTopicId(string $TopicId) 设置主题自定义ID，格式为：用户自定义部分-APPID。未填写该参数时将自动生成ID。
+- 尾部需要使用-拼接用户APPID，APPID可在https://console.cloud.tencent.com/developer页面查询。
+- 如果指定该字段，需保证全地域唯一
+ * @method void setTopicId(string $TopicId) 设置主题自定义ID，格式为：用户自定义部分-用户APPID。未填写该参数时将自动生成ID。
 - 用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符
-- APPID可在https://console.cloud.tencent.com/developer页面查询
+- 尾部需要使用-拼接用户APPID，APPID可在https://console.cloud.tencent.com/developer页面查询。
+- 如果指定该字段，需保证全地域唯一
  * @method boolean getIsWebTracking() 获取免鉴权开关。 false：关闭； true：开启。默认为false。
 开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
  * @method void setIsWebTracking(boolean $IsWebTracking) 设置免鉴权开关。 false：关闭； true：开启。默认为false。
@@ -136,9 +138,10 @@ class CreateTopicRequest extends AbstractModel
     public $HotPeriod;
 
     /**
-     * @var string 主题自定义ID，格式为：用户自定义部分-APPID。未填写该参数时将自动生成ID。
+     * @var string 主题自定义ID，格式为：用户自定义部分-用户APPID。未填写该参数时将自动生成ID。
 - 用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符
-- APPID可在https://console.cloud.tencent.com/developer页面查询
+- 尾部需要使用-拼接用户APPID，APPID可在https://console.cloud.tencent.com/developer页面查询。
+- 如果指定该字段，需保证全地域唯一
      */
     public $TopicId;
 
@@ -174,9 +177,10 @@ class CreateTopicRequest extends AbstractModel
      * @param integer $HotPeriod 0：关闭日志沉降。
 非0：开启日志沉降后标准存储的天数，HotPeriod需要大于等于7，且小于Period。
 仅在StorageType为 hot 时生效。
-     * @param string $TopicId 主题自定义ID，格式为：用户自定义部分-APPID。未填写该参数时将自动生成ID。
+     * @param string $TopicId 主题自定义ID，格式为：用户自定义部分-用户APPID。未填写该参数时将自动生成ID。
 - 用户自定义部分仅支持小写字母、数字和-，且不能以-开头和结尾，长度为3至40字符
-- APPID可在https://console.cloud.tencent.com/developer页面查询
+- 尾部需要使用-拼接用户APPID，APPID可在https://console.cloud.tencent.com/developer页面查询。
+- 如果指定该字段，需保证全地域唯一
      * @param boolean $IsWebTracking 免鉴权开关。 false：关闭； true：开启。默认为false。
 开启后将支持指定操作匿名访问该日志主题。详情请参见[日志主题](https://cloud.tencent.com/document/product/614/41035)。
      * @param TopicExtendInfo $Extends 日志主题扩展信息

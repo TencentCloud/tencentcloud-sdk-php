@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setSmartSubtitlesTaskResult(array $SmartSubtitlesTaskResult) 设置智能字幕任务的执行结果
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method SmartEraseTaskResult getSmartEraseTaskResult() 获取智能擦除任务的执行结果
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setSmartEraseTaskResult(SmartEraseTaskResult $SmartEraseTaskResult) 设置智能擦除任务的执行结果
+注意：此字段可能返回 null，表示取不到有效值。
  */
 class WorkflowTask extends AbstractModel
 {
@@ -126,6 +130,12 @@ class WorkflowTask extends AbstractModel
     public $SmartSubtitlesTaskResult;
 
     /**
+     * @var SmartEraseTaskResult 智能擦除任务的执行结果
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $SmartEraseTaskResult;
+
+    /**
      * @param string $TaskId 媒体处理任务 ID。
      * @param string $Status 任务流状态，取值：
 <li>PROCESSING：处理中；</li>
@@ -143,6 +153,8 @@ class WorkflowTask extends AbstractModel
      * @param ScheduleQualityControlTaskResult $AiQualityControlTaskResult 媒体质检任务的执行状态与结果。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $SmartSubtitlesTaskResult 智能字幕任务的执行结果
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param SmartEraseTaskResult $SmartEraseTaskResult 智能擦除任务的执行结果
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -232,6 +244,11 @@ class WorkflowTask extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SmartSubtitlesTaskResult, $obj);
             }
+        }
+
+        if (array_key_exists("SmartEraseTaskResult",$param) and $param["SmartEraseTaskResult"] !== null) {
+            $this->SmartEraseTaskResult = new SmartEraseTaskResult();
+            $this->SmartEraseTaskResult->deserialize($param["SmartEraseTaskResult"]);
         }
     }
 }

@@ -278,6 +278,9 @@ use TencentCloud\Common\AbstractModel;
 <ul><li> <b>空值（默认）</b> :无限制，可在任何场景进入签署流程。</li><li> <b>link</b> :选择此选项后，将无法通过控制台或电子签小程序列表进入填写或签署操作，仅可预览合同。填写或签署流程只能通过短信或发起方提供的专用链接进行。</li></ul>
  * @method void setSignEndpoints(array $SignEndpoints) 设置进入签署流程的限制，目前支持以下选项：
 <ul><li> <b>空值（默认）</b> :无限制，可在任何场景进入签署流程。</li><li> <b>link</b> :选择此选项后，将无法通过控制台或电子签小程序列表进入填写或签署操作，仅可预览合同。填写或签署流程只能通过短信或发起方提供的专用链接进行。</li></ul>
+ * @method RegisterInfo getRegisterInfo() 获取快速注册相关信息
+
+ * @method void setRegisterInfo(RegisterInfo $RegisterInfo) 设置快速注册相关信息
  */
 class ApproverInfo extends AbstractModel
 {
@@ -507,6 +510,12 @@ class ApproverInfo extends AbstractModel
     public $SignEndpoints;
 
     /**
+     * @var RegisterInfo 快速注册相关信息
+
+     */
+    public $RegisterInfo;
+
+    /**
      * @param integer $ApproverType 在指定签署方时，可选择企业B端或个人C端等不同的参与者类型，可选类型如下:
 **0**：企业
 **1**：个人
@@ -636,6 +645,7 @@ class ApproverInfo extends AbstractModel
 ![image](https://qcloudimg.tencent-cloud.cn/raw/e004195ee4cb98a7f9bc12eb4a0a0b77.png)
      * @param array $SignEndpoints 进入签署流程的限制，目前支持以下选项：
 <ul><li> <b>空值（默认）</b> :无限制，可在任何场景进入签署流程。</li><li> <b>link</b> :选择此选项后，将无法通过控制台或电子签小程序列表进入填写或签署操作，仅可预览合同。填写或签署流程只能通过短信或发起方提供的专用链接进行。</li></ul>
+     * @param RegisterInfo $RegisterInfo 快速注册相关信息
      */
     function __construct()
     {
@@ -760,6 +770,11 @@ class ApproverInfo extends AbstractModel
 
         if (array_key_exists("SignEndpoints",$param) and $param["SignEndpoints"] !== null) {
             $this->SignEndpoints = $param["SignEndpoints"];
+        }
+
+        if (array_key_exists("RegisterInfo",$param) and $param["RegisterInfo"] !== null) {
+            $this->RegisterInfo = new RegisterInfo();
+            $this->RegisterInfo->deserialize($param["RegisterInfo"]);
         }
     }
 }

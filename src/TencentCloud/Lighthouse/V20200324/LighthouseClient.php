@@ -140,6 +140,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
  * @method Models\DescribeInstancesReturnableResponse DescribeInstancesReturnable(Models\DescribeInstancesReturnableRequest $req) 本接口（DescribeInstancesReturnable）用于查询实例是否可退还。
  * @method Models\DescribeInstancesTrafficPackagesResponse DescribeInstancesTrafficPackages(Models\DescribeInstancesTrafficPackagesRequest $req) 本接口（DescribeInstancesTrafficPackages）用于查询一个或多个实例的流量包详情。
  * @method Models\DescribeKeyPairsResponse DescribeKeyPairs(Models\DescribeKeyPairsRequest $req) 本接口 (DescribeKeyPairs) 用于查询用户密钥对信息。
+ * @method Models\DescribeMcpServerTemplatesResponse DescribeMcpServerTemplates(Models\DescribeMcpServerTemplatesRequest $req) 本接口（DescribeMcpServerTemplates）用于查询MCP Server模板列表。
  * @method Models\DescribeMcpServersResponse DescribeMcpServers(Models\DescribeMcpServersRequest $req) 本接口（DescribeMcpServers）用于查询MCP Server列表。
  * @method Models\DescribeModifyInstanceBundlesResponse DescribeModifyInstanceBundles(Models\DescribeModifyInstanceBundlesRequest $req) 本接口（DescribeModifyInstanceBundles）用于查询实例可变更套餐列表。
  * @method Models\DescribeRegionsResponse DescribeRegions(Models\DescribeRegionsRequest $req) 本接口（DescribeRegions）用于查询地域信息。
@@ -183,7 +184,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 <li> ATTACHED（已挂载）</li>
 <li> UNATTACHED（待挂载）</li>
  * @method Models\ModifyDisksBackupQuotaResponse ModifyDisksBackupQuota(Models\ModifyDisksBackupQuotaRequest $req) 本接口(ModifyDisksBackupQuota)用于调整云硬盘备份点配额。
-该操作目前仅支持云硬盘类型为数据盘且状态是ATTACHED（已挂载）或 UNATTACHED（待挂载）的云硬盘。
+该操作目前仅支持状态是ATTACHED（已挂载）或 UNATTACHED（待挂载）的云硬盘。
 支持批量操作。每次批量请求云硬盘数量上限为15个。
  * @method Models\ModifyDisksRenewFlagResponse ModifyDisksRenewFlag(Models\ModifyDisksRenewFlagRequest $req) 本接口（ModifyDisksRenewFlag）用于修改云硬盘续费标识。
 云硬盘需要处于以下状态：

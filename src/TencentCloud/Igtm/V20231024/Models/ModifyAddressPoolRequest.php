@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPoolName(string $PoolName) 设置地址池名称，不允许重复
  * @method string getTrafficStrategy() 获取流量策略: WEIGHT负载均衡，ALL解析全部
  * @method void setTrafficStrategy(string $TrafficStrategy) 设置流量策略: WEIGHT负载均衡，ALL解析全部
- * @method integer getMonitorId() 获取监控器id
- * @method void setMonitorId(integer $MonitorId) 设置监控器id
- * @method array getAddressSet() 获取地址列表
- * @method void setAddressSet(array $AddressSet) 设置地址列表
+ * @method integer getMonitorId() 获取监控器id，当监控器已关联策略时，此字段必传
+ * @method void setMonitorId(integer $MonitorId) 设置监控器id，当监控器已关联策略时，此字段必传
+ * @method array getAddressSet() 获取地址列表，全量更新逻辑，对于存量不需要修改的地址信息也需要带上(其中参数里的AddressId需传入正确的值)，否则会被删除。
+ * @method void setAddressSet(array $AddressSet) 设置地址列表，全量更新逻辑，对于存量不需要修改的地址信息也需要带上(其中参数里的AddressId需传入正确的值)，否则会被删除。
  */
 class ModifyAddressPoolRequest extends AbstractModel
 {
@@ -49,12 +49,12 @@ class ModifyAddressPoolRequest extends AbstractModel
     public $TrafficStrategy;
 
     /**
-     * @var integer 监控器id
+     * @var integer 监控器id，当监控器已关联策略时，此字段必传
      */
     public $MonitorId;
 
     /**
-     * @var array 地址列表
+     * @var array 地址列表，全量更新逻辑，对于存量不需要修改的地址信息也需要带上(其中参数里的AddressId需传入正确的值)，否则会被删除。
      */
     public $AddressSet;
 
@@ -62,8 +62,8 @@ class ModifyAddressPoolRequest extends AbstractModel
      * @param integer $PoolId 地址池id
      * @param string $PoolName 地址池名称，不允许重复
      * @param string $TrafficStrategy 流量策略: WEIGHT负载均衡，ALL解析全部
-     * @param integer $MonitorId 监控器id
-     * @param array $AddressSet 地址列表
+     * @param integer $MonitorId 监控器id，当监控器已关联策略时，此字段必传
+     * @param array $AddressSet 地址列表，全量更新逻辑，对于存量不需要修改的地址信息也需要带上(其中参数里的AddressId需传入正确的值)，否则会被删除。
      */
     function __construct()
     {

@@ -72,8 +72,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxGroupNum(integer $MaxGroupNum) 设置最大分组数
  * @method integer getCvm() 获取售卖类型,0:标准版,1:专业版
  * @method void setCvm(integer $Cvm) 设置售卖类型,0:标准版,1:专业版
- * @method string getInstanceType() 获取类型
- * @method void setInstanceType(string $InstanceType) 设置类型
+ * @method string getInstanceType() 获取实例类型  枚举列表: 
+profession  :专业版    
+standards2  :标准版
+premium   :高级版
+serverless  :serverless版
+ * @method void setInstanceType(string $InstanceType) 设置实例类型  枚举列表: 
+profession  :专业版    
+standards2  :标准版
+premium   :高级版
+serverless  :serverless版
  * @method array getFeatures() 获取表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。
  * @method void setFeatures(array $Features) 设置表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。
  * @method DynamicRetentionTime getRetentionTimeConfig() 获取动态消息保留策略
@@ -82,24 +90,36 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxConnection(integer $MaxConnection) 设置最大连接数
  * @method integer getPublicNetwork() 获取公网带宽
  * @method void setPublicNetwork(integer $PublicNetwork) 设置公网带宽
- * @method string getDeleteRouteTimestamp() 获取时间
- * @method void setDeleteRouteTimestamp(string $DeleteRouteTimestamp) 设置时间
+ * @method string getDeleteRouteTimestamp() 获取该字段已废弃,无实际含义
+ * @method void setDeleteRouteTimestamp(string $DeleteRouteTimestamp) 设置该字段已废弃,无实际含义
  * @method integer getRemainingPartitions() 获取剩余创建分区数
  * @method void setRemainingPartitions(integer $RemainingPartitions) 设置剩余创建分区数
  * @method integer getRemainingTopics() 获取剩余创建主题数
  * @method void setRemainingTopics(integer $RemainingTopics) 设置剩余创建主题数
  * @method DynamicDiskConfig getDynamicDiskConfig() 获取动态硬盘扩容策略
  * @method void setDynamicDiskConfig(DynamicDiskConfig $DynamicDiskConfig) 设置动态硬盘扩容策略
- * @method string getInstanceChargeType() 获取实例计费类型
- * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例计费类型
- * @method string getClusterType() 获取集群类型
- * @method void setClusterType(string $ClusterType) 设置集群类型
+ * @method string getInstanceChargeType() 获取实例计费类型  POSTPAID_BY_HOUR 按小时付费; PREPAID 包年包月
+ * @method void setInstanceChargeType(string $InstanceChargeType) 设置实例计费类型  POSTPAID_BY_HOUR 按小时付费; PREPAID 包年包月
+ * @method string getClusterType() 获取集群类型  
+CLOUD_IDC IDC集群
+CLOUD_CVM_SHARE CVM共享集群
+CLOUD_CVM_YUNTI 云梯CVM集群
+CLOUD_CVM    CVM集群
+CLOUD_CDC CDC集群
+CLOUD_EKS_TSE EKS集群
+ * @method void setClusterType(string $ClusterType) 设置集群类型  
+CLOUD_IDC IDC集群
+CLOUD_CVM_SHARE CVM共享集群
+CLOUD_CVM_YUNTI 云梯CVM集群
+CLOUD_CVM    CVM集群
+CLOUD_CDC CDC集群
+CLOUD_EKS_TSE EKS集群
  * @method integer getFreePartitionNumber() 获取免费分区数量
  * @method void setFreePartitionNumber(integer $FreePartitionNumber) 设置免费分区数量
  * @method integer getElasticFloatBandwidth() 获取弹性带宽上浮值
  * @method void setElasticFloatBandwidth(integer $ElasticFloatBandwidth) 设置弹性带宽上浮值
- * @method string getCustomCertId() 获取ssl自定义证书id
- * @method void setCustomCertId(string $CustomCertId) 设置ssl自定义证书id
+ * @method string getCustomCertId() 获取ssl自定义证书id  仅自定义证书实例集群返回
+ * @method void setCustomCertId(string $CustomCertId) 设置ssl自定义证书id  仅自定义证书实例集群返回
  * @method integer getUncleanLeaderElectionEnable() 获取集群topic默认 unclean.leader.election.enable配置: 1 开启 0 关闭
  * @method void setUncleanLeaderElectionEnable(integer $UncleanLeaderElectionEnable) 设置集群topic默认 unclean.leader.election.enable配置: 1 开启 0 关闭
  * @method integer getDeleteProtectionEnable() 获取实例删除保护开关: 1 开启 0 关闭
@@ -238,7 +258,11 @@ class InstanceAttributesResponse extends AbstractModel
     public $Cvm;
 
     /**
-     * @var string 类型
+     * @var string 实例类型  枚举列表: 
+profession  :专业版    
+standards2  :标准版
+premium   :高级版
+serverless  :serverless版
      */
     public $InstanceType;
 
@@ -263,7 +287,7 @@ class InstanceAttributesResponse extends AbstractModel
     public $PublicNetwork;
 
     /**
-     * @var string 时间
+     * @var string 该字段已废弃,无实际含义
      */
     public $DeleteRouteTimestamp;
 
@@ -283,12 +307,18 @@ class InstanceAttributesResponse extends AbstractModel
     public $DynamicDiskConfig;
 
     /**
-     * @var string 实例计费类型
+     * @var string 实例计费类型  POSTPAID_BY_HOUR 按小时付费; PREPAID 包年包月
      */
     public $InstanceChargeType;
 
     /**
-     * @var string 集群类型
+     * @var string 集群类型  
+CLOUD_IDC IDC集群
+CLOUD_CVM_SHARE CVM共享集群
+CLOUD_CVM_YUNTI 云梯CVM集群
+CLOUD_CVM    CVM集群
+CLOUD_CDC CDC集群
+CLOUD_EKS_TSE EKS集群
      */
     public $ClusterType;
 
@@ -303,7 +333,7 @@ class InstanceAttributesResponse extends AbstractModel
     public $ElasticFloatBandwidth;
 
     /**
-     * @var string ssl自定义证书id
+     * @var string ssl自定义证书id  仅自定义证书实例集群返回
      */
     public $CustomCertId;
 
@@ -344,20 +374,30 @@ class InstanceAttributesResponse extends AbstractModel
      * @param string $Version ckafka集群实例版本
      * @param integer $MaxGroupNum 最大分组数
      * @param integer $Cvm 售卖类型,0:标准版,1:专业版
-     * @param string $InstanceType 类型
+     * @param string $InstanceType 实例类型  枚举列表: 
+profession  :专业版    
+standards2  :标准版
+premium   :高级版
+serverless  :serverless版
      * @param array $Features 表示该实例支持的特性。FEATURE_SUBNET_ACL:表示acl策略支持设置子网。
      * @param DynamicRetentionTime $RetentionTimeConfig 动态消息保留策略
      * @param integer $MaxConnection 最大连接数
      * @param integer $PublicNetwork 公网带宽
-     * @param string $DeleteRouteTimestamp 时间
+     * @param string $DeleteRouteTimestamp 该字段已废弃,无实际含义
      * @param integer $RemainingPartitions 剩余创建分区数
      * @param integer $RemainingTopics 剩余创建主题数
      * @param DynamicDiskConfig $DynamicDiskConfig 动态硬盘扩容策略
-     * @param string $InstanceChargeType 实例计费类型
-     * @param string $ClusterType 集群类型
+     * @param string $InstanceChargeType 实例计费类型  POSTPAID_BY_HOUR 按小时付费; PREPAID 包年包月
+     * @param string $ClusterType 集群类型  
+CLOUD_IDC IDC集群
+CLOUD_CVM_SHARE CVM共享集群
+CLOUD_CVM_YUNTI 云梯CVM集群
+CLOUD_CVM    CVM集群
+CLOUD_CDC CDC集群
+CLOUD_EKS_TSE EKS集群
      * @param integer $FreePartitionNumber 免费分区数量
      * @param integer $ElasticFloatBandwidth 弹性带宽上浮值
-     * @param string $CustomCertId ssl自定义证书id
+     * @param string $CustomCertId ssl自定义证书id  仅自定义证书实例集群返回
      * @param integer $UncleanLeaderElectionEnable 集群topic默认 unclean.leader.election.enable配置: 1 开启 0 关闭
      * @param integer $DeleteProtectionEnable 实例删除保护开关: 1 开启 0 关闭
      */

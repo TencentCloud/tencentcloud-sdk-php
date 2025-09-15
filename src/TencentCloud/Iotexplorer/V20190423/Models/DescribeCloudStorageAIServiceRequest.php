@@ -25,11 +25,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDeviceName() 获取设备名称
  * @method void setDeviceName(string $DeviceName) 设置设备名称
  * @method string getServiceType() 获取云存 AI 服务类型。可选值：
-- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
  * @method void setServiceType(string $ServiceType) 设置云存 AI 服务类型。可选值：
-- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
+ * @method integer getChannelId() 获取通道 ID
+ * @method void setChannelId(integer $ChannelId) 设置通道 ID
+ * @method string getUserId() 获取用户 ID
+ * @method void setUserId(string $UserId) 设置用户 ID
  */
 class DescribeCloudStorageAIServiceRequest extends AbstractModel
 {
@@ -45,17 +47,27 @@ class DescribeCloudStorageAIServiceRequest extends AbstractModel
 
     /**
      * @var string 云存 AI 服务类型。可选值：
-- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
      */
     public $ServiceType;
 
     /**
+     * @var integer 通道 ID
+     */
+    public $ChannelId;
+
+    /**
+     * @var string 用户 ID
+     */
+    public $UserId;
+
+    /**
      * @param string $ProductId 产品 ID
      * @param string $DeviceName 设备名称
      * @param string $ServiceType 云存 AI 服务类型。可选值：
-- `RealtimeObjectDetect`：目标检测
 - `Highlight`：视频浓缩
+     * @param integer $ChannelId 通道 ID
+     * @param string $UserId 用户 ID
      */
     function __construct()
     {
@@ -80,6 +92,14 @@ class DescribeCloudStorageAIServiceRequest extends AbstractModel
 
         if (array_key_exists("ServiceType",$param) and $param["ServiceType"] !== null) {
             $this->ServiceType = $param["ServiceType"];
+        }
+
+        if (array_key_exists("ChannelId",$param) and $param["ChannelId"] !== null) {
+            $this->ChannelId = $param["ChannelId"];
+        }
+
+        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
+            $this->UserId = $param["UserId"];
         }
     }
 }

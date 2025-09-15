@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setBlindWatermarkConfig(BlindWatermarkConfig $BlindWatermarkConfig) 设置盲水印配置。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method BeautyConfig getBeautyConfig() 获取美颜配置。
+ * @method void setBeautyConfig(BeautyConfig $BeautyConfig) 设置美颜配置。
  */
 class ImageTaskInput extends AbstractModel
 {
@@ -64,6 +66,11 @@ class ImageTaskInput extends AbstractModel
     public $BlindWatermarkConfig;
 
     /**
+     * @var BeautyConfig 美颜配置。
+     */
+    public $BeautyConfig;
+
+    /**
      * @param ImageEncodeConfig $EncodeConfig 图片编码配置。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param ImageEnhanceConfig $EnhanceConfig 图片增强配置。
@@ -72,6 +79,7 @@ class ImageTaskInput extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param BlindWatermarkConfig $BlindWatermarkConfig 盲水印配置。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param BeautyConfig $BeautyConfig 美颜配置。
      */
     function __construct()
     {
@@ -104,6 +112,11 @@ class ImageTaskInput extends AbstractModel
         if (array_key_exists("BlindWatermarkConfig",$param) and $param["BlindWatermarkConfig"] !== null) {
             $this->BlindWatermarkConfig = new BlindWatermarkConfig();
             $this->BlindWatermarkConfig->deserialize($param["BlindWatermarkConfig"]);
+        }
+
+        if (array_key_exists("BeautyConfig",$param) and $param["BeautyConfig"] !== null) {
+            $this->BeautyConfig = new BeautyConfig();
+            $this->BeautyConfig->deserialize($param["BeautyConfig"]);
         }
     }
 }

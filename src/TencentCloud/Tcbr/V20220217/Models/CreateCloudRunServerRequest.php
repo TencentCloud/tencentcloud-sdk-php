@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServerConfig(ServerBaseConfig $ServerConfig) 设置服务配置信息(已废弃)
  * @method array getItems() 获取服务配置信息
  * @method void setItems(array $Items) 设置服务配置信息
+ * @method CreateVpcInfo getVpcInfo() 获取vpc 信息
+ * @method void setVpcInfo(CreateVpcInfo $VpcInfo) 设置vpc 信息
  */
 class CreateCloudRunServerRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class CreateCloudRunServerRequest extends AbstractModel
     public $Items;
 
     /**
+     * @var CreateVpcInfo vpc 信息
+     */
+    public $VpcInfo;
+
+    /**
      * @param string $EnvId 环境Id
      * @param string $ServerName 服务名
      * @param DeployParam $DeployInfo 部署信息
      * @param ServerBaseConfig $ServerConfig 服务配置信息(已废弃)
      * @param array $Items 服务配置信息
+     * @param CreateVpcInfo $VpcInfo vpc 信息
      */
     function __construct()
     {
@@ -103,6 +111,11 @@ class CreateCloudRunServerRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Items, $obj);
             }
+        }
+
+        if (array_key_exists("VpcInfo",$param) and $param["VpcInfo"] !== null) {
+            $this->VpcInfo = new CreateVpcInfo();
+            $this->VpcInfo->deserialize($param["VpcInfo"]);
         }
     }
 }

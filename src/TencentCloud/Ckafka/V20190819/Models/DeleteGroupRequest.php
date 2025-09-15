@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取。
  * @method void setInstanceId(string $InstanceId) 设置ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取。
- * @method string getGroup() 获取消费组名称，可通过DescribeConsumerGroup接口获取。
- * @method void setGroup(string $Group) 设置消费组名称，可通过DescribeConsumerGroup接口获取。
+ * @method string getGroup() 获取消费组名称，可通过[DescribeConsumerGroup](https://cloud.tencent.com/document/product/597/40841)接口获取。
+ * @method void setGroup(string $Group) 设置消费组名称，可通过[DescribeConsumerGroup](https://cloud.tencent.com/document/product/597/40841)接口获取。
  */
 class DeleteGroupRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DeleteGroupRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 消费组名称，可通过DescribeConsumerGroup接口获取。
+     * @var string 消费组名称，可通过[DescribeConsumerGroup](https://cloud.tencent.com/document/product/597/40841)接口获取。
      */
     public $Group;
 
     /**
      * @param string $InstanceId ckafka集群实例Id，可通过[DescribeInstances](https://cloud.tencent.com/document/product/597/40835)接口获取。
-     * @param string $Group 消费组名称，可通过DescribeConsumerGroup接口获取。
+     * @param string $Group 消费组名称，可通过[DescribeConsumerGroup](https://cloud.tencent.com/document/product/597/40841)接口获取。
      */
     function __construct()
     {

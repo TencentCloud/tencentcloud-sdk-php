@@ -26,10 +26,8 @@ use TencentCloud\Common\AbstractModel;
 (若UserId不填，则UserIdString必填；两者选其一；两者都填以UserIdString为准)
  * @method void setUserId(integer $UserId) 设置需要删除送检的用户号。示例：1234
 (若UserId不填，则UserIdString必填；两者选其一；两者都填以UserIdString为准)
- * @method string getUserIdString() 获取需要删除送检的用户号。示例："1234"
-(若UserIdString不填，则UserId必填；两者选其一；两者都填以UserIdString为准)
- * @method void setUserIdString(string $UserIdString) 设置需要删除送检的用户号。示例："1234"
-(若UserIdString不填，则UserId必填；两者选其一；两者都填以UserIdString为准)
+ * @method string getUserIdString() 获取需要删除送检的用户号，长度不超过1024字符。示例："1234"(若UserIdString不填，则UserId必填；两者选其一；两者都填以UserIdString为准)
+ * @method void setUserIdString(string $UserIdString) 设置需要删除送检的用户号，长度不超过1024字符。示例："1234"(若UserIdString不填，则UserId必填；两者选其一；两者都填以UserIdString为准)
  */
 class DeleteScanUserRequest extends AbstractModel
 {
@@ -45,8 +43,7 @@ class DeleteScanUserRequest extends AbstractModel
     public $UserId;
 
     /**
-     * @var string 需要删除送检的用户号。示例："1234"
-(若UserIdString不填，则UserId必填；两者选其一；两者都填以UserIdString为准)
+     * @var string 需要删除送检的用户号，长度不超过1024字符。示例："1234"(若UserIdString不填，则UserId必填；两者选其一；两者都填以UserIdString为准)
      */
     public $UserIdString;
 
@@ -54,8 +51,7 @@ class DeleteScanUserRequest extends AbstractModel
      * @param integer $BizId 应用ID，登录控制台 - 服务管理创建应用得到的AppID
      * @param integer $UserId 需要删除送检的用户号。示例：1234
 (若UserId不填，则UserIdString必填；两者选其一；两者都填以UserIdString为准)
-     * @param string $UserIdString 需要删除送检的用户号。示例："1234"
-(若UserIdString不填，则UserId必填；两者选其一；两者都填以UserIdString为准)
+     * @param string $UserIdString 需要删除送检的用户号，长度不超过1024字符。示例："1234"(若UserIdString不填，则UserId必填；两者选其一；两者都填以UserIdString为准)
      */
     function __construct()
     {

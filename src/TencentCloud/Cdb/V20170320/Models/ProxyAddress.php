@@ -58,6 +58,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccessMode(string $AccessMode) 设置接入模式
  * @method boolean getAutoLoadBalance() 获取是否开启自动负载均衡
  * @method void setAutoLoadBalance(boolean $AutoLoadBalance) 设置是否开启自动负载均衡
+ * @method boolean getApNodeAsRoNode() 获取是否把libra当作ro节点
+ * @method void setApNodeAsRoNode(boolean $ApNodeAsRoNode) 设置是否把libra当作ro节点
+ * @method boolean getApQueryToOtherNode() 获取libra节点故障，是否转发给其他节点
+ * @method void setApQueryToOtherNode(boolean $ApQueryToOtherNode) 设置libra节点故障，是否转发给其他节点
  */
 class ProxyAddress extends AbstractModel
 {
@@ -153,6 +157,16 @@ class ProxyAddress extends AbstractModel
     public $AutoLoadBalance;
 
     /**
+     * @var boolean 是否把libra当作ro节点
+     */
+    public $ApNodeAsRoNode;
+
+    /**
+     * @var boolean libra节点故障，是否转发给其他节点
+     */
+    public $ApQueryToOtherNode;
+
+    /**
      * @param string $ProxyAddressId 代理组地址ID
      * @param string $UniqVpcId 私有网络ID
      * @param string $UniqSubnetId 私有子网ID
@@ -172,6 +186,8 @@ class ProxyAddress extends AbstractModel
      * @param array $ProxyAllocation 实例读权重分配
      * @param string $AccessMode 接入模式
      * @param boolean $AutoLoadBalance 是否开启自动负载均衡
+     * @param boolean $ApNodeAsRoNode 是否把libra当作ro节点
+     * @param boolean $ApQueryToOtherNode libra节点故障，是否转发给其他节点
      */
     function __construct()
     {
@@ -261,6 +277,14 @@ class ProxyAddress extends AbstractModel
 
         if (array_key_exists("AutoLoadBalance",$param) and $param["AutoLoadBalance"] !== null) {
             $this->AutoLoadBalance = $param["AutoLoadBalance"];
+        }
+
+        if (array_key_exists("ApNodeAsRoNode",$param) and $param["ApNodeAsRoNode"] !== null) {
+            $this->ApNodeAsRoNode = $param["ApNodeAsRoNode"];
+        }
+
+        if (array_key_exists("ApQueryToOtherNode",$param) and $param["ApQueryToOtherNode"] !== null) {
+            $this->ApQueryToOtherNode = $param["ApQueryToOtherNode"];
         }
     }
 }

@@ -38,7 +38,7 @@ use TencentCloud\Asr\V20190614\Models as Models;
 <br>• 注意:  热词权重设置为11时，当前热词将升级为超级热词，建议仅将重要且必须生效的热词设置到11，设置过多权重为11的热词将影响整体字准率。
  * @method Models\CreateAsyncRecognitionTaskResponse CreateAsyncRecognitionTask(Models\CreateAsyncRecognitionTaskRequest $req) 本接口用于对语音流进行准实时识别，通过异步回调来返回识别结果。适用于直播审核等场景。
 <br>• 支持rtmp、rtsp等流媒体协议，以及各类基于http协议的直播流(不支持hls)
-<br>• 音频流时长无限制，服务会自动拉取音频流数据，若连续10分钟拉不到流数据时，服务会终止识别任务
+<br>• 音频流时长无限制，服务会自动拉取音频流数据，若连续10分钟拉不到流或流数据无人声时，服务会终止识别任务
 <br>• 服务通过回调的方式来提供识别结果，用户需要提供CallbackUrl。回调时机为一小段话(最长15秒)回调一次。
 <br>• 签名方法参考 [公共参数](https://cloud.tencent.com/document/api/1093/35640) 中签名方法v3。
 <br>• 默认单账号限制并发数为20路，如您有提高并发限制的需求，请提[工单](https://console.cloud.tencent.com/workorder/category)进行咨询。

@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxTokens(integer $MaxTokens) 设置最大生成的token数量，默认为4096，最大可设置为16384
  * @method boolean getEnableSearch() 获取是否启用联网搜索
  * @method void setEnableSearch(boolean $EnableSearch) 设置是否启用联网搜索
+ * @method Thinking getThinking() 获取思维链开关，本参数仅在deepseek v3.1时生效
+ * @method void setThinking(Thinking $Thinking) 设置思维链开关，本参数仅在deepseek v3.1时生效
  */
 class ChatCompletionsRequest extends AbstractModel
 {
@@ -81,6 +83,11 @@ class ChatCompletionsRequest extends AbstractModel
     public $EnableSearch;
 
     /**
+     * @var Thinking 思维链开关，本参数仅在deepseek v3.1时生效
+     */
+    public $Thinking;
+
+    /**
      * @param string $Model 模型名称
      * @param array $Messages 聊天上下文信息。
 说明：
@@ -92,6 +99,7 @@ class ChatCompletionsRequest extends AbstractModel
      * @param float $Temperature 控制生成的随机性，较高的值会产生更多样化的输出。
      * @param integer $MaxTokens 最大生成的token数量，默认为4096，最大可设置为16384
      * @param boolean $EnableSearch 是否启用联网搜索
+     * @param Thinking $Thinking 思维链开关，本参数仅在deepseek v3.1时生效
      */
     function __construct()
     {
@@ -133,6 +141,11 @@ class ChatCompletionsRequest extends AbstractModel
 
         if (array_key_exists("EnableSearch",$param) and $param["EnableSearch"] !== null) {
             $this->EnableSearch = $param["EnableSearch"];
+        }
+
+        if (array_key_exists("Thinking",$param) and $param["Thinking"] !== null) {
+            $this->Thinking = new Thinking();
+            $this->Thinking->deserialize($param["Thinking"]);
         }
     }
 }

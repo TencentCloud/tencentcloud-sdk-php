@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargets(array $Targets) 设置要修改标签的后端机器列表。
  * @method string getLocationId() 获取转发规则的ID，七层规则时需要此参数，4层规则不需要。
  * @method void setLocationId(string $LocationId) 设置转发规则的ID，七层规则时需要此参数，4层规则不需要。
- * @method string getTag() 获取后端服务修改后的标签。此参数的优先级低于前述[Target](https://cloud.tencent.com/document/api/214/30694#Target)中的Tag参数，即最终的标签以Target中的Tag参数值为准，仅当Target中的Weight参数为空时，才以RsTagRule中的Tag参数为准。
- * @method void setTag(string $Tag) 设置后端服务修改后的标签。此参数的优先级低于前述[Target](https://cloud.tencent.com/document/api/214/30694#Target)中的Tag参数，即最终的标签以Target中的Tag参数值为准，仅当Target中的Weight参数为空时，才以RsTagRule中的Tag参数为准。
+ * @method string getTag() 获取后端服务修改后的标签。此参数的优先级低于前述[Target](https://cloud.tencent.com/document/api/214/30694#Target)中的Tag参数，即最终的标签以Target中的Tag参数值为准，仅当Target中的Tag参数为空时，才以RsTagRule中的Tag参数为准。
+ * @method void setTag(string $Tag) 设置后端服务修改后的标签。此参数的优先级低于前述[Target](https://cloud.tencent.com/document/api/214/30694#Target)中的Tag参数，即最终的标签以Target中的Tag参数值为准，仅当Target中的Tag参数为空时，才以RsTagRule中的Tag参数为准。
  */
 class RsTagRule extends AbstractModel
 {
@@ -47,7 +47,7 @@ class RsTagRule extends AbstractModel
     public $LocationId;
 
     /**
-     * @var string 后端服务修改后的标签。此参数的优先级低于前述[Target](https://cloud.tencent.com/document/api/214/30694#Target)中的Tag参数，即最终的标签以Target中的Tag参数值为准，仅当Target中的Weight参数为空时，才以RsTagRule中的Tag参数为准。
+     * @var string 后端服务修改后的标签。此参数的优先级低于前述[Target](https://cloud.tencent.com/document/api/214/30694#Target)中的Tag参数，即最终的标签以Target中的Tag参数值为准，仅当Target中的Tag参数为空时，才以RsTagRule中的Tag参数为准。
      */
     public $Tag;
 
@@ -55,7 +55,7 @@ class RsTagRule extends AbstractModel
      * @param string $ListenerId 负载均衡监听器 ID。
      * @param array $Targets 要修改标签的后端机器列表。
      * @param string $LocationId 转发规则的ID，七层规则时需要此参数，4层规则不需要。
-     * @param string $Tag 后端服务修改后的标签。此参数的优先级低于前述[Target](https://cloud.tencent.com/document/api/214/30694#Target)中的Tag参数，即最终的标签以Target中的Tag参数值为准，仅当Target中的Weight参数为空时，才以RsTagRule中的Tag参数为准。
+     * @param string $Tag 后端服务修改后的标签。此参数的优先级低于前述[Target](https://cloud.tencent.com/document/api/214/30694#Target)中的Tag参数，即最终的标签以Target中的Tag参数值为准，仅当Target中的Tag参数为空时，才以RsTagRule中的Tag参数为准。
      */
     function __construct()
     {

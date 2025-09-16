@@ -34,6 +34,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\BatchOperateUserSignatureRulesResponse BatchOperateUserSignatureRules(Models\BatchOperateUserSignatureRulesRequest $req) 批量操作tiga子规则
  * @method Models\CreateAccessExportResponse CreateAccessExport(Models\CreateAccessExportRequest $req) 本接口用于创建访问日志导出
  * @method Models\CreateAreaBanRuleResponse CreateAreaBanRule(Models\CreateAreaBanRuleRequest $req) 添加（编辑）地域封禁中的地域信息
+ * @method Models\CreateBatchIpAccessControlResponse CreateBatchIpAccessControl(Models\CreateBatchIpAccessControlRequest $req) 批量IP黑白名单新增接口
  * @method Models\CreateDealsResponse CreateDeals(Models\CreateDealsRequest $req) 计费资源购买、续费下单接口
  * @method Models\CreateExportResponse CreateExport(Models\CreateExportRequest $req) 本接口仅创建下载任务，任务返回的下载地址，请用户调用DescribeExports查看任务列表。其中有下载地址CosPath参数。参考文档https://cloud.tencent.com/document/product/614/56449
  * @method Models\CreateHostResponse CreateHost(Models\CreateHostRequest $req) clb-waf中添加防护域名
@@ -46,6 +47,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\DeleteAntiInfoLeakRuleResponse DeleteAntiInfoLeakRule(Models\DeleteAntiInfoLeakRuleRequest $req) 信息防泄漏删除规则
  * @method Models\DeleteAttackDownloadRecordResponse DeleteAttackDownloadRecord(Models\DeleteAttackDownloadRecordRequest $req) 删除攻击日志下载任务记录
  * @method Models\DeleteAttackWhiteRuleResponse DeleteAttackWhiteRule(Models\DeleteAttackWhiteRuleRequest $req) 供用户控制台调用，删除Tiga规则引擎白名单。
+ * @method Models\DeleteBatchIpAccessControlResponse DeleteBatchIpAccessControl(Models\DeleteBatchIpAccessControlRequest $req) 批量黑白名单删除接口
  * @method Models\DeleteBotSceneUCBRuleResponse DeleteBotSceneUCBRule(Models\DeleteBotSceneUCBRuleRequest $req) 场景化后删除Bot的UCB自定义规则
  * @method Models\DeleteCCRuleResponse DeleteCCRule(Models\DeleteCCRuleRequest $req) Waf  CC V2 Delete接口
  * @method Models\DeleteCustomRuleResponse DeleteCustomRule(Models\DeleteCustomRuleRequest $req) 删除自定义规则
@@ -155,6 +157,7 @@ use TencentCloud\Waf\V20180125\Models as Models;
  * @method Models\ModifyAreaBanRuleResponse ModifyAreaBanRule(Models\ModifyAreaBanRuleRequest $req) 添加（编辑）地域封禁中的地域信息
  * @method Models\ModifyAreaBanStatusResponse ModifyAreaBanStatus(Models\ModifyAreaBanStatusRequest $req) 修改防护域名的地域封禁状态
  * @method Models\ModifyAttackWhiteRuleResponse ModifyAttackWhiteRule(Models\ModifyAttackWhiteRuleRequest $req) 供用户控制台调用，修改Tiga规则引擎白名单。
+ * @method Models\ModifyBatchIpAccessControlResponse ModifyBatchIpAccessControl(Models\ModifyBatchIpAccessControlRequest $req) 批量IP黑白名单新增接口
  * @method Models\ModifyBotSceneStatusResponse ModifyBotSceneStatus(Models\ModifyBotSceneStatusRequest $req) bot子场景开关
  * @method Models\ModifyBotSceneUCBRuleResponse ModifyBotSceneUCBRule(Models\ModifyBotSceneUCBRuleRequest $req) 【接口复用】场景化后更新Bot的UCB自定义规则，两个调用位置：1.BOT全局白名单 2.BOT场景配置
  * @method Models\ModifyBotStatusResponse ModifyBotStatus(Models\ModifyBotStatusRequest $req) Bot_V2 bot总开关更新

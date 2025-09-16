@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeepaliveEnable(boolean $KeepaliveEnable) 设置是否开启长连接，此参数仅适用于HTTP/HTTPS目标组，0:关闭；1:开启， 默认关闭。
  * @method integer getSessionExpireTime() 获取会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。仅V2新版且后端转发协议为HTTP/HTTPS/GRPC目标组支持该参数。
  * @method void setSessionExpireTime(integer $SessionExpireTime) 设置会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。仅V2新版且后端转发协议为HTTP/HTTPS/GRPC目标组支持该参数。
+ * @method string getIpVersion() 获取IP版本类型。
+ * @method void setIpVersion(string $IpVersion) 设置IP版本类型。
  */
 class CreateTargetGroupRequest extends AbstractModel
 {
@@ -124,6 +126,11 @@ class CreateTargetGroupRequest extends AbstractModel
     public $SessionExpireTime;
 
     /**
+     * @var string IP版本类型。
+     */
+    public $IpVersion;
+
+    /**
      * @param string $TargetGroupName 目标组名称，限定50个字符
      * @param string $VpcId 目标组的vpcId属性，不填则使用默认vpc。
      * @param integer $Port 目标组的默认端口， 后续添加服务器时可使用该默认端口。全监听目标组不支持此参数，非全监听目标组Port和TargetGroupInstances.N中的port二者必填其一。
@@ -140,6 +147,7 @@ class CreateTargetGroupRequest extends AbstractModel
      * @param boolean $FullListenSwitch 全监听目标组标识，true表示是全监听目标组，false表示不是全监听目标组。仅V2新版类型目标组支持该参数。
      * @param boolean $KeepaliveEnable 是否开启长连接，此参数仅适用于HTTP/HTTPS目标组，0:关闭；1:开启， 默认关闭。
      * @param integer $SessionExpireTime 会话保持时间，单位：秒。可选值：30~3600，默认 0，表示不开启。仅V2新版且后端转发协议为HTTP/HTTPS/GRPC目标组支持该参数。
+     * @param string $IpVersion IP版本类型。
      */
     function __construct()
     {
@@ -215,6 +223,10 @@ class CreateTargetGroupRequest extends AbstractModel
 
         if (array_key_exists("SessionExpireTime",$param) and $param["SessionExpireTime"] !== null) {
             $this->SessionExpireTime = $param["SessionExpireTime"];
+        }
+
+        if (array_key_exists("IpVersion",$param) and $param["IpVersion"] !== null) {
+            $this->IpVersion = $param["IpVersion"];
         }
     }
 }

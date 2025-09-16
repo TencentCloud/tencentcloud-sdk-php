@@ -44,6 +44,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAllDeadToAlive(boolean $AllDeadToAlive) 设置是否支持全死全活。默认支持。
  * @method array getTags() 获取标签。
  * @method void setTags(array $Tags) 设置标签。
+ * @method string getForwardingMode() 获取流量分发方式
+
+- STATELESS：无状态
+- STATEFUL： 有状态
+ * @method void setForwardingMode(string $ForwardingMode) 设置流量分发方式
+
+- STATELESS：无状态
+- STATEFUL： 有状态
+ * @method integer getTcpIdleConnectTimeout() 获取TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。
+ * @method void setTcpIdleConnectTimeout(integer $TcpIdleConnectTimeout) 设置TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。
+ * @method integer getOthersIdleConnectTimeout() 获取其他协议连接空闲超时时间，可配置5s-180s，默认120s
+ * @method void setOthersIdleConnectTimeout(integer $OthersIdleConnectTimeout) 设置其他协议连接空闲超时时间，可配置5s-180s，默认120s
+ * @method boolean getRescheduleUnbindRs() 获取重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。
+ * @method void setRescheduleUnbindRs(boolean $RescheduleUnbindRs) 设置重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。
+ * @method integer getRescheduleUnbindRsStartTime() 获取解绑RS后开启重调度的时间，可配置0s-3600s，默认0s
+ * @method void setRescheduleUnbindRsStartTime(integer $RescheduleUnbindRsStartTime) 设置解绑RS后开启重调度的时间，可配置0s-3600s，默认0s
+ * @method boolean getRescheduleUnhealthy() 获取重新调度功能内的后端服务健康探测异常开关，开关打开后后端服务健康检查异常会触发重新调度。
+ * @method void setRescheduleUnhealthy(boolean $RescheduleUnhealthy) 设置重新调度功能内的后端服务健康探测异常开关，开关打开后后端服务健康检查异常会触发重新调度。
+ * @method integer getRescheduleUnhealthyStartTime() 获取后端服务健康探测异常后开启重调度的时间，可配置0s-3600s，默认0s
+ * @method void setRescheduleUnhealthyStartTime(integer $RescheduleUnhealthyStartTime) 设置后端服务健康探测异常后开启重调度的时间，可配置0s-3600s，默认0s
  */
 class CreateTargetGroupRequest extends AbstractModel
 {
@@ -96,6 +116,44 @@ class CreateTargetGroupRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var string 流量分发方式
+
+- STATELESS：无状态
+- STATEFUL： 有状态
+     */
+    public $ForwardingMode;
+
+    /**
+     * @var integer TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。
+     */
+    public $TcpIdleConnectTimeout;
+
+    /**
+     * @var integer 其他协议连接空闲超时时间，可配置5s-180s，默认120s
+     */
+    public $OthersIdleConnectTimeout;
+
+    /**
+     * @var boolean 重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。
+     */
+    public $RescheduleUnbindRs;
+
+    /**
+     * @var integer 解绑RS后开启重调度的时间，可配置0s-3600s，默认0s
+     */
+    public $RescheduleUnbindRsStartTime;
+
+    /**
+     * @var boolean 重新调度功能内的后端服务健康探测异常开关，开关打开后后端服务健康检查异常会触发重新调度。
+     */
+    public $RescheduleUnhealthy;
+
+    /**
+     * @var integer 后端服务健康探测异常后开启重调度的时间，可配置0s-3600s，默认0s
+     */
+    public $RescheduleUnhealthyStartTime;
+
+    /**
      * @param string $TargetGroupName 目标组名称，限定60个字符。
      * @param string $VpcId 网关负载均衡后端目标组所属的网络 ID，如vpc-12345678，可以通过 [DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)  接口获取。 不填此参数则默认为DefaultVPC。
      * @param integer $Port 目标组的默认端口， 后续添加服务器时可使用该默认端口。Port和TargetGroupInstances.N中的port二者必填其一。仅支持6081。
@@ -108,6 +166,16 @@ class CreateTargetGroupRequest extends AbstractModel
 - IP_HASH_3_ELASTIC：弹性哈希
      * @param boolean $AllDeadToAlive 是否支持全死全活。默认支持。
      * @param array $Tags 标签。
+     * @param string $ForwardingMode 流量分发方式
+
+- STATELESS：无状态
+- STATEFUL： 有状态
+     * @param integer $TcpIdleConnectTimeout TCP协议连接空闲超时时间，可配置60s-6000s，默认350s。
+     * @param integer $OthersIdleConnectTimeout 其他协议连接空闲超时时间，可配置5s-180s，默认120s
+     * @param boolean $RescheduleUnbindRs 重新调度功能内的解绑后端服务开关，开关打开后解绑后端服务会触发重新调度。
+     * @param integer $RescheduleUnbindRsStartTime 解绑RS后开启重调度的时间，可配置0s-3600s，默认0s
+     * @param boolean $RescheduleUnhealthy 重新调度功能内的后端服务健康探测异常开关，开关打开后后端服务健康检查异常会触发重新调度。
+     * @param integer $RescheduleUnhealthyStartTime 后端服务健康探测异常后开启重调度的时间，可配置0s-3600s，默认0s
      */
     function __construct()
     {
@@ -167,6 +235,34 @@ class CreateTargetGroupRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("ForwardingMode",$param) and $param["ForwardingMode"] !== null) {
+            $this->ForwardingMode = $param["ForwardingMode"];
+        }
+
+        if (array_key_exists("TcpIdleConnectTimeout",$param) and $param["TcpIdleConnectTimeout"] !== null) {
+            $this->TcpIdleConnectTimeout = $param["TcpIdleConnectTimeout"];
+        }
+
+        if (array_key_exists("OthersIdleConnectTimeout",$param) and $param["OthersIdleConnectTimeout"] !== null) {
+            $this->OthersIdleConnectTimeout = $param["OthersIdleConnectTimeout"];
+        }
+
+        if (array_key_exists("RescheduleUnbindRs",$param) and $param["RescheduleUnbindRs"] !== null) {
+            $this->RescheduleUnbindRs = $param["RescheduleUnbindRs"];
+        }
+
+        if (array_key_exists("RescheduleUnbindRsStartTime",$param) and $param["RescheduleUnbindRsStartTime"] !== null) {
+            $this->RescheduleUnbindRsStartTime = $param["RescheduleUnbindRsStartTime"];
+        }
+
+        if (array_key_exists("RescheduleUnhealthy",$param) and $param["RescheduleUnhealthy"] !== null) {
+            $this->RescheduleUnhealthy = $param["RescheduleUnhealthy"];
+        }
+
+        if (array_key_exists("RescheduleUnhealthyStartTime",$param) and $param["RescheduleUnhealthyStartTime"] !== null) {
+            $this->RescheduleUnhealthyStartTime = $param["RescheduleUnhealthyStartTime"];
         }
     }
 }

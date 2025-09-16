@@ -80,6 +80,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKeepaliveEnable(boolean $KeepaliveEnable) 设置是否开启长连接,  仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。
  * @method integer getSessionExpireTime() 获取会话保持时间，仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。
  * @method void setSessionExpireTime(integer $SessionExpireTime) 设置会话保持时间，仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。
+ * @method string getIpVersion() 获取IP版本。
+ * @method void setIpVersion(string $IpVersion) 设置IP版本。
  */
 class TargetGroupInfo extends AbstractModel
 {
@@ -186,6 +188,11 @@ class TargetGroupInfo extends AbstractModel
     public $SessionExpireTime;
 
     /**
+     * @var string IP版本。
+     */
+    public $IpVersion;
+
+    /**
      * @param string $TargetGroupId 目标组ID
      * @param string $VpcId 目标组的vpcid
      * @param string $TargetGroupName 目标组的名字
@@ -216,6 +223,7 @@ class TargetGroupInfo extends AbstractModel
      * @param boolean $FullListenSwitch 是否全监听目标组。
      * @param boolean $KeepaliveEnable 是否开启长连接,  仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。
      * @param integer $SessionExpireTime 会话保持时间，仅后端转发协议为HTTP/HTTPS/GRPC目标组返回有效值。
+     * @param string $IpVersion IP版本。
      */
     function __construct()
     {
@@ -311,6 +319,10 @@ class TargetGroupInfo extends AbstractModel
 
         if (array_key_exists("SessionExpireTime",$param) and $param["SessionExpireTime"] !== null) {
             $this->SessionExpireTime = $param["SessionExpireTime"];
+        }
+
+        if (array_key_exists("IpVersion",$param) and $param["IpVersion"] !== null) {
+            $this->IpVersion = $param["IpVersion"];
         }
     }
 }

@@ -23,17 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getType() 获取类型名称。取值如下：
 
 <li>Dongjing：东京</li>
-<li>QingJiaopian：轻胶片</li>
+<li>Qingjiaopian：轻胶片</li>
 <li>Meiwei：美味</li>
-
-
  * @method void setType(string $Type) 设置类型名称。取值如下：
 
 <li>Dongjing：东京</li>
-<li>QingJiaopian：轻胶片</li>
+<li>Qingjiaopian：轻胶片</li>
 <li>Meiwei：美味</li>
-
-
  * @method string getSwitch() 获取能力配置开关，可选值：
 <li>ON：开启；</li>
 <li>OFF：关闭。</li>
@@ -42,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
 <li>ON：开启；</li>
 <li>OFF：关闭。</li>
 默认值：ON。
- * @method integer getValue() 获取效果强度，值范围：[0, 100]。
- * @method void setValue(integer $Value) 设置效果强度，值范围：[0, 100]。
+ * @method integer getValue() 获取效果强度，值范围：[-100, 100]。
+ * @method void setValue(integer $Value) 设置效果强度，值范围：[-100, 100]。
  */
 class BeautyFilterItemConfig extends AbstractModel
 {
@@ -51,10 +47,8 @@ class BeautyFilterItemConfig extends AbstractModel
      * @var string 类型名称。取值如下：
 
 <li>Dongjing：东京</li>
-<li>QingJiaopian：轻胶片</li>
+<li>Qingjiaopian：轻胶片</li>
 <li>Meiwei：美味</li>
-
-
      */
     public $Type;
 
@@ -67,7 +61,7 @@ class BeautyFilterItemConfig extends AbstractModel
     public $Switch;
 
     /**
-     * @var integer 效果强度，值范围：[0, 100]。
+     * @var integer 效果强度，值范围：[-100, 100]。
      */
     public $Value;
 
@@ -75,15 +69,13 @@ class BeautyFilterItemConfig extends AbstractModel
      * @param string $Type 类型名称。取值如下：
 
 <li>Dongjing：东京</li>
-<li>QingJiaopian：轻胶片</li>
+<li>Qingjiaopian：轻胶片</li>
 <li>Meiwei：美味</li>
-
-
      * @param string $Switch 能力配置开关，可选值：
 <li>ON：开启；</li>
 <li>OFF：关闭。</li>
 默认值：ON。
-     * @param integer $Value 效果强度，值范围：[0, 100]。
+     * @param integer $Value 效果强度，值范围：[-100, 100]。
      */
     function __construct()
     {

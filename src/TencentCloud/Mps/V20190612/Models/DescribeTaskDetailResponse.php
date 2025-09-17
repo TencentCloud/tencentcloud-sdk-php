@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setLiveStreamProcessTask(LiveStreamProcessTask $LiveStreamProcessTask) 设置直播流处理任务信息，仅当 TaskType 为 LiveStreamProcessTask，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method ExtractBlindWatermarkTask getExtractBlindWatermarkTask() 获取提取数字水印任务信息，仅当 TaskType 为 ExtractBlindWatermark，该字段有值。
+ * @method void setExtractBlindWatermarkTask(ExtractBlindWatermarkTask $ExtractBlindWatermarkTask) 设置提取数字水印任务信息，仅当 TaskType 为 ExtractBlindWatermark，该字段有值。
  * @method TaskNotifyConfig getTaskNotifyConfig() 获取任务的事件通知信息。
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setTaskNotifyConfig(TaskNotifyConfig $TaskNotifyConfig) 设置任务的事件通知信息。
@@ -120,6 +122,11 @@ class DescribeTaskDetailResponse extends AbstractModel
     public $LiveStreamProcessTask;
 
     /**
+     * @var ExtractBlindWatermarkTask 提取数字水印任务信息，仅当 TaskType 为 ExtractBlindWatermark，该字段有值。
+     */
+    public $ExtractBlindWatermarkTask;
+
+    /**
      * @var TaskNotifyConfig 任务的事件通知信息。
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -177,6 +184,7 @@ class DescribeTaskDetailResponse extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param LiveStreamProcessTask $LiveStreamProcessTask 直播流处理任务信息，仅当 TaskType 为 LiveStreamProcessTask，该字段有值。
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param ExtractBlindWatermarkTask $ExtractBlindWatermarkTask 提取数字水印任务信息，仅当 TaskType 为 ExtractBlindWatermark，该字段有值。
      * @param TaskNotifyConfig $TaskNotifyConfig 任务的事件通知信息。
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $TasksPriority 任务流的优先级，取值范围为 [-10, 10]。
@@ -235,6 +243,11 @@ class DescribeTaskDetailResponse extends AbstractModel
         if (array_key_exists("LiveStreamProcessTask",$param) and $param["LiveStreamProcessTask"] !== null) {
             $this->LiveStreamProcessTask = new LiveStreamProcessTask();
             $this->LiveStreamProcessTask->deserialize($param["LiveStreamProcessTask"]);
+        }
+
+        if (array_key_exists("ExtractBlindWatermarkTask",$param) and $param["ExtractBlindWatermarkTask"] !== null) {
+            $this->ExtractBlindWatermarkTask = new ExtractBlindWatermarkTask();
+            $this->ExtractBlindWatermarkTask->deserialize($param["ExtractBlindWatermarkTask"]);
         }
 
         if (array_key_exists("TaskNotifyConfig",$param) and $param["TaskNotifyConfig"] !== null) {

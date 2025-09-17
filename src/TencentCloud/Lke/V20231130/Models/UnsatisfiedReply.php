@@ -32,14 +32,24 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setQuestion(string $Question) 设置用户问题
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getAnswer() 获取应用回复
+ * @method string getAnswer() 获取问题回复
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setAnswer(string $Answer) 设置应用回复
+ * @method void setAnswer(string $Answer) 设置问题回复
 注意：此字段可能返回 null，表示取不到有效值。
  * @method array getReasons() 获取错误类型
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setReasons(array $Reasons) 设置错误类型
 注意：此字段可能返回 null，表示取不到有效值。
+ * @method integer getStatus() 获取处理状态，0：待处理，1：已拒答，2：已忽略，3：已纠错
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setStatus(integer $Status) 设置处理状态，0：待处理，1：已拒答，2：已忽略，3：已纠错
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getCreateTime() 获取创建时间，秒级时间戳
+ * @method void setCreateTime(string $CreateTime) 设置创建时间，秒级时间戳
+ * @method string getUpdateTime() 获取更新时间,秒级时间戳
+ * @method void setUpdateTime(string $UpdateTime) 设置更新时间,秒级时间戳
+ * @method string getOperator() 获取操作人
+ * @method void setOperator(string $Operator) 设置操作人
  */
 class UnsatisfiedReply extends AbstractModel
 {
@@ -62,7 +72,7 @@ class UnsatisfiedReply extends AbstractModel
     public $Question;
 
     /**
-     * @var string 应用回复
+     * @var string 问题回复
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Answer;
@@ -74,16 +84,42 @@ class UnsatisfiedReply extends AbstractModel
     public $Reasons;
 
     /**
+     * @var integer 处理状态，0：待处理，1：已拒答，2：已忽略，3：已纠错
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Status;
+
+    /**
+     * @var string 创建时间，秒级时间戳
+     */
+    public $CreateTime;
+
+    /**
+     * @var string 更新时间,秒级时间戳
+     */
+    public $UpdateTime;
+
+    /**
+     * @var string 操作人
+     */
+    public $Operator;
+
+    /**
      * @param string $ReplyBizId 不满意回复ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $RecordBizId 消息记录ID
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $Question 用户问题
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $Answer 应用回复
+     * @param string $Answer 问题回复
 注意：此字段可能返回 null，表示取不到有效值。
      * @param array $Reasons 错误类型
 注意：此字段可能返回 null，表示取不到有效值。
+     * @param integer $Status 处理状态，0：待处理，1：已拒答，2：已忽略，3：已纠错
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $CreateTime 创建时间，秒级时间戳
+     * @param string $UpdateTime 更新时间,秒级时间戳
+     * @param string $Operator 操作人
      */
     function __construct()
     {
@@ -116,6 +152,22 @@ class UnsatisfiedReply extends AbstractModel
 
         if (array_key_exists("Reasons",$param) and $param["Reasons"] !== null) {
             $this->Reasons = $param["Reasons"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
+            $this->Operator = $param["Operator"];
         }
     }
 }

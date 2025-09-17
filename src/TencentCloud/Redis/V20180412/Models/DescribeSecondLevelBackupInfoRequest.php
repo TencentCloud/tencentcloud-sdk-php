@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSecondLevelBackupInfo请求参数结构体
  *
- * @method string getInstanceId() 获取指定实例 ID。例如：crs-xjhsdj****。请登录Redis控制台在实例列表复制实例 ID。
- * @method void setInstanceId(string $InstanceId) 设置指定实例 ID。例如：crs-xjhsdj****。请登录Redis控制台在实例列表复制实例 ID。
- * @method integer getBackupTimestamp() 获取秒级备份时间戳，7天内
- * @method void setBackupTimestamp(integer $BackupTimestamp) 设置秒级备份时间戳，7天内
+ * @method string getInstanceId() 获取指定实例 ID。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置指定实例 ID。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+ * @method integer getBackupTimestamp() 获取秒级备份时间戳。
+- 设置范围：支持7天内任意秒级时间点。
+-  时间戳格式：Unix 时间戳。
+ * @method void setBackupTimestamp(integer $BackupTimestamp) 设置秒级备份时间戳。
+- 设置范围：支持7天内任意秒级时间点。
+-  时间戳格式：Unix 时间戳。
  */
 class DescribeSecondLevelBackupInfoRequest extends AbstractModel
 {
     /**
-     * @var string 指定实例 ID。例如：crs-xjhsdj****。请登录Redis控制台在实例列表复制实例 ID。
+     * @var string 指定实例 ID。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      */
     public $InstanceId;
 
     /**
-     * @var integer 秒级备份时间戳，7天内
+     * @var integer 秒级备份时间戳。
+- 设置范围：支持7天内任意秒级时间点。
+-  时间戳格式：Unix 时间戳。
      */
     public $BackupTimestamp;
 
     /**
-     * @param string $InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录Redis控制台在实例列表复制实例 ID。
-     * @param integer $BackupTimestamp 秒级备份时间戳，7天内
+     * @param string $InstanceId 指定实例 ID。请登录 [Redis 控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
+     * @param integer $BackupTimestamp 秒级备份时间戳。
+- 设置范围：支持7天内任意秒级时间点。
+-  时间戳格式：Unix 时间戳。
      */
     function __construct()
     {

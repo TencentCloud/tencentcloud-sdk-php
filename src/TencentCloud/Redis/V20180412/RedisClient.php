@@ -84,7 +84,7 @@ use TencentCloud\Redis\V20180412\Models as Models;
  * @method Models\DescribeReplicationGroupResponse DescribeReplicationGroup(Models\DescribeReplicationGroupRequest $req) 本接口（DescribeReplicationGroup）用于查询复制组。
  * @method Models\DescribeReplicationGroupInstanceResponse DescribeReplicationGroupInstance(Models\DescribeReplicationGroupInstanceRequest $req) 本接口（DescribeReplicationGroupInstance）用于查询复制组信息。
  * @method Models\DescribeSSLStatusResponse DescribeSSLStatus(Models\DescribeSSLStatusRequest $req) 本接口（DescribeSSLStatus）用于查询实例 SSL 认证相关信息，包括开启状态、配置状态、证书地址等。
- * @method Models\DescribeSecondLevelBackupInfoResponse DescribeSecondLevelBackupInfo(Models\DescribeSecondLevelBackupInfoRequest $req) 查询实例秒级备份信息
+ * @method Models\DescribeSecondLevelBackupInfoResponse DescribeSecondLevelBackupInfo(Models\DescribeSecondLevelBackupInfoRequest $req) 本接口（DescribeSecondLevelBackupInfo）用于查询实例秒级备份信息。
  * @method Models\DescribeSlowLogResponse DescribeSlowLog(Models\DescribeSlowLogRequest $req) 本接口（DescribeSlowLog）查询实例慢查询记录。
  * @method Models\DescribeTaskInfoResponse DescribeTaskInfo(Models\DescribeTaskInfoRequest $req) 本接口（DescribeTaskInfo）用于获取指定任务的执行情况。
  * @method Models\DescribeTaskListResponse DescribeTaskList(Models\DescribeTaskListRequest $req) 本接口（DescribeTaskList）用于查询指定实例的任务列表信息。

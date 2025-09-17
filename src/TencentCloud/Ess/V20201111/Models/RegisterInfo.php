@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * 发起流程快速注册相关信息
  *
- * @method string getLegalName() 获取<font color="red">字段不再使用</font>，法人姓名
- * @method void setLegalName(string $LegalName) 设置<font color="red">字段不再使用</font>，法人姓名
+ * @method string getLegalName() 获取法人姓名
+ * @method void setLegalName(string $LegalName) 设置法人姓名
  * @method string getUscc() 获取社会统一信用代码
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setUscc(string $Uscc) 设置社会统一信用代码
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUnifiedSocialCreditCode() 获取<font color="red">字段不再使用</font>，社会统一信用代码
- * @method void setUnifiedSocialCreditCode(string $UnifiedSocialCreditCode) 设置<font color="red">字段不再使用</font>，社会统一信用代码
+ * @method string getUnifiedSocialCreditCode() 获取社会统一信用代码
+ * @method void setUnifiedSocialCreditCode(string $UnifiedSocialCreditCode) 设置社会统一信用代码
  * @method string getOrganizationAddress() 获取组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。
  * @method void setOrganizationAddress(string $OrganizationAddress) 设置组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。
  * @method array getAuthorizationTypes() 获取指定企业认证的授权方式 支持多选:
@@ -58,7 +58,7 @@ use TencentCloud\Common\AbstractModel;
 class RegisterInfo extends AbstractModel
 {
     /**
-     * @var string <font color="red">字段不再使用</font>，法人姓名
+     * @var string 法人姓名
      */
     public $LegalName;
 
@@ -70,7 +70,7 @@ class RegisterInfo extends AbstractModel
     public $Uscc;
 
     /**
-     * @var string <font color="red">字段不再使用</font>，社会统一信用代码
+     * @var string 社会统一信用代码
      */
     public $UnifiedSocialCreditCode;
 
@@ -101,10 +101,10 @@ class RegisterInfo extends AbstractModel
     public $AuthorizationType;
 
     /**
-     * @param string $LegalName <font color="red">字段不再使用</font>，法人姓名
+     * @param string $LegalName 法人姓名
      * @param string $Uscc 社会统一信用代码
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UnifiedSocialCreditCode <font color="red">字段不再使用</font>，社会统一信用代码
+     * @param string $UnifiedSocialCreditCode 社会统一信用代码
      * @param string $OrganizationAddress 组织机构企业注册地址。 请确认该企业注册地址与企业营业执照中注册的地址一致。
      * @param array $AuthorizationTypes 指定企业认证的授权方式 支持多选:
 

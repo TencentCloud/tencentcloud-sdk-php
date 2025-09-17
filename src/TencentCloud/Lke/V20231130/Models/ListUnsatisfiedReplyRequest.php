@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuery(string $Query) 设置用户请求(问题或答案)
  * @method array getReasons() 获取错误类型检索
  * @method void setReasons(array $Reasons) 设置错误类型检索
+ * @method integer getStatus() 获取操作状态  0-全部 1-待处理  2-已处理【包括答案纠错，拒答，忽略】
+ * @method void setStatus(integer $Status) 设置操作状态  0-全部 1-待处理  2-已处理【包括答案纠错，拒答，忽略】
  */
 class ListUnsatisfiedReplyRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class ListUnsatisfiedReplyRequest extends AbstractModel
     public $Reasons;
 
     /**
+     * @var integer 操作状态  0-全部 1-待处理  2-已处理【包括答案纠错，拒答，忽略】
+     */
+    public $Status;
+
+    /**
      * @param string $BotBizId 应用ID
      * @param integer $PageNumber 页码
      * @param integer $PageSize 分页数量
@@ -80,6 +87,7 @@ class ListUnsatisfiedReplyRequest extends AbstractModel
      * @param string $LoginSubAccountUin 登录用户子账号(集成商模式必填)
      * @param string $Query 用户请求(问题或答案)
      * @param array $Reasons 错误类型检索
+     * @param integer $Status 操作状态  0-全部 1-待处理  2-已处理【包括答案纠错，拒答，忽略】
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class ListUnsatisfiedReplyRequest extends AbstractModel
 
         if (array_key_exists("Reasons",$param) and $param["Reasons"] !== null) {
             $this->Reasons = $param["Reasons"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

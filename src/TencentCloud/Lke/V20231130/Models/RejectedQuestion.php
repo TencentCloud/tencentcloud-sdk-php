@@ -34,18 +34,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuestion(string $Question) 设置被拒答的问题
 
 注意：此字段可能返回 null，表示取不到有效值。
- * @method integer getStatus() 获取状态
+ * @method integer getStatus() 获取发布状态(1 待发布 2 发布中 3 已发布 4 发布失败)
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setStatus(integer $Status) 设置状态
+ * @method void setStatus(integer $Status) 设置发布状态(1 待发布 2 发布中 3 已发布 4 发布失败)
 注意：此字段可能返回 null，表示取不到有效值。
  * @method string getStatusDesc() 获取状态描述
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setStatusDesc(string $StatusDesc) 设置状态描述
 注意：此字段可能返回 null，表示取不到有效值。
- * @method string getUpdateTime() 获取更新时间
+ * @method string getUpdateTime() 获取更新时间, 秒级时间戳
 
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setUpdateTime(string $UpdateTime) 设置更新时间
+ * @method void setUpdateTime(string $UpdateTime) 设置更新时间, 秒级时间戳
 
 注意：此字段可能返回 null，表示取不到有效值。
  * @method boolean getIsAllowEdit() 获取是否允许编辑
@@ -59,6 +59,10 @@ use TencentCloud\Common\AbstractModel;
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setIsAllowDelete(boolean $IsAllowDelete) 设置是否允许删除
 
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method string getOperator() 获取操作人
+注意：此字段可能返回 null，表示取不到有效值。
+ * @method void setOperator(string $Operator) 设置操作人
 注意：此字段可能返回 null，表示取不到有效值。
  */
 class RejectedQuestion extends AbstractModel
@@ -79,7 +83,7 @@ class RejectedQuestion extends AbstractModel
     public $Question;
 
     /**
-     * @var integer 状态
+     * @var integer 发布状态(1 待发布 2 发布中 3 已发布 4 发布失败)
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $Status;
@@ -91,7 +95,7 @@ class RejectedQuestion extends AbstractModel
     public $StatusDesc;
 
     /**
-     * @var string 更新时间
+     * @var string 更新时间, 秒级时间戳
 
 注意：此字段可能返回 null，表示取不到有效值。
      */
@@ -112,6 +116,12 @@ class RejectedQuestion extends AbstractModel
     public $IsAllowDelete;
 
     /**
+     * @var string 操作人
+注意：此字段可能返回 null，表示取不到有效值。
+     */
+    public $Operator;
+
+    /**
      * @param string $RejectedBizId 拒答问题ID
 
 
@@ -119,11 +129,11 @@ class RejectedQuestion extends AbstractModel
      * @param string $Question 被拒答的问题
 
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param integer $Status 状态
+     * @param integer $Status 发布状态(1 待发布 2 发布中 3 已发布 4 发布失败)
 注意：此字段可能返回 null，表示取不到有效值。
      * @param string $StatusDesc 状态描述
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param string $UpdateTime 更新时间
+     * @param string $UpdateTime 更新时间, 秒级时间戳
 
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsAllowEdit 是否允许编辑
@@ -131,6 +141,8 @@ class RejectedQuestion extends AbstractModel
 注意：此字段可能返回 null，表示取不到有效值。
      * @param boolean $IsAllowDelete 是否允许删除
 
+注意：此字段可能返回 null，表示取不到有效值。
+     * @param string $Operator 操作人
 注意：此字段可能返回 null，表示取不到有效值。
      */
     function __construct()
@@ -172,6 +184,10 @@ class RejectedQuestion extends AbstractModel
 
         if (array_key_exists("IsAllowDelete",$param) and $param["IsAllowDelete"] !== null) {
             $this->IsAllowDelete = $param["IsAllowDelete"];
+        }
+
+        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
+            $this->Operator = $param["Operator"];
         }
     }
 }

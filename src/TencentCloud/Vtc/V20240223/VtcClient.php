@@ -24,7 +24,7 @@ use TencentCloud\Vtc\V20240223\Models as Models;
 
 /**
  * @method Models\ConfirmVideoTranslateJobResponse ConfirmVideoTranslateJob(Models\ConfirmVideoTranslateJobRequest $req) 确认视频转译结果
- * @method Models\DescribeVideoTranslateJobResponse DescribeVideoTranslateJob(Models\DescribeVideoTranslateJobRequest $req) 查询视频翻译任务
+ * @method Models\DescribeVideoTranslateJobResponse DescribeVideoTranslateJob(Models\DescribeVideoTranslateJobRequest $req) 查询视频转译任务
  * @method Models\SubmitVideoTranslateJobResponse SubmitVideoTranslateJob(Models\SubmitVideoTranslateJobRequest $req) ###### 支持音色种别列表
 | 音色名称                 | 性别 | 目标语言         | 音色ID |
 | ------------------------ | ---- | ---------------- | ------ |

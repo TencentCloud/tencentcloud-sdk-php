@@ -74,8 +74,8 @@ GooseFSx：GooseFSx存储
  * @method void setAutomaticStopTime(integer $AutomaticStopTime) 设置自动停止时间，单位小时
  * @method array getTags() 获取标签配置
  * @method void setTags(array $Tags) 设置标签配置
- * @method array getDataConfigs() 获取数据配置，只支持WEDATA_HDFS存储类型
- * @method void setDataConfigs(array $DataConfigs) 设置数据配置，只支持WEDATA_HDFS存储类型
+ * @method array getDataConfigs() 获取数据存储挂载配置
+ * @method void setDataConfigs(array $DataConfigs) 设置数据存储挂载配置
  * @method ImageInfo getImageInfo() 获取镜像信息
  * @method void setImageInfo(ImageInfo $ImageInfo) 设置镜像信息
  * @method string getImageType() 获取镜像类型，包括SYSTEM、TCR、CCR
@@ -191,7 +191,7 @@ GooseFSx：GooseFSx存储
     public $Tags;
 
     /**
-     * @var array 数据配置，只支持WEDATA_HDFS存储类型
+     * @var array 数据存储挂载配置
      */
     public $DataConfigs;
 
@@ -243,7 +243,7 @@ GooseFSx：GooseFSx存储
      * @param array $AdditionalCodeRepoIds 其他GIT存储库的ID，最多3个
      * @param integer $AutomaticStopTime 自动停止时间，单位小时
      * @param array $Tags 标签配置
-     * @param array $DataConfigs 数据配置，只支持WEDATA_HDFS存储类型
+     * @param array $DataConfigs 数据存储挂载配置
      * @param ImageInfo $ImageInfo 镜像信息
      * @param string $ImageType 镜像类型，包括SYSTEM、TCR、CCR
      * @param SSHConfig $SSHConfig SSH配置信息

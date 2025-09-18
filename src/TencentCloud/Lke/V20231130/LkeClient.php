@@ -25,7 +25,7 @@ use TencentCloud\Lke\V20231130\Models as Models;
 /**
  * @method Models\CheckAttributeLabelExistResponse CheckAttributeLabelExist(Models\CheckAttributeLabelExistRequest $req) 检查属性下的标签名是否存在
  * @method Models\CheckAttributeLabelReferResponse CheckAttributeLabelRefer(Models\CheckAttributeLabelReferRequest $req) 检查属性标签引用
- * @method Models\CreateAgentResponse CreateAgent(Models\CreateAgentRequest $req) 你创建一个Agent
+ * @method Models\CreateAgentResponse CreateAgent(Models\CreateAgentRequest $req) 创建一个Agent
  * @method Models\CreateAppResponse CreateApp(Models\CreateAppRequest $req) 创建知识引擎应用。
  * @method Models\CreateAttributeLabelResponse CreateAttributeLabel(Models\CreateAttributeLabelRequest $req) 创建标签
  * @method Models\CreateDocCateResponse CreateDocCate(Models\CreateDocCateRequest $req) 创建Doc分类
@@ -91,6 +91,7 @@ use TencentCloud\Lke\V20231130\Models as Models;
  * @method Models\ListAppResponse ListApp(Models\ListAppRequest $req) 获取企业下应用列表
  * @method Models\ListAppKnowledgeDetailResponse ListAppKnowledgeDetail(Models\ListAppKnowledgeDetailRequest $req) 列表查询知识库容量详情
  * @method Models\ListAttributeLabelResponse ListAttributeLabel(Models\ListAttributeLabelRequest $req) 查询属性标签列表
+ * @method Models\ListChannelResponse ListChannel(Models\ListChannelRequest $req) 获取发布渠道列表
  * @method Models\ListDocResponse ListDoc(Models\ListDocRequest $req) 文档列表
  * @method Models\ListDocCateResponse ListDocCate(Models\ListDocCateRequest $req) 获取Doc分类
  * @method Models\ListModelResponse ListModel(Models\ListModelRequest $req) 获取模型列表

@@ -24,12 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
  * @method array getReadonlyPolicy() 获取只读路由策略。
 - master：表示只读路由至主节点。
-- replication：表示只读路由至从节点。
-- 默认策略：表示写主节点，读从节点。
+- replication：表示只读路由至从节点。默认值为：replication。
  * @method void setReadonlyPolicy(array $ReadonlyPolicy) 设置只读路由策略。
 - master：表示只读路由至主节点。
-- replication：表示只读路由至从节点。
-- 默认策略：表示写主节点，读从节点。
+- replication：表示只读路由至从节点。默认值为：replication。
  */
 class EnableReplicaReadonlyRequest extends AbstractModel
 {
@@ -41,8 +39,7 @@ class EnableReplicaReadonlyRequest extends AbstractModel
     /**
      * @var array 只读路由策略。
 - master：表示只读路由至主节点。
-- replication：表示只读路由至从节点。
-- 默认策略：表示写主节点，读从节点。
+- replication：表示只读路由至从节点。默认值为：replication。
      */
     public $ReadonlyPolicy;
 
@@ -50,8 +47,7 @@ class EnableReplicaReadonlyRequest extends AbstractModel
      * @param string $InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      * @param array $ReadonlyPolicy 只读路由策略。
 - master：表示只读路由至主节点。
-- replication：表示只读路由至从节点。
-- 默认策略：表示写主节点，读从节点。
+- replication：表示只读路由至从节点。默认值为：replication。
      */
     function __construct()
     {

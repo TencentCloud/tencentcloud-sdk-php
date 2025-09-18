@@ -25,7 +25,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStartTime() 获取维护时间窗起始时间，如：17:00。
  * @method void setStartTime(string $StartTime) 设置维护时间窗起始时间，如：17:00。
  * @method string getEndTime() 获取维护时间窗结束时间，如：19:00。
+**说明：**维护时间窗时长，当前支持：30分钟、1小时、1.5小时、2小时、3小时。
  * @method void setEndTime(string $EndTime) 设置维护时间窗结束时间，如：19:00。
+**说明：**维护时间窗时长，当前支持：30分钟、1小时、1.5小时、2小时、3小时。
  */
 class ModifyMaintenanceWindowRequest extends AbstractModel
 {
@@ -41,6 +43,7 @@ class ModifyMaintenanceWindowRequest extends AbstractModel
 
     /**
      * @var string 维护时间窗结束时间，如：19:00。
+**说明：**维护时间窗时长，当前支持：30分钟、1小时、1.5小时、2小时、3小时。
      */
     public $EndTime;
 
@@ -48,6 +51,7 @@ class ModifyMaintenanceWindowRequest extends AbstractModel
      * @param string $InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      * @param string $StartTime 维护时间窗起始时间，如：17:00。
      * @param string $EndTime 维护时间窗结束时间，如：19:00。
+**说明：**维护时间窗时长，当前支持：30分钟、1小时、1.5小时、2小时、3小时。
      */
     function __construct()
     {

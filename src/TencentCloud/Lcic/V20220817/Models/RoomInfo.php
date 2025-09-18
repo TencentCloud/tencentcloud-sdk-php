@@ -90,6 +90,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubtitlesTranscription(integer $SubtitlesTranscription) 设置字幕转写功能开关：0关闭，1开启，默认关闭
  * @method array getGuests() 获取嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效
  * @method void setGuests(array $Guests) 设置嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效
+ * @method integer getRecordMerge() 获取录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效
+ * @method void setRecordMerge(integer $RecordMerge) 设置录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效
  */
 class RoomInfo extends AbstractModel
 {
@@ -259,6 +261,11 @@ class RoomInfo extends AbstractModel
     public $Guests;
 
     /**
+     * @var integer 录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效
+     */
+    public $RecordMerge;
+
+    /**
      * @param string $Name 房间名称。
      * @param integer $StartTime 预定的房间开始时间，unix时间戳。
      * @param integer $EndTime 预定的房间结束时间，unix时间戳。
@@ -294,6 +301,7 @@ class RoomInfo extends AbstractModel
      * @param integer $WhiteBoardSnapshotMode 板书截图生成类型。0 不生成板书（默认）；1 全量模式；2 单页去重模式
      * @param integer $SubtitlesTranscription 字幕转写功能开关：0关闭，1开启，默认关闭
      * @param array $Guests 嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效
+     * @param integer $RecordMerge 录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效
      */
     function __construct()
     {
@@ -434,6 +442,10 @@ class RoomInfo extends AbstractModel
 
         if (array_key_exists("Guests",$param) and $param["Guests"] !== null) {
             $this->Guests = $param["Guests"];
+        }
+
+        if (array_key_exists("RecordMerge",$param) and $param["RecordMerge"] !== null) {
+            $this->RecordMerge = $param["RecordMerge"];
         }
     }
 }

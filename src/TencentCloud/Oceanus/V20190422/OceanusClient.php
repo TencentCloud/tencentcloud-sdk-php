@@ -23,8 +23,10 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Oceanus\V20190422\Models as Models;
 
 /**
+ * @method Models\CheckConnectorNameResponse CheckConnectorName(Models\CheckConnectorNameRequest $req) 查询资源名是否重复
  * @method Models\CheckSavepointResponse CheckSavepoint(Models\CheckSavepointRequest $req) 检查快照是否可用
  * @method Models\CopyJobsResponse CopyJobs(Models\CopyJobsRequest $req) 单条和批量复制作业
+ * @method Models\CreateConnectorResponse CreateConnector(Models\CreateConnectorRequest $req) 创建Connector
  * @method Models\CreateFolderResponse CreateFolder(Models\CreateFolderRequest $req) 作业列表页面新建文件夹请求
  * @method Models\CreateJobResponse CreateJob(Models\CreateJobRequest $req) 新建作业接口，一个 AppId 最多允许创建1000个作业
  * @method Models\CreateJobConfigResponse CreateJobConfig(Models\CreateJobConfigRequest $req) 创建作业配置，一个作业最多有100个配置版本
@@ -55,6 +57,7 @@ use TencentCloud\Oceanus\V20190422\Models as Models;
  * @method Models\DescribeWorkSpacesResponse DescribeWorkSpaces(Models\DescribeWorkSpacesRequest $req) 授权工作空间列表
  * @method Models\FetchSqlGatewayStatementResultResponse FetchSqlGatewayStatementResult(Models\FetchSqlGatewayStatementResultRequest $req) 查询Sql Gateway的Statement执行结果
  * @method Models\GetMetaTableResponse GetMetaTable(Models\GetMetaTableRequest $req) 查询元数据表
+ * @method Models\ModifyConnectorResponse ModifyConnector(Models\ModifyConnectorRequest $req) 修改Connector
  * @method Models\ModifyFolderResponse ModifyFolder(Models\ModifyFolderRequest $req) 自定义树状结构页面拖拽文件夹
  * @method Models\ModifyJobResponse ModifyJob(Models\ModifyJobRequest $req) 更新作业属性，仅允许以下3种操作，不支持组合操作：
 (1)	更新作业名称
@@ -66,6 +69,7 @@ use TencentCloud\Oceanus\V20190422\Models as Models;
 假设作业运行状态，则先停止作业，再启动作业，中间状态丢失
 假设作业暂停状态，则将作业更改为停止状态，中间状态丢失
  * @method Models\ModifyWorkSpaceResponse ModifyWorkSpace(Models\ModifyWorkSpaceRequest $req) 修改工作空间
+ * @method Models\ParseConnectorResponse ParseConnector(Models\ParseConnectorRequest $req) 解析用户上传connector
  * @method Models\RunJobsResponse RunJobs(Models\RunJobsRequest $req) 批量启动或者恢复作业，批量操作数量上限20
  * @method Models\RunSqlGatewayStatementResponse RunSqlGatewayStatement(Models\RunSqlGatewayStatementRequest $req) 通过Sql gateway执行satement
  * @method Models\StopJobsResponse StopJobs(Models\StopJobsRequest $req) 批量停止作业，批量操作数量上限为20

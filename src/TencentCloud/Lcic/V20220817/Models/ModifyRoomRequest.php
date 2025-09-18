@@ -114,6 +114,10 @@ video 纯视频
  * @method void setWhiteBoardSnapshotMode(integer $WhiteBoardSnapshotMode) 设置板书截图生成类型。0 不生成板书；1 全量模式；2 单页去重模式
  * @method integer getSubtitlesTranscription() 获取字幕转写功能开关：0关闭，1开启，默认关闭
  * @method void setSubtitlesTranscription(integer $SubtitlesTranscription) 设置字幕转写功能开关：0关闭，1开启，默认关闭
+ * @method array getGuests() 获取嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效
+ * @method void setGuests(array $Guests) 设置嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效
+ * @method integer getRecordMerge() 获取录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效
+ * @method void setRecordMerge(integer $RecordMerge) 设置录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效
  */
 class ModifyRoomRequest extends AbstractModel
 {
@@ -278,6 +282,16 @@ video 纯视频
     public $SubtitlesTranscription;
 
     /**
+     * @var array 嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效
+     */
+    public $Guests;
+
+    /**
+     * @var integer 录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效
+     */
+    public $RecordMerge;
+
+    /**
      * @param integer $RoomId 房间ID。
      * @param integer $SdkAppId 低代码互动课堂的SdkAppId
      * @param integer $StartTime 预定的房间开始时间，unix时间戳（秒）。直播开始后不允许修改。
@@ -325,6 +339,8 @@ video 纯视频
      * @param string $RecordLang 录制自定义语言，仅recordlayout=9的时候此参数有效
      * @param integer $WhiteBoardSnapshotMode 板书截图生成类型。0 不生成板书；1 全量模式；2 单页去重模式
      * @param integer $SubtitlesTranscription 字幕转写功能开关：0关闭，1开启，默认关闭
+     * @param array $Guests 嘉宾Id列表。当圆桌会议模式（RoomType==3）时生效
+     * @param integer $RecordMerge 录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效
      */
     function __construct()
     {
@@ -449,6 +465,14 @@ video 纯视频
 
         if (array_key_exists("SubtitlesTranscription",$param) and $param["SubtitlesTranscription"] !== null) {
             $this->SubtitlesTranscription = $param["SubtitlesTranscription"];
+        }
+
+        if (array_key_exists("Guests",$param) and $param["Guests"] !== null) {
+            $this->Guests = $param["Guests"];
+        }
+
+        if (array_key_exists("RecordMerge",$param) and $param["RecordMerge"] !== null) {
+            $this->RecordMerge = $param["RecordMerge"];
         }
     }
 }

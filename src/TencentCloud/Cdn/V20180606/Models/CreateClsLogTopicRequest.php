@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChannel(string $Channel) 设置接入渠道，cdn或者ecdn，默认值为cdn
  * @method array getDomainAreaConfigs() 获取域名区域信息
  * @method void setDomainAreaConfigs(array $DomainAreaConfigs) 设置域名区域信息
+ * @method boolean getInheritDomainTags() 获取是否继承域名标签，默认为false
+ * @method void setInheritDomainTags(boolean $InheritDomainTags) 设置是否继承域名标签，默认为false
  */
 class CreateClsLogTopicRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CreateClsLogTopicRequest extends AbstractModel
     public $DomainAreaConfigs;
 
     /**
+     * @var boolean 是否继承域名标签，默认为false
+     */
+    public $InheritDomainTags;
+
+    /**
      * @param string $TopicName 日志主题名称
      * @param string $LogsetId 日志集ID
      * @param string $Channel 接入渠道，cdn或者ecdn，默认值为cdn
      * @param array $DomainAreaConfigs 域名区域信息
+     * @param boolean $InheritDomainTags 是否继承域名标签，默认为false
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class CreateClsLogTopicRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->DomainAreaConfigs, $obj);
             }
+        }
+
+        if (array_key_exists("InheritDomainTags",$param) and $param["InheritDomainTags"] !== null) {
+            $this->InheritDomainTags = $param["InheritDomainTags"];
         }
     }
 }

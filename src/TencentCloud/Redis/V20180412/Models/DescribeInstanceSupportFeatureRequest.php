@@ -20,38 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceSupportFeature请求参数结构体
  *
- * @method string getInstanceId() 获取指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis#/)在实例列表复制实例 ID。
-示例值：crs-asdasdas
- * @method void setInstanceId(string $InstanceId) 设置指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis#/)在实例列表复制实例 ID。
-示例值：crs-asdasdas
- * @method string getFeatureName() 获取功能特性名称
-- read-local-node-only 就近接入功能
-- multi-account 多账号功能
- * @method void setFeatureName(string $FeatureName) 设置功能特性名称
-- read-local-node-only 就近接入功能
-- multi-account 多账号功能
+ * @method string getInstanceId() 获取指定实例 ID。请登录[Redis控制台](https://console.cloud.tencent.com/redis#/)在实例列表复制实例 ID。
+ * @method void setInstanceId(string $InstanceId) 设置指定实例 ID。请登录[Redis控制台](https://console.cloud.tencent.com/redis#/)在实例列表复制实例 ID。
+ * @method string getFeatureName() 获取支持查询的功能特性如下所示。
+- read-local-node-only：就近接入。
+- multi-account：多账号管理。
+- auto-failback：故障恢复场景，主节点是否开启自动回切。
+ * @method void setFeatureName(string $FeatureName) 设置支持查询的功能特性如下所示。
+- read-local-node-only：就近接入。
+- multi-account：多账号管理。
+- auto-failback：故障恢复场景，主节点是否开启自动回切。
  */
 class DescribeInstanceSupportFeatureRequest extends AbstractModel
 {
     /**
-     * @var string 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis#/)在实例列表复制实例 ID。
-示例值：crs-asdasdas
+     * @var string 指定实例 ID。请登录[Redis控制台](https://console.cloud.tencent.com/redis#/)在实例列表复制实例 ID。
      */
     public $InstanceId;
 
     /**
-     * @var string 功能特性名称
-- read-local-node-only 就近接入功能
-- multi-account 多账号功能
+     * @var string 支持查询的功能特性如下所示。
+- read-local-node-only：就近接入。
+- multi-account：多账号管理。
+- auto-failback：故障恢复场景，主节点是否开启自动回切。
      */
     public $FeatureName;
 
     /**
-     * @param string $InstanceId 指定实例 ID。例如：crs-xjhsdj****。请登录[Redis控制台](https://console.cloud.tencent.com/redis#/)在实例列表复制实例 ID。
-示例值：crs-asdasdas
-     * @param string $FeatureName 功能特性名称
-- read-local-node-only 就近接入功能
-- multi-account 多账号功能
+     * @param string $InstanceId 指定实例 ID。请登录[Redis控制台](https://console.cloud.tencent.com/redis#/)在实例列表复制实例 ID。
+     * @param string $FeatureName 支持查询的功能特性如下所示。
+- read-local-node-only：就近接入。
+- multi-account：多账号管理。
+- auto-failback：故障恢复场景，主节点是否开启自动回切。
      */
     function __construct()
     {

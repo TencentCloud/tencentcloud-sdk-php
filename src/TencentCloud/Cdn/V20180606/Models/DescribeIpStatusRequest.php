@@ -30,14 +30,8 @@ last：表示回源层节点
 edge：表示边缘节点
 last：表示回源层节点
 不填充情况下，默认返回边缘节点信息
- * @method string getArea() 获取查询区域：
-mainland: 国内节点
-overseas: 海外节点
-global: 全球节点
- * @method void setArea(string $Area) 设置查询区域：
-mainland: 国内节点
-overseas: 海外节点
-global: 全球节点
+ * @method string getArea() 获取查询区域：mainland: 中国境内节点overseas: 海外节点global: 全球节点
+ * @method void setArea(string $Area) 设置查询区域：mainland: 中国境内节点overseas: 海外节点global: 全球节点
  * @method boolean getSegment() 获取是否以IP段的格式返回。
  * @method void setSegment(boolean $Segment) 设置是否以IP段的格式返回。
  * @method boolean getShowIpv6() 获取是否查询节点 IPV6 信息。
@@ -61,10 +55,7 @@ last：表示回源层节点
     public $Layer;
 
     /**
-     * @var string 查询区域：
-mainland: 国内节点
-overseas: 海外节点
-global: 全球节点
+     * @var string 查询区域：mainland: 中国境内节点overseas: 海外节点global: 全球节点
      */
     public $Area;
 
@@ -89,10 +80,7 @@ global: 全球节点
 edge：表示边缘节点
 last：表示回源层节点
 不填充情况下，默认返回边缘节点信息
-     * @param string $Area 查询区域：
-mainland: 国内节点
-overseas: 海外节点
-global: 全球节点
+     * @param string $Area 查询区域：mainland: 中国境内节点overseas: 海外节点global: 全球节点
      * @param boolean $Segment 是否以IP段的格式返回。
      * @param boolean $ShowIpv6 是否查询节点 IPV6 信息。
      * @param boolean $AbbreviationIpv6 是否对IPV6进行缩写。

@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
- * @method string getCurrentProxyVersion() 获取当前 Proxy 版本。
- * @method void setCurrentProxyVersion(string $CurrentProxyVersion) 设置当前 Proxy 版本。
- * @method string getUpgradeProxyVersion() 获取可升级的 Redis 版本。
- * @method void setUpgradeProxyVersion(string $UpgradeProxyVersion) 设置可升级的 Redis 版本。
+ * @method string getCurrentProxyVersion() 获取当前 Proxy 版本。请通过 [DescribeInstances](https://cloud.tencent.com/document/product/239/20018) 接口获取实例当前 Proxy 版本。
+ * @method void setCurrentProxyVersion(string $CurrentProxyVersion) 设置当前 Proxy 版本。请通过 [DescribeInstances](https://cloud.tencent.com/document/product/239/20018) 接口获取实例当前 Proxy 版本。
+ * @method string getUpgradeProxyVersion() 获取可升级的 Redis 版本。请通过 [DescribeInstances](https://cloud.tencent.com/document/product/239/20018) 接口获取实例可升级的 Redis 版本。
+ * @method void setUpgradeProxyVersion(string $UpgradeProxyVersion) 设置可升级的 Redis 版本。请通过 [DescribeInstances](https://cloud.tencent.com/document/product/239/20018) 接口获取实例可升级的 Redis 版本。
  * @method integer getInstanceTypeUpgradeNow() 获取指定是否立即升级。
 - 1：立即升级。
 - 0：维护时间窗口升级。
@@ -41,12 +41,12 @@ class UpgradeProxyVersionRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 当前 Proxy 版本。
+     * @var string 当前 Proxy 版本。请通过 [DescribeInstances](https://cloud.tencent.com/document/product/239/20018) 接口获取实例当前 Proxy 版本。
      */
     public $CurrentProxyVersion;
 
     /**
-     * @var string 可升级的 Redis 版本。
+     * @var string 可升级的 Redis 版本。请通过 [DescribeInstances](https://cloud.tencent.com/document/product/239/20018) 接口获取实例可升级的 Redis 版本。
      */
     public $UpgradeProxyVersion;
 
@@ -59,8 +59,8 @@ class UpgradeProxyVersionRequest extends AbstractModel
 
     /**
      * @param string $InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
-     * @param string $CurrentProxyVersion 当前 Proxy 版本。
-     * @param string $UpgradeProxyVersion 可升级的 Redis 版本。
+     * @param string $CurrentProxyVersion 当前 Proxy 版本。请通过 [DescribeInstances](https://cloud.tencent.com/document/product/239/20018) 接口获取实例当前 Proxy 版本。
+     * @param string $UpgradeProxyVersion 可升级的 Redis 版本。请通过 [DescribeInstances](https://cloud.tencent.com/document/product/239/20018) 接口获取实例可升级的 Redis 版本。
      * @param integer $InstanceTypeUpgradeNow 指定是否立即升级。
 - 1：立即升级。
 - 0：维护时间窗口升级。

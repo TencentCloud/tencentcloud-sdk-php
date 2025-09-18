@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBeginTime(string $BeginTime) 设置开始时间：2019-09-08 12:12:41，查询时间最大跨度30天。
  * @method string getEndTime() 获取结束时间：2019-09-09 12:12:41，查询时间最大跨度30天。
  * @method void setEndTime(string $EndTime) 设置结束时间：2019-09-09 12:12:41，查询时间最大跨度30天。
- * @method integer getMinQueryTime() 获取慢查询阈值（毫秒）
- * @method void setMinQueryTime(integer $MinQueryTime) 设置慢查询阈值（毫秒）
- * @method integer getLimit() 获取页面大小：默认20，最大100。
- * @method void setLimit(integer $Limit) 设置页面大小：默认20，最大100。
- * @method integer getOffset() 获取分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
- * @method void setOffset(integer $Offset) 设置分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
+ * @method integer getMinQueryTime() 获取慢查询阈值，取值为大于0的正整数，单位：毫秒。
+ * @method void setMinQueryTime(integer $MinQueryTime) 设置慢查询阈值，取值为大于0的正整数，单位：毫秒。
+ * @method integer getLimit() 获取页面大小。默认为20，最小为1，最大为100。
+ * @method void setLimit(integer $Limit) 设置页面大小。默认为20，最小为1，最大为100。
+ * @method integer getOffset() 获取分页偏移量。默认为0，取值为 Limit 整数倍，计算公式：offset=limit*(页码-1)。
+ * @method void setOffset(integer $Offset) 设置分页偏移量。默认为0，取值为 Limit 整数倍，计算公式：offset=limit*(页码-1)。
  */
 class DescribeTendisSlowLogRequest extends AbstractModel
 {
@@ -51,17 +51,17 @@ class DescribeTendisSlowLogRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var integer 慢查询阈值（毫秒）
+     * @var integer 慢查询阈值，取值为大于0的正整数，单位：毫秒。
      */
     public $MinQueryTime;
 
     /**
-     * @var integer 页面大小：默认20，最大100。
+     * @var integer 页面大小。默认为20，最小为1，最大为100。
      */
     public $Limit;
 
     /**
-     * @var integer 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
+     * @var integer 分页偏移量。默认为0，取值为 Limit 整数倍，计算公式：offset=limit*(页码-1)。
      */
     public $Offset;
 
@@ -69,9 +69,9 @@ class DescribeTendisSlowLogRequest extends AbstractModel
      * @param string $InstanceId 实例 ID，请登录[Tendis控制台](https://console.cloud.tencent.com/tendis)在实例列表复制实例 ID。
      * @param string $BeginTime 开始时间：2019-09-08 12:12:41，查询时间最大跨度30天。
      * @param string $EndTime 结束时间：2019-09-09 12:12:41，查询时间最大跨度30天。
-     * @param integer $MinQueryTime 慢查询阈值（毫秒）
-     * @param integer $Limit 页面大小：默认20，最大100。
-     * @param integer $Offset 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
+     * @param integer $MinQueryTime 慢查询阈值，取值为大于0的正整数，单位：毫秒。
+     * @param integer $Limit 页面大小。默认为20，最小为1，最大为100。
+     * @param integer $Offset 分页偏移量。默认为0，取值为 Limit 整数倍，计算公式：offset=limit*(页码-1)。
      */
     function __construct()
     {

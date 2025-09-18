@@ -124,6 +124,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWhiteBoardSnapshotMode(integer $WhiteBoardSnapshotMode) 设置板书截图生成类型。0 不生成板书（默认）；1 全量模式；2 单页去重模式
  * @method integer getSubtitlesTranscription() 获取字幕转写功能开关：0关闭，1开启，默认关闭
  * @method void setSubtitlesTranscription(integer $SubtitlesTranscription) 设置字幕转写功能开关：0关闭，1开启，默认关闭
+ * @method integer getRecordMerge() 获取录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效
+ * @method void setRecordMerge(integer $RecordMerge) 设置录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效
  */
 class CreateRoomRequest extends AbstractModel
 {
@@ -314,6 +316,11 @@ class CreateRoomRequest extends AbstractModel
     public $SubtitlesTranscription;
 
     /**
+     * @var integer 录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效
+     */
+    public $RecordMerge;
+
+    /**
      * @param string $Name 课堂名称。
      * @param integer $StartTime 预定的课堂开始时间，unix时间戳（秒）。
      * @param integer $EndTime 预定的课堂结束时间，unix时间戳（秒）。
@@ -366,6 +373,7 @@ class CreateRoomRequest extends AbstractModel
      * @param integer $RecordStream 录制类型 0 仅录制混流（默认） ;1 录制混流+单流，该模式下除混流录制基础上，分别录制老师、台上学生的音视频流，每路录制都会产生相应的录制费用 。示例：0
      * @param integer $WhiteBoardSnapshotMode 板书截图生成类型。0 不生成板书（默认）；1 全量模式；2 单页去重模式
      * @param integer $SubtitlesTranscription 字幕转写功能开关：0关闭，1开启，默认关闭
+     * @param integer $RecordMerge 录制文件合并开关。0 关闭 1 开启 注：只有在一节课多次启用手动录制时，此功能才有效
      */
     function __construct()
     {
@@ -510,6 +518,10 @@ class CreateRoomRequest extends AbstractModel
 
         if (array_key_exists("SubtitlesTranscription",$param) and $param["SubtitlesTranscription"] !== null) {
             $this->SubtitlesTranscription = $param["SubtitlesTranscription"];
+        }
+
+        if (array_key_exists("RecordMerge",$param) and $param["RecordMerge"] !== null) {
+            $this->RecordMerge = $param["RecordMerge"];
         }
     }
 }

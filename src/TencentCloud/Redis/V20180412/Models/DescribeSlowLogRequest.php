@@ -28,12 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBeginTime(string $BeginTime) 设置预查询慢日志的起始时间，查询时间最大跨度30天。
  * @method string getEndTime() 获取预查询慢日志的结束时间，查询时间最大跨度30天
  * @method void setEndTime(string $EndTime) 设置预查询慢日志的结束时间，查询时间最大跨度30天
- * @method integer getMinQueryTime() 获取慢查询平均执行时间阈值，单位：毫秒。
- * @method void setMinQueryTime(integer $MinQueryTime) 设置慢查询平均执行时间阈值，单位：毫秒。
- * @method integer getLimit() 获取每个页面展示的慢查询条数，默认值为20，最大100。
- * @method void setLimit(integer $Limit) 设置每个页面展示的慢查询条数，默认值为20，最大100。
- * @method integer getOffset() 获取慢查询条数的偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
- * @method void setOffset(integer $Offset) 设置慢查询条数的偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
+ * @method integer getMinQueryTime() 获取慢查询平均执行时间阈值。取值为大于0 的正整数。单位：毫秒。
+ * @method void setMinQueryTime(integer $MinQueryTime) 设置慢查询平均执行时间阈值。取值为大于0 的正整数。单位：毫秒。
+ * @method integer getLimit() 获取每个页面展示的慢查询条数，默认值为20，最小值为1，最大值为100。
+ * @method void setLimit(integer $Limit) 设置每个页面展示的慢查询条数，默认值为20，最小值为1，最大值为100。
+ * @method integer getOffset() 获取慢查询条数的偏移量。默认为0。取Limit整数倍。计算公式：offset=limit*(页码-1)。
+ * @method void setOffset(integer $Offset) 设置慢查询条数的偏移量。默认为0。取Limit整数倍。计算公式：offset=limit*(页码-1)。
  * @method string getRole() 获取节点所属角色。
 - master：主节点。
 - slave：从节点。
@@ -60,17 +60,17 @@ class DescribeSlowLogRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var integer 慢查询平均执行时间阈值，单位：毫秒。
+     * @var integer 慢查询平均执行时间阈值。取值为大于0 的正整数。单位：毫秒。
      */
     public $MinQueryTime;
 
     /**
-     * @var integer 每个页面展示的慢查询条数，默认值为20，最大100。
+     * @var integer 每个页面展示的慢查询条数，默认值为20，最小值为1，最大值为100。
      */
     public $Limit;
 
     /**
-     * @var integer 慢查询条数的偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
+     * @var integer 慢查询条数的偏移量。默认为0。取Limit整数倍。计算公式：offset=limit*(页码-1)。
      */
     public $Offset;
 
@@ -86,9 +86,9 @@ class DescribeSlowLogRequest extends AbstractModel
 
      * @param string $BeginTime 预查询慢日志的起始时间，查询时间最大跨度30天。
      * @param string $EndTime 预查询慢日志的结束时间，查询时间最大跨度30天
-     * @param integer $MinQueryTime 慢查询平均执行时间阈值，单位：毫秒。
-     * @param integer $Limit 每个页面展示的慢查询条数，默认值为20，最大100。
-     * @param integer $Offset 慢查询条数的偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
+     * @param integer $MinQueryTime 慢查询平均执行时间阈值。取值为大于0 的正整数。单位：毫秒。
+     * @param integer $Limit 每个页面展示的慢查询条数，默认值为20，最小值为1，最大值为100。
+     * @param integer $Offset 慢查询条数的偏移量。默认为0。取Limit整数倍。计算公式：offset=limit*(页码-1)。
      * @param string $Role 节点所属角色。
 - master：主节点。
 - slave：从节点。

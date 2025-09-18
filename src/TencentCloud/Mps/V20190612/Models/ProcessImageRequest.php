@@ -26,6 +26,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) 设置图片处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
  * @method string getOutputDir() 获取图片处理生成的文件输出的路径。如果不填表示与 InputInfo 中文件所在的目录一致。如果是目录，如`/image/201907/`，表示继承原文件名输出到该目录。
  * @method void setOutputDir(string $OutputDir) 设置图片处理生成的文件输出的路径。如果不填表示与 InputInfo 中文件所在的目录一致。如果是目录，如`/image/201907/`，表示继承原文件名输出到该目录。
+ * @method string getOutputPath() 获取输出路径，可以为相对路径或者绝对路径。
+若需定义输出路径，路径需以`.{format}`结尾。变量名请参考 [文件名变量说明](https://cloud.tencent.com/document/product/862/37039)。
+相对路径示例：
+<li>文件名_{变量名}.{format}</li>
+<li>文件名.{format}</li>
+绝对路径示例：
+<li>/自定义路径/文件名_{变量名}.{format}</li>
+如果不填，则默认为相对路径：{inputName}.{format}。
+ * @method void setOutputPath(string $OutputPath) 设置输出路径，可以为相对路径或者绝对路径。
+若需定义输出路径，路径需以`.{format}`结尾。变量名请参考 [文件名变量说明](https://cloud.tencent.com/document/product/862/37039)。
+相对路径示例：
+<li>文件名_{变量名}.{format}</li>
+<li>文件名.{format}</li>
+绝对路径示例：
+<li>/自定义路径/文件名_{变量名}.{format}</li>
+如果不填，则默认为相对路径：{inputName}.{format}。
  * @method ImageTaskInput getImageTask() 获取图片处理参数。
  * @method void setImageTask(ImageTaskInput $ImageTask) 设置图片处理参数。
  */
@@ -47,6 +63,18 @@ class ProcessImageRequest extends AbstractModel
     public $OutputDir;
 
     /**
+     * @var string 输出路径，可以为相对路径或者绝对路径。
+若需定义输出路径，路径需以`.{format}`结尾。变量名请参考 [文件名变量说明](https://cloud.tencent.com/document/product/862/37039)。
+相对路径示例：
+<li>文件名_{变量名}.{format}</li>
+<li>文件名.{format}</li>
+绝对路径示例：
+<li>/自定义路径/文件名_{变量名}.{format}</li>
+如果不填，则默认为相对路径：{inputName}.{format}。
+     */
+    public $OutputPath;
+
+    /**
      * @var ImageTaskInput 图片处理参数。
      */
     public $ImageTask;
@@ -55,6 +83,14 @@ class ProcessImageRequest extends AbstractModel
      * @param MediaInputInfo $InputInfo 图片处理的文件输入信息。
      * @param TaskOutputStorage $OutputStorage 图片处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
      * @param string $OutputDir 图片处理生成的文件输出的路径。如果不填表示与 InputInfo 中文件所在的目录一致。如果是目录，如`/image/201907/`，表示继承原文件名输出到该目录。
+     * @param string $OutputPath 输出路径，可以为相对路径或者绝对路径。
+若需定义输出路径，路径需以`.{format}`结尾。变量名请参考 [文件名变量说明](https://cloud.tencent.com/document/product/862/37039)。
+相对路径示例：
+<li>文件名_{变量名}.{format}</li>
+<li>文件名.{format}</li>
+绝对路径示例：
+<li>/自定义路径/文件名_{变量名}.{format}</li>
+如果不填，则默认为相对路径：{inputName}.{format}。
      * @param ImageTaskInput $ImageTask 图片处理参数。
      */
     function __construct()
@@ -82,6 +118,10 @@ class ProcessImageRequest extends AbstractModel
 
         if (array_key_exists("OutputDir",$param) and $param["OutputDir"] !== null) {
             $this->OutputDir = $param["OutputDir"];
+        }
+
+        if (array_key_exists("OutputPath",$param) and $param["OutputPath"] !== null) {
+            $this->OutputPath = $param["OutputPath"];
         }
 
         if (array_key_exists("ImageTask",$param) and $param["ImageTask"] !== null) {

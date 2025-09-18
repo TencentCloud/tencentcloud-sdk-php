@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBotBizId(string $BotBizId) 设置应用ID
  * @method string getDesc() 获取发布描述
  * @method void setDesc(string $Desc) 设置发布描述
- * @method array getChannelBizIds() 获取渠道业务ID
- * @method void setChannelBizIds(array $ChannelBizIds) 设置渠道业务ID
+ * @method array getChannelBizIds() 获取渠道业务ID，从ListChannel接口的响应字段ChannelId获取
+ * @method void setChannelBizIds(array $ChannelBizIds) 设置渠道业务ID，从ListChannel接口的响应字段ChannelId获取
  */
 class CreateReleaseRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class CreateReleaseRequest extends AbstractModel
     public $Desc;
 
     /**
-     * @var array 渠道业务ID
+     * @var array 渠道业务ID，从ListChannel接口的响应字段ChannelId获取
      */
     public $ChannelBizIds;
 
     /**
      * @param string $BotBizId 应用ID
      * @param string $Desc 发布描述
-     * @param array $ChannelBizIds 渠道业务ID
+     * @param array $ChannelBizIds 渠道业务ID，从ListChannel接口的响应字段ChannelId获取
      */
     function __construct()
     {

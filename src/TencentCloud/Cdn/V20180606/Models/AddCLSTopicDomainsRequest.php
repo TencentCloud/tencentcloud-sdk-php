@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomainAreaConfigs(array $DomainAreaConfigs) 设置域名区域配置
  * @method string getChannel() 获取接入渠道，cdn或者ecdn，默认值为cdn
  * @method void setChannel(string $Channel) 设置接入渠道，cdn或者ecdn，默认值为cdn
+ * @method boolean getInheritDomainTags() 获取是否继承域名标签, 默认保留上一次更改的值
+ * @method void setInheritDomainTags(boolean $InheritDomainTags) 设置是否继承域名标签, 默认保留上一次更改的值
  */
 class AddCLSTopicDomainsRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class AddCLSTopicDomainsRequest extends AbstractModel
     public $Channel;
 
     /**
+     * @var boolean 是否继承域名标签, 默认保留上一次更改的值
+     */
+    public $InheritDomainTags;
+
+    /**
      * @param string $LogsetId 日志集ID
      * @param string $TopicId 日志主题ID
      * @param array $DomainAreaConfigs 域名区域配置
      * @param string $Channel 接入渠道，cdn或者ecdn，默认值为cdn
+     * @param boolean $InheritDomainTags 是否继承域名标签, 默认保留上一次更改的值
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class AddCLSTopicDomainsRequest extends AbstractModel
 
         if (array_key_exists("Channel",$param) and $param["Channel"] !== null) {
             $this->Channel = $param["Channel"];
+        }
+
+        if (array_key_exists("InheritDomainTags",$param) and $param["InheritDomainTags"] !== null) {
+            $this->InheritDomainTags = $param["InheritDomainTags"];
         }
     }
 }

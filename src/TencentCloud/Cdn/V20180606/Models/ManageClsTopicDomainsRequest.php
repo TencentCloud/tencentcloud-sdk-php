@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChannel(string $Channel) 设置接入渠道，cdn或者ecdn，默认值为cdn
  * @method array getDomainAreaConfigs() 获取域名区域配置，注意：如果此字段为空，则表示解绑对应主题下的所有域名
  * @method void setDomainAreaConfigs(array $DomainAreaConfigs) 设置域名区域配置，注意：如果此字段为空，则表示解绑对应主题下的所有域名
+ * @method boolean getInheritDomainTags() 获取是否继承域名标签
+ * @method void setInheritDomainTags(boolean $InheritDomainTags) 设置是否继承域名标签
  */
 class ManageClsTopicDomainsRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ManageClsTopicDomainsRequest extends AbstractModel
     public $DomainAreaConfigs;
 
     /**
+     * @var boolean 是否继承域名标签
+     */
+    public $InheritDomainTags;
+
+    /**
      * @param string $LogsetId 日志集ID
      * @param string $TopicId 日志主题ID
      * @param string $Channel 接入渠道，cdn或者ecdn，默认值为cdn
      * @param array $DomainAreaConfigs 域名区域配置，注意：如果此字段为空，则表示解绑对应主题下的所有域名
+     * @param boolean $InheritDomainTags 是否继承域名标签
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class ManageClsTopicDomainsRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->DomainAreaConfigs, $obj);
             }
+        }
+
+        if (array_key_exists("InheritDomainTags",$param) and $param["InheritDomainTags"] !== null) {
+            $this->InheritDomainTags = $param["InheritDomainTags"];
         }
     }
 }

@@ -46,6 +46,12 @@ es类型示例:
 {"ResourceDescription":"qcs::es:ap-guangzhou:uin/1500000688:instance/es-7cplmhsd","ESTargetParams":{"EsVersion":"7.14.2","UserName":"elastic","Password":"xxxxx","NetMode":"privateLink","IndexPrefix":"auto-test","IndexSuffixMode":"default","RotationInterval":"none","IndexTemplateType":"","OutputMode":"default"}}
  * @method string getRuleId() 获取事件规则ID
  * @method void setRuleId(string $RuleId) 设置事件规则ID
+ * @method integer getBatchTimeout() 获取批量投递最长等待时间
+ * @method void setBatchTimeout(integer $BatchTimeout) 设置批量投递最长等待时间
+ * @method integer getBatchEventCount() 获取批量投递最大事件条数
+ * @method void setBatchEventCount(integer $BatchEventCount) 设置批量投递最大事件条数
+ * @method boolean getEnableBatchDelivery() 获取开启批量投递使能
+ * @method void setEnableBatchDelivery(boolean $EnableBatchDelivery) 设置开启批量投递使能
  */
 class CreateTargetRequest extends AbstractModel
 {
@@ -79,6 +85,21 @@ es类型示例:
     public $RuleId;
 
     /**
+     * @var integer 批量投递最长等待时间
+     */
+    public $BatchTimeout;
+
+    /**
+     * @var integer 批量投递最大事件条数
+     */
+    public $BatchEventCount;
+
+    /**
+     * @var boolean 开启批量投递使能
+     */
+    public $EnableBatchDelivery;
+
+    /**
      * @param string $EventBusId 事件集ID
      * @param string $Type 目标类型;取值范围:scf(云函数)/cls(日志服务)/amp(消息推送)/ckafka(消息推送)/es(大数据elastic-search)
      * @param TargetDescription $TargetDescription 目标描述;scf类型示例:
@@ -92,6 +113,9 @@ amp类型-邮件/短信示例:
 es类型示例:
 {"ResourceDescription":"qcs::es:ap-guangzhou:uin/1500000688:instance/es-7cplmhsd","ESTargetParams":{"EsVersion":"7.14.2","UserName":"elastic","Password":"xxxxx","NetMode":"privateLink","IndexPrefix":"auto-test","IndexSuffixMode":"default","RotationInterval":"none","IndexTemplateType":"","OutputMode":"default"}}
      * @param string $RuleId 事件规则ID
+     * @param integer $BatchTimeout 批量投递最长等待时间
+     * @param integer $BatchEventCount 批量投递最大事件条数
+     * @param boolean $EnableBatchDelivery 开启批量投递使能
      */
     function __construct()
     {
@@ -121,6 +145,18 @@ es类型示例:
 
         if (array_key_exists("RuleId",$param) and $param["RuleId"] !== null) {
             $this->RuleId = $param["RuleId"];
+        }
+
+        if (array_key_exists("BatchTimeout",$param) and $param["BatchTimeout"] !== null) {
+            $this->BatchTimeout = $param["BatchTimeout"];
+        }
+
+        if (array_key_exists("BatchEventCount",$param) and $param["BatchEventCount"] !== null) {
+            $this->BatchEventCount = $param["BatchEventCount"];
+        }
+
+        if (array_key_exists("EnableBatchDelivery",$param) and $param["EnableBatchDelivery"] !== null) {
+            $this->EnableBatchDelivery = $param["EnableBatchDelivery"];
         }
     }
 }

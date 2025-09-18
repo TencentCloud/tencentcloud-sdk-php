@@ -22,16 +22,26 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() 获取实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
- * @method string getPassword() 获取重置的密码。若切换为免密实例时，可不配置该参数。其他情况必须配置。
- * @method void setPassword(string $Password) 设置重置的密码。若切换为免密实例时，可不配置该参数。其他情况必须配置。
+ * @method string getPassword() 获取重置的密码。若切换为免密实例时，可不配置该参数。
+- 长度8-32位, 推荐使用12位以上的密码。
+- 不能以"/"开头。
+- 至少包含小写字母a- z、大写字母A - Z、数字0 - 9、特殊字符 ()~!@#$%^&*-+=_|{}[]:;<>,.?/中的两项。
+ * @method void setPassword(string $Password) 设置重置的密码。若切换为免密实例时，可不配置该参数。
+- 长度8-32位, 推荐使用12位以上的密码。
+- 不能以"/"开头。
+- 至少包含小写字母a- z、大写字母A - Z、数字0 - 9、特殊字符 ()~!@#$%^&*-+=_|{}[]:;<>,.?/中的两项。
  * @method boolean getNoAuth() 获取是否切换免密实例。
-- false：切换为非免密码实例。
-- true：切换为免密码实例。默认 false。
+- false：切换为非免密码实例。默认 false。
+- true：切换为免密码实例。
  * @method void setNoAuth(boolean $NoAuth) 设置是否切换免密实例。
-- false：切换为非免密码实例。
-- true：切换为免密码实例。默认 false。
- * @method boolean getEncryptPassword() 获取是否加密密码
- * @method void setEncryptPassword(boolean $EncryptPassword) 设置是否加密密码
+- false：切换为非免密码实例。默认 false。
+- true：切换为免密码实例。
+ * @method boolean getEncryptPassword() 获取是否加密密码。
+- false：非加密密码。默认 false。
+- true：加密密码。
+ * @method void setEncryptPassword(boolean $EncryptPassword) 设置是否加密密码。
+- false：非加密密码。默认 false。
+- true：加密密码。
  */
 class ResetPasswordRequest extends AbstractModel
 {
@@ -41,29 +51,39 @@ class ResetPasswordRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string 重置的密码。若切换为免密实例时，可不配置该参数。其他情况必须配置。
+     * @var string 重置的密码。若切换为免密实例时，可不配置该参数。
+- 长度8-32位, 推荐使用12位以上的密码。
+- 不能以"/"开头。
+- 至少包含小写字母a- z、大写字母A - Z、数字0 - 9、特殊字符 ()~!@#$%^&*-+=_|{}[]:;<>,.?/中的两项。
      */
     public $Password;
 
     /**
      * @var boolean 是否切换免密实例。
-- false：切换为非免密码实例。
-- true：切换为免密码实例。默认 false。
+- false：切换为非免密码实例。默认 false。
+- true：切换为免密码实例。
      */
     public $NoAuth;
 
     /**
-     * @var boolean 是否加密密码
+     * @var boolean 是否加密密码。
+- false：非加密密码。默认 false。
+- true：加密密码。
      */
     public $EncryptPassword;
 
     /**
      * @param string $InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
-     * @param string $Password 重置的密码。若切换为免密实例时，可不配置该参数。其他情况必须配置。
+     * @param string $Password 重置的密码。若切换为免密实例时，可不配置该参数。
+- 长度8-32位, 推荐使用12位以上的密码。
+- 不能以"/"开头。
+- 至少包含小写字母a- z、大写字母A - Z、数字0 - 9、特殊字符 ()~!@#$%^&*-+=_|{}[]:;<>,.?/中的两项。
      * @param boolean $NoAuth 是否切换免密实例。
-- false：切换为非免密码实例。
-- true：切换为免密码实例。默认 false。
-     * @param boolean $EncryptPassword 是否加密密码
+- false：切换为非免密码实例。默认 false。
+- true：切换为免密码实例。
+     * @param boolean $EncryptPassword 是否加密密码。
+- false：非加密密码。默认 false。
+- true：加密密码。
      */
     function __construct()
     {

@@ -28,12 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBeginTime(string $BeginTime) 设置慢查询的开始时间，查询时间最大跨度30天。
  * @method string getEndTime() 获取慢查询的结束时间，查询时间最大跨度30天。
  * @method void setEndTime(string $EndTime) 设置慢查询的结束时间，查询时间最大跨度30天。
- * @method integer getMinQueryTime() 获取慢查询阈值，单位：毫秒。
- * @method void setMinQueryTime(integer $MinQueryTime) 设置慢查询阈值，单位：毫秒。
- * @method integer getLimit() 获取每页输出的任务列表大小，默认为 20，最多输出100条。
- * @method void setLimit(integer $Limit) 设置每页输出的任务列表大小，默认为 20，最多输出100条。
- * @method integer getOffset() 获取分页偏移量，取Limit整数倍，计算公式：offset=limit*(页码-1)。
- * @method void setOffset(integer $Offset) 设置分页偏移量，取Limit整数倍，计算公式：offset=limit*(页码-1)。
+ * @method integer getMinQueryTime() 获取慢查询阈值。取值为大于0 的正整数。单位：毫秒。
+ * @method void setMinQueryTime(integer $MinQueryTime) 设置慢查询阈值。取值为大于0 的正整数。单位：毫秒。
+ * @method integer getLimit() 获取每页输出的任务列表大小。默认值为20，最小值为1，最大值为100。
+ * @method void setLimit(integer $Limit) 设置每页输出的任务列表大小。默认值为20，最小值为1，最大值为100。
+ * @method integer getOffset() 获取分页偏移量。默认为0。取值为 Limit 整数倍。计算公式：offset=limit*(页码-1)。
+ * @method void setOffset(integer $Offset) 设置分页偏移量。默认为0。取值为 Limit 整数倍。计算公式：offset=limit*(页码-1)。
  */
 class DescribeProxySlowLogRequest extends AbstractModel
 {
@@ -54,17 +54,17 @@ class DescribeProxySlowLogRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var integer 慢查询阈值，单位：毫秒。
+     * @var integer 慢查询阈值。取值为大于0 的正整数。单位：毫秒。
      */
     public $MinQueryTime;
 
     /**
-     * @var integer 每页输出的任务列表大小，默认为 20，最多输出100条。
+     * @var integer 每页输出的任务列表大小。默认值为20，最小值为1，最大值为100。
      */
     public $Limit;
 
     /**
-     * @var integer 分页偏移量，取Limit整数倍，计算公式：offset=limit*(页码-1)。
+     * @var integer 分页偏移量。默认为0。取值为 Limit 整数倍。计算公式：offset=limit*(页码-1)。
      */
     public $Offset;
 
@@ -73,9 +73,9 @@ class DescribeProxySlowLogRequest extends AbstractModel
 
      * @param string $BeginTime 慢查询的开始时间，查询时间最大跨度30天。
      * @param string $EndTime 慢查询的结束时间，查询时间最大跨度30天。
-     * @param integer $MinQueryTime 慢查询阈值，单位：毫秒。
-     * @param integer $Limit 每页输出的任务列表大小，默认为 20，最多输出100条。
-     * @param integer $Offset 分页偏移量，取Limit整数倍，计算公式：offset=limit*(页码-1)。
+     * @param integer $MinQueryTime 慢查询阈值。取值为大于0 的正整数。单位：毫秒。
+     * @param integer $Limit 每页输出的任务列表大小。默认值为20，最小值为1，最大值为100。
+     * @param integer $Offset 分页偏移量。默认为0。取值为 Limit 整数倍。计算公式：offset=limit*(页码-1)。
      */
     function __construct()
     {

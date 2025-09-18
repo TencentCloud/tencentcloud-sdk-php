@@ -24,8 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) 设置实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
  * @method integer getMemSize() 获取分片大小，单位：MB。
  * @method void setMemSize(integer $MemSize) 设置分片大小，单位：MB。
- * @method integer getRedisShardNum() 获取分片数量，Redis 2.8主从版、CKV主从版和Redis2.8单机版不需要填写。
- * @method void setRedisShardNum(integer $RedisShardNum) 设置分片数量，Redis 2.8主从版、CKV主从版和Redis2.8单机版不需要填写。
+ * @method integer getRedisShardNum() 获取分片数量。
+- 实例为标准架构，RedisShardNum 默认为1。
+- Redis 2.8主从版、CKV主从版和 Redis 2.8单机版不需要填写。
+ * @method void setRedisShardNum(integer $RedisShardNum) 设置分片数量。
+- 实例为标准架构，RedisShardNum 默认为1。
+- Redis 2.8主从版、CKV主从版和 Redis 2.8单机版不需要填写。
  * @method integer getRedisReplicasNum() 获取副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写。
  * @method void setRedisReplicasNum(integer $RedisReplicasNum) 设置副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写。
  */
@@ -42,7 +46,9 @@ class InquiryPriceUpgradeInstanceRequest extends AbstractModel
     public $MemSize;
 
     /**
-     * @var integer 分片数量，Redis 2.8主从版、CKV主从版和Redis2.8单机版不需要填写。
+     * @var integer 分片数量。
+- 实例为标准架构，RedisShardNum 默认为1。
+- Redis 2.8主从版、CKV主从版和 Redis 2.8单机版不需要填写。
      */
     public $RedisShardNum;
 
@@ -54,7 +60,9 @@ class InquiryPriceUpgradeInstanceRequest extends AbstractModel
     /**
      * @param string $InstanceId 实例 ID，请登录[Redis控制台](https://console.cloud.tencent.com/redis/instance/list)在实例列表复制实例 ID。
      * @param integer $MemSize 分片大小，单位：MB。
-     * @param integer $RedisShardNum 分片数量，Redis 2.8主从版、CKV主从版和Redis2.8单机版不需要填写。
+     * @param integer $RedisShardNum 分片数量。
+- 实例为标准架构，RedisShardNum 默认为1。
+- Redis 2.8主从版、CKV主从版和 Redis 2.8单机版不需要填写。
      * @param integer $RedisReplicasNum 副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写。
      */
     function __construct()

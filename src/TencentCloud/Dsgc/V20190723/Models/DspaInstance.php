@@ -60,6 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInsAuthCount(integer $InsAuthCount) 设置已授权的实例数量
  * @method integer getInsTotalQuota() 获取已购买的实例数量
  * @method void setInsTotalQuota(integer $InsTotalQuota) 设置已购买的实例数量
+ * @method array getTags() 获取标签
+ * @method void setTags(array $Tags) 设置标签
  */
 class DspaInstance extends AbstractModel
 {
@@ -156,6 +158,11 @@ class DspaInstance extends AbstractModel
     public $InsTotalQuota;
 
     /**
+     * @var array 标签
+     */
+    public $Tags;
+
+    /**
      * @param string $DspaId DSPA实例ID。
      * @param string $DspaName DSPA实例名称。
      * @param string $DspaDescription DSPA实例描述信息。
@@ -176,6 +183,7 @@ class DspaInstance extends AbstractModel
      * @param string $Channel 实例渠道
      * @param integer $InsAuthCount 已授权的实例数量
      * @param integer $InsTotalQuota 已购买的实例数量
+     * @param array $Tags 标签
      */
     function __construct()
     {
@@ -260,6 +268,15 @@ class DspaInstance extends AbstractModel
 
         if (array_key_exists("InsTotalQuota",$param) and $param["InsTotalQuota"] !== null) {
             $this->InsTotalQuota = $param["InsTotalQuota"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

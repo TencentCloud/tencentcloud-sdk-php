@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBillingMode(integer $BillingMode) 设置付费方式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul>
  * @method integer getPeriod() 获取购买实例时长。<ul><li>单位：月。</li><li>付费方式选择包年包月计费时，取值范围为[1,2,3,4,5,6,7,8,9,10,11,12,24,36,48,60]。</li><li>付费方式选择按量计费时，设置为1。</li></ul>
  * @method void setPeriod(integer $Period) 设置购买实例时长。<ul><li>单位：月。</li><li>付费方式选择包年包月计费时，取值范围为[1,2,3,4,5,6,7,8,9,10,11,12,24,36,48,60]。</li><li>付费方式选择按量计费时，设置为1。</li></ul>
- * @method array getSecurityGroupIdList() 获取安全组ID。请登录控制台，在<b>安全组</b>页面获取安全组 ID 信息。
- * @method void setSecurityGroupIdList(array $SecurityGroupIdList) 设置安全组ID。请登录控制台，在<b>安全组</b>页面获取安全组 ID 信息。
+ * @method array getSecurityGroupIdList() 获取安全组ID。请通过 [DescribeInstanceSecurityGroup](https://cloud.tencent.com/document/product/239/34447) 接口获取实例的安全组 ID。
+ * @method void setSecurityGroupIdList(array $SecurityGroupIdList) 设置安全组ID。请通过 [DescribeInstanceSecurityGroup](https://cloud.tencent.com/document/product/239/34447) 接口获取实例的安全组 ID。
  * @method string getBackupId() 获取克隆实例使用的备份ID。请通过接口[DescribeInstanceBackups](https://cloud.tencent.com/document/product/239/20011)获取备份ID。
  * @method void setBackupId(string $BackupId) 设置克隆实例使用的备份ID。请通过接口[DescribeInstanceBackups](https://cloud.tencent.com/document/product/239/20011)获取备份ID。
  * @method boolean getNoAuth() 获取配置克隆实例是否支持免密访问。开启 SSL 与外网均不支持免密访问。<ul><li>true：免密实例，</li><li>false：非免密实例。默认为非免密实例。</li></ul>
@@ -105,7 +105,7 @@ class CloneInstancesRequest extends AbstractModel
     public $Period;
 
     /**
-     * @var array 安全组ID。请登录控制台，在<b>安全组</b>页面获取安全组 ID 信息。
+     * @var array 安全组ID。请通过 [DescribeInstanceSecurityGroup](https://cloud.tencent.com/document/product/239/34447) 接口获取实例的安全组 ID。
      */
     public $SecurityGroupIdList;
 
@@ -196,7 +196,7 @@ class CloneInstancesRequest extends AbstractModel
      * @param integer $ZoneId 克隆实例所属的可用区ID。当前所支持的可用区 ID，请参见[地域和可用区](https://cloud.tencent.com/document/product/239/4106) 。
      * @param integer $BillingMode 付费方式。<ul><li>0：按量计费。</li><li>1：包年包月。</li></ul>
      * @param integer $Period 购买实例时长。<ul><li>单位：月。</li><li>付费方式选择包年包月计费时，取值范围为[1,2,3,4,5,6,7,8,9,10,11,12,24,36,48,60]。</li><li>付费方式选择按量计费时，设置为1。</li></ul>
-     * @param array $SecurityGroupIdList 安全组ID。请登录控制台，在<b>安全组</b>页面获取安全组 ID 信息。
+     * @param array $SecurityGroupIdList 安全组ID。请通过 [DescribeInstanceSecurityGroup](https://cloud.tencent.com/document/product/239/34447) 接口获取实例的安全组 ID。
      * @param string $BackupId 克隆实例使用的备份ID。请通过接口[DescribeInstanceBackups](https://cloud.tencent.com/document/product/239/20011)获取备份ID。
      * @param boolean $NoAuth 配置克隆实例是否支持免密访问。开启 SSL 与外网均不支持免密访问。<ul><li>true：免密实例，</li><li>false：非免密实例。默认为非免密实例。</li></ul>
      * @param string $VpcId 配置克隆实例的私有网络ID。如果未配置该参数，默认选择基础网络。

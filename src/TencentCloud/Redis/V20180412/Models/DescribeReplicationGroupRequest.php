@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeReplicationGroup请求参数结构体
  *
- * @method integer getLimit() 获取每页输出实例列表的大小，参数默认值20。
- * @method void setLimit(integer $Limit) 设置每页输出实例列表的大小，参数默认值20。
+ * @method integer getLimit() 获取每页输出实例列表的大小。取值为大于0 的正整数，默认为20。
+ * @method void setLimit(integer $Limit) 设置每页输出实例列表的大小。取值为大于0 的正整数，默认为20。
  * @method integer getOffset() 获取分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
  * @method void setOffset(integer $Offset) 设置分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
  * @method string getGroupId() 获取指定复制组 ID。例如：crs-rpl-m3zt****。请登录[Redis 控制台](https://console.cloud.tencent.com/redis/replication)的全球复制组列表获取复制组 ID。
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeReplicationGroupRequest extends AbstractModel
 {
     /**
-     * @var integer 每页输出实例列表的大小，参数默认值20。
+     * @var integer 每页输出实例列表的大小。取值为大于0 的正整数，默认为20。
      */
     public $Limit;
 
@@ -52,7 +52,7 @@ class DescribeReplicationGroupRequest extends AbstractModel
     public $SearchKey;
 
     /**
-     * @param integer $Limit 每页输出实例列表的大小，参数默认值20。
+     * @param integer $Limit 每页输出实例列表的大小。取值为大于0 的正整数，默认为20。
      * @param integer $Offset 分页偏移量，取Limit整数倍。计算公式：offset=limit*(页码-1)。
      * @param string $GroupId 指定复制组 ID。例如：crs-rpl-m3zt****。请登录[Redis 控制台](https://console.cloud.tencent.com/redis/replication)的全球复制组列表获取复制组 ID。
      * @param string $SearchKey 模糊查询的关键字，可以设置为复制组ID或复制组名称进行模糊查询。请登录[Redis 控制台](https://console.cloud.tencent.com/redis/replication)的全球复制组列表获取复制组 ID及名称。

@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCommandLine(string $CommandLine) 设置慢查询详细命令行信息。
  * @method string getExecuteTime() 获取执行时间。
  * @method void setExecuteTime(string $ExecuteTime) 设置执行时间。
+ * @method integer getRecvClientEnd() 获取收客户端请求时长(ms)
+ * @method void setRecvClientEnd(integer $RecvClientEnd) 设置收客户端请求时长(ms)
+ * @method integer getSendClientEnd() 获取发送客户端请求时长(ms)
+ * @method void setSendClientEnd(integer $SendClientEnd) 设置发送客户端请求时长(ms)
  */
 class InstanceProxySlowlogDetail extends AbstractModel
 {
@@ -59,11 +63,23 @@ class InstanceProxySlowlogDetail extends AbstractModel
     public $ExecuteTime;
 
     /**
+     * @var integer 收客户端请求时长(ms)
+     */
+    public $RecvClientEnd;
+
+    /**
+     * @var integer 发送客户端请求时长(ms)
+     */
+    public $SendClientEnd;
+
+    /**
      * @param integer $Duration 慢查询耗时时长。单位：毫秒。
      * @param string $Client 客户端地址。
      * @param string $Command 慢查询的命令。
      * @param string $CommandLine 慢查询详细命令行信息。
      * @param string $ExecuteTime 执行时间。
+     * @param integer $RecvClientEnd 收客户端请求时长(ms)
+     * @param integer $SendClientEnd 发送客户端请求时长(ms)
      */
     function __construct()
     {
@@ -96,6 +112,14 @@ class InstanceProxySlowlogDetail extends AbstractModel
 
         if (array_key_exists("ExecuteTime",$param) and $param["ExecuteTime"] !== null) {
             $this->ExecuteTime = $param["ExecuteTime"];
+        }
+
+        if (array_key_exists("RecvClientEnd",$param) and $param["RecvClientEnd"] !== null) {
+            $this->RecvClientEnd = $param["RecvClientEnd"];
+        }
+
+        if (array_key_exists("SendClientEnd",$param) and $param["SendClientEnd"] !== null) {
+            $this->SendClientEnd = $param["SendClientEnd"];
         }
     }
 }

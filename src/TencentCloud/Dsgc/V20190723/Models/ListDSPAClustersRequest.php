@@ -36,6 +36,8 @@ DspaId和DspaName支持模糊搜索。
 Status支持的可选值：enabled、disabled。
 Version支持的可选值：trial、official。
 Channel支持的可选值：sp_cds_dsgc_pre（代表dsgc实例）、sp_cds_dsgc_wedata_dc（代表wedata实例）
+ * @method array getTagFilter() 获取Tag键值过滤
+ * @method void setTagFilter(array $TagFilter) 设置Tag键值过滤
  * @method string getListMode() 获取展示模式。
 
 目前只有两个值的处理逻辑：
@@ -74,6 +76,11 @@ Channel支持的可选值：sp_cds_dsgc_pre（代表dsgc实例）、sp_cds_dsgc_
     public $Filters;
 
     /**
+     * @var array Tag键值过滤
+     */
+    public $TagFilter;
+
+    /**
      * @var string 展示模式。
 
 目前只有两个值的处理逻辑：
@@ -93,6 +100,7 @@ DspaId和DspaName支持模糊搜索。
 Status支持的可选值：enabled、disabled。
 Version支持的可选值：trial、official。
 Channel支持的可选值：sp_cds_dsgc_pre（代表dsgc实例）、sp_cds_dsgc_wedata_dc（代表wedata实例）
+     * @param array $TagFilter Tag键值过滤
      * @param string $ListMode 展示模式。
 
 目前只有两个值的处理逻辑：
@@ -128,6 +136,15 @@ Channel支持的可选值：sp_cds_dsgc_pre（代表dsgc实例）、sp_cds_dsgc_
                 $obj = new DspaDataSourceMngFilter();
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
+            }
+        }
+
+        if (array_key_exists("TagFilter",$param) and $param["TagFilter"] !== null) {
+            $this->TagFilter = [];
+            foreach ($param["TagFilter"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagFilter, $obj);
             }
         }
 
